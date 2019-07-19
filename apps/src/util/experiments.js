@@ -23,6 +23,7 @@ experiments.SCHOOL_AUTOCOMPLETE_DROPDOWN_NEW_SEARCH =
   'schoolAutocompleteDropdownNewSearch';
 experiments.SCHOOL_INFO_CONFIRMATION_DIALOG = 'schoolInfoConfirmationDialog';
 experiments.FEEDBACK_NOTIFICATION = 'feedbackNotification';
+experiments.ROLLUP_SURVEY_REPORT = 'rollupSurveyReport';
 
 /**
  * Get our query string. Provided as a method so that tests can mock this.

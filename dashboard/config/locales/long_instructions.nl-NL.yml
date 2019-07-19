@@ -2,349 +2,30 @@
 nl-NL:
   data:
     long_instructions:
-      2-3 Artist 1 new: "Hoi, ik ben een kunstenaar. Jij kan me programmeren om me
-        om het even wat te laten tekenen. Gebruik enkele blokken om me over grijze
-        lijnen van de afbeelding te laten tekenen. (Elke lijn is 100 pixels lang)\\\r
-        \n\\\r"
-      2-3 Artist 11: 'Geef het stopbord een rand door een achthoek te vormen met zijden
-        van 100 pixels. '
-      2-3 Artist 12: 'Hoeveel keer moet je de code herhalen om een cirkel te tekenen,
-        als een kunstenaar 1 graad draait per keer? '
-      2-3 Artist 2 new: "Dit huis heeft een halfafgewerkte muur. \nElke zijde is 100,
-        maar de halve muur is slecht 50 lang. Werk de muur af."
-      2-3 Artist 3.4: |-
-        Het spring blok verplaatst de artiest zonder te tekenen.
-        Om een stippellijn te maken gebruik je het spring blok tegelijk met het teken blok.
-      2-3 Artist 3new: De rode hoed is 100 pixels hoog. Vervolledig de tekening van
-        de zwarte hoed die 70 pixels korter is
+      2-3 Artist 1 new: Hoi! Ik ben een kunstenaar. Jij kan programmeren om mij bijna
+        alles te laten tekenen. Gebruik een paar blokken om me over de grijze lijnen
+        in de tekening te laten tekenen. (Elke lijn is 100 pixels lang)
       2-3 Artist 4: Help mij het huis voor deze kat af te maken.
-      2-3 Artist 6: "Dit huis heeft een dak nodig. Teken een driehoek. \\\r \n\\\r\nHit:\nalle
-        zijde hebben dezelfde lengte.\\\r \n\\\r\n<img src=\"https://images.code.org/8b10073fd1a7fe53b4da33ec2229894b-image-1468018903891.gif\"\nwidth=\"300\"/>"
-      2-3 Artist 7: "Werk de tekening af met de laatste ramen voor de school, zodat
-        iedereen in de klas naar buiten kan kijken. \\\r \n\\\r\nDe zijden van elk
-        vierkant raam zijn 25 pixels lang. "
-      2-3 Artist 8: "Tijd om een schuur te bouwen. \\\r \n\\\r\nMaak voor elk dier
-        een kamer\ndoor de schuurt in 2 even grote vierkanten te verdelen. \\\r \n\\\r\nHint:\nDe
-        rechthoek is 200 pixels breed en 100 pixels hoog.\\\r \n\\\r\nEr zijn veel
-        verschillende manieren om deze puzzel op te lossen."
-      2-3 Artist 9: Maak de vlieger af
-      2-3 Artist Assessment 1: "**Beoordeling:** Werk de tekening af met een laatste
-        tand. \nHij is 25 pixels breed en 25 pixels hoog."
-      2-3 Artist Debugging 1: "Deze hoed moet slechts 50 pixels breed zijn. \\\r \n\\\r\nKan
-        je het verbeteren?\\\r \n\\\r"
-      2-3 Artist Debugging 10: "De richting van het pad op mijn spelbesturing is te
-        smal. \\\r \n\\\r\nKan je hem 10 pixels breder maken? \\\r \n\\\r\nProbeer
-        de programmeercode eerst uit om te kijken wat er misloopt."
-      2-3 Artist Debugging 11: |-
-        Help me mijn schitterende sneeuwvlok af te maken.
-        Hoe vaak moet ik de opdrachten "herhalen" om het af te maken?
-      2-3 Artist Debugging 2: "Deze code voor de snorharen van de kat is verkeerd.
-        \\\r \n\\\r\nVerbeter de code om snorharen te tekenen die allemaal dezelfde
-        lengte hebben."
-      2-3 Artist Debugging 3: "Er zit een gat in mijn boot! \\\r \n\\\r\nWat heb je
-        nodig om deze eindjes aan elkaar te knopen?"
-      2-3 Artist Debugging 5: "De code voor het been en de voet zijn verkeerd. \\\r
-        \n\\\r\nKan je hem verbeteren?"
-      2-3 Artist Debugging 6: "Het lijkt erop dat de stoel waarop ik zit een poot
-        mist. \\\r \n\\\r\nPas de code aan om de laatste poot te tekenen."
-      2-3 Artist Debugging 7: "Het lijkt erop dat de C in de code achterstevoren is
-        getekend. \\\r \n\\\r\nKan je hem er opnieuw als een C doen uitzien?"
-      2-3 Artist Debugging 8: "Mijn leerkracht zegt dat als ik begin, ik het ook moet
-        afwerken. \\\r \n\\\r\nHelp me om mijn molen af te werken. Kan jij uitvissen
-        wat er mis liep?"
-      2-3 Artist Debugging 9: "Er klopt iets niet. \\\r \n\\\r\nDe code voor deze
-        stam is verkeerd. Kan je uitvissen hoe de kunstenaar deze stam juist kan tekenen?"
-      2-3 Artist Debugging Assessment 1: "**Beoordeling:**\\\r \n\\\r\nWaarom is het
-        vierkant aan elke kant 75 pixels te smal? \\\r \n\\\r\nWaar zit de fout in
-        de code?"
-      2-3 Artist Free Play: Vrij spel! Je mag tekenen wat je wil.
-      2-3 Artist Functions 1: "\"Ik zombie kunstenaar. Ik hou tekenen!\"\n\\\r \n\\\r\nHelp
-        de zombie om vierkanten glazen te tekenen. \\\r \n\\\r\nDe brug tussen de
-        glazen is 25 pixels korter dan de breedte van het vierkant, dat 100 pixels
-        breed is. \\\r \n\\\r"
-      2-3 Artist Functions 10: "**Vrij spel:** Er zijn twee functies, een om een groot
-        tandwiel te tekenen en de andere om een klein tandwiel te tekenen!"
-      2-3 Artist Functions 11: "We hebben de functie 'teken een vierkant' een nieuwe
-        naam gegeven:'teken een zeshoek', maar het tekent nog steeds vierkanten. \\\r
-        \n\\\r\nKan je de functie 'teken een zeshoek' aanpassen zodat hij zeshoeken
-        tekent met zijdes van 50 pixels lang.\n\\\r \n\\\r\nTeken de afbeelding door
-        gebruik te maken van de nieuwe functie!"
-      2-3 Artist Functions 11.5: "Er is een functie om een zeshoek te tekenen. \\\r
-        \n\\\r\nWat gebeurt er als ik het hoofdprogramma 6 keer herhaal, terwijl het
-        telkens 60 graden draait bij elke herhaling?"
-      2-3 Artist Functions 12: "Functies zijn echt geweldig om complexe zaken verschillende
-        keren te tekenen. \\\r \n\\\r\nKan je de functie 'teken een bloem' gebruiker
-        om de plantenbak te vullen? \\\r \n\\\r\nDe planten zijn elk 100 pixels groot."
-      2-3 Artist Functions 2: "Functies laten je nieuwe blokken definiëren. \\\r \n\\\r\nWe
-        hebben de blokken nodig voor het tekenen van een vierkant verplaatst naar
-        een functie met naam 'teken een vierkant'. Deze keer, kan je de functie 'teken
-        een vierkant' gebruiken om de brillen te creëren."
-      2-3 Artist Functions 3: "Pas de functie om een vierkant te tekenen aan naar
-        een zijde van 115 om een grotere bril te tekenen. \\\r \n\\\r\nDe vierkanten
-        staan nu 45 pixels van elkaar verwijderd."
-      2-3 Artist Functions 4: Plaats de functie nu in de herhaling om deze 3 vierkanten
-        te tekenen.
-      2-3 Artist Functions 9: "**Vrij spel:** Dit is een functie voor sneeuwvlokken.
-        Experimenteer ermee om een winterlandschap te creëren. \\\r \n\\\r\nDit is
-        een niveau met vrij spel, dus er is geen puzzel om op te lossen. Geniet ervan!"
-      2-3 Artist Loops New 1: "Laat ons het hoofd van een robot tekenen! \nKan je
-        een vierkant maken met zijden van 100 pixels? \\\r \n\\\r"
-      2-3 Artist Loops New 10: Laat ons nu enkele V's aan elkaar vastmaken in een
-        herhaling.
-      2-3 Artist Loops New 11: "Tijd om iets hip te maken!\n\\\r \n\\\r\nHerprogrammeer
-        de code van de laatste puzzel, maar voeg deze keer een linkse draai van 30
-        graden toe aan de herhaling."
-      2-3 Artist Loops New 12: 'Teken een diamant met zijden van 100 pixels. '
-      2-3 Artist Loops New 13: "We gaan van start met de (grijze) code om één diamant
-        te maken. \\\r \n\\\r\nHerhaal de grijze code om een plezierig patroon te
-        maken!"
-      2-3 Artist Loops New 14: "Speel met de code voor de diamant en zoek uit welke
-        andere patronen je kan maken. \\\r \\\r\nHet aantal graden dat je draait en
-        het aantal keren dat je de herhaling volgt, kan je aanpassen."
-      2-3 Artist Loops New 15: "Nu kan je tekenen wat je wilt! \\\r \\\r"
-      2-3 Artist Loops New 2: "Dit is dezelfde puzzel die we net hebben opgelost,
-        maar deze keer mag je enkel één blok 'beweeg vooruit' en één blok 'draai'
-        gebruiken. \\\r \n\\\r\nKan je een 'herhaling' gebruiken om deze puzzel op
-        te lossen?"
-      2-3 Artist Loops New 9: Teken een simpele V (waarvan beide zijden 50 pixels
-        lang zijn) om er een pijl van te maken.
-      2-3 Artist Nested Loops 1: "Je hebt eerder al herhalingen gebruikt om vormen
-        te tekenen, maar nu gaan we de lussen of herhalingen in andere herhalingen
-        plaatsen. \\\r \n\\\r\nPlaats een 'herhaal' blok rond de hele stapel codes
-        om een patroon te tekenen. \\\r \n\\\r"
+      2-3 Artist 9 NEW: Maak de vlieger af
+      2-3 Artist Free Play: Vrij spel! Je mag alles tekenen wat je wilt.
       2-3 Artist Nested Loops 10: Laat deze code in een lus 12 keer uitvoeren om het
         patroon af te maken.
-      2-3 Artist Nested Loops 11: Laat deze code in een lus 4 keer uitvoeren om het
-        patroon af te maken en draai 90 graden na iedere cirkel.
-      2-3 Artist Nested Loops 12: Herhaal deze code 12 keer om de krullen af te werken.
-      2-3 Artist Nested Loops 2: "Herhaal nu de driehoek 6 keer.\n\\\r \n\\\r\nNa
-        elke driehoek, zal je 60 graden moeten draaien voor de volgende driehoek."
-      2-3 Artist Nested Loops 3: "Je moet deze driehoek 12 keer herhalen om het patroon
-        te tekenen.\\\r \n\\\r\nDeel het aantal graden van een cirkel (360°) door
-        het aantal vormen (12) dat je wil tekenen om te berekenen hoe ver je moet
-        draaien na elke vorm."
-      2-3 Artist Nested Loops 4: "Herhaal deze diamant 12 keer om een bloem te tekenen.
-        \\\r \n\\\r\nTip: We gebruiken dezelfde hoek om de 12 diamanten te herhalen
-        als bij de 12 driehoeken.\nHoe ver moet je draaien na elke vorm?"
-      2-3 Artist Nested Loops 5: "Vul dit de ramen van dit gebouw met een geneste
-        herhaling. \\\r \n\\\r\nDe ramen zijn 20 pixels lang en staan 20 pixels ver
-        van elkaar."
-      2-3 Artist Nested Loops 6: "De dinosauriër heeft 8 stekels op bovenop zijn staart.
-        \\\r \n\\\r\nElke stekel is 30 pixels lang. \\\r \n\\\r\nHerhaal de driehoek
-        8 keer, maar zorg ervoor dat je tussen elke driehoek voorwaarts springt!"
-      2-3 Artist Nested Loops 7: "Herhaal deze driehoek 10 keer om de zon te tekenen.
-        \\\r \n\\\r\nJe zal na elke driehoek moeten voortbewegen en draaien.\n\\\r
-        \n\\\r\nJe kan nu uitzoeken hoe ver je moet draaien door het aantal graden
-        van de cirkel te delen door het aantal driehoeken waaruit hij bestaat."
-      2-3 Artist Nested Loops 8: Laten we nu wat gras toevogen. Elk plukje gras is
-        50 pixel uit elkaar.
-      2-3 Artist Nested Loops 9: Als laatste komt nog een bloem. Herhaal de diamant
-        12 keer om een bloem te tekenen.
-      2-3 Artist Nested Loops Free Play: Vrij spelen, teken iets cools met geneste
-        lussen.
-      2-3 Bee Conditionals 11: Verzamel nektar van bloemen met nektar.
-      2-3 Bee Conditionals 13: |-
-        Verzamel nektar en maak honing. Tip:
-        Wat gebeurt er als je de voorwaarde "als nektar" gebruikt bij een rode bloem? Kan je dit met een lus doen?
-      2-3 Bee Conditionals 15: Verzamel nektar van de vier bloemen.
-      2-3 Bee Conditionals 3: Help me om alle nektar van de bloemen te verzamelen
-        en om honing te maken. Gebruik een lus.
-      2-3 Bee Debugging 3: Deze blokken blijven een probleem. Herstel de fout(en)
-        om alle nektar te verzamelen en alle honing te maken.
-      2-3 Bee Debugging 6: 'Deze blokken blijven een probleem. Herstel de fout(en)
-        om alle nektar te verzamelen en alle honing te maken. '
-      2-3 Bee Debugging 9: Deze blokken blijven een probleem. Herstel de fout(en)
-        om alle nektar te verzamelen en alle honing te maken.
-      2-3 Bee Debugging Assessment 1: "**Opdracht:** Het is tijd om te tonen wat je
-        weet!\\\r\n\\\r\nHerstel de fout(en) door alle nectar te verzamelen en maak
-        alle honing."
-      2-3 Bee Functions 10: Paarse bloemen hebben 1 of 0 nektar. Maak een functie
-        die alleen van paarse bloemen met nektar, de nektar verzamelt.
-      2-3 Bee Functions 2: Functies zijn blokken code die een taak uitvoeren. Gebruik
-        de "neem 5" functies om 5 nektars te verzamelen. Gebruik een lus om het gewenste
-        totaal te krijgen.
-      2-3 Bee Functions 4: De functie "beweeg en verzamel nektar" draait de bij, verzamelt
-        nektar en brengt de bij terug waar hij begon. Gebruik de functie om alle nektar
-        te verzamelen.
-      2-3 Bee Functions Assessment 1: "**Opdracht:** Gebruik de gegeven functie om
-        alle nectar te verzamelen van elke bloem."
-      2-3 Bee Functions Assessment 2: |-
-        **Opdracht:** Maak een functie om te draaien, voorwaarts te beween en maak 3 honing aan.
-        Breng vervolgens de bij terug naar waar hij startte en keer om.
-      2-3 Bee Loops 1: 'Elke bloem heeft één eenheid nektar. Verzamel nektar van elke
-        bloem. '
-      2-3 Bee Loops 13: |-
-        **Opdracht:** Verzamel alle nectar,
-        gebruik makende van het zo weinig mogelijk blokken.
-      2-3 Bee Loops 3A: Gebruik een `herhaal` lust om alle nectar te verzamelen.
-      2-3 Bee Loops 3B: Gebruik nu het nieuwe herhaalblok om alle nectar te verzamelen
-        en om alle honing te maken.
-      2-3 Bee Loops 4A: Wat gebeurt er als je deze reeks driemaal uitvoert in een
-        lus? Vergeet niet om aan het eind de honing te maken!
-      2-3 Bee Loops 8: Deze paarse bloemen hebben een onbekende hoeveelheid nectar.
-        Gebruik de lus "while nectar" voor het verzamelen van alle nectar. Deze lus
-        zal worden uitgevoerd, zolang aan de voorwaarde wordt voldaan, in dit geval
-        Nectar > 0.
-      2-3 Bee Loops Assessment 1: "**Opdracht:** Gebruik een `terwijl` lus om alle
-        nectar te verzamelen van deze bloemen."
-      2-3 Maze 15: Gebruik twee lussen om naar het biggetje te gaan met minder blokken.
-      2-3 Maze Loops 18: Help me tot bij de zonnebloem!
-      2-3 Maze Loops Assessment 1: "**Opdracht:** Bereik de zonnebloem, gebruik makende
-        van slechts 5 blokken?"
-      4-5 Artist 2: Kun je een lus van deze code maken om het vierkant te voltooien?
-      4-5 Artist 5: Door wat kunnen we "???" vervangen om de zombie de tekening te
-        laten vervolledigen, gebruik makend van de gegeven lus?
-      4-5 Artist 6: De gelijkzijdige driehoek heeft hoeken van 60, 60, en 60 graden.
-        Iedere zijde is 200 pixels lang. Vervolledig de tekening.
-      4-5 Artist 7: "De rechtse driehoek heeft hoeken van 30, 60, en 90 graden.\nDe
-        lengte van de schuine zijde (=hypothenusa) is 200 pixels.\\\r\n\\\r\nMaak
-        de tekening af."
-      4-5 Artist 8: "De middellijn op een voetbalplein staat _loodrecht_ op de zijlijnen.\\\r\nDeze
-        rechthoek heeft een totale omtrek van 800 pixels en is 240 pixels lang. Hoe
-        breed is dit?\\\r\n\\\r\nTeken de buitenlijnen en de middellijn."
-      4-5 Artist Assessment 1: "**Opdracht:** Gebruik een lus om de gelijkzijdige
-        driehoek te tekenen. Elke zijde is 300 pixels lang."
-      4-5 Artist Free Draw 1: Vrije tekening! Teken de creatie die in je opkomt.
-      4-5 Artist Patterns 1: Kun jij dit vierkant tekenen met behulp van een lus?
-        Elk zijde is 20 pixels lang.
-      4-5 Artist Patterns 10: "Deze code tekent twee rijen zeshoeken\n\n-   herhaal
-        dit geheel 4 keer om een hele honinggraat te tekenen \\\r \n    \\\r \n    Je
-        zal 120 pixel terug moeten gaan in je allerlaatste lus (herhaling) om zeker
-        te zijn dat de kunstenaar niet buiten het scherm tekent."
-      4-5 Artist Patterns 11: Hoe veel keer moet je dit herhalen om een halve cirkel
-        te tekenen?
-      4-5 Artist Patterns 12: "Wat gebeurt er als je een andere herhaling maakt zoals
-        deze, maar links draait in plaats van rechts? \\\r \n\\\r\nKan je dit allemaal
-        herhalen om deze golf te tekenen?"
-      4-5 Artist Patterns 13: "Laat ons nu het geheel 4 keer herhalen om deze fotokader
-        te creëren. Let op voor de hoeken - je kan enkel 90 graden draaien! \\\r \n\\\r\nAls
-        een herhaling van 60 keer een 3 graden draai maakt voor een halve cirkel,
-        welke van deze codeblokken zal dan een bijkomend kwart van een cirkel aanmaken
-        voor deze hoeken?"
-      4-5 Artist Patterns 2: "Als je je lus of herhaling voor het vierkant in een
-        andere herhaling plaatst, dan spreken we van een geneste herhaling (lus).\\\r
-        \n\\\r\nWat moet je toevoegen als buitenste herhaling om zeker te zijn dat
-        alle 15 vierkanten mooi naast elkaar worden uitgelijnd?"
-      4-5 Artist Patterns 3: Laten we nu één niveau dieper gaan! Wij hebben dat hele
-        codeblok in een andere lus genest, maar jij moet de kunstenaar terug op zijn
-        plaats krijgen om de volgende lijn te tekenen. Welke van deze codeblokken
-        kun je aan het einde van de buitenste lus plaatsen om het gehele raster te
-        tekenen?
-      4-5 Artist Patterns 5: "Herhaal deze code om een rij van 6 diamanten te verkijgen.\\\r\n\\\r\nMerk
-        op dat we onze diamant code veranderden om 3 keer te herhalen in plaats van
-        2. Waarom is dat, denk je?"
-      4-5 Artist Patterns 6: Hoeveel keer moet je dit blok herhalen om een volledig
-        rooster diamanten te tekenen?
-      4-5 Artist Patterns 8: Gebruik een lus om deze zeshoek met 40 pixel zijden en
-        60 graden hoeken te tekenen.
-      4-5 Artist Patterns 9: Herhaal die code nu 3 keer om de hele rij te tekenen.
-        Hint, elke zeshoek is 80 pixels breed van uiterst links naar uiterst rechts.
-      4-5 Artist Patterns Free Play: Vrij spelen - probeer een eigen patroon te maken!
-      4-5 Bee Conditionals 2: De bij wil nu alleen nectar. Vergeet niet dat niet alle
-        objecten bloemen zijn, dus test om alleen bij bloemen nectar verzamelen.
-      4-5 Bee Conditionals 5: Er kan een bloem of een honingraat onder die wolken
-        zijn. Gebruik het als/anders blok om bij een bloem nectar te verzamelen en
-        om anders honing te maken (omdat het een honigraat is).
-      4-5 Bee Conditionals 6: Deze paarse bloem heeft 3, 2 of 1 nectar. Hier is een
-        als/anders blok gecombineerd met nog een als/anders blok om een als, anders/als,
-        anders blok te maken. Maak de oplossing af om de onbekende hoeveelheid nectar
-        te verzamelen.
-      4-5 Bee Conditionals 7: Onthoud dat paarse bloemen 3, 2 of 1 nectar kunnen hebben.
-        Maak de "controleer paarse bloem" functie af en gebruik hem om alle nectar
-        bij de bloemen te verzamelen.
-      4-5 Bee Conditionals 8: Schrijf een functie binnen het blok genaamd "controleer
-        bloem maak honing". Jouw functie moet controleren hoeveel nectar de paarse
-        bloem heeft en dit verzamelen, vooruit bewegen en honing maken.
-      4-5 Bee Conditionals Assessment 1: 'Evaluatie: Deze code is onjuist. Maak de
-        "haal nectar of maak honing" functie af en roep deze vervolgens aan om alle
-        nectar en honing te verzamelen. Vergeet niet dat paarse bloemen 3, 2 of 1
-        nectar kunnen hebben.'
-      4-5 Bee Debugging 1: "Deze blokken storen me echt.\\\r\n\\\r\nKan jij dat corrigeren?"
-      4-5 Bee Debugging 6: De paarse bloem heeft een onbekende hoeveelheid nectar.
-        Maak de blokken in orde om alle nectar uit de bloem te krijgen.
-      4-5 Bee Nested Loops 4: 'Verzamel alle nectar van elke bloem en maak honing
-        bij elke honingraat. Gebruik een geneste lus. '
-      4-5 Bee Nested Loops Assessment 1: Test - Verzamel alle nectar en maak alle
-        honing door gebruik te maken van lussen.
-      4-5 Maze 9: Maak een lus met het "herhaal tot" blok.
-      4-5 Maze Conditionals 1: Gebruik het herhaal tot blok om de zombie bij de zonnebloem
-        te brengen.
-      4-5 Maze Conditionals 10: "Lukt het om de zombie een moeilijker doolhof te laten
-        oplossen door maar 3 blokken toe te voegen? \\\r\n\\\r\nAls je het goed doet,
-        kan hij over ieder kronkelend pad lopen, hoe lang het ook is!"
-      4-5 Maze Conditionals 2: Gebruik het herhaal tot blok om de zombie bij de zonnebloem
-        te brengen.
-      4-5 Maze Conditionals 3: 'Gebruik het "als" blok om me te laten beslissen wanneer
-        te draaien. Tip: je hebt nog slechts een blok nodig, maar leer hoe wij het
-        instelden zodat je het de volgende keer zelf kunt.'
-      4-5 Maze Conditionals 4: OK, dit is net als de vorige puzzel, maar je moet onthouden
-        hoe je het "als" blok en het "herhaal" blok samen gebruikte.
-      4-5 Maze Conditionals 5: Ik wil zonnebloem! Gebruik een "als" blok om me daar
-        te krijgen met het minste aantal blokken.
-      4-5 Maze Conditionals 6: Ik wil zonnebloem! Gebruik een "als" blok om me daar
-        te krijgen met het minste aantal blokken.
-      4-5 Maze Conditionals 7: OK, laten we dat om te oefenen nog eens doen - dit
-        is niet heel anders, maar kijk uit voor de happers!
-      4-5 Maze Conditionals 8: Het "als-anders" blok controleert een voorwaarde en
-        doet dan het ene OF het andere. Probeer dit nieuwe blok te gebruiken om me
-        bij de zonnebloem te brengen.
-      4-5 Maze Conditionals 9: Nog een oefening met het "als-anders" blok, kun je
-        het in een keer goed doen?
-      4-5 Maze Conditionals Assessment 1: Gebruik een "herhaal tot" en een "als-anders"
-        blok om me met zo min mogelijk blokken bij de zonnebloem te brengen.
-      4-5 Nested Loops 12: Kan je deze 36 driehoeken tekenen met een geneste lus?
-      4-5 Nested Loops 3: "Maak een zon door de begincode in een andere lus te nesten.
-        Dit noemen we een geneste lus.\\\r"
+      2-3 Artist Nested Loops 12: Herhaal deze code 12 keer om de krullen te voltooien.
+      2-3 Artist Nested Loops Free Play: Vrije opdracht, tekenen iets moois met een
+        geneste lus.
+      2-3 Bee Loops 3A: Kan je een lus gebruiken om alle nectar te verzamelen?
+      4-5 Artist Free Draw 1: Vrij tekenen! Teken wat in je opkomt.
+      4-5 Artist Patterns 7: Laten we de code van de laatste puzzel aanpassen om dit
+        complexere patroon te maken. Merk op hoe de diamanten elkaar nu overlappen.
+        Probeer de eerste "spring achteruit" van 100 naar 50 (half zo ver) te veranderen
+        - hoe ver moet de kunstenaar nu gaan in de tweede "spring achteruit"?
       4-5 Nested Loops 5: Maak een windmolen met een lus rond de voorbeeldcode.
-      4-5 Nested Loops 6: Kan je een zeskant tekenen met een lus rond de driehoek-code?
-      4-5 Nested Loops 7: 'Lus 10 keer met deze tekening. Hoevaak moet je draaien
-        in elke lus? (Hint: wat is 360 gedeeld door 10?)'
-      4-5 Nested Loops 8: 'Lus 6 keer met deze tekening. Hoevaak moet je draaien in
-        elke lus? (Hint: wat is 360 gedeeld door 6?)'
       4-5 Nested Loops 9: Teken de tanden in de mond van de krokodil!
-      4-5 While Loops 1: Beweeg me naar het gat en vul het met twee scheppen vuil.
-        Gebruik daarbij het "vul" blok.
-      4-5 While Loops 2: Beweeg me naar de afvalberg en ruim die op met 5 scheppen.
-        Gebruik daarbij het 'verwijder' blok.
-      4-5 While Loops 3: 'Beweeg me naar de hoop en ruim die helemaal op. Ga dan naar
-        het gat en vul die helemaal. Hint: gebruik zo min mogelijk blokken.'
-      4-5 While Loops 4: 'Wow, ik heb een heel diep gat gevonden! Ik weet niet hoeveel
-        scheppen vuil daarvoor nodig zijn. Kan je een programma schrijven dat het
-        gat vult tot boven vult? Hint: probeer dit keer een zolang-lus.'
       CSD U6 iter predict bubbles: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       CSD U6 iter predict bubbles_2018: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       CSD U6 iter predict bubbles_2019: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
-      Course 4 Artist 13: Nog aan het spelen? Hier is een leeg canvas on te ontwerpen
-        wat je maar wilt!
-      Course 4 Artist 6: 'Maak de code af om deze driehoeken te tekenen. Hint: de
-        drie driehoeken draaien in totaal 360 graden.'
-      Course 4 Artist 8: Teken deze zon met een door 12 keer door het hele code blok
-        te lussen.
-      Course 4 Artist 8a: "Herken je deze vorm? We laten je die nu maken zonder je
-        vooraf blokken te geven!\\\r\nAanwijzing: Er zijn 3 driehoeken in de 360 graden
-        verdraaiing...hoe vaak gaat 3 in 360?"
-      Course 4 Artist For Loops 4: "Gebruik een 'for loop' om deze vierkanten te tekenen.
-        \nZe starten met een lengte van 50 pixels, de grootste is 300 pixels lang,
-        en elk vierkant is 25 pixels groter dan de vorige. Ik heb je bijna alle code
-        gegeven die je nodig hebt - er ontbreekt nog maar een blok, welke is dat?"
       Course 4 Artist For Loops 6a: Verander 3 kleine dingen uit de code van het vorige
         niveau om dit op te lossen!
-      Course 4 Bee Params 1: Gebruik de functie "krijg 3 nectar", die draait, nectar
-        ophaalt, en dan teruggaat naar de oorspronkelijke plek. Schrijf een sequentie
-        om alle nectar te verzamelen door "krijg 3 nectar" te gebruiken.
-      Course 4 Play Lab Params 4: Hier is een functie genaamd "patrol". Bewerk hem
-        om de kat eerst 400 pixels omhoog en dan 400 pixels omlaag te laten bewegen.
-      Course 4 Play Lab Params 8: Gebruik een "wanneer de speler aanraakt"-blok om
-        de hond terug naar de linkerbovenhoek te sturen, maar alleen wanneer hij een
-        van de andere spelers aanraakt.
-      Course 4 Play Lab Vars 2: Die wedstrijd was niet eerlijk! Verander de "hond\_snelheid"
-        variabele om er zeker te zijn dat je meer vlaggen kunt verzamelen dan de kat.
-        Wie als eerst 10 vlaggen heeft wint.
-      Course 4 Play Labs For Loops 1: Zullen we de hond alle getallen van 1 tot en
-        met 100 laten uitspreken. Gebruik een rekenen met lus en de teller blok om
-        de teller variabele uit te spreken bij elke uitvoering van de lus.
-      Course 4 Playlab For Loops 5b: Pas het interval in deze `herhaal` lussen aan
-        zodat deze twee spelers op exact dezelfde plaats eindigen.
       CourseD_Dance_Party_01: |-
         _Laten we een dansfeestje houden!_
 
@@ -425,15 +106,15 @@ nl-NL:
       CourseE_HOC 2018 Level_2: Boten zijn veel gemakkelijker dan zwemmen in open
         water! Ga naar het einde van de steiger en klim aan boord.
       CourseE_HOC 2018 Level_3: Pak de roeispanen en stuur je boot over de open zee
-        om de \*\* kabeljauw \*\* !\[] (<https://images.code.org/9b636884eefb1efe18f9f844e1e916a9-image-1538698597353.png>)
+        om de \*\* kabeljauw \*\* \!\[] (<https://images.code.org/9b636884eefb1efe18f9f844e1e916a9-image-1538698597353.png>)
         te vangen.
-      CourseE_HOC 2018 Level_4: Laten we de kabeljauw aan de \*\* dolfijn \*\* !\[]
+      CourseE_HOC 2018 Level_4: Laten we de kabeljauw aan de \*\* dolfijn \*\* \!\[]
         (<https://images.code.org/8c240fd4df4da2795ba7ca942b77a057-image-1538947890991.png>)
         voeren. Gebruik een herhalingsblok om de oceaan sneller te doorkruisen.
       CourseE_HOC 2018 Level_5: Er is ergens een **nautilusschelp** ![](https://images.code.org/2eb084fa0c718dee6ca4b6379381f735-image-1538698936660.png)
         verborgen! Verken het scheepswrak om de **kist** ![](https://images.code.org/16cdd5779b38909d4bf47b29535c92b0-image-1538698950602.png)
         te vinden.
-      CourseE_HOC 2018 Level_6: Dat ziet er ijskoud uit! Vang een **zalm** !\[] (<https://images.code.org/c66eadf25b3cdfe20bbfdc91e2c28c94-image-1538699000102.png>)
+      CourseE_HOC 2018 Level_6: Dat ziet er ijskoud uit! Vang een **zalm** \!\[] (<https://images.code.org/c66eadf25b3cdfe20bbfdc91e2c28c94-image-1538699000102.png>)
         op weg naar de onderwaterruïnes.
       CourseE_HOC 2018 Level_7a: Je hebt de onderwaterruïnes gevonden. Doorzoek het
         zandsteen voor een **kist** ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png)
@@ -578,14 +259,14 @@ nl-NL:
       HOC 2018 Level_2: Boten zijn veel gemakkelijker dan zwemmen in open water! Ga
         naar het einde van de steiger en klim aan boord.
       HOC 2018 Level_3: Pak de roeispanen en stuur je boot over de open zee om de
-        \*\* kabeljauw \*\* !\[] (<https://images.code.org/9b636884eefb1efe18f9f844e1e916a9-image-1538698597353.png>)
+        \*\* kabeljauw \*\* \!\[] (<https://images.code.org/9b636884eefb1efe18f9f844e1e916a9-image-1538698597353.png>)
         te vangen.
-      HOC 2018 Level_4: Laten we de kabeljauw aan de \*\* dolfijn \*\* !\[] (<https://images.code.org/8c240fd4df4da2795ba7ca942b77a057-image-1538947890991.png>)
+      HOC 2018 Level_4: Laten we de kabeljauw aan de \*\* dolfijn \*\* \!\[] (<https://images.code.org/8c240fd4df4da2795ba7ca942b77a057-image-1538947890991.png>)
         voeren. Gebruik een herhalingsblok om de oceaan sneller te doorkruisen.
       HOC 2018 Level_5: Er is ergens een **nautilusschelp** ![](https://images.code.org/2eb084fa0c718dee6ca4b6379381f735-image-1538698936660.png)
         verborgen! Verken het scheepswrak om de **kist** ![](https://images.code.org/16cdd5779b38909d4bf47b29535c92b0-image-1538698950602.png)
         te vinden.
-      HOC 2018 Level_6: Dat ziet er ijskoud uit! Vang een **zalm** !\[] (<https://images.code.org/c66eadf25b3cdfe20bbfdc91e2c28c94-image-1538699000102.png>)
+      HOC 2018 Level_6: Dat ziet er ijskoud uit! Vang een **zalm** \!\[] (<https://images.code.org/c66eadf25b3cdfe20bbfdc91e2c28c94-image-1538699000102.png>)
         op weg naar de onderwaterruïnes.
       HOC 2018 Level_7a: Je hebt de onderwaterruïnes gevonden. Doorzoek het zandsteen
         voor een **kist** ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png)
@@ -597,17 +278,8 @@ nl-NL:
         de zee** ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png)
         ! Gebruik het blauwe en rode koraal om de schat **kist** ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png)
         te vinden.
-      K-1 Bee Loops 2: Gebruik een lus om te verplaatsen en pak dan te nectar en maak
-        honing!
-      K-1 Bee Loops 3: Gebruik lussen om nectar te pakken en honing te maken!
-      K-1 Bee Loops 4: Gebruik lussen om de nectar te pakken, honing te maken en te
-        verplaatsen!
       K-1 Bee Loops 5: Gebruik lussen om de nectar en honing te pakken!
-      K-1 Bee Loops 6: Gebruik herhaal blokken om nectar te pakken en honing te maken!
-      K-1 Maze Loops 11: Breng me naar het varken! Gebruik het herhaal blok.
-      K-1 Maze Loops 12: Breng me naar het varken! Gebruik het herhaal blok.
       K-1 Maze Loops 2: Gebruik het herhaal blok om me naar het varken te brengen!
-      K-1 Maze Loops 8: Breng me naar het varken! Gebruik het herhaal blok.
       MC_HOC_2017_01_RETRY: "{currentPlayerName} is gevangen in het huis, maar de
         agent is er om te helpen!   \\\r\n \\\r\n   \\\r\nMaak een 'naar voren'-blok
         vast aan het 'wanneer uitgevoerd'-blok in de werkruimte om de agent naar de
@@ -681,58 +353,26 @@ nl-NL:
         de agent om de wereld te verkennen."
       MC_HOC_2017_FP20x20_2019: "**Vrij spel:** Het is nu aan jou! Gebruik de code
         van de agent om de wereld te verkennen."
-      NEW Course 4 Artist Functions 12: Gebruik de functie "teken een lijn van vierkanten"
-        van de laatste puzzel om dit patroon te tekenen."
-      NEW Course 4 Artist Functions 3: 'Hier is een nieuw type blok. Het heet een
-        "functie blok." Klik op ''Uitvoeren'' om te zien wat het kan doen. '
-      NEW Course 4 Artist Functions 9: Kan je dit oplossen door slechts 1 blok toe
-        te voegen?
-      NEW Course 4 Artist Params 4: Zie je een verschil tussen deze functie blokken?
-        Druk op "Start" om te zien wat er gebeurt.
-      NEW Course 4 Artist Vars 12: Maak het algoritme van het vorige niveau opnieuw
-        en teken een vijfhoek met kanten van 150 pixels lang.
-      NEW Course 4 Artist Vars 4: 'Laten we dat opnieuw proberen. Kan je de lengte
-        variabele "zetten" om dit leuke patroon met zeshoeken te maken? Hint: het
-        is een veelvoud van 10.'
-      NEW Course 4 Artist Vars 6: "Teken dit patroon door de \"length\" variabele
-        naar de juiste plekken te slepen. Je moet \"length\" ook de juiste waarde
-        geven (Hint: het is een veelvoud van 10). \\\r\n\\\r\nZie je dat je waarde
-        van \"length\" maar een keer hoeft te \"zetten\", en dat de code overal de
-        juiste waarde gebruikt?\\\r\n\\\r\n\\\r"
       Overworld Move to Sheep: Voeg een tweede "beweeg vooruit"-commando toe om de
         schapen te bereiken.
       Overworld Move to Sheep_2019: Voeg een tweede "beweeg vooruit"-commando toe
         om de schapen te bereiken.
-      course1_artist_loops_challenge2: Laten we een spel spelen! Teken zoveel mogelijk
-        X'en als je maar kan! Kan er 3 in een rij tekenen?
       course1_maze_debugging_challenge2: Debug dit level. Dit zijn de correct blokken,
         maar ze staan in de verkeerde volgorde!
-      course1_maze_seq_challenge2: Je kan slechts 4 keer bewegen in elke richting.
-        Vind je een pad voordat je blokken op zijn?
-      course2_artist_prog_challenge2: Help me de gele lijnen op deze weg schilderen!
-        \*
       course2_collector_prog_challenge1: Kijk aandachtig! Kan jij alle _10_ stukken
         schat verzamelen?
       course2_harvester_loops_challenge1: Verzamel alle maïs.
       course2_harvester_loops_challenge2: |-
         Verzamel alle sla.
         Vermijd de bomen en de velden!
-      course2_maze_programming_challenge1: _" Het varken verstopt zich! Kan jij me
-        helpen een omweg te vinden?"_
       course2_maze_programming_challenge2: Soms is er meer dan één manier om hetzelfde
         probleem op te lossen. Soms is het sneller om achterwaarts te gaan dan voorwaarts!
-      course3_bee_debugging_challenge1: |-
-        Bekijk hoe de bijen de nektar verzamelt.
-        Kan je hetzelfde soort patroon gebruiken om de bij alle honing te laten maken?
-      course3_maze_debugging_challenge1: _"Ga ik enkel rond in cirkels?"_
       course4_artist_binary_challenge1: Je kan elk van de binaire waardes (0 of 1)
         slechts éénmaal gebruiken in deze puzzel. Maak gebruik vaan geneste lussen
         om deze tekening te voltooien.
       course4_artist_fwp_challenge1: Probeer dit programma uit te voeren, en verander
         het om te zien wat er gebeurt. Kun je erachter te komen hoe het werkt? (Of
         het verwijder het en vervang het door iets totaal anders)
-      courseA_collector_preLoops1: "Dit is Laurel de avonturier! \n\nKlik op\n\"Run\"
-        om haar naar de schat te zien wandelen en het te bemachtigen."
       courseA_maze_seq8_2018: Los dit niveau op en krijg de vogel naar het varken!
       courseA_maze_seq8_2019: Los dit niveau op en krijg de vogel naar het varken!
       courseB_artist_loops7: |-
@@ -824,8 +464,8 @@ nl-NL:
         en koppel alle blokken aan `als gestart` om je code te vervolledigen.
       courseD_maze_ramp2_2019: Versleep een extra `ga voorwaarts` blok uit de gereedschapskist,
         en koppel alle blokken aan `als gestart` om je code te vervolledigen.
-      courseD_scrat_ramp1: Versleep in deze puzzel alle blokken tezamen en klik op
-        "Start" om het te zien gaan!
+      courseD_scrat_ramp1: Plak alle blokken aaneen bij deze puzzel en klik op "Start"
+        om het te zien bewegen!
       courseD_scrat_ramp2: Versleep een extra `ga voorwaarts` blok uit de gereedschapskist,
         en koppel alle blokken aan `als gestart` om je code te vervolledigen.
       courseE_bee_functions3: Functies zijn blokken code die een taak uitvoeren. Gebruik

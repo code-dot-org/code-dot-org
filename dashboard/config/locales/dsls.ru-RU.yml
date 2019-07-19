@@ -1,71 +1,755 @@
 ---
-ru:
+ru-RU:
   data:
-    external:
+    dsls:
+      2-3 Algorithms Multi 1:
+        title: Вопрос с несколькими вариантами ответа
+        questions:
+        - text: Выбери алгоритм для предоставленного изображения.
+        answers:
+        - text: Начни с квадрата <br/>Помести треугольник над квадратом<br/>Помести
+            треугольник под квадратом
+        - {}
+        - text: Начни с квадрата <br/> Помести параллелограмм над квадратом<br/> Помести
+            треугольник справа от параллелограмма
+        - text: Начни с квадрата <br/> Помести треугольник под квадратом<br/> Помести
+            параллелограмм справа от треугольника
+      2-3 Algorithms Multi 2:
+        title: Вопрос с несколькими вариантами ответа
+        content1: Начни с треугольника<br/>Помести квадрат под треугольником<br/>Помести
+          еще один треугольник под квадратом
+        questions:
+        - text: Какое изображение <em>не</em> соответствует этому алгоритму?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 Big Event Match 1:
+        title: Соответствие
+        content2: Сопоставить комбинацию кнопок с танцевальными движениями.
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 Binary Match 1:
+        title: Соответствие
+        content2: Используй ключ, чтобы сопоставить каждый код с соответствующей буквой
+        questions:
+        - text: "<strong>N</strong>"
+        - text: "<strong>O</strong>"
+        - text: "<strong>P</strong>"
+        - text: "<strong>Q</strong>"
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 Conditionals Multi 1:
+        title: Вопрос с несколькими вариантами ответа
+        questions:
+        - text: Какой набор карт рассчитан правильно по правилам игры?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 Getting Loopy Multi 1:
+        title: Вопрос с несколькими вариантами ответа
+        questions:
+        - text: Как бы ты упростил эту последовательность с помощью циклов?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 Graph Paper Match 1:
+        title: Соответствие
+        content1: Сопоставь сетку и программу.
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      2-3 Graph Paper Multi 1:
+        title: Вопрос с несколькими вариантами ответа
+        questions:
+        - text: С помощью какой программы создано это изображение?
+        answers:
+        - {}
+        - {}
+        - {}
+      2-3 Maze Match 2:
+        title: 'Лабиринт: сопоставление'
+        content1: Сопоставь блоки с головоломками
+        pre_title: Инструкции
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      2-3 Maze Multi 2:
+        title: Лабиринт. Вопрос с несколькими вариантами ответа
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 Relay Programming Multi 1:
+        title: Вопрос с несколькими вариантами ответа
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      2-3 Relay Programming Multi 2:
+        title: Вопрос с несколькими вариантами ответа
+        questions:
+        - text: Какая комбинация изображения и программы не содержит ошибок?
+        answers:
+        - {}
+        - {}
+        - {}
+      2-3 artist debug multi 1:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 artist functions multi 1:
+        title: Художник. Функции. Вопрос с несколькими вариантами ответа 1
+        questions:
+        - text: Выбери правильные блоки, чтобы нарисовать это изображение с помощью
+            данной функции
+        answers:
+        - {}
+        - {}
+        - {}
+      2-3 artist loops match 1:
+        content2: Сопоставь цикл и форму
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 artist loops multi 1:
+        title: Художник. Циклы. Вопрос с несколькими вариантами ответа
+        questions:
+        - text: Какая форма получается этом цикле?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 artist loops multi 2:
+        title: Художник. Циклы. Вопрос с несколькими вариантами ответа
+        questions:
+        - text: Какая фигура выражена этой программой?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 artist match 1:
+        title: Художник. Сопоставление
+        content1: Сопоставь форму и блок.
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 bee conditionals multi 1:
+        questions:
+        - text: Какое из сравнений ниже верно?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 bee conditionals multi 3:
+        questions:
+        - text: Выбери лучшие блоки.
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 bee loops multi 1:
+        title: Пчела. Циклы. Вопрос с несколькими вариантами ответа 1
+        questions:
+        - text: Какие блоки собирают весь нектар?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 maze match 1:
+        title: Лабиринт. Сопоставление 1
+        content1: Сопоставь блоки с головоломками
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      2-3 maze multi 1:
+        title: Лабиринт. Вопрос с несколькими вариантами ответа 1
+        questions:
+        - text: Какой набор блоков является правильным ответом?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 Algorithms Match 1:
+        title: Соответствие
+        content1: Сопоставь шаги игры в кубики и порядок их расположения в алгоритме.
+        questions:
+        - text: "<h4>1)</h4>"
+        - text: "<h4>2)</h4>"
+        - text: "<h4>3)</h4>"
+        - text: "<h4>4)</h4>"
+        answers:
+        - text: "<h4>Обнулить счет Игрока 1</h4>"
+        - text: "<h4>Игрок 1 кидает кубик</h4>"
+        - text: "<h4>Добавить счет Игрока 1 к общему счету</h4>"
+        - text: "<h4>Сравни результаты игроков, чтобы увидеть победителя</h4>"
+      4-5 Algorithms Multi 1:
+        title: Вопрос с несколькими вариантами ответа
+        questions:
+        - text: Алгоритм для какого из этих элементов труднее всего описать?
+        answers:
+        - text: Чистка зубов
+        - text: Выпечка печенья
+        - text: Покупки по списку продуктов
+        - text: Банан
+      4-5 Computational Thinking Match 1:
+        title: Соответствие
+        content1: Каждый из этих автомобилей разобран на части. Сопоставь автомобиль
+          со списком деталей к нему.
+        questions:
+        - text: "<h3>Колеса/сторона: 2<br/>Окна/сторона: 0</h3>"
+        - text: "<h3>Колеса/сторона: 2<br/>Окна/сторона: 1</h3>"
+        - text: "<h3>Колеса/сторона: 2<br/>Окна/сторона: 6</h3>"
+        - text: "<h3>Колеса/сторона: 3<br/>Окна/сторона: 2</h3>"
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 Computational Thinking Multi 1:
+        title: Вопрос с несколькими вариантами ответа
+        questions:
+        - text: Москва — это большой город.<br/>Самара — это средний город.<br/>Тында
+            — это маленький город.
+        answers:
+        - text: Москва — _____ _____ _____.
+        - text: _____ — это _____ город.
+        - text: _____ — _____ это _____.
+        - text: Тында – это _____ город.
+      4-5 Crowdsourcing Multi 1:
+        title: Вопрос с несколькими вариантами ответа
+        questions:
+        - text: Какая из этих картинок лучше всего иллюстрирует краудсорсинг?
+        answers:
+        - {}
+        - {}
+      4-5 Crowdsourcing Multi 2:
+        title: Вопрос с несколькими вариантами ответа
+        questions:
+        - text: Какой из этих видов деятельности больше подходит для краудсорсинга?
+        answers:
+        - text: Уборка своей комнаты
+        - text: Наслаждение десертом
+        - text: Расчесывание волос
+        - text: Умывание лица
+      4-5 Digital Footprint Multi 1:
+        title: Вопрос с несколькими вариантами ответа
+        questions:
+        - text: Какой информацией из перечисленных ниже можно поделиться в интернете?
+        answers:
+        - text: Ваша дата рождения
+        - text: Ваше любимое блюдо
+        - text: Ваш адрес
+        - text: Номер кредитной карты ваших родителей
+      4-5 Internet Multi 1:
+        title: Вопрос с несколькими вариантами ответа
+        questions:
+        - text: Когда ты заходишь на code.org, на какой IP-адрес тебя скорее всего
+            направят?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 Internet Multi 2:
+        title: Вопрос с несколькими вариантами ответа
+        questions:
+        - text: Если DNS отправил тебя на страницу с IP-адресом 100.42.50.110, на
+            каком ты сайте?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 Songwriting Multi 1:
+        title: Вопрос с несколькими вариантами ответа
+        questions:
+        - {}
+        answers:
+        - text: Lou, Lou, skip to my Lou,
+        - text: Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou,
+            Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.
+        - {}
+        - {}
+      4-5 Suncatchers Match 1:
+        title: Соответствие
+        content1: Сопоставь программы и образованные ими слова, используя предоставленные
+          ниже навыки.
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - text: "<h4>STACK</h4>"
+        - text: "<h4>STAMP</h4>"
+        - text: "<h4>STAR</h4>"
+        - text: "<h4>RAMP</h4>"
+      4-5 Suncatchers Multi 1:
+        title: Вопрос с несколькими вариантами ответа
+        questions:
+        - text: Какие из программ ниже <em>не</em> создают такую же последовательность
+            как программа 1?
+        answers:
+        - {}
+        - {}
+        - {}
+      4-5 artist loops multi 1:
+        title: Художник. Циклы. Вопрос с несколькими вариантами ответа
+        questions:
+        - text: Какие блоки создадут структуру кода?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 artist multi 1:
+        title: Художник. Вопрос с несколькими вариантами ответа
+        questions:
+        - text: Какие блоки рисуют прямоугольник с периметром 100?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 artist multi 2:
+        title: Художник. Вопрос с несколькими вариантами ответа
+        questions:
+        - text: Какой рисунок симметричен?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 bee conditionals multi 1:
+        title: Пчела. Условные команды. Вопрос с несколькими вариантами ответа
+        questions:
+        - text: Выбери лучшие блоки.
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 bee debug multi 1:
+        title: Пчела. Отладка. Вопрос с несколькими вариантами ответа
+        questions:
+        - text: Какая версия функции будет работать?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 bee loops multi 1:
+        title: Пчела. Циклы. Вопрос с несколькими вариантами ответа
+        questions:
+        - text: Какие блоки решат головоломку?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 maze conditionals multi 1:
+        title: Лабиринт. Условные команды. Вопрос с несколькими вариантами ответа
+        questions:
+        - text: Какие блоки решают головоломку?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 maze match 1:
+        title: 'Лабиринт: сопоставление'
+        content1: Сопоставь блоки с головоломками
+        pre_title: Инструкции
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      4-5 maze multi 1:
+        title: Лабиринт. Вопрос с несколькими вариантами ответа
+        questions:
+        - text: Какие блоки решают головоломку?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
       Begin planning your project:
-        content1: Описание здесь
         title: название
+        content1: Описание здесь
       Begin planning your project_2018:
         content1: Описание здесь
       Begin planning your project_2018_2019:
         content1: Описание здесь
+      CSD Header Size MC:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD Header Size MC_2018:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD Header Size MC_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
       CSD U2 Design Project:
-        content1: Описание здесь
         title: название
+        content1: Описание здесь
       CSD U2 Design Project_2018:
-        content1: Описание здесь
         title: название
+        content1: Описание здесь
       CSD U2 Design Project_2018_2019:
-        content1: Описание здесь
         title: название
-      CSD U2 L1 Overview:
         content1: Описание здесь
-        title: название
       CSD U2 L2 Overview:
-        content1: Описание здесь
         title: название
+        content1: Описание здесь
       CSD U2 L3 Overview:
-        content1: Описание здесь
         title: название
+        content1: Описание здесь
       CSD U2 L4 Overview:
-        content1: Описание здесь
         title: название
+        content1: Описание здесь
       CSD U2 L5 Overview:
-        content1: Описание здесь
         title: название
+        content1: Описание здесь
       CSD U2 L6 Overview:
-        content1: Описание здесь
         title: название
+        content1: Описание здесь
       CSD U2 Lesson 6 Overview:
         content1: Описание здесь
       CSD U2 expand project:
-        content1: Описание здесь
         title: название
+        content1: Описание здесь
       CSD U2 expand project_2018:
-        content1: Описание здесь
         title: название
+        content1: Описание здесь
       CSD U2 expand project_2018_2019:
-        content1: Описание здесь
         title: название
+        content1: Описание здесь
+      CSD U2 image debug match:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U2 lists match:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U2 lists match_2018:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U2 lists match_2018_2019:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
       CSD U2 project guide:
         content1: Описание здесь
       CSD U2 project guide_2018:
         content1: Описание здесь
       CSD U2 project guide_2018_2019:
         content1: Описание здесь
+      CSD U3 - conditionals - Matching:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 - conditionals - Matching_2018:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 - conditionals - Matching_2018_2019:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Boolean MC:
+        title: название
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Boolean MC_2018:
+        title: название
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Boolean MC_2018_2019:
+        title: название
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
       CSD U3 Card Examples_2018:
         content1: Описание здесь
       CSD U3 Card Examples_2018_2019:
         content1: Описание здесь
+      CSD U3 Functions Prediction define first:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Functions Prediction define first_2018:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Functions Prediction define first_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Keypress Matching:
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      CSD U3 Keypress Matching_2018:
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      CSD U3 Keypress Matching_2018_2019:
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      CSD U3 Sprite Movement Predict Multi:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Sprite Movement Predict Multi_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Sprite Movement Predict Multi_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Sprites intro predict multi:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Sprites intro predict multi_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Sprites intro predict multi_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
       CSD U3 combining rep:
-        content1: Описание здесь
         title: название
+        content1: Описание здесь
       CSD U3 combining rep_2018:
-        content1: Описание здесь
         title: название
+        content1: Описание здесь
       CSD U3 combining rep_2018_2019:
-        content1: Описание здесь
         title: название
+        content1: Описание здесь
+      CSD U3 drawSprites placement match:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 drawSprites placement match_2019:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
       CSD U3 game intro:
         content1: Описание здесь
       CSD U3 game intro_2018:
@@ -79,14 +763,14 @@ ru:
       CSD U3 platform intro_2018_2019:
         content1: Описание здесь
       CSD U5 Encryption 1:
-        content1: Описание здесь
         title: название
+        content1: Описание здесь
       CSD U5 Encryption 1_2018:
-        content1: Описание здесь
         title: название
+        content1: Описание здесь
       CSD U5 Encryption 1_2018_2019:
-        content1: Описание здесь
         title: название
+        content1: Описание здесь
       CSD U5 Encryption 2:
         content1: Описание здесь
       CSD U5 Encryption 2_2018:
@@ -94,8 +778,8 @@ ru:
       CSD U5 Encryption 2_2018_2019:
         content1: Описание здесь
       CSD U5 L13 SFLP Interpreting Data:
-        content1: Описание здесь
         title: название
+        content1: Описание здесь
       CSD U5 crosstab warmup:
         content1: Описание здесь
       CSD U5 crosstab warmup_2018:
@@ -103,1285 +787,971 @@ ru:
       CSD U5 crosstab warmup_2018_2019:
         content1: Описание здесь
       CSD U5 data visualization:
-        content1: Описание здесь
         title: название
+        content1: Описание здесь
       CSD U5 data visualization_2018:
-        content1: Описание здесь
         title: название
+        content1: Описание здесь
       CSD U5 data visualization_2018_2019:
-        content1: Описание здесь
         title: название
+        content1: Описание здесь
       CSD U5 student record:
-        content1: Описание здесь
         title: название
+        content1: Описание здесь
       CSD U5 student record_2018:
-        content1: Описание здесь
         title: название
+        content1: Описание здесь
       CSD U5 student record_2018_2019:
-        content1: Описание здесь
         title: название
+        content1: Описание здесь
       CSD U6 LED create intro:
         content1: Описание здесь
       CSD U6 LED create intro_2018:
         content1: Описание здесь
       CSD U6 LED create intro_2018_2019:
         content1: Описание здесь
+      CSD U6 array multi:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U6 array multi_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U6 array multi_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
       CSD U6 final intro:
         content1: Описание здесь
       CSD U6 final intro_2018:
         content1: Описание здесь
       CSD U6 final intro_2018_2019:
         content1: Описание здесь
+      CSD U6 setProperty predict multi:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U6 setProperty predict multi_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
       Internet Simulator Setup:
         content1: Описание здесь
       Internet Simulator Setup 2:
-        content1: Описание здесь
         title: название
+        content1: Описание здесь
       Internet Simulator Setup 3:
         content1: Описание здесь
+      K-1 Artist 1 Multi 1:
+        title: Вопрос с несколькими вариантами ответа
+        questions:
+        - text: Какие блоки решают эту головоломку?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Artist 1 Multi 2:
+        title: Вопрос с несколькими вариантами ответа
+        questions:
+        - text: Какие блоки рисуют квадрат?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Artist 2 Match 2:
+        title: Соответствие
+        content2: Сопоставь фигуры по типу.
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Bee 1 Multi 1:
+        title: Вопрос с несколькими вариантами ответа
+        questions:
+        - text: Сколько здесь порций нектара?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Bee 1 Multi 2:
+        title: Вопрос с несколькими вариантами ответа
+        questions:
+        - text: Сколько здесь порций нектара?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Bee Loops Match 1:
+        title: Соответствие
+        content2: Сопоставь блоки
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Big Event Match 1:
+        title: Соответствие
+        content2: Сопоставить комбинацию кнопок с танцевальными движениями.
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      K-1 Digital Footprint Multi 1:
+        title: Вопрос с несколькими вариантами ответа
+        questions:
+        - text: Какое животное оставило цифровой след, который подвергает его <strong>наибольшей
+            опасности</strong>?
+        answers:
+        - {}
+        - {}
+        - {}
+      K-1 Getting Loopy Multi 1:
+        title: Вопрос с несколькими вариантами ответа
+        questions:
+        - text: Как бы ты упростил эту последовательность с помощью циклов?
+        answers:
+        - {}
+        - {}
+        - {}
+      K-1 Happy Maps Multi 1:
+        title: Вопрос с несколькими вариантами ответа
+        questions:
+        - text: Какая стрелка направит Флурба к сокровищу?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Keep it Private Multi 1:
+        title: Вопрос с несколькими вариантами ответа
+        questions:
+        - text: Какой информацией следует <strong>не</strong> поделиться онлайн?
+        answers:
+        - {}
+        - {}
+        - {}
+      K-1 Maze Debugging Multi 1:
+        title: Вопрос с несколькими вариантами ответа
+        questions:
+        - text: Какой блок должен быть последним?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Maze Loops Multi 1:
+        title: Вопрос с несколькими вариантами ответа
+        questions:
+        - text: Выбери аналогичный блок «повторить».
+        answers:
+        - {}
+        - {}
+        - {}
+      K-1 Maze Loops Multi 2:
+        title: Вопрос с несколькими вариантами ответа
+        questions:
+        - text: Выбери правильный блок «повторить».
+        answers:
+        - {}
+        - {}
+        - {}
+      K-1 Maze Match 1:
+        title: Соответствие
+        content2: Сопоставь головоломки и блоки
+        pre_title: Инструкции
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Maze Multiple Choice 2:
+        title: Лабиринт
+        questions:
+        - text: С помощью какого ответа можно пройти этот уровень?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Move It Multi 1:
+        title: Вопрос с несколькими вариантами ответа
+        questions:
+        - text: Какой алгоритм приведет Флурба к цветам?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Plant a Seed Multi 1:
+        title: Вопрос с несколькими вариантами ответа
+        questions:
+        - text: Какой шаг должен быть в начале этого алгоритма?
+        answers:
+        - {}
+        - {}
+        - {}
+      K-1 Plant a Seed Multi 2:
+        title: Вопрос с несколькими вариантами ответа
+        questions:
+        - text: Какой шаг должен стоять на месте пропуска в этом алгоритме?
+        answers:
+        - {}
+        - {}
+        - {}
+      K-1 Word Search Multi 1:
+        title: Вопрос с несколькими вариантами ответа
+        questions:
+        - text: Какие блоки содержат буквы MOVE (ДВИЖЕНИЕ)?
+        answers:
+        - {}
+        - {}
+        - {}
+      K-1 Word Search Multi 3:
+        title: Вопрос с несколькими вариантами ответа
+        questions:
+        - text: Какое слово записано?
+        answers:
+        - text: SET (УСТАНОВИТЬ)
+        - {}
+        - text: ЮГ
       Multi-Screen Apps:
-        content1: Описание здесь
         title: название
+        content1: Описание здесь
       New Challenge Introduction:
-        content1: Описание здесь
         title: название
+        content1: Описание здесь
       OPD-K5 Stage3aGo:
-        content1: Описание здесь
         title: название
+        content1: Описание здесь
       Prepare for your presentation:
-        content1: Описание здесь
         title: название
+        content1: Описание здесь
       'Technique: Frequency Analysis':
         content1: Описание здесь
       Terminology Recap:
         content1: Описание здесь
-    match:
-      2-3 Big Event Match 1:
-        content2: Сопоставить комбинацию кнопок с танцевальными движениями.
-        title: Соответствие
-      2-3 Binary Match 1:
-        content2: Используй ключ, чтобы сопоставить каждый код с соответствующей буквой
-        questions:
-        - text: "<strong>N</strong>"
-        - text: "<strong>O</strong>"
-        - text: "<strong>P</strong>"
-        - text: "<strong>Q</strong>"
-        title: Соответствие
-      2-3 Graph Paper Match 1:
-        content1: Сопоставь сетку и программу.
-        title: Соответствие
-      2-3 Maze Match 2:
-        content1: Сопоставь блоки с головоломками
-        pre_title: Инструкции
-        title: 'Лабиринт: сопоставление'
-      2-3 artist loops match 1:
-        content2: Сопоставь цикл и форму
-      2-3 artist match 1:
-        content1: Сопоставь форму и блок.
-        title: Художник. Сопоставление
-      2-3 maze match 1:
-        content1: Сопоставь блоки с головоломками
-        title: Лабиринт. Сопоставление 1
-      4-5 Algorithms Match 1:
-        answers:
-        - text: "<h4>Обнулить счет Игрока 1</h4>"
-        - text: "<h4>Игрок 1 кидает кубик</h4>"
-        - text: "<h4>Добавить счет Игрока 1 к общему счету</h4>"
-        - text: "<h4>Сравни результаты игроков, чтобы увидеть победителя</h4>"
-        content1: Сопоставь шаги игры в кубики и порядок их расположения в алгоритме.
-        questions:
-        - text: "<h4>1)</h4>"
-        - text: "<h4>2)</h4>"
-        - text: "<h4>3)</h4>"
-        - text: "<h4>4)</h4>"
-        title: Соответствие
-      4-5 Computational Thinking Match 1:
-        content1: Каждый из этих автомобилей разобран на части. Сопоставь автомобиль
-          со списком деталей к нему.
-        questions:
-        - text: "<h3>Колеса/сторона: 2<br/>Окна/сторона: 0</h3>"
-        - text: "<h3>Колеса/сторона: 2<br/>Окна/сторона: 1</h3>"
-        - text: "<h3>Колеса/сторона: 2<br/>Окна/сторона: 6</h3>"
-        - text: "<h3>Колеса/сторона: 3<br/>Окна/сторона: 2</h3>"
-        title: Соответствие
-      4-5 Suncatchers Match 1:
-        answers:
-        - text: "<h4>STACK</h4>"
-        - text: "<h4>STAMP</h4>"
-        - text: "<h4>STAR</h4>"
-        - text: "<h4>RAMP</h4>"
-        content1: Сопоставь программы и образованные ими слова, используя предоставленные
-          ниже навыки.
-        title: Соответствие
-      4-5 maze match 1:
-        content1: Сопоставь блоки с головоломками
-        pre_title: Инструкции
-        title: 'Лабиринт: сопоставление'
-      K-1 Artist 2 Match 2:
-        content2: Сопоставь фигуры по типу.
-        title: Соответствие
-      K-1 Bee Loops Match 1:
-        content2: Сопоставь блоки
-        title: Соответствие
-      K-1 Big Event Match 1:
-        content2: Сопоставить комбинацию кнопок с танцевальными движениями.
-        title: Соответствие
-      K-1 Maze Match 1:
-        content2: Сопоставь головоломки и блоки
-        pre_title: Инструкции
-        title: Соответствие
-    multi:
-      2-3 Algorithms Multi 1:
-        answers:
-        - text: Начни с квадрата <br/>Помести треугольник над квадратом<br/>Помести
-            треугольник под квадратом
-          correct: false
-        - correct: true
-        - text: Начни с квадрата <br/> Помести параллелограмм над квадратом<br/> Помести
-            треугольник справа от параллелограмма
-          correct: false
-        - text: Начни с квадрата <br/> Помести треугольник под квадратом<br/> Помести
-            параллелограмм справа от треугольника
-          correct: false
-        questions:
-        - text: Выбери алгоритм для предоставленного изображения.
-        title: Вопрос с несколькими вариантами ответа
-      2-3 Algorithms Multi 2:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        content1: Начни с треугольника<br/>Помести квадрат под треугольником<br/>Помести
-          еще один треугольник под квадратом
-        questions:
-        - text: Какое изображение <em>не</em> соответствует этому алгоритму?
-        title: Вопрос с несколькими вариантами ответа
-      2-3 Conditionals Multi 1:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: Какой набор карт рассчитан правильно по правилам игры?
-        title: Вопрос с несколькими вариантами ответа
-      2-3 Getting Loopy Multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        questions:
-        - text: Как бы ты упростил эту последовательность с помощью циклов?
-        title: Вопрос с несколькими вариантами ответа
-      2-3 Graph Paper Multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: С помощью какой программы создано это изображение?
-        title: Вопрос с несколькими вариантами ответа
-      2-3 Maze Multi 2:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        title: Лабиринт. Вопрос с несколькими вариантами ответа
-      2-3 Relay Programming Multi 1:
-        answers:
-        - 
-        - 
-        - correct: true
-        title: Вопрос с несколькими вариантами ответа
-      2-3 Relay Programming Multi 2:
-        answers:
-        - 
-        - 
-        - correct: true
-        questions:
-        - text: Какая комбинация изображения и программы не содержит ошибок?
-        title: Вопрос с несколькими вариантами ответа
-      2-3 artist debug multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      2-3 artist functions multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Выбери правильные блоки, чтобы нарисовать это изображение с помощью
-            данной функции
-        title: Художник. Функции. Вопрос с несколькими вариантами ответа 1
-      2-3 artist loops multi 1:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: Какая форма получается этом цикле?
-        title: Художник. Циклы. Вопрос с несколькими вариантами ответа
-      2-3 artist loops multi 2:
-        answers:
-        - 
-        - 
-        - 
-        - correct: true
-        questions:
-        - text: Какая фигура выражена этой программой?
-        title: Художник. Циклы. Вопрос с несколькими вариантами ответа
-      2-3 bee conditionals multi 1:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: Какое из сравнений ниже верно?
-      2-3 bee conditionals multi 3:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Выбери лучшие блоки.
-      2-3 bee loops multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        questions:
-        - text: Какие блоки собирают весь нектар?
-        title: Пчела. Циклы. Вопрос с несколькими вариантами ответа 1
-      2-3 maze multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Какой набор блоков является правильным ответом?
-        title: Лабиринт. Вопрос с несколькими вариантами ответа 1
-      4-5 Algorithms Multi 1:
-        answers:
-        - text: Чистка зубов
-          correct: false
-        - text: Выпечка печенья
-          correct: false
-        - text: Покупки по списку продуктов
-          correct: false
-        - text: Банан
-          correct: true
-        questions:
-        - text: Алгоритм для какого из этих элементов труднее всего описать?
-        title: Вопрос с несколькими вариантами ответа
-      4-5 Computational Thinking Multi 1:
-        answers:
-        - text: Москва — _____ _____ _____.
-          correct: false
-        - text: _____ — это _____ город.
-          correct: true
-        - text: _____ — _____ это _____.
-          correct: false
-        - text: Тында – это _____ город.
-          correct: false
-        questions:
-        - text: Москва — это большой город.<br/>Самара — это средний город.<br/>Тында
-            — это маленький город.
-        title: Вопрос с несколькими вариантами ответа
-      4-5 Crowdsourcing Multi 1:
-        answers:
-        - 
-        - correct: true
-        questions:
-        - text: Какая из этих картинок лучше всего иллюстрирует краудсорсинг?
-        title: Вопрос с несколькими вариантами ответа
-      4-5 Crowdsourcing Multi 2:
-        answers:
-        - text: Уборка своей комнаты
-          correct: true
-        - text: Наслаждение десертом
-          correct: false
-        - text: Расчесывание волос
-          correct: false
-        - text: Умывание лица
-          correct: false
-        questions:
-        - text: Какой из этих видов деятельности больше подходит для краудсорсинга?
-        title: Вопрос с несколькими вариантами ответа
-      4-5 Digital Footprint Multi 1:
-        answers:
-        - text: Ваша дата рождения
-          correct: false
-        - text: Ваше любимое блюдо
-          correct: true
-        - text: Ваш адрес
-          correct: false
-        - text: Номер кредитной карты ваших родителей
-          correct: false
-        questions:
-        - text: Какой информацией из перечисленных ниже можно поделиться в интернете?
-        title: Вопрос с несколькими вариантами ответа
-      4-5 Internet Multi 1:
-        answers:
-        - 
-        - 
-        - 
-        - correct: true
-        questions:
-        - text: Когда ты заходишь на code.org, на какой IP-адрес тебя скорее всего
-            направят?
-        title: Вопрос с несколькими вариантами ответа
-      4-5 Internet Multi 2:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Если DNS отправил тебя на страницу с IP-адресом 100.42.50.110, на
-            каком ты сайте?
-        title: Вопрос с несколькими вариантами ответа
-      4-5 Songwriting Multi 1:
-        answers:
-        - text: Lou, Lou, skip to my Lou,
-          correct: false
-        - text: Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou,
-            Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.
-          correct: true
-        - 
-        - 
-        title: Вопрос с несколькими вариантами ответа
-      4-5 Suncatchers Multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: Какие из программ ниже <em>не</em> создают такую же последовательность
-            как программа 1?
-        title: Вопрос с несколькими вариантами ответа
-      4-5 artist loops multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Какие блоки создадут структуру кода?
-        title: Художник. Циклы. Вопрос с несколькими вариантами ответа
-      4-5 artist multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Какие блоки рисуют прямоугольник с периметром 100?
-        title: Художник. Вопрос с несколькими вариантами ответа
-      4-5 artist multi 2:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: Какой рисунок симметричен?
-        title: Художник. Вопрос с несколькими вариантами ответа
-      4-5 bee conditionals multi 1:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: Выбери лучшие блоки.
-        title: Пчела. Условные команды. Вопрос с несколькими вариантами ответа
-      4-5 bee debug multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Какая версия функции будет работать?
-        title: Пчела. Отладка. Вопрос с несколькими вариантами ответа
-      4-5 bee loops multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        questions:
-        - text: Какие блоки решат головоломку?
-        title: Пчела. Циклы. Вопрос с несколькими вариантами ответа
-      4-5 maze conditionals multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        questions:
-        - text: Какие блоки решают головоломку?
-        title: Лабиринт. Условные команды. Вопрос с несколькими вариантами ответа
-      4-5 maze multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        questions:
-        - text: Какие блоки решают головоломку?
-        title: Лабиринт. Вопрос с несколькими вариантами ответа
-      CSD Header Size MC:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      CSD Header Size MC_2018:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      CSD Header Size MC_2018_2019:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      CSD U3 Boolean MC:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        title: название
-      CSD U3 Boolean MC_2018:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        title: название
-      CSD U3 Boolean MC_2018_2019:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        title: название
-      CSD U3 Functions Prediction define first:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      CSD U3 Functions Prediction define first_2018:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      CSD U3 Functions Prediction define first_2018_2019:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      CSD U3 Sprite Movement Predict Multi:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      CSD U3 Sprite Movement Predict Multi_2018:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      CSD U3 Sprite Movement Predict Multi_2018_2019:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      CSD U3 Sprites intro predict multi:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      CSD U3 Sprites intro predict multi_2018:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      CSD U3 Sprites intro predict multi_2018_2019:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      CSD U6 array multi:
-        answers:
-        - 
-        - 
-        - 
-        - correct: true
-      CSD U6 array multi_2018:
-        answers:
-        - 
-        - 
-        - 
-        - correct: true
-      CSD U6 array multi_2018_2019:
-        answers:
-        - 
-        - 
-        - 
-        - correct: true
-      CSD U6 setProperty predict multi:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      CSD U6 setProperty predict multi_2018:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      CSD U6 setProperty predict multi_2018_2019:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      K-1 Artist 1 Multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Какие блоки решают эту головоломку?
-        title: Вопрос с несколькими вариантами ответа
-      K-1 Artist 1 Multi 2:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        questions:
-        - text: Какие блоки рисуют квадрат?
-        title: Вопрос с несколькими вариантами ответа
-      K-1 Bee 1 Multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Сколько здесь порций нектара?
-        title: Вопрос с несколькими вариантами ответа
-      K-1 Bee 1 Multi 2:
-        answers:
-        - 
-        - 
-        - 
-        - correct: true
-        questions:
-        - text: Сколько здесь порций нектара?
-        title: Вопрос с несколькими вариантами ответа
-      K-1 Digital Footprint Multi 1:
-        answers:
-        - 
-        - 
-        - correct: true
-        questions:
-        - text: Какое животное оставило цифровой след, который подвергает его <strong>наибольшей
-            опасности</strong>?
-        title: Вопрос с несколькими вариантами ответа
-      K-1 Getting Loopy Multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Как бы ты упростил эту последовательность с помощью циклов?
-        title: Вопрос с несколькими вариантами ответа
-      K-1 Happy Maps Multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Какая стрелка направит Флурба к сокровищу?
-        title: Вопрос с несколькими вариантами ответа
-      K-1 Keep it Private Multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Какой информацией следует <strong>не</strong> поделиться онлайн?
-        title: Вопрос с несколькими вариантами ответа
-      K-1 Maze Debugging Multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        questions:
-        - text: Какой блок должен быть последним?
-        title: Вопрос с несколькими вариантами ответа
-      K-1 Maze Loops Multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Выбери аналогичный блок «повторить».
-        title: Вопрос с несколькими вариантами ответа
-      K-1 Maze Loops Multi 2:
-        answers:
-        - 
-        - 
-        - correct: true
-        questions:
-        - text: Выбери правильный блок «повторить».
-        title: Вопрос с несколькими вариантами ответа
-      K-1 Maze Multiple Choice 2:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: С помощью какого ответа можно пройти этот уровень?
-        title: Лабиринт
-      K-1 Move It Multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Какой алгоритм приведет Флурба к цветам?
-        title: Вопрос с несколькими вариантами ответа
-      K-1 Plant a Seed Multi 1:
-        answers:
-        - 
-        - 
-        - correct: true
-        questions:
-        - text: Какой шаг должен быть в начале этого алгоритма?
-        title: Вопрос с несколькими вариантами ответа
-      K-1 Plant a Seed Multi 2:
-        answers:
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: Какой шаг должен стоять на месте пропуска в этом алгоритме?
-        title: Вопрос с несколькими вариантами ответа
-      K-1 Word Search Multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: Какие блоки содержат буквы MOVE (ДВИЖЕНИЕ)?
-        title: Вопрос с несколькими вариантами ответа
-      K-1 Word Search Multi 3:
-        answers:
-        - text: SET (УСТАНОВИТЬ)
-          correct: false
-        - correct: true
-        - text: ЮГ
-          correct: false
-        questions:
-        - text: Какое слово записано?
-        title: Вопрос с несколькими вариантами ответа
       behaviors 1 predict:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - correct: false
-          feedback: Неправильно
+        - {}
+        - {}
+        - {}
+        - feedback: Неправильно
       behaviors 4 predict:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - correct: false
-          feedback: Неправильно
+        - {}
+        - {}
+        - {}
+        - feedback: Неправильно
       courseC_multi_artist_prog6_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseC_multi_artist_prog6_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseC_multi_artist_prog6_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseC_multi_harvester_loops11_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseC_multi_harvester_loops11_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseC_multi_harvester_loops11_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseC_multi_maze_debugging8_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseC_multi_maze_debugging8_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseC_multi_maze_debugging8_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseC_multi_maze_programming8_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseC_multi_maze_programming8_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseC_multi_maze_programming8_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseC_multi_starWars_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
+        - {}
+        - {}
+        - {}
         - text: Я не знаю
-          correct: false
       courseC_multi_starWars_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
+        - {}
+        - {}
+        - {}
         - text: Я не знаю
-          correct: false
       courseC_multi_starWars_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
+        - {}
+        - {}
+        - {}
         - text: Я не знаю
-          correct: false
       courseC_multi_starWars_predict2:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseC_multi_starWars_predict2_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseC_multi_starWars_predict2_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_artist_binary8_predict1:
+        questions:
+        - {}
         answers:
         - text: А
-          correct: false
         - text: Б
-          correct: false
         - text: В
-          correct: false
         - text: Г
-          correct: true
       courseD_multi_artist_binary8_predict1_2018:
+        questions:
+        - {}
         answers:
         - text: А
-          correct: false
         - text: Б
-          correct: false
         - text: В
-          correct: false
         - text: Г
-          correct: true
       courseD_multi_artist_binary8_predict1_2018_2019:
+        questions:
+        - {}
         answers:
         - text: А
-          correct: false
         - text: Б
-          correct: false
         - text: В
-          correct: false
         - text: Г
-          correct: true
       courseD_multi_artist_nestedLoops9_predict1:
+        questions:
+        - {}
         answers:
         - text: А
-          correct: true
         - text: Б
-          correct: false
         - text: В
-          correct: false
-        - 
+        - {}
       courseD_multi_artist_nestedLoops9_predict1_2018:
+        questions:
+        - {}
         answers:
         - text: А
-          correct: true
         - text: Б
-          correct: false
         - text: В
-          correct: false
-        - 
+        - {}
       courseD_multi_artist_nestedLoops9_predict1_2018_2019:
+        questions:
+        - {}
         answers:
         - text: А
-          correct: true
         - text: Б
-          correct: false
         - text: В
-          correct: false
-        - 
+        - {}
       courseD_multi_bee_conditionals1_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_bee_conditionals1_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_bee_conditionals1_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_bee_conditionals7_predict2:
+        questions:
+        - {}
         answers:
-        - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_bee_conditionals7_predict2_2018:
+        questions:
+        - {}
         answers:
-        - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_bee_conditionals7_predict2_2018_2019:
+        questions:
+        - {}
         answers:
-        - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_bee_nestedLoops2_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_bee_nestedLoops2_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_bee_nestedLoops2_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_bee_nestedLoops9_predict2:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_bee_nestedLoops9_predict2_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_bee_nestedLoops9_predict2_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_collector_debugging10_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_farmer_condLoops9_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_farmer_condLoops9_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_farmer_condLoops9_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_farmer_ramp13:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_farmer_while10_predict2:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_farmer_while10_predict2_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_farmer_while10_predict2_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_farmer_while4_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_farmer_while4_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_farmer_while4_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_maze_until10_predict2:
+        questions:
+        - {}
         answers:
-        - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_maze_until10_predict2_2018:
+        questions:
+        - {}
         answers:
-        - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_maze_until10_predict2_2018_2019:
+        questions:
+        - {}
         answers:
-        - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_maze_until2_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_maze_until2_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_maze_until2_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_scrat_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
-      courseE_multi_artist_predict1:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseE_multi_bee_functions_predict1:
+        questions:
+        - {}
         answers:
-        - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseE_multi_farmer_functions11_predict:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - 
-        - correct: true
+        - {}
+        - {}
+        - {}
+        - {}
       courseE_multi_farmer_functions11_predict_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseE_multi_farmer_functions11_predict_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
-      courseE_multi_farmer_predict1:
-        answers:
-        - 
-        - 
-        - correct: true
-        - text: Я не знаю
-          correct: false
-      courseE_multi_farmer_predict2:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      courseE_multi_maze_predict1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseE_prediction_artistFunction1:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - 
-        - correct: true
+        - {}
+        - {}
+        - {}
+        - {}
       courseE_prediction_artistFunction1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - 
-        - correct: true
+        - {}
+        - {}
+        - {}
+        - {}
       courseE_prediction_artistFunction1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - 
-        - correct: true
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_bee_variables_8a_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_bee_variables_8a_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_multi_artist_for10_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_multi_artist_for10_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_multi_artist_for10_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_multi_artist_fwp2_predict1:
+        questions:
+        - {}
         answers:
-        - correct: true
-        - 
-        - 
-        - 
-      courseF_multi_artist_predict1:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_multi_artist_variables3a_predict1:
+        questions:
+        - {}
         answers:
-        - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_multi_artist_variables3a_predict1_2018:
+        questions:
+        - {}
         answers:
-        - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_multi_artist_variables3a_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_multi_bee_conditionals1_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_multi_bee_conditionals7_predict2:
+        questions:
+        - {}
         answers:
-        - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_multi_bee_for3_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_multi_bee_for3_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_multi_bee_for3_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_multi_bee_fwp9_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_multi_playlab_variables4c_predictive1:
+        questions:
+        - {}
         answers:
-        - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       coursee_prediction_artistfunction2:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       coursee_prediction_artistfunction2_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       coursee_prediction_artistfunction2_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       grade2_multi_collector_A_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       grade2_multi_collector_A_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       grade2_multi_collector_A_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}

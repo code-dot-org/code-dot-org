@@ -76,6 +76,7 @@ he:
   prize: 'פרס'
   more_info: 'מידע נוסף'
   auth:
+    continue_with: 'המשך באמצעות %{provider}'
     sign_in_with: 'היכנס באמצעות %{provider}'
     signed_in: 'נכנסת!'
     signed_out: 'התנתקת מ<a href="%{url}">Code.org</a>.'
@@ -90,12 +91,15 @@ he:
     clever: 'חשבון חכם'
     powerschool: 'חשבון בית-ספר חזק'
     forgot_password: 'שכחת את הסיסמא שלך?'
+    migration_success: 'הצלחת! עדכנת כעת את החשבון שלך לחווית המשתמש החדשה שלנו.'
+    demigration_success: 'חוויית המשתמש החדשה כרגע מבוטלת בחשבון שלך.'
     need_confirmation: "לא קיבלת את  ההוראות האישור?"
     need_unlock: "לא קיבלת את ההוראות הפתיחה?"
     not_linked: "מצטערים, חשבון Code.org שלך אינו מקושר ל%{provider}. עליך להתחבר בעזרת הקלדת ססמתך מטה."
     use_clever: "מצטערים, חשבון Code.org שלך אינו מקושר ל%{provider}. עליך להתחבר דרך \"הפורטל החכם\" שלך במקום."
     unable_to_connect_provider: "אין אפשרות להתחבר לחשבון Code.org שלך אל ה%{provider} שלך. אנא נסה שוב."
   signup_form:
+    email_signup: 'הירשם באמצעות הדוא"ל שלך'
     student_count: '%{count} תלמידים כבר נרשמו.'
     teacher_count: '%{count} מורים כבר נרשמו.'
     overview: 'הרשם לקבלת חשבון בכדי לעקוב אחר התקדמות וניהול הכיתה שלך. <a href="/">באפשרותך לדפדף בין השלבים והפאזלים השונים</a> ללא חשבון, אבל תידרש להירשם בכדי לשמור את התקדמותך ואת הפרויקטים שלך.'
@@ -313,6 +317,7 @@ he:
       signin: 'התחבר'
       signup: 'צור חשבון'
       already_registered: 'כבר נרשמת?'
+      pair_programming: 'תכנות בזוגות'
       team: 'צוות'
       driver: 'מחובר/ת'
       navigator: 'נווט'
@@ -369,6 +374,7 @@ he:
       example: 'דוגמא לפתרון'
       example_with_number: 'דוגמה לפתרון %{solution_number}'
       submitted_on: 'הוגש ב-'
+      last_updated: 'עודכן לאחרונה:'
       unsubmit: 'בטל הגשה'
       worked_with: 'עובד יחד עם'
       update_lock_settings: 'עדכן את הגדרות הנעילה כאן.'
@@ -516,7 +522,7 @@ he:
     teacher: 'הצג את הפתרון'
     teacher_no_solution: 'הפסק צפייה בפתרון'
     auth_error: 'אינך מורשה לראות את הפתרון.'
-    submit: 'עדכן מיקום אומן'
+    submit: 'עדכן מיקום אמן'
     direction: 'התחל כיוון (במעלות)'
   video:
     tab: 'וידאו.'
@@ -830,12 +836,14 @@ he:
     csf_jigsaw: 'פאזל'
     csf_loops: 'חזרות'
     csf_events: 'אירועים'
+    csf_online_safety: 'בטיחות ברשת'
     csf_binary: 'בינארי'
     csf_conditionals: 'תנאים'
     csf_functions: 'פונקציות'
     csf_variables: 'משתנים'
     csf_for_loops: 'בשביל לולאות'
     csf_internet: 'אינטרנט'
+    csf_warmup: 'חימום'
     csd1_1: 'פרק 1: הדרך לפתרון תהליך'
     csd1_2: 'פרק 2: מחשבים ופתרון בעיות'
     csd2_1: 'פרק 1: תוכן אינטרנט ו-HTML'
@@ -860,6 +868,7 @@ he:
     csp_variables: 'משתנים'
     csp_conditionals: 'תנאים'
     csp_functions: 'פונקציות'
+    csp_project: 'פּרוֹיֶקט'
     csp_lists: 'רשימות'
     csp_loops: 'חזרות'
   external_links:

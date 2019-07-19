@@ -2,238 +2,25 @@
 vi-VN:
   data:
     short_instructions:
-      2-3 Artist 1 new: "Chào, tôi là một họa sĩ. Tôi có thể vẽ hầu như mọi thứ theo
-        những dòng lệnh bạn viết. Hãy sử dụng các khối lệnh để giúp tôi vẽ các đường
-        thẳng màu xám. (Mỗi đường dài 100 pixel)\\\r \n\\\r"
-      2-3 Artist 11: 'Tạo đường viền cho biển báo dừng bằng cách vẽ một hình bát giác
-        cạnh dài 100 pixel. '
       2-3 Artist 12: Đặt khối "lặp lại nhiều lần" để tạo ra một "vòng tròn" giúp hoàn
         thành một nhãn cầu. Nếu mỗi di chuyển xoay phải 1 độ, bạn cần lặp lại bao
         nhiêu lần để hoàn thành vòng tròn? 180? 360? 500?
       2-3 Artist 2 new: 'Ngôi nhà này có một bức tường mới được hoàn thành một nửa.
         Mỗi bên là 100, nhưng đã hoàn thành một nửa là 50. Hoàn thành bức tường. '
-      2-3 Artist 3.4: Khối nhảy di chuyển người nghệ sĩ mà không vẽ. Lập nét đứt bằng
-        cách sử dụng hai khối nhảy và vẽ.
-      2-3 Artist 3new: Chiếc mũ đỏ cao 100 điểm ảnh. Hãy vẽ nốt một chiếc mũ đen thấp
-        hơn mũ đỏ 70 điểm ảnh. Chiều rộng của mũ đen là 50 điểm ảnh.
       2-3 Artist 4: Giúp tôi hoàn thành nhà cho con mèo này.
-      2-3 Artist 6: 'Căn nhà này cần một mái nhà! Vẽ hình tam giác.  Gợi ý: Cả 3 cạnh
-        đều dài như nhau.'
-      2-3 Artist 7: 'Hoàn thành vẽ nửa bên phải của cửa sổ cuối. Mỗi ô vuông của cửa
-        sổ dài 25 pixels. '
-      2-3 Artist 8: Hoàn thành các phòng cho mỗi động vật qua việc tách hình chữ nhật
-        thành 2 hình vuông có kích thước bằng nhau. Hình chữ nhật rộng 200 pixels
-        và cao 100 pixels.
-      2-3 Artist 9: Hoàn thành diều này
-      2-3 Artist Assessment 1: 'Đánh giá: Hoàn thành bản vẽ chiếc răng cuối, rộng
-        25 pixels và cao 25 pixels.'
-      2-3 Artist Debugging 1: Bạn có thể làm mũ này với chiều dài 100?
-      2-3 Artist Debugging 10: "Phím mũi tên điều khiển của tôi quá hẹp. \\\r\n\\\r
-        Bạn có thể làm nó rộng hơn 10 pixel không? \\\r\n\\\r\nThử chạy mã lệnh trước
-        để thấy lỗi sai."
-      2-3 Artist Debugging 11: Giúp tôi hoàn thành bông tuyết xinh đẹp này. Tôi cần
-        "lặp lại" bao nhiêu lần để hoàn thành nó?
-      2-3 Artist Debugging 2: "Dòng lệnh vẽ ria cho mèo bị sai. \\\r\n\\\r Hãy sửa
-        lại để mỗi chiếc ria dài bằng nhau."
-      2-3 Artist Debugging 3: "Thuyền của tôi có một cái lỗ! \\\r\n\\\r\nPhải sửa
-        như thế nào để khắc phục việc này?"
-      2-3 Artist Debugging 5: "Các lệnh để vẽ chân và bàn chân bị sai. \\\r\n\\\r\nBạn
-        có sửa được không?"
-      2-3 Artist Debugging 6: "Có vẻ như tôi đang ngồi trên một cái ghế thiếu một
-        chân! \\\r\n\\\r\nSửa lại mã lệnh để vẽ nốt chân còn lại."
-      2-3 Artist Debugging 7: "Có vẻ như chữ C trong từ \"code\" bị viết ngược \\\r\n\\\r\nBạn
-        có thể sửa lại nó không?"
-      2-3 Artist Debugging 8: "Giáo viên của tôi nói tôi phải hoàn tất những gì mình
-        bắt đầu! \\\r\n\\\r\nHãy giúp tôi hoàn tất cái chong chóng. Bạn có thấy nó
-        bị sai chỗ nào không?"
-      2-3 Artist Debugging 9: "Một cái gì đó đã bị tắt!\\\r\\\rMã lập trình cho thân
-        cây này đã bị sai rồi. Bạn có thể tìm hiểu làm cách nào để người nghệ sỹ theo
-        dõi thân cây đúng cách được không?"
-      2-3 Artist Debugging Assessment 1: 'Hình dạng này quá nhỏ. Bạn có thể làm cho
-        nó lớn hơn? Gợi ý: nó nên dài thêm 75 pixels mỗi bên.'
-      2-3 Artist Free Play: Tự do sáng tạo! Hãy bất thứ gì bạn thích.
-      2-3 Artist Functions 1: 'Xin chào. Tôi-nghệ sĩ zombie. Tôi thích vẽ! Giúp tôi
-        vẽ kính vuông.  Gợi ý: các cầu nối giữa các kính là 25 pixels ngắn hơn so
-        với độ dài cạnh vuông.'
-      2-3 Artist Functions 10: Đây là hai hàm, một để vẽ một chiếc bánh răng to và
-        một vẽ bánh răng nhỏ. Hãy dùng chúng để vẽ bên trong một cỗ máy!
-      2-3 Artist Functions 11: Chúng ta đã đổi tên hàm "vẽ hình vuông" thành "vẽ hình
-        lục giác", nhưng nó vẫn vẽ hình vuông. Bạn có thể sửa hàm "vẽ hình lục giác
-        sao cho nó vẽ ra lục giác với cạnh là 50 pixel không? Hãy vẽ bằng hàm này!
-      2-3 Artist Functions 11.5: "Đây là hàm vẽ hình lục giác. \\\r\n\\\r\nChuyện
-        ì sẽ xảy ra nếu bạn lặp hàm này 6 lần, xoay góc 60 độ sau mỗi vòng lặp?"
-      2-3 Artist Functions 12: "Hàm có thể vẽ những vật phức tạp nhiều lần một cách
-        tiện lợi. \\\r\n\\\r\nBạn có thể dùng hàm \"vẽ bông hoa\" để vẽ hết những
-        cây còn lại trong chậu không? \\\r\nCác bông hoa cách nhau 100 pixel."
-      2-3 Artist Functions 2: "Hàm giúp bạn tạo ra khối lệnh mới! \\\r\n\\\r\nChúng
-        ta đã đưa các khối lệnh dùng để vẽ hình vuông vào hàm mang tên \"vẽ hình vuông\".
-        Hãy dùng hàm, này để vẽ một khung cửa kính. \\\r\n\\\r\nCác hình vuông cách
-        nhau 75 pixel."
-      2-3 Artist Functions 3: "Chỉnh sửa hàm để vẽ một hình vuông với chiều dài cạnh
-        115 để vẽ khung kính lớn hơn. \\\r \\\r các ô vuông có bây giờ cách nhau 45
-        pixel."
-      2-3 Artist Functions 4: Bây giờ, đặt hàm vào trong một vòng lặp để vẽ ba hình
-        vuông.
-      2-3 Artist Functions 9: Đây là một hàm hoa tuyết. Thử nghiệm với nó để tạo ra
-        khung cảnh mùa đông! Đây là bàn tự do nên không có câu đố nào để giải. Chúc
-        vui vẻ!
-      2-3 Artist Loops New 1: Hãy vẽ đầu của chú robot này nhé. Bạn có thể vẽ 1 hình
-        vuông với các cạnh có 100 điểm ảnh không?
-      2-3 Artist Loops New 10: Giờ hãy nối các chữ V lại với nhau trong một vòng lặp.
-      2-3 Artist Loops New 11: Bây h bạn hãy vẽ lại nó 24 lần. rồi quay trái góc 30
-        độ tại điểm Code và đặt tất cả chúng vào trong một khối lặp lại.
-      2-3 Artist Loops New 12: Vẽ một viên kim cương với các mặt có 100 điểm ảnh.
-      2-3 Artist Loops New 13: bây giờ bạn hãy vẽ viên kim cương 3 lần trong vòng
-        lặp.
-      2-3 Artist Loops New 14: Tiếp theo hãy vẽ viên kim cương 10 lần, nhưng hãy xoay
-        viên kim cương 90 độ giữa mỗi viên.
+      2-3 Artist 9 NEW: Hoàn thành diều này
+      2-3 Artist Free Play: Chơi miễn phí! Vẽ bất cứ điều gì bạn muốn.
       2-3 Artist Loops New 15: Vẽ một cái gì đó vui vẻ.
-      2-3 Artist Loops New 2: Đây là một số mã bạn sử dụng để vẽ hình chữ nhật. Điều
-        gì xảy ra nếu bạn sử dụng các khối lặp lại để chạy mã này 4 lần?
-      2-3 Artist Loops New 9: Vẽ một V đơn giản mà cả hai bên là 50 điểm ảnh để hoàn
-        thành mũi tên.
-      2-3 Artist Nested Loops 1: "Bạn đã sử dụng vòng để vẽ hình dạng trước đó, nhưng
-        bạn có biết bạn có thể đặt một vòng lặp bên trong một vòng lặp? \\\r vẽ vòng
-        lặp toàn khối  3 lần để vẽ các mô hình."
       2-3 Artist Nested Loops 10: Lặp mã này 12 lần để hoàn thành các mô hình.
-      2-3 Artist Nested Loops 11: Lặp mã này 4 lần để hoàn thành các mô hình,   quay
-        90 độ sau khi mỗi vòng tròn.
       2-3 Artist Nested Loops 12: Lặp mã này 12 lần để hoàn thành các curls.
-      2-3 Artist Nested Loops 2: Bây giờ lặp tam giác 6 lần. Sau mỗi tam giác, bạn
-        sẽ cần quay 60 độ trước khi vẽ tiếp theo.
-      2-3 Artist Nested Loops 3: Bạn sẽ cần phải lặp tam giác 12 lần để vẽ mô hình
-        này. Phân chia số độ trong một vòng tròn (360) bởi số lượng các hình dạng
-        bạn đang vẽ (12) để tìm ra bao nhiêu lần quay sau khi mỗi hình dạng.
-      2-3 Artist Nested Loops 4: 'lặp lại hình kim cương này 12 lần để vẽ một bông
-        hoa. Gợi ý: 12 kim cương là giống như hình tam giác 12 bạn đã làm - bạn cần
-        phải quay bao nhiêu lần sau mỗi hình?'
-      2-3 Artist Nested Loops 5: Điền vào cửa sổ này xây dựng với một vòng lặp lồng
-        nhau. Các cửa sổ là 20 điểm ảnh dài và 20 pixel bên.
-      2-3 Artist Nested Loops 6: Khủng long này có 8 gai chạy lên đuôi của nó; mỗi
-        cành là 30 pixel dài. Vòng lặp tam giác 8 lần, nhưng chắc chắn rằng để di
-        chuyển về phía trước sau khi mỗi một.
-      2-3 Artist Nested Loops 7: Lặp tam giác này 10 lần để vẽ mặt trời. Bạn sẽ cần
-        để di chuyển và quay sau mỗi tam giác. Bạn có thể tìm ra số lần lặp cách chia
-        số độ trong vòng tròn với số hình dạng mà vẽ cho nó.
-      2-3 Artist Nested Loops 8: Bây giờ chúng ta hãy thêm ít cỏ vào bức tranh của
-        chúng ta. Mỗi chỏm cỏ là 50 pixel apart.
-      2-3 Artist Nested Loops 9: Chúng tôi sẽ hoàn thành hình ảnh này bằng cách thêm
-        một bông hoa.  Lặp lại hình kim cương 12 lần để vẽ hoa của bạn.
       2-3 Artist Nested Loops Free Play: chơi tự do, hãy vẽ cai gì đó thật dễ thương
         với các vòng lặp lồng vào nhau.
-      2-3 Bee Conditionals 11: Thu thập phấn hoa từ những bông có phấn.
-      2-3 Bee Conditionals 12: |-
-        Sử dụng một vòng lặp để kiểm tra và thu thập mật hoa
-        từ tất cả các bông hoa.
-      2-3 Bee Conditionals 13: |-
-        Hút mật hoa để làm mật ong.
-        Gợi ý: điều gì sẽ xảy ra nếu sử dụng hàm "if" để hút mật ở bông hoa đỏ?
-                   bạn có thể dùng vòng lặp để hoàn thành không?
-      2-3 Bee Conditionals 14: Thu thập phấn hoa và làm mật ong . Cẩn thận không lấy
-        phấn hoa từ hoa tím vì nó có thể không có phấn .
-      2-3 Bee Conditionals 15: Thu thập phấn hoa từ tất cả các bông.
-      2-3 Bee Conditionals 2: Xin chào, tôi là Ong! Hãy giúp tôi thu thập mật hoa
-        từ những bông hoa. Sử dụng hàm Loop.
-      2-3 Bee Conditionals 3: Giúp tôi thu thập tất cả mật hoa từ những bông hoa và
-        làm mật ong. Sử dụng một vòng lặp.
-      2-3 Bee Conditionals 5: Hãy cẩn thận không thu thập phấn hoa từ một bông hoa
-        tím nếu nó không có phấn. Trước tiên, bạn phải kiểm tra nếu phấn hoa bằng
-        1 sử dụng khối lệnh "nếu phấn hoa/mật hoa".
-      2-3 Bee Conditionals 6: Kiểm tra bông hoa này với một khối lệnh "nếu" để xem
-        nếu có phấn hoa không.
-      2-3 Bee Conditionals 7: Thu thập phấn hoa từ các bông hoa nếu nó có phấn.
-      2-3 Bee Conditionals 8: Cánh đồng này có cả hoa đỏ và hao tím. Ta biết trước
-        lượng phấn của hoa đỏ, nhưng không biết trước lượng phấn của hoa tím.
       2-3 Bee Conditionals 9: Thu thập tất cả phấn hoa từ từng bông.
-      2-3 Bee Conditionals Assessment 1: 'Bài tập: thu thật tất cả phấn hoa. Cẩn thận
-        không thu thập phấn hoa từ những bông hoa tím không có mật.'
-      2-3 Bee Debugging 1: Các khối lệnh cần phải được sửa lỗi. Hãy sửa (các) lỗi
-        để thu thập tất cả phấn hoa.
-      2-3 Bee Debugging 10: Trò chơi này sử dụng nhiều lệnh lặp. Hãy sửa lỗi để thu
-        thập tất cả các phấn hoa và tạo ra mật ong.
-      2-3 Bee Debugging 2: Bạn có thể tìm ra lỗi ở đây không? Hãy sửa lỗi để thu thập
-        tất cả phấn hoa.
-      2-3 Bee Debugging 3: "Có nhiều hoa đẹp quá!\\\r\n\\\r\nSửa lỗi để lấy được hết
-        phấn hoa."
-      2-3 Bee Debugging 4: Các khối lệnh cần phải được sửa lỗi. Hãy sửa (các) lỗi
-        để thu thập tất cả phấn hoa.
-      2-3 Bee Debugging 5: "Hoa trông ngon quá! \\\r \\\r sửa chữa lỗi đã để thu thập
-        tất cả phấn hoa.  Bây giờ, bạn có thể sử dụng cả chạy và bước."
-      2-3 Bee Debugging 6: "Thật là một thách thức ngọt ngào!\\\r\n\\\r\nSửa lỗi để
-        lấy được hết phấn hoa."
-      2-3 Bee Debugging 7: Sửa tất cả các lỗi để con ong lấy được phấn hoa và tạo
-        mật.
-      2-3 Bee Debugging 8: "Có nhiều hoa đẹp quá!\\\r\n\\\r\nSửa lỗi để lấy được hết
-        phấn hoa."
-      2-3 Bee Debugging 9: "Hãy cẩn thận!\\\r\n\\\r\nHãy sửa lỗi chương trình sau
-        để con ong lấy được hết phấn hoa và tạo mật."
-      2-3 Bee Debugging Assessment 1: "Bài tập: Bây giờ là lúc thể hiện những gì bạn
-        biết! \\\r \\\r sửa lỗi để thu thập tất cả phấn hoa hoa và làm tất cả mật
-        ong."
-      2-3 Bee Functions 1: Hàm là khối mã thực hiện một nhiệm vụ. Sử dụng Hàm "lấy
-        2 mật hoa" để thu thập mật hoa từ mỗi hoa.
-      2-3 Bee Functions 10: "Hoa màu tím thay đổi lượng phấn hoa từ 1 thành 0 hoặc
-        từ 0 thành 1 mỗi khi bạn chạy trò chơi.   \\\r \\\r tạo ra một hàm thu thập
-        phấn hoa chỉ tf các bông hoa màu tím mà có phấn."
-      2-3 Bee Functions 2: "Hàm là khối lệnh thực hiện một nhiệm vụ.  \\\r \\\r sử
-        dụng hàm 'lấy 5' để lấy  5 phấn hoa một lần."
       2-3 Bee Functions 3: Thu thập tất cả phấn hoa từ từng bông.
-      2-3 Bee Functions 4: "Chức năng 'di chuyển và lấy mật hoa' xoay chuyển con ong,
-        thu thập mật hoa và sau đó trả con ong để nơi nó bắt đầu.  \\\r \\\r sử dụng
-        các chức năng để thu thập tất cả mật hoa."
-      2-3 Bee Functions 5: Bây giờ hoa có nhiều phấn hơn. Chỉnh sửa hàm đã cho để
-        nó có thể thu thập 4 phấn hoa và sử dụng nó để thu thập tất cả phấn hoa từ
-        các bông hoa.
       2-3 Bee Functions 6: Bây giờ, sử dụng cùng hàm đó để thu thập phấn hoa từ 3
         bông hoa.
-      2-3 Bee Functions 8: Bạn hãy tự tạo 1 hàm để lấy 7 phấn hoa, di chuyển, và tạo
-        7 mật ong. Sử dụng hàm bạn tạo để thu thập phấn hoa từ từng bông hoa và tạo
-        mật ong ở từng tổ ong.
-      2-3 Bee Functions 9: Tạo ra các khối lệnh chức năng của riêng bạn bao gồm hoạt
-        động đi theo đuồng dẫn, lấy mật hoa, làm mật ong, và sau đó trở về vị trí
-        của con ong ở đầu đường dẫn.
-      2-3 Bee Functions Assessment 1: Sử dụng những khối lệnh chức năng có sẵn để
-        thu thập mật hoa từ mỗi bông hoa.
-      2-3 Bee Functions Assessment 2: Tạo ra một nhóm lệnh chức năng để con ong xoay,
-        di chuyển về phía trước và tạo ra 3 mật ong, sau đó về vị trí ban đầu và quay
-        trở lại.
-      2-3 Bee Loops 1: "Những bông hoa trông thật hấp dẫn! \\\r \\\r Hãy thu thập
-        mật hoa từ mỗi bông hoa bằng cách sử dụng ít nhất các lệnh có thể."
-      2-3 Bee Loops 10: Bạn có thể dùng một vòng lặp while trong 2 vòng lặp khác để
-        thu thập tất cả phấn hoa chứ?
-      2-3 Bee Loops 13: 'Cách đánh giá: Thu thập tất cả phấn hoadùng ít khối nhất
-        có thể.'
-      2-3 Bee Loops 1A: 'Xin chào, tôi là một chú ong. Bạn có thể giúp tôi thu thập
-        phấn hoa từ những bông hoa này không? '
-      2-3 Bee Loops 2: Thu thập tất cả mật hoa và làm tất cả trở thành mật ong bằng
-        cách sử dụng ít nhất các lệnh có thể.
       2-3 Bee Loops 2A: Lần này, dùng một vòng lặp để thu tập tất cả phấn hoa.
-      2-3 Bee Loops 3: Thu thập mật hoa từ mỗi bông hoa và làm mật ong tại mỗi tổ
-        ong và hãy sử dụng ít nhất các lệnh có thể.
       2-3 Bee Loops 3A: Dùng một vòng lặp `repeat`để thu thập tất cả phấn hoa.
-      2-3 Bee Loops 3B: Bây giờ dùng khối `repeat` để thu thập tất cả phấn hoa và
-        biến tất cả thành mật ong.
-      2-3 Bee Loops 4: "Quả là một chú ong bận rộn!\\\r\n\\\r\nHãy giúp chú ong thu
-        thập toàn bộ phấn hoa và biến chúng thành mật ong với ít khối nhất có thể."
-      2-3 Bee Loops 4A: "Vòng lặp có thể giúp bạn bao nhiêu lần trong trò chơi này?
-        \\\r\n\\\r\nCác vòng lặp là bạn của bạn! Dùng một vài trong số các vòng lặp
-        để hoàn thành trò chơi với số khối ít nhất có thể."
-      2-3 Bee Loops 5: "Hình dạng của con đường này khác với những con đường khác.\\\r\n\\\r\nBạn
-        có thể thu thập tất cả phấn hoa sử dụng ít khối nhất có thể chứ?"
-      2-3 Bee Loops 6: Bạn có thể tìm cách nhanh nhất để chú ong có thể thu thập tất
-        cả phấn hoa và biến chúng thành mật ong không?
-      2-3 Bee Loops 7: Cánh đồng hoa mới đẹp làm sao! Hãy giúp những chú ong tới thăm
-        từng bông hoa 1. Bạn có thể hoàn thành nhiệm vụ này trong vòng ít hơn 7 lệnh
-        được chứ?
-      2-3 Bee Loops 8: "Các bông hoa màu tím này co số lượng mật hoa khác nhau mỗi
-        khi bạn chạy câu đố.\\\r\n\\\r\nSử dụng vòng lặp 'mật hoa trắng' để thu thập
-        tất cả mật hoa.\\\r\n\\\r\nVòng lặp này sẽ tiếp tục chạy miễn là điều kiện
-        được thỏa mãn, trong trường hợp này 'mật hoa > 0'."
-      2-3 Bee Loops Assessment 1: Sử dụng vòng lặp "while" (khi) để thu thập mật ong
-        từ tất cả những bông hoa.
-      2-3 Maze 1: 'Bạn có thể giúp tôi bắt chú heo nghịch ngợm không? Sử dụng một
-        vài lệch "di chuyển về phía trước" (move forward), nằm dưới lệnh "khi chạy
-        chương trình" (when run), sau đó nhấn vào lệnh "Chạy chương trình" (run). '
       2-3 Maze 10: Hãy dẫn dắt tôi tới chỗ chú heo màu xanh lá cây! (Nhớ coi chừng
         thuốc nổ)
       2-3 Maze 4: Hãy dẫn dắt tôi tới chỗ chú heo màu xanh lá cây! (Nhớ coi chừng
@@ -242,46 +29,16 @@ vi-VN:
         thuốc nổ)
       2-3 Maze 9: Hãy dẫn dắt tôi tới chỗ chú heo màu xanh lá cây! (Nhớ coi chừng
         thuốc nổ)
-      4-5 Artist 11: Hoàn thành các dòng màu xanh lá cây. Các dòng dài 300 pixel và
-        cách nhau 15 pixel.
-      4-5 Artist 2: Tạo vòng lặp cho dòng lệnh sử dụng khối lệnh "nhắc lại" để hoàn
-        thành hình vuông.
-      4-5 Artist 3: Cái giường bông hoa hình chữ nhật này có chu vi 600. Chiều dài
-        là 200. Vẽ hình chữ nhật bằng cách sử dụng càng ít khối lệnh càng tốt.
       4-5 Artist 3.5: Cố gắng tìm hiểu xem điều gì xảy ra nếu bạn chạy đoạn mã này
         (hoặc chỉ cần nhấn nút "Chạy" và thử nó). Tiếp theo, lặp lại đoạn mã để hoàn
         thành bản vẽ!
       4-5 Artist 4: Có bao nhiêu độ trong 1 vòng tròn? Tạo vòng lặp cho các khối lệnh
         để tạo một vòng tròn màu sắc.
-      4-5 Artist 5: Những gì chúng ta có thể thay thế "???" để đảm bảo rằng xác chết
-        hoàn thành bản vẽ bằng cách sử dụng các vòng lặp được cung cấp?
-      4-5 Artist 6: Tam giác đều này có các góc là 60, 60, và 60 độ. Mỗi cạnh là 200
-        pixel. Hoàn tất bản vẽ.
-      4-5 Artist 7: Tam giác bên phải này có các góc là 30, 60, và 90 độ. Chiều dài
-        mặt nghiêng (chiều dài của cạnh huyền) là 200 pixel. Hoàn tất bản vẽ.
-      4-5 Artist 8: "Nửa đường kẻ trong lĩnh vực bóng đá là vuông góc với lề.   \\\r
-        Hình chữ nhật này có chu vi tổng cộng là 800 pixel, và nó dài 240 pixel. Nó
-        cao bao nhiêu?   \\\r \\\r Vẽ các đường bao và nửa dòng kẻ."
-      4-5 Artist 9: Vẽ nửa bên phải của hình ảnh này để thiết kế trở nên đối xứng.
-        Các hình tam giác đều là tam giác đều và các cạnh dài 50 pixel.
       4-5 Artist Assessment 1: 'Đánh giá: Sử dụng một vòng lặp để vẽ hình tam giác
         đều. Mỗi cạnh là 300 pixel.'
       4-5 Bee Debugging 10: Tìm các lỗi và sửa chúng.
       4-5 Bee Debugging 3: Tìm các lỗi và sửa chúng.
       4-5 Maze 3: Phải... đạt được... hoa hướng dương.
-      4-5 Maze 8: Sử dụng khối "lặp lại" để đưa con zombie tới chỗ hoa hướng dương.
-        (Tránh các Chompers!)
-      Course 4 Artist 12: "Trò chơi cảm hứng miễn phí: Bạn bây giờ đã học được tất
-        cả mọi thứ bạn cần biết để làm cho một mẫu như thế này! Nếu hình ảnh này truyền
-        cảm hứng cho bạn, cố gắng làm một cái gì đó tương tự. Nếu không, hãy tạo ra
-        thứ của riêng của bạn. \\\r \\\r muốn biết mô hình cảm hứng được tạo ra thế
-        nào?  Ghé thăm <https://studio.code.org/c/105765376/edit> cho các giải pháp."
-      Course 4 Artist Inspire: "Trò chơi cảm hứng miễn phí: Bạn bây giờ đã học được
-        tất cả mọi thứ bạn cần biết để làm cho một mẫu như thế này! Nếu hình ảnh này
-        truyền cảm hứng cho bạn, cố gắng làm một cái gì đó tương tự. Nếu không, hãy
-        tạo ra thứ của riêng của bạn. \\\r \\\r muốn biết mô hình cảm hứng được tạo
-        ra thế nào?  Ghé thăm <https://studio.code.org/c/105765376/edit> cho các giải
-        pháp."
       Course 4 Bee Params 5: Hãy bắt đầu từ đầu - bạn có thể tạo ra một chức năng
         mới được gọi là "lấy 5 mật hoa " với một tham số hướng?
       CourseD_Dance_Party_01: Kéo khối `make a new` vào trong không gian làm việc
@@ -391,17 +148,12 @@ vi-VN:
       K-1 Artist Loops 4: Một vòng lặp có thể giúp chúng ta vẽ đỉnh của tòa lâu đài
         này?
       K-1 Artist Loops 5: Bạn có thể lặp cái gì 4 lần để vẽ cầu thang này?
-      K-1 Artist Loops 6: Cái này cần 2 lần lặp; một lần lên cầu thang và một lần
-        xuống.
       K-1 Artist Loops 7: Bạn có thể hoàn thành họa tiết này với 2 vòng lặp?
       K-1 Artist Loops 8: Cầu thang này có nhiều bậc hơn.
       K-1 Artist Loops 9: 'Đánh giá: Dùng một vòng lặp để vẽ cầu thang'
       K-1 Artist Loops Free Play: Chơi miễn phi, hãy vẽ gì đó vui nhộn!
       K-1 Artist1 1: Vẽ chân người đàn ông với một đường
-      K-1 Artist1 10: Vẽ và nhảy để tạo nét đứt tới kho báu X
       K-1 Artist1 2: Vẽ bộ ria cho con mèo với 2 đường!
-      K-1 Artist1 3: Vẽ 2 đường hướng đông và 2 đường hướng bắc để hoàn thành ngôi
-        nhà!
       K-1 Artist1 4: Vẽ các đường lên, trên và xuống để hoàn thành lâu đài!
       K-1 Artist1 5: Vẽ thân của bông hoa này với hai dòng!
       K-1 Artist1 6: Hoàn thành bức tranh bằng cách sử dụng một khối nhảy!
@@ -415,17 +167,9 @@ vi-VN:
       K-1 Artist2 Assessment1: 'Đánh giá: Vẽ một hình vuông bên cạnh hình vuông khác.'
       K-1 Artist2 Free Draw: Vẽ bất cứ thứ gì!
       K-1 Artist2_7: Vẽ một hình chữ nhật để cho tủ quần áo có một ngăn kéo!
-      K-1 Bee 1: Đưa tôi đến chỗ bông hoa, lấy mật hoa, rồi đưa tôi tới tổ ong, và
-        làm mật ong
       K-1 Bee 11: Lấy ba mật hoa và sau đó làm một mật ong
       K-1 Bee 13: Lấy ba mật hoa và sau đó làm một mật ong!
-      K-1 Bee 14: Đưa tôi đến mật hoa, lấy chúng, đưa tôi đến chỗ mật ong, và làm
-        mật ong
       K-1 Bee 15: Lấy hai mật hoa để làm hai mật ong!
-      K-1 Bee 2: Đưa tôi đến chỗ bông hoa, lấy mật hoa, rồi đưa tôi tới tổ ong, và
-        làm mật ong
-      K-1 Bee 3: Đưa tôi đến chỗ bông hoa, lấy mật hoa, rồi đưa tôi tới tổ ong, và
-        làm mật ong
       K-1 Bee 4: Lấy hai mật hoa và sau đó làm hai mật ong!
       K-1 Bee 5: Lấy ba mật hoa và sau đó làm một mật ong!
       K-1 Bee 6: Lấy hai mật hoa và sau đó làm hai mật ong!
@@ -436,15 +180,6 @@ vi-VN:
       K-1 Bee Loops 11: 'Đánh giá: Sử dụng vòng lặp và lấy mật hoa và mật ong!'
       K-1 Bee Loops 12: 'Đánh giá: Sử dụng vòng lặp để lấy mật hoa, mật ong, và di
         chuyển!'
-      K-1 Bee Loops 2: Sử dụng một vòng lặp để di chuyển và sau đó lấy mật hoa và
-        làm mật ong!
-      K-1 Bee Loops 3: Sử dụng vòng để lấy mật hoa và làm mật ong!
-      K-1 Bee Loops 6: Sử dụng vòng lặp để lấy mật hoa, mật ong, và di chuyển!
-      K-1 Bee Loops 7: Sử dụng vòng để lấy mật hoa và làm mật ong!
-      K-1 Bee Loops 8: Sử dụng vòng để lấy mật hoa và làm mật ong!
-      K-1 Bee Loops 9: Sử dụng vòng lặp để lấy mật hoa, mật ong, và di chuyển!
-      K-1 artist 1 level 10: Vẽ một nét đứt bằng cách sử dụng cả hai khối nhảy và
-        vẽ
       K-1 artist 1 level 9: Vẽ cái này sử dụng ba dòng
       MC HOC 2016 Level 10: Đã đến lúc để tạo ra 1 thế giới Minecraft của riêng bạn
         rồi! Hãy tạo ra sinh vật và làm cho chúng làm theo những gì bạn muốn. Chúc
@@ -518,22 +253,7 @@ vi-VN:
       MC_HOC_2017_FP20x20: 'Chơi tự do: Thời gian để bạn tự khám phá và sáng tạo!'
       MC_HOC_2017_FP20x20_2019: 'Chơi tự do: Thời gian để bạn tự khám phá và sáng
         tạo!'
-      NEW Course 4 Artist Functions 11: Bây giờ chúng tôi muốn tạo ra một nhóm lệnh
-        chức năng gọi là "vẽ một đường bao gồm các hình vuông" trong đó vẽ sáu hình
-        vuông trong 1 hàng. Bạn có thể tạo ra nhóm lệnh này bằng cách sử dụng nhóm
-        lệnh "vẽ một hình vuông 20 pixels" mà chúng tôi đã tạo sẵn cho bạn không?
-      NEW Course 4 Artist Functions 12: Sử dụng nhóm lệnh chức năng "vẽ một đường
-        gồm các hình vuông" từ câu đố trước để vẽ mô hình này.
-      NEW Course 4 Artist Functions 13: 'Bạn có thể vẽ một hình ngôi sao sử dụng nhóm
-        lệnh chức năng "vẽ một đường bao gồm các hình vuông" được không?  '
       NEW Course 4 Artist Functions 14: 'Thời gian chơi tự do! '
-      NEW Course 4 Artist Functions 2: 'Bạn có thể vẽ 3 hình vuông 20 điểm ảnh khác
-        nhau? Gợi ý: mỗi ô vuông chứa 100 điểm ảnh'
-      NEW Course 4 Artist Params 7: 'Bạn có thể hoàn thành bản vẽ này? Gợi ý: Mỗi
-        tam giác có độ phân lớn hơn so với tam giác trước là 25.  Tam giác đầu tiên
-        có độ phân giải là 25.'
-      NEW Course 4 Bee For Loops 4 4: 'Bạn có thể giúp chú ong tìm kiếm phần còn lại
-        của mật ong bằng cách sử dụng vòng lặp không? '
       Overworld Avoid Monsters: Đi thẳng về phía một Creeper là một ý kiến không hay.
         Hãy di chuyển cẩn thận qua các Creeper và về đến nhà một cách an toàn.
       Overworld Avoid Monsters_2019: Đi thẳng về phía một Creeper là một ý kiến không

@@ -13,6 +13,8 @@
 
 const AWS = require("aws-sdk");
 const mysqlPromise = require("promise-mysql");
+// Uses API key from HONEYBADGER_API_KEY env variable
+const Honeybadger = require("honeybadger");
 
 const DB_CLUSTER_ID = process.env.DB_CLUSTER_ID;
 const DB_INSTANCE_ID = process.env.DB_INSTANCE_ID;
@@ -58,6 +60,7 @@ const restoreLatestSnapshot = async (rds, clusterId, instanceId) => {
     DBClusterIdentifier: clusterId,
     SnapshotIdentifier: mostRecentSnapshot.DBClusterSnapshotIdentifier,
     Engine: DB_ENGINE,
+    EngineVersion: mostRecentSnapshot.EngineVersion,
     DBSubnetGroupName: DB_SUBNET_GROUP_NAME
   };
 
@@ -67,14 +70,19 @@ const restoreLatestSnapshot = async (rds, clusterId, instanceId) => {
     DBInstanceClass: DB_INSTANCE_CLASS,
     DBClusterIdentifier: clusterId,
     DBInstanceIdentifier: instanceId,
-    Engine: DB_ENGINE
+    Engine: DB_ENGINE,
+    EngineVersion: mostRecentSnapshot.EngineVersion
   };
 
   await rds.createDBInstance(createInstanceParams).promise();
 
   await rds
     .waitFor("dBInstanceAvailable", {
-      DBInstanceIdentifier: instanceId
+      DBInstanceIdentifier: instanceId,
+      $waiter: {
+        maxAttempts: 120,
+        delay: 60 // seconds
+      }
     })
     .promise();
 };
@@ -162,6 +170,9 @@ const main = async () => {
     await verifyDb(rds, DB_INSTANCE_ID, NEW_PASSWORD);
     console.log("verified");
   } catch (error) {
+    Honeybadger.notify(error, {
+      name: "Offsite account snapshot verification"
+    });
     console.log(error);
     throw error;
   } finally {

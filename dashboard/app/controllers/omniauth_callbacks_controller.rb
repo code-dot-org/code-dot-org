@@ -164,7 +164,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     SignUpTracking.log_oauth_callback AuthenticationOption::GOOGLE, session
     prepare_locale_cookie user
 
-    if allows_google_classroom_takeover user
+    if allows_section_takeover user
       user = silent_takeover user, auth_hash
     end
     sign_in_user user
@@ -339,11 +339,11 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     scopes.include?(scope_name)
   end
 
-  def allows_google_classroom_takeover(user)
-    # Google Classroom does not provide student email addresses, so we want to perform
-    # silent takeover on these accounts, but *only if* the student hasn't made progress
-    # with the account created during the Google Classroom import.
-    user.persisted? && user.google_classroom_student? &&
+  def allows_section_takeover(user)
+    # OAuth providers do not necessarily provide student email addresses, so we
+    # want to perform silent takeover on these accounts, but *only if* the
+    # student hasn't made progress with the initial account
+    user.persisted? && user.oauth_student? &&
       user.email.blank? && user.hashed_email.blank? &&
       !user.has_activity?
   end
@@ -364,9 +364,10 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     provider = auth_hash.provider.to_s
 
     unless lookup_user.present?
-      # Even if silent takeover is not available for student imported from Google Classroom, we still want
-      # to attach the email received from Google login to the student's account since GC imports do not provide emails.
-      if allows_google_classroom_takeover(oauth_user)
+      # Even if silent takeover is not available for imported student, we still
+      # want to attach the email received from the provider to the student's
+      # account since many imports do not provide emails.
+      if allows_section_takeover(oauth_user)
         oauth_user.update_email_for(
           provider: provider,
           uid: auth_hash.uid,
@@ -376,8 +377,8 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
       return oauth_user
     end
 
-    # Transfer sections and destroy Google Classroom user if takeover is possible
-    if allows_google_classroom_takeover(oauth_user)
+    # Transfer sections and destroy new user if takeover is possible
+    if allows_section_takeover(oauth_user)
       return unless move_sections_and_destroy_source_user(
         source_user: oauth_user,
         destination_user: lookup_user,
@@ -388,7 +389,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
     begin
       if lookup_user.migrated?
-        AuthenticationOption.create!(
+        ao = AuthenticationOption.create!(
           user: lookup_user,
           email: lookup_email,
           credential_type: provider,
@@ -405,6 +406,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
         # deprecated in favor of microsoft_v2_auth.
         windowslive_auth_option = lookup_user.authentication_options.find {|auth_option| auth_option.credential_type == AuthenticationOption::WINDOWS_LIVE}
         if windowslive_auth_option.present? && provider == AuthenticationOption::MICROSOFT
+          lookup_user.update!(primary_contact_info: ao) if windowslive_auth_option.primary?
           windowslive_auth_option.destroy!
         end
       else
@@ -445,10 +447,12 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   end
 
   def allows_silent_takeover(oauth_user, auth_hash)
-    allow_takeover = auth_hash.provider.present?
-    allow_takeover &= AuthenticationOption::SILENT_TAKEOVER_CREDENTIAL_TYPES.include?(auth_hash.provider.to_s)
+    return false unless auth_hash.provider.present?
+    return false unless AuthenticationOption::SILENT_TAKEOVER_CREDENTIAL_TYPES.include?(auth_hash.provider.to_s)
+    return false if oauth_user.persisted?
+
     lookup_user = User.find_by_email_or_hashed_email(oauth_user.email)
-    allow_takeover && lookup_user && !oauth_user.persisted?
+    return !!lookup_user
   end
 
   def should_connect_provider?

@@ -4173,6 +4173,10 @@ es:
               name: Importación y exportación de datos
             Sample Apps:
               name: Aplicaciones de ejemplo
+        csp1-pilot:
+          stages:
+            Number Systems:
+              name: Sistemas de numeración
         time4csdemo:
           stages:
             Crowdsourcing:

@@ -793,21 +793,7 @@
   coursee_name: "Կուրս E"
   coursef-draft_name: Կուրս F
   coursef_name: "Կուրս F"
-  cspunit2_name: "CS Principles Unit 2"
-  cspunit3_name: "CS Principles Unit 3"
-  cspunit4_name: "CS Principles Unit 4"
-  cspunit5_name: "CS Principles Unit 5"
-  cspunit6_name: 'CS Principles Unit 6'
-  csp1-2017_name: 'Unit 1: The Internet'
-  csp2-2017_name: 'Unit 2: Digital Information'
-  csp1-2018_name: 'Unit 1: The Internet'
-  csp2-2018_name: 'Unit 2: Digital Information'
-  csp1_name: 'Unit 1: The Internet'
-  csp2_name: 'Unit 2: Digital Information'
-  cspassessment_name: "Full Test - 50 questions"
-  cspexam1-mWU7ilDYM9_name: Test Part 1 - 25 questions
-  cspexam2-AKwgAh1ac5_name: Test Part 2 - 25 questions
-  cspunit3_gradelevel: "Grades 9-12"
+  accelerated_name: "Արագացված Դասընթացի"
   20-hour_name: Արագացված Դասընթացի
   algebra_name: "CS in Algebra"
   AlgebraA_name: "CS in Algebra Course A"
@@ -817,12 +803,6 @@
   iceage_name: "Ice Age"
   minecraft_name: "Minecraft"
   starwarsblocks_name: "Star Wars (Blocks)"
-  math_category_name: "Մաթեմատիկա"
-  hoc_category_name: "Կոդի ժամ"
-  csf_category_name: "CS Fundamentals"
-  csp_category_name: "CS Principles"
-  csp17_category_name: "'16-'17 CS Principles"
-  cspexams_category_name: "CS Principles Practice Test"
   applab_name: "App Lab"
   applab_gradelevel: "տարեկան 13-ից ավելի"
   applab_shortdescription_congrats: "App Lab is a programming environment where you can make simple apps. Design an app, code with blocks or JavaScript to make it work, then share your app in seconds"
@@ -1205,7 +1185,6 @@
   header_project_gallery: "ծրագրեր"
   header_educate_hoc: "Կոդի ժամ"
   header_stats: "Վիճակագրություն"
-  csp_name: "'16-'17 CS Principles"
   user_header_label: "Բարև %{username}"
   user_header_settings: "Իմ էջը"
   user_header_logout: "Դուրս գալ"

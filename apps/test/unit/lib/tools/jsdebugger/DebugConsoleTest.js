@@ -13,7 +13,6 @@ import {
 } from '@cdo/apps/redux';
 import {KeyCodes} from '@cdo/apps/constants';
 import JSInterpreter from '@cdo/apps/lib/tools/jsinterpreter/JSInterpreter';
-import experiments from '@cdo/apps/util/experiments';
 
 describe('The DebugConsole component', () => {
   let root;
@@ -73,7 +72,7 @@ describe('The DebugConsole component', () => {
       });
 
       it('a notice about the interpreter not running gets spit out', () => {
-        expect(debugOutput().text()).to.contain('< (not running)');
+        expect(debugOutput().text()).to.contain('< "(not running)"');
       });
 
       it('the text gets removed from the input', () => {
@@ -159,7 +158,7 @@ describe('The DebugConsole component', () => {
       });
 
       it('no notice about the interpreter not running gets spit out', () => {
-        expect(debugOutput().text()).not.to.contain('< (not running)');
+        expect(debugOutput().text()).not.to.contain('< "(not running)"');
       });
 
       it('the result of evaluating the expression gets spit out', () => {
@@ -168,6 +167,109 @@ describe('The DebugConsole component', () => {
 
       it('the text gets removed from the input', () => {
         expect(debugInputText()).not.to.contain('1+1;');
+      });
+    });
+
+    describe('when input originates from code workspace console.logging', () => {
+      it('a logged array prints an array with an expander icon', () => {
+        getStore().dispatch(
+          actions.appendLog({
+            output: ['test'],
+            fromConsoleLog: true
+          })
+        );
+        expect(debugOutput().text()).to.equal('▶["test"]');
+      });
+
+      it('a logged string prints a string without an arrow', () => {
+        getStore().dispatch(
+          actions.appendLog({
+            output: 'hello world',
+            fromConsoleLog: true
+          })
+        );
+        expect(debugOutput().text()).to.equal('"hello world"');
+      });
+
+      it('a logged integer or mathematical operation prints an integer without an arrow', () => {
+        getStore().dispatch(
+          actions.appendLog({
+            output: 1 + 1,
+            fromConsoleLog: true
+          })
+        );
+        expect(debugOutput().text()).to.equal('2');
+      });
+
+      it('a logged object prints an object with an expandable arrow', () => {
+        getStore().dispatch(
+          actions.appendLog({
+            output: {foo: 'bar'},
+            fromConsoleLog: true
+          })
+        );
+        expect(debugOutput().text()).to.equal('▶Object {foo: "bar"}');
+      });
+    });
+
+    describe('when input originates from the command prompt in the debug console', () => {
+      it('the original array is prepended with >, and the interpreted array with an expander icon is prepended with < ', () => {
+        getStore().dispatch(
+          actions.appendLog({
+            input: '["test"]'
+          })
+        );
+        getStore().dispatch(
+          actions.appendLog({
+            output: ['test']
+          })
+        );
+        expect(debugOutput().text()).to.equal('> ["test"]< ▶["test"]');
+      });
+
+      it('the original string is prepended with >, and the interpreted string is prepended with <', () => {
+        var input = 'hello world';
+        getStore().dispatch(
+          actions.appendLog({
+            input: input
+          })
+        );
+        getStore().dispatch(
+          actions.appendLog({
+            output: input
+          })
+        );
+        expect(debugOutput().text()).to.equal(`> ${input}< "${input}"`);
+      });
+
+      it('the original integer or mathematical operation is prepended with >, and the interpreted integer or mathematical operation is prepended with <', () => {
+        getStore().dispatch(
+          actions.appendLog({
+            input: '1 + 1'
+          })
+        );
+        getStore().dispatch(
+          actions.appendLog({
+            output: 1 + 1
+          })
+        );
+        expect(debugOutput().text()).to.equal('> 1 + 1< 2');
+      });
+
+      it('the original object is prepended with >, and the interpreted object with an expander icon is prepended with <', () => {
+        getStore().dispatch(
+          actions.appendLog({
+            input: "{foo: 'bar'}"
+          })
+        );
+        getStore().dispatch(
+          actions.appendLog({
+            output: {foo: 'bar'}
+          })
+        );
+        expect(debugOutput().text()).to.equal(
+          '> {foo: \'bar\'}< ▶Object {foo: "bar"}'
+        );
       });
     });
 
@@ -180,7 +282,7 @@ describe('The DebugConsole component', () => {
 
       it('the error gets appended to the output', () => {
         expect(debugOutput().text()).to.contain(
-          '< ReferenceError: a is not defined'
+          '< "ReferenceError: a is not defined"'
         );
       });
     });
@@ -216,151 +318,30 @@ describe('The DebugConsole component', () => {
 
   describe('debug output highlighting behavior', () => {
     it('normal debug output will not change background color', () => {
-      getStore().dispatch(actions.appendLog('test normal text'));
+      getStore().dispatch(actions.appendLog({output: 'test normal text'}));
       expect(debugOutput().instance().style.backgroundColor).to.equal('');
     });
 
     it('warning debug output will change background color to lightest yellow', () => {
-      getStore().dispatch(actions.appendLog('test normal text'));
-      getStore().dispatch(actions.appendLog('test warning text', 'WARNING'));
+      getStore().dispatch(actions.appendLog({output: 'test normal text'}));
+      getStore().dispatch(
+        actions.appendLog({output: 'test warning text'}, 'WARNING')
+      );
       expect(debugOutput().instance().style.backgroundColor).to.equal(
         'rgb(255, 247, 223)'
       );
     });
 
     it('error debug output will change background color to lightest red', () => {
-      getStore().dispatch(actions.appendLog('test normal text'));
-      getStore().dispatch(actions.appendLog('test warning text', 'WARNING'));
-      getStore().dispatch(actions.appendLog('test error text', 'ERROR'));
+      getStore().dispatch(actions.appendLog({output: 'test normal text'}));
+      getStore().dispatch(
+        actions.appendLog({output: 'test warning text'}, 'WARNING')
+      );
+      getStore().dispatch(
+        actions.appendLog({output: 'test error text'}, 'ERROR')
+      );
       expect(debugOutput().instance().style.backgroundColor).to.equal(
         'rgb(255, 204, 204)'
-      );
-    });
-  });
-});
-
-describe('The DebugConsole component with the react-inspector flag on', () => {
-  let root;
-
-  beforeEach(() => {
-    stubRedux();
-    registerReducers(reducers);
-    sinon.stub(experiments, 'isEnabled').returns(true);
-    expect(experiments.isEnabled('react-inspector')).to.equal(true);
-
-    root = mount(
-      <Provider store={getStore()}>
-        <DebugConsole showReactInspector={true} />
-      </Provider>
-    );
-  });
-
-  afterEach(() => {
-    experiments.isEnabled.restore();
-    restoreRedux();
-  });
-
-  const debugOutput = () => root.find('#debug-output');
-
-  describe('when input originates from code workspace console.log', () => {
-    it('a logged array prints an array with an expander icon', () => {
-      getStore().dispatch(
-        actions.appendLog({
-          output: ['test'],
-          fromConsoleLog: true
-        })
-      );
-      expect(debugOutput().text()).to.equal('▶["test"]');
-    });
-
-    it('a logged string prints a string without an arrow', () => {
-      getStore().dispatch(
-        actions.appendLog({
-          output: 'hello world',
-          fromConsoleLog: true
-        })
-      );
-      expect(debugOutput().text()).to.equal('"hello world"');
-    });
-
-    it('a logged integer or mathematical operation prints an integer without an arrow', () => {
-      getStore().dispatch(
-        actions.appendLog({
-          output: 1 + 1,
-          fromConsoleLog: true
-        })
-      );
-      expect(debugOutput().text()).to.equal('2');
-    });
-
-    it('a logged object prints an object with an expandable arrow', () => {
-      getStore().dispatch(
-        actions.appendLog({
-          output: {foo: 'bar'},
-          fromConsoleLog: true
-        })
-      );
-      expect(debugOutput().text()).to.equal('▶Object {foo: "bar"}');
-    });
-  });
-
-  describe('when input originates from the command prompt in the debug console', () => {
-    it('the original array is prepended with >, and the interpreted array with an expander icon is prepended with < ', () => {
-      getStore().dispatch(
-        actions.appendLog({
-          input: '["test"]'
-        })
-      );
-      getStore().dispatch(
-        actions.appendLog({
-          output: ['test']
-        })
-      );
-      expect(debugOutput().text()).to.equal('> ["test"]< ▶["test"]');
-    });
-
-    it('the original string is prepended with >, and the interpreted string is prepended with <', () => {
-      var input = 'hello world';
-      getStore().dispatch(
-        actions.appendLog({
-          input: input
-        })
-      );
-      getStore().dispatch(
-        actions.appendLog({
-          output: input
-        })
-      );
-      expect(debugOutput().text()).to.equal(`> ${input}< "${input}"`);
-    });
-
-    it('the original integer or mathematical operation is prepended with >, and the interpreted integer or mathematical operation is prepended with <', () => {
-      getStore().dispatch(
-        actions.appendLog({
-          input: '1 + 1'
-        })
-      );
-      getStore().dispatch(
-        actions.appendLog({
-          output: 1 + 1
-        })
-      );
-      expect(debugOutput().text()).to.equal('> 1 + 1< 2');
-    });
-
-    it('the original object is prepended with >, and the interpreted object with an expander icon is prepended with <', () => {
-      getStore().dispatch(
-        actions.appendLog({
-          input: "{foo: 'bar'}"
-        })
-      );
-      getStore().dispatch(
-        actions.appendLog({
-          output: {foo: 'bar'}
-        })
-      );
-      expect(debugOutput().text()).to.equal(
-        '> {foo: \'bar\'}< ▶Object {foo: "bar"}'
       );
     });
   });

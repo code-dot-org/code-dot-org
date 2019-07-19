@@ -2396,6 +2396,10 @@ nn:
           stages:
             While Loops:
               name: Medan-løkker
+        csp1-pilot:
+          stages:
+            Number Systems:
+              name: Talsystem
         time4csdemo:
           stages:
             Crowdsourcing:

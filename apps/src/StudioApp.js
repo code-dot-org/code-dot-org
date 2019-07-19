@@ -2030,6 +2030,10 @@ StudioApp.prototype.configureDom = function(config) {
     }
   }
 
+  // This prevents the app from extending offscreen when opening/closing the
+  // toolbox (if the app has a collapsible toolbox).
+  container.style.overflow = 'hidden';
+
   if (config.readonlyWorkspace) {
     $(codeWorkspace).addClass('readonly');
   }
@@ -3221,7 +3225,8 @@ StudioApp.prototype.setPageConstants = function(config, appSpecificConstants) {
         !!config.level.projectTemplateLevelName &&
         !config.level.isK1 &&
         !config.readonlyWorkspace,
-      serverLevelId: config.serverLevelId
+      serverLevelId: config.serverLevelId,
+      serverScriptLevelId: config.serverScriptLevelId
     },
     appSpecificConstants
   );

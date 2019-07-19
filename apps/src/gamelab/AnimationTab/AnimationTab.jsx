@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import Radium from 'radium';
 import {connect} from 'react-redux';
-import color from '../../util/color';
+import color from '@cdo/apps/util/color';
 import AnimationPicker from '../AnimationPicker/AnimationPicker';
 import GameLabVisualizationHeader from '../GameLabVisualizationHeader';
 import {setColumnSizes} from './animationTabModule';

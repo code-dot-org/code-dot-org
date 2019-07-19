@@ -1223,4 +1223,58 @@ class ActivitiesControllerTest < ActionController::TestCase
     # panda_panda contains a panda emoji, ensure that it's gone
     assert_equal user_level.level_source.data, 'Panda'
   end
+
+  test "milestone updates assessment activities for multi assessments" do
+    post :milestone, params: @milestone_params
+    assert_nil AssessmentActivity.find_by(user_id: @user, level_id: @script_level.id, script_id: @script_level.script.id)
+
+    assessment_script_level = create :script_level, assessment: true
+    post :milestone, params: @milestone_params.merge(script_level_id: assessment_script_level.id)
+    assert_nil AssessmentActivity.find_by(user_id: @user, level_id: assessment_script_level.level.id, script_id: assessment_script_level.script.id)
+
+    multi_level = create :multi
+
+    multi_sl = create :script_level, levels: [multi_level]
+    post :milestone, params: @milestone_params.merge(script_level_id: multi_sl.id)
+    assert_nil AssessmentActivity.find_by(user_id: @user, level_id: multi_sl.level.id, script_id: multi_sl.script.id)
+
+    assessment_multi_sl = create :script_level, levels: [multi_level], assessment: true
+    milestone_params = @milestone_params.merge(
+      script_level_id: assessment_multi_sl.id, program: '0'
+    )
+    post :milestone, params: milestone_params
+    assessment_activity = AssessmentActivity.find_by(
+      user_id: @user,
+      level_id: assessment_multi_sl.level.id,
+      script_id: assessment_multi_sl.script.id
+    )
+    refute_nil assessment_activity
+    assert_equal @milestone_params[:attempt].to_i, assessment_activity.attempt
+    assert_equal @milestone_params[:testResult].to_i, assessment_activity.test_result
+
+    # allow multiple entries to be created
+
+    post :milestone, params: milestone_params.merge(attempt: '2', program: '4')
+    post :milestone, params: milestone_params.merge(attempt: '3', program: '5')
+    assessment_activities = AssessmentActivity.where(
+      user_id: @user,
+      level_id: assessment_multi_sl.level.id,
+      script_id: assessment_multi_sl.script.id
+    ).all
+    assert_equal [1, 2, 3], assessment_activities.map(&:attempt)
+    answers = assessment_activities.map {|aa| LevelSource.find(aa.level_source_id)&.data}
+    assert_equal ['0', '4', '5'], answers
+
+    # make sure that we don't create an AssessmentActivity when the multi level
+    # is updated within an assessment level group.
+
+    multi_sublevel = create :multi
+    level_group = create :level_group, name: 'assessment-level-group'
+    script_level = create :script_level, levels: [level_group], assessment: true
+    post :milestone, params: @milestone_params.merge(
+      script_level_id: script_level.id,
+      level_id: multi_sublevel.id
+    )
+    assert_nil AssessmentActivity.find_by(user_id: @user, level_id: multi_sublevel.id)
+  end
 end

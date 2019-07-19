@@ -17,7 +17,8 @@ export default class StudentHomepage extends Component {
     courses: shapes.courses,
     topCourse: shapes.topCourse,
     sections: shapes.sections,
-    canViewAdvancedTools: PropTypes.bool
+    canViewAdvancedTools: PropTypes.bool,
+    studentId: PropTypes.number.isRequired
   };
 
   componentDidMount() {
@@ -29,17 +30,14 @@ export default class StudentHomepage extends Component {
 
   render() {
     const {courses, sections, topCourse} = this.props;
-    const {canViewAdvancedTools} = this.props;
+    const {canViewAdvancedTools, studentId} = this.props;
 
     return (
       <div>
         <HeaderBanner headingText={i18n.homepageHeading()} short={true} />
         <ProtectedStatefulDiv ref="flashes" />
         {experiments.isEnabled(experiments.FEEDBACK_NOTIFICATION) && (
-          <StudentFeedbackNotification
-            numFeedbackLevels="2"
-            linkToFeedbackOverview="/"
-          />
+          <StudentFeedbackNotification studentId={studentId} />
         )}
         <RecentCourses
           courses={courses}

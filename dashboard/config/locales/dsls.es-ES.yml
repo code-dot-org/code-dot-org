@@ -1,71 +1,758 @@
 ---
-es:
+es-ES:
   data:
-    external:
+    dsls:
+      2-3 Algorithms Multi 1:
+        title: "- Respuesta múltiple"
+        questions:
+        - text: Elige un algoritmo para esta imagen
+        answers:
+        - text: Comienza con un cuadrado<br/>Pon un triángulo sobre cuadrado<br/>Pon
+            un triángulo debajo del cuadrado
+        - {}
+        - text: Comienza con un cuadrado <br/> Pon un paralelogramo sobre el cuadrado
+            <br/> Pon un triángulo a la derecha del paralelogramo
+        - text: Comienza con un cuadrado <br/> Pon un triángulo debajo del cuadrado
+            <br/> Pon un paralelogramo a la derecha del triángulo
+      2-3 Algorithms Multi 2:
+        title: "- Respuesta múltiple"
+        content1: Comienza con un triángulo <br/>Pon un cuadrado debajo del triángulo<br/>Pon
+          otro triángulo debajo del cuadrado
+        questions:
+        - text: "¿Qué imagen <em>no</em> sigue este algoritmo?"
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 Big Event Match 1:
+        title: Emparejar
+        content2: Haz que coincidan las combinaciones de botones con los movimientos.
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 Binary Match 1:
+        title: Emparejar
+        content2: Usa la clave para unir cada código con su letra
+        questions:
+        - text: "<strong>N</strong>"
+        - text: "<strong>O</strong>"
+        - text: "<strong>P</strong>"
+        - text: "<strong>Q</strong>"
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 Conditionals Multi 1:
+        title: "- Respuesta múltiple"
+        questions:
+        - text: Según las reglas del juego ¿Qué conjunto de cartas tienen la puntuación
+            correcta?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 Getting Loopy Multi 1:
+        title: "- Respuesta múltiple"
+        questions:
+        - text: "¿Cómo simplificarías esta secuencia con bucles?"
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 Graph Paper Match 1:
+        title: Emparejar
+        content1: Haz coincidir la cuadrícula con el programa.
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      2-3 Graph Paper Multi 1:
+        title: "- Respuesta múltiple"
+        questions:
+        - text: "¿Qué programa hace esta imagen?"
+        answers:
+        - {}
+        - {}
+        - {}
+      2-3 Maze Match 2:
+        title: Partida del Laberinto
+        content1: Une los rompecabezas a los bloques
+        pre_title: Instrucciones
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      2-3 Maze Multi 2:
+        title: Laberinto - Opción Múltiple
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 Relay Programming Multi 1:
+        title: "- Respuesta múltiple"
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      2-3 Relay Programming Multi 2:
+        title: "- Respuesta múltiple"
+        questions:
+        - text: "¿Qué combinación imagen-programa no tiene errores?"
+        answers:
+        - {}
+        - {}
+        - {}
+      2-3 artist debug multi 1:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 artist functions multi 1:
+        title: Funciones del Artista - Opción Múltiple Uno
+        questions:
+        - text: Elegir los bloques correctos para dibujar esta imagen usando las funciones
+            dadas
+        answers:
+        - {}
+        - {}
+        - {}
+      2-3 artist loops match 1:
+        content2: Haz coincidir el bucle con la figura
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 artist loops multi 1:
+        title: Bucles del Artista - Opción Múltiple
+        questions:
+        - text: "¿Qué figura hace este bucle?"
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 artist loops multi 2:
+        title: Bucles del Artista - Opción Múltiple
+        questions:
+        - text: "¿Qué figura se forma a partir de este programa?"
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 artist match 1:
+        title: Artista que coincide
+        content1: Haz coincidir la figura con los bloques que la completan.
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 bee conditionals multi 1:
+        questions:
+        - text: "¿Qué comparación de las de abajo es verdadera?"
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 bee conditionals multi 3:
+        questions:
+        - text: Escoge el mejor bloque.
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 bee loops multi 1:
+        title: Bucles de la Abeja - Opción Múltiple Uno
+        questions:
+        - text: "¿Qué bloques recogen todo el néctar?"
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 maze match 1:
+        title: Partido Uno del Laberinto
+        content1: Une los rompecabezas a los bloques
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      2-3 maze multi 1:
+        title: Laberinto de Opción Múltiple Uno
+        questions:
+        - text: "¿Qué conjunto de bloques forma la respuesta correcta?"
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 Algorithms Match 1:
+        title: Emparejar
+        content1: Une los pasos en el juego Carrera de Dados al orden que deben aparecer
+          en el algoritmo.
+        questions:
+        - text: "<h4>1)</h4>"
+        - text: "<h4>2)</h4>"
+        - text: "<h4>3)</h4>"
+        - text: "<h4>4)</h4>"
+        answers:
+        - text: "<h4>Establecer puntuación del Jugador 1 a 0</h4>"
+        - text: "<h4>Los roles del Jugador 1 mueren</h4>"
+        - text: "<h4>Añadir el rol del Jugador 1 a puntuación total</h4>"
+        - text: "<h4>Comparar puntuación de jugadores para ver quien gana</h4>"
+      4-5 Algorithms Multi 1:
+        title: "- Respuesta múltiple"
+        questions:
+        - text: "¿Cuál de estos elementos es más difícil de describir con un algoritmo?"
+        answers:
+        - text: Cepillarte los dientes
+        - text: Horneando galletas
+        - text: Hacer la compra con una lista de compras
+        - text: Plátano
+      4-5 Computational Thinking Match 1:
+        title: Emparejar
+        content1: Cada uno de estos vehículos ha sido descompuesto en pedazos más
+          pequeños. Relacionar cada vehículo descompuesto con su lista.
+        questions:
+        - text: "<h3>Ruedas/lado: 2<br/> Ventanas/lado: 0</h3>"
+        - text: "<h3>Ruedas/lado: 2<br/>Ventanas/lado: 1</h3>"
+        - text: "<h3>Ruedas/lado: 2<br/>Ventanas/lado: 6</h3>"
+        - text: "<h3>Ruedas/lado: 3<br/>Ventanas/lado: 2</h3>"
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 Computational Thinking Multi 1:
+        title: "- Respuesta múltiple"
+        questions:
+        - text: Seattle es una gran ciudad. <br/> Eugene es una ciudad mediana <br/>
+            Hillview es una ciudad pequeña.
+        answers:
+        - text: Seattle _____ una _____ _____.
+        - text: _____ es una _____ ciudad.
+        - text: _____ es una _____ _____.
+        - text: "¿Eugene es una _____ ciudad."
+      4-5 Crowdsourcing Multi 1:
+        title: "- Respuesta múltiple"
+        questions:
+        - text: "¿Cual de estas imágenes representa mejor el crowdsourcing?"
+        answers:
+        - {}
+        - {}
+      4-5 Crowdsourcing Multi 2:
+        title: "- Respuesta múltiple"
+        questions:
+        - text: "¿Cual de estas actividades sería mejor para usar crowdsourcing?"
+        answers:
+        - text: Limpiando tu cuarto
+        - text: Comiendo tu postre
+        - text: Peinándote
+        - text: Lavándote la cara
+      4-5 Digital Footprint Multi 1:
+        title: "- Respuesta múltiple"
+        questions:
+        - text: "¿Qué parte de la información listada más abajo puede compartirse
+            en Internet?"
+        answers:
+        - text: Tu cumpleaños
+        - text: Tu comida favorita
+        - text: Tu dirección
+        - text: El número de tarjeta de crédito de tus padres
+      4-5 Internet Multi 1:
+        title: "- Respuesta múltiple"
+        questions:
+        - text: "¿Al intentar iniciar sesión en code.org, a qué dirección IP es más
+            probable que te lleve el DNS?"
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 Internet Multi 2:
+        title: "- Respuesta múltiple"
+        questions:
+        - text: Si el DNS te lleva a la página en la dirección IP 100.42.50.110, ¿en
+            qué sitio Web estás?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 Songwriting Multi 1:
+        title: "- Respuesta múltiple"
+        questions:
+        - {}
+        answers:
+        - text: Lou, Lou, saltear a mi Lou,
+        - text: Lou, Lou, saltear a mi Lou, <br/>Lou, Lou, saltear a mi Lou, <br/>Lou,
+            Lou, saltear a mi Lou, <br/>saltear a mi Lou, mi querida.
+        - {}
+        - {}
+      4-5 Suncatchers Match 1:
+        title: Emparejar
+        content1: Une cada programa a la palabra que produce, utilizando el grupo
+          de habilidades provistas.
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - text: "<h4>STACK</h4>"
+        - text: "<h4>STAMP</h4>"
+        - text: "<h4>STAR</h4>"
+        - text: "<h4>RAMP</h4>"
+      4-5 Suncatchers Multi 1:
+        title: "- Respuesta múltiple"
+        questions:
+        - text: "¿Cuál de los programas de abajo <em>no</em> hacen la secuencia exacta
+            que programa 1?"
+        answers:
+        - {}
+        - {}
+        - {}
+      4-5 artist loops multi 1:
+        title: Bucles del Artista - Opción Múltiple
+        questions:
+        - text: "¿Qué bloques crearán el diseño?"
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 artist multi 1:
+        title: El Artista - Opción Múltiple
+        questions:
+        - text: "¿Qué bloques dibujan un rectángulo con un perímetro de 100?"
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 artist multi 2:
+        title: El Artista - Opción Múltiple
+        questions:
+        - text: "¿Qué dibujo es simétrico?"
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 bee conditionals multi 1:
+        title: Condicionales de la Abeja - Opción Múltiple
+        questions:
+        - text: Escoge el mejor bloque.
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 bee debug multi 1:
+        title: Depuración de la Abeja - Opción Múltiple
+        questions:
+        - text: "¿Qué versión de la función funcionará?"
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 bee loops multi 1:
+        title: Bucles de la Abeja - Opción Múltiple
+        questions:
+        - text: "¿Qué bloques resolverán el puzzle?"
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 maze conditionals multi 1:
+        title: Condicionales del Laberinto - Opción Múltiple
+        questions:
+        - text: "¿Qué bloque resuelve el rompecabezas?"
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 maze match 1:
+        title: Partida del Laberinto
+        content1: Une los rompecabezas a los bloques
+        pre_title: Instrucciones
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      4-5 maze multi 1:
+        title: Laberinto - Opción Múltiple
+        questions:
+        - text: "¿Qué bloque resuelve el rompecabezas?"
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
       Begin planning your project:
-        content1: descripción aquí
         title: Título
+        content1: descripción aquí
       Begin planning your project_2018:
         content1: descripción aquí
       Begin planning your project_2018_2019:
         content1: descripción aquí
+      CSD Header Size MC:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD Header Size MC_2018:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD Header Size MC_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
       CSD U2 Design Project:
-        content1: descripción aquí
         title: Título
+        content1: descripción aquí
       CSD U2 Design Project_2018:
-        content1: descripción aquí
         title: Título
+        content1: descripción aquí
       CSD U2 Design Project_2018_2019:
-        content1: descripción aquí
         title: Título
-      CSD U2 L1 Overview:
         content1: descripción aquí
-        title: Título
       CSD U2 L2 Overview:
-        content1: descripción aquí
         title: Título
+        content1: descripción aquí
       CSD U2 L3 Overview:
-        content1: descripción aquí
         title: Título
+        content1: descripción aquí
       CSD U2 L4 Overview:
-        content1: descripción aquí
         title: Título
+        content1: descripción aquí
       CSD U2 L5 Overview:
-        content1: descripción aquí
         title: Título
+        content1: descripción aquí
       CSD U2 L6 Overview:
-        content1: descripción aquí
         title: Título
+        content1: descripción aquí
       CSD U2 Lesson 6 Overview:
         content1: descripción aquí
       CSD U2 expand project:
-        content1: descripción aquí
         title: Título
+        content1: descripción aquí
       CSD U2 expand project_2018:
-        content1: descripción aquí
         title: Título
+        content1: descripción aquí
       CSD U2 expand project_2018_2019:
-        content1: descripción aquí
         title: Título
+        content1: descripción aquí
+      CSD U2 image debug match:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U2 lists match:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U2 lists match_2018:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U2 lists match_2018_2019:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
       CSD U2 project guide:
         content1: descripción aquí
       CSD U2 project guide_2018:
         content1: descripción aquí
       CSD U2 project guide_2018_2019:
         content1: descripción aquí
+      CSD U3 - conditionals - Matching:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 - conditionals - Matching_2018:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 - conditionals - Matching_2018_2019:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Boolean MC:
+        title: Título
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Boolean MC_2018:
+        title: Título
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Boolean MC_2018_2019:
+        title: Título
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
       CSD U3 Card Examples_2018:
         content1: descripción aquí
       CSD U3 Card Examples_2018_2019:
         content1: descripción aquí
+      CSD U3 Functions Prediction define first:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Functions Prediction define first_2018:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Functions Prediction define first_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Keypress Matching:
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      CSD U3 Keypress Matching_2018:
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      CSD U3 Keypress Matching_2018_2019:
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      CSD U3 Sprite Movement Predict Multi:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Sprite Movement Predict Multi_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Sprite Movement Predict Multi_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Sprites intro predict multi:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Sprites intro predict multi_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Sprites intro predict multi_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
       CSD U3 combining rep:
-        content1: descripción aquí
         title: Título
+        content1: descripción aquí
       CSD U3 combining rep_2018:
-        content1: descripción aquí
         title: Título
+        content1: descripción aquí
       CSD U3 combining rep_2018_2019:
-        content1: descripción aquí
         title: Título
+        content1: descripción aquí
+      CSD U3 drawSprites placement match:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 drawSprites placement match_2019:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
       CSD U3 game intro:
         content1: descripción aquí
       CSD U3 game intro_2018:
@@ -79,14 +766,14 @@ es:
       CSD U3 platform intro_2018_2019:
         content1: descripción aquí
       CSD U5 Encryption 1:
-        content1: descripción aquí
         title: Título
+        content1: descripción aquí
       CSD U5 Encryption 1_2018:
-        content1: descripción aquí
         title: Título
+        content1: descripción aquí
       CSD U5 Encryption 1_2018_2019:
-        content1: descripción aquí
         title: Título
+        content1: descripción aquí
       CSD U5 Encryption 2:
         content1: descripción aquí
       CSD U5 Encryption 2_2018:
@@ -94,8 +781,8 @@ es:
       CSD U5 Encryption 2_2018_2019:
         content1: descripción aquí
       CSD U5 L13 SFLP Interpreting Data:
-        content1: descripción aquí
         title: Título
+        content1: descripción aquí
       CSD U5 crosstab warmup:
         content1: descripción aquí
       CSD U5 crosstab warmup_2018:
@@ -103,1439 +790,992 @@ es:
       CSD U5 crosstab warmup_2018_2019:
         content1: descripción aquí
       CSD U5 data visualization:
-        content1: descripción aquí
         title: Título
+        content1: descripción aquí
       CSD U5 data visualization_2018:
-        content1: descripción aquí
         title: Título
+        content1: descripción aquí
       CSD U5 data visualization_2018_2019:
-        content1: descripción aquí
         title: Título
+        content1: descripción aquí
       CSD U5 student record:
-        content1: descripción aquí
         title: Título
+        content1: descripción aquí
       CSD U5 student record_2018:
-        content1: descripción aquí
         title: Título
+        content1: descripción aquí
       CSD U5 student record_2018_2019:
-        content1: descripción aquí
         title: Título
+        content1: descripción aquí
       CSD U6 LED create intro:
         content1: descripción aquí
       CSD U6 LED create intro_2018:
         content1: descripción aquí
       CSD U6 LED create intro_2018_2019:
         content1: descripción aquí
+      CSD U6 array multi:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U6 array multi_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U6 array multi_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
       CSD U6 final intro:
         content1: descripción aquí
       CSD U6 final intro_2018:
         content1: descripción aquí
       CSD U6 final intro_2018_2019:
         content1: descripción aquí
+      CSD U6 setProperty predict multi:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U6 setProperty predict multi_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      GraphPaperProgramming-Unplugged:
+        markdown: |
+          #Programación de papel cuadriculado
+
+          Escribe algoritmos que tus compañeros puedan usar para dibujar imágenes.
       Internet Simulator Setup:
         content1: descripción aquí
       Internet Simulator Setup 2:
-        content1: descripción aquí
         title: Título
+        content1: descripción aquí
       Internet Simulator Setup 3:
         content1: descripción aquí
+      K-1 Artist 1 Multi 1:
+        title: "- Respuesta múltiple"
+        questions:
+        - text: "¿Qué bloques resuelven este puzzle?"
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Artist 1 Multi 2:
+        title: "- Respuesta múltiple"
+        questions:
+        - text: "¿Qué bloques dibujan el cuadrado?"
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Artist 2 Match 2:
+        title: Emparejar
+        content2: Relaciona las figuras de acuerdo a su tipo.
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Bee 1 Multi 1:
+        title: "- Respuesta múltiple"
+        questions:
+        - text: "¿Cuánto néctar hay?"
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Bee 1 Multi 2:
+        title: "- Respuesta múltiple"
+        questions:
+        - text: "¿Cuánto néctar hay?"
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Bee Loops Match 1:
+        title: Emparejar
+        content2: Relaciona los bloques
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Big Event Match 1:
+        title: Emparejar
+        content2: Haz que coincidan las combinaciones de botones con los movimientos.
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      K-1 Digital Footprint Multi 1:
+        title: "- Respuesta múltiple"
+        questions:
+        - text: "¿Cuál animal deja la huella digital que lo hace <strong>más inseguro</strong>?"
+        answers:
+        - {}
+        - {}
+        - {}
+      K-1 Getting Loopy Multi 1:
+        title: "- Respuesta múltiple"
+        questions:
+        - text: "¿Cómo simplificarías esta secuencia con bucles?"
+        answers:
+        - {}
+        - {}
+        - {}
+      K-1 Happy Maps Multi 1:
+        title: "- Respuesta múltiple"
+        questions:
+        - text: "¿Qué flecha lleva al Flurb al tesoro?"
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Keep it Private Multi 1:
+        title: "- Respuesta múltiple"
+        questions:
+        - text: "¿Qué información <strong>no</strong> deberías compartir en línea?"
+        answers:
+        - {}
+        - {}
+        - {}
+      K-1 Maze Debugging Multi 1:
+        title: "- Respuesta múltiple"
+        questions:
+        - text: "¿Qué opción debería ser el bloque final?"
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Maze Loops Multi 1:
+        title: "- Respuesta múltiple"
+        questions:
+        - text: "¿Qué bloque significa lo mismo?"
+        answers:
+        - {}
+        - {}
+        - {}
+      K-1 Maze Loops Multi 2:
+        title: "- Respuesta múltiple"
+        questions:
+        - text: Elige el bloque de repetición correcto.
+        answers:
+        - {}
+        - {}
+        - {}
+      K-1 Maze Match 1:
+        title: Emparejar
+        content2: Haz coincidir los rompecabezas y los bloques
+        pre_title: Instrucciones
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Maze Multiple Choice 2:
+        title: Laberinto
+        questions:
+        - text: "¿Qué respuesta resuelve este nivel?"
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Move It Multi 1:
+        title: "- Respuesta múltiple"
+        questions:
+        - text: "¿Qué algoritmo lleva al Flurb a las flores?"
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Plant a Seed Multi 1:
+        title: "- Respuesta múltiple"
+        questions:
+        - text: "¿Qué paso debe ir al principio de este algoritmo?"
+        answers:
+        - {}
+        - {}
+        - {}
+      K-1 Plant a Seed Multi 2:
+        title: "- Respuesta múltiple"
+        questions:
+        - text: "¿Qué paso debe llenar el espacio en blanco para este algoritmo?"
+        answers:
+        - {}
+        - {}
+        - {}
+      K-1 Word Search Multi 1:
+        title: "- Respuesta múltiple"
+        questions:
+        - text: ¿Cuáles bloques forman la palabra "MOVE"?
+        answers:
+        - {}
+        - {}
+        - {}
+      K-1 Word Search Multi 3:
+        title: "- Respuesta múltiple"
+        questions:
+        - text: "¿Qué palabra se forma?"
+        answers:
+        - text: SET
+        - text: CUADRADO
+        - text: SUR
       Multi-Screen Apps:
-        content1: descripción aquí
         title: Título
+        content1: descripción aquí
       New Challenge Introduction:
-        content1: descripción aquí
         title: Título
+        content1: descripción aquí
       OPD-K5 Stage3aGo:
-        content1: descripción aquí
         title: Título
+        content1: descripción aquí
       Prepare for your presentation:
-        content1: descripción aquí
         title: Título
+        content1: descripción aquí
       'Technique: Frequency Analysis':
         content1: descripción aquí
       Terminology Recap:
         content1: descripción aquí
-    match:
-      2-3 Big Event Match 1:
-        content2: Haz que coincidan las combinaciones de botones con los movimientos.
-        title: Emparejar
-      2-3 Binary Match 1:
-        content2: Usa la clave para unir cada código con su letra
-        questions:
-        - text: "<strong>N</strong>"
-        - text: "<strong>O</strong>"
-        - text: "<strong>P</strong>"
-        - text: "<strong>Q</strong>"
-        title: Emparejar
-      2-3 Graph Paper Match 1:
-        content1: Haz coincidir la cuadrícula con el programa.
-        title: Emparejar
-      2-3 Maze Match 2:
-        content1: Une los rompecabezas a los bloques
-        pre_title: Instrucciones
-        title: Partida del Laberinto
-      2-3 artist loops match 1:
-        content2: Haz coincidir el bucle con la figura
-      2-3 artist match 1:
-        content1: Haz coincidir la figura con los bloques que la completan.
-        title: Artista que coincide
-      2-3 maze match 1:
-        content1: Une los rompecabezas a los bloques
-        title: Partido Uno del Laberinto
-      4-5 Algorithms Match 1:
-        answers:
-        - text: "<h4>Establecer puntuación del Jugador 1 a 0</h4>"
-        - text: "<h4>Los roles del Jugador 1 mueren</h4>"
-        - text: "<h4>Añadir el rol del Jugador 1 a puntuación total</h4>"
-        - text: "<h4>Comparar puntuación de jugadores para ver quien gana</h4>"
-        content1: Une los pasos en el juego Carrera de Dados al orden que deben aparecer
-          en el algoritmo.
-        questions:
-        - text: "<h4>1)</h4>"
-        - text: "<h4>2)</h4>"
-        - text: "<h4>3)</h4>"
-        - text: "<h4>4)</h4>"
-        title: Emparejar
-      4-5 Computational Thinking Match 1:
-        content1: Cada uno de estos vehículos ha sido descompuesto en pedazos más
-          pequeños. Relacionar cada vehículo descompuesto con su lista.
-        questions:
-        - text: "<h3>Ruedas/lado: 2<br/> Ventanas/lado: 0</h3>"
-        - text: "<h3>Ruedas/lado: 2<br/>Ventanas/lado: 1</h3>"
-        - text: "<h3>Ruedas/lado: 2<br/>Ventanas/lado: 6</h3>"
-        - text: "<h3>Ruedas/lado: 3<br/>Ventanas/lado: 2</h3>"
-        title: Emparejar
-      4-5 Suncatchers Match 1:
-        answers:
-        - text: "<h4>STACK</h4>"
-        - text: "<h4>STAMP</h4>"
-        - text: "<h4>STAR</h4>"
-        - text: "<h4>RAMP</h4>"
-        content1: Une cada programa a la palabra que produce, utilizando el grupo
-          de habilidades provistas.
-        title: Emparejar
-      4-5 maze match 1:
-        content1: Une los rompecabezas a los bloques
-        pre_title: Instrucciones
-        title: Partida del Laberinto
-      K-1 Artist 2 Match 2:
-        content2: Relaciona las figuras de acuerdo a su tipo.
-        title: Emparejar
-      K-1 Bee Loops Match 1:
-        content2: Relaciona los bloques
-        title: Emparejar
-      K-1 Big Event Match 1:
-        content2: Haz que coincidan las combinaciones de botones con los movimientos.
-        title: Emparejar
-      K-1 Maze Match 1:
-        content2: Haz coincidir los rompecabezas y los bloques
-        pre_title: Instrucciones
-        title: Emparejar
-    multi:
-      2-3 Algorithms Multi 1:
-        answers:
-        - text: Comienza con un cuadrado<br/>Pon un triángulo sobre cuadrado<br/>Pon
-            un triángulo debajo del cuadrado
-          correct: false
-        - correct: true
-        - text: Comienza con un cuadrado <br/> Pon un paralelogramo sobre el cuadrado
-            <br/> Pon un triángulo a la derecha del paralelogramo
-          correct: false
-        - text: Comienza con un cuadrado <br/> Pon un triángulo debajo del cuadrado
-            <br/> Pon un paralelogramo a la derecha del triángulo
-          correct: false
-        questions:
-        - text: Elige un algoritmo para esta imagen
-        title: "- Respuesta múltiple"
-      2-3 Algorithms Multi 2:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        content1: Comienza con un triángulo <br/>Pon un cuadrado debajo del triángulo<br/>Pon
-          otro triángulo debajo del cuadrado
-        questions:
-        - text: "¿Qué imagen <em>no</em> sigue este algoritmo?"
-        title: "- Respuesta múltiple"
-      2-3 Conditionals Multi 1:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: Según las reglas del juego ¿Qué conjunto de cartas tienen la puntuación
-            correcta?
-        title: "- Respuesta múltiple"
-      2-3 Getting Loopy Multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        questions:
-        - text: "¿Cómo simplificarías esta secuencia con bucles?"
-        title: "- Respuesta múltiple"
-      2-3 Graph Paper Multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: "¿Qué programa hace esta imagen?"
-        title: "- Respuesta múltiple"
-      2-3 Maze Multi 2:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        title: Laberinto - Opción Múltiple
-      2-3 Relay Programming Multi 1:
-        answers:
-        - 
-        - 
-        - correct: true
-        title: "- Respuesta múltiple"
-      2-3 Relay Programming Multi 2:
-        answers:
-        - 
-        - 
-        - correct: true
-        questions:
-        - text: "¿Qué combinación imagen-programa no tiene errores?"
-        title: "- Respuesta múltiple"
-      2-3 artist debug multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      2-3 artist functions multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Elegir los bloques correctos para dibujar esta imagen usando las funciones
-            dadas
-        title: Funciones del Artista - Opción Múltiple Uno
-      2-3 artist loops multi 1:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: "¿Qué figura hace este bucle?"
-        title: Bucles del Artista - Opción Múltiple
-      2-3 artist loops multi 2:
-        answers:
-        - 
-        - 
-        - 
-        - correct: true
-        questions:
-        - text: "¿Qué figura se forma a partir de este programa?"
-        title: Bucles del Artista - Opción Múltiple
-      2-3 bee conditionals multi 1:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: "¿Qué comparación de las de abajo es verdadera?"
-      2-3 bee conditionals multi 3:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Escoge el mejor bloque.
-      2-3 bee loops multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        questions:
-        - text: "¿Qué bloques recogen todo el néctar?"
-        title: Bucles de la Abeja - Opción Múltiple Uno
-      2-3 maze multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: "¿Qué conjunto de bloques forma la respuesta correcta?"
-        title: Laberinto de Opción Múltiple Uno
-      4-5 Algorithms Multi 1:
-        answers:
-        - text: Cepillarte los dientes
-          correct: false
-        - text: Horneando galletas
-          correct: false
-        - text: Hacer la compra con una lista de compras
-          correct: false
-        - text: Plátano
-          correct: true
-        questions:
-        - text: "¿Cuál de estos elementos es más difícil de describir con un algoritmo?"
-        title: "- Respuesta múltiple"
-      4-5 Computational Thinking Multi 1:
-        answers:
-        - text: Seattle _____ una _____ _____.
-          correct: false
-        - text: _____ es una _____ ciudad.
-          correct: true
-        - text: _____ es una _____ _____.
-          correct: false
-        - text: "¿Eugene es una _____ ciudad."
-          correct: false
-        questions:
-        - text: Seattle es una gran ciudad. <br/> Eugene es una ciudad mediana <br/>
-            Hillview es una ciudad pequeña.
-        title: "- Respuesta múltiple"
-      4-5 Crowdsourcing Multi 1:
-        answers:
-        - 
-        - correct: true
-        questions:
-        - text: "¿Cual de estas imágenes representa mejor el crowdsourcing?"
-        title: "- Respuesta múltiple"
-      4-5 Crowdsourcing Multi 2:
-        answers:
-        - text: Limpiando tu cuarto
-          correct: true
-        - text: Comiendo tu postre
-          correct: false
-        - text: Peinándote
-          correct: false
-        - text: Lavándote la cara
-          correct: false
-        questions:
-        - text: "¿Cual de estas actividades sería mejor para usar crowdsourcing?"
-        title: "- Respuesta múltiple"
-      4-5 Digital Footprint Multi 1:
-        answers:
-        - text: Tu cumpleaños
-          correct: false
-        - text: Tu comida favorita
-          correct: true
-        - text: Tu dirección
-          correct: false
-        - text: El número de tarjeta de crédito de tus padres
-          correct: false
-        questions:
-        - text: "¿Qué parte de la información listada más abajo puede compartirse
-            en Internet?"
-        title: "- Respuesta múltiple"
-      4-5 Internet Multi 1:
-        answers:
-        - 
-        - 
-        - 
-        - correct: true
-        questions:
-        - text: "¿Al intentar iniciar sesión en code.org, a qué dirección IP es más
-            probable que te lleve el DNS?"
-        title: "- Respuesta múltiple"
-      4-5 Internet Multi 2:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Si el DNS te lleva a la página en la dirección IP 100.42.50.110, ¿en
-            qué sitio Web estás?
-        title: "- Respuesta múltiple"
-      4-5 Songwriting Multi 1:
-        answers:
-        - text: Lou, Lou, saltear a mi Lou,
-          correct: false
-        - text: Lou, Lou, saltear a mi Lou, <br/>Lou, Lou, saltear a mi Lou, <br/>Lou,
-            Lou, saltear a mi Lou, <br/>saltear a mi Lou, mi querida.
-          correct: true
-        - 
-        - 
-        title: "- Respuesta múltiple"
-      4-5 Suncatchers Multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: "¿Cuál de los programas de abajo <em>no</em> hacen la secuencia exacta
-            que programa 1?"
-        title: "- Respuesta múltiple"
-      4-5 artist loops multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: "¿Qué bloques crearán el diseño?"
-        title: Bucles del Artista - Opción Múltiple
-      4-5 artist multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: "¿Qué bloques dibujan un rectángulo con un perímetro de 100?"
-        title: El Artista - Opción Múltiple
-      4-5 artist multi 2:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: "¿Qué dibujo es simétrico?"
-        title: El Artista - Opción Múltiple
-      4-5 bee conditionals multi 1:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: Escoge el mejor bloque.
-        title: Condicionales de la Abeja - Opción Múltiple
-      4-5 bee debug multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: "¿Qué versión de la función funcionará?"
-        title: Depuración de la Abeja - Opción Múltiple
-      4-5 bee loops multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        questions:
-        - text: "¿Qué bloques resolverán el puzzle?"
-        title: Bucles de la Abeja - Opción Múltiple
-      4-5 maze conditionals multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        questions:
-        - text: "¿Qué bloque resuelve el rompecabezas?"
-        title: Condicionales del Laberinto - Opción Múltiple
-      4-5 maze multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        questions:
-        - text: "¿Qué bloque resuelve el rompecabezas?"
-        title: Laberinto - Opción Múltiple
-      CSD Header Size MC:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      CSD Header Size MC_2018:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      CSD Header Size MC_2018_2019:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      CSD U3 Boolean MC:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        title: Título
-      CSD U3 Boolean MC_2018:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        title: Título
-      CSD U3 Boolean MC_2018_2019:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        title: Título
-      CSD U3 Functions Prediction define first:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      CSD U3 Functions Prediction define first_2018:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      CSD U3 Functions Prediction define first_2018_2019:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      CSD U3 Sprite Movement Predict Multi:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      CSD U3 Sprite Movement Predict Multi_2018:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      CSD U3 Sprite Movement Predict Multi_2018_2019:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      CSD U3 Sprites intro predict multi:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      CSD U3 Sprites intro predict multi_2018:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      CSD U3 Sprites intro predict multi_2018_2019:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      CSD U6 array multi:
-        answers:
-        - 
-        - 
-        - 
-        - correct: true
-      CSD U6 array multi_2018:
-        answers:
-        - 
-        - 
-        - 
-        - correct: true
-      CSD U6 array multi_2018_2019:
-        answers:
-        - 
-        - 
-        - 
-        - correct: true
-      CSD U6 setProperty predict multi:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      CSD U6 setProperty predict multi_2018:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      CSD U6 setProperty predict multi_2018_2019:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      K-1 Artist 1 Multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: "¿Qué bloques resuelven este puzzle?"
-        title: "- Respuesta múltiple"
-      K-1 Artist 1 Multi 2:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        questions:
-        - text: "¿Qué bloques dibujan el cuadrado?"
-        title: "- Respuesta múltiple"
-      K-1 Bee 1 Multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: "¿Cuánto néctar hay?"
-        title: "- Respuesta múltiple"
-      K-1 Bee 1 Multi 2:
-        answers:
-        - 
-        - 
-        - 
-        - correct: true
-        questions:
-        - text: "¿Cuánto néctar hay?"
-        title: "- Respuesta múltiple"
-      K-1 Digital Footprint Multi 1:
-        answers:
-        - 
-        - 
-        - correct: true
-        questions:
-        - text: "¿Cuál animal deja la huella digital que lo hace <strong>más inseguro</strong>?"
-        title: "- Respuesta múltiple"
-      K-1 Getting Loopy Multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: "¿Cómo simplificarías esta secuencia con bucles?"
-        title: "- Respuesta múltiple"
-      K-1 Happy Maps Multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: "¿Qué flecha lleva al Flurb al tesoro?"
-        title: "- Respuesta múltiple"
-      K-1 Keep it Private Multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: "¿Qué información <strong>no</strong> deberías compartir en línea?"
-        title: "- Respuesta múltiple"
-      K-1 Maze Debugging Multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        questions:
-        - text: "¿Qué opción debería ser el bloque final?"
-        title: "- Respuesta múltiple"
-      K-1 Maze Loops Multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: "¿Qué bloque significa lo mismo?"
-        title: "- Respuesta múltiple"
-      K-1 Maze Loops Multi 2:
-        answers:
-        - 
-        - 
-        - correct: true
-        questions:
-        - text: Elige el bloque de repetición correcto.
-        title: "- Respuesta múltiple"
-      K-1 Maze Multiple Choice 2:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: "¿Qué respuesta resuelve este nivel?"
-        title: Laberinto
-      K-1 Move It Multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: "¿Qué algoritmo lleva al Flurb a las flores?"
-        title: "- Respuesta múltiple"
-      K-1 Plant a Seed Multi 1:
-        answers:
-        - 
-        - 
-        - correct: true
-        questions:
-        - text: "¿Qué paso debe ir al principio de este algoritmo?"
-        title: "- Respuesta múltiple"
-      K-1 Plant a Seed Multi 2:
-        answers:
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: "¿Qué paso debe llenar el espacio en blanco para este algoritmo?"
-        title: "- Respuesta múltiple"
-      K-1 Word Search Multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: ¿Cuáles bloques forman la palabra "MOVE"?
-        title: "- Respuesta múltiple"
-      K-1 Word Search Multi 3:
-        answers:
-        - text: SET
-          correct: false
-        - text: CUADRADO
-          correct: true
-        - text: SUR
-          correct: false
-        questions:
-        - text: "¿Qué palabra se forma?"
-        title: "- Respuesta múltiple"
       behaviors 1 predict:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - correct: false
-          feedback: Incorrecto
+        - {}
+        - {}
+        - {}
+        - feedback: Incorrecto
       behaviors 4 predict:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - correct: false
-          feedback: Incorrecto
+        - {}
+        - {}
+        - {}
+        - feedback: Incorrecto
       courseC_multi_artist_prog6_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
+        - {}
+        - {}
+        - {}
         - text: No lo se.
-          correct: false
       courseC_multi_artist_prog6_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
+        - {}
+        - {}
+        - {}
         - text: No lo se.
-          correct: false
       courseC_multi_artist_prog6_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
+        - {}
+        - {}
+        - {}
         - text: No lo se.
-          correct: false
       courseC_multi_harvester_loops11_predict1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - text: No lo se.
-          correct: false
         questions:
         - text: Mira cuidadosamente el código. ¿Cúantas calabazas recogerá el granjero
             cuando hagas click en "Ejecutar"?
+        answers:
+        - {}
+        - {}
+        - {}
+        - text: No lo se.
       courseC_multi_harvester_loops11_predict1_2018:
-        answers:
-        - 
-        - correct: true
-        - 
-        - text: No lo se.
-          correct: false
         questions:
         - text: Mira cuidadosamente el código. ¿Cúantas calabazas recogerá el granjero
             cuando hagas click en "Ejecutar"?
+        answers:
+        - {}
+        - {}
+        - {}
+        - text: No lo se.
       courseC_multi_harvester_loops11_predict1_2018_2019:
-        answers:
-        - 
-        - correct: true
-        - 
-        - text: No lo se.
-          correct: false
         questions:
         - text: Mira cuidadosamente el código. ¿Cúantas calabazas recogerá el granjero
             cuando hagas click en "Ejecutar"?
+        answers:
+        - {}
+        - {}
+        - {}
+        - text: No lo se.
       courseC_multi_maze_debugging8_predict1:
-        answers:
-        - text: El programa no fallará. Scrat conseguirá la bellota.
-          correct: false
-        - text: Scrat se equivocará después de su último giro.
-          correct: true
-        - text: Scrat hace muy pocos pasos y termina antes de coger la bellota.
-          correct: false
-        - text: No lo se.
-          correct: false
         questions:
         - text: 'Fíjate en el código siguiente.  ¿Cuál es el primer error que hará
             que este programa falle? '
+        answers:
+        - text: El programa no fallará. Scrat conseguirá la bellota.
+        - text: Scrat se equivocará después de su último giro.
+        - text: Scrat hace muy pocos pasos y termina antes de coger la bellota.
+        - text: No lo se.
       courseC_multi_maze_debugging8_predict1_2018:
-        answers:
-        - text: El programa no fallará. Scrat conseguirá la bellota.
-          correct: false
-        - text: Scrat se equivocará después de su último giro.
-          correct: true
-        - text: Scrat hace muy pocos pasos y termina antes de coger la bellota.
-          correct: false
-        - text: No lo se.
-          correct: false
         questions:
         - text: 'Fíjate en el código siguiente.  ¿Cuál es el primer error que hará
             que este programa falle? '
+        answers:
+        - text: El programa no fallará. Scrat conseguirá la bellota.
+        - text: Scrat se equivocará después de su último giro.
+        - text: Scrat hace muy pocos pasos y termina antes de coger la bellota.
+        - text: No lo se.
       courseC_multi_maze_debugging8_predict1_2018_2019:
-        answers:
-        - text: El programa no fallará. Scrat conseguirá la bellota.
-          correct: false
-        - text: Scrat se equivocará después de su último giro.
-          correct: true
-        - text: Scrat hace muy pocos pasos y termina antes de coger la bellota.
-          correct: false
-        - text: No lo se.
-          correct: false
         questions:
         - text: 'Fíjate en el código siguiente.  ¿Cuál es el primer error que hará
             que este programa falle? '
+        answers:
+        - text: El programa no fallará. Scrat conseguirá la bellota.
+        - text: Scrat se equivocará después de su último giro.
+        - text: Scrat hace muy pocos pasos y termina antes de coger la bellota.
+        - text: No lo se.
       courseC_multi_maze_programming8_predict1:
-        answers:
-        - text: El pájaro se quedará a un paso del cerdo.
-          correct: false
-        - correct: true
-        - text: El pájaro caerá en el TNT.
-          correct: false
-        - text: No lo se.
-          correct: false
         questions:
         - text: Lee el código que hay debajo con atención. ¿Qué pasará cuando pulses
             "Ejecutar"?
+        answers:
+        - text: El pájaro se quedará a un paso del cerdo.
+        - {}
+        - text: El pájaro caerá en el TNT.
+        - text: No lo se.
       courseC_multi_maze_programming8_predict1_2018:
-        answers:
-        - text: El pájaro se quedará a un paso del cerdo.
-          correct: false
-        - correct: true
-        - text: El pájaro caerá en el TNT.
-          correct: false
-        - text: No lo se.
-          correct: false
         questions:
         - text: Lee el código que hay debajo con atención. ¿Qué pasará cuando pulses
             "Ejecutar"?
+        answers:
+        - text: El pájaro se quedará a un paso del cerdo.
+        - {}
+        - text: El pájaro caerá en el TNT.
+        - text: No lo se.
       courseC_multi_maze_programming8_predict1_2018_2019:
-        answers:
-        - text: El pájaro se quedará a un paso del cerdo.
-          correct: false
-        - correct: true
-        - text: El pájaro caerá en el TNT.
-          correct: false
-        - text: No lo se.
-          correct: false
         questions:
         - text: Lee el código que hay debajo con atención. ¿Qué pasará cuando pulses
             "Ejecutar"?
+        answers:
+        - text: El pájaro se quedará a un paso del cerdo.
+        - {}
+        - text: El pájaro caerá en el TNT.
+        - text: No lo se.
       courseC_multi_starWars_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
+        - {}
+        - {}
+        - {}
         - text: No lo sé
-          correct: false
       courseC_multi_starWars_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
+        - {}
+        - {}
+        - {}
         - text: No lo sé
-          correct: false
       courseC_multi_starWars_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
+        - {}
+        - {}
+        - {}
         - text: No lo sé
-          correct: false
       courseC_multi_starWars_predict2:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
         - text: No lo se.
-          correct: false
       courseC_multi_starWars_predict2_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
         - text: No lo se.
-          correct: false
       courseC_multi_starWars_predict2_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
         - text: No lo se.
-          correct: false
       courseD_multi_artist_binary8_predict1:
+        questions:
+        - {}
         answers:
         - text: A
-          correct: false
         - text: B
-          correct: false
         - text: C
-          correct: false
         - text: D
-          correct: true
       courseD_multi_artist_binary8_predict1_2018:
+        questions:
+        - {}
         answers:
         - text: A
-          correct: false
         - text: B
-          correct: false
         - text: C
-          correct: false
         - text: D
-          correct: true
       courseD_multi_artist_binary8_predict1_2018_2019:
+        questions:
+        - {}
         answers:
         - text: A
-          correct: false
         - text: B
-          correct: false
         - text: C
-          correct: false
         - text: D
-          correct: true
       courseD_multi_artist_nestedLoops9_predict1:
+        questions:
+        - {}
         answers:
         - text: A
-          correct: true
         - text: B
-          correct: false
         - text: C
-          correct: false
         - text: No lo se.
-          correct: false
       courseD_multi_artist_nestedLoops9_predict1_2018:
+        questions:
+        - {}
         answers:
         - text: A
-          correct: true
         - text: B
-          correct: false
         - text: C
-          correct: false
         - text: No lo se.
-          correct: false
       courseD_multi_artist_nestedLoops9_predict1_2018_2019:
+        questions:
+        - {}
         answers:
         - text: A
-          correct: true
         - text: B
-          correct: false
         - text: C
-          correct: false
         - text: No lo se.
-          correct: false
       courseD_multi_bee_conditionals1_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
         - text: No lo se.
-          correct: false
       courseD_multi_bee_conditionals1_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
         - text: No lo se.
-          correct: false
       courseD_multi_bee_conditionals1_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
         - text: No lo se.
-          correct: false
       courseD_multi_bee_conditionals7_predict2:
+        questions:
+        - {}
         answers:
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
         - text: No lo se.
-          correct: false
       courseD_multi_bee_conditionals7_predict2_2018:
+        questions:
+        - {}
         answers:
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
         - text: No lo se.
-          correct: false
       courseD_multi_bee_conditionals7_predict2_2018_2019:
+        questions:
+        - {}
         answers:
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
         - text: No lo se.
-          correct: false
       courseD_multi_bee_nestedLoops2_predict1:
-        answers:
-        - text: La abeja se moverá y obtendrá el néctar sólo una vez.
-          correct: false
-        - text: La abeja recogerá sólo dos unidades de néctar.
-          correct: false
-        - text: La abeja recogerá todo el néctar.
-          correct: true
-        - text: No lo se.
-          correct: false
         questions:
         - text: Mira detenidamente todos los bucles anidados que hay debajo. ¿Qué
             ocurrirá si haces clic en "Ejecutar"?
+        answers:
+        - text: La abeja se moverá y obtendrá el néctar sólo una vez.
+        - text: La abeja recogerá sólo dos unidades de néctar.
+        - text: La abeja recogerá todo el néctar.
+        - text: No lo se.
       courseD_multi_bee_nestedLoops2_predict1_2018:
-        answers:
-        - text: La abeja se moverá y obtendrá el néctar sólo una vez.
-          correct: false
-        - text: La abeja recogerá sólo dos unidades de néctar.
-          correct: false
-        - text: La abeja recogerá todo el néctar.
-          correct: true
-        - text: No lo se.
-          correct: false
         questions:
         - text: Mira detenidamente todos los bucles anidados que hay debajo. ¿Qué
             ocurrirá si haces clic en "Ejecutar"?
+        answers:
+        - text: La abeja se moverá y obtendrá el néctar sólo una vez.
+        - text: La abeja recogerá sólo dos unidades de néctar.
+        - text: La abeja recogerá todo el néctar.
+        - text: No lo se.
       courseD_multi_bee_nestedLoops2_predict1_2018_2019:
-        answers:
-        - text: La abeja se moverá y obtendrá el néctar sólo una vez.
-          correct: false
-        - text: La abeja recogerá sólo dos unidades de néctar.
-          correct: false
-        - text: La abeja recogerá todo el néctar.
-          correct: true
-        - text: No lo se.
-          correct: false
         questions:
         - text: Mira detenidamente todos los bucles anidados que hay debajo. ¿Qué
             ocurrirá si haces clic en "Ejecutar"?
+        answers:
+        - text: La abeja se moverá y obtendrá el néctar sólo una vez.
+        - text: La abeja recogerá sólo dos unidades de néctar.
+        - text: La abeja recogerá todo el néctar.
+        - text: No lo se.
       courseD_multi_bee_nestedLoops9_predict2:
-        answers:
-        - 
-        - correct: true
-        - 
-        - text: No lo se.
-          correct: false
         questions:
         - text: Mira detenidamente el código que hay debajo. ¿Cuánta miel hará la
             abeja cuando hagas clic en "Ejecutar"?
+        answers:
+        - {}
+        - {}
+        - {}
+        - text: No lo se.
       courseD_multi_bee_nestedLoops9_predict2_2018:
-        answers:
-        - 
-        - correct: true
-        - 
-        - text: No lo se.
-          correct: false
         questions:
         - text: Mira detenidamente el código que hay debajo. ¿Cuánta miel hará la
             abeja cuando hagas clic en "Ejecutar"?
+        answers:
+        - {}
+        - {}
+        - {}
+        - text: No lo se.
       courseD_multi_bee_nestedLoops9_predict2_2018_2019:
-        answers:
-        - 
-        - correct: true
-        - 
-        - text: No lo se.
-          correct: false
         questions:
         - text: Mira detenidamente el código que hay debajo. ¿Cuánta miel hará la
             abeja cuando hagas clic en "Ejecutar"?
+        answers:
+        - {}
+        - {}
+        - {}
+        - text: No lo se.
       courseD_multi_collector_debugging10_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
+        - {}
+        - {}
+        - {}
         - text: No lo se.
-          correct: false
       courseD_multi_farmer_condLoops9_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
+        - {}
+        - {}
+        - {}
         - text: No lo se.
-          correct: false
       courseD_multi_farmer_condLoops9_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
+        - {}
+        - {}
+        - {}
         - text: No lo se.
-          correct: false
       courseD_multi_farmer_condLoops9_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
+        - {}
+        - {}
+        - {}
         - text: No lo se.
-          correct: false
       courseD_multi_farmer_ramp13:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
         - text: No lo se.
-          correct: false
       courseD_multi_farmer_while10_predict2:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
         - text: No lo se.
-          correct: false
       courseD_multi_farmer_while10_predict2_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
         - text: No lo se.
-          correct: false
       courseD_multi_farmer_while10_predict2_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
         - text: No lo se.
-          correct: false
       courseD_multi_farmer_while4_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
+        - {}
+        - {}
+        - {}
         - text: No lo se.
-          correct: false
       courseD_multi_farmer_while4_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
+        - {}
+        - {}
+        - {}
         - text: No lo se.
-          correct: false
       courseD_multi_farmer_while4_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
+        - {}
+        - {}
+        - {}
         - text: No lo se.
-          correct: false
       courseD_multi_maze_until10_predict2:
+        questions:
+        - {}
         answers:
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
         - text: No lo se.
-          correct: false
       courseD_multi_maze_until10_predict2_2018:
+        questions:
+        - {}
         answers:
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
         - text: No lo se.
-          correct: false
       courseD_multi_maze_until10_predict2_2018_2019:
+        questions:
+        - {}
         answers:
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
         - text: No lo se.
-          correct: false
       courseD_multi_maze_until2_predict1:
+        questions:
+        - {}
         answers:
         - text: El pájaro no se moverá.
-          correct: false
-        - correct: true
-        - 
+        - {}
+        - {}
         - text: No lo se.
-          correct: false
       courseD_multi_maze_until2_predict1_2018:
+        questions:
+        - {}
         answers:
         - text: El pájaro no se moverá.
-          correct: false
-        - correct: true
-        - 
+        - {}
+        - {}
         - text: No lo se.
-          correct: false
       courseD_multi_maze_until2_predict1_2018_2019:
+        questions:
+        - {}
         answers:
         - text: El pájaro no se moverá.
-          correct: false
-        - correct: true
-        - 
+        - {}
+        - {}
         - text: No lo se.
-          correct: false
       courseD_multi_scrat_predict1:
-        answers:
-        - text: Nada. Scrat no se moverá.
-          correct: false
-        - text: Scrat se moverá hacia adelante tres veces, girará, después se moverá
-            hacia adelante tres veces más, consiguiendo la bellota!
-          correct: true
-        - text: Scrat se moverá hacia adelante, después girará y se estrellará.
-          correct: false
-        - text: No lo se.
-          correct: false
         questions:
         - text: Este código utiliza un bloque nuevo. Qué crees que pasará cuando pulses
             "Ejecutar"?
-      courseE_multi_artist_predict1:
         answers:
-        - correct: true
-        - 
-        - 
+        - text: Nada. Scrat no se moverá.
+        - text: Scrat se moverá hacia adelante tres veces, girará, después se moverá
+            hacia adelante tres veces más, consiguiendo la bellota!
+        - text: Scrat se moverá hacia adelante, después girará y se estrellará.
         - text: No lo se.
-          correct: false
       courseE_multi_bee_functions_predict1:
+        questions:
+        - {}
         answers:
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
         - text: No lo se.
-          correct: false
       courseE_multi_farmer_functions11_predict:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - 
-        - correct: true
+        - {}
+        - {}
+        - {}
+        - {}
       courseE_multi_farmer_functions11_predict_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseE_multi_farmer_functions11_predict_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
-      courseE_multi_farmer_predict1:
-        answers:
-        - 
-        - 
-        - correct: true
-        - text: No lo sé
-          correct: false
-      courseE_multi_farmer_predict2:
-        answers:
-        - 
-        - correct: true
-        - 
-        - text: No lo se.
-          correct: false
-      courseE_multi_maze_predict1:
-        answers:
-        - text: Nada. El pájaro no se moverá.
-          correct: false
-        - correct: true
-        - 
-        - text: No lo se.
-          correct: false
+        - {}
+        - {}
+        - {}
+        - {}
       courseE_prediction_artistFunction1:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - 
-        - correct: true
+        - {}
+        - {}
+        - {}
+        - {}
       courseE_prediction_artistFunction1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - 
-        - correct: true
+        - {}
+        - {}
+        - {}
+        - {}
       courseE_prediction_artistFunction1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - 
-        - correct: true
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_bee_variables_8a_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
         - text: No lo se.
-          correct: false
       courseF_bee_variables_8a_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
         - text: No lo se.
-          correct: false
       courseF_multi_artist_for10_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
+        - {}
+        - {}
+        - {}
         - text: No lo se.
-          correct: false
       courseF_multi_artist_for10_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
+        - {}
+        - {}
+        - {}
         - text: No lo se.
-          correct: false
       courseF_multi_artist_for10_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
+        - {}
+        - {}
+        - {}
         - text: No lo se.
-          correct: false
       courseF_multi_artist_fwp2_predict1:
+        questions:
+        - {}
         answers:
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
         - text: No lo se.
-          correct: false
-      courseF_multi_artist_predict1:
-        answers:
-        - correct: true
-        - 
-        - 
-        - text: No lo se.
-          correct: false
       courseF_multi_artist_variables3a_predict1:
+        questions:
+        - {}
         answers:
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
         - text: No lo se.
-          correct: false
       courseF_multi_artist_variables3a_predict1_2018:
+        questions:
+        - {}
         answers:
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
         - text: No lo se.
-          correct: false
       courseF_multi_artist_variables3a_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
         - text: No lo se.
-          correct: false
       courseF_multi_bee_conditionals1_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
         - text: No lo se.
-          correct: false
       courseF_multi_bee_conditionals7_predict2:
+        questions:
+        - {}
         answers:
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
         - text: No lo se.
-          correct: false
       courseF_multi_bee_for3_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_multi_bee_for3_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
         - text: 'No lo se. '
-          correct: false
       courseF_multi_bee_for3_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
         - text: 'No lo se. '
-          correct: false
       courseF_multi_bee_fwp9_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
         - text: No lo se.
-          correct: false
       courseF_multi_playlab_variables4c_predictive1:
+        questions:
+        - {}
         answers:
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
         - text: No lo se.
-          correct: false
       coursee_prediction_artistfunction2:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       coursee_prediction_artistfunction2_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       coursee_prediction_artistfunction2_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       grade2_multi_collector_A_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
         - text: No lo se.
-          correct: false
       grade2_multi_collector_A_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
         - text: No lo se.
-          correct: false
       grade2_multi_collector_A_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
         - text: No lo se.
-          correct: false

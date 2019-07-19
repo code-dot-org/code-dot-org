@@ -510,6 +510,13 @@ const sourceHandler = {
       callback({});
     }
   },
+  setInitialGeneratedProperties(generatedProperties) {
+    getAppOptions().initialGeneratedProperties = generatedProperties;
+  },
+  getGeneratedProperties() {
+    const {getGeneratedProperties} = getAppOptions();
+    return getGeneratedProperties && getGeneratedProperties();
+  },
   prepareForRemix() {
     const {prepareForRemix} = getAppOptions();
     if (prepareForRemix) {

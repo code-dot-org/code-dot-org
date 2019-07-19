@@ -7,7 +7,7 @@ import {
 import {RegionalPartnerMiniContactPopupLink} from '@cdo/apps/code-studio/pd/regional_partner_mini_contact/RegionalPartnerMiniContact';
 import Notification from '@cdo/apps/templates/Notification';
 import * as color from '../util/color';
-import UnsafeRenderedMarkdown from '@cdo/apps/templates/UnsafeRenderedMarkdown';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {studio} from '@cdo/apps/lib/util/urlHelpers';
 import PropTypes from 'prop-types';
 import queryString from 'query-string';
@@ -418,7 +418,7 @@ class RegionalPartnerSearch extends Component {
                 <div>
                   <h3>Scholarship, discounts, and cost information:</h3>
                   <div style={styles.scholarship}>
-                    <UnsafeRenderedMarkdown
+                    <SafeMarkdown
                       markdown={partnerInfo.cost_scholarship_information}
                     />
                   </div>
@@ -428,7 +428,7 @@ class RegionalPartnerSearch extends Component {
               {partnerInfo.additional_program_information && (
                 <div>
                   <h3>Additional program information:</h3>
-                  <UnsafeRenderedMarkdown
+                  <SafeMarkdown
                     markdown={partnerInfo.additional_program_information}
                   />
                 </div>

@@ -1,5 +1,5 @@
 name 'CSD U3 drawing practice choice'
-title 'Practice'
+display_name 'Practice'
 description 'Do lots of practice!'
 
 sublevels

@@ -909,46 +909,8 @@
   coursee-2019_name: 課程 E（2019）
   coursef-2019_name: 課程 F（2019）
   pre-express-2018_name: 學前兒童的速學課程（2018）
-  cspunit2_name: "（舊）單元 2：網際網路"
-  cspunit3_name: "（舊）單元 3：程式設計"
-  cspunit4_name: "（舊）單元 4：數據"
-  cspunit5_name: "（舊）單元 5：探索及建立 PT"
-  cspunit6_name: 'Post-AP：App 的數據庫'
-  csd1_name: '單元 1：問題解決'
-  csd2_name: '單元 2：Web 開發'
-  csd3_name: '單元 3：動畫與遊戲'
-  csd4_name: '單元 4：設計流程'
-  csd5_name: '單元 5：數據和社會'
-  csd6_name: '單元 6：物理運算'
-  csd1-2017_name: '單元 1：問題解決'
-  csd2-2017_name: '單元 2：Web 開發'
-  csd3-2017_name: '單元 3：動畫與遊戲'
-  csd4-2017_name: '單元 4：設計流程'
-  csd5-2017_name: '單元 5：數據和社會'
-  csd6-2017_name: '單元 6：物理運算'
-  csd1-2018_name: '單元 1：問題解決'
-  csd2-2018_name: '單元 2：Web 開發'
-  csd3-2018_name: '單元 3：動畫與遊戲'
-  csd4-2018_name: '單元 4：設計流程'
-  csd5-2018_name: '單元 5：數據和社會'
-  csd6-2018_name: '單元 6：物理運算'
-  csp1-2017_name: '單元 1：網際網路'
-  csp2-2017_name: '單元 2：數位資訊'
-  csppostap-2017_name: 'Post AP：App 的數據庫'
-  csp1-2018_name: '單元 1：網際網路'
-  csp2-2018_name: '單元 2：數位資訊'
-  csppostap-2018_name: 'Post AP：App 的數據庫'
-  csp1_name: '單元 1：網際網路'
-  csp2_name: '單元 2：數位資訊'
-  csp3-a_name: '單元 3：程式設計介紹（版本 A）'
-  csp3-research-mxghyt_name: '單元 3：程式設計介紹（子目標）'
-  csp-ap_name: AP效能任務
-  csppostap_name: 'Post AP：App 的數據庫'
-  csp-post-survey_name: 課後問卷調查
-  cspassessment_name: "完整測驗 - 共 50 題"
-  cspexam1-mWU7ilDYM9_name: 測驗第一部分：25 題
-  cspexam2-AKwgAh1ac5_name: 測驗第二部分：25 題
-  cspunit3_gradelevel: "年級 9-12"
+  accelerated_name: "速成課程"
+  express_name: "速學課程"
   20-hour_name: 速成課程
   algebra_name: "代數裡的 CS"
   AlgebraA_name: "代數裡的 CS 課程 A"
@@ -960,20 +922,6 @@
   starwarsblocks_name: "星際大戰（程式積木）"
   hoc-encryption_name: 簡單加密
   text-compression_name: 文字壓縮
-  math_category_name: "運算"
-  hoc_category_name: "一小時玩程式"
-  csf_category_name: "CS 基本原理"
-  csf_2017_category_name: "計算機科學基礎（2017）"
-  csf_2018_category_name: "計算機科學基礎（2018）"
-  csf_international_category_name: "計算機科學基礎國際版"
-  csf2_draft_category_name: '開發中：課程 A - F'
-  csd_category_name: "計算機科學探索（'17-'18）"
-  csd_2018_category_name: "計算機科學探索（'18-'19）"
-  csp_category_name: "'15-' 16 計算機科學原理"
-  csp17_category_name: "CS 原理 ('17-'18)"
-  csp_2018_category_name: "計算機科學原理（'18-'19）"
-  cspexams_category_name: "計算機科學原理應用測驗"
-  research_studies_category_name: "研究"
   applab_name: "App Lab"
   gamelab_name: "Game Lab"
   basketball_name: "製作一個籃球遊戲"
@@ -1440,10 +1388,6 @@
   header_report_bug: "回報 Bug"
   header_tutorials: "所有教程"
   header_documentation: "說明文件"
-  csp_name: "CS 原理"
-  csd_name: "計算機科學探索"
-  csd_2018_name: "計算機科學探索"
-  full_course_category_name: "完整課程"
   user_header_label: "嗨，%{username}"
   user_header_team: "團隊"
   user_header_settings: "帳戶設定"

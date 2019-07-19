@@ -4,7 +4,7 @@ import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
 import debounce from 'lodash/debounce';
-import UnsafeRenderedMarkdown from '@cdo/apps/templates/UnsafeRenderedMarkdown';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
 const MenuState = {
   MINIMIZING: 'MINIMIZING',
@@ -243,24 +243,24 @@ export default class SmallFooter extends React.Component {
         </div>
         <div id="copyright-flyout" style={styles.copyright}>
           <div id="copyright-scroll-area" style={styles.copyrightScrollArea}>
-            <UnsafeRenderedMarkdown
+            <SafeMarkdown
               markdown={decodeURIComponent(
                 this.props.copyrightStrings.thank_you
               )}
             />
             <p>{this.props.copyrightStrings.help_from_html}</p>
-            <UnsafeRenderedMarkdown
+            <SafeMarkdown
               markdown={decodeURIComponent(
                 this.props.copyrightStrings.art_from_html
               )}
             />
-            <UnsafeRenderedMarkdown
+            <SafeMarkdown
               markdown={decodeURIComponent(
                 this.props.copyrightStrings.code_from_html
               )}
             />
             <p>{this.props.copyrightStrings.powered_by_aws}</p>
-            <UnsafeRenderedMarkdown
+            <SafeMarkdown
               markdown={decodeURIComponent(
                 this.props.copyrightStrings.trademark
               )}

@@ -39,7 +39,8 @@ class SchoolInfo < ActiveRecord::Base
 
   VALIDATION_TYPES = [
     VALIDATION_FULL = 'full'.freeze,
-    VALIDATION_NONE = 'none'.freeze
+    VALIDATION_NONE = 'none'.freeze,
+    VALIDATION_COMPLETE = 'complete'.freeze
   ].freeze
 
   belongs_to :school_district
@@ -133,13 +134,14 @@ class SchoolInfo < ActiveRecord::Base
   validate :validate_with_country
   validate :validate_without_country
   validate :validate_zip
+  validate :validate_complete
 
   def usa?
     ['US', 'USA', 'United States'].include? country
   end
 
-  def should_validate?
-    validation_type != VALIDATION_NONE
+  def should_check_for_full_validation?
+    !(validation_type == VALIDATION_NONE || validation_type == VALIDATION_COMPLETE)
   end
 
   def validate_zip
@@ -163,7 +165,7 @@ class SchoolInfo < ActiveRecord::Base
   #
   # This method reports errors if the record has a country and is invalid.
   def validate_with_country
-    return unless country && should_validate?
+    return unless country && should_check_for_full_validation?
     usa? ? validate_us : validate_non_us
   end
 
@@ -239,7 +241,7 @@ class SchoolInfo < ActiveRecord::Base
   # validate records in the older data format (see school_info_test.rb for details).
   # This method reports errors if the record does NOT have a country and is invalid.
   def validate_without_country
-    return unless should_validate?
+    return unless should_check_for_full_validation?
     return if country
 
     # don't allow any new fields in the old data format.
@@ -269,6 +271,13 @@ class SchoolInfo < ActiveRecord::Base
     end
 
     errors.add(:school_district, "is required")
+  end
+
+  def validate_complete
+    return if validation_type != VALIDATION_COMPLETE || complete?
+
+    errors.add(:country, "is required") if country.nil?
+    errors.add(:school_name, "cannot be blank") if school_name.blank?
   end
 
   def effective_school_district_name

@@ -6,12 +6,14 @@ en:
       category:
         csd_category_name: CS Discoveries ('17-'18)
         csd_2018_category_name: CS Discoveries ('18-'19)
+        csd_2019_category_name: CS Discoveries ('19-'20)
         csf_category_name: CS Fundamentals
         csf_2018_category_name: CS Fundamentals (2018)
         csf_international_category_name: CS Fundamentals International
         csf2_draft_category_name: 'Under Development: Courses A - F'
         csp_category_name: "'15-'16 CS Principles"
         csp_2018_category_name: CS Principles ('18-'19)
+        csp_2019_category_name: CS Principles ('19-'20)
         cspexams_category_name: CS Principles Practice Test
         csp17_category_name: CS Principles ('17-'18)
         full_course_category_name: Full Courses
@@ -10521,6 +10523,8 @@ en:
               name: andrea-test-stage3
             Deeper Learning Overview:
               name: Deeper Learning Overview
+            andrea-test-stage4:
+              name: andrea-test-stage4
           title: andrea-test
           description_audience: 6-12 Facilitators-in-Training
           description_short: this is to test my skills in making a course
@@ -11792,6 +11796,8 @@ en:
           stages:
             new stage:
               name: new stage
+            Number Systems:
+              name: Number Systems
           title: CSP Unit 1 Pilot
           description_audience: ''
           description_short: ''
@@ -12050,6 +12056,30 @@ en:
               name: 'Project: Designing an App, pt. 1'
             'Project: Designing an App, pt. 2':
               name: 'Project: Designing an App, pt. 2'
+            Programs Investigate:
+              name: Programs Investigate
+            Programs Practice:
+              name: Programs Practice
+            'Project: Designing an App, pt. 3':
+              name: 'Project: Designing an App, pt. 3'
+            'Project: Designing an App, pt. 4':
+              name: 'Project: Designing an App, pt. 4'
+            'Project: Share Your App':
+              name: 'Project: Share Your App'
+            'Project: Designing an App pt. 1':
+              name: 'Project: Designing an App pt. 1'
+            'Project: Designing an App pt. 2':
+              name: 'Project: Designing an App pt. 2'
+            Project - Designing an App Part 1:
+              name: Project - Designing an App Part 1
+            Project - Designing an App Part 2:
+              name: Project - Designing an App Part 2
+            Project - Designing an App Part 3:
+              name: Project - Designing an App Part 3
+            Project - Designing an App Part 4:
+              name: Project - Designing an App Part 4
+            The Need for Programming Languages:
+              name: The Need for Programming Languages
           title: 'Unit 3: Intro to App Development'
           description_audience: ''
           description_short: ''

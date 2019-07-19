@@ -9,27 +9,31 @@ import {
   GAME_WIDTH,
   SpritelabReservedWords
 } from './constants';
-import experiments from '../util/experiments';
-import {outputError, injectErrorHandler} from '../lib/util/javascriptMode';
-import JavaScriptModeErrorHandler from '../JavaScriptModeErrorHandler';
-import BlocklyModeErrorHandler from '../BlocklyModeErrorHandler';
-var msg = require('@cdo/gamelab/locale');
-import CustomMarshalingInterpreter from '../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
+import experiments from '@cdo/apps/util/experiments';
+import {
+  outputError,
+  injectErrorHandler
+} from '@cdo/apps/lib/util/javascriptMode';
+import JavaScriptModeErrorHandler from '@cdo/apps/JavaScriptModeErrorHandler';
+import BlocklyModeErrorHandler from '@cdo/apps/BlocklyModeErrorHandler';
+var gamelabMsg = require('@cdo/gamelab/locale');
+var spritelabMsg = require('@cdo/spritelab/locale');
+import CustomMarshalingInterpreter from '@cdo/apps/lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 var apiJavascript = require('./apiJavascript');
-var consoleApi = require('../consoleApi');
-var utils = require('../utils');
+var consoleApi = require('@cdo/apps/consoleApi');
+var utils = require('@cdo/apps/utils');
 var dropletConfig = require('./dropletConfig');
-var JSInterpreter = require('../lib/tools/jsinterpreter/JSInterpreter');
-import * as apiTimeoutList from '../lib/util/timeoutList';
-var JsInterpreterLogger = require('../JsInterpreterLogger');
+var JSInterpreter = require('@cdo/apps/lib/tools/jsinterpreter/JSInterpreter');
+import * as apiTimeoutList from '@cdo/apps/lib/util/timeoutList';
+var JsInterpreterLogger = require('@cdo/apps/JsInterpreterLogger');
 var GameLabP5 = require('./GameLabP5');
 var gameLabSprite = require('./GameLabSprite');
 var gameLabGroup = require('./GameLabGroup');
 var gamelabCommands = require('./commands');
-import {initializeSubmitHelper, onSubmitComplete} from '../submitHelper';
-var dom = require('../dom');
-import {initFirebaseStorage} from '../storage/firebaseStorage';
-import {getStore} from '../redux';
+import {initializeSubmitHelper, onSubmitComplete} from '@cdo/apps/submitHelper';
+var dom = require('@cdo/apps/dom');
+import {initFirebaseStorage} from '@cdo/apps/storage/firebaseStorage';
+import {getStore} from '@cdo/apps/redux';
 import {
   allAnimationsSingleFrameSelector,
   setInitialAnimationList,
@@ -37,23 +41,23 @@ import {
   withAbsoluteSourceUrls
 } from './animationListModule';
 import {getSerializedAnimationList} from './shapes';
-import {add as addWatcher} from '../redux/watchedExpressions';
+import {add as addWatcher} from '@cdo/apps/redux/watchedExpressions';
 var reducers = require('./reducers');
 var GameLabView = require('./GameLabView');
 var Provider = require('react-redux').Provider;
-import {shouldOverlaysBeVisible} from '../templates/VisualizationOverlay';
+import {shouldOverlaysBeVisible} from '@cdo/apps/templates/VisualizationOverlay';
 import {
   getContainedLevelResultInfo,
   postContainedLevelAttempt,
   runAfterPostContainedLevel
-} from '../containedLevels';
-import {hasValidContainedLevelResult} from '../code-studio/levels/codeStudioLevels';
-import {actions as jsDebugger} from '../lib/tools/jsdebugger/redux';
+} from '@cdo/apps/containedLevels';
+import {hasValidContainedLevelResult} from '@cdo/apps/code-studio/levels/codeStudioLevels';
+import {actions as jsDebugger} from '@cdo/apps/lib/tools/jsdebugger/redux';
 import {addConsoleMessage, clearConsole} from './textConsoleModule';
-import {captureThumbnailFromCanvas} from '../util/thumbnail';
-import Sounds from '../Sounds';
-import {TestResults, ResultType} from '../constants';
-import {showHideWorkspaceCallouts} from '../code-studio/callouts';
+import {captureThumbnailFromCanvas} from '@cdo/apps/util/thumbnail';
+import Sounds from '@cdo/apps/Sounds';
+import {TestResults, ResultType} from '@cdo/apps/constants';
+import {showHideWorkspaceCallouts} from '@cdo/apps/code-studio/callouts';
 import defaultSprites from './defaultSprites.json';
 import wrap from './debugger/replay';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
@@ -66,7 +70,13 @@ import {
 } from '@cdo/apps/util/performance';
 import MobileControls from './MobileControls';
 import Exporter from './Exporter';
-import {generateExpoApk} from '../util/exporter';
+import {
+  expoGenerateApk,
+  expoCheckApkBuild,
+  expoCancelApkBuild
+} from '@cdo/apps/util/exporter';
+import project from '@cdo/apps/code-studio/initApp/project';
+import {setExportGeneratedProperties} from '@cdo/apps/code-studio/components/exportDialogRedux';
 
 const defaultMobileControlsConfig = {
   spaceButtonVisible: true,
@@ -107,6 +117,7 @@ var GameLab = function() {
   /** @private {JsInterpreterLogger} */
   this.consoleLogger_ = new JsInterpreterLogger(window.console);
 
+  this.generatedProperties = {};
   this.eventHandlers = {};
   this.Globals = {};
   this.currentCmdQueue = null;
@@ -167,19 +178,10 @@ module.exports = GameLab;
  * @param {string} logLevel
  */
 GameLab.prototype.log = function(object, logLevel) {
-  this.consoleLogger_.log(
-    experiments.isEnabled('react-inspector')
-      ? {output: object, fromConsoleLog: true}
-      : object
-  );
+  this.consoleLogger_.log({output: object, fromConsoleLog: true});
   if (this.debuggerEnabled) {
     getStore().dispatch(
-      jsDebugger.appendLog(
-        experiments.isEnabled('react-inspector')
-          ? {output: object, fromConsoleLog: true}
-          : object,
-        logLevel
-      )
+      jsDebugger.appendLog({output: object, fromConsoleLog: true}, logLevel)
     );
   }
 };
@@ -272,7 +274,7 @@ GameLab.prototype.init = function(config) {
   }.bind(this);
 
   config.dropletConfig = dropletConfig;
-  config.appMsg = msg;
+  config.appMsg = this.isSpritelab ? spritelabMsg : gamelabMsg;
 
   // hide makeYourOwn on the share page
   config.makeYourOwn = false;
@@ -378,9 +380,26 @@ GameLab.prototype.init = function(config) {
     }
   }
 
+  const setAndroidExportProps = this.setAndroidExportProps.bind(this);
+
   this.studioApp_.setPageConstants(config, {
     allowExportExpo: experiments.isEnabled('exportExpo'),
     exportApp: this.exportApp.bind(this),
+    expoGenerateApk: expoGenerateApk.bind(
+      null,
+      config.expoSession,
+      setAndroidExportProps
+    ),
+    expoCheckApkBuild: expoCheckApkBuild.bind(
+      null,
+      config.expoSession,
+      setAndroidExportProps
+    ),
+    expoCancelApkBuild: expoCancelApkBuild.bind(
+      null,
+      config.expoSession,
+      setAndroidExportProps
+    ),
     channelId: config.channel,
     nonResponsiveVisualizationColumnWidth: GAME_WIDTH,
     showDebugButtons: showDebugButtons,
@@ -410,6 +429,13 @@ GameLab.prototype.init = function(config) {
       ? config.initialAnimationList
       : this.startAnimations;
   getStore().dispatch(setInitialAnimationList(initialAnimationList));
+
+  this.generatedProperties = {
+    ...config.initialGeneratedProperties
+  };
+  getStore().dispatch(
+    setExportGeneratedProperties(this.generatedProperties.export)
+  );
 
   // Pre-register all audio preloads with our Sounds API, which will load
   // them into memory so they can play immediately:
@@ -445,26 +471,25 @@ GameLab.prototype.init = function(config) {
  * @param {Object} expoOpts
  */
 GameLab.prototype.exportApp = async function(expoOpts) {
-  // TODO: find another way to get this info that doesn't rely on globals.
-  const appName =
-    (window.dashboard && window.dashboard.project.getCurrentName()) || 'my-app';
-  const {mode, expoSnackId, iconUri, splashImageUri} = expoOpts || {};
-  if (mode === 'expoGenerateApk') {
-    return generateExpoApk(
-      {
-        appName,
-        expoSnackId,
-        iconUri,
-        splashImageUri
-      },
-      this.studioApp_.config
-    );
-  }
   await this.whenAnimationsAreReady();
   return this.exportAppWithAnimations(
-    appName,
+    project.getCurrentName() || 'my-app',
     getStore().getState().animationList,
     expoOpts
+  );
+};
+
+GameLab.prototype.setAndroidExportProps = function(props) {
+  // Spread the previous object so changes here will always fail shallow
+  // compare and trigger react prop changes
+  this.generatedProperties.export = {
+    ...this.generatedProperties.export,
+    android: props
+  };
+  project.projectChanged();
+  project.saveIfSourcesChanged();
+  getStore().dispatch(
+    setExportGeneratedProperties(this.generatedProperties.export)
   );
 };
 
@@ -750,6 +775,7 @@ GameLab.prototype.reset = function() {
 };
 
 GameLab.prototype.onPuzzleComplete = function(submit, testResult, message) {
+  let msg = this.isSpritelab ? spritelabMsg : gamelabMsg;
   if (message && msg[message]) {
     this.message = msg[message]();
   }
@@ -1080,6 +1106,7 @@ GameLab.prototype.onP5ExecutionStarting = function() {
 GameLab.prototype.onP5Preload = function() {
   Promise.all([
     this.preloadAnimations_(this.level.pauseAnimationsByDefault),
+    this.maybePreloadBackgrounds_(),
     this.runPreloadEventHandler_()
   ]).then(() => {
     this.gameLabP5.notifyPreloadPhaseComplete();
@@ -1094,6 +1121,14 @@ GameLab.prototype.loadValidationCodeIfNeeded_ = function() {
   ) {
     this.level.helperLibraries.unshift(validationLibraryName);
   }
+};
+
+// Preloads background images if this is Sprite Lab
+GameLab.prototype.maybePreloadBackgrounds_ = function() {
+  if (!this.isSpritelab) {
+    return Promise.resolve();
+  }
+  return this.gameLabP5.preloadBackgrounds();
 };
 
 /**
@@ -1421,6 +1456,7 @@ GameLab.prototype.executeCmd = function(id, name, opts) {
  */
 GameLab.prototype.displayFeedback_ = function() {
   var level = this.level;
+  let msg = this.isSpritelab ? spritelabMsg : gamelabMsg;
 
   this.studioApp_.displayFeedback({
     feedbackType: this.testResults,
@@ -1455,6 +1491,18 @@ GameLab.prototype.getSerializedAnimationList = function(callback) {
       callback(getSerializedAnimationList(getStore().getState().animationList));
     })
   );
+};
+
+/**
+ * Get the project properties for upload to the sources API.
+ * Bound to appOptions in gamelab/main.js, used in project.js for autosave.
+ */
+GameLab.prototype.getGeneratedProperties = function() {
+  // Must return a new object instance each time so the project
+  // system can properly compare currentSources vs newSources
+  return {
+    ...this.generatedProperties
+  };
 };
 
 /**
