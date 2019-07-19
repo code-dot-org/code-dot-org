@@ -81,7 +81,7 @@ module Pd
     end
 
     test 'pre-workshop survey displays embedded JotForm when enrolled' do
-      setup_summer_workshop
+      setup_summer_workshop :with_regional_partner
       submit_redirect = general_submit_redirect(day: 0)
       assert_equal '/pd/workshop_survey/submit', URI.parse(submit_redirect).path
 
@@ -109,7 +109,7 @@ module Pd
     end
 
     test 'pre-workshop survey reports render to New Relic' do
-      setup_summer_workshop
+      setup_summer_workshop :with_regional_partner
       NewRelic::Agent.expects(:record_custom_event).with(
         'RenderJotFormView',
         {
@@ -186,7 +186,7 @@ module Pd
     end
 
     test 'daily summer workshop survey with open session attendance displays embedded JotForm' do
-      setup_summer_workshop
+      setup_summer_workshop :with_regional_partner
       Session.any_instance.expects(:open_for_attendance?).returns(true)
       create :pd_attendance, session: @summer_workshop.sessions[0], teacher: @enrolled_summer_teacher, enrollment: @summer_enrollment
 
@@ -217,7 +217,7 @@ module Pd
     end
 
     test 'academic year workshop with open session attendance displays embedded Jotform' do
-      setup_academic_year_workshop
+      setup_academic_year_workshop :with_regional_partner
       Session.any_instance.expects(:open_for_attendance?).returns(true)
       create :pd_attendance, session: @academic_year_workshop.sessions[0], teacher: @enrolled_academic_year_teacher, enrollment: @academic_year_enrollment
 
@@ -248,7 +248,7 @@ module Pd
     end
 
     test 'enrollment code override is used when fetching the workshop for a user' do
-      setup_academic_year_workshop
+      setup_academic_year_workshop :with_regional_partner
       other_academic_workshop = create :pd_workshop,
         course: COURSE_CSP,
         subject: SUBJECT_CSP_WORKSHOP_1,
@@ -420,7 +420,7 @@ module Pd
     end
 
     test 'facilitator specific survey reports render to New Relic' do
-      setup_summer_workshop
+      setup_summer_workshop :with_regional_partner
       NewRelic::Agent.expects(:record_custom_event).with(
         'RenderJotFormView',
         {
@@ -576,7 +576,7 @@ module Pd
     end
 
     test 'post workshop survey renders embedded JotForm' do
-      setup_summer_workshop
+      setup_summer_workshop :with_regional_partner
       create :pd_attendance, session: @summer_workshop.sessions[4], teacher: @enrolled_summer_teacher, enrollment: @summer_enrollment
 
       submit_redirect = general_submit_redirect(day: 5, enrollment_code: @summer_enrollment.code)
@@ -1077,29 +1077,49 @@ module Pd
 
     private
 
-    def setup_summer_workshop
-      @summer_workshop = create :pd_workshop, :with_regional_partner,
-        course: COURSE_CSP, subject: SUBJECT_TEACHER_CON,
-        num_sessions: 5, num_facilitators: 2
-      @summer_enrollment = create :pd_enrollment, :from_user, workshop: @summer_workshop
-      @enrolled_summer_teacher = @summer_enrollment.user
+    def setup_summer_workshop(*traits)
+      create(
+        :pd_workshop,
+        *traits,
+        course: COURSE_CSP,
+        subject: SUBJECT_TEACHER_CON,
+        num_sessions: 5,
+        num_facilitators: 2
+      ).tap do |workshop|
+        @summer_workshop = workshop
+        @summer_enrollment = create :pd_enrollment, :from_user, workshop: workshop
+        @enrolled_summer_teacher = @summer_enrollment.user
+      end
     end
 
-    def setup_academic_year_workshop
-      @academic_year_workshop = create :pd_workshop, :with_regional_partner,
-        course: COURSE_CSP, subject: SUBJECT_CSP_WORKSHOP_1,
-        num_sessions: 1, num_facilitators: 2
-      @academic_year_enrollment = create :pd_enrollment, :from_user, workshop: @academic_year_workshop
-      @enrolled_academic_year_teacher = @academic_year_enrollment.user
+    def setup_academic_year_workshop(*traits)
+      create(
+        :pd_workshop,
+        *traits,
+        course: COURSE_CSP,
+        subject: SUBJECT_CSP_WORKSHOP_1,
+        num_sessions: 1,
+        num_facilitators: 2
+      ).tap do |workshop|
+        @academic_year_workshop = workshop
+        @academic_year_enrollment = create :pd_enrollment, :from_user, workshop: workshop
+        @enrolled_academic_year_teacher = @academic_year_enrollment.user
+      end
     end
 
-    def setup_two_day_academic_year_workshop
-      @two_day_academic_year_workshop = create :pd_workshop, :with_regional_partner,
-        course: COURSE_CSP, subject: SUBJECT_CSP_WORKSHOP_5,
-        num_sessions: 2, num_facilitators: 2
-      @two_day_academic_year_enrollment = create :pd_enrollment, :from_user,
-        workshop: @two_day_academic_year_workshop
-      @enrolled_two_day_academic_year_teacher = @two_day_academic_year_enrollment.user
+    def setup_two_day_academic_year_workshop(*traits)
+      create(
+        :pd_workshop,
+        *traits,
+        course: COURSE_CSP,
+        subject: SUBJECT_CSP_WORKSHOP_5,
+        num_sessions: 2,
+        num_facilitators: 2
+      ).tap do |workshop|
+        @two_day_academic_year_workshop = workshop
+        @two_day_academic_year_enrollment = create :pd_enrollment, :from_user, workshop: workshop
+        @enrolled_two_day_academic_year_teacher = @two_day_academic_year_enrollment.user
+      end
     end
 
     def assert_not_enrolled
