@@ -94,11 +94,9 @@ FactoryGirl.define do
     # Sub-factories
     #
 
-    # TODO: Make :ended a trait
+    # TODO: Remove, replace usages with the :ended trait
     factory :pd_ended_workshop do
-      num_sessions 1
-      started_at {Time.zone.now}
-      ended_at {Time.zone.now}
+      ended
     end
 
     factory :csf201_workshop do
