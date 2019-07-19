@@ -37,7 +37,7 @@ id-ID:
       2-3 Artist 8:
         2-3_Artist_8_a: Jika kamu memotong 200 menjadi setengah, berapa lebar piksel
           untuk setiap bujur sangkar?
-      2-3 Artist 9:
+      2-3 Artist 9 NEW:
         2-3_Artist_9_a: Berlian ini benar-benar nyata terdapat persegi pada sisinya
       2-3 Artist Debugging 10:
         2-3_Artist_Debugging_10_b: |-
@@ -980,6 +980,36 @@ id-ID:
         mc_9_b: Bintik hitam di dinding adalah batubara! Gunakan `hancurkan blok`
           untuk menambang batubara.
         mc_9_c: Gunakan `letakkan obor` untuk menempatkan obor di tempat anda berdiri.
+      behaviors 2:
+        behavior hint: |-
+          Coba edit perilaku!
+
+          \-Ke arah mana roket perlu bergerak?
+      behaviors 3:
+        behavior hint: |-
+          Coba edit perilaku!
+
+          \-Nilai yang mana yang mengontrol kecepatan setiap peri?
+      behaviors 3a:
+        behavior hint: |-
+          Coba edit perilaku!
+
+          \-Nilai yang mana yang mengontrol kecepatan setiap peri?
+      behaviors 5:
+        target hint: Anda bisa memilih domba mana saja dari empat domba. Yang manakah
+          yang diinginkan astronot?
+        behavior hint: Edit perilaku untuk memecahkan teka teki. Peri astronot perlu
+          bergerak dalam dua arah untuk berhenti secara diagonal.
+      behaviors 6:
+        behavior hint: |-
+          Coba edit perilaku!
+
+          \-Nilai yang mana yang mengontrol kecepatan setiap peri?
+      behaviors 7:
+        behavior hint: |-
+          Coba edit perilaku!
+
+          \-Nilai yang mana yang mengontrol kecepatan setiap peri?
       course1_artist_loops_challenge1:
         courseA_artist_loops_challenge1_b: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
         courseA_artist_loops_challenge1_c: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
@@ -2999,12 +3029,6 @@ id-ID:
       courseC_maze_debugging1:
         courseC_maze_debugging1_b: Ada 1 blok yang perlu ditambahkan untuk melengkapi
           teka-teki ini.
-        courseD_collector_debugging1_a: |-
-          Gunakan tombol "step" untuk melihat apakah semuanya benar pada langkah pertama.
-          Bagaimana dengan yang kedua?
-          Di mana salahnya?
-        courseD_collector_debugging1_b: Apakah anda melihat pola yang bisa dibuat
-          lebih sederhana menggunakan loop `repeat`?
       courseC_maze_debugging1_2018:
         courseC_maze_debugging1_b: Ada 1 blok yang perlu ditambahkan untuk melengkapi
           teka-teki ini.
@@ -3016,12 +3040,6 @@ id-ID:
           hanya menghapus semuanya dan memulai lagi dari awal!
         courseC_maze_debugging2_c: Tidak tahu apa yang salah? Coba jalankan kode beberapa
           kali untuk melihat apa yang terjadi.
-        courseD_collector_debugging2_a: |-
-          Gunakan tombol "step" untuk melihat apakah semuanya benar pada langkah pertama.
-          Bagaimana dengan yang kedua?
-          Di mana salahnya?
-        courseD_collector_debugging2_b: Apakah anda melihat pola yang bisa dibuat
-          lebih sederhana menggunakan loop `repeat`?
       courseC_maze_debugging2_2018:
         courseC_maze_debugging2_a: Ada banyak kode berharga di ruang kerja. Jangan
           hanya menghapus semuanya dan memulai lagi dari awal!
@@ -3035,10 +3053,6 @@ id-ID:
       courseC_maze_debugging3:
         courseC_maze_debugging3_b: Tidak tahu apa yang salah? Coba jalankan kode beberapa
           kali untuk melihat apa yang terjadi.
-        courseD_collector_debugging3_a: Adakah tempat dimana Laurel melakukan suatu
-          hal yang tidak masuk akal? apa yang terjadi ketika kamu mengganti blok tersebut?
-        courseD_collector_debugging3_b: Cobalah menyederhanakan kode menggunakan loop
-          bersarang.
       courseC_maze_debugging3_2018:
         courseC_maze_debugging3_b: Tidak tahu apa yang salah? Coba jalankan kode beberapa
           kali untuk melihat apa yang terjadi.
@@ -3051,15 +3065,6 @@ id-ID:
           salah?
         courseC_maze_debugging4_b: Salah satu belokannya membuat Scrat masuk ke arah
           yang salah. Bisakah kamu mencari tahu yang mana?
-        courseD_collector_debugging4_a: "Coba gunakan proses debug beberapa kali berturut-turut.
-          \nApa yang menyebabkan masalah pertama?\nSetelah masalah itu diperbaiki,
-          apa yang salah?"
-        courseD_collector_debugging4_b: Jika anda mengalami kesulitan untuk mencari
-          tahu bagaimana membuat pola langkah tangga, cobalah menelusuri dengan jari
-          anda dan ucapkan perintah dengan suara keras. Jangan lupa tunjukkan arah
-          belokan!
-        courseD_collector_debugging4_c: Loop ini hanya kehilangan satu blok. Bisakah
-          kamu temukan?
       courseC_maze_debugging4_2018:
         courseC_maze_debugging4_a: Gunakan tombol "step" untuk menjalankan instruksi
           satu per satu. Apakah itu membantu anda menemukan garis di mana ada yang
@@ -3075,8 +3080,6 @@ id-ID:
       courseC_maze_debugging5:
         courseC_maze_debugging5_b: Coba katakan apa yang harus dilakukan Scrat dengan
           suara keras. Apakah sama seperti kode di workspace? Apa yang salah?
-        courseD_collector_debugging5_b: Setelah anda memiliki loop pertama seperti
-          yang anda inginkan, apa yang tersisa dalam kode anda?
       courseC_maze_debugging5_2018:
         courseC_maze_debugging5_b: Coba katakan apa yang harus dilakukan Scrat dengan
           suara keras. Apakah sama seperti kode di workspace? Apa yang salah?
@@ -3087,13 +3090,6 @@ id-ID:
         courseC_maze_debugging6_b: Setelah Anda menemukan dan tetap yang pertama bug,
           melalui proses debugging lagi untuk menemukan yang kedua. Ulangi proses
           sampai program bekerja!
-        courseD_collector_debugging6_a: |-
-          Coba jalankan melalui kode menggunakan tombol "step". Apakah semuanya baik pada langkah pertama?
-          Bagaimana dengan yang kedua?
-          Di mana ada yang salah?
-        courseD_collector_debugging6_b: Tampaknya semua langkah sudah benar, kamu
-          hanya butuh sedikit lagi. Bagaimana kamu bisa mengulang aksi 'collect' berulang
-          kali?
       courseC_maze_debugging6_2018:
         courseC_maze_debugging6_b: Setelah Anda menemukan dan tetap yang pertama bug,
           melalui proses debugging lagi untuk menemukan yang kedua. Ulangi proses
@@ -3108,10 +3104,6 @@ id-ID:
         courseC_maze_debugging7_c: |-
           Setelah menemukan dan memperbaiki bug pertama, pastikan untuk menggunakan proses debug lagi untuk menemukan yang berikutnya.
           Ulangi proses debug sampai program bekerja!
-        courseD_collector_debugging8_a: Apakah anda melihat pola yang bisa anda simpulkan
-          dengan sebuah loop?
-        courseD_collector_debugging8_b: Coba gunakan loop bersarang untuk membuat
-          kode ini lebih pendek.
       courseC_maze_debugging7_2018:
         courseC_maze_debugging7_b: Jangan lupa gunakan tombol "Step" untuk menjalankan
           program baris demi baris!
@@ -3124,18 +3116,6 @@ id-ID:
         courseC_maze_debugging7_c: |-
           Setelah menemukan dan memperbaiki bug pertama, pastikan untuk menggunakan proses debug lagi untuk menemukan yang berikutnya.
           Ulangi proses debug sampai program bekerja!
-      courseC_maze_debugging8_predict1:
-        courseD_collector_debugging9_a: Ada beberapa cara untuk mengatasi masalah
-          ini... tapi mereka semuanya melibatkan belokan!
-        courseD_collector_debugging9_b: Cari tahu bagaimana anda bisa memecahkan teka-teki
-          itu, kemudian pindahkan langkah demi langkah untuk mencoba membuat kode
-          sesuai dengan apa yang ada di kepala anda.
-      courseC_maze_debugging9:
-        courseD_collector_debugging9_a: Ada beberapa cara untuk mengatasi masalah
-          ini... tapi mereka semuanya melibatkan belokan!
-        courseD_collector_debugging9_b: Cari tahu bagaimana anda bisa memecahkan teka-teki
-          itu, kemudian pindahkan langkah demi langkah untuk mencoba membuat kode
-          sesuai dengan apa yang ada di kepala anda.
       courseC_maze_debugging_challenge1:
         courseC_maze_debugging_challenge1_a: Kiri atau kanan? Terserah kamu!
         courseC_maze_debugging_challenge1_b: Scrat jalan adalah bentuk sebuah persegi
@@ -5063,54 +5043,33 @@ id-ID:
         courseD_playLab_cond6_c: Tambahkan sebuah blok `wait 1 second` ke bagian atas
           loop 'repeat forever' yang memeriksa posisi bajak laut (tapi tidak di dalam
           pernyataan`if`) untuk mtnjaga poin agar tidak dihapus terlalu cepat.
-      courseD_scrat_predict1:
-        courseF_maze_ramp6_a: Ada dua alternatif untuk menyelesaikan teka-teki ini!
-        courseF_maze_ramp6_c: Jangan takut membuat kesalahan! Cobalah menambahkan
+      courseD_scrat_ramp1:
+        courseC_maze_programming1_b: Jangan takut membuat kesalahan! Cobalah menambahkan
           blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika
           anda berpikir bahwa anda belum menyelesaikan teka-teki itu.
-      courseD_scrat_ramp1:
-        courseC_maze_programming1_0: Jika burung tersebut tidak sampai ke babi, pastikan
-          ketiga blok telah diklik sepenuhnya bersama-sama, lalu klik "Run" lagi.
       courseD_scrat_ramp2:
         courseC_maze_programming2_a: Untuk menggunakan sebuah blok `move forward`,
           seret dari toolbox ke dalam ruang kerja dan hubungkan ke blok`when run`.
         courseC_maze_programming2_b: Pastikan ketiga blok 'move forward`terpasang
           pada blok`when run\`.
       courseD_scrat_ramp4:
-        courseF_maze_ramp4_a: Anda bisa belok kanan atau kiri dari sudut pandang burung.
-          Jika anda menghadap ke kanan, belok ke kanan akan membuat anda menunjuk
-          ke bawah.
-        courseF_maze_ramp4_b: Untuk mengikuti jalannya, bergerak maju dan berbelok
-          ke satu arah, kemudian bergerak tiga kali sebelum berbalik ke arah berlawanan.
-          Bergerak maju satu kali lagi untuk menjangkau babi.
-        courseF_maze_ramp4_c: Jangan takut untuk membuat kesalahan! Cobalah menambahkan
-          blok dan menjalankan kode untuk melihat apa yang terjadi, bahkan jika anda
-          belum memecahkan teka-teki itu.
-        courseC_maze_programming4_a: Anda bisa belok kanan atau kiri dari sudut pandang
-          burung. Jika anda menghadap ke kanan, belok ke kanan akan membuat anda menunjuk
+        courseC_maze_programming4_a: Anda dapat belok kanan atau kiri dari sudut pandang
+          Scrat. Jika anda menghadap ke kanan, belok ke kanan akan membuat anda menunjuk
           ke bawah.
         courseC_maze_programming4_b: Untuk mengikuti jalan, bergerak maju dan berbelok
           ke satu arah, kemudian bergerak lagi dan berbelok sebaliknya. Maju terus
-          satu kali lagi untuk menjangkau babi.
+          satu kali lagi untuk menjangkau acorn.
         courseC_maze_programming4_c: Jangan takut membuat kesalahan! Cobalah menambahkan
           blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika
           anda berpikir bahwa anda belum menyelesaikan teka-teki itu.
       courseD_scrat_ramp5:
-        courseF_maze_ramp5_a: Coba gunakan tombol "step" untuk menjalankan kode baris
-          demi baris. Bisakah anda mencari tahu apa yang perlu anda lakukan selanjutnya?
         courseC_maze_programming5_a: Coba gunakan tombol "step" untuk menjalankan
           kode baris demi baris. Bisakah anda mencari tahu apa yang perlu anda lakukan
           selanjutnya?
-      courseD_scrat_ramp6:
-        courseC_maze_programming6_a: Ada dua alternatif untuk menyelesaikan teka-teki
-          ini!
-        courseC_maze_programming6_c: Jangan takut membuat kesalahan! Cobalah menambahkan
-          blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika
-          anda berpikir bahwa anda belum menyelesaikan teka-teki itu.
       courseD_scrat_ramp7:
-        courseD_maze_ramp7_b: Jangan lupa gunakan tombol "Step" untuk melewati blok
-          demi blok dan mencari kesalahan.
-        courseD_maze_ramp7_c: Jangan takut membuat kesalahan! Cobalah menambahkan
+        courseD_scrat_programming6_a: Ada dua alternatif untuk menyelesaikan teka-teki
+          ini!
+        courseD_scrat_programming6_c: Jangan takut membuat kesalahan! Cobalah menambahkan
           blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika
           anda berpikir bahwa anda belum menyelesaikan teka-teki itu.
       courseD_scrat_ramp8:
@@ -5119,12 +5078,6 @@ id-ID:
         courseD_maze_ramp7_c: Jangan takut membuat kesalahan! Cobalah menambahkan
           blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika
           anda berpikir bahwa anda belum menyelesaikan teka-teki itu.
-        courseE_artist_ramp8_a: Untuk menggambar sebuah sisi, gunakan `bergerak maju
-          dengan 100 piksel` blok, dan mengubah 100 untuk sebuah 200.
-      courseD_video_repeatUntil:
-        courseE_farmer_ramp12c: Jangan takut untuk membuat kesalahan! Cobalah menambahkan
-          blok dan menjalankan kode untuk melihat apa yang terjadi, bahkan jika anda
-          belum memecahkan teka-teki itu.
       courseE_artist_concept_challenge1:
         courseE_artist_concept_challenge1_a: 'Setengah segi enam memiliki **panjang
           30** dan belok kanan **60 derajat**.  '
@@ -5203,9 +5156,12 @@ id-ID:
         courseE_artist_ramp8_a: Untuk menggambar sebuah sisi, gunakan `bergerak maju
           dengan 100 piksel` blok, dan mengubah 100 untuk sebuah 200.
       courseE_artist_ramp8_2:
+        courseE_artist_ramp8_a: Untuk menggambar sebuah sisi, gunakan `bergerak maju
+          dengan 100 piksel` blok, dan mengubah 100 untuk sebuah 200.
+      courseE_artist_ramp9:
         courseD_artist_ramp12_b: Anda bisa menggunakan menu drop dwon pada blok `ubah`
           untuk melihat sudut mana yang Anda butuhkan!
-      courseE_artist_ramp9:
+      courseE_artist_ramp9_2:
         courseD_artist_ramp12_b: Anda bisa menggunakan menu drop dwon pada blok `ubah`
           untuk melihat sudut mana yang Anda butuhkan!
       courseE_bee_concept1:
@@ -5357,6 +5313,9 @@ id-ID:
       courseF_artist_variables4_2018:
         courseF_artist_variables4_b: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       courseF_artist_variables4_2019:
+        courseF_artist_variables4_a: Kode anda tidak akan jauh berbeda dengan yang
+          ada di teka teki terakhir, kecuali anda perlu untuk mengganti artis untuk
+          terjun, kemudian memutarnya balik untuk bersiap menggambar segitiga berikutnya.
         courseF_artist_variables4_b: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       courseF_artist_variables_challenge2:
         courseF_artist_variables_challenge2_a: 'Variabel sangat membantu Anda karena
@@ -5452,6 +5411,10 @@ id-ID:
           judul fungsi anda pada suatu waktu.  Tambah beberapa blok, kemudian mencobanya.
           Tambahkan lebih banyak, kemudian coba lagi. Segera, anda akan sampai di
           sana!
+      courseF_bee_variables_4_2019:
+        courseF_bee_variables_4_2019_1: Sebagai ganti pengurangan 1 dari'gather' tambahkan
+          1 setiap waktu sebagai pengganti. keuntungan apa yang seharusnya dimiliki
+          variabel pertama kali?
       courseF_playlab_variables_challenge2:
         courseF_playlab_variables_challenge2_b: Anda dapat mengubah parameter seberapa
           jauh sprite anda bergerak salah satu tombol panah ditekan setiap kali.

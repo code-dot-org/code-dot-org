@@ -694,9 +694,6 @@ it-IT:
       courseD_playLab_condFP_2018:
         courseD_playLab_condFP_1: Abbiamo organizzato i blocchi in categorie per darti
           più istruzioni con cui giocare! Clicca qui per vedere dove sono finite.
-      courseD_scrat_predict1:
-        courseD_maze_ramp6_1: Qualiasi codice inserisci qui sarà ripetuto quante volte
-          gli dici di farlo, poi continua ad eseguire il resto del programma.
       courseD_scrat_ramp1:
         grade2_CaringForNewPet_0_1: Dopo aver attaccato tutti i blocchi tra loro,
           premi "Esegui" per far partire il programma.
@@ -710,15 +707,11 @@ it-IT:
         courseC_maze_programming4_1: Questo numero indica la massima quantità di blocchi
           di questo tipo che puoi usare.
       courseD_scrat_ramp6:
-        courseE_artist_ramp8_1: Puoi cambiare questo numero.
-        courseE_artist_ramp8_2: Clicca qui per inserire il numero di volte da ripetere
-          il tuo codice.
         courseD_maze_ramp6_1: Qualiasi codice inserisci qui sarà ripetuto quante volte
           gli dici di farlo, poi continua ad eseguire il resto del programma.
-      courseD_scrat_ramp8:
-        courseE_artist_ramp8_1: Puoi cambiare questo numero.
-        courseE_artist_ramp8_2: Clicca qui per inserire il numero di volte da ripetere
-          il tuo codice.
+      courseD_scrat_ramp7:
+        courseD_maze_ramp6_1: Qualiasi codice inserisci qui sarà ripetuto quante volte
+          gli dici di farlo, poi continua ad eseguire il resto del programma.
       courseE_artist_functions1:
         courseD_artist_functions1_1: Cominciamo usando questo blocco per creare il
           primo quadrato.
@@ -774,6 +767,10 @@ it-IT:
         courseE_artist_functions_challenge2_callout2: Se non ti piace questo progetto,
           cambialo con qualunque cosa vuoi!
       courseE_artist_ramp8:
+        courseE_artist_ramp8_1: Puoi cambiare questo numero.
+        courseE_artist_ramp8_2: Clicca qui per inserire il numero di volte da ripetere
+          il tuo codice.
+      courseE_artist_ramp8_2:
         courseE_artist_ramp8_1: Puoi cambiare questo numero.
         courseE_artist_ramp8_2: Clicca qui per inserire il numero di volte da ripetere
           il tuo codice.

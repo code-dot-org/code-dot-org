@@ -51,6 +51,7 @@ class Census::StateCsOffering < ApplicationRecord
     MT
     NC
     ND
+    NE
     NH
     NJ
     NM
@@ -99,6 +100,7 @@ class Census::StateCsOffering < ApplicationRecord
     MS
     MT
     ND
+    NE
     NM
     NY
     OH

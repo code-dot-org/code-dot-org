@@ -1216,33 +1216,6 @@ pl-PL:
   coursee_name: Kurs E
   coursef-draft_name: Kurs F
   coursef_name: Kurs F
-  cspunit2_name: "(stary) Unit 2: Internet"
-  cspunit3_name: "(stary) Unit 3: Programowanie"
-  cspunit4_name: "(stary) Unit 4: Dane"
-  cspunit5_name: "(stary) Unit 5: Wypróbuj i Utwórz PT"
-  cspunit6_name: 'Post-AP: Baz Danych w Aplikacjach'
-  csd5_name: 'Jednostka 5: Dane i Społeczeństwo'
-  csd6_name: 'Jednostka 6: Programowanie Urządzeń'
-  csd5-2017_name: 'Jednostka 5: Dane i Społeczeństwo'
-  csd6-2017_name: 'Jednostka 6: Programowanie Urządzeń'
-  csd5-2018_name: 'Jednostka 5: Dane i Społeczeństwo'
-  csd6-2018_name: 'Jednostka 6: Programowanie Urządzeń'
-  csp1-2017_name: 'Unit 1: Internet'
-  csp2-2017_name: 'Unit 2: Cyfrowe informacje'
-  csppostap-2017_name: 'Post-AP: Bazy Danych w Aplikacjach'
-  csp1-2018_name: 'Unit 1: Internet'
-  csp2-2018_name: 'Unit 2: Cyfrowe informacje'
-  csppostap-2018_name: 'Post-AP: Bazy Danych w Aplikacjach'
-  csp1_name: 'Unit 1: Internet'
-  csp2_name: 'Unit 2: Cyfrowe informacje'
-  csp3-a_name: 'Jednostka 3: Programowanie Wprowadzające (wersja A)'
-  csp3-research-mxghyt_name: 'Jednostka 3: Programowanie Wprowadzające (Podcele)'
-  csp-ap_name: Zadania Wydajnościowe AP
-  csppostap_name: 'Post-AP: Bazy Danych w Aplikacjach'
-  cspassessment_name: Pełen test - 50 pytań
-  cspexam1-mWU7ilDYM9_name: Test Część 1 - 25 pytań
-  cspexam2-AKwgAh1ac5_name: Test Część 2 - 25 pytań
-  cspunit3_gradelevel: Klasy 9-12
   accelerated_name: Przyspieszony kurs
   20-hour_name: Przyspieszony kurs
   algebra_name: Informatyka w algebrze
@@ -1255,14 +1228,6 @@ pl-PL:
   starwarsblocks_name: Star Wars (Bloki)
   hoc-encryption_name: Proste szyfrowanie
   text-compression_name: Kompresja tekstu
-  math_category_name: Matematyka
-  hoc_category_name: Godzina Kodowania
-  csf_category_name: Podstawy Informatyki
-  csf_international_category_name: Mędzynarodowe Podstawy Informatyki
-  csf2_draft_category_name: 'W fazie rozwoju: Kursy A - F'
-  csp_category_name: Podstawy Informatyki '15-'16
-  csp17_category_name: Podstawy Informatyki '16-'17
-  cspexams_category_name: Praktyczny Test Podstaw Informatyki
   applab_name: App Lab
   gamelab_name: Laboratorium Gier (Game Lab)
   basketball_name: Utwórz grę w koszykówkę
@@ -2104,10 +2069,6 @@ pl-PL:
   header_report_bug: Zgłoś błąd
   header_tutorials: Samouczki
   header_documentation: Dokumentacja
-  csp_name: Podstawy Informatyki '16-'17
-  csd_name: Odkrycia CS
-  csd_2018_name: Odkrycia CS
-  full_course_category_name: Pełne Kursy
   user_header_label: Witaj %{username}
   user_header_team: Zespół
   user_header_settings: Moje konto

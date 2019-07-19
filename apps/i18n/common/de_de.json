@@ -552,7 +552,6 @@
   "feedbackFrom": "Rückmeldung von {teacher}",
   "feedbackNotificationButton": "Rückmeldung ansehen",
   "feedbackNotificationDetails": "Du hast {numFeedbackLevels} Level mit ungelesenen Rückmeldungen.",
-  "feedbackNotificationLastUpdated": "Letztes Update:",
   "filterByStudent": "Filtern nach Schüler:",
   "filterByStage": "Nach Schwierigkeitsstufen sortieren:",
   "finalStage": "Herzlichen Glückwunsch! Du hast die letzte Aufgabe abgeschlossen.",

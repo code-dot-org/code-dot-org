@@ -458,10 +458,6 @@ ru-RU:
       courseD_scrat_ramp4:
         courseC_maze_programming4_1: Это твой предел блоков. Он говорит сколько таких
           блоков ты ещё можешь использовать.
-      courseD_scrat_ramp6:
-        courseE_artist_ramp8_1: Вы можете изменить это число.
-      courseD_scrat_ramp8:
-        courseE_artist_ramp8_1: Вы можете изменить это число.
       courseE_artist_functions1:
         courseD_artist_functions1_1: Давай начнём использовать этот блок, чтобы помочь
           создать первый квадрат.
@@ -475,6 +471,8 @@ ru-RU:
         courseD_artist_functions2_1: Когда этот зелёный блок работает весь код функции
           работает. Что должен делать художник после отрисовки первого квадрата?
       courseE_artist_ramp8:
+        courseE_artist_ramp8_1: Вы можете изменить это число.
+      courseE_artist_ramp8_2:
         courseE_artist_ramp8_1: Вы можете изменить это число.
       courseF_bee_conditionals5:
         courseF_bee_conditionals5_1: Используйте этот блок, когда длина пути меняется

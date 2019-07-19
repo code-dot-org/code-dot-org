@@ -553,8 +553,6 @@ zh-CN:
         courseD_playLab_condFP_1: 我们将模块分类提供给你，来写更多的代码！点击这里来看看每样东西都在哪里。
       courseD_playLab_condFP_2018:
         courseD_playLab_condFP_1: 我们将模块分类提供给你，来写更多的代码！点击这里来看看每样东西都在哪里。
-      courseD_scrat_predict1:
-        courseD_maze_ramp6_1: 无论您在这里放置什么代码, 都会重复您说的次数, 然后继续运行该程序的其余部分。
       courseD_scrat_ramp1:
         grade2_CaringForNewPet_0_1: 连接完所有的模块后, 按 "运行" 来启动你的程序。
       courseD_scrat_ramp2:
@@ -564,15 +562,11 @@ zh-CN:
       courseD_scrat_ramp4:
         courseC_maze_programming4_1: 这是你的模块限制。 它告诉你还可以使用多少个模块。
       courseD_scrat_ramp6:
-        courseE_artist_ramp8_1: 您可以更改此数字。
-        courseE_artist_ramp8_2: 单击此处键入重复代码的次数。
         courseD_maze_ramp6_1: 无论您在这里放置什么代码, 都会重复您说的次数, 然后继续运行该程序的其余部分。
       courseD_scrat_ramp7:
-        courseD_maze_ramp7_1: 这是你的第一个挑战关卡！这些都是很难的, 可能需要几次尝试。
+        courseD_maze_ramp6_1: 无论您在这里放置什么代码, 都会重复您说的次数, 然后继续运行该程序的其余部分。
       courseD_scrat_ramp8:
         courseD_maze_ramp7_1: 这是你的第一个挑战关卡！这些都是很难的, 可能需要几次尝试。
-        courseE_artist_ramp8_1: 您可以更改此数字。
-        courseE_artist_ramp8_2: 单击此处键入重复代码的次数。
       courseE_artist_functions1:
         courseD_artist_functions1_1: 让我们用这个模块来帮助创建第一个正方形。
       courseE_artist_functions2:
@@ -606,6 +600,9 @@ zh-CN:
         courseE_artist_functions_challenge2_callout1: 通过在底部添加更多代码来保持这个程序运行。
         courseE_artist_functions_challenge2_callout2: 如果你不喜欢这个设计, 把它变成你想要的任何东西!
       courseE_artist_ramp8:
+        courseE_artist_ramp8_1: 您可以更改此数字。
+        courseE_artist_ramp8_2: 单击此处键入重复代码的次数。
+      courseE_artist_ramp8_2:
         courseE_artist_ramp8_1: 您可以更改此数字。
         courseE_artist_ramp8_2: 单击此处键入重复代码的次数。
       courseE_farmer_functions1:

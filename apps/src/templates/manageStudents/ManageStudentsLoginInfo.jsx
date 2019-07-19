@@ -5,6 +5,7 @@ import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 import i18n from '@cdo/locale';
 import googleSignInButton from '../../../static/teacherDashboard/googleSignInButton.png';
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
+import Button from '../../templates/Button';
 
 const styles = {
   explanation: {
@@ -102,16 +103,15 @@ class ManageStudentsLoginInfo extends Component {
           sectionId={sectionId}
           onLoginTypeChanged={() => window.location.reload()}
         />
-        <h2>Privacy</h2>
-        <p>
-          <a
-            id="uitest-privacy-link"
-            target="_blank"
-            href={`${pegasusUrlPrefix}/privacy/student-privacy`}
-          >
-            {i18n.privacyDocExplanation()}
-          </a>
-        </p>
+        <h2>{i18n.privacyHeading()}</h2>
+        <p id="uitest-privacy-text">{i18n.privacyDocExplanation()}</p>
+        <Button
+          color="white"
+          id="uitest-privacy-link"
+          target="_blank"
+          href={`${pegasusUrlPrefix}/privacy/student-privacy`}
+          text={i18n.privacyButton()}
+        />
       </div>
     );
   }

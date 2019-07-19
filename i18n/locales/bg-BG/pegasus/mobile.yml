@@ -840,22 +840,6 @@
   course2_name: "Курс 2"
   course3_name: "Курс 3"
   course4_name: "Курс 4"
-  cspunit2_name: "(стар) Раздел 2: Интернет"
-  cspunit3_name: "(стар) Раздел 3: програмиране"
-  cspunit4_name: "(стар) Раздел 4: данни"
-  cspunit5_name: "(стар) Раздел 5: Изследване и създаване на PT"
-  cspunit6_name: 'Пост AP: Бази данни в приложения'
-  csp1-2017_name: 'Раздел 1: Интернет'
-  csp2-2017_name: 'Част 1 - Дигитална информация'
-  csp1-2018_name: 'Раздел 1: Интернет'
-  csp2-2018_name: 'Част 1 - Дигитална информация'
-  csp1_name: 'Раздел 1: Интернет'
-  csp2_name: 'Част 1 - Дигитална информация'
-  cspassessment_name: "Пълен тест - 50 въпроса"
-  cspexam1-mWU7ilDYM9_name: Тест част 1-25 въпроси
-  cspexam2-AKwgAh1ac5_name: Тест част 2 - 25 въпроси
-  cspunit3_gradelevel: "Класове 9-12"
-  cspunit3_shortdescription_congrats: "Тази част въвежда фундаменталните концепции за компютърно програмиране, което отключва възможността да се правят богати, интерактивни приложения. Този курс използва JavaScript като език за програмиране, както и Ап лабораторията като програмната среда за изграждане на приложения, но концепцията, която ще научите в тези уроци обхваща всички езици за програмиране и инструменти."
   accelerated_name: "Ускорен курс"
   20-hour_name: Ускорен курс
   algebra_name: "CS в алгебрата"
@@ -867,12 +851,6 @@
   minecraft_name: "Minecraft"
   starwarsblocks_name: "Междузвездни войни (блокове)"
   text-compression_name: Компресия на текста
-  math_category_name: "Математика"
-  hoc_category_name: "Hour of Code"
-  csf_category_name: "CS основи"
-  csp_category_name: "\"15-\" 16 CS принципи"
-  csp17_category_name: "\"15-\" 16 CS принципи"
-  cspexams_category_name: "CS принципи практически тест"
   applab_name: "Лаборатория за приложения"
   gamelab_name: "Играта лаборатория"
   basketball_name: "Направете баскетболна игра"
@@ -1313,7 +1291,6 @@
   header_about: "Относно"
   header_teacher_community: "Учителска общност"
   header_report_bug: "Съобщи за бъгове"
-  csp_name: "\"15-\" 16 CS принципи"
   user_header_label: "Здравейте %{username}"
   user_header_team: "Екип"
   user_header_settings: "Моят акаунт"
