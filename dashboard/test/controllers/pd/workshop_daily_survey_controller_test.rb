@@ -482,21 +482,22 @@ module Pd
     end
 
     test 'facilitator specific submit for 2-day academic redirects to thanks for day 1' do
-      setup_two_day_academic_year_workshop num_facilitators: 2
-      sign_in @enrolled_two_day_academic_year_teacher
+      workshop = create :two_day_academic_year_workshop, num_facilitators: 2
+      teacher = create(:enrollment, :from_user, workshop: workshop).user
+      sign_in teacher
 
       assert_creates Pd::WorkshopFacilitatorDailySurvey do
         post '/pd/workshop_survey/facilitators/submit',
           params: facilitator_submit_redirect_params(
             day: 1,
-            user: @enrolled_two_day_academic_year_teacher,
-            workshop: @two_day_academic_year_workshop,
+            user: teacher,
+            workshop: workshop,
             facilitator_index: 1
           ).deep_merge(
             submission_id: FAKE_SUBMISSION_ID,
             key: {
-              userId: @enrolled_two_day_academic_year_teacher.id,
-              sessionId: @two_day_academic_year_workshop.sessions[0].id
+              userId: teacher.id,
+              sessionId: workshop.sessions[0].id
             }
           )
 
@@ -505,38 +506,40 @@ module Pd
 
       new_record = Pd::WorkshopFacilitatorDailySurvey.last
       assert new_record.placeholder?
-      assert_equal @two_day_academic_year_workshop, new_record.pd_workshop
+      assert_equal workshop, new_record.pd_workshop
       assert_equal 1, new_record.day
-      assert_equal @two_day_academic_year_workshop.facilitators[1], new_record.facilitator
+      assert_equal workshop.facilitators[1], new_record.facilitator
     end
 
     test 'facilitator specific submit for 2-day academic redirects to post for day 2' do
-      setup_two_day_academic_year_workshop num_facilitators: 2
-      sign_in @enrolled_two_day_academic_year_teacher
+      workshop = create :two_day_academic_year_workshop, num_facilitators: 2
+      enrollment = create :enrollment, :from_user, workshop: workshop
+      teacher = enrollment.user
+      sign_in teacher
 
       assert_creates Pd::WorkshopFacilitatorDailySurvey do
         post '/pd/workshop_survey/facilitators/submit',
           params: facilitator_submit_redirect_params(
             day: 2,
-            user: @enrolled_two_day_academic_year_teacher,
-            workshop: @two_day_academic_year_workshop,
+            user: teacher,
+            workshop: workshop,
             facilitator_index: 1
           ).deep_merge(
             submission_id: FAKE_SUBMISSION_ID,
             key: {
-              userId: @enrolled_two_day_academic_year_teacher.id,
-              sessionId: @two_day_academic_year_workshop.sessions[1].id
+              userId: teacher.id,
+              sessionId: workshop.sessions[1].id
             }
           )
 
-        assert_redirected_to action: :new_post, enrollment_code: @two_day_academic_year_enrollment.code
+        assert_redirected_to action: :new_post, enrollment_code: enrollment.code
       end
 
       new_record = Pd::WorkshopFacilitatorDailySurvey.last
       assert new_record.placeholder?
-      assert_equal @two_day_academic_year_workshop, new_record.pd_workshop
+      assert_equal workshop, new_record.pd_workshop
       assert_equal 2, new_record.day
-      assert_equal @two_day_academic_year_workshop.facilitators[1], new_record.facilitator
+      assert_equal workshop.facilitators[1], new_record.facilitator
     end
 
     test 'facilitator specific submit for 1-day academic redirects to post for day 1' do
@@ -1098,18 +1101,6 @@ module Pd
         @academic_year_workshop = workshop
         @academic_year_enrollment = create :pd_enrollment, :from_user, workshop: workshop
         @enrolled_academic_year_teacher = @academic_year_enrollment.user
-      end
-    end
-
-    def setup_two_day_academic_year_workshop(*traits, **properties)
-      create(
-        :two_day_academic_year_workshop,
-        *traits,
-        **properties
-      ).tap do |workshop|
-        @two_day_academic_year_workshop = workshop
-        @two_day_academic_year_enrollment = create :pd_enrollment, :from_user, workshop: workshop
-        @enrolled_two_day_academic_year_teacher = @two_day_academic_year_enrollment.user
       end
     end
 

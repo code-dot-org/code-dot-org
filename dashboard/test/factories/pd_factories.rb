@@ -456,7 +456,7 @@ FactoryGirl.define do
     tc1_depart {Date.new(2017, 8, 29)}
   end
 
-  factory :pd_enrollment, class: 'Pd::Enrollment' do
+  factory :pd_enrollment, aliases: [:enrollment], class: 'Pd::Enrollment' do
     association :workshop, factory: :pd_workshop
     sequence(:first_name) {|n| "Participant#{n}"}
     last_name 'Codeberg'
