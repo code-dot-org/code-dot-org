@@ -32,6 +32,9 @@ stage 'Project - Designing an App Part 2'
 level 'CSP U3 Bird Quiz Storyboard', progression: 'Sample Prototype'
 level 'CSP U3 L4 Design Screens', progression: 'Build Your Screens'
 
+stage 'The Need for Programming Languages'
+level 'Temporary Need for Programming Languages SFLP CSP3 Pilot', progression: 'Lesson Overview'
+
 stage 'Programs Investigate'
 level 'U3 Program Investigate Sequential 1', progression: 'Code Investigation'
 level 'U3 Program Investigate Sequential 2', progression: 'Code Investigation'

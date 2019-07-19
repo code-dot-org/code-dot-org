@@ -969,9 +969,10 @@
     remark-stringify "^6.0.0"
     unified "^7.0.0"
 
-"@code-dot-org/snack-sdk@2.2.0-apkurl-v3":
-  version "2.2.0-apkurl-v3"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/snack-sdk/-/snack-sdk-2.2.0-apkurl-v3.tgz#571ea2cb15b21a27e1b397c963e04cfce32e7122"
+"@code-dot-org/snack-sdk@2.2.1-apkurl-v4":
+  version "2.2.1-apkurl-v4"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/snack-sdk/-/snack-sdk-2.2.1-apkurl-v4.tgz#b90c03ba129aef14a629e1a876ae5f7c0786dda6"
+  integrity sha512-VGmcK+Bp5jC5psDeIkulA1uM3hN6kq56+i1LcR2vIS/geEujyJ995e9ay5CqFN6uj5543dlD9qy92mAvM89Sxw==
   dependencies:
     babel-runtime "^6.23.0"
     diff "^3.2.0"
