@@ -5,30 +5,6 @@
 #   attendance (Pd::Attendance)
 FactoryGirl.define do
   factory :pd_workshop, class: 'Pd::Workshop' do
-    association :organizer, factory: :workshop_organizer
-    funded false
-    on_map true
-    location_name 'Hogwarts School of Witchcraft and Wizardry'
-    course Pd::Workshop::COURSES.first
-    subject {Pd::Workshop::SUBJECTS[course].try(&:first)}
-    trait :teachercon do
-      course Pd::Workshop::COURSE_CSP
-      subject Pd::Workshop::SUBJECT_CSP_TEACHER_CON
-    end
-    trait :local_summer_workshop do
-      course Pd::Workshop::COURSE_CSP
-      subject Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP
-    end
-    trait :local_summer_workshop_upcoming do
-      local_summer_workshop
-      num_sessions 5
-      sessions_from {Date.current + 3.months}
-    end
-    trait :fit do
-      course Pd::Workshop::COURSE_CSP
-      subject Pd::Workshop::SUBJECT_CSP_FIT
-    end
-    capacity 10
     transient do
       num_sessions 0
       num_facilitators 0
@@ -41,9 +17,72 @@ FactoryGirl.define do
       randomized_survey_answers false
       assign_session_code false
     end
+
+    # Associations
+    association :organizer, factory: :workshop_organizer
+
+    # Properties
+    location_name 'Hogwarts School of Witchcraft and Wizardry'
+    course Pd::Workshop::COURSES.first
+    subject {Pd::Workshop::SUBJECTS[course].try(&:first)}
+    capacity 10
+    on_map true
+    funded false
+
+    #
+    # Traits (mix-and-match)
+    #
+
+    trait :funded do
+      funded true
+      funding_type {course == Pd::Workshop::COURSE_CSF ? Pd::Workshop::FUNDING_TYPE_FACILITATOR : nil}
+    end
+
     trait :with_codes_assigned do
       assign_session_code true
     end
+
+    #
+    # Traits (specifying a specific type of workshop)
+    # TODO: Make these subfactories
+    #
+
+    trait :teachercon do
+      course Pd::Workshop::COURSE_CSP
+      subject Pd::Workshop::SUBJECT_CSP_TEACHER_CON
+    end
+
+    trait :local_summer_workshop do
+      course Pd::Workshop::COURSE_CSP
+      subject Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP
+    end
+
+    trait :local_summer_workshop_upcoming do
+      local_summer_workshop
+      num_sessions 5
+      sessions_from {Date.current + 3.months}
+    end
+
+    trait :fit do
+      course Pd::Workshop::COURSE_CSP
+      subject Pd::Workshop::SUBJECT_CSP_FIT
+    end
+
+    #
+    # Sub-factories
+    #
+
+    # TODO: Make :ended a trait
+    factory :pd_ended_workshop do
+      num_sessions 1
+      started_at {Time.zone.now}
+      ended_at {Time.zone.now}
+    end
+
+    #
+    # Hooks
+    #
+
     after(:build) do |workshop, evaluator|
       # Sessions, one per day starting today
       evaluator.num_sessions.times do |i|
@@ -71,11 +110,6 @@ FactoryGirl.define do
       end
     end
 
-    trait :funded do
-      funded true
-      funding_type {course == Pd::Workshop::COURSE_CSF ? Pd::Workshop::FUNDING_TYPE_FACILITATOR : nil}
-    end
-
     after(:create) do |workshop, evaluator|
       workshop.sessions.map(&:save)
 
@@ -94,11 +128,5 @@ FactoryGirl.define do
         end
       end
     end
-  end
-
-  factory :pd_ended_workshop, parent: :pd_workshop, class: 'Pd::Workshop' do
-    num_sessions 1
-    started_at {Time.zone.now}
-    ended_at {Time.zone.now}
   end
 end
