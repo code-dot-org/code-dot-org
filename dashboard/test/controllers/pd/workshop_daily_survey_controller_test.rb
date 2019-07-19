@@ -64,7 +64,7 @@ module Pd
     end
 
     test 'pre-workshop survey displays not enrolled message when not enrolled' do
-      sign_in unenrolled_teacher
+      sign_in create :teacher
       get '/pd/workshop_survey/day/0'
       assert_response :success
       assert_not_enrolled
@@ -147,7 +147,7 @@ module Pd
     end
 
     test 'daily workshop survey displays not enrolled message when not enrolled' do
-      sign_in unenrolled_teacher
+      sign_in create :teacher
       get '/pd/workshop_survey/day/1'
       assert_response :success
       assert_not_enrolled
@@ -657,7 +657,7 @@ module Pd
     end
 
     test 'csf pre201 survey: unenrolled teacher gets not_enrolled msg' do
-      sign_in unenrolled_teacher
+      sign_in create :teacher
       get '/pd/workshop_survey/csf/pre201'
 
       assert_response :success
@@ -781,7 +781,7 @@ module Pd
     end
 
     test 'csf post201 survey: show not-enrolled page if teacher did not enroll' do
-      sign_in unenrolled_teacher
+      sign_in create :teacher
       get '/pd/workshop_survey/csf/post201'
 
       assert_response :success
@@ -1100,10 +1100,6 @@ module Pd
       @two_day_academic_year_enrollment = create :pd_enrollment, :from_user,
         workshop: @two_day_academic_year_workshop
       @enrolled_two_day_academic_year_teacher = @two_day_academic_year_enrollment.user
-    end
-
-    def unenrolled_teacher
-      create :teacher
     end
 
     def assert_not_enrolled
