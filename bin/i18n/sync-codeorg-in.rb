@@ -10,6 +10,7 @@ require 'fileutils'
 require 'json'
 
 require_relative 'i18n_script_utils'
+require_relative 'redact_restore_utils'
 
 I18N_SOURCE_DIR = "i18n/locales/source"
 
@@ -17,7 +18,7 @@ def sync_in
   localize_level_content
   localize_block_content
   puts "Copying source files"
-  run_bash_script "bin/i18n-codeorg/in.sh"
+  I18nScriptUtils.run_bash_script "bin/i18n-codeorg/in.sh"
   redact_level_content
   redact_block_content
 end
@@ -98,7 +99,7 @@ def localize_level_content
       script_strings = {}
       script.script_levels.each do |script_level|
         level = script_level.oldest_active_level
-        url = get_level_url_key(script, level)
+        url = I18nScriptUtils.get_level_url_key(script, level)
         script_strings[url] = get_i18n_strings(level)
 
         # extract block category strings; although these are defined for each
@@ -162,7 +163,7 @@ def localize_block_content
   end
 
   File.open("dashboard/config/locales/blocks.en.yml", "w+") do |f|
-    f.write(to_crowdin_yaml({"en" => {"data" => {"blocks" => blocks}}}))
+    f.write(I18nScriptUtils.to_crowdin_yaml({"en" => {"data" => {"blocks" => blocks}}}))
   end
 end
 
@@ -205,11 +206,8 @@ def redact_level_file(source_path)
     file.write(JSON.pretty_generate(redactable_data))
   end
 
-  stdout, _status = Open3.capture2(
-    'bin/i18n/node_modules/.bin/redact',
-    stdin_data: JSON.generate(redactable_data)
-  )
-  redacted_data = JSON.parse(stdout)
+  redacted_data = RedactRestoreUtils.redact_data(redactable_data)
+
   File.open(source_path, 'w') do |source_file|
     source_file.write(JSON.pretty_generate(source_data.deep_merge(redacted_data)))
   end
@@ -230,7 +228,7 @@ def redact_block_content
   backup = source.sub("source", "original")
   FileUtils.mkdir_p(File.dirname(backup))
   FileUtils.cp(source, backup)
-  redact(source, source, ['blockfield'], 'txt')
+  RedactRestoreUtils.redact(source, source, ['blockfield'], 'txt')
 end
 
 sync_in if __FILE__ == $0
