@@ -1079,12 +1079,8 @@ module Pd
 
     def setup_summer_workshop(*traits)
       create(
-        :pd_workshop,
+        :summer_workshop,
         *traits,
-        course: COURSE_CSP,
-        subject: SUBJECT_CSP_SUMMER_WORKSHOP,
-        num_sessions: 5,
-        num_facilitators: 2
       ).tap do |workshop|
         @summer_workshop = workshop
         @summer_enrollment = create :pd_enrollment, :from_user, workshop: workshop
