@@ -61,6 +61,7 @@ class XhrProxyController < ApplicationController
     herokuapp.com
     hubblesite.org
     images-api.nasa.gov
+    icanhazdadjoke.com
     isenseproject.org
     lakeside-cs.org
     opentdb.com
