@@ -12,7 +12,7 @@ import project from '../../initApp/project';
 import commonStyles from './styles';
 import IntroPage from './IntroPage';
 import PlatformPage from './PlatformPage';
-// import IconPage from './IconPage';
+import IconPage from './IconPage';
 import PublishPage from './PublishPage';
 import GeneratingPage from './GeneratingPage';
 
@@ -214,6 +214,7 @@ class ExportDialog extends React.Component {
       exportError: null,
       expoUri: undefined,
       expoSnackId: undefined,
+      iconFileUrl: undefined,
       iconUri: undefined,
       md5PublishSavedSources: undefined,
       splashImageUri: undefined,
@@ -228,22 +229,20 @@ class ExportDialog extends React.Component {
     this.props.onClose();
   };
 
-  onInstallExpoIOS = () => {
-    window.open(
-      'https://itunes.apple.com/app/apple-store/id982107779',
-      '_blank'
-    );
-  };
-
-  onInstallExpoAndroid = () => {
-    window.open(
-      'https://play.google.com/store/apps/details?id=host.exp.exponent&referrer=www',
-      '_blank'
-    );
+  onIconSelected = url => {
+    this.setState({
+      iconFileUrl: url
+    });
   };
 
   async publishExpoExport() {
-    const {expoUri, expoSnackId, iconUri, splashImageUri} = this.state;
+    const {
+      expoUri,
+      expoSnackId,
+      iconFileUrl,
+      iconUri,
+      splashImageUri
+    } = this.state;
     if (expoUri) {
       // We have already have exported to Expo
       return {
@@ -260,7 +259,8 @@ class ExportDialog extends React.Component {
     });
     try {
       const exportResult = await exportApp({
-        mode: 'expoPublish'
+        mode: 'expoPublish',
+        iconFileUrl
       });
       const {exporting} = this.state;
       if (!exporting) {
@@ -443,13 +443,11 @@ class ExportDialog extends React.Component {
         this.setState({screen: 'platform'});
         break;
       case 'platform':
+        this.setState({screen: 'icon'});
+        break;
+      case 'icon':
         this.setState({screen: 'publish'});
         break;
-      // this.setState({screen: 'icon'});
-      // break;
-      // case 'icon':
-      //   this.setState({screen: 'publish'});
-      //   break;
       case 'publish':
         this.generateApkAsNeeded();
         this.setState({screen: 'generating'});
@@ -471,9 +469,11 @@ class ExportDialog extends React.Component {
       case 'platform':
         this.setState({screen: 'intro'});
         break;
-      // case 'icon':
-      case 'publish':
+      case 'icon':
         this.setState({screen: 'platform'});
+        break;
+      case 'publish':
+        this.setState({screen: 'icon'});
         break;
       case 'generating':
         this.setState({screen: 'publish'});
@@ -495,17 +495,20 @@ class ExportDialog extends React.Component {
   };
 
   renderMainContent() {
-    const {screen} = this.state;
+    const {screen, iconFileUrl} = this.state;
 
     switch (screen) {
       case 'intro':
         return <IntroPage />;
       case 'platform':
         return <PlatformPage />;
-      // case 'icon':
-      //   return (
-      //     <IconPage />
-      //   );
+      case 'icon':
+        return (
+          <IconPage
+            iconFileUrl={iconFileUrl}
+            onIconSelected={this.onIconSelected}
+          />
+        );
       case 'publish':
         return <PublishPage />;
       case 'generating': {
