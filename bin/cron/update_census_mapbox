@@ -68,7 +68,7 @@ file = Tempfile.new(['census', 'geojson'])
 tiles = Tempfile.new(['censustiles', 'mbtiles'])
 file.write(JSON.pretty_generate(geojson))
 stdout, _status = Open3.capture2(
-  "./../tippecanoe-executable -zg -o #{tiles.path} -l \"census\" --force -r1 --cluster-distance=10 #{file.path}"
+  "tippecanoe -Z 1 -rg --cluster-distance=2 -o #{tiles.path} -l \"census\" --force #{file.path}"
 )
 upload_maptiles(tiles.path, 'censustiles')
 puts stdout
