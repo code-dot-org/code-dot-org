@@ -460,11 +460,8 @@ class User < ActiveRecord::Base
   # (2) you will not need to read additional associations of the script object.
   #
   # If you do need to read additional associations of the script object, it is
-  # better to do something like:
-  #
-  #   user_scripts.map{|us| Script.get_from_cache(us.script_id)}
-  #
-  # since the cached script objects already contains many associations listed in
+  # better to do something like `user_scripts.map(&:script)` to obtain cached
+  # script objects, since those already contain many associations listed in
   # Script.with_associated_models. The downside to using this approach is that
   # it is very slow in development and levelbuilder environments where script
   # caching is disabled.
