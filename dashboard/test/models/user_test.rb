@@ -1491,12 +1491,6 @@ class UserTest < ActiveSupport::TestCase
     assert scripts.include?(user_script_1)
   end
 
-  test 'user is working on script' do
-    user = create :user
-    s1 = create :user_script, user: user, started_at: (Time.now - 10.days), last_progress_at: (Time.now - 4.days)
-    assert user.working_on?(s1.script)
-  end
-
   test 'user is working on scripts' do
     user = create :user
     s1 = create :user_script, user: user, started_at: (Time.now - 10.days), last_progress_at: (Time.now - 4.days)

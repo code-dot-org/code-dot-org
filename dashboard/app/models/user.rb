@@ -1689,10 +1689,6 @@ class User < ActiveRecord::Base
     end
   end
 
-  def working_on?(script)
-    working_on_scripts.include?(script)
-  end
-
   def working_on_scripts
     scripts.where('user_scripts.completed_at is null').map(&:cached)
   end
