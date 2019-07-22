@@ -1597,7 +1597,7 @@ class User < ActiveRecord::Base
   # @return [Array{CourseData, ScriptData}] an array of hashes of script and
   # course data
   def recent_courses_and_scripts(exclude_primary_script)
-    primary_script_id = primary_script.try(:id)
+    primary_script_id = exclude_primary_script ? primary_script.try(:id) : nil
 
     # Filter out user_scripts that are already covered by a course
     course_scripts_script_ids = courses_as_student.map(&:default_course_scripts).flatten.pluck(:script_id).uniq
@@ -1608,7 +1608,7 @@ class User < ActiveRecord::Base
     user_script_data = user_scripts.map do |user_script|
       # Skip this script if we are excluding the primary script and this is the
       # primary script.
-      if exclude_primary_script && user_script[:script_id] == primary_script_id
+      if primary_script_id && user_script[:script_id] == primary_script_id
         nil
       else
         script_id = user_script[:script_id]
