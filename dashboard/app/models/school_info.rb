@@ -82,8 +82,6 @@ class SchoolInfo < ActiveRecord::Base
   # Only sync from school on create to avoid unintended updates to old data
   before_validation :sync_from_schools, on: :create
 
-  before_validation :readonly?, on: :update
-
   # Set SchoolInfo to read-only.  Explicitly raise an error for any attempts to update school info
   def readonly?
     !new_record?
