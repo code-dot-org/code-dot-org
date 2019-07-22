@@ -566,7 +566,7 @@ class Script < ActiveRecord::Base
     return true unless user.student?
 
     # A student can view the script version if they have progress in it or the course it belongs to.
-    has_progress = user.scripts.include?(self) || course&.has_progress?(user)
+    has_progress = user.visible_scripts.include?(self) || course&.has_progress?(user)
     return true if has_progress
 
     # A student can view the script version if they are assigned to it.
