@@ -746,9 +746,6 @@ export class Workshop extends React.Component {
         >
           <i className="fa fa-arrow-circle-down" />
         </Button>
-        {this.props.permission.has(WorkshopAdmin) && (
-          <Button bsSize="xsmall">Move enrollments</Button>
-        )}
       </div>
     );
 
