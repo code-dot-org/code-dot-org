@@ -2,7 +2,8 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
-import {Table, sort} from 'reactabular';
+import * as Table from 'reactabular-table';
+import * as sort from 'sortabular';
 import wrappedSortable from '../tables/wrapped_sortable';
 import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
 import Immutable from 'immutable';
@@ -196,7 +197,7 @@ class MoveStudents extends Component {
         property: 'selected',
         header: {
           label: '',
-          format: this.selectedStudentHeaderFormatter,
+          formatters: [this.selectedStudentHeaderFormatter],
           props: {
             style: {
               ...tableLayoutStyles.headerCell,
@@ -205,7 +206,7 @@ class MoveStudents extends Component {
           }
         },
         cell: {
-          format: this.selectedStudentFormatter,
+          formatters: [this.selectedStudentFormatter],
           props: {
             style: {
               ...tableLayoutStyles.cell,

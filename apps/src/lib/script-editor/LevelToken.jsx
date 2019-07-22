@@ -6,6 +6,7 @@ import color from '../../util/color';
 import {borderRadius, levelTokenMargin} from './constants';
 import LevelTokenDetails from './LevelTokenDetails';
 import {toggleExpand, removeLevel} from './editorRedux';
+import {levelShape} from './shapes';
 
 const styles = {
   levelToken: {
@@ -65,7 +66,7 @@ class LevelToken extends Component {
     levelKeyList: PropTypes.object.isRequired,
     toggleExpand: PropTypes.func.isRequired,
     removeLevel: PropTypes.func.isRequired,
-    level: PropTypes.object.isRequired,
+    level: levelShape.isRequired,
     stagePosition: PropTypes.number.isRequired,
     dragging: PropTypes.bool.isRequired,
     drag: PropTypes.bool.isRequired,
