@@ -508,7 +508,9 @@ var projects = (module.exports = {
     return (
       (appOptions.level && appOptions.level.hideShareAndRemix) ||
       (appOptions.embed &&
-        (appOptions.app === 'applab' || appOptions.app === 'gamelab'))
+        (appOptions.app === 'applab' ||
+          appOptions.app === 'gamelab' ||
+          appOptions.app === 'spritelab'))
     );
   },
 
@@ -675,6 +677,8 @@ var projects = (module.exports = {
         return msg.defaultProjectNameAppLab();
       case 'gamelab':
         return msg.defaultProjectNameGameLab();
+      case 'spritelab':
+        return msg.defaultProjectNameSpriteLab();
       case 'weblab':
         return msg.defaultProjectNameWebLab();
       case 'turtle':
@@ -736,12 +740,9 @@ var projects = (module.exports = {
       case 'flappy':
       case 'scratch':
       case 'weblab':
-        return appOptions.app; // Pass through type exactly
       case 'gamelab':
-        if (appOptions.droplet) {
-          return 'gamelab';
-        }
-        return 'spritelab';
+      case 'spritelab':
+        return appOptions.app; // Pass through type exactly
       case 'turtle':
         if (appOptions.skinId === 'elsa' || appOptions.skinId === 'anna') {
           return 'frozen';
