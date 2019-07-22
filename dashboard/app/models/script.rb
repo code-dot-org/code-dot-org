@@ -416,13 +416,14 @@ class Script < ActiveRecord::Base
   end
 
   def self.get_without_cache(id_or_name, version_year: nil)
-    # Also serve any script by its new_name, if it has one.
-    script = id_or_name && Script.find_by(new_name: id_or_name)
-    return script if script
-
     # a bit of trickery so we support both ids which are numbers and
     # names which are strings that may contain numbers (eg. 2-3)
     is_id = id_or_name.to_i.to_s == id_or_name.to_s
+
+    # Also serve any script by its new_name, if it has one.
+    script = !is_id && Script.find_by(new_name: id_or_name)
+    return script if script
+
     find_by = is_id ? :id : :name
     script = Script.with_associated_models.find_by(find_by => id_or_name)
     return script if script
