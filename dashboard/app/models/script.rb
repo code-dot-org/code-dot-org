@@ -412,6 +412,7 @@ class Script < ActiveRecord::Base
   end
 
   def cached
+    return self unless Script.should_cache?
     self.class.get_from_cache(id)
   end
 
