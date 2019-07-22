@@ -4,7 +4,8 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import {orderBy} from 'lodash';
-import {Table, sort} from 'reactabular';
+import * as Table from 'reactabular-table';
+import * as sort from 'sortabular';
 import wrappedSortable from '@cdo/apps/templates/tables/wrapped_sortable';
 import color from '@cdo/apps/util/color';
 
