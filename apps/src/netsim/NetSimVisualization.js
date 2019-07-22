@@ -228,6 +228,9 @@ NetSimVisualization.prototype.setLocalNode = function(newLocalNode) {
     this.eventKeys.remoteChange = newLocalNode.remoteChange.register(
       this.onRemoteChange_.bind(this)
     );
+    this.eventKeys.wireStateChange = newLocalNode.wireStateChange.register(
+      this.onWireStateChange_.bind(this)
+    );
     this.eventKeys.registeredWithLocalNode = newLocalNode;
   }
 
@@ -261,6 +264,15 @@ NetSimVisualization.prototype.setLocalNode = function(newLocalNode) {
 NetSimVisualization.prototype.onRemoteChange_ = function() {
   this.pullElementsToForeground();
   this.distributeForegroundNodes();
+};
+
+NetSimVisualization.prototype.onWireStateChange_ = function(
+  message,
+  fromRemote
+) {
+  if (message) {
+    this.animateSetWireState(message.payload, fromRemote);
+  }
 };
 
 /**
@@ -945,8 +957,12 @@ NetSimVisualization.prototype.setEncodings = function(newEncodings) {
  * Kick off an animation that will show the state of the simplex wire being
  * set by the local node.
  * @param {"0"|"1"} newState
+ * @param {boolean} fromRemote - if true, animate the wire being set from the remote node
  */
-NetSimVisualization.prototype.animateSetWireState = function(newState) {
+NetSimVisualization.prototype.animateSetWireState = function(
+  newState,
+  fromRemote
+) {
   // Assumptions - we are talking about the wire between the local node
   // and its remote partner.
   // This only gets used in peer-to-peer mode, so there should be an incoming
@@ -963,7 +979,7 @@ NetSimVisualization.prototype.animateSetWireState = function(newState) {
   // Hide the incoming wire because we are in simplex mode.
   incomingWire.hide();
   // Animate the outgoing wire
-  vizWire.animateSetState(newState);
+  vizWire.animateSetState(newState, fromRemote);
 };
 
 /**

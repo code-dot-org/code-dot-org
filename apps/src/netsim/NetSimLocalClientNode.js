@@ -78,6 +78,8 @@ var NetSimLocalClientNode = (module.exports = function(shard, clientRow) {
    */
   this.remoteChange = new ObservableEventDEPRECATED();
 
+  this.wireStateChange = new ObservableEventDEPRECATED();
+
   /**
    * Callback for when something indicates that this node has been
    * disconnected from the instance.
@@ -597,11 +599,29 @@ NetSimLocalClientNode.prototype.onWireTableChange_ = function() {
  * sent to this node.
  * @private
  */
-NetSimLocalClientNode.prototype.onMessageTableChange_ = function() {
+NetSimLocalClientNode.prototype.onMessageTableChange_ = function(changeType) {
   if (!NetSimGlobals.getLevelConfig().automaticReceive) {
     // In this level, we will not automatically pick up messages directed
     // at us.  We must manually call a receive method instead.
     return;
+  }
+  if (
+    changeType !== 'removeRowFromCache' &&
+    NetSimGlobals.getLevelConfig().messageGranularity ===
+      MessageGranularity.BITS
+  ) {
+    this.getLatestMessageOnSimplexWire(
+      function(err, message) {
+        if (err) {
+          logger.error('Error pulling message off the wire: ' + err.message);
+          return;
+        }
+        if (message) {
+          let fromRemote = message.fromNodeID !== this.entityID;
+          this.wireStateChange.notifyObservers(message, fromRemote);
+        }
+      }.bind(this)
+    );
   }
 
   if (this.isProcessingMessages_) {
