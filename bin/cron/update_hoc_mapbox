@@ -51,7 +51,8 @@ DB_READONLY[:forms].where(kind: CURRENT_HOC_SIGNUP).paged_each(rows_per_fetch: 1
         type: "Point"
       },
       properties: {
-        organization_name: organization_name
+        organization_name: organization_name,
+        special_event_details: data['special_event_details_s']
       },
       type: "Feature"
     }
@@ -60,7 +61,7 @@ file = Tempfile.new(['hocevents', 'geojson'])
 tiles = Tempfile.new(['hoctiles', 'mbtiles'])
 file.write(JSON.pretty_generate(geojson))
 stdout, _status = Open3.capture2(
-  "./../tippecanoe-executable -zg -o #{tiles.path} -l \"hoc\" --force -r1 --cluster-distance=10 #{file.path}"
+  "tippecanoe -Z 1 -rg --cluster-distance=2 -o #{tiles.path} -l \"hoc\" --force #{file.path}"
 )
 upload_maptiles(tiles.path, 'hoctiles')
 puts stdout
