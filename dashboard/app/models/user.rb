@@ -453,7 +453,23 @@ class User < ActiveRecord::Base
 
   # a bit of trickery to sort most recently started/assigned/progressed scripts first and then completed
   has_many :user_scripts, -> {order "-completed_at asc, greatest(coalesce(started_at, 0), coalesce(assigned_at, 0), coalesce(last_progress_at, 0)) desc, user_scripts.id asc"}
+
+  # The :scripts and :all_scripts associations should be used with
+  # caution because they bypass the script cache. They are ok to use when (1)
+  # fresh information is needed based on the current status of user_scripts, and
+  # (2) you will not need to read additional associations of the script object.
+  #
+  # If you do need to read additional associations of the script object, it is
+  # better to do something like:
+  #
+  #   user_scripts.map{|us| Script.get_from_cache(us.script_id)}
+  #
+  # since the cached script objects already contains many associations listed in
+  # Script.with_associated_models. The downside to using this approach is that
+  # it is very slow in development and levelbuilder environments where script
+  # caching is disabled.
   has_many :scripts, -> {where hidden: false}, through: :user_scripts, source: :script
+  has_many :all_scripts, through: :user_scripts, source: :script
 
   validates :name, presence: true, unless: -> {purged_at}
   validates :name, length: {within: 1..70}, allow_blank: true
@@ -1602,25 +1618,19 @@ class User < ActiveRecord::Base
     # Filter out user_scripts that are already covered by a course
     course_scripts_script_ids = courses_as_student.map(&:default_course_scripts).flatten.pluck(:script_id).uniq
 
-    user_scripts = in_progress_and_completed_scripts.
-      select {|user_script| !course_scripts_script_ids.include?(user_script.script_id)}
+    excluded_script_ids = course_scripts_script_ids
+    excluded_script_ids.push(primary_script_id) if primary_script_id
 
-    user_script_data = user_scripts.map do |user_script|
-      # Skip this script if we are excluding the primary script and this is the
-      # primary script.
-      if primary_script_id && user_script[:script_id] == primary_script_id
-        nil
-      else
-        script_id = user_script[:script_id]
-        script = Script.get_from_cache(script_id)
-        {
-          name: script[:name],
-          title: data_t_suffix('script.name', script[:name], 'title'),
-          description: data_t_suffix('script.name', script[:name], 'description_short', default: ''),
-          link: script_path(script),
-        }
-      end
-    end.compact
+    recent_scripts = all_scripts.where.not(id: excluded_script_ids)
+
+    user_script_data = recent_scripts.map do |script|
+      {
+        name: script[:name],
+        title: data_t_suffix('script.name', script[:name], 'title'),
+        description: data_t_suffix('script.name', script[:name], 'description_short', default: ''),
+        link: script_path(script),
+      }
+    end
 
     user_course_data = courses_as_student.map(&:summarize_short)
 
