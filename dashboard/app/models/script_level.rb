@@ -314,6 +314,8 @@ class ScriptLevel < ActiveRecord::Base
       summary[:videoKey] = level.video_key
       summary[:concepts] = level.summarize_concepts
       summary[:conceptDifficulty] = level.summarize_concept_difficulty
+      summary[:assessment] = !!assessment
+      summary[:challenge] = !!challenge
     end
 
     if include_prev_next
