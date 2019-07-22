@@ -1,4 +1,54 @@
 {
+  "https://studio.code.org/s/csd4-2017/stage/1/puzzle/1": {
+    "dsls": {
+      "markdown": "# CS Discoveries Post-Course Survey\n\n**Your input and feedback is important to us!** We use it to:\n\n* make improvements to the course\n* understand your experience\n* tell us what topics you want to learn more about in the future\n\nThanks for taking the time to help make CS Discoveries even better!\n\n<a class=\"btn btn-large btn-success\" href=\"/s/csd-post-survey/stage/1/puzzle/1/page/1\" target=\"top\">Click here to complete the CS Discoveries Post-Course Survey!!!</a>\n\n(opens in a new tab)\n\n<br>\n\n\n\n\n\n"
+    }
+  },
+  "https://studio.code.org/s/csd4-2017/stage/2/puzzle/1": {
+    "dsls": {
+      "markdown": "# Overview\n\nDesigners need to understand their users' needs. In this lesson you'll think about how to design for another person by role-playing a user profile and reacting to a series of products.\n\n## Vocabulary\n\n* **Usability** - How easy, efficient, and satisfying it is to use a human-made object or device (including software).\n\n## Resources\n\n* [Reacting as your User](https://docs.google.com/document/d/1cQXtr4zj3LEuOMoOYJf8KtBUl9ge3qmwBBzEBv8GixA/export?format=pdf) - Activity Guide\n\n\n* [Profile 1](https://docs.google.com/document/d/1N6Ks8rp6YoLgsbA3FE0x9RatJY3znevnMkMyUN3yRE8/export?format=pdf) - User Profile\n* [Profile 2](https://docs.google.com/document/d/14nHf-TzkKBUC0hvYlcviVe-S9wDdo1TqPUIcnTcHMzw/export?format=pdf) - User Profile\n* [Profile 3](https://docs.google.com/document/d/1Nw_0v_uGCe4J_tcimhyJiWKYgw4jhNgg8qP1zo4GddE/export?format=pdf) - User Profile\n* [Profile 4](https://docs.google.com/document/d/1kRKQYsomhS9UakiDazQ9dXNk8AIWHaq082Y4wBflK34/export?format=pdf) - User Profile\n"
+    }
+  },
+  "https://studio.code.org/s/csd4-2017/stage/3/puzzle/1": {
+    "dsls": {
+      "markdown": "# Overview\n\nIn this lesson you'll design a product from scratch to meet a user's needs. Along the way you'll learn how brainstorming and then categorizing ideas is a useful skill when there are many potential options you could choose.\n\n## Resources\n\n* [User Centered Design](https://docs.google.com/document/d/1HxcW76EFNVIJykCVELgjr4WRpFjPgrVvz9tURRR1gWY/export?format=pdf) - Activity Guide\n"
+    }
+  },
+  "https://studio.code.org/s/csd4-2017/stage/4/puzzle/1": {
+    "dsls": {
+      "markdown": "# Overview\n\nIn this lesson you'll learn what an app is and how they are designed to help meet a user's needs. You'll also learn how prototypes are used to create a rough draft of a piece of software.\n\n## Vocabulary\n\n* **Prototype** - A first or early model of a product that allows you to test assumptions before developing a final version.\n* **User Interface** - The visual elements of an program through which a user controls or communicates with the application. Often abbreviated UI.\n\n\n## Resources\n\n* [User Interface Screens](https://docs.google.com/document/d/1JOVsR0T5P7zQ6LdxfDjRSsX1EC8xk0TYZKe7X_GjYlk/export?format=pdf) - Activity Guide\n* [User Testing (Computer)](https://docs.google.com/document/d/1Rtla8WSmJol6sHT5SToep5_hhTM5I8z3UjA7yCap-nw/export?format=pdf) - Activity Guide\n* [User Testing (User)](https://docs.google.com/document/d/1IPu6hsHRui_ChXogq0nklAUuPUae2yx0RaADW9b4Nrs/export?format=pdf) - Activity Guide\n"
+    }
+  },
+  "https://studio.code.org/s/csd4-2017/stage/5/puzzle/1": {
+    "dsls": {
+      "markdown": "# Overview\n\nIn this lesson you'll learn how to read feedback on a product carefully to identify the needs that are being expressed. Then you'll update a paper prototype in order to better meet those needs.\n\n## Resources\n\n* [User Interface Screens](https://docs.google.com/document/d/1JOVsR0T5P7zQ6LdxfDjRSsX1EC8xk0TYZKe7X_GjYlk/export?format=pdf) - Activity Guide\n* [Prototype Feedback](https://docs.google.com/document/d/1DzoLUATK8k1lyr_TLhR4mJ5UHLhrZN6-sLRay0tLX4Q/export?format=pdf) - Activity Guide\n* [Improve a Screen](https://docs.google.com/document/d/1y0YfE6qZKKlRRpeVGU2d-SuctJP9P5fI2062yo85nZg/export?format=pdf) - Activity Guide\n"
+    }
+  },
+  "https://studio.code.org/s/csd4-2017/stage/6/puzzle/1": {
+    "dsls": {
+      "markdown": "# Overview\n\nUp to this point we have focused on designing for users who are, to some degree, distanced from us. Whether through brainstorming, profiles, or text feedback, the connection to an end user has never been direct. In this lesson you'll directly interview one of your classmates as you look to design an app that meets their needs.\n\n## Resources\n\n* [User Interview](https://docs.google.com/document/d/1u3mOVcBHWJpsMJwrvjb4_B8532xg774hkiWPEH7fbqQ/export?format=pdf) - Activity Guide\n* [Project - Paper Prototype](https://docs.google.com/document/d/12dSfN9z_sEbo41hx4reMUQxl399RjbE5cgCKl0rCHz4/export?format=pdf) - Activity Guide\n"
+    }
+  },
+  "https://studio.code.org/s/csd4-2017/stage/7/puzzle/1": {
+    "dsls": {
+      "markdown": "# Overview\n\nBased on the interview you conducted in the last lesson, design an app that could help your classmate overcome some obstacle to learning something new.\n\n\n## Resources\n\n* [Paper Prototype Rubric](https://docs.google.com/document/d/16llO0PF7rJhz_ImtNDAxG3MAt9vU6QVGpDSPGoi_-04/export?format=pdf) - Rubric\n* [Project - Paper Prototype](https://docs.google.com/document/d/12dSfN9z_sEbo41hx4reMUQxl399RjbE5cgCKl0rCHz4/export?format=pdf) - Activity Guide\n"
+    }
+  },
+  "https://studio.code.org/s/csd4-2017/stage/8/puzzle/1": {
+    "dsls": {
+      "markdown": "# Overview\n\nTo kick off the app design project, the class organizes into teams and starts exploring app topics. Several example socially impactful apps serve as inspiration for the project.\n\n\n## Resources\n\n* [App Design Kickoff](https://docs.google.com/document/d/1u5oTuQcEV0sweTA6bEER_wZT6FKoX7EqX8JdiY8YCAA/export?format=pdf) - Activity Guide\n\n"
+    }
+  },
+  "https://studio.code.org/s/csd4-2017/stage/9/puzzle/1": {
+    "dsls": {
+      "markdown": "# Overview\n\nDive into app development by exploring existing apps that may serve similar users. Each group identifies a handful of apps that address the same topic they are working on, using those apps to help refine the app idea they will pursue.\n\n\n## Resources\n\n* [Market Research](https://docs.google.com/document/d/1zDS5HCQ3nTwWHh4Dr4Ix17Db9fMRVJA8lNefwdcjiA0/export?format=pdf) - Activity Guide\n"
+    }
+  },
+  "https://studio.code.org/s/csd4-2017/stage/10/puzzle/1": {
+    "dsls": {
+      "markdown": "# Overview\n\nPaper prototypes allow developers to quickly test ideas before investing a lot of time writing code. In this lesson teams explore some example apps created in App Lab, using those apps to help inform the first paper prototypes of their apps.\n## Vocabulary\n\n* **Prototype** - A first or early model of a product that allows you to test assumptions before developing a final version.\n\n\n## Resources\n\n* [Phone Paper Prototype](https://drive.google.com/open?id=0B2UNlnU_5Vg4c1VJZ1Zrd0NXUkE) - Template\n* [What's for Lunch](https://docs.google.com/drawings/d/12qoCyr8ApVLVT9OlnHpDX7qM5mVopbw7w-0TcxlQd2k) - Prototype\n* [Prototype Brainstorming](https://docs.google.com/document/d/1t6pRCn-oSUsuQ2rog24KzbbZ7iORothH_Gp1i3Hm8A4/export?format=pdf) - Activity Guide\n"
+    }
+  },
   "https://studio.code.org/s/csd4-2017/stage/10/puzzle/3": {
     "long_instructions": "# Quiz Me\n\nA quiz app can be used to teach, or help reinforce, information important to your chosen topic.\n\nAt its most basic, a quiz app is composed of a screen for each question with two or more buttons for multiple choice answers. Each button links to a page that either confirms that you were correct, or gives you information about why you were were wrong.\n\nMore advanced quiz apps could include features such as:\n\n-   Different types of questions (such as matching, free response, or even interactive games)\n-   Randomizing the order of questions\n-   Changing the questions based on how we'll you're doing\n-   Providing a final score\n-   Incorporating study material\n\n# Functionality Missing from this Prototype\n\n-   Questions aren't actually checked for correctness"
   },
@@ -10,6 +60,16 @@
   },
   "https://studio.code.org/s/csd4-2017/stage/10/puzzle/6": {
     "long_instructions": "# Crowdsourcing\n\nCrowdsourcing apps allow multiple users to submit content for everyone to use (the _source_ of content is the _crowd_). This app is very similar to the list app, with the main difference being that the list app assumes a single user while this app allows all users to add to the same list and \"like\" submissions.\n\nThis example uses a list of crowdsourced information for simplicity, but you could display any kind of information in many different formats. A crowdsourcing app could allow users to submit locations for display on a map, images to go into a gallery, or any number of other types of information.\n\n# Functionality Missing from this Prototype\n\n-   User's can't create accounts or profiles\n-   Submitted things aren't added to the list\n-   Clicking on the \"like\" icons don't change their state"
+  },
+  "https://studio.code.org/s/csd4-2017/stage/11/puzzle/1": {
+    "dsls": {
+      "markdown": "# Overview\n\nIn this lesson teams test out their paper prototypes with other members of the class. With one student role playing the computer, one narrating, and the rest observing, teams will get immediate feedback on their app designs which will inform the next version of their app prototypes.\n\n\n## Resources\n\n* [Paper Prototype User Testing](https://docs.google.com/document/d/1cPIdaayUutKdsq1RFT-keF4X-o4XBrF2BnMaVutc-_4/export?format=pdf) - Activity Guide\n* [What's For Lunch Testing](https://drive.google.com/open?id=0BxKeX2-Lg_EYUTBNbnMyUENFcGs) - Video\n"
+    }
+  },
+  "https://studio.code.org/s/csd4-2017/stage/12/puzzle/1": {
+    "dsls": {
+      "markdown": "# Overview\n\nHaving developed, tested, and gathered feedback on a paper prototype, teams now move to App Lab to build the next iteration of their apps. Using the drag-and-drop Design Mode, each team member builds out at least one page of their team's app, responding to feedback that was received in the previous round of testing.\n\n\n## Resources\n\n* [Screen Ownership](https://docs.google.com/document/d/1eAl3Gpi1iLLOMjaO44-w2dUuJvHEzGVPrIDxpP4rkW4/export?format=pdf) - Activity Guide\n* [Screen Design](https://docs.google.com/document/d/1dtMInlgLRk_DUZwpqF6KF8TvGUJNp-vWFYYU4wG-ZLc/export?format=pdf) - Activity Guide\n"
+    }
   },
   "https://studio.code.org/s/csd4-2017/stage/12/puzzle/2": {
     "display_name": "Tour of Design Mode"
@@ -45,6 +105,11 @@
   "https://studio.code.org/s/csd4-2017/stage/12/puzzle/13": {
     "display_name": "App Project: Screen Design",
     "long_instructions": "# Mocking Up Your App\n\nUsing your paper prototype, create a digital version of your screen using the Design Mode elements you've learned about.\n\n# Do This\n\n-   Rename the screen to match your _namespace_.\n-   Use the built-in elements to lay out your app screen, giving each a proper ID\n    -   For example, if your namespace is \"home\\_\" you might create IDs like:\n        -   `home_title`\n        -   `home_login_button`\n        -   `home_logo`\n-   For any components of your app that can't be recreated with the built in elements you can either:\n    -   Redesign to utilize built in elements\n    -   Find an image to use in place of your element\n    -   Draw the element using your preferred image editor\n-   Share your design regularly with your teammates to ensure consistent style"
+  },
+  "https://studio.code.org/s/csd4-2017/stage/13/puzzle/1": {
+    "dsls": {
+      "markdown": "# Overview\n\nBuilding on the screens that the class designed in the previous lesson, teams combine screens into a single app. Simple code can then be added to make button clicks change to the appropriate screen.\n\n## Introduced Code\n\n* [onEvent](//docs.code.org/applab/onEvent/)\n* [setScreen](//docs.code.org/applab/setScreen/)\n\n"
+    }
   },
   "https://studio.code.org/s/csd4-2017/stage/13/puzzle/2": {
     "display_name": "Multi-Screen Apps"
@@ -87,8 +152,23 @@
     "display_name": "App Project: Linking Screens",
     "long_instructions": "# Linking Screens\n\nWith all of your screens in place you can start adding events that will change the screens. When you're done with this step you'll actually have an interactive prototype!\n\n# Do This\n\nFor each screen of your app:\n\n-   Find all of the button IDs\n-   For each button, add an event handler that watches that ID\n-   In each event handler, use `setScreen()` to move the the right screen\n-   Test it all out!\n\nDepending on the number of screens and buttons your app has, this can be a pretty involved process. Make sure that you test your work often, using `console.log()` blocks to debug any strange behavior with your app. When you think you've got the whole thing working, compare your app with other members of your group to see if they work the same."
   },
+  "https://studio.code.org/s/csd4-2017/stage/14/puzzle/1": {
+    "dsls": {
+      "markdown": "# Overview\n\nTeams run another round of user testing, this time with their interactive prototype. Feedback gathered from this round of testing will inform the final iteration of the app prototypes.\n\n\n## Resources\n\n* [App User Testing](https://docs.google.com/document/d/1-ZgkOaZ1Y_jCG1c9Hzkz_SMEZXrJAzVFLgoCVIQiIts/export?format=pdf) - Activity Guide\n"
+    }
+  },
+  "https://studio.code.org/s/csd4-2017/stage/15/puzzle/1": {
+    "dsls": {
+      "markdown": "# Overview\n\nUsing the feedback from the last round of testing, teams implement changes that address the needs of their users. Each team tracks and prioritizes the features they want to add and the bugs they need to fix.\n## Vocabulary\n\n* **Bug** - Part of a program that does not work correctly.\n* **Feature** - An individual functional element of a software item. This could be the ability to do something new, work across multiple platforms, or perform more efficiently.\n\n\n## Resources\n\n* [App User Testing Analysis](https://docs.google.com/document/d/1Y7cri91LU_70n6CrIGnUSedPwA_TMfYCkyhCjfpfTns/export?format=pdf) - Activity Guide\n"
+    }
+  },
   "https://studio.code.org/s/csd4-2017/stage/15/puzzle/2": {
     "display_name": "App Project: Bugs and Features",
     "long_instructions": "# Improving and Iterating\n\nYou've put your app in front of users, gathered feedback, and identified bugs and new features - time to do something about it.\n\n# Do This\n\nEach team member is going to implement select features and bug fixes on their own version of the team's app. Start by selecting a sticky note from the **To Do** column of your team's chart and moving it to the **Doing** column. For each sticky you tackle:\n\n-   Add a comment to the top of your program describing the feature or bug fix you are implementing\n-   Work on your iteration until it works. Try to stay focused on only the single feature or bug that you've selected.\n-   When done, move your sticky to the **Done** column, pick a new one, and start the process over."
+  },
+  "https://studio.code.org/s/csd4-2017/stage/16/puzzle/1": {
+    "dsls": {
+      "markdown": "# Overview\n\nEach team prepares a presentation to \"pitch\" the app they've developed. This is the time to share struggles, triumphs, and plans for the future.\n\n\n## Resources\n\n* [App Presentation Template](https://docs.google.com/presentation/d/19KVEybGqu6pdFB3QwjvJNA_VTM5W5Kxy3fUlxf1xnc4/edit) - Slide Deck\n* [App Presentation](https://docs.google.com/presentation/d/1qRbnSABMrfeZHUiQ_mGdhzW7UIGuiGiWyMcQK_pH-tY/edit) - Exemplar\n* [App Presentation](https://docs.google.com/document/d/1RVmBL9jCfG2QJXyEiya4w9dSBluRxinEOKBZLicv4lg/export?format=pdf) - Rubric\n"
+    }
   }
 }

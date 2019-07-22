@@ -1285,40 +1285,8 @@ fr-FR:
   coursef-2017_name: Cours F (2017)
   pre-express-2018_name: Cours rapide pour les primo-lecteurs (2018)
   pre-express-2019_name: Cours rapide pour les primo-lecteurs (2019)
-  cspunit2_name: Principes de l'informatique, unité 2
-  cspunit3_name: Principes de l'informatique, unité 3
-  cspunit4_name: Principes de l'informatique, unité 4
-  cspunit5_name: Principes de l'informatique, unité 5
-  cspunit6_name: Principes de l'informatique, unité 6
-  csd5_name: 'Unité 5 : Information et société'
-  csd6_name: 'Unité 6 : Contrôle de système physiques'
-  csd5-2017_name: 'Unité 5 : Information et société'
-  csd6-2017_name: 'Unité 6 : Contrôle de système physiques'
-  csd5-2018_name: 'Unité 5 : Information et société'
-  csd6-2018_name: 'Unité 6 : Contrôle de système physiques'
-  csp1-2017_name: 'Unité 1: Internet'
-  csp2-2017_name: 'Unité 2: L’Information numérique'
-  csp-explore-2017_name: 'Avancé : Préparation à l’exploration des tâches de performance'
-  csp-create-2017_name: 'Avancé : Préparation à la création de tâches de performance'
-  csppostap-2017_name: 'Post AP: Bases de données dans les applications'
-  csp1-2018_name: 'Unité 1: Internet'
-  csp2-2018_name: 'Unité 2: L’Information numérique'
-  csp-explore-2018_name: 'Avancé : Préparation à l’exploration des tâches de performance'
-  csp-create-2018_name: 'Avancé : Préparation à la création de tâches de performance'
-  csppostap-2018_name: 'Post AP: Bases de données dans les applications'
-  csp1_name: 'Unité 1: Internet'
-  csp2_name: 'Unité 2: L’Information numérique'
-  csp3-a_name: 'Partie 3: Introduction a la programmation (version A)'
-  csp3-research-mxghyt_name: 'Partie 3: Introduction a la programmation (sous objectifs)'
-  csp-ap_name: Tâches de performance avancées
-  csppostap_name: 'Post AP: Bases de données dans les applications'
-  csp-post-survey_name: Sondage après cour pour élève
-  cspassessment_name: Test complet - 50 questions
-  csp-explore_name: 'Avancé : Préparation à l’exploration des tâches de performance'
-  csp-create_name: 'Avancé : Préparation à la création de tâches de performance'
-  cspexam1-mWU7ilDYM9_name: Test, partie 1, 25 questions
-  cspexam2-AKwgAh1ac5_name: Test, partie 2, 25 questions
-  cspunit3_gradelevel: Niveaux de lycée
+  accelerated_name: Cours accéléré
+  express_name: Cours Express
   20-hour_name: Cours accéléré
   algebra_name: Informatique en algèbre
   AlgebraA_name: Informatique en algèbre cours A
@@ -1329,18 +1297,6 @@ fr-FR:
   minecraft_name: Minecraft
   starwarsblocks_name: Star Wars (blocs)
   hoc-encryption_name: Cryptage simple
-  math_category_name: Math
-  hoc_category_name: Heure de Code
-  csf_category_name: Fondamentaux d'informatique
-  csf_2017_category_name: Fondamental d'informatique (2017)
-  csf_2018_category_name: Fondamental d'informatique (2018)
-  csf_international_category_name: Fondamental d'informatique international
-  csf2_draft_category_name: 'En cours d’élaboration : Cours A - F'
-  csd_2018_category_name: Découvertes de l'informatique (2018-2019)
-  csp_category_name: Principes de l'informatique
-  csp17_category_name: Principes de l'informatique (2017-2018)
-  csp_2018_category_name: Principes de l'informatique (2018-2019)
-  cspexams_category_name: Test d'entraînement aux principes de l'informatique
   applab_name: Labo des applis
   gamelab_name: Labo des jeux
   basketball_name: Faire un match de basket
@@ -2197,10 +2153,6 @@ fr-FR:
   header_report_bug: Rapporter un problème
   header_tutorials: Tutoriels
   header_documentation: Documentation
-  csp_name: Principes de l'informatique
-  csd_name: Découvertes de l'informatique
-  csd_2018_name: Découvertes de l'informatique
-  full_course_category_name: Cours complets
   user_header_label: Bonjour %{username}
   user_header_team: Équipe
   user_header_my_projects: Mes projets

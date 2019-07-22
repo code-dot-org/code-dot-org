@@ -3,7 +3,9 @@ es-MX:
   data:
     script:
       category:
+        csd_category_name: Descubrimientos de Ciencias de la Computación ('17-'18)
         csd_2018_category_name: Descubrimientos de Ciencias de la Computación ('18-'19)
+        csd_2019_category_name: Descubrimientos de Ciencias de la Computación ('19-'20)
         csf_category_name: Fundamentos de Ciencias de la Computación
         csf_2018_category_name: Fundamentos de Ciencias de la Computación (2018)
         csf_international_category_name: Fundamentos de Ciencias de la Computación
@@ -11,12 +13,14 @@ es-MX:
         csf2_draft_category_name: 'En desarrollo: cursos A-F'
         csp_category_name: Principios de Ciencias de la Computación '15-'16
         csp_2018_category_name: Principios de Ciencias de la Computación ('18-'19)
+        csp_2019_category_name: Principios de Ciencias de la Computación ('19-'20)
         cspexams_category_name: Prueba de práctica de Principios de Ciencias de la
           Computación
         csp17_category_name: Principios de Ciencias de la Computación ('17-'18)
         full_course_category_name: Cursos completos
         hoc_category_name: Hora del código
         math_category_name: Matemáticas
+        research_studies_category_name: Estudios de investigación
       name:
         course1:
           title: Curso 1
@@ -2182,7 +2186,7 @@ es-MX:
             Rapid Research - Cybercrime:
               name: Investigación rápida - Delito cibernético
             Practice PT - Big Data and Security Dilemmas:
-              name: PT de práctica - Grandes datos y dilemas de seguridad
+              name: PT de práctica - Big Data y dilemas de seguridad
             Unit 4 Chapter 1 Assessment:
               name: Evaluación del Capítulo 1 de la Unidad 4
             CSP Student Post Survey Staging:
@@ -3825,7 +3829,8 @@ es-MX:
             'Lessons 1 - 3: Algorithms':
               name: 'Lecciones 1 - 3: Algoritmos'
             'Lessons 4 - 6 : Procedural Abstraction and Top-Down Design':
-              name: 'Lecciones 4 - 6 : Abstracción procedimental y diseño general'
+              name: 'Lecciones 4 - 6 : Abstracción procedimental y diseño de lo general
+                a lo particular'
             'Lessons 7 - 9: Documentation, Simple Loops, and Random Numbers':
               name: 'Lecciones 7 - 9: Documentación, bucles simples y números aleatorios'
             Event Driven Programming:
@@ -4935,7 +4940,8 @@ es-MX:
             'Lessons 1 - 3: Algorithms':
               name: 'Lecciones 1 - 3: Algoritmos'
             'Lessons 4 - 6 : Procedural Abstraction and Top-Down Design':
-              name: 'Lecciones 4 - 6 : Abstracción procedimental y diseño general'
+              name: 'Lecciones 4 - 6 : Abstracción procedimental y diseño de lo general
+                a lo particular'
             'Lessons 7 - 9: Documentation, Simple Loops, and Random Numbers':
               name: 'Lecciones 7 - 9: Documentación, bucles simples y números aleatorios'
             Group Work and Peer Learning:
@@ -5214,7 +5220,7 @@ es-MX:
             Automating Data Decisions:
               name: Automatizar las decisiones basadas en datos
             Problem Solving with Big Data:
-              name: La resolución de problemas con los grandes datos
+              name: La resolución de problemas con Big Data
             Project - Solve a Data Problem:
               name: Proyecto - Solucionar un problema de datos
             Representing Numbers:
@@ -6213,7 +6219,7 @@ es-MX:
                 los beneficios y desventajas de usar computadoras para automatizar
                 el proceso de resolución de problemas de datos.
             Problem Solving with Big Data:
-              name: La resolución de problemas con los grandes datos
+              name: La resolución de problemas con Big Data
               description_student: Esta lección cubre cómo las organizaciones recopilan
                 y usan los datos para resolver problemas del mundo real. La clase
                 analiza tres escenarios que podrían resolverse a través de los datos
@@ -8467,7 +8473,7 @@ es-MX:
             Automating Data Decisions:
               name: Automatizar las decisiones basadas en datos
             Problem Solving with Big Data:
-              name: La resolución de problemas con los grandes datos
+              name: La resolución de problemas con Big Data
             Project - Solve a Data Problem:
               name: Proyecto - Solucionar un problema de datos
           title: CSD Unidad 5 - Los datos y la sociedad
@@ -8598,13 +8604,13 @@ es-MX:
             'Technology Foundations: What is a Computer?':
               name: 'Fundamentos tecnológicos: ¿qué es una computadora?'
             'Data Science: Problem Solving with Big Data':
-              name: 'Ciencia de datos: resolución de problemas con los grandes datos'
+              name: 'Ciencia de datos: resolución de problemas con Big Data'
             Personal Innovations:
               name: Innovaciones personales
             What is a Computer?:
               name: "¿Qué es una computadora?"
             Problem Solving with Big Data:
-              name: La resolución de problemas con los grandes datos
+              name: La resolución de problemas con Big Data
             Programming - Hour of Code:
               name: Programación - Hora del Código
             Simple Encryption:
@@ -10025,7 +10031,7 @@ es-MX:
             Programming with Behaviors:
               name: Programación con comportamientos
             Programming with Forever:
-              name: Programación con la función Siempre
+              name: Programación con Siempre
             Using Behaviors:
               name: Uso de comportamientos
             Using Forever Loops:
@@ -11440,7 +11446,7 @@ es-MX:
                 general de resolución de problemas con su aplicación específica a
                 los problemas de datos.'
             Problem Solving with Big Data:
-              name: La resolución de problemas con los grandes datos
+              name: La resolución de problemas con Big Data
               description_student: Esta lección cubre cómo las organizaciones recopilan
                 y usan los datos para resolver problemas del mundo real. La clase
                 analiza tres escenarios que podrían resolverse a través de los datos
@@ -11716,7 +11722,7 @@ es-MX:
             CS Principles Post-Course Survey:
               name: Encuesta de fin de curso de Principios de Ciencias de la Computación
         csp4-2018:
-          title: CSP Unidad 4 - Grandes datos y privacidad ('18-'19)
+          title: CSP Unidad 4 - Big Data y privacidad ('18-'19)
           description: El mundo en el que vivimos, repleto de datos, introduce muchas
             preguntas complejas relacionadas con la política pública, la ley, la ética
             y el impacto social. Los objetivos de esta unidad son desarrollar una
@@ -11744,7 +11750,7 @@ es-MX:
             Rapid Research - Cybercrime:
               name: Investigación rápida - Delito cibernético
             Practice PT - Big Data and Security Dilemmas:
-              name: PT de práctica - Grandes datos y dilemas de seguridad
+              name: PT de práctica - Big Data y dilemas de seguridad
             Unit 4 Chapter 1 Assessment:
               name: Evaluación del Capítulo 1 de la Unidad 4
             Participate in a longitudinal study!:
@@ -13703,6 +13709,8 @@ es-MX:
               name: andrea-prueba-etapa3
             Deeper Learning Overview:
               name: Resumen del aprendizaje profundo
+            andrea-test-stage4:
+              name: andrea-prueba-etapa4
           title: andrea-prueba
           description_audience: Facilitadores 6-12 en período de formación
           description_short: esto es para poner a prueba mis habilidades para hacer
@@ -15340,7 +15348,7 @@ es-MX:
                 general de resolución de problemas con su aplicación específica a
                 los problemas de datos.'
             Problem Solving with Big Data:
-              name: La resolución de problemas con los grandes datos
+              name: La resolución de problemas con Big Data
               description_student: Esta lección cubre cómo las organizaciones recopilan
                 y usan los datos para resolver problemas del mundo real. La clase
                 analiza tres escenarios que podrían resolverse a través de los datos
@@ -15891,6 +15899,8 @@ es-MX:
           stages:
             new stage:
               name: nueva etapa
+            Number Systems:
+              name: Sistemas numéricos
           title: Piloto de la Unidad 1 de CSP
         csd-tests:
           stages:
@@ -16141,6 +16151,30 @@ es-MX:
               name: 'Proyecto: diseñar una aplicación, pt. 1'
             'Project: Designing an App, pt. 2':
               name: 'Proyecto: diseñar una aplicación, pt. 2'
+            Programs Investigate:
+              name: Investigar programas
+            Programs Practice:
+              name: Práctica de programas
+            'Project: Designing an App, pt. 3':
+              name: 'Proyecto: diseñar una aplicación, pt. 3'
+            'Project: Designing an App, pt. 4':
+              name: 'Proyecto: diseñar una aplicación, pt. 4'
+            'Project: Share Your App':
+              name: 'Proyecto: comparte tu aplicación'
+            'Project: Designing an App pt. 1':
+              name: 'Proyecto: diseñar una aplicación pt. 1'
+            'Project: Designing an App pt. 2':
+              name: 'Proyecto: diseñar una aplicación pt. 2'
+            Project - Designing an App Part 1:
+              name: Proyecto - Diseñar una aplicación Parte 1
+            Project - Designing an App Part 2:
+              name: Proyecto - Diseñar una aplicación Parte 2
+            Project - Designing an App Part 3:
+              name: Proyecto - Diseñar una aplicación Parte 3
+            Project - Designing an App Part 4:
+              name: Proyecto - Diseñar una aplicación Parte 4
+            The Need for Programming Languages:
+              name: La necesidad de lenguajes de programación
           title: 'Unidad 3: Introducción al desarrollo de aplicaciones'
         csp4-pilot-staging:
           stages:
@@ -16648,7 +16682,7 @@ es-MX:
               name: "¿Qué es una computadora?"
             Problem Solving Process:
               name: Proceso de resolución de problemas
-          title: Widgets de prueba que guardan el estado
+          title: Muestra de actividades en línea
         fit2019-apprentice:
           stages:
             Apprentice Reflection Overview:

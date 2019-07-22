@@ -6,7 +6,7 @@ es-ES:
         dibujar casi cualquier cosa. Utiliza algunos bloques para hacerme dibujar
         por encima de las líneas grises de la imagen. (Cada línea tiene 100 píxeles)
       2-3 Artist 4: Ayúdame a completar la casa para este gato.
-      2-3 Artist 9: Termina esta cometa
+      2-3 Artist 9 NEW: Termina esta cometa
       2-3 Artist Free Play: "¡Juego libre! Dibuja lo que quieras."
       2-3 Artist Loops New 12: 'Dibuja un diamante con lados de 100 píxeles. '
       2-3 Artist Nested Loops 10: Itera este código 12 veces para completar el patrón.
@@ -789,6 +789,9 @@ es-ES:
         a la oveja.
       course2_collector_prog_challenge1: "¡Mira con atención! ¿Puedes recoger las
         **10** joyas?"
+      course2_harvester_loops_challenge1: Recoge todo el maíz.
+      course2_harvester_loops_challenge2: Recoge las lechugas. ¡Evita los árboles
+        y la hierba!
       course2_maze_programming_challenge2: A veces hay más de una forma de solucionar
         un problema. A veces, ¡es más rápido ir hacia atrás que hacia delante!
       course4_artist_fwp_challenge1: Intente ejecutar este programa y haga cambios
@@ -1219,6 +1222,18 @@ es-ES:
         Flappy volará a través de los obstáculos a menos que escribas código que haga que se estrelle.
 
         Junta un bloque al evento `cuando choca con un obstáculo` para que el juego termine cuando Flappy se choque contra el primer grupo de tuberías.
+      courseC_flappy_events5: "Hemos añadido un marcador para contar puntos cuando
+        Flappy atraviese obstáculos. \n\nAñade un bloque al evento `cuando pase un
+        obstáculo`, después pulsa `Ejecutar` para anotar un punto haciendo que Flappy
+        atraviese las primeras tuberías."
+      courseC_flappy_events5_2018: "Hemos añadido un marcador para contar puntos cuando
+        Flappy atraviese obstáculos. \n\nAñade un bloque al evento `cuando pase un
+        obstáculo`, después pulsa `Ejecutar` para anotar un punto haciendo que Flappy
+        atraviese las primeras tuberías."
+      courseC_flappy_events5_2019: "Hemos añadido un marcador para contar puntos cuando
+        Flappy atraviese obstáculos. \n\nAñade un bloque al evento `cuando pase un
+        obstáculo`, después pulsa `Ejecutar` para anotar un punto haciendo que Flappy
+        atraviese las primeras tuberías."
       courseC_flappy_events6: |-
         Haz click en la flecha dentro del bloque `aletear normalmente` para seleccionar una velocidad de aleteo diferente.
 
@@ -1306,6 +1321,16 @@ es-ES:
       courseC_harvester_loops9: Recoge todo el maíz y todas las calabazas.
       courseC_harvester_loops9_2018: Recoge todo el maíz y todas las calabazas.
       courseC_harvester_loops9_2019: Recoge todo el maíz y todas las calabazas.
+      courseC_harvester_loops_challenge2: Recoge las lechugas. ¡Evita los árboles
+        y la hierba!
+      courseC_harvester_loops_challenge2_2018: Recoge las lechugas. ¡Evita los árboles
+        y la hierba!
+      courseC_harvester_loops_challenge2_2019: Recoge las lechugas. ¡Evita los árboles
+        y la hierba!
+      courseC_maze_debugging1: |-
+        ¡ El código no está del todo bien!
+
+        Corrige el código para ayudar a Scrat a conseguir la bellota.
       courseC_maze_debugging1_2018: |-
         ¡ El código no está del todo bien!
 
@@ -1314,6 +1339,10 @@ es-ES:
         ¡ El código no está del todo bien!
 
         Corrige el código para ayudar a Scrat a conseguir la bellota.
+      courseC_maze_debugging3: |-
+        Algo no está del todo bien.
+
+        ¡Elimina bloques para conseguir que Scrat consiga la bellota!
       courseC_maze_debugging3_2018: |-
         Algo no está del todo bien.
 
@@ -1620,33 +1649,24 @@ es-ES:
         _"¡Ha llegado el momento de enfadarse!"_
 
         ¡Utiliza lo que has aprendido para llevar el pájaro hasta el cerdo!
-      courseD_scrat_predict1: |-
-        _"Mantén la calma y ayúdame a encontrar al cerdo malo. Si no, ¡puedo enfadarme!"_
-
-        Cuando tienes varios bloques iguales seguidos, prueba a moverlos dentro de un bucle <xml><block type="controls_repeat"><title name="TIMES">???</title></block></xml>. ¡Esto hace lo mismo con menos código!
-      courseD_scrat_ramp1: En este puzle, ¡une todos los bloques y pulsa Ejecutar
-        para ver qué ocurre!
+      courseD_scrat_ramp1: En este puzle, coloca todos los bloques juntos y pulsa
+        "Ejecutar"!
       courseD_scrat_ramp2: Arrastra otro bloque `avanzar` de la caja de herramientas,
         después une todos los bloques a `al ejecutar` para terminar tu código.
-      courseD_scrat_ramp4: |-
-        _"Traza el camino y llevame al cerdo tonto"_
-
-        ¡Evita el TNT o las plumas volarán!
       courseD_scrat_ramp5: |-
         _"¡Sigue este camino para llevarme hasta el cerdo!"_
 
         Evita el TNT.
-      courseD_scrat_ramp7: |-
-        _"¡Ha llegado el momento de enfadarse!"_
-
-        **Desafío:** ¡Utiliza lo que has aprendido para llevar el pájaro hasta el cerdo!
-      courseE_artist_ramp8_2: |-
+      courseD_scrat_ramp7: "¡Ayuda a Scrat a conseguir la bellota!"
+      courseD_scrat_ramp8: "**Desafío:**¡ Usa lo que has aprendido para llevar a Scrat
+        hasta la bellota!"
+      courseE_artist_ramp9: |-
         Usa lo que has aprendido para dibujar este triángulo.
 
         * * *
 
         ##### Cada lado tiene 100 píxeles de largo. Tienes que girar 120 grados en cada esquina.
-      courseE_artist_ramp9: |-
+      courseE_artist_ramp9_2: |-
         Usa lo que has aprendido para dibujar este triángulo.
 
         * * *
@@ -1730,15 +1750,6 @@ es-ES:
       grade2_collector_A: Ayuda a Laurel a recoger todo el tesoro.
       grade2_collector_A_2018: Ayuda a Laurel a recoger todo el tesoro.
       grade2_collector_A_2019: Ayuda a Laurel a recoger todo el tesoro.
-      grade2_collector_A_predict1: "name 'grade2_multi_collector_A_predict1' \nquestion
-        'Mira detenidamente el código. Si se ejecutara hasta el final (ignorando los
-        errroes), ¿cuantas joyas recogería Laurel?' wrong 'Laurel recogería 4 joyas
-        usando este código.', feedback: 'Incorrecto. Laurel intenta recoger joyas
-        donde no hay ninguna y eso provoca un error.' right 'Laurel intentará recoger
-        joyas donde no hay y eso provocará un error.', feedback: 'Correcto!' wrong
-        'Laurel recogerá todas las joyas.', feedback: 'Incorrecto. Laurel intentará
-        recoger joyas donde no hay y eso provocará un error.' wrong 'No lo se.', feedback:
-        'Laurel intentará recoger joyas donde no hay y eso provocará un error..'"
       ramp_artist_loops1: "¡Qué día más maravilloso! \n\nAyuda al artista a cubrir
         sus flores antes del invierno moviéndose 60 píxeles hacia delante."
       ramp_artist_loops1_2018: "¡Qué día más maravilloso! \n\nAyuda al artista a cubrir

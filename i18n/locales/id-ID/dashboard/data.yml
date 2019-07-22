@@ -430,12 +430,42 @@ id:
         mc_2016_congrats: Jam Mengkode Minecraft - Selamat
         mc_2017_congratulations: Jam Mengkode Minecraft - Selamat
         csd_applab_arrays: Pengenalan untuk array
+        CSF_ifelseifelse_allskins: Menggunakan If/Elself/Blok Else
         CSF_loops_AB: Loop
+        csd_gamelab_conditional_statements: Pernyataan kondisional
+        csd_gamelab_if_else: If/pernyataan If
+        CSF_SpriteLabIntro_CDEF: Ini adalah Lab Sprite
+        CSF_Spritelab_MakeSprite_CDEF: Bagaimana membuat sebuah Sprite dalam Lab Sprite
+        CDEF_Video_SpritesInAction: Sprite dalam aksi
+        CSF_SpriteLab_SpritesInAction_CDEF: Sprite dalam aksi
+        CSF_StarWars_ProjectIntro: Pendahuluan proyek Star Wars
+        mc_2018_intro: 'Minekraft: pengenalan perjalanan air'
+        mc_2018_conditionals: 'Minekraft: kondisional perjalanan air'
+        hoc_dance_warmup: Pesta dansa-pemanasan
         hoc_dance_events: Pesta dansa-acara
         hoc_dance_properties: Pesta dans-properti
+        hoc_dance_congrats: Pesta dansa - pesta dimulai!
+        teaching_csf_how_it_works: 'Mengajar dasar dasar CS: bagaimana cara kerja kursus'
+        elem_pd_2: Sains komputer Sekolah Dasar- PD 2/2
+        what_is_cs: Apakah ilmu komputer?
+        repeat_block: Menggunakan blok pengulangan
+        lesson_planning: Rencana pembelajaran
+        opd_closing: 'Mengajar dasar dasar CS: penutupan dan langkah selanjutnya'
+        why_unplugged_lessons: '"Tercabut"'
+        writing_first_program: Tulis program komputer pertama anda
+        conditionals_with_cards: Pelajaran Unplugged dalam aksi-kondisional dengan kartu
+        songwriting_with_functions: 'Pelajaran Unplugged dalam aksi: penulisanlagu dengan fungsi'
+        what_is_an_event: Apakah sebuah event?
+        teaching_cs_pair_programming: 'Mengajar dasar dasar CS: programing berpasangan'
+        teaching_problem_solving: 'Mengajar dasar dasar CS: mengajarkan pemecahan masalah'
+        csd_applab_designmode: 'Penemuan CS: aplikasi Lab-merancang mode'
         csd_pair_programming: Pemrograman berpasangan
+        csd_gamelab_functions: Mrndefinisikan fungsi
         csd_applab_parameters: Fungsi dengan parameter
+        csd_applab_loops: Loop dalam aplikasi Lab
         csd_problem_solving_process: Proses Pemecahan Masalah
+        CSF_Going_Places_Safely: Tetangga daring saya
+        CSF_SpriteLab_SpritesInAction_v2: Sprite dalam aksi
     callout:
       text:
         drag_blocks: Tarik blok "gerak" dan letakkan di bawah blok lain

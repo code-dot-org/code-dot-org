@@ -35,7 +35,7 @@ nl-NL:
       2-3 Artist 8:
         2-3_Artist_8_a: Als je 200 doormidden deelt, hoeveel pixels breed moet ieder
           vierkant dan worden?
-      2-3 Artist 9:
+      2-3 Artist 9 NEW:
         2-3_Artist_9_a: Deze diamant is eigenlijk gewoon een vierkant op zijn kant
       2-3 Artist Debugging 10:
         2-3_Artist_Debugging_10_b: "\\*\\* Proberen en fouten maken is prima hier!\\*\\*."
@@ -2143,11 +2143,6 @@ nl-NL:
       courseC_starWars_loops5_2019:
         courseC_starWars_loops5_a: De beste oplossing gebruikt eerst een draai, vervolgens
           een enkele `beweeg voorwaarts`, een andere draai, en als laatste een lus.
-      courseC_video_angles2:
-        courseF_artist_ramp10_c: |-
-          Voor deze uitdaging moet je 6 driehoeken in totaal tekenen:
-
-          ![](https://images.code.org/bc62bed22e90d35e420b0a116ac487ef-image-1500347536221.2_solution2.gif)
       courseD_artist_nestedLoops3:
         courseD_artist_nestedLoops3_a: |-
           Probeer het 'spring vooruit' blok te gebruiken om van de bovenkant van het ene vierkant naar de plaats te komen waar je het volgende vierkant gaat beginnen.
@@ -2397,10 +2392,8 @@ nl-NL:
           </xml>
       courseD_maze_ramp6:
         courseC_maze_programming6_a: Er zijn 2 manieren om deze puzzel op te lossen!
-      courseD_scrat_predict1:
-        courseF_maze_ramp6_a: Er zijn 2 manieren om deze puzzel op te lossen!
-      courseD_scrat_ramp6:
-        courseC_maze_programming6_a: Er zijn 2 manieren om deze puzzel op te lossen!
+      courseD_scrat_ramp7:
+        courseD_scrat_programming6_a: Er zijn 2 manieren om deze puzzel op te lossen!
       courseE_artist_concept_challenge1:
         courseE_artist_concept_challenge1_a: De halve zeshoek heeft een \*\* lengte
           van 30 \*\* en draait rechts met \*\* 60 graden \*\*.
@@ -2466,6 +2459,9 @@ nl-NL:
           dan je functie stap voor stap te maken. \n\nVoeg een paar blokken toe en
           test je programma. Voeg daarna weer een paar blokken toe en test dan opnieuw.
           Zo kom je er wel!"
+      courseE_farmer_ramp12e:
+        courseE_farmer_ramp12e_b: De oplossing van deze puzzel lijkt sterk op de oplossing
+          van de laatste puzzel, maar draait in de andere richting.
       courseE_farmer_ramp12e_2018:
         courseE_farmer_ramp12e_b: De oplossing van deze puzzel lijkt sterk op de oplossing
           van de laatste puzzel, maar draait in de andere richting.

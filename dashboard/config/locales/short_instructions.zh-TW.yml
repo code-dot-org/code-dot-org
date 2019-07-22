@@ -5,7 +5,7 @@ zh-TW:
       2-3 Artist 12: "建立一個圓形來完成這個眼球！\\\r\n\\\r\n如果小藝術家在每次的循環轉向 1 度，要重複這個程式多少次才能畫出一個圓形呢？180？360？500？"
       2-3 Artist 2 new: '這房子有個半完成的牆。每一邊都應該是 100，但是半完成的牆是只有 50。請試著完成這個牆吧。 '
       2-3 Artist 4: 幫助我完成這隻貓的房子。
-      2-3 Artist 9: 完成這個風箏
+      2-3 Artist 9 NEW: 完成這個風箏
       2-3 Artist Debugging 2: |-
         畫出貓鬍鬚的程式不正確。
 
@@ -752,10 +752,6 @@ zh-TW:
       courseC_harvester_loops_challenge2_2019: |-
         收集所有的生菜。
         注意避開樹木和田地！
-      courseC_maze_debugging1: 修復一個或多個錯誤以收集到所有的寶藏。
-      courseC_maze_debugging2: 修復一個或多個錯誤以收集到所有的寶藏。
-      courseC_maze_debugging3: 修復一個或多個錯誤以收集到所有的寶藏。
-      courseC_maze_debugging4: 修復一個或多個錯誤以收集到所有的寶藏。
       courseC_maze_debugging7: "**挑戰：**找出關卡裡的錯誤，重新組合、添加、移除程式積木。"
       courseC_maze_debugging7_2018: "**挑戰：**找出關卡裡的錯誤，重新組合、添加、移除程式積木。"
       courseC_maze_debugging7_2019: "**挑戰：**找出關卡裡的錯誤，重新組合、添加、移除程式積木。"
@@ -786,7 +782,6 @@ zh-TW:
       courseC_maze_programming9: _「現在，幫我偷襲這隻豬，不管用什麼辦法，你想得到的都行！」_
       courseC_maze_programming9_2018: _「現在，幫我偷襲這隻豬，不管用什麼辦法，你想得到的都行！」_
       courseC_maze_programming9_2019: _「現在，幫我偷襲這隻豬，不管用什麼辦法，你想得到的都行！」_
-      courseC_video_angles2: 現在，把上個畫出三角形的程式放到新的迴圈積木裡，讓它邊轉邊畫，就可以畫出一個雪花囉！
       courseD_artist_1_2018: 畫個邊長 **50** 像素的六邊形。
       courseD_artist_1_2018_2019: 畫個邊長 **50** 像素的六邊形。
       courseD_artist_binary1: 使用下方的程式積木讓小藝術家在網格中的第一行以二進位畫出「01010101」。
@@ -968,9 +963,8 @@ zh-TW:
       courseD_scrat_ramp3: 這裡有個多餘的積木害得鳥撞牆，找到它，然後把它拖回工具箱以消除它。
       courseD_scrat_ramp4: 小心 TNT 炸藥，不然羽毛會被炸飛！
       courseD_scrat_ramp5: 小心 TNT 炸藥。
-      courseD_scrat_ramp6: "「保持冷靜，幫我找到那隻壞豬豬。否則我真的會變成憤怒鳥！」"
-      courseD_scrat_ramp7: 用你學到的方式，幫助鳥抓到這隻豬！
-      courseD_scrat_ramp8: 現在用小藝術家來畫出一個正方形！
+      courseD_scrat_ramp6: "_「冷靜！幫我抓到這頭壞豬，不然我就真的要變成憤怒鳥啦！」_\\\r\n\\\r\n當你有很多相同指令的積木時，試著將它們放到`重複`迴圈裡，這樣子就盡量減少積木的使用數。"
+      courseD_scrat_ramp7: 幫鼠奎特拿到橡樹果實！
       courseE_artist_functions1: "哈囉。我是個僵屍。我是個熱愛繪畫的殭屍！ 幫我畫一副方形眼鏡。 \n提示： 眼鏡框之間的鼻樑比鏡框的長度短
         25 像素。"
       courseE_artist_functions10: 這次，用 8 個邊長 25 像素的六邊形來畫圖。
@@ -981,8 +975,9 @@ zh-TW:
       courseE_artist_functions8a_2019: 創建一個能繪出正方形的函式。
       courseE_artist_functions9: 用現有的積木創建出這個圖像。
       courseE_artist_ramp8: 現在用小藝術家來畫出一個正方形！
-      courseE_artist_ramp8_2: 使用你學到的方法來畫出這個三角形。
+      courseE_artist_ramp8_2: 現在用小藝術家來畫出一個正方形！
       courseE_artist_ramp9: 使用你學到的方法來畫出這個三角形。
+      courseE_artist_ramp9_2: 使用你學到的方法來畫出這個三角形。
       courseE_bee_concept1: 使用巢狀迴圈從每朵花中收集所有的花蜜。
       courseE_bee_concept1_2018: 使用巢狀迴圈從每朵花中收集所有的花蜜。
       courseE_bee_concept5: 幫蜜蜂在花朵上收集花蜜。
@@ -998,10 +993,9 @@ zh-TW:
       courseE_farmer_functions4b: 使用你的新函式以完成這個關卡。
       courseE_farmer_functions5c: 你的函式會在這裡派上用場。
       courseE_farmer_functions8b: "**挑戰：**讓農夫走到南瓜那兒，並沿著路收集所有的南瓜。 "
-      courseE_farmer_ramp11b: 現在使用巢狀迴圈（`重複`和`當…`）來完成這個關卡。
+      courseE_farmer_ramp12_forswap: 現在使用巢狀迴圈（`重複`和`當…`）來完成這個關卡。
       courseE_farmer_ramp12_forswap_2018: 現在使用巢狀迴圈（`重複`和`當…`）來完成這個關卡。
       courseE_farmer_ramp12_forswap_2019: 現在使用巢狀迴圈（`重複`和`當…`）來完成這個關卡。
-      courseE_farmer_ramp12c: 如果有玉米就收集玉米；如果有生菜就收集生菜。
       courseE_playLab_scaffold5: 現在花些時間確保遊戲按照你想要的方式運作。包括輸或贏的方式，還有滿足的條件設定。
       courseF_artist_for6: 利用上一關的程式，改成轉 89 度，就能讓正方形產生螺旋效果。
       courseF_artist_for6_2018: 利用上一關的程式，改成轉 89 度，就能讓正方形產生螺旋效果。

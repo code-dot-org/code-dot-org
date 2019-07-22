@@ -3,7 +3,7 @@ hu-HU:
   data:
     long_instructions:
       2-3 Artist 4: Segíts befejezni a cica házát!
-      2-3 Artist 9: Fejezd be a sárkányt
+      2-3 Artist 9 NEW: Fejezd be a sárkányt
       2-3 Artist Free Play: Szabad játék! Rajzolj, amit akarsz.
       2-3 Artist Nested Loops 10: Ismételd a ciklust 12-szer, hogy elkészítsd a mintát!
       2-3 Artist Nested Loops 12: Ismételd a kódot 12-szer hogy elkészítsd a köröket.
@@ -56,6 +56,105 @@ hu-HU:
       4-5 Nested Loops 6: Meg tudod rajzolni a hatszöget a háromszög rajzoló kód ciklusba
         ágyazásával?
       4-5 Nested Loops 9: Rajzold meg az alligátor alsó fogsorát!
+      CSD Problem Solving Process Video: |-
+        ## megfontolandó kérdések
+
+        -   Hogyan követte az utolsó leckében a problémamegoldási folyamatot?
+        -   Hogyan használhatnád ezt a folyamatot a mindennapi életed problémájára?
+      CSD U2 HTML Adding Paragraphs pt 2_2019: |-
+        <div class="no-pullthrough" style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+        <details>
+
+        <summary>
+        <strong>Mi a bekezdés címke?</strong>
+        </summary>
+
+        A bekezdéseket a (`<p>`) nyitó és (`</p>`) záró címkékkel jelöljük. A HTML-bekezdések bármekkora szövegek lehetnek egy szótól sok-sok mondatig terjedhetnek. A bekezdések csoportosítják a mondatok halmazait, és egy kis üres helyet képeznek a szövegcsoport és a következő szövegcsoport között.
+
+        </details>
+        <details>
+        <summary>
+        <strong>Hogyan készíthetek több bekezdést?</strong>
+        </summary>
+
+        Íme egy példa több bekezdéscímkére egy sorban. Ezt a kódot a weboldalának body részébe kell írni.
+
+            <p>Ez egy bekezdés. Két mondatból áll.</p>
+            <p>Ez egy másik bekezdés.</p>
+
+        </details>
+        </div>
+
+        # Bekezdés címke használata
+
+        A `<p>` `</p>` címkék vagy a "bekezdés" kezdő- és végcímkék a szöveg körül helyezkednek el, jelezve, hogy ez egy bekezdés. A szöveget elhelyezve a bekezdés elejére és végére vonatkozó címkék közé a számítógép tudja, hogy ezt a szöveget másképpen kell kezelni, legtöbbször csak a másik szövegektől távolabb írva.
+
+        # Csináld ezt
+
+        -   Helyezzen az írott szövegbe legalább két különálló bekezdést úgy, hogy a <p> `és` </p> \`címkékkel körülveszi azt
+        -   Hasonlítsa össze az eredményeket egy szomszéddal. Mi változott a szöveg megjelenítésének módjában?
+      CSD U2 HTML Debug Paragraphs_2019: |-
+        <div class="no-pullthrough" style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px">
+        <details>
+
+        <summary>
+        <strong>Mi a bekezdés elem?</strong>
+        </summary>
+
+        A bekezdések egy nyitó( `<p>` ) és egy záró( `</p>` ) taggel vannak jelölve. A bekezdés a HTML-ben bármilyen hosszú szöveg lehet, akár egy szó vagy brutál sok mondat is. A bekezdések a szöveget tagolják, a bennük lévő szöveget egybefogják és a másik bekezdéstől egy kis térrel választják el.
+
+        </details>
+        <details>
+        <summary>
+        <strong>Why does HTML seem to work even when it's broken?</strong>
+
+        </summary>
+
+        A HTML-t a böngésződ olvassa és ebből generálja a weblapokat. Mivel az emberek szoktak hibázni a böngészőket úgy programozták, hogy próbálja azt megjeleníteni amit szeretnél. Néha a különböző böngészők egész eltérően találgatnak! Az egyetlen megoldás, hogy pontosan azt kapd amit szeretnél, ha megbizonyosodsz róla, hogy a tag-eket mindig pontosan használod.
+
+        </details>
+        <details>
+        <summary>
+        <strong>Miért vált néha rózsaszínbe a kód?</strong>
+        </summary>
+
+        A Web Lab programozott, hogy automatikusan felismerje a HTML hibáit. Amikor hibát észlel, ez a kód rózsaszínre vált. A hiba lehet a rózsaszín rész, vagy lehet, hogy valahol a rózsaszínű kód előtt. Gondoskodni kell a hibakeresésről.
+
+        </details>
+        </div>
+
+        # Hibakeresés: A hibás címkék rögzítése
+
+        Ez az egyszerű weboldal néhány olyan problémával rendelkezik, amelyek megakadályozzák a tartalom helyes megjelenítését. A problémákat azonosítani és javítani kell. Ezt a gyakorlatot a kód hibakeresésnek is nevezik.
+
+        # Csináld ezt
+
+        -   Javítsa a hibás kódot, hogy a weblap helyesen jelenjen meg
+        -   Hasonlítsa össze a szomszéddal a javított problémákat
+      CSD U2 Inspector Warm Up_2019: |-
+        <div class="no-pullthrough" style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px">
+        <details>
+
+        <summary>
+        <strong><span> Hogyan használhatom az Inspector eszközt? </span></strong>
+        </summary>
+
+        Az Inspector eszköz egy nagyszerű módja annak, hogy többet megtudjon a Web Lab ismeretlen kódjáról. Az Inspector eszköz bekapcsolásához kattintson a gombra.  <img src="https://images.code.org/188579d7c6e7645d0d2edd203a33bd63-image-1480361561351.31.56 PM.png" style="width:100px">. Tudni fogja, hogy az Inspector Tool be van kapcsolva, mert a gomb fehérre vált és azt látja: "Inspector: On". Miután bekapcsolta az Inspector eszközt, az előnézeti területen bárhová léphet, és a Web Lab kijelöli azt a kódot, amelyik az oldalt megjeleníti.
+
+        </details>
+        </div>
+
+        # HTML felfedezése
+
+        Ez egy weblap, amely HTML-ben van írva, a web nyelvén. Tudjon meg többet arról, hogyan működik, de először vizsgálja meg az Inspector Tool segítségével.
+
+        # Csináld ezt
+
+        -   Kattintson a Tipp "Hogyan használhatom az Inspector toolt?" a jobb oldalon, hogy megtudja, hogyan kell használni az Inspector eszközt.
+        -   Kövesse a weboldalon megjelenő utasításokat a weblap felfedezéséhez és beszélje meg a partnerével a működés elvét.
+      CSD U2 Pair Programming Video_2019: "## megfontolandó kérdések\n\n-   Miért
+        gondolod, hogy a profi programozók párprogramozást használnak? \n-   Szerinted
+        hogyan segít a párosprogramozás a programozásban?"
       CSD U2 create page: "# Hozd létre, és nevezd el az új oldaladat\\\r\n\n\\\r\nMielőtt\nelkezdesz
         kódolni, meg kell bizonyosodnod róla, hogy minden lap megvan,\namire szükséged
         lesz a projektben.\\\r\n\\\r\n\n# Tedd a következőt\\\r\n\n-   Hozz létre
@@ -95,6 +194,70 @@ hu-HU:
         A fejléc átismétléséhez keresd fel a\n    [9. szint 3. feladványát](/s/csd2/stage/9/puzzle/3).\\\r\n-
         \  Minden oldal esetén\n    bizonyosodj meg róla, hogy van lábléc, amely tartalmazza
         az oldal felhasználási feltételeit.\\\r\n    \\\r"
+      CSD U5 binary video_2019: |-
+        # megfontolandó kérdések
+
+        -   Miért tárolják a számítógépen az összes adattípust számként?
+        -   Ha mindent számként tárol, hogyan tudja a számítógép a különbséget a számok, betűk, képek és hang között?
+      CSD U6 arrays video: "## megfontolandó kérdések\n\n-   Mikor lehet egy tömb
+        hasznosabb, mint egy változó? \n-   Miért kell mindig hozzárendelni egy tömböt
+        egy változóhoz? \n-   Hogyan érheti el a tömb elemeit?"
+      CSD U6 for loop led color_2019: |-
+        # Adj hozzá színeket
+
+        Most, hogy be- és kikapcsolhatod a LED-eket, itt az ideje, hogy hozzáadj néhány színt.
+
+        # Csináld ezt
+
+        Adj eseménykezelőt „gomb \\ _vörös” és a „gomb\\_zöld" -ekhez, amely a saját színére állítja LED-eket.
+      CSD U6 for loop led personalize_2019: "# Készítsd el a sajátodat\n\nGondolj
+        egy új gombra, amit használsz majd a projektben. Ne felejtsd el a többi LED-es
+        opciót, például az pulzálást és a villogást. \n\n# Csináld ezt\n\nAdj hozzá
+        egy új gombot a projekthez, és programozd azt választott viselkedésre."
+      CSD U6 functions paramters video_2019: "## megfontolandó kérdések\n\n-   Hogyan
+        teszik a paraméterek hasznosabbá a funkciókat? \n-   Honnan tudod, mikor kombinálhatsz
+        több funkciót egybe?"
+      CSD U6 hardware software video_2019: "## megfontolandó kérdések\n\n-   Mi a
+        különbség a hardver és a szoftver között? \n-   Mit csinál a számítógép operációs
+        rendszere?"
+      CSD U6 params modify clouds_2019: "# Felhők\n\nEz a program lehetővé teszi a
+        felhők mozgását, amikor a hangérzékelőt fújja, de nem fejeződött be. \n\n#
+        Csináld ezt\n\n-   Hozz létre egy új függvényt `moveCloud (name)`, amely bármilyen
+        felhőt mozgat. \n    -   (Tipp: majdnem ugyanazokat a kódokat fogjuk használni,
+        mint a `moveCloud0` függvény.)\n-   Hívja az új `moveCloud (name)` funkciót
+        az eseményblokkon belül, egyszer minden egyes felhőnévre. \n    -   (Tipp:
+        ez hasonlít ahhoz, hogy a \\`loopCloud (name)' függvényt többször is hívják.)"
+      CSD U6 setProperty hidden 2_2019: "# Mutatás / Elrejtés\n\nEz a riasztó alkalmazás
+        nem túl hasznos, ha nem bírja kikapcsolni a riasztást, miután bekapcsolta.
+        Javítsuk meg.\n\n# Csináld a következőt:\n\nHozzon létre egy második eseményt,
+        hogy megnézze a \"stopAlarmButton\" -t. Az esemény bekapcsolásakor: \n\n-
+        \  Állítsa az állapot szövegét \"OFF\" -ra \n-   A \"stopAlarmButton\" elrejtése
+        \n\n\\_segítség: \"rejtett\" egy logikai tulajdonság. Ha a \"false\" -t használjuk
+        a gomb megjelenítéséhez, mit kell használnod, hogy újra elrejtse? \\_"
+      CSD What Makes a Computer a Computer Video_2019: |-
+        ## gondolkodtató kérdések
+
+        -   Miben különböznek a számítógépek a korábbi gépektől?
+        -   Gondolj valamire, amit a számítógépen csinálsz. Milyen bemenet, kimenet, tárolás és feldolgozás történik?
+      'CSD: For Loop_2019': |-
+        ## megfontolandó kérdések
+
+        -   Melyek a programozáshoz használt ciklusok?
+        -   Hol találhatóak a ciklusok a kódodba?
+      CSDU4 Design Mode Video_2019: |-
+        ## megfontolandó kérdések
+
+        -   Hol lehet az App Labben megtervezni az alkalmazás felhasználói felületét?
+        -   Milyen típusú elemek adhatók hozzá az alkalmazáshoz?
+      CSDU6 making new arrays_2019: |-
+        # Új tömbök készítése
+
+        Most, hogy meg tudod változtatni a tömböket, itt az ideje, hogy készítsd el a sajátodat.
+
+        # Csináld ezt
+
+        -   Készíts egy új tömböt a kívánt célra. Különböző oktávok lehetnek, egy bizonyos kulcsban elrendezve, stb.
+        -   Ha a \*\* jobb \*\* gombot megnyomja, a zümmögő véletlenszerűen írjon egy jegyet a tömbbe.
       Course 4 Artist 2: Ciklusba tudnád rakni ezt a kód részletet, hogy a szürke
         négyzet kirajzolódjon? (Minden oldal 300 pixel hosszú)
       Course 4 Artist 3: Rendben, most próbáld meg kitalálni, hogy mi fog történni,
@@ -384,8 +547,19 @@ hu-HU:
       HOC 2018 Level_9b: Elérted a zátonyt, most keresd meg a **Tenger szívét** ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png)
         ! A kék és vörös korall segítségével juss el a kincset tartalmazó **ládához**
         ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png).
+      Intro to Web Lab - Part 1_2019: |-
+        ## megfontolandó kérdés:
+
+        -   Melyek a Web Lab különböző részei, és mire használhatók?
+      Intro to Web Lab - Part 2_2019: "## megfontolandó kérdés:\n\n-   Miért hasznosak
+        a HTML-címkék? \n-   Mit csinál a bekezdéscímke?"
       K-1 Bee Loops 5: Használj ciklusokat, hogy nektárt gyűjts és mézet készíts!
       K-1 Maze Loops 2: Használd az Ismételd blokkot és juttass el a malachoz!
+      MC HOC 2016 SCORE LEVEL: "Néhány játék lehetővé teszi a pontszámok megtartását.
+        Játssz a címkézésével ezeknek az Iron Golemeknek és használd a blokkot <xml>
+        \ <block type=\"craft_addScore\">\n    <title name=\"SCORE\">1</title>\n  </block></xml>
+        hogy adj magadnak egy pontot, amikor címkézed őket.  \n\n  Szerezz öt pontot
+        hogy nyerj!"
       MC_HOC_2017_01_RETRY: "{currentPlayerName} a ház foglya, de az Agent a segítségére
         siet!   \\\r\n \\\r\n   \\\r\nIllessz egy \"mozgás előre\" blokkot az \"amikor
         fut\" blokkba a munkaterületen, hogy az Agentet a [PressurePlate_Up] nyomólapra
@@ -462,9 +636,63 @@ hu-HU:
         a bárányt.
       Overworld Move to Sheep_2019: Adj hozzá egy második előrelépni parancsot, hogy
         elérd a bárányt.
+      U4 Model Program 5_2019: "# A többi gomb felszerelése\n\nMost, hogy készült
+        egy működő gomb, csak ismételd tovább mintát. \n\n# Csináld ezt\n\n-   Minden
+        gomb megnyomásakor hozzon létre egy eseményt, amely a gomb megnyomásakor hivatkozik
+        a megfelelő képernyőre. \n-   Futtassa az alkalmazást és tesztelje, hogy az
+        összes gomb működik-e."
       course4_artist_fwp_challenge1: Próbálja meg futtatni ezt a programot, és változtassa
         meg, hogy lássa, mi történik. Ki tudja kitalálni, hogyan fog működni? (Akár
         törölheti az egészet, és írhat helyette valami teljesen mást)
+      courseA_artist_loops4_2019: |-
+        Most használd a <xml><block type="controls_repeat_simplified_dropdown" block-text="repeat"><title name="TIMES" config="2-6">5</title></block></xml> ciklust, a vonal megrajzolásához ötször!
+
+        ![](https://images.code.org/b2bc7f52ffdac2ad0d8e7c2d798c24df-image-1501875818062.gif)
+      courseA_artist_loops7_2019: |-
+        Használd a <xml><block type="controls_repeat_simplified_dropdown" block-text="repeat"><title name="TIMES" config="3-10">???</title></block></xml> ciklust, hogy hullámos legyen a víz!
+
+        ![expandable](https://images.code.org/01c5f6772a8b608a2fca5f6de7e25c67-image-1498062629139.gif)
+      courseA_collector_loops2_2019: 'Szerezd meg mind a három cölöpöt! Mozgasd Laurel-t
+        minden egyes kincses darabhoz, majd használd a <xml><block type="collector_collect"
+        block-text="get treasure"/></xml> blokkot. '
+      courseA_collector_loops3_2019: Hogyan tudja Laurel megkapni mind az öt kincset
+        mindössze egy<xml><block type="maze_moveEast" block-text="move east"/></xml>
+        blokk segítségével?
+      courseA_maze_ramp3a_2019: Fogja meg a <xml><block type="maze_moveNorth" block-text="move
+        north"/></xml> blokkot az eszköztárból, és adja hozzá a többi blokk aljához,
+        hogy befejezze ezt a kódot, majd kattintson az "▶ Futtatás" gombra.
+      courseA_playLab_events3_2019: |-
+        Segít Jorge kutyának mozogni a <xml><block type="studio_move" block-text="move dog west">
+            <title name="SPRITE">1</title>
+            <title name="DIR">8</title>
+          </block></xml> blokkhoz és<xml><block type="studio_whenArrow" block-text="when left arrow">
+            <title name="VALUE">left</title>
+          </block></xml> esemény blokkhoz kapcsolva, amelyek már a munkaterületen vannak.
+
+        Vidd Jorge-t a zászlóhoz a szint teljesítéséhez!
+      courseB_Scrat_ramp1_2019: Ahhoz, hogy Scrat eljusson a makkhoz, kattints a <xml><block
+        type="maze_moveEast" block-text="move East"/></xml> blokkra a <xml><block
+        type="when_run" block-text="when run"/></xml> blokk alján, majd nyomd meg
+        a "▶ Run"!
+      courseB_Scrat_ramp2_2019: A kód <xml><block type="maze_moveEast" block-text="move
+        east"/></xml> befejezéséhez kattints mindkét blokkon a <xml><block type="when_run"
+        block-text="when run"/></xml> blokk aljára, majd kattintson az "▶ Run" gombra.
+      courseB_Scrat_ramp3a_2019: Fogja meg a <xml><block type="maze_moveNorth" block-text="move
+        north"/></xml> blokkot az eszköztárból, és adja hozzá a többi blokk aljához,
+        hogy befejezze ezt a kódot, majd kattintson az "▶ Futtatás" gombra.
+      courseB_collector_loops3_2019: Hogyan tudja Laurel megkapni mind az öt kincset
+        mindössze egy<xml><block type="maze_moveEast" block-text="move east"/></xml>
+        blokk segítségével?
+      courseB_iceage_loops2_2019: Használd minkét, ezt <xml><block type="maze_moveWest"
+        block_text="move west"/></xml> és ezt<xml><block type="maze_moveSouth" block_text="move
+        south"/></xml> a blokkot, hogy eljuss a makkhoz!
+      courseB_iceage_loops3_2019: El tudod érni a makkot egy <xml><block type="maze_moveWest"
+        block-text="move west"/></xml> blokkal? Próbálj ciklust használni!
+      courseC_collector_prog2_2019: Move Laurelt a kincshez, majd használja <xml><block
+        type="collector_collect" block-text="collect"/></xml> blokkot, hogy felvegye.
+      courseC_maze_programming2_2019: Húzz egy extra <xml><block type="maze_moveForward"
+        block-text="move forward"/></xml> blokkot elő a eszköztárból, hogy befejezd
+        a kódod.
       courseD_bee_nestedLoops8: Gyűjtsd össze az összes nektárt az összes virágról,
         és készíts mézet minden lépbe. Használj beágyazott ciklust!
       courseD_bee_nestedLoops8_2018: Gyűjtsd össze az összes nektárt az összes virágról,

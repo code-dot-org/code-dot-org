@@ -430,7 +430,7 @@ module Pd::Application
           zip: '98101',
           school_name: 'Code.org',
           full_address: '1501 4th Ave',
-          validation_type: SchoolInfo::VALIDATION_NONE
+          validation_type: SchoolInfo::VALIDATION_COMPLETE
         },
         application.school_info_attr
       )

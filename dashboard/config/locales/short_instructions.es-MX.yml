@@ -18,7 +18,7 @@ es-MX:
       2-3 Artist 4: Ayúdame a completar la casa para este gato.
       2-3 Artist 6: "¡Esta casa necesita un tejado! Dibuja el triángulo. Pista: los
         tres lados miden lo mismo."
-      2-3 Artist 9: Termina esta cometa
+      2-3 Artist 9 NEW: Termina esta cometa
       2-3 Artist Debugging 10: "El panel de dirección en mi dispositivo de juego es
         demasiado estrecho. \n\n¿Puedes aumentar el ancho en 10 pixeles? \n\nIntenta
         ejecutar el código primero para ver cuál es el error."
@@ -346,9 +346,9 @@ es-MX:
       CSDU6 arrays select variable_2019: Escribe un programa que muestre un color
         elegido aleatoriamente desde el arreglo. (Haz clic para ver las instrucciones
         completas)
-      Choose Your Own Adventure: "¡Puedes hacer lo que quieras en el laboratorio de
-        juego! Aquí hay un ejemplo para escoger tu propia historia de aventura en
-        el laboratorio de juego."
+      Choose Your Own Adventure: "¡Puedes hacer lo que quieras en el Laboratorio de
+        juego! Este es un ejemplo de una historia de Elige tu propia aventura en el
+        Laboratorio de juegos."
       Course 4 Artist Binary 1: Aquí hay una función que toma una cadena binaria de
         0 y 1 e instruye al artista a que gire de izquierda a derecha, de arriba hacia
         abajo, llenando los cuadrados cuando ve 1 e ignorándolos cuando ve 0. Corre
@@ -520,8 +520,8 @@ es-MX:
         más detalles)
       Dance_Party_extras_visible: ¿Dónde habrán ido? (haz clic en "Más" para obtener
         más detalles)
-      Find the Wizard: Construye lo que quieras. ¡Este es un ejemplo de un juego de
-        adivinación de números!
+      Find the Wizard: Crea lo que quieras. ¡Este es un ejemplo de un juego de adivinar
+        números!
       Fish Tank 2-validated: Convierte a Dusty (la planta rodadora) en un pez.
       Fish Tank 2-validated_2019: Convierte a Dusty (la planta rodadora) en un pez.
       Fish Tank 3-validated: Cambia el comportamiento del pez para que se mueva alrededor
@@ -538,8 +538,8 @@ es-MX:
         para darle un toque especial a tu pecera!"
       Fish Tank 7-validated_2019: "¡Usa algunos bloques nuevos de la caja de herramientas
         para darle un toque especial a tu pecera!"
-      FoodFight: Este es un ejemplo de un juego que puedes hacer en el laboratorio
-        de juego.
+      FoodFight: Este es un ejemplo de un juego que puedes crear en el Laboratorio
+        de juegos.
       Frequency Analysis: Prueba
       Function intro Ryan: Usa la función "Construir puente" dos veces para crear
         un camino para la antorcha.
@@ -549,8 +549,8 @@ es-MX:
         crear un patrón. ¡Esto requiere persistencia y planificación!'
       Geometric Sun_2018: 'Idea para un proyecto: usa ideas geométricas como formas
         para crear un patrón. ¡Esto requiere persistencia y planificación!'
-      Guess The Number: Construye lo que quieras. ¡Este es un ejemplo de un juego
-        de adivinación de números!
+      Guess The Number: Crea lo que quieras. ¡Este es un ejemplo de un juego de adivinar
+        números!
       HOC 2018 Level_1: Obtén un bote en el cofre.
       HOC 2018 Level_10: Dirígete a la entrada de este monumento oceánico.
       HOC 2018 Level_11: Fabrica un conducto con prismarina dentro del monumento oceánico.
@@ -996,9 +996,9 @@ es-MX:
       course3_bee_functions_challenge1: De ti depende este desafío. ¡Puede ser más
         difícil de lo que parece!
       course3_bee_functions_challenge3: Crea una función para recoger todo el néctar
-        y la miel mientras hay un camino por delante. ¡Úsalo para completar el desafío!
-      course3_bee_functions_challenge4: "¡Usa todo lo que has aprendido para completar
-        este desafío!"
+        y la miel mientras haya un camino por delante. ¡Úsala para completar el desafío!
+      course3_bee_functions_challenge4: "¡Aprovecha todo lo que has aprendido para
+        completar este desafío!"
       course3_collector_debugging_challenge2: "¿Eres experto en loops anidados? ¡Usa
         lo que has aprendido hasta ahora para recolectar todo el tesoro!"
       course3_farmer_condLoops_challenge1: Gira a la derecha en las calabazas. Recoge
@@ -1033,9 +1033,9 @@ es-MX:
         ¿Puedes quedarte aquí hasta que descifres la solución?"
       course4_bee_for_challenge1: Usa este 'bucle para' para recoger todo el néctar.
         Hay unas pocas acciones que querrás repetir 'contador' veces.
-      course4_bee_fwp_challenge1: Usa un 'loop para' en una función para recoger todo
-        el maíz. El mismo 'loop para' puede contar a valores máximos diferentes usando
-        el parámetro 'longitud'.
+      course4_bee_fwp_challenge1: Usa un bucle `desde` en una función para recoger
+        todo el maíz. El mismo bucle `desde` puede contar valores máximos diferentes
+        mediante el parámetro `longitud`.
       course4_bee_fwp_challenge2: Usa un 'bucle para' en una función para recoger
         todos los vegetales en la fila. Haz que el 'bucle para' pueda contar hasta
         valores máximos diferentes usando el parámetro `longitud`. Haz tu programa
@@ -2142,32 +2142,32 @@ es-MX:
         árboles y los campos!
       courseC_harvester_loops_challenge2_2019: Recoge toda la lechuga. ¡Evita los
         árboles y los campos!
-      courseC_maze_debugging1: Corrige los errores para recoger todo el tesoro.
+      courseC_maze_debugging1: Corrige el código para ayudar a Scrat a llegar hasta
+        la bellota.
       courseC_maze_debugging1_2018: Corrige el código para ayudar a Scrat a llegar
         hasta la bellota.
       courseC_maze_debugging1_2019: Corrige el código para ayudar a Scrat a llegar
         hasta la bellota.
-      courseC_maze_debugging2: Corrige los errores para recoger todo el tesoro.
+      courseC_maze_debugging2: Utiliza tus habilidades de depuración para que Scrat
+        llegue hasta la bellota.
       courseC_maze_debugging2_2018: Utiliza tus habilidades de depuración para que
         Scrat llegue hasta la bellota.
       courseC_maze_debugging2_2019: Utiliza tus habilidades de depuración para que
         Scrat llegue hasta la bellota.
-      courseC_maze_debugging3: Corrige los errores para recoger todo el tesoro.
+      courseC_maze_debugging3: "¡Quita bloques para que Scrat llegue hasta la bellota!"
       courseC_maze_debugging3_2018: "¡Quita bloques para que Scrat llegue hasta la
         bellota!"
       courseC_maze_debugging3_2019: "¡Quita bloques para que Scrat llegue hasta la
         bellota!"
-      courseC_maze_debugging4: Corrige los errores para recoger todo el tesoro.
+      courseC_maze_debugging4: "¡Alguien no sabe cómo llegar! ¿Puedes ayudar?"
       courseC_maze_debugging4_2018: "¡Alguien no sabe cómo llegar! ¿Puedes ayudar?"
       courseC_maze_debugging4_2019: "¡Alguien no sabe cómo llegar! ¿Puedes ayudar?"
-      courseC_maze_debugging5: Todos los comandos que necesitas están aquí... Usa
-        tus habilidades de depuración para descubrir cómo resolver el desafío.
+      courseC_maze_debugging5: Reorganiza y cambia los bloques para depurar este nivel.
       courseC_maze_debugging5_2018: Reorganiza y cambia los bloques para depurar este
         nivel.
       courseC_maze_debugging5_2019: Reorganiza y cambia los bloques para depurar este
         nivel.
-      courseC_maze_debugging6: 'Desafío: Usa tus habilidades de depuración para corregir
-        los errores y recoger todo el tesoro.'
+      courseC_maze_debugging6: Descubre el error y lleva a Scrat hasta la bellota.
       courseC_maze_debugging6_2018: Descubre el error y lleva a Scrat hasta la bellota.
       courseC_maze_debugging6_2019: Descubre el error y lleva a Scrat hasta la bellota.
       courseC_maze_debugging7: "**Desafío**: Reorganiza, agrega y elimina bloques
@@ -2335,8 +2335,6 @@ es-MX:
         chatarra!"
       courseC_starWars_loops9_2019: "¡Usa lo que has aprendido para recoger toda la
         chatarra!"
-      courseC_video_angles2: Ahora arrastra el código para el último triángulo al
-        nuevo bucle para hacerlo girar y hacer un copo de nieve.
       courseD_artist_1_2018: Dibuja un hexágono con lados de **50** pixeles de largo.
       courseD_artist_1_2018_2019: Dibuja un hexágono con lados de **50** pixeles de
         largo.
@@ -3122,23 +3120,21 @@ es-MX:
         la línea del pulpo.
       courseD_playLab_condFP: "¡Crea tu propio juego para presumir con tus amigos!"
       courseD_playLab_condFP_2018: "¡Crea tu propio juego para presumir con tus amigos!"
-      courseD_scrat_predict1: Este código incluye un nuevo bloque. ¿Qué crees que
-        sucederá si presionas el bloque "Ejecutar"?
-      courseD_scrat_ramp1: Para este desafío, arrastra todos los bloques para juntarlos
-        y haz clic en "Ejecutar" para verlo funcionar.
+      courseD_scrat_ramp1: Para este desafío, encaja todos los bloques juntos y haz
+        clic en "Ejecutar" ¡para verlos funcionar!
       courseD_scrat_ramp2: Arrastra un bloque 'avanzar' extra desde la caja de herramientas,
         luego adjunta todos los bloques al 'cuando ejecute' para finalizar el código.
       courseD_scrat_ramp3: Hay un bloque sobrante que hará que el pájaro se estrelle.
         Arrástralo a la caja de herramientas para descartarlo.
       courseD_scrat_ramp4: "¡Evita el TNT o volarán plumas!"
       courseD_scrat_ramp5: Evita el TNT.
-      courseD_scrat_ramp6: '"Mantén la calma y ayúdame a encontrar al cerdo malo.
-        De lo contrario, ¡me puedo enojar!"'
-      courseD_scrat_ramp7: "¡Usa lo que has aprendido para llevar al pájaro hasta
-        el cerdo!"
-      courseD_scrat_ramp8: "¡Ahora haz un cuadrado con Artista!"
-      courseD_video_repeatUntil: Ayuda a la granjera a recorrer el camino correctamente
-        para recolectar toda la lechuga.
+      courseD_scrat_ramp6: |-
+        _"Mantén la calma y ayúdame a encontrar al cerdo malo. Si no, ¡puedo enfadarme!"_
+
+        Cuando tienes varios bloques seguidos, prueba moverlos dentro de un bucle `repetir`. ¡Esto hará lo mismo con menos código!
+      courseD_scrat_ramp7: "¡Ayuda a Scrat a llegar hasta la bellota!"
+      courseD_scrat_ramp8: "¡Usa lo que has aprendido para que Scrat llegue hasta
+        la bellota!"
       courseE_aboutme_6: |-
         El póster de Rikki se ve bien, ¡pero puede ser aún mejor!
 
@@ -3241,8 +3237,9 @@ es-MX:
       courseE_artist_functions_challenge2_2019: Prueba este código para ver cómo funciona,
         ¡y luego personaliza el programa!
       courseE_artist_ramp8: "¡Ahora haz un cuadrado con Artista!"
-      courseE_artist_ramp8_2: Usa lo que has aprendido para dibujar este triángulo.
+      courseE_artist_ramp8_2: "¡Ahora haz un cuadrado con Artista!"
       courseE_artist_ramp9: Usa lo que has aprendido para dibujar este triángulo.
+      courseE_artist_ramp9_2: Usa lo que has aprendido para dibujar este triángulo.
       courseE_bee_concept1: Recoge todo el néctar de cada flor.
       courseE_bee_concept1_2018: Recoge todo el néctar de cada flor.
       courseE_bee_concept2: 'Ayuda a la abeja a hacer toda la miel. '
@@ -3352,35 +3349,38 @@ es-MX:
       courseE_farmer_ramp11a: Cuando haya una pila, quita la tierra.
       courseE_farmer_ramp11a_2018: Cuando haya una pila, quita la tierra.
       courseE_farmer_ramp11a_2019: Cuando haya una pila, quita la tierra.
-      courseE_farmer_ramp11b: Ahora usa bucles anidados para resolver este desafío.
+      courseE_farmer_ramp11b: Cuando haya una pila, quita la tierra.
       courseE_farmer_ramp11b_2018: Cuando haya una pila, quita la tierra.
       courseE_farmer_ramp11b_2019: Cuando haya una pila, quita la tierra.
+      courseE_farmer_ramp12_forswap: Ahora usa bucles anidados para resolver este
+        desafío.
       courseE_farmer_ramp12_forswap_2018: Ahora usa bucles anidados para resolver
         este desafío.
       courseE_farmer_ramp12_forswap_2019: Ahora usa bucles anidados para resolver
         este desafío.
-      courseE_farmer_ramp12b: Recoge todas las lechugas (solo mientras haya alguna
-        que recoger).
+      courseE_farmer_ramp12b: "¡Cuando haya lechuga, recoge la lechuga!"
       courseE_farmer_ramp12b_2018: "¡Cuando haya lechuga, recoge la lechuga!"
       courseE_farmer_ramp12b_2019: "¡Cuando haya lechuga, recoge la lechuga!"
-      courseE_farmer_ramp12c: Recoge el maíz si hay maíz, y la lechuga cuando haya
-        lechuga.
+      courseE_farmer_ramp12c: Muévete hacia adelante hasta que alcances la lechuga,
+        y luego usa un bucle `mientras` para recogerla toda.
       courseE_farmer_ramp12c_2018: Muévete hacia adelante hasta que alcances la lechuga,
         y luego usa un bucle `mientras` para recogerla toda.
       courseE_farmer_ramp12c_2019: Muévete hacia adelante hasta que alcances la lechuga,
         y luego usa un bucle `mientras` para recogerla toda.
-      courseE_farmer_ramp12d: Ayuda a la abeja a seguir el camino para juntar toda
-        la miel y todo el néctar.
+      courseE_farmer_ramp12d: Muévete hacia adelante hasta que alcances la lechuga,
+        y luego usa un bucle `mientras` para recogerla toda.
       courseE_farmer_ramp12d_2018: Muévete hacia adelante hasta que alcances la lechuga,
         y luego usa un bucle `mientras` para recogerla toda.
       courseE_farmer_ramp12d_2019: Muévete hacia adelante hasta que alcances la lechuga,
+        y luego usa un bucle `mientras` para recogerla toda.
+      courseE_farmer_ramp12e: Muévete hacia adelante hasta que alcances la lechuga,
         y luego usa un bucle `mientras` para recogerla toda.
       courseE_farmer_ramp12e_2018: Muévete hacia adelante hasta que alcances la lechuga,
         y luego usa un bucle `mientras` para recogerla toda.
       courseE_farmer_ramp12e_2019: Muévete hacia adelante hasta que alcances la lechuga,
         y luego usa un bucle `mientras` para recogerla toda.
-      courseE_farmer_ramp12f: Usa solo los bloques disponibles para resolver este
-        desafío.
+      courseE_farmer_ramp12f: Avanza hasta llegar a la lechuga, luego gira a la izquierda
+        **si** hay un camino a la izquierda. De lo contrario, gira a la derecha.
       courseE_farmer_ramp12f_2018: Avanza hasta llegar a la lechuga, luego gira a
         la izquierda **si** hay un camino a la izquierda. De lo contrario, gira a
         la derecha.
@@ -3708,8 +3708,8 @@ es-MX:
         laberinto. ¿Por qué es diferente al de la última vez?
       courseF_bee_functions_challenge1: Crea una nueva función para recoger todo el
         néctar y la miel mientras haya un camino por delante.
-      courseF_bee_functions_challenge2: "¡Usa todo lo que has aprendido para completar
-        este desafío!"
+      courseF_bee_functions_challenge2: "¡Aprovecha todo lo que has aprendido para
+        completar este desafío!"
       courseF_bee_fwp2: Transforma este código en una función, y luego llama a la
         función para revisar esta fila en busca de néctar.
       courseF_bee_fwp3: Veamos si esta función permite recoger estas tres filas de
@@ -3719,7 +3719,7 @@ es-MX:
       courseF_bee_fwp5: Usa esta función para recoger todo el néctar.
       courseF_bee_fwp6: Crea una solución breve y dulce para este desafío.
       courseF_bee_fwp7: "**Desafío:** Modifica tu función para que también haga miel."
-      courseF_bee_fwp8: Usa tu nueva función para resolver este espiral.
+      courseF_bee_fwp8: Usa tu nueva función para resolver esta espiral.
       courseF_bee_fwp9_predict1: Usa tu nueva función para resolver este desafío.
       courseF_bee_fwp_challenge1: Usa un bucle `desde` en una función con un parámetro
         de `longitud` para recoger todo el maíz.

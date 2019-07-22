@@ -578,6 +578,14 @@ pt-BR:
       CSD U2 Design Project_2018_2019:
         title: título
         content1: descrição aqui
+      CSD U2 L1 Overview:
+        markdown: "# CS Descobertas Inquérito pós-curso \n\n** A sua entrada e feedback
+          é importante para nós! **Usamos para:\n\n* fazer melhorias no curso\n* entender
+          sua experiência\n* diga-nos quais tópicos você quer aprender mais no futuro\n\nObrigado
+          por dedicar um tempo para ajudar a tornar os CS Descobertas ainda melhores!\n\n<a
+          class=\"btn btn-large btn-success\" href=\"/s/csd-post-survey/stage/1/puzzle/1/page/1\"
+          target=\"top\"> Clique aqui para completar as CS Descobertas Pesquisa pós-curso!!!</a>\n\n(abre
+          em uma nova aba)\n\n<br>\n\n\n\n\n\n"
       CSD U2 L2 Overview:
         title: título
         content1: descrição aqui
@@ -875,30 +883,70 @@ pt-BR:
         - text: keyWentDown()
         - text: keyWentUp()
         - text: keyDown()
+      CSD U3 Lesson Overview 2:
+        markdown: "# CS Descobertas Inquérito pós-curso \n\n** A sua entrada e feedback
+          é importante para nós! **Usamos para:\n\n* fazer melhorias no curso\n* entender
+          sua experiência\n* diga-nos quais tópicos você quer aprender mais no futuro\n\nObrigado
+          por dedicar um tempo para ajudar a tornar os CS Descobertas ainda melhores!\n\n<a
+          class=\"btn btn-large btn-success\" href=\"/s/csd-post-survey/stage/1/puzzle/1/page/1\"
+          target=\"top\"> Clique aqui para completar as CS Descobertas Pesquisa pós-curso!!!</a>\n\n(abre
+          em uma nova aba)\n\n<br>\n\n\n\n\n\n"
+      CSD U3 Lesson Overview 3:
+        markdown: |+
+          # Visão global
+
+          A turma é apresentada ao Laboratório de Jogos, o ambiente de programação desta unidade, e começa a usá-lo para posicionar formas na tela. A lição abrange os conceitos básicos de sequenciamento e depuração, bem como alguns comandos simples. No final da lição, a turma cria uma versão on-line da imagem projetada na lição anterior.
+          ## Vocabulário
+
+          * **Bug** - Parte de um programa que não funciona corretamente.
+          * **Depuração** - Localizando e corrigindo problemas em seu algoritmo ou programa.
+          * ** Programa ** - Um algoritmo que foi codificado em algo que pode ser executado por uma máquina.
+
+          ## Código introduzido
+
+          * [ellipse()](//docs.code.org/gamelab/ellipse/)
+          * [rect()](//docs.code.org/gamelab/rect/)
+          * [fill()](//docs.code.org/gamelab/fill/)
+
       CSD U3 Sprite Movement Predict Multi:
         questions:
         - {}
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: "<img src='https://images.code.org/649915789345f5958475cd2b91e0630c-image-1491939133180.gif'
+            style='border: 1px solid #ccc'>"
+        - text: "<img src='https://images.code.org/2f5e7773ae2f99d6217929bd58490393-image-1491939162998.gif'
+            style='border: 1px solid #ccc'>"
+        - text: "<img src='https://images.code.org/7c43fbce8cbbe7c15614203290f806e7-image-1491939169414.gif'
+            style='border: 1px solid #ccc'>"
+          correct: true
+        - text: "<img src='https://images.code.org/c62dbed9a37b03958cb056bf493bd59c-image-1491939175575.gif'
+            style='border: 1px solid #ccc'>"
       CSD U3 Sprite Movement Predict Multi_2018:
         questions:
         - {}
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: "<img src='https://images.code.org/649915789345f5958475cd2b91e0630c-image-1491939133180.gif'
+            style='border: 1px solid #ccc'>"
+        - text: "<img src='https://images.code.org/2f5e7773ae2f99d6217929bd58490393-image-1491939162998.gif'
+            style='border: 1px solid #ccc'>"
+        - text: "<img src='https://images.code.org/7c43fbce8cbbe7c15614203290f806e7-image-1491939169414.gif'
+            style='border: 1px solid #ccc'>"
+          correct: true
+        - text: "<img src='https://images.code.org/c62dbed9a37b03958cb056bf493bd59c-image-1491939175575.gif'
+            style='border: 1px solid #ccc'>"
       CSD U3 Sprite Movement Predict Multi_2018_2019:
         questions:
         - {}
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: "<img src='https://images.code.org/649915789345f5958475cd2b91e0630c-image-1491939133180.gif'
+            style='border: 1px solid #ccc'>"
+        - text: "<img src='https://images.code.org/2f5e7773ae2f99d6217929bd58490393-image-1491939162998.gif'
+            style='border: 1px solid #ccc'>"
+        - text: "<img src='https://images.code.org/7c43fbce8cbbe7c15614203290f806e7-image-1491939169414.gif'
+            style='border: 1px solid #ccc'>"
+          correct: true
+        - text: "<img src='https://images.code.org/c62dbed9a37b03958cb056bf493bd59c-image-1491939175575.gif'
+            style='border: 1px solid #ccc'>"
       CSD U3 Sprites intro predict multi:
         questions:
         - {}
@@ -1003,6 +1051,69 @@ pt-BR:
       CSD U3 platform intro_2018_2019:
         title: Crie um salto de plataformas
         content1: descrição aqui
+      CSD U4L01 SFLP:
+        markdown: "# CS Descobertas Inquérito pós-curso \n\n** A sua entrada e feedback
+          é importante para nós! **Usamos para:\n\n* fazer melhorias no curso\n* entender
+          sua experiência\n* diga-nos quais tópicos você quer aprender mais no futuro\n\nObrigado
+          por dedicar um tempo para ajudar a tornar os CS Descobertas ainda melhores!\n\n<a
+          class=\"btn btn-large btn-success\" href=\"/s/csd-post-survey/stage/1/puzzle/1/page/1\"
+          target=\"top\"> Clique aqui para completar as CS Descobertas Pesquisa pós-curso!!!</a>\n\n(abre
+          em uma nova aba)\n\n<br>\n\n\n\n\n\n"
+      CSD U4L02 SFLP:
+        markdown: |
+          # Visão global
+
+          Os designers precisam entender as necessidades de seus usuários. Nesta lição, você pensará sobre como projetar para outra pessoa desempenhando um perfil de usuário e reagindo a uma série de produtos.
+
+          ## Vocabulário
+
+          * **Usabilidade** - Quão fácil, eficiente e satisfatório é usar um objeto ou dispositivo feito pelo homem (incluindo software).
+
+          ## Recursos
+
+          * [Reagindo como seu usuário] (https://docs.google.com/document/d/1cQXtr4zj3LEuOMoOYJf8KtBUl9ge3qmwBBzEBv8GixA/export?format=pdf) - Guia de atividades
+
+          * [Perfil 1](https://docs.google.com/document/d/1N6Ks8rp6YoLgsbA3FE0x9RatJY3znevnMkMyUN3yRE8/export?format=pdf) - Perfil do usuário
+          * [Perfil 2](https://docs.google.com/document/d/14nHf-TzkKBUC0hvYlcviVe-S9wDdo1TqPUIcnTcHMzw/export?format=pdf) - Perfil do usuário
+          * [Perfil 3](https://docs.google.com/document/d/1Nw_0v_uGCe4J_tcimhyJiWKYgw4jhNgg8qP1zo4GddE/export?format=pdf) - Perfil do usuário
+          * [Perfil 4](https://docs.google.com/document/d/1kRKQYsomhS9UakiDazQ9dXNk8AIWHaq082Y4wBflK34/export?format=pdf) - Perfil do usuário
+      CSD U4L03 SFLP:
+        markdown: |
+          # Visão global
+
+          Nesta lição, você projetará um produto a partir do zero para atender às necessidades de um usuário. Ao longo do caminho, você aprenderá como o debate e a categorização de ideias são uma habilidade útil quando há muitas opções possíveis que você pode escolher.
+
+          ## Recursos
+
+          * [Design centrado no usuário] (https://docs.google.com/document/d/1HxcW76EFNVIJykCVELgjr4WRpFjPgrVvz9tURRR1gWY/export?format=pdf) - Guia de atividades
+      CSD U4L04 SFLP:
+        markdown: |
+          # Visão global
+
+          Nesta lição, você aprenderá o que é um aplicativo e como ele é projetado para ajudar a atender às necessidades de um usuário. Você também aprenderá como os protótipos são usados para criar um rascunho de um software.
+
+          ## Vocabulário
+
+          * **Protótipo** - Um modelo inicial ou inicial de um produto que permite testar as premissas antes de desenvolver uma versão final.
+          * **Interface do usuário** - Os elementos visuais de um programa através do qual um usuário controla ou se comunica com o aplicativo. Frequentemente abreviada como UI.
+
+
+          ## Recursos
+
+          * [Telas da interface do usuário] (https://docs.google.com/document/d/1JOVsR0T5P7zQ6LdxfDjRSsX1EC8xk0TYZKe7X_GjYlk/export?format=pdf) - Guia de atividades
+          * [Teste de usuário (computador)] (https://docs.google.com/document/d/1Rtla8WSmJol6sHT5SToep5_hhTM5I8z3UjA7yCap-nw/export?format=pdf) - Guia de atividades
+          * [Teste de usuário (usuário)] (https://docs.google.com/document/d/1IPu6hsHRui_ChXogq0nklAUuPUae2yx0RaADW9b4Nrs/export?format=pdf) - Guia de atividades
+      CSD U4L05 SFLP:
+        markdown: |
+          # Visão global
+
+          Nesta lição, você aprenderá a ler cuidadosamente o feedback de um produto para identificar as necessidades que estão sendo expressas. Então você atualizará um protótipo de papel para melhor atender a essas necessidades.
+
+          ## Recursos
+
+          * [Telas da interface do usuário] (https://docs.google.com/document/d/1JOVsR0T5P7zQ6LdxfDjRSsX1EC8xk0TYZKe7X_GjYlk/export?format=pdf) - Guia de atividades
+          * [Feedback do protótipo] (https://docs.google.com/document/d/1DzoLUATK8k1lyr_TLhR4mJ5UHLhrZN6-sLRay0tLX4Q/export?format=pdf) - Guia de atividades
+          * [Melhorar uma tela] (https://docs.google.com/document/d/1y0YfE6qZKKlRRpeVGU2d-SuctJP9P5fI2062yo85nZg/export?format=pdf) - Guia de atividades
       CSD U5 Encryption 1:
         title: título
         content1: descrição aqui
@@ -1133,6 +1244,51 @@ pt-BR:
           correct: true
         - text: '<img src="https://images.code.org/cea9a118066ffc296f1023f395e61058-image-1507311692360.png"
             style="max-width: 100px;">'
+      CSD U6L01 TFMD:
+        markdown: "# CS Descobertas Inquérito pós-curso \n\n** A sua entrada e feedback
+          é importante para nós! **Usamos para:\n\n* fazer melhorias no curso\n* entender
+          sua experiência\n* diga-nos quais tópicos você quer aprender mais no futuro\n\nObrigado
+          por dedicar um tempo para ajudar a tornar os CS Descobertas ainda melhores!\n\n<a
+          class=\"btn btn-large btn-success\" href=\"/s/csd-post-survey/stage/1/puzzle/1/page/1\"
+          target=\"top\"> Clique aqui para completar as CS Descobertas Pesquisa pós-curso!!!</a>\n\n(abre
+          em uma nova aba)\n\n<br>\n\n\n\n\n\n"
+      CSD-U5-SFLP Representation Matters:
+        markdown: "# CS Descobertas Inquérito pós-curso \n\n** A sua entrada e feedback
+          é importante para nós! **Usamos para:\n\n* fazer melhorias no curso\n* entender
+          sua experiência\n* diga-nos quais tópicos você quer aprender mais no futuro\n\nObrigado
+          por dedicar um tempo para ajudar a tornar os CS Descobertas ainda melhores!\n\n<a
+          class=\"btn btn-large btn-success\" href=\"/s/csd-post-survey/stage/1/puzzle/1/page/1\"
+          target=\"top\"> Clique aqui para completar as CS Descobertas Pesquisa pós-curso!!!</a>\n\n(abre
+          em uma nova aba)\n\n<br>\n\n\n\n\n\n"
+      Crowdsourcing-Unplugged:
+        markdown: |
+          # Crowdsourcing
+
+          Veja como o crowdsourcing, que é uma técnica comum para resolução de problemas em ciências da computação, pode ajudá-lo a completar uma tarefa juntos em uma sala de aula, de maneira mais eficiente do que se você tivesse que fazer sozinho.
+      DesigningForAccessibilityMarkdownLevel_2019:
+        markdown: |
+          # Desenhando para Acessibilidade
+
+          * No mundo de ciências da computação, **acessibilidade** está relacionada à criação de tecnologia para pessoas com deficiências.
+          * Deficiências incluem físicas, auditivas, visuais, e muitas outras.
+          * Deficiências são variadas e impactam pessoas de maneiras diferentes, incluindo a forma como elas usam tecnologias como **applicativos de smartphones**.
+          * Criar aplicativos que são acessíveis para pessoas com deficiências também torna estes aplicativos melhores para todos!!
+
+          ![](https://images.code.org/0c670d0d9078657a870df0ca799492cb-image-1557166420066.png)
+      DigitalSharing-Unplugged:
+        markdown: |
+          # Compartilhamento Digital
+
+          Nesta aula você irá considerar os desafios e os benefícios de respeitar a propriedade e o copyright, em particular nos ambientes digitais.
+      EnvelopeVariables-Unplugged:
+        markdown: "# Envelopes de Variáveis\n\nVariáveis nos dão muita liberdade em
+          ciências da computação. Esta aula ajuda a explicar o que são variáveis e
+          como nós podemos usá-las de muitas formas diferentes. \n"
+      ForLoopFun-Unplugged:
+        markdown: |
+          # Divirta-se com Laços For
+
+          Sabemos que os laços nos permiter fazer algo repetidas vezes, mas agora iremos aprender como usar laços com uma estrutura adicional diretamente integrada.
       Internet Simulator Setup:
         title: Configuração do simulador de internet
         content1: descrição aqui
@@ -1142,6 +1298,11 @@ pt-BR:
       Internet Simulator Setup 3:
         title: Configuração do Simulador de Internet 3
         content1: descrição aqui
+      Internet-Unplugged:
+        markdown: |
+          # A Internet
+
+          Crie sua própria internet na sala de aula, somente usando pedaços de papel.
       K-1 Artist 1 Multi 1:
         title: Múltipla Escolha
         content1: "/script_assets/k_1_images/artist_images/rshort_dlong.png, 500"
@@ -1381,17 +1542,69 @@ pt-BR:
       OPD-K5 Stage3aGo:
         title: título
         content1: descrição aqui
+      PowerOfWords-Unplugged:
+        markdown: |
+          # A Força das Palavras
+
+          Hoje você irá aprender sobre o que fazer se alguém estiver sendo mau online.
       Prepare for your presentation:
         title: título
         content1: descrição aqui
       Prepare for your presentation_2018:
         title: Prepare-se para sua apresentação
+      PrivatePersonalInformation-Unplugged:
+        markdown: |
+          # Informação Privada e Pessoal
+
+          Criada por Common Sense Education, esta aula é sobre a diferença entre informações que são seguras para serem compartilhadas online e informações que não são.
+
+          ![](https://images.code.org/872576b170b9d8aec9b29f684a1ad94e-image-1557878406833.png)
+      SimonSays-Unplugged:
+        markdown: |
+          # Simão Diz
+
+          Jogue um jogo e pense sobre quais comandos são necessários para obter o resultado certo.
+      Songwriting-Unplugged:
+        markdown: |
+          # Composição Musical
+
+          Use o conceito do refrão em uma música para aprender sobre definição e chamada de funções.
       'Technique: Frequency Analysis':
         title: Como desvendar uma cifra de substituição
         content1: descrição aqui
       Terminology Recap:
         title: Isso foi fácil, o que vem a seguir?
         content1: descrição aqui
+      Unit 1 Lesson 2 Overview:
+        markdown: |
+          # Visão global
+
+          Nesta lição, você aprenderá um processo formal de resolução de problemas que o ajudará a estruturar sua abordagem para uma ampla variedade de problemas.
+
+
+          ## Recursos
+
+          * [O Processo de Resolução de Problemas - Guia de Atividades]
+          (https://docs.google.com/document/d/1xEPMYIDy70fWCgyLymBNmxkE-6uJ7BYOXSmV8Vyt-SQ/export?format=pdf)
+      Unit 1 Lesson 3 Overview:
+        markdown: |
+          # Visão global
+          Nesta lição, você aplicará o processo de solução de problemas a uma variedade de problemas para explorar como cada etapa o ajuda a desenvolver e melhorar as soluções para os problemas.
+
+          ## Recursos
+
+          * [Resolvendo Problemas - Guia de Atividades]
+          (https://docs.google.com/document/d/1cym5lMuy41CbvXYe7F57N2XfI6Afp0hJsHovhR0GD2M/export?format=pdf)
+      Unit 1 Lesson 4 Overview:
+        markdown: |
+          # Visão global
+
+          Nesta lição, você começará a pensar em como os computadores ajudam a resolver certos tipos de problemas e aprendem os principais recursos de cada computador.
+
+          ## Recursos
+
+          * [O que é um computador - Guia de atividades]
+          (https://docs.google.com/document/d/1g4dPcsx2xADEZI0FiMYApLr0hh3_-89NDWd2y86sS6I/export?format=pdf)
       behaviors 1 predict:
         questions:
         - text: Clique em "editar" para ver como o 'comportamento misterioso' funciona.
@@ -2239,21 +2452,18 @@ pt-BR:
       courseD_multi_scrat_predict1:
         questions:
         - text: O código faz uso de um novo bloco. O que você acha que irá acontecer
-            quando você clicar em 'Executar'?
+            quando você clicar em "Executar"?
         answers:
-        - text: Nada. O pássaro não irá se mover de forma alguma.
-          feedback: Incorreto. Colocando o bloco "mover-se para frente" dentro de
-            um laço de repetição irá fazer com que o pássaro se mova para frente três
-            vezes.
-        - text: O pássaro irá se mover três vezes para frente, virar, se moverá mais
-            três vezes para frente, chegando até o porco!
+        - text: Nada. Scrat não se moverá de forma alguma.
+          feedback: Incorreto. Colocando o bloco "mover para frente" dentro do bloco
+            "repetir" fará Scrat se mover para frente três vezes.
+        - text: Scrat irá avança para frente três vezes, vira, então avança para frente
+            mais três vezes, chegando a avelã!
           correct: true
           feedback: Correto!
-        - text: O pássaro irá se mover para frente, então irá se virar e baterá na
-            parede.
-          feedback: Incorreto. Colocando o bloco "mover-se para frente" dentro de
-            um laço de repetição irá fazer com que o pássaro se mova para frente três
-            vezes.
+        - text: Scrat irá avançar, depois virar e bater.
+          feedback: Incorreto. Colocando o bloco "mover para frente" dentro do bloco
+            "repetir" fará Scrat se mover para frente três vezes.
         - text: Eu não sei.
       courseE_multi_bee_functions_predict1:
         questions:
@@ -2370,6 +2580,25 @@ pt-BR:
       courseE_project_exemplars_2019:
         title: Teste a Página da Apostila de Markdown
         content1: Teste a Página da Apostila de Markdown
+        markdown: |+
+          # Exemplos de Projetos
+
+          Você está prestes a iniciar seu último projeto. Antes de começar, gaste algum tempo observando os projetos de exemplo:
+
+          ## Sprite Lab
+
+          | Dança do Monstro (Sprite Lab) | Jogo do Cupcake (Sprite Lab) |
+          |---|---|
+          | [![Dança do Monstro (Sprite Lab)](https://images.code.org/85838ca11b728dce3e1513515c4510e3-image-1556826303297.png "Dança do Monstro (Sprite Lab")](https://studio.code.org/projects/spritelab/S2l_b6LHSmSULTBF7CibJm1rTsngztJyu5pgORe7GBs/view) | [![Jogo do Cupcake (Sprite Lab)](https://images.code.org/c90080aaf05349fb6e1fbb6861e815df-image-1556809855136.png "Jogo do Cupcake (Sprite Lab")](https://studio.code.org/projects/spritelab/gXM_YU_qL_QWo1o5Wkam96oiFrYY5VUp27m2xKlp7EQ/view) |
+          | Tente acrescentar texto ou pontuação a este jogo! | Tente acrescentar texto ou pontuação a este jogo! |
+
+          ## Artista
+
+          | Padrão (Artista) | Flores de Função (Arista) |
+          |---|---|
+          | [![Padrão (Artista)](https://images.code.org/2432878706891dda080b69428ddc4a20-image-1556822714214.png "Padrão (Artista)")](https://studio.code.org/projects/artist/TznMeJRa4SnHWJvUBEoNUw/view) | [![Flores de Função (Artista)](https://images.code.org/1e6da38baf996dace44581572895a4b8-image-1556822184973.png "Flores de Função (Artista)")](https://studio.code.org/projects/artist/4uGqFaTnc7V9B6IqCqj21Q/view) |
+          | Vamos ser criativos com laços aninhados! | Vamos ser criativos com funções! |
+
       courseF_bee_variables_8a_2018:
         questions:
         - text: Veja o código abaixo. Quantas unidades de néctar a abelha coletará
@@ -2695,6 +2924,25 @@ pt-BR:
       courseF_project_exemplars_2019:
         title: Teste a Página da Apostila de Markdown
         content1: Teste a Página da Apostila de Markdown
+        markdown: |+
+          # Exemplos de Projetos
+
+          Você está prestes a iniciar seu último projeto. Antes de começar, gaste algum tempo observando os projetos de exemplo.
+
+          ## Sprite Lab
+
+          | Jogo do Cupcake (Sprite Lab) | Jogo do Helicóptero (Sprite Lab) |
+          |---|---|
+          | [![#Jogo do Coelhinho (Sprite Lab)](https://images.code.org/c90080aaf05349fb6e1fbb6861e815df-image-1556809855136.png)](https://studio.code.org/projects/spritelab/gXM_YU_qL_QWo1o5Wkam96oiFrYY5VUp27m2xKlp7EQ/view) | [![#Jogo do Helicóptero (Sprite Lab)](https://images.code.org/1a273fd447b952367792423a70c5087a-image-1556812149075.png)](https://studio.code.org/projects/spritelab/QeROTy1pNyjNPC-ZZdBN1mcpkmTEMUc2FYwXX0SOFAY/view) |
+          | Tente adicionar texto ou pontuação a este jogo! | Tente adicionar texto ou pontuação a este jogo! |
+
+          ## Artista
+
+          | Flores (Artista) | Espiral (Artista) |
+          |---|---|
+          | [![Flores (Artista)](https://images.code.org/0f5adf63c318eab8c8acb397d9db7f2a-image-1556821537577.png)](https://studio.code.org/projects/artist/MIMh2pV2IiLm1ZzaiA6N7kKvg534lFck3abLXTsvZU8/view) | [![Espiral (Artista)](https://images.code.org/06514571a8cf2f8b0346006ac1adc219-image-1556819399386.png)](https://studio.code.org/projects/artist/66scPDPWa8RNNHkcXDaXdA/view) |
+          | Vamos ser criativos com variáveis! | Vamos ser criativos com laços for! |
+
       coursee_prediction_artistfunction2:
         questions:
         - text: O que acontecerá quando você pressionar o botão "Executar"?
@@ -2740,6 +2988,14 @@ pt-BR:
         - text: O artista desenhará quatro quadrados um em cima do outro.
           feedback: Incorreta. O loop gira 90 graus entre as chamadas para "desenhar
             polígono".
+      csd-pre-survey-2017-levelgroup:
+        markdown: "# Visão global\n\nA turma trabalha em grupos para projetar barcos
+          de alumínio que suportarão o maior número possível de centavos. No final
+          da aula, os grupos refletem sobre suas experiências com a atividade e estabelecem
+          conexões com os tipos de solução de problemas que estarão fazendo para o
+          restante do curso. \n\n## Recursos\n\n* [Barcos de alumínio]\n(https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=pdf)
+          - Guia de Atividade (copy as [MS Word](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=doc),
+          [Google Documentos](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/copy))\n"
       grade2_multi_collector_A_predict1:
         questions:
         - {}

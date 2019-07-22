@@ -38,7 +38,7 @@ pt-BR:
       2-3 Artist 8:
         2-3_Artist_8_a: Se você cortar 200 ao meio, quantos pixels de largura cada
           quadrado precisa ter?
-      2-3 Artist 9:
+      2-3 Artist 9 NEW:
         2-3_Artist_9_a: Na verdade este diamante é apenas um quadrado inclinado
       2-3 Artist Debugging 10:
         2-3_Artist_Debugging_10_b: |-
@@ -538,11 +538,186 @@ pt-BR:
         Course_4_Artist_Functions_challenge_d: Você precisará virar 90 graus à esquerda
           do lado de fora de seu `repeat`, mas ainda dentro do `laço for`.
       Course 4 Artist Inspire:
+        Course_4_Artist_Inspire_a: Depois que você completar um quadrado, tente pular
+          metade do seu comprimento para frente antes de virar e fazer outro.
         Course_4_Artist_Inspire_b: Cada quadrado e pulo é repetido quatro vezes (usando
           um giro para a esquerda entre eles) para criar uma unidade completa semelhante
           a um cata-vento.
         Course_4_Artist_Inspire_c: Cada cata-vento também é repetido quatro vezes,
           com um giro para a direita de **360/lados**.
+        Course_4_Artist_Inspire_d: |-
+          **Solução:**
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="draw_colour" inline="true" id="draw-color">
+                  <value name="COLOUR">
+                    <block type="colour_picker">
+                      <title name="COLOUR">#843179</title>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="variables_set" inline="false">
+                      <title name="VAR">lados</title>
+                      <value name="VALUE">
+                        <block type="math_number">
+                          <title name="NUM">4</title>
+                        </block>
+                      </value>
+                      <next>
+                        <block type="variables_set" inline="false">
+                          <title name="VAR">comprimento</title>
+                          <value name="VALUE">
+                            <block type="math_arithmetic" inline="true">
+                              <title name="OP">DIVIDIR</title>
+                              <value name="A">
+                                <block type="math_number">
+                                  <title name="NUM">200</title>
+                                </block>
+                              </value>
+                              <value name="B">
+                                <block type="variables_get">
+                                  <title name="VAR">lados</title>
+                                </block>
+                              </value>
+                            </block>
+                          </value>
+                          <next>
+                            <block type="controls_repeat_ext" inline="true">
+                              <value name="TIMES">
+                                <block type="variables_get">
+                                  <title name="VAR">lados</title>
+                                </block>
+                              </value>
+                              <statement name="DO">
+                                <block type="controls_repeat_ext" inline="true">
+                                  <value name="TIMES">
+                                    <block type="variables_get">
+                                      <title name="VAR">lados</title>
+                                    </block>
+                                  </value>
+                                  <statement name="DO">
+                                    <block type="controls_repeat_ext" inline="true">
+                                      <value name="TIMES">
+                                        <block type="variables_get">
+                                          <title name="VAR">lados</title>
+                                        </block>
+                                      </value>
+                                      <statement name="DO">
+                                        <block type="draw_move" inline="true">
+                                          <title name="DIR">sigaEmFrente</title>
+                                          <value name="VALUE">
+                                            <block type="variables_get">
+                                              <title name="VAR">comprimento</title>
+                                            </block>
+                                          </value>
+                                          <next>
+                                            <block type="draw_turn" inline="true">
+                                              <title name="DIR">vireParaDireita</title>
+                                              <value name="VALUE">
+                                                <block type="math_arithmetic" inline="true">
+                                                  <title name="OP">DIVIDIR</title>
+                                                  <value name="A">
+                                                    <block type="math_number">
+                                                      <title name="NUM">360</title>
+                                                    </block>
+                                                  </value>
+                                                  <value name="B">
+                                                    <block type="variables_get">
+                                                      <title name="VAR">lados</title>
+                                                    </block>
+                                                  </value>
+                                                </block>
+                                              </value>
+                                            </block>
+                                          </next>
+                                        </block>
+                                      </statement>
+                                      <next>
+                                        <block type="jump" inline="true">
+                                          <title name="DIR">pularParaFrente</title>
+                                          <value name="VALUE">
+                                            <block type="math_arithmetic" inline="true">
+                                              <title name="OP">DIVIDIR</title>
+                                              <value name="A">
+                                                <block type="variables_get">
+                                                  <title name="VAR">comprimento</title>
+                                                </block>
+                                              </value>
+                                              <value name="B">
+                                                <block type="math_number">
+                                                  <title name="NUM">2</title>
+                                                </block>
+                                              </value>
+                                            </block>
+                                          </value>
+                                          <next>
+                                            <block type="draw_turn" inline="true">
+                                              <title name="DIR">vireParaEsquerda</title>
+                                              <value name="VALUE">
+                                                <block type="math_arithmetic" inline="true">
+                                                  <title name="OP">DIVIDIR</title>
+                                                  <value name="A">
+                                                    <block type="math_number">
+                                                      <title name="NUM">360</title>
+                                                    </block>
+                                                  </value>
+                                                  <value name="B">
+                                                    <block type="variables_get">
+                                                      <title name="VAR">lados</title>
+                                                    </block>
+                                                  </value>
+                                                </block>
+                                              </value>
+                                            </block>
+                                          </next>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </statement>
+                                  <next>
+                                    <block type="jump" inline="true">
+                                      <title name="DIR">pularParaFrente</title>
+                                      <value name="VALUE">
+                                        <block type="variables_get">
+                                          <title name="VAR">comprimento</title>
+                                        </block>
+                                      </value>
+                                      <next>
+                                        <block type="draw_turn" inline="true">
+                                          <title name="DIR">virarParaDireita</title>
+                                          <value name="VALUE">
+                                            <block type="math_arithmetic" inline="true">
+                                              <title name="OP">DIVIDIR</title>
+                                              <value name="A">
+                                                <block type="math_number">
+                                                  <title name="NUM">360</title>
+                                                </block>
+                                              </value>
+                                              <value name="B">
+                                                <block type="variables_get">
+                                                  <title name="VAR">lados</title>
+                                                </block>
+                                              </value>
+                                            </block>
+                                          </value>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </statement>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </xml>
       Course 4 Artist Vars 13:
         Course_4_Artist_Vars_13_a: Você precisa de dois laços de repetição (um dentro
           do outro) ambos repetindo `quantidade de lados` vezes.
@@ -3020,6 +3195,10 @@ pt-BR:
           de um laço <xml><block type="controls_repeat_simplified_dropdown"><title
           name="TIMES" config="3-10">???</title></block></xml>.
       courseA_collector_loops3_2019:
+        courseA_collector_loops3_a: |-
+          Experimente usar um laço
+
+          <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>!
         courseA_collector_loops3_b: Lembre-se, você pode colocar mais de 1 bloco dentro
           de um laço <xml><block type="controls_repeat_simplified_dropdown"><title
           name="TIMES" config="3-10">???</title></block></xml>.
@@ -7410,12 +7589,6 @@ pt-BR:
           \  Ainda funciona depois do segundo? \n-   Onde isso dá errado?"
         courseC_maze_debugging1_b: Tem 1 bloco que você precisa adicionar para completar
           esse quebra-cabeça.
-        courseD_collector_debugging1_a: "Use o botão \"Passo\" para ver se está tudo
-          certo no primeiro passo. \n\nE o segundo? \n\nOnde dá errado?"
-        courseD_collector_debugging1_b: Você vê algum padrão que poderia ser mais
-          simples usando um laço `repetir`?
-        courseD_collector_debugging1_c: 'Lembre de usar o block `coletar` para pegar
-          o tesouro uma vez que você tenha se movido até ele.  '
       courseC_maze_debugging1_2018:
         courseC_maze_debugging1_a: "-   Tudo funciona depois do primeiro passo? \n-
           \  Ainda funciona depois do segundo? \n-   Onde isso dá errado?"
@@ -7433,13 +7606,6 @@ pt-BR:
           \  Ainda funciona depois do segundo? \n-   Onde isso dá errado?"
         courseC_maze_debugging2_c: Não consegue descobrir o que está errado? Tente
           rodar o código algumas vezes para ver o que acontece.
-        courseD_collector_debugging2_a: "Use o botão \"Passo\" para ver se está tudo
-          certo no primeiro passo. \n\nE o segundo? \n\nOnde dá errado?"
-        courseD_collector_debugging2_b: Você vê algum padrão que poderia ser mais
-          simples usando um laço `repetir`?
-        courseD_collector_debugging2_c: Tente colecionar tesouros para um lado desse
-          padrão. Você consegue repetir isso para coletar tesouros nos outros dois
-          lados?
       courseC_maze_debugging2_2018:
         courseC_maze_debugging2_a: Há muito código valioso no espaço de trabalho.
           Não apague tudo para começar de novo!
@@ -7461,10 +7627,6 @@ pt-BR:
           coloque seus outros blocos de volta onde eles pertencem.\n\n![](https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif)"
         courseC_maze_debugging3_b: Não consegue descobrir o que está errado? Tente
           rodar o código algumas vezes para ver o que acontece.
-        courseD_collector_debugging3_a: Existe algum lugar onde Laurel faz algo que
-          não faz sentido? O que acontece quando você muda esses blocos?
-        courseD_collector_debugging3_b: Tente simplificar o código usando laços de
-          repetição aninhados.
       courseC_maze_debugging3_2018:
         courseC_maze_debugging3_a: "Para excluir um bloco do meio do seu código, arraste
           todos os blocos para outra parte do espaço de trabalho. \n\nArraste o bloco
@@ -7485,14 +7647,6 @@ pt-BR:
           errado?
         courseC_maze_debugging4_b: Um das viradas fazendo Scrat ir na direção errada.
           Você pode descobrir qual delas?
-        courseD_collector_debugging4_a: "Tente usar o processo de depuração algumas
-          vezes seguidas. \n\nO que causa o primeiro problema? \n\nQuando esse problema
-          é resolvido, o que está errado?"
-        courseD_collector_debugging4_b: "Se você está tendo dificuldade em descobrir
-          como fazer o padrão do passo de escada, tentar rastreá-lo com o dedo e dizer
-          os comandos em voz alta. \n\nNão se esqueça de apontar a direção de curvas!"
-        courseD_collector_debugging4_c: Esse laço está faltando apenas um bloco. Você
-          pode descobrir qual deles?
       courseC_maze_debugging4_2018:
         courseC_maze_debugging4_a: Use o botão `Passo` para percorrer as instruções,
           uma de cada vez. Isso ajuda você a encontrar a linha onde as coisas dão
@@ -7511,10 +7665,6 @@ pt-BR:
           onde o código está errado."
         courseC_maze_debugging5_b: Tente dizer o que o Scrat deveria fazer em voz
           alta. É o mesmo que o código no espaço de trabalho? O que está errado?
-        courseD_collector_debugging5_a: "Comece olhando apenas o primeiro laço. \n\nO
-          que isso faz? \n\nO que deveria fazer? \n\nO que isso lhe diz?"
-        courseD_collector_debugging5_b: Depois de ter o primeiro laço do jeito que
-          você quer, o que resta no seu código?
       courseC_maze_debugging5_2018:
         courseC_maze_debugging5_a: "Existem muitos blocos úteis no espaço de trabalho.
           Não exclua todos eles! \n\nUse o botão `Passo` para percorrer e descobrir
@@ -7537,11 +7687,6 @@ pt-BR:
         courseC_maze_debugging6_b: "Depois de encontrar e consertar o primeiro bug,
           passe pelo processo de depuração novamente para encontrar o segundo. \n\nRepita
           o processo até o programa funcionar!"
-        courseD_collector_debugging6_a: "Tente executar o código usando o botão \"Passo\".
-          Tudo é bom no primeiro passo? \n\nE o segundo?\n\nOnde não funciona?"
-        courseD_collector_debugging6_b: Parece que todos os passos certos estão aqui,
-          você só precisa de mais deles. Como você pode repetir a ação "coletar" várias
-          vezes?
       courseC_maze_debugging6_2018:
         courseC_maze_debugging6_a: "-   O que o Scrat deveria fazer? \n-   O que o
           Scrat está fazendo? \n-   O que isso lhe diz?"
@@ -7562,10 +7707,6 @@ pt-BR:
         courseC_maze_debugging7_c: "Depois de encontrar e corrigir o primeiro erro,
           certifique-se de usar o processo de depuração novamente para encontrar o
           próximo. \n\nRepita o processo de depuração até que o programa funcione!"
-        courseD_collector_debugging8_a: Você vê um padrão que você pode simplificar
-          com um laço?
-        courseD_collector_debugging8_b: Tente usar um laço aninhado para tornar esse
-          código mais curto.
       courseC_maze_debugging7_2018:
         courseC_maze_debugging7_a: "-   Tudo funciona no primeiro passo? \n-   E o
           segundo passo? \n-   Onde está dando errado?"
@@ -7582,18 +7723,6 @@ pt-BR:
         courseC_maze_debugging7_c: "Depois de encontrar e corrigir o primeiro erro,
           certifique-se de usar o processo de depuração novamente para encontrar o
           próximo. \n\nRepita o processo de depuração até que o programa funcione!"
-      courseC_maze_debugging8_predict1:
-        courseD_collector_debugging9_a: Existem várias maneiras de resolver este problema...
-          mas todas envolvem turnos!
-        courseD_collector_debugging9_b: Descubra como você resolveria o quebra-cabeça
-          e, em seguida, mova-o passo a passo para tentar fazer com que o código corresponda
-          ao que está na sua cabeça.
-      courseC_maze_debugging9:
-        courseD_collector_debugging9_a: Existem várias maneiras de resolver este problema...
-          mas todas envolvem turnos!
-        courseD_collector_debugging9_b: Descubra como você resolveria o quebra-cabeça
-          e, em seguida, mova-o passo a passo para tentar fazer com que o código corresponda
-          ao que está na sua cabeça.
       courseC_maze_debugging_challenge1:
         courseC_maze_debugging_challenge1_a: Esquerda ou direita? Esta escolha cabe
           a você!
@@ -8005,16 +8134,6 @@ pt-BR:
           Você não precisa virar à esquerda para resolver esse desafio. Todas as suas viradas podem ser para a direita.
 
           ![](https://images.code.org/3dd00d424aa4112934053548b48bbb69-image-1510198997590.40.57.png)
-      courseC_video_angles2:
-        courseF_artist_ramp10_a: Não se esqueça de girar 60 graus após cada triângulo.
-          Qual laço você precisa para colocar essa instrução dentro?
-        courseF_artist_ramp10_b: Se o seu código para um triângulo estiver em um laço
-          <xml><block type="controls_repeat"><title name="TIMES">6</title></block></xml>,
-          esta tarefa será muito mais simples.
-        courseF_artist_ramp10_c: |-
-          Você irá desenhar, ao todo, seis triângulos:
-
-          ![](https://images.code.org/bc62bed22e90d35e420b0a116ac487ef-image-1500347536221.2_solution2.gif)
       courseD_artist_1_2018:
         courseD_artist_project1_a: Use o menu suspenso nos blocos `virar` para escolher
           o ângulo que você precisa!
@@ -10203,6 +10322,13 @@ pt-BR:
         courseB_iceage_loops3_b: Para repetir o código, arraste um laço `repetir`,
           depois coloque o bloco que você quer repetir dentro dele.
       courseD_iceage_loops3_2019:
+        courseB_iceage_loops3_a: |-
+          Use este novo bloco!
+
+          <xml><block type="controls_repeat_dropdown">
+
+           <title name="TIMES" config="2-10">5</title>
+          </block></xml>
         courseB_iceage_loops3_b: Para repetir o código, arraste um laço `repetir`,
           depois coloque o bloco que você quer repetir dentro dele.
       courseD_iceage_loops4:
@@ -10258,6 +10384,9 @@ pt-BR:
         courseD_iceage_loops9_b: Seu código final deve possuir **4** laços de repetição.
         courseD_iceage_loops9_c: Cuidado com o gelo quebrado! Scrat vai cair direto.
       courseD_maze_intro4_2019:
+        courseC_maze_programming4_a: Você pode virar à direita ou à esquerda do ponto
+          de vista do Red. Se você estiver olhando para a direita, virar à direita
+          fará você apontar para baixo.
         courseC_maze_programming4_b: Para seguir o caminho, siga em frente e vire
           para um lado, em seguida, mova-se novamente e vire no sentido oposto. Avance
           mais uma vez para alcançar a bolota.
@@ -10265,6 +10394,8 @@ pt-BR:
         courseC_maze_programming5_a: Tente usar o botão "Passo" para executar o seu
           código linha a linha. Você consegue descobrir o que você precisa fazer em
           seguida?
+        courseC_maze_programming5_b: Lembre-se que os giros são feitos na perspectiva
+          do Red.
         courseC_maze_programming5_c: Não tenha medo de cometer um erro! Tente adicionar
           blocos e executar o código para ver o que vai acontecer, mesmo se você achar
           que ainda não resolveu o quebra-cabeça.
@@ -10719,37 +10850,14 @@ pt-BR:
         courseD_playLab_cond6_c: Adicione um bloco `esperar 1 segundo` ao topo do
           laço `repetir para sempre` que verifica a posição do pirata (mas não dentro
           da instrução `se`) para evitar que os pontos sejam removidos muito rapidamente.
-      courseD_scrat_predict1:
-        courseF_maze_ramp6_a: Existem duas maneiras de resolver este quebra-cabeças!
-        courseF_maze_ramp6_b: O pássaro começa a se deparar com uma parede, então
-          lembre-se de virar antes de se mexer!
-        courseF_maze_ramp6_c: Não tenha medo de cometer um erro! Tente adicionar blocos
-          e executar o código para ver o que vai acontecer, mesmo se você achar que
-          ainda não resolveu o quebra-cabeça.
       courseD_scrat_ramp1:
-        courseF_maze_ramp1_a: Se o pássaro não está chegando ao porco, certifique-se
-          de que todos os blocos foram totalmente encaixados juntos, então clique
-          em "Executar" novamente.
-        courseF_maze_ramp1_b: Você não precisa de nenhum bloco extra da caixa de ferramentas
-          aqui!
-        courseC_maze_programming1_b: Você não precisa de nenhum bloco extra da caixa
-          de ferramentas para este quebra-cabeça!
+        courseC_maze_programming1_b: Não tenha medo de cometer um erro! Tente adicionar
+          blocos e executar o código para ver o que vai acontecer, mesmo se você achar
+          que ainda não resolveu o quebra-cabeça.
       courseD_scrat_ramp2:
-        courseF_maze_ramp2_a: Para usar o novo bloco, arraste-o da caixa de ferramentas
-          para o espaço de trabalho e conecte-o ao programa que está junto com o bloco
-          <xml><block type="when_run"/></xml>.
-        courseF_maze_ramp2_b: Certifique-se de que o bloco <xml><block type="maze_moveForward"/></xml>
-          está dentro do laço, para que ele seja repetido.
         courseC_maze_programming2_b: Certifique-se de que todos os três blocos `avançar`
           estejam ligados ao bloco `quando rodar`.
       courseD_scrat_ramp3:
-        courseF_maze_ramp3_a: "! \\[] (<https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif>)
-          \nPara excluir um bloco de no meio do seu código, arraste todos os blocos
-          abaixo dele para a direita solte-os na área de trabalho por um tempo.\n\nClique
-          sobre o bloco que você deseja excluir e arraste-o de volta à caixa de ferramentas.
-          \n\nFinalmente, coloque seus outros blocos no lugar onde eles pertencem."
-        courseF_maze_ramp3_b: Use o botão passo para passar pela linha do programa.
-          Onde algo da errado?
         courseC_maze_programming3_a: "! \\[] (<https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif>)
           \nPara excluir um bloco de no meio do seu código, arraste todos os blocos
           abaixo dele para a direita solte-os na área de trabalho por um tempo.\n\nClique
@@ -10758,21 +10866,16 @@ pt-BR:
         courseC_maze_programming3_b: Lembre-se que virar a direita ou a esquerda é
           feito na perspectiva do pássaro.
       courseD_scrat_ramp4:
-        courseF_maze_ramp4_b: Para seguir o caminho, siga em frente e vire para um
-          lado, em seguida, mova-se novamente e vire no sentido oposto. Avance mais
-          uma vez para alcançar o porco.
-        courseF_maze_ramp4_c: Não tenha medo de cometer um erro! Tente adicionar blocos
-          e executar o código para ver o que vai acontecer, mesmo se você achar que
-          ainda não resolveu o quebra-cabeça.
+        courseC_maze_programming4_a: Você pode virar à direita ou à esquerda do ponto
+          de vista do Scrat. Se você estiver olhando para a direita, virar à direita
+          fará você apontar para baixo.
+        courseC_maze_programming4_b: Para seguir o caminho, siga em frente e vire
+          para um lado, em seguida, mova-se novamente e vire no sentido oposto. Avance
+          mais uma vez para alcançar a bolota.
         courseC_maze_programming4_c: Não tenha medo de cometer um erro! Tente adicionar
           blocos e executar o código para ver o que vai acontecer, mesmo se você achar
           que ainda não resolveu o quebra-cabeça.
       courseD_scrat_ramp5:
-        courseF_maze_ramp5_a: Tente usar o botão "Passo" para executar o seu código
-          linha a linha. Você consegue descobrir o que você precisa fazer em seguida?
-        courseF_maze_ramp5_b: Há mais de uma maneira de chegar ao porco.
-        courseF_maze_ramp5_c: Tente usar o laço <xml><block type="controls_repeat"><title
-          name="TIMES">3</title></block></xml> para usar menos código!
         courseC_maze_programming5_a: Tente usar o botão "Passo" para executar o seu
           código linha a linha. Você consegue descobrir o que você precisa fazer em
           seguida?
@@ -10780,61 +10883,19 @@ pt-BR:
           ao canto?
         courseC_maze_programming5_c: Você precisará virar à esquerda na esquina para
           chegar ao porco.
-      courseD_scrat_ramp6:
-        courseF_artist_ramp8_a: Para desenhar um lado, use o bloco <xml><block type="draw_move_by_constant"><title
-          name="DIR">moveForward</title><title name="VALUE">100</title></block></xml>
-          e altere o valor 100 para 200.
-        courseF_artist_ramp8_b: |-
-          Para desenhar 4 lados, coloque o bloco <xml><block type="draw_move_by_constant"><title name="DIR">moveForward</title><title name="VALUE">200</title></block></xml> dentro de um laço de repetição e certifique-se de que o laço está definido para desenhar 4 vezes.
-
-          Não se esqueça de virar depois!
-        courseF_artist_ramp8_c: Você também deve entrar no laço <xml><block type="controls_repeat"><title
-          name="TIMES">3</title></block></xml>.
-        courseC_maze_programming6_a: Existem duas maneiras de resolver este quebra-cabeças!
-        courseC_maze_programming6_b: Lembre-se de virar antes de se mover, pois o
-          pássaro começa a se deparar com uma parede.
-        courseC_maze_programming6_c: Não tenha medo de cometer um erro! Tente adicionar
-          blocos e executar o código para ver o que vai acontecer, mesmo se você achar
-          que ainda não resolveu o quebra-cabeça.
       courseD_scrat_ramp7:
-        courseD_maze_ramp7_b: Não se esqueça de usar o botão "Passo" para percorrer
-          bloco a bloco e procurar erros.
-        courseD_maze_ramp7_a: Use blocos de repetição para executar um único bloco
-          ou um pedaço de código repetidamente.
-        courseD_maze_ramp7_c: Não tenha medo de cometer um erro! Tente adicionar blocos
-          e executar o código para ver o que vai acontecer, mesmo se você achar que
-          ainda não resolveu o quebra-cabeça.
-      courseD_scrat_ramp8:
-        courseF_artist_ramp9_a: Como isso é semelhante a um quadrado? Como é diferente?
-        courseF_artist_ramp9_b: Você pode usar o menu suspenso nos blocos de virar
-          para ver qual ângulo você precisa!
-        courseF_artist_ramp9_c: Você deve mover-se 100 pixels para a frente e, em
-          seguida, vire 120 graus à direita para cada lado. Você pode usar um laço
-          de repetição <xml><block type="controls_repeat"><title name="TIMES">3</title></block></xml>
-          para tornar seu código mais curto?
-        courseD_maze_ramp7_b: Não se esqueça de usar o botão "Passo" para percorrer
-          bloco a bloco e procurar erros.
-        courseD_maze_ramp7_a: Use blocos de repetição para executar um único bloco
-          ou um pedaço de código repetidamente.
-        courseD_maze_ramp7_c: Não tenha medo de cometer um erro! Tente adicionar blocos
-          e executar o código para ver o que vai acontecer, mesmo se você achar que
-          ainda não resolveu o quebra-cabeça.
-        courseE_artist_ramp8_a: Para desenhar um lado, use o bloco `avançar por 100
-          pixels` e mude o 100 para o 200.
-        courseE_artist_ramp8_b: |-
-          Para desenhar 4 lados, coloque o bloco 'avançar por 100 pixels' dentro de um laço de repetição e certifique-se de que o laço esteja definido para desenhar 4 vezes.
-
-          Não esqueça de virar depois!
-        courseE_artist_ramp8_c: 'Seu laço deve ter dois blocos dentro dele: \`avançar''
-          e ''virar à direita em 90 graus''.'
-      courseD_video_repeatUntil:
-        courseE_farmer_ramp12b: Você precisará verificar sua declaração `se` 21 vezes
-          para resolver este desafio.
-        courseE_farmer_ramp12c: Não tenha medo de cometer um erro! Tente adicionar
+        courseD_scrat_programming6_a: Existem duas maneiras de resolver este quebra-cabeças!
+        courseD_scrat_programming6_c: Não tenha medo de cometer um erro! Tente adicionar
           blocos e executar o código para ver o que vai acontecer, mesmo se você achar
           que ainda não resolveu o quebra-cabeça.
-        courseE_farmer_ramp12d: Só haverá alface, então você não precisa se preocupar
-          com espaços vazios, milhos ou abóboras.
+      courseD_scrat_ramp8:
+        courseD_maze_ramp7_b: Não se esqueça de usar o botão "Passo" para percorrer
+          bloco a bloco e procurar erros.
+        courseD_maze_ramp7_a: Use blocos de repetição para executar um único bloco
+          ou um pedaço de código repetidamente.
+        courseD_maze_ramp7_c: Não tenha medo de cometer um erro! Tente adicionar blocos
+          e executar o código para ver o que vai acontecer, mesmo se você achar que
+          ainda não resolveu o quebra-cabeça.
       courseE_artist_concept1:
         courseE_artist_concept1_a: Os hexágonos têm 50 lados de pixel e 60 graus de
           giro à direita.
@@ -11279,21 +11340,21 @@ pt-BR:
         courseE_artist_ramp8_c: 'Seu laço deve ter dois blocos dentro dele: \`avançar''
           e ''virar à direita em 90 graus''.'
       courseE_artist_ramp8_2:
+        courseE_artist_ramp8_a: Para desenhar um lado, use o bloco `avançar por 100
+          pixels` e mude o 100 para o 200.
+        courseE_artist_ramp8_b: |-
+          Para desenhar 4 lados, coloque o bloco 'avançar por 100 pixels' dentro de um laço de repetição e certifique-se de que o laço esteja definido para desenhar 4 vezes.
+
+          Não esqueça de virar depois!
+        courseE_artist_ramp8_c: 'Seu laço deve ter dois blocos dentro dele: \`avançar''
+          e ''virar à direita em 90 graus''.'
+      courseE_artist_ramp9:
         courseD_artist_ramp12_a: Como isso é semelhante a um quadrado? Como é diferente?
         courseD_artist_ramp12_b: Você pode usar o menu suspenso nos blocos de `virar`
           para ver quais ângulos você precisa!
         courseD_artist_ramp12_c: Para desenhar cada lado, você precisará avançar 100
           pixels e, em seguida, virar à direita 120 graus. Quantos lados você precisa?
-      courseE_artist_ramp9:
-        courseF_farmer_ramp11_a: Se você está tendo dificuldade de ver onde os laços
-          devem ir, tente programá-los todos em seguida procurando um padrão.
-        courseF_farmer_ramp11_b: Como você pode usar um loop <xml><block type="controls_repeat"><title
-          name="TIMES">???</title></block></xml> para selecionar repolhos, ao invés
-          de utilizar 5 blocos <xml><block type="harvester_lettuce"/></xml>?
-        courseF_farmer_ramp11_c: Você não precisa usar 5 laços de repetição para pegar
-          todos os alfaces. Ao invés disso, arraste seu alface usando o laço de repetir
-          dentro de outro laço (junto com um bloco <xml><block type="maze_moveForward"/></xml>,
-          e você terá o que precisa!)
+      courseE_artist_ramp9_2:
         courseD_artist_ramp12_a: Como isso é semelhante a um quadrado? Como é diferente?
         courseD_artist_ramp12_b: Você pode usar o menu suspenso nos blocos de `virar`
           para ver quais ângulos você precisa!
@@ -11682,29 +11743,26 @@ pt-BR:
           de pilha`.  '
         courseE_farmer_ramp12_b: Você só precisa avançar uma vez para chegar à terra.
       courseE_farmer_ramp11b:
-        courseE_farmer_ramp12_b: Você ainda precisará usar um laço `repetir` no exterior
-          para dizer ao agricultor quantas vezes para avançar e obter a letalidade.
+        courseE_farmer_ramp11b_a: Você pode aninhar seu laço `enquanto` dentro de
+          um laço `repetir` para tornar seu código mais curto.
       courseE_farmer_ramp11b_2018:
         courseE_farmer_ramp11b_a: Você pode aninhar seu laço `enquanto` dentro de
           um laço `repetir` para tornar seu código mais curto.
       courseE_farmer_ramp11b_2019:
         courseE_farmer_ramp11b_a: Você pode aninhar seu laço `enquanto` dentro de
           um laço `repetir` para tornar seu código mais curto.
+      courseE_farmer_ramp12_forswap:
+        courseE_farmer_ramp12_b: Você ainda precisará usar um laço `repetir` no exterior
+          para dizer ao agricultor quantas vezes para avançar e obter a letalidade.
       courseE_farmer_ramp12_forswap_2018:
         courseE_farmer_ramp12_b: Você ainda precisará usar um laço `repetir` no exterior
           para dizer ao agricultor quantas vezes para avançar e obter a letalidade.
       courseE_farmer_ramp12_forswap_2019:
         courseE_farmer_ramp12_b: Você ainda precisará usar um laço `repetir` no exterior
           para dizer ao agricultor quantas vezes para avançar e obter a letalidade.
-      courseE_farmer_ramp12b:
-        courseE_farmer_ramp12a: Sinta-se livre para voltar ao último desafio se você
-          precisar de um lembrete de como escolher apenas **enquanto** há produtos
-          para escolher.
       courseE_farmer_ramp12c:
-        courseE_farmer_ramp13_a: Pode haver mais do que uma das duas culturas em um
-          espaço, então certifique-se de usar laços `enquanto` para escolher tudo!
-        courseE_farmer_ramp13_b: Use um laço `repetir` para que você não tenha que
-          escrever uma declaração `se` para cada quadrado.
+        courseE_farmer_ramp12b_b: Você ainda precisará usar um laço `até` primeiro,
+          então use um laço `enquanto` até você pegar o alface.
       courseE_farmer_ramp12c_2018:
         courseE_farmer_ramp12b_b: Você ainda precisará usar um laço `até` primeiro,
           então use um laço `enquanto` até você pegar o alface.
@@ -11712,19 +11770,17 @@ pt-BR:
         courseE_farmer_ramp12b_b: Você ainda precisará usar um laço `até` primeiro,
           então use um laço `enquanto` até você pegar o alface.
       courseE_farmer_ramp12d:
-        courseE_bee_ramp14_a: A abelha funciona como o fazendeiro no desafio anterior.
-          Buzz ao longo do caminho e colete néctar enquanto há néctar (enquanto néctar
-          > 0) e faça todo o mel.
-        courseE_bee_ramp14_b: Pode haver mais de uma flor ou favo de mel em cada espaço,
-          então garanta o uso de laço `enquanto` para pegar todos eles!
-        courseE_bee_ramp14_c: Este desafio é quase idêntico ao anterior, apenas com
-          mel e néctar em vez de legumes.
+        courseE_farmer_ramp12d_b: Você ainda precisará colocar seus laços `até` e
+          `enquanto` dentro de um laço `repetir` para resolver este desafio!
       courseE_farmer_ramp12d_2018:
         courseE_farmer_ramp12d_b: Você ainda precisará colocar seus laços `até` e
           `enquanto` dentro de um laço `repetir` para resolver este desafio!
       courseE_farmer_ramp12d_2019:
         courseE_farmer_ramp12d_b: Você ainda precisará colocar seus laços `até` e
           `enquanto` dentro de um laço `repetir` para resolver este desafio!
+      courseE_farmer_ramp12e:
+        courseE_farmer_ramp12e_b: A solução deste quebra-cabeças vai ser muito parecida
+          com a do anterior, mas virando em outra direção.
       courseE_farmer_ramp12e_2018:
         courseE_farmer_ramp12e_b: A solução deste quebra-cabeças vai ser muito parecida
           com a do anterior, mas virando em outra direção.
@@ -11732,12 +11788,8 @@ pt-BR:
         courseE_farmer_ramp12e_b: A solução deste quebra-cabeças vai ser muito parecida
           com a do anterior, mas virando em outra direção.
       courseE_farmer_ramp12f:
-        courseE_farmer_ramp15_a: Use o bloco `repetir até a abóbora` para chegar até
-          o final do caminho.
-        courseE_farmer_ramp15_b: O que mais há a fazer ao avançar o caminho para a
-          abóbora?
-        courseE_farmer_ramp15_c: Os sprouts escondem várias quantidades de milho ou
-          de alfabeto para colher em seu caminho para a abóbora.
+        courseE_farmer_ramp12f_b: Use um bloco `se/senão` para ajudar o agricultor
+          a decidir se ela precisa virar para a direita ou para a esquerda.
       courseE_farmer_ramp12f_2018:
         courseE_farmer_ramp12f_b: Use um bloco `se/senão` para ajudar o agricultor
           a decidir se ela precisa virar para a direita ou para a esquerda.
@@ -13156,9 +13208,10 @@ pt-BR:
           ![](https://images.code.org/41ae98c1633755cf4553f90a80e125cf-image-1500325529204.6_hint.gif)
         courseF_artist_variables4_b: "![](https://images.code.org/fc31a4b60dc86d7b820c2d242f83e6ed-image-1477533361197.gif)"
       courseF_artist_variables4_2019:
-        courseF_artist_variables4_a: Seu código não será muito diferente do que estava
-          no último desafio, exceto que você precisará virar o artista para baixo,
-          então volte-o para ficar pronto para saltar novamente.
+        courseF_artist_variables4_a: Seu código não será muito diferente do que foi
+          no último desafio, exceto que você vai precisar virar o artista para que
+          ele pule para baixo, para então virá-lo de volta para que esteja pronto
+          para desenhar o próximo triângulo.
         courseF_artist_variables4_c: |-
           Este é o padrão que seu(sua) artista irá seguir:
 
@@ -15171,7 +15224,7 @@ pt-BR:
           </block></xml>
       courseF_bee_variables_4_2019:
         courseF_bee_variables_4_2019_1: Ao invés de subtrair 1 de `obter`, adicione
-          1 a cada vez. Qual deve ser o valor que a variável terá primeiro?
+          1 a cada vez. Qual deve ser o valor de partida que a variável deverá ter?
       courseF_playlab_variables1a:
         courseF_playlab_variables1a_a: Você vai querer substituir as palavras “O que
           devo gritar?” no bloco verde com "Objetivo!”

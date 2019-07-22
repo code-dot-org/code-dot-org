@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
-import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
-import Button from '@cdo/apps/templates/Button';
+import shapes from './shapes';
+import {UnlocalizedTimeAgo as TimeAgo} from '@cdo/apps/templates/TimeAgo';
 
 const styles = {
   main: {
@@ -14,22 +14,19 @@ const styles = {
     marginBottom: 20,
     display: 'flex',
     flexFlow: 'wrap',
-    boxSizing: 'border-box',
-    color: color.charcoal
+    boxSizing: 'border-box'
   },
   lessonDetails: {
-    width: '50%',
+    width: '75%',
     margin: 15
-  },
-  button: {
-    marginLeft: 25,
-    marginRight: 25,
-    marginTop: 18,
-    marginBottom: 18
   },
   lessonLevel: {
     fontSize: 16,
-    marginBottom: 10
+    marginBottom: 8,
+    color: color.teal
+  },
+  unit: {
+    color: color.teal
   },
   label: {
     fontFamily: '"Gotham 5r", sans-serif',
@@ -37,68 +34,80 @@ const styles = {
     marginLeft: 10
   },
   time: {
-    width: '25%',
-    marginTop: 30,
-    fontStyle: 'italic'
+    marginTop: 15,
+    fontStyle: 'italic',
+    color: color.light_gray,
+    float: 'left'
+  },
+  comment: {
+    width: '100%',
+    fontStyle: 'italic',
+    color: color.charcoal,
+    marginLeft: 25,
+    marginRight: 25,
+    marginBottom: 15,
+    fontSize: 14
   }
 };
 
 export default class LevelFeedbackEntry extends Component {
-  static propTypes = {
-    seenByStudent: PropTypes.bool.isRequired,
-    lessonName: PropTypes.string.isRequired,
-    levelName: PropTypes.string.isRequired,
-    courseName: PropTypes.string.isRequired,
-    unitName: PropTypes.string.isRequired,
-    lastUpdated: PropTypes.string.isRequired,
-    linkToLevel: PropTypes.string.isRequired
-  };
+  static propTypes = {feedback: shapes.feedback};
 
   render() {
-    const {seenByStudent} = this.props;
+    const {
+      seen_on_feedback_page_at,
+      student_first_visited_at,
+      lessonName,
+      levelNum,
+      linkToLevel,
+      unitName,
+      linkToUnit,
+      created_at,
+      comment,
+      performance
+    } = this.props.feedback;
 
-    const buttonColor = seenByStudent
-      ? Button.ButtonColor.gray
-      : Button.ButtonColor.orange;
+    const seenByStudent = seen_on_feedback_page_at || student_first_visited_at;
 
     const style = {
-      backgroundColor: seenByStudent ? color.lightest_gray : color.white,
+      backgroundColor: seenByStudent ? color.lightest_teal : color.white,
       ...styles.main
+    };
+
+    const rubricPerformance = {
+      performanceLevel1: i18n.rubricLevelOneHeader(),
+      performanceLevel2: i18n.rubricLevelTwoHeader(),
+      performanceLevel3: i18n.rubricLevelThreeHeader(),
+      performanceLevel4: i18n.rubricLevelFourHeader()
     };
 
     return (
       <div style={style}>
         <div style={styles.lessonDetails}>
-          <div style={styles.lessonLevel}>
-            <span style={styles.label}>
-              {i18n.feedbackNotificationLesson()}
-            </span>
-            <span>{this.props.lessonName}</span>
-            <span style={styles.label}>{i18n.feedbackNotificationLevel()}</span>
-            <span>{this.props.levelName}</span>
-          </div>
-          <div style={styles.courseUnit}>
-            <span style={styles.label}>
-              {i18n.feedbackNotificationCourse()}
-            </span>
-            <span>{this.props.courseName}</span>
-            <span style={styles.label}>{i18n.feedbackNotificationUnit()}</span>
-            <span>{this.props.unitName}</span>
-          </div>
+          <a href={linkToLevel}>
+            <div style={styles.lessonLevel}>
+              <span style={styles.label}>
+                {i18n.feedbackNotificationLesson()}
+              </span>
+              <span>{lessonName}</span>
+              <span style={styles.label}>
+                {i18n.feedbackNotificationLevel()}
+              </span>
+              <span>{levelNum}</span>
+            </div>
+          </a>
+          <a href={linkToUnit}>
+            <div style={styles.unit}>
+              <span style={styles.label}>
+                {i18n.feedbackNotificationUnit()}
+              </span>
+              <span>{unitName}</span>
+            </div>
+          </a>
         </div>
-        <div style={styles.time}>
-          <span style={styles.label}>
-            {i18n.feedbackNotificationLastUpdated()}
-          </span>
-          <span>{this.props.lastUpdated}</span>
-        </div>
-        <Button
-          href="/"
-          color={buttonColor}
-          text={i18n.feedbackNotificationButton()}
-          target={'_blank'}
-          style={styles.button}
-        />
+        <TimeAgo style={styles.time} dateString={created_at} />
+        <div style={styles.comment}>{rubricPerformance[performance]}</div>
+        <div style={styles.comment}>{comment}</div>
       </div>
     );
   }

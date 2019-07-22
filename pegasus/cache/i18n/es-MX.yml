@@ -215,8 +215,8 @@ es-MX:
     a octavo grado
   third_party_desc_dozens_kto8: Decenas de lecciones para todos los estudiantes de
     preescolar a octavo grado
-  third_party_desc_10to15_3to12: Entre 10 y 15 lecciones, dirigido a grados 3ro a
-    12vo
+  third_party_desc_10to15_3to12: Entre 10 y 15 lecciones, dirigidas a estudiantes
+    de tercero a doceavo grado
   third_party_desc_25to40_3to12: De 25 a 40 lecciones, dirigidas a estudiantes de
     tercero a doceavo grado
   third_party_desc_20_2to8: Alrededor de 20 lecciones, dirigidas a estudiantes de
@@ -1312,48 +1312,9 @@ es-MX:
   pre-express-2018_name: Curso Express para prelectores (2018)
   express-2019_name: Curso Express (2019)
   pre-express-2019_name: Curso Express para prelectores (2019)
-  cspunit2_name: "(anterior) Unidad 2: Internet"
-  cspunit3_name: "(anterior) Unidad 3: Programación"
-  cspunit4_name: "(anterior) Unidad 4: Datos"
-  cspunit5_name: "(anterior) Unidad 5: PT de exploración y creación"
-  cspunit6_name: 'Post-AP: bases de datos en aplicaciones'
-  csd5_name: 'Unidad 5: Los datos y la sociedad'
-  csd6_name: 'Unidad 6: Computación física'
-  csd5-2017_name: 'Unidad 5: Los datos y la sociedad'
-  csd6-2017_name: 'Unidad 6: Computación física'
-  csd5-2018_name: 'Unidad 5: Los datos y la sociedad'
-  csd6-2018_name: 'Unidad 6: Computación física'
-  csp1-2017_name: 'Unidad 1: Internet'
-  csp2-2017_name: 'Unidad 2: Información digital'
-  csp-explore-2017_name: 'AP: preparación de PT de exploración'
-  csp-create-2017_name: 'AP: preparación de PT de creación'
-  csppostap-2017_name: 'Post AP: bases de datos en aplicaciones'
-  csp1-2018_name: 'Unidad 1: Internet'
-  csp2-2018_name: 'Unidad 2: Información digital'
-  csp-explore-2018_name: 'AP: preparación de PT de exploración'
-  csp-create-2018_name: 'AP: preparación de PT de creación'
-  csppostap-2018_name: 'Post AP: bases de datos en aplicaciones'
-  csp1_name: 'Unidad 1: Internet'
-  csp2_name: 'Unidad 2: Información digital'
-  csp3-a_name: 'Unidad 3: Introducción a la programación (versión A)'
-  csp3-research-mxghyt_name: 'Unidad 3: Introducción a la programación (objetivos
-    secundarios)'
-  csp-ap_name: AP Performance Tasks
-  csppostap_name: 'Post AP: bases de datos en aplicaciones'
-  csp-post-survey_name: Encuesta de fin de curso para estudiantes
-  cspassessment_name: Prueba completa - 50 preguntas
-  csp-explore_name: 'AP: preparación de PT de exploración'
-  csp-create_name: 'AP: preparación de PT de creación'
-  cspexam1-mWU7ilDYM9_name: Parte 1 de la prueba - 25 preguntas
-  cspexam2-AKwgAh1ac5_name: Parte 2 de la prueba - 25 preguntas
-  cspunit3_gradelevel: Grados 9-12
-  cspunit3_shortdescription_congrats: "Esta unidad presenta los conceptos fundamentales
-    de la programación informática, que desbloquea la capacidad de crear aplicaciones
-    ricas e interactivas. Este curso utiliza JavaScript como lenguaje de programación
-    y App Lab como el entorno de programación para crear aplicaciones, pero los conceptos
-    aprendidos en estas lecciones abarcan todos los lenguajes y herramientas de programación.\r\n\r\nEsta
-    unidad se actualizó por última vez el 30 de octubre de 2017. Obtenga más información
-    sobre las actualizaciones de los planes de estudios en forum.code.org/c/csp/updates."
+  accelerated_name: Curso acelerado
+  express_name: Curso Express
+  pre-express_name: Curso Express para prelectores
   20-hour_name: Curso acelerado
   algebra_name: Curso completo de Ciencias de la Comunicación en el álgebra
   AlgebraA_name: Curso A de Ciencias de la Comunicación en el álgebra
@@ -1365,18 +1326,6 @@ es-MX:
   starwarsblocks_name: Star Wars (bloques)
   hoc-encryption_name: Cifrado simple
   text-compression_name: Compresión de texto
-  math_category_name: Matemáticas
-  hoc_category_name: Hora del código
-  csf_category_name: Fundamentos de Ciencias de la Computación
-  csf_2017_category_name: Fundamentos de Ciencias de la Computación (2017)
-  csf_2018_category_name: Fundamentos de Ciencias de la Computación (2018)
-  csf_international_category_name: Fundamentos de Ciencias de la Computación (internacional)
-  csf2_draft_category_name: 'En desarrollo: cursos A-F'
-  csd_2018_category_name: Descubrimientos de Ciencias de la Computación ('18-'19)
-  csp_category_name: Principios de Ciencias de la Computación '15-'16
-  csp17_category_name: Principios de Ciencias de la Computación ('17-'18)
-  csp_2018_category_name: Principios de Ciencias de la Computación ('18-'19)
-  cspexams_category_name: Prueba de práctica de Principios de Ciencias de la Computación
   applab_name: Laboratorio de aplicaciones
   gamelab_name: Laboratorio de juegos
   basketball_name: Crea un juego de baloncesto
@@ -2229,10 +2178,6 @@ es-MX:
   game_lab_documentation: Documentación del Laboratorio de juegos
   game_lab_tutorials: Tutoriales del Laboratorio de juegos
   header_documentation: Documentación
-  csp_name: Principios de Ciencias de la Computación
-  csd_name: Descubrimientos de Ciencias de la Computación
-  csd_2018_name: Descubrimientos de Ciencias de la Computación
-  full_course_category_name: Cursos completos
   user_header_label: Hola, %{username}
   user_header_team: Equipo
   user_header_my_projects: Mis proyectos
@@ -2336,7 +2281,7 @@ es-MX:
   hoc2018_creativity: creatividad
   hoc2018_creativity_create: Crear
   hoc2018_creativity_hoc_coming: Ya llega la Hora del Código…
-  hoc2018_creativity_what_will_you_create: "¿Qué vas crear?"
+  hoc2018_creativity_what_will_you_create: "¿Qué vas a crear?"
   hoc2018_creativity_homepage: Deja volar la imaginación y que nazca la innovación.
     Comienza con una Hora del Código y define tu propio estilo creativo, sea cual
     sea. Mira nuestro video.
@@ -2414,7 +2359,7 @@ es-MX:
   hoc2018_mc_video_title_anybody_can_learn: Todos pueden aprender
   hoc2018_mc_video_title_my_name_is_aracely: Mi nombre es Aracely
   hoc2018_mc_homepage_hoc_coming: La Hora del Código está llegando...
-  hoc2018_mc_homepage_what_create: "¿Qué vas crear?"
+  hoc2018_mc_homepage_what_create: "¿Qué vas a crear?"
   hoc2018_mc_homepage_give_flight: Deja volar la imaginación y que nazca la innovación.
     Comienza con una Hora del Código y define tu propio estilo creativo, sea cual
     sea.

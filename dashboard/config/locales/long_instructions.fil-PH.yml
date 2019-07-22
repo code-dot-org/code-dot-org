@@ -3,7 +3,7 @@ fil-PH:
   data:
     long_instructions:
       2-3 Artist 4: Tulungan mo akong tapusin ang bahay para sa pusang ito.
-      2-3 Artist 9: Tapusin ang saranggola na ito
+      2-3 Artist 9 NEW: Tapusin ang saranggola na ito
       2-3 Artist Free Play: Libreng laro! Gumuhit ng anumang gusto mo.
       2-3 Artist Nested Loops Free Play: Libreng maglaro, gumuhit ng isang bagay na
         kamangha-mangha gamit ang mga naka-nest na mga loop.
@@ -441,11 +441,13 @@ fil-PH:
         zombie na makapunta sa mirasol."
       courseD_maze_until_challenge1: Walang pahiwatig, hamon lang. Dalhin ang zombie
         sa mirasol.
-      courseD_scrat_ramp1: Para sa palaisipang ito, kaladkarin ang lahat ng mga bloke
-        na sama-sama at pindutin ang "Run" para tingnan itong mawala!
+      courseD_scrat_ramp1: Para sa palaisipang ito, i-snap ang lahat ng mga bloke
+        nang sama-sama at i-click ang "Run" para tingnan itong umalis!
       courseD_scrat_ramp2: Mag-kaladkad ng ekstrang `move forward` na bloke palabas
         sa toolbox, pagkatapos ay ilakip ang lahat ng mga bloke sa `when run` para
         matapos ang iyong code.
+      courseD_scrat_ramp4: Iwasan ang TNT para hindi lilipad ang mga balahibo!
+      courseD_scrat_ramp7: Tulungan si Scrat na makakuha ng bunga ng oak!
       courseE_artist_concept_challenge2: Maglikha ng limang pinwheel na mga disenyo
         gamit ang code sa baba.
       courseE_artist_concept_challenge2_2018: Maglikha ng limang pinwheel na mga disenyo

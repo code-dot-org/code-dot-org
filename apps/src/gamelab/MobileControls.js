@@ -1,5 +1,5 @@
-import dom from '../dom';
-import gameLabDPadHtmlEjs from '../templates/gameLabDPad.html.ejs';
+import dom from '@cdo/apps/dom';
+import gameLabDPadHtmlEjs from '@cdo/apps/templates/gameLabDPad.html.ejs';
 import {GAMELAB_DPAD_CONTAINER_ID} from './constants';
 
 const DPAD_DEAD_ZONE = 3;

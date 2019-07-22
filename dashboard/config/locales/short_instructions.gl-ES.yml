@@ -8,7 +8,7 @@ gl-ES:
       2-3 Artist 2 new: "Esta casa ten unha parede inacabada. Cada lado\nten 100 pixels
         de lonxitude, pero a parede inacabada ten só 50. Completa a parede. "
       2-3 Artist 4: Axúdame a completar a casa para o gato.
-      2-3 Artist 9: Termina este papaventos
+      2-3 Artist 9 NEW: Termina este papaventos
       2-3 Artist Free Play: Actividade libre! Debuxa o que queiras.
       2-3 Artist Loops New 15: Debuxa algo divertido.
       2-3 Artist Nested Loops 10: |-
@@ -89,6 +89,9 @@ gl-ES:
         posíbel de bloques?
       4-5 Nested Loops 5: Repite o código dado para crear un muiño de vento.
       4-5 Nested Loops 9: Debuxa o dente na boca do crocodilo!
+      AB_Debug_PlayLab3: Move o cabaleiro a cada unha das bandeiras. Se algo sae mal,
+        busca os erros!
+      CDEF_debugging_flappy2: Por que non funciona este xogo?
       Course 4 Artist Binary 3: |-
         Podes debuxar este padrón usando
         a repetición dunha tira binaria de 3 díxitos?
@@ -154,6 +157,7 @@ gl-ES:
       Course 4 SCV 6: Clique aquí para ver as instrucións novamente.
       Crack Random Substitution: Instrucións
       Crack a Caesar Cipher: Instrucións
+      HOC 2018 Level_12: Deseña o teu propio entorno subacuático, ti decides!
       Infinity_catch: |-
         Podes facer que a Elsa ("personaxe 2") alcance
         á Anna usando as frechas do teclado?
@@ -337,6 +341,10 @@ gl-ES:
       Underground Mining Coal_2019: Atoparás os recursos máis valiosos no subterráneo,
         pero pode estar escuro alá dentro. Coloca polo menos 2 fachos e extrae polo
         menos 2 carbóns.
+      'Widget: Text Compression': Busca patróns (frases ou palabras repetidas) no
+        texto. Introduce os patróns que vexas no dicionario da dereita. A medida que
+        introduces entradas no dicionario, introdúcese o símbolo da entrada no texto
+        no lugar do patrón.
       bounce_1: Conecte un bloque ao bloque "cando premer na frecha para a esquerda"
         e clic en "Executar". Mova a raqueta usando a frecha para a esquerda para
         alcanzar o obxectivo final.
@@ -368,6 +376,12 @@ gl-ES:
         para ver o que acontece. Podes descubrir como funciona? (Ou eliminalo e substituílo
         por algo totalmente distinto)
       courseA_maze_seq2: Altera o código para me levar até o porco!
+      courseB_collector_loops_challenge2a: Axuda a Laurel a conseguir alomenos **5**
+        pezas do tesouro para rematar este quebracabezas.
+      courseB_collector_loops_challenge2a_2018: Axuda a Laurel a conseguir alomenos
+        **5** pezas do tesouro para rematar este quebracabezas.
+      courseB_collector_loops_challenge2a_2019: Axuda a Laurel a conseguir alomenos
+        **5** pezas do tesouro para rematar este quebracabezas.
       courseC_artist_prog5: 'Esta casa precisa dun tellado! Debuxa o triángulo. Pista:
         todos os 3 lados teñen a mesma lonxitude.'
       courseC_artist_prog5_2018: 'Esta casa precisa dun tellado! Debuxa o triángulo.

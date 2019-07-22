@@ -33,6 +33,7 @@ hu-HU:
       CSD LEDs Map: 'Áramkör játszótér: LED-EK'
       CSD LEDs Map_2018: 'Áramkör játszótér: LED-EK'
       CSD LEDs Map_2019: 'Áramkör játszótér: LED-EK'
+      CSD Problem Solving Process Video: 'Videó: probléma-megoldási folyamat'
       CSD U1L02 TFMD_2018: Lecke áttekintése
       CSD U1L03 TFMD_2018: Lecke áttekintése
       CSD U1L03 TFMD_2019: Lecke áttekintése
@@ -97,6 +98,7 @@ hu-HU:
       CSD U2 lists map: HTML listák
       CSD U2 lists map_2018: HTML listák
       CSD U2 lists map_2019: HTML listák
+      CSD U2 publish video: Webhelyének közzététele
       CSD U2L01 TFMD_2018: Lecke áttekintése
       CSD U2L02 TFMD_2018: Lecke áttekintése
       CSD U2L03 TFMD_2018: Lecke áttekintése
@@ -295,6 +297,9 @@ hu-HU:
       CSD U4L15 autoSFLP_2019: Lecke áttekintése
       CSD U4L16 autoSFLP_2018: Lecke áttekintése
       CSD U4L16 autoSFLP_2019: Lecke áttekintése
+      CSD U5 Amazon Data Video_2019: Hogyan használja az Amazon az adatokat
+      CSD U5 Netflix Data Video_2019: Hogyan használja a Netflix az adatokat
+      CSD U5 Waze Data Video_2019: Hogyan használja a Waze az adatokat
       CSD U5L01 autoSFLP_2018: Lecke áttekintése
       CSD U5L02 autoSFLP_2018: Lecke áttekintése
       CSD U5L03 autoSFLP_2018: Lecke áttekintése
@@ -323,6 +328,7 @@ hu-HU:
       CSD U5L14 autoSFLP_2019: Lecke áttekintése
       CSD U5L15 autoSFLP_2018: Lecke áttekintése
       CSD U5L15 autoSFLP_2019: Lecke áttekintése
+      CSD U6 arrays video: 'Videó: bevezető a Tömbök-höz'
       CSD U6 challenge motorcycle_2018: 'Kihívás: Motorbicikli'
       CSD U6 challenge motorcycle_2019: 'Kihívás: Motorbicikli'
       CSD U6 circuit LED map: Áramkörök és LED-ek
@@ -387,6 +393,7 @@ hu-HU:
       'CSD: Animating Sprite Movement_2018': 'Videó: mozgó sprite'
       'CSD: Animating Sprite Movement_2019': 'Videó: mozgó sprite'
       'CSD: For Loop_2018': Számláló ciklusok
+      'CSD: For Loop_2019': 'Videó: Ciklusok'
       'CSD: Sprite Velocity': 'Videó: sebesség'
       'CSD: Sprite Velocity_2018': 'Videó: sebesség'
       'CSD: Sprite Velocity_2019': 'Videó: sebesség'

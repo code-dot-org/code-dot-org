@@ -913,40 +913,8 @@
   coursee-2017_name: Curs E (2017)
   coursef-2017_name: Curs F (2017)
   pre-express-2018_name: Curs Expres pentru preșcolari (2018)
-  cspunit2_name: "(vechi) Unitatea 2: Internet"
-  cspunit3_name: "(vechi) Unitate 3: programare"
-  cspunit4_name: "(vechi) Unitatea 4: date"
-  cspunit5_name: "(vechi) Unitatea 5: Exploreaza şi creaza PT"
-  cspunit6_name: 'Post-AP: Baze de date din aplicaţii'
-  csd5_name: 'Unitatea 5: Datele și societatea'
-  csd6_name: 'Unitatea 6: Calcul fizic'
-  csd5-2017_name: 'Unitatea 5: Datele și societatea'
-  csd6-2017_name: 'Unitatea 6: Calcul fizic'
-  csd5-2018_name: 'Unitatea 5: Datele și societatea'
-  csd6-2018_name: 'Unitatea 6: Calcul fizic'
-  csp1-2017_name: 'Unitatea 1: Internet'
-  csp2-2017_name: 'Unitatea 2: Informaţii digitale'
-  csp-explore-2017_name: 'Nivel Avansat: Pregătire Explorare Perfomanță'
-  csp-create-2017_name: 'Nivel avansat: Creați temă preparatorie'
-  csppostap-2017_name: 'Post-AP: Baze de date în aplicaţii'
-  csp1-2018_name: 'Unitatea 1: Internet'
-  csp2-2018_name: 'Unitatea 2: Informaţii digitale'
-  csp-explore-2018_name: 'Nivel Avansat: Pregătire Explorare Perfomanță'
-  csp-create-2018_name: 'Nivel avansat: Creați temă preparatorie'
-  csppostap-2018_name: 'Post-AP: Baze de date în aplicaţii'
-  csp1_name: 'Unitatea 1: Internet'
-  csp2_name: 'Unitatea 2: Informaţii digitale'
-  csp3-a_name: 'Unitatea 3: Introducere în programare (versiunea A)'
-  csp3-research-mxghyt_name: 'Unitatea 3: Introducere în programare (obiective subordonate)'
-  csp-ap_name: Sarcini de performanţă AP
-  csppostap_name: 'Post-AP: Baze de date în aplicaţii'
-  csp-post-survey_name: Studiu post - curs pentru elevi
-  cspassessment_name: "Testul complet - 50 întrebări"
-  csp-explore_name: 'Nivel Avansat: Pregătire Explorare Perfomanță'
-  csp-create_name: 'Nivel avansat: Creați temă preparatorie'
-  cspexam1-mWU7ilDYM9_name: Test partea 1-25 întrebări
-  cspexam2-AKwgAh1ac5_name: Test de partea 2-25 întrebări
-  cspunit3_gradelevel: "Clasele 9-12"
+  accelerated_name: "Curs intensiv"
+  express_name: "Curs Expres"
   20-hour_name: Curs intensiv
   algebra_name: "CS în Algebră"
   AlgebraA_name: "CS în algebră Curs A"
@@ -957,18 +925,6 @@
   minecraft_name: "Minecraft"
   starwarsblocks_name: "Star Wars (blocuri)"
   hoc-encryption_name: Criptare simplă
-  math_category_name: "Matematică"
-  hoc_category_name: "Oră de Programare"
-  csf_category_name: "Fundamentele CS"
-  csf_2017_category_name: "Fundamentele Informaticii (2017)"
-  csf_2018_category_name: "Fundamentele Informaticii (2018)"
-  csf_international_category_name: "Fundamentele internaționale ale Informaticii"
-  csf2_draft_category_name: 'În curs de dezvoltare: Cursuri A - F'
-  csd_2018_category_name: "Descoperiri Informatice ('18-'19)"
-  csp_category_name: "Principii de CS 15-16"
-  csp17_category_name: "Pricipiile Informaticii ('17-'18)"
-  csp_2018_category_name: "Pricipii Informatice ('18-'19)"
-  cspexams_category_name: "Principiile practicilor test CS"
   applab_name: "Laboratului Aplicației"
   gamelab_name: "Game Lab"
   basketball_name: "Realizeaza un joc de baschet"
@@ -1425,10 +1381,6 @@
   header_report_bug: "Raporteazã eroare"
   header_tutorials: "Tutoriale"
   header_documentation: "Documentație"
-  csp_name: "Principle Informaticii"
-  csd_name: "Descoperiri informatice"
-  csd_2018_name: "Descoperiri informatice"
-  full_course_category_name: "Toate cursurile"
   user_header_label: "Salut %{username}"
   user_header_team: "Echipa"
   user_header_settings: "Contul meu"

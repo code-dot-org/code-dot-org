@@ -751,7 +751,7 @@
             '"South"': Sør
             '"West"': Vest
       gamelab_moveToward:
-        text: gå {SPRITE} distanse {DISTANCE} mot {TARGET}
+        text: flytt {SPRITE} piksler {DISTANCE} mot {TARGET}
       gamelab_playSound:
         text: spillLyd {SOUND}
       gamelab_pointInDirection:

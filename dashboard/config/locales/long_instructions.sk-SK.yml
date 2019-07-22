@@ -6,7 +6,7 @@ sk-SK:
         Nakresli prerušovanú čiaru použitím blokov "skoč dopredu" a "posuň sa dopredu".
         Každá čiara má dĺžku 50 pixelov.
       2-3 Artist 4: Pomôž mi dokončiť tento dom pre mačku.
-      2-3 Artist 9: Dokonči tohto šarkana
+      2-3 Artist 9 NEW: Dokonči tohto šarkana
       2-3 Artist Debugging 1: |-
         Tento klobúk by mal byť len 50 pixelov široký. Dokážeš to opraviť?
 
@@ -223,54 +223,239 @@ sk-SK:
       4-5 While Loops 4: "Fíha, pozrite sa na toto!\n\nNeviem, koľko lopát plných
         hliny treba na zasypanie tejto jamy.\\\nViete napísať program, ktorý bude
         zasypávať jamu až kým nebude zem vyrovnaná?  "
+      CSD U3 - conditionals - first conditional 2_2018: "<img src=\"https://images.code.org/abd459d8d1477ac2f582417f4334cdaa-image-1466107090414.gif\"
+        style=\"width:200px;float:right\">\n\n# Viditeľnosť\n\nNiekedy sa hodí obrázok
+        na chvíľu skryť a potom ho zas zobraziť. Toto sa dá urobiť pomocou nastavenia
+        `viditeľnosť`. Toto nastavenie sa trochu líši od tých, s ktorými si sa už
+        stretol/stretla: Ide totiž o Booleovu hodnotu, buď `pravdivú` (postava je
+        viditeľná) alebo `nepravdivú` (postava **nie**  je viditeľná). Viditeľnosť
+        je automaticky nastavená na `pravda`.\n\n# Urob toto\n\nNastav balón tak,
+        aby praskol, keď dosiahne okraj pracovnej plochy!\n\n-   Pridaj podmienku,
+        ktorá overí, či balón dosiahol okraj plochy. \n    -   Použi pomocníka na
+        `balón.veľkosť`, ktorý ti s tým pomôže.\n-   Vytvor postavu - nový balón,
+        ktorý je prasktnuý - a pridaj ju do záložky animácií.\n-   Použi nastavenie
+        `viditeľnosť`, vďaka ktorému bude prasknutý balón na začiatku skrytý.\n-   Do
+        výrazu `ak` pridaj dva výroky.\n    -   Jeden, ktorý nastaví `viditeľnosť`
+        pre neprasknutý balón - ten by sa mal skryť, keď dosiahne okraj plochy.\n
+        \   -   Druhý, ktorý zobrazí prasknutý balón."
+      CSD U3 - conditionals - first conditional 2_2018_2019: "<img src=\"https://images.code.org/abd459d8d1477ac2f582417f4334cdaa-image-1466107090414.gif\"
+        style=\"width:200px;float:right\">\n\n# Viditeľnosť\n\nNiekedy sa hodí obrázok
+        na chvíľu skryť a potom ho zas zobraziť. Toto sa dá urobiť pomocou nastavenia
+        `viditeľnosť`. Toto nastavenie sa trochu líši od tých, s ktorými si sa už
+        stretol/stretla: Ide totiž o Booleovu hodnotu, buď `pravdivú` (postava je
+        viditeľná) alebo `nepravdivú` (postava **nie**  je viditeľná). Viditeľnosť
+        je automaticky nastavená na `pravda`.\n\n# Urob toto\n\nNastav balón tak,
+        aby praskol, keď dosiahne okraj pracovnej plochy!\n\n-   Pridaj podmienku,
+        ktorá overí, či balón dosiahol okraj plochy. \n    -   Použi pomocníka na
+        `balón.veľkosť`, ktorý ti s tým pomôže.\n-   Vytvor postavu - nový balón,
+        ktorý je prasktnuý - a pridaj ju do záložky animácií.\n-   Použi nastavenie
+        `viditeľnosť`, vďaka ktorému bude prasknutý balón na začiatku skrytý.\n-   Do
+        výrazu `ak` pridaj dva výroky.\n    -   Jeden, ktorý nastaví `viditeľnosť`
+        pre neprasknutý balón - ten by sa mal skryť, keď dosiahne okraj plochy.\n
+        \   -   Druhý, ktorý zobrazí prasknutý balón."
+      CSD U3 Boolean Modify_2018: |-
+        # Booleove výrazy
+
+        Najjednoduchšie Booleove výrazy sú tie, na ktoré sa dá odpovedať pravda alebo nepravda. Tieto výrazy sa vytvárajú použitím **porovnávacích znamienok**, ktoré sú uvedené nižšie.
+
+        | Porovnávacie zmamienko | Booleov Výraz | Význam | | :---------------------------------------------------------------------------------------------------------------: | :----------------: | :-------------------: | | <img src="https://images.code.org/1a0798d75d4242715e7608d825f95101-image-1447271431312.png" style="width: 100px"> \| `1 < 9` | Je 1 menšie ako 9? | | <img src="https://images.code.org/5ff460ac121f0ac51b569e96a4404c57-image-§1447271431310.png" style="width: 100px"> \| `1 > 9` | Je 1 väčšie ako 9 ? | | <img src="https://images.code.org/a4daa9efccea2278e165592efe343c1a-image-1447271431308.png" style="width: 100px"> \| `1 == 9` | Je 1 rovné 9? |
+
+        **Poznámka:** Ak by si uvidel/a výrok 3 \< 2 na matematike, mohol/mohla by si si myslieť, že niekde nastala chyba. Ale toto nie je hodina matematiky. V informatike sa porovnávacie znamienka  **pýtajú otázku**, na ktorú bude počítač odpovedať `pravda` alebo `nepravda`. V našom prípade tento výraz čítaj ako otázku: **„Je 3 menšie ako 2?"** Odpoveď znie nie, čiže `nepravda`.
+
+        Iná možnosť, ako prečítať tento Booleov výraz je, že `3 > 2` **sa rovná** `nepravda`.
+
+        # Urob toto
+
+        Vedel/a by si upraviť hodnoty atribútov jednotlivých postáv tak, aby bol každý Booleov výraz `pravdivý`?
+
+        -   Prejdi si celý program a zisti, ako sú `postava1` a `postava2` vytvorené a ktoré ich vlastnosti sú porovnávané.
+        -   Pre každý z Booleových výrazov urči ich vlastnosti, ktoré sú poronávané.
+        -   Zmeň kód _iba v prvých **11-tich** riadkoch_ tak, aby každý výraz v `console.log()` vrátil odpoveď `pravda`.
+      CSD U3 Conditionals Apple 2_2018: |-
+        # Meniace sa ovocie
+
+        Teraz keď poznáme výroky _ak_, môžeš urobiť viac, ako len overiť, či jablko dosiahlo veľkosť 2. Keď sa tak stane, zmeň jeho animáciu na hrušku.
+
+        # Urob toto
+
+        Použi podmienku v cykle kreslenia, ktorá overí, že `fruit.scale` je väčšie ako 2. Ak je to tak, zmeň animáciu ovocia na "hruška".
+
+        _Výzva: Vieš zariadiť, aby ovocie prestalo rásť, keď sa z neho stane hruška?_
+      CSD U3 Conditionals Apple 2_2018_2019: |-
+        # Meniace sa ovocie
+
+        Teraz keď poznáme výroky _ak_, môžeš urobiť viac, ako len overiť, či jablko dosiahlo veľkosť 2. Keď sa tak stane, zmeň jeho animáciu na hrušku.
+
+        # Urob toto
+
+        Použi podmienku v cykle kreslenia, ktorá overí, že `fruit.scale` je väčšie ako 2. Ak je to tak, zmeň animáciu ovocia na "hruška".
+
+        _Výzva: Vieš zariadiť, aby ovocie prestalo rásť, keď sa z neho stane hruška?_
+      CSD U3 Conditionals Apple_2018: |-
+        # Ďalšie precvičenie Booleových výrazov
+
+        Poďme použiť ešte jeden Booleov výraz na kontrolu podmienok postavy. Môžeš použiť `console.log` príkaz na overenie, či jeho škála už dosiahla hodnotu 2.
+
+        # Urob toto
+
+        \*Pridaj `console.log` výrok
+
+        -   Do `console.log` pridaj Booleov výraz, ktorý overuje, či `fruit.scale` je väčšie ako 2.
+      CSD U3 Conditionals Apple_2018_2019: |-
+        # Ďalšie precvičenie Booleových výrazov
+
+        Poďme použiť ešte jeden Booleov výraz na kontrolu podmienok postavy. Môžeš použiť `console.log` príkaz na overenie, či jeho škála už dosiahla hodnotu 2.
+
+        # Urob toto
+
+        \*Pridaj `console.log` výrok
+
+        -   Do `console.log` pridaj Booleov výraz, ktorý overuje, či `fruit.scale` je väčšie ako 2.
       CSD U3 Diagonal Movement_2018: |-
         <img src="https://images.code.org/f92774863b17074adc85b8f6bbd017f2-image-1492726926884.gif" style="float: right; margin-left: 20px;">
+
         # Pohyb po diagonále
 
-        Zmena `x`a `y`atribútov postavy vie docieliť jej posun rovno hore a dole alebo vpravo a vľavo. Ak chceš aby sa posúvala po diagonále, je potrebné zmeniť obe tieto hodnoty.
+        Zmena `x` a `y`atribútov postavy vie docieliť jej posun rovno hore a dole alebo vpravo a vľavo. Ak chceš, aby sa posúvala po diagonále, je potrebné zmeniť obe tieto hodnoty.
 
-        Tento program momentálne pohybuje myškou po obrazovke rovno dole. Vieš ho zmeniť tak, aby sa hýbala diagonálne po obrazovke tak, ako na obrázku vpravo?
+        Náš program momentálne pohybuje myškou rovno nadol. Vieš ho zmeniť tak, aby sa hýbala diagonálne po obrazovke tak, ako na obrázku vpravo?
 
-        \_Výzva: Vieš nastaviť myšku tak, aby išla rovnakým smerom ako na obrázku
+        _Výzva: Vieš nastaviť myšku tak, aby išla rovnakým smerom ako na obrázku?_
       CSD U3 Diagonal Movement_2019: |-
         <img src="https://images.code.org/f92774863b17074adc85b8f6bbd017f2-image-1492726926884.gif" style="float: right; margin-left: 20px;">
+
         # Pohyb po diagonále
 
-        Zmena `x`a `y`atribútov postavy vie docieliť jej posun rovno hore a dole alebo vpravo a vľavo. Ak chceš aby sa posúvala po diagonále, je potrebné zmeniť obe tieto hodnoty.
+        Zmena `x` a `y`atribútov postavy vie docieliť jej posun rovno hore a dole alebo vpravo a vľavo. Ak chceš, aby sa posúvala po diagonále, je potrebné zmeniť obe tieto hodnoty.
 
-        Tento program momentálne pohybuje myškou po obrazovke rovno dole. Vieš ho zmeniť tak, aby sa hýbala diagonálne po obrazovke tak, ako na obrázku vpravo?
+        Náš program momentálne pohybuje myškou rovno nadol. Vieš ho zmeniť tak, aby sa hýbala diagonálne po obrazovke tak, ako na obrázku vpravo?
 
-        \_Výzva: Vieš nastaviť myšku tak, aby išla rovnakým smerom ako na obrázku
-      CSD U3 Drawing Squares to Corners_2018: "# Umiestni štvorce do rohov\n\nDôležitým
-        pre používanie Game Lab je pochopiť umiestňovanie tvarov. Nezabudni, že kedykoľvek
-        môžeš zapnúť zobrazenie mriežky alebo zistiť x a y súradnice pomocou kurzoru
-        tvojej myši.\n\n# Urob toto\n\n•\tUmiestni dva obdĺžniky presne do rohov mriežky,
-        tak ako je na obrázku vpravo.<img src=\"https://images.code.org/716209ce879925f89bf661f337946509-image-1529019186051.32.48
-        PM.png\" style=\"float:right;width:150px\">."
-      CSD U3 Drawing Squares to Corners_2019: "# Umiestni štvorce do rohov\n\nDôležitým
-        pre používanie Game Lab je pochopiť umiestňovanie tvarov. Nezabudni, že kedykoľvek
-        môžeš zapnúť zobrazenie mriežky alebo zistiť x a y súradnice pomocou kurzoru
-        tvojej myši.\n\n# Urob toto\n\n•\tUmiestni dva obdĺžniky presne do rohov mriežky,
-        tak ako je na obrázku vpravo.<img src=\"https://images.code.org/716209ce879925f89bf661f337946509-image-1529019186051.32.48
-        PM.png\" style=\"float:right;width:150px\">."
+        _Výzva: Vieš nastaviť myšku tak, aby išla rovnakým smerom ako na obrázku?_
+      CSD U3 Direction Arrows_2018: "# Posun do všetkých smerov\n\nKeďže už vieš posunúť
+        postavu pomocou príkazu `keyDown` jedným smerom, posun vo všetkých smeroch
+        by mal byť pre teba viac-menej podobný. Ovládanie klávesnicou, ktoré sa naučíš
+        na tomto mieste, sa stane základom pre mnoho hier, ktoré následne naprogramuješ.\n\n#
+        Urob toto\n\nPostava chrobáčika, ktorá reaguje na stlačenie šípky doprava,
+        sa dostala aj do tohto levelu. Pridaj interakcie aj pre ostatné klávesy!\n\n\\*Pridaj
+        tri výrazy \"ak\" – jeden pre každú šípku. \n\\*Nezabudni pridať komentár
+        pre každý výraz!\n\\*Každý z výrazov by mal posunúť chrobáčika v smere šípky.\n\n\\_NÁPOVEDA:
+        Nezabudni zhodnotiť pohyb po oboch osiach (x aj y) **a tiež** nad tým, či
+        musíš zvýšiť alebo znížiť ich hodnotu"
+      CSD U3 Direction Arrows_2018_2019: "# Posun do všetkých smerov\n\nKeďže už vieš
+        posunúť postavu pomocou príkazu `keyDown` jedným smerom, posun vo všetkých
+        smeroch by mal byť pre teba viac-menej podobný. Ovládanie klávesnicou, ktoré
+        sa naučíš na tomto mieste, sa stane základom pre mnoho hier, ktoré následne
+        naprogramuješ.\n\n# Urob toto\n\nPostava chrobáčika, ktorá reaguje na stlačenie
+        šípky doprava, sa dostala aj do tohto levelu. Pridaj interakcie aj pre ostatné
+        klávesy!\n\n\\*Pridaj tri výrazy \"ak\" – jeden pre každú šípku. \n\\*Nezabudni
+        pridať komentár pre každý výraz!\n\\*Každý z výrazov by mal posunúť chrobáčika
+        v smere šípky.\n\n\\_NÁPOVEDA: Nezabudni zhodnotiť pohyb po oboch osiach (x
+        aj y) **a tiež** nad tým, či musíš zvýšiť alebo znížiť ich hodnotu"
+      CSD U3 Drawing Squares to Corners_2018: |-
+        # Umiestni štvorce do rohov
+
+        Dôležitým pre prácu v Game Lab je pochopiť umiestňovanie tvarov. Nezabudni, že kedykoľvek môžeš zapnúť zobrazenie mriežky alebo zistiť súradnice x a y pomocou kurzoru svojej myši.
+
+        # Urob toto
+
+        -   Umiestni dva obdĺžniky presne do rohov mriežky, tak ako na obrázku vpravo<img src="https://images.code.org/716209ce879925f89bf661f337946509-image-1529019186051.32.48 PM.png" style="float:right;width:150px">.
+      CSD U3 Drawing Squares to Corners_2019: |-
+        # Umiestni štvorce do rohov
+
+        Dôležitým pre prácu v Game Lab je pochopiť umiestňovanie tvarov. Nezabudni, že kedykoľvek môžeš zapnúť zobrazenie mriežky alebo zistiť súradnice x a y pomocou kurzoru svojej myši.
+
+        # Urob toto
+
+        -   Umiestni dva obdĺžniky presne do rohov mriežky, tak ako na obrázku vpravo<img src="https://images.code.org/716209ce879925f89bf661f337946509-image-1529019186051.32.48 PM.png" style="float:right;width:150px">.
+      CSD U3 Else_2018: |-
+        # Čo ak moja podmienka nie je splnená?
+
+        <img src="https://images.code.org/1a997d78fcd88efeb9e6dc5a02aa88e8-image-1464706463138.53.58.png" width="125px" style="float:right">
+
+        Niekedy chceme nášmu programu povedať, čo má robiť, ak je podmienka „ak“ `pravdivá`, ale aj čo má urobiť, ak podmienka pravdivá nie je - výsledkom je `nepravda`. Keď stlačíš tlačidlo „plus“ v spodnej časti podmieňovacieho bloku, pridá sa ďalšia sekciu nazvaná `inak`. Spustí sa vždy, ak prvotná podmienka nie je pravdivá, t.j. výsledkom je `nepravda`.
+
+        # Urob toto
+
+        Ozubené kolesá sú späť. Naposledy sme sa s nimi hrali tak, že sa začali točiť až po stlačení medzerníka. Tentoraz však chceme, aby sa po stlačení medzerníka točili jedným smerom, a keď medzerník stlačený nebude, nech sa točia opačne.
+        <img src="https://images.code.org/b074d47ca8dfa5ab3bfd08344b4f4e42-image-1464706389475.gif" style="float:right">
+
+        \*Klikni na tlačidlo „plus“  v spodnej časti bloku „aj“ - pre pridanie časti „inak“.
+        \*Pridaj príkaz pre otáčanie kolies opačným smerom v prípade, ak je stlačený medzerník.
+      CSD U3 Keypress Boolean embed-2018: |-
+        # Uhádni - keyDown()
+
+        Blok `keyDown()` je prvým z novej skupiny blokov, ktoré umožňujú získať vstupy od užívateľa. Toto je prvý krok na našej ceste k tvorbe hier! Pozrime sa, či uhádneš, ako blok `keyDown()` funguje. Zatiaľ ešte **nepíš** žiaden kód.
+
+        # Urob toto
+
+        \*Pozorne si prečítaj program.
+        **\*Predpokladaj, ako bude kód fungovať** a napíš odpoveď do políčka nižšie. Buď konkrétny/a!
+        \*Spusti program.
+        \*Počas behu programu stlač medzerník na klávesnici.
+        \*Uhádol/la si? Bol/a si prekvapený/á? Porozprávaj sa o tom so spolusediacim/spolusediacou.
+      CSD U3 Keypress Boolean embed-2018_2019: |-
+        # Uhádni - keyDown()
+
+        Blok `keyDown()` je prvým z novej skupiny blokov, ktoré umožňujú získať vstupy od užívateľa. Toto je prvý krok na našej ceste k tvorbe hier! Pozrime sa, či uhádneš, ako blok `keyDown()` funguje. Zatiaľ ešte **nepíš** žiaden kód.
+
+        # Urob toto
+
+        \*Pozorne si prečítaj program.
+        **\*Predpokladaj, ako bude kód fungovať** a napíš odpoveď do políčka nižšie. Buď konkrétny/a!
+        \*Spusti program.
+        \*Počas behu programu stlač medzerník na klávesnici.
+        \*Uhádol/la si? Bol/a si prekvapený/á? Porozprávaj sa o tom so spolusediacim/spolusediacou.
+      CSD U3 Movement Fish challenge_2018: |-
+        # Viac rýb!
+
+        Tentokrát skús zmeniť rotáciu každej ryby tak, že jej pohyb sa bude podobať plávaniu. Môžeš tiež pridať ďalšie detaily, ako napríklad bublinky, ktoré stúpajú ku hladine.
+      CSD U3 Movement Fish challenge_2019: |-
+        # Viac rýb!
+
+        Tentokrát skús zmeniť rotáciu každej ryby tak, že jej pohyb sa bude podobať plávaniu. Môžeš tiež pridať ďalšie detaily, ako napríklad bublinky, ktoré stúpajú ku hladine.
+      CSD U3 Movement Fish_2018: |-
+        # Pridaj rybám animáciu
+
+        Využitím vzoru pre počítanie naprogramuj ryby tak, aby sa všetky hýbali ako na obrázku vpravo. Modrá ryba by sa mala posúvať najrýchlejšie a zelená ryba by mala byť najpomalšia.
+      CSD U3 Movement Fish_2019: |-
+        # Pridaj rybám animáciu
+
+        Využitím vzoru pre počítanie naprogramuj ryby tak, aby sa všetky hýbali ako na obrázku vpravo. Modrá ryba by sa mala posúvať najrýchlejšie a zelená ryba by mala byť najpomalšia.
+      CSD U3 Movement Your Own 2_2018: |-
+        # Pridaj pohyb do animáce
+
+        Ak už máš vytvorený statický obrázok, môžeš do neho pridať nejaký pohyb.
+
+        # Urob toto
+
+        V cykle kreslenia
+
+        -   Urči, ktoré vlastnosti postáv je potrebné zmeniť
+        -   Zmeň tieto nastavenia pomocou vzoru pre počítanie
+
+        _Tip: Ak tvoj vzor pre počítanie nepracuje tak, ako očakávaš, do kódu pridaj nástroje, ktoré ti pomôžu odstrániť chyby._
       CSD U3 Random Debug Cloud_2018: |-
+        <img src="https://images.code.org/45d1d513f5ed63592e98ea3e4a08840c-image-1520403109680.11.28 PM.png" style="float:right;height:150px">
+
         # Oprava chýb - Použitie 4 parametrov
 
-        Keď už je tráva nakreslená správne, pridaj na oblohu oblak. Momentálne tento obrázok vyzerá trochu smiešne.
+        Keď už je tráva nakreslená správne, pridaj na oblohu oblak. Momentálne náš obrázok vyzerá trochu smiešne.
 
         # Urob toto
 
         -   Oprav tento program tak, aby bol oblak viac široký ako dlhý – presne tak, ako je nakreslené na obrázku.
-        -   Nápoveda: Musíš zmeniť dva parametre. Ktorými z nich sa nastavuje šírka a výška oblaku <img src="https://images.code.org/45d1d513f5ed63592e98ea3e4a08840c-image-1520403109680.11.28 PM.png" style="float:right;height:150px">?
+        -   Nápoveda: Musíš zmeniť dva parametre. Ktorými z nich sa nastavuje šírka a výška oblaku?
       CSD U3 Random Debug Cloud_2018_2019: |-
+        <img src="https://images.code.org/45d1d513f5ed63592e98ea3e4a08840c-image-1520403109680.11.28 PM.png" style="float:right;height:150px">
+
         # Oprava chýb - Použitie 4 parametrov
 
-        Keď už je tráva nakreslená správne, pridaj na oblohu oblak. Momentálne tento obrázok vyzerá trochu smiešne.
+        Keď už je tráva nakreslená správne, pridaj na oblohu oblak. Momentálne náš obrázok vyzerá trochu smiešne.
 
         # Urob toto
 
         -   Oprav tento program tak, aby bol oblak viac široký ako dlhý – presne tak, ako je nakreslené na obrázku.
-        -   Nápoveda: Musíš zmeniť dva parametre. Ktorými z nich sa nastavuje šírka a výška oblaku <img src="https://images.code.org/45d1d513f5ed63592e98ea3e4a08840c-image-1520403109680.11.28 PM.png" style="float:right;height:150px">?
+        -   Nápoveda: Musíš zmeniť dva parametre. Ktorými z nich sa nastavuje šírka a výška oblaku?
       CSD U3 Random Debug Grass_2018: |-
         <img src="https://images.code.org/08c7c6cd82f4d4ff57459165f29ab624-image-1520402652290.03.37 PM.png" style="float:right;height:150px">
 
@@ -293,37 +478,56 @@ sk-SK:
 
         -   Oprav tento program tak, aby sa tráva rozprestierala po celej spodnej časti obrázka.
         -   Nápoveda: Stačí zmeniť iba jedno číslo. Ktorý parameter urobí obdĺžnik (trávu) širším?
-      CSD U3 Random Ellipse Behind_2018: "# Urob toto\n\n•\tNapíš kód, ktorý vytvorí
-        oranžovú elipsu za zelenou elipsou.\n•\tNemusíš riešiť presnú veľkosť elíps,
-        pokiaľ bude splnené, že zelená elipsa je celá vo vnútri oranžovej. "
-      CSD U3 Random Ellipse Behind_2018_2019: "# Urob toto\n\n•\tNapíš kód, ktorý
-        vytvorí oranžovú elipsu za zelenou elipsou.\n•\tNemusíš riešiť presnú veľkosť
-        elíps, pokiaľ bude splnené, že zelená elipsa je celá vo vnútri oranžovej. "
+      CSD U3 Random Ellipse Behind_2018: |-
+        <img src="https://images.code.org/dd73760e7129225b1e9f53a542960b9a-image-1520402430622.59.19 PM.png" style="float:right;height:150px">
+
+        # Urob toto
+
+        -   Napíš kód, ktorý vytvorí oranžovú elipsu za zelenou elipsou.
+        -   Nemusíš riešiť presnú veľkosť elíps, pokiaľ bude splnené, že zelená elipsa je celá vo vnútri oranžovej.
+      CSD U3 Random Ellipse Behind_2018_2019: |-
+        <img src="https://images.code.org/dd73760e7129225b1e9f53a542960b9a-image-1520402430622.59.19 PM.png" style="float:right;height:150px">
+
+        # Urob toto
+
+        -   Napíš kód, ktorý vytvorí oranžovú elipsu za zelenou elipsou.
+        -   Nemusíš riešiť presnú veľkosť elíps, pokiaľ bude splnené, že zelená elipsa je celá vo vnútri oranžovej.
       CSD U3 Random rainbow snake_2018: |-
         <img src="https://images.code.org/6af643f712b042e5b076f06cc2f902e2-image-1520404404645.32.58 PM.png" style="float:right;height:150px">
+
         # Dúhový had
 
         Tento program nakreslí veľmi jedinečný druh dúhového hada. Pre nakreslenie vždy iného hada musíš použiť náhodné čísla.
 
         # Urob toto
 
-        -   Spusti program niekoľkokrát, aby si videl/a, ako funguje predtým, ako ho začneš upravovať.
+        -   Spusti program niekoľkokrát, aby si videl/a, ako funguje, než ho začneš upravovať.
         -   K dúhovému hadovi pridaj aspoň tri rôzne farebné kruhy.
         -   Použi blok `randomNumber()` (náhodné číslo) pre posun zvyšku tela hada hore alebo dole tak, ako pri posledných troch kruhoch.
 
         Výzva: Vieš náhodnou urobiť aj veľkosť kruhov
-      CSD U3 Random random ellipse2_2018: "<img src=\"https://images.code.org/8306a9fd01470ac8582cf4374dde7033-image-1520403513967.17.40
-        PM.png\" style=\"float:right;height:150px\">\n# Náhodné čísla\n\nTu máme rovnaké
-        slnko ako naposledy. V tomto momente je náhodná len súradnica x. Náhodnou
-        však môžeš urobiť aj súradnicu y.\n\n# Urob toto\n\n-   Použi blok `randomNumber()`
-        (náhodné číslo) pre parameter Y elipsy tak, aby bol kruh nakreslený aj v náhodnej
-        výške.\n-   Keď sa kruh nakreslí na náhodnej súradnici, môžeš pokračovať ďalej. "
-      CSD U3 Random random ellipse2_2018_2019: "<img src=\"https://images.code.org/8306a9fd01470ac8582cf4374dde7033-image-1520403513967.17.40
-        PM.png\" style=\"float:right;height:150px\">\n# Náhodné čísla\n\nTu máme rovnaké
-        slnko ako naposledy. V tomto momente je náhodná len súradnica x. Náhodnou
-        však môžeš urobiť aj súradnicu y.\n\n# Urob toto\n\n-   Použi blok `randomNumber()`
-        (náhodné číslo) pre parameter Y elipsy tak, aby bol kruh nakreslený aj v náhodnej
-        výške.\n-   Keď sa kruh nakreslí na náhodnej súradnici, môžeš pokračovať ďalej. "
+      CSD U3 Random random ellipse2_2018: |-
+        <img src="https://images.code.org/8306a9fd01470ac8582cf4374dde7033-image-1520403513967.17.40 PM.png" style="float:right;height:150px">
+
+        # Náhodné čísla
+
+        Tu máme rovnaké slnko ako naposledy. V tomto momente je náhodná len súradnica x. Náhodnou môžeš urobiť aj súradnicu y.
+
+        # Urob toto
+
+        -   Použi blok `randomNumber()` (náhodné číslo) pre parameter Y elipsy tak, aby bol kruh nakreslený aj v náhodnej výške.
+        -   Keď sa kruh nakreslí na náhodnej súradnici, môžeš pokračovať ďalej.
+      CSD U3 Random random ellipse2_2018_2019: |-
+        <img src="https://images.code.org/8306a9fd01470ac8582cf4374dde7033-image-1520403513967.17.40 PM.png" style="float:right;height:150px">
+
+        # Náhodné čísla
+
+        Tu máme rovnaké slnko ako naposledy. V tomto momente je náhodná len súradnica x. Náhodnou môžeš urobiť aj súradnicu y.
+
+        # Urob toto
+
+        -   Použi blok `randomNumber()` (náhodné číslo) pre parameter Y elipsy tak, aby bol kruh nakreslený aj v náhodnej výške.
+        -   Keď sa kruh nakreslí na náhodnej súradnici, môžeš pokračovať ďalej.
       CSD U3 Scene Example_2018: |-
         # Zostavy postáv
 
@@ -331,41 +535,96 @@ sk-SK:
 
         ## Načrtni si svoj obrázok
 
-        Predtým ako začneš, venuj chvíľku načrtnutiu obrázku, ktorý by si chcel/a vytvoriť. Môžeš použiť jednoduché tvary, ktoré si použil/a v minulosti, rovnako ako rozličné postavy a text. Keď si svoj nápad načrtneš, naučíme ťa, ako používať blok `text`a ako zostaviť svoj obrázok.
+        Predtým ako začneš, venuj chvíľku načrtnutiu obrázku, ktorý by si chcel/a vytvoriť. Môžeš použiť jednoduché tvary, ktoré si použil/a v minulosti, rovnako ako rozličné postavy a text. Keď si svoj nápad nakreslíš, naučíme ťa, ako používať blok `text` a ako zostaviť obrázok.
       CSD U3 Sprites text_2018: "# Pridávanie textu\n\nText môžeš pridať kdekoľvek
         na obrazovke použitím príkazu `text`. \n\n# Urob toto\n\n-   Zmeň zobrazený
-        text v kóde\n-   Pridaj ďalší text na inú časť obrazovky.\n\n\\_Tip: Základná
+        text v kóde\n-   Pridaj ďalší text na inú časť obrazovky.\n\n_Tip: Základná
         veľkosť textu je pomerne malá, ale môžeš použiť blok  `textSize` (veľkosť
-        textu) na jej zmenu. Môžeš tiež použiť blok `fill` (vyplň) na zmenu jeho farby"
+        textu) na jej zmenu. Môžeš tiež použiť blok `fill` (vyplň) na zmenu jeho farby._"
       CSD U3 Sprites text_2019: "# Pridávanie textu\n\nText môžeš pridať kdekoľvek
         na obrazovke použitím príkazu `text`. \n\n# Urob toto\n\n-   Zmeň zobrazený
-        text v kóde\n-   Pridaj ďalší text na inú časť obrazovky.\n\n\\_Tip: Základná
+        text v kóde\n-   Pridaj ďalší text na inú časť obrazovky.\n\n_Tip: Základná
         veľkosť textu je pomerne malá, ale môžeš použiť blok  `textSize` (veľkosť
-        textu) na jej zmenu. Môžeš tiež použiť blok `fill` (vyplň) na zmenu jeho farby"
+        textu) na jej zmenu. Môžeš tiež použiť blok `fill` (vyplň) na zmenu jeho farby._"
+      CSD U3 UP_ARROW_2018: |-
+        # Pohyb postáv
+
+        Pozíciu postavy môžeš meniť na základe stlačených kláves rovnako, ako si menil/a jej obrázok.
+
+        # Urob toto
+
+        \*Pridaj výraz `ak` dovnútra cyklu kreslenia.
+        \*Skontroluj, či bola stlačená klávesa „šípka doprava“.
+        \*Pridaj kód do podmieňovacieho príkazu tak, aby sa postava pohla doprava vždy, keď bude sltačená klávesa „šípka doprava“.
+
+        _Potrebuješ zmeniť premennú „x“ alebo „y“ svojej postavy na to, aby sa posunula doprava?_
+      CSD U3 UP_ARROW_2018_2019: |-
+        # Pohyb postáv
+
+        Pozíciu postavy môžeš meniť na základe stlačených kláves rovnako, ako si menil/a jej obrázok.
+
+        # Urob toto
+
+        \*Pridaj výraz `ak` dovnútra cyklu kreslenia.
+        \*Skontroluj, či bola stlačená klávesa „šípka doprava“.
+        \*Pridaj kód do podmieňovacieho príkazu tak, aby sa postava pohla doprava vždy, keď bude sltačená klávesa „šípka doprava“.
+
+        _Potrebuješ zmeniť premennú „x“ alebo „y“ svojej postavy na to, aby sa posunula doprava?_
+      CSD U3 keydown conditional_2018: "# Zmena postáv\n\nV poslednom leveli sme videli,
+        že `keyDown` vráti hodnotu `pravda`, ak je klávesa stlačená, a hodnotu `nepravda`,
+        ak klávesa stlačená nie je. Vstupom pre príkaz `keyDown` je anglický názov
+        klávesy, ktorú chceš sledovať, napísaný v úvodzovkách. Napríklad: \"x\", \"up\"
+        (hore) alebo \"space\" (medzerník).\n\nPríkaz `keyDown` môžeš použiť ako vstup
+        pre výraz `ak`, a to na zmenu animácie podľa toho, ktorá klávesa bola stlačená!\n\n#
+        Urob toto\n\n\\*Spusti kód a skús stlačiť klávesy „p“ a „h“. \n\\*Pozri sa
+        na výraz `ak` a zisti, ako funguje kód.\n\\*Pridaj blok do tretieho výrazu
+        `ak`, aby si zmenil/a zvieratko v animácii.\n\n_Výzva: Pri použití `setAnimation`
+        bude nová animácia používaná, až kým ju opäť nezmeníš. Vieš upraviť kód tak,
+        aby sa zobrazila žirafa vždy, keď nie je stlačená žiadna klávesa?_"
+      CSD U3 keydown conditional_2018_2019: "# Zmena postáv\n\nV poslednom leveli
+        sme videli, že `keyDown` vráti hodnotu `pravda`, ak je klávesa stlačená, a
+        hodnotu `nepravda`, ak klávesa stlačená nie je. Vstupom pre príkaz `keyDown`
+        je anglický názov klávesy, ktorú chceš sledovať, napísaný v úvodzovkách. Napríklad:
+        \"x\", \"up\" (hore) alebo \"space\" (medzerník).\n\nPríkaz `keyDown` môžeš
+        použiť ako vstup pre výraz `ak`, a to na zmenu animácie podľa toho, ktorá
+        klávesa bola stlačená!\n\n# Urob toto\n\n\\*Spusti kód a skús stlačiť klávesy
+        „p“ a „h“. \n\\*Pozri sa na výraz `ak` a zisti, ako funguje kód.\n\\*Pridaj
+        blok do tretieho výrazu `ak`, aby si zmenil/a zvieratko v animácii.\n\n_Výzva:
+        Pri použití `setAnimation` bude nová animácia používaná, až kým ju opäť nezmeníš.
+        Vieš upraviť kód tak, aby sa zobrazila žirafa vždy, keď nie je stlačená žiadna
+        klávesa?_"
       CSD U3 rect_2018: |-
         # Preskúmaj Game Lab
 
         Vitaj v Game Labe, kde môžeš vytvárať interaktívne animácie a hry!
-        Už si si precvičil/a základy vytvárania tvarov v mriežke. V Game Labe budeš robiť to isté použitím ľavej časti obrazovky.
+        Už si si precvičil/a základy vytvárania tvarov v mriežke. V Game Labe budeš robiť to isté v ľavej časti obrazovky.
 
         # Urob toto
 
-        -   Pozri sa na riadok kódu v pracovnom priestore pod týmito pokynmi (ukáž mi kde [0] ) a porozprávaj sa  so svojím kamarátom, kde v mriežke bude nakreslený tvar.
-        -   Kliknutím <img src="https://images.code.org/9e963203e9cafd558b760730d13537ca-image-1461783998310.06.20 PM.png" width=100> spusti program a sleduj, čo sa stane.
-        -   Zmeň čísla vnútri bloku a skús spustiť program znova.
-        -   Skús umiestniť obdĺžnik v blízkosti pravého dolného rohu obrazovky.
+        -   Pozri sa na riadok kódu na pracovnej ploche pod týmito pokynmi ([Ukáž mi kde](#triggercallout=block_trigger) ) a so svojím kamarátom porozmýšľajte, kde v mriežke bude asi nakreslený tvar.
+        -   Kliknutím na tlačidlo <img src="https://images.code.org/9e963203e9cafd558b760730d13537ca-image-1461783998310.06.20 PM.png" width=100> spusti program a sleduj, čo sa stane.
+        -   Zmeň čísla vnútri bloku a program spusti znova.
+        -   Skús umiestniť obdĺžnik do pravého dolného rohu obrazovky.
       CSD U3 rect_2019: |-
         # Preskúmaj Game Lab
 
         Vitaj v Game Labe, kde môžeš vytvárať interaktívne animácie a hry!
-        Už si si precvičil/a základy vytvárania tvarov v mriežke. V Game Labe budeš robiť to isté použitím ľavej časti obrazovky.
+        Už si si precvičil/a základy vytvárania tvarov v mriežke. V Game Labe budeš robiť to isté v ľavej časti obrazovky.
 
         # Urob toto
 
-        -   Pozri sa na riadok kódu v pracovnom priestore pod týmito pokynmi (ukáž mi kde [0] ) a porozprávaj sa  so svojím kamarátom, kde v mriežke bude nakreslený tvar.
-        -   Kliknutím <img src="https://images.code.org/9e963203e9cafd558b760730d13537ca-image-1461783998310.06.20 PM.png" width=100> spusti program a sleduj, čo sa stane.
-        -   Zmeň čísla vnútri bloku a skús spustiť program znova.
-        -   Skús umiestniť obdĺžnik v blízkosti pravého dolného rohu obrazovky.
+        -   Pozri sa na riadok kódu na pracovnej ploche pod týmito pokynmi ([Ukáž mi kde](#triggercallout=block_trigger) ) a so svojím kamarátom porozmýšľajte, kde v mriežke bude asi nakreslený tvar.
+        -   Kliknutím na tlačidlo <img src="https://images.code.org/9e963203e9cafd558b760730d13537ca-image-1461783998310.06.20 PM.png" width=100> spusti program a sleduj, čo sa stane.
+        -   Zmeň čísla vnútri bloku a program spusti znova.
+        -   Skús umiestniť obdĺžnik do pravého dolného rohu obrazovky.
+      CSD sprite movement challenge_2018: |-
+        # Vylepši svoj obrázok
+
+        Urob svoj obrázok ešte zaujímavejším - zmeň viacero nastavení pre postavy alebo doň pridaj tých postáv ešte viac!
+      CSD sprite movement challenge_2019: |-
+        # Vylepši svoj obrázok
+
+        Urob svoj obrázok ešte zaujímavejším - zmeň viacero nastavení pre postavy alebo doň pridaj tých postáv ešte viac!
       Course 4 Artist Binary 1: |-
         Tu máme funkciu, ktorá vezme reťazec binárnych 1 a 0 a spracováva ich z ľava do prava, z hore dolu.
         Pokiaľ Umelec natrafí na 1, štvorec vymaľuje, pokiaľ na 0, tak štvorec nechá tak.
@@ -1660,9 +1919,9 @@ sk-SK:
       courseC_harvester_loops9_2018: Pozbieraj všetky kukurice a tekvice.
       courseC_harvester_loops9_2019: Pozbieraj všetky kukurice a tekvice.
       courseC_maze_debugging1: |-
-        _"Oh nie! Vidím tu problém"_
+        Tento kód nie je úplne správny!
 
-        Oprav chyby a pozbieraj všetky drahokamy.
+        Oprav ho tak, aby sa Scart dostal k žaluďu.
       courseC_maze_debugging1_2018: |-
         Tento kód nie je úplne správny!
 
@@ -1671,14 +1930,10 @@ sk-SK:
         Tento kód nie je úplne správny!
 
         Oprav ho tak, aby sa Scart dostal k žaluďu.
-      courseC_maze_debugging2: |-
-        _"Dokážeš to!"_
-
-        Oprav chyby a pozbieraj všetky drahokamy.
       courseC_maze_debugging3: |-
-        _"Buď vytrvalý a určite na to prídeš."_
+        Niečo tu nesedí.
 
-        Oprav chyby a pozbieraj všetky drahokamy.
+        Odstráň bloky tak, aby sa Scrat dostal k žaluďu!
       courseC_maze_debugging3_2018: |-
         Niečo tu nesedí.
 
@@ -1687,28 +1942,6 @@ sk-SK:
         Niečo tu nesedí.
 
         Odstráň bloky tak, aby sa Scrat dostal k žaluďu!
-      courseC_maze_debugging4: |-
-        _"Nepoddaj sa frustrácii. Zvládneš to!"_
-
-        Oprav chyby a pozbieraj všetky drahokamy.
-      courseC_maze_debugging5: |-
-        _"Z tejto úlohy sa mi točí hlava!"_
-
-        Všetky príkazy ktoré potrebuješ sú už tu...teraz použi svoje schopnosti v hľadaní chýb a vyrieš túto úlohu.
-      courseC_maze_debugging6: "**Výzva:** Všetky bloky ktoré potrebuješ sú už tu...teraz
-        použi svoje schopnosti v hľadaní chýb a pozbieraj všetky drahokamy."
-      courseC_maze_debugging7: |-
-        _"Toľko drahokamov!"_
-
-        Pomôž Laurel opraviť kód a pozbierať všetky drahokamy.
-      courseC_maze_debugging8_predict1: |-
-        _"To je ako na ostrove pokladov!"_
-
-        Pomôž Laurel opraviť kód a pozbierať všetky drahokamy.
-      courseC_maze_debugging9: |-
-        _"To je ako na ostrove pokladov!"_
-
-        Pomôž Laurel opraviť kód a pozbierať všetky drahokamy.
       courseC_maze_debugging_challenge2: Ak sa Scrat otáča príliš často, môže sa mu
         zakrútiť hlava! Pomôž mu dostať sa k žaluďu iba pomocou štyroch blokov `otoč
         sa`.
@@ -2697,8 +2930,8 @@ sk-SK:
         -   Nechať chobotnice naháňať piráta
         -   Nechať každú postavu, ktorá sa zrazí s ninjom zmiznúť
         -   Vymyslieť vlastnú hru!
-      courseD_scrat_ramp1: V tejto úlohe pospájaj všetky bloky, klikni na tlačítko
-        "Spustiť" a sleduj, čo sa stane!
+      courseD_scrat_ramp1: V tejto hre pospájaj všetky bloky dokopy, potom klikni
+        na tlačítko "Spustiť" a sleduj, čo sa stane.
       courseD_scrat_ramp2: Aby sa vták dostal až k prasaťu, z panela nástrojov presuň
         ešte jeden blok `posuň sa dopredu` a pripoj ho k ostatným blokom napojených
         na blok `pri spustení`.
@@ -2707,12 +2940,12 @@ sk-SK:
 
         Na pracovnej ploche je jeden blok navyše, ktorý spôsobí, že vták narazí.
         Vyhoď ho tak, že ho presunieš späť do panela nástrojov.
-      courseD_scrat_ramp4: "_\"Nájdi cestu a priveď ma k tomu nezbednému prasiatku.\"_
-        \n\nVyhni sa TNT, inak bude lietať perie!"
+      courseD_scrat_ramp4: Vyhni sa TNT, lebo bude lietať perie!
       courseD_scrat_ramp5: |-
         _"Nasleduj cestu a priveď ma k prasiatku"_
 
         Vyhni sa TNT.
+      courseD_scrat_ramp7: Pomôž Scratovi dostať sa k žaluďu!
       courseE_bee_functions3: Funkcie sú bloky kódu, ktoré plnia úlohu. Použi funkciu
         "get 5" aby si získal 5 nektárov naraz. Uisti sa, že používaš slučku aby si
         mal ideálny počet blokov.
@@ -2846,11 +3079,14 @@ sk-SK:
         \ odhadnúť koľko je v nej hliny.  \n\n* * *\n\nPridali sme nový blok do panela
         nástrojov - je to blok `pokiaľ tam je hromada, vykonaj`.  Použi ho na odstránenie
         hromady a odoberaj z nej hlinu  len kým tam nejaká je! "
-      courseE_farmer_ramp11b: Pozbieraj všetok šalát.
+      courseE_farmer_ramp11b: A teraz to skús znova ale s viacerými hromadami!
       courseE_farmer_ramp11b_2018: A teraz to skús znova ale s viacerými hromadami!
       courseE_farmer_ramp11b_2019: A teraz to skús znova ale s viacerými hromadami!
+      courseE_farmer_ramp12_forswap: Pozbieraj všetok šalát.
       courseE_farmer_ramp12_forswap_2018: Pozbieraj všetok šalát.
       courseE_farmer_ramp12_forswap_2019: Pozbieraj všetok šalát.
+      courseE_farmer_ramp12b: Teraz záhradníčka potrebuje pozbierať všetok šalát.
+        Použi blok `pokiaľ tam je šalát` a daj ho do bloku pre cyklus `opakuj`!
       courseE_farmer_ramp12b_2018: Teraz záhradníčka potrebuje pozbierať všetok šalát.
         Použi blok `pokiaľ tam je šalát` a daj ho do bloku pre cyklus `opakuj`!
       courseE_farmer_ramp12b_2019: Teraz záhradníčka potrebuje pozbierať všetok šalát.
@@ -2858,21 +3094,12 @@ sk-SK:
       courseE_farmer_ramp12c_2018: "Šalát je tento raz až na konci cestičky.\\\nChoď
         po cestičke **pokiaľ neplatí**, že si na políčku s hlávkou šalátu, potom pokračuj
         a zbieraj šalát **pokiaľ** tam nejaký je.  "
-      courseE_farmer_ramp12c_2019: "Šalát je tento raz až na konci cestičky.\\\nChoď
-        po cestičke **pokiaľ neplatí**, že si na políčku s hlávkou šalátu, potom pokračuj
-        a zbieraj šalát **pokiaľ** tam nejaký je.  "
       courseE_farmer_ramp12d_2018: "Šalát je rozptýlený po celej záhrade.\\\nChoď
         po cestičke **pokiaľ nie** si na políčku s hlávkou šalátu, potom pokračuj
         a zbieraj šalát **pokiaľ** tam nejaký je.  "
-      courseE_farmer_ramp12d_2019: "Šalát je rozptýlený po celej záhrade.\\\nChoď
-        po cestičke **pokiaľ nie** si na políčku s hlávkou šalátu, potom pokračuj
-        a zbieraj šalát **pokiaľ** tam nejaký je.  "
-      courseE_farmer_ramp12e_2018: "Šalát je rozptýlený po celej záhrade.\\\nChoď
-        po cestičke **pokiaľ nie** si na políčku s hlávkou šalátu, potom pokračuj
-        a zbieraj šalát **pokiaľ** tam nejaký je.  "
-      courseE_farmer_ramp12e_2019: "Šalát je rozptýlený po celej záhrade.\\\nChoď
-        po cestičke **pokiaľ nie** si na políčku s hlávkou šalátu, potom pokračuj
-        a zbieraj šalát **pokiaľ** tam nejaký je.  "
+      courseE_farmer_ramp12f: "**Výzva**: jediný spôsob ako pozbierať celú úrodu je
+        posúvať sa dopredu pokiaľ sa nedostaneš k šalátu, potom sa otoč vľavo **ak**
+        je cesta vľavo, inak sa otoč vpravo."
       courseE_farmer_ramp12f_2018: "**Výzva**: jediný spôsob ako pozbierať celú úrodu
         je posúvať sa dopredu pokiaľ sa nedostaneš k šalátu, potom sa otoč vľavo **ak**
         je cesta vľavo, inak sa otoč vpravo."

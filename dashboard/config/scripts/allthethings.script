@@ -1,5 +1,6 @@
 hideable_stages true
 stage_extras_available true
+family_name ''
 
 stage 'Jigsaw'
 skin 'jigsaw'
@@ -150,7 +151,7 @@ level 'Resizing Test'
 
 stage 'Multi page assessment'
 level 'K-1 Maze 11'
-assessment 'Test longassessment levelgroup split new'
+level 'Test longassessment levelgroup split new', assessment: true
 
 stage 'Star wars'
 skin 'hoc2015'
@@ -167,13 +168,13 @@ level 'MC Agent Freeplay'
 level 'Craft Aquatic - allthethings'
 
 stage 'Rich long assessment'
-assessment 'PS U3 Assessment1 new'
+level 'PS U3 Assessment1 new', assessment: true
 
 stage 'Free Response'
 level 'Sample Free Response'
 
 stage 'Sample PLC Assessment'
-assessment 'Sample CSP Assessment'
+level 'Sample CSP Assessment', assessment: true
 
 stage 'Swapped Levels'
 variants
@@ -218,10 +219,10 @@ variants
 endvariants
 
 stage 'Anonymous student survey'
-assessment 'Test anonymous student survey'
+level 'Test anonymous student survey', assessment: true
 
 stage 'Anonymous student survey 2', lockable: true
-assessment 'CSP pre-assessment survey'
+level 'CSP pre-assessment survey', assessment: true
 
 stage 'Public Key Cryptography'
 level 'AllTheThings Modulo Clock'
@@ -231,7 +232,7 @@ stage 'Web Lab'
 level 'Web Lab 1'
 
 stage 'Single page assessment'
-assessment 'Test longassessment levelgroup new'
+level 'Test longassessment levelgroup new', assessment: true
 
 stage 'Standalone video'
 level 'AllTheThings_StandaloneVideo'
@@ -248,13 +249,16 @@ level 'allthethings HOC Dance 1'
 level 'allthethings HOC Dance 10 Measures'
 
 stage 'Mini Rubric'
-assessment 'allthethings-mini-rubric'
-assessment 'allthethings-mini-rubric-weblab'
-assessment 'allthethings-mini-rubric-gamelab'
+level 'allthethings-mini-rubric', assessment: true
+level 'allthethings-mini-rubric-weblab', assessment: true
+level 'allthethings-mini-rubric-gamelab', assessment: true
 
 stage 'Pluralsight Test', lockable: true
-assessment 'Pluralsight LevelGroup Test'
+level 'Pluralsight LevelGroup Test', assessment: true
 
 stage 'Externals Optionally Displayed as Unplugged'
 level 'allthethings_external_displayed_as_unplugged'
 level 'allthethings_external_not_displayed_as_unplugged'
+
+stage 'Bubble Choice'
+level 'allthethings_bubble_choice'
