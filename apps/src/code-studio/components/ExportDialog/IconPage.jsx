@@ -60,13 +60,13 @@ export default class IconPage extends React.Component {
           type="file"
           style={styles.hiddenFileInput}
           accept="image/png"
-          onChange={this.handleSelectUploadFile}
+          onChange={this.onUploadFileInputChange}
         />
       </div>
     );
   }
 
-  handleSelectUploadFile = () => {
+  onUploadFileInputChange = () => {
     if (!this.uploadFileInput.value) {
       return;
     }
