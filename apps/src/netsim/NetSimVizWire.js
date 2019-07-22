@@ -42,8 +42,7 @@ var NetSimVizWire = (module.exports = function(localNode, remoteNode) {
    * @type {jQuery} wrapped around a SVGTextElement
    * @private
    */
-  this.questionMark_ = jQuerySvgElement('text')
-    .text('?')
+  this.lastReadState_ = jQuerySvgElement('text')
     .addClass('question-mark')
     .appendTo(root);
 
@@ -153,7 +152,7 @@ NetSimVizWire.prototype.render = function(clock) {
     wireCenter.x !== this.wireCenter_.x ||
     wireCenter.y !== this.wireCenter_.y
   ) {
-    this.questionMark_
+    this.lastReadState_
       .attr('x', this.wireCenter_.x)
       .attr('y', this.wireCenter_.y);
   }
@@ -192,7 +191,7 @@ NetSimVizWire.prototype.setEncodings = function(newEncodings) {
  * Kick off an animation of the wire state being set by the local viznode.
  * @param {"0"|"1"} newState
  */
-NetSimVizWire.prototype.animateSetState = function(newState) {
+NetSimVizWire.prototype.animateSetState = function(newState, fromRemote) {
   if (!(this.localVizNode && this.remoteVizNode)) {
     return;
   }
@@ -203,7 +202,9 @@ NetSimVizWire.prototype.animateSetState = function(newState) {
   this.stopAllAnimation();
   this.setWireClasses_(newState);
   this.text_.text(this.getDisplayBit_(newState));
-  this.snapTextToPosition(this.getLocalNodePosition());
+  this.snapTextToPosition(
+    fromRemote ? this.getRemoteNodePosition() : this.getLocalNodePosition()
+  );
   this.tweenTextToPosition(
     this.getWireCenterPosition(),
     flyOutMs,
@@ -212,6 +213,7 @@ NetSimVizWire.prototype.animateSetState = function(newState) {
   this.doAfterDelay(
     flyOutMs + holdPositionMs,
     function() {
+      this.lastReadState_.text(this.getDisplayBit_(newState));
       this.setWireClasses_('unknown');
     }.bind(this)
   );
@@ -241,6 +243,7 @@ NetSimVizWire.prototype.animateReadState = function(newState) {
         flyToNodeMs,
         tweens.easeOutQuad
       );
+      this.lastReadState_.text(this.getDisplayBit_(newState));
       this.setWireClasses_('unknown');
     }.bind(this)
   );
@@ -345,6 +348,13 @@ NetSimVizWire.prototype.getLocalNodePosition = function() {
   return {
     x: this.localVizNode.posX,
     y: this.localVizNode.posY
+  };
+};
+
+NetSimVizWire.prototype.getRemoteNodePosition = function() {
+  return {
+    x: this.remoteVizNode.posX,
+    y: this.remoteVizNode.posY
   };
 };
 
