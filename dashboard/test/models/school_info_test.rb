@@ -590,17 +590,4 @@ class SchoolInfoTest < ActiveSupport::TestCase
     school_info.school_name = '     '
     refute school_info.complete?
   end
-
-  test 'school info is readonly for an existing record' do
-    school_info = SchoolInfo.new
-    school_info.country = 'United States'
-    school_info.school_type = SchoolInfo::SCHOOL_TYPE_PUBLIC
-    school_info.school_name = 'Primary School'
-    school_info.validation_type = SchoolInfo::VALIDATION_COMPLETE
-    school_info.save!
-
-    assert_raises("ActiveRecord::ReadOnlyRecord") do
-      school_info.update(country: 'United States', school_type: SchoolInfo::SCHOOL_TYPE_PRIVATE)
-    end
-  end
 end
