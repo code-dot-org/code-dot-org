@@ -276,7 +276,7 @@ button.arrow:disabled {
   min-width: 204px;
 }
 
-/* Set z-index to zero here so that .droplet-dropdown (z-index 500) appears in front of
+/* Set z-index to one here so that .droplet-dropdown (z-index 500) appears in front of
  * other droplet elements, but behind anything with z-index > 1 outside of #codeTextbox,
  * such as dialogs. */
 #codeTextbox {
