@@ -165,7 +165,7 @@ export function appendItem(
   validateType = apiValidateType,
   calledWithinInterpreter
 ) {
-  validateType('appendItem', 'list', array, 'array');
+  validateType({}, 'appendItem', 'list', array, 'array');
 
   const arrayValues = calledWithinInterpreter ? array.properties : array;
 
