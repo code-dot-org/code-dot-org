@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import * as Table from 'reactabular-table';
+import {Table} from 'reactabular';
 import Button from '../Button';
 
 export default class CensusInaccuracyReviewTable extends Component {
@@ -58,7 +58,7 @@ export default class CensusInaccuracyReviewTable extends Component {
         label: 'School'
       },
       cell: {
-        formatters: [this.formatSchool]
+        format: this.formatSchool
       }
     },
     {
@@ -67,7 +67,7 @@ export default class CensusInaccuracyReviewTable extends Component {
         label: 'Current Summary'
       },
       cell: {
-        formatters: [this.formatTeachesCs]
+        format: this.formatTeachesCs
       }
     },
     {
@@ -76,7 +76,7 @@ export default class CensusInaccuracyReviewTable extends Component {
         label: "Submitter's comment"
       },
       cell: {
-        formatters: [this.formatComment]
+        format: this.formatComment
       }
     },
     {
@@ -85,7 +85,7 @@ export default class CensusInaccuracyReviewTable extends Component {
         label: 'Action'
       },
       cell: {
-        formatters: [this.beginReviewButton]
+        format: this.beginReviewButton
       }
     }
   ];
