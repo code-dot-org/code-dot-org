@@ -42,30 +42,30 @@ module Pd::SurveyPipeline::Helper
   # Summarize facilitator-specific results from all related workshops
   # that a facilitator have facilitated.
   #
-  # @param fac_id [Number] a valid user id
+  # @param facilitator_id [Number] a valid user id
   # @param workshop [Pd::Workshop] a valid workshop
   #
   # @return [Hash{:facilitators, :facilitator_response_counts, :facilitator_averages, :errors => Hash, Array}]
-  #   facilitators: {fac_id => fac_name}
-  #   facilitator_response_counts: {this_workshop, all_my_workshops => {fac_id => count}}
+  #   facilitators: {facilitator_id => fac_name}
+  #   facilitator_response_counts: {this_workshop, all_my_workshops => {facilitator_id => count}}
   #   facilitator_averages: {
   #     fac_name => {qcategory, qname => {this_workshop, all_my_workshops => score}},
   #     questions => {qname => qtext}
   #    }
   #   errors: Array
   #
-  def report_facilitator_rollup(fac_id, workshop)
+  def report_facilitator_rollup(facilitator_id, workshop)
     context = {
       current_workshop_id: workshop.id,
-      facilitator_id: fac_id,
+      facilitator_id: facilitator_id,
       question_categories: [FACILITATOR_EFFECTIVENESS_CATEGORY],
       submission_type: 'Facilitator'
     }
 
     # Retrieve data
-    related_ws_ids = find_related_workshops(fac_id, workshop.course)
+    related_ws_ids = find_related_workshops(facilitator_id, workshop.course)
     context[:related_workshop_ids] = related_ws_ids
-    context.merge! retrieve_facilitator_surveys([fac_id], related_ws_ids)
+    context.merge! retrieve_facilitator_surveys([facilitator_id], related_ws_ids)
 
     # Process data
     process_rollup_data context
@@ -76,16 +76,16 @@ module Pd::SurveyPipeline::Helper
     context[:decorated_summaries]
   end
 
-  def report_workshop_rollup(fac_id, workshop)
+  def report_workshop_rollup(facilitator_id, workshop)
     context = {
       current_workshop_id: workshop.id,
-      facilitator_id: fac_id,
+      facilitator_id: facilitator_id,
       question_categories: [WORKSHOP_OVERALL_SUCCESS_CATEGORY, WORKSHOP_TEACHER_ENGAGEMENT_CATEGORY],
       submission_type: 'Workshop'
     }
 
     # Retrieve data
-    related_ws_ids = find_related_workshops(fac_id, workshop.course)
+    related_ws_ids = find_related_workshops(facilitator_id, workshop.course)
     context[:related_workshop_ids] = related_ws_ids
     context.merge! retrieve_workshop_surveys(related_ws_ids)
 
@@ -210,34 +210,32 @@ module Pd::SurveyPipeline::Helper
 
   # Find all workshops of the same course and facilitated by a facilitator.
   #
-  # @param fac_ids [Number] valid facilitator id
+  # @param facilitator_id [Number] valid facilitator id
   # @param course [String] valid course name
   #
   # @return [Array<Number>] list of workshop ids
   #
-  def find_related_workshops(fac_id, course)
-    return [] unless fac_id && course.present?
+  def find_related_workshops(facilitator_id, course)
+    return [] unless facilitator_id && course.present?
 
-    ws_facilitated_query =
-      "SELECT DISTINCT pd_workshop_id FROM pd_workshops_facilitators "\
-      "WHERE user_id = #{fac_id}"
-    ws_facilitated = ActiveRecord::Base.connection.exec_query(ws_facilitated_query).rows.flatten
-
-    Pd::Workshop.where(id: ws_facilitated, course: course).pluck(:id)
+    Pd::Workshop.left_outer_joins(:facilitators).
+      where(users: {id: facilitator_id}, course: course).
+      distinct.
+      pluck(:id)
   end
 
   # Retrieve facilitator submissions and survey questions for selected facilitators and workshops.
   #
-  # @param fac_ids [Array<number>] non-empty list of facilitator ids
+  # @param facilitator_ids [Array<number>] non-empty list of facilitator ids
   # @param ws_ids [Array<number>] non-empty list of workshop ids
   #
   # @return [Hash{:facilitator_submissions, :survey_questions => Array}]
   #
   # TODO: Move these functions into a Retriever
   #
-  def retrieve_facilitator_surveys(fac_ids, ws_ids)
+  def retrieve_facilitator_surveys(facilitator_ids, ws_ids)
     fac_submissions = Pd::WorkshopFacilitatorDailySurvey.where(
-      facilitator_id: fac_ids, pd_workshop_id: ws_ids
+      facilitator_id: facilitator_ids, pd_workshop_id: ws_ids
     )
     form_ids = fac_submissions.pluck(:form_id).uniq
 
