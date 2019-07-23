@@ -1,8 +1,10 @@
 import React, {Component} from 'react';
+import ReactDOM from 'react-dom';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
 import shapes from './shapes';
 import {UnlocalizedTimeAgo as TimeAgo} from '@cdo/apps/templates/TimeAgo';
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
 
 const styles = {
   main: {
@@ -18,7 +20,9 @@ const styles = {
   },
   lessonDetails: {
     width: '75%',
-    margin: 15
+    marginLeft: 15,
+    marginTop: 15,
+    marginBottom: 5
   },
   lessonLevel: {
     fontSize: 16,
@@ -40,18 +44,54 @@ const styles = {
     float: 'left'
   },
   comment: {
-    width: '100%',
     fontStyle: 'italic',
     color: color.charcoal,
     marginLeft: 25,
     marginRight: 25,
-    marginBottom: 15,
     fontSize: 14
+  },
+  icon: {
+    fontSize: 18
+  },
+  iconBox: {
+    float: 'left',
+    paddingLeft: 25
+  },
+  commentBox: {
+    float: 'left',
+    width: '96%'
   }
 };
 
+const measureElement = element => {
+  const DOMNode = ReactDOM.findDOMNode(element);
+  return {
+    height: DOMNode.offsetHeight
+  };
+};
+
 export default class LevelFeedbackEntry extends Component {
+  state = {
+    expanded: false,
+    commentHeight: 60
+  };
+
   static propTypes = {feedback: shapes.feedback};
+
+  expand = () => {
+    this.setState({expanded: true});
+  };
+
+  collapse = () => {
+    this.setState({expanded: false});
+  };
+
+  componentDidMount() {
+    this.comment &&
+      this.setState({commentHeight: measureElement(this.comment).height});
+  }
+
+  longComment = () => this.state.commentHeight > 60;
 
   render() {
     const {
@@ -69,9 +109,19 @@ export default class LevelFeedbackEntry extends Component {
 
     const seenByStudent = seen_on_feedback_page_at || student_first_visited_at;
 
+    const baseHeight = performance && comment.length > 2 ? 132 : 112;
+
     const style = {
       backgroundColor: seenByStudent ? color.lightest_teal : color.white,
+      height: this.state.expanded ? 'auto' : baseHeight,
+      overflow: this.state.expanded ? 'none' : 'hidden',
       ...styles.main
+    };
+
+    const performanceStyle = {
+      width: '100%',
+      marginBottom: 5,
+      ...styles.comment
     };
 
     const rubricPerformance = {
@@ -80,6 +130,9 @@ export default class LevelFeedbackEntry extends Component {
       performanceLevel3: i18n.rubricLevelThreeHeader(),
       performanceLevel4: i18n.rubricLevelFourHeader()
     };
+
+    const showRightCaret = this.longComment() && !this.state.expanded;
+    const showDownCaret = this.longComment() && this.state.expanded;
 
     return (
       <div style={style}>
@@ -106,8 +159,30 @@ export default class LevelFeedbackEntry extends Component {
           </a>
         </div>
         <TimeAgo style={styles.time} dateString={created_at} />
-        <div style={styles.comment}>{rubricPerformance[performance]}</div>
-        <div style={styles.comment}>{comment}</div>
+        <div style={performanceStyle}>{rubricPerformance[performance]}</div>
+        {showRightCaret ? (
+          <span style={styles.iconBox}>
+            <FontAwesome
+              style={styles.icon}
+              icon="caret-right"
+              onClick={this.expand}
+            />
+          </span>
+        ) : null}
+        {showDownCaret ? (
+          <span style={styles.iconBox}>
+            <FontAwesome
+              style={styles.icon}
+              icon="caret-down"
+              onClick={this.collapse}
+            />
+          </span>
+        ) : null}
+        <span style={styles.commentBox}>
+          <div ref={r => (this.comment = r)} style={styles.comment}>
+            {comment}
+          </div>
+        </span>
       </div>
     );
   }
