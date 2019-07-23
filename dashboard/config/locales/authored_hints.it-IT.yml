@@ -7368,19 +7368,19 @@ it-IT:
           prova prima a scrivere le mosse su un pezzo di carta.
       courseC_maze_programming8:
         courseC_maze_programming8_a: Ricordati che se ti blocchi puoi usare il pulsante
-          "Fai un passo" per analizzare il tuo codice linea per linea.
+          "Fai un passo" per analizzare il tuo codice un blocco per volta.
         courseC_maze_programming8_b: Non aver paura di sbagliare! Prova ad aggiungere
           blocchi ed eseguire il codice per vedere cosa succede, anche se non hai
           ancora risolto l'esercizio.
       courseC_maze_programming8_2018:
         courseC_maze_programming8_a: Ricordati che se ti blocchi puoi usare il pulsante
-          "Fai un passo" per analizzare il tuo codice linea per linea.
+          "Fai un passo" per analizzare il tuo codice un blocco per volta.
         courseC_maze_programming8_b: Non aver paura di sbagliare! Prova ad aggiungere
           blocchi ed eseguire il codice per vedere cosa succede, anche se non hai
           ancora risolto l'esercizio.
       courseC_maze_programming8_2019:
         courseC_maze_programming8_a: Ricordati che se ti blocchi puoi usare il pulsante
-          "Fai un passo" per analizzare il tuo codice linea per linea.
+          "Fai un passo" per analizzare il tuo codice un blocco per volta.
         courseC_maze_programming8_b: Non aver paura di sbagliare! Prova ad aggiungere
           blocchi ed eseguire il codice per vedere cosa succede, anche se non hai
           ancora risolto l'esercizio.
@@ -10375,6 +10375,9 @@ it-IT:
           sempre` che controlla la posizione del pirata (ma, attenzione, non all'interno
           dell'istruzione `se`).
       courseD_scrat_ramp1:
+        courseC_maze_programming1_a: Se Scrat non riesce a prendere la ghianda, controlla
+          che tutti e tre i blocchi siano collegati insieme, quindi clicca nuovamente
+          su "Esegui".
         courseC_maze_programming1_b: Non aver paura di sbagliare! Prova ad aggiungere
           blocchi ed eseguire il codice per vedere cosa succede, anche se non hai
           ancora risolto l'esercizio.
@@ -10411,8 +10414,13 @@ it-IT:
           dopo?
         courseC_maze_programming5_b: Di quante caselle devi andare avanti per raggiungere
           l'angolo?
+      courseD_scrat_ramp6:
+        courseC_maze_programming6a_a: Usa un ciclo `ripeti ... volte` per far muovere
+          Scrat!
       courseD_scrat_ramp7:
         courseD_scrat_programming6_a: Ci sono due modi per risolvere questo esercizio!
+        courseD_scrat_programming6_b: Ricorda di girare prima di muoverti, visto che
+          Scrat è rivolto nella direzione sbagliata.
         courseD_scrat_programming6_c: Non aver paura di sbagliare! Prova ad aggiungere
           blocchi ed eseguire il codice per vedere cosa succede, anche se non hai
           ancora risolto l'esercizio.

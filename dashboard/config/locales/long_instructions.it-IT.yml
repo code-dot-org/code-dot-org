@@ -186,6 +186,40 @@ it-IT:
 
         -   Nell'ultima lezione, sei riuscito a mettere a fuoco il processo di risoluzione dei problemi?
         -   Come potresti sfruttare questo processo su un problema della tua vita quotidiana?
+      CSD U2 Heading Demo_2019: "# Intestazioni (Headings)\n\n<div class=\"no-pullthrough\"
+        style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left:
+        20px; font-size:14px\">\n<details>\n\n<summary><strong>Cosa sono le intestazioni
+        (headings)?</strong>\n\n</summary>\nLe intestazioni, che possono avere varie
+        dimensioni, sono i titoli delle diverse sezioni di una pagina web. Questi
+        titoli aggiungono struttura alla tua pagina web, suddividendola in modo da
+        renderla più facile da leggere per l'utente.\n</details>\n<details>\n<summary><strong>How
+        do I make different sized headings?</strong>\n\n</summary>\nHeadings come
+        in 6 different sizes. So far you have primarily used the biggest one: &lt;h1&gt;.
+        The number '1' in the HTML tag designates that this is the biggest heading.
+        The smallest heading is &lt;h6&gt;. You can also try the &lt;h2&gt;, &lt;h3&gt;,
+        &lt;h4&gt;, and &lt;h5&gt; tags, which get smaller as the number gets larger.\n</details>\n<details>\n<summary><strong>What
+        is HTML?</strong>\n\n</summary>\nHTML stands for Hypertext Markup Language.
+        HTML is used to add structure to the content of a web page. HTML uses tags
+        to specify where certain structures start and end. These tags are sets of
+        characters not found in the English language so that the content and structure
+        can be differentiated. \n</details>\n<details>\n<summary><strong>What is an
+        HTML element?</strong>\n\n</summary>\nAn HTML element is a piece of a website
+        that is marked by a start tag and sometimes closed with an end tag. The element
+        also includes the content inside the tags. For example: \n<img src=\"https://images.code.org/fb4df62aa4d879f7021c567be2e28eea-image-1481135855001.png\"
+        style=\"width:500px\">\n</details>\n<details>\n<summary><strong>What is an
+        HTML tag?</strong>\n\n</summary>\n\nAn HTML tag is the special set of characters
+        that tells the machine where the start or end of an HTML element is and what
+        type it is.\n\n</details>\n</div>\n\nSo far, you've organized your content
+        into paragraphs.  Another way HTML allows you to organize your code is by
+        using **headings**.  A heading is a short piece of text that goes at the top
+        of a section of content, like a title.\nFinora, abbiamo organizzato il contenuto
+        in paragrafi.  Un altro modo in cui l'HTML ti permette di organizzare il tua
+        pagina è utilizzando le **intestazioni** (**headings**).  Un'intestazione
+        è un breve testo che va all'inizio di una sezione, come un titolo.\n\n# Do
+        This:\n\n-   Find the headings in the web page below and use the Inspector
+        Tool to see the code that makes them.\n-   Make sure you and your partner
+        agree on what the tags do.\n-   Change the code so that \"Drawing\" and \"2
+        years\" match the headings on the rest of the page."
       CSD U6 iter predict bubbles: "![](https://images.code.org/52f474adbbc3bdd87aaae407c9ebf588-image-1515690462464.png)"
       CSD U6 iter predict bubbles_2018: "![](https://images.code.org/52f474adbbc3bdd87aaae407c9ebf588-image-1515690462464.png)"
       CSD U6 iter predict bubbles_2019: "![](https://images.code.org/52f474adbbc3bdd87aaae407c9ebf588-image-1515690462464.png)"
