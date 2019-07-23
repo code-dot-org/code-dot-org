@@ -1408,6 +1408,27 @@ is-IS:
         ull af báðum kindunum.
       Overworld Shear Sheep_2019: Nú þarf að rýja rollur! Notaðu "rýja" skipunina
         til safna ull af báðum kindunum.
+      Pixelation - Lesson 15 - Color Shades: Við byrjum með röðina af rauðum litbrigðum
+        sem Maddie bjó til í myndbandinu. Gerðu tilraunir með 6-bita lit með því að
+        fylla neðri röð myndarinnar með litbrigðum í öðrum lit. Hér er dæmi með nokkrum
+        bláum litbrigðum. Prófaðu þinn eigin lit!
+      Pixelation - Lesson 15 - Color Shades 4x4: 'Þú byrjar með 4x4 myndina sem Maddie
+        bjó til í myndbandinu. Verkefni þitt er að fylla 4x4 grindina með litum með
+        12 bitum fyrir hvern díl. Hér eru kröfurnar: Röð 1 - fylla með rauðum litbrigðum.
+        Röð 2 - græn litbrigði. Röð 3 - grá litbrigði.'
+      Pixelation - Lesson 15 - Complete 3-bit color: Þú byrjar með 4x2 myndina sem
+        Maddie var að búa til, en við höfum skilið eftir síðustu tvo reitina. Ljúktu
+        við myndina með því að finna út hvaða tvo liti vantar og kóða þá.
+      Pixelation 4x4 Empty: Breiddin og hæðin eru nú hluti af gögnunum. Getur þú fundið
+        út hvernig á að stilla þessar víddir?
+      Pixelation Bee: 'Þessi stærri mynd af býflugu kóðar lit með 12 bitum í hverjum
+        díl, en með því að skoða þetta í hex er auðveldara að sjá litinn í hverjum
+        díl. Ef þú skiptir yfir í tvíundir - haltu þér fast - þá færðu mikið af bitum.
+        Hér er annað sem gefur furðulega útkomu: færðu bitana á hvern díl upp í 24
+        bita á díl. Hvað gerist? Getur þú útskýrt þessa hegðun?'
+      Pixelation Flappy: Hér er stærri mynd með 9 bitum í hverjum díl. Með 9 bitum
+        getur þú haft 512 mismunandi liti. Smelltu áfram til að sjá næstu mynd sem
+        er jafnvel enn háþróaðri en auðveldari að skilja.
       Robot Doodle: 'Hugmynd að verkefni: Búðu til mynd af einhverju kunnuglegu úr
         raunheimi. Þetta krefst úthalds og skipulagningar!'
       Robot Doodle_2018: 'Hugmynd að verkefni: Búðu til mynd af einhverju kunnuglegu
@@ -4421,6 +4442,8 @@ is-IS:
       grade5_artist_binary8: Ljúktu við þessa teikningu.
       grade5_artist_binary9: "Þessi myndflötur hefur hærri upplausn - 16 díla sinnum
         16 díla!\\\r\n\\\r\nSérðu hvað gerist þegar við förum að skapa með bitunum?"
+      grade5_pixelation: Kóðaðu mynd af því sem þú vilt með tvíundum. Við forritun
+        í tvíundum eru einu táknin '0' og '1'.
       iceage_click_hello: 'Getur þú hjálpað Sid að kalla á vini sína þegar þú smellir
         á hann? '
       iceage_free_play: 'Nú átt þú að búa til eigin leik eða sögu! '
@@ -4443,6 +4466,9 @@ is-IS:
       iceage_warn_ice_age: Breyttu sviðinu í íslagðan bakgrunn og láttu Sid (leikara
         1) hreyfast hratt.
       k-1 maze 1: Getur þú látið mig fara í Vestur til að ná svíninu?
+      mike3bit: Þú byrjar með 4x2 myndina sem Maddie var að búa til, en við höfum
+        skilið eftir síðustu reitina. Ljúktu við myndina með því að finna út hvaða
+        liti vantar og kóða þá.
       ramp_artist_loops1: Farðu áfram 60 díla til að ljúka þessari þraut.
       ramp_artist_loops1_2018: Farðu áfram 60 díla til að ljúka þessari þraut.
       ramp_artist_loops1_2019: Farðu áfram 60 díla til að ljúka þessari þraut.
