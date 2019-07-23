@@ -1499,7 +1499,7 @@ class UserTest < ActiveSupport::TestCase
 
     # all scripts
     assert_equal [s2, s1, c], user.user_scripts
-    assert_equal [s2.script, s1.script, c.script], user.visible_scripts
+    assert_equal [s2.script, s1.script, c.script], user.scripts
 
     # working on scripts
     assert_equal [s2.script, s1.script], user.working_on_scripts

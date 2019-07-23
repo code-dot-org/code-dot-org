@@ -454,7 +454,7 @@ class User < ActiveRecord::Base
   # a bit of trickery to sort most recently started/assigned/progressed scripts first and then completed
   has_many :user_scripts, -> {order "-completed_at asc, greatest(coalesce(started_at, 0), coalesce(assigned_at, 0), coalesce(last_progress_at, 0)) desc, user_scripts.id asc"}
 
-  # The :visible_scripts and :all_scripts associations should be used with
+  # The :scripts and :all_scripts associations should be used with
   # caution because they bypass the script cache. They are ok to use when (1)
   # fresh information is needed based on the current status of user_scripts, and
   # (2) you will not need to read additional associations of the script object.
@@ -465,7 +465,7 @@ class User < ActiveRecord::Base
   # Script.with_associated_models. The downside to using this approach is that
   # it is very slow in development and levelbuilder environments where script
   # caching is disabled.
-  has_many :visible_scripts, -> {where hidden: false}, through: :user_scripts, source: :script
+  has_many :scripts, -> {where hidden: false}, through: :user_scripts, source: :script
   has_many :all_scripts, through: :user_scripts, source: :script
 
   validates :name, presence: true, unless: -> {purged_at}
@@ -1542,7 +1542,7 @@ class User < ActiveRecord::Base
 
   # Returns the set of courses the user has been assigned to or has progress in.
   def courses_as_student
-    visible_scripts.map(&:course).compact.concat(section_courses).uniq
+    scripts.map(&:course).compact.concat(section_courses).uniq
   end
 
   # Checks if there are any non-hidden scripts assigned to the user.
@@ -1697,7 +1697,7 @@ class User < ActiveRecord::Base
   end
 
   def working_on_scripts
-    visible_scripts.where('user_scripts.completed_at is null').map(&:cached)
+    scripts.where('user_scripts.completed_at is null').map(&:cached)
   end
 
   # NOTE: Changes to this method should be mirrored in
