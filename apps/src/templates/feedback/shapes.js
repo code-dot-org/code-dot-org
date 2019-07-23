@@ -9,11 +9,12 @@ const shapes = {
     linkToLevel: PropTypes.string.isRequired,
     unitName: PropTypes.string,
     linkToUnit: PropTypes.string,
-    updated_at: PropTypes.oneOfType([
+    created_at: PropTypes.oneOfType([
       PropTypes.string,
       PropTypes.instanceOf(Date)
     ]).isRequired,
-    comment: PropTypes.string
+    comment: PropTypes.string,
+    performance: PropTypes.string
   })
 };
 

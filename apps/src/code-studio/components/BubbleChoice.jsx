@@ -124,7 +124,11 @@ export default class BubbleChoice extends React.Component {
         {this.renderButtons()}
         <h2 style={styles.h2}>{i18n.chooseActivity()}</h2>
         {level.sublevels.map(sublevel => (
-          <div key={sublevel.id} style={styles.row}>
+          <div
+            key={sublevel.id}
+            style={styles.row}
+            className="uitest-bubble-choice"
+          >
             {sublevel.perfect && (
               <div style={styles.thumbnailOverlay}>
                 <FontAwesome icon="check" style={styles.check} />

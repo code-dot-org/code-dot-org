@@ -1155,6 +1155,8 @@ en:
               name: Pluralsight Test
             Externals Optionally Displayed as Unplugged:
               name: Externals Optionally Displayed as Unplugged
+            Bubble Choice:
+              name: Bubble Choice
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: 'Phase 2 Online: Blended Summer Study'
@@ -11798,6 +11800,20 @@ en:
               name: new stage
             Number Systems:
               name: Number Systems
+            Bit Sending Device:
+              name: Bit Sending Device
+            Flippy Do Pt 1:
+              name: Flippy Do Pt 1
+            Flippy Do Pt 2:
+              name: Flippy Do Pt 2
+            Sending Text:
+              name: Sending Text
+            Black and White Images:
+              name: Black and White Images
+            Color Images:
+              name: Color Images
+            Lossless Compression:
+              name: Lossless Compression
           title: CSP Unit 1 Pilot
           description_audience: ''
           description_short: ''
