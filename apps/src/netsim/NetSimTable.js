@@ -454,7 +454,7 @@ NetSimTable.prototype.fullCacheUpdate_ = function(allRows) {
   if (!_.isEqual(this.cache_, newCache)) {
     this.cache_ = newCache;
     this.latestRowID_ = maxRowID;
-    this.tableChange.notifyObservers('fullCacheUpdate');
+    this.tableChange.notifyObservers();
   }
 
   this.lastRefreshTime_ = Date.now();
@@ -474,7 +474,7 @@ NetSimTable.prototype.incrementalCacheUpdate_ = function(newRows) {
       maxRowID = Math.max(maxRowID, row.id);
     }, this);
     this.latestRowID_ = maxRowID;
-    this.tableChange.notifyObservers('incrementalCacheUpdate');
+    this.tableChange.notifyObservers();
   }
 
   this.lastRefreshTime_ = Date.now();
@@ -487,7 +487,7 @@ NetSimTable.prototype.incrementalCacheUpdate_ = function(newRows) {
  */
 NetSimTable.prototype.addRowToCache_ = function(row) {
   this.cache_[row.id] = row;
-  this.tableChange.notifyObservers('addRowToCache');
+  this.tableChange.notifyObservers();
 };
 
 /**
@@ -504,7 +504,7 @@ NetSimTable.prototype.removeRowsFromCache_ = function(ids) {
   }, this);
 
   if (cacheChanged) {
-    this.tableChange.notifyObservers('removeRowFromCache');
+    this.tableChange.notifyObservers();
   }
 };
 
@@ -523,7 +523,7 @@ NetSimTable.prototype.updateCacheRow_ = function(id, row) {
 
   if (!_.isEqual(oldRow, newRow)) {
     this.cache_[id] = newRow;
-    this.tableChange.notifyObservers('updateCacheRow');
+    this.tableChange.notifyObservers();
   }
 };
 
