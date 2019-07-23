@@ -4,7 +4,7 @@ import React from 'react';
 import Radium from 'radium';
 import color from '@cdo/apps/util/color';
 import {AnimationCategories, CostumeCategories} from '../constants';
-var msg = require('@cdo/gamelab/locale') || require('@cdo/spritelab/locale');
+import msg from '@cdo/locale';
 import animationLibrary from '../animationLibrary.json';
 import spriteCostumeLibrary from '../spriteCostumeLibrary.json';
 import ScrollableList from '../AnimationTab/ScrollableList.jsx';

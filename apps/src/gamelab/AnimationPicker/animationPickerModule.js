@@ -10,7 +10,7 @@ import {
 } from '../animationListModule';
 import {makeEnum} from '@cdo/apps/utils';
 import {animations as animationsApi} from '@cdo/apps/clientApi';
-var msg = require('@cdo/gamelab/locale') || require('@cdo/spritelab/locale');
+import msg from '@cdo/locale';
 import {changeInterfaceMode} from '../actions';
 import {GameLabInterfaceMode} from '../constants';
 
