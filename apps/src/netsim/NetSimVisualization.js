@@ -969,7 +969,6 @@ NetSimVisualization.prototype.changeWireState = function(newState) {
  * Kick off an animation that will show the state of the simplex wire being
  * set by the local node.
  * @param {"0"|"1"} newState
- * @param {boolean} fromRemote - if true, animate the wire being set from the remote node
  */
 NetSimVisualization.prototype.animateSetWireState = function(newState) {
   // Assumptions - we are talking about the wire between the local node
