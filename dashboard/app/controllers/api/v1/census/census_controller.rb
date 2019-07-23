@@ -80,7 +80,7 @@ class Api::V1::Census::CensusController < ApplicationController
           zip: params[:school_zip_s],
           school_name: params[:school_name_s],
           full_address: params[:school_location],
-          validation_type: SchoolInfo::VALIDATION_NONE
+          validation_type: SchoolInfo::VALIDATION_COMPLETE
         }
       end
 

@@ -182,8 +182,6 @@
   learn_more: "अधिक जानें"
   learn_sign_up_button: "साइन अप"
   blockly_name: "ब्लॉक्ली"
-  math_category_name: "गणित"
-  csf_category_name: "कंप्यूटर साइंस की बुनियादी बातें"
   codeorg_gradelevel: "उम्र 4-104"
   codeintl_gradelevel: "उम्र 4-104"
   tynker_gradelevel: "उम्र 5-13"
@@ -249,7 +247,8 @@
   header_course_catalog: "कोर्स कैटलॉग"
   header_project_gallery: "प्रोजेक्ट्स"
   header_about: "के बारे में"
-  header_report_bug: "“समस्या की रिपोर्ट करें”"
+  header_help_support: 'सहायता और समर्थन '
+  header_report_bug: "समस्या की रिपोर्ट करें"
   user_header_signin: "दाखिल करना"
   user_header_dance: "डांस पार्टी"
   applab_tile_start_tutorial: "शुरू करें"

@@ -38,7 +38,7 @@ de-DE:
       2-3 Artist 8:
         2-3_Artist_8_a: Wenn man 200 halbiert, wie viele Pixel breit muss jedes Quadrat
           dann sein?
-      2-3 Artist 9:
+      2-3 Artist 9 NEW:
         2-3_Artist_9_a: Diese Raute ist einfach nur ein gedrehter Quader
       2-3 Artist Debugging 10:
         2-3_Artist_Debugging_10_b: |-
@@ -58,11 +58,13 @@ de-DE:
       2-3 Artist Functions 3:
         2-3_Artist_Functions_3_a: "**115 + 45 = 160**"
       2-3 Artist Nested Loops 3:
-        2-3_Artist_Nested_Loops_3_a: "Brauchst du Hilfe mit den Winkeln?  \n**360/12
-          = 30**"
+        2-3_Artist_Nested_Loops_3_a: |-
+          Brauchst du Hilfe mit den Winkeln?\
+          **360/12 = 30**
       2-3 Artist Nested Loops 4:
-        2-3_Artist_Nested_Loops_3_a: "Brauchst du Hilfe mit den Winkeln?  \n**360/12
-          = 30**"
+        2-3_Artist_Nested_Loops_3_a: |-
+          Brauchst du Hilfe mit den Winkeln?\
+          **360/12 = 30**
       2-3 Artist Nested Loops 7:
         2-3_Artist_Nested_Loops_7_a: Wie weit sollten Sie sich in jedem Schleifendurchlauf
           drehen? Was ist 360/10?
@@ -104,7 +106,6 @@ de-DE:
         Course_4_SCF_1_a: Jedes Hexagon hat 40 Pixel lange Seiten.
       Course 4 SCF 1a:
         Course_4_SCF_1a_a: Erinnere dich an deine Funktionen aus Level 16.
-        Course_4_SCF_1a_b: "Siehe diesen Pfad als deine Hauptroute:  \n\n![](https://images.code.org/1c3feab70af706409b3a05af4dc83c2e-image-1469726967858.png)"
       Course 4 SCF 2:
         Course_4_SCF_2_a: Jedes Oktagon hat 40 Pixel lange Seiten.
       Course 4 SCFL 1b:
@@ -455,8 +456,6 @@ de-DE:
       courseD_maze_ramp6:
         courseC_maze_programming6_a: Es gibt zwei Möglichkeiten um dieses Puzzle zu
           lösen!
-      courseD_scrat_predict1:
-        courseF_maze_ramp6_a: Es gibt zwei Möglichkeiten um dieses Puzzle zu lösen!
-      courseD_scrat_ramp6:
-        courseC_maze_programming6_a: Es gibt zwei Möglichkeiten um dieses Puzzle zu
-          lösen!
+      courseD_scrat_ramp7:
+        courseD_scrat_programming6_a: Es gibt zwei Möglichkeiten um dieses Puzzle
+          zu lösen!

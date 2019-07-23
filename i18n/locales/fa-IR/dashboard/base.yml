@@ -199,9 +199,12 @@ fa:
     header:
       finished_hoc: "من ساعتی با کد خود را به پایان رسانده ام"
       sign_in_to_save: 'وارد گردید تا پیشرفتتان ذخیره شود'
-      course_catalog: "کاتالوگ دوره‌ها"
+      my_dashboard: "دَشبورد من"
+      course_catalog: "سرفصل دوره‌ها"
       project_gallery: "پروژه ها"
       educate_hoc: "ساعت کد نویسی"
+      about_us: "درباره ما"
+      about: "درباره"
     user:
       classroom: 'صفحه اصلی معلم'
       district_dashboard: 'محدوده ی داشبورد'

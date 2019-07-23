@@ -231,7 +231,7 @@ en:
             '"seconds"': seconds
           OP:
             '">"': ">"
-            '"<"': "\\<"
+            '"<"': "<"
             '"="': "="
       Dancelab_jumpTo:
         text: "[SPRITE][0] jump to [LOCATION][1]"
@@ -798,7 +798,7 @@ en:
       gamelab_location_picker:
         text: "[LOCATION][0]"
       gamelab_makeNewSpriteAnon:
-        text: make new [ANIMATION\_NAME][0] sprite at [LOCATION][1]
+        text: make new [ANIMATION_NAME][0] sprite at [LOCATION][1]
       gamelab_mirrorSprite:
         text: "[SPRITE][0] face [DIRECTION][1]"
         options:
@@ -1351,9 +1351,9 @@ en:
       aalab_createNewSpriteAdvanced:
         text: "make a new sprite called [NAME][0] \n with costume [COSTUME][1] \n at [LOCATION][2]"
       aalab_createNewSpriteAnon:
-        text: make new [ANIMATION\_NAME][0] sprite at [LOCATION][1]
+        text: make new [ANIMATION_NAME][0] sprite at [LOCATION][1]
       aalab_createNewSpriteAnonReturn:
-        text: aalab make new [ANIMATION\_NAME][0] sprite at [LOCATION][1]
+        text: aalab make new [ANIMATION_NAME][0] sprite at [LOCATION][1]
       aalab_createPropertyGroup:
         text: |-
           make a new sprite group called [VAR][0]

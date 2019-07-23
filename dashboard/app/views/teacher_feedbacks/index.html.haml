@@ -1,0 +1,7 @@
+- feedback_data = {}
+- feedback_data[:all_feedback] = @feedbacks_as_student_with_level_info
+
+#feedback-container
+
+- content_for(:head) do
+  %script{src: minifiable_asset_path('js/teacher_feedbacks/index.js'), data: {feedback: feedback_data.to_json}}

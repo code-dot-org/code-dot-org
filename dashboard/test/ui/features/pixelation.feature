@@ -2,7 +2,6 @@
 Feature: Pixelation levels
   # Brad (2018-11-14) Skip on IE due to blocked pop-ups
   @no_ie
-  @no_circle
   @as_student
   Scenario: Pixelation version 2 in black and white with no sliders
     Given I am on the 1st pixelation test level
@@ -21,7 +20,6 @@ Feature: Pixelation levels
 
   # Brad (2018-11-14) Skip on IE due to blocked pop-ups
   @no_ie
-  @no_circle
   @as_student
   Scenario: Pixelation version 3 in color with sliders
     Given I am on the 2nd pixelation test level
@@ -40,7 +38,6 @@ Feature: Pixelation levels
 
   # Brad (2018-11-14) Skip on IE due to blocked pop-ups
   @no_ie
-  @no_circle
   @as_student
   Scenario: Pixelation version 3 in color with sliders starting in hex mode
     Given I am on the 3rd pixelation test level

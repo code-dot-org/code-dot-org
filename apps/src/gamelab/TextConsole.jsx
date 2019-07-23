@@ -35,6 +35,7 @@ export const styles = {
     fontFamily: 'monospace'
   },
   text: {
+    fontSize: 15,
     margin: 0
   }
 };

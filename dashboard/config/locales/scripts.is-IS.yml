@@ -2512,6 +2512,10 @@ is:
                 fara fram.
             Variables:
               name: Breytur
+            Sprites:
+              name: Kvikar
+            Sprite Movement:
+              name: Hreyfing kvika
             Conditionals:
               name: Skilyrði
               description_student: Hópurinn byrjar á að nota boole-virkja til að bera
@@ -2968,6 +2972,10 @@ is:
               name: Lokaverkefni
             Post-Course Survey:
               name: Könnun eftir námskeið
+        gamelab-demo:
+          stages:
+            Simple Sprite Movement:
+              name: Einföld hreyfing kvika
         csd6-draft:
           stages:
             Lists:
@@ -2986,6 +2994,8 @@ is:
           stages:
             Introduction:
               name: Kynning
+            Sprites:
+              name: Kvikar
             'Project: Interactive Card':
               name: 'Verkefni: Gagnvirkt kort'
         csd5-draft:
@@ -3032,6 +3042,10 @@ is:
               name: Teikning í Leikjasmiðju
             Variables:
               name: Breytur
+            Sprites:
+              name: Kvikar
+            Sprite Movement:
+              name: Hreyfing kvika
             Conditionals:
               name: Skilyrði
             Complex Conditionals:
@@ -3233,6 +3247,10 @@ is:
               name: Teikning í Leikjasmiðju
             Variables:
               name: Breytur
+            Sprites:
+              name: Kvikar
+            Sprite Movement:
+              name: Hreyfing kvika
             Conditionals:
               name: Skilyrði
             'Project: Interactive Card':
@@ -3716,6 +3734,10 @@ is:
               name: Form og handahóf
             Variables:
               name: Breytur
+            Sprites:
+              name: Kvikar
+            Sprite Movement:
+              name: Hreyfing kvika
             Conditionals:
               name: Skilyrði
             Velocity:
@@ -3792,6 +3814,10 @@ is:
               name: Form og handahóf
             Variables:
               name: Breytur
+            Sprites:
+              name: Kvikar
+            Sprite Movement:
+              name: Hreyfing kvika
             Conditionals:
               name: Skilyrði
               description_student: Hópurinn byrjar á að nota boole-virkja til að bera
@@ -4456,6 +4482,17 @@ is:
               name: Fara yfir verkefnið
             The Artist:
               name: Listamaðurinn
+            Virtual Pet:
+              description_student: Í þessari kennslustund munu nemendur búa til gagnvirkt
+                sýndargæludýr sem lítur út og hegðar sér eins og þeir vilja. Nemendu
+                rmunu nota "Búninga" tæki Verusmiðjunnar til að sérsníða ásýnd gæludýrsins.
+                Þeir munu nota atvik, hegðun og önnur hugtök sem þeir hafa lært til
+                að blása lífi í gæludýrið!
+              description_teacher: Í þessari kennslustund munu nemendur búa til gagnvirkt
+                sýndargæludýr sem lítur út og hegðar sér eins og þeir vilja. Nemendu
+                rmunu nota "Búninga" tæki Verusmiðjunnar til að sérsníða ásýnd gæludýrsins.
+                Þeir munu nota atvik, hegðun og önnur hugtök sem þeir hafa lært til
+                að blása lífi í gæludýrið!
             Internet:
               name: Internetið
             Crowdsourcing:
@@ -4713,6 +4750,10 @@ is:
               name: Form og handahóf
             Variables:
               name: Breytur
+            Sprites:
+              name: Kvikar
+            Sprite Movement:
+              name: Hreyfing kvika
             Conditionals:
               name: Skilyrði
               description_student: Hópurinn byrjar á að nota boole-virkja til að bera
@@ -5054,6 +5095,8 @@ is:
           stages:
             new stage:
               name: nýr áfangi
+            Number Systems:
+              name: Talnakerfi
         csd-videos:
           stages:
             new stage:
@@ -5070,6 +5113,8 @@ is:
           stages:
             new stage:
               name: nýr áfangi
+            Libraries:
+              name: Söfn
         express-2018-vn:
           stages:
             Graph Paper Programming:
@@ -5167,6 +5212,10 @@ is:
               name: Form og handahóf
             Variables:
               name: Breytur
+            Sprites:
+              name: Kvikar
+            Sprite Movement:
+              name: Hreyfing kvika
             Conditionals:
               name: Skilyrði
               description_student: Hópurinn byrjar á að nota boole-virkja til að bera

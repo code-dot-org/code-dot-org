@@ -1,16 +1,22 @@
 ---
-sv-SE:
+sv:
   data:
     block_categories:
       Actions: Åtgärder
-      Color: Färg
-      Conditionals: Villkor
-      Dancers: Dansare
-      Events: Händelser
-      Functions: funktioner
-      Groups: Grupper
-      Logic: Logik
       Loops: loopar
+      Functions: funktioner
+      Color: Färg
       Math: Matte
-      Text: text
+      Logic: Logik
       Variables: variabler
+      Conditionals: Villkor
+      Events: Händelser
+      Text: text
+      Location: Ort
+      Dancers: Dansare
+      Groups: Grupper
+      Start: Start
+      Booleans: Booleska värden
+      test: test
+      Name: Namn
+      Function: Funktion

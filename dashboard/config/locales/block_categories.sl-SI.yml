@@ -1,14 +1,19 @@
 ---
-sl-SI:
+sl:
   data:
     block_categories:
       Actions: Dejanja
+      Loops: Zanke
+      Functions: Funkcije
       Color: Barva
+      Math: Matematika
+      Logic: Logika
+      Variables: Spremenljivke
       Conditionals: Pogoji
       Events: Dogodki
-      Functions: Funkcije
-      Logic: Logika
-      Loops: Zanke
-      Math: Matematika
       Text: Besedilo
-      Variables: Spremenljivke
+      Location: Lokacija
+      Start: Začni
+      test: preizkus
+      Name: Ime
+      Function: Funkcija

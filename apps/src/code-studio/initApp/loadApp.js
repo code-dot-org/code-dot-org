@@ -99,6 +99,7 @@ export function setupApp(appOptions) {
         appOptions.level.projectTemplateLevelName ||
         appOptions.app === 'applab' ||
         appOptions.app === 'gamelab' ||
+        appOptions.app === 'spritelab' ||
         appOptions.app === 'weblab'
       ) {
         $('#clear-puzzle-header').hide();
@@ -509,6 +510,13 @@ const sourceHandler = {
     } else {
       callback({});
     }
+  },
+  setInitialGeneratedProperties(generatedProperties) {
+    getAppOptions().initialGeneratedProperties = generatedProperties;
+  },
+  getGeneratedProperties() {
+    const {getGeneratedProperties} = getAppOptions();
+    return getGeneratedProperties && getGeneratedProperties();
   },
   prepareForRemix() {
     const {prepareForRemix} = getAppOptions();

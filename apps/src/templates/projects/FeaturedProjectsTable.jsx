@@ -3,7 +3,8 @@ import React from 'react';
 import i18n from '@cdo/locale';
 import color from '../../util/color';
 import {ImageWithStatus} from '../ImageWithStatus';
-import {Table, sort} from 'reactabular';
+import * as Table from 'reactabular-table';
+import * as sort from 'sortabular';
 import wrappedSortable from '../tables/wrapped_sortable';
 import orderBy from 'lodash/orderBy';
 import {
@@ -215,7 +216,7 @@ class FeaturedProjectsTable extends React.Component {
           }
         },
         cell: {
-          format: thumbnailFormatter,
+          formatters: [thumbnailFormatter],
           props: {
             style: {
               ...tableLayoutStyles.cell,
@@ -237,7 +238,7 @@ class FeaturedProjectsTable extends React.Component {
           }
         },
         cell: {
-          format: nameFormatter,
+          formatters: [nameFormatter],
           props: {
             style: {
               ...tableLayoutStyles.cell,
@@ -254,7 +255,7 @@ class FeaturedProjectsTable extends React.Component {
           transforms: [sortable]
         },
         cell: {
-          format: typeFormatter,
+          formatters: [typeFormatter],
           props: {
             style: {
               ...styles.cellType,
@@ -271,7 +272,7 @@ class FeaturedProjectsTable extends React.Component {
           transforms: [sortable]
         },
         cell: {
-          format: dateFormatter,
+          formatters: [dateFormatter],
           props: {style: tableLayoutStyles.cell}
         }
       },
@@ -283,7 +284,7 @@ class FeaturedProjectsTable extends React.Component {
           transforms: [sortable]
         },
         cell: {
-          format: dateFormatter,
+          formatters: [dateFormatter],
           props: {style: tableLayoutStyles.cell}
         }
       }
@@ -297,7 +298,7 @@ class FeaturedProjectsTable extends React.Component {
           transforms: [sortable]
         },
         cell: {
-          format: dateFormatter,
+          formatters: [dateFormatter],
           props: {style: tableLayoutStyles.cell}
         }
       },
@@ -313,7 +314,7 @@ class FeaturedProjectsTable extends React.Component {
           }
         },
         cell: {
-          format: actionsFormatterUnfeatured,
+          formatters: [actionsFormatterUnfeatured],
           props: {style: tableLayoutStyles.cell}
         }
       }
@@ -331,7 +332,7 @@ class FeaturedProjectsTable extends React.Component {
           }
         },
         cell: {
-          format: actionsFormatterFeatured,
+          formatters: [actionsFormatterFeatured],
           props: {style: tableLayoutStyles.cell}
         }
       }

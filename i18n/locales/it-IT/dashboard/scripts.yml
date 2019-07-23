@@ -286,7 +286,7 @@ it:
           description_short: Usa il Laboratorio per creare una storia o inventare un gioco con i personaggi di Disney Infinity.
           stages:
             Infinity:
-              name: Infiniti
+              name: Infinito
         algebrademo:
           title: Demo per l'Algebra
           description: Un po' di esercizi per dimostrare l'ambiente ed il linguaggio di programmazione usati nel corso "Informatica in Algebra"
@@ -2048,6 +2048,7 @@ it:
             Spelling Bee:
               name: Ape Sapiente
           title: Corso rapido pre-scolare
+          assignment_family_title: Corso rapido pre-scolare
           description_short: 'Introduzione all''informatica per studenti pre-scolari: mette insieme il meglio dei nostri corsi per la scuola dell''infanzia e per la prima classe della scuola primaria.'
           description: Impara le basi dell'informatica e della sicurezza su Internet. Alla fine del corso, potrai creare il tuo gioco o la tua storia che potrai condividere.
         subgoal-labels-opt-in:
@@ -3050,7 +3051,10 @@ it:
             Alien Dance Party - Input:
               name: La festa degli alieni - Ingressi
         pre-express-2018:
+          title: Corso Rapido pre-scolare (2018)
+          assignment_family_title: Corso rapido pre-scolare
           description: Impara le basi dell'informatica e della sicurezza su Internet. Alla fine del corso, potrai creare il tuo gioco o la tua storia che potrai condividere.
+          description_short: 'Introduzione all''informatica per studenti pre-scolari: mette insieme il meglio dei nostri corsi per la scuola dell''infanzia e per la prima classe della scuola primaria.'
           stages:
             'Debugging: Unspotted Bugs':
               name: Quei fastidiosi insetti nascosti
@@ -3256,7 +3260,7 @@ it:
               description_teacher: In informatica affrontiamo alcuni problemi che possono scoraggiare. Sfide come la ricerca di grandi numeri primi o il sequenziamento del DNA sono quasi impossibili da risolvere come singoli individui. Affrontare queste attività in gruppo permette di ridimensionarle e renderle gestibili. Questa lezione mostrerà ai tuoi studenti quanto utile possa essere il lavoro di squadra nel settore dell'informatica.
             Digital Sharing:
               name: Condivisione digitale
-              description_teacher: Questa lezione è un contributo del gruppo Copyright e Creatività di Code.org e serve per aiutare gli studenti a comprendere le sfide e i vantaggi del rispetto della proprietà intellettuale (copyright), in particolare in ambiento digitale. Gli studenti dovrebbero essere incoraggiati a rispettare i diritti degli artisti come parte integrante dell'etica di un buon cittadino digitale.
+              description_teacher: Questa lezione è un contributo del gruppo Copyright e Creatività (www.copyrightandcreativity.org) e serve per aiutare gli studenti a comprendere le sfide e i vantaggi del rispetto della proprietà intellettuale (copyright), in particolare in ambiento digitale. Gli studenti dovrebbero essere incoraggiati a rispettare i diritti degli artisti come parte integrante dell'etica di un buon cittadino digitale.
             Running Simulations:
               name: Simulazioni in corso
         dance-low:
@@ -3279,7 +3283,7 @@ it:
             Relay Programming:
               name: Programmazione a staffetta
               description_student: Ricordi quando facevi i primi disegni con il coding all'inizio del corso? In questa lezione lavorerai in gruppo per fare qualcosa di molto simile!
-              description_teacher: 'Questa attività inizierà con una breve lezione sulla correzione degli errori (debugging) e sulla persistenza, poi partirà una corsa contro il tempo: gli studenti si suddividono in squadre e lavorano insieme per scrivere un programma un''istruzione alla volta.'
+              description_teacher: 'Questa attività inizierà con una breve lezione sulla correzione degli errori (debugging) e sulla perseveranza, poi partirà una corsa contro il tempo: gli studenti si suddividono in squadre e lavorano insieme per scrivere un programma un''istruzione alla volta.'
             Debugging in Collector:
               name: Debugging con la collezionista
               description_student: 'Hai mai avuto problemi durante la programmazione? In questa lezione imparerai i segreti del debugging: il processo di cercare e risolvere i problemi nel codice. '
@@ -3665,7 +3669,9 @@ it:
               name: Sequenze di istruzioni con Angry Birds
               description_teacher: Questa lezione darà agli studenti un'idea di cosa aspettarsi quando andranno nel laboratorio di informatica. Si comincia con una breve discussione introduttiva sui comportamenti da tenere in laboratorio, poi gli studenti inizieranno ad utilizzare un computer per completare degli esercizi online.
         pre-express-2019:
+          title: Corso Rapido pre-scolare (2019)
           description: Impara le basi dell'informatica e della sicurezza su Internet. Alla fine del corso, potrai creare il tuo gioco o la tua storia che potrai condividere.
+          description_short: 'Introduzione all''informatica per studenti pre-scolari: mette insieme il meglio dei nostri corsi per la scuola dell''infanzia e per la prima classe della scuola primaria.'
           stages:
             'Debugging: Unspotted Bugs':
               name: 'Correzione Errori (Debugging)'
@@ -3790,6 +3796,10 @@ it:
           stages:
             Mid-Year Survey:
               name: Sondaggio di metà anno
+        csp1-pilot:
+          stages:
+            Number Systems:
+              name: Sistema di numerazione
         time4csdemo:
           stages:
             Crowdsourcing:

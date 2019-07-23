@@ -9,7 +9,7 @@ import {connect} from 'react-redux';
 import {convertXmlToBlockly} from './utils';
 import VideoThumbnail from '../VideoThumbnail';
 import {videoDataShape} from '../types';
-import UnsafeRenderedMarkdown from '../UnsafeRenderedMarkdown';
+import SafeMarkdown from '../SafeMarkdown';
 
 class InlineHint extends React.Component {
   static propTypes = {
@@ -46,7 +46,7 @@ class InlineHint extends React.Component {
         ttsUrl={this.props.ttsUrl}
         ttsMessage={this.props.ttsMessage}
       >
-        <UnsafeRenderedMarkdown markdown={this.props.markdown} />
+        <SafeMarkdown markdown={this.props.markdown} />
         {this.props.block && <ReadOnlyBlockSpace block={this.props.block} />}
         {this.props.video && (
           <VideoThumbnail

@@ -65,365 +65,1548 @@ pl:
         title: tytuł
     match:
       2-3 Big Event Match 1:
-        Match the button combination to the dance moves.: Dopasuj kombinację przycisków do ruchów tańca.
-        Matching: Dopasowanie
+        content2: Dopasuj kombinację przycisków do ruchów tańca.
+        title: Dopasowanie
       2-3 Binary Match 1:
-        "<strong>N</strong>": "<strong>N</strong>"
-        "<strong>O</strong>": "<strong>O</strong>"
-        "<strong>P</strong>": "<strong>P</strong>"
-        "<strong>Q</strong>": "<strong>Q</strong>"
-        Matching: Dopasowanie
-        Use the key to match each code to its letter: Użyj klawisza, aby połączyć każdy kod z jego literą
+        content2: Użyj klawisza, aby połączyć każdy kod z jego literą
+        questions:
+          - 
+            text: "<strong>N</strong>"
+          - 
+            text: "<strong>O</strong>"
+          - 
+            text: "<strong>P</strong>"
+          - 
+            text: "<strong>Q</strong>"
+        title: Dopasowanie
       2-3 Graph Paper Match 1:
-        Match the grid to the program.: Dopasuj siatkę do programu.
-        Matching: Dopasowanie
+        content1: Dopasuj siatkę do programu.
+        title: Dopasowanie
       2-3 Maze Match 2:
-        Instructions: Instrukcje
-        Match the puzzles to the blocks: Dopasuj łamigłówki do bloków
-        Maze Match: 'Labirynt: Dopasowanie'
+        content1: Dopasuj łamigłówki do bloków
+        pre_title: Instrukcje
+        title: 'Labirynt: Dopasowanie'
       2-3 artist loops match 1:
-        Match the loop to the shape: Dopasuj pętlę do kształtu
+        content2: Dopasuj pętlę do kształtu
       2-3 artist match 1:
-        Artist Matching: 'Artysta: Dopasowywanie'
-        Match the shape with the blocks that complete it.: Dopasuj do kształtów bloki, które je tworzą.
+        content1: Dopasuj do kształtów bloki, które je tworzą.
+        title: 'Artysta: Dopasowywanie'
       2-3 maze match 1:
-        Match the puzzles to the blocks: Dopasuj łamigłówki do bloków
-        Maze Match One: 'Labirynt: Dopasowanie 1'
+        content1: Dopasuj łamigłówki do bloków
+        title: 'Labirynt: Dopasowanie 1'
       4-5 Algorithms Match 1:
-        "<h4>1)</h4>": "<h4>1)</h4>"
-        "<h4>2)</h4>": "<h4>2)</h4>"
-        "<h4>3)</h4>": "<h4>3)</h4>"
-        "<h4>4)</h4>": "<h4>4)</h4>"
-        "<h4>Add Player 1 roll to total score</h4>": "<h4>Dodaj wynik Gracza 1 do całkowitego wyniku</h4>"
-        "<h4>Compare player scores to see who wins</h4>": "<h4>Porównaj wyniki graczy, aby zobaczyć, kto wygrywa</h4>"
-        "<h4>Player 1 rolls die</h4>": "<h4>Gracz 1 rzuca kostką</h4>"
-        "<h4>Set Player 1 score to 0</h4>": "<h4>Ustaw wynik Gracz 1 na 0</h4>"
-        Match the steps in the Dice Race game to the order that they should appear in the algorithm.: Ustaw w kolejności kroki w grze w kości (Dice Race), w jakiej powinny wystąpić w algorytmie.
-        Matching: Dopasowanie
+        answers:
+          - 
+            text: "<h4>Ustaw wynik Gracz 1 na 0</h4>"
+          - 
+            text: "<h4>Gracz 1 rzuca kostką</h4>"
+          - 
+            text: "<h4>Dodaj wynik Gracza 1 do całkowitego wyniku</h4>"
+          - 
+            text: "<h4>Porównaj wyniki graczy, aby zobaczyć, kto wygrywa</h4>"
+        content1: Ustaw w kolejności kroki w grze w kości (Dice Race), w jakiej powinny wystąpić w algorytmie.
+        questions:
+          - 
+            text: "<h4>1)</h4>"
+          - 
+            text: "<h4>2)</h4>"
+          - 
+            text: "<h4>3)</h4>"
+          - 
+            text: "<h4>4)</h4>"
+        title: Dopasowanie
       4-5 Computational Thinking Match 1:
-        "<h3>Wheels/side: 2<br/>Windows/side: 0</h3>": "<h3>Koła/z boku: 2 <br/> Windows/z boku: 0</h3>"
-        "<h3>Wheels/side: 2<br/>Windows/side: 1</h3>": "<h3>Koła/z boku: 2 <br/> Windows/z boku: 1</h3>"
-        "<h3>Wheels/side: 2<br/>Windows/side: 6</h3>": "<h3>Koła/z boku: 2 <br/> Windows/z boku: 6</h3>"
-        "<h3>Wheels/side: 3<br/>Windows/side: 2</h3>": "<h3>Koła/z boku: 3 <br/> Windows/z boku: 2</h3>"
-        Each of these vehicles has been decomposed into smaller pieces. Match each vehicle with its decomposed list.: Każdy z tych pojazdów został rozłożony na mniejsze części. Dopasuj każdy pojazd do listy rozłożonych elementów.
-        Matching: Dopasowanie
+        content1: Każdy z tych pojazdów został rozłożony na mniejsze części. Dopasuj każdy pojazd do listy rozłożonych elementów.
+        questions:
+          - 
+            text: "<h3>Koła/z boku: 2 <br/> Windows/z boku: 0</h3>"
+          - 
+            text: "<h3>Koła/z boku: 2 <br/> Windows/z boku: 1</h3>"
+          - 
+            text: "<h3>Koła/z boku: 2 <br/> Windows/z boku: 6</h3>"
+          - 
+            text: "<h3>Koła/z boku: 3 <br/> Windows/z boku: 2</h3>"
+        title: Dopasowanie
       4-5 Suncatchers Match 1:
-        "<h4>RAMP</h4>": "<h4>RAMP</h4>"
-        "<h4>STACK</h4>": "<h4>STACK</h4>"
-        "<h4>STAMP</h4>": "<h4>STAMP</h4>"
-        "<h4>STAR</h4>": "<h4>STAR</h4>"
-        Match each program to the word it makes, using the provided group of skills.: Połącz każdy program do słowa, które tworzy, stosując dostarczoną grupę umiejętności.
-        Matching: Dopasowanie
+        answers:
+          - 
+            text: "<h4>STACK</h4>"
+          - 
+            text: "<h4>STAMP</h4>"
+          - 
+            text: "<h4>STAR</h4>"
+          - 
+            text: "<h4>RAMP</h4>"
+        content1: Połącz każdy program do słowa, które tworzy, stosując dostarczoną grupę umiejętności.
+        title: Dopasowanie
       4-5 maze match 1:
-        Instructions: Instrukcje
-        Match the puzzles to the blocks: Dopasuj łamigłówki do bloków
-        Maze Match: 'Labirynt: Dopasowanie'
+        content1: Dopasuj łamigłówki do bloków
+        pre_title: Instrukcje
+        title: 'Labirynt: Dopasowanie'
       K-1 Artist 2 Match 2:
-        Match the shapes based on type.: Dopasuj kształty podobnego typu.
-        Matching: Dopasowanie
+        content2: Dopasuj kształty podobnego typu.
+        title: Dopasowanie
       K-1 Bee Loops Match 1:
-        Match the blocks: Dopasuj bloki
-        Matching: Dopasowanie
+        content2: Dopasuj bloki
+        title: Dopasowanie
       K-1 Big Event Match 1:
-        Match the button combination to the dance moves.: Dopasuj kombinację przycisków do ruchów tańca.
-        Matching: Dopasowanie
+        content2: Dopasuj kombinację przycisków do ruchów tańca.
+        title: Dopasowanie
       K-1 Maze Match 1:
-        Instructions: Instrukcje
-        Match the puzzles and blocks: Dopasuj łamigłówki i bloki
-        Matching: Dopasowanie
+        content2: Dopasuj łamigłówki i bloki
+        pre_title: Instrukcje
+        title: Dopasowanie
     multi:
       2-3 Algorithms Multi 1:
-        Choose an algorithm for the image provided.: Wybierz algorytm pasujący do obrazka.
-        Multiple Choice: Test wielokrotnego wyboru
-        Start with a square<br/>Put a parallelogram above the square<br/>Put a triangle right of the parallelogram: Zacznij od kwadratu<br/>Umieść równoległobok nad kwadratem<br/>Umieść trójkąt na prawo od równoległoboku
-        Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square: Rozpocznij od kwadratu <br/> Umieść trójkąt powyżej kwadratu <br/> Umieścić trójkąt poniżej kwadratu
-        Start with a square<br/>Put a triangle below the square<br/>Put a parallelogram right of the triangle: Zacznij od kwadratu<br/>Umieść trójkąt pod kwadratem<br/>Umieść równoległobok na prawo od trójkąta
-        0: '? Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram below square<br/>Put triangle right of parallelogram'
-        1: ': Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram below square<br/>Put triangle right of parallelogram'
+        answers:
+          - 
+            text: Rozpocznij od kwadratu <br/> Umieść trójkąt powyżej kwadratu <br/> Umieścić trójkąt poniżej kwadratu
+            correct: false
+          - 
+            correct: true
+          - 
+            text: Zacznij od kwadratu<br/>Umieść równoległobok nad kwadratem<br/>Umieść trójkąt na prawo od równoległoboku
+            correct: false
+          - 
+            text: Zacznij od kwadratu<br/>Umieść trójkąt pod kwadratem<br/>Umieść równoległobok na prawo od trójkąta
+            correct: false
+        questions:
+          - 
+            text: Wybierz algorytm pasujący do obrazka.
+        title: Test wielokrotnego wyboru
       2-3 Algorithms Multi 2:
-        Multiple Choice: Test wielokrotnego wyboru
-        Start with a triangle<br/>Put a square below the triangle<br/>Put another triangle below the square: Zacznij od trójkąta<br/>Umieść kwadrat pod trójkątem <br/>Umieść kolejny trójkąt pod kwadratem
-        Which image does <em>not</em> follow this algorithm?: Który z obrazków <em>nie</em> pasuje do podanego algorytmu?
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+        content1: Zacznij od trójkąta<br/>Umieść kwadrat pod trójkątem <br/>Umieść kolejny trójkąt pod kwadratem
+        questions:
+          - 
+            text: Który z obrazków <em>nie</em> pasuje do podanego algorytmu?
+        title: Test wielokrotnego wyboru
       2-3 Conditionals Multi 1:
-        According to the rules of the game, which set of cards is scored correctly?: Który zestaw kart został ułożony zgodnie z zasadami gry?
-        Multiple Choice: Test wielokrotnego wyboru
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+        questions:
+          - 
+            text: Który zestaw kart został ułożony zgodnie z zasadami gry?
+        title: Test wielokrotnego wyboru
       2-3 Getting Loopy Multi 1:
-        How would you simplify this sequence with loops?: Jak możesz uprościć ten ciąg działań za pomocą pętli?
-        Multiple Choice: Test wielokrotnego wyboru
+        answers:
+          - 
+            correct: true
+          - 
+          - 
+          - 
+        questions:
+          - 
+            text: Jak możesz uprościć ten ciąg działań za pomocą pętli?
+        title: Test wielokrotnego wyboru
       2-3 Graph Paper Multi 1:
-        Multiple Choice: Test wielokrotnego wyboru
-        Which program makes this image?: Za pomocą którego programu został utworzony ten obrazek?
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+        questions:
+          - 
+            text: Za pomocą którego programu został utworzony ten obrazek?
+        title: Test wielokrotnego wyboru
       2-3 Maze Multi 2:
-        Maze Multiple Choice: 'Labirynt: Test wielokrotnego wyboru'
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+        title: 'Labirynt: Test wielokrotnego wyboru'
       2-3 Relay Programming Multi 1:
-        Multiple Choice: Test wielokrotnego wyboru
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+        title: Test wielokrotnego wyboru
       2-3 Relay Programming Multi 2:
-        Multiple Choice: Test wielokrotnego wyboru
-        Which image-program combo does not contain mistakes?: Które połączenie obrazka i sekwencji strzałek nie zawiera błędu?
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+        questions:
+          - 
+            text: Które połączenie obrazka i sekwencji strzałek nie zawiera błędu?
+        title: Test wielokrotnego wyboru
+      2-3 artist debug multi 1:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
       2-3 artist functions multi 1:
-        Artist Functions Multiple Choice One: 'Artysta, funkcje: Test wielokrotnego wyboru 1'
-        Pick the correct blocks to draw this image using the given functions: Wybierz odpowiednie bloki, aby narysować ten obrazek przy użyciu dostępnych funkcji
+        answers:
+          - 
+            correct: true
+          - 
+          - 
+        questions:
+          - 
+            text: Wybierz odpowiednie bloki, aby narysować ten obrazek przy użyciu dostępnych funkcji
+        title: 'Artysta, funkcje: Test wielokrotnego wyboru 1'
       2-3 artist loops multi 1:
-        Artist Loops Multiple Choice: 'Artysta, pętle: Test wielokrotnego wyboru'
-        Which shape is made by this loop?: Który kształt jest tworzony przez tę pętlę?
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+        questions:
+          - 
+            text: Który kształt jest tworzony przez tę pętlę?
+        title: 'Artysta, pętle: Test wielokrotnego wyboru'
       2-3 artist loops multi 2:
-        Artist Loops Multiple Choice: 'Artysta, pętle: Test wielokrotnego wyboru'
-        Which shape is made by this program?: Który kształt można utworzyć za pomocą tego programu?
+        answers:
+          - 
+          - 
+          - 
+          - 
+            correct: true
+        questions:
+          - 
+            text: Który kształt można utworzyć za pomocą tego programu?
+        title: 'Artysta, pętle: Test wielokrotnego wyboru'
       2-3 bee conditionals multi 1:
-        Which comparison below is true?: Które z poniższych porównań jest prawdziwe?
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+        questions:
+          - 
+            text: Które z poniższych porównań jest prawdziwe?
       2-3 bee conditionals multi 3:
-        Choose the best blocks.: Wybierz najlepsze bloki.
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+        questions:
+          - 
+            text: Wybierz najlepsze bloki.
       2-3 bee loops multi 1:
-        Bee Loops Multiple Choice One: 'Pszczółka, pętle: Test wielokrotnego wyboru 1'
-        Which blocks collect all of the nectar?: Którymi blokami zbierzesz cały nektar?
+        answers:
+          - 
+            correct: true
+          - 
+          - 
+          - 
+        questions:
+          - 
+            text: Którymi blokami zbierzesz cały nektar?
+        title: 'Pszczółka, pętle: Test wielokrotnego wyboru 1'
       2-3 maze multi 1:
-        Maze Multiple Choice One: 'Labirynt: Test wielokrotnego wyboru 1'
-        Which set of blocks is the correct answer?: Który zestaw bloków jest prawidłową odpowiedzią?
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+        questions:
+          - 
+            text: Który zestaw bloków jest prawidłową odpowiedzią?
+        title: 'Labirynt: Test wielokrotnego wyboru 1'
       4-5 Algorithms Multi 1:
-        Baking cookies: Pieczenie ciasteczek
-        Banana: Banan
-        Brushing your teeth: Szczotkowanie zębów
-        Multiple Choice: Test wielokrotnego wyboru
-        Shopping from a grocery list: Zakupy spożywcze z listą
-        Which one of these items is hardest to describe an algorithm for?: Dla którego z tych elementów najtrudniej jest napisać algorytm?
+        answers:
+          - 
+            text: Szczotkowanie zębów
+            correct: false
+          - 
+            text: Pieczenie ciasteczek
+            correct: false
+          - 
+            text: Zakupy spożywcze z listą
+            correct: false
+          - 
+            text: Banan
+            correct: true
+        questions:
+          - 
+            text: Dla którego z tych elementów najtrudniej jest napisać algorytm?
+        title: Test wielokrotnego wyboru
       4-5 Computational Thinking Multi 1:
-        Eugene is a _____ city.: Eugene jest  _____ miastem.
-        0: '? Here are three sentences. Which of the templates below correctly abstracts so that all three match the same pattern as the template?'
-        1: ': Oto trzy zdania. Który z poniższych szablonów pasuje do wszystkich trzech zdań?'
-        Multiple Choice: Test wielokrotnego wyboru
-        Seattle _____ a _____ _____.: Seattle _____ _____ _____.
-        Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.: Seattle jest dużym miastem.<br/>Eugene jest średnim miastem<br/>Hillview jest małym miastem.
-        _____ is _____ a _____.: _____ jest _____ _____.
-        _____ is a _____ city.: _____ jest  _____ miastem.
+        answers:
+          - 
+            text: Seattle _____ _____ _____.
+            correct: false
+          - 
+            text: _____ jest  _____ miastem.
+            correct: true
+          - 
+            text: _____ jest _____ _____.
+            correct: false
+          - 
+            text: Eugene jest  _____ miastem.
+            correct: false
+        questions:
+          - 
+            text: Seattle jest dużym miastem.<br/>Eugene jest średnim miastem<br/>Hillview jest małym miastem.
+        title: Test wielokrotnego wyboru
       4-5 Crowdsourcing Multi 1:
-        Multiple Choice: Test wielokrotnego wyboru
-        Which of these pictures best represents crowdsourcing?: Który z tych obrazków najlepiej przedstawia crowdsourcing?
+        answers:
+          - 
+          - 
+            correct: true
+        questions:
+          - 
+            text: Który z tych obrazków najlepiej przedstawia crowdsourcing?
+        title: Test wielokrotnego wyboru
       4-5 Crowdsourcing Multi 2:
-        Brushing your hair: Szczotkowanie włosów
-        Cleaning your room: Sprzątanie pokoju
-        Eating your dessert: Jedzenie deseru
-        Multiple Choice: Test wielokrotnego wyboru
-        Washing your face: Mycie twarzy
-        Which one of these activities would be best for practicing crowdsourcing?: Która z tych czynności jest najlepszym przykładem crowdsourcing?
+        answers:
+          - 
+            text: Sprzątanie pokoju
+            correct: true
+          - 
+            text: Jedzenie deseru
+            correct: false
+          - 
+            text: Szczotkowanie włosów
+            correct: false
+          - 
+            text: Mycie twarzy
+            correct: false
+        questions:
+          - 
+            text: Która z tych czynności jest najlepszym przykładem crowdsourcing?
+        title: Test wielokrotnego wyboru
       4-5 Digital Footprint Multi 1:
-        Multiple Choice: Test wielokrotnego wyboru
-        Which piece of information listed below is okay to share on the internet?: Którą z poniższych informacji możesz udostępnić w internecie?
-        Your address: Twój adres
-        Your birthday: Data Twoich urodzin
-        Your favorite food: Twoja ulubiona potrawa
-        Your parent's credit card number: Numer karty kredytowej Twoich rodziców
+        answers:
+          - 
+            text: Data Twoich urodzin
+            correct: false
+          - 
+            text: Twoja ulubiona potrawa
+            correct: true
+          - 
+            text: Twój adres
+            correct: false
+          - 
+            text: Numer karty kredytowej Twoich rodziców
+            correct: false
+        questions:
+          - 
+            text: Którą z poniższych informacji możesz udostępnić w internecie?
+        title: Test wielokrotnego wyboru
       4-5 Internet Multi 1:
-        Multiple Choice: Test wielokrotnego wyboru
-        When you try to log on to code.org, which IP address is the DNS most likely to take you to?: Logując się na stronę code.org, na który adres IP najprawdopodobniej przeniesie Cię DNS?
+        answers:
+          - 
+          - 
+          - 
+          - 
+            correct: true
+        questions:
+          - 
+            text: Logując się na stronę code.org, na który adres IP najprawdopodobniej przeniesie Cię DNS?
+        title: Test wielokrotnego wyboru
       4-5 Internet Multi 2:
-        If the DNS has sent you to the page at the IP address 100.42.50.110, which website are you on?: Jeśli DNS zabrał Cię na stronę o adresie IP 100.42.50.110, to jak nazywa ta strona?
-        Multiple Choice: Test wielokrotnego wyboru
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+        questions:
+          - 
+            text: Jeśli DNS zabrał Cię na stronę o adresie IP 100.42.50.110, to jak nazywa ta strona?
+        title: Test wielokrotnego wyboru
       4-5 Songwriting Multi 1:
-        0: '? Fly''s in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly''s in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly''s in the buttermilk, <br/>Shoo, fly, shoo, <br/>Skip to my Lou, my darlin.'
-        1: ': Muszka jest w maślance, <br/> Uciekaj, muszko, uciekaj, <br/> Muszka jest w maślance, <br/> Uciekaj, muszko, uciekaj, <br/> Muszka jest w maślance, <br/> Uciekaj, muszko, uciekaj, <br/> Przeskocz do mojej Lou, moja kochana.'
-        Lou, Lou, skip to my Lou,: Lou Lou, przeskocz do mojej Lou,
-        Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.: Lou, Lou, przeskocz do mojej Lou, <br/> Lou, Lou, przeskocz do mojej Lou, <br/> Lou, Lou, przeskocz do mojej Lou, <br/> Przeskocz do mojej Lou, moja kochana.
-        2: '? Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly''s in the buttermilk, <br/>Shoo, fly, shoo,'
-        3: ': Lou, Lou, przeskocz do mojej Lou, <br/> Lou, Lou, przeskocz do mojej Lou, <br/> Lou, Lou, przeskocz do mojej Lou, <br/> Przeskocz do mojej Lou, moja kochana. <br/> <br/> <p>Muszka jest w maślance, <br/> Uciekaj, muszko, uciekaj,'
-        Multiple Choice: Test wielokrotnego wyboru
-        4: '? What is the largest chunk of this song that you can define as the chorus so that the chorus repeats exactly each time it is called?'
-        5: ': What is the largest chunk of this song that you can define as the chorus so that the chorus repeats exactly each time it is called?'
+        answers:
+          - 
+            text: Lou Lou, przeskocz do mojej Lou,
+            correct: false
+          - 
+            text: Lou, Lou, przeskocz do mojej Lou, <br/> Lou, Lou, przeskocz do mojej Lou, <br/> Lou, Lou, przeskocz do mojej Lou, <br/> Przeskocz do mojej Lou, moja kochana.
+            correct: true
+          - 
+          - 
+        title: Test wielokrotnego wyboru
       4-5 Suncatchers Multi 1:
-        Multiple Choice: Test wielokrotnego wyboru
-        Which of the programs below <em>does not</em> make the exact same sequence as Program 1?: Który z programów poniżej <em>nie</em> tworzy tej samej sekwencji, co Program 1?
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+        questions:
+          - 
+            text: Który z programów poniżej <em>nie</em> tworzy tej samej sekwencji, co Program 1?
+        title: Test wielokrotnego wyboru
       4-5 artist loops multi 1:
-        Artist Loops Multiple Choice: 'Artysta, pętle: Test wielokrotnego wyboru'
-        Which blocks will create the design?: Które bloki utworzą ten wzorek?
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+        questions:
+          - 
+            text: Które bloki utworzą ten wzorek?
+        title: 'Artysta, pętle: Test wielokrotnego wyboru'
       4-5 artist multi 1:
-        Artist Multiple Choice: 'Artysta: Test wielokrotnego wyboru'
-        Which blocks draw a rectangle with a perimeter of 100?: Które bloki narysują prostokąt o obwodzie 100?
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+        questions:
+          - 
+            text: Które bloki narysują prostokąt o obwodzie 100?
+        title: 'Artysta: Test wielokrotnego wyboru'
       4-5 artist multi 2:
-        Artist Multiple Choice: 'Artysta: Test wielokrotnego wyboru'
-        Which drawing is symmetric?: Który z rysunków jest symetryczny?
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+        questions:
+          - 
+            text: Który z rysunków jest symetryczny?
+        title: 'Artysta: Test wielokrotnego wyboru'
       4-5 bee conditionals multi 1:
-        0: '? A purple flower may have either 3, 2 or 1 nectars, but you don''t know how many. Which blocks correctly check and collect all of the nectar from a purple flower?'
-        1: ': Fioletowy kwiat może zawierać 3, 2 lub 1 nektary, ale nie wiesz ile. Które bloki prawidłowo sprawdzają i zbierają cały nektar z fioletowego kwiatka?'
-        Bee Conditionals Multiple Choice: 'Pszczółka, warunki: Test wielokrotnego wyboru'
-        Choose the best blocks.: Wybierz najlepsze bloki.
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+        questions:
+          - 
+            text: Wybierz najlepsze bloki.
+        title: 'Pszczółka, warunki: Test wielokrotnego wyboru'
       4-5 bee debug multi 1:
-        Bee Debug Multiple Choice: 'Pszczółka, debagowanie: Test wielokrotnego wyboru'
-        Which version of the function will work?: Która wersja funkcji jest poprawna?
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+        questions:
+          - 
+            text: Która wersja funkcji jest poprawna?
+        title: 'Pszczółka, debagowanie: Test wielokrotnego wyboru'
       4-5 bee loops multi 1:
-        Bee Loops Multiple Choice: 'Pszczółka, pętle: Test wielokrotnego wyboru'
-        Which blocks will solve the puzzle?: Które bloki rozwiązują tę łamigłówkę?
+        answers:
+          - 
+            correct: true
+          - 
+          - 
+          - 
+        questions:
+          - 
+            text: Które bloki rozwiązują tę łamigłówkę?
+        title: 'Pszczółka, pętle: Test wielokrotnego wyboru'
       4-5 maze conditionals multi 1:
-        Maze Conditionals Multiple Choice: 'Labirynt, warunki: Test wielokrotnego wyboru'
-        Which blocks solve the puzzle?: Które bloki rozwiązują tę łamigłówkę?
+        answers:
+          - 
+            correct: true
+          - 
+          - 
+          - 
+        questions:
+          - 
+            text: Które bloki rozwiązują tę łamigłówkę?
+        title: 'Labirynt, warunki: Test wielokrotnego wyboru'
       4-5 maze multi 1:
-        Maze Multiple Choice: 'Labirynt: Test wielokrotnego wyboru'
-        Which blocks solve the puzzle?: Które bloki rozwiązują tę łamigłówkę?
+        answers:
+          - 
+            correct: true
+          - 
+          - 
+          - 
+        questions:
+          - 
+            text: Które bloki rozwiązują tę łamigłówkę?
+        title: 'Labirynt: Test wielokrotnego wyboru'
+      CSD Header Size MC:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      CSD Header Size MC_2018:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      CSD Header Size MC_2018_2019:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
       CSD U3 Boolean MC:
+        answers:
+          - 
+            correct: true
+          - 
+          - 
+          - 
         title: tytuł
       CSD U3 Boolean MC_2018:
+        answers:
+          - 
+            correct: true
+          - 
+          - 
+          - 
         title: tytuł
       CSD U3 Boolean MC_2018_2019:
+        answers:
+          - 
+            correct: true
+          - 
+          - 
+          - 
         title: tytuł
+      CSD U3 Functions Prediction define first:
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+      CSD U3 Functions Prediction define first_2018:
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+      CSD U3 Functions Prediction define first_2018_2019:
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+      CSD U3 Sprite Movement Predict Multi:
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+      CSD U3 Sprite Movement Predict Multi_2018:
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+      CSD U3 Sprite Movement Predict Multi_2018_2019:
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+      CSD U3 Sprites intro predict multi:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      CSD U3 Sprites intro predict multi_2018:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      CSD U3 Sprites intro predict multi_2018_2019:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      CSD U6 array multi:
+        answers:
+          - 
+          - 
+          - 
+          - 
+            correct: true
+      CSD U6 array multi_2018:
+        answers:
+          - 
+          - 
+          - 
+          - 
+            correct: true
+      CSD U6 array multi_2018_2019:
+        answers:
+          - 
+          - 
+          - 
+          - 
+            correct: true
+      CSD U6 setProperty predict multi:
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+      CSD U6 setProperty predict multi_2018:
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+      CSD U6 setProperty predict multi_2018_2019:
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
       K-1 Artist 1 Multi 1:
-        Multiple Choice: Test wielokrotnego wyboru
-        Which blocks solve this puzzle?: Które bloki rozwiązują tę łamigłówkę?
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+        questions:
+          - 
+            text: Które bloki rozwiązują tę łamigłówkę?
+        title: Test wielokrotnego wyboru
       K-1 Artist 1 Multi 2:
-        Multiple Choice: Test wielokrotnego wyboru
-        Which blocks draw the square?: Które bloki narysują ten kwadrat?
+        answers:
+          - 
+            correct: true
+          - 
+          - 
+          - 
+        questions:
+          - 
+            text: Które bloki narysują ten kwadrat?
+        title: Test wielokrotnego wyboru
       K-1 Bee 1 Multi 1:
-        How many nectars is this?: Ile razem jest nektarów?
-        Multiple Choice: Test wielokrotnego wyboru
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+        questions:
+          - 
+            text: Ile razem jest nektarów?
+        title: Test wielokrotnego wyboru
       K-1 Bee 1 Multi 2:
-        How many nectars is this?: Ile razem jest nektarów?
-        Multiple Choice: Test wielokrotnego wyboru
+        answers:
+          - 
+          - 
+          - 
+          - 
+            correct: true
+        questions:
+          - 
+            text: Ile razem jest nektarów?
+        title: Test wielokrotnego wyboru
       K-1 Digital Footprint Multi 1:
-        Multiple Choice: Test wielokrotnego wyboru
-        Which animal has the digital footprint that leaves him or her the <strong>most unsafe</strong>?: Które ze zwierząt ma cyfrowy ślad, który powoduje, że jest ono <strong>najbardziej zagrożone</strong>?
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+        questions:
+          - 
+            text: Które ze zwierząt ma cyfrowy ślad, który powoduje, że jest ono <strong>najbardziej zagrożone</strong>?
+        title: Test wielokrotnego wyboru
       K-1 Getting Loopy Multi 1:
-        How would you simplify this sequence with loops?: Jak możesz uprościć ten ciąg działań za pomocą pętli?
-        Multiple Choice: Test wielokrotnego wyboru
+        answers:
+          - 
+            correct: true
+          - 
+          - 
+        questions:
+          - 
+            text: Jak możesz uprościć ten ciąg działań za pomocą pętli?
+        title: Test wielokrotnego wyboru
       K-1 Happy Maps Multi 1:
-        Multiple Choice: Test wielokrotnego wyboru
-        Which arrow gets the Flurb to the treasure?: Która strzałka doprowadzi Flurba do skarbu?
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+        questions:
+          - 
+            text: Która strzałka doprowadzi Flurba do skarbu?
+        title: Test wielokrotnego wyboru
       K-1 Keep it Private Multi 1:
-        Multiple Choice: Test wielokrotnego wyboru
-        Which information should you <strong>not</strong> share online?: Jakimi informacjami <strong>nie</strong> powinniście dzielić się w sieci?
+        answers:
+          - 
+            correct: true
+          - 
+          - 
+        questions:
+          - 
+            text: Jakimi informacjami <strong>nie</strong> powinniście dzielić się w sieci?
+        title: Test wielokrotnego wyboru
       K-1 Maze Debugging Multi 1:
-        Multiple Choice: Test wielokrotnego wyboru
-        Which choice should be the final block?: Który blok powinien być na końcu?
+        answers:
+          - 
+            correct: true
+          - 
+          - 
+          - 
+        questions:
+          - 
+            text: Który blok powinien być na końcu?
+        title: Test wielokrotnego wyboru
       K-1 Maze Loops Multi 1:
-        Multiple Choice: Test wielokrotnego wyboru
-        Which repeat block is the same?: Które blok "powtórz" (repeat) jest taki sam?
+        answers:
+          - 
+            correct: true
+          - 
+          - 
+        questions:
+          - 
+            text: Które blok "powtórz" (repeat) jest taki sam?
+        title: Test wielokrotnego wyboru
       K-1 Maze Loops Multi 2:
-        Multiple Choice: Test wielokrotnego wyboru
-        Pick the correct repeat block.: Wybierz właściwy blok "powtórz" (repeat).
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+        questions:
+          - 
+            text: Wybierz właściwy blok "powtórz" (repeat).
+        title: Test wielokrotnego wyboru
       K-1 Maze Multiple Choice 2:
-        Maze: Labirynt
-        Which answer solves this level?: Która odpowiedź jest poprawna?
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+        questions:
+          - 
+            text: Która odpowiedź jest poprawna?
+        title: Labirynt
       K-1 Move It Multi 1:
-        Multiple Choice: Test wielokrotnego wyboru
-        Which algorithm gets the Flurb to the flowers?: Który algorytm doprowadzi Flurba do kwiatów?
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+        questions:
+          - 
+            text: Który algorytm doprowadzi Flurba do kwiatów?
+        title: Test wielokrotnego wyboru
       K-1 Plant a Seed Multi 1:
-        Multiple Choice: Test wielokrotnego wyboru
-        Which step should go at the beginning of this algorithm?: Który krok powinien być na początku tego algorytmu?
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+        questions:
+          - 
+            text: Który krok powinien być na początku tego algorytmu?
+        title: Test wielokrotnego wyboru
       K-1 Plant a Seed Multi 2:
-        Multiple Choice: Test wielokrotnego wyboru
-        Which step should fill in the blank for this algorithm?: Który krok powinien uzupełnić lukę w algorytmie?
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+        questions:
+          - 
+            text: Który krok powinien uzupełnić lukę w algorytmie?
+        title: Test wielokrotnego wyboru
       K-1 Word Search Multi 1:
-        Multiple Choice: Test wielokrotnego wyboru
-        Which blocks spell "MOVE"?: Które bloki utworzą słowo "MOVE"?
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+        questions:
+          - 
+            text: Które bloki utworzą słowo "MOVE"?
+        title: Test wielokrotnego wyboru
       K-1 Word Search Multi 3:
-        Multiple Choice: Test wielokrotnego wyboru
-        SET: SET
-        SOUTH: SOUTH
-        SQUARE: SQUARE
-        Which word is spelled?: Które ze słów zostanie utworzone?
+        answers:
+          - 
+            text: SET
+            correct: false
+          - 
+            text: SQUARE
+            correct: true
+          - 
+            text: SOUTH
+            correct: false
+        questions:
+          - 
+            text: Które ze słów zostanie utworzone?
+        title: Test wielokrotnego wyboru
       behaviors 1 predict:
-        Incorrect: Nieprawidłowe
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+            correct: false
+            feedback: Nieprawidłowe
       behaviors 4 predict:
-        Incorrect: Nieprawidłowe
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+            correct: false
+            feedback: Nieprawidłowe
+      courseC_multi_artist_prog6_predict1:
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+      courseC_multi_artist_prog6_predict1_2018:
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+      courseC_multi_artist_prog6_predict1_2018_2019:
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
       courseC_multi_harvester_loops11_predict1:
-        '12': '12'
-        '15': '15'
-        '4': '4'
+        answers:
+          - 
+            text: '4'
+            correct: false
+          - 
+            text: '12'
+            correct: true
+          - 
+            text: '15'
+            correct: false
+          - 
       courseC_multi_harvester_loops11_predict1_2018:
-        '12': '12'
-        '15': '15'
-        '4': '4'
+        answers:
+          - 
+            text: '4'
+            correct: false
+          - 
+            text: '12'
+            correct: true
+          - 
+            text: '15'
+            correct: false
+          - 
       courseC_multi_harvester_loops11_predict1_2018_2019:
-        '12': '12'
-        '15': '15'
-        '4': '4'
+        answers:
+          - 
+            text: '4'
+            correct: false
+          - 
+            text: '12'
+            correct: true
+          - 
+            text: '15'
+            correct: false
+          - 
+      courseC_multi_maze_debugging8_predict1:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      courseC_multi_maze_debugging8_predict1_2018:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      courseC_multi_maze_debugging8_predict1_2018_2019:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      courseC_multi_maze_programming8_predict1:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      courseC_multi_maze_programming8_predict1_2018:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      courseC_multi_maze_programming8_predict1_2018_2019:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
       courseC_multi_starWars_predict1:
-        I don't know: Nie wiem
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+            text: Nie wiem
+            correct: false
       courseC_multi_starWars_predict1_2018:
-        I don't know: Nie wiem
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+            text: Nie wiem
+            correct: false
       courseC_multi_starWars_predict1_2018_2019:
-        I don't know: Nie wiem
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+            text: Nie wiem
+            correct: false
+      courseC_multi_starWars_predict2:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      courseC_multi_starWars_predict2_2018:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      courseC_multi_starWars_predict2_2018_2019:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
       courseD_multi_artist_binary8_predict1:
-        A: A
-        B: B
-        C: B
-        D: R
+        answers:
+          - 
+            text: A
+            correct: false
+          - 
+            text: B
+            correct: false
+          - 
+            text: B
+            correct: false
+          - 
+            text: R
+            correct: true
       courseD_multi_artist_binary8_predict1_2018:
-        A: A
-        B: B
-        C: B
-        D: R
+        answers:
+          - 
+            text: A
+            correct: false
+          - 
+            text: B
+            correct: false
+          - 
+            text: B
+            correct: false
+          - 
+            text: R
+            correct: true
       courseD_multi_artist_binary8_predict1_2018_2019:
-        A: A
-        B: B
-        C: B
-        D: R
+        answers:
+          - 
+            text: A
+            correct: false
+          - 
+            text: B
+            correct: false
+          - 
+            text: B
+            correct: false
+          - 
+            text: R
+            correct: true
       courseD_multi_artist_nestedLoops9_predict1:
-        A: A
-        B: B
-        C: B
+        answers:
+          - 
+            text: A
+            correct: true
+          - 
+            text: B
+            correct: false
+          - 
+            text: B
+            correct: false
+          - 
       courseD_multi_artist_nestedLoops9_predict1_2018:
-        A: A
-        B: B
-        C: B
+        answers:
+          - 
+            text: A
+            correct: true
+          - 
+            text: B
+            correct: false
+          - 
+            text: B
+            correct: false
+          - 
       courseD_multi_artist_nestedLoops9_predict1_2018_2019:
-        A: A
-        B: B
-        C: B
+        answers:
+          - 
+            text: A
+            correct: true
+          - 
+            text: B
+            correct: false
+          - 
+            text: B
+            correct: false
+          - 
+      courseD_multi_bee_conditionals1_predict1:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      courseD_multi_bee_conditionals1_predict1_2018:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      courseD_multi_bee_conditionals1_predict1_2018_2019:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      courseD_multi_bee_conditionals7_predict2:
+        answers:
+          - 
+            correct: true
+          - 
+          - 
+          - 
+      courseD_multi_bee_conditionals7_predict2_2018:
+        answers:
+          - 
+            correct: true
+          - 
+          - 
+          - 
+      courseD_multi_bee_conditionals7_predict2_2018_2019:
+        answers:
+          - 
+            correct: true
+          - 
+          - 
+          - 
       courseD_multi_bee_nestedLoops2_predict1:
-        The bee will get all of the nectar.: Pszczółka zbierze cały nektar.
-        The bee will get only 2 units of nectar.: Pszczółka zbierze tylko 2 nektary.
+        answers:
+          - 
+          - 
+            text: Pszczółka zbierze tylko 2 nektary.
+            correct: false
+          - 
+            text: Pszczółka zbierze cały nektar.
+            correct: true
+          - 
       courseD_multi_bee_nestedLoops2_predict1_2018:
-        The bee will get all of the nectar.: Pszczółka zbierze cały nektar.
-        The bee will get only 2 units of nectar.: Pszczółka zbierze tylko 2 nektary.
+        answers:
+          - 
+          - 
+            text: Pszczółka zbierze tylko 2 nektary.
+            correct: false
+          - 
+            text: Pszczółka zbierze cały nektar.
+            correct: true
+          - 
       courseD_multi_bee_nestedLoops2_predict1_2018_2019:
-        The bee will get all of the nectar.: Pszczółka zbierze cały nektar.
-        The bee will get only 2 units of nectar.: Pszczółka zbierze tylko 2 nektary.
+        answers:
+          - 
+          - 
+            text: Pszczółka zbierze tylko 2 nektary.
+            correct: false
+          - 
+            text: Pszczółka zbierze cały nektar.
+            correct: true
+          - 
       courseD_multi_bee_nestedLoops9_predict2:
-        '12': '12'
-        '4': '4'
-        '8': '8'
-        13: '? Incorrect. The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
-        14: ': Incorrect. The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
-        Look closely at the code below. How much honey will the bee make when you click "Run"?: Spójrz uważnie na kod poniżej. Ile miodu zbierze pszczółka, kiedy klikniesz "Uruchom"?
-        15: '? The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
-        16: ': The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
+        answers:
+          - 
+            text: '4'
+            correct: false
+          - 
+            text: '8'
+            correct: true
+          - 
+            text: '12'
+            correct: false
+          - 
+        questions:
+          - 
+            text: Spójrz uważnie na kod poniżej. Ile miodu zbierze pszczółka, kiedy klikniesz "Uruchom"?
       courseD_multi_bee_nestedLoops9_predict2_2018:
-        '12': '12'
-        '4': '4'
-        '8': '8'
-        13: '? Incorrect. The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
-        14: ': Incorrect. The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
-        Look closely at the code below. How much honey will the bee make when you click "Run"?: Spójrz uważnie na kod poniżej. Ile miodu zbierze pszczółka, kiedy klikniesz "Uruchom"?
-        15: '? The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
-        16: ': The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
+        answers:
+          - 
+            text: '4'
+            correct: false
+          - 
+            text: '8'
+            correct: true
+          - 
+            text: '12'
+            correct: false
+          - 
+        questions:
+          - 
+            text: Spójrz uważnie na kod poniżej. Ile miodu zbierze pszczółka, kiedy klikniesz "Uruchom"?
       courseD_multi_bee_nestedLoops9_predict2_2018_2019:
-        '12': '12'
-        '4': '4'
-        '8': '8'
-        13: '? Incorrect. The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
-        14: ': Incorrect. The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
-        Look closely at the code below. How much honey will the bee make when you click "Run"?: Spójrz uważnie na kod poniżej. Ile miodu zbierze pszczółka, kiedy klikniesz "Uruchom"?
-        15: '? The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
-        16: ': The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
+        answers:
+          - 
+            text: '4'
+            correct: false
+          - 
+            text: '8'
+            correct: true
+          - 
+            text: '12'
+            correct: false
+          - 
+        questions:
+          - 
+            text: Spójrz uważnie na kod poniżej. Ile miodu zbierze pszczółka, kiedy klikniesz "Uruchom"?
+      courseD_multi_collector_debugging10_predict1:
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+      courseD_multi_farmer_condLoops9_predict1:
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+      courseD_multi_farmer_condLoops9_predict1_2018:
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+      courseD_multi_farmer_condLoops9_predict1_2018_2019:
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+      courseD_multi_farmer_ramp13:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      courseD_multi_farmer_while10_predict2:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      courseD_multi_farmer_while10_predict2_2018:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      courseD_multi_farmer_while10_predict2_2018_2019:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      courseD_multi_farmer_while4_predict1:
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+      courseD_multi_farmer_while4_predict1_2018:
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+      courseD_multi_farmer_while4_predict1_2018_2019:
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+      courseD_multi_maze_until10_predict2:
+        answers:
+          - 
+            correct: true
+          - 
+          - 
+          - 
+      courseD_multi_maze_until10_predict2_2018:
+        answers:
+          - 
+            correct: true
+          - 
+          - 
+          - 
+      courseD_multi_maze_until10_predict2_2018_2019:
+        answers:
+          - 
+            correct: true
+          - 
+          - 
+          - 
+      courseD_multi_maze_until2_predict1:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      courseD_multi_maze_until2_predict1_2018:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      courseD_multi_maze_until2_predict1_2018_2019:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      courseD_multi_scrat_predict1:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      courseE_multi_artist_predict1:
+        answers:
+          - 
+            correct: true
+          - 
+          - 
+          - 
+      courseE_multi_bee_functions_predict1:
+        answers:
+          - 
+            correct: true
+          - 
+          - 
+          - 
+      courseE_multi_farmer_functions11_predict:
+        answers:
+          - 
+          - 
+          - 
+          - 
+            correct: true
+      courseE_multi_farmer_functions11_predict_2018:
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+      courseE_multi_farmer_functions11_predict_2018_2019:
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
       courseE_multi_farmer_predict1:
-        I don't know: Nie wiem
-        0: '? Incorrect. The `if` statement will help the farmer check if there is a path ahead.  If there is, she will move forward.  Else, if there is no path, she will pick as much lettuce as there is and then turn left.'
-        1: ': Incorrect. The `if` statement will help the farmer check if there is a path ahead.  If there is, she will move forward.  Else, if there is no path, she will pick as much lettuce as there is and then turn left.'
-        2: '? The `if` statement will help the farmer check if there is a path ahead.  If there is, she will move forward.  Else, if there is no path, she will pick as much lettuce as there is and then turn left.'
-        3: ': The `if` statement will help the farmer check if there is a path ahead.  If there is, she will move forward.  Else, if there is no path, she will pick as much lettuce as there is and then turn left.'
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+            text: Nie wiem
+            correct: false
+      courseE_multi_farmer_predict2:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      courseE_multi_maze_predict1:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      courseE_prediction_artistFunction1:
+        answers:
+          - 
+          - 
+          - 
+          - 
+            correct: true
+      courseE_prediction_artistFunction1_2018:
+        answers:
+          - 
+          - 
+          - 
+          - 
+            correct: true
+      courseE_prediction_artistFunction1_2018_2019:
+        answers:
+          - 
+          - 
+          - 
+          - 
+            correct: true
       courseF_bee_variables_8a_2018:
-        The bee will collect all of the nectar.: Pszczółka zbierze cały nektar.
-        The bee will only collect 2 nectar.: Pszczółka zbierze tylko 2 nektary.
-        0: '? The variable gets set back to 0 before the last two function calls, where 1 gets added each time. The bee then collects 2 nectar units.'
-        1: ': The variable gets set back to 0 before the last two function calls, where 1 gets added each time. The bee then collects 2 nectar units.'
+        answers:
+          - 
+          - 
+            text: Pszczółka zbierze tylko 2 nektary.
+            correct: true
+          - 
+            text: Pszczółka zbierze cały nektar.
+            correct: false
+          - 
       courseF_bee_variables_8a_2018_2019:
-        The bee will collect all of the nectar.: Pszczółka zbierze cały nektar.
-        The bee will only collect 2 nectar.: Pszczółka zbierze tylko 2 nektary.
-        0: '? The variable gets set back to 0 before the last two function calls, where 1 gets added each time. The bee then collects 2 nectar units.'
-        1: ': The variable gets set back to 0 before the last two function calls, where 1 gets added each time. The bee then collects 2 nectar units.'
+        answers:
+          - 
+          - 
+            text: Pszczółka zbierze tylko 2 nektary.
+            correct: true
+          - 
+            text: Pszczółka zbierze cały nektar.
+            correct: false
+          - 
+      courseF_multi_artist_for10_predict1:
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+      courseF_multi_artist_for10_predict1_2018:
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+      courseF_multi_artist_for10_predict1_2018_2019:
+        answers:
+          - 
+          - 
+          - 
+            correct: true
+          - 
+      courseF_multi_artist_fwp2_predict1:
+        answers:
+          - 
+            correct: true
+          - 
+          - 
+          - 
+      courseF_multi_artist_predict1:
+        answers:
+          - 
+            correct: true
+          - 
+          - 
+          - 
+      courseF_multi_artist_variables3a_predict1:
+        answers:
+          - 
+            correct: true
+          - 
+          - 
+          - 
+      courseF_multi_artist_variables3a_predict1_2018:
+        answers:
+          - 
+            correct: true
+          - 
+          - 
+          - 
+      courseF_multi_artist_variables3a_predict1_2018_2019:
+        answers:
+          - 
+            correct: true
+          - 
+          - 
+          - 
+      courseF_multi_bee_conditionals1_predict1:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      courseF_multi_bee_conditionals7_predict2:
+        answers:
+          - 
+            correct: true
+          - 
+          - 
+          - 
       courseF_multi_bee_for3_predict1:
-        The bee will move forward and collect all of the nectar from every flower, except for one.: Pszczółka poleci do przodu i zbierze cały nektar ze wszystkich kwiatów oprócz jednego.
-        'The bee will move forward and collect one nectar from each flower. ': 'Pszczółka poleci do przodu i zbierze jeden nektar z każdego kwiatka. '
+        answers:
+          - 
+          - 
+            text: Pszczółka poleci do przodu i zbierze cały nektar ze wszystkich kwiatów oprócz jednego.
+            correct: true
+          - 
+            text: 'Pszczółka poleci do przodu i zbierze jeden nektar z każdego kwiatka. '
+            correct: false
+          - 
       courseF_multi_bee_for3_predict1_2018:
-        The bee will move forward and collect all of the nectar from every flower, except for one.: Pszczółka poleci do przodu i zbierze cały nektar ze wszystkich kwiatów oprócz jednego.
-        'The bee will move forward and collect one nectar from each flower. ': 'Pszczółka poleci do przodu i zbierze jeden nektar z każdego kwiatka. '
+        answers:
+          - 
+          - 
+            text: Pszczółka poleci do przodu i zbierze cały nektar ze wszystkich kwiatów oprócz jednego.
+            correct: true
+          - 
+            text: 'Pszczółka poleci do przodu i zbierze jeden nektar z każdego kwiatka. '
+            correct: false
+          - 
       courseF_multi_bee_for3_predict1_2018_2019:
-        The bee will move forward and collect all of the nectar from every flower, except for one.: Pszczółka poleci do przodu i zbierze cały nektar ze wszystkich kwiatów oprócz jednego.
-        'The bee will move forward and collect one nectar from each flower. ': 'Pszczółka poleci do przodu i zbierze jeden nektar z każdego kwiatka. '
+        answers:
+          - 
+          - 
+            text: Pszczółka poleci do przodu i zbierze cały nektar ze wszystkich kwiatów oprócz jednego.
+            correct: true
+          - 
+            text: 'Pszczółka poleci do przodu i zbierze jeden nektar z każdego kwiatka. '
+            correct: false
+          - 
+      courseF_multi_bee_fwp9_predict1:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      courseF_multi_playlab_variables4c_predictive1:
+        answers:
+          - 
+            correct: true
+          - 
+          - 
+          - 
+      coursee_prediction_artistfunction2:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      coursee_prediction_artistfunction2_2018:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      coursee_prediction_artistfunction2_2018_2019:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      grade2_multi_collector_A_predict1:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      grade2_multi_collector_A_predict1_2018:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 
+      grade2_multi_collector_A_predict1_2018_2019:
+        answers:
+          - 
+          - 
+            correct: true
+          - 
+          - 

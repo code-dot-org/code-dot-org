@@ -3,7 +3,7 @@ no-NO:
   data:
     callouts:
       2-3 Artist Debugging 1:
-        2-3_Artist_Debugging_1_a: Kunstneren har ikke en "Skritt"-knapp, men du kan
+        2-3_Artist_Debugging_1_a: Kunstneren har ikke en "Skritt"-knapp, men kan du
           dra glidebryteren mot venstre for å se programmet kjøre saktere.
       2-3 Bee Conditionals 5:
         Bee_Cond_5_1a: Lilla blomster kan ha 1 eller 0 nektar... men det vet du ikke
@@ -334,8 +334,6 @@ no-NO:
       courseA_collector_loops3_2019:
         gradek_adventurer_loops2_1: Dette tallet angir hvor mange av disse blokkene
           du kan bruke i denne oppgaven.
-      courseA_collector_preLoops1:
-        courseA_collector_preLoops1_1: Klikk her for å kjøre koden!
       courseA_collector_preLoops2:
         courseA_collector_loops1_1: Ser du noen nye blokker i verktøykassen?  Ta det
           helt med ro, vi vil vise deg hvordan du bruker dem senere i nivået.
@@ -604,9 +602,6 @@ no-NO:
       courseD_scrat_ramp4:
         courseC_maze_programming4_1: Dette er grensen på antall blokker. Den forteller
           deg hvor mange av disse blokkene du har igjen å bruke.
-      courseD_scrat_ramp8:
-        courseE_artist_ramp8_2: Klikk her for å skrive inn antall ganger du vil gjenta
-          koden.
       courseE_artist_ramp8:
         courseE_artist_ramp8_2: Klikk her for å skrive inn antall ganger du vil gjenta
           koden.

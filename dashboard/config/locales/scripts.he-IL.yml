@@ -79,6 +79,8 @@ he:
               name: 'מבוך: לולאות'
             'Maze: Sequence':
               name: 'מבוך: רצף'
+            'Real-life Algorithms: Paper Planes':
+              name: 'אלגוריתמים מהחיים: מטוסי נייר'
             'Studio: Create a Story':
               name: 'מעבדת הצעצועים: צור סיפור'
             The Big Event:
@@ -303,13 +305,13 @@ he:
             The Artist:
               name: האמן
             The Artist 2:
-              name: האומן 2
+              name: האמן 2
             The Artist 3:
-              name: האומן 3
+              name: האמן 3
             The Artist 4:
               name: האמן 4
             The Artist 5:
-              name: האומן 5
+              name: האמן 5
             The Farmer:
               name: האיכר
             The Farmer 2:
@@ -782,6 +784,8 @@ he:
               name: פלאפי
             Binary Bracelets:
               name: צמידים בינארים
+            'Real-life Algorithms: Paper Planes':
+              name: 'אלגוריתמים מהחיים: מטוסי נייר'
             The Big Event:
               name: האירוע הגדול
         k5concepts:
@@ -888,6 +892,8 @@ he:
           stages:
             Programming in Maze:
               name: תכנות במבוך
+            'Real-life Algorithms: Paper Planes':
+              name: 'אלגוריתמים מהחיים: מטוסי נייר'
             Loops in Maze:
               name: לולאות במבוך
             Binary Bracelets:
@@ -1101,6 +1107,8 @@ he:
               name: תכנות במבוך
             Debugging in Maze:
               name: איתור באגים במבוך
+            'Real-life Algorithms: Paper Planes':
+              name: 'אלגוריתמים מהחיים: מטוסי נייר'
             Loops in Maze:
               name: לולאות במבוך
             Binary Bracelets:
@@ -1500,6 +1508,8 @@ he:
               name: תכנות עם ציפורים כועסות
             Debugging in Maze:
               name: איתור באגים עם ציפורים כועסות
+            'Real-life Algorithms: Paper Planes':
+              name: מטוסי נייר
             'Events: The Big Event':
               name: האירוע הגדול
             Binary Bracelets:
@@ -1755,6 +1765,8 @@ he:
               name: תכנות עם ציפורים כועסות
             Debugging in Maze:
               name: איתור באגים במבוך
+            'Real-life Algorithms: Paper Planes':
+              name: 'אלגוריתמים מהחיים: מטוסי נייר'
             'Events: The Big Event':
               name: האירוע הגדול
             Binary Bracelets:

@@ -747,6 +747,8 @@ is:
         hoc_dance_events: Danspartý - Atvik
         hoc_dance_properties: Danspartý - Eiginleikar
         hoc_dance_congrats: Danspartý - Meira fjör!
+        teaching_csf_how_it_works: 'Kennsla Grunnatriða tölvunarfræði: Hvernig námskeiðið
+          virkar'
         elem_pd_2: Tölvunarfræði fyrir grunnskóla - Fagmenntunarmyndband 2/2
         what_is_cs: Hvað er tölvunarfræði?
         repeat_block: Notkun "Endurtaka" kubbsins
@@ -755,9 +757,18 @@ is:
         why_unplugged_lessons: Að vera "án tölvu"
         writing_first_program: Að skrifa fyrsta forritið
         conditionals_with_cards: Kennslustund án tölvu - Skilyrði með kortum
+        songwriting_with_functions: Ótengd æfing - Lagasmíð með föllum
         what_is_an_event: Hvað er atvik?
+        teaching_cs_pair_programming: 'Kennsla Grunnatriða tölvunarfræði: Félagaforritun'
+        teaching_problem_solving: 'Kennsla Grunnatriða tölvunarfræði: Úrlausnaraðferðir'
+        csd_applab_designmode: 'Kennsla Grunnatriða tölvunarfræði: Appsmiðjan - Hönnunarstaða'
         csd_pair_programming: Félagaforritun
+        csd_gamelab_functions: Að kalla á og skilgreina föll
         csd_applab_parameters: Föll með stikum
+        csd_applab_loops: Lykkjur í Appsmiðjunni
+        CSF_Going_Places_Safely: Netumhverfið mitt
+        CSF_SpriteLab_Intro_v2: Kynning á Kvikasmiðjunni
+        CSF_Spritelab_MakeSprite_v2: Hvernig á að búa til kvika
         CSF_SpriteLab_SpritesInAction_v2: Kvikar í verki
     callout:
       text:

@@ -4722,6 +4722,8 @@ pl:
           stages:
             new stage:
               name: nowy etap
+            Number Systems:
+              name: Systemy liczbowe
         csd-videos:
           stages:
             new stage:

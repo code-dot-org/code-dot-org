@@ -1,5 +1,5 @@
 import * as spriteUtils from './spriteUtils';
-import {getStore} from '../../redux';
+import {getStore} from '@cdo/apps/redux';
 import {addConsoleMessage} from '../textConsoleModule';
 
 export const commands = {
@@ -20,9 +20,10 @@ export const commands = {
   },
 
   setBackgroundImage(img) {
-    let backgroundImage = this.loadImage(img);
-    backgroundImage.name = img;
-    spriteUtils.background = backgroundImage;
+    if (this._preloadedBackgrounds && this._preloadedBackgrounds[img]) {
+      let backgroundImage = this._preloadedBackgrounds[img];
+      spriteUtils.background = backgroundImage;
+    }
   },
 
   showTitleScreen(title, subtitle) {

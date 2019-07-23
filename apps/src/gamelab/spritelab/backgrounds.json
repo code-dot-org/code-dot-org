@@ -1,0 +1,149 @@
+{
+  "backgrounds": [
+    {
+      "name": "cave",
+      "legacyParam": "https://studio.code.org/blockly/media/skins/studio/background_cave.png",
+      "sourceUrl": "/api/v1/animation-library/xQipuvePUXSq06jZsTlobJR8.Q7ZvgTC/category_backgrounds/background_cave.png"
+    },
+    {
+      "name": "city",
+      "legacyParam": "https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png",
+      "sourceUrl": "/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"
+    },
+    {
+      "name": "continuous_grass",
+      "legacyParam": "https://studio.code.org/api/v1/animation-library/UieRK0NBKD3xVHtSJxcUTAuhzLM1D_Hq/category_backgrounds/continuous_grass.png",
+      "sourceUrl": "/api/v1/animation-library/UieRK0NBKD3xVHtSJxcUTAuhzLM1D_Hq/category_backgrounds/continuous_grass.png"
+    },
+    {
+      "name": "court",
+      "legacyParam": "https://studio.code.org/blockly/media/skins/studio/background.png",
+      "sourceUrl": "/api/v1/animation-library/ybx_l2OXs2ZrM2C8p9Texf7sEvpKvY0T/category_backgrounds/background_court.png"
+    },
+    {
+      "name": "desert",
+      "legacyParam": "https://studio.code.org/blockly/media/skins/studio/background_desert.png",
+      "sourceUrl": "/api/v1/animation-library/lXCJiemM_ybjwK6SzMVp07qqEC.lumSD/category_backgrounds/background_desert.png"
+    },
+    {
+      "name": "desert_road",
+      "legacyParam": "https://studio.code.org/api/v1/animation-library/nfgysU3t3P8XnUBAf9LjIy2JTHtdXpTj/category_backgrounds/desert_road.png",
+      "sourceUrl": "/api/v1/animation-library/nfgysU3t3P8XnUBAf9LjIy2JTHtdXpTj/category_backgrounds/desert_road.png"
+    },
+    {
+      "name": "farm_land",
+      "legacyParam": "https://studio.code.org/api/v1/animation-library/4FnSIFL33P0PH_C_DnKOse2QbZCdtaJJ/category_backgrounds/farm_land.png",
+      "sourceUrl": "/api/v1/animation-library/4FnSIFL33P0PH_C_DnKOse2QbZCdtaJJ/category_backgrounds/farm_land.png"
+    },
+    {
+      "name": "floating_grass",
+      "legacyParam": "https://studio.code.org/api/v1/animation-library/vrlUwPslp0VK_KJcPQ9OPZNb.Ms5eBL5/category_backgrounds/floating_grass.png",
+      "sourceUrl": "/api/v1/animation-library/vrlUwPslp0VK_KJcPQ9OPZNb.Ms5eBL5/category_backgrounds/floating_grass.png"
+    },
+    {
+      "name": "front_of_house",
+      "legacyParam": "https://studio.code.org/api/v1/animation-library/ZjjFGjO0xNEZGEweTgANloehQrxwIXVM/category_backgrounds/front_of_house.png",
+      "sourceUrl": "/api/v1/animation-library/ZjjFGjO0xNEZGEweTgANloehQrxwIXVM/category_backgrounds/front_of_house.png"
+    },
+    {
+      "name": "galaxy",
+      "legacyParam": "https://studio.code.org/blockly/media/skins/studio/background_space.png",
+      "sourceUrl": "/api/v1/animation-library/8O2IYyEUlJ8FNRemqZEf0FXfKmbUIxiF/category_backgrounds/background_space.png"
+    },
+    {
+      "name": "grid",
+      "legacyParam": "https://studio.code.org/blockly/media/skins/studio/background_grid.png",
+      "sourceUrl": "/api/v1/animation-library/E.uBGDJX3M_UR0wJ0XSCT4rm43eHbVXL/category_backgrounds/background_grid.png"
+    },
+    {
+      "name": "kitchen",
+      "legacyParam": "https://studio.code.org/api/v1/animation-library/1K7z7Kc3EeXsLV693byb0xxoJSJ4Du7e/category_backgrounds/kitchen.png",
+      "sourceUrl": "/api/v1/animation-library/1K7z7Kc3EeXsLV693byb0xxoJSJ4Du7e/category_backgrounds/kitchen.png"
+    },
+    {
+      "name": "living_room",
+      "legacyParam": "https://studio.code.org/api/v1/animation-library/4bsf67OUrcX.t1wbIcE_xygGKxOkiQ6f/category_backgrounds/living_room.png",
+      "sourceUrl": "/api/v1/animation-library/4bsf67OUrcX.t1wbIcE_xygGKxOkiQ6f/category_backgrounds/living_room.png"
+    },
+    {
+      "name": "meadow",
+      "legacyParam": "https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png",
+      "sourceUrl": "/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"
+    },
+    {
+      "name": "park_view",
+      "legacyParam": "https://studio.code.org/api/v1/animation-library/4gC7uWaaRI4aDyrncCFO_wY_67vYhr4C/category_backgrounds/park_view.png",
+      "sourceUrl": "/api/v1/animation-library/4gC7uWaaRI4aDyrncCFO_wY_67vYhr4C/category_backgrounds/park_view.png"
+    },
+    {
+      "name": "pine_trees",
+      "legacyParam": "https://studio.code.org/api/v1/animation-library/5K0h1rGe5ql4J9TdlqggIzGZYzbD38pF/category_backgrounds/pine_trees.png",
+      "sourceUrl": "/api/v1/animation-library/5K0h1rGe5ql4J9TdlqggIzGZYzbD38pF/category_backgrounds/pine_trees.png"
+    },
+    {
+      "name": "rainbow",
+      "legacyParam": "https://studio.code.org/blockly/media/skins/studio/background_rainbow.png",
+      "sourceUrl": "/api/v1/animation-library/QhGjRWwM9QmHltn3tJojhlSD_Im9Ubsu/category_backgrounds/background_rainbow.png"
+    },
+    {
+      "name": "sci_fi",
+      "legacyParam": "https://studio.code.org/blockly/media/skins/studio/background_scifi.png",
+      "sourceUrl": "/api/v1/animation-library/AkZ46QubAbBWZCmJO7D7hW3xCENr_80h/category_backgrounds/background_scifi.png"
+    },
+    {
+      "name": "soccer_field",
+      "legacyParam": "https://studio.code.org//api/v1/animation-library/WJjQlG1rFhbVmPfcuI_wy6tpwI6mHYnM/category_backgrounds/soccer_field.png",
+      "sourceUrl": "/api/v1/animation-library/WJjQlG1rFhbVmPfcuI_wy6tpwI6mHYnM/category_backgrounds/soccer_field.png"
+    },
+    {
+      "name": "stage",
+      "legacyParam": "https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png",
+      "sourceUrl": "/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"
+    },
+    {
+      "name": "stars",
+      "legacyParam": "https://studio.code.org/blockly/media/skins/studio/background_santa.png",
+      "sourceUrl": "/api/v1/animation-library/9HfWWIAEPsb37dxbPayqZeE1qKKsmG5S/category_backgrounds/background_santa.png"
+    },
+    {
+      "name": "subway",
+      "legacyParam": "https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png",
+      "sourceUrl": "/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"
+    },
+    {
+      "name": "sun_and_rainbow",
+      "legacyParam": "https://studio.code.org/api/v1/animation-library/ZY0THG5IedwCgmWVIhiPdJH59OORnmgT/category_backgrounds/sun_and_rainbow.png",
+      "sourceUrl": "/api/v1/animation-library/ZY0THG5IedwCgmWVIhiPdJH59OORnmgT/category_backgrounds/sun_and_rainbow.png"
+    },
+    {
+      "name": "sunshine_showers",
+      "legacyParam": "https://studio.code.org/api/v1/animation-library/_aXeLwM1Ge.ZDVJoON.cAlR3iwhKJJvl/category_backgrounds/sunshine_showers.png",
+      "sourceUrl": "/api/v1/animation-library/_aXeLwM1Ge.ZDVJoON.cAlR3iwhKJJvl/category_backgrounds/sunshine_showers.png"
+    },
+    {
+      "name": "tennis_court",
+      "legacyParam": "https://studio.code.org/api/v1/animation-library/.51KpEhDOyXg4dbDaAnm0dEWLAj1GZwy/category_backgrounds/tennis_court.png",
+      "sourceUrl": "/api/v1/animation-library/.51KpEhDOyXg4dbDaAnm0dEWLAj1GZwy/category_backgrounds/tennis_court.png"
+    },
+    {
+      "name": "tree_island",
+      "legacyParam": "https://studio.code.org/api/v1/animation-library/yatDsUkvGtT_.fSv68qi1d4YJDMHdGnS/category_backgrounds/tree_island.png",
+      "sourceUrl": "/api/v1/animation-library/yatDsUkvGtT_.fSv68qi1d4YJDMHdGnS/category_backgrounds/tree_island.png"
+    },
+    {
+      "name": "underground",
+      "legacyParam": "https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png",
+      "sourceUrl": "/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"
+    },
+    {
+      "name": "underwater",
+      "legacyParam": "https://studio.code.org/blockly/media/skins/studio/background_underwater.png",
+      "sourceUrl": "/api/v1/animation-library/Uc3U0ENCf9gcYmAADOJ9wD9KMfxXbbic/category_backgrounds/background_underwater.png"
+    },
+    {
+      "name": "winter",
+      "legacyParam": "https://studio.code.org/blockly/media/skins/studio/background_winter.png",
+      "sourceUrl": "/api/v1/animation-library/eamej9mDjbAXDV1GcRKy2hadPAdeB5Og/category_backgrounds/background_winter.png"
+    }
+  ]
+}

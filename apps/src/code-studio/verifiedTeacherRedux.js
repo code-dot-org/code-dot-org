@@ -1,7 +1,7 @@
 const SET_VERIFIED = 'verifiedTeacher/SET_VERIFIED';
 const SET_VERIFIED_RESOURCES = 'verifiedTeacher/SET_VERIFIED_RESOURCES';
 
-export const setVerified = isVerified => ({type: SET_VERIFIED});
+export const setVerified = () => ({type: SET_VERIFIED});
 export const setVerifiedResources = hasVerifiedResources => ({
   type: SET_VERIFIED_RESOURCES
 });

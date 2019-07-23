@@ -3,14 +3,14 @@
  */
 import _ from 'lodash';
 import {combineReducers} from 'redux';
-import {createUuid} from '../utils';
+import {createUuid} from '@cdo/apps/utils';
 import {
   fetchURLAsBlob,
   blobToDataURI,
   dataURIToSourceSize
-} from '../imageUtils';
-import {animations as animationsApi} from '../clientApi';
-import * as assetPrefix from '../assetManagement/assetPrefix';
+} from '@cdo/apps/imageUtils';
+import {animations as animationsApi} from '@cdo/apps/clientApi';
+import * as assetPrefix from '@cdo/apps/assetManagement/assetPrefix';
 import {selectAnimation} from './AnimationTab/animationTabModule';
 import {reportError} from './errorDialogStackModule';
 import {throwIfSerializedAnimationListIsInvalid} from './shapes';
@@ -18,7 +18,7 @@ import {
   projectChanged,
   isOwner,
   getCurrentId
-} from '../code-studio/initApp/project';
+} from '@cdo/apps/code-studio/initApp/project';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 // TODO: Overwrite version ID within session

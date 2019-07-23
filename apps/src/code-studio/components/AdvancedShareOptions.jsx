@@ -62,10 +62,6 @@ const style = {
   expoButtonLast: {
     marginRight: 0
   },
-  expoButtonApk: {
-    marginBottom: 10,
-    maxWidth: 280
-  },
   expoContainer: {
     display: 'flex',
     flexDirection: 'column'
@@ -186,35 +182,6 @@ class AdvancedShareOptions extends React.Component {
     }
   };
 
-  generateExpoApk = async () => {
-    const {expoSnackId, iconUri, splashImageUri} = this.state;
-    this.setState({generatingExpoApk: true});
-    try {
-      const expoApkUri = await this.props.exportApp({
-        mode: 'expoGenerateApk',
-        expoSnackId,
-        iconUri,
-        splashImageUri
-      });
-      this.setState({
-        generatingExpoApk: false,
-        generatingExpoApkError: null,
-        expoApkUri
-      });
-    } catch (e) {
-      this.setState({
-        generatingExpoApk: false,
-        generatingExpoApkError:
-          'Failed to create Android app. Please try again later.'
-      });
-    }
-  };
-
-  visitExpoSite = () => {
-    const {expoSnackId} = this.state;
-    window.open(`https://snack.expo.io/${expoSnackId}`, '_blank');
-  };
-
   renderEmbedTab() {
     let url = `${this.props.shareUrl}/embed`;
     if (this.state.embedWithoutCode) {
@@ -292,12 +259,7 @@ class AdvancedShareOptions extends React.Component {
   };
 
   renderExportExpoTab() {
-    const {
-      expoUri,
-      exportedExpoZip,
-      expoApkUri,
-      generatingExpoApk
-    } = this.state;
+    const {expoUri, exportedExpoZip} = this.state;
     const exportSpinner =
       this.state.exportingExpo === 'zip' ? (
         <i className="fa fa-spinner fa-spin" />
@@ -306,21 +268,10 @@ class AdvancedShareOptions extends React.Component {
       this.state.exportingExpo === 'publish' ? (
         <i className="fa fa-spinner fa-spin" />
       ) : null;
-    const generateApkSpinner = generatingExpoApk ? (
-      <i className="fa fa-spinner fa-spin" />
-    ) : null;
     // TODO: Make this use a nice UI component from somewhere.
     const alert = this.state.exportExpoError ? (
       <div className="alert fade in">{this.state.exportExpoError}</div>
     ) : null;
-    const apkAlert = this.state.generatingExpoApkError ? (
-      <div className="alert fade in">{this.state.generatingExpoApkError}</div>
-    ) : null;
-    const apkStatusString = expoApkUri
-      ? 'App created successfully'
-      : generatingExpoApk
-      ? 'Creating app...'
-      : '(This will take 5-10 minutes)';
 
     return (
       <div>
@@ -379,39 +330,6 @@ class AdvancedShareOptions extends React.Component {
                     value={expoUri}
                     style={style.expoInput}
                   />
-                  <button
-                    type="button"
-                    onClick={this.generateExpoApk}
-                    style={[style.expoButton, style.expoButtonApk]}
-                  >
-                    {generateApkSpinner}
-                    Create Android App
-                  </button>
-                  <button
-                    type="button"
-                    onClick={this.visitExpoSite}
-                    style={[style.expoButton, style.expoButtonApk]}
-                  >
-                    Visit Expo Site
-                  </button>
-                  <p style={style.p}>{apkStatusString}</p>
-                  {!!expoApkUri && (
-                    <div>
-                      <p style={[style.p, style.bold]}>
-                        Send this URL to an Android phone:
-                      </p>
-                    </div>
-                  )}
-                  {!!expoApkUri && (
-                    <input
-                      type="text"
-                      onClick={this.onInputSelect}
-                      readOnly="true"
-                      value={expoApkUri}
-                      style={style.expoInput}
-                    />
-                  )}
-                  {apkAlert}
                 </div>
               </div>
             </div>
