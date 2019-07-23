@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
-import {Table} from 'react-bootstrap';
+import {Table, DropdownButton, MenuItem} from 'react-bootstrap';
 import ConfirmationDialog from '../../components/confirmation_dialog';
 import {enrollmentShape} from '../types';
 import {workshopEnrollmentStyles as styles} from '../workshop_enrollment_styles';
@@ -110,11 +110,13 @@ export class WorkshopEnrollmentSchoolInfo extends React.Component {
     }
   }
 
-  handleClickActions() {
+  handleClickMoveEnrollments() {
     // check what enrollments are selected to see if delete is a valid option
     // when you click a specific action, apply it to all enrollments whose
     // ids are in list of selected enrollments in state
   }
+
+  handleClickDeleteEnrollments() {}
 
   formatCsfCourseExperience(csf_course_experience) {
     if (!csf_course_experience) {
@@ -277,7 +279,23 @@ export class WorkshopEnrollmentSchoolInfo extends React.Component {
         <thead>
           <tr>
             <th style={styles.th} />
-            {this.props.permissionList.has(WorkshopAdmin) && <td>Actions</td>}
+            {this.props.permissionList.has(WorkshopAdmin) && (
+              <th>
+                <DropdownButton
+                  bsSize="xsmall"
+                  title="Admin Actions"
+                  id="admin-actions-dropdown"
+                  disabled={this.state.selectedEnrollments.length === 0}
+                >
+                  <MenuItem onSelect={this.handleClickMoveEnrollments}>
+                    Move
+                  </MenuItem>
+                  <MenuItem onSelect={this.handleClickDeleteEnrollments}>
+                    Delete
+                  </MenuItem>
+                </DropdownButton>
+              </th>
+            )}
             <th style={styles.th}>#</th>
             <th style={styles.th}>First Name</th>
             <th style={styles.th}>Last Name</th>
