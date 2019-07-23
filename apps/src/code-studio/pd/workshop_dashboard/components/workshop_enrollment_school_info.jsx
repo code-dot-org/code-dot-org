@@ -280,12 +280,13 @@ export class WorkshopEnrollmentSchoolInfo extends React.Component {
           <tr>
             <th style={styles.th} />
             {this.props.permissionList.has(WorkshopAdmin) && (
-              <th>
+              <th style={styles.th}>
                 <DropdownButton
                   bsSize="xsmall"
-                  title="Admin Actions"
+                  title="Actions (admin)"
                   id="admin-actions-dropdown"
                   disabled={this.state.selectedEnrollments.length === 0}
+                  noCaret
                 >
                   <MenuItem onSelect={this.handleClickMoveEnrollments}>
                     Move
