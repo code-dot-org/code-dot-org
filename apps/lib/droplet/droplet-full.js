@@ -6240,7 +6240,6 @@ exports.Editor = Editor = (function() {
     this.sideScroller.style.position = 'absolute';
     this.sideScroller.style.top = 0;
     this.sideScroller.style.left = 0;
-    this.sideScroller.style.zIndex = 5;
     this.paletteWrapper = document.createElement('div');
     this.paletteWrapper.className = 'droplet-palette-wrapper';
     this.paletteElement = document.createElement('div');
