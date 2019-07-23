@@ -135,58 +135,6 @@ class SchoolInfoInterstitialHelperTest < ActiveSupport::TestCase
     # We never reach the call for the school_info_interstitial
   end
 
-  test 'shows the confirmation dialog even if there is a recent partial entry' do
-    user = create :teacher
-
-    # We got a complete school info right after they signed up
-    Timecop.travel 7.days
-    user.update! school_info: create(:school_info)
-    user.reload
-
-    # One year later, they enter an incomplete school info
-    Timecop.travel 1.year
-    user.update! school_info: create(
-      :school_info,
-      school_id: nil,
-      country: nil,
-      validation_type: SchoolInfo::VALIDATION_NONE
-    )
-    user.reload
-
-    Timecop.travel 7.days
-
-    assert SchoolInfoInterstitialHelper.show_school_info_confirmation_dialog? user
-    # We never reach the call for the school_info_interstitial
-  end
-
-  test 'does not show a dialog after ignoring a partial entry and confirming the previous complete one' do
-    user = create :teacher
-
-    # Enter a complete school info right after sign-up
-    Timecop.travel 7.days
-    user.update! school_info: create(:school_info)
-    user.reload
-
-    # Enter an incomplete school info a year later
-    Timecop.travel 1.year
-    user.update! school_info: create(
-      :school_info,
-      school_id: nil,
-      country: nil,
-      validation_type: SchoolInfo::VALIDATION_NONE
-    )
-    user.reload
-
-    # Change mind and confirm previous complete school info a week later
-    Timecop.travel 7.days
-    user.last_complete_user_school_info.update! last_confirmation_date: DateTime.now
-    user.reload
-
-    # A week later, expect to see no dialogs
-    refute SchoolInfoInterstitialHelper.show_school_info_confirmation_dialog? user
-    refute SchoolInfoInterstitialHelper.show_school_info_interstitial? user
-  end
-
   test 'user school info updates as expected over lifetime of user' do
     user = create :teacher
 
