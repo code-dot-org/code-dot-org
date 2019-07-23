@@ -30,15 +30,12 @@ describe('NetSimVizWire', function() {
       assert.equal('[object SVGGElement]', root[0].toString());
 
       var rootChildren = root.children();
-      assert.equal(3, rootChildren.length);
+      assert.equal(2, rootChildren.length);
 
       var line = rootChildren[0];
       assert.equal('[object SVGPathElement]', line.toString());
 
-      var questionMark = rootChildren[1];
-      assert.equal('[object SVGTextElement]', questionMark.toString());
-
-      var textBit = rootChildren[2];
+      var textBit = rootChildren[1];
       assert.equal('[object SVGTextElement]', textBit.toString());
     });
   });
