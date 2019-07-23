@@ -1,9 +1,10 @@
 name 'RelayProgramming-Unplugged'
+video_key 'C2_relay_programming'
 display_as_unplugged 'true'
 use_large_video_player 'true'
 hide_reference_area 'true'
 markdown <<MARKDOWN
 # Relay Programming
 
-This activity will begin with a short lesson on debugging and persistence, then will quickly move to a race against the clock as students break into teams and work together to write a program one instruction at a time.
+Break into teams and work together to write programs that draw pictures.
 MARKDOWN

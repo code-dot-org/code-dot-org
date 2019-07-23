@@ -85,8 +85,9 @@ describe('PeerReviewSubmissions', () => {
       submissions: fakePeerReviewData.submissions,
       pagination: fakePeerReviewData.pagination
     });
-    expect(peerReviewSubmissions.find('#DownloadCsvReport').prop('disabled')).to
-      .be.true;
+    expect(
+      peerReviewSubmissions.find('button#DownloadCsvReport').prop('disabled')
+    ).to.be.true;
 
     let courseOptions = peerReviewSubmissions
       .find('#PlcCourseSelect option')
@@ -99,25 +100,28 @@ describe('PeerReviewSubmissions', () => {
       ['course_1', 1],
       ['course_2', 2]
     ]);
-    expect(peerReviewSubmissions.find('#PlcCourseUnitSelect').prop('disabled'))
-      .to.be.true;
+    expect(
+      peerReviewSubmissions.find('select#PlcCourseUnitSelect').prop('disabled')
+    ).to.be.true;
   });
 
   it('Changing the course makes a new call and enables the button when a course is selected', () => {
     server = sinon.fakeServer.create();
 
     peerReviewSubmissions
-      .find('#PlcCourseSelect')
+      .find('select#PlcCourseSelect')
       .simulate('change', {target: {value: '1'}});
     expect(server.requests[0].url).to.equal(
       '/api/v1/peer_review_submissions/index?email=&plc_course_id=1&plc_course_unit_id=&page=1&per=30'
     );
     expect(peerReviewSubmissions.state().plcCourseId).to.equal('1');
     expect(peerReviewSubmissions.state().plcCourseUnitId).to.equal('');
-    expect(peerReviewSubmissions.find('#DownloadCsvReport').prop('disabled')).to
-      .be.true;
-    expect(peerReviewSubmissions.find('#PlcCourseUnitSelect').prop('disabled'))
-      .to.be.false;
+    expect(
+      peerReviewSubmissions.find('button#DownloadCsvReport').prop('disabled')
+    ).to.be.true;
+    expect(
+      peerReviewSubmissions.find('select#PlcCourseUnitSelect').prop('disabled')
+    ).to.be.false;
     let courseUnitOptions = peerReviewSubmissions
       .find('#PlcCourseUnitSelect option')
       .map(option => {
@@ -130,40 +134,44 @@ describe('PeerReviewSubmissions', () => {
     ]);
 
     peerReviewSubmissions
-      .find('#PlcCourseUnitSelect')
+      .find('select#PlcCourseUnitSelect')
       .simulate('change', {target: {value: '10'}});
     expect(server.requests[1].url).to.equal(
       '/api/v1/peer_review_submissions/index?email=&plc_course_id=1&plc_course_unit_id=10&page=1&per=30'
     );
     expect(peerReviewSubmissions.state().plcCourseId).to.equal('1');
     expect(peerReviewSubmissions.state().plcCourseUnitId).to.equal('10');
-    expect(peerReviewSubmissions.find('#DownloadCsvReport').prop('disabled')).to
-      .be.false;
+    expect(
+      peerReviewSubmissions.find('button#DownloadCsvReport').prop('disabled')
+    ).to.be.false;
 
     peerReviewSubmissions
-      .find('#PlcCourseSelect')
+      .find('select#PlcCourseSelect')
       .simulate('change', {target: {value: ''}});
     expect(server.requests[2].url).to.equal(
       '/api/v1/peer_review_submissions/index?email=&plc_course_id=&plc_course_unit_id=&page=1&per=30'
     );
     expect(peerReviewSubmissions.state().plcCourseId).to.equal('');
     expect(peerReviewSubmissions.state().plcCourseUnitId).to.equal('');
-    expect(peerReviewSubmissions.find('#DownloadCsvReport').prop('disabled')).to
-      .be.true;
-    expect(peerReviewSubmissions.find('#PlcCourseUnitSelect').prop('disabled'))
-      .to.be.true;
+    expect(
+      peerReviewSubmissions.find('button#DownloadCsvReport').prop('disabled')
+    ).to.be.true;
+    expect(
+      peerReviewSubmissions.find('select#PlcCourseUnitSelect').prop('disabled')
+    ).to.be.true;
   });
 
   it('Changing the email filter triggers a new call with email filter applied', () => {
     server = sinon.fakeServer.create();
 
     peerReviewSubmissions
-      .find('#EmailFilter')
+      .find('input#EmailFilter')
       .simulate('change', {target: {value: 'someone@example.com'}});
     expect(server.requests[0].url).to.equal(
       '/api/v1/peer_review_submissions/index?email=someone@example.com&plc_course_id=&plc_course_unit_id=&page=1&per=30'
     );
-    expect(peerReviewSubmissions.find('#DownloadCsvReport').prop('disabled')).to
-      .be.true;
+    expect(
+      peerReviewSubmissions.find('button#DownloadCsvReport').prop('disabled')
+    ).to.be.true;
   });
 });

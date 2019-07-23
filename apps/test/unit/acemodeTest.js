@@ -104,4 +104,24 @@ describe('errorMapper correctly maps different errors', function() {
       "'x' is a reserved word in Game Lab. Use a different variable name."
     );
   });
+
+  it('redefining setup', function() {
+    var jslintResults = {
+      data: [
+        {
+          column: 0,
+          raw: "'{a}' is defined but never used.",
+          row: 0,
+          text: "'setup' is defined but never used.",
+          type: 'error'
+        }
+      ]
+    };
+
+    errorMapper.processResults(jslintResults, 'Gamelab');
+    assert.equal(
+      jslintResults.data[0].text,
+      "'setup' is a function that already exists in Game Lab. Consider giving this function a different name."
+    );
+  });
 });

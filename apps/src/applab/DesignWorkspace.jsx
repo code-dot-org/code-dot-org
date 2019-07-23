@@ -15,6 +15,7 @@ class DesignWorkspace extends React.Component {
     onChangeElement: PropTypes.func.isRequired,
     onDepthChange: PropTypes.func.isRequired,
     onDuplicate: PropTypes.func.isRequired,
+    onRestoreThemeDefaults: PropTypes.func.isRequired,
     onDelete: PropTypes.func.isRequired,
     onInsertEvent: PropTypes.func.isRequired,
     isDimmed: PropTypes.bool.isRequired,
@@ -60,6 +61,7 @@ class DesignWorkspace extends React.Component {
           onDelete={this.props.onDelete}
           onDepthChange={this.props.onDepthChange}
           onDuplicate={this.props.onDuplicate}
+          onRestoreThemeDefaults={this.props.onRestoreThemeDefaults}
           onInsertEvent={this.props.onInsertEvent}
           screenIds={this.props.screenIds}
         />

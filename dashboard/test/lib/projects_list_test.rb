@@ -68,6 +68,7 @@ class ProjectsListTest < ActionController::TestCase
       storage_id: @storage_id,
       id: 1,
       birthday: 13.years.ago.to_datetime,
+      abuse_score: 0
     }
     StorageApps.stubs(:get_published_project_data).returns({})
     refute_nil ProjectsList.send(:get_published_project_and_user_data, project_and_user)
@@ -80,6 +81,7 @@ class ProjectsListTest < ActionController::TestCase
       storage_id: @storage_id,
       id: 1,
       birthday: 13.years.ago.to_datetime,
+      abuse_score: 0
     }
     StorageApps.stubs(:get_published_project_data).returns({})
     refute_nil ProjectsList.send(:get_published_project_and_user_data, project_and_user)
@@ -93,7 +95,8 @@ class ProjectsListTest < ActionController::TestCase
         birthday: 13.years.ago.to_datetime,
         storage_id: @storage_id,
         id: 1,
-        project_type: 'applab'
+        project_type: 'applab',
+        abuse_score: 0
       },
       {
         name: 'project2',
@@ -101,7 +104,8 @@ class ProjectsListTest < ActionController::TestCase
         birthday: 13.years.ago.to_datetime,
         storage_id: @storage_id,
         id: 2,
-        project_type: 'applab'
+        project_type: 'applab',
+        abuse_score: 0
       },
       {
         name: 'project3',
@@ -109,7 +113,8 @@ class ProjectsListTest < ActionController::TestCase
         birthday: 13.years.ago.to_datetime,
         storage_id: @storage_id,
         id: 3,
-        project_type: 'applab'
+        project_type: 'applab',
+        abuse_score: 0
       }
     ]
     PEGASUS_DB.stubs(:[]).returns(db_result(stub_projects))
@@ -125,7 +130,8 @@ class ProjectsListTest < ActionController::TestCase
         birthday: 13.years.ago.to_datetime,
         storage_id: @storage_id,
         id: 1,
-        project_type: 'dance'
+        project_type: 'dance',
+        abuse_score: 0
       },
       {
         name: 'project2',
@@ -133,7 +139,8 @@ class ProjectsListTest < ActionController::TestCase
         birthday: 13.years.ago.to_datetime,
         storage_id: @storage_id,
         id: 2,
-        project_type: 'dance'
+        project_type: 'dance',
+        abuse_score: 0
       },
       {
         name: 'project3',
@@ -141,12 +148,48 @@ class ProjectsListTest < ActionController::TestCase
         birthday: 13.years.ago.to_datetime,
         storage_id: @storage_id,
         id: 3,
-        project_type: 'dance'
+        project_type: 'dance',
+        abuse_score: 0
       }
     ]
     PEGASUS_DB.stubs(:[]).returns(db_result(stub_projects))
     StorageApps.stubs(:get_published_project_data).returns({})
     assert_equal 3, ProjectsList.send(:fetch_published_project_types, ['dance'], limit: 4)['dance'].length
+  end
+
+  test 'fetch_published_project_types filters by abuse_score' do
+    stub_projects = [
+      {
+        name: 'abusive',
+        properties: {}.to_json,
+        birthday: 13.years.ago.to_datetime,
+        storage_id: @storage_id,
+        id: 1,
+        project_type: 'applab',
+        abuse_score: 20
+      },
+      {
+        name: 'normal',
+        properties: {}.to_json,
+        birthday: 13.years.ago.to_datetime,
+        storage_id: @storage_id,
+        id: 2,
+        project_type: 'applab',
+        abuse_score: 0
+      },
+      {
+        name: 'featured',
+        properties: {}.to_json,
+        birthday: 13.years.ago.to_datetime,
+        storage_id: @storage_id,
+        id: 3,
+        project_type: 'applab',
+        abuse_score: -50
+      }
+    ]
+    PEGASUS_DB.stubs(:[]).returns(db_result(stub_projects))
+    StorageApps.stubs(:get_published_project_data).returns({})
+    assert_equal 2, ProjectsList.send(:fetch_published_project_types, ['applab'], limit: 4)['applab'].length
   end
 
   test 'extract_data_for_featured_project_cards correctly parses project data' do

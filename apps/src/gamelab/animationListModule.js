@@ -3,14 +3,14 @@
  */
 import _ from 'lodash';
 import {combineReducers} from 'redux';
-import {createUuid} from '../utils';
+import {createUuid} from '@cdo/apps/utils';
 import {
   fetchURLAsBlob,
   blobToDataURI,
   dataURIToSourceSize
-} from '../imageUtils';
-import {animations as animationsApi} from '../clientApi';
-import * as assetPrefix from '../assetManagement/assetPrefix';
+} from '@cdo/apps/imageUtils';
+import {animations as animationsApi} from '@cdo/apps/clientApi';
+import * as assetPrefix from '@cdo/apps/assetManagement/assetPrefix';
 import {selectAnimation} from './AnimationTab/animationTabModule';
 import {reportError} from './errorDialogStackModule';
 import {throwIfSerializedAnimationListIsInvalid} from './shapes';
@@ -18,7 +18,7 @@ import {
   projectChanged,
   isOwner,
   getCurrentId
-} from '../code-studio/initApp/project';
+} from '@cdo/apps/code-studio/initApp/project';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 // TODO: Overwrite version ID within session
@@ -402,13 +402,17 @@ export function appendCustomFrames(props) {
 }
 
 /**
- * Add a library animation to the project.
+ * Add a library animation to the project (at the end of the list, unless a spritelab project).
  * @param {!SerializedAnimation} props
  */
 export function addLibraryAnimation(props) {
   return (dispatch, getState) => {
     const key = createUuid();
-    dispatch(addAnimationAction(key, props));
+    if (getState().pageConstants && getState().pageConstants.isBlockly) {
+      dispatch(addAnimationAction(key, props, 0));
+    } else {
+      dispatch(addAnimationAction(key, props));
+    }
     dispatch(
       loadAnimationFromSource(key, () => {
         dispatch(selectAnimation(key));
@@ -646,9 +650,19 @@ function loadAnimationFromSource(key, callback) {
  * Action creator for adding an animation.
  * @param {!AnimationKey} key
  * @param {SerializedAnimation} props
+ * @param {number} [index]
  * @returns {{type: string, key: AnimationKey, props: SerializedAnimation}}
  */
-export function addAnimationAction(key, props) {
+export function addAnimationAction(key, props, index) {
+  // Spritelab projects add animation at the beginning of animation list
+  if (index === 0) {
+    return {
+      type: ADD_ANIMATION_AT,
+      key,
+      props,
+      index
+    };
+  }
   return {
     type: ADD_ANIMATION,
     key,

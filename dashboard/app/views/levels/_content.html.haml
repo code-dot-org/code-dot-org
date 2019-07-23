@@ -2,20 +2,21 @@
 / Set 'data' and 'app' to use this partial.
 / Note that content_class, source_level, hide_header, and postcontent are optional.
 - app, data, content_class, source_level, hide_header, postcontent = %i(app data content_class source_level hide_header postcontent).map{ |x| local_assigns[x] }
+- level = source_level || @level
 
 - unless data['title'].blank? || hide_header
-  %h1!= render_multi_or_match_content(data['title'], source_level || @level) unless app == 'external'
+  %h1!= render_multi_or_match_content(level.localized_property('title')) unless app == 'external'
 %div.content-level{class: (content_class unless content_class.blank?)}
   - unless app == 'external'
     - unless data['content1'].blank?
-      %p.content.content1!= render_multi_or_match_content(data['content1'], source_level || @level)
+      %p.content.content1!= render_multi_or_match_content(level.localized_property('content1'))
     - unless data['content2'].blank?
-      %p.content.content2!= render_multi_or_match_content(data['content2'], source_level || @level)
+      %p.content.content2!= render_multi_or_match_content(level.localized_property('content2'))
     - unless data['content3'].blank?
-      %p.content.content3!= render_multi_or_match_content(data['content3'], source_level || @level)
+      %p.content.content3!= render_multi_or_match_content(level.localized_property('content3'))
   / Markdown support using the 'markdown' property.
   - if data['markdown'].present?
     #markdown
       / Render markdown text through the ActionView template engine.
-      = ActionView::Base.new.render(inline: data['markdown'], type: :md)
+      = ActionView::Base.new.render(inline: level.localized_property('markdown'), type: :md)
   = postcontent

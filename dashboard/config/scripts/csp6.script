@@ -3,6 +3,7 @@ hideable_stages true
 exclude_csf_column_in_legend true
 student_detail_progress_view true
 has_lesson_plan true
+curriculum_umbrella 'CSP'
 
 stage 'Tech Setup - Your AP Digital Portfolio and Other Tools'
 level 'U6 AP Performance Task Tech Setup - Student Links', progression: 'U6 AP Performance Task Tech Setup - Student Links'

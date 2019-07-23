@@ -1,5 +1,6 @@
 import React from 'react';
 import SchoolInfoConfirmationDialog from './SchoolInfoConfirmationDialog';
+import {action} from '@storybook/addon-actions';
 
 export default storybook => {
   storybook
@@ -7,8 +8,19 @@ export default storybook => {
     .addStoryTable([
       {
         name: 'Display school info confirmation dialog',
-        description: 'Teacher can view prompt to update school information',
-        story: () => <SchoolInfoConfirmationDialog isOpen={true} />
+        description: 'Teacher can view modal to update school information',
+        story: () => (
+          <SchoolInfoConfirmationDialog
+            scriptData={{
+              formUrl: '',
+              authTokenName: 'auth_token',
+              authTokenValue: 'fake_auth_token',
+              existingSchoolInfo: {}
+            }}
+            onClose={action('onClose callback')}
+            isOpen={true}
+          />
+        )
       }
     ]);
 };

@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import FlexGroup from './FlexGroup';
 import StageDescriptions from './StageDescriptions';
 import ScriptAnnouncementsEditor from './ScriptAnnouncementsEditor';
 import LegendSelector from './LegendSelector';
@@ -24,16 +25,22 @@ const styles = {
   },
   checkbox: {
     margin: '0 0 0 7px'
+  },
+  dropdown: {
+    margin: '0 6px'
   }
 };
 
 const VIDEO_KEY_REGEX = /video_key_for_next_level/g;
+
+const CURRICULUM_UMBRELLAS = ['CSF', 'CSD', 'CSP'];
 
 /**
  * Component for editing course scripts.
  */
 export default class ScriptEditor extends React.Component {
   static propTypes = {
+    beta: PropTypes.bool,
     name: PropTypes.string.isRequired,
     i18nData: PropTypes.object.isRequired,
     hidden: PropTypes.bool,
@@ -56,7 +63,12 @@ export default class ScriptEditor extends React.Component {
     announcements: PropTypes.arrayOf(announcementShape),
     supportedLocales: PropTypes.arrayOf(PropTypes.string),
     locales: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.string)).isRequired,
-    projectSharing: PropTypes.bool
+    projectSharing: PropTypes.bool,
+    curriculumUmbrella: PropTypes.oneOf(CURRICULUM_UMBRELLAS),
+    familyName: PropTypes.string,
+    versionYear: PropTypes.string,
+    scriptFamilies: PropTypes.arrayOf(PropTypes.string).isRequired,
+    versionYearOptions: PropTypes.arrayOf(PropTypes.string).isRequired
   };
 
   handleClearProjectWidgetSelectClick = () => {
@@ -75,9 +87,8 @@ export default class ScriptEditor extends React.Component {
     const videoKeysBefore = (
       this.props.stageLevelData.match(VIDEO_KEY_REGEX) || []
     ).length;
-    const videoKeysAfter = (
-      this.scriptTextArea.value.match(VIDEO_KEY_REGEX) || []
-    ).length;
+    const scriptText = this.props.beta ? '' : this.scriptTextArea.value;
+    const videoKeysAfter = (scriptText.match(VIDEO_KEY_REGEX) || []).length;
     if (videoKeysBefore !== videoKeysAfter) {
       if (
         !confirm(
@@ -140,6 +151,56 @@ export default class ScriptEditor extends React.Component {
           inputStyle={styles.input}
         />
         <h2>Basic Settings</h2>
+        <label>
+          Is this script part of one of the core courses?
+          <select
+            name="curriculum_umbrella"
+            style={styles.dropdown}
+            defaultValue={this.props.curriculumUmbrella}
+            ref={select => (this.curriculumUmbrellaSelect = select)}
+          >
+            <option value="">(None)</option>
+            {CURRICULUM_UMBRELLAS.map(curriculumUmbrella => (
+              <option key={curriculumUmbrella} value={curriculumUmbrella}>
+                {curriculumUmbrella}
+              </option>
+            ))}
+          </select>
+          <p>
+            By selecting one of the above, this script will have a property,
+            curriculum_umbrella, specific to that course regardless of version.
+          </p>
+        </label>
+        <label>
+          Family Name
+          <select
+            name="family_name"
+            defaultValue={this.props.familyName}
+            style={styles.dropdown}
+          >
+            <option value="">(None)</option>
+            {this.props.scriptFamilies.map(familyOption => (
+              <option key={familyOption} value={familyOption}>
+                {familyOption}
+              </option>
+            ))}
+          </select>
+        </label>
+        <label>
+          Version Year
+          <select
+            name="version_year"
+            defaultValue={this.props.versionYear}
+            style={styles.dropdown}
+          >
+            <option value="">(None)</option>
+            {this.props.versionYearOptions.map(year => (
+              <option key={year} value={year}>
+                {year}
+              </option>
+            ))}
+          </select>
+        </label>
         <label>
           Visible in Teacher Dashboard
           <input
@@ -394,16 +455,23 @@ export default class ScriptEditor extends React.Component {
           />
         </div>
         <h2>Stages and Levels</h2>
-        <div>
-          <textarea
-            id="script_text"
-            name="script_text"
-            rows={textAreaRows}
-            style={styles.input}
-            defaultValue={this.props.stageLevelData || "stage 'new stage'\n"}
-            ref={textArea => (this.scriptTextArea = textArea)}
-          />
-        </div>
+        {this.props.beta ? (
+          <FlexGroup />
+        ) : (
+          <div>
+            <a href="?beta=true">
+              Try the beta Script Editor (will reload the page without saving)
+            </a>
+            <textarea
+              id="script_text"
+              name="script_text"
+              rows={textAreaRows}
+              style={styles.input}
+              defaultValue={this.props.stageLevelData || "stage 'new stage'\n"}
+              ref={textArea => (this.scriptTextArea = textArea)}
+            />
+          </div>
+        )}
         <button
           className="btn btn-primary"
           type="submit"

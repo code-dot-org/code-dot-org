@@ -1,7 +1,8 @@
 {
   "category": "Sprites",
   "config": {
-    "func": "allSpritesWithAnimation",
+    "simpleValue": true,
+    "name": "allSpritesWithAnimation",
     "inline": false,
     "blockText": "{ANIMATION}",
     "returnType": "Sprite",

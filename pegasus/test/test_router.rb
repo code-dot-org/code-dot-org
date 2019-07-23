@@ -37,7 +37,7 @@ class RouterTest < Minitest::Test
       get('/erb_error_body')
     end
     file, line = err.backtrace.first.split(':')
-    assert_equal file, app.helpers.content_dir('code.org/public/erb_error_body.md')
+    assert_equal file, app.helpers.content_dir('code.org/public/erb_error_body.md.erb')
     assert_equal 8, line.to_i
   end
 
@@ -48,6 +48,22 @@ class RouterTest < Minitest::Test
     file, line = err.backtrace.first.split(':')
     assert_equal file, app.helpers.content_dir('code.org/public/haml_error.haml')
     assert_equal 10, line.to_i
+  end
+
+  def test_markdown_partial
+    path = '/test_md_partials'
+    resp = get(path)
+    assert_equal 200, resp.status, path
+    assert_match "<h1>Markdown With Partials</h1>", resp.body
+    assert_match "<h2>Partial Content</h2>", resp.body
+  end
+
+  def test_markdown_partial_only_templates
+    path = '/test_md_partial_only_templates'
+    resp = get(path)
+    assert_equal 200, resp.status, path
+    assert_match "<h1>Partials protect against directory transversal</h1>", resp.body
+    refute_match "<h3>Hello</h3>", resp.body
   end
 
   def test_view

@@ -76,55 +76,64 @@ export function createCircuitPlaygroundComponents(board) {
  *   createCircuitPlaygroundComponents.  This object will be mutated: Destroyed
  *   components will be removed. Additional members of this object will be
  *   ignored.
+ * @param {boolean} shouldDestroyComponents - whether or not to fully delete the
+ *   components, or just reset to their initial state.
  */
-export function destroyCircuitPlaygroundComponents(components) {
+export function cleanupCircuitPlaygroundComponents(
+  components,
+  shouldDestroyComponents
+) {
   if (components.colorLeds) {
-    components.colorLeds.forEach(led => led.stop());
+    components.colorLeds.forEach(led => {
+      led.color('white');
+      led.intensity(100);
+      led.off();
+    });
   }
-  delete components.colorLeds;
 
   if (components.led) {
-    components.led.stop();
+    components.led.intensity(0);
+    components.led.off();
   }
-  delete components.led;
-
-  // No reset needed for Switch
-  delete components.toggleSwitch;
 
   if (components.buzzer) {
+    components.buzzer.off();
     components.buzzer.stop();
   }
-  delete components.buzzer;
 
   if (components.soundSensor) {
     components.soundSensor.disable();
   }
-  delete components.soundSensor;
 
   if (components.lightSensor) {
     components.lightSensor.disable();
   }
-  delete components.lightSensor;
 
   if (components.tempSensor) {
     components.tempSensor.disable();
   }
-  delete components.tempSensor;
 
   if (components.accelerometer) {
     components.accelerometer.stop();
   }
-  delete components.accelerometer;
+  if (shouldDestroyComponents) {
+    delete components.colorLeds;
+    delete components.led;
+    delete components.toggleSwitch;
+    delete components.buzzer;
+    delete components.soundSensor;
+    delete components.lightSensor;
+    delete components.tempSensor;
+    delete components.accelerometer;
+    delete components.buttonL;
+    delete components.buttonR;
 
-  // No reset needed for Button
-  delete components.buttonL;
-  delete components.buttonR;
-
-  if (experiments.isEnabled('maker-captouch')) {
-    // Remove listeners from each TouchSensor
-    TOUCH_PINS.forEach(pin => {
-      delete components[`touchPad${pin}`];
-    });
+    if (experiments.isEnabled('maker-captouch')) {
+      // Remove listeners from each TouchSensor
+      TOUCH_PINS.forEach(pin => {
+        delete components[`touchPad${pin}`];
+      });
+    }
   }
 }
 
@@ -250,6 +259,16 @@ function initializeAccelerometer(board) {
         accelerometer.getOrientation('y'),
         accelerometer.getOrientation('z')
       ];
+    }
+
+    // Accelerometer on the express board is rotated 90 degrees from classic board.
+    // Conditional ensures consistent output of 'pitch'/'roll' across both boards
+    if (board.isExpressBoard) {
+      if (orientationType === 'pitch') {
+        return accelerometer['roll'];
+      } else if (orientationType === 'roll') {
+        return -1 * accelerometer['pitch'];
+      }
     }
     return accelerometer[orientationType];
   };

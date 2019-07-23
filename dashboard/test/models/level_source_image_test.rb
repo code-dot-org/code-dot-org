@@ -5,7 +5,7 @@ class LevelSourceTest < ActiveSupport::TestCase
     # rubocop:disable Lint/Void
     LevelSourceImage # make sure this is loaded before we mess around with mocking S3...
     # rubocop:enable Lint/Void
-    CDO.disable_s3_image_uploads = true # make sure image uploads are disabled unless specified in individual tests
+    CDO.stubs(disable_s3_image_uploads: true) # make sure image uploads are disabled unless specified in individual tests
 
     @blank_image = File.read('test/fixtures/artist_image_blank.png', binmode: true)
     @good_image_png = File.read('test/fixtures/artist_image_1.png', binmode: true)

@@ -20,7 +20,10 @@ import {EMPTY_IMAGE} from '@cdo/apps/gamelab/constants';
 import {createStore} from '../../util/redux';
 import {expect} from '../../util/configuredChai';
 import {setExternalGlobals} from '../../util/testUtils';
+import commonReducers from '@cdo/apps/redux/commonReducers';
+import {setPageConstants} from '@cdo/apps/redux/pageConstants';
 const project = require('@cdo/apps/code-studio/initApp/project');
+import _ from 'lodash';
 
 describe('animationListModule', function() {
   setExternalGlobals(beforeEach, afterEach);
@@ -490,7 +493,9 @@ describe('animationListModule', function() {
       server = sinon.fakeServer.create();
       server.respondWith('imageBody');
       store = createStore(
-        combineReducers({animationList: reducer, animationTab}),
+        combineReducers(
+          _.assign({}, commonReducers, {animationTab}, {animationList: reducer})
+        ),
         {}
       );
     });
@@ -535,6 +540,32 @@ describe('animationListModule', function() {
       expect(
         store.getState().animationList.propsByKey[blankAnimationKey4].name
       ).to.equal('library_animation_2');
+    });
+
+    it('adds animation at front of list in Game Lab', function() {
+      store.dispatch(addLibraryAnimation({name: 'first'}));
+      store.dispatch(addLibraryAnimation({name: 'second'}));
+      store.dispatch(addLibraryAnimation({name: 'third'}));
+      let firstAnimation = store.getState().animationList.orderedKeys[0];
+      expect(
+        store.getState().animationList.propsByKey[firstAnimation].name
+      ).to.equal('first_1');
+    });
+
+    it('adds animation at front of list in Sprite Lab', function() {
+      store.dispatch(
+        setPageConstants({
+          isBlockly: true
+        })
+      );
+
+      store.dispatch(addLibraryAnimation({name: 'first'}));
+      store.dispatch(addLibraryAnimation({name: 'second'}));
+      store.dispatch(addLibraryAnimation({name: 'third'}));
+      let firstAnimation = store.getState().animationList.orderedKeys[0];
+      expect(
+        store.getState().animationList.propsByKey[firstAnimation].name
+      ).to.equal('third_1');
     });
   });
 

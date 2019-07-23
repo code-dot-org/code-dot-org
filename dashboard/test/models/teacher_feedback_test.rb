@@ -155,4 +155,28 @@ class TeacherFeedbackTest < ActiveSupport::TestCase
 
     assert_equal([], TeacherFeedback.where(student: student).latest_per_teacher)
   end
+
+  test 'increment_visit_count increments visit count and updates timestamps' do
+    feedback = create :teacher_feedback
+    datetime1 = DateTime.new(2000, 1, 1)
+    datetime2 = DateTime.new(2002, 1, 1)
+
+    Timecop.freeze(datetime1) do
+      feedback.increment_visit_count
+      feedback.reload
+
+      assert_equal 1, feedback.student_visit_count
+      assert_equal datetime1, feedback.student_first_visited_at
+      assert_equal datetime1, feedback.student_last_visited_at
+    end
+
+    Timecop.freeze(datetime2) do
+      feedback.increment_visit_count
+      feedback.reload
+
+      assert_equal 2, feedback.student_visit_count
+      assert_equal datetime1, feedback.student_first_visited_at
+      assert_equal datetime2, feedback.student_last_visited_at
+    end
+  end
 end

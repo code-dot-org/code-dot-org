@@ -261,6 +261,10 @@ class Pd::Workshop < ActiveRecord::Base
     "#{course_subject} workshop on #{start_time} at #{location_name} in #{friendly_location}"[0...255]
   end
 
+  def friendly_subject
+    subject ? "#{subject} Workshop" : nil
+  end
+
   # E.g. "March 1-3, 2017" or "March 30 - April 2, 2017"
   # Assume no workshops will span a new year
   def friendly_date_range
@@ -315,13 +319,12 @@ class Pd::Workshop < ActiveRecord::Base
     sessions.order(:start).first.start.strftime('%Y')
   end
 
-  # returns the school year the summer workshop is preparing for, in
-  # the form "2019-2020", like application_year on Pd Applications
-  def summer_workshop_school_year
-    if local_summer?
-      y = year
-      "#{y}-#{y.to_i + 1}"
-    end
+  # Returns the school year the summer workshop is preparing for, in
+  # the form "2019-2020", like application_year on Pd Applications.
+  # The school year runs 6/1-5/31.
+  def school_year
+    return nil if sessions.empty?
+    sessions.order(:start).first.start.month >= 6 ? "#{year}-#{year.to_i + 1}" : "#{year.to_i - 1}-#{year}"
   end
 
   # Suppress 3 and 10-day reminders for certain workshops
@@ -335,20 +338,10 @@ class Pd::Workshop < ActiveRecord::Base
     ].include? subject
   end
 
-  def self.csf_201_pilot?(workshop)
-    workshop.csf? &&
-      workshop.subject == SUBJECT_CSF_201 &&
-      workshop.sessions.present? &&
-      workshop.sessions.first.start < CSF_201_PILOT_END_DATE
-  end
-
   def self.send_reminder_for_upcoming_in_days(days)
     # Collect errors, but do not stop batch. Rethrow all errors below.
     errors = []
     scheduled_start_in_days(days).each do |workshop|
-      # Don't send emails to CSF 201 pilot workshops
-      next if csf_201_pilot?(workshop)
-
       workshop.enrollments.each do |enrollment|
         email = Pd::WorkshopMailer.teacher_enrollment_reminder(enrollment, days_before: days)
         email.deliver_now
@@ -421,7 +414,6 @@ class Pd::Workshop < ActiveRecord::Base
 
   def self.process_ended_workshop_async(id)
     workshop = Pd::Workshop.find(id)
-    return if csf_201_pilot?(workshop)
     raise "Unexpected workshop state #{workshop.state}." unless workshop.state == STATE_ENDED
 
     workshop.send_exit_surveys
@@ -436,7 +428,13 @@ class Pd::Workshop < ActiveRecord::Base
     end
   end
 
+  # Called at the very end of the async close-workshop workflow, to actually send exit
+  # surveys to attended teachers.  Note that logic here is more-or-less independent
+  # from other logic deciding whether a workshop should have exit surveys.
   def send_exit_surveys
+    # FiT workshops should not send exit surveys
+    return if SUBJECT_FIT == subject || COURSE_FACILITATOR == course
+
     resolve_enrolled_users
 
     # Send the emails
@@ -588,6 +586,10 @@ class Pd::Workshop < ActiveRecord::Base
     course == COURSE_CSF
   end
 
+  def csf_201?
+    course == COURSE_CSF && subject == SUBJECT_CSF_201
+  end
+
   def funded_csf?
     course == COURSE_CSF && funded
   end
@@ -636,6 +638,11 @@ class Pd::Workshop < ActiveRecord::Base
     sessions.last.try {|session| session.attendances.any?}
   end
 
+  # whether we will show the scholarship dropdown
+  def scholarship_workshop?
+    csf? || local_summer?
+  end
+
   def pre_survey?
     PRE_SURVEY_BY_COURSE.key? course
   end
@@ -667,5 +674,39 @@ class Pd::Workshop < ActiveRecord::Base
       end
       [unit_name, lesson_names]
     end
+  end
+
+  # Users who could be re-assigned to be the organizer of this workshop
+  def potential_organizers
+    potential_organizers = []
+
+    # if there is a regional partner, only that partner's PMs can become the organizer
+    # otherwise, any PM can become the organizer
+    if regional_partner
+      regional_partner.program_managers.each do |pm|
+        potential_organizers << {label: pm.name, value: pm.id}
+      end
+    else
+      UserPermission.where(permission: UserPermission::PROGRAM_MANAGER).pluck(:user_id)&.map do |user_id|
+        pm = User.find(user_id)
+        potential_organizers << {label: pm.name, value: pm.id}
+      end
+    end
+
+    # any CSF facilitator can become the organizer of a CSF workshhop
+    if course == Pd::Workshop::COURSE_CSF
+      Pd::CourseFacilitator.where(course: Pd::Workshop::COURSE_CSF).pluck(:facilitator_id)&.map do |user_id|
+        facilitator = User.find(user_id)
+        potential_organizers << {label: facilitator.name, value: facilitator.id}
+      end
+    end
+
+    # workshop admins can become the organizer of any workshop
+    UserPermission.where(permission: UserPermission::WORKSHOP_ADMIN).pluck(:user_id)&.map do |user_id|
+      admin = User.find(user_id)
+      potential_organizers << {label: admin.name, value: admin.id}
+    end
+
+    potential_organizers
   end
 end

@@ -13,6 +13,7 @@ import {
   renderTeacherPanel,
   queryLockStatus
 } from '@cdo/apps/code-studio/teacherPanelHelpers';
+import {setVerified} from '@cdo/apps/code-studio/verifiedTeacherRedux';
 
 $(document).ready(initPage);
 
@@ -25,11 +26,20 @@ function initPage() {
   initViewAs(store);
   queryLockStatus(store, teacherPanelData.script_id);
   store.dispatch(getHiddenStages(teacherPanelData.script_name, false));
-  renderTeacherContentToggle(store);
+  if (teacherPanelData.is_verified_teacher) {
+    store.dispatch(setVerified());
+  }
+  // Stage Extras fail to load with this
+  if (!teacherPanelData.stage_extra) {
+    renderTeacherContentToggle(store);
+  }
   renderTeacherPanel(
     store,
     teacherPanelData.script_id,
-    teacherPanelData.section
+    teacherPanelData.section,
+    teacherPanelData.script_name,
+    teacherPanelData,
+    teacherPanelData.page_type
   );
 }
 

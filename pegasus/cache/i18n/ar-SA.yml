@@ -1045,16 +1045,9 @@ ar-SA:
   coursed-2017_name: الدورة D (2017)
   coursee-2017_name: الدورة E (2017)
   coursef-2017_name: الدورة F (2017)
+  pre-express-2018_name: دورة سريعة لمستوى ما قبل القراءة (2018)
   accelerated_name: دورة تدريبية مسرّعة
   express_name: دورة سريعة
-  pre-express_name: دورة سريعة لمستوى ما قبل القراءة
-  express-2017_name: دورة سريعة (2017)
-  pre-express-2017_name: دورة سريعة لمستوى ما قبل القراءة (2017)
-  pre-express-2018_name: دورة سريعة لمستوى ما قبل القراءة (2018)
-  cspunit1_name: "(قديم) الوحدة 1: معلومات رقمية"
-  cspunit2_name: "(قديم) الوحدة 2: الإنترنت"
-  cspunit3_name: "(قديم) الوحدة 3: البرمجة"
-  cspunit4_name: "(قديم) الوحدة 4: البيانات"
   20-hour_name: دورة تدريبية مسرّعة
   algebra_name: علوم الحاسوب في الجبر
   AlgebraA_name: علوم الحاسوب في الجبر مُقَرّر أ
@@ -1062,8 +1055,6 @@ ar-SA:
   classicmaze_name: المتاهة الكلاسيكية
   iceage_name: العصر الجليدي
   minecraft_name: Minecraft
-  math_category_name: العمليات الحسابية
-  hoc_category_name: ساعة البرمجة
   applab_name: مختبر التطبيق
   basketball_name: اصنع لعبة كرة السلة
   applab_gradelevel: للأعمار 13 +
@@ -1138,6 +1129,12 @@ ar-SA:
   coursed-2018_gradelevel: الصفوف 8+
   coursee-2018_gradelevel: الذين تتراوح أعمارهم بين 8-12
   coursef-2018_gradelevel: الأعمار 9-13
+  coursea-2019_gradelevel: الأعمار 4-7
+  courseb-2019_gradelevel: الأعمار 5-8
+  coursec-2019_gradelevel: الأعمار 6-10
+  coursed-2019_gradelevel: الصفوف 8+
+  coursee-2019_gradelevel: الذين تتراوح أعمارهم بين 8-12
+  coursef-2019_gradelevel: الأعمار 9-13
   accelerated_gradelevel: الذين تتراوح أعمارهم بين 10-13
   codeorg_platformtext: المتصفحات الحديثة والهواتف الذكية و اللوحات الرقمية
   codeintl_platformtext: المتصفحات الحديثة والهواتف الذكية و اللوحات الرقمية

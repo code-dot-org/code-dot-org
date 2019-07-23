@@ -115,7 +115,7 @@ en:
       CSD Introduction to Lists - Length: Introduction to Lists - Length
       CSD LEDs Map: 'Circuit Playground: LEDs'
       CSD LEDs Map_2018: 'Circuit Playground: LEDs'
-      CSD LEDs Map_2019: 'Circuit Playground: LEDs'
+      CSD LEDs Map_2019: 'Circuit Playground: Introduction'
       CSD Polling Events Map: Polling Events
       CSD Polling Events Map_2018: Polling Events
       CSD Polling Events Map_2019: Polling Events
@@ -490,6 +490,9 @@ en:
       CSD U4 User Input Map: Responding to User Input
       CSD U4 User Input Map_2018: Responding to User Input
       CSD U4 User Input Map_2019: Responding to User Input
+      CSD U4 test bug FR: Iterative Design
+      CSD U4 test empathy FR: Iterative Design
+      CSD U4 test prototype FR: Iterative Design
       CSD U4L01 SFLP_2018: Lesson Overview
       CSD U4L01 autoSFLP_2018: Lesson Overview
       CSD U4L01 autoSFLP_2019: Lesson Overview
@@ -739,7 +742,7 @@ en:
       'CSD: Drawing in Game Lab 2_2018': 'Video: Drawing in Game Lab - Part 2'
       'CSD: Drawing in Game Lab 2_2019': 'Video: Drawing in Game Lab - Part 2'
       'CSD: For Loop_2018': For Loops
-      'CSD: For Loop_2019': For Loops
+      'CSD: For Loop_2019': 'Video: For Loops'
       'CSD: Introduction to Lists - Part 1': Introduction to Lists - Part 1
       'CSD: Introduction to Lists - Part 2': Introduction to Lists - Part 2
       'CSD: Introduction to the Draw Loop': 'Video: Introduction to the Draw Loop'
@@ -1157,10 +1160,13 @@ en:
       U5 Lists Investigate Choresly App: Thermostat App v.5
       U5 Lists Investigate Choresly Code: Thermostat App v.5
       U5 Lists Investigate Outfitly Code: Thermostat App v.5
+      U5 Param Return Investigate Thermostat: Thermostat App v6
       U5-AP-Algorithm-Does-It-Count: AP Practice Response - Score the Response
       U5-AP-Algorithm-Does-It-Count_2018: AP Practice Response - Score the Response
       U5-AP-Algorithm-Does-It-Count_2019: AP Practice Response - Score the Response
       U7 L01 More with Functions: 'Conditionals: Boolean Expressions'
+      U7 L04 Exit Ticket: Check Your Understanding
+      U7 L04 Libraries Intro: 'Conditionals: Boolean Expressions'
       U7 L05 Exit Ticket: Check Your Understanding
       Using Accelerometer Events_2018: Using Accelerometer Events
       Using Accelerometer Events_2019: Using Accelerometer Events
@@ -1197,6 +1203,8 @@ en:
       cp1dlp-q1: Lesson Connections and Philosophy
       csd U3 conditional statements video: 'Video: "If/Else" Statements'
       csd U3 conditional statements video_2019: 'Video: Conditional Statements'
+      csd digital unplugged PSP word search FR: Word Search
+      csd digital unplugged PSP word search: Word Search
       csd u5 recommender sample: Sample App
       csd u5 recommender sample_2019: Sample App
       csd-thursday-facilitation: Facilitation Reflection

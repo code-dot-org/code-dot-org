@@ -1534,6 +1534,11 @@ FactoryGirl.define do
     day 5
   end
 
+  factory :pd_survey_question, class: 'Pd::SurveyQuestion' do
+    form_id 12345
+    questions '{}'
+  end
+
   factory :pd_application_email, class: 'Pd::Application::Email' do
     association :application, factory: :pd_teacher1920_application
     email_type 'confirmation'

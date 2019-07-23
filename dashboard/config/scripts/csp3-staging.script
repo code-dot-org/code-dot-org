@@ -2,6 +2,7 @@ login_required true
 hideable_stages true
 student_detail_progress_view true
 has_verified_resources true
+curriculum_umbrella 'CSP'
 
 stage 'The Need For Programming Languages', flex_category: 'csp3_1'
 level 'v2 U3L01 Student Lesson Introduction', progression: 'Lesson Vocabulary & Resources'

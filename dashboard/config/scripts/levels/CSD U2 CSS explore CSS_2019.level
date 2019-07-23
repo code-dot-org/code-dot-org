@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 324,
   "properties": {
-    "long_instructions": "<div style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\r\n<details>\r\n\r\n<summary><strong>How do I switch between files?</strong></summary>\r\n\r\nClick the name of the file you want to look at in the menu on the left side of the screen.\r\n\r\n\r\n</details>\r\n</div>\r\n\r\n# Adding Style\r\n\r\nThis Web Lab project is using a new language to add style to the page. With a partner explore both the `index.html` and `style.css` files. Be ready to discuss the following questions.\r\n\r\n* What changes is this new language making to the page?\r\n* How is this language different from HTML?\r\n* How are the `index.html` and `style.css` files connected?",
+    "long_instructions": "<div class=\"no-pullthrough\" style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\r\n<details>\r\n\r\n<summary><strong>How do I switch between files?</strong></summary>\r\n\r\nClick the name of the file you want to look at in the menu on the left side of the screen.\r\n\r\n\r\n</details>\r\n</div>\r\n\r\n# Adding Style\r\n\r\nThis Web Lab project is using a new language to add style to the page. With a partner explore both the `index.html` and `style.css` files. Be ready to discuss the following questions.\r\n\r\n* What changes is this new language making to the page?\r\n* How is this language different from HTML?\r\n* How are the `index.html` and `style.css` files connected?",
     "instructions_important": "false",
     "hide_share_and_remix": "false",
     "submittable": "false",

@@ -27,6 +27,12 @@
     = f.text_area :notes, rows: 6, class: "input-block-level"
 
 .field
+  = f.label 'bubble_choice_description'
+  %p
+    Description of this level and why a student would want to choose it as part of a BubbleChoice progression.
+  = f.text_area :bubble_choice_description, rows: 3, class: "input-block-level"
+
+.field
   %legend.control-legend{data: {toggle: "collapse", target: "#audit_log_info"}}
     Audit Log
   %p A log of the people who most recently edited this level (up to the last 10 people)
@@ -69,6 +75,8 @@
   %p
     Add new videos by going to
     %a{href:"/videos/new"} the add video page
+    - if @level.is_a?(DSLDefined)
+      %p Warning: This is a DSL defined level. You can use the dropdown to find the video key that you'd like to use, but selecting in the dropdown will NOT be sufficient to associate the video with the level. If you'd like to add a video to this level you need to add video_key 'video_key' to the DSL box.
   = f.select :video_key, options_for_select(video_key_choices, @level.video_key), {include_blank: true}, {class: 'video-dropdown'}
   .video-preview{style: 'display: block'}
 

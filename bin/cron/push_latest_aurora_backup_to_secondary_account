@@ -1,0 +1,33 @@
+#!/usr/bin/env ruby
+
+Dir.chdir(File.expand_path('../../../dashboard', __FILE__))
+require_relative '../../dashboard/config/environment'
+require 'aws-sdk-rds'
+require 'cdo/chat_client'
+require 'cron/aurora_backup'
+
+# This script pushes backup snapshots of our production database into a
+# write-only backup account, with the following steps:
+#
+# 1) Copy the latest automated snapshot to a temporary manual one
+# 2) Wait until ready, and share the manual snapshot with the backup acct
+# 3) On the backup account, copy the shared snapshot to a manual one
+# 4) Wait until ready, and finally go back to the main account and delete the temp snapshot
+#
+# IAM user credentials for backup account must be present in aws config with profile name 'backup',
+# which requires setting appropriate secrets in our Chef config.
+def main
+  ChatClient.message 'cron-daily', 'Beginning cross-account RDS backup'
+  rds_client = Aws::RDS::Client.new
+  credentials_backup = Aws::SharedCredentials.new(profile_name: 'backup')
+  rds_client_backup = Aws::RDS::Client.new(credentials: credentials_backup)
+  backup_account_id = Aws::STS::Client.new(credentials: credentials_backup).get_caller_identity.account
+  copied_snapshot_on_backup = AuroraBackup.backup_latest_snapshot(rds_client, rds_client_backup, backup_account_id, CDO.db_cluster_id)
+
+  ChatClient.message'cron-daily', "Completed cross account RDS backup: #{copied_snapshot_on_backup.snapshot_id}"
+rescue => e
+  ChatClient.message'cron-daily', e.message, color: 'red'
+  raise e
+end
+
+main

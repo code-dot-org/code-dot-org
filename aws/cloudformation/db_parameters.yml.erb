@@ -91,8 +91,11 @@ Primary: &primary
   # If disabled, transactions may be committed in parallel.
   # In some cases, disabling this variable might produce a performance increment.
   binlog_order_commits: 0
-  # Log only changed columns, and columns needed to identify rows.
-  binlog_row_image: minimal
+  # Typically set to MINIMAL on MySQL to log only changed columns and columns needed to identify rows to reduce I/O.
+  # Set to FULL in advance of migration from MySQL to Aurora because the future Aurora production server replicating
+  # from the production MySQL server has a defect that causes it to occasionally crash if it is replicating from
+  # a binlog that uses MINIMAL (and there is an index on a JSON generated column).
+  binlog_row_image: FULL
   # Disable synchronization of the binary log to disk.
   # Reduces durability for better performance.
   sync_binlog: 0
@@ -160,10 +163,21 @@ AuroraCluster:
   # Enable InnoDB monitoring counters: https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Aurora.Monitoring.html
   innodb_monitor_enable: all
 
+  # Improve insert/update concurrency for autoincrement tables.
+  innodb_autoinc_lock_mode: 2 # not dynamic
+  
+  # With a setting of 0, logs are written and flushed to disk once per second.
+  # Transactions for which logs have not been flushed can be lost in a crash.
+  # Reduces durability for better performance.
+  innodb_flush_log_at_trx_commit: 0
+
 # System variables for the Aurora DB writer.
 AuroraWriter:
   # Enable Performance Schema.
   performance_schema: 1
+
+  # Relax transaction isolation for improved concurrency under load.
+  tx_isolation: READ-COMMITTED
 
 # System variables for the Aurora DB writer.
 AuroraReportingReplica:

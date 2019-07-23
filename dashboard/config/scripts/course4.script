@@ -2,6 +2,7 @@ hidden false
 hideable_stages true
 has_lesson_plan true
 curriculum_path 'https://code.org/curriculum/course4/{LESSON}/Teacher'
+curriculum_umbrella 'CSF'
 
 stage 'Unplugged: Tangrams'
 level 'TangramAlgorithms'

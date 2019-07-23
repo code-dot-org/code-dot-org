@@ -1,0 +1,8 @@
+name 'CSD U2 layout style challenge_pilot'
+display_name 'Styling Elements'
+description 'Try extra challenges or learn some new code.'
+
+sublevels
+level 'CSD U2 layout style border_pilot'
+level 'CSD U2 layout style borderradius_pilot'
+level 'CSD U2 layout style margin_pilot'

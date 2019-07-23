@@ -5,6 +5,7 @@ import AssetThumbnail from './AssetThumbnail';
 import i18n from '@cdo/locale';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import color from '@cdo/apps/util/color';
+import $ from 'jquery';
 
 const styles = {
   deleteWarning: {
@@ -117,7 +118,7 @@ export default class AssetRow extends React.Component {
     }
 
     let usage = $('#visualization').find(
-      `[src*=\'${encodeURIComponent(this.props.name)}']`
+      `[src*=\'${encodeURIComponent(this.props.name).replace("'", "\\'")}']`
     ).length;
 
     switch (this.state.action) {

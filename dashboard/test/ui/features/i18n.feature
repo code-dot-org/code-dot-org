@@ -3,56 +3,56 @@
 Feature: Hour of Code, Frozen, and Minecraft:Agent tutorials in various languages
 
 Scenario: HoC tutorial in Spanish
-  Given I am on "http://studio.code.org/hoc/15/lang/es"
+  Given I am on "http://studio.code.org/hoc/15/lang/es-MX"
   And I rotate to landscape
   And I wait for the page to fully load
-  Then element ".csf-top-instructions p" has "es" text from key "data.level.instructions.maze_2_14"
+  Then element ".csf-top-instructions p" has "es-MX" text from key "data.level.instructions.maze_2_14"
   Then element "#runButton" is visible
   And element "#resetButton" is hidden
-  Then element ".csf-top-instructions p" has "es" text from key "data.level.instructions.maze_2_14"
+  Then element ".csf-top-instructions p" has "es-MX" text from key "data.level.instructions.maze_2_14"
 
 Scenario: Frozen tutorial in Spanish
-  Given I am on "http://studio.code.org/s/frozen/stage/1/puzzle/2/lang/es"
+  Given I am on "http://studio.code.org/s/frozen/stage/1/puzzle/2/lang/es-MX"
   And I rotate to landscape
   And I wait for the page to fully load
-  Then element ".csf-top-instructions p" has "es" text from key "data.short_instructions.frozen perpendicular"
+  Then element ".csf-top-instructions p" has "es-MX" text from key "data.short_instructions.frozen perpendicular"
   Then element "#runButton" is visible
   And element "#resetButton" is hidden
-  Then element ".csf-top-instructions p" has "es" text from key "data.short_instructions.frozen perpendicular"
+  Then element ".csf-top-instructions p" has "es-MX" text from key "data.short_instructions.frozen perpendicular"
 
 Scenario: Minecraft:Agent tutorial in Spanish
-  Given I am on "http://studio.code.org/s/hero/stage/1/puzzle/1/lang/es"
+  Given I am on "http://studio.code.org/s/hero/stage/1/puzzle/1/lang/es-MX"
   And I rotate to landscape
   And I wait for the page to fully load
   Then element "#toggleButton" is visible
   And I click selector "#toggleButton"
   And I wait until element ".csf-top-instructions p" is visible
-  And element ".csf-top-instructions p" has "es" text from key "data.short_instructions.MC_HOC_2017_01_RETRY"
+  And element ".csf-top-instructions p" has "es-MX" text from key "data.short_instructions.MC_HOC_2017_01_RETRY"
 
 Scenario: Toolbox Categories in Spanish
-  Given I am on "http://studio.code.org/s/allthethings/stage/3/puzzle/7/lang/es"
+  Given I am on "http://studio.code.org/s/allthethings/stage/3/puzzle/7/lang/es-MX"
   And I rotate to landscape
   And I wait for the page to fully load
-  Then element ".blocklyTreeRoot #\\\:1" has "es" text from key "data.block_categories.Actions"
-  Then element ".blocklyTreeRoot #\\\:2" has "es" text from key "data.block_categories.Color"
-  Then element ".blocklyTreeRoot #\\\:3" has "es" text from key "data.block_categories.Category"
-  Then element ".blocklyTreeRoot #\\\:4" has "es" text from key "data.block_categories.Functions"
-  Then element ".blocklyTreeRoot #\\\:5" has "es" text from key "data.block_categories.Prebuilt"
-  Then element ".blocklyTreeRoot #\\\:6" has "es" text from key "data.block_categories.Loops"
-  Then element ".blocklyTreeRoot #\\\:7" has "es" text from key "data.block_categories.Logic"
-  Then element ".blocklyTreeRoot #\\\:8" has "es" text from key "data.block_categories.Math"
-  Then element ".blocklyTreeRoot #\\\:9" has "es" text from key "data.block_categories.Text"
+  Then element ".blocklyTreeRoot #\\\:1" has "es-MX" text from key "data.block_categories.Actions"
+  Then element ".blocklyTreeRoot #\\\:2" has "es-MX" text from key "data.block_categories.Color"
+  Then element ".blocklyTreeRoot #\\\:3" has "es-MX" text from key "data.block_categories.Category"
+  Then element ".blocklyTreeRoot #\\\:4" has "es-MX" text from key "data.block_categories.Functions"
+  Then element ".blocklyTreeRoot #\\\:5" has "es-MX" text from key "data.block_categories.Prebuilt"
+  Then element ".blocklyTreeRoot #\\\:6" has "es-MX" text from key "data.block_categories.Loops"
+  Then element ".blocklyTreeRoot #\\\:7" has "es-MX" text from key "data.block_categories.Logic"
+  Then element ".blocklyTreeRoot #\\\:8" has "es-MX" text from key "data.block_categories.Math"
+  Then element ".blocklyTreeRoot #\\\:9" has "es-MX" text from key "data.block_categories.Text"
 
 Scenario: Translated function names in Spanish
-  Given I am on "http://studio.code.org/s/allthethings/stage/3/puzzle/3/lang/es"
+  Given I am on "http://studio.code.org/s/allthethings/stage/3/puzzle/3/lang/es-MX"
   And I rotate to landscape
   And I wait for the page to fully load
   # Toolbox call block is translated
-  Then element "[block-id=6] .blocklyText" has "es" text from key "data.function_names.draw a square"
+  Then element "[block-id=6] .blocklyText" has "es-MX" text from key "data.function_names.draw a square"
   # Workspace call block is translated
-  And element "[block-id=28] .blocklyText" has "es" text from key "data.function_names.draw a square"
+  And element "[block-id=28] .blocklyText" has "es-MX" text from key "data.function_names.draw a square"
   # Workspace definition block is translated
-  And element "[block-id=29] > .blocklyNonEditableText > .blocklyText" has "es" text from key "data.function_names.draw a square"
+  And element "[block-id=29] > .blocklyNonEditableText > .blocklyText" has "es-MX" text from key "data.function_names.draw a square"
 
 Scenario: HoC tutorial in Portuguese
   Given I am on "http://studio.code.org/hoc/15/lang/pt-br"

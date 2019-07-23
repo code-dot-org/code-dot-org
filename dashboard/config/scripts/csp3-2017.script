@@ -11,6 +11,7 @@ family_name 'csp3'
 version_year '2017'
 is_stable true
 project_sharing true
+curriculum_umbrella 'CSP'
 
 stage 'The Need For Programming Languages', flex_category: 'csp3_1'
 level 'v2 U3L01 Student Lesson Introduction', progression: 'Lesson Vocabulary & Resources'

@@ -12,7 +12,7 @@ Scenario: Can Toggle to the Public Project Gallery
   Then I navigate to the public gallery via the gallery switcher
 
 Scenario: Can Publish and Unpublish a Project (Button Version)
-  Given I make a playlab project named "Publishable Project"
+  Given I make a "playlab" project named "Publishable Project"
   Given I am on "http://studio.code.org/projects"
   And I wait until element "#react-personal-projects" is visible
   And I wait until element ".ui-personal-projects-table" is visible
@@ -25,7 +25,7 @@ Scenario: Can Publish and Unpublish a Project (Button Version)
 @no_ie
 # Disabling IE due to bug where key changes are not registered,
 Scenario: Can Rename a Project
-  Given I make a playlab project named "Old Name"
+  Given I make a "playlab" project named "Old Name"
   Given I am on "http://studio.code.org/projects"
   And I wait until element "#react-personal-projects" is visible
   And I wait until element ".ui-personal-projects-table" is visible
@@ -40,7 +40,7 @@ Scenario: Can Rename a Project
   And the first project in the table is named "New Name"
 
 Scenario: Can Remix a Project
-  Given I make a playlab project named "Remix Template"
+  Given I make a "playlab" project named "Remix Template"
   Given I am on "http://studio.code.org/projects"
   And I wait until element "#react-personal-projects" is visible
   And I wait until element ".ui-personal-projects-table" is visible
@@ -51,7 +51,7 @@ Scenario: Can Remix a Project
   And I wait until current URL contains "/edit"
 
 Scenario: Can Delete a Project
-  Given I make a playlab project named "To Be Deleted"
+  Given I make a "playlab" project named "To Be Deleted"
   Given I am on "http://studio.code.org/projects"
   And I wait until element "#react-personal-projects" is visible
   And I wait until element ".ui-personal-projects-table" is visible

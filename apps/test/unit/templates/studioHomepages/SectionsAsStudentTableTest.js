@@ -75,4 +75,18 @@ describe('SectionsAsStudentTable', () => {
       expect(wrapper).to.containMatchingElement(<td>{section.teacherName}</td>);
     });
   });
+
+  it('shows section codes correctly', () => {
+    const wrapper = shallow(
+      <SectionsAsStudentTable sections={joinedSections} canLeave={false} />,
+      {context: {store}}
+    ).dive();
+
+    expect(wrapper).to.containMatchingElement(<td>ClassOneCode</td>);
+    expect(wrapper).to.containMatchingElement(<td>ClassTwoCode</td>);
+    expect(wrapper).to.containMatchingElement(<td>Google Classroom</td>);
+    expect(wrapper).to.not.containMatchingElement(<td>DoNotShowThis</td>);
+    expect(wrapper).to.containMatchingElement(<td>Clever</td>);
+    expect(wrapper).to.not.containMatchingElement(<td>OrThisEither</td>);
+  });
 });

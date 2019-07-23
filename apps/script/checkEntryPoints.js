@@ -42,56 +42,49 @@ const chalk = require('chalk');
 const child_process = require('child_process');
 
 const SILENCED = [
+  // app types loaded conditionally from _apps_dependencies.html.haml
   'applab',
-  'applab-api',
-  'blockly',
   'bounce',
-  'brambleHost',
   'calc',
-  'code-studio',
   'craft',
-  'districtDropdown',
-  'embedBlocks',
-  'embedVideo',
-  'essential',
+  'dance',
   'eval',
   'flappy',
   'gamelab',
-  'gamelab-api',
   'jigsaw',
-  'jotformLoader',
-  'jotformEmbed',
-  'levelbuilder',
-  'levelbuilder_applab',
-  'levelbuilder_craft',
-  'levelbuilder_edit_script',
-  'levelbuilder_gamelab',
-  'levelbuilder_studio',
-  'levelbuilder_pixelation',
-  'levels/contract_match',
-  'levels/external',
-  'levels/multi',
-  'levels/textMatch',
-  'levels/widget',
   'maze',
   'netsim',
-  'plc',
-  'publicKeyCryptography',
-  'raceInterstitial',
-  'schoolInfo',
-  'schoolInfoInterstitial',
-  'scratch',
-  'scriptOverview',
-  'signup',
   'studio',
   'turtle',
-  'tutorialExplorer',
+  'scratch',
   'weblab',
-  'learn/index',
+  'spritelab',
+
+  // referenced from exported projects
+  'applab-api',
+  'gamelab-api',
+
+  // referenced by embedded multi/match levels
+  'embedBlocks',
+  'embedVideo',
+
+  // referenced from dashboard/public
+  'publicKeyCryptography',
+
+  // shared code referenced from application.html.haml. These should go
+  // away once we configure webpack to manage chunks dynamically.
+  'essential',
+  'code-studio',
+
+  // referenced by multiple sites
+  'tutorialExplorer',
   'cookieBanner',
-  'dance',
-  'regionalPartnerSearch',
-  'regionalPartnerMiniContact'
+  'regionalPartnerMiniContact',
+
+  // other entry points
+  'blockly',
+  'brambleHost',
+  'levelbuilder'
 ];
 const SITES_CONFIG = {
   studio: {

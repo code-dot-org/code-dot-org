@@ -436,6 +436,15 @@ body.modal-open .supreme-container{
   padding: 50px 20px 20px 20px;
 }
 
+.every-student {
+  color: rgb(77, 87, 95);
+  font-size: 18px;
+  text-align: center;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
 .make-difference {
   font-weight: 900;
   color: rgb(0, 173, 188);

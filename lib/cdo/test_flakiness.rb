@@ -54,7 +54,7 @@ class TestFlakiness
         'total' => samples.count,
         'failed' => samples.count - passed.count,
         'fail_rate' => (1.0 * (samples.count - passed.count) / samples.count).round(2),
-        'duration' => 1.0 * passed.sum {|job| job['end_time'] - job['start_time']} / passed.count
+        'duration' => 1.0 * passed.sum {|job| job['end_time'].to_f - job['start_time'].to_f} / passed.count
       }
       [name, summary]
     end.compact.to_h

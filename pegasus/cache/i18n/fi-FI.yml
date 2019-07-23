@@ -819,8 +819,6 @@ fi-FI:
   classicmaze_name: Klassinen sokkelo
   iceage_name: Jääkausi
   minecraft_name: Minecraft
-  math_category_name: Matematiikka
-  hoc_category_name: Koodaustunti
   applab_name: Sovelluslabra
   gamelab_name: Pelilabra
   basketball_name: Tee koripallopeli
@@ -884,6 +882,8 @@ fi-FI:
   coursee-2017_gradelevel: 8-12-vuotiaille
   coursed-2018_gradelevel: Kahdeksasluokkalaisista alkaen
   coursee-2018_gradelevel: 8-12-vuotiaille
+  coursed-2019_gradelevel: Kahdeksasluokkalaisista alkaen
+  coursee-2019_gradelevel: 8-12-vuotiaille
   accelerated_gradelevel: 10+ -vuotiaille (kurssin 3 jälkeen)
   codeorg_platformtext: Nykyaikaiset selaimet, älypuhelimet, tabletit
   codeintl_platformtext: Nykyaikaiset selaimet, älypuhelimet, tabletit

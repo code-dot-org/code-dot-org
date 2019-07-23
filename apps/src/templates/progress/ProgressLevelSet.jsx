@@ -64,18 +64,11 @@ class ProgressLevelSet extends React.Component {
     name: PropTypes.string,
     levels: PropTypes.arrayOf(levelType).isRequired,
     disabled: PropTypes.bool.isRequired,
-    selectedSectionId: PropTypes.string,
-    inMiniRubricExperiment: PropTypes.bool
+    selectedSectionId: PropTypes.string
   };
 
   render() {
-    const {
-      name,
-      levels,
-      disabled,
-      selectedSectionId,
-      inMiniRubricExperiment
-    } = this.props;
+    const {name, levels, disabled, selectedSectionId} = this.props;
 
     const multiLevelStep = levels.length > 1;
     const url = multiLevelStep ? undefined : levels[0].url;
@@ -102,7 +95,6 @@ class ProgressLevelSet extends React.Component {
                 text={pillText}
                 disabled={disabled}
                 selectedSectionId={selectedSectionId}
-                inMiniRubricExperiment={inMiniRubricExperiment}
               />
             </td>
             <td style={styles.col2}>
@@ -125,7 +117,6 @@ class ProgressLevelSet extends React.Component {
                   levels={levels}
                   disabled={disabled}
                   selectedSectionId={selectedSectionId}
-                  inMiniRubricExperiment={inMiniRubricExperiment}
                 />
               </td>
             </tr>

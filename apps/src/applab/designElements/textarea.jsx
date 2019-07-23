@@ -13,10 +13,8 @@ import * as utils from '../../utils';
 import * as elementUtils from './elementUtils';
 import EnumPropertyRow from './EnumPropertyRow';
 import designMode from '../designMode';
-import {defaultFontSizeStyle, fontFamilyStyles} from '../constants';
-import themeColor from '../themeColor';
+import themeValues, {CLASSIC_TEXT_AREA_PADDING} from '../themeValues';
 import elementLibrary from './library';
-import experiments from '../../util/experiments';
 
 class TextAreaProperties extends React.Component {
   static propTypes = {
@@ -136,7 +134,6 @@ class TextAreaProperties extends React.Component {
 
     // TODO:
     // bold/italics/underline (p2)
-    // textAlignment (p2)
     // enabled (p2)
   }
 }
@@ -192,125 +189,21 @@ class TextAreaEvents extends React.Component {
   }
 }
 
-const CLASSIC_TEXT_AREA_PADDING = '5px';
-const NEW_THEME_TEXT_AREA_PADDING = '5px 15px';
-
 export default {
   PropertyTab: TextAreaProperties,
   EventTab: TextAreaEvents,
-  themeValues: {
-    backgroundColor: {
-      type: 'color',
-      ...themeColor.textAreaBackground
-    },
-    borderRadius: {
-      default: 2,
-      orange: 2,
-      citrus: 4,
-      ketchupAndMustard: 5,
-      lemonade: 6,
-      forest: 5,
-      watermelon: 20,
-      area51: 20,
-      polar: 8,
-      glowInTheDark: 0,
-      bubblegum: 8,
-      millennial: 8,
-      robot: 0,
-      classic: 0
-    },
-    borderWidth: {
-      default: 1,
-      orange: 0,
-      citrus: 0,
-      ketchupAndMustard: 2,
-      lemonade: 0,
-      forest: 0,
-      watermelon: 0,
-      area51: 0,
-      polar: 2,
-      glowInTheDark: 0,
-      bubblegum: 0,
-      millennial: 0,
-      robot: 1,
-      classic: 1
-    },
-    borderColor: {
-      type: 'color',
-      ...themeColor.textAreaBorder
-    },
-    textColor: {
-      type: 'color',
-      ...themeColor.textArea
-    },
-    fontFamily: {
-      default: 'Arial',
-      orange: 'Arial',
-      citrus: 'Palatino',
-      ketchupAndMustard: 'Tahoma',
-      lemonade: 'Arial',
-      forest: 'Arial',
-      watermelon: 'Georgia',
-      area51: 'Trebuchet',
-      polar: 'Arial',
-      glowInTheDark: 'Tahoma',
-      bubblegum: 'Trebuchet',
-      millennial: 'Arial',
-      robot: 'Tahoma',
-      classic: 'Arial'
-    },
-    fontSize: {
-      default: 13,
-      orange: 13,
-      citrus: 13,
-      ketchupAndMustard: 13,
-      lemonade: 13,
-      forest: 13,
-      watermelon: 13,
-      area51: 13,
-      polar: 13,
-      glowInTheDark: 13,
-      bubblegum: 13,
-      millennial: 13,
-      robot: 13,
-      classic: 14
-    },
-    padding: {
-      default: NEW_THEME_TEXT_AREA_PADDING,
-      orange: NEW_THEME_TEXT_AREA_PADDING,
-      citrus: NEW_THEME_TEXT_AREA_PADDING,
-      ketchupAndMustard: NEW_THEME_TEXT_AREA_PADDING,
-      lemonade: NEW_THEME_TEXT_AREA_PADDING,
-      forest: NEW_THEME_TEXT_AREA_PADDING,
-      watermelon: NEW_THEME_TEXT_AREA_PADDING,
-      area51: NEW_THEME_TEXT_AREA_PADDING,
-      polar: NEW_THEME_TEXT_AREA_PADDING,
-      glowInTheDark: NEW_THEME_TEXT_AREA_PADDING,
-      bubblegum: NEW_THEME_TEXT_AREA_PADDING,
-      millennial: NEW_THEME_TEXT_AREA_PADDING,
-      robot: NEW_THEME_TEXT_AREA_PADDING,
-      classic: CLASSIC_TEXT_AREA_PADDING
-    }
-  },
+  themeValues: themeValues.textArea,
 
   create: function() {
     const element = document.createElement('div');
     element.setAttribute('contenteditable', true);
     element.style.width = '200px';
     element.style.height = '100px';
-    if (experiments.isEnabled('applabThemes')) {
-      element.style.borderStyle = 'solid';
-      elementLibrary.applyCurrentTheme(element, designMode.activeScreen());
-    } else {
-      element.style.fontFamily = fontFamilyStyles[0];
-      element.style.fontSize = defaultFontSizeStyle;
-      element.style.color = themeColor.textArea.classic;
-      element.style.backgroundColor = themeColor.textAreaBackground.classic;
-      elementUtils.setDefaultBorderStyles(element, {
-        forceDefaults: true,
-        textInput: true
-      });
-    }
+    element.style.borderStyle = 'solid';
+    elementLibrary.setAllPropertiesToCurrentTheme(
+      element,
+      designMode.activeScreen()
+    );
 
     $(element).addClass('textArea');
 
@@ -324,11 +217,9 @@ export default {
     elementUtils.setDefaultBorderStyles(element, {textInput: true});
     // Set the font family for older projects that didn't set it on create:
     elementUtils.setDefaultFontFamilyStyle(element);
-    if (experiments.isEnabled('applabThemes')) {
-      // Set the padding for older projects that didn't set it on create:
-      if (element.style.padding === '') {
-        element.style.padding = CLASSIC_TEXT_AREA_PADDING;
-      }
+    // Set the padding for older projects that didn't set it on create:
+    if (element.style.padding === '') {
+      element.style.padding = CLASSIC_TEXT_AREA_PADDING;
     }
 
     $(element).addClass('textArea');

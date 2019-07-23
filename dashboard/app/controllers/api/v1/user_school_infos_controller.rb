@@ -1,7 +1,6 @@
 class Api::V1::UserSchoolInfosController < ApplicationController
   before_action :authenticate_user!
-  before_action :load_user_school_info
-  load_and_authorize_resource
+  load_and_authorize_resource only: :update_last_confirmation_date
 
   # PATCH /api/v1/users_school_infos/<id>/update_last_confirmation_date
   def update_last_confirmation_date
@@ -10,49 +9,50 @@ class Api::V1::UserSchoolInfosController < ApplicationController
     head :no_content
   end
 
-  # PATCH /api/v1/users_school_infos/<id>/update_end_date
-  def update_end_date
-    ActiveRecord::Base.transaction do
-      @user_school_info.update!(end_date: DateTime.now, last_confirmation_date: DateTime.now)
-      @user_school_info.user.update!(properties: {last_seen_school_info_interstitial: DateTime.now})
+  # PATCH /api/v1/users_school_infos
+  def update
+    unless school_info_params[:school_id].present? || school_info_params[:country].present?
+      render json: {error: "school id or country is not present"}, status: 422
+      return
     end
 
-    head :no_content
-  end
+    school_info_params.delete(:full_address) if school_info_params[:full_address]&.blank?
 
-  # PATCH /api/v1/user_school_infos/<id>/update_school_info_id
-  # A new row is added to the user school infos table when a teacher updates current school to a different school,
-  # then the school_info_id is updated in the users table.
+    if school_info_params[:country]&.downcase&.eql? 'united states'
+      school_info_params[:country] = 'US'
+    end
 
-  def update_school_info_id
-    ActiveRecord::Base.transaction do
-      school = @user_school_info.school_info.school
-      unless school
-        school = School.create!(new_school_params)
-        school.school_info.create!(school_info_params)
+    existing_school_info = current_user.last_complete_school_info
+    existing_school_info&.assign_attributes school_info_params
+    if existing_school_info.nil? || existing_school_info.changed?
+      submitted_school_info =
+        if school_info_params[:school_id]
+          SchoolInfo.where(school_info_params).
+          first_or_create
+        else
+          # VALIDATION_COMPLETE is passed when the school_id does not exist to check
+          # form for completeness; specifically, school name is required.
+          # If school_id does not exist, ncesSchoolId is set to -1 when the checkbox
+          # for school not found is clicked.
+          SchoolInfo.where(school_info_params).
+          first_or_create(validation_type: SchoolInfo::VALIDATION_COMPLETE)
+        end
+      unless current_user.update(school_info: submitted_school_info)
+        render json: current_user.errors, status: 422
+        return
       end
-
-      school_info = school.school_info.order(created_at: :desc).first
-
-      user = @user_school_info.user
-
-      user.user_school_infos.create!({school_info_id: school_info.id, last_confirmation_date: DateTime.now, start_date: user.created_at})
-
-      user.update!({school_info_id: school_info.id})
+      current_user.user_school_infos.where(school_info: submitted_school_info).
+        update(last_confirmation_date: DateTime.now)
+    else
+      current_user.user_school_infos.where(school_info: existing_school_info).
+        update(last_confirmation_date: DateTime.now)
     end
   end
 
   private
 
-  def load_user_school_info
-    @user_school_info = UserSchoolInfo.find(params[:id])
-  end
-
-  def new_school_params
-    params.require(:school).permit(:name, :city, :state)
-  end
-
   def school_info_params
-    params.require(:school_info).permit(:school_type, :state, :school_name, :country)
+    @school_info_params ||= params.require(:user).require(:school_info_attributes).
+      permit(:school_type, :school_name, :full_address, :country, :school_id)
   end
 end

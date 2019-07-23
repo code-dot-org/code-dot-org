@@ -1,0 +1,71 @@
+pegasus_skip_asset_map: <%=ci_test%>
+netsim_enable_metrics: true
+stub_school_data: true
+daemon: true
+
+# test environment should use precompiled, minified, digested assets like production,
+# unless it's being used for unit tests. This logic should be kept in sync with
+# the logic for setting config.assets.* under dashboard/config/.
+pretty_js: <%=ci_test%>
+
+# Since channel ids are derived from user id and other sequential integer ids
+# use a new S3 sources directory for each Test Build to prevent a UI test
+# from inadvertently using a channel id from a previous Test Build.
+# CircleCI environments already override the sources_s3_directory setting to suffix it with the Circle Build number:
+# https://github.com/code-dot-org/code-dot-org/blob/fb53af48ec0598692ed19f340f26d2ed0bd9547b/.circleci/config.yml#L153
+# Detect Circle environment just to be safe.
+sources_s3_directory: sources_test<%=ENV['CIRCLECI'] ? '' : "/#{GitUtils.git_revision_short(root_dir)}"%>
+
+# Disable this for test by default, it won't make much sense if we keep wiping
+# the DB.
+disable_s3_image_uploads: true
+
+# provide a unique path for firebase channels data for ci, to avoid conflicts in channel ids.
+firebase_channel_id_suffix: '<%=ci ? "-#{circle_run_identifier}" : ''%>'
+
+# Overrides for Jotform Form Ids
+jotform_forms:
+  local:
+    day_0: 1
+    day_1: 2
+    day_2: 3
+    day_3: 4
+    day_4: 5
+    day_5: 6
+    facilitator: 7
+    post_workshop: 6
+  local_summer:
+    day_0: 1
+    day_1: 2
+    day_2: 3
+    day_3: 4
+    day_4: 5
+    day_5: 6
+    facilitator: 7
+    post_workshop: 6
+  academic_year_1:
+    day_1: 10
+    facilitator: 11
+    post_workshop: 12
+  academic_year_2:
+    day_1: 20
+    facilitator: 11
+    post_workshop: 12
+  academic_year_3:
+    day_1: 30
+    facilitator: 11
+    post_workshop: 12
+  academic_year_4:
+    day_1: 40
+    facilitator: 11
+    post_workshop: 12
+  academic_year_1_2:
+    day_1: 10
+    day_2: 20
+    facilitator: 11
+    post_workshop: 12
+  academic_year_3_4:
+    day_1: 30
+    day_2: 40
+    facilitator: 11
+    post_workshop: 12

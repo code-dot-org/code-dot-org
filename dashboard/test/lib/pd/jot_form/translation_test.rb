@@ -16,6 +16,7 @@ module Pd
         assert_equal TextQuestion, Translation.get_question_class_for(TYPE_TEXTBOX)
         assert_equal TextQuestion, Translation.get_question_class_for(TYPE_TEXTAREA)
         assert_equal TextQuestion, Translation.get_question_class_for(TYPE_NUMBER)
+        assert_equal TextQuestion, Translation.get_question_class_for(TYPE_DATETIME)
 
         assert_equal SelectQuestion, Translation.get_question_class_for(TYPE_DROPDOWN)
         assert_equal SelectQuestion, Translation.get_question_class_for(TYPE_RADIO)
@@ -73,8 +74,8 @@ module Pd
 
         questions = Translation.new(@form_id).get_questions
 
-        assert_equal 8, QUESTION_TYPES.length
-        assert_equal 8, questions.length
+        assert_equal 9, QUESTION_TYPES.length
+        assert_equal 9, questions.length
       end
 
       test 'get_questions replaces -summary text' do

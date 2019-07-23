@@ -1,1 +1,6 @@
-/i18n/locales/original
+/locales/original
+
+# Ignore all course content directories
+/locales/*/course_content
+# ... except for source
+!/locales/source/course_content

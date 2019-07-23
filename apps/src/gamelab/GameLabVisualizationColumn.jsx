@@ -3,16 +3,18 @@ import React from 'react';
 import Pointable from 'react-pointable';
 import {connect} from 'react-redux';
 import classNames from 'classnames';
-import GameButtons from '../templates/GameButtons';
-import ArrowButtons from '../templates/ArrowButtons';
-import BelowVisualization from '../templates/BelowVisualization';
+import GameButtons from '@cdo/apps/templates/GameButtons';
+import ArrowButtons from '@cdo/apps/templates/ArrowButtons';
+import BelowVisualization from '@cdo/apps/templates/BelowVisualization';
 import {GAME_HEIGHT, GAME_WIDTH, GAMELAB_DPAD_CONTAINER_ID} from './constants';
-import CompletionButton from '../templates/CompletionButton';
-import ProtectedStatefulDiv from '../templates/ProtectedStatefulDiv';
-import ProtectedVisualizationDiv from '../templates/ProtectedVisualizationDiv';
-import VisualizationOverlay from '../templates/VisualizationOverlay';
-import CrosshairOverlay from '../templates/CrosshairOverlay';
-import TooltipOverlay, {coordinatesProvider} from '../templates/TooltipOverlay';
+import CompletionButton from '@cdo/apps/templates/CompletionButton';
+import ProtectedStatefulDiv from '@cdo/apps/templates/ProtectedStatefulDiv';
+import ProtectedVisualizationDiv from '@cdo/apps/templates/ProtectedVisualizationDiv';
+import VisualizationOverlay from '@cdo/apps/templates/VisualizationOverlay';
+import CrosshairOverlay from '@cdo/apps/templates/CrosshairOverlay';
+import TooltipOverlay, {
+  coordinatesProvider
+} from '@cdo/apps/templates/TooltipOverlay';
 import i18n from '@cdo/locale';
 import {toggleGridOverlay} from './actions';
 import GridOverlay from './GridOverlay';
@@ -23,7 +25,7 @@ import {
   updateLocation,
   isPickingLocation
 } from './locationPickerModule';
-import {calculateOffsetCoordinates} from '../utils';
+import {calculateOffsetCoordinates} from '@cdo/apps/utils';
 
 const MODAL_Z_INDEX = 1050;
 
@@ -147,7 +149,7 @@ class GameLabVisualizationColumn extends React.Component {
     const spriteLab = this.props.spriteLab;
 
     return (
-      <span>
+      <div style={{position: 'relative'}}>
         <ProtectedVisualizationDiv>
           <Pointable
             id="divGameLab"
@@ -192,7 +194,7 @@ class GameLabVisualizationColumn extends React.Component {
             onClick={() => this.props.cancelPicker()}
           />
         )}
-      </span>
+      </div>
     );
   }
 }

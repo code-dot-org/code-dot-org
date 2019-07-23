@@ -10,7 +10,7 @@ import AbuseError from './AbuseError';
 import SendToPhone from './SendToPhone';
 import color from '../../util/color';
 import * as applabConstants from '../../applab/constants';
-import * as gamelabConstants from '../../gamelab/constants';
+import * as gamelabConstants from '@cdo/apps/gamelab/constants';
 import {SongTitlesToArtistTwitterHandle} from '../dancePartySongArtistTags';
 import {hideShareDialog, unpublishProject} from './shareDialogRedux';
 import DownloadReplayVideoButton from './DownloadReplayVideoButton';
@@ -460,6 +460,7 @@ class ShareAllowedDialog extends React.Component {
                   <SendToPhone
                     channelId={this.props.channelId}
                     appType={this.props.appType}
+                    isLegacyShare={false}
                     styles={{label: {marginTop: 15, marginBottom: 0}}}
                   />
                 )}

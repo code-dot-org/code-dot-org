@@ -1,12 +1,13 @@
 /* global dashboard */
 
-import {SVG_NS} from '../constants';
-import {getStore} from '../redux';
+import {SVG_NS} from '@cdo/apps/constants';
+import {getStore} from '@cdo/apps/redux';
 import {getLocation} from './locationPickerModule';
 import {GAME_HEIGHT, GameLabInterfaceMode} from './constants';
 import {animationSourceUrl} from './animationListModule';
 import {changeInterfaceMode} from './actions';
 import {Goal, show} from './AnimationPicker/animationPickerModule';
+import i18n from '@cdo/locale';
 
 function sprites() {
   const animationList = getStore().getState().animationList;
@@ -122,7 +123,8 @@ const customInputTypes = {
             Blockly.Msg.VARIABLES_SET_ITEM,
             null,
             null,
-            Blockly.BlockValueType.LOCATION
+            Blockly.BlockValueType.LOCATION,
+            null
           ),
           inputConfig.name
         )
@@ -153,13 +155,19 @@ const customInputTypes = {
   costumePicker: {
     addInput(blockly, block, inputConfig, currentInputRow) {
       let buttons;
-      if (getStore().getState().pageConstants.showAnimationMode) {
+      if (
+        getStore().getState().pageConstants &&
+        getStore().getState().pageConstants.showAnimationMode
+      ) {
         buttons = [
           {
             text: 'Draw',
             action: () => {
               getStore().dispatch(
-                changeInterfaceMode(GameLabInterfaceMode.ANIMATION)
+                changeInterfaceMode(
+                  GameLabInterfaceMode.ANIMATION,
+                  true /* spritelabDraw */
+                )
               );
             }
           },
@@ -180,6 +188,16 @@ const customInputTypes = {
     },
     generateCode(block, arg) {
       return block.getTitleValue(arg.name);
+    }
+  },
+  spritePointer: {
+    addInput(blockly, block, inputConfig, currentInputRow) {
+      currentInputRow
+        .appendTitle(inputConfig.label)
+        .appendTitle(new Blockly.FieldImage('', 32, 32), inputConfig.name);
+    },
+    generateCode(block, arg) {
+      return `'${block.getTitleValue(arg.name)}'`;
     }
   },
   spritePicker: {
@@ -224,7 +242,8 @@ const customInputTypes = {
             null,
             null,
             null,
-            Blockly.BlockValueType.SPRITE
+            Blockly.BlockValueType.SPRITE,
+            i18n.sprite()
           ),
           inputConfig.name
         );
@@ -296,7 +315,8 @@ export default {
                   Blockly.Msg.VARIABLES_SET_ITEM,
                   null,
                   null,
-                  Blockly.BlockValueType.SPRITE
+                  Blockly.BlockValueType.SPRITE,
+                  i18n.sprite()
                 ),
             'VAR'
           )

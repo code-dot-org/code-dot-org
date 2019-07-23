@@ -1,5 +1,5 @@
 import React from 'react';
-import {expect} from '../../util/configuredChai';
+import {expect} from '../../util/reconfiguredChai';
 import {mount} from 'enzyme';
 import {ImageWithStatus} from '@cdo/apps/templates/ImageWithStatus';
 
@@ -35,6 +35,7 @@ describe('ImageWithStatus', () => {
       // ImageWithStatus, so wait until the next clock tick before checking
       // expectations.
       setTimeout(function() {
+        root.update();
         const loaded = root.find('div[data-image-status="loaded"]');
         expect(loaded).to.have.length(1);
         done();
@@ -57,6 +58,7 @@ describe('ImageWithStatus', () => {
       // ImageWithStatus, so wait until the next clock tick before checking
       // expectations.
       setTimeout(function() {
+        root.update();
         const loaded = root.find('div[data-image-status="loaded"]');
         expect(loaded).to.have.length(1);
         changeImageUrl(done);
@@ -88,6 +90,7 @@ describe('ImageWithStatus', () => {
       // ImageWithStatus, so wait until the next clock tick before checking
       // expectations.
       setTimeout(function() {
+        root.update();
         const error = root.find('div[data-image-status="error"]');
         expect(error).to.have.length(1);
         done();

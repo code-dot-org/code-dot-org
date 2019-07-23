@@ -41,10 +41,10 @@ Then(/^I scroll the Play Lab gallery section into view$/) do
   @browser.execute_script('$(".ui-playlab")[0].scrollIntoView(true)')
 end
 
-Then(/^I make a playlab project named "([^"]*)"$/) do |name|
+Then(/^I make a "([^"]*)" project named "([^"]*)"$/) do |project_type, name|
   steps %Q{
-    Then I am on "http://studio.code.org/projects/playlab/new"
-    And I get redirected to "/projects/playlab/([^\/]*?)/edit" via "dashboard"
+    Then I am on "http://studio.code.org/projects/#{project_type}/new"
+    And I get redirected to "/projects/#{project_type}/([^\/]*?)/edit" via "dashboard"
     And I wait for the page to fully load
     And element "#runButton" is visible
     And element ".project_updated_at" eventually contains text "Saved"
@@ -52,10 +52,22 @@ Then(/^I make a playlab project named "([^"]*)"$/) do |name|
     And I type "#{name}" into "input.project_name"
     And I click selector ".project_save"
     And I wait until element ".project_edit" is visible
-    Then I should see title "#{name} - Play Lab"
     And I press "#runButton" using jQuery
     And I wait until element ".project_updated_at" contains text "Saved"
     And I wait until initial thumbnail capture is complete
+  }
+end
+
+Then(/^I report abuse on the project$/) do
+  steps %Q{
+    Then I switch tabs
+    Then I wait until current URL contains "report_abuse"
+    And I type "abuse_reporter@school.edu" into "#uitest-email"
+    And I select the "Other" option in dropdown "uitest-abuse-type"
+    And I type "I just don't like it." into "#uitest-abuse-detail"
+    Then I click selector "#uitest-submit-report-abuse" once I see it
+    Then I wait until current URL contains "support.code.org"
+    Then I switch tabs
   }
 end
 

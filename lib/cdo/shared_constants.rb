@@ -3,7 +3,7 @@ require_relative '../../cookbooks/cdo-varnish/libraries/http_cache'
 
 # This is the source of truth for a set of constants that are shared between JS
 # and ruby code. generateSharedConstants.rb is the file that processes this and
-# outputs JS. It is run via `grunt exec:generateSharedConstants` from the app
+# outputs JS. It is run via `grunt exec:generateSharedConstants` from the apps
 # directory.
 #
 # Many of these constants exist in other files. Changes to this file often should
@@ -60,15 +60,6 @@ module SharedConstants
     }
   ).freeze
 
-  # The set of gamelab autorun options
-  GAMELAB_AUTORUN_OPTIONS = OpenStruct.new(
-    {
-      draw_loop: 'DRAW_LOOP',
-      draw_sprites: 'DRAW_SPRITES',
-      custom: 'CUSTOM',
-    }
-  ).freeze
-
   # Valid milestone post modes
   POST_MILESTONE_MODE = OpenStruct.new(
     {
@@ -76,6 +67,11 @@ module SharedConstants
       successful_runs_and_final_level_only: 'successful_runs_and_final_level_only',
       final_level_only: 'final_level_only',
     }
+  )
+
+  # Projects with an abuse score over this threshold will be blocked.
+  ABUSE_CONSTANTS = OpenStruct.new(
+    {ABUSE_THRESHOLD: 15}
   )
 
   # This list of project types can be shared by anyone regardless of their age or sharing setting.
@@ -268,6 +264,7 @@ module SharedConstants
       "toUpperCase": null,
       "toLowerCase": null,
       "declareAssign_list_abd": null,
+      "declareAssign_list_123": null,
       "accessListItem": null,
       "listLength": null,
       "insertItem": null,
@@ -555,4 +552,16 @@ module SharedConstants
   JSON
 
   ALLOWED_WEB_REQUEST_HEADERS = HttpCache::ALLOWED_WEB_REQUEST_HEADERS
+
+  # Subset of Ruby Logger::Severity constants.
+  # https://github.com/ruby/ruby/blob/trunk/lib/logger.rb
+  # We don't use 2 irrelevant severity levels DEBUG (0) and INFO (1).
+  ERROR_SEVERITY_LEVELS = {
+    # A warning.
+    WARN: 2,
+    # A handleable error condition.
+    ERROR: 3,
+    # An unhandleable error that results in a program crash.
+    FATAL: 4
+  }.freeze
 end

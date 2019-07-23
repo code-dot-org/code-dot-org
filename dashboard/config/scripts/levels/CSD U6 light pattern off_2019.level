@@ -94,17 +94,23 @@
     "encrypted_examples": "KxZlpJ6bLYzc3aFyFKEg3FktHZLA9mqEvmuFIhbULhBXjuUYFitajdZJ1Upt\nw9KUPJdEuJUD3779bbp7DvQRag==\n",
     "parent_level_id": 12448,
     "name_suffix": "_2019",
-    "preload_asset_list": null,
     "reference_links": [
       "/docs/concepts/javascript/arrays/",
       "/docs/concepts/maker-toolkit/circuits-and-leds/"
     ],
     "map_reference": "/docs/concepts/maker-toolkit/color-lights/",
-    "mini_rubric": "false"
+    "mini_rubric": "true",
+    "preload_asset_list": null,
+    "encrypted": "false",
+    "rubric_key_concept": "Access elements in arrays, and develop software to control a variety of physical devices. ",
+    "rubric_performance_level_1": "The program works as described, has three buttons, two of which turn the color LEDs on in a distinctive pattern, and one of which turns the color LEDs off.  There is no unnecessary code in the program.",
+    "rubric_performance_level_2": "The program generally works as described, has three buttons, two of which turn the lights on in a distinctive pattern, and a function that turns the color LEDs off.  There may be minor errors in the program.",
+    "rubric_performance_level_3": "There is code in the program that turns the LEDs on and off, but there may be major errors that prevent the program from working properly.",
+    "rubric_performance_level_4": "There is no new code that turns the LEDs on and off."
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-12-07 19:28:21 +0000\",\"changed\":[\"code_functions\",\"project_template_level_name\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-03-15 23:07:42 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2019-03-11 07:23:00 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-12-07 19:28:21 +0000\",\"changed\":[\"code_functions\",\"project_template_level_name\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-03-15 23:07:42 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2019-03-11 07:23:00 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-05-29 19:43:37 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"mini_rubric\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

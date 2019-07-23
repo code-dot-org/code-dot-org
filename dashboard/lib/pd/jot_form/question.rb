@@ -8,7 +8,7 @@ module Pd
 
       attr_accessor(
         :id,   # question id
-        :type, # See Translation::QUESTION_TYPES_TO_CLASS for a complete list of supported types
+        :type, # See Translation::QUESTION_CLASSES for a complete list of supported types
         :name, # "unique" (not actually enforced by JotForm) name per form
         :text, # label
         :order, # 1-based order the question appears in the form

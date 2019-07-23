@@ -2,11 +2,15 @@
 -international_layout ||= nil
 -subheading ||= nil
 -company = request.GET['company']
+-shuffle ||= false
 -if check_language
   -items = tutorials.find_with_tag_and_language(tag, request.locale)
 -else
   -items = tutorials.find_with_tag(tag)
 -if items.count > 0
+  -if shuffle
+    -items = items.to_a.shuffle.to_h
+
   %h2{:class=>'course-carousel-title', :style=>"margin-bottom:8px"}=heading
 
   -unless subheading.nil_or_empty?

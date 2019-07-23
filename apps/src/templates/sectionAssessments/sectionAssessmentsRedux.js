@@ -3,7 +3,6 @@ import {
   SET_SCRIPT,
   getSelectedScriptName
 } from '@cdo/apps/redux/scriptSelectionRedux';
-import experiments from '@cdo/apps/util/experiments';
 
 export const ALL_STUDENT_FILTER = 0;
 
@@ -146,18 +145,13 @@ export const asyncLoadAssessments = (sectionId, scriptId) => {
     );
     const loadQuestions = loadAssessmentQuestionsFromServer(scriptId);
     const loadSurveys = loadSurveysFromServer(sectionId, scriptId);
-    let loadFeedback = null;
-    if (experiments.isEnabled(experiments.MINI_RUBRIC_2019)) {
-      loadFeedback = loadFeedbackFromServer(sectionId, scriptId);
-    }
+    const loadFeedback = loadFeedbackFromServer(sectionId, scriptId);
 
     Promise.all([loadResponses, loadQuestions, loadSurveys, loadFeedback])
       .then(arrayOfValues => {
         dispatch(setAssessmentResponses(scriptId, arrayOfValues[0]));
         dispatch(setAssessmentQuestions(scriptId, arrayOfValues[1]));
-        if (experiments.isEnabled(experiments.MINI_RUBRIC_2019)) {
-          dispatch(setFeedback(scriptId, arrayOfValues[3]));
-        }
+        dispatch(setFeedback(scriptId, arrayOfValues[3]));
         dispatch(setSurveys(scriptId, arrayOfValues[2]));
         dispatch(setInitialAssessmentId(scriptId));
         dispatch(finishLoadingAssessments());
@@ -1096,16 +1090,11 @@ export const getExportableFeedbackData = state => {
 };
 
 /*
- * Only show feedback option if in experiment and its CSD and CSP
- * TODO: Remove experiment code once we remove mini rubric experiment
+ * Only show feedback option if its CSD and CSP
  * */
 export const doesCurrentCourseUseFeedback = state => {
-  if (experiments.isEnabled(experiments.MINI_RUBRIC_2019)) {
-    const scriptName = getSelectedScriptName(state) || '';
-    return scriptName.includes('csp') || scriptName.includes('csd');
-  } else {
-    return false;
-  }
+  const scriptName = getSelectedScriptName(state) || '';
+  return scriptName.includes('csp') || scriptName.includes('csd');
 };
 
 export const isCurrentScriptCSD = state => {

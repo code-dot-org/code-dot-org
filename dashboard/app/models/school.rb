@@ -40,7 +40,7 @@ class School < ActiveRecord::Base
   has_many :census_overrides, class_name: 'Census::CensusOverride'
   has_many :census_summaries, class_name: 'Census::CensusSummary'
 
-  has_one :ap_school_code, class_name: 'Census::ApSchoolCode'
+  has_many :ap_school_code, class_name: 'Census::ApSchoolCode'
   has_one :ib_school_code, class_name: 'Census::IbSchoolCode'
 
   validates :state_school_id, allow_blank: true, format: {with: /\A[A-Z]{2}-.+-.+\z/, message: "must be {State Code}-{State District Id}-{State School Id}"}
@@ -99,12 +99,8 @@ class School < ActiveRecord::Base
       School.transaction do
         merge_from_csv(schools_tsv)
       end
-      # this also needs to be commented out to prevent seeding
-      # of new schools until school_districts table is updated
-      # b/c we'll get foreign key errors if this were to be executed
-      # (i.e., schools added without appropriate school districts)
-      # else
-      #   School.seed_from_s3
+    else
+      School.seed_from_s3
     end
   end
 

@@ -2,9 +2,27 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import color from '../../util/color';
 
+const craftStyles = {
+  text: {
+    color: color.white
+  },
+  highlighted: {
+    borderBottom: '2px solid ' + color.white,
+    color: color.white
+  }
+};
+
 const styles = {
   tab: {
     marginRight: 5,
+    paddingLeft: 10,
+    paddingRight: 10,
+    paddingBottom: 6,
+    fontWeight: 'bold',
+    cursor: 'pointer'
+  },
+  tabRtl: {
+    marginLeft: 5,
     paddingLeft: 10,
     paddingRight: 10,
     paddingBottom: 6,
@@ -34,19 +52,25 @@ export default class InstructionsTab extends Component {
     onClick: PropTypes.func.isRequired,
     style: PropTypes.object,
     text: PropTypes.string.isRequired,
-    teacherOnly: PropTypes.bool
+    teacherOnly: PropTypes.bool,
+    isMinecraft: PropTypes.bool,
+    isRtl: PropTypes.bool
   };
 
   render() {
     const combinedStyle = {
-      ...styles.tab,
+      ...(this.props.isRtl ? styles.tabRtl : styles.tab),
       ...this.props.style,
       ...(this.props.selected
         ? this.props.teacherOnly
           ? styles.teacherHighlighted
+          : this.props.isMinecraft
+          ? craftStyles.highlighted
           : styles.highlighted
         : this.props.teacherOnly
         ? styles.teacherText
+        : this.props.isMinecraft
+        ? craftStyles.text
         : styles.text)
     };
     return (

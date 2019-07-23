@@ -81,6 +81,7 @@ node['cdo-users'].each_pair do |user_name, user_data|
     'authorized_keys' => user_data['ssh-key'],
     'server_access_key' => node['cdo-servers']['ssh-private-key'],
     'server_access_key.pub' => node['cdo-servers']['ssh-key'],
+    'drone_access_key' => node['cdo-servers']['drone-ssh-private-key'],
   }.each_pair do |file, text|
     template File.join(ssh_directory, file) do
       source 'text_file.erb'

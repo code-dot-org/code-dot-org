@@ -27,8 +27,7 @@ const DEFAULT_PROPS = {
   icon: 'desktop',
   text: '1',
   fontSize: 12,
-  disabled: false,
-  inMiniRubricExperiment: false
+  disabled: false
 };
 
 describe('ProgressPill', () => {
@@ -83,41 +82,25 @@ describe('ProgressPill', () => {
     assert.equal(wrapper.find('a').props().href, undefined);
   });
 
-  it('has an assessment icon when single level is assessment and in experiment', () => {
+  it('has an assessment icon when single level is assessment', () => {
     const wrapper = shallow(
-      <ProgressPill
-        {...DEFAULT_PROPS}
-        levels={[assessmentLevel]}
-        inMiniRubricExperiment={true}
-      />
+      <ProgressPill {...DEFAULT_PROPS} levels={[assessmentLevel]} />
     );
     expect(wrapper.find('SmallAssessmentIcon')).to.have.lengthOf(1);
   });
 
-  it('does not have an assessment icon when single level is assessment and not in experiment', () => {
+  it('does not have an assessment icon when single level is not assessment', () => {
     const wrapper = shallow(
-      <ProgressPill {...DEFAULT_PROPS} levels={[assessmentLevel]} />
+      <ProgressPill {...DEFAULT_PROPS} levels={[unpluggedLevel]} />
     );
     expect(wrapper.find('SmallAssessmentIcon')).to.have.lengthOf(0);
   });
 
-  it('does not have an assessment icon when single level is not assessment and in experiment', () => {
-    const wrapper = shallow(
-      <ProgressPill
-        {...DEFAULT_PROPS}
-        levels={[unpluggedLevel]}
-        inMiniRubricExperiment={true}
-      />
-    );
-    expect(wrapper.find('SmallAssessmentIcon')).to.have.lengthOf(0);
-  });
-
-  it('does not have an assessment icon when multiple assessment levels and in experiment', () => {
+  it('does not have an assessment icon when multiple assessment levels', () => {
     const wrapper = shallow(
       <ProgressPill
         {...DEFAULT_PROPS}
         levels={[assessmentLevel, assessmentLevel]}
-        inMiniRubricExperiment={true}
       />
     );
     expect(wrapper.find('SmallAssessmentIcon')).to.have.lengthOf(0);

@@ -1,0 +1,31 @@
+{
+  "https://studio.code.org/s/csd1-2019/stage/1/puzzle/1": {
+    "display_name": "Lesson Overview"
+  },
+  "https://studio.code.org/s/csd1-2019/stage/2/puzzle/2": {
+    "display_name": "Video: Problem Solving Process",
+    "long_instructions": "## Questions to consider\n\n-   How did you follow the problem solving process in the last lesson?\n-   How could you use this process on a problem in your everyday life?"
+  },
+  "https://studio.code.org/s/csd1-2019/stage/3/puzzle/1": {
+    "display_name": "Lesson Overview"
+  },
+  "https://studio.code.org/s/csd1-2019/stage/4/puzzle/1": {
+    "display_name": "Lesson Overview"
+  },
+  "https://studio.code.org/s/csd1-2019/stage/4/puzzle/2": {
+    "display_name": "Video: What Makes a Computer, a Computer?",
+    "long_instructions": "## Questions to think about\n\n-   What made computers different from machines that came before them?\n-   Think of something you do on the computer. What sort of input, output, storage, and processing are happening?"
+  },
+  "https://studio.code.org/s/csd1-2019/stage/5/puzzle/1": {
+    "display_name": "Lesson Overview"
+  },
+  "https://studio.code.org/s/csd1-2019/stage/6/puzzle/1": {
+    "display_name": "Lesson Overview"
+  },
+  "https://studio.code.org/s/csd1-2019/stage/7/puzzle/1": {
+    "display_name": "Lesson Overview"
+  },
+  "https://studio.code.org/s/csd1-2019/stage/8/puzzle/1": {
+    "display_name": "Lesson Overview"
+  }
+}

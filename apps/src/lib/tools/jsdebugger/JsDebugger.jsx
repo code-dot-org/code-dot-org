@@ -322,6 +322,20 @@ class JsDebugger extends React.Component {
     }
   };
 
+  setDebugHeight = height => {
+    if (!this.props.isOpen) {
+      this.props.open();
+      this.setState({
+        open: true,
+        openedHeight: height
+      });
+    } else {
+      this.setState({
+        openedHeight: height
+      });
+    }
+  };
+
   /**
    *  Handle mouse moves while dragging the debug resize bar.
    */
@@ -345,17 +359,8 @@ class JsDebugger extends React.Component {
       MIN_DEBUG_AREA_HEIGHT,
       Math.min(MAX_DEBUG_AREA_HEIGHT, window.innerHeight - event.pageY - offset)
     );
-    if (!this.props.isOpen) {
-      this.props.open();
-      this.setState({
-        open: true,
-        openedHeight: newDbgHeight
-      });
-    } else {
-      this.setState({
-        openedHeight: newDbgHeight
-      });
-    }
+
+    this.setDebugHeight(newDbgHeight);
 
     codeTextbox.style.bottom = newDbgHeight + 'px';
     // Toggle transition style to 'none' to allow height to update immediately
@@ -426,7 +431,6 @@ class JsDebugger extends React.Component {
 
     const watchersResizeRect = this._watchersResizeBar.getBoundingClientRect();
     const watchersResizeRight = newWatchersWidth - watchersResizeRect.width / 2;
-
     watchers.scrollableContainer.style.width = newWatchersWidth + 'px';
     this._debugConsole.getWrappedInstance().root.style.right =
       newWatchersWidth + 'px';

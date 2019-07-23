@@ -1,7 +1,8 @@
-import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
 import msg from '@cdo/locale';
+
+import {UnlocalizedTimeAgo} from './TimeAgo';
 
 /**
  * A single row in the VersionHistory dialog, describing one version of a project.
@@ -13,10 +14,6 @@ export default class VersionRow extends React.Component {
     isLatest: PropTypes.bool,
     onChoose: PropTypes.func
   };
-
-  componentDidMount() {
-    $('.versionTimestamp').timeago();
-  }
 
   getLastModifiedTimestamp() {
     const timestamp = this.props.lastModified;
@@ -70,13 +67,7 @@ export default class VersionRow extends React.Component {
       <tr className="versionRow">
         <td>
           <p>
-            Saved{' '}
-            <time
-              className="versionTimestamp"
-              dateTime={this.props.lastModified.toISOString()}
-            >
-              {this.getLastModifiedTimestamp()}
-            </time>
+            Saved <UnlocalizedTimeAgo dateString={this.props.lastModified} />
           </p>
           {this.getLastModifiedTimestamp()}
         </td>

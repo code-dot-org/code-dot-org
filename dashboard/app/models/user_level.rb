@@ -91,6 +91,14 @@ class UserLevel < ActiveRecord::Base
     return most_recent_user.name, most_recent.level_source_id, most_recent_user
   end
 
+  def self.most_recent_navigator(script, level, user)
+    most_recent = find_by(script: script, level: level, user: user).try(:navigator_user_levels).try(:last)
+    return nil unless most_recent
+
+    most_recent_user = most_recent.user || DeletedUser.instance
+    return most_recent_user.name, most_recent.level_source_id, most_recent_user
+  end
+
   def paired?
     driver? || navigator?
   end

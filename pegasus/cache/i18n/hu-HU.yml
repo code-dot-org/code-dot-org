@@ -883,26 +883,10 @@ hu-HU:
   course3_name: 3. tanfolyam
   course4_name: 4. tanfolyam
   accelerated_name: Gyorsított tanfolyam
-  csp1-2017_name: '1. lecke: Az internet'
-  csp2-2017_name: '2. fejezet: Digitális információ'
-  csp1-2018_name: '1. lecke: Az internet'
-  csp2-2018_name: '2. fejezet: Digitális információ'
-  csp1_name: '1. lecke: Az internet'
-  csp2_name: '2. fejezet: Digitális információ'
-  cspassessment_name: Teljes teszt - 50 kérdés
-  cspexam1-mWU7ilDYM9_name: Teszt 1. része - 25 kérdés
-  cspexam2-AKwgAh1ac5_name: Teszt 2. része - 25 kérdés
-  cspunit3_gradelevel: 9-12. évfolyam
   20-hour_name: Gyorsított tanfolyam
   classicmaze_name: Hagyományos Útvesztö
   iceage_name: Jégkorszak
   minecraft_name: Minecraft
-  math_category_name: Matematika
-  hoc_category_name: A kódolás órája
-  csf_category_name: A számítógép-tudomány alapjai
-  csf_2017_category_name: A számítógép-tudomány alapjai (2017)
-  csf_2018_category_name: A számítógép-tudomány alapjai (2018)
-  csf_international_category_name: A számítógép-tudomány alapjai - nemzetközi
   applab_name: App Lab
   sports_name: Kódold le a saját sportjátékodat
   applab_gradelevel: Kor 13+
@@ -965,6 +949,8 @@ hu-HU:
   coursee-2017_gradelevel: 8-tól 12 éves korig
   coursed-2018_gradelevel: 8+ évfolyam
   coursee-2018_gradelevel: 8-tól 12 éves korig
+  coursed-2019_gradelevel: 8+ évfolyam
+  coursee-2019_gradelevel: 8-tól 12 éves korig
   accelerated_gradelevel: 10-től 18 éves korig
   codeorg_platformtext: Modern böngészők, okostelefonok, tabletek
   codeintl_platformtext: Modern böngészők, okostelefonok, tabletek
@@ -1615,6 +1601,7 @@ hu-HU:
   user_header_minecraft: Minecraft
   user_header_flappy: Flappy
   user_header_view_all: Összes projekt áttekintése...
+  user_header_view_my_projects: Projektjeim megtekintése
   view_all_sections: Minden csoport megtekintése
   signing_in: Bejelentkezés
   applab_tile_start_tutorial: Kezdés
@@ -1683,6 +1670,7 @@ hu-HU:
   hoc2018_mc_teacher_guide: Oktatói útmutató megtekintése
   hoc2018_mc_minecraft_education: Minecraft oktatás
   hoc2018_mc_continue_learning: Folytasd a tanulást a Minecraft-tal.
+  hoc2018_mc_go_to_mc_education: Irány a Minecraft oktatás
   hoc2018_mc_journey: Utazás a Minecraft világában kóddal.
   hoc2018_dance_party_main_heading: Táncos buli
   hoc2018_dance_create_your_own_dance_title: Hozd létre saját táncos bulidat

@@ -17,6 +17,8 @@ function showCourseEditor() {
     <CourseEditor
       name={courseEditorData.course_summary.name}
       title={courseEditorData.course_summary.title}
+      familyName={courseEditorData.course_summary.family_name}
+      versionYear={courseEditorData.course_summary.version_year}
       descriptionShort={courseEditorData.course_summary.description_short}
       descriptionStudent={courseEditorData.course_summary.description_student}
       descriptionTeacher={courseEditorData.course_summary.description_teacher}
@@ -28,6 +30,8 @@ function showCourseEditor() {
       hasVerifiedResources={
         courseEditorData.course_summary.has_verified_resources
       }
+      courseFamilies={courseEditorData.course_families}
+      versionYearOptions={courseEditorData.version_year_options}
     />,
     document.getElementById('course_editor')
   );

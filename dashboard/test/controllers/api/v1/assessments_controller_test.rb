@@ -223,8 +223,8 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
             "url" => "http://test.host/s/#{script.name}/stage/1/puzzle/1?section_id=#{@section.id}&user_id=#{@student_1.id}",
             "multi_correct" => 1,
             "multi_count" => 4,
-            "match_correct" => 2,
-            "match_count" => 6,
+            "match_correct" => 1,
+            "match_count" => 3,
             "submitted" => true,
             "timestamp" => user_level[:updated_at],
             "level_results" => [

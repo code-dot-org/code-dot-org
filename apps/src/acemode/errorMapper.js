@@ -18,6 +18,11 @@ var errorMap = [
       '$1 is a reserved word in App Lab. Use a different variable name.',
     gamelab_replacement:
       '$1 is a reserved word in Game Lab. Use a different variable name.'
+  },
+  {
+    original: /'setup' is defined, but it's not called in your program./,
+    replacement:
+      "'setup' is a function that already exists in Game Lab. Consider giving this function a different name."
   }
 ];
 

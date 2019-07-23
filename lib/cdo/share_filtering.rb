@@ -1,6 +1,6 @@
 require 'cdo/regexp'
 require 'cdo/geocoder'
-require 'cdo/web_purify'
+require 'cdo/profanity_filter'
 require 'dynamic_config/gatekeeper'
 
 USER_ENTERED_TEXT_INDICATORS = ['TITLE', 'TEXT', 'title name\=\"VAL\"'].freeze
@@ -23,6 +23,9 @@ module ShareFiltering
   #
   # May throw OpenURI::HTTPError, IO::EAGAINWaitReadable depending on
   # service availability.
+  #
+  # @param [String] program the student's program text
+  # @param [String] locale a two-character ISO 639-1 language code
   def self.find_share_failure(program, locale)
     return nil unless should_filter_program(program)
 
@@ -38,7 +41,7 @@ module ShareFiltering
     phone_number = RegexpUtils.find_potential_phone_number(program_tags_removed)
     return ShareFailure.new(FailureType::PHONE, phone_number) if phone_number
 
-    expletive = WebPurify.find_potential_profanity(program_tags_removed, ['en', locale])
+    expletive = ProfanityFilter.find_potential_profanity(program_tags_removed, locale)
     return ShareFailure.new(FailureType::PROFANITY, expletive) if expletive
 
     nil

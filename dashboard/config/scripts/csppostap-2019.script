@@ -5,9 +5,10 @@ exclude_csf_column_in_legend true
 student_detail_progress_view true
 has_verified_resources true
 has_lesson_plan true
-curriculum_path 'https://curriculum.code.org/csp-19/post-ap/{LESSON}'
+curriculum_path 'https://curriculum.code.org/{LOCALE}/csp-19/post-ap/{LESSON}'
 family_name 'csppostap'
 version_year '2019'
+is_stable true
 project_sharing true
 
 stage 'Intro to Data', flex_category: 'csp_postap_1'
@@ -143,3 +144,7 @@ level 'U6 - Sample Apps - Flashcards_2019'
 stage 'Final Project', flex_category: 'csp_postap_2'
 level 'U6 - Final Project - Student Introduction_2018_2019'
 level 'U6 - Final Project - Project Level_2019', assessment: true
+
+stage 'CS Principles Post Course survey', lockable: true, flex_category: 'cspSurvey'
+level 'csp-post-survey-intro-2019'
+level 'csp-post-survey-levelgroup-2019.2', assessment: true

@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
-import ProjectInfo from '@cdo/apps/code-studio/header/ProjectInfo';
+import ProjectInfo from '@cdo/apps/code-studio/components/header/ProjectInfo';
 import {getStore} from '@cdo/apps/redux';
 
 const container = document.getElementsByClassName('project_info');

@@ -78,8 +78,7 @@ class VirtualizedDetailView extends Component {
     columnWidths: PropTypes.arrayOf(PropTypes.number).isRequired,
     getLevels: PropTypes.func,
     onScroll: PropTypes.func,
-    stageExtrasEnabled: PropTypes.bool,
-    inMiniRubricExperiment: PropTypes.bool
+    stageExtrasEnabled: PropTypes.bool
   };
 
   state = {
@@ -173,9 +172,7 @@ class VirtualizedDetailView extends Component {
           <span style={styles.bubbleSet}>
             {scriptData.stages[stageIdIndex].levels.map((level, i) => (
               <FontAwesome
-                // NOTE: When we remove mini rubrics experiment we will still need to have optional
-                // param to tell getIconForLevel that we are in the detailed progress view
-                icon={getIconForLevel(level, this.props.inMiniRubricExperiment)}
+                icon={getIconForLevel(level, true)}
                 style={
                   level.isUnplugged
                     ? progressStyles.unpluggedIcon
@@ -219,7 +216,6 @@ class VirtualizedDetailView extends Component {
             stageId={stageIdIndex}
             stageExtrasEnabled={stageExtrasEnabled}
             levelsWithStatus={getLevels(student.id, stageIdIndex)}
-            inMiniRubricExperiment={this.props.inMiniRubricExperiment}
           />
         )}
       </div>

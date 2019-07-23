@@ -4,11 +4,11 @@ teacher_resources [["lessonPlans", "https://curriculum.code.org/csf-18/coursed/"
 stage_extras_available true
 has_lesson_plan true
 curriculum_path 'https://curriculum.code.org/{LOCALE}/csf-18/coursed/{LESSON}'
-script_announcements [{"notice"=>"Our 2018 CS Fundamentals Curriculum Guide is Live", "details"=>"Click \"Learn More\" to download the PDF, including unplugged lesson plans for Courses A-F.", "link"=>"https://code.org/curriculum/docs/csf/CSF_Curriculum_Guide_2018_smaller.pdf", "type"=>"bullhorn"}]
 family_name 'coursed'
 version_year '2018'
 is_stable true
 supported_locales ["sk-SK"]
+curriculum_umbrella 'CSF'
 
 stage 'Algorithms: Graph Paper Programming'
 level 'GraphPaperProgramming_2018'

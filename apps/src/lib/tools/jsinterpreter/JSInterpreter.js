@@ -154,7 +154,7 @@ export default class JSInterpreter {
         'if(__jsCB){setCallbackRetVal(__jsCB.fn.apply(null,__jsCB.arguments || null));}}';
 
       CustomMarshalingInterpreter.createNativeFunctionFromInterpreterFunction = intFunc => {
-        return (...args) => {
+        let retFunc = (...args) => {
           if (this.initialized()) {
             this.eventQueue.push({
               fn: intFunc,
@@ -175,6 +175,10 @@ export default class JSInterpreter {
             }
           }
         };
+        if (intFunc && intFunc.node && intFunc.node.id) {
+          retFunc.funcName = intFunc.node.id.name;
+        }
+        return retFunc;
       };
     }
 

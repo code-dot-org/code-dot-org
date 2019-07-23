@@ -55,7 +55,7 @@ class Courses extends Component {
     const headingDescription = isSignedOut
       ? i18n.coursesHeadingDescription()
       : null;
-    const showSpecialTeacherAnnouncement = true;
+    const showSpecialTeacherAnnouncement = false;
 
     return (
       <div style={styles.content}>

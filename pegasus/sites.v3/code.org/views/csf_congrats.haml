@@ -37,6 +37,15 @@
     ScriptConstants::COURSEE_2018_NAME => ScriptConstants::COURSEF_2018_NAME,
     ScriptConstants::COURSEF_2018_NAME => "applab",
     ScriptConstants::EXPRESS_2018_NAME => "applab",
+
+    ScriptConstants::COURSEA_2019_NAME => ScriptConstants::COURSEB_2019_NAME,
+    ScriptConstants::COURSEB_2019_NAME => ScriptConstants::COURSEC_2019_NAME,
+    ScriptConstants::PRE_READER_EXPRESS_2019_NAME => ScriptConstants::COURSEC_2019_NAME,
+    ScriptConstants::COURSEC_2019_NAME => ScriptConstants::COURSED_2019_NAME,
+    ScriptConstants::COURSED_2019_NAME => ScriptConstants::COURSEE_2019_NAME,
+    ScriptConstants::COURSEE_2019_NAME => ScriptConstants::COURSEF_2019_NAME,
+    ScriptConstants::COURSEF_2019_NAME => "applab",
+    ScriptConstants::EXPRESS_2019_NAME => "applab",
   }
 
   rec_third_party = {
@@ -64,6 +73,15 @@
     ScriptConstants::COURSED_2018_NAME => "csf_next",
     ScriptConstants::COURSEE_2018_NAME => "csf_next",
     ScriptConstants::COURSEF_2018_NAME => "csf_next",
+
+    ScriptConstants::EXPRESS_2019_NAME => "csf_next",
+    ScriptConstants::PRE_READER_EXPRESS_2019_NAME => "csf_next",
+    ScriptConstants::COURSEA_2019_NAME => "csf_next",
+    ScriptConstants::COURSEB_2019_NAME => "csf_next",
+    ScriptConstants::COURSEC_2019_NAME => "csf_next",
+    ScriptConstants::COURSED_2019_NAME => "csf_next",
+    ScriptConstants::COURSEE_2019_NAME => "csf_next",
+    ScriptConstants::COURSEF_2019_NAME => "csf_next",
   }
 
 #congrats.mobile-pad{:style=>'margin: 0 auto;'}
@@ -101,6 +119,6 @@
 
   %div{:style=>'clear: both; height:30px;'}
   %hr
-  = view :petition_expand 
+  = view :petition_expand
 
 = view 'popup_window.js'

@@ -787,6 +787,8 @@ en:
       Fish Tank 2-validated_callout: {}
       Fish Tank 2-validated_2019_callout: {}
       Fish Tank 2-validated_simple_callout: {}
+      Fish Tank 3-validated_2019_callout:
+        spritelab_comment: Use this block to leave yourself or your teacher notes about how your code works.
       Frozen Project Test Toolbox_callout:
         snowflake_dropdown: Use this drop-down to create different snowflakes!
       Frozen Project Toolbox (Old)_callout:

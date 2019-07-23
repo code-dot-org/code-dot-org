@@ -31,6 +31,8 @@ class XhrProxyController < ApplicationController
     api.coinmarketcap.com
     api.data.gov
     api.datamuse.com
+    api.energidataservice.dk
+    api.exchangeratesapi.io
     api.football-data.org
     api.foursquare.com
     api.nasa.gov
@@ -58,19 +60,24 @@ class XhrProxyController < ApplicationController
     hamlin.myschoolapp.com
     herokuapp.com
     hubblesite.org
+    images-api.nasa.gov
+    icanhazdadjoke.com
     isenseproject.org
     lakeside-cs.org
+    opentdb.com
+    pokeapi.co
     qrng.anu.edu.au
     quandl.com
-    query.yahooapis.com
     quizlet.com
     rejseplanen.dk
+    maker.ifttt.com
     noaa.gov
     nuevaschool.ngrok.io
     nuevaschool2.ngrok.io
     nuevaschool3.ngrok.io
     numbersapi.com
     random.org
+    restcountries.eu
     rhcloud.com
     runescape.com
     samples.openweathermap.org

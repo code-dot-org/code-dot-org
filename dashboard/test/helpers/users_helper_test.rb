@@ -112,6 +112,35 @@ class UsersHelperTest < ActionView::TestCase
     )
   end
 
+  def test_summarize_user_progress_with_bubble_choice
+    user = create :user, total_lines: 150
+    script = create :script
+
+    # Create BubbleChoice level with sublevels, script_level, and user_levels.
+    sublevel1 = create :level, name: 'choice_1'
+    sublevel2 = create :level, name: 'choice_2'
+    level = create :bubble_choice_level, sublevels: [sublevel1, sublevel2]
+    script_level = create :script_level, script: script, levels: [level]
+    create :user_level, user: user, level: sublevel1, script: script, best_result: ActivityConstants::BEST_PASS_RESULT
+    create :user_level, user: user, level: sublevel2, script: script, best_result: 20
+
+    expected_summary = {
+      linesOfCode: 150,
+      linesOfCodeText: 'Total lines of code: 150',
+      lockableAuthorized: false,
+      levels: {
+        # BubbleChoice levels return status/result using the sublevel with the highest best_result.
+        level.id => {
+          status: LEVEL_STATUS.perfect,
+          result: ActivityConstants::BEST_PASS_RESULT
+        }
+      },
+      current_stage: script_level.stage.id,
+      completed: false
+    }
+    assert_equal expected_summary, summarize_user_progress(script, user)
+  end
+
   def test_summarize_user_progress_with_locked
     user = create :user, total_lines: 42
     script = create :script

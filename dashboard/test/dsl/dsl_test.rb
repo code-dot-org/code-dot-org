@@ -33,6 +33,7 @@ class DslTest < ActiveSupport::TestCase
     supported_locales: [],
     pilot_experiment: nil,
     project_sharing: nil,
+    curriculum_umbrella: nil
   }
 
   test 'test Script DSL' do
@@ -69,10 +70,10 @@ class DslTest < ActiveSupport::TestCase
       }
     )
 
-    i18n_expected = {'en' => {'data' => {'script' => {'name' => {'test' => {'stages' => {
+    i18n_expected = {'test' => {'stages' => {
       'Stage1' => {'name' => 'Stage1'},
       'Stage2' => {'name' => 'Stage2'}
-    }}}}}}}
+    }}}
     assert_equal expected, output
     assert_equal i18n_expected, i18n
   end
@@ -226,21 +227,15 @@ wrong 'w3'
       }
     }
     i18n_expected = {
-      'en' => {
-        'data' => {
-          'multi' => {
-            'name1' => {
-              'title1' => 'title1',
-              'desc1' => 'desc1',
-              'q1' => 'q1',
-              'w1' => 'w1',
-              'w2' => 'w2',
-              'r1' => 'r1',
-              'w3' => 'w3'
-            }
-          }
-        }
-      }
+      'title' => 'title1',
+      'content1' => 'desc1',
+      'questions' => [{'text' => 'q1'}],
+      'answers' => [
+        {'text' => 'w1', 'correct' => false},
+        {'text' => 'w2', 'correct' => false},
+        {'text' => 'r1', 'correct' => true},
+        {'text' => 'w3', 'correct' => false}
+      ],
     }
     assert_equal expected, output
     assert_equal i18n_expected.to_yaml, i18n.to_yaml
@@ -253,7 +248,7 @@ name 'name1'
 title nil
 DSL
     _, i18n = MultiDSL.parse(input_dsl, 'test')
-    i18n_expected = {'en' => {'data' => {'multi' => {'name1' => {}}}}}
+    i18n_expected = {}
     assert_equal i18n_expected, i18n
   end
 
@@ -534,13 +529,13 @@ level 'Level 3'
     end
   end
 
-  test 'Script DSL with level target and challenge' do
+  test 'Script DSL with level challenge' do
     input_dsl = <<DSL
 stage 'Stage1'
 level 'Level 1'
 level 'Level 2'
 level 'Level 3', challenge: true
-level 'Level 4', target: true
+level 'Level 4'
 variants
   level 'Level 5', challenge: true
   level 'Level 5.1', active: false
@@ -555,7 +550,7 @@ DSL
               {stage: "Stage1", levels: [{name: "Level 1"}]},
               {stage: "Stage1", levels: [{name: "Level 2"}]},
               {stage: "Stage1", levels: [{name: "Level 3"}], properties: {challenge: true}},
-              {stage: "Stage1", levels: [{name: "Level 4"}], properties: {target: true}},
+              {stage: "Stage1", levels: [{name: "Level 4"}]},
               {
                 stage: "Stage1",
                 levels: [
@@ -622,6 +617,31 @@ DSL
     expected = <<-SCRIPT
 hidden false
 project_sharing true
+
+SCRIPT
+
+    assert_equal expected, script_text
+  end
+
+  test 'Script DSL with curriculum_umbrella' do
+    input_dsl = "curriculum_umbrella 'CSF'"
+    expected = DEFAULT_PROPS.merge(
+      {
+        stages: [],
+        curriculum_umbrella: 'CSF'
+      }
+    )
+
+    output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
+    assert_equal expected, output
+  end
+
+  test 'serialize curriculum_umbrella' do
+    script = create :script, curriculum_umbrella: 'CSP'
+    script_text = ScriptDSL.serialize_to_string(script)
+    expected = <<-SCRIPT
+hidden false
+curriculum_umbrella 'CSP'
 
 SCRIPT
 

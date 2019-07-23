@@ -13,7 +13,7 @@
       "gamelab"
     ],
     "helper_libraries": [
-      "GameLabJr",
+      "NativeSpriteLab",
       "aalab"
     ],
     "use_default_sprites": "true",
