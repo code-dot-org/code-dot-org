@@ -183,7 +183,10 @@ pt-BR:
         programa que remove cada um deles até que o chão fique nivelado?
       4-5 While Loops Assessment 1: Há vários buracos e montes. Me ajude a preencher
         os buracos e remover os montes para deixar o chão plano.
+      AB_Debug_PlayLab3: Mova o cavaleiro para cada uma das bandeiras. Se algo der
+        errado, procure por erros!
       Alien Defender: 'Ideia de Projeto: Construa um jogo de defesa no Laboratório!'
+      CDEF_debugging_flappy2: Por que este jogo não funciona?
       CSD U3 Boolean Modify: Modifique o código para que todos os comandos console.log
         imprimam 'true'
       CSD U3 Boolean Modify_2018: Modifique o código para que todos os comandos console.log
@@ -2831,6 +2834,7 @@ pt-BR:
       courseD_artist_project5: Brinque com os flocos de neve!
       courseD_artist_project5_2018: Brinque com os flocos de neve!
       courseD_artist_project5_2019: Brinque com os flocos de neve!
+      courseD_artist_ramp11: Agora faça um quadrado usando o Artista!
       courseD_artist_ramp12: Use o que você aprendeu para desenhar este triângulo
         dentro de um quadrado.
       courseD_autorun_binary2_2019: Rode esse código para ver como o artista utiliza
@@ -3402,6 +3406,10 @@ pt-BR:
         então faça um programa do seu jeito!
       courseE_artist_functions_challenge2_2019: Tente esse código para ver como funciona,
         então faça um programa do seu jeito!
+      courseE_artist_ramp8: Agora faça um quadrado usando o Artista!
+      courseE_artist_ramp8_2: Agora faça um quadrado usando o Artista!
+      courseE_artist_ramp9: Use o que você aprendeu para desenhar este triângulo.
+      courseE_artist_ramp9_2: Use o que você aprendeu para desenhar este triângulo.
       courseE_bee_concept1: "Colete todo o néctar de cada flor.\nUse um laço aninhado. "
       courseE_bee_concept1_2018: "Colete todo o néctar de cada flor.\nUse um laço
         aninhado. "
@@ -4019,11 +4027,15 @@ pt-BR:
       iceage_click_hello: 'Você pode ajudar Sid a ligar para os amigos dele quando
         você clica nele? '
       iceage_free_play: 'Hora de criar seu próprio jogo ou história! '
+      iceage_hello1: Ajude Sid a dizer "Olá!" buscando o bloco `falar` e ligando ele
+        abaixo do evento `quando rodar`.
       iceage_hello2: Ajude Manny e Sid a se cumprimentarem usando o bloco `ator ___
         diz` duas vezes.
       iceage_move_events: Escreva o código para ajudar Scrat a pegar todas as nozes!
       iceage_move_to_actor: Conecte um bloco ao evento `quando o ator tocar` para
         tocar um som quando Diego encontra Manny.
+      iceage_move_to_flag: Scrat está procurando pela nós dele! Você consegue ajuda-lo
+        a andar os últimos 200 pixels?
       iceage_repeat: Ajude a vovó a fazer algum exercício movendo para a esquerda
         e para a direita repetidamente.
       iceage_sound_and_points: 'Você pode terminar este programa para fazer com que
