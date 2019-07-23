@@ -68,7 +68,7 @@ class Ability
       can :manage, Pd::Enrollment, user_id: user.id
       can :workshops_user_enrolled_in, Pd::Workshop
       can :index, Section, user_id: user.id
-      can :get_feedbacks, TeacherFeedback, student_id: user.id
+      can [:get_feedbacks, :count, :increment_visit_count, :index], TeacherFeedback, student_id: user.id
 
       if user.teacher?
         can :manage, Section, user_id: user.id
@@ -93,7 +93,7 @@ class Ability
         can [:new, :create, :read], Pd::Application::Teacher1920Application, user_id: user.id
         can :create, Pd::InternationalOptIn, user_id: user.id
         can :manage, :maker_discount
-        can [:update_last_confirmation_date, :update_end_date, :update_school_info_id], UserSchoolInfo, user_id: user.id
+        can :update_last_confirmation_date, UserSchoolInfo, user_id: user.id
       end
 
       if user.facilitator?

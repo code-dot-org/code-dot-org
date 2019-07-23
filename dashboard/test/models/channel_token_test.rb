@@ -3,6 +3,8 @@ require 'test_helper'
 require_relative '../../../shared/middleware/helpers/storage_apps'
 
 class ChannelTokenTest < ActiveSupport::TestCase
+  self.use_transactional_test_case = true
+
   setup_all do
     @level = create :level
     @fake_ip = '127.0.0.1'
@@ -12,7 +14,7 @@ class ChannelTokenTest < ActiveSupport::TestCase
     channel_token = ChannelToken.find_or_create_channel_token(
       @level,
       @fake_ip,
-      storage_id('user')
+      get_storage_id
     )
 
     storage_id, storage_app_id = storage_decrypt_channel_id(channel_token.channel)

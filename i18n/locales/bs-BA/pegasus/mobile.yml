@@ -698,12 +698,7 @@
   courseb-draft_name: Kurs B
   courseb_name: "Kurs B"
   accelerated_name: "Ubrzani Kurs"
-  csp1-2017_name: 'Jedinica 1: internet'
-  csp1-2018_name: 'Jedinica 1: internet'
-  csp1_name: 'Jedinica 1: internet'
   20-hour_name: Ubrzani Kurs
-  math_category_name: "Matematika"
-  hoc_category_name: "Sat Kodiranja"
   applab_name: "Laboratorij za Aplikacije"
   basketball_name: "Napravi igru košarke"
   codeorg_gradelevel: "Dob 4-104"
@@ -760,6 +755,8 @@
   coursee-2017_gradelevel: Dob 8-12
   coursed-2018_gradelevel: Razred 8+
   coursee-2018_gradelevel: Dob 8-12
+  coursed-2019_gradelevel: Razred 8+
+  coursee-2019_gradelevel: Dob 8-12
   accelerated_gradelevel: "Dob 10+ (nakon Kursa 3)"
   codeorg_platformtext: "Savremeni browser-i, mobiteli, tableti"
   codeintl_platformtext: "Savremeni browser-i, mobiteli, tableti"

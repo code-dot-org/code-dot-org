@@ -193,7 +193,7 @@ class S3Packaging
       File.open(package, 'wb') do |file|
         IO.copy_stream open(url), file
       rescue OpenURI::HTTPError
-        raise Aws::S3::Errors::NoSuchKey.new(nil, file)
+        raise Aws::S3::Errors::NoSuchKey.new(nil, file.path)
       end
     end
     @logger.info "Downloaded"

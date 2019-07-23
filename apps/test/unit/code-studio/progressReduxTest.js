@@ -27,8 +27,6 @@ import reducer, {
   getLevelResult,
   __testonly__
 } from '@cdo/apps/code-studio/progressRedux';
-import sinon from 'sinon';
-import experiments from '@cdo/apps/util/experiments';
 
 // This is some sample stage data taken a course. I truncated to the first two
 // stages, and also truncated the second stage to the first 3 levels
@@ -470,22 +468,7 @@ describe('progressReduxTest', () => {
         const status = statusForLevel(level, levelProgress);
         assert.strictEqual(status, LevelStatus.perfect);
       });
-      // it('returns LevelStatus.completed_assessment for assessment level when experiment is on', () => {
-      //   sinon.stub(experiments, 'isEnabled').returns(true);
-      //   const level = {
-      //     ids: [123],
-      //     kind: LevelKind.assessment
-      //   };
-      //   const levelProgress = {
-      //     123: TestResults.ALL_PASS
-      //   };
-      //   const status = statusForLevel(level, levelProgress);
-      //   assert.strictEqual(status, LevelStatus.completed_assessment);
-      //   experiments.isEnabled.restore();
-      // });
-
-      it('does not return LevelStatus.completed_assessment for assessment level when experiment is off', () => {
-        sinon.stub(experiments, 'isEnabled').returns(false);
+      it('returns LevelStatus.completed_assessment for assessment level', () => {
         const level = {
           ids: [123],
           kind: LevelKind.assessment
@@ -494,8 +477,7 @@ describe('progressReduxTest', () => {
           123: TestResults.ALL_PASS
         };
         const status = statusForLevel(level, levelProgress);
-        assert.strictEqual(status, LevelStatus.perfect);
-        experiments.isEnabled.restore();
+        assert.strictEqual(status, LevelStatus.completed_assessment);
       });
     });
   });

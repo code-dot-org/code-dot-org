@@ -89,7 +89,8 @@ module Pd::Application
       queue_email :confirmation, deliver_now: true
     end
 
-    # Queries for locked and (accepted or withdrawn) and assigned to a fit workshop
+    # Queries for locked and (accepted or withdrawn) CSD/CSP facilitator applications
+    # that have filled out the FiT Weekend Registration form.
     # @param [ActiveRecord::Relation<Pd::Application::Facilitator1920Application>] applications_query
     #   (optional) defaults to all
     # @note this is not chainable since it inspects fit_workshop_id from serialized attributes,
@@ -98,10 +99,10 @@ module Pd::Application
     def self.fit_cohort(applications_query = all)
       applications_query.
         where(type: name).
+        where(course: [:csd, :csp]).
         where(status: [:accepted, :withdrawn]).
         where.not(locked_at: nil).
-        includes(:pd_fit_weekend1920_registration).
-        select(&:fit_workshop_id?)
+        includes(:pd_fit_weekend1920_registration)
     end
 
     # @override

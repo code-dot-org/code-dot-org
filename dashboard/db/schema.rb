@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190422234557) do
+ActiveRecord::Schema.define(version: 20190711190421) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -45,6 +45,18 @@ ActiveRecord::Schema.define(version: 20190422234557) do
     t.datetime "updated_at",             null: false
     t.index ["school_code", "school_year"], name: "index_ap_school_codes_on_school_code_and_school_year", unique: true, using: :btree
     t.index ["school_id"], name: "fk_rails_08d2269647", using: :btree
+  end
+
+  create_table "assessment_activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.integer  "user_id",         null: false
+    t.integer  "level_id",        null: false
+    t.integer  "script_id",       null: false
+    t.integer  "level_source_id"
+    t.integer  "attempt"
+    t.integer  "test_result"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.index ["user_id", "level_id", "script_id"], name: "index_assessment_activities_on_user_and_level_and_script", using: :btree
   end
 
   create_table "authentication_options", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
@@ -348,7 +360,7 @@ ActiveRecord::Schema.define(version: 20190422234557) do
 
   create_table "gallery_activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id",                            null: false
-    t.integer  "user_level_id"
+    t.bigint   "user_level_id",                                   unsigned: true
     t.integer  "level_source_id"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -501,8 +513,8 @@ ActiveRecord::Schema.define(version: 20190422234557) do
   end
 
   create_table "paired_user_levels", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.integer  "driver_user_level_id"
-    t.integer  "navigator_user_level_id"
+    t.bigint   "driver_user_level_id",                 unsigned: true
+    t.bigint   "navigator_user_level_id",              unsigned: true
     t.datetime "created_at",              null: false
     t.datetime "updated_at",              null: false
     t.index ["driver_user_level_id"], name: "index_paired_user_levels_on_driver_user_level_id", using: :btree
@@ -684,6 +696,18 @@ ActiveRecord::Schema.define(version: 20190422234557) do
     t.index ["user_id"], name: "index_pd_international_opt_ins_on_user_id", using: :btree
   end
 
+  create_table "pd_misc_surveys", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.bigint   "form_id",                     null: false
+    t.bigint   "submission_id",               null: false
+    t.text     "answers",       limit: 65535
+    t.integer  "user_id"
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
+    t.index ["form_id"], name: "index_pd_misc_surveys_on_form_id", using: :btree
+    t.index ["submission_id"], name: "index_pd_misc_surveys_on_submission_id", unique: true, using: :btree
+    t.index ["user_id"], name: "index_pd_misc_surveys_on_user_id", using: :btree
+  end
+
   create_table "pd_payment_terms", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "regional_partner_id",               null: false
     t.date     "start_date",                        null: false
@@ -787,11 +811,10 @@ ActiveRecord::Schema.define(version: 20190422234557) do
     t.integer  "pd_enrollment_id"
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
-    t.string   "course"
+    t.string   "course",             null: false
     t.index ["pd_application_id"], name: "index_pd_scholarship_infos_on_pd_application_id", using: :btree
     t.index ["pd_enrollment_id"], name: "index_pd_scholarship_infos_on_pd_enrollment_id", using: :btree
     t.index ["user_id", "application_year", "course"], name: "index_pd_scholarship_infos_on_user_id_and_app_year_and_course", unique: true, using: :btree
-    t.index ["user_id", "application_year"], name: "index_pd_scholarship_infos_on_user_id_and_application_year", unique: true, using: :btree
     t.index ["user_id"], name: "index_pd_scholarship_infos_on_user_id", using: :btree
   end
 
@@ -1372,14 +1395,19 @@ ActiveRecord::Schema.define(version: 20190422234557) do
   end
 
   create_table "teacher_feedbacks", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.text     "comment",     limit: 65535
+    t.text     "comment",                  limit: 65535
     t.integer  "student_id"
     t.integer  "level_id"
     t.integer  "teacher_id"
-    t.datetime "created_at",                null: false
-    t.datetime "updated_at",                null: false
+    t.datetime "created_at",                             null: false
+    t.datetime "updated_at",                             null: false
     t.datetime "deleted_at"
     t.string   "performance"
+    t.integer  "student_visit_count"
+    t.datetime "student_first_visited_at"
+    t.datetime "student_last_visited_at"
+    t.integer  "script_level_id"
+    t.datetime "seen_on_feedback_page_at"
     t.index ["student_id", "level_id", "teacher_id"], name: "index_feedback_on_student_and_level_and_teacher_id", using: :btree
     t.index ["student_id", "level_id"], name: "index_feedback_on_student_and_level", using: :btree
   end
@@ -1628,7 +1656,6 @@ ActiveRecord::Schema.define(version: 20190422234557) do
   add_foreign_key "pd_teachercon1819_registrations", "regional_partners"
   add_foreign_key "pd_teachercon1819_registrations", "users"
   add_foreign_key "pd_workshops", "regional_partners"
-  add_foreign_key "peer_reviews", "level_sources"
   add_foreign_key "peer_reviews", "levels"
   add_foreign_key "peer_reviews", "scripts"
   add_foreign_key "peer_reviews", "users", column: "reviewer_id"

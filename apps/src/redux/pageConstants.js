@@ -16,6 +16,7 @@ var ALLOWED_KEYS = new Set([
   'isResponsive',
   'isIframeEmbed',
   'isReadOnlyWorkspace',
+  'isNotStartedLevel',
   'isShareView',
   'isProjectLevel',
   'isSubmittable',
@@ -60,7 +61,11 @@ var ALLOWED_KEYS = new Set([
   'nextLevelUrl',
   'showProjectTemplateWorkspaceIcon',
   'serverLevelId',
+  'serverScriptLevelId',
   'exportApp',
+  'expoGenerateApk',
+  'expoCheckApkBuild',
+  'expoCancelApkBuild',
   'allowExportExpo'
 ]);
 

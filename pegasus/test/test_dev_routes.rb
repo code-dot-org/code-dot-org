@@ -22,17 +22,9 @@ class DevRoutesTest < Minitest::Test
       Rack::Test::Session.new(mock_session)
     end
 
-    def in_rack_env(env)
-      original_rack_env = CDO.rack_env
-      CDO.rack_env = env
-      yield
-    ensure
-      CDO.rack_env = original_rack_env
-    end
-
     describe '/api/dev/start-build' do
       def assert_forbidden_on_rack_env(forbidden_env)
-        in_rack_env(forbidden_env) do
+        with_rack_env(forbidden_env) do
           pegasus = make_test_pegasus
 
           pegasus.post '/api/dev/start-build', DEFAULT_PARAMS
@@ -42,7 +34,7 @@ class DevRoutesTest < Minitest::Test
       end
 
       def assert_allowed_on_rack_env(allowed_env)
-        in_rack_env(allowed_env) do
+        with_rack_env(allowed_env) do
           pegasus = make_test_pegasus
           begin
             pegasus.post '/api/dev/start-build', DEFAULT_PARAMS
@@ -57,7 +49,7 @@ class DevRoutesTest < Minitest::Test
         $log.level = Logger::ERROR
 
         # Fake slack token for tests
-        CDO.slack_start_build_token = FAKE_SLACK_SLASH_TOKEN
+        CDO.stubs(slack_start_build_token: FAKE_SLACK_SLASH_TOKEN)
 
         # Should have no build-started file at the beginning of tests
         system "rm -f #{BUILD_STARTED_PATH}"
@@ -90,7 +82,7 @@ class DevRoutesTest < Minitest::Test
       end
 
       it 'is forbidden with a missing token' do
-        in_rack_env(:staging) do
+        with_rack_env(:staging) do
           pegasus = make_test_pegasus
           pegasus.post(
             '/api/dev/start-build',
@@ -101,7 +93,7 @@ class DevRoutesTest < Minitest::Test
       end
 
       it 'is forbidden with an incorrect token' do
-        in_rack_env(:staging) do
+        with_rack_env(:staging) do
           pegasus = make_test_pegasus
           pegasus.post(
             '/api/dev/start-build',
@@ -115,7 +107,7 @@ class DevRoutesTest < Minitest::Test
       end
 
       it 'generates a start_build file if none exists' do
-        in_rack_env(:test) do
+        with_rack_env(:test) do
           pegasus = make_test_pegasus
           begin
             refute File.file? BUILD_STARTED_PATH
@@ -134,7 +126,7 @@ class DevRoutesTest < Minitest::Test
       end
 
       it 'succeeds without action if start_build exists' do
-        in_rack_env(:test) do
+        with_rack_env(:test) do
           pegasus = make_test_pegasus
           begin
             system "touch #{BUILD_STARTED_PATH}"
@@ -162,12 +154,12 @@ class DevRoutesTest < Minitest::Test
       before do
         $log.level = Logger::ERROR
 
-        CDO.slack_set_last_dtt_green_token = FAKE_SLACK_SLASH_TOKEN
+        CDO.stubs(slack_set_last_dtt_green_token: FAKE_SLACK_SLASH_TOKEN)
       end
 
       it 'is forbidden on non-test environments' do
         [:development, :staging, :adhoc, :levelbuilder, :production].each do |env|
-          in_rack_env(env) do
+          with_rack_env(env) do
             pegasus = make_test_pegasus
             pegasus.post '/api/dev/set-last-dtt-green', DEFAULT_PARAMS
             assert_equal 403, pegasus.last_response.status
@@ -176,7 +168,7 @@ class DevRoutesTest < Minitest::Test
       end
 
       it 'succeeds on test environment' do
-        in_rack_env(:test) do
+        with_rack_env(:test) do
           fake_sha = 'abcdef'
           GitHub.expects(:sha).returns(fake_sha)
           DevelopersTopic.expects(:set_dtt).with('yes')
@@ -203,12 +195,12 @@ class DevRoutesTest < Minitest::Test
       }.freeze
       before do
         $log.level = Logger::ERROR
-        CDO.github_webhook_secret = FAKE_GITHUB_WEBHOOK_SECRET
+        CDO.stubs(github_webhook_secret: FAKE_GITHUB_WEBHOOK_SECRET)
       end
 
       it 'is forbidden on non-staging environments' do
         [:test, :adhoc, :levelbuilder, :production].each do |env|
-          in_rack_env(env) do
+          with_rack_env(env) do
             pegasus = make_test_pegasus
             pegasus.post '/api/dev/check-dts', GITHUB_PARAMS
             assert_equal 403, pegasus.last_response.status
@@ -217,7 +209,7 @@ class DevRoutesTest < Minitest::Test
       end
 
       it 'ignores actions we dont care about' do
-        in_rack_env(:staging) do
+        with_rack_env(:staging) do
           Rack::Utils.expects(:secure_compare).returns(true)
           pegasus = make_test_pegasus
 
@@ -229,7 +221,7 @@ class DevRoutesTest < Minitest::Test
       end
 
       it 'ignores events we dont care about' do
-        in_rack_env(:staging) do
+        with_rack_env(:staging) do
           Rack::Utils.expects(:secure_compare).returns(true)
           pegasus = make_test_pegasus
 
@@ -240,7 +232,7 @@ class DevRoutesTest < Minitest::Test
       end
 
       it 'ignores PRs against branches we dont care about' do
-        in_rack_env(:staging) do
+        with_rack_env(:staging) do
           Rack::Utils.expects(:secure_compare).returns(true)
           pegasus = make_test_pegasus
 
@@ -259,7 +251,7 @@ class DevRoutesTest < Minitest::Test
       end
 
       it 'Sets the dts check to pass if DTS is yes' do
-        in_rack_env(:staging) do
+        with_rack_env(:staging) do
           Rack::Utils.expects(:secure_compare).returns(true)
           GitHub.expects(:configure_octokit)
           DevelopersTopic.expects(:dts?).returns(true)
@@ -274,7 +266,7 @@ class DevRoutesTest < Minitest::Test
       end
 
       it 'Sets the dts check to fail if DTS is no' do
-        in_rack_env(:staging) do
+        with_rack_env(:staging) do
           Rack::Utils.expects(:secure_compare).returns(true)
           GitHub.expects(:configure_octokit)
           DevelopersTopic.expects(:dts?).returns(false)

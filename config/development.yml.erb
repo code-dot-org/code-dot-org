@@ -1,0 +1,19 @@
+# Configuration defaults for development environment.
+census_map_table_id: null
+dashboard_enable_pegasus: true
+pegasus_skip_asset_map: true
+
+firebase_name: cdo-v3-dev
+# provide a unique path for firebase channels data for development, to avoid conflicts in channel ids.
+firebase_channel_id_suffix: -DEVELOPMENT-<%=ENV['USER']%>
+
+lint: true
+pretty_js: true
+stub_school_data: true
+daemon: true
+
+# Disable this for developers by default, it won't make much sense because we
+# have our own db.
+disable_s3_image_uploads: true
+
+chef_local_mode: true

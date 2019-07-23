@@ -1,5 +1,5 @@
 ---
-fi:
+fi-FI:
   data:
     display_name:
       CSD U2 Pair Programming Video: Pariohjelmointi
@@ -53,7 +53,6 @@ fi:
       CSD U3 Variables Map: Muuttujat
       CSD U3 Variables Map_2018: Muuttujat
       CSD U3 Variables Map_2019: Muuttujat
-      CSD U3 functions map: Funktiot
       CSD U6 for loop map: Silmukat
       CSD U6 for loop map_2018: Silmukat
       CSD U6 for loop map_2019: Silmukat
@@ -61,19 +60,13 @@ fi:
       CSD U6 functions paramters video_2018: Parametrilliset funktiot
       CSD U6 functions paramters video_2019: Parametrilliset funktiot
       'CSD: For Loop_2018': Silmukat
-      'CSD: For Loop_2019': Silmukat
       Dance_Party_extras_battle: Tanssiryhmät
       Dance_Party_extras_every_beat: Neljäsosanuotit
       Dance_Party_extras_layout: Mene muodostelmaan
       Dance_Party_extras_on_beat: Basso, midi ja diskantti
       Dance_Party_extras_speed: Pistä vauhtia, himmaa ja hidasta
       Dance_Party_extras_visible: Mihin he menivät?
-      MC_HOC_2017_FP10x10: Vapaata kokeilua
-      MC_HOC_2017_FP10x10_RE: Vapaata kokeilua
-      SG U3L07 More Subgoals: Dokumentaatio
       courseA_video_Stevie: Stevie ja iso projekti
       courseA_video_Stevie_2018: Stevie ja iso projekti
-      courseA_video_Stevie_2019: Stevie ja iso projekti
       courseB_video_Unspotted: Huomaamattomia vikoja
       courseB_video_Unspotted_2018: Huomaamattomia vikoja
-      courseB_video_Unspotted_2019: Huomaamattomia vikoja

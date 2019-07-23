@@ -51,7 +51,6 @@ lv:
   of: "no"
   more: "VAIRĀK"
   less: "MAZĀK"
-  beta: "beta"
   try_hoc: "Izmēģini \"Programmēšanas stundu\", spied šeit >> "
   try_k8intro: "Izmēģini mūsu K-8 Ievadu Datorzinātņu kursos (15-25 stundas)"
   k8intro: "K-8 Ievads Datorzinātņu kursos (15-25stundas)"
@@ -480,6 +479,7 @@ lv:
     races:
       other: "Citi"
     submit: "Iesniegt"
+    decline: "Aizvērt"
   zendesk_too_young_message: 'Atvainojiet, jaunākiem lietotājiem nav iespējas pierakstīties mūsu atbalsta lapā. Tu vari pārlūkot <a href="http://support.code.org">support.code.org</a> bez pierakstīšanās vai vari prasīt savam vecākam vai skolotājam, lai sazinās ar mums tavā vietā.'
   progress:
     completed_too_many_blocks: Pabeigts, pārāk daudz bloki
@@ -490,17 +490,8 @@ lv:
     completed_courses: "Pabeigtie kursi"
     all_courses: "Visi kursi"
   project:
-    save: "Saglabāt"
-    delete: "Izdzēst"
-    my_projects: "Mani projekti"
-    share: "Ieteikt"
-    more: "Vairāk"
     name: "Vārds"
-    really_delete: 'Izdzēst?'
-    delete_yes: 'Jā'
-    delete_no: 'Nē'
     saved: "Saglabāts galerijā!"
-    cancel: 'Atcelt'
     abuse:
       report_abuse_form:
         abuse_type:

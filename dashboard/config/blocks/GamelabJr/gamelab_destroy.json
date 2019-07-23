@@ -9,8 +9,10 @@
     "func": "destroy",
     "blockText": "remove {THIS}",
     "args": [
-
-    ],
-    "methodCall": true
+      {
+        "name": "THIS",
+        "type": "Sprite"
+      }
+    ]
   }
 }

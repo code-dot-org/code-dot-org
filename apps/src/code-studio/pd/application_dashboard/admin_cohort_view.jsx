@@ -88,7 +88,7 @@ export default class AdminCohortView extends React.Component {
       registered_workshop: 'Registered Workshop',
       assigned_fit: 'Assigned FiT',
       registered_fit_submission_time: 'Registered FiT Submission Time',
-      accepted_seat: 'Accepted Seat?',
+      accepted_fit: 'Accepted Seat?',
       course_name: 'Course',
       regional_partner_name: 'Regional Partner',
       notes: 'General Notes',

@@ -119,8 +119,6 @@
   carousel_heading_international: "உங்கள் மொழியிலுள்ள பயிற்சிகள்"
   blockly_name: "புலோக்லி"
   course1_name: "கோர்ஸ் 1"
-  math_category_name: "கணிதம்"
-  hoc_category_name: "நிரல்வரி நேரம்"
   lightbot_gradelevel: "அனைத்து வயதினரும்"
   thinkersmith_gradelevel: "அனைத்து வயதினரும்"
   lightbotintl_gradelevel: "அனைத்து வயதினரும்"
@@ -129,6 +127,7 @@
   coursed_gradelevel: "தரம் 8+"
   coursed-2017_gradelevel: தரம் 8+
   coursed-2018_gradelevel: தரம் 8+
+  coursed-2019_gradelevel: தரம் 8+
   lightbot_beyond_gradelevel: "அனைத்து வயதினரும்"
   flappy_shortcode: "flap"
   header_courses: "பாடங்கள்"

@@ -11,8 +11,7 @@ import designMode from '../designMode';
 import elementLibrary from './library';
 import * as applabConstants from '../constants';
 import * as elementUtils from './elementUtils';
-import themeColor from '../themeColor';
-import experiments from '../../util/experiments';
+import themeValues from '../themeValues';
 
 class ScreenProperties extends React.Component {
   static propTypes = {
@@ -53,12 +52,10 @@ class ScreenProperties extends React.Component {
           handleChange={this.props.handleChange.bind(this, 'id')}
           isIdRow={true}
         />
-        {experiments.isEnabled('applabThemes') && (
-          <ThemePropertyRow
-            initialValue={element.getAttribute('data-theme')}
-            handleChange={this.props.handleChange.bind(this, 'theme')}
-          />
-        )}
+        <ThemePropertyRow
+          initialValue={element.getAttribute('data-theme')}
+          handleChange={this.props.handleChange.bind(this, 'theme')}
+        />
         <ColorPickerPropertyRow
           desc={'background color'}
           initialValue={elementUtils.rgb2hex(element.style.backgroundColor)}
@@ -153,12 +150,7 @@ class ScreenEvents extends React.Component {
 export default {
   PropertyTab: ScreenProperties,
   EventTab: ScreenEvents,
-  themeValues: {
-    backgroundColor: {
-      type: 'color',
-      ...themeColor.background
-    }
-  },
+  themeValues: themeValues.screen,
 
   create: function() {
     const element = document.createElement('div');
@@ -177,14 +169,12 @@ export default {
     // see http://philipwalton.com/articles/what-no-one-told-you-about-z-index/
     element.style.position = 'absolute';
     element.style.zIndex = 0;
-    if (experiments.isEnabled('applabThemes')) {
-      // New screens are created with the same theme as is currently active
-      const currentTheme = elementLibrary.getCurrentTheme(
-        designMode.activeScreen()
-      );
-      element.setAttribute('data-theme', currentTheme);
-      elementLibrary.applyCurrentTheme(element, element);
-    }
+    // New screens are created with the same theme as is currently active
+    const currentTheme = elementLibrary.getCurrentTheme(
+      designMode.activeScreen()
+    );
+    element.setAttribute('data-theme', currentTheme);
+    elementLibrary.setAllPropertiesToCurrentTheme(element, element);
 
     return element;
   },
@@ -198,47 +188,29 @@ export default {
     element.style.zIndex = 0;
     element.setAttribute('tabIndex', '1');
 
-    if (experiments.isEnabled('applabThemes')) {
-      if (!element.getAttribute('data-theme')) {
-        element.setAttribute(
-          'data-theme',
-          applabConstants.themeOptions[applabConstants.CLASSIC_THEME_INDEX]
-        );
-      }
+    if (!element.getAttribute('data-theme')) {
+      element.setAttribute(
+        'data-theme',
+        applabConstants.themeOptions[applabConstants.CLASSIC_THEME_INDEX]
+      );
+    }
 
-      if (element.style.backgroundColor === '') {
-        element.style.backgroundColor = this.themeValues.backgroundColor[
-          applabConstants.themeOptions[applabConstants.CLASSIC_THEME_INDEX]
-        ];
-      }
+    if (element.style.backgroundColor === '') {
+      element.style.backgroundColor = this.themeValues.backgroundColor[
+        applabConstants.themeOptions[applabConstants.CLASSIC_THEME_INDEX]
+      ];
     }
   },
   readProperty: function(element, name) {
-    switch (name) {
-      case 'theme':
-        if (experiments.isEnabled('applabThemes')) {
-          return element.getAttribute('data-theme');
-        } else {
-          throw `unknown property name ${name}`;
-        }
-      default:
-        throw `unknown property name ${name}`;
+    if (name === 'theme') {
+      return element.getAttribute('data-theme');
     }
+    throw `unknown property name ${name}`;
   },
   onPropertyChange: function(element, name, value) {
-    if (experiments.isEnabled('applabThemes')) {
-      switch (name) {
-        case 'theme': {
-          const prevValue =
-            element.getAttribute('data-theme') ||
-            applabConstants.themeOptions[applabConstants.CLASSIC_THEME_INDEX];
-          element.setAttribute('data-theme', value);
-          designMode.changeThemeForCurrentScreen(prevValue, value);
-          return true;
-        }
-        default:
-          break;
-      }
+    if (name === 'theme') {
+      designMode.changeThemeForScreen(element, value);
+      return true;
     }
     return false;
   }

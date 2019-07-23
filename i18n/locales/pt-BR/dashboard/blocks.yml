@@ -215,7 +215,9 @@ pt-BR:
             MOVES.ThisOrThat: Isso ou Aquilo
             MOVES.Rest: Nenhum
       Dancelab_ifTime:
-        text: se {UNIT} é {OP} {N} {DO1} {DO2}
+        text: |-
+          se {UNIT} é {OP} {N}
+          {DO1} {DO2}
         options:
           UNIT:
             '"measures"': compassos
@@ -667,34 +669,10 @@ pt-BR:
           SONG:
             '"hammer"': MC Hammer - U Can't Touch This
             '"peas"': The Black Eyed Peas - I Got a Feeling
-      gamelab_add:
-        text: adicionar {SPRITE} ao grupo {THIS}
       gamelab_addBehaviorSimple:
         text: sprite {SPRITE} começa a {BEHAVIOR}
-      gamelab_addBehaviorUntil:
-        text: elemento {SPRITE} começa {BEHAVIOR} até {CONDITION}
       gamelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
-      gamelab_beginBehavior:
-        text: começar {BEHAVIOR}
-      gamelab_bounceOff:
-        text: "{SPRITE} salta fora de {TARGET}"
-      gamelab_bounceOffEdges:
-        text: "{SPRITE} salta pra fora das bordas"
-      gamelab_changeColor:
-        text: alterar {COLOR} {METHOD} por {AMOUNT}
-        options:
-          METHOD:
-            '"tint"': tonalidade
-            '"tone"': tonalidade
-            '"shade"': sombra
-      gamelab_changeColorBy:
-        text: alterar {COLOR} {METHOD} por {AMOUNT}
-        options:
-          METHOD:
-            '"hue"': tonalidade
-            '"saturation"': saturação
-            '"brightness"': brilho
       gamelab_changePropBy:
         text: alterar {SPRITE} {PROPERTY} por {VAL}
         options:
@@ -716,8 +694,6 @@ pt-BR:
         text: 'comentário: {COMMENT}'
       gamelab_console.log:
         text: mostra mensagem {MESSAGE}
-      gamelab_countByCostume:
-        text: número de {COSTUME}
       gamelab_createNewSprite:
         text: "faça um novo sprite\n chamado {NAME} \n com fantasia {COSTUME} \n em {LOCATION}"
       gamelab_debugSprite:
@@ -730,29 +706,10 @@ pt-BR:
         text: remover {THIS}
       gamelab_displace:
         text: "{THIS} bloqueia {SPRITE} de se mover"
-      gamelab_distance:
-        text: distância de {LOCATION1} até {LOCATION2}
       gamelab_draggable:
         text: ser arrastável
       gamelab_edgesDisplace:
         text: bordas bloqueiam {SPRITE} de se mover
-      gamelab_enableDebug:
-        text: habilitar a depuração
-      gamelab_firstTouched:
-        text: primeiro sprite tocado
-      gamelab_forEachSpriteWithCostume:
-        text: |-
-          para cada {VALUE} sprite
-          faça {STATEMENT}
-      gamelab_getAnim:
-        text: "{SPRITE} {COSTUME}"
-        options:
-          COSTUME:
-            '"costume"': fantasia
-      gamelab_getDirection:
-        text: direção do movimento de {SPRITE}
-      gamelab_getFrameDelay:
-        text: atraso do quadro {THIS}
       gamelab_getProp:
         text: "{SPRITE} {PROPERTY}"
         options:
@@ -768,24 +725,12 @@ pt-BR:
         options:
           CHOICE:
             '"this"': este
-      gamelab_groupLength:
-        text: número de personagens em {THIS}
-      gamelab_hasBehavior:
-        text: "{SPRITE} está {BEHAVIOR}"
       gamelab_hideTitleScreen:
         text: esconder a tela do título
-      gamelab_hsbColor:
-        text: "Cor HSB \nH{HUE}S{SATURATION}B{BRIGHTNESS}"
-      gamelab_isTouching:
-        text: "{THIS} está tocando {TARGET}"
       gamelab_isTouchingEdges:
         text: "{SPRITE} está tocando as bordas"
-      gamelab_joystickDirection:
-        text: direção do joystick
       gamelab_jumpTo:
         text: "{SPRITE} pular para {LOCATION}"
-      gamelab_keyDown:
-        text: tecla está pressionada {KEY}
       gamelab_keyPressed:
         text: "{CONDITION} {KEY} pressionado"
         options:
@@ -824,79 +769,24 @@ pt-BR:
             '"x"': x
             '"y"': 'y'
             '"z"': z
-      gamelab_layoutSprites:
-        options:
-          FORMAT:
-            '"border"': borda
-            '"inner"': quadrado interno
-            '"circle"': círculo
-            '"grid"': grade
-            '"row"': linha
-            '"column"': coluna
-            '"x"': linhas cruzadas
-            '"plus"': mais
-            '"random"': aleatório
-      gamelab_locationAdd:
-        text: "{LOC1} {OPERATOR} {LOC2}"
-        options:
-          OPERATOR:
-            "'plus'": "\\+"
-            "'minus'": "\\-"
       gamelab_locationAt:
         text: 'localização x: {X} y: {Y}'
-      gamelab_locationConstant:
-        text: "{DIR}"
-        options:
-          DIR:
-            "'north'": norte
-            "'south'": sul
-            "'east'": leste
-            "'west'": oeste
-      gamelab_locationDelta:
-        text: "{DISTANCE} pixels {DIR} de {LOCATION}"
-        options:
-          DIR:
-            "'north'": norte
-            "'south'": sul
-            "'east'": leste
-            "'west'": oeste
-            "'random'": aleatório
-      gamelab_locationEast:
-        text: leste
       gamelab_locationMouse:
         text: posição do mouse
-      gamelab_locationNorth:
-        text: norte
       gamelab_locationOf:
         text: localização de {SPRITE}
-      gamelab_locationSouth:
-        text: sul
-      gamelab_locationWest:
-        text: oeste
       gamelab_location_picker:
         text: "{LOCATION}"
-      gamelab_location_variable_get:
-        text: localização de {VAR}
-      gamelab_location_variable_set:
-        text: definir localização de {VAR} para {VAL}
-      gamelab_makeNewGroup:
-        text: criar um novo grupo
       gamelab_makeNewSpriteAnon:
-        text: criar novo {ANIMATION\_NAME} elemento em {LOCATION}
+        text: criar novo {ANIMATION_NAME} elemento em {LOCATION}
       gamelab_mirrorSprite:
         text: "{SPRITE} vira para {DIRECTION}"
         options:
           DIRECTION:
             '"right"': para direita
             '"left"': para esquerda
-      gamelab_mixColors:
-        text: Mesclar {COLOR1} e {COLOR2}
-      gamelab_mouseDown:
-        text: mouse está parado
       gamelab_mouseLocation:
         text: posição do mouse
-      gamelab_moveDown:
-        text: "{THIS} move para baixo"
       gamelab_moveForward:
         text: mover {SPRITE} {DISTANCE} pixels pra frente
       gamelab_moveInDirection:
@@ -907,16 +797,8 @@ pt-BR:
             '"East"': Leste
             '"South"': Sul
             '"West"': Oeste
-      gamelab_moveInDirection2:
-        text: mover {SPRITE} pixels {DISTANCE} na direção de {DIRECTION}
-      gamelab_moveLeft:
-        text: "{THIS} mover pra esquerda"
-      gamelab_moveRight:
-        text: "{THIS} mover pra direita"
       gamelab_moveToward:
         text: mover {SPRITE} distância {DISTANCE} em direção a {TARGET}
-      gamelab_moveUp:
-        text: "{THIS} move pra cima"
       gamelab_playSound:
         text: reproduzir som {SOUND}
       gamelab_pointInDirection:
@@ -927,8 +809,6 @@ pt-BR:
             '"East"': Leste
             '"South"': Sul
             '"West"': Oeste
-      gamelab_pointToward:
-        text: aponte {SPRITE} para {LOCATION}
       gamelab_printText:
         text: imprimir {TEXT}
       gamelab_randColor:
@@ -943,10 +823,6 @@ pt-BR:
         text: personagem {SPRITE} para {BEHAVIOR}
       gamelab_removeTint:
         text: retirar cor de {THIS}
-      gamelab_say:
-        text: "{THIS} diga {TEXT}"
-      gamelab_secondTouched:
-        text: segunda fada a ser tocada
       gamelab_setAnimation:
         text: alterar fantasia de {THIS} para {ANIMATION}
       gamelab_setBackground:
@@ -958,29 +834,14 @@ pt-BR:
             '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': caverna
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': cidade
             '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': deserto
+            '"https://studio.code.org/blockly/media/skins/studio/background_space.png"': galáxia
             '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': grade
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': arco-íris
+            '"https://studio.code.org/blockly/media/skins/studio/background_scifi.png"': ficção científica
+            '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': estrelas
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': debaixo d'água
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': inverno
             undefined: nenhum
-      gamelab_setDirection:
-        text: definir {SPRITE} direção de movimento {DIRECTION}
-      gamelab_setFrameDelay:
-        text: definir {THIS} atraso do quadro {VAL}
-      gamelab_setPosition:
-        text: mover {THIS} para a posição {POSITION}
-        options:
-          POSITION:
-            "{x: 50, y: 50}": canto superior esquerdo
-            "{x: 200, y: 50}": superior central
-            "{x: 350, y: 50}": superior direito
-            "{x: 50, y: 200}": centro a esquerda
-            "{x: 200, y: 200}": centro
-            "{x: 350, y: 200}": centro a direita
-            "{x: 50, y: 350}": canto inferior esquerdo
-            "{x: 200, y: 350}": inferior central
-            "{x: 350, y: 350}": canto inferior direito
-            '"random"': aleatório
       gamelab_setProp:
         text: definir {SPRITE} {PROPERTY} para {VAL}
         options:
@@ -1000,8 +861,6 @@ pt-BR:
             '"height"': altura
       gamelab_setTint:
         text: mudar a cor de {THIS} para {COLOR}
-      gamelab_setup:
-        text: configuração
       gamelab_setupSim:
         text: |-
           simulação de configuração com
@@ -1017,58 +876,6 @@ pt-BR:
           CONDITION:
             '"when"': quando
             '"while"': enquanto
-      gamelab_spriteClickedSet:
-        options:
-          CONDITION:
-            '"when"': quando
-            '"while"': enquanto
-      gamelab_spriteCostume:
-        text: "{COSTUME}"
-      gamelab_spriteDirection:
-        text: "{DIRECTION}"
-        options:
-          DIRECTION:
-            '"North"': Norte
-            '"East"': Leste
-            '"South"': Sul
-            '"West"': Oeste
-      gamelab_spritesWhere:
-        text: personagens onde {PROPERTY} é {VALUE}
-        options:
-          PROPERTY:
-            '"scale"': tamanho
-            '"x"': posição x
-            '"y"': posição y
-            '"costume"': fantasia
-            '"direction"': direção do movimento
-            '"rotation"': rotação ou direção
-            '"tint"': tonalidade
-      gamelab_spritesWhereFirst:
-        text: primeiro {VALUE}
-      gamelab_spritesWhereGenerator:
-        text: personagens onde {PROPERTY} {OP} {VALUE}
-        options:
-          PROPERTY:
-            '"scale"': tamanho
-            '"x"': posição x
-            '"y"': posição y
-            '"costume"': fantasia
-            '"direction"': direção do movimento
-            '"rotation"': rotação ou direção
-            '"tint"': tonalidade
-          OP:
-            '"="': "="
-            '">"': ">"
-            '"<"': "\\<"
-      gamelab_spritesWhereLast:
-        text: último {VALUE}
-      gamelab_spritesWhereRandom:
-        text: aleatório no grupo {VALUE}
-      gamelab_thisBeginsBehaviorSimple:
-        text: sprite {SPRITE} começa a {BEHAVIOR}
-        options:
-          SPRITE:
-            abc: este personagem
       gamelab_turn:
         text: "{SPRITE} gira {DIRECTION} {N} graus"
         options:
@@ -1077,8 +884,6 @@ pt-BR:
             '"left"': para esquerda
       gamelab_whenDownArrow:
         text: quando a seta para baixo for pressionada
-      gamelab_whenJoystick:
-        text: quando o joystick
       gamelab_whenKey:
         text: quando {KEY} for pressionado
         options:
@@ -1094,8 +899,6 @@ pt-BR:
             '"d"': d
       gamelab_whenLeftArrow:
         text: quando a seta para esquerda for pressionada
-      gamelab_whenMouseClicked:
-        text: quando o personagem for clicado
       gamelab_whenPressedAndReleased:
         text: "quando {DIR} pressionado \n{STATEMENT1}quando liberado\n{STATEMENT2}"
         options:
@@ -1112,21 +915,10 @@ pt-BR:
           {STATEMENT2}
       gamelab_whenTouching:
         text: quando {SPRITE1} encostar {SPRITE2}
-      gamelab_whenTouchingAny:
-        text: quando {SPRITE} encosta em qualquer {GROUP}
-      gamelab_whenTouchingSet:
-        options:
-          CONDITION:
-            '"when"': quando
-            '"while"': enquanto
-      gamelab_whenTrue:
-        text: quando {CONDITION} for verdadeiro
       gamelab_whenUpArrow:
         text: quando a seta para cima for pressionada
       gamelab_whileDownArrow:
         text: enquanto a seta para baixo estiver pressionada
-      gamelab_whileJoystick:
-        text: enquanto o joystick
       gamelab_whileKey:
         text: enquanto {KEY} estiver pressionado
         options:
@@ -1148,8 +940,6 @@ pt-BR:
         text: enquanto {SPRITE1} estiver tocando {SPRITE2}
       gamelab_whileUpArrow:
         text: enquanto a seta para cima estiver pressionada
-      gamelab_worldSeconds:
-        text: segundos decorridos
       gamelab_xLocationOf:
         text: coordenada x do {SPRITE}
       gamelab_yLocationOf:
@@ -1194,7 +984,7 @@ pt-BR:
             '"all"': todos
             '"this"': este
       Mikelab_groupChangePropBy:
-        text: mudar {PROPERTY} de {SELECT} {COSTUME} para {VAL}
+        text: mudar {PROPERTY} de {SELECT} {COSTUME} de {VAL}
         options:
           SELECT:
             '"all"': todos
@@ -1220,7 +1010,7 @@ pt-BR:
             "{x: 300, y: 300}": canto inferior direito
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Aleatório
       Mikelab_groupDestroy:
-        text: remover{SELECT}{COSTUME}
+        text: remover {SELECT} {COSTUME}
         options:
           SELECT:
             '"all"': todos
@@ -1228,7 +1018,7 @@ pt-BR:
       Mikelab_groupEdgesDisplace:
         text: bordas bloqueiam {COSTUME} de se mover
       Mikelab_groupGetProp:
-        text: "{SELECT} {COSTUME} de{PROPERTY}"
+        text: "{SELECT} {PROPERTY} de {COSTUME}"
         options:
           SELECT:
             '"average"': média
@@ -1450,9 +1240,9 @@ pt-BR:
       aalab_createNewSpriteAdvanced:
         text: "faça um novo elemento chamado {NAME} \n com fantasia {COSTUME} \n em {LOCATION}"
       aalab_createNewSpriteAnon:
-        text: criar novo {ANIMATION\_NAME} elemento em {LOCATION}
+        text: criar novo {ANIMATION_NAME} elemento em {LOCATION}
       aalab_createNewSpriteAnonReturn:
-        text: aalab criará novo {ANIMATION\_NAME} elemento em {LOCATION}
+        text: aalab criará novo {ANIMATION_NAME} elemento em {LOCATION}
       aalab_createPropertyGroup:
         text: |-
           faça um novo grupo de elementos chamado {VAR}
@@ -1501,9 +1291,9 @@ pt-BR:
       aalab_prompt:
         text: perguntar {MESSAGE}
       aalab_randomLocation:
-        text: aalab localização aleatória
+        text: posição aleatória
       aalab_removeOneAndAll:
-        text: aalab remove {THIS}
+        text: remover {THIS}
       aalab_setBG:
         options:
           BG:
@@ -1554,7 +1344,7 @@ pt-BR:
         text: desenhar o binário {BIN}
       binary_drawBinScreen:
         text: |-
-          desenhar a tela
+          desenhar na tela
           {B1}
           {B2}
           {B3}
@@ -1564,7 +1354,7 @@ pt-BR:
           {B7}
           {B8}
       binary_drawDec:
-        text: desenhar o decimal {DEC}
+        text: desenhar decimal {DEC}
       binary_drawPixelHere:
         text: definir pixel {VAL}
         options:

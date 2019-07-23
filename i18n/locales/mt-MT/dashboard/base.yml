@@ -44,7 +44,6 @@ mt:
   of: "ta'"
   more: "AKTAR"
   less: "ANQAS"
-  beta: "verzjoni beta"
   try_hoc: "Ipprova l-Hour of Code, ikklikkja hawn >> "
   try_k8intro: "Ipprova il-kors 'Introduzzjoni tax-xjenza tal-kompjuter' ghal studenti tal-primarja (15-25 siegha)"
   k8intro: "Introduzzjoni ghall-kors tax-xjenza tal-kompjuter ghal-studenti tal-primarja (15-25 siegha)"
@@ -359,17 +358,13 @@ mt:
     create: "Oħloq Proġett"
     create_a_project: 'Oħloq proġett ġdid:'
     new: "Oħloq Ġdid"
-    rename: "Ibdel l-isem"
     exit: "Lura għall-kors"
-    my_projects: "Il-Proġetti Tiegħi"
     project_gallery: "Il-Proġetti"
     share_title: Aqsam il-proġett tiegħek
-    close: "Agħlaq"
     updated: "Aġġornat"
     saved: "Ssalvat"
     not_saved: "Mhux issalvat"
     view_all: 'Ara l-Proġetti Tiegħi'
-    remix: 'Remix'
     edit_project: 'Editja l-proġett'
     abuse:
       report_abuse_form:

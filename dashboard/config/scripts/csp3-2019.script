@@ -6,9 +6,12 @@ student_detail_progress_view true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csp-19/unit3/"], ["teacherForum", "https://forum.code.org/c/csp3"], ["vocabulary", "https://curriculum.code.org/csp-19/unit3/vocab/"], ["codeIntroduced", "https://curriculum.code.org/csp-19/unit3/code/"], ["standardMappings", "https://curriculum.code.org/csp-19/unit3/standards/"], ["professionalLearning", "https://studio.code.org/s/csp3-support"]]
 has_verified_resources true
 has_lesson_plan true
+curriculum_path 'https://curriculum.code.org/{LOCALE}/csp-19/unit3/{LESSON}'
 family_name 'csp3'
 version_year '2019'
+is_stable true
 project_sharing true
+curriculum_umbrella 'CSP'
 
 stage 'The Need For Programming Languages', flex_category: 'csp3_1_2018'
 level 'CSP U3L01 SFLP_2019', named: true
@@ -127,5 +130,6 @@ level 'U3L08 - digitalScene_2019', progression: 'Challenge: Design Your Digital 
 stage 'Unit 3 Chapter 1 Assessment', lockable: true, flex_category: 'cspAssessment'
 level 'CSP Unit 3 Ch1 Cumulative Assessment MC Group_2018_2019', assessment: true
 
-stage 'Mid-Year Survey', flex_category: 'cspSurvey'
-level 'csp-mid-survey-2018-markdown-with-link-to-survey_2019', progression: 'Click here! Complete the CS Principles Mid-year survey'
+stage 'CS Principles Post Course survey', lockable: true, flex_category: 'cspSurvey'
+level 'csp-post-survey-intro-2019'
+level 'csp-post-survey-levelgroup-2019.2', assessment: true

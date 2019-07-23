@@ -58,7 +58,6 @@ lt:
   of: "iš"
   more: "DAUGIAU"
   less: "MAŽIAU"
-  beta: "beta"
   try_hoc: "Išmėgink „Programavimo valandą“, spausk čia >> "
   try_k8intro: "Išmėgink mūsų programavimo įvado kursą (15-25 valandos)"
   k8intro: "Programavimo įvadas 5-8 klasėms (15-25 valandos)"
@@ -412,7 +411,6 @@ lt:
   pdf_download: 'Parsisiųsti PDF'
   download_coming_soon: 'Jau netrukus bus galima parsisiųsti įvairias veiklas.'
   video_coming_soon: 'Vaizdo įrašas bus jau netrukus!'
-  not_started: 'Mokinys dar nebandė šio lygio.'
   share_code:
     title: "Nuspausk „Paleisti“, kad programa būtų įvykdyta"
     bounce_og_title: "Peržiūrėk mano Bounce žaidimą"
@@ -603,34 +601,19 @@ lt:
     create: "Sukurti projektą"
     create_a_project: 'Sukurti naują projektą:'
     new: "Sukurti naują"
-    rename: "Pervadinti"
-    save: "Išsaugoti"
-    delete: "Ištrinti"
     exit: "Grįžti prie kursų"
-    my_projects: "Mano projektai"
     project_gallery: "Projektai"
-    share: "Dalintis"
     share_title: Bendrinti savo projektą
     share_copy_link: "Kopijuoti nuorodą:"
     advanced_share: "Rodyti išplėstinius nustatymus"
-    close: "Užverti"
-    more: "Daugiau"
     name: "Vardas"
     updated: "Atnaujinta"
     project_type: "Projekto rūšis"
     help_text: "Nuspausk<strong>Sukurti programėlę</strong> arba <strong>Kažką nupiešti</strong> žemiau, kad sukurtum Žaidimo laboratorijos projektą!<br/>Bet kuriuo metu galėsi sugrįžti ir pratęsti savo projektą."
     need_help: "Išmėgink šiuos kursus, kurie tau padės sukurti naują projektą"
-    really_delete: 'Ištrinti?'
-    delete_yes: 'Taip'
-    delete_no: 'Ne'
     saved: "Išsaugota"
     not_saved: "Neišsaugota"
-    cancel: 'Atšaukti'
-    delete_confirm_title: Ar tikrai norite ištrinti šį projektą?
-    delete_confirm_text: "Jei ištrinsite projektą, jis bus visam laikui pašalintas iš projektų sąrašo. Kiekvienas žmogus, kuriam buvote nusiuntęs nuorodą į jį, nebegalės jo peržiūrėti."
     view_all: 'Peržiūrėti mano projektus'
-    remix: 'Remiksas'
-    click_to_remix: "Paspausk ant „Remiksas“ ir sukurk savo versiją!"
     edit_project: 'Redaguoti projektą'
     abuse:
       tos: "Buvo pranešta, kad šis projektas pažeidė Code.org <a href='http://code.org/tos'>Naudojimosi sąlygas</a>, todėl juo negalima dalintis su kitais."

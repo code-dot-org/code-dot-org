@@ -81,7 +81,6 @@ es:
   of: de
   more: MÁS
   less: MENOS
-  beta: beta
   try_hoc: 'Prueba la Hora del Code, haz clic aquí >> '
   try_k8intro: Prueba nuestro curso de Introducción a la informática K-8 (15-25 horas)
   k8intro: Curso de Introducción a las Ciencias de la Computación K-8 (15-25 horas)
@@ -801,7 +800,6 @@ es:
   pdf_download: Descargar PDF
   download_coming_soon: Actividad descargable próximamente.
   video_coming_soon: "¡Vídeo próximamente!"
-  not_started: El alumno no ha intentado este nivel.
   share_code:
     title: Haz clic en "Ejecutar" para ver el programa en acción
     bounce_og_title: Revisa mi juego Bounce
@@ -1104,23 +1102,10 @@ es:
     create: Crear proyecto
     create_a_project: 'Crear un nuevo proyecto:'
     new: Crear nuevo
-    rename: Cambiar nombre
-    save: Guardar
-    delete: Borrar
-    import: Importar
-    share_link_import_bad_link_header: El enlace compartido no ha sido reconocido
-    share_link_import_bad_link_body: 'No hemos podido importar el enlace compartido.
-      Asegúrate de que estás utilizando un enlace de un rompecabezas de Minecraft:
-      Agent, y de que has copiado el enlace al completo.'
-    share_link_import_error_header: Algo salió mal.
-    share_link_import_error_body: Ha habido un problema al importar ese enlace compartido.
-      Por favor, vuelve a intentarlo.
     exit: Volver al curso
-    my_projects: Mis proyectos
     project_gallery: Proyectos
     publish: Publicar
     unpublish: No publicar
-    share: Compartir
     share_title: Compartir tu proyecto
     share_copy_link: 'Copiar el enlace:'
     share_embed_description: Puedes pegar el código escondido en una página HTML para
@@ -1131,8 +1116,6 @@ es:
     advanced_share: Mostrar opciones avanzadas
     no_projects: Actualmente usted no posee proyectos. Haga clic en uno de los siguientes
       botones para empezar un proyecto.
-    close: Cerrar
-    more: Más
     name: Nombre
     updated: Actualizado
     project_type: Tipo de Proyecto
@@ -1143,19 +1126,9 @@ es:
     thumbnail_help: "¿No ven la imagen miniatura correcta para su proyecto? Ejecute
       la aplicación para generar una nueva imagen miniatura. Tenga en cuenta que pueda
       tardar un par de horas para que la miniatura se actualice en todos lados."
-    really_delete: "¿Borrar?"
-    delete_yes: Sí
-    delete_no: 'No'
     saved: Guardado
     not_saved: No guardado
-    cancel: Cancelar
-    delete_confirm_title: "¿Estás seguro de que quieres eliminar este proyecto?"
-    delete_confirm_text: Al borrar tu proyecto se eliminará permanentemente de tu
-      Lista de proyectos. Las personas que tengan un enlace al mismo no podrán seguir
-      viendo el proyecto una vez que haya sido eliminado.
     view_all: Ver Mis proyectos
-    remix: Remezclar
-    click_to_remix: "¡Haz clic en 'Remezclar' para obtener tu propia versión!"
     edit_project: Editar proyecto
     sharing_disabled: Lo sentimos, este proyecto no está disponible para compartirse.
       Si este es tu proyecto o el proyecto de uno de tus estudiantes, por favor <a

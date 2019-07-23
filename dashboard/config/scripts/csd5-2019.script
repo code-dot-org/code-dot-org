@@ -3,12 +3,15 @@ login_required true
 hideable_stages true
 exclude_csf_column_in_legend true
 student_detail_progress_view true
-teacher_resources [["lessonPlans", "https://curriculum.code.org/csd-19/unit5/"], ["teacherForum", "https://forum.code.org/c/csd5"], ["vocabulary", "https://curriculum.code.org/csd-19/unit5/vocab"], ["standardMappings", "https://curriculum.code.org/csd-19/unit5/standards/"]]
+teacher_resources [["lessonPlans", "https://curriculum.code.org/csd-19/unit5/"], ["teacherForum", "https://forum.code.org/c/csd"], ["vocabulary", "https://curriculum.code.org/csd-19/unit5/vocab"], ["standardMappings", "https://curriculum.code.org/csd-19/unit5/standards/"]]
 has_verified_resources true
 has_lesson_plan true
+curriculum_path 'https://curriculum.code.org/csd-19/unit5/{LESSON}'
 family_name 'csd5'
 version_year '2019'
+is_stable true
 project_sharing true
+curriculum_umbrella 'CSD'
 
 stage 'Representation Matters', flex_category: 'csd5_1'
 level 'CSD U5L01 autoSFLP_2019', named: true
@@ -80,3 +83,10 @@ stage 'Project - Solve a Data Problem', flex_category: 'csd5_2'
 level 'CSD U5L15 autoSFLP_2019', named: true
 level 'csd u5 recommender sample_2019', named: true
 level 'csd-pulse-check-survey-1-levelgroup U5Ch2_2018_2019', progression: 'Reflection', assessment: true
+
+stage 'Post-Project Test', lockable: true, flex_category: 'csd5_2'
+level 'CSD U5 test', assessment: true
+
+stage 'CS Discoveries Post Course survey', lockable: true, flex_category: 'cspSurvey'
+level 'csd-post-survey-intro-2019'
+level 'csd-post-survey-2017-levelgroup_2018_2019', assessment: true

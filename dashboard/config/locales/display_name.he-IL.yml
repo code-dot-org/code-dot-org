@@ -1,34 +1,13 @@
 ---
-he:
+he-IL:
   data:
     display_name:
       Alien Defender: מגן חייזרים
-      Alien Defender_2018: מגן חייזרים
       App Lab Intro 8 - Video Images and Sounds: 'סרטון: תמונות וצלילים'
       App Lab Intro 8 - Video Share Your App: 'סרטון: שתפו את האפליקציה שלכם'
-      AppLab Intro 3 - Change Screen Color: שנה צבע מסך
-      AppLab Intro 3 - Change Text 2: שנה טקסט
-      AppLab Intro 3 - Change Text: שנה טקסט
-      AppLab Intro 3 - Change Two Buttons: שני כפתורים
-      AppLab Intro 3 - Full Text: שני כפתורים
-      AppLab Intro 4 - Change Screen Color: שנה צבע מסך
-      AppLab Intro 4 - Change Text 2: שנה טקסט
-      AppLab Intro 4 - Change Text: שנה טקסט
-      AppLab Intro 4 - Change Two Buttons: שני כפתורים
-      AppLab Intro 4 - Full Text: שני כפתורים
-      AppLab Intro 4 - Video Welcome: ברוכים הבאים לשעת קוד
-      AppLab Intro 5 - Change Screen Color: שנה צבע מסך
-      AppLab Intro 5 - Change Text 2: שנה טקסט
-      AppLab Intro 5 - Change Text: שנה טקסט
-      AppLab Intro 5 - Change Two Buttons: שני כפתורים
-      AppLab Intro 5 - Full Text: שני כפתורים
-      AppLab Intro 6 - Change Screen Color: שנה צבע מסך
-      AppLab Intro 6 - Change Text 2: שנה טקסט
-      AppLab Intro 6 - Full Text: שני כפתורים
       AppLab Intro 7 - Change Screen Color: שנה צבע מסך
       AppLab Intro 7 - Change Text 2: שנה טקסט
       AppLab Intro 7 - Full Text: שני כפתורים
-      CSD Introduction to Lists - Length: מבוא לרשימות - אורך
       CSD U2 Pair Programming Video: תכנות בזוגות
       CSD U2 Pair Programming Video_2018: תכנות בזוגות
       CSD U2 Pair Programming Video_2019: תכנות בזוגות
@@ -80,7 +59,6 @@ he:
       CSD U3 Variables Map: משתנים
       CSD U3 Variables Map_2018: משתנים
       CSD U3 Variables Map_2019: משתנים
-      CSD U3 functions map: פונקציות
       CSD U6 for loop map: בשביל לולאות
       CSD U6 for loop map_2018: בשביל לולאות
       CSD U6 for loop map_2019: בשביל לולאות
@@ -88,8 +66,3 @@ he:
       CSD U6 functions paramters video_2018: פונקציות ופרמטרים
       CSD U6 functions paramters video_2019: פונקציות ופרמטרים
       'CSD: For Loop_2018': בשביל לולאות
-      'CSD: For Loop_2019': בשביל לולאות
-      MC_HOC_2017_FP10x10: משחק חופשי
-      MC_HOC_2017_FP10x10_RE: משחק חופשי
-      SG U3L07 More Subgoals: מסמכים
-      coursee_explore_4: מגן חייזרים

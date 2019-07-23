@@ -21,10 +21,11 @@ class SectionSelector extends React.Component {
     style: PropTypes.object,
     // If false, the first option is "Select Section"
     requireSelection: PropTypes.bool,
-    // If true, we'll show even if we don't have any locakable or hidden stages
+    // If true, we'll show even if we don't have any lockable or hidden stages
     alwaysShow: PropTypes.bool,
     // If true, changing sections results in us hitting the server
     reloadOnChange: PropTypes.bool,
+    logToFirehose: PropTypes.func,
 
     // redux provided
     sections: PropTypes.arrayOf(
@@ -40,10 +41,16 @@ class SectionSelector extends React.Component {
   handleSelectChange = event => {
     const newSectionId = event.target.value;
 
+    if (this.props.logToFirehose) {
+      this.props.logToFirehose();
+    }
+
     updateQueryParam(
       'section_id',
       newSectionId === NO_SECTION ? undefined : newSectionId
     );
+    // If we have a user_id when we switch sections we should get rid of it
+    updateQueryParam('user_id', undefined);
     if (this.props.reloadOnChange) {
       reload();
     } else {

@@ -61,16 +61,8 @@ my:
   race_interstitial:
     submit: ပေးပို့ပါ
   project:
-    import: ထည့်သွင်းပါ
-    share_link_import_bad_link_header: share link ကို မသိပါဘူး
-    share_link_import_bad_link_body: ဒီ share link ကို ထည့်လို့မရပါဘူး Minecraft:Agent
-      puzzle က link ဆိုတာသေချာလား link အပြည့်အစုံကို ကူးခဲ့လား ပြန်စစ်ကြည့်ပါ
-    share_link_import_error_header: တစ်ခုခုမှားယွင်းနေတယ်
-    share_link_import_error_body: share link ကို project ထဲထည့်သွင်းရမှာ ပြသနာတက်နေပါတယ်
-      နောက်တစ်ခေါက်ကြိုးစားပါ
     name: အမည္
     saved: သိမ်းထားပြီးပါပြီ
-    cancel: ပယ်ဖျတ်သည်
   flex_category:
     csf_loops: Loops
     csf_variables: Variables

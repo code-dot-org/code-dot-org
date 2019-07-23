@@ -20,7 +20,7 @@ steps:
   - git merge origin/$DRONE_TARGET_BRANCH
 
 - name: verify-pr
-  image: wintercdo/code-dot-org:0.7
+  image: joshlory/code-dot-org:0.10
   pull: always
   commands:
     - |
@@ -44,7 +44,7 @@ steps:
     restore: true
 
 - name: unit-tests
-  image: wintercdo/code-dot-org:0.7
+  image: joshlory/code-dot-org:0.10
   pull: always
   volumes:
   - name: rbenv
@@ -57,7 +57,8 @@ steps:
     CLOUDFRONT_PRIVATE_KEY:
       from_secret: CLOUDFRONT_PRIVATE_KEY
   commands:
-    - echo "Running on $DRONE_RUNNER_HOSTNAME"
+    # If running on EC2, get hostname from ec2 metadata
+    - hostname=$(curl -s --max-time 3 http://169.254.169.254/latest/meta-data/public-hostname || echo $DRONE_RUNNER_HOSTNAME); echo "Running on $hostname"
     - sudo chown -R circleci:circleci .
     # cache is restored to source directory, so we need to copy it into the right place
     - cp -rn "$(pwd)/home/circleci/.rbenv" /home/circleci || true
@@ -116,7 +117,7 @@ steps:
   - git merge origin/$DRONE_TARGET_BRANCH
 
 - name: verify-pr
-  image: wintercdo/code-dot-org:0.7
+  image: joshlory/code-dot-org:0.10
   pull: always
   commands:
     - |
@@ -140,7 +141,7 @@ steps:
     restore: true
 
 - name: ui-tests
-  image: wintercdo/code-dot-org:0.7
+  image: joshlory/code-dot-org:0.10
   volumes:
   - name: rbenv
     path: /home/circleci/.rbenv
@@ -162,7 +163,8 @@ steps:
     SAUCE_ACCESS_KEY:
       from_secret: SAUCE_ACCESS_KEY
   commands:
-    - echo "Running on $DRONE_RUNNER_HOSTNAME"
+    # If running on EC2, get hostname from ec2 metadata
+    - hostname=$(curl -s --max-time 3 http://169.254.169.254/latest/meta-data/public-hostname || echo $DRONE_RUNNER_HOSTNAME); echo "Running on $hostname"
     - sudo chown -R circleci:circleci .
     # cache is restored to source directory, so we need to copy it into the right place
     - cp -rn "$(pwd)/home/circleci/.rbenv" /home/circleci || true
@@ -194,6 +196,6 @@ trigger:
   - pull_request
 ---
 kind: signature
-hmac: 6b7e7814aa5e4affe72e051161413e62d24dc552d6a2c85aabed23d134fd8cc3
+hmac: 268b4c8338918bc7f7e71313badeba5e8267cf568f8dd9ca8ef934a412e4b3b3
 
 ...

@@ -1,5 +1,5 @@
 import React from 'react';
-import {assert, expect} from 'chai';
+import {assert, expect} from '../../../../util/reconfiguredChai';
 import sinon from 'sinon';
 import {UnconnectedSectionSelector as SectionSelector} from '@cdo/apps/code-studio/components/progress/SectionSelector';
 import {mount} from 'enzyme';
@@ -86,9 +86,9 @@ describe('SectionSelector', () => {
       wrapper
         .find('select')
         .simulate('change', {target: {value: 'testSectionId'}});
-      expect(
-        codeStudioUtils.updateQueryParam
-      ).to.have.been.calledOnce.and.calledWith('section_id', 'testSectionId');
+      expect(codeStudioUtils.updateQueryParam)
+        .to.have.been.calledTwice.and.calledWith('section_id', 'testSectionId')
+        .and.calledWith('user_id', undefined);
     });
 
     it('removes the query param if a section is unselected', () => {
@@ -102,9 +102,9 @@ describe('SectionSelector', () => {
         />
       );
       wrapper.find('select').simulate('change', {target: {value: NO_SECTION}});
-      expect(
-        codeStudioUtils.updateQueryParam
-      ).to.have.been.calledOnce.and.calledWith('section_id', undefined);
+      expect(codeStudioUtils.updateQueryParam)
+        .to.have.been.calledTwice.and.calledWith('section_id', undefined)
+        .and.calledWith('user_id', undefined);
     });
 
     it('reloads on change if prop reloadOnChange is set', () => {

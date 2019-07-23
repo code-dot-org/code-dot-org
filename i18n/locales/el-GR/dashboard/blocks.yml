@@ -647,34 +647,10 @@ el:
             '2': πρίμα
       Dancelab_whenSetup:
         text: αρχικοποίηση
-      gamelab_add:
-        text: πρόσθεσε {SPRITE} στην ομάδα {THIS}
       gamelab_addBehaviorSimple:
         text: χαρακτήρας {SPRITE} ξεκινάει {BEHAVIOR}
-      gamelab_addBehaviorUntil:
-        text: χαρακτήρας {SPRITE} ξεκινάει {BEHAVIOR} μέχρι {CONDITION}
       gamelab_allSpritesWithAnimation:
         text: aalab όλοι {ANIMATION}
-      gamelab_beginBehavior:
-        text: ξεκίνα {BEHAVIOR}
-      gamelab_bounceOff:
-        text: "{SPRITE} αναπηδά από {TARGET}"
-      gamelab_bounceOffEdges:
-        text: "{SPRITE} αναπηδάει από τις άκρες"
-      gamelab_changeColor:
-        text: άλλαξε του {COLOR} την {METHOD} κατά {AMOUNT}
-        options:
-          METHOD:
-            '"tint"': απόχρωση
-            '"tone"': τόνος
-            '"shade"': απόχρωση
-      gamelab_changeColorBy:
-        text: άλλαξε του {COLOR} την {METHOD} κατά {AMOUNT}
-        options:
-          METHOD:
-            '"hue"': απόχρωση
-            '"saturation"': ένταση
-            '"brightness"': φωτεινότητα
       gamelab_changePropBy:
         text: αλλαγή {SPRITE} {PROPERTY} με {VAL}
         options:
@@ -707,29 +683,10 @@ el:
         text: αφαίρεσε {THIS}
       gamelab_displace:
         text: "{THIS} τουβλάκια {SPRITE} από το να κινηθούν"
-      gamelab_distance:
-        text: απόσταση από {LOCATION1} μέχρι {LOCATION2}
       gamelab_draggable:
         text: είναι συρόμενο
       gamelab_edgesDisplace:
         text: τουβλάκι ακμών {SPRITE} από το να κινηθεί
-      gamelab_enableDebug:
-        text: ενεργοποίησε ανίχνευση σφαλμάτων
-      gamelab_firstTouched:
-        text: ο πρώτος χαρακτήρας που αγγίχθηκε
-      gamelab_forEachSpriteWithCostume:
-        text: |-
-          για κάθε {VALUE} χαρακτήρα
-          κάνε {STATEMENT}
-      gamelab_getAnim:
-        text: "{SPRITE} {COSTUME}"
-        options:
-          COSTUME:
-            '"costume"': κοστούμι
-      gamelab_getDirection:
-        text: "{SPRITE} κατεύθυνση κίνησης"
-      gamelab_getFrameDelay:
-        text: "{THIS} καθυστέρηση κάδρου"
       gamelab_getProp:
         text: "{SPRITE} {PROPERTY}"
         options:
@@ -745,26 +702,12 @@ el:
         options:
           CHOICE:
             '"this"': αυτό
-      gamelab_groupLength:
-        text: αριθμός χαρακτήρων μέσα σε {THIS}
-      gamelab_hasBehavior:
-        text: "{SPRITE} αυτή τη στιγμή κάνει {BEHAVIOR}"
       gamelab_hideTitleScreen:
         text: κρύψε την οθόνη τίτλων
-      gamelab_hsbColor:
-        text: |-
-          HSB χρώμα
-          H{HUE}S{SATURATION}B{BRIGHTNESS}
-      gamelab_isTouching:
-        text: "{THIS} αγγίζει {TARGET}"
       gamelab_isTouchingEdges:
         text: "{SPRITE} αγγίζει τις άκρες"
-      gamelab_joystickDirection:
-        text: κατεύθυνση του τζόιστικ
       gamelab_jumpTo:
         text: "{SPRITE} πήγαινε στο {LOCATION}"
-      gamelab_keyDown:
-        text: κουμπί είναι κάτω {KEY}
       gamelab_keyPressed:
         options:
           CONDITION:
@@ -795,77 +738,22 @@ el:
             '"w"': ς
             '"x"': x
             '"z"': ζ
-      gamelab_layoutSprites:
-        options:
-          FORMAT:
-            '"border"': όριο
-            '"inner"': εσωτερικό τετράγωνο
-            '"circle"': κύκλος
-            '"grid"': πλέγμα
-            '"row"': γραμμή
-            '"column"': στήλη
-            '"x"': χιαστί
-            '"plus"': συν
-            '"random"': τυχαίο
-      gamelab_locationAdd:
-        text: "{LOC1} {OPERATOR} {LOC2}"
-        options:
-          OPERATOR:
-            "'plus'": "\\+"
-            "'minus'": "\\-"
       gamelab_locationAt:
         text: 'θέση x: {X} y: {Y}'
-      gamelab_locationConstant:
-        text: "{DIR}"
-        options:
-          DIR:
-            "'north'": βοράς
-            "'south'": νότος
-            "'east'": ανατολή
-            "'west'": δύση
-      gamelab_locationDelta:
-        text: "{DISTANCE} pixels {DIR} από {LOCATION}"
-        options:
-          DIR:
-            "'north'": βοράς
-            "'south'": νότος
-            "'east'": ανατολή
-            "'west'": δύση
-            "'random'": τυχαίο
-      gamelab_locationEast:
-        text: ανατολή
       gamelab_locationMouse:
         text: θέση ποντικιού
-      gamelab_locationNorth:
-        text: βοράς
       gamelab_locationOf:
         text: θέση από {SPRITE}
-      gamelab_locationSouth:
-        text: νότος
-      gamelab_locationWest:
-        text: δύση
       gamelab_location_picker:
         text: "{LOCATION}"
-      gamelab_location_variable_get:
-        text: θέση από {VAR}
-      gamelab_location_variable_set:
-        text: όρισε θέση από {VAR} σε {VAL}
-      gamelab_makeNewGroup:
-        text: φτιάξε μία καινούρια ομάδα
       gamelab_mirrorSprite:
         text: "{SPRITE} γύρνα προς {DIRECTION}"
         options:
           DIRECTION:
             '"right"': δεξιά
             '"left"': αριστερά
-      gamelab_mixColors:
-        text: ανακάτεψε {COLOR1} και {COLOR2}
-      gamelab_mouseDown:
-        text: το ποντίκι είναι πατημένο
       gamelab_mouseLocation:
         text: θέση ποντικιού
-      gamelab_moveDown:
-        text: "{THIS} κινήσου κάτω"
       gamelab_moveForward:
         text: κινήσου {SPRITE} {DISTANCE} pixels προς τα μπρος
       gamelab_moveInDirection:
@@ -876,16 +764,8 @@ el:
             '"East"': Ανατολή
             '"South"': Νότος
             '"West"': Δυτικά
-      gamelab_moveInDirection2:
-        text: κινήσου {SPRITE} pixels {DISTANCE} προς {DIRECTION}
-      gamelab_moveLeft:
-        text: "{THIS} κινήσου αριστερά"
-      gamelab_moveRight:
-        text: "{THIS} κινήσου δεξιά"
       gamelab_moveToward:
         text: κινήσου {SPRITE} απόσταση {DISTANCE} προς {TARGET}
-      gamelab_moveUp:
-        text: "{THIS} κινήσου πάνω"
       gamelab_playSound:
         text: παίξεΉχο {SOUND}
       gamelab_pointInDirection:
@@ -896,8 +776,6 @@ el:
             '"East"': Ανατολή
             '"South"': Νότος
             '"West"': Δυτικά
-      gamelab_pointToward:
-        text: στρίψε το {SPRITE} προς {LOCATION}
       gamelab_randColor:
         text: τυχαίο χρώμα
       gamelab_randomColor:
@@ -910,8 +788,6 @@ el:
         text: χαρακτήρας {SPRITE} σταματάει {BEHAVIOR}
       gamelab_removeTint:
         text: αφαίρεσε το χρώμα από {THIS}
-      gamelab_secondTouched:
-        text: δευτερόλεπτο που αγγίχθηκε ο χαρακτήρας
       gamelab_setAnimation:
         text: άλλαξε {THIS} κοστούμι σε {ANIMATION}
       gamelab_setBackground:
@@ -926,24 +802,6 @@ el:
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': ουράνιο τόξο
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': υποβρύχια
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': χειμώνας
-      gamelab_setDirection:
-        text: όρισε {SPRITE} κατεύθυνση κίνησης {DIRECTION}
-      gamelab_setFrameDelay:
-        text: όρισε {THIS} καθιστέρηση κάδρου {VAL}
-      gamelab_setPosition:
-        text: προχώρησε μπροστά {THIS} στη θέση {POSITION}
-        options:
-          POSITION:
-            "{x: 50, y: 50}": πάνω αριστερά
-            "{x: 200, y: 50}": πάνω κέντρο
-            "{x: 350, y: 50}": πάνω δεξιά
-            "{x: 50, y: 200}": κέντρο αριστερά
-            "{x: 200, y: 200}": κέντρο
-            "{x: 350, y: 200}": κέντρο δεξιά
-            "{x: 50, y: 350}": κάτω αριστερά
-            "{x: 200, y: 350}": κάτω κέντρο
-            "{x: 350, y: 350}": κάτω δεξιά
-            '"random"': τυχαίο
       gamelab_setProp:
         text: "΄όρισε {SPRITE} {PROPERTY} σε {VAL}"
         options:
@@ -963,8 +821,6 @@ el:
             '"height"': ύψος
       gamelab_setTint:
         text: άλλαξε το χρώμα του {THIS} σε {COLOR}
-      gamelab_setup:
-        text: αρχικοποίηση
       gamelab_showTitleScreen:
         text: δείξε οθόνη τίτλων {BREAK} τίτλος {TITLE} κείμενο {SUBTITLE}
       gamelab_spriteClicked:
@@ -973,58 +829,6 @@ el:
           CONDITION:
             '"when"': όταν
             '"while"': όσο
-      gamelab_spriteClickedSet:
-        options:
-          CONDITION:
-            '"when"': όταν
-            '"while"': όσο
-      gamelab_spriteCostume:
-        text: "{COSTUME}"
-      gamelab_spriteDirection:
-        text: "{DIRECTION}"
-        options:
-          DIRECTION:
-            '"North"': Βοράς
-            '"East"': Ανατολή
-            '"South"': Νότος
-            '"West"': Δυτικά
-      gamelab_spritesWhere:
-        text: χαρακτήρες όπου {PROPERTY} είναι {VALUE}
-        options:
-          PROPERTY:
-            '"scale"': μέγεθος
-            '"x"': θέση x
-            '"y"': θέση y
-            '"costume"': κοστούμι
-            '"direction"': κατεύθυνση κίνησης
-            '"rotation"': περιστροφή ή κατεύθυνση
-            '"tint"': απόχρωση
-      gamelab_spritesWhereFirst:
-        text: πρώτα {VALUE}
-      gamelab_spritesWhereGenerator:
-        text: χαρακτήρες όπου {PROPERTY} {OP} {VALUE}
-        options:
-          PROPERTY:
-            '"scale"': μέγεθος
-            '"x"': θέση x
-            '"y"': θέση y
-            '"costume"': κοστούμι
-            '"direction"': κατεύθυνση κίνησης
-            '"rotation"': περιστροφή ή κατεύθυνση
-            '"tint"': απόχρωση
-          OP:
-            '"="': "="
-            '">"': ">"
-            '"<"': "\\<"
-      gamelab_spritesWhereLast:
-        text: τελευταίο {VALUE}
-      gamelab_spritesWhereRandom:
-        text: τυχαίο στην ομάδα {VALUE}
-      gamelab_thisBeginsBehaviorSimple:
-        text: χαρακτήρας {SPRITE} ξεκινάει {BEHAVIOR}
-        options:
-          SPRITE:
-            abc: αυτός ο χαρακτήρας
       gamelab_turn:
         text: "{SPRITE} στρίψε {DIRECTION} {N} μοίρες"
         options:
@@ -1033,8 +837,6 @@ el:
             '"left"': αριστερά
       gamelab_whenDownArrow:
         text: όταν πατηθεί το κάτω βέλος
-      gamelab_whenJoystick:
-        text: όταν το τζόιστικ
       gamelab_whenKey:
         text: όταν πατηθεί το {KEY}
         options:
@@ -1050,8 +852,6 @@ el:
             '"d"': β
       gamelab_whenLeftArrow:
         text: όταν πατηθεί το αριστερό βέλος
-      gamelab_whenMouseClicked:
-        text: όταν πατηθεί το ποντίκι
       gamelab_whenPressedAndReleased:
         text: "όταν {DIR} πατηθεί \n{STATEMENT1} όταν ελευθερώνεται \n{STATEMENT2}"
         options:
@@ -1066,21 +866,10 @@ el:
         text: όταν {SPRITE1} αρχίζει να ακουμπάει {SPRITE2} {STATEMENT1} όταν σταματάνε να αγγίζονται {STATEMENT2}
       gamelab_whenTouching:
         text: όταν {SPRITE1} αγγίζει {SPRITE2}
-      gamelab_whenTouchingAny:
-        text: όταν {SPRITE} αγγίζει οποιοδήποτε {GROUP}
-      gamelab_whenTouchingSet:
-        options:
-          CONDITION:
-            '"when"': όταν
-            '"while"': όσο
-      gamelab_whenTrue:
-        text: όταν {CONDITION} αληθές
       gamelab_whenUpArrow:
         text: όταν πατηθεί το πάνω βέλος
       gamelab_whileDownArrow:
         text: όσο πατιέται το κάτω βέλος
-      gamelab_whileJoystick:
-        text: όσο το τζόιστικ
       gamelab_whileKey:
         text: όσο {KEY} πατιέται
         options:

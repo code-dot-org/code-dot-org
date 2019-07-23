@@ -2006,6 +2006,8 @@ nl:
               name: Internet
             Crowdsourcing:
               name: Crowdsourcing
+            Dance Party:
+              name: Dansfeest
         andrea-test:
           stages:
             'null':
@@ -2117,6 +2119,10 @@ nl:
               name: Inleiding tot Arrays
             Processing Arrays:
               name: Arrays Verwerken
+        csp1-pilot:
+          stages:
+            Number Systems:
+              name: Systemen voor getalnotatie
         time4csdemo:
           stages:
             Crowdsourcing:
@@ -2129,3 +2135,18 @@ nl:
           stages:
             Graph Paper Programming:
               name: Programmeren op Ruitjespapier
+        csd2-pilot:
+          stages:
+            Lists:
+              name: Lijsten
+        csd3-pilot:
+          description_short: Programmeren
+          stages:
+            Variables:
+              name: Variabelen
+            Conditionals:
+              name: Voorwaardelijke instructies
+            Velocity:
+              name: Snelheid
+            Functions:
+              name: Functies

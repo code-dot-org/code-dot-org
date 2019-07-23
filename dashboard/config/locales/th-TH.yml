@@ -15,10 +15,16 @@ th:
     errors:
       messages:
         blank: จำเป็น
+        blank_plural: จำเป็นต้องมี
+        invalid: ไม่ถูกต้อง
+        invalid_plural: ไม่ถูกต้อง
     attributes:
       user:
         name: ชื่อที่ใช้แสดง
+        name_example: ชื่อที่แสดง<br/>(เช่น Cool Coder หรือ Jane S.)
         email: อีเมล
+        parent_email: อีเมล์ของผู้ปกครอง/ผู้พิทักษ์
+        personal_email: ที่อยู่อีเมล์ส่วนบุคคล <a href="%{url}">(ลิกที่นี่หากคุณยังไม่มีที่อยู่อีเมล์)</a>
         username: ชื่อผู้ใช้
         password: รหัสผ่าน
         password_confirmation: ยืนยันรหัสผ่าน
@@ -27,6 +33,7 @@ th:
         age: อายุ
         gender: เพศ
         edit_header: แก้ไขรายละเอียดบัญชี
+        finish_sign_up_header: เสร็จสิ้นการสร้างบัญชีผู้ใช้ของคุณ
         error:
           future: ไม่สามารถทำได้ในอนาคต
   hello: สวัสดีชาวโลก
@@ -60,11 +67,11 @@ th:
   courses: คอร์ส
   courses_page:
     title_student: เรียนกับ Code Studio
+    title_teacher: สอนวิทยาการคอมพิวเตอร์
   unplugged_activity: กิจกรรมถอดปลั๊ก
   of: ของ
   more: เพิ่มเติม
   less: น้อย
-  beta: Beta
   try_hoc: ลอง "ชั่วโมงแห่งการโค้ด" คลิกที่นี่ >>
   try_k8intro: ทดลอง K-8 ของพวกเราเพื่อเริ่มต้นศึกษาคอมพิวเตอร์  (15-25 ชั่วโมง)
   k8intro: K-8 เพื่อเริ่มต้นกับวิชาวิทยาศาสตร์คอมพิวเตอร์(15-25 ชั่วโมง)
@@ -74,6 +81,7 @@ th:
   prize: รางวัล
   more_info: ข้อมูลเพิ่มเติม
   auth:
+    continue_with: ดำเนินการต่อด้วย %{provider}
     sign_in_with: ลงทะเบียนด้วย %{provider}
     signed_in: ลงชื่อเข้าใช้
     signed_out: คุณได้ลงทะเบียนออกจาก <a href="%{url}">Code.org</a>.
@@ -85,10 +93,12 @@ th:
     facebook: เฟซบุค
     windowslive: บัญชี Microsoft
     microsoft_v2_auth: บัญชี Microsoft
+    powerschool: Powerschool
     forgot_password: ลืมรหัสผ่าน?
     need_confirmation: ไม่ได้รับการยืนยันคำแนะนำ?
     need_unlock: ไม่ได้รับคำแนะนำในการปลดล็อค?
   signup_form:
+    email_signup: ลงทะเบียนด้วยที่อยู่อีเมลของคุณ
     student_count: "%{count} นักเรียนได้ลงทะเบียนไว้แล้ว"
     teacher_count: ครู %{count} ได้ลงทะเบียนไว้แล้ว
     overview: ลงทะเบียนเพื่อที่จะได้มีบัญชีเพื่อติดตามความคืบหน้า หรือจัดการชั้นเรียนของคุณ
@@ -110,6 +120,7 @@ th:
     age: อายุ
     user_type: คุณเป็นนักเรียนหรืออาจารย์
     submit: สมัครสมาชิก
+    go_to_account: ไปที่บัญชีผู้ใช้ของฉัน
     teacher: คุณเป็นครูหรือ
     valid_username: อนุญาต
     invalid_username: ชื่อผู้ใช้ต้องมีอย่างน้อย 5 ตัวอักษร
@@ -117,6 +128,8 @@ th:
     valid_password: รหัสผ่านถูกต้อง
     invalid_password: รหัสผ่านต้องมีอย่างน้อย 6 ตัวอักษร
     mismatch_password: รหัสผ่านที่คุณป้อนไม่ตรงกัน
+    under_13_consent: ถ้าฉันมีอายุต่ำกว่า 13 ปี ฉันยืนยันว่าฉันได้รับอนุญาตจากผู้ปกครองหรือผู้พิทักษ์ตามกฏหมายเพื่อใช้บริการของ
+      Code.org แล้ว
     student_terms: ข้าพเจ้ายอมรับผูกพันตาม<a href='http://code.org/tos'>เงื่อนไขการให้บริการ</a>ของ
       Code.org ถ้าหากข้าพเจ้าอายุต่ำกว่า 13 ปี ข้าพเจ้ายืนยัน โดยส่งแบบฟอร์มนี้ว่า
       มีคุณพ่อคุณแม่หรือผู้ปกครองตามกฎหมายอนุญาตให้ใช้บริการ Code.org. <br/> <br/>
@@ -133,10 +146,18 @@ th:
     email_preference_yes: ใช่
     email_preference_no: ไม่ใช่
   school_info:
+    title: ข้อมูลโรงเรียน (ไม่บังคับ)
+    school_country: ประเทศของโรงเรียน
+    select_school_type: ประเภทโรงเรียน
     other: อาชีพอื่น ๆ
+    school: โรงเรียน
+    school_name: ชื่อโรงเรียน
+    school_zip: รหัสไปรษณีย์ของโรงเรียน
+    school_address: ที่อยู่โรงเรียน
   signin_form:
     title: มีบัญชีผู้ใช้แล้ว? เข้าสู่ระบบ
     login: อีเมล
+    login_username: อีเมล หรือ ชื่อผู้ใช้งาน
     password: รหัสผ่าน
     remember: จำฉัน
     submit: เข้าสู่ระบบ
@@ -173,8 +194,13 @@ th:
       บทเรียนที่สนุก, การเห็นร่วมกัน, และสอนแนวคิดพื้นฐานของวิทยาการคอมพิวเตอร์ที่ได้ใช้ง่าย, การแนะนำ, ประสบการณ์เหมือนเกม. เรียนรู้การเขียนโปรแกรมจากบิลเกตส์, มาร์ค ซัคเกอร์เบิร์ก, Angry Birds, และ Plants vs. Zombies! :-)
 
       %{name}
+  parent_mailer:
+    student_associated_subject: ข้อมูลล็อกอินสำหรับ Code.org
+  teacher_mailer:
+    new_teacher_subject: ยินดีต้อนรับสู่ Code.org!
   section:
     type:
+      picture: รหัสผ่านภาพ
       word: ข้อความล๊อกอิน
       email: อีเมล
   follower:
@@ -217,10 +243,18 @@ th:
       course_catalog: รายการหลักสูตร
       project_gallery: โปรเจกต์
       help_support: การช่วยเหลือและสนับสนุน
+      teacher_community: ชุมชนครูผู้สอน
       professional_learning: การเรียนรู้อย่างมืออาชีพ
       educate_hoc: ช่วงเวลาของ Code
+      about_us: เกี่ยวกับเรา
+      about_donors: ผู้บริจาค
+      about_jobs: งาน
+      about_contact: ติดต่อเรา
+      learn: เรียนรู้
       stats: สถิติ
       help_us: ช่วยเรา
+      teach: สอน
+      about: เกี่ยวกับ
     user:
       classroom: หน้าแรกของคุณครู
       label: สวัสดี %{username}
@@ -228,6 +262,7 @@ th:
       settings: บัญชีของฉัน
       logout: ออกจากระบบ
       signin: เข้าสู่ระบบ
+      signup: สร้างบัญชีผู้ใช้
       already_registered: ลงทะเบียนแล้วหรือยัง?
       pair_programming: การจับคู่เพื่อเขียนโปรแกรม
       team: ทีม
@@ -267,13 +302,16 @@ th:
       remove: แน่ใจหรือไม่ว่าต้องการลบคุณครูท่านนี้ออก
     students:
       dashboard: ไปที่แดชบอร์ดครู
+    user_not_found: ไม่พบครูผู้สอน
     student_teacher_disassociated: คุณได้ลบ %{teacher_name} ออกจากการเป็นครูผู้สอนของคุณ
     panel:
       answer_viewer: แผงผังสำหรับครูผู้สอน
       student: นักเรียน
+      viewing_solution: ดูเฉลย
       try_it_yourself: ลองด้วยตัวเอง
       example: ตัวอย่างวิธีการแก้ปัญหา
       submitted_on: 'ส่งให้:'
+      last_updated: 'ปรับปรุงล่าสุด:'
       unsubmit: ไม่ส่ง
       worked_with: ทำงานร่วมกันกับ
   user:
@@ -282,6 +320,7 @@ th:
     email_confirm_wrong_email: "(อีเมล์ไม่ถูกต้องหรือเปล่า?)"
     email_resend_confirm: ส่งคำแนะนำการยืนยันตัวอีกครั้ง
     new_password_hint: "(ปล่อยว่างไว้ถ้าคุณไม่ต้องการเปลี่ยน)"
+    delete: ลบบัญชีผู้ใช้
   user_level:
     completed: เสร็จแล้ว
   home:
@@ -459,30 +498,20 @@ th:
     races:
       other: อาชีพอื่น ๆ
     submit: ส่งคำตอบ
+    decline: ปิด
   progress:
     not_started: ยังไม่เริ่ม
     submitted: ส่งคำตอบแล้ว
   project:
     projects: โปรเจกต์
     new: สร้างใหม่
-    rename: ตั้งชื่อใหม่
-    save: บันทึก
-    delete: ลบ
-    my_projects: โปรเจคของฉัน
     project_gallery: โปรเจกต์
     publish: เผยแพร่
     unpublish: ไม่เผยแพร่
-    share: แบ่งปัน
-    more: เพิ่มเติม
     name: ชื่อ
     project_type: ประเภทโปรเจกต์
-    really_delete: ลบหรือไม่?
-    delete_yes: ใช่
-    delete_no: ไม่ใช่
     saved: จัดเก็บสู่ที่แสดงรูปภาพเรียบร้อยแล้ว!
-    cancel: ยกเลิก
     view_all: ดูโปรเจคของฉัน
-    remix: รีมิกซ์
     abuse:
       report_abuse_form:
         abuse_type:
@@ -512,6 +541,8 @@ th:
   pd:
     form_labels:
       email: อีเมล
+      school_name: ชื่อโรงเรียน
+      school_country: ประเทศของโรงเรียน
     form_entries:
       gender:
         male: ชาย

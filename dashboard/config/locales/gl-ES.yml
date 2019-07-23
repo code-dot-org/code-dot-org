@@ -80,7 +80,6 @@ gl:
   of: de
   more: MÁIS
   less: MENOS
-  beta: beta
   try_hoc: 'Experimenta a Hora de Código, clica aquí >> '
   try_k8intro: Experimenta o noso curso de Introdución á Informática para o Ensino
     Básico (15-25 horas)
@@ -576,7 +575,6 @@ gl:
   pdf_download: Baixar PDF
   download_coming_soon: Actividade disponíbel para baixar en breve.
   video_coming_soon: Vídeo en breve!
-  not_started: O alumno aínda non practicou este nivel.
   share_code:
     title: Premer en 'Executar' para ver o meu programa en acción
     bounce_og_title: Bota unha ollada ao meu xogo de Ping-pong
@@ -755,17 +753,10 @@ gl:
     create: Crear proxecto
     create_a_project: 'Crea un proxecto novo:'
     new: Crear novo
-    rename: Renomear
-    save: Salvar
-    delete: Eliminar
     exit: Voltar ao curso
-    my_projects: Os meus proxectos
     project_gallery: Proxectos
-    share: Compartir
     share_title: Comparte o teu proxecto
     share_copy_link: 'Copia a ligazón:'
-    close: Pechar
-    more: Máis
     name: Nome
     updated: Última actualización
     project_type: Tipo de proxecto
@@ -774,19 +765,9 @@ gl:
       un Proxecto de artista!<br/>Podes voltar a traballar nos teus proxectos cando
       quixeres.
     need_help: Precisas de axuda para comezares?
-    really_delete: Eliminar?
-    delete_yes: Si
-    delete_no: Non
     saved: Gardado na Galería!
     not_saved: Non gardado
-    cancel: Cancelar
-    delete_confirm_title: Tes a certeza de que pretendes eliminar este proxecto?
-    delete_confirm_text: Ao borrares este proxecto estás eliminándoo permanentemente
-      de “Os meus proxectos”. Calquera persoa coa que compartiras a ligazón para este
-      proxecto xa non poderá velo.
     view_all: Ver os meus proxectos
-    remix: Remix
-    click_to_remix: Clique em "Remix" para facer a súa propia versión!
     edit_project: Editar proxecto
     abuse:
       tos: Este proxecto foi reportado por violar os <a href='http://code.org/tos'>Termos

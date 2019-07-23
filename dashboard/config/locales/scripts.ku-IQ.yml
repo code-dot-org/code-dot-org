@@ -174,3 +174,11 @@ ku:
           stages:
             The Internet:
               name: ئینترنێت
+        csd2-pilot:
+          stages:
+            Lists:
+              name: لیستەکان
+        csd3-pilot:
+          stages:
+            Variables:
+              name: گۆڕاوەکان

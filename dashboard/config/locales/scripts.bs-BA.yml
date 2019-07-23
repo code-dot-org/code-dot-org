@@ -2067,6 +2067,8 @@ bs:
               name: Internet
             Crowdsourcing:
               name: Crowdsourcing
+            Dance Party:
+              name: Plesna zabava
         andrea-test:
           stages:
             'null':
@@ -2095,6 +2097,16 @@ bs:
                 kodu.
             Going Places Safely:
               name: Sigurna Putovanja
+            Learn to Drag and Drop:
+              description_teacher: Ova lekcija će studentima dati ideju o tome šta
+                da očekuju kada se upute prema kompjuterskom laboratoriju. Sve počinje
+                sa kratkom raspravom koji ih upoznaje sa manirima kompjutorskog laboratorija,
+                onda će nastaviti korištenjem računala da završe online zagonetke.
+            Sequencing with Scrat:
+              description_teacher: Ova lekcija će studentima dati ideju o tome šta
+                da očekuju kada se upute prema kompjuterskom laboratoriju. Sve počinje
+                sa kratkom raspravom koji ih upoznaje sa manirima kompjutorskog laboratorija,
+                onda će nastaviti korištenjem računala da završe online zagonetke.
         courseb-2019:
           description: Naučite osnove računarstva i internet sigurnosti. Na kraju
             kursa, kreirajte svoju vlastitu igru ili priču koju možete podijeliti.
@@ -2105,6 +2117,11 @@ bs:
               name: Digitalni otisak stopala
             'Loops: Getting Loopy':
               name: Zapetljavanje
+            Sequencing in Maze:
+              description_teacher: Ova lekcija će studentima dati ideju o tome šta
+                da očekuju kada se upute prema kompjuterskom laboratoriju. Sve počinje
+                sa kratkom raspravom koji ih upoznaje sa manirima kompjutorskog laboratorija,
+                onda će nastaviti korištenjem računala da završe online zagonetke.
         pre-express-2019:
           description: Naučite osnove računarstva i internet sigurnosti. Na kraju
             kursa, kreirajte svoju vlastitu igru ili priču koju možete podijeliti.
@@ -2178,6 +2195,10 @@ bs:
               name: Primjeri aplikacija
             Final Project:
               name: Završni projekat
+        csp1-pilot:
+          stages:
+            Number Systems:
+              name: Brojčani Sistemi
         time4csdemo:
           stages:
             Crowdsourcing:
@@ -2190,3 +2211,19 @@ bs:
           stages:
             Graph Paper Programming:
               name: Papirno Programiranje Grafikona
+        csd2-pilot:
+          stages:
+            Lists:
+              name: Liste
+            Images:
+              name: Slike
+        csd3-pilot:
+          stages:
+            Variables:
+              name: Varijable
+            Conditionals:
+              name: Uvjeti
+            Velocity:
+              name: Brzina
+            Functions:
+              name: Funkcije

@@ -66,7 +66,6 @@ ja:
   of: "の"
   more: "くわしく"
   less: "かくす"
-  beta: "ベータ版"
   try_hoc: "ここをクリックしてHour of Codeを試す >>"
   try_k8intro: "コンピュータサイエンスコース （15-25 時間）の入門編"
   k8intro: "コンピュータサイエンスコース （15-25 時間）の入門編"
@@ -545,7 +544,6 @@ ja:
   pdf_download: 'PDF をダウンロード'
   download_coming_soon: '間もなく、ダウンロードできる教材が利用できるようになります。'
   video_coming_soon: '間もなく、ビデオを視聴できるようになります。'
-  not_started: '学生は、まだこのレベルを行っていません。'
   share_code:
     title: "「実行」をクリックして私のプログラムが動くところを見てください"
     bounce_og_title: "私が作った Bounce Game を試してみてください"
@@ -770,20 +768,10 @@ ja:
     create: "プロジェクトを作る"
     create_a_project: '新しいプロジェクトを作る'
     new: "新しく作る"
-    rename: "名前をかえる"
-    save: "保存"
-    delete: "削除（さくじょ）"
-    import: "インポート"
-    share_link_import_bad_link_header: "共有リンクが認識されません"
-    share_link_import_bad_link_body: "共有リンクをインポートできません。完全な Minecraft: Agent パズルのリンクをコピーしていることを確認してください。"
-    share_link_import_error_header: "問題が発生しました。"
-    share_link_import_error_body: "共有リンクのインポート時に問題が発生しました。もう一度やり直してください。"
     exit: "コースに戻る"
-    my_projects: "マイプロジェクト"
     project_gallery: "プロジェクト"
     publish: "みんなに見せる"
     unpublish: "見られなくする"
-    share: "シェアする"
     share_title: プロジェクトを共有
     share_copy_link: "リンクをコピー:"
     share_embed_description: "Web ページにプロジェクトを表示するため、HTML ページに埋め込みコードを貼り付けることができます。"
@@ -791,25 +779,15 @@ ja:
     embed: "埋め込み"
     advanced_share: "詳細オプションを表示"
     no_projects: "あなたのプロジェクトは現在ありません。上のボタンをクリックしてプロジェクトを開始してください。"
-    close: "閉じる"
-    more: "見る"
     name: "名前"
     updated: "更新された"
     project_type: "プロジェクトの種類"
     help_text: "下にある <strong>アプリを作る</strong> か <strong>何かを描く</strong> をクリックして、新しいプレイラボかアーティストプロジェクトを作りましょう！ <br/>いつでも、戻ってきてプロジェクトを再開することができます。"
     need_help: "これらのコースで、新しいプロジェクトを はじめよう"
     thumbnail_help: "プロジェクトのサムネイルが正しく表示されませんか? 新しいサムネイルを生成するために、アプリを実行してみてください。サムネイルの更新には、数時間かかることがありますのでご注意ください。"
-    really_delete: '本当に削除しますか？'
-    delete_yes: 'はい'
-    delete_no: 'いいえ'
     saved: "保存されました"
     not_saved: "保存されていません"
-    cancel: 'キャンセル'
-    delete_confirm_title: このプロジェクトを本当に削除してもよろしいですか？
-    delete_confirm_text: "プロジェクトを削除すると、マイプロジェクトのリストからは永久に消えます。今までにリンクを共有した人は誰もそのプロジェクトを見ることができなくなります。"
     view_all: 'マイプロジェクトを見る'
-    remix: 'リミックス'
-    click_to_remix: "\"Remix\" をクリックしてあなただけのバージョンを作成しましょう"
     edit_project: 'プロジェクトを編集します'
     abuse:
       tos: "このプロジェクトは、Code.org との <a href='http://code.org/tos'> サービス利用規約</a> に違反するという報告があったため、他のユーザーとは共有できません。"

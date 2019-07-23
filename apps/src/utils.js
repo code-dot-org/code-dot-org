@@ -696,6 +696,13 @@ export function currentLocation() {
 }
 
 /**
+ * Helper that wraps window.open, for stubbing in unit tests.
+ */
+export function windowOpen(...args) {
+  return window.open(...args);
+}
+
+/**
  * Wrapper for window.location.href which we can stub in unit tests.
  * @param {string} href Location to navigate to.
  */

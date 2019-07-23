@@ -4,7 +4,7 @@ import ProgressLevelSet from './ProgressLevelSet';
 import ProgressBubbleSet from './ProgressBubbleSet';
 import {levelType} from './progressTypes';
 import {progressionsFromLevels} from '@cdo/apps/code-studio/progressRedux';
-import UnsafeRenderedMarkdown from '@cdo/apps/templates/UnsafeRenderedMarkdown';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
 const styles = {
   summary: {
@@ -20,18 +20,11 @@ export default class ProgressLessonContent extends React.Component {
     description: PropTypes.string,
     levels: PropTypes.arrayOf(levelType).isRequired,
     disabled: PropTypes.bool.isRequired,
-    selectedSectionId: PropTypes.string,
-    inMiniRubricExperiment: PropTypes.bool
+    selectedSectionId: PropTypes.string
   };
 
   render() {
-    const {
-      description,
-      levels,
-      disabled,
-      selectedSectionId,
-      inMiniRubricExperiment
-    } = this.props;
+    const {description, levels, disabled, selectedSectionId} = this.props;
     const progressions = progressionsFromLevels(levels);
 
     let bubbles;
@@ -41,7 +34,6 @@ export default class ProgressLessonContent extends React.Component {
           levels={progressions[0].levels}
           disabled={disabled}
           selectedSectionId={selectedSectionId}
-          inMiniRubricExperiment={inMiniRubricExperiment}
         />
       );
     } else {
@@ -52,7 +44,6 @@ export default class ProgressLessonContent extends React.Component {
           levels={progression.levels}
           disabled={disabled}
           selectedSectionId={selectedSectionId}
-          inMiniRubricExperiment={inMiniRubricExperiment}
         />
       ));
     }
@@ -60,7 +51,7 @@ export default class ProgressLessonContent extends React.Component {
     return (
       <div>
         <div style={styles.summary}>
-          <UnsafeRenderedMarkdown markdown={description || ''} />
+          <SafeMarkdown markdown={description || ''} />
         </div>
         {bubbles}
       </div>

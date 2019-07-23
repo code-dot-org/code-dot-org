@@ -568,18 +568,6 @@ et:
             '2': kõrged helid
       Dancelab_whenSetup:
         text: seadistus
-      gamelab_changeColor:
-        text: muuda {COLOR} {METHOD} {AMOUNT}
-        options:
-          METHOD:
-            '"tint"': toon
-      gamelab_changeColorBy:
-        text: muuda {COLOR} {METHOD} {AMOUNT}
-        options:
-          METHOD:
-            '"hue"': värvitoon
-            '"saturation"': küllastus
-            '"brightness"': heledus
       gamelab_changePropBy:
         text: muuda {SPRITE} {PROPERTY} {VAL} võrra
         options:
@@ -640,29 +628,11 @@ et:
             '"w"': w
             '"x"': x
             '"z"': z
-      gamelab_layoutSprites:
-        options:
-          FORMAT:
-            '"border"': piir
-            '"inner"': ruudu sees
-            '"circle"': ring
-            '"grid"': ruudustikus
-            '"row"': rida
-            '"column"': veerg
-            '"x"': risti-rästi
-            '"plus"': pluss
-            '"random"': juhuslik
-      gamelab_locationDelta:
-        options:
-          DIR:
-            "'random'": juhuslik
       gamelab_mirrorSprite:
         options:
           DIRECTION:
             '"right"': paremale
             '"left"': vasakule
-      gamelab_mixColors:
-        text: segad {COLOR1} ja {COLOR2}
       gamelab_randColor:
         text: juhuslik värv
       gamelab_randomColor:
@@ -679,20 +649,6 @@ et:
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': vikerkaar
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': veealune
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': talv
-      gamelab_setPosition:
-        text: liiguta {THIS} {POSITION} asendisse
-        options:
-          POSITION:
-            "{x: 50, y: 50}": üleval vasakul
-            "{x: 200, y: 50}": üleval keskel
-            "{x: 350, y: 50}": üleval paremal
-            "{x: 50, y: 200}": keskel vasakul
-            "{x: 200, y: 200}": keskel
-            "{x: 350, y: 200}": keskel paremal
-            "{x: 50, y: 350}": keskel vasakul
-            "{x: 200, y: 350}": alla keskel
-            "{x: 350, y: 350}": all paremal
-            '"random"': juhuslik
       gamelab_setProp:
         options:
           PROPERTY:
@@ -708,34 +664,11 @@ et:
             '"scale"': suurus
             '"width"': laius
             '"height"': kõrgus
-      gamelab_setup:
-        text: seadistus
       gamelab_spriteClicked:
         options:
           CONDITION:
             '"when"': kui
             '"while"': tingimusel
-      gamelab_spriteClickedSet:
-        options:
-          CONDITION:
-            '"when"': kui
-            '"while"': tingimusel
-      gamelab_spritesWhere:
-        options:
-          PROPERTY:
-            '"scale"': suurus
-            '"x"': x asukoht
-            '"y"': y asukoht
-            '"direction"': liikumise suund
-            '"tint"': toon
-      gamelab_spritesWhereGenerator:
-        options:
-          PROPERTY:
-            '"scale"': suurus
-            '"x"': x asukoht
-            '"y"': y asukoht
-            '"direction"': liikumise suund
-            '"tint"': toon
       gamelab_turn:
         options:
           DIRECTION:
@@ -761,11 +694,6 @@ et:
             "'down'": alla
             "'left'": vasakule
             "'right'": paremale
-      gamelab_whenTouchingSet:
-        options:
-          CONDITION:
-            '"when"': kui
-            '"while"': tingimusel
       gamelab_whileKey:
         options:
           KEY:

@@ -1556,6 +1556,8 @@ ja:
               name: インターネット
             Crowdsourcing:
               name: クラウドソーシング
+            Dance Party:
+              name: ダンスパーティー
         andrea-test:
           stages:
             'null':
@@ -1634,8 +1636,10 @@ ja:
               name: つづりみつばち
             Learn to Drag and Drop:
               name: ドラッグ＆ドロップ
-            Programming in Maze:
-              name: めいろ のプログラミング
+            Tell a Story in Play Lab:
+              name: プレイ ラボのイベント
+            Make a Game in Play Lab:
+              name: プレイ ラボのイベント
             Ocean Scene with Loops:
               name: アーティストくりかえし
         removed19:
@@ -1700,3 +1704,17 @@ ja:
               name: グラフ用紙のプログラミング
             Programming in Maze:
               name: めいろ のプログラミング
+        csd2-pilot:
+          stages:
+            Lists:
+              name: リスト
+        csd3-pilot:
+          stages:
+            Variables:
+              name: 変数
+            Conditionals:
+              name: 条件
+            Velocity:
+              name: 速度
+            Functions:
+              name: 関数(かんすう)

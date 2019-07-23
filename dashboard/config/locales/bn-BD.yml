@@ -48,7 +48,6 @@ bn:
   of: এর
   more: বেশি
   less: কম
-  beta: বেটা
   try_hoc: Hour of Code এ আসতে, এখানে ক্লিক করো>>
   try_k8intro: আমাদের 'K-৮ পরিচিতি' থেকে 'কম্পিউটার বিজ্ঞানের কোর্স' করে দেখুন (১৫-২৫
     ঘন্টা)
@@ -110,6 +109,9 @@ bn:
     email_preference_yes: '"হ্যাঁ"'
     email_preference_no: না
   school_info:
+    title: স্কুলের তথ্য (ঐচ্ছিক)
+    school_country: স্কুলের দেশ
+    select_school_type: স্কুলের ধরণ
     other: অন্যান্য
   signin_form:
     title: একাউন্ট ইতিমধ্যেই আছে? সাইন ইন করুন
@@ -368,26 +370,14 @@ bn:
     projects: প্রকল্প
     create: প্রকল্প তৈরি করুন
     new: নতুন তৈরি করুন
-    rename: পুনঃনামকরণ করুন
-    save: সংরক্ষন করন
-    delete: বাদ দিন
     exit: কোর্সের কাছে ফিরে যান।
-    my_projects: আমার প্রকল্প
     project_gallery: প্রকল্প
-    share: শেয়ার
-    close: বন্ধ
-    more: আরো
     name: নাম
     updated: আপডেট
     project_type: প্রকল্পের ধরন
-    really_delete: বাদ দিবেন কি?
-    delete_yes: '"হ্যাঁ"'
-    delete_no: না
     saved: গ্যালারিতে সংরক্ষিত!
     not_saved: সংরক্ষিত নয়
-    cancel: বাতিল করুন
     view_all: আমার প্রকল্প প্রদর্শন করুন
-    remix: রিমিক্স
     edit_project: প্রকল্প সম্পাদন করুন
     abuse:
       report_abuse_form:
@@ -413,6 +403,7 @@ bn:
   pd:
     form_labels:
       email: ই-মেইল
+      school_country: স্কুলের দেশ
     form_entries:
       gender:
         male: পুরুষ

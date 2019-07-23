@@ -41,7 +41,6 @@ ur:
   courses: 'کورسز'
   more: "مزید دیکھیے"
   less: "کم دیکھیے"
-  beta: "beta"
   try_hoc: "آور آف کوڈ کھیلنے کے لئے یہاں کلک کریں>> "
   try_k8intro: "١٢ سال تک کی عمر کے لئے موزوں کمپیوٹر کورس  (١٥ سے ٢٥ گھنٹے) کا تعارف دیکھیے"
   k8intro: "١٢ سال تک کی عمر کے لئے موزوں کمپیوٹر کورس کا تعارف (١٥ سے ٢٥ گھنٹے)"
@@ -166,13 +165,8 @@ ur:
       other: "دیگر"
     submit: "جمع کرائیں"
   project:
-    share: "دوسروں کو بتائیں"
-    more: "مزید"
     name: "نام"
-    delete_yes: 'جی'
-    delete_no: 'نہيں'
     saved: "Saved"
-    cancel: 'منسوخ کریں'
     abuse:
       report_abuse_form:
         abuse_type:

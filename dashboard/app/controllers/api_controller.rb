@@ -441,6 +441,20 @@ class ApiController < ApplicationController
     head :ok
   end
 
+  # PUT /api/firehose_unreachable
+  def firehose_unreachable
+    original_data = params.require(:original_data)
+    event = original_data['event']
+    project_id = original_data['project_id'] || nil
+    FirehoseClient.instance.put_record(
+      study: 'firehose-error-unreachable',
+      event: event,
+      project_id: project_id,
+      data_string: params.require(:error_text),
+      data_json: original_data.to_json
+    )
+  end
+
   private
 
   def load_student(student_id)

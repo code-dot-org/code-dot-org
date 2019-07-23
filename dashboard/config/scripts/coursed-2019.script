@@ -4,8 +4,11 @@ teacher_resources [["lessonPlans", "https://curriculum.code.org/csf-19/coursed/"
 stage_extras_available true
 has_lesson_plan true
 curriculum_path 'https://curriculum.code.org/{LOCALE}/csf-19/coursed/{LESSON}'
+script_announcements [{"notice"=>"Our 2019 CS Fundamentals Lessons are Live!", "details"=>"Click \"Learn More\" to view all of the lesson plans for the 2019 version of Course D!", "link"=>"https://curriculum.code.org/csf-19/coursed", "type"=>"information", "visibility"=>"Teacher-only"}]
 family_name 'coursed'
 version_year '2019'
+is_stable true
+curriculum_umbrella 'CSF'
 
 stage 'Algorithms: Graph Paper Programming', flex_category: 'csf_sequencing'
 level 'GraphPaperProgramming-Unplugged'

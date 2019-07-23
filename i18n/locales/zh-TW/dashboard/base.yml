@@ -67,7 +67,6 @@ zh-TW:
   of: "／"
   more: "更多"
   less: "更少"
-  beta: "測試版"
   try_hoc: "點擊這裡體驗一小時玩程式 >> "
   try_k8intro: "試試我們為年級 K-8 所設計的計算機科學課程（15-25 小時）"
   k8intro: "K-8 資訊科學介紹課程 （15-25 小時）"
@@ -564,7 +563,6 @@ zh-TW:
   pdf_download: '下載 PDF'
   download_coming_soon: '可下載的活動內容也即將完成。'
   video_coming_soon: '影片即將推出！'
-  not_started: '學生尚未試過這個級別。'
   share_code:
     title: "按下\"執行\"來看看我的程式如何運作"
     bounce_og_title: "看看我的彈跳遊戲"
@@ -793,20 +791,10 @@ zh-TW:
     create: "創建專案"
     create_a_project: '創建一個新的專案：'
     new: "建立新專案"
-    rename: "重新命名"
-    save: "儲存"
-    delete: "删除"
-    import: "匯入"
-    share_link_import_bad_link_header: "分享的連結無法識別"
-    share_link_import_bad_link_body: "我們無法匯入該分享連結。請確認您使用的是來自《Minecraft: Agent 版圖》的連結，且您複製的是完整的連結。"
-    share_link_import_error_header: "有地方出錯了。"
-    share_link_import_error_body: "匯入分享連結時發生問題。請再試一次。"
     exit: "返回課程"
-    my_projects: "我的專案"
     project_gallery: "所有專案"
     publish: "發佈"
     unpublish: "取消發佈"
-    share: "分享"
     share_title: 分享你的專案
     share_copy_link: "複製連結："
     share_embed_description: "你可以把嵌入代碼貼到一個 HTML 頁面，就可以在該網頁上顯示這個專案。"
@@ -814,25 +802,15 @@ zh-TW:
     embed: "嵌入"
     advanced_share: "顯示進階選項"
     no_projects: "你目前沒有創建任何專案，點擊上方其中一個按鈕來開始一個專案。"
-    close: "關閉"
-    more: "更多"
     name: "你的名字"
     updated: "最後更新於"
     project_type: "專案類型"
     help_text: "點擊下方的<strong>做一個 App</strong>或<strong>畫一些東西</strong>來開始一個新的專案！<br/>你可以隨時回來繼續你的專案。"
     need_help: "試試這些課程來幫助你開始新專案"
     thumbnail_help: "你的專案縮圖不正確嗎？運行你的 app 以產生新的縮圖。注意，可能需要幾個小時後才能看到更新後的圖片。"
-    really_delete: '要刪除嗎？'
-    delete_yes: '是'
-    delete_no: '否'
     saved: "已儲存"
     not_saved: "未儲存"
-    cancel: '取消'
-    delete_confirm_title: 確定要刪除這個專案？
-    delete_confirm_text: "刪除您當前的專案，將會把它從你的專案清單中永久移除，你已分享的連結也會永久失效。"
     view_all: '檢視我的專案'
-    remix: '改編'
-    click_to_remix: "點擊「改編」，創造自己的版本！"
     edit_project: '編輯專案'
     sharing_disabled: "抱歉，這個專案無法分享。如果這是你或者你的學生的專案，請<a href='https://studio.code.org/users/sign_in'>登入</a>到你的帳戶以查看該專案。"
     abuse:

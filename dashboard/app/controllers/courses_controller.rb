@@ -1,6 +1,9 @@
 class CoursesController < ApplicationController
+  include VersionRedirectOverrider
+
   before_action :require_levelbuilder_mode, except: [:index, :show]
   before_action :authenticate_user!, except: [:index, :show]
+  before_action :set_redirect_override, only: [:show]
   authorize_resource except: [:index]
 
   def index
@@ -22,9 +25,8 @@ class CoursesController < ApplicationController
   end
 
   def show
-    # csp and csd are each "course families", each containing two "course versions",
-    # one with version year 2017 and one with version year 2018. When the url
-    # of a course family is requested, redirect to a specific course version.
+    # csp and csd are each "course families", each containing multiple "course versions".
+    # When the url of a course family is requested, redirect to a specific course version.
     #
     # For now, Hard-code the redirection logic because there are only two course
     # families to worry about. In the future we will want to make this redirect
@@ -32,10 +34,10 @@ class CoursesController < ApplicationController
     redirect_query_string = request.query_string.empty? ? '' : "?#{request.query_string}"
     case params[:course_name]
     when 'csd'
-      redirect_to "/courses/csd-2018#{redirect_query_string}"
+      redirect_to "/courses/csd-2019#{redirect_query_string}"
       return
     when 'csp'
-      redirect_to "/courses/csp-2018#{redirect_query_string}"
+      redirect_to "/courses/csp-2019#{redirect_query_string}"
       return
     end
 
@@ -62,7 +64,8 @@ class CoursesController < ApplicationController
     end
 
     # Attempt to redirect user if we think they ended up on the wrong course overview page.
-    if redirect_course = redirect_course(course)
+    override_redirect = VersionRedirectOverrider.override_course_redirect?(session, course)
+    if !override_redirect && redirect_course = redirect_course(course)
       redirect_to "/courses/#{redirect_course.name}/?redirect_warning=true"
       return
     end
@@ -86,7 +89,9 @@ class CoursesController < ApplicationController
     course = Course.find_by_name!(params[:course_name])
     course.persist_strings_and_scripts_changes(params[:scripts], params[:alternate_scripts], i18n_params)
     course.update_teacher_resources(params[:resourceTypes], params[:resourceLinks])
-    course.update_attribute(:has_verified_resources, !!params[:has_verified_resources])
+    # Convert has_verified_resources from a string ("on") to a boolean.
+    params[:has_verified_resources] = !!params[:has_verified_resources]
+    course.update(course_params)
     redirect_to course
   end
 
@@ -108,6 +113,16 @@ class CoursesController < ApplicationController
   end
 
   private
+
+  def course_params
+    params.permit(:version_year, :family_name, :has_verified_resources).to_h
+  end
+
+  def set_redirect_override
+    if params[:course_name] && params[:no_redirect]
+      VersionRedirectOverrider.set_course_redirect_override(session, params[:course_name])
+    end
+  end
 
   def redirect_course(course)
     # Return nil if course is nil or we know the user can view the version requested.

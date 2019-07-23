@@ -273,16 +273,6 @@ ka:
             '2': მაღალი
       Dancelab_whenSetup:
         text: დაყენება
-      gamelab_changeColor:
-        options:
-          METHOD:
-            '"tint"': შეფერადება
-      gamelab_changeColorBy:
-        options:
-          METHOD:
-            '"hue"': ელფერი
-            '"saturation"': გაჯერება
-            '"brightness"': სიმკვეთრე
       gamelab_changePropBy:
         options:
           PROPERTY:
@@ -301,14 +291,6 @@ ka:
           VAL:
             'true': ჭეშმარიტი
             'false': მცდარი
-      gamelab_enableDebug:
-        text: გამართვის რეჟიმის ჩართვა
-      gamelab_firstTouched:
-        text: ჯერ სპრაიტს შეეხეთ
-      gamelab_getAnim:
-        options:
-          COSTUME:
-            '"costume"': კოსტუმი
       gamelab_getProp:
         options:
           PROPERTY:
@@ -339,40 +321,8 @@ ka:
             '"w"': w
             '"x"': x
             '"y"': y
-      gamelab_layoutSprites:
-        options:
-          FORMAT:
-            '"grid"': ბადე
-            '"row"': მწკრივი
-            '"column"': სვეტი
-            '"random"': შემთხვევითი
-      gamelab_locationConstant:
-        options:
-          DIR:
-            "'north'": ჩრდილოეთი
-            "'south'": სამრხეთი
-            "'east'": აღმოსავლეთი
-            "'west'": აღმოსავლეთი
-      gamelab_locationDelta:
-        options:
-          DIR:
-            "'north'": ჩრდილოეთი
-            "'south'": სამრხეთი
-            "'east'": აღმოსავლეთი
-            "'west'": აღმოსავლეთი
-            "'random'": შემთხვევითი
-      gamelab_locationEast:
-        text: აღმოსავლეთი
       gamelab_locationMouse:
         text: თაგვის მდებარეობა
-      gamelab_locationNorth:
-        text: ჩრდილოეთი
-      gamelab_locationSouth:
-        text: სამრხეთი
-      gamelab_locationWest:
-        text: აღმოსავლეთი
-      gamelab_makeNewGroup:
-        text: ახალი ჯგუფის შექმნა
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -410,19 +360,6 @@ ka:
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': ცისარტყელა
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': წყალქვეშა
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': ზამთარი
-      gamelab_setPosition:
-        options:
-          POSITION:
-            "{x: 50, y: 50}": ზედა მარცხენა
-            "{x: 200, y: 50}": ზედა ცენტში
-            "{x: 350, y: 50}": ზედა მარჯვენა
-            "{x: 50, y: 200}": ცენტრში მარცხნივ
-            "{x: 200, y: 200}": ცენტრი
-            "{x: 350, y: 200}": ცენტრში მარჯვნივ
-            "{x: 50, y: 350}": ქვედა მარცხენა
-            "{x: 200, y: 350}": ქვედა ცენტრში
-            "{x: 350, y: 350}": ქვედა მარჯვენა
-            '"random"': შემთხვევითი
       gamelab_setProp:
         options:
           PROPERTY:
@@ -438,48 +375,11 @@ ka:
             '"scale"': ზომა
             '"width"': სიგრძე
             '"height"': სიმაღლე
-      gamelab_setup:
-        text: დაყენება
       gamelab_spriteClicked:
         options:
           CONDITION:
             '"when"': როდის
             '"while"': სანამ
-      gamelab_spriteClickedSet:
-        options:
-          CONDITION:
-            '"when"': როდის
-            '"while"': სანამ
-      gamelab_spriteDirection:
-        options:
-          DIRECTION:
-            '"North"': ჩრდილოეთი
-            '"East"': აღმოსავლეთი
-            '"South"': სამრხეთი
-            '"West"': აღმოსავლეთი
-      gamelab_spritesWhere:
-        options:
-          PROPERTY:
-            '"scale"': ზომა
-            '"x"': x პოზიცია
-            '"y"': y პოზიცია
-            '"costume"': კოსტუმი
-            '"direction"': მოძრაობის მიმართულება
-            '"rotation"': მოტრიალება ან მიმართულება
-            '"tint"': შეფერადება
-      gamelab_spritesWhereGenerator:
-        options:
-          PROPERTY:
-            '"scale"': ზომა
-            '"x"': x პოზიცია
-            '"y"': y პოზიცია
-            '"costume"': კოსტუმი
-            '"direction"': მოძრაობის მიმართულება
-            '"rotation"': მოტრიალება ან მიმართულება
-            '"tint"': შეფერადება
-          OP:
-            '"="': "="
-            '">"': ">"
       gamelab_turn:
         options:
           DIRECTION:
@@ -487,8 +387,6 @@ ka:
             '"left"': მარცხნივ
       gamelab_whenDownArrow:
         text: როცა დაჭერილია ისარი ქვემოთ
-      gamelab_whenJoystick:
-        text: ჯოისტიკის გამოყენებისას
       gamelab_whenKey:
         options:
           KEY:
@@ -503,8 +401,6 @@ ka:
             '"d"': d
       gamelab_whenLeftArrow:
         text: როცა დაჭერილია ისარი მარცხნივ
-      gamelab_whenMouseClicked:
-        text: მაუსზე დაწკაპუნების დროს
       gamelab_whenPressedAndReleased:
         options:
           DIR:
@@ -514,17 +410,10 @@ ka:
             "'right'": მარჯვნივ
       gamelab_whenRightArrow:
         text: როცა დაჭერილია ისარი მარჯვნივ
-      gamelab_whenTouchingSet:
-        options:
-          CONDITION:
-            '"when"': როდის
-            '"while"': სანამ
       gamelab_whenUpArrow:
         text: როცა დაჭერილია ისარი მაღლა
       gamelab_whileDownArrow:
         text: სანამ დაჭერილია ისარი ქვემოთ
-      gamelab_whileJoystick:
-        text: ჯოისტიკის გამოყენების განმავლობაში
       gamelab_whileKey:
         options:
           KEY:

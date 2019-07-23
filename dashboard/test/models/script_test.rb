@@ -20,6 +20,10 @@ class ScriptTest < ActiveSupport::TestCase
     @script_2017 = create :script, name: 'script-2017', family_name: 'family-cache-test', version_year: '2017'
     @script_2018 = create :script, name: 'script-2018', family_name: 'family-cache-test', version_year: '2018'
 
+    @csf_script = create :csf_script, name: 'csf1'
+    @csd_script = create :csd_script, name: 'csd1'
+    @csp_script = create :csp_script, name: 'csp1'
+
     # ensure that we have freshly generated caches with this course/script
     Course.clear_cache
     Script.clear_cache
@@ -314,6 +318,13 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal frozen, Script.get_from_cache(frozen_id)
   end
 
+  test 'get_from_cache raises if called with a family_name' do
+    error = assert_raises do
+      Script.get_from_cache('coursea')
+    end
+    assert_equal 'Do not call Script.get_from_cache with a family_name. Call Script.get_script_family_redirect_for_user instead.  Family: coursea', error.message
+  end
+
   test 'get_family_from_cache uses script_family_cache' do
     family_scripts = Script.where(family_name: 'family-cache-test')
     assert_equal [@script_2017.name, @script_2018.name], family_scripts.map(&:name)
@@ -402,15 +413,35 @@ class ScriptTest < ActiveSupport::TestCase
     end
   end
 
-  test 'get_script_family_redirect_for_user returns latest user assigned script in family if user' do
+  test 'get_script_family_redirect_for_user returns latest stable script assigned or with progress if student' do
     csp1_2017 = create(:script, name: 'csp1-2017', family_name: 'csp', version_year: '2017')
-    create(:script, name: 'csp1-2018', family_name: 'csp', version_year: '2018')
+    csp1_2018 = create(:script, name: 'csp1-2018', family_name: 'csp', version_year: '2018')
+
+    # Assign student to csp1_2017.
     section = create :section, script: csp1_2017
     student = create :student
     section.students << student
 
     redirect_script = Script.get_script_family_redirect_for_user('csp', user: student)
     assert_equal csp1_2017.name, redirect_script.redirect_to
+
+    # Student makes progress in csp1_2018.
+    create :user_level, user: student, script: csp1_2018
+    student.reload
+
+    redirect_script = Script.get_script_family_redirect_for_user('csp', user: student)
+    assert_equal csp1_2018.name, redirect_script.redirect_to
+  end
+
+  test 'get_script_family_redirect_for_user returns latest stable script in family if teacher' do
+    teacher = create :teacher
+    csp1_2017 = create(:script, name: 'csp1-2017', family_name: 'csp', version_year: '2017', is_stable: true)
+    csp1_2018 = create(:script, name: 'csp1-2018', family_name: 'csp', version_year: '2018', is_stable: true)
+    create(:script, name: 'csp1-2019', family_name: 'csp', version_year: '2019')
+    create :section, user: teacher, script: csp1_2017
+
+    redirect_script = Script.get_script_family_redirect_for_user('csp', user: teacher)
+    assert_equal csp1_2018.name, redirect_script.redirect_to
   end
 
   test 'get_script_family_redirect_for_user returns nil if no scripts in family are stable' do
@@ -614,6 +645,7 @@ class ScriptTest < ActiveSupport::TestCase
     assert_nil Script.find_by_name('flappy').banner_image
     assert_equal 'banner_course1.jpg', Script.find_by_name('course1').banner_image
     assert_equal 'banner_course2.jpg', Script.find_by_name('course2').banner_image
+    assert_nil Script.find_by_name('csf1').banner_image
   end
 
   test 'professional_learning_course?' do
@@ -1035,10 +1067,10 @@ class ScriptTest < ActiveSupport::TestCase
     course3_yml = {'stages' => {'course3' => {'name' => 'course3'}}}
     course4_yml = {'stages' => {'course4' => {'name' => 'course4'}}}
 
-    stages_i18n = {'en' => {'data' => {'script' => {'name' => {
+    stages_i18n = {
       'course3' => course3_yml,
       'course4' => course4_yml
-    }}}}}
+    }
 
     # updated represents what will get written to scripts.en.yml
     updated = Script.update_i18n(original_yml, stages_i18n)
@@ -1078,8 +1110,8 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal 'This is what you should know as a teacher', updated_report_script['stages']['Report Stage 1']['description_teacher']
   end
 
-  test 'text_to_speech_enabled? when script k1? is true' do
-    assert Script.find_by_name('course1').text_to_speech_enabled?
+  test 'text_to_speech_enabled? for k5_course' do
+    assert Script.find_by_name('csf1').text_to_speech_enabled?
   end
 
   test '!text_to_speech_enabled? by default' do
@@ -1707,6 +1739,30 @@ endvariants
     refute Script.has_any_pilot_access?(teacher)
     assert Script.has_any_pilot_access?(pilot_teacher)
     assert Script.has_any_pilot_access?(levelbuilder)
+  end
+
+  test "script_names_by_curriculum_umbrella returns the correct script names" do
+    assert_equal(
+      [@csf_script.name],
+      Script.script_names_by_curriculum_umbrella('CSF')
+    )
+    assert_equal(
+      [@csd_script.name],
+      Script.script_names_by_curriculum_umbrella('CSD')
+    )
+    assert_equal(
+      [@csp_script.name],
+      Script.script_names_by_curriculum_umbrella('CSP')
+    )
+  end
+
+  test "under_curriculum_umbrella and helpers" do
+    assert @csf_script.under_curriculum_umbrella?('CSF')
+    assert @csf_script.csf?
+    assert @csd_script.under_curriculum_umbrella?('CSD')
+    assert @csd_script.csd?
+    assert @csp_script.under_curriculum_umbrella?('CSP')
+    assert @csp_script.csp?
   end
 
   private

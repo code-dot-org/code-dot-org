@@ -7,7 +7,7 @@
   "properties": {
     "skin": "gamelab",
     "embed": "false",
-    "long_instructions": "# Change the Background with the Score\r\n\r\nOnce you've caught 10 coins it's time to celebrate. You should change the background to be something fun.\r\n\r\n<img src=\"https://images.code.org/943c67e59502334fc65a25e690076bdb-image-1475030156530.33.54 PM.png\" style=\"float:right; height:100px\">\r\n\r\n# Do This\r\n\r\n* Use an **if-statement** and two separate functions to draw your backgrounds.\r\n* Then go write your functions outside your draw loop. You get to decide what a \"simple\" or \"crazy\" background are. Have fun with it!",
+    "long_instructions": "# Change the Background with the Score\r\n\r\nOnce you've caught 10 coins it's time to celebrate. You should change the background to be something fun.\r\n\r\n# Do This\r\n\r\n* Use an **if-statement** and two separate functions to draw your backgrounds.\r\n* Then go write your functions outside your draw loop. You get to decide what a \"simple\" or \"silly\" background are. Have fun with it!",
     "start_blocks": "var coin = createSprite(200,10);\r\ncoin.setAnimation(\"coin_gold_1\");\r\nsetCoin();\r\n\r\nvar bunny = createSprite(200,350);\r\nbunny.setAnimation(\"bunny1_ready_1\");\r\n\r\nvar score = 0;\r\n\r\nfunction draw() {\r\n  background(\"white\");\r\n  \r\n  if(keyDown(\"left\")){\r\n    bunny.x = bunny.x - 2;\r\n  }\r\n  \r\n  if(keyDown(\"right\")){\r\n    bunny.x = bunny.x + 2;\r\n  }\r\n  \r\n  if(coin.y > 400){\r\n    setCoin();\r\n  }\r\n  \r\n  textSize(20);\r\n  text(\"Score: \" + score, 10, 10, 100, 100);\r\n  drawSprites();\r\n}\r\n\r\nfunction setCoin(){\r\n\r\n}\r\n",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -45,11 +45,15 @@
     "expand_debugger": "false",
     "parent_level_id": 7924,
     "name_suffix": "_2018",
-    "contained_level_names": null
+    "preload_asset_list": null,
+    "encrypted": "false",
+    "mini_rubric": "false"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-08 20:39:07 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-06-08 20:39:07 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-06-17 21:07:58 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":959,\"changed_by_email\":\"george.zhang@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Gamelab>

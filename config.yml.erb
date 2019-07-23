@@ -1,0 +1,501 @@
+# Default global configuration settings for code-dot-org (CDO) application.
+# Keys in this file correspond to CDO.* properties, e.g., `x: foo` will set `CDO.x` to value `'foo'`.
+# All CDO.* properties _must_ be defined in this file, and _should_ be documented with descriptive comments.
+#
+# Once CDO configuration is loaded it is 'frozen', so values cannot be modified at runtime.
+# However, for testing, you can stub specific keys using Mocha syntax, e.g.:
+# CDO.stubs(x: 'foo')
+#
+# Properties defined below can be further configured through several overrides.
+# The loading order is as follows (1 = highest priority):
+#
+# 1. ENV          - environment-variable overrides (CDO_*, plus RACK_ENV and RAILS_ENV)
+#                   e.g.: `CDO_MY_VARIABLE` would override `CDO.my_variable`.
+# 2. locals.yml   - local configuration: locally-configured overrides
+# 3. globals.yml  - global configuration: globally-configured (e.g., Chef provisioned) overrides
+# 4. config/[env] - environment-specific overrides (version-controlled)
+# 5. config       - this file (version-controlled)
+#
+# CDO properties are generally used for the following use-cases:
+#
+# a. Configuration defaults that vary per-environment;
+# b. Configuration that may need to be manually overridden, e.g., when developing/testing services locally;
+# c. Application secrets, such as API keys or passwords;
+# d. Dynamic application endpoints, such as third-party services or dynamically-provisioned application resources
+#
+# CDO properties are not really needed for the following use-cases (though they have sometimes been used in these ways):
+#
+# e. Fixed constants that never change
+#    - Use a standard Ruby module/class constant.
+# f. Global namespace for general-purpose utility objects/functions, e.g., `CDO.cache`
+#    - Use a different namespace/constant to contain the object, e.g., `Cdo.cache` or `CDO_CACHE`.
+# g. Other custom logic that combines values from other CDO properties
+#    - Define a class method in another module/class containing the logic.
+#
+# See also:
+# DCDO and Gatekeeper properties are similar to CDO,
+# but are managed through an admin interface and can be updated while the application is running.
+#
+
+env:
+_env: <%=env == 'production' ? '' : "_#{env}"%>
+unit_test: <%=!!ENV['UNIT_TEST']%>
+ci: <%=!!ENV['CI']%>
+ci_test: <%=unit_test || ci%>
+root_dir: <%=__dir__%>
+name: <%=`hostname`.strip%>
+rack_env: :<%=env%>
+rack_envs:
+  - :development
+  - :production
+  - :adhoc
+  - :staging
+  - :test
+  - :levelbuilder
+  - :integration
+
+#### Third-party API credentials / configuration
+
+# OAuth provider credentials, used by Omniauth for authentication.
+dashboard_facebook_key:
+dashboard_facebook_secret:
+dashboard_google_key:
+dashboard_google_secret:
+dashboard_windowslive_key:
+dashboard_windowslive_secret:
+dashboard_microsoft_key:
+dashboard_microsoft_secret:
+dashboard_clever_key:
+dashboard_clever_secret:
+dashboard_schoolproject_key:
+dashboard_schoolproject_secret:
+
+# Recaptcha
+recaptcha_site_key:
+recaptcha_secret_key:
+
+# Logentries (aka 'slog')
+logentries_secret:
+slog_token:
+
+# Twilio
+twilio_auth:
+twilio_auth_test:
+twilio_messaging_service:
+twilio_phone_test_forward:
+twilio_phone_test_to:
+twilio_sid:
+twilio_sid_test:
+
+# Jotform
+jotform_api_key:
+jotform_forms:
+jotform_min_dates:
+
+# Learning Tools Interoperability (LTI)
+lti_credentials:
+
+# Mimeo
+mimeo_api:
+
+# PagerDuty
+pagerduty_token:
+
+# Pardot
+pardot_password:
+pardot_user_key:
+pardot_username:
+
+# Honeybadger
+honeybadger_api_token:
+cronjobs_honeybadger_api_key:
+dashboard_honeybadger_api_key: '00000000'
+pegasus_honeybadger_api_key: '00000000'
+
+# Zendesk
+zendesk_secret:
+zendesk_dev_token:
+
+# Webpurify
+webpurify_key:
+
+# Github
+github_access_token:
+github_webhook_secret:
+
+# Google API credentials (various)
+google_maps_client_id:
+google_maps_api_key:
+google_maps_secret:
+hoc_map_account:
+hoc_map_table_id:
+ga_account:
+ga_profile_id:
+google_safe_browsing_key: fake_api_key
+
+# Crowdin
+crowdin_codeorg_api_key:
+
+# Azure Content Moderator
+azure_content_moderation_endpoint:
+azure_content_moderation_key:
+
+# Credentials for SauceLabs.com, used for running selenium tests against
+# multiple browsers
+saucelabs_username:
+saucelabs_authkey:
+
+# Credentials for applitools.com, used for running automated visual tests
+applitools_eyes_api_key:
+applitools_eyes_api_key_view:
+
+# Slack API credentials
+slack_set_last_dtt_green_token:
+slack_start_build_token:
+slack_endpoint:
+slack_token:
+slack_log_room: <%=env%>
+hip_chat_logging: false
+# Logging endpoint used by broken link checker.
+slack_endpoint_broken_links:
+
+# Credentials/configuration for connecting to Firebase to use data blocks or data browser
+# in Applab.
+firebase_name:
+firebase_secret:
+firebase_channel_id_suffix: ''
+firebase_max_channel_writes_per_15_sec: 300
+firebase_max_channel_writes_per_60_sec: 600
+firebase_max_table_count: 10
+firebase_max_table_rows: 20000
+firebase_max_record_size: 4096
+firebase_max_property_size: 4096
+
+# Configuration Options for Pusher.com integration
+# Optional for most devs, very useful if working on Internet Simulator
+use_pusher: false
+pusher_app_id: fake_app_id
+pusher_application_key: fake_application_key
+pusher_application_secret: fake_application_secret
+
+# Configuration options for Acapela-Group.com integration
+use_acapela:
+acapela_login:
+acapela_storage_app:
+acapela_storage_password:
+acapela_ephemeral_app:
+acapela_ephemeral_password:
+
+# Credentials for new relic logging. Used to log apps build times.
+new_relic_license_key:
+newrelic_logging: false
+
+# Credentials for Google-federated AWS access.
+aws_role:
+google_client_id:
+google_client_secret:
+
+# Static AWS SDK credentials (prefer Google-federated authentication if possible).
+aws_region: us-east-1
+aws_access_key:
+aws_secret_key:
+
+### Service configurations (urls, endpoints, etc)
+
+freegeoip_host:
+geocoder_redis_url:
+solr_server:
+
+# Asynchronous queue-processor
+pd_workshop_queue_url:
+activity_queue_url:
+process_queues:
+
+# S3 bucket and (environment-specific) path-prefix configuration
+assets_bucket:             cdo-dist
+assets_bucket_prefix:      <%=env%>
+files_s3_bucket:           cdo-v3-files
+files_s3_directory:        files<%=_env%>
+animations_s3_bucket:      cdo-v3-animations
+animations_s3_directory:   animations<%=_env%>
+assets_s3_bucket:          cdo-v3-assets
+assets_s3_directory:       assets<%=_env%>
+sources_s3_bucket:         cdo-v3-sources
+sources_s3_directory:      sources<%=_env%>
+videos_s3_bucket:          videos.code.org
+videos_url:                //videos.code.org
+
+# Memcached (ElastiCache)
+memcached_endpoint:
+memcached_hosts:
+
+# Redis (ElastiCache)
+redis_primary:
+redis_read_addresses:
+redis_read_ports:
+
+# Netsim
+netsim_redis_groups:
+netsim_enable_metrics: false
+netsim_max_routers: 20
+netsim_shard_expiry_seconds: 7200
+
+# The Fusion Table ID for the census map shown at code.org/yourschool.  If this
+# is set to the ID for the production site, be careful not to run
+# update_census_map as it will overwrite that table.
+census_map_table_id: 1AUZYRjLMI5NiQsDeDBGFsOIFpL_rLGsnxNpSyR13
+
+# DynamoDB table names for dcdo/gatekeeper
+dcdo_table_name:       dcdo_<%=env%>
+gatekeeper_table_name: gatekeeper_<%=env%>
+
+# Poste (internal transactional email processing framework)
+poste_host: 'localhost.code.org:3000'
+poste_attachment_dir:
+poste_smtp_password:
+poste_smtp_server:
+poste_smtp_user:
+poste_secret: 'not a real secret'
+
+# Chef defaults
+chef_managed: false
+chef_local_mode: false
+chef_node_name: cdo-ci
+chef_org_name: code-dot-org
+chef_client_key: <%="#{ENV['HOME']}/.chef/#{chef_node_name}.pem"%>
+chef_validation_client_name: <%="#{chef_org_name}-validator"%>
+chef_validation_key: <%="#{ENV['HOME']}/.chef/#{chef_validation_client_name}.pem"%>
+chef_server_url: '<%="https://api.opscode.com/organizations/#{chef_org_name}"%>'
+
+# Cloudfront keys for private content
+cloudfront_key_pair_id:
+cloudfront_private_key:
+
+# Discourse configuration
+discourse_sso_secret:
+
+### Application configuration defaults
+
+i18n_key_value:
+i18n_backend:
+cache:
+app_servers: {}
+rack_mini_profiler_enabled:
+https_development:
+default_scheme: '<%=(env == 'development') || ci ? 'http:' : 'https:'%>'
+allowed_iframe_ancestors:
+skip_locales:
+secret_pictures_csv:
+no_https_store:
+expo_session_secret:
+firebase_debug:
+pd_teacher_application_list_secret_key:
+
+# Whether rake:build should rebuild the apps package
+build_apps: false
+
+# Whether dashboard should use your local build of the apps package.
+# If false, dashboard will try to use a prepackaged version from S3.
+use_my_apps:
+
+# Allows your local server to render non-English locales, defaults to false in development.
+# If false, choosing a locale other than English will have no effect.
+# Note: You may need to be in an incognito window to see changes
+# due to a difference in the language cookie between production and localhost.
+load_locales:
+
+# Whether to skip the slow `rake seed:all` command during `rake build`.
+# Until you manually run `rake seed:all` or disable this flag, you won't
+# see changes to: videos, concepts, levels, scripts, trophies, prize providers,
+# callouts, hints, secret words, or secret pictures.
+skip_seed_all:
+
+# Whether to store sprocket asset cache on disk or in memory. Setting this to
+# false reduces memory usage, but significantly slows down dev server startup.
+cache_assets_in_memory:
+
+# Encryption key required for decoding certain protected level sources.
+# Contributors should ask a Code.org engineer for this if needed.
+properties_encryption_key:
+
+# NOTE: When a new language is added to this set, make sure to also update
+# the redirection rules for the cdo-curriculum S3 bucket by running the
+# aws/s3/cdo-curriculum/redirection_rules.rb script. Otherwise, all links to
+# CB for that language will attempt to point to the language-specific version
+# of that content, even if we haven't translated that content yet.
+#
+# See the LANGUAGES setting in
+# https://github.com/mrjoshida/curriculumbuilder/blob/master/curriculumBuilder/settings.py
+# for the languages currently supported in CurriculumBuilder itself
+curriculum_languages: ['es-mx', 'it-it', 'th-th', 'sk-sk']
+
+start_circle_builds_branch:
+start_circle_builds_token:
+circle_build_num: <%=ENV['CIRCLE_BUILD_NUM']%>
+circle_node_index: <%=ENV['CIRCLE_NODE_INDEX']%>
+circle_run_identifier: <%=circle_build_num ? "CIRCLE-BUILD-#{circle_build_num}-#{circle_node_index}" : nil%>
+
+ignore_eyes_mismatches:
+
+# Keeps from taking eyes snapshots when running feature files
+disable_all_eyes_running:
+
+build_dashboard: true
+build_pegasus: true
+
+# Dashboard
+override_dashboard:
+dashboard_assets_dir: <%=root_dir%>/dashboard/public/assets
+dashboard_devise_secret:
+dashboard_devise_pepper: not a pepper!
+dashboard_secret_key_base: not a secret
+dashboard_host: 0.0.0.0
+dashboard_port: 3000
+dashboard_workers: 8
+dashboard_unicorn_name: dashboard
+dashboard_sock:
+
+# Causes dashboard-server to run pegasus as middleware, starting both in a
+# single command.  This is preferred (and default) in development mode.
+dashboard_enable_pegasus: false
+
+# Pegasus
+override_pegasus:
+pegasus_host:
+pegasus_sock:
+pegasus_port: 3000
+pegasus_unicorn_name: pegasus
+pegasus_workers: 8
+pegasus_skip_asset_map: false
+sinatra_session_secret:
+
+# Configures Pegasus `settings.read_only`, which affects some (legacy) routes. Not actively used(?)
+read_only: false
+
+proxy: false # If true, generated URLs will not include explicit port numbers in development
+
+# Run dashboard-server with the level editing interface enabled (for admins)
+levelbuilder_mode:
+
+default_hoc_mode:   pre-hoc  # overridden by 'hoc_mode' DCDO param, except in :test
+default_hoc_launch: ''       # overridden by 'hoc_launch' DCDO param, except in :test
+
+localize_apps: false
+
+partners: []
+
+# Default Rack server ports for PDF-generation scripts.
+pdf_port_collate: 8081
+pdf_port_markdown: 8081
+
+# Specify `use_mailcatcher: true` if you are running mailcatcher on localhost.
+# You should have also run this once:
+#   `gem install mailcatcher`
+# And this each time you need to start mailcatcher in the background again:
+#   `mailcatcher --ip=0.0.0.0`
+use_mailcatcher:
+
+lint: false
+
+# Whether to stub schools and school_districts table with much smaller data,
+# saving a total of 4 min 30 sec during rake seed. Default: true (in development).
+stub_school_data: false
+
+pretty_js: false
+
+disable_s3_image_uploads: false
+
+channels_api_secret: <%=poste_secret%>
+
+# Whether to prefix bundler commands with 'sudo'.
+# It may be useful to set this false when doing local development on Linux.
+bundler_use_sudo: <%=chef_managed%>
+
+daemon: <%=name == 'production-daemon'%>
+image_optim: <%=chef_managed && !ci_test%>
+
+# Referenced in CI config, but not sure if they are still used anywhere?
+# TODO verify these are intentionally no longer used and remove references from CI config.
+build_shared_js:
+use_my_shared_js:
+build_blockly_core:
+
+# Referenced in Chef config, but not sure if they are still used anywhere?
+# TODO: verify these are intentionally no longer used and remove references from Chef config.
+build_blockly: false
+geocoder_read_replica_1:
+geocoder_read_replica_2:
+browserstack_username:
+browserstack_authkey:
+dashboard_powerschool_key:
+dashboard_powerschool_secret:
+x-dashboard_twitter_key:
+x-dashboard_twitter_secret:
+ga_service_account_email:
+ga_api_key:
+ga_api_secret:
+hipchat_secret:
+indiegogo_api_token:
+localize_blockly: true
+level_builder_port: 8082
+sendy_db_reader:
+sendy_db_writer:
+developers_channel_id:
+twilio_phone:
+level_sources_redis_url:
+discourse_sso_url:
+discourse_url:
+pledge_map_table_id:
+hoc_map_service_account_email:
+hoc_map_api_secret:
+hoc_map_api_key:
+
+#### Parameters related to CloudFormation-stack deployment
+stack_name: <%=env%>
+cdn_enabled: <%=chef_managed%>
+
+# Application-stack parameters.
+instance_type:
+branch:
+database_username:
+
+# Data-stack parameters.
+rds_host:
+rds_identifier:
+rds_username:
+rds_password:
+redshift_database:
+redshift_username:
+rds_backup_account:
+logs_bucket:
+
+### Database configuration
+
+redshift_host:
+redshift_password:
+
+devinternal_db_writer:
+
+db_cluster_id:
+db_admin:
+reporting_db_admin:
+
+db_writer: 'mysql://root@localhost/'
+reporting_db_writer: 'mysql://root@localhost/'
+
+dashboard_db_name: dashboard_<%=env%>
+pegasus_db_name: pegasus<%=_env%>
+
+# Default reader endpoints to writer endpoint.
+db_reader: <%=db_writer%>
+reporting_db_reader: <%=reporting_db_writer%>
+
+# Default DB-specific endpoints to base endpoint plus db name.
+dashboard_db_reader:           <%="#{db_reader}#{dashboard_db_name}"%>
+dashboard_db_writer:           <%="#{db_writer}#{dashboard_db_name}"%>
+pegasus_db_reader:             <%="#{db_reader}#{pegasus_db_name}"%>
+pegasus_db_writer:             <%="#{db_writer}#{pegasus_db_name}"%>
+dashboard_reporting_db_reader: <%="#{reporting_db_reader}#{dashboard_db_name}"%>
+dashboard_reporting_db_writer: <%="#{reporting_db_writer}#{dashboard_db_name}"%>
+pegasus_reporting_db_reader:   <%="#{reporting_db_reader}#{pegasus_db_name}"%>
+pegasus_reporting_db_writer:   <%="#{reporting_db_writer}#{pegasus_db_name}"%>

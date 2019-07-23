@@ -4288,12 +4288,12 @@ pl:
               name: Programowanie w labiryncie
             Relay Programming:
               name: Sztafeta programowania
-            Debugging in Maze:
-              name: Debugowanie labiryntu
             Loops with Rey and BB-8:
               name: Pętle z Rey i BB-8
+            'Concept Practice with Minecraft ':
+              name: Patrząc w przyszłość
             Nested Loops in Bee:
-              name: Zagnieżdżone pętle w pszczole
+              name: Zagnieżdżone pętle w labiryncie
             Conditionals with Cards:
               name: Warunkowe z kartami
             Conditionals in Bee:
@@ -4322,6 +4322,10 @@ pl:
               name: Internet
             Crowdsourcing:
               name: Praca w grupie (Crowdsourcing)
+            Dance Party:
+              name: Potańcówka
+            Concept Practice with Minecraft:
+              name: Patrząc w przyszłość
         csd1-2019:
           stages:
             Intro to Problem Solving:
@@ -4405,14 +4409,10 @@ pl:
               name: Przenieść go, przenieść go
             Your Digital Footprint:
               name: Twój cyfrowy ślad
-            Loops in Ice Age:
-              name: Pętle w Epoce Lodowcowej
             Spelling Bee:
               name: Literująca Pszczółka
             Learn to Drag and Drop:
               name: Nauka metody "przeciągnij i upuść"
-            Programming in Maze:
-              name: Programowanie w labiryncie
         removed19:
           stages:
             'Debugging: Unspotted Bugs':
@@ -4659,6 +4659,8 @@ pl:
           stages:
             new stage:
               name: nowy etap
+            Number Systems:
+              name: Systemy liczbowe
         csd-videos:
           stages:
             new stage:
@@ -4685,7 +4687,94 @@ pl:
               name: Programowanie na papierze milimetrowym
             Programming in Maze:
               name: Programowanie w labiryncie
+            Loops with Rey and BB-8:
+              name: Pętle z Rey i BB-8
         csp5-pilot:
+          stages:
+            new stage:
+              name: nowy etap
+        csd-test-saving-state:
+          stages:
+            What is a Computer?:
+              name: Czym jest komputer?
+        csd1-pilot:
+          stages:
+            Intro to Problem Solving:
+              name: Wstęp do rozwiązywania problemów
+            The Problem Solving Process:
+              name: Proces Rozwiązywania Problemów
+            Exploring Problem Solving:
+              name: Odkrywanie rozwiązywania problemów
+            What is a Computer?:
+              name: Czym jest komputer?
+            Input and Output:
+              name: Wejście i wyjście
+            Processing:
+              name: Przetwarzanie
+            Project - Propose an App:
+              name: Projekt - Propozycja aplikacji
+        csd2-pilot:
+          stages:
+            Exploring Websites:
+              name: Odkrywanie stron
+            Intro to HTML:
+              name: Wprowadzenie do HTML
+            Headings:
+              name: Nagłówki
+            Digital Footprint:
+              name: Cyfrowy ślad
+            Lists:
+              name: Listy
+            Clean Code and Debugging:
+              name: Czysty kod i debugowanie
+            Styling Text with CSS:
+              name: Stylowanie tekstu przy użyciu CSS
+            Sources and Search Engines:
+              name: Źródła i wyszukiwarki
+            RGB Colors and Classes:
+              name: Kolory RGB i klasy
+            Project - Personal Portfolio Website:
+              name: Projekt - Własna strona portfolio
+            Intellectual Property:
+              name: Własność intelektualna
+            Images:
+              name: Obrazki
+        csd3-pilot:
+          description_short: "Programowanie"
+          stages:
+            Plotting Shapes:
+              name: Rysowanie kształtów
+            Drawing in Game Lab:
+              name: Rysowanie w laboratorium gier
+            Shapes and Randomization:
+              name: Kształty oraz losowość
+            Variables:
+              name: Zmienne
+            Booleans Unplugged:
+              name: Wyrażenia boolowskie bez komputera
+            Conditionals:
+              name: Zdania z warunkami
+            Keyboard Input:
+              name: Wejście klawiatury
+            Other Forms of Input:
+              name: Inne formy wejścia
+            Project - Interactive Card:
+              name: Projekt - Interaktywna karta
+            Velocity:
+              name: Prędkość
+            Collision Detection:
+              name: Wykrywanie kolizji
+            Collisions:
+              name: Kolizje
+            Functions:
+              name: Funkcje
+            The Game Design Process:
+              name: Proces projektowania gier
+            Using the Game Design Process:
+              name: Używanie procesu projektowania gier
+            Project - Design a Game:
+              name: Projekt - Zaprojektuj grę
+        maddie-test:
           stages:
             new stage:
               name: nowy etap

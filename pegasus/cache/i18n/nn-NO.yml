@@ -1195,47 +1195,9 @@ nn-NO:
   coursed-2017_name: Kurs D (2017)
   coursee-2017_name: Kurs E (2017)
   coursef-2017_name: Kurs F (2017)
+  pre-express-2018_name: Ekspresskurs før ein kan lese (2018)
   accelerated_name: Framskunda kurs
   express_name: Ekspresskurs
-  pre-express_name: Programmeringskurs før ein kan lese
-  express-2017_name: Ekspresskurs (2017)
-  pre-express-2017_name: Ekspresskurs før ein kan lese (2017)
-  pre-express-2018_name: Ekspresskurs før ein kan lese (2018)
-  cspunit1_name: "(gammel) Eining 1: Digital informasjon"
-  cspunit2_name: "(gammel) Eining 2: Internett"
-  cspunit3_name: "(gammel) Eining 3: Programmering"
-  cspunit4_name: "(gammel) Eining 4: Data"
-  cspunit5_name: "(gamal) Eining 5: Utforsk og lag PT"
-  cspunit6_name: 'Post-AP: Databaser i appar'
-  csd5_name: 'Eining 5: Data og samfunn'
-  csd6_name: 'Eining 6: Fysisk programmering'
-  csd5-2017_name: 'Eining 5: Data og samfunn'
-  csd6-2017_name: 'Eining 6: Fysisk programmering'
-  csd5-2018_name: 'Eining 5: Data og samfunn'
-  csd6-2018_name: 'Eining 6: Fysisk programmering'
-  csp1-2017_name: 'Eining 1: Internett'
-  csp2-2017_name: 'Eining 2: Digital informasjon'
-  csp-explore-2017_name: 'AP: Utforsk PT-førebuing'
-  csp-create-2017_name: 'AP: Lag ei PT-førebuing'
-  csppostap-2017_name: 'Post-AP: Databasar i appar'
-  csp1-2018_name: 'Eining 1: Internett'
-  csp2-2018_name: 'Eining 2: Digital informasjon'
-  csp-explore-2018_name: 'AP: Utforsk PT-førebuing'
-  csp-create-2018_name: 'AP: Lag ei PT-førebuing'
-  csppostap-2018_name: 'Post-AP: Databasar i appar'
-  csp1_name: 'Eining 1: Internett'
-  csp2_name: 'Eining 2: Digital informasjon'
-  csp3-a_name: 'Eining 3: Intro til programmering (versjon A)'
-  csp3-research-mxghyt_name: 'Eining 3: Intro til programmering (delmål)'
-  csp-ap_name: AP-ytelseaktivitetar
-  csppostap_name: 'Post-AP: Databasar i appar'
-  csp-post-survey_name: Elevundersøking etter kurs
-  cspassessment_name: Full test - 50 spørsmål
-  csp-explore_name: 'AP: Utforsk PT-førebuing'
-  csp-create_name: 'AP: Lag ei PT-førebuing'
-  cspexam1-mWU7ilDYM9_name: 'Test del 1: 25 spørsmål'
-  cspexam2-AKwgAh1ac5_name: Test del 2 - 25 spørsmål
-  cspunit3_gradelevel: 9.-12. klasse
   20-hour_name: Framskunda kurs
   algebra_name: Heilt kurs i algebra for datavitskap
   AlgebraA_name: Informatikk i algebra kurs A
@@ -1246,18 +1208,6 @@ nn-NO:
   minecraft_name: Minecraft
   starwarsblocks_name: Star Wars (blokker)
   hoc-encryption_name: Enkel kryptering
-  math_category_name: Matematikk
-  hoc_category_name: Kodetimen
-  csf_category_name: Grunnleggande informatikk
-  csf_2017_category_name: Grunnleggande informatikk (2017)
-  csf_2018_category_name: Grunnleggande informatikk (2018)
-  csf_international_category_name: Grunnleggande informatikk internasjonalt
-  csf2_draft_category_name: 'Under utvikling: Kurs A - F'
-  csd_2018_category_name: Oppdagingar i informatikk (2018-19)
-  csp_category_name: "'15-'16 Prinsipper i informatikk"
-  csp17_category_name: Prinsipp i datavitskap ('17-'18)
-  csp_2018_category_name: Prinsipp i informatikk (2018-19)
-  cspexams_category_name: Prinsipp i teoriprøve i informatikk
   applab_name: App-lab
   gamelab_name: Spel-lab
   basketball_name: Lag eit basketballspel
@@ -1337,6 +1287,12 @@ nn-NO:
   coursed-2018_gradelevel: 8.+ klasse
   coursee-2018_gradelevel: Alder 8–12 år
   coursef-2018_gradelevel: Alder 9-13 år
+  coursea-2019_gradelevel: Alder 4-7 år
+  courseb-2019_gradelevel: Alder 5-8 år
+  coursec-2019_gradelevel: Alder 6-10 år
+  coursed-2019_gradelevel: 8.+ klasse
+  coursee-2019_gradelevel: Alder 8–12 år
+  coursef-2019_gradelevel: Alder 9-13 år
   accelerated_gradelevel: Frå 10+ år (etter Kurs 3)
   codeorg_platformtext: Moderne nettlesarar, smarttelefonar, nettbrett
   codeintl_platformtext: Moderne nettlesarar, smarttelefonar, nettbrett
@@ -1495,6 +1451,16 @@ nn-NO:
   coursee-2018_shortdescription_congrats: Få eit raskt overblikk over konsepta frå
     kurs C og D, og gå videre med funksjonar.
   coursef-2018_shortdescription_congrats: Lær alle konspta i grunnleggande informatikk
+    og skap din eigen kunst, historie eller spel.
+  coursea-2019_shortdescription_congrats: Ein introduksjon til informatikk for dei
+    som ikkje kan lese.
+  courseb-2019_shortdescription_congrats: Ein introduksjon til informatikk for dei
+    som ikkje kan lese. (Lik Kurs A, men med meir variasjon for eldre elevar).
+  coursed-2019_shortdescription_congrats: Få eit raskt overblikk over konsepta frå
+    kurs C, og gå videre med algoritmar, løkker i løkke, vilkår og meir.
+  coursee-2019_shortdescription_congrats: Få eit raskt overblikk over konsepta frå
+    kurs C og D, og gå videre med funksjonar.
+  coursef-2019_shortdescription_congrats: Lær alle konspta i grunnleggande informatikk
     og skap din eigen kunst, historie eller spel.
   codeorg_longdescription: Lær dei grunnlegjande konsepta for datavitksap med dra-og-slepp-programmering.
     Dette er ei spel-liknande, sjølvstyrt øving med videoforedrag av Bill Gates, Mark
@@ -2017,10 +1983,6 @@ nn-NO:
   header_report_bug: Rapporter feil
   header_tutorials: Guide
   header_documentation: Dokumentasjon
-  csp_name: Prinsipp i datavitskap
-  csd_name: Oppdagingar i informatikk
-  csd_2018_name: Oppdagingar i informatikk
-  full_course_category_name: Alle kurs
   user_header_label: Hei %{username}
   user_header_team: Team
   user_header_settings: Kontoinnstillingar

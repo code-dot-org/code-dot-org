@@ -1,15 +1,20 @@
 /* global appOptions */
 import $ from 'jquery';
+import MD5 from 'crypto-js/md5';
 import msg from '@cdo/locale';
 import * as utils from '../../utils';
 import {CIPHER, ALPHABET} from '../../constants';
 import {files as filesApi} from '../../clientApi';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import {AbuseConstants} from '@cdo/apps/util/sharedConstants';
+import experiments from '@cdo/apps/util/experiments';
 
 // Attempt to save projects every 30 seconds
 var AUTOSAVE_INTERVAL = 30 * 1000;
 
-var ABUSE_THRESHOLD = 15;
+const NUM_ERRORS_BEFORE_WARNING = 3;
+
+var ABUSE_THRESHOLD = AbuseConstants.ABUSE_THRESHOLD;
 
 var hasProjectChanged = false;
 
@@ -83,6 +88,9 @@ let newSourceVersionInterval = 15 * 60 * 1000; // 15 minutes
 var currentAbuseScore = 0;
 var sharingDisabled = false;
 var currentHasPrivacyProfanityViolation = false;
+var currentShareFailureEnglish = '';
+var currentShareFailureIntl = '';
+var intlLanguage = false;
 var isEditing = false;
 let initialSaveComplete = false;
 let initialCaptureComplete = false;
@@ -120,6 +128,7 @@ function unpackSources(data) {
     html: data.html,
     animations: data.animations,
     makerAPIsEnabled: data.makerAPIsEnabled,
+    generatedProperties: data.generatedProperties,
     selectedSong: data.selectedSong
   };
 }
@@ -258,6 +267,19 @@ var projects = (module.exports = {
     return currentSources.makerAPIsEnabled;
   },
 
+  /**
+   * Calculates a md5 hash for everything within sources except the
+   * generatedProperties.
+   * @return {string} md5 hash string.
+   */
+  md5CurrentSources() {
+    const {
+      generatedProperties, // eslint-disable-line no-unused-vars
+      ...sourcesWithoutProperties
+    } = currentSources;
+    return MD5(JSON.stringify(sourcesWithoutProperties)).toString();
+  },
+
   getCurrentSourceVersionId() {
     return currentSourceVersionId;
   },
@@ -343,6 +365,27 @@ var projects = (module.exports = {
    */
   hasPrivacyProfanityViolation() {
     return currentHasPrivacyProfanityViolation;
+  },
+
+  /**
+   * @returns {string} the text that was flagged by our content moderation service for being potentially private or profane in English.
+   */
+  privacyProfanityDetailsEnglish() {
+    return currentShareFailureEnglish;
+  },
+
+  /**
+   * @returns {string} the text that was flagged by our content moderation service for being potentially private or profane in an language other than English.
+   */
+  privacyProfanityDetailsIntl() {
+    return currentShareFailureIntl;
+  },
+
+  /**
+   * @returns {string} a 2-character language code if the content moderation service ran in a language other than English.
+   */
+  privacyProfanitySecondLanguage() {
+    return intlLanguage;
   },
 
   /**
@@ -447,7 +490,9 @@ var projects = (module.exports = {
 
   showProjectHeader() {
     if (this.shouldUpdateHeaders()) {
-      header.showProjectHeader();
+      header.showProjectHeader({
+        showExport: this.shouldShowExport()
+      });
     }
   },
 
@@ -463,14 +508,29 @@ var projects = (module.exports = {
     return (
       (appOptions.level && appOptions.level.hideShareAndRemix) ||
       (appOptions.embed &&
-        (appOptions.app === 'applab' || appOptions.app === 'gamelab'))
+        (appOptions.app === 'applab' ||
+          appOptions.app === 'gamelab' ||
+          appOptions.app === 'spritelab'))
+    );
+  },
+
+  // Currently, only applab when the experiment is enabled. Hide if
+  // hideShareAndRemix is set on the level.
+  shouldShowExport() {
+    const {level = {}, app} = appOptions;
+    const {hideShareAndRemix} = level;
+    return (
+      !hideShareAndRemix &&
+      (app === 'applab' || app === 'gamelab') &&
+      experiments.isEnabled('exportExpo')
     );
   },
 
   showHeaderForProjectBacked() {
     if (this.shouldUpdateHeaders()) {
       header.showHeaderForProjectBacked({
-        showShareAndRemix: !this.shouldHideShareAndRemix()
+        showShareAndRemix: !this.shouldHideShareAndRemix(),
+        showExport: this.shouldShowExport()
       });
     }
   },
@@ -500,6 +560,8 @@ var projects = (module.exports = {
    * @param {function(): string} sourceHandler.getLevelSource
    * @param {function(SerializedAnimationList)} sourceHandler.setInitialAnimationList
    * @param {function(function(): SerializedAnimationList)} sourceHandler.getAnimationList
+   * @param {function(Object)} sourceHandler.setInitialGeneratedProperties
+   * @param {function(): Object} sourceHandler.getGeneratedProperties
    * @param {function(boolean)} sourceHandler.setMakerAPIsEnabled
    * @param {function(): boolean} sourceHandler.getMakerAPIsEnabled
    * @param {function(): boolean} sourceHandler.setSelectedSong
@@ -527,6 +589,12 @@ var projects = (module.exports = {
 
       if (currentSources.animations) {
         sourceHandler.setInitialAnimationList(currentSources.animations);
+      }
+
+      if (currentSources.generatedProperties) {
+        sourceHandler.setInitialGeneratedProperties(
+          currentSources.generatedProperties
+        );
       }
 
       if (isEditing) {
@@ -609,6 +677,8 @@ var projects = (module.exports = {
         return msg.defaultProjectNameAppLab();
       case 'gamelab':
         return msg.defaultProjectNameGameLab();
+      case 'spritelab':
+        return msg.defaultProjectNameSpriteLab();
       case 'weblab':
         return msg.defaultProjectNameWebLab();
       case 'turtle':
@@ -670,12 +740,9 @@ var projects = (module.exports = {
       case 'flappy':
       case 'scratch':
       case 'weblab':
-        return appOptions.app; // Pass through type exactly
       case 'gamelab':
-        if (appOptions.droplet) {
-          return 'gamelab';
-        }
-        return 'spritelab';
+      case 'spritelab':
+        return appOptions.app; // Pass through type exactly
       case 'turtle':
         if (appOptions.skinId === 'elsa' || appOptions.skinId === 'anna') {
           return 'frozen';
@@ -853,7 +920,7 @@ var projects = (module.exports = {
       return;
     }
 
-    $('.project_updated_at').text(msg.saving());
+    header.showProjectSaving();
 
     // Force a new version if we have not done so recently. This creates
     // periodic "checkpoint" saves if the user works for a long period of time
@@ -924,8 +991,20 @@ var projects = (module.exports = {
                 saveSourcesErrorCount,
                 err.message
               );
+              if (saveSourcesErrorCount >= NUM_ERRORS_BEFORE_WARNING) {
+                header.showTryAgainDialog();
+              }
               return;
             }
+          } else if (saveSourcesErrorCount > 0) {
+            // If the previous errors occurred due to network problems, we may not
+            // have been able to report them. Try to report them once more, now that
+            // the network appears to be working again.
+            this.logError_(
+              'sources-saved-after-errors',
+              saveSourcesErrorCount,
+              `sources saved after ${saveSourcesErrorCount} consecutive failures`
+            );
           }
           saveSourcesErrorCount = 0;
           if (!firstSaveTimestamp) {
@@ -1016,18 +1095,29 @@ var projects = (module.exports = {
    */
   getUpdatedSourceAndHtml_(callback) {
     this.sourceHandler.getAnimationList(animations =>
-      this.sourceHandler.getLevelSource().then(response => {
-        const source = response;
+      this.sourceHandler.getLevelSource().then(source => {
         const html = this.sourceHandler.getLevelHtml();
         const makerAPIsEnabled = this.sourceHandler.getMakerAPIsEnabled();
         const selectedSong = this.sourceHandler.getSelectedSong();
-        callback({source, html, animations, makerAPIsEnabled, selectedSong});
+        const generatedProperties = this.sourceHandler.getGeneratedProperties();
+        callback({
+          source,
+          html,
+          animations,
+          makerAPIsEnabled,
+          selectedSong,
+          generatedProperties
+        });
       })
     );
   },
 
   getSelectedSong() {
     return currentSources.selectedSong;
+  },
+
+  getGeneratedProperties() {
+    return currentSources.generatedProperties;
   },
 
   /**
@@ -1053,6 +1143,9 @@ var projects = (module.exports = {
   },
   showSaveError_(errorType, errorCount, errorText) {
     header.showProjectSaveError();
+    this.logError_(errorType, errorCount, errorText);
+  },
+  logError_: function(errorType, errorCount, errorText) {
     firehoseClient.putRecord(
       {
         study: 'project-data-integrity',
@@ -1085,9 +1178,22 @@ var projects = (module.exports = {
         saveChannelErrorCount,
         err + ''
       );
+      if (saveChannelErrorCount >= NUM_ERRORS_BEFORE_WARNING) {
+        header.showTryAgainDialog();
+      }
       return;
+    } else if (saveChannelErrorCount) {
+      // If the previous errors occurred due to network problems, we may not
+      // have been able to report them. Try to report them once more, now that
+      // the network appears to be working again.
+      this.logError_(
+        'channel-saved-after-errors',
+        saveChannelErrorCount,
+        `channel save succeeded after ${saveChannelErrorCount} consecutive failures`
+      );
     }
     saveChannelErrorCount = 0;
+    header.hideTryAgainDialog();
 
     // The following race condition can lead to thumbnail URLs not being stored
     // in the project metadata:
@@ -1238,7 +1344,7 @@ var projects = (module.exports = {
     var destChannel = current.id;
     assets.copyAll(srcChannel, destChannel, function(err) {
       if (err) {
-        $('.project_updated_at').text('Error copying files'); // TODO i18n
+        header.showProjectSaveError();
         return;
       }
       executeCallback(callback);
@@ -1324,7 +1430,7 @@ var projects = (module.exports = {
               .slice(PathPart.START, PathPart.APP + 1)
               .join('/');
           } else {
-            fetchSource(
+            this.fetchSource(
               data,
               () => {
                 if (current.isOwner && pathInfo.action === 'view') {
@@ -1349,7 +1455,7 @@ var projects = (module.exports = {
         if (err) {
           deferred.reject();
         } else {
-          fetchSource(
+          this.fetchSource(
             data,
             () => {
               projects.showHeaderForProjectBacked();
@@ -1450,53 +1556,58 @@ var projects = (module.exports = {
   setPublishedAt(publishedAt) {
     current = current || {};
     current.publishedAt = publishedAt;
+  },
+
+  /**
+   * Given data from our channels api, updates current and gets sources from
+   * sources api
+   * @param {object} channelData Data we fetched from channels api
+   * @param {function} callback
+   * @param {string?} version Optional version to load
+   * @param {boolean} sources api to use, if present.
+   */
+  fetchSource(channelData, callback, version, sourcesApi) {
+    // Explicitly remove levelSource/levelHtml from channels
+    delete channelData.levelSource;
+    delete channelData.levelHtml;
+    // Also clear out html, which we never should have been setting.
+    delete channelData.html;
+
+    // Update current
+    current = channelData;
+
+    projects.setTitle(current.name);
+    if (sourcesApi && channelData.migratedToS3) {
+      var url = current.id + '/' + SOURCE_FILE;
+      if (version) {
+        url += '?version=' + version;
+      }
+      sourcesApi.fetch(url, (err, data, jqXHR) => {
+        if (err) {
+          this.logError_(
+            'load-sources-error',
+            null,
+            `unable to fetch project source file: ${err}`
+          );
+          console.warn();
+          data = {
+            source: '',
+            html: '',
+            animations: ''
+          };
+        }
+        currentSourceVersionId =
+          jqXHR && jqXHR.getResponseHeader('S3-Version-Id');
+        unpackSources(data);
+        callback();
+      });
+    } else {
+      // It's possible that we created a channel, but failed to save anything to
+      // S3. In this case, it's expected that html/levelSource are null.
+      callback();
+    }
   }
 });
-
-/**
- * Given data from our channels api, updates current and gets sources from
- * sources api
- * @param {object} channelData Data we fetched from channels api
- * @param {function} callback
- * @param {string?} version Optional version to load
- * @param {boolean} sources api to use, if present.
- */
-function fetchSource(channelData, callback, version, sourcesApi) {
-  // Explicitly remove levelSource/levelHtml from channels
-  delete channelData.levelSource;
-  delete channelData.levelHtml;
-  // Also clear out html, which we never should have been setting.
-  delete channelData.html;
-
-  // Update current
-  current = channelData;
-
-  projects.setTitle(current.name);
-  if (sourcesApi && channelData.migratedToS3) {
-    var url = current.id + '/' + SOURCE_FILE;
-    if (version) {
-      url += '?version=' + version;
-    }
-    sourcesApi.fetch(url, function(err, data, jqXHR) {
-      if (err) {
-        console.warn('unable to fetch project source file', err);
-        data = {
-          source: '',
-          html: '',
-          animations: ''
-        };
-      }
-      currentSourceVersionId =
-        jqXHR && jqXHR.getResponseHeader('S3-Version-Id');
-      unpackSources(data);
-      callback();
-    });
-  } else {
-    // It's possible that we created a channel, but failed to save anything to
-    // S3. In this case, it's expected that html/levelSource are null.
-    callback();
-  }
-}
 
 function fetchAbuseScore(resolve) {
   channels.fetch(current.id + '/abuse', function(err, data) {
@@ -1522,6 +1633,26 @@ function fetchSharingDisabled(resolve) {
   });
 }
 
+function fetchShareFailure(resolve) {
+  channels.fetch(current.id + '/share-failure', function(err, data) {
+    currentShareFailureEnglish =
+      data && data.share_failure && data.share_failure.content
+        ? data.share_failure.content
+        : currentShareFailureEnglish;
+    currentShareFailureIntl =
+      data && data.intl_share_failure && data.intl_share_failure.content
+        ? data.intl_share_failure.content
+        : currentShareFailureIntl;
+    intlLanguage = data && data.language ? data.language : intlLanguage;
+    resolve();
+    if (err) {
+      // Throw an error so that things like New Relic see this. This shouldn't
+      // affect anything else
+      throw err;
+    }
+  });
+}
+
 function fetchPrivacyProfanityViolations(resolve) {
   channels.fetch(current.id + '/privacy-profanity', (err, data) => {
     // data.has_violation is 0 or true, coerce to a boolean
@@ -1537,7 +1668,10 @@ function fetchPrivacyProfanityViolations(resolve) {
 }
 
 function fetchAbuseScoreAndPrivacyViolations(project, callback) {
-  const deferredCallsToMake = [new Promise(fetchAbuseScore)];
+  const deferredCallsToMake = [
+    new Promise(fetchAbuseScore),
+    new Promise(fetchShareFailure)
+  ];
 
   if (project.getStandaloneApp() === 'playlab') {
     deferredCallsToMake.push(new Promise(fetchPrivacyProfanityViolations));

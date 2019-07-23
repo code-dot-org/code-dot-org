@@ -375,3 +375,15 @@ uz:
           stages:
             Graph Paper Programming:
               name: Katakchali varaqda dasturlash
+        csd2-pilot:
+          stages:
+            Lists:
+              name: Ro‘yxatlar
+        csd3-pilot:
+          stages:
+            Variables:
+              name: O‘zgaruvchilar
+            Conditionals:
+              name: Shart buyruqlari
+            Functions:
+              name: Funksiyalar

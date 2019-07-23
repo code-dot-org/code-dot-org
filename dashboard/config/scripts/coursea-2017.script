@@ -10,6 +10,7 @@ family_name 'coursea'
 version_year '2017'
 is_stable true
 supported_locales ["es-ES", "es-MX", "sk-SK"]
+curriculum_umbrella 'CSF'
 
 stage 'Debugging: Unspotted Bugs'
 level 'courseB_video_Unspotted'

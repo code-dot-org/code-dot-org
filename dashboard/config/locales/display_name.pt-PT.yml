@@ -1,5 +1,5 @@
 ---
-pt:
+pt-PT:
   data:
     display_name:
       CSD U2 Pair Programming Video: Programação em duplas
@@ -50,7 +50,6 @@ pt:
       CSD U3 Variables Map: variáveis
       CSD U3 Variables Map_2018: variáveis
       CSD U3 Variables Map_2019: variáveis
-      CSD U3 functions map: Funções
       CSD U6 for loop map: Ciclos "for"
       CSD U6 for loop map_2018: Ciclos "for"
       CSD U6 for loop map_2019: Ciclos "for"
@@ -58,7 +57,3 @@ pt:
       CSD U6 functions paramters video_2018: Funções com parâmetros
       CSD U6 functions paramters video_2019: Funções com parâmetros
       'CSD: For Loop_2018': Ciclos "for"
-      'CSD: For Loop_2019': Ciclos "for"
-      MC_HOC_2017_FP10x10: Atividade livre
-      MC_HOC_2017_FP10x10_RE: Atividade livre
-      SG U3L07 More Subgoals: Documentação

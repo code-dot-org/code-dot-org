@@ -672,6 +672,7 @@ hu:
         csd_pair_programming: Páros programozás
         csd_applab_parameters: Paraméteres függvények
         csd_problem_solving_process: A probléma-megoldási folyamat
+        CSF_Spritelab_MakeSprite_v2: Hogyan készítsünk sprite-ot
     callout:
       text:
         drag_blocks: Húzz egy „előrelépni” blokkot, és csatold a másik blokk alá

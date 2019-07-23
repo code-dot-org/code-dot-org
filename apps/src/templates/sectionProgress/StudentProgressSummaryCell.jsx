@@ -12,8 +12,7 @@ class StudentProgressSummaryCell extends Component {
     studentId: PropTypes.number.isRequired,
     style: PropTypes.object,
     levelsWithStatus: PropTypes.arrayOf(PropTypes.object),
-    onSelectDetailView: PropTypes.func,
-    inMiniRubricExperiment: PropTypes.bool
+    onSelectDetailView: PropTypes.func
   };
 
   render() {
@@ -43,7 +42,6 @@ class StudentProgressSummaryCell extends Component {
           imperfect={imperfectPixels}
           perfect={perfectPixels}
           stageIsAllAssessment={assessmentStage}
-          inMiniRubricExperiment={this.props.inMiniRubricExperiment}
         />
       </div>
     );

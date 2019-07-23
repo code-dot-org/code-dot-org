@@ -230,7 +230,7 @@ sk:
         desc: "# Brad Repro Chyba 000\\r\n## Pokus na zopakovanie chyby, ktorú nahlásil Brooke\\r\nproces je nasledovný:\\r\n1. začal som s levelom \"unplugged\", doplnil som informácie, stlačil som Uložiť a publikovať.\\r\n2. \"zničil\" som level\\r\n3. spravil som \"označený\" level s rovnakým obsahom a rovnakým menom. označil som políčko pre jeho zašifrovanie. stlačil som uložiť a publikovať"
       courseB_unplugged_MRF_2018:
         title: Moji robotickí kamaráti
-        desc: Naučte sa programovať napísaním kódu pre Vašich priateľov!
+        desc: Naučte sa programovať napísaním kódu pre vašich priateľov!
       PlantASeed_2018:
         title: 'Algoritmy z reálneho života: Zasaď semienko'
         desc: Táto lekcia na príklade sadenia semienka objasňuje spôsoby, akými používame algoritmy v každodennom živote. Takisto sa zameriava na širšie súvislosti informatiky a dôležitú rolu algoritmov.
@@ -286,7 +286,7 @@ sk:
         desc: Táto aktivita začne krátkym cvičením v hľadaní a opravovaní chýb a vo vytrvalosti. Následne sa študenti rozdelia do skupín, v ktorých, pretekajúc s časom, postupne po jednotlivých príkazoch vytvoria program.
       courseB_unplugged_MRF_2019:
         title: Moji robotickí kamaráti
-        desc: Naučte sa programovať napísaním kódu pre Vašich priateľov!
+        desc: Naučte sa programovať napísaním kódu pre vašich priateľov!
       BuildingAFoundation_2019:
         title: 'chýba preklad: en-US.data.unplugged.BuildingAFoundation_2018.title'
         desc: 'chýba preklad: en-US.data.unplugged.BuildingAFoundation_2018.desc'

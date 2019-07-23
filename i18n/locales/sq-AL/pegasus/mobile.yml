@@ -721,8 +721,6 @@
   classicmaze_name: "Labirint Klasik"
   iceage_name: "Epoka e Akullnajave"
   minecraft_name: "Minecraft"
-  math_category_name: "Matematikë"
-  hoc_category_name: "Ora e Kodimit"
   applab_name: "Laboratori i Aplikacioneve"
   basketball_name: "Realizo një lojë basketbolli"
   sports_name: "Krijo lojën tënde sportive"
@@ -782,6 +780,8 @@
   coursee-2017_gradelevel: Moshat 8-12
   coursed-2018_gradelevel: Klasat 8+
   coursee-2018_gradelevel: Moshat 8-12
+  coursed-2019_gradelevel: Klasat 8+
+  coursee-2019_gradelevel: Moshat 8-12
   accelerated_gradelevel: "Moshat 10-18"
   codeorg_platformtext: "Browserat e kohës, smartphones, tableta"
   codeintl_platformtext: "Browserat e kohës, smartphones, tableta"

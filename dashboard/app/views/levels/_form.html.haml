@@ -57,6 +57,12 @@
       - @level.script_levels.each do |script_level|
         %li
           = f.submit build_script_level_path(script_level), {:class=> 'publishLevel', :name => "redirect", :style => "font-family: monospace; margin-bottom: 10px"}
+      - BubbleChoice.parent_levels(@level.name).each do |parent_level|
+        - parent_level.script_levels.each do |script_level|
+          %li
+            - position = parent_level.sublevel_position(@level)
+            = f.submit build_script_level_path(script_level, sublevel_position: position), {:class=> 'publishLevel', :name => "redirect", :style => "font-family: monospace; margin-bottom: 10px"}
+
 %pre#validation-error.validation-error{style: 'background-color: yellow; display: none'}
 :javascript
   window.levelbuilder.ajaxSubmit("#{@level.new_record? ? '#new_level' : '.edit_level'}");

@@ -1541,3 +1541,15 @@ eu:
           stages:
             Graph Paper Programming:
               name: Paper grafiko programazioa
+        csd2-pilot:
+          stages:
+            Lists:
+              name: Zerrendak
+        csd3-pilot:
+          stages:
+            Variables:
+              name: Aldagaiak
+            Conditionals:
+              name: Baldintzak
+            Functions:
+              name: Funtzioak

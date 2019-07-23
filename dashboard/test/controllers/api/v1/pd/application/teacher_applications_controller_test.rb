@@ -5,6 +5,8 @@ module Api::V1::Pd::Application
     include Pd::Application::ApplicationConstants
     include Pd::Application::ActiveApplicationModels
 
+    self.use_transactional_test_case = true
+
     setup_all do
       @test_params = {
         form_data: build(TEACHER_APPLICATION_HASH_FACTORY)

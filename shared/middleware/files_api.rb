@@ -61,7 +61,7 @@ class FilesApi < Sinatra::Base
   end
 
   def can_view_profane_or_pii_assets?(encrypted_channel_id)
-    owns_channel?(encrypted_channel_id) || admin?
+    owns_channel?(encrypted_channel_id) || admin? || has_permission?('project_validator')
   end
 
   def file_too_large(quota_type)
@@ -225,7 +225,7 @@ class FilesApi < Sinatra::Base
 
     metadata = result[:metadata]
     abuse_score = [metadata['abuse_score'].to_i, metadata['abuse-score'].to_i].max
-    not_found if abuse_score > 0 && !can_view_abusive_assets?(encrypted_channel_id)
+    not_found if abuse_score >= SharedConstants::ABUSE_CONSTANTS.ABUSE_THRESHOLD && !can_view_abusive_assets?(encrypted_channel_id)
     not_found if profanity_privacy_violation?(filename, result[:body]) && !can_view_profane_or_pii_assets?(encrypted_channel_id)
     not_found if code_projects_domain_root_route && !codeprojects_can_view?(encrypted_channel_id)
 
@@ -313,7 +313,6 @@ class FilesApi < Sinatra::Base
 
   def put_file(endpoint, encrypted_channel_id, filename, body)
     not_authorized unless owns_channel?(encrypted_channel_id)
-
     file_too_large(endpoint) unless body.length < max_file_size
 
     buckets = get_bucket_impl(endpoint).new
@@ -346,7 +345,9 @@ class FilesApi < Sinatra::Base
     tab_id = params['tabId']
     conflict unless buckets.check_current_version(encrypted_channel_id, filename, current_version, should_replace, timestamp, tab_id, current_user_id)
 
-    response = buckets.create_or_replace(encrypted_channel_id, filename, body, version_to_replace)
+    abuse_score = StorageApps.get_abuse(encrypted_channel_id)
+
+    response = buckets.create_or_replace(encrypted_channel_id, filename, body, version_to_replace, abuse_score)
 
     {
       filename: filename,
@@ -428,7 +429,8 @@ class FilesApi < Sinatra::Base
 
     bad_request unless file[:filename] && file[:tempfile]
 
-    put_file('assets', encrypted_channel_id, file[:filename], file[:tempfile].read)
+    filename = BucketHelper.replace_unsafe_chars(file[:filename])
+    put_file('assets', encrypted_channel_id, filename, file[:tempfile].read)
   end
 
   # POST /v3/copy-assets/<channel-id>?src_channel=<src-channel-id>&src_files=<src-filenames-json>
@@ -644,11 +646,14 @@ class FilesApi < Sinatra::Base
 
     # write the manifest (assuming the entry changed)
     unless manifest_is_unchanged
+      abuse_score = StorageApps.get_abuse(encrypted_channel_id)
+
       response = bucket.create_or_replace(
         encrypted_channel_id,
         FileBucket::MANIFEST_FILENAME,
         manifest.to_json,
-        params['files-version']
+        params['files-version'],
+        abuse_score
       )
       new_entry_hash['filesVersionId'] = response.version_id
     end
@@ -680,7 +685,8 @@ class FilesApi < Sinatra::Base
 
     bad_request unless file[:filename] && file[:tempfile]
 
-    files_put_file(encrypted_channel_id, file[:filename], file[:tempfile].read)
+    filename = BucketHelper.replace_unsafe_chars(file[:filename])
+    files_put_file(encrypted_channel_id, filename, file[:tempfile].read)
   end
 
   #
@@ -720,8 +726,10 @@ class FilesApi < Sinatra::Base
     return {filesVersionId: ""}.to_json if manifest_result[:status] == 'NOT_FOUND'
     manifest = JSON.load manifest_result[:body]
 
+    abuse_score = StorageApps.get_abuse(encrypted_channel_id)
+
     # overwrite the manifest file with an empty list
-    response = bucket.create_or_replace(encrypted_channel_id, FileBucket::MANIFEST_FILENAME, [].to_json, params['files-version'])
+    response = bucket.create_or_replace(encrypted_channel_id, FileBucket::MANIFEST_FILENAME, [].to_json, params['files-version'], abuse_score)
 
     # delete the files
     bucket.delete_multiple(encrypted_channel_id, manifest.map {|e| e['filename'].downcase}) unless manifest.empty?
@@ -753,8 +761,10 @@ class FilesApi < Sinatra::Base
     reject_result = manifest.reject! {|e| e['filename'].downcase == manifest_delete_comparison_filename}
     not_found if reject_result.nil?
 
+    abuse_score = StorageApps.get_abuse(encrypted_channel_id)
+
     # write the manifest
-    response = bucket.create_or_replace(encrypted_channel_id, FileBucket::MANIFEST_FILENAME, manifest.to_json, params['files-version'])
+    response = bucket.create_or_replace(encrypted_channel_id, FileBucket::MANIFEST_FILENAME, manifest.to_json, params['files-version'], abuse_score)
 
     # delete the file
     bucket.delete(encrypted_channel_id, filename.downcase)
@@ -798,9 +808,11 @@ class FilesApi < Sinatra::Base
       entry['versionId'] = response.version_id
     end
 
+    abuse_score = StorageApps.get_abuse(encrypted_channel_id)
+
     # save the new manifest
     manifest_json = manifest.to_json
-    result = bucket.create_or_replace(encrypted_channel_id, FileBucket::MANIFEST_FILENAME, manifest_json)
+    result = bucket.create_or_replace(encrypted_channel_id, FileBucket::MANIFEST_FILENAME, manifest_json, nil, abuse_score)
 
     {"filesVersionId": result[:version_id], "files": manifest}.to_json
   end
@@ -871,7 +883,7 @@ class FilesApi < Sinatra::Base
     file = get_file('files', encrypted_channel_id, s3_prefix)
 
     if THUMBNAIL_FILENAME == filename
-      storage_apps = StorageApps.new(storage_id('user'))
+      storage_apps = StorageApps.new(get_storage_id)
       project_type = storage_apps.project_type_from_channel_id(encrypted_channel_id)
       if moderate_type?(project_type) && moderate_channel?(encrypted_channel_id)
         file_mime_type = mime_type(File.extname(filename.downcase))
@@ -925,7 +937,7 @@ class FilesApi < Sinatra::Base
   end
 
   def moderate_channel?(encrypted_channel_id)
-    storage_apps = StorageApps.new(storage_id('user'))
+    storage_apps = StorageApps.new(get_storage_id)
     !storage_apps.content_moderation_disabled?(encrypted_channel_id)
   end
 end

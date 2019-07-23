@@ -23,6 +23,8 @@ import {actions} from './redux/applab';
 import * as screens from './redux/screens';
 import {getStore} from '../redux';
 import {applabObjectFitImages} from './applabObjectFitImages';
+import firehoseClient from '../lib/util/firehose';
+import project from '../code-studio/initApp/project';
 
 var designMode = {};
 export default designMode;
@@ -32,6 +34,7 @@ var ICON_PREFIX_REGEX = applabConstants.ICON_PREFIX_REGEX;
 
 var currentlyEditedElement = null;
 var clipboardElement = null;
+var clipboardElementTheme = null;
 
 var ApplabInterfaceMode = applabConstants.ApplabInterfaceMode;
 
@@ -228,7 +231,6 @@ designMode.updateProperty = function(
   }
   switch (name) {
     case 'id':
-      value = value.trim();
       elementUtils.setId(element, value);
       if (
         elementLibrary.getElementType(element) ===
@@ -578,13 +580,27 @@ designMode.readProperty = function(element, name) {
   }
 };
 
-designMode.onDuplicate = function(element, event) {
+const FIREHOSE_STUDY = 'applab';
+const FIREHOSE_GROUP = 'design_mode';
+
+designMode.onDuplicate = function(element, prevThemeName, event) {
   let isScreen = $(element).hasClass('screen');
   if (isScreen) {
     const newScreenId = duplicateScreen(element);
     return elementUtils.getPrefixedElementById(newScreenId);
   }
 
+  firehoseClient.putRecord({
+    study: FIREHOSE_STUDY,
+    study_group: FIREHOSE_GROUP,
+    event: 'duplicate_element',
+    project_id: project.getCurrentId(),
+    data_json: JSON.stringify({
+      elementId: element.id,
+      elementTag: element.tagName,
+      elementClass: element.className
+    })
+  });
   var duplicateElement = $(element).clone(true)[0];
   var dupLeft = parseInt(element.style.left, 10) + 10;
   var dupTop = parseInt(element.style.top, 10) + 10;
@@ -604,6 +620,14 @@ designMode.onDuplicate = function(element, event) {
     elementLibrary.getUnusedElementId(elementType.toLowerCase())
   );
 
+  if (prevThemeName) {
+    designMode.changeThemeForElement(
+      duplicateElement,
+      prevThemeName,
+      elementLibrary.getCurrentTheme(designMode.activeScreen())
+    );
+  }
+
   // Attach the duplicate element and then focus on it
   designMode.attachElement(duplicateElement);
   duplicateElement.focus();
@@ -612,14 +636,158 @@ designMode.onDuplicate = function(element, event) {
   return duplicateElement;
 };
 
+designMode.hasCustomizedThemeProperties = function(element) {
+  const currentThemeValue = elementLibrary.getCurrentTheme(
+    designMode.activeScreen()
+  );
+  const themeValues = elementLibrary.getThemeValues(element);
+
+  for (const propName in themeValues) {
+    const propTheme = themeValues[propName];
+    const currentDefault = propTheme[currentThemeValue];
+    const currentPropValue = designMode.readProperty(element, propName);
+    const {type} = propTheme;
+    //
+    // Compare properties against the theme default
+    //
+    if (type === 'color') {
+      if (
+        new RGBColor(currentPropValue).toHex() !==
+        new RGBColor(currentDefault).toHex()
+      ) {
+        return true;
+      }
+    } else if (currentPropValue !== currentDefault) {
+      return true;
+    }
+  }
+  return false;
+};
+
 var batchChangeId = 1;
 
-designMode.changeThemeForCurrentScreen = function(prevThemeValue, themeValue) {
-  const currentScreen = $(
-    elementUtils.getPrefixedElementById(
-      getStore().getState().screens.currentScreenId
-    )
+designMode.onRestoreThemeDefaults = function(element) {
+  firehoseClient.putRecord({
+    study: FIREHOSE_STUDY,
+    study_group: FIREHOSE_GROUP,
+    event: 'restore_theme_defaults',
+    project_id: project.getCurrentId(),
+    data_json: JSON.stringify({
+      elementId: element.id,
+      elementTag: element.tagName,
+      elementClass: element.className
+    })
+  });
+
+  const currentThemeValue = elementLibrary.getCurrentTheme(
+    designMode.activeScreen()
   );
+  const themeValues = elementLibrary.getThemeValues(element);
+  let modifiedProperty = false;
+  // Start a new batched set of updateProperty() calls:
+  batchChangeId++;
+  for (const propName in themeValues) {
+    const dataModifiedAttributeName = `data-mod-${propName}`;
+    const propTheme = themeValues[propName];
+    const currentDefault = propTheme[currentThemeValue];
+    const currentPropValue = designMode.readProperty(element, propName);
+    const {type} = propTheme;
+    //
+    // Update properties to the theme default
+    //
+    let propNeedsUpdate;
+    if (type === 'color') {
+      propNeedsUpdate =
+        new RGBColor(currentPropValue).toHex() !==
+        new RGBColor(currentDefault).toHex();
+    } else {
+      propNeedsUpdate = currentPropValue !== currentDefault;
+    }
+    if (propNeedsUpdate) {
+      designMode.updateProperty(
+        element,
+        propName,
+        currentDefault,
+        null,
+        batchChangeId
+      );
+      modifiedProperty = true;
+    }
+    // Since we're resetting to the default theme value, in all cases,
+    // remove the attribute marking the element as explicitly modified:
+    element.removeAttribute(dataModifiedAttributeName);
+  }
+  if (modifiedProperty) {
+    designMode.renderDesignWorkspace(element);
+  }
+};
+
+designMode.changeThemeForElement = function(
+  element,
+  prevThemeValue,
+  themeValue
+) {
+  const themeValues = elementLibrary.getThemeValues(element);
+  let modifiedProperty = false;
+  // Start a new batched set of updateProperty() calls:
+  batchChangeId++;
+  for (const propName in themeValues) {
+    const dataModifiedAttributeName = `data-mod-${propName}`;
+    if (element.getAttribute(dataModifiedAttributeName)) {
+      // This property was explicitly modified prior to an earlier theme
+      // change, so we will not update it here:
+      continue;
+    }
+    const propTheme = themeValues[propName];
+    const prevDefault = propTheme[prevThemeValue];
+    const newDefault = propTheme[themeValue];
+    const currentPropValue = designMode.readProperty(element, propName);
+    const {type} = propTheme;
+    //
+    // Update properties if the student hasn't customized the property
+    // from the default value for the previous theme.
+    //
+    let propShouldUpdate;
+    if (currentPropValue === '') {
+      // Don't treat a deleted/empty property as a valid customization
+      // that should be preserved across a theme change.
+      propShouldUpdate = true;
+    } else if (type === 'color') {
+      propShouldUpdate =
+        new RGBColor(currentPropValue).toHex() ===
+        new RGBColor(prevDefault).toHex();
+    } else {
+      propShouldUpdate = currentPropValue === prevDefault;
+    }
+    if (propShouldUpdate) {
+      designMode.updateProperty(
+        element,
+        propName,
+        newDefault,
+        null,
+        batchChangeId
+      );
+      modifiedProperty = true;
+    } else {
+      // Since this property doesn't match the expected default value for the
+      // previous theme, mark the element as explicitly modified so the
+      // customization survives subsequent theme changes:
+      element.setAttribute(dataModifiedAttributeName, 1);
+    }
+  }
+  if (modifiedProperty) {
+    designMode.renderDesignWorkspace(element);
+  }
+};
+
+designMode.changeThemeForScreen = function(screenElement, themeValue) {
+  if (!applabConstants.themeOptions.includes(themeValue)) {
+    throw new Error(`Invalid themeValue: ${themeValue}`);
+  }
+  const prevThemeValue = elementLibrary.getCurrentTheme(screenElement);
+  screenElement.setAttribute('data-theme', themeValue);
+
+  const currentScreen = $(screenElement);
 
   // Unwrap the draggable wrappers around the elements in the source screen:
   const madeUndraggable = makeUndraggable(currentScreen.children());
@@ -630,40 +798,9 @@ designMode.changeThemeForCurrentScreen = function(prevThemeValue, themeValue) {
   ];
 
   // Modify each element in the screen (including the screen itself):
-  screenAndChildren.forEach(element => {
-    const themeValues = elementLibrary.getThemeValues(element);
-    let modifiedProperty = false;
-    // Start a new batched set of updateProperty() calls:
-    batchChangeId++;
-    for (const propName in themeValues) {
-      const propTheme = themeValues[propName];
-      const prevDefault = propTheme[prevThemeValue];
-      const newDefault = propTheme[themeValue];
-      const currentPropValue = designMode.readProperty(element, propName);
-      const {type} = propTheme;
-      let propShouldUpdate;
-      if (type === 'color') {
-        propShouldUpdate =
-          new RGBColor(currentPropValue).toHex() ===
-          new RGBColor(prevDefault).toHex();
-      } else {
-        propShouldUpdate = currentPropValue === prevDefault;
-      }
-      if (propShouldUpdate) {
-        designMode.updateProperty(
-          element,
-          propName,
-          newDefault,
-          null,
-          batchChangeId
-        );
-        modifiedProperty = true;
-      }
-    }
-    if (modifiedProperty) {
-      designMode.renderDesignWorkspace(element);
-    }
-  });
+  screenAndChildren.forEach(element =>
+    designMode.changeThemeForElement(element, prevThemeValue, themeValue)
+  );
 
   // Restore the draggable wrappers on the elements in the source screen:
   if (madeUndraggable) {
@@ -672,10 +809,35 @@ designMode.changeThemeForCurrentScreen = function(prevThemeValue, themeValue) {
 };
 
 function duplicateScreen(element) {
+  firehoseClient.putRecord({
+    study: FIREHOSE_STUDY,
+    study_group: FIREHOSE_GROUP,
+    event: 'duplicate_screen',
+    project_id: project.getCurrentId(),
+    data_json: JSON.stringify({
+      elementId: element.id
+    })
+  });
+
   const sourceScreen = $(element);
   const sourceScreenId = elementUtils.getId(element);
-  const newScreen = designMode.createScreen();
-  designMode.changeScreen(newScreen);
+  const newScreenId = designMode.createScreen();
+  const newScreenElement = elementUtils.getPrefixedElementById(newScreenId);
+  const sourceElement = elementUtils.getPrefixedElementById(sourceScreenId);
+  const backgroundColor = 'backgroundColor';
+  designMode.updateProperty(
+    newScreenElement,
+    backgroundColor,
+    designMode.readProperty(sourceElement, backgroundColor)
+  );
+
+  const backgroundImage = 'screen-image';
+  const sourceImage = designMode.readProperty(sourceElement, backgroundImage);
+  if (sourceImage) {
+    designMode.updateProperty(newScreenElement, backgroundImage, sourceImage);
+  }
+
+  designMode.changeScreen(newScreenId);
 
   // Unwrap the draggable wrappers around the elements in the source screen:
   const madeUndraggable = makeUndraggable(sourceScreen.children());
@@ -700,26 +862,47 @@ function duplicateScreen(element) {
   };
   const alert = (
     <div style={styles}>
-      Duplicated <b>{sourceScreenId}</b> to <b>{newScreen}</b>
+      Duplicated <b>{sourceScreenId}</b> to <b>{newScreenId}</b>
     </div>
   );
   studioApp().displayPlayspaceNotification(alert);
 
-  return newScreen;
+  return newScreenId;
 }
 
 designMode.onCopyElementToScreen = function(element, destScreen) {
+  firehoseClient.putRecord({
+    study: FIREHOSE_STUDY,
+    study_group: FIREHOSE_GROUP,
+    event: 'copy_to_screen',
+    project_id: project.getCurrentId(),
+    data_json: JSON.stringify({
+      elementId: element.id,
+      elementTag: element.tagName,
+      elementClass: element.className,
+      destinationScreen: destScreen
+    })
+  });
+
   const sourceElement = $(element);
+  const prevThemeName = elementLibrary.getCurrentTheme(
+    designMode.activeScreen()
+  );
   designMode.changeScreen(destScreen);
 
   // Unwrap the draggable wrappers around the elements in the source screen:
   const madeUndraggable = makeUndraggable(sourceElement.children());
 
-  let duplicateElement = sourceElement.clone(true)[0];
+  const duplicateElement = sourceElement.clone(true)[0];
   const elementType = elementLibrary.getElementType(duplicateElement);
   elementUtils.setId(
     duplicateElement,
     elementLibrary.getUnusedElementId(elementType.toLowerCase())
+  );
+  designMode.changeThemeForElement(
+    duplicateElement,
+    prevThemeName,
+    elementLibrary.getCurrentTheme(designMode.activeScreen())
   );
   designMode.attachElement(duplicateElement);
 
@@ -744,6 +927,17 @@ designMode.onDeletePropertiesButton = function(element, event) {
 };
 
 function deleteElement(element) {
+  firehoseClient.putRecord({
+    study: FIREHOSE_STUDY,
+    study_group: FIREHOSE_GROUP,
+    event: 'delete_element',
+    project_id: project.getCurrentId(),
+    data_json: JSON.stringify({
+      elementId: element.id,
+      elementTag: element.tagName,
+      elementClass: element.className
+    })
+  });
   var isScreen = $(element).hasClass('screen');
   if ($(element.parentNode).is('.ui-resizable')) {
     element = element.parentNode;
@@ -920,7 +1114,8 @@ function getUnsafeHtmlReporter(sanitizationTarget) {
 designMode.parseScreenFromLevelHtml = function(
   screenEl,
   allowDragging,
-  prefix
+  prefix,
+  skipUnknownElements
 ) {
   var screen = $(screenEl);
   elementUtils.addIdPrefix(screen[0], prefix);
@@ -938,7 +1133,8 @@ designMode.parseScreenFromLevelHtml = function(
     var element = $(this).hasClass('ui-draggable') ? this.firstChild : this;
     elementLibrary.onDeserialize(
       element,
-      designMode.updateProperty.bind(element)
+      designMode.updateProperty.bind(element),
+      skipUnknownElements
     );
   });
   return screen[0];
@@ -970,7 +1166,12 @@ designMode.parseFromLevelHtml = function(rootEl, allowDragging, prefix) {
   );
   var children = $(levelDom).children();
   children.each(function() {
-    designMode.parseScreenFromLevelHtml(this, allowDragging, prefix);
+    designMode.parseScreenFromLevelHtml(
+      this,
+      allowDragging,
+      prefix,
+      true /* skipUnknownElements */
+    );
   });
   children.appendTo(rootEl);
 };
@@ -1469,7 +1670,11 @@ designMode.renderDesignWorkspace = function(element) {
     onCopyElementToScreen: designMode.onCopyElementToScreen.bind(this, element),
     onChangeElement: designMode.editElementProperties.bind(this),
     onDepthChange: designMode.onDepthChange,
-    onDuplicate: designMode.onDuplicate.bind(this, element),
+    onDuplicate: designMode.onDuplicate.bind(this, element, null),
+    onRestoreThemeDefaults: designMode.onRestoreThemeDefaults.bind(
+      this,
+      element
+    ),
     onDelete: designMode.onDeletePropertiesButton.bind(this, element),
     onInsertEvent: designMode.onInsertEvent.bind(this),
     handleVersionHistory: Applab.handleVersionHistory,
@@ -1528,6 +1733,11 @@ designMode.setAsClipboardElement = function(element) {
   // Remember the current element on the clipboard
   clipboardElement = jqueryElement.clone(true)[0];
 
+  // Remember the current theme on the clipboard
+  clipboardElementTheme = elementLibrary.getCurrentTheme(
+    designMode.activeScreen()
+  );
+
   // Restore the draggable wrappers on the child elements:
   if (isScreen && madeUndraggable) {
     makeDraggable(jqueryElement.children());
@@ -1549,7 +1759,10 @@ designMode.addKeyboardHandlers = function() {
         case KeyCodes.PASTE:
           // Paste the clipboard element with updated position and ID
           if (clipboardElement) {
-            const duplicateElement = designMode.onDuplicate(clipboardElement);
+            const duplicateElement = designMode.onDuplicate(
+              clipboardElement,
+              clipboardElementTheme
+            );
             designMode.setAsClipboardElement(duplicateElement);
           }
           break;

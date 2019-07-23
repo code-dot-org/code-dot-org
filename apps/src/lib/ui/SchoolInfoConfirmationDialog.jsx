@@ -4,91 +4,121 @@ import Dialog, {Body} from '@cdo/apps/templates/Dialog';
 import Button from '../../templates/Button';
 import SchoolInfoInterstitial from './SchoolInfoInterstitial';
 import i18n from '@cdo/locale';
+import color from '@cdo/apps/util/color';
 
 export const styles = {
   button: {
     marginTop: 30,
     marginLeft: 290
+  },
+  updateButton: {
+    marginLeft: 5
+  },
+  intro: {
+    fontSize: 18,
+    fontFamily: "'Gotham 5r', sans-serif",
+    color: color.charcoal,
+    paddingRight: 20
+  },
+  schoolName: {
+    color: color.purple,
+    fontStyle: 'italic'
   }
 };
 
 class SchoolInfoConfirmationDialog extends Component {
   static propTypes = {
     schoolName: PropTypes.string,
-    onUpdate: PropTypes.func,
-    onConfirm: PropTypes.func,
-    isOpen: PropTypes.bool.isRequired
+    scriptData: PropTypes.shape({
+      formUrl: PropTypes.string.isRequired,
+      authTokenName: PropTypes.string.isRequired,
+      authTokenValue: PropTypes.string.isRequired,
+      existingSchoolInfo: PropTypes.shape({
+        id: PropTypes.number,
+        user_school_info_id: PropTypes.number,
+        school_id: PropTypes.string,
+        country: PropTypes.string,
+        school_type: PropTypes.string,
+        school_name: PropTypes.string,
+        full_address: PropTypes.string
+      }).isRequired
+    }).isRequired,
+    onClose: PropTypes.func,
+    isOpen: PropTypes.bool
   };
 
   constructor(props) {
     super(props);
     this.state = {
       showSchoolInterstitial: false,
-      schoolName: props.schoolName,
-      isOpen: true
+      schoolName: props.scriptData.existingSchoolInfo.school_name,
+      isOpen: props.isOpen || true
     };
   }
 
-  static defaultProps = {
-    onUpdate: () => {},
-    schoolName: ''
+  closeModal = () => {
+    this.setState({isOpen: false});
+    this.props.onClose();
   };
 
-  componentDidMount() {
-    const {schoolName} = this.state;
-    if (!schoolName && schoolName.length > 0) {
-      fetch('/dashboardapi/v1/users/me/school_name')
-        .then(response => response.json())
-        .then(data => {
-          this.setState({
-            schoolName: data.school_name
-          });
-        })
-        .catch(error => this.setState({error}));
-    }
-  }
+  handleClickYes = () => {
+    const {authTokenName, authTokenValue} = this.props.scriptData;
+    const formData = new FormData();
+    formData.append(authTokenName, authTokenValue);
+    fetch(
+      `/api/v1/user_school_infos/${
+        this.props.scriptData.existingSchoolInfo.user_school_info_id
+      }/update_last_confirmation_date`,
+      {
+        method: 'PATCH',
+        body: formData
+      }
+    )
+      .then(this.closeModal)
+      .catch(error => {
+        this.setState({error});
+      });
+  };
 
-  handleUpdateClick = () => {
+  handleClickUpdate = () => {
     this.setState({showSchoolInterstitial: true});
   };
 
-  renderInitialContent() {
-    const {onConfirm} = this.props;
+  renderInitialContent = () => {
     const {schoolName} = this.state;
     return (
       <Body>
         <div>
-          <p>
-            {i18n.schoolInfoDialogDescription()} {schoolName}
+          <p style={styles.intro}>
+            {i18n.schoolInfoDialogDescription()}
+            <span style={styles.schoolName}>
+              {i18n.schoolInfoDialogDescriptionSchoolName({schoolName})}
+            </span>
           </p>
         </div>
         <Button
           text={i18n.schoolInfoDialogUpdate()}
           color={Button.ButtonColor.blue}
-          onClick={this.handleUpdateClick}
+          onClick={this.handleClickUpdate}
+          id="update-button"
         />
         <Button
           style={styles.button}
           text={i18n.yes()}
           color={Button.ButtonColor.orange}
-          onClick={onConfirm}
-          href={'#'}
+          onClick={this.handleClickYes}
+          id="yes-button"
         />
       </Body>
     );
-  }
+  };
 
   renderSchoolInformationForm() {
     return (
       <Body>
         <SchoolInfoInterstitial
-          scriptData={{
-            formUrl: '',
-            authTokenName: 'auth_token',
-            authTokenValue: 'fake_auth_token',
-            existingSchoolInfo: {}
-          }}
-          onClose={() => this.setState({isOpen: false})}
+          scriptData={this.props.scriptData}
+          onClose={this.closeModal}
         />
       </Body>
     );
@@ -97,7 +127,7 @@ class SchoolInfoConfirmationDialog extends Component {
   render() {
     const {showSchoolInterstitial, isOpen} = this.state;
     return (
-      <Dialog isOpen={isOpen}>
+      <Dialog isOpen={isOpen} handleClose={this.closeModal}>
         {!showSchoolInterstitial
           ? this.renderInitialContent()
           : this.renderSchoolInformationForm()}
@@ -105,4 +135,5 @@ class SchoolInfoConfirmationDialog extends Component {
     );
   }
 }
+
 export default SchoolInfoConfirmationDialog;

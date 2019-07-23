@@ -903,31 +903,6 @@
   coursef-draft_name: Курс Д
   coursef_name: "Курс Д"
   accelerated_name: "Прискорений курс"
-  cspunit1_name: "Розділ 1: Цифрова інформація"
-  cspunit2_name: "Розділ 2: Інтернет"
-  cspunit3_name: "Розділ 3: Програмування"
-  cspunit4_name: "Розділ 4: Дані"
-  cspunit5_name: "Розділ 5: Дослідження та створення PT"
-  cspunit6_name: 'Після-АР: Бази даних у програмах'
-  csd5_name: 'Розділ 5: Дані та суспільство'
-  csd6_name: 'Розділ 6: Фізичні обчислення'
-  csd5-2017_name: 'Розділ 5: Дані та суспільство'
-  csd6-2017_name: 'Розділ 6: Фізичні обчислення'
-  csd5-2018_name: 'Розділ 5: Дані та суспільство'
-  csd6-2018_name: 'Розділ 6: Фізичні обчислення'
-  csp1-2017_name: 'Розділ 1: Інтернет'
-  csp2-2017_name: 'Розділ 2: Цифрова інформація'
-  csppostap-2017_name: 'Після довишівської підготовки: Бази даних у програмах'
-  csp1-2018_name: 'Розділ 1: Інтернет'
-  csp2-2018_name: 'Розділ 2: Цифрова інформація'
-  csppostap-2018_name: 'Після довишівської підготовки: Бази даних у програмах'
-  csp1_name: 'Розділ 1: Інтернет'
-  csp2_name: 'Розділ 2: Цифрова інформація'
-  csppostap_name: 'Після довишівської підготовки: Бази даних у програмах'
-  cspassessment_name: "Повний тест - 50 запитань"
-  cspexam1-mWU7ilDYM9_name: Тест, частина 1 - 25 запитань
-  cspexam2-AKwgAh1ac5_name: Тест, частина 2 - 25 запитань
-  cspunit3_gradelevel: "9-12 класи"
   20-hour_name: Прискорений курс
   algebra_name: "Інформатика в алгебрі"
   AlgebraA_name: "Інформатика в алгебрі - Курс А"
@@ -938,13 +913,6 @@
   minecraft_name: "Майнкрафт"
   starwarsblocks_name: "Зоряні війни (блоки)"
   hoc-encryption_name: Просте шифрування
-  math_category_name: "Математика"
-  hoc_category_name: "Година коду"
-  csf_category_name: "Основи інформатики"
-  csf2_draft_category_name: 'В розробці: курси А—Д'
-  csp_category_name: "'15-'16 принципи інформатики"
-  csp17_category_name: "'16-'17 принципи інформатики"
-  cspexams_category_name: "Практичний тест з принципів інформатики"
   applab_name: "App Lab"
   gamelab_name: "Ігрова лабораторія"
   basketball_name: "Зроби гру в баскетбол"
@@ -1011,6 +979,8 @@
   coursee-2017_gradelevel: Вік 8-12
   coursed-2018_gradelevel: 8+ класи
   coursee-2018_gradelevel: Вік 8-12
+  coursed-2019_gradelevel: 8+ класи
+  coursee-2019_gradelevel: Вік 8-12
   accelerated_gradelevel: "Вік 10-18"
   codeorg_platformtext: "Сучасні браузери, смартфони, планшети"
   codeintl_platformtext: "Сучасні браузери, смартфони, планшети"
@@ -1360,7 +1330,6 @@
   header_stats: "Статистика"
   header_help_us: "Допомога нам"
   header_about: "Про"
-  csp_name: "'16-'17 принципи інформатики"
   user_header_label: "Привіт %{username}"
   user_header_team: "Команда"
   user_header_settings: "Мій профіль"

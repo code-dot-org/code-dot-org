@@ -1,8 +1,10 @@
-import {getStore} from '../redux';
+import {getStore} from '@cdo/apps/redux';
 import {allAnimationsSingleFrameSelector} from './animationListModule';
 var gameLabSprite = require('./GameLabSprite');
 var gameLabGroup = require('./GameLabGroup');
-import * as assetPrefix from '../assetManagement/assetPrefix';
+var Spritelab = require('./spritelab/Spritelab');
+import {backgrounds} from './spritelab/backgrounds.json';
+import * as assetPrefix from '@cdo/apps/assetManagement/assetPrefix';
 
 const defaultFrameRate = 30;
 
@@ -73,6 +75,7 @@ GameLabP5.baseP5loadImage = null;
  * @param {!Function} options.onPreload callback to run during preload()
  * @param {!Function} options.onSetup callback to run during setup()
  * @param {!Function} options.onDraw callback to run during each draw()
+ * @param {boolean} options.spritelab Whether this is a spritelab instance
  */
 GameLabP5.prototype.init = function(options) {
   this.onExecutionStarting = options.onExecutionStarting;
@@ -130,14 +133,16 @@ GameLabP5.prototype.init = function(options) {
     return false;
   };
 
-  // Override p5.createSprite and p5.Group so we can override the methods that
-  // take callback parameters
-  window.p5.prototype.createSprite = gameLabSprite.createSprite;
-  var baseGroupConstructor = window.p5.prototype.Group;
-  window.p5.prototype.Group = gameLabGroup.Group.bind(
-    null,
-    baseGroupConstructor
-  );
+  if (!options.spritelab) {
+    // Override p5.createSprite and p5.Group so we can override the methods that
+    // take callback parameters
+    window.p5.prototype.createSprite = gameLabSprite.createSprite;
+    var baseGroupConstructor = window.p5.prototype.Group;
+    window.p5.prototype.Group = gameLabGroup.Group.bind(
+      null,
+      baseGroupConstructor
+    );
+  }
 
   window.p5.prototype.gamelabPreload = function() {
     this.p5decrementPreload = window.p5._getDecrementPreload.apply(
@@ -145,6 +150,10 @@ GameLabP5.prototype.init = function(options) {
       arguments
     );
   }.bind(this);
+
+  if (options.spritelab) {
+    this.spritelab = new Spritelab();
+  }
 };
 
 /**
@@ -152,6 +161,9 @@ GameLabP5.prototype.init = function(options) {
  */
 GameLabP5.prototype.resetExecution = function() {
   gameLabSprite.setCreateWithDebug(false);
+  if (this.spritelab) {
+    this.spritelab.reset();
+  }
 
   if (this.p5) {
     this.p5.remove();
@@ -568,6 +580,32 @@ GameLabP5.prototype.afterSetupStarted = function() {
 GameLabP5.prototype.afterSetupComplete = function() {
   this.p5._setupEpiloguePhase1();
   this.p5._setupEpiloguePhase2();
+};
+
+GameLabP5.prototype.preloadBackgrounds = function() {
+  if (!this.preloadBackgrounds_) {
+    this.preloadedBackgrounds = {};
+    this.preloadBackgrounds_ = Promise.all(
+      backgrounds.map(background => {
+        return new Promise(resolve => {
+          this.p5.loadImage(
+            background.sourceUrl,
+            image => {
+              this.preloadedBackgrounds[background.legacyParam] = image;
+              resolve();
+            },
+            err => {
+              console.log(err);
+              resolve();
+            }
+          );
+        });
+      })
+    );
+  }
+  return this.preloadBackgrounds_.then(
+    () => (this.p5._preloadedBackgrounds = this.preloadedBackgrounds)
+  );
 };
 
 /**

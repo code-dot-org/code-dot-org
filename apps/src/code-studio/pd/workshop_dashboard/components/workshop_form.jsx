@@ -14,6 +14,7 @@ import moment from 'moment';
 import Spinner from '../../components/spinner';
 import SessionListFormPart from './session_list_form_part';
 import FacilitatorListFormPart from './facilitator_list_form_part';
+import OrganizerFormPart from './organizer_form_part';
 import {
   Grid,
   Row,
@@ -82,7 +83,11 @@ export class WorkshopForm extends React.Component {
       sessions: PropTypes.array.isRequired,
       enrolled_teacher_count: PropTypes.number.isRequired,
       regional_partner_name: PropTypes.string,
-      regional_partner_id: PropTypes.number
+      regional_partner_id: PropTypes.number,
+      potential_organizers: PropTypes.array,
+      organizer: PropTypes.shape({
+        id: PropTypes.number
+      })
     }),
     onSaved: PropTypes.func,
     readOnly: PropTypes.bool,
@@ -131,7 +136,8 @@ export class WorkshopForm extends React.Component {
           'course',
           'subject',
           'notes',
-          'regional_partner_id'
+          'regional_partner_id',
+          'organizer'
         ])
       );
       initialState.sessions = this.prepareSessionsForForm(
@@ -293,8 +299,13 @@ export class WorkshopForm extends React.Component {
       destroyedSessions
     });
   };
+
   handleFacilitatorsChange = facilitators => {
     this.setState({facilitators: facilitators});
+  };
+
+  handleOrganizerChange = event => {
+    this.setState({organizer: {id: parseInt(event.target.value)}});
   };
 
   renderCourseSelect(validation) {
@@ -434,8 +445,7 @@ export class WorkshopForm extends React.Component {
 
   renderWorkshopTypeOptions(validation) {
     const isCsf = this.state.course === 'CS Fundamentals';
-    const isDeepDive = this.state.subject === 'Deep Dive';
-    const showMapChoice = isCsf && !isDeepDive;
+    const showMapChoice = isCsf;
 
     return (
       <FormGroup>
@@ -548,7 +558,7 @@ export class WorkshopForm extends React.Component {
             id="subject"
             name="subject"
             onChange={this.handleFieldChange}
-            style={this.props.readOnly && styles.readOnlyInput}
+            style={this.getInputStyle()}
             disabled={this.props.readOnly}
           >
             {placeHolder}
@@ -690,6 +700,10 @@ export class WorkshopForm extends React.Component {
       ),
       regional_partner_id: this.state.regional_partner_id
     };
+
+    if (this.state.organizer) {
+      workshop_data.organizer_id = this.state.organizer.id;
+    }
 
     let method, url;
     if (this.props.workshop) {
@@ -955,6 +969,14 @@ export class WorkshopForm extends React.Component {
               facilitators={this.state.facilitators}
               course={this.state.course}
               onChange={this.handleFacilitatorsChange}
+              readOnly={this.props.readOnly}
+            />
+          )}
+          {this.props.permission.has(WorkshopAdmin) && this.props.workshop && (
+            <OrganizerFormPart
+              potential_organizers={this.props.workshop.potential_organizers}
+              organizer_id={this.state.organizer.id}
+              onChange={this.handleOrganizerChange}
               readOnly={this.props.readOnly}
             />
           )}

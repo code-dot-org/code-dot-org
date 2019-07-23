@@ -2970,6 +2970,13 @@ fr:
               name: Financement participatif
             Digital Sharing:
               name: Partage numérique
+              description_teacher: Prêtée aux Fondamentaux de l’informatique par l'équipe
+                de Copyright and Creativity, cette leçon a pour but d'aider les élèves
+                à comprendre les défis et les avantages du respect de la propriété
+                et du droit d'auteur, en particulier dans les environnements numériques.
+                Les étudiants devraient être encouragés à respecter les droits des
+                artistes, qui constituent un élément important de leur citoyenneté
+                numérique.
         dance-low:
           stages:
             Dance Party:
@@ -2980,6 +2987,11 @@ fr:
               name: Programmation sur papier quadrillé
             Relay Programming:
               name: Programmation de relais
+              description_teacher: Cette activité débutera par une brève leçon sur
+                le débogage et la persistance, puis passera rapidement à une course
+                contre la montre pendant que les élèves se regroupent en équipes et
+                travaillent ensemble à la rédaction d'un programme, instruction par
+                instruction.
             Loops in Ice Age:
               name: Boucles dans l'Âge de Glace
             Conditionals with Cards:
@@ -3030,6 +3042,8 @@ fr:
               name: Internet
             Crowdsourcing:
               name: Financement participatif
+            Dance Party:
+              name: Fête dansante
         andrea-test:
           stages:
             'null':
@@ -3073,8 +3087,6 @@ fr:
               name: Bouge, Bouge
             Your Digital Footprint:
               name: Ton empreinte numérique
-            Loops in Ice Age:
-              name: Boucles dans l'Âge de Glace
             Spelling Bee:
               name: Concours d'orthographe
         removed19:
@@ -3302,6 +3314,10 @@ fr:
               name: Boucles et simulations
             Introduction to Arrays:
               name: Introduction sur les Arrays
+        csp1-pilot:
+          stages:
+            Number Systems:
+              name: Systèmes de numération
         time4csdemo:
           stages:
             Crowdsourcing:
@@ -3318,3 +3334,108 @@ fr:
           stages:
             Graph Paper Programming:
               name: Programmation sur papier quadrillé
+        csd2-pilot:
+          description_short: "  Apprends à construire ton propre site web avec le
+            labo du web."
+          stages:
+            Digital Footprint:
+              description_teacher: "As students have recently spent some time thinking
+                about the actual content that will go into their personal website,
+                this lesson takes a step back from the unit-long project (publication
+                of a personal website) to help students articulate what personal information
+                they choose to share digitally and with whom.  It also reinforces
+                the notion that much of the information that they choose to share
+                digitally falls largely out of their control the moment it is released.
+                \ \r\n\r\nStudents begin by individually identifying appropriate audiences
+                with whom they would be comfortable sharing given pieces of personal
+                information.  They then look at several social media pages to determine
+                what sorts of information people are sharing about themselves or one
+                another.  Last, students reflect on what guidelines they think are
+                appropriate for posting information online.\r\n\r\nThe ultimate point
+                of this lesson is not to scare students, but rather to experientially
+                bring students to realizing precisely what level of control they don’t
+                have in releasing information into the web."
+            Lists:
+              name: Listes
+            Intellectual Property and Images:
+              description_teacher: "Starting with an discussion of their personal
+                opinions on how others should be allowed to use their work, the class
+                explores the purpose and role of copyright for both creators and users
+                of creative content.  They then move on to an activity exploring the
+                various Creative Commons licenses as a solution to the difficulty
+                in dealing with copyright. \r\n\r\nFinally, with a common understanding
+                of the restrictions of various Creative Commons licenses, students
+                learn how to add images to their web pages using the &lt;img&gt; tag."
+            Project - Multi-Page Websites:
+              description_teacher: "After learning about how to link web pages to
+                one another, students are finally able to publish the website they
+                have been working on.  In this lesson, they link together all the
+                previous pages they have created into one project, create a new page,
+                and add navigation between the pages before publishing the entire
+                site to the Web.  \r\n\r\n"
+            Styling Text with CSS:
+              description_teacher: "This lesson introduces CSS as a way to style elements
+                on the page. Students learn the basic syntax for CSS rule-sets and
+                then explore properties that impact HTML text elements. They work
+                on a HTML page about Guinness World Record holders, adding their own
+                style to the provided page. In the last level, students apply what
+                they have learned about styles for text elements to their personal
+                web page.\r\n\r\n"
+            RGB Colors and Classes:
+              name: Couleurs RVB et classes
+              description_student: Cette leçon couvre les classes et les couleurs
+                personnalisées. La classe commence par apprendre à spécifier des couleurs
+                personnalisées à l'aide de valeurs RVB (rouge, vert, bleu), puis à
+                appliquer ces couleurs à une nouvelle page web Quatre saisons, qui
+                utilise des classes CSS. À l'aide des classes, la classe ajoute plus
+                de styles à la page web Quatre saisons, puis les utilise pour styliser
+                ses sites web personnels.
+              description_teacher: Dans cette leçon, les élèves apprennent d’abord
+                comment définir des couleurs personnalisées en utilisant leurs valeurs
+                RVB (rouge, vert, bleu). Ils appliquent ensuite ces couleurs à une
+                nouvelle page web Quatre saisons, qui utilise des classes CSS. Les
+                classes CSS permettent aux développeurs web de traiter des groupes
+                d’éléments qu’il veulent styliser différemment d’autres éléments du
+                même type. En utilisant les classes, les élèves ajoutent plus de styles
+                à la page web Quatre saisons, puis les utilisent pour styliser leurs
+                sites web personnels.
+            Project - Personal Portfolio Website:
+              description_teacher: "Students have spent a lot of time throughout the
+                unit working on their Personal Website. In the final couple of days
+                students finalize their websites.  They work with peers to get feedback,
+                put the finishing touches on the websites, review the rubric and reflect
+                on their process. To cap off the unit, they will share their projects
+                and also a overview of the process they took to get to that final
+                design.\r\n"
+            Intellectual Property:
+              name: Propriété intellectuelle
+        csd3-pilot:
+          description_short: Programmation
+          stages:
+            Variables:
+              name: variables
+            The Draw Loop:
+              name: La boucle Draw
+              description_student: Cette leçon présente la boucle draw, l’un des principaux
+                paradigmes de programmation du labo des jeux. La classe combine la
+                boucle draw avec des nombres aléatoires pour manipuler des animations
+                simples avec des points, puis des sprites. Ensuite, tout le monde
+                utilise ce qu'il a appris pour mettre à jour la scène du sprite de
+                la leçon précédente.
+              description_teacher: Dans cette leçon, les élèves se familiarisent avec
+                la boucle d’étirage, l’un des principaux paradigmes de programmation
+                du labo des jeux. Pour commencer la leçon, les élèves examinent des
+                folioscopes afin de constater que le fait de montrer plusieurs images
+                à la suite crée l’impression de mouvement. Les élèves regardent ensuite
+                une vidéo expliquant comment la boucle draw du labo des jeux contribue
+                à créer cette même impression dans leurs programmes. Les élèves combinent
+                la boucle draw avec des nombres aléatoires pour manipuler des animations
+                simples avec des points, puis des sprites. À la fin de la leçon, les
+                élèves utilisent ce qu'ils ont appris pour mettre à jour la scène
+                de sprites de la leçon précédente.
+            Conditionals:
+              name: Instructions conditionnelles
+            Velocity:
+              name: Vitesse
+            Functions:
+              name: fonctions

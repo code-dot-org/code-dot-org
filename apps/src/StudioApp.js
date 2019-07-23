@@ -8,6 +8,7 @@ import _ from 'lodash';
 import url from 'url';
 import {Provider} from 'react-redux';
 import trackEvent from './util/trackEvent';
+import cookies from 'js-cookie';
 
 // Make sure polyfills are available in all code studio apps and level tests.
 import './polyfills';
@@ -195,7 +196,6 @@ class StudioApp extends EventEmitter {
     this.libraries = {};
   }
 }
-
 /**
  * Configure StudioApp options
  */
@@ -297,7 +297,7 @@ StudioApp.prototype.init = function(config) {
     document.body.appendChild(document.createElement('div'))
   );
 
-  if (config.usesAssets) {
+  if (config.usesAssets && config.channel) {
     assetPrefix.init(config);
 
     // Pre-populate asset list
@@ -792,11 +792,13 @@ export function makeFooterMenuItems() {
       newWindow: true
     },
     {
+      key: 'how-it-works',
       text: i18n.t('footer.how_it_works'),
       link: project.getProjectUrl('/edit'),
       newWindow: false
     },
     {
+      key: 'report-abuse',
       text: i18n.t('footer.report_abuse'),
       link: '/report_abuse',
       newWindow: true
@@ -821,6 +823,19 @@ export function makeFooterMenuItems() {
   //Removes 'Try-HOC' from only gamelab footer menu
   if (project.getStandaloneApp() === 'gamelab') {
     footerMenuItems.shift();
+  }
+
+  var userAlreadyReportedAbuse =
+    cookies.get('reported_abuse') &&
+    _.includes(
+      JSON.parse(cookies.get('reported_abuse')),
+      project.getCurrentId()
+    );
+
+  if (userAlreadyReportedAbuse) {
+    _.remove(footerMenuItems, function(menuItem) {
+      return menuItem.key === 'report-abuse';
+    });
   }
 
   return footerMenuItems;
@@ -1838,12 +1853,6 @@ StudioApp.prototype.fixViewportForSmallScreens_ = function(viewport, config) {
 StudioApp.prototype.setConfigValues_ = function(config) {
   this.share = config.share;
 
-  // By default, we center our embedded levels. Can be overridden by apps.
-  config.centerEmbedded = utils.valueOr(config.centerEmbedded, true);
-
-  // By default, embedded levels are not responsive.
-  config.responsiveEmbedded = utils.valueOr(config.responsiveEmbedded, false);
-
   // If set to true, we use our wireframe share (or chromeless share on mobile).
   config.wireframeShare = utils.valueOr(config.wireframeShare, false);
 
@@ -1978,8 +1987,8 @@ StudioApp.prototype.configureDom = function(config) {
   // TODO (cpirich): make conditional for applab
   var belowViz = document.getElementById('belowVisualization');
   var referenceArea = document.getElementById('reference_area');
-  // noInstructionsWhenCollapsed is used in TopInstructions to determine when to use CSPTopInstructions (in which case
-  // display videos in the top instructions) or CSFTopInstructions (in which case the videos are appended here).
+  // noInstructionsWhenCollapsed is used in TopInstructions to determine when to use if in CSP/CSD (in which case
+  // display videos in the top instructions) or InstructionsCSF (in which case the videos are appended here).
 
   const referenceAreaInTopInstructions = config.noInstructionsWhenCollapsed;
   if (!referenceAreaInTopInstructions && referenceArea) {
@@ -2023,14 +2032,6 @@ StudioApp.prototype.configureDom = function(config) {
 
   if (config.readonlyWorkspace) {
     $(codeWorkspace).addClass('readonly');
-  }
-
-  // NOTE: Can end up with embed true and hideSource false in level builder
-  // scenarios. See https://github.com/code-dot-org/code-dot-org/pull/1744
-  if (config.embed && config.hideSource && config.centerEmbedded) {
-    container.className = container.className + ' centered_embed';
-    visualizationColumn.className =
-      visualizationColumn.className + ' centered_embed';
   }
 
   var smallFooter = document.querySelector(
@@ -3149,9 +3150,27 @@ StudioApp.prototype.polishGeneratedCodeString = function(code) {
  * the visualizationColumn.
  */
 StudioApp.prototype.isResponsiveFromConfig = function(config) {
-  const isResponsiveEmbedView = !!(config.embed && config.responsiveEmbedded);
   const isWorkspaceView = !config.hideSource;
-  return isResponsiveEmbedView || isWorkspaceView;
+  return config.embed || isWorkspaceView;
+};
+
+/**
+ * Checks if the level a teacher is viewing of a students has
+ * not been started.
+ */
+StudioApp.prototype.isNotStartedLevel = function(config) {
+  const progress = getStore().getState().progress;
+
+  if (
+    ['Gamelab', 'Applab', 'Weblab', 'Spritelab'].includes(config.levelGameName)
+  ) {
+    return config.readonlyWorkspace && !config.channel;
+  } else if (!config.level.freePlay) {
+    return (
+      config.readonlyWorkspace &&
+      progress.levelProgress[progress.currentLevelId] === undefined
+    );
+  }
 };
 
 /**
@@ -3178,6 +3197,7 @@ StudioApp.prototype.setPageConstants = function(config, appSpecificConstants) {
       isChallengeLevel: !!config.isChallengeLevel,
       isEmbedView: !!config.embed,
       isResponsive: this.isResponsiveFromConfig(config),
+      isNotStartedLevel: this.isNotStartedLevel(config),
       isShareView: !!config.share,
       pinWorkspaceToBottom: !!config.pinWorkspaceToBottom,
       noInstructionsWhenCollapsed: !!config.noInstructionsWhenCollapsed,
@@ -3201,7 +3221,8 @@ StudioApp.prototype.setPageConstants = function(config, appSpecificConstants) {
         !!config.level.projectTemplateLevelName &&
         !config.level.isK1 &&
         !config.readonlyWorkspace,
-      serverLevelId: config.serverLevelId
+      serverLevelId: config.serverLevelId,
+      serverScriptLevelId: config.serverScriptLevelId
     },
     appSpecificConstants
   );

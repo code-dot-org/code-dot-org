@@ -194,14 +194,6 @@ pt:
             '"space"': espaço
             '"x"': x
             '"y"': 'y'
-      gamelab_layoutSprites:
-        options:
-          FORMAT:
-            '"random"': aleatório
-      gamelab_locationDelta:
-        options:
-          DIR:
-            "'random'": aleatório
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -220,10 +212,6 @@ pt:
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': arco-íris
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': debaixo de água
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': inverno
-      gamelab_setPosition:
-        options:
-          POSITION:
-            '"random"': aleatório
       gamelab_setProp:
         options:
           PROPERTY:
@@ -240,23 +228,6 @@ pt:
           CONDITION:
             '"when"': quando
             '"while"': enquanto
-      gamelab_spriteClickedSet:
-        options:
-          CONDITION:
-            '"when"': quando
-            '"while"': enquanto
-      gamelab_spritesWhere:
-        options:
-          PROPERTY:
-            '"scale"': tamanho
-            '"x"': posição x
-            '"y"': posição y
-      gamelab_spritesWhereGenerator:
-        options:
-          PROPERTY:
-            '"scale"': tamanho
-            '"x"': posição x
-            '"y"': posição y
       gamelab_turn:
         options:
           DIRECTION:
@@ -277,11 +248,6 @@ pt:
             "'down'": para baixo
             "'left'": para a esquerda
             "'right'": para a direita
-      gamelab_whenTouchingSet:
-        options:
-          CONDITION:
-            '"when"': quando
-            '"while"': enquanto
       gamelab_whileKey:
         options:
           KEY:

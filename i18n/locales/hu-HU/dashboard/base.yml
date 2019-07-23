@@ -68,7 +68,6 @@ hu:
   of: "/"
   more: "TÖBB"
   less: "KEVESEBB"
-  beta: "béta"
   try_hoc: "Próbáld ki a Kódolás Óráját, kattints ide >> "
   try_k8intro: "Próbáld ki az általános iskolás Bevezető számítógép-tudományi tanfolyamot (15-25 óra)"
   k8intro: "K-8 Bevezető tanfolyam a  számítógép tudományhoz  (15-25 óra)"
@@ -108,6 +107,8 @@ hu:
     teacher_count: '%{count} tanár iratkozott már fel.'
     overview: 'Regisztrálj fiókot, hogy rögzítsd az előremeneteled vagy hogy egy osztály irányíts. <a href="/">Böngészhetsz a különböző szintek és puzzlek között</a> fiók nélkül is, de az állapotod mentéséhez regisztrálnod kell.'
     hoc_already_signed_up_heading: 'Kezdés bejelentkezés nélkül'
+    hoc_already_signed_up_content: 'Sikeresen bejelentkeztél a Kódolás Órájába! Neked és a tanáraidnak nem kell bejelentkezned a Kód Stúdióba a kihívások eléréséhez. A kezdéshez <a href="%{learn_url}">válassz ki egy feladatot az osztályodnak,és oszd meg a linket.<br/><br/>Ha élvezted a Kódolás Óráját,akkor állíts be magadnak egy jelszót,és csinálj egy Kód Stúdió fiókot,hogy felvedd a tanáraidat egy<a href="%{educate_url}">kurzusra.'
+    hoc_already_signed_up_content_post_hoc: 'Köszönjük, hogy otthont adott egy Kódolás Órájá-nak. A Code Studio szolgáltatásba való bejelentkezéshez jelszót kell beállítania fiókjához. Ezzel elmentheti a haladását és kezelheti az osztálytermét. A hallgatókhoz kurzusokat rendelhet, és nyomon követheti azok előrehaladását. <a href="%{studio_url}"> Továbbra is folytathatja a különböző szakaszok és rejtvények böngészését </a> fiók létrehozása nélkül.'
     teacher_educator_guide: 'Lásd a tanító segítségét'
     title: "Regisztrálj a Code.org-ba"
     school_name: 'Iskola neve (nem kötelező)'
@@ -118,6 +119,7 @@ hu:
     age: 'Kor'
     user_type: 'Diák vagy tanár vagy?'
     submit: 'Regisztrálás'
+    go_to_account: 'A fiókomhoz'
     teacher: 'Tanár vagy?'
     valid_username: "Elérhető!"
     invalid_username: "Felhasználónév minimum 5 karakter hosszú"
@@ -125,7 +127,11 @@ hu:
     valid_password: "Érvényes jelszó!"
     invalid_password: "A jelszónak legalább 6 karakter hosszúnak kell lennie"
     mismatch_password: "A megadott két jelszó nem egyezik"
+    agree_tos_privacy: "Egyetértek a <a href='http://code.org/tos'> Általános Szerződési Feltételek </a> és a <a href='http://code.org/privacy'> adatvédelmi irányelvekkel </a>."
+    under_13_consent: "Ha 13 éves kor alatti vagyok, megerősítem, hogy a szülőm vagy törvényes gondviselőm engedélyt adott, hogy használjam Code.org szolgáltatásait."
     student_consent: "Megerősítem, hogy a szülőm vagy törvényes gondviselőm engedélyt adott, hogy használjam Code.org szolgáltatásait."
+    agree_us_website: "Elfogadom, hogy egy Egyesült Államokban létrejött weboldalt használok."
+    my_data_to_us: "A weboldal használatából keletkező adatok tárolása és feldolgozása esetlegesen az Egyesült Államokban történik."
     student_terms: "Megjegyzés: a tanulók e-mail címeit olyan módon tároljuk, hogy az nem teszi lehetővé számunkra a kapcsolatfelvételt. A tanulók a jelszóemlékeztető kivételével soha nem fognak e-mailt kapni a Code.org-tól. További információt az <a href='http://code.org/privacy'>adatvédelem</a> részben találsz."
     additional_information: "Még szükségünk van néhány adatra  a regisztráció folytatásához."
     user_type_button: "Felhasználói fiók-típus módosítása"
@@ -483,7 +489,6 @@ hu:
   pdf_download: 'Letöltés PDF-ben'
   download_coming_soon: 'Hamarosan lesz letölthető tevékenység.'
   video_coming_soon: 'Hamarosan lesz videó!'
-  not_started: 'A diák nem próbálta meg ezt a szintet.'
   share_code:
     title: "Kattints a \"Fuss\"-ra, hogy lásd a programomat működés közben"
     bounce_og_title: "Nézd meg a Visszapattanós játékomat"
@@ -670,41 +675,21 @@ hu:
     create: "Projekt létrehozása"
     create_a_project: 'Új projekt létrehozása:'
     new: "Új létrehozása"
-    rename: "Átnevezés"
-    save: "Mentés"
-    delete: "Törlés"
-    import: "Importálás"
-    share_link_import_bad_link_header: "A megosztási hivatkozást a rendszer nem ismerte fel"
-    share_link_import_bad_link_body: "Nem sikerült importálni a megosztási hivatkozást. Bizonyosodj meg arról, hogy a Minecraft: Agent kirakósból származó hivatkozást használsz, és hogy a teljes hivatkozást lemásoltad."
-    share_link_import_error_header: "Hiba történt."
-    share_link_import_error_body: "Hiba történt a megosztási hivatkozás importálása során. Próbáld újra!"
     exit: "Vissza a tanfolyamhoz"
-    my_projects: "Projektjeim"
     project_gallery: "Projektek"
     publish: "Közzétesz"
     unpublish: "Közzététel visszavonása"
-    share: "Megosztás"
     share_title: A projekt megosztása
     share_copy_link: "A hivatkozás másolása:"
     embed: "Beágyaz"
-    close: "Bezár"
-    more: "Mégtöbb"
     name: "Név"
     updated: "Frissítve"
     project_type: "Projekt típusa"
     help_text: "Kattints <strong>App készítése</strong> vagy a <strong>Rajzolj valamit</strong> feliratokra egy új \"Játék a Laborban\" vagy \"Művész\" projekt létrehozásához!<br/>Bármikor vissza tudsz térni és folytatni a munkát a projektjeiden."
     need_help: "Szükséged van segítségre a kezdéshez?"
-    really_delete: 'Biztos törölni akarod?'
-    delete_yes: 'Igen'
-    delete_no: 'Nem'
     saved: "Mentve"
     not_saved: "Nincs mentve"
-    cancel: 'Mégsem'
-    delete_confirm_title: Biztosan törlöd ezt a projektet?
-    delete_confirm_text: "A projekt törlése véglegesen eltávolítja azt a saját projektek listájából. Bárki, akivel korábban megosztottad azt, többé már nem fogja tudni megtekinteni a projektet."
     view_all: 'Projektjeim megtekintése'
-    remix: 'Remix'
-    click_to_remix: "Kattints a 'Remix'-re, hogy lepörgesd a saját verziódat!"
     edit_project: 'Projekt szerkesztése'
     abuse:
       tos: "Ezt a projektet jelentették, mint amely nem tesz eleget a Code.org <a href='http://code.org/tos'>Felhasználói Feltételekben előírtaknak,</a> így nem osztható meg másokkal."

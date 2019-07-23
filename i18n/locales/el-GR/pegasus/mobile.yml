@@ -836,11 +836,6 @@
   course3_name: "Μάθημα 3"
   course4_name: "Μάθημα 4"
   accelerated_name: "Επιταχυνόμενη πορεία μάθησης"
-  cspunit3_name: "Αρχές CS - Ενότητα 3"
-  cspassessment_name: "Πλήρης εξέταση - 50 ερωτήσεις"
-  cspexam1-mWU7ilDYM9_name: Εξέταση Μέρος 1 -25 ερωτήσεις
-  cspexam2-AKwgAh1ac5_name: Εξέταση Μέρος 2 -25 ερωτήσεις
-  cspunit3_gradelevel: "Τάξεις Γ΄ Γυμνασίου - Γ΄ Λυκείου"
   20-hour_name: Επιταχυνόμενη πορεία μάθησης
   algebra_name: "Επιστήμη Υπολογιστών στην Αλγεβρα"
   AlgebraA_name: "Επιστήμη Υπολογιστών στην Αλγεβρα - Μάθημα Α"
@@ -851,14 +846,6 @@
   starwarsblocks_name: "Πόλεμος τον Άστρων (μπλοκ)"
   hoc-encryption_name: Απλή Κρυπτογράφηση
   text-compression_name: Συμπίεση κειμένου
-  math_category_name: "Μαθηματικά"
-  hoc_category_name: "Η Ώρα του Κώδικα"
-  csf_category_name: "Βασικές αρχές της Επιστήμης των Υπολογιστών"
-  csf_international_category_name: "Διεθνείς Βασικές Αρχές Επιστήμης Υπολογιστών"
-  csf2_draft_category_name: 'Υπό ανάπτυξη: Μαθήματα A - F'
-  csp_category_name: "Αρχές της Επιστήμης των Υπολογιστών ' 15-'16"
-  csp17_category_name: "Βασικές Αρχές της Επιστήμης των Υπολογιστών ' 16-'17"
-  cspexams_category_name: "Τεστ στις Βασικές Αρχές της Επιστήμης των Υπολογιστών"
   applab_name: "App Lab"
   gamelab_name: "Game Lab"
   basketball_name: "Φτιάξτε ένα παιχνίδι μπάσκετ"
@@ -933,6 +920,11 @@
   coursed-2018_gradelevel: Τάξεις Β' Γυμνασίου +
   coursee-2018_gradelevel: Τάξεις Γ' Γυμνασίου +
   coursef-2018_gradelevel: Τάξεις Α' Λυκείου +
+  coursea-2019_gradelevel: Τάξεις Ε' Δημοτικού +
+  coursec-2019_gradelevel: Τάξεις Α' Γυμνασίου +
+  coursed-2019_gradelevel: Τάξεις Β' Γυμνασίου +
+  coursee-2019_gradelevel: Τάξεις Γ' Γυμνασίου +
+  coursef-2019_gradelevel: Τάξεις Α' Λυκείου +
   accelerated_gradelevel: "Ηλικίες 10+ (μετά το Μάθημα 3)"
   codeorg_platformtext: "Σύγχρονα προγράμματα περιήγησης, smartphones, ταμπλέτες"
   codeintl_platformtext: "Σύγχρονα προγράμματα περιήγησης, έξυπνα τηλέφωνα, tablet"
@@ -1259,7 +1251,6 @@
   header_about: "Σχετικά"
   header_help_support: 'Βοήθεια και υποστήριξη '
   header_report_bug: "Αναφορά σφάλματος"
-  csp_name: "Βασικές Αρχές της Επιστήμης των Υπολογιστών ' 16-'17"
   user_header_label: "Γεια σου %{username}"
   user_header_team: "Ομάδα"
   user_header_settings: "Ο λογαριασμός μου"

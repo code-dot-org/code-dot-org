@@ -1,10 +1,7 @@
 ---
-pl:
+pl-PL:
   data:
     display_name:
-      AppLab Intro 4 - Video setProperty: Pierwsze kroki
-      AppLab Intro 6 - Video welcome: Pierwsze kroki
-      CSD Timed Loop Map: Pętle czasowe
       CSD U2 Pair Programming Video: Programowanie w parach
       CSD U2 Pair Programming Video_2018: Programowanie w parach
       CSD U2 Pair Programming Video_2019: Programowanie w parach
@@ -65,7 +62,6 @@ pl:
       CSD U3 collisions build isTouching: Wykrywanie kolizji
       CSD U3 collisions build isTouching_2018: Wykrywanie kolizji
       CSD U3 collisions build isTouching_2019: Wykrywanie kolizji
-      CSD U3 functions map: Funkcje
       CSD U6 Event Types: Typy zdarzeń
       CSD U6 Event Types_2018: Typy zdarzeń
       CSD U6 Event Types_2019: Typy zdarzeń
@@ -79,7 +75,6 @@ pl:
       CSD U6 functions paramters video_2018: Funkcje z parametrami
       CSD U6 functions paramters video_2019: Funkcje z parametrami
       'CSD: For Loop_2018': Pętle dla (for)
-      'CSD: For Loop_2019': Pętle dla (for)
       CourseEF_video_IntroSpriteLab: To jest Laboratorium Duszków
       CourseEF_video_IntroSpriteLab_2019: To jest Laboratorium Duszków
       Dance_Party_extras_battle: Zespoły taneczne
@@ -88,16 +83,9 @@ pl:
       Dance_Party_extras_on_beat: Bas, średni i wysoki ton
       Dance_Party_extras_speed: Przyspiesz, spowolnij
       Dance_Party_extras_visible: Gdzie oni poszli?
-      MC_HOC_2017_FP10x10: Czas na zabawę
-      MC_HOC_2017_FP10x10_RE: Czas na zabawę
       Making Music_2018: Tworzenie muzyki
       Making Music_2019: Tworzenie muzyki
-      SG U3L07 More Subgoals: Dokumentacja
-      Text Compression_2018: Kompresja tekstu
-      Text Compression_2019: Kompresja tekstu
       courseA_video_Stevie: Stevie i Duży Projekt (the Big Project)
       courseA_video_Stevie_2018: Stevie i Duży Projekt (the Big Project)
-      courseA_video_Stevie_2019: Stevie i Duży Projekt (the Big Project)
       courseB_video_Unspotted: Niewykryte Błędy
       courseB_video_Unspotted_2018: Niewykryte Błędy
-      courseB_video_Unspotted_2019: Niewykryte Błędy

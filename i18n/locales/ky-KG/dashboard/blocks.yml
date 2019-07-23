@@ -222,14 +222,6 @@ ky:
             '"space"': космос
             '"x"': x
             '"y"': 'y'
-      gamelab_layoutSprites:
-        options:
-          FORMAT:
-            '"random"': туш келди
-      gamelab_locationDelta:
-        options:
-          DIR:
-            "'random'": туш келди
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -248,10 +240,6 @@ ky:
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': көк желе
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': суу алдында
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': кыш
-      gamelab_setPosition:
-        options:
-          POSITION:
-            '"random"': туш келди
       gamelab_setProp:
         options:
           PROPERTY:
@@ -268,23 +256,6 @@ ky:
           CONDITION:
             '"when"': качан
             '"while"': болуп турганда
-      gamelab_spriteClickedSet:
-        options:
-          CONDITION:
-            '"when"': качан
-            '"while"': болуп турганда
-      gamelab_spritesWhere:
-        options:
-          PROPERTY:
-            '"scale"': өлчөмү
-            '"x"': x позиция
-            '"y"': у позиция
-      gamelab_spritesWhereGenerator:
-        options:
-          PROPERTY:
-            '"scale"': өлчөмү
-            '"x"': x позиция
-            '"y"': у позиция
       gamelab_turn:
         options:
           DIRECTION:
@@ -305,11 +276,6 @@ ky:
             "'down'": ылдый
             "'left'": солго
             "'right'": оңго
-      gamelab_whenTouchingSet:
-        options:
-          CONDITION:
-            '"when"': качан
-            '"while"': болуп турганда
       gamelab_whileKey:
         options:
           KEY:

@@ -640,8 +640,36 @@ FactoryGirl.define do
     level_source {create(:level_source, :with_image, level: user_level.level)}
   end
 
+  factory :assessment_activity do
+    user
+    script
+    level
+    level_source {create :level_source, level: level}
+  end
+
   factory :script do
     sequence(:name) {|n| "bogus-script-#{n}"}
+
+    factory :csf_script do
+      after(:create) do |csf_script|
+        csf_script.curriculum_umbrella = 'CSF'
+        csf_script.save
+      end
+    end
+
+    factory :csd_script do
+      after(:create) do |csd_script|
+        csd_script.curriculum_umbrella = 'CSD'
+        csd_script.save
+      end
+    end
+
+    factory :csp_script do
+      after(:create) do |csp_script|
+        csp_script.curriculum_umbrella = 'CSP'
+        csp_script.save
+      end
+    end
   end
 
   factory :featured_project do
@@ -694,6 +722,13 @@ FactoryGirl.define do
         end
       end
       props
+    end
+
+    factory :csf_script_level do
+      after(:create) do |csf_script_level|
+        csf_script_level.script.curriculum_umbrella = 'CSF'
+        csf_script_level.save
+      end
     end
   end
 
@@ -813,6 +848,29 @@ FactoryGirl.define do
           {levels: [sublevels[0].name, sublevels[1].name]},
           {levels: [sublevels[2].name]}
         ]
+      end
+    end
+  end
+
+  factory :bubble_choice_level, class: BubbleChoice do
+    game {create(:game, app: "bubble_choice")}
+    name 'name'
+    display_name 'display_name'
+    transient do
+      sublevels []
+    end
+    properties do
+      {
+        display_name: display_name,
+        sublevels: sublevels.pluck(:name)
+      }
+    end
+
+    trait :with_sublevels do
+      after(:create) do |bc|
+        sublevels = create_list(:level, 3)
+        bc.properties['sublevels'] = sublevels.pluck(:name)
+        bc.save!
       end
     end
   end

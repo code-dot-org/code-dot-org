@@ -129,6 +129,51 @@ class Api::V1::TeacherFeedbacksControllerTest < ActionDispatch::IntegrationTest
     assert_equal [], parsed_response
   end
 
+  test 'count is 0 when no feedback available' do
+    sign_in @student
+    get "#{API}/count"
+
+    assert_equal "0", formatted_response
+  end
+
+  test 'count is accurate when feedback is available' do
+    sign_in @student
+    teacher_sign_in_and_give_feedback(@teacher, @student, @level, COMMENT1, PERFORMANCE1)
+    sign_out @teacher
+
+    sign_in @student
+    get "#{API}/count"
+
+    assert_equal "1", formatted_response
+
+    teacher_sign_in_and_give_feedback(@teacher, @student, @level, COMMENT2, PERFORMANCE2)
+    sign_out @teacher
+
+    sign_in @student
+    get "#{API}/count"
+
+    assert_equal "2", formatted_response
+  end
+
+  test 'count does not include already seen feedback' do
+    sign_in @student
+    teacher_sign_in_and_give_feedback(@teacher, @student, @level, COMMENT1, PERFORMANCE1)
+    sign_out @teacher
+
+    sign_in @student
+    get "#{API}/count"
+
+    assert_equal "1", formatted_response
+
+    TeacherFeedback.last.update_attribute(
+      :seen_on_feedback_page_at,
+      DateTime.now
+    )
+
+    get "#{API}/count"
+    assert_equal "0", formatted_response
+  end
+
   test 'bad request when student_id not provided - get_feedbacks' do
     teacher_sign_in_and_give_feedback(@teacher, @student, @level, COMMENT1, PERFORMANCE1)
     get "#{API}/get_feedbacks", params: {level_id: @level.id}
@@ -212,10 +257,32 @@ class Api::V1::TeacherFeedbacksControllerTest < ActionDispatch::IntegrationTest
     assert_equal 'Test Name', parsed_response[0]['teacher_name']
   end
 
+  test 'increment_visit_count returns no_content on successful save' do
+    TeacherFeedback.any_instance.stubs(:increment_visit_count).returns(true)
+    feedback = create :teacher_feedback
+
+    sign_in feedback.student
+    post "#{API}/#{feedback.id}/increment_visit_count"
+    assert_response :no_content
+  end
+
+  test 'increment_visit_count returns unprocessable_entity on failed save' do
+    TeacherFeedback.any_instance.stubs(:increment_visit_count).returns(false)
+    feedback = create :teacher_feedback
+
+    sign_in feedback.student
+    post "#{API}/#{feedback.id}/increment_visit_count"
+    assert_response :unprocessable_entity
+  end
+
   private
 
   def parsed_response
     JSON.parse(@response.body)
+  end
+
+  def formatted_response
+    @response.body.delete!('\\"')
   end
 
   # Sign in as teacher and leave feedback for student on level.

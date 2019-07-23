@@ -80,7 +80,6 @@ is:
   of: af
   more: MEIRA
   less: MINNA
-  beta: beta
   try_hoc: 'Prófaðu Klukkustund kóðunar, smelltu hér >> '
   try_k8intro: Prófaðu Inngang að tölvunarfræði fyrir 13 - 14 ára (11-25 klst.)
   k8intro: Inngangur að tölvunarfræði fyrir 13 - 14 ára (15-25 klst.)
@@ -392,12 +391,17 @@ is:
       gumball: The Amazing World of Gumball
       iceage: Ice Age
       infinity: Óendanleiki
+      makerlab: Maker Toolkit
       minecraft_adventurer: Minecraft Könnuður
+      minecraft_aquatic: Minecraft Vatnaveröld
+      minecraft_codebuilder: 'Minecraft: Code Connection'
       minecraft_designer: Minecraft
+      minecraft_hero: Minecraft Hetja
       playlab: Leikjasmiðjan
+      playlab_k1: Leikjasmiðja (forlæsir)
       scratch: Scratch
       sports: Íþróttir
-      spritelab: Kvikasmiðjan
+      spritelab: Verusmiðjan
       starwars: Star Wars
       starwarsblocks: Star Wars (Kubbar)
       starwarsblocks_hour: Star Wars (Kubbar)
@@ -775,7 +779,6 @@ is:
   pdf_download: Hala niður PDF
   download_coming_soon: Niðurhal verkefnis verður brátt tiltækt.
   video_coming_soon: Myndskeið á leiðinni!
-  not_started: Nemandinn hefur ekki reynt við þetta borð.
   share_code:
     title: Smelltu á "Keyra" til að prófa forritið mitt
     bounce_og_title: Kíktu á skoppleikinn minn
@@ -1070,23 +1073,10 @@ is:
     create: Stofna verkefni
     create_a_project: 'Byrja með nýtt verkefni:'
     new: Stofna nýtt
-    rename: Endurnefna
-    save: Vista
-    delete: Eyða
-    import: Flytja inn
-    share_link_import_bad_link_header: Óþekktur tengill fyrir deilingu
-    share_link_import_bad_link_body: 'Við gátum ekki flutt inn þennan tengil til að
-      deila. Gættu þess að þú sért að nota tengil úr Minecraft: Umba þraut og að þú
-      hafir afritað allan tengilinn.'
-    share_link_import_error_header: Eitthvað fór úrskeiðis.
-    share_link_import_error_body: Það kom upp vandamál við að flytja inn þennan tengil
-      fyrir deilingu. Reyndu aftur.
     exit: Til baka í námskeið
-    my_projects: Verkefni mín
     project_gallery: Verkefni
     publish: Birta
     unpublish: Taka úr birtingu
-    share: Deila leik
     share_title: Deila verkefninu
     share_copy_link: 'Afrita tengilinn:'
     share_embed_description: Þú getur límt innfellingarkóðann í HTML síðu til að sýna
@@ -1097,8 +1087,6 @@ is:
     advanced_share: Sýna ítarlegri valkosti
     no_projects: Þú hefur engin verkefni sem er. Smelltu á einhvern hnappinn hér fyrir
       ofan til að byrja á verkefni.
-    close: Loka
-    more: Meira
     name: Nafn
     updated: Uppfært
     project_type: Tegund verkefnis
@@ -1109,19 +1097,9 @@ is:
     thumbnail_help: Sérðu ekki réttu smámyndina fyrir verkefnið þitt? Keyrðu appið
       þitt til að búa til nýja smámynd. Athugaðu að það getur einhverja klukkutíma
       fyrir smámyndina að birtast alls staðar.
-    really_delete: Eyða?
-    delete_yes: Já
-    delete_no: Nei
     saved: Vistað
     not_saved: Ekki vistað
-    cancel: Hætta við
-    delete_confirm_title: Ertu viss um að þú viljir eyða þessu verkefni?
-    delete_confirm_text: Ef þú eyðir verkefninu, verður það endanlega fjarlægt úr
-      listanum Verkefni mín. Ef þú hefur deilt verkefninu með öðrum, munu þeir ekki
-      lengur sjá það.
     view_all: Sýna verkefnin mín
-    remix: Endurblanda
-    click_to_remix: Smelltu á "Endurblanda" til að stofna afleidda útgáfu!
     edit_project: Breyta verkefni
     sharing_disabled: Því miður er ekki mögulegt að deila þessu verkefni. Ef þetta
       er þitt verkefni eða nemanda þíns, vinsamlegast <a href='https://studio.code.org/users/sign_in'>skráðu
@@ -1187,17 +1165,21 @@ is:
     csf_f_2: Innihald Námskeiðs F
     csf_digcit: Stafrænn borgari
     csf_jigsaw: Púsl
+    csf_sequencing: Skipanaröð
     csf_loops: Lykkjur
     csf_events: Atvik
+    csf_online_safety: Netöryggi
     csf_binary: Tvíundir
     csf_data: Gögn
     csf_conditionals: Skilyrði
+    csf_sprites: Kvikar
     csf_spritelab: Kvikasmiðjan
     csf_nested_loops: Innri lykkjur
     csf_functions: Föll
     csf_variables: Breytur
     csf_for_loops: Frá lykkjur
     csf_internet: Internet
+    csf_warmup: Upphitun
     csd1_1: 'Kafli 1: Lausn vandamála sem ferli'
     csd1_2: 'Kafli 2: Tölvur og lausn vandamála'
     csd2_1: 'Kafli 1: Innihald vefja og HTML'
@@ -1231,9 +1213,18 @@ is:
     csp_variables: Breytur
     csp_conditionals: Skilyrði
     csp_functions: Föll
+    csp_project: Verkefni
     csp_lists: Listar
     csp_loops: Lykkjur
+    csp_traversals: Yfirferðir
+    csp_libraries: Söfn
+    csp_parameters_return_values: Stikar og skilagildi
     dlp: Kvaðningar um íhugun
+    time4cs_c1: Everglades og vistkerfi þess
+    time4cs_c2: Fæðukeðjur í Everglades
+    time4cs_c3: Líf í Everglades
+    time4cs_c4: Utanaðkomandi áhrif í Everglades
+    time4cs_c5: Borgarar til hins betra í Everglades
   external_links:
     disclaimer: Afsal ábyrgðar
     leaving_domain: Þú ert nú að yfirgefa þetta vefsvæði og fara á svæði sem Code.org
@@ -1314,6 +1305,11 @@ is:
     kennarann í hvaða verkefni þú ættir að vera.
   hidden_script: Kennarinn þinn bjóst ekki við að þú værir hér. Vinsamlegast spurðu
     kennarann í hvaða verkefni þú ættir að vera.
+  no_script_access_student: Þú hefur ekki aðgang að þessari einingu. Vinsamlegast
+    spurðu kennarann þinn í hvaða einingu þú ættir að vera.
+  no_script_access_teacher: Þú hefur ekki aðgang að þessari einingu. Ef þú telur að
+    þú ættir að hafa aðgang að þessari einingu, skrifaðu þá til support@code.org svo
+    að við getum bætt úr því.
   return_unit_overview: Fara í yfirlit kafla
   return_course_overview: Fara í yfirlit kafla
   view_all_units: Sjá allar einingar

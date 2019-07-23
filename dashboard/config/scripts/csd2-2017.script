@@ -11,6 +11,7 @@ family_name 'csd2'
 version_year '2017'
 is_stable true
 project_sharing true
+curriculum_umbrella 'CSD'
 
 stage 'Exploring Websites', flex_category: 'csd2_1'
 level 'CSD U2 L1 Overview', named: true

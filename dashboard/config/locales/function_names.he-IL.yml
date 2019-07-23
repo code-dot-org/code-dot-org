@@ -1,283 +1,957 @@
 ---
-he:
+he-IL:
   data:
     function_names:
-      x: x
-      details: פרטים
-      draw eyebrow: צייר גבות
-      draw pupil: צייר תלמיד
-      draw a circle: צייר מעגל
-      draw a car: צייר מכונית
-      draw_rect: צייר מרובע
-      draw square: צייר ריבוע
-      jump to controller top left: קפוץ עם הבקר לפינה שמאלית עליונה
-      jump to middle: קפוץ לאמצע
-      draw a button: צייר כפתור
-      draw cord: צייר מיתר
-      draw left leg: צייר רגל שמאל
-      draw right leg: צייר רגל ימין
-      draw body and arms: צייר גוף וזרועות
-      draw a head: צייר ראש
-      draw head: צייר ראש
-      draw arms: צייר זרועות
-      jump to neck: קפוץ לצוואר
-      draw O: צייר O
-      draw D: צייר D
-      draw E: צייר E
-      big gear: מנוע גדול
-      small gear: מנוע קטן
-      draw a hexagon: צייר משושה
-      draw a flower: צייר פרח
-      draw a square: צייר ריבוע
-      draw a snowflake: צייר פתית שלג
-      draw 3 hexagons: צייר 3 משושים
-      draw 4 hexagons: צייר 4 משושים
-      draw 5 hexagons: צייר 5 משושים
-      get 2 nectar: אסוף 2 צופים
-      collect purple nectar: אסוף צוף סגול
-      get 5: הבא 5
-      move and get nectar: זוז ואסוף צוף
-      move and get 4: זוז והבא 4
-      get 7 nectar make 7 honey: אסוף 7 צופים ויצר 7 דבשים
-      get 7 make 7: אסוף 7 וצור 7
-      get 7: אסוף 7
-      move and get 3: זוז ואסוף 3
-      draw a tree: צייר עץ
-      draw triangle: צייר משולש
-      draw circle: צייר עיגול
-      draw goal: צייר מטרה
-      graph: גרף
-      draw waves: צייר גלים
-      draw a wave: צייר גל
-      draw a small triangle: צייר משולש קטן
-      draw a medium triangle: צייר משולש בינוני
-      draw a large triangle: צייר משולש רחב
-      draw a big triangle: צייר משולש גדול
-      draw a triangle: צייר משולש
-      draw a house: צייר בית
-      check purple flower: צייר פרח סגול
-      check flower make honey: בדוק פרח צור דבש
-      get nectar or make honey: אסוף צוף או צור דבש
-      make 3 honey: צור 3 דבש
-      get 5 nectar: אסוף 5 צופים
-      make all honey: צור את כל הדבש
-      draw a star: צייר כוכב
-      game has been won: המשחק הסתיים בניצחון
-      draw: צייר
-      draw a polygon: צייר מצולע
-      draw a shape: צייר צורה
-      get 2 and make 2: הבא 2 וצור 2
-      draw a pinwheel: צייר גלגל רוח
-      drawTree: צייר עץ
-      drawHouse: צייר בית
-      drawBranch: צייר ספסל
-      drawSky: צייר שמיים
-      fillScreen: מלא מסך
-      drawHouseLayer: צור שכבת בית
-      swap: החלף
-      init: אתחל
-      do something: עשה משהו
-      filter_pixel: סנן פיקסל
-      draw_image: צייר תמונה
-      story: סיפור
-      starting path: תחילת הדרך
-      jump: קפוץ
-      patrol: סייר
-      fill in bg: מלא ברקע
-      draw grid1: צייר רשת1
-      draw lines: צייר קווים
-      Draw a Square Line: צייר קו ריבוע
-      Draw a triangle: צייר משולש
-      Draw a Cube: צייר קוביה
-      draw a cube: צייר קוביה
-      draw an octagon 20: צייר מתומן 20
-      Draw a square: צייר מרובע
-      cube: קוביה
-      do something2: עשה משהו2
-      jump upper right: קפוץ לפינה ימנית עליונה
-      draw a line of  squares: צייר קו של מרובעים
-      draw a line of squares: צייר קו של מרובעים
-      Draw Square Line: צייר קו ריבוע
-      jump upper left: קפוץ לפינה שמאלית עליונה
-      draw a line of octagons: צור קו של מתומן
-      draw a square line: צייר קו ריבוע
-      Draw a Square: צייר ריבוע
-      draw a square 20: צור ריבוע 20
-      draw a square 40: צור ריבוע 40
-      draw a triangle with length: צייר משולש עם אורך
-      Draw a Triangle with length: צייר משולש עם אורך
-      draw a triangle wioth length: צייר משולש עם אורך
-      draw a sqaure: צייר ריבוע
-      triangle: משולש
-      draw a spiral shape: צייר צורה ספירלית
-      get 3 nectar: אסוף 3 צופים
-      get many nectar: אסוף כמה צופים
-      get nectar make honey: אסוף צופים וצור דבש
-      draw an octagon: צייר מתומן
-      draw octagons: צייר מתומנים
-      shift down: הזז מטה
-      level_up: שלב הבא
-      score_points: נקודות
-      set score: הגדר ניקוד
-      draw a line of hexagons: צייר קו של משושה
-      shift down/forward: הזז למטה/קדימה
-      shift down/backward: הזז למטה/אחורה
-      get nectar: תשיג צוף
-      make honey up and over: ייצר דבש למעלה וסיים
-      setActors: הגדר שחקנים
-      popCharacter: הצג דמות
-      patrol left right: סייר שמאלה וימינה
-      empty function: פונקציה ריקה
-      check guess: בדוק ניחוש
-      Jump: קפוץ
-      test: בדיקה
-      build bridge: בנה גשר
-      run right: רוץ ימינה
-      spin right: הסתובב ימינה
-      grow forever: גדול לתמיד
-      draw grass: צייר דשא
-      sun: שמש
-      draw windows: צייר חלונות
-      square: ריבוע
-      draw a door: צייר דלת
-      rectangle: מלבן
-      diamond: יהלום
-      window: חלון
-      n-sided shape: צורה עם n צדדים
-      draw a loop: צייר לולאה
-      draw spiral circle: צייר עיגול ספירלי
-      draw roof: צייר גג
-      draw rectangle: צייר מלבן
-      move: זוז
-      function 1: פונקציה 1
-      function 2: פונקציה 2
-      destroy and move: השמד וזוז
-      clear path: פנה דרך
-      clear cacti: הסר קקטוסים
-      place and move: הנח וזוז
-      build short bridge: בנה גשר קצר
-      build long bridge: בנה גשר ארוך
-      create trail: צור שביל
-      move and fill: זוז ומלאה
-      fix right corner: תקן פינה ימנית
-      fix left corner: תקן פינה שמאלית
-      make segment: צור רווח
-      turn corner: סובב פינה
-      fix long path: תקן דרך ארוכה
-      fix short path: תקן דרך קצרה
-      place 3 tracks: הנח 3 מסילות
-      clear right corner: נקה פינה ימנית
-      clear left corner: נקה פינה שמאלית
-      draw a spiral edge: צייר פינה ספירלית
-      draw a pentagon: צייר מחומש
-      artist jump around: אמן קופץ סביב
-      Draw lenses: צייר עדשות
-      25 pixel square: ריבוע בגודל 25 פיקסלים
-      draw eye: צייר עין
-      Make a Dot: צור נקודה
-      bubble sort: מיון בועות
-      move right: זוז ימינה
-      say number: אמור מספר
-      move up: זוז למעלה
-      move down: הזז למטה
-      move left: זוז שמאלה
-      kill alien: הרוג חייזר
-      click: לחיצה
-      Send Actor 1 to opposite: שלח שחקן 1 ליריב
-      blink actor 1: הבהב שחקן 1
-      my function: הפונקציה שלי
-      Squares row: שורת ריבועים
-      draw first part of heart: צייר חלק ראשון של לב
-      check win: בדוק ניצחון
-      curvy corner: פינה מעוקלת
-      make triangle: צור משולש
-      my behavior: ההתנהגות שלי
-      '"simple" solution': פתרון "פשוט"
-      potential solution: פוטנציאל לפתרון
-      my design: העיצוב שלי
-      get 3 nectar or honey: אסוף 3 צופים או דבש
-      move and collect: זוז ואסוף
-      check nectar or honey: בדוק צוף או דבש
-      row of nectar: שורה של צוף
-      rowOfNectar: שורה של צוף
-      move and check: זוז ובדוק
-      win game: נצח משחק
-      lose game: הפסד משחק
-      keep playing: המשך לשחק
-      Ask a question: שאל שאלה
-      draw pinwheel: צייר גלגל רוח
-      draw background: צייר רקע
-      move and get nectar with counter: זוז ואסוף צוף עם מונה
-      pick row: בחר שורה
-      draw flame: צייר להבה
-      draw fire: צייר אש
-      booster: מאיץ
-      draw line of triangles: צייר קו של משולשים
-      draw a window: צייר חלון
-      stop_everything: עצור הכל
-      draw a plane of squares: צייר מטוס של מרובעים
-      draw hexagon: צייר משושה
-      draw line of hexagons: צייר קו של משושים
-      staggered squares: נענע מרובעים
-      draw line of polygons: צייר קו של מצולע
-      draw polygon: צייר מצולע
-      honey nectar: דבש מצוף
-      move and make honey: זוז וייצר דבש
-      collect all nectar: אסוף את כל הצוף
-      get all nectar: אסוף את כל הצוף
-      get pumpkin: הבא דלעת
-      harvest: קציר
-      get corn and come back: הבא תירס וחזור חזרה
-      pick along path: אסוף לאורך הדרך
-      check square for corn: בדוק ריבוע עבור תירס
-      get all pumpkins: הבא את כל הדלועים
-      pumpkin square: מרובע דלעת
-      navigate: נווט
-      check and pick: בדוק ואסוף
-      find pumpkin: מצא דלעת
-      wander path: לך לאורך השביל
-      get produce: התחל לייצר
-      check for corn: בדוק עבור תירס
-      corn rectangle: ריבוע תירס
-      lettuce stairs: מדרגות חסה
-      pick veggie: אסוף ירק
-      corn and pumpkin: תירס ודלעת
-      go get pumpkins: לך ואסוף דלועים
-      go get lettuce: לך והבא חסה
-      garden square: מרובע גינה
-      get corn come back: אסוף תירס וחזור
-      checker: בודק
-      Make gingham: ייצר בגד
-      draw a square2: צור ריבוע2
-      get only nectar: אסוף רק צוף
-      only make honey: רק ייצר דבש
-      collect row: אסוף שורה
-      rowOfNectarOrHoney: שורה של צוף או דבש
-      collect stairs: אסוף מדרגות
-      collect: אסוף
-      move and increment: זוז והוסף
-      do something3: עשה משהו3
-      Robot Jump: רובוט קופץ
-      Center Dragon: מרכז דרקון
-      Dragon Fly: דרקון עף
-      Stop Dragon: עצור דרקון
-      Knight Jump: אביר קופץ
-      robotThinking: רובוט חושב
-      fill area with color: מלא איזור עם צבע
-      draw a line of triangles: צייר קו של משולשים
-      check flower: בדוק פרח
-      get next row: הבא שורה הבאה
-      check space: בדוק מרווח
-      follow path: עקוב אחר הדרך
-      physics: פיזיקה
-      initialization: איתחול
-      Make Actor 1 Jump: עשה ששחקן 1 יקפוץ
-      Choose Number: בחר מספר
-      Move Bird: הזז ציפור
-      turn left: פנה שמאלה
-      move forward: זוז קדימה
-      turn right: פנה ימינה
-      drawDot: צייר נקודה
-      draw a rectangle: צייר מלבן
-      Which Course for My Students?: איזה קורס לתלמידים שלי?
-      draw a heart: צייר לב
+      2-3 Artist 11:
+        x: x
+      2-3 Artist 12:
+        details: פרטים
+        draw eyebrow: צייר גבות
+        draw pupil: צייר תלמיד
+      2-3 Artist 3.4:
+        draw a circle: צייר מעגל
+        draw a car: צייר מכונית
+      2-3 Artist 7:
+        draw_rect: צייר מרובע
+      2-3 Artist Debugging 10:
+        draw square: צייר ריבוע
+        jump to controller top left: קפוץ עם הבקר לפינה שמאלית עליונה
+        jump to middle: קפוץ לאמצע
+        draw a circle: צייר מעגל
+        draw a button: צייר כפתור
+        draw cord: צייר מיתר
+      2-3 Artist Debugging 5:
+        draw left leg: צייר רגל שמאל
+        draw right leg: צייר רגל ימין
+        draw body and arms: צייר גוף וזרועות
+        draw a head: צייר ראש
+      2-3 Artist Debugging 6:
+        draw right leg: צייר רגל ימין
+        draw head: צייר ראש
+        draw arms: צייר זרועות
+        jump to neck: קפוץ לצוואר
+        draw left leg: צייר רגל שמאל
+      2-3 Artist Debugging 7:
+        draw O: צייר O
+        draw D: צייר D
+        draw E: צייר E
+      2-3 Artist Functions 10:
+        big gear: מנוע גדול
+        small gear: מנוע קטן
+      2-3 Artist Functions 11:
+        draw a hexagon: צייר משושה
+      2-3 Artist Functions 11.5:
+        draw a hexagon: צייר משושה
+      2-3 Artist Functions 12:
+        draw a flower: צייר פרח
+      2-3 Artist Functions 2:
+        draw a square: צייר ריבוע
+      2-3 Artist Functions 3:
+        draw a square: צייר ריבוע
+      2-3 Artist Functions 4:
+        draw a square: צייר ריבוע
+      2-3 Artist Functions 9:
+        draw a snowflake: צייר פתית שלג
+      2-3 Bee Functions 1:
+        get 2 nectar: אסוף 2 צופים
+      2-3 Bee Functions 10:
+        collect purple nectar: אסוף צוף סגול
+      2-3 Bee Functions 2:
+        get 5: הבא 5
+      2-3 Bee Functions 4:
+        move and get nectar: זוז ואסוף צוף
+      2-3 Bee Functions 5:
+        move and get 4: זוז והבא 4
+      2-3 Bee Functions 6:
+        move and get 4: זוז והבא 4
+      2-3 Bee Functions 8:
+        get 7 nectar make 7 honey: אסוף 7 צופים ויצר 7 דבשים
+      2-3 Bee Functions 9:
+        get 7 make 7: אסוף 7 וצור 7
+      2-3 Bee Functions Assessment 1:
+        get 7: אסוף 7
+      2-3 Bee Functions Assessment 2:
+        move and get 3: זוז ואסוף 3
+      4-5 Artist 3:
+        draw a flower: צייר פרח
+      4-5 Artist 6:
+        draw a tree: צייר עץ
+      4-5 Artist 7:
+        draw triangle: צייר משולש
+        draw a circle: צייר מעגל
+        draw a car: צייר מכונית
+      4-5 Artist 8:
+        draw circle: צייר עיגול
+        draw goal: צייר מטרה
+      4-5 Bee Conditionals 7:
+        check purple flower: צייר פרח סגול
+      4-5 Bee Conditionals 8:
+        check flower make honey: בדוק פרח צור דבש
+      4-5 Bee Conditionals Assessment 1:
+        get nectar or make honey: אסוף צוף או צור דבש
+      4-5 Bee Debugging 7:
+        make 3 honey: צור 3 דבש
+      4-5 Bee Debugging 8:
+        get 5 nectar: אסוף 5 צופים
+      4-5 Bee Debugging 9:
+        make all honey: צור את כל הדבש
+      Alien Defender:
+        game has been won: המשחק הסתיים בניצחון
+      Choose Your Own Adventure:
+        story: סיפור
+        starting path: תחילת הדרך
+      Course 4 Artist Binary 1:
+        draw: צייר
+      Course 4 Artist Binary 2:
+        draw: צייר
+      Course 4 Artist Binary 3:
+        draw: צייר
+      Course 4 Artist Binary 4:
+        draw: צייר
+      Course 4 Artist Binary 5:
+        draw: צייר
+      Course 4 Artist Binary 6:
+        draw: צייר
+      Course 4 Artist Binary 7:
+        draw: צייר
+      Course 4 Artist Binary Free Play 2:
+        draw: צייר
+      Course 4 Artist Binary Free Play 2a:
+        draw: צייר
+      Course 4 Artist Binary Free Play 2b:
+        draw: צייר
+      Course 4 Artist Binary pre1:
+        draw: צייר
+      Course 4 Artist Functions Inspiration:
+        draw a square 20: צור ריבוע 20
+      Course 4 Artist Functions challenge:
+        draw a line of squares: צייר קו של מרובעים
+        draw a square 20: צור ריבוע 20
+      Course 4 Bee Params 1:
+        get 3 nectar: אסוף 3 צופים
+      Course 4 Bee Params 2:
+        get 3 nectar: אסוף 3 צופים
+      Course 4 Bee Params 3:
+        get 3 nectar: אסוף 3 צופים
+      Course 4 Bee Params 4:
+        get 3 nectar: אסוף 3 צופים
+      Course 4 Bee Params 5:
+        get 5 nectar: אסוף 5 צופים
+      Course 4 Bee Params 6:
+        get 5 nectar: אסוף 5 צופים
+      Course 4 Bee Params 7:
+        get many nectar: אסוף כמה צופים
+      Course 4 Bee Params 8:
+        get nectar make honey: אסוף צופים וצור דבש
+      Course 4 Play Lab Params 1:
+        jump: קפוץ
+      Course 4 Play Lab Params 10:
+        level_up: שלב הבא
+        score_points: נקודות
+      Course 4 Play Lab Params 2:
+        jump: קפוץ
+      Course 4 Play Lab Params 3:
+        jump: קפוץ
+      Course 4 Play Lab Params 4:
+        patrol: סייר
+        do something: עשה משהו
+      Course 4 Play Lab Params 5:
+        patrol: סייר
+      Course 4 Play Lab Params 6:
+        patrol: סייר
+      Course 4 Play Lab Params 7:
+        patrol: סייר
+      Course 4 Play Lab Params 8:
+        patrol: סייר
+      Course 4 Play Lab Params 9:
+        score_points: נקודות
+      Course 4 Play Lab Vars 1:
+        set score: הגדר ניקוד
+      Course 4 Play Lab Vars 2:
+        set score: הגדר ניקוד
+      Course 4 SCF 1:
+        draw a hexagon: צייר משושה
+        draw a line of hexagons: צייר קו של משושה
+        shift down/forward: הזז למטה/קדימה
+        shift down/backward: הזז למטה/אחורה
+        draw a square 20: צור ריבוע 20
+      Course 4 SCF 1a:
+        get nectar: תשיג צוף
+      Course 4 SCF 1b:
+        make honey up and over: ייצר דבש למעלה וסיים
+      Course 4 SCF 2:
+        draw a square 20: צור ריבוע 20
+        draw octagons: צייר מתומנים
+        draw an octagon: צייר מתומן
+        shift down: הזז מטה
+      Course 4 SCF 3:
+        draw a square 20: צור ריבוע 20
+        do something: עשה משהו
+        draw an octagon: צייר מתומן
+      'Course E: Play Lab Project':
+        do something: עשה משהו
+      Find the Wizard:
+        check guess: בדוק ניחוש
+        do something: עשה משהו
+      FoodFight:
+        level_up: שלב הבא
+        score_points: נקודות
+      Function intro Ryan:
+        build bridge: בנה גשר
+      Function intro Ryan_2019:
+        build bridge: בנה גשר
+      Geometric Sun:
+        draw a door: צייר דלת
+        draw grass: צייר דשא
+        draw windows: צייר חלונות
+        rectangle: מלבן
+        sun: שמש
+        diamond: יהלום
+        window: חלון
+        draw a house: צייר בית
+        triangle: משולש
+        square: ריבוע
+      Geometric Sun_2018:
+        draw a door: צייר דלת
+        draw grass: צייר דשא
+        draw windows: צייר חלונות
+        rectangle: מלבן
+        sun: שמש
+        diamond: יהלום
+        window: חלון
+        draw a house: צייר בית
+        triangle: משולש
+        square: ריבוע
+      Guess The Number:
+        check guess: בדוק ניחוש
+      InspirationalArtwork:
+        n-sided shape: צורה עם n צדדים
+        draw a loop: צייר לולאה
+        draw spiral circle: צייר עיגול ספירלי
+      InspirationalArtwork_2018:
+        draw a loop: צייר לולאה
+        n-sided shape: צורה עם n צדדים
+        draw spiral circle: צייר עיגול ספירלי
+      K-1 Artist2 3:
+        draw roof: צייר גג
+      K-1 Artist2 4:
+        draw rectangle: צייר מלבן
+      K-1 Artist2 5:
+        draw rectangle: צייר מלבן
+      MC_HOC_2017_07_Cole:
+        clear path: פנה דרך
+      MC_HOC_2017_07_Cole_2019:
+        clear path: פנה דרך
+      MC_HOC_2017_10_RETRY:
+        fix long path: תקן דרך ארוכה
+        fix short path: תקן דרך קצרה
+      MC_HOC_2017_10_RETRY_2019:
+        fix long path: תקן דרך ארוכה
+        fix short path: תקן דרך קצרה
+      MC_HOC_2017_Ali:
+        build short bridge: בנה גשר קצר
+        build long bridge: בנה גשר ארוך
+      MC_HOC_2017_Ali_2019:
+        build short bridge: בנה גשר קצר
+        build long bridge: בנה גשר ארוך
+      MC_HOC_2017_FP20x20:
+        function 1: פונקציה 1
+        function 2: פונקציה 2
+      MC_HOC_2017_FP20x20_2019:
+        function 1: פונקציה 1
+        function 2: פונקציה 2
+      NEW Course 4 Artist Functions 11:
+        draw a line of  squares: צייר קו של מרובעים
+        draw a square 20: צור ריבוע 20
+        draw a line of squares: צייר קו של מרובעים
+      NEW Course 4 Artist Functions 12:
+        draw a square 20: צור ריבוע 20
+        draw a line of squares: צייר קו של מרובעים
+      NEW Course 4 Artist Functions 13:
+        draw a square 20: צור ריבוע 20
+        draw a line of squares: צייר קו של מרובעים
+      NEW Course 4 Artist Functions 14:
+        empty function: פונקציה ריקה
+        draw a line of squares: צייר קו של מרובעים
+        draw a square 40: צור ריבוע 40
+        draw a square 20: צור ריבוע 20
+      NEW Course 4 Artist Functions 3:
+        draw a square: צייר ריבוע
+      NEW Course 4 Artist Functions 4:
+        draw a square: צייר ריבוע
+      NEW Course 4 Artist Functions 7:
+        draw a square: צייר ריבוע
+      NEW Course 4 Artist Functions 8:
+        draw a triangle: צייר משולש
+      NEW Course 4 Artist Functions 9:
+        draw a square: צייר ריבוע
+        draw a triangle: צייר משולש
+      NEW Course 4 Artist Params 1:
+        draw a square: צייר ריבוע
+        Draw a triangle: צייר משולש
+      NEW Course 4 Artist Params 10:
+        do something: עשה משהו
+        draw a hexagon: צייר משושה
+      NEW Course 4 Artist Params 11:
+        draw a polygon: צייר מצולע
+        do something: עשה משהו
+      NEW Course 4 Artist Params 12:
+        draw a polygon: צייר מצולע
+      NEW Course 4 Artist Params 12a:
+        draw a polygon: צייר מצולע
+      NEW Course 4 Artist Params 13:
+        draw a polygon: צייר מצולע
+      NEW Course 4 Artist Params 14:
+        draw a spiral edge: צייר פינה ספירלית
+      NEW Course 4 Artist Params 15:
+        draw a star: צייר כוכב
+        draw a circle: צייר מעגל
+        draw a pinwheel: צייר גלגל רוח
+        draw a triangle: צייר משולש
+        draw a shape: צייר צורה
+        draw a house: צייר בית
+        draw a square: צייר ריבוע
+      NEW Course 4 Artist Params 2:
+        do something: עשה משהו
+        draw a triangle: צייר משולש
+      NEW Course 4 Artist Params 3:
+        draw a triangle: צייר משולש
+      NEW Course 4 Artist Params 4:
+        draw a triangle with length: צייר משולש עם אורך
+      NEW Course 4 Artist Params 5:
+        draw a pentagon: צייר מחומש
+      NEW Course 4 Artist Params 6:
+        draw a triangle: צייר משולש
+        draw a hexagon: צייר משושה
+        draw a square: צייר ריבוע
+        draw a sqaure: צייר ריבוע
+      NEW Course 4 Artist Params 7:
+        draw a triangle: צייר משולש
+      NEW Course 4 Artist Params 8:
+        draw a triangle with length: צייר משולש עם אורך
+      NEW Course 4 Artist Params 9:
+        draw a square: צייר ריבוע
+        do something: עשה משהו
+      NEW Course 4 Artist Params inspire:
+        draw a polygon: צייר מצולע
+      NEW Course 4 Play Lab Params 11:
+        jump: קפוץ
+        patrol: סייר
+      Robot Doodle:
+        25 pixel square: ריבוע בגודל 25 פיקסלים
+        draw head: צייר ראש
+        draw eye: צייר עין
+      Robot Doodle_2018:
+        25 pixel square: ריבוע בגודל 25 פיקסלים
+        draw head: צייר ראש
+        draw eye: צייר עין
+      Standalone_Artist_7:
+        draw a flower: צייר פרח
+      Standalone_Artist_8:
+        draw a shape: צייר צורה
+      Standalone_Artist_9:
+        my function: הפונקציה שלי
+      course1_artist_loops_challenge1:
+        '"simple" solution': פתרון "פשוט"
+      course1_artist_loops_challenge2:
+        potential solution: פוטנציאל לפתרון
+      course3_artist_functions_challenge1:
+        my design: העיצוב שלי
+        do something: עשה משהו
+      course3_artist_functions_challenge2:
+        my design: העיצוב שלי
+        do something: עשה משהו
+      course3_bee_functions_challenge1:
+        do something: עשה משהו
+        get 3 nectar or honey: אסוף 3 צופים או דבש
+      course3_bee_functions_challenge2:
+        do something: עשה משהו
+        move and collect: זוז ואסוף
+      course3_bee_functions_challenge3:
+        check nectar or honey: בדוק צוף או דבש
+        row of nectar: שורה של צוף
+        rowOfNectar: שורה של צוף
+      course3_bee_functions_challenge4:
+        check nectar or honey: בדוק צוף או דבש
+        row of nectar: שורה של צוף
+        rowOfNectar: שורה של צוף
+        move and check: זוז ובדוק
+      course3_playLab_challenge1:
+        win game: נצח משחק
+        lose game: הפסד משחק
+        keep playing: המשך לשחק
+      course4_artist_binary_challenge1:
+        draw: צייר
+      course4_artist_binary_challenge2:
+        draw: צייר
+      course4_artist_concept_challenge2:
+        draw pinwheel: צייר גלגל רוח
+      course4_artist_functions_challenge2:
+        my design: העיצוב שלי
+        do something: עשה משהו
+      course4_artist_fwp_challenge1:
+        draw background: צייר רקע
+        draw a polygon: צייר מצולע
+        draw a square 20: צור ריבוע 20
+        do something: עשה משהו
+      course4_bee_for_challenge1:
+        move and get nectar with counter: זוז ואסוף צוף עם מונה
+      course4_bee_fwp_challenge1:
+        pick row: בחר שורה
+      course4_bee_fwp_challenge2:
+        pick row: בחר שורה
+      courseA_artist_loops_challenge1:
+        '"simple" solution': פתרון "פשוט"
+      courseB_artist_loops_challenge2:
+        potential solution: פוטנציאל לפתרון
+      courseB_artist_loops_challenge2_2018:
+        potential solution: פוטנציאל לפתרון
+      courseB_artist_loops_challenge2_2019:
+        potential solution: פוטנציאל לפתרון
+      courseC_artist_prog3:
+        draw flame: צייר להבה
+        draw fire: צייר אש
+      courseC_artist_prog3_2018:
+        draw flame: צייר להבה
+        draw fire: צייר אש
+      courseC_artist_prog3_2019:
+        draw flame: צייר להבה
+        draw fire: צייר אש
+      courseC_artist_prog4:
+        booster: מאיץ
+      courseC_artist_prog4_2018:
+        booster: מאיץ
+      courseC_artist_prog4_2019:
+        booster: מאיץ
+      courseC_data wizard:
+        do something: עשה משהו
+      courseD_artist_binary1:
+        draw: צייר
+      courseD_artist_binary1_2018:
+        draw: צייר
+      courseD_artist_binary1_2019:
+        draw: צייר
+      courseD_artist_binary2:
+        draw: צייר
+      courseD_artist_binary2_2018:
+        draw: צייר
+      courseD_artist_binary2_2019:
+        draw: צייר
+      courseD_artist_binary3:
+        draw: צייר
+      courseD_artist_binary3_2018:
+        draw: צייר
+      courseD_artist_binary3_2019:
+        draw: צייר
+      courseD_artist_binary4:
+        draw: צייר
+      courseD_artist_binary4_2018:
+        draw: צייר
+      courseD_artist_binary4_2019:
+        draw: צייר
+      courseD_artist_binary5:
+        draw: צייר
+      courseD_artist_binary5_2018:
+        draw: צייר
+      courseD_artist_binary5_2019:
+        draw: צייר
+      courseD_artist_binary6:
+        draw: צייר
+      courseD_artist_binary6_2018:
+        draw: צייר
+      courseD_artist_binary6_2019:
+        draw: צייר
+      courseD_artist_binary7:
+        draw: צייר
+      courseD_artist_binary7_2018:
+        draw: צייר
+      courseD_artist_binary7_2019:
+        draw: צייר
+      courseD_artist_binary8:
+        draw: צייר
+      courseD_artist_binary8_2018:
+        draw: צייר
+      courseD_artist_binary8_2019:
+        draw: צייר
+      courseD_artist_binary8_predict1:
+        draw: צייר
+      courseD_artist_binary8_predict1_2018:
+        draw: צייר
+      courseD_artist_binary8_predict1_2019:
+        draw: צייר
+      courseD_artist_binaryFP_2018:
+        draw: צייר
+      courseD_artist_binaryFP_2019:
+        draw: צייר
+      courseD_artist_binary_challenge1_2018:
+        draw: צייר
+      courseD_artist_binary_challenge1_2019:
+        draw: צייר
+      courseD_artist_binary_challenge2_2018:
+        draw: צייר
+      courseD_artist_binary_challenge2_2019:
+        draw: צייר
+      courseD_autorun_binary2_2019:
+        draw: צייר
+      courseD_autorun_binary3_2019:
+        draw: צייר
+      courseD_autorun_binary4_2019:
+        draw: צייר
+      courseD_autorun_binary5_2019:
+        draw: צייר
+      courseD_autorun_binary6_2019:
+        draw: צייר
+      courseD_autorun_binary7_2019:
+        draw: צייר
+      courseD_autorun_binary8_2019:
+        draw: צייר
+      courseD_autorun_binary8_predict1_2019:
+        draw: צייר
+      courseE_Dogger_2:
+        stop_everything: עצור הכל
+      courseE_artist_concept1:
+        do something: עשה משהו
+        draw a hexagon: צייר משושה
+      courseE_artist_concept1_2018:
+        draw a hexagon: צייר משושה
+      courseE_artist_concept4:
+        draw a square: צייר ריבוע
+        draw a line of squares: צייר קו של מרובעים
+        draw a plane of squares: צייר מטוס של מרובעים
+      courseE_artist_concept4_2018:
+        draw a square: צייר ריבוע
+        draw a line of squares: צייר קו של מרובעים
+        draw a plane of squares: צייר מטוס של מרובעים
+      courseE_artist_concept_challenge1:
+        do something: עשה משהו
+      courseE_artist_concept_challenge1_2018:
+        do something: עשה משהו
+      courseE_artist_concept_challenge2:
+        draw pinwheel: צייר גלגל רוח
+      courseE_artist_concept_challenge2_2018:
+        draw pinwheel: צייר גלגל רוח
+      courseE_artist_functions10:
+        do something: עשה משהו
+        draw hexagon: צייר משושה
+        draw line of hexagons: צייר קו של משושים
+      courseE_artist_functions10_2018:
+        do something: עשה משהו
+        draw hexagon: צייר משושה
+        draw line of hexagons: צייר קו של משושים
+      courseE_artist_functions10_2019:
+        do something: עשה משהו
+        draw hexagon: צייר משושה
+        draw line of hexagons: צייר קו של משושים
+      courseE_artist_functions2:
+        draw a square: צייר ריבוע
+      courseE_artist_functions2_2018:
+        draw a square: צייר ריבוע
+      courseE_artist_functions2_2019:
+        draw a square: צייר ריבוע
+      courseE_artist_functions3_2018:
+        draw a star: צייר כוכב
+      courseE_artist_functions3_2019:
+        draw a star: צייר כוכב
+      courseE_artist_functions4:
+        draw a star: צייר כוכב
+      courseE_artist_functions5:
+        draw a star: צייר כוכב
+      courseE_artist_functions5_2018:
+        draw a star: צייר כוכב
+      courseE_artist_functions5_2019:
+        draw a star: צייר כוכב
+      courseE_artist_functions7:
+        draw a window: צייר חלון
+        draw a house: צייר בית
+      courseE_artist_functions7_2018:
+        draw a window: צייר חלון
+        draw a house: צייר בית
+      courseE_artist_functions7_2019:
+        draw a window: צייר חלון
+        draw a house: צייר בית
+      courseE_artist_functions8:
+        do something: עשה משהו
+        draw a line of squares: צייר קו של מרובעים
+        draw square: צייר ריבוע
+      courseE_artist_functions8_2018:
+        do something: עשה משהו
+        staggered squares: נענע מרובעים
+        draw a line of squares: צייר קו של מרובעים
+        draw square: צייר ריבוע
+      courseE_artist_functions8_2019:
+        do something: עשה משהו
+        staggered squares: נענע מרובעים
+        draw a line of squares: צייר קו של מרובעים
+        draw square: צייר ריבוע
+      courseE_artist_functions8a_2018:
+        draw a square: צייר ריבוע
+        do something: עשה משהו
+      courseE_artist_functions8a_2019:
+        draw a square: צייר ריבוע
+        do something: עשה משהו
+      courseE_artist_functions8b_2018:
+        draw a line of squares: צייר קו של מרובעים
+        draw square: צייר ריבוע
+        do something: עשה משהו
+      courseE_artist_functions8b_2019:
+        draw a line of squares: צייר קו של מרובעים
+        draw square: צייר ריבוע
+        do something: עשה משהו
+      courseE_artist_functions8c_2018:
+        draw a line of squares: צייר קו של מרובעים
+        draw square: צייר ריבוע
+        do something: עשה משהו
+        staggered squares: נענע מרובעים
+      courseE_artist_functions8c_2019:
+        draw a line of squares: צייר קו של מרובעים
+        draw square: צייר ריבוע
+        do something: עשה משהו
+        staggered squares: נענע מרובעים
+      courseE_artist_functions9:
+        do something: עשה משהו
+        draw triangle: צייר משולש
+        draw line of triangles: צייר קו של משולשים
+      courseE_artist_functions9_2018:
+        do something: עשה משהו
+        draw triangle: צייר משולש
+        draw line of triangles: צייר קו של משולשים
+      courseE_artist_functions9_2019:
+        do something: עשה משהו
+        draw triangle: צייר משולש
+        draw line of triangles: צייר קו של משולשים
+      courseE_artist_functionsProj_2018:
+        draw hexagon: צייר משושה
+        draw line of hexagons: צייר קו של משושים
+        staggered squares: נענע מרובעים
+        draw a line of squares: צייר קו של מרובעים
+        draw square: צייר ריבוע
+      courseE_artist_functionsProj_2019:
+        draw hexagon: צייר משושה
+        draw line of hexagons: צייר קו של משושים
+        staggered squares: נענע מרובעים
+        draw a line of squares: צייר קו של מרובעים
+        draw square: צייר ריבוע
+      courseE_artist_functions_challenge1:
+        my design: העיצוב שלי
+        do something: עשה משהו
+      courseE_artist_functions_challenge1_2018:
+        my design: העיצוב שלי
+        do something: עשה משהו
+      courseE_artist_functions_challenge1_2019:
+        my design: העיצוב שלי
+        do something: עשה משהו
+      courseE_artist_functions_challenge2:
+        my design: העיצוב שלי
+        do something: עשה משהו
+      courseE_artist_functions_challenge2_2018:
+        my design: העיצוב שלי
+        do something: עשה משהו
+      courseE_artist_functions_challenge2_2019:
+        my design: העיצוב שלי
+        do something: עשה משהו
+      courseE_artist_functions_predict1:
+        draw a square: צייר ריבוע
+      courseE_artist_functions_predict1_2018:
+        draw a square: צייר ריבוע
+      courseE_artist_functions_predict1_2019:
+        draw a square: צייר ריבוע
+      courseE_artist_functions_predict2:
+        draw line of polygons: צייר קו של מצולע
+        draw polygon: צייר מצולע
+        do something: עשה משהו
+      courseE_artist_functions_predict2_2018:
+        draw line of polygons: צייר קו של מצולע
+        draw polygon: צייר מצולע
+        do something: עשה משהו
+      courseE_artist_functions_predict2_2019:
+        draw line of polygons: צייר קו של מצולע
+        draw polygon: צייר מצולע
+        do something: עשה משהו
+      courseE_bee_concept4:
+        honey nectar: דבש מצוף
+      courseE_bee_functions1:
+        do something: עשה משהו
+      courseE_bee_functions10:
+        move and make honey: זוז וייצר דבש
+      courseE_bee_functions11_predict1:
+        move and make honey: זוז וייצר דבש
+      courseE_bee_functions2:
+        get 2 nectar: אסוף 2 צופים
+      courseE_bee_functions3:
+        get 5: הבא 5
+      courseE_bee_functions4:
+        move and get nectar: זוז ואסוף צוף
+      courseE_bee_functions5:
+        move and get 4: זוז והבא 4
+      courseE_bee_functions6:
+        get 7 nectar make 7 honey: אסוף 7 צופים ויצר 7 דבשים
+      courseE_bee_functions7:
+        get 7 make 7: אסוף 7 וצור 7
+      courseE_bee_functions8:
+        collect all nectar: אסוף את כל הצוף
+      courseE_bee_functions9:
+        get all nectar: אסוף את כל הצוף
+      courseE_bee_functions_challenge1:
+        do something: עשה משהו
+        get 3 nectar or honey: אסוף 3 צופים או דבש
+      courseE_bee_functions_challenge2:
+        do something: עשה משהו
+        move and collect: זוז ואסוף
+      courseE_farmer_concept1:
+        do something: עשה משהו
+      courseE_farmer_concept2:
+        do something: עשה משהו
+        get pumpkin: הבא דלעת
+      courseE_farmer_concept2_2018:
+        get pumpkin: הבא דלעת
+      courseE_farmer_concept3:
+        do something: עשה משהו
+      courseE_farmer_functions10a1_2018:
+        pick along path: אסוף לאורך הדרך
+        check square for corn: בדוק ריבוע עבור תירס
+        get all pumpkins: הבא את כל הדלועים
+        pumpkin square: מרובע דלעת
+      courseE_farmer_functions10a1_2019:
+        pick along path: אסוף לאורך הדרך
+        check square for corn: בדוק ריבוע עבור תירס
+        get all pumpkins: הבא את כל הדלועים
+        pumpkin square: מרובע דלעת
+      courseE_farmer_functions10b:
+        navigate: נווט
+      courseE_farmer_functions11_predict:
+        check and pick: בדוק ואסוף
+        find pumpkin: מצא דלעת
+        wander path: לך לאורך השביל
+      courseE_farmer_functions11_predict_2018:
+        pick along path: אסוף לאורך הדרך
+        pumpkin square: מרובע דלעת
+        check square for corn: בדוק ריבוע עבור תירס
+        get produce: התחל לייצר
+        get all pumpkins: הבא את כל הדלועים
+      courseE_farmer_functions11_predict_2019:
+        pick along path: אסוף לאורך הדרך
+        pumpkin square: מרובע דלעת
+        check square for corn: בדוק ריבוע עבור תירס
+        get produce: התחל לייצר
+        get all pumpkins: הבא את כל הדלועים
+      courseE_farmer_functions13_2018:
+        pick along path: אסוף לאורך הדרך
+        check for corn: בדוק עבור תירס
+        corn rectangle: ריבוע תירס
+        lettuce stairs: מדרגות חסה
+      courseE_farmer_functions13_2019:
+        pick along path: אסוף לאורך הדרך
+        check for corn: בדוק עבור תירס
+        corn rectangle: ריבוע תירס
+        lettuce stairs: מדרגות חסה
+      courseE_farmer_functions1a_2018:
+        check square for corn: בדוק ריבוע עבור תירס
+      courseE_farmer_functions1a_2019:
+        check square for corn: בדוק ריבוע עבור תירס
+      courseE_farmer_functions2b_2018:
+        check square for corn: בדוק ריבוע עבור תירס
+      courseE_farmer_functions2b_2019:
+        check square for corn: בדוק ריבוע עבור תירס
+      courseE_farmer_functions2ba:
+        corn and pumpkin: תירס ודלעת
+      courseE_farmer_functions2ba_2018:
+        check square for corn: בדוק ריבוע עבור תירס
+        get all pumpkins: הבא את כל הדלועים
+      courseE_farmer_functions2ba_2019:
+        check square for corn: בדוק ריבוע עבור תירס
+        get all pumpkins: הבא את כל הדלועים
+      courseE_farmer_functions3c:
+        corn and pumpkin: תירס ודלעת
+      courseE_farmer_functions3c1_2018:
+        pick along path: אסוף לאורך הדרך
+        check square for corn: בדוק ריבוע עבור תירס
+        get all pumpkins: הבא את כל הדלועים
+      courseE_farmer_functions3c1_2019:
+        pick along path: אסוף לאורך הדרך
+        check square for corn: בדוק ריבוע עבור תירס
+        get all pumpkins: הבא את כל הדלועים
+      courseE_farmer_functions3c_2018:
+        check square for corn: בדוק ריבוע עבור תירס
+        get all pumpkins: הבא את כל הדלועים
+      courseE_farmer_functions3c_2019:
+        check square for corn: בדוק ריבוע עבור תירס
+        get all pumpkins: הבא את כל הדלועים
+      courseE_farmer_functions4b:
+        corn and pumpkin: תירס ודלעת
+      courseE_farmer_functions5c:
+        corn and pumpkin: תירס ודלעת
+      courseE_farmer_functions6c:
+        corn and pumpkin: תירס ודלעת
+      courseE_farmer_functions7a1_2018:
+        garden square: מרובע גינה
+      courseE_farmer_functions7a1_2019:
+        garden square: מרובע גינה
+      courseE_farmer_functions8a1_2018:
+        garden square: מרובע גינה
+      courseE_farmer_functions8a1_2019:
+        garden square: מרובע גינה
+      courseE_farmer_functions8b:
+        navigate: נווט
+      courseE_farmer_functions9a1_2018:
+        garden square: מרובע גינה
+      courseE_farmer_functions9a1_2019:
+        garden square: מרובע גינה
+      courseE_farmer_functions9b:
+        navigate: נווט
+      courseE_playLab_challenge1:
+        win game: נצח משחק
+        lose game: הפסד משחק
+        keep playing: המשך לשחק
+      courseE_playLab_scaffold1:
+        do something: עשה משהו
+      courseE_playLab_scaffold2:
+        do something: עשה משהו
+      courseE_playLab_scaffold3:
+        do something: עשה משהו
+      courseE_playLab_scaffold4:
+        do something: עשה משהו
+      courseF_artist_fwp1:
+        draw a square: צייר ריבוע
+        checker: בודק
+        do something: עשה משהו
+        Make gingham: ייצר בגד
+      courseF_artist_fwp2:
+        draw a square: צייר ריבוע
+        checker: בודק
+        do something: עשה משהו
+        Make gingham: ייצר בגד
+      courseF_artist_fwp2_predict1:
+        draw a square: צייר ריבוע
+      courseF_artist_fwp3:
+        draw a square: צייר ריבוע
+        draw a square2: צור ריבוע2
+      courseF_artist_fwp4:
+        draw a polygon: צייר מצולע
+      courseF_artist_fwp5:
+        draw a polygon: צייר מצולע
+      courseF_artist_fwp6:
+        draw a spiral edge: צייר פינה ספירלית
+      courseF_artist_fwp7:
+        draw a spiral edge: צייר פינה ספירלית
+      courseF_artist_fwp8:
+        draw a spiral edge: צייר פינה ספירלית
+      courseF_artist_fwp9:
+        draw a star: צייר כוכב
+        draw a circle: צייר מעגל
+        draw a pinwheel: צייר גלגל רוח
+        draw a triangle: צייר משולש
+        draw a shape: צייר צורה
+        draw a house: צייר בית
+        draw a square: צייר ריבוע
+        draw a spiral edge: צייר פינה ספירלית
+      courseF_artist_fwp_challenge1:
+        draw background: צייר רקע
+        draw a polygon: צייר מצולע
+        draw a square 20: צור ריבוע 20
+        do something: עשה משהו
+      courseF_artist_fwp_challenge2:
+        draw a square 20: צור ריבוע 20
+        do something: עשה משהו
+        draw an octagon: צייר מתומן
+      courseF_bee_conditionals2:
+        move and check: זוז ובדוק
+        check nectar or honey: בדוק צוף או דבש
+      courseF_bee_for_challenge1:
+        move and get nectar with counter: זוז ואסוף צוף עם מונה
+      courseF_bee_for_challenge1_2018:
+        move and get nectar with counter: זוז ואסוף צוף עם מונה
+      courseF_bee_for_challenge1_2019:
+        move and get nectar with counter: זוז ואסוף צוף עם מונה
+      courseF_bee_functions2:
+        get only nectar: אסוף רק צוף
+      courseF_bee_functions3:
+        only make honey: רק ייצר דבש
+      courseF_bee_functions3a:
+        check nectar or honey: בדוק צוף או דבש
+      courseF_bee_functions4:
+        move and check: זוז ובדוק
+        check nectar or honey: בדוק צוף או דבש
+      courseF_bee_functions5a:
+        move and check: זוז ובדוק
+        check nectar or honey: בדוק צוף או דבש
+      courseF_bee_functions6:
+        get nectar make honey: אסוף צופים וצור דבש
+      courseF_bee_functions7:
+        get nectar make honey: אסוף צופים וצור דבש
+      courseF_bee_functions8a:
+        do something: עשה משהו
+        get nectar make honey: אסוף צופים וצור דבש
+      courseF_bee_functionsPre7:
+        get nectar make honey: אסוף צופים וצור דבש
+      courseF_bee_functions_challenge1:
+        row of nectar: שורה של צוף
+        rowOfNectar: שורה של צוף
+        check nectar or honey: בדוק צוף או דבש
+      courseF_bee_functions_challenge2:
+        rowOfNectar: שורה של צוף
+        move and check: זוז ובדוק
+        check nectar or honey: בדוק צוף או דבש
+      courseF_bee_fwp2:
+        rowOfNectar: שורה של צוף
+      courseF_bee_fwp3:
+        rowOfNectar: שורה של צוף
+      courseF_bee_fwp4:
+        rowOfNectar: שורה של צוף
+      courseF_bee_fwp5:
+        rowOfNectar: שורה של צוף
+      courseF_bee_fwp6:
+        rowOfNectar: שורה של צוף
+      courseF_bee_fwp7:
+        rowOfNectarOrHoney: שורה של צוף או דבש
+      courseF_bee_fwp8:
+        rowOfNectarOrHoney: שורה של צוף או דבש
+      courseF_bee_fwp9_predict1:
+        rowOfNectarOrHoney: שורה של צוף או דבש
+      courseF_bee_fwp_challenge1:
+        pick row: בחר שורה
+      courseF_bee_fwp_challenge2:
+        pick row: בחר שורה
+      courseF_bee_variables_1_2018:
+        collect row: אסוף שורה
+      courseF_bee_variables_1_2019:
+        collect row: אסוף שורה
+      courseF_bee_variables_2_2018:
+        collect row: אסוף שורה
+      courseF_bee_variables_2_2019:
+        collect row: אסוף שורה
+      courseF_bee_variables_3_2018:
+        collect row: אסוף שורה
+      courseF_bee_variables_3_2019:
+        collect row: אסוף שורה
+      courseF_bee_variables_4_2018:
+        collect row: אסוף שורה
+      courseF_bee_variables_4_2019:
+        collect row: אסוף שורה
+      courseF_bee_variables_5_2018:
+        collect row: אסוף שורה
+      courseF_bee_variables_5_2019:
+        collect row: אסוף שורה
+      courseF_bee_variables_6_2018:
+        collect stairs: אסוף מדרגות
+      courseF_bee_variables_6_2019:
+        collect stairs: אסוף מדרגות
+      courseF_bee_variables_7_2018:
+        collect: אסוף
+      courseF_bee_variables_7_2019:
+        collect: אסוף
+      courseF_bee_variables_8_2018:
+        move and increment: זוז והוסף
+        collect: אסוף
+      courseF_bee_variables_8_2019:
+        move and increment: זוז והוסף
+        collect: אסוף
+      grade5_artist_binary11:
+        draw: צייר
+      grade5_artist_binary4:
+        draw: צייר
+      grade5_artist_binary5:
+        draw: צייר
+      grade5_artist_binary8:
+        draw: צייר
+      grade5_artist_binary9:
+        draw: צייר

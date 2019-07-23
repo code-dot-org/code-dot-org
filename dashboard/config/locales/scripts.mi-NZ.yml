@@ -1428,3 +1428,15 @@ mi:
           stages:
             Graph Paper Programming:
               name: Papatono Pepa Kauwhata
+        csd2-pilot:
+          stages:
+            Lists:
+              name: Ngā Rārangi
+        csd3-pilot:
+          stages:
+            Variables:
+              name: Ngā Taurangi
+            Conditionals:
+              name: Ngā Here
+            Functions:
+              name: Ngā Taumahi

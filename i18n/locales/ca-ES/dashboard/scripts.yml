@@ -1274,6 +1274,8 @@ ca:
               name: Internet
             Crowdsourcing:
               name: Col·laboració oberta
+            Dance Party:
+              name: Festa amb ball
         andrea-test:
           stages:
             'null':
@@ -1355,3 +1357,15 @@ ca:
           stages:
             Graph Paper Programming:
               name: Programació de paper quadriculat
+        csd2-pilot:
+          stages:
+            Lists:
+              name: Llistes
+        csd3-pilot:
+          stages:
+            Variables:
+              name: Variables
+            Conditionals:
+              name: Condicionals
+            Functions:
+              name: Funcions

@@ -570,8 +570,6 @@
   accelerated_name: "Curs Accelerat"
   20-hour_name: Curs Accelerat
   minecraft_name: "Minecraft"
-  math_category_name: "Matemàtiques"
-  hoc_category_name: "Hora del codi"
   applab_name: "Laboratori d'aplicacions"
   codeorg_gradelevel: "Edat 4-104"
   codeintl_gradelevel: "Edat 4-104"
@@ -627,6 +625,8 @@
   coursee-2017_gradelevel: Edats 8-12
   coursed-2018_gradelevel: Qualificacions 8+
   coursee-2018_gradelevel: Edats 8-12
+  coursed-2019_gradelevel: Qualificacions 8+
+  coursee-2019_gradelevel: Edats 8-12
   accelerated_gradelevel: "Edat 10 + (després del curs 3)"
   codeorg_platformtext: "Navegadors moderns, mòbils i tablets"
   codeintl_platformtext: "Navegadors moderns, mòbils i tablets"

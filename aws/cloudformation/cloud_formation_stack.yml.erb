@@ -24,7 +24,7 @@ commit = ENV['COMMIT'] || `git ls-remote origin #{branch}`.split.first
 ami = commit[0..4]
 
 frontends = @frontends = rack_env?(:production) || ENV['FRONTENDS']
-database = @database = rack_env?(:test) || ENV['DATABASE']
+database = @database = [:staging, :test, :levelbuilder].include?(rack_env) || ENV['DATABASE']
 load_balancer = @load_balancer = !rack_env?(:adhoc) || ENV['FRONTENDS']
 
 unless dry_run
@@ -585,7 +585,10 @@ Resources:
           PolicyDocument:
             Statement:
               - Effect: Allow
-                Action: rds:DescribeDBInstances
+                Action:
+                  - rds:DescribeDBInstances
+                  - rds:DescribeDBClusters
+                  - rds:DescribeDBClusterSnapshots
                 Resource: '*'
               - Effect: Allow
                 Action: rds:DescribeDBSnapshots
@@ -593,6 +596,16 @@ Resources:
               - Effect: Allow
                 Action: rds:CopyDBSnapshot
                 Resource: !Sub "arn:aws:rds:${AWS::Region}:${AWS::AccountId}:snapshot:rds:production-*"
+              - Effect: Allow
+                Action: rds:CopyDBClusterSnapshot
+                Resource: !Sub "arn:aws:rds:${AWS::Region}:${AWS::AccountId}:cluster-snapshot:rds:<%=CDO.db_cluster_id%>*"
+              - Effect: Allow
+                Action:
+                  - rds:ModifyDBClusterSnapshotAttribute
+                  - rds:CopyDBClusterSnapshot
+                  - rds:DeleteDBClusterSnapshot
+                  - rds:DescribeDBClusterSnapshotAttributes
+                Resource: !Sub "arn:aws:rds:${AWS::Region}:${AWS::AccountId}:cluster-snapshot:temp-snapshot*"
               - Effect: Allow
                 Action:
                   - rds:CopyDBSnapshot
@@ -651,7 +664,7 @@ Resources:
         SubnetId: !ImportValue VPC-PublicSubnet<%=azs.first%>
         GroupSet:
           - !ImportValue VPC-FrontendSecurityGroup
-          - !ImportValue VPC-GatewaySecurityGroup
+          - !ImportValue VPC-DaemonSecurityGroup # SSH access to frontends
 <%  unless load_balancer -%>
           - !ImportValue VPC-ELBSecurityGroup # Accept HTTP traffic on daemon
 <%  end -%>

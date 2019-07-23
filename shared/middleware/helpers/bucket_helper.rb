@@ -451,6 +451,16 @@ class BucketHelper
     response.to_h
   end
 
+  # Regex matching every character except those which are url-safe and
+  # recommended for use in S3 key names:
+  # https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingMetadata.html#object-key-guidelines-safe-characters
+  UNSAFE_CHAR_REGEX = /[^0-9A-Za-z!\-_.*'()]/ unless defined? UNSAFE_CHAR_REGEX
+
+  # Replace any unsafe characters with dashes.
+  def self.replace_unsafe_chars(str)
+    str.gsub(UNSAFE_CHAR_REGEX, '-')
+  end
+
   protected
 
   #

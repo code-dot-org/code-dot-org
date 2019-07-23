@@ -41,25 +41,25 @@ module Pd::WorkshopSurveyResultsHelper
 
   QUESTIONS_FOR_FACILITATOR_AVERAGES = {
     FACILITATOR_EFFECTIVENESS: [
-      {primary_id: 'overallHow'},
-      {primary_id: 'duringYour'},
-      {primary_id: 'forThis54'},
-      {primary_id: 'howInteresting55'},
-      {primary_id: 'howOften56'},
-      {primary_id: 'howComfortable', all_ids: %w(howComfortable howComfortable57)},
-      {primary_id: 'howOften'}
+      {primary_id: 'facilitator_effectiveness_0'},
+      {primary_id: 'facilitator_effectiveness_1'},
+      {primary_id: 'facilitator_effectiveness_2'},
+      {primary_id: 'facilitator_effectiveness_3'},
+      {primary_id: 'facilitator_effectiveness_4'},
+      {primary_id: 'facilitator_effectiveness_5'},
     ],
     TEACHER_ENGAGEMENT: [
-      {primary_id: 'pleaseRate120_0'},
-      {primary_id: 'pleaseRate120_1'},
-      {primary_id: 'pleaseRate120_2'}
+      {primary_id: 'teacher_engagement_0'},
+      {primary_id: 'teacher_engagement_1'},
+      {primary_id: 'teacher_engagement_2'},
+      {primary_id: 'teacher_engagement_3'}
     ],
     OVERALL_SUCCESS: [
-      {primary_id: 'iFeel133', all_ids: ['iFeel133', 'pleaseRate_0', 'iFeel45']},
-      {primary_id: 'regardingThe_2', all_ids: ['regardingThe_2', 'pleaseRate_1']},
-      {primary_id: 'pleaseRate_2', all_ids: ['pleaseRate_2', 'regardingThe_3']},
-      {primary_id: 'iWould', all_ids: ['iWould', 'pleaseRate_4']},
-      {primary_id: 'pleaseRate_3'}
+      {primary_id: 'overall_success_0'},
+      {primary_id: 'overall_success_1'},
+      {primary_id: 'overall_success_2'},
+      {primary_id: 'overall_success_3'},
+      {primary_id: 'overall_success_4'},
     ]
   }
 
@@ -401,6 +401,36 @@ module Pd::WorkshopSurveyResultsHelper
     questions
   end
 
+  # Given a collection of question histograms (potentially across many workshops and many
+  # facilitators) extract a histogram for a question or questions for a particular facilitator.
+  #
+  # @param [Hash] flattened_histograms
+  # @param [Array.<String>] question_ids of the questions we should look up
+  # @param [String] facilitator name for whom we want results
+  # @return [nil|Hash] a histogram for the question, if one is found, in the form
+  #   {"Group 1" => 3, "Group 2" => 5, "Group 3" => 2}
+  #
+  def histogram_for_question(flattened_histograms, question_ids, facilitator)
+    result = question_ids.map {|x| flattened_histograms[x]}.compact.first
+
+    # At this point, result can be in one of these three forms:
+    #
+    # nil
+    # {"Agree" => 6, "Disagree" => 4, "num_respondents" => 10}
+    # {"Facilitator 1" => {"Agree" => 6, "Disagree" => 4}, "Facilitator 2" => {"Agree" => 10}}
+    #
+    # In the first two forms, we don't want to change anything.
+    # In the third form, we want to dive one layer and extract the results for the specific
+    # facilitator we're considering.  If the facilitator in question is not present in the
+    # hash, convert to nil since we have no results.
+    if result&.values&.first.is_a? Hash
+      result = result.try(:[], facilitator)
+    end
+
+    # Remove the num_respondents entry that lives alongside the answer entries.
+    result&.except "num_respondents"
+  end
+
   # Take the existing survey summary and generate averages for each question as well as
   # the three averages for each category of question
   def generate_facilitator_averages(summary)
@@ -427,9 +457,9 @@ module Pd::WorkshopSurveyResultsHelper
     facilitator_averages = facilitators.map {|name| [name, {}]}.to_h
     facilitator_averages[:questions] = {}
 
-    # In some cases, the same question has different IDs in different forms. To get around
+    # In some cases, the same question has different question names in different forms. To get around
     # this, the QUESTIONS_FOR_FACILITATOR_AVERAGES contains a primary_id (what we use
-    # here) and optional all_ids (what is used in multiple forms)
+    # here) and optional all_ids (names used in multiple forms)
     QUESTIONS_FOR_FACILITATOR_AVERAGES_LIST.each do |question_group|
       question = flattened_questions[question_group[:primary_id]] || question_group[:all_ids]&.map {|x| flattened_questions[x]}&.compact&.first
 
@@ -440,22 +470,10 @@ module Pd::WorkshopSurveyResultsHelper
         # specific, we need to go one level deeper in the hash to get the question
         # histogram. Do the same thing for both this_workshop and all_my_workshops.
         # When all_workshops is implemented, it will be in S3 and not computed on the fly
-        histogram_for_this_workshop = (question_group[:all_ids] || [question_group[:primary_id]]).map {|x| flattened_this_workshop_histograms[x]}.compact.first
+        question_ids = question_group[:all_ids] || [question_group[:primary_id]]
 
-        if histogram_for_this_workshop.values.first.is_a? Hash
-          next unless histogram_for_this_workshop.key? facilitator
-        end
-
-        # The summary passed into this function (which was generated by
-        # generate_workshops_survey_summary) may contain num_respondent entries
-        # alongside the answer entries.  We should ignore such entries for the
-        # purposes of doing the calculations here.
-        histogram_for_this_workshop.except!("num_respondents")
-
-        histogram_for_this_workshop = histogram_for_this_workshop.try(:[], facilitator) || histogram_for_this_workshop
-
-        histogram_for_all_my_workshops = (question_group[:all_ids] || [question_group[:primary_id]]).map {|x| flattened_all_my_workshop_histograms[x]}.compact.first
-        histogram_for_all_my_workshops = histogram_for_all_my_workshops.try(:[], facilitator) || histogram_for_all_my_workshops
+        histogram_for_this_workshop = histogram_for_question(flattened_this_workshop_histograms, question_ids, facilitator)
+        next unless histogram_for_this_workshop
 
         # Now that we have the histogram, the average is just the sum of option values
         # divided by the total number of responses for this particular question
@@ -482,6 +500,7 @@ module Pd::WorkshopSurveyResultsHelper
 
         facilitator_averages[facilitator][question_group[:primary_id]] = {this_workshop: (total_answer_for_this_workshop_sum / total_responses_for_this_workshop.to_f).round(2)}
 
+        histogram_for_all_my_workshops = histogram_for_question(flattened_all_my_workshop_histograms, question_ids, facilitator)
         total_responses_for_all_workshops = histogram_for_all_my_workshops&.values&.reduce(:+) || 0
         total_answer_for_all_workshops_sum = histogram_for_all_my_workshops&.map do |k, v|
           option = question[:option_map][k]
@@ -563,9 +582,9 @@ module Pd::WorkshopSurveyResultsHelper
 
   private
 
-  def get_summary_for_form(form_id, workshop)
+  def get_summary_for_form(form_id, workshop, show_hidden_questions: false)
     survey = Pd::SurveyQuestion.find_by(form_id: form_id)
-    summary = survey&.summarize || {}
+    summary = survey&.summarize(show_hidden_questions: show_hidden_questions) || {}
 
     summary.each do |_, question|
       if question[:text].match? '{.*}'

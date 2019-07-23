@@ -37,12 +37,19 @@ class MakerControllerTest < ActionController::TestCase
     assert_select '#maker-home'
   end
 
-  test "shows CSD6-2018 when there are no relevant assignments" do
+  test "shows CSD6-2019 when there are no relevant assignments" do
     assert_empty @student.scripts
     assert_empty @student.section_courses
     assert_nil @student.user_script_with_most_recent_progress
 
-    assert_equal @csd6_2018, MakerController.maker_script(@student)
+    assert_equal @csd6_2019, MakerController.maker_script(@student)
+  end
+
+  test "assignment should take precedence over progress in a script" do
+    create :user_script, user: @student, script: @csd6_2019
+    create :follower, section: create(:section, course: @csd_2017), student_user: @student
+
+    assert_equal @csd6_2017, MakerController.maker_script(@student)
   end
 
   test "shows CSD6-2019 if CSD6-2019 is assigned" do
@@ -77,6 +84,15 @@ class MakerControllerTest < ActionController::TestCase
     assert_equal @csd6_2018, MakerController.maker_script(@student)
   end
 
+  test "shows CSD6-2019 if both CSD6-2018 and CSD6-2019 are assigned" do
+    create :user_script, user: @student, script: @csd6_2018, assigned_at: Time.now
+    create :user_script, user: @student, script: @csd6_2019, assigned_at: Time.now
+    assert_includes @student.scripts, @csd6_2018
+    assert_includes @student.scripts, @csd6_2019
+
+    assert_equal @csd6_2019, MakerController.maker_script(@student)
+  end
+
   test "shows CSD6-2019 if CSD-2019 is assigned" do
     create :follower, section: create(:section, course: @csd_2019), student_user: @student
     assert_includes @student.section_courses, @csd_2019
@@ -103,6 +119,7 @@ class MakerControllerTest < ActionController::TestCase
   test "shows CSD6-2018 if both CSD-2017 and CSD-2018 are assigned" do
     create :follower, section: create(:section, course: @csd_2017), student_user: @student
     create :follower, section: create(:section, course: @csd_2018), student_user: @student
+    @student.reload
     assert_includes @student.section_courses, @csd_2017
     assert_includes @student.section_courses, @csd_2018
 
@@ -110,8 +127,9 @@ class MakerControllerTest < ActionController::TestCase
   end
 
   test "shows CSD6-2018 if both CSD6-2017 and CSD-2018 are assigned" do
-    create :user_script, user: @student, script: @csd6_2017, assigned_at: Time.now
+    create :follower, section: create(:section, script: @csd6_2017), student_user: @student
     create :follower, section: create(:section, course: @csd_2018), student_user: @student
+    @student.reload
     assert_includes @student.scripts, @csd6_2017
     refute_includes @student.section_courses, @csd_2017
     refute_includes @student.scripts, @csd6_2018
@@ -122,7 +140,8 @@ class MakerControllerTest < ActionController::TestCase
 
   test "shows CSD6-2018 if both CSD-2017 and CSD6-2018 are assigned" do
     create :follower, section: create(:section, course: @csd_2017), student_user: @student
-    create :user_script, user: @student, script: @csd6_2018, assigned_at: Time.now
+    create :follower, section: create(:section, script: @csd6_2018), student_user: @student
+    assert_includes @student.section_scripts, @csd6_2018
     refute_includes @student.scripts, @csd6_2017
     assert_includes @student.section_courses, @csd_2017
     assert_includes @student.scripts, @csd6_2018

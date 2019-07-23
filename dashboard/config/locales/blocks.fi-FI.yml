@@ -576,20 +576,6 @@ fi:
             '2': diskantti
       Dancelab_whenSetup:
         text: asetukset
-      gamelab_changeColor:
-        text: muuta {COLOR} {METHOD} {AMOUNT}
-        options:
-          METHOD:
-            '"tint"': sävy
-            '"tone"': sävy
-            '"shade"': varjostus
-      gamelab_changeColorBy:
-        text: muuta {COLOR} {METHOD} {AMOUNT}
-        options:
-          METHOD:
-            '"hue"': vivahde
-            '"saturation"': kylläisyys
-            '"brightness"': kirkkaus
       gamelab_changePropBy:
         text: muuta {SPRITE} {PROPERTY} {VAL}
         options:
@@ -615,10 +601,6 @@ fi:
             'false': epätosi
       gamelab_destroy:
         text: poista {THIS}
-      gamelab_getAnim:
-        options:
-          COSTUME:
-            '"costume"': asu
       gamelab_getProp:
         options:
           PROPERTY:
@@ -660,48 +642,11 @@ fi:
             '"w"': w
             '"x"': x
             '"z"': z
-      gamelab_layoutSprites:
-        options:
-          FORMAT:
-            '"border"': raja
-            '"inner"': neliön sisällä
-            '"circle"': ympyrä
-            '"grid"': ruudukko
-            '"row"': rivi
-            '"column"': sarake
-            '"x"': ristiinrastiin
-            '"plus"': risti
-            '"random"': satunnainen
-      gamelab_locationConstant:
-        options:
-          DIR:
-            "'north'": pohjoinen
-            "'south'": etelä
-            "'east'": itä
-            "'west'": länsi
-      gamelab_locationDelta:
-        options:
-          DIR:
-            "'north'": pohjoinen
-            "'south'": etelä
-            "'east'": itä
-            "'west'": länsi
-            "'random'": satunnainen
-      gamelab_locationEast:
-        text: itä
-      gamelab_locationNorth:
-        text: pohjoinen
-      gamelab_locationSouth:
-        text: etelä
-      gamelab_locationWest:
-        text: länsi
       gamelab_mirrorSprite:
         options:
           DIRECTION:
             '"right"': oikealle
             '"left"': vasemmalle
-      gamelab_mixColors:
-        text: sekoita {COLOR1} ja {COLOR2}
       gamelab_moveInDirection:
         options:
           DIRECTION:
@@ -734,20 +679,6 @@ fi:
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': sateenkaari
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': vedenalainen
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': talvi
-      gamelab_setPosition:
-        text: siirrä {THIS} tähän {POSITION} asentoon
-        options:
-          POSITION:
-            "{x: 50, y: 50}": vasen yläkulma
-            "{x: 200, y: 50}": ylhäällä keskellä
-            "{x: 350, y: 50}": oikea yläkulma
-            "{x: 50, y: 200}": keskivasen
-            "{x: 200, y: 200}": keskellä
-            "{x: 350, y: 200}": keskioikea
-            "{x: 50, y: 350}": alavasen
-            "{x: 200, y: 350}": alhaalla keskellä
-            "{x: 350, y: 350}": alaoikea
-            '"random"': satunnainen
       gamelab_setProp:
         options:
           PROPERTY:
@@ -764,47 +695,11 @@ fi:
             '"scale"': koko
             '"width"': leveys
             '"height"': korkeus
-      gamelab_setup:
-        text: asetukset
       gamelab_spriteClicked:
         options:
           CONDITION:
             '"when"': kun
             '"while"': niin kauan kuin
-      gamelab_spriteClickedSet:
-        options:
-          CONDITION:
-            '"when"': kun
-            '"while"': niin kauan kuin
-      gamelab_spriteDirection:
-        options:
-          DIRECTION:
-            '"North"': Pohjoinen
-            '"East"': Itä
-            '"South"': Etelä
-            '"West"': Länsi
-      gamelab_spritesWhere:
-        options:
-          PROPERTY:
-            '"scale"': koko
-            '"x"': x:än paikka
-            '"y"': y:n paikka
-            '"costume"': asu
-            '"direction"': liikkeen suunta
-            '"tint"': sävy
-      gamelab_spritesWhereGenerator:
-        options:
-          PROPERTY:
-            '"scale"': koko
-            '"x"': x:än paikka
-            '"y"': y:n paikka
-            '"costume"': asu
-            '"direction"': liikkeen suunta
-            '"tint"': sävy
-          OP:
-            '"="': "="
-            '">"': ">"
-            '"<"': "\\<"
       gamelab_turn:
         options:
           DIRECTION:
@@ -830,11 +725,6 @@ fi:
             "'down'": alas
             "'left'": vasemmalle
             "'right'": oikealle
-      gamelab_whenTouchingSet:
-        options:
-          CONDITION:
-            '"when"': kun
-            '"while"': niin kauan kuin
       gamelab_whileKey:
         options:
           KEY:

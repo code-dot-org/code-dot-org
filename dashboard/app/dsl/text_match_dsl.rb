@@ -11,13 +11,11 @@ class TextMatchDSL < ContentDSL
   def placeholder(text) @hash[:placeholder] = text end
 
   def i18n_strings
-    strings = super[@name]
+    strings = super
 
-    @hash[:answers].each do |answer|
-      strings[answer] = answer
-    end
-    strings[@hash[:placeholder]] = @hash[:placeholder] unless @hash[:placeholder].blank?
+    strings['answers'] = @hash[:answers] unless @hash[:answers].empty?
+    strings['placeolder'] = @hash[:placeholder] unless @hash[:placeholder].blank?
 
-    {@name => strings}
+    strings.deep_stringify_keys
   end
 end

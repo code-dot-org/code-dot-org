@@ -1,7 +1,7 @@
 {
   "absolute": "absoluto",
-  "agentGenericFailureMessage": "Kod yapmaya devam edin! Bir temsilciden yardim alabilaceginizi unutmayin.",
-  "agentTooFewBlocksFailureMessage": "Agent'ı doğru noktaya ulaştırmak için her defasında sadece bir blok eklemeye çalış.",
+  "agentGenericFailureMessage": "¡Sigue creando código! Recuerda que puedes usar al Agent como ayuda.",
+  "agentTooFewBlocksFailureMessage": "Intenta añadir bloques de uno en uno para conseguir que el Agent llegue al sitio adecuado.",
   "at": "en",
   "agentDiamondPathCongrats": "¡Felicidades, has encontrado el camino de los diamantes! ¡Hasta el momento has encontrado {count, plural, one {1 diamond} other {# diamonds}} en total!",
   "blockActionAdd": "Añadir",

@@ -17,8 +17,7 @@ export default class StudentProgressDetailCell extends Component {
     stageId: PropTypes.number.isRequired,
     sectionId: PropTypes.number.isRequired,
     levelsWithStatus: PropTypes.arrayOf(PropTypes.object),
-    stageExtrasEnabled: PropTypes.bool,
-    inMiniRubricExperiment: PropTypes.bool
+    stageExtrasEnabled: PropTypes.bool
   };
 
   render() {
@@ -34,7 +33,6 @@ export default class StudentProgressDetailCell extends Component {
             pairingIconEnabled={true}
             stageExtrasEnabled={this.props.stageExtrasEnabled}
             hideAssessmentIcon={true}
-            inMiniRubricExperiment={this.props.inMiniRubricExperiment}
           />
         </div>
       </div>

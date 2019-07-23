@@ -222,7 +222,7 @@ class AssetsTest < FilesApiTestBase
     end
 
     # set abuse
-    @api.patch_abuse(10)
+    @api.patch_abuse(15)
 
     # owner can view
     @api.get_object(asset_name)
@@ -314,8 +314,10 @@ class AssetsTest < FilesApiTestBase
     sound_filename = 'woof.mp3'
     sound_body = 'stub-sound-contents'
 
-    _, image_filename = post_asset_file(src_api, image_filename, image_body, 'image/jpeg')
-    _, sound_filename = post_asset_file(src_api, sound_filename, sound_body, 'audio/mpeg')
+    response, _ = post_asset_file(src_api, image_filename, image_body, 'image/jpeg')
+    image_filename = JSON.parse(response)['filename']
+    response, _ = post_asset_file(src_api, sound_filename, sound_body, 'audio/mpeg')
+    sound_filename = JSON.parse(response)['filename']
     src_api.patch_abuse(10)
 
     expected_image_info = {'filename' =>  image_filename, 'category' => 'image', 'size' => image_body.length}
@@ -324,10 +326,10 @@ class AssetsTest < FilesApiTestBase
     copy_file_infos = JSON.parse(copy_all(@channel_id, dest_channel_id))
     dest_file_infos = dest_api.list_objects
 
-    assert_fileinfo_equal(expected_image_info, copy_file_infos[1])
-    assert_fileinfo_equal(expected_sound_info, copy_file_infos[0])
-    assert_fileinfo_equal(expected_image_info, dest_file_infos[1])
-    assert_fileinfo_equal(expected_sound_info, dest_file_infos[0])
+    assert_fileinfo_equal(expected_image_info, copy_file_infos[0])
+    assert_fileinfo_equal(expected_sound_info, copy_file_infos[1])
+    assert_fileinfo_equal(expected_image_info, dest_file_infos[0])
+    assert_fileinfo_equal(expected_sound_info, dest_file_infos[1])
 
     # abuse score didn't carry over
     assert_equal 0, AssetBucket.new.get_abuse_score(dest_channel_id, image_filename)

@@ -32,6 +32,7 @@ class ScriptDSL < BaseDSL
     @supported_locales = []
     @pilot_experiment = nil
     @project_sharing = nil
+    @curriculum_umbrella = nil
   end
 
   integer :id
@@ -57,6 +58,7 @@ class ScriptDSL < BaseDSL
   string :version_year
   string :curriculum_path
   string :pilot_experiment
+  string :curriculum_umbrella
 
   def teacher_resources(resources)
     @teacher_resources = resources
@@ -118,7 +120,8 @@ class ScriptDSL < BaseDSL
       is_stable: @is_stable,
       supported_locales: @supported_locales,
       pilot_experiment: @pilot_experiment,
-      project_sharing: @project_sharing
+      project_sharing: @project_sharing,
+      curriculum_umbrella: @curriculum_umbrella
     }
   end
 
@@ -157,7 +160,6 @@ class ScriptDSL < BaseDSL
   def level(name, properties = {})
     active = properties.delete(:active)
     progression = properties.delete(:progression)
-    target = properties.delete(:target)
     challenge = properties.delete(:challenge)
     experiments = properties.delete(:experiments)
     named = properties.delete(:named)
@@ -217,10 +219,9 @@ class ScriptDSL < BaseDSL
         levels: [level]
       }
 
-      if progression || target || challenge
+      if progression || challenge
         script_level[:properties] = {}
         script_level[:properties][:progression] = progression if progression
-        script_level[:properties][:target] = true if target
         script_level[:properties][:challenge] = true if challenge
       end
 
@@ -247,7 +248,7 @@ class ScriptDSL < BaseDSL
       i18n_strings[stage[:stage]] = {'name' => stage[:stage]}
     end
 
-    {'name' => {@name => {'stages' => i18n_strings}}}
+    {@name => {'stages' => i18n_strings}}
   end
 
   def self.parse_file(filename, name = nil)
@@ -295,6 +296,7 @@ class ScriptDSL < BaseDSL
     s << "supported_locales #{script.supported_locales}" if script.supported_locales
     s << "pilot_experiment '#{script.pilot_experiment}'" if script.pilot_experiment
     s << 'project_sharing true' if script.project_sharing
+    s << "curriculum_umbrella '#{script.curriculum_umbrella}'" if script.curriculum_umbrella
 
     s << '' unless s.empty?
     s << serialize_stages(script)
@@ -322,7 +324,6 @@ class ScriptDSL < BaseDSL
                 sl.active?(level),
                 sl.progression,
                 sl.named_level?,
-                sl.target,
                 sl.challenge,
                 sl.assessment,
                 sl.experiments(level)
@@ -331,7 +332,7 @@ class ScriptDSL < BaseDSL
           end
           s << 'endvariants'
         else
-          s.concat(serialize_level(sl.level, type, nil, sl.progression, sl.named_level?, sl.target, sl.challenge, sl.assessment))
+          s.concat(serialize_level(sl.level, type, nil, sl.progression, sl.named_level?, sl.challenge, sl.assessment))
         end
       end
       s << 'no_extras' if stage.stage_extras_disabled
@@ -346,7 +347,6 @@ class ScriptDSL < BaseDSL
     active = nil,
     progression = nil,
     named = nil,
-    target = nil,
     challenge = nil,
     assessment = nil,
     experiments = []
@@ -369,7 +369,6 @@ class ScriptDSL < BaseDSL
     l += ", progression: '#{progression}'" if progression
     l += ', named: true' if named
     l += ', assessment: true' if assessment
-    l += ', target: true' if target
     l += ', challenge: true' if challenge
     s << l
     s

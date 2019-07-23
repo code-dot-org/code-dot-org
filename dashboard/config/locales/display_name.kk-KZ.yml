@@ -1,5 +1,5 @@
 ---
-kk:
+kk-KZ:
   data:
     display_name:
       CSD U2 Pair Programming Video: Жұптасып Бағдарламалау
@@ -50,7 +50,6 @@ kk:
       CSD U3 Variables Map: Айнымалылар
       CSD U3 Variables Map_2018: Айнымалылар
       CSD U3 Variables Map_2019: Айнымалылар
-      CSD U3 functions map: Функциялар
       CSD U6 for loop map: For ілмектері
       CSD U6 for loop map_2018: For ілмектері
       CSD U6 for loop map_2019: For ілмектері
@@ -58,6 +57,3 @@ kk:
       CSD U6 functions paramters video_2018: Параметрлі Функциялар
       CSD U6 functions paramters video_2019: Параметрлі Функциялар
       'CSD: For Loop_2018': For ілмектері
-      'CSD: For Loop_2019': For ілмектері
-      MC_HOC_2017_FP10x10: Тегін Ойнау
-      MC_HOC_2017_FP10x10_RE: Тегін Ойнау

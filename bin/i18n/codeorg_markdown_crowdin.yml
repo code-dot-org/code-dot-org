@@ -5,7 +5,12 @@
 # https://support.crowdin.com/configuration-file/#split-project-configuration-and-api-credentials
 "api_key" : ""
 
+"preserve_hierarchy": true
+
 files: [{
-  "source": "/public/international/about.md",
+  "source": "/public/international/about.md.partial",
+  "translation": "/i18n/%original_path%/%file_name%.%locale%.%file_extension%",
+}, {
+  "source": "/public/educate/curriculum/csf-transition-guide.md",
   "translation": "/i18n/%original_path%/%file_name%.%locale%.%file_extension%",
 }]

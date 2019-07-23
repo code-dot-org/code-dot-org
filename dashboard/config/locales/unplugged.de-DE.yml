@@ -260,6 +260,8 @@ de:
           Satz des Pythagoras und die Distanz-Formel verwendet werden können, um die
           Entfernung zwischen zwei Punkten auf einer Ebene zu bestimmen und zu entscheiden,
           ob sich diese zwei Punkte (oder Spielcharaktere) berühren.
+      courseA_unplugged_loops:
+        title: 'Offline: Schleifen'
       courseB_unplugged_MRF:
         title: Aktivität ohne Computer
       courseB_unplugged_loopyMRF:
@@ -402,6 +404,8 @@ de:
         title: Sicher unterwegs
         desc: Das Internet ist ein wunderbarer, aber auch gefährlicher Ort. Lehrer
           erklären, wie Schüler sicher im Internet navigieren.
+      courseA_unplugged_loops_2018:
+        title: 'Offline: Schleifen'
       BigEvent_2018:
         title: Der große Event
         desc: Schüler lernen das Programmierkonzept „Ereignis“ kennen. Dies ist eine
@@ -514,6 +518,8 @@ de:
         title: Sicher unterwegs
         desc: Das Internet ist ein wunderbarer, aber auch gefährlicher Ort. Lehrer
           erklären, wie Schüler sicher im Internet navigieren.
+      courseA_unplugged_loops_2019:
+        title: 'Offline: Schleifen'
       MoveItMoveIt_2019:
         title: Bewegung, Bewegung
       DigitalFootprint_2019:

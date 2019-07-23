@@ -665,29 +665,10 @@ zh-TW:
             '2': 高音
       Dancelab_whenSetup:
         text: 設定
-      gamelab_add:
-        text: 角色 {SPRITE} 加入群組 {THIS}
       gamelab_addBehaviorSimple:
         text: 角色 {SPRITE} 開始 {BEHAVIOR}
-      gamelab_addBehaviorUntil:
-        text: 角色 {SPRITE} 開始 {BEHAVIOR} 直到 {CONDITION}
       gamelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
-      gamelab_bounceOffEdges:
-        text: 角色 {SPRITE} 碰到邊緣就反彈
-      gamelab_changeColor:
-        text: "{COLOR} {METHOD} 改變 {AMOUNT}"
-        options:
-          METHOD:
-            '"tint"': 色調
-            '"tone"': 音調
-      gamelab_changeColorBy:
-        text: "{COLOR} {METHOD} 改變 {AMOUNT}"
-        options:
-          METHOD:
-            '"hue"': 色調
-            '"saturation"': 飽和度
-            '"brightness"': 亮度
       gamelab_changePropBy:
         text: 角色 {SPRITE} {PROPERTY} 改變 {VAL}
         options:
@@ -722,15 +703,6 @@ zh-TW:
         text: "{THIS} 阻擋 {SPRITE} 前進"
       gamelab_edgesDisplace:
         text: 邊緣阻擋 {SPRITE} 前進
-      gamelab_firstTouched:
-        text: 第一個碰到的角色
-      gamelab_getAnim:
-        text: 角色 {SPRITE} 的 {COSTUME}
-        options:
-          COSTUME:
-            '"costume"': 造型
-      gamelab_getDirection:
-        text: 角色 {SPRITE} 的移動方向
       gamelab_getProp:
         text: 角色 {SPRITE} 的 {PROPERTY}
         options:
@@ -790,70 +762,20 @@ zh-TW:
             '"x"': x
             '"y"': 'y'
             '"z"': z
-      gamelab_layoutSprites:
-        options:
-          FORMAT:
-            '"border"': 邊框
-            '"inner"': 正方形內部
-            '"circle"': 圓形
-            '"grid"': 格狀
-            '"row"': 橫列
-            '"column"': 直排
-            '"x"': 十字交叉
-            '"plus"': 十字加號
-            '"random"': 隨機
-      gamelab_locationAdd:
-        text: "{LOC1} {OPERATOR} {LOC2}"
-        options:
-          OPERATOR:
-            "'plus'": "\\+"
-            "'minus'": "\\-"
       gamelab_locationAt:
         text: '座標 x: {X} y: {Y}'
-      gamelab_locationConstant:
-        text: "{DIR}"
-        options:
-          DIR:
-            "'north'": 南
-            "'south'": 北
-            "'east'": 東
-            "'west'": 西
-      gamelab_locationDelta:
-        options:
-          DIR:
-            "'north'": 南
-            "'south'": 北
-            "'east'": 東
-            "'west'": 西
-            "'random'": 隨機
-      gamelab_locationEast:
-        text: 東
       gamelab_locationMouse:
         text: 鼠標位置
-      gamelab_locationNorth:
-        text: 南
       gamelab_locationOf:
         text: 位置 {SPRITE}
-      gamelab_locationSouth:
-        text: 北
-      gamelab_locationWest:
-        text: 西
       gamelab_location_picker:
         text: "{LOCATION}"
-      gamelab_location_variable_get:
-        text: 座標 {VAR}
-      gamelab_location_variable_set:
-        text: 角色 {VAR} 位置設為 {VAL}
-      gamelab_makeNewGroup:
-        text: 建立一個新群組
       gamelab_mirrorSprite:
         text: 角色 {SPRITE} 面朝 {DIRECTION} 向
         options:
           DIRECTION:
             '"right"': 向右
             '"left"': " 向左"
-      gamelab_mixColors:
-        text: 混合顏色 {COLOR1} 和 {COLOR2}
       gamelab_mouseLocation:
         text: 鼠標位置
       gamelab_moveForward:
@@ -866,8 +788,6 @@ zh-TW:
             '"East"': 東
             '"South"': 南
             '"West"': 西
-      gamelab_moveInDirection2:
-        text: 角色 {SPRITE} 移動 {DISTANCE} 像素 面向 {DIRECTION}
       gamelab_playSound:
         text: 播放音效 {SOUND}
       gamelab_pointInDirection:
@@ -892,8 +812,6 @@ zh-TW:
         text: 角色 {SPRITE} 停止 {BEHAVIOR}
       gamelab_removeTint:
         text: 角色 {THIS} 顏色移除
-      gamelab_secondTouched:
-        text: 第二個碰到的角色
       gamelab_setAnimation:
         text: 角色 {THIS} 造型設為 {ANIMATION}
       gamelab_setBackground:
@@ -912,22 +830,6 @@ zh-TW:
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': 水中
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': 冬天
             undefined: 無
-      gamelab_setFrameDelay:
-        text: 角色 {THIS} 圖格延遲 {VAL}
-      gamelab_setPosition:
-        text: 角色 {THIS} 定位到 {POSITION} 位置
-        options:
-          POSITION:
-            "{x: 50, y: 50}": 左上
-            "{x: 200, y: 50}": 中上
-            "{x: 350, y: 50}": 右上
-            "{x: 50, y: 200}": 中左
-            "{x: 200, y: 200}": 中間
-            "{x: 350, y: 200}": 中右
-            "{x: 50, y: 350}": 左下
-            "{x: 200, y: 350}": 中下
-            "{x: 350, y: 350}": 右下
-            '"random"': 隨機
       gamelab_setProp:
         text: 角色 {SPRITE} {PROPERTY} 設為 {VAL}
         options:
@@ -947,8 +849,6 @@ zh-TW:
             '"height"': 高度
       gamelab_setTint:
         text: 角色 {THIS} 顏色設為 {COLOR}
-      gamelab_setup:
-        text: 設定
       gamelab_showTitleScreen:
         text: 標題畫面顯示 {BREAK} 標題 {TITLE} 內文 {SUBTITLE}
       gamelab_spriteClicked:
@@ -957,47 +857,6 @@ zh-TW:
           CONDITION:
             '"when"': 當
             '"while"': 當
-      gamelab_spriteClickedSet:
-        options:
-          CONDITION:
-            '"when"': 當
-            '"while"': 當
-      gamelab_spriteCostume:
-        text: "{COSTUME}"
-      gamelab_spriteDirection:
-        options:
-          DIRECTION:
-            '"North"': 北
-            '"East"': 東
-            '"South"': 南
-            '"West"': 西
-      gamelab_spritesWhere:
-        options:
-          PROPERTY:
-            '"scale"': 尺寸
-            '"x"': x 座標
-            '"y"': y 座標
-            '"costume"': 造型
-            '"direction"': 移動方向
-            '"tint"': 色調
-      gamelab_spritesWhereGenerator:
-        options:
-          PROPERTY:
-            '"scale"': 尺寸
-            '"x"': x 座標
-            '"y"': y 座標
-            '"costume"': 造型
-            '"direction"': 移動方向
-            '"tint"': 色調
-          OP:
-            '"="': "="
-            '">"': ">"
-            '"<"': "\\<"
-      gamelab_thisBeginsBehaviorSimple:
-        text: 角色 {SPRITE} 開始 {BEHAVIOR}
-        options:
-          SPRITE:
-            abc: 這個角色
       gamelab_turn:
         text: 角色 {SPRITE} 轉向 {DIRECTION} {N} 度
         options:
@@ -1021,8 +880,6 @@ zh-TW:
             '"d"': d
       gamelab_whenLeftArrow:
         text: 當向左鍵被按下
-      gamelab_whenMouseClicked:
-        text: 當滑鼠按鍵被點擊
       gamelab_whenPressedAndReleased:
         options:
           DIR:
@@ -1034,13 +891,6 @@ zh-TW:
         text: 當向右鍵被按下
       gamelab_whenTouching:
         text: 當角色 {SPRITE1} 碰到角色 {SPRITE2} 時
-      gamelab_whenTouchingAny:
-        text: 當角色 {SPRITE} 碰到群組 {GROUP} 的任一角色時
-      gamelab_whenTouchingSet:
-        options:
-          CONDITION:
-            '"when"': 當
-            '"while"': 當
       gamelab_whenUpArrow:
         text: 當向上鍵被按下
       gamelab_whileDownArrow:

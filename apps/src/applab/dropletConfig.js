@@ -15,7 +15,6 @@ import {
   setPropertyDropdown,
   setPropertyValueSelector
 } from './setPropertyDropdown';
-import {getListColumnDropdown} from './getListDropdown';
 import {getStore} from '../redux';
 import * as applabConstants from './constants';
 
@@ -522,18 +521,6 @@ export var blocks = [
   },
 
   {
-    func: 'getList',
-    parent: api,
-    category: 'Data',
-    params: ['tableName', 'columnName'],
-    dropdown: {
-      0: () => getAssetDropdown('dataset'),
-      1: getListColumnDropdown()
-    },
-    nativeIsAsync: true,
-    type: 'value'
-  },
-  {
     func: 'startWebRequest',
     parent: api,
     category: 'Data',
@@ -864,6 +851,12 @@ export var blocks = [
     modeOptionName: '*.toLowerCase',
     tipPrefix: stringMethodPrefix,
     type: 'value'
+  },
+  {
+    func: 'declareAssign_list_123',
+    block: 'var list = [1, 2, 3];',
+    category: 'Variables',
+    noAutocomplete: true
   },
   {
     func: 'declareAssign_list_abd',

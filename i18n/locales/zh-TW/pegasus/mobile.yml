@@ -902,53 +902,15 @@
   coursed-2018_name: 課程 D（2018）
   coursee-2018_name: 課程 E（2018）
   coursef-2018_name: 課程 F（2018）
+  coursea-2019_name: 課程 A（2019）
+  courseb-2019_name: 課程 B（2019）
+  coursec-2019_name: 課程 C（2019）
+  coursed-2019_name: 課程 D（2019）
+  coursee-2019_name: 課程 E（2019）
+  coursef-2019_name: 課程 F（2019）
+  pre-express-2018_name: 學前兒童的速學課程（2018）
   accelerated_name: "速成課程"
   express_name: "速學課程"
-  pre-express_name: 學前兒童的速學課程
-  express-2017_name: 速學課程（2017）
-  pre-express-2017_name: 學前兒童的速學課程（2017）
-  pre-express-2018_name: 學前兒童的速學課程（2018）
-  cspunit1_name: "（舊）單元 1：數位資訊"
-  cspunit2_name: "（舊）單元 2：網際網路"
-  cspunit3_name: "（舊）單元 3：程式設計"
-  cspunit4_name: "（舊）單元 4：數據"
-  cspunit5_name: "（舊）單元 5：探索及建立 PT"
-  cspunit6_name: 'Post-AP：App 的數據庫'
-  csd1_name: '單元 1：問題解決'
-  csd2_name: '單元 2：Web 開發'
-  csd3_name: '單元 3：動畫與遊戲'
-  csd4_name: '單元 4：設計流程'
-  csd5_name: '單元 5：數據和社會'
-  csd6_name: '單元 6：物理運算'
-  csd1-2017_name: '單元 1：問題解決'
-  csd2-2017_name: '單元 2：Web 開發'
-  csd3-2017_name: '單元 3：動畫與遊戲'
-  csd4-2017_name: '單元 4：設計流程'
-  csd5-2017_name: '單元 5：數據和社會'
-  csd6-2017_name: '單元 6：物理運算'
-  csd1-2018_name: '單元 1：問題解決'
-  csd2-2018_name: '單元 2：Web 開發'
-  csd3-2018_name: '單元 3：動畫與遊戲'
-  csd4-2018_name: '單元 4：設計流程'
-  csd5-2018_name: '單元 5：數據和社會'
-  csd6-2018_name: '單元 6：物理運算'
-  csp1-2017_name: '單元 1：網際網路'
-  csp2-2017_name: '單元 2：數位資訊'
-  csppostap-2017_name: 'Post AP：App 的數據庫'
-  csp1-2018_name: '單元 1：網際網路'
-  csp2-2018_name: '單元 2：數位資訊'
-  csppostap-2018_name: 'Post AP：App 的數據庫'
-  csp1_name: '單元 1：網際網路'
-  csp2_name: '單元 2：數位資訊'
-  csp3-a_name: '單元 3：程式設計介紹（版本 A）'
-  csp3-research-mxghyt_name: '單元 3：程式設計介紹（子目標）'
-  csp-ap_name: AP效能任務
-  csppostap_name: 'Post AP：App 的數據庫'
-  csp-post-survey_name: 課後問卷調查
-  cspassessment_name: "完整測驗 - 共 50 題"
-  cspexam1-mWU7ilDYM9_name: 測驗第一部分：25 題
-  cspexam2-AKwgAh1ac5_name: 測驗第二部分：25 題
-  cspunit3_gradelevel: "年級 9-12"
   20-hour_name: 速成課程
   algebra_name: "代數裡的 CS"
   AlgebraA_name: "代數裡的 CS 課程 A"
@@ -960,20 +922,6 @@
   starwarsblocks_name: "星際大戰（程式積木）"
   hoc-encryption_name: 簡單加密
   text-compression_name: 文字壓縮
-  math_category_name: "運算"
-  hoc_category_name: "一小時玩程式"
-  csf_category_name: "CS 基本原理"
-  csf_2017_category_name: "計算機科學基礎（2017）"
-  csf_2018_category_name: "計算機科學基礎（2018）"
-  csf_international_category_name: "計算機科學基礎國際版"
-  csf2_draft_category_name: '開發中：課程 A - F'
-  csd_category_name: "計算機科學探索（'17-'18）"
-  csd_2018_category_name: "計算機科學探索（'18-'19）"
-  csp_category_name: "'15-' 16 計算機科學原理"
-  csp17_category_name: "CS 原理 ('17-'18)"
-  csp_2018_category_name: "計算機科學原理（'18-'19）"
-  cspexams_category_name: "計算機科學原理應用測驗"
-  research_studies_category_name: "研究"
   applab_name: "App Lab"
   gamelab_name: "Game Lab"
   basketball_name: "製作一個籃球遊戲"
@@ -1051,6 +999,12 @@
   coursed-2018_gradelevel: 年級 8+
   coursee-2018_gradelevel: 年齡 8-12
   coursef-2018_gradelevel: 年齡 9-13
+  coursea-2019_gradelevel: 年齡 4-7
+  courseb-2019_gradelevel: 年齡 5-8
+  coursec-2019_gradelevel: 年齡 6-10
+  coursed-2019_gradelevel: 年級 8+
+  coursee-2019_gradelevel: 年齡 8-12
+  coursef-2019_gradelevel: 年齡 9-13
   accelerated_gradelevel: "年齡 10-18"
   codeorg_platformtext: "主流的瀏覽器、手機、平板"
   codeintl_platformtext: "主流的瀏覽器、手機、平板"
@@ -1164,6 +1118,11 @@
   coursed-2018_shortdescription_congrats: 快速地導覽在課程 C 的概念，進一步的介紹演算法、巢狀迴圈、條件判斷式…等的使用。
   coursee-2018_shortdescription_congrats: 快速地導覽在課程 C 和課程 D 的概念，進一步的介紹函式的使用。
   coursef-2018_shortdescription_congrats: 學習計算機科學的基礎概念，並創建自己的藝術、故事、遊戲作品。
+  coursea-2019_shortdescription_congrats: 為學齡前兒童設計的計算機科學指引。
+  courseb-2019_shortdescription_congrats: 為學前兒童準備的計算機科學介紹（類似課程 A，但對年紀大些的學童提供了更多變化）
+  coursed-2019_shortdescription_congrats: 快速地導覽在課程 C 的概念，進一步的介紹演算法、巢狀迴圈、條件判斷式…等的使用。
+  coursee-2019_shortdescription_congrats: 快速地導覽在課程 C 和課程 D 的概念，進一步的介紹函式的使用。
+  coursef-2019_shortdescription_congrats: 學習計算機科學的基礎概念，並創建自己的藝術、故事、遊戲作品。
   codeorg_longdescription: "使用拖曳程式積木的方式來學習計算機科學的基本概念。這是一個遊戲式、自學式的教程，由比爾 · 蓋茨、馬克 · 佐柏克、憤怒鳥和植物大戰僵屍所主演。在這個課程中您將學到重複迴圈、條件判斷、基礎的演算法。共有 34 種語言可用。"
   codeintl_longdescription: "使用拖曳程式積木的方式來學習計算機科學的基本概念。這是一個遊戲式、自學式的教程，由比爾 · 蓋茨、馬克 · 佐柏克、憤怒鳥和植物大戰僵屍所主演。在這個課程中您將學到重複迴圈、條件判斷、基礎的演算法。共有 34 種語言可用。"
   thinkersmithspanish_longdescription: "使用預先定義的「字彙機器人(Vocabulary Robot )」，學生就可以在討論前就理解如何引導彼此去完成特定的任務。此課程教導孩子建立符號及動作的連結，及非常具有價值的除錯技能。My Robotic Friends（我的機器人朋友）以小組活動方式進行最佳，裡頭包含教師手冊給班級使用。"
@@ -1429,10 +1388,6 @@
   header_report_bug: "回報 Bug"
   header_tutorials: "所有教程"
   header_documentation: "說明文件"
-  csp_name: "CS 原理"
-  csd_name: "計算機科學探索"
-  csd_2018_name: "計算機科學探索"
-  full_course_category_name: "完整課程"
   user_header_label: "嗨，%{username}"
   user_header_team: "團隊"
   user_header_settings: "帳戶設定"

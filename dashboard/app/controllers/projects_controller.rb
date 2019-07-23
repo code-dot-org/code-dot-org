@@ -240,7 +240,7 @@ class ProjectsController < ApplicationController
     return if redirect_under_13_without_tos_teacher(@level)
     channel = ChannelToken.create_channel(
       request.ip,
-      StorageApps.new(storage_id('user')),
+      StorageApps.new(get_storage_id),
       data: initial_data,
       type: params[:key]
     )
@@ -368,7 +368,7 @@ class ProjectsController < ApplicationController
     project_type = params[:key]
     new_channel_id = ChannelToken.create_channel(
       request.ip,
-      StorageApps.new(storage_id('user')),
+      StorageApps.new(get_storage_id),
       src: src_channel_id,
       type: project_type,
       remix_parent_id: remix_parent_id,
@@ -400,7 +400,7 @@ class ProjectsController < ApplicationController
     rescue ArgumentError, OpenSSL::Cipher::CipherError
       return head :bad_request
     end
-    storage_app = StorageApps.new(storage_id('user'))
+    storage_app = StorageApps.new(get_storage_id)
     src_data = storage_app.get(src_channel_id)
     data = initial_data
     data['name'] = "Exported: #{src_data['name']}"

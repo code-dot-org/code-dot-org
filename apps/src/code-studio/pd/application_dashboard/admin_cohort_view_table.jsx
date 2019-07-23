@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import ReactTooltip from 'react-tooltip';
-import {Table, sort} from 'reactabular';
+import * as Table from 'reactabular-table';
+import * as sort from 'sortabular';
 import color from '@cdo/apps/util/color';
 import {Button} from 'react-bootstrap';
 import _, {orderBy} from 'lodash';
@@ -76,7 +77,7 @@ export default class AdminCohortViewTable extends React.Component {
           label: 'View Application'
         },
         cell: {
-          format: this.formatViewButton
+          formatters: [this.formatViewButton]
         }
       },
       {
@@ -86,7 +87,7 @@ export default class AdminCohortViewTable extends React.Component {
           transforms: [sortable]
         },
         cell: {
-          format: this.formatDate
+          formatters: [this.formatDate]
         }
       },
       {
@@ -117,7 +118,7 @@ export default class AdminCohortViewTable extends React.Component {
           transforms: [sortable]
         },
         cell: {
-          format: this.formatBoolean
+          formatters: [this.formatBoolean]
         }
       },
       {
@@ -162,7 +163,7 @@ export default class AdminCohortViewTable extends React.Component {
           transforms: [sortable]
         },
         cell: {
-          format: this.formatBoolean
+          formatters: [this.formatBoolean]
         }
       },
       {
@@ -173,19 +174,9 @@ export default class AdminCohortViewTable extends React.Component {
         }
       },
       {
-        property: 'registered_fit',
+        property: 'registered_fit_submission_time',
         header: {
           label: 'Registered FiT',
-          transforms: [sortable]
-        },
-        cell: {
-          format: this.formatBoolean
-        }
-      },
-      {
-        property: 'fit_assigned_at_registration',
-        header: {
-          label: 'FiT Assigned at Registration',
           transforms: [sortable]
         }
       },
@@ -212,7 +203,7 @@ export default class AdminCohortViewTable extends React.Component {
           transforms: [sortable]
         },
         cell: {
-          format: this.formatNotesTooltip,
+          formatters: [this.formatNotesTooltip],
           transforms: [
             () => ({
               style: {...styles.notesCell}
@@ -280,6 +271,7 @@ export default class AdminCohortViewTable extends React.Component {
     return (
       <Button
         bsSize="xsmall"
+        target="_blank"
         href={this.context.router && this.context.router.createHref(`/${id}`)}
         onClick={this.handleViewClick.bind(this, id)}
       >

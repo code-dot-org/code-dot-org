@@ -40,7 +40,6 @@ ms:
   of: "dari"
   more: "LAGI"
   less: "KURANG"
-  beta: "beta"
   try_hoc: "Cuba Kod Sejam, klik di sini >> "
   try_k8intro: "Cuba pengenalan K-8 kami untuk kursus Sains Komputer (15-25 jam)"
   k8intro: "Pengenalan K-8 untuk kursus Sains Komputer (15-25 jam)"
@@ -319,16 +318,8 @@ ms:
       other: "Lain-lain"
     submit: "Hantar"
   project:
-    save: "Simpan"
-    delete: "Padam"
-    share: "Kongsi"
-    more: "Lagi"
     name: "Nama"
-    really_delete: 'Padam?'
-    delete_yes: 'Ya'
-    delete_no: 'Tidak'
     saved: "Disimpan di dalam galeri!"
-    cancel: 'Batal'
     abuse:
       report_abuse_form:
         abuse_type:

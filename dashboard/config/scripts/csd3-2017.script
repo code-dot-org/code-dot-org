@@ -11,6 +11,7 @@ family_name 'csd3'
 version_year '2017'
 is_stable true
 project_sharing true
+curriculum_umbrella 'CSD'
 
 stage 'Programming for Entertainment', flex_category: 'csd3_1'
 level 'CSD U3 Lesson Overview 1', named: true

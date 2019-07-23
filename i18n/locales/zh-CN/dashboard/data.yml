@@ -505,6 +505,9 @@ zh-CN:
         csd_applab_parameters: 有参数的函数
         csd_applab_loops: 应用实验室的循环
         csd_problem_solving_process: 解决问题的过程
+        CSF_Going_Places_Safely: 我的在线邻居
+        CSF_Spritelab_MakeSprite_v2: 如何制作精灵
+        CSF_SpriteLab_SpritesInAction_v2: 动作精灵
     callout:
       text:
         drag_blocks: 拖动一个"移动"的块，并将它吸到别的模块下面

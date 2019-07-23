@@ -154,14 +154,6 @@ ms:
             '"right"': kanan
             '"space"': angkasa
             '"x"': x
-      gamelab_layoutSprites:
-        options:
-          FORMAT:
-            '"random"': rawak
-      gamelab_locationDelta:
-        options:
-          DIR:
-            "'random'": rawak
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -183,10 +175,6 @@ ms:
               bawah permukaan air
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': musim
               sejuk
-      gamelab_setPosition:
-        options:
-          POSITION:
-            '"random"': rawak
       gamelab_setProp:
         options:
           PROPERTY:
@@ -201,19 +189,6 @@ ms:
           CONDITION:
             '"when"': apabila
             '"while"': semasa
-      gamelab_spriteClickedSet:
-        options:
-          CONDITION:
-            '"when"': apabila
-            '"while"': semasa
-      gamelab_spritesWhere:
-        options:
-          PROPERTY:
-            '"scale"': saiz
-      gamelab_spritesWhereGenerator:
-        options:
-          PROPERTY:
-            '"scale"': saiz
       gamelab_turn:
         options:
           DIRECTION:
@@ -234,11 +209,6 @@ ms:
             "'down'": bawah
             "'left'": kiri
             "'right'": kanan
-      gamelab_whenTouchingSet:
-        options:
-          CONDITION:
-            '"when"': apabila
-            '"while"': semasa
       gamelab_whileKey:
         options:
           KEY:

@@ -635,18 +635,6 @@ Flappy.init = function(config) {
     config.blockArrangement.flappy_whenClick.y = row2;
   }
 
-  if (
-    config.embed &&
-    config.level.longInstructions &&
-    !config.level.shortInstructions
-  ) {
-    // if we are an embedded level with long instructions but no short
-    // instructions, we want to display CSP-style instructions and not be
-    // centered
-    config.noInstructionsWhenCollapsed = true;
-    config.centerEmbedded = false;
-  }
-
   var onMount = function() {
     studioApp().init(config);
 

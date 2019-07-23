@@ -4658,6 +4658,7 @@ zh-TW:
               name: 用撲克牌學習條件判斷（Conditionals）
             Digital Citizenship:
               name: 數位公民
+              description_student: 有些資訊在網上分享是不安全的。本課將讓學生瞭解安全資訊和私人資訊之間的區別。
             'Unplugged: Binary':
               name: 二進制圖像
             Artist Binary:
@@ -4707,19 +4708,17 @@ zh-TW:
           description: 學習計算機科學以及網路安全的基礎知識，在課程結束後，創造並分享屬於你自己的遊戲或故事。
           stages:
             Programming in Maze:
-              name: 在迷宮中編程（Programming ）
+              name: 與憤怒鳥一起編程
             Relay Programming:
               name: 接力編程
             Programming in Collector:
-              name: 和收藏家學編程（Program）
+              name: 和 Laurel 一起收集寶石
             'Loops: Getting Loopy':
               name: 迴圈：學習迴圈
-            Loops in Artist:
-              name: 藝術家中的迴圈（Loops）
             'Concept Practice with Minecraft ':
               name: 與 Minecraft 一起實踐所學
             Nested Loops in Bee:
-              name: 蜜蜂裡的巢狀迴圈（Nested Loops）
+              name: 迷宮裡的巢狀迴圈（Nested Loops）
             Conditionals with Cards:
               name: 用撲克牌學習條件判斷（Conditionals）
             Functions in Minecraft:
@@ -4731,7 +4730,7 @@ zh-TW:
             For Loops in Artist:
               name: 藝術家中的計數迴圈（For Loops）
             Alien Dance Party with Sprite Lab:
-              name: 用 Sprite Lab 創作外星人舞蹈派對
+              name: 外星人舞蹈派對
             Explore Project Ideas:
               name: 找些專案靈感
             Build Your Project:
@@ -4748,6 +4747,12 @@ zh-TW:
               name: 網際網路 Internet
             Crowdsourcing:
               name: 群眾外包（Crowdsourcing）
+            Editing Behaviors:
+              name: 行為的修改
+            Dance Party:
+              name: 舞蹈派對
+            Concept Practice with Minecraft:
+              name: 與 Minecraft 一起展望未來
         csd1-2019:
           title: CSD 單元 1 - 問題解決 ('19-'20)
           stages:
@@ -4874,18 +4879,16 @@ zh-TW:
               name: 在冰河歷險紀裡編程
             Programming with Rey and BB-8:
               name: 和 BB-8 與 Rey 一起寫程式
-            Loops in Ice Age:
-              name: 冰河歷險紀中的迴圈
             Loops in Collector:
               name: 和收藏家學迴圈（Loop）
-            Loops in Artist:
-              name: 藝術家中的迴圈（Loops）
             Spelling Bee:
               name: 拼字蜜蜂
             Learn to Drag and Drop:
               name: 學習滑鼠的拖放
             Programming in Maze:
-              name: 在迷宮中編程（Programming ）
+              name: 和鼠奎特一起寫程式
+            Programming in Harvester:
+              name: 和農夫一起學程式
         removed19:
           stages:
             'Debugging: Unspotted Bugs':
@@ -5152,6 +5155,8 @@ zh-TW:
           stages:
             new stage:
               name: 新的階段
+            Number Systems:
+              name: 數字系統
         csd-tests:
           stages:
             Computers and Problem Solving:
@@ -5247,6 +5252,108 @@ zh-TW:
             Programming in Maze:
               name: 在迷宮中編程（Programming ）
         csp5-pilot:
+          stages:
+            new stage:
+              name: 新的階段
+        fit2019-novice:
+          stages:
+            Novice Reflection Overview:
+              name: 新手反思概覽
+            Day 1:
+              name: 第 1 天
+            Day 2:
+              name: 第 2 天
+            Day 3:
+              name: 第 3 天
+            Day 4:
+              name: 第 4 天
+            Wrap Up:
+              name: 總結
+        csd-test-saving-state:
+          stages:
+            What is a Computer?:
+              name: 電腦是什麼？
+        fit2019-apprentice:
+          stages:
+            Apprentice Reflection Overview:
+              name: 學徒反思
+            Day 1:
+              name: 第 1 天
+            Day 2:
+              name: 第 2 天
+            Day 3:
+              name: 第 3 天
+            Day 4:
+              name: 第 4 天
+            Wrap Up:
+              name: 總結
+        csd1-pilot:
+          title: CSD 單元 1 - 問題解決 ('19-'20)
+          stages:
+            Intro to Problem Solving:
+              name: 問題解決能力的介紹
+            The Problem Solving Process:
+              name: 問題解決流程
+            Exploring Problem Solving:
+              name: 問題解決探索
+            What is a Computer?:
+              name: 電腦是什麼？
+            Input and Output:
+              name: 輸入與輸出
+        csd2-pilot:
+          title: CSD 單元 2 - Web 開發 ('19-'20)
+          stages:
+            Headings:
+              name: 標題
+            Digital Footprint:
+              name: 數位足跡
+            Lists:
+              name: 清單
+            Clean Code and Debugging:
+              name: 乾淨代碼和偵錯調試
+            Project - Multi-Page Websites:
+              name: 專案 - 多頁式網站
+            Styling Text with CSS:
+              name: 透過 CSS 修改文字樣式
+            Styling Elements with CSS:
+              name: 透過 CSS 修改元素樣式
+            Sources and Search Engines:
+              name: 來源和搜尋引擎
+            Images:
+              name: 圖像
+        csd3-pilot:
+          title: CSD 單元 3 -互動式遊戲和動畫
+          description_short: Game Lab 編程環境介紹
+          stages:
+            Programming for Entertainment:
+              name: 娛樂用途的程式設計
+            Plotting Shapes:
+              name: 幾何繪圖
+            Drawing in Game Lab:
+              name: 用 Game Lab 繪圖
+            Variables:
+              name: 變數
+            Sprites:
+              name: 角色
+            Sprite Movement:
+              name: 角色動作
+            Conditionals:
+              name: 條件判斷（Conditionals）
+            Project - Interactive Card:
+              name: 專案 - 互動式卡片
+            Velocity:
+              name: 速度
+            Complex Sprite Movement:
+              name: 複合角色動作
+            Collisions:
+              name: 碰撞
+            Functions:
+              name: 函式
+            Using the Game Design Process:
+              name: 使用遊戲設計流程
+            Project - Design a Game:
+              name: 專案 - 設計一個遊戲
+        maddie-test:
           stages:
             new stage:
               name: 新的階段

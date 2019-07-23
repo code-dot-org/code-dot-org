@@ -74,7 +74,7 @@ it:
           parole a scelta degli spazi vuoti di frasi pre-determinate) per aiutarli
           a comprendere l'efficacia dell'astrazione.
       Unplug9:
-        title: Programmazione a Staffetta
+        title: Programmazione a staffetta
         desc: Questa lezione riutilizza l'idea di una precedente lezione (n.4 - Programmazione
           su carta a quadretti) ed usa le abilità apprese in quella lezione per sottolineare
           l'importanza di costruire programmi che operano in sequenza e di controllare
@@ -115,7 +115,7 @@ it:
           (istruzione di ripetizione) attraverso una danza. Gli studenti imparano
           una semplice coreografia da ripetere più volte.
       RelayProgramming:
-        title: Programmazione a Staffetta
+        title: Programmazione a staffetta
         desc: Gli studenti fanno una corsa a staffetta, nella quale uno alla volta
           corrono a scrivere un algoritmo basato su un disegno dalla lezione "Programmazione
           su carta a quadretti". Possono scrivere una sola istruzione alla volta,
@@ -129,13 +129,16 @@ it:
       BigEvent:
         title: Gli eventi
         desc: Gli studenti vengono introdotti al concetto di "evento" nella programmazione.
-          Gli eventi sono azioni che un calcolatore continuamente controlla se accadono
-          o meno. In questa lezione l'insegnante "cliccherà" i pulsanti di un controller
-          di carta e gli studenti dovranno reagire in funzione del pulsante cliccato.
+          Gli eventi sono azioni che un calcolatore controlla in continuazione se
+          accadono o meno. In questa lezione l'insegnante "cliccherà" i pulsanti di
+          un controller di carta e gli studenti dovranno reagire in funzione del pulsante
+          cliccato.
       GoingPlacesSafely:
         title: Cittadinanza digitale - Visitare luoghi in modo sicuro
-        desc: Internet è un luogo potente, ma alle volte pericoloso. L'insegnante
-          introduce come navigare su Internet in modo sicuro.
+        desc: 'Internet è un luogo potente, ma alle volte pericoloso. L''insegnante
+          introduce come navigare su Internet in modo sicuro. Cerca questa lezione
+          in italiano sul sito di Programma il Futuro: programmailfuturo.it / "Percorsi"
+          / "Cittadinanza digitale consapevole" / "Per la scuola primaria"'
       GraphPaperProgramming:
         title: Programmazione su carta a quadretti
         desc: Gli studenti scrivono un algoritmo (una sequenza di istruzioni) usando
@@ -154,9 +157,11 @@ it:
           essere rappresentati e memorizzati in più di un modo.
       DigitalFootprint:
         title: La tua impronta digitale
-        desc: L'insegnante introduce agli studenti l'idea che mettere su Internet
-          le loro informazioni personali crea un'impronta digitale che lascia tracce
-          riconoscibili e sfruttabili.
+        desc: 'L''insegnante introduce agli studenti l''idea che mettere su Internet
+          le loro informazioni personali crea un''impronta digitale che lascia tracce
+          riconoscibili e sfruttabili. Cerca questa lezione in italiano sul sito di
+          Programma il Futuro: programmailfuturo.it / "Percorsi" / "Cittadinanza digitale
+          consapevole" / "Per la scuola primaria"'
       ComputationalThinking:
         title: Pensiero computazionale
         desc: Gli studenti usano i passi fondamentali del pensiero computazione (decomposizione,
@@ -182,13 +187,13 @@ it:
         desc: Gli studenti inviano messaggi che rappresentano i vari metodi di trasmissione
           su Internet, usando solo dei fogli di carta.
       Crowdsourcing:
-        title: Intelligenza Collettiva
+        title: Intelligenza collettiva
         desc: Gli studenti utilizzano l'Intelligenza Collettiva (<i>crowd-sourcing</i>),
           una tecnica per la risoluzione di problemi usata in informatica, per completare
           insieme un'attività in modo più efficiente rispetto a uno studente che ci
           prova da solo.
       DigitalCitizenship:
-        title: Cittadinanza Digitale
+        title: Cittadinanza digitale
         desc: Gli studenti esplorano la differenza tra informazioni private e informazioni
           personali, per distinguere cosa si può condividere su Internet in modo sicuro
           e cosa no.
@@ -212,7 +217,7 @@ it:
           di storia così ottenuti diventano dei modelli per divertirsi ad inventare
           nuove storie.
       ForLoopFun:
-        title: Divertiti usando i Cicli con Contatore
+        title: Divertiti usando i cicli con contatore
         desc: Sappiamo che i cicli permettono di svolgere azioni più e più volte,
           ma ora impariamo come usare i cicli con strutture aggiuntive.
       SongwritingWithParameters:
@@ -271,28 +276,32 @@ it:
         title: 'Cicli: Lezioni Tradizionali'
         desc: In questa lezione, si parlerà di cicli!
       courseB_unplugged_MRF:
-        title: Attività Tradizionale
+        title: Attività tradizionale
         desc: In questa lezione, "programmerai" i tuoi amici!
       courseB_unplugged_loopyMRF:
-        title: Attività Tradizionale
+        title: Attività tradizionale
         desc: Come nella lezione "I Miei Amici Robotici", dovrai "programmare" i tuoi
           amici, ma questa volta usando i cicli!
       courseC_Unplugged_ScreenOutTheMean:
-        title: Attività Tradizionale
-        desc: Oggi impareremo come comportarsi quando qualcuno viene maltrattato in
-          rete. Cerca tutta la documentazione in italiano sul sito di Programma il
-          Futuro - programmailfuturo.it / "Percorsi" / "Cittadinanza digitale consapevole"
+        title: Attività tradizionale
+        desc: 'Oggi impareremo come comportarsi quando qualcuno viene maltrattato
+          in rete. Cerca questa lezione in italiano sul sito di Programma il Futuro:
+          programmailfuturo.it / "Percorsi" / "Cittadinanza digitale consapevole"
+          / "Per la scuola primaria"'
       courseD_unplugged_digitalCitizenship:
-        title: Attività Tradizionale
-        desc: Oggi imparerai cosa significa essere un Cittadino Digitale.
+        title: Attività tradizionale
+        desc: 'Oggi imparerai cosa significa essere un Cittadino Digitale. Cerca questa
+          lezione in italiano sul sito di Programma il Futuro: programmailfuturo.it
+          / "Percorsi" / "Cittadinanza digitale consapevole" / "Per la scuola primaria"'
       courseE_unplugged_privateInformation:
-        title: 'Cittadinanza digitale: Dati personali '
+        title: 'Cittadinanza digitale - Dati personali '
         desc: Oggi imparerai la differenza tra informazioni private e personali!
       courseF_unplugged_powerOfWords:
-        title: Attività Tradizionale
-        desc: Oggi impareremo come comportarsi quando qualcuno viene maltrattato in
-          rete. Cerca tutta la documentazione in italiano sul sito di Programma il
-          Futuro - programmailfuturo.it / "Percorsi" / "Cittadinanza digitale consapevole"
+        title: Attività tradizionale
+        desc: 'Oggi impareremo come comportarsi quando qualcuno viene maltrattato
+          in rete. Cerca questa lezione in italiano sul sito di Programma il Futuro:
+          programmailfuturo.it / "Percorsi" / "Cittadinanza digitale consapevole"
+          / "Per la scuola primaria"'
       courseAB_unplugged_plantASeed:
         title: 'Algoritmi della Vita Reale: Piantare un Seme'
         desc: Questa lezione tratta degli algoritmi nella vita quotidiana, usando
@@ -305,19 +314,24 @@ it:
           spostare un personaggio attraverso un labirinto utilizzando un solo comando.
       courseA_unplugged_goingPlacesSafely:
         title: Cittadinanza digitale - Visitare luoghi in modo sicuro
-        desc: Internet è un luogo potente, ma alle volte pericoloso. L'insegnante
-          introduce come navigare su Internet in modo sicuro.
+        desc: 'Internet è un luogo potente, ma alle volte pericoloso. L''insegnante
+          introduce come navigare su Internet in modo sicuro. Cerca questa lezione
+          in italiano sul sito di Programma il Futuro: programmailfuturo.it / "Percorsi"
+          / "Cittadinanza digitale consapevole" / "Per la scuola primaria"'
       courseABC_unplugged_bigEvent:
         title: Gli eventi
         desc: Gli studenti vengono introdotti al concetto di "evento" nella programmazione.
-          Gli eventi sono azioni che un calcolatore continuamente controlla se accadono
-          o meno. In questa lezione l'insegnante "cliccherà" i pulsanti di un controller
-          di carta e gli studenti dovranno reagire in funzione del pulsante cliccato.
+          Gli eventi sono azioni che un calcolatore controlla in continuazione se
+          accadono o meno. In questa lezione l'insegnante "cliccherà" i pulsanti di
+          un controller di carta e gli studenti dovranno reagire in funzione del pulsante
+          cliccato.
       courseB_unplugged_digitalFootprint:
         title: La tua impronta digitale
-        desc: L'insegnante introduce agli studenti l'idea che mettere su Internet
-          le loro informazioni personali crea un'impronta digitale che lascia tracce
-          riconoscibili e sfruttabili.
+        desc: 'L''insegnante introduce agli studenti l''idea che mettere su Internet
+          le loro informazioni personali crea un''impronta digitale che lascia tracce
+          riconoscibili e sfruttabili. Cerca questa lezione in italiano sul sito di
+          Programma il Futuro: programmailfuturo.it / "Percorsi" / "Cittadinanza digitale
+          consapevole" / "Per la scuola primaria"'
       courseC_unplugged_buildingAFoundation:
         title: Costruire le fondamenta
         desc: Gli studenti costruiscono una struttura usando solo il materiale disponibile.
@@ -346,14 +360,14 @@ it:
           un insieme di comandi predefiniti per guidare i loro compagni di classe
           nel riprodurre il disegno.
       courseD_unplugged_relayProgramming:
-        title: Programmazione a Staffetta
+        title: Programmazione a staffetta
         desc: Gli studenti fanno una corsa a staffetta, nella quale uno alla volta
           corrono a scrivere un algoritmo basato su un disegno dalla lezione "Programmazione
           su carta a quadretti". Possono scrivere una sola istruzione alla volta,
           e se trovano un errore in qualche punto, devono cancellare tutto fino a
           quel punto.
       courseD_unplugged_conditionalsCards:
-        title: Istruzioni condizionali con le Carte da Gioco
+        title: Istruzioni condizionali con le carte da gioco
         desc: Per imparare le istruzioni condizionali, gli studenti giocano con le
           carte e creano regole del tipo "SE estraggo una carta rossa ottengo un punto"
           e "SE estraggo una carta nera tu ottieni un punto".
@@ -380,7 +394,7 @@ it:
         desc: Gli studenti inviano messaggi che rappresentano i vari metodi di trasmissione
           su Internet, usando solo dei fogli di carta.
       courseE_unplugged_crowdsourcing:
-        title: Intelligenza Collettiva
+        title: Intelligenza collettiva
         desc: Gli studenti utilizzano l'Intelligenza Collettiva (<i>crowd-sourcing</i>),
           una tecnica per la risoluzione di problemi usata in informatica, per completare
           insieme un'attività in modo più efficiente rispetto a uno studente che ci
@@ -403,7 +417,7 @@ it:
           diversi modi. Svolgi questa attività prima di (o in concomitanza con) la
           lezione sull'astrazione per comprendere a fondo come usare le variabili.
       courseF_unplugged_forLoopFun:
-        title: Divertiti usando i Cicli con Contatore
+        title: Divertiti usando i cicli con contatore
         desc: Sappiamo che i cicli permettono di svolgere azioni più e più volte,
           ma ora impariamo come usare i cicli con strutture aggiuntive.
       courseF_unplugged_songwritingParameters:
@@ -428,30 +442,36 @@ it:
           spostare un personaggio attraverso un labirinto utilizzando un solo comando.
       GoingPlacesSafely_2018:
         title: Cittadinanza digitale - Visitare luoghi in modo sicuro
-        desc: Internet è un luogo potente, ma alle volte pericoloso. L'insegnante
-          introduce come navigare su Internet in modo sicuro.
+        desc: 'Internet è un luogo potente, ma alle volte pericoloso. L''insegnante
+          introduce come navigare su Internet in modo sicuro. Cerca questa lezione
+          in italiano sul sito di Programma il Futuro: programmailfuturo.it / "Percorsi"
+          / "Cittadinanza digitale consapevole" / "Per la scuola primaria"'
       courseA_unplugged_loops_2018:
         title: 'Cicli: Lezioni Tradizionali'
         desc: In questa lezione, si parlerà di cicli!
       BigEvent_2018:
         title: Gli eventi
         desc: Gli studenti vengono introdotti al concetto di "evento" nella programmazione.
-          Gli eventi sono azioni che un calcolatore continuamente controlla se accadono
-          o meno. In questa lezione l'insegnante "cliccherà" i pulsanti di un controller
-          di carta e gli studenti dovranno reagire in funzione del pulsante cliccato.
+          Gli eventi sono azioni che un calcolatore controlla in continuazione se
+          accadono o meno. In questa lezione l'insegnante "cliccherà" i pulsanti di
+          un controller di carta e gli studenti dovranno reagire in funzione del pulsante
+          cliccato.
       GraphPaperProgramming_2018:
         title: Programmazione su carta a quadretti
         desc: Gli studenti scrivono un algoritmo (una sequenza di istruzioni) usando
           un insieme di comandi predefiniti per guidare i loro compagni di classe
           nel riprodurre il disegno.
       courseD_unplugged_digitalCitizenship_2018:
-        title: Attività Tradizionale
-        desc: Oggi imparerai cosa significa essere un Cittadino Digitale.
+        title: Attività tradizionale
+        desc: 'Oggi imparerai cosa significa essere un Cittadino Digitale. Cerca questa
+          lezione in italiano sul sito di Programma il Futuro: programmailfuturo.it
+          / "Percorsi" / "Cittadinanza digitale consapevole" / "Per la scuola primaria"'
       courseC_Unplugged_ScreenOutTheMean_2018:
-        title: Attività Tradizionale
-        desc: Oggi impareremo come comportarsi quando qualcuno viene maltrattato in
-          rete. Cerca tutta la documentazione in italiano sul sito di Programma il
-          Futuro - programmailfuturo.it / "Percorsi" / "Cittadinanza digitale consapevole"
+        title: Attività tradizionale
+        desc: 'Oggi impareremo come comportarsi quando qualcuno viene maltrattato
+          in rete. Cerca questa lezione in italiano sul sito di Programma il Futuro:
+          programmailfuturo.it / "Percorsi" / "Cittadinanza digitale consapevole"
+          / "Per la scuola primaria"'
       Conditionals_2018:
         title: Istruzioni condizionali
         desc: Per imparare le istruzioni condizionali, gli studenti giocano con le
@@ -459,9 +479,11 @@ it:
           e "SE estraggo una carta nera tu ottieni un punto".
       DigitalFootprint_2018:
         title: La tua impronta digitale
-        desc: L'insegnante introduce agli studenti l'idea che mettere su Internet
-          le loro informazioni personali crea un'impronta digitale che lascia tracce
-          riconoscibili e sfruttabili.
+        desc: 'L''insegnante introduce agli studenti l''idea che mettere su Internet
+          le loro informazioni personali crea un''impronta digitale che lascia tracce
+          riconoscibili e sfruttabili. Cerca questa lezione in italiano sul sito di
+          Programma il Futuro: programmailfuturo.it / "Percorsi" / "Cittadinanza digitale
+          consapevole" / "Per la scuola primaria"'
       BinaryImages_2018:
         title: Immagini binarie
         desc: Anche se molti pensano al sistema binario come costituito rigorosamente
@@ -490,22 +512,21 @@ it:
         title: Muovilo, muovilo
       courseB_unplugged_CnC_2018:
         title: È fantastico creare e comportarsi lealmente
-        desc: Questa lezione è un contributo del gruppo Copyright e Creatività di
-          Code.org e serve per aiutare gli studenti a capire il processo di condivisione
-          e ispirazione. A ciò si aggiunge la promozione della creatività e la necessità
+        desc: Questa lezione è un contributo del gruppo Copyright e Creatività (www.copyrightandcreativity.org)
+          e serve per aiutare gli studenti a capire il processo di condivisione e
+          ispirazione. A ciò si aggiunge la promozione della creatività e la necessità
           di essere corretti con coloro che danno vita ai contenuti creativi.
       courseE_unplugged_CnC_2018:
-        title: Condivisione Digitale
-        desc: Questa lezione è un contributo del gruppo Copyright e Creatività di
-          Code.org e serve per aiutare gli studenti a comprendere le sfide e i vantaggi
-          del rispetto della proprietà intellettuale (copyright), in particolare in
-          ambiento digitale. Gli studenti dovrebbero essere incoraggiati a rispettare
-          i diritti degli artisti come parte integrante dell'etica di un buon cittadino
-          digitale.
+        title: Condivisione digitale
+        desc: Questa lezione è un contributo del gruppo Copyright e Creatività (www.copyrightandcreativity.org)
+          e serve per aiutare gli studenti a comprendere le sfide e i vantaggi del
+          rispetto della proprietà intellettuale (copyright), in particolare in ambiento
+          digitale. Gli studenti dovrebbero essere incoraggiati a rispettare i diritti
+          degli artisti come parte integrante dell'etica di un buon cittadino digitale.
       RelayProgramming_2018:
-        title: Programmazione a Staffetta
+        title: Programmazione a staffetta
         desc: 'Questa attività inizierà con una breve lezione sulla correzione degli
-          errori (debugging) e sulla persistenza, poi partirà una corsa contro il
+          errori (debugging) e sulla perseveranza, poi partirà una corsa contro il
           tempo: gli studenti si suddividono in squadre e lavorano insieme per scrivere
           un programma un''istruzione alla volta.'
       courseB_unplugged_MRF_2019:
@@ -524,14 +545,16 @@ it:
           un insieme di comandi predefiniti per guidare i loro compagni di classe
           nel riprodurre il disegno.
       RelayProgramming_2018_2019:
-        title: Programmazione a Staffetta
+        title: Programmazione a staffetta
         desc: 'Questa attività inizierà con una breve lezione sulla correzione degli
-          errori (debugging) e sulla persistenza, poi partirà una corsa contro il
+          errori (debugging) e sulla perseveranza, poi partirà una corsa contro il
           tempo: gli studenti si suddividono in squadre e lavorano insieme per scrivere
           un programma un''istruzione alla volta.'
       courseD_unplugged_digitalCitizenship_2019:
-        title: Attività Tradizionale
-        desc: Oggi imparerai cosa significa essere un Cittadino Digitale.
+        title: Attività tradizionale
+        desc: 'Oggi imparerai cosa significa essere un Cittadino Digitale. Cerca questa
+          lezione in italiano sul sito di Programma il Futuro: programmailfuturo.it
+          / "Percorsi" / "Cittadinanza digitale consapevole" / "Per la scuola primaria"'
       BinaryImages_2019:
         title: Immagini binarie
         desc: Anche se molti pensano al sistema binario come costituito rigorosamente
@@ -543,29 +566,30 @@ it:
       courseE_unplugged_privateInformation_2019:
         title: Cittadinanza digitale - Dati personali
       courseE_unplugged_CnC_2019:
-        title: Condivisione Digitale
-        desc: Questa lezione è un contributo del gruppo Copyright e Creatività di
-          Code.org e serve per aiutare gli studenti a comprendere le sfide e i vantaggi
-          del rispetto della proprietà intellettuale (copyright), in particolare in
-          ambiento digitale. Gli studenti dovrebbero essere incoraggiati a rispettare
-          i diritti degli artisti come parte integrante dell'etica di un buon cittadino
-          digitale.
+        title: Condivisione digitale
+        desc: Questa lezione è un contributo del gruppo Copyright e Creatività (www.copyrightandcreativity.org)
+          e serve per aiutare gli studenti a comprendere le sfide e i vantaggi del
+          rispetto della proprietà intellettuale (copyright), in particolare in ambiento
+          digitale. Gli studenti dovrebbero essere incoraggiati a rispettare i diritti
+          degli artisti come parte integrante dell'etica di un buon cittadino digitale.
       GettingLoopy_2019:
         title: Diventare ripetitivi
         desc: Questa lezione introduce il costrutto di programmazione detto ciclo
           (istruzione di ripetizione) attraverso una danza. Gli studenti imparano
           una semplice coreografia da ripetere più volte.
       courseC_Unplugged_ScreenOutTheMean_2019:
-        title: Attività Tradizionale
-        desc: Oggi impareremo come comportarsi quando qualcuno viene maltrattato in
-          rete. Cerca tutta la documentazione in italiano sul sito di Programma il
-          Futuro - programmailfuturo.it / "Percorsi" / "Cittadinanza digitale consapevole"
+        title: Attività tradizionale
+        desc: 'Oggi impareremo come comportarsi quando qualcuno viene maltrattato
+          in rete. Cerca questa lezione in italiano sul sito di Programma il Futuro:
+          programmailfuturo.it / "Percorsi" / "Cittadinanza digitale consapevole"
+          / "Per la scuola primaria"'
       BigEvent_2019:
         title: Gli eventi
         desc: Gli studenti vengono introdotti al concetto di "evento" nella programmazione.
-          Gli eventi sono azioni che un calcolatore continuamente controlla se accadono
-          o meno. In questa lezione l'insegnante "cliccherà" i pulsanti di un controller
-          di carta e gli studenti dovranno reagire in funzione del pulsante cliccato.
+          Gli eventi sono azioni che un calcolatore controlla in continuazione se
+          accadono o meno. In questa lezione l'insegnante "cliccherà" i pulsanti di
+          un controller di carta e gli studenti dovranno reagire in funzione del pulsante
+          cliccato.
       BinaryBracelets_2019:
         title: Braccialetti binari
         desc: Gli studenti creano dei braccialetti che rappresentano con l'alfabeto
@@ -589,8 +613,10 @@ it:
           spostare un personaggio attraverso un labirinto utilizzando un solo comando.
       GoingPlacesSafely_2019:
         title: Cittadinanza digitale - Visitare luoghi in modo sicuro
-        desc: Internet è un luogo potente, ma alle volte pericoloso. L'insegnante
-          introduce come navigare su Internet in modo sicuro.
+        desc: 'Internet è un luogo potente, ma alle volte pericoloso. L''insegnante
+          introduce come navigare su Internet in modo sicuro. Cerca questa lezione
+          in italiano sul sito di Programma il Futuro: programmailfuturo.it / "Percorsi"
+          / "Cittadinanza digitale consapevole" / "Per la scuola primaria"'
       courseA_unplugged_loops_2019:
         title: 'Cicli: Lezioni Tradizionali'
         desc: In questa lezione, si parlerà di cicli!
@@ -598,17 +624,19 @@ it:
         title: Muovilo, muovilo
       DigitalFootprint_2019:
         title: La tua impronta digitale
-        desc: L'insegnante introduce agli studenti l'idea che mettere su Internet
-          le loro informazioni personali crea un'impronta digitale che lascia tracce
-          riconoscibili e sfruttabili.
+        desc: 'L''insegnante introduce agli studenti l''idea che mettere su Internet
+          le loro informazioni personali crea un''impronta digitale che lascia tracce
+          riconoscibili e sfruttabili. Cerca questa lezione in italiano sul sito di
+          Programma il Futuro: programmailfuturo.it / "Percorsi" / "Cittadinanza digitale
+          consapevole" / "Per la scuola primaria"'
       courseB_unplugged_CnC_2019:
         title: È fantastico creare e comportarsi lealmente
-        desc: Questa lezione è un contributo del gruppo Copyright e Creatività di
-          Code.org e serve per aiutare gli studenti a capire il processo di condivisione
-          e ispirazione. A ciò si aggiunge la promozione della creatività e la necessità
+        desc: Questa lezione è un contributo del gruppo Copyright e Creatività (www.copyrightandcreativity.org)
+          e serve per aiutare gli studenti a capire il processo di condivisione e
+          ispirazione. A ciò si aggiunge la promozione della creatività e la necessità
           di essere corretti con coloro che danno vita ai contenuti creativi.
       timeforcs_demo_crowdsourcing:
-        title: Intelligenza Collettiva
+        title: Intelligenza collettiva
       timeforcs_demo_conditionals:
         title: Istruzioni condizionali
         desc: Per imparare le istruzioni condizionali, gli studenti giocano con le

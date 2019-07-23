@@ -542,6 +542,10 @@ fa:
               name: شبیه ساز اینترنت
             Welcome!:
               name: خوش آمدی!
+        K5-OnlinePD:
+          stages:
+            Computer Science Fundamentals:
+              name: مقدمات علم کامپیوتر
         ECSPD2:
           description: 'فاز 2 آنلاین: مطالعه مخلوط تابستان'
           description_short: 'فاز 2 آنلاین: مطالعه مخلوط تابستان'
@@ -1602,3 +1606,16 @@ fa:
           stages:
             Graph Paper Programming:
               name: برنامه نویسی روی کاغذ رسم شطرنجی
+        csd2-pilot:
+          stages:
+            Lists:
+              name: فهرست‌ها
+        csd3-pilot:
+          description_short: "برنامه نویسی"
+          stages:
+            Variables:
+              name: متغیرها
+            Conditionals:
+              name: شرطی ها
+            Functions:
+              name: توابع

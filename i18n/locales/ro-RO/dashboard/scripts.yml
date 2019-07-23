@@ -3626,25 +3626,10 @@ ro:
             Conditionals in Farmer:
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
-            Functions in Minecraft:
-              description_student: '[șir gol]'
-              description_teacher: '[șir gol]'
             Envelope Variables:
               name: Variabile de tip plic
-            Variables as Constant in Artist:
-              description_student: '[șir gol]'
-              description_teacher: '[șir gol]'
-            Variables that Change in Bee:
-              description_student: '[șir gol]'
-              description_teacher: '[șir gol]'
-            Variables that Change in Artist:
-              description_student: '[șir gol]'
-              description_teacher: '[șir gol]'
             For Loop Fun:
               name: Pentru distracția cu bucle
-            Learning Sprites with Sprite Lab:
-              description_student: '[șir gol]'
-              description_teacher: '[șir gol]'
             Alien Dance Party with Sprite Lab:
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
@@ -3667,68 +3652,27 @@ ro:
           stages:
             'Algorithms: Graph Paper Programming':
               name: Programare pe Hârtie Milimetrică
-              description_student: '[șir gol]'
-              description_teacher: '[șir gol]'
-            Introduction to Online Puzzles:
-              description_student: '[șir gol]'
-              description_teacher: '[șir gol]'
             Relay Programming:
               name: Programare de releu
-              description_student: '[șir gol]'
-              description_teacher: '[șir gol]'
-            Debugging in Collector:
-              description_student: '[șir gol]'
-              description_teacher: '[șir gol]'
-            Events in Bounce:
-              description_student: '[șir gol]'
-              description_teacher: '[șir gol]'
             Loops in Ice Age:
               name: Bucle în Ice Age
-              description_student: '[șir gol]'
-              description_teacher: '[șir gol]'
-            Loops in Artist:
-              description_student: '[șir gol]'
-              description_teacher: '[șir gol]'
-            Nested Loops in Bee:
-              description_student: '[șir gol]'
-              description_teacher: '[șir gol]'
             Nested Loops in Artist:
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
             Nested Loops in Frozen:
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
-            While Loops in Farmer:
-              description_student: '[șir gol]'
-              description_teacher: '[șir gol]'
-            Until Loops in Maze:
-              description_student: '[șir gol]'
-              description_teacher: '[șir gol]'
             Conditionals with Cards:
               name: Condiționale cu Carduri
-              description_student: '[șir gol]'
-              description_teacher: '[șir gol]'
-            Conditionals in Bee:
-              description_student: '[șir gol]'
-              description_teacher: '[șir gol]'
-            Conditionals & Loops in Harvester:
-              description_student: '[șir gol]'
-              description_teacher: '[șir gol]'
             Digital Citizenship:
               name: Cetățenia Digitală
-              description_student: '[șir gol]'
-              description_teacher: '[șir gol]'
             Build a Play Lab Game:
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
             'Unplugged: Binary':
               name: Imagini binare
-              description_student: '[șir gol]'
-              description_teacher: '[șir gol]'
             Artist Binary:
               name: Binar cu artist
-              description_student: '[șir gol]'
-              description_teacher: '[șir gol]'
             Dance Party:
               name: Petrecere cu dans
         coursee-2019:
@@ -3768,19 +3712,7 @@ ro:
               description_teacher: '[șir gol]'
             'Functions: Songwriting':
               name: Compunând Cântece
-            Functions in Minecraft:
-              description_student: '[șir gol]'
-              description_teacher: '[șir gol]'
-            Functions in Harvester:
-              description_student: '[șir gol]'
-              description_teacher: '[șir gol]'
             Copyright and Creativity:
-              description_student: '[șir gol]'
-              description_teacher: '[șir gol]'
-            Learning Sprites with Sprite Lab:
-              description_student: '[șir gol]'
-              description_teacher: '[șir gol]'
-            Alien Dance Party with Sprite Lab:
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
             Pet Giraffe with Sprite Lab:
@@ -3823,9 +3755,6 @@ ro:
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
             Copyright and Creativity:
-              description_student: '[șir gol]'
-              description_teacher: '[șir gol]'
-            'Concept Practice with Minecraft ':
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
             Nested Loops in Bee:
@@ -3944,6 +3873,8 @@ ro:
               name: Obţinând Informaţii/Critici
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
+            Dance Party:
+              name: Petrecere cu dans
         csd1-2019:
           description_audience: '[șir gol]'
           stages:
@@ -3960,54 +3891,20 @@ ro:
           description: Mergi mai departe de prima oră cu ideile de extindere a proiectelor.
         coursec-2019:
           stages:
-            Programming in Maze:
-              description_student: '[șir gol]'
-              description_teacher: '[șir gol]'
-            Debugging in Maze:
-              description_student: '[șir gol]'
-              description_teacher: '[șir gol]'
             'Real-life Algorithms: Paper Planes':
               name: 'Algoritmi din viaţa reală: Avioane de Hârtie'
-              description_student: '[șir gol]'
-              description_teacher: '[șir gol]'
-            Programming in Collector:
-              description_student: '[șir gol]'
-              description_teacher: '[șir gol]'
-            Programming in Artist:
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
             'Loops: Getting Loopy':
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
-            Loops with Rey and BB-8:
-              description_student: '[șir gol]'
-              description_teacher: '[șir gol]'
             Loops in Artist:
-              description_student: '[șir gol]'
-              description_teacher: '[șir gol]'
-            Loops in Harvester:
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
             'Events: The Big Event':
               name: Marele eveniment
-              description_student: '[șir gol]'
-              description_teacher: '[șir gol]'
-            Build a Flappy Game:
-              description_student: '[șir gol]'
-              description_teacher: '[șir gol]'
-            Screen Out the Mean:
-              description_student: '[șir gol]'
-              description_teacher: '[șir gol]'
-            Events in Play Lab:
-              description_student: '[șir gol]'
-              description_teacher: '[șir gol]'
-            Looking Ahead:
-              description_student: '[șir gol]'
-              description_teacher: '[șir gol]'
             Binary Bracelets:
               name: Brăţări Binare
-              description_student: '[șir gol]'
-              description_teacher: '[șir gol]'
         gamelab:
           title: Game Lab
           description_audience: '[șir gol]'
@@ -4020,7 +3917,6 @@ ro:
               description_teacher: '[șir gol]'
             'Programming: Happy Maps':
               name: Hărţi Fericite
-              description_student: '[șir gol]'
             Programming in Maze:
               description_student: '[șir gol]'
             Programming in Harvester:
@@ -4028,30 +3924,17 @@ ro:
               description_teacher: '[șir gol]'
             Going Places Safely:
               name: Mergând în locuri în siguranţă
-              description_student: '[șir gol]'
-            'Loops: Happy Loops':
-              description_student: '[șir gol]'
-            Loops in Collector:
-              description_student: '[șir gol]'
             Loops in Artist:
-              description_student: '[șir gol]'
-            'Events: The Big Event':
-              description_student: '[șir gol]'
-            Events in Play Lab:
               description_student: '[șir gol]'
         courseb-2019:
           stages:
             Move It, Move It:
               name: Mutaţi-l, mutați-l
-              description_student: '[șir gol]'
-              description_teacher: '[șir gol]'
             Sequencing with Scrat:
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
             Your Digital Footprint:
               name: Amprenta ta Digitală
-              description_student: '[șir gol]'
-              description_teacher: '[șir gol]'
             'Programming: My Robotic Friends':
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
@@ -4069,18 +3952,6 @@ ro:
               description_teacher: '[șir gol]'
             Loops in Ice Age:
               name: Bucle în Ice Age
-              description_student: '[șir gol]'
-              description_teacher: '[șir gol]'
-            Loops in Collector:
-              description_student: '[șir gol]'
-              description_teacher: '[șir gol]'
-            Loops in Artist:
-              description_student: '[șir gol]'
-              description_teacher: '[șir gol]'
-            'Events: The Big Event':
-              description_student: '[șir gol]'
-              description_teacher: '[șir gol]'
-            Events in Play Lab:
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
             'Loops: Getting Loopy':
@@ -4120,7 +3991,6 @@ ro:
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
             Loops in Ice Age:
-              name: Bucle în Ice Age
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
             Loops in Collector:
@@ -4576,6 +4446,9 @@ ro:
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
         csp1-pilot:
+          stages:
+            Number Systems:
+              name: Sisteme de numere
           description_audience: '[șir gol]'
           description_short: '[șir gol]'
           description: '[șir gol]'
@@ -4642,9 +4515,73 @@ ro:
             Graph Paper Programming:
               name: Programare pe Hârtie Milimetrică
           description_audience: '[șir gol]'
+        csp5-pilot:
+          description_audience: '[șir gol]'
           description_short: '[șir gol]'
           description: '[șir gol]'
-        csp5-pilot:
+        fit2019-novice:
+          stages:
+            Wrap Up:
+              name: Încheiere
+        csd-test-saving-state:
+          description_audience: '[șir gol]'
+          description_short: '[șir gol]'
+          description: '[șir gol]'
+        fit2019-apprentice:
+          stages:
+            Wrap Up:
+              name: Încheiere
+        csd-sample-online:
+          description_audience: '[șir gol]'
+          description_short: '[șir gol]'
+          description: '[șir gol]'
+        csd1-pilot:
+          description_audience: '[șir gol]'
+          stages:
+            CS Discoveries Pre-survey:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Post-Project Test:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+        csd2-pilot:
+          description_audience: '[șir gol]'
+          stages:
+            Lists:
+              name: Liste
+            Post-Project Test:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            CS Discoveries Post Course survey:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+        csd3-pilot:
+          description_short: "Programare"
+          description_audience: '[șir gol]'
+          stages:
+            Shapes and Randomization:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Variables:
+              name: Variabile
+            Conditionals:
+              name: Condiţionale
+            Velocity:
+              name: Viteza
+            Functions:
+              name: Funcţii
+            Post-Project Test:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            CS Discoveries Post Course survey:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+        csd-bugs:
+          description_audience: '[șir gol]'
+          description_short: '[șir gol]'
+          description: '[șir gol]'
+        maddie-test:
+          title: '[șir gol]'
           description_audience: '[șir gol]'
           description_short: '[șir gol]'
           description: '[șir gol]'

@@ -68,7 +68,6 @@ sq:
   of: "i"
   more: "MË SHUMË"
   less: "ME PAK"
-  beta: "beta"
   try_hoc: "Provo \"Orën e Kodimit\" kliko këtu >> "
   try_k8intro: "Provo Hyrjen tonë K-8 tek Kursi i Shkencave Kompjuterike (15-25 orë)"
   k8intro: "Hyrja K-8 tek Kursi i Shkencave Kompjuterike (15-25 orë)"
@@ -449,7 +448,6 @@ sq:
   pdf_download: 'Shkarko PDF'
   download_coming_soon: 'Së shpejti veprime me shkarkim.'
   video_coming_soon: 'Video vjen së shpejti!'
-  not_started: 'Studenti nuk e ka tentuar këtë nivel.'
   share_code:
     title: "Kliko 'Run' të shohësh programin tim në veprim"
     bounce_og_title: "Shiko Lojën time me Përplasje"
@@ -655,37 +653,22 @@ sq:
     create: "Krijo një Projekt"
     create_a_project: 'Krijo një projekt të ri:'
     new: "Krijo një të ri"
-    rename: "Riemëro"
-    save: "Ruaj"
-    delete: "Fshi"
     exit: "Kthehu te Kursi"
-    my_projects: "Projektet e mia"
     project_gallery: "Projekte"
-    share: "Shpërndaje"
     share_title: Shpërndaje projektin
     share_copy_link: "Kopjo lidhjen:"
     share_embed_description: "Ju mund të kopjoni kodin e integruar në një faqe HTML për të shfaqur projektin për një webpage."
     share_u13_warning: "Pyetni mësuesin tuaj para shpërndarjes. Vetëm shpërndajeni me të tjerët në shkollën tuaj."
     embed: "I integruar"
     advanced_share: "Trego opsione të avancuara"
-    close: "Mbyll"
-    more: "Më shumë"
     name: "Emri"
     updated: "U ndryshua"
     project_type: "Lloji i Projektit"
     help_text: "Shtyp <strong>Bëj një Aplikacion</strong> ose <strong>Vizato Diçka</strong> më poshtë për të hapur    një Projekt të ri!<br/> Mund të kthehesh kur të duash dhe të zhvillosh projektin tënd."
     need_help: "Provoni këto kurse për t`ju ndihmuar  të filloni me projektin tuaj të ri"
-    really_delete: 'Fshirje?'
-    delete_yes: 'Po'
-    delete_no: 'Jo'
     saved: "E ruajtur"
     not_saved: "E pa ruajtur"
-    cancel: 'Anulo'
-    delete_confirm_title: A jeni i sugurt që dëshironi ta fshini këtë projekt?
-    delete_confirm_text: "Duke fshirë projektin, ju do ta hiqni përfundisht nga lista e projekteve. Të gjithë njerëzit me të cilët e ke shpërndarë, nuk do të munden më ta shohin atë."
     view_all: 'Shfaq projektet e mia'
-    remix: 'Remix'
-    click_to_remix: "Kliko \"Remix\" për të nxjerrë versionin tënd!"
     edit_project: 'Ndërhy në Projekt'
     abuse:
       tos: "Ky projekt është raportuar si shkelje e <a href='http://code.org/tos'> së Termave të Shërbimit të Code.org</a> dhe nuk mund të behet publik për të tjerët."

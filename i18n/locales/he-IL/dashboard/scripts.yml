@@ -73,6 +73,8 @@ he:
               name: 'מבוך: לולאות'
             'Maze: Sequence':
               name: 'מבוך: רצף'
+            'Real-life Algorithms: Paper Planes':
+              name: 'אלגוריתמים מהחיים: מטוסי נייר'
             'Studio: Create a Story':
               name: 'מעבדת הצעצועים: צור סיפור'
             The Big Event:
@@ -283,13 +285,13 @@ he:
             The Artist:
               name: האמן
             The Artist 2:
-              name: האומן 2
+              name: האמן 2
             The Artist 3:
-              name: האומן 3
+              name: האמן 3
             The Artist 4:
               name: האמן 4
             The Artist 5:
-              name: האומן 5
+              name: האמן 5
             The Farmer:
               name: האיכר
             The Farmer 2:
@@ -756,6 +758,8 @@ he:
               name: פלאפי
             Binary Bracelets:
               name: צמידים בינארים
+            'Real-life Algorithms: Paper Planes':
+              name: 'אלגוריתמים מהחיים: מטוסי נייר'
             The Big Event:
               name: האירוע הגדול
         k5concepts:
@@ -838,6 +842,8 @@ he:
           stages:
             Programming in Maze:
               name: תכנות במבוך
+            'Real-life Algorithms: Paper Planes':
+              name: 'אלגוריתמים מהחיים: מטוסי נייר'
             Loops in Maze:
               name: לולאות במבוך
             Binary Bracelets:
@@ -1045,6 +1051,8 @@ he:
               name: תכנות במבוך
             Debugging in Maze:
               name: איתור באגים במבוך
+            'Real-life Algorithms: Paper Planes':
+              name: 'אלגוריתמים מהחיים: מטוסי נייר'
             Loops in Maze:
               name: לולאות במבוך
             Binary Bracelets:
@@ -1392,6 +1400,8 @@ he:
               name: תכנות עם ציפורים כועסות
             Debugging in Maze:
               name: איתור באגים עם ציפורים כועסות
+            'Real-life Algorithms: Paper Planes':
+              name: מטוסי נייר
             'Events: The Big Event':
               name: האירוע הגדול
             Binary Bracelets:
@@ -1535,8 +1545,10 @@ he:
               name: תכנות לנייר משבצות
             Introduction to Online Puzzles:
               name: היכרות עם חידות מבוכים
+              description_teacher: 'בקבוצת החידות הזו, תלמידים יתחילו עם היכרות (או חזרה על החומר, תלוי בניסיון הכיתה שלך) עם סביבת הפיתוח של Code.org. יהיו סרטונים המציגים את הפונקציונלית הבסיסית של סביבת העבודה כולל הכפתורים "הרץ", "אפס", ו-"צעד". עוד יעלה בסרטונים: גרירת הבלוקים, מחיקת בלוקים וחיבור בלוקים. לאחר מכן, תלמידים יתרגלו את כישוריהם ב _רצפים_ ו _איתור באגים_ במבוך. משם, תלמידים יראו דוגמאות חדשות של חידות כמו האוסף, האמן והקוצר כאשר הם ילמדו את השלב הבסיסי של _לולאות_.'
             Relay Programming:
               name: הרץ פעולה בשנית
+              description_teacher: פעילות זו תחל עם שיעור קצר על איתור באגים ועקביות, אח"כ נעבור בזריזות למירוץ אחר השעון כשהתלמידים יתחלקו לקבוצות ויעבדו יחד כדי לתכנת הוראה אחת בכל פעם.
             Debugging in Collector:
               name: ניפוי שגיאות עם לורל
             Loops in Ice Age:
@@ -1551,6 +1563,7 @@ he:
               name: צור משחק במעבדת הצעצועים
             'Unplugged: Binary':
               name: תמונות בינאריות
+              description_teacher: אומנם רוב האנשים חושבים שהמשמעות של בינארי זה רק אפסים ואחדות, התלמידים ילמדו על הרעיון שמידע יכול להיות מיוצג בעזרת מספר דרכים. השיעור הזה לוקח את הרעיון צעד נוסף קדימה על-ידי הדמיה כיצד המחשב שומר מידע מורכב יותר (כמו תמונות וצבעים) גם בצורה בינארית.
             Artist Binary:
               name: אמן בינארי
             Dance Party:
@@ -1576,27 +1589,27 @@ he:
         express-2019:
           stages:
             Programming in Maze:
-              name: תכנות במבוך
+              name: תכנות עם ציפורים כועסות
             Relay Programming:
               name: הרץ פעולה בשנית
             Debugging in Maze:
-              name: איתור באגים במבוך
+              name: ניפוי שגיאות עם סקראט
+            Nested Loops in Bee:
+              name: לולאות מקוננות במבוך
             Until Loops in Maze:
               name: לולאות "עד" במבוך
             Conditionals with Cards:
               name: התניות עם כרטיסים
             For Loop Fun:
               name: כיף עם לולאת "עבור"
-            For Loops in Bee:
-              name: לולאות עבור עם הדבורה
-            For Loops in Artist:
-              name: לולאות עבור עם האמן
             Binary Bracelets:
               name: צמידים בינארים
             Artist Binary:
               name: אמן בינארי
             Internet:
               name: אינטרנט
+            Dance Party:
+              name: מסיבת ריקודים
         andrea-test:
           stages:
             'null':
@@ -1610,6 +1623,8 @@ he:
               name: תכנות עם ציפורים כועסות
             Debugging in Maze:
               name: איתור באגים במבוך
+            'Real-life Algorithms: Paper Planes':
+              name: 'אלגוריתמים מהחיים: מטוסי נייר'
             'Events: The Big Event':
               name: האירוע הגדול
             Binary Bracelets:
@@ -1626,6 +1641,8 @@ he:
               description_teacher: בחזרה ללולאות, תלמידים לומדים לצייר תמונות עם התניות של רצפים פשוטים של הוראות. בשיעור הקודם, השתמשנו בלולאות לנווט במבוך ולאסוף אוצרות. כאן, לולאות יוצרות רצפים. בסוף השלב, תלמידים יוכלו לקבל הזדמנות ליצור תמונות משלהם בעזרת לולאות.
             Events in Play Lab:
               description_teacher: בפעילות הזו, תלמידים יוכלו ללמוד כיצד להשתמש באירועים במעבדת הצעצועים ולהשתמש בכל מיומנויות התכנות שהם רכשו כדי לייצר משחק אנימציה. זה הזמן להיות יצירתי וליצור סיפור במעבדת הצעצועים!
+            Ocean Scene with Loops:
+              description_teacher: בחזרה ללולאות, תלמידים לומדים לצייר תמונות עם התניות של רצפים פשוטים של הוראות. בשיעור הקודם, השתמשנו בלולאות לנווט במבוך ולאסוף אוצרות. כאן, לולאות יוצרות רצפים. בסוף השלב, תלמידים יוכלו לקבל הזדמנות ליצור תמונות משלהם בעזרת לולאות.
             Loops in Ice Age:
               name: לולאות עם סקראט
         courseb-2019:
@@ -1643,11 +1660,9 @@ he:
             Move It, Move It:
               name: זוזו, זוזו
             Loops in Ice Age:
-              name: לולאות בעידן הקרח
+              name: לולאות עם סקראט
             Spelling Bee:
               name: תחרות איות
-            Programming in Maze:
-              name: תכנות במבוך
         removed19:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -1705,3 +1720,20 @@ he:
               name: תכנות לנייר משבצות
             Programming in Maze:
               name: תכנות במבוך
+        csd2-pilot:
+          stages:
+            Intro to HTML:
+              description_teacher: בשיעור זה תלמידים ילמדו לראשונה HTML כשיטה שתסביר למחשב איך להציג תוכן ומבנה של אתר. השיעור מתחיל עם פעילות ללא מחשב המדגימה את האתגרים בהגדרת מבנה של אתר אינטרנט. התלמידים יסתכלו במבנה דף HTML לדוגמה במעבדת האינטרנט וידונו עם חבריהם לכיתה איך תגיות HTML עוזרות לפתור את הבעיה. לאחר מכן, התלמידים יכתבו את דף ה-HTML הראשון שלהם. לבסוף, יהיה דיון מסכם אשר יעזור לחזק את ההבנה שלהם ביחס שבין התוכן למבנה כפי שנבנה במהלך השיעור.
+            Headings:
+              description_student: שיעור זה ממשיך את ההיכרות עם תגיות HTML, הפעם עם כותרות. הכיתה מתרגלת שימוש בתגיות מסוג כותרת כדי לייצר כותרות דף ומקטעים ולומדים כיצד הכותרות מוצגות כברירת מחדל. לאחר מכן, הכיתה תתכנן כיצד לארגן את התוכן בדפי האינטרנט הפרטיים שלהם אשר יבנו לאורך כל יחידת הלימוד ויתחילו את הדף הראשון בפרויקט שלהם.
+              description_teacher: בשיעור זה, תלמידים ממשיכים להשתמש ב-HTML כדי לשבץ טקסט באתר שלהם, הפעם בעזרת כותרות. התלמידים לומדים איך הכותרות השונות מופיעים כברירת מחדל ומתרגלים שימוש בהם כדי לייצר כותרות דף וכותרות מקטעים. לאחר מכן, התלמידים מתחילים להחליט כיצד הם רוצים לארגן את התוכן שלהם בדפי האינטרנט הפרטיים שלהם. בשלב האחרון, התלמידים יתחילו את הפרויקט שעליו ימשיכו לעבוד לאורך כל יחידת הלימוד.
+            Lists:
+              name: רשימות
+        csd3-pilot:
+          stages:
+            Variables:
+              name: משתנים
+            Conditionals:
+              name: תנאים
+            Functions:
+              name: פונקציות

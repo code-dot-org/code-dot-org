@@ -249,6 +249,8 @@ Dashboard::Application.routes.draw do
         member do
           # /s/xxx/stage/yyy/puzzle/zzz/page/ppp
           get 'page/:puzzle_page', to: 'script_levels#show', as: 'puzzle_page', format: false
+          # /s/xxx/stage/yyy/puzzle/zzz/sublevel/sss
+          get 'sublevel/:sublevel_position', to: 'script_levels#show', as: 'sublevel', format: false
         end
       end
     end
@@ -355,6 +357,7 @@ Dashboard::Application.routes.draw do
   get '/too_young', to: 'too_young#index'
 
   post '/sms/send', to: 'sms#send_to_phone', as: 'send_to_phone'
+  post '/sms/send_download', to: 'sms#send_download_url_to_phone', as: 'send_download_url_to_phone'
 
   # Experiments are get requests so that a user can click on a link to join or leave an experiment
   get '/experiments/set_course_experiment/:experiment_name', to: 'experiments#set_course_experiment'
@@ -397,7 +400,8 @@ Dashboard::Application.routes.draw do
 
         get :workshop_survey_report, action: :workshop_survey_report, controller: 'workshop_survey_report'
         get :local_workshop_survey_report, action: :local_workshop_survey_report, controller: 'workshop_survey_report'
-        get :local_workshop_daily_survey_report, action: :local_workshop_daily_survey_report, controller: 'workshop_survey_report'
+        get :generic_survey_report, action: :generic_survey_report, controller: 'workshop_survey_report'
+        get :experiment_survey_report, action: :experiment_survey_report, controller: 'workshop_survey_report'
         get :teachercon_survey_report, action: :teachercon_survey_report, controller: 'workshop_survey_report'
         get :workshop_organizer_survey_report, action: :workshop_organizer_survey_report, controller: 'workshop_organizer_survey_report'
       end
@@ -414,9 +418,6 @@ Dashboard::Application.routes.draw do
 
       # persistent namespace for FiT Weekend registrations, can be updated/replaced each year
       post 'fit_weekend_registrations', to: 'fit_weekend_registrations#create'
-
-      post :facilitator_program_registrations, to: 'facilitator_program_registrations#create'
-      post :regional_partner_program_registrations, to: 'regional_partner_program_registrations#create'
 
       post :pre_workshop_surveys, to: 'pre_workshop_surveys#create'
       post :workshop_surveys, to: 'workshop_surveys#create'
@@ -472,6 +473,10 @@ Dashboard::Application.routes.draw do
     get 'teacher_application/manage/:teacher_application_id/email', to: 'teacher_application#construct_email'
     post 'teacher_application/manage/:teacher_application_id/email', to: 'teacher_application#send_email'
 
+    get 'misc_survey/thanks', to: 'misc_survey#thanks'
+    get 'misc_survey/:form_tag', to: 'misc_survey#new'
+    post 'misc_survey/submit', to: 'misc_survey#submit'
+
     get 'workshop_survey/day/:day', to: 'workshop_daily_survey#new_general'
     post 'workshop_survey/submit', to: 'workshop_daily_survey#submit_general'
     get 'workshop_survey/post/:enrollment_code', to: 'workshop_daily_survey#new_post', as: 'new_workshop_survey'
@@ -495,9 +500,6 @@ Dashboard::Application.routes.draw do
     get 'fit_weekend_registration/:application_guid', to: 'fit_weekend_registration#new'
 
     delete 'fit_weekend_registration/:application_guid', to: 'fit_weekend_registration#destroy'
-
-    get 'facilitator_program_registration', to: 'facilitator_program_registration#new'
-    get 'regional_partner_program_registration', to: 'regional_partner_program_registration#new'
 
     get 'workshops/:workshop_id/enroll', action: 'new', controller: 'workshop_enrollment'
     post 'workshops/:workshop_id/enroll', action: 'create', controller: 'workshop_enrollment'
@@ -575,6 +577,7 @@ Dashboard::Application.routes.draw do
   get '/api/user_progress/:script', to: 'api#user_progress', as: 'user_progress'
   get '/api/user_progress/:script/:stage_position/:level_position', to: 'api#user_progress_for_stage', as: 'user_progress_for_stage'
   get '/api/user_progress/:script/:stage_position/:level_position/:level', to: 'api#user_progress_for_stage', as: 'user_progress_for_stage_and_level'
+  put '/api/firehose_unreachable', to: 'api#firehose_unreachable'
   namespace :api do
     api_methods.each do |action|
       get action, action: action
@@ -603,9 +606,7 @@ Dashboard::Application.routes.draw do
 
       patch 'user_school_infos/:id/update_last_confirmation_date', to: 'user_school_infos#update_last_confirmation_date'
 
-      patch 'user_school_infos/:id/update_end_date', to: 'user_school_infos#update_end_date'
-
-      patch 'user_school_infos/:id/update_school_info_id', to: 'user_school_infos#update_school_info_id'
+      patch 'user_school_infos', to: 'user_school_infos#update'
 
       post 'users/:user_id/post_ui_tip_dismissed', to: 'users#post_ui_tip_dismissed'
 
@@ -631,14 +632,20 @@ Dashboard::Application.routes.draw do
       get 'peer_review_submissions/index', to: 'peer_review_submissions#index'
       get 'peer_review_submissions/report_csv', to: 'peer_review_submissions#report_csv'
 
-      resources :teacher_feedbacks, only: [:create] do
+      resources :teacher_feedbacks, only: [:index, :create] do
         collection do
           get 'get_feedback_from_teacher'
           get 'get_feedbacks'
+          get 'count'
+        end
+        member do
+          post 'increment_visit_count'
         end
       end
     end
   end
+
+  resources :feedback, controller: 'teacher_feedbacks'
 
   get '/dashboardapi/v1/users/:user_id/contact_details', to: 'api/v1/users#get_contact_details'
   post '/dashboardapi/v1/users/accept_data_transfer_agreement', to: 'api/v1/users#accept_data_transfer_agreement'
@@ -660,4 +667,6 @@ Dashboard::Application.routes.draw do
   get '/dashboardapi/courses', to: 'courses#index', defaults: {format: 'json'}
 
   post '/safe_browsing', to: 'safe_browsing#safe_to_open', defaults: {format: 'json'}
+
+  get '/curriculum_tracking_pixel', to: 'curriculum_tracking_pixel#index'
 end

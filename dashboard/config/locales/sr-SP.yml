@@ -62,7 +62,6 @@ sr:
   of: од
   more: ВИШЕ
   less: МАЊЕ
-  beta: пробна верзија
   try_hoc: 'Испробајте Hour of Code. Кликните овде >> '
   try_k8intro: Пробај наш К-8 курс Увод у рачунарство (15-25 часова)
   k8intro: К-8 курс Увод у рачунарство (15-25 часова)
@@ -422,16 +421,8 @@ sr:
       other: Други
     submit: Пошаљи
   project:
-    save: Сачувај
-    delete: Обриши
-    share: Подели
-    more: Више
     name: Име
-    really_delete: Желите ли да избришете?
-    delete_yes: Да
-    delete_no: не
     saved: Сачувано у галерији!
-    cancel: Откажи
     abuse:
       report_abuse_form:
         abuse_type:

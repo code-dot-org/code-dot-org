@@ -371,6 +371,7 @@
   dashboard_sections_secret_none: "Ja vēlies, lai skolēni var pārvaldīt paši savus kontus, tai skaitā izvēlēties savas paroles, izvēlies slepeno tipu <b>neviens</b>."
   dashboard_sections_print_secrets: "Tad jūs varat izdrukāt lapiņas, kas satur informāciju par kontiem, kas individuāli tiek izdalīti taviem skolēniem."
   dashboard_sections_switch_section: 'Pārslēgt sadaļu:'
+  dashboard_sections_close: "Aizvērt"
   dashboard_students_add_multiple: 'Ieraksti vai iekopē savu skolēnu vārdus, vienu katrā rindā:'
   dashboard_students_new_section: "Tu izveidoji jaunu sadaļu! Tagad pievieno skolēnus, izmantojot pogas <b>Pievienot skolēnu</b> un <b>Pievienot vairākus skolēnus</b>."
   dashboard_students_name: 'Vārds'
@@ -506,8 +507,6 @@
   course2_name: "Kurss 2"
   course3_name: "Kurss 3"
   course4_name: "4. kurss"
-  math_category_name: "Matemātika"
-  hoc_category_name: "Programmēšanas stunda"
   applab_name: "Aplikāciju laborotorija"
   applab_gradelevel: "Vecums 13+"
   codeorg_gradelevel: "Vecums no 4-104"
@@ -561,6 +560,7 @@
   coursee_gradelevel: "Vecumā no 8-12"
   coursee-2017_gradelevel: Vecumā no 8-12
   coursee-2018_gradelevel: Vecumā no 8-12
+  coursee-2019_gradelevel: Vecumā no 8-12
   accelerated_gradelevel: "Vecumā no 10 gadiem (pēc 3. kursa)"
   codeorg_platformtext: "Moderni pārlūki, viedtālruņi, planšetdatori"
   codeintl_platformtext: "Moderni pārlūki, viedtālruņi, planšetdatori"

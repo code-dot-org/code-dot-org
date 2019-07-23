@@ -98,8 +98,8 @@ class YourSchool extends Component {
     const showExistingInaccuracy = this.state.showExistingInaccuracy;
     const existingInaccuracy = this.state.existingInaccuracy;
 
-    // Show the special announcement.
-    const showSpecialAnnouncement = true;
+    // Hide the special announcement.
+    const showSpecialAnnouncement = false;
 
     return (
       <div>

@@ -68,7 +68,6 @@ vi:
   of: "của"
   more: "NHIỀU HƠN"
   less: "ÍT HƠN"
-  beta: "phiên bản thử nghiệm"
   try_hoc: "Tham gia thử Hour of Code, bấm vào đây >> "
   try_k8intro: "Hãy thử Khóa K-8 về Khóa học về Khoa học Máy tính (15-25 giờ)"
   k8intro: "Khóa giới thiệu về khoa học máy tính cho học sinh K-8 (15-25 giờ)"
@@ -549,7 +548,6 @@ vi:
   pdf_download: 'Tải phiên bản PDF'
   download_coming_soon: 'Tải về các hoạt động sắp diễn ra.'
   video_coming_soon: 'Video sắp tới!'
-  not_started: 'Học sinh chưa cố gắng cấp độ này.'
   share_code:
     title: "Nhấp vào 'Chạy' để xem chương trình của tôi trực tiếp"
     bounce_og_title: "Hãy xem thử trò chơi Bounce của tôi"
@@ -776,20 +774,10 @@ vi:
     create: "Tạo ra chương trình"
     create_a_project: 'Tạo một chương trình mới:'
     new: "Tạo mới"
-    rename: "Đổi tên"
-    save: "Lưu"
-    delete: "Xóa"
-    import: "Nhập"
-    share_link_import_bad_link_header: "Chia sẻ liên kết không được công nhận"
-    share_link_import_bad_link_body: "Chúng tôi không thể truy xuất đường link chia sẻ này. Hãy chắc chắn rằng bạn đang sử dụng một đường link từ Minecraft: câu đố về nhiệm vụ của Đặc vụ và bạn đã copy đầy đủ đường link đó."
-    share_link_import_error_header: "Có gì đó không ổn."
-    share_link_import_error_body: "Đã xảy ra sự cố khi nhập liên kết chia sẻ đó. Vui lòng thử lại."
     exit: "Trở về khóa học"
-    my_projects: "chương trình của tôi"
     project_gallery: "chương trình"
     publish: "Xuất bản"
     unpublish: "Hủy xuất bản"
-    share: "Chia sẻ"
     share_title: Chia sẻ chương trình của tôi
     share_copy_link: "Sao chép liên kết:"
     share_embed_description: "Bạn có thể dán mã nhúng vào trang HTML để hiển thị dự án trên một trang web."
@@ -797,25 +785,15 @@ vi:
     embed: "Nhúng"
     advanced_share: "Hiển thị tuỳ chọn nâng cao"
     no_projects: "Bạn hiện không có dự án. Nhấp vào một trong các nút ở trên để bắt đầu dự án."
-    close: "Đóng"
-    more: "Nhiều hơn"
     name: "Tên"
     updated: "Đã cập nhật"
     project_type: "loại chương trình"
     help_text: "Nhấp vào liên kết bên dưới để tạo một chương trình Play Lap (trò chơi thí nghiệm) hoặc Artist (đồ họa) <strong>Make an App</strong> hoặc <strong>Draw Something</strong> below to make a new Play Lab or Artist project!<br/> Bạn có thể trở lại và làm việc với các dự án của mình bất cứ lúc nào"
     need_help: "Cần trợ giúp ban đầu?"
     thumbnail_help: "Không nhìn thấy hình thu nhỏ chính xác cho dự án của bạn? Chạy ứng dụng của bạn để tạo một hình thu nhỏ mới. Xin lưu ý rằng có thể mất vài giờ để hình thu nhỏ mới được làm mới."
-    really_delete: 'Xóa?'
-    delete_yes: 'Đồng ý'
-    delete_no: 'Không'
     saved: "Đã lưu"
     not_saved: "Không lưu"
-    cancel: 'Huỷ'
-    delete_confirm_title: Bạn có chắc bạn muốn xóa bỏ chương trình này?
-    delete_confirm_text: "Xóa chương trình của bạn sẽ vĩnh viễn loại bỏ nó từ danh sách chương trình của bạn. Bất cừ ai đã được bạn chia sẽ sẽ không còn nhìn thấy chương trình của bạn."
     view_all: 'Xem chương trình của tôi'
-    remix: 'đảo lại'
-    click_to_remix: "Nhấp vào 'Remix' để xáo trộn phiên bản của bạn!"
     edit_project: 'Chỉnh sửa dự án'
     sharing_disabled: "Xin lỗi, dự án này không có sẵn để chia sẻ. Nếu đây là dự án của bạn hoặc dự án của một trong những sinh viên của bạn, vui lòng <a href='https://studio.code.org/users/sign_in'>đăng nhập</a> vào tài khoản của bạn để xem dự án."
     abuse:

@@ -68,7 +68,6 @@ sk:
   of: "z"
   more: "VIAC"
   less: "MENEJ"
-  beta: "beta"
   try_hoc: "Vyskúšaj si Hodinu Kódu tu >> "
   try_k8intro: "Vyskúšaj si náš K-8 Úvod do Kurzu Informatiky (15-25 hodín)"
   k8intro: "K-8 Úvod do Kurzu Informatiky (15-25 hours)"
@@ -108,7 +107,7 @@ sk:
     teacher_count: '%{count} učiteľov sa už zaregistrovalo.'
     overview: 'Vytvor si účet, aby si mohol sledovať svoj pokrok alebo spravovať svoju triedu. <a href="/">Môžeš prechádzať jednotlivými úlohy</a> aj bez účtu, ale ak si budeš chcieť uložiť svoj pokrok alebo projekty, musíš sa zaregistrovať.'
     hoc_already_signed_up_heading: 'Začať bez prihlásenia'
-    hoc_already_signed_up_content: 'Zaregistrovali ste sa, aby ste učili Hodinu Kódu! Vy ani Vaši študenti sa nemusíte prihlasovať, aby ste sa Hodiny Kódu zúčastnili. Začnite <a href="%{learn_url}">výberom kurzu</a> pre vašu triedu a pošlite žiakom jeho odkaz.:<br/><br/>Ak sa vám Hodina Kódu páčila a chcete pokračovať, možete si nižšie vytvoriť účet a nastaviť heslo, aby ste mohli vašich študentov zapísať na ktorýkoľvek z našich <a href="%{educate_url}">rozsiahlejších kurzov</a>.'
+    hoc_already_signed_up_content: 'Zaregistrovali ste sa, aby ste odučili Hodinu kódu! Pre účasť na Hodine kódu sa vy ani vaši študenti sa nemusíte registrovať ani prihlasovať. Začnite <a href="%{learn_url}">výberom kurzu</a> vhodného pre vašu triedu a pošlite žiakom jeho odkaz.:<br/><br/>Ak sa vám Hodina kódu páčila a chcete pokračovať, možete si vytvoriť účet a nastaviť heslo, aby ste mohli vašich študentov zapísať na ktorýkoľvek z našich <a href="%{educate_url}">dlhodobých kurzov</a>.'
     hoc_already_signed_up_content_post_hoc: 'Ďakujeme vám za usporiadanie Hodiny Kódu. Pre prihlásenie sa do Code Studio, musíte nastaviť heslo pre Vaše konto. Toto vám umožní uložiť váš pokrok a spravovať Vašu triedu. Môžete priraďovať lekcie študentom a sledovať ich pokrok. <a href="%{studio_url}"> Taktiež môžete pokračovať v prehliadaní rôznych úrovní a lekcií</a> bez vytvorenia účtu.'
     teacher_educator_guide: 'Pozrieť príručku učiteľa'
     title: "Zaregistruj sa na Code.org"
@@ -407,7 +406,7 @@ sk:
     delete: 'Vymazať účet'
     delete_text: "Vymazaním svojho účtu odstránite všetky informácie a pokrok spojený s týmto účtom."
     delete_text_teacher_managed_note: "Nemáš oprávnenie vymazať tento účet pretože je spravovaný tvojím učiteľom. Tvoj učiteľ (učitelia) ťa bude (budú) musieť odstrániť zo svojej trieby predtým, ako si budeš môcť vymazať svoj účet."
-    delete_text_teacher_note: "Poznámka: vymazaním svojho účtu nevymažete účty Vašich študentov."
+    delete_text_teacher_note: "Poznámka: vymazaním svojho účtu nevymažete účty vašich študentov."
     delete_confirm: 'Naozaj chcete odstrániť tento účet?'
     deleted_user: 'zmazaný používateľ'
     no_password_because_oauth: 'Heslo nie je požadované, pretože ste prihlásený cez poskytovateľa služieb.'
@@ -474,7 +473,7 @@ sk:
     choose_next_course: "Vyskúšaj kurz Code Štúdia výberom niektorého z kurzov nižšie"
     print_certificate: "Vytlačiť certifikát"
     announcement_title: "Oznámenia"
-    announcement_message_fall2016_features: "Celé leto sme pracovali na zapracovávaní Vašich pripomienok. Odteraz môžete <a href=\"%{pp_url}\" target=\"_blank\">sledovať pokrok viacerých študentov</a> aj keď spoločne programujú na jednom zariadení. Môžete takisto použiť <a href=\"%{csp_widgets_url}\" target=\"_blank\">najlepšie interaktívne nástroje</a> z našich kurzov Základov informatiky v <i>ktorejkoľvek</i> triede. A Vaši študenti si môžu <a href=\"%{unused_code_url}\" target=\"_blank\">ponechať nepoužitý kód</a> na svojej pracovnej ploche a experimentovať s ním! Pozrite si všetky nové funkcionality a dajte nám vedieť, čo si o nich myslíte."
+    announcement_message_fall2016_features: "Celé leto sme pracovali na zapracovávaní vašich pripomienok. Odteraz môžete <a href=\"%{pp_url}\" target=\"_blank\">sledovať pokrok viacerých študentov</a> aj keď spoločne programujú na jednom zariadení. Môžete takisto použiť <a href=\"%{csp_widgets_url}\" target=\"_blank\">najlepšie interaktívne nástroje</a> z našich kurzov Základov informatiky v <i>ktorejkoľvek</i> triede. Vaši študenti si už môžu <a href=\"%{unused_code_url}\" target=\"_blank\">ponechať nepoužitý kód</a> na svojej pracovnej ploche a experimentovať s ním! Pozrite si všetky nové funkcionality a dajte nám vedieť, čo si o nich myslíte."
     announcement_csp_widgets_message: "Hľadáte zábavnú formu ako vyučovať ako funguje internet, ako kryptografia pomáha uchovať dáta v bezpečí a podobne? Vybrali sme najlepšie interaktívne nástroje z našich osnov Základy informatiky a vydali sme ich ako samostatné časti, ktoré možete kedykoľvek použiť!"
     announcement_learn_more_button: "Zistiť viac"
     announcement_try_now_button: "Skúsiť teraz"
@@ -498,7 +497,7 @@ sk:
     announcement_apcsp_recruitment3: "Tento rok očakávame, že AP skúška Základov informatiky prelomí rekordy. Účasť študentov na skúške môže dramaticky zlepšiť diverzitu v AP Informatike, ale potrebujeme na o aj Vašu pomoc. Podporte každého študenta informatiky pri absolvovaní AP skúšky Základov informatiky a môžete vyhrať <a href='%{gift_url}' target='_blank'>darčekové karty, notebooky alebo iné super ceny</a> (platí len pre vybrané krajiny)! Zdieľajte <a href='%{video_url}' target='_blank'>toto video</a>, aby si študenti mohli vypočuť rovesníkov, ktorí sa zúčastnia skúšky."
     announcement_csp_deadline: "Posledná výzva pre stredoškolských učiteľov. Staňte sa lídrom v informatike na Vašej škole a zúčastnite sa našich vysoko kvalitných výučbových programov pre profesionálov <strong>zadarmo a bez nákladov pre Vás i Vašu školu</strong>. Prihlásiť sa môžete do 14. apríla."
     announcement_applab_export: "App Lab, naše webové programovacie prostredie odteraz podporuje export tvojho kódu! Môžeš začať tvoriť aplikácie presúvaním JavaScriptových blokov, potom si vyexportovať tvoj kód a pokračovať v ktoromkoľvek profesionálnom vývojovom prostredí."
-    announcement_csp_survey: "<b>Gratulujeme všetkým učiteľom Základov informatiky!</b><br />Vaši žiaci Základov informatiky zúčastňujúci sa AP skúšky v informatike sa pridajú k ďalším viac než 50 000 študentom v najväčšej AP skúške v histórií. Nechajme teraz znieť hlas Vašich študentov - pripomeňte im, aby na konci vyplnili anketu! Budete si môcť prezrieť odpovede Vašich študentov a takisto vám poskytneme súhrnný report z celej krajiny."
+    announcement_csp_survey: "<b>Gratulujeme všetkým učiteľom Základov informatiky!</b><br />Vaši žiaci z kurzu Základov informatiky, ktorí sa zúčastňujú skúšky AP v informatike sa pridajú k ďalším viac než 50 000 študentom v najväčšej AP skúške v histórií. Nechajme teraz znieť hlas vašich študentov - pripomeňte im, aby na konci vyplnili anketu! Budete si môcť prezrieť odpovede vašich študentov a takisto vám poskytneme súhrnný report z celej krajiny."
     announcement_navigation_redesign: "<b>Nadchádzajúce zmeny v navigácií na stránke</b><br />Už toto leto vylepšíme navigáciu na Code.org, aby ste vždy mali prístup k Vašim najpoužívanejším položkám z akéhokoľvek miesta na tejto stránke. Hneď po prihlásení sa do vášho učiteľského účtu bude na každej stránke nová navigačná lišta s odkazmi na Vašu domovskú stránku, kurzy, galériu projektov, triedy a profesionálne vzdelávanie."
   move_students:
     new_section_dne: "Ospravedlňujeme sa, ale sekcia %{new_section_code} neexistuje. Zadajte kód inej sekcie."
@@ -579,7 +578,6 @@ sk:
   pdf_download: 'Stiahnuť PDF'
   download_coming_soon: 'Stiahnuteľné aktivity už čoskoro.'
   video_coming_soon: 'Video už čoskoro!'
-  not_started: 'Študent neprešiel túto úroveň.'
   share_code:
     title: "Klikni na 'Spustiť' pre zobrazenie tvojho kódu v akcii"
     bounce_og_title: "Pozri si moju hru Bounce"
@@ -811,20 +809,10 @@ sk:
     create: "Vytvoriť projekt"
     create_a_project: 'Vytvoriť nový projekt:'
     new: "Vytvoriť nový"
-    rename: "Premenovať"
-    save: "Uložiť"
-    delete: "Vymazať"
-    import: "Import"
-    share_link_import_bad_link_header: "Link na zdieľanie nebol rozpoznaný"
-    share_link_import_bad_link_body: "Link na zdieľanie sa nám nepodarilo importovať. Uisti sa, že používaš link z úlohy Minecraft: Agent a že si skopíroval celý link."
-    share_link_import_error_header: "Vyskytla sa chyba."
-    share_link_import_error_body: "Vyskytol sa problém s importom tohto linku na zdieľanie. Skús to znova."
     exit: "Vrátiť sa do kurzu"
-    my_projects: "Moje Projekty"
     project_gallery: "Projekty"
     publish: "Publikovať"
     unpublish: "Zrušiť publikovanie"
-    share: "Zdieľať"
     share_title: Zdieľajte svoj projekt
     share_copy_link: "Skopírujte odkaz:"
     share_embed_description: "Môžete vložiť kód do HTML stránky pre zobrazenie projektu na webovej stránke."
@@ -832,25 +820,15 @@ sk:
     embed: "Vložiť"
     advanced_share: "Zobraziť rozšírené možnosti"
     no_projects: "Momentálne nemáte žiadne projekty. Kliknite na jedno z tlačidiel vyššie pre začatie projektu."
-    close: "Zatvoriť"
-    more: "Viac"
     name: "Meno"
     updated: "Aktualizovaný"
     project_type: "Typ projektu"
     help_text: "Klikni na <strong>Vytvoriť Appku</strong> alebo <strong>Nakresliť niečo</strong> a vytvor nový projekt!<br/> Kedykoľvek sa môžeš vrátiť späť a pokračovať v práci na svojom projekte."
     need_help: "Potrebujete pomôcť so štartom?"
     thumbnail_help: "Nevidíte správny obrázok vášho projektu? Spustite Vašu aplikáciu pre vygenerovanie nového obrázku. Môže trvať až niekoľko hodín, kým sa obrázok aktualizuje na celej stránke."
-    really_delete: 'Vymazať?'
-    delete_yes: 'Áno'
-    delete_no: 'Nie'
     saved: "Uložené"
     not_saved: "Neuložené"
-    cancel: 'Zrušiť'
-    delete_confirm_title: Naozaj chcete odstrániť tento projekt?
-    delete_confirm_text: "Vymazaním tohto projektu sa projekt navždy zmaže aj z tvojho zoznamu Moje Projekty. Nikto, s kým si zdieľal odkaz, si už tvoj projekt nebude môcť pozrieť."
     view_all: 'Zobraziť Moje Projekty'
-    remix: 'Remix'
-    click_to_remix: "Kliknite na 'Remix' a roztočte to s Vašou vlastnou verziou!"
     edit_project: 'Upraviť projekt'
     sharing_disabled: "Je nám ľúto, ale tento projekt nie je možné zdieľať. Ak je to váš projekt alebo projekt vášho študenta, <a href='https://studio.code.org/users/sign_in'>prihláste sa</a> do vášho konta pre zobrazenie projektu."
     abuse:
@@ -1045,7 +1023,7 @@ sk:
       workshop_facilitator: 'Usporiadateľ workshopov'
       workshop_course: 'Kurz workshopov'
       email_opt_in: 'Môžeme vám zasielať emaily o medzinárodnom programe Code.org, aktualizáciáchnašich kurzov alebo iných novinkách zo sveta informatiky?'
-      legal_opt_in: 'Odoslaním tohto formuláru súhlasíte s tým, aby Code.org zdieľal informácie o Vašom využívaní Code.org a profesionánálnych vzdelávacích nástrojov s medzinárodným partnerom code.org vo Vašej krajine, školskom obvode a orgánizatormi podujatí. S týmito partnermi budeme zdieľať Vaše kontaktné údaje, ktoré kurzy/lekcie absolvujete a súhrnné dáta o Vašej triede. Tie zahrňujú počet študentov vo Vašich triedach, demografické rozdelenie Vašej triedy a názov Vašej školy a mestskej časti. Nebudeme zdieľať žiadne informácie o jednotlivých študentoch: všetky takéto informácie budú anonymizované a súhrnné. Naši medzinárodní partneri a organizátori sú zmluvne zaviazaní zaobchádzať s týmito údajmi na rovnako dôvernej úrovni ako Code.org.'
+      legal_opt_in: 'Odoslaním tohto formuláru súhlasíte s tým, aby Code.org zdieľal informácie o vašom využívaní Code.org a profesionánálnych vzdelávacích nástrojov s medzinárodným partnerom code.org vo vašej krajine, školskom obvode a orgánizatormi podujatí. S týmito partnermi budeme zdieľať vaše kontaktné údaje, ktoré kurzy/lekcie absolvujete a súhrnné dáta o vašej triede. Tie zahrňujú počet študentov vo vašich triedach, demografické rozdelenie vašej triedy a názov vašej školy a mestskej časti. Nebudeme zdieľať žiadne informácie o jednotlivých študentoch: všetky takéto informácie budú anonymizované a súhrnné. Naši medzinárodní partneri a organizátori sú zmluvne zaviazaní zaobchádzať s týmito údajmi na rovnako dôvernej úrovni ako Code.org.'
     form_entries:
       gender:
         male: 'Muž'
@@ -1110,7 +1088,7 @@ sk:
     international_opt_in:
       title: 'Účasť na workshope'
       intro: "Ďakujeme, že ste obetovali váš čas a absolvovali tréning na Code.org. Naša misia - priniesť možnosť naučiť sa informatiku všetkým deťom po celom svete - by nebola možná bez Vašej podpory."
-      instructions: "Vyplňte prosím nasledujúci formulár na potvrdenie, že 1) ste sa zúčastnili tréningového workshopu organizovaného jedným z našich medzinárodných Code.org partnerov, a 2) súhlasíte so zdieľaním Vašich údajov s naším medzinárodným Code.org partnerom vo Vašej krajine, aby sme vám mohli pomôcť pri Vašej práci - výučbe informatiky."
+      instructions: "Vyplňte prosím nasledujúci formulár na potvrdenie, že 1) ste sa zúčastnili tréningového workshopu organizovaného jedným z našich medzinárodných Code.org partnerov, a 2) súhlasíte so zdieľaním Vašich údajov s naším medzinárodným Code.org partnerom vo vašej krajine, aby sme vám mohli pomôcť pri vašej práci - výučbe informatiky."
       thanks: "Ďakujeme za odoslanie! Tešíme sa, že Vás budeme môcť podporovať pri spoznávaní Code.org a našich nástrojov. Dajte nám prosím vedieť Vaše nápady, otázky a postrehy emailom na <a href='%{support_email_url}'>support@code.org</a> alebo príspevkom na <a href='%{teacher_forum_url}' target='_blank'>fóre pre učiteľov</a>!"
     logged_out:
       heading: 'Ďakujeme vám za prejavený záujem o Vzdelávací program pre profesionálov!'

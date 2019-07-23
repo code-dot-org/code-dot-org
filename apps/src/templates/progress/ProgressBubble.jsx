@@ -104,8 +104,7 @@ class ProgressBubble extends React.Component {
     pairingIconEnabled: PropTypes.bool,
     hideToolTips: PropTypes.bool,
     stageExtrasEnabled: PropTypes.bool,
-    hideAssessmentIcon: PropTypes.bool,
-    inMiniRubricExperiment: PropTypes.bool
+    hideAssessmentIcon: PropTypes.bool
   };
 
   static defaultProps = {
@@ -121,8 +120,7 @@ class ProgressBubble extends React.Component {
       currentLocation,
       stageTrophyEnabled,
       pairingIconEnabled,
-      hideAssessmentIcon,
-      inMiniRubricExperiment
+      hideAssessmentIcon
     } = this.props;
 
     const levelIsAssessment = isLevelAssessment(level);
@@ -180,7 +178,6 @@ class ProgressBubble extends React.Component {
         icon={levelIcon}
         text={tooltipText}
         includeAssessmentIcon={levelIsAssessment}
-        inMiniRubricExperiment={inMiniRubricExperiment}
       />
     );
 
@@ -191,7 +188,6 @@ class ProgressBubble extends React.Component {
           text={i18n.unpluggedActivity()}
           fontSize={16}
           tooltip={this.props.hideToolTips ? null : tooltip}
-          inMiniRubricExperiment={inMiniRubricExperiment}
         />
       );
     }
@@ -233,12 +229,9 @@ class ProgressBubble extends React.Component {
                 </span>
               )}
             </div>
-            {inMiniRubricExperiment &&
-              levelIsAssessment &&
-              !smallBubble &&
-              !hideAssessmentIcon && (
-                <SmallAssessmentIcon isDiamond={level.isConceptLevel} />
-              )}
+            {levelIsAssessment && !smallBubble && !hideAssessmentIcon && (
+              <SmallAssessmentIcon isDiamond={level.isConceptLevel} />
+            )}
           </div>
           {!this.props.hideToolTips && tooltip}
         </div>

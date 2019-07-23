@@ -172,14 +172,6 @@ gl:
             '"left"': esquerda
             '"right"': dereita
             '"space"': espazo
-      gamelab_layoutSprites:
-        options:
-          FORMAT:
-            '"random"': aleatorio
-      gamelab_locationDelta:
-        options:
-          DIR:
-            "'random'": aleatorio
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -200,10 +192,6 @@ gl:
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': baixa
               a auga
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': inverno
-      gamelab_setPosition:
-        options:
-          POSITION:
-            '"random"': aleatorio
       gamelab_setProp:
         options:
           PROPERTY:
@@ -220,23 +208,6 @@ gl:
           CONDITION:
             '"when"': cando
             '"while"': mentras
-      gamelab_spriteClickedSet:
-        options:
-          CONDITION:
-            '"when"': cando
-            '"while"': mentras
-      gamelab_spritesWhere:
-        options:
-          PROPERTY:
-            '"scale"': tamaño
-            '"x"': posición x
-            '"y"': posición y
-      gamelab_spritesWhereGenerator:
-        options:
-          PROPERTY:
-            '"scale"': tamaño
-            '"x"': posición x
-            '"y"': posición y
       gamelab_turn:
         options:
           DIRECTION:
@@ -257,11 +228,6 @@ gl:
             "'down'": abaixo
             "'left'": esquerda
             "'right'": dereita
-      gamelab_whenTouchingSet:
-        options:
-          CONDITION:
-            '"when"': cando
-            '"while"': mentras
       gamelab_whileKey:
         options:
           KEY:

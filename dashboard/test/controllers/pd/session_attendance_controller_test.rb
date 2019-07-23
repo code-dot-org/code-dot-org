@@ -74,9 +74,7 @@ class Pd::SessionAttendanceControllerTest < ::ActionController::TestCase
     assert_equal @teacher, attendance.teacher
     assert_equal enrollment, attendance.enrollment
 
-    assert_redirected_to CDO.studio_url('/', CDO.default_scheme)
-    assert flash[:notice]
-    assert flash[:notice].start_with? 'Thank you for attending Code.org professional development.'
+    assert_template :attendance_recorded
   end
 
   test 'attend with a matching enrollment by email updates the enrollment.user' do
@@ -103,9 +101,7 @@ class Pd::SessionAttendanceControllerTest < ::ActionController::TestCase
     assert_equal @teacher, attendance.teacher
     assert_equal enrollment, attendance.enrollment
 
-    assert_redirected_to CDO.studio_url('/', CDO.default_scheme)
-    assert flash[:notice]
-    assert flash[:notice].start_with? 'Thank you for attending Code.org professional development.'
+    assert_template :attendance_recorded
   end
 
   test 'select_enrollment assigns enrollment.user for the selected enrollment' do
@@ -144,7 +140,7 @@ class Pd::SessionAttendanceControllerTest < ::ActionController::TestCase
     end
     @teacher.reload
     assert @teacher.teacher?
-    assert_redirected_to CDO.studio_url('/', CDO.default_scheme)
+    assert_template :attendance_recorded
   end
 
   test 'select_enrollment redirects to upgrade_account when accidental student account emails dont match' do

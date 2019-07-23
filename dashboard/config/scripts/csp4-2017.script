@@ -11,6 +11,7 @@ family_name 'csp4'
 version_year '2017'
 is_stable true
 project_sharing true
+curriculum_umbrella 'CSP'
 
 stage 'What is Big Data?', flex_category: 'csp4_1'
 level 'Unit 4 Lesson 1 Introduction', progression: 'Lesson Vocabulary & Resources'

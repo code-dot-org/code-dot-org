@@ -3703,6 +3703,44 @@ pt-BR:
       2:
         text: Meu nome é Maria, sou júnior na Universidade de Washington e sou engenheira
           amazônica do futuro.
+      3:
+        text: Eu amo ciência da computação porque ela incorpora resolução de problemas
+          e pensamento crítico e depois de colocar horas de trabalho em algo você
+          pode obter algo muito legal e gratificante.
+      4:
+        text: Até agora, você teve a chance de dançar com alguns tipos diferentes
+          de dançarinos e os programou para fazer diferentes tipos de movimentos de
+          dança. Mas como esses movimentos realmente funcionam?
+      5:
+        text: Cada movimento de dança é composto de uma série de imagens chamadas
+          frames. Cada frame é um pouco diferente do anterior. Quando o programa é
+          executado, o computador mostra um frame após o outro. Eles são mostrados
+          tão rápido que parece que a dançarina está se movendo. Este é o segredo
+          por trás de toda animação.
+      6:
+        text: Não só você pode mudar os movimentos da sua dançarina, como também pode
+          alterar as propriedades da dançarina. As propriedades descrevem coisas como
+          a posição da bailarina na tela, o tamanho da bailarina e a cor da bailarina.
+      7:
+        text: Para alterar as propriedades de um dançarino, você usará um bloco de
+          set. Vamos usar um bloco para fazer nossos dançarinos parecerem menores.
+          Primeiro, arraste o bloco definido para o seu programa. Em seguida, selecione
+          a dançarina que você gostaria de alterar e digite o tamanho que aparecerá
+          na tela.
+      8:
+        text: O tamanho total é 100. Se você escolher um número menor, o bailarino
+          será menor. Quanto menor a dançarina, mais longe ela fica. Esta é uma ótima
+          maneira de fazer dançarinos de backup.
+      9:
+        text: Usando o set block, você também pode alterar as dimensões, rotação,
+          posição e cor do bailarino. Ao brincar com essas propriedades, você pode
+          fazer todos os tipos de alterações e vinculá-las a diferentes partes da
+          música.
+      10:
+        text: Lembre-se, você só pode definir as propriedades de um dançarino que
+          já existe. Certifique-se de que o bloco definido vem depois do bloco "Criar
+          uma nova dançarina". Sinta-se à vontade para experimentar ser criativo e
+          se divertir.
     hoc_dance_congrats:
       1:
         text: 'Hora do Código | Festa da Dança: Que comece a Festa!'
@@ -3727,6 +3765,16 @@ pt-BR:
         text: No final do tutorial você pode compartilhar um link para sua criação
           com seus amigos. Exercite a sua imaginação e apenas se divirta!
     mc_2018_intro:
+      1:
+        text: Olá! Você chegou na hora certa. Bem-vindo ao Voyage Aquatic. Estou prestes
+          a embarcar em uma missão para encontrar tesouros subaquáticos escondidos
+          e estou muito feliz por ter sua ajuda. Quem sabe o que vamos encontrar ao
+          longo desses misteriosos canais? Estamos destinados a conhecer nosso primeiro
+          guia em algum lugar nesta doca.
+      2:
+        text: Bem vindos, aventureiros! Para completar o Voyage Aquatic, você precisará
+          resolver uma série de quebra-cabeças usando o código. Veja como isso funciona.
+          Sua tela é dividida em três partes principais.
       3:
         text: No lado esquerdo, você verá o mundo de Minecraft.
       4:
@@ -3738,6 +3786,13 @@ pt-BR:
       6:
         text: As instruções de cada nível estão no topo da página. Clique no sinal
           de mais para mudar entre instruções longas e curtas.
+      7:
+        text: Tente arrastar blocos da caixa de ferramentas para o espaço de trabalho,
+          empilhando-os e, em seguida, clique no botão Executar para executar seus
+          comandos.
+      8:
+        text: Você pode ter que tentar algumas vezes para acertar e alguns dos quebra-cabeças
+          têm mais de uma solução, então experimente para ver o que funciona.
       9:
         text: Se você quiser tentar novamente, clique no botão de resetar para voltar
           onde você começou.
@@ -3745,10 +3800,196 @@ pt-BR:
         text: Se você precisa excluir um comando, basta arrastar o bloco da sua área
           de trabalho de volta para a caixa de ferramentas. Lembre-se de clicar em
           "Executar" para ver o seu código em ação.
+      11:
+        text: Ok, chega de brincadeira companheiro aventureiro. Vamos começar a codificar
+          para encontrar algum tesouro submarino.
+    MC_2018_loops:
+      1:
+        text: Ótimo! Nós pegamos um bacalhau! Você sabia que, se você alimentar um
+          golfinho com um bacalhau, ele te guiará para um naufrágio onde talvez haja
+          um tesouro? Nós devemos estar perto. O próximo conjunto de desáfios serão
+          complicados, é melhor aprendermos mais habilidades. O que é isso? Uma caverna?
+      2:
+        text: Sejam bem-vindos, aventureiros! Meu nome é Squid. Eu notei que você
+          estava utilizando o mesmo conunto de comandos em alguns dos últimos desafios.
+          Deve ter sido cansativo. Você já se perguntou se havia um jeito de fazer
+          algo várias vezes, como por exemplo, lavar a louça ou escovar os dentes
+          sem ficar cansado ou entediado? Isso seria legal.
+      3:
+        text: Computadores são muito bons em repetir a mesma coisa utilizando loops.
+          Quando você quer que o seu programa repita as mesmas instruções várias vezes
+          você pode utilizar um loop!
+      4:
+        text: Esse bloco de loop contém instruções que serão repetidas até que o objetivo
+          seja atingido. Uma vez que o programa comece um loop "Repetir até objetivo",
+          ele continuará a repetir as instruções até que se tenha êxito.
+      5:
+        text: Tente você mesmo! Posicione os comandos que você quer no bloco "Repetir
+          até objetivo", clique em "Executar/Run" e ação!
+      6:
+        text: Bom, isso foi um pouco estranho. Quem imaginaria que lulas são capazes
+          de programar? Eu nem sabia que eles tinham dedos. Mas agora que sabemos
+          mais sobre loops, vamos utilizá-los para conseguir um outro tesouro.
+    mc_2018_conditionals:
+      1:
+        text: Uau! Outro desafio resolvido! E nós conseguimos... um salmão. Não é
+          tão animador quanto pilhas de ouro, mas nós pegaremos de qualquer forma.
+          E eu sinto que natilóides serão úteis no futuro. Eu me pergunto o que se
+          esconde nessas ruínas... Talvez seja uma outra dica! Vamos checar.
+      2:
+        text: Meu nome é Netty e bem-vindo às minhas ruínas. Nós tomamos decisões
+          o tempo inteiro baseadas em condições. Se parece que vai chover, nós pegamos
+          um guarda-chuva. Se estamos com fome, nós iremos comer um lanche.
+      3:
+        text: Se virmos um creeper, nós iremos correr na direção oposta. Computadores
+          tomam esse tipo de decisões também. Eles respondem às condições utilizando-se
+          de códigos.
+      4:
+        text: Para programar uma resposta como essa utilizando seus comandos de código,
+          selecione um bloco 'se caminho' (if path).
+      5:
+        text: Selecione o menu suspenso para criar o comando.
+      6:
+        text: Por exemplo, se você escrever o comando "se caminho para a direita"
+          (if path to the right) e o colocar dentro de uma condicional, quando Steve
+          alcança um caminho aberto à direita ele irá sempre ir para a direita. Se
+          não há caminho aberto à direita, ele não irá para lá. Esses comandos condicionais
+          'se' (if) úteis quando você roda o seu código em situações imprevisíveis
+          como as misteriosas ruínas em cavernas embaixo d'água.
+      7:
+        text: Tente utilizar blocos "se" (if) e programe um giro.
+      8:
+        text: Uau! As ruínas do Netty eram incríveis. Eu realmente preciso sair da
+          casa dos meus pais. O que você acha? As condições estão boas para nós completarmos
+          os desafios finais? Vamos tentar.
     mc_2018_closing:
+      1:
+        text: 'Amy Lee33: Parabéns! Você conseguiu!'
       2:
         text: 'Squid: Parabéns!'
       3:
         text: 'Netty: Você conseguiu! Parabéns!'
       4:
         text: 'Tomohawk: Parabéns!'
+      5:
+        text: Grande dia! Toda essa caça ao tesouro nos levou a construir um condutor
+          de Minecraft, achar nautilóides e descobrir baus de tesouro. Eu simplesmente
+          amo a cor de prismarinho. Nós também aprendemos como programar com loops
+          e condicionais.
+      6:
+        text: Falando de programação, há mais um nível para esta tarefa. Vocês estão
+          prontos, aventureiros?
+      7:
+        text: É um nível de jogo livre e você colocar usar suas habilidades de programação
+          para construir algo incrível.
+      8:
+        text: Hmmm... Um lugar para esconder o seu tesouro, um monumento embaixo d'água,
+          um castelo coral? Ahhh... Tantas ideias! Tente usar loops para criar uma
+          ação repetitiva e condicionais para se preparar para cenários imprevisíveis.
+      9:
+        text: Você certamente se provou como um programador audaz, mal posso esperar
+          para ver o que você construiu. Espero que suas aventuras com a programação
+          não acabem por aqui. Bon Voyage!
+    teaching_csf_how_it_works:
+      1:
+        image: notes/teaching_cs_fundamentals_1.png
+        text: O curso se divide em etapas.
+      2:
+        image: notes/teaching_cs_fundamentals_2.png
+        text: As primeiras etapas irão introduzir o que a ciência da computação é,
+          assim como apresentarão o vocabulário chave.
+      3:
+        image: notes/teaching_cs_fundamentals_3.png
+        text: Agora, você irá aprender como programar da mesma maneira que os estudantes
+          irão. As etapas finais do curso te ajudarão a criar um plano para ensinar
+          ciência da computação na sua sala de aula. Durante o curso, você irá ver
+          exemplos de lições conectadas - lições online -, assim como lições que poderão
+          ser feitas sem um computador.
+      4:
+        image: notes/teaching_cs_fundamentals_4.png
+        text: A plataforma de aprendizagem guardará o seu progresso, assim você poderá
+          retormar de onde parou a qualquer tempo.
+    what_is_cs:
+      1:
+        image: notes/what_is_cs.png
+        text: Programação é a série de instruções que você dá a um computador. A ciência
+          da computação é o campo em que as pessoas utilizam o poder dos computadores
+          para resolver grandes problemas. Ciência da computação inclui programação,
+          mas também pode incluir outras coisas como, por exemplo, o funcionamento
+          da internet e seu impacto na sociedade, o que fazer com big data e como
+          solucionar grandes problemas. Assim, ciência da computação é sobre resolução
+          de problemas, pensamento crítico e persistência.
+    writing_first_program:
+      1:
+        image: notes/writing_first_program_1.png
+        text: Code.org utiliza uma linguagem de programação visual do tipo 'arrastar
+          e soltar' chamada Blockly. Esta linguagem utiliza instruções coloridas chamadas
+          blocos para construir programas e solucionar desafios.
+      2:
+        image: notes/writing_first_program_2.png
+        text: Cada desafio tem quatro partes.
+      3:
+        image: notes/writing_first_program_3.png
+        text: O espaço do jogo está à esquerda, onde o programa é executado.
+      4:
+        image: notes/writing_first_program_4.png
+        text: Ao centro se encontra a área da caixa de ferramentas, que possui todos
+          os blocos que você precisa.
+      5:
+        image: notes/writing_first_program_5.png
+        text: À direita está a área de trabalho, onde você irá arrastar os blocos
+          para construir seu programa.
+      6:
+        image: notes/writing_first_program_7.png
+        text: Acima da área de trabalho estão instruções para cada desafio.
+      7:
+        image: notes/writing_first_program_7.png
+        text: Se você arrastar muitos blocos para fora da caixa de ferramentas (toolbox),
+          apenas arraste o bloco extra para dentro da caixa de ferramentas novamente.
+          Aperte 'Executar/Run' para testar o seu programa e 'Reiniciar/Reset' para
+          testar novamente.
+    repeat_block:
+      1:
+        image: notes/repeat_block.png
+        text: Um bloco 'repetir' te permite repetir o código dentro dele quantas vezes
+          você demandar.
+    what_is_an_event:
+      1:
+        image: notes/what_is_an_event.png
+        text: Um evento indica ao seu programa que escute para que, quando aquilo
+          acontecer, o programa realize uma ação. O computador pode escutar um clique
+          do mouse, o pressionar de uma tecla, ou até um toque na tela.
+    lesson_planning:
+      1:
+        image: notes/lesson_planning_1.png
+        text: As lições de Fundamentos da Ciência da Computação começam com resumos
+          para que você saiba o que cada uma irá cobrir.
+      2:
+        image: notes/lesson_planning_2.png
+        text: As lições possuem fases de preparação, atividades e anotação. Se você
+          quiser criar seus próprios planos de lições, você pode querer ter tais dicas
+          em mente.
+      3:
+        image: notes/lesson_planning_3.png
+        text: 1. Tente utilizar um desenho de currículo em espiral. Introduza conceitos
+          uma vez e volte a visitá-los.
+      4:
+        image: notes/lesson_planning_4.png
+        text: 2. Crie uma experiência mesclada ao combinar lições online e offline.
+      5:
+        image: notes/lesson_planning_5.png
+        text: 3. Divida o seu currículo em partes menores.
+      6:
+        image: notes/lesson_planning_6.png
+        text: 4. Assegure-se de que você alinhou padrões locais e habilidades de preparação
+          para a universidade e carreiras profissionais.
+    opd_closing:
+      1:
+        image: notes/opd_closing_1.png
+        text: Parabéns! Você completou o curso online Teaching Computer Science Fundamentals.
+          Você agora faz parte de uma comunidade crescente de professores que estão
+          preparando seus estudantes para o futuro.
+      2:
+        image: notes/opd_closing_2.png
+        text: 'Cheque estes recursos caso precise de mais suporte: 1. forum.code.org;
+          2. @teachcode no Twitter; e 3. studio.code.org '

@@ -690,8 +690,6 @@
   minecraft_name: "Minecraft"
   starwarsblocks_name: "Star Wars (Blocks)"
   hoc-encryption_name: Enkel kryptering
-  math_category_name: "Matematik"
-  hoc_category_name: "Hour of Code"
   applab_name: "App Lab"
   gamelab_name: "Spil Laboratoriet"
   applab_gradelevel: "Alder 13+"
@@ -766,6 +764,12 @@
   coursed-2018_gradelevel: 8. klasse+
   coursee-2018_gradelevel: Alder 8-12
   coursef-2018_gradelevel: Alder 9 -13
+  coursea-2019_gradelevel: Alder 4-7
+  courseb-2019_gradelevel: Alder 5-8
+  coursec-2019_gradelevel: Alder 6-10
+  coursed-2019_gradelevel: 8. klasse+
+  coursee-2019_gradelevel: Alder 8-12
+  coursef-2019_gradelevel: Alder 9 -13
   accelerated_gradelevel: "Fra 10 år (efter kursus 3)"
   codeorg_platformtext: "Moderne browsere, smartphones, tabletter"
   codeintl_platformtext: "Moderne browsere, smartphones, tabletter"

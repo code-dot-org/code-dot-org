@@ -64,11 +64,10 @@ it:
   courses_page:
     title_student: "Impara l'informatica"
     title_teacher: "Insegna l'informatica"
-  unplugged_activity: 'Attività Tradizionale'
+  unplugged_activity: 'Attività tradizionale'
   of: "di"
   more: "DI PIÙ"
   less: "DI MENO"
-  beta: "versione provvisoria"
   try_hoc: "Prova l'Ora del Codice, clicca qui >> "
   try_k8intro: "Prova il nostro corso introduttivo di informatica per scuole elementari e medie inferiori (in 20 lezioni)"
   k8intro: "Corso introduttivo di informatica per scuole elementari e medie inferiori (in 20 lezioni)"
@@ -342,7 +341,7 @@ it:
       gamelab_jr: 'Sviluppo Giochi (versione provvisoria)'
       gumball: 'Lo straordinario mondo di Gumball'
       iceage: 'L''Era Glaciale'
-      infinity: 'Infiniti'
+      infinity: 'Infinito'
       minecraft_adventurer: 'Un''avventura con Minecraft'
       minecraft_aquatic: 'Minecraft Acquatico'
       minecraft_designer: 'Minecraft'
@@ -548,7 +547,7 @@ it:
   reference_area:
     title: 'Hai bisogno di aiuto?'
     subtitle: 'Guarda questi video e suggerimenti'
-    teacher: 'Vedi la soluzione'
+    teacher: 'Vedi una soluzione'
     teacher_no_solution: 'Smetti di vedere la soluzione'
     auth_error: 'Non sei autorizzato a vedere la soluzione.'
     submit: 'Aggiorna la posizione dell''Artista'
@@ -578,7 +577,6 @@ it:
   pdf_download: 'Scarica il PDF'
   download_coming_soon: 'La descrizione di questa attività è in corso di preparazione.'
   video_coming_soon: 'Il video è in corso di preparazione!'
-  not_started: 'Lo studente non ha provato questo esercizio.'
   share_code:
     title: "Clicca su \"Esegui\" per vedere il mio programma in azione"
     bounce_og_title: "Prova la mia versione del Ping-Pong"
@@ -811,20 +809,10 @@ it:
     create: "Crea progetto"
     create_a_project: 'Crea un nuovo progetto:'
     new: "Nuovo"
-    rename: "Rinomina"
-    save: "Salva"
-    delete: "Elimina"
-    import: "Importa"
-    share_link_import_bad_link_header: "Collegamento di condivisione non riconosciuto"
-    share_link_import_bad_link_body: "Non siamo riusciti a importare il collegamento di condivisione. Assicurati di usare un collegamento creato da un rompicapo di Minecraft: Agent e di aver copiato il collegamento completo."
-    share_link_import_error_header: "Si è verificato un errore."
-    share_link_import_error_body: "Si è verificato un errore durante l'importazione del collegamento di condivisione. Riprova."
     exit: "Ritorna al corso"
-    my_projects: "Collezione Privata"
     project_gallery: "Progetti"
     publish: "Pubblica"
     unpublish: "Annulla Pubblicazione"
-    share: "Condividi"
     share_title: Condividi il tuo progetto
     share_copy_link: "Copia il link:"
     share_embed_description: "È possibile incollare il codice da incorporare in una pagina HTML per visualizzare il progetto in una pagina Web."
@@ -832,25 +820,15 @@ it:
     embed: "Incorpora"
     advanced_share: "Mostra opzioni avanzate"
     no_projects: "Attualmente non hai progetti. Clicca su uno dei bottoni qui sopra per iniziarne uno."
-    close: "Chiudi"
-    more: "Di più"
     name: "Nome"
     updated: "Aggiornato"
     project_type: "Tipo di progetto"
     help_text: "Clicca qui sotto su <strong>Costruisci una App</strong> o <strong>Costruisci un Gioco</strong> o <strong>Disegna qualcosa</strong> per creare un nuovo progetto negli ambienti \"Sviluppo App\" o del Laboratorio o dell'Artista! <br/> Puoi salvare i progetti e riprenderli in qualsiasi momento."
     need_help: "Hai bisogno di aiuto per iniziare?"
     thumbnail_help: "Non trovi l'anteprima del tuo progetto? Esegui la tua App per generare una nuova anteprima. Considera che ci vogliono un paio d'ore affinché le anteprime si aggiornino ovunque."
-    really_delete: 'Elimina?'
-    delete_yes: 'Sì'
-    delete_no: 'No'
     saved: "Salvato"
     not_saved: "Non salvato"
-    cancel: 'Annulla'
-    delete_confirm_title: Sei sicuro di voler rimuovere questo progetto?
-    delete_confirm_text: "L'eliminazione del progetto lo rimuoverà in modo permanente dal tuo elenco progetti. Se hai condiviso il link con altri questi non saranno più in grado di visualizzare il progetto."
     view_all: 'Guarda la Collezione Privata'
-    remix: 'Rimescola'
-    click_to_remix: "Clicca su 'Rimescola' per ottenere una tua copia da cambiare a piacere!"
     edit_project: 'Modifica progetto'
     sharing_disabled: "Siamo spiacenti, questo progetto non è disponibile per la condivisione. Se questo è il tuo progetto o il progetto di uno dei tuoi studenti, ti preghiamo di <a href='https://studio.code.org/users/sign_in'> accedere </a> al tuo account per visualizzare il progetto."
     abuse:
@@ -900,7 +878,7 @@ it:
     csf_e_2: 'Contenuti del Corso E'
     csf_f_1: 'Introduzione al Corso F (facoltativo - per chi non ha svolto i corsi precedenti)'
     csf_f_2: 'Contenuti del Corso F'
-    csf_digcit: 'Cittadinanza Digitale'
+    csf_digcit: 'Cittadinanza digitale'
     csf_jigsaw: 'Puzzle'
     csf_loops: 'Ripetizioni'
     csf_events: 'Eventi'
@@ -911,8 +889,9 @@ it:
     csf_nested_loops: 'Cicli annidati'
     csf_functions: 'Funzioni'
     csf_variables: 'Variabili'
-    csf_for_loops: 'Cicli con Contatore'
+    csf_for_loops: 'Cicli con contatore'
     csf_internet: 'Internet'
+    csf_warmup: 'Riscaldamento'
     csd1_1: 'Capitolo 1: il Problem Solving'
     csd1_2: 'Capitolo 2: Computers e Problem Solvig'
     csd2_1: 'Capitolo 1: Contenuti Web e HTML'

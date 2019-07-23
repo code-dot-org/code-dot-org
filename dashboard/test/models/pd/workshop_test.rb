@@ -347,6 +347,28 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     workshop.send_exit_surveys
   end
 
+  test 'send_exit_surveys sends no surveys for FiT workshops' do
+    # Make a FiT workshop that's ended and has attendance;
+    # these are the conditions under which we'd normally send a survey.
+    workshop = create :pd_ended_workshop, subject: SUBJECT_FIT
+    create(:pd_workshop_participant, workshop: workshop, enrolled: true, attended: true)
+
+    # Ensure no exit surveys are sent
+    Pd::Enrollment.any_instance.expects(:send_exit_survey).never
+    workshop.send_exit_surveys
+  end
+
+  test 'send_exit_surveys sends no surveys for Facilitator workshops' do
+    # Make a Facilitator workshop that's ended and has attendance;
+    # these are the conditions under which we'd normally send a survey.
+    workshop = create :pd_ended_workshop, course: COURSE_FACILITATOR
+    create(:pd_workshop_participant, workshop: workshop, enrolled: true, attended: true)
+
+    # Ensure no exit surveys are sent
+    Pd::Enrollment.any_instance.expects(:send_exit_survey).never
+    workshop.send_exit_surveys
+  end
+
   test 'send_follow_up only teachers attended workshop get follow up emails' do
     workshop = create :pd_ended_workshop, course: Pd::Workshop::COURSE_CSF,
       subject: Pd::Workshop::SUBJECT_CSF_101, num_sessions: 1, sessions_from: Date.today - 30.days
@@ -670,6 +692,26 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
       each_session_hours: 8
 
     assert_equal 33.5, workshop_csp_summer.effective_num_hours
+  end
+
+  test 'CSF 101 workshops are capped at 7 hours' do
+    workshop_csf_101 = create :pd_workshop,
+      course: Pd::Workshop::COURSE_CSF,
+      subject: Pd::Workshop::SUBJECT_CSF_101,
+      num_sessions: 1,
+      each_session_hours: 8
+
+    assert_equal 7, workshop_csf_101.effective_num_hours
+  end
+
+  test 'CSF 201 workshops are capped at 6 hours' do
+    workshop_csf_201 = create :pd_workshop,
+      course: Pd::Workshop::COURSE_CSF,
+      subject: Pd::Workshop::SUBJECT_CSF_201,
+      num_sessions: 1,
+      each_session_hours: 7
+
+    assert_equal 6, workshop_csf_201.effective_num_hours
   end
 
   test 'errors in teacher reminders in send_reminder_for_upcoming_in_days do not stop batch' do
@@ -1202,32 +1244,38 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     assert_equal csp_workshops[0], Pd::Workshop.where(course: COURSE_CSP).nearest_attended_or_enrolled_in_by(teacher)
   end
 
-  test 'pilot csf201 workshop does not get exit email' do
-    skip "Skip this test from #{CSF_201_PILOT_END_DATE}" unless
-      DateTime.now < CSF_201_PILOT_END_DATE
+  test 'potential organizers' do
+    workshop_admin = create :workshop_admin
+    program_manager = create :program_manager
+    csf_facilitator = create :facilitator, course: COURSE_CSF
+    csd_facilitator = create :facilitator, course: COURSE_CSD
 
-    ended_pilot_workshop = create :pd_ended_workshop,
-      course: COURSE_CSF, subject: SUBJECT_CSF_201,
-      num_sessions: 1, sessions_from: CSF_201_PILOT_END_DATE - 1.day
+    # csf workshop has workshop admins, program managers, and other csf facilitators in list
+    csf_workshop = create :pd_workshop, course: COURSE_CSF
+    potential_organizer_ids = csf_workshop.potential_organizers.map {|org| org[:value]}
 
-    Pd::Workshop.any_instance.expects(:send_exit_surveys).never
-    Pd::Workshop.process_ended_workshop_async ended_pilot_workshop.id
-  end
+    assert potential_organizer_ids.include? workshop_admin.id
+    assert potential_organizer_ids.include? program_manager.id
+    assert potential_organizer_ids.include? csf_facilitator.id
+    # don't include other types of facilitators
+    refute potential_organizer_ids.include? csd_facilitator.id
 
-  test 'pilot csf201 workshop does not get reminder email' do
-    skip "Skip this test from #{CSF_201_PILOT_END_DATE + 7.days}" unless
-      DateTime.now < CSF_201_PILOT_END_DATE + 7.days
+    # non-csf workshop without regional partner has workshop admins and all program managers in list
+    csd_workshop = create :pd_workshop, course: COURSE_CSD
+    potential_organizer_ids = csd_workshop.potential_organizers.map {|org| org[:value]}
+    assert potential_organizer_ids.include? workshop_admin.id
+    assert potential_organizer_ids.include? program_manager.id
+    # facilitators cannot be organizers for non-csf workshops
+    refute potential_organizer_ids.include? csd_facilitator.id
 
-    create :pd_workshop, course: COURSE_CSF, subject: SUBJECT_CSF_201,
-      num_sessions: 1, sessions_from: DateTime.now
-
-    assert Pd::Workshop.scheduled_start_in_days(0).present?
-
-    Pd::WorkshopMailer.expects(:teacher_enrollment_reminder).never
-    Pd::WorkshopMailer.expects(:facilitator_enrollment_reminder).never
-    Pd::WorkshopMailer.expects(:organizer_enrollment_reminder).never
-
-    Pd::Workshop.send_reminder_for_upcoming_in_days(0)
+    # non-csf workshop with a regional partner has only that regional partner's program managers, and all workshop admins
+    workshop_partner = create :regional_partner
+    workshop_partner_program_manager = create :program_manager, regional_partner: workshop_partner
+    csd_workshop.regional_partner = workshop_partner
+    potential_organizer_ids = csd_workshop.potential_organizers.map {|org| org[:value]}
+    assert potential_organizer_ids.include? workshop_admin.id
+    assert potential_organizer_ids.include? workshop_partner_program_manager.id
+    refute potential_organizer_ids.include? program_manager.id
   end
 
   private

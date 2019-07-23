@@ -16,7 +16,6 @@ import {
 import CommandHistory from './CommandHistory';
 import {actions, selectors} from './redux';
 import color from '../../../util/color';
-import experiments from '../../../util/experiments';
 import Inspector from 'react-inspector';
 
 const DEBUG_INPUT_HEIGHT = 16;
@@ -66,12 +65,18 @@ const style = {
     flexGrow: 1,
     marginBottom: 0,
     boxShadow: 'none'
+  },
+  inspector: {
+    display: 'inline-flex'
   }
 };
 
 const WATCH_COMMAND_PREFIX = '$watch ';
 const UNWATCH_COMMAND_PREFIX = '$unwatch ';
 
+// The JS console, by default, prints 'undefined' when there is no return value.
+// We don't want that functionality and therefore don't include 'undefined' in this list.
+const FALSY_VALUES = new Set([false, null, 0, '', NaN]);
 /**
  * Set the cursor position to the end of the text content in a div element.
  * @see http://stackoverflow.com/a/6249440/5000129
@@ -116,15 +121,18 @@ export default connect(
     static propTypes = {
       // from redux
       commandHistory: PropTypes.instanceOf(CommandHistory),
-      logOutput: experiments.isEnabled('react-inspector')
-        ? PropTypes.oneOfType([PropTypes.array, PropTypes.object]).isRequired
-        : PropTypes.string.isRequired,
+      logOutput: PropTypes.oneOfType([
+        PropTypes.array,
+        PropTypes.object,
+        PropTypes.string
+      ]).isRequired,
       maxLogLevel: PropTypes.string.isRequired,
       isAttached: PropTypes.bool.isRequired,
       addWatchExpression: PropTypes.func.isRequired,
       removeWatchExpression: PropTypes.func.isRequired,
       evalInCurrentScope: PropTypes.func.isRequired,
       appendLog: PropTypes.func.isRequired,
+      jsInterpreter: PropTypes.object,
 
       // passed from above
       debugButtons: PropTypes.bool,
@@ -138,7 +146,7 @@ export default connect(
         e.preventDefault();
         this.props.commandHistory.push(input);
         e.target.value = '';
-        this.appendLog('> ' + input);
+        this.appendLog({input: input});
         if (0 === input.indexOf(WATCH_COMMAND_PREFIX)) {
           this.props.addWatchExpression(
             input.substring(WATCH_COMMAND_PREFIX.length)
@@ -149,13 +157,24 @@ export default connect(
           );
         } else if (this.props.isAttached) {
           try {
-            const result = this.props.evalInCurrentScope(input);
-            this.appendLog('< ' + String(result));
+            // parentheses prevent the object from being interpreted as a block rather than as an object
+            let result = this.props.evalInCurrentScope(
+              input[0] === '{' && input[input.length - 1] === '}'
+                ? `(${input})`
+                : input
+            );
+            result = this.props.jsInterpreter.interpreter.marshalInterpreterToNative(
+              result
+            );
+            this.appendLog({
+              output: result,
+              undefinedInput: input === 'undefined' ? true : false
+            });
           } catch (err) {
-            this.appendLog('< ' + String(err));
+            this.appendLog({output: String(err)});
           }
         } else {
-          this.appendLog('< (not running)');
+          this.appendLog({output: '(not running)'});
         }
       } else if (e.keyCode === KeyCodes.UP) {
         e.target.value = this.props.commandHistory.goBack(input);
@@ -209,13 +228,44 @@ export default connect(
       }
     }
 
+    isValidOutput(rowValue) {
+      if (rowValue.output) {
+        return true;
+      } else if (FALSY_VALUES.has(rowValue.output)) {
+        return true;
+      } else if (
+        rowValue.output === undefined &&
+        (rowValue.fromConsoleLog || rowValue.undefinedInput)
+      ) {
+        return true;
+      }
+      return false;
+    }
+
     displayOutputToConsole() {
       if (this.props.logOutput.size > 0) {
-        return this.props.logOutput.map((output, i) => {
-          if (typeof output === 'object') {
-            output = output.toJS();
+        return this.props.logOutput.map((rowValue, i) => {
+          if ('function' === typeof rowValue.toJS) {
+            rowValue = rowValue.toJS();
           }
-          return <Inspector key={i} data={output} />;
+          if (rowValue.input) {
+            return <div key={i}>&gt; {rowValue.input}</div>;
+          } else if (rowValue.skipInspector) {
+            return rowValue.output;
+          } else if (this.isValidOutput(rowValue)) {
+            if (rowValue.fromConsoleLog) {
+              return <Inspector key={i} data={rowValue.output} />;
+            } else {
+              return (
+                <div key={i}>
+                  &lt;{' '}
+                  <div style={style.inspector}>
+                    <Inspector data={rowValue.output} />
+                  </div>
+                </div>
+              );
+            }
+          }
         });
       }
     }
@@ -257,9 +307,7 @@ export default connect(
               ...this.getDebugOutputBackgroundStyle()
             }}
           >
-            {experiments.isEnabled('react-inspector')
-              ? this.displayOutputToConsole()
-              : this.props.logOutput}
+            {this.displayOutputToConsole()}
           </div>
           <div style={style.debugInputWrapper}>
             <span style={style.debugInputPrompt} onClick={this.focus}>

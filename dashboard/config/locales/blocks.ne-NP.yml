@@ -195,19 +195,6 @@ ne:
           CONDITION:
             '"when"': when
             '"while"': while
-      gamelab_spriteClickedSet:
-        options:
-          CONDITION:
-            '"when"': when
-            '"while"': while
-      gamelab_spritesWhere:
-        options:
-          PROPERTY:
-            '"scale"': size
-      gamelab_spritesWhereGenerator:
-        options:
-          PROPERTY:
-            '"scale"': size
       gamelab_turn:
         options:
           DIRECTION:
@@ -228,11 +215,6 @@ ne:
             "'down'": तल
             "'left'": बाँया
             "'right'": दाँया
-      gamelab_whenTouchingSet:
-        options:
-          CONDITION:
-            '"when"': when
-            '"while"': while
       gamelab_whileKey:
         options:
           KEY:

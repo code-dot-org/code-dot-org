@@ -1336,3 +1336,18 @@ sr:
           stages:
             Graph Paper Programming:
               name: Графиконско - Папирно Програмирање
+        csd2-pilot:
+          stages:
+            Lists:
+              name: Листе
+        csd3-pilot:
+          description_short: "Programming"
+          stages:
+            Variables:
+              name: Променљиве
+            Conditionals:
+              name: Кондиционали
+            Velocity:
+              name: Брзина
+            Functions:
+              name: Функције

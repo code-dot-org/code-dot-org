@@ -223,13 +223,11 @@ describe('project.js', () => {
 
     it('for gamelab', () => {
       window.appOptions.app = 'gamelab';
-      window.appOptions.droplet = true;
       expect(project.getStandaloneApp()).to.equal('gamelab');
     });
 
     it('for spritelab', () => {
-      window.appOptions.app = 'gamelab';
-      window.appOptions.droplet = false;
+      window.appOptions.app = 'spritelab';
       expect(project.getStandaloneApp()).to.equal('spritelab');
     });
 
@@ -773,6 +771,8 @@ function createStubSourceHandler() {
     getLevelSource: sinon.stub().resolves(),
     setInitialAnimationList: sinon.stub(),
     getAnimationList: sinon.stub().callsFake(cb => cb({})),
+    setInitialGeneratedProperties: sinon.stub(),
+    getGeneratedProperties: sinon.stub(),
     setMakerAPIsEnabled: sinon.stub(),
     getMakerAPIsEnabled: sinon.stub(),
     setSelectedSong: sinon.stub(),

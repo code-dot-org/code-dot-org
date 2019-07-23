@@ -582,18 +582,6 @@ th:
             '2': เสียงสูง
       Dancelab_whenSetup:
         text: การตั้งค่า
-      gamelab_changeColor:
-        text: เปลี่ยน {COLOR} {METHOD} จำนวน {AMOUNT}
-        options:
-          METHOD:
-            '"tint"': ระดับอ่อนสี
-      gamelab_changeColorBy:
-        text: เปลี่ยน {COLOR} {METHOD} จำนวน {AMOUNT}
-        options:
-          METHOD:
-            '"hue"': สีสัน
-            '"saturation"': ความอิ่มตัวของสี
-            '"brightness"': ความสว่าง
       gamelab_changePropBy:
         text: เปลี่ยน {SPRITE} {PROPERTY} โดย {VAL}
         options:
@@ -636,29 +624,11 @@ th:
             '"right"': ขวา
             '"space"': อวกาศ
             '"x"': x
-      gamelab_layoutSprites:
-        options:
-          FORMAT:
-            '"border"': เส้นขอบ
-            '"inner"': แถวจตุรัส
-            '"circle"': วงกลม
-            '"grid"': ตาข่าย
-            '"row"': แถว
-            '"column"': คอลัมน์
-            '"x"': กากบาท
-            '"plus"': เครื่องหมายบวก
-            '"random"': สุ่ม
-      gamelab_locationDelta:
-        options:
-          DIR:
-            "'random'": สุ่ม
       gamelab_mirrorSprite:
         options:
           DIRECTION:
             '"right"': ขวา
             '"left"': ซ้าย
-      gamelab_mixColors:
-        text: ผสม{COLOR1} กับ {COLOR2}
       gamelab_randColor:
         text: สุ่มสี
       gamelab_randomColor:
@@ -675,20 +645,6 @@ th:
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': รุ้งกินน้ำ
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': ใต้น้ำ
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': ฤดูหนาว
-      gamelab_setPosition:
-        text: ย้าย {THIS} ไป {POSITION} ตำแหน่ง
-        options:
-          POSITION:
-            "{x: 50, y: 50}": ซ้ายบน
-            "{x: 200, y: 50}": ตรงกลาง
-            "{x: 350, y: 50}": ขวาบน
-            "{x: 50, y: 200}": ซ้ายกลาง
-            "{x: 200, y: 200}": ตรงกลาง
-            "{x: 350, y: 200}": ขวากลาง
-            "{x: 50, y: 350}": ซ้ายล่าง
-            "{x: 200, y: 350}": กลางล่าง
-            "{x: 350, y: 350}": ขวาล่าง
-            '"random"': สุ่ม
       gamelab_setProp:
         options:
           PROPERTY:
@@ -705,34 +661,11 @@ th:
             '"scale"': ขนาด
             '"width"': ความกว้าง
             '"height"': ความสูง
-      gamelab_setup:
-        text: การตั้งค่า
       gamelab_spriteClicked:
         options:
           CONDITION:
             '"when"': เมื่อ (สัมผัสกัน)
             '"while"': ในขณะที่
-      gamelab_spriteClickedSet:
-        options:
-          CONDITION:
-            '"when"': เมื่อ (สัมผัสกัน)
-            '"while"': ในขณะที่
-      gamelab_spritesWhere:
-        options:
-          PROPERTY:
-            '"scale"': ขนาด
-            '"x"': อยู่ที่แกน X
-            '"y"': อยู่ที่แกน Y
-            '"direction"': ทิศทางการเคลื่อนไหว
-            '"tint"': ระดับอ่อนสี
-      gamelab_spritesWhereGenerator:
-        options:
-          PROPERTY:
-            '"scale"': ขนาด
-            '"x"': อยู่ที่แกน X
-            '"y"': อยู่ที่แกน Y
-            '"direction"': ทิศทางการเคลื่อนไหว
-            '"tint"': ระดับอ่อนสี
       gamelab_turn:
         options:
           DIRECTION:
@@ -754,11 +687,6 @@ th:
             "'down'": เป็นตำแหน่ง
             "'left'": ซ้าย
             "'right'": ขวา
-      gamelab_whenTouchingSet:
-        options:
-          CONDITION:
-            '"when"': เมื่อ (สัมผัสกัน)
-            '"while"': ในขณะที่
       gamelab_whileKey:
         options:
           KEY:

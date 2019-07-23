@@ -5,49 +5,140 @@
 # as well as instructions for levelbuilder supported levels and
 # collects them to the single source folder i18n/locales/source.
 
-require File.expand_path('../../../pegasus/src/env', __FILE__)
+require File.expand_path('../../../dashboard/config/environment', __FILE__)
 require 'fileutils'
 require 'json'
-require 'yaml'
-require 'tempfile'
 
 require_relative 'i18n_script_utils'
+require_relative 'redact_restore_utils'
+
+I18N_SOURCE_DIR = "i18n/locales/source"
 
 def sync_in
   localize_level_content
   localize_block_content
-  run_bash_script "bin/i18n-codeorg/in.sh"
+  puts "Copying source files"
+  I18nScriptUtils.run_bash_script "bin/i18n-codeorg/in.sh"
   redact_level_content
   redact_block_content
 end
 
-def copy_to_yml(label, data)
-  File.open("dashboard/config/locales/#{label}.en.yml", "w+") do |f|
-    f.write(to_crowdin_yaml({"en" => {"data" => {label => data}}}))
+def get_i18n_strings(level)
+  i18n_strings = {}
+
+  if level.is_a?(DSLDefined)
+    text = level.dsl_text
+    i18n_strings["dsls"] = level.class.dsl_class.parse(text, '')[1] if text
+  elsif level.is_a?(Level)
+    %w(
+      display_name
+      short_instructions
+      long_instructions
+      failure_message_overrides
+    ).each do |prop|
+      i18n_strings[prop] = level.try(prop)
+    end
+
+    # authored_hints
+    if level.authored_hints
+      authored_hints = JSON.parse(level.authored_hints)
+      i18n_strings['authored_hints'] = Hash.new unless authored_hints.empty?
+      authored_hints.each do |hint|
+        i18n_strings['authored_hints'][hint['hint_id']] = hint['hint_markdown']
+      end
+    end
+
+    # callouts
+    if level.callout_json
+      callouts = JSON.parse(level.callout_json)
+      i18n_strings['callouts'] = Hash.new unless callouts.empty?
+      callouts.each do |callout|
+        i18n_strings['callouts'][callout['localization_key']] = callout['callout_text']
+      end
+    end
+
+    level_xml = Nokogiri::XML(level.to_xml, &:noblanks)
+    blocks = level_xml.xpath('//blocks').first
+    if blocks
+      ## Categories
+      block_categories = blocks.xpath('//category')
+      i18n_strings['block_categories'] = Hash.new unless block_categories.empty?
+      block_categories.each do |category|
+        name = category.attr('name')
+        i18n_strings['block_categories'][name] = name if name
+      end
+
+      ## Function Names
+      functions = blocks.xpath("//block[@type=\"procedures_defnoreturn\"]")
+      i18n_strings['function_names'] = Hash.new unless functions.empty?
+      functions.each do |function|
+        name = function.at_xpath('./title[@name="NAME"]')
+        i18n_strings['function_names'][name.content] = name.content if name
+      end
+    end
   end
+
+  i18n_strings["contained levels"] = level.contained_levels.map do |contained_level|
+    get_i18n_strings(contained_level)
+  end
+
+  i18n_strings.delete_if {|_, value| value.blank?}
 end
 
-# sanitize a string before uploading to crowdin. Currently only performs
-# CRLF -> LF conversion, but could be extended to do more
-def sanitize(string)
-  return string.gsub(/\r(\n)?/, "\n")
-end
+def localize_level_content
+  puts "Localizing level content"
 
-def redact_translated_data(path, plugins = nil)
-  source = "i18n/locales/source/#{path}"
-  backup = "i18n/locales/original/#{path}"
-  FileUtils.mkdir_p(File.dirname(backup))
-  FileUtils.cp(source, backup)
-  redact(source, source, plugins)
-end
+  block_category_strings = {}
 
-def redact_block_content
-  redact_translated_data('dashboard/blocks.yml', 'blockfield')
+  # We have to run this specifically from the Rails directory because
+  # get_i18n_strings relies on level.dsl_text which relies on level.filename
+  # which relies on running a shell command
+  Dir.chdir(Rails.root) do
+    Script.all.each do |script|
+      next unless ScriptConstants.i18n? script.name
+      script_strings = {}
+      script.script_levels.each do |script_level|
+        level = script_level.oldest_active_level
+        url = I18nScriptUtils.get_level_url_key(script, level)
+        script_strings[url] = get_i18n_strings(level)
+
+        # extract block category strings; although these are defined for each
+        # level, the expectation here is that there is a massive amount of
+        # overlap between levels, so we actually want to just present these all
+        # as a single group rather than breaking them up by script
+        if script_strings[url].key? "block_categories"
+          block_category_strings.merge! script_strings[url].delete("block_categories")
+        end
+      end
+      script_strings.delete_if {|_, value| value.blank?}
+
+      script_i18n_directory = "../#{I18N_SOURCE_DIR}/course_content"
+      script_i18n_directory =
+        if script.version_year
+          File.join(script_i18n_directory, script.version_year)
+        elsif ScriptConstants.script_in_category?(:hoc, script.name)
+          File.join(script_i18n_directory, "Hour of Code")
+        else
+          File.join(script_i18n_directory, "other")
+        end
+      FileUtils.mkdir_p script_i18n_directory
+      script_i18n_filename = File.join(script_i18n_directory, "#{script.name}.json")
+      File.open(script_i18n_filename, 'w') do |file|
+        file.write(JSON.pretty_generate(script_strings))
+      end
+    end
+  end
+
+  File.open(File.join(I18N_SOURCE_DIR, "dashboard/block_categories.json"), 'w') do |file|
+    file.write(JSON.pretty_generate(block_category_strings.sort.to_h))
+  end
 end
 
 # Pull in various fields for custom blocks from .json files and save them to
 # blocks.en.yml.
 def localize_block_content
+  puts "Localizing block content"
+
   blocks = {}
 
   Dir.glob('dashboard/config/blocks/**/*.json').sort.each do |file|
@@ -71,109 +162,73 @@ def localize_block_content
     blocks[name]['options'] = args_with_options unless args_with_options.empty?
   end
 
-  copy_to_yml('blocks', blocks)
+  File.open("dashboard/config/locales/blocks.en.yml", "w+") do |f|
+    f.write(I18nScriptUtils.to_crowdin_yaml({"en" => {"data" => {"blocks" => blocks}}}))
+  end
+end
+
+def select_redactable(i18n_strings)
+  redactable_content = %w(
+    authored_hints
+    long_instructions
+    short_instructions
+  )
+
+  redactable = i18n_strings.select do |key, _|
+    redactable_content.include? key
+  end
+
+  if i18n_strings.key? "contained levels"
+    contained_levels = i18n_strings["contained levels"].map do |contained_level|
+      select_redactable(contained_level)
+    end
+    contained_levels.select! do |result|
+      !result.blank?
+    end
+    redactable["contained levels"] = contained_levels unless contained_levels.empty?
+  end
+
+  redactable.delete_if {|_k, v| v.blank?}
+end
+
+def redact_level_file(source_path)
+  return unless File.exist? source_path
+  source_data = JSON.load(File.open(source_path))
+  return if source_data.blank?
+
+  redactable_data = source_data.map do |level_url, i18n_strings|
+    [level_url, select_redactable(i18n_strings)]
+  end.to_h
+
+  backup_path = source_path.sub("source", "original")
+  FileUtils.mkdir_p File.dirname(backup_path)
+  File.open(backup_path, "w") do |file|
+    file.write(JSON.pretty_generate(redactable_data))
+  end
+
+  redacted_data = RedactRestoreUtils.redact_data(redactable_data)
+
+  File.open(source_path, 'w') do |source_file|
+    source_file.write(JSON.pretty_generate(source_data.deep_merge(redacted_data)))
+  end
 end
 
 def redact_level_content
-  %w(
-    authored_hints
-    short_instructions
-    long_instructions
-  ).each do |content_type|
-    redact_translated_data("dashboard/#{content_type}.yml")
+  puts "Redacting level content"
+
+  Dir.glob(File.join(I18N_SOURCE_DIR, "course_content/**/*.json")).each do |source_path|
+    redact_level_file(source_path)
   end
 end
 
-# Pull in various fields for levelbuilder levels from .level files and
-# save them to [field_name].en.yml files to be translated. Fields included:
-#   short instructions
-#   long instructions
-#   failure message override
-#   authored hints
-#   callouts
-#
-# See Blockly.get_localized_property in dashboard models for usage
-def localize_level_content
-  level_display_name = Hash.new
-  level_short_instructions = Hash.new
-  level_long_instructions = Hash.new
-  level_failure_message_overrides = Hash.new
-  level_authored_hints = Hash.new
-  level_callouts = Hash.new
-  level_block_categories = Hash.new
-  level_function_names = Hash.new
+def redact_block_content
+  puts "Redacting block content"
 
-  Dir.glob("dashboard/config/scripts/levels/*.level").sort.each do |file|
-    level_name = File.basename(file, ".*")
-    File.open(file) do |data|
-      level_xml = Nokogiri::XML(data, &:noblanks)
-
-      # Properties
-      config = JSON.parse(level_xml.xpath('//../config').first.text)
-      next unless config["properties"]
-
-      ## Display Name
-      if display_name = config["properties"]["display_name"]
-        level_display_name[level_name] = sanitize(display_name)
-      end
-
-      ## Instructions
-      if short_instructions = (config["properties"]["short_instructions"] || config["properties"]["instructions"])
-        level_short_instructions[level_name] = sanitize(short_instructions)
-      end
-
-      ## Markdown Instructions
-      if long_instructions = (config["properties"]["long_instructions"] || config["properties"]["markdown_instructions"])
-        level_long_instructions[level_name] = sanitize(long_instructions)
-      end
-
-      ## Failure message overrides
-      if failure_message_overrides = config["properties"]["failure_message_override"]
-        level_failure_message_overrides["#{level_name}_failure_message_override"] = sanitize(failure_message_overrides)
-      end
-
-      ## Authored Hints
-      if authored_hints_json = config["properties"]["authored_hints"]
-        level_authored_hints["#{level_name}_authored_hint"] = JSON.parse(authored_hints_json).reduce({}) do |memo, hint|
-          memo[hint['hint_id']] = hint['hint_markdown'] unless hint['hint_id'].empty?
-          memo
-        end
-      end
-
-      ## Callouts
-      if callouts_json = config["properties"]["callout_json"]
-        level_callouts["#{level_name}_callout"] = JSON.parse(callouts_json).reduce({}) do |memo, callout|
-          memo[callout['localization_key']] = callout['callout_text'] unless callout['localization_key'].empty?
-          memo
-        end
-      end
-
-      # Blocks
-      blocks = level_xml.xpath('//blocks').first
-      if blocks
-        ## Categories
-        blocks.xpath('//category').each do |category|
-          name = category.attr('name')
-          level_block_categories[name] = name if name
-        end
-
-        ## Function Names
-        blocks.xpath("//block[@type=\"procedures_defnoreturn\"]").each do |function|
-          name = function.at_xpath('./title[@name="NAME"]')
-          level_function_names[name.content] = name.content if name
-        end
-      end
-    end
-  end
-
-  copy_to_yml("display_name", level_display_name)
-  copy_to_yml("short_instructions", level_short_instructions)
-  copy_to_yml("long_instructions", level_long_instructions)
-  copy_to_yml("failure_message_overrides", level_failure_message_overrides)
-  copy_to_yml("authored_hints", level_authored_hints)
-  copy_to_yml("callouts", level_callouts)
-  copy_to_yml("block_categories", level_block_categories)
-  copy_to_yml("function_names", level_function_names)
+  source = File.join(I18N_SOURCE_DIR, "dashboard/blocks.yml")
+  backup = source.sub("source", "original")
+  FileUtils.mkdir_p(File.dirname(backup))
+  FileUtils.cp(source, backup)
+  RedactRestoreUtils.redact(source, source, ['blockfield'], 'txt')
 end
 
 sync_in if __FILE__ == $0

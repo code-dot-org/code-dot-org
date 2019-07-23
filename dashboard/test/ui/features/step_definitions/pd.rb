@@ -462,7 +462,9 @@ end
 def create_enrollment(workshop, name=nil)
   first_name = name.nil? ? "First - #{SecureRandom.hex}" : name
   last_name = name.nil? ? "Last - #{SecureRandom.hex}" : "Last"
-  user = FactoryGirl.create :teacher
+  user = Retryable.retryable(on: [ActiveRecord::RecordInvalid], tries: 5) do
+    FactoryGirl.create :teacher
+  end
   enrollment = Pd::Enrollment.create!(
     first_name: first_name,
     last_name: last_name,

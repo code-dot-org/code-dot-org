@@ -963,3 +963,16 @@ bn:
           stages:
             Graph Paper Programming:
               name: ছক-কাগজে প্রোগ্রামিং
+        csd2-pilot:
+          stages:
+            Lists:
+              name: তালিকা
+        csd3-pilot:
+          description_short: প্রোগ্রামিং
+          stages:
+            Variables:
+              name: চলকগুলো
+            Conditionals:
+              name: শর্তযুক্ত
+            Functions:
+              name: ফাংশনগুলি

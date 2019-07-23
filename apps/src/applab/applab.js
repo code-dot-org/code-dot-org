@@ -5,6 +5,8 @@
  *
  */
 import $ from 'jquery';
+import cookies from 'js-cookie';
+import _ from 'lodash';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {singleton as studioApp} from '../StudioApp';
@@ -73,7 +75,12 @@ import experiments from '../util/experiments';
 import header from '../code-studio/header';
 import {TestResults, ResultType} from '../constants';
 import i18n from '../code-studio/i18n';
-import {generateExpoApk} from '../util/exporter';
+import {
+  expoGenerateApk,
+  expoCheckApkBuild,
+  expoCancelApkBuild
+} from '../util/exporter';
+import {setExportGeneratedProperties} from '../code-studio/components/exportDialogRedux';
 
 /**
  * Create a namespace for the application.
@@ -97,10 +104,12 @@ var jsInterpreterLogger = null;
  */
 Applab.log = function(object, logLevel) {
   if (jsInterpreterLogger) {
-    jsInterpreterLogger.log(object);
+    jsInterpreterLogger.log({output: object, fromConsoleLog: true});
   }
 
-  getStore().dispatch(jsDebugger.appendLog(object, logLevel));
+  getStore().dispatch(
+    jsDebugger.appendLog({output: object, fromConsoleLog: true}, logLevel)
+  );
 };
 consoleApi.setLogMethod(Applab.log);
 
@@ -175,6 +184,7 @@ function shouldRenderFooter() {
 Applab.makeFooterMenuItems = function(isIframeEmbed) {
   const footerMenuItems = [
     window.location.search.indexOf('nosource') < 0 && {
+      key: 'how-it-works',
       text: i18n.t('footer.how_it_works'),
       link: project.getProjectUrl('/view'),
       newWindow: true
@@ -185,6 +195,7 @@ Applab.makeFooterMenuItems = function(isIframeEmbed) {
         link: '/projects/applab/new'
       },
     {
+      key: 'report-abuse',
       text: commonMsg.reportAbuse(),
       link: '/report_abuse',
       newWindow: true
@@ -200,6 +211,20 @@ Applab.makeFooterMenuItems = function(isIframeEmbed) {
       newWindow: true
     }
   ].filter(item => item);
+
+  var userAlreadyReportedAbuse =
+    cookies.get('reported_abuse') &&
+    _.includes(
+      JSON.parse(cookies.get('reported_abuse')),
+      project.getCurrentId()
+    );
+
+  if (userAlreadyReportedAbuse) {
+    _.remove(footerMenuItems, function(menuItem) {
+      return menuItem.key === 'report-abuse';
+    });
+  }
+
   return footerMenuItems;
 };
 
@@ -368,6 +393,14 @@ Applab.init = function(config) {
   // Necessary for tests.
   thumbnailUtils.init();
 
+  Applab.generatedProperties = {
+    ...config.initialGeneratedProperties
+  };
+  getStore().dispatch(
+    setExportGeneratedProperties(Applab.generatedProperties.export)
+  );
+  config.getGeneratedProperties = getGeneratedProperties;
+
   // replace studioApp methods with our own
   studioApp().reset = this.reset.bind(this);
   studioApp().runButtonClick = this.runButtonClick.bind(this);
@@ -383,11 +416,6 @@ Applab.init = function(config) {
       start_blocks: Applab.getCode(),
       start_html: Applab.getHtml()
     }));
-  } else if (!config.channel) {
-    throw new Error(
-      'Cannot initialize App Lab without a channel id. ' +
-        'You may need to sign in to your code studio account first.'
-    );
   }
   Applab.channelId = config.channel;
   Applab.storage = initFirebaseStorage({
@@ -543,11 +571,7 @@ Applab.init = function(config) {
 
   config.enableShowLinesCount = false;
 
-  // In Applab, we want our embedded levels to look the same as regular levels,
-  // just without the editor
-  config.centerEmbedded = false;
   config.wireframeShare = true;
-  config.responsiveEmbedded = true;
 
   // Provide a way for us to have top pane instructions disabled by default, but
   // able to turn them on.
@@ -624,6 +648,21 @@ Applab.init = function(config) {
     channelId: config.channel,
     allowExportExpo: experiments.isEnabled('exportExpo'),
     exportApp: Applab.exportApp,
+    expoGenerateApk: expoGenerateApk.bind(
+      null,
+      config.expoSession,
+      Applab.setAndroidExportProps
+    ),
+    expoCheckApkBuild: expoCheckApkBuild.bind(
+      null,
+      config.expoSession,
+      Applab.setAndroidExportProps
+    ),
+    expoCancelApkBuild: expoCancelApkBuild.bind(
+      null,
+      config.expoSession,
+      Applab.setAndroidExportProps
+    ),
     nonResponsiveVisualizationColumnWidth: applabConstants.APP_WIDTH,
     visualizationHasPadding: !config.noPadding,
     hasDataMode: !config.level.hideViewDataButton,
@@ -834,33 +873,36 @@ Applab.render = function() {
   );
 };
 
+/**
+ * Export the project for web or use within Expo.
+ * @param {Object} expoOpts
+ */
 Applab.exportApp = function(expoOpts) {
+  // Run, grab the html from divApplab, then reset:
   Applab.runButtonClick();
   var html = document.getElementById('divApplab').outerHTML;
   studioApp().resetButtonClick();
 
-  // TODO: find another way to get this info that doesn't rely on globals.
-  const appName = project.getCurrentName() || 'my-app';
-
-  const {mode, expoSnackId, iconUri, splashImageUri} = expoOpts || {};
-  if (mode === 'expoGenerateApk') {
-    return generateExpoApk(
-      {
-        appName,
-        expoSnackId,
-        iconUri,
-        splashImageUri
-      },
-      studioApp().config
-    );
-  }
-
   return Exporter.exportApp(
-    appName,
+    project.getCurrentName() || 'my-app',
     studioApp().editor.getValue(),
     html,
     expoOpts,
     studioApp().config
+  );
+};
+
+Applab.setAndroidExportProps = function(props) {
+  // Spread the previous object so changes here will always fail shallow
+  // compare and trigger react prop changes
+  Applab.generatedProperties.export = {
+    ...Applab.generatedProperties.export,
+    android: props
+  };
+  project.projectChanged();
+  project.saveIfSourcesChanged();
+  getStore().dispatch(
+    setExportGeneratedProperties(Applab.generatedProperties.export)
   );
 };
 
@@ -1088,6 +1130,14 @@ Applab.onReportComplete = function(response) {
   studioApp().onReportComplete(response);
   displayFeedback();
 };
+
+function getGeneratedProperties() {
+  // Must return a new object instance each time so the project
+  // system can properly compare currentSources vs newSources
+  return {
+    ...Applab.generatedProperties
+  };
+}
 
 /**
  * Execute the app

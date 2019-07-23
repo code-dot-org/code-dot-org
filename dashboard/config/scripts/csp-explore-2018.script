@@ -11,6 +11,7 @@ family_name 'csp-explore'
 version_year '2018'
 is_stable true
 project_sharing true
+curriculum_umbrella 'CSP'
 
 stage 'Explore PT Prep - Reviewing the Task', flex_category: 'csp_ap_2'
 level 'CSP ExploreL01 SFLP', named: true

@@ -1,9 +1,10 @@
-import {assert} from '../../../util/configuredChai';
+import {assert} from '../../../util/reconfiguredChai';
 import {stub} from 'sinon';
 import React from 'react';
 import {shallow} from 'enzyme';
 import StageExtrasProgressBubble from '@cdo/apps/templates/progress/StageExtrasProgressBubble';
 import * as utils from '@cdo/apps/utils';
+import color from '@cdo/apps/util/color';
 
 const defaultProps = {
   stageExtrasUrl: '/extras',
@@ -36,9 +37,12 @@ describe('StageExtrasProgressBubble', () => {
 
   it('has a grey flag icon when not current level', () => {
     const wrapper = shallow(<StageExtrasProgressBubble {...defaultProps} />);
-    assert.match(
-      wrapper.find('a').props().style.backgroundImage,
-      /flag_inactive.png/
+    assert.equal(
+      wrapper
+        .find('i')
+        .at(1)
+        .props().style.color,
+      color.lighter_gray
     );
   });
 
@@ -46,9 +50,12 @@ describe('StageExtrasProgressBubble', () => {
     const wrapper = shallow(
       <StageExtrasProgressBubble {...defaultProps} onStageExtras={true} />
     );
-    assert.match(
-      wrapper.find('a').props().style.backgroundImage,
-      /flag_active.png/
+    assert.equal(
+      wrapper
+        .find('i')
+        .at(1)
+        .props().style.color,
+      color.level_perfect
     );
   });
 });

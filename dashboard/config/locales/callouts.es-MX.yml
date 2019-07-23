@@ -2,1834 +2,1256 @@
 es-MX:
   data:
     callouts:
-      2-3 Artist Debugging 1_callout:
+      2-3 Artist Debugging 1:
         2-3_Artist_Debugging_1_a: El Artista no tiene un botón para ir "Paso" a "Paso",
           pero puedes arrastrar el control deslizante de la izquierda para ver tu
           programa ejecutarse más cuidadosamente.
-      2-3 Bee Conditionals 5_callout:
+      2-3 Bee Conditionals 5:
         Bee_Cond_5_1a: Las flores de color púrpura pueden tener néctar ya sea 1 o
           0... pero no lo sabes hasta que se ejecuta el código!
-      4-5 Artist Patterns Free Play_callout:
+      4-5 Artist Patterns Free Play:
         4-5_Artist_Patterns_Free_Play_1: Ahora todos tus bloques favoritos se organizan
           en categorías.  ¡Haz click sobre estas palabras para verlo todo!
-      4-5 Bee Conditionals - FC Test_callout:
+      4-5 Bee Conditionals 2:
         4_5_Bee_Conditionals_2_1: Recuerda, revisa si CADA nube tiene una FLOR. No
           tienes que revisar las colmenas.
-      4-5 Bee Conditionals 2_callout:
-        4_5_Bee_Conditionals_2_1: Recuerda, revisa si CADA nube tiene una FLOR. No
-          tienes que revisar las colmenas.
-      AppLab Intro 2 - Edit place1 2_callout:
-        dragTextAreaIn: Haz clic y arrastra un "Área de texto" en la pantalla
-        screenSelectorCallout3: Elige la pantalla que creaste
-      AppLab Intro 2 - Edit place1_callout:
-        screenSelectorCallout2: Este es el seleccionador de pantalla
-        changePlace1ID: Cambia la identificación de tu pantalla aquí.
-      AppLab Intro 2 - Edit startScreen_callout:
-        applabIntro2_1: Haz click en el título de tu aplicación
-        appLabIntro2_designMenu: Usa estos menús para cambiar el "texto" de tu aplicación
-        appLabIntro2_textColor: Desplázate hacia abajo para cambiar el "color del
-          texto"
-      AppLab Intro 2 - Edit startScreen2_callout:
-        applabIntro2storyText: Haz click en el texto de la historia en esta pantalla
-        appLabIntro2_editStoryText: Arrastra la esquina inferior derecha de este cuadro
-          de texto para obtener más espacio. Luego completa el texto de tu historia
-        appLabIntro2_textColor: Prueba algunas de las diferentes propiedades que puedes
-          cambiar a continuación
-      AppLab Intro 2 - add Button_callout:
-        designToolboxCallOut: Arrastra un botón en tu pantalla.
-        changeButtonID: Elije un "id" claro para tu botón. Por ejemplo, "llamarCampoBoton"
-          o "irABotonExterno"
-        screenSelectorCallout3: Ve a tu "pantalla de inicio"
-      AppLab Intro 2 - add onEvent_callout:
-        onEventFirstTime: Haz click y arrastra un bloque "onEvent" en el espacio de
-          trabajo a la derecha
-        setScreenFirstTime: Haz click y arrastra hacia el espacio en tu bloque "onEvent"
-      AppLab Intro 7 - Change Screen Color_callout:
+      AppLab Intro 7 - Change Screen Color:
         applab_hoc_finish: "¿La pantalla se volvió verde? Si es así, presiona 'Finalizar'.
           Si no, presiona 'Restablecer', cambia tu código y presiona 'Ejecutar' nuevamente."
-      AppLab Intro 7 - thisOrThatAddButton_callout:
+      AppLab Intro 7 - thisOrThatAddButton:
         AppLabHoCFinal11: Ahora estás en modo de diseño.
-      CSD U3 Variables Predict Where X_callout:
+      CSD U3 - conditionals - transition:
+        CSD_U3_L8_S6_C1: Pon la instrucción de registro de la consola aquí
+      CSD U3 - conditionals - transition_2018:
+        CSD_U3_L8_S6_C1: Pon la instrucción de registro de la consola aquí
+      CSD U3 - conditionals - transition_2019:
+        CSD_U3_L8_S6_C1: Pon la instrucción de registro de la consola aquí
+      CSD U3 Boolean Predict:
+        '': Este programa imprimirá un resultado aquí
+      CSD U3 Boolean Predict_2018:
+        '': Este programa imprimirá un resultado aquí
+      CSD U3 Boolean Predict_2019:
+        '': Este programa imprimirá un resultado aquí
+      CSD U3 Sprites anitab 1:
+        '': Haz clic aquí para abrir la pestaña Animación
+      CSD U3 Sprites anitab 1_2018:
+        '': Haz clic aquí para abrir la pestaña Animación
+      CSD U3 Sprites anitab 1_2019:
+        '': Haz clic aquí para abrir la pestaña Animación
+      CSD U3 Sprites intro sprites:
+        '': Usa este bloque para crear un sprite
+      CSD U3 Sprites intro sprites_2018:
+        '': Usa este bloque para crear un sprite
+      CSD U3 Sprites intro sprites_2019:
+        '': Usa este bloque para crear un sprite
+      CSD U3 Sprites text:
+        '': Usa este bloque para poner texto en la pantalla
+      CSD U3 Sprites text_2018:
+        '': Usa este bloque para poner texto en la pantalla
+      CSD U3 Sprites text_2019:
+        '': Usa este bloque para poner texto en la pantalla
+      CSD U3 UP_ARROW:
+        '': Agrega una sentencia si y coloca tu código de movimiento dentro de ella
+      CSD U3 UP_ARROW_2018:
+        '': Agrega una sentencia si y coloca tu código de movimiento dentro de ella
+      CSD U3 UP_ARROW_2018_2019:
+        '': Agrega una sentencia si y coloca tu código de movimiento dentro de ella
+      CSD U3 Variables Predict Where X:
         CSD_U3_variables: Cambia el número aquí
-      CSD U3 Variables Predict Where XY Embed_callout:
+      CSD U3 Variables Predict Where XY:
         grid: Haz click aquí para mostrar la cuadrícula.
-      CSD U3 Variables Predict Where XY Embed_2018_callout:
+      CSD U3 Variables Predict Where XY_2018:
         grid: Haz click aquí para mostrar la cuadrícula.
-      CSD U3 Variables Predict Where XY Embed_2019_callout:
+      CSD U3 Variables Predict Where XY_2019:
         grid: Haz click aquí para mostrar la cuadrícula.
-      CSD U3 Variables Predict Where XY_callout:
-        grid: Haz click aquí para mostrar la cuadrícula.
-      CSD U3 Variables Predict Where XY_2018_callout:
-        grid: Haz click aquí para mostrar la cuadrícula.
-      CSD U3 Variables Predict Where XY_2019_callout:
-        grid: Haz click aquí para mostrar la cuadrícula.
-      CSD U3 Variables Predict Where X_2018_callout:
+      CSD U3 Variables Predict Where X_2018:
         CSD_U3_variables: Cambia el número aquí
-      CSD U3 Variables Predict Where X_2019_callout:
+      CSD U3 Variables Predict Where X_2019:
         CSD_U3_variables: Cambia el número aquí
-      CSD U3 debug_callout:
+      CSD U3 abstraction accelerateX:
+        CSD_U3_L11_S6_C1: Agrega tu código aquí.
+      CSD U3 abstraction accelerateX_2018:
+        CSD_U3_L11_S6_C1: Agrega tu código aquí.
+      CSD U3 abstraction accelerateX_2019:
+        CSD_U3_L11_S6_C1: Agrega tu código aquí.
+      CSD U3 abstraction accelerateY:
+        CSD_U3_L11_S7_C1: Agrega tu código aquí.
+      CSD U3 abstraction accelerateY_2018:
+        CSD_U3_L11_S7_C1: Agrega tu código aquí.
+      CSD U3 abstraction accelerateY_2019:
+        CSD_U3_L11_S7_C1: Agrega tu código aquí.
+      CSD U3 abstraction jump:
+        CSD_U3_L11_S17_C1: Observa esta sentencia si
+        CSD_U3_L11_S17_C2: Envía la rana de vuelta aquí
+      CSD U3 abstraction jump_2018:
+        CSD_U3_L11_S17_C1: Observa esta sentencia si
+        CSD_U3_L11_S17_C2: Envía la rana de vuelta aquí
+      CSD U3 abstraction jump_2018_2019:
+        CSD_U3_L11_S17_C1: Observa esta sentencia si
+        CSD_U3_L11_S17_C2: Envía la rana de vuelta aquí
+      CSD U3 abstraction jumping:
+        CSD_U3_L13_S8_C1: Establece la velocidad aquí
+      CSD U3 abstraction jumping_2018:
+        CSD_U3_L13_S8_C1: Establece la velocidad aquí
+      CSD U3 abstraction jumping_2019:
+        CSD_U3_L13_S8_C1: Establece la velocidad aquí
+      CSD U3 abstraction looping:
+        CSD_U3_L11_S17_C1: Observa esta sentencia si
+      CSD U3 abstraction looping_2018:
+        CSD_U3_L11_S17_C1: Observa esta sentencia si
+      CSD U3 abstraction looping_2019:
+        CSD_U3_L11_S17_C1: Observa esta sentencia si
+      CSD U3 abstraction rotation:
+        CSD_U3_L11_S4_C1: Usa el bloque velocidadRotación aquí
+      CSD U3 abstraction rotation control:
+        CSD_U3_L11_S5_C1: Observa este código.
+      CSD U3 abstraction rotation control_2018:
+        CSD_U3_L11_S5_C1: Observa este código.
+      CSD U3 abstraction rotation control_2019:
+        CSD_U3_L11_S5_C1: Observa este código.
+      CSD U3 abstraction rotation_2018:
+        CSD_U3_L11_S4_C1: Usa el bloque velocidadRotación aquí
+      CSD U3 abstraction rotation_2019:
+        CSD_U3_L11_S4_C1: Usa el bloque velocidadRotación aquí
+      CSD U3 abstraction tumbleweed:
+        CSD_U3_L11_S17_C1: Observa esta sentencia si
+      CSD U3 abstraction tumbleweed_2018:
+        CSD_U3_L11_S17_C1: Observa esta sentencia si
+      CSD U3 abstraction tumbleweed_2019:
+        CSD_U3_L11_S17_C1: Observa esta sentencia si
+      CSD U3 abstraction velocityX:
+        CSD_U3_L11_S4_C1: Agrega tu bloque aquí.
+      CSD U3 abstraction velocityX control:
+        CSD_U3_L11_S5_C1: Observa este código.
+      CSD U3 abstraction velocityX control_2018:
+        CSD_U3_L11_S5_C1: Observa este código.
+      CSD U3 abstraction velocityX control_2019:
+        CSD_U3_L11_S5_C1: Observa este código.
+      CSD U3 abstraction velocityX if-statements:
+        CSD_U3_L11_S5_C1: Observa este código.
+      CSD U3 abstraction velocityX if-statements_2018:
+        CSD_U3_L11_S5_C1: Observa este código.
+      CSD U3 abstraction velocityX if-statements_2019:
+        CSD_U3_L11_S5_C1: Observa este código.
+      CSD U3 abstraction velocityX_2018:
+        CSD_U3_L11_S4_C1: Agrega tu bloque aquí.
+      CSD U3 abstraction velocityX_2019:
+        CSD_U3_L11_S4_C1: Agrega tu bloque aquí.
+      CSD U3 abstraction velocityY:
+        CSD_U3_L11_S5_C1: Agrega tu bloque aquí.
+      CSD U3 abstraction velocityY control:
+        CSD_U3_L11_S5_C1: Observa este código.
+      CSD U3 abstraction velocityY control_2018:
+        CSD_U3_L11_S5_C1: Observa este código.
+      CSD U3 abstraction velocityY control_2019:
+        CSD_U3_L11_S5_C1: Observa este código.
+      CSD U3 abstraction velocityY_2018:
+        CSD_U3_L11_S5_C1: Agrega tu bloque aquí.
+      CSD U3 abstraction velocityY_2019:
+        CSD_U3_L11_S5_C1: Agrega tu bloque aquí.
+      CSD U3 collisions isTouching intro:
+        CSD_U3_L12_S2_C1: Agrega tu bloque aquí.
+      CSD U3 collisions isTouching intro_2018:
+        CSD_U3_L12_S2_C1: Agrega tu bloque aquí.
+      CSD U3 collisions isTouching intro_2019:
+        CSD_U3_L12_S2_C1: Agrega tu bloque aquí.
+      CSD U3 collisions scoreboard:
+        CSD_U3_L12_S8_C1: Estos bloques muestran la puntuación.
+        CSD_U3_L12_S8_C2: Los bloques que determinan si el conejito atrapó la zanahoria
+          van aquí.
+      CSD U3 collisions scoreboard_2018:
+        CSD_U3_L12_S8_C1: Estos bloques muestran la puntuación.
+        CSD_U3_L12_S8_C2: Los bloques que determinan si el conejito atrapó la zanahoria
+          van aquí.
+      CSD U3 collisions scoreboard_2019:
+        CSD_U3_L12_S8_C1: Estos bloques muestran la puntuación.
+        CSD_U3_L12_S8_C2: Los bloques que determinan si el conejito atrapó la zanahoria
+          van aquí.
+      CSD U3 collisions try blocks:
+        CSD_U3_L13_S6_C1: Cambia este bloque.
+      CSD U3 collisions try blocks_2018:
+        CSD_U3_L13_S6_C1: Cambia este bloque.
+      CSD U3 collisions try blocks_2019:
+        CSD_U3_L13_S6_C1: Cambia este bloque.
+      CSD U3 collisions types:
+        CSD_U3_L13_S6_C1: Agrega tu código aquí.
+      CSD U3 collisions types_2018:
+        CSD_U3_L13_S6_C1: Agrega tu código aquí.
+      CSD U3 collisions types_2019:
+        CSD_U3_L13_S6_C1: Agrega tu código aquí.
+      CSD U3 debug:
         CSD_U3_rect_c1: Aquí está el código
         CSD_U3_rect_c2: Arrastra este bloque dentro del área de código.
-      CSD U3 debug_2018_callout:
+      CSD U3 debug_2018:
         CSD_U3_rect_c1: Aquí está el código
         CSD_U3_rect_c2: Arrastra este bloque dentro del área de código.
-      CSD U3 debug_2019_callout:
+      CSD U3 debug_2019:
         CSD_U3_rect_c1: Aquí está el código
         CSD_U3_rect_c2: Arrastra este bloque dentro del área de código.
-      CSD U3 ellipse_callout:
+      CSD U3 ellipse:
         CSD_U3_rect_c1: Aquí está el código
         CSD_U3_rect_c2: Arrastra este bloque dentro del área de código.
-      CSD U3 ellipse_2018_callout:
+      CSD U3 ellipse_2018:
         CSD_U3_rect_c1: Aquí está el código
         CSD_U3_rect_c2: Arrastra este bloque dentro del área de código.
-      CSD U3 ellipse_2019_callout:
+      CSD U3 ellipse_2019:
         CSD_U3_rect_c1: Aquí está el código
         CSD_U3_rect_c2: Arrastra este bloque dentro del área de código.
-      CSD U3 fill_callout:
+      CSD U3 fill:
         CSD_U3_rect_c1: Aquí está el código
         CSD_U3_rect_c2: Arrastra este bloque dentro del área de código.
-      CSD U3 fill_2018_callout:
+      CSD U3 fill_2018:
         CSD_U3_rect_c1: Aquí está el código
         CSD_U3_rect_c2: Arrastra este bloque dentro del área de código.
-      CSD U3 fill_2019_callout:
+      CSD U3 fill_2019:
         CSD_U3_rect_c1: Aquí está el código
         CSD_U3_rect_c2: Arrastra este bloque dentro del área de código.
-      CSD U3 my-rect_callout:
+      CSD U3 game backgrounds:
+        CSD_U3_S18_L4_C1: Este bloque llama a tu función.
+        CSD_U3_L18_S4_C2: Área de funciones
+      CSD U3 game backgrounds_2018:
+        CSD_U3_S18_L4_C1: Este bloque llama a tu función.
+        CSD_U3_L18_S4_C2: Área de funciones
+      CSD U3 game backgrounds_2019:
+        CSD_U3_S18_L4_C1: Este bloque llama a tu función.
+        CSD_U3_L18_S4_C2: Área de funciones
+      CSD U3 game variables:
+        CSD_U3_S18_L3_C1: Este bloque crea una nueva variable.
+        CSD_U3_L18_S3_C2: Área de variables
+      CSD U3 game variables_2018:
+        CSD_U3_S18_L3_C1: Este bloque crea una nueva variable.
+        CSD_U3_L18_S3_C2: Área de variables
+      CSD U3 game variables_2019:
+        CSD_U3_S18_L3_C1: Este bloque crea una nueva variable.
+        CSD_U3_L18_S3_C2: Área de variables
+      CSD U3 keydown conditional:
+        '': Agrega tu bloque dentro de esta sentencia si
+      CSD U3 keydown conditional_2018:
+        '': Agrega tu bloque dentro de esta sentencia si
+      CSD U3 keydown conditional_2018_2019:
+        '': Agrega tu bloque dentro de esta sentencia si
+      CSD U3 platform background1:
+        CSD_U3_L16_S3_C1: la función que dibuja el fondo
+        CSD_U3_L16_S3_C2: el código que llama a la función
+        CSD_U3_L16_S3_C3: Cambia esta función.
+      CSD U3 platform background1_2018:
+        CSD_U3_L16_S3_C1: la función que dibuja el fondo
+        CSD_U3_L16_S3_C2: el código que llama a la función
+        CSD_U3_L16_S3_C3: Cambia esta función.
+      CSD U3 platform background1_2019:
+        CSD_U3_L16_S3_C1: la función que dibuja el fondo
+        CSD_U3_L16_S3_C2: el código que llama a la función
+        CSD_U3_L16_S3_C3: Cambia esta función.
+      CSD U3 platform platform1:
+        CSD_U3_S17_L8_C1: Este bloque crea un nuevo sprite.
+      CSD U3 platform platform1_2018:
+        CSD_U3_S17_L8_C1: Este bloque crea un nuevo sprite.
+      CSD U3 platform platform1_2019:
+        CSD_U3_S17_L8_C1: Este bloque crea un nuevo sprite.
+      CSD U3 platform scoreboard:
+        CSD_U3_L17_S7_C1: La puntuación se imprime aquí.
+      CSD U3 platform scoreboard_2018:
+        CSD_U3_L17_S7_C1: La puntuación se imprime aquí.
+      CSD U3 platform scoreboard_2019:
+        CSD_U3_L17_S7_C1: La puntuación se imprime aquí.
+      CSD U3 platform variable1:
+        callout: Este bloque crea una variable.
+      CSD U3 platform variable1_2018:
+        callout: Este bloque crea una variable.
+      CSD U3 platform variable1_2019:
+        callout: Este bloque crea una variable.
+      CSD U3 rect:
         CSD_U3_rect_c1: Aquí está el código
         CSD_U3_rect_c2: Éste es el botón "Ejecutar".
-      CSD U3 rect_callout:
+      CSD U3 rect_2018:
         CSD_U3_rect_c1: Aquí está el código
-        CSD_U3_rect_c2: Éste es el botón "Ejecutar".
-      CSD U3 rect_2018_callout:
+      CSD U3 rect_2019:
         CSD_U3_rect_c1: Aquí está el código
-      CSD U3 rect_2019_callout:
-        CSD_U3_rect_c1: Aquí está el código
-      CSD U3 sequence_callout:
+      CSD U3 sequence:
         CSD_U3_rect_c1: Aquí está el código
         CSD_U3_rect_c2: Arrastra este bloque dentro del área de código.
-      CSD U3 sequence_2018_callout:
+      CSD U3 sequence_2018:
         CSD_U3_rect_c1: Aquí está el código
         CSD_U3_rect_c2: Arrastra este bloque dentro del área de código.
-      CSD U3 sequence_2019_callout:
+      CSD U3 sequence_2019:
         CSD_U3_rect_c1: Aquí está el código
         CSD_U3_rect_c2: Arrastra este bloque dentro del área de código.
-      CSD U6 colorLeds intensity_callout:
+      CSD U6 colorLeds intensity:
         CSDU6L10_rainbow: Agrega tu código aquí
-      CSD U6 colorLeds intensity_2018_callout:
+      CSD U6 colorLeds intensity_2018:
         CSDU6L10_rainbow: Agrega tu código aquí
-      CSD U6 colorLeds intensity_2019_callout:
+      CSD U6 colorLeds intensity_2019:
         CSDU6L10_rainbow: Agrega tu código aquí
-      CSD U6 light show predict_callout:
+      CSD U6 getProperty input:
+        CSD_U6L06P03: Agrega tu bloque aquí.
+      CSD U6 getProperty input_2018:
+        CSD_U6L06P03: Agrega tu bloque aquí.
+      CSD U6 getProperty input_2019:
+        CSD_U6L06P03: Agrega tu bloque aquí.
+      CSD U6 light show:
         CSDUDL03P09: "¿Qué hace esta línea?"
-      CSD U6 light show predict_2018_callout:
+      CSD U6 light show_2018:
         CSDUDL03P09: "¿Qué hace esta línea?"
-      CSD U6 light show predict_2019_callout:
+      CSD U6 light show_2019:
         CSDUDL03P09: "¿Qué hace esta línea?"
-      CSD U6 light show_callout:
-        CSDUDL03P09: "¿Qué hace esta línea?"
-      CSD U6 light show_2018_callout:
-        CSDUDL03P09: "¿Qué hace esta línea?"
-      CSD U6 light show_2019_callout:
-        CSDUDL03P09: "¿Qué hace esta línea?"
-      CSD U6 tugowar variables 1_callout:
+      CSD U6 tugowar variables 1:
         CSD_U6_startGame: Define iniciarJuego aquí
-      CSD U6 tugowar variables 1_2018_callout:
+      CSD U6 tugowar variables 1_2018:
         CSD_U6_startGame: Define iniciarJuego aquí
-      CSD U6 tugowar variables 1_2019_callout:
+      CSD U6 tugowar variables 1_2019:
         CSD_U6_startGame: Define iniciarJuego aquí
-      CSD U6 tugowar variables 2_callout:
+      CSD U6 tugowar variables 2:
         CSD_U6_movePlayer: Define moverJugador() aquí
-      CSD U6 tugowar variables 2_2018_callout:
+      CSD U6 tugowar variables 2_2018:
         CSD_U6_movePlayer: Define moverJugador() aquí
-      CSD U6 tugowar variables 2_2019_callout:
+      CSD U6 tugowar variables 2_2019:
         CSD_U6_movePlayer: Define moverJugador() aquí
-      CSD U6 tugowar variables 3_callout:
+      CSD U6 tugowar variables 3:
         CSD_U6_checkWin: Verifica si el jugador ha ganado
-      CSD U6 tugowar variables 3_2018_callout:
+      CSD U6 tugowar variables 3_2018:
         CSD_U6_checkWin: Verifica si el jugador ha ganado
-      CSD U6 tugowar variables 3_2019_callout:
+      CSD U6 tugowar variables 3_2019:
         CSD_U6_checkWin: Verifica si el jugador ha ganado
-      Counting_callout:
-        New Play Lab Project_callout1: "¡Haz click en las categorías para ver los
-          bloques en tu caja de herramientas! Arrastra los bloques al área de trabajo
-          y agrégalos a tu programa"
-        New Play Lab Project_callout2: Presiona "Ejecutar" para guardar y ejecutar
-          tu programa
-        sign_in_to_save_project: "¿Quieres ingresar a tu proyecto más tarde? ¡Ingresa
-          para guardar este proyecto en tu cuenta!"
-      Course 4 Artist 4_callout:
+      Course 4 Artist 4:
         repeat_full_circle: Ingresa el número de veces que el zombie debe moverse
           para hacer un círculo completo
-      Course 4 Artist 7_callout:
+      Course 4 Artist 7:
         repeat_blocks: Usa el bloque "repetir" y ponlo alrededor de los bloques del
           espacio de trabajo
-      Course 4 Artist For Loops 4_callout:
+      Course 4 Artist For Loops 4:
         place_counter_variable: Arrastra la variable contador dentro de este bloque
-      Course 4 Artist Functions 4_callout:
-        create_function: Haz clic aquí para abrir el menú desplegable de "Funciones",
-          y luego haz clic en el botón "Crear una función".
-      Course 4 Artist Functions 5 OLD_callout:
-        house_hint: Está bien si la imagen aún no se ve como una casa. Lo solucionaremos
-          en el siguiente desafío.
-      Course 4 Artist Functions 8_callout:
-        edit_function: Haz clic aquí para editar tu función.
-      Course 4 Artist Functions challenge_callout:
+      Course 4 Artist Functions challenge:
         Course_4_Artist_Functions_challenge_1: Ten en cuenta que hemos organizado
           los bloques en categorías para que todo esté ordenado. Haz clic aquí para
           encontrar todos los bloques que necesitas.
-      Course 4 Artist Params 2_callout:
-        length_parameter: ¿Puedes actualizar esta función para que utilice el parámetro
-          "longitud"?
-      Course 4 Artist Params 4_callout:
-        create_function: Haz clic aquí para abrir el menú desplegable de "Funciones",
-          y luego haz clic en el botón "Crear una función".
-      Course 4 Artist Vars 1_callout:
+      Course 4 Artist Vars 1:
         repeat_blocks: Usa el bloque "repetir" y ponlo alrededor de los bloques del
           espacio de trabajo
-      Course 4 Artist Vars 10_callout:
-        set_sides: Usa este bloque para definir el número de "lados" necesarios para
-          completar el desafío.
-      Course 4 Artist Vars 12_callout:
+      Course 4 Artist Vars 12:
         set_length: Usa este bloque para establecer el valor correcto de "longitud".
-      Course 4 Artist Vars 2_callout:
+      Course 4 Artist Vars 2:
         set_length: Usa este bloque para establecer el valor correcto de "longitud".
-      Course 4 Artist Vars 3_callout:
-        place_variable: Arrastra tu variable dentro de este bloque
-      Course 4 Artist Vars 6_callout:
+      Course 4 Artist Vars 6:
         degrees_per_side: Divide 360 por el número de lados para obtener el tamaño
           de cada ángulo en grados.
-      Course 4 Artist Vars 8_callout:
+      Course 4 Artist Vars 8:
         Course_4_Artist_Vars_8_a: "¿Necesitas más espacio? Arrastra esta barra para
           ampliar el área de programación."
-      Course 4 Artist Vars 9_callout:
-        set_sides: Usa este bloque para definir el número de "lados" necesarios para
-          completar el desafío.
-      Course 4 Bee 1_callout:
+      Course 4 Bee 1:
         if_bee_nectar: Usa el bloque "si" para decidir si la abeja debe recoger el
           néctar o hacer la miel
-      Course 4 Bee 3_callout:
+      Course 4 Bee 3:
         if_else_bee: Usa el bloque "si/si no" para que la abeja recoja el néctar de
           una flor y haga la miel si no es una flor
-      Course 4 Bee For Loops 1_callout:
-        get_nectar: Usa el nuevo bloque "obtener néctar".
-      Course 4 Bee For Loops 6_callout:
-        actions_category: ¡La caja de herramientas tiene un nuevo aspecto! Aquí están
-          los bloques de "Acciones".
-      Course 4 Bee Params 2_callout:
+      Course 4 Bee Params 2:
         edit_get_nectar: Usa este botón para editar la función y cambiar la dirección
           en la que girará la abeja para obtener el néctar.
-      Course 4 Bee Params 4 - Two WhenRun_callout:
-        Course_4_Bee_Params_4: Al configurar estas variables a "0" o "1", estamos
-          estableciendo un "indicador". Este indicador puede indicar a la función
-          hacia qué dirección debe ir nuestra abeja.
-      Course 4 Maze 1_callout:
-        Course 4 Maze 1_callout1: Dale a "Ejecutar" para probar el programa.
-        Course 4 Maze 1_callout2: Arrastra el bloque "mover" y colócalo debajo de
-          los otros bloques en el área de trabajo
-      Course 4 Maze 4_callout:
+      Course 4 Maze 4:
         repeat: Coloca bloques dentro del bucle para repetir comandos
-      Course 4 Play Lab Params 2_callout:
+      Course 4 Play Lab Params 2:
         Course_4 _Play_Lab_Params_2_1: Haz clic en "editar" para actualizar esta función
           y que utilice el parámetro de altura.
-      Course 4 Play Lab Params 3_callout:
+      Course 4 Play Lab Params 3:
         edit_function: Haz clic aquí para editar tu función.
-      Course 4 Play Lab Params 6_callout:
+      Course 4 Play Lab Params 6:
         edit_add_parameter: Haz clic en editar para agregar un parámetro en tu función
-      Course 4 Play Lab Vars 1_callout:
+      Course 4 Play Lab Vars 1:
         arrows_move_actor: Usa las flechas para mover al actor
-      Course 4 Play Lab Vars 9_callout:
+      Course 4 Play Lab Vars 9:
         Course_4_Play_Lab_Vars_9_1: "¡Todos tus bloques están organizados en categorías!
           Haz click en la etiqueta para ver las piezas dentro."
-      Course 4 Play Labs For Loops 5_callout:
-        Course_4_Play_Labs_For_Loops_5: "¡Oh, no! ¡Mi código explotó! ¿Puedes volver
-          a armarlo para resolver este desafío?"
-      Course 4 Playlab For Loops 4b_callout:
+      Course 4 Playlab For Loops 4b:
         Course_4_Playlab_For_Loops_4b_1: "¿Has visto que la variable `contador` tiene
           un nombre diferente para cada personaje? Eso es para que cada bucle `desde`
           pueda controlar su propio contador."
         Course_4_Playlab_For_Loops_4b_2: En este desafío, solo puedes cambiar el "incremento"
           de los bucles `desde`.
-      Course 4 SCV 6_callout:
+      Course 4 SCV 6:
         Course_4_SCV_6: "¡Este bloque te permite personalizar tu color para casi cualquier
           cosa que quieras ver! ¡Juega con los números para ver qué ocurre!"
-      CourseD_Dance_Party_01_callout:
+      CourseD_Dance_Party_01:
         dance_callout_01: "¡Añade este bloque a tu programa!"
-      CourseD_Dance_Party_02_callout:
+      CourseD_Dance_Party_02:
         dance_callout_02: "¡Añade este bloque a tu programa!"
-      CourseD_Dance_Party_04_callout:
+      CourseD_Dance_Party_04:
         dance_callout_04: "¡Añade este bloque a tu programa!"
-      CourseD_Dance_Party_06_callout:
+      CourseD_Dance_Party_06:
         dance_callout_06: Añade tu nuevo bailarín aquí
-      CourseD_Dance_Party_11_callout:
+      CourseD_Dance_Party_11:
         dance_callout_11_a: "¡Bloque nuevo!"
         dance_callout_11_b: "¡Bloque nuevo!"
-      CourseD_Dance_Party_11_5_callout:
+      CourseD_Dance_Party_11_5:
         dance_party_11_5_groups: Busca aquí los bloques de "todos los patos"
-      CourseF_PlayLab_vars1_callout:
-        arrows_move_actor: Usa las flechas para mover al actor
-      CourseF_PlayLab_vars10_callout:
-        Course_4_Play_Lab_Vars_9_1: "¡Todos tus bloques están organizados en categorías!
-          Haz click en la etiqueta para ver las piezas dentro."
-      Dance_Party_01_callout:
+      Dance_Party_01:
         dance_callout_01: "¡Añade este bloque a tu programa!"
-      Dance_Party_01_low_callout:
-        dance_callout_01: "¡Añade este bloque a tu programa!"
-      Dance_Party_02_callout:
+      Dance_Party_02:
         dance_callout_02: "¡Añade este bloque a tu programa!"
-      Dance_Party_04_callout:
+      Dance_Party_04:
         dance_callout_04: "¡Añade este bloque a tu programa!"
-      Dance_Party_06_callout:
+      Dance_Party_06:
         dance_callout_06: Añade tu nuevo bailarín aquí
-      Dance_Party_11.5_test_callout:
-        dance_party_11.5_groups: Busca aquí los bloques de "todos los patos"
-      Dance_Party_11_callout:
+      Dance_Party_11:
         dance_callout_11_a: "¡Bloque nuevo!"
         dance_callout_11_b: "¡Bloque nuevo!"
-      Dance_Party_11_5_callout:
+      Dance_Party_11_5:
         dance_party_11_5_groups: Busca aquí los bloques de "todos los patos"
-      Eval Design Recipe .1_callout:
-        edit_function: Haz clic aquí para editar tu función.
-      Frozen Project Test Toolbox_callout:
-        snowflake_dropdown: "¡Usa este menú desplegable para crear diferentes copos
-          de nieve!"
-      Frozen Project Toolbox (Old)_callout:
-        snowflake_dropdown: "¡Usa este menú desplegable para crear diferentes copos
-          de nieve!"
-      Function intro Ryan_callout:
+      Fish Tank 3-validated_2019:
+        spritelab_comment: Usa este bloque para dejarte notas a ti o al docente sobre
+          cómo funciona tu código.
+      Function intro Ryan:
         Function_intro_Ryan_1: Esta pequeña instrucción le indica a la computadora
           que ejecute el gran pedazo de código con el mismo nombre en el área de trabajo.
-      Function intro Ryan_2019_callout:
+      Function intro Ryan_2019:
         Function_intro_Ryan_1: Esta pequeña instrucción le indica a la computadora
           que ejecute el gran pedazo de código con el mismo nombre en el área de trabajo.
-      Geometric Pattern_callout:
+      Geometric Sun:
         4-5_Artist_Patterns_Free_Play_1: Ahora todos tus bloques favoritos se organizan
           en categorías.  ¡Haz click sobre estas palabras para verlo todo!
-      Geometric Sun_callout:
+      Geometric Sun_2018:
         4-5_Artist_Patterns_Free_Play_1: Ahora todos tus bloques favoritos se organizan
           en categorías.  ¡Haz click sobre estas palabras para verlo todo!
-      Geometric Sun_2018_callout:
-        4-5_Artist_Patterns_Free_Play_1: Ahora todos tus bloques favoritos se organizan
-          en categorías.  ¡Haz click sobre estas palabras para verlo todo!
-      Geometric Sun_2019_callout:
-        4-5_Artist_Patterns_Free_Play_1: Ahora todos tus bloques favoritos se organizan
-          en categorías.  ¡Haz click sobre estas palabras para verlo todo!
-      Infinity_move_collide_callout:
+      Infinity_move_collide:
         Infinity_move_collide_callout: Reproduce un sonido cuando ocurra este evento.
-      Infinity_move_directions_callout:
+      Infinity_move_directions:
         Infinity_move_directions_callout: "¿Qué bloque hará que Baymax suba cuando
           se presiona la flecha hacia arriba?"
         Infinity_move_directions_callout_arrow: Usa las flechas para conducir
-      Infinity_move_right_callout:
+      Infinity_move_right:
         Infinity_move_right_runbutton: Agrega un bloque de movimiento aquí
-      Infinity_repeat_callout:
+      Infinity_repeat:
         Infinity_repeat_callout: Coloca los bloques de movimiento aquí adentro
-      InspirationalArtwork_callout:
+      InspirationalArtwork:
         InspirationalArtwork_1: "¡Prueba el nuevo bloque `comentario` debajo de esta
           etiqueta para dejarte notas dentro de tu programa!"
-      InspirationalArtwork_2018_callout:
+      InspirationalArtwork_2018:
         InspirationalArtwork_1: "¡Prueba el bloque `comentario` debajo de esta etiqueta
           para dejarte notas dentro de tu programa!"
-      InspirationalArtwork_2019_callout:
-        InspirationalArtwork_1: "¡Prueba el bloque `comentario` debajo de esta etiqueta
-          para dejarte notas dentro de tu programa!"
-      MC HOC 2016 Level 2-2_callout:
+      MC HOC 2016 Level 2-2:
         craft2_run_button_callout: Cuando estés listo, presiona "Ejecutar" para probar
           tu programa.
-      MC HOC 2016 New Walk_callout:
+      MC HOC 2016 New Walk:
         MC_HOC_2016_New_Walk_callout2: Presiona "Ejecutar" para comenzar a moverte.
-      MC_HOC_2017_01_Cole_callout:
-        MC_HOC_2017_01_Cole_2: Usa las teclas de flecha o haz clic aquí para empezar
-          a mover al jugador.
-      MC_HOC_2017_02_Will_callout:
-        MC_HOC_2017_02_Cole_1: "¡Tu jugador ahora tiene un amigo!  Puedes escribir
-          código para el Agent y que te ayude a pasar los niveles."
-      MC_HOC_2017_03_Cole_callout:
+      MC_HOC_2017_03_Cole:
         MC_HOC_2017_03_Cole_1: ¡Este es un bucle "Repetir"!  Haz clic en el área de
           trabajo y añade el código que quieras ejecutar una y otra vez.
-      MC_HOC_2017_03_Cole_2019_callout:
+      MC_HOC_2017_03_Cole_2019:
         MC_HOC_2017_03_Cole_1: ¡Este es un bucle "Repetir"!  Haz clic en el área de
           trabajo y añade el código que quieras ejecutar una y otra vez.
-      MC_HOC_2017_04_Cole_callout:
+      MC_HOC_2017_04_Cole:
         MC_HOC_2017_04_Cole_a: El Agent puede flotar sobre el agua, ¡pero el jugador
           no!
-      MC_HOC_2017_04_Cole_2019_callout:
+      MC_HOC_2017_04_Cole_2019:
         MC_HOC_2017_04_Cole_a: El Agent puede flotar sobre el agua, ¡pero el jugador
           no!
-      MC_HOC_2017_04_Kiki_callout:
-        MC_HOC_2017_04_Kiki_1: "¡Haz clic en esto para llevarlo al área de trabajo
-          y añade algo de código para que se repita una y otra vez!"
-      MC_HOC_2017_06_Cole_callout:
+      MC_HOC_2017_06_Cole:
         MC_HOC_2017_06_Cole_1: No puedes tirar esos bloques, pero ¡puedes editarlos!
-      MC_HOC_2017_06_Cole_2019_callout:
+      MC_HOC_2017_06_Cole_2019:
         MC_HOC_2017_06_Cole_1: No puedes tirar esos bloques, pero ¡puedes editarlos!
-      MC_HOC_2017_08_RY_callout:
+      MC_HOC_2017_Ali:
         MC_HOC_2017_08_RY_1: El Agent puede flotar sobre la lava, ¡pero el jugador
           no!
-      MC_HOC_2017_08_Will_callout:
+      MC_HOC_2017_Ali_2019:
         MC_HOC_2017_08_RY_1: El Agent puede flotar sobre la lava, ¡pero el jugador
           no!
-      MC_HOC_2017_Ali_callout:
-        MC_HOC_2017_08_RY_1: El Agent puede flotar sobre la lava, ¡pero el jugador
-          no!
-      MC_HOC_2017_Ali_2019_callout:
-        MC_HOC_2017_08_RY_1: El Agent puede flotar sobre la lava, ¡pero el jugador
-          no!
-      Mike Playlab Project_callout:
-        New Play Lab Project_callout1: "¡Haz click en las categorías para ver los
-          bloques en tu caja de herramientas! Arrastra los bloques al área de trabajo
-          y agrégalos a tu programa"
-        New Play Lab Project_callout2: Presiona "Ejecutar" para guardar y ejecutar
-          tu programa
-        sign_in_to_save_project: "¿Quieres ingresar a tu proyecto más tarde? ¡Ingresa
-          para guardar este proyecto en tu cuenta!"
-      NEW Course 4 Artist Functions 3_callout:
+      NEW Course 4 Artist Functions 3:
         NEW_Course_4_Artist_Functions_3_1: Haz clic aquí para editar la nueva función
           y que pueda crear un cuadrado.
-      NEW Course 4 Artist Functions 5_callout:
+      NEW Course 4 Artist Functions 7:
         edit_function: Haz clic aquí para editar tu función.
-        function_editor_draw_square: Ésta es tu definición de función. Estos bloques
-          se ejecutan cada vez que usas el bloque "dibujar un cuadrado"
-      NEW Course 4 Artist Functions 7_callout:
+      NEW Course 4 Artist Functions 8:
         edit_function: Haz clic aquí para editar tu función.
-      NEW Course 4 Artist Functions 8_callout:
-        edit_function: Haz clic aquí para editar tu función.
-      NEW Course 4 Artist Params 10_callout:
+      NEW Course 4 Artist Params 10:
         create_function: Haz clic aquí para abrir el menú desplegable de "Funciones",
           y luego haz clic en el botón "Crear una función".
-      NEW Course 4 Artist Params 9_callout:
+      NEW Course 4 Artist Params 9:
         edit_add_parameter: Haz clic en editar para agregar un parámetro en tu función
         add_and_drag_parameter: Escribe el nombre de su parámetro aquí, haz clic en
           agregar y luego arrastrarlo en la definición de la función
-      NEW Course 4 Artist Vars 6_callout:
+      NEW Course 4 Artist Vars 6:
         place_length_variable: Arrastra aquí la variable de longitud para reemplazar
           los signos de interrogación
-      NEW Course 4 Bee For Loops 4_callout:
+      NEW Course 4 Bee For Loops 4:
         bee_for_loop: Introduce aquí la mayor cantidad de néctar que quieres que recoja
           la abeja
-      NEW Course 4 Bee For Loops 5_callout:
+      NEW Course 4 Bee For Loops 5:
         actions_category: ¡La caja de herramientas tiene un nuevo aspecto! Aquí están
           los bloques de "Acciones".
-      New Artist Project_callout:
-        New Artist Project_callout1: "¡Haz clic en las categorías para ver los bloques
-          de tu caja de herramientas! Puedes arrastrar los bloques al área de trabajo
-          para añadirlos a tu programa"
-        New Artist Project_callout2: Presiona "Ejecutar" para guardar y ejecutar tu
-          programa
-        sign_in_to_save_project: "¿Quieres ingresar a tu proyecto más tarde? ¡Ingresa
-          para guardar este proyecto en tu cuenta!"
-      New Frozen Project_callout:
-        snowflake_dropdown: "¡Usa este menú desplegable para crear diferentes copos
-          de nieve!"
-      New Play Lab Project_callout:
-        New Play Lab Project_callout1: "¡Haz click en las categorías para ver los
-          bloques en tu caja de herramientas! Arrastra los bloques al área de trabajo
-          y agrégalos a tu programa"
-        New Play Lab Project_callout2: Presiona "Ejecutar" para guardar y ejecutar
-          tu programa
-        sign_in_to_save_project: "¿Quieres ingresar a tu proyecto más tarde? ¡Ingresa
-          para guardar este proyecto en tu cuenta!"
-      Overworld Chop Trees_callout:
+      Overworld Chop Trees:
         craft_callout_preplaced: Hemos colocado algunos bloques para que empieces.
-      Overworld Chop Trees_2018_callout:
+      Overworld Chop Trees_2019:
         craft_callout_preplaced: Hemos colocado algunos bloques para que empieces.
-      Overworld Chop Trees_2019_callout:
-        craft_callout_preplaced: Hemos colocado algunos bloques para que empieces.
-      Overworld House Frame Chosen_callout:
+      Overworld House Frame Chosen:
         craft_callout_preplaced_house: Este código empezará a construir tu casa. ¿Puedes
           acabarlo?
-      Overworld House Frame Chosen_2018_callout:
+      Overworld House Frame Chosen_2019:
         craft_callout_preplaced_house: Este código empezará a construir tu casa. ¿Puedes
           acabarlo?
-      Overworld House Frame Chosen_2019_callout:
-        craft_callout_preplaced_house: Este código empezará a construir tu casa. ¿Puedes
-          acabarlo?
-      Overworld Move to Sheep_callout:
+      Overworld Move to Sheep:
         craft_run_button_callout: Dale a "Ejecutar" para probar el programa.
         craft_drag_block_callout: Arrastra un bloque "avanzar" y colócalo debajo del
           otro bloque
-      Overworld Move to Sheep_2018_callout:
+      Overworld Move to Sheep_2019:
         craft_run_button_callout: Dale a "Ejecutar" para probar el programa.
         craft_drag_block_callout: Arrastra un bloque "avanzar" y colócalo debajo del
           otro bloque
-      Overworld Move to Sheep_2019_callout:
-        craft_run_button_callout: Dale a "Ejecutar" para probar el programa.
-        craft_drag_block_callout: Arrastra un bloque "avanzar" y colócalo debajo del
-          otro bloque
-      Overworld Place Wall_callout:
+      Overworld Place Wall:
         craft_inside_repeat: Coloca bloques aquí para repetir acciones.
-      Overworld Place Wall_2018_callout:
+      Overworld Place Wall_2019:
         craft_inside_repeat: Coloca bloques aquí para repetir acciones.
-      Overworld Place Wall_2019_callout:
-        craft_inside_repeat: Coloca bloques aquí para repetir acciones.
-      PS clone CSD U3 Variables Predict Where XY_callout:
-        grid: Haz click aquí para mostrar la cuadrícula.
-      PS copy - CSD U3 Variables Predict Where XY Embed_callout:
-        grid: Haz click aquí para mostrar la cuadrícula.
-      PS copy 2-3 Bee Conditionals 5_callout:
-        Bee_Cond_5_1a: Las flores de color púrpura pueden tener néctar ya sea 1 o
-          0... pero no lo sabes hasta que se ejecuta el código!
-      PS copy CSD U3 Variables Predict Where XY_callout:
-        grid: Haz click aquí para mostrar la cuadrícula.
-      Pizza on a Plate_callout:
-        4-5_Artist_Patterns_Free_Play_1: Ahora todos tus bloques favoritos se organizan
-          en categorías.  ¡Haz click sobre estas palabras para verlo todo!
-      Play Lab Rocket 2_callout:
-        pass_function: Este bloque de iniciar(función) te permite mover tu función
-          (no el valor que devuelve tu función con alguna entrada) a la biblioteca
-          de animación del cohete. ¡La animación que ves en la pantalla usa tu función
-          para mover el cohete!
-        play lab rocket 2: Define aquí la función de altura del cohete
-      Play Lab Rocket 2B_callout:
-        pass_function: Este bloque negro te permite mover tu función (no el valor
-          que devuelve tu función con alguna entrada) a la biblioteca de animación
-          del cohete. ¡La animación que ves en la pantalla usa tu función para mover
-          el cohete!
-      Play Lab Rocket 3_callout:
-        Play Lab Rocket 3 1: Actualiza la sentencia de propósito antes de pasar a
-          los ejemplos y la definición.
-      Quantum Bee - Ryan_callout:
-        feeling_stuck_callout_test: " ¿No puedes avanzar?<br />¡Haz clic en la bombilla
-          para obtener una pista!"
-      Robot Doodle_callout:
+      Robot Doodle:
         4-5_Artist_Patterns_Free_Play_2: "¡Prueba el nuevo bloque `comentario` debajo
           de esta etiqueta para dejarte notas dentro de tu programa!"
-      Robot Doodle_2018_callout:
+      Robot Doodle_2018:
         4-5_Artist_Patterns_Free_Play_2: "¡Prueba el nuevo bloque `comentario` debajo
           de esta etiqueta para dejarte notas dentro de tu programa!"
-      Robot Doodle_2019_callout:
-        4-5_Artist_Patterns_Free_Play_2: "¡Prueba el nuevo bloque `comentario` debajo
-          de esta etiqueta para dejarte notas dentro de tu programa!"
-      Robot Drawing_callout:
-        4-5_Artist_Patterns_Free_Play_1: Ahora todos tus bloques favoritos se organizan
-          en categorías.  ¡Haz click sobre estas palabras para verlo todo!
-      Robot_callout:
-        4-5_Artist_Patterns_Free_Play_1: Ahora todos tus bloques favoritos se organizan
-          en categorías.  ¡Haz click sobre estas palabras para verlo todo!
-      Rock Paper Scissors_callout:
-        New Play Lab Project_callout1: "¡Haz click en las categorías para ver los
-          bloques en tu caja de herramientas! Arrastra los bloques al área de trabajo
-          y agrégalos a tu programa"
-        New Play Lab Project_callout2: Presiona "Ejecutar" para guardar y ejecutar
-          tu programa
-        sign_in_to_save_project: "¿Quieres ingresar a tu proyecto más tarde? ¡Ingresa
-          para guardar este proyecto en tu cuenta!"
-      Rocket Height Course A_callout:
-        pass_function: Este bloque de iniciar(función) te permite mover tu función
-          (no el valor que devuelve tu función con alguna entrada) a la biblioteca
-          de animación del cohete. ¡La animación que ves en la pantalla usa tu función
-          para mover el cohete!
-      Ryan - 4-5 Bee Conditionals 2_callout:
-        4_5_Bee_Conditionals_2_1: Recuerda, revisa si CADA nube tiene una FLOR. No
-          tienes que revisar las colmenas.
-      Ryan - Bee Conditionals_callout:
-        4_5_Bee_Conditionals_2_1: Recuerda, revisa si CADA nube tiene una FLOR. No
-          tienes que revisar las colmenas.
-      Ryan_Demo_callout:
-        dance_callout_02: "¡Añade este bloque a tu programa!"
-      SG U3L08 how to add comments_callout:
-        comment_highlight: Arrastra un bloque de comentarios desde aquí hacia tu código
-      SG U3L2_Turtle3by3Grid_callout:
-        pen_functions: Ya puedes usar lápizArriba y lápizAbajo.
-        goals_tab: arrastra los objetivos desde aquí
-      SGU3L2A Introducing Subgoals_callout:
-        goals_palette_show: Esta es una lista de objetivos secundarios
-        goals_workspace: Ejemplo de código con objetivos secundarios
-      Sam the Butterfly 3_callout:
-        Sam the Butterfly 3 1: Edita esta función para evitar que Sam se vaya por
-          el lado derecho
-      Test Play Lab Project With Walls_callout:
-        New Play Lab Project_callout1: "¡Haz click en las categorías para ver los
-          bloques en tu caja de herramientas! Arrastra los bloques al área de trabajo
-          y agrégalos a tu programa"
-        New Play Lab Project_callout2: Presiona "Ejecutar" para guardar y ejecutar
-          tu programa
-        sign_in_to_save_project: "¿Quieres ingresar a tu proyecto más tarde? ¡Ingresa
-          para guardar este proyecto en tu cuenta!"
-      U3L08 how to add comments_callout:
-        comment_highlight: Arrastra un bloque de comentarios desde aquí hacia tu código
-      U3L08 how to add comments_2018_callout:
-        comment_highlight: Arrastra un bloque de comentarios desde aquí hacia tu código
-      U3L08 how to add comments_2019_callout:
-        comment_highlight: Arrastra un bloque de comentarios desde aquí hacia tu código
-      Underground Avoiding Lava_callout:
+      Underground Avoiding Lava:
         craft_callout_moveforward: Este código comprobará si hay lava. ¿Puedes añadir
           un comando para avanzar?
-      Underground Avoiding Lava_2018_callout:
+      Underground Avoiding Lava_2019:
         craft_callout_moveforward: Este código comprobará si hay lava. ¿Puedes añadir
           un comando para avanzar?
-      Underground Avoiding Lava_2019_callout:
-        craft_callout_moveforward: Este código comprobará si hay lava. ¿Puedes añadir
-          un comando para avanzar?
-      Underground Iron_callout:
+      Underground Iron:
         craft_what_is_iron: "¡Extrae este hierro!"
-      Underground Iron_2018_callout:
+      Underground Iron_2019:
         craft_what_is_iron: "¡Extrae este hierro!"
-      Underground Iron_2019_callout:
-        craft_what_is_iron: "¡Extrae este hierro!"
-      WebLab PS test - 1-12_callout:
-        version_history_button: Mira el historial de versiones
-      aE1_callout:
-        aE1_1: Solo habrá dos de estos y dos giros
-      aE2_callout:
-        aE2_1: Aún sigue habiendo dos de estos y dos giros
-      aE3_callout:
-        aE3_1: Solo hay un puñado de estos
-      aE3alternate_callout:
-        aE3_1: Solo hay un puñado de estos
-      aE3alternateB_callout:
-        aE3_1: Solo hay un puñado de estos
-      aE4_callout:
-        aE3_1: Solo hay un puñado de estos
-      aE5_callout:
-        aE3_1: Solo hay un puñado de estos
-      aE6_callout:
-        aE6_1: Solo 1 movimiento hacia adelante y 1 bloque de giro
-      aEfreeplay_callout:
-        aEfreeplay_1: Ten en cuenta que iniciar el artista en el centro puede ser
-          raro. El objetivo es añadir acciones que puedan mover al artista a posiciones
-          absolutas.
-      artistLoopsK2_callout:
-        artistLoopsK2_1: Este número indica cuántos de estos bloques se pueden utilizar
-          en este desafío.
-      artistLoopsK2gradek_artist_loops3_callout:
-        artistLoopsK2_1: Este número indica cuántos de estos bloques se pueden utilizar
-          en este desafío.
-      behaviors 1_callout:
+      behaviors 1:
         behaviors_edit: Haz clic aquí para ver cómo funciona este comportamiento.
-      behaviors 3a_callout:
+      behaviors 3a:
         behavior_callout: "¿Por qué este comportamiento no funciona para la estrella
           del medio?"
         star2_callout: Quita este bloque 'disfraz' y, en su lugar, usa el bloque "este
           sprite".
         this_sprite_callout: Probando
-      behaviors 4_callout:
+      behaviors 4:
         behaviors_edit: Haz clic aquí para ver cómo funciona este comportamiento.
-      behaviors 4a_callout:
-        behaviors_edit: Haz clic aquí para ver cómo funciona este comportamiento.
-      behaviors 5_callout:
+      behaviors 5:
         behaviors_edit: Agrega código a este comportamiento.
-      behaviors free play_callout:
+      behaviors free play:
         behaviors_edit: Agrega código a este comportamiento.
-      course2_bee_conditionals_challenge2_callout:
+      course2_bee_conditionals_challenge2:
         courseD_bee_conditionals_challenge2_1: Usa este loop para recolectar todo
           el néctar (o miel) de una flor (o panal).
-      course3_artist_functions_challenge1_callout:
+      course3_artist_functions_challenge1:
         courseE_artist_functions_challenge1_callout1: Mantén este programa funcionando
           agregando más códigos al final.
         courseE_artist_functions_challenge1_callout2: Si no te gusta este diseño,
           ¡cámbialo por el que quieras!
-      course3_artist_functions_challenge2_callout:
+      course3_artist_functions_challenge2:
         courseE_artist_functions_challenge2_callout1: Mantén este programa funcionando
           agregando más códigos al final.
         courseE_artist_functions_challenge2_callout2: Si no te gusta este diseño,
           ¡cámbialo por el que quieras!
-      course3_bee_debugging_challenge1_callout:
+      course3_bee_debugging_challenge1:
         courseD_bee_debugging_challenge1_callout1: Usa este comando para mover la
           abeja hacia atrás.
-      course3_bee_functions_challenge3_callout:
+      course3_bee_functions_challenge3:
         courseF_bee_functions_challenge1_1: "¿Qué código deberías poner en esta función?"
         courseF_bee_functions_challenge1_2: La funcón "revisar el nectar o la miel"
           puede usarse aquí si lo editas para hacer miel varias veces.
-      course3_playLab_challenge1_callout:
+      course3_playLab_challenge1:
         courseC_PlayLab_events_challenge1_1: Este bloque te permite mover actores
           a diferentes partes del espacio del juego.
-      course4_artist_functions_challenge2_callout:
+      course4_artist_functions_challenge2:
         courseE_artist_functions_challenge2_callout1: Mantén este programa funcionando
           agregando más códigos al final.
         courseE_artist_functions_challenge2_callout2: Si no te gusta este diseño,
           ¡cámbialo por el que quieras!
-      course4_bee_fwp_challenge2_callout:
+      course4_bee_fwp_challenge2:
         courseF_bee_fwp_challenge2_callout1: Esta función hará un buen trabajo con
           el maiz, pero ¿y las otras verduras?
-      courseA_artist_loops4_callout:
-        courseA_artist_loops4_1: Este número indica cuántos de estos bloques se pueden
-          utilizar en este acertjo.
-      courseA_artist_loops4_2018_callout:
+      courseA_artist_loops4:
         courseA_artist_loops4_1: Este número indica cuántos de estos bloques se pueden
           utilizar en este desafío.
-      courseA_artist_loops4_2019_callout:
+      courseA_artist_loops4_2018:
         courseA_artist_loops4_1: Este número indica cuántos de estos bloques se pueden
           utilizar en este desafío.
-      courseA_artist_loops7_callout:
+      courseA_artist_loops4_2019:
+        courseA_artist_loops4_1: Este número indica cuántos de estos bloques se pueden
+          utilizar en este desafío.
+      courseA_artist_loops7:
         courseA_artist_loops7_1: Este número significa que sólo uno de este tipo de
           bloque se puede usar en la respuesta final.
-      courseA_artist_loops7_2018_callout:
+      courseA_artist_loops7_2018:
         courseA_artist_loops7_1: Este número significa que sólo uno de este tipo de
           bloque se puede usar en la respuesta final.
-      courseA_artist_loops7_2019_callout:
+      courseA_artist_loops7_2019:
         courseA_artist_loops7_1: Este número significa que sólo uno de este tipo de
           bloque se puede usar en la respuesta final.
-      courseA_artist_loops7_forVideo_callout:
-        courseA_artist_loops7_1: Este número significa que solo uno de este tipo de
-          bloque se puede usar en la respuesta final.
-      courseA_artist_loops8_callout:
+      courseA_artist_loops8:
         courseA_artist_loops8_1: "¿Sabias que puedes dibujar sobre una línea cuando
           lo necesites?"
-      courseA_artist_loops8_2018_callout:
+      courseA_artist_loops8_2018:
         courseA_artist_loops8_1: "¿Sabias que puedes dibujar sobre una línea cuando
           lo necesites?"
-      courseA_artist_loops8_2019_callout:
+      courseA_artist_loops8_2019:
         courseA_artist_loops8_1: "¿Sabias que puedes dibujar sobre una línea cuando
           lo necesites?"
-      courseA_collector_loops1_callout:
+      courseA_collector_loops1:
         courseA_collector_loops1_1: "¿Ves algunos bloques nuevos en la caja de herramientas?
           No te preocupes, te mostraremos cómo utilizarlos más adelante en el escenario."
-      courseA_collector_loops1_2018_callout:
+      courseA_collector_loops1_2019:
         courseA_collector_loops1_1: "¿Ves algunos bloques nuevos en la caja de herramientas?
           No te preocupes, te mostraremos cómo utilizarlos más adelante en el escenario."
-      courseA_collector_loops1_2019_callout:
-        courseA_collector_loops1_1: "¿Ves algunos bloques nuevos en la caja de herramientas?
-          No te preocupes, te mostraremos cómo utilizarlos más adelante en el escenario."
-      courseA_collector_loops3_callout:
-        gradek_adventurer_loops2_1: Este número indica cuántos de estos bloques se
-          pueden utilizar en este acertjo.
-      courseA_collector_loops3_2018_callout:
+      courseA_collector_loops3:
         gradek_adventurer_loops2_1: Este número indica cuántos de estos bloques se
           pueden utilizar en este desafío.
-      courseA_collector_loops3_2019_callout:
+      courseA_collector_loops3_2018:
         gradek_adventurer_loops2_1: Este número indica cuántos de estos bloques se
           pueden utilizar en este desafío.
-      courseA_collector_preLoops1_callout:
-        courseA_collector_preLoops1_1: "¡Haz click aquí para ver tu código ejecutarse!"
-      courseA_collector_preLoops2_callout:
+      courseA_collector_loops3_2019:
+        gradek_adventurer_loops2_1: Este número indica cuántos de estos bloques se
+          pueden utilizar en este desafío.
+      courseA_collector_preLoops2:
         courseA_collector_loops1_1: "¿Ves algunos bloques nuevos en la caja de herramientas?
           No te preocupes, te mostraremos cómo utilizarlos más adelante en el escenario."
-      courseA_collector_preLoops3_callout:
+      courseA_collector_preLoops3:
         courseA_collector_loops1_1: "¿Ves algunos bloques nuevos en la caja de herramientas?
           No te preocupes, te mostraremos cómo utilizarlos más adelante en el escenario."
-      courseA_collector_preLoops4_callout:
+      courseA_collector_preLoops4:
         courseA_collector_loops1_1: "¿Ves algunos bloques nuevos en la caja de herramientas?
           No te preocupes, te mostraremos cómo utilizarlos más adelante en el escenario."
-      courseA_collector_preLoops5_callout:
+      courseA_collector_preLoops5:
         courseA_collector_loops1_1: "¿Ves algunos bloques nuevos en la caja de herramientas?
           No te preocupes, te mostraremos cómo utilizarlos más adelante en el escenario."
-      courseA_collector_preLoops6_callout:
+      courseA_collector_preLoops6:
         courseA_collector_loops1_1: "¿Ves algunos bloques nuevos en la caja de herramientas?
           No te preocupes, te mostraremos cómo utilizarlos más adelante en el escenario."
-      courseA_maze_ramp2_2019_callout:
+      courseA_maze_ramp2_2019:
         courseC_maze_programming2_1: Esta es la caja de herramientas. Es donde encontrarás
           bloques adicionales para completar tus rompecabezas.
-      courseA_maze_ramp2a_2018_callout:
+      courseA_maze_ramp3a_2018:
         courseC_maze_programming2_1: Esta es la caja de herramientas. Es donde encontrarás
           bloques adicionales para completar tus rompecabezas.
-      courseA_maze_ramp3_2018_callout:
-        courseC_maze_programming3_2: Puedes arrastrar los bloques adicionales a la
-          caja de herramientas para eliminarlos.
-        stone_block_2: Los bloques grises están hechos de piedra y no se pueden eliminar.
-      courseA_maze_ramp3a_2018_callout:
-        courseC_maze_programming2_1: Esta es la caja de herramientas. Es donde encontrarás
-          bloques adicionales para completar tus rompecabezas.
-      courseA_maze_ramp4_2018_callout:
-        courseC_maze_programming4_1: Este es tu limite de bloques. Te dice cuántos
-          de estos bloques te quedan por usar.
-      courseA_maze_seq1_callout:
+      courseA_maze_seq1:
         courseA_maze_seq1_1: "¡Haz click en la bombilla cuando necesites ayuda!"
-      courseA_maze_seq1_2018_callout:
+      courseA_maze_seq1_2018:
         courseA_maze_seq1_1: "¡Haz click en la bombilla cuando necesites ayuda!"
-      courseA_maze_seq1_2019_callout:
+      courseA_maze_seq1_2019:
         courseA_maze_seq1_1: "¡Haz click en la bombilla cuando necesites ayuda!"
-      courseA_maze_seq2_callout:
+      courseA_maze_seq2:
         courseA_maze_seqA_callout1: Usa el botón de paso para ir paso a paso a través
           del programa. ¡Esto te ayudará a encontrar el error!
-      courseA_maze_seq2_2018_callout:
-        courseA_maze_seqA_callout1: Usa el botón de paso para ir paso a paso a través
-          del programa. ¡Esto te ayudará a encontrar el error!
-      courseA_maze_seq4_callout:
+      courseA_maze_seq4:
         made_of_stone: Estos bloques están hechos de piedra. ¡Puedes moverlos, pero
           no eliminarlos!
-      courseA_maze_seq4_2018_callout:
-        made_of_stone: Estos bloques están hechos de piedra. ¡Puedes moverlos, pero
-          no eliminarlos!
-      courseA_playLab_events4_callout:
+      courseA_playLab_events4:
         courseA_playlab_events4_callout1: Esta es una llamada
-      courseA_playLab_events4_2018_callout:
+      courseA_playLab_events4_2018:
         courseA_playlab_events4_callout1: Esta es una llamada
-      courseA_playLab_events4_2019_callout:
+      courseA_playLab_events4_2019:
         courseA_playlab_events4_callout1: Esta es una llamada
-      courseA_playLab_events5_callout:
+      courseA_playLab_events5:
         courseA_playLab_events5_1: Haz click aquí para cambiar la dirección de la
           flecha del evento.
-      courseA_playLab_events5_2018_callout:
+      courseA_playLab_events5_2018:
         courseA_playLab_events5_1: Haz click aquí para cambiar la dirección de la
           flecha del evento.
-      courseA_playLab_events5_2019_callout:
+      courseA_playLab_events5_2019:
         courseA_playLab_events5_1: Haz click aquí para cambiar la dirección de la
           flecha del evento.
-      courseA_playLab_events6_callout:
+      courseA_playLab_events6:
         courseA_playLab_events6_1: Esto te permite elegir un sonido "aleatorio", lo
           que significa que ¡no sabes que vas a escuchar!
-      courseA_playLab_events6_2018_callout:
+      courseA_playLab_events6_2018:
         courseA_playLab_events6_1: Esto te permite elegir un sonido "aleatorio", lo
           que significa que ¡no sabes que vas a escuchar!
-      courseA_playLab_events6_2019_callout:
+      courseA_playLab_events6_2019:
         courseA_playLab_events6_1: Esto te permite elegir un sonido "aleatorio", lo
           que significa que ¡no sabes que vas a escuchar!
-      courseB_Scrat_ramp1_2018_callout:
+      courseB_Scrat_ramp1_2018:
         grade2_CaringForNewPet_0_1: Luego de conectar todos los bloques, presiona
           "Ejecutar" para comenzar tu programa.
-      courseB_Scrat_ramp1_2019_callout:
+      courseB_Scrat_ramp1_2019:
         grade2_CaringForNewPet_0_1: Luego de conectar todos los bloques, presiona
           "Ejecutar" para comenzar tu programa.
-      courseB_Scrat_ramp3a_2019_callout:
+      courseB_Scrat_ramp3a_2019:
         courseC_maze_programming2_1: Esta es la caja de herramientas. Es donde encontrarás
           bloques adicionales para completar tus rompecabezas.
-      courseB_artist_loops3_callout:
+      courseB_artist_loops3:
         courseB_artist_loops3_1: Sólo hay uno de estos bloques en la caja de herramientas.  ¿Cómo
           se utilizará?
-      courseB_artist_loops3_2018_callout:
+      courseB_artist_loops3_2018:
         courseB_artist_loops3_1: Sólo hay uno de estos bloques en la caja de herramientas.  ¿Cómo
           se utilizará?
-      courseB_artist_loops3_2019_callout:
+      courseB_artist_loops3_2019:
         courseB_artist_loops3_1: Sólo hay uno de estos bloques en la caja de herramientas.  ¿Cómo
           se utilizará?
-      courseB_artist_loops5_callout:
+      courseB_artist_loops5:
         courseB_artist_loops5_1: Este número significa que no hay más que este bloque
           en la caja de herramientas.
-      courseB_collector_loops1_callout:
+      courseB_collector_loops1:
         courseB_collector_loops1_1: "¿Ves algunos bloques nuevos en la caja de herramientas?
           No te preocupes, te mostraremos cómo utilizarlos más adelante en el escenario."
-      courseB_collector_loops1_2018_callout:
+      courseB_collector_loops1_2018:
         courseB_collector_loops1_1: "¿Ves algunos bloques nuevos en la caja de herramientas?
           No te preocupes, te mostraremos cómo utilizarlos más adelante en el escenario."
-      courseB_collector_loops1_2019_callout:
+      courseB_collector_loops1_2019:
         courseB_collector_loops1_1: "¿Ves algunos bloques nuevos en la caja de herramientas?
           No te preocupes, te mostraremos cómo utilizarlos más adelante en el escenario."
-      courseB_maze_seq1_callout:
+      courseB_maze_seq1:
         courseB_maze_seq1: "¡Haz click en la bombilla cuando necesites ayuda!"
-      courseB_maze_seq1_2018_callout:
+      courseB_maze_seq1_2018:
         courseB_maze_seq1: "¡Haz click en la bombilla cuando necesites ayuda!"
-      courseB_maze_seq1_2019_callout:
+      courseB_maze_seq1_2019:
         courseB_maze_seq1: "¡Haz click en la bombilla cuando necesites ayuda!"
-      courseB_maze_seq2_callout:
+      courseB_maze_seq2:
         courseB_maze_seq2_callout1: Usa el botón de paso para ir paso a paso a través
           del programa. ¡Esto te ayudará a encontrar el error!
-      courseB_maze_seq2_2018_callout:
-        courseB_maze_seq2_callout1: Usa el botón de paso para ir paso a paso a través
-          del programa. ¡Esto te ayudará a encontrar el error!
-      courseB_maze_seq3_callout:
+      courseB_maze_seq3:
         courseB_maze_seq3_1: Los bloques grises están hechos de piedra y no pueden
           desecharse.
-      courseB_maze_seq3_2018_callout:
-        courseB_maze_seq3_1: Los bloques grises están hechos de piedra y no pueden
-          desecharse.
-      courseB_playlab_events6_callout:
+      courseB_playlab_events6:
         courseB_playlab_events6_a: Usa la flecha verde desplegable para cambiar la
           direccion.
-      courseB_playlab_events6_2018_callout:
+      courseB_playlab_events6_2018:
         courseB_playlab_events6_a: Usa la flecha verde desplegable para cambiar la
           direccion.
-      courseB_playlab_events6_2019_callout:
+      courseB_playlab_events6_2019:
         courseB_playlab_events6_a: Usa la flecha verde desplegable para cambiar la
           direccion.
-      courseC19_playLab_EOC3_callout:
+      courseC19_playLab_EOC3:
         courseE_playLab_scaffold3_1: Lleva al actor a esta bandera para pasar al nivel
           siguiente.
-      courseC_PlayLab_events8_callout:
+      courseC_PlayLab_events8:
         courseC_PlayLab_events8_callout1: "¡Usa este bloque cuando toquen Waddles
           y Chomp!"
-      courseC_PlayLab_events8_2018_callout:
+      courseC_PlayLab_events8_2018:
         courseC_PlayLab_events8_callout1: "¡Usa este bloque cuando toquen Waddles
           y Chomp!"
-      courseC_PlayLab_events8_2019_callout:
+      courseC_PlayLab_events8_2019:
         courseC_PlayLab_events8_callout1: "¡Usa este bloque cuando toquen Waddles
           y Chomp!"
-      courseC_PlayLab_events_challenge1_callout:
+      courseC_PlayLab_events_challenge1:
         courseC_PlayLab_events_challenge1_1: Este bloque te permite mover actores
           a diferentes partes del espacio del juego.
-      courseC_PlayLab_events_challenge1_2018_callout:
+      courseC_PlayLab_events_challenge1_2018:
         courseC_PlayLab_events_challenge1_1: Este bloque te permite mover actores
           a diferentes partes del espacio del juego.
-      courseC_PlayLab_events_challenge1_2019_callout:
+      courseC_PlayLab_events_challenge1_2019:
         courseC_PlayLab_events_challenge1_1: Este bloque te permite mover actores
           a diferentes partes del espacio del juego.
-      courseC_artist_loops1a_2019_callout:
+      courseC_artist_loops1a_2019:
         jumpto_callout: Este bloque es muy importante para este proyecto. ¡Asegúrate
           de usarlo!
-      courseC_artist_loops1b_2019_callout:
+      courseC_artist_loops1b_2019:
         sticker2: Añade esto en el medio de tu programa.
-      courseC_artist_loopsPrePre1a_callout:
+      courseC_artist_loopsPrePre1a:
         courseC_artist_loopsPrePre1a_1: Comienza usando este bloque para llevar al
           artista al centro de la pantalla.
-      courseC_artist_loopsPrePre1a_2018_callout:
+      courseC_artist_loopsPrePre1a_2018:
         courseC_artist_loopsPrePre1a_1: Comienza usando este bloque para llevar al
           artista al centro de la pantalla.
-      courseC_artist_loopsPrePre1a_2019_callout:
+      courseC_artist_loopsPrePre1a_2019:
         courseC_artist_loopsPrePre1a_1: Comienza usando este bloque para llevar al
           artista al centro de la pantalla.
-      courseC_collector_prog1_callout:
+      courseC_collector_prog1:
         courseC_collector_prog1_1: "¿Ves algunos bloques nuevos en la caja de herramientas?
           No te preocupes, te mostraremos cómo utilizarlos más adelante en el escenario."
-      courseC_collector_prog1_2018_callout:
+      courseC_collector_prog1_2018:
         courseC_collector_prog1_1: "¿Ves algunos bloques nuevos en la caja de herramientas?
           No te preocupes, te mostraremos cómo utilizarlos más adelante en otra lección."
-      courseC_collector_prog1_2019_callout:
+      courseC_collector_prog1_2019:
         courseC_collector_prog1_1: "¿Ves algunos bloques nuevos en la caja de herramientas?
           No te preocupes, te mostraremos cómo utilizarlos más adelante en otra lección."
-      courseC_collector_prog7_callout:
+      courseC_collector_prog7:
         courseC_collector_prog7_1: "¡Puedes sacar más bloques de la caja de herramientas
           si los necesitas!"
-      courseC_collector_prog7_2018_callout:
+      courseC_collector_prog7_2018:
         courseC_collector_prog7_1: "¡Puedes sacar más bloques de la caja de herramientas
           si los necesitas!"
-      courseC_collector_prog7_2019_callout:
+      courseC_collector_prog7_2019:
         courseC_collector_prog7_1: "¡Puedes sacar más bloques de la caja de herramientas
           si los necesitas!"
-      courseC_harvester_loops1_callout:
+      courseC_harvester_loops1:
         courseC_harvester_loops1_callout1: El número cuatro en la calabaza te informa
           que hay cuatro calabazas disponibles para escoger.
-      courseC_harvester_loops1_2018_callout:
+      courseC_harvester_loops1_2018:
         courseC_harvester_loops1_callout1: El número cuatro en la calabaza te informa
           que hay cuatro calabazas disponibles para escoger.
-      courseC_harvester_loops1_2019_callout:
+      courseC_harvester_loops1_2019:
         courseC_harvester_loops1_callout1: El número cuatro en la calabaza te informa
           que hay cuatro calabazas disponibles para escoger.
-      courseC_maze_debugging5_callout:
+      courseC_maze_debugging5:
         courseC_maze_debugging5_1: "¡Los bloques grises no se pueden eliminar!"
-      courseC_maze_debugging5_2018_callout:
+      courseC_maze_debugging5_2018:
         courseC_maze_debugging5_1: "¡Estos bloques grises están bloqueados y no se
           pueden eliminar!"
-      courseC_maze_debugging5_2019_callout:
+      courseC_maze_debugging5_2019:
         courseC_maze_debugging5_1: "¡Estos bloques están bloqueados y no se pueden
           eliminar!"
-      courseC_maze_debugging9_2019_callout:
+      courseC_maze_debugging9_2019:
         courseC_maze_debugging9_2019_1: Arrastra los bloques desde la caja de herramientas
           hacia tu espacio de trabajo.
-      courseC_maze_loops2_callout:
-        courseC_maze_loops2_1: Sólo tienes disponible uno de estos bloques en este
-          rompecabezas.
-      courseC_maze_programming1_callout:
+      courseC_maze_programming1:
         grade2_CaringForNewPet_0_1: Luego de conectar todos los bloques, presiona
           "Ejecutar" para comenzar tu programa.
-      courseC_maze_programming1_2018_callout:
+      courseC_maze_programming1_2018:
         grade2_CaringForNewPet_0_1: Luego de conectar todos los bloques, presiona
           "Ejecutar" para comenzar tu programa.
-      courseC_maze_programming1_2019_callout:
+      courseC_maze_programming1_2019:
         grade2_CaringForNewPet_0_1: Luego de conectar todos los bloques, presiona
           "Ejecutar" para comenzar tu programa.
-      courseC_maze_programming2_callout:
+      courseC_maze_programming2:
         courseC_maze_programming2_1: Esta es la caja de herramientas. Es donde encontrarás
           bloques adicionales para completar tus rompecabezas.
-      courseC_maze_programming2_2018_callout:
+      courseC_maze_programming2_2018:
         courseC_maze_programming2_1: Esta es la caja de herramientas. Es donde encontrarás
           bloques adicionales para completar tus rompecabezas.
-      courseC_maze_programming2_2019_callout:
+      courseC_maze_programming2_2019:
         courseC_maze_programming2_1: Esta es la caja de herramientas. Es donde encontrarás
           bloques adicionales para completar tus rompecabezas.
-      courseC_maze_programming3_callout:
+      courseC_maze_programming3:
         courseC_maze_programming3_2: Puedes arrastrar los bloques adicionales a la
           caja de herramientas para eliminarlos.
         courseC_maze_programming3_3: Estos bloques son de piedra y no se pueden eliminar.
-      courseC_maze_programming3_2018_callout:
+      courseC_maze_programming3_2018:
         courseC_maze_programming3_2: Puedes arrastrar los bloques adicionales a la
           caja de herramientas para eliminarlos.
         courseC_maze_programming3_3: Estos bloques son de piedra y no se pueden eliminar.
-      courseC_maze_programming3_2019_callout:
+      courseC_maze_programming3_2019:
         courseC_maze_programming3_2: Puedes arrastrar los bloques adicionales a la
           caja de herramientas para eliminarlos.
         courseC_maze_programming3_3: Estos bloques son de piedra y no se pueden eliminar.
-      courseC_maze_programming4_callout:
+      courseC_maze_programming4:
         courseC_maze_programming4_1: Este es tu limite de bloques. Te dice cuántos
           de estos bloques te quedan por usar.
-      courseC_maze_programming4_2018_callout:
+      courseC_maze_programming4_2018:
         courseC_maze_programming4_1: Este es tu limite de bloques. Te dice cuántos
           de estos bloques te quedan por usar.
-      courseC_maze_programming4_2019_callout:
+      courseC_maze_programming4_2019:
         courseC_maze_programming4_1: Este es tu limite de bloques. Te dice cuántos
           de estos bloques te quedan por usar.
-      courseC_maze_programming7_callout:
+      courseC_maze_programming5:
+        '': Estos bloques no incluyen números. ¡Puedes usarlos todas las veces que
+          quieras!
+      courseC_maze_programming5_2018:
+        '': Estos bloques no incluyen números. ¡Puedes usarlos todas las veces que
+          quieras!
+      courseC_maze_programming5_2019:
+        '': Estos bloques no incluyen números. ¡Puedes usarlos todas las veces que
+          quieras!
+      courseC_maze_programming7:
         courseC_maze_programming7_1: "¡Este es tu primer súper desafío! Estos están
           hechos difíciles a propósito y pueden implicar varios intentos."
         courseC_maze_programming7_2: Estos bloques están hechos de piedra y no se
           pueden eliminar.
-      courseC_maze_programming7_2018_callout:
+      courseC_maze_programming7_2018:
         courseC_maze_programming7_1: "¡Este es tu primer súper desafío! Estos están
           hechos difíciles a propósito y pueden implicar varios intentos."
         courseC_maze_programming7_2: Estos bloques están hechos de piedra y no se
           pueden eliminar.
-      courseC_maze_programming7_2019_callout:
+      courseC_maze_programming7_2019:
         courseC_maze_programming7_1: "¡Este es tu primer súper desafío! Estos están
           hechos difíciles a propósito y pueden implicar varios intentos."
         courseC_maze_programming7_2: Estos bloques están hechos de piedra y no se
           pueden eliminar.
-      courseC_starWars_loops2_callout:
+      courseC_starWars_loops2:
         courseC_starWars_loops2: Sólo tienes disponible uno de estos bloques en este
           rompecabezas.
-      courseC_starWars_loops2_2018_callout:
+      courseC_starWars_loops2_2018:
         courseC_starWars_loops2: Sólo tienes disponible uno de estos bloques en este
           rompecabezas.
-      courseC_starWars_loops2_2019_callout:
+      courseC_starWars_loops2_2019:
         courseC_starWars_loops2: Sólo tienes disponible uno de estos bloques en este
           rompecabezas.
-      courseD_artist_functions2_callout:
-        courseD_artist_functions2_1: Cuando este bloque verde se ejecuta, todos los
-          códigos en la función se ejecutarán. ¿Qué deberían hacer los artistas después
-          de dibujar la primera plaza?
-      courseD_artist_functions8_callout:
-        courseD_artist_functions8_1: Tus bloques para crear funciones se han ubicado
-          bajo esta etiqueta en la caja de herramientas.
-      courseD_artist_nestedLoops1a_callout:
+      courseD_artist_nestedLoops1a:
         courseD_artist_nestedLoops1a_1: No tienes que usar colores para resolver este
           desafío correctamente. Si lo deseas, ¡Este bloque "colores al azar" lo facilita!
-      courseD_artist_nestedLoops1a_2018_callout:
+      courseD_artist_nestedLoops1a_2018:
         courseD_artist_nestedLoops1a_1: No tienes que usar colores para resolver este
           desafío correctamente. Si lo deseas, ¡Este bloque "colores al azar" lo facilita!
-      courseD_artist_nestedLoops1a_2019_callout:
+      courseD_artist_nestedLoops1a_2019:
         courseD_artist_nestedLoops1a_1: No tienes que usar colores para resolver este
           desafío correctamente. Si lo deseas, ¡Este bloque "colores al azar" lo facilita!
-      courseD_artist_ramp11_callout:
+      courseD_artist_ramp11:
         courseD_artist_ramp11_1: Puedes cambiar este número.
         courseD_artist_ramp11_2: Haz click aquí para ingresar el número de veces que
           tu código se repite.
-      courseD_bee_conditionals2_callout:
+      courseD_bee_conditionals2:
         4_5_Bee_Conditionals_2_1: Recuerda, revisa si CADA nube tiene una FLOR. No
           tienes que revisar las colmenas.
         4_5_Bee_Conditionals_2_2: "¿Necesitas ayuda? ¡Haz click aquí para un VIDEO
           de ayuda!"
-      courseD_bee_conditionals2_2018_callout:
+      courseD_bee_conditionals2_2018:
         4_5_Bee_Conditionals_2_1: Recuerda, revisa si CADA nube tiene una FLOR. No
           tienes que revisar las colmenas.
-      courseD_bee_conditionals2_2019_callout:
+      courseD_bee_conditionals2_2019:
         4_5_Bee_Conditionals_2_1: Recuerda, revisa si CADA nube tiene una FLOR. No
           tienes que revisar las colmenas.
-      courseD_bee_conditionals2_test_callout:
-        4_5_Bee_Conditionals_2_1: Recuerda, revisa si CADA nube tiene una FLOR. No
-          tienes que revisar las colmenas.
-        4_5_Bee_Conditionals_2_2: "¿Necesitas algo de ayuda? ¡Haga click aquí para
-          ver nuestro nuevo VIDEO de AYUDA!"
-      courseD_bee_conditionals_challenge2_callout:
+      courseD_bee_conditionals_challenge2:
         courseD_bee_conditionals_challenge2_1: Usa este loop para recolectar todo
           el néctar (o miel) de una flor (o panal).
-      courseD_bee_conditionals_challenge2_2018_callout:
+      courseD_bee_conditionals_challenge2_2018:
         courseD_bee_conditionals_challenge2_1: Usa este loop para recolectar todo
           el néctar (o miel) de una flor (o panal).
-      courseD_bee_conditionals_challenge2_2019_callout:
+      courseD_bee_conditionals_challenge2_2019:
         courseD_bee_conditionals_challenge2_1: Usa este loop para recolectar todo
           el néctar (o miel) de una flor (o panal).
-      courseD_bee_conditionals_challenge3_callout:
-        courseD_bee_conditionals_challenge3_1: Intenta repetir el bloque de movimiento
-          hacia adelante usando este bucle.
-      courseD_bee_debugging_challenge1_callout:
+      courseD_bee_debugging_challenge1:
         courseD_bee_debugging_challenge1_callout1: Usa este comando para mover la
           abeja hacia atrás.
-      courseD_bee_debugging_challenge1_2018_callout:
+      courseD_bee_debugging_challenge1a:
         courseD_bee_debugging_challenge1_callout1: Usa este comando para mover la
           abeja hacia atrás.
-      courseD_bee_debugging_challenge1a_callout:
-        courseD_bee_debugging_challenge1_callout1: Usa este comando para mover la
-          abeja hacia atrás.
-      courseD_bee_debugging_challenge2_callout:
-        courseD_bee_debugging_challenge1_callout1: Usa este comando para mover la
-          abeja hacia atrás.
-      courseD_collector_ramp8_callout:
+      courseD_collector_ramp8:
         courseD_collector_ramp8_1: 'Usa este bloque para recolectar una sola pieza
           del tesoro.  '
-      courseD_farmer_while7_2018_callout:
+      courseD_farmer_while7_2018:
         courseD_farmer_while7_2018_PathAhead: Necesitarás usar un bloque "mientras
           camino adelante" para resolver este desafío.
-      courseD_farmer_while7_2019_callout:
+      courseD_farmer_while7_2019:
         courseD_farmer_while7_2018_PathAhead: Necesitarás usar un bloque "mientras
           camino adelante" para resolver este desafío.
-      courseD_maze_intro4_2019_callout:
+      courseD_maze_intro4_2019:
         courseC_maze_programming4_1: Este es tu limite de bloques. Te dice cuántos
           de estos bloques te quedan por usar.
-      courseD_maze_ramp1_callout:
-        grade2_CaringForNewPet_0_1: Luego de conectar todos los bloques, presione
-          "Ejecutar" para inciar su progama.
-      courseD_maze_ramp1_2018_callout:
+      courseD_maze_intro5a_2019:
+        '': Estos bloques no incluyen números. ¡Puedes usarlos todas las veces que
+          quieras!
+      courseD_maze_ramp1:
         grade2_CaringForNewPet_0_1: Luego de conectar todos los bloques, presiona
           "Ejecutar" para comenzar tu programa.
-      courseD_maze_ramp1_2019_callout:
+      courseD_maze_ramp1_2018:
         grade2_CaringForNewPet_0_1: Luego de conectar todos los bloques, presiona
           "Ejecutar" para comenzar tu programa.
-      courseD_maze_ramp2_callout:
+      courseD_maze_ramp1_2019:
+        grade2_CaringForNewPet_0_1: Luego de conectar todos los bloques, presiona
+          "Ejecutar" para comenzar tu programa.
+      courseD_maze_ramp2:
         courseC_maze_programming2_1: Esta es la caja de herramientas. Es donde encontrarás
           bloques adicionales para completar tus rompecabezas.
-      courseD_maze_ramp2_2018_callout:
+      courseD_maze_ramp2_2018:
         courseC_maze_programming2_1: Esta es la caja de herramientas. Es donde encontrarás
           bloques adicionales para completar tus rompecabezas.
-      courseD_maze_ramp2_2019_callout:
+      courseD_maze_ramp2_2019:
         courseC_maze_programming2_1: Esta es la caja de herramientas. Es donde encontrarás
           bloques adicionales para completar tus rompecabezas.
-      courseD_maze_ramp3_callout:
+      courseD_maze_ramp3:
         courseC_maze_programming3_2: Puedes arrastrar los bloques adicionales a la
           caja de herramientas para eliminarlos.
         stone_block_2: Los bloques grises están hechos de piedra y no se pueden eliminar.
-      courseD_maze_ramp3_2018_callout:
+      courseD_maze_ramp3_2018:
         courseC_maze_programming3_2: Puedes arrastrar los bloques adicionales a la
           caja de herramientas para eliminarlos.
         stone_block_2: Los bloques grises están hechos de piedra y no se pueden eliminar.
-      courseD_maze_ramp3_2019_callout:
+      courseD_maze_ramp3_2019:
         courseC_maze_programming3_2: Puedes arrastrar los bloques adicionales a la
           caja de herramientas para eliminarlos.
         stone_block_2: Los bloques grises están hechos de piedra y no se pueden eliminar.
-      courseD_maze_ramp4_callout:
-        courseC_maze_programming4_1: Este es tu limite de bloques. Te dice cuántos
-          de estos bloques te quedan para usar.
-      courseD_maze_ramp4_2018_callout:
+      courseD_maze_ramp4:
         courseC_maze_programming4_1: Este es tu limite de bloques. Te dice cuántos
           de estos bloques te quedan por usar.
-      courseD_maze_ramp4_2019_callout:
+      courseD_maze_ramp4_2018:
         courseC_maze_programming4_1: Este es tu limite de bloques. Te dice cuántos
           de estos bloques te quedan por usar.
-      courseD_maze_ramp6_callout:
+      courseD_maze_ramp4_2019:
+        courseC_maze_programming4_1: Este es tu limite de bloques. Te dice cuántos
+          de estos bloques te quedan por usar.
+      courseD_maze_ramp5:
+        '': Estos bloques no incluyen números. ¡Puedes usarlos todas las veces que
+          quieras!
+      courseD_maze_ramp5_2018:
+        '': Estos bloques no incluyen números. ¡Puedes usarlos todas las veces que
+          quieras!
+      courseD_maze_ramp5_2019:
+        '': Estos bloques no incluyen números. ¡Puedes usarlos todas las veces que
+          quieras!
+      courseD_maze_ramp5a:
+        '': Estos bloques no incluyen números. ¡Puedes usarlos todas las veces que
+          quieras!
+      courseD_maze_ramp5a_2018:
+        '': Estos bloques no incluyen números. ¡Puedes usarlos todas las veces que
+          quieras!
+      courseD_maze_ramp5a_2019:
+        '': Estos bloques no incluyen números. ¡Puedes usarlos todas las veces que
+          quieras!
+      courseD_maze_ramp6:
         courseD_maze_ramp6_1: Cualquier código que ingreses aquí se repetirá tantas
           veces como lo indiques, luego continúa ejecutando el resto del programa.
-      courseD_maze_ramp6a_callout:
-        courseD_maze_ramp6_1: Cualquier código que ingreses aquí se repetirá tantas
-          veces como tú lo indiques, luego continúa ejecutando el resto del programa.
-      courseD_playLab_condFP_callout:
+      courseD_playLab_condFP:
         courseD_playLab_condFP_1: hemos organizado los bloques en categorías para
           darte más códigos con los que jugar. Has click aquí para ver adónde fue
           todo.
-      courseD_playLab_condFP_2018_callout:
+      courseD_playLab_condFP_2018:
         courseD_playLab_condFP_1: hemos organizado los bloques en categorías para
           darte más códigos con los que jugar. Has click aquí para ver adónde fue
           todo.
-      courseD_playLab_condFP_2019_callout:
-        courseD_playLab_condFP_1: hemos organizado los bloques en categorías para
-          darte más códigos con los que jugar. Has click aquí para ver adónde fue
-          todo.
-      courseD_playLab_condFP_a_callout:
-        courseD_playLab_condFP_1: hemos organizado los bloques en categorías para
-          darte más códigos con los que jugar. Has click aquí para ver adónde fue
-          todo.
-      courseD_playLab_condForVideo_callout:
-        courseD_playLab_condFP_1: hemos organizado los bloques en categorías para
-          darte más códigos con los que jugar. Has click aquí para ver adónde fue
-          todo.
-      courseD_scrat_ramp1_callout:
+      courseD_scrat_ramp1:
         grade2_CaringForNewPet_0_1: Luego de conectar todos los bloques, presiona
           "Ejecutar" para comenzar tu programa.
-      courseD_scrat_ramp1_2018_callout:
-        grade2_CaringForNewPet_0_1: Luego de conectar todos los bloques, presiona
-          "Ejecutar" para comenzar tu programa.
-      courseD_scrat_ramp2_callout:
-        courseC_maze_programming2_1: Esta es la caja de herramientas. Aquí encontrarás
-          bloques adicionales para completar tus rompecabezas.
-      courseD_scrat_ramp2_2018_callout:
+      courseD_scrat_ramp2:
         courseC_maze_programming2_1: Esta es la caja de herramientas. Es donde encontrarás
           bloques adicionales para completar tus rompecabezas.
-      courseD_scrat_ramp3_callout:
-        courseC_maze_programming3_2: Puedes arrastrar los bloques extra a la caja
-          de herramientas para eliminarlos.
-      courseD_scrat_ramp3_2018_callout:
+      courseD_scrat_ramp3:
         courseC_maze_programming3_2: Puedes arrastrar los bloques adicionales a la
           caja de herramientas para eliminarlos.
-      courseD_scrat_ramp4_callout:
-        courseC_maze_programming4_1: Este es tu limite de bloques. Te informa cuántos
-          de estos bloques te quedan por usar.
-      courseD_scrat_ramp4_2018_callout:
+      courseD_scrat_ramp4:
         courseC_maze_programming4_1: Este es tu limite de bloques. Te dice cuántos
           de estos bloques te quedan por usar.
-      courseD_scrat_ramp6_callout:
-        courseD_maze_ramp6_1: Cualquier código que ingreses aquí se repetirá tantas
-          veces como tú lo indiques, luego continúa ejecutando el resto del programa.
-      courseD_scrat_ramp6_2018_callout:
-        courseD_maze_ramp6_1: Cualquier código que ingreses aquí se repetirá tantas
-          veces como lo indiques, luego continúa ejecutando el resto del programa.
-      courseD_scrat_ramp7_callout:
-        courseD_maze_ramp6_1: Cualquier código que ingreses aquí se repetirá tantas
-          veces como tú lo indiques, luego continúa ejecutando el resto del programa.
-      courseD_scrat_ramp7_2018_callout:
+      courseD_scrat_ramp5:
+        '': Estos bloques no incluyen números. ¡Puedes usarlos todas las veces que
+          quieras!
+      courseD_scrat_ramp6:
         courseD_maze_ramp6_1: Cualquier código que ingreses aquí se repetirá tantas
           veces como lo indiques, luego continúa ejecutando el resto del programa.
-      courseD_scrat_ramp8_callout:
-        courseD_maze_ramp7_1: "¡Este es tu primer desafío de rompecabezas! Estos están
-          hechos para que sean díficiles y pueden implicar varios intentos."
-      courseD_scrat_ramp8_2018_callout:
+      courseD_scrat_ramp7:
+        courseD_maze_ramp6_1: Cualquier código que ingreses aquí se repetirá tantas
+          veces como lo indiques, luego continúa ejecutando el resto del programa.
+      courseD_scrat_ramp8:
         courseD_maze_ramp7_1: "¡Este es tu primer súper desafío! Estos están hechos
           difíciles a propósito y pueden implicar varios intentos."
-      courseE_artist_functions1_callout:
+      courseE_artist_functions1:
         courseD_artist_functions1_1: Comencemos usando este bloque para ayudar a crear
           el primer cuadrado.
-      courseE_artist_functions1_2018_callout:
-        courseD_artist_functions1_1: Comencemos usando este bloque para ayudar a crear
-          el primer cuadrado.
-      courseE_artist_functions2_callout:
+      courseE_artist_functions2:
         courseD_artist_functions2_1: Cuando este bloque verde se ejecuta, todos los
           códigos en la función se ejecutarán. ¿Qué deberían hacer los artistas después
           de dibujar la primera plaza?
-      courseE_artist_functions2_2018_callout:
+      courseE_artist_functions2_2018:
         courseD_artist_functions2_1: Cuando este bloque verde se ejecuta, todos los
           códigos en la función se ejecutarán. ¿Qué deberían hacer los artistas después
           de dibujar la primera plaza?
-      courseE_artist_functions2_2019_callout:
+      courseE_artist_functions2_2019:
         courseD_artist_functions2_1: Cuando este bloque verde se ejecuta, todos los
           códigos en la función se ejecutarán. ¿Qué deberían hacer los artistas después
           de dibujar la primera plaza?
-      courseE_artist_functions8_callout:
+      courseE_artist_functions8:
         courseD_artist_functions8_1: Tus bloques para crear funciones se han ubicado
           bajo esta etiqueta en la caja de herramientas.
-      courseE_artist_functions8a_2018_callout:
+      courseE_artist_functions8a_2018:
         courseD_artist_functions8_1: Tus bloques para crear funciones se han ubicado
           bajo esta etiqueta en la caja de herramientas.
-      courseE_artist_functions8a_2019_callout:
+      courseE_artist_functions8a_2019:
         courseD_artist_functions8_1: Tus bloques para crear funciones se han ubicado
           bajo esta etiqueta en la caja de herramientas.
-      courseE_artist_functions_challenge_callout:
-        courseE_artist_functions_challenge_callout1: Mantén este programa funcionando
-          agregando más códigos al final.
-        courseE_artist_functions_challenge_callout2: Si no te gusta este diseño, ¡cámbialo
-          por el que quieras!
-      courseE_artist_functions_challenge1_callout:
+      courseE_artist_functions_challenge1:
         courseE_artist_functions_challenge1_callout1: Mantén este programa funcionando
           agregando más códigos al final.
         courseE_artist_functions_challenge1_callout2: Si no te gusta este diseño,
           ¡cámbialo por el que quieras!
-      courseE_artist_functions_challenge1_2018_callout:
+      courseE_artist_functions_challenge1_2018:
         courseE_artist_functions_challenge1_callout1: Mantén este programa funcionando
           agregando más códigos al final.
         courseE_artist_functions_challenge1_callout2: Si no te gusta este diseño,
           ¡cámbialo por el que quieras!
-      courseE_artist_functions_challenge1_2019_callout:
+      courseE_artist_functions_challenge1_2019:
         courseE_artist_functions_challenge1_callout1: Mantén este programa funcionando
           agregando más códigos al final.
         courseE_artist_functions_challenge1_callout2: Si no te gusta este diseño,
           ¡cámbialo por el que quieras!
-      courseE_artist_functions_challenge2_callout:
+      courseE_artist_functions_challenge2:
         courseE_artist_functions_challenge2_callout1: Mantén este programa funcionando
           agregando más códigos al final.
         courseE_artist_functions_challenge2_callout2: Si no te gusta este diseño,
           ¡cámbialo por el que quieras!
-      courseE_artist_functions_challenge2_2018_callout:
+      courseE_artist_functions_challenge2_2018:
         courseE_artist_functions_challenge2_callout1: Mantén este programa funcionando
           agregando más códigos al final.
         courseE_artist_functions_challenge2_callout2: Si no te gusta este diseño,
           ¡cámbialo por el que quieras!
-      courseE_artist_functions_challenge2_2019_callout:
+      courseE_artist_functions_challenge2_2019:
         courseE_artist_functions_challenge2_callout1: Mantén este programa funcionando
           agregando más códigos al final.
         courseE_artist_functions_challenge2_callout2: Si no te gusta este diseño,
           ¡cámbialo por el que quieras!
-      courseE_artist_ramp11_callout:
-        courseD_artist_ramp11_1: Puedes cambiar este número.
-        courseD_artist_ramp11_2: Haz click aquí para escribir el número de veces que
-          se repite tu código.
-      courseE_artist_ramp8_callout:
-        courseE_artist_ramp8_1: Puedes cambiar este número.
-        courseE_artist_ramp8_2: Haz click aquí para escribir el número de veces que
-          se reipte tu código.
-      courseE_artist_ramp8_2_callout:
-        courseE_artist_ramp8_1: Puedes cambiar este número.
-        courseE_artist_ramp8_2: Haz click aquí para escribir el número de veces que
-          se reipte tu código.
-      courseE_artist_ramp8_2018_callout:
+      courseE_artist_ramp8:
         courseE_artist_ramp8_1: Puedes cambiar este número.
         courseE_artist_ramp8_2: Haz click aquí para ingresar el número de veces que
           tu código se repite.
-      courseE_artist_ramp8_2_2018_callout:
+      courseE_artist_ramp8_2:
         courseE_artist_ramp8_1: Puedes cambiar este número.
         courseE_artist_ramp8_2: Haz click aquí para ingresar el número de veces que
           tu código se repite.
-      courseE_collector_ramp8_callout:
-        courseD_collector_ramp8_1: 'Usa este bloque para recolectar una sola pieza
-          del tesoro.  '
-      courseE_farmer_functions1_callout:
+      courseE_farmer_functions1:
         courseE_farmer_functions1_2: "¡La caja de herramientas está organizada un
           poco diferente esta vez! Haz clic en las diferentes categorías para ver
-          que bloques tienes."
-      courseE_farmer_functions13_2018_callout:
+          qué bloques tienes."
+      courseE_farmer_functions13_2018:
         courseE_farmer_functions1a_1: Esta verdura es desconocida. Cambia cada vez
           que ejecutas el programa.
-      courseE_farmer_functions13_2019_callout:
+      courseE_farmer_functions13_2019:
         courseE_farmer_functions1a_1: Esta verdura es desconocida. Cambia cada vez
           que ejecutas el programa.
-      courseE_farmer_functions1_2018_callout:
-        courseE_farmer_functions1_2: "¡La caja de herramientas está organizado un
+      courseE_farmer_functions1_2018:
+        courseE_farmer_functions1_2: "¡La caja de herramientas está organizada un
           poco diferente esta vez! Haz clic en las diferentes categorías para ver
-          que bloques tienes."
-      courseE_farmer_functions1_2019_callout:
-        courseE_farmer_functions1_2: "¡La caja de herramientas está organizado un
+          qué bloques tienes."
+      courseE_farmer_functions1_2019:
+        courseE_farmer_functions1_2: "¡La caja de herramientas está organizada un
           poco diferente esta vez! Haz clic en las diferentes categorías para ver
-          que bloques tienes."
-      courseE_farmer_functions1a_callout:
+          qué bloques tienes."
+      courseE_farmer_functions1a:
         courseE_farmer_functions1a_1: Esta verdura es desconocida. Cambia cada vez
           que ejecutas el programa.
-      courseE_farmer_functions1a_2018_callout:
+      courseE_farmer_functions1a_2018:
         courseE_farmer_functions1a_1: Esta verdura es desconocida. Cambia cada vez
           que ejecutas el programa.
-      courseE_farmer_functions1a_2019_callout:
+      courseE_farmer_functions1a_2019:
         courseE_farmer_functions1a_1: Esta verdura es desconocida. Cambia cada vez
           que ejecutas el programa.
-      courseE_farmer_functions2a_callout:
-        courseE_farmer_functions2a_2: Es posible que este código no luzca exactamente
-          como lo escribiste, ¡pero hará el trabajo!
-      courseE_farmer_functions2aALT_callout:
-        courseE_farmer_functions2a_2: Es posible que este código no luzca exactamente
-          como lo escrbiste, ¡pero hará el trabajo!
-      courseE_farmer_functions2b_callout:
+      courseE_farmer_functions2b:
         courseE_farmer_functions1a_1: Esta verdura es desconocida. Cambia cada vez
           que ejecutas el programa.
-      courseE_farmer_functions2b_2018_callout:
+      courseE_farmer_functions2b_2018:
         courseE_farmer_functions1a_1: Esta verdura es desconocida. Cambia cada vez
           que ejecutas el programa.
-      courseE_farmer_functions2b_2019_callout:
+      courseE_farmer_functions2b_2019:
         courseE_farmer_functions1a_1: Esta verdura es desconocida. Cambia cada vez
           que ejecutas el programa.
-      courseE_farmer_functions3b_callout:
-        courseE_farmer_functions1a_1: Esta verdura es desconocida. Cambia cada vez
-          que ejecutas el programa.
-      courseE_maze_ramp1_callout:
-        grade2_CaringForNewPet_0_1: Luego de conectar todos los bloques, presiona
-          "Ejecutar" para comenzar el programa.
-      courseE_maze_ramp1_2018_callout:
-        grade2_CaringForNewPet_0_1: Luego de conectar todos los bloques, presiona
-          "Ejecutar" para comenzar tu programa.
-      courseE_maze_ramp2_callout:
-        courseC_maze_programming2_1: Esta es la caja de herramientas. Es dónde encontrarás
-          bloques adicionales para completar tus rompecabezas.
-      courseE_maze_ramp2_2018_callout:
-        courseC_maze_programming2_1: Esta es la caja de herramientas. Es donde encontrarás
-          bloques adicionales para completar tus rompecabezas.
-      courseE_maze_ramp3_callout:
-        courseC_maze_programming3_2: Puedes arrastrar los bloques adicionales a la
-          caja de herramientas para eliminarlos.
-      courseE_maze_ramp3_2018_callout:
-        courseC_maze_programming3_2: Puedes arrastrar los bloques adicionales a la
-          caja de herramientas para eliminarlos.
-      courseE_maze_ramp4_callout:
-        courseC_maze_programming4_1: Este es tu limite de bloques. Te informa cuántos
-          de estos bloques te quedan para usar.
-      courseE_maze_ramp4_2018_callout:
-        courseC_maze_programming4_1: Este es tu limite de bloques. Te dice cuántos
-          de estos bloques te quedan por usar.
-      courseE_maze_ramp6_callout:
-        courseD_maze_ramp6_1: Cualquier código que ingreses aquí se repetirá tantas
-          veces como tú lo indiques, luego continúa ejecutando el resto del programa.
-      courseE_maze_ramp6_2018_callout:
-        courseD_maze_ramp6_1: Cualquier código que ingreses aquí se repetirá tantas
-          veces como lo indiques, luego continúa ejecutando el resto del programa.
-      courseE_maze_ramp7_callout:
-        courseD_maze_ramp7_1: "¡Este es tu primer desafío de rompecabezas! Están hechos
-          para que sean díficiles y pueden implicar varios intentos."
-      courseE_maze_ramp7_2018_callout:
-        courseD_maze_ramp7_1: "¡Este es tu primer súper desafío! Estos están hechos
-          difíciles a propósito y pueden implicar varios intentos."
-      courseE_playLab_challenge1_callout:
+      courseE_playLab_challenge1:
         courseC_PlayLab_events_challenge1_1: Este bloque te permite mover actores
           a diferentes partes del espacio del juego.
-      courseE_playLab_challenge1_2018_callout:
-        courseC_PlayLab_events_challenge1_1: Este bloque te permite mover actores
-          a diferentes partes del espacio del juego.
-      courseE_playLab_scaffold3_callout:
+      courseE_playLab_scaffold3:
         courseE_playLab_scaffold3_1: Lleva al actor a esta bandera para pasar al nivel
           siguiente.
-      courseE_playLab_scaffold3_2018_callout:
-        courseE_playLab_scaffold3_1: Lleva al actor a esta bandera para pasar al nivel
-          siguiente.
-      courseF_IceAge_1_callout:
-        playlab_drag_say_a: Arrastra el bloque 'actor 1 dice' aquí y escribe "Hola"
-      courseF_IceAge_9_callout:
-        playlab_add_blocks_1: Agrega bloques aquí
-      courseF_artist_for1_callout:
+      courseF_artist_for1:
         courseF_artist_for1_1: La caja de herramientas está en modo de "categoría"
           para hacer más espacio para tu código. Los bulcles "for" viven aquí.
-      courseF_artist_for1_2018_callout:
+      courseF_artist_for1_2018:
         courseF_artist_for1_1: La caja de herramientas está en modo de "categoría"
           para hacer más espacio para tu código. Los bulcles "for" viven aquí.
-      courseF_artist_for1_2019_callout:
+      courseF_artist_for1_2019:
         courseF_artist_for1_1: La caja de herramientas está en modo de "categoría"
           para hacer más espacio para tu código. Los bulcles "for" viven aquí.
-      courseF_artist_fwp1_callout:
+      courseF_artist_fwp1:
         courseF_artist_fwp1_1: Haz click en el botón "editar" para cambiar el código
           dentro de la función.
-      courseF_artist_fwp1_2018_callout:
-        courseF_artist_fwp1_1: Haz click en el botón "editar" para cambiar el código
-          dentro de la función.
-      courseF_artist_fwp4_callout:
+      courseF_artist_fwp4:
         courseF_artist_fwp4_1: Para completar tu polígono, asegúrate que siempre estás
           girando en 360 grados ÷ "lados".
-      courseF_artist_fwp4_2018_callout:
-        courseF_artist_fwp4_1: Para completar tu polígono, asegúrate que siempre estás
-          girando en 360 grados ÷ "lados".
-      courseF_artist_fwp5_callout:
+      courseF_artist_fwp5:
         courseF_artist_fwp5_1: Aquí encontrarás la función polígono.
-      courseF_artist_fwp5_2018_callout:
-        courseF_artist_fwp5_1: Aquí encontrarás la función polígono.
-      courseF_artist_ramp8_callout:
-        courseE_artist_ramp8_1: Puedes cambiar este número.
-        courseE_artist_ramp8_2: Haz click aquí para ingresar el número de veces que
-          se repite tu código.
-      courseF_artist_ramp8_2018_callout:
-        courseE_artist_ramp8_1: Puedes cambiar este número.
-        courseE_artist_ramp8_2: Haz click aquí para ingresar el número de veces que
-          tu código se repite.
-      courseF_artist_variables1_callout:
-        courseF_artist_variables1_1: Ten en cuenta que ahora los bloques tienen una
-          nueva forma de ingresar números. ¡Estos bloques "matemáticos" se pueden
-          sacar y mover!
-      courseF_artist_variables3_callout:
+      courseF_artist_variables3:
         courseF_artist_variables3_a: Usa éste para establecer la variable 'longitud'
-      courseF_artist_variables3_2018_callout:
+      courseF_artist_variables3_2018:
         courseF_artist_variables3_a: Usa éste para establecer la variable 'longitud'
-      courseF_artist_variables3_2019_callout:
+      courseF_artist_variables3_2019:
         courseF_artist_variables3_a: Usa éste para establecer la variable 'longitud'
-      courseF_artist_variables6_callout:
+      courseF_artist_variables6:
         courseF_artist_variables6_1: Las variables pueden ser útiles cuando tienes
           que cambiar muchas copias del mismo número.
-      courseF_artist_variables6_2018_callout:
+      courseF_artist_variables6_2018:
         courseF_artist_variables6_1: Las variables pueden ser útiles cuando tienes
           que cambiar muchas copias del mismo número.
-      courseF_artist_variables6_2019_callout:
+      courseF_artist_variables6_2019:
         courseF_artist_variables6_1: Las variables pueden ser útiles cuando tienes
           que cambiar muchas copias del mismo número.
-      courseF_artist_variables6a_callout:
-        courseF_artist_variables6a_1: Las variables pueden ser útiles cuándo tienes
-          que cambiar muchas copias del mismo número.
-      courseF_artist_variables6a_2018_callout:
+      courseF_artist_variables6a:
         courseF_artist_variables6a_1: Las variables pueden ser útiles cuando tienes
           que cambiar muchas copias del mismo número.
-      courseF_artist_variables6a_2019_callout:
+      courseF_artist_variables6a_2018:
         courseF_artist_variables6a_1: Las variables pueden ser útiles cuando tienes
           que cambiar muchas copias del mismo número.
-      courseF_artist_variables_3_callout:
-        courseF_artist_variables_3_a: Usa este para establecer la variable 'longitud'
-      courseF_artist_variables_6_callout:
-        courseF_artist_variables_6_1: Las variables pueden ser útiles cuándo tienes
+      courseF_artist_variables6a_2019:
+        courseF_artist_variables6a_1: Las variables pueden ser útiles cuando tienes
           que cambiar muchas copias del mismo número.
-      courseF_artist_variables_6a_callout:
-        courseF_artist_variables6a_1: Las variables pueden ser útiles cuándo tienes
-          que cambiar muchas copias del mismo número.
-      courseF_bee_conditionals2_callout:
+      courseF_bee_conditionals2:
         courseF_bee_conditionals2_2: La caja de herramientas están ahora en modo de
           categoría. ¡Todos los bloques que necesitas están bajo estas etiquetas!
-      courseF_bee_conditionals2_2018_callout:
-        courseF_bee_conditionals2_2: La caja de herramientas están ahora en modo de
-          categoría. ¡Todos los bloques que necesitas están bajo estas etiquetas!
-      courseF_bee_conditionals5_callout:
+      courseF_bee_conditionals5:
         courseF_bee_conditionals5_1: Usa este bloque cuando la longitud de la ruta
           cambie (¡como en los lados del rectángulo!)
-      courseF_bee_conditionals5_2018_callout:
-        courseF_bee_conditionals5_1: Usa este bloque cuando la longitud de la ruta
-          cambie (¡como en los lados del rectángulo!)
-      courseF_bee_for3_callout:
-        courseF_bee_for3_1: El bucle 'For' es tan amplio que hemos cambiado la caja
-          de herramientas a modo categoría para ahorrar espacio. ¡Encontrarás aquí
-          el nuevo bucle 'For'!
-      courseF_bee_for4_callout:
+      courseF_bee_for4:
         courseF_bee_for4_1: "¡Aquí encontrarás el bucle 'for'!"
-      courseF_bee_for4_2018_callout:
+      courseF_bee_for4_2018:
         courseF_bee_for4_1: "¡Aquí encontrarás el bucle 'for'!"
-      courseF_bee_for4_2019_callout:
+      courseF_bee_for4_2019:
         courseF_bee_for4_1: "¡Aquí encontrarás el bucle 'for'!"
-      courseF_bee_for9_callout:
+      courseF_bee_for9:
         courseF_bee_for9_1: Aquí encontrarás el bucle 'matemáticas'.
-      courseF_bee_for9_2018_callout:
+      courseF_bee_for9_2018:
         courseF_bee_for9_1: Aquí encontrarás el bucle 'matemáticas'.
-      courseF_bee_for9_2019_callout:
+      courseF_bee_for9_2019:
         courseF_bee_for9_1: Aquí encontrarás el bucle 'matemáticas'.
-      courseF_bee_functions2_callout:
+      courseF_bee_functions2:
         courseF_bee_functions2_1: Este bloque llama a una función. ¡Haz click en este
           botón "editar" para ver que hay por dentro!
-      courseF_bee_functions2_2018_callout:
-        courseF_bee_functions2_1: Este bloque llama a una función. ¡Haz click en este
-          botón "editar" para ver que hay por dentro!
-      courseF_bee_functions6_callout:
+      courseF_bee_functions6:
         courseF_bee_functions6_1: "¡No te olvides buscar aquí más bloques que podrían
           ayudarte a hacerlo más fácl!"
-      courseF_bee_functions6_2018_callout:
-        courseF_bee_functions6_1: "¡No te olvides buscar aquí más bloques que podrían
-          ayudarte a hacerlo más fácl!"
-      courseF_bee_functions_1_2018_callout:
-        courseF_bee_functions_1_2018_1: "¡Puedes encontrar tus variables aquí!"
-      courseF_bee_functions_challenge1_callout:
+      courseF_bee_functions_challenge1:
         courseF_bee_functions_challenge1_1: "¿Qué código deberías poner en esta función?"
         courseF_bee_functions_challenge1_2: La funcón "revisar el nectar o la miel"
           puede usarse aquí si lo editas para hacer miel varias veces.
-      courseF_bee_functions_challenge1_2018_callout:
-        courseF_bee_functions_challenge1_1: "¿Qué código deberías poner en esta función?"
-        courseF_bee_functions_challenge1_2: La funcón "revisar el nectar o la miel"
-          puede usarse aquí si lo editas para hacer miel varias veces.
-      courseF_bee_fwp1_callout:
+      courseF_bee_fwp1:
         courseF_bee_fwp1_1: Aquí puedes encontrar las declaraciones "sí".
-      courseF_bee_fwp1_2018_callout:
-        courseF_bee_fwp1_1: Aquí puedes encontrar las declaraciones "sí".
-      courseF_bee_fwp2_callout:
+      courseF_bee_fwp2:
         courseF_bee_fwp2_a: El bloque que llama tu función vive aquí.
-      courseF_bee_fwp2_2018_callout:
-        courseF_bee_fwp2_a: El bloque que llama tu función vive aquí.
-      courseF_bee_fwp3_callout:
+      courseF_bee_fwp3:
         courseF_bee_fwp3_1: La misma función se puede usar cuando cuando busques espacios
           vacíos, asi como nubes.
-      courseF_bee_fwp3_2018_callout:
-        courseF_bee_fwp3_1: La misma función se puede usar cuando cuando busques espacios
-          vacíos, asi como nubes.
-      courseF_bee_fwp4_callout:
+      courseF_bee_fwp4:
         courseF_bee_fwp4_1: Presiona el botón "editar" para agregar un parámetro a
           esta función.
-      courseF_bee_fwp4_2018_callout:
-        courseF_bee_fwp4_1: Presiona el botón "editar" para agregar un parámetro a
-          esta función.
-      courseF_bee_fwp_challenge2_callout:
+      courseF_bee_fwp_challenge2:
         courseF_bee_fwp_challenge2_callout1: Esta función hará un buen trabajo con
           el maiz, pero ¿y las otras verduras?
-      courseF_bee_fwp_challenge2_2018_callout:
-        courseF_bee_fwp_challenge2_callout1: Esta función hará un buen trabajo con
-          el maiz, pero ¿y las otras verduras?
-      courseF_bee_variables_1_2018_callout:
+      courseF_bee_variables_1_2018:
         courseF_bee_functions_1_2018_1: "¡Puedes encontrar tus variables aquí!"
-      courseF_bee_variables_1_2019_callout:
+      courseF_bee_variables_1_2019:
         courseF_bee_functions_1_2018_1: "¡Puedes encontrar tus variables aquí!"
-      courseF_maze_ramp1_callout:
-        grade2_CaringForNewPet_0_1: Luego de conectar todos los bloques, presiona
-          "Ejecutar" para comenzar tu programa.
-      courseF_maze_ramp15_callout:
-        courseF_maze_ramp7_1: "¡Este es tu primer desafío de rompecabezas! Estos están
-          hechos para ser díficiles y pueden implicar varios intentos."
-      courseF_maze_ramp1_2018_callout:
-        grade2_CaringForNewPet_0_1: Luego de conectar todos los bloques, presiona
-          "Ejecutar" para comenzar tu programa.
-      courseF_maze_ramp2_callout:
-        courseC_maze_programming2_1: Esta es la caja de herramientas. Es donde encontrarás
-          bloques adicionales para completar tus rompecabezas.
-      courseF_maze_ramp2_2018_callout:
-        courseC_maze_programming2_1: Esta es la caja de herramientas. Es donde encontrarás
-          bloques adicionales para completar tus rompecabezas.
-      courseF_maze_ramp4_callout:
-        courseC_maze_programming4_1: Este es tu limite de bloques. Te dice cuántos
-          de estos bloques te quedan por usar.
-      courseF_maze_ramp4_2018_callout:
-        courseC_maze_programming4_1: Este es tu limite de bloques. Te dice cuántos
-          de estos bloques te quedan por usar.
-      courseF_maze_ramp6_callout:
-        courseD_maze_ramp6_1: Cualquier código que ingreses aquí se repetirá tantas
-          veces como tú lo indiques, luego continúa ejecutando el resto del programa.
-      courseF_maze_ramp6_2018_callout:
-        courseD_maze_ramp6_1: Cualquier código que ingreses aquí se repetirá tantas
-          veces como lo indiques, luego continúa ejecutando el resto del programa.
-      courseF_maze_ramp7_callout:
-        courseF_maze_ramp7_1: "¡Este es tu primer desafío de rompecabezas! Estos están
-          hechos para ser díficiles y pueden implicar varios intentos."
-      courseF_playLab_func2_callout:
-        New Play Lab Project_callout1: "¡Haz click en las categorías para ver los
-          bloues en tu caja de herramientas! Arrastra los bloques al área de trabajo
-          y agrégalos a tu programa"
-        New Play Lab Project_callout2: Presiona "Ejecutar" para guardar y ejecutar
-          tu programa
-        sign_in_to_save_project: "¿Quieres ingresar a tu proyecto más tarde? ¡Ingresa
-          para guardar este proyecto en tu cuenta!"
-      courseF_playlab_brokenText_callout:
-        courseF_playlab_variables5c_1: Aquí encontrarás tu bloque de variables.
-      courseF_playlab_variables1a_callout:
+      courseF_playlab_variables1a:
         courseF_playlab_variables1a_1: La caja de herramientas se ha organizado en
           categorías para que sea más fácil encontrar los bloques que necesitas.
-      courseF_playlab_variables1a_2018_callout:
-        courseF_playlab_variables1a_1: La caja de herramientas se ha organizado en
-          categorías para que sea más fácil encontrar los bloques que necesitas.
-      courseF_playlab_variables2_callout:
-        course_playlab_variables2_1: Así es como estableces el valor de tu variable.
-          Cambia el texto que va conectado a este bloque para cambiar lo que está
-          siendo retenido en tu variable.
-      courseF_playlab_variables5c RYAN Copy_callout:
+      courseF_playlab_variables5c:
         courseF_playlab_variables5c_1: Aquí encontrarás tu bloque de variables.
-      courseF_playlab_variables5c_callout:
+      courseF_playlab_variables6c:
         courseF_playlab_variables5c_1: Aquí encontrarás tu bloque de variables.
-      courseF_playlab_variables5c_2018_callout:
-        courseF_playlab_variables5c_1: Aquí encontrarás tu bloque de variables.
-      courseF_playlab_variables6c_callout:
-        courseF_playlab_variables5c_1: Aquí encontrarás tu bloque de variables.
-      courseF_playlab_variables6c_2018_callout:
-        courseF_playlab_variables5c_1: Aquí encontrarás tu bloque de variables.
-      courseF_playlab_variables7c_callout:
+      courseF_playlab_variables7c:
         courseF_playlab_variables7c_1: ¡Encuentra el bloque "preguntar" aquí!
-      courseF_playlab_variables7c_2018_callout:
-        courseF_playlab_variables7c_1: ¡Encuentra el bloque "preguntar" aquí!
-      courseF_playlab_variablesTemplate_callout:
-        courseF_playlab_variables5c_1: Aquí encontrarás tu bloque de variables.
-      courseF_playlab_variablesTemplate_2018_callout:
-        courseF_playlab_variables5c_1: Aquí encontrarás tu bloque de variables.
-      course_playlab_variables2_callout:
-        course_playlab_variables2_1: Así es como estableces el valor de tu variable.
-          Cambia el texto que va conectado a este bloque para cambiar lo que está
-          siendo retenido en tu variable.
-      course_playlab_variables3_callout:
-        course_playlab_variables3_1: Así es como se establece el valor de tu variable.
-      coursea_maze_ramp1_2018_callout:
+      coursea_maze_ramp1_2018:
         grade2_CaringForNewPet_0_1: Después de ajustar todos los bloques juntos, presiona
           "Ejecutar" para iniciar tu programa.
-      coursea_maze_ramp1_2019_callout:
+      coursea_maze_ramp1_2019:
         grade2_CaringForNewPet_0_1: Después de ajustar todos los bloques juntos, presiona
           "Ejecutar" para iniciar tu programa.
-      coursef_maze_ramp3_callout:
-        courseC_maze_programming3_2: Puedes arrastrar bloques adicionales a la caja
-          de herramientas para eliminarlos.
-      coursef_maze_ramp3_2018_callout:
-        courseC_maze_programming3_2: Puedes arrastrar los bloques adicionales a la
-          caja de herramientas para eliminarlos.
-      express_maze_debugging9_2019_callout:
+      express_maze_debugging9_2019:
         express_maze_debugging9_2019_1: Arrastra los bloques desde la caja de herramientas
           hacia tu espacio de trabajo.
-      frozen circle function with parameter_callout:
+      frozen circle function with parameter:
         frozen_circle_function_with_parameter_circle: Utiliza el bloque "crear un
           círculo" y cambia su tamaño.
-      frozen circle function with parameter_b_callout:
-        frozen_circle_function_with_parameter_circle: Usa el bloque `crear un círculo`
-          y cambia el tamaño.
-      frozen circle function with parameter_test_callout:
-        frozen_circle_function_with_parameter_circle: Usa el bloque `crear un círculo`
-          y cambia el tamaño.
-      frozen cross rotate_callout:
-        replace_questions_degree: Usa el menú desplegable para reemplazar "???" con
-          un número
-      frozen cross rotate_b_callout:
-        replace_questions_degree: Usa el menú desplegable para reemplazar "???" con
-          un número
-      frozen cross rotate_test_callout:
-        replace_questions_degree: Usa el menú desplegable para reemplazar "???" con
-          un número
-      frozen cross_callout:
+      frozen cross:
         repeat_blocks_1: "(1) Usa este bloque y ponlo alrededor de los bloques grises
           en el espacio de trabajo"
         repeat_blocks_2: (2) Mueve el bloque "repetir" aquí y coloca los bloques grises
           dentro
-      frozen diamond snowflake_callout:
+      frozen cross rotate:
+        replace_questions_degree: Usa el menú desplegable para reemplazar "???" con
+          un número
+      frozen diamond:
         frozen_diamond_repeat: Utiliza el bloque repetir para crear esta forma.
-      frozen diamond_callout:
+      frozen diamond snowflake:
         frozen_diamond_repeat: Utiliza el bloque repetir para crear esta forma.
-      frozen freeplay_callout:
+      frozen freeplay:
         snowflake_dropdown: "¡Usa este menú desplegable para crear diferentes copos
           de nieve!"
-      frozen freeplay_b_callout:
-        snowflake_dropdown: "¡Usa este menú desplegable para crear diferentes copos
-          de nieve!"
-      frozen freeplay_test_callout:
-        snowflake_dropdown: "¡Usa este menú desplegable para crear diferentes copos
-          de nieve!"
-      frozen line_callout:
+      frozen line:
         run: ¡Presiona "Ejecutar" para probar tu programa!
         move_elsa_forward: Arrastra un bloque "avanzar" y colócalo debajo del bloque
           "cuando se ejecuta" para mover a Elsa hacia adelante
-      frozen line_b_callout:
-        run: ¡Presiona "Ejecutar" para probar tu programa!
-        move_elsa_forward: Arrastra un bloque "avanzar" y colócalo debajo del bloque
-          "cuando se ejecuta" para mover a Elsa hacia adelante
-      frozen line_test_callout:
-        run: ¡Presiona "Ejecutar" para probar tu programa!
-        move_elsa_forward: Arrastra un bloque "avanzar" y colócalo debajo del bloque
-          "cuando se ejecuta" para mover a Elsa hacia adelante
-      frozen perpendicular_callout:
+      frozen perpendicular:
         turn_elsa: Usa el bloque "girar" para que Elsa dé un giro. El número en el
           menú desplegable determina cuánto gira Elsa
-      frozen perpendicular_b_callout:
-        turn_elsa: 'Usa el bloque `girar` para que Elsa dé un giro. '
-      frozen perpendicular_test_callout:
-        turn_elsa: 'Usa el bloque `girar` para que Elsa dé un giro. '
-      frozen snowflake branch_callout:
+      frozen snowflake branch:
         frozen_snowflake_branch: Utiliza el bloque "crear una rama de copo de nieve"
-      frozen snowflake branch_b_callout:
-        frozen_snowflake_branch: Usa la función "crear un brazo de copo de nieve"
-      frozen snowflake branch_test_callout:
-        frozen_snowflake_branch: Utiliza el bloque "crear una rama de copo de nieve"
-      frozen square iterative_callout:
+      frozen square iterative:
         frozen_create_square: Añade más bloques aquí para crear un cuadrado
-      frozen square iterative_b_callout:
-        frozen_create_square: Añade más bloques aquí para crear un cuadrado
-      frozen square iterative_test_callout:
-        frozen_create_square: Añade más bloques aquí para crear un cuadrado
-      frozen square loop 3x_callout:
+      frozen square loop:
         replace_questions: Usa el menú desplegable para reemplazar "???" con un número
-      frozen square loop 3x_b_callout:
+      frozen square loop 3x:
         replace_questions: Usa el menú desplegable para reemplazar "???" con un número
-      frozen square loop 3x_test_callout:
+      frozen square snowflake:
         replace_questions: Usa el menú desplegable para reemplazar "???" con un número
-      frozen square loop_callout:
-        replace_questions: Usa el menú desplegable para reemplazar "???" con un número
-      frozen square loop_b_callout:
-        replace_questions: Usa el menú desplegable para reemplazar "???" con un número
-      frozen square loop_test_callout:
-        replace_questions: Usa el menú desplegable para reemplazar "???" con un número
-      frozen square snowflake_callout:
-        replace_questions: Usa el menú desplegable para reemplazar "???" con un número
-      frozen square snowflake_b_callout:
-        replace_questions: Usa el menú desplegable para reemplazar "???" con un número
-      frozen square snowflake_test_callout:
-        replace_questions: Usa el menú desplegable para reemplazar "???" con un número
-      grade1_artist_loops2_callout:
-        grade1_artist_loops2_1: Sólo hay uno de estos bloques en la caja de herramientas.  ¿Cómo
-          se utilizará?
-      grade1_maze_sequence6_callout:
-        grade1_maze_sequence6_1: "¡Estos bloques grises están hechos de piedra! Eso
-          significa que no pueden ser destruidos."
-      grade2_CaringForNewPet_0_callout:
-        grade2_CaringForNewPet_0_1: Luego de conectar todos los bloques, presiona
-          "Ejecutar" para comenzar tu programa.
-      grade2_CaringForNewPet_1_callout:
-        grade2_CaringForNewPet_1_1: Esta es la caja de herramientas. Es donde encontrarás
-          bloques adicionales para completar tus rompecabezas.
-      grade2_CaringForNewPet_2_callout:
-        grade2_CaringForNewPet_2_2: Puedes arrastrar los bloques adicionales a la
-          caja de herramientas para eliminarlos.
-      grade2_CaringForNewPet_2courseC_maze_programming3_callout:
-        courseC_maze_programming3_2: Puedes arrastrar bloques adicionales a la caja
-          de herramientas para eliminarlos.
-      grade2_CaringForNewPet_3_callout:
-        grade2_CaringForNewPet_3_1: Este es tu limite de bloques. Te dice cuántos
-          de estos bloques te quedan por usar.
-      grade2_collector_7_callout:
-        grade2_collector_7_1: "¡Puedes sacar más bloques de la caja de herramientas
-          si los necesitas!"
-      grade2_puppy_loops2_callout:
-        grade2_puppy_loops2_callout1: Sólo tienes disponible uno de estos bloques
-          en este rompecabezas.
-      grade3_ConditionalsElse_2_callout:
-        4_5_Bee_Conditionals_2_1: Recuerda, revisa si CADA nube tiene una FLOR. No
-          tienes que revisar las colmenas.
-      grade3_Conditionals_3_callout:
-        Bee_Cond_5_1a: Las flores de color púrpura pueden tener néctar ya sea 1 o
-          0... pero no lo sabes hasta que se ejecuta el código!
-      grade3_bee_conditionals_quantum2_callout:
-        4_5_Bee_Conditionals_2_1: Recuerda, revisa si CADA nube tiene una FLOR. No
-          tienes que revisar las colmenas.
-      grade4_artist_freeplay_callout:
-        4-5_Artist_Patterns_Free_Play_1: Ahora todos tus bloques favoritos se organizan
-          en categorías.  ¡Haz click sobre estas palabras para verlo todo!
-      grade4_artist_functions1_callout:
-        grade4_artist_functions1_1: Comencemos usando este bloque para ayudar a crear
-          el primer cuadrado.
-      grade4_artist_functions2_callout:
-        grade4_artist_funcions2_1: Cuando este bloque verde se ejecuta, todos los
-          códigos en la función se ejecutarán. ¿Qué deberían hacer los artistas después
-          de dibujar la primera plaza?
-      grade4_artist_functions_freeplay_callout:
-        4-5_Artist_Patterns_Free_Play_1: Ahora todos tus bloques favoritos se organizan
-          en categorías.  ¡Haz click sobre estas palabras para verlo todo!
-      grade4_artist_parameters_squares1_callout:
-        edit_add_parameter: Haz clic en editar para agregar un parámetro en tu función
-        add_and_drag_parameter: Escribe el nombre de su parámetro aquí, haz clic en
-          agregar y luego arrastrarlo en la definición de la función
-      grade4_bee_conditionals_quantum2_callout:
-        4_5_Bee_Conditionals_2_1: Recuerda, revisa si CADA nube tiene una FLOR. No
-          tienes que revisar las colmenas.
-      grade4_frozen_freeplay_callout:
-        snowflake_dropdown: "¡Usa este menú desplegable para crear diferentes copos
-          de nieve!"
-      grade4_frozen_functions3_callout:
-        frozen_circle_function_with_parameter_circle: Utiliza el bloque "crear un
-          círculo" y cambia su tamaño.
-      grade4_frozen_nested_loop_diamonds1_callout:
-        frozen_diamond_repeat: Utiliza el bloque repetir para crear esta forma.
-      grade4_frozen_nested_loop_diamonds3_callout:
-        frozen_diamond_repeat: Utiliza el bloque repetir para crear esta forma.
-      grade4_frozen_nested_loop_rectangle1_callout:
-        frozen_diamond_repeat: Utiliza el bloque repetir para crear esta forma.
-      grade4_frozen_square_callout:
-        replace_questions: Usa el menú desplegable para reemplazar "???" con un número
-      grade4_frozen_square_loop1_callout:
-        replace_questions: Usa el menú desplegable para reemplazar "???" con un número
-      grade4_frozen_square_loop2_callout:
-        replace_questions: Usa el menú desplegable para reemplazar "???" con un número
-      grade4_frozen_square_loop3_callout:
-        replace_questions: Usa el menú desplegable para reemplazar "???" con un número
-      grade4_playLab_proj_example1_callout:
-        New Play Lab Project_callout1: "¡Haz click en las categorías para ver los
-          bloques en tu caja de herramientas! Arrastra los bloques al área de trabajo
-          y agrégalos a tu programa"
-        New Play Lab Project_callout2: Presiona "Ejecutar" para guardar y ejecutar
-          tu programa
-      grade4_playLab_proj_example2_callout:
-        New Play Lab Project_callout1: "¡Haz click en las categorías para ver los
-          bloques en tu caja de herramientas! Arrastra los bloques al área de trabajo
-          y agrégalos a tu programa"
-        New Play Lab Project_callout2: Presiona "Ejecutar" para guardar y ejecutar
-          tu programa
-        sign_in_to_save_project: "¿Quieres ingresar a tu proyecto más tarde? ¡Ingresa
-          para guardar este proyecto en tu cuenta!"
-      grade5_artist_freeplay_callout:
-        4-5_Artist_Patterns_Free_Play_1: Ahora todos tus bloques favoritos se organizan
-          en categorías.  ¡Haz click sobre estas palabras para verlo todo!
-      grade5_artist_functionparameters8_callout:
-        grade5_artist_functionparameters8_1: Aquí encontrarás la función polígono.
-      grade5_artist_functionparameters_6_callout:
-        grade5_artist_functionparameters_6_1: Para completar tu polígono, asegúrate
-          que siempre estás girando en 360 grados ÷ "lados".
-      grade5_artist_parameters_squares1_callout:
-        edit_add_parameter: Haz clic en editar para agregar un parámetro en tu función
-        add_and_drag_parameter: Escribe el nombre de su parámetro aquí, haz clic en
-          agregar y luego arrastrarlo en la definición de la función
-      grade5_artist_parameters_squares1a_callout:
-        grade5_artist_parameters_triangles1_1: Haz click en el botón "editar" para
-          cambiar el código dentro de la función.
-      grade5_artist_parameters_triangles1_callout:
-        grade5_artist_parameters_triangles1_1: Haz click en el botón "editar" para
-          cambiar el código dentro de la función.
-      grade5_artist_parameters_triangles1aa_callout:
-        edit_add_parameter: Haz clic en editar para agregar un parámetro en tu función
-        add_and_drag_parameter: Escribe el nombre de su parámetro aquí, haz clic en
-          agregar y luego arrastrarlo en la definición de la función
-      grade5_artist_variables_freeplay10_callout:
-        Course_4_Artist_Vars_8_a: "¿Necesitas más espacio? Arrastra esta barra para
-          ampliar el área de programación."
-      grade5_artist_variables_pentagons1_callout:
-        place_length_variable: Arrastra aquí la variable de longitud para reemplazar
-          los signos de interrogación
-      grade5_artist_variables_pentagons12_callout:
-        set_length: Usa este bloque para establecer el valor correcto de "longitud".
-      grade5_artist_variables_square7_callout:
-        degrees_per_side: Divide 360 por el número de lados para obtener el tamaño
-          de cada ángulo en grados.
-      grade5_artist_variables_triangles1_callout:
+      grade5_artist_variables_triangles1:
         grade5_artist_variables_triangles1_1: Ten en cuenta que ahora los bloques
           tienen una nueva forma de ingresar números. ¡Estos bloques "matemáticos"
           se pueden sacar y mover!
-      grade5_artist_variables_triangles1_2018_callout:
+      grade5_artist_variables_triangles1_2018:
         grade5_artist_variables_triangles1_1: Ten en cuenta que ahora los bloques
           tienen una nueva forma de ingresar números. ¡Estos bloques "matemáticos"
           se pueden sacar y mover!
-      grade5_artist_variables_triangles1_2019_callout:
+      grade5_artist_variables_triangles1_2019:
         grade5_artist_variables_triangles1_1: Ten en cuenta que ahora los bloques
           tienen una nueva forma de ingresar números. ¡Estos bloques "matemáticos"
           se pueden sacar y mover!
-      grade5_artist_variables_triangles2_callout:
-        set_length: Usa este bloque para establecer el valor correcto de "longitud".
-      grade5_bee_parameters_new1_callout:
-        grade5_bee_parameters_new1_a: Aquí puedes encontrar las declaraciones "sí".
-      grade5_bee_parameters_new3_callout:
-        grade5_bee_parameters_new3_1: La misma función se puede usar cuando cuando
-          busques espacios vacíos, asi como nubes.
-      grade5_bee_parameters_new4_callout:
-        grade5_bee_parameters_new4_1: Presiona el botón "editar" para agregar un parámetro
-          a esta función.
-      grade5_playlab_variables1_callout:
-        arrows_move_actor: Usa las flechas para mover al actor
-      grade5_playlab_variables11_callout:
-        edit_add_parameter: Haz clic en editar para agregar un parámetro en tu función
-      grade5_playlab_variables1ask_callout:
-        arrows_move_actor: Usa las flechas para mover al actor
-      grade5_playlab_variables_freeplay_callout:
-        Course_4_Play_Lab_Vars_9_1: "¡Todos tus bloques están organizados en categorías!
-          Haz click en la etiqueta para ver las piezas dentro."
-      grade5_playlab_variables_jump1_callout:
-        Course_4_Play_Lab_Vars_9_1: "¡Todos tus bloques están organizados en categorías!
-          Haz click en la etiqueta para ver las piezas dentro."
-      gradek_adventurer_loops2_callout:
-        gradek_adventurer_loops2_1: Este número indica cuántos de estos bloques se
-          pueden utilizar en este desafío.
-      gradek_artist_loops3_callout:
-        artistLoopsK2_1: Este número indica cuántos de estos bloques se pueden utilizar
-          en este desafío.
-      gradek_artist_loops7_callout:
-        gradek_artist_loops7_1: "¿Sabias que puedes dibujar sobre una línea cuando
-          lo necesites?"
-      gradek_playlab_events5c_callout:
-        gradek_playlab_events5c_1: Esto te permite elegir un sonido "aleatorio", lo
-          que significa que ¡no sabes que vas a escuchar!
-      harvester_Kahoot_callout:
-        courseE_farmer_functions1a_1: Esta verdura es desconocida. Cambia cada vez
-          que ejecutas el programa.
-      small_actors_playlab_projects_callout:
-        New Play Lab Project_callout1: "¡Haz click en las categorías para ver los
-          bloques en tu caja de herramientas! Arrastra los bloques al área de trabajo
-          y agrégalos a tu programa"
-        New Play Lab Project_callout2: Presiona "Ejecutar" para guardar y ejecutar
-          tu programa
-        sign_in_to_save_project: "¿Quieres ingresar a tu proyecto más tarde? ¡Ingresa
-          para guardar este proyecto en tu cuenta!"
-      subgoal-test-clone_callout:
-        move_subgoal: Esta es la etiqueta del subgrupo "mover la tortuga". Arrástrala
-          hacia el espacio de trabajo.
-      subgoal-test_callout:
-        move_subgoal: Esta es la etiqueta del subgrupo "mover la tortuga". Arrástrala
-          hacia el espacio de trabajo.
-        orient_subgoal: Esto significa que quieres girar a la tortuga
-      testing code callout_callout:
-        testing_code_callout: "¡Esto hace que el sprite se mueva!"

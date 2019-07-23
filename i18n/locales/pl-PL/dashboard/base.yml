@@ -65,7 +65,6 @@ pl:
   of: "z"
   more: "WIĘCEJ"
   less: "MNIEJ"
-  beta: "beta"
   try_hoc: "Spróbuj Godziny Kodowania (Hour of Code), kliknij tutaj >> "
   try_k8intro: "Wypróbuj nasz wprowadzający kurs z informatyki (15-25 godzin)"
   k8intro: "Kurs Wprowadzenie do Informatyki dla K-8 (15-25 godzin)"
@@ -547,7 +546,6 @@ pl:
   pdf_download: 'Pobierz PDF'
   download_coming_soon: 'Już wkrótce aktywności  do pobrania.'
   video_coming_soon: 'Wkrótce wideo!'
-  not_started: 'Uczeń nie próbował na tym poziomie.'
   share_code:
     title: "Kliknij \"Uruchom\", aby zobaczyć mój program w akcji"
     bounce_og_title: "Sprawdź moją grę w odbijanie"
@@ -780,20 +778,10 @@ pl:
     create: "Utwórz Projekt"
     create_a_project: 'Utwórz nowy projekt:'
     new: "Utwórz nowy"
-    rename: "Zmień nazwę"
-    save: "Zapisz"
-    delete: "Usuń"
-    import: "Importuj"
-    share_link_import_bad_link_header: "Nie rozpoznano udostępnionego linka"
-    share_link_import_bad_link_body: "Nie można było zaimportować tego udostępnionego linka. Upewnij się, że ten link pochodzi z łamigłówki Minecraft: Agent i że został skopiowany w całości."
-    share_link_import_error_header: "Coś poszło nie tak."
-    share_link_import_error_body: "Wystąpił problem podczas importowania tego linku udostępniania. Proszę spróbować ponownie."
     exit: "Powrót do Kursu"
-    my_projects: "Moje Projekty"
     project_gallery: "Projekty"
     publish: "Opublikuj"
     unpublish: "Cofnij publikację"
-    share: "Udostępnij"
     share_title: Udostępnij swój projekt
     share_copy_link: "Skopiuj odnośnik/link:"
     share_embed_description: "Możesz wkleić kod na stronę HTML, aby wyświetlić projektu na stronie internetowej."
@@ -801,25 +789,15 @@ pl:
     embed: "Osadź"
     advanced_share: "Pokaż zaawansowane opcje"
     no_projects: "Aktualnie nie masz żadnych projektów. Kliknij na jeden z powyższych przycisków, aby rozpocząć projekt."
-    close: "Zamknij"
-    more: "Więcej"
     name: "Imię/Nazwisko"
     updated: "Zaktualizowano"
     project_type: "Typ Projektu"
     help_text: "Kliknij, <strong>Utwórz aplikację</strong> lub <strong>Narysuj coś</strong> poniżej, aby utworzyć nowy projekt! <br/>Możesz wrócić i pracować nad swoimi projektami w dowolnym momencie."
     need_help: "Wypróbuj te kursy, by przygotować się do rozpoczęcia nowego projektu"
     thumbnail_help: "Nie widzisz poprawnej miniatury dla twojego projektu? Uruchom swoją aplikację, by wygenerować nową miniaturę. Weź pod uwagę, że odświeżenie miniatury wszędzie może zająć kilka godzin."
-    really_delete: 'Usunąć?'
-    delete_yes: 'Tak'
-    delete_no: 'Nie'
     saved: "Zapisane"
     not_saved: "Nie zapisane"
-    cancel: 'Anuluj'
-    delete_confirm_title: Czy na pewno chcesz usunąć ten projekt?
-    delete_confirm_text: "Usunięcie projektu spowoduje trwałe usunięcie go z twojej listy Moje Projekty. Nikt, komu udostępniłeś link do tego projektu, nie będzie już mógł zobaczyć tego projektu."
     view_all: 'Zobacz Moje Projekty'
-    remix: 'Remix'
-    click_to_remix: "Kliknij 'Remix', aby utworzyć swoją własną wersję!"
     edit_project: 'Edytuj projekt'
     sharing_disabled: "Przepraszamy, udostępnienie tego projektu nie jest możliwe. Jeżeli to jest twój projekt lub projekt jednego z twoich uczniów, prosimy o<a href='https://studio.code.org/users/sign_in'>zalogowanie się</a> do twojego konta w celu uzyskania dostępu do projektu."
     abuse:

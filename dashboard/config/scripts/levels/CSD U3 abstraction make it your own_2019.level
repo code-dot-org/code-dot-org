@@ -39,7 +39,7 @@
     "project_template_level_name": "CSD U3 abstraction jumping template_2019",
     "instructions_important": "false",
     "show_debug_watch": "true",
-    "encrypted_examples": "2qvPk2x7NgA4jZQO8HnjUNoiOzBrsrZVmBz4KbBDRcCbpbDWaLBLXWKLEYcs\n1X+/\n",
+    "encrypted_examples": "2wrbcgOgN2SSvBV4pqR6NgK7p3OBVY+mwzVdOXRHLE3qu0sNu1pCc2LsN16T\nXs1JvFapoad6mh2fCWbKrmyYjA==\n",
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
     "hide_share_and_remix": "false",
@@ -47,7 +47,6 @@
     "expand_debugger": "false",
     "parent_level_id": 11353,
     "name_suffix": "_2019",
-    "preload_asset_list": null,
     "reference_links": [
       "/docs/concepts/game-lab/sprites/velocity/",
       "/docs/concepts/game-lab/the-counter-pattern/",
@@ -56,11 +55,13 @@
       "/docs/concepts/game-lab/sprites/collision-detection/"
     ],
     "map_reference": "/docs/concepts/game-lab/velocity-and-the-counter-pattern/",
-    "mini_rubric": "false"
+    "mini_rubric": "false",
+    "preload_asset_list": null,
+    "encrypted": "false"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2018-02-23 01:12:33 +0000\",\"changed\":[\"start_animations\",\"start_blocks\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-03-05 18:42:09 +0000\",\"changed\":[\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2018-02-23 01:12:33 +0000\",\"changed\":[\"start_animations\",\"start_blocks\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-03-05 18:42:09 +0000\",\"changed\":[\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-06-27 17:17:57 +0000\",\"changed\":[\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":959,\"changed_by_email\":\"george.zhang@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

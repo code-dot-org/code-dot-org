@@ -10,10 +10,13 @@
     "blockText": "change color of {THIS} to {COLOR}",
     "args": [
       {
+        "name": "THIS",
+        "type": "Sprite"
+      },
+      {
         "name": "COLOR",
         "type": "Colour"
       }
-    ],
-    "methodCall": true
+    ]
   }
 }

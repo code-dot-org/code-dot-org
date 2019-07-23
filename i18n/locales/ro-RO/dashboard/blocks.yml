@@ -649,20 +649,6 @@ ro:
             '2': sunet înalt
       Dancelab_whenSetup:
         text: configurare
-      gamelab_changeColor:
-        text: schimbă {COLOR} {METHOD} cu {AMOUNT}
-        options:
-          METHOD:
-            '"tint"': tentă
-            '"tone"': ton
-            '"shade"': umbră
-      gamelab_changeColorBy:
-        text: schimbă {COLOR} {METHOD} cu {AMOUNT}
-        options:
-          METHOD:
-            '"hue"': nuanță
-            '"saturation"': saturație
-            '"brightness"': luminozitate
       gamelab_changePropBy:
         text: schimbă {SPRITE} {PROPERTY} cu {VAL}
         options:
@@ -682,14 +668,6 @@ ro:
           VAL:
             'true': adevărat
             'false': fals
-      gamelab_enableDebug:
-        text: activează depanare
-      gamelab_firstTouched:
-        text: primul spiriduș atins
-      gamelab_getAnim:
-        options:
-          COSTUME:
-            '"costume"': costum
       gamelab_getProp:
         text: "{SPRITE} {PROPERTY}"
         options:
@@ -702,8 +680,6 @@ ro:
             '"tint"': tentă
       gamelab_hideTitleScreen:
         text: ascend ecranul cu titlu
-      gamelab_joystickDirection:
-        text: direcția joystick-ului
       gamelab_jumpTo:
         text: "{SPRITE} sare la {LOCATION}"
       gamelab_keyPressed:
@@ -737,54 +713,13 @@ ro:
             '"x"': x
             '"y"': 'y'
             '"z"': z
-      gamelab_layoutSprites:
-        options:
-          FORMAT:
-            '"border"': margine
-            '"inner"': pătrat interior
-            '"circle"': cerc
-            '"grid"': rețea
-            '"row"': rând
-            '"column"': coloană
-            '"x"': încrucişat
-            '"plus"': plus
-            '"random"': aleator
-      gamelab_locationConstant:
-        options:
-          DIR:
-            "'north'": nord
-            "'south'": sud
-            "'east'": est
-            "'west'": vest
-      gamelab_locationDelta:
-        options:
-          DIR:
-            "'north'": nord
-            "'south'": sud
-            "'east'": est
-            "'west'": vest
-            "'random'": aleator
-      gamelab_locationEast:
-        text: est
       gamelab_locationMouse:
         text: locația mouse-ului
-      gamelab_locationNorth:
-        text: nord
-      gamelab_locationSouth:
-        text: sud
-      gamelab_locationWest:
-        text: vest
-      gamelab_makeNewGroup:
-        text: creează un grup nou
       gamelab_mirrorSprite:
         options:
           DIRECTION:
             '"right"': dreapta
             '"left"': stânga
-      gamelab_mixColors:
-        text: amestecă {COLOR1} şi {COLOR2}
-      gamelab_mouseDown:
-        text: mouse-ul este jos
       gamelab_mouseLocation:
         text: locația mouse-ului
       gamelab_moveInDirection:
@@ -807,8 +742,6 @@ ro:
         text: culoare aleatorie
       gamelab_randomLocation:
         text: locație aleatorie
-      gamelab_secondTouched:
-        text: al doilea spiriduș atins
       gamelab_setBackground:
         text: setează culoarea de fundal la {COLOR}
       gamelab_setBackgroundImage:
@@ -821,20 +754,6 @@ ro:
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': curcubeu
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': subacvatic
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': iarna
-      gamelab_setPosition:
-        text: mută {THIS} la poziţia {POSITION}
-        options:
-          POSITION:
-            "{x: 50, y: 50}": stânga sus
-            "{x: 200, y: 50}": centru sus
-            "{x: 350, y: 50}": dreapta sus
-            "{x: 50, y: 200}": centru stânga
-            "{x: 200, y: 200}": centru
-            "{x: 350, y: 200}": centru dreapta
-            "{x: 50, y: 350}": stânga jos
-            "{x: 200, y: 350}": centru jos
-            "{x: 350, y: 350}": dreapta jos
-            '"random"': aleator
       gamelab_setProp:
         options:
           PROPERTY:
@@ -850,48 +769,11 @@ ro:
             '"scale"': dimensiune
             '"width"': lăţime
             '"height"': înălțime
-      gamelab_setup:
-        text: configurare
       gamelab_spriteClicked:
         options:
           CONDITION:
             '"when"': când
             '"while"': în timp ce
-      gamelab_spriteClickedSet:
-        options:
-          CONDITION:
-            '"when"': când
-            '"while"': în timp ce
-      gamelab_spriteDirection:
-        options:
-          DIRECTION:
-            '"North"': Nord
-            '"East"': Est
-            '"South"': Sud
-            '"West"': Vest
-      gamelab_spritesWhere:
-        options:
-          PROPERTY:
-            '"scale"': dimensiune
-            '"x"': poziţia x
-            '"y"': poziţia y
-            '"costume"': costum
-            '"direction"': direcţie de mişcare
-            '"rotation"': rotire sau direcţie
-            '"tint"': tentă
-      gamelab_spritesWhereGenerator:
-        options:
-          PROPERTY:
-            '"scale"': dimensiune
-            '"x"': poziţia x
-            '"y"': poziţia y
-            '"costume"': costum
-            '"direction"': direcţie de mişcare
-            '"rotation"': rotire sau direcţie
-            '"tint"': tentă
-          OP:
-            '"="': "="
-            '">"': ">"
       gamelab_turn:
         options:
           DIRECTION:
@@ -899,8 +781,6 @@ ro:
             '"left"': stânga
       gamelab_whenDownArrow:
         text: când săgeata jos este apăsată
-      gamelab_whenJoystick:
-        text: când joystick-ul
       gamelab_whenKey:
         text: când {KEY} apăsat(ă)
         options:
@@ -916,8 +796,6 @@ ro:
             '"d"': d
       gamelab_whenLeftArrow:
         text: când săgeata stânga este apăsată
-      gamelab_whenMouseClicked:
-        text: când se face clic cu mouse-ul
       gamelab_whenPressedAndReleased:
         options:
           DIR:
@@ -927,17 +805,10 @@ ro:
             "'right'": dreapta
       gamelab_whenRightArrow:
         text: când săgeata dreapta este apăsată
-      gamelab_whenTouchingSet:
-        options:
-          CONDITION:
-            '"when"': când
-            '"while"': în timp ce
       gamelab_whenUpArrow:
         text: când săgeata sus este apăsată
       gamelab_whileDownArrow:
         text: în timp ce săgeata jos este apăsată
-      gamelab_whileJoystick:
-        text: în timp ce joystick-ul
       gamelab_whileKey:
         options:
           KEY:

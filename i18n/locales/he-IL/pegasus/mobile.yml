@@ -469,9 +469,13 @@
   dashboard_sections_one_per_teacher: "תלמידים יכולים להיות רק בקבוצה אחת לכל מורה. התלמידים שלך יוספו לקבוצה החדשה הזו ויעזבו את הקבוצה הקודמת."
   dashboard_sections_move_to_section: 'העבר לקבוצה:'
   dashboard_sections_enter_code: 'הכנס קוד קבוצה:'
+  dashboard_sections_other_section: "מורה אחר"
   dashboard_sections_both_sections: "האם תרצה שהתלמיד(ים) יהיו בשתי הקבוצות?"
   dashboard_sections_yes_both: "כן, ברצוני להעתיק תלמיד(ים) כך שיישארו בקבוצה זו ויהיו גם בקבוצה החדשה"
   dashboard_sections_no_move: "לא, ברצוני שהתלמיד(ים) יהיו רק בקבוצה החדשה."
+  dashboard_sections_move_students: "העבר תלמידים"
+  dashboard_sections_assign_hoc_script_desc: "משתתף בשעת קוד?"
+  dashboard_sections_assign_activity: "שייך קורס"
   dashboard_error_other_section: "אם אתה מעביר תלמידים בין קבוצות שונות שלך, בחר את הקבוצה מהרשימה הנפתחת. בחר רק 'קבוצה אחרת' כדי להעביר את התלמידים לקבוצה של מורה אחר."
   dashboard_students_add_multiple: 'הקלד או הדבק את שמות התלמידים שלך, אחד בכל שורה:'
   dashboard_students_new_section: "יצרת קבוצה חדשה! כעת, הוסף את התלמידים שלך באמצעות הלחצנים <b>הוסף תלמיד</b>, <b>הוסף מספר תלמידים</b> לעיל."
@@ -569,6 +573,7 @@
   carousel_heading_webpages: "למד ליצור דפי אינטרנט"
   carousel_heading_robots: "למד לתכנת בעזרת רובוטים"
   carousel_heading_ide: "פלטפורמות פופולריות בקרב מורים"
+  carousel_heading_mobtabelem: "עבור טלפונים ומחשבי לוח (טאבלטים)"
   educator_notes: "הערות מורה"
   how_to_teach_hoc: "איך ללמד שעת קוד"
   more_resources_educators: "משאבים נוספים עבור מורים ומחנכים"
@@ -627,8 +632,6 @@
   classicmaze_name: "מבוך קלאסי"
   iceage_name: "עידן הקרח"
   minecraft_name: "מיינקראפט"
-  math_category_name: "מתמטיקה"
-  hoc_category_name: "שעה של קוד"
   applab_name: "מעבדת היישומים"
   gamelab_name: "מעבדת המשחקים"
   applab_gradelevel: "גילאי 13+"
@@ -686,6 +689,8 @@
   coursee-2017_gradelevel: גילאי 8-12
   coursed-2018_gradelevel: כיתות ח' ומעלה
   coursee-2018_gradelevel: גילאי 8-12
+  coursed-2019_gradelevel: כיתות ח' ומעלה
+  coursee-2019_gradelevel: גילאי 8-12
   accelerated_gradelevel: "גילאי 10-18"
   codeorg_platformtext: "דפדפנים מודרנים, סמארטפונים, טאבלטים"
   codeintl_platformtext: "דפדפנים מודרנים, סמארטפונים, טאבלטים"
@@ -997,7 +1002,9 @@
   view_all_sections: "הצג את כל הקבוצות"
   view_section: "הצג קבוצה"
   view_named_section: "הצג %{section_name}"
+  privacy_doc_explanation: "לחץ כאן כדי לגשת למסמך הפרטיות שלנו כדי לשתף או להדפיס אותו עבור תלמידיך."
   sign_in_instruct_code: 'הכנס את קוד הקבוצה שלהם: %{section_code}.'
+  sign_in_overview_cards: "תלמידים יכולים למצוא את כל המידע הזה, כולל %{secret} הסודי שלהם, תחת כרטיסיית ההתחברות מטה."
   reset_student_password_instructions: "באפשרותך לאפס את ה<word/picture> הסודי לכל אחד מהתלמידים על ידי לחיצה על הכרטיסיה \"נהל תלמידים\" לקבוצה זו, לחיצה על לחצן \"הצג הסוד\" שתחת עמודה \"סיסמה\" ולחיצה על כפתור \"אפס סיסמה\"."
   joining_section: "הצטרפות לקבוצה שלך (חד פעמית בלבד)"
   joining_section_overview: "אם תלמיד עדיין לא הצטרף לקבוצה שלך, אנא בקש ממנו לבצע את הצעדים הבאים. שים לב שהם נדרשים לעשות זאת רק פעם אחת. על ידי הצטרפות לקבוצה שלך, תלמידים יוכלו לראות את הקורס ששויך להם ותוכל לעקוב אחר ההתקדמות שלהם בביצוע המשימות בזמן שהם מחוברים."

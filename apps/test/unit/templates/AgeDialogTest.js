@@ -13,13 +13,13 @@ describe('AgeDialog', () => {
 
   it('renders null if signed in', () => {
     const wrapper = shallow(<AgeDialog {...defaultProps} signedIn={true} />);
-    assert.equal(wrapper.getNode(), null);
+    assert.equal(wrapper.children().length, 0);
   });
 
   it('renders null if seen before', () => {
     sessionStorage.setItem('ad_anon_over13', true);
     const wrapper = shallow(<AgeDialog {...defaultProps} />);
-    assert.equal(wrapper.getNode(), null);
+    assert.equal(wrapper.children().length, 0);
   });
 
   it('renders a dialog otherwise', () => {

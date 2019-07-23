@@ -62,6 +62,13 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
     assert user.migrated?
   end
 
+  test 'logs to honeybager if user save fails' do
+    Honeybadger.expects(:notify).once
+    user = create :user, :demigrated
+    user.stubs(:save).returns(false)
+    user.migrate_to_multi_auth
+  end
+
   #
   # Sponsored accounts:
   # Picture and word password students have no authentication_options.

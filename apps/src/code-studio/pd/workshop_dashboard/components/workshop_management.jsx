@@ -5,7 +5,10 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 import {Button} from 'react-bootstrap';
-import {WorkshopTypes} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
+import {
+  WorkshopTypes,
+  SubjectNames
+} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 import ConfirmationDialog from '../../components/confirmation_dialog';
 import {PermissionPropType, Organizer, ProgramManager} from '../permission';
 
@@ -36,16 +39,7 @@ export class WorkshopManagement extends React.Component {
 
     if (props.showSurveyUrl) {
       let surveyBaseUrl;
-
-      if (
-        ([WorkshopTypes.local_summer, WorkshopTypes.teachercon].includes(
-          props.subject
-        ) &&
-          new Date(this.props.date).getFullYear() >= 2018) ||
-        (['CS Discoveries', 'CS Principles'].includes(props.course) &&
-          props.subject !== 'Code.org Facilitator Weekend' &&
-          new Date(this.props.date) >= new Date('2018-08-01'))
-      ) {
+      if (this.use_daily_survey_route()) {
         surveyBaseUrl = 'daily_survey_results';
       } else if (props.subject === WorkshopTypes.local_summer) {
         surveyBaseUrl = 'local_summer_workshop_survey_results';
@@ -58,6 +52,29 @@ export class WorkshopManagement extends React.Component {
       this.surveyUrl = `/${surveyBaseUrl}/${this.props.workshopId}`;
     }
   }
+
+  use_daily_survey_route = () => {
+    let workshop_date = new Date(this.props.date);
+
+    let new_local_summer_and_teachercon =
+      workshop_date.getFullYear() >= 2018 &&
+      [WorkshopTypes.local_summer, WorkshopTypes.teachercon].includes(
+        this.props.subject
+      );
+
+    let new_facilitator_weekend =
+      workshop_date >= new Date('2018-08-01') &&
+      ['CS Discoveries', 'CS Principles'].includes(this.props.course) &&
+      this.props.subject !== SubjectNames.SUBJECT_FIT;
+
+    let new_csf_201 =
+      workshop_date >= new Date('2019-05-20') &&
+      this.props.subject === 'Deep Dive';
+
+    return (
+      new_local_summer_and_teachercon || new_facilitator_weekend || new_csf_201
+    );
+  };
 
   state = {
     showDeleteConfirmation: false

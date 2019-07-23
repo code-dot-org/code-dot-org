@@ -265,3 +265,13 @@ ur:
               name: متغیرات
             Conditionals:
               name: شرائط
+        csd2-pilot:
+          stages:
+            Lists:
+              name: فہرستیں
+        csd3-pilot:
+          stages:
+            Variables:
+              name: متغیرات
+            Conditionals:
+              name: شرائط

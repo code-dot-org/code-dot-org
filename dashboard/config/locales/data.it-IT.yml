@@ -19,7 +19,7 @@ it:
         Farmer2: La contadina 2
         Unplug8: Astrazione
         Artist4: L'artista 4
-        Unplug9: Programmazione a Staffetta
+        Unplug9: Programmazione a staffetta
         Farmer3: La contadina 3
         Unplug10: Internet
         Artist5: L'artista 5
@@ -52,7 +52,7 @@ it:
         if_else: Blocco "se-altrimenti"
         loop_times: Blocco "ripeti ... volte"
         loop_until: Blocco "ripeti fino a che"
-        loop_while: Blocco "Mentre"
+        loop_while: Blocco "mentre"
         loop_for: Blocco "ripeti con contatore"
         function: Funzioni
         parameters: Funzioni con parametri
@@ -574,7 +574,7 @@ it:
         if_else: Blocco "se-altrimenti"
         if_else_scrat: Blocco "se-altrimenti"
         function: Funzioni
-        loop_while: Blocco "Mentre"
+        loop_while: Blocco "mentre"
         loop_for: Blocco "ripeti con contatore"
         parameters: Funzioni con parametri
         hoc_wrapup: Conclusione dell'Ora del Codice
@@ -586,7 +586,7 @@ it:
         Unplug6: Istruzioni condizionali
         Unplug7: Composizione di canzoni
         Unplug8: Astrazione
-        Unplug9: Programmazione a Staffetta
+        Unplug9: Programmazione a staffetta
         Unplug10: Internet
         Unplug11: Conclusione
         C1_happy_maps_unplugged: Mappe Felici
@@ -618,7 +618,7 @@ it:
         C2_graph_paper: Programmazione su carta a quadretti
         C2_conditionals_with_cards: Istruzioni condizionali
         C2_binary_bracelets: Braccialetti Binari
-        C2_relay_programming: Programmazione a Staffetta
+        C2_relay_programming: Programmazione a staffetta
         C2_paper_airplanes: Aeroplani di carta
         C2_digital_footprint: La tua impronta digitale
         C2_digital_footprint_v2: La tua impronta digitale
@@ -629,7 +629,7 @@ it:
         C3_bee_conditionals: 'Ape: Istruzioni Condizionali'
         C3_maze_conditionals: 'Labirinto: Istruzioni Condizionali'
         C3_artist_nested_loops: Cicli annidati
-        C3_farmer_while: Cicli "Mentre"
+        C3_farmer_while: Cicli "mentre"
         C3_bee_nested_loops: Cicli annidati
         C3_bee_debugging: 'Ape: Correzione di Errori'
         C3_bounce: Ping-Pong
@@ -637,7 +637,7 @@ it:
         C3_computational_thinking: Pensiero computazionale
         C3_dice_race: Gara con i Dadi
         C3_internet: Internet
-        C3_crowdsourcing: Intelligenza Collettiva
+        C3_crowdsourcing: Intelligenza collettiva
         C3_functional_suncatchers: Acchiappa-sole Funzionale
         C3_songwriting_with_parameters: Composizione di Canzoni - Parametri
         C4_intro: Introduzione
@@ -645,9 +645,9 @@ it:
         C4_bee_conditional: 'Ape: Istruzioni Condizionali'
         C4_variables_artist: 'Artista: Variabili'
         C4_variables_playlab: 'Laboratorio: Variabili'
-        C4_for_loops: Cicli con Contatore
-        C4_for_loops_bee: Cicli con Contatore
-        C4_for_loops_no_bee: Cicli con Contatore
+        C4_for_loops: Cicli con contatore
+        C4_for_loops_bee: Cicli con contatore
+        C4_for_loops_no_bee: Cicli con contatore
         C4_math_artist: Programmare l'artista usando la matematica
         C4_function_edit: Modifica di funzioni
         C4_function_create: Creazione di funzioni
@@ -655,8 +655,8 @@ it:
         C4_conditionals: Istruzioni condizionali
         C4_unplugged_algorithms: Algoritmi per il Tangram
         C4_unplugged_madlibs: Mad-Libs
-        C4_unplugged_variables: Variabili e Buste
-        C4_unplugged_forloops: Cicli con Contatore
+        C4_unplugged_variables: Variabili e buste
+        C4_unplugged_forloops: Cicli con contatore
         C4_unplugged_parameters: Composizione di Canzoni - Parametri
         C4_unplugged_binary: Binario
         CSF_a_b_artist_loops: Cicli con l'artista
@@ -806,18 +806,18 @@ it:
         CSF_harvester_loops_K1: Cicli con la contadina
         CSF_scrat_loops_K1: Cicli con l'Era glaciale
         CSF_scrat_loops_CF: Cicli con l'Era glaciale
-        CSF_if_allskins: Il Blocco Se
-        CSF_ifelse_allskins: Uso dei Blocchi Se/Altrimenti
-        CSF_ifelseifelse_allskins: Uso dei Blocchi Se/AltrimentiSe/Altrimenti
+        CSF_if_allskins: Il blocco "se"
+        CSF_ifelse_allskins: Uso dei blocchi se/altrimenti
+        CSF_ifelseifelse_allskins: Uso dei blocchi se/altrimenti-se/altrimenti
         CSF_loops_AB: Ripetizioni
         csd_gamelab_booleans: Espressioni Booleane
         csd_gamelab_conditional_statements: Istruzioni Condizionali
         csd_gamelab_if_else: Dichiarazioni Se/altrimenti
-        CSF_SpriteLabIntro_CDEF: Questo è il Laboratorio dei Personaggi
-        CSF_Spritelab_MakeSprite_CDEF: Come creare un Personaggio nel Laboratorio
-          dei Personaggi
-        CDEF_Video_SpritesInAction: Personaggi in Azione
-        CSF_SpriteLab_SpritesInAction_CDEF: Personaggi in Azione
+        CSF_SpriteLabIntro_CDEF: Questo è il Laboratorio dei personaggi
+        CSF_Spritelab_MakeSprite_CDEF: Come creare un personaggio nel Laboratorio
+          dei personaggi
+        CDEF_Video_SpritesInAction: Personaggi in azione
+        CSF_SpriteLab_SpritesInAction_CDEF: Personaggi in azione
         CSF_StarWars_ProjectIntro: Introduzione al progetto Star Wars
         mc_2018_intro: 'Minecraft: Viaggio Acquatico - Introduzione'
         MC_2018_loops: 'Minecraft: Viaggio Acquatico - Ripeti fino a che'
@@ -828,7 +828,7 @@ it:
         hoc_dance_properties: Ballando col codice - Proprietà
         hoc_dance_congrats: Ballando col codice - Parte la festa!
         c_and_c_great_to_create: È fantastico creare e comportarsi lealmente
-        c_and_c_digital_sharing: Condivisione Digitale
+        c_and_c_digital_sharing: Condivisione digitale
         teaching_csf_how_it_works: Introduzione ai corsi di fondamenti di informatica
         what_is_cs: Cos'é l'informatica?
         repeat_block: Uso del blocco Ripeti
@@ -836,6 +836,8 @@ it:
         what_is_an_event: Cos'è un evento?
         csd_pair_programming: Programmazione in coppia
         csd_applab_parameters: Funzioni con parametri
+        CSF_Going_Places_Safely: Il mio quartiere digitale
+        CSF_SpriteLab_SpritesInAction_v2: Personaggi in azione
     callout:
       text:
         drag_blocks: Prendi qui a sinistra il blocco "vai avanti" ed attaccalo sotto

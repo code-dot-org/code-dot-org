@@ -943,20 +943,6 @@ pt-PT:
   course3_name: Curso 3
   course4_name: Curso 4
   accelerated_name: Curso acelerado
-  cspunit1_name: 'Unidade 1: Informação Digital'
-  cspunit2_name: 'Unidade 2: A Internet'
-  cspunit3_name: 'Unidade 3: Programação'
-  cspunit4_name: 'Unidade 4: Dados'
-  csp1-2017_name: 'Unidade 1: A Internet'
-  csp2-2017_name: 'Unidade 1: Informação Digital'
-  csp1-2018_name: 'Unidade 1: A Internet'
-  csp2-2018_name: 'Unidade 1: Informação Digital'
-  csp1_name: 'Unidade 1: A Internet'
-  csp2_name: 'Unidade 1: Informação Digital'
-  cspassessment_name: Teste Completo - 50 questões
-  cspexam1-mWU7ilDYM9_name: Teste Parte 1 - 25 perguntas
-  cspexam2-AKwgAh1ac5_name: Teste Parte 2 - 25 perguntas
-  cspunit3_gradelevel: Classificação 9-12
   20-hour_name: Curso acelerado
   algebra_name: CS em Álgebra
   AlgebraA_name: CS no Curso de Álgebra A
@@ -966,8 +952,6 @@ pt-PT:
   iceage_name: Idade do gelo
   minecraft_name: Minecraft
   starwarsblocks_name: Guerra das Estrelas (Blocos)
-  math_category_name: Matemática
-  hoc_category_name: Hora de Código
   applab_name: Laboratório de aplicações
   applab_gradelevel: Maiores de 13 anos
   codeorg_gradelevel: Dos 4 aos 104 anos
@@ -1029,6 +1013,8 @@ pt-PT:
   coursee-2017_gradelevel: Dos 8 aos 12 anos
   coursed-2018_gradelevel: Notas 8+
   coursee-2018_gradelevel: Dos 8 aos 12 anos
+  coursed-2019_gradelevel: Notas 8+
+  coursee-2019_gradelevel: Dos 8 aos 12 anos
   accelerated_gradelevel: Dos 10 aos 18 anos
   codeorg_platformtext: Navegadores modernos, smartphones e tablets
   codeintl_platformtext: Navegadores modernos, smartphones e tablets

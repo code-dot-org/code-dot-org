@@ -2324,6 +2324,10 @@ bg:
           stages:
             While Loops:
               name: Докато цикли
+        csp1-pilot:
+          stages:
+            Number Systems:
+              name: Бройни системи
         time4csdemo:
           stages:
             Crowdsourcing:
@@ -2336,3 +2340,18 @@ bg:
           stages:
             Graph Paper Programming:
               name: Програмиране на милиметрова хартия
+        csd2-pilot:
+          stages:
+            Lists:
+              name: Списъци
+        csd3-pilot:
+          description_short: "Програмиране"
+          stages:
+            Variables:
+              name: Променливи
+            Conditionals:
+              name: Условия
+            Velocity:
+              name: Скорост
+            Functions:
+              name: Функции

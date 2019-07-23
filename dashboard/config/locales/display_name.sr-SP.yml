@@ -1,5 +1,5 @@
 ---
-sr:
+sr-SP:
   data:
     display_name:
       CSD U3 L11 Freeplay: Free Play
@@ -47,7 +47,6 @@ sr:
       CSD U3 Variables Map: Променљиве
       CSD U3 Variables Map_2018: Променљиве
       CSD U3 Variables Map_2019: Променљиве
-      CSD U3 functions map: Функције
       CSD U6 for loop map: Бројачке петље
       CSD U6 for loop map_2018: Бројачке петље
       CSD U6 for loop map_2019: Бројачке петље
@@ -55,6 +54,3 @@ sr:
       CSD U6 functions paramters video_2018: Функције са параметрима
       CSD U6 functions paramters video_2019: Функције са параметрима
       'CSD: For Loop_2018': Бројачке петље
-      'CSD: For Loop_2019': Бројачке петље
-      MC_HOC_2017_FP10x10: Free Play
-      MC_HOC_2017_FP10x10_RE: Free Play

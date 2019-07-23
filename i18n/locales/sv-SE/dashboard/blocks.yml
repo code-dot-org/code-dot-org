@@ -601,18 +601,6 @@ sv:
             '2': diskant
       Dancelab_whenSetup:
         text: ställ in
-      gamelab_changeColor:
-        text: ändra {COLOR} {METHOD} via {AMOUNT}
-        options:
-          METHOD:
-            '"tint"': färgton
-      gamelab_changeColorBy:
-        text: ändra {COLOR} {METHOD} via {AMOUNT}
-        options:
-          METHOD:
-            '"hue"': nyans
-            '"saturation"': färgmättnad
-            '"brightness"': ljusstyrka
       gamelab_changePropBy:
         text: ändra {SPRITE} {PROPERTY} via {VAL}
         options:
@@ -655,28 +643,11 @@ sv:
             '"right"': höger
             '"space"': rymden
             '"x"': x
-      gamelab_layoutSprites:
-        options:
-          FORMAT:
-            '"border"': gräns
-            '"inner"': innanför kvadrat
-            '"circle"': cirkel
-            '"grid"': rutnät
-            '"row"': rad
-            '"column"': kolumn
-            '"x"': korsvis
-            '"random"': slumpad
-      gamelab_locationDelta:
-        options:
-          DIR:
-            "'random'": slumpad
       gamelab_mirrorSprite:
         options:
           DIRECTION:
             '"right"': höger
             '"left"': vänster
-      gamelab_mixColors:
-        text: blanda {COLOR1} och {COLOR2}
       gamelab_randColor:
         text: slumpad färg
       gamelab_randomColor:
@@ -693,20 +664,6 @@ sv:
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': regnbåge
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': under vatten
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': vinter
-      gamelab_setPosition:
-        text: flytta {THIS} till positionen av {POSITION}
-        options:
-          POSITION:
-            "{x: 50, y: 50}": längst upp till vänster
-            "{x: 200, y: 50}": längst upp i mittersta delen
-            "{x: 350, y: 50}": längst upp till höger
-            "{x: 50, y: 200}": till vänster i mittersta delen
-            "{x: 200, y: 200}": mittersta delen
-            "{x: 350, y: 200}": till höger i mittersta delen
-            "{x: 50, y: 350}": nederst till vänster
-            "{x: 200, y: 350}": längst ned i mittersta delen
-            "{x: 350, y: 350}": nederst till höger
-            '"random"': slumpad
       gamelab_setProp:
         options:
           PROPERTY:
@@ -723,34 +680,11 @@ sv:
             '"scale"': storlek
             '"width"': bredd
             '"height"': höjd
-      gamelab_setup:
-        text: ställ in
       gamelab_spriteClicked:
         options:
           CONDITION:
             '"when"': när
             '"while"': medan
-      gamelab_spriteClickedSet:
-        options:
-          CONDITION:
-            '"when"': när
-            '"while"': medan
-      gamelab_spritesWhere:
-        options:
-          PROPERTY:
-            '"scale"': storlek
-            '"x"': x-position
-            '"y"': y-position
-            '"direction"': rörelseriktning
-            '"tint"': färgton
-      gamelab_spritesWhereGenerator:
-        options:
-          PROPERTY:
-            '"scale"': storlek
-            '"x"': x-position
-            '"y"': y-position
-            '"direction"': rörelseriktning
-            '"tint"': färgton
       gamelab_turn:
         options:
           DIRECTION:
@@ -772,11 +706,6 @@ sv:
             "'down'": ner
             "'left'": vänster
             "'right'": höger
-      gamelab_whenTouchingSet:
-        options:
-          CONDITION:
-            '"when"': när
-            '"while"': medan
       gamelab_whileKey:
         options:
           KEY:

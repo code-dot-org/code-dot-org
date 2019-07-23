@@ -68,7 +68,6 @@ fr:
   of: "de"
   more: "PLUS"
   less: "MOINS"
-  beta: "beta"
   try_hoc: "Essaie l'Heure de Code, en cliquant ici >> "
   try_k8intro: "Essaie notre cours d'Introduction à l'informatique pour l'école primaire (15-25 heures)"
   k8intro: "Cours d'Introduction à l'informatique pour l'école primaire (15-25 heures)"
@@ -316,6 +315,7 @@ fr:
       district_dashboard: 'Tableau de bord du district'
       label: 'Bonjour %{username}'
       stats: 'Code Studio'
+      my_projects: 'Mes projets'
       settings: 'Mon compte'
       logout: 'Déconnexion'
       signin: 'Connexion'
@@ -526,10 +526,10 @@ fr:
     help_from_html: 'Nous tenons particulièrement à remercier les ingénieurs de Google, Microsoft, Facebook, Twitter et beaucoup d''autres organismes qui ont contribué à créer ce matériel.'
     help_from_html_old: 'Les ingénieurs de Google, Microsoft, Facebook et Twitter ont contribué à créer ces matériels.'
     art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. Tous droits réservés. <br />Star Wars&#8482; &copy; %{current_year} Disney et Lucasfilm. Tous droits réservés.<br />La reine des neiges&#8482; &copy; %{current_year} Disney. Tous droits réservés. <br /> L’âge de glace&#8482; &copy; %{current_year} 20th Century Fox. Tous droits réservés. <br /> Angry Bird&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Tous droits réservés. <br /> Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. Tous droits réservés. <br /> Le monde incroyable de Gumball est une marque commerciale et &copy; %{current_year} Cartoon Network.'
-    art_from_html_old: 'Minecraft&#8482 ; &copie ; %{current_year} Microsoft. Tous droits réservés. Star Wars&#8482 ; &copie ; %{current_year} Disney et Lucasfilm. Tous droits réservés. La reine des neiges&#8482 ; &copie ; %{current_year} Disney. Tous droits réservés. L’âge de glace&#8482 ; &copie ; %{current_year} 20th Century Fox. Tous droits réservés. Angry Bird&#8482 ; &copie ; 2009-%{current_year} Rovio Entertainment Ltd. Tous droits réservés. Plantes vs. Zombies&#8482 ; &copie ; %{current_year} Electronic Arts Inc. Tous droits réservés. Le monde incroyable de Gumball est une marque commerciale et &copie ; 2015 Cartoon Network.'
+    art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. Tous droits réservés. Star Wars&#8482; &copy; %{current_year} Disney et Lucasfilm. Tous droits réservés. La reine des neiges&#8482; &copy; %{current_year} Disney. Tous droits réservés. L’âge de glace&#8482; &copy; %{current_year} 20th Century Fox. Tous droits réservés. Angry Bird&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Tous droits réservés. Plantes vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. Tous droits réservés. Le monde incroyable de Gumball est une marque commerciale et &copy; %{current_year} Cartoon Network.'
     code_from_html: 'Code.org utilise p5.play, qui est distribué sous la licence <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">GNU LGPL 2.1</a>.'
     powered_by_aws: 'Fourni par Amazon Web Services'
-    trademark: '&copie ; Code.org, %{current_year}. Code.org®, le logo CODE et Hour of Code™ sont des marques déposées de Code.org.'
+    trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, le logo CODE et Hour of Code&reg; sont des marques déposées de Code.org.'
     copyright: 'Copyright'
     more: 'Plus'
     feedback: 'Fournir un commentaire'
@@ -578,7 +578,6 @@ fr:
   pdf_download: 'Télécharger le PDF'
   download_coming_soon: 'Activité téléchargeable prochainement.'
   video_coming_soon: 'Vidéo bientôt disponible !'
-  not_started: 'L''élève n''a pas tenté ce niveau.'
   share_code:
     title: "Clique sur « Démarrer » pour voir mon programme en action."
     bounce_og_title: "Vérifier mon jeu de rebond"
@@ -814,20 +813,10 @@ fr:
     create: "Crée un projet"
     create_a_project: 'Crée un nouveau projet :'
     new: "Créer un nouveau projet"
-    rename: "Renommer"
-    save: "Sauvegarder"
-    delete: "Supprimer"
-    import: "Importer"
-    share_link_import_bad_link_header: "Lien de partage non reconnu"
-    share_link_import_bad_link_body: "Nous n'avons pas pu importer ce lien de partage. Assurez-vous d'utiliser un lien issu du casse-tête Minecraft: Agent et de copier le lien complet."
-    share_link_import_error_header: "Une erreur est survenue."
-    share_link_import_error_body: "Un problème est survenu lors de l'importation de ce lien de partage. Veuillez réessayer."
     exit: "Retourner au cours"
-    my_projects: "Mes projets"
     project_gallery: "Projets"
     publish: "Publier"
     unpublish: "Dépublier"
-    share: "Partager"
     share_title: Partage ton projet
     share_copy_link: "Copie le lien :"
     share_embed_description: "Vous pouvez copier le code intégré dans une page HTML pour afficher le projet sur une page web."
@@ -835,25 +824,15 @@ fr:
     embed: "Intégré"
     advanced_share: "Afficher les options avancées"
     no_projects: "Vous n’avez actuellement aucun projet. Cliquez sur un des boutons ci-dessus pour démarrer un projet."
-    close: "Fermer"
-    more: "Plus"
     name: "Nom"
     updated: "Mis à jour"
     project_type: "Type de projet"
     help_text: "Clique sur <strong>Développer une application</strong> ou <strong>Dessiner quelque chose</strong> ci-dessous pour créer un nouveau Labo de jeux ou d'artistes !<br/>Tu peux revenir travailler sur tes projets à tout moment."
     need_help: "Essaye ces cours pour t'aider à démarrer un nouveau projet"
     thumbnail_help: "Vous ne voyez pas la bonne vignette pour votre projet? Lancez votre app pour générer une nouvelle vignette. Veuillez noter que cela peut prendre jusqu'à deux heures pour que la vignette soit modifiée partout."
-    really_delete: 'Voukez-vous vraiment supprimer ?'
-    delete_yes: 'Oui'
-    delete_no: 'Non'
     saved: "Enregistré"
     not_saved: "Non enregistré"
-    cancel: 'Annuler'
-    delete_confirm_title: Es-tu sûr de vouloir supprimer ce projet ?
-    delete_confirm_text: "La suppression de ton projet le supprimera définitivement de ta liste « Mes projets ». Ceux avec qui tu as partagé le lien ne seront plus en mesure de visualiser ton projet."
     view_all: 'Afficher « Mes projets »'
-    remix: 'Remix'
-    click_to_remix: "Clique sur «Remix» pour créer ta propre version!"
     edit_project: 'Modifier le projet'
     sharing_disabled: "Désolé, ce projet ne peut pas être partagé. Si c'est votre projet ou celui de vos élèves, veuillez vous <a href='https://studio.code.org/users/sign_in'>connecter</a> à votre compte pour voir ce projet."
     abuse:

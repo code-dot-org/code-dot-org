@@ -1043,7 +1043,7 @@ sk:
             Deleting Records:
               name: Vymazanie záznamov
             Final Project:
-              name: Finálny projekt
+              name: Záverečný projekt
         CSPPD3-Unit5:
           stages:
             Getting Started:
@@ -1053,7 +1053,7 @@ sk:
             Deleting Records:
               name: Vymazanie záznamov
             Final Project:
-              name: Finálny projekt
+              name: Záverečný projekt
         AlgebraA:
           stages:
             'Unplugged: The Design Recipe':
@@ -1786,7 +1786,7 @@ sk:
             Deleting Records:
               name: Vymazanie záznamov
             Final Project:
-              name: Finálny projekt
+              name: Záverečný projekt
             Post-Course Survey:
               name: Hodnotenie kurzu
         csd6-draft:
@@ -1925,9 +1925,9 @@ sk:
               name: 'Digitálne občianstvo: Bezpečný pohyb na internete'
               description_teacher: V spolupráci s Common Sense Education, táto lekcia oboznámi študentom s tým, že webové stránky často požadú informácie, ktoré sú súkromné a diskutuje s nimi o tom, ako na takého požiadavky zodpovedne reagovať. Študenti tiež zistia, že môžu navštíviť mnohé zaujímavé online miesta, ale nato, aby zostali v bezpečí musia dodržiavať určité pravidlá.
             'Loops: Happy Loops':
-              description_teacher: Cykly sú v programovaní veľmi užitočným a veľmi silným nástrojom. Na pochopenie toho, ako nám môžu byť užitočné budú žiaci hľadať jednoduchšiu cestu na riešenie každodenných problémov.
+              description_teacher: Cykly sú v programovaní veľmi užitočným a veľmi silným nástrojom. Aby pochopili, ako nám cyklu môžu byť užitočné, žiakov dostaneme do situácie, v ktorej budú sami chcieť nájsť jednoduchšiu cestu ku vyriešeniu problému.
             Loops in Artist:
-              description_teacher: Vrátením sa k slučkám, študenti sa učia kresliť použitím jednoduchých postupností pokynov. V predchádzajúcej lekcii sme skučky použili na prechádzanie bludiskom a zbieraním pokladu. Tu slučky tvoria vzory. Na konci, Študenti majú príležitosť použitím slučiek vytvoriť vlastné útvary.
+              description_teacher: V tejto lekcii si ešte raz zopakujeme cykly. Žiaci začnú kreslením obrázkov pomocou opakovania krátkych sekvencií príkazov. V predchádzajúcej lekcii sme cykly použili na prechádzanie bludiskom a zbieranie drahokamov. Tu ich použijeme na kreslenie vzorov. Na konci lekcie dostanú žiaci príležitosť pomozou cyklov nakresliť vlastné obrazy.
             'Events: The Big Event':
               name: 'Udalosti: Veľká udalosť'
               description_teacher: Udalosti sú skvelým spôsobom, ako nášmu programu pridať trochu flexibililty a spraviť ho viac zaujímavým a interaktívnym. Niekedy chceme, aby náš program reagoval na používateľa presne v tom momente, keď to používateľ chce. Práve na toto používame udalosti.
@@ -2167,8 +2167,8 @@ sk:
               description_student: V tejto lekcii sa pomocou hlavolamu Tangram naučíte viac o algorimoch!
             Introduction:
               name: Predstavenie online úloh
-              description_student: Táto lekcia vám dá stručný úvod úžasných vecí, ktoré sa naučíte v tomto kurze!
-              description_teacher: 'V tejto lekcii budú študentom predstavené sekvencie, cykly, a vnorené slučky, aby ich pripravili pre komplikovanejšie koncepty v neskoršej časti kurzu. Táto "nadstavbová" lekcia vyrovnáva úroveň medzi expertami a začiatočníkmi vo vašej triede. '
+              description_student: Táto lekcia vám stručne predstaví niektoré z úžasných vecí, ktoré sa naučíte v tomto kurze!
+              description_teacher: 'Táto lekcia študentom predstaví sekvencie, cykly, a vnorené cykly s cieľom pripraviť ich na komplikovanejšie koncepty vyučovaneé v ďalšej časti kurzu. Táto "prípravná" lekcia vám pomôže vyrovnať rozdiely v znalostiach medzi expertami a začiatočníkmi vo vašej triede. '
             The Power of Words:
               name: 'Digitálne občianstvo: Objav silu slov'
             Ice Age Play Lab:
@@ -2672,7 +2672,7 @@ sk:
         course-e-2018:
           stages:
             courseB_unplugged_MRF_2018:
-              name: kurzB_odpojený_MRF_2018
+              name: kurzB_BezPočítača_MRF_2018
             'Programming: My Robotic Friends':
               name: 'Programovanie: Moji robotickí kamaráti'
             Building a Foundation:
@@ -2832,12 +2832,12 @@ sk:
               description_teacher: V spolupráci s Common Sense Education, táto lekcia oboznámi študentom s tým, že webové stránky často požadú informácie, ktoré sú súkromné a diskutuje s nimi o tom, ako na takého požiadavky zodpovedne reagovať. Študenti tiež zistia, že môžu navštíviť mnohé zaujímavé online miesta, ale nato, aby zostali v bezpečí musia dodržiavať určité pravidlá.
             'Loops: Happy Loops':
               name: Veselé cykly
-              description_teacher: Cykly sú v programovaní veľmi užitočným a veľmi silným nástrojom. Na pochopenie toho, ako nám môžu byť užitočné budú žiaci hľadať jednoduchšiu cestu na riešenie každodenných problémov.
+              description_teacher: Cykly sú v programovaní veľmi užitočným a veľmi silným nástrojom. Aby pochopili, ako nám cyklu môžu byť užitočné, žiakov dostaneme do situácie, v ktorej budú sami chcieť nájsť jednoduchšiu cestu ku vyriešeniu problému.
             Loops in Collector:
               name: Cykly s Laurel
             Loops in Artist:
               name: Na mori s cyklami
-              description_teacher: Vrátením sa k slučkám, študenti sa učia kresliť použitím jednoduchých postupností pokynov. V predchádzajúcej lekcii sme skučky použili na prechádzanie bludiskom a zbieraním pokladu. Tu slučky tvoria vzory. Na konci, Študenti majú príležitosť použitím slučiek vytvoriť vlastné útvary.
+              description_teacher: V tejto lekcii si ešte raz zopakujeme cykly. Žiaci začnú kreslením obrázkov pomocou opakovania krátkych sekvencií príkazov. V predchádzajúcej lekcii sme cykly použili na prechádzanie bludiskom a zbieranie drahokamov. Tu ich použijeme na kreslenie vzorov. Na konci lekcie dostanú žiaci príležitosť pomozou cyklov nakresliť vlastné obrazy.
             'Events: The Big Event':
               name: Veľká udalosť Jr.
               description_teacher: Udalosti sú skvelým spôsobom, ako nášmu programu pridať trochu flexibililty a spraviť ho viac zaujímavým a interaktívnym. Niekedy chceme, aby náš program reagoval na používateľa presne v tom momente, keď to používateľ chce. Práve na toto používame udalosti.
@@ -2994,7 +2994,7 @@ sk:
           title: Kurz B (2018)
           assignment_family_title: Kurz B
           description: Nauč sa základy informatiky a bezpečnosti na internete. Na konci kurzu si vytvoríš vlastnú hru alebo príbeh, ktorý môžeš zdieľať s priateľmi.
-          description_short: Úvod do informatiky pre predškolákov. Podobný ako Kurz A, ale s rozšírenou hĺbkou konceptu.
+          description_short: Úvod do informatiky pre žiakov, ktorí len začínajú čítať. Podobný Kurzu A, ale jednotlivé koncepty precvičí viac dohĺbky.
           description_audience: 'Vek 5-8'
           stages:
             'Debugging: Unspotted Bugs':
@@ -3140,7 +3140,7 @@ sk:
           title: Kurz E (2018)
           assignment_family_title: Kurz E
           description: Začneš programovať s algoritmami, cyklami, podmienkami a udalosťami a potom sa pustíš do funkcií. V druhej časti tohto kurzu nadizajnuješ a vytvoríš záverečný projekt, ktorý môžeš zdieľať s kamarátmi a rodinou.
-          description_short: Zrevidujte koncepty v Kurzoch C a D, potom sa začnite učiť funkcie.
+          description_short: Zopakujte si koncepty z kurzov C a D a potom sa naučte používať funkcie.
           description_audience: 'Vek 8-12'
           stages:
             'Programming: My Robotic Friends':
@@ -3258,8 +3258,8 @@ sk:
               description_student: V tejto lekcii sa pomocou hlavolamu Tangram naučíte viac o algorimoch!
             Introduction:
               name: Úvod
-              description_student: Táto lekcia vám dá stručný úvod úžasných vecí, ktoré sa naučíte v tomto kurze!
-              description_teacher: 'V tejto lekcii budú študentom predstavené sekvencie, cykly, a vnorené slučky, aby ich pripravili pre komplikovanejšie koncepty v neskoršej časti kurzu. Táto "nadstavbová" lekcia vyrovnáva úroveň medzi expertami a začiatočníkmi vo vašej triede. '
+              description_student: Táto lekcia vám stručne predstaví niektoré z úžasných vecí, ktoré sa naučíte v tomto kurze!
+              description_teacher: 'Táto lekcia študentom predstaví sekvencie, cykly, a vnorené cykly s cieľom pripraviť ich na komplikovanejšie koncepty vyučovaneé v ďalšej časti kurzu. Táto "prípravná" lekcia vám pomôže vyrovnať rozdiely v znalostiach medzi expertami a začiatočníkmi vo vašej triede. '
             The Power of Words:
               name: Objav silu slov
             Ice Age Play Lab:
@@ -3380,7 +3380,7 @@ sk:
             Deleting Records:
               name: Vymazanie záznamov
             Final Project:
-              name: Finálny projekt
+              name: Záverečný projekt
         spritelab:
           stages:
             Alien Dance Party - Input:
@@ -3534,10 +3534,12 @@ sk:
               name: Premenné v obálkach
             Variables as Constant in Artist:
               name: Premenné s Umelcom
+              description_student: Nezabudni do triedy priniesť svoju tvorivosť! V týchto úlohách pomocou premenných vytvoríš fantastické kresby.
             Variables that Change in Bee:
               name: Meniace sa premenné s včelou
             Variables that Change in Artist:
               name: Meniace sa premenné s Umelcom
+              description_teacher: V tejto lekcii študenti objavia tvorbu opakujúcich sa dizajnov s použitím premenných v prostredí Umelca. Študenti sa naučia používať premenné na tvorbu kódu tak aby sa jednoduchšie písal aj chápal. Prejdením riadených úloh, študenti kočia úrovňou volných hier a uvidia čo sa naučili a ako tvoria svoje vlastné dizajny.
             For Loop Fun:
               name: Zábava s cyklami "for"
             For Loops in Bee:
@@ -3584,8 +3586,11 @@ sk:
               name: Internet
             Crowdsourcing:
               name: Crowdsourcing
+              description_student: Táto lekcia ťa naučí viac o crowdsourcingu - procese, ktorým riešiš úlohu spolu ako tím.
+              description_teacher: V informatike čelíme viacerým veľkým problémom (napríklad hľadanie najväčšieho prvočísla či analýza DNA), ktoré by jednotlivci osamote neboli schopní vyriešiť. Spojenými silami sa však aj s takýmito úlohami vieme popasovať. V tejto lekcii študenti zažijú, akou užitočnou môže byť v informatike tímová práca.
             Digital Sharing:
               name: Digitálne zdieľanie
+              description_teacher: Táto lekcia, vytvorená pomocou tímu Autorských práv a Kreativity, pomôže študentom lepšie porozumieť výzvam aj výhodám rešpektovania vlastníckych a autorských práv, s dôrazom na digitálne prostredie. Študenti by mali byť vedení k dodržiavaniu autorských práv umelcov, čo je dôležitá súčasť ich existencie ako etického digitálneho občana.
         dance-low:
           stages:
             Dance Party:
@@ -3601,8 +3606,10 @@ sk:
               name: Programovanie na štvorčekový papier
             Introduction to Online Puzzles:
               name: Predstavenie online úloh
+              description_teacher: 'V týchto úlohých študenti začnú úvodom (alebo opakovaním - podľa toho, ako pokročilá je vaša trieda) do online pracovného prostredia Code.org. Videá vám vysvetlia ako funguje pracovné prostredie, vrátane tlačidiel `Spustiť`, `Obnoviť` a `Krok`. Videá tiež ukážu ako presúvať bloky a ako ich vymazať či spájať. Následne si študenti precvičia svoje schopnosti v _postupnostiach_ a _odstraňovaní chýb_. Potom študenti uvidia nové typy úloh ako napríklad Zberateľka, Umelec a Záhradníčka.'
             Relay Programming:
               name: Štafetové programovanie
+              description_teacher: Táto aktivita začne krátkym cvičením v hľadaní a opravovaní chýb a vo vytrvalosti. Následne sa študenti rozdelia do skupín, v ktorých, pretekajúc s časom, postupne po jednotlivých príkazoch vytvoria program.
             Debugging in Collector:
               name: Odstraňovanie chýb s Laurel
             Events in Bounce:
@@ -3623,12 +3630,14 @@ sk:
               name: Cykly "dovtedy kým" v bludisku
             Conditionals with Cards:
               name: Podmienky s kartami
+              description_student: Je čas na hru, v ktorej budeš zbierať body len za určitých podmienok!
             Conditionals in Bee:
               name: Podmienky "ak/inak" s včelou
             Conditionals & Loops in Harvester:
               name: Zber úrody s podmienkami
             Digital Citizenship:
               name: Digitálne občianstvo
+              description_student: Niektoré informácie nie je vhodné zdieľať online. Táto lekcia vám pomôže rozlišovať medzi súkromnými a osobnými informáciami.
             Build a Play Lab Game:
               name: Vytvor hru v Play Labe
             'Unplugged: Binary':
@@ -3637,12 +3646,14 @@ sk:
               name: Binárny Umelec
             Build a Star Wars Game:
               name: Vytvor hru Star Wars
+              description_student: Nech ťa sila sprevádza pri tvorení tvojej vlastnej hry Star Wars.
+              description_teacher: V tejto lekcii si študenti precvičia využitie udalostí na vytvorenie hry, ktorú môžu zdieľať online. R2-D2 a ďalšie postavy zo Star Wars (Hviezdnych vojen) študentov prevedú konceptom udalostí a potom im ponechajú priestor na vytvorenie vlastnej hry.
             Dance Party:
               name: Tanečná Párty
         coursee-2019:
           title: Kurz E (2019)
           description: Začneš programovať s algoritmami, cyklami, podmienkami a udalosťami a potom sa pustíš do funkcií. V druhej časti tohto kurzu nadizajnuješ a vytvoríš záverečný projekt, ktorý môžeš zdieľať s kamarátmi a rodinou.
-          description_short: Zrevidujte koncepty v Kurzoch C a D, potom sa začnite učiť funkcie.
+          description_short: Zopakujte si koncepty z kurzov C a D a potom sa naučte používať funkcie.
           description_audience: 'Vek 8-12'
           stages:
             'Programming: My Robotic Friends':
@@ -3666,10 +3677,7 @@ sk:
             Private and Personal Information:
               name: Súkromné a osobné údaje
               description_student: Na internete zažijeme veľa zábavy, ale je tiež dôležité myslieť na bezpečnosť. V tejto lekcii sa naučíme rozlišovať medzi informáciami, ktoré je bezpečné zdieľať online a a informáciami, ktoré majú zostať súkromné.
-              description_teacher: |-
-                Táto lekcia bez počítača vytvorená v spolupráci s Common Sense Education je o rozlišovaní medzi údajmi, ktoré je bezpečné zdieľať online a ktoré už nie. 
-
-                Ako študenti navštevujú stránky, ktoré vyžadujú zadanie rôznych údajov, naučia sa kriticky rozmýšľať o týchto požiadavkách - zručnosť nevyhnutná na ochranu pred krádežou identity. V tejto lekcii sa naučia kriticky rozmýšľať o informáciách, ktoré od nich požadujú rôzne internetové stránky. Naučia rozlišovať medzi osobnými a súkromnými údajmi a medzi informáciami, ktoré je a ktoré nie je bezpečné zdieľať na internete.
+              description_teacher: "Táto lekcia bez počítača vytvorená v spolupráci s Common Sense Education je o rozlišovaní medzi údajmi, ktoré je bezpečné zdieľať online a ktoré už nie. \n\nAko študenti navštevujú stránky, ktoré vyžadujú zadanie rôznych údajov, naučia sa kriticky rozmýšľať o týchto požiadavkách - zručnosť nevyhnutná na ochranu pred krádežou identity. V tejto lekcii sa naučia kriticky rozmýšľať o informáciách, ktoré od nich požadujú rôzne internetové stránky. Naučia rozlišovať medzi osobnými a súkromnými údajmi a medzi informáciami, ktoré je a ktoré nie je bezpečné zdieľať na internete."
             Build a Star Wars Game:
               name: Vytvor hru Star Wars
               description_student: Nech ťa sila sprevádza pri tvorení tvojej vlastnej hry Star Wars.
@@ -3682,6 +3690,7 @@ sk:
               name: Funkcie v Minecrafte
             Functions in Harvester:
               name: Funkcie so Záhradníčkou
+              description_student: Funkcie vám ušetria veľa práce počas pomáhania farmárke s jej úrodou!
             Copyright and Creativity:
               name: Autorské práva a Kreativita
             Functions in Artist:
@@ -3720,6 +3729,8 @@ sk:
               name: Vnorené cykly v bludisku
             Nested Loops in Artist:
               name: Ornamenty pomocou vnorených cyklov
+              description_student: Viac vnorených cyklov! Tentokrát s vnorenými cyklami vytvoríš ÚŽASNÉ kresby.
+              description_teacher: V dnešných úlohách študenti s pomocou Umelca vytvoria spletité kresby. Precvičovanie vnorených cyklov v nových, komplexnejších úlohách umožní študentom uvedomiť si širšie možnosti ich využitia. Tieto úlohy tiež ponúkajú vyššiu mieru kreativity s možnosťou vytvorenia vlastnej kresby v poslednej úlohe.
             Nested Loops in Frozen:
               name: Vnorené cykly s Frozen
             End of Course Project:
@@ -3736,25 +3747,29 @@ sk:
             'Algorithms: Graph Paper Programming':
               name: 'Algoritmy: Programovanie na štvorčekový papier'
             Programming in Maze:
-              name: Programovanie v bludisku
+              name: Programovanie s Angry Birds
             Relay Programming:
               name: Štafetové programovanie
             Debugging in Maze:
-              name: Odstraňovanie chýb v bludisku
+              name: Odstraňovanie chýb so Scratom
             Programming in Collector:
-              name: Programovanie so zberateľkou
+              name: Zbieranie pokladov s Laurel
             Programming in Artist:
-              name: Programovanie s Umelcom
+              name: Umenie s pomocou kódu
             'Loops: Getting Loopy':
               name: 'Cykly sa zacykľujú'
             Loops with Rey and BB-8:
               name: Cykly s Rey a BB-8
+            Loops in Artist:
+              name: Pečiatkovanie v cykloch
             Copyright and Creativity:
               name: Autorské práva a Kreativita
+            'Concept Practice with Minecraft ':
+              name: Pohľad do budúcnosti s Minecraftom
             Nested Loops in Bee:
-              name: Vnorené cykly s včelou
+              name: Vnorené cykly v bludisku
             Nested Loops in Frozen:
-              name: Vnorené cykly vo Frozen
+              name: Snehové vločky s Annou a Elsou
             While Loops in Farmer:
               name: Cykly "pokiaľ" s Farmárkou
             Until Loops in Maze:
@@ -3762,9 +3777,9 @@ sk:
             Conditionals with Cards:
               name: Podmienky s kartami
             Conditionals in Bee:
-              name: Podmienky s včelou
+              name: Podmienky "ak/inak" s včelou
             Conditionals & Loops in Harvester:
-              name: Podmienky a cykly so Záhradníčkou
+              name: Zber úrody s podmienkami
             'Functions: Songwriting':
               name: 'Funkcie: Písanie pesničiek'
             Functions in Minecraft:
@@ -3785,14 +3800,22 @@ sk:
               name: Objav silu slov
             Envelope Variables:
               name: Premenné v obálkach
+            Variables as Constant in Artist:
+              name: Premenné s Umelcom
+            Variables that Change in Bee:
+              name: Meniace sa premenné s včelou
+            Variables that Change in Artist:
+              name: Meniace sa premenné s Umelcom
             For Loop Fun:
               name: Zábava s cyklami "for"
             For Loops in Bee:
               name: Cykly "for" s včelou
             For Loops in Artist:
               name: Cykly "for" s Umelcom
+            Learning Sprites with Sprite Lab:
+              name: Spoznaj Sprite Lab
             Alien Dance Party with Sprite Lab:
-              name: Mimozemská tanečná párty so Sprite Labom
+              name: Mimozemská tanečná párty
             Pet Giraffe with Sprite Lab:
               name: Moja malá žirafa so Sprite Labom
             Explore Project Ideas:
@@ -3815,6 +3838,12 @@ sk:
               name: Internet
             Crowdsourcing:
               name: Crowdsourcing
+            Build A Project:
+              name: Záverečný projekt
+            Dance Party:
+              name: Tanečná Párty
+            Concept Practice with Minecraft:
+              name: Pohľad do budúcnosti s Minecraftom
         andrea-test:
           stages:
             module1:
@@ -3888,6 +3917,7 @@ sk:
               name: Vytvor si vlastné obrázky s cyklami
             'End of Course Project: Create a Play Lab Game':
               name: 'Záverečný projekt: Vytvor si hru v Play Labe'
+              description_student: Priprav sa na veľa kódovania! Je načase vytvoriť tvoj projekt.
             'Programming: My Robotic Friends':
               name: Moji robotickí kamaráti (ml.)
             'Loops: My Loopy Robotic Friends':
@@ -3914,7 +3944,7 @@ sk:
           stages:
             'Programming: Happy Maps':
               name: Veselé mapy
-              description_teacher: Premostenie od algoritmov ku programovaniu môže byť jednoduché, ak študenti rozumejú rozdielu medzi naplánovaním krokov a ich zakódovaním do určitého jazyka. Táto aktivita pomôže študentom v čítaní a písaní jednoduchého kódu.
+              description_teacher: 'Premostenie od algoritmov ku programovaniu môže byť jednoduché, ak študenti rozumejú rozdielu medzi naplánovaním krokov a ich zakódovaním do určitého jazyka. Táto aktivita pomôže študentom v čítaní a písaní jednoduchého kódu.'
             Programming in Maze:
               name: Programovanie v bludisku
               description_teacher: V tejto sérii online úloh si študenti precvičia pochopenie algoritmov, hľadanie a odstraňovanie chýb a všeobecnú počítačovú gramotnosť. Spolu s postavičkami z Angry Birds študenti vybudujú sekvenčné algoritmy s cieľom presunúť vtáka ku prasiatku vyhýbajúc sa stenám a TNT. V lekcii sa tiež nachádzajú úlohy na hľadanie a odstraňovanie chýb, ktoré pomáhajú rozvíjať schopnosť riešiť problémy a kritické myslenie.
@@ -3923,11 +3953,11 @@ sk:
               description_teacher: V spolupráci s Common Sense Education, táto lekcia oboznámi študentom s tým, že webové stránky často požadú informácie, ktoré sú súkromné a diskutuje s nimi o tom, ako na takého požiadavky zodpovedne reagovať. Študenti tiež zistia, že môžu navštíviť mnohé zaujímavé online miesta, ale nato, aby zostali v bezpečí musia dodržiavať určité pravidlá.
             'Loops: Happy Loops':
               name: Veselé cykly
-              description_teacher: Cykly sú v programovaní veľmi užitočným a veľmi silným nástrojom. Na pochopenie toho, ako nám môžu byť užitočné budú žiaci hľadať jednoduchšiu cestu na riešenie každodenných problémov.
+              description_teacher: Cykly sú v programovaní veľmi užitočným a veľmi silným nástrojom. Aby pochopili, ako nám cyklu môžu byť užitočné, žiakov dostaneme do situácie, v ktorej budú sami chcieť nájsť jednoduchšiu cestu ku vyriešeniu problému.
             Loops in Collector:
               name: Cykly s Laurel
             Loops in Artist:
-              description_teacher: Vrátením sa k slučkám, študenti sa učia kresliť použitím jednoduchých postupností pokynov. V predchádzajúcej lekcii sme skučky použili na prechádzanie bludiskom a zbieraním pokladu. Tu slučky tvoria vzory. Na konci, Študenti majú príležitosť použitím slučiek vytvoriť vlastné útvary.
+              description_teacher: V tejto lekcii si ešte raz zopakujeme cykly. Žiaci začnú kreslením obrázkov pomocou opakovania krátkych sekvencií príkazov. V predchádzajúcej lekcii sme cykly použili na prechádzanie bludiskom a zbieranie drahokamov. Tu ich použijeme na kreslenie vzorov. Na konci lekcie dostanú žiaci príležitosť pomozou cyklov nakresliť vlastné obrazy.
             'Events: The Big Event':
               name: Veľká udalosť Jr.
               description_teacher: Udalosti sú skvelým spôsobom, ako nášmu programu pridať trochu flexibililty a spraviť ho viac zaujímavým a interaktívnym. Niekedy chceme, aby náš program reagoval na používateľa presne v tom momente, keď to používateľ chce. Práve na toto používame udalosti.
@@ -3936,6 +3966,7 @@ sk:
               description_teacher: V tejto online aktivite sa študenti naučia, ako v PlayLabe využívať Udalosti. Následne dostanú príležitosť aplikovať všetky doteraz naučené zručnosti a vytvoriť animovanú hru. Je čas na kreativitu! Vytvorme v Play Labe celý príbeh!
             Ocean Scene with Loops:
               name: Na mori s cyklami
+              description_teacher: V tejto lekcii si ešte raz zopakujeme cykly. Žiaci začnú kreslením obrázkov pomocou opakovania krátkych sekvencií príkazov. V predchádzajúcej lekcii sme cykly použili na prechádzanie bludiskom a zbieranie drahokamov. Tu ich použijeme na kreslenie vzorov. Na konci lekcie dostanú žiaci príležitosť pomozou cyklov nakresliť vlastné obrazy.
             Loops in Ice Age:
               name: Cykly so Scratom
             Programming in Ice Age:
@@ -3947,7 +3978,7 @@ sk:
         courseb-2019:
           title: Kurz B (2019)
           description: Nauč sa základy informatiky a bezpečnosti na internete. Na konci kurzu si vytvoríš vlastnú hru alebo príbeh, ktorý môžeš zdieľať s priateľmi.
-          description_short: Úvod do informatiky pre predškolákov. Podobný ako Kurz A, ale s rozšírenou hĺbkou konceptu.
+          description_short: Úvod do informatiky pre žiakov, ktorí len začínajú čítať. Podobný Kurzu A, ale jednotlivé koncepty precvičí viac dohĺbky.
           description_audience: 'Vek 5-8'
           stages:
             Move It, Move It:
@@ -3970,8 +4001,11 @@ sk:
               name: Cykly v Dobe ľadovej
             Loops in Collector:
               name: Cykly s Laurel
+            Loops in Artist:
+              name: Kreslenie v záhrade pomocou cyklov
             'Events: The Big Event':
               name: Veľká udalosť Jr.
+              description_teacher: Udalosti sú skvelým spôsobom, ako nášmu programu pridať trochu flexibililty a spraviť ho viac zaujímavým a interaktívnym. Niekedy chceme, aby náš program reagoval na používateľa presne v tom momente, keď to používateľ chce. Práve na toto používame udalosti.
             Events in Play Lab:
               name: Kráľovská bitka s udalosťami
             'Loops: Getting Loopy':
@@ -4011,13 +4045,23 @@ sk:
             'Loops: My Loopy Robotic Friends':
               name: 'Cykly: Moji zacyklení robotickí kamaráti'
             Loops in Ice Age:
-              name: Cykly v Dobe ľadovej
+              name: Cykly so Scratom
+            Loops in Collector:
+              name: Cykly s Laurel
+            Loops in Artist:
+              name: Kreslenie v záhrade pomocou cyklov
             'Events: The Big Event':
               name: 'Udalosti: Veľká udalosť'
             Spelling Bee:
               name: Včela Hláskovanie
             Programming in Maze:
-              name: Programovanie v bludisku
+              name: Programovanie so Scratom
+            Programming in Harvester:
+              name: Programovanie so Záhradníčkou
+            Tell a Story in Play Lab:
+              name: Udalosti v pohybe
+            Make a Game in Play Lab:
+              name: Kráľovská bitka s udalosťami
             Ocean Scene with Loops:
               name: Na mori s cyklami
         removed19:
@@ -4105,7 +4149,11 @@ sk:
             Deleting Records:
               name: Vymazanie záznamov
             Final Project:
-              name: Finálny projekt
+              name: Záverečný projekt
+        csp1-pilot:
+          stages:
+            Number Systems:
+              name: Číselné systémy
         time4csdemo:
           stages:
             Crowdsourcing:
@@ -4154,3 +4202,35 @@ sk:
               name: Programovanie na štvorčekový papier
             Programming in Maze:
               name: Programovanie v bludisku
+            Loops with Rey and BB-8:
+              name: Cykly s Rey a BB-8
+        fit2019-novice:
+          stages:
+            Wrap Up:
+              name: Zhrnutie
+        fit2019-apprentice:
+          stages:
+            Wrap Up:
+              name: Zhrnutie
+        csd2-pilot:
+          stages:
+            'Websites for Expression ':
+              description_student: 'Táto lekcia predstavuje webstránky ako spôsob osobného vyjadrovania. Hodina najskôr preberá rôzne spôsoby akými sa ľudia vyjadrujú a zdieľajú svoje záujmy a nápady, potom sa pozerá na zopár príkladov webstránok pripravených študentami z predošlých kurzov. Na koniec si každý premyslí a podelí sa o zoznam tém a záujmov, ktoré bu´du tvoriť zdroj pre vytvorenie vlastnej webstránky v priebehu zvyšku kapitoly. '
+            Digital Footprint:
+              name: Digitálna stopa
+            Lists:
+              name: Zoznamy
+            Project - Multi-Page Websites:
+              name: Projekt - Viacstránkové webstránky
+            Images:
+              name: Obrázky
+        csd3-pilot:
+          stages:
+            Variables:
+              name: Premenné
+            Conditionals:
+              name: Podmienky
+            Velocity:
+              name: Rýchlosť
+            Functions:
+              name: Funkcie
