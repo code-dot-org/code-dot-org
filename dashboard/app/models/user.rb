@@ -315,7 +315,7 @@ class User < ActiveRecord::Base
     # Check user_school_infos count to verify if new or existing user
     # If user_school_infos count == 0, new user
     # If user_school_infos count > 0, existing user
-    if user_school_infos.count > 0 && !school_info.complete?
+    if user_school_infos.count > 0 && !school_info&.complete?
       errors.add(:school_info_id, "cannot add new school id")
     end
   end
@@ -2114,7 +2114,7 @@ class User < ActiveRecord::Base
 
     self.purged_at = Time.zone.now
 
-    save!
+    save!(validate: false)
   end
 
   def within_united_states?
