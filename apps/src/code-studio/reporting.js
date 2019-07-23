@@ -121,6 +121,7 @@ function validateReport(report) {
         if (
           report.app === 'applab' ||
           report.app === 'gamelab' ||
+          report.app === 'spritelab' ||
           report.app === 'weblab'
         ) {
           validateType('submitted', value, 'boolean');

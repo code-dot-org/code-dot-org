@@ -16,7 +16,8 @@ import {
 } from '@cdo/apps/lib/util/javascriptMode';
 import JavaScriptModeErrorHandler from '@cdo/apps/JavaScriptModeErrorHandler';
 import BlocklyModeErrorHandler from '@cdo/apps/BlocklyModeErrorHandler';
-var msg = require('@cdo/gamelab/locale');
+var gamelabMsg = require('@cdo/gamelab/locale');
+var spritelabMsg = require('@cdo/spritelab/locale');
 import CustomMarshalingInterpreter from '@cdo/apps/lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 var apiJavascript = require('./apiJavascript');
 var consoleApi = require('@cdo/apps/consoleApi');
@@ -273,7 +274,7 @@ GameLab.prototype.init = function(config) {
   }.bind(this);
 
   config.dropletConfig = dropletConfig;
-  config.appMsg = msg;
+  config.appMsg = this.isSpritelab ? spritelabMsg : gamelabMsg;
 
   // hide makeYourOwn on the share page
   config.makeYourOwn = false;
@@ -774,6 +775,7 @@ GameLab.prototype.reset = function() {
 };
 
 GameLab.prototype.onPuzzleComplete = function(submit, testResult, message) {
+  let msg = this.isSpritelab ? spritelabMsg : gamelabMsg;
   if (message && msg[message]) {
     this.message = msg[message]();
   }
@@ -1454,6 +1456,7 @@ GameLab.prototype.executeCmd = function(id, name, opts) {
  */
 GameLab.prototype.displayFeedback_ = function() {
   var level = this.level;
+  let msg = this.isSpritelab ? spritelabMsg : gamelabMsg;
 
   this.studioApp_.displayFeedback({
     feedbackType: this.testResults,
