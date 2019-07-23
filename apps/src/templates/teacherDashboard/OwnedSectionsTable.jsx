@@ -2,8 +2,7 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import color from '@cdo/apps/util/color';
-import * as Table from 'reactabular-table';
-import * as sort from 'sortabular';
+import {Table, sort} from 'reactabular';
 import i18n from '@cdo/locale';
 import wrappedSortable from '../tables/wrapped_sortable';
 import orderBy from 'lodash/orderBy';
@@ -217,7 +216,7 @@ class OwnedSectionsTable extends Component {
           props: {style: styles.hiddenCol}
         },
         cell: {
-          formatters: [hiddenFormatter],
+          format: hiddenFormatter,
           props: {style: styles.hiddenCol}
         }
       },
@@ -230,7 +229,7 @@ class OwnedSectionsTable extends Component {
           transforms: [sortable]
         },
         cell: {
-          formatters: [sectionLinkFormatter],
+          format: sectionLinkFormatter,
           props: {style: {...colStyle, ...styles.leftHiddenCol}}
         }
       },
@@ -242,7 +241,7 @@ class OwnedSectionsTable extends Component {
           transforms: [sortable]
         },
         cell: {
-          formatters: [gradeFormatter],
+          format: gradeFormatter,
           props: {style: colStyle}
         }
       },
@@ -255,7 +254,7 @@ class OwnedSectionsTable extends Component {
           }
         },
         cell: {
-          formatters: [courseLinkFormatter],
+          format: courseLinkFormatter,
           props: {style: colStyle}
         }
       },
@@ -267,7 +266,7 @@ class OwnedSectionsTable extends Component {
           transforms: [sortable]
         },
         cell: {
-          formatters: [studentsFormatter],
+          format: studentsFormatter,
           props: {style: colStyle}
         }
       },
@@ -280,7 +279,7 @@ class OwnedSectionsTable extends Component {
           }
         },
         cell: {
-          formatters: [loginInfoFormatter],
+          format: loginInfoFormatter,
           props: {style: colStyle}
         }
       },
@@ -290,7 +289,7 @@ class OwnedSectionsTable extends Component {
           props: {style: tableLayoutStyles.headerCell}
         },
         cell: {
-          formatters: [this.actionCellFormatter],
+          format: this.actionCellFormatter,
           props: {style: {...tableLayoutStyles.cell, ...styles.colButton}}
         }
       }
