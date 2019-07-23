@@ -2,8 +2,7 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
-import * as Table from 'reactabular-table';
-import * as sort from 'sortabular';
+import {Table, sort} from 'reactabular';
 import wrappedSortable from '../tables/wrapped_sortable';
 import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
 import orderBy from 'lodash/orderBy';
@@ -80,7 +79,7 @@ class StatsTable extends Component {
           transforms: [sortable]
         },
         cell: {
-          formatters: [this.nameFormatter],
+          format: this.nameFormatter,
           props: {
             style: {
               ...tableLayoutStyles.cell
