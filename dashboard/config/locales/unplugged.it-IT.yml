@@ -129,9 +129,10 @@ it:
       BigEvent:
         title: Gli eventi
         desc: Gli studenti vengono introdotti al concetto di "evento" nella programmazione.
-          Gli eventi sono azioni che un calcolatore continuamente controlla se accadono
-          o meno. In questa lezione l'insegnante "cliccherà" i pulsanti di un controller
-          di carta e gli studenti dovranno reagire in funzione del pulsante cliccato.
+          Gli eventi sono azioni che un calcolatore controlla in continuazione se
+          accadono o meno. In questa lezione l'insegnante "cliccherà" i pulsanti di
+          un controller di carta e gli studenti dovranno reagire in funzione del pulsante
+          cliccato.
       GoingPlacesSafely:
         title: Cittadinanza digitale - Visitare luoghi in modo sicuro
         desc: 'Internet è un luogo potente, ma alle volte pericoloso. L''insegnante
@@ -320,9 +321,10 @@ it:
       courseABC_unplugged_bigEvent:
         title: Gli eventi
         desc: Gli studenti vengono introdotti al concetto di "evento" nella programmazione.
-          Gli eventi sono azioni che un calcolatore continuamente controlla se accadono
-          o meno. In questa lezione l'insegnante "cliccherà" i pulsanti di un controller
-          di carta e gli studenti dovranno reagire in funzione del pulsante cliccato.
+          Gli eventi sono azioni che un calcolatore controlla in continuazione se
+          accadono o meno. In questa lezione l'insegnante "cliccherà" i pulsanti di
+          un controller di carta e gli studenti dovranno reagire in funzione del pulsante
+          cliccato.
       courseB_unplugged_digitalFootprint:
         title: La tua impronta digitale
         desc: 'L''insegnante introduce agli studenti l''idea che mettere su Internet
@@ -450,9 +452,10 @@ it:
       BigEvent_2018:
         title: Gli eventi
         desc: Gli studenti vengono introdotti al concetto di "evento" nella programmazione.
-          Gli eventi sono azioni che un calcolatore continuamente controlla se accadono
-          o meno. In questa lezione l'insegnante "cliccherà" i pulsanti di un controller
-          di carta e gli studenti dovranno reagire in funzione del pulsante cliccato.
+          Gli eventi sono azioni che un calcolatore controlla in continuazione se
+          accadono o meno. In questa lezione l'insegnante "cliccherà" i pulsanti di
+          un controller di carta e gli studenti dovranno reagire in funzione del pulsante
+          cliccato.
       GraphPaperProgramming_2018:
         title: Programmazione su carta a quadretti
         desc: Gli studenti scrivono un algoritmo (una sequenza di istruzioni) usando
@@ -509,22 +512,21 @@ it:
         title: Muovilo, muovilo
       courseB_unplugged_CnC_2018:
         title: È fantastico creare e comportarsi lealmente
-        desc: Questa lezione è un contributo del gruppo Copyright e Creatività di
-          Code.org e serve per aiutare gli studenti a capire il processo di condivisione
-          e ispirazione. A ciò si aggiunge la promozione della creatività e la necessità
+        desc: Questa lezione è un contributo del gruppo Copyright e Creatività (www.copyrightandcreativity.org)
+          e serve per aiutare gli studenti a capire il processo di condivisione e
+          ispirazione. A ciò si aggiunge la promozione della creatività e la necessità
           di essere corretti con coloro che danno vita ai contenuti creativi.
       courseE_unplugged_CnC_2018:
         title: Condivisione digitale
-        desc: Questa lezione è un contributo del gruppo Copyright e Creatività di
-          Code.org e serve per aiutare gli studenti a comprendere le sfide e i vantaggi
-          del rispetto della proprietà intellettuale (copyright), in particolare in
-          ambiento digitale. Gli studenti dovrebbero essere incoraggiati a rispettare
-          i diritti degli artisti come parte integrante dell'etica di un buon cittadino
-          digitale.
+        desc: Questa lezione è un contributo del gruppo Copyright e Creatività (www.copyrightandcreativity.org)
+          e serve per aiutare gli studenti a comprendere le sfide e i vantaggi del
+          rispetto della proprietà intellettuale (copyright), in particolare in ambiento
+          digitale. Gli studenti dovrebbero essere incoraggiati a rispettare i diritti
+          degli artisti come parte integrante dell'etica di un buon cittadino digitale.
       RelayProgramming_2018:
         title: Programmazione a staffetta
         desc: 'Questa attività inizierà con una breve lezione sulla correzione degli
-          errori (debugging) e sulla persistenza, poi partirà una corsa contro il
+          errori (debugging) e sulla perseveranza, poi partirà una corsa contro il
           tempo: gli studenti si suddividono in squadre e lavorano insieme per scrivere
           un programma un''istruzione alla volta.'
       courseB_unplugged_MRF_2019:
@@ -545,7 +547,7 @@ it:
       RelayProgramming_2018_2019:
         title: Programmazione a staffetta
         desc: 'Questa attività inizierà con una breve lezione sulla correzione degli
-          errori (debugging) e sulla persistenza, poi partirà una corsa contro il
+          errori (debugging) e sulla perseveranza, poi partirà una corsa contro il
           tempo: gli studenti si suddividono in squadre e lavorano insieme per scrivere
           un programma un''istruzione alla volta.'
       courseD_unplugged_digitalCitizenship_2019:
@@ -565,12 +567,11 @@ it:
         title: Cittadinanza digitale - Dati personali
       courseE_unplugged_CnC_2019:
         title: Condivisione digitale
-        desc: Questa lezione è un contributo del gruppo Copyright e Creatività di
-          Code.org e serve per aiutare gli studenti a comprendere le sfide e i vantaggi
-          del rispetto della proprietà intellettuale (copyright), in particolare in
-          ambiento digitale. Gli studenti dovrebbero essere incoraggiati a rispettare
-          i diritti degli artisti come parte integrante dell'etica di un buon cittadino
-          digitale.
+        desc: Questa lezione è un contributo del gruppo Copyright e Creatività (www.copyrightandcreativity.org)
+          e serve per aiutare gli studenti a comprendere le sfide e i vantaggi del
+          rispetto della proprietà intellettuale (copyright), in particolare in ambiento
+          digitale. Gli studenti dovrebbero essere incoraggiati a rispettare i diritti
+          degli artisti come parte integrante dell'etica di un buon cittadino digitale.
       GettingLoopy_2019:
         title: Diventare ripetitivi
         desc: Questa lezione introduce il costrutto di programmazione detto ciclo
@@ -585,9 +586,10 @@ it:
       BigEvent_2019:
         title: Gli eventi
         desc: Gli studenti vengono introdotti al concetto di "evento" nella programmazione.
-          Gli eventi sono azioni che un calcolatore continuamente controlla se accadono
-          o meno. In questa lezione l'insegnante "cliccherà" i pulsanti di un controller
-          di carta e gli studenti dovranno reagire in funzione del pulsante cliccato.
+          Gli eventi sono azioni che un calcolatore controlla in continuazione se
+          accadono o meno. In questa lezione l'insegnante "cliccherà" i pulsanti di
+          un controller di carta e gli studenti dovranno reagire in funzione del pulsante
+          cliccato.
       BinaryBracelets_2019:
         title: Braccialetti binari
         desc: Gli studenti creano dei braccialetti che rappresentano con l'alfabeto
@@ -629,9 +631,9 @@ it:
           consapevole" / "Per la scuola primaria"'
       courseB_unplugged_CnC_2019:
         title: È fantastico creare e comportarsi lealmente
-        desc: Questa lezione è un contributo del gruppo Copyright e Creatività di
-          Code.org e serve per aiutare gli studenti a capire il processo di condivisione
-          e ispirazione. A ciò si aggiunge la promozione della creatività e la necessità
+        desc: Questa lezione è un contributo del gruppo Copyright e Creatività (www.copyrightandcreativity.org)
+          e serve per aiutare gli studenti a capire il processo di condivisione e
+          ispirazione. A ciò si aggiunge la promozione della creatività e la necessità
           di essere corretti con coloro che danno vita ai contenuti creativi.
       timeforcs_demo_crowdsourcing:
         title: Intelligenza collettiva

@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import applabMsg from '@cdo/applab/locale';
 import color from '../util/color';
-import experiments from '../util/experiments';
 import elementLibrary from './designElements/library';
 import DeleteElementButton from './designElements/DeleteElementButton';
 import ElementSelect from './ElementSelect';
@@ -52,7 +51,6 @@ export default class DesignProperties extends React.Component {
       $(this.props.element).data('key', key);
     }
 
-    const themesEnabled = experiments.isEnabled('applabThemes');
     const hasCustomizedThemeProps = designMode.hasCustomizedThemeProperties(
       this.props.element
     );
@@ -235,7 +233,7 @@ export default class DesignProperties extends React.Component {
                 <DuplicateElementButton
                   handleDuplicate={this.props.onDuplicate}
                 />
-                {themesEnabled && hasCustomizedThemeProps && (
+                {hasCustomizedThemeProps && (
                   <RestoreThemeDefaultsButton
                     handleRestore={this.props.onRestoreThemeDefaults}
                   />

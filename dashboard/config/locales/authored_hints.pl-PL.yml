@@ -35,7 +35,7 @@ pl-PL:
       2-3 Artist 8:
         2-3_Artist_8_a: Jeśli podzielisz 200 pikseli na pół, jaką szerokość powinien
           mieć każdy kwadrat?
-      2-3 Artist 9:
+      2-3 Artist 9 NEW:
         2-3_Artist_9_a: Ten diament to tak na prawdę kwadrat obrócony na bok
       2-3 Artist Debugging 10:
         2-3_Artist_Debugging_10_b: |-
@@ -1984,15 +1984,8 @@ pl-PL:
           Będziesz potrzebował użyć bloku warunkowego ('if' lub ' if/else') do rozwiązania problemu.
       courseD_maze_ramp6:
         courseC_maze_programming6_a: Istnieją dwa sposoby, aby rozwiązać ten problem!
-      courseD_scrat_predict1:
-        courseF_maze_ramp6_a: Istnieją dwa sposoby, aby rozwiązać ten problem!
-      courseD_scrat_ramp1:
-        courseF_maze_ramp1_b: Nie potrzebujesz tutaj żadnego dodatkowego bloku z przybornika!
-      courseD_scrat_ramp3:
-        courseF_maze_ramp3_b: Użyj przycisku Krok aby sprawdzić kod linijka po linijce.
-          Czy już wiesz gdzie jest błąd?
-      courseD_scrat_ramp6:
-        courseC_maze_programming6_a: Istnieją dwa sposoby, aby rozwiązać ten problem!
+      courseD_scrat_ramp7:
+        courseD_scrat_programming6_a: Istnieją dwa sposoby, aby rozwiązać ten problem!
       courseE_artist_concept_challenge1:
         courseE_artist_concept_challenge1_a: 'Połowa sześciokąta ma **długość 30**
           i wymaga obrotu w prawo o **60 stopni**.  '

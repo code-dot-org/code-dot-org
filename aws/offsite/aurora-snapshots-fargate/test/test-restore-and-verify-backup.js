@@ -167,12 +167,14 @@ describe("#verifyDb()", function() {
         }
       });
 
-    const queryFake = sinon.fake.returns([
-      {
-        number_of_users: 1,
-        last_updated_at: "now"
-      }
-    ]);
+    const queryFake = sinon.fake.returns(
+      Promise.resolve([
+        {
+          number_of_users: 1,
+          last_updated_at: "now"
+        }
+      ])
+    );
 
     const connection = {
       query: queryFake,
@@ -181,7 +183,7 @@ describe("#verifyDb()", function() {
     sinon.replace(
       mysqlPromise,
       "createConnection",
-      sinon.fake.returns(connection)
+      sinon.fake.returns(Promise.resolve(connection))
     );
 
     await restoreAndVerify.verifyDb(rds, INSTANCE_ID, password);

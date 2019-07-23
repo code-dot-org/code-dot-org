@@ -32,7 +32,7 @@ km-KH:
       2-3 Artist 8:
         2-3_Artist_8_a: ប្រសិនបើអ្នកកាត់បន្ថយចំនួន ២០០​ នៅពាក់កណ្តាល តើមានប៉ុន្មាន
           ភីកសែល ដែលការ៉េនីមួយៗត្រូវការ?
-      2-3 Artist 9:
+      2-3 Artist 9 NEW:
         2-3_Artist_9_a: ពេជ្រនេះគឺគ្រាន់តែជារៀងការ៉េនៅចំហៀងរបស់ខ្លួនប៉ុន្ណោះ
       2-3 Artist Debugging 10:
         2-3_Artist_Debugging_10_b: |-
@@ -465,10 +465,8 @@ km-KH:
           If there is nothing there, you won't pick anything!
       courseD_maze_ramp6:
         courseC_maze_programming6_a: មានវិធីពីរយ៉ាងក្នុងការដោះស្រាយចំណោទនេះ ។
-      courseD_scrat_predict1:
-        courseF_maze_ramp6_a: មានវិធីពីរយ៉ាងក្នុងការដោះស្រាយចំណោទនេះ ។
-      courseD_scrat_ramp6:
-        courseC_maze_programming6_a: មានវិធីពីរយ៉ាងក្នុងការដោះស្រាយចំណោទនេះ ។
+      courseD_scrat_ramp7:
+        courseD_scrat_programming6_a: មានវិធីពីរយ៉ាងក្នុងការដោះស្រាយចំណោទនេះ ។
       courseE_artist_concept_challenge1:
         courseE_artist_concept_challenge1_a: 'ពាក់កណ្តាលឆកោនមាន \*\* ប្រវែង 30 \*\*
           និងងាកទៅស្តាំដោយ \*\* 60 ដឺក្រេ \*\* ។  '

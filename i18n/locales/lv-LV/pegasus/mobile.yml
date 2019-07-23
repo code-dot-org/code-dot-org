@@ -507,8 +507,6 @@
   course2_name: "Kurss 2"
   course3_name: "Kurss 3"
   course4_name: "4. kurss"
-  math_category_name: "Matemātika"
-  hoc_category_name: "Programmēšanas stunda"
   applab_name: "Aplikāciju laborotorija"
   applab_gradelevel: "Vecums 13+"
   codeorg_gradelevel: "Vecums no 4-104"
