@@ -447,6 +447,7 @@ NetSimSendPanel.prototype.sendOneBit_ = function() {
   }
 
   this.disableEverything();
+  this.netsim_.animateSetWireState(nextBit);
   myNode.setSimplexWireState(nextBit, err => {
     if (err) {
       logger.warn(err.message);

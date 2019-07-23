@@ -42,14 +42,6 @@ var NetSimVizWire = (module.exports = function(localNode, remoteNode) {
    * @type {jQuery} wrapped around a SVGTextElement
    * @private
    */
-  this.lastReadState_ = jQuerySvgElement('text')
-    .addClass('question-mark')
-    .appendTo(root);
-
-  /**
-   * @type {jQuery} wrapped around a SVGTextElement
-   * @private
-   */
   this.text_ = jQuerySvgElement('text')
     .addClass('state-label')
     .appendTo(root);
@@ -116,7 +108,6 @@ NetSimVizWire.prototype.render = function(clock) {
   var textPosX = this.textPosX_;
   var textPosY = this.textPosY_;
   var pathData = this.pathData_;
-  var wireCenter = this.wireCenter_;
 
   // Make the call to super to update everything we can, then
   // recalculate the values of ours that are dependent on the movement
@@ -147,14 +138,6 @@ NetSimVizWire.prototype.render = function(clock) {
   }
   if (pathData !== this.pathData_) {
     this.line_.attr('d', this.pathData_);
-  }
-  if (
-    wireCenter.x !== this.wireCenter_.x ||
-    wireCenter.y !== this.wireCenter_.y
-  ) {
-    this.lastReadState_
-      .attr('x', this.wireCenter_.x)
-      .attr('y', this.wireCenter_.y);
   }
 };
 
@@ -197,7 +180,6 @@ NetSimVizWire.prototype.animateSetState = function(newState, fromRemote) {
   }
 
   var flyOutMs = 300;
-  var holdPositionMs = 300;
 
   this.stopAllAnimation();
   this.setWireClasses_(newState);
@@ -210,13 +192,15 @@ NetSimVizWire.prototype.animateSetState = function(newState, fromRemote) {
     flyOutMs,
     tweens.easeOutQuad
   );
-  this.doAfterDelay(
-    flyOutMs + holdPositionMs,
-    function() {
-      this.lastReadState_.text(this.getDisplayBit_(newState));
-      this.setWireClasses_('unknown');
-    }.bind(this)
-  );
+};
+
+NetSimVizWire.prototype.changeWireState = function(newState) {
+  if (!(this.localVizNode && this.remoteVizNode)) {
+    return;
+  }
+  this.text_.text(this.getDisplayBit_(newState));
+  this.snapTextToPosition(this.getWireCenterPosition());
+  this.setWireClasses_(newState);
 };
 
 /**
@@ -243,8 +227,12 @@ NetSimVizWire.prototype.animateReadState = function(newState) {
         flyToNodeMs,
         tweens.easeOutQuad
       );
-      this.lastReadState_.text(this.getDisplayBit_(newState));
-      this.setWireClasses_('unknown');
+      this.doAfterDelay(
+        holdPositionMs,
+        function() {
+          this.snapTextToPosition(this.getWireCenterPosition());
+        }.bind(this)
+      );
     }.bind(this)
   );
 };

@@ -606,9 +606,9 @@ NetSimLocalClientNode.prototype.onMessageTableChange_ = function(changeType) {
     return;
   }
   if (
-    changeType !== 'removeRowFromCache' &&
+    // messageGranularity === BITS implies this is a simplex wire
     NetSimGlobals.getLevelConfig().messageGranularity ===
-      MessageGranularity.BITS
+    MessageGranularity.BITS
   ) {
     this.getLatestMessageOnSimplexWire(
       function(err, message) {
@@ -616,10 +616,7 @@ NetSimLocalClientNode.prototype.onMessageTableChange_ = function(changeType) {
           logger.error('Error pulling message off the wire: ' + err.message);
           return;
         }
-        if (message) {
-          let fromRemote = message.fromNodeID !== this.entityID;
-          this.wireStateChange.notifyObservers(message, fromRemote);
-        }
+        this.wireStateChange.notifyObservers(message.payload);
       }.bind(this)
     );
   }
