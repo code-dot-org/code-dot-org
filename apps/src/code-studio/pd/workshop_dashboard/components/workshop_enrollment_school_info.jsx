@@ -99,13 +99,18 @@ export class WorkshopEnrollmentSchoolInfo extends React.Component {
     if (this.state.selectedEnrollments.includes(enrollment.id)) {
       this.setState(state => {
         const selectedEnrollments = state.selectedEnrollments.filter(e => {
-          return e !== enrollment.id;
+          return e.id !== enrollment.id;
         });
         return {selectedEnrollments};
       });
     } else {
       this.setState(state => {
-        state.selectedEnrollments.push(enrollment.id);
+        state.selectedEnrollments.push({
+          id: enrollment.id,
+          email: enrollment.email,
+          first_name: enrollment.first_name,
+          last_name: enrollment.last_name
+        });
       });
     }
   }
