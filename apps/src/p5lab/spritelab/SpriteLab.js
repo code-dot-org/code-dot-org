@@ -14,6 +14,11 @@ SpriteLab.prototype = Object.create(P5Lab.prototype);
 
 module.exports = SpriteLab;
 
+SpriteLab.prototype.reset = function() {
+  P5Lab.prototype.reset.call(this);
+  spriteUtils.reset();
+};
+
 SpriteLab.prototype.preview = function() {
   if (getStore().getState().runState.isRunning) {
     return;
