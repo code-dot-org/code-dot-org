@@ -2,7 +2,7 @@
  * Copyright (c) 2019 Anthony Bau.
  * MIT License.
  *
- * Date: 2019-07-17
+ * Date: 2019-07-23
  */
 (function(f){if(typeof exports==="object"&&typeof module!=="undefined"){module.exports=f()}else if(typeof define==="function"&&define.amd){define([],f)}else{var g;if(typeof window!=="undefined"){g=window}else if(typeof global!=="undefined"){g=global}else if(typeof self!=="undefined"){g=self}else{g=this}g.droplet = f()}})(function(){var define,module,exports;return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 var lookup = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/';
@@ -6455,18 +6455,22 @@ exports.Editor = Editor = (function() {
   };
 
   Editor.prototype.resizeBlockMode = function() {
+    var ref1;
     if (this.session == null) {
       return;
     }
     this.resizeTextMode();
-    this.dropletElement.style.height = this.wrapperElement.clientHeight + "px";
+    if ((ref1 = this.session) != null ? ref1.currentlyUsingBlocks : void 0) {
+      this.dropletElement.style.bottom = "0px";
+    } else {
+      this.dropletElement.style.bottom = "9999px";
+    }
     if (this.session.paletteEnabled) {
       this.dropletElement.style.left = this.paletteWrapper.clientWidth + "px";
-      this.dropletElement.style.width = (this.wrapperElement.clientWidth - this.paletteWrapper.clientWidth) + "px";
     } else {
       this.dropletElement.style.left = "0px";
-      this.dropletElement.style.width = this.wrapperElement.clientWidth + "px";
     }
+    this.dropletElement.style.right = "0px";
     this.session.viewports.main.height = this.dropletElement.clientHeight;
     this.session.viewports.main.width = this.dropletElement.clientWidth - this.gutter.clientWidth;
     this.mainCanvas.style.left = this.gutter.clientWidth + "px";
@@ -6545,13 +6549,16 @@ Editor.prototype.clearCanvas = function(canvas) {};
 
 Editor.prototype.clearMain = function(opts) {};
 
-Editor.prototype.setTopNubbyStyle = function(height, color) {
+Editor.prototype.setTopNubbyStyle = function(height, color, addedWidth) {
   var nubbyWidth, points;
   if (height == null) {
     height = 10;
   }
   if (color == null) {
     color = '#EBEBEB';
+  }
+  if (addedWidth == null) {
+    addedWidth = 0;
   }
   this.nubbyHeight = Math.max(0, height);
   this.nubbyColor = color;
@@ -6561,7 +6568,7 @@ Editor.prototype.setTopNubbyStyle = function(height, color) {
   this.topNubbyPath.activate();
   this.topNubbyPath.setParent(this.mainCanvas);
   points = [];
-  nubbyWidth = this.computeMainCanvasWidth();
+  nubbyWidth = this.computeMainCanvasWidth(addedWidth);
   points.push(new this.draw.Point(nubbyWidth, -5));
   points.push(new this.draw.Point(nubbyWidth, height));
   points.push(new this.draw.Point(this.session.view.opts.tabOffset + this.session.view.opts.tabWidth, height));
@@ -6574,11 +6581,13 @@ Editor.prototype.setTopNubbyStyle = function(height, color) {
   points.push(new this.draw.Point(-5, -5));
   this.topNubbyPath.setPoints(points);
   this.topNubbyPath.style.fillColor = color;
-  return this.redrawMain();
+  return this.redrawMain({
+    addedWidth: addedWidth
+  });
 };
 
-Editor.prototype.resizeNubby = function() {
-  return this.setTopNubbyStyle(this.nubbyHeight, this.nubbyColor);
+Editor.prototype.resizeNubby = function(addedWidth) {
+  return this.setTopNubbyStyle(this.nubbyHeight, this.nubbyColor, addedWidth);
 };
 
 Editor.prototype.initializeFloatingBlock = function(record, i) {
@@ -6674,12 +6683,15 @@ hook('populate', 0, function() {
   return this.currentlyDrawnFloatingBlocks = [];
 });
 
-Editor.prototype.computeMainCanvasWidth = function() {
-  return Math.max(this.session.view.getViewNodeFor(this.session.tree).totalBounds.width, this.dropletElement.clientWidth - this.gutter.clientWidth);
+Editor.prototype.computeMainCanvasWidth = function(addedWidth) {
+  if (addedWidth == null) {
+    addedWidth = 0;
+  }
+  return Math.max(this.session.view.getViewNodeFor(this.session.tree).totalBounds.width, this.dropletElement.clientWidth + addedWidth - this.gutter.clientWidth);
 };
 
 Editor.prototype.redrawMain = function(opts) {
-  var binding, el, element, endWidth, i, j, k, l, layoutResult, len, len1, len2, options, record, rect, ref1, ref2, ref3, ref4, ref5, ref6, startWidth;
+  var binding, el, element, endWidth, i, j, k, l, layoutResult, len, len1, len2, options, record, rect, ref1, ref2, ref3, ref4, ref5, ref6, ref7, startWidth;
   if (opts == null) {
     opts = {};
   }
@@ -6699,11 +6711,11 @@ Editor.prototype.redrawMain = function(opts) {
     layoutResult = this.session.view.getViewNodeFor(this.session.tree).layout(0, this.nubbyHeight);
     this.session.view.getViewNodeFor(this.session.tree).draw(rect, options);
     this.session.view.getViewNodeFor(this.session.tree).root();
-    this.mainCanvas.setAttribute('width', this.computeMainCanvasWidth());
-    ref2 = this.currentlyDrawnFloatingBlocks;
-    for (i = j = 0, len = ref2.length; j < len; i = ++j) {
-      el = ref2[i];
-      if (ref3 = el.record, indexOf.call(this.session.floatingBlocks, ref3) < 0) {
+    this.mainCanvas.setAttribute('width', this.computeMainCanvasWidth((ref2 = opts.addedWidth) != null ? ref2 : 0));
+    ref3 = this.currentlyDrawnFloatingBlocks;
+    for (i = j = 0, len = ref3.length; j < len; i = ++j) {
+      el = ref3[i];
+      if (ref4 = el.record, indexOf.call(this.session.floatingBlocks, ref4) < 0) {
         el.record.grayBoxPath.destroy();
         el.record.startText.destroy();
         el.record.endText.destroy();
@@ -6712,9 +6724,9 @@ Editor.prototype.redrawMain = function(opts) {
     this.currentlyDrawnFloatingBlocks = [];
     startWidth = this.session.mode.startComment.length * this.session.fontWidth;
     endWidth = this.session.mode.endComment.length * this.session.fontWidth;
-    ref4 = this.session.floatingBlocks;
-    for (k = 0, len1 = ref4.length; k < len1; k++) {
-      record = ref4[k];
+    ref5 = this.session.floatingBlocks;
+    for (k = 0, len1 = ref5.length; k < len1; k++) {
+      record = ref5[k];
       element = this.drawFloatingBlock(record, startWidth, endWidth, rect, opts);
       this.currentlyDrawnFloatingBlocks.push({
         record: record
@@ -6723,14 +6735,14 @@ Editor.prototype.redrawMain = function(opts) {
     this.redrawCursors();
     this.redrawHighlights();
     this.resizeGutter();
-    ref5 = editorBindings.redraw_main;
-    for (l = 0, len2 = ref5.length; l < len2; l++) {
-      binding = ref5[l];
+    ref6 = editorBindings.redraw_main;
+    for (l = 0, len2 = ref6.length; l < len2; l++) {
+      binding = ref6[l];
       binding.call(this, layoutResult);
     }
     if (this.session.changeEventVersion !== this.session.tree.version) {
       this.session.changeEventVersion = this.session.tree.version;
-      if ((ref6 = this.session) != null ? ref6.currentlyUsingBlocks : void 0) {
+      if ((ref7 = this.session) != null ? ref7.currentlyUsingBlocks : void 0) {
         this.setAceValue(this.getValue());
       }
       this.fireEvent('change', []);
@@ -8258,16 +8270,20 @@ hook('populate', 1, function() {
 });
 
 Editor.prototype.resizeAceElement = function() {
-  var left, ref1, ref2, width;
+  var left, ref1, ref2, ref3, width;
   width = this.wrapperElement.clientWidth;
   left = 0;
   if (((ref1 = this.session) != null ? ref1.showPaletteInTextMode : void 0) && ((ref2 = this.session) != null ? ref2.paletteEnabled : void 0)) {
     width -= this.paletteWrapper.clientWidth;
     left = this.paletteWrapper.clientWidth;
   }
-  this.aceElement.style.width = width + "px";
   this.aceElement.style.left = left + "px";
-  return this.aceElement.style.height = this.wrapperElement.clientHeight + "px";
+  this.aceElement.style.right = "0px";
+  if ((ref3 = this.session) != null ? ref3.currentlyUsingBlocks : void 0) {
+    return this.aceElement.style.bottom = "9999px";
+  } else {
+    return this.aceElement.style.bottom = "0px";
+  }
 };
 
 last_ = function(array) {
@@ -9422,7 +9438,7 @@ Editor.prototype.performMeltAnimation = function(fadeTime, translateTime, cb) {
       this.sideScroller.style.overflowX = 'hidden';
     }
     this.mainScroller.style.overflowY = 'hidden';
-    this.dropletElement.style.width = this.wrapperElement.clientWidth + 'px';
+    this.dropletElement.style.right = "0px";
     this.session.currentlyUsingBlocks = false;
     this.currentlyAnimating = this.currentlyAnimating_suppressRedraw = true;
     ref1 = this.computePlaintextTranslationVectors(), textElements = ref1.textElements, translationVectors = ref1.translationVectors;
@@ -9502,12 +9518,14 @@ Editor.prototype.performMeltAnimation = function(fadeTime, translateTime, cb) {
         var l, len1;
         _this.dropletElement.style.transition = '';
         _this.aceElement.style.top = '0px';
+        _this.aceElement.style.bottom = '0px';
         if (_this.session.showPaletteInTextMode && _this.session.paletteEnabled) {
           _this.aceElement.style.left = _this.paletteWrapper.clientWidth + "px";
         } else {
           _this.aceElement.style.left = '0px';
         }
         _this.dropletElement.style.top = '-9999px';
+        _this.dropletElement.style.bottom = '9999px';
         _this.dropletElement.style.left = '-9999px';
         _this.currentlyAnimating = false;
         _this.showScrollbars();
@@ -9575,12 +9593,13 @@ Editor.prototype.performFreezeAnimation = function(fadeTime, translateTime, cb) 
       return function() {
         var aceScrollTop, bottom, div, fn1, fn2, i, j, k, len, line, lineHeight, paletteAppearingWithFreeze, ref1, ref2, ref3, textElement, textElements, top, translatingElements, translationVectors, treeView;
         _this.showScrollbars(false);
-        _this.dropletElement.style.width = _this.wrapperElement.clientWidth + 'px';
+        _this.dropletElement.style.right = "0px";
         _this.redrawMain({
           noText: true
         });
         _this.currentlyAnimating_suppressRedraw = true;
         _this.aceElement.style.top = "-9999px";
+        _this.aceElement.style.bottom = "9999px";
         _this.aceElement.style.left = "-9999px";
         paletteAppearingWithFreeze = _this.session.paletteEnabled && !_this.session.showPaletteInTextMode;
         if (paletteAppearingWithFreeze) {
@@ -9588,6 +9607,7 @@ Editor.prototype.performFreezeAnimation = function(fadeTime, translateTime, cb) 
           _this.paletteHeader.style.zIndex = 0;
         }
         _this.dropletElement.style.top = "0px";
+        _this.dropletElement.style.bottom = "0px";
         if (_this.session.paletteEnabled && !paletteAppearingWithFreeze) {
           _this.dropletElement.style.left = _this.paletteWrapper.clientWidth + "px";
         } else {
@@ -9700,15 +9720,19 @@ Editor.prototype.enablePalette = function(enabled) {
       activeElement.style.left = '0px';
       this.paletteHeader.style.zIndex = 0;
       this.resize();
+      this.resizeNubby(this.paletteWrapper.clientWidth);
       return setTimeout(((function(_this) {
         return function() {
           activeElement.style.transition = '';
           _this.currentlyAnimating = false;
-          _this.redrawMain();
+          _this.resize();
+          _this.resizeNubby();
+          _this.paletteWrapper.style.visibility = "hidden";
           return _this.fireEvent('palettetoggledone', [_this.session.paletteEnabled]);
         };
       })(this)), 500);
     } else {
+      this.paletteWrapper.style.visibility = "visible";
       this.paletteWrapper.style.top = '0px';
       this.paletteHeader.style.zIndex = 257;
       return setTimeout(((function(_this) {
@@ -9720,7 +9744,7 @@ Editor.prototype.enablePalette = function(enabled) {
             activeElement.style.transition = '';
             _this.resize();
             _this.currentlyAnimating = false;
-            _this.redrawMain();
+            _this.resizeNubby();
             return _this.fireEvent('palettetoggledone', [_this.session.paletteEnabled]);
           }), 500);
         };
@@ -9781,9 +9805,8 @@ hook('populate', 2, function() {
 });
 
 Editor.prototype.resizeMainScroller = function() {
-  this.mainScroller.style.width = this.dropletElement.clientWidth + "px";
-  this.mainScroller.style.height = this.dropletElement.clientHeight + "px";
-  return this.sideScroller.style.width = this.dropletElement.clientWidth + "px";
+  this.mainScroller.style.right = "0px";
+  return this.sideScroller.style.right = "0px";
 };
 
 hook('resize_palette', 0, function() {
@@ -10080,6 +10103,7 @@ Editor.prototype.setEditorState = function(useBlocks) {
       this.setValue_raw(this.getAceValue());
     }
     this.dropletElement.style.top = '0px';
+    this.dropletElement.style.bottom = '0px';
     if (this.session.paletteEnabled) {
       this.paletteWrapper.style.top = this.paletteWrapper.style.left = '0px';
       this.dropletElement.style.left = this.paletteWrapper.clientWidth + "px";
@@ -10088,6 +10112,7 @@ Editor.prototype.setEditorState = function(useBlocks) {
       this.dropletElement.style.left = '0px';
     }
     this.aceElement.style.top = this.aceElement.style.left = '-9999px';
+    this.aceElement.style.bottom = '9999px';
     this.session.currentlyUsingBlocks = true;
     this.lineNumberWrapper.style.display = 'block';
     this.mainCanvas.style.opacity = this.highlightCanvas.style.opacity = 1;
@@ -10107,8 +10132,10 @@ Editor.prototype.setEditorState = function(useBlocks) {
     this.aceEditor.resize(true);
     this.aceEditor.session.setScrollTop(oldScrollTop);
     this.dropletElement.style.top = this.dropletElement.style.left = '-9999px';
+    this.dropletElement.style.bottom = '9999px';
     this.paletteWrapper.style.top = this.paletteWrapper.style.left = '0px';
     this.aceElement.style.top = '0px';
+    this.aceElement.style.bottom = '0px';
     if (paletteVisibleInNewState) {
       this.aceElement.style.left = this.paletteWrapper.clientWidth + "px";
     } else {
