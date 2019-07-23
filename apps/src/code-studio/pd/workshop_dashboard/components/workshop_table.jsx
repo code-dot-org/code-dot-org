@@ -4,8 +4,7 @@
 import _, {orderBy} from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
-import * as Table from 'reactabular-table';
-import * as sort from 'sortabular';
+import {Table, sort} from 'reactabular';
 import color from '@cdo/apps/util/color';
 import SessionTimesList from './session_times_list';
 import FacilitatorsList from './facilitators_list';
@@ -108,7 +107,7 @@ export default class WorkshopTable extends React.Component {
           label: 'Manage'
         },
         cell: {
-          formatters: [this.formatManagement]
+          format: this.formatManagement
         }
       },
       {
@@ -118,7 +117,7 @@ export default class WorkshopTable extends React.Component {
           transforms: [sortable]
         },
         cell: {
-          formatters: [this.formatSessions]
+          format: this.formatSessions
         }
       },
       {
@@ -135,7 +134,7 @@ export default class WorkshopTable extends React.Component {
           transforms: [sortable]
         },
         cell: {
-          formatters: [this.formatBoolean]
+          format: this.formatBoolean
         }
       },
       {
@@ -145,7 +144,7 @@ export default class WorkshopTable extends React.Component {
           transforms: [sortable]
         },
         cell: {
-          formatters: [this.formatBoolean]
+          format: this.formatBoolean
         }
       },
       {
@@ -178,7 +177,7 @@ export default class WorkshopTable extends React.Component {
           label: 'Organizer'
         },
         cell: {
-          formatters: [this.formatOrganizer]
+          format: this.formatOrganizer
         }
       });
     }
@@ -190,7 +189,7 @@ export default class WorkshopTable extends React.Component {
           label: 'Facilitators'
         },
         cell: {
-          formatters: [this.formatFacilitators]
+          format: this.formatFacilitators
         }
       },
       {
@@ -221,7 +220,7 @@ export default class WorkshopTable extends React.Component {
           label: 'Signup Url'
         },
         cell: {
-          formatters: [this.formatSignupUrl]
+          format: this.formatSignupUrl
         }
       });
     }
