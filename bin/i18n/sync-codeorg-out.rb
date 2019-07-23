@@ -12,6 +12,7 @@ require 'tempfile'
 require 'yaml'
 
 require_relative 'i18n_script_utils'
+require_relative 'redact_restore_utils'
 
 CLEAR = "\r\033[K"
 
@@ -22,7 +23,7 @@ def sync_out
   copy_untranslated_apps
   rebuild_blockly_js_files
   puts "updating TTS I18n (should usually take 2-3 minutes, may take up to 15 if there are a whole lot of translation updates)"
-  run_standalone_script "dashboard/scripts/update_tts_i18n.rb"
+  I18nScriptUtils.run_standalone_script "dashboard/scripts/update_tts_i18n.rb"
 end
 
 # Files downloaded from Crowdin are organized by language name,
@@ -36,27 +37,51 @@ def rename_from_crowdin_name_to_locale
   end
 end
 
+def find_malformed_links_images(locale, file_path)
+  return unless File.exist?(file_path)
+  is_json = File.extname(file_path) == '.json'
+  data =
+    if is_json
+      file = File.open(file_path, 'r')
+      JSON.load(file)
+    else
+      YAML.load_file(file_path)
+    end
+
+  return unless data
+  return unless data&.values&.first&.length
+  I18nScriptUtils.recursively_find_malformed_links_images(data, locale, file_path)
+end
+
 def restore_redacted_files
   total_locales = Languages.get_locale.count
-  Languages.get_locale.each_with_index do |prop, i|
+  original_files = Dir.glob("i18n/locales/original/**/*.*").to_a
+  Languages.get_locale.each_with_index do |prop, locale_index|
     locale = prop[:locale_s]
-    print "#{CLEAR}Restoring #{locale} (#{i}/#{total_locales})"
-    $stdout.flush
     next if locale == 'en-US'
     next unless File.directory?("i18n/locales/#{locale}/")
 
-    Dir.glob("i18n/locales/original/**/*.*").each do |original_path|
+    original_files.each_with_index do |original_path, file_index|
       translated_path = original_path.sub("original", locale)
-      plugin = nil
-      if original_path == 'i18n/locales/original/dashboard/blocks.yml'
-        plugin = 'blockfield'
-      end
+      next unless File.file?(translated_path)
+
+      print "#{CLEAR}Restoring #{locale} (#{locale_index}/#{total_locales}) file #{file_index}/#{original_files.count}"
+      $stdout.flush
+
       if original_path.include? "course_content"
-        restore_course_content(original_path, translated_path, translated_path, plugin)
+        restored_data = RedactRestoreUtils.restore_file(original_path, translated_path)
+        translated_data = JSON.parse(File.read(translated_path))
+        File.open(translated_path, "w") do |file|
+          file.write(JSON.pretty_generate(translated_data.deep_merge(restored_data)))
+        end
+      elsif original_path == 'i18n/locales/original/dashboard/blocks.yml'
+        RedactRestoreUtils.restore(original_path, translated_path, translated_path, ['blockfield'], 'txt')
       else
-        restore(original_path, translated_path, translated_path, plugin)
+        RedactRestoreUtils.restore(original_path, translated_path, translated_path)
       end
+      find_malformed_links_images(locale, translated_path)
     end
+    I18nScriptUtils.upload_malformed_restorations(locale)
   end
 end
 
@@ -114,44 +139,44 @@ def sanitize_data_and_write(data, dest_path)
   end
 end
 
-def distribute_course_content(locale)
-  translated_strings = {
-    "display_name" => {},
-    "short_instructions" => {},
-    "long_instructions" => {},
-    "failure_message_overrides" => {},
-    "authored_hints" => {},
-    "callouts" => {},
-    "block_categories" => {},
-    "function_names" => {}
-  }
+def serialize_i18n_strings(level, strings)
+  result = Hash.new
 
-  Dir.glob("i18n/locales/#{locale}/course_content/**/*.json") do |loc_file|
-    file = File.open(loc_file, 'r')
-    translated_data = JSON.load(file)
-    file.close
-    next unless translated_data
-    translated_data.each do |type, type_data|
-      next if type_data.blank?
-      type_data.each do |level_url, level_data|
-        # We want function_names and block_categories to be flat (not keyed by level)
-        if ["function_names", "block_categories"].include? type
-          translated_strings[type] = translated_strings[type].merge(level_data)
-        else
-          level = get_level_from_url(level_url)
-          translated_strings[type][level.name] = level_data
-        end
+  if strings.key? "contained levels"
+    contained_strings = strings.delete("contained levels")
+    unless contained_strings.blank?
+      level.contained_levels.zip(contained_strings).each do |contained_level, contained_string|
+        result.deep_merge! serialize_i18n_strings(contained_level, contained_string)
       end
     end
   end
 
-  translated_strings.each do |type, translations|
-    translations = translations.sort.to_h
-    type_data = {}
+  strings.each do |string_type, translated_string|
+    result[string_type] ||= Hash.new
+    result[string_type][level.name] = translated_string
+  end
+
+  result
+end
+
+def distribute_course_content(locale)
+  locale_strings = {}
+
+  Dir.glob("i18n/locales/#{locale}/course_content/**/*.json") do |course_strings_file|
+    course_strings = JSON.load(File.read(course_strings_file))
+    next unless course_strings
+
+    course_strings.each do |level_url, level_strings|
+      level = I18nScriptUtils.get_level_from_url(level_url)
+      locale_strings.deep_merge! serialize_i18n_strings(level, level_strings)
+    end
+  end
+
+  locale_strings.each do |type, translations|
+    type_data = Hash.new
     type_data[locale] = Hash.new
     type_data[locale]["data"] = Hash.new
-    type_data[locale]["data"][type] = Hash.new
-    type_data[locale]["data"][type] = translations
+    type_data[locale]["data"][type] = translations.sort.to_h
     sanitize_data_and_write(type_data, "dashboard/config/locales/#{type}.#{locale}.yml")
   end
 end
@@ -219,7 +244,7 @@ def copy_untranslated_apps
 end
 
 def rebuild_blockly_js_files
-  run_bash_script "apps/node_modules/@code-dot-org/blockly/i18n/codeorg-messages.sh"
+  I18nScriptUtils.run_bash_script "apps/node_modules/@code-dot-org/blockly/i18n/codeorg-messages.sh"
   Dir.chdir('apps') do
     puts `yarn build`
   end

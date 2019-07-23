@@ -289,7 +289,7 @@ class User < ActiveRecord::Base
   # old school info object doesn't have a NCES school ID associated with it
   # @param new_school_info a school_info object to compare to the user current school information.
   def update_school_info(new_school_info)
-    if school_info.try(&:school).nil? || new_school_info.try(&:school)
+    if new_school_info.complete?
       self.school_info_id = new_school_info.id
       save(validate: false)
     end
@@ -1015,6 +1015,11 @@ class User < ActiveRecord::Base
   # True if user is a student in a section that has Clever login type
   def clever_student?
     sections_as_student.find_by_login_type(Section::LOGIN_TYPE_CLEVER).present?
+  end
+
+  # True if user is a student in a section that uses any oauth login type
+  def oauth_student?
+    sections_as_student.find_by_login_type(Section::LOGIN_TYPES_OAUTH).present?
   end
 
   # overrides Devise::Authenticatable#find_first_by_auth_conditions

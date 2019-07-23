@@ -97,6 +97,7 @@ export class TeacherFeedback extends Component {
     //Provided by Redux
     viewAs: PropTypes.oneOf(['Teacher', 'Student']).isRequired,
     serverLevelId: PropTypes.number,
+    serverScriptLevelId: PropTypes.number,
     teacher: PropTypes.number,
     displayKeyConcept: PropTypes.bool,
     latestFeedback: PropTypes.array,
@@ -160,6 +161,7 @@ export class TeacherFeedback extends Component {
       comment: this.state.comment,
       student_id: this.state.studentId,
       level_id: this.props.serverLevelId,
+      script_level_id: this.props.serverScriptLevelId,
       teacher_id: this.props.teacher,
       performance: this.state.performance
     };
@@ -340,5 +342,6 @@ export const UnconnectedTeacherFeedback = TeacherFeedback;
 export default connect(state => ({
   viewAs: state.viewAs,
   serverLevelId: state.pageConstants.serverLevelId,
+  serverScriptLevelId: state.pageConstants.serverScriptLevelId,
   teacher: state.pageConstants.userId
 }))(TeacherFeedback);

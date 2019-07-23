@@ -1,5 +1,6 @@
 /* global appOptions */
 import $ from 'jquery';
+import MD5 from 'crypto-js/md5';
 import msg from '@cdo/locale';
 import * as utils from '../../utils';
 import {CIPHER, ALPHABET} from '../../constants';
@@ -127,6 +128,7 @@ function unpackSources(data) {
     html: data.html,
     animations: data.animations,
     makerAPIsEnabled: data.makerAPIsEnabled,
+    generatedProperties: data.generatedProperties,
     selectedSong: data.selectedSong
   };
 }
@@ -263,6 +265,19 @@ var projects = (module.exports = {
    */
   useMakerAPIs() {
     return currentSources.makerAPIsEnabled;
+  },
+
+  /**
+   * Calculates a md5 hash for everything within sources except the
+   * generatedProperties.
+   * @return {string} md5 hash string.
+   */
+  md5CurrentSources() {
+    const {
+      generatedProperties, // eslint-disable-line no-unused-vars
+      ...sourcesWithoutProperties
+    } = currentSources;
+    return MD5(JSON.stringify(sourcesWithoutProperties)).toString();
   },
 
   getCurrentSourceVersionId() {
@@ -493,7 +508,9 @@ var projects = (module.exports = {
     return (
       (appOptions.level && appOptions.level.hideShareAndRemix) ||
       (appOptions.embed &&
-        (appOptions.app === 'applab' || appOptions.app === 'gamelab'))
+        (appOptions.app === 'applab' ||
+          appOptions.app === 'gamelab' ||
+          appOptions.app === 'spritelab'))
     );
   },
 
@@ -504,7 +521,7 @@ var projects = (module.exports = {
     const {hideShareAndRemix} = level;
     return (
       !hideShareAndRemix &&
-      app === 'applab' &&
+      (app === 'applab' || app === 'gamelab') &&
       experiments.isEnabled('exportExpo')
     );
   },
@@ -543,6 +560,8 @@ var projects = (module.exports = {
    * @param {function(): string} sourceHandler.getLevelSource
    * @param {function(SerializedAnimationList)} sourceHandler.setInitialAnimationList
    * @param {function(function(): SerializedAnimationList)} sourceHandler.getAnimationList
+   * @param {function(Object)} sourceHandler.setInitialGeneratedProperties
+   * @param {function(): Object} sourceHandler.getGeneratedProperties
    * @param {function(boolean)} sourceHandler.setMakerAPIsEnabled
    * @param {function(): boolean} sourceHandler.getMakerAPIsEnabled
    * @param {function(): boolean} sourceHandler.setSelectedSong
@@ -570,6 +589,12 @@ var projects = (module.exports = {
 
       if (currentSources.animations) {
         sourceHandler.setInitialAnimationList(currentSources.animations);
+      }
+
+      if (currentSources.generatedProperties) {
+        sourceHandler.setInitialGeneratedProperties(
+          currentSources.generatedProperties
+        );
       }
 
       if (isEditing) {
@@ -652,6 +677,8 @@ var projects = (module.exports = {
         return msg.defaultProjectNameAppLab();
       case 'gamelab':
         return msg.defaultProjectNameGameLab();
+      case 'spritelab':
+        return msg.defaultProjectNameSpriteLab();
       case 'weblab':
         return msg.defaultProjectNameWebLab();
       case 'turtle':
@@ -713,12 +740,9 @@ var projects = (module.exports = {
       case 'flappy':
       case 'scratch':
       case 'weblab':
-        return appOptions.app; // Pass through type exactly
       case 'gamelab':
-        if (appOptions.droplet) {
-          return 'gamelab';
-        }
-        return 'spritelab';
+      case 'spritelab':
+        return appOptions.app; // Pass through type exactly
       case 'turtle':
         if (appOptions.skinId === 'elsa' || appOptions.skinId === 'anna') {
           return 'frozen';
@@ -1071,18 +1095,29 @@ var projects = (module.exports = {
    */
   getUpdatedSourceAndHtml_(callback) {
     this.sourceHandler.getAnimationList(animations =>
-      this.sourceHandler.getLevelSource().then(response => {
-        const source = response;
+      this.sourceHandler.getLevelSource().then(source => {
         const html = this.sourceHandler.getLevelHtml();
         const makerAPIsEnabled = this.sourceHandler.getMakerAPIsEnabled();
         const selectedSong = this.sourceHandler.getSelectedSong();
-        callback({source, html, animations, makerAPIsEnabled, selectedSong});
+        const generatedProperties = this.sourceHandler.getGeneratedProperties();
+        callback({
+          source,
+          html,
+          animations,
+          makerAPIsEnabled,
+          selectedSong,
+          generatedProperties
+        });
       })
     );
   },
 
   getSelectedSong() {
     return currentSources.selectedSong;
+  },
+
+  getGeneratedProperties() {
+    return currentSources.generatedProperties;
   },
 
   /**

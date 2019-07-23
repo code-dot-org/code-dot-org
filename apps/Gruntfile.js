@@ -3,18 +3,15 @@ var child_process = require('child_process');
 var path = require('path');
 var fs = require('fs');
 var _ = require('lodash');
-var logBuildTimes = require('./script/log-build-times');
 var webpackConfig = require('./webpack');
 var envConstants = require('./envConstants');
 var checkEntryPoints = require('./script/checkEntryPoints');
 var {BundleAnalyzerPlugin} = require('webpack-bundle-analyzer');
 var {StatsWriterPlugin} = require('webpack-stats-plugin');
 var UnminifiedWebpackPlugin = require('unminified-webpack-plugin');
+var sass = require('node-sass');
 
 module.exports = function(grunt) {
-  // Decorate grunt to record and report build durations.
-  var buildTimeLogger = logBuildTimes(grunt);
-
   process.env.mocha_entry = grunt.option('entry') || '';
   if (process.env.mocha_entry) {
     if (
@@ -76,6 +73,7 @@ describe('entry tests', () => {
     'eval',
     'flappy',
     'gamelab',
+    'spritelab',
     'jigsaw',
     'maze',
     'netsim',
@@ -211,6 +209,11 @@ describe('entry tests', () => {
             return path.join(dest, outputPath);
           }
         },
+        // minifying ace code requires some advanced configuration:
+        // https://github.com/ajaxorg/ace/blob/b808ac14ec6d6afa74b36ff5c03452a2832b32a4/Makefile.dryice.js#L620-L638
+        // instead of replicating that configuration here, we keep minified
+        // and unminified js in our repo and provide the correct one
+        // based on whether we are in development or production mode.
         {
           expand: true,
           cwd: 'lib/ace/src' + ace_suffix + '-noconflict/',
@@ -229,12 +232,6 @@ describe('entry tests', () => {
           expand: true,
           cwd: './node_modules/@code-dot-org/p5.play/lib',
           src: ['p5.play.js'],
-          dest: 'build/package/js/p5play/'
-        },
-        {
-          expand: true,
-          cwd: 'lib',
-          src: ['p5.sound.min.js'],
           dest: 'build/package/js/p5play/'
         },
         {
@@ -303,7 +300,8 @@ describe('entry tests', () => {
       options: {
         // Compression currently occurs at the ../dashboard sprockets layer.
         outputStyle: 'nested',
-        includePaths: ['node_modules', '../shared/css/']
+        includePaths: ['node_modules', '../shared/css/'],
+        implementation: sass
       },
       files: _.fromPairs(
         [
@@ -491,6 +489,25 @@ describe('entry tests', () => {
   var codeStudioEntries = {
     blockly: './src/sites/studio/pages/blockly.js',
     'code-studio': './src/sites/studio/pages/code-studio.js',
+    'congrats/index': './src/sites/studio/pages/congrats/index.js',
+    'courses/index': './src/sites/studio/pages/courses/index.js',
+    'courses/show': './src/sites/studio/pages/courses/show.js',
+    'devise/registrations/_finish_sign_up':
+      './src/sites/studio/pages/devise/registrations/_finish_sign_up.js',
+    'devise/registrations/_old_sign_up_form':
+      './src/sites/studio/pages/devise/registrations/_old_sign_up_form.js',
+    'devise/registrations/edit':
+      './src/sites/studio/pages/devise/registrations/edit.js',
+    'home/_homepage': './src/sites/studio/pages/home/_homepage.js',
+    'layouts/_header': './src/sites/studio/pages/layouts/_header.js',
+    'layouts/_race_interstitial':
+      './src/sites/studio/pages/layouts/_race_interstitial.js',
+    'layouts/_school_info_confirmation_dialog':
+      './src/sites/studio/pages/layouts/_school_info_confirmation_dialog.js',
+    'layouts/_school_info_interstitial':
+      './src/sites/studio/pages/layouts/_school_info_interstitial.js',
+    'layouts/_terms_interstitial':
+      './src/sites/studio/pages/layouts/_terms_interstitial.js',
     'levels/_bubble_choice':
       './src/sites/studio/pages/levels/_bubble_choice.js',
     'levels/_contract_match':
@@ -513,37 +530,22 @@ describe('entry tests', () => {
     'levels/_text_match': './src/sites/studio/pages/levels/_text_match.js',
     'levels/_widget': './src/sites/studio/pages/levels/_widget.js',
     'levels/show': './src/sites/studio/pages/levels/show.js',
+    'maker/discountcode': './src/sites/studio/pages/maker/discountcode.js',
+    'maker/home': './src/sites/studio/pages/maker/home.js',
+    'maker/setup': './src/sites/studio/pages/maker/setup.js',
+    'projects/featured': './src/sites/studio/pages/projects/featured.js',
     'projects/index': './src/sites/studio/pages/projects/index.js',
     'projects/public': './src/sites/studio/pages/projects/public.js',
-    'projects/featured': './src/sites/studio/pages/projects/featured.js',
-    schoolInfo: './src/sites/studio/pages/schoolInfo.js',
-    schoolInfoConfirmationDialog:
-      './src/sites/studio/pages/schoolInfoConfirmationDialog.js',
-    schoolInfoInterstitial:
-      './src/sites/studio/pages/schoolInfoInterstitial.js',
+    'scripts/show': './src/sites/studio/pages/scripts/show.js',
     'scripts/stage_extras': './src/sites/studio/pages/scripts/stage_extras.js',
     'sections/show': './src/sites/studio/pages/sections/show.js',
     'shared/_header_progress':
       './src/sites/studio/pages/shared/_header_progress.js',
-    signup: './src/sites/studio/pages/signup.js',
-    raceInterstitial: './src/sites/studio/pages/raceInterstitial.js',
-    'layouts/_header': './src/sites/studio/pages/layouts/_header.js',
-    'layouts/_terms_interstitial':
-      './src/sites/studio/pages/layouts/_terms_interstitial.js',
-    'maker/home': './src/sites/studio/pages/maker/home.js',
-    'maker/setup': './src/sites/studio/pages/maker/setup.js',
-    'maker/discountcode': './src/sites/studio/pages/maker/discountcode.js',
-    scriptOverview: './src/sites/studio/pages/scriptOverview.js',
-    'home/_homepage': './src/sites/studio/pages/home/_homepage.js',
-    'congrats/index': './src/sites/studio/pages/congrats/index.js',
-    'courses/index': './src/sites/studio/pages/courses/index.js',
-    'courses/show': './src/sites/studio/pages/courses/show.js',
-    'devise/registrations/edit':
-      './src/sites/studio/pages/devise/registrations/edit.js',
-    'devise/registrations/_finish_sign_up':
-      './src/sites/studio/pages/devise/registrations/_finish_sign_up.js',
+    'shared/_school_info': './src/sites/studio/pages/shared/_school_info.js',
     'teacher_dashboard/show':
-      './src/sites/studio/pages/teacher_dashboard/show.js'
+      './src/sites/studio/pages/teacher_dashboard/show.js',
+    'teacher_feedbacks/index':
+      './src/sites/studio/pages/teacher_feedbacks/index.js'
   };
 
   var internalEntries = {
@@ -551,8 +553,6 @@ describe('entry tests', () => {
     'blocks/index': './src/sites/studio/pages/blocks/index.js',
     'courses/edit': './src/sites/studio/pages/courses/edit.js',
     levelbuilder: './src/sites/studio/pages/levelbuilder.js',
-    levelbuilder_edit_script:
-      './src/sites/studio/pages/levelbuilder_edit_script.js',
     'levels/editors/_all': './src/sites/studio/pages/levels/editors/_all.js',
     'levels/editors/_applab':
       './src/sites/studio/pages/levels/editors/_applab.js',
@@ -570,6 +570,7 @@ describe('entry tests', () => {
     'levels/editors/_studio':
       './src/sites/studio/pages/levels/editors/_studio.js',
     'libraries/edit': './src/sites/studio/pages/libraries/edit.js',
+    'scripts/_form': './src/sites/studio/pages/scripts/_form.js',
     'shared_blockly_functions/edit':
       './src/sites/studio/pages/shared_blockly_functions/edit.js'
   };
@@ -1098,11 +1099,6 @@ describe('entry tests', () => {
 
   // Run Scratch tests in a separate target so `window.Blockly` doesn't collide.
   grunt.registerTask('scratchTest', ['preconcat', 'karma:scratch']);
-
-  grunt.registerTask('logBuildTimes', function() {
-    var done = this.async();
-    buildTimeLogger.upload(console.log, done);
-  });
 
   grunt.registerTask('default', ['rebuild', 'test']);
 };

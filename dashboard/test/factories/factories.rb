@@ -855,13 +855,13 @@ FactoryGirl.define do
   factory :bubble_choice_level, class: BubbleChoice do
     game {create(:game, app: "bubble_choice")}
     name 'name'
-    title 'title'
+    display_name 'display_name'
     transient do
       sublevels []
     end
     properties do
       {
-        title: title,
+        display_name: display_name,
         sublevels: sublevels.pluck(:name)
       }
     end

@@ -2,12 +2,22 @@ import React from 'react';
 import LevelFeedbackEntry from './LevelFeedbackEntry';
 
 const defaultProps = {
-  lessonName: 'name of lesson',
-  levelName: 'name of level',
-  courseName: 'name of course',
-  unitName: 'name of unit',
-  lastUpdated: '2/5/19 at 4:05pm',
-  linkToLevel: '/'
+  feedback: {
+    lessonName: 'Creating Functions',
+    levelNum: 8,
+    linkToLevel: '/',
+    unitName: 'CSP Unit 3 - Intro to Programming',
+    linkToUnit: '/',
+    created_at: new Date(),
+    comment: 'Excellent work! You followed the directions closely.'
+  }
+};
+
+const seenFeedback = {
+  feedback: {
+    ...defaultProps.feedback,
+    seen_on_feedback_page_at: new Date().toLocaleString()
+  }
 };
 
 export default storybook => {
@@ -17,15 +27,11 @@ export default storybook => {
     .addStoryTable([
       {
         name: 'LevelFeedbackEntry - not yet seen',
-        story: () => (
-          <LevelFeedbackEntry {...defaultProps} seenByStudent={false} />
-        )
+        story: () => <LevelFeedbackEntry {...defaultProps} />
       },
       {
         name: 'LevelFeedbackEntry - seen by student',
-        story: () => (
-          <LevelFeedbackEntry {...defaultProps} seenByStudent={true} />
-        )
+        story: () => <LevelFeedbackEntry {...seenFeedback} />
       }
     ]);
 };

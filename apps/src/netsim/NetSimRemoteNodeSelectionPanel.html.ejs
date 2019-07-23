@@ -169,8 +169,9 @@ function writeEmptyRow(contents) {
   <%
 }
 
-function writeNodeRow(row, nodeStatus, buttonType, addlClass) {
+function writeNodeRow(row, nodeStatus, buttonType, addlClass, shouldShowSpinner) {
     var button;
+    var maybeSpinner = shouldShowSpinner ? '<img src="' + getAssetUrl('media/netsim/loading.gif') + '" />' : '';
     if (buttonType === 'join-button') {
       button = buttonMarkup(i18n.buttonJoin(), undefined, [buttonType, addlClass], { 'data-node-id': row.nodeID });
     } else if (buttonType === 'accept-button') {
@@ -184,12 +185,12 @@ function writeNodeRow(row, nodeStatus, buttonType, addlClass) {
     <tr>
       <td nowrap><%= row.displayName %> <small>(<%= row.hostname %>)</small></td>
       <% if (button) { %>
-        <td><%- nodeStatus %></td>
+        <td><%- maybeSpinner %><%= nodeStatus %></td>
         <td class="button-column">
           <%- button %>
         </td>
       <% } else { %>
-        <td colspan="2"><%- nodeStatus %></td>
+        <td colspan="2"><%= nodeStatus %></td>
       <% } %>
     </tr>
   <%
@@ -211,11 +212,10 @@ function writeNodeRow(row, nodeStatus, buttonType, addlClass) {
         writeBeginTbody();
         outgoingRequestRows.forEach(function (row) {
           var outgoingStatus = i18n.lobbyStatusWaitingForOther({
-            spinner: '<img src="' + getAssetUrl('media/netsim/loading.gif') + '" />',
             otherName: row.displayName,
             otherStatus: row.status
           });
-          writeNodeRow(row, outgoingStatus, 'cancel-button', row.classAttr);
+          writeNodeRow(row, outgoingStatus, 'cancel-button', row.classAttr, true);
         });
         writeEndTbody();
         writeEndTable();
@@ -232,7 +232,7 @@ function writeNodeRow(row, nodeStatus, buttonType, addlClass) {
             buttonType = 'accept-button';
           }
           var incomingStatus = i18n.lobbyStatusWaitingForYou();
-          writeNodeRow(row, incomingStatus, buttonType, row.classAttr);
+          writeNodeRow(row, incomingStatus, buttonType, row.classAttr, false);
         });
         writeEndTbody();
         writeEndTable();
@@ -258,7 +258,7 @@ function writeNodeRow(row, nodeStatus, buttonType, addlClass) {
             buttonType = 'join-button';
           }
         }
-        writeNodeRow(row, row.status, buttonType, row.classAttr);
+        writeNodeRow(row, row.status, buttonType, row.classAttr, false);
       });
 
       if (lobbyRows.length === 0) {

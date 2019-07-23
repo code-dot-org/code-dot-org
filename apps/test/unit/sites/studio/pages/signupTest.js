@@ -1,5 +1,5 @@
 import {expect} from '../../../../util/configuredChai';
-import {setSchoolInfoFormData} from '@cdo/apps/sites/studio/pages/signup';
+import {setSchoolInfoFormData} from '@cdo/apps/sites/studio/pages/devise/registrations/_old_sign_up_form';
 
 describe('registration', () => {
   describe('setSchoolInfoFormData', () => {

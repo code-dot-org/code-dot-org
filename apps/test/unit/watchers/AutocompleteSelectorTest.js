@@ -42,7 +42,7 @@ describe('AutocompleteSelector', () => {
       options.first().simulate('click');
       expect(clicked).to.have.been.calledOnce;
       expect(clicked).to.have.been.calledWithExactly(FIRST_OPTION_TEXT);
-      clicked.reset();
+      clicked.resetHistory();
       options.last().simulate('click');
       expect(clicked).to.have.been.calledOnce;
       expect(clicked).to.have.been.calledWithExactly(SECOND_OPTION_TEXT);
@@ -52,7 +52,7 @@ describe('AutocompleteSelector', () => {
       options.first().simulate('mouseOver');
       expect(mousedOver).to.have.been.calledOnce;
       expect(mousedOver).to.have.been.calledWithExactly(0);
-      mousedOver.reset();
+      mousedOver.resetHistory();
       options.last().simulate('mouseOver');
       expect(mousedOver).to.have.been.calledOnce;
       expect(mousedOver).to.have.been.calledWithExactly(1);

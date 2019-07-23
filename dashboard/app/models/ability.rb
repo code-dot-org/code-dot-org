@@ -68,7 +68,7 @@ class Ability
       can :manage, Pd::Enrollment, user_id: user.id
       can :workshops_user_enrolled_in, Pd::Workshop
       can :index, Section, user_id: user.id
-      can [:get_feedbacks, :count, :increment_visit_count], TeacherFeedback, student_id: user.id
+      can [:get_feedbacks, :count, :increment_visit_count, :index], TeacherFeedback, student_id: user.id
 
       if user.teacher?
         can :manage, Section, user_id: user.id
@@ -158,6 +158,7 @@ class Ability
         can :manage, Pd::Application::ApplicationBase
         can :manage, Pd::Application::Facilitator1920Application
         can :manage, Pd::Application::Teacher1920Application
+        can :update_scholarship_info, Pd::Enrollment
       end
 
       if user.permission?(UserPermission::PROJECT_VALIDATOR)

@@ -1,563 +1,895 @@
 {
-  "display_name": {
-    "https://studio.code.org/s/coursee-2017/stage/21/puzzle/1": "End of Course Projects",
-    "https://studio.code.org/s/coursee-2017/stage/21/puzzle/4": "Alien Defender",
-    "https://studio.code.org/s/coursee-2017/stage/23/puzzle/2": "Course E Artist Project"
-  },
-  "short_instructions": {
-    "https://studio.code.org/s/coursee-2017/stage/2/puzzle/2": "For this puzzle, snap all of the blocks together and click \"Run\" to watch it go!",
-    "https://studio.code.org/s/coursee-2017/stage/2/puzzle/3": "Drag an extra `move forward` block out of the toolbox, then attach all blocks to `when run` to finish your code.",
-    "https://studio.code.org/s/coursee-2017/stage/2/puzzle/4": "There is one extra block that is going to cause the bird to crash. Throw it away by dragging it back to the toolbox.",
-    "https://studio.code.org/s/coursee-2017/stage/2/puzzle/5": "Avoid TNT or feathers will fly!",
-    "https://studio.code.org/s/coursee-2017/stage/2/puzzle/6": "Avoid the TNT.",
-    "https://studio.code.org/s/coursee-2017/stage/2/puzzle/7": "Pay attention to the sequence and see if you can figure out how to get to that pig!",
-    "https://studio.code.org/s/coursee-2017/stage/2/puzzle/8": "Navigate this maze to help the bird find the pig!",
-    "https://studio.code.org/s/coursee-2017/stage/2/puzzle/9": "Help the bird get to the pig.",
-    "https://studio.code.org/s/coursee-2017/stage/2/puzzle/10": "Get the bird to the pig.",
-    "https://studio.code.org/s/coursee-2017/stage/4/puzzle/2": "Fix the code to help get Scrat get to the acorn.",
-    "https://studio.code.org/s/coursee-2017/stage/4/puzzle/3": "Use your debugging skills to get Scrat to the acorn.",
-    "https://studio.code.org/s/coursee-2017/stage/4/puzzle/4": "Remove blocks to get Scrat to the acorn!",
-    "https://studio.code.org/s/coursee-2017/stage/4/puzzle/5": "Someone has their directions mixed up! Can you help?",
-    "https://studio.code.org/s/coursee-2017/stage/4/puzzle/6": "Debug this level by rearranging and changing blocks.",
-    "https://studio.code.org/s/coursee-2017/stage/4/puzzle/7": "Figure out what is wrong and get Scrat to the acorn.",
-    "https://studio.code.org/s/coursee-2017/stage/4/puzzle/8": "**Challenge:** Debug this level by rearranging, adding, and deleting blocks.",
-    "https://studio.code.org/s/coursee-2017/stage/4/puzzle/10": "Debug this level to get Scrat to the acorn.",
-    "https://studio.code.org/s/coursee-2017/stage/5/puzzle/2": "Play with the blocks in the toolbox to see what they do!",
-    "https://studio.code.org/s/coursee-2017/stage/5/puzzle/3": "Drag blocks onto the screen to have the artist draw over the grey lines in the picture. (Each line is 100 pixels long)",
-    "https://studio.code.org/s/coursee-2017/stage/5/puzzle/4": "Each side of the inner square is 100 pixels and all of the angles are 90 degrees.",
-    "https://studio.code.org/s/coursee-2017/stage/5/puzzle/5": "Finish Starla's rocket so she can chase her pet.",
-    "https://studio.code.org/s/coursee-2017/stage/5/puzzle/6": "Finish this tag by drawing a rectangle around the outside.\n(The long sides are 200 pixels each and the short sides are each 100 pixels)",
-    "https://studio.code.org/s/coursee-2017/stage/5/puzzle/7": "Draw this diamond with 200 pixel sides.",
-    "https://studio.code.org/s/coursee-2017/stage/5/puzzle/8": "**Challenge:** This tag is a special one!  Can you figure out how to draw the outline?",
-    "https://studio.code.org/s/coursee-2017/stage/5/puzzle/9": "One more tag.  This is a triangle for Pi.\n(Each side is 150 pixels)",
-    "https://studio.code.org/s/coursee-2017/stage/5/extras?level_name=courseC_artist_prog_challenge1": "Draw rooms for each of the animals. ",
-    "https://studio.code.org/s/coursee-2017/stage/5/extras?level_name=courseC_artist_prog_challenge2a": "_\"Help me paint the yellow lines on this road!\"_",
-    "https://studio.code.org/s/coursee-2017/stage/7/puzzle/2": "Move forward by 60 pixels to complete this puzzle.",
-    "https://studio.code.org/s/coursee-2017/stage/7/puzzle/3": "Move forward five times and make this colored line.",
-    "https://studio.code.org/s/coursee-2017/stage/7/puzzle/5": "Use a `repeat` loop to draw five colored dashes.",
-    "https://studio.code.org/s/coursee-2017/stage/7/puzzle/6": "What happens when you add a 72 degree right turn after everything else inside your loop?",
-    "https://studio.code.org/s/coursee-2017/stage/7/puzzle/7": "Use loops to draw this staircase.",
-    "https://studio.code.org/s/coursee-2017/stage/7/puzzle/8": "Edit your loop to draw this staircase.",
-    "https://studio.code.org/s/coursee-2017/stage/7/puzzle/9": "Look for a pattern and make this code shorter using loops!",
-    "https://studio.code.org/s/coursee-2017/stage/7/puzzle/10": "Look for a pattern and make this code shorter using loops.",
-    "https://studio.code.org/s/coursee-2017/stage/7/puzzle/11": "Solve this puzzle by drawing a square.",
-    "https://studio.code.org/s/coursee-2017/stage/8/puzzle/1": "Help the bee collect all of the nectar.",
-    "https://studio.code.org/s/coursee-2017/stage/8/puzzle/2": "Help the bee collect all of the nectar.",
-    "https://studio.code.org/s/coursee-2017/stage/8/puzzle/4": "This time, help the bee collect all of the nectar using as few blocks as possible.",
-    "https://studio.code.org/s/coursee-2017/stage/8/puzzle/5": "This time, help the bee collect all of the nectar using as few blocks as possible.",
-    "https://studio.code.org/s/coursee-2017/stage/8/puzzle/6": "Get the zombie to the sunflower using the fewest number of blocks possible.",
-    "https://studio.code.org/s/coursee-2017/stage/8/puzzle/7": "Get the zombie to the sunflower using the fewest blocks possible!  ",
-    "https://studio.code.org/s/coursee-2017/stage/8/puzzle/8": "Get the zombie to the sunflower using the fewest number of blocks possible!",
-    "https://studio.code.org/s/coursee-2017/stage/8/puzzle/9": "Get the zombie to the sunflower using only the blocks available.",
-    "https://studio.code.org/s/coursee-2017/stage/8/puzzle/10": "Challenge: Figure out how to get all of the nectar using only the blocks available.",
-    "https://studio.code.org/s/coursee-2017/stage/8/puzzle/11": "Collect all of the nectar from each flower and make honey at the honeycomb. ",
-    "https://studio.code.org/s/coursee-2017/stage/8/puzzle/12": "Make all of the honey.",
-    "https://studio.code.org/s/coursee-2017/stage/8/puzzle/13": "Make all of the honey.",
-    "https://studio.code.org/s/coursee-2017/stage/9/puzzle/1": "Draw a small shape, between **20 and 50** pixels wide.  It can be any shape that you like.  ",
-    "https://studio.code.org/s/coursee-2017/stage/9/puzzle/2": "Now take your shape and draw two or three in a row!",
-    "https://studio.code.org/s/coursee-2017/stage/9/puzzle/3": "Let's spin that line of shapes around!",
-    "https://studio.code.org/s/coursee-2017/stage/9/puzzle/4": "Time to layer those shapes!",
-    "https://studio.code.org/s/coursee-2017/stage/9/puzzle/5": "Play with the snowflakes!",
-    "https://studio.code.org/s/coursee-2017/stage/9/puzzle/6": "Draw a stair-step pattern that uses turns between 75 and 105 degrees.",
-    "https://studio.code.org/s/coursee-2017/stage/9/puzzle/7": "Now, turn around 180 degrees and draw the stair pattern again!",
-    "https://studio.code.org/s/coursee-2017/stage/9/puzzle/8": "Spin that shape around 5 or 6 times in a circle.",
-    "https://studio.code.org/s/coursee-2017/stage/9/puzzle/9": "Try playing around with what you've created. Draw whatever you like!\n\n-   What happens if you use two different angles in your stair step pattern?\n-   What happens if you make your diamond pattern longer or shorter?\n-   What does it look like to draw two snowflakes on top of one another?",
-    "https://studio.code.org/s/coursee-2017/stage/11/puzzle/2": "For this puzzle, drag all of the blocks together and click \"Run\" to watch it go!",
-    "https://studio.code.org/s/coursee-2017/stage/11/puzzle/3": "Drag an extra `move forward` block out of the toolbox, then attach all blocks to `when run` to finish your code.",
-    "https://studio.code.org/s/coursee-2017/stage/11/puzzle/4": "There is one extra block that is going to cause the bird to crash. Throw it away by dragging it back to the toolbox.",
-    "https://studio.code.org/s/coursee-2017/stage/11/puzzle/5": "Avoid TNT or feathers will fly!",
-    "https://studio.code.org/s/coursee-2017/stage/11/puzzle/6": "Avoid the TNT.",
-    "https://studio.code.org/s/coursee-2017/stage/11/puzzle/7": "This code includes a new block. What do you think would happen if you press the \"Run\" block?",
-    "https://studio.code.org/s/coursee-2017/stage/11/puzzle/9": "\"Keep calm and help me find the bad pig. Otherwise I might get angry!\"",
-    "https://studio.code.org/s/coursee-2017/stage/11/puzzle/10": "Use what you've learned to get the bird to the pig!",
-    "https://studio.code.org/s/coursee-2017/stage/11/puzzle/11": "Use what you've learned to get Scrat to the acorn!",
-    "https://studio.code.org/s/coursee-2017/stage/11/puzzle/13": "Now make a square using Artist!",
-    "https://studio.code.org/s/coursee-2017/stage/11/puzzle/15": "Use what you've learned to draw this triangle.",
-    "https://studio.code.org/s/coursee-2017/stage/12/puzzle/2": "While there is a pile, remove dirt.",
-    "https://studio.code.org/s/coursee-2017/stage/12/puzzle/3": "Now use nested loops to solve this puzzle.",
-    "https://studio.code.org/s/coursee-2017/stage/12/puzzle/4": "Pick all of the lettuce (only while there is some to pick.)",
-    "https://studio.code.org/s/coursee-2017/stage/12/puzzle/5": "Now use nested loops to solve this puzzle.",
-    "https://studio.code.org/s/coursee-2017/stage/12/puzzle/6": "Help the farmer correctly travel the path to gather all of the lettuce.",
-    "https://studio.code.org/s/coursee-2017/stage/12/puzzle/7": "Pick corn if there is corn, and pick lettuce while there is lettuce.",
-    "https://studio.code.org/s/coursee-2017/stage/12/puzzle/8": "Help the bee follow the path to gather all of the honey and all of the nectar.",
-    "https://studio.code.org/s/coursee-2017/stage/12/puzzle/9": "Move forward until you reach the lettuce, then pick it all using a `while` loop.",
-    "https://studio.code.org/s/coursee-2017/stage/12/puzzle/11": "Solve this puzzle using only the blocks available.",
-    "https://studio.code.org/s/coursee-2017/stage/12/puzzle/12": "Move forward until you reach the lettuce, then turn left **if** there is a path to the left.  Otherwise, turn right.",
-    "https://studio.code.org/s/coursee-2017/stage/16/puzzle/1": "Help the zombie draw glasses using squares with sides of 100 pixels.  \nThe bridge between the glasses is 75 pixels long.",
-    "https://studio.code.org/s/coursee-2017/stage/16/puzzle/4": "This time, use the `draw a square` function to create the glasses. ",
-    "https://studio.code.org/s/coursee-2017/stage/16/puzzle/5": "You can make this drawing by adding a repeat block.",
-    "https://studio.code.org/s/coursee-2017/stage/16/puzzle/6": "Now that you can draw a star, try drawing four stars!",
-    "https://studio.code.org/s/coursee-2017/stage/16/puzzle/7": "Draw only those three stars to finish this puzzle.",
-    "https://studio.code.org/s/coursee-2017/stage/16/puzzle/8": "Make this window by drawing a square, then turning 90 degrees before drawing another, and so on.",
-    "https://studio.code.org/s/coursee-2017/stage/16/puzzle/9": "Try solving this puzzle by creating `draw a window` and calling it five times. Watch out for the door!",
-    "https://studio.code.org/s/coursee-2017/stage/16/puzzle/10": "Challenge: Create as many functions as you think you need to make this drawing of 50 pixel squares.",
-    "https://studio.code.org/s/coursee-2017/stage/16/puzzle/11": "Create this image using only the blocks provided.",
-    "https://studio.code.org/s/coursee-2017/stage/16/puzzle/12": "This time, use lines of 8 hexagons with 25 pixel sides.",
-    "https://studio.code.org/s/coursee-2017/stage/16/extras?level_name=courseE_artist_functions_challenge1": "Once you define a function, you can call it over and over again - whenever and wherever you want! Try this code to see how it works, then change it to make your own impressive design!",
-    "https://studio.code.org/s/coursee-2017/stage/16/extras?level_name=courseE_artist_functions_challenge2": "Try this code to see how it works, then make the program your own!",
-    "https://studio.code.org/s/coursee-2017/stage/17/puzzle/1": "Collect all the nectar from each flower.",
-    "https://studio.code.org/s/coursee-2017/stage/17/puzzle/3": "Use the `get 2 nectar` function to collect the nectar from each flower.",
-    "https://studio.code.org/s/coursee-2017/stage/17/puzzle/4": "Build the `get 5` function to use in this puzzle.",
-    "https://studio.code.org/s/coursee-2017/stage/17/puzzle/5": "Use the `move and get nectar` function to collect all of the nectar.",
-    "https://studio.code.org/s/coursee-2017/stage/17/puzzle/6": "Now write the function to collect nectar from the flowers.",
-    "https://studio.code.org/s/coursee-2017/stage/17/puzzle/7": "We don't have a video for creating functions, yet. This is a placeholder.",
-    "https://studio.code.org/s/coursee-2017/stage/17/puzzle/8": "Create a function and call it to collect nectar at each flower and make honey at each honeycomb.",
-    "https://studio.code.org/s/coursee-2017/stage/17/puzzle/9": "Create your own function that goes down a path, gets nectar, makes honey, and then returns the bee to the top of the path. Collect all the nectar and make all the honey!",
-    "https://studio.code.org/s/coursee-2017/stage/17/puzzle/10": "Create a function that collects all of the nectar from each flower.",
-    "https://studio.code.org/s/coursee-2017/stage/17/puzzle/11": "Create a function to collect all of the nectar from each flower.",
-    "https://studio.code.org/s/coursee-2017/stage/17/puzzle/12": "Solve this puzzle by creating a function that helps the bee go get all of the honey before returning back to the main path.",
-    "https://studio.code.org/s/coursee-2017/stage/17/extras?level_name=courseE_bee_functions_challenge1": "You are on your own for this challenge. This could \"bee\" harder than it looks!",
-    "https://studio.code.org/s/coursee-2017/stage/17/extras?level_name=courseE_bee_functions_challenge2": "You are on your own for this challenge. Sweet!",
-    "https://studio.code.org/s/coursee-2017/stage/18/puzzle/1": "Help the harvester get to the pumpkin and pick it.",
-    "https://studio.code.org/s/coursee-2017/stage/18/puzzle/2": "Now help the harvester pick the corn, lettuce, **and** pumpkin.",
-    "https://studio.code.org/s/coursee-2017/stage/18/puzzle/3": "Help the harvester pick the corn and pumpkins.",
-    "https://studio.code.org/s/coursee-2017/stage/18/puzzle/4": "Help the farmer pick the corn and pumpkins using the `corn and pumpkin` function.",
-    "https://studio.code.org/s/coursee-2017/stage/18/puzzle/5": "Now, fill-in the function yourself by pulling the blocks from the code and dropping them into the **function definition**.",
-    "https://studio.code.org/s/coursee-2017/stage/18/puzzle/6": "Use your new function to solve this puzzle.",
-    "https://studio.code.org/s/coursee-2017/stage/18/puzzle/7": "Your function will come in handy here.",
-    "https://studio.code.org/s/coursee-2017/stage/18/puzzle/8": "What do you need to add this program to check whether a sprout is corn or lettuce?",
-    "https://studio.code.org/s/coursee-2017/stage/18/puzzle/9": "We don't have a video for creating functions, yet. This is a placeholder.",
-    "https://studio.code.org/s/coursee-2017/stage/18/puzzle/10": "Help the harvester find her way down this confusing path and to the pumpkin by turning left at the corn and right at the lettuce.",
-    "https://studio.code.org/s/coursee-2017/stage/18/puzzle/11": "**Challenge:** Collect all of the pumpkins using the method from the last puzzle. ",
-    "https://studio.code.org/s/coursee-2017/stage/18/puzzle/12": "Can you figure out the pattern that you need to solve this puzzle?",
-    "https://studio.code.org/s/coursee-2017/stage/18/puzzle/13": "Use your new function twice to solve this puzzle.",
-    "https://studio.code.org/s/coursee-2017/stage/19/puzzle/1": "Collect all of the nectar from each flower.",
-    "https://studio.code.org/s/coursee-2017/stage/19/puzzle/2": "Can you write a program that fills these holes until the ground is even?",
-    "https://studio.code.org/s/coursee-2017/stage/19/puzzle/3": "Help the bee make all of the honey. ",
-    "https://studio.code.org/s/coursee-2017/stage/19/puzzle/4": "Collect all of the nectar using  as few blocks as possible.",
-    "https://studio.code.org/s/coursee-2017/stage/19/puzzle/5": "Recreate this image. ",
-    "https://studio.code.org/s/coursee-2017/stage/19/puzzle/6": "Uh oh! The bee is not sure if he should collect nectar or make honey. Can you help him out?",
-    "https://studio.code.org/s/coursee-2017/stage/19/puzzle/7": "Collect all of the pumpkins.",
-    "https://studio.code.org/s/coursee-2017/stage/19/puzzle/8": "Help the bee collect the nectar from the flowers?",
-    "https://studio.code.org/s/coursee-2017/stage/19/puzzle/9": "Fill in the hole at the end of each of these paths.",
-    "https://studio.code.org/s/coursee-2017/stage/19/puzzle/10": "Recreate this drawing.",
-    "https://studio.code.org/s/coursee-2017/stage/19/extras?level_name=courseE_artist_concept_challenge1": "Help the artist draw this unique shape. ",
-    "https://studio.code.org/s/coursee-2017/stage/19/extras?level_name=courseE_artist_concept_challenge2": "Create five pinwheel designs using the code below.",
-    "https://studio.code.org/s/coursee-2017/stage/20/puzzle/1": "Choose a background and map, and pick an actor to be your game's hero.",
-    "https://studio.code.org/s/coursee-2017/stage/20/puzzle/2": "Use event handlers and actions to make your hero move.",
-    "https://studio.code.org/s/coursee-2017/stage/20/puzzle/3": "Add two or more additional actors to your game and make them move.",
-    "https://studio.code.org/s/coursee-2017/stage/20/puzzle/4": "Find some interesting ways to change the score in your game. Get the score to show something other than 0 to continue.",
-    "https://studio.code.org/s/coursee-2017/stage/20/puzzle/5": "Now spend some time making sure the game works the way you want. Include a way to win or lose your game, then play until you meet one of those conditions.",
-    "https://studio.code.org/s/coursee-2017/stage/20/puzzle/6": "You've finished! Now you can play your game or share it with your friends and classmates!",
-    "https://studio.code.org/s/coursee-2017/stage/20/extras?level_name=courseE_playLab_challenge1": "Something should happen when you get enough points or when you run out of points. Add some code to the `win game` and `lose game` functions to make the game work the way it should. \nClick the hints for ideas!",
-    "https://studio.code.org/s/coursee-2017/stage/21/puzzle/2": "Project Idea: Create a pattern using geometric ideas like shapes. This requires persistence and planning!",
-    "https://studio.code.org/s/coursee-2017/stage/21/puzzle/3": "Project Idea: Create a picture of something familiar from the real world. This requires persistence and planning!",
-    "https://studio.code.org/s/coursee-2017/stage/21/puzzle/4": "Project Idea: Make a defender game in Play Lab!",
-    "https://studio.code.org/s/coursee-2017/stage/21/puzzle/5": "Build whatever you want. This is an example of a number-guessing game!"
-  },
-  "long_instructions": {
-    "https://studio.code.org/s/coursee-2017/stage/2/puzzle/2": "For this puzzle, snap all of the blocks together and click \"Run\" to watch it go!",
-    "https://studio.code.org/s/coursee-2017/stage/2/puzzle/3": "Drag an extra `move forward` block out of the toolbox, then attach all blocks to `when run` to finish your code.",
-    "https://studio.code.org/s/coursee-2017/stage/2/puzzle/4": "_\"This pig is ruffling my feathers.\"_\n\nThere is one extra block that is going to cause the bird to crash.  \nThrow it away by removing it from the other blocks and dragging it back to the toolbox.",
-    "https://studio.code.org/s/coursee-2017/stage/2/puzzle/5": "_\"Trace the path and lead me to the silly pig.\"_ \n\nAvoid TNT or feathers will fly!",
-    "https://studio.code.org/s/coursee-2017/stage/2/puzzle/6": "_\"Follow this path to get me to the pig!\"_\n\nAvoid the TNT.",
-    "https://studio.code.org/s/coursee-2017/stage/2/puzzle/7": "Pay attention to the sequence and see if you can figure out how to get to that pig!",
-    "https://studio.code.org/s/coursee-2017/stage/2/puzzle/8": "**Challenge:** Navigate this maze to help the bird find the pig!",
-    "https://studio.code.org/s/coursee-2017/stage/2/puzzle/9": "Help the bird get to the pig.",
-    "https://studio.code.org/s/coursee-2017/stage/2/puzzle/10": "Get the bird to the pig.",
-    "https://studio.code.org/s/coursee-2017/stage/4/puzzle/2": "This code isn't quite right!  \n\nFix the code to help Scrat get to the acorn.",
-    "https://studio.code.org/s/coursee-2017/stage/4/puzzle/4": "Something is not quite right. \n\nRemove blocks to get Scrat to the acorn!",
-    "https://studio.code.org/s/coursee-2017/stage/5/puzzle/2": "_\"Hi, I'm an artist. You can write code to make me draw almost anything.\"_\n\nPlay with the blocks in the toolbox to see what they do!",
-    "https://studio.code.org/s/coursee-2017/stage/5/puzzle/3": "_\"Let's make a cage for my pet monster!\"_\n\nDrag blocks onto the screen to have the artist draw over the grey lines in the picture.  \n(Each line is 100 pixels long)",
-    "https://studio.code.org/s/coursee-2017/stage/5/puzzle/4": "_\"This spaceship needs a window!\"_\n\nEach side of the inner square is 100 pixels and all of the angles are 90 degrees.",
-    "https://studio.code.org/s/coursee-2017/stage/5/puzzle/5": "_\"Oh no!  Starla's pet alien just flew away! Let's help the spacewoman!\"_\n\nFinish Starla's rocket so she can chase her pet.  \n(Each side of the triangle is 100 pixels long and has 120 degree outer angles.)",
-    "https://studio.code.org/s/coursee-2017/stage/5/puzzle/6": "_\"Maybe we should make a tag for each of our pets in case they get lost!\"_\n\nFinish this tag by drawing a rectangle around the outside.  \n(The long sides are 200 pixels each and the short sides are each 100 pixels)",
-    "https://studio.code.org/s/coursee-2017/stage/5/puzzle/7": "_\"Now a tag for Belle!\"_\n\nDraw this diamond with 200 pixel sides.",
-    "https://studio.code.org/s/coursee-2017/stage/5/puzzle/8": "**Challenge:** This tag is a special one!  \n\nCan you figure out how to draw the outline?  \n(The long side is 150 pixels and each of the short sides are 75 pixels.)",
-    "https://studio.code.org/s/coursee-2017/stage/5/puzzle/9": "One more tag.  This is a triangle for Pi.  \n(Each side is 150 pixels)",
-    "https://studio.code.org/s/coursee-2017/stage/5/extras?level_name=courseC_artist_prog_challenge1": "Draw rooms for each of the animals. There are many different ways to solve this puzzle, so have some fun! Each square has a side length of 100 pixels.",
-    "https://studio.code.org/s/coursee-2017/stage/5/extras?level_name=courseC_artist_prog_challenge2a": "_\"Help me paint the yellow lines on this road!\"_\n\nThe three line segments have lengths of 150, 100, and 200 pixels!",
-    "https://studio.code.org/s/coursee-2017/stage/7/puzzle/2": "What a lovely day!  \n\nHelp the Artist cover his flowers before the winter by moving forward by 60 pixels.",
-    "https://studio.code.org/s/coursee-2017/stage/7/puzzle/3": "Add some beauty by repeating that step five times, changing to a random color between each move.",
-    "https://studio.code.org/s/coursee-2017/stage/7/puzzle/5": "Draw the colorful line 5 times again, this time using a `repeat` loop.",
-    "https://studio.code.org/s/coursee-2017/stage/7/puzzle/6": "What happens when you add a 72 degree right turn after everything else inside your loop?",
-    "https://studio.code.org/s/coursee-2017/stage/7/puzzle/7": "Loops sure make writing code easier!\n\nUse loops to draw this staircase.\n\n-   Each stairstep is 50 pixels long and 50 pixels tall\n-   You will need to turn 90 degrees in each direction",
-    "https://studio.code.org/s/coursee-2017/stage/7/puzzle/8": "This staircase is much bigger, but it takes the same amount of code as the last puzzle!\n\nFix this loop to complete the puzzle.",
-    "https://studio.code.org/s/coursee-2017/stage/7/puzzle/9": "Look for a pattern and make this code shorter using loops!",
-    "https://studio.code.org/s/coursee-2017/stage/7/puzzle/10": "**Challenge:** Look for a pattern and make this code shorter using loops.",
-    "https://studio.code.org/s/coursee-2017/stage/7/puzzle/11": "Solve this puzzle by drawing a square with 200 pixel sides.",
-    "https://studio.code.org/s/coursee-2017/stage/8/puzzle/1": "_\"This is going to **BEE** great!\"_\n\nHelp the bee collect all of the nectar.",
-    "https://studio.code.org/s/coursee-2017/stage/8/puzzle/2": "\"_This is going to **BEE** great!_\"\n\nHelp the bee collect all of the nectar.",
-    "https://studio.code.org/s/coursee-2017/stage/8/puzzle/4": "This time, help the bee collect all of the nectar using as few blocks as possible.",
-    "https://studio.code.org/s/coursee-2017/stage/8/puzzle/5": "This time, help the bee collect all of the nectar using as few blocks as possible.",
-    "https://studio.code.org/s/coursee-2017/stage/8/puzzle/6": "_\"Zombie hungry!\"_\n\nGet the zombie to the sunflower using the fewest number of blocks possible.",
-    "https://studio.code.org/s/coursee-2017/stage/8/puzzle/7": "Get the zombie to the sunflower using the fewest blocks possible!  ",
-    "https://studio.code.org/s/coursee-2017/stage/8/puzzle/9": "_\"Must eat sunflower!\"_\n\nGet the zombie to the sunflower using only the blocks available.",
-    "https://studio.code.org/s/coursee-2017/stage/8/puzzle/10": "**Challenge:** Figure out how to get all of the nectar using only the blocks available.",
-    "https://studio.code.org/s/coursee-2017/stage/8/puzzle/11": "Collect all of the nectar from each flower and make honey at the honeycomb. ",
-    "https://studio.code.org/s/coursee-2017/stage/8/puzzle/12": "Make all of the honey.",
-    "https://studio.code.org/s/coursee-2017/stage/8/puzzle/13": "Make all of the honey.",
-    "https://studio.code.org/s/coursee-2017/stage/9/puzzle/1": "[][0] _“Hi, I’m Elsa of Arendelle, help me draw a shape.”_\n\nDraw a small shape, between **20 and 50** pixels wide.  It can be any shape that you like.  \n\n<hr/>\n\nYou can try making a polygon, like one of these:  \n[][1]\n[][2]\n[][3]  \n\nOr even an abstract shape, like one of these:  \n[][4]\n[][5]\n[][6]",
-    "https://studio.code.org/s/coursee-2017/stage/9/puzzle/2": "[][0] _“Now, let’s draw more than one.”_\n\nNow take your shape and draw two or three in a row by jumping forward some number of pixels.  \n\n-   If you jump forward by **less** than the width of your shape, they might overlap\n-   If you jump forward by **more** than the width of your shape, you will get a gap\n\n<hr/>\n\nYour row might end up straight like with these:\n\n[][1]\n[][2]\n[][3]\n<br/>  <br/>\n\nOr, your shapes might move around like one of these: \n\n[][4]\n[][5]\n[][6]",
-    "https://studio.code.org/s/coursee-2017/stage/9/puzzle/3": "[][0] _\"Let’s make it into a snowflake.\"_\n\nNext, jump Elsa back to the center using the `jump to 200 over and 200 down` block, and spin her around to draw the line of shapes again and again in a bunch of different directions.\n\nWhat amazing snowflakes you can make!\n\n* * *\n\nTake a look at these examples with polygons:  \n[][1]\n[][2]\n[][3]\n\nAbstract shapes might make a snowflake more like one of these:  \n[][4]\n[][5]\n[][6]",
-    "https://studio.code.org/s/coursee-2017/stage/9/puzzle/4": "[][0] _\"What happens if we draw snowflakes on top of each other?\"_\n\nTry layering two different shapes of snowflakes on top of one another with a little turn in between - see what you get! ",
-    "https://studio.code.org/s/coursee-2017/stage/9/puzzle/5": "[][0] _\"Get creative with shapes and angles to see what kind of new snowflakes we can draw!\"_",
-    "https://studio.code.org/s/coursee-2017/stage/9/puzzle/6": "[][0] _\"Let’s try something new. This time, skate in a zig-zag.\"_\n\n<img src=\"https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png\" width=\"200px\" style=\"float: left; margin: 0 15px 15px 0;\" />\n\nDraw a stair-step pattern that uses turns between 75 and 105 degrees -- but make sure that your left and right turns use the same angle.  \n(You will see why later.)",
-    "https://studio.code.org/s/coursee-2017/stage/9/puzzle/7": "[][0] _\"Now let’s turn and go back the way we came.\"_\n\nTurn around 180 degrees and draw the exact same stair pattern again!  \n\n-   The rest of this stage will be easier if you put all of your code inside of a loop to make Elsa  draw, turn around 180 degrees, draw, then turn around 180 degrees again.\n\n<hr/>\n\nHere is an example of stairs that use a 76 degree turn:\n\n[][1]",
-    "https://studio.code.org/s/coursee-2017/stage/9/puzzle/8": "[][0] _\"Let’s spin and make it into a snowflake.\"_\n\nSpin that shape around 5 or 6 times in a circle.\n\n-   If you choose 5 times,  try a turn of 72 degrees\n-   If you choose 6 times,  try a turn of 60 degrees\n    <hr/>\n\nHere's an example of Elsa turning a pattern 6 times:\n\n[][1]",
-    "https://studio.code.org/s/coursee-2017/stage/9/puzzle/9": "[][0]  _\"Now, what should we do? Let’s explore and create our own winter wonderland!\"_\n\nTry playing around with what you've created. Draw whatever you like!\n\n-   What happens if you use two different angles in your stair step pattern?\n-   What happens if you make your diamond pattern longer or shorter?\n-   What does it look like to draw two snowflakes on top of one another?",
-    "https://studio.code.org/s/coursee-2017/stage/11/puzzle/2": "For this puzzle, drag all of the blocks together and click \"Run\" to watch it go!",
-    "https://studio.code.org/s/coursee-2017/stage/11/puzzle/3": "Drag an extra `move forward` block out of the toolbox, then attach all blocks to `when run` to finish your code.",
-    "https://studio.code.org/s/coursee-2017/stage/11/puzzle/4": "_\"This pig is ruffling my feathers.\"_\n\nThere is one extra block that is going to cause the bird to crash.  \nThrow it away by dragging it back to the toolbox.",
-    "https://studio.code.org/s/coursee-2017/stage/11/puzzle/5": "_\"Trace the path and lead me to the silly pig.\"_ \n\nAvoid TNT or feathers will fly!",
-    "https://studio.code.org/s/coursee-2017/stage/11/puzzle/6": "_\"Follow this path to get me to the pig!\"_\n\nAvoid the TNT.",
-    "https://studio.code.org/s/coursee-2017/stage/11/puzzle/9": "_\"Keep calm and help me find the bad pig. Otherwise I might get angry!\"_\n\nWhen you have several blocks in a row, try moving them inside of a `repeat` loop.  This will do the same thing with less code!",
-    "https://studio.code.org/s/coursee-2017/stage/11/puzzle/10": "_\"It's time to get angry!\"_\n\n**Challenge:** Use what you've learned to get the bird to the pig!",
-    "https://studio.code.org/s/coursee-2017/stage/11/puzzle/11": "**Challenge:** Use what you've learned to get Scrat to the acorn!",
-    "https://studio.code.org/s/coursee-2017/stage/11/puzzle/13": "Great!  Now let's use that `repeat` loop to make a square using Artist!  The blocks for artist are a little different than other puzzles, but the idea is the same.\n\n* * *\n\n##### Each side of the square has a length of 200 pixels, and you will need to turn 90 degrees to make each angle.",
-    "https://studio.code.org/s/coursee-2017/stage/11/puzzle/15": "Use what you've learned to draw this triangle.\n\n* * *\n\n##### The sides are each 100 pixels long. You will need to turn 120 degrees at each corner.",
-    "https://studio.code.org/s/coursee-2017/stage/12/puzzle/2": "Oh my!  This pile is so big that it's hard to guess how much dirt is in it.  \n\n* * *\n\nWe've added a new block to the toolbox called the `while there is a pile` block.  Use this to remove dirt only while there is still some to scoop! ",
-    "https://studio.code.org/s/coursee-2017/stage/12/puzzle/3": "Pick all of the lettuce.",
-    "https://studio.code.org/s/coursee-2017/stage/12/puzzle/4": "Help the farmer walk the path to find all of the lettuce\n\nIn this puzzle, lettuce is growing at the end of every path.  If there is a path in front of her, the farmer can keep moving forward.  Otherwise, she needs to pick all of the lettuce, then turn to stay on the path. ",
-    "https://studio.code.org/s/coursee-2017/stage/12/puzzle/5": "Pick all of the lettuce.",
-    "https://studio.code.org/s/coursee-2017/stage/12/puzzle/6": "Help the farmer walk the path to find all of the lettuce\n\nIn this puzzle, lettuce is growing at the end of every path.  If there is a path in front of her, the farmer can keep moving forward.  Otherwise, she needs to pick all of the lettuce, then turn to stay on the path. ",
-    "https://studio.code.org/s/coursee-2017/stage/12/puzzle/7": "Goodness!  Look at all of these sprouts. Some of them will turn into corn, and others into lettuce.  \n\nTravel to the ends of the path to pick lettuce while there is lettuce, and pick corn while there is corn. ",
-    "https://studio.code.org/s/coursee-2017/stage/12/puzzle/8": "The same technique works with nectar and honey!  \n\nLook at all of these clouds. Some of them will turn into honey, and others into nectar.  \nHelp the bee follow the path and solve this puzzle.",
-    "https://studio.code.org/s/coursee-2017/stage/12/puzzle/9": "The lettuce is scattered all over the garden.  \nTravel down each path **until** you reach a head of lettuce, then continue to pick it **while** there is still some left.  ",
-    "https://studio.code.org/s/coursee-2017/stage/12/puzzle/11": "Solve this puzzle using only the blocks available.\n\nThis level will help give you practice with the `repeat until` block.  Collect all of the corn and lettuce until you get to the pumpkin. (Don't forget to collect the pumpkin, too!)",
-    "https://studio.code.org/s/coursee-2017/stage/12/puzzle/12": "Move forward until you get to the lettuce, then turn left **if** there is a path to the left.  Otherwise, turn right.",
-    "https://studio.code.org/s/coursee-2017/stage/16/puzzle/1": "_\"Me zombie artist. Me love drawing!\"_\n\nHelp the zombie draw glasses using squares with sides of 100 pixels.  \nThe bridge between the glasses is 75 pixels long.",
-    "https://studio.code.org/s/coursee-2017/stage/16/puzzle/3": "Here is a puzzle that uses a function that we have defined. ",
-    "https://studio.code.org/s/coursee-2017/stage/16/puzzle/4": "Functions let you define new blocks! \n\nWe've moved the blocks needed for drawing a square into a function called `draw a square`. This time, use the `draw a square` function to create the glasses. \n\n* * *\n\nThe squares are 75 pixels apart.",
-    "https://studio.code.org/s/coursee-2017/stage/16/puzzle/5": "We will come back to functions shortly. Let's take a break to practice making this star. \n\nYou can make this drawing by adding a repeat block.",
-    "https://studio.code.org/s/coursee-2017/stage/16/puzzle/6": "Now that you can draw a star, try drawing four stars!\n\n-   Each branch of the star is 25 pixels long\n-   Turn 45 degrees between branches\n-   Jump 100 pixels between each star",
-    "https://studio.code.org/s/coursee-2017/stage/16/puzzle/7": "When is drawing three stars harder than drawing four? When you also have to jump over the moon!\n\nDraw only those three stars to finish this puzzle.",
-    "https://studio.code.org/s/coursee-2017/stage/16/puzzle/8": "You are doing great! \n\nMake this window by drawing a square, then turning 90 degrees before drawing another, and so on.",
-    "https://studio.code.org/s/coursee-2017/stage/16/puzzle/9": "Let's take the code for the window and add it to function `draw a window`. Now, we can call the function any time we need to draw a window without having to write the code again. \n\n[][0]\n\nTry solving this puzzle by creating `draw a window` and calling it five times. Watch out for the door!\n\n-   The top windows are 50 pixels away from each other.  \n-   The bottom windows are 100 pixels below the top set.",
-    "https://studio.code.org/s/coursee-2017/stage/16/puzzle/10": "**Challenge:** Did you know that you can call functions from _inside_ other functions?!\n\nCreate as many functions as you think you need to make this drawing of 50 pixel squares.",
-    "https://studio.code.org/s/coursee-2017/stage/16/puzzle/11": "Create this image using the limited blocks provided. \n\n-   Each triangle has sides of **50 pixels**  \n-   To draw a diamond, you will need to alternate between turning **60 degrees and 120 degrees**.",
-    "https://studio.code.org/s/coursee-2017/stage/16/puzzle/12": "This time, use lines of 8 hexagons with 25 pixel sides.\n\n-   To make each hexagon, repeat the side 6 times, turning 60 degrees.\n-   Jump 25 pixels between each hexagon.\n-   To draw a diamond, you will need to alternate between turning 60 degrees and 120 degrees.",
-    "https://studio.code.org/s/coursee-2017/stage/16/extras?level_name=courseE_artist_functions_challenge1": "Once you define a function, you can call it over and over again - whenever and wherever you want! Try this code to see how it works, then change it to make your own impressive design!",
-    "https://studio.code.org/s/coursee-2017/stage/16/extras?level_name=courseE_artist_functions_challenge2": "Not only can you jump to some pre-set locations, like the corners of the canvas, you can also use a `jump to` command to get to absolutely any spot you like! Try this code to see how it works, then make the program your own!\n\n<xml>\n  <block type=\"jump_to_xy\">\n    <title name=\"XPOS\">???</title>\n    <title name=\"YPOS\">???</title>\n    </block></xml>",
-    "https://studio.code.org/s/coursee-2017/stage/17/puzzle/3": "Functions are blocks of code that perform a task.  \n\nUse the `get 2 nectar` function to collect the nectar from each flower.",
-    "https://studio.code.org/s/coursee-2017/stage/17/puzzle/4": "Build the `get 5` function to use in this puzzle.",
-    "https://studio.code.org/s/coursee-2017/stage/17/puzzle/5": "The `move and get nectar` function turns the bee, collects nectar, and then returns the bee to where it started.  \n\nUse the `move and get nectar` function to collect all of the nectar.",
-    "https://studio.code.org/s/coursee-2017/stage/17/puzzle/10": "**Challenge:** These flowers can have a different amount of nectar each time you run the puzzle.   \n\nCreate a function that collects all of the nectar from each flower.",
-    "https://studio.code.org/s/coursee-2017/stage/17/puzzle/12": "_\"Show me the HONEY!\"_\n\nSolve this puzzle by creating a function that causes the bee to: \n\n-   turn toward the branch in the path\n-   move forward\n-   make all of the honey\n-   return to the main path \n-   turn back to the original direction",
-    "https://studio.code.org/s/coursee-2017/stage/17/extras?level_name=courseE_bee_functions_challenge1": "You are on your own for this challenge.  This could \"bee\" harder than it looks!",
-    "https://studio.code.org/s/coursee-2017/stage/18/puzzle/1": "_\"Have we met before? I'm the harvester!\"_\n\nHelp the harvester get to the pumpkin and pick it.",
-    "https://studio.code.org/s/coursee-2017/stage/18/puzzle/2": "_\"Oooh, veggies are cropping up everywhere!\"_\n\nNow help the harvester pick all of the corn on the way to the pumpkin at the end.\n\n* * *\n\n##### Note: Every square on the path that leads to the pumpkin will either have _one_ corn or nothing.  You will need to use an `if` statement to check whether there is corn before you try to pick it!",
-    "https://studio.code.org/s/coursee-2017/stage/18/puzzle/3": "Help the harvester pick the corn and pumpkins.\n\n* * *\n\n##### Each sprout will either grow _one_ corn or nothing.",
-    "https://studio.code.org/s/coursee-2017/stage/18/puzzle/4": "_\"I feel so functional!\"_\n\nDid you notice that there was repeated code in the last puzzle?  It doesn't work to put it all inside of a loop, but we **can** use functions.  \n\nFor this puzzle, we have moved the repeated code into a function called `corn and pumpkin`. Now, all you need to do is put the small `corn and pumpkin` **function call block** into the code where you need it.\n\n* * *\n\n##### Each sprout will either grow _one_ corn or nothing.",
-    "https://studio.code.org/s/coursee-2017/stage/18/puzzle/5": "Now, fill-in the function yourself by pulling the blocks from the code and dropping them into the **function definition**.  \n\nDon't forget to add the little **function call** blocks to use the function in your program when you're done.",
-    "https://studio.code.org/s/coursee-2017/stage/18/puzzle/6": "Use your new function to solve this puzzle.",
-    "https://studio.code.org/s/coursee-2017/stage/18/puzzle/7": "Your function will come in handy here.",
-    "https://studio.code.org/s/coursee-2017/stage/18/puzzle/8": "_\"Lettuce pick all of the produce!\"_\n\nNow the sprouts can be either corn **or** lettuce.  What do you need to add to this program to check each sprout before you pick?\n\n* * *\n\n##### Note: Each sprout will turn into either **one** corn or **one** lettuce.",
-    "https://studio.code.org/s/coursee-2017/stage/18/puzzle/10": "_\"This harvest is a-MAZE-ing!\"_\n\nHelp the harvester find her way down this confusing path and to the pumpkin by turning **left** at the corn and **right** at the lettuce.  \n\n_(Don't forget to collect all of the produce along the way!)_",
-    "https://studio.code.org/s/coursee-2017/stage/18/puzzle/11": "**Challenge:** Not all corners are marked in this maze, that means that you will need to use your navigation code more than once to get where you need to go.  \n\nCan you figure out what you need to do?",
-    "https://studio.code.org/s/coursee-2017/stage/18/puzzle/12": "Take a good look at this puzzle.  Can you figure out the pattern?",
-    "https://studio.code.org/s/coursee-2017/stage/18/puzzle/13": "Use your new function twice to solve this puzzle.",
-    "https://studio.code.org/s/coursee-2017/stage/18/puzzle/14": "Figure out which function to use and which one to delete, then solve this puzzle!",
-    "https://studio.code.org/s/coursee-2017/stage/19/puzzle/1": "_\"Can you BEE-lieve all of these flowers?\"_\n\nCollect all of the nectar from each flower. ",
-    "https://studio.code.org/s/coursee-2017/stage/19/puzzle/3": "Help the bee make all of the honey.  \n\nYou can only make honey at a honeycomb, but you can check any space to see if there is a honeycomb.",
-    "https://studio.code.org/s/coursee-2017/stage/19/puzzle/5": "Recreate this image. \n\n-   The hexagons have sides of 50 pixels\n-   The hexagons are 100 pixels apart\n-   The pen widths of the hexagons are 1 pixel, 4 pixels, and 8 pixels.",
-    "https://studio.code.org/s/coursee-2017/stage/19/puzzle/8": "Can you help the bee collect the nectar from the flowers? \n\nYou can only collect nectar from flowers, but you can check any space to see if there is a flower.",
-    "https://studio.code.org/s/coursee-2017/stage/19/puzzle/10": "Recreate this drawing. \n\nEach square has a side length of **20 pixels** and there are **15 squares per row**.",
-    "https://studio.code.org/s/coursee-2017/stage/19/extras?level_name=courseE_artist_concept_challenge1": "<img src=\"https://images.code.org/6cac10470af71bbb5d75bf5e2669046f-image-1439939145211.png\" width=\"200px\"/>\n\nNow for a challenge!\n\nHere is a design that uses only blocks that you have already been shown.  Can you figure out how to recreate it?  Feel free to use trial and error. You don't have to draw it perfectly the first time.",
-    "https://studio.code.org/s/coursee-2017/stage/19/extras?level_name=courseE_artist_concept_challenge2": "Create five pinwheel designs using the code below.",
-    "https://studio.code.org/s/coursee-2017/stage/20/puzzle/1": "It is amazing how much you have learned! Let's make a game step by step.\n\nUsing new blocks in your toolbox, choose a new background, then pick an actor to be in your game.",
-    "https://studio.code.org/s/coursee-2017/stage/20/puzzle/2": "Use  blocks like event handlers and actions to make your player move according to the arrows on your keyboard.  \n\nGet the player to the targets to complete this puzzle.",
-    "https://studio.code.org/s/coursee-2017/stage/20/puzzle/3": "Let's add some more characters to your game!\n\nUse the `set actor` block to add more characters then move to the goal to complete this puzzle.",
-    "https://studio.code.org/s/coursee-2017/stage/20/puzzle/4": "Multiple characters and getting the actors moving is a great start to a game, but we need to do more to make this feel like a real game. Let's add a score!\n\nUse event blocks like the `when actor touches` to change the score. Score 10 points to complete this puzzle.",
-    "https://studio.code.org/s/coursee-2017/stage/20/puzzle/5": "Great job! You have all the basic components of a working game. Now spend some time making sure the game works the way you want. Include a way to win or lose your game, then play until you meet one of those conditions.",
-    "https://studio.code.org/s/coursee-2017/stage/20/puzzle/6": "You've finished! Now you can play your game or share it with your friends and classmates!",
-    "https://studio.code.org/s/coursee-2017/stage/20/extras?level_name=courseE_playLab_challenge1": "_The **squirrels** are terrified to see that a **dinosaur** has come to town! Can the brave **knight** keep them all from panicking?_\n\nRules:\n\n1.  _Touching the squirrels scores you points._\n2.  _Touching the dinosaur takes many points away._\n\nHere is a different kind of game that has already been started for you! Play it to see how it works. \n\nSomething should happen when you get enough points or when you run out of points. Add some code to the `win game` and `lose game` functions to make the game work the way it should. \nClick the hints for ideas!",
-    "https://studio.code.org/s/coursee-2017/stage/21/puzzle/2": "**Project Idea:** Create a pattern using geometric ideas like shapes. This requires persistence and planning!",
-    "https://studio.code.org/s/coursee-2017/stage/21/puzzle/3": "**Project Idea:** Create a picture of something familiar from the real world. This requires persistence and planning!",
-    "https://studio.code.org/s/coursee-2017/stage/21/puzzle/4": "**Project Idea**: Make a defender game in Play Lab!"
-  },
-  "failure_message_overrides": {
-    "https://studio.code.org/s/coursee-2017/stage/20/puzzle/3": "You must add two or more new actors to your game and program them to move."
-  },
-  "authored_hints": {
-    "https://studio.code.org/s/coursee-2017/stage/2/puzzle/2": {
+  "https://studio.code.org/s/coursee-2017/stage/2/puzzle/2": {
+    "short_instructions": "For this puzzle, snap all of the blocks together and click \"Run\" to watch it go!",
+    "long_instructions": "For this puzzle, snap all of the blocks together and click \"Run\" to watch it go!",
+    "authored_hints": {
       "courseC_maze_programming1_a": "If the bird isn't getting to the pig, make sure all three of the blocks have been fully clicked together, then click \"Run\" again.",
       "courseC_maze_programming1_b": "Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you don't think you've solved the puzzle yet."
     },
-    "https://studio.code.org/s/coursee-2017/stage/2/puzzle/3": {
+    "callouts": {
+      "grade2_CaringForNewPet_0_1": "After connecting all the blocks, press \"Run\" to start your program."
+    }
+  },
+  "https://studio.code.org/s/coursee-2017/stage/2/puzzle/3": {
+    "short_instructions": "Drag an extra `move forward` block out of the toolbox, then attach all blocks to `when run` to finish your code.",
+    "long_instructions": "Drag an extra `move forward` block out of the toolbox, then attach all blocks to `when run` to finish your code.",
+    "authored_hints": {
       "courseC_maze_programming2_a": "To use a `move forward` block, drag it from the toolbox out into the workspace and connect it to the `when run` block.",
       "courseC_maze_programming2_b": "Make sure all 3 blocks are clicked together and attached to the `when run` block."
     },
-    "https://studio.code.org/s/coursee-2017/stage/2/puzzle/4": {
+    "callouts": {
+      "courseC_maze_programming2_1": "This is the toolbox. It’s where you’ll find extra blocks to complete your puzzles."
+    }
+  },
+  "https://studio.code.org/s/coursee-2017/stage/2/puzzle/4": {
+    "short_instructions": "There is one extra block that is going to cause the bird to crash. Throw it away by dragging it back to the toolbox.",
+    "long_instructions": "_\"This pig is ruffling my feathers.\"_\n\nThere is one extra block that is going to cause the bird to crash.\\\nThrow it away by removing it from the other blocks and dragging it back to the toolbox.",
+    "authored_hints": {
       "courseC_maze_programming3_a": "[][0]\n\nTo delete a block from the middle of your code, drag all of the blocks underneath it away to the right and let them sit in the workspace for a while.  \n\nClick on the block you want to delete, and drag it back to the toolbox.\n\nFinally, put your other blocks back in place where they belong."
     },
-    "https://studio.code.org/s/coursee-2017/stage/2/puzzle/5": {
+    "callouts": {
+      "courseC_maze_programming3_2": "You can drag extra blocks to the toolbox to throw them away.",
+      "stone_block_2": "Grey blocks are made of stone and cannot be thrown away."
+    }
+  },
+  "https://studio.code.org/s/coursee-2017/stage/2/puzzle/5": {
+    "short_instructions": "Avoid TNT or feathers will fly!",
+    "long_instructions": "_\"Trace the path and lead me to the silly pig.\"_ \n\nAvoid TNT or feathers will fly!",
+    "authored_hints": {
       "courseC_maze_programming4_a": "You can turn right or left from the bird's point of view. If you are facing right, turning right will make you point downwards.",
       "courseC_maze_programming4_b": "To follow the path, move forward and turn one way, then move again and turn the opposite way. Move forward one more time to reach the pig."
     },
-    "https://studio.code.org/s/coursee-2017/stage/2/puzzle/6": {
+    "callouts": {
+      "courseC_maze_programming4_1": "This is your block limit.  It tells you how many of these blocks you have left to use."
+    }
+  },
+  "https://studio.code.org/s/coursee-2017/stage/2/puzzle/6": {
+    "short_instructions": "Avoid the TNT.",
+    "long_instructions": "_\"Follow this path to get me to the pig!\"_\n\nAvoid the TNT.",
+    "authored_hints": {
       "courseC_maze_programming5_a": "Try using the \"Step\" button to run your code line by line. Can you figure out what you need to do next?",
       "courseC_maze_programming5_b": "Remember that turns are from the bird's perspective.",
       "courseC_maze_programming5_c": "Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you don't think you've solved the puzzle yet."
     },
-    "https://studio.code.org/s/coursee-2017/stage/2/puzzle/7": {
+    "callouts": {
+      "": "These blocks don't have numbers on them. You can use as many as you want!"
+    }
+  },
+  "https://studio.code.org/s/coursee-2017/stage/2/puzzle/7": {
+    "short_instructions": "Pay attention to the sequence and see if you can figure out how to get to that pig!",
+    "long_instructions": "Pay attention to the sequence and see if you can figure out how to get to that pig!",
+    "authored_hints": {
       "courseC_maze_programming5_a": "Try using the \"Step\" button to run your code line by line. Can you figure out what you need to do next?",
       "courseC_maze_programming5_b": "Remember that turns are from the bird's perspective.",
       "courseC_maze_programming5_c": "Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you don't think you've solved the puzzle yet."
     },
-    "https://studio.code.org/s/coursee-2017/stage/2/puzzle/8": {
+    "callouts": {
+      "": "These blocks don't have numbers on them. You can use as many as you want!"
+    }
+  },
+  "https://studio.code.org/s/coursee-2017/stage/2/puzzle/8": {
+    "short_instructions": "Navigate this maze to help the bird find the pig!",
+    "long_instructions": "**Challenge:** Navigate this maze to help the bird find the pig!",
+    "authored_hints": {
       "courseC_maze_programming5_a": "Try using the \"Step\" button to run your code line by line. Can you figure out what you need to do next?",
       "courseC_maze_programming5_b": "Remember that turns are from the bird's perspective.",
       "courseC_maze_programming5_c": "Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you don't think you've solved the puzzle yet."
-    },
-    "https://studio.code.org/s/coursee-2017/stage/4/puzzle/2": {
+    }
+  },
+  "https://studio.code.org/s/coursee-2017/stage/2/puzzle/9": {
+    "short_instructions": "Help the bird get to the pig.",
+    "long_instructions": "Help the bird get to the pig."
+  },
+  "https://studio.code.org/s/coursee-2017/stage/2/puzzle/10": {
+    "short_instructions": "Get the bird to the pig.",
+    "long_instructions": "Get the bird to the pig."
+  },
+  "https://studio.code.org/s/coursee-2017/stage/4/puzzle/2": {
+    "short_instructions": "Fix the code to help get Scrat get to the acorn.",
+    "long_instructions": "This code isn't quite right!  \n\nFix the code to help Scrat get to the acorn.",
+    "authored_hints": {
       "courseC_maze_debugging1_a": "-   Does everything work after the first step?\n-   Does it still work after the second?\n-   Where does it go wrong?",
       "courseC_maze_debugging1_b": "There is 1 block you need to add to complete this puzzle."
-    },
-    "https://studio.code.org/s/coursee-2017/stage/4/puzzle/3": {
+    }
+  },
+  "https://studio.code.org/s/coursee-2017/stage/4/puzzle/3": {
+    "short_instructions": "Use your debugging skills to get Scrat to the acorn.",
+    "authored_hints": {
       "courseC_maze_debugging2_a": "There is a lot of valuable code in the workspace.  Don't just delete it all and start over!",
       "courseC_maze_debugging2_b": "-   Does everything work after the first step?\n-   Does it still work after the second?\n-   Where does it go wrong?",
       "courseC_maze_debugging2_c": "Can't figure out what's wrong? Try running the code a couple of times to see what happens."
-    },
-    "https://studio.code.org/s/coursee-2017/stage/4/puzzle/4": {
+    }
+  },
+  "https://studio.code.org/s/coursee-2017/stage/4/puzzle/4": {
+    "short_instructions": "Remove blocks to get Scrat to the acorn!",
+    "long_instructions": "Something is not quite right. \n\nRemove blocks to get Scrat to the acorn!",
+    "authored_hints": {
       "courseC_maze_debugging3_a": "To delete a block from the middle of your code, drag all of the blocks to another part of the workspace.\n\nDrag the block you want to delete back to the toolbox.\n\nFinally, put your other blocks back where they belong.\n\n[][0]",
       "courseC_maze_debugging3_b": "Can't figure out what's wrong? Try running the code a couple of times to see what happens."
-    },
-    "https://studio.code.org/s/coursee-2017/stage/4/puzzle/5": {
+    }
+  },
+  "https://studio.code.org/s/coursee-2017/stage/4/puzzle/5": {
+    "short_instructions": "Someone has their directions mixed up! Can you help?",
+    "authored_hints": {
       "courseC_maze_debugging4_a": "Use the \"Step\" button to run through the instructions one at a time.  Does that help you find the line where things go wrong?",
       "courseC_maze_debugging4_b": "One of the turns is making Scrat go in the wrong direction. Can you figure out which one?"
-    },
-    "https://studio.code.org/s/coursee-2017/stage/4/puzzle/6": {
+    }
+  },
+  "https://studio.code.org/s/coursee-2017/stage/4/puzzle/6": {
+    "short_instructions": "Debug this level by rearranging and changing blocks.",
+    "authored_hints": {
       "courseC_maze_debugging5_a": "There are lots of helpful blocks in the workspace already.  Don't delete them all! \n\nUse the \"Step\" button to go through and figure out where the code goes wrong.",
       "courseC_maze_debugging5_b": "Try saying what Scrat should do out loud.  Is it the same as the code in the workspace?  What goes wrong?"
     },
-    "https://studio.code.org/s/coursee-2017/stage/4/puzzle/7": {
+    "callouts": {
+      "courseC_maze_debugging5_1": "Grey blocks cannot be deleted!"
+    }
+  },
+  "https://studio.code.org/s/coursee-2017/stage/4/puzzle/7": {
+    "short_instructions": "Figure out what is wrong and get Scrat to the acorn.",
+    "authored_hints": {
       "courseC_maze_debugging6_a": "-   What is Scrat supposed to do?\n-   What does Scrat do?\n-   What does that tell you?",
       "courseC_maze_debugging6_b": "Once you've found and fixed the first bug, go through the debugging process again to find the second one.\n\nRepeat the process until the program works!"
-    },
-    "https://studio.code.org/s/coursee-2017/stage/4/puzzle/8": {
+    }
+  },
+  "https://studio.code.org/s/coursee-2017/stage/4/puzzle/8": {
+    "short_instructions": "**Challenge:** Debug this level by rearranging, adding, and deleting blocks.",
+    "authored_hints": {
       "courseC_maze_debugging7_a": "-   Does everything work at the first step?\n-   How about the second step?\n-   Where does it go wrong?",
       "courseC_maze_debugging7_b": "Don't forget to use the \"Step\" button to run the program line by line!",
       "courseC_maze_debugging7_c": "After you find and fix the first bug, make sure to use the debugging process again to find the next one.\n\nRepeat the debugging process until the program works!"
-    },
-    "https://studio.code.org/s/coursee-2017/stage/5/puzzle/3": {
+    }
+  },
+  "https://studio.code.org/s/coursee-2017/stage/4/puzzle/9": {
+    "contained levels": [
+      {
+        "dsls": {
+          "questions": [
+            {
+              "text": "Look closely at the code below.  What is the first bug that will make this program fail? "
+            }
+          ],
+          "answers": [
+            {
+              "text": "The program won't fail. Scrat will get to the acorn.",
+              "correct": false,
+              "feedback": "Incorrect. Scrat goes the wrong way after his final turn."
+            },
+            {
+              "text": "Scrat will go the wrong way after his final turn.",
+              "correct": true,
+              "feedback": "Correct!"
+            },
+            {
+              "text": "Scrat takes one too few steps and ends up short of the acorn.",
+              "correct": false,
+              "feedback": "Incorrect. Taking one too few steps happens after Scrat turns the wrong way."
+            },
+            {
+              "text": "I don't know.",
+              "correct": false,
+              "feedback": "The first error is that Scrat goes the wrong way after his final turn. "
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "https://studio.code.org/s/coursee-2017/stage/4/puzzle/10": {
+    "short_instructions": "Debug this level to get Scrat to the acorn."
+  },
+  "https://studio.code.org/s/coursee-2017/stage/5/puzzle/2": {
+    "short_instructions": "Play with the blocks in the toolbox to see what they do!",
+    "long_instructions": "_\"Hi, I'm an artist. You can write code to make me draw almost anything.\"_\n\nPlay with the blocks in the toolbox to see what they do!"
+  },
+  "https://studio.code.org/s/coursee-2017/stage/5/puzzle/3": {
+    "short_instructions": "Drag blocks onto the screen to have the artist draw over the grey lines in the picture. (Each line is 100 pixels long)",
+    "long_instructions": "_\"Let's make a cage for my pet monster!\"_\n\nDrag blocks onto the screen to have the artist draw over the grey lines in the picture.\\\n(Each line is 100 pixels long)",
+    "authored_hints": {
       "courseC_artist_prog2_a": "*\"If you use the <xml><block type=\"draw_move_by_constant\"><title name=\"DIR\">moveForward</title><title name=\"VALUE\">100</title></block></xml> block, I will draw a line.\"*",
       "courseC_artist_prog2_b": "Having trouble turning the corner? Use the <xml><block type=\"draw_turn_by_constant_dropdown\"><title name=\"DIR\">turnRight</title><title name=\"VALUE\" config=\"45,60,90,120,180\">90</title></block></xml> block."
-    },
-    "https://studio.code.org/s/coursee-2017/stage/5/puzzle/4": {
+    }
+  },
+  "https://studio.code.org/s/coursee-2017/stage/5/puzzle/4": {
+    "short_instructions": "Each side of the inner square is 100 pixels and all of the angles are 90 degrees.",
+    "long_instructions": "_\"This spaceship needs a window!\"_\n\nEach side of the inner square is 100 pixels and all of the angles are 90 degrees.",
+    "authored_hints": {
       "courseC_artist_prog3_a": "To create this window, just draw a square with 100 pixel sides.\n\n-   move forward\n-   turn\n-   move forward\n-   turn\n-   move forward\n-   turn\n-   move forward",
       "courseC_artist_prog3_b": "Want to make shorter code? Try using a loop in this puzzle."
     },
-    "https://studio.code.org/s/coursee-2017/stage/5/puzzle/5": {
+    "function_names": {
+      "draw flame": "draw flame",
+      "draw fire": "draw fire"
+    }
+  },
+  "https://studio.code.org/s/coursee-2017/stage/5/puzzle/5": {
+    "short_instructions": "Finish Starla's rocket so she can chase her pet.",
+    "long_instructions": "_\"Oh no!  Starla's pet alien just flew away! Let's help the spacewoman!\"_\n\nFinish Starla's rocket so she can chase her pet.\\\n(Each side of the triangle is 100 pixels long and has 120 degree outer angles.)",
+    "authored_hints": {
       "courseC_artist_prog4_a": "To finish the rocket, just draw the triangle on top!",
       "courseC_artist_prog4_b": "You can use the drop down menu on the `turn` blocks to see which angle you need!",
       "courseC_artist_prog4_c": "To draw a triangle, you will want to:\n\n-   move forward\n-   turn left 120 degrees\n-   move forward\n-   turn left 120 degrees\n-   move forward"
     },
-    "https://studio.code.org/s/coursee-2017/stage/5/puzzle/6": {
+    "function_names": {
+      "booster": "booster"
+    }
+  },
+  "https://studio.code.org/s/coursee-2017/stage/5/puzzle/6": {
+    "short_instructions": "Finish this tag by drawing a rectangle around the outside.\n(The long sides are 200 pixels each and the short sides are each 100 pixels)",
+    "long_instructions": "_\"Maybe we should make a tag for each of our pets in case they get lost!\"_\n\nFinish this tag by drawing a rectangle around the outside.\\\n(The long sides are 200 pixels each and the short sides are each 100 pixels)",
+    "authored_hints": {
       "courseC_artist_prog5_a": "Slow the slider down all the way until you can run your code line-by-line to see where things go wrong.",
       "courseC_artist_prog5_b": "Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you don't think you've solved the puzzle yet.",
       "courseC_artist_prog5_c": "You can use the drop down menu on the `turn` blocks to see which angle you need!",
       "courseC_artist_prog5_d": "Each turn should be 90 degrees to the right."
-    },
-    "https://studio.code.org/s/coursee-2017/stage/5/puzzle/7": {
+    }
+  },
+  "https://studio.code.org/s/coursee-2017/stage/5/puzzle/7": {
+    "short_instructions": "Draw this diamond with 200 pixel sides.",
+    "long_instructions": "_\"Now a tag for Belle!\"_\n\nDraw this diamond with 200 pixel sides.",
+    "authored_hints": {
       "courseC_artist_prog6_a": "The artist is already facing the correct way to draw his first line.",
       "courseC_artist_prog6_b": "This diamond is really just a square that's standing on its corner.",
       "courseC_artist_prog6_c": "Since this diamond is also a square, be sure to turn 90 degrees at the corners."
-    },
-    "https://studio.code.org/s/coursee-2017/stage/5/puzzle/8": {
+    }
+  },
+  "https://studio.code.org/s/coursee-2017/stage/5/puzzle/8": {
+    "short_instructions": "**Challenge:** This tag is a special one!  Can you figure out how to draw the outline?",
+    "long_instructions": "**Challenge:** This tag is a special one!  \n\nCan you figure out how to draw the outline?\\\n(The long side is 150 pixels and each of the short sides are 75 pixels.)",
+    "authored_hints": {
       "courseC_artist_prog7_a": "Every angle is either 45 or 90 degrees.",
-      "courseC_artist_prog7_b": "Does it work at the first step?  \nHow about the second?  \nWhere does it go wrong?",
+      "courseC_artist_prog7_b": "Does it work at the first step?\\\nHow about the second?\\\nWhere does it go wrong?",
       "courseC_artist_prog7_c": "You can use the dropdown menu on the turn blocks to see which angle you need!",
       "courseC_artist_prog7_d": "You will want to:\n\n-   move forward\n-   turn right 45 degrees\n-   move forward\n-   turn right 90 degrees\n-   move forward\n-   turn right 45 degrees\n\nRepeat this pattern 2 times!",
       "courseC_artist_prog7_e": "Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you don't think you've solved the puzzle yet."
-    },
-    "https://studio.code.org/s/coursee-2017/stage/5/extras?level_name=courseC_artist_prog_challenge1": {
+    }
+  },
+  "https://studio.code.org/s/coursee-2017/stage/5/puzzle/9": {
+    "short_instructions": "One more tag.  This is a triangle for Pi.\n(Each side is 150 pixels)",
+    "long_instructions": "One more tag.  This is a triangle for Pi.\\\n(Each side is 150 pixels)"
+  },
+  "https://studio.code.org/s/coursee-2017/stage/5/puzzle/10": {
+    "contained levels": [
+      {
+        "dsls": {
+          "questions": [
+            {
+              "text": "Look carefully at the code below.  What will happen when you click \"Run\"?"
+            }
+          ],
+          "answers": [
+            {
+              "text": "The artist will draw a triangle with three equal sides.",
+              "correct": false,
+              "feedback": "Incorrect.  The artist draws a square."
+            },
+            {
+              "text": "The artist will draw a single line.",
+              "correct": false,
+              "feedback": "Incorrect.  The artist draws a square."
+            },
+            {
+              "text": "The artist draws a square.",
+              "correct": true,
+              "feedback": "Correct!"
+            },
+            {
+              "text": "I don't know.",
+              "correct": false,
+              "feedback": "The artist draws a square."
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "https://studio.code.org/s/coursee-2017/stage/5/extras?level_name=courseC_artist_prog_challenge1": {
+    "short_instructions": "Draw rooms for each of the animals. ",
+    "long_instructions": "Draw rooms for each of the animals. There are many different ways to solve this puzzle, so have some fun! Each square has a side length of 100 pixels.",
+    "authored_hints": {
       "courseC_artist_prog_challenge1_a": "You can draw this as a rectangle with a line in the middle or two different squares!"
-    },
-    "https://studio.code.org/s/coursee-2017/stage/5/extras?level_name=courseC_artist_prog_challenge2a": {
+    }
+  },
+  "https://studio.code.org/s/coursee-2017/stage/5/extras?level_name=courseC_artist_prog_challenge2a": {
+    "short_instructions": "_\"Help me paint the yellow lines on this road!\"_",
+    "long_instructions": "_\"Help me paint the yellow lines on this road!\"_\n\nThe three line segments have lengths of 150, 100, and 200 pixels!",
+    "authored_hints": {
       "courseC_artist_prog_challenge2_a": "After you draw the first line, turn left before you draw your second line.",
       "courseC_artist_prog_challenge2_b": "After you draw the second line, turn right before you draw your third line."
-    },
-    "https://studio.code.org/s/coursee-2017/stage/8/puzzle/1": {
+    }
+  },
+  "https://studio.code.org/s/coursee-2017/stage/7/puzzle/2": {
+    "short_instructions": "Move forward by 60 pixels to complete this puzzle.",
+    "long_instructions": "What a lovely day!  \n\nHelp the Artist cover his flowers before the winter by moving forward by 60 pixels."
+  },
+  "https://studio.code.org/s/coursee-2017/stage/7/puzzle/3": {
+    "short_instructions": "Move forward five times and make this colored line.",
+    "long_instructions": "Add some beauty by repeating that step five times, changing to a random color between each move."
+  },
+  "https://studio.code.org/s/coursee-2017/stage/7/puzzle/5": {
+    "short_instructions": "Use a `repeat` loop to draw five colored dashes.",
+    "long_instructions": "Draw the colorful line 5 times again, this time using a `repeat` loop."
+  },
+  "https://studio.code.org/s/coursee-2017/stage/7/puzzle/6": {
+    "short_instructions": "What happens when you add a 72 degree right turn after everything else inside your loop?",
+    "long_instructions": "What happens when you add a 72 degree right turn after everything else inside your loop?"
+  },
+  "https://studio.code.org/s/coursee-2017/stage/7/puzzle/7": {
+    "short_instructions": "Use loops to draw this staircase.",
+    "long_instructions": "Loops sure make writing code easier!\n\nUse loops to draw this staircase.\n\n-   Each stairstep is 50 pixels long and 50 pixels tall\n-   You will need to turn 90 degrees in each direction"
+  },
+  "https://studio.code.org/s/coursee-2017/stage/7/puzzle/8": {
+    "short_instructions": "Edit your loop to draw this staircase.",
+    "long_instructions": "This staircase is much bigger, but it takes the same amount of code as the last puzzle!\n\nFix this loop to complete the puzzle."
+  },
+  "https://studio.code.org/s/coursee-2017/stage/7/puzzle/9": {
+    "short_instructions": "Look for a pattern and make this code shorter using loops!",
+    "long_instructions": "Look for a pattern and make this code shorter using loops!"
+  },
+  "https://studio.code.org/s/coursee-2017/stage/7/puzzle/10": {
+    "short_instructions": "Look for a pattern and make this code shorter using loops.",
+    "long_instructions": "**Challenge:** Look for a pattern and make this code shorter using loops."
+  },
+  "https://studio.code.org/s/coursee-2017/stage/7/puzzle/11": {
+    "short_instructions": "Solve this puzzle by drawing a square.",
+    "long_instructions": "Solve this puzzle by drawing a square with 200 pixel sides."
+  },
+  "https://studio.code.org/s/coursee-2017/stage/8/puzzle/1": {
+    "short_instructions": "Help the bee collect all of the nectar.",
+    "long_instructions": "_\"This is going to **BEE** great!\"_\n\nHelp the bee collect all of the nectar.",
+    "authored_hints": {
       "courseD_bee_nestedLoops1_a": "Not working?  Try using the \"Step\" button to see what happens line by line.",
       "courseD_bee_nestedLoops1_c": "Remember to use the `get nectar` block once you are on a square with a flower."
-    },
-    "https://studio.code.org/s/coursee-2017/stage/8/puzzle/2": {
+    }
+  },
+  "https://studio.code.org/s/coursee-2017/stage/8/puzzle/2": {
+    "short_instructions": "Help the bee collect all of the nectar.",
+    "long_instructions": "\"_This is going to **BEE** great!_\"\n\nHelp the bee collect all of the nectar.",
+    "authored_hints": {
       "courseD_bee_nestedLoops1_a": "Not working?  Try using the \"Step\" button to see what happens line by line.",
       "courseD_bee_nestedLoops1_b": "Try writing code for one side of the square first. Can you loop this to get all of the nectar?",
       "courseD_bee_nestedLoops1_c": "Remember to use the `get nectar` block once you are on a square with a flower."
-    },
-    "https://studio.code.org/s/coursee-2017/stage/8/puzzle/5": {
+    }
+  },
+  "https://studio.code.org/s/coursee-2017/stage/8/puzzle/4": {
+    "short_instructions": "This time, help the bee collect all of the nectar using as few blocks as possible.",
+    "long_instructions": "This time, help the bee collect all of the nectar using as few blocks as possible.",
+    "contained levels": [
+      {
+        "dsls": {
+          "questions": [
+            {
+              "text": "Look closely at the nested loops below.  What will happen when you click \"Run\"?"
+            }
+          ],
+          "answers": [
+            {
+              "text": "The bee will move forward and get nectar only one time.",
+              "correct": false,
+              "feedback": "Incorrect.  The bee loops the looped action of moving forward and collecting nectar, allowing it to solve the puzzle."
+            },
+            {
+              "text": "The bee will get only 2 units of nectar.",
+              "correct": false,
+              "feedback": "Incorrect.  The bee loops the looped action of moving forward and collecting nectar, allowing it to solve the puzzle."
+            },
+            {
+              "text": "The bee will get all of the nectar.",
+              "correct": true,
+              "feedback": "Correct!"
+            },
+            {
+              "text": "I don't know.",
+              "correct": false,
+              "feedback": "The bee loops the looped action of moving forward and collecting nectar, allowing it to solve the puzzle."
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "https://studio.code.org/s/coursee-2017/stage/8/puzzle/5": {
+    "short_instructions": "This time, help the bee collect all of the nectar using as few blocks as possible.",
+    "long_instructions": "This time, help the bee collect all of the nectar using as few blocks as possible.",
+    "authored_hints": {
       "courseD_bee_nestedLoops2_a": "To solve this puzzle, you will need to nest one `repeat` loop inside of another.",
       "courseD_bee_nestedLoops2_b": "Can't figure out where to put the loops? Try writing the code on paper step-by-step and look for a pattern.",
       "courseD_bee_nestedLoops2_c": "Remember you can put more than one block inside of a loop."
-    },
-    "https://studio.code.org/s/coursee-2017/stage/8/puzzle/6": {
+    }
+  },
+  "https://studio.code.org/s/coursee-2017/stage/8/puzzle/6": {
+    "short_instructions": "Get the zombie to the sunflower using the fewest number of blocks possible.",
+    "long_instructions": "_\"Zombie hungry!\"_\n\nGet the zombie to the sunflower using the fewest number of blocks possible.",
+    "authored_hints": {
       "courseD_maze_nestedLoops3_a": "To solve this puzzle, you will need to \"nest\" one `repeat` loop inside of another `repeat` loop.",
       "courseD_maze_nestedLoops3_b": "Can't figure out where to put the loops? Try writing the code step-by-step and look for a pattern.",
       "courseD_maze_nestedLoops3_c": "Try writing code for one straight piece of path and a turn. Can you repeat this to get to the sunflower?"
-    },
-    "https://studio.code.org/s/coursee-2017/stage/8/puzzle/7": {
+    }
+  },
+  "https://studio.code.org/s/coursee-2017/stage/8/puzzle/7": {
+    "short_instructions": "Get the zombie to the sunflower using the fewest blocks possible!  ",
+    "long_instructions": "Get the zombie to the sunflower using the fewest blocks possible!  ",
+    "authored_hints": {
       "courseD_maze_nestedLoops4_a": "Try using this path through the maze.\n\n[][0]",
       "courseD_maze_nestedLoops4_b": "If the loop pattern is hard to see, try coding it all out first and see what code repeats over and over before you put the loops in.",
       "courseD_maze_nestedLoops4_c": "Try using one `repeat` loop inside of another to cut down on the amount of code you need."
-    },
-    "https://studio.code.org/s/coursee-2017/stage/8/puzzle/8": {
+    }
+  },
+  "https://studio.code.org/s/coursee-2017/stage/8/puzzle/8": {
+    "short_instructions": "Get the zombie to the sunflower using the fewest number of blocks possible!",
+    "authored_hints": {
       "courseD_maze_nestedLoops5_a": "Look for a stair-step pattern in this maze to find where a nested loop can be used.",
       "courseD_maze_nestedLoops5_b": "Can't figure out where to put the loops? Try writing the code step-by-step and look for a pattern."
-    },
-    "https://studio.code.org/s/coursee-2017/stage/8/puzzle/9": {
+    }
+  },
+  "https://studio.code.org/s/coursee-2017/stage/8/puzzle/9": {
+    "short_instructions": "Get the zombie to the sunflower using only the blocks available.",
+    "long_instructions": "_\"Must eat sunflower!\"_\n\nGet the zombie to the sunflower using only the blocks available.",
+    "authored_hints": {
       "courseD_maze_nestedLoops6_a": "If you are stuck, try writing out the code out on paper without loops first and look for patterns.",
       "courseD_maze_nestedLoops6_b": "Nesting `repeat` loops can help decrease the number of blocks used.",
       "courseD_maze_nestedLoops6_c": "It will take two sets of nested `repeat` loops to solve this puzzle."
-    },
-    "https://studio.code.org/s/coursee-2017/stage/8/puzzle/10": {
+    }
+  },
+  "https://studio.code.org/s/coursee-2017/stage/8/puzzle/10": {
+    "short_instructions": "Challenge: Figure out how to get all of the nectar using only the blocks available.",
+    "long_instructions": "**Challenge:** Figure out how to get all of the nectar using only the blocks available.",
+    "authored_hints": {
       "courseD_bee_nestedLoops7_a": "You will need to repeat `get nectar` inside of another `repeat` that also has the `move forward` block inside of it.",
       "courseD_bee_nestedLoops7_b": "You will need to use all three of the available `repeat` blocks to solve this puzzle.",
       "courseD_bee_nestedLoops7_c": "Nest your blocks three deep, like this:\n\n-   repeat 4\n    -   repeat 3\n        -   repeat 12\n            -   get nectar\n        -   move forward\n    -   turn right"
-    },
-    "https://studio.code.org/s/coursee-2017/stage/9/puzzle/1": {
+    }
+  },
+  "https://studio.code.org/s/coursee-2017/stage/8/puzzle/11": {
+    "short_instructions": "Collect all of the nectar from each flower and make honey at the honeycomb. ",
+    "long_instructions": "Collect all of the nectar from each flower and make honey at the honeycomb. "
+  },
+  "https://studio.code.org/s/coursee-2017/stage/8/puzzle/12": {
+    "short_instructions": "Make all of the honey.",
+    "long_instructions": "Make all of the honey."
+  },
+  "https://studio.code.org/s/coursee-2017/stage/8/puzzle/13": {
+    "short_instructions": "Make all of the honey.",
+    "long_instructions": "Make all of the honey.",
+    "contained levels": [
+      {
+        "dsls": {
+          "questions": [
+            {
+              "text": "Look closely at the code below. How much honey will the bee make when you click \"Run\"?"
+            }
+          ],
+          "answers": [
+            {
+              "text": "4",
+              "correct": false,
+              "feedback": "Incorrect. The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!"
+            },
+            {
+              "text": "8",
+              "correct": true,
+              "feedback": "Correct!"
+            },
+            {
+              "text": "12",
+              "correct": false,
+              "feedback": "Incorrect. The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!"
+            },
+            {
+              "text": "I don't know.",
+              "correct": false,
+              "feedback": "The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "https://studio.code.org/s/coursee-2017/stage/9/puzzle/1": {
+    "short_instructions": "Draw a small shape, between **20 and 50** pixels wide.  It can be any shape that you like.  ",
+    "long_instructions": "[][0] _“Hi, I’m Elsa of Arendelle, help me draw a shape.”_\n\nDraw a small shape, between **20 and 50** pixels wide.  It can be any shape that you like.  \n\n<hr/>\n\nYou can try making a polygon, like one of these:\\\n[][1]\n[][2]\n[][3]  \n\nOr even an abstract shape, like one of these:\\\n[][4]\n[][5]\n[][6]",
+    "authored_hints": {
       "courseD_artist_project1_a": "Use the drop down menu on the `turn` blocks to choose the angle you need!",
       "courseD_artist_project1_b": "Remember that `move forward` draws a line, while `jump forward` does not."
-    },
-    "https://studio.code.org/s/coursee-2017/stage/9/puzzle/2": {
+    }
+  },
+  "https://studio.code.org/s/coursee-2017/stage/9/puzzle/2": {
+    "short_instructions": "Now take your shape and draw two or three in a row!",
+    "long_instructions": "[][0] _“Now, let’s draw more than one.”_\n\nNow take your shape and draw two or three in a row by jumping forward some number of pixels.  \n\n-   If you jump forward by **less** than the width of your shape, they might overlap\n-   If you jump forward by **more** than the width of your shape, you will get a gap\n\n<hr/>\n\nYour row might end up straight like with these:\n\n[][1]\n[][2]\n[][3]\n<br/>  <br/>\n\nOr, your shapes might move around like one of these: \n\n[][4]\n[][5]\n[][6]",
+    "authored_hints": {
       "courseD_artist_project2_a": "Remember that `move forward` draws a line, while `jump forward` does not.",
       "courseD_artist_project2_b": "After you draw and move the first time, you can repeat the code by adding a loop around the outside."
-    },
-    "https://studio.code.org/s/coursee-2017/stage/9/puzzle/3": {
+    }
+  },
+  "https://studio.code.org/s/coursee-2017/stage/9/puzzle/3": {
+    "short_instructions": "Let's spin that line of shapes around!",
+    "long_instructions": "[][0] _\"Let’s make it into a snowflake.\"_\n\nNext, jump Elsa back to the center using the `jump to 200 over and 200 down` block, and spin her around to draw the line of shapes again and again in a bunch of different directions.\n\nWhat amazing snowflakes you can make!\n\n* * *\n\nTake a look at these examples with polygons:\\\n[][1]\n[][2]\n[][3]\n\nAbstract shapes might make a snowflake more like one of these:\\\n[][4]\n[][5]\n[][6]",
+    "authored_hints": {
       "courseD_artist_project3_a": "Use the drop down menu on the `turn` blocks to choose the angle you need!",
       "courseD_artist_project3_b": "Try nested loops!\n\nUse the code that you created to draw a line of shapes and nest it inside of another loop.  At the bottom, before the outside loop ends, add a block that will turn Elsa around.  \n\n-   Try 72 degrees if you are repeating the outer loop 5 times\n-   Try 60 degrees if you are repeating the outer loop 6 times"
-    },
-    "https://studio.code.org/s/coursee-2017/stage/9/puzzle/4": {
+    }
+  },
+  "https://studio.code.org/s/coursee-2017/stage/9/puzzle/4": {
+    "short_instructions": "Time to layer those shapes!",
+    "long_instructions": "[][0] _\"What happens if we draw snowflakes on top of each other?\"_\n\nTry layering two different shapes of snowflakes on top of one another with a little turn in between - see what you get! ",
+    "authored_hints": {
       "courseD_artist_project4_a": "Here is the pentagon snowflake with a turn of 36 degrees before a triangle snowflake:\n\n<img src=\"https://images.code.org/2ba023db9404f948fab655bfa7923160-image-1495822526223.14.13.png\" width=\"200px\" />\n\nHere's a set of hexagons with squares:\n\n<img src=\"https://images.code.org/4d77462f3d07df6f1f5f2dc25e5d2b70-image-1495822526224.15.08.png\" width=\"200px\" />",
       "courseD_artist_project4_b": "To try this, draw your first snowflake, turn, then draw a second snowflake."
-    },
-    "https://studio.code.org/s/coursee-2017/stage/9/puzzle/5": {
+    }
+  },
+  "https://studio.code.org/s/coursee-2017/stage/9/puzzle/5": {
+    "short_instructions": "Play with the snowflakes!",
+    "long_instructions": "[][0] _\"Get creative with shapes and angles to see what kind of new snowflakes we can draw!\"_",
+    "authored_hints": {
       "courseD_artist_project4_a": "Lines of 2 hexagons and 4 triangles:\n\n<img src=\"https://images.code.org/37ca9779bafd2ccc5cc801f82358008e-image-1495823683964.34.09.png\" width=\"200px\" />"
-    },
-    "https://studio.code.org/s/coursee-2017/stage/9/puzzle/6": {
+    }
+  },
+  "https://studio.code.org/s/coursee-2017/stage/9/puzzle/6": {
+    "short_instructions": "Draw a stair-step pattern that uses turns between 75 and 105 degrees.",
+    "long_instructions": "[][0] _\"Let’s try something new. This time, skate in a zig-zag.\"_\n\n<img src=\"https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png\" width=\"200px\" style=\"float: left; margin: 0 15px 15px 0;\" />\n\nDraw a stair-step pattern that uses turns between 75 and 105 degrees -- but make sure that your left and right turns use the same angle.\\\n(You will see why later.)",
+    "authored_hints": {
       "courseD_artist_project1a_a": "This stair step uses a 76 degree turn and repeats 4 times.\n\n<img src=\"https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png\" width=\"200px\" />",
       "courseD_artist_project1a_b": "These patterns are a lot like the stair steps from other puzzles, but using a different angle."
-    },
-    "https://studio.code.org/s/coursee-2017/stage/9/puzzle/7": {
+    }
+  },
+  "https://studio.code.org/s/coursee-2017/stage/9/puzzle/7": {
+    "short_instructions": "Now, turn around 180 degrees and draw the stair pattern again!",
+    "long_instructions": "[][0] _\"Now let’s turn and go back the way we came.\"_\n\nTurn around 180 degrees and draw the exact same stair pattern again!  \n\n-   The rest of this stage will be easier if you put all of your code inside of a loop to make Elsa  draw, turn around 180 degrees, draw, then turn around 180 degrees again.\n\n<hr/>\n\nHere is an example of stairs that use a 76 degree turn:\n\n[][1]",
+    "authored_hints": {
       "courseD_artist_project2a_a": "This drawing was made by nesting a loop of 4 stairs and a `turn right 180 degrees` block inside of a `repeat 2 times` block.\n\n<img src=\"https://images.code.org/bb24f9acee8afed2e119c1e920cb43f6-image-1495834479042.16.27.png\" width=\"200px\" />"
-    },
-    "https://studio.code.org/s/coursee-2017/stage/9/puzzle/8": {
+    }
+  },
+  "https://studio.code.org/s/coursee-2017/stage/9/puzzle/8": {
+    "short_instructions": "Spin that shape around 5 or 6 times in a circle.",
+    "long_instructions": "[][0] _\"Let’s spin and make it into a snowflake.\"_\n\nSpin that shape around 5 or 6 times in a circle.\n\n-   If you choose 5 times,  try a turn of 72 degrees\n-   If you choose 6 times,  try a turn of 60 degrees\n    <hr/>\n\nHere's an example of Elsa turning a pattern 6 times:\n\n[][1]",
+    "authored_hints": {
       "courseD_artist_project3a_a": "You can choose different amounts to rotate your shape! What about 18 times with a 20 degree turn in between?"
-    },
-    "https://studio.code.org/s/coursee-2017/stage/9/puzzle/9": {
+    }
+  },
+  "https://studio.code.org/s/coursee-2017/stage/9/puzzle/9": {
+    "short_instructions": "Try playing around with what you've created. Draw whatever you like!\n\n-   What happens if you use two different angles in your stair step pattern?\n-   What happens if you make your diamond pattern longer or shorter?\n-   What does it look like to draw two snowflakes on top of one another?",
+    "long_instructions": "[][0]  _\"Now, what should we do? Let’s explore and create our own winter wonderland!\"_\n\nTry playing around with what you've created. Draw whatever you like!\n\n-   What happens if you use two different angles in your stair step pattern?\n-   What happens if you make your diamond pattern longer or shorter?\n-   What does it look like to draw two snowflakes on top of one another?",
+    "authored_hints": {
       "courseD_artist_project4a_a": "Here are two different lengths of snowflake, drawn one after another (with a 30 degree turn in between.)\n\n<img src=\"https://images.code.org/45dedb51d89d3e5d0a88fe65ecbd7d7b-image-1495833855890.22.39.png\" width=\"200px\" />"
+    }
+  },
+  "https://studio.code.org/s/coursee-2017/stage/11/puzzle/2": {
+    "short_instructions": "For this puzzle, snap all of the blocks together and click \"Run\" to watch it go!",
+    "long_instructions": "For this puzzle, snap all of the blocks together and click \"Run\" to watch it go!",
+    "authored_hints": {
+      "courseC_maze_programming1_a": "If Scrat isn't getting to the acorn, make sure all three of the blocks have been fully snapped together, then click \"Run\" again.",
+      "courseC_maze_programming1_b": "Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you don't think you've solved the puzzle yet."
     },
-    "https://studio.code.org/s/coursee-2017/stage/11/puzzle/2": {
-      "courseC_maze_programming1_0": "If the bird isn't getting to the pig, make sure all three of the blocks have been fully clicked together, then click \"Run\" again.",
-      "courseC_maze_programming1_b": "You don't need any extra blocks from the toolbox for this puzzle!"
-    },
-    "https://studio.code.org/s/coursee-2017/stage/11/puzzle/3": {
+    "callouts": {
+      "grade2_CaringForNewPet_0_1": "After connecting all the blocks, press \"Run\" to start your program."
+    }
+  },
+  "https://studio.code.org/s/coursee-2017/stage/11/puzzle/3": {
+    "short_instructions": "Drag an extra `move forward` block out of the toolbox, then attach all blocks to `when run` to finish your code.",
+    "long_instructions": "Drag an extra `move forward` block out of the toolbox, then attach all blocks to `when run` to finish your code.",
+    "authored_hints": {
       "courseC_maze_programming2_a": "To use a `move forward` block, drag it from the toolbox out into the workspace and connect it to the `when run` block.",
       "courseC_maze_programming2_b": "Make sure all three `move forward` blocks are attached to the `when run` block."
     },
-    "https://studio.code.org/s/coursee-2017/stage/11/puzzle/4": {
+    "callouts": {
+      "courseC_maze_programming2_1": "This is the toolbox. It’s where you’ll find extra blocks to complete your puzzles."
+    }
+  },
+  "https://studio.code.org/s/coursee-2017/stage/11/puzzle/4": {
+    "short_instructions": "There is one extra block that is going to cause Scrat to crash. Throw it away by dragging it back to the toolbox.",
+    "long_instructions": "There is one extra block that is going to cause Scrat to crash.\\\nThrow it away by disconnecting it from the other blocks and dragging it back to the toolbox.",
+    "authored_hints": {
       "courseC_maze_programming3_a": "[][0]\n\nTo delete a block from the middle of your code, drag all of the blocks underneath it away to the right and let them sit in the workspace for a while.  \n\nClick on the block you want to delete, and drag it back to the toolbox.\n\nFinally, put your other blocks back in place where they belong.",
-      "courseC_maze_programming3_b": "Remember that turns to the right and left are from the bird's perspective."
+      "courseC_maze_programming3_b": "Remember that turns to the right and left are from Scrat's perspective."
     },
-    "https://studio.code.org/s/coursee-2017/stage/11/puzzle/5": {
-      "courseC_maze_programming4_a": "You can turn right or left from the bird's point of view. If you are facing right, turning right will make you point downwards.",
-      "courseC_maze_programming4_b": "To follow the path, move forward and turn one way, then move again and turn the opposite way. Move forward one more time to reach the pig.",
+    "callouts": {
+      "courseC_maze_programming3_2": "You can drag extra blocks to the toolbox to throw them away."
+    }
+  },
+  "https://studio.code.org/s/coursee-2017/stage/11/puzzle/5": {
+    "short_instructions": "Avoid the cracked ice to keep Scrat safe!",
+    "long_instructions": "Avoid the cracked ice to keep Scrat safe!",
+    "authored_hints": {
+      "courseC_maze_programming4_a": "You can turn right or left from Scrat's point of view. If you are facing right, turning right will make you point downwards.",
+      "courseC_maze_programming4_b": "To follow the path, move forward and turn one way, then move again and turn the opposite way. Move forward one more time to reach the acorn.",
       "courseC_maze_programming4_c": "Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you don't think you've solved the puzzle yet."
     },
-    "https://studio.code.org/s/coursee-2017/stage/11/puzzle/6": {
+    "callouts": {
+      "courseC_maze_programming4_1": "This is your block limit.  It tells you how many of these blocks you have left to use."
+    }
+  },
+  "https://studio.code.org/s/coursee-2017/stage/11/puzzle/6": {
+    "short_instructions": "Avoid the cracked ice.",
+    "long_instructions": "Avoid the cracked ice!",
+    "authored_hints": {
       "courseC_maze_programming5_a": "Try using the \"Step\" button to run your code line by line. Can you figure out what you need to do next?",
       "courseC_maze_programming5_b": "How far do you need to move to get to the corner?",
-      "courseC_maze_programming5_c": "You will need to turn left at the corner to get to the pig."
+      "courseC_maze_programming5_c": "You will need to turn left at the corner to get to the acorn."
     },
-    "https://studio.code.org/s/coursee-2017/stage/11/puzzle/9": {
-      "courseC_maze_programming6_a": "There are two ways to solve this puzzle!",
-      "courseC_maze_programming6_b": "Remember to turn first before moving, since the bird starts facing a wall.",
-      "courseC_maze_programming6_c": "Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you don't think you've solved the puzzle yet."
+    "callouts": {
+      "": "These blocks don't have numbers on them. You can use as many as you want!"
+    }
+  },
+  "https://studio.code.org/s/coursee-2017/stage/11/puzzle/7": {
+    "contained levels": [
+      {
+        "dsls": {
+          "questions": [
+            {
+              "text": "This code uses a new block. What do you think will happen when you press \"Run\"?"
+            }
+          ],
+          "answers": [
+            {
+              "text": "Nothing. Scrat will not move at all.",
+              "correct": false,
+              "feedback": "Incorrect. Putting the 'move forward' block inside the 'repeat' block will cause Scrat to move forward three times."
+            },
+            {
+              "text": "Scrat will move forward three times, turn, then move forward three more times, making it to the acorn!",
+              "correct": true,
+              "feedback": "Correct!"
+            },
+            {
+              "text": "Scrat will move forward, then turn and crash.",
+              "correct": false,
+              "feedback": "Incorrect. Putting the 'move forward' block inside the 'repeat' block will cause Scrat to move forward three times."
+            },
+            {
+              "text": "I don't know.",
+              "correct": false,
+              "feedback": "Putting the 'move forward' block inside the 'repeat' block will cause Scrat to move forward three times. He then turns and moves forward another three times, making it to the acorn!"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "https://studio.code.org/s/coursee-2017/stage/11/puzzle/9": {
+    "short_instructions": "Help Scrat get to the acorn using a loop!",
+    "long_instructions": "Help Scrat get to the acorn using a loop!",
+    "authored_hints": {
+      "courseC_maze_programming6a_a": "Use a `repeat` loop to get Scrat moving!"
     },
-    "https://studio.code.org/s/coursee-2017/stage/11/puzzle/10": {
+    "callouts": {
+      "courseD_maze_ramp6_1": "Whatever code you put in here will repeat as many times as you tell it to, then continue to run the rest of the program."
+    }
+  },
+  "https://studio.code.org/s/coursee-2017/stage/11/puzzle/10": {
+    "short_instructions": "Help Scrat get to the acorn!",
+    "long_instructions": "Help Scrat get to the acorn!",
+    "authored_hints": {
+      "courseD_scrat_programming6_a": "There are two ways to solve this puzzle!",
+      "courseD_scrat_programming6_b": "Remember to turn first before moving, since Scrat is facing the wrong direction.",
+      "courseD_scrat_programming6_c": "Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you don't think you've solved the puzzle yet."
+    },
+    "callouts": {
+      "courseD_maze_ramp6_1": "Whatever code you put in here will repeat as many times as you tell it to, then continue to run the rest of the program."
+    }
+  },
+  "https://studio.code.org/s/coursee-2017/stage/11/puzzle/11": {
+    "short_instructions": "Use what you've learned to get Scrat to the acorn!",
+    "long_instructions": "**Challenge:** Use what you've learned to get Scrat to the acorn!",
+    "authored_hints": {
       "courseD_maze_ramp7_b": "Don't forget to use the \"Step\" button to go through block by block and look for errors.",
       "courseD_maze_ramp7_a": "Use repeat blocks to run either a single block or a chunk of code over and over.",
       "courseD_maze_ramp7_c": "Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you don't think you've solved the puzzle yet."
     },
-    "https://studio.code.org/s/coursee-2017/stage/11/puzzle/11": {
-      "courseD_maze_ramp7_b": "Don't forget to use the \"Step\" button to go through block by block and look for errors.",
-      "courseD_maze_ramp7_a": "Use repeat blocks to run either a single block or a chunk of code over and over.",
-      "courseD_maze_ramp7_c": "Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you don't think you've solved the puzzle yet."
-    },
-    "https://studio.code.org/s/coursee-2017/stage/11/puzzle/13": {
+    "callouts": {
+      "courseD_maze_ramp7_1": "This is your first challenge puzzle! These are meant to be hard and may take several tries."
+    }
+  },
+  "https://studio.code.org/s/coursee-2017/stage/11/puzzle/13": {
+    "short_instructions": "Now make a square using Artist!",
+    "long_instructions": "Great!  Now let's use that `repeat` loop to make a square using Artist!  The blocks for artist are a little different than other puzzles, but the idea is the same.\n\n* * *\n\n##### Each side of the square has a length of 200 pixels, and you will need to turn 90 degrees to make each angle.",
+    "authored_hints": {
       "courseE_artist_ramp8_a": "To draw a side, use the `move forward by 100 pixels` block, and change the 100 to a 200.",
       "courseE_artist_ramp8_b": "To draw 4 sides, put the `move forward by 100 pixels` block inside of a repeat loop and make sure the loop is set to draw 4 times.\n\nDon't forget to turn afterward!",
       "courseE_artist_ramp8_c": "Your loop should have two blocks inside of it: `move forward` and `turn right by 90 degrees`."
     },
-    "https://studio.code.org/s/coursee-2017/stage/11/puzzle/15": {
+    "callouts": {
+      "courseE_artist_ramp8_1": "You can change this number.",
+      "courseE_artist_ramp8_2": "Click here to type in the number of times to repeat your code."
+    }
+  },
+  "https://studio.code.org/s/coursee-2017/stage/11/puzzle/15": {
+    "short_instructions": "Use what you've learned to draw this triangle.",
+    "long_instructions": "Use what you've learned to draw this triangle.\n\n* * *\n\n##### The sides are each 100 pixels long. You will need to turn 120 degrees at each corner.",
+    "authored_hints": {
       "courseD_artist_ramp12_a": "How is this similar to a square?  How is it different?",
       "courseD_artist_ramp12_b": "You can use the drop down menu on the `turn` blocks to see which angle you need!",
       "courseD_artist_ramp12_c": "To draw each side, you will need to move forward 100 pixels, then turn right 120 degrees. How many sides do you need?"
-    },
-    "https://studio.code.org/s/coursee-2017/stage/12/puzzle/2": {
+    }
+  },
+  "https://studio.code.org/s/coursee-2017/stage/12/puzzle/2": {
+    "short_instructions": "While there is a pile, remove dirt.",
+    "long_instructions": "Oh my!  This pile is so big that it's hard to guess how much dirt is in it.  \n\n* * *\n\nWe've added a new block to the toolbox called the `while there is a pile` block.  Use this to remove dirt only while there is still some to scoop! ",
+    "authored_hints": {
       "courseE_farmer_ramp12_a": "Instead of using a `repeat` loop to tell the farmer how many times to shovel dirt, now you can use a `while there is a pile` block.  ",
       "courseE_farmer_ramp12_b": "You only need to move forward once to get to the dirt."
-    },
-    "https://studio.code.org/s/coursee-2017/stage/12/puzzle/3": {
+    }
+  },
+  "https://studio.code.org/s/coursee-2017/stage/12/puzzle/3": {
+    "short_instructions": "While there is a pile, remove dirt.",
+    "long_instructions": "Let's try that again, but with more piles!",
+    "authored_hints": {
+      "courseE_farmer_ramp11b_a": "You can nest your `while` loop inside of a `repeat` loop to make your code shorter."
+    }
+  },
+  "https://studio.code.org/s/coursee-2017/stage/12/puzzle/4": {
+    "short_instructions": "While there is lettuce, pick lettuce!",
+    "long_instructions": "Now the harvester needs to pick all of the lettuce.  Use `while there is lettuce` inside of a `repeat` loop to get it all!"
+  },
+  "https://studio.code.org/s/coursee-2017/stage/12/puzzle/5": {
+    "short_instructions": "Now use nested loops to solve this puzzle.",
+    "long_instructions": "Pick all of the lettuce.",
+    "authored_hints": {
       "courseE_farmer_ramp12_b": "You will still need to use a `repeat` loop on the outside of it all to tell the farmer how many times to walk forward and get lettuce."
-    },
-    "https://studio.code.org/s/coursee-2017/stage/12/puzzle/4": {
-      "courseE_farmer_ramp12a": "Feel free to go back to the last puzzle if you need a reminder of how to pick produce only **while** there is produce to pick."
-    },
-    "https://studio.code.org/s/coursee-2017/stage/12/puzzle/5": {
-      "courseE_farmer_ramp12_b": "You will still need to use a `repeat` loop on the outside of it all to tell the farmer how many times to walk forward and get lettuce."
-    },
-    "https://studio.code.org/s/coursee-2017/stage/12/puzzle/6": {
-      "courseE_farmer_ramp12b": "You will need to check your `if` statement 21 times to solve this puzzle.",
-      "courseE_farmer_ramp12c": "Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you haven't solved the puzzle yet.",
-      "courseE_farmer_ramp12d": "There will only be lettuce, so you don't need to worry about empty spaces, corn, or pumpkins."
-    },
-    "https://studio.code.org/s/coursee-2017/stage/12/puzzle/7": {
-      "courseE_farmer_ramp13_a": "There can be more than one of either crop in a space, so make sure to use `while` loops to pick them all!",
-      "courseE_farmer_ramp13_b": "Use a `repeat` loop so that you don't have to write a separate if statement for each square.",
-      "courseE_farmer_ramp13_c": "If you can't figure out where to put the loops, try writing your code step-by-step and look for patterns."
-    },
-    "https://studio.code.org/s/coursee-2017/stage/12/puzzle/8": {
-      "courseE_bee_ramp14_a": "The bee works just like the farmer in the previous puzzle. Buzz along the path and collect nectar while there is nectar (while nectar > 0) and make all of the honey.",
-      "courseE_bee_ramp14_b": "There can be more than one flower or honeycomb at each space, so make sure to use `while` loops to get them all!",
-      "courseE_bee_ramp14_c": "This puzzle is nearly identical to the previous one, just with honey and nectar instead of vegetables."
-    },
-    "https://studio.code.org/s/coursee-2017/stage/12/puzzle/9": {
+    }
+  },
+  "https://studio.code.org/s/coursee-2017/stage/12/puzzle/7": {
+    "short_instructions": "Move forward until you reach the lettuce, then pick it all using a `while` loop.",
+    "long_instructions": "The lettuce is now only at the end of the path.\\\nTravel down the path **until** you reach a head of lettuce, then continue to pick it **while** there is still some left.  ",
+    "authored_hints": {
+      "courseE_farmer_ramp12b_b": "You will still need to use an `until` loop first, then use a `while` loop once you get to the lettuce."
+    }
+  },
+  "https://studio.code.org/s/coursee-2017/stage/12/puzzle/8": {
+    "short_instructions": "Move forward until you reach the lettuce, then pick it all using a `while` loop.",
+    "long_instructions": "The lettuce is scattered all over the garden.\\\nTravel down each path **until** you reach a head of lettuce, then continue to pick it **while** there is still some left.  ",
+    "authored_hints": {
+      "courseE_farmer_ramp12d_b": "You will still need to put your `until` and `while` loops inside of a `repeat` loop to solve this puzzle!"
+    }
+  },
+  "https://studio.code.org/s/coursee-2017/stage/12/puzzle/9": {
+    "short_instructions": "Move forward until you reach the lettuce, then pick it all using a `while` loop.",
+    "long_instructions": "The lettuce is scattered all over the garden.\\\nTravel down each path **until** you reach a head of lettuce, then continue to pick it **while** there is still some left.  ",
+    "authored_hints": {
       "courseE_farmer_ramp12e_b": "The solution to this puzzle will look a lot like the solution to the last puzzle, but turning in the other direction."
-    },
-    "https://studio.code.org/s/coursee-2017/stage/12/puzzle/11": {
-      "courseE_farmer_ramp15_a": "Use the `repeat until at pumpkin` block to make it to the end of the path.",
-      "courseE_farmer_ramp15_b": "What else needs to be done while moving along the path to the pumpkin?",
-      "courseE_farmer_ramp15_c": "The sprouts hide various amounts of either corn or lettuce to harvest on your way to the pumpkin."
-    },
-    "https://studio.code.org/s/coursee-2017/stage/12/puzzle/12": {
+    }
+  },
+  "https://studio.code.org/s/coursee-2017/stage/12/puzzle/11": {
+    "short_instructions": "Move forward until you reach the lettuce, then turn left **if** there is a path to the left.  Otherwise, turn right.",
+    "long_instructions": "**Challenge**: The only way to get all of the crops is to move forward until you get to the lettuce, then turn left **if** there is a path to the left.  Otherwise, turn right.",
+    "authored_hints": {
+      "courseE_farmer_ramp12f_b": "Use an `if/else` block to help the farmer decide if she needs to turn right or left."
+    }
+  },
+  "https://studio.code.org/s/coursee-2017/stage/12/puzzle/12": {
+    "short_instructions": "Move forward until you reach the lettuce, then turn left **if** there is a path to the left.  Otherwise, turn right.",
+    "long_instructions": "Move forward until you get to the lettuce, then turn left **if** there is a path to the left.  Otherwise, turn right.",
+    "authored_hints": {
       "courseE_farmer_ramp12G_b": "Use an `if/else` block to help the farmer decide if she needs to turn right or left."
-    },
-    "https://studio.code.org/s/coursee-2017/stage/16/puzzle/1": {
+    }
+  },
+  "https://studio.code.org/s/coursee-2017/stage/16/puzzle/1": {
+    "short_instructions": "Help the zombie draw glasses using squares with sides of 100 pixels.\\\nThe bridge between the glasses is 75 pixels long.",
+    "long_instructions": "_\"Me zombie artist. Me love drawing!\"_\n\nHelp the zombie draw glasses using squares with sides of 100 pixels.\\\nThe bridge between the glasses is 75 pixels long.",
+    "authored_hints": {
       "courseE_artist_functions1_a": "The squares each have 100 pixel sides, that means that you will have to move forward 175 pixels before drawing your second square.",
       "courseE_artist_functions1_b": "It is okay to draw overlapping lines to make your glasses.",
       "courseE_artist_functions1_c": "For shorter code, try using a `repeat` loop to draw the square frames of the glasses."
     },
-    "https://studio.code.org/s/coursee-2017/stage/16/puzzle/4": {
+    "callouts": {
+      "courseD_artist_functions1_1": "Let's start by using this block to help create the first square."
+    },
+    "function_names": {
+      "draw ear stems": "draw ear stems"
+    }
+  },
+  "https://studio.code.org/s/coursee-2017/stage/16/puzzle/3": {
+    "long_instructions": "Here is a puzzle that uses a function that we have defined. ",
+    "function_names": {
+      "draw a square": "draw a square",
+      "draw ear stems": "draw ear stems"
+    },
+    "contained levels": [
+      {
+        "dsls": {
+          "questions": [
+            {
+              "text": "What will happen when you press \"Run\"?"
+            }
+          ],
+          "answers": [
+            {
+              "text": "Nothing. The function is not called in the program.",
+              "correct": false,
+              "feedback": "Incorrect. The function is actually called two times in the program."
+            },
+            {
+              "text": "The artist will draw a single square.",
+              "correct": false,
+              "feedback": "Incorrect. The function is actually called two times in the program."
+            },
+            {
+              "text": "The artist will draw two squares that overlap.",
+              "correct": false,
+              "feedback": "Incorrect. The length of each side of the square is only 100 pixels, but the artist jumps by 175 pixels between functions."
+            },
+            {
+              "text": "The artist will draw two squares with a small gap in between.",
+              "correct": true,
+              "feedback": "Correct! The function is called two times in the program, with a jump in between."
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "https://studio.code.org/s/coursee-2017/stage/16/puzzle/4": {
+    "short_instructions": "This time, use the `draw a square` function to create the glasses. ",
+    "long_instructions": "Functions let you define new blocks! \n\nWe've moved the blocks needed for drawing a square into a function called `draw a square`. This time, use the `draw a square` function to create the glasses. \n\n* * *\n\nThe squares are 75 pixels apart.",
+    "authored_hints": {
       "courseD_artist_functions2_b": "The function you write should not contain your whole program, just the part that draws a square with 100 pixel sides.",
       "courseD_artist_functions2_c": "Use the green `draw a square` block to \"call\" your function under the `when run` block. Otherwise, the code in your function will not run.\n\n<xml><block type=\"procedures_callnoreturn\" limit=\"2\"><mutation name=\"draw a square\"/></block></xml>",
       "courseD_artist_functions2_a": "Your program should:\n\n-   Use function\n-   Move forward 100 + 75 pixels\n-   Use function"
     },
-    "https://studio.code.org/s/coursee-2017/stage/16/puzzle/5": {
+    "callouts": {
+      "courseD_artist_functions2_1": "When this green block runs, all of the code in the function will run. What should the artist do after drawing the first square?"
+    },
+    "function_names": {
+      "draw a square": "draw a square",
+      "draw ear stems": "draw ear stems"
+    }
+  },
+  "https://studio.code.org/s/coursee-2017/stage/16/puzzle/5": {
+    "short_instructions": "You can make this drawing by adding a repeat block.",
+    "long_instructions": "We will come back to functions shortly. Let's take a break to practice making this star. \n\nYou can make this drawing by adding a repeat block.",
+    "authored_hints": {
       "courseD_artist_functions3_a": "To solve this puzzle, you just need to add a  loop that repeats the starter code 8 times.\n\nIf you can't remember what the starter code was, click \"start over\" in the upper right corner of the workspace.",
       "courseD_artist_functions3_b": "Your loop should have all 3 starter code blocks inside of it."
-    },
-    "https://studio.code.org/s/coursee-2017/stage/16/puzzle/6": {
+    }
+  },
+  "https://studio.code.org/s/coursee-2017/stage/16/puzzle/6": {
+    "short_instructions": "Now that you can draw a star, try drawing four stars!",
+    "long_instructions": "Now that you can draw a star, try drawing four stars!\n\n-   Each branch of the star is 25 pixels long\n-   Turn 45 degrees between branches\n-   Jump 100 pixels between each star",
+    "authored_hints": {
       "courseD_artist_functions4_a": "Try using a function!",
       "courseD_artist_functions4_b": "Drag the `draw a star` function block out of the toolbox to begin building your function. It should have the same code as the previous puzzle, since you are drawing the same star pattern.",
       "courseD_artist_functions4_c": "Use the green `draw a star` block to call this function in your main program. Don't forget to jump forward between each star!"
     },
-    "https://studio.code.org/s/coursee-2017/stage/16/puzzle/7": {
+    "function_names": {
+      "draw a star": "draw a star"
+    }
+  },
+  "https://studio.code.org/s/coursee-2017/stage/16/puzzle/7": {
+    "short_instructions": "Draw only those three stars to finish this puzzle.",
+    "long_instructions": "When is drawing three stars harder than drawing four? When you also have to jump over the moon!\n\nDraw only those three stars to finish this puzzle.",
+    "authored_hints": {
       "courseD_artist_functions5_a": "Don't give up!  Remember what you have been learning.",
       "courseD_artist_functions5_b": "Functions make it easy to call saved code at any time, not just from inside a loop!",
       "courseD_artist_functions5_c": "Start by dragging the code for a star shape into the `draw a star` function, then use this function to draw the three stars!"
     },
-    "https://studio.code.org/s/coursee-2017/stage/16/puzzle/8": {
+    "function_names": {
+      "draw a star": "draw a star"
+    }
+  },
+  "https://studio.code.org/s/coursee-2017/stage/16/puzzle/8": {
+    "short_instructions": "Make this window by drawing a square, then turning 90 degrees before drawing another, and so on.",
+    "long_instructions": "You are doing great! \n\nMake this window by drawing a square, then turning 90 degrees before drawing another, and so on.",
+    "authored_hints": {
       "grade4_artist_functions_windows0_a": "Focus only on making one window for now.  We'll create a function in the next puzzle.",
       "grade4_artist_functions_windows0_b": "Try using nested loops. The inner loop will make the square and the outer loop will rotate the square four times.",
       "grade4_artist_functions_windows0_c": "Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you haven't solved the puzzle yet."
-    },
-    "https://studio.code.org/s/coursee-2017/stage/16/puzzle/9": {
+    }
+  },
+  "https://studio.code.org/s/coursee-2017/stage/16/puzzle/9": {
+    "short_instructions": "Try solving this puzzle by creating `draw a window` and calling it five times. Watch out for the door!",
+    "long_instructions": "Let's take the code for the window and add it to function `draw a window`. Now, we can call the function any time we need to draw a window without having to write the code again. \n\n[][0]\n\nTry solving this puzzle by creating `draw a window` and calling it five times. Watch out for the door!\n\n-   The top windows are 50 pixels away from each other.  \n-   The bottom windows are 100 pixels below the top set.",
+    "authored_hints": {
       "courseD_artist_functions7_a": "Try creating your function first then add windows one at a time.",
       "courseD_artist_functions7_b": "You shouldn't need to add any extra repeat loops.  Just jump the artist 100 pixels between each top window, then down 150 pixels to get to the bottom windows."
     },
-    "https://studio.code.org/s/coursee-2017/stage/16/puzzle/10": {
+    "function_names": {
+      "draw a window": "draw a window",
+      "draw a house": "draw a house"
+    }
+  },
+  "https://studio.code.org/s/coursee-2017/stage/16/puzzle/10": {
+    "short_instructions": "Challenge: Create as many functions as you think you need to make this drawing of 50 pixel squares.",
+    "long_instructions": "**Challenge:** Did you know that you can call functions from _inside_ other functions?!\n\nCreate as many functions as you think you need to make this drawing of 50 pixel squares.",
+    "authored_hints": {
       "courseD_artist_functions8_f": "You only need one `move forward` block, but you will need quite a few `jump forward` and/or `jump backward` blocks!",
       "courseD_artist_functions8_a": "Start by making a function for a square, then try making a function for a line of squares.\n\nHow would you use the `draw a line of squares` function to make this image?",
       "courseD_artist_functions8_d": "To make a line of squares,\n\n-   repeat 3 times\n    -   draw a square with a side length of **50 pixels**\n    -   jump forward **100 pixels**",
@@ -565,738 +897,684 @@
       "courseD_artist_functions8_c": "At the end of each line of squares, the artist will need to jump down and backward before he draws the next line of squares.",
       "courseD_artist_functions8_g": "[][0]"
     },
-    "https://studio.code.org/s/coursee-2017/stage/16/puzzle/11": {
+    "callouts": {
+      "courseD_artist_functions8_1": "Your blocks to create functions have been moved under this label in the toolbox."
+    },
+    "function_names": {
+      "do something": "do something",
+      "draw a line of squares": "draw a line of squares",
+      "draw square": "draw square"
+    }
+  },
+  "https://studio.code.org/s/coursee-2017/stage/16/puzzle/11": {
+    "short_instructions": "Create this image using only the blocks provided.",
+    "long_instructions": "Create this image using the limited blocks provided. \n\n-   Each triangle has sides of **50 pixels**  \n-   To draw a diamond, you will need to alternate between turning **60 degrees and 120 degrees**.",
+    "authored_hints": {
       "courseD_artist_functions9_e": "Can you spot all four places that the `line of triangles` can be used in this drawing?\n\n[][0]",
       "courseD_artist_functions9_a": "This puzzle can be broken into three parts:\n\n-   make the `draw a triangle` function\n-   make the `draw a line of triangles` function\n-   use your `draw a line of triangles` function four times to complete the drawing",
       "courseD_artist_functions9_b": "This drawing is made by drawing a line of triangles 4 times and turning either 60 or 120 degrees before you draw the next triangle line.",
       "courseD_artist_functions9_c": "To draw a line of triangles:\n\n-   repeat 4 times\n    -   draw a triangle\n    -   jump forward 50 pixels",
       "courseD_artist_functions9_d": "To draw the diamond:\n\n-   repeat 2 times\n    -   draw a line of triangles\n    -   turn 60 degrees\n    -   draw a line of triangles\n    -   turn 120 degrees"
     },
-    "https://studio.code.org/s/coursee-2017/stage/16/puzzle/12": {
+    "function_names": {
+      "do something": "do something",
+      "draw triangle": "draw triangle",
+      "draw line of triangles": "draw line of triangles"
+    }
+  },
+  "https://studio.code.org/s/coursee-2017/stage/16/puzzle/12": {
+    "short_instructions": "This time, use lines of 8 hexagons with 25 pixel sides.",
+    "long_instructions": "This time, use lines of 8 hexagons with 25 pixel sides.\n\n-   To make each hexagon, repeat the side 6 times, turning 60 degrees.\n-   Jump 25 pixels between each hexagon.\n-   To draw a diamond, you will need to alternate between turning 60 degrees and 120 degrees.",
+    "authored_hints": {
       "courseD_artist_functions10_b": "This drawing is a lot like the last one, but the `draw line` function is now drawing a different shape.",
       "courseD_artist_functions10_a": "To avoid using multiple `move forward` blocks, create a `draw hexagon` function and call that multiple times.",
       "courseD_artist_functions10_c": "Do you see where this drawing could use a function called `line of hexagons`?\n\n[][0]"
     },
-    "https://studio.code.org/s/coursee-2017/stage/16/extras?level_name=courseE_artist_functions_challenge1": {
+    "function_names": {
+      "do something": "do something",
+      "draw hexagon": "draw hexagon",
+      "draw line of hexagons": "draw line of hexagons"
+    }
+  },
+  "https://studio.code.org/s/coursee-2017/stage/16/puzzle/13": {
+    "function_names": {
+      "draw line of polygons": "draw line of polygons",
+      "draw polygon": "draw polygon",
+      "do something": "do something"
+    },
+    "contained levels": [
+      {
+        "dsls": {
+          "questions": [
+            {
+              "text": "What will happen when you press the \"Run\" button?"
+            }
+          ],
+          "answers": [
+            {
+              "text": "The artist will solve the puzzle correctly.",
+              "correct": false,
+              "feedback": "Incorrect. The loop uses \"draw polygon\" instead of \"draw line of polygons\"."
+            },
+            {
+              "text": "The artist will draw four squares in a window pattern.",
+              "correct": true,
+              "feedback": "Correct!"
+            },
+            {
+              "text": "The artist will draw only one line of squares.",
+              "correct": false,
+              "feedback": "Incorrect. The program does not call \"draw line of polygons\"."
+            },
+            {
+              "text": "The artist will draw four squares on top of one another.",
+              "correct": false,
+              "feedback": "Incorrect. The loop turns 90 degrees between calls to \"draw polygon\"."
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "https://studio.code.org/s/coursee-2017/stage/16/extras?level_name=courseE_artist_functions_challenge1": {
+    "short_instructions": "Once you define a function, you can call it over and over again - whenever and wherever you want! Try this code to see how it works, then change it to make your own impressive design!",
+    "long_instructions": "Once you define a function, you can call it over and over again - whenever and wherever you want! Try this code to see how it works, then change it to make your own impressive design!",
+    "authored_hints": {
       "courseE_artist_functions_challenge1_a": "If you call the function one more time, you can create the same design in the final corner.",
       "courseE_artist_functions_challenge1_b": "You can also `jump to` other positions or change the whole design however you want!"
     },
-    "https://studio.code.org/s/coursee-2017/stage/16/extras?level_name=courseE_artist_functions_challenge2": {
+    "callouts": {
+      "courseE_artist_functions_challenge1_callout1": "Keep this program going by adding more code to the bottom.",
+      "courseE_artist_functions_challenge1_callout2": "If you don't like this design, change it to anything you want!"
+    },
+    "function_names": {
+      "my design": "my design",
+      "do something": "do something"
+    }
+  },
+  "https://studio.code.org/s/coursee-2017/stage/16/extras?level_name=courseE_artist_functions_challenge2": {
+    "short_instructions": "Try this code to see how it works, then make the program your own!",
+    "long_instructions": "Not only can you jump to some pre-set locations, like the corners of the canvas, you can also use a `jump to` command to get to absolutely any spot you like! Try this code to see how it works, then make the program your own!\n\n<xml>\n  <block type=\"jump_to_xy\">\n    <title name=\"XPOS\">???</title>\n    <title name=\"YPOS\">???</title>\n    </block></xml>",
+    "authored_hints": {
       "courseE_artist_functions_challenge1_a": "<xml>\n  <block type=\"jump_to_xy\">\n    <title name=\"XPOS\">350</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n  </xml>\n\nThis `jump to` block lets you move the zombie artist to any pixel on the grid, whenever you want. It works by moving him a number of pixels over to the right and a number of pixels down. This is always counted from the top left corner, which it means it doesn't matter where the zombie artist is _before_ the command is run!\n\n[][0]"
     },
-    "https://studio.code.org/s/coursee-2017/stage/17/puzzle/1": {
+    "callouts": {
+      "courseE_artist_functions_challenge2_callout1": "Keep this program going by adding more code to the bottom.",
+      "courseE_artist_functions_challenge2_callout2": "If you don't like this design, change it to anything you want!"
+    },
+    "function_names": {
+      "my design": "my design",
+      "do something": "do something"
+    }
+  },
+  "https://studio.code.org/s/coursee-2017/stage/17/puzzle/1": {
+    "short_instructions": "Collect all the nectar from each flower.",
+    "authored_hints": {
       "courseE_bee_functions1_a": "Remember that left and right turns are from the point of view of the bee.",
       "courseE_bee_functions1_b": "Use a `repeat` loop when collecting nectar to make your code shorter.",
       "courseE_bee_functions1_c": "Remember that left and right turns are from the perspective of the bee."
     },
-    "https://studio.code.org/s/coursee-2017/stage/17/puzzle/3": {
+    "function_names": {
+      "do something": "do something"
+    }
+  },
+  "https://studio.code.org/s/coursee-2017/stage/17/puzzle/3": {
+    "short_instructions": "Use the `get 2 nectar` function to collect the nectar from each flower.",
+    "long_instructions": "Functions are blocks of code that perform a task.  \n\nUse the `get 2 nectar` function to collect the nectar from each flower.",
+    "authored_hints": {
       "courseE_bee_functions2_a": "The function has been written for you, but you will need to call it at each flower.",
       "courseE_bee_functions2_b": "This <xml><block type=\"procedures_callnoreturn\"><mutation name=\"get 2 nectar\"/></block></xml> block calls the function given to you.",
       "courseE_bee_functions2_c": "You will want to move forward and get 2 nectar twice to solve this puzzle."
     },
-    "https://studio.code.org/s/coursee-2017/stage/17/puzzle/4": {
+    "function_names": {
+      "get 2 nectar": "get 2 nectar"
+    }
+  },
+  "https://studio.code.org/s/coursee-2017/stage/17/puzzle/4": {
+    "short_instructions": "Build the `get 5` function to use in this puzzle.",
+    "long_instructions": "Build the `get 5` function to use in this puzzle.",
+    "authored_hints": {
       "courseE_bee_functions3_a": "Your function for this puzzle only needs to collect nectar, it shouldn't have any `move forward` or `turn` blocks in it. ",
       "courseE_bee_functions3_b": "Call your `get 5` function under the `when run` block.",
       "courseE_bee_functions3_c": "Your main program will control all of the movement, the function is just for what happens when the bee reaches a flower.",
       "courseE_bee_functions3_d": "Try using this path through."
     },
-    "https://studio.code.org/s/coursee-2017/stage/17/puzzle/5": {
+    "function_names": {
+      "get 5": "get 5"
+    }
+  },
+  "https://studio.code.org/s/coursee-2017/stage/17/puzzle/5": {
+    "short_instructions": "Use the `move and get nectar` function to collect all of the nectar.",
+    "long_instructions": "The `move and get nectar` function turns the bee, collects nectar, and then returns the bee to where it started.  \n\nUse the `move and get nectar` function to collect all of the nectar.",
+    "authored_hints": {
       "courseE_bee_functions4_a": "Your function will already travel down the side paths and return the bee back to the main road.  You don't need to add that part to your program.",
       "courseE_bee_functions4_b": "Use the green `move and get nectar` block to call this function.",
       "courseE_bee_functions4_c": "You don't need to change the function, just use it in your program."
     },
-    "https://studio.code.org/s/coursee-2017/stage/17/puzzle/6": {
+    "function_names": {
+      "move and get nectar": "move and get nectar"
+    }
+  },
+  "https://studio.code.org/s/coursee-2017/stage/17/puzzle/6": {
+    "short_instructions": "Now write the function to collect nectar from the flowers.",
+    "authored_hints": {
       "courseE_bee_functions5_a": "Edit the function so that it solves the puzzle without having to change the main program.",
       "courseE_bee_functions5_c": "The `move forward` block can be changed into a `move backward` block. Use this instead of turning all the way around at the end of the paths!",
       "courseE_bee_functions5_b": "Your function should make the bee: \n\n-   turn\n-   move forward\n-   collect all of the nectar\n-   move backward\n-   turn back to the direction that the bee started from"
     },
-    "https://studio.code.org/s/coursee-2017/stage/17/puzzle/8": {
+    "function_names": {
+      "move and get 4": "move and get 4"
+    }
+  },
+  "https://studio.code.org/s/coursee-2017/stage/17/puzzle/7": {
+    "short_instructions": "We don't have a video for creating functions, yet. This is a placeholder."
+  },
+  "https://studio.code.org/s/coursee-2017/stage/17/puzzle/8": {
+    "short_instructions": "Create a function and call it to collect nectar at each flower and make honey at each honeycomb.",
+    "authored_hints": {
       "courseE_bee_functions6_a": "If the puzzle seems challenging, try building your function a little at a time.  \n\nAdd some blocks, then try it out. Add more, then try again.  Soon, you'll get there!\n\n[][0]",
       "courseE_bee_functions6_b": "It might help in this case to move inside of the function, but not all of your `move` blocks need to be there."
     },
-    "https://studio.code.org/s/coursee-2017/stage/17/puzzle/9": {
+    "function_names": {
+      "get 7 nectar make 7 honey": "get 7 nectar make 7 honey"
+    }
+  },
+  "https://studio.code.org/s/coursee-2017/stage/17/puzzle/9": {
+    "short_instructions": "Create your own function that goes down a path, gets nectar, makes honey, and then returns the bee to the top of the path. Collect all the nectar and make all the honey!",
+    "authored_hints": {
       "courseE_bee_functions7_a": "If the puzzle seems challenging, try building your function a little at a time.  \n\nAdd some blocks, then try it out. Add more, then try again.  Soon, you'll get there!",
       "courseE_bee_functions7_b": "Remember to build your code inside of the green function block.\n\n[][0]",
       "courseE_bee_functions7_c": "This function should turn the bee to head him down the path, collect the nectar, make the honey, then turn the bee around and bring him back."
     },
-    "https://studio.code.org/s/coursee-2017/stage/17/puzzle/10": {
+    "function_names": {
+      "get 7 make 7": "get 7 make 7"
+    }
+  },
+  "https://studio.code.org/s/coursee-2017/stage/17/puzzle/10": {
+    "short_instructions": "Create a function that collects all of the nectar from each flower.",
+    "long_instructions": "**Challenge:** These flowers can have a different amount of nectar each time you run the puzzle.   \n\nCreate a function that collects all of the nectar from each flower.",
+    "authored_hints": {
       "courseE_bee_functions8_a": "Your function will only need to collect nectar. Try using a while loop instead of a repeat loop.",
       "courseE_bee_functions8_b": "Use `while nectar > 0` to make sure you get all of the nectar.",
       "courseE_bee_functions8_c": "Your main program will need a stair step movement pattern. Remember, the main program is the code under the `when run` block."
     },
-    "https://studio.code.org/s/coursee-2017/stage/17/puzzle/11": {
+    "function_names": {
+      "collect all nectar": "collect all nectar"
+    }
+  },
+  "https://studio.code.org/s/coursee-2017/stage/17/puzzle/11": {
+    "short_instructions": "Create a function to collect all of the nectar from each flower.",
+    "authored_hints": {
       "courseE_bee_functions9_a": "You can use the exact same function for this puzzle as you did in the last puzzle.  All you need to do is create a function that collects all of the nectar when you get to each flower.",
       "courseE_bee_functions9_b": "Even though you know how much nectar some of the flowers have, a `while` loop can make one function work for all of them."
     },
-    "https://studio.code.org/s/coursee-2017/stage/17/puzzle/12": {
+    "function_names": {
+      "get all nectar": "get all nectar"
+    }
+  },
+  "https://studio.code.org/s/coursee-2017/stage/17/puzzle/12": {
+    "short_instructions": "Solve this puzzle by creating a function that helps the bee go get all of the honey before returning back to the main path.",
+    "long_instructions": "_\"Show me the HONEY!\"_\n\nSolve this puzzle by creating a function that causes the bee to: \n\n-   turn toward the branch in the path\n-   move forward\n-   make all of the honey\n-   return to the main path \n-   turn back to the original direction",
+    "authored_hints": {
       "courseE_bee_functions10_a": "You will need a `while` loop to collect all of the honey, since it varies between honeycombs.",
       "courseE_bee_functions10_b": "Include the turns and movement in your function, so you can call it when the bee is on the main path.",
       "courseE_bee_functions10_c": "Remember to call your function in the main program!"
     },
-    "https://studio.code.org/s/coursee-2017/stage/17/extras?level_name=courseE_bee_functions_challenge1": {
+    "function_names": {
+      "move and make honey": "move and make honey"
+    }
+  },
+  "https://studio.code.org/s/coursee-2017/stage/17/puzzle/13": {
+    "function_names": {
+      "move and make honey": "move and make honey"
+    },
+    "contained levels": [
+      {
+        "dsls": {
+          "questions": [
+            {
+              "text": "Here is the exact same program from the last puzzle, but the amount of honey to collect in this puzzle has changed.  What will happen when you click \"Run\"?"
+            }
+          ],
+          "answers": [
+            {
+              "text": "The same program will work to solve this puzzle, too.",
+              "correct": true,
+              "feedback": "Correct!  It doesn't matter that there is a different amount of honey. The function is programmed to handle that."
+            },
+            {
+              "text": "The bee won't make enough honey.",
+              "correct": false,
+              "feedback": "Incorrect. The function is programmed to handle any amount of honey over 0."
+            },
+            {
+              "text": "The bee will try to make too much honey.",
+              "correct": false,
+              "feedback": "Incorrect. The function is programmed to handle any amount of honey over 0."
+            },
+            {
+              "text": "I don't know.",
+              "correct": false,
+              "feedback": "The program will work to solve this puzzle, too. It is programmed to handle any amount of honey over 0."
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "https://studio.code.org/s/coursee-2017/stage/17/extras?level_name=courseE_bee_functions_challenge1": {
+    "short_instructions": "You are on your own for this challenge. This could \"bee\" harder than it looks!",
+    "long_instructions": "You are on your own for this challenge.  This could \"bee\" harder than it looks!",
+    "authored_hints": {
       "courseE_bee_functions_challenge1_a": "If the puzzle seems challenging, try building your function a little at a time.  \n\nAdd some blocks, then try it out. Add more, then try again.  Soon, you'll get there!",
       "courseE_bee_functions_challenge1_b": "Remember to build your code inside of the green function block."
     },
-    "https://studio.code.org/s/coursee-2017/stage/17/extras?level_name=courseE_bee_functions_challenge2": {
+    "function_names": {
+      "do something": "do something",
+      "get 3 nectar or honey": "get 3 nectar or honey"
+    }
+  },
+  "https://studio.code.org/s/coursee-2017/stage/17/extras?level_name=courseE_bee_functions_challenge2": {
+    "short_instructions": "You are on your own for this challenge. Sweet!",
+    "authored_hints": {
       "courseE_bee_functions_challenge1_a": "If the puzzle seems challenging, try building your function a little at a time.  \n\nAdd some blocks, then try it out. Add more, then try again.  Soon, you'll get there!",
       "courseE_bee_functions_challenge1_b": "Remember to build your code inside of the green function block."
     },
-    "https://studio.code.org/s/coursee-2017/stage/18/puzzle/1": {
+    "function_names": {
+      "do something": "do something",
+      "move and collect": "move and collect"
+    }
+  },
+  "https://studio.code.org/s/coursee-2017/stage/18/puzzle/1": {
+    "short_instructions": "Help the harvester get to the pumpkin and pick it.",
+    "long_instructions": "_\"Have we met before? I'm the harvester!\"_\n\nHelp the harvester get to the pumpkin and pick it.",
+    "authored_hints": {
       "courseE_farmer_functions1_a": "The toolbox is organized a little differently this time! Click on the different categories to see which blocks you have.",
       "courseE_farmer_functions1_b": "You only need to pick one pumpkin, but could you use a loop to get to it?"
     },
-    "https://studio.code.org/s/coursee-2017/stage/18/puzzle/2": {
+    "callouts": {
+      "courseE_farmer_functions1_2": "The toolbox is organized a little differently this time! Click on the different categories to see which blocks you have."
+    }
+  },
+  "https://studio.code.org/s/coursee-2017/stage/18/puzzle/2": {
+    "short_instructions": "Now help the harvester pick the corn, lettuce, **and** pumpkin.",
+    "long_instructions": "_\"Oooh, veggies are cropping up everywhere!\"_\n\nNow help the harvester pick all of the corn on the way to the pumpkin at the end.\n\n* * *\n\n##### Note: Every square on the path that leads to the pumpkin will either have _one_ corn or nothing.  You will need to use an `if` statement to check whether there is corn before you try to pick it!",
+    "authored_hints": {
       "courseE_farmer_functions1a_a": "Think through the `if/else` statements step by step. What should you do if you are standing at a corn plant?",
       "courseE_farmer_functions1a_b": "Use a `repeat until` block to get to the pumpkin!"
     },
-    "https://studio.code.org/s/coursee-2017/stage/18/puzzle/3": {
+    "callouts": {
+      "courseE_farmer_functions1a_1": "This veggie is unknown.  It changes each time you run the program."
+    }
+  },
+  "https://studio.code.org/s/coursee-2017/stage/18/puzzle/3": {
+    "short_instructions": "Help the harvester pick the corn and pumpkins.",
+    "long_instructions": "Help the harvester pick the corn and pumpkins.\n\n* * *\n\n##### Each sprout will either grow _one_ corn or nothing.",
+    "authored_hints": {
       "courseE_farmer_functions2b_a": "You can use a `repeat until pumpkin` to get to the ends of the two paths.",
       "courseE_farmer_functions2b_b": "There is no corn on the connecting path, so you can just move along it and turn.",
       "courseE_farmer_functions2b_c": "You will need two separate `repeat until` blocks to get all of the crops."
     },
-    "https://studio.code.org/s/coursee-2017/stage/18/puzzle/4": {
+    "callouts": {
+      "courseE_farmer_functions1a_1": "This veggie is unknown.  It changes each time you run the program."
+    }
+  },
+  "https://studio.code.org/s/coursee-2017/stage/18/puzzle/4": {
+    "short_instructions": "Help the farmer pick the corn and pumpkins using the `corn and pumpkin` function.",
+    "long_instructions": "_\"I feel so functional!\"_\n\nDid you notice that there was repeated code in the last puzzle?  It doesn't work to put it all inside of a loop, but we **can** use functions.  \n\nFor this puzzle, we have moved the repeated code into a function called `corn and pumpkin`. Now, all you need to do is put the small `corn and pumpkin` **function call block** into the code where you need it.\n\n* * *\n\n##### Each sprout will either grow _one_ corn or nothing.",
+    "authored_hints": {
       "courseE_farmer_functions2ba_a": "Use the green `corn and pumpkin` block to call this function.",
       "courseE_farmer_functions2ba_b": "Drag all of the blocks in the workspace together under `when run` to see how this function works."
     },
-    "https://studio.code.org/s/coursee-2017/stage/18/puzzle/5": {
+    "function_names": {
+      "corn and pumpkin": "corn and pumpkin"
+    }
+  },
+  "https://studio.code.org/s/coursee-2017/stage/18/puzzle/5": {
+    "short_instructions": "Now, fill-in the function yourself by pulling the blocks from the code and dropping them into the **function definition**.",
+    "long_instructions": "Now, fill-in the function yourself by pulling the blocks from the code and dropping them into the **function definition**.  \n\nDon't forget to add the little **function call** blocks to use the function in your program when you're done.",
+    "authored_hints": {
       "courseE_farmer_functions3c_a": "What sequence is repeated often in this program? Can you drag these blocks into the function?",
       "courseE_farmer_functions3c_b": "Don't forget to call your function in the main program wherever you removed blocks."
     },
-    "https://studio.code.org/s/coursee-2017/stage/18/puzzle/6": {
+    "function_names": {
+      "corn and pumpkin": "corn and pumpkin"
+    }
+  },
+  "https://studio.code.org/s/coursee-2017/stage/18/puzzle/6": {
+    "short_instructions": "Use your new function to solve this puzzle.",
+    "long_instructions": "Use your new function to solve this puzzle.",
+    "authored_hints": {
       "courseE_farmer_functions4b_a": "Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you haven't solved the puzzle yet.",
       "courseE_farmer_functions4b_b": "Remember to turn after each path.",
       "courseE_farmer_functions4b_c": "The green `corn and pumpkin` blocks are in the Functions tab of the toolbox."
     },
-    "https://studio.code.org/s/coursee-2017/stage/18/puzzle/7": {
+    "function_names": {
+      "corn and pumpkin": "corn and pumpkin"
+    }
+  },
+  "https://studio.code.org/s/coursee-2017/stage/18/puzzle/7": {
+    "short_instructions": "Your function will come in handy here.",
+    "long_instructions": "Your function will come in handy here.",
+    "authored_hints": {
       "courseE_farmer_functions5c_a": "Are there any other patterns you can loop in this puzzle?",
       "courseE_farmer_functions5c_b": "Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you haven't solved the puzzle yet."
     },
-    "https://studio.code.org/s/coursee-2017/stage/18/puzzle/8": {
+    "function_names": {
+      "corn and pumpkin": "corn and pumpkin"
+    }
+  },
+  "https://studio.code.org/s/coursee-2017/stage/18/puzzle/8": {
+    "short_instructions": "What do you need to add this program to check whether a sprout is corn or lettuce?",
+    "long_instructions": "_\"Lettuce pick all of the produce!\"_\n\nNow the sprouts can be either corn **or** lettuce.  What do you need to add to this program to check each sprout before you pick?\n\n* * *\n\n##### Note: Each sprout will turn into either **one** corn or **one** lettuce.",
+    "authored_hints": {
       "courseE_farmer_functions6c_a": "Edit your function to check for the lettuce as well.",
       "courseE_farmer_functions6c_b": "Would an `if/else` block help to check if there is lettuce in a space?",
       "courseE_farmer_functions6c_c": "Don't forget to keep checking for corn!"
     },
-    "https://studio.code.org/s/coursee-2017/stage/18/puzzle/10": {
+    "function_names": {
+      "corn and pumpkin": "corn and pumpkin"
+    }
+  },
+  "https://studio.code.org/s/coursee-2017/stage/18/puzzle/9": {
+    "short_instructions": "We don't have a video for creating functions, yet. This is a placeholder."
+  },
+  "https://studio.code.org/s/coursee-2017/stage/18/puzzle/10": {
+    "short_instructions": "Help the harvester find her way down this confusing path and to the pumpkin by turning left at the corn and right at the lettuce.",
+    "long_instructions": "_\"This harvest is a-MAZE-ing!\"_\n\nHelp the harvester find her way down this confusing path and to the pumpkin by turning **left** at the corn and **right** at the lettuce.  \n\n_(Don't forget to collect all of the produce along the way!)_",
+    "authored_hints": {
       "courseE_farmer_functions7b_a": "You don't need a function here, but you can make one if it is helpful to you!",
       "courseE_farmer_functions7b_b": "Use an `if/else` statement to check for crops, then turn based on which crop you find.",
       "courseE_farmer_functions7b_c": "A `repeat until pumpkin` loop can help you get all the way through the maze."
-    },
-    "https://studio.code.org/s/coursee-2017/stage/18/puzzle/11": {
+    }
+  },
+  "https://studio.code.org/s/coursee-2017/stage/18/puzzle/11": {
+    "short_instructions": "**Challenge:** Collect all of the pumpkins using the method from the last puzzle. ",
+    "long_instructions": "**Challenge:** Not all corners are marked in this maze, that means that you will need to use your navigation code more than once to get where you need to go.  \n\nCan you figure out what you need to do?",
+    "authored_hints": {
       "courseE_farmer_functions8b_a": "Try running the code given to see what it does. What do you need after this?",
       "courseE_farmer_functions8b_b": "Drag all of the starter blocks into a function so that you can use them more than once.",
       "courseE_farmer_functions8b_c": "How many times do you need to call the function?"
     },
-    "https://studio.code.org/s/coursee-2017/stage/18/puzzle/12": {
+    "function_names": {
+      "navigate": "navigate"
+    }
+  },
+  "https://studio.code.org/s/coursee-2017/stage/18/puzzle/12": {
+    "short_instructions": "Can you figure out the pattern that you need to solve this puzzle?",
+    "long_instructions": "Take a good look at this puzzle.  Can you figure out the pattern?",
+    "authored_hints": {
       "courseE_farmer_functions9b_a": "Can you use nested `if` and `if/else` statements to move along the path?",
       "courseE_farmer_functions9b_b": "Use `repeat until pumpkin` to move through all of the paths.",
       "courseE_farmer_functions9b_c": "You will want to move through the paths as if they are squares getting larger after each loop."
     },
-    "https://studio.code.org/s/coursee-2017/stage/18/puzzle/13": {
+    "function_names": {
+      "navigate": "navigate"
+    }
+  },
+  "https://studio.code.org/s/coursee-2017/stage/18/puzzle/13": {
+    "short_instructions": "Use your new function twice to solve this puzzle.",
+    "long_instructions": "Use your new function twice to solve this puzzle.",
+    "authored_hints": {
       "courseE_farmer_functions10b_a": "You will have to re-create your function first.",
       "courseE_farmer_functions10b_b": "Which way do you need to turn after the first pumpkin?",
       "courseE_farmer_functions10b_c": "Look back at the last puzzle if you need help making the function."
     },
-    "https://studio.code.org/s/coursee-2017/stage/19/puzzle/1": {
-      "courseE_bee_concept1_b": "Are there any patterns that _repeat_ here?",
-      "courseE_bee_concept1_a": "If you don't understand how to use nested loops here, try writing out the instructions step by step on a piece of paper.  Circle the patterns that you see."
-    },
-    "https://studio.code.org/s/coursee-2017/stage/19/puzzle/2": {
-      "courseE_farmer_concept1_a": "A `while there is a hole` block will help you fill any hole until it's flat.",
-      "courseE_farmer_concept1_b": "You can use a stair step pattern to get to the holes."
-    },
-    "https://studio.code.org/s/coursee-2017/stage/19/puzzle/3": {
-      "courseE_bee_concept2_a": "Would a `while` loop help here?",
-      "courseE_bee_concept2_d": "You can even check empty spaces to see if honey is > 0.",
-      "courseE_bee_concept2_b": "You can use `while` loops to move to the end of each path, and to collect all of the honey from each space.",
-      "courseE_bee_concept2_c": "Which way should the bee turn after each path?"
-    },
-    "https://studio.code.org/s/coursee-2017/stage/19/puzzle/4": {
-      "courseE_bee_concept3a_a": "Try using nested `repeat` loops to solve this puzzle.",
-      "courseE_bee_concept3a_b": "If you can't figure out where to put the loops, try writing your code step-by-step and looking for patterns.",
-      "courseE_bee_concept3a_c": "There are three groups of flowers, so your outer `repeat` loop should repeat three times."
-    },
-    "https://studio.code.org/s/coursee-2017/stage/19/puzzle/5": {
-      "courseE_artist_concept1_a": "The hexagons have 50 pixel sides and 60 degree turns to the right.",
-      "courseE_artist_concept1_b": "Try using a function here so you don't have to write the code for a hexagon over and over again.",
-      "courseE_artist_concept1_c": "Use the `set width` block before each function call to change the pen width."
-    },
-    "https://studio.code.org/s/coursee-2017/stage/19/puzzle/6": {
-      "courseE_bee_concept4_a": "An `if/else` statement could really help you out here.",
-      "courseE_bee_concept4_b": "The stair step pattern can help you get through all of the flowers and honeycombs.",
-      "courseE_bee_concept4_c": "If you are at a flower, how many times do you have to get nectar? Is this the same number for all flowers?"
-    },
-    "https://studio.code.org/s/coursee-2017/stage/19/puzzle/7": {
-      "courseE_farmer_concept2_a": "The paths are all the same length, but they are a different number of squares apart.  A loop isn't ideal here. Try a function.",
-      "courseE_farmer_concept2_b": "A function which turns, goes down the path, gathers pumpkins, and returns to the main horizontal path could be helpful here.",
-      "courseE_farmer_concept2_c": "Your main program can call this function with the green `do something` block."
-    },
-    "https://studio.code.org/s/coursee-2017/stage/19/puzzle/8": {
-      "courseE_bee_concept5_a": "The flowers follow a rectangular path.  You can trace that rectangle using `while path ahead` even with a different number of squares per side.",
-      "courseE_bee_concept5_c": "Here's a picture of a rectangular path the bee could take.\n\n[][0]",
-      "courseE_bee_concept5_b": "You can check every square for a flower using the `if` block, even if you already know there's not one there."
-    },
-    "https://studio.code.org/s/coursee-2017/stage/19/puzzle/9": {
-      "grade3_robotFarmer_ConditionalsIntro_8_a": "The `while path ahead` block lets you keep going, even if you don't know how many squares are in a path.",
-      "grade3_robotFarmer_ConditionalsIntro_8_b": "What should you do once you've reached the end of a path?",
-      "grade3_robotFarmer_ConditionalsIntro_8_c": "Use a `repeat` loop to run your code multiple times for each straight path."
-    },
-    "https://studio.code.org/s/coursee-2017/stage/19/puzzle/10": {
-      "courseE_artist_concept4_a": "There are several ways to solve this puzzle. Can you make a plan?",
-      "courseE_artist_concept4_b": "Try creating one square. Then make a line of squares.  What comes next?",
-      "courseE_artist_concept4_c": "After drawing a line of squares, you can either turn around and draw another line of squares going left, or you can jump back to the left side of the figure to draw another line of squares going right. Which do you prefer?"
-    },
-    "https://studio.code.org/s/coursee-2017/stage/19/extras?level_name=courseE_artist_concept_challenge1": {
-      "courseE_artist_concept_challenge1_a": "The half-hexagon has a **length of 30** and turns right by **60 degrees**.  ",
-      "courseE_artist_concept_challenge1_b": "The 2/3 triangle has a **length of 80** and turns right by **120 degrees**. ",
-      "courseE_artist_concept_challenge1_c": "This is the design you want to repeat to make the full shape:\n\n[][0]"
-    },
-    "https://studio.code.org/s/coursee-2017/stage/19/extras?level_name=courseE_artist_concept_challenge2": {
-      "courseE_artist_concept_challenge2_a": "Once you define a function, you can call it over and over again - whenever and wherever you want!",
-      "courseE_artist_concept_challenge2_b": "You can jump to different positions on the canvas using this command:\n\n<xml>  <block type=\"jump_to\">\n    <title name=\"VALUE\">???</title>\n  </block></xml>"
-    },
-    "https://studio.code.org/s/coursee-2017/stage/20/puzzle/1": {
-      "courseE_playLab_scaffold1_a": "The `set actor 1 to ??? image` block can be used to add an actor to the stage.",
-      "courseE_playLab_scaffold1_b": "Put the `set actor` block under `when run` to make your actor appear at the beginning of the program.",
-      "courseE_playLab_scaffold1_c": "Use `set ??? background` to choose a background for your scene."
-    },
-    "https://studio.code.org/s/coursee-2017/stage/20/puzzle/2": {
-      "courseE_playLab_scaffold1_a": "Pull on the dropdown menu of the `when ____ arrow` event to change the direction the block controls.",
-      "courseE_playLab_scaffold1_b": "You should have four `when arrow` event blocks, with a direction to move underneath each.",
-      "courseE_playLab_scaffold1_c": "When you are done, you should be able to move your hero with the arrow keys!"
-    },
-    "https://studio.code.org/s/coursee-2017/stage/20/puzzle/4": {
-      "courseE_playLab_scaffold4_a": "Use `score point` to add a point, and `remove point` to subtract one."
-    },
-    "https://studio.code.org/s/coursee-2017/stage/20/puzzle/5": {
-      "courseE_playLab_scaffold5_a": "To finish this level, you need to win or lose. Use a `end game as win` or `end game as loss` block to finish."
-    },
-    "https://studio.code.org/s/coursee-2017/stage/20/extras?level_name=courseE_playLab_challenge1": {
-      "courseE_playLab_challenge1_a": "Here are some things you could do when the player wins the game:\n\n-   Make the dinosaur vanish.\n-   Stop the squirrels.\n-   Make the squirrels and knight happy.\n-   Set a new background.\n-   Make the knight thank the player for helping.\n-   Make all of the actors vanish and show a \"You Win!\" message.",
-      "courseE_playLab_challenge1_b": "Here are some things you could do when the player loses the game:\n\n-   Make the knight vanish.\n-   Make the squirrels sad.\n-   Make the dinosaur say something.\n-   Set a new background.\n-   Make all of the actors vanish and show a \"Game Over\" message."
+    "function_names": {
+      "navigate": "navigate"
     }
   },
-  "callouts": {
-    "https://studio.code.org/s/coursee-2017/stage/2/puzzle/2": {
-      "grade2_CaringForNewPet_0_1": "After connecting all the blocks, press \"Run\" to start your program."
-    },
-    "https://studio.code.org/s/coursee-2017/stage/2/puzzle/3": {
-      "courseC_maze_programming2_1": "This is the toolbox. It’s where you’ll find extra blocks to complete your puzzles."
-    },
-    "https://studio.code.org/s/coursee-2017/stage/2/puzzle/4": {
-      "courseC_maze_programming3_2": "You can drag extra blocks to the toolbox to throw them away.",
-      "stone_block_2": "Grey blocks are made of stone and cannot be thrown away."
-    },
-    "https://studio.code.org/s/coursee-2017/stage/2/puzzle/5": {
-      "courseC_maze_programming4_1": "This is your block limit.  It tells you how many of these blocks you have left to use."
-    },
-    "https://studio.code.org/s/coursee-2017/stage/2/puzzle/6": {
-      "": "These blocks don't have numbers on them. You can use as many as you want!"
-    },
-    "https://studio.code.org/s/coursee-2017/stage/2/puzzle/7": {
-      "": "These blocks don't have numbers on them. You can use as many as you want!"
-    },
-    "https://studio.code.org/s/coursee-2017/stage/4/puzzle/6": {
-      "courseC_maze_debugging5_1": "Grey blocks cannot be deleted!"
-    },
-    "https://studio.code.org/s/coursee-2017/stage/11/puzzle/2": {
-      "grade2_CaringForNewPet_0_1": "After connecting all the blocks, press \"Run\" to start your program."
-    },
-    "https://studio.code.org/s/coursee-2017/stage/11/puzzle/3": {
-      "courseC_maze_programming2_1": "This is the toolbox. It’s where you’ll find extra blocks to complete your puzzles."
-    },
-    "https://studio.code.org/s/coursee-2017/stage/11/puzzle/4": {
-      "courseC_maze_programming3_2": "You can drag extra blocks to the toolbox to throw them away."
-    },
-    "https://studio.code.org/s/coursee-2017/stage/11/puzzle/5": {
-      "courseC_maze_programming4_1": "This is your block limit.  It tells you how many of these blocks you have left to use."
-    },
-    "https://studio.code.org/s/coursee-2017/stage/11/puzzle/6": {
-      "": "These blocks don't have numbers on them. You can use as many as you want!"
-    },
-    "https://studio.code.org/s/coursee-2017/stage/11/puzzle/9": {
-      "courseD_maze_ramp6_1": "Whatever code you put in here will repeat as many times as you tell it to, then continue to run the rest of the program."
-    },
-    "https://studio.code.org/s/coursee-2017/stage/11/puzzle/10": {
-      "courseD_maze_ramp7_1": "This is your first challenge puzzle! These are meant to be hard and may take several tries."
-    },
-    "https://studio.code.org/s/coursee-2017/stage/11/puzzle/11": {
-      "courseD_maze_ramp7_1": "This is your first challenge puzzle! These are meant to be hard and may take several tries."
-    },
-    "https://studio.code.org/s/coursee-2017/stage/11/puzzle/13": {
-      "courseE_artist_ramp8_1": "You can change this number.",
-      "courseE_artist_ramp8_2": "Click here to type in the number of times to repeat your code."
-    },
-    "https://studio.code.org/s/coursee-2017/stage/16/puzzle/1": {
-      "courseD_artist_functions1_1": "Let's start by using this block to help create the first square."
-    },
-    "https://studio.code.org/s/coursee-2017/stage/16/puzzle/4": {
-      "courseD_artist_functions2_1": "When this green block runs, all of the code in the function will run. What should the artist do after drawing the first square?"
-    },
-    "https://studio.code.org/s/coursee-2017/stage/16/puzzle/10": {
-      "courseD_artist_functions8_1": "Your blocks to create functions have been moved under this label in the toolbox."
-    },
-    "https://studio.code.org/s/coursee-2017/stage/16/extras?level_name=courseE_artist_functions_challenge1": {
-      "courseE_artist_functions_challenge1_callout1": "Keep this program going by adding more code to the bottom.",
-      "courseE_artist_functions_challenge1_callout2": "If you don't like this design, change it to anything you want!"
-    },
-    "https://studio.code.org/s/coursee-2017/stage/16/extras?level_name=courseE_artist_functions_challenge2": {
-      "courseE_artist_functions_challenge2_callout1": "Keep this program going by adding more code to the bottom.",
-      "courseE_artist_functions_challenge2_callout2": "If you don't like this design, change it to anything you want!"
-    },
-    "https://studio.code.org/s/coursee-2017/stage/18/puzzle/1": {
-      "courseE_farmer_functions1_2": "The toolbox is organized a little differently this time! Click on the different categories to see which blocks you have."
-    },
-    "https://studio.code.org/s/coursee-2017/stage/18/puzzle/2": {
-      "courseE_farmer_functions1a_1": "This veggie is unknown.  It changes each time you run the program."
-    },
-    "https://studio.code.org/s/coursee-2017/stage/18/puzzle/3": {
-      "courseE_farmer_functions1a_1": "This veggie is unknown.  It changes each time you run the program."
-    },
-    "https://studio.code.org/s/coursee-2017/stage/20/puzzle/3": {
-      "courseE_playLab_scaffold3_1": "Get the actor to this flag to move on to the next level."
-    },
-    "https://studio.code.org/s/coursee-2017/stage/20/extras?level_name=courseE_playLab_challenge1": {
-      "courseC_PlayLab_events_challenge1_1": "This block lets you move actors to different parts of the game space."
-    },
-    "https://studio.code.org/s/coursee-2017/stage/21/puzzle/2": {
-      "4-5_Artist_Patterns_Free_Play_1": "All of your favorite blocks are now organized into categories.  Click on these words to see where everything went!"
-    },
-    "https://studio.code.org/s/coursee-2017/stage/21/puzzle/3": {
-      "4-5_Artist_Patterns_Free_Play_2": "Try using the new `comment` block under this label to leave yourself notes inside your program!"
-    }
-  },
-  "block_categories": {
-    "https://studio.code.org/s/coursee-2017/stage/9/puzzle/1": {
-      "Actions": "Actions",
-      "Brushes": "Brushes",
-      "Loops": "Loops",
-      "Math": "Math"
-    },
-    "https://studio.code.org/s/coursee-2017/stage/9/puzzle/2": {
-      "Actions": "Actions",
-      "Brushes": "Brushes",
-      "Loops": "Loops",
-      "Math": "Math"
-    },
-    "https://studio.code.org/s/coursee-2017/stage/9/puzzle/3": {
-      "Actions": "Actions",
-      "Brushes": "Brushes",
-      "Loops": "Loops",
-      "Math": "Math"
-    },
-    "https://studio.code.org/s/coursee-2017/stage/9/puzzle/4": {
-      "Actions": "Actions",
-      "Brushes": "Brushes",
-      "Loops": "Loops",
-      "Math": "Math"
-    },
-    "https://studio.code.org/s/coursee-2017/stage/9/puzzle/5": {
-      "Actions": "Actions",
-      "Brushes": "Brushes",
-      "Loops": "Loops",
-      "Math": "Math"
-    },
-    "https://studio.code.org/s/coursee-2017/stage/9/puzzle/6": {
-      "Actions": "Actions",
-      "Brushes": "Brushes",
-      "Loops": "Loops",
-      "Math": "Math"
-    },
-    "https://studio.code.org/s/coursee-2017/stage/9/puzzle/7": {
-      "Actions": "Actions",
-      "Brushes": "Brushes",
-      "Loops": "Loops",
-      "Math": "Math"
-    },
-    "https://studio.code.org/s/coursee-2017/stage/9/puzzle/8": {
-      "Actions": "Actions",
-      "Brushes": "Brushes",
-      "Loops": "Loops",
-      "Math": "Math"
-    },
-    "https://studio.code.org/s/coursee-2017/stage/9/puzzle/9": {
-      "Actions": "Actions",
-      "Brushes": "Brushes",
-      "Loops": "Loops",
-      "Math": "Math"
-    },
-    "https://studio.code.org/s/coursee-2017/stage/16/puzzle/10": {
-      "Actions": "Actions",
-      "Brushes": "Brushes",
-      "Loops": "Loops",
-      "Functions": "Functions"
-    },
-    "https://studio.code.org/s/coursee-2017/stage/16/puzzle/11": {
-      "Actions": "Actions",
-      "Brushes": "Brushes",
-      "Loops": "Loops",
-      "Functions": "Functions"
-    },
-    "https://studio.code.org/s/coursee-2017/stage/16/puzzle/12": {
-      "Actions": "Actions",
-      "Brushes": "Brushes",
-      "Loops": "Loops",
-      "Functions": "Functions"
-    },
-    "https://studio.code.org/s/coursee-2017/stage/16/puzzle/13": {
-      "Actions": "Actions",
-      "Brushes": "Brushes",
-      "Loops": "Loops",
-      "Functions": "Functions"
-    },
-    "https://studio.code.org/s/coursee-2017/stage/17/puzzle/8": {
-      "Actions": "Actions",
-      "Loops": "Loops",
-      "Functions": "Functions"
-    },
-    "https://studio.code.org/s/coursee-2017/stage/17/puzzle/9": {
-      "Actions": "Actions",
-      "Loops": "Loops",
-      "Functions": "Functions"
-    },
-    "https://studio.code.org/s/coursee-2017/stage/17/extras?level_name=courseE_bee_functions_challenge1": {
-      "Actions": "Actions",
-      "Loops": "Loops",
-      "Conditionals": "Conditionals",
-      "Functions": "Functions"
-    },
-    "https://studio.code.org/s/coursee-2017/stage/17/extras?level_name=courseE_bee_functions_challenge2": {
-      "Actions": "Actions",
-      "Loops": "Loops",
-      "Functions": "Functions"
-    },
-    "https://studio.code.org/s/coursee-2017/stage/18/puzzle/1": {
-      "Actions": "Actions",
-      "Loops": "Loops",
-      "Conditionals": "Conditionals",
-      "Functions": "Functions"
-    },
-    "https://studio.code.org/s/coursee-2017/stage/18/puzzle/2": {
-      "Actions": "Actions",
-      "Loops": "Loops",
-      "Conditionals": "Conditionals",
-      "Functions": "Functions"
-    },
-    "https://studio.code.org/s/coursee-2017/stage/18/puzzle/3": {
-      "Actions": "Actions",
-      "Loops": "Loops",
-      "Conditionals": "Conditionals",
-      "Functions": "Functions"
-    },
-    "https://studio.code.org/s/coursee-2017/stage/18/puzzle/4": {
-      "Actions": "Actions",
-      "Loops": "Loops",
-      "Conditionals": "Conditionals",
-      "Functions": "Functions"
-    },
-    "https://studio.code.org/s/coursee-2017/stage/18/puzzle/5": {
-      "Actions": "Actions",
-      "Loops": "Loops",
-      "Conditionals": "Conditionals",
-      "Functions": "Functions"
-    },
-    "https://studio.code.org/s/coursee-2017/stage/18/puzzle/6": {
-      "Actions": "Actions",
-      "Loops": "Loops",
-      "Conditionals": "Conditionals",
-      "Functions": "Functions"
-    },
-    "https://studio.code.org/s/coursee-2017/stage/18/puzzle/7": {
-      "Actions": "Actions",
-      "Loops": "Loops",
-      "Conditionals": "Conditionals",
-      "Functions": "Functions"
-    },
-    "https://studio.code.org/s/coursee-2017/stage/18/puzzle/8": {
-      "Actions": "Actions",
-      "Loops": "Loops",
-      "Conditionals": "Conditionals",
-      "Functions": "Functions"
-    },
-    "https://studio.code.org/s/coursee-2017/stage/18/puzzle/10": {
-      "Actions": "Actions",
-      "Loops": "Loops",
-      "Conditionals": "Conditionals",
-      "Functions": "Functions"
-    },
-    "https://studio.code.org/s/coursee-2017/stage/18/puzzle/11": {
-      "Actions": "Actions",
-      "Loops": "Loops",
-      "Conditionals": "Conditionals",
-      "Functions": "Functions"
-    },
-    "https://studio.code.org/s/coursee-2017/stage/18/puzzle/12": {
-      "Actions": "Actions",
-      "Loops": "Loops",
-      "Conditionals": "Conditionals",
-      "Functions": "Functions"
-    },
-    "https://studio.code.org/s/coursee-2017/stage/18/puzzle/13": {
-      "Actions": "Actions",
-      "Loops": "Loops",
-      "Conditionals": "Conditionals",
-      "Functions": "Functions"
-    },
-    "https://studio.code.org/s/coursee-2017/stage/18/puzzle/14": {
-      "Actions": "Actions",
-      "Loops": "Loops",
-      "Conditionals": "Conditionals",
-      "Functions": "Functions"
-    },
-    "https://studio.code.org/s/coursee-2017/stage/19/puzzle/10": {
-      "Actions": "Actions",
-      "Loops": "Loops",
-      "Brushes": "Brushes",
-      "Functions": "Functions"
-    },
-    "https://studio.code.org/s/coursee-2017/stage/20/puzzle/5": {
-      "Actions": "Actions",
-      "Events": "Events",
-      "Loops": "Loops",
-      "Conditionals": "Conditionals",
-      "Functions": "Functions"
-    },
-    "https://studio.code.org/s/coursee-2017/stage/20/puzzle/6": {
-      "Actions": "Actions",
-      "Events": "Events",
-      "Loops": "Loops",
-      "Conditionals": "Conditionals",
-      "Functions": "Functions"
-    },
-    "https://studio.code.org/s/coursee-2017/stage/20/extras?level_name=courseE_playLab_challenge1": {
-      "Actions": "Actions",
-      "Events": "Events",
-      "Loops": "Loops",
-      "Conditionals": "Conditionals",
-      "Functions": "Functions"
-    },
-    "https://studio.code.org/s/coursee-2017/stage/21/puzzle/2": {
-      "Actions": "Actions",
-      "Brushes": "Brushes",
-      "Loops": "Loops",
-      "Math": "Math",
-      "Logic": "Logic",
-      "Functions": "Functions",
-      "Variables": "Variables",
-      "Comments": "Comments"
-    },
-    "https://studio.code.org/s/coursee-2017/stage/21/puzzle/3": {
-      "Actions": "Actions",
-      "Brushes": "Brushes",
-      "Loops": "Loops",
-      "Math": "Math",
-      "Logic": "Logic",
-      "Functions": "Functions",
-      "Variables": "Variables",
-      "Comments": "Comments"
-    },
-    "https://studio.code.org/s/coursee-2017/stage/21/puzzle/4": {
-      "Actions": "Actions",
-      "Events": "Events",
-      "Loops": "Loops",
-      "Math": "Math",
-      "Logic": "Logic",
-      "Functions": "Functions",
-      "Variables": "Variables",
-      "Games/Score": "Games/Score",
-      "Comments": "Comments"
-    },
-    "https://studio.code.org/s/coursee-2017/stage/21/puzzle/5": {
-      "Actions": "Actions",
-      "Events": "Events",
-      "Loops": "Loops",
-      "Math": "Math",
-      "Logic": "Logic",
-      "Functions": "Functions",
-      "Variables": "Variables",
-      "Games/Score": "Games/Score",
-      "Comments": "Comments"
-    },
-    "https://studio.code.org/s/coursee-2017/stage/23/puzzle/1": {
-      "Actions": "Actions",
-      "Events": "Events",
-      "Loops": "Loops",
-      "Math": "Math",
-      "Logic": "Logic",
-      "Functions": "Functions",
-      "Variables": "Variables",
-      "Games/Score": "Games/Score",
-      "Comments": "Comments"
-    }
-  },
-  "function_names": {
-    "https://studio.code.org/s/coursee-2017/stage/5/puzzle/4": {
-      "draw flame": "draw flame",
-      "draw fire": "draw fire"
-    },
-    "https://studio.code.org/s/coursee-2017/stage/5/puzzle/5": {
-      "booster": "booster"
-    },
-    "https://studio.code.org/s/coursee-2017/stage/16/puzzle/1": {
-      "draw ear stems": "draw ear stems"
-    },
-    "https://studio.code.org/s/coursee-2017/stage/16/puzzle/3": {
-      "draw a square": "draw a square",
-      "draw ear stems": "draw ear stems"
-    },
-    "https://studio.code.org/s/coursee-2017/stage/16/puzzle/4": {
-      "draw a square": "draw a square",
-      "draw ear stems": "draw ear stems"
-    },
-    "https://studio.code.org/s/coursee-2017/stage/16/puzzle/6": {
-      "draw a star": "draw a star"
-    },
-    "https://studio.code.org/s/coursee-2017/stage/16/puzzle/7": {
-      "draw a star": "draw a star"
-    },
-    "https://studio.code.org/s/coursee-2017/stage/16/puzzle/9": {
-      "draw a window": "draw a window",
-      "draw a house": "draw a house"
-    },
-    "https://studio.code.org/s/coursee-2017/stage/16/puzzle/10": {
-      "do something": "do something",
-      "draw a line of squares": "draw a line of squares",
-      "draw square": "draw square"
-    },
-    "https://studio.code.org/s/coursee-2017/stage/16/puzzle/11": {
-      "do something": "do something",
-      "draw triangle": "draw triangle",
-      "draw line of triangles": "draw line of triangles"
-    },
-    "https://studio.code.org/s/coursee-2017/stage/16/puzzle/12": {
-      "do something": "do something",
-      "draw hexagon": "draw hexagon",
-      "draw line of hexagons": "draw line of hexagons"
-    },
-    "https://studio.code.org/s/coursee-2017/stage/16/puzzle/13": {
-      "draw line of polygons": "draw line of polygons",
-      "draw polygon": "draw polygon",
-      "do something": "do something"
-    },
-    "https://studio.code.org/s/coursee-2017/stage/16/extras?level_name=courseE_artist_functions_challenge1": {
-      "my design": "my design",
-      "do something": "do something"
-    },
-    "https://studio.code.org/s/coursee-2017/stage/16/extras?level_name=courseE_artist_functions_challenge2": {
-      "my design": "my design",
-      "do something": "do something"
-    },
-    "https://studio.code.org/s/coursee-2017/stage/17/puzzle/1": {
-      "do something": "do something"
-    },
-    "https://studio.code.org/s/coursee-2017/stage/17/puzzle/3": {
-      "get 2 nectar": "get 2 nectar"
-    },
-    "https://studio.code.org/s/coursee-2017/stage/17/puzzle/4": {
-      "get 5": "get 5"
-    },
-    "https://studio.code.org/s/coursee-2017/stage/17/puzzle/5": {
-      "move and get nectar": "move and get nectar"
-    },
-    "https://studio.code.org/s/coursee-2017/stage/17/puzzle/6": {
-      "move and get 4": "move and get 4"
-    },
-    "https://studio.code.org/s/coursee-2017/stage/17/puzzle/8": {
-      "get 7 nectar make 7 honey": "get 7 nectar make 7 honey"
-    },
-    "https://studio.code.org/s/coursee-2017/stage/17/puzzle/9": {
-      "get 7 make 7": "get 7 make 7"
-    },
-    "https://studio.code.org/s/coursee-2017/stage/17/puzzle/10": {
-      "collect all nectar": "collect all nectar"
-    },
-    "https://studio.code.org/s/coursee-2017/stage/17/puzzle/11": {
-      "get all nectar": "get all nectar"
-    },
-    "https://studio.code.org/s/coursee-2017/stage/17/puzzle/12": {
-      "move and make honey": "move and make honey"
-    },
-    "https://studio.code.org/s/coursee-2017/stage/17/puzzle/13": {
-      "move and make honey": "move and make honey"
-    },
-    "https://studio.code.org/s/coursee-2017/stage/17/extras?level_name=courseE_bee_functions_challenge1": {
-      "do something": "do something",
-      "get 3 nectar or honey": "get 3 nectar or honey"
-    },
-    "https://studio.code.org/s/coursee-2017/stage/17/extras?level_name=courseE_bee_functions_challenge2": {
-      "do something": "do something",
-      "move and collect": "move and collect"
-    },
-    "https://studio.code.org/s/coursee-2017/stage/18/puzzle/4": {
-      "corn and pumpkin": "corn and pumpkin"
-    },
-    "https://studio.code.org/s/coursee-2017/stage/18/puzzle/5": {
-      "corn and pumpkin": "corn and pumpkin"
-    },
-    "https://studio.code.org/s/coursee-2017/stage/18/puzzle/6": {
-      "corn and pumpkin": "corn and pumpkin"
-    },
-    "https://studio.code.org/s/coursee-2017/stage/18/puzzle/7": {
-      "corn and pumpkin": "corn and pumpkin"
-    },
-    "https://studio.code.org/s/coursee-2017/stage/18/puzzle/8": {
-      "corn and pumpkin": "corn and pumpkin"
-    },
-    "https://studio.code.org/s/coursee-2017/stage/18/puzzle/11": {
-      "navigate": "navigate"
-    },
-    "https://studio.code.org/s/coursee-2017/stage/18/puzzle/12": {
-      "navigate": "navigate"
-    },
-    "https://studio.code.org/s/coursee-2017/stage/18/puzzle/13": {
-      "navigate": "navigate"
-    },
-    "https://studio.code.org/s/coursee-2017/stage/18/puzzle/14": {
+  "https://studio.code.org/s/coursee-2017/stage/18/puzzle/14": {
+    "long_instructions": "Figure out which function to use and which one to delete, then solve this puzzle!",
+    "function_names": {
       "check and pick": "check and pick",
       "find pumpkin": "find pumpkin",
       "wander path": "wander path"
     },
-    "https://studio.code.org/s/coursee-2017/stage/19/puzzle/2": {
-      "do something": "do something"
+    "contained levels": [
+      {
+        "dsls": {
+          "questions": [
+            {
+              "text": "Look at the functions defined below.  What will the harvester pick?"
+            }
+          ],
+          "answers": [
+            {
+              "text": "The harvester will pick two pumpkins.",
+              "correct": false,
+              "feedback": "Incorrect.  The harvester does not call \"check and pick\" until she gets to the corn."
+            },
+            {
+              "text": "The harvester will pick all of the pumpkins.",
+              "correct": false,
+              "feedback": "Incorrect.  The harvester does not call \"check and pick\" until she gets to the corn."
+            },
+            {
+              "text": "The harvester will pick the lettuce.",
+              "correct": false,
+              "feedback": "Incorrect. The harvester only makes one turn, and ends at the corn."
+            },
+            {
+              "text": "The harvester will pick the corn.",
+              "correct": true,
+              "feedback": "Correct!"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "https://studio.code.org/s/coursee-2017/stage/19/puzzle/1": {
+    "short_instructions": "Collect all of the nectar from each flower.",
+    "long_instructions": "_\"Can you BEE-lieve all of these flowers?\"_\n\nCollect all of the nectar from each flower. ",
+    "authored_hints": {
+      "courseE_bee_concept1_b": "Are there any patterns that _repeat_ here?",
+      "courseE_bee_concept1_a": "If you don't understand how to use nested loops here, try writing out the instructions step by step on a piece of paper.  Circle the patterns that you see."
+    }
+  },
+  "https://studio.code.org/s/coursee-2017/stage/19/puzzle/2": {
+    "short_instructions": "Can you write a program that fills these holes until the ground is even?",
+    "authored_hints": {
+      "courseE_farmer_concept1_a": "A `while there is a hole` block will help you fill any hole until it's flat.",
+      "courseE_farmer_concept1_b": "You can use a stair step pattern to get to the holes."
     },
-    "https://studio.code.org/s/coursee-2017/stage/19/puzzle/5": {
+    "function_names": {
+      "do something": "do something"
+    }
+  },
+  "https://studio.code.org/s/coursee-2017/stage/19/puzzle/3": {
+    "short_instructions": "Help the bee make all of the honey. ",
+    "long_instructions": "Help the bee make all of the honey.  \n\nYou can only make honey at a honeycomb, but you can check any space to see if there is a honeycomb.",
+    "authored_hints": {
+      "courseE_bee_concept2_a": "Would a `while` loop help here?",
+      "courseE_bee_concept2_d": "You can even check empty spaces to see if honey is > 0.",
+      "courseE_bee_concept2_b": "You can use `while` loops to move to the end of each path, and to collect all of the honey from each space.",
+      "courseE_bee_concept2_c": "Which way should the bee turn after each path?"
+    }
+  },
+  "https://studio.code.org/s/coursee-2017/stage/19/puzzle/4": {
+    "short_instructions": "Collect all of the nectar using  as few blocks as possible.",
+    "authored_hints": {
+      "courseE_bee_concept3a_a": "Try using nested `repeat` loops to solve this puzzle.",
+      "courseE_bee_concept3a_b": "If you can't figure out where to put the loops, try writing your code step-by-step and looking for patterns.",
+      "courseE_bee_concept3a_c": "There are three groups of flowers, so your outer `repeat` loop should repeat three times."
+    }
+  },
+  "https://studio.code.org/s/coursee-2017/stage/19/puzzle/5": {
+    "short_instructions": "Recreate this image. ",
+    "long_instructions": "Recreate this image. \n\n-   The hexagons have sides of 50 pixels\n-   The hexagons are 100 pixels apart\n-   The pen widths of the hexagons are 1 pixel, 4 pixels, and 8 pixels.",
+    "authored_hints": {
+      "courseE_artist_concept1_a": "The hexagons have 50 pixel sides and 60 degree turns to the right.",
+      "courseE_artist_concept1_b": "Try using a function here so you don't have to write the code for a hexagon over and over again.",
+      "courseE_artist_concept1_c": "Use the `set width` block before each function call to change the pen width."
+    },
+    "function_names": {
       "do something": "do something",
       "draw a hexagon": "draw a hexagon"
+    }
+  },
+  "https://studio.code.org/s/coursee-2017/stage/19/puzzle/6": {
+    "short_instructions": "Uh oh! The bee is not sure if he should collect nectar or make honey. Can you help him out?",
+    "authored_hints": {
+      "courseE_bee_concept4_a": "An `if/else` statement could really help you out here.",
+      "courseE_bee_concept4_b": "The stair step pattern can help you get through all of the flowers and honeycombs.",
+      "courseE_bee_concept4_c": "If you are at a flower, how many times do you have to get nectar? Is this the same number for all flowers?"
     },
-    "https://studio.code.org/s/coursee-2017/stage/19/puzzle/6": {
+    "function_names": {
       "honey nectar": "honey nectar"
+    }
+  },
+  "https://studio.code.org/s/coursee-2017/stage/19/puzzle/7": {
+    "short_instructions": "Collect all of the pumpkins.",
+    "authored_hints": {
+      "courseE_farmer_concept2_a": "The paths are all the same length, but they are a different number of squares apart.  A loop isn't ideal here. Try a function.",
+      "courseE_farmer_concept2_b": "A function which turns, goes down the path, gathers pumpkins, and returns to the main horizontal path could be helpful here.",
+      "courseE_farmer_concept2_c": "Your main program can call this function with the green `do something` block."
     },
-    "https://studio.code.org/s/coursee-2017/stage/19/puzzle/7": {
+    "function_names": {
       "do something": "do something",
       "get pumpkin": "get pumpkin"
+    }
+  },
+  "https://studio.code.org/s/coursee-2017/stage/19/puzzle/8": {
+    "short_instructions": "Help the bee collect the nectar from the flowers?",
+    "long_instructions": "Can you help the bee collect the nectar from the flowers? \n\nYou can only collect nectar from flowers, but you can check any space to see if there is a flower.",
+    "authored_hints": {
+      "courseE_bee_concept5_a": "The flowers follow a rectangular path.  You can trace that rectangle using `while path ahead` even with a different number of squares per side.",
+      "courseE_bee_concept5_c": "Here's a picture of a rectangular path the bee could take.\n\n[][0]",
+      "courseE_bee_concept5_b": "You can check every square for a flower using the `if` block, even if you already know there's not one there."
+    }
+  },
+  "https://studio.code.org/s/coursee-2017/stage/19/puzzle/9": {
+    "short_instructions": "Fill in the hole at the end of each of these paths.",
+    "authored_hints": {
+      "grade3_robotFarmer_ConditionalsIntro_8_a": "The `while path ahead` block lets you keep going, even if you don't know how many squares are in a path.",
+      "grade3_robotFarmer_ConditionalsIntro_8_b": "What should you do once you've reached the end of a path?",
+      "grade3_robotFarmer_ConditionalsIntro_8_c": "Use a `repeat` loop to run your code multiple times for each straight path."
     },
-    "https://studio.code.org/s/coursee-2017/stage/19/puzzle/9": {
+    "function_names": {
       "do something": "do something"
+    }
+  },
+  "https://studio.code.org/s/coursee-2017/stage/19/puzzle/10": {
+    "short_instructions": "Recreate this drawing.",
+    "long_instructions": "Recreate this drawing. \n\nEach square has a side length of **20 pixels** and there are **15 squares per row**.",
+    "authored_hints": {
+      "courseE_artist_concept4_a": "There are several ways to solve this puzzle. Can you make a plan?",
+      "courseE_artist_concept4_b": "Try creating one square. Then make a line of squares.  What comes next?",
+      "courseE_artist_concept4_c": "After drawing a line of squares, you can either turn around and draw another line of squares going left, or you can jump back to the left side of the figure to draw another line of squares going right. Which do you prefer?"
     },
-    "https://studio.code.org/s/coursee-2017/stage/19/puzzle/10": {
+    "function_names": {
       "draw a square": "draw a square",
       "draw a line of squares": "draw a line of squares",
       "draw a plane of squares": "draw a plane of squares"
+    }
+  },
+  "https://studio.code.org/s/coursee-2017/stage/19/extras?level_name=courseE_artist_concept_challenge1": {
+    "short_instructions": "Help the artist draw this unique shape. ",
+    "long_instructions": "<img src=\"https://images.code.org/6cac10470af71bbb5d75bf5e2669046f-image-1439939145211.png\" width=\"200px\"/>\n\nNow for a challenge!\n\nHere is a design that uses only blocks that you have already been shown.  Can you figure out how to recreate it?  Feel free to use trial and error. You don't have to draw it perfectly the first time.",
+    "authored_hints": {
+      "courseE_artist_concept_challenge1_a": "The half-hexagon has a **length of 30** and turns right by **60 degrees**.  ",
+      "courseE_artist_concept_challenge1_b": "The 2/3 triangle has a **length of 80** and turns right by **120 degrees**. ",
+      "courseE_artist_concept_challenge1_c": "This is the design you want to repeat to make the full shape:\n\n[][0]"
     },
-    "https://studio.code.org/s/coursee-2017/stage/19/extras?level_name=courseE_artist_concept_challenge1": {
+    "function_names": {
       "do something": "do something"
+    }
+  },
+  "https://studio.code.org/s/coursee-2017/stage/19/extras?level_name=courseE_artist_concept_challenge2": {
+    "short_instructions": "Create five pinwheel designs using the code below.",
+    "long_instructions": "Create five pinwheel designs using the code below.",
+    "authored_hints": {
+      "courseE_artist_concept_challenge2_a": "Once you define a function, you can call it over and over again - whenever and wherever you want!",
+      "courseE_artist_concept_challenge2_b": "You can jump to different positions on the canvas using this command:\n\n<xml>  <block type=\"jump_to\">\n    <title name=\"VALUE\">???</title>\n  </block></xml>"
     },
-    "https://studio.code.org/s/coursee-2017/stage/19/extras?level_name=courseE_artist_concept_challenge2": {
+    "function_names": {
       "draw pinwheel": "draw pinwheel"
+    }
+  },
+  "https://studio.code.org/s/coursee-2017/stage/20/puzzle/1": {
+    "short_instructions": "Choose a background and map, and pick an actor to be your game's hero.",
+    "long_instructions": "It is amazing how much you have learned! Let's make a game step by step.\n\nUsing new blocks in your toolbox, choose a new background, then pick an actor to be in your game.",
+    "authored_hints": {
+      "courseE_playLab_scaffold1_a": "The `set actor 1 to ??? image` block can be used to add an actor to the stage.",
+      "courseE_playLab_scaffold1_b": "Put the `set actor` block under `when run` to make your actor appear at the beginning of the program.",
+      "courseE_playLab_scaffold1_c": "Use `set ??? background` to choose a background for your scene."
     },
-    "https://studio.code.org/s/coursee-2017/stage/20/puzzle/1": {
+    "function_names": {
       "do something": "do something"
+    }
+  },
+  "https://studio.code.org/s/coursee-2017/stage/20/puzzle/2": {
+    "short_instructions": "Use event handlers and actions to make your hero move.",
+    "long_instructions": "Use  blocks like event handlers and actions to make your player move according to the arrows on your keyboard.  \n\nGet the player to the targets to complete this puzzle.",
+    "authored_hints": {
+      "courseE_playLab_scaffold1_a": "Pull on the dropdown menu of the `when ____ arrow` event to change the direction the block controls.",
+      "courseE_playLab_scaffold1_b": "You should have four `when arrow` event blocks, with a direction to move underneath each.",
+      "courseE_playLab_scaffold1_c": "When you are done, you should be able to move your hero with the arrow keys!"
     },
-    "https://studio.code.org/s/coursee-2017/stage/20/puzzle/2": {
+    "function_names": {
       "do something": "do something"
+    }
+  },
+  "https://studio.code.org/s/coursee-2017/stage/20/puzzle/3": {
+    "short_instructions": "Add two or more additional actors to your game and make them move.",
+    "long_instructions": "Let's add some more characters to your game!\n\nUse the `set actor` block to add more characters then move to the goal to complete this puzzle.",
+    "callouts": {
+      "courseE_playLab_scaffold3_1": "Get the actor to this flag to move on to the next level."
     },
-    "https://studio.code.org/s/coursee-2017/stage/20/puzzle/3": {
+    "function_names": {
       "do something": "do something"
+    }
+  },
+  "https://studio.code.org/s/coursee-2017/stage/20/puzzle/4": {
+    "short_instructions": "Find some interesting ways to change the score in your game. Get the score to show something other than 0 to continue.",
+    "long_instructions": "Multiple characters and getting the actors moving is a great start to a game, but we need to do more to make this feel like a real game. Let's add a score!\n\nUse event blocks like the `when actor touches` to change the score. Score 10 points to complete this puzzle.",
+    "authored_hints": {
+      "courseE_playLab_scaffold4_a": "Use `score point` to add a point, and `remove point` to subtract one."
     },
-    "https://studio.code.org/s/coursee-2017/stage/20/puzzle/4": {
+    "function_names": {
       "do something": "do something"
+    }
+  },
+  "https://studio.code.org/s/coursee-2017/stage/20/puzzle/5": {
+    "short_instructions": "Now spend some time making sure the game works the way you want. Include a way to win or lose your game, then play until you meet one of those conditions.",
+    "long_instructions": "Great job! You have all the basic components of a working game. Now spend some time making sure the game works the way you want. Include a way to win or lose your game, then play until you meet one of those conditions.",
+    "authored_hints": {
+      "courseE_playLab_scaffold5_a": "To finish this level, you need to win or lose. Use a `end game as win` or `end game as loss` block to finish."
+    }
+  },
+  "https://studio.code.org/s/coursee-2017/stage/20/puzzle/6": {
+    "short_instructions": "You've finished! Now you can play your game or share it with your friends and classmates!",
+    "long_instructions": "You've finished! Now you can play your game or share it with your friends and classmates!"
+  },
+  "https://studio.code.org/s/coursee-2017/stage/20/extras?level_name=courseE_playLab_challenge1": {
+    "short_instructions": "Something should happen when you get enough points or when you run out of points. Add some code to the `win game` and `lose game` functions to make the game work the way it should. \nClick the hints for ideas!",
+    "long_instructions": "_The **squirrels** are terrified to see that a **dinosaur** has come to town! Can the brave **knight** keep them all from panicking?_\n\nRules:\n\n1.  _Touching the squirrels scores you points._\n2.  _Touching the dinosaur takes many points away._\n\nHere is a different kind of game that has already been started for you! Play it to see how it works. \n\nSomething should happen when you get enough points or when you run out of points. Add some code to the `win game` and `lose game` functions to make the game work the way it should. \nClick the hints for ideas!",
+    "authored_hints": {
+      "courseE_playLab_challenge1_a": "Here are some things you could do when the player wins the game:\n\n-   Make the dinosaur vanish.\n-   Stop the squirrels.\n-   Make the squirrels and knight happy.\n-   Set a new background.\n-   Make the knight thank the player for helping.\n-   Make all of the actors vanish and show a \"You Win!\" message.",
+      "courseE_playLab_challenge1_b": "Here are some things you could do when the player loses the game:\n\n-   Make the knight vanish.\n-   Make the squirrels sad.\n-   Make the dinosaur say something.\n-   Set a new background.\n-   Make all of the actors vanish and show a \"Game Over\" message."
     },
-    "https://studio.code.org/s/coursee-2017/stage/20/extras?level_name=courseE_playLab_challenge1": {
+    "callouts": {
+      "courseC_PlayLab_events_challenge1_1": "This block lets you move actors to different parts of the game space."
+    },
+    "function_names": {
       "win game": "win game",
       "lose game": "lose game",
       "keep playing": "keep playing"
+    }
+  },
+  "https://studio.code.org/s/coursee-2017/stage/21/puzzle/1": {
+    "display_name": "End of Course Projects"
+  },
+  "https://studio.code.org/s/coursee-2017/stage/21/puzzle/2": {
+    "short_instructions": "Project Idea: Create a pattern using geometric ideas like shapes. This requires persistence and planning!",
+    "long_instructions": "**Project Idea:** Create a pattern using geometric ideas like shapes. This requires persistence and planning!",
+    "callouts": {
+      "4-5_Artist_Patterns_Free_Play_1": "All of your favorite blocks are now organized into categories.  Click on these words to see where everything went!"
     },
-    "https://studio.code.org/s/coursee-2017/stage/21/puzzle/2": {
+    "function_names": {
       "draw a door": "draw a door",
       "draw grass": "draw grass",
       "draw windows": "draw windows",
@@ -1307,21 +1585,55 @@
       "draw a house": "draw a house",
       "triangle": "triangle",
       "square": "square"
+    }
+  },
+  "https://studio.code.org/s/coursee-2017/stage/21/puzzle/3": {
+    "short_instructions": "Project Idea: Create a picture of something familiar from the real world. This requires persistence and planning!",
+    "long_instructions": "**Project Idea:** Create a picture of something familiar from the real world. This requires persistence and planning!",
+    "callouts": {
+      "4-5_Artist_Patterns_Free_Play_2": "Try using the new `comment` block under this label to leave yourself notes inside your program!"
     },
-    "https://studio.code.org/s/coursee-2017/stage/21/puzzle/3": {
+    "function_names": {
       "25 pixel square": "25 pixel square",
       "draw head": "draw head",
       "draw eye": "draw eye"
-    },
-    "https://studio.code.org/s/coursee-2017/stage/21/puzzle/4": {
+    }
+  },
+  "https://studio.code.org/s/coursee-2017/stage/21/puzzle/4": {
+    "display_name": "Alien Defender",
+    "short_instructions": "Project Idea: Make a defender game in Play Lab!",
+    "long_instructions": "**Project Idea**: Make a defender game in Play Lab!",
+    "function_names": {
       "game has been won": "game has been won"
-    },
-    "https://studio.code.org/s/coursee-2017/stage/21/puzzle/5": {
+    }
+  },
+  "https://studio.code.org/s/coursee-2017/stage/21/puzzle/5": {
+    "short_instructions": "Build whatever you want. This is an example of a number-guessing game!",
+    "function_names": {
       "check guess": "check guess",
       "do something": "do something"
-    },
-    "https://studio.code.org/s/coursee-2017/stage/23/puzzle/1": {
+    }
+  },
+  "https://studio.code.org/s/coursee-2017/stage/22/puzzle/1": {
+    "dsls": {
+      "title": "title",
+      "content1": "description here",
+      "markdown": "# The Design Process\n\n<iframe src=\"https://docs.google.com/document/d/e/2PACX-1vS2GtTZLCnFf4QYXEswvBv_XHQBoYbyBDrqABx9FCRpHBndTD0VbpC34HuN56dBgQ6I3tMgKstI3r6G/pub?embedded=true\" style=\"width: 800px; height: 600px\"></iframe>\n"
+    }
+  },
+  "https://studio.code.org/s/coursee-2017/stage/23/puzzle/1": {
+    "function_names": {
       "do something": "do something"
+    }
+  },
+  "https://studio.code.org/s/coursee-2017/stage/23/puzzle/2": {
+    "display_name": "Course E Artist Project"
+  },
+  "https://studio.code.org/s/coursee-2017/stage/24/puzzle/1": {
+    "dsls": {
+      "title": "title",
+      "content1": "description here",
+      "markdown": "# Project Presentations\n\nTime to present your projects! Your teacher will provide more details on how you will be presenting your work to your classmates.\n"
     }
   }
 }

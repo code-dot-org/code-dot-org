@@ -18,5 +18,5 @@
   - if data['markdown'].present?
     #markdown
       / Render markdown text through the ActionView template engine.
-      = ActionView::Base.new.render(inline: data['markdown'], type: :md)
+      = ActionView::Base.new.render(inline: level.localized_property('markdown'), type: :md)
   = postcontent

@@ -60,8 +60,12 @@ class XhrProxyController < ApplicationController
     hamlin.myschoolapp.com
     herokuapp.com
     hubblesite.org
+    images-api.nasa.gov
+    icanhazdadjoke.com
     isenseproject.org
     lakeside-cs.org
+    opentdb.com
+    pokeapi.co
     qrng.anu.edu.au
     quandl.com
     quizlet.com
@@ -73,6 +77,7 @@ class XhrProxyController < ApplicationController
     nuevaschool3.ngrok.io
     numbersapi.com
     random.org
+    restcountries.eu
     rhcloud.com
     runescape.com
     samples.openweathermap.org
