@@ -78,6 +78,10 @@ var NetSimLocalClientNode = (module.exports = function(shard, clientRow) {
    */
   this.remoteChange = new ObservableEventDEPRECATED();
 
+  /**
+   * Change event others can observe, which will fire whenever the simplex wire
+   * state changes, if the level is configured to auto_receive new messages.
+   */
   this.wireStateChange = new ObservableEventDEPRECATED();
 
   /**
