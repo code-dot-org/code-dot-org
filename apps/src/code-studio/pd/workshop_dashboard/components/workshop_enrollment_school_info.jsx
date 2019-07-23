@@ -23,7 +23,8 @@ export class WorkshopEnrollmentSchoolInfo extends React.Component {
     this.state = {
       pendingDelete: null,
       pendingScholarshipUpdates: [],
-      enrollments: this.props.enrollments
+      enrollments: this.props.enrollments,
+      selectedEnrollments: []
     };
 
     this.handleClickDelete = this.handleClickDelete.bind(this);
@@ -32,6 +33,7 @@ export class WorkshopEnrollmentSchoolInfo extends React.Component {
     this.handleScholarshipStatusChange = this.handleScholarshipStatusChange.bind(
       this
     );
+    this.handleClickSelect = this.handleClickSelect.bind(this);
   }
 
   handleClickDelete(event) {
@@ -93,6 +95,27 @@ export class WorkshopEnrollmentSchoolInfo extends React.Component {
     });
   }
 
+  handleClickSelect(enrollment) {
+    if (this.state.selectedEnrollments.includes(enrollment.id)) {
+      this.setState(state => {
+        const selectedEnrollments = state.selectedEnrollments.filter(e => {
+          return e !== enrollment.id;
+        });
+        return {selectedEnrollments};
+      });
+    } else {
+      this.setState(state => {
+        state.selectedEnrollments.push(enrollment.id);
+      });
+    }
+  }
+
+  handleClickActions() {
+    // check what enrollments are selected to see if delete is a valid option
+    // when you click a specific action, apply it to all enrollments whose
+    // ids are in list of selected enrollments in state
+  }
+
   formatCsfCourseExperience(csf_course_experience) {
     if (!csf_course_experience) {
       return NA;
@@ -128,6 +151,22 @@ export class WorkshopEnrollmentSchoolInfo extends React.Component {
     }
   }
 
+  renderSelectCell(enrollment) {
+    const checkBoxClass = this.state.selectedEnrollments.includes(enrollment.id)
+      ? 'fa fa-check-square-o'
+      : 'fa fa-square-o';
+    return (
+      <td>
+        <div
+          style={styles.contents}
+          onClick={this.handleClickSelect.bind(this, enrollment)}
+        >
+          <i className={checkBoxClass} />
+        </div>
+      </td>
+    );
+  }
+
   render() {
     const enrollmentRows = this.state.enrollments.map((enrollment, i) => {
       let deleteCell;
@@ -152,6 +191,8 @@ export class WorkshopEnrollmentSchoolInfo extends React.Component {
       return (
         <tr key={i}>
           {deleteCell}
+          {this.props.permissionList.has(WorkshopAdmin) &&
+            this.renderSelectCell(enrollment)}
           <td>{i + 1}</td>
           <td>{enrollment.first_name}</td>
           <td>{enrollment.last_name}</td>
@@ -236,6 +277,7 @@ export class WorkshopEnrollmentSchoolInfo extends React.Component {
         <thead>
           <tr>
             <th style={styles.th} />
+            {this.props.permissionList.has(WorkshopAdmin) && <td>Actions</td>}
             <th style={styles.th}>#</th>
             <th style={styles.th}>First Name</th>
             <th style={styles.th}>Last Name</th>
