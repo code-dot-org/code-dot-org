@@ -296,10 +296,6 @@ class Pd::Workshop < ActiveRecord::Base
     sessions.each(&:assign_code)
     update!(started_at: Time.zone.now)
 
-    if CDO.newrelic_logging
-      NewRelic::Agent.record_metric "Custom/Workshops/InProgress", self.class.in_state(STATE_IN_PROGRESS).count
-    end
-
     # return nil in case any callers are still expecting a section
     nil
   end
@@ -310,12 +306,6 @@ class Pd::Workshop < ActiveRecord::Base
     return unless ended_at.nil?
     self.ended_at = Time.zone.now
     save!
-
-    if CDO.newrelic_logging
-      NewRelic::Agent.record_metric "Custom/Workshops/InProgress", self.class.in_state(STATE_IN_PROGRESS).count
-    end
-
-    nil
   end
 
   def state
