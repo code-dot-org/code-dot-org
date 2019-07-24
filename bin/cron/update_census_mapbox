@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-# The map on code.org/yourschool is run off of Mapbox
+# The map on code.org/yourschool is run off of Mapbox.
 # This script updates the data on Mapbox by querying all rows from
 # census_summaries table for the appropriate school year,
 # creating maptiles with Mapbox's command line tool, Tippecanoe,
@@ -67,8 +67,24 @@ end
 file = Tempfile.new(['census', 'geojson'])
 tiles = Tempfile.new(['censustiles', 'mbtiles'])
 file.write(JSON.pretty_generate(geojson))
-stdout, _status = Open3.capture2(
+_stdout, stderr, tippecanoe_status = Open3.capture2(
+  # Tippecanoe will generate a map that has a min zoom of 1 (approx the whole world),
+  # clusters points that are approximately 2 pixels apart, and drops points to make them fit if they can't.
+  # The layer is called "census". DO NOT change the layer name without changing the map
+  # in the Mapbox UI.
   "tippecanoe -Z 1 -rg --cluster-distance=2 -o #{tiles.path} -l \"census\" --force #{file.path}"
 )
-upload_maptiles(tiles.path, 'censustiles')
-puts stdout
+upload_successful = false
+if tippecanoe_status.success?
+  upload_successful = upload_maptiles(tiles.path, 'censustiles')
+end
+unless tippecanoe_status.success? && upload_successful
+  Honeybadger.notify(
+    error_message: "Updating HOC map on Mapbox failed",
+    error_class: "HOC Map Update Failure",
+    context: {
+      tippecanoe_status: stderr,
+      upload_status: upload_successful
+    }
+  )
+end
