@@ -4,7 +4,7 @@ set -e
 MEM_PER_PROCESS=4096
 GRUNT_CMD="node --max_old_space_size=${MEM_PER_PROCESS} `npm bin`/grunt"
 
-if [ -n "$CIRCLECI" ]; then
+if [ -n "$DRONE" ]; then
   NPROC=4
   mkdir -p log
   cat <<STR
@@ -17,7 +17,8 @@ STR
   CODECOV=/tmp/codecov.sh
   curl -s https://codecov.io/bash > ${CODECOV}
   chmod +x ${CODECOV}
-  LOG=">"
+  CODECOV="$CODECOV -C $DRONE_COMMIT_SHA"
+  LOG='&& :' # stub
 else
   # For non-Circle runs, stub-out codecov and logging to files.
   NPROC=$(nproc)
