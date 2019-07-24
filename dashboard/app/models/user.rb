@@ -2114,7 +2114,7 @@ class User < ActiveRecord::Base
 
     self.purged_at = Time.zone.now
 
-    save!(validate: false)
+    save!
   end
 
   def within_united_states?
