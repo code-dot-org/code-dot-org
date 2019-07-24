@@ -1,4 +1,5 @@
 import {assert} from 'chai';
+import sinon from 'sinon';
 import {TestResults} from '@cdo/apps/constants';
 import {LevelStatus, LevelKind} from '@cdo/apps/util/sharedConstants';
 import {ViewType, setViewType} from '@cdo/apps/code-studio/viewAsRedux';
@@ -1361,6 +1362,74 @@ describe('progressReduxTest', () => {
         pages_completed: [-50, null, null, null, null]
       });
       assert.strictEqual(result, TestResults.READONLY_SUBMISSION_RESULT);
+    });
+  });
+
+  describe('userProgressFromServer', () => {
+    let server, state, dispatch;
+    const {userProgressFromServer} = __testonly__;
+
+    beforeEach(() => {
+      server = sinon.fakeServer.create();
+      state = {scriptName: 'my-script'};
+      dispatch = sinon.spy();
+    });
+
+    afterEach(() => server.restore());
+
+    const serverResponse = data => {
+      server.respondWith([
+        200,
+        {'Content-Type': 'application/json'},
+        JSON.stringify(data)
+      ]);
+    };
+
+    it('requests user progress and does not dispatch actions with no data', () => {
+      serverResponse({});
+      const promise = userProgressFromServer(state, dispatch, 1);
+      server.respond();
+      return promise.then(responseData => {
+        assert(dispatch.notCalled);
+        assert.deepEqual({}, responseData);
+      });
+    });
+
+    it('requests user progress and dispatches appropriate actions', () => {
+      const responseData = {
+        isVerifiedTeacher: true,
+        teacherViewingStudent: true,
+        professionalLearningCourse: false,
+        focusAreaStageIds: [1, 2],
+        lockableAuthorized: true,
+        completed: true,
+        levels: {},
+        peerReviewsPerformed: true,
+        current_stage: 1
+      };
+      serverResponse(responseData);
+      const promise = userProgressFromServer(state, dispatch, 1);
+      server.respond();
+
+      assert.equal(9, dispatch.callCount);
+      const dispatchActions = dispatch
+        .getCalls()
+        .map(call => call.args[0].type);
+      const expectedDispatchActions = [
+        'verifiedTeacher/SET_VERIFIED',
+        'progress/SET_IS_SUMMARY_VIEW',
+        'progress/SHOW_TEACHER_INFO',
+        'progress/UPDATE_FOCUS_AREAS',
+        'stageLock/AUTHORIZE_LOCKABLE',
+        'progress/SET_SCRIPT_COMPLETED',
+        'progress/MERGE_PROGRESS',
+        'progress/MERGE_PEER_REVIEW_PROGRESS',
+        'progress/SET_CURRENT_STAGE_ID'
+      ];
+      return promise.then(serverResponseData => {
+        assert.deepEqual(expectedDispatchActions, dispatchActions);
+        assert.deepEqual(responseData, serverResponseData);
+      });
     });
   });
 });
