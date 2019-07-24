@@ -53,6 +53,7 @@ class XhrProxyController < ApplicationController
     data.cityofchicago.org
     data.gv.at
     data.nasa.gov
+    donordrive.com
     dweet.io
     enclout.com
     githubusercontent.com

@@ -31,6 +31,8 @@ module Pd
         {tag: "612_f_post",     form_id: "90525028928158", allow_embed: false}, # 6-12 Facilitator Post-Survey
         {tag: "rp_pre",         form_id: "90525686494166", allow_embed: false}, # Regional Partner Pre-Survey
         {tag: "rp_post",        form_id: "91384165042151", allow_embed: false}, # Regional Partner Post-Survey
+        {tag: "fit-pre-2019",   form_id: "91826716927166", allow_embed: false}, # 2019 FiT Workshop Pre-Survey
+        {tag: "fit-post-2019" , form_id: "91883754303159", allow_embed: false}, # 2019 FiT Workshop Post-Survey
         {tag: "other_workshop", form_id: "91477280965166", allow_embed: true},  # Unofficial Workshop Attendance
       ]
     end
