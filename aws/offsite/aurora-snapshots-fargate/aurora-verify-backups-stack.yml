@@ -88,7 +88,7 @@ Resources:
                 Action:
                   - ecs:RunTask
                 # Manually construct the Task Definition Family ARN, since !Ref returns the Task Definition Revision ARN
-                Resource: !Sub "arn:aws:ecs:${AWS::Region}:${AWS::AccountId}:task-definition/${AWS::StackName}-aurora-verify-backups"
+                Resource: !Ref TaskDefinition
                 Condition:
                   ArnLike:
                     ecs:cluster: !GetAtt ECSCluster.Arn

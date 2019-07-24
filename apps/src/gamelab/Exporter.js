@@ -273,7 +273,13 @@ export default {
   exportApp(appName, code, animationOpts, suppliedExpoOpts, config) {
     const expoOpts = suppliedExpoOpts || {};
     if (expoOpts.mode === 'expoPublish') {
-      return this.publishToExpo(appName, code, animationOpts, config);
+      return this.publishToExpo(
+        appName,
+        code,
+        animationOpts,
+        expoOpts.iconFileUrl,
+        config
+      );
     }
     return this.exportAppToZip(
       appName,
@@ -287,7 +293,7 @@ export default {
     });
   },
 
-  async publishToExpo(appName, code, animationOpts, config) {
+  async publishToExpo(appName, code, animationOpts, iconFileUrl, config) {
     const {origin} = window.location;
     const webpackRuntimePath =
       getEnvironmentPrefix() === 'cdo-development'
@@ -373,13 +379,13 @@ export default {
       assetLocation: 'appassets/'
     });
     appAssets.push({
-      url: exportExpoIconPng,
+      url: iconFileUrl || exportExpoIconPng,
       dataType: 'binary',
       filename: 'icon.png',
       assetLocation: 'appassets/'
     });
     appAssets.push({
-      url: exportExpoSplashPng,
+      url: iconFileUrl || exportExpoSplashPng,
       dataType: 'binary',
       filename: 'splash.png',
       assetLocation: 'appassets/'

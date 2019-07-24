@@ -12,29 +12,21 @@ import MiniView from './components/progress/MiniView.jsx';
 import DisabledBubblesModal from './DisabledBubblesModal';
 import DisabledBubblesAlert from './DisabledBubblesAlert';
 import {getStore} from './redux';
-import {authorizeLockable} from './stageLockRedux';
 import {setViewType, ViewType} from './viewAsRedux';
 import {getHiddenStages, initializeHiddenScripts} from './hiddenStageRedux';
 import {TestResults} from '@cdo/apps/constants';
 import {
   initProgress,
   mergeProgress,
-  mergePeerReviewProgress,
-  updateFocusArea,
-  showTeacherInfo,
   disablePostMilestone,
   setIsHocScript,
   setIsAge13Required,
   setStudentDefaultsSummaryView,
-  setIsSummaryView,
-  setCurrentStageId,
-  setScriptCompleted,
   setStageExtrasEnabled,
-  getLevelResult
+  queryUserProgress as reduxQueryUserProgress
 } from './progressRedux';
 import {setVerified} from '@cdo/apps/code-studio/verifiedTeacherRedux';
 import {queryLockStatus, renderTeacherPanel} from './teacherPanelHelpers';
-import experiments from '../util/experiments';
 
 var progress = module.exports;
 
@@ -51,9 +43,7 @@ function showDisabledBubblesModal() {
 progress.showDisabledBubblesAlert = function() {
   const store = getStore();
   const {postMilestoneDisabled} = store.getState().progress;
-  const showAlert =
-    postMilestoneDisabled || experiments.isEnabled('postMilestoneDisabledUI');
-  if (!showAlert) {
+  if (!postMilestoneDisabled) {
     return;
   }
 
@@ -237,49 +227,29 @@ function initViewAs(store, scriptData) {
  * as appropriate
  */
 function queryUserProgress(store, scriptData, currentLevelId) {
-  const onOverviewPage = !currentLevelId;
-  const pageType = currentLevelId ? 'level' : 'script_overview';
-
-  $.ajax('/api/user_progress/' + scriptData.name, {
-    data: {
-      user_id: clientState.queryParams('user_id')
+  const userId = clientState.queryParams('user_id');
+  store.dispatch(reduxQueryUserProgress(userId)).then(data => {
+    const onOverviewPage = !currentLevelId;
+    if (!onOverviewPage) {
+      return;
     }
-  }).done(data => {
-    data = data || {};
 
-    const postMilestoneDisabled =
-      store.getState().progress.postMilestoneDisabled ||
-      experiments.isEnabled('postMilestoneDisabledUI');
     // Depend on the fact that even if we have no levelProgress, our progress
     // data will have other keys
     const signedInUser = Object.keys(data).length > 0;
-    if (data.isVerifiedTeacher) {
-      store.dispatch(setVerified());
-    }
-    if (
-      onOverviewPage &&
-      signedInUser &&
-      postMilestoneDisabled &&
-      !scriptData.isHocScript
-    ) {
+    const postMilestoneDisabled = store.getState().progress
+      .postMilestoneDisabled;
+    if (signedInUser && postMilestoneDisabled && !scriptData.isHocScript) {
       showDisabledBubblesModal();
     }
 
-    // Show lesson plan links and other teacher info if teacher and on unit
-    // overview page
     if (
       (data.isTeacher || data.teacherViewingStudent) &&
-      !data.professionalLearningCourse &&
-      onOverviewPage
+      !data.professionalLearningCourse
     ) {
-      // Default to progress summary view if teacher is viewing their student's progress.
-      if (data.teacherViewingStudent) {
-        store.dispatch(setIsSummaryView(true));
-      }
-
-      store.dispatch(showTeacherInfo());
       queryLockStatus(store, scriptData.id);
 
+      const pageType = currentLevelId ? 'level' : 'script_overview';
       renderTeacherPanel(
         store,
         scriptData.id,
@@ -288,32 +258,6 @@ function queryUserProgress(store, scriptData, currentLevelId) {
         null,
         pageType
       );
-    }
-
-    if (data.focusAreaStageIds) {
-      store.dispatch(
-        updateFocusArea(data.changeFocusAreaPath, data.focusAreaStageIds)
-      );
-    }
-
-    if (data.lockableAuthorized) {
-      store.dispatch(authorizeLockable());
-    }
-
-    if (data.completed) {
-      store.dispatch(setScriptCompleted());
-    }
-
-    // Merge progress from server (loaded via AJAX)
-    if (data.levels) {
-      const levelProgress = _.mapValues(data.levels, getLevelResult);
-      store.dispatch(mergeProgress(levelProgress));
-      if (data.peerReviewsPerformed) {
-        store.dispatch(mergePeerReviewProgress(data.peerReviewsPerformed));
-      }
-      if (data.current_stage) {
-        store.dispatch(setCurrentStageId(data.current_stage));
-      }
     }
   });
 }
@@ -356,10 +300,7 @@ function initializeStoreWithProgress(
     })
   );
 
-  const postMilestoneDisabled =
-    scriptData.disablePostMilestone ||
-    experiments.isEnabled('postMilestoneDisabledUI');
-  if (postMilestoneDisabled) {
+  if (scriptData.disablePostMilestone) {
     store.dispatch(disablePostMilestone());
   }
 
