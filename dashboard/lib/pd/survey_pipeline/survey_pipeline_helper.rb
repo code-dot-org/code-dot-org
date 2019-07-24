@@ -63,7 +63,7 @@ module Pd::SurveyPipeline::Helper
     }
 
     # Retrieve data
-    related_ws_ids = find_related_workshops(facilitator_id, workshop.course)
+    related_ws_ids = find_related_workshop_ids(facilitator_id, workshop.course)
     context[:related_workshop_ids] = related_ws_ids
     context.merge! retrieve_facilitator_surveys([facilitator_id], related_ws_ids)
 
@@ -85,7 +85,7 @@ module Pd::SurveyPipeline::Helper
     }
 
     # Retrieve data
-    related_ws_ids = find_related_workshops(facilitator_id, workshop.course)
+    related_ws_ids = find_related_workshop_ids(facilitator_id, workshop.course)
     context[:related_workshop_ids] = related_ws_ids
     context.merge! retrieve_workshop_surveys(related_ws_ids)
 
@@ -215,7 +215,7 @@ module Pd::SurveyPipeline::Helper
   #
   # @return [Array<Number>] list of workshop ids
   #
-  def find_related_workshops(facilitator_id, course)
+  def find_related_workshop_ids(facilitator_id, course)
     return [] unless facilitator_id && course.present?
 
     Pd::Workshop.left_outer_joins(:facilitators).
