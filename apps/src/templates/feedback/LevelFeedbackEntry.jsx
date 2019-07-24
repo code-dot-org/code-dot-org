@@ -5,6 +5,7 @@ import color from '@cdo/apps/util/color';
 import shapes from './shapes';
 import {UnlocalizedTimeAgo as TimeAgo} from '@cdo/apps/templates/TimeAgo';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 const styles = {
   main: {
@@ -83,6 +84,7 @@ export default class LevelFeedbackEntry extends Component {
 
   expand = () => {
     this.setState({expanded: true});
+    firehoseClient.putRecord({study: 'all-feedback', event: 'expand'});
   };
 
   collapse = () => {
@@ -137,6 +139,10 @@ export default class LevelFeedbackEntry extends Component {
 
     const showRightCaret = this.longComment() && !this.state.expanded;
     const showDownCaret = this.longComment() && this.state.expanded;
+
+    if (showRightCaret) {
+      firehoseClient.putRecord({study: 'all-feedback', event: 'long-comment'});
+    }
 
     return (
       <div style={style}>
