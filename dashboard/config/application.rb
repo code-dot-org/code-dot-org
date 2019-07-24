@@ -142,6 +142,17 @@ module Dashboard
     # See http://edgeguides.rubyonrails.org/upgrading_ruby_on_rails.html#autoloading-is-disabled-after-booting-in-the-production-environment
     config.enable_dependency_loading = true
 
+    # Make sure we never clear the Rails cache in production. This is just a
+    # precaution, because ActiveSupport::Reloader already promises never to run
+    # its callbacks if config.cache_classes is set.
+    unless Rails.env.production?
+      ActiveSupport::Reloader.after_class_unload do
+        # Make sure the script cache never contains stale class references.
+        CDO.log.info "clearing rails cache after class reload"
+        Rails.cache.clear
+      end
+    end
+
     if CDO.newrelic_logging
       require 'newrelic_rpm'
     end
