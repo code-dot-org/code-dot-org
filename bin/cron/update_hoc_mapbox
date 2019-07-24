@@ -20,8 +20,7 @@ require_relative 'upload_to_mapbox'
 
 DB_READONLY = Sequel.connect(CDO.pegasus_db_reader.sub('mysql:', 'mysql2:'))
 
-#CURRENT_HOC_SIGNUP = "HocSignup#{DCDO.get('hoc_year', 2017)}".freeze
-CURRENT_HOC_SIGNUP = "VolunteerEngineerSubmission2015"
+CURRENT_HOC_SIGNUP = "HocSignup#{DCDO.get('hoc_year', 2017)}".freeze
 
 geojson = JSON.parse('{ "type": "FeatureCollection", "features": [] }')
 
