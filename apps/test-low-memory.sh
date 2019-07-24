@@ -1,6 +1,7 @@
 #!/bin/bash
 set -e
 
+MEM_PER_PROCESS=4096
 GRUNT_CMD="node --max_old_space_size=${MEM_PER_PROCESS} `npm bin`/grunt"
 
 if [ -n "$DRONE" ]; then
@@ -16,9 +17,6 @@ else
   LOG='&& :' # stub
 fi
 
-MEM_PER_PROCESS=4096
-NPROC=$(nproc)
-
 # Use MemAvailable when available, otherwise fall back to MemFree
 if grep -q MemAvailable /proc/meminfo; then
   MEM_METRIC=MemAvailable
@@ -28,6 +26,7 @@ fi
 
 # Don't run more processes than can fit in free memory.
 MEM_PROCS=$(awk "/${MEM_METRIC}/ {printf \"%d\", \$2/1024/${MEM_PER_PROCESS}}" /proc/meminfo)
+NPROC=$(nproc)
 PROCS=$(( ${MEM_PROCS} < ${NPROC} ? ${MEM_PROCS} : ${NPROC} ))
 
 if [ $PROCS -eq 0 ]; then
