@@ -34,7 +34,7 @@ def put_file_on_s3(tileset_path, credentials)
   obj.upload_file(tileset_path)
 end
 
-# Return upload response code so that it can be logged
+# Return true if the upload completed without errors
 def upload_maptiles(tileset_path, tileset_name)
   credentials = create_upload_credentials
   return false unless put_file_on_s3(tileset_path, credentials)
