@@ -1105,7 +1105,9 @@ GameLab.prototype.onP5ExecutionStarting = function() {
  */
 GameLab.prototype.onP5Preload = function() {
   Promise.all([
-    this.preloadAnimations_(this.level.pauseAnimationsByDefault),
+    this.isSpritelab
+      ? this.preloadSpriteImages_()
+      : this.preloadAnimations_(this.level.pauseAnimationsByDefault),
     this.maybePreloadBackgrounds_(),
     this.runPreloadEventHandler_()
   ]).then(() => {
@@ -1152,6 +1154,12 @@ GameLab.prototype.preloadAnimations_ = async function(
   );
 };
 
+GameLab.prototype.preloadSpriteImages_ = async function() {
+  await this.whenAnimationsAreReady();
+  return this.gameLabP5.preloadSpriteImages(
+    getStore().getState().animationList
+  );
+};
 /**
  * Check whether all animations in the project animation list have been loaded
  * into memory and are ready to use.
