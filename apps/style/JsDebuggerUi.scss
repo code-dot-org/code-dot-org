@@ -44,6 +44,9 @@
   opacity: 1;
 }
 
+// When opening the debug console with the ellipsis, the codeTextbox sometimes
+// renders over the debug console. Setting the z-index to 2 is a work-around for
+// this issue. See JsDebugger.jsx.
 $debug-area-initial-height: 43px;
 #debug-area {
   position: absolute;
