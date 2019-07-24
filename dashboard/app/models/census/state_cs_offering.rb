@@ -83,7 +83,7 @@ class Census::StateCsOffering < ApplicationRecord
     HI
   ).freeze
 
-  # The following states use the "V2" format for CSV files in 2017-2018.
+  # The following states use the "V2" format for CSV files in 2018-2019.
   STATES_USING_FORMAT_V2_IN_2018_19 = %w(
     AK
     AR
