@@ -132,8 +132,6 @@ class Api::V1::Census::CensusController < ApplicationController
     errors.merge!(submission.errors) unless submission.nil? || submission.valid?
 
     # Only new records can be saved.
-    # Note if desired behavior changes, remember to remove condition
-    # to allow update on existing records.
     if errors.empty?
       ActiveRecord::Base.transaction do
         school_info.save! if school_info&.new_record?
