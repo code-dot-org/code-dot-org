@@ -233,7 +233,7 @@ class User < ActiveRecord::Base
 
   has_many :user_school_infos
   after_save :update_and_add_users_school_infos, if: :school_info_id_changed?
-  validate :complete_school_info, if: :school_info_id_changed?
+  validate :complete_school_info, if: :school_info_id_changed?, unless: proc {|u| u.purged_at.present?}
 
   has_one :circuit_playground_discount_application
 
