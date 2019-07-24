@@ -3,6 +3,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {Table, DropdownButton, MenuItem} from 'react-bootstrap';
 import ConfirmationDialog from '../../components/confirmation_dialog';
+import MoveEnrollmentsDialog from './move_enrollments_dialog';
 import {enrollmentShape} from '../types';
 import {workshopEnrollmentStyles as styles} from '../workshop_enrollment_styles';
 import {ScholarshipDropdown} from '../../components/scholarshipDropdown';
@@ -116,12 +117,15 @@ export class WorkshopEnrollmentSchoolInfo extends React.Component {
   }
 
   handleClickMoveEnrollments() {
-    // check what enrollments are selected to see if delete is a valid option
     // when you click a specific action, apply it to all enrollments whose
     // ids are in list of selected enrollments in state
+    // open a dialog with a text box
+    return (
+      <MoveEnrollmentsDialog
+        selectedEnrollments={this.state.selectedEnrollments}
+      />
+    );
   }
-
-  handleClickDeleteEnrollments() {}
 
   formatCsfCourseExperience(csf_course_experience) {
     if (!csf_course_experience) {
