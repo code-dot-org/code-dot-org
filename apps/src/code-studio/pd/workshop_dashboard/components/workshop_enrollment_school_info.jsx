@@ -296,9 +296,6 @@ export class WorkshopEnrollmentSchoolInfo extends React.Component {
                   <MenuItem onSelect={this.handleClickMoveEnrollments}>
                     Move
                   </MenuItem>
-                  <MenuItem onSelect={this.handleClickDeleteEnrollments}>
-                    Delete
-                  </MenuItem>
                 </DropdownButton>
               </th>
             )}
