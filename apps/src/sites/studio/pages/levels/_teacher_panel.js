@@ -24,7 +24,7 @@ function initPage() {
   const store = getStore();
 
   initViewAs(store);
-  queryLockStatus(store);
+  queryLockStatus(store, teacherPanelData.script_id);
   store.dispatch(getHiddenStages(teacherPanelData.script_name, false));
   if (teacherPanelData.is_verified_teacher) {
     store.dispatch(setVerified());
