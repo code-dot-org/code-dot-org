@@ -11,15 +11,17 @@ require 'rest-client'
 
 def create_upload_credentials
   puts "Creating credentials"
-  response = RestClient.post("https://api.mapbox.com/uploads/v1/bethanycodeorg/credentials?access_token=#{CDO.mapbox_upload_token}", {})
+  response = RestClient.post("https://api.mapbox.com/uploads/v1/codeorg/credentials?access_token=#{CDO.mapbox_upload_token}", {})
   JSON.parse(response.body)
 end
 
+# Returns response code
 def create_upload(config)
   puts "Creating upload"
-  RestClient.post("https://api.mapbox.com/uploads/v1/bethanycodeorg?access_token=#{CDO.mapbox_upload_token}", config.to_json, {content_type: :json, accept: :json})
+  RestClient.post("https://api.mapbox.com/uploads/v1/codeorg?access_token=#{CDO.mapbox_upload_token}", config.to_json, {content_type: :json, accept: :json}).code
 end
 
+# Return true if upload was successful
 def put_file_on_s3(tileset_path, credentials)
   puts "Putting file on s3"
   s3_client = Aws::S3::Resource.new(
@@ -32,14 +34,16 @@ def put_file_on_s3(tileset_path, credentials)
   obj.upload_file(tileset_path)
 end
 
+# Return upload response code so that it can be logged
 def upload_maptiles(tileset_path, tileset_name)
   credentials = create_upload_credentials
-  put_file_on_s3(tileset_path, credentials)
-  create_upload(
+  return false unless put_file_on_s3(tileset_path, credentials)
+  response_code = create_upload(
     {
       url: credentials['url'],
-      tileset: "bethanycodeorg.#{tileset_name}",
-      name: "bethanycodeorg.#{tileset_name}"
+      tileset: "codeorg.#{tileset_name}",
+      name: "codeorg.#{tileset_name}"
     }
   )
+  return response_code == 200
 end
