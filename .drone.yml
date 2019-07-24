@@ -56,12 +56,15 @@ steps:
       from_secret: CLOUDFRONT_KEY_PAIR_ID
     CLOUDFRONT_PRIVATE_KEY:
       from_secret: CLOUDFRONT_PRIVATE_KEY
+    CODECOV_TOKEN:
+      from_secret: CODECOV_TOKEN
   commands:
     # If running on EC2, get hostname from ec2 metadata
     - hostname=$(curl -s --max-time 3 http://169.254.169.254/latest/meta-data/public-hostname || echo $DRONE_RUNNER_HOSTNAME); echo "Running on $hostname"
     - sudo chown -R circleci:circleci .
     # cache is restored to source directory, so we need to copy it into the right place
     - cp -rn "$(pwd)/home/circleci/.rbenv" /home/circleci || true
+    - rm -rf "$(pwd)/home/circleci/.rbenv"
     # Depended on by CircleUtils: https://github.com/code-dot-org/code-dot-org/blob/56c4061afb55432ba8ccecc72b5b960ebd9480aa/lib/cdo/circle_utils.rb#L19
     - export CIRCLE_SHA1=$DRONE_COMMIT
     - /entrypoint.sh docker/unit_tests.sh
@@ -196,6 +199,6 @@ trigger:
   - pull_request
 ---
 kind: signature
-hmac: 268b4c8338918bc7f7e71313badeba5e8267cf568f8dd9ca8ef934a412e4b3b3
+hmac: 79d4be8e9397ef07b8896318ddfc617abda7f25e95a773604ddad6865c531d9e
 
 ...

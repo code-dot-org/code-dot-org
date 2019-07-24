@@ -7,6 +7,7 @@ import {GAME_HEIGHT, GameLabInterfaceMode} from './constants';
 import {animationSourceUrl} from './animationListModule';
 import {changeInterfaceMode} from './actions';
 import {Goal, show} from './AnimationPicker/animationPickerModule';
+import i18n from '@cdo/locale';
 
 function sprites() {
   const animationList = getStore().getState().animationList;
@@ -122,7 +123,8 @@ const customInputTypes = {
             Blockly.Msg.VARIABLES_SET_ITEM,
             null,
             null,
-            Blockly.BlockValueType.LOCATION
+            Blockly.BlockValueType.LOCATION,
+            null
           ),
           inputConfig.name
         )
@@ -240,7 +242,8 @@ const customInputTypes = {
             null,
             null,
             null,
-            Blockly.BlockValueType.SPRITE
+            Blockly.BlockValueType.SPRITE,
+            i18n.sprite()
           ),
           inputConfig.name
         );
@@ -312,7 +315,8 @@ export default {
                   Blockly.Msg.VARIABLES_SET_ITEM,
                   null,
                   null,
-                  Blockly.BlockValueType.SPRITE
+                  Blockly.BlockValueType.SPRITE,
+                  i18n.sprite()
                 ),
             'VAR'
           )
