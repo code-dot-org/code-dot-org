@@ -59,6 +59,11 @@ namespace :circle do
       next
     end
 
+    # Lint everything but javascript, which is done as part of apps tests
+    Rake::Task['lint:ruby'].invoke
+    Rake::Task['lint:haml'].invoke
+    Rake::Task['lint:scss'].invoke
+
     if CircleUtils.tagged?(RUN_ALL_TESTS_TAG)
       ChatClient.log "Commit message: '#{CircleUtils.circle_commit_message}' contains [#{RUN_ALL_TESTS_TAG}], force-running all tests."
       RakeUtils.rake_stream_output 'test:all'
