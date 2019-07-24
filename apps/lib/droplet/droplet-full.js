@@ -9517,16 +9517,14 @@ Editor.prototype.performMeltAnimation = function(fadeTime, translateTime, cb) {
       return function() {
         var l, len1;
         _this.dropletElement.style.transition = '';
-        _this.aceElement.style.top = '0px';
-        _this.aceElement.style.bottom = '0px';
+        _this.aceElement.style.top = _this.aceElement.style.right = _this.aceElement.style.bottom = '0px';
         if (_this.session.showPaletteInTextMode && _this.session.paletteEnabled) {
           _this.aceElement.style.left = _this.paletteWrapper.clientWidth + "px";
         } else {
           _this.aceElement.style.left = '0px';
         }
-        _this.dropletElement.style.top = '-9999px';
-        _this.dropletElement.style.bottom = '9999px';
-        _this.dropletElement.style.left = '-9999px';
+        _this.dropletElement.style.top = _this.dropletElement.style.left = '-9999px';
+        _this.dropletElement.style.bottom = _this.dropletElement.style.right = '9999px';
         _this.currentlyAnimating = false;
         _this.showScrollbars();
         for (l = 0, len1 = translatingElements.length; l < len1; l++) {
@@ -9598,16 +9596,14 @@ Editor.prototype.performFreezeAnimation = function(fadeTime, translateTime, cb) 
           noText: true
         });
         _this.currentlyAnimating_suppressRedraw = true;
-        _this.aceElement.style.top = "-9999px";
-        _this.aceElement.style.bottom = "9999px";
-        _this.aceElement.style.left = "-9999px";
+        _this.aceElement.style.top = _this.aceElement.style.left = "-9999px";
+        _this.aceElement.style.bottom = _this.aceElement.style.right = "9999px";
         paletteAppearingWithFreeze = _this.session.paletteEnabled && !_this.session.showPaletteInTextMode;
         if (paletteAppearingWithFreeze) {
           _this.paletteWrapper.style.top = '0px';
           _this.paletteHeader.style.zIndex = 0;
         }
-        _this.dropletElement.style.top = "0px";
-        _this.dropletElement.style.bottom = "0px";
+        _this.dropletElement.style.top = _this.dropletElement.style.right = _this.dropletElement.style.bottom = "0px";
         if (_this.session.paletteEnabled && !paletteAppearingWithFreeze) {
           _this.dropletElement.style.left = _this.paletteWrapper.clientWidth + "px";
         } else {
@@ -10100,8 +10096,7 @@ Editor.prototype.setEditorState = function(useBlocks) {
     if (!this.session.currentlyUsingBlocks) {
       this.setValue_raw(this.getAceValue());
     }
-    this.dropletElement.style.top = '0px';
-    this.dropletElement.style.bottom = '0px';
+    this.dropletElement.style.top = this.dropletElement.style.right = this.dropletElement.style.bottom = '0px';
     if (this.session.paletteEnabled) {
       this.paletteWrapper.style.top = this.paletteWrapper.style.left = '0px';
       this.dropletElement.style.left = this.paletteWrapper.clientWidth + "px";
@@ -10110,7 +10105,7 @@ Editor.prototype.setEditorState = function(useBlocks) {
       this.dropletElement.style.left = '0px';
     }
     this.aceElement.style.top = this.aceElement.style.left = '-9999px';
-    this.aceElement.style.bottom = '9999px';
+    this.aceElement.style.bottom = this.aceElement.style.right = '9999px';
     this.session.currentlyUsingBlocks = true;
     this.lineNumberWrapper.style.display = 'block';
     this.mainCanvas.style.opacity = this.highlightCanvas.style.opacity = 1;
@@ -10130,10 +10125,9 @@ Editor.prototype.setEditorState = function(useBlocks) {
     this.aceEditor.resize(true);
     this.aceEditor.session.setScrollTop(oldScrollTop);
     this.dropletElement.style.top = this.dropletElement.style.left = '-9999px';
-    this.dropletElement.style.bottom = '9999px';
+    this.dropletElement.style.bottom = this.dropletElement.style.right = '9999px';
     this.paletteWrapper.style.top = this.paletteWrapper.style.left = '0px';
-    this.aceElement.style.top = '0px';
-    this.aceElement.style.bottom = '0px';
+    this.aceElement.style.top = this.aceElement.style.right = this.aceElement.style.bottom = '0px';
     if (paletteVisibleInNewState) {
       this.aceElement.style.left = this.paletteWrapper.clientWidth + "px";
     } else {
