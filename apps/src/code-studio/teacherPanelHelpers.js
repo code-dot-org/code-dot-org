@@ -60,9 +60,11 @@ export function renderTeacherPanel(
  * Query the server for lock status of this teacher's students
  * @returns {Promise} when finished
  */
-export function queryLockStatus(store) {
+export function queryLockStatus(store, scriptId) {
   return new Promise((resolve, reject) => {
-    $.ajax('/api/lock_status').done(data => {
+    $.ajax('/api/lock_status', {
+      data: {script_id: scriptId}
+    }).done(data => {
       // Extract the state that teacherSectionsRedux cares about
       const teacherSections = Object.values(data).map(section => ({
         id: section.section_id,
