@@ -1,19 +1,10 @@
 #!/bin/bash
 set -e
 
-MEM_PER_PROCESS=4096
 GRUNT_CMD="node --max_old_space_size=${MEM_PER_PROCESS} `npm bin`/grunt"
 
 if [ -n "$DRONE" ]; then
-  NPROC=4
   mkdir -p log
-  cat <<STR
-###################################################################
-#                                                                 #
-#   See 'apps-test-log' under the artifacts tab for test output   #
-#                                                                 #
-###################################################################
-STR
   CODECOV=/tmp/codecov.sh
   curl -s https://codecov.io/bash > ${CODECOV}
   chmod +x ${CODECOV}
@@ -21,13 +12,22 @@ STR
   LOG='&& :' # stub
 else
   # For non-Circle runs, stub-out codecov and logging to files.
-  NPROC=$(nproc)
   CODECOV=: # stub
   LOG='&& :' # stub
 fi
 
+MEM_PER_PROCESS=4096
+NPROC=$(nproc)
+
+# Use MemAvailable when available, otherwise fall back to MemFree
+if grep -q MemAvailable /proc/meminfo; then
+  MEM_METRIC=MemAvailable
+else
+  MEM_METRIC=MemFree
+fi
+
 # Don't run more processes than can fit in free memory.
-MEM_PROCS=$(awk "/MemFree/ {printf \"%d\", \$2/1024/${MEM_PER_PROCESS}}" /proc/meminfo)
+MEM_PROCS=$(awk "/${MEM_METRIC}/ {printf \"%d\", \$2/1024/${MEM_PER_PROCESS}}" /proc/meminfo)
 PROCS=$(( ${MEM_PROCS} < ${NPROC} ? ${MEM_PROCS} : ${NPROC} ))
 
 if [ $PROCS -eq 0 ]; then
@@ -35,6 +35,8 @@ if [ $PROCS -eq 0 ]; then
   echo "Warning: There may not be enough free memory to run tests. Required: ${MEM_PER_PROCESS}KB; Free: ${FREE_KB}KB"
   PROCS=1
 fi
+
+echo "Running with parallelism: ${PROCS}"
 
 $GRUNT_CMD preconcat
 
