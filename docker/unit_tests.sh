@@ -14,9 +14,6 @@ export RACK_ENV=test
 export DISABLE_SPRING=1
 export LD_LIBRARY_PATH=/usr/local/lib
 
-# rbenv-doctor https://github.com/rbenv/rbenv-installer#readme
-curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-doctor | bash
-
 mispipe "bundle install --verbose" ts
 
 # set up locals.yml
