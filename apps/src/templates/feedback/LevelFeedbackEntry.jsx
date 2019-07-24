@@ -55,7 +55,8 @@ const styles = {
   },
   iconBox: {
     float: 'left',
-    paddingLeft: 25
+    paddingLeft: 25,
+    cursor: 'pointer'
   },
   commentBox: {
     float: 'left',
@@ -70,10 +71,12 @@ const measureElement = element => {
   };
 };
 
+const initialCommentHeight = 60;
+
 export default class LevelFeedbackEntry extends Component {
   state = {
     expanded: false,
-    commentHeight: 60
+    commentHeight: initialCommentHeight
   };
 
   static propTypes = {feedback: shapes.feedback};
@@ -91,7 +94,7 @@ export default class LevelFeedbackEntry extends Component {
       this.setState({commentHeight: measureElement(this.comment).height});
   }
 
-  longComment = () => this.state.commentHeight > 60;
+  longComment = () => this.state.commentHeight > initialCommentHeight;
 
   render() {
     const {
@@ -109,6 +112,7 @@ export default class LevelFeedbackEntry extends Component {
 
     const seenByStudent = seen_on_feedback_page_at || student_first_visited_at;
 
+    // These heights ensure that up to two lines of the comment will be visible, and a 'sneak peak' of the third line for long comments.
     const baseHeight = performance && comment.length > 2 ? 132 : 112;
 
     const style = {
