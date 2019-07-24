@@ -133,7 +133,7 @@ class Api::V1::Census::CensusController < ApplicationController
 
     # Only new records can be saved.
     # Note if desired behavior changes, remember to remove condition
-    # to allow update on existing records.Note: remove condition if exsit
+    # to allow update on existing records.
     if errors.empty?
       ActiveRecord::Base.transaction do
         school_info.save! if school_info.new_record?
