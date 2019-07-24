@@ -17,11 +17,11 @@ module Pd
       # on JotForm's site.
       # https://www.jotform.com/answers/1894693-Fields-values-do-not-update-while-changing-the-values-on-URL-parameters-if-autofill-is-enabled-
       JOTFORM_EXPERIMENTAL_REDIRECT_FORMS = [
-        '90986506471163'.to_i, # 2019 Five-Day Workshop Survey - Day 1
-        '90986458251165'.to_i, # 2019 Five-Day Workshop Survey - Day 2
-        '90986477669179'.to_i, # 2019 Five-Day Workshop Survey - Day 3
-        '90986953273169'.to_i, # 2019 Five-Day Workshop Survey - Day 4
-        '91372090131144'.to_i  # 2019 K-12 Facilitator {facilitatorPosition} of {numFacilitators}
+        '90986506471163', # 2019 Five-Day Workshop Survey - Day 1
+        '90986458251165', # 2019 Five-Day Workshop Survey - Day 2
+        '90986477669179', # 2019 Five-Day Workshop Survey - Day 3
+        '90986953273169', # 2019 Five-Day Workshop Survey - Day 4
+        '91372090131144'  # 2019 K-12 Facilitator {facilitatorPosition} of {numFacilitators}
       ]
 
       # If the DCDO setting 'jotform_redirect' is enabled,
