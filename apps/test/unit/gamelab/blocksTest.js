@@ -1,5 +1,5 @@
 import {expect} from '../../util/configuredChai';
-import {sprites} from '@cdo/apps/gamelab/blocks';
+import {sprites} from '@cdo/apps/p5lab/blocks';
 import {
   registerReducers,
   stubRedux,
@@ -9,7 +9,7 @@ import {
 import reducer, {
   setInitialAnimationList,
   animationSourceUrl
-} from '@cdo/apps/gamelab/animationListModule';
+} from '@cdo/apps/p5lab/animationListModule';
 import {setPageConstants} from '@cdo/apps/redux/pageConstants';
 import commonReducers from '@cdo/apps/redux/commonReducers';
 

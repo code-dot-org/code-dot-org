@@ -5,7 +5,7 @@ const gamelabMsg = require('@cdo/gamelab/locale');
 import {
   WarningLabel,
   UnconnectedAnimationPickerBody as AnimationPickerBody
-} from '@cdo/apps/gamelab/AnimationPicker/AnimationPickerBody';
+} from '@cdo/apps/p5lab/AnimationPicker/AnimationPickerBody';
 
 const emptyFunction = function() {};
 

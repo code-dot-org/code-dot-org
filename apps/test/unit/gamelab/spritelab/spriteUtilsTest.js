@@ -2,8 +2,8 @@
 import {expect} from '../../../util/reconfiguredChai';
 import {stub} from 'sinon';
 import createGameLabP5 from '../../../util/gamelab/TestableGameLabP5';
-import * as spriteUtils from '@cdo/apps/gamelab/spritelab/spriteUtils';
-import {commands as spriteCommands} from '@cdo/apps/gamelab/spritelab/spriteCommands';
+import * as spriteUtils from '@cdo/apps/p5lab/spritelab/spriteUtils';
+import {commands as spriteCommands} from '@cdo/apps/p5lab/spritelab/spriteCommands';
 
 describe('Sprite Utils', () => {
   let gameLabP5, createSprite, animation;

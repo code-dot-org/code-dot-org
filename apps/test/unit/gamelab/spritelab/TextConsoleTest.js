@@ -1,6 +1,6 @@
 import React from 'react';
 import {expect} from '../../../util/reconfiguredChai';
-import TextConsole from '@cdo/apps/gamelab/TextConsole';
+import TextConsole from '@cdo/apps/p5lab/TextConsole';
 import {mount} from 'enzyme';
 import sinon from 'sinon';
 
