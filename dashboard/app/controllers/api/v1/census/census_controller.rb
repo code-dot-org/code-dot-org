@@ -136,7 +136,7 @@ class Api::V1::Census::CensusController < ApplicationController
     # to allow update on existing records.
     if errors.empty?
       ActiveRecord::Base.transaction do
-        school_info.save! if school_info.new_record?
+        school_info.save! if school_info&.new_record?
         submission.save!
       end
       if template
