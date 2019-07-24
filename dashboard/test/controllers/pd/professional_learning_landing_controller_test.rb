@@ -124,6 +124,8 @@ class Pd::ProfessionalLearningLandingControllerTest < ::ActionController::TestCa
   end
 
   test 'Facilitator workshops do not interfere with other pending exit surveys' do
+    skip 'Investigate flaky test failures'
+    
     # Fake CSF workshop (older than the Facilitator workshop) which should
     # produce a pending exit survey
     csf_workshop = create :pd_ended_workshop,
