@@ -1,0 +1,34 @@
+distcode,LEA_NAME,schcode,SCH_NAME,localcoursetitle,scedcourse,itemValueName,Student Count
+04,Central Falls,04108,Blackstone Valley Prep High School,COMPUTER SCIENCE 1A,10012,Exploring Computer Science,64
+04,Central Falls,04108,Central Falls Senior High School,COMPUTER SCIENCE 1B,10012,Exploring Computer Science,19
+20,Narragansett,20103,Central Falls Senior High School,Computer Science I 7,10012,Exploring Computer Science,109
+20,Narragansett,20103,Chariho Regional High School,Computer Science II 8,10012,Exploring Computer Science,122
+25,North Smithfield,25108,Chariho Regional High School,Intro to Computing,10012,Exploring Computer Science,34
+25,North Smithfield,25108,Chariho Regional High School,AP Computer Sci. Prin. A,10019,AP Computer Science Principles,15
+25,North Smithfield,25108,Chariho Regional High School,AP Computer Sci. Prin. B,10019,AP Computer Science Principles,13
+27,Portsmouth,27106,Chariho Regional High School,AP Computer Science,10019,AP Computer Science Principles,7
+30,Scituate,30105,Chariho Regional High School,Comp. Sci. for Innovators - 6,10012,Exploring Computer Science,81
+30,Scituate,30105,Chariho Regional High School,Comp. Sci. for Innovators - 7,10012,Exploring Computer Science,107
+30,Scituate,30105,Chariho Regional High School,Comp. Sci. for Innovators - 8,10012,Exploring Computer Science,111
+32,South Kingstown,32108,Exeter-West Greenwich Regional High School,INTRO TO COMPUTER SCIENCE,10012,Exploring Computer Science,50
+32,South Kingstown,32108,Exeter-West Greenwich Regional High School,AP COMPUTER SCIENCE PRINCIPLES,10019,AP Computer Science Principles,26
+35,Warwick,35139,Narragansett Pier School,Computer Science 1,10012,Exploring Computer Science,71
+35,Warwick,35139,Narragansett Pier School,Computer Science 2,10012,Exploring Computer Science,9
+35,Warwick,35142,North Smithfield High School,Computer Science 1,10012,Exploring Computer Science,175
+35,Warwick,35142,North Smithfield High School,Computer Science 2,10012,Exploring Computer Science,11
+36,Westerly,36104,North Smithfield High School,INTRO TO COMPUTING,10012,Exploring Computer Science,73
+36,Westerly,36104,Paul Cuffee Charter School,PHYSICAL COMPUTING,10012,Exploring Computer Science,1
+36,Westerly,36104,Portsmouth High School,CSC101 COMPUTING CONCEPTS,10019,AP Computer Science Principles,8
+36,Westerly,36104,Scituate Middle School,CSC106 THE JOY OF PROGRAMMING,10019,AP Computer Science Principles,8
+47,"Blackstone Valley Prep, A RI Mayoral Academy",08604,Scituate Middle School,AP Computer Science Principles,10019,AP Computer Science Principles,15
+51,Paul Cuffee Charter Sch,28602,Scituate Middle School,COMPUTER SCIENCE,10012,Exploring Computer Science,41
+97,Exeter-West Greenwich,97106,South Kingstown High School,AP Computer Science Principles,10019,AP Computer Science Principles,11
+97,Exeter-West Greenwich,97106,South Kingstown High School,AP Computer Science Principles .5,10019,AP Computer Science Principles,11
+98,Chariho,98101,Warwick Veterans Middle School,Comp Tech I: Exploration & Game Design,10012,Exploring Computer Science,42
+98,Chariho,98101,Warwick Veterans Middle School,Computer Tech & Game Design II,10012,Exploring Computer Science,17
+98,Chariho,98101,Westerly High School,Computer Tech & Game Design IIF,10012,Exploring Computer Science,16
+98,Chariho,98101,Westerly High School,Computer Tech & Game Design III,10012,Exploring Computer Science,18
+98,Chariho,98101,Westerly High School,Computer Tech & Game Design IS,10012,Exploring Computer Science,13
+98,Chariho,98101,Westerly High School,Intro. to Coding CP,10012,Exploring Computer Science,29
+98,Chariho,98101,Winman Middle School,Robotics,10012,Exploring Computer Science,30
+98,Chariho,98101,Winman Middle School,AP Computer Science Principles,10019,AP Computer Science Principles,18
