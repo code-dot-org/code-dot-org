@@ -353,9 +353,10 @@ GameLab.prototype.init = function(config) {
     this.setCrosshairCursorForPlaySpace();
 
     if (this.isSpritelab) {
-      this.studioApp_.addChangeHandler(
-        this.gameLabP5.spritelab.preview.bind(this)
-      );
+      this.studioApp_.addChangeHandler(() => {
+        this.reset();
+        this.gameLabP5.spritelab.preview.apply(this);
+      });
     }
   };
 
