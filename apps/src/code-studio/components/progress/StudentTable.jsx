@@ -4,6 +4,7 @@ import Radium from 'radium';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 import {TeacherPanelProgressBubble} from '@cdo/apps/code-studio/components/progress/TeacherPanelProgressBubble';
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
 
 const styles = {
   table: {
@@ -40,6 +41,9 @@ const styles = {
   },
   nameWithBubble: {
     paddingLeft: 5
+  },
+  linkIcon: {
+    marginLeft: 10
   }
 };
 
@@ -113,6 +117,13 @@ class StudentTable extends React.Component {
                   >
                     {student.name}
                   </span>
+                  <a
+                    href={this.getRowLink(student.id)}
+                    target="_blank"
+                    style={styles.linkIcon}
+                  >
+                    <FontAwesome icon="external-link" />
+                  </a>
                 </div>
               </td>
             </tr>
