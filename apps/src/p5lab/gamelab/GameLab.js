@@ -2,6 +2,7 @@ import $ from 'jquery';
 import _ from 'lodash';
 import React from 'react';
 import ReactDOM from 'react-dom';
+import P5Lab from '../P5Lab';
 import {changeInterfaceMode, viewAnimationJson} from './actions';
 import {startInAnimationTab} from './stateQueries';
 import {
@@ -101,6 +102,7 @@ const DRAW_LOOP_MEASURE = 'drawLoop';
  * @implements LogTarget
  */
 var GameLab = function() {
+  P5Lab.call(this);
   this.skin = null;
   this.level = null;
   this.tickIntervalId = 0;
@@ -169,6 +171,8 @@ var GameLab = function() {
     getStore().dispatch(addConsoleMessage(spriteMessage));
   };
 };
+
+GameLab.prototype = Object.create(P5Lab.prototype);
 
 module.exports = GameLab;
 
