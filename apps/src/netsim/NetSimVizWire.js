@@ -8,6 +8,7 @@ var NetSimVizElement = require('./NetSimVizElement');
 var tweens = require('./tweens');
 var DataConverters = require('./DataConverters');
 var NetSimConstants = require('./NetSimConstants');
+var NetSimGlobals = require('./NetSimGlobals');
 
 var EncodingType = NetSimConstants.EncodingType;
 
@@ -29,6 +30,8 @@ var TEXT_FINAL_VERTICAL_OFFSET = -10;
 var NetSimVizWire = (module.exports = function(localNode, remoteNode) {
   NetSimVizElement.call(this);
 
+  this.alwaysShowWireState = NetSimGlobals.getLevelConfig().automaticReceive;
+
   var root = this.getRoot();
   root.addClass('viz-wire');
 
@@ -37,6 +40,16 @@ var NetSimVizWire = (module.exports = function(localNode, remoteNode) {
    * @private
    */
   this.line_ = jQuerySvgElement('path').appendTo(root);
+
+  /**
+   * @type {jQuery} wrapped around a SVGTextElement
+   * @private
+   */
+
+  this.questionMark_ = jQuerySvgElement('text')
+    .text('?')
+    .addClass('question-mark')
+    .appendTo(root);
 
   /**
    * @type {jQuery} wrapped around a SVGTextElement
@@ -108,6 +121,7 @@ NetSimVizWire.prototype.render = function(clock) {
   var textPosX = this.textPosX_;
   var textPosY = this.textPosY_;
   var pathData = this.pathData_;
+  var wireCenter = this.wireCenter_;
 
   // Make the call to super to update everything we can, then
   // recalculate the values of ours that are dependent on the movement
@@ -138,6 +152,14 @@ NetSimVizWire.prototype.render = function(clock) {
   }
   if (pathData !== this.pathData_) {
     this.line_.attr('d', this.pathData_);
+  }
+  if (
+    wireCenter.x !== this.wireCenter_.x ||
+    wireCenter.y !== this.wireCenter_.y
+  ) {
+    this.questionMark_
+      .attr('x', this.wireCenter_.x)
+      .attr('y', this.wireCenter_.y);
   }
 };
 
@@ -190,6 +212,15 @@ NetSimVizWire.prototype.animateSetState = function(newState) {
     flyOutMs,
     tweens.easeOutQuad
   );
+  if (!this.alwaysShowWireState) {
+    var holdPositionMs = 300;
+    this.doAfterDelay(
+      flyOutMs + holdPositionMs,
+      function() {
+        this.setWireClasses_('unknown');
+      }.bind(this)
+    );
+  }
 };
 
 NetSimVizWire.prototype.setWireState = function(newState) {
@@ -225,12 +256,16 @@ NetSimVizWire.prototype.animateReadState = function(newState) {
         flyToNodeMs,
         tweens.easeOutQuad
       );
-      this.doAfterDelay(
-        holdPositionMs,
-        function() {
-          this.snapTextToPosition(this.getWireCenterPosition());
-        }.bind(this)
-      );
+      if (this.alwaysShowWireState) {
+        this.doAfterDelay(
+          holdPositionMs,
+          function() {
+            this.snapTextToPosition(this.getWireCenterPosition());
+          }.bind(this)
+        );
+      } else {
+        this.setWireClasses_('unknown');
+      }
     }.bind(this)
   );
 };
@@ -334,13 +369,6 @@ NetSimVizWire.prototype.getLocalNodePosition = function() {
   return {
     x: this.localVizNode.posX,
     y: this.localVizNode.posY
-  };
-};
-
-NetSimVizWire.prototype.getRemoteNodePosition = function() {
-  return {
-    x: this.remoteVizNode.posX,
-    y: this.remoteVizNode.posY
   };
 };
 
