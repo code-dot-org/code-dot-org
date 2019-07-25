@@ -204,7 +204,7 @@ P5Lab.prototype.injectStudioApp = function(studioApp) {
  */
 P5Lab.prototype.init = function(config) {
   if (!this.studioApp_) {
-    throw new Error('GameLab requires a StudioApp');
+    throw new Error('P5Lab requires a StudioApp');
   }
 
   this.isSpritelab = this.studioApp_.isUsingBlockly();
