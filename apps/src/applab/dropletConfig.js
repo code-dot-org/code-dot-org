@@ -880,7 +880,6 @@ export var blocks = [
   },
   {
     func: 'insertItem',
-    parent: dontMarshalApi,
     category: 'Variables',
     paletteParams: ['list', 'index', 'item'],
     params: ['list', '2', '"c"'],
@@ -888,7 +887,6 @@ export var blocks = [
   },
   {
     func: 'appendItem',
-    parent: dontMarshalApi,
     category: 'Variables',
     paletteParams: ['list', 'item'],
     params: ['list', '"f"'],
@@ -896,7 +894,6 @@ export var blocks = [
   },
   {
     func: 'removeItem',
-    parent: dontMarshalApi,
     category: 'Variables',
     paletteParams: ['list', 'index'],
     params: ['list', '0'],

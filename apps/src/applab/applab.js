@@ -81,6 +81,7 @@ import {
   expoCancelApkBuild
 } from '../util/exporter';
 import {setExportGeneratedProperties} from '../code-studio/components/exportDialogRedux';
+let polyfillApi = require('!!raw-loader!./api.interpreted');
 
 /**
  * Create a namespace for the application.
@@ -1154,7 +1155,7 @@ Applab.execute = function() {
 
   // Set event handlers and start the onTick timer
 
-  var codeWhenRun = '';
+  var codeWhenRun = polyfillApi;
   if (level.helperLibraries) {
     codeWhenRun +=
       level.helperLibraries.map(lib => studioApp().libraries[lib]).join('\n') +

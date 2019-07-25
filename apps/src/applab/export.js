@@ -1,4 +1,5 @@
 import * as api from './api';
+import * as polyfillApi from './api.interpreted';
 import {executors as audioExecutors} from '../lib/util/audioApi';
 import {executors as timeoutExecutors} from '../lib/util/timeoutApi';
 import * as dontMarshalApi from './dontMarshalApi';
@@ -10,6 +11,7 @@ export function getExportedGlobals() {
     audioExecutors,
     timeoutExecutors,
     dontMarshalApi,
+    polyfillApi,
     api
   );
   dropletGlobalConfigBlocks.forEach(block => {
