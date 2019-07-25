@@ -174,7 +174,7 @@ NetSimVizWire.prototype.setEncodings = function(newEncodings) {
  * Kick off an animation of the wire state being set by the local viznode.
  * @param {"0"|"1"} newState
  */
-NetSimVizWire.prototype.animateSetState = function(newState, fromRemote) {
+NetSimVizWire.prototype.animateSetState = function(newState) {
   if (!(this.localVizNode && this.remoteVizNode)) {
     return;
   }
@@ -184,9 +184,7 @@ NetSimVizWire.prototype.animateSetState = function(newState, fromRemote) {
   this.stopAllAnimation();
   this.setWireClasses_(newState);
   this.text_.text(this.getDisplayBit_(newState));
-  this.snapTextToPosition(
-    fromRemote ? this.getRemoteNodePosition() : this.getLocalNodePosition()
-  );
+  this.snapTextToPosition(this.getLocalNodePosition());
   this.tweenTextToPosition(
     this.getWireCenterPosition(),
     flyOutMs,
@@ -194,7 +192,7 @@ NetSimVizWire.prototype.animateSetState = function(newState, fromRemote) {
   );
 };
 
-NetSimVizWire.prototype.changeWireState = function(newState) {
+NetSimVizWire.prototype.setWireState = function(newState) {
   if (!(this.localVizNode && this.remoteVizNode)) {
     return;
   }
