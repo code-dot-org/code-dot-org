@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
-import Dialog, {Body} from '../templates/Dialog';
+import Dialog, {Body} from '@cdo/apps/templates/Dialog';
 import {hideAnimationJson} from './actions';
 
 const style = {

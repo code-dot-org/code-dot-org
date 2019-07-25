@@ -1,7 +1,7 @@
 /** Animation picker dialog search bar */
 import PropTypes from 'prop-types';
 import React from 'react';
-import color from '../../util/color';
+import color from '@cdo/apps/util/color';
 
 const BORDER_WIDTH = 1;
 const BORDER_COLOR = color.light_gray;

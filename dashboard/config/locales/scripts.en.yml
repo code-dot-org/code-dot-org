@@ -1155,6 +1155,8 @@ en:
               name: Pluralsight Test
             Externals Optionally Displayed as Unplugged:
               name: Externals Optionally Displayed as Unplugged
+            Bubble Choice:
+              name: Bubble Choice
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: 'Phase 2 Online: Blended Summer Study'
@@ -11798,6 +11800,20 @@ en:
               name: new stage
             Number Systems:
               name: Number Systems
+            Bit Sending Device:
+              name: Bit Sending Device
+            Flippy Do Pt 1:
+              name: Flippy Do Pt 1
+            Flippy Do Pt 2:
+              name: Flippy Do Pt 2
+            Sending Text:
+              name: Sending Text
+            Black and White Images:
+              name: Black and White Images
+            Color Images:
+              name: Color Images
+            Lossless Compression:
+              name: Lossless Compression
           title: CSP Unit 1 Pilot
           description_audience: ''
           description_short: ''
@@ -12066,6 +12082,20 @@ en:
               name: 'Project: Designing an App, pt. 4'
             'Project: Share Your App':
               name: 'Project: Share Your App'
+            'Project: Designing an App pt. 1':
+              name: 'Project: Designing an App pt. 1'
+            'Project: Designing an App pt. 2':
+              name: 'Project: Designing an App pt. 2'
+            Project - Designing an App Part 1:
+              name: Project - Designing an App Part 1
+            Project - Designing an App Part 2:
+              name: Project - Designing an App Part 2
+            Project - Designing an App Part 3:
+              name: Project - Designing an App Part 3
+            Project - Designing an App Part 4:
+              name: Project - Designing an App Part 4
+            The Need for Programming Languages:
+              name: The Need for Programming Languages
           title: 'Unit 3: Intro to App Development'
           description_audience: ''
           description_short: ''
@@ -12864,6 +12894,32 @@ en:
             new stage:
               name: new stage
           title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csp3-pilot:
+          stages:
+            Introduction to Apps:
+              name: Introduction to Apps
+            Introduction to Design Mode:
+              name: Introduction to Design Mode
+            Project - Designing an App Part 1:
+              name: Project - Designing an App Part 1
+            Project - Designing an App Part 2:
+              name: Project - Designing an App Part 2
+            Programs Investigate:
+              name: Programs Investigate
+            Programs Practice:
+              name: Programs Practice
+            Project - Designing an App Part 3:
+              name: Project - Designing an App Part 3
+            Project - Designing an App Part 4:
+              name: Project - Designing an App Part 4
+            'Project: Share Your App':
+              name: 'Project: Share Your App'
+            The Need for Programming Languages:
+              name: The Need for Programming Languages
+          title: 'Unit 3: Intro to App Design'
           description_audience: ''
           description_short: ''
           description: ''

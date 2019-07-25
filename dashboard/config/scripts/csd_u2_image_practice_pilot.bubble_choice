@@ -1,0 +1,7 @@
+name 'CSD U2 Image practice_pilot'
+display_name 'Adding Images'
+description 'Practice your new skills here.'
+
+sublevels
+level 'CSD U2 image debug match_pilot'
+

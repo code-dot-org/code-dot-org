@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import {createUuid} from '../../utils';
+import {createUuid} from '@cdo/apps/utils';
 import {connect} from 'react-redux';
-import BaseDialog from '../../templates/BaseDialog.jsx';
-import gamelabMsg from '@cdo/gamelab/locale';
+import BaseDialog from '@cdo/apps/templates/BaseDialog.jsx';
+var msg = require('@cdo/gamelab/locale') || require('@cdo/spritelab/locale');
 import styles from './styles';
 import {
   hide,
@@ -14,7 +14,7 @@ import {
   handleUploadError
 } from './animationPickerModule';
 import AnimationPickerBody from './AnimationPickerBody.jsx';
-import HiddenUploader from '../../code-studio/components/HiddenUploader';
+import HiddenUploader from '@cdo/apps/code-studio/components/HiddenUploader';
 
 // Some operating systems round their file sizes, so max size is 101KB even
 // though our error message says 100KB, to help users avoid confusion.
@@ -59,14 +59,10 @@ class AnimationPicker extends React.Component {
   renderVisibleBody() {
     if (this.props.uploadError) {
       return (
-        <h1>
-          {gamelabMsg.animationPicker_error({message: this.props.uploadError})}
-        </h1>
+        <h1>{msg.animationPicker_error({message: this.props.uploadError})}</h1>
       );
     } else if (this.props.uploadInProgress) {
-      return (
-        <h1 style={styles.title}>{gamelabMsg.animationPicker_uploading()}</h1>
-      );
+      return <h1 style={styles.title}>{msg.animationPicker_uploading()}</h1>;
     }
     return (
       <AnimationPickerBody
@@ -131,9 +127,7 @@ export default connect(
     },
     onUploadStart(data) {
       if (data.files[0].size >= MAX_UPLOAD_SIZE) {
-        dispatch(
-          handleUploadError(gamelabMsg.animationPicker_unsupportedSize())
-        );
+        dispatch(handleUploadError(msg.animationPicker_unsupportedSize()));
       } else if (
         data.files[0].type === 'image/png' ||
         data.files[0].type === 'image/jpeg'
@@ -141,9 +135,7 @@ export default connect(
         dispatch(beginUpload(data.files[0].name));
         data.submit();
       } else {
-        dispatch(
-          handleUploadError(gamelabMsg.animationPicker_unsupportedType())
-        );
+        dispatch(handleUploadError(msg.animationPicker_unsupportedType()));
       }
     },
     onUploadDone(result) {

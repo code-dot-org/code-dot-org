@@ -25,12 +25,15 @@ level 'CSP U3 L2 Design Mode Icons', progression: 'Design Mode Exploration'
 level 'CSP U3 L2 Design Mode ids', progression: 'Design Mode Exploration'
 level 'CSP U3 L2 Copy an App', progression: 'Copy an App'
 
-stage 'Project: Designing an App, pt. 1'
+stage 'Project - Designing an App Part 1'
 level 'CSP U3 L3 Check Your Understanding', progression: 'Check For Understanding'
 
-stage 'Project: Designing an App, pt. 2'
+stage 'Project - Designing an App Part 2'
 level 'CSP U3 Bird Quiz Storyboard', progression: 'Sample Prototype'
 level 'CSP U3 L4 Design Screens', progression: 'Build Your Screens'
+
+stage 'The Need for Programming Languages'
+level 'Temporary Need for Programming Languages SFLP CSP3 Pilot', progression: 'Lesson Overview'
 
 stage 'Programs Investigate'
 level 'U3 Program Investigate Sequential 1', progression: 'Code Investigation'
@@ -48,11 +51,11 @@ level 'U3 Program Practice Pt 5', progression: 'Debugging'
 level 'U3 Program Practice Pt 6', progression: 'Debugging'
 level 'U3 Program Practice Pt 8', progression: 'Debugging'
 
-stage 'Project: Designing an App, pt. 3'
+stage 'Project - Designing an App Part 3'
 level 'U3 L08 Pair Programming Video', progression: 'Pair Programming'
 level 'CSP U3 L4 Add Code', progression: 'Add Code'
 
-stage 'Project: Designing an App, pt. 4'
+stage 'Project - Designing an App Part 4'
 level 'CSP U3 L9 Add More Code', progression: 'Add More Code'
 
 stage 'Project: Share Your App'

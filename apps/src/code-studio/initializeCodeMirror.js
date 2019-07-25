@@ -22,7 +22,7 @@ import {JSHINT} from 'jshint';
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import UnsafeRenderedMarkdown from '../templates/UnsafeRenderedMarkdown';
+import SafeMarkdown from '../templates/SafeMarkdown';
 
 window.JSHINT = JSHINT;
 
@@ -74,7 +74,7 @@ function initializeCodeMirror(target, mode, options = {}) {
       const originalCallback = callback;
       updatePreview = editor => {
         ReactDOM.render(
-          React.createElement(UnsafeRenderedMarkdown, {
+          React.createElement(SafeMarkdown, {
             markdown: editor.getValue()
           }),
           previewElement

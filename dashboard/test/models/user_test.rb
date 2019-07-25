@@ -118,14 +118,14 @@ class UserTest < ActiveSupport::TestCase
     assert_equal user.user_school_infos.where(end_date: nil).count, 1
   end
 
-  test 'update_school_info with custom school does nothing when the user already has a specific school' do
+  test 'update_school_info with custom school updates user that has a specific school' do
     original_school_info = create :school_info
     user = create :teacher, school_info: original_school_info
-    new_school_info = create :school_info_us_other
+    new_school_info = create :school_info_us_other, validation_type:  SchoolInfo::VALIDATION_COMPLETE
 
     user.update_school_info(new_school_info)
-    assert_equal original_school_info, user.school_info
-    assert_equal user.user_school_infos.count, 1
+    assert_equal new_school_info, user.school_info
+    assert_equal user.user_school_infos.count, 2
   end
 
   test 'update_school_info with custom school updates user info when user does not have a specific school' do
@@ -139,6 +139,99 @@ class UserTest < ActiveSupport::TestCase
     assert_not_nil user.school_info_id
 
     assert_equal user.user_school_infos.count, 2
+    assert_equal user.user_school_infos.where(end_date: nil).count, 1
+  end
+
+  test 'update_school_info with custom school updates user info when user school info does not include a school_id' do
+    original_school_info = create :school_info
+    user = create :teacher, school_info: original_school_info
+    new_school_info = create :school_info_us_other
+
+    user.update_school_info(new_school_info)
+    assert_equal new_school_info, user.school_info
+    assert_not_nil user.school_info_id
+
+    assert_equal user.user_school_infos.count, 2
+  end
+
+  # Tests for replacing the old school info with the new school info if and only if the new school info is complete.
+  test 'No NCES id for old and new school_infos, incomplete new school_info, no update' do
+    original_school_info = create :school_info, school_id: nil, validation_type:  SchoolInfo::VALIDATION_NONE
+    user = create :teacher, school_info: original_school_info
+    new_school_info = create :school_info, school_id: nil, validation_type:  SchoolInfo::VALIDATION_NONE
+
+    user.update_school_info(new_school_info)
+    assert_equal original_school_info, user.school_info
+    refute_equal new_school_info, user.school_info
+    assert_not_nil user.school_info_id
+
+    assert_equal user.user_school_infos.count, 1
+  end
+
+  test 'No NCES id for old and new school_infos, complete new school_info, update' do
+    original_school_info = create :school_info, school_id: nil, validation_type:  SchoolInfo::VALIDATION_NONE
+    user = create :teacher, school_info: original_school_info
+    new_school_info = create :school_info_us_other
+
+    user.update_school_info(new_school_info)
+    refute_equal original_school_info, user.school_info
+    assert_equal new_school_info, user.school_info
+    assert_not_nil user.school_info_id
+
+    assert_equal user.user_school_infos.count, 2
+  end
+
+  test 'No NCES id for old school_info, NCES id for new school_info, complete new school_info, update' do
+    original_school_info = create :school_info, school_id: nil, validation_type:  SchoolInfo::VALIDATION_NONE
+    user = create :teacher, school_info: original_school_info
+    new_school_info = create :school_info
+
+    user.update_school_info(new_school_info)
+    refute_equal original_school_info, user.school_info
+    assert_equal new_school_info, user.school_info
+    assert_not_nil user.school_info_id
+
+    assert_equal user.user_school_infos.count, 2
+  end
+
+  test 'NCES id for old school_info, no NCES id for new school_info, incomplete new school_info, no update' do
+    user = create :teacher, :with_school_info
+    new_school_info = create :school_info, school_id: nil, validation_type: SchoolInfo::VALIDATION_NONE
+
+    user.update_school_info(new_school_info)
+    refute_equal new_school_info, user.school_info
+
+    assert_equal user.user_school_infos.count, 1
+    assert_equal user.user_school_infos.where(school_info_id: new_school_info.id).count, 0
+    assert_equal user.user_school_infos.where(end_date: nil).count, 1
+  end
+
+  test 'NCES id for old school_info, no NCES id for new school_info, complete school_info, update' do
+    original_school_info = create :school_info
+    user = create :teacher, school_info: original_school_info
+    new_school_info = create :school_info_us_other
+    refute user.school_info.school.nil?
+    assert new_school_info.school.nil?
+    assert new_school_info.complete?
+
+    user.update_school_info(new_school_info)
+    user.reload
+    assert_equal new_school_info, user.school_info
+
+    assert_equal user.user_school_infos.count, 2
+    assert_equal user.user_school_infos.where(school_info_id: new_school_info.id).count, 1
+    assert_equal user.user_school_infos.where(end_date: nil).count, 1
+  end
+
+  test 'old has NCES id, new has NCES id, new is complete, update' do
+    user = create :teacher, :with_school_info
+    new_school_info = create :school_info
+
+    user.update_school_info(new_school_info)
+    assert_equal new_school_info, user.school_info
+
+    assert_equal user.user_school_infos.count, 2
+    assert_equal user.user_school_infos.where(school_info_id: new_school_info.id).count, 1
     assert_equal user.user_school_infos.where(end_date: nil).count, 1
   end
 
@@ -4090,5 +4183,35 @@ class UserTest < ActiveSupport::TestCase
 
   test 'find_channel_owner returns nil for a malformed channel id' do
     assert_nil User.find_channel_owner 'not-a-channel-id'
+  end
+
+  test 'user_school_info count is > 0 and school info is incomplete' do
+    user_school_info = create :user_school_info
+    teacher = user_school_info.user
+    school_info = create :school_info, country: nil, school_id: nil, validation_type: SchoolInfo::VALIDATION_NONE
+    refute teacher.update(school_info: school_info)
+    assert_includes teacher.errors.full_messages, "School info cannot add new school id"
+  end
+
+  test 'user_school_info_count == 0 and school info is not complete' do
+    teacher = create :teacher
+    school_info = create :school_info, country: nil, school_id: nil, validation_type: SchoolInfo::VALIDATION_NONE
+    assert teacher.update(school_info: school_info)
+    assert_equal teacher.user_school_infos.count, 1
+  end
+
+  test 'user_school_info_count == 0 and school info is complete' do
+    teacher = create :teacher
+    school_info = create :school_info
+    assert teacher.update(school_info: school_info)
+    assert_equal teacher.user_school_infos.count, 1
+  end
+
+  test 'count is > 0 and school info is complete' do
+    user_school_info = create :user_school_info
+    teacher = user_school_info.user
+    school_info = create :school_info
+    assert teacher.update(school_info: school_info)
+    assert_equal teacher.user_school_infos.count, 2
   end
 end
