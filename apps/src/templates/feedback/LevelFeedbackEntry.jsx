@@ -84,11 +84,14 @@ export default class LevelFeedbackEntry extends Component {
 
   expand = () => {
     this.setState({expanded: true});
-    firehoseClient.putRecord({
-      study: 'all-feedback',
-      event: 'expand',
-      data_string: this.props.feedback.id
-    });
+    firehoseClient.putRecord(
+      {
+        study: 'all-feedback',
+        event: 'expand-feedback',
+        data_string: this.props.feedback.id
+      },
+      {includeUserId: true}
+    );
   };
 
   collapse = () => {
@@ -103,11 +106,14 @@ export default class LevelFeedbackEntry extends Component {
   longComment = () => {
     let long = this.state.commentHeight > initialCommentHeight;
     if (long) {
-      firehoseClient.putRecord({
-        study: 'all-feedback',
-        event: 'long-comment',
-        data_string: this.props.feedback.id
-      });
+      firehoseClient.putRecord(
+        {
+          study: 'all-feedback',
+          event: 'long-comment',
+          data_string: this.props.feedback.id
+        },
+        {includeUserId: true}
+      );
     }
     return long;
   };
