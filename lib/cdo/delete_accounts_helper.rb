@@ -102,7 +102,6 @@ class DeleteAccountsHelper
     @log.puts "Cleaning PD content"
     application_ids = Pd::Application::ApplicationBase.with_deleted.where(user_id: user_id).pluck(:id)
     pd_enrollment_ids = Pd::Enrollment.with_deleted.where(user_id: user_id).pluck(:id)
-    workshop_material_order_ids = Pd::WorkshopMaterialOrder.where(user_id: user_id).pluck(:id)
 
     # Two different paths to anonymizing attendance records
     Pd::Attendance.with_deleted.where(teacher_id: user_id).update_all(teacher_id: nil, deleted_at: Time.now)
@@ -128,23 +127,10 @@ class DeleteAccountsHelper
     end
 
     unless pd_enrollment_ids.empty?
-      workshop_material_order_ids += Pd::WorkshopMaterialOrder.where(pd_enrollment_id: pd_enrollment_ids).pluck(:id)
       Pd::PreWorkshopSurvey.where(pd_enrollment_id: pd_enrollment_ids).update_all(form_data: '{}')
       Pd::WorkshopSurvey.where(pd_enrollment_id: pd_enrollment_ids).update_all(form_data: '{}')
       Pd::TeacherconSurvey.where(pd_enrollment_id: pd_enrollment_ids).update_all(form_data: '{}')
       Pd::Enrollment.with_deleted.where(id: pd_enrollment_ids).each(&:clear_data)
-    end
-
-    unless workshop_material_order_ids.empty?
-      Pd::WorkshopMaterialOrder.where(id: workshop_material_order_ids).update_all(
-        school_or_company: nil,
-        street: '',
-        apartment_or_suite: nil,
-        city: '',
-        state: '',
-        zip_code: '',
-        phone_number: ''
-      )
     end
   end
 
