@@ -353,9 +353,7 @@ P5Lab.prototype.init = function(config) {
     this.setCrosshairCursorForPlaySpace();
 
     if (this.isSpritelab) {
-      this.studioApp_.addChangeHandler(
-        this.gameLabP5.spritelab.preview.bind(this)
-      );
+      this.studioApp_.addChangeHandler(this.preview.bind(this));
     }
   };
 
@@ -721,9 +719,6 @@ P5Lab.prototype.startTickTimer = function() {
  */
 P5Lab.prototype.resetHandler = function(ignore) {
   this.reset();
-  if (this.isSpritelab) {
-    this.gameLabP5.spritelab.preview.apply(this);
-  }
 };
 
 /**
@@ -961,7 +956,7 @@ P5Lab.prototype.initInterpreter = function(attachDebugger = true) {
     }
 
     if (this.isSpritelab) {
-      const spritelabCommands = this.gameLabP5.spritelab.commands;
+      const spritelabCommands = this.commands;
       for (const command in spritelabCommands) {
         this.JSInterpreter.createGlobalProperty(
           command,
