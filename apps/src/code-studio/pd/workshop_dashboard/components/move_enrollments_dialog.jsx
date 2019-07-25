@@ -1,17 +1,29 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Dialog, {Body} from '@cdo/apps/templates/Dialog';
+import {Modal, Button} from 'react-bootstrap';
 
 export default class MoveEnrollmentsDialog extends React.Component {
   static propTypes = {
-    selectedEnrollments: PropTypes.array
+    selectedEnrollments: PropTypes.array,
+    show: PropTypes.bool,
+    onCancel: PropTypes.func,
+    onConfirm: PropTypes.func
   };
 
   render() {
     return (
-      <Dialog title="Move Enrollments">
-        <Body>Move EM!</Body>
-      </Dialog>
+      <Modal show={this.props.show} onHide={this.props.onCancel}>
+        <Modal.Header closeButton>
+          <Modal.Title>Move Enrollments</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>Move Em!</Modal.Body>
+        <Modal.Footer>
+          <Button bsStyle="primary" onClick={this.props.onConfirm}>
+            Move
+          </Button>
+          <Button onClick={this.props.onCancel}>Cancel</Button>
+        </Modal.Footer>
+      </Modal>
     );
   }
 }

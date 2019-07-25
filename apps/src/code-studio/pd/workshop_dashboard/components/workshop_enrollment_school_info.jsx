@@ -25,7 +25,8 @@ export class WorkshopEnrollmentSchoolInfo extends React.Component {
       pendingDelete: null,
       pendingScholarshipUpdates: [],
       enrollments: this.props.enrollments,
-      selectedEnrollments: []
+      selectedEnrollments: [],
+      isMoveEnrollmentsDialogOpen: false
     };
 
     this.handleClickDelete = this.handleClickDelete.bind(this);
@@ -35,6 +36,15 @@ export class WorkshopEnrollmentSchoolInfo extends React.Component {
       this
     );
     this.handleClickSelect = this.handleClickSelect.bind(this);
+    this.handleClickMoveEnrollments = this.handleClickMoveEnrollments.bind(
+      this
+    );
+    this.handleMoveEnrollmentsCanceled = this.handleMoveEnrollmentsCanceled.bind(
+      this
+    );
+    this.handleMoveEnrollmentsConfirmed = this.handleMoveEnrollmentsConfirmed.bind(
+      this
+    );
   }
 
   handleClickDelete(event) {
@@ -120,11 +130,19 @@ export class WorkshopEnrollmentSchoolInfo extends React.Component {
     // when you click a specific action, apply it to all enrollments whose
     // ids are in list of selected enrollments in state
     // open a dialog with a text box
-    return (
-      <MoveEnrollmentsDialog
-        selectedEnrollments={this.state.selectedEnrollments}
-      />
-    );
+    this.setState({isMoveEnrollmentsDialogOpen: true});
+  }
+
+  handleMoveEnrollmentsCanceled() {
+    this.setState({
+      isMoveEnrollmentsDialogOpen: false
+    });
+  }
+
+  handleMoveEnrollmentsConfirmed() {
+    this.setState({
+      isMoveEnrollmentsDialogOpen: false
+    });
   }
 
   formatCsfCourseExperience(csf_course_experience) {
@@ -306,6 +324,12 @@ export class WorkshopEnrollmentSchoolInfo extends React.Component {
                   <MenuItem onSelect={this.handleClickMoveEnrollments}>
                     Move
                   </MenuItem>
+                  <MoveEnrollmentsDialog
+                    show={this.state.isMoveEnrollmentsDialogOpen}
+                    selectedEnrollments={this.state.selectedEnrollments}
+                    onCancel={this.handleMoveEnrollmentsCanceled}
+                    onConfirm={this.handleMoveEnrollmentsConfirmed}
+                  />
                 </DropdownButton>
               </th>
             )}
