@@ -102,24 +102,18 @@ class StudentTable extends React.Component {
               onClick={() => onSelectUser(student.id)}
             >
               <td key={`td-${student.id}`} style={styles.td}>
-                <a href={this.getRowLink(student.id)} style={{width: '100%'}}>
-                  <div style={styles.studentTableRow}>
-                    {levels && (
-                      <TeacherPanelProgressBubble
-                        level={levels.find(
-                          level => student.id === level.user_id
-                        )}
-                      />
-                    )}
-                    <span
-                      style={
-                        levels ? styles.nameWithBubble : styles.nameInScript
-                      }
-                    >
-                      {student.name}
-                    </span>
-                  </div>
-                </a>
+                <div style={styles.studentTableRow}>
+                  {levels && (
+                    <TeacherPanelProgressBubble
+                      level={levels.find(level => student.id === level.user_id)}
+                    />
+                  )}
+                  <span
+                    style={levels ? styles.nameWithBubble : styles.nameInScript}
+                  >
+                    {student.name}
+                  </span>
+                </div>
               </td>
             </tr>
           ))}
