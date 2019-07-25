@@ -220,6 +220,9 @@ NetSimVisualization.prototype.setLocalNode = function(newLocalNode) {
     this.eventKeys.registeredWithLocalNode.remoteChange.unregister(
       this.eventKeys.remoteChange
     );
+    this.eventKeys.registeredWithLocalNode.wireStateChange.unregister(
+      this.eventKeys.wireStateChange
+    );
     this.eventKeys.registeredWithLocalNode = null;
   }
 
@@ -271,7 +274,16 @@ NetSimVisualization.prototype.onRemoteChange_ = function() {
  * @private
  */
 NetSimVisualization.prototype.onWireStateChange_ = function(newState) {
-  this.changeWireState(newState);
+  var vizWire = this.getVizWireToRemote();
+  var incomingWire = this.getVizWireFromRemote();
+  if (!(vizWire && incomingWire)) {
+    return;
+  }
+
+  // Hide the incoming wire because we are in simplex mode.
+  incomingWire.hide();
+  // Change the wire state on the outgoing wire
+  vizWire.setWireState(newState);
 };
 
 /**
@@ -950,19 +962,6 @@ NetSimVisualization.prototype.setEncodings = function(newEncodings) {
       vizElement.setEncodings(newEncodings);
     }
   });
-};
-
-NetSimVisualization.prototype.changeWireState = function(newState) {
-  var vizWire = this.getVizWireToRemote();
-  var incomingWire = this.getVizWireFromRemote();
-  if (!(vizWire && incomingWire)) {
-    return;
-  }
-
-  // Hide the incoming wire because we are in simplex mode.
-  incomingWire.hide();
-  // Change the wire state on the outgoing wire
-  vizWire.changeWireState(newState);
 };
 
 /**

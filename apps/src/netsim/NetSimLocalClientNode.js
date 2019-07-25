@@ -623,6 +623,7 @@ NetSimLocalClientNode.prototype.onMessageTableChange_ = function() {
         this.wireStateChange.notifyObservers(message.payload);
       }.bind(this)
     );
+    return;
   }
 
   if (this.isProcessingMessages_) {
