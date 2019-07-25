@@ -208,7 +208,7 @@ fi:
             '"seconds"': sekuntia
           OP:
             '">"': ">"
-            '"<"': "\\<"
+            '"<"': "<"
             '"="': "="
       Dancelab_jumpTo:
         text: "{SPRITE} siirry paikkaan {LOCATION}"

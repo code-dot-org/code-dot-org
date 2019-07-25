@@ -613,9 +613,9 @@ is:
         text: þegar ýtt er á {KEY}
         options:
           KEY:
-            '"up"': uppi
+            '"up"': upp
             '"left"': vinstri
-            '"down"': niðri
+            '"down"': niður
             '"right"': hægri
             '"space"': geimur
             '"enter"': Enter
@@ -735,8 +735,8 @@ is:
             '"when"': þegar
             '"while"': meðan
           KEY:
-            '"up"': uppi
-            '"down"': niðri
+            '"up"': upp
+            '"down"': niður
             '"left"': vinstri
             '"right"': hægri
             '"space"': geimur
@@ -886,8 +886,8 @@ is:
         text: þegar ýtt er á {KEY}
         options:
           KEY:
-            '"up"': uppi
-            '"down"': niðri
+            '"up"': upp
+            '"down"': niður
             '"left"': vinstri
             '"right"': hægri
             '"space"': geimur
@@ -901,8 +901,8 @@ is:
         text: "þegar {DIR} haldið \n{STATEMENT1} þegar sleppt \n{STATEMENT2}"
         options:
           DIR:
-            "'up'": uppi
-            "'down'": niðri
+            "'up'": upp
+            "'down'": niður
             "'left'": vinstri
             "'right'": hægri
       gamelab_whenRightArrow:
@@ -921,8 +921,8 @@ is:
         text: meðan ýtt er á {KEY}
         options:
           KEY:
-            '"up"': uppi
-            '"down"': niðri
+            '"up"': upp
+            '"down"': niður
             '"left"': vinstri
             '"right"': hægri
             '"space"': geimur
@@ -1264,8 +1264,8 @@ is:
             '"when"': þegar
             '"while"': meðan
           KEY:
-            '"up"': uppi
-            '"down"': niðri
+            '"up"': upp
+            '"down"': niður
             '"left"': vinstri
             '"right"': hægri
             '"space"': geimur
@@ -1373,16 +1373,16 @@ is:
         text: færa {DIR}
         options:
           DIR:
-            '"up"': uppi
-            '"down"': niðri
+            '"up"': upp
+            '"down"': niður
             '"left"': vinstri
             '"right"': hægri
       binary_whenKey:
         text: þegar ýtt er á {KEY}
         options:
           KEY:
-            '"up"': uppi
-            '"down"': niðri
+            '"up"': upp
+            '"down"': niður
             '"left"': vinstri
             '"right"': hægri
             '"space"': geimur

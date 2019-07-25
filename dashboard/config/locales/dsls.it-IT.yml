@@ -2260,7 +2260,7 @@ it-IT:
         markdown: "# **Hai appena imparato cosa sono gli \"algoritmi\"!**  \n\n\n\n###
           **Un algoritmo è semplicemente una sequenza di passi necessari per svolgere
           una certa attività**. La cosa divertente degli algoritmi, è che si può decidere
-          cosa far accadere, passo dopo passo.\n\n###Un algoritmo scritto per una
+          cosa far accadere, passo dopo passo.\n\n### Un algoritmo scritto per una
           macchina si chiama **programma**.  \n\n---\n\n## **Termini da conoscere**\n\n*
           ### **Algoritmo** - Una sequenza di passi per svolgere un'attività\n\n*
           ### **Programma** - Un algoritmo tradotto in un linguaggio comprensibile

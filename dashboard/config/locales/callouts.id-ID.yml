@@ -166,6 +166,9 @@ id-ID:
         Course_4_SCV_6: Blok ini mengizinkan anda menyesuaikan warna anda dengan hampir
           semua hal yang ingin anda lihat! Bermainlah dengan angka ini untuk melihat
           apa yang terjadi!
+      Fish Tank 3-validated_2019:
+        spritelab_comment: Gunakan blok ini untuk membuat catatan untuk anda atau
+          guru anda tentang bagaimana kode bekerja.
       Function intro Ryan:
         Function_intro_Ryan_1: Instruksi kecil ini memberi tahu komputer untuk menjalankan
           potongan BESAR kode dengan nama yang sama di ruang kerja.
@@ -285,6 +288,8 @@ id-ID:
         craft_what_is_iron: Tambang besi ini!
       Underground Iron_2019:
         craft_what_is_iron: Tambang besi ini!
+      Virtual Pet 2_2019:
+        '': Klik disini!
       behaviors 1:
         behaviors_edit: Klik di sini untuk melihat bagaimana perilaku bekerja.
       behaviors 3a:
@@ -734,6 +739,8 @@ id-ID:
       courseD_scrat_ramp8:
         courseD_maze_ramp7_1: Ini merupakan tantangan teka-teki kamu yang pertama!
           Akan sulit dan perlu dilakukan beberapa kali untuk menyusunnya.
+      courseE_aboutme_2:
+        '': Klik disini!
       courseE_artist_functions1:
         courseD_artist_functions1_1: Ayo kita mulai dengan menggunakan blok ini untuk
           membantu membuat kotak pertama.
