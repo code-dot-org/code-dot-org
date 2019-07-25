@@ -233,6 +233,7 @@ class User < ActiveRecord::Base
 
   has_many :user_school_infos
   after_save :update_and_add_users_school_infos, if: :school_info_id_changed?
+  validate :complete_school_info, if: :school_info_id_changed?, unless: proc {|u| u.purged_at.present?}
 
   has_one :circuit_playground_discount_application
 
@@ -289,7 +290,7 @@ class User < ActiveRecord::Base
   # old school info object doesn't have a NCES school ID associated with it
   # @param new_school_info a school_info object to compare to the user current school information.
   def update_school_info(new_school_info)
-    if school_info.try(&:school).nil? || new_school_info.try(&:school)
+    if new_school_info.complete?
       self.school_info_id = new_school_info.id
       save(validate: false)
     end
@@ -308,6 +309,15 @@ class User < ActiveRecord::Base
       start_date: last_school ? current_time : created_at,
       last_confirmation_date: current_time
     )
+  end
+
+  def complete_school_info
+    # Check user_school_infos count to verify if new or existing user
+    # If user_school_infos count == 0, new user
+    # If user_school_infos count > 0, existing user
+    if user_school_infos.count > 0 && !school_info&.complete?
+      errors.add(:school_info_id, "cannot add new school id")
+    end
   end
 
   # Not deployed to everyone, so we don't require this for anybody, yet

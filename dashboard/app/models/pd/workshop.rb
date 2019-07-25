@@ -306,6 +306,9 @@ class Pd::Workshop < ActiveRecord::Base
     return unless ended_at.nil?
     self.ended_at = Time.zone.now
     save!
+
+    send_exit_surveys
+    update!(processed_at: Time.zone.now)
   end
 
   def state
@@ -412,15 +415,6 @@ class Pd::Workshop < ActiveRecord::Base
     send_follow_up_after_days(30)
   end
 
-  def self.process_ended_workshop_async(id)
-    workshop = Pd::Workshop.find(id)
-    raise "Unexpected workshop state #{workshop.state}." unless workshop.state == STATE_ENDED
-
-    workshop.send_exit_surveys
-
-    workshop.update!(processed_at: Time.zone.now)
-  end
-
   # Updates enrollments with resolved users.
   def resolve_enrolled_users
     enrollments.each do |enrollment|
@@ -433,7 +427,7 @@ class Pd::Workshop < ActiveRecord::Base
   # from other logic deciding whether a workshop should have exit surveys.
   def send_exit_surveys
     # FiT workshops should not send exit surveys
-    return if SUBJECT_FIT == subject
+    return if SUBJECT_FIT == subject || COURSE_FACILITATOR == course
 
     resolve_enrolled_users
 
@@ -674,5 +668,39 @@ class Pd::Workshop < ActiveRecord::Base
       end
       [unit_name, lesson_names]
     end
+  end
+
+  # Users who could be re-assigned to be the organizer of this workshop
+  def potential_organizers
+    potential_organizers = []
+
+    # if there is a regional partner, only that partner's PMs can become the organizer
+    # otherwise, any PM can become the organizer
+    if regional_partner
+      regional_partner.program_managers.each do |pm|
+        potential_organizers << {label: pm.name, value: pm.id}
+      end
+    else
+      UserPermission.where(permission: UserPermission::PROGRAM_MANAGER).pluck(:user_id)&.map do |user_id|
+        pm = User.find(user_id)
+        potential_organizers << {label: pm.name, value: pm.id}
+      end
+    end
+
+    # any CSF facilitator can become the organizer of a CSF workshhop
+    if course == Pd::Workshop::COURSE_CSF
+      Pd::CourseFacilitator.where(course: Pd::Workshop::COURSE_CSF).pluck(:facilitator_id)&.map do |user_id|
+        facilitator = User.find(user_id)
+        potential_organizers << {label: facilitator.name, value: facilitator.id}
+      end
+    end
+
+    # workshop admins can become the organizer of any workshop
+    UserPermission.where(permission: UserPermission::WORKSHOP_ADMIN).pluck(:user_id)&.map do |user_id|
+      admin = User.find(user_id)
+      potential_organizers << {label: admin.name, value: admin.id}
+    end
+
+    potential_organizers
   end
 end

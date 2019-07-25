@@ -120,7 +120,12 @@ class Pd::Enrollment < ActiveRecord::Base
   # Except for FiT workshops - no exit surveys for them!
   # This scope is used in ProfessionalLearningLandingController to direct the teacher
   #   to their latest pending survey.
-  scope :with_surveys, -> {for_ended_workshops.attended.where.not(pd_workshops: {subject: SUBJECT_FIT})}
+  scope :with_surveys, (lambda do
+    for_ended_workshops.
+      attended.
+      where.not(pd_workshops: {course: COURSE_FACILITATOR}).
+      where('pd_workshops.subject != ? or pd_workshops.subject is null', [SUBJECT_FIT])
+  end)
 
   def has_user?
     user_id

@@ -44,14 +44,12 @@ level 'CSD U2L10 TFMD_pilot', named: true
 level 'CSD U2 CSS explore CSS_pilot', named: true
 level 'Video: Intro to CSS_pilot', named: true
 level 'CSD U2 text style h1_pilot', progression: 'Styling Text'
-level 'CSD U2 text style h3_pilot', progression: 'Styling Text', assessment: true
-level 'CSD U2 text style size_pilot', progression: 'Fonts and Style'
-level 'CSD U2 text style font family_pilot', progression: 'Fonts and Style'
-level 'CSD U2 text style decoration_pilot', progression: 'Fonts and Style'
-level 'CSD U2 text style text align_pilot', progression: 'Fonts and Style'
+level 'CSD U2 text style h3_pilot', progression: 'Styling Text'
+level 'CSD U2 text style size_pilot', progression: 'Styling Text'
 level 'Video: Intro to CSS Part 2_pilot', named: true
 level 'CSD U2 add file_pilot', progression: 'Styling your Website'
-level 'CSD U2 text style freeplay_pilot', progression: 'Styling your Website'
+level 'CSD U2 CSS practice_pilot', progression: 'Styling Text'
+level 'CSD U2 CSS challenge_pilot', progression: 'Styling Text'
 
 stage 'Intellectual Property', flex_category: 'csd2_1'
 level 'CSD U2L07 TFMD_pilot', named: true
@@ -61,11 +59,9 @@ level 'CSD U2L07 TFMD_pilot', named: true
 level 'CSD U2 Image Tag 1_pilot', progression: 'Adding Images'
 level 'CSD U2 Image Tag Debug_pilot', progression: 'Adding Images'
 level 'CSD U2 image debug match_pilot', progression: 'Adding Images'
-level 'CSD U2 Image Tag 2_pilot', progression: 'Adding Images', assessment: true
-level 'CSD U2 images map_pilot', named: true
-level 'CSD U2 CC Search Map_pilot', named: true
-level 'CSD U2 Image Tag Attribution_pilot', progression: 'Attribution'
-level 'CSD U2 Info Page Final Touches_pilot', progression: 'Attribution'
+level 'CSD U2 Image Tag 2_pilot', progression: 'Adding Images'
+level 'CSD U2 Image practice_pilot', progression: 'Adding Images'
+level 'CSD U2 Image challenge_pilot', progression: 'Adding Images'
 
 stage 'Websites for Expression ', flex_category: 'csd2_1'
 level 'CSD U2L02 TFMD_pilot', named: true
@@ -75,16 +71,12 @@ stage 'Styling Elements with CSS', flex_category: 'csd2_1'
 level 'CSD U2L11 TFMD_pilot', named: true
 level 'CSD U2 layout style sample_pilot', progression: 'Exploring more CSS'
 level 'CSD U2 layout style bgcolor_pilot', progression: 'Exploring more CSS'
-level 'CSS U2 Body Map_pilot', named: true
 level 'CSD U2 layout style body_pilot', progression: 'Layout with CSS'
-level 'CSD U2 layout style border_pilot', progression: 'Layout with CSS'
-level 'CSD U2 layout style borderradius_pilot', progression: 'Layout with CSS'
 level 'CSD U2 layout style float_pilot', progression: 'Layout with CSS'
 level 'CSD U2 layout style width_pilot', progression: 'Layout with CSS'
-level 'CSD U2 layout style margin_pilot', progression: 'Layout with CSS'
+level 'CSD U2 layout style practice_pilot', progression: 'Layout with CSS'
 level 'CSD U2 add style_pilot', progression: 'Layout with CSS', assessment: true
-level 'CSD U2 Layout Properties Map_pilot', named: true
-level 'CSD U2 layout style freeplay_pilot', progression: 'Styling your Website'
+level 'CSD U2 layout style challenge_pilot', progression: 'Layout with CSS'
 
 stage 'Project - Planning Layout and Style', flex_category: 'csd2_1'
 level 'CSD U2L09 TFMD_pilot', named: true

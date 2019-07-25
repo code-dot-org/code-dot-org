@@ -8,7 +8,7 @@ import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import i18n from '@cdo/locale';
 import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
 import {getCurrentQuestion} from './sectionAssessmentsRedux';
-import UnsafeRenderedMarkdown from '@cdo/apps/templates/UnsafeRenderedMarkdown';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
 const styles = {
   dialog: {
@@ -40,9 +40,7 @@ class FreeResponseDetailsDialog extends Component {
       >
         <h2>{i18n.questionText()}</h2>
         <div style={styles.instructions}>
-          <UnsafeRenderedMarkdown
-            markdown={this.props.questionAndAnswers.question}
-          />
+          <SafeMarkdown markdown={this.props.questionAndAnswers.question} />
         </div>
         <DialogFooter>
           <Button

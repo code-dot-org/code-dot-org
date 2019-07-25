@@ -21,6 +21,20 @@ module Pd
         assert_equal 'before {plusSign} after', sanitize_value('before + after')
         assert_equal 'dev{plusSign}tag@code.org', sanitize_value('dev+tag@code.org')
       end
+
+      test 'form_in_experiment? works for strings' do
+        assert form_in_experiment? '90986506471163'
+        refute form_in_experiment? '90986506471164'
+      end
+
+      test 'form_in_experiment? works for integers' do
+        assert form_in_experiment? 90_986_506_471_163
+        refute form_in_experiment? 90_986_506_471_164
+      end
+
+      test 'form_in_experiment? safely returns false for nil' do
+        refute form_in_experiment? nil
+      end
     end
   end
 end

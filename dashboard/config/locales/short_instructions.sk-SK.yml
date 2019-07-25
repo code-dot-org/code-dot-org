@@ -20,7 +20,7 @@ sk-SK:
       2-3 Artist 8: Dokončite miestosti pre každé zo zvierat rozdelením obdĺžnika
         na 2 rovnako veľké štvorce. Obdĺžnik je 200 pixelov široký a 100 pixelov vysoký.
         Existujú rôzne riešenia tohto hlavolamu, takže sa kľudne zabavte!
-      2-3 Artist 9: Dokonči tohto šarkana
+      2-3 Artist 9 NEW: Dokonči tohto šarkana
       2-3 Artist Debugging 10: |-
         Plocha na ovládanie smeru na mojom hernom ovládači je príliš úzka.
 
@@ -1471,32 +1471,27 @@ sk-SK:
       courseC_harvester_loops9: Pozbieraj všetky kukurice a tekvice.
       courseC_harvester_loops9_2018: Pozbieraj všetky kukurice a tekvice.
       courseC_harvester_loops9_2019: Pozbieraj všetky kukurice a tekvice.
-      courseC_maze_debugging1: Oprav chyby v kóde tak, aby Laurel pozbierala všetky
-        drahokamy.
+      courseC_maze_debugging1: Uprav kód tak, aby sa Scrat dostal k žaluďu.
       courseC_maze_debugging1_2018: Uprav kód tak, aby sa Scrat dostal k žaluďu.
       courseC_maze_debugging1_2019: Uprav kód tak, aby sa Scrat dostal k žaluďu.
-      courseC_maze_debugging2: Oprav chyby v kóde tak, aby Laurel pozbierala všetky
-        drahokamy.
+      courseC_maze_debugging2: Využi svoje zručnosti a uprav kód tak, aby sa Scrat
+        dostal k žaluďu.
       courseC_maze_debugging2_2018: Využi svoje zručnosti a uprav kód tak, aby sa
         Scrat dostal k žaluďu.
       courseC_maze_debugging2_2019: Využi svoje zručnosti a uprav kód tak, aby sa
         Scrat dostal k žaluďu.
-      courseC_maze_debugging3: Oprav chyby v kóde tak, aby Laurel pozbierala všetky
-        drahokamy.
+      courseC_maze_debugging3: Odstráň bloky, ktoré Scratovi bránia dostať sa k žaluďu.
       courseC_maze_debugging3_2018: Odstráň bloky, ktoré Scratovi bránia dostať sa
         k žaluďu.
       courseC_maze_debugging3_2019: Odstráň bloky, ktoré Scratovi bránia dostať sa
         k žaluďu.
-      courseC_maze_debugging4: Oprav chyby v kóde tak, aby Laurel pozbierala všetky
-        drahokamy.
+      courseC_maze_debugging4: Niekto si tu zmýlil smer! Dokážeš mu pomôcť?
       courseC_maze_debugging4_2018: Niekto si tu zmýlil smer! Dokážeš mu pomôcť?
       courseC_maze_debugging4_2019: Niekto si tu zmýlil smer! Dokážeš mu pomôcť?
-      courseC_maze_debugging5: Všetky príkazy ktoré potrebuješ sú už tu...teraz použi
-        svoje schopnosti v hľadaní chýb a vyrieš túto úlohu.
+      courseC_maze_debugging5: Vylaď tento kód premiestnením a výmenou blokov.
       courseC_maze_debugging5_2018: Vylaď tento kód premiestnením a výmenou blokov.
       courseC_maze_debugging5_2019: Vylaď tento kód premiestnením a výmenou blokov.
-      courseC_maze_debugging6: 'Výzva: Použi svoje zručnosti v ladení kódu na opravenie
-        chýb a vyzbieranie celého pokladu.'
+      courseC_maze_debugging6: Zisti, kde je chyba a pomôž Scratovi dostať sa k žaluďu.
       courseC_maze_debugging6_2018: Zisti, kde je chyba a pomôž Scratovi dostať sa
         k žaluďu.
       courseC_maze_debugging6_2019: Zisti, kde je chyba a pomôž Scratovi dostať sa
@@ -2237,16 +2232,16 @@ sk-SK:
         bod.
       courseD_playLab_condFP: A teraz si vytvor hru, ktorou sa pochváliš kamarátom!
       courseD_playLab_condFP_2018: A teraz si vytvor hru, ktorou sa pochváliš kamarátom!
-      courseD_scrat_ramp1: V tejto úlohe pospájaj všetky bloky, klikni na tlačítko
-        "Spustiť" a sleduj, čo sa stane!
+      courseD_scrat_ramp1: V tejto hre pospájaj všetky bloky dokopy, potom klikni
+        na tlačítko "Spustiť" a sleduj, čo sa stane.
       courseD_scrat_ramp2: Aby sa vták dostal až k prasaťu, z panela nástrojov presuň
         ešte jeden blok `posuň sa dopredu` a pripoj ho k ostatným blokom napojených
         na blok `pri spustení`.
       courseD_scrat_ramp4: Vyhni sa TNT, lebo bude lietať perie!
       courseD_scrat_ramp5: Vyhni sa TNT.
-      courseD_scrat_ramp6: '"Zachovaj pokoj a pomôž mi nájsť to zlé prasiatko. Inak
-        sa môžem rozhnevať!"'
-      courseD_scrat_ramp8: Teraz s pomocu Umelca nakresli štvorec!
+      courseD_scrat_ramp7: Pomôž Scratovi dostať sa k žaluďu!
+      courseD_scrat_ramp8: Použi všetky doteraz získané vedomosti a dostaň Scrata
+        k žaluďu!
       courseE_artist_functions10: Tento krát použi rad zložený z 8 šesťuholníkov so
         stranami dlhými 25 pixelov.
       courseE_artist_functions10_2018: Tento krát použi rad zložený z 8 šesťuholníkov
@@ -2280,6 +2275,7 @@ sk-SK:
       courseE_artist_functionsProj_2019: "**Inšpirácia:** Využi všetko, čo už vieš
         a nakresli obrázok, aký len chceš!"
       courseE_artist_ramp8: Teraz s pomocu Umelca nakresli štvorec!
+      courseE_artist_ramp8_2: Teraz s pomocu Umelca nakresli štvorec!
       courseE_bee_concept1: Zozbieraj všetok nektár z každého kvetu.
       courseE_bee_concept1_2018: Zozbieraj všetok nektár z každého kvetu.
       courseE_bee_functions1: Zozbieraj všetok nektár z každého kvetu.
@@ -2385,6 +2381,12 @@ sk-SK:
         počtu blokov
       courseF_bee_for1: Pozbieraj nektár z každého kvetu s použitím čo najmenšieho
         počtu blokov.
+      courseF_bee_for10: "**Výzva:** Použi, čo si sa naučil o cykloch `for`, a skús
+        vyriešiť tento problém. "
+      courseF_bee_for10_2018: "**Výzva:** Použi, čo si sa naučil o cykloch `for`,
+        a skús vyriešiť tento problém. "
+      courseF_bee_for10_2019: "**Výzva:** Použi, čo si sa naučil o cykloch `for`,
+        a skús vyriešiť tento problém. "
       courseF_bee_for1_2018: Pozbieraj nektár z každého kvetu s použitím čo najmenšieho
         počtu blokov.
       courseF_bee_for1_2019: Pozbieraj nektár z každého kvetu s použitím čo najmenšieho

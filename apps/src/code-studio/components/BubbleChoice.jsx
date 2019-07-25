@@ -4,7 +4,7 @@ import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
 import {navigateToHref} from '@cdo/apps/utils';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import UnsafeRenderedMarkdown from '@cdo/apps/templates/UnsafeRenderedMarkdown';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
 const THUMBNAIL_IMAGE_SIZE = 150;
 const MARGIN = 10;
@@ -120,11 +120,15 @@ export default class BubbleChoice extends React.Component {
     return (
       <div>
         <h1>{level.display_name}</h1>
-        <UnsafeRenderedMarkdown markdown={level.description} />
+        <SafeMarkdown markdown={level.description} />
         {this.renderButtons()}
         <h2 style={styles.h2}>{i18n.chooseActivity()}</h2>
         {level.sublevels.map(sublevel => (
-          <div key={sublevel.id} style={styles.row}>
+          <div
+            key={sublevel.id}
+            style={styles.row}
+            className="uitest-bubble-choice"
+          >
             {sublevel.perfect && (
               <div style={styles.thumbnailOverlay}>
                 <FontAwesome icon="check" style={styles.check} />

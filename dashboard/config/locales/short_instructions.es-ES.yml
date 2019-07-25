@@ -13,7 +13,7 @@ es-ES:
       2-3 Artist 4: Ayúdame a completar la casa para este gato.
       2-3 Artist 6: "¡Esta casa necesita un tejado! Dibuja el triángulo. Pista: los
         tres lados miden lo mismo."
-      2-3 Artist 9: Termina esta cometa
+      2-3 Artist 9 NEW: Termina esta cometa
       2-3 Artist Free Play: "¡Juego libre! Dibuja lo que quieras."
       2-3 Artist Loops New 1: "¡Dibujemos la cabeza de este robot! ¿Puedes hacer un
         cuadrado con lados de 100 píxeles?"
@@ -518,6 +518,9 @@ es-ES:
         pelota hasta que toque la bandera.
       bounce_7_sports: Coloca bloques cada uno de lo bloques "cuando". Bota la pelota
         hasta que toque la bandera.
+      course2_harvester_loops_challenge1: Recoge todo el maíz.
+      course2_harvester_loops_challenge2: Recoge las lechugas. ¡Evita los árboles
+        y la hierba!
       course2_maze_loops_challenge1: "¡Ahora Scrat quiere usar bucles para encontrar
         su bellota! "
       course2_maze_programming_challenge2: A veces hay más de una forma de solucionar
@@ -624,11 +627,31 @@ es-ES:
       courseC_PlayLab_eventsFP_2019: Crea tu propia historia. Cuando acabes, haz click
         en "Terminar" para compartirla con tus amigos. Las pistas te darán ideas para
         las historias.
+      courseC_PlayLab_events_challenge1: "Usa un bloque nuevo para hacer que Waddles
+        vuelva al principio cuando se choque con Dinosaurio y cuando anote un punto.
+        \nJuega y mueve a Waddles con las flechas hasta que ganes suficientes puntos."
+      courseC_PlayLab_events_challenge1_2018: "Usa un bloque nuevo para hacer que
+        Waddles vuelva al principio cuando se choque con Dinosaurio y cuando anote
+        un punto. \nJuega y mueve a Waddles con las flechas hasta que ganes suficientes
+        puntos."
+      courseC_PlayLab_events_challenge1_2019: "Usa un bloque nuevo para hacer que
+        Waddles vuelva al principio cuando se choque con Dinosaurio y cuando anote
+        un punto. \nJuega y mueve a Waddles con las flechas hasta que ganes suficientes
+        puntos."
       courseC_artist_loop1: "¡Pongamos un poco de chispa!"
       courseC_artist_loops2a: Ahora usa un bucle para girar tu pájaro 12 veces con
         un giro de 30 grados.
       courseC_artist_loops2a_2018: Ahora usa un bucle para girar tu pájaro 12 veces
         con un giro de 30 grados.
+      courseC_artist_loops5a: "¡Prueba las nuevas calcomanías!"
+      courseC_artist_loops5a_2018: "¡Prueba las nuevas calcomanías!"
+      courseC_artist_loops5a_2019: "¡Prueba las nuevas calcomanías!"
+      courseC_artist_loops6a: "¡Añade otra calcomanía!"
+      courseC_artist_loops6a_2018: "¡Añade otra calcomanía!"
+      courseC_artist_loops6a_2019: "¡Añade otra calcomanía!"
+      courseC_artist_loops7a: Juega con bucles y ángulos.
+      courseC_artist_loops7a_2018: Juega con bucles y ángulos.
+      courseC_artist_loops7a_2019: Juega con bucles y ángulos.
       courseC_artist_loopsPre1a: "¡Hora de girar esa línea!"
       courseC_artist_loopsPre1a_2018: "¡Hora de girar esa línea!"
       courseC_artist_loopsPre1a_2019: "¡Hora de girar esa línea!"
@@ -715,6 +738,9 @@ es-ES:
       courseC_flappy_events1: Junta el bloque `aletear normalmente` a `Cuando haga
         click`, después haz click en "Ejecutar".  Haz click o toca en el espacio de
         juego para llevar a Flappy al objetivo.
+      courseC_flappy_events10: "¡Crea tu propio juego de Flappy! "
+      courseC_flappy_events10_2018: "¡Crea tu propio juego de Flappy! "
+      courseC_flappy_events10_2019: "¡Crea tu propio juego de Flappy! "
       courseC_flappy_events1_2018: Junta el bloque `aletear normalmente` a `Cuando
         haga click`, después haz click en "Ejecutar".  Haz click o toca en el espacio
         de juego para llevar a Flappy al objetivo.
@@ -730,6 +756,30 @@ es-ES:
       courseC_flappy_events2_2019: Prueba a añadir un bloque que fije la velocidad
         cuando hagas click en el botón "Ejecutar".  Juega al juego y aletea hasta
         el objetivo para continuar.
+      courseC_flappy_events3: Junta el bloque `terminar el juego` al evento `cuando
+        toca el suelo`. Juega y estrella el pájaro contra el suelo para continuar.
+      courseC_flappy_events3_2018: Junta el bloque `terminar el juego` al evento `cuando
+        toca el suelo`. Juega y estrella el pájaro contra el suelo para continuar.
+      courseC_flappy_events3_2019: Junta el bloque `terminar el juego` al evento `cuando
+        toca el suelo`. Juega y estrella el pájaro contra el suelo para continuar.
+      courseC_flappy_events4: Junta un bloque al evento `cuando choca con un obstáculo`
+        para que el juego termine cuando Flappy se choque contra el primer grupo de
+        tuberías.
+      courseC_flappy_events4_2018: Junta un bloque al evento `cuando choca con un
+        obstáculo` para que el juego termine cuando Flappy se choque contra el primer
+        grupo de tuberías.
+      courseC_flappy_events4_2019: Junta un bloque al evento `cuando choca con un
+        obstáculo` para que el juego termine cuando Flappy se choque contra el primer
+        grupo de tuberías.
+      courseC_flappy_events5: Añade un bloque al evento `cuando pase un obstáculo`,
+        después pulsa `Ejecutar` para anotar un punto haciendo que Flappy atraviese
+        las primeras tuberías.
+      courseC_flappy_events5_2018: Añade un bloque al evento `cuando pase un obstáculo`,
+        después pulsa `Ejecutar` para anotar un punto haciendo que Flappy atraviese
+        las primeras tuberías.
+      courseC_flappy_events5_2019: Añade un bloque al evento `cuando pase un obstáculo`,
+        después pulsa `Ejecutar` para anotar un punto haciendo que Flappy atraviese
+        las primeras tuberías.
       courseC_flappy_events6: Prueba a ver si todavía puedes anotarte un punto después
         de hacer que Flappy aletee más o menos cada vez que haces click.
       courseC_flappy_events6_2018: Prueba a ver si todavía puedes anotarte un punto
@@ -742,18 +792,27 @@ es-ES:
         un bloque al evento `al ejecutar`.
       courseC_flappy_events7_2019: Ahora, prueba a cambiar el escenario añadiendo
         un bloque al evento `al ejecutar`.
+      courseC_flappy_events8: Prueba a poner una escena **al azar** cuando ocurran
+        otros eventos... por ejemplo, al atravesar un obstáculo.
+      courseC_flappy_events8_2018: Prueba a poner una escena **al azar** cuando ocurran
+        otros eventos... por ejemplo, al atravesar un obstáculo.
+      courseC_flappy_events8_2019: Prueba a poner una escena **al azar** cuando ocurran
+        otros eventos... por ejemplo, al atravesar un obstáculo.
       courseC_flappy_events9: Para juntar las cosas, en lugar de terminar el juego
         cuando Flappy golpee un obstáculo, prueba a poner el marcador a 0.
       courseC_flappy_events9_2018: Para juntar las cosas, en lugar de terminar el
         juego cuando Flappy golpee un obstáculo, prueba a poner el marcador a 0.
       courseC_flappy_events9_2019: Para juntar las cosas, en lugar de terminar el
         juego cuando Flappy golpee un obstáculo, prueba a poner el marcador a 0.
+      courseC_harvester_loops1: Utiliza bucles para recoger todas las calabazas.
       courseC_harvester_loops10: Recoge todo el maíz y todas las calabazas.
       courseC_harvester_loops10_2018: Recoge todo el maíz y todas las calabazas.
       courseC_harvester_loops10_2019: Recoge todo el maíz y todas las calabazas.
       courseC_harvester_loops11: Recoge todo el maíz y todas las calabazas.
       courseC_harvester_loops11_2018: Recoge todo el maíz y todas las calabazas.
       courseC_harvester_loops11_2019: Recoge todo el maíz y todas las calabazas.
+      courseC_harvester_loops1_2018: Utiliza bucles para recoger todas las calabazas.
+      courseC_harvester_loops1_2019: Utiliza bucles para recoger todas las calabazas.
       courseC_harvester_loops2: "¿Puedes combinar dos bucles diferentes para moverte
         hacia las calabazas y luego recogerlas todas?"
       courseC_harvester_loops2_2018: "¿Puedes combinar dos bucles diferentes para
@@ -783,16 +842,30 @@ es-ES:
       courseC_harvester_loops9: Recoge todo el maíz y todas las calabazas.
       courseC_harvester_loops9_2018: Recoge todo el maíz y todas las calabazas.
       courseC_harvester_loops9_2019: Recoge todo el maíz y todas las calabazas.
+      courseC_harvester_loops_challenge1a: Recoge todo el maíz.
+      courseC_harvester_loops_challenge1a_2018: Recoge todo el maíz.
+      courseC_harvester_loops_challenge1a_2019: Recoge todo el maíz.
+      courseC_harvester_loops_challenge2: Recoge las lechugas. ¡Evita los árboles
+        y la hierba!
+      courseC_harvester_loops_challenge2_2018: Recoge las lechugas. ¡Evita los árboles
+        y la hierba!
+      courseC_harvester_loops_challenge2_2019: Recoge las lechugas. ¡Evita los árboles
+        y la hierba!
+      courseC_maze_debugging2: Usa tus habilidades de depuración para que Scrat consiga
+        la bellota.
       courseC_maze_debugging2_2018: Usa tus habilidades de depuración para que Scrat
         consiga la bellota.
       courseC_maze_debugging2_2019: Usa tus habilidades de depuración para que Scrat
         consiga la bellota.
+      courseC_maze_debugging4: Alguien ha confundido sus instrucciones. ¿Puedes ayudarle?
       courseC_maze_debugging4_2018: Alguien ha confundido sus instrucciones. ¿Puedes
         ayudarle?
       courseC_maze_debugging4_2019: Alguien ha confundido sus instrucciones. ¿Puedes
         ayudarle?
+      courseC_maze_debugging5: Depura este nivel reorganizando y cambiando bloques.
       courseC_maze_debugging5_2018: Depura este nivel reorganizando y cambiando bloques.
       courseC_maze_debugging5_2019: Depura este nivel reorganizando y cambiando bloques.
+      courseC_maze_debugging6: Averigua qué es incorrecto y lleva a Scrat a la bellota.
       courseC_maze_debugging6_2018: Averigua qué es incorrecto y lleva a Scrat a la
         bellota.
       courseC_maze_debugging6_2019: Averigua qué es incorrecto y lleva a Scrat a la
@@ -805,6 +878,18 @@ es-ES:
         añadiendo y eliminando bloques."
       courseC_maze_debugging9: Depura este nivel para que Scrat consiga la bellota.
       courseC_maze_debugging9_2018: Depura este nivel para que Scrat consiga la bellota.
+      courseC_maze_debugging_challenge1: Ayuda a Scrat a decidir hacia qué lado girar
+        para conseguir la bellota.
+      courseC_maze_debugging_challenge1_2018: Ayuda a Scrat a decidir hacia qué lado
+        girar para conseguir la bellota.
+      courseC_maze_debugging_challenge1_2019: Ayuda a Scrat a decidir hacia qué lado
+        girar para conseguir la bellota.
+      courseC_maze_debugging_challenge2: Ayuda a Scrat a conseguir la bellota sólo
+        con cuatro comandos `girar`.
+      courseC_maze_debugging_challenge2_2018: Ayuda a Scrat a conseguir la bellota
+        sólo con cuatro comandos `girar`.
+      courseC_maze_debugging_challenge2_2019: Ayuda a Scrat a conseguir la bellota
+        sólo con cuatro comandos `girar`.
       courseC_maze_loops_challenge1a: "¡Ahora Scrat quiere usar bucles para encontrar
         su bellota! "
       courseC_maze_loops_challenge1a_2018: "¡Ahora Scrat quiere usar bucles para encontrar
@@ -823,6 +908,12 @@ es-ES:
         de herramientas para completar tu código.
       courseC_maze_programming2_2019: Arrastra un bloque `avanzar` más de la caja
         de herramientas para completar tu código.
+      courseC_maze_programming6: '"Mantén la calma y ayúdame a encontrar al cerdo
+        malo. ¡Si no, podría enfadarme!"'
+      courseC_maze_programming6_2018: '"Mantén la calma y ayúdame a encontrar al cerdo
+        malo. ¡Si no, podría enfadarme!"'
+      courseC_maze_programming6_2019: '"Mantén la calma y ayúdame a encontrar al cerdo
+        malo. ¡Si no, podría enfadarme!"'
       courseC_maze_programming7: "**Desafío:** Este código tiene muchos errores. Tendrás
         que quitar algunos bloques y añadir otros."
       courseC_maze_programming7_2018: "**Desafío:** Este código tiene muchos errores.
@@ -1026,10 +1117,18 @@ es-ES:
         después une todos los bloques a `al ejecutar` para terminar tu código.
       courseD_maze_ramp2_2019: Arrastra otro bloque `avanzar` de la caja de herramientas,
         después une todos los bloques a `al ejecutar` para terminar tu código.
-      courseD_scrat_ramp1: En este puzle, ¡une todos los bloques y pulsa Ejecutar
-        para ver qué ocurre!
+      courseD_maze_ramp6: '"Mantén la calma y ayúdame a encontrar al cerdo malo. ¡Si
+        no, podría enfadarme!"'
+      courseD_scrat_ramp1: En este puzle, coloca todos los bloques juntos y pulsa
+        "Ejecutar"!
       courseD_scrat_ramp2: Arrastra otro bloque `avanzar` de la caja de herramientas,
         después une todos los bloques a `al ejecutar` para terminar tu código.
+      courseD_scrat_ramp3: Hay un bloque extra que va a hacer que Scrat se estrelle.
+        Quítalo arrastrándolo de vuelta a la caja de herramientas.
+      courseD_scrat_ramp4: "¡Evita el hielo agrietado para mantener a Scrat a salvo!"
+      courseD_scrat_ramp5: Evita el hielo agrietado.
+      courseD_scrat_ramp6: "¡Ayuda a Scrat a coger la bellota usando un bucle!"
+      courseD_scrat_ramp7: "¡Ayuda a Scrat a conseguir la bellota!"
       courseE_artist_functions1: |-
         Hola. Yo artista zombie. Yo amo dibujar!
         Ayúdame a dibujar las gafas cuadradas.  Sugerencia: el puente entre las gafas es 25 píxeles más corto que la longitud cuadrada.

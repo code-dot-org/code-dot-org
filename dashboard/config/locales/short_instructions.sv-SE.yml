@@ -8,7 +8,7 @@ sv-SE:
       2-3 Artist 2 new: 'Detta hus har en halvfärdig vägg. Varje sida är 100, men
         den halvfärdiga väggen är bara 50. Komplettera väggen. '
       2-3 Artist 4: Hjälp mig att göra färdigt huset till katten.
-      2-3 Artist 9: Gör färdigt draken
+      2-3 Artist 9 NEW: Gör färdigt draken
       2-3 Artist Free Play: Frispel! Rita vad du vill.
       2-3 Artist Loops New 15: Rita något roligt.
       2-3 Artist Nested Loops 10: Loopa den här koden 12 gånger för att slutföra mönstret.
@@ -444,6 +444,7 @@ sv-SE:
         tre sidor är lika långa.'
       courseC_artist_prog5_2019: 'Huset behöver ett tak! Rita en triangel. Tips: alla
         tre sidor är lika långa.'
+      courseC_maze_debugging1: Fixa koden för att hjälpa Scrat att ta sig till ekollonet.
       courseC_maze_debugging1_2018: Fixa koden för att hjälpa Scrat att ta sig till
         ekollonet.
       courseC_maze_debugging1_2019: Fixa koden för att hjälpa Scrat att ta sig till
