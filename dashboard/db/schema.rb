@@ -447,7 +447,7 @@ ActiveRecord::Schema.define(version: 20190718184223) do
   end
 
   create_table "level_sources_multi_types", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.bigint  "level_source_id",               null: false
+    t.bigint  "level_source_id",               null: false, unsigned: true
     t.integer "level_id",                      null: false
     t.text    "data",            limit: 65535
     t.string  "md5",                           null: false
