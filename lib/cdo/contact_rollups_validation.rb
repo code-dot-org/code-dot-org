@@ -175,15 +175,6 @@ class ContactRollupsValidation
       max: 40_000
     },
     {
-      name: "Check that all contacts with courses facilitated are "\
-            "facilitators",
-      query: "SELECT COUNT(*) FROM contact_rollups_daily
-              WHERE courses_facilitated IS NOT NULL
-              AND Roles NOT LIKE '%Facilitator%'",
-      min: 0,
-      max: 0
-    },
-    {
       name: "Count of contacts with professional learning enrollment",
       query:  "SELECT COUNT(*) FROM contact_rollups_daily
               WHERE professional_learning_enrolled IS NOT NULL",
