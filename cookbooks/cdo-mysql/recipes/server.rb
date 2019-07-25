@@ -13,7 +13,7 @@ template 'cdo.cnf' do
 end
 
 execute 'mysql-upgrade' do
-  command 'mysql_upgrade --user=root'
+  command 'mysql_upgrade --user=root --force'
   action :nothing
   notifies :start, 'service[mysql]', :before
   notifies :restart, 'service[mysql]', :immediately
