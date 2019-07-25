@@ -415,15 +415,6 @@ class Pd::Workshop < ActiveRecord::Base
     send_follow_up_after_days(30)
   end
 
-  def process_ended_workshop
-    workshop = Pd::Workshop.find(id)
-    raise "Unexpected workshop state #{workshop.state}." unless workshop.state == STATE_ENDED
-
-    workshop.send_exit_surveys
-
-    workshop.update!(processed_at: Time.zone.now)
-  end
-
   # Updates enrollments with resolved users.
   def resolve_enrolled_users
     enrollments.each do |enrollment|
