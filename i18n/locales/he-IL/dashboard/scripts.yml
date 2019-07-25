@@ -21,6 +21,8 @@ he:
               name: 'דבורה: לולאות'
             'Bee: Sequence':
               name: 'דבורה: רצף'
+            Getting Loopy:
+              name: עוברים ללולאות
             Happy Maps:
               name: מפות שמחות
             'Jigsaw: Learn to drag and drop':
@@ -67,6 +69,8 @@ he:
               name: תנאים
             Flappy:
               name: פלאפי
+            Getting Loopy:
+              name: עוברים ללולאות
             Graph Paper Programming:
               name: תכנות לנייר משבצות
             'Maze: Loops':
@@ -531,6 +535,8 @@ he:
           stages:
             Binary Bracelets:
               name: צמידים בינארים
+            Getting Loopy:
+              name: עוברים ללולאות
             Graph Paper Programming:
               name: תכנות לנייר משבצות
             Happy Maps:
@@ -1331,6 +1337,8 @@ he:
               name: תכנות עם ציפורים כועסות
             Debugging in Maze:
               name: ניפוי שגיאות עם סקראט
+            'Loops: Getting Loopy':
+              name: עוברים ללולאות
             Conditionals with Cards:
               name: התניות עם כרטיסים
             'Functions: Songwriting':
@@ -1402,6 +1410,8 @@ he:
               name: איתור באגים עם ציפורים כועסות
             'Real-life Algorithms: Paper Planes':
               name: מטוסי נייר
+            'Loops: Getting Loopy':
+              name: עוברים ללולאות
             'Events: The Big Event':
               name: האירוע הגדול
             Binary Bracelets:
@@ -1651,6 +1661,8 @@ he:
               name: זוזו, זוזו
             Loops in Ice Age:
               name: לולאות בעידן הקרח
+            'Loops: Getting Loopy':
+              name: עוברים ללולאות
             Programming in Maze:
               name: תכנות עם ציפורים כועסות
             Sequencing in Maze:

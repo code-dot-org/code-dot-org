@@ -356,10 +356,15 @@ ar:
         infinity_playlab_intro: مختبر اللعب - المقدمة
         infinity_playlab_events: مختبر اللعب - الأحداث
         infinity_playlab_repeat_forever: مختبر الألعاب - تكرار إلى الأبد
+        csd_weblab_intro_2: مدخل لمختبر الويب -الجزء 2
+        csd_weblab_css_1: مدخل ل CSS - جزء 1
+        csd_weblab_css_2: مدخل ل CSS - جزء 2
+        csd_weblab_intro_3: مدخل لمختبر الويب - جزء 3
         csp_applab_functions: تقديم للدوال
         csp_applab_functions_parameters: الدوال والمعاملات
         csp_applab_loops: الحلقات
         csp_concept_rgb: بعض المعلومات عن البكسل
+        csp_cs_is_changing_everything: علوم الكمبيوتر تغير كل شيء
         csp_pixelation_color_1: برنامج بكسل الألوان - الجزء 1
         csp_pixelation_color_2: برنامج بكسل الألوان - الجزء 2
         csp_pixelation_color_3: برنامج بكسل الألوان - الجزء 3
@@ -410,6 +415,11 @@ ar:
         mc_2016_events: ساعة من البرمجة مع ماينكرافت - الأحداث Events
         mc_2016_spawn: ساعة من البرمجة مع ماينكرافت - اظهر
         mc_2016_congrats: ساعة من البرمجة مع ماينكرافت - مبروك
+        applab_hoc_welcome: ترحيب - ساعة البرمجة لمختبر التطبيقات
+        applab_hoc_setproperty: إعداد الخاصيات - ساعة البرمجة لمختبر التطبيقات
+        applab_hoc_onevent: خلال الحدث - ساعة البرمجة لمختبر التطبيقات
+        applab_hoc_designmode: وضع التصميم - ساعة البرمجة لمختبر التطبيقات
+        applab_hoc_share: تقاسم - ساعة البرمجة لمختبر التطبيقات
         mc_2017_agent_intro: ماينكرافت ساعة من البرمجة - الروبوت
         mc_2017_repeat: ماينكرافت ساعة من البرمجة - تكرار الحلقات
         mc_2017_functions: ماينكرافت ساعة من البرمجة - الدالات
@@ -418,9 +428,54 @@ ar:
         mc_2017_puzzle_3: ماينكرافت ساعة من البرمجة - تكرار الحلقات
         mc_2017_puzzle_8: ماينكرافت ساعة من البرمجة - الدالات
         mc_2017_puzzle_12: ماينكرافت ساعة من البرمجة - اللعب الحر
+        hint_videos_d_11_3_first: 'فيديوهات توضيحية: D.11.3 الأول'
+        hint_videos_d_11_3_last: 'فيديوهات توضيحية: D.11.3 الأخير'
+        hint_videos_d_11_4_first: 'فيديوهات توضيحية: D.11.4 الأول'
+        hint_videos_d_11_4_last: 'فيديوهات توضيحية: D.11.4 الأخير'
+        hint_videos_d_11_5_first: 'فيديوهات توضيحية: D.11.5 الأول'
+        hint_videos_d_11_5_last: 'فيديوهات توضيحية: D.11.5 الأخير'
+        hint_videos_d_11_6_first: 'فيديوهات توضيحية: D.11.6 الأول'
+        hint_videos_d_11_6_last: 'فيديوهات توضيحية: D.11.6 الأخير'
+        hint_videos_d_11_7_first: 'فيديوهات توضيحية: D.11.7 الأول'
+        hint_videos_d_11_7_last: 'فيديوهات توضيحية: D.11.7 الأخير'
+        hint_videos_d_11_9_first: 'فيديوهات توضيحية: D.11.9 الأول'
+        hint_videos_d_11_9_last: 'فيديوهات توضيحية: D.11.9 الأخير'
+        hint_videos_d_11_11_first: 'فيديوهات توضيحية: D.11.11 الأول'
+        hint_videos_d_11_11_last: 'فيديوهات توضيحية: D.11.11 الأخير'
+        applab_intro_welcome: ابدأ - مختبر الـطبيقات
+        applab_intro_events: أجعله تفاعليا - مختبر التطبيقات
+        applab_intro_sounds: أصوات وصور - مختبر التطبيقات
+        applab_intro_designmode: وضع التصميم - مختبر التطبيقات
+        applab_intro_share: تقاسم تطبيقك - مختبر التطبيقات
+        CSF_skinOverview_Harvester: الحصادة
+        CSF_bb8_skinOverview_C-F: BB-8
+        CSF_bb8_skinOverview_K-1: BB-8
+        CSF_harvester_skinOverview_K-1: الحصادة
+        CSF_scrat_loops_K1: الحلقات في العصر الجليدي
+        CSF_scrat_loops_CF: الحلقات في العصر الجليدي
+        CSF_if_allskins: الكتلة البرمجية if
+        CSF_ifelse_allskins: استعمال الكتل البرمجية if/else
+        CSF_ifelseifelse_allskins: استعمال الكتل البرمجية if/else/else
         CSF_loops_AB: الحلقات
+        csd_gamelab_booleans: تعبيرات منطقية
+        csd_gamelab_conditional_statements: الأوامر الشرطية
+        csd_gamelab_if_else: أوامر If/Else
+        CSF_SpriteLabIntro_CDEF: هذا مختبر العفريت
+        CSF_Spritelab_MakeSprite_CDEF: كيف تنشئ العفريت داخل مختبر العفريت
+        CDEF_Video_SpritesInAction: العفاريت تتحرك
+        CSF_SpriteLab_SpritesInAction_CDEF: العفاريت تتحرك
+        CSF_StarWars_ProjectIntro: مدخل لمشروع حرب النجوم
+        mc_2018_intro: 'Minecraft: مدخل للسفر المائي'
+        MC_2018_loops: 'Minecraft: لسفر مائي تكرار إلى حين'
+        mc_2018_conditionals: 'Minecraft: سفر مائي شرطي'
+        mc_2018_closing: 'Minecraft: سفر مائي تهانينا'
+        hoc_dance_warmup: حفلة الرقص - تسخينات
+        hoc_dance_congrats: حفلة الرقص - البداية!
+        teaching_csf_how_it_works: 'تدريس أساسيات علوم الكمبيوتر: كيف تنجز الدورات'
+        elem_pd_2: المدرسة الابتدائية لعلوم الكمبيوتر - PD فيديو 2/2
         csd_pair_programming: البرمجة الزوجية
         csd_applab_parameters: الدوال والمعاملات
+        CSF_SpriteLab_SpritesInAction_v2: العفاريت تتحرك
     callout:
       text:
         drag_blocks: اسحب المقطع البرمجي "تقدم للأمام" وثبته تحت مقطع آخر

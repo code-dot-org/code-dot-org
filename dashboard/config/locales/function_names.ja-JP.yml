@@ -20,6 +20,7 @@ ja-JP:
         draw a circle: 円 を かく
         draw a button: ボタンを かく
         draw cord: うねをかく
+        draw R pad: Rパッドをかく
       2-3 Artist Debugging 5:
         draw left leg: 左足を かく
         draw right leg: 右足を かく
@@ -87,11 +88,11 @@ ja-JP:
       4-5 Bee Conditionals Assessment 1:
         get nectar or make honey: 蜜を採るか蜂蜜を作る
       4-5 Bee Debugging 7:
-        make 3 honey: 蜂蜜を3つ作る
+        make 3 honey: ハチミツを3つ作る
       4-5 Bee Debugging 8:
         get 5 nectar: 蜜を5つ取る
       4-5 Bee Debugging 9:
-        make all honey: 蜂蜜を全部作る
+        make all honey: ハチミツをぜんぶ作る
       Course 4 Artist Binary 1:
         draw: かく
       Course 4 Artist Binary 2:
