@@ -306,9 +306,6 @@ class Pd::Workshop < ActiveRecord::Base
     return unless ended_at.nil?
     self.ended_at = Time.zone.now
     save!
-
-    send_exit_surveys
-    update!(processed_at: Time.zone.now)
   end
 
   def state
@@ -413,6 +410,15 @@ class Pd::Workshop < ActiveRecord::Base
     send_reminder_for_upcoming_in_days(10)
     send_reminder_to_close
     send_follow_up_after_days(30)
+  end
+
+  def self.process_ended_workshop_async(id)
+    workshop = Pd::Workshop.find(id)
+    raise "Unexpected workshop state #{workshop.state}." unless workshop.state == STATE_ENDED
+
+    workshop.send_exit_surveys
+
+    workshop.update!(processed_at: Time.zone.now)
   end
 
   # Updates enrollments with resolved users.
