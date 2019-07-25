@@ -1,5 +1,5 @@
 import sinon from 'sinon';
-import {expect} from '../../../util/reconfiguredChai';
+import {expect} from '../../util/reconfiguredChai';
 import {
   getStore,
   registerReducers,
@@ -9,7 +9,7 @@ import {
 import commonReducers from '@cdo/apps/redux/commonReducers';
 import reducers from '@cdo/apps/p5lab/gamelab/reducers';
 import {setIsRunning} from '@cdo/apps/redux/runState';
-import Spritelab from '@cdo/apps/p5lab/gamelab/spritelab/Spritelab';
+import Spritelab from '@cdo/apps/p5lab/spritelab/Spritelab';
 import Sounds from '@cdo/apps/Sounds';
 
 describe('Spritelab Preview', () => {
