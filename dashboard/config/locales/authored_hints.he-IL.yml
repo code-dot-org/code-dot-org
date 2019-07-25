@@ -1262,14 +1262,23 @@ he-IL:
           </block>
           </xml>
       courseB_collector_loops_challenge2a:
+        courseB_collector_loops_challenge2a_a: אם משהו משתבש, נסה לפתור אותו. אל תוותר!
+        courseB_collector_loops_challenge2a_b: תסתכל על האפשרות הזו לעבור את המבוך.
+          אתה רואה תבנית שאתה יכול לחזור עליה?
         courseB_collector_loops_challenge2a_c: כדי לאסוף את כל האוצר, תזדקק בכל מקרה
           להוסיף שני בלוקים מסוג <xml><block type="collector_collect"/></xml> בתוך
           הלולאה שלך, או לשים את הבלוק בתוך בלוק 'חזור' משלו.
       courseB_collector_loops_challenge2a_2018:
+        courseB_collector_loops_challenge2a_a: אם משהו משתבש, נסה לפתור אותו. אל תוותר!
+        courseB_collector_loops_challenge2a_b: תסתכל על האפשרות הזו לעבור את המבוך.
+          אתה רואה תבנית שאתה יכול לחזור עליה?
         courseB_collector_loops_challenge2a_c: כדי לאסוף את כל האוצר, תזדקק בכל מקרה
           להוסיף שני בלוקים מסוג <xml><block type="collector_collect"/></xml> בתוך
           הלולאה שלך, או לשים את הבלוק בתוך בלוק 'חזור' משלו.
       courseB_collector_loops_challenge2a_2019:
+        courseB_collector_loops_challenge2a_a: אם משהו משתבש, נסה לפתור אותו. אל תוותר!
+        courseB_collector_loops_challenge2a_b: תסתכל על האפשרות הזו לעבור את המבוך.
+          אתה רואה תבנית שאתה יכול לחזור עליה?
         courseB_collector_loops_challenge2a_c: כדי לאסוף את כל האוצר, תזדקק בכל מקרה
           להוסיף שני בלוקים מסוג <xml><block type="collector_collect"/></xml> בתוך
           הלולאה שלך, או לשים את הבלוק בתוך בלוק 'חזור' משלו.

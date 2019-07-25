@@ -450,11 +450,11 @@ id-ID:
         Animasi.\\\r\n-   Membuat sprite dan menetapkan gambar.\\\r\n-   M\n-   Tetapkan\n
         \   hingga gambar loop untuk gambar latar belakang dan sprite anda."
       CSD U5 black white images pixelation 2: "# lakukan ini\\\r\n\n\\\r\ngunakan\nwidget
-        pixelasi untuk menggambar wajah tersenyum\\\r\n\\\r\n![](<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image-\n1491425592286.52.47\nPM.png>)"
+        pixelasi untuk menggambar wajah tersenyum\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image->\n1491425592286.52.47\nPM.png>)"
       CSD U5 black white images pixelation 2_2018: "# lakukan ini\\\r\n\n\\\r\ngunakan\nwidget
-        pixelasi untuk menggambar wajah tersenyum\\\r\n\\\r\n![](<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image-\n1491425592286.52.47\nPM.png>)"
+        pixelasi untuk menggambar wajah tersenyum\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image->\n1491425592286.52.47\nPM.png>)"
       CSD U5 black white images pixelation 2_2019: "# lakukan ini\\\r\n\n\\\r\ngunakan\nwidget
-        pixelasi untuk menggambar wajah tersenyum\\\r\n\\\r\n![](<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image-\n1491425592286.52.47\nPM.png>)"
+        pixelasi untuk menggambar wajah tersenyum\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image->\n1491425592286.52.47\nPM.png>)"
       CSD U6 game project finish: "# Menyelesaikan Sentuhan dan Pengujian\\\r\n\n\\\r\nDi\nPoin
         ini anda harus memiliki sebagian besar program di tempat Anda. Sekarang anda
         perlu untuk\nMenambahkan dengan menyelesaikan sentuhan yang diperlukan dan
@@ -520,6 +520,20 @@ id-ID:
       Course 4 Artist For Loops 6a: |-
         Buat tiga perubahan kecil pada
         kode dari level terakhir untuk mendapatkan ini!
+      CourseE_HOC 2018 Level_10: Ada seekor**cumi-cumi**![](https://images.code.org/82f305ab1cb4a9ff9044991a18edb16e-image-1538947827218.png)
+        sedang bersembunyi di suatu tempat di Ocean Monument? bisakah kau temukan?
+      CourseE_HOC 2018 Level_6: Lihat pembekuan diluar sana! Tangkap seekor**salmon**![](https://images.code.org/c66eadf25b3cdfe20bbfdc91e2c28c94-image-1538699000102.png)
+        dengan caramu di reruntuhan bawah air.
+      CourseE_HOC 2018 Level_7a: Anda menemukanreruntuhan bawah laut. Pencarian batu
+        pasir untuk**peti**![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png)
+        mengandung **prismarine**![](https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png)
+        harta karun.
+      CourseE_HOC 2018 Level_8: Pertama gunung es, sekarang lava? Lintasi pulau vulkanik
+        ini dan temukan**ikan tropis**![](https://images.code.org/6d3293e7709cb1a43d9f7617fd0cc2b8-image-1538699180397.png)
+        di batu karang.
+      CourseE_HOC 2018 Level_9b: Anda membuatnya untuk batu karang, sekarang cari
+        untuk**jantung lautan**![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png)
+        ! Gunakan karang biru dan merah untuk mencapai harta karun **peti**![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png).
       Crack Random Substitution: |-
         # Membuka sebuah sandi substitusi acak
 
@@ -563,6 +577,20 @@ id-ID:
         Perhatikan berapa lama anda bisa memecahkan sandinya!Apakah ini metode yang bagus dalam mengenkripsi data rahasia?.
 
         <img src="http://code.org/api/hour/begin_encryption.png">
+      Dance Party 3_2019: |-
+        Buat peri baru yang terlihat seperti alien biru. <img src="https://levelbuilder-studio.code.org/media?u=https%3A%2F%2Flevelbuilder-studio.code.org%2Fapi%2Fv1%2Fanimation-library%2FecnW7rdKTB0fUrKRKrqIHbrHVvyWh5hu%2Fcategory_characters%2FalienPink.png" width="3%"></img>
+
+        Buatlah berbagai gerakan yang anda inginkan saat diklik.Coba gunakan sebuah gerakan baru saat ini!
+      Dance Party 4_2019: |-
+        Formasi kru dansa alien
+
+        \-Buat peri ketiga yang terlihat seperti alien kuning, dan buat dia mulai gerakan dansa saat diklik
+        \-Atur semua alienmu berdiri di garis horizontal, seperti ini:
+
+        ![](https://images.code.org/09380fc01069e79d9d33a979379a666b-image-1555960752137.png)
+      Dance Party Predict_2019: "**Buat sebuah prediksi:** seorang peri yang nampak
+        seperti alien biru!\n\nMenurut anda apa yang akan terjadi saat anda meng-kliknya?
+        \ "
       Dance_Party_02: |-
         Ayo kita ini rusa besar menari!
 
@@ -660,6 +688,21 @@ id-ID:
         \-Tambahkan lebih banyak benda/hal yang pengguna bisa berinteraksi dengannya di dalam ruangan
         \-Coba buat kode rahasia acak
         \-Tambahkan lebih banyak ruang
+      Fish Tank 4-validated_2019: |-
+        Kolam ikan perlu air!
+
+        Gunakan<xml><block type="gamelab_setBackground" inline="true" block-text="the set background color block">
+        <value name="COLOR">
+        <block type="colour_picker">
+
+        <title name="COLOUR">000ff</title>
+        </block>
+        </value>
+        </block></xml> untuk membuat berbagai warna latar. Kami merekomendasikan biru!
+      Fish Tank 6-validated_2019: |-
+        Apa yang kau inginkan dari teman baru ikanmu untuk dilakukan?
+
+        Tambahkan sebuah perilaku dan lihat mereka pergi!
       Function intro Ryan: "**Fungsi** bernama `bangun jembatan` ada di ruang kerjamu.
         \ Semua kode yang kamu butuhkan untuk menyeberangi sungai sudah tersedia!
         \\\r\n \\\r\nPosisikan blok hijau kecil dua kali ke ruang kerjamu untuk memperbaiki
@@ -668,8 +711,22 @@ id-ID:
         kerjamu.  Semua kode yang kamu butuhkan untuk menyeberangi sungai sudah tersedia!
         \\\r\n \\\r\nPosisikan blok hijau kecil dua kali ke ruang kerjamu untuk memperbaiki
         jalur dan bawa {currentPlayerName} ke Obor Batu Merah [redstone_torch]."
+      HOC 2018 Level_10: Ada seekor**cumi-cumi**![](https://images.code.org/82f305ab1cb4a9ff9044991a18edb16e-image-1538947827218.png)
+        sedang bersembunyi di suatu tempat di Ocean Monument? bisakah kau temukan?
       HOC 2018 Level_12: Selamat! Dunia air terbuka menunggumu.Bangun sebuah batu
         karang! Sebuah gunung! Kapal karam! Terserah padamu
+      HOC 2018 Level_6: Lihat pembekuan diluar sana! Tangkap seekor**salmon**![](https://images.code.org/c66eadf25b3cdfe20bbfdc91e2c28c94-image-1538699000102.png)
+        dengan caramu di reruntuhan bawah air.
+      HOC 2018 Level_7a: Anda menemukanreruntuhan bawah laut. Pencarian batu pasir
+        untuk**peti**![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png)
+        mengandung **prismarine**![](https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png)
+        harta karun.
+      HOC 2018 Level_8: Pertama gunung es, sekarang lava? Lintasi pulau vulkanik ini
+        dan temukan**ikan tropis**![](https://images.code.org/6d3293e7709cb1a43d9f7617fd0cc2b8-image-1538699180397.png)
+        di batu karang.
+      HOC 2018 Level_9b: Anda membuatnya untuk batu karang, sekarang cari untuk**jantung
+        lautan**![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png)
+        ! Gunakan karang biru dan merah untuk mencapai harta karun **peti**![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png).
       Intro to Web Lab - Part 1_2019: "## Pertanyaan untuk dipertimbangkan:\n\n-   Apa
         perbedaan  bagian bagian dari Web \n    Lab, dan apa fungsinya?"
       Intro to Web Lab - Part 2_2019: |-
@@ -812,6 +869,16 @@ id-ID:
         membuatnya untuk menggambar sebuah pola dari segiempat, segitiga, atau segidelapan?
       Standalone_Artist_9: Sekarang buatlah gambar apapun yang anda suka! Anda bahkan
         punya fungsi kosong yang anda dapat isi dengan apapun yang anda sukai!
+      Virtual Pet 1_2019: |-
+        **Permainan bebas**woow! Lihat binatang peliharaan yang keren!.
+
+        Sambil membaca kode di bawah ini, tanyakan diri anda:
+
+        \-Bagaimana anda memerintah binatang peliharaan agar bergerak?
+        \-Apa yang terjadi saat binatang peliharaan menyentuh cone es krim? Bagaimana dengan kertas?
+        \-Bagaimana variabel 'energi'digunakan? Bagaimana anda memeriksa nila energi binatang peliharaan secara langsung?
+
+        Jalankan kode dan bermain dengan binatang peliharaan! Saat anda selesai, klik"selesai".
       Virtual Pet 2_2019: |-
         Ssekarang giliranmu untuk membuat binatang peliharaan virtualmu sendiri! Mula dengan bentuk yang anda suka.
 
@@ -825,6 +892,12 @@ id-ID:
         Mulai dengan <xml><block type="gamelab_keyPressed" block-text="the while up key pressed event block"><title name="CONDITION">"ketika"</title><title name="KEY">"up"</title></block></xml>dengan<xml><block type="gamelab_moveInDirection" block-text="the move in direction action block"><title name="DIRECTION">"North"</title></block></xml>untuk membuat binatang peliharaanmu bergerak ke utara **ketika**panah atas ditekan.
 
         Ulangi hal di atas untuk tiga arah lain(selatan, barat, timur) dan tombol panah (turun, kiri, kanan)!
+      Virtual Pet 4_2019: |-
+        Ayo membuat petualang makanan!
+
+        1.  Tambahkan**peri**ke dalam duniamu
+        2.  Buatlah peri yang terlihat seperti makanan\*\* yang disukai**binatang peliharaanmu, dan yang lainnya tampak \*\*tidak disukai** untuk dimakan.
+        3.  Buatlah setiap peri makanan mulai berperilaku**petualang** setelah itu muncul.
       Virtual Pet 5_2019: |-
         Gunakan<xml><block type="gamelab_checkTouching" block-text="the when touching block"></xml>dengan<xml><block type="gamelab_jumpTo" block-text="the jump to location block"></block></xml>**simulasi**makan\*\*dalam dunia virtualmu!
 
@@ -841,6 +914,16 @@ id-ID:
         <xml><block type=\"gamelab_printText\" block-text=\"the print block\"></xml>,
         blok baru ditemukan di kategori'Dunia'!\n\nBuat sebuah acara yang membuat
         nilai'energi' dicetak saat peri binatang diklik. "
+      Virtual Pet 8_2019: |-
+        **Permainan bebas:**binatang peliharaanmu adalah BINATANG VIRTUAL _YANG LUAR BIASA!_
+
+        Apalagi yang bisa anda lakukan? Coba ide berikut:
+
+        \-Ubah warna latar menjadi berwarna atau gambar.
+        \-Cetak lagi! Coba mencetak_"yummi! energi bertambah"_saat binatang peliharaanmu makan makanan yang dia suka, atau_"yeak! energi diatur ulang"_saat memakan makanan yang tidak disukai.
+        \-Tambahkan peri lainnya yang berinteraksi dengan binatang peliharaanmu  dengan cara berbeda. Bagaimana dengan peri **boneka**?
+        \-Tambahkan variabel lainnya yang bisa mempengaruhi binatang peliharaanmu atau dunia. Apa yang mungkin"kebahagiaan"atau"zaman"lakukan?.
+        \-Percobaan dengan perilaku! Coba edit perilaku**petualangan**perlambat atau percepat peri petualang(petunjuk:"kecepatan" mereka saat ini 5...).
       'Widget: Text Compression': Perhatikan pola (pengulangan kata atau frase) dalam
         teks.Masukkan pola yang anda lihat ke dalam kamus dengan benar. Ketika anda
         mengetik entri kedalam kamus,simbol untuk entri dimasukkan kedalam teks di
