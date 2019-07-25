@@ -1,6 +1,7 @@
 /**
  * Reducer and actions for progress
  */
+import $ from 'jquery';
 import _ from 'lodash';
 import {makeEnum} from '../utils';
 import {mergeActivityResult, activityCssClass} from './activityUtils';
@@ -8,6 +9,8 @@ import {LevelStatus, LevelKind} from '@cdo/apps/util/sharedConstants';
 import {TestResults} from '@cdo/apps/constants';
 import {ViewType, SET_VIEW_TYPE} from './viewAsRedux';
 import {processedLevel} from '@cdo/apps/templates/progress/progressHelpers';
+import {setVerified} from '@cdo/apps/code-studio/verifiedTeacherRedux';
+import {authorizeLockable} from './stageLockRedux';
 
 // Action types
 export const INIT_PROGRESS = 'progress/INIT_PROGRESS';
@@ -301,6 +304,73 @@ export function processedStages(stages, isPlc) {
   });
 }
 
+/**
+ * Requests user progress from the server and dispatches other redux actions
+ * based on the server's response data.
+ */
+const userProgressFromServer = (state, dispatch, userId) => {
+  if (!state.scriptName) {
+    const message = `Could not request progress for user ID ${userId} from server: scriptName must be present in progress redux.`;
+    throw new Error(message);
+  }
+
+  return $.ajax({
+    url: `/api/user_progress/${state.scriptName}`,
+    method: 'GET',
+    data: {user_id: userId}
+  }).done(data => {
+    data = data || {};
+
+    if (data.isVerifiedTeacher) {
+      dispatch(setVerified());
+    }
+
+    // We are on an overview page if currentLevelId is undefined.
+    const onOverviewPage = !state.currentLevelId;
+    // Show lesson plan links and other teacher info if teacher and on unit overview page.
+    if (
+      (data.isTeacher || data.teacherViewingStudent) &&
+      !data.professionalLearningCourse &&
+      onOverviewPage
+    ) {
+      // Default to progress summary view if teacher is viewing their student's progress.
+      if (data.teacherViewingStudent) {
+        dispatch(setIsSummaryView(true));
+      }
+
+      dispatch(showTeacherInfo());
+    }
+
+    if (data.focusAreaStageIds) {
+      dispatch(
+        updateFocusArea(data.changeFocusAreaPath, data.focusAreaStageIds)
+      );
+    }
+
+    if (data.lockableAuthorized) {
+      dispatch(authorizeLockable());
+    }
+
+    if (data.completed) {
+      dispatch(setScriptCompleted());
+    }
+
+    // Merge progress from server
+    if (data.levels) {
+      const levelProgress = _.mapValues(data.levels, getLevelResult);
+      dispatch(mergeProgress(levelProgress));
+
+      if (data.peerReviewsPerformed) {
+        dispatch(mergePeerReviewProgress(data.peerReviewsPerformed));
+      }
+
+      if (data.current_stage) {
+        dispatch(setCurrentStageId(data.current_stage));
+      }
+    }
+  });
+};
+
 // Action creators
 export const initProgress = ({
   currentLevelId,
@@ -380,6 +450,11 @@ export const setStageExtrasEnabled = stageExtrasEnabled => ({
   type: SET_STAGE_EXTRAS_ENABLED,
   stageExtrasEnabled
 });
+
+export const queryUserProgress = userId => (dispatch, getState) => {
+  const state = getState().progress;
+  return userProgressFromServer(state, dispatch, userId);
+};
 
 // Selectors
 
@@ -664,6 +739,7 @@ export const __testonly__ = IN_UNIT_TEST
       bestResultLevelId,
       peerReviewLesson,
       peerReviewLevels,
-      PEER_REVIEW_ID
+      PEER_REVIEW_ID,
+      userProgressFromServer
     }
   : {};

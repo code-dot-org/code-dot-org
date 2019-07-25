@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
-import * as Table from 'reactabular-table';
-import * as sort from 'sortabular';
+import {Table, sort} from 'reactabular';
 import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
 import i18n from '@cdo/locale';
 import wrappedSortable from '../tables/wrapped_sortable';
@@ -99,7 +98,7 @@ class MatchByStudentTable extends Component {
           props: {style: tableLayoutStyles.headerCell}
         },
         cell: {
-          formatters: [this.optionCellFormatter],
+          format: this.optionCellFormatter,
           props: {
             style: {
               ...tableLayoutStyles.cell,
@@ -120,7 +119,7 @@ class MatchByStudentTable extends Component {
           }
         },
         cell: {
-          formatters: [this.studentAnswerColumnFormatter],
+          format: this.studentAnswerColumnFormatter,
           props: {
             style: {
               ...tableLayoutStyles.cell,
@@ -141,7 +140,7 @@ class MatchByStudentTable extends Component {
           }
         },
         cell: {
-          formatters: [this.correctAnswerColumnFormatter],
+          format: this.correctAnswerColumnFormatter,
           props: {
             style: {
               ...tableLayoutStyles.cell,
