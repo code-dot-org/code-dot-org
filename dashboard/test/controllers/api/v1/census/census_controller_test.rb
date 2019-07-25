@@ -93,6 +93,45 @@ class Api::V1::Census::CensusControllerTest < ActionController::TestCase
     refute response['census_submission_id'].nil?, "census_submission_id expected in response: #{response}"
   end
 
+  test 'yourschool census submission with negative 1 school_name, existing school_id succeeds' do
+    post :create,
+      params: {
+        form_version: 'CensusYourSchool2017v4',
+        nces_school_s: '-1',
+        school_year: 2017,
+        country_s: "US",
+        school_name_s: "Rushmore",
+        submitter_email_address: "rushmore@email.address",
+        submitter_name: "Somebody",
+        submitter_role: 'OTHER',
+        how_many_do_hoc: 'NONE',
+        how_many_after_school: 'NONE',
+        how_many_10_hours: 'NONE',
+        how_many_20_hours: 'NONE',
+        opt_in: true
+      }
+
+    post :create,
+      params: {
+        form_version: 'CensusYourSchool2017v4',
+        nces_school_s: '-1',
+        school_year: 2017,
+        country_s: "US",
+        school_name_s: "Rushmore",
+        submitter_email_address: "rushmore@email.address",
+        submitter_name: "Somebody",
+        submitter_role: 'OTHER',
+        how_many_do_hoc: 'NONE',
+        how_many_after_school: 'NONE',
+        how_many_10_hours: 'NONE',
+        how_many_20_hours: 'NONE',
+        opt_in: true
+      }
+    assert_response 201, @response.body.to_s
+    response = JSON.parse(@response.body)
+    refute response['census_submission_id'].nil?, "census_submission_id expected in response: #{response}"
+  end
+
   test 'yourschool census submission with negative 1 school_id fails' do
     post :create,
       params: {
