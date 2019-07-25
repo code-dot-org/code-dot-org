@@ -82,7 +82,7 @@ class I18nScriptUtils
     I18nScriptUtils.run_standalone_script("bash #{location}")
   end
 
-  private_class_method def self.report_malformed_restoration(key, translation, file_name)
+  def self.report_malformed_restoration(key, translation, file_name)
     @malformed_restorations ||= [["Key", "File Name", "Translation"]]
     @malformed_restorations << [key, file_name, translation]
   end
