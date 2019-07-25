@@ -97,7 +97,7 @@ export class WorkshopEnrollmentSchoolInfo extends React.Component {
   }
 
   handleClickSelect(enrollment) {
-    if (this.state.selectedEnrollments.includes(enrollment.id)) {
+    if (this.isEnrollmentSelected(enrollment)) {
       this.setState(state => {
         const selectedEnrollments = state.selectedEnrollments.filter(e => {
           return e.id !== enrollment.id;
@@ -162,8 +162,14 @@ export class WorkshopEnrollmentSchoolInfo extends React.Component {
     }
   }
 
+  isEnrollmentSelected(enrollment) {
+    return (
+      this.state.selectedEnrollments.findIndex(e => e.id === enrollment.id) >= 0
+    );
+  }
+
   renderSelectCell(enrollment) {
-    const checkBoxClass = this.state.selectedEnrollments.includes(enrollment.id)
+    const checkBoxClass = this.isEnrollmentSelected(enrollment)
       ? 'fa fa-check-square-o'
       : 'fa fa-square-o';
     return (
