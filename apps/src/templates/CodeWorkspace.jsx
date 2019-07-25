@@ -84,7 +84,7 @@ class CodeWorkspace extends React.Component {
     if (textbox.style.bottom) {
       $(textbox).animate(
         {bottom: debuggerHeight},
-        {done: utils.fireResizeEvent}
+        {step: utils.fireResizeEvent}
       );
     } else {
       // if we haven't initialized the height of the code textbox,
