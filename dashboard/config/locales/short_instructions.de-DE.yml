@@ -73,7 +73,8 @@ de-DE:
       4-5 Bee Nested Loops 5: Sammle den gesamten Nektar, indem du eine geschachtelte
         Schleife erzeugst.
       4-5 Maze 1: Guter Mensch. Ich Zombie. Muss ... zur ... Sonnenblume.
-      4-5 Maze 10: Kannst du die Sonnenblume holen und dabei nur vier Bausteine benutzen?
+      4-5 Maze 10: Kannst du zur Sonnenblume gelangen, und dabei nur vier Bausteine
+        benutzen?
       4-5 Maze 11: Kommst du zur Sonnenblume, indem du nur sechs Bausteine verwendest?
       4-5 Maze 12: Okay, das ist etwas anders. Kannst du es mit nur sechs Bausteinen?
       4-5 Maze 2: Bringe den Zombie zur Sonnenblume, aber weiche der fleischfressenden
@@ -85,6 +86,18 @@ de-DE:
         an Bausteinen verwenden?
       4-5 Maze 6: Kannst du diese Aufgabe lösen und dabei die kleinstmögliche Anzahl
         an Bausteinen verwenden?
+      4-5 Maze 7: Bringe den Zombie auf schnellstem Weg zur Sonnenblume. Kannst Du
+        die Aufgabe mit weniger als 11 Blöcken lösen?
+      4-5 Maze 8: |-
+        Verwende so wenig Blöcke wie möglich, um den Zombie zur Sonnenblume zu bringen.
+        (Meide die fleischfressenden Pflanzen!)
+      4-5 Maze 9: |-
+        Jetzt gibt es einen "Wiederhole bis"-Baustein.
+        Hiermit können wir Befehle wiederholen bis der Zombie auf die Sonnenblume trifft.
+
+        Verwende den "Wiederhole bis"-Baustein, um die Aufgabe mit so wenig Blöcken wie möglich zu lösen.
+      4-5 Maze Assessment 1: 'Aufgabe: Gehe zur Sonnenblume und verwende dabei so
+        wenig Bausteine wie möglich.'
       4-5 Nested Loops 5: Benutze den angegebenen Code in einer Schleife, um eine
         Windmühle zu erstellen.
       4-5 Nested Loops 9: Zeichne die Zähne im Mund des Alligators!
@@ -599,6 +612,7 @@ de-DE:
         hüpfen, bis er das Ziel trifft.
       bounce_7_sports: Hänge Bausteine an beide „Sobald“-Bausteine. Lass den Ball
         hüpfen, bis er das Ziel trifft.
+      course3_maze_debugging_challenge1: _"Gehe ich hier nur immer im Kreis herum?"_
       course4_artist_fwp_challenge1: Versuche, dieses Programm auszuführen und verändere
         es, um zu sehen, was passiert. Kannst du herausfinden, wie es funktioniert?
         (Oder lösche es und ersetze es durch etwas ganz anderes)

@@ -2895,28 +2895,46 @@ is-IS:
             við og fer til baka þar til hann tínir kálið.
       courseE_prediction_artistFunction1:
         questions:
-        - {}
+        - text: Hvað mun gerast þegar þú smellir á "Keyra"?
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: Ekkert. Forritið kallar aldrei á fallið.
+          feedback: Ekki rétt. Forritið kallar reyndar tvisvar á fallið.
+        - text: Listamaðurinn mun teikna einn ferning.
+          feedback: Ekki rétt. Forritið kallar reyndar tvisvar á fallið.
+        - text: Listamaðurinn mun teikna tvo ferninga sem skarast.
+          feedback: Ekki rétt. Lengd hverrar hliðar á ferningnum er aðeins 100 dílar,
+            en listamaðurinn hoppar um 175 díla á milli fallanna.
+        - text: Listamaðurinn mun teikna tvo ferninga með smá-bil á milli.
+          correct: true
+          feedback: Rétt! Forritið kallar tvisvar á fallið með hopp á milli.
       courseE_prediction_artistFunction1_2018:
         questions:
-        - {}
+        - text: Hvað mun gerast þegar þú smellir á "Keyra"?
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: Ekkert. Forritið kallar aldrei á fallið.
+          feedback: Ekki rétt. Forritið kallar reyndar tvisvar á fallið.
+        - text: Listamaðurinn mun teikna einn ferning.
+          feedback: Ekki rétt. Forritið kallar reyndar tvisvar á fallið.
+        - text: Listamaðurinn mun teikna tvo ferninga sem skarast.
+          feedback: Ekki rétt. Lengd hverrar hliðar á ferningnum er aðeins 100 dílar,
+            en listamaðurinn hoppar um 175 díla á milli fallanna.
+        - text: Listamaðurinn mun teikna tvo ferninga með smá-bil á milli.
+          correct: true
+          feedback: Rétt! Forritið kallar tvisvar á fallið með hopp á milli.
       courseE_prediction_artistFunction1_2018_2019:
         questions:
-        - {}
+        - text: Hvað mun gerast þegar þú smellir á "Keyra"?
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: Ekkert. Forritið kallar aldrei á fallið.
+          feedback: Ekki rétt. Forritið kallar reyndar tvisvar á fallið.
+        - text: Listamaðurinn mun teikna einn ferning.
+          feedback: Ekki rétt. Forritið kallar reyndar tvisvar á fallið.
+        - text: Listamaðurinn mun teikna tvo ferninga sem skarast.
+          feedback: Ekki rétt. Lengd hverrar hliðar á ferningnum er aðeins 100 dílar,
+            en listamaðurinn hoppar um 175 díla á milli fallanna.
+        - text: Listamaðurinn mun teikna tvo ferninga með smá-bil á milli.
+          correct: true
+          feedback: Rétt! Forritið kallar tvisvar á fallið með hopp á milli.
       courseE_project_exemplars_2019:
         title: Prufusíða fyrir Markdown texta
         content1: Prufusíða fyrir Markdown texta
@@ -2940,23 +2958,43 @@ is-IS:
           | Skapað með földuðum föllum! | Skapað með földuðum föllum! |
 
       courseF_bee_variables_8a_2018:
+        title: Val með breytur og býflugu
         questions:
-        - {}
+        - text: Skoðaðu kóðann hér fyrir neðan. Hve mörgum einingum af blómasafa mun
+            býflugan safna í lokin?
         answers:
-        - {}
-        - correct: true
+        - text: Býflugan mun ekki safna neinum blómasafa vegna þess að breytan heitir
+            ekki "safna" (gather).
+          feedback: Ekki rétt. Heiti breytu hefur ekki áhrif á innihald hennar.
+        - text: Býflugan mun aðeins safna 2 af blómasafa.
+          correct: true
           feedback: Rétt!
-        - {}
+        - text: Býflugan mun ná öllum blómasafanum.
+          feedback: Ekki rétt. Breytan er aftur stillt á 0 áður en kemur að síðustu
+            tveimur köllum á fallið.
         - text: Veit ekki.
+          feedback: Breytan er aftur stillt á 0 áður en kemur að síðustu tveimur köllunum
+            á fallið, þar sem 1 er bætt við í hvert sinn. Síðan safnar býflugan 2
+            af blómasafa.
       courseF_bee_variables_8a_2018_2019:
+        title: Val með breytur og býflugu
         questions:
-        - {}
+        - text: Skoðaðu kóðann hér fyrir neðan. Hve mörgum einingum af blómasafa mun
+            býflugan safna í lokin?
         answers:
-        - {}
-        - correct: true
+        - text: Býflugan mun ekki safna neinum blómasafa vegna þess að breytan heitir
+            ekki "safna" (gather).
+          feedback: Ekki rétt. Heiti breytu hefur ekki áhrif á innihald hennar.
+        - text: Býflugan mun aðeins safna 2 af blómasafa.
+          correct: true
           feedback: Rétt!
-        - {}
+        - text: Býflugan mun ná öllum blómasafanum.
+          feedback: Ekki rétt. Breytan er aftur stillt á 0 áður en kemur að síðustu
+            tveimur köllum á fallið.
         - text: Veit ekki.
+          feedback: Breytan er aftur stillt á 0 áður en kemur að síðustu tveimur köllunum
+            á fallið, þar sem 1 er bætt við í hvert sinn. Síðan safnar býflugan 2
+            af blómasafa.
       courseF_external_variableConstant:
         markdown: "<h2>Meira um breytur</h2>\n\n\n<img src=\"https://images.code.org/082c757f5c939bd353eacda9589ca54f-image-1477349401281.35.08.png\"
           style=\"padding-left: 30px; width:300px; float:right;\"/>\n<h3>Þú varst
@@ -3196,7 +3234,9 @@ is-IS:
         questions:
         - text: Hvað mun gerast þegar þú smellir á "Keyra"?
         answers:
-        - feedback: Ekki rétt. Listamaðurinn snýr í hverri umferð `frá` lykkjunnar.
+        - text: Listamaðurinn mun teikna beina línu sem breikkar frá einni hlið spilunarsvæðisins
+            til annarrar.
+          feedback: Ekki rétt. Listamaðurinn snýr í hverri umferð `frá` lykkjunnar.
         - text: 'Listamaðurinn mun teikna spíral og í hverri umferð `frá` lykkjunnar
             verður línan lengri og mjórri. '
           feedback: Ekki rétt. Í hverri umferð `frá` lykkjunnar teiknar listamaðurinn
@@ -3212,7 +3252,9 @@ is-IS:
         questions:
         - text: Hvað mun gerast þegar þú smellir á "Keyra"?
         answers:
-        - feedback: Ekki rétt. Listamaðurinn snýr í hverri umferð `frá` lykkjunnar.
+        - text: Listamaðurinn mun teikna beina línu sem breikkar frá einni hlið spilunarsvæðisins
+            til annarrar.
+          feedback: Ekki rétt. Listamaðurinn snýr í hverri umferð `frá` lykkjunnar.
         - text: 'Listamaðurinn mun teikna spíral og í hverri umferð `frá` lykkjunnar
             verður línan lengri og mjórri. '
           feedback: Ekki rétt. Í hverri umferð `frá` lykkjunnar teiknar listamaðurinn
@@ -3228,7 +3270,9 @@ is-IS:
         questions:
         - text: Hvað mun gerast þegar þú smellir á "Keyra"?
         answers:
-        - feedback: Ekki rétt. Listamaðurinn snýr í hverri umferð `frá` lykkjunnar.
+        - text: Listamaðurinn mun teikna beina línu sem breikkar frá einni hlið spilunarsvæðisins
+            til annarrar.
+          feedback: Ekki rétt. Listamaðurinn snýr í hverri umferð `frá` lykkjunnar.
         - text: 'Listamaðurinn mun teikna spíral og í hverri umferð `frá` lykkjunnar
             verður línan lengri og mjórri. '
           feedback: Ekki rétt. Í hverri umferð `frá` lykkjunnar teiknar listamaðurinn
@@ -3463,7 +3507,7 @@ is-IS:
 
       coursee_prediction_artistfunction2:
         questions:
-        - {}
+        - text: Hvað gerist þegar þú smellir á "Keyra" hnappinn?
         answers:
         - text: Listamaðurinn mun leysa þrautina rétt.
           feedback: Ekki rétt. Lykkjan notar "teikna marghyrning" í stað "teikna röð
@@ -3471,11 +3515,14 @@ is-IS:
         - text: Listamaðurinn mun teikna fjóra ferninga sem mynda glugga.
           correct: true
           feedback: Rétt!
-        - {}
-        - {}
+        - text: Listamaðurinn mun aðeins teikna eina röð af ferningum.
+          feedback: Ekki rétt. Forritið kallar aldrei á fallið "teikna röð marghyrninga".
+        - text: Listamaðurinn mun teikna fjóra ferninga hvern ofan á annan.
+          feedback: Ekki rétt. Lykkjan er með 90 gráðu snúning á milli þess kallað
+            er á "teikna marghyrning".
       coursee_prediction_artistfunction2_2018:
         questions:
-        - {}
+        - text: Hvað gerist þegar þú smellir á "Keyra" hnappinn?
         answers:
         - text: Listamaðurinn mun leysa þrautina rétt.
           feedback: Ekki rétt. Lykkjan notar "teikna marghyrning" í stað "teikna röð
@@ -3483,11 +3530,14 @@ is-IS:
         - text: Listamaðurinn mun teikna fjóra ferninga sem mynda glugga.
           correct: true
           feedback: Rétt!
-        - {}
-        - {}
+        - text: Listamaðurinn mun aðeins teikna eina röð af ferningum.
+          feedback: Ekki rétt. Forritið kallar aldrei á fallið "teikna röð marghyrninga".
+        - text: Listamaðurinn mun teikna fjóra ferninga hvern ofan á annan.
+          feedback: Ekki rétt. Lykkjan er með 90 gráðu snúning á milli þess kallað
+            er á "teikna marghyrning".
       coursee_prediction_artistfunction2_2018_2019:
         questions:
-        - {}
+        - text: Hvað gerist þegar þú smellir á "Keyra" hnappinn?
         answers:
         - text: Listamaðurinn mun leysa þrautina rétt.
           feedback: Ekki rétt. Lykkjan notar "teikna marghyrning" í stað "teikna röð
@@ -3495,35 +3545,65 @@ is-IS:
         - text: Listamaðurinn mun teikna fjóra ferninga sem mynda glugga.
           correct: true
           feedback: Rétt!
-        - {}
-        - {}
+        - text: Listamaðurinn mun aðeins teikna eina röð af ferningum.
+          feedback: Ekki rétt. Forritið kallar aldrei á fallið "teikna röð marghyrninga".
+        - text: Listamaðurinn mun teikna fjóra ferninga hvern ofan á annan.
+          feedback: Ekki rétt. Lykkjan er með 90 gráðu snúning á milli þess kallað
+            er á "teikna marghyrning".
       grade2_multi_collector_A_predict1:
         questions:
-        - {}
+        - text: Skoðaðu kóðann hér fyrir neðan vandlega. Ef kóðinn mundi keyra alveg
+            til enda (og við hunsum villur) hve mörgum fjársjóðum mundi Lára þá safna?
         answers:
-        - {}
-        - correct: true
+        - text: Lára mun safna 4 fjársjóðum með þessum kóða.
+          feedback: Ekki rétt. Lára mun reyna að safna fjársjóði þar sem enginn er
+            og það veldur villu.
+        - text: Lára mun reyna að safna fjársjóði þar sem enginn er og það veldur
+            villu.
+          correct: true
           feedback: Rétt!
-        - {}
+        - text: Lára mun safna öllum fjársjóðunum.
+          feedback: Ekki rétt. Lára mun reyna að safna fjársjóði þar sem enginn er
+            og það veldur villu.
         - text: Veit ekki.
+          feedback: Lára reynir að safna fjársjóði þar sem enginn er og það veldur
+            villu.
       grade2_multi_collector_A_predict1_2018:
         questions:
-        - {}
+        - text: Skoðaðu þennan kóða vandlega. Hvað heldur þú að muni gerast þegar
+            forritið keyrir?
         answers:
-        - {}
-        - correct: true
+        - text: Lára mun safna 4 fjársjóðum með þessum kóða.
+          feedback: Ekki rétt. Lára mun reyna að safna fjársjóði þar sem enginn er
+            og það veldur villu.
+        - text: Lára mun reyna að safna fjársjóði þar sem enginn er og það veldur
+            villu.
+          correct: true
           feedback: Rétt!
-        - {}
+        - text: Lára mun safna öllum fjársjóðunum.
+          feedback: Ekki rétt. Lára mun reyna að safna fjársjóði þar sem enginn er
+            og það veldur villu.
         - text: Veit ekki.
+          feedback: Lára reynir að safna fjársjóði þar sem enginn er og það veldur
+            villu.
       grade2_multi_collector_A_predict1_2018_2019:
         questions:
-        - {}
+        - text: Skoðaðu þennan kóða vandlega. Hvað heldur þú að muni gerast þegar
+            forritið keyrir?
         answers:
-        - {}
-        - correct: true
+        - text: Lára mun safna 4 fjársjóðum með þessum kóða.
+          feedback: Ekki rétt. Lára mun reyna að safna fjársjóði þar sem enginn er
+            og það veldur villu.
+        - text: Lára mun reyna að safna fjársjóði þar sem enginn er og það veldur
+            villu.
+          correct: true
           feedback: Rétt!
-        - {}
+        - text: Lára mun safna öllum fjársjóðunum.
+          feedback: Ekki rétt. Lára mun reyna að safna fjársjóði þar sem enginn er
+            og það veldur villu.
         - text: Veit ekki.
+          feedback: Lára reynir að safna fjársjóði þar sem enginn er og það veldur
+            villu.
       gradek1_activity_beNice:
         title: Tölvan er vinur þinn
         markdown: "# Hegðun í tölvuveri\n  \n<br/><br/>    \n    \n<a href=\"https://docs.google.com/document/d/18KHX5NNlmXX1Eqt8u6LFRzto7PK4dIFNv-tr1F1joUQ/edit?usp=sharing\"

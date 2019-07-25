@@ -293,6 +293,7 @@
   homepage_slot_text_link_stats: "ดูสถิติ"
   homepage_slot_text_link_buy: "มาร่วมกับเราสิ"
   homepage_slot_text_link_donate: "ร่วมบริจาค"
+  homepage_gallery_header: "โครงงานของ Code.org ได้ถูกสร้างมาแล้วมากกว่า %{project_count} ล้านโครงการ"
   homepage_header_donors: "Code.org ขอขอบคุณพันธมิตร"
   homepage_donors_seall: "ดูทั้งหมด"
   homepage_donors_donate: "ร่วมบริจาค"

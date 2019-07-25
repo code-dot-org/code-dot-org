@@ -4184,4 +4184,34 @@ class UserTest < ActiveSupport::TestCase
   test 'find_channel_owner returns nil for a malformed channel id' do
     assert_nil User.find_channel_owner 'not-a-channel-id'
   end
+
+  test 'user_school_info count is > 0 and school info is incomplete' do
+    user_school_info = create :user_school_info
+    teacher = user_school_info.user
+    school_info = create :school_info, country: nil, school_id: nil, validation_type: SchoolInfo::VALIDATION_NONE
+    refute teacher.update(school_info: school_info)
+    assert_includes teacher.errors.full_messages, "School info cannot add new school id"
+  end
+
+  test 'user_school_info_count == 0 and school info is not complete' do
+    teacher = create :teacher
+    school_info = create :school_info, country: nil, school_id: nil, validation_type: SchoolInfo::VALIDATION_NONE
+    assert teacher.update(school_info: school_info)
+    assert_equal teacher.user_school_infos.count, 1
+  end
+
+  test 'user_school_info_count == 0 and school info is complete' do
+    teacher = create :teacher
+    school_info = create :school_info
+    assert teacher.update(school_info: school_info)
+    assert_equal teacher.user_school_infos.count, 1
+  end
+
+  test 'count is > 0 and school info is complete' do
+    user_school_info = create :user_school_info
+    teacher = user_school_info.user
+    school_info = create :school_info
+    assert teacher.update(school_info: school_info)
+    assert_equal teacher.user_school_infos.count, 2
+  end
 end

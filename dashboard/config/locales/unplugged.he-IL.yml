@@ -49,6 +49,8 @@ he:
         desc: שיעור זה מציג כיצד אנחנו משתמשים באלגוריתמים בחיי היום יום שלנו, תוך
           כדי הצגה של שתילת זרעון כדוגמה. השיעור גם מציג את התמונה הגדולה של מדעי
           המחשב וכיצד אלגוריתמים הם חלק חשוב ונצרך כחלק מהעולם הזה.
+      GettingLoopy:
+        title: עוברים ללולאות
       RelayProgramming:
         title: הרץ פעולה בשנית
       Conditionals:
@@ -107,6 +109,8 @@ he:
         title: האירוע הגדול
       courseC_unplugged_paperPlanes:
         title: 'אלגוריתמים מהחיים: מטוסי נייר'
+      courseC_unplugged_gettingLoopy:
+        title: עוברים ללולאות
       courseC_unplugged_binaryBracelets:
         title: צמידים בינארים
         desc: התלמידים מייצרים צמידים בצורה האות הראשונה בשם שלהם בייצוג בינארי. התלמידים
@@ -152,6 +156,8 @@ he:
         title: תמונות בינאריות
       PaperPlanes_2018:
         title: 'אלגוריתמים מהחיים: מטוסי נייר'
+      GettingLoopy_2018:
+        title: עוברים ללולאות
       BinaryBracelets_2018:
         title: צמידים בינארים
         desc: התלמידים מייצרים צמידים בצורה האות הראשונה בשם שלהם בייצוג בינארי. התלמידים
@@ -178,6 +184,8 @@ he:
         title: פעילות ללא עבודה במחשב
       BinaryImages_2019:
         title: תמונות בינאריות
+      GettingLoopy_2019:
+        title: עוברים ללולאות
       courseC_Unplugged_ScreenOutTheMean_2019:
         title: פעילות ללא עבודה במחשב
       BigEvent_2019:

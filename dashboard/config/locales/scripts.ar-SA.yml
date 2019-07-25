@@ -3,6 +3,7 @@ ar:
   data:
     script:
       category:
+        csf_category_name: أساسيات علوم الكمبيوتر
         hoc_category_name: ساعة البرمجة
         math_category_name: العمليات الحسابية
       name:
@@ -1133,6 +1134,8 @@ ar:
               name: ثنائي الفنان
             Building a Foundation:
               name: بناء قاعدة
+            Loops in Ice Age:
+              name: الحلقات في العصر الجليدي
         new-express:
           stages:
             Introduction:
@@ -1299,6 +1302,8 @@ ar:
               name: صور ثنائية
             Artist Binary:
               name: ثنائي الفنان
+            Loops in Ice Age:
+              name: الحلقات في العصر الجليدي
             Graph Paper Programming:
               name: برمجة ورقة الرسم البياني
             Relay Programming:
@@ -1441,6 +1446,8 @@ ar:
               name: برمجة ورقة الرسم البياني
             Relay Programming:
               name: برمجة السباق
+            Loops in Ice Age:
+              name: الحلقات في العصر الجليدي
             Conditionals with Cards:
               name: الشرطية مع بطاقات
             Digital Citizenship:
@@ -1516,6 +1523,8 @@ ar:
               name: حركها , حركها
             Your Digital Footprint:
               name: البصمة الرقمية الخاصة بك
+            Loops in Ice Age:
+              name: الحلقات في العصر الجليدي
             'Loops: Getting Loopy':
               name: القبض على المعتوهون
         pre-express-2019:
@@ -1572,6 +1581,10 @@ ar:
               name: الشرطية مع بطاقات
             Building a Foundation:
               name: بناء قاعدة
+        csp7-pilot-staging:
+          stages:
+            Libraries:
+              name: المكتبات
         express-2018-vn:
           stages:
             Graph Paper Programming:
