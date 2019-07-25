@@ -507,10 +507,6 @@ Dashboard::Application.routes.draw do
     get 'workshop_enrollment/:code/thanks', action: 'thanks', controller: 'workshop_enrollment'
     get 'workshop_enrollment/:code/cancel', action: 'cancel', controller: 'workshop_enrollment'
 
-    get 'workshop_materials/:enrollment_code', action: 'new', controller: 'workshop_material_orders'
-    post 'workshop_materials/:enrollment_code', action: 'create', controller: 'workshop_material_orders'
-    get 'workshop_materials', action: 'admin_index', controller: 'workshop_material_orders'
-
     get 'pre_workshop_survey/:enrollment_code', action: 'new', controller: 'pre_workshop_survey', as: 'new_pre_workshop_survey'
     get 'teachercon_survey/:enrollment_code', action: 'new', controller: 'teachercon_survey', as: 'new_teachercon_survey'
 
