@@ -1,4 +1,4 @@
-import GameLab from '@cdo/apps/gamelab/GameLab';
+import GameLab from '@cdo/apps/p5lab/gamelab/GameLab';
 
 var SpriteLab = function() {
   this.gamelab = new GameLab();
