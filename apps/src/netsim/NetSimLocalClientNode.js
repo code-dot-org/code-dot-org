@@ -603,7 +603,7 @@ NetSimLocalClientNode.prototype.onWireTableChange_ = function() {
  * sent to this node.
  * @private
  */
-NetSimLocalClientNode.prototype.onMessageTableChange_ = function(changeType) {
+NetSimLocalClientNode.prototype.onMessageTableChange_ = function() {
   if (!NetSimGlobals.getLevelConfig().automaticReceive) {
     // In this level, we will not automatically pick up messages directed
     // at us.  We must manually call a receive method instead.
