@@ -115,7 +115,6 @@ include_recipe 'cdo-i18n' if node.name == 'i18n'
 
 # Production analytics utilities.
 include_recipe 'cdo-analytics' if %w[production-daemon production-console].include?(node.name)
-include_recipe 'cdo-tippecanoe' if %w[production-daemon production-console].include?(node.name)
 
 # Daemon-specific configuration for SSH access to frontend instances.
 include_recipe 'cdo-apps::daemon_ssh' if node['cdo-apps']['daemon'] && node['cdo-apps']['frontends']
