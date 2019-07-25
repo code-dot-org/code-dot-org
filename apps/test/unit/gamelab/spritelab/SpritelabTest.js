@@ -7,9 +7,9 @@ import {
   restoreRedux
 } from '@cdo/apps/redux';
 import commonReducers from '@cdo/apps/redux/commonReducers';
-import reducers from '@cdo/apps/gamelab/reducers';
+import reducers from '@cdo/apps/p5lab/gamelab/reducers';
 import {setIsRunning} from '@cdo/apps/redux/runState';
-import Spritelab from '@cdo/apps/gamelab/spritelab/Spritelab';
+import Spritelab from '@cdo/apps/p5lab/gamelab/spritelab/Spritelab';
 import Sounds from '@cdo/apps/Sounds';
 
 describe('Spritelab Preview', () => {
