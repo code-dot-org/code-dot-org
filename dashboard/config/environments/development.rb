@@ -55,6 +55,9 @@ Dashboard::Application.configure do
 
   config.assets.quiet = true
 
+  # skip precompiling of all assets on the first request for any asset.
+  config.assets.check_precompiled_asset = false
+
   # Whether or not to display pretty apps (formerly called blockly).
   config.pretty_apps = true
 
