@@ -20,6 +20,7 @@ export default class WorkshopEnrollment extends React.Component {
     accountRequiredForAttendance: PropTypes.bool.isRequired,
     scholarshipWorkshop: PropTypes.bool.isRequired,
     onDelete: PropTypes.func.isRequired,
+    onMove: PropTypes.func.isRequired,
     location: PropTypes.object,
     activeTab: PropTypes.number,
     onTabSelect: PropTypes.func
@@ -60,6 +61,7 @@ export default class WorkshopEnrollment extends React.Component {
         accountRequiredForAttendance={this.props.accountRequiredForAttendance}
         scholarshipWorkshop={this.props.scholarshipWorkshop}
         onDelete={this.props.onDelete}
+        onMove={this.props.onMove}
         workshopCourse={this.props.workshopCourse}
         workshopSubject={this.props.workshopSubject}
         numSessions={this.props.numSessions}

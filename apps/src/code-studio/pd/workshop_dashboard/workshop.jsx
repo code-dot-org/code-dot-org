@@ -166,6 +166,26 @@ export class Workshop extends React.Component {
     });
   };
 
+  handleMoveEnrollment = (destinationWorkshopId, selectedEnrollments) => {
+    // /platforms?platform_ids[]=0&platform_ids[]=1&platform_ids[]=2
+    this.moveEnrollmentRequest = $.ajax({
+      method: 'POST',
+      url: `/api/v1/pd/workshops/${
+        this.props.params.workshopId
+      }/enrollments/move`,
+      traditional: true,
+      data: {
+        enrollments: selectedEnrollments,
+        destination_workshop_id: destinationWorkshopId
+      },
+      dataType: 'json'
+    }).done(() => {
+      // reload
+      this.loadEnrollments();
+      this.moveEnrollmentRequest = null;
+    });
+  };
+
   componentWillUnmount() {
     if (this.loadWorkshopRequest) {
       this.loadWorkshopRequest.abort();
@@ -765,6 +785,7 @@ export class Workshop extends React.Component {
           numSessions={this.state.workshop.sessions.length}
           enrollments={this.state.enrollments}
           onDelete={this.handleDeleteEnrollment}
+          onMove={this.handleMoveEnrollment}
           accountRequiredForAttendance={
             this.state.workshop['account_required_for_attendance?']
           }
