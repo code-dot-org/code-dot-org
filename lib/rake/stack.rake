@@ -1,7 +1,6 @@
 namespace :stack do
   task :environment do
     require_relative '../../deployment'
-    CDO.chef_local_mode = rack_env?(:adhoc) ? !ENV['CHEF_SERVER'] : false
     ENV['TEMPLATE'] ||= 'cloud_formation_stack.yml.erb'
     ENV['CDN_ENABLED'] ||= '1' unless rack_env?(:adhoc)
     ENV['DOMAIN'] ||= rack_env?(:adhoc) ? 'cdn-code.org' : 'code.org'
@@ -32,14 +31,13 @@ Note: Consumes AWS resources until `adhoc:stop` is called.'
     AWS::CloudFormation.validate
   end
 
-  %I(vpc iam ami data lambda).each do |stack|
+  %I(vpc iam ami data lambda alerting).each do |stack|
     namespace stack do
       task :environment do
         require_relative '../../deployment'
         ENV['TEMPLATE'] ||= "#{stack}.yml.erb"
-        ENV['STACK_NAME'] ||= 'lambda' if stack == :lambda
+        ENV['STACK_NAME'] ||= stack.to_s if [:lambda, :alerting].include? stack
         ENV['STACK_NAME'] ||= "#{stack.upcase}#{"-#{rack_env}" if [:ami, :data].include? stack}"
-        CDO.chef_local_mode = true if rack_env? :adhoc
         require 'cdo/aws/cloud_formation'
       end
 

@@ -30,7 +30,6 @@ function updateTitle() {
 
 export const commands = {
   executeDrawLoopAndCallbacks() {
-    this.createEdgeSprites();
     drawBackground.apply(this);
     spriteUtils.runBehaviors();
     spriteUtils.runEvents(this);
@@ -209,12 +208,12 @@ export const commands = {
     return validationCommands.getBackground();
   },
 
-  getBehaviorsForAnimation(animation) {
-    return validationCommands.getBehaviorsForAnimation(animation);
+  getNumBehaviorsForAnimation(animation) {
+    return validationCommands.getNumBehaviorsForAnimation(animation);
   },
 
-  getBehaviorsForSpriteId(spriteId) {
-    return validationCommands.getBehaviorsForSpriteId(spriteId);
+  getNumBehaviorsForSpriteId(spriteId) {
+    return validationCommands.getNumBehaviorsForSpriteId(spriteId);
   },
 
   getSpriteIdsInUse() {

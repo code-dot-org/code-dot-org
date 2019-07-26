@@ -265,10 +265,12 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
       :subject,
       :notes,
       :regional_partner_id,
+      :organizer_id,
       sessions_attributes: [:id, :start, :end, :_destroy],
     ]
 
     allowed_params.delete :regional_partner_id unless can_update_regional_partner
+    allowed_params.delete :organizer_id unless current_user.permission?(UserPermission::WORKSHOP_ADMIN)
 
     params.require(:pd_workshop).permit(*allowed_params)
   end

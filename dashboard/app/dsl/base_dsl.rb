@@ -43,8 +43,7 @@ class BaseDSL
   # after parse has been done, this function returns a hash of all the user-visible strings from this instance
   def i18n_hash
     # Filter out any entries with nil key or value
-    hash = i18n_strings.select {|key, value| key && value}
-    {"en" => {"data" => {prefix => hash}}}
+    i18n_strings.select {|key, value| key && value}
   end
 
   # Implement in subclass

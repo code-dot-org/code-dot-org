@@ -11,13 +11,6 @@ function cp_in() {
   cp $1 $2
 }
 
-# make sure we're on staging
-branch=$(git branch | sed -n '/\* /s///p')
-if [ "$branch" != "staging" ]; then
-  echo "Must run from staging branch"
-  exit
-fi
-
 ### Dashboard
 
 orig_dir=dashboard/config/locales

@@ -1,6 +1,6 @@
 import React from 'react';
 import {shallow, mount} from 'enzyme';
-import {assert} from '../../../util/configuredChai';
+import {assert} from '../../../util/reconfiguredChai';
 import sinon from 'sinon';
 import StageDescriptions from '@cdo/apps/lib/script-editor/StageDescriptions';
 
@@ -129,6 +129,7 @@ describe('StageDescriptions', () => {
         ]
       })
     );
+    wrapper.update();
 
     assert.equal(wrapper.state('buttonText'), 'Imported');
     assert.deepEqual(wrapper.state('mismatchedStages'), ['The Internet_new']);

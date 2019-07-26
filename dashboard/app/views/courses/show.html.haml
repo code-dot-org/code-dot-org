@@ -9,6 +9,7 @@
 - data[:show_version_warning] = course.has_older_version_progress?(@current_user) && !course.has_dismissed_version_warning?(@current_user)
 - data[:show_redirect_warning] = redirect_warning
 - data[:redirect_to_course_url] = course.redirect_to_course_url(@current_user)
+- data[:user_id] = @current_user.try(:id)
 
 - content_for(:head) do
   %script{ src: minifiable_asset_path('js/courses/show.js'), data: {courses_show: data.to_json}}

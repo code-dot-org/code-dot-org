@@ -9,11 +9,11 @@ Minitest.load_plugins
 Minitest.extensions.delete('rails')
 Minitest.extensions.unshift('rails')
 
-if ENV['COVERAGE'] || ENV['CIRCLECI'] # set this environment variable when running tests if you want to see test coverage
+if ENV['COVERAGE'] || ENV['CIRCLECI'] || ENV['DRONE'] # set this environment variable when running tests if you want to see test coverage
   require 'simplecov'
   SimpleCov.start :rails
   SimpleCov.root(File.expand_path(File.join(File.dirname(__FILE__), '../../')))
-  if ENV['CIRCLECI']
+  if ENV['CIRCLECI'] || ENV['DRONE']
     require 'codecov'
     SimpleCov.formatter = SimpleCov::Formatter::Codecov
   end
@@ -34,22 +34,20 @@ ENV["RACK_ENV"] = "test"
 # but running unit tests in the test env for developers only sets
 # RAILS ENV. We fix it above but we need to reload some stuff...
 
-CDO.rack_env = :test if defined? CDO
+require 'mocha/mini_test'
+
+CDO.stubs(:rack_env).returns(:test) if defined? CDO
 Rails.application.reload_routes! if defined?(Rails) && defined?(Rails.application)
 
 require File.expand_path('../../config/environment', __FILE__)
 I18n.load_path += Dir[Rails.root.join('test', 'en.yml')]
 I18n.backend.reload!
-CDO.override_pegasus = nil
-CDO.override_dashboard = nil
 
 Rails.application.routes.default_url_options[:host] = CDO.dashboard_hostname
 Dashboard::Application.config.action_mailer.default_url_options = {host: CDO.canonical_hostname('studio.code.org'), protocol: 'https'}
 Devise.mailer.default_url_options = Dashboard::Application.config.action_mailer.default_url_options
 
 require 'rails/test_help'
-
-require 'mocha/mini_test'
 
 # Raise exceptions instead of rendering exception templates.
 Dashboard::Application.config.action_dispatch.show_exceptions = false
@@ -71,6 +69,8 @@ class ActiveSupport::TestCase
     UserHelpers.stubs(:random_donor).returns(name_s: 'Someone')
     AWS::S3.stubs(:upload_to_bucket).raises("Don't actually upload anything to S3 in tests... mock it if you want to test it")
     AWS::S3.stubs(:download_from_bucket).raises("Don't actually download anything to S3 in tests... mock it if you want to test it")
+    CDO.stubs(override_pegasus: nil)
+    CDO.stubs(override_dashboard: nil)
 
     set_env :test
 
@@ -102,22 +102,22 @@ class ActiveSupport::TestCase
 
   def set_env(env)
     Rails.env = env.to_s
-    CDO.rack_env = env
+    CDO.stubs(rack_env: env)
   end
 
   # some s3 helpers/mocks
   def expect_s3_upload
-    CDO.disable_s3_image_uploads = false
+    CDO.stubs(disable_s3_image_uploads: false)
     AWS::S3.expects(:upload_to_bucket).returns(true)
   end
 
   def expect_s3_upload_failure
-    CDO.disable_s3_image_uploads = false
+    CDO.stubs(disable_s3_image_uploads: false)
     AWS::S3.expects(:upload_to_bucket).returns(nil)
   end
 
   def expect_no_s3_upload
-    CDO.disable_s3_image_uploads = false
+    CDO.stubs(disable_s3_image_uploads: false)
     AWS::S3.expects(:upload_to_bucket).never
   end
 

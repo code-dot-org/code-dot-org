@@ -9,27 +9,31 @@ import {
   GAME_WIDTH,
   SpritelabReservedWords
 } from './constants';
-import experiments from '../util/experiments';
-import {outputError, injectErrorHandler} from '../lib/util/javascriptMode';
-import JavaScriptModeErrorHandler from '../JavaScriptModeErrorHandler';
-import BlocklyModeErrorHandler from '../BlocklyModeErrorHandler';
-var msg = require('@cdo/gamelab/locale');
-import CustomMarshalingInterpreter from '../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
+import experiments from '@cdo/apps/util/experiments';
+import {
+  outputError,
+  injectErrorHandler
+} from '@cdo/apps/lib/util/javascriptMode';
+import JavaScriptModeErrorHandler from '@cdo/apps/JavaScriptModeErrorHandler';
+import BlocklyModeErrorHandler from '@cdo/apps/BlocklyModeErrorHandler';
+var gamelabMsg = require('@cdo/gamelab/locale');
+var spritelabMsg = require('@cdo/spritelab/locale');
+import CustomMarshalingInterpreter from '@cdo/apps/lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 var apiJavascript = require('./apiJavascript');
-var consoleApi = require('../consoleApi');
-var utils = require('../utils');
+var consoleApi = require('@cdo/apps/consoleApi');
+var utils = require('@cdo/apps/utils');
 var dropletConfig = require('./dropletConfig');
-var JSInterpreter = require('../lib/tools/jsinterpreter/JSInterpreter');
-import * as apiTimeoutList from '../lib/util/timeoutList';
-var JsInterpreterLogger = require('../JsInterpreterLogger');
+var JSInterpreter = require('@cdo/apps/lib/tools/jsinterpreter/JSInterpreter');
+import * as apiTimeoutList from '@cdo/apps/lib/util/timeoutList';
+var JsInterpreterLogger = require('@cdo/apps/JsInterpreterLogger');
 var GameLabP5 = require('./GameLabP5');
 var gameLabSprite = require('./GameLabSprite');
 var gameLabGroup = require('./GameLabGroup');
 var gamelabCommands = require('./commands');
-import {initializeSubmitHelper, onSubmitComplete} from '../submitHelper';
-var dom = require('../dom');
-import {initFirebaseStorage} from '../storage/firebaseStorage';
-import {getStore} from '../redux';
+import {initializeSubmitHelper, onSubmitComplete} from '@cdo/apps/submitHelper';
+var dom = require('@cdo/apps/dom');
+import {initFirebaseStorage} from '@cdo/apps/storage/firebaseStorage';
+import {getStore} from '@cdo/apps/redux';
 import {
   allAnimationsSingleFrameSelector,
   setInitialAnimationList,
@@ -37,25 +41,24 @@ import {
   withAbsoluteSourceUrls
 } from './animationListModule';
 import {getSerializedAnimationList} from './shapes';
-import {add as addWatcher} from '../redux/watchedExpressions';
+import {add as addWatcher} from '@cdo/apps/redux/watchedExpressions';
 var reducers = require('./reducers');
 var GameLabView = require('./GameLabView');
 var Provider = require('react-redux').Provider;
-import {shouldOverlaysBeVisible} from '../templates/VisualizationOverlay';
+import {shouldOverlaysBeVisible} from '@cdo/apps/templates/VisualizationOverlay';
 import {
   getContainedLevelResultInfo,
   postContainedLevelAttempt,
   runAfterPostContainedLevel
-} from '../containedLevels';
-import {hasValidContainedLevelResult} from '../code-studio/levels/codeStudioLevels';
-import {actions as jsDebugger} from '../lib/tools/jsdebugger/redux';
+} from '@cdo/apps/containedLevels';
+import {hasValidContainedLevelResult} from '@cdo/apps/code-studio/levels/codeStudioLevels';
+import {actions as jsDebugger} from '@cdo/apps/lib/tools/jsdebugger/redux';
 import {addConsoleMessage, clearConsole} from './textConsoleModule';
-import {captureThumbnailFromCanvas} from '../util/thumbnail';
-import Sounds from '../Sounds';
-import {TestResults, ResultType} from '../constants';
-import {showHideWorkspaceCallouts} from '../code-studio/callouts';
+import {captureThumbnailFromCanvas} from '@cdo/apps/util/thumbnail';
+import Sounds from '@cdo/apps/Sounds';
+import {TestResults, ResultType} from '@cdo/apps/constants';
+import {showHideWorkspaceCallouts} from '@cdo/apps/code-studio/callouts';
 import defaultSprites from './defaultSprites.json';
-import {GamelabAutorunOptions} from '@cdo/apps/util/sharedConstants';
 import wrap from './debugger/replay';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {
@@ -67,7 +70,13 @@ import {
 } from '@cdo/apps/util/performance';
 import MobileControls from './MobileControls';
 import Exporter from './Exporter';
-import {generateExpoApk} from '../util/exporter';
+import {
+  expoGenerateApk,
+  expoCheckApkBuild,
+  expoCancelApkBuild
+} from '@cdo/apps/util/exporter';
+import project from '@cdo/apps/code-studio/initApp/project';
+import {setExportGeneratedProperties} from '@cdo/apps/code-studio/components/exportDialogRedux';
 
 const defaultMobileControlsConfig = {
   spaceButtonVisible: true,
@@ -108,6 +117,7 @@ var GameLab = function() {
   /** @private {JsInterpreterLogger} */
   this.consoleLogger_ = new JsInterpreterLogger(window.console);
 
+  this.generatedProperties = {};
   this.eventHandlers = {};
   this.Globals = {};
   this.currentCmdQueue = null;
@@ -168,19 +178,10 @@ module.exports = GameLab;
  * @param {string} logLevel
  */
 GameLab.prototype.log = function(object, logLevel) {
-  this.consoleLogger_.log(
-    experiments.isEnabled('react-inspector')
-      ? {output: object, fromConsoleLog: true}
-      : object
-  );
+  this.consoleLogger_.log({output: object, fromConsoleLog: true});
   if (this.debuggerEnabled) {
     getStore().dispatch(
-      jsDebugger.appendLog(
-        experiments.isEnabled('react-inspector')
-          ? {output: object, fromConsoleLog: true}
-          : object,
-        logLevel
-      )
+      jsDebugger.appendLog({output: object, fromConsoleLog: true}, logLevel)
     );
   }
 };
@@ -206,8 +207,10 @@ GameLab.prototype.init = function(config) {
     throw new Error('GameLab requires a StudioApp');
   }
 
+  this.isSpritelab = this.studioApp_.isUsingBlockly();
+
   this.skin = config.skin;
-  if (this.studioApp_.isUsingBlockly()) {
+  if (this.isSpritelab) {
     const MEDIA_URL = '/blockly/media/spritelab/';
     this.skin.smallStaticAvatar = MEDIA_URL + 'avatar.png';
     this.skin.staticAvatar = MEDIA_URL + 'avatar.png';
@@ -228,9 +231,6 @@ GameLab.prototype.init = function(config) {
     );
   }
   this.level = config.level;
-
-  this.shouldAutoRunSetup =
-    config.level.autoRunSetup && !this.level.edit_blocks;
 
   this.level.helperLibraries = this.level.helperLibraries || [];
 
@@ -265,7 +265,7 @@ GameLab.prototype.init = function(config) {
     onPreload: this.onP5Preload.bind(this),
     onSetup: this.onP5Setup.bind(this),
     onDraw: this.onP5Draw.bind(this),
-    spritelab: this.studioApp_.isUsingBlockly()
+    spritelab: this.isSpritelab
   });
 
   config.afterClearPuzzle = function() {
@@ -274,7 +274,7 @@ GameLab.prototype.init = function(config) {
   }.bind(this);
 
   config.dropletConfig = dropletConfig;
-  config.appMsg = msg;
+  config.appMsg = this.isSpritelab ? spritelabMsg : gamelabMsg;
 
   // hide makeYourOwn on the share page
   config.makeYourOwn = false;
@@ -296,7 +296,7 @@ GameLab.prototype.init = function(config) {
   // Display CSF-style instructions when using Blockly. Otherwise provide a way
   // for us to have top pane instructions disabled by default, but able to turn
   // them on.
-  config.noInstructionsWhenCollapsed = !this.studioApp_.isUsingBlockly();
+  config.noInstructionsWhenCollapsed = !this.isSpritelab;
 
   var breakpointsEnabled = !config.level.debuggerDisabled;
   config.enableShowCode = true;
@@ -352,8 +352,10 @@ GameLab.prototype.init = function(config) {
 
     this.setCrosshairCursorForPlaySpace();
 
-    if (this.shouldAutoRunSetup) {
-      this.studioApp_.addChangeHandler(this.rerunSetupCode.bind(this));
+    if (this.isSpritelab) {
+      this.studioApp_.addChangeHandler(
+        this.gameLabP5.spritelab.preview.bind(this)
+      );
     }
   };
 
@@ -378,9 +380,26 @@ GameLab.prototype.init = function(config) {
     }
   }
 
+  const setAndroidExportProps = this.setAndroidExportProps.bind(this);
+
   this.studioApp_.setPageConstants(config, {
     allowExportExpo: experiments.isEnabled('exportExpo'),
     exportApp: this.exportApp.bind(this),
+    expoGenerateApk: expoGenerateApk.bind(
+      null,
+      config.expoSession,
+      setAndroidExportProps
+    ),
+    expoCheckApkBuild: expoCheckApkBuild.bind(
+      null,
+      config.expoSession,
+      setAndroidExportProps
+    ),
+    expoCancelApkBuild: expoCancelApkBuild.bind(
+      null,
+      config.expoSession,
+      setAndroidExportProps
+    ),
     channelId: config.channel,
     nonResponsiveVisualizationColumnWidth: GAME_WIDTH,
     showDebugButtons: showDebugButtons,
@@ -391,7 +410,7 @@ GameLab.prototype.init = function(config) {
     showAnimationMode: !config.level.hideAnimationMode,
     startInAnimationTab: config.level.startInAnimationTab,
     allAnimationsSingleFrame:
-      config.level.allAnimationsSingleFrame || this.studioApp_.isUsingBlockly(),
+      config.level.allAnimationsSingleFrame || this.isSpritelab,
     isIframeEmbed: !!config.level.iframeEmbed,
     isProjectLevel: !!config.level.isProjectLevel,
     isSubmittable: !!config.level.submittable,
@@ -410,6 +429,13 @@ GameLab.prototype.init = function(config) {
       ? config.initialAnimationList
       : this.startAnimations;
   getStore().dispatch(setInitialAnimationList(initialAnimationList));
+
+  this.generatedProperties = {
+    ...config.initialGeneratedProperties
+  };
+  getStore().dispatch(
+    setExportGeneratedProperties(this.generatedProperties.export)
+  );
 
   // Pre-register all audio preloads with our Sounds API, which will load
   // them into memory so they can play immediately:
@@ -445,26 +471,25 @@ GameLab.prototype.init = function(config) {
  * @param {Object} expoOpts
  */
 GameLab.prototype.exportApp = async function(expoOpts) {
-  // TODO: find another way to get this info that doesn't rely on globals.
-  const appName =
-    (window.dashboard && window.dashboard.project.getCurrentName()) || 'my-app';
-  const {mode, expoSnackId, iconUri, splashImageUri} = expoOpts || {};
-  if (mode === 'expoGenerateApk') {
-    return generateExpoApk(
-      {
-        appName,
-        expoSnackId,
-        iconUri,
-        splashImageUri
-      },
-      this.studioApp_.config
-    );
-  }
   await this.whenAnimationsAreReady();
   return this.exportAppWithAnimations(
-    appName,
+    project.getCurrentName() || 'my-app',
     getStore().getState().animationList,
     expoOpts
+  );
+};
+
+GameLab.prototype.setAndroidExportProps = function(props) {
+  // Spread the previous object so changes here will always fail shallow
+  // compare and trigger react prop changes
+  this.generatedProperties.export = {
+    ...this.generatedProperties.export,
+    android: props
+  };
+  project.projectChanged();
+  project.saveIfSourcesChanged();
+  getStore().dispatch(
+    setExportGeneratedProperties(this.generatedProperties.export)
   );
 };
 
@@ -609,7 +634,7 @@ GameLab.prototype.afterInject_ = function(config) {
     getStore().getState().pageConstants.isShareView
   );
 
-  if (this.studioApp_.isUsingBlockly()) {
+  if (this.isSpritelab) {
     // Add to reserved word list: API, local variables in execution evironment
     // (execute) and the infinite loop detection function.
     Blockly.JavaScript.addReservedWords(
@@ -695,10 +720,9 @@ GameLab.prototype.startTickTimer = function() {
  *     implementation.
  */
 GameLab.prototype.resetHandler = function(ignore) {
-  if (this.shouldAutoRunSetup) {
-    this.execute(false /* shouldLoop */);
-  } else {
-    this.reset();
+  this.reset();
+  if (this.isSpritelab) {
+    this.gameLabP5.spritelab.preview.apply(this);
   }
 };
 
@@ -750,26 +774,11 @@ GameLab.prototype.reset = function() {
   getStore().dispatch(clearConsole());
 };
 
-GameLab.prototype.rerunSetupCode = function() {
-  if (
-    getStore().getState().runState.isRunning ||
-    !this.gameLabP5.p5 ||
-    !this.areAnimationsReady_()
-  ) {
-    return;
+GameLab.prototype.onPuzzleComplete = function(submit, testResult, message) {
+  let msg = this.isSpritelab ? spritelabMsg : gamelabMsg;
+  if (message && msg[message]) {
+    this.message = msg[message]();
   }
-  Sounds.getSingleton().muteURLs();
-  this.gameLabP5.p5.allSprites.removeSprites();
-  if (this.gameLabP5.spritelab) {
-    this.gameLabP5.spritelab.reset();
-  }
-  this.JSInterpreter.deinitialize();
-  this.initInterpreter(false /* attachDebugger */);
-  this.onP5Setup();
-  this.gameLabP5.p5.redraw();
-};
-
-GameLab.prototype.onPuzzleComplete = function(submit, testResult) {
   if (this.executionError) {
     this.result = ResultType.ERROR;
   } else {
@@ -892,15 +901,10 @@ GameLab.prototype.runButtonClick = function() {
 
 /**
  * Execute the user's code.  Heaven help us...
- * @param {boolean} shouldLoop - If true, runs user code in a loop. Otherwise,
- * only executes once. Defaults to true.
  */
-GameLab.prototype.execute = function(shouldLoop = true) {
-  if (shouldLoop) {
-    Sounds.getSingleton().unmuteURLs();
-  } else {
-    Sounds.getSingleton().muteURLs();
-  }
+GameLab.prototype.execute = function() {
+  Sounds.getSingleton().unmuteURLs();
+
   this.result = ResultType.UNSET;
   this.testResults = TestResults.NO_TESTS_RUN;
   this.waitingForReport = false;
@@ -911,7 +915,7 @@ GameLab.prototype.execute = function(shouldLoop = true) {
   this.studioApp_.clearAndAttachRuntimeAnnotations();
 
   if (
-    this.studioApp_.isUsingBlockly() &&
+    this.isSpritelab &&
     (this.studioApp_.hasUnwantedExtraTopBlocks() ||
       this.studioApp_.hasDuplicateVariablesInForLoops())
   ) {
@@ -921,7 +925,7 @@ GameLab.prototype.execute = function(shouldLoop = true) {
   }
 
   this.gameLabP5.startExecution();
-  this.gameLabP5.setLoop(shouldLoop);
+  this.gameLabP5.setLoop(true);
 
   if (
     !this.JSInterpreter ||
@@ -931,14 +935,12 @@ GameLab.prototype.execute = function(shouldLoop = true) {
     return;
   }
 
-  if (this.studioApp_.isUsingBlockly() && shouldLoop) {
+  if (this.studioApp_.isUsingBlockly()) {
     // Disable toolbox while running
     Blockly.mainBlockSpaceEditor.setEnableToolbox(false);
   }
 
-  if (shouldLoop) {
-    this.startTickTimer();
-  }
+  this.startTickTimer();
 };
 
 GameLab.prototype.initInterpreter = function(attachDebugger = true) {
@@ -958,7 +960,7 @@ GameLab.prototype.initInterpreter = function(attachDebugger = true) {
       );
     }
 
-    if (this.gameLabP5.spritelab) {
+    if (this.isSpritelab) {
       const spritelabCommands = this.gameLabP5.spritelab.commands;
       for (const command in spritelabCommands) {
         this.JSInterpreter.createGlobalProperty(
@@ -1104,6 +1106,7 @@ GameLab.prototype.onP5ExecutionStarting = function() {
 GameLab.prototype.onP5Preload = function() {
   Promise.all([
     this.preloadAnimations_(this.level.pauseAnimationsByDefault),
+    this.maybePreloadBackgrounds_(),
     this.runPreloadEventHandler_()
   ]).then(() => {
     this.gameLabP5.notifyPreloadPhaseComplete();
@@ -1118,6 +1121,14 @@ GameLab.prototype.loadValidationCodeIfNeeded_ = function() {
   ) {
     this.level.helperLibraries.unshift(validationLibraryName);
   }
+};
+
+// Preloads background images if this is Sprite Lab
+GameLab.prototype.maybePreloadBackgrounds_ = function() {
+  if (!this.isSpritelab) {
+    return Promise.resolve();
+  }
+  return this.gameLabP5.preloadBackgrounds();
 };
 
 /**
@@ -1311,10 +1322,12 @@ GameLab.prototype.runValidationCode = function() {
             (function () {
               validationState = null;
               validationResult = null;
+              validationMessage = null;
               ${this.level.validationCode}
               return {
                 state: validationState,
-                result: validationResult
+                result: validationResult,
+                message: validationMessage
               };
             })();
           `)
@@ -1322,8 +1335,10 @@ GameLab.prototype.runValidationCode = function() {
       if (validationResult.state === 'succeeded') {
         const testResult = validationResult.result || TestResults.ALL_PASS;
         this.onPuzzleComplete(false, testResult);
-      } else if (validationResult === 'failed') {
-        // TODO(ram): Show failure feedback
+      } else if (validationResult.state === 'failed') {
+        const testResult = validationResult.result;
+        const failureMessage = validationResult.message;
+        this.onPuzzleComplete(false, testResult, failureMessage);
       }
     } catch (e) {
       // If validation code errors, assume it was neither a success nor failure
@@ -1356,18 +1371,8 @@ GameLab.prototype.onP5Draw = function() {
         this.eventHandlers.draw.apply(null);
         this.runValidationCode();
       });
-    } else if (this.shouldAutoRunSetup) {
-      switch (this.level.autoRunSetup) {
-        case GamelabAutorunOptions.draw_loop:
-          this.eventHandlers.draw.apply(null);
-          break;
-        case GamelabAutorunOptions.draw_sprites:
-          this.JSInterpreter.evalInCurrentScope('drawSprites();');
-          break;
-        case GamelabAutorunOptions.custom:
-          this.JSInterpreter.evalInCurrentScope(this.level.customSetupCode);
-          break;
-      }
+    } else if (this.isSpritelab) {
+      this.eventHandlers.draw.apply(null);
     }
   }
   this.completeRedrawIfDrawComplete();
@@ -1451,6 +1456,7 @@ GameLab.prototype.executeCmd = function(id, name, opts) {
  */
 GameLab.prototype.displayFeedback_ = function() {
   var level = this.level;
+  let msg = this.isSpritelab ? spritelabMsg : gamelabMsg;
 
   this.studioApp_.displayFeedback({
     feedbackType: this.testResults,
@@ -1485,6 +1491,18 @@ GameLab.prototype.getSerializedAnimationList = function(callback) {
       callback(getSerializedAnimationList(getStore().getState().animationList));
     })
   );
+};
+
+/**
+ * Get the project properties for upload to the sources API.
+ * Bound to appOptions in gamelab/main.js, used in project.js for autosave.
+ */
+GameLab.prototype.getGeneratedProperties = function() {
+  // Must return a new object instance each time so the project
+  // system can properly compare currentSources vs newSources
+  return {
+    ...this.generatedProperties
+  };
 };
 
 /**

@@ -12,9 +12,9 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
 
     # Disable other logging
     @@original_hip_chat_logging = CDO.hip_chat_logging
-    CDO.hip_chat_logging = false
+    CDO.stubs(hip_chat_logging: false)
     @@original_slack_endpoint = CDO.slack_endpoint
-    CDO.slack_endpoint = nil
+    CDO.stubs(slack_endpoint: nil)
 
     # No uploads
     ExpiredDeletedAccountPurger.any_instance.stubs :upload_activity_log
@@ -27,8 +27,8 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
   end
 
   def teardown
-    CDO.hip_chat_logging = @@original_hip_chat_logging
-    CDO.slack_endpoint = @@original_slack_endpoint
+    CDO.unstub(:hip_chat_logging)
+    CDO.unstub(:slack_endpoint)
   end
 
   test 'can construct with no arguments - all defaults' do

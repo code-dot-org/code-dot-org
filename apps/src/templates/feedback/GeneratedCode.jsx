@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import UnsafeRenderedMarkdown from '../UnsafeRenderedMarkdown';
+import SafeMarkdown from '../SafeMarkdown';
 
 export default class GeneratedCode extends React.Component {
   static propTypes = {
@@ -14,7 +14,7 @@ export default class GeneratedCode extends React.Component {
     return (
       <div className="generated-code-container" style={this.props.style}>
         <div className="generatedCodeMessage">
-          <UnsafeRenderedMarkdown markdown={this.props.message} />
+          <SafeMarkdown markdown={this.props.message} />
         </div>
 
         {/* code container should be LTR even in RTL mode */}

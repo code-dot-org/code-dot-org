@@ -2,11 +2,17 @@
 require File.expand_path('../../../pegasus/src/env', __FILE__)
 require 'retryable'
 require 'cdo/only_one'
+require 'cdo/parse_email_address_string'
 require 'cdo/poste'
+require 'honeybadger/ruby'
 require 'base64'
 require 'nokogiri'
 require src_dir 'forms'
 require src_dir 'abort_email_error'
+
+if CDO.newrelic_logging
+  require 'newrelic_rpm'
+end
 
 BATCH_SIZE = 500_000
 MAX_THREAD_COUNT = 50
@@ -245,20 +251,9 @@ class Deliverer
     @templates[name] = Poste::Template.new IO.read(path), engine
   end
 
-  def parse_addresses(string)
-    string.split(', ').map do |user_string|
-      if user_string.include? '<'
-        user_string =~ /^([^<]*)<([^>]*)>$/
-        {name: $1.strip, email: $2}
-      else
-        {name: nil, email: user_string}
-      end
-    end
-  end
-
   def parse_address(address, defaults={})
     address = address.to_s.strip
-    return parse_addresses(address).first unless address.empty?
+    return parse_email_address_string(address) unless address.empty?
 
     # Student accounts don't have a stored email in contacts,
     # so we use the temporary email here when email doesn't exist.
@@ -318,14 +313,23 @@ def main
       begin
         deliverer.send delivery
       rescue Net::SMTPSyntaxError, Net::SMTPFatalError => e
-        CDO.log.info "Unable to deliver #{delivery[:id]} to '#{delivery[:contact_email]}' because '#{e.message.to_s.strip}'"
+        Honeybadger.notify(
+          e,
+          error_message: "Unable to deliver #{delivery[:id]} to '#{delivery[:contact_email]}' because '#{e.message.to_s.strip}'"
+        )
         deliverer.reset_connection
         sent_at = 0
       rescue AbortEmailError => e
-        CDO.log.info "Abandoning delivery of #{delivery[:id]} because '#{e.message.to_s.strip}'"
+        Honeybadger.notify(
+          e,
+          error_message: "Abandoning delivery of #{delivery[:id]} because '#{e.message.to_s.strip}'"
+        )
         sent_at = 0
       rescue => e
-        CDO.log.info "Unable to deliver #{delivery[:id]} to '#{delivery[:contact_email]}' because '#{e.message.to_s.strip}'"
+        Honeybadger.notify(
+          e,
+          error_message: "Unable to deliver #{delivery[:id]} to '#{delivery[:contact_email]}' because '#{e.message.to_s.strip}'"
+        )
         raise
       end
 
@@ -342,15 +346,18 @@ def main
   end
   workers.each(&:join)
 
-  remaining_count = POSTE_DB[:poste_deliveries].where(sent_at: nil).count
+  if CDO.newrelic_logging
+    # How many emails we sent on _this run_ of the cronjob
+    sent_count = POSTE_DB[:poste_deliveries].where(Sequel.lit('sent_at >= ?', started_at)).count
+    NewRelic::Agent.record_metric("Custom/Poste/Sent", sent_count)
 
-  elapsed_seconds = ((Time.now - started_at) * 100.0).to_i / 100.0
+    # How many total abandoned emails we have
+    abandon_count = POSTE_DB[:poste_deliveries].where(sent_at: 0).count
+    NewRelic::Agent.record_metric("Custom/Poste/Abandoned", abandon_count)
 
-  unless queue_count == 0 && remaining_count == 0
-    message = "#{queue_count} email(s) sent in #{elapsed_seconds} seconds using #{worker_count} threads, #{remaining_count} still queued."
-    if rack_env?(:development)
-      puts message
-    end
+    # How many emails are still queued for send on subsequent runs
+    remaining_count = POSTE_DB[:poste_deliveries].where(sent_at: nil).count
+    NewRelic::Agent.record_metric("Custom/Poste/Queued", remaining_count)
   end
 end
 

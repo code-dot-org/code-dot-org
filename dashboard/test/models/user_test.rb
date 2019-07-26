@@ -118,14 +118,14 @@ class UserTest < ActiveSupport::TestCase
     assert_equal user.user_school_infos.where(end_date: nil).count, 1
   end
 
-  test 'update_school_info with custom school does nothing when the user already has a specific school' do
+  test 'update_school_info with custom school updates user that has a specific school' do
     original_school_info = create :school_info
     user = create :teacher, school_info: original_school_info
-    new_school_info = create :school_info_us_other
+    new_school_info = create :school_info_us_other, validation_type:  SchoolInfo::VALIDATION_COMPLETE
 
     user.update_school_info(new_school_info)
-    assert_equal original_school_info, user.school_info
-    assert_equal user.user_school_infos.count, 1
+    assert_equal new_school_info, user.school_info
+    assert_equal user.user_school_infos.count, 2
   end
 
   test 'update_school_info with custom school updates user info when user does not have a specific school' do
@@ -139,6 +139,99 @@ class UserTest < ActiveSupport::TestCase
     assert_not_nil user.school_info_id
 
     assert_equal user.user_school_infos.count, 2
+    assert_equal user.user_school_infos.where(end_date: nil).count, 1
+  end
+
+  test 'update_school_info with custom school updates user info when user school info does not include a school_id' do
+    original_school_info = create :school_info
+    user = create :teacher, school_info: original_school_info
+    new_school_info = create :school_info_us_other
+
+    user.update_school_info(new_school_info)
+    assert_equal new_school_info, user.school_info
+    assert_not_nil user.school_info_id
+
+    assert_equal user.user_school_infos.count, 2
+  end
+
+  # Tests for replacing the old school info with the new school info if and only if the new school info is complete.
+  test 'No NCES id for old and new school_infos, incomplete new school_info, no update' do
+    original_school_info = create :school_info, school_id: nil, validation_type:  SchoolInfo::VALIDATION_NONE
+    user = create :teacher, school_info: original_school_info
+    new_school_info = create :school_info, school_id: nil, validation_type:  SchoolInfo::VALIDATION_NONE
+
+    user.update_school_info(new_school_info)
+    assert_equal original_school_info, user.school_info
+    refute_equal new_school_info, user.school_info
+    assert_not_nil user.school_info_id
+
+    assert_equal user.user_school_infos.count, 1
+  end
+
+  test 'No NCES id for old and new school_infos, complete new school_info, update' do
+    original_school_info = create :school_info, school_id: nil, validation_type:  SchoolInfo::VALIDATION_NONE
+    user = create :teacher, school_info: original_school_info
+    new_school_info = create :school_info_us_other
+
+    user.update_school_info(new_school_info)
+    refute_equal original_school_info, user.school_info
+    assert_equal new_school_info, user.school_info
+    assert_not_nil user.school_info_id
+
+    assert_equal user.user_school_infos.count, 2
+  end
+
+  test 'No NCES id for old school_info, NCES id for new school_info, complete new school_info, update' do
+    original_school_info = create :school_info, school_id: nil, validation_type:  SchoolInfo::VALIDATION_NONE
+    user = create :teacher, school_info: original_school_info
+    new_school_info = create :school_info
+
+    user.update_school_info(new_school_info)
+    refute_equal original_school_info, user.school_info
+    assert_equal new_school_info, user.school_info
+    assert_not_nil user.school_info_id
+
+    assert_equal user.user_school_infos.count, 2
+  end
+
+  test 'NCES id for old school_info, no NCES id for new school_info, incomplete new school_info, no update' do
+    user = create :teacher, :with_school_info
+    new_school_info = create :school_info, school_id: nil, validation_type: SchoolInfo::VALIDATION_NONE
+
+    user.update_school_info(new_school_info)
+    refute_equal new_school_info, user.school_info
+
+    assert_equal user.user_school_infos.count, 1
+    assert_equal user.user_school_infos.where(school_info_id: new_school_info.id).count, 0
+    assert_equal user.user_school_infos.where(end_date: nil).count, 1
+  end
+
+  test 'NCES id for old school_info, no NCES id for new school_info, complete school_info, update' do
+    original_school_info = create :school_info
+    user = create :teacher, school_info: original_school_info
+    new_school_info = create :school_info_us_other
+    refute user.school_info.school.nil?
+    assert new_school_info.school.nil?
+    assert new_school_info.complete?
+
+    user.update_school_info(new_school_info)
+    user.reload
+    assert_equal new_school_info, user.school_info
+
+    assert_equal user.user_school_infos.count, 2
+    assert_equal user.user_school_infos.where(school_info_id: new_school_info.id).count, 1
+    assert_equal user.user_school_infos.where(end_date: nil).count, 1
+  end
+
+  test 'old has NCES id, new has NCES id, new is complete, update' do
+    user = create :teacher, :with_school_info
+    new_school_info = create :school_info
+
+    user.update_school_info(new_school_info)
+    assert_equal new_school_info, user.school_info
+
+    assert_equal user.user_school_infos.count, 2
+    assert_equal user.user_school_infos.where(school_info_id: new_school_info.id).count, 1
     assert_equal user.user_school_infos.where(end_date: nil).count, 1
   end
 
@@ -2128,6 +2221,21 @@ class UserTest < ActiveSupport::TestCase
     refute user.clever_student?
   end
 
+  test 'oauth_student? is true if the user belongs to any oauth section as a student' do
+    clever_section = create(:section, login_type: Section::LOGIN_TYPE_CLEVER)
+    clever_user = create(:follower, section: clever_section).student_user
+    assert clever_user.oauth_student?
+
+    google_section = create(:section, login_type: Section::LOGIN_TYPE_GOOGLE_CLASSROOM)
+    google_user = create(:follower, section: google_section).student_user
+    assert google_user.oauth_student?
+  end
+
+  test 'oauth_student? is false if the user does not belong to any oauth section as a student' do
+    user = create(:user)
+    refute user.oauth_student?
+  end
+
   test 'track_proficiency adds proficiency if necessary and no hint used' do
     level_concept_difficulty = create :level_concept_difficulty
     # Defaults with repeat_loops_{d1,d2,d3,d4,d5}_count = {0,2,0,3,0}.
@@ -2218,7 +2326,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   def track_progress(user_id, script_level, result, pairings: nil)
-    User.track_level_progress_sync(
+    User.track_level_progress(
       user_id: user_id,
       level_id: script_level.level_id,
       script_id: script_level.script_id,
@@ -2229,7 +2337,7 @@ class UserTest < ActiveSupport::TestCase
     )
   end
 
-  test 'track_level_progress_sync calls track_proficiency if new perfect csf score' do
+  test 'track_level_progress calls track_proficiency if new perfect csf score' do
     user = create :user
     csf_script = create :csf_script
     csf_script_level = create :csf_script_level
@@ -2239,7 +2347,7 @@ class UserTest < ActiveSupport::TestCase
     track_progress(user.id, csf_script_level, 100)
   end
 
-  test 'track_level_progress_sync does not call track_proficiency if new perfect non-csf score' do
+  test 'track_level_progress does not call track_proficiency if new perfect non-csf score' do
     user = create :user
     non_csf_script_level = create :script_level
 
@@ -2247,7 +2355,7 @@ class UserTest < ActiveSupport::TestCase
     track_progress(user.id, non_csf_script_level, 100)
   end
 
-  test 'track_level_progress_sync does not call track_proficiency if old perfect score' do
+  test 'track_level_progress does not call track_proficiency if old perfect score' do
     user = create :user
     csf_script_level = Script.get_from_cache('20-hour').script_levels.third
     create :user_level,
@@ -2260,7 +2368,7 @@ class UserTest < ActiveSupport::TestCase
     track_progress(user.id, csf_script_level, 100)
   end
 
-  test 'track_level_progress_sync does not call track_proficiency if new passing csf score' do
+  test 'track_level_progress does not call track_proficiency if new passing csf score' do
     user = create :user
     csf_script_level = Script.get_from_cache('20-hour').script_levels.third
 
@@ -2268,7 +2376,7 @@ class UserTest < ActiveSupport::TestCase
     track_progress(user.id, csf_script_level, 25)
   end
 
-  test 'track_level_progress_sync does not call track_proficiency if hint used' do
+  test 'track_level_progress does not call track_proficiency if hint used' do
     user = create :user
     csf_script_level = Script.get_from_cache('20-hour').script_levels.third
     create :hint_view_request,
@@ -2280,7 +2388,7 @@ class UserTest < ActiveSupport::TestCase
     track_progress(user.id, csf_script_level, 100)
   end
 
-  test 'track_level_progress_sync does not call track_proficiency if authored hint used' do
+  test 'track_level_progress does not call track_proficiency if authored hint used' do
     user = create :user
     csf_script_level = Script.get_from_cache('20-hour').script_levels.third
     AuthoredHintViewRequest.create(
@@ -2293,7 +2401,7 @@ class UserTest < ActiveSupport::TestCase
     track_progress(user.id, csf_script_level, 100)
   end
 
-  test 'track_level_progress_sync does not call track_proficiency when pairing' do
+  test 'track_level_progress does not call track_proficiency when pairing' do
     user = create :user
     csf_script_level = Script.get_from_cache('20-hour').script_levels.third
 
@@ -2301,7 +2409,7 @@ class UserTest < ActiveSupport::TestCase
     track_progress(user.id, csf_script_level, 100, pairings: [create(:user).id])
   end
 
-  test 'track_level_progress_sync does call track_profiency when manual_pass to perfect' do
+  test 'track_level_progress does call track_profiency when manual_pass to perfect' do
     user = create :user
     csf_script = create :csf_script
     csf_script_level = create :csf_script_level
@@ -2318,7 +2426,7 @@ class UserTest < ActiveSupport::TestCase
     track_progress(user.id, csf_script_level, 100)
   end
 
-  test 'track_level_progress_sync stops incrementing attempts for perfect results' do
+  test 'track_level_progress stops incrementing attempts for perfect results' do
     user = create :user
     csf_script_level = Script.get_from_cache('20-hour').script_levels.third
     ul = UserLevel.create!(
@@ -2346,12 +2454,12 @@ class UserTest < ActiveSupport::TestCase
     assert_equal 4, ul.reload.attempts
   end
 
-  test 'track_level_progress_sync does not overwrite the level_source_id of the navigator' do
+  test 'track_level_progress does not overwrite the level_source_id of the navigator' do
     script_level = create :script_level
     student = create :student
     level_source = create :level_source, data: 'sample answer'
 
-    User.track_level_progress_sync(
+    User.track_level_progress(
       user_id: student.id,
       level_id: script_level.level_id,
       script_id: script_level.script_id,
@@ -2365,7 +2473,7 @@ class UserTest < ActiveSupport::TestCase
     assert_equal 30, ul.best_result
     assert_equal 'sample answer', ul.level_source.data
 
-    User.track_level_progress_sync(
+    User.track_level_progress(
       user_id: create(:user).id,
       level_id: script_level.level_id,
       script_id: script_level.script_id,
@@ -2380,7 +2488,7 @@ class UserTest < ActiveSupport::TestCase
     assert_equal 'sample answer', ul.level_source.data
   end
 
-  test 'track_level_progress_sync does not overwrite level_source_id with nil' do
+  test 'track_level_progress does not overwrite level_source_id with nil' do
     script_level = create :script_level
     user = create :user
     level_source = create :level_source, data: 'sample answer'
@@ -2390,7 +2498,7 @@ class UserTest < ActiveSupport::TestCase
       level_id: script_level.level_id,
       level_source_id: level_source.id
 
-    User.track_level_progress_sync(
+    User.track_level_progress(
       user_id: user.id,
       script_id: script_level.script_id,
       level_id: script_level.level_id,
@@ -3281,14 +3389,34 @@ class UserTest < ActiveSupport::TestCase
     assert_equal 'fake refresh token', google_auth_option.data_hash[:oauth_refresh_token]
   end
 
+  test 'managing_own_credentials? is true for users with email logins' do
+    user = create :user
+    assert user.managing_own_credentials?
+  end
+
+  test 'managing_own_credentials? is true for students with email logins' do
+    user = create :student
+    assert user.managing_own_credentials?
+  end
+
+  test 'managing_own_credentials? is false for users with oauth logins' do
+    user = create :user, :sso_provider
+    refute user.managing_own_credentials?
+  end
+
+  test 'managing_own_credentials? is false for students with sponsored logins' do
+    user = create :student_in_picture_section
+    refute user.managing_own_credentials?
+  end
+
   test 'password_required? is false if user is not creating their own account' do
-    user = build :user
+    user = create :user
     user.expects(:managing_own_credentials?).returns(false)
     refute user.password_required?
   end
 
   test 'password_required? is true for new users with no encrypted password' do
-    user = build :user, encrypted_password: nil
+    user = create :user, encrypted_password: nil
     user.expects(:managing_own_credentials?).returns(true)
     assert user.encrypted_password.nil?
     assert user.password_required?
@@ -4055,5 +4183,35 @@ class UserTest < ActiveSupport::TestCase
 
   test 'find_channel_owner returns nil for a malformed channel id' do
     assert_nil User.find_channel_owner 'not-a-channel-id'
+  end
+
+  test 'user_school_info count is > 0 and school info is incomplete' do
+    user_school_info = create :user_school_info
+    teacher = user_school_info.user
+    school_info = create :school_info, country: nil, school_id: nil, validation_type: SchoolInfo::VALIDATION_NONE
+    refute teacher.update(school_info: school_info)
+    assert_includes teacher.errors.full_messages, "School info cannot add new school id"
+  end
+
+  test 'user_school_info_count == 0 and school info is not complete' do
+    teacher = create :teacher
+    school_info = create :school_info, country: nil, school_id: nil, validation_type: SchoolInfo::VALIDATION_NONE
+    assert teacher.update(school_info: school_info)
+    assert_equal teacher.user_school_infos.count, 1
+  end
+
+  test 'user_school_info_count == 0 and school info is complete' do
+    teacher = create :teacher
+    school_info = create :school_info
+    assert teacher.update(school_info: school_info)
+    assert_equal teacher.user_school_infos.count, 1
+  end
+
+  test 'count is > 0 and school info is complete' do
+    user_school_info = create :user_school_info
+    teacher = user_school_info.user
+    school_info = create :school_info
+    assert teacher.update(school_info: school_info)
+    assert_equal teacher.user_school_infos.count, 2
   end
 end

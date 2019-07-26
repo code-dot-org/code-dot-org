@@ -13,12 +13,12 @@ export const commands = {
     }
   },
 
-  getBehaviorsForAnimation(animation) {
-    return spriteUtils.getBehaviorsForAnimation(animation);
+  getNumBehaviorsForAnimation(animation) {
+    return spriteUtils.getNumBehaviorsForAnimation(animation);
   },
 
-  getBehaviorsForSpriteId(spriteId) {
-    return spriteUtils.getBehaviorsForSpriteId(spriteId);
+  getNumBehaviorsForSpriteId(spriteId) {
+    return spriteUtils.getNumBehaviorsForSpriteId(spriteId);
   },
 
   getSpriteIdsInUse() {

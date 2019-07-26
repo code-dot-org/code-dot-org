@@ -6,7 +6,7 @@
   z-index: 99;
 }
 
-#hamburger, #help-button {
+#hamburger {
 
   &.hide-always {
     display: none;
@@ -46,14 +46,14 @@
   position: relative;
   font-size: 14px;
 
-  #hamburger-icon, #help-icon {
+  #hamburger-icon {
     cursor: pointer;
     height: 20px;
     vertical-align: middle;
     text-decoration: none;
   }
 
-  #hamburger-contents, #help-contents {
+  #hamburger-contents {
     font-size: 14px;
     list-style: none;
     margin: 0;
@@ -219,15 +219,12 @@
     #hamburger {
       padding-left: 0;
     }
-    #help-button {
-      display: none;
-    } 
   }
 }
 
 #hamburger {
   #hamburger-icon {
-    padding: 10px 35px 16px 0;
+    padding: 10px 28px 16px 0;
     float: right;
     margin-top: 8px;
     display: inline-block;
@@ -278,17 +275,5 @@
         transform: rotate(-45deg);
       }
     }
-  }
-}
-
-#help-button {
-  padding-left: 15px;
-  padding-top: 4px;
-
-  #help-icon {
-    padding: 9px 0 16px 0;
-    font-size: 26px;
-    color: $white;
-    height: 25px;
   }
 }

@@ -754,12 +754,11 @@ fa-IR:
   course2_name: دوره 2
   course3_name: دورۀ 3
   course4_name: دوره 4
+  accelerated_name: دوره های سریع
   20-hour_name: دوره های سریع
   classicmaze_name: هزارتوی کلاسیک
   iceage_name: عصر یخبندان
   minecraft_name: ماینکرفت
-  math_category_name: ریاضی
-  hoc_category_name: ساعت کد نویسی
   applab_name: آزمایشگاه نرم افزار
   gamelab_name: کارگاه بازی سازی
   applab_gradelevel: سنین سیزده به بالا
@@ -822,6 +821,8 @@ fa-IR:
   coursee-2017_gradelevel: سنین 8-12
   coursed-2018_gradelevel: رده ی سنی 8+
   coursee-2018_gradelevel: سنین 8-12
+  coursed-2019_gradelevel: رده ی سنی 8+
+  coursee-2019_gradelevel: سنین 8-12
   accelerated_gradelevel: سنین 10 به بالا (پس از دوره 3)
   codeorg_platformtext: مرورگرهای مدرن, تلفن های هوشمند, تبلت
   codeintl_platformtext: مرورگرهای مدرن, تلفن های هوشمند, تبلت
@@ -1382,10 +1383,13 @@ fa-IR:
     یک دوره ی فشرده ی جالب در برنامه نویسی ربات به بچه ها می دهد و هم زمان توانایی
     های آن ها در ریاضی و علوم را تقویت می کند.
   flappy_shortcode: پریدن
+  header_my_dashboard: دَشبورد من
   header_courses: مراحل
-  header_course_catalog: کاتالوگ دوره‌ها
+  header_course_catalog: سرفصل دوره‌ها
   header_project_gallery: پروژه ها
   header_educate_hoc: ساعت کد نویسی
+  header_about_us: درباره ما
+  header_about: درباره
   user_header_label: سلام %{username}
   user_header_settings: حساب کاربری من
   user_header_logout: خروج

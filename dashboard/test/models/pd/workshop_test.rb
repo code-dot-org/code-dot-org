@@ -347,6 +347,28 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     workshop.send_exit_surveys
   end
 
+  test 'send_exit_surveys sends no surveys for FiT workshops' do
+    # Make a FiT workshop that's ended and has attendance;
+    # these are the conditions under which we'd normally send a survey.
+    workshop = create :pd_ended_workshop, subject: SUBJECT_FIT
+    create(:pd_workshop_participant, workshop: workshop, enrolled: true, attended: true)
+
+    # Ensure no exit surveys are sent
+    Pd::Enrollment.any_instance.expects(:send_exit_survey).never
+    workshop.send_exit_surveys
+  end
+
+  test 'send_exit_surveys sends no surveys for Facilitator workshops' do
+    # Make a Facilitator workshop that's ended and has attendance;
+    # these are the conditions under which we'd normally send a survey.
+    workshop = create :pd_ended_workshop, course: COURSE_FACILITATOR
+    create(:pd_workshop_participant, workshop: workshop, enrolled: true, attended: true)
+
+    # Ensure no exit surveys are sent
+    Pd::Enrollment.any_instance.expects(:send_exit_survey).never
+    workshop.send_exit_surveys
+  end
+
   test 'send_follow_up only teachers attended workshop get follow up emails' do
     workshop = create :pd_ended_workshop, course: Pd::Workshop::COURSE_CSF,
       subject: Pd::Workshop::SUBJECT_CSF_101, num_sessions: 1, sessions_from: Date.today - 30.days
@@ -1220,6 +1242,40 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     # No problem. Return the one associated with the most recent attendance
     create :pd_attendance, teacher: teacher, session: csp_workshops[0].sessions.last
     assert_equal csp_workshops[0], Pd::Workshop.where(course: COURSE_CSP).nearest_attended_or_enrolled_in_by(teacher)
+  end
+
+  test 'potential organizers' do
+    workshop_admin = create :workshop_admin
+    program_manager = create :program_manager
+    csf_facilitator = create :facilitator, course: COURSE_CSF
+    csd_facilitator = create :facilitator, course: COURSE_CSD
+
+    # csf workshop has workshop admins, program managers, and other csf facilitators in list
+    csf_workshop = create :pd_workshop, course: COURSE_CSF
+    potential_organizer_ids = csf_workshop.potential_organizers.map {|org| org[:value]}
+
+    assert potential_organizer_ids.include? workshop_admin.id
+    assert potential_organizer_ids.include? program_manager.id
+    assert potential_organizer_ids.include? csf_facilitator.id
+    # don't include other types of facilitators
+    refute potential_organizer_ids.include? csd_facilitator.id
+
+    # non-csf workshop without regional partner has workshop admins and all program managers in list
+    csd_workshop = create :pd_workshop, course: COURSE_CSD
+    potential_organizer_ids = csd_workshop.potential_organizers.map {|org| org[:value]}
+    assert potential_organizer_ids.include? workshop_admin.id
+    assert potential_organizer_ids.include? program_manager.id
+    # facilitators cannot be organizers for non-csf workshops
+    refute potential_organizer_ids.include? csd_facilitator.id
+
+    # non-csf workshop with a regional partner has only that regional partner's program managers, and all workshop admins
+    workshop_partner = create :regional_partner
+    workshop_partner_program_manager = create :program_manager, regional_partner: workshop_partner
+    csd_workshop.regional_partner = workshop_partner
+    potential_organizer_ids = csd_workshop.potential_organizers.map {|org| org[:value]}
+    assert potential_organizer_ids.include? workshop_admin.id
+    assert potential_organizer_ids.include? workshop_partner_program_manager.id
+    refute potential_organizer_ids.include? program_manager.id
   end
 
   private

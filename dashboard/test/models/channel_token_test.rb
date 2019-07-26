@@ -3,6 +3,8 @@ require 'test_helper'
 require_relative '../../../shared/middleware/helpers/storage_apps'
 
 class ChannelTokenTest < ActiveSupport::TestCase
+  self.use_transactional_test_case = true
+
   setup_all do
     @level = create :level
     @fake_ip = '127.0.0.1'

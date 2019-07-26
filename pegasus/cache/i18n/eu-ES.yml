@@ -819,12 +819,11 @@ eu-ES:
   course2_name: 2. Kurtsoa
   course3_name: 3. Kurtsoa
   course4_name: 4. Kurtsoa
+  accelerated_name: Ikastaro Azeleratua
   20-hour_name: Ikastaro Azeleratua
   classicmaze_name: Labirinto klasikoa
   iceage_name: Izotz Aroa
   minecraft_name: Minecraft
-  math_category_name: Matematika
-  hoc_category_name: Kode Ordua
   applab_name: App laborategia
   codeorg_gradelevel: 4-104 adinentzat
   codeintl_gradelevel: 4-104 adinentzat
@@ -882,6 +881,7 @@ eu-ES:
   coursee_gradelevel: 8 eta 12 urte bitartean
   coursee-2017_gradelevel: 8 eta 12 urte bitartean
   coursee-2018_gradelevel: 8 eta 12 urte bitartean
+  coursee-2019_gradelevel: 8 eta 12 urte bitartean
   accelerated_gradelevel: 10-18 bitarteko adina
   codeorg_platformtext: Nabigatzaile modernoak, smatphoneak, tabletak
   codeintl_platformtext: Nabigatzaile modernoak, eskuko telefonoak, tabletak

@@ -1128,29 +1128,8 @@ ka-GE:
   coursef-draft_name: კურსი F
   coursef_name: კურსი F
   express-2018_name: დაჩქარებული კურსი
-  cspunit2_name: "(ძველი) სექცია 2: ინტერნეტი"
-  cspunit3_name: "(ძველი) ნაწილი 3: პროგრამირება"
-  cspunit4_name: "(ძველი) სექცია 4: მონაცემები"
-  cspunit5_name: "(ძველი) ნაწილი 5: შეისწავლეთ და შექმენით PT"
-  cspunit6_name: 'მომდევნო დონე: მონაცემთა ბაზები აპლიკაციებში'
-  csd5_name: 'თავი 5: მონაცემები და საზოგადოება'
-  csd6_name: 'თავი 6: ფიზიკური კომპიუტერული გამოთვლები'
-  csd5-2017_name: 'თავი 5: მონაცემები და საზოგადოება'
-  csd6-2017_name: 'თავი 6: ფიზიკური კომპიუტერული გამოთვლები'
-  csd5-2018_name: 'თავი 5: მონაცემები და საზოგადოება'
-  csd6-2018_name: 'თავი 6: ფიზიკური კომპიუტერული გამოთვლები'
-  csp1-2017_name: 'სექცია 1: ინტერნეტი'
-  csp2-2017_name: 'სექცია 2: ციფრული ინფორმაცია'
-  csp1-2018_name: 'სექცია 1: ინტერნეტი'
-  csp2-2018_name: 'სექცია 2: ციფრული ინფორმაცია'
-  csp1_name: 'სექცია 1: ინტერნეტი'
-  csp2_name: 'სექცია 2: ციფრული ინფორმაცია'
-  csp3-a_name: 'თავი 3: შესავალი პროგრამირებაში (ვერსია A)'
-  csp3-research-mxghyt_name: 'თავი 3: შესავალი პროგრამირებაში (ქვემიზნები)'
-  cspassessment_name: სრული ტესტი – 50 კითხვა
-  cspexam1-mWU7ilDYM9_name: ტესტის ნაწილი 1 – 25 კითხვა
-  cspexam2-AKwgAh1ac5_name: ტესტის ნაწილი 2 – 25 კითხვა
-  cspunit3_gradelevel: კლასები 9-12
+  accelerated_name: დაჩქარებული კურსი
+  express_name: დაჩქარებული კურსი
   20-hour_name: დაჩქარებული კურსი
   algebra_name: კომპიუტერული მეცნიერება ალგებრაში
   AlgebraA_name: CS ალგებრაში, კურსი A
@@ -1161,14 +1140,6 @@ ka-GE:
   minecraft_name: Minecraft
   starwarsblocks_name: ვარსკვალვური ომები (ბლოკები)
   hoc-encryption_name: მარტივი შიფრირება
-  math_category_name: მათემატიკა
-  hoc_category_name: კოდის ერთი საათი
-  csf_category_name: CS საფუძვლები
-  csf_international_category_name: კომპიუტერული მეცნიერების საერთაშორისო საფუძვლები
-  csf2_draft_category_name: 'დამუშავების პროცესში: კურსები A - F'
-  csp_category_name: "'15-'16 CS საფუძვლები"
-  csp17_category_name: CS საფუძვლები ('17-'18)
-  cspexams_category_name: CS საფუძვლების სავარჯიშო ტესტი
   applab_name: App Lab
   gamelab_name: თამაშების ლაბი
   basketball_name: კალათბურთის თამაშის შექმნა
@@ -1248,6 +1219,12 @@ ka-GE:
   coursed-2018_gradelevel: კლასები 8+
   coursee-2018_gradelevel: ასაკი 8-12
   coursef-2018_gradelevel: 9-13 წელი
+  coursea-2019_gradelevel: 4-7 წელი
+  courseb-2019_gradelevel: 5-8 წელი
+  coursec-2019_gradelevel: 6-10 წელი
+  coursed-2019_gradelevel: კლასები 8+
+  coursee-2019_gradelevel: ასაკი 8-12
+  coursef-2019_gradelevel: 9-13 წელი
   accelerated_gradelevel: 'ასაკი: 10-18'
   codeorg_platformtext: თანამედროვე ბრაუზერები, სმარტფონები, პლანშეტები
   codeintl_platformtext: თანამედროვე ბრაუზერები, სმარტფონები, პლანშეტები
@@ -1398,6 +1375,10 @@ ka-GE:
   coursea-2018_shortdescription_congrats: შესავალი კომპიუტერულ მეცნიერებაში მათთვის,
     ვინც ჯერ კითხვა არ იცის.
   courseb-2018_shortdescription_congrats: შესავალი კომპიუტერულ მეცნიერებაში დამწყებ
+    მკითხველთათვის. (A კურსის მსგავსი, მაგრამ უფრო მრავალფეროვანი უფრო მოსწავლეებისთვის.)
+  coursea-2019_shortdescription_congrats: შესავალი კომპიუტერულ მეცნიერებაში მათთვის,
+    ვინც ჯერ კითხვა არ იცის.
+  courseb-2019_shortdescription_congrats: შესავალი კომპიუტერულ მეცნიერებაში დამწყებ
     მკითხველთათვის. (A კურსის მსგავსი, მაგრამ უფრო მრავალფეროვანი უფრო მოსწავლეებისთვის.)
   codeorg_longdescription: ისწავლეთ ინფორმატიკის საფუძვლები ვიზუალური პროგრამირებით.
     ამ თამაშის მსგავს კურსში ვიდეო ლექციებს წაგიკითხავთ ბილ გეითსი, მარკ ცუკერბერგი,
@@ -1890,8 +1871,6 @@ ka-GE:
   header_report_bug: მოგვახსენეთ ტექნიკური ხარვეზის შესახებ
   header_tutorials: ტუტორიალები
   header_documentation: დოკუმენტაცია
-  csp_name: CS საფუძვლები
-  full_course_category_name: ყველა კურსი
   user_header_label: გამარჯობა %{username}
   user_header_team: გუნდი
   user_header_settings: ანგარიშის პარამეტრები

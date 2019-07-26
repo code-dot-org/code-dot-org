@@ -41,7 +41,7 @@ describe('VisualizationResizeBar', function() {
     // Mouse down doesn't fire resize event, but does attach needed handlers
     wrapper
       .find('div')
-      .getNode()
+      .instance()
       .dispatchEvent(mouseEvent('mousedown', 0, 0));
     expect(spy).to.have.callCount(0);
 

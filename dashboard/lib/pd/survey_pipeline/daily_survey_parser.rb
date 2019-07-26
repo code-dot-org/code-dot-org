@@ -1,8 +1,30 @@
-require_relative 'transformer.rb'
-
 module Pd::SurveyPipeline
-  class DailySurveyParser < TransformerBase
+  class DailySurveyParser < SurveyPipelineWorker
     include Pd::JotForm::Constants
+
+    REQUIRED_INPUT_KEYS = [:survey_questions]
+    OPTIONAL_INPUT_KEYS = [:workshop_submissions, :facilitator_submissions]
+    OUTPUT_KEYS = [:parsed_questions, :parsed_submissions]
+
+    # @param context [Hash] contains necessary input for this worker to process.
+    #   Results are added back to the context object.
+    #
+    # @return [Hash] the same context object.
+    #
+    # @raise [RuntimeError] if required input keys are missing.
+    #
+    def self.process_data(context)
+      check_required_input_keys REQUIRED_INPUT_KEYS, context
+
+      results = transform_data context.slice(*(REQUIRED_INPUT_KEYS + OPTIONAL_INPUT_KEYS))
+
+      OUTPUT_KEYS.each do |key|
+        context[key] ||= {}
+        context[key].deep_merge! results[key]
+      end
+
+      context
+    end
 
     # Parse input records into hashes.
     #
@@ -11,19 +33,15 @@ module Pd::SurveyPipeline
     # @param facilitator_submissions [Array<Pd::WorkshopFacilitatorDailySurvey>]
     #
     # @return [Hash{:questions, :submissions => Hash}]
-    #   @see output of parse_survey and parse_submissions for the structures of those hash values.
-    def self.transform_data(survey_questions:, workshop_submissions:, facilitator_submissions:)
-      raise 'Invalid input parameter' unless survey_questions &&
-        workshop_submissions && facilitator_submissions
-
-      # Parse questions in surveys
-      questions = parse_survey(survey_questions)
-
-      # Parse submissions
+    #
+    def self.transform_data(survey_questions:, workshop_submissions: [], facilitator_submissions: [])
       workshop_submissions = parse_submissions(workshop_submissions)
       facilitator_submissions = parse_submissions(facilitator_submissions)
 
-      {questions: questions, submissions: workshop_submissions.merge(facilitator_submissions)}
+      {
+        parsed_questions: parse_questions(survey_questions),
+        parsed_submissions: workshop_submissions.merge(facilitator_submissions)
+      }
     end
 
     # Parse an array of submissions into hashes.
@@ -36,6 +54,7 @@ module Pd::SurveyPipeline
     #   submission_content[:answer] is Hash{qid => answer_content}.
     #   answer_content is Array<Hash{:text, :answer => String}> for matrix question, and string
     #   for other question types.
+    #
     def self.parse_submissions(survey_submissions)
       parsed_submissions = {}
 
@@ -86,7 +105,8 @@ module Pd::SurveyPipeline
     # @return [Hash{form_id => {question_id => question_content}}]
     #   question_content is Hash{:type, :name, :text, :order, :hidden}.
     #   It could also have question-specific keys such as :options, :sub_questions etc.
-    def self.parse_survey(survey_questions)
+    #
+    def self.parse_questions(survey_questions)
       parsed_questions = {}
 
       # questions field in Pd::SurveyQuestion is an array of hashes, with each hash is

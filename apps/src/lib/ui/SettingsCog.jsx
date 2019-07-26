@@ -12,8 +12,6 @@ import * as makerToolkitRedux from '../kits/maker/redux';
 import PopUpMenu from './PopUpMenu';
 import ConfirmEnableMakerDialog from './ConfirmEnableMakerDialog';
 import {getStore} from '../../redux';
-import experiments from '@cdo/apps/util/experiments';
-import LibraryPicker from '../../code-studio/components/LibraryPicker';
 
 const style = {
   iconContainer: {
@@ -44,8 +42,7 @@ class SettingsCog extends Component {
   static propTypes = {
     isRunning: PropTypes.bool,
     runModeIndicators: PropTypes.bool,
-    showMakerToggle: PropTypes.bool,
-    openLibraryPicker: PropTypes.func
+    showMakerToggle: PropTypes.bool
   };
 
   // This ugly two-flag state is a workaround for an event-handling bug in
@@ -56,8 +53,7 @@ class SettingsCog extends Component {
   state = {
     open: false,
     canOpen: true,
-    confirmingEnableMaker: false,
-    libraryPickerOpen: false
+    confirmingEnableMaker: false
   };
 
   open = () => this.setState({open: true, canOpen: false});
@@ -72,15 +68,6 @@ class SettingsCog extends Component {
   manageAssets = () => {
     this.close();
     assets.showAssetManager();
-  };
-
-  openLibraryPicker = () => {
-    this.close();
-    this.setState({libraryPickerOpen: true});
-  };
-
-  closeLibraryPicker = () => {
-    this.setState({libraryPickerOpen: false});
   };
 
   toggleMakerToolkit = () => {
@@ -142,9 +129,6 @@ class SettingsCog extends Component {
           showTail={true}
         >
           <ManageAssets onClick={this.manageAssets} />
-          {experiments.isEnabled('student-libraries') && (
-            <ManageLibraries onClick={this.openLibraryPicker} />
-          )}
           {this.props.showMakerToggle && (
             <ToggleMaker onClick={this.toggleMakerToolkit} />
           )}
@@ -154,12 +138,6 @@ class SettingsCog extends Component {
           handleConfirm={this.confirmEnableMaker}
           handleCancel={this.hideConfirmation}
         />
-        {experiments.isEnabled('student-libraries') && (
-          <LibraryPicker
-            isOpen={this.state.libraryPickerOpen}
-            onClose={this.closeLibraryPicker}
-          />
-        )}
       </span>
     );
   }
@@ -174,10 +152,6 @@ ManageAssets.propTypes = {
   first: PropTypes.bool,
   last: PropTypes.bool
 };
-
-export function ManageLibraries(props) {
-  return <PopUpMenu.Item {...props}>Manage Libraries</PopUpMenu.Item>;
-}
 
 export function ToggleMaker(props) {
   const reduxState = getStore().getState();

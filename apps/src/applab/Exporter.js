@@ -27,6 +27,7 @@ import {getAppOptions} from '@cdo/apps/code-studio/initApp/loadApp';
 import project from '@cdo/apps/code-studio/initApp/project';
 import {EXPO_SESSION_SECRET} from '../constants';
 import {
+  EXPO_SDK_VERSION,
   extractSoundAssets,
   createPackageFilesFromZip,
   createPackageFilesFromExpoFiles,
@@ -395,6 +396,7 @@ export default {
     if (expoMode) {
       const appJson = exportExpoAppJsonEjs({
         appName: appName,
+        sdkVersion: EXPO_SDK_VERSION,
         projectId: project.getCurrentId(),
         iconPath: '.' + iconPath,
         splashImagePath: '.' + splashImagePath
@@ -569,10 +571,16 @@ export default {
     });
   },
 
-  async exportApp(appName, code, levelHtml, suppliedExpoOpts, config) {
+  exportApp(appName, code, levelHtml, suppliedExpoOpts, config) {
     const expoOpts = suppliedExpoOpts || {};
     if (expoOpts.mode === 'expoPublish') {
-      return await this.publishToExpo(appName, code, levelHtml, config);
+      return this.publishToExpo(
+        appName,
+        code,
+        levelHtml,
+        expoOpts.iconFileUrl,
+        config
+      );
     }
     return this.exportAppToZip(
       appName,
@@ -586,7 +594,7 @@ export default {
     });
   },
 
-  async publishToExpo(appName, code, levelHtml, config) {
+  async publishToExpo(appName, code, levelHtml, iconFileUrl, config) {
     const {css, outerHTML} = transformLevelHtml(levelHtml);
     const fontAwesomeCSS = exportFontAwesomeCssEjs({
       fontPath: fontAwesomeWOFFPath
@@ -636,7 +644,7 @@ export default {
       sessionId: `${getEnvironmentPrefix()}-${project.getCurrentId()}`,
       files,
       name: `project-${project.getCurrentId()}`,
-      sdkVersion: '31.0.0',
+      sdkVersion: EXPO_SDK_VERSION,
       user: {
         sessionSecret: config.expoSession || EXPO_SESSION_SECRET
       }
@@ -678,13 +686,13 @@ export default {
       assetLocation: 'appassets/'
     });
     appAssets.push({
-      url: exportExpoIconPng,
+      url: iconFileUrl || exportExpoIconPng,
       dataType: 'binary',
       filename: 'icon.png',
       assetLocation: 'appassets/'
     });
     appAssets.push({
-      url: exportExpoSplashPng,
+      url: iconFileUrl || exportExpoSplashPng,
       dataType: 'binary',
       filename: 'splash.png',
       assetLocation: 'appassets/'
@@ -715,6 +723,10 @@ export default {
     };
 
     await session.sendCodeAsync(files);
+    // NOTE: We are waiting on a snack-sdk change that will make sendCodeAsync() actually
+    // send the code right away (currently, the method is debounced). Until then, we must
+    // call an internal method to ensure the code is saved:
+    await session._publishNotDebouncedAsync();
     const saveResult = await session.saveAsync();
     const expoUri = `exp://expo.io/${saveResult.id}`;
     const expoSnackId = saveResult.id;

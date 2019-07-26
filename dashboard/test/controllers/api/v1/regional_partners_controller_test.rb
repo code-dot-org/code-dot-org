@@ -3,6 +3,8 @@ require 'test_helper'
 class Api::V1::RegionalPartnersControllerTest < ActionController::TestCase
   COURSES = ['csd', 'csp']
 
+  self.use_transactional_test_case = true
+
   setup_all do
     @workshop_admin = create :workshop_admin
     @workshop_organizer = create :workshop_organizer

@@ -212,7 +212,7 @@ describe('WorkshopManagement', () => {
       it('Calls the supplied onDelete func when confirmed', () => {
         deleteConfirmationDialog.props().onOk();
         expect(deleteStub.withArgs(123).calledOnce).to.be.true;
-        deleteStub.reset();
+        deleteStub.resetHistory();
       });
     });
   });

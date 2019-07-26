@@ -462,6 +462,8 @@ fr-FR:
   homepage_slot_text_link_donate: Faire un don
   homepage_slot_text_link_shop: T-shirts, chapeaux, & plus
   homepage_slot_text_link_administrators: Amener l'informatique dans votre école
+  homepage_gallery_header: Plus de %{project_count} millions de projets créés sur
+    Code.org
   homepage_header_donors: Code.org remercie tout ceux qui l'ont soutenu
   homepage_donors_seall: Tout afficher
   homepage_donors_donate: Faire un don
@@ -1282,40 +1284,9 @@ fr-FR:
   coursee-2017_name: Cours E (2017)
   coursef-2017_name: Cours F (2017)
   pre-express-2018_name: Cours rapide pour les primo-lecteurs (2018)
-  cspunit2_name: Principes de l'informatique, unité 2
-  cspunit3_name: Principes de l'informatique, unité 3
-  cspunit4_name: Principes de l'informatique, unité 4
-  cspunit5_name: Principes de l'informatique, unité 5
-  cspunit6_name: Principes de l'informatique, unité 6
-  csd5_name: 'Unité 5 : Information et société'
-  csd6_name: 'Unité 6 : Contrôle de système physiques'
-  csd5-2017_name: 'Unité 5 : Information et société'
-  csd6-2017_name: 'Unité 6 : Contrôle de système physiques'
-  csd5-2018_name: 'Unité 5 : Information et société'
-  csd6-2018_name: 'Unité 6 : Contrôle de système physiques'
-  csp1-2017_name: 'Unité 1: Internet'
-  csp2-2017_name: 'Unité 2: L’Information numérique'
-  csp-explore-2017_name: 'Avancé : Préparation à l’exploration des tâches de performance'
-  csp-create-2017_name: 'Avancé : Préparation à la création de tâches de performance'
-  csppostap-2017_name: 'Post AP: Bases de données dans les applications'
-  csp1-2018_name: 'Unité 1: Internet'
-  csp2-2018_name: 'Unité 2: L’Information numérique'
-  csp-explore-2018_name: 'Avancé : Préparation à l’exploration des tâches de performance'
-  csp-create-2018_name: 'Avancé : Préparation à la création de tâches de performance'
-  csppostap-2018_name: 'Post AP: Bases de données dans les applications'
-  csp1_name: 'Unité 1: Internet'
-  csp2_name: 'Unité 2: L’Information numérique'
-  csp3-a_name: 'Partie 3: Introduction a la programmation (version A)'
-  csp3-research-mxghyt_name: 'Partie 3: Introduction a la programmation (sous objectifs)'
-  csp-ap_name: Tâches de performance avancées
-  csppostap_name: 'Post AP: Bases de données dans les applications'
-  csp-post-survey_name: Sondage après cour pour élève
-  cspassessment_name: Test complet - 50 questions
-  csp-explore_name: 'Avancé : Préparation à l’exploration des tâches de performance'
-  csp-create_name: 'Avancé : Préparation à la création de tâches de performance'
-  cspexam1-mWU7ilDYM9_name: Test, partie 1, 25 questions
-  cspexam2-AKwgAh1ac5_name: Test, partie 2, 25 questions
-  cspunit3_gradelevel: Niveaux de lycée
+  pre-express-2019_name: Cours rapide pour les primo-lecteurs (2019)
+  accelerated_name: Cours accéléré
+  express_name: Cours Express
   20-hour_name: Cours accéléré
   algebra_name: Informatique en algèbre
   AlgebraA_name: Informatique en algèbre cours A
@@ -1326,18 +1297,6 @@ fr-FR:
   minecraft_name: Minecraft
   starwarsblocks_name: Star Wars (blocs)
   hoc-encryption_name: Cryptage simple
-  math_category_name: Math
-  hoc_category_name: Heure de Code
-  csf_category_name: Fondamentaux d'informatique
-  csf_2017_category_name: Fondamental d'informatique (2017)
-  csf_2018_category_name: Fondamental d'informatique (2018)
-  csf_international_category_name: Fondamental d'informatique international
-  csf2_draft_category_name: 'En cours d’élaboration : Cours A - F'
-  csd_2018_category_name: Découvertes de l'informatique (2018-2019)
-  csp_category_name: Principes de l'informatique
-  csp17_category_name: Principes de l'informatique (2017-2018)
-  csp_2018_category_name: Principes de l'informatique (2018-2019)
-  cspexams_category_name: Test d'entraînement aux principes de l'informatique
   applab_name: Labo des applis
   gamelab_name: Labo des jeux
   basketball_name: Faire un match de basket
@@ -1417,6 +1376,12 @@ fr-FR:
   coursed-2018_gradelevel: 4ème ou plus
   coursee-2018_gradelevel: De 8 à 12 ans
   coursef-2018_gradelevel: Seconde ou plus
+  coursea-2019_gradelevel: CM2 ou plus
+  courseb-2019_gradelevel: 6ème ou plus
+  coursec-2019_gradelevel: 5ème ou plus
+  coursed-2019_gradelevel: 4ème ou plus
+  coursee-2019_gradelevel: De 8 à 12 ans
+  coursef-2019_gradelevel: Seconde ou plus
   accelerated_gradelevel: De 10 à 18 ans
   codeorg_platformtext: Navigateurs récents, smartphones, tablettes
   codeintl_platformtext: Navigateurs récents, smartphones, tablettes
@@ -1597,6 +1562,20 @@ fr-FR:
   coursee-2018_shortdescription_congrats: Voyez rapidement les notions des cours C
     et D, et allez plus loin avec les fonctions.
   coursef-2018_shortdescription_congrats: Apprenez toutes les notions fondamentales
+    de l’informatique et créez vos propres œuvres d’arts, histoires ou jeux.
+  coursea-2019_shortdescription_congrats: Une introduction à l’informatique pour les
+    primo-lecteurs.
+  courseb-2019_shortdescription_congrats: Une introduction à l'informatique pour les
+    primo-lecteurs. (Semblable au cours A, mais avec plus de variété pour les étudiants
+    plus âgés.)
+  coursec-2019_shortdescription_congrats: Apprendre les rudiments de l’informatique
+    et de créer vos propres œuvres d’art, vos histoires et vos jeux.
+  coursed-2019_shortdescription_congrats: Voyez rapidement les notions du cours C,
+    puis allez plus loin avec les algorithmes, boucles imbriquées, instructions conditionnelles
+    et plus encore.
+  coursee-2019_shortdescription_congrats: Voyez rapidement les notions des cours C
+    et D, et allez plus loin avec les fonctions.
+  coursef-2019_shortdescription_congrats: Apprenez toutes les notions fondamentales
     de l’informatique et créez vos propres œuvres d’arts, histoires ou jeux.
   codeorg_longdescription: Apprends les concepts de base de l'informatique avec la
     programmation, en glissant et en déposant. Il s'agit d'un didacticiel ludique
@@ -2174,12 +2153,9 @@ fr-FR:
   header_report_bug: Rapporter un problème
   header_tutorials: Tutoriels
   header_documentation: Documentation
-  csp_name: Principes de l'informatique
-  csd_name: Découvertes de l'informatique
-  csd_2018_name: Découvertes de l'informatique
-  full_course_category_name: Cours complets
   user_header_label: Bonjour %{username}
   user_header_team: Équipe
+  user_header_my_projects: Mes projets
   user_header_settings: Mon compte
   user_header_logout: Déconnexion
   user_header_signin: Connexion
@@ -2378,6 +2354,7 @@ fr-FR:
     avec la programmation.
   hoc2018_mc_journey: Voyage à travers Minecraft avec la programmation.
   hoc2018_dance_party_main_heading: Fête dansante
+  hoc2018_dance_party_landing_title: Danse
   hoc2018_dance_party_subheading: Aider à traduire Soirée Dansante
   hoc2018_dance_create_your_own_dance_title: Créez votre propre soirée dansante
   hoc2018_dance_party_box_title: Fête dansante
@@ -2459,3 +2436,6 @@ fr-FR:
     l’adresse web et réessayez, ou retournez à notre page d’accueil.
   page_not_found_button: Retourner à la page d’accueil
   hoc2018_mc_with_microsoft: En partenariat avec
+  hoc2018_mc_thank_microsoft: Nous remercions Microsoft du soutien accordé à notre
+    vision et mission d'offrir à chaque enfant la possibilité d’apprendre l’informatique
+    et les compétences nécessaires pour réussir au XXIe siècle.

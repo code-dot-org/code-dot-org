@@ -78,12 +78,12 @@ describe('Led', function() {
     });
 
     it(`calls stop() only once when blink starts`, () => {
-      led.stop.reset();
+      led.stop.resetHistory();
       led.blink(100);
       expect(led.stop).to.have.been.calledOnce;
 
       // Pass some time and make sure it doesn't happen again
-      led.stop.reset();
+      led.stop.resetHistory();
       clock.tick(100);
       expect(led.toggle).to.have.been.calledOnce;
       expect(led.stop).not.to.have.been.called;

@@ -8,9 +8,9 @@ import {
   appendCustomFrames,
   appendLibraryFrames
 } from '../animationListModule';
-import {makeEnum} from '../../utils';
-import {animations as animationsApi} from '../../clientApi';
-import gamelabMsg from '@cdo/gamelab/locale';
+import {makeEnum} from '@cdo/apps/utils';
+import {animations as animationsApi} from '@cdo/apps/clientApi';
+var msg = require('@cdo/gamelab/locale') || require('@cdo/spritelab/locale');
 import {changeInterfaceMode} from '../actions';
 import {GameLabInterfaceMode} from '../constants';
 
@@ -131,9 +131,7 @@ export function handleUploadComplete(result) {
         dispatch(hide());
       },
       () => {
-        dispatch(
-          handleUploadError(gamelabMsg.animationPicker_failedToParseImage())
-        );
+        dispatch(handleUploadError(msg.animationPicker_failedToParseImage()));
       }
     );
   };

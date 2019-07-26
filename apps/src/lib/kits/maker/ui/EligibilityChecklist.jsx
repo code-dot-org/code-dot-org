@@ -5,7 +5,7 @@ import color from '@cdo/apps/util/color';
 import DiscountCodeSchoolChoice from './DiscountCodeSchoolChoice';
 import Button from '@cdo/apps/templates/Button';
 import ValidationStep, {Status} from '@cdo/apps/lib/ui/ValidationStep';
-import UnsafeRenderedMarkdown from '../../../../templates/UnsafeRenderedMarkdown';
+import SafeMarkdown from '../../../../templates/SafeMarkdown';
 import {isUnit6IntentionEligible} from '../util/discountLogic';
 import Unit6ValidationStep from './Unit6ValidationStep';
 import EligibilityConfirmDialog from './EligibilityConfirmDialog';
@@ -126,9 +126,9 @@ export default class EligibilityChecklist extends React.Component {
     return (
       <div>
         <h1>{discountPageHeader}</h1>
-        <UnsafeRenderedMarkdown markdown={discountPageDescriptionMd} />
+        <SafeMarkdown markdown={discountPageDescriptionMd} />
         <h2>{schoolRequirementHeading}</h2>
-        <UnsafeRenderedMarkdown markdown={schoolRequirementDescriptionMd} />
+        <SafeMarkdown markdown={schoolRequirementDescriptionMd} />
         <DiscountCodeSchoolChoice
           initialSchoolId={this.props.schoolId}
           initialSchoolName={this.props.schoolName}
@@ -136,28 +136,24 @@ export default class EligibilityChecklist extends React.Component {
           onSchoolConfirmed={this.handleSchoolConfirmed}
         />
         {this.state.schoolEligible === false && !this.props.adminSetStatus && (
-          <UnsafeRenderedMarkdown
-            markdown={schoolIsNotEligibleMd(this.state.schoolId)}
-          />
+          <SafeMarkdown markdown={schoolIsNotEligibleMd(this.state.schoolId)} />
         )}
         {this.state.schoolEligible === true && !this.props.adminSetStatus && (
           <div>
-            <UnsafeRenderedMarkdown markdown={schoolIsEligibleMd} />
+            <SafeMarkdown markdown={schoolIsEligibleMd} />
             <h2>{i18n.eligibilityRequirements()}</h2>
             <p>{i18n.eligibilityExplanation()}</p>
             <ValidationStep
               stepName={i18n.eligibilityReqPD()}
               stepStatus={this.props.statusPD}
             >
-              <UnsafeRenderedMarkdown markdown={eligibilityReqPDFail} />
+              <SafeMarkdown markdown={eligibilityReqPDFail} />
             </ValidationStep>
             <ValidationStep
               stepName={i18n.eligibilityReqStudentCount()}
               stepStatus={this.props.statusStudentCount}
             >
-              <UnsafeRenderedMarkdown
-                markdown={eligibilityReqStudentCountFail}
-              />
+              <SafeMarkdown markdown={eligibilityReqStudentCountFail} />
             </ValidationStep>
             <Unit6ValidationStep
               showRadioButtons={

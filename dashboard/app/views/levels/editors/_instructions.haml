@@ -3,9 +3,7 @@
   %legend.control-legend{data: {toggle: "collapse", target: "#instructions"}}
     Instructions
 
-  %p Edit the instructions for a level (CSF hints, CSF skin, long/short instructions, TTS)
-
-  #instructions.collapse
+  #instructions.in.collapse
 
     %p
       Every level can have a combination of short and long instructions. When both
@@ -53,9 +51,6 @@
         and start solving without looking at the instructions first?
 
     = render partial: 'levels/editors/tts', locals: {f: f}
-
-    - if !(@level.uses_droplet?) && @level.is_a?(Blockly)
-      = render partial: 'levels/editors/csf_instructions', locals: {f: f}
 
 :javascript
   var mdEditor = levelbuilder.initializeCodeMirror('level_long_instructions', 'markdown', {

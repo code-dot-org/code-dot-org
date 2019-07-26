@@ -107,7 +107,7 @@ website_configuration = {
   routing_rules: routing_rules
 }
 
-CDO.class::CURRICULUM_LANGUAGES.each do |lang|
+CDO.curriculum_languages.each do |lang|
   routing_rules << {
     condition: {
       http_error_code_returned_equals: "404",

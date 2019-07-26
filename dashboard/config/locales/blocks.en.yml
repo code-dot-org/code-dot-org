@@ -686,34 +686,10 @@ en:
             '"macklemore90"': Macklemore - Can't Hold Us
             '"hammer"': MC Hammer - U Can't Touch This
             '"peas"': The Black Eyed Peas - I Got a Feeling
-      gamelab_add:
-        text: add {SPRITE} to group {THIS}
       gamelab_addBehaviorSimple:
         text: sprite {SPRITE} begins {BEHAVIOR}
-      gamelab_addBehaviorUntil:
-        text: sprite {SPRITE} begins {BEHAVIOR} until {CONDITION}
       gamelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
-      gamelab_beginBehavior:
-        text: begin {BEHAVIOR}
-      gamelab_bounceOff:
-        text: "{SPRITE} bounces off of {TARGET}"
-      gamelab_bounceOffEdges:
-        text: "{SPRITE} bounces off of edges"
-      gamelab_changeColor:
-        text: change {COLOR} {METHOD} by {AMOUNT}
-        options:
-          METHOD:
-            '"tint"': tint
-            '"tone"': tone
-            '"shade"': shade
-      gamelab_changeColorBy:
-        text: change {COLOR} {METHOD} by {AMOUNT}
-        options:
-          METHOD:
-            '"hue"': hue
-            '"saturation"': saturation
-            '"brightness"': brightness
       gamelab_changePropBy:
         text: change {SPRITE} {PROPERTY} by {VAL}
         options:
@@ -737,8 +713,6 @@ en:
         text: 'comment: {COMMENT}'
       gamelab_console.log:
         text: log message {MESSAGE}
-      gamelab_countByCostume:
-        text: number of {COSTUME}
       gamelab_createNewSprite:
         text: "make a new sprite \n called {NAME} \n with costume {COSTUME} \n at {LOCATION}"
       gamelab_debugSprite:
@@ -751,31 +725,10 @@ en:
         text: remove {THIS}
       gamelab_displace:
         text: "{THIS} blocks {SPRITE} from moving"
-      gamelab_distance:
-        text: distance from {LOCATION1} to {LOCATION2}
       gamelab_draggable:
         text: being draggable
       gamelab_edgesDisplace:
         text: edges block {SPRITE} from moving
-      gamelab_enableDebug:
-        text: enable debugging
-      gamelab_eval:
-        text: eval {CODE}
-      gamelab_firstTouched:
-        text: first touched sprite
-      gamelab_forEachSpriteWithCostume:
-        text: |-
-          for each {VALUE} sprite
-           do {STATEMENT}
-      gamelab_getAnim:
-        text: "{SPRITE} {COSTUME}"
-        options:
-          COSTUME:
-            '"costume"': costume
-      gamelab_getDirection:
-        text: "{SPRITE} movement direction"
-      gamelab_getFrameDelay:
-        text: "{THIS} frame delay"
       gamelab_getProp:
         text: "{SPRITE} {PROPERTY}"
         options:
@@ -792,26 +745,12 @@ en:
           CHOICE:
             '"this"': this
             '"other"': other
-      gamelab_groupLength:
-        text: number of {THIS}
-      gamelab_hasBehavior:
-        text: "{SPRITE} is currently {BEHAVIOR}"
       gamelab_hideTitleScreen:
         text: hide title screen
-      gamelab_hsbColor:
-        text: |-
-          HSB color
-           H{HUE}S{SATURATION}B{BRIGHTNESS}
-      gamelab_isTouching:
-        text: "{THIS} is touching {TARGET}"
       gamelab_isTouchingEdges:
         text: "{SPRITE} is touching edges"
-      gamelab_joystickDirection:
-        text: joystick direction
       gamelab_jumpTo:
         text: "{SPRITE} jump to {LOCATION}"
-      gamelab_keyDown:
-        text: key is down {KEY}
       gamelab_keyPressed:
         text: "{CONDITION} {KEY} pressed"
         options:
@@ -850,64 +789,14 @@ en:
             '"x"': x
             '"y"': 'y'
             '"z"': z
-      gamelab_layoutSprites:
-        text: layout {COSTUME} as a {FORMAT}
-        options:
-          FORMAT:
-            '"border"': border
-            '"inner"': inside square
-            '"circle"': circle
-            '"grid"': grid
-            '"row"': row
-            '"column"': column
-            '"x"': criss-cross
-            '"plus"': plus
-            '"random"': random
-      gamelab_locationAdd:
-        text: "{LOC1} {OPERATOR} {LOC2}"
-        options:
-          OPERATOR:
-            "'plus'": "+"
-            "'minus'": "-"
       gamelab_locationAt:
         text: 'location x: {X} y: {Y}'
-      gamelab_locationConstant:
-        text: "{DIR}"
-        options:
-          DIR:
-            "'north'": north
-            "'south'": south
-            "'east'": east
-            "'west'": west
-      gamelab_locationDelta:
-        text: "{DISTANCE} pixels {DIR} of {LOCATION}"
-        options:
-          DIR:
-            "'north'": north
-            "'south'": south
-            "'east'": east
-            "'west'": west
-            "'random'": random
-      gamelab_locationEast:
-        text: east
       gamelab_locationMouse:
         text: mouse location
-      gamelab_locationNorth:
-        text: north
       gamelab_locationOf:
         text: location of {SPRITE}
-      gamelab_locationSouth:
-        text: south
-      gamelab_locationWest:
-        text: west
       gamelab_location_picker:
         text: "{LOCATION}"
-      gamelab_location_variable_get:
-        text: location of {VAR}
-      gamelab_location_variable_set:
-        text: set location of {VAR} to {VAL}
-      gamelab_makeNewGroup:
-        text: make a new group
       gamelab_makeNewSpriteAnon:
         text: make new {ANIMATION_NAME} sprite at {LOCATION}
       gamelab_mirrorSprite:
@@ -916,14 +805,8 @@ en:
           DIRECTION:
             '"right"': right
             '"left"': left
-      gamelab_mixColors:
-        text: mix {COLOR1} and {COLOR2}
-      gamelab_mouseDown:
-        text: mouse is down
       gamelab_mouseLocation:
         text: mouse location
-      gamelab_moveDown:
-        text: "{THIS} move down"
       gamelab_moveForward:
         text: move {SPRITE} {DISTANCE} pixels forward
       gamelab_moveInDirection:
@@ -934,18 +817,8 @@ en:
             '"East"': East
             '"South"': South
             '"West"': West
-      gamelab_moveInDirection2:
-        text: move {SPRITE} pixels {DISTANCE} toward {DIRECTION}
-      gamelab_moveLeft:
-        text: "{THIS} move left"
-      gamelab_moveRight:
-        text: "{THIS} move right"
       gamelab_moveToward:
         text: move {SPRITE} pixels {DISTANCE} toward {TARGET}
-      gamelab_moveUp:
-        text: "{THIS} move up"
-      gamelab_objectSprite:
-        text: object sprite
       gamelab_playSound:
         text: playSound {SOUND}
       gamelab_pointInDirection:
@@ -956,8 +829,6 @@ en:
             '"East"': East
             '"South"': South
             '"West"': West
-      gamelab_pointToward:
-        text: point {SPRITE} toward {LOCATION}
       gamelab_printText:
         text: print {TEXT}
       gamelab_randColor:
@@ -972,10 +843,6 @@ en:
         text: sprite {SPRITE} stops {BEHAVIOR}
       gamelab_removeTint:
         text: remove color from {THIS}
-      gamelab_say:
-        text: "{THIS} say {TEXT}"
-      gamelab_secondTouched:
-        text: second touched sprite
       gamelab_setAnimation:
         text: change {THIS} costume to {ANIMATION}
       gamelab_setBackground:
@@ -1014,24 +881,6 @@ en:
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': underwater
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': winter
             undefined: none
-      gamelab_setDirection:
-        text: set {SPRITE} movement direction {DIRECTION}
-      gamelab_setFrameDelay:
-        text: set {THIS} frame delay {VAL}
-      gamelab_setPosition:
-        text: move {THIS} to the {POSITION} position
-        options:
-          POSITION:
-            "{x: 50, y: 50}": top left
-            "{x: 200, y: 50}": top center
-            "{x: 350, y: 50}": top right
-            "{x: 50, y: 200}": center left
-            "{x: 200, y: 200}": center
-            "{x: 350, y: 200}": center right
-            "{x: 50, y: 350}": bottom left
-            "{x: 200, y: 350}": bottom center
-            "{x: 350, y: 350}": bottom right
-            '"random"': random
       gamelab_setProp:
         text: set {SPRITE} {PROPERTY} to {VAL}
         options:
@@ -1051,8 +900,6 @@ en:
             '"height"': height
       gamelab_setTint:
         text: change color of {THIS} to {COLOR}
-      gamelab_setup:
-        text: setup
       gamelab_setupSim:
         text: |-
           setup simulation with
@@ -1068,61 +915,6 @@ en:
           CONDITION:
             '"when"': when
             '"while"': while
-      gamelab_spriteClickedSet:
-        text: "{CONDITION} {SPRITE} clicked set {CLICK}"
-        options:
-          CONDITION:
-            '"when"': when
-            '"while"': while
-      gamelab_spriteCostume:
-        text: "{COSTUME}"
-      gamelab_spriteDirection:
-        text: "{DIRECTION}"
-        options:
-          DIRECTION:
-            '"North"': North
-            '"East"': East
-            '"South"': South
-            '"West"': West
-      gamelab_spritesWhere:
-        text: sprites where {PROPERTY} is {VALUE}
-        options:
-          PROPERTY:
-            '"scale"': size
-            '"x"': x position
-            '"y"': y position
-            '"costume"': costume
-            '"direction"': movement direction
-            '"rotation"': rotation or direction
-            '"tint"': tint
-      gamelab_spritesWhereFirst:
-        text: first {VALUE}
-      gamelab_spritesWhereGenerator:
-        text: sprites where {PROPERTY} {OP} {VALUE}
-        options:
-          PROPERTY:
-            '"scale"': size
-            '"x"': x position
-            '"y"': y position
-            '"costume"': costume
-            '"direction"': movement direction
-            '"rotation"': rotation or direction
-            '"tint"': tint
-          OP:
-            '"="': "="
-            '">"': ">"
-            '"<"': "<"
-      gamelab_spritesWhereLast:
-        text: last {VALUE}
-      gamelab_spritesWhereRandom:
-        text: random in group {VALUE}
-      gamelab_subjectSprite:
-        text: subject sprite
-      gamelab_thisBeginsBehaviorSimple:
-        text: sprite {SPRITE} begins {BEHAVIOR}
-        options:
-          SPRITE:
-            abc: this sprite
       gamelab_turn:
         text: turn {SPRITE} {DIRECTION} {N} degrees
         options:
@@ -1131,8 +923,6 @@ en:
             '"left"': left
       gamelab_whenDownArrow:
         text: when down arrow pressed
-      gamelab_whenJoystick:
-        text: when joystick
       gamelab_whenKey:
         text: when {KEY} pressed
         options:
@@ -1148,8 +938,6 @@ en:
             '"d"': d
       gamelab_whenLeftArrow:
         text: when left arrow pressed
-      gamelab_whenMouseClicked:
-        text: when mouse clicked
       gamelab_whenPressedAndReleased:
         text: "when {DIR} pressed \n{STATEMENT1}when released \n{STATEMENT2}"
         options:
@@ -1166,22 +954,10 @@ en:
            {STATEMENT2}
       gamelab_whenTouching:
         text: when {SPRITE1} touches {SPRITE2}
-      gamelab_whenTouchingAny:
-        text: when {SPRITE} touches any {GROUP}
-      gamelab_whenTouchingSet:
-        text: "{CONDITION} {SPRITE1} touches {SPRITE2} set {SPRITEA} and set {SPRITEB}"
-        options:
-          CONDITION:
-            '"when"': when
-            '"while"': while
-      gamelab_whenTrue:
-        text: when {CONDITION} true
       gamelab_whenUpArrow:
         text: when up arrow pressed
       gamelab_whileDownArrow:
         text: while down arrow pressed
-      gamelab_whileJoystick:
-        text: while joystick
       gamelab_whileKey:
         text: while {KEY} pressed
         options:
@@ -1203,8 +979,6 @@ en:
         text: while {SPRITE1} is touching {SPRITE2}
       gamelab_whileUpArrow:
         text: while up arrow pressed
-      gamelab_worldSeconds:
-        text: seconds elapsed
       gamelab_xLocationOf:
         text: x coordinate of {SPRITE}
       gamelab_yLocationOf:

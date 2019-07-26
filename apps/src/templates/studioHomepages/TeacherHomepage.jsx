@@ -164,8 +164,8 @@ export default class TeacherHomepage extends Component {
       locale
     } = this.props;
 
-    // Show the special announcement for now.
-    const showSpecialAnnouncement = true;
+    // Hide the special announcement for now.
+    const showSpecialAnnouncement = false;
 
     // Hide the regular announcement/notification for now.
     const showAnnouncement = false;

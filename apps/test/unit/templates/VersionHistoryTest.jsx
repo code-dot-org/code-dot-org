@@ -1,7 +1,7 @@
 import React from 'react';
 import {mount} from 'enzyme';
 import sinon from 'sinon';
-import {expect} from '../../util/configuredChai';
+import {assert, expect} from '../../util/reconfiguredChai';
 import VersionHistory from '@cdo/apps/templates/VersionHistory';
 import VersionRow from '@cdo/apps/templates/VersionRow';
 import {sources as sourcesApi, files as filesApi} from '@cdo/apps/clientApi';
@@ -58,8 +58,10 @@ describe('VersionHistory', () => {
         handleClearPuzzle: () => {},
         useFilesApi: false
       },
-      finishVersionHistoryLoad: () =>
-        sourcesApi.ajax.firstCall.args[2](FAKE_VERSION_LIST_RESPONSE),
+      finishVersionHistoryLoad: () => {
+        sourcesApi.ajax.firstCall.args[2](FAKE_VERSION_LIST_RESPONSE);
+        wrapper.update();
+      },
       failVersionHistoryLoad: () => sourcesApi.ajax.firstCall.args[3](),
       restoreSpy: () => sourcesApi.restorePreviousFileVersion,
       finishRestoreVersion: () =>
@@ -85,10 +87,12 @@ describe('VersionHistory', () => {
         handleClearPuzzle: () => {},
         useFilesApi: true
       },
-      finishVersionHistoryLoad: () =>
+      finishVersionHistoryLoad: () => {
         filesApi.getVersionHistory.firstCall.args[0](
           FAKE_VERSION_LIST_RESPONSE
-        ),
+        );
+        wrapper.update();
+      },
       failVersionHistoryLoad: () =>
         filesApi.getVersionHistory.firstCall.args[1](),
       restoreSpy: () => filesApi.restorePreviousVersion,
@@ -109,15 +113,17 @@ describe('VersionHistory', () => {
   }) {
     it('renders loading spinner at first', () => {
       wrapper = mount(<VersionHistory {...props} />);
-      expect(wrapper).to.containMatchingElement(
-        <i className="fa fa-spinner fa-spin" style={{fontSize: '32px'}} />
+      assert(
+        wrapper.containsMatchingElement(
+          <i className="fa fa-spinner fa-spin" style={{fontSize: '32px'}} />
+        )
       );
     });
 
     it('renders an error on failed version history load', () => {
       wrapper = mount(<VersionHistory {...props} />);
       failVersionHistoryLoad();
-      expect(wrapper).to.contain.text('An error occurred.');
+      expect(wrapper.text()).to.include('An error occurred.');
     });
 
     it('renders a version list on successful version history load', () => {
@@ -126,8 +132,10 @@ describe('VersionHistory', () => {
       finishVersionHistoryLoad();
 
       // Spinner goes away
-      expect(wrapper).not.to.containMatchingElement(
-        <i className="fa fa-spinner fa-spin" style={{fontSize: '32px'}} />
+      assert(
+        !wrapper.containsMatchingElement(
+          <i className="fa fa-spinner fa-spin" style={{fontSize: '32px'}} />
+        )
       );
 
       // Rendered two version rows
@@ -155,7 +163,7 @@ describe('VersionHistory', () => {
         .simulate('click');
 
       failRestoreVersion();
-      expect(wrapper).to.contain.text('An error occurred.');
+      expect(wrapper.text()).to.include('An error occurred.');
     });
 
     it('reloads the page on successful restore', () => {
@@ -179,16 +187,20 @@ describe('VersionHistory', () => {
       wrapper.find('.btn-danger').simulate('click');
 
       // Expect confirmation to show
-      expect(wrapper).to.containMatchingElement(
-        <div>
-          <p>Are you sure you want to clear all progress for this level&#63;</p>
-          <button type="button" id="confirm-button">
-            Start Over
-          </button>
-          <button type="button" id="again-button">
-            Cancel
-          </button>
-        </div>
+      assert(
+        wrapper.containsMatchingElement(
+          <div>
+            <p>
+              Are you sure you want to clear all progress for this level&#63;
+            </p>
+            <button type="button" id="confirm-button">
+              Start Over
+            </button>
+            <button type="button" id="again-button">
+              Cancel
+            </button>
+          </div>
+        )
       );
     });
 
@@ -200,16 +212,20 @@ describe('VersionHistory', () => {
       wrapper.find('.btn-danger').simulate('click');
 
       // Expect confirmation to show
-      expect(wrapper).to.containMatchingElement(
-        <div>
-          <p>Are you sure you want to clear all progress for this level&#63;</p>
-          <button type="button" id="confirm-button">
-            Start Over
-          </button>
-          <button type="button" id="again-button">
-            Cancel
-          </button>
-        </div>
+      expect(
+        wrapper.containsMatchingElement(
+          <div>
+            <p>
+              Are you sure you want to clear all progress for this level&#63;
+            </p>
+            <button type="button" id="confirm-button">
+              Start Over
+            </button>
+            <button type="button" id="again-button">
+              Cancel
+            </button>
+          </div>
+        )
       );
 
       // Click "Cancel"
@@ -220,7 +236,7 @@ describe('VersionHistory', () => {
     });
 
     describe('confirming Start Over', () => {
-      let wrapper, handleClearPuzzle;
+      let handleClearPuzzle;
 
       beforeEach(() => {
         sinon.stub(firehoseClient, 'putRecord');
@@ -252,8 +268,10 @@ describe('VersionHistory', () => {
       });
 
       it('immediately renders spinner', () => {
-        expect(wrapper).to.containMatchingElement(
-          <i className="fa fa-spinner fa-spin" style={{fontSize: '32px'}} />
+        expect(
+          wrapper.containsMatchingElement(
+            <i className="fa fa-spinner fa-spin" style={{fontSize: '32px'}} />
+          )
         );
       });
 

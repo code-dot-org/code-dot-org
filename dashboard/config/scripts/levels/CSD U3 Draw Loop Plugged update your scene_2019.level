@@ -1,7 +1,7 @@
 <Gamelab>
   <config><![CDATA[{
   "game_id": 50,
-  "created_at": "2019-02-20T16:17:27.000Z",
+  "created_at": "2019-02-14T01:29:32.000Z",
   "level_num": "custom",
   "user_id": 155,
   "properties": {
@@ -93,11 +93,12 @@
     "rubric_performance_level_2": "The sprite animates, but there may be small problems with the scene, such the wrong sprite or text being in front.  There may be other errors, such as creating sprites inside the draw loop or having extra calls to `drawSprites` or other extra code.",
     "rubric_performance_level_3": "The sprite animates, but there are major problems, such as leaving a \"trails\" of previous locations behind or text or other parts of the scene disappearing.",
     "rubric_performance_level_4": "The sprite does not animate.",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": "aMADTsdS7szY3AefkMprQKiygNkr0/SojX2n43N6olwWufTGNUJr57oEuTsO\nyAvasxb+nJ6U2uqqWhX7bkFC5A==\n"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-02 18:20:09 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-06-08 19:23:27 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-06-13 20:46:02 +0000\",\"changed\":[\"code_functions\",\"show_debug_watch\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-11-20 16:21:45 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-05-15 17:56:04 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-05-15 17:56:20 +0000\",\"changed\":[\"never_autoplay_video\",\"code_functions\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-03-29 19:04:34 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-03-29 20:35:08 +0000\",\"changed\":[\"code_functions\",\"rubric_exceeds\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-06-02 18:20:09 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-06-08 19:23:27 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-06-13 20:46:02 +0000\",\"changed\":[\"code_functions\",\"show_debug_watch\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-11-20 16:21:45 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-05-15 17:56:04 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-05-15 17:56:20 +0000\",\"changed\":[\"never_autoplay_video\",\"code_functions\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-03-29 19:04:34 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-03-29 20:35:08 +0000\",\"changed\":[\"code_functions\",\"rubric_exceeds\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-06-25 20:59:46 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":959,\"changed_by_email\":\"george.zhang@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

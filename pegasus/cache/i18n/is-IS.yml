@@ -33,7 +33,7 @@ is-IS:
   name: Nafn
   email: Netfang
   zipcode: Póstnúmer eða land
-  submit: Senda inn
+  submit: Staðfesta
   twentyhours_heading: Prófaðu námskeiðið okkar Inngangur að tölvunarfræði
   twentyhours_text: Búin(n) að ljúka fyrstu Klukkustund kóðunar? Fylgdu eftir með
     því að læra fleiri mikilvæg hugtök í tölvunarfræði og forritun á þessu námskeiði.
@@ -963,6 +963,7 @@ is-IS:
   dashboard_coursed: 'Námskeið D: '
   dashboard_coursee: 'Námskeið E: '
   dashboard_coursef: 'Námskeið F: '
+  dashboard_express: 'Hraðnámskeið: '
   dashboard_unplugged: Ef þú hefur engar tölvur, <a href='%{unplugged_url}'>ættir
     þú að prófa þessar kennslustundir án tengingar</a> í bekknum þínum.
   dashboard_curriculum: Námskrá
@@ -982,6 +983,7 @@ is-IS:
   dashboard_curriculum_csins: 'Tölvunarfræði í vísindum:'
   dashboard_curriculum_csp: 'AP® Undirstöðuatriði tölvunarfræði:'
   dashboard_curriculum_ecs: 'Tölvunarfræði könnuð:'
+  dashboard_curriculum_csd: 'Uppgötvanir í Tölvunarfræði: '
   dashboard_grade_k: K
   dashboard_grade_other: Annað
   dashboard_login_word: Orð
@@ -1174,36 +1176,22 @@ is-IS:
   coursee-2017_name: Námskeið E (2017)
   coursef-2017_name: Námskeið F (2017)
   coursea-2018_name: Námskeið A (2018)
+  coursec-2018_name: Námskeið C (2018)
+  coursed-2018_name: Námskeið D (2018)
+  coursee-2018_name: Námskeið E (2018)
+  coursef-2018_name: Námskeið F (2018)
   coursea-2019_name: Námskeið A (2019)
+  courseb-2019_name: Námskeið B (2019)
+  coursec-2019_name: Námskeið C (2019)
+  coursed-2019_name: Námskeið D (2019)
+  coursee-2019_name: Námskeið E (2019)
+  coursef-2019_name: Námskeið F (2019)
+  express-2018_name: Hraðnámskeið (2018)
   pre-express-2018_name: Hraðnámskeið fyrir forlæsa (2018)
-  cspunit2_name: 'Kafli 2: Internetið'
-  cspunit3_name: 'Kafli 3: Forritun'
-  cspunit4_name: 'Kafli 4: Gögn'
-  cspunit5_name: 'Kafli 5: Kanna og búa til fagnám'
-  cspunit6_name: 'Framhald: Gagnagrunnar í öppum'
-  csd5_name: 'Kafli 5: Upplýsingar og samfélagið'
-  csd6_name: 'Kafli 6: Tölvun'
-  csd5-2017_name: 'Kafli 5: Upplýsingar og samfélagið'
-  csd6-2017_name: 'Kafli 6: Tölvun'
-  csd5-2018_name: 'Kafli 5: Upplýsingar og samfélagið'
-  csd6-2018_name: 'Kafli 6: Tölvun'
-  csp1-2017_name: 'Kafli 1: Internetið'
-  csp2-2017_name: Kafli 2 - Stafrænar upplýsingar
-  csppostap-2017_name: 'Framhald: Gagnagrunnar í öppum'
-  csp1-2018_name: 'Kafli 1: Internetið'
-  csp2-2018_name: Kafli 2 - Stafrænar upplýsingar
-  csppostap-2018_name: 'Framhald: Gagnagrunnar í öppum'
-  csp1_name: 'Kafli 1: Internetið'
-  csp2_name: Kafli 2 - Stafrænar upplýsingar
-  csp3-a_name: 'Kafli 3: Kynning á forritun (útgáfa A)'
-  csp3-research-mxghyt_name: 'Kafli 3: Kynning á forritun (undirmarkmið)'
-  csp-ap_name: AP verkefni
-  csppostap_name: 'Framhald: Gagnagrunnar í öppum'
-  csp-post-survey_name: Nemendakönnun að loknu námskeiði
-  cspassessment_name: Fullt próf - 50 spurningar
-  cspexam1-mWU7ilDYM9_name: Prófhluti 1 - 25 spurningar
-  cspexam2-AKwgAh1ac5_name: Prófhluti 2 - 25 spurningar
-  cspunit3_gradelevel: Bekkir 9-12
+  express-2019_name: Hraðnámskeið (2019)
+  accelerated_name: Hraðnámskeiðið
+  express_name: Hraðnámskeið
+  pre-express_name: Hraðnámskeið fyrir forlæsa
   20-hour_name: Hraðnámskeiðið
   algebra_name: TF í algebru
   AlgebraA_name: TF í algebru Námskeið A
@@ -1215,18 +1203,6 @@ is-IS:
   starwarsblocks_name: Star Wars (Kubbar)
   hoc-encryption_name: Einföld dulkóðun
   text-compression_name: Þjöppun texta
-  math_category_name: Reikningur
-  hoc_category_name: Klukkustund kóðunar
-  csf_category_name: TF Grunnur
-  csf_2017_category_name: Grunnatriði tölvunarfræði (2017)
-  csf_2018_category_name: Grunnatriði tölvunarfræði (2018)
-  csf_international_category_name: Grunnatriði TF - alþjóðlegt
-  csf2_draft_category_name: 'Í þróun: Námskeið A-F'
-  csd_2018_category_name: Uppgötvanir tölvunarfræði ('18-'19)
-  csp_category_name: "'15-'16 TF Grundvöllur"
-  csp17_category_name: Grunnhugtök tölvunarfræði
-  csp_2018_category_name: Grunnhugtök tölvunarfræði ('18-'19)
-  cspexams_category_name: Æfingapróf fyrir Undirstöðuatriði TF
   applab_name: Appsmiðjan
   gamelab_name: Leikjasmiðjan
   basketball_name: Búa til körfuboltaleik
@@ -1307,6 +1283,12 @@ is-IS:
   coursed-2018_gradelevel: 14 ára og eldri
   coursee-2018_gradelevel: 8 - 12 ára
   coursef-2018_gradelevel: Bekkur 10+
+  coursea-2019_gradelevel: Bekkur 5+
+  courseb-2019_gradelevel: Bekkur 6+
+  coursec-2019_gradelevel: Bekkur 7+
+  coursed-2019_gradelevel: 14 ára og eldri
+  coursee-2019_gradelevel: 8 - 12 ára
+  coursef-2019_gradelevel: Bekkur 10+
   accelerated_gradelevel: Fyrir 10-18 ára
   codeorg_platformtext: Fyrir nýjustu vafra, snjallsíma, spjaldtölvur
   codeintl_platformtext: Fyrir nýjustu vafra, snjallsíma, spjaldtölvur
@@ -1469,6 +1451,18 @@ is-IS:
   coursee-2018_shortdescription_congrats: Hér er farið fljótt yfir hugtök frá Námskeiðum
     C og D og síðan haldið lengra með föllum.
   coursef-2018_shortdescription_congrats: Lærðu öll hugtökin í Grunnatriði tölvunarfræði
+    og búðu til eigin myndir, sögur og leiki.
+  coursea-2019_shortdescription_congrats: Kynning á tölvunarfræði fyrir byrjendur
+    í lestri.
+  courseb-2019_shortdescription_congrats: Kynning á tölvunarfræði fyrir byrjendur
+    í lestri. (Svipað og Námskeið A en með meiri fjölbreytni fyrir eldri nemendur.)
+  coursec-2019_shortdescription_congrats: Lærðu grundvallaratriði tölvunarfræði og
+    búðu til eigin myndir, sögur og leiki.
+  coursed-2019_shortdescription_congrats: Hér er farið fljótt yfir hugtök frá Námskeiði
+    C og svo haldið lengra með algrímum, földuðum lykkjum, skilyrðingum og fleiru.
+  coursee-2019_shortdescription_congrats: Hér er farið fljótt yfir hugtök frá Námskeiðum
+    C og D og síðan haldið lengra með föllum.
+  coursef-2019_shortdescription_congrats: Lærðu öll hugtökin í Grunnatriði tölvunarfræði
     og búðu til eigin myndir, sögur og leiki.
   codeorg_longdescription: Lærðu grunnhugtók tölvunarfræði með kubbaforritun. Þetta
     er leikjamiðað, sjálfstýrt kennsluefni með fyrirlestrum í myndskeiðum þar sem
@@ -1986,10 +1980,6 @@ is-IS:
   header_report_bug: Tilkynna galla
   header_tutorials: Kennslutímar
   header_documentation: Skjölun
-  csp_name: Grunnhugtök tölvunarfræði
-  csd_name: Uppgötvanir tölvunarfræði
-  csd_2018_name: Uppgötvanir tölvunarfræði
-  full_course_category_name: Heil námskeið
   user_header_label: Hæ %{username}
   user_header_team: Félagar
   user_header_settings: Reikningurinn minn
@@ -2149,7 +2139,11 @@ is-IS:
   hoc2018_mc_video_title_hoc_is_here: Klukkustund kóðunar er hér - Allir geta lært
   hoc2018_mc_video_title_anybody_can_learn: Allir geta lært
   hoc2018_mc_video_title_my_name_is_aracely: Ég heiti Aracely
+  hoc2018_mc_homepage_hoc_coming: Klukkustund kóðunar er á næsta leiti...
   hoc2018_mc_homepage_what_create: Hvað ætlar þú að búa til?
+  hoc2018_mc_homepage_give_flight: Gefðu ímyndunaraflinu lausan tauminn og leyfðu
+    hugmyndum að fæðast. Byrjaðu með Klukkustund kóðunar og þína eigin sköpunargáfu.
+  hoc2018_mc_homepage_watch_video: Horfðu á myndbandið okkar
   hoc2018_mc_homepage_join_us: Vertu með
   hoc2018_mc_homepage_try_it: Prófið hana
   hoc2018_mc_back_journey: |-
@@ -2160,13 +2154,17 @@ is-IS:
     leysa þrautir til að kanna og byggja neðansjávarheima með kóða.
   hoc2018_mc_journey: Ferðastu um Minecraft með kóða.
   hoc2018_dance_party_main_heading: Danspartý
+  hoc2018_dance_party_landing_title: Dans
   hoc2018_dance_party_subheading: Hjálpaðu að þýða Danspartý
+  hoc2018_dance_create_your_own_dance_title: Búðu til þitt eigið Danspartý
   hoc2018_dance_party_box_title: Danspartý
   hoc2018_dance_party_box_description: Kóðaðu Danspartý og deildu því með vinum!
+  hoc2018_dance_party_specs: Tungumál | Snið | Aldur 6-106
   hoc2018_dance_party_button: Byrja
   hoc2018_dance_keep_on_dancing_box_title: Halda áfram að dansa
   hoc2018_dance_keep_on_dancing_description: Halda áfram eftir fyrstu klukkustundina
     með fleiri hugmyndir að verkefnum.
+  hoc2018_dance_keep_on_dancing_specs: Tungumál | Snið | Aldur 13+
   hoc2018_dance_keep_on_dancing_button: Byrja 2. hluta
   hoc2018_dance_teacher_resources_title: Fyrir kennara
   hoc2018_dance_teacher_resources_tile1_description: Kennsluáætlanir, skírteini og
@@ -2187,7 +2185,11 @@ is-IS:
     að markmiði að hvetja, mennta og þjálfa fátæk og önnur börn og ungmenni sem standa
     höllum fæti til að finna sér starfsvettvang innan tölvunarfræði. <a href='%{amazon_future_engineer_link}'
     target='_blank'>Nánar</a>
+  hoc2018_dance_amazon_learn_more_future_engineer_subheading_title: Lærðu meira um
+    Amazon Future Engineer
+  hoc2018_dance_amazon_about_future_engineer_title: Um Amazon Future Engineer
   hoc2018_dance_amazon_about_future_engineer_button: Nánar
+  hoc2018_dance_amazon_try_coding_this_summer_title: Prófaðu að kóða í sumar
   hoc2018_dance_amazon_scholarship_programs_button: Sækja um nú
   hoc2018_dance_amazon_future_engineer_footer: "* Listamennirnir sem eiga tónlistina
     sem er notuð í þessu kennsluefni eru ekki að styðja við eða mæla með Amazon með

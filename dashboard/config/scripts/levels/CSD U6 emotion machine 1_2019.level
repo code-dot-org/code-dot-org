@@ -221,21 +221,22 @@
     "debugger_disabled": "false",
     "makerlab_enabled": "false",
     "top_level_procedure_autopopulate": "false",
-    "encrypted_examples": "Pr39WR7swvjRxXVyRj4S1tfBLs/56X8QrjbKzpXjfx4uNcqkjZFak4roOAPF\neQSJk8gGSklDuqKoR01kxne1WA==\n",
+    "encrypted_examples": "PEK7oy+9y1Zj4aXBn8KOW7b/fSiZ8JrAcxGHOzPomrRmq+5jVdTu9rsPubiI\nBSvegg0MZbvudgWDliDfXzsr4w==\n",
     "parent_level_id": 12316,
     "name_suffix": "_2019",
-    "preload_asset_list": null,
     "reference_links": [
       "/docs/concepts/app-lab/responding-to-user-input/",
       "/docs/concepts/javascript/random-numbers/"
     ],
     "map_reference": "/docs/concepts/app-lab/designing-screens-with-code/",
     "mini_rubric": "false",
-    "text_mode_at_start": "false"
+    "text_mode_at_start": "false",
+    "preload_asset_list": null,
+    "encrypted": "false"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-11-03 19:04:49 +0000\",\"changed\":[\"notes\",\"code_functions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-11-10 18:23:20 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2017-11-21 19:17:59 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-02-02 17:19:18 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2019-03-06 19:49:11 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-11-03 19:04:49 +0000\",\"changed\":[\"notes\",\"code_functions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-11-10 18:23:20 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2017-11-21 19:17:59 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-02-02 17:19:18 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2019-03-06 19:49:11 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-07-09 16:26:19 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":959,\"changed_by_email\":\"george.zhang@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
