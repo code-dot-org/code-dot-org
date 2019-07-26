@@ -136,10 +136,12 @@ export class WorkshopEnrollmentSchoolInfo extends React.Component {
     });
   }
 
-  handleMoveEnrollmentsConfirmed(destination_workshop_id) {
+  handleMoveEnrollmentsConfirmed(destinationWorkshopId) {
     this.setState({
-      isMoveEnrollmentsDialogOpen: false
+      isMoveEnrollmentsDialogOpen: false,
+      selectedEnrollments: []
     });
+    this.props.onMove(destinationWorkshopId, this.state.selectedEnrollments);
   }
 
   formatCsfCourseExperience(csf_course_experience) {
@@ -378,6 +380,7 @@ WorkshopEnrollmentSchoolInfo.propTypes = {
   accountRequiredForAttendance: PropTypes.bool.isRequired,
   scholarshipWorkshop: PropTypes.bool.isRequired,
   onDelete: PropTypes.func.isRequired,
+  onMove: PropTypes.func.isRequired,
   workshopCourse: PropTypes.string.isRequired,
   workshopSubject: PropTypes.string.isRequired,
   numSessions: PropTypes.number.isRequired
