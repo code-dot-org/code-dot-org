@@ -307,8 +307,25 @@ class Pd::Workshop < ActiveRecord::Base
     self.ended_at = Time.zone.now
     save!
 
-    send_exit_surveys
-    update!(processed_at: Time.zone.now)
+    # We want to send exit surveys now, but that needs to be done on the
+    # production-daemon machine, so we'll let the process_pd_workshop_emails
+    # cron job call the process_ends function below on that machine.
+  end
+
+  # This is called by the process_pd_workshop_emails cron job which is run
+  # on the production-daemon machine, and will send exit surveys to workshops
+  # that have been ended in the last two days when they haven't already had
+  # that done.
+  # The emails must be sent from production-daemon because they contain attachments.
+  # See https://github.com/code-dot-org/code-dot-org/blob/96b890d6e6f77de23bc5d4469df69b900e3fbeb7/lib/cdo/poste.rb#L217
+  # for details.
+  def self.process_ends
+    end_on_or_after(Time.now - 2.days).each do |workshop|
+      if !workshop.processed_at || workshop.processed_at < workshop.ended_at
+        workshop.send_exit_surveys
+        workshop.update!(processed_at: Time.zone.now)
+      end
+    end
   end
 
   def state
