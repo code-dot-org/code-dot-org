@@ -1,0 +1,57 @@
+---
+title: About
+theme: responsive
+video_player: true
+---
+
+# About Us
+
+<div class="col-60", style="padding-right:20px;">
+
+Code.org® məktəblərdə kompüter elminə müraciətin genişləndirilməsinə, qadın və azlıqların qoşulmasını artırmağa həsr edilmiş qeyri-kommersiya təşkilatıdır. İstəyimiz, hər bir məktəbdəki hər bir şagirdin biologiya, kimya və ya cəbr öyrəndiyi kimi kompüter elmini öyrənmə imkanına da sahib olmasıdır. Orta məktəbdə kompüter elminin tədrisi üçün ən geniş istifadə olunan tədris proqramını təqdim edirik və həmçinin hər il dünyadakı bütün şagirdlərin 10%-ni əhatə edən <a href="hourofcode.com">Kod Saatı</a> kampaniyasını təşkil edirik. Code.org Amazon, Facebook, Google, Infosys Foundation, Microsoft və <a href="/about/donors">digərləri</a> daxil olmaqla bir çox səxavətli ianəçilər tərəfindən dəstəklənir.
+
+</div>
+
+[col-40]
+
+<div style="background-color:#7665a0;height:190px;padding:25px;display:flex;justify-content:center;flex-direction:column">
+  
+  <font size="4" color="#FFFFFF"><b>Code.org courses are used by tens of millions of students and by one million teachers all around the world.</b></font>
+ 
+</div>
+
+[/col-40]
+
+<div style="clear:both"></div>
+
+## History 
+
+In 2013, Code.org was launched by twin brothers Hadi and Ali Partovi with a [video promoting computer science](https://www.youtube.com/watch?v=nKIu9yen5nc). Bu video bir günlük YouTube-da 1. yerdə oldu və 15,000 məktəb kömək üçün bizə müraciət etdi. O vaxtdan bəri, dünya miqyaslı bir hərəkatı dəstəkləyən tam bir təşkilat qurmaq üçün könüllülər heyətindən genişləndik. Keyfiyyətli kompüter elmləri təhsilinin uşaqların sadəcə bir qismi üçün deyil hamısı üçün mümkün olduğuna inanırıq.
+<br>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/nKIu9yen5nc" frameborder="0" allowfullscreen></iframe>
+
+## What We Do
+
+We do work across the education spectrum: designing [our own courses](https://studio.code.org/courses) or partnering with others, training teachers, partnering with large school districts, helping change government policies, expanding internationally via partnerships, and marketing to break stereotypes. İşlərimiz, kompüter elmi təhsilinin yaradılması, maliyyələşdirilməsi və yayılmasına kömək edən saysız-hesabsız təşkilat və şəxslər tərəfindən onillik səylər əsasında qurulmuşdur. Daha geniş kompüter elmi təhsili cəmiyyətinin yorulmaz işi üçün minnətdarıq və illər ərzində təsirimizi artıran tərəfdaşlara və şəxlərə təşəkkürümüzü bildiririk.
+
+## Code.org's International Reach 
+
+Veb saytımızın trafikinin 40%-dən çoxu Birləşmiş Ştatlar xaricindən gəlir və bu rəqəm artmağa davam edir. In order to expand global access to computer science, our team works closely with [more than 100 international partners](/about/partners), helping them to promote the Hour of Code, advocate for policy change, and train teachers. Dünyanın hər yerində təhsil nazirlikləri ilə tərəfdaşlıq edərək və İqtisadi Əməkdaşlıq və İnkişaf Təşkilatı, Birləşmiş Millət Təhsil, Elm və Mədəniyyət Təşkilatı kimi beynəlxalq quruluşlarla işləyərək kompüter elmini beynəlxalq təhsil mühazirəsinin bir hissəsinə çeviririk.
+
+<img alt="Code.org International Partners" src="/images/international/international_partners.jpg" width="100%">
+
+## Translation 
+
+Ölkənizdəki şagirdlərə birbaşa təsir göstərmək istəyirsiniz? Code.org məzmununu onların doğma dilində hazırlamağımız üçün bizə kömək edin! Məşğələ və dərslərimizin tərcüməsinə kömək etmək üçün könüllü olsanız, dünyadakı şagirdlərə kompüter elmi təhsilini gətirməyə kömək edən 7,000-dən çox tərcüməçidən ibarət olan cəmiyyətə qoşulacaqsınız. Take a look at our [translation guide](/translate) for more information. 
+
+## Our commitment to free curriculum and open source technology
+
+All curriculum resources and tutorials we create will forever be free to use and openly licensed under a [Creative Commons](http://creativecommons.org/licenses/by-nc-sa/4.0/) license, allowing others to make derivative education resources for non-commercial purposes. If you are interested in licensing our materials for commercial purposes, [contact us](/contact). Kurslarımız dünya miqyasında istifadə etmək və fərqli dillərdə danışanlar üçün tərcümə edilir. Our technology is developed as an [open source project](https://github.com/code-dot-org/code-dot-org).
+
+<img alt="Students with a laptop" src="/images/international/group_computer.jpg" width="100%">
+
+## Follow us
+
+[Sign up to receive status updates](/about/hear-from-us) about progress in the K-12 computer science movement and about the work of Code.org. Or follow Code.org on social media:
+
+{{ social_media_codeorg }}
