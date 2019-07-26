@@ -167,12 +167,17 @@ export class Workshop extends React.Component {
   };
 
   handleMoveEnrollment = (destinationWorkshopId, selectedEnrollments) => {
-    // /platforms?platform_ids[]=0&platform_ids[]=1&platform_ids[]=2
+    const enrollmentIds = selectedEnrollments.map(enrollment => {
+      return enrollment.id;
+    });
+    const urlParams = `enrollment_ids[]=${enrollmentIds.join(
+      '&enrollment_ids[]='
+    )}`;
     this.moveEnrollmentRequest = $.ajax({
       method: 'POST',
       url: `/api/v1/pd/workshops/${
         this.props.params.workshopId
-      }/enrollments/move`,
+      }/enrollments/move?${urlParams}`,
       traditional: true,
       data: {
         enrollments: selectedEnrollments,
