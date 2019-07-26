@@ -12923,3 +12923,21 @@ en:
           description_audience: ''
           description_short: ''
           description: ''
+        csl-vn:
+          stages:
+            Sequencing with Scrat:
+              name: Sequencing with Scrat
+            Programming in Maze:
+              name: Programming in Maze
+            Programming with Rey and BB-8:
+              name: Programming with Rey and BB-8
+            Loops in Ice Age:
+              name: Loops in Ice Age
+            Ocean Scene with Loops:
+              name: Ocean Scene with Loops
+            Tell a Story in Play Lab:
+              name: Tell a Story in Play Lab
+          title: Computer Science Literacy for Vietnam
+          description_audience: Tuổi 5-10
+          description_short: Khoa học máy tính cơ bản cho học sinh Việt Nam
+          description: 'Khoa Học Máy Tính (Computer Science) là môn học cơ bản của thời đại kinh tế số và đã được đưa vào dạy đại trà từ tiểu học ở Mỹ, Canada, Anh, Nhật và các nước phát triển khác. Khoá học này nhằm giới thiệu Khoa Học Máy Tính cơ bản đến với học sinh Việt Nam. Chương trình được xây dựng trực tiếp từ chương trình hiện hành cho học sinh tiểu học ở Mỹ và cô đọng cho phù hợp với học sinh Việt Nam. '
