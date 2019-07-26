@@ -169,8 +169,8 @@ module Api::V1::Pd
         errors: [
           {
             severity: Logger::Severity::ERROR,
-            message: "#{exception.message}. Workshop id: #{@workshop.id},"\
-              " course: #{@workshop.course}, subject: #{@workshop.subject}."
+            message: "Error: #{exception.message}. First backtrace: #{exception.backtrace.first}."\
+              " Workshop id: #{@workshop.id}, course: #{@workshop.course}, subject: #{@workshop.subject}."
           }
         ]
       }
