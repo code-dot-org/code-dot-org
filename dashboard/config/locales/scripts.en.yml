@@ -10527,6 +10527,12 @@ en:
               name: Deeper Learning Overview
             andrea-test-stage4:
               name: andrea-test-stage4
+            Part 1:
+              name: Part 1
+            Part 2:
+              name: Part 2
+            part 3:
+              name: part 3
           title: andrea-test
           description_audience: 6-12 Facilitators-in-Training
           description_short: this is to test my skills in making a course
@@ -11814,6 +11820,36 @@ en:
               name: Color Images
             Lossless Compression:
               name: Lossless Compression
+            Welcome to CSP:
+              name: Welcome to CSP
+            Sending Binary Messages:
+              name: Sending Binary Messages
+            Sending Binary Messages with the Internet Simulator:
+              name: Sending Binary Messages with the Internet Simulator
+            AB Patterns:
+              name: AB Patterns
+            Flippy Do, pt. 1:
+              name: Flippy Do, pt. 1
+            Flippy Do, pt. 2:
+              name: Flippy Do, pt. 2
+            Lossy Compression:
+              name: Lossy Compression
+            Intellectual Property:
+              name: Intellectual Property
+            'Project: Digital Information Dilemmas, pt. 1':
+              name: 'Project: Digital Information Dilemmas, pt. 1'
+            'Project: Digital Information Dilemmas, pt. 2':
+              name: 'Project: Digital Information Dilemmas, pt. 2'
+            Unit Assessment:
+              name: Unit Assessment
+            Flippy Do, pt 1:
+              name: Flippy Do, pt 1
+            Flippy Do, pt 2:
+              name: Flippy Do, pt 2
+            'Project: Digital Information Dilemmas, pt 1':
+              name: 'Project: Digital Information Dilemmas, pt 1'
+            'Project: Digital Information Dilemmas, pt 2':
+              name: 'Project: Digital Information Dilemmas, pt 2'
           title: CSP Unit 1 Pilot
           description_audience: ''
           description_short: ''
