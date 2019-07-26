@@ -293,9 +293,10 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     @workshop.sessions << create(:pd_session)
     @workshop.start!
 
-    @workshop.expects(:send_exit_surveys)
+    Pd::Workshop.any_instance.expects(:send_exit_surveys)
 
     @workshop.end!
+    Pd::Workshop.process_ends
   end
 
   test 'account_required_for_attendance?' do
