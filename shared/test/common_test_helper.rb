@@ -37,6 +37,19 @@ VCR.configure do |c|
       X-Amz-Id-2
     ).each {|h| i.response.headers.delete h}
   end
+
+  # Our S3 channel API tests can be flaky because they're integration tests
+  # and sometimes we end up with user or channel ids other than 1/1.
+  # This configuration drops ignores that part of the S3 key where we can't guarantee consistency
+  # for purposes of VCR verification.
+  c.filter_sensitive_data('<S3_PREFIX>') do |interaction|
+    %r{
+      (sources | assets | animations | files)_test
+      \/\d+        # user id
+      \/\d+        # channel id
+      (?=\/)       # Lookahead to closing slash - don't
+    }x.match(interaction.request.uri).try(:[], 0)
+  end
 end
 
 # Truncate database tables to ensure repeatable tests.
