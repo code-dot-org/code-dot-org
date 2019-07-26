@@ -381,32 +381,32 @@ class User < ActiveRecord::Base
 
   def self.find_or_create_teacher(params, invited_by_user, permission = nil)
     user = User.find_by_email_or_hashed_email(params[:email])
-    unless user
+
+    if user
+      user.update!(params.merge(user_type: TYPE_TEACHER))
+    else
       # initialize new users with name and school
       if params[:ops_first_name] || params[:ops_last_name]
         params[:name] ||= [params[:ops_first_name], params[:ops_last_name]].flatten.join(" ")
       end
       params[:school] ||= params[:ops_school]
+      params[:user_type] = TYPE_TEACHER
+      params[:age] ||= 21
 
       # Devise Invitable's invite! skips validation, so we must first validate the email ourselves.
       # See https://github.com/scambra/devise_invitable/blob/5eb76d259a954927308bfdbab363a473c520748d/lib/devise_invitable/model.rb#L151
       ValidatesEmailFormatOf.validate_email_format(params[:email]).tap do |result|
         raise ArgumentError, "'#{params[:email]}' #{result.first}" unless result.nil?
       end
-      user = User.invite!(
-        email: params[:email],
-        user_type: TYPE_TEACHER,
-        age: 21
-      )
-      user.invited_by = invited_by_user
+      user = User.invite!(attributes: params)
+      user.update!(invited_by: invited_by_user)
     end
-
-    user.update!(params.merge(user_type: TYPE_TEACHER))
 
     if permission
       user.permission = permission
       user.save!
     end
+
     user
   end
 
