@@ -127,14 +127,6 @@ en-GB:
           KEY:
             '"space"': space
             '"x"': x
-      gamelab_layoutSprites:
-        options:
-          FORMAT:
-            '"random"': random
-      gamelab_locationDelta:
-        options:
-          DIR:
-            "'random'": random
       gamelab_randColor:
         text: random colour
       gamelab_randomColor:
@@ -148,10 +140,6 @@ en-GB:
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': rainbow
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': underwater
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': winter
-      gamelab_setPosition:
-        options:
-          POSITION:
-            '"random"': random
       gamelab_setSizes:
         options:
           PROPERTY:
@@ -161,20 +149,10 @@ en-GB:
           CONDITION:
             '"when"': when
             '"while"': while
-      gamelab_spriteClickedSet:
-        options:
-          CONDITION:
-            '"when"': when
-            '"while"': while
       gamelab_whenKey:
         options:
           KEY:
             '"space"': space
-      gamelab_whenTouchingSet:
-        options:
-          CONDITION:
-            '"when"': when
-            '"while"': while
       gamelab_whileKey:
         options:
           KEY:

@@ -629,13 +629,12 @@
   course2_name: "Tečaj 2"
   course3_name: "Tečaj 3"
   course4_name: "Tečaj 4"
+  accelerated_name: "Pospešeni Tečaj"
   20-hour_name: Pospešeni Tečaj
   classicmaze_name: "Klasičen labirint"
   iceage_name: "Ledena doba"
   minecraft_name: "Minecraft"
   starwarsblocks_name: "Vojna Zvezd (Kocke)"
-  math_category_name: "Matematika"
-  hoc_category_name: "Ura kode"
   applab_gradelevel: "Starost 13+"
   applab_shortdescription_congrats: "App Lab je okolje za programiranje, kjer lahko narediš enostavne aplikacije. Oblikuješ izgled aplikacije, kodiraš z bloki ali JavaScriptom. Ko aplikacijo dokončaš jo lahko deliš z ostalimi v nekaj sekundah"
   codeorg_gradelevel: "Starost 4-104"
@@ -697,6 +696,8 @@
   coursee-2017_gradelevel: Starost 8-12
   coursed-2018_gradelevel: 8. razred in višje
   coursee-2018_gradelevel: Starost 8-12
+  coursed-2019_gradelevel: 8. razred in višje
+  coursee-2019_gradelevel: Starost 8-12
   accelerated_gradelevel: "Starost 10-18"
   codeorg_platformtext: "Sodobni brskalniki, pametni telefoni, tablice"
   codeintl_platformtext: "Sodobni brskalniki, pametni telefoni, tablice"

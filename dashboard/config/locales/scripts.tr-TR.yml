@@ -11933,6 +11933,8 @@ tr:
           stages:
             new stage:
               name: yeni kademe
+            Number Systems:
+              name: Sayı Sistemleri
         csd-videos:
           stages:
             new stage:
@@ -12000,3 +12002,713 @@ tr:
           stages:
             Wrap Up:
               name: Özet
+        csd1-pilot:
+          description_short: "  İnsanların problemleri çözmek için bilgisayarlarla
+            nasıl çalıştıklarını öğrenin."
+          stages:
+            CS Discoveries Pre-survey:
+              name: CS Keşifleri Anket öncesi
+            Intro to Problem Solving:
+              name: Problem çözme tanıtımı
+              description_student: Sınıf, olabildiğince çok para kazandıracak alüminyum
+                folyo tekneleri tasarlamak için gruplar halinde çalışır. Derslerin
+                sonunda gruplar, etkinlikle ilgili deneyimlerini yansıtır ve kursun
+                geri kalanında yapacakları problem çözme yöntemleriyle bağlantı kurar.
+              description_teacher: Bu derste öğrenciler, mümkün olduğunca çok para
+                sağlayacak alüminyum folyo tekneleri tasarlamak için gruplar halinde
+                çalışır. Gruplar, 1. turda olduğundan daha fazla kuruş yapmaya çalışmak
+                amacıyla teknelerinde çalışmak üzere iki tur oynamaktadırlar. Faaliyetin
+                yapısı, öğrencilerin daha ayrıntılı olarak tanıtılacak olan problem
+                çözme sürecinin farklı adımlarını ön plana çıkarmaktadır. Ders sonunda
+                öğrenciler, etkinlikle ilgili deneyimlerine yansıtmakta ve kursun
+                geri kalanında yapacakları problem çözme yöntemleriyle bağlantı kurmaktadırlar.
+            The Problem Solving Process:
+              name: Problem çözme süreci
+              description_student: Bu ders sınıfın kurs boyunca kullanacağı (formal)
+                biçimsel problem çözme sürecini, (Define - Prepare - Try - Reflect),
+                "Tanımla- Hazırlan- Uygula- Değerlendir" tanıtır. Sınıf, bu adımları
+                bir önceki dersteki alüminyum tekneler problemiyle, daha sonra istedikleri
+                bir problemle, sonrasında çözümünü geliştirmek istedikleri bir problemle
+                ilişkilendirir. Dersin sonunda sınıf, kurs boyunca kullanacakları
+                posterleri oluşturmak için sürecin (D-P-T-R) her adımı için  genel,
+                kullanışlı stratejilerin bir listesini biriktirir.
+              description_teacher: Bu ders, öğrencilerin yıl boyunca kullanacakları
+                resmi problem çözme sürecini, Define(tanımla) - Prepare(hazırla) -
+                Try(dene) - Reflect'i(yansıt) tanıtmaktadır. Ders, öğrencilere gündelik
+                yaşamda karşılaştıkları tüm farklı problemleri beyin fırtınasına teşvik
+                ederek başlar. Öğrenciler daha sonra, problem çözme sürecinin dört
+                adımını gösterir ve bu soyut adımları problem çözme gerçek deneyimleriyle
+                ilişkilendirmek için birlikte çalışır. İlk olarak öğrenciler, bu adımları
+                bir önceki dersin alüminyum tekneleri problemiyle, daha sonra çözümünü
+                iyi bildikleri bir problemle, daha sonra da geliştirmek istedikleri
+                bir problemle ilişkilendirir. Sınıf dersin sonunda, bu ünite de ve
+                yıl boyunca sürecin her adımında kullanılacak posterleri koymak için
+                genel olarak kullanışlı stratejilerin bir listesini toplar.
+            Exploring Problem Solving:
+              name: Problem çözmeyi keşfetme
+              description_student: 'Bu derste sınıf, problem çözme sürecini üç farklı
+                soruna uygular: bir kelime araması, bir doğum günü partisi için oturma
+                düzenlemesi ve bir gezi planlama. Sorunlar giderek daha da karmaşık
+                hale gelir ve sorun çözme sürecinin özellikle bu tür sorunlarla başa
+                çıkarken yararlı olduğunun altını çizilir.'
+              description_teacher: |-
+                Bu derste öğrenciler, her adımın değerini daha iyi anlamak için problem çözme sürecini üç farklı soruna uygulayacaktır. Bir kelime araması çözer, bir doğum günü partisi için koltuk düzenlemesi yapar ve gezi planı yapar. Sorunlar giderek daha da karmaşık hale gelir ve sorun çözme sürecinin bu tür sorunlarla başa çıkarken özellikle yararlı olduğunun altını çizer. Ders, öğrencilerin problem çözme sürecindeki deneyimlerini yansıtmalarıyla sonuca varır. Her adımın dahil edilmesinin doğru olduğu kanısına varacaklar ve açık uçlu problemleri daha iyi tanımlamalarını sağlayacak soruları veya stratejileri beyin fırtınası ile inceleyeceklerdir. Bu nokta çoğu kez en kritik adımdır.
+
+                Bu ders büyük olasılıkla iki ders saatinde veya daha fazlasında tamamlanacaktır. İlk iki problem tek bir derse sığabilir, ancak üçüncü faktör ikinci bir güne taşınmalıdır.
+            What is a Computer?:
+              name: Bilgisayar nedir?
+              description_student: Bu derste sınıf, bir bilgisayarın tanımını geliştirir.
+                Sonra, bilgisayarın olası tanımlarıyla ilgili beyin fırtınası yapıyor,
+                sınıf gruplar halinde çalışma ile resimleri  "bu bir bilgisayar" veya
+                "bu bir bilgisayar değil" şeklinde poster kağıdının üzerine sınıflandırır
+                ve  bazı en zor gruplamaları seçmek için motive olduklarını açıklarlar.
+                Öğretmen daha sonra bilgisayarın tanımını yapar ve öğrencilerin yeni
+                tanıma göre kendi posterlerini gözden geçirmeleri için imkân verir.
+              description_teacher: Bu derste öğrenciler bir bilgisayar tanımı geliştirir.
+                Dersin başında, bir bilgisayarın olası tanımlarıyla ilgili beyin fırtınası
+                yapar ve beyin fırtınası sonuçlarını panoya yerleştirirler. Sonra,
+                öğrenciler gruplar halinde çalışma ile resimleri  "bu bir bilgisayar"
+                veya "bu bir bilgisayar değil" şeklinde poster kağıdının üzerine sınıflandıracak.
+                Gruplar posterlerini odanın etrafına yerleştirecek ve gruplama yaparken
+                en çok hangilerinde zorlandıklarını kısaca açıklayacaklar. Öğretmen
+                daha sonra bilgisayarın tanımını yapacak ve öğrencilerin yeni tanıma
+                göre kendi posterlerini gözden geçirmeleri için imkân verecek.
+            Input and Output:
+              name: Girdiler ve çıktılar
+              description_student: "Bu sınıfta öğrenciler,  \nIn this the class students
+                consider a number of computing devices to determine what types of
+                inputs and outputs they use. Groups are assigned to a computing device
+                and based on a teacher-provided definition of input and output, list
+                the inputs and outputs of their device.  To conclude the lesson the
+                class examines common activities they do on a computing device and
+                select the inputs and outputs used for that activity from the chart."
+              description_teacher: Bu derste öğrenciler, ne tür girdiler ve çıktılar
+                kullandıklarını saptamak için birtakım bilgi işlem cihazları düşünürler.
+                Gruplar bir bilgisayara atanır ve öğretmenin sağladığı girdi ve çıktı
+                tanımına dayandırılır, cihazlarının girdilerini ve çıktılarını listeler.
+                Aktivitenin başında, öğrenciler daha açık fiziksel girdiler ve çıktılara
+                odaklanmaya teşvik edilir (örneğin, bir girdi olarak bir klavye ya
+                da bir çıktı olarak bir ekran) ancak daha sonraki tartışmalar, öğrencileri
+                daha az belirgin örnekleri düşünmeye yönlendirir (örneğin, dokunmatik
+                ekranın hem bir girdi hem de bir çıktıdır ya da internet hem girdi
+                hem de çıktı olarak hizmet edebilir). Ders boyunca, öğretmen ön odada
+                bir T- Grafik üzerinde tanımlanan girdileri ve çıktıları kaydeder.
+                Dersi sonuçlandırmak için, öğrenciler bir bilgisayarda yaptıkları
+                ortak aktiviteleri incelerler ve aktivite için kullandıkları girdileri
+                ve çıktıları grafikten seçerler.
+            Processing:
+              name: İşleme
+              description_student: Bu ders, bir bilgisayarın tanımında tanıtımı yapılan
+                işleme kavramı kısmına derinlemesine dalıyor.  Çiftler, bilgi işleme
+                şekli olarak, bir kart destesini sıraya koymak için birlikte çalışırlar.  Sonunda
+                sınıf, informasyon sorunlarını çözme bağlamında işlemenin ne demek
+                olduğunu tartışır.
+              description_teacher: Öğrenciler, işlemenin anlamını ve problem çözme
+                ile ilişkisini keşfetmeleri için iki tane bağımsız kart sıralama etkinliği
+                yaparlar. İlk etkinlikte az kısıtlama vardır ve işlemenin üst düzey
+                bir tanımını öğretmek için kullanılır. Sonraki etkinlikte öğrencileri,
+                kartları her zaman başarılı bir şekilde işleyen bir algoritma geliştirmeye
+                zorlayan daha çok kısıtlama vardır. Öğrenciler sürekli olarak algoritmalarını
+                geliştirir, test eder ve sınıf arkadaşlarıyla paylaşır. Kapanış tartışması,
+                öğrencilerin bu etkinliklerde kullandıkları farklı problem çözme türleri
+                ve bir problemi çözmek için bir algoritma üretmenin değeri üzerine
+                derinlemesine düşünmelerini sağlar.
+            Apps and Storage:
+              description_student: 'Bu ders, bilgisayarların girdi ve çıktı özelliklerini
+                öğrencilerle ilgili olan ve öğrencilerin bildiği bir bağlamda işler:
+                uygulamalar ile. Öğrenciler, belirli problemleri çözmek için tasarlanmış
+                olan çeşitli web uygulamalarını, onların çalışması için gereken girdileri
+                ve kullanıcılara verdikleri çıktıları değerlendirir. Ders, uygulamalar
+                üzerine gözlemler ve uygulamaların topluma etkisi hakkında öğretmen
+                tarafından yönlendirilen bir tartışma ile biter. '
+            Project - Propose an App:
+              name: Proje - bir uygulama önermek
+              description_student: Sınıfımız; problem çözme süreci çalışmalarını ve
+                bilgisayarın giriş/çıkış/depolama/sürecini sonuçlandırmak için, gerçek
+                hayat problemlerini çözebilecek uygulamalar sunar. Bu projenin tamamlanması
+                günlere yayılabilir ve, her uygulamanın önemli noktalarını vurgulayan
+                özelliklerin posterle sunulmasıyla proje sonuçlandırılacaktır. Proje
+                ikili bitirilebilecek şekilde tasarlanmıştır, ama bireysel de yapılabilir.
+              description_teacher: Problem çözme süreci ve bir bilgisayarın girdi/çıktı/depolama/işleme
+                modeli üzerine çalışmalarını bitirmek için öğrenciler bir gerçek hayat
+                sorununu çözen bir uygulama sunarlar. Bu proje günlere yayılarak tamamlanacaktır
+                ve öğrenciler uygulamalarının özelliklerini vurgulayan bir poster
+                oluşturup sınıf arkadaşlarına sunarak proje sonuçlanacaktır. Bir proje
+                rehberi öğrencilere adım adım talimatlar verir ve öğrencilerin düşüncelerini
+                organize etmesine yardım eder. Proje, çiftler halinde yapılmak için
+                tasarlanmış olmasına rağmen bireysel olarak da yapılabilir.
+        csd2-pilot:
+          description: " 2. Ünitede, kendi web sayfanızda nasıl içerik oluşturacağınız
+            ve paylaşacağınızı öğreneceksiniz. Dünyayla ne tür içerik paylaşacağınıza
+            karar verdikten sonra, web sayfanızı HTML ve CSS kullanarak nasıl yapılandıracağınızı
+            ve biçimlendireceğinizi öğreneceksiniz. Aynı zamanda hata ayıklama (debugging)
+            ve yorumlama (commenting) gibi önemli programlama becerilerini uygulayacaksınız.
+            Ünitenin sonunda, İnternette yayınlanabilecek kişisel bir web siteniz
+            olacak."
+          description_short: "  Web Lab'da kendi web siteni oluşturmayı öğren."
+          stages:
+            Exploring Websites:
+              name: Web Sitelerini Keşfetme
+              description_student: Bu ders, bir web sitesinin hem kullanıcılar hem
+                de site oluşturanlar için hizmet edebileceği amaçları kapsar. Öğrenciler,
+                ABD'de en çok kullanılan web sitelerini keşfeder ve bu sitelerin hem
+                kullanıcılar için nasıl kullanışlı olabildiğini, hem de site oluşturanlara
+                nasıl hizmet sunabildiğini ele alırlar.
+              description_teacher: Her web sitesinin bir amacı vardır, o web sitesini
+                oluşturan kişi bir amaç için oluşturmuştur ve diğerleri onu kullanır.
+                Bu derste öğrenciler, bir web sitesinin, hem kullanıcılar hem de web
+                sitesini oluşturanlar için hizmet ettiği amacı düşünmeye başlarlar.
+                Öğrenciler Abd' de en çok kullanılan bir avuç web sitesi keşfeder
+                ve bu web sitelerinin kullanıcılar için nasıl kullanışlı olduğunu
+                ve onu yaratanlara nasıl hizmet ettiğini çözmeye çalışırlar.
+            'Websites for Expression ':
+              name: 'İfade Web Siteleri '
+              description_student: 'Bu ders, web sitelerini kişisel ifadenin bir aracı
+                olarak tanıtır. Sınıf önce, insanların fikirlerini ve ilgi alanlarını
+                ifade etmek ve paylaşmak için kullandıkları farklı yolları tartışır.
+                Sonra, bir önceki derste öğrenciler tarafından yapılan birkaç örnek
+                web sitesine bakarlar. Son olarak, kişisel bir web sitesi geliştirmek
+                kullanılmak üzere kaynak oluşturmak için ilgi alanlarının ve konuların
+                bir listesini paylaşırlar ve beyin fırtınası yaparlar. '
+              description_teacher: Bu derste öğrenciler, websitelerini kendilerini
+                ifade etme aracı olarak kullanma yollarını araştırırlar ve bir kişisel
+                websitesine eklemek isteyecekleri konuların ve ilgi alanlarının bir
+                listesini oluştururlar. Derse başlamak için öğrenciler insanların
+                ilgi alanlarını ve düşüncelerini ifade etme ve paylaşmanın farklı
+                yolları üzerine beyin fırtınası yaparlar. Daha sonra, öğrenciler geçmiş
+                bir Bilgisayar Bilimi Keşifleri kursundaki öğrencilerin düşüncelerini
+                nasıl ifade ettiklerini belirlemek için onlar tarafından yapılmış
+                birkaç örnek websitesine bakarlar. Son olarak, öğrenciler beyin fırtınası
+                yaparlar ve ünitede boyunca fikir almak için başvurabilecekleri bir
+                kişisel websitesine eklemek isteyecekleri konuların ve ilgi alanlarının
+                bir listesini paylaşırlar.
+            Intro to HTML:
+              name: HTML' ye Giriş
+              description_student: Bu ders, bir web sitesinin içeriğinin ve yapısının
+                bir bilgisayara nasıl iletileceği sorununa bir çözüm olarak HTML'yi
+                tanıtmaktadır. Ders, bir web sayfasının yapısını ile etkili bir şekilde
+                iletişim kurmanın zorluklarını gösteren, bilgisayardan uzak, kısa
+                süren bir faaliyetle başlar. Sınıf, Web Lab'da bir HTML sayfasına
+                bakar ve HTML etiketlerinin bu sorunun çözümüne nasıl yardımcı olduğu
+                tartışır, daha sonra ünitenin ilk web sayfalarını yazmak için HTML
+                kullanır.
+              description_teacher: Bu derste öğrenciler, bir web sitesinin içeriğini
+                ve yapısını bir bilgisayara nasıl iletebileceklerine ilişkin bir çözüm
+                olarak HTML'yi tanıtıyorlar. Ders, bir web sayfasının yapısını etkin
+                bir biçimde iletişim kurmanın zorluklarını gösteren kısa bir fişi
+                kopararak başlar. Öğrenciler daha sonra Web Lab'da örnek bir HTML
+                sayfasına bakıyor ve sınıf arkadaşlarıyla birlikte HTML etiketlerinin
+                bu sorunun nasıl çözülebileceğini tartışıyorlar. Öğrenciler daha sonra
+                ilk HTML'yi yazarlar. Bir tamamlama tartışması, ders boyunca geliştirilen
+                içerik ile yapı anlayışını sağlamlaştırmaya yardım eder.
+            Headings:
+              name: Başlıklar
+              description_student: Bu derste HTML etiketleri tanıtmaya devam ediyor,
+                bu kez üst başlıklarla birlikte. Sınıf, sayfa ve bölüm başlıkları
+                oluşturmak için üstbilgi etiketlerini kullanır ve farklı üstbilgi
+                öğelerinin varsayılan olarak nasıl göründüğünü öğrenir. Daha sonra,
+                sınıf, ünite yoluyla oluşturulacak ve projenin ilk sayfası olacak
+                olan kişisel web sayfalarındaki içeriklerini nasıl düzenleyeceğini
+                planlıyor.
+              description_teacher: Bu derste, öğrenciler web sayfalarında metni yapılandırmak
+                amacıyla HTML kullanmaya devam ediyor, bu seferde başlıkları vardır.
+                Öğrenciler, farklı başlık elemanlarının varsayılan olarak nasıl görüntülendiğini
+                öğrenir ve bunları sayfa ve bölüm başlıkları oluşturmak için kullanmaya
+                başlar. Öğrenciler daha sonra içeriğini kendi kişisel web sayfalarında
+                nasıl düzenleyeceklerine karar vermeye başlarlar. Son aşamada, öğrenciler
+                ünitenin tamamında üstünde çalışmaya devam edecekleri projeye başlarlar.
+            Digital Footprint:
+              name: Dijital Ayak İzi
+              description_student: Bu ders, kişisel bilgilerini dijital ortamda paylaşmak
+                için kişisel web sitesi oluşturan insanlar hakkında konuşmak için
+                harcanır. Sınıf, diğer insanlarla ne tür kişisel bilgileri paylaşmanın
+                iyi olduğu hakkında tartışmaya başlar, sonra birkaç sosyal medya sayfasına,
+                ne tür bilgilerin bilerek veya bilmeyerek paylaşıldığına bakar. Sonunda,
+                sınıf, çevrim içi bilgi paylaşırken, uyulması gereken bir dizi yönerge
+                ortaya koyar.
+              description_teacher: "Öğrenciler son zamanlarda kişisel web sitelerine
+                girecekleri gerçek içeriği düşünmek için biraz zaman harcadıklarından
+                dolayı bu ders, öğrencilere dijital olarak paylaşmayı seçtikleri kişisel
+                bilgileri ve kiminle paylaşacaklarını belirtmelerinde yardımcı olmak
+                için birim uzunluktaki projeden (kişisel web sitesinin yayınlanması)
+                bir adım geri atar. Ayrıca, dijital olarak paylaşmayı seçtikleri bilgilerin
+                çoğunun, yayınlandığı andan itibaren büyük ölçüde kontrollerinden
+                çıkması düşüncesini güçlendirir. \r\n\r\nÖğrenciler, verilen kişisel
+                bilgi metinlerini paylaşarak, kendilerinin rahat olacakları uygun
+                kitleleri bireysel olarak tanımlama ile başlarlar. Sonrasında, insanların
+                kendileri veya birbirleri hakkında ne tür bilgiler paylaştıklarını
+                belirlemek için çeşitli sosyal medya sayfalarını gözden geçirirler.
+                Son olarak, öğrenciler, çevrimiçi bilgi gönderimi için hangi yönergelere
+                uygun oldukları üzerinde derinlemesine düşünürler.\r\n\r\nBu dersin
+                temel noktası, öğrencileri korkutmaktan daha ziyade, onlara web’de
+                bilgi yayınlama konusunda sahip olmadıkları kontrol düzeyinin tam
+                olarak farkına varmalarını deneysel metodlarla ortaya çıkarmaktır."
+            Lists:
+              name: Listeler
+              description_student: Bu ders, sıralı ve sıralı olmayan listeleri ve
+                ilgili &lt;ul&gt;, &lt;ol&gt; ve &lt;li&gt; HTML etiketlerini öğretir.
+                Sınıf etiketleri kullanarak alıştırma yapar, sonra kişisel web sayfası
+                projesine giderek bu yeni etiketleri içeren yeni bir HTML sayfası
+                ekler.
+              description_teacher: Öğrenciler, HTML'de sıralı ve sırasız listeleri
+                öğrenirler ve öğrenciler, &lt;ul&gt;, &lt;ol&gt;, ve &lt;li&gt; etiketlerini
+                kullanacakları birkaç seviyede bunlar üzerine çalışma yaparlar. Sonra
+                projelerine geri gidip yeni bir HTML sayfası eklerler. Yeni sayfa
+                içinde bir tarif, bir ilk on listesi ya da öğrendikleri yeni etiketleri
+                kullanan başka herhangi bir içerik yazarlar.
+            Intellectual Property and Images:
+              name: Fikri mülkiyet ve görüntüleri
+              description_student: Bu derste, bir medyanın yaratıcısının haklarına
+                saygı göstererek, başkası tarafından oluşturulan resim, video veya
+                müzik gibi medyaların bir web sitesi içinde nasıl kullanılacağı anlatılmaktadır.
+                İlk olarak Creative Commons incelendikten sonra, sınıf, web sayfalarına
+                görüntü eklemeyi ve bunu yaparken uygun atfı nasıl yapacağını öğrenir.
+              description_teacher: "Sınıf, başkalarının çalışmalarını  kullanmalarına
+                nasıl izin verileceğine dair kişisel görüşleri üzerine bir tartışma
+                ile başlayarak hem yaratıcılar  hem de yaratıcı içeriğin kullanıcıları
+                için telif hakkının amacını ve rolünü araştırır. Daha sonra, çeşitli
+                Yaratıcı Toplum lisanslarını, telif hakkı ile uğraşmanın zorluğuna
+                \ bir çözüm olarak keşfeden bir etkinliğe geçiyorlar. \r\n\r\nEn sonunda,
+                öğrenciler çeşitli Yaratıcı Toplum lisanslarının kısıtlamaları konusunda
+                ortak bir anlayışla, &lt;img&gt; etiketini kullanarak kendi internet
+                sitelerine nasıl resim ekleyeceklerini öğrenirler."
+            Clean Code and Debugging:
+              name: Temiz Kod ve Debugging (Hata Ayıklama)
+              description_student: Bu ders, HTML ile dizayn edilen web sayfalarında
+                ortaya çıkan genel problemleri içerir. Sınıf, Code Studio'da bulunan
+                karmaşık web sayfalarında giderek ortaya bir dizi hatayı düzeltecekler.
+                Ve yorumların, beyaz boşlukların ve web sayfalarını okumayı kolaylaştıran
+                girintilerin önemini öğrenecekler.
+              description_teacher: Öğrenciler bu derste HTML ile dizayn edilen web
+                sayfalarında ortaya çıkan genel sorunları ele alacaklar. Öğrenciler
+                Code Studio'daki karmaşık web sayfalarında ortaya çıkan bir dizi hatayı
+                düzeltecekler. Süreç içinde; yorumların önemini, beyaz boşluğu ve
+                web sayfaları okumayı kolaylaştıran girintileri öğrenecekler. Dersin
+                sonunda öğrenciler hata ayıklama (debugging) stratejilerinin bir listenin
+                yapacaklar ve kodların kolay okunabilir ve sürdürülebilir olduğundan
+                emin olacaklar.
+            Project - Multi-Page Websites:
+              name: Proje - çok sayfalı web siteleri
+              description_student: 'Bu ders, web geliştiricilerin sayfaları bir web
+                sitesinde bir araya getirmesine yarayan bağlantıları içerir. Sınıf,
+                önceki tüm sayfaların hepsini bir projeye bağlar, ve tüm siteyi Web''e
+                yayınlamadan önce her sayfa için gezinti çubukları oluşturur.  '
+              description_teacher: "Web sayfalarını birbirine nasıl bağlanacağını
+                öğrendikten sonra, öğrenciler üzerinde çalıştıkları web sitelerini
+                artık paylaşabilirler. Bu derste, tüm siteyi Web'de yayınlamadan önce
+                daha önce oluşturdukları tüm sayfaları bir projeye bağlarlar, yeni
+                sayfa oluştururlar ve  sayfalar arasında gezinme eklerler.\r\n\r\n"
+            Styling Text with CSS:
+              name: CSS ile Metin Biçimlendirme
+              description_student: Bu derste, web sayfasındaki ögeleri biçimlendirmenin
+                bir yolu olan CSS tanıtılır. Sınıf temel CSS söz dizimi kurallarını
+                öğrenir sonra HTML metin öğelerini etkileyen özellikleri keşfeder.
+                Son olarak, herkes kendi kişisel web sitesine metin stillerini uygular.
+              description_teacher: Bu derste, web sayfasındaki öğeleri biçimlendirmenin
+                bir yolu olan CSS tanıtılır. Öğrenciler temel CSS söz dizimi kurallarını
+                öğrenir sonra HTML metin öğelerini etkileyen özellikleri keşfederler.
+                Öğrenciler Guinness Rekorlar Kitabı hakkkındaki bir HTML sayfası üzerinde
+                çalışırlar, bu sayfadaki metinlere kendi stillerini uygularlar. Son
+                aşamada, öğrenciler, kendi kişisel web sayfalarındaki metinlere öğrendikleri
+                stil özelliklerini uygularlar.
+            Styling Elements with CSS:
+              name: CSS ile Stil Öğeleri
+              description_student: Bu ders, CSS stil özelliklerine, daha çok metin
+                olmayan öğelere odaklanarak devam eder. Sınıf, Dünyanın Tatlıları
+                sayfasında yeni CSS stillerini keşfetmeye ve uygulamaya başlar. Daha
+                sonra, herkes bu yeni bilgiyi kişisel web sayfasında uygular.
+              description_teacher: Bu ders, CSS stil özelliklerine, daha çok metin
+                olmayan öğelere odaklanarak devam eder. Öğrenciler, bu derse, Dünyanın
+                Tatlıları hakkında bir web sitesini inceleyerek başlarlar. Bu web
+                sitesindeki yeni CSS stillerini inceler ve düzenlerler, sayfaya kendi
+                stilleri eklerler. Tatlılar sayfasında çalıştıktan sonra, öğrenciler,
+                yeni CSS özellikleri hakkındaki bilgilerini, kendi web sitelerini
+                daha fazla biçimlendirmek için kullanırlar.
+            Sources and Search Engines:
+              name: Kaynaklar ve Arama Motorları
+              description_student: İlk önce bir web araması toplama avı tamamladıktan
+                sonra, sınıf arama motorlarının iç işleyişini öğrenir ve analitik
+                becerilerini, tuhaf ve olası olmayan hayvanlar için araştırmaya yönlendirebilme
+                olanağına sahiptirler.
+              description_teacher: Bu ders internetteki arama motorlarının nasıl çalıştığını
+                ve internette alakalı ve güvenilir bilginin nasıl bulunacağı konusunda
+                daha ciddi düşünmeleri konusunda öğrencileri cesaretlendirecektir.
+                Arama motorlarının nasıl çalıştığı ile ilgili videoyu izledikten ve
+                tartıştıktan sonra, öğrenciler birçok bilinmeyen hayvan hakkında bilgi
+                araştıracaklardır. Hayvanlardan hangisinin gerçekten bir aldatmaca
+                olduğuna karar verebilmek için, buldukları sitelerin güvenilirliğini
+                analiz etmeleri gerekecektir.
+            RGB Colors and Classes:
+              name: RGB Renkleri ve Sınıfları
+              description_student: Bu ders sınıfları ve özel renkleri anlatır. İlk
+                olarak öğrenciler, RGB (kırmızı, yeşil, mavi) değerlerini kullanarak
+                nasıl özel renkler belirleyeceklerini öğrenirler, sonra bu renkleri
+                CSS sınıfları kullanan yeni bir Dört Mevsim web sayfasına uygularlar.
+                Sınıfları kullanarak öğrenciler Dört Mevsim web sayfasına daha çok
+                biçim ekler sonra onları kendi kişisel web sitelerini biçimlendirmek
+                için kullanırlar.
+              description_teacher: Bu derste öğrenciler RGB (kırmızı, yeşil, mavi)
+                değerlerini kullanarak özel renkleri nasıl belirteceğini öğrenirler.
+                Daha sonra bu renkleri CSS sınıfları kullanan bir Dört Mevsim web
+                sayfasına uygularlar. CSS sınıfları, web geliştiricilerinin öge gruplarına
+                aynı türdeki diğer öge gruplarından farklı olarak istedikleri tarzda
+                davranmalarına izin verir. Sınıfları kullanarak, öğrenciler Dört Mevsim
+                web sayfasına daha fazla tarz eklerler, daha sonra onları kendi kişisel
+                web sayfalarında kullanırlar.
+            Project - Personal Portfolio Website:
+              name: 'Proje: Kişisel portföy Web sitesi'
+              description_student: Birimin son birkaç gününde, sınıf kişisel web sitelerini
+                tamamlar, geribildirim almak için akranları ile beraber çalışır, metnin
+                gözden geçirilmesi ve sitede son rötuşlar yapılmasını sağlar. Birimi
+                kapatmak için herkes projelerini ve projelerinin nasıl geliştirildiğini
+                paylaşır.
+              description_teacher: "Öğrenciler, Kişisel Web Sitesi'nde çalışan ünite
+                boyunca çok zaman harcadılar. Son birkaç gün içinde öğrenciler web
+                sitelerini tamamlarlar. Geri bildirim almak, web sitelerine son rötuşlar
+                yapmak, öyküyü gözden geçirmek ve süreçlerini yansıtmak için akranları
+                ile beraber çalışırlar. Birimi kapatmak için, projelerini paylaşacak
+                ve ayrıca bu son tasarıma geçmek için aldıkları sürece genel bir bakış
+                katacaklardır.\r\n"
+            Intellectual Property:
+              name: Fikri Mülkiyet
+            Images:
+              name: Görüntüler
+        csd3-pilot:
+          description_short: Programlama
+          stages:
+            Programming for Entertainment:
+              name: Eğlence için programlama
+              description_student: Sınıfın, can sıkıntısı ve kendini ifade etme "sorunlarını"
+                göz önünde bulundurması ve bu sorunlara kendi yaşamlarında nasıl yaklaştıkları
+                üzerine düşünmesi istendi. Buradan, genel olarak Bilgisayar Bilimleri'nin
+                ve özellikle programlamanın belirli bir eğlence biçiminde veya kendini
+                ifade etme aracı olarak nasıl bir rol oynadığını keşfedecekler.
+              description_teacher: Öğrencilerden can sıkıntısı ve kendini ifade etmenin
+                "sorunlarını" düşünmeleri ve bu sorunlara kendi yaşamlarında nasıl
+                yaklaştıkları üzerine düşünmeleri istenir. Buradan öğrenciler, Genel
+                olarak Bilgisayar Bilimlerinin ve özellikle programlamanın belirli
+                bir eğlence biçiminde veya kendini ifade etme aracı olarak nasıl bir
+                rol oynadığını keşfedeceklerdir.
+            Plotting Shapes:
+              name: Şekiller çizme
+              description_student: Öğrenciler şekillerle nasıl çizileceğini iletmenin
+                zorluklarını keşfederler ve Oyun Laboratuarında bu probleme nasıl
+                yaklaşıldığını tanıtan bir araç kullanırlar. Isınma etkinliği, ortak
+                referans noktası olmadan konum bilgisi iletmenin zorluklarını hızla
+                gösterir. Ana etkinlikte öğrenciler,  Oyun Laboratuarının 400 x 400
+                ızgara şekillerini interaktif olarak yerleştirebilmelerini sağlayan
+                bir Oyun Laboratuar aracını keşfederler. Daha sonra, bu aracı kullanarak
+                takım arkadaşlarına sırayla gizli bir resim çizdirirler ve bu sayede
+                Oyun Laboratuvarında programlama yaparken karşılaşacakları zorlukların
+                benzerini deneyimlerler. Öğrenciler isteğe bağlı olarak sunum yapmadan
+                önce kendi çizdirecekleri resimlerini oluştururlar.
+              description_teacher: Öğrenciler şekillerle nasıl çizileceğini iletmenin
+                zorluklarını keşfederler ve Oyun Laboratuarında bu probleme nasıl
+                yaklaşıldığını tanıtan bir araç kullanırlar. Isınma etkinliği, ortak
+                referans noktası olmadan konum bilgisi iletmenin zorluklarını hızla
+                gösterir. Ana etkinlikte öğrenciler,  Oyun Laboratuarının 400 x 400
+                ızgara şekillerini interaktif olarak yerleştirebilmelerini sağlayan
+                bir Oyun Laboratuar aracını keşfederler. Daha sonra, bu aracı kullanarak
+                takım arkadaşlarına sırayla gizli bir resim çizdirirler ve bu sayede
+                Oyun Laboratuvarında programlama yaparken karşılaşacakları zorlukların
+                benzerini deneyimlerler. Öğrenciler isteğe bağlı olarak sunum yapmadan
+                önce kendi çizdirecekleri resimlerini oluştururlar.
+            Drawing in Game Lab:
+              name: Game Lab' da Çizim
+              description_student: Sınıf, bu bölüm için programlama ortamı olan Oyun
+                Laboratuvarı ile tanıştırılır ve Oyun Laboratuvarı kullanmaya ekrandaki
+                şekillerin pozisyonlarını ayarlamakla başlar. Bu ders, basit bir kaç
+                komutla hata ayıklama ve sıralamanın temellerini içerir. Dersin sonunda,
+                sınıf, önceki derste tasarladıkları resmin çevrim içi bir versiyonun
+                oluşturur.
+              description_teacher: Sınıf, bu bölüm için programlama ortamı olan Game
+                Lab ile tanıştırılır ve ekrandaki şekillerin pozisyonları kullanmakla
+                başlar. Öğrenciler basit bir kaç komutla hata ayıklama ve sıralamanın
+                temellerini öğrenirler. Dersin sonunda, öğrenciler, önceki derste
+                çizim aracı ile yaptıkları resmin bir benzerini yapabileceklerdir.
+            Shapes and Randomization:
+              name: Şekiller ve Rastgelelik
+            Variables:
+              name: Değişkenler
+              description_student: Bu derste, rastgele üretilen bir numarayı kaydetmenin
+                veya bir numarayı etiketlemenin bir yolu olarak değişkenler tanıtılır.
+                Sınıf, değişkenlerin amacının basit bir açıklamasıyla derse başlar
+                ve yeni blokları kullanarak alıştırma yapar. Daha sonra, sınıf, rastgele
+                bir numarayı kaydetmek için değişkenleri kullanır, programların aynı
+                rastgele sayıyı birden çok kez kullanmalarını sağlar.
+              description_teacher: Bu derste, öğrenciler, rastgele üretilen bir sayıyı
+                kaydetmek veya programlarındaki bir sayıyı etiketlemek için değişkenleri
+                nasıl kullanacaklarını öğrenirler. Öğrenciler, bir değişkenin amacının
+                basit bir açıklamasıyla derse başlar. Öğrenciler, bir sayıyı isimlendirmenin
+                veya etiketlemenin bir yolu olarak bir değişken modelini pekiştirdikleri
+                bir seviyeyi tamamlarlar. Öğrenciler, değişkenlerin gerçekten değerleri
+                kaydettiğini veya depoladığı görmek için, rastgele bir sayıyı kaydetmek
+                amacıyla değişkenleri kullanırlar, aynı rastgele numarayı kendi programlarında
+                birden çok kez kullanırlar.
+            Sprites:
+              name: Hareketli Nesneler
+              description_student: Daha ilginç ve ayrıntılı resimler oluşturmak için
+                sınıf sprite nesnesiyle tanıştırıldı. Her sprite bir nesne göstermek
+                için atanabilir ve ayrıca sprites de kendileri hakkında birden çok
+                değerleri kayıt altında tutar ve bu da animasyonu yaparken yolun son
+                derece yararlı olacağına işaret eder. Dersin sonunda herkes sprites
+                kullanarak bir sahne hazırlar.
+              description_teacher: Daha ilginç ve ayrıntılı resimler oluşturmak için
+                öğrencilere hareketli nesne-sprite tanıtıldı. Her hareketli nesneye
+                bir resim atanabilir ve ayrıca hareketli nesneler de kendileri hakkında
+                birden çok değeri kayıt altında tutabilir. Bu da animasyonu yaparken  son
+                derece yararlı olacaktır.
+            The Draw Loop:
+              name: Döngü çiz
+              description_student: Bu ders, Oyun Laboratuarındaki temel programlama
+                paradigmalarından biri olan çekme halkasını tanıtır. Sınıf, bazı basit
+                canlandırmaları noktalarla ve sonra da hareketli nesne ile değiştirmek
+                için rastgele sayılarla çizim döngüsünü birleştirir. Daha sonra, herkes
+                önceki dersin hareketli nesne sahnesini güncellemek için öğrendiklerini
+                kullanır.
+              description_teacher: Bu derste öğrenciler Oyun Laboratuvarındaki çekirdek
+                programlama paradigmalarından biri olan döngü halkasını tanırlar.
+                Ders başlangıcında öğrenciler, farklı görüntülere sahip birçok çerçeveye
+                sahip olduklarını görmek için bazı fiziksel animasyon defterlerine
+                bakar; hareket izlenimi yaratır. Öğrenciler daha sonra, Oyun Laboratuvarındaki
+                döngü halkasının programlarında aynı izlenimi yaratmada nasıl yardımcı
+                olduğunu açıklayan bir video izlerler. Öğrenciler noktalarla ve ardından
+                hareketli nesne ile bazı basit animasyonları düzenlemek için çizim
+                döngüsünü rastgele sayılarla birleştirirler. Ders sonunda öğrenciler
+                önceki dersin hareketli nesne sahnesini güncellemek için öğrendiklerini
+                kullanırlar.
+            The Counter Pattern Unplugged:
+              name: Sayaç deseni
+              description_student: Bu bağımsız ders, değişkenlerin arka plandaki davranışlarını
+                araştırır. Bir programın içindeki değişkenlerin bir benzerini yapmak
+                için, sınıf, not kartları ve metinleri kullanarak kısa bir program
+                uygular. Sınıf, bu söz dizimine alıştıktan sonra, hareketli nesne
+                özellikleri ile aynı süreci uygular. Ekran boyunca ilerleyen hareketli
+                bir nesneyi izler.
+              description_teacher: Öğrenciler bağımsız bir aktivitede değişkenlerin
+                arka plandaki davranışlarını keşfeder. Bir programdaki değişkenlerin
+                bir benzerini yapmak için not kartları ve metinleri kullanarak kısa
+                bir program uygular. Öğrenciler bu söz dizimine alıştıktan sonra,
+                ekran boyunca ilerleyen bir nesneyi takip etmek için hareketli nesne
+                özelliklerindeki aynı süreci uygular.
+            Sprite Movement:
+              name: Hareketli Nesnelerin Hareketi
+              description_student: Çizim Döngüsü ve Sayaç deseni birleştirilerek sınıf,
+                ekranda hareketli nesneleri hareket ettiren programlar yazar ve bununla
+                birlikte diğer hareketli nesne özelliklerini canlandırır.
+              description_teacher: Öğrenciler, Çizim Döngüsü ve Sayaç deseni birleştirerek
+                ekranda hareketli nesneleri hareket ettiren programlar yazar ve bununla
+                birlikte diğer hareketli nesne özelliklerini canlandırır.
+            Booleans Unplugged:
+              name: Mantıksallar
+              description_student: |-
+                Bu ders boolean değerler ve mantık ile birlikte koşullu ifadeleri de tanıtmaktadır. Sınıf, kişisel özelliklerini (saç veya göz rengi, giyim türü, yaş, vb.) tanımladığı Boolean (doğru / yanlış) ifadelerini kullanarak , basit bir Ayağa kalk - Otur oyunuyla başlar. Sınıf daha sonra giderek daha karmaşık olan boolean ifadelerine dayalı nesneleri gruplar, ardından koşulların bir program akışını nasıl etkilediğine bakar.
+
+                Not: Ayağa kalk - Otur oyunu, öğrencilere koşul cümleleri kullanarak oynanır. Örneğin gözlerin kahverengiyse ayağa kalk.
+              description_teacher: |-
+                Bu derste öğrencilere boolean değerleri ve mantık ile koşullu ifadeler tanıtılır. Sınıf, kişisel özelliklerini (saç veya göz rengi, giyim türü, yaş, vb.) tanımladığı Boolean (doğru / yanlış) ifadelerini kullanarak , basit bir Ayağa kalk - Otur oyunuyla başlar. Bu, öğrencilere, ikili bir soru ile çoklu potansiyel değerleri olan bir özelliği (yaş gibi) nasıl çerçeveleyebileceklerini düşünmeye iter.
+
+                Buradan öğrencilere, benzer ancak değişen fiziksel özelliklere sahip bir grup nesne sağlanır. Bir arkadaşıyla, VE ve VEYA ifadeleri de dahil olmak üzere giderek daha karmaşık olan boolean ifadelerine dayanan bu nesneleri gruplandırır.
+
+                Son olarak, şartlı cümlelerin karar vermede ya da boolean ifadeleri girdi olarak kullanan bir program akışını etkilemek için bir araç olduğunu ifade ederiz.
+            Conditionals:
+              name: Koşullar
+              description_student: Sınıf, hareketli nesne özelliğinin geçerli değerini
+                bir hedef değerle karşılaştırmak için boolean değerler kullanarak
+                başlar; bu karşılaştırmayı kullanarak, bir hareketli nesne ekrandaki
+                bir noktaya ne zaman ulaştığını, belirli bir boyuta büyütüldüğünü
+                veya sayaç desenini kullanarak başka bir değere ulaştığını belirler.
+                Booleanları doğrudan değerleri veya hareketli nesne özelliklerini
+                araştırmak için kullandıktan sonra, sınıf bu mantıksal karşılaştırmalara
+                yanıt veren kodu yazmak için koşullu eğer ifadeleri ekler.
+              description_teacher: Öğrenciler, hareketli nesne özelliğinin geçerli
+                değerini bir hedef değerle karşılaştırmak için boolean değerler kullanarak
+                başlar; bu karşılaştırmayı kullanarak, bir hareketli nesne ekrandaki
+                bir noktaya ne zaman ulaştığını, belirli bir boyuta büyütüldüğünü
+                veya sayaç desenini kullanarak başka bir değere ulaştığını belirler.
+                Booleanları doğrudan değerleri veya hareketli nesne özelliklerini
+                araştırmak için kullandıktan sonra, öğrenciler bu mantıksal karşılaştırmalara
+                yanıt veren kodu yazmak için koşullu eğer ifadeleri eklerler.
+            Keyboard Input:
+              name: Klavye girişi
+              description_student: Önceki derste boolean ve eğer ifadelerine bir girişten
+                sonra, öğrenciler, 'keyDown()' olarak adlandırılan yeni bir blokla
+                tanışırlar. Bu blok, sahnedeki nesneleri hareket ettirmek için koşul
+                ifadelerini kullanır ve boolean bir değer döndürür. Dersin sonunda
+                öğrenciler, ekrandaki nesneleri kontrol etmek için kullanıcıdan klavye
+                girdileri alan programlar yazacaklar.
+              description_teacher: Önceki derste boolean ve _eğer_ ifadelerine bir
+                girişten sonra, öğrenciler, 'keyDown()' olarak adlandırılan yeni bir
+                blokla tanışırlar. Bu blok, sahnedeki nesneleri hareket ettirmek için
+                koşul ifadelerini kullanır ve boolean bir değer döndürür. Dersin sonunda
+                öğrenciler, ekrandaki nesneleri kontrol etmek için kullanıcıdan klavye
+                girdileri alan programlar yazacaklar.
+            Other Forms of Input:
+              name: " Diğer girdi yöntemi"
+              description_student: Bu derste öğrenciler, kullanıcı girdilerini almak
+                için koşul ifadelerini kullanmanın yollarını keşfetmeye devam ederler.
+                Dün öğrendikleri basit 'keyDown()' komutuna ek olarak, sınıf, fare
+                girdilerini almanın yanı sıra birkaç farklı klavye girdisi komutlarını
+                öğrenirler.
+              description_teacher: Bu derste öğrenciler, kullanıcı girdilerini almak
+                için koşul ifadelerini kullanmanın yollarını keşfetmeye devam ederler.
+                Dün öğrendikleri 'keyDown()' komutuna ek olarak, öğrenciler, fare
+                girdilerini almanın yanı sıra birkaç farklı klavye girdisini almayı
+                da öğrenecekler.
+            Project - Interactive Card:
+              name: Proje - interaktif kart
+              description_student: Bölüm 1'deki bu ortak çalışmada, sınıf, bu noktada
+                öğrenmiş oldukları bütün programlama tekniklerini kullanarak etkileşimli
+                bir tebrik kartı planlar ve geliştirir.
+              description_teacher: Bölüm 1'deki bu ortak çalışmada, öğrenciler, bu
+                noktada öğrenmiş oldukları bütün programlama tekniklerini kullanarak
+                etkileşimli bir tebrik kartı planlar ve geliştirirler.
+            Velocity:
+              name: Hız
+              description_student: Hareketli nesnelerin, sayaç deseni ile nasıl hareket
+                ettikleriyle ilgili kısa bir bilgilendirmeden sonra, sınıfa sahnedeki
+                nesnelerin dönme hızlarının ve süratlarinin doğrudan nasıl ayarlanacağını
+                anlatılır. Öğrenciler, bu yeni özellikleri faklı yollarla kullanırken,
+                ihtiyaç duydukları basit bir oyun kaydırma çubuğunu oluştururken becerilerini
+                geliştirirler.
+              description_teacher: Önceki derslerde öğrencilerin hareketli nesneleri
+                sayaç deseni ile nasıl hareket ettirdikleriyle ilgili kısa bir bilgilendirmeden
+                sonra, öğrencilere nesnelerin dönme hızlarının ve süratlarinin doğrudan
+                nasıl ayarlanacağını anlatılır. Öğrenciler, bu yeni özellikleri faklı
+                yollarla kullanırken, ihtiyaç duydukları basit bir oyun kaydırma çubuğunu
+                oluştururken becerilerini geliştirirler.
+            Collision Detection:
+              name: Çarpışmanın algılanması
+              description_student: Sınıf bilgisayarda çarpışmayı bulmayı öğrenir.
+                Çiftler, bir bilgisayarın, hareketli nesnelerin konumunu, boyut özelliklerini
+                ve iki nesnenin birbirine dokunduğunu nasıl belirlediği keşfeder.
+                Sınıf daha sonra oyun sesleri dahil olmak üzere, hareketli nesneler
+                çarpıştığında farklı efektleri oluşturmak için 'isTouching()' komutunu
+                kullanır.  Son olarak, öğrenciler yeni becerilerini, son derste başladıkları
+                oyun kaydırma çubuğunu geliştirmek için kullanırlar.
+              description_teacher: Öğrenciler bilgisayarda çarpışmayı bulmayı öğrenir.
+                Çiftler halinde çalışıp, bir bilgisayarın, hareketli nesnelerin konumunu,
+                boyut özelliklerini ve iki nesnenin birbirine dokunduğunu nasıl belirlediği
+                keşfederler. Öğrenciler daha sonra oyun sesleri dahil olmak üzere,
+                hareketli nesneler çarpıştığında farklı efektleri oluşturmak için
+                'isTouching()' komutunu kullanır.  Son olarak, öğrenciler yeni becerilerini,
+                son derste başladıkları oyun kaydırma çubuğunu geliştirmek için kullanırlar.
+            Complex Sprite Movement:
+              name: Karmaşık Hareketli Nesne Hareketi
+              description_student: 'Sınıf, yer çekimi simülasyonu, bir nesnenin zıplaması,
+                sağa veya sola süzülmek gibi, nesnelerin, daha karmaşık hareketlerini
+                oluşturmak için sayaç desenini kullanarak sürat özelliklerini birleştirmeyi
+                öğrenir. Son seviyelerde sınıf, bu hareketleri bir nesneyi hareket
+                ettirmek ve kontrol etmek için kullanır. Kontrol ettikleri nesneyi
+                uçurarak etraftaki altınları topladıkları basit bir oyun oluştururlar. '
+              description_teacher: Öğrenciler daha karmaşık nesne hareketleri oluşturmak
+                için sayaç deseni ile nesnelerin sürat özelliklerini birleştirmeyi
+                öğrenir. Öğrenciler özellikle yer çekimi simülasyonu, bir nesnenin
+                zıplaması ve nesnelerin süzülmelerinin nasıl olacağını öğrenirler.
+                Code Stüdyo'da ilerledikçe öğrenciler bu hareketleri, bir nesneyi
+                hareketlendirmek, kontrol etmek ve basit bir oyunda bir nesneyi uçurarak
+                altın toplamak için kullanırlar. Öğrenciler, son seviyede oyuna kendi
+                istedikleri eklemeyi yapmaları için cesaretlendirilirler.
+            Collisions:
+              name: Çarpışmalar
+              description_student: Sınıf, nesnelerin yeni bir yolla etkileşime geçmeleri
+                için program yazarlar.  'isTouching' bloğunu nasıl kullandıklarıyla
+                ilgili kısa bir gözden geçirmeden sonra, sınıf iki nesnenin farklı
+                şekillerde nasıl etkileşime geçebilecekleri hakkında beyin fırtınası
+                yaparlar. Dört çarpışma bloğunu(çarpışma, yerinden oynatma, zıplama
+                ve aşağı inme) denemeden önce, 'isTouching' bloğunu ekranda bir nesnenin
+                başka bir nesneyi  ittirmesi için kullanırlar.
+              description_teacher: Öğrenciler, farklı bir yolla etkileşime geçmeleri
+                için nesneleri programlarlar. 'isTouching' bloğunu nasıl kullandıklarıyla
+                ilgili kısa bir gözden geçirmeden sonra, iki nesnenin farklı şekillerde
+                nasıl etkileşime geçecekleri hakkında beyin fırtınası yaparlar. Dört
+                çarpışma bloğunu(çarpışma, yerinden oynatma, zıplama ve aşağı inme)
+                denemeden önce, 'isTouching' bloğunu ekranda bir nesnenin başka bir
+                nesneyi  ittirmesi için kullanırlar.
+            Functions:
+              name: Fonksiyonlar
+              description_student: Bu ders, kodları organize etmeyi, tekrar eden blokları
+                kaldırmayı, kodların daha okunabilir olmasını sağlayan bir yol olan
+                fonksiyonları içerir. Sınıf, daha yüksek seviyeleri ve soyut adımları
+                anlamayı ve daha kolay hale getirmeyi öğrenir. Daha sonra Game Lab'da
+                fonksiyonlar oluştururlar. Dersin sonunda sınıf, bu becerilerini,
+                oyun kaydırma çubuğu'nun son versiyonuna özellik eklemek ve düzenlemek
+                için kullanırlar.
+              description_teacher: Öğrenciler, tekrar eden kod bloklarını kaldırmak,
+                kodu daha anlaşılır hale getirmek ve kodlarını düzenlemek için ifonksiyonları
+                nasıl oluşturacaklarını öğrenirler. Bağımsız bir ısınma alıştırması,
+                duruma bağlı olarak farklı detay seviyelerinde hangi yönün kullanışlı
+                olduğunu araştırır. Öğrenciler, daha soyut adımları ve daha yüksek
+                seviyeleri kolaylaştırmak için adımları detaylıca düşünmeyi ve anlamayı
+                öğrenirler. Daha sonra öğrenciler Game Lab' da fonksiyonlar oluşturmayı
+                öğrenirler. Öğrenciler, çizim döngülerindeki uzun kod bloklarını kaldırmak
+                ve tekrar eden kod parçalarını tek bir işlevle değiştirmek için fonksiyonları
+                kullanırlar. Dersin sonunda öğrenciler, kaydırma çubuğu oyununu düzenlemek
+                ve oyuna işlevsellik eklemek için bu becerilerini kullanırlar.
+            The Game Design Process:
+              name: Oyun tasarım süreci
+              description_student: Bu ders, sınıfın, bu ünitenin devamında oyunlar
+                tasarlamak için kullanacağı süreci tanıtmaktadır. Sınıf, bu süreç
+                boyunca bir dizi (level) seviyede ilerlemektedir. Bu dersin bir parçası
+                olarak, sınıf ayrıca Oyun Lab'da çoklu kareli animasyonları kullanmayı
+                da kısaca öğrenecek. Dersin sonunda, kendi oyunlarını yapmak için
+                bu oyunu geliştirecektir.
+              description_teacher: Bu ders, öğrencilerin, ünitenin devamında oyun
+                tasarımı için kullanacakları süreci tanıtmaktadır. Bu süreç, öğrencilerin
+                oyunlarını programlamaya başlamadan önce hareketli nesnelerini, değişkenlerini
+                ve fonksiyonlarını tanımlamalarını isteyen bir proje rehberi etrafında
+                toplanmıştır. Bu derse öğrenciler, Oyun Laboratuvarı'nda kodun gizli
+                olduğu bir oyun oynayarak başlar. Öğrenciler bu oyunu yapmak için
+                gerekebilecek hareketli nesneleri, değişkenleri ve fonksiyonları düşünürler.
+                Daha sonra, öğrencilere oyunu uygulamak için yol gösteren tamamlanmış
+                bir proje kılavuzu verilir. Öğrenciler daha sonra bu süreç boyunca
+                bir dizi (level) seviyede ilerler. Bu dersin bir parçası olarak, öğrenciler
+                ayrıca Game Lab'da çok çerçeveli animasyonları kullanmayı kısaca öğreneceklerdir.
+                Dersin sonunda, kendi oyunlarını yapmak için bu oyunu geliştirecektir.
+            Using the Game Design Process:
+              name: Oyun tasarım süreci kullanarak
+              description_student: Bu çok günlü derste sınıf zıplama platformu oyununu
+                yaratmak için 1. ünitedeki problem çözme sürecini kullanir. Sınıf,
+                bir oyun örneğine baktıktan sonra oyunlarının neye benzeyeceğini tanımlar
+                ve oluşturmak için yapılandırılmış bir süreç kullanır. Sonunda, sınıf
+                oyunların nasıl geliştirildiğini düşünür, kusurları bulur ve bu değişiklikleri
+                uygular.
+              description_teacher: "In this multi-day lesson, students use the problem
+                solving process from Unit 1 to create a platform jumper game.  They
+                start by looking at an example of a platform jumper, then define what
+                their games will look like.  Next, they use a structured process to
+                plan the backgrounds, variables, sprites, and functions they will
+                need to implement their game.  After writing the code for the game,
+                students will reflect on how the game could be improved, and implement
+                those changes. \nBu çok günlük derste, öğrenciler bir atlama  oyunu
+                platformu yapmak için Ünite 1 problem çözme sürecini kullanırlar.
+                Bir platform atlama teli örneğine bakarak başlarlar, sonra oyunlarının
+                nasıl görüneceğini tanımlarlar. Ardından, oyunlarını uygulamak için
+                ihtiyaç duyacakları arka planları, değişkenleri, sprite'leri ve işlevleri
+                planlamak için yapılandırılmış bir süreç kullanıyorlar. Oyun için
+                kod yazdıktan sonra, öğrenciler oyunun nasıl geliştirilebileceğini
+                düşünecek ve bu değişiklikleri uygulayacaklardır."
+            Project - Design a Game:
+              name: Proje - Bir oyun tasarla
+              description_student: Sınıf, önceki iki dersteki proje rehberi kullanarak
+                orjinal oyunlar planlar ve oluşturur. Bireysel veya çiftler halinde
+                çalışarak sınıf, oyunları planlar, geliştirir ve geri bildirim verir.
+                Akran geri bildirimini dahil edildikten sonra, sınıf tamamlanmış oyunları
+                paylaşır.
+              description_teacher: Öğrenciler, projelerini yönlendirmek için önceki
+                iki dersin proje rehberini kullanarak kendi oyunlarını planlayacak
+                ve inşa edecektir. Bireysel ya da çift olarak çalışarak, öğrenciler
+                ilham kaynağı olarak örnek oyun seti alarak, kurmak istedikleri oyun
+                türüne karar verecekler. Ardından, oyunun davranışını açıklayacak
+                ve oluşturmaları gereken değişkenleri, hareketli nesneleri ve işlevleri
+                kapsam altına alacakları boş bir proje kılavuzu tamamlayacaklardır.
+                Code Studio'da, bir dizi seviye, onlara bu planı uygulamak için kullanabilecekleri
+                genel bir sıra üzerinde bilgi ister. Süreç boyunca, öğrenciler akran
+                incelemesi için projelerini paylaşacak ve oyunun bitiminde geri bildirim
+                içeriyor olacak. Ders sonunda öğrenciler tamamladıkları oyunları sınıf
+                arkadaşlarıyla paylaşacaklardır. Bu proje birden fazla sınıfı kapsayacak
+                ve 3-5 sınıf döneminden herhangi bir yeri kolayca alabilecektir.
+        maddie-test:
+          stages:
+            new stage:
+              name: yeni kademe

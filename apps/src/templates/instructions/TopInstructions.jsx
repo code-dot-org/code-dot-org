@@ -273,9 +273,15 @@ class TopInstructions extends Component {
       );
     }
 
-    Promise.all(promises).then(() => {
-      this.setState({fetchingData: false}, this.forceTabResizeToMaxHeight);
-    });
+    Promise.all(promises)
+      .then(() => {
+        this.setState({fetchingData: false}, this.forceTabResizeToMaxHeight);
+      })
+      .catch(error => {
+        console.log(
+          'Promise Rejection while getting instructions: ' + error.responseText
+        );
+      });
   }
 
   componentWillUnmount() {

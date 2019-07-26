@@ -480,7 +480,7 @@
   sports_athlete_Chris: "Chris Bosh, medalhista de ouro olímpico e campeão da NBA, o Miami Heat"
   sports_athlete_Harrison: "Harrison Barnes, medalhista de ouro olímpico e campeão da NBA, Dallas Mavericks"
   watch_inspirational_videos: "Antes de começar, assista a um desses vídeos inspiradores"
-  video_title_cs_is_everything: "Ciência da computação está mudando tudo"
+  video_title_cs_is_everything: "Ciência da Computação está Mudando Tudo"
   video_title_inspire_girl: "Inspire uma garota"
   video_title_cs_intro: "Introdução à ciência da computação"
   video_title_schools_dont_teach: "O que a maioria das escolas não ensina"
@@ -841,6 +841,7 @@
   carousel_heading_beyond_languages: "Tutoriais sobre outras linguagens de programação"
   carousel_heading_apps_games: "Crie seus próprios aplicativos e jogos"
   carousel_heading_university: "Cursos universitários on-line"
+  carousel_heading_online_university: "Cursos Universitários Disponíveis Online"
   carousel_heading_webpages: "Aprenda a fazer páginas da Web"
   carousel_heading_robots: "Aprenda a programar com robôs e dispositivos"
   carousel_heading_ide: "Plataformas populares entre professores"
@@ -948,41 +949,9 @@
   coursee-2019_name: Curso E (2019)
   pre-express-2018_name: Curso Expresso de Pré-Leitor (2018)
   express-2019_name: Curso Expresso (2019)
-  cspunit2_name: "(antigo) Unidade 2: A Internet"
-  cspunit3_name: "(antigo) Unidade 3: Programação"
-  cspunit4_name: "(antigo) Unidade 4: Dados"
-  cspunit5_name: "(antigo) Unidade 5: Explorar e criar tarefas de desempenho"
-  cspunit6_name: 'Após NA (Nivelamento Avançado): Bancos de dados em aplicativos'
-  csd5_name: 'Unidade 5: Dados e Sociedade'
-  csd6_name: 'Unidade 6: A computação física'
-  csd5-2017_name: 'Unidade 5: Dados e Sociedade'
-  csd6-2017_name: 'Unidade 6: A computação física'
-  csd5-2018_name: 'Unidade 5: Dados e Sociedade'
-  csd6-2018_name: 'Unidade 6: A computação física'
-  csp1-2017_name: 'Unidade 1: A Internet'
-  csp2-2017_name: 'Unidade 2: Informação Digital'
-  csp-explore-2017_name: 'AP: Explorar a preparação da tarefa de desempenho'
-  csp-create-2017_name: 'AP: Criar a preparação da tarefa de desempenho'
-  csppostap-2017_name: 'Post-AP: Bancos de dados em aplicativos'
-  csp1-2018_name: 'Unidade 1: A Internet'
-  csp2-2018_name: 'Unidade 2: Informação Digital'
-  csp-explore-2018_name: 'AP: Explorar a preparação da tarefa de desempenho'
-  csp-create-2018_name: 'AP: Criar a preparação da tarefa de desempenho'
-  csppostap-2018_name: 'Post-AP: Bancos de dados em aplicativos'
-  csp1_name: 'Unidade 1: A Internet'
-  csp2_name: 'Unidade 2: Informação Digital'
-  csp3-a_name: 'Unidade 3: Introdução a programação (versão A)'
-  csp3-research-mxghyt_name: 'Unidade 3: Introdução a programação(submetas)'
-  csp-ap_name: Tarefas de Performance
-  csppostap_name: 'Post-AP: Bancos de dados em aplicativos'
-  csp-post-survey_name: Pesquisa pós-curso do estudante
-  cspassessment_name: "Teste completo - 50 questões"
-  csp-explore_name: 'AP: Explorar a preparação da tarefa de desempenho'
-  csp-create_name: 'AP: Criar a preparação da tarefa de desempenho'
-  cspexam1-mWU7ilDYM9_name: Teste, parte 1 - 25 questões
-  cspexam2-AKwgAh1ac5_name: Teste, parte 2 - 25 questões
-  cspunit3_gradelevel: "Alunos do 9° ano ao Ensino Médio"
-  cspunit3_shortdescription_congrats: "Esta unidade introduz os conceitos fundamentais de programação de computadores, que ajudam na habilidade de criar ricos aplicativos interativos. Esse curso usa JavaScript como linguagem de programação, e o Laboratório de Aplicativo App Lab é o ambiente de programação para construir aplicativos, mas os conceitos aprendidos nessas lições envolvem todas as ferramentas e linguagens de programação."
+  pre-express-2019_name: Curso Pre-reader Express (2019)
+  accelerated_name: "Curso acelerado"
+  express_name: "Curso Expresso"
   20-hour_name: Curso acelerado
   algebra_name: "CC na Álgebra Curso Completo"
   AlgebraA_name: "CC no Curso A de Álgebra"
@@ -994,18 +963,6 @@
   starwarsblocks_name: "Star Wars (Blocos)"
   hoc-encryption_name: Criptografia simples
   text-compression_name: Compressão de texto
-  math_category_name: "Matemática"
-  hoc_category_name: "Hora do Código"
-  csf_category_name: "Conceitos básicos da CC"
-  csf_2017_category_name: "Fundamentos da Ciência da Computação (2017)"
-  csf_2018_category_name: "Fundamentos da Ciência da Computação (2018)"
-  csf_international_category_name: "Fundamentos da Ciencia da Computação International"
-  csf2_draft_category_name: 'Em desenvolvimento: Cursos A - F'
-  csd_2018_category_name: "Descobertas da Ciência da Computação (2018-2019)"
-  csp_category_name: "Princípios da CC - 15-16"
-  csp17_category_name: "Princípios da CC (2017-2018)"
-  csp_2018_category_name: "Princípios de Ciência da Computação (18-19)"
-  cspexams_category_name: "Teste prático dos princípios da CC"
   applab_name: "Laboratório de Aplicativo"
   gamelab_name: "Laboratório de Jogos"
   basketball_name: "Fazer um jogo de basquete"
@@ -1084,6 +1041,12 @@
   coursed-2018_gradelevel: Alunos a partir do 8º ano
   coursee-2018_gradelevel: De 8 a 12 anos
   coursef-2018_gradelevel: 'Idade: de 9 a 13 anos'
+  coursea-2019_gradelevel: 'Idade: de 4 a 7 anos'
+  courseb-2019_gradelevel: 'Idade: de 5 a 8 anos'
+  coursec-2019_gradelevel: 'Idade: de 6 a 10 anos'
+  coursed-2019_gradelevel: Alunos a partir do 8º ano
+  coursee-2019_gradelevel: De 8 a 12 anos
+  coursef-2019_gradelevel: 'Idade: de 9 a 13 anos'
   accelerated_gradelevel: "10-18 anos de idade"
   codeorg_platformtext: "Navegadores modernos, smartphones, tablets"
   codeintl_platformtext: "Navegadores modernos, smartphones, tablets"
@@ -1200,6 +1163,11 @@
   coursed-2018_shortdescription_congrats: Abrange rapidamente conceitos do Curso C e, em seguida, vá mais longe com algoritmos, laços aninhados, condicionais e muito mais.
   coursee-2018_shortdescription_congrats: Rapidamente cobrem conceitos de curso C e D e vai mais longe com funções.
   coursef-2018_shortdescription_congrats: Aprenda todos os conceitos Fundamentais da Ciência da Computação e crie sua própria arte, história ou jogo.
+  coursea-2019_shortdescription_congrats: Uma introdução à ciência da computação para pré-leitores.
+  courseb-2019_shortdescription_congrats: Uma introdução à ciência da computação para pré-leitores. (Similar ao Curso A, mas com mais variedade para os alunos mais velhos.)
+  coursed-2019_shortdescription_congrats: Abrange rapidamente conceitos do Curso C e, em seguida, vá mais longe com algoritmos, laços aninhados, condicionais e muito mais.
+  coursee-2019_shortdescription_congrats: Rapidamente cobrem conceitos de curso C e D e vai mais longe com funções.
+  coursef-2019_shortdescription_congrats: Aprenda todos os conceitos Fundamentais da Ciência da Computação e crie sua própria arte, história ou jogo.
   codeorg_longdescription: "Aprenda os conceitos básicos de Ciência da Computação com a programação de arrastar e soltar. Este tutorial se parece com um jogo, é autoexplicativo e conta com a participação de Bill Gates, Mark Zuckerberg, Angry Birds e Plants vs. Zombies. Aprenda sobre laços-repetição, condicionais e algoritmos básicos. Este tutorial está disponível em 34 idiomas."
   codeintl_longdescription: "Aprenda os conceitos básicos de Ciência da Computação com a programação de arrastar e soltar. Este tutorial se parece com um jogo, é autoexplicativo e conta com a participação de Bill Gates, Mark Zuckerberg, Angry Birds e Plants vs. Zombies. Aprenda sobre laços-repetição, condicionais e algoritmos básicos. Este tutorial está disponível em 34 idiomas."
   thinkersmithspanish_longdescription: "Usando um \"Vocabulário-robô\" pré-definido, os alunos vão descobrir como orientar uns aos outros a concluir tarefas específicas sem discuti-las primeiro. Esta aula ensina as crianças sobre a conexão entre símbolos e ações, bem como sobre a habilidade individual de depuração."
@@ -1466,13 +1434,14 @@
   header_help_support: 'Ajuda e suporte '
   header_report_bug: "Reportar um erro"
   header_tutorials: "Tutoriais"
+  app_lab_documentation: "Documentação App Lab"
+  app_lab_tutorials: "Tutoriais App Lab"
+  game_lab_documentation: "Documentação Game Lab"
+  game_lab_tutorials: "Tutoriais Game Lab"
   header_documentation: "Documentação"
-  csp_name: "Princípios da CC"
-  csd_name: "Descobertas da Ciência da Computação"
-  csd_2018_name: "Descobertas da Ciência da Computação"
-  full_course_category_name: "Cursos Completos"
   user_header_label: "Oi, %{username}"
   user_header_team: "Equipe"
+  user_header_my_projects: "Meus projetos"
   user_header_settings: "Configurações da conta"
   user_header_logout: "Sair"
   user_header_signin: "Entrar"
@@ -1580,7 +1549,7 @@
   hoc2018_mc_video_5min: "5 min"
   hoc2018_mc_video_title_steph_curry: "Hora de código com Steph Curry"
   hoc2018_mc_video_title_sports: "Esforce-se. Qualquer um pode aprender."
-  hoc2018_mc_video_title_cs_is_everything: "Ciência da computação está mudando tudo"
+  hoc2018_mc_video_title_cs_is_everything: "Ciência da Computação está Mudando Tudo"
   hoc2018_mc_video_title_inspire_girl: "Inspire uma garota"
   hoc2018_mc_video_title_cs_intro: "Introdução à ciência da computação"
   hoc2018_mc_video_title_schools_dont_teach: "O que a maioria das escolas não ensina"
@@ -1657,3 +1626,4 @@
   page_not_found_description: "A página que você está procurando não existe neste endereço. Verifique o endereço de web e carregue novamente. Ou, então, volte para nossa página inicial."
   page_not_found_button: "Volte para a página inicial"
   hoc2018_mc_with_microsoft: "Em parceria com"
+  hoc2018_mc_thank_microsoft: "Nós agradecemos à Microsoft por apoiar nossa visão e missão para que toda criança tenha a oportunidade de aprender ciência da computação e as habilidades necessárias para ter sucesso no século XXI."

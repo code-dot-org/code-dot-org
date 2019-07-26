@@ -1692,3 +1692,17 @@ fi:
           stages:
             Graph Paper Programming:
               name: Ruutupaperiohjelmointi
+        csd2-pilot:
+          stages:
+            Lists:
+              name: Listat
+        csd3-pilot:
+          stages:
+            Variables:
+              name: Muuttujat
+            Conditionals:
+              name: Ehtolausekkeet
+            Velocity:
+              name: Nopeus
+            Functions:
+              name: Funktiot

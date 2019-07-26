@@ -6,12 +6,14 @@ en:
       category:
         csd_category_name: CS Discoveries ('17-'18)
         csd_2018_category_name: CS Discoveries ('18-'19)
+        csd_2019_category_name: CS Discoveries ('19-'20)
         csf_category_name: CS Fundamentals
         csf_2018_category_name: CS Fundamentals (2018)
         csf_international_category_name: CS Fundamentals International
         csf2_draft_category_name: 'Under Development: Courses A - F'
         csp_category_name: "'15-'16 CS Principles"
         csp_2018_category_name: CS Principles ('18-'19)
+        csp_2019_category_name: CS Principles ('19-'20)
         cspexams_category_name: CS Principles Practice Test
         csp17_category_name: CS Principles ('17-'18)
         full_course_category_name: Full Courses
@@ -1153,6 +1155,8 @@ en:
               name: Pluralsight Test
             Externals Optionally Displayed as Unplugged:
               name: Externals Optionally Displayed as Unplugged
+            Bubble Choice:
+              name: Bubble Choice
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: 'Phase 2 Online: Blended Summer Study'
@@ -10521,6 +10525,8 @@ en:
               name: andrea-test-stage3
             Deeper Learning Overview:
               name: Deeper Learning Overview
+            andrea-test-stage4:
+              name: andrea-test-stage4
           title: andrea-test
           description_audience: 6-12 Facilitators-in-Training
           description_short: this is to test my skills in making a course
@@ -10762,7 +10768,7 @@ en:
               description_student: Program Laurel the adventurer to collect treasure in an open cave.
               description_teacher: In this lesson, students continue learning the concept of loops. Here, Laurel the Adventurer uses loops to collect treasure in open cave spaces. A new `get treasure` block is introduced to help her on her journey.
             Loops in Artist:
-              name: Drawing Gardnes with Loops
+              name: Drawing Gardens with Loops
               description_student: Use patterns and loops to finish the images.
               description_teacher: Returning to loops, students learn to draw images by looping simple sequences of instructions. In the previous online lesson, loops were used to traverse a maze and collect treasure. Here, students use loops to create patterns. At the end of this stage, students will be given the opportunity to create their own images using loops.
             'Events: The Big Event':
@@ -11792,6 +11798,22 @@ en:
           stages:
             new stage:
               name: new stage
+            Number Systems:
+              name: Number Systems
+            Bit Sending Device:
+              name: Bit Sending Device
+            Flippy Do Pt 1:
+              name: Flippy Do Pt 1
+            Flippy Do Pt 2:
+              name: Flippy Do Pt 2
+            Sending Text:
+              name: Sending Text
+            Black and White Images:
+              name: Black and White Images
+            Color Images:
+              name: Color Images
+            Lossless Compression:
+              name: Lossless Compression
           title: CSP Unit 1 Pilot
           description_audience: ''
           description_short: ''
@@ -12042,6 +12064,38 @@ en:
               name: Practice PT Part 3
             Unit 4 Assessment:
               name: Unit 4 Assessment
+            Introduction to Apps:
+              name: Introduction to Apps
+            Introduction to Design Mode:
+              name: Introduction to Design Mode
+            'Project: Designing an App, pt. 1':
+              name: 'Project: Designing an App, pt. 1'
+            'Project: Designing an App, pt. 2':
+              name: 'Project: Designing an App, pt. 2'
+            Programs Investigate:
+              name: Programs Investigate
+            Programs Practice:
+              name: Programs Practice
+            'Project: Designing an App, pt. 3':
+              name: 'Project: Designing an App, pt. 3'
+            'Project: Designing an App, pt. 4':
+              name: 'Project: Designing an App, pt. 4'
+            'Project: Share Your App':
+              name: 'Project: Share Your App'
+            'Project: Designing an App pt. 1':
+              name: 'Project: Designing an App pt. 1'
+            'Project: Designing an App pt. 2':
+              name: 'Project: Designing an App pt. 2'
+            Project - Designing an App Part 1:
+              name: Project - Designing an App Part 1
+            Project - Designing an App Part 2:
+              name: Project - Designing an App Part 2
+            Project - Designing an App Part 3:
+              name: Project - Designing an App Part 3
+            Project - Designing an App Part 4:
+              name: Project - Designing an App Part 4
+            The Need for Programming Languages:
+              name: The Need for Programming Languages
           title: 'Unit 3: Intro to App Development'
           description_audience: ''
           description_short: ''
@@ -12706,6 +12760,16 @@ en:
               name: CS Discoveries Post Course survey
               description_student: ''
               description_teacher: ''
+            Intellectual Property:
+              name: Intellectual Property
+            Project - Planning Layout and Style:
+              name: Project - Planning Layout and Style
+            Project - Building a Webpage:
+              name: Project - Building a Webpage
+            Purpose of a  Websites:
+              name: Purpose of a  Websites
+            Images:
+              name: Images
         csd3-pilot:
           title: CSD Unit 3 - Animations and Games ('19-'20)
           description: " In Unit 3, you’ll build on your coding experience as you program animations, interactive art, and games in Game Lab. The unit starts off with simple shapes and builds up to more sophisticated sprite-based games, using the same programming concepts and the design process computer scientists use daily. In the final project, you’ll develop a personalized, interactive program."
@@ -12817,7 +12881,63 @@ en:
           stages:
             Game Lab Bugs:
               name: Game Lab Bugs
+            Immovable Crab:
+              name: Immovable Crab
           title: Example of Bugs for CSD Teachers
           description_audience: ''
           description_short: ''
           description: ''
+        maddie-test:
+          stages:
+            stage 1:
+              name: stage 1
+            new stage:
+              name: new stage
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csp3-pilot:
+          stages:
+            Introduction to Apps:
+              name: Introduction to Apps
+            Introduction to Design Mode:
+              name: Introduction to Design Mode
+            Project - Designing an App Part 1:
+              name: Project - Designing an App Part 1
+            Project - Designing an App Part 2:
+              name: Project - Designing an App Part 2
+            Programs Investigate:
+              name: Programs Investigate
+            Programs Practice:
+              name: Programs Practice
+            Project - Designing an App Part 3:
+              name: Project - Designing an App Part 3
+            Project - Designing an App Part 4:
+              name: Project - Designing an App Part 4
+            'Project: Share Your App':
+              name: 'Project: Share Your App'
+            The Need for Programming Languages:
+              name: The Need for Programming Languages
+          title: 'Unit 3: Intro to App Design'
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csl-vn:
+          stages:
+            Sequencing with Scrat:
+              name: Sequencing with Scrat
+            Programming in Maze:
+              name: Programming in Maze
+            Programming with Rey and BB-8:
+              name: Programming with Rey and BB-8
+            Loops in Ice Age:
+              name: Loops in Ice Age
+            Ocean Scene with Loops:
+              name: Ocean Scene with Loops
+            Tell a Story in Play Lab:
+              name: Tell a Story in Play Lab
+          title: Computer Science Literacy for Vietnam
+          description_audience: Tuổi 5-10
+          description_short: Khoa học máy tính cơ bản cho học sinh Việt Nam
+          description: 'Khoa Học Máy Tính (Computer Science) là môn học cơ bản của thời đại kinh tế số và đã được đưa vào dạy đại trà từ tiểu học ở Mỹ, Canada, Anh, Nhật và các nước phát triển khác. Khoá học này nhằm giới thiệu Khoa Học Máy Tính cơ bản đến với học sinh Việt Nam. Chương trình được xây dựng trực tiếp từ chương trình hiện hành cho học sinh tiểu học ở Mỹ và cô đọng cho phù hợp với học sinh Việt Nam. '

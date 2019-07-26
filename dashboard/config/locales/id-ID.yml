@@ -342,6 +342,10 @@ id:
       professional_learning: Belajar profesional
       documentation: Dokumentasi
       tutorials: Tutorial
+      app_lab_documentation: Dokumentasi aplikasi Lab
+      app_lab_tutorials: Tutorial aplikasi Lab
+      game_lab_documentation: Dokumentasi lab permainan
+      game_lab_tutorials: Tutorial lab permainan
       educate_overview: Ikhtisar Pendidik
       educate_elementary: Sekolah Dasar
       educate_middle: Sekolah Menengah Pertama
@@ -372,6 +376,7 @@ id:
       district_dashboard: Wilayah Dashboard
       label: Halo %{username}
       stats: Kode Studio
+      my_projects: Proyek saya
       settings: Akun saya
       logout: Keluar
       signin: Masuk
@@ -397,13 +402,18 @@ id:
       gumball: Dunia Gumball yang menakjubkan
       iceage: Zaman Es
       infinity: "∞"
+      makerlab: Pembuat Toolkit
       minecraft_adventurer: Petualang Minecraft
+      minecraft_codebuilder: 'Minecraft: Sambungan Kode'
       minecraft_designer: Minecraft
       minecraft_hero: Pahlawan Minecraft
       playlab: Play Lab/Lab Permainan
       playlab_k1: Lab bermain (pra-pembaca)
       starwars: Perang Bintang
+      starwarsblocks: Star wars(blok)
+      starwarsblocks_hour: Star wars(blok)
       weblab: Web lab
+      view_all: Lihat semua proyek...
     popup:
       progress_for_user: "%{name} kemajuan"
       progress: Kemajuan Anda
@@ -802,7 +812,6 @@ id:
   pdf_download: Unduh PDF
   download_coming_soon: Aktivitas yang dapat diunduh segera hadir.
   video_coming_soon: Video Segera Hadir!
-  not_started: Pelajar tidak diusahakan level ini.
   share_code:
     title: klik 'Jalankan' untuk melihat program saya berjalan
     bounce_og_title: Check out permainan Bouncing ku
@@ -865,6 +874,7 @@ id:
       audience: Usia 13+
       cta: Pelajari caranya
     hoc-encryption:
+      title: Enkripsi sederhana
       body: Pelajar akan belajar cara untuk membuat dan memecahkan pesan terenkripsi.
     weblab:
       title: Web Lab (beta)
@@ -1190,8 +1200,10 @@ id:
     csf_f_2: Isi kursus F
     csf_digcit: Kewarganegaraaan Digital
     csf_jigsaw: Teka-teki
+    csf_sequencing: Urutan
     csf_loops: Loop
     csf_events: kegiatan
+    csf_online_safety: Keamanan daring
     csf_binary: Biner
     csf_conditionals: Kondisi
     csf_nested_loops: Perulangan bercabang
@@ -1200,6 +1212,7 @@ id:
     csf_for_loops: Untuk Pengulangan
     csf_internet: Internet
     csf_impacts: Dampak dari Komputasi
+    csf_warmup: Berlatih
     csd1_1: 'Bab 1: Proses Pemecahan Masalah'
     csd1_2: 'Bab 2: Komputer dan Pemecahan Masalah'
     csd2_1: 'Bab 1: Konten Web dan HTML'
@@ -1228,13 +1241,23 @@ id:
     csp_ap_3: 'Bab 3: AP Membuat Kinerja Tugas'
     csp_postap_1: 'Bab 1: Memanipulasi dan memvisualisasikan Data'
     csp_postap_2: 'Bab 2: Aplikasi dan Basis data'
+    csp2_1_2018: 'Unit 2: informasi digital'
     csp3_1_2018: 'Unit 3: Pengenalan Pemrograman'
     csp_variables: variabel
     csp_conditionals: Kondisi
     csp_functions: fungsi
+    csp_project: Proyek
     csp_lists: List
     csp_loops: Loop
+    csp_traversals: Melintang
+    csp_libraries: Perpustakaan
+    csp_parameters_return_values: Parameter dan Nilai Balik
     dlp: Anjuran Refleksi
+    time4cs_c1: Everglades dan Ekosistemnya
+    time4cs_c2: Tantai Makanan di Everglades
+    time4cs_c3: Hidup di Everglades
+    time4cs_c4: Dampak Invasi pada Everglades
+    time4cs_c5: Masyarakat Mempengaruhi Perubahan di Everglades
   external_links:
     disclaimer: Disclaimer
     leaving_domain: Anda sekarang meninggalkan domain ini, ke situs yang tidak dioperasikan
@@ -1315,9 +1338,17 @@ id:
     pada guru anda pelajaran mana yang harus anda ikuti.
   hidden_script: Guru anda tidak mengharapkan anda berada di sini. Silahkan tanyakan
     pada guru anda ke unit mana anda harus ikuti.
+  no_script_access_student: Anda tidak punya akses ke unit ini. Silahkan bertanya
+    pada guru unit mana yang harus aktif.
+  no_script_access_teacher: 'Anda tidak punya akses ke unit ini. Jika anda percaya
+    anda harus mengakses unit ini,silahkan menulis untuk mendukung @code.org sehingga
+    ketika kita dapat memperbaiki situasi
+
+'
   return_unit_overview: Pergi ke ikhtisar unit
   return_course_overview: Pergi ke ikhtisar kursus
   view_all_units: Melihat semua satuan
+  view_teacher_guide: Lihat petunjuk guru
   pd:
     form_labels:
       first_name: Nama Depan
@@ -1345,6 +1376,20 @@ id:
         non_binary: Non-biner
         not_listed: Istilah yang disukai tidak terdaftar
         none: Memilih untuk tidak menjawab
+      school_country:
+        canada: Kanada
+        chile: Cili
+        israel: Israel
+        malaysia: Malaysia
+        mexico: Meksiko
+        thailand: Tailand
+      ages:
+        ages_under_6: 6 tahun
+        ages_7_8: 7- 8 tahun
+        ages_9_10: 9-10 tahun
+        ages_11_12: 11-12 tahun
+        ages_13_14: 13-14 tahun
+        ages_15_16: 15-16 tahun
       subjects:
         cs: Ilmu komputer
         math: Matematika
@@ -1355,9 +1400,13 @@ id:
         lightbot: Lightbot
       robotics:
         kodable: Kodable
+      workshop_course:
+        csd: Penemuan CS
+        csp: Aturan CS
       email_opt_in:
         opt_in_yes: Ya
         opt_in_no: Tidak
+  courses_category: Seluruh kursus
   cookie_banner:
     accept: Saya setuju
   gdpr_dialog:

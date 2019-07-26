@@ -1197,3 +1197,15 @@ sl:
           stages:
             Graph Paper Programming:
               name: Obarvajmo kvadratke
+        csd2-pilot:
+          stages:
+            Lists:
+              name: Seznami
+        csd3-pilot:
+          stages:
+            Variables:
+              name: Spremenljivke
+            Conditionals:
+              name: Pogoji
+            Functions:
+              name: Funkcije

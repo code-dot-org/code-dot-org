@@ -1880,3 +1880,17 @@ et:
           stages:
             Graph Paper Programming:
               name: Millimeetripaberi programmeerimine
+        csd2-pilot:
+          stages:
+            Lists:
+              name: Loendid
+        csd3-pilot:
+          stages:
+            Variables:
+              name: Muutujad
+            Conditionals:
+              name: Tingimuslaused
+            Velocity:
+              name: Velocity
+            Functions:
+              name: Funktsioonid

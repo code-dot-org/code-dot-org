@@ -1083,3 +1083,15 @@ ky:
           stages:
             Graph Paper Programming:
               name: Графикалык кагазды програмдоо
+        csd2-pilot:
+          stages:
+            Lists:
+              name: Тизмелер
+        csd3-pilot:
+          stages:
+            Variables:
+              name: Өзгөрмөлөр
+            Conditionals:
+              name: Шартуулар
+            Functions:
+              name: Функциялар

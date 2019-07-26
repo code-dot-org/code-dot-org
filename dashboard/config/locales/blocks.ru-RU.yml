@@ -587,18 +587,6 @@ ru:
             '2': высокие
       Dancelab_whenSetup:
         text: установка
-      gamelab_changeColor:
-        text: изменить {COLOR} {METHOD} на {AMOUNT}
-        options:
-          METHOD:
-            '"tint"': оттенок
-      gamelab_changeColorBy:
-        text: изменить {COLOR} {METHOD} на {AMOUNT}
-        options:
-          METHOD:
-            '"hue"': оттенок
-            '"saturation"': насыщенность
-            '"brightness"': яркость
       gamelab_changePropBy:
         text: изменить {SPRITE} {PROPERTY} на {VAL}
         options:
@@ -622,12 +610,6 @@ ru:
             'false': ложь
       gamelab_destroy:
         text: удалить {THIS}
-      gamelab_distance:
-        text: расстояние от {LOCATION1} до {LOCATION2}
-      gamelab_getAnim:
-        options:
-          COSTUME:
-            '"costume"': костюм
       gamelab_getProp:
         options:
           PROPERTY:
@@ -639,8 +621,6 @@ ru:
             '"tint"': оттенок
       gamelab_jumpTo:
         text: "{SPRITE} перейти к {LOCATION}"
-      gamelab_keyDown:
-        text: клавиша {KEY} нажата
       gamelab_keyPressed:
         options:
           CONDITION:
@@ -654,58 +634,13 @@ ru:
             '"space"': космос
             '"x"': x
             '"y"': у
-      gamelab_layoutSprites:
-        options:
-          FORMAT:
-            '"border"': граница
-            '"inner"': внутренняя площадь
-            '"circle"': круг
-            '"grid"': сетка
-            '"row"': шеренга
-            '"column"': колонна
-            '"x"': крест-накрест
-            '"plus"': плюс
-            '"random"': случайный
-      gamelab_locationConstant:
-        options:
-          DIR:
-            "'north'": север
-            "'south'": юг
-            "'east'": восток
-            "'west'": запад
-      gamelab_locationDelta:
-        options:
-          DIR:
-            "'north'": север
-            "'south'": юг
-            "'east'": восток
-            "'west'": запад
-            "'random'": случайный
-      gamelab_locationEast:
-        text: восток
-      gamelab_locationNorth:
-        text: север
       gamelab_locationOf:
         text: местоположение {SPRITE}
-      gamelab_locationSouth:
-        text: юг
-      gamelab_locationWest:
-        text: запад
-      gamelab_location_variable_get:
-        text: местоположение {VAR}
-      gamelab_location_variable_set:
-        text: установить местоположение {VAR} в {VAL}
-      gamelab_makeNewGroup:
-        text: создать новую группу
       gamelab_mirrorSprite:
         options:
           DIRECTION:
             '"right"': вправо
             '"left"': влево
-      gamelab_mixColors:
-        text: смешайте {COLOR1} и {COLOR2}
-      gamelab_moveDown:
-        text: "{THIS} передвинуть вниз"
       gamelab_moveInDirection:
         options:
           DIRECTION:
@@ -713,12 +648,6 @@ ru:
             '"East"': Восток
             '"South"': Юг
             '"West"': Запад
-      gamelab_moveLeft:
-        text: "{THIS} передвинуть влево"
-      gamelab_moveRight:
-        text: "{THIS} передвинуть вправо"
-      gamelab_moveUp:
-        text: "{THIS} передвинуть вверх"
       gamelab_pointInDirection:
         text: точка {SPRITE} {DIRECTION}
         options:
@@ -746,20 +675,6 @@ ru:
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': под
               водой
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': зима
-      gamelab_setPosition:
-        text: переместить {THIS} в положение {POSITION}
-        options:
-          POSITION:
-            "{x: 50, y: 50}": вверху слева
-            "{x: 200, y: 50}": вверху по центру
-            "{x: 350, y: 50}": вверху справа
-            "{x: 50, y: 200}": по центру слева
-            "{x: 200, y: 200}": центр
-            "{x: 350, y: 200}": по центру справа
-            "{x: 50, y: 350}": внизу слева
-            "{x: 200, y: 350}": внизу по центру
-            "{x: 350, y: 350}": внизу справа
-            '"random"': случайный
       gamelab_setProp:
         text: установить {SPRITE} {PROPERTY} в {VAL}
         options:
@@ -779,43 +694,11 @@ ru:
             '"height"': высота
       gamelab_setTint:
         text: изменить цвет {THIS} на {COLOR}
-      gamelab_setup:
-        text: установка
       gamelab_spriteClicked:
         options:
           CONDITION:
             '"when"': когда
             '"while"': пока
-      gamelab_spriteClickedSet:
-        options:
-          CONDITION:
-            '"when"': когда
-            '"while"': пока
-      gamelab_spriteDirection:
-        options:
-          DIRECTION:
-            '"North"': Север
-            '"East"': Восток
-            '"South"': Юг
-            '"West"': Запад
-      gamelab_spritesWhere:
-        options:
-          PROPERTY:
-            '"scale"': размер
-            '"x"': позиция абсцисс (x)
-            '"y"': позиция ординат (y)
-            '"costume"': костюм
-            '"direction"': направление движения
-            '"tint"': оттенок
-      gamelab_spritesWhereGenerator:
-        options:
-          PROPERTY:
-            '"scale"': размер
-            '"x"': позиция абсцисс (x)
-            '"y"': позиция ординат (y)
-            '"costume"': костюм
-            '"direction"': направление движения
-            '"tint"': оттенок
       gamelab_turn:
         options:
           DIRECTION:
@@ -834,8 +717,6 @@ ru:
             '"space"': космос
       gamelab_whenLeftArrow:
         text: когда стрелка влево нажата
-      gamelab_whenMouseClicked:
-        text: когда щёлкнули мышкой
       gamelab_whenPressedAndReleased:
         options:
           DIR:
@@ -845,11 +726,6 @@ ru:
             "'right'": вправо
       gamelab_whenRightArrow:
         text: когда стрелка вправо нажата
-      gamelab_whenTouchingSet:
-        options:
-          CONDITION:
-            '"when"': когда
-            '"while"': пока
       gamelab_whenUpArrow:
         text: когда стрелка вверх нажата
       gamelab_whileDownArrow:

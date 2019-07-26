@@ -142,7 +142,7 @@ class Homepage
           url: "/hourofcode/overview"
         }
       ]
-    elsif hoc_mode == "post-hoc"
+    elsif ["post-hoc", "pre-hoc"].include? hoc_mode
       [
         {
           text: "homepage_action_text_learn",
@@ -413,7 +413,7 @@ class Homepage
   end
 
   def self.show_professional_learning_banner(request)
-    request.language == "en"
+    false
   end
 
   def self.get_dance_stars

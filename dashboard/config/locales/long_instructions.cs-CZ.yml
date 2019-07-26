@@ -2,106 +2,43 @@
 cs-CZ:
   data:
     long_instructions:
-      2-3 Artist 3.4: Blok "skoč" přesune umělce bez toho aby kreslil. Vytvoř přerušovanou
-        čáru za použití bloků "skoč" a "posuň".
       2-3 Artist 4: Pomoz mi dokončit domeček pro tuto kočičku.
-      2-3 Artist 9: Dokončete tohoto draka
+      2-3 Artist 9 NEW: Dokončete tohoto draka
       2-3 Artist Debugging 10: |-
         Směrové tlačítka na mém herním ovladači jsou příliš úzká.
 
         Můžeš je udělat širší od 10 pixelů?
 
         Zkus nejprve kód spustit, abys viděl(a), co je špatně.
-      2-3 Artist Debugging 11: Pomoz mi dokončit mé krásné sněhové vločky. Kolikrát
-        musím "opakovat", abych to dokončil?
-      2-3 Artist Debugging 2: 'Kód pro tři vousy, které vidíš, je špatný. Rada: každý
-        vous je dlouhý 75 pixelů. Oprav kód k nakreslení vousů.'
-      2-3 Artist Debugging 3: 'Moje loď má díru! Můžeš to opravit změnou úhlu čáry?
-        Rada: poslední úhel je mimo o 15 stupňů.'
-      2-3 Artist Debugging 5: 'Kód pro nohy a chodidla, které vidíš, je špatný. Rada:
-        Noha je příliš dlouhá, možná bude třeba odstranit nohu (slovní hříčka)'
-      2-3 Artist Debugging 6: Vypadá to, že sedím na židli, které chybí noha. Upravte
-        bloky k nakreslení nohy.
-      2-3 Artist Debugging 7: Vypadá to, že C v kódu je nakresleno pozpátku. Můžeš
-        to udělat, aby to vypadalo jako C?
-      2-3 Artist Debugging 8: Můj Větrník není dokončen. Kolikrát je to třeba opakovat,
-        aby se to dokončilo?
       2-3 Artist Debugging 9: |-
         Něco nefunguje!
 
         Kód pro tento stonek je chybný. Zvládneš vymyslet, jak umělce navést na správnou cestu?
       2-3 Artist Free Play: Zahraj si zdarma! Nakresli si něco, co bys chtěl.
-      2-3 Artist Functions 11.5: Tady je to stejné, funkce "Nakreslit šestiúhelníku".
-        Co se stane, když se otočí jen o 60 stupňů při každém opakování?
-      2-3 Artist Functions 12: 'Funkce jsou opravdu skvělé ke vícenásobnému kreslení
-        složitých věci. Můžeš použít funkci "nakreslit květinu" vyplnit ve zbytku
-        pole květináč? (Rada: rostliny jsou oddělené délkou 100 pixelů)  '
-      2-3 Artist Functions 2: Funkce ti umožňují definovat nové bloky! Přemístili
-        jsme bloky k nakreslení čtverce do funkce nazvané "nakreslit čtverec". Můžeš
-        použít funkci "nakreslit čtverec" k vytvoření brýlí? Čtverce jsou od sebe
-        75 pixelů.
-      2-3 Artist Functions 3: Uprav funkci nakreslit čtverec s délkou strany 115 a
-        nakresli větší brýle. Čtverce jsou teď od sebe 45 pixelů.
-      2-3 Artist Functions 4: Použij blok "opakování" k nakreslení těchto 3 čtverců.
       2-3 Artist Loops New 10: Teď spojme v cyklu dohromady několik V.
       2-3 Artist Loops New 12: 'Nakresli diamant se stranou 100 pixelů. '
       2-3 Artist Loops New 13: |-
         Připravili jsme pro tebe kód (šedý), který vytvoří jeden diamant.
 
         Opakuj tento šedý kód, abys vytvořil zábavný vzor!
-      2-3 Artist Loops New 2: Zde je část kódu použitého k nakreslení čtverce. Co
-        se stane, když použiješ blok opakování pro 4 krát spuštění tohoto kódu?
       2-3 Artist Loops New 9: K dokončení šipky nakresli jednoduché V (kde obě strany
         jsou 50 pixelů).
       2-3 Artist Nested Loops 10: Opakuj tento kód 12 krát k dokončení vzoru.
-      2-3 Artist Nested Loops 11: Opakovat tento kód 4 krát k dokončení vzoru, otoč
-        o 90 ° po každém průchodu.
       2-3 Artist Nested Loops 12: Opakovat tento kód 12 krát dokončit kudrlinek.
       2-3 Artist Nested Loops 2: Nyní zopakuj trojúhelník 6 krát. Po nakreslení každého
         trojúhelníku je třeba se otočit o 60 stupňů před kreslením dalšího.
-      2-3 Artist Nested Loops 4: 'Opakovat tento kosodélník 12 krát k nakreslení květiny.
-        Rada: 12 kosodélníků je stejně udělaná jako 12 trojúhelníků, co jsi udělal
-        - kolik musíš otočit po každém tvaru?'
-      2-3 Artist Nested Loops 5: Vyplň okna budovy vnořeným cyklem. Okna jsou dlouhá
-        20 pixelů a od sebe 20 pixelů.
-      2-3 Artist Nested Loops 7: Opakovat 10 krát tento trojúhelník k nakreslené slunce.
-        Budeš se muset přesunout a otočit po každém trojúhelníku. Můžeš zjistit, kolik
-        se musíš otočit vydělením počtu stupňů v kruhu počtem vytvořených obrazců.
-      2-3 Artist Nested Loops 8: Přidejme nyní trochu trávy na náš obrázek. Každý
-        trs trávy je od sebe 50 pixelů.
       2-3 Artist Nested Loops 9: Nyní dokončíme obrázek přidáním květiny. Květinu
         nakreslíš pomoci 12 diamantů.
       2-3 Artist Nested Loops Free Play: Zahraj si zdarma, nakresli něco cool s vnořenými
         cykly.
-      2-3 Bee Conditionals 11: Sbírej nektar, kde květy mají nektar.
-      2-3 Bee Conditionals 13: 'Sbírej nektar a udělej med. Rada: co se stane, když
-        používáš "if nektar" na červený květ? Můžeš to dokončit s cyklem?'
-      2-3 Bee Conditionals 15: Sbírej nektar ze všech čtyř květů.
-      2-3 Bee Conditionals 3: Pomoz mi sesbírat všechen nektar z květů a udělat med.
-        Použij cyklus.
       2-3 Bee Debugging 10: |-
         S téhle hádanky se mi točí hlava!
 
         Oprav chybu/chyby k sesbírání veškerého nektaru a vyrobení všeho medu.
-      2-3 Bee Debugging 3: Tyto bloky mě opravdu štvou. Oprav chybu(y), aby se sesbíral
-        všechen nektar a udělal všechen med.
-      2-3 Bee Debugging 6: Tyto bloky mě opravdu štvou. Oprav chybu(y), aby se sesbíral
-        všechen nektar a udělal všechen med.
-      2-3 Bee Debugging 9: Tyto bloky mě opravdu štvou. Oprav chybu(y), aby se sesbíral
-        všechen nektar a udělal všechen med.
       2-3 Bee Debugging Assessment 1: |-
         **Hodnocení:** Nyní je čas ukázat, co umíš!
 
         Oprav chybu/chyby k sesbírání všeho nektaru a vyrobení veškerého medu.
-      2-3 Bee Functions 10: Fialové květiny mohou mít buď 1 nebo 0 nektaru.  Vytvoř
-        funkci ke sběru nektaru pouze z fialových květy mající nektar.
-      2-3 Bee Functions 2: Funkce jsou bloky kódu, provádějící úkol. Použij funkci
-        "dostat 5" k získání 5 nektarů najednou. Přesvědč se, zda používáš taky cyklus
-        k získání ideálního počtu bloků.
-      2-3 Bee Functions 4: Funkce "posunout a dostat nektar" otočí včelu, sbírá nektar
-        a vrací včelu tam, kde to začalo. Použij funkci sesbírat všechen nektar.
-      2-3 Bee Loops 1: 'Každý květ obsahuje jednu jednotku nektaru. Sbírej nektar
-        z každého květu. '
       2-3 Bee Loops 3A: Použij cyklus `opakuj` k sesbírání všeho nektaru.
       2-3 Bee Loops 3B: Nyní použij blok `opakuj` k sesbírání všeho nektaru a vyrobení
         veškerého medu.
@@ -109,109 +46,21 @@ cs-CZ:
         Kolik smyček potřebuješ v této hádance?
 
         Smyčky jsou tví kamarádi! Použij je tak, abys dokončil tuto hádanku s co nejmenším počtem bloků.
-      2-3 Bee Loops 8: Fialové květiny mají neznámé množství nektaru. Použij cyklus
-        "while nektar" sesbírat všechen nektar. Tento cyklus bude fungovat tak dlouho,
-        pokud je podmínka pravdivá, v tomto případě nektar > 0.
       2-3 Maze 15: V této hádance ti dva cykly `opakuj` pomohou dostat se k prasátku
         pomocí co nejméně bloků!
-      2-3 Maze Loops 18: Dostaň mě ke slunečnici!
-      4-5 Artist 2: Dokážeš opakovat tento kód k dokončení čtverce?
       4-5 Artist 3.5: |-
         Ok, zkus přijít na to, co se stane, když spustíš tento kód (nebo to zkus stisknutím "Spustit").
 
         Pak opakuj kód několikrát, aby se kresba dokončila!
-      4-5 Artist 5: Jaký úhel použiješ?
-      4-5 Artist 6: |-
-        Tento rovnostranný trojúhelník má úhly 60, 60,
-        a 60 stupňů. Každá strana má 200 pixelů. Dokonči kresbu.
       4-5 Artist Free Draw 1: Volná kresba! Nakresli co tě napadne.
-      4-5 Artist Patterns 1: Umíš nakreslit tento čtverec pomocí cyklu? Každá strana
-        je dlouhá 20 pixelů.
-      4-5 Artist Patterns 12: Když zkopíruješ tento cyklus a otočíš vlevo místo vpravo,
-        co se stane? Můžeš to zopakovat k kreslení této vlny?
-      4-5 Artist Patterns 13: Teď musíme opakovat to celé čtyřikrát k vytvoření tento
-        rámečku k obrázku. Pozor na rohy - nemůžeš je jen otočit o 90 stupňů! Pokud
-        60 krát se opakují 3 stupně udělá se půlkruh, který z těchto bloků kódu bude
-        Čtvrtkruh pro rohy?
-      4-5 Artist Patterns 3: Teď pojďme hlouběji o jednu úroveň. Vnořili jsme celý
-        blok kódu do jiného cyklu, ale umělec se musí dostat zpět na místo další řádky.
-        Který z těchto bloků kódu můžeš umístit na konec vnějšího cyklu, aby nakreslil
-        celou mřížku?
-      4-5 Artist Patterns 8: Použij cyklus k nakreslení tohoto šestiúhelníku se stranami
-        40 pixelů a úhlu 60 stupňů.
-      4-5 Artist Patterns 9: 'Zopakuj nyní tento kód 3 krát k nakreslení celé řádky.
-        Rada: Každý šestiúhelník je 80 pixelů široký od nejvzdálenějších bodů zleva
-        doprava.'
-      4-5 Artist Patterns Free Play: Zdarma si pohraj - zkus si od ruky udělat vlastní
-        vzor!
-      4-5 Bee Conditionals 2: Včela chce právě teď jen nektar. Všechny objekty jsou
-        květiny, takže pod KAŽDÝM MRAKEM zjisti, jestli se skrývá květ. Pokud ano,
-        můžeš získat nektar.
-      4-5 Bee Conditionals 5: Může být květ nebo plástve pod těmito mraky. Použij
-        if/else bloky ke sběru nektaru, pokud je to květina, jinak dělej med (protože
-        je to plástev).
-      4-5 Bee Conditionals 6: Tento Fialový květ může mít buď 3, 2 nebo 1 nektar.
-        Zde je blok if-else kombinovaný s jiným if-else blokem k vytvoření if, else-if,
-        else bloku. Dokonči řešení pro sběr neznámé množství nektaru.
-      4-5 Bee Conditionals 7: Pamatujte si, že fialové květy mohou mít buď 3, 2 nebo
-        1 nektarů. Dokonči funkci "kontrolovat fialový květ" a použít ji sesbírat
-        všechen nektar na květinách.
-      4-5 Bee Conditionals 8: Napiš uvnitř funkce "kontrolovat květinu k tvorbě medu".
-        Tvoje funkce by měla zkontrolovat, zda fialový květ má 3, 2 nebo 1 nektaru
-        a sesbírat všechen nektar. Potom se přesuň vpřed a udělej med.
-      4-5 Bee Conditionals Assessment 1: 'Hodnocení: Tento kód je chybný. Dokonči
-        funkci "získat nektar nebo med" a potom ji vyvolej sesbírat všechen nektar
-        a med. Pamatuj si, že fialové květy mohou mít, 3, 2 nebo 1 nektarů.'
-      4-5 Bee Debugging 1: Tyto bloky mě opravdu štvou. Umíš je opravit?
-      4-5 Bee Debugging 6: Fialový květ má neznámé množství nektaru. Oprav bloky sesbírat
-        všechen nektar z květu.
+      4-5 Artist Patterns 7: Upravíme kód z poslední puzzlu, abychom udělali z toho
+        složitěji vzorek. Všimni si, jak se teď překrývají kosodélníky, zkus změnit
+        první "skok zpět" ze 100 na 50 (polovina dál) - teď jak daleko by měl umělec
+        jít při druhém "skočit dozadu"?
       4-5 Bee Nested Loops 4: 'Sesbírej všechen nektar z každého květu a udělej med
         na každé plástvi. Použij vnořené cykly. '
-      4-5 Bee Nested Loops Assessment 1: Hodnocení - sesbírat všechen nektar a udělat
-        všechen med pomocí cyklů.
-      4-5 Maze 9: Vytvoř smyčku s blokem "opakovat do".
-      4-5 Maze Conditionals 1: Použij bloku opakování až do dostat zombie ke slunečnici.
-      4-5 Maze Conditionals 10: "Dokážete přidat jen 3 bloky abyste pomohli zombiemu
-        vyřešit více bludišť? \\\r \\\r pokud to uděláte správně, může chodit všechmi
-        křivolakými cestami bez ohledu na délku!"
-      4-5 Maze Conditionals 2: Použij bloku opakování až do dostat zombie ke slunečnici.
-      4-5 Maze Conditionals 3: 'Použij blok "if" abych se rozhodoval, kdy se otočit.
-        Rada: stačí ti pouze jeden další blok, ale naučit se, jak jsme ti to nachystali,
-        aby si to příště dokázal sám.'
-      4-5 Maze Conditionals 4: Dobře, tohle je stejné jako předchozí puzzle, ale musíš
-        si pamatovat, jak jsi použil dohromady bloky "if" a "opakovat".
-      4-5 Maze Conditionals 5: Já chci slunečnici! Použij blok "if" a dostaň mě tam
-        s co nejmenším počtem bloků.
-      4-5 Maze Conditionals 6: Já chci slunečnici! Použij blok "if" a dostaň mě tam
-        s co nejmenším počtem bloků.
-      4-5 Maze Conditionals 7: Dobře, pojďme to znova procvičit - není to příliš jiné,
-        ale dávej pozor na masožravky!
-      4-5 Maze Conditionals 8: Blok "if/else" ověřuje podmínku a poté udělá jednu
-        NEBO druhou věc. Zkus použít tento blok, abys mě dostal ke slunečnici.
-      4-5 Maze Conditionals 9: Další cvičení pro blok "if-else". Zvládneš to na první
-        pokus?
-      4-5 Maze Conditionals Assessment 1: Použij bloky "opakovat až do" a "if-else"
-        dostat mne ke slunečnici pokud možná několika bloky.
-      4-5 Nested Loops 12: Umíš nakreslit těchto 36 trojúhelníků pomocí vnořených
-        cyklů?
-      4-5 Nested Loops 3: "Vytvoř slunce vnořením počátečního kódu do jiného cyklu.
-        Tomu se říká vnořené cykly. \\\r"
       4-5 Nested Loops 5: Zacykluj daný kód k vytvoření větrného mlýnu.
-      4-5 Nested Loops 6: Umíš nakreslit šestiúhelník opakováním kódu trojúhelníku?
-      4-5 Nested Loops 7: 'Zacykluj 10 krát tento návrh. Kolikrát se musíš otočit
-        při každém opakování? (Rada: Co je 360 děleno 10?)'
-      4-5 Nested Loops 8: 'Zacykluj 10 krát tento návrh. Kolikrát se musíš otočit
-        při každém opakování? (Rada: Co dává 360 děleno 10?)'
       4-5 Nested Loops 9: Nakresli zuby v tlamě aligátora!
-      4-5 While Loops 1: Přesuň mě do díry a naplň ji s dvěma lopatami špíny pomocí
-        bloku "výplň".
-      4-5 While Loops 2: Přesuň mě na hromadu kompostu a odstraň ji 5 lopatami na
-        kopečky pomocí bloku 'odstranit'.
-      4-5 While Loops 3: 'Přesuň mě na hromadu a odstraň všechno přesunutím do díry
-        a vyplň ji zcela.  Rada: Použij pokud možno  pár bloků.'
-      4-5 While Loops 4: 'Wow,  našel jsem opravdu hluboké díry! Nevím kolik se potřebuje
-        spousty  lopat špíny.  Umíš napsat program, který ji vyplní, dokud je ještě?  Rada:
-        Zkus tentokrát  použít while cyklus.'
       CSD U3 Entertainment Sample 4: |-
         # Razítkovací panel
 
@@ -227,34 +76,8 @@ cs-CZ:
       CSD U6 iter predict bubbles: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       CSD U6 iter predict bubbles_2018: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       CSD U6 iter predict bubbles_2019: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
-      Course 4 Artist 13: Stále si hraješ?  Zde je prázdné plátno, kde si můžeš navrhnout
-        cokoliv chceš!
-      Course 4 Artist 6: 'Dokonči kód k nakreslení těchto trojúhelníků. Rada: Jsou
-        to 3 trojúhelníky v rozsahu otáčení o 360 stupňů... kolikrát se 3 vejde do
-        360?'
-      Course 4 Artist 8: Nakresli slunce opakováním tohoto celého bloku kódu.
-      Course 4 Artist 8a: "Nezapomeň na tento tvar?  Nyní umožníme  postavit bez udání
-        bloky začít! \\\r Rada: existují 3 trojúhelníky v otáčení o 360 stupňů...
-        kolikrát se 3 vejde do 360?"
-      Course 4 Artist For Loops 4: 'Jak bys změnil, co jsi se naučil o kreslení těchto
-        čtverců? Začíná se na délce 15 pixelů, největší má délku 300 pixelů, a každý
-        čtverec je větší o 15 pixelů než ten poslední. '
       Course 4 Artist For Loops 6a: Udělej tři malé změny do kódu z poslední úrovni,
         abys to dosáhl!
-      Course 4 Bee Params 1: Použijte funkci "dostat 3 nektary", která obrací, přesune
-        se ke sběru nektaru a pak se vrací do původního umístění. Zapiš posloupnost
-        sesbírat všechen nektar pomocí "dostat 3 nektary."
-      Course 4 Play Lab Params 4: Zde je funkce nazvaná "hlídka." Uprav ji k přesunutí
-        Kočky 400 pixelů a pak dolů 400 pixelů.
-      Course 4 Play Lab Params 8: Použij blok "když aktér se dotkne" pošle psa zpět
-        do levého horního pouze když pes se dotkne některého z ostatních aktérů.
-      Course 4 Play Lab Vars 2: Závod v tom posledním puzzle nebyl velmi fér! Změň
-        proměnnou "pes\_rychlost", a ujisti se, že můžeš sesbírat více vlajek než
-        kočka. Kdo první sesbírá 10 vyhrává!
-      Course 4 Play Labs For Loops 1: Udělejme, aby pes řekl každé číslo od 1 do 100.
-        Použij for cyklus a čítač, aby řekl proměnnou čítače pokaždé, když běží cyklus.
-      Course 4 Playlab For Loops 5b: Upravte rozsahy cyklů "počítat s" tak, aby obě
-        postavy skončily přesně ve stejném místě.
       CourseD_Dance_Party_01: |-
         _Pojďme uspořádat taneční večírek!_
 
@@ -501,15 +324,18 @@ cs-CZ:
         v korálovém útesu.
       HOC 2018 Level_9b: Dostal(a) jsi se k útesu, nyní hledej **Srdce moře** ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png)
         ! Dostaň se pomocí modrého a červeného korálu k **truhle** s pokladem ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png).
-      K-1 Bee Loops 2: Používej cyklus k pohybu a pak dostaneš nektar a vyrobíš med!
-      K-1 Bee Loops 3: Používej cykly, abys dostal nektar a udělal med!
-      K-1 Bee Loops 4: Použij cykly, abys dostal nektar, udělal med a pohyboval!
+      K-1 Bee Loops 3: Používej tři opakovací cykly, abys dostal nektar a udělal med!
       K-1 Bee Loops 5: Použij cykly, aby dostal nektar a med!
-      K-1 Bee Loops 6: Použij cykly, abys dostal nektar, zlato a k pohybu!
-      K-1 Maze Loops 11: Dostaň mne k prasátku! Použij opakovací cykly.
-      K-1 Maze Loops 12: Dostaň mne k prasátku! Použij opakovací cykly.
+      K-1 Bee Loops 6: Použij cykly, abys dostal nektar, med a k pohybu!
+      K-1 Maze Loops 10: "Dostaň mě k prasátku!\\\rPoužití cyklu 'opakuj' to hodně
+        zjednoduší."
       K-1 Maze Loops 2: Použij Opakovací blok, abys mne dostal k prasátku!
-      K-1 Maze Loops 8: Dostaň mne k prasátku! Použij opakovací cykly.
+      K-1 Maze Loops 3: Dostaň mě k prasátku! Určitě použij 'opakuj'.
+      K-1 Maze Loops 5: Dostaň mě k prasátku! Určitě použij 'opakuj'.
+      K-1 Maze Loops 6: Dostaň mě k prasátku! Určitě použij 'opakuj'.
+      K-1 Maze Loops 7: Dostaň mě k prasátku! Určitě použij 'opakuj'.
+      K-1 Maze Loops Assessment 1: "Podívej na vše, co jsme se naučili!\\\rPoužij
+        cyklus 'Opakuj' abys mě dostal k prasátku!"
       MC_HOC_2017_01_RETRY: "Hráč {currentPlayerName} je uvězněn v domě, ale na pomoc
         mu přišel agent!   \\\r\n \\\r\n   \\\r\nPřichyťte v pracovním prostoru blok
         „pohyb vpřed“ k bloku „při spuštění“, abyste agenta přesunuli na nášlapnou
@@ -579,26 +405,13 @@ cs-CZ:
         pomocí agentova kódu."
       MC_HOC_2017_FP20x20_2019: "**Volná hra:** Teď je to na vás! Prozkoumejte tento
         svět pomocí agentova kódu."
-      NEW Course 4 Artist Functions 12: Použij funkci "nakreslit čáru čtverců" z posledního
-        puzzlu, abys nakreslil tento vzor."
-      NEW Course 4 Artist Functions 3: Zde je nový typ bloku. Nazývá "Funkce" blok.
-        Klepni na tlačítko "Upravit" a pak vyplň jej kódem pro kreslení čtverce o
-        stranách 100 pixelů. Po dokončení úprav funkci, klepni na tlačítko "Zavřít"
-        přejdi zpět do programu.
-      NEW Course 4 Artist Functions 9: Umíš to vyřešit přidáním pouze jednoho bloku?
-      NEW Course 4 Artist Params 4: Všiml jsi si něčeho neobvyklého na těchto funkčních
-        blocích? Klepni na "Run", abys vidělco se stane.
-      NEW Course 4 Artist Vars 12: Nyní znovu vytvoř algoritmus z poslední úrovně
-        a vytvoř pětiúhelník se stranami 150.
-      NEW Course 4 Artist Vars 4: 'Zkusme to znova. Lze nastavit proměnnou délka,
-        abys udělal tento cool návrh šestiúhelníků? Rada: Je to násobkem 10.'
-      NEW Course 4 Artist Vars 6: "Nakresli tento vzor do správných míst zavěšením
-        proměnné délky, pak nastavením správné hodnoty pro délku. (Rada: Je to násobek
-        10).  \\\r \\\r Uvidíš, jak jen  nastavíš hodnotu pro délku, a kód používá
-        všude správnou hodnotu? \\\r \\\r \\\r"
       Overworld Move to Sheep: Abys došel k ovci, přidej druhý příkaz "posunout vpřed".
       Overworld Move to Sheep_2019: Abys došel k ovci, přidej druhý příkaz "posunout
         vpřed".
+      course1_artist_loops_challenge2: Jdem si hrát. Nakresli tolik X kolik chceš!
+        Uděláš tři v řadě?
+      course1_maze_seq_challenge2: V každém směru se můžeš posunout pouze čtyřikrát.
+        Dokážeš najít cestu než ti dojdou bloky?
       course2_bee_conditionals_challenge1: Sesbírej všechen nektar a vyrob všechen
         med. Nektar můžeš sbírat pouze z květin a med vyrábět do pláství. Zkontroluj
         každé místečko, jestli je tam květina nebo plástev.

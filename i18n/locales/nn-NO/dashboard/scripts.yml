@@ -2345,6 +2345,10 @@ nn:
           stages:
             While Loops:
               name: Medan-løkker
+        csp1-pilot:
+          stages:
+            Number Systems:
+              name: Talsystem
         time4csdemo:
           stages:
             Crowdsourcing:
@@ -2359,3 +2363,17 @@ nn:
           stages:
             Graph Paper Programming:
               name: Programmering på millimeterpapir
+        csd2-pilot:
+          stages:
+            Lists:
+              name: Lister
+        csd3-pilot:
+          stages:
+            Variables:
+              name: Variablar
+            Conditionals:
+              name: Betingelser
+            Velocity:
+              name: Fart
+            Functions:
+              name: Funksjonar

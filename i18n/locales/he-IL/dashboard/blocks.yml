@@ -590,9 +590,11 @@ he:
             '"0"': '0'
             '"2"': '2'
             '"3"': '3'
+            '"4"': '4'
             '"5"': '5'
             '"6"': '6'
             '"7"': '7'
+            '"8"': '8'
             '"9"': '9'
       Dancelab_whenPeak:
         text: כאשר {RANGE} מגיע לשיא
@@ -603,20 +605,6 @@ he:
             '2': טְרֶבֶּל
       Dancelab_whenSetup:
         text: הגדרה
-      gamelab_beginBehavior:
-        text: התחל {BEHAVIOR}
-      gamelab_changeColor:
-        text: שנה {COLOR} {METHOD} ב {AMOUNT}
-        options:
-          METHOD:
-            '"tint"': גוון
-      gamelab_changeColorBy:
-        text: שנה {COLOR} {METHOD} ב {AMOUNT}
-        options:
-          METHOD:
-            '"hue"': גוון
-            '"saturation"': רוויה
-            '"brightness"': בהירות
       gamelab_changePropBy:
         text: שנה {PROPERTY} של {SPRITE} ב {VAL}
         options:
@@ -644,14 +632,6 @@ he:
             'false': שגוי
       gamelab_destroy:
         text: הסר את {THIS}
-      gamelab_distance:
-        text: מרחק מנקודה {LOCATION1} לנקודה {LOCATION2}
-      gamelab_enableDebug:
-        text: הדלק דיבוג
-      gamelab_getAnim:
-        options:
-          COSTUME:
-            '"costume"': תחפושת
       gamelab_getProp:
         text: "{PROPERTY} של {SPRITE}"
         options:
@@ -666,8 +646,6 @@ he:
         text: הסתר כותרת מסך
       gamelab_jumpTo:
         text: "{SPRITE} קפוץ למיקום {LOCATION}"
-      gamelab_keyDown:
-        text: כפתור {KEY} לחוץ
       gamelab_keyPressed:
         options:
           CONDITION:
@@ -701,66 +679,17 @@ he:
             '"x"': x
             '"y"': 'y'
             '"z"': z
-      gamelab_layoutSprites:
-        options:
-          FORMAT:
-            '"border"': גבול
-            '"inner"': בתוך ריבוע
-            '"circle"': עיגול
-            '"grid"': רשת
-            '"row"': שורה
-            '"column"': עמודה
-            '"x"': קְרִיס-קְרוֹס
-            '"plus"': פלוס
-            '"random"': אקראי
-      gamelab_locationAdd:
-        options:
-          OPERATOR:
-            "'plus'": "\\+"
-            "'minus'": "\\-"
-      gamelab_locationConstant:
-        text: "{DIR}"
-        options:
-          DIR:
-            "'north'": צפון
-            "'south'": דרום
-            "'east'": מזרח
-            "'west'": מערב
-      gamelab_locationDelta:
-        options:
-          DIR:
-            "'north'": צפון
-            "'south'": דרום
-            "'east'": מזרח
-            "'west'": מערב
-            "'random'": אקראי
-      gamelab_locationEast:
-        text: מזרח
       gamelab_locationMouse:
         text: מיקום עכבר
-      gamelab_locationNorth:
-        text: צפון
       gamelab_locationOf:
         text: מיקום {SPRITE}
-      gamelab_locationSouth:
-        text: דרום
-      gamelab_locationWest:
-        text: מערב
       gamelab_location_picker:
         text: "{LOCATION}"
-      gamelab_location_variable_get:
-        text: מיקום {VAR}
-      gamelab_location_variable_set:
-        text: שנה מיקום של {VAR} ל-{VAL}
-      gamelab_makeNewGroup:
-        text: צור קבוצה חדשה
       gamelab_mirrorSprite:
         options:
           DIRECTION:
             '"right"': ימינה
             '"left"': שמאלה
-      gamelab_mixColors:
-        text: ערבב {COLOR1} עם {COLOR2}
       gamelab_mouseLocation:
         text: מיקום עכבר
       gamelab_randColor:
@@ -779,20 +708,6 @@ he:
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': קשת
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': תת-ימי
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': חורף
-      gamelab_setPosition:
-        text: העבר את {THIS} לעמדה {POSITION}
-        options:
-          POSITION:
-            "{x: 50, y: 50}": למעלה משמאל
-            "{x: 200, y: 50}": למעלה באמצע
-            "{x: 350, y: 50}": למעלה מימין
-            "{x: 50, y: 200}": משמאל באמצע
-            "{x: 200, y: 200}": באמצע
-            "{x: 350, y: 200}": מימין באמצע
-            "{x: 50, y: 350}": למטה משמאל
-            "{x: 200, y: 350}": למטה במרכז
-            "{x: 350, y: 350}": למטה מימין
-            '"random"': אקראי
       gamelab_setProp:
         options:
           PROPERTY:
@@ -810,46 +725,11 @@ he:
             '"height"': גובה
       gamelab_setTint:
         text: שנה צבע של {THIS} ל-{COLOR}
-      gamelab_setup:
-        text: הגדרה
       gamelab_spriteClicked:
         options:
           CONDITION:
             '"when"': כאשר
             '"while"': כאשר
-      gamelab_spriteClickedSet:
-        options:
-          CONDITION:
-            '"when"': כאשר
-            '"while"': כאשר
-      gamelab_spriteCostume:
-        text: "{COSTUME}"
-      gamelab_spriteDirection:
-        text: "{DIRECTION}"
-      gamelab_spritesWhere:
-        options:
-          PROPERTY:
-            '"scale"': גודל
-            '"x"': מיקום בציר x
-            '"y"': מיקום בציר y
-            '"costume"': תחפושת
-            '"direction"': כיוון תנועה
-            '"rotation"': סיבוב או כיוון
-            '"tint"': גוון
-      gamelab_spritesWhereGenerator:
-        options:
-          PROPERTY:
-            '"scale"': גודל
-            '"x"': מיקום בציר x
-            '"y"': מיקום בציר y
-            '"costume"': תחפושת
-            '"direction"': כיוון תנועה
-            '"rotation"': סיבוב או כיוון
-            '"tint"': גוון
-          OP:
-            '"="': "="
-            '">"': ">"
-            '"<"': "\\<"
       gamelab_turn:
         options:
           DIRECTION:
@@ -875,11 +755,6 @@ he:
             "'down'": למטה
             "'left'": שמאלה
             "'right'": ימינה
-      gamelab_whenTouchingSet:
-        options:
-          CONDITION:
-            '"when"': כאשר
-            '"while"': כאשר
       gamelab_whileKey:
         options:
           KEY:

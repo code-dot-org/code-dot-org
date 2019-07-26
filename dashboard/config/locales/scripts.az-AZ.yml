@@ -864,3 +864,15 @@ az:
           stages:
             Wrap Up:
               name: Yekun
+        csd2-pilot:
+          stages:
+            Lists:
+              name: Siyahılar
+        csd3-pilot:
+          stages:
+            Variables:
+              name: dəyişənlər
+            Conditionals:
+              name: Şərti ifadələr
+            Functions:
+              name: funksiyalar

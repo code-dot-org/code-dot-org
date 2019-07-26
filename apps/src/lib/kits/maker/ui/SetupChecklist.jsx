@@ -5,7 +5,7 @@ import React, {Component} from 'react';
 import * as utils from '../../../../utils';
 import trackEvent from '../../../../util/trackEvent';
 import SetupChecker from '../util/SetupChecker';
-import UnsafeRenderedMarkdown from '@cdo/apps/templates/UnsafeRenderedMarkdown';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import i18n from '@cdo/locale';
 import {
   isWindows,
@@ -211,7 +211,7 @@ export default class SetupChecklist extends Component {
   }
 
   contactSupport() {
-    return <UnsafeRenderedMarkdown markdown={i18n.contactGeneralSupport()} />;
+    return <SafeMarkdown markdown={i18n.contactGeneralSupport()} />;
   }
 
   render() {
@@ -317,7 +317,7 @@ export default class SetupChecklist extends Component {
         </div>
         <div>
           <h2>{i18n.support()}</h2>
-          <UnsafeRenderedMarkdown markdown={i18n.debugMakerToolkit()} />
+          <SafeMarkdown markdown={i18n.debugMakerToolkit()} />
           {this.contactSupport()}
         </div>
       </div>

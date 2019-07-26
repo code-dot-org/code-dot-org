@@ -164,6 +164,7 @@ sl:
     type:
       word: 'Skrivna beseda'
       email: 'Elektronska pošta'
+      clever: 'Clever'
   follower:
     invite_sent: 'Povabilo poslano'
     added_teacher: '%{name} dodan/a kot tvoj/a učitelj/ica'
@@ -249,6 +250,7 @@ sl:
       iceage: 'Ledena doba'
       infinity: 'Neskončnost'
       minecraft_adventurer: 'Minecraft Pustolovec'
+      minecraft_aquatic: 'Minecraft Aquatic'
       minecraft_designer: 'Minecraft'
       playlab: 'Play Lab'
       starwars: 'Star Wars'

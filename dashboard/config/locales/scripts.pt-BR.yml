@@ -2043,6 +2043,8 @@ pt-BR:
               name: APIs e parâmetros de função
             Creating Functions:
               name: Criando funções
+            Creating functions with Parameters:
+              name: Criação de funções com parâmetros
             Functions and Top-Down Design:
               name: Funções e design de cima pra baixo
             Looping and Random Numbers:
@@ -2051,6 +2053,8 @@ pt-BR:
               name: Tarefa para prática - Projete uma cena digital
             The Need For Programming Languages:
               name: A necessidade de linguagens de programação
+            The Need for Algorithms:
+              name: A necessidade de algoritmos
             Using Simple Commands:
               name: Usando comandos simples
             Unit 3 Chapter 1 Assessment:
@@ -2544,6 +2548,8 @@ pt-BR:
               name: Websites com várias páginas
             Classes:
               name: Classes
+            External Style Sheets:
+              name: Folhas de estilo externas
             Usability and Accessibility:
               name: Usabilidade e Acessibilidade
             Peer Review:
@@ -2560,10 +2566,18 @@ pt-BR:
               name: Funções do artista
             Sample Stage:
               name: Estágio de amostra
+            The same thing with named levels:
+              name: A mesma coisa com níveis nomeados
+            You are a coding STAR:
+              name: Você é um ESTRELA da codificação
         artistExemplar:
           description_audience: 8-18 anos de idade
         teachercon:
           stages:
+            Balancing Teachers and Tools:
+              name: Balanceamento de professores e ferramentas
+            Discovery Learning:
+              name: Aprendizagem de descoberta
             Group Work and Peer Learning:
               name: Trabalho em Grupo e Aprendizagem entre Pares
             Introduction to Teachercon:
@@ -2590,6 +2604,8 @@ pt-BR:
           stages:
             'Bee: Conditionals':
               name: 'Abelha: Condicionais'
+            Kindergarten Stage 1:
+              name: Jardim de infância Fase 1
         gradeKinder:
           stages:
             Being Safe Online:
@@ -2608,6 +2624,8 @@ pt-BR:
               name: Introdução a Laços
             Loops Unplugged:
               name: Loops off-line
+            Persistence & Frustration:
+              name: Persistência & Frustração
             Programming:
               name: Programação
             Sequences & Algorithms:
@@ -2616,6 +2634,8 @@ pt-BR:
               name: 'Algoritmos da vida real: plante uma semente'
         grade4:
           stages:
+            'Bee: Determine the Concept':
+              name: 'Abelha: determine o conceito'
             'Bee: Functions (Course 3)':
               name: 'Abelha: Funções (Curso 3)'
             Build a Star Wars Game!:
@@ -2626,6 +2646,8 @@ pt-BR:
               name: Explore ideias de projetos
             Final Project - Presentation Day:
               name: Projeto Final - Dia da Apresentação
+            'Final Project - Unplugged: Design Process':
+              name: 'Projeto Final - Desconectado: Processo de Design'
             'Final Project - Work Day: Build Project Online':
               name: 'Projeto Final - Dia de Trabalho: Construa o Projeto Online'
             'New Artist: Functions':
@@ -2650,6 +2672,10 @@ pt-BR:
               name: Introdução a Laços
             Loops Unplugged:
               name: Loops off-line
+            More Computer Science:
+              name: Mais Ciência da Computação
+            Persistence & Frustration:
+              name: Persistência & Frustração
             Programming:
               name: Programação
             Sequences & Algorithms:
@@ -2676,6 +2702,8 @@ pt-BR:
               name: Explore ideias de projetos
             Final Project - Presentation Day:
               name: Projeto Final - Dia da Apresentação
+            'Final Project - Unplugged: Design Process':
+              name: 'Projeto Final - Desconectado: Processo de Design'
             'Final Project - Work Day: Build Project Online':
               name: 'Projeto Final - Dia de Trabalho: Construa o Projeto Online'
             'Play Lab: Variables':
@@ -2810,6 +2838,8 @@ pt-BR:
               name: 'Desconectado: Condicionais com Laços de Repetição'
         alltheplcthings:
           stages:
+            Balancing Teachers and Tools:
+              name: Balanceamento de professores e ferramentas
             Group Work and Peer Learning:
               name: Trabalho em Grupo e Aprendizagem entre Pares
             Introduction to Teachercon:
@@ -2998,6 +3028,10 @@ pt-BR:
               name: 'Lições 2-3: Mensagens Binárias'
             Group Work and Peer Learning:
               name: Trabalho em Grupo e Aprendizagem entre Pares
+            Balancing Teachers and Tools:
+              name: Balanceamento de professores e ferramentas
+            Discovery Learning:
+              name: Aprendizagem de descoberta
             Measuring Student Learning:
               name: Medindo a Aprendizagem dos Estudantes
             'Lessons 4-6: Encoding and Sending Numbers':
@@ -3054,6 +3088,10 @@ pt-BR:
               name: 'Lições 12 - 13: Abstração na internet'
             Group Work and Peer Learning:
               name: Trabalho em Grupo e Aprendizagem entre Pares
+            Balancing Teachers and Tools:
+              name: Balanceamento de professores e ferramentas
+            Discovery Learning:
+              name: Aprendizagem de descoberta
             Measuring Student Learning:
               name: Medindo a Aprendizagem dos Estudantes
         basketball:
@@ -3102,6 +3140,8 @@ pt-BR:
               name: Websites com várias páginas
             Classes:
               name: Classes
+            External Style Sheets:
+              name: Folhas de estilo externas
             Peer Review:
               name: Revisão em grupo
             Digital Footprint:
@@ -3134,6 +3174,10 @@ pt-BR:
               name: 'Lições 7 - 10: Interpretando Dados Visuais'
             Group Work and Peer Learning:
               name: Trabalho em Grupo e Aprendizagem entre Pares
+            Balancing Teachers and Tools:
+              name: Balanceamento de professores e ferramentas
+            Discovery Learning:
+              name: Aprendizagem de descoberta
             Measuring Student Learning:
               name: Medindo a Aprendizagem dos Estudantes
         csd4-2017:
@@ -3220,6 +3264,8 @@ pt-BR:
               name: Programação no labirinto
             'Loops: My Loopy Robotic Friends':
               name: 'Repetições: Meus amigos robôs esquisitos'
+            More Computer Science:
+              name: Mais Ciência da Computação
             Keep it Private:
               name: Mantenha-o confidencial
             'Real-life Algorithms: Plant a Seed':
@@ -3359,6 +3405,10 @@ pt-BR:
               name: 'Lições 1 - 3: Algoritmos'
             Group Work and Peer Learning:
               name: Trabalho em Grupo e Aprendizagem entre Pares
+            Balancing Teachers and Tools:
+              name: Balanceamento de professores e ferramentas
+            Discovery Learning:
+              name: Aprendizagem de descoberta
             Measuring Student Learning:
               name: Medindo a Aprendizagem dos Estudantes
         csdgraveyard:
@@ -3367,6 +3417,8 @@ pt-BR:
               name: nova fase
             Introduction to Styling with CSS:
               name: Introdução a estilização com CSS
+            External Style Sheets:
+              name: Folhas de estilo externas
         csp4-support:
           stages:
             Unit 3 Overview:
@@ -3379,6 +3431,10 @@ pt-BR:
               name: 'Lições 5 - 7: Segurança, Codificação Assimétrica e Simétrica'
             Group Work and Peer Learning:
               name: Trabalho em Grupo e Aprendizagem entre Pares
+            Balancing Teachers and Tools:
+              name: Balanceamento de professores e ferramentas
+            Discovery Learning:
+              name: Aprendizagem de descoberta
             Measuring Student Learning:
               name: Medindo a Aprendizagem dos Estudantes
             Unit 4 Overview:
@@ -3425,6 +3481,10 @@ pt-BR:
               name: Visão geral da unidade 5
             Group Work and Peer Learning:
               name: Trabalho em Grupo e Aprendizagem entre Pares
+            Balancing Teachers and Tools:
+              name: Balanceamento de professores e ferramentas
+            Discovery Learning:
+              name: Aprendizagem de descoberta
             Measuring Student Learning:
               name: Medindo a Aprendizagem dos Estudantes
         csppostap-2017:
@@ -3985,6 +4045,8 @@ pt-BR:
               description_student: Projetos tão grandes levam tempo e muito planejamento.
                 Aqui, você aprenderá sobre o processo de design que você usará para
                 desenvolver seu próprio projeto.
+            Conditionals in Minecraft:
+              name: Condicionais no Minecraft
             'Programming: My Robotic Friends':
               name: 'Programando: Meus amigos robôs'
             Building a Foundation:
@@ -4071,6 +4133,8 @@ pt-BR:
               name: Cidadania digital
             Conditionals with Cards:
               name: Condicionais com cartas
+            Conditionals in Minecraft:
+              name: Condicionais no Minecraft
             Envelope Variables:
               name: Variáveis do envelope
             Variables in Play Lab:
@@ -4129,6 +4193,8 @@ pt-BR:
               name: nova fase
             The Need For Programming Languages:
               name: A necessidade de linguagens de programação
+            The Need for Algorithms:
+              name: A necessidade de algoritmos
             Using Simple Commands:
               name: Usando comandos simples
             Creating Functions:
@@ -4137,6 +4203,8 @@ pt-BR:
               name: Funções e design de cima pra baixo
             APIs and Function Parameters:
               name: APIs e parâmetros de função
+            Creating functions with Parameters:
+              name: Criação de funções com parâmetros
             Looping and Random Numbers:
               name: Repetição e números aleatórios
             Practice PT - Design a Digital Scene:
@@ -4206,7 +4274,7 @@ pt-BR:
             Building a Foundation:
               name: Criando uma base
             Loops in Ice Age:
-              name: Repetições na Era do gelo
+              name: Laços na Era do gelo
         csp3-a:
           stages:
             new stage:
@@ -4219,6 +4287,8 @@ pt-BR:
               name: 'Repetições: Meus amigos robôs esquisitos'
             'How it Works: The Internet':
               name: 'Como Isto Funciona: A Internet'
+            Conditionals in Minecraft:
+              name: Condicionais no Minecraft
             Variables in Play Lab:
               name: Variáveis no Laboratório
             Explore Project Ideas:
@@ -4255,6 +4325,8 @@ pt-BR:
               name: 'Repetições: Meus amigos robôs esquisitos'
             Ice Age Play Lab:
               name: Laboratório da Era do Gelo
+            Conditionals in Minecraft:
+              name: Condicionais no Minecraft
             Envelope Variables:
               name: Variáveis do envelope
             Variables in Play Lab:
@@ -4309,6 +4381,8 @@ pt-BR:
           stages:
             The Need For Programming Languages:
               name: A necessidade de linguagens de programação
+            The Need for Algorithms:
+              name: A necessidade de algoritmos
             Using Simple Commands:
               name: Usando comandos simples
             Creating Functions:
@@ -4317,6 +4391,8 @@ pt-BR:
               name: Funções e design de cima pra baixo
             APIs and Function Parameters:
               name: APIs e parâmetros de função
+            Creating functions with Parameters:
+              name: Criação de funções com parâmetros
             Looping and Random Numbers:
               name: Repetição e números aleatórios
             Practice PT - Design a Digital Scene:
@@ -4412,6 +4488,8 @@ pt-BR:
               name: Introdução
             Ice Age Play Lab:
               name: Laboratório da Era do Gelo
+            Conditionals in Minecraft:
+              name: Condicionais no Minecraft
             Envelope Variables:
               name: Variáveis do envelope
             Variables in Play Lab:
@@ -4639,6 +4717,8 @@ pt-BR:
               name: 'Como Isto Funciona: A Internet'
             'Events: The Big Event':
               name: O grande evento
+            Conditionals in Minecraft:
+              name: Condicionais no Minecraft
             Variables in Play Lab:
               name: Variáveis no Laboratório
             Explore Project Ideas:
@@ -4736,7 +4816,7 @@ pt-BR:
             Artist Binary:
               name: 'Artista: binário'
             Loops in Ice Age:
-              name: Repetições na Era do gelo
+              name: Laços na Era do gelo
             Graph Paper Programming:
               name: Programação em papel quadriculado
             Relay Programming:
@@ -4897,6 +4977,8 @@ pt-BR:
               name: Introdução
             Ice Age Play Lab:
               name: Laboratório da Era do Gelo
+            Conditionals in Minecraft:
+              name: Condicionais no Minecraft
             Envelope Variables:
               name: Variáveis do envelope
             Variables in Play Lab:
@@ -5031,6 +5113,8 @@ pt-BR:
           stages:
             The Need For Programming Languages:
               name: A necessidade de linguagens de programação
+            The Need for Algorithms:
+              name: A necessidade de algoritmos
             Using Simple Commands:
               name: Usando comandos simples
             Creating Functions:
@@ -5039,6 +5123,8 @@ pt-BR:
               name: Funções e design de cima pra baixo
             APIs and Function Parameters:
               name: APIs e parâmetros de função
+            Creating functions with Parameters:
+              name: Criação de funções com parâmetros
             Looping and Random Numbers:
               name: Repetição e números aleatórios
             Practice PT - Design a Digital Scene:
@@ -5467,7 +5553,7 @@ pt-BR:
                 contra o tempo à medida que os alunos se dividem em times e trabalham
                 juntos para escrever um programa uma instrução por vez.
             Loops in Ice Age:
-              name: Repetições na Era do gelo
+              name: Laços na Era do gelo
             Nested Loops in Bee:
               name: Laços Aninhados no Labirinto
             Conditionals with Cards:
@@ -5564,6 +5650,8 @@ pt-BR:
               name: Sequenciamento no labirinto
             Programming and Loops with the Artist:
               name: Desenhar com laços
+            Conditionals in Minecraft:
+              name: Condicionais no Minecraft
             Aquatic Conditionals in Minecraft:
               name: Condicionais Aquáticas no Minecraft
             Access Ability:
@@ -5801,9 +5889,11 @@ pt-BR:
             'Loops: My Loopy Robotic Friends':
               name: 'Repetições: Meus amigos robôs esquisitos'
             Loops in Ice Age:
-              name: Repetições na Era do gelo
+              name: Laços na Era do gelo
             Loops in Collector:
               name: Repetições com Laurel
+            Loops in Artist:
+              name: Desenho jardins com repetições
             'Events: The Big Event':
               description_teacher: |-
                 Eventos são uma ótima forma de adicionar variedade a um algoritmo pré-escrito. Algumas vezes você quer que o seu programa esteja apto a responder ao usuário exatamente quando o usuário quiser.
@@ -6061,6 +6151,8 @@ pt-BR:
           stages:
             The Need For Programming Languages:
               name: A necessidade de linguagens de programação
+            The Need for Algorithms:
+              name: A necessidade de algoritmos
             Using Simple Commands:
               name: Usando comandos simples
             Creating Functions:
@@ -6069,6 +6161,8 @@ pt-BR:
               name: Funções e design de cima pra baixo
             APIs and Function Parameters:
               name: APIs e parâmetros de função
+            Creating functions with Parameters:
+              name: Criação de funções com parâmetros
             Looping and Random Numbers:
               name: Repetição e números aleatórios
             Practice PT - Design a Digital Scene:
@@ -6193,6 +6287,8 @@ pt-BR:
           stages:
             new stage:
               name: nova fase
+            Number Systems:
+              name: Sistemas numéricos
         csd-videos:
           stages:
             new stage:
@@ -6507,3 +6603,75 @@ pt-BR:
               name: Dia 4
             Wrap Up:
               name: Resumo
+        csd1-pilot:
+          description: "Resolução de Problemas e Computação é uma introdução altamente
+            interativa e colaborativa para o campo da ciência da computação, enquadrada
+            na busca mais ampla de resolução de problemas. Você irá praticar usando
+            um processo de solução de problemas para resolver uma série de enigmas,
+            desafios e cenários do mundo real. Em seguida, você aprenderá como os
+            computadores inserem, produzem, armazenam e processam informações para
+            ajudar as pessoas a resolver problemas. A unidade é concluída com um projeto
+            em que você cria um aplicativo que ajuda a resolver um problema de sua
+            escolha.\r\n"
+          stages:
+            Processing:
+              name: Processando
+            Post-Project Test:
+              name: Teste pós-projeto
+        csd2-pilot:
+          stages:
+            Intro to HTML:
+              name: Introdução a HTML
+            Digital Footprint:
+              name: Pegada Digital
+            Lists:
+              name: Listas
+            Clean Code and Debugging:
+              name: Código limpo e depuração
+            Sources and Search Engines:
+              name: Fontes e mecanismos de pesquisa
+            Post-Project Test:
+              name: Teste pós-projeto
+            Intellectual Property:
+              name: Propriedade intelectual
+            Images:
+              name: Imagens
+        csd3-pilot:
+          description_short: Programação
+          stages:
+            Drawing in Game Lab:
+              name: Desenhando no Laboratório de Jogos
+            Shapes and Randomization:
+              name: Formas e Randomização
+            Variables:
+              name: variáveis
+            Sprites:
+              name: Sprite
+            Booleans Unplugged:
+              name: Booleanos off-line
+            Conditionals:
+              name: Condições
+            Project - Interactive Card:
+              name: Projeto - Cartão Interativo
+            Velocity:
+              name: Velocidade
+            Collision Detection:
+              name: Detecção de Colisão
+            Complex Sprite Movement:
+              name: Movimento complexo de Sprite
+            Collisions:
+              name: Colisões
+            Functions:
+              name: funções
+            The Game Design Process:
+              name: O processo de design de jogos
+            Using the Game Design Process:
+              name: Usando o processo de design de jogos
+            Project - Design a Game:
+              name: Projeto - Projetar um Jogo
+            Post-Project Test:
+              name: Teste pós-projeto
+        maddie-test:
+          stages:
+            new stage:
+              name: nova fase

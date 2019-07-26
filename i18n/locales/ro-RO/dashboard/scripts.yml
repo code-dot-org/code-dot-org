@@ -4446,6 +4446,9 @@ ro:
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
         csp1-pilot:
+          stages:
+            Number Systems:
+              name: Sisteme de numere
           description_audience: '[șir gol]'
           description_short: '[șir gol]'
           description: '[șir gol]'
@@ -4528,3 +4531,61 @@ ro:
           stages:
             Wrap Up:
               name: Încheiere
+        csd-sample-online:
+          description_audience: '[șir gol]'
+          description_short: '[șir gol]'
+          description: '[șir gol]'
+        csd1-pilot:
+          description_audience: '[șir gol]'
+          stages:
+            CS Discoveries Pre-survey:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Post-Project Test:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+        csd2-pilot:
+          description_audience: '[șir gol]'
+          stages:
+            Lists:
+              name: Liste
+            Post-Project Test:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            CS Discoveries Post Course survey:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+        csd3-pilot:
+          description_short: "Programare"
+          description_audience: '[șir gol]'
+          stages:
+            Shapes and Randomization:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Variables:
+              name: Variabile
+            Conditionals:
+              name: Condiţionale
+            Velocity:
+              name: Viteza
+            Functions:
+              name: Funcţii
+            Post-Project Test:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            CS Discoveries Post Course survey:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+        csd-bugs:
+          description_audience: '[șir gol]'
+          description_short: '[șir gol]'
+          description: '[șir gol]'
+        maddie-test:
+          title: '[șir gol]'
+          description_audience: '[șir gol]'
+          description_short: '[șir gol]'
+          description: '[șir gol]'
+        csp3-pilot:
+          description_audience: '[șir gol]'
+          description_short: '[șir gol]'
+          description: '[șir gol]'

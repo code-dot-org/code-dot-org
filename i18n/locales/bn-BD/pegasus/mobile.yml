@@ -741,20 +741,9 @@
   coursee_name: "কোর্স E"
   coursef-draft_name: কোর্স F
   coursef_name: "কোর্স F"
-  cspunit2_name: "(পুরাতন) ইউনিট ২: ইন্টারনেট"
-  cspunit3_name: "সিএস এর মূলনীতি ইউনিট ৩"
-  cspunit4_name: "(পুরাতন) ইউনিট ৪: তথ্য"
-  cspunit5_name: "(পুরাতন) ইউনিট 5: PT খোঁজ এবং তৈরি করুন"
-  cspunit6_name: 'Post-AP: অ্যাপ্লিকেশন ডাটাবেস'
-  csd5_name: 'ইউনিট ৫: তথ্য এবং সমাজ'
-  csd5-2017_name: 'ইউনিট ৫: তথ্য এবং সমাজ'
-  csd5-2018_name: 'ইউনিট ৫: তথ্য এবং সমাজ'
-  cspunit3_gradelevel: "৯-১২ গ্রেড"
   iceage_name: "বরফযুগ"
   minecraft_name: "মাইনক্র্যাফট"
   hoc-encryption_name: সাধারণ এনক্রিপশন
-  math_category_name: "গণিত"
-  hoc_category_name: "এক ঘন্টার কোড"
   applab_name: "অ্যাপ ল্যাব"
   applab_gradelevel: "বয়সের ১৩+"
   applab_shortdescription_congrats: "অ্যাপ ল্যাব একটি প্রোগ্রামিং পরিবেশ যেখানে আপনি সহজ অ্যাপ বানানো হয়। একটি অ্যাপ্লিকেশন নকশা (ডিজাইন) করুন ,তাকে কাজ করানোর জন্য ব্লক বা জাভাস্ক্রিপ্ট দিয়ে কোড করুন, তারপর এক সেকেন্ডের মধ্যে আপনার অ্যাপ্লিকেশন শেয়ার করুন।"
@@ -817,6 +806,8 @@
   coursee-2017_gradelevel: বয়স 8-12
   coursed-2018_gradelevel: গ্রেড ৮ +
   coursee-2018_gradelevel: বয়স 8-12
+  coursed-2019_gradelevel: গ্রেড ৮ +
+  coursee-2019_gradelevel: বয়স 8-12
   accelerated_gradelevel: "বয়স ১০-১৮"
   codeorg_platformtext: "আধুনিক ব্রাউজার, smartphones, ট্যাবলেট"
   codeintl_platformtext: "আধুনিক ব্রাউজার, smartphones, ট্যাবলেট"

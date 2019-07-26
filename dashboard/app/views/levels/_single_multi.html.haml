@@ -1,6 +1,7 @@
 -# inhibit brakeman warning about unescaped model attribute - comes from static data in database, level.properties does not contain XSS attacks
 - data = brakeman_no_warn(level.properties)
 - data['answers'] ||= []
+- localized_answers = level.localized_property(:answers)
 - contained_mode = local_assigns.fetch :contained_mode, false
 - app = 'multi'
 - use_tight_layout = data['layout'] == "tight" || tight_layout
@@ -21,7 +22,7 @@
   = render partial: 'levels/content', locals: {app: app, data: data, content_class: question_content_class, source_level: level, hide_header: !standalone}
 
   - localized_questions = level.localized_property(:questions)
-  - if localized_questions.count
+  - if localized_questions.any?
     .multi-question!= render_multi_or_match_content(localized_questions[0]["text"])
 
   - answers_class = 'answers ' + (question_content_blank ? 'question-content-blank' : '')
@@ -62,7 +63,6 @@
 
     .mainblock
       %form#voteform{onsubmit: 'return false;'}
-        - localized_answers = level.localized_property(:answers)
         - data['answers'].each_with_index do |answer, i|
           -# When LevelGroup-hosted, with students (or teachers doing PD), set all answers false before rendering page.
           - correct = include_multi_answers?(standalone) ? answer['correct'] : false
@@ -107,9 +107,9 @@
   - else
     -# When LevelGroup-hosted, with students (or teachers doing PD), dont include answers
     - if contained_mode || include_multi_answers?(standalone)
-      - answers = data['answers'].map {|answer| answer['correct'] || false}
+      - answers = localized_answers.map {|answer| answer['correct'] || false}
 
-    - answers_feedback = data['answers'].map {|answer| answer['feedback']}
+    - answers_feedback = localized_answers.map {|answer| answer['feedback']}
 
   :javascript
     window.dashboard.codeStudioLevels.registerLevel(#{level.id}, new Multi(

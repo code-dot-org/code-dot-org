@@ -17,7 +17,10 @@ JOTFORM_SURVEY_RESPONSE_CLASSES = [
 #   quotations escaped. Returns nil on nil input.
 def sanitize_string_for_db(unsanitized)
   return nil if unsanitized.nil?
-  unsanitized.gsub(/[\r\n\\]+/, '').gsub(/"/, '\"')
+  # 1 gets rid of new lines
+  # 2 puts escape character in front of double quotes
+  # 3 removes HTML and replaces with underscore
+  unsanitized.gsub(/[\r\n\\]+/, '').gsub(/"/, '\"').gsub(/<[^>]*>/, '_')
 end
 
 def insert_survey_answers(survey_answers)

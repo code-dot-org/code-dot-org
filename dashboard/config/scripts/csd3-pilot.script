@@ -9,6 +9,7 @@ has_lesson_plan true
 curriculum_path 'https://curriculum.code.org/csd-19/unit3/{LESSON}'
 project_widget_visible true
 project_widget_types ["gamelab", "weblab"]
+family_name ''
 project_sharing true
 curriculum_umbrella 'CSD'
 
@@ -33,12 +34,9 @@ level 'CSD: Drawing in Game Lab 2_pilot', named: true
 level 'CSD U3 fill_pilot', progression: 'Drawing'
 level 'CSD U3 sequence_pilot', progression: 'Drawing'
 level 'CSD U3 ellipse_pilot', progression: 'Drawing'
+level 'CSD U3 drawing practice choice', progression: 'Drawing'
 level 'CSD U3 debug_pilot', progression: 'Drawing', assessment: true
-level 'CSD U3 plotting shapes map_pilot', named: true
-bonus 'CSD U3 picture_pilot', progression: 'Challenges'
-bonus 'CSD U3 challenge face_pilot', progression: 'Challenges'
-bonus 'CSD U3 challenge new shape_pilot', progression: 'Challenges'
-bonus 'CSD U3 L3 Freeplay_pilot'
+level 'CSD U3 drawing challenges', named: true
 
 stage 'Shapes and Randomization', flex_category: 'csd3_1'
 level 'CSD U3L04 TFMD_pilot', named: true

@@ -1996,11 +1996,12 @@ sk:
                 žiakov dostaneme do situácie, v ktorej budú sami chcieť nájsť jednoduchšiu
                 cestu ku vyriešeniu problému.
             Loops in Artist:
-              description_teacher: Vrátením sa k slučkám, študenti sa učia kresliť
-                použitím jednoduchých postupností pokynov. V predchádzajúcej lekcii
-                sme skučky použili na prechádzanie bludiskom a zbieraním pokladu.
-                Tu slučky tvoria vzory. Na konci, Študenti majú príležitosť použitím
-                slučiek vytvoriť vlastné útvary.
+              description_teacher: V tejto lekcii si ešte raz zopakujeme cykly. Žiaci
+                začnú kreslením obrázkov pomocou opakovania krátkych sekvencií príkazov.
+                V predchádzajúcej lekcii sme cykly použili na prechádzanie bludiskom
+                a zbieranie drahokamov. Tu ich použijeme na kreslenie vzorov. Na konci
+                lekcie dostanú žiaci príležitosť pomozou cyklov nakresliť vlastné
+                obrazy.
             'Events: The Big Event':
               name: 'Udalosti: Veľká udalosť'
               description_teacher: Udalosti sú skvelým spôsobom, ako nášmu programu
@@ -3136,11 +3137,12 @@ sk:
               name: Cykly s Laurel
             Loops in Artist:
               name: Na mori s cyklami
-              description_teacher: Vrátením sa k slučkám, študenti sa učia kresliť
-                použitím jednoduchých postupností pokynov. V predchádzajúcej lekcii
-                sme skučky použili na prechádzanie bludiskom a zbieraním pokladu.
-                Tu slučky tvoria vzory. Na konci, Študenti majú príležitosť použitím
-                slučiek vytvoriť vlastné útvary.
+              description_teacher: V tejto lekcii si ešte raz zopakujeme cykly. Žiaci
+                začnú kreslením obrázkov pomocou opakovania krátkych sekvencií príkazov.
+                V predchádzajúcej lekcii sme cykly použili na prechádzanie bludiskom
+                a zbieranie drahokamov. Tu ich použijeme na kreslenie vzorov. Na konci
+                lekcie dostanú žiaci príležitosť pomozou cyklov nakresliť vlastné
+                obrazy.
             'Events: The Big Event':
               name: Veľká udalosť Jr.
               description_teacher: Udalosti sú skvelým spôsobom, ako nášmu programu
@@ -4592,11 +4594,12 @@ sk:
             Loops in Collector:
               name: Cykly s Laurel
             Loops in Artist:
-              description_teacher: Vrátením sa k slučkám, študenti sa učia kresliť
-                použitím jednoduchých postupností pokynov. V predchádzajúcej lekcii
-                sme skučky použili na prechádzanie bludiskom a zbieraním pokladu.
-                Tu slučky tvoria vzory. Na konci, Študenti majú príležitosť použitím
-                slučiek vytvoriť vlastné útvary.
+              description_teacher: V tejto lekcii si ešte raz zopakujeme cykly. Žiaci
+                začnú kreslením obrázkov pomocou opakovania krátkych sekvencií príkazov.
+                V predchádzajúcej lekcii sme cykly použili na prechádzanie bludiskom
+                a zbieranie drahokamov. Tu ich použijeme na kreslenie vzorov. Na konci
+                lekcie dostanú žiaci príležitosť pomozou cyklov nakresliť vlastné
+                obrazy.
             'Events: The Big Event':
               name: Veľká udalosť Jr.
               description_teacher: Udalosti sú skvelým spôsobom, ako nášmu programu
@@ -4611,11 +4614,12 @@ sk:
                 na kreativitu! Vytvorme v Play Labe celý príbeh!
             Ocean Scene with Loops:
               name: Na mori s cyklami
-              description_teacher: Vrátením sa k slučkám, študenti sa učia kresliť
-                použitím jednoduchých postupností pokynov. V predchádzajúcej lekcii
-                sme skučky použili na prechádzanie bludiskom a zbieraním pokladu.
-                Tu slučky tvoria vzory. Na konci, Študenti majú príležitosť použitím
-                slučiek vytvoriť vlastné útvary.
+              description_teacher: V tejto lekcii si ešte raz zopakujeme cykly. Žiaci
+                začnú kreslením obrázkov pomocou opakovania krátkych sekvencií príkazov.
+                V predchádzajúcej lekcii sme cykly použili na prechádzanie bludiskom
+                a zbieranie drahokamov. Tu ich použijeme na kreslenie vzorov. Na konci
+                lekcie dostanú žiaci príležitosť pomozou cyklov nakresliť vlastné
+                obrazy.
             Loops in Ice Age:
               name: Cykly so Scratom
             Programming in Ice Age:
@@ -4653,6 +4657,8 @@ sk:
               name: Cykly v Dobe ľadovej
             Loops in Collector:
               name: Cykly s Laurel
+            Loops in Artist:
+              name: Kreslenie v záhrade pomocou cyklov
             'Events: The Big Event':
               name: Veľká udalosť Jr.
               description_teacher: Udalosti sú skvelým spôsobom, ako nášmu programu
@@ -4811,6 +4817,10 @@ sk:
               name: Vymazanie záznamov
             Final Project:
               name: Záverečný projekt
+        csp1-pilot:
+          stages:
+            Number Systems:
+              name: Číselné systémy
         time4csdemo:
           stages:
             Crowdsourcing:
@@ -4869,3 +4879,31 @@ sk:
           stages:
             Wrap Up:
               name: Zhrnutie
+        csd2-pilot:
+          stages:
+            'Websites for Expression ':
+              description_student: 'Táto lekcia predstavuje webstránky ako spôsob
+                osobného vyjadrovania. Hodina najskôr preberá rôzne spôsoby akými
+                sa ľudia vyjadrujú a zdieľajú svoje záujmy a nápady, potom sa pozerá
+                na zopár príkladov webstránok pripravených študentami z predošlých
+                kurzov. Na koniec si každý premyslí a podelí sa o zoznam tém a záujmov,
+                ktoré bu´du tvoriť zdroj pre vytvorenie vlastnej webstránky v priebehu
+                zvyšku kapitoly. '
+            Digital Footprint:
+              name: Digitálna stopa
+            Lists:
+              name: Zoznamy
+            Project - Multi-Page Websites:
+              name: Projekt - Viacstránkové webstránky
+            Images:
+              name: Obrázky
+        csd3-pilot:
+          stages:
+            Variables:
+              name: Premenné
+            Conditionals:
+              name: Podmienky
+            Velocity:
+              name: Rýchlosť
+            Functions:
+              name: Funkcie

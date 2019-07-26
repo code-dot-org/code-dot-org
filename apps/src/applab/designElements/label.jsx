@@ -14,9 +14,8 @@ import * as applabConstants from '../constants';
 import * as elementUtils from './elementUtils';
 import * as gridUtils from '../gridUtils';
 import designMode from '../designMode';
-import themeColor from '../themeColor';
+import themeValues from '../themeValues';
 import elementLibrary from './library';
-import experiments from '../../util/experiments';
 
 class LabelProperties extends React.Component {
   static propTypes = {
@@ -130,7 +129,6 @@ class LabelProperties extends React.Component {
 
     // TODO:
     // bold/italics/underline (p2)
-    // textAlignment (p2)
     // enabled (p2)
   }
 }
@@ -191,106 +189,10 @@ class LabelEvents extends React.Component {
  */
 const STILL_FITS = 5;
 
-const CLASSIC_LABEL_PADDING = '2px';
-const NEW_THEME_LABEL_PADDING = '2px 15px';
-
 export default {
   PropertyTab: LabelProperties,
   EventTab: LabelEvents,
-  themeValues: {
-    backgroundColor: {
-      type: 'color',
-      ...themeColor.labelBackground
-    },
-    borderRadius: {
-      default: 0,
-      orange: 0,
-      citrus: 2,
-      ketchupAndMustard: 10,
-      lemonade: 0,
-      forest: 2,
-      watermelon: 0,
-      area51: 10,
-      polar: 2,
-      glowInTheDark: 0,
-      bubblegum: 10,
-      millennial: 4,
-      robot: 0,
-      classic: 0
-    },
-    borderWidth: {
-      default: 0,
-      orange: 0,
-      citrus: 0,
-      ketchupAndMustard: 0,
-      lemonade: 0,
-      forest: 0,
-      watermelon: 0,
-      area51: 0,
-      polar: 0,
-      glowInTheDark: 0,
-      bubblegum: 0,
-      millennial: 0,
-      robot: 0,
-      classic: 0
-    },
-    borderColor: {
-      type: 'color',
-      ...themeColor.textInputBorder
-    },
-    textColor: {
-      type: 'color',
-      ...themeColor.labelText
-    },
-    fontFamily: {
-      default: 'Arial Black',
-      orange: 'Arial',
-      citrus: 'Georgia',
-      ketchupAndMustard: 'Georgia',
-      lemonade: 'Arial Black',
-      forest: 'Verdana',
-      watermelon: 'Georgia',
-      area51: 'Trebuchet',
-      polar: 'Verdana',
-      glowInTheDark: 'Tahoma',
-      bubblegum: 'Georgia',
-      millennial: 'Arial',
-      robot: 'Tahoma',
-      classic: 'Arial'
-    },
-    fontSize: {
-      default: 13,
-      orange: 13,
-      citrus: 13,
-      ketchupAndMustard: 13,
-      lemonade: 13,
-      forest: 13,
-      watermelon: 13,
-      area51: 13,
-      polar: 13,
-      glowInTheDark: 13,
-      bubblegum: 13,
-      millennial: 13,
-      robot: 13,
-      classic: 14
-    },
-    padding: {
-      default: NEW_THEME_LABEL_PADDING,
-      orange: NEW_THEME_LABEL_PADDING,
-      citrus: NEW_THEME_LABEL_PADDING,
-      ketchupAndMustard: NEW_THEME_LABEL_PADDING,
-      lemonade: NEW_THEME_LABEL_PADDING,
-      forest: NEW_THEME_LABEL_PADDING,
-      watermelon: NEW_THEME_LABEL_PADDING,
-      area51: NEW_THEME_LABEL_PADDING,
-      polar: NEW_THEME_LABEL_PADDING,
-      glowInTheDark: NEW_THEME_LABEL_PADDING,
-      bubblegum: NEW_THEME_LABEL_PADDING,
-      millennial: NEW_THEME_LABEL_PADDING,
-      robot: NEW_THEME_LABEL_PADDING,
-      classic: CLASSIC_LABEL_PADDING
-    }
-  },
+  themeValues: themeValues.label,
 
   create: function() {
     const element = document.createElement('label');
@@ -300,17 +202,11 @@ export default {
     element.style.wordWrap = 'break-word';
     element.textContent = 'text';
     element.style.maxWidth = applabConstants.APP_WIDTH + 'px';
-    if (experiments.isEnabled('applabThemes')) {
-      element.style.borderStyle = 'solid';
-      elementLibrary.applyCurrentTheme(element, designMode.activeScreen());
-    } else {
-      element.style.padding = CLASSIC_LABEL_PADDING;
-      element.style.backgroundColor = themeColor.labelBackground.classic;
-      element.style.fontFamily = applabConstants.fontFamilyStyles[0];
-      element.style.fontSize = applabConstants.defaultFontSizeStyle;
-      element.style.color = themeColor.labelText.classic;
-      elementUtils.setDefaultBorderStyles(element, {forceDefaults: true});
-    }
+    element.style.borderStyle = 'solid';
+    elementLibrary.setAllPropertiesToCurrentTheme(
+      element,
+      designMode.activeScreen()
+    );
 
     this.resizeToFitText(element);
     return element;
@@ -319,7 +215,7 @@ export default {
   onDeserialize: function(element) {
     // Set background color style for older projects that didn't set them on create:
     if (!element.style.backgroundColor) {
-      element.style.backgroundColor = themeColor.labelBackground.classic;
+      element.style.backgroundColor = themeValues.label.backgroundColor.classic;
     }
     // Set border styles for older projects that didn't set them on create:
     elementUtils.setDefaultBorderStyles(element);
@@ -422,10 +318,19 @@ export default {
     element.style.height = size.height + 'px';
   },
 
+  /**
+   * Cache whether or not this label previously fit exactly, so the result can be re-used
+   * across multiple property changes in the same batch.
+   *
+   * This object stores a batchId property (number) and a previouslyFitsExactly property (boolean)
+   */
   _lastFitsExactly: {},
 
   /**
    * Returns whether this element perfectly fits its bounding size, if that is needed in onPropertyChange.
+   *
+   * If several property changes happen together, they will share the same unique batchChangeId
+   * parameter. Batched property changes occur as a result of theme changes.
    */
   beforePropertyChange: function(element, name, batchChangeId) {
     switch (name) {
@@ -433,6 +338,7 @@ export default {
       case 'text':
       case 'fontFamily':
       case 'fontSize': {
+        // Check _lastFitsExactly for a cache hit
         const {
           batchId = -1,
           previouslyFitExactly: batchPreviouslyFitExactly
@@ -446,6 +352,8 @@ export default {
         const previouslyFitExactly =
           Math.abs(currentSize.width - bestSize.width) < STILL_FITS &&
           Math.abs(currentSize.height - bestSize.height) < STILL_FITS;
+        // Cache this result in the _lastFitsExactly object in case we need it again for
+        // another property change in the same batch
         this._lastFitsExactly = batchChangeId
           ? {
               batchId: batchChangeId,

@@ -1880,3 +1880,17 @@ th:
           stages:
             Graph Paper Programming:
               name: การเขียนกระดาษกราฟ
+        csd2-pilot:
+          stages:
+            Lists:
+              name: รายการ
+            Clean Code and Debugging:
+              name: โค้ดที่หมดจดและการดีบั๊ก
+        csd3-pilot:
+          stages:
+            Variables:
+              name: ตัวแปร
+            Conditionals:
+              name: เงื่อนไข
+            Functions:
+              name: ฟังก์ชัน

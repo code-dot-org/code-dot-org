@@ -50,7 +50,6 @@ pt-BR:
       CSD Set Scale Map_2018: Alterando a escala do Sensor
       CSD Set Scale Map_2019: Alterando a escala do Sensor
       CSD U1L02 TFMD_2018: Visão geral da aula
-      CSD U1L02 TFMD_2019: Visão geral da aula
       CSD U1L03 TFMD_2018: Visão geral da aula
       CSD U1L03 TFMD_2019: Visão geral da aula
       CSD U1L04 TFMD_2018: Visão geral da aula
@@ -63,6 +62,9 @@ pt-BR:
       CSD U1L07 TFMD_2019: Visão geral da aula
       CSD U1L09 TFMD_2018: Visão geral da aula
       CSD U1L09 TFMD_2019: Visão geral da aula
+      CSD U2 CC Search Map: Busca Creative Commons
+      CSD U2 CC Search Map_2018: Busca Creative Commons
+      CSD U2 CC Search Map_2019: Busca Creative Commons
       CSD U2 CSS Classes Map: Classes CSS
       CSD U2 CSS Classes Map_2018: Classes CSS
       CSD U2 CSS Classes Map_2019: Classes CSS
@@ -119,9 +121,7 @@ pt-BR:
       CSD U2 lists map_2019: Listas em HTML
       CSD U2 publish video: Publicando seu site
       CSD U2L01 TFMD_2018: Visão geral da aula
-      CSD U2L01 TFMD_2019: Visão geral da aula
       CSD U2L02 TFMD_2018: Visão geral da aula
-      CSD U2L02 TFMD_2019: Visão geral da aula
       CSD U2L03 TFMD_2018: Visão geral da aula
       CSD U2L03 TFMD_2019: Visão geral da aula
       CSD U2L04 TFMD_2018: Visão geral da aula
@@ -233,7 +233,6 @@ pt-BR:
       CSD U3 L9 Freeplay_2019: Atividade livre
       CSD U3 Plotting Shapes Shape Lab: Desenhando Formas
       CSD U3 Plotting Shapes Shape Lab_2018: Desenhando Formas
-      CSD U3 Plotting Shapes Shape Lab_2019: Desenhando Formas
       CSD U3 Random Number Map Level: Números Aleatórios
       CSD U3 Random Number Map Level_2018: Números Aleatórios
       CSD U3 Random Number Map Level_2019: Números Aleatórios
@@ -305,6 +304,9 @@ pt-BR:
       CSD U3 platform sample1: Amostra de Jogo de plataforma
       CSD U3 platform sample1_2018: Amostra de Jogo de plataforma
       CSD U3 platform sample1_2019: Amostra de Jogo de plataforma
+      CSD U3 platform sample2: Saltador de avião
+      CSD U3 platform sample2_2018: Saltador de avião
+      CSD U3 platform sample2_2019: Saltador de avião
       CSD U3 platform sample3: Coelho Saltador
       CSD U3 platform sample3_2018: Coelho Saltador
       CSD U3 platform sample3_2019: Coelho Saltador
@@ -320,10 +322,7 @@ pt-BR:
       CSD U3 velocity map: Velocidade de Sprite
       CSD U3 velocity map_2018: Velocidade de Sprite
       CSD U3 velocity map_2019: Velocidade de Sprite
-      CSD U3L01 TFMD_2018: Visão geral da aula
-      CSD U3L01 TFMD_2019: Visão geral da aula
       CSD U3L02 TFMD_2018: Visão geral da aula
-      CSD U3L02 TFMD_2019: Visão geral da aula
       CSD U3L03 TFMD_2018: Visão geral da aula
       CSD U3L03 TFMD_2019: Visão geral da aula
       CSD U3L04 TFMD_2018: Visão geral da aula
@@ -386,9 +385,7 @@ pt-BR:
       CSD U4 User Input Map_2018: Respondendo a Entradas de Usuário
       CSD U4 User Input Map_2019: Respondendo a Entradas de Usuário
       CSD U4L01 autoSFLP_2018: Visão geral da aula
-      CSD U4L01 autoSFLP_2019: Visão geral da aula
       CSD U4L02 autoSFLP_2018: Visão geral da aula
-      CSD U4L02 autoSFLP_2019: Visão geral da aula
       CSD U4L03 autoSFLP_2018: Visão geral da aula
       CSD U4L03 autoSFLP_2019: Visão geral da aula
       CSD U4L04 autoSFLP_2018: Visão geral da aula
@@ -419,11 +416,11 @@ pt-BR:
       CSD U4L16 autoSFLP_2019: Visão geral da aula
       CSD U5 Amazon Data Video: Coletando Informações sobre Usuários
       CSD U5 Amazon Data Video_2018: Coletando Informações sobre Usuários
-      CSD U5 Amazon Data Video_2019: Coletando Informações sobre Usuários
-      CSD U5 Netflix Data Video_2019: Como Netflix usa dados
+      CSD U5 Amazon Data Video_2019: Como a Amazon Usa Dados
+      CSD U5 Netflix Data Video_2019: Como a Netflix Usa Dados
       CSD U5 Waze Data Video: Coletando Informações sobre Usuários
       CSD U5 Waze Data Video_2018: Coletando Informações sobre Usuários
-      CSD U5 Waze Data Video_2019: Coletando Informações sobre Usuários
+      CSD U5 Waze Data Video_2019: Como o Waze usa Dados
       CSD U5 binary video: Binário e Dados
       CSD U5 binary video_2018: Binário e Dados
       CSD U5 binary video_2019: Binário e Dados
@@ -453,9 +450,7 @@ pt-BR:
       CSD U5 black white images pixelation_2019: Widget de pixelização em preto e
         branco
       CSD U5L01 autoSFLP_2018: Visão geral da aula
-      CSD U5L01 autoSFLP_2019: Visão geral da aula
       CSD U5L02 autoSFLP_2018: Visão geral da aula
-      CSD U5L02 autoSFLP_2019: Visão geral da aula
       CSD U5L03 autoSFLP_2018: Visão geral da aula
       CSD U5L03 autoSFLP_2019: Visão geral da aula
       CSD U5L04 autoSFLP_2018: Visão geral da aula
@@ -488,7 +483,7 @@ pt-BR:
       CSD U6 arrays intro: Introdução a Arrays
       CSD U6 arrays intro_2018: Introdução a Arrays
       CSD U6 arrays intro_2019: Vetores
-      CSD U6 arrays video: 'Vídeo: Introdução aos Arrays'
+      CSD U6 arrays video: 'Vídeo: Introdução a Matrizes'
       CSD U6 challenge motorcycle_2018: 'Desafio: Motocicleta'
       CSD U6 challenge motorcycle_2019: 'Desafio: Motocicleta'
       CSD U6 circuit LED map: Circuitos e LEDs
@@ -536,12 +531,9 @@ pt-BR:
       CSD U6 tugowar final: Torne-o Seu
       CSD U6 tugowar final_2018: Torne-o Seu
       CSD U6 tugowar final_2019: Torne-o Seu
-      CSD U6L01 TFMD: Visão geral da aula
       CSD U6L01 TFMD_2018: Visão geral da aula
-      CSD U6L01 TFMD_2019: Visão geral da aula
       CSD U6L02 TFMD: Visão geral da aula
       CSD U6L02 TFMD_2018: Visão geral da aula
-      CSD U6L02 TFMD_2019: Visão geral da aula
       CSD U6L03 TFMD: Visão geral da aula
       CSD U6L03 TFMD_2018: Visão geral da aula
       CSD U6L03 TFMD_2019: Visão geral da aula
@@ -618,6 +610,7 @@ pt-BR:
       'CSD: Drawing in Game Lab 2_2019': 'Vídeo: Desenho no laboratório de jogo -
         parte 2'
       'CSD: For Loop_2018': Laços para
+      'CSD: For Loop_2019': 'Vídeo: Laços Para'
       'CSD: Introduction to the Draw Loop': 'Vídeo: Introdução ao laço Draw'
       'CSD: Introduction to the Draw Loop_2018': 'Vídeo: Introdução ao laço Draw'
       'CSD: Introduction to the Draw Loop_2019': 'Vídeo: Introdução ao laço Draw'
@@ -639,7 +632,6 @@ pt-BR:
       CSDU4 Project Import: 'Projeto do Aplicativo: Importação de Tela'
       CSDU4 Project Import_2018: 'Projeto do Aplicativo: Importação de Tela'
       CSDU4 Project Import_2019: 'Projeto do Aplicativo: Importação de Tela'
-      CSDU6 - UI and Inputs - getNumber: pegarNúmero
       CSDU6 - board event challenge_2018: Placa de Som
       CSDU6 - board event challenge_2019: Placa de Som
       CSDU6 buzzer 2d arrays_2018: Vetores 2D
@@ -649,10 +641,14 @@ pt-BR:
       CSS U2 Body Map: O elemento do corpo
       CSS U2 Body Map_2018: O elemento do corpo
       CSS U2 Body Map_2019: O elemento do corpo
+      'Course E: Artist Project': Curso E Projeto Artístico
+      'Course E: Artist Project_2018': Curso E Projeto Artístico
+      'Course E: Artist Project_2019': Curso E Projeto Artístico
+      'Course F: Artist Project - Revise_2018': Revisar Projeto Artista
       'Course F: Artist Project_2018': Curso F Projeto Artista
       'Course F: Artist Project_2019': Curso F Projeto Artista
-      CourseEF_video_IntroSpriteLab: Este é o Laboratório de Sprite
-      CourseEF_video_IntroSpriteLab_2019: Este é o Laboratório de Sprite
+      CourseEF_video_IntroSpriteLab: Este é o Laboratório de Sprites
+      CourseEF_video_IntroSpriteLab_2019: Este é o Laboratório de Sprites
       CourseEF_video_MakeSprite: Como fazer um Sprite
       CourseEF_video_MakeSprite_2019: Como fazer um Sprite
       CourseE_hoops: 'Coelho '
@@ -702,6 +698,7 @@ pt-BR:
       courseA_video_Stevie_2018: Stevie e o Grande Projeto
       courseB_video_Unspotted: Erros Não Reportados
       courseB_video_Unspotted_2018: Erros Não Reportados
+      courseF_video_csMatters: Projetos de conclusão de curso
       csd U3 conditional statements video: 'Vídeo: Declarações Condicionais'
       csd U3 conditional statements video_2019: 'Vídeo: Declarações Condicionais'
       csd u5 recommender sample: Aplicativo exemplo

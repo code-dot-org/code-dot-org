@@ -1964,6 +1964,10 @@ sv:
           stages:
             While Loops:
               name: '''Medan'' loopar(slingor)'
+        csp1-pilot:
+          stages:
+            Number Systems:
+              name: Talsystem
         time4csdemo:
           stages:
             Crowdsourcing:
@@ -1976,3 +1980,17 @@ sv:
           stages:
             Graph Paper Programming:
               name: Kalkyleringsprogrammering
+        csd2-pilot:
+          stages:
+            Lists:
+              name: Listor
+            Images:
+              name: Bilder
+        csd3-pilot:
+          stages:
+            Variables:
+              name: variabler
+            Conditionals:
+              name: Villkor
+            Functions:
+              name: funktioner

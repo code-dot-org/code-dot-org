@@ -540,7 +540,6 @@ tr:
   pdf_download: 'PDF İndir'
   download_coming_soon: 'İndirilebilir aktivite yakında geliyor.'
   video_coming_soon: 'Video Yakında Geliyor!'
-  not_started: 'Öğrenciler bu bölüm için henüz giriş yapmadılar.'
   share_code:
     title: "Benim programımın çalışmasını görmek için, 'Çalıştır' seçeneğini tıklayın"
     bounce_og_title: "Benim Bounce oyunuma göz atın"

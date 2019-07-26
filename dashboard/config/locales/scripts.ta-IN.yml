@@ -276,3 +276,13 @@ ta:
           stages:
             Graph Paper Programming:
               name: வரைதாள் செய்நிரல்
+        csd2-pilot:
+          stages:
+            Lists:
+              name: பட்டியல்கள்
+        csd3-pilot:
+          stages:
+            Variables:
+              name: மாறிலிகள்
+            Functions:
+              name: செயல்பாடுகள்

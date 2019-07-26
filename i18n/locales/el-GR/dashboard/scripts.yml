@@ -1718,3 +1718,18 @@ el:
           stages:
             Graph Paper Programming:
               name: Προγραμματισμός σε Χαρτί Γραφικών Παραστάσεων
+        csd2-pilot:
+          stages:
+            Lists:
+              name: Λίστες
+        csd3-pilot:
+          description_short: "Προγραμματισμός"
+          stages:
+            Variables:
+              name: Μεταβλητές
+            Conditionals:
+              name: Συνθήκες
+            Velocity:
+              name: Ταχύτητα
+            Functions:
+              name: Συναρτήσεις

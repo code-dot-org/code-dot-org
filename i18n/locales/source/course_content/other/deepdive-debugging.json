@@ -1,9 +1,11 @@
 {
-  "display_name": {
-    "https://studio.code.org/s/deepdive-debugging/stage/1/puzzle/2": "Artist Debugging #1 (AB)"
+  "https://studio.code.org/s/deepdive-debugging/stage/1/puzzle/2": {
+    "display_name": "Artist Debugging #1 (AB)"
   },
-  "short_instructions": {
-    "https://studio.code.org/s/deepdive-debugging/stage/1/puzzle/3": "Move the knight to each of the flags. If something goes wrong, look for bugs!",
-    "https://studio.code.org/s/deepdive-debugging/stage/2/puzzle/3": "Why doesn't this game work?"
+  "https://studio.code.org/s/deepdive-debugging/stage/1/puzzle/3": {
+    "short_instructions": "Move the knight to each of the flags. If something goes wrong, look for bugs!"
+  },
+  "https://studio.code.org/s/deepdive-debugging/stage/2/puzzle/3": {
+    "short_instructions": "Why doesn't this game work?"
   }
 }

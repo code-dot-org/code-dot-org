@@ -17,7 +17,6 @@ ru-RU:
       CSD Polling Events Map_2018: Опросы
       CSD Polling Events Map_2019: Опросы
       CSD U1L02 TFMD_2018: Обзор урока
-      CSD U1L02 TFMD_2019: Обзор урока
       CSD U1L03 TFMD_2018: Обзор урока
       CSD U1L03 TFMD_2019: Обзор урока
       CSD U1L04 TFMD_2018: Обзор урока
@@ -30,18 +29,54 @@ ru-RU:
       CSD U1L07 TFMD_2019: Обзор урока
       CSD U1L09 TFMD_2018: Обзор урока
       CSD U1L09 TFMD_2019: Обзор урока
+      CSD U2 CC Search Map: Поиск Creative Commons
+      CSD U2 CC Search Map_2018: Поиск Creative Commons
+      CSD U2 CC Search Map_2019: Поиск Creative Commons
       CSD U2 CSS Classes Map: CSS классы
       CSD U2 CSS Classes Map_2018: CSS классы
       CSD U2 CSS Classes Map_2019: CSS классы
+      CSD U2 CSS explore CSS: Добавление стиля
+      CSD U2 CSS explore CSS_2018: Добавление стиля
+      CSD U2 CSS explore CSS_2019: Добавление стиля
       CSD U2 HTML Tags Map: HTML тэги
       CSD U2 HTML Tags Map_2018: HTML тэги
       CSD U2 HTML Tags Map_2019: HTML тэги
       CSD U2 Headers map: Загловки в HTML
       CSD U2 Headers map_2018: Загловки в HTML
       CSD U2 Headers map_2019: Загловки в HTML
+      CSD U2 Heading Demo: Введение в заголовки
+      CSD U2 Heading Demo_2018: Введение в заголовки
+      CSD U2 Heading Demo_2019: Введение в заголовки
+      CSD U2 Heading Sizes: Размер заголовков
+      CSD U2 Heading Sizes_2018: Размер заголовков
+      CSD U2 Heading Sizes_2019: Размер заголовков
+      CSD U2 Heading Test: Заголовки и параграфы
+      CSD U2 Heading Test_2018: Заголовки и параграфы
+      CSD U2 Heading Test_2019: Заголовки и параграфы
+      CSD U2 Inspector Warm Up: Изучаем HTML
+      CSD U2 Inspector Warm Up_2018: Изучаем HTML
+      CSD U2 Inspector Warm Up_2019: Изучаем HTML
+      CSD U2 Layout Properties Map: Свойства макета
+      CSD U2 Layout Properties Map_2018: Свойства макета
+      CSD U2 Layout Properties Map_2019: Свойства макета
       CSD U2 Pair Programming Video: Программирование в парах
       CSD U2 Pair Programming Video_2018: Программирование в парах
       CSD U2 Pair Programming Video_2019: Программирование в парах
+      CSD U2 RGB intro: RGB Widget
+      CSD U2 RGB intro_2018: RGB Widget
+      CSD U2 RGB intro_2019: RGB Widget
+      CSD U2 Style Sheet Map: CSS и таблицы стилей
+      CSD U2 Style Sheet Map_2018: CSS и таблицы стилей
+      CSD U2 Style Sheet Map_2019: CSS и таблицы стилей
+      CSD U2 Text Properties Map: Свойства CSS текста
+      CSD U2 Text Properties Map_2018: Свойства CSS текста
+      CSD U2 Text Properties Map_2019: Свойства CSS текста
+      CSD U2 a tag map: Гиперссылки
+      CSD U2 a tag map_2018: Гиперссылки
+      CSD U2 a tag map_2019: Гиперссылки
+      CSD U2 challenge: Испытание
+      CSD U2 challenge_2018: Испытание
+      CSD U2 challenge_2019: Испытание
       CSD U2 formatting map: Форматирование HTML
       CSD U2 formatting map_2018: Форматирование HTML
       CSD U2 formatting map_2019: Форматирование HTML
@@ -49,9 +84,7 @@ ru-RU:
       CSD U2 lists map_2018: Списки в HTML
       CSD U2 lists map_2019: Списки в HTML
       CSD U2L01 TFMD_2018: Обзор урока
-      CSD U2L01 TFMD_2019: Обзор урока
       CSD U2L02 TFMD_2018: Обзор урока
-      CSD U2L02 TFMD_2019: Обзор урока
       CSD U2L03 TFMD_2018: Обзор урока
       CSD U2L03 TFMD_2019: Обзор урока
       CSD U2L04 TFMD_2018: Обзор урока
@@ -142,10 +175,7 @@ ru-RU:
       CSD U3 platform challenge: Улучшите вашу игру
       CSD U3 platform challenge_2018: Улучшите вашу игру
       CSD U3 platform challenge_2019: Улучшите вашу игру
-      CSD U3L01 TFMD_2018: Обзор урока
-      CSD U3L01 TFMD_2019: Обзор урока
       CSD U3L02 TFMD_2018: Обзор урока
-      CSD U3L02 TFMD_2019: Обзор урока
       CSD U3L03 TFMD_2018: Обзор урока
       CSD U3L03 TFMD_2019: Обзор урока
       CSD U3L04 TFMD_2018: Обзор урока
@@ -193,9 +223,7 @@ ru-RU:
       CSD U4 Importing Screens Map_2018: Импорт экранов
       CSD U4 Importing Screens Map_2019: Импорт экранов
       CSD U4L01 autoSFLP_2018: Обзор урока
-      CSD U4L01 autoSFLP_2019: Обзор урока
       CSD U4L02 autoSFLP_2018: Обзор урока
-      CSD U4L02 autoSFLP_2019: Обзор урока
       CSD U4L03 autoSFLP_2018: Обзор урока
       CSD U4L03 autoSFLP_2019: Обзор урока
       CSD U4L04 autoSFLP_2018: Обзор урока
@@ -226,14 +254,10 @@ ru-RU:
       CSD U4L16 autoSFLP_2019: Обзор урока
       CSD U5 Amazon Data Video: Сбор информации о пользователях
       CSD U5 Amazon Data Video_2018: Сбор информации о пользователях
-      CSD U5 Amazon Data Video_2019: Сбор информации о пользователях
       CSD U5 Waze Data Video: Сбор информации о пользователях
       CSD U5 Waze Data Video_2018: Сбор информации о пользователях
-      CSD U5 Waze Data Video_2019: Сбор информации о пользователях
       CSD U5L01 autoSFLP_2018: Обзор урока
-      CSD U5L01 autoSFLP_2019: Обзор урока
       CSD U5L02 autoSFLP_2018: Обзор урока
-      CSD U5L02 autoSFLP_2019: Обзор урока
       CSD U5L03 autoSFLP_2018: Обзор урока
       CSD U5L03 autoSFLP_2019: Обзор урока
       CSD U5L04 autoSFLP_2018: Обзор урока
@@ -268,12 +292,9 @@ ru-RU:
       CSD U6 functions paramters video: Процедуры с параметрами
       CSD U6 functions paramters video_2018: Процедуры с параметрами
       CSD U6 functions paramters video_2019: Процедуры с параметрами
-      CSD U6L01 TFMD: Обзор урока
       CSD U6L01 TFMD_2018: Обзор урока
-      CSD U6L01 TFMD_2019: Обзор урока
       CSD U6L02 TFMD: Обзор урока
       CSD U6L02 TFMD_2018: Обзор урока
-      CSD U6L02 TFMD_2019: Обзор урока
       CSD U6L03 TFMD: Обзор урока
       CSD U6L03 TFMD_2018: Обзор урока
       CSD U6L03 TFMD_2019: Обзор урока
@@ -316,6 +337,9 @@ ru-RU:
       CSD U6L16 TFMD: Обзор урока
       CSD U6L16 TFMD_2018: Обзор урока
       CSD U6L16 TFMD_2019: Обзор урока
+      CSD What Makes a Computer a Computer Video: Что делает компьютер компьютером?
+      CSD What Makes a Computer a Computer Video_2018: Что делает компьютер компьютером?
+      CSD What Makes a Computer a Computer Video_2019: Что делает компьютер компьютером?
       CSD-Arrays: Изменение и создание массивов
       CSD-Arrays_2018: Изменение и создание массивов
       CSD-Arrays_2019: Изменение и создание массивов
@@ -325,13 +349,25 @@ ru-RU:
       'CSD: Sprite Velocity_2019': 'Видео: скорость'
       CSDU6 buzzer 2d arrays_2018: Двумерные массивы
       CSDU6 buzzer 2d arrays_2019: Двумерные массивы
+      CSS U2 Body Map: Элемент body
+      CSS U2 Body Map_2018: Элемент body
+      CSS U2 Body Map_2019: Элемент body
       Dance_Party_extras_battle: Танцевальные коллективы
       Dance_Party_extras_every_beat: Четвертные ноты
       Dance_Party_extras_layout: Давайте установим порядок
       Dance_Party_extras_on_beat: Басовые, средние и высокие
       Dance_Party_extras_speed: Ускорить, замедлить
       Dance_Party_extras_visible: Куда они исчезли?
+      Final Personal Website: Персональный веб-сайт
+      Final Personal Website_2018: Персональный веб-сайт
+      Final Personal Website_2019: Персональный веб-сайт
       InspirationalArtwork_2018: Вдохновение!
+      Intro to Web Lab - Part 1: Введение в Web Lab - Часть 1
+      Intro to Web Lab - Part 1_2018: Введение в Web Lab - Часть 1
+      Intro to Web Lab - Part 1_2019: Введение в Web Lab - Часть 1
+      Intro to Web Lab - Part 2: Введение в Web Lab - Часть 2
+      Intro to Web Lab - Part 2_2018: Введение в Web Lab - Часть 2
+      Intro to Web Lab - Part 2_2019: Введение в Web Lab - Часть 2
       MC_HOC_2017_02_Cole: Ферма
       MC_HOC_2017_02_Cole_2019: Ферма
       MC_HOC_2017_04_Cole: Болото

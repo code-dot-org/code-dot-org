@@ -286,6 +286,10 @@ pt-BR:
       professional_learning: "Aprendizado Profissional"
       documentation: "Documentação"
       tutorials: "Tutoriais"
+      app_lab_documentation: "Documentação App Lab"
+      app_lab_tutorials: "Tutoriais App Lab"
+      game_lab_documentation: "Documentação Game Lab"
+      game_lab_tutorials: "Tutoriais Game Lab"
       educate_overview: "Visão Geral do Educador"
       educate_elementary: "Ensino Fundamental"
       educate_middle: "Ensino Fundamental II"
@@ -316,6 +320,7 @@ pt-BR:
       district_dashboard: 'Painel do distrito'
       label: 'Oi, %{username}'
       stats: 'Code Studio'
+      my_projects: 'Meus projetos'
       settings: 'Configurações da conta'
       logout: 'Sair'
       signin: 'Entrar'
@@ -345,6 +350,7 @@ pt-BR:
       makerlab: 'Conjunto de Ferramentas Maker'
       minecraft_adventurer: 'Aventureiro de Minecraft'
       minecraft_aquatic: 'Minecraft Aquático'
+      minecraft_codebuilder: 'Minecraft: Code Connection'
       minecraft_designer: 'Minecraft'
       minecraft_hero: 'Herói de Minecraft'
       playlab: 'Laboratório'
@@ -578,7 +584,6 @@ pt-BR:
   pdf_download: 'Baixar PDF'
   download_coming_soon: 'Atividade disponível para download em breve.'
   video_coming_soon: 'Vídeo em breve!'
-  not_started: 'O aluno ainda não praticou este nível.'
   share_code:
     title: "Clique em 'Executar' para ver meu programa em ação"
     bounce_og_title: "Veja meu jogo de Pingue-pongue"
@@ -894,6 +899,7 @@ pt-BR:
     csf_variables: 'variáveis'
     csf_for_loops: 'Laços para'
     csf_internet: 'Internet'
+    csf_warmup: 'Aquecimento'
     csd1_1: 'Capítulo 1: O Processo de Solução de Problemas'
     csd1_2: 'Capítulo 2: Computadores e Solução de Problemas'
     csd2_1: 'Capítulo 1: Conteúdo Web e HTML'
@@ -924,6 +930,7 @@ pt-BR:
     csp_postap_2: 'Capítulo 2: Aplicativos e Bancos de Dados'
     csp2_1_2018: 'Unidade 2: Informação Digital'
     csp3_1_2018: 'Unidade 3: Introdução à Programação'
+    csp4_1_2018: 'Unit 4: Big Data e Privacy'
     csp_variables: 'variáveis'
     csp_conditionals: 'Condições'
     csp_functions: 'funções'
@@ -932,7 +939,13 @@ pt-BR:
     csp_loops: 'laços'
     csp_traversals: 'Traversais'
     csp_libraries: 'Bibliotecas'
+    csp_parameters_return_values: 'Parâmetros e valores de retorno'
     dlp: 'Prompts de reflexão'
+    time4cs_c1: 'Everglades e seus ecossistemas'
+    time4cs_c2: 'Cadeias de comida em Everglades'
+    time4cs_c3: 'Viver em Everglades'
+    time4cs_c4: 'Impactos Invasivos em Everglades'
+    time4cs_c5: 'Cidadãos influenciam as mudanças em Everglades'
   external_links:
     disclaimer: Aviso
     leaving_domain: Você está deixando este domínio para acessar um site que não é operado pela Code.org.

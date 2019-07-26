@@ -901,40 +901,8 @@
   coursef_name: "Kursong F"
   coursed-2018_name: Bagong Kursong D na Iskript
   express-2018_name: Mabilis na Kurso
-  cspunit2_name: "(luma) Yunit 2: Ang Internet"
-  cspunit3_name: "(luma) Yunit 3: Pagprogram"
-  cspunit4_name: "(luma) Yunit 5: Datos"
-  cspunit5_name: "(luma) Yunit 5: Pagtuklas at Paglikha ng PT"
-  cspunit6_name: 'Pagkatapos ng AP: Mga Database sa mga Apps'
-  csd5_name: 'Yunit 5: Mga Datos at Lipunan'
-  csd6_name: 'Yunit 6: Pisikal na Computing'
-  csd5-2017_name: 'Yunit 5: Mga Datos at Lipunan'
-  csd6-2017_name: 'Yunit 6: Pisikal na Computing'
-  csd5-2018_name: 'Yunit 5: Mga Datos at Lipunan'
-  csd6-2018_name: 'Yunit 6: Pisikal na Computing'
-  csp1-2017_name: 'Yunit 1: Ang Internet'
-  csp2-2017_name: 'Yunit 2: Digital na Impormasyon'
-  csp-explore-2017_name: 'AP: Tuklasin ang PT Prep'
-  csp-create-2017_name: 'AP: Maglikha ng PT Prep'
-  csppostap-2017_name: 'Pagkatapos ng AP: Mga Database sa mga Apps'
-  csp1-2018_name: 'Yunit 1: Ang Internet'
-  csp2-2018_name: 'Yunit 2: Digital na Impormasyon'
-  csp-explore-2018_name: 'AP: Tuklasin ang PT Prep'
-  csp-create-2018_name: 'AP: Maglikha ng PT Prep'
-  csppostap-2018_name: 'Pagkatapos ng AP: Mga Database sa mga Apps'
-  csp1_name: 'Yunit 1: Ang Internet'
-  csp2_name: 'Yunit 2: Digital na Impormasyon'
-  csp3-a_name: 'Yunit 3: Panimula sa Pagprogram (bersyon A)'
-  csp3-research-mxghyt_name: 'Yunit 3: Panimula sa Pagprogram (Subgoals)'
-  csp-ap_name: AP na Performance Tasks
-  csppostap_name: 'Pagkatapos ng AP: Mga Database sa mga Apps'
-  cspassessment_name: "Buong Pagsusulit - 50 na mga tanong"
-  csp-explore_name: 'AP: Tuklasin ang PT Prep'
-  csp-create_name: 'AP: Maglikha ng PT Prep'
-  cspexam1-mWU7ilDYM9_name: Pagsubok Parte 1 - 25 na mga tanong
-  cspexam2-AKwgAh1ac5_name: Pagsubok na Parte 2 - 25 na mga tanong
-  cspunit3_gradelevel: "Mga Baitang na 9-12"
-  cspunit3_shortdescription_congrats: "Ang yunit na ito ay nagpapakilala sa mga pundasyonal na mga konsepto sa pag-program sa kompyuter, kung saan nagbigay diin ito sa abilidad na makagawa ng mayaman, at inter-aktib na mga apps. Ang kursong ito ay gumagamit ng JavaScript bilang wika ng pang-program, at App Lab bilang kapaligiran sa pag-program para makabuo ng mga apps, ngunit ang mga konsepto na matutunan sa mga araling ito ay lumakip sa lahat ng mga wika ng pang-program at mga kagamitan.\\r\n\\r\nAng yunit na ito ay huling binago noong ika-30 ng Oktubre, 2017. Magbasa pa tungkol sa mga pagbabago sa kurikulum sa forum.code.org/c/csp/updates."
+  accelerated_name: "Pinabilis na Kurso"
+  express_name: "Mabilis na Kurso"
   20-hour_name: Pinabilis na Kurso
   algebra_name: "CS sa Algebra"
   AlgebraA_name: "CS sa Algebra na Kursong A"
@@ -945,14 +913,6 @@
   minecraft_name: "Minecraft"
   starwarsblocks_name: "Star Wars (Mga bloke)"
   hoc-encryption_name: Simpleng Pag-encrypt
-  math_category_name: "Math"
-  hoc_category_name: "Hour of Code"
-  csf_category_name: "CS Fundamentals"
-  csf_international_category_name: "Internasyonal na CS Fundamentals"
-  csf2_draft_category_name: 'Kasalukuyang Ginagawa: Mga Kursong A - F'
-  csp_category_name: "'15-'16 na mga Prinsipyo ng CS"
-  csp17_category_name: "Mga Prinsipyo ng CS"
-  cspexams_category_name: "Pag-ensayo na Pagsubok sa mga Prinsipyo ng CS"
   applab_name: "App na Lab"
   gamelab_name: "Game Lab"
   basketball_name: "Gumawa ng isang basketbol na laro"
@@ -1030,6 +990,12 @@
   coursed-2018_gradelevel: Baitang 8+
   coursee-2018_gradelevel: Baitang 9+
   coursef-2018_gradelevel: Baitang 10+
+  coursea-2019_gradelevel: Baitang 5+
+  courseb-2019_gradelevel: Baitang 6+
+  coursec-2019_gradelevel: Baitang 7+
+  coursed-2019_gradelevel: Baitang 8+
+  coursee-2019_gradelevel: Baitang 9+
+  coursef-2019_gradelevel: Baitang 10+
   accelerated_gradelevel: "Mga edad na 10-18"
   codeorg_platformtext: "Makabagong mga browser, smartphone, at mga tablet"
   codeintl_platformtext: "Makabagong mga browser, smartphone, at mga tablet"
@@ -1148,6 +1114,12 @@
   coursed-2018_shortdescription_congrats: Mabilis na dinaanan ang mga konsepto mula sa Kursong C, pagkatapos ay pupunta pa tayo sa mga algoritmo, mga naka-nest na mga loop, mga kondisyonal, at iba pa.
   coursee-2018_shortdescription_congrats: Madaling dumaan sa mga konsepto sa Kursong C & D at pagkatapos ay pumunta pa sa mga function.
   coursef-2018_shortdescription_congrats: Alamin ang lahat ng mga konsepto sa mga Pangunahing Kaalaman sa Computer Science at maglikha ng iyong sariling sining, kuwento o laro.
+  coursea-2019_shortdescription_congrats: Isang panimula sa computer science para sa mga hindi pa marunong magbasa.
+  courseb-2019_shortdescription_congrats: Isang panimula sa computer science para sa mga hindi marunong magbasa. (Katulad ng Kursong A, ngunit may mas maraming pagkakaiba para sa mga nakakatandang mga estudyante.)
+  coursec-2019_shortdescription_congrats: Alamin ang mga pangunahing alituntunin ng computer science at lumikha ng iyong sariling sining, mga kuwento, at mga laro.
+  coursed-2019_shortdescription_congrats: Mabilis na dinaanan ang mga konsepto mula sa Kursong C, pagkatapos ay pupunta pa tayo sa mga algoritmo, mga naka-nest na mga loop, mga kondisyonal, at iba pa.
+  coursee-2019_shortdescription_congrats: Madaling dumaan sa mga konsepto sa Kursong C & D at pagkatapos ay pumunta pa sa mga function.
+  coursef-2019_shortdescription_congrats: Alamin ang lahat ng mga konsepto sa mga Pangunahing Kaalaman sa Computer Science at maglikha ng iyong sariling sining, kuwento o laro.
   codeorg_longdescription: "Matuto ng mga pangunahing konsepto ng Computer Science gamit ang drag and drop na pagprogram. Ito ay isang parang laro, pansariling-gabay na mga tutoryal na naglakip sa mga video ng mga lektura nina Bill Gates, Mark Zuckerberg, Angry Birds at Plants vs. Zombies. Matuto ng mga repeat na loops, mga kondisyonal, at pangunahing kaalaman sa mga algoritmo. Magagamit sa 34 na mga wika."
   codeintl_longdescription: "Matuto ng mga pangunahing konsepto ng Computer Science gamit ang drag and drop na pagprogram. Ito ay isang parang laro, pansariling-gabay na mga tutoryal na naglakip sa mga video ng mga lektura nina Bill Gates, Mark Zuckerberg, Angry Birds at Plants vs. Zombies. Matuto ng mga repeat na loops, mga kondisyonal, at pangunahing kaalaman sa mga algoritmo. Magagamit sa 34 na mga wika."
   khan_longdescription: "Pag-aralan ang mga pangunahing konsepto ng pagprogram sa Javascript habang lumikha ng mga masasayang drowing gamit ang iyong code. Gawin ito nang ikaw lang o sa iyong klase!"
@@ -1399,8 +1371,6 @@
   header_report_bug: "I-report ang bug"
   header_tutorials: "Mga Tutorial"
   header_documentation: "Dokumentasyon"
-  csp_name: "Mga Prinsipyo ng CS"
-  full_course_category_name: "Buong mga Kurso"
   user_header_label: "Mabuhay %{username}"
   user_header_team: "Koponan"
   user_header_settings: "Account Ko"

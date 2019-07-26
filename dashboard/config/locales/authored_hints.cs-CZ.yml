@@ -24,8 +24,6 @@ cs-CZ:
       2-3 Artist 4:
         2-3_Artist_4_a: Vše co je třeba pro dokončení domu je nakreslit čtverec!
       2-3 Artist 6:
-        2-3_Artist_6_a: 'Pro nakreslení těchto malých úhlů se musíš ještě otočit pokaždé,
-          když namaluješ čtverec.   '
         2-3_Artist_6_b: Protože už jsem otočen doprava, je pri vytvoření trojúhelníku
           jednodušší začít tím že půjdu dopředu a potom se otočím doleva.
         2-3_Artist_6_c: Každá strana trojúhelníku je stejně dlouhá jako každá strana
@@ -36,11 +34,9 @@ cs-CZ:
       2-3 Artist 8:
         2-3_Artist_8_a: Pokud rozdělíš 200 na polovinu, kolik pixelů na šířku musí
           mít každý čtverec?
-      2-3 Artist 9:
+      2-3 Artist 9 NEW:
         2-3_Artist_9_a: Tvar diamantu je jen pootočený čtverec
       2-3 Artist Debugging 10:
-        2-3_Artist_Debugging_10_a: Pamatuj, chceš udělat ovládací tlačítka 10 pixelů
-          _širší_ ...tak nezapomeň **přidat** 10 k číslu, které se mění.
         2-3_Artist_Debugging_10_b: |-
           **Pokus a omyl je zde dobrá cesta!**
 
@@ -58,13 +54,6 @@ cs-CZ:
       2-3 Artist Debugging 7:
         2-3_Artist_Debugging_7_a: Co se stane, pokud necháte umělce posunout nebo
           skočit zpět, poté co nakreslí první čáru?
-      2-3 Artist Debugging 8:
-        2-3_Artist_Debugging_8_a: |-
-          Kolikrát se můj tvar opakuje?
-
-          Kolikrát se _má_ opakovat?
-
-          Kde to můžeš v programu změnit?
       2-3 Artist Debugging 9:
         2-3_Artist_Debugging_9_a: Umělec se potřebuje otočit o 60 stupňů více doleva,
           než začne kreslit!
@@ -94,49 +83,6 @@ cs-CZ:
         2-3_Artist_Functions_4_a: Umělec se potřebuje otočit o 120 stupňů mezi každým
           čtvercem, aby dokončil obrazec.
       2-3 Artist Loops New 11:
-        2-3_Artist_Loops_New_11_a: |-
-          Vzpomeňte si, že kód z předchozí hádanky byl:
-
-          <xml>
-          <block type="when_run" deletable="false" movable="false">
-          <next>
-          <block type="controls_repeat">
-          <title name="TIMES">8</title>
-          <statement name="DO">
-          <block type="draw_colour" inline="true">
-          <value name="COLOUR">
-          <block type="colour_random"/>
-          </value>
-          <next>
-          <block type="draw_turn_by_constant_dropdown">VpravoBok,</title>,
-          ,<title name="VALUE" config="45,60,90,120,180">45,
-          <title name="DIR">,</title>
-          <next>
-          <block type="draw_move_by_constant">
-          <title name="DIR">moveForward 50</title>
-          <title name="VALUE"></title>
-          <next>
-          <block type="draw_turn_by_constant_dropdown">
-          <title name="DIR">Vlevobok</title>
-          <title name="VALUE" config="45,60,90,120,180">90</title>
-          <next>
-          <block type="draw_move_by_constant">
-          <title name="DIR">
-          ,<title name="VALUE">50,</title>,
-          , moveForward</title>,</block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </statement>
-          </block>
-          </next>
-          </block>
-          </xml>
         2-3_Artist_Loops_New_11_b: Váš nový obrat by měl jít na **konec** kódu uvnitř
           smyčky.
       2-3 Artist Loops New 12:
@@ -151,15 +97,6 @@ cs-CZ:
           Na konci každého diamantu stojí již umělec správný směrem, aby mohl začít kreslit další.
 
           Proto nepotřebujeme přidávat další blok `otoč vlevo`, než znovu začne.
-        2-3_Artist_Loops_New_13_b: |-
-          Pro každý diamant umělec:
-
-          -   posun vpřed
-          -   otočit vpravo o 120 stupňů
-          -   posun vpřed
-          -   otočit vpravo o 60 stupňů
-
-          A pak celé znovu!
       2-3 Artist Loops New 9:
         2-3_Artist_Loops_New_9_a: Umělec se potřebuje otočit o 45 stupňů doprava,
           než začne kreslit.
@@ -169,11 +106,15 @@ cs-CZ:
         2-3_Artist_Nested_Loops_1_a: Nezapomeňte vložit všechny šedé bloky dovnitř
           vaší smyčky.
       2-3 Artist Nested Loops 3:
-        2-3_Artist_Nested_Loops_3_a: "Potřebujete pomoc s úhly?  \n**360/12 = 30**"
+        2-3_Artist_Nested_Loops_3_a: |-
+          Potřebujete pomoc s úhly?\
+          **360/12 = 30**
         2-3_Artist_Nested_Loops_3_b: Nezapomeňte dovnitř smyčky vložit celý šedý kód
           a bloky měnící směr.
       2-3 Artist Nested Loops 4:
-        2-3_Artist_Nested_Loops_3_a: "Potřebujete pomoc s úhly?  \n**360/12 = 30**"
+        2-3_Artist_Nested_Loops_3_a: |-
+          Potřebujete pomoc s úhly?\
+          **360/12 = 30**
       2-3 Artist Nested Loops 5:
         2-3_Artist_Nested_Loops_5_a: |-
           Zkuste použít blok \`skok vpřed ' abyste se dostali z vrcholu jednoho čtverce na místo, kde budete začínat další.
@@ -194,24 +135,6 @@ cs-CZ:
           s červenou květinou úplně stejně jako s fialovou květinou!
         2-3_Bee_Conditionals_14_b: Pokud by červená květina byla fialová, našel bys
           jak použít blok `opakuj` abys zmenšil kód?
-        2-3_Bee_Conditionals_14_c: |-
-          Zkus to rozložit na dva samostatné úkoly:
-
-          ![](https://images.code.org/895a52f3febff9edb83979f7861cf67a-image-1469640892331.png)
-
-          1.  Získat nektar 3 krát
-
-          2.  Posun vpřed 5 krát
-
-          3.  Zkontroluj, jestli je tam nektar: pokud ano, získej ho
-
-          4.  Otoč se doleva
-
-          5.  Vyrob med
-
-          6.  Posuň se vpřed 2 krát
-
-          7.  Vyrob dva medy
       2-3 Bee Conditionals 15:
         2-3_Bee_Conditionals_15_a: 'Pamatuj: Fialová květina může mít 0 nebo 1 nektaru
           and mohou se změnit pokaždé, když spustíš program.'
@@ -329,26 +252,13 @@ cs-CZ:
           V kruhu je 360 stupňů!
 
           To je, kolikrát je potřeba kód opakovat (s otočením o 1 stupeň pokaždé), aby se kruh dokončil!
-      4-5 Artist 5:
-        4-5_Artist_5_a: |-
-          Metoda pokus / omyl je skvělá, ale problém lze také vyřešit rozdělením úhlu 90 stupňů na třetiny.
-
-          \*\* 90 / 3 = **\_** \*\*
       4-5 Artist 7:
         4-5_Artist_7_a: 'Který úhel je nejmenší? V jakém úhlu stojí Malíř? '
       4-5 Artist 8:
         4-5_Artist_8_a: "Dlouhé strany mají vždy 240 pixelů. To znamená, že dvě krátké
           strany musí být celkem:\n\n\\*\\* 800 - 240 - 240 = 320 \\*\\*\n\nCo znamená
           \\*\\* 320/2 \\*\\*? "
-        4-5_Artist_8_b: |-
-          Tento obrázek lze nakreslit dvěma způsoby!
-
-          -   Nakreslete dva obdélníky, které jsou \*\* 120 \*\* dlouhé a \*\* 160 \*\* vysoké, s překrývající se stranou
-
-          -   Nakreslete jeden obdélník, který je \*\* 240 \*\* dlouhý a \*\* 160 \*\* vysoký, potom přidejte prostřední čáru.
       4-5 Artist 9:
-        4-5_Artist_9_a: Když je trojúhelník rovnostranný, jsou všechny jeho strany
-          a všechny úhly stejné.
         4-5_Artist_9_b: Budete muset nakreslit tři stejně velké trojúhelníky. Nezapomeňte,
           že do každé nové pozice musíte skočit.
       4-5 Artist Assessment 1:
@@ -723,18 +633,6 @@ cs-CZ:
         courseA_artist_loops_challenge1_b: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
         courseA_artist_loops_challenge1_c: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
         courseA_artist_loops_challenge1_d: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
-      course2_bee_conditionals_challenge2:
-        courseD_bee_conditionals_challenge1_b: |-
-          Stejně jako bloky `pokud na květině`, kód v cyklu `pokud nektar > 0` poběží, pokud je včela na květině. Rozdíl je v tom, že kód uvnitř se bude opakovat, dokud zbývá nějaký nektar. Zkus tento vzor:
-
-          <xml>  <block type="bee_whileNectarAmount">
-
-          <title name="ARG1">nectarRemaining</title>
-          <title name="OP">&gt;</title>
-          <title name="ARG2">0</title>                    <statement name="DO">
-          <block type="maze_nectar"/>
-          </statement>
-          </block></xml>
       course2_collector_loops_challenge2:
         courseC_maze_loops_challenge2_a: Původní kód by fungoval skvěle - pokud by
           tam byl jeden kousek pokladu na každé hromádce!
@@ -753,10 +651,6 @@ cs-CZ:
           různých úsecích. Každý z nich má vzor, který můžete opakovat.
         courseC_maze_loops_challenge1_b: Mezi bloky `opakuj` budete potřebovat bloky
           `otočit vlevo` nebo `otočit vpravo`, aby byl Scrat připraven na další vzor.
-        courseC_maze_loops_challenge1_c: |-
-          Pokud jste se dostali až sem, potřebujete jen `otočit vlevo` a pak párkrát `posunout vpřed`. Nevzdávejte to!
-
-          ![](<https://images.code.org/7696c5c16b8ddf1d53436cdc7fb6346d-image-1494101728016.14.34 PM.png>)
       course3_bee_functions_challenge1:
         courseE_bee_functions_challenge1_a: |-
           Pokud je hádanka příliš složitá, zkuste budovat svou funkci po částech.
@@ -867,10 +761,8 @@ cs-CZ:
           </block></xml>
       courseD_maze_ramp6:
         courseC_maze_programming6_a: Tuto hádanku lze vyřešit dvěma způsoby!
-      courseD_scrat_predict1:
-        courseF_maze_ramp6_a: Tuto hádanku lze vyřešit dvěma způsoby!
-      courseD_scrat_ramp6:
-        courseC_maze_programming6_a: Tuto hádanku lze vyřešit dvěma způsoby!
+      courseD_scrat_ramp7:
+        courseD_scrat_programming6_a: Tuto hádanku lze vyřešit dvěma způsoby!
       courseE_artist_concept_challenge1:
         courseE_artist_concept_challenge1_b: 'Dvě třetiny trojúhelníku mají délku
           80 pixelů a otočka vpravo je o 120 stupňů. '
@@ -921,10 +813,6 @@ cs-CZ:
           Pokud je hádanka příliš složitá, zkuste budovat svou funkci po částech.
 
           Přidejte pár bloků a vyzkoušejte to. Přidejte další a zkuste to znovu. Brzy se vám to podaří!
-      courseE_farmer_ramp12d:
-        courseE_bee_ramp14_a: Včela pracuje jako farmář v předchozí hádance. Jdi po
-          cestě a sbírej nektar, dokud tam nějaký je (dokud nektar > 0) a vyrob všechen
-          med.
       courseF_artist_fwp_challenge2:
         courseF_artist_fwp_challenge1_a: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       courseF_artist_variables4:

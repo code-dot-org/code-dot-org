@@ -338,9 +338,9 @@ it:
         C4_bee_conditional: 'Ape: Istruzioni Condizionali'
         C4_variables_artist: 'Artista: Variabili'
         C4_variables_playlab: 'Laboratorio: Variabili'
-        C4_for_loops: Cicli con Contatore
-        C4_for_loops_bee: Cicli con Contatore
-        C4_for_loops_no_bee: Cicli con Contatore
+        C4_for_loops: Cicli con contatore
+        C4_for_loops_bee: Cicli con contatore
+        C4_for_loops_no_bee: Cicli con contatore
         C4_math_artist: Programmare l'artista usando la matematica
         C4_function_edit: Modifica di funzioni
         C4_function_create: Creazione di funzioni
@@ -349,7 +349,7 @@ it:
         C4_unplugged_algorithms: Algoritmi per il Tangram
         C4_unplugged_madlibs: Mad-Libs
         C4_unplugged_variables: Variabili e buste
-        C4_unplugged_forloops: Cicli con Contatore
+        C4_unplugged_forloops: Cicli con contatore
         C4_unplugged_parameters: Composizione di Canzoni - Parametri
         C4_unplugged_binary: Binario
         CSF_a_b_artist_loops: Cicli con l'artista
@@ -495,10 +495,10 @@ it:
         csd_gamelab_booleans: Espressioni Booleane
         csd_gamelab_conditional_statements: Istruzioni Condizionali
         csd_gamelab_if_else: Dichiarazioni Se/altrimenti
-        CSF_SpriteLabIntro_CDEF: Questo è il Laboratorio dei Personaggi
-        CSF_Spritelab_MakeSprite_CDEF: Come creare un Personaggio nel Laboratorio dei Personaggi
-        CDEF_Video_SpritesInAction: Personaggi in Azione
-        CSF_SpriteLab_SpritesInAction_CDEF: Personaggi in Azione
+        CSF_SpriteLabIntro_CDEF: Questo è il Laboratorio dei personaggi
+        CSF_Spritelab_MakeSprite_CDEF: Come creare un personaggio nel Laboratorio dei personaggi
+        CDEF_Video_SpritesInAction: Personaggi in azione
+        CSF_SpriteLab_SpritesInAction_CDEF: Personaggi in azione
         CSF_StarWars_ProjectIntro: Introduzione al progetto Star Wars
         mc_2018_intro: 'Minecraft: Viaggio Acquatico - Introduzione'
         MC_2018_loops: 'Minecraft: Viaggio Acquatico - Ripeti fino a che'
@@ -518,7 +518,7 @@ it:
         csd_pair_programming: Programmazione in coppia
         csd_applab_parameters: Funzioni con parametri
         CSF_Going_Places_Safely: Il mio quartiere digitale
-        CSF_SpriteLab_SpritesInAction_v2: Personaggi in Azione
+        CSF_SpriteLab_SpritesInAction_v2: Personaggi in azione
     callout:
       text:
         drag_blocks: Prendi qui a sinistra il blocco "vai avanti" ed attaccalo sotto l'altro blocco qua sopra

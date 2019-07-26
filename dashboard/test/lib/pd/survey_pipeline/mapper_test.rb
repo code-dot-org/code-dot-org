@@ -23,6 +23,22 @@ module Pd::SurveyPipeline
       }
     end
 
+    test 'map and reduce basic data' do
+      group_config = [:a, :b]
+      always_true = lambda {|_| true}
+      map_config = [{condition: always_true, field: :c, reducers: [Pd::SurveyPipeline::AvgReducer]}]
+
+      # Average value of field :c in @data, grouped by field :a and :b
+      expected_avg = 0.5
+
+      context = {question_answer_joined: @data}
+
+      mapper = GenericMapper.new(group_config: group_config, map_config: map_config)
+      mapper.process_data context
+
+      assert_equal [expected_avg], context[:summaries].pluck(:reducer_result).uniq
+    end
+
     test 'group data using no key' do
       # Empty group config returns 1 group with all data
       summary = group_and_summarize([])

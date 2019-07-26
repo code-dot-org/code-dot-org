@@ -1,16 +1,456 @@
 ---
-ja:
+ja-JP:
   data:
-    external:
+    dsls:
+      2-3 Algorithms Multi 1:
+        title: 複数の選択肢
+        questions:
+        - text: 与えられた画像のためのアルゴリズムを選びましょう
+        answers:
+        - text: 正方形から始めます<br/>正方形の上に三角形を置きます<br/>正方形の下に三角形を置きます
+        - {}
+        - text: 正方形から始めます<br/>正方形の上に平行四辺形を置きます<br/>三角形を平行四辺形の右に置きます
+        - text: 正方形から始めます<br/>三角形を正方形の下に置きます<br/>平行四辺形を三角形の右に置きます
+      2-3 Algorithms Multi 2:
+        title: 複数の選択肢
+        content1: 三角形から始めます<br/>正方形を三角形の下に置きます<br/>もう一つの三角形を正方形の下に置きます
+        questions:
+        - text: どの絵がこのアルゴリズムに従って<em>いない</em>でしょうか？
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 Big Event Match 1:
+        title: 一致
+        content2: 一致するボタンの組み合わせをえらびましょう。
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 Binary Match 1:
+        title: 一致
+        content2: キーを使って一致する文字の組み合わせをえらびましょう。
+        questions:
+        - text: "<strong>N</strong>"
+        - text: "<strong>O</strong>"
+        - text: "<strong>P</strong>"
+        - text: "<strong>Q</strong>"
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 Conditionals Multi 1:
+        title: 複数の選択肢
+        questions:
+        - text: ゲームのルールによると、カードの組み合わせの点数が正しいのはどれでしょう？
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 Getting Loopy Multi 1:
+        title: 複数の選択肢
+        questions:
+        - text: この流れをループを使って簡単にする方法はないでしょうか？
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 Graph Paper Match 1:
+        title: 一致
+        content1: 一致するマス目のプログラムの組み合わせをえらびましょう。
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      2-3 Graph Paper Multi 1:
+        title: 複数の選択肢
+        questions:
+        - text: この画像を描いたのはどのプログラムでしょうか？
+        answers:
+        - {}
+        - {}
+        - {}
+      2-3 Maze Match 2:
+        title: 迷路パズル
+        content1: 一致するパズルのブロックの組み合わせをえらびましょう。
+        pre_title: 'やり方:'
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      2-3 Maze Multi 2:
+        title: めいろ選択問題（せんたくもんだい）
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 Relay Programming Multi 1:
+        title: 複数の選択肢
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      2-3 Relay Programming Multi 2:
+        title: 複数の選択肢
+        questions:
+        - text: 正しい画像プログラムはどれですか？
+        answers:
+        - {}
+        - {}
+        - {}
+      2-3 artist debug multi 1:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 artist functions multi 1:
+        title: アーティスト ファンクション選択問題（せんたくもんだい）
+        questions:
+        - text: 与えられた関数を使ってこの画像を描くことができるように、正しいブロックをえらびましょう。
+        answers:
+        - {}
+        - {}
+        - {}
+      2-3 artist loops match 1:
+        content2: 一致する組み合わせをえらびましょう。
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 artist loops multi 1:
+        title: アーティストループ 選択問題（せんたくもんだい）
+        questions:
+        - text: このループではどんな形が描かれるでしょうか？
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 artist loops multi 2:
+        title: アーティストループ 選択問題（せんたくもんだい）
+        questions:
+        - text: このプログラムで描いた図形はどれでしょう？
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 artist match 1:
+        title: アーティストの一致
+        content1: 一致する組み合わせをえらびましょう。
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 bee conditionals multi 1:
+        questions:
+        - text: 下のどっちの比較がtrueになるでしょうか？
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 bee conditionals multi 3:
+        questions:
+        - text: 正しいブロックを選んでください。
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 bee loops multi 1:
+        title: みつばちループ選択問題（せんたくもんだい）
+        questions:
+        - text: すべての花のミツを集めるブロックはどれでしょう？
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 maze match 1:
+        title: 迷路はどれに一致するか
+        content1: 一致するパズルのブロックの組み合わせをえらびましょう。
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      2-3 maze multi 1:
+        title: めいろ選択問題（せんたくもんだい）
+        questions:
+        - text: 正しいブロックの組み合わせはどれでしょう？
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 Algorithms Match 1:
+        title: 一致
+        content1: サイコロレースゲームの手順を一致させましょう。
+        questions:
+        - text: "<h4>1)</h4>"
+        - text: "<h4>2)</h4>"
+        - text: "<h4>3)</h4>"
+        - text: "<h4>4)</h4>"
+        answers:
+        - text: "<h4>プレイヤー１の点数をゼロにします</h4>"
+        - text: "<h4>プレイヤー１がサイコロを振ります</h4>"
+        - text: "<h4>プレイヤー１の出た目を合計点数に加えます</h4>"
+        - text: "<h4>プレイヤーの点数を比較して誰が勝ったか見てみましょう</h4>"
+      4-5 Algorithms Multi 1:
+        title: 複数の選択肢
+        questions:
+        - text: どのアイテムがアルゴリズムを記述するのが最も難しいですか?
+        answers:
+        - text: 歯を磨く
+        - text: クッキーを焼く
+        - text: 食料品リストから買い物をする
+        - text: バナナ
+      4-5 Computational Thinking Match 1:
+        title: 一致
+        content1: これらの車両を分解しました。分解した部品リストを一致させましょう。
+        questions:
+        - text: "<h3>車輪/片面: 2<br/>窓/片面: 0</h3>"
+        - text: "<h3>車輪/片面: 2<br/>窓/片面: 1</h3>"
+        - text: "<h3>車輪/片面: 2<br/>窓/片面: 6</h3>"
+        - text: "<h3>車輪/片面: 3<br/>窓/片面: 2</h3>"
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 Computational Thinking Multi 1:
+        title: 複数の選択肢
+        questions:
+        - text: シアトルは大きな町。<br/>ユージーンは中くらいの町<br/> ヒルビューは小さな町。
+        answers:
+        - text: シアトル _____ _____ _____。
+        - text: _____ は、_____ 都市です。
+        - text: _____は_____ _____。
+        - text: Eugene は _____ 都市です。
+      4-5 Crowdsourcing Multi 1:
+        title: 複数の選択肢
+        questions:
+        - text: どの写真がクラウドソーシングを表していますか?
+        answers:
+        - {}
+        - {}
+      4-5 Crowdsourcing Multi 2:
+        title: 複数の選択肢
+        questions:
+        - text: クラウドソーシングの実践に適した活動はどれだろうと思いますか？
+        answers:
+        - text: 部屋の掃除
+        - text: デザートを食べる
+        - text: 髪をとかす
+        - text: 顔を洗う
+      4-5 Digital Footprint Multi 1:
+        title: 複数の選択肢
+        questions:
+        - text: インターネット上で公開や共有しても大丈夫なのは、次のうちどれでしょうか？
+        answers:
+        - text: あなたの誕生日
+        - text: あなたの好きな食べ物
+        - text: あなたの住所
+        - text: 親のクレジットカード番号
+      4-5 Internet Multi 1:
+        title: 複数の選択肢
+        questions:
+        - text: Code.org にログオンする時、DNSはあなたを、どの IP アドレスに連れていくでしょうか？
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 Internet Multi 2:
+        title: 複数の選択肢
+        questions:
+        - text: もしDNSがIPアドレス100.42.50.110のページを送信したすると、どのウェブサイトが該当しますか?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 Songwriting Multi 1:
+        title: 複数の選択肢
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 Suncatchers Match 1:
+        title: 一致
+        content1: SKILL表を使い、PROGRAMとできる単語を一致させましょう
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 Suncatchers Multi 1:
+        title: 複数の選択肢
+        questions:
+        - text: プログラム 1 とまったく同じ順序 <em>では無い</em> のは、下のどのプログラムですか?
+        answers:
+        - {}
+        - {}
+        - {}
+      4-5 artist loops multi 1:
+        title: アーティストループ 選択問題（せんたくもんだい）
+        questions:
+        - text: どのくみあわせでこの絵がかけますか？
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 artist multi 1:
+        title: アーティスト選択問題（せんたくもんだい）
+        questions:
+        - text: 一辺の長さが100の正方形を描くブロックはどれでしょうか？
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 artist multi 2:
+        title: アーティスト選択問題（せんたくもんだい）
+        questions:
+        - text: 対称（たいしょう）な図形（ずけい）はどれですか？
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 bee conditionals multi 1:
+        title: 正しいものを選ぼう
+        questions:
+        - text: 正しいブロックを選んでください。
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 bee debug multi 1:
+        title: みつばちデバッグ選択問題（せんたくもんだい）
+        questions:
+        - text: どのバージョンの関数をつかえばよいでしょうか？
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 bee loops multi 1:
+        title: みつばちループ選択問題（せんたくもんだい）
+        questions:
+        - text: どのコードが正（ただ）しいくみあわせですか？
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 maze conditionals multi 1:
+        title: めいろ：条件文（じょうけんぶん）選択問題（せんたくもんだい）
+        questions:
+        - text: どのコードが正（ただ）しいですか？
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 maze match 1:
+        title: 迷路パズル
+        content1: 一致するパズルのブロックの組み合わせをえらびましょう。
+        pre_title: 'やり方:'
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      4-5 maze multi 1:
+        title: めいろ選択問題（せんたくもんだい）
+        questions:
+        - text: どのコードが正（ただ）しいですか？
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
       Begin planning your project:
         title: タイトル
+      CSD Header Size MC:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD Header Size MC_2018:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD Header Size MC_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
       CSD U2 Design Project:
         title: タイトル
       CSD U2 Design Project_2018:
         title: タイトル
       CSD U2 Design Project_2018_2019:
-        title: タイトル
-      CSD U2 L1 Overview:
         title: タイトル
       CSD U2 L2 Overview:
         title: タイトル
@@ -28,12 +468,245 @@ ja:
         title: タイトル
       CSD U2 expand project_2018_2019:
         title: タイトル
+      CSD U2 image debug match:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U2 lists match:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U2 lists match_2018:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U2 lists match_2018_2019:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 - conditionals - Matching:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 - conditionals - Matching_2018:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 - conditionals - Matching_2018_2019:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Boolean MC:
+        title: タイトル
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Boolean MC_2018:
+        title: タイトル
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Boolean MC_2018_2019:
+        title: タイトル
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Functions Prediction define first:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Functions Prediction define first_2018:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Functions Prediction define first_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Keypress Matching:
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      CSD U3 Keypress Matching_2018:
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      CSD U3 Keypress Matching_2018_2019:
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      CSD U3 Sprite Movement Predict Multi:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Sprite Movement Predict Multi_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Sprite Movement Predict Multi_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Sprites intro predict multi:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Sprites intro predict multi_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Sprites intro predict multi_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
       CSD U3 combining rep:
         title: タイトル
       CSD U3 combining rep_2018:
         title: タイトル
       CSD U3 combining rep_2018_2019:
         title: タイトル
+      CSD U3 drawSprites placement match:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 drawSprites placement match_2019:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
       CSD U5 Encryption 1:
         title: タイトル
       CSD U5 Encryption 1_2018:
@@ -54,8 +727,243 @@ ja:
         title: タイトル
       CSD U5 student record_2018_2019:
         title: タイトル
+      CSD U6 array multi:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U6 array multi_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U6 array multi_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U6 setProperty predict multi:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U6 setProperty predict multi_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
       Internet Simulator Setup 2:
         title: タイトル
+      K-1 Artist 1 Multi 1:
+        title: 複数の選択肢
+        questions:
+        - text: どのブロックが正（ただ）しいくみあわせですか？
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Artist 1 Multi 2:
+        title: 複数の選択肢
+        questions:
+        - text: しかくをかくくみあわせはどれですか？
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Artist 2 Match 2:
+        title: 一致
+        content2: 種類別に形を一致させてください。
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Bee 1 Multi 1:
+        title: 複数の選択肢
+        questions:
+        - text: 左（ひだり）にある花（はな）のみつの数（かず）はいくつでしょうか？
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Bee 1 Multi 2:
+        title: 複数の選択肢
+        questions:
+        - text: 左（ひだり）にある花（はな）のみつの数（かず）はいくつでしょうか？
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Bee Loops Match 1:
+        title: 一致
+        content2: ブロックを一致させましょう。
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Big Event Match 1:
+        title: 一致
+        content2: 一致するボタンの組み合わせをえらびましょう。
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      K-1 Digital Footprint Multi 1:
+        title: 複数の選択肢
+        questions:
+        - text: どの動物が<strong> もっとも安全ではない </strong>デジタル足あとを、のこしますか？
+        answers:
+        - {}
+        - {}
+        - {}
+      K-1 Getting Loopy Multi 1:
+        title: 複数の選択肢
+        questions:
+        - text: この流れをループを使って簡単にする方法はないでしょうか？
+        answers:
+        - {}
+        - {}
+        - {}
+      K-1 Happy Maps Multi 1:
+        title: 複数の選択肢
+        questions:
+        - text: どの矢印を選べば、Flurbはお宝をゲットできますか？
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Keep it Private Multi 1:
+        title: 複数の選択肢
+        questions:
+        - text: オンラインで<strong>共有すべきではない</strong>情報はどれでしょう？
+        answers:
+        - {}
+        - {}
+        - {}
+      K-1 Maze Debugging Multi 1:
+        title: 複数の選択肢
+        questions:
+        - text: どのブロックがさいごになればいいでしょうか？
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Maze Loops Multi 1:
+        title: 複数の選択肢
+        questions:
+        - text: 正しいリピートブロックをえらびましょう。
+        answers:
+        - {}
+        - {}
+        - {}
+      K-1 Maze Loops Multi 2:
+        title: 複数の選択肢
+        questions:
+        - text: 正しいリピートブロックをえらびましょう。
+        answers:
+        - {}
+        - {}
+        - {}
+      K-1 Maze Match 1:
+        title: 一致
+        content2: ブロックとパズルを一致させましょう。
+        pre_title: 'やり方:'
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Maze Multiple Choice 2:
+        title: 迷路
+        questions:
+        - text: 答えはどれでしょう？
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Move It Multi 1:
+        title: 複数の選択肢
+        questions:
+        - text: どのアルゴリズム（命令のセット）を選べば、Flurbは花をゲットできますか？
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Plant a Seed Multi 1:
+        title: 複数の選択肢
+        questions:
+        - text: このアルゴリズムの？を埋めましょう。
+        answers:
+        - {}
+        - {}
+        - {}
+      K-1 Plant a Seed Multi 2:
+        title: 複数の選択肢
+        questions:
+        - text: このアルゴリズムの？を埋めましょう。
+        answers:
+        - {}
+        - {}
+        - {}
+      K-1 Word Search Multi 1:
+        title: 複数の選択肢
+        questions:
+        - text: '"MOVE"のつづりはどれでしょう？'
+        answers:
+        - {}
+        - {}
+        - {}
+      K-1 Word Search Multi 3:
+        title: 複数の選択肢
+        questions:
+        - text: このつづりはどの単語でしょう？
+        answers:
+        - {}
+        - {}
+        - text: 南
       Multi-Screen Apps:
         title: タイトル
       New Challenge Introduction:
@@ -64,1212 +972,683 @@ ja:
         title: タイトル
       Prepare for your presentation:
         title: タイトル
-    match:
-      2-3 Big Event Match 1:
-        content2: 一致するボタンの組み合わせをえらびましょう。
-        title: 一致
-      2-3 Binary Match 1:
-        content2: キーを使って一致する文字の組み合わせをえらびましょう。
-        questions:
-        - text: "<strong>N</strong>"
-        - text: "<strong>O</strong>"
-        - text: "<strong>P</strong>"
-        - text: "<strong>Q</strong>"
-        title: 一致
-      2-3 Graph Paper Match 1:
-        content1: 一致するマス目のプログラムの組み合わせをえらびましょう。
-        title: 一致
-      2-3 Maze Match 2:
-        content1: 一致するパズルのブロックの組み合わせをえらびましょう。
-        pre_title: 'やり方:'
-        title: 迷路パズル
-      2-3 artist loops match 1:
-        content2: 一致する組み合わせをえらびましょう。
-      2-3 artist match 1:
-        content1: 一致する組み合わせをえらびましょう。
-        title: アーティストの一致
-      2-3 maze match 1:
-        content1: 一致するパズルのブロックの組み合わせをえらびましょう。
-        title: 迷路はどれに一致するか
-      4-5 Algorithms Match 1:
-        answers:
-        - text: "<h4>プレイヤー１の点数をゼロにします</h4>"
-        - text: "<h4>プレイヤー１がサイコロを振ります</h4>"
-        - text: "<h4>プレイヤー１の出た目を合計点数に加えます</h4>"
-        - text: "<h4>プレイヤーの点数を比較して誰が勝ったか見てみましょう</h4>"
-        content1: サイコロレースゲームの手順を一致させましょう。
-        questions:
-        - text: "<h4>1)</h4>"
-        - text: "<h4>2)</h4>"
-        - text: "<h4>3)</h4>"
-        - text: "<h4>4)</h4>"
-        title: 一致
-      4-5 Computational Thinking Match 1:
-        content1: これらの車両を分解しました。分解した部品リストを一致させましょう。
-        questions:
-        - text: "<h3>車輪/片面: 2<br/>窓/片面: 0</h3>"
-        - text: "<h3>車輪/片面: 2<br/>窓/片面: 1</h3>"
-        - text: "<h3>車輪/片面: 2<br/>窓/片面: 6</h3>"
-        - text: "<h3>車輪/片面: 3<br/>窓/片面: 2</h3>"
-        title: 一致
-      4-5 Suncatchers Match 1:
-        content1: SKILL表を使い、PROGRAMとできる単語を一致させましょう
-        title: 一致
-      4-5 maze match 1:
-        content1: 一致するパズルのブロックの組み合わせをえらびましょう。
-        pre_title: 'やり方:'
-        title: 迷路パズル
-      K-1 Artist 2 Match 2:
-        content2: 種類別に形を一致させてください。
-        title: 一致
-      K-1 Bee Loops Match 1:
-        content2: ブロックを一致させましょう。
-        title: 一致
-      K-1 Big Event Match 1:
-        content2: 一致するボタンの組み合わせをえらびましょう。
-        title: 一致
-      K-1 Maze Match 1:
-        content2: ブロックとパズルを一致させましょう。
-        pre_title: 'やり方:'
-        title: 一致
-    multi:
-      2-3 Algorithms Multi 1:
-        answers:
-        - text: 正方形から始めます<br/>正方形の上に三角形を置きます<br/>正方形の下に三角形を置きます
-          correct: false
-        - correct: true
-        - text: 正方形から始めます<br/>正方形の上に平行四辺形を置きます<br/>三角形を平行四辺形の右に置きます
-          correct: false
-        - text: 正方形から始めます<br/>三角形を正方形の下に置きます<br/>平行四辺形を三角形の右に置きます
-          correct: false
-        questions:
-        - text: 与えられた画像のためのアルゴリズムを選びましょう
-        title: 複数の選択肢
-      2-3 Algorithms Multi 2:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        content1: 三角形から始めます<br/>正方形を三角形の下に置きます<br/>もう一つの三角形を正方形の下に置きます
-        questions:
-        - text: どの絵がこのアルゴリズムに従って<em>いない</em>でしょうか？
-        title: 複数の選択肢
-      2-3 Conditionals Multi 1:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: ゲームのルールによると、カードの組み合わせの点数が正しいのはどれでしょう？
-        title: 複数の選択肢
-      2-3 Getting Loopy Multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        questions:
-        - text: この流れをループを使って簡単にする方法はないでしょうか？
-        title: 複数の選択肢
-      2-3 Graph Paper Multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: この画像を描いたのはどのプログラムでしょうか？
-        title: 複数の選択肢
-      2-3 Maze Multi 2:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        title: めいろ選択問題（せんたくもんだい）
-      2-3 Relay Programming Multi 1:
-        answers:
-        - 
-        - 
-        - correct: true
-        title: 複数の選択肢
-      2-3 Relay Programming Multi 2:
-        answers:
-        - 
-        - 
-        - correct: true
-        questions:
-        - text: 正しい画像プログラムはどれですか？
-        title: 複数の選択肢
-      2-3 artist debug multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      2-3 artist functions multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: 与えられた関数を使ってこの画像を描くことができるように、正しいブロックをえらびましょう。
-        title: アーティスト ファンクション選択問題（せんたくもんだい）
-      2-3 artist loops multi 1:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: このループではどんな形が描かれるでしょうか？
-        title: アーティストループ 選択問題（せんたくもんだい）
-      2-3 artist loops multi 2:
-        answers:
-        - 
-        - 
-        - 
-        - correct: true
-        questions:
-        - text: このプログラムで描いた図形はどれでしょう？
-        title: アーティストループ 選択問題（せんたくもんだい）
-      2-3 bee conditionals multi 1:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: 下のどっちの比較がtrueになるでしょうか？
-      2-3 bee conditionals multi 3:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: 正しいブロックを選んでください。
-      2-3 bee loops multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        questions:
-        - text: すべての花のミツを集めるブロックはどれでしょう？
-        title: みつばちループ選択問題（せんたくもんだい）
-      2-3 maze multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: 正しいブロックの組み合わせはどれでしょう？
-        title: めいろ選択問題（せんたくもんだい）
-      4-5 Algorithms Multi 1:
-        answers:
-        - text: 歯を磨く
-          correct: false
-        - text: クッキーを焼く
-          correct: false
-        - text: 食料品リストから買い物をする
-          correct: false
-        - text: バナナ
-          correct: true
-        questions:
-        - text: どのアイテムがアルゴリズムを記述するのが最も難しいですか?
-        title: 複数の選択肢
-      4-5 Computational Thinking Multi 1:
-        answers:
-        - text: シアトル _____ _____ _____。
-          correct: false
-        - text: _____ は、_____ 都市です。
-          correct: true
-        - text: _____は_____ _____。
-          correct: false
-        - text: Eugene は _____ 都市です。
-          correct: false
-        questions:
-        - text: シアトルは大きな町。<br/>ユージーンは中くらいの町<br/> ヒルビューは小さな町。
-        title: 複数の選択肢
-      4-5 Crowdsourcing Multi 1:
-        answers:
-        - 
-        - correct: true
-        questions:
-        - text: どの写真がクラウドソーシングを表していますか?
-        title: 複数の選択肢
-      4-5 Crowdsourcing Multi 2:
-        answers:
-        - text: 部屋の掃除
-          correct: true
-        - text: デザートを食べる
-          correct: false
-        - text: 髪をとかす
-          correct: false
-        - text: 顔を洗う
-          correct: false
-        questions:
-        - text: クラウドソーシングの実践に適した活動はどれだろうと思いますか？
-        title: 複数の選択肢
-      4-5 Digital Footprint Multi 1:
-        answers:
-        - text: あなたの誕生日
-          correct: false
-        - text: あなたの好きな食べ物
-          correct: true
-        - text: あなたの住所
-          correct: false
-        - text: 親のクレジットカード番号
-          correct: false
-        questions:
-        - text: インターネット上で公開や共有しても大丈夫なのは、次のうちどれでしょうか？
-        title: 複数の選択肢
-      4-5 Internet Multi 1:
-        answers:
-        - 
-        - 
-        - 
-        - correct: true
-        questions:
-        - text: Code.org にログオンする時、DNSはあなたを、どの IP アドレスに連れていくでしょうか？
-        title: 複数の選択肢
-      4-5 Internet Multi 2:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: もしDNSがIPアドレス100.42.50.110のページを送信したすると、どのウェブサイトが該当しますか?
-        title: 複数の選択肢
-      4-5 Songwriting Multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        title: 複数の選択肢
-      4-5 Suncatchers Multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: プログラム 1 とまったく同じ順序 <em>では無い</em> のは、下のどのプログラムですか?
-        title: 複数の選択肢
-      4-5 artist loops multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: どのくみあわせでこの絵がかけますか？
-        title: アーティストループ 選択問題（せんたくもんだい）
-      4-5 artist multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: 一辺の長さが100の正方形を描くブロックはどれでしょうか？
-        title: アーティスト選択問題（せんたくもんだい）
-      4-5 artist multi 2:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: 対称（たいしょう）な図形（ずけい）はどれですか？
-        title: アーティスト選択問題（せんたくもんだい）
-      4-5 bee conditionals multi 1:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: 正しいブロックを選んでください。
-        title: 正しいものを選ぼう
-      4-5 bee debug multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: どのバージョンの関数をつかえばよいでしょうか？
-        title: みつばちデバッグ選択問題（せんたくもんだい）
-      4-5 bee loops multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        questions:
-        - text: どのコードが正（ただ）しいくみあわせですか？
-        title: みつばちループ選択問題（せんたくもんだい）
-      4-5 maze conditionals multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        questions:
-        - text: どのコードが正（ただ）しいですか？
-        title: めいろ：条件文（じょうけんぶん）選択問題（せんたくもんだい）
-      4-5 maze multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        questions:
-        - text: どのコードが正（ただ）しいですか？
-        title: めいろ選択問題（せんたくもんだい）
-      CSD Header Size MC:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      CSD Header Size MC_2018:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      CSD Header Size MC_2018_2019:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      CSD U3 Boolean MC:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        title: タイトル
-      CSD U3 Boolean MC_2018:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        title: タイトル
-      CSD U3 Boolean MC_2018_2019:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        title: タイトル
-      CSD U3 Functions Prediction define first:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      CSD U3 Functions Prediction define first_2018:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      CSD U3 Functions Prediction define first_2018_2019:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      CSD U3 Sprite Movement Predict Multi:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      CSD U3 Sprite Movement Predict Multi_2018:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      CSD U3 Sprite Movement Predict Multi_2018_2019:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      CSD U3 Sprites intro predict multi:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      CSD U3 Sprites intro predict multi_2018:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      CSD U3 Sprites intro predict multi_2018_2019:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      CSD U6 array multi:
-        answers:
-        - 
-        - 
-        - 
-        - correct: true
-      CSD U6 array multi_2018:
-        answers:
-        - 
-        - 
-        - 
-        - correct: true
-      CSD U6 array multi_2018_2019:
-        answers:
-        - 
-        - 
-        - 
-        - correct: true
-      CSD U6 setProperty predict multi:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      CSD U6 setProperty predict multi_2018:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      CSD U6 setProperty predict multi_2018_2019:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      K-1 Artist 1 Multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: どのブロックが正（ただ）しいくみあわせですか？
-        title: 複数の選択肢
-      K-1 Artist 1 Multi 2:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        questions:
-        - text: しかくをかくくみあわせはどれですか？
-        title: 複数の選択肢
-      K-1 Bee 1 Multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: 左（ひだり）にある花（はな）のみつの数（かず）はいくつでしょうか？
-        title: 複数の選択肢
-      K-1 Bee 1 Multi 2:
-        answers:
-        - 
-        - 
-        - 
-        - correct: true
-        questions:
-        - text: 左（ひだり）にある花（はな）のみつの数（かず）はいくつでしょうか？
-        title: 複数の選択肢
-      K-1 Digital Footprint Multi 1:
-        answers:
-        - 
-        - 
-        - correct: true
-        questions:
-        - text: どの動物が<strong> もっとも安全ではない </strong>デジタル足あとを、のこしますか？
-        title: 複数の選択肢
-      K-1 Getting Loopy Multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: この流れをループを使って簡単にする方法はないでしょうか？
-        title: 複数の選択肢
-      K-1 Happy Maps Multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: どの矢印を選べば、Flurbはお宝をゲットできますか？
-        title: 複数の選択肢
-      K-1 Keep it Private Multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: オンラインで<strong>共有すべきではない</strong>情報はどれでしょう？
-        title: 複数の選択肢
-      K-1 Maze Debugging Multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        questions:
-        - text: どのブロックがさいごになればいいでしょうか？
-        title: 複数の選択肢
-      K-1 Maze Loops Multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: 正しいリピートブロックをえらびましょう。
-        title: 複数の選択肢
-      K-1 Maze Loops Multi 2:
-        answers:
-        - 
-        - 
-        - correct: true
-        questions:
-        - text: 正しいリピートブロックをえらびましょう。
-        title: 複数の選択肢
-      K-1 Maze Multiple Choice 2:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: 答えはどれでしょう？
-        title: 迷路
-      K-1 Move It Multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: どのアルゴリズム（命令のセット）を選べば、Flurbは花をゲットできますか？
-        title: 複数の選択肢
-      K-1 Plant a Seed Multi 1:
-        answers:
-        - 
-        - 
-        - correct: true
-        questions:
-        - text: このアルゴリズムの？を埋めましょう。
-        title: 複数の選択肢
-      K-1 Plant a Seed Multi 2:
-        answers:
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: このアルゴリズムの？を埋めましょう。
-        title: 複数の選択肢
-      K-1 Word Search Multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: '"MOVE"のつづりはどれでしょう？'
-        title: 複数の選択肢
-      K-1 Word Search Multi 3:
-        answers:
-        - 
-        - correct: true
-        - text: 南
-          correct: false
-        questions:
-        - text: このつづりはどの単語でしょう？
-        title: 複数の選択肢
       behaviors 1 predict:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - correct: false
-          feedback: 不正解
+        - {}
+        - {}
+        - {}
+        - feedback: 不正解
       behaviors 4 predict:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - correct: false
-          feedback: 不正解
+        - {}
+        - {}
+        - {}
+        - feedback: 不正解
       courseC_multi_artist_prog6_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseC_multi_artist_prog6_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseC_multi_artist_prog6_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseC_multi_harvester_loops11_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseC_multi_harvester_loops11_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseC_multi_harvester_loops11_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseC_multi_maze_debugging8_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseC_multi_maze_debugging8_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseC_multi_maze_debugging8_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseC_multi_maze_programming8_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseC_multi_maze_programming8_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseC_multi_maze_programming8_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseC_multi_starWars_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
+        - {}
+        - {}
+        - {}
         - text: わかりません
-          correct: false
       courseC_multi_starWars_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
+        - {}
+        - {}
+        - {}
         - text: わかりません
-          correct: false
       courseC_multi_starWars_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
+        - {}
+        - {}
+        - {}
         - text: わかりません
-          correct: false
       courseC_multi_starWars_predict2:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseC_multi_starWars_predict2_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseC_multi_starWars_predict2_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_artist_binary8_predict1:
+        questions:
+        - {}
         answers:
         - text: A
-          correct: false
         - text: B
-          correct: false
         - text: C
-          correct: false
         - text: D
-          correct: true
       courseD_multi_artist_binary8_predict1_2018:
+        questions:
+        - {}
         answers:
         - text: A
-          correct: false
         - text: B
-          correct: false
         - text: C
-          correct: false
         - text: D
-          correct: true
       courseD_multi_artist_binary8_predict1_2018_2019:
+        questions:
+        - {}
         answers:
         - text: A
-          correct: false
         - text: B
-          correct: false
         - text: C
-          correct: false
         - text: D
-          correct: true
       courseD_multi_artist_nestedLoops9_predict1:
+        questions:
+        - {}
         answers:
         - text: A
-          correct: true
         - text: B
-          correct: false
         - text: C
-          correct: false
-        - 
+        - {}
       courseD_multi_artist_nestedLoops9_predict1_2018:
+        questions:
+        - {}
         answers:
         - text: A
-          correct: true
         - text: B
-          correct: false
         - text: C
-          correct: false
-        - 
+        - {}
       courseD_multi_artist_nestedLoops9_predict1_2018_2019:
+        questions:
+        - {}
         answers:
         - text: A
-          correct: true
         - text: B
-          correct: false
         - text: C
-          correct: false
-        - 
+        - {}
       courseD_multi_bee_conditionals1_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_bee_conditionals1_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_bee_conditionals1_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_bee_conditionals7_predict2:
+        questions:
+        - {}
         answers:
-        - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_bee_conditionals7_predict2_2018:
+        questions:
+        - {}
         answers:
-        - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_bee_conditionals7_predict2_2018_2019:
+        questions:
+        - {}
         answers:
-        - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_bee_nestedLoops2_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_bee_nestedLoops2_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_bee_nestedLoops2_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_bee_nestedLoops9_predict2:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_bee_nestedLoops9_predict2_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_bee_nestedLoops9_predict2_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_collector_debugging10_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_farmer_condLoops9_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_farmer_condLoops9_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_farmer_condLoops9_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_farmer_ramp13:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_farmer_while10_predict2:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_farmer_while10_predict2_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_farmer_while10_predict2_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_farmer_while4_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_farmer_while4_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_farmer_while4_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_maze_until10_predict2:
+        questions:
+        - {}
         answers:
-        - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_maze_until10_predict2_2018:
+        questions:
+        - {}
         answers:
-        - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_maze_until10_predict2_2018_2019:
+        questions:
+        - {}
         answers:
-        - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_maze_until2_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_maze_until2_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_maze_until2_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_scrat_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
-      courseE_multi_artist_predict1:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseE_multi_bee_functions_predict1:
+        questions:
+        - {}
         answers:
-        - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseE_multi_farmer_functions11_predict:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - 
-        - correct: true
+        - {}
+        - {}
+        - {}
+        - {}
       courseE_multi_farmer_functions11_predict_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseE_multi_farmer_functions11_predict_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
-      courseE_multi_farmer_predict1:
-        answers:
-        - 
-        - 
-        - correct: true
-        - text: わかりません
-          correct: false
-      courseE_multi_farmer_predict2:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      courseE_multi_maze_predict1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseE_prediction_artistFunction1:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - 
-        - correct: true
+        - {}
+        - {}
+        - {}
+        - {}
       courseE_prediction_artistFunction1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - 
-        - correct: true
+        - {}
+        - {}
+        - {}
+        - {}
       courseE_prediction_artistFunction1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - 
-        - correct: true
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_bee_variables_8a_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_bee_variables_8a_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_multi_artist_for10_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_multi_artist_for10_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_multi_artist_for10_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_multi_artist_fwp2_predict1:
+        questions:
+        - {}
         answers:
-        - correct: true
-        - 
-        - 
-        - 
-      courseF_multi_artist_predict1:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_multi_artist_variables3a_predict1:
+        questions:
+        - {}
         answers:
-        - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_multi_artist_variables3a_predict1_2018:
+        questions:
+        - {}
         answers:
-        - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_multi_artist_variables3a_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_multi_bee_conditionals1_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_multi_bee_conditionals7_predict2:
+        questions:
+        - {}
         answers:
-        - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_multi_bee_for3_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_multi_bee_for3_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_multi_bee_for3_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_multi_bee_fwp9_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_multi_playlab_variables4c_predictive1:
+        questions:
+        - {}
         answers:
-        - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       coursee_prediction_artistfunction2:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       coursee_prediction_artistfunction2_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       coursee_prediction_artistfunction2_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       grade2_multi_collector_A_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       grade2_multi_collector_A_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       grade2_multi_collector_A_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}

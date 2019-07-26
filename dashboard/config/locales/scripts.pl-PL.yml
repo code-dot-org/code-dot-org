@@ -4722,6 +4722,8 @@ pl:
           stages:
             new stage:
               name: nowy etap
+            Number Systems:
+              name: Systemy liczbowe
         csd-videos:
           stages:
             new stage:
@@ -4758,3 +4760,84 @@ pl:
           stages:
             What is a Computer?:
               name: Czym jest komputer?
+        csd1-pilot:
+          stages:
+            Intro to Problem Solving:
+              name: Wstęp do rozwiązywania problemów
+            The Problem Solving Process:
+              name: Proces Rozwiązywania Problemów
+            Exploring Problem Solving:
+              name: Odkrywanie rozwiązywania problemów
+            What is a Computer?:
+              name: Czym jest komputer?
+            Input and Output:
+              name: Wejście i wyjście
+            Processing:
+              name: Przetwarzanie
+            Project - Propose an App:
+              name: Projekt - Propozycja aplikacji
+        csd2-pilot:
+          stages:
+            Exploring Websites:
+              name: Odkrywanie stron
+            Intro to HTML:
+              name: Wprowadzenie do HTML
+            Headings:
+              name: Nagłówki
+            Digital Footprint:
+              name: Cyfrowy ślad
+            Lists:
+              name: Listy
+            Clean Code and Debugging:
+              name: Czysty kod i debugowanie
+            Styling Text with CSS:
+              name: Stylowanie tekstu przy użyciu CSS
+            Sources and Search Engines:
+              name: Źródła i wyszukiwarki
+            RGB Colors and Classes:
+              name: Kolory RGB i klasy
+            Project - Personal Portfolio Website:
+              name: Projekt - Własna strona portfolio
+            Intellectual Property:
+              name: Własność intelektualna
+            Images:
+              name: Obrazki
+        csd3-pilot:
+          description_short: Programowanie
+          stages:
+            Plotting Shapes:
+              name: Rysowanie kształtów
+            Drawing in Game Lab:
+              name: Rysowanie w laboratorium gier
+            Shapes and Randomization:
+              name: Kształty oraz losowość
+            Variables:
+              name: Zmienne
+            Booleans Unplugged:
+              name: Wyrażenia boolowskie bez komputera
+            Conditionals:
+              name: Zdania z warunkami
+            Keyboard Input:
+              name: Wejście klawiatury
+            Other Forms of Input:
+              name: Inne formy wejścia
+            Project - Interactive Card:
+              name: Projekt - Interaktywna karta
+            Velocity:
+              name: Prędkość
+            Collision Detection:
+              name: Wykrywanie kolizji
+            Collisions:
+              name: Kolizje
+            Functions:
+              name: Funkcje
+            The Game Design Process:
+              name: Proces projektowania gier
+            Using the Game Design Process:
+              name: Używanie procesu projektowania gier
+            Project - Design a Game:
+              name: Projekt - Zaprojektuj grę
+        maddie-test:
+          stages:
+            new stage:
+              name: nowy etap

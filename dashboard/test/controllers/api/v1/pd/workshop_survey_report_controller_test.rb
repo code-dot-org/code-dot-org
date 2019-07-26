@@ -208,15 +208,17 @@ module Api::V1::Pd
     end
 
     test 'facilitators cannot see results for other types of workshops' do
-      workshop = create :pd_workshop, facilitators: [@facilitator]
+      workshop = create :pd_workshop, course: COURSE_CSF, subject: SUBJECT_CSF_101,
+        facilitators: [@facilitator]
       sign_in @facilitator
 
       get :generic_survey_report, params: {workshop_id: workshop.id}
+      result = JSON.parse(@response.body)
+
       assert_response :bad_request
-      assert_equal(
-        {'error' => "Do not know how to process survey results for this workshop"\
-          " #{workshop.course} #{workshop.subject}"},
-        JSON.parse(@response.body)
+      assert result['errors']&.present?
+      assert result['errors'].first["message"]&.start_with?(
+        'Action generic_survey_report should not be used for this workshop'
       )
     end
 
@@ -246,6 +248,28 @@ module Api::V1::Pd
         user: @program_manager,
         expected_facilitator_name_filter: nil
       )
+    end
+
+    test 'experiment_survey_report: return empty result for workshop without responds' do
+      csf_201_ws = create :pd_workshop, course: COURSE_CSF, subject: SUBJECT_CSF_201, num_sessions: 1
+
+      expected_result = {
+        "course_name" => nil,
+        "questions" => {},
+        "this_workshop" => {},
+        "all_my_workshops" => {},
+        "facilitators" => {},
+        "facilitator_averages" => {},
+        "facilitator_response_counts" => {},
+        "experiment" => true
+      }
+
+      sign_in @admin
+      get :experiment_survey_report, params: {workshop_id: csf_201_ws.id}
+      result = JSON.parse(@response.body).slice(*expected_result.keys)
+
+      assert_equal expected_result, result
+      assert_response :success
     end
 
     test 'generic_survey_report: CSF201 workshop uses new pipeline' do

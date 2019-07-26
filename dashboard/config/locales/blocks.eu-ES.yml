@@ -385,25 +385,8 @@ eu:
             '"macklemore90"': Macklemore - Can't Hold Us (90 sec)
             '"hammer"': MC Hammer - U Can't Touch This
             '"peas"': The Black Eyed Peas - I Got a Feeling
-      gamelab_add:
-        text: gehitu {SPRITE}, {THIS} taldera
       gamelab_addBehaviorSimple:
         text: sprite {SPRITE} hasi {BEHAVIOR}
-      gamelab_beginBehavior:
-        text: hasi {BEHAVIOR}
-      gamelab_changeColor:
-        text: aldatu {COLOR} {METHOD} {AMOUNT} erabiliaz
-        options:
-          METHOD:
-            '"tint"': tinta
-            '"tone"': tonua
-      gamelab_changeColorBy:
-        text: aldatu {COLOR} {METHOD} {AMOUNT} erabiliaz
-        options:
-          METHOD:
-            '"hue"': tonua
-            '"saturation"': saturazioa
-            '"brightness"': distira
       gamelab_changePropBy:
         text: aldatu {SPRITE} {PROPERTY} honekin {VAL}
         options:
@@ -416,7 +399,7 @@ eu:
       gamelab_checkTouching:
         options:
           CONDITION:
-            '"when"': "\\-enean"
+            '"when"': "-enean"
             '"while"': bitartean
       gamelab_clickedOn:
         text: "{SPRITE} klik egitean"
@@ -429,8 +412,6 @@ eu:
             'false': gezurra
       gamelab_destroy:
         text: ezabatu {THIS}
-      gamelab_eval:
-        text: ebal {CODE}
       gamelab_getProp:
         text: "{SPRITE} {PROPERTY}"
         options:
@@ -444,7 +425,7 @@ eu:
       gamelab_keyPressed:
         options:
           CONDITION:
-            '"when"': "\\-enean"
+            '"when"': "-enean"
             '"while"': bitartean
           KEY:
             '"up"': gora
@@ -457,14 +438,6 @@ eu:
             '"s"': s
             '"w"': w
             '"x"': x
-      gamelab_layoutSprites:
-        options:
-          FORMAT:
-            '"random"': ausazkoa
-      gamelab_locationDelta:
-        options:
-          DIR:
-            "'random'": ausazkoa
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -484,10 +457,6 @@ eu:
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': ur
               azpian
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': negua
-      gamelab_setPosition:
-        options:
-          POSITION:
-            '"random"': ausazkoa
       gamelab_setProp:
         options:
           PROPERTY:
@@ -505,31 +474,8 @@ eu:
       gamelab_spriteClicked:
         options:
           CONDITION:
-            '"when"': "\\-enean"
+            '"when"': "-enean"
             '"while"': bitartean
-      gamelab_spriteClickedSet:
-        options:
-          CONDITION:
-            '"when"': "\\-enean"
-            '"while"': bitartean
-      gamelab_spritesWhere:
-        options:
-          PROPERTY:
-            '"scale"': tamaina
-            '"x"': x posizioa
-            '"y"': y posizioa
-            '"direction"': mugimentuaren norantza
-            '"tint"': tinta
-      gamelab_spritesWhereGenerator:
-        options:
-          PROPERTY:
-            '"scale"': tamaina
-            '"x"': x posizioa
-            '"y"': y posizioa
-            '"direction"': mugimentuaren norantza
-            '"tint"': tinta
-      gamelab_thisBeginsBehaviorSimple:
-        text: sprite {SPRITE} hasi {BEHAVIOR}
       gamelab_turn:
         options:
           DIRECTION:
@@ -555,11 +501,6 @@ eu:
             "'down'": behera
             "'left'": ezkerrera
             "'right'": eskuinera
-      gamelab_whenTouchingSet:
-        options:
-          CONDITION:
-            '"when"': "\\-enean"
-            '"while"': bitartean
       gamelab_whileKey:
         options:
           KEY:
@@ -716,17 +657,17 @@ eu:
       aalab_checkTouching:
         options:
           CONDITION:
-            '"when"': "\\-enean"
+            '"when"': "-enean"
             '"while"': bitartean
       aalab_clickedOn:
         options:
           CONDITION:
-            '"when"': "\\-enean"
+            '"when"': "-enean"
             '"while"': bitartean
       aalab_keyPressed:
         options:
           CONDITION:
-            '"when"': "\\-enean"
+            '"when"': "-enean"
             '"while"': bitartean
           KEY:
             '"up"': gora

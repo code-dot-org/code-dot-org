@@ -1607,3 +1607,16 @@ si:
           stages:
             Graph Paper Programming:
               name: ප්‍රස්තාර රටා වැඩසටහන්
+        csd2-pilot:
+          stages:
+            Lists:
+              name: ලැයිස්තු
+        csd3-pilot:
+          description_short: ක්‍රමලේඛනය
+          stages:
+            Variables:
+              name: විචල්‍යන්
+            Conditionals:
+              name: කන්ඩිෂනලස්
+            Functions:
+              name: ශ්‍රිතයන්

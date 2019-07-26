@@ -3,6 +3,18 @@ id:
   data:
     script:
       category:
+        csd_2018_category_name: Penemuan CS('18-19')
+        csd_2019_category_name: Penemuan CS('19-'20)
+        csf_category_name: Dasar dasar CS
+        csf_2018_category_name: Dasar dasar CS (2018)
+        csf_international_category_name: Dasar dasar internasional CS
+        csf2_draft_category_name: 'Dalam pengembangan: Kursus A-F'
+        csp_category_name: "'15-16'Aturan CS"
+        csp_2018_category_name: Aturan CS('18-'19)
+        csp_2019_category_name: Dasar dasar CS('19'20)
+        cspexams_category_name: Aturan Tes Praktik CS
+        csp17_category_name: Aturab CS('17-'18)
+        full_course_category_name: Seluruh kursus
         hoc_category_name: Jam kode
         math_category_name: Matematika
       name:
@@ -1994,6 +2006,8 @@ id:
               name: Kunci umum Kripto
             Rapid Research - Data Innovations:
               name: Penelitian cepat - Data inovasi
+            Simple Encryption:
+              name: Enkripsi sederhana
             The Cost of Free:
               name: Biayanya gratis
             What is Big Data?:
@@ -2008,6 +2022,8 @@ id:
               name: CSP Mahasiswa pasca survei pementasan
             Post-Course Survey:
               name: Survei Pasca Kursus
+            Student Post-Course Survey:
+              name: Pos siswa-survei kursus
         csp5-2017:
           stages:
             Beyond Buttons Toward Apps:
@@ -2986,6 +3002,10 @@ id:
           stages:
             Controlling Memory with Variables:
               name: Mengontrol Memori dengan Variabel
+        hoc-encryption:
+          stages:
+            Simple Encryption:
+              name: Enkripsi sederhana
         fesbinary:
           title: Biner
           stages:
@@ -3659,12 +3679,15 @@ id:
               name: 'Algoritma kehidupan nyata: Tanam sebuah Bibit'
           title: Kursus A
           assignment_family_title: Kursus A
+          description_short: Pengenalan ilmu komputer untuk pra-pembaca.
         courseb-2017:
           stages:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritma kehidupan nyata: Tanam sebuah Bibit'
           title: Kursus B
           assignment_family_title: Kursus B
+          description_short: Pengenalan ilmu komputer untuk pra-pembaca.(Sama dengan
+            kursus A, tetapi dengan banyak variasi untuk siswa yang lebih tua)
         coursec-2017:
           stages:
             'Real-life Algorithms: Paper Planes':
@@ -3679,6 +3702,8 @@ id:
               name: Perulangan bercabang
           title: Kursus D
           assignment_family_title: Kursus D
+          description_short: Segera beralih konsep dari kursus C, kemudian algoritma,
+            nested loops, kondisional, dan banyak lagi.
         coursee-2017:
           stages:
             Introduction:
@@ -3726,6 +3751,8 @@ id:
               name: Perulangan bercabang
           title: Kursus E
           assignment_family_title: Kursus E
+          description_short: Segera berpindah konsep di kursus C&D kemudian lanjutkan
+            dengan fungsi.
         coursef-2017:
           stages:
             Introduction:
@@ -3750,6 +3777,8 @@ id:
               name: Membangun dasar
           title: Kursus F
           assignment_family_title: Kursus F
+          description_short: Pelajari seluruh konsep dalam dasar dasar ilmu komputer
+            dan buat seni, cerita atau permainan anda sendiri.
         csdnovice:
           stages:
             Wrap Up:
@@ -4020,6 +4049,8 @@ id:
               name: Apa itu komputer?
             Problem Solving with Big Data:
               name: Pemecahan masalah dengan Data Besar
+            Simple Encryption:
+              name: Enkripsi sederhana
             Smart Clothing Design:
               name: Pintar Desain Pakaian
         hero:
@@ -4295,6 +4326,7 @@ id:
               name: Proyek - Situs web Portfolio Pribadi
         coursea-2018:
           assignment_family_title: Kursus A
+          description_short: Pengenalan ilmu komputer untuk pra-pembaca.
           stages:
             'Programming: Happy Maps':
               name: Pemetaan bahagia
@@ -4454,6 +4486,8 @@ id:
               name: Minecraft Hour of Code
         coursef-2018:
           assignment_family_title: Kursus F
+          description_short: Pelajari seluruh konsep dalam dasar dasar ilmu komputer
+            dan buat seni, cerita atau permainan anda sendiri.
           stages:
             'Programming: My Robotic Friends':
               name: Teman-teman robot saya
@@ -4689,6 +4723,8 @@ id:
               name: Mengenali orang dengan data
             The Cost of Free:
               name: Biayanya gratis
+            Simple Encryption:
+              name: Enkripsi sederhana
             Encryption with Keys and Passwords:
               name: Enkripsi dengan kunci dan kata sandi
             Public Key Crypto:
@@ -4821,7 +4857,12 @@ id:
           stages:
             Artist:
               name: Artis
+        dance-extras:
+          title: Tetaplah berdansa
+          description: Lewatilah jam pertama dengan ide ide proyek yang luas.
         coursef-2019:
+          description_short: Pelajari seluruh konsep dalam dasar dasar ilmu komputer
+            dan buat seni, cerita atau permainan anda sendiri.
           stages:
             Building a Foundation:
               name: Membangun dasar
@@ -4979,6 +5020,9 @@ id:
           stages:
             'null':
               name: 'null'
+        dance-extras-gallery:
+          title: Tetaplah berdansa
+          description: Lewatilah jam pertama dengan ide ide proyek yang luas.
         coursec-2019:
           stages:
             'Real-life Algorithms: Paper Planes':
@@ -4997,6 +5041,7 @@ id:
         gamelab:
           title: Laboratorium Game
         coursea-2019:
+          description_short: Pengenalan ilmu komputer untuk pra-pembaca.
           stages:
             'Programming: Happy Maps':
               name: Pemetaan bahagia
@@ -5311,6 +5356,8 @@ id:
               name: Mengenali orang dengan data
             The Cost of Free:
               name: Biayanya gratis
+            Simple Encryption:
+              name: Enkripsi sederhana
             Encryption with Keys and Passwords:
               name: Enkripsi dengan kunci dan kata sandi
             Public Key Crypto:
@@ -5407,6 +5454,10 @@ id:
               name: Contoh aplikasi
             Final Project:
               name: Tugas Akhir
+        csp1-pilot:
+          stages:
+            Number Systems:
+              name: Sistem nomor
         time4csdemo:
           stages:
             Crowdsourcing:
@@ -5415,6 +5466,10 @@ id:
               name: Bersyarat dengan kartu
             Building a Foundation:
               name: Membangun dasar
+        csp7-pilot-staging:
+          stages:
+            Libraries:
+              name: Perpustakaan
         express-2018-vn:
           stages:
             Graph Paper Programming:
@@ -5431,3 +5486,188 @@ id:
           stages:
             Wrap Up:
               name: Penutupan
+        csd1-pilot:
+          stages:
+            The Problem Solving Process:
+              name: Proses Pemecahan Masalah
+            Exploring Problem Solving:
+              name: Eksplorasi Pemecahan Masalah
+            What is a Computer?:
+              name: Apa itu komputer?
+            Input and Output:
+              description_student: Dalam hal ini siswa kelas mempertimbangkan sejumlah
+                perangkat komputasi untuk menentukan apa jenis masukan dan keluaran
+                yang mereka gunakan. Kelompok-kelompok yang ditugaskan untuk sebuah
+                perangkat komputasi dan didasarkan pada guru-disediakan definisi masukan
+                dan keluaran, daftar masukan dan keluaran dari perangkat mereka. Untuk
+                menyimpulkan pelajaran kelas meneliti umum kegiatan-kegiatan yang
+                mereka lakukan pada perangkat komputasi dan pilih masukan dan keluaran
+                yang digunakan untuk kegiatan itu dari grafik.
+            Processing:
+              name: Sedang memproses
+            Apps and Storage:
+              description_student: 'Pelajaran ini mencakup masukan dan keluaran aspek
+                komputer dalam sebuah konteks yang relevan dan akrab bagi siswa: apps.
+                Kelas mengevaluasi berbagai aplikasi web untuk menganalisis masalah-masalah
+                tertentu yang mereka dirancang untuk memecahkan, masukan-masukan yang
+                mereka butuhkan untuk bekerja, dan keluaran yang mereka berikan kepada
+                pengguna. Kelas diakhiri dengan pengamatan dari aplikasi ini serta
+                guru memimpin diskusi tentang dampak aplikasi di masyarakat. '
+        csd2-pilot:
+          stages:
+            Exploring Websites:
+              description_student: Pelajaran kali ini mencakup tentang bagaimana sebuah
+                situs web daat berfungsi, baik untuk pengguna maupun pembuatnya. kelas
+                ini mengeksplorasi beberapa situs web yang paling sering dikunjungi
+                di Amerika Serikat dan bagaimana situs-situs tersebut bisa berguna
+                bagi pengguna dan untuk pembuatnya juga.
+            'Websites for Expression ':
+              name: 'Situs-situs untuk Ekspresi '
+            Headings:
+              name: Tajuk
+            Digital Footprint:
+              name: Jejak Digital
+              description_student: Pelajaran kali ini mengulang  kembali ke pembuatan
+                situs pribadi untuk membahas tentang informasi pribadi yang orang
+                pilih untuk dibagikan secara digital. kelas dimulai dengan membahas
+                jenis informasi apa yang bagus intuk dibagikan kepada orang lain.
+                kemudian melihat beberapa contoh halaman media sosial untuk melihat
+                jenis informasi  pribadi apa yang dapat dibagikan secara sengaja atau
+                tidak disengaja. akhirnya, kelas hadir dengan sebuah pedoman untuk
+                diikuti saat memasukkan informasi secara online.
+            Lists:
+              name: List
+            Clean Code and Debugging:
+              name: Kode yang bersih dan Debugging
+            Sources and Search Engines:
+              name: Sumber dan mesin pencari
+              description_teacher: Pelajaran ini mendorong siswa agar dapat berpikir
+                lebih kritis tentang bagaimana situs pencari bekerja dan bagaimana
+                menemukan informasi yang relevan dan dapat dipercaya. setelah melihat
+                video dan mendiskusikan tentang mesin pencari bekerja, para murid
+                akan mencari informasi tentang beberapa hewan yang langka. mereka
+                perlu menganalisis situs yang mereka temukan apakah bisa diandalkan
+                untuk mengenali hewan mana yang bohongan.
+            Project - Personal Portfolio Website:
+              name: Proyek - Situs web Portfolio Pribadi
+            Intellectual Property:
+              name: Hak milik intelektual
+        csd3-pilot:
+          description_short: Pemrograman
+          stages:
+            Programming for Entertainment:
+              name: Pemrograman untuk Hiburan
+            Drawing in Game Lab:
+              name: Menggambar dalam lab permaianan
+              description_teacher: Siswa diperkenalkan dengan permainan lab, lingkungan
+                pemrograman untuk unit ini, dan mulai menggunakannya untuk posisi
+                bentuk pada layar. Mereka mempelajari dasar-dasar pengurutan dan debugging,
+                serta beberapa perintah sederhana. Di akhir pelajaran, siswa akan
+                mampu untuk gambar program seperti yang mereka buat dengan alat gambar
+                pada pelajaran sebelumnya.
+            Variables:
+              name: variabel
+              description_student: Pelajaran ini memperkenalkan variabel sebagai cara
+                untuk label nomor pada sebuah program atau menyimpan nilai secara
+                acak. Kelas dimulai pelajaran dengan deskripsi dasar dari tujuan variabel
+                dan praktek menggunakan blok baru. Setelah itu, kelas ini menggunakan
+                variabel untuk menyimpan nomor acak, yang memungkinkan program untuk
+                menggunakan nomor acak beberapa kali.
+              description_teacher: Dalam pelajaran ini siswa belajar bagaimana menggunakan
+                variabel untuk label nomor dalam program mereka atau menyimpan nilai
+                secara acak. Siswa memulai pelajaran dengan deskripsi dasar dari tujuan
+                dari sebuah variabel. Siswa kemudian menyelesaikan tingkat perkembangan
+                yang memperkuat model variabel sebagai cara untuk label atau nama
+                nomor. Siswa menggunakan variabel untuk menyimpan nomor acak untuk
+                melihat bahwa variabel-variabel yang benar-benar menyimpan atau menyimpan
+                nilai-nilai mereka, yang memungkinkan mereka untuk sama-sama menggunakan
+                nomor acak beberapa kali dalam program-program mereka.
+            Sprites:
+              description_student: Dalam rangka untuk membuat lebih menarik dan lengkap
+                gambar, kelas diperkenalkan ke objek sprite. Setiap sprite dapat ditugaskan
+                gambar untuk menunjukkan, dan sprite juga melacak beberapa nilai-nilai
+                tentang diri mereka sendiri, yang akan berguna di jalan, ketika membuat
+                animasi. Di akhir pelajaran, semua orang membuat adegan menggunakan
+                sprite.
+            Booleans Unplugged:
+              name: Booleans dicabut
+              description_student: Pelajaran ini memperkenalkan nilai-nilai boolean
+                dan logika, serta pernyataan bersyarat. Kelas dimulai dengan bermain
+                game sederhana dari Berdiri, Duduk di mana boolean (benar/palsu) pernyataan
+                yang menggambarkan sifat-sifat pribadi (rambut atau warna mata, jenis
+                pakaian, usia, dll). Kelas, kemudian kelompok benda berdasarkan semakin
+                kompleks pernyataan boolean, kemudian melihat bagaimana dapat bersyarat
+                mempengaruhi aliran program.
+            Conditionals:
+              name: Kondisi
+            Project - Interactive Card:
+              name: Proyek - kartu interaktif
+              description_student: Dalam hal ini kumulatif proyek untuk bab 1, rencana
+                kelas untuk mengembangkan dan interaktif kartu ucapan menggunakan
+                semua teknik pemrograman yang telah mereka pelajari saat ini.
+            Velocity:
+              name: Percepatan
+              description_student: Setelah pengarahan singkat tentang bagaimana menggunakan
+                pola Pencacah untuk memindahkan spirit, kelas diperkenalkan pada properti
+                yang mengatur kecepatan dan kecepatan rotasi secara langsung. mereka
+                menggunakan properti baru ini dengan cara mereka sendiri, mereka membangun
+                keterampilan yang mereka butuhkan untuk membuat sisi dasar permainan
+                scroller.
+              description_teacher: Setelah melihat singkat tentang bagaimana mereka
+                melawan menggunakan pola untuk memindahkan sprite dalam pelajaran
+                sebelumnya, siswa diperkenalkan dengan sifat yang membedakan kecepatan
+                dan kecepatan rotasi ini diatas. Karena mereka menggunakan sifat-sifat
+                baru dengan cara yang berbeda, mereka membangun keterampilan yang
+                mereka butuhkan untuk membuat dasar sisi permainan scroller.
+            Collision Detection:
+              name: Deteksi tumbukan
+              description_student: Kelas belajar tentang deteksi tabrakan di komputer.
+                Pasang bagaimana bisa mengeksplorasi komputer menggunakan lokasi sprite
+                dan ukuran sifat dan matematika untuk mendeteksi apakah dua sprite
+                yang menyentuh. Kelas kemudian menyentuh menggunakan blok() untuk
+                menciptakan efek yang berbeda ketika sprite bertabrakan, termasuk
+                bermain suara. Terakhir, mereka menggunakan keterampilan baru untuk
+                meningkatkan sisi scroller permainan yang mereka mulai di pelajaran
+                yang lalu.
+            Complex Sprite Movement:
+              description_student: 'Kelas belajar untuk menggabungkan kecepatan sifat
+                sprite dengan melawan pola untuk membuat gerakan sprite yang lebih
+                kompleks, seperti simulasi gravitasi, membuat sprite melompat, dan
+                memungkinkan mengabung sprite kiri atau kanan. Di tingkat akhir kelas
+                menggabungkan gerakan-gerakan ini untuk menghidupkan dan mengontrol
+                satu sprite dan membangun sebuah permainan sederhana di mana karakter
+                terbang di sekitar dan mengumpulkan koin. '
+            Collisions:
+              name: Tumbukan
+            Functions:
+              name: fungsi
+            The Game Design Process:
+              name: Proses perancangan permainan
+              description_student: Pelajaran ini memperkenalkan proses kelas yang
+                akan digunakan untuk sisa unit desain permainan. Kelas berjalan melalui
+                melalui proses ini dalam serangkaian tingkat. Sebagai bagian dari
+                pelajaran ini kelas juga sempat belajar untuk menggunakan aneka-bingkai
+                animasi dalam permainan lab. Di akhir pelajaran mereka memiliki kesempatan
+                untuk membuat perbaikan permainan sendiri.
+              description_teacher: Pelajaran ini memperkenalkan siswa untuk proses
+                yang akan mereka gunakan untuk desain permainan untuk sisa unit. Proses
+                ini berpusat di sekitar proyek panduan yang meminta siswa untuk menentukan
+                sprite mereka, variabel, dan fungsi sebelum mereka memulai pemrograman
+                permainan mereka. Dalam pelajaran ini siswa mulai dengan bermain permainan
+                di permainan lab mana kode tersembunyi. Mereka mendiskusikan apa yang
+                mereka pikirkan sprite, variabel, dan fungsi akan perlu untuk membuat
+                permainan. Mereka kemudian diberi proyek selesai panduan yang menunjukkan
+                salah satu cara untuk menerapkan permainan. Siswa kemudian berjalan
+                melalui proses ini melalui serangkaian tingkat. Sebagai bagian dari
+                pelajaran ini mahasiswa juga sempat belajar untuk menggunakan aneka-bingkai
+                animasi dalam permainan lab. Di akhir pelajaran, siswa memiliki kesempatan
+                untuk membuat perbaikan untuk permainan buatan mereka sendiri.
+            Using the Game Design Process:
+              name: Proses menggunakan desain permainan
+            Project - Design a Game:
+              name: Proyek - merancang sebuah permainan
+              description_student: Kelas rencana dan membangun permainan asli menggunakan
+                panduan proyek dari dua pelajaran sebelumnya. Bekerja secara individual
+                atau berpasangan, kelas rencana, mengembangkan, dan memberikan umpan
+                balik tentang permainan. Setelah memasukkan rekan umpan balik, permainan
+                kelas saham selesai.

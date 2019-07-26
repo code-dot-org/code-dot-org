@@ -552,15 +552,6 @@ ca:
             '2': agut
       Dancelab_whenSetup:
         text: configuració
-      gamelab_changeColor:
-        text: canvi {COLOR} {METHOD} per {AMOUNT}
-      gamelab_changeColorBy:
-        text: canvi {COLOR} {METHOD} per {AMOUNT}
-        options:
-          METHOD:
-            '"hue"': matís
-            '"saturation"': saturació
-            '"brightness"': lluïssor
       gamelab_changePropBy:
         text: canvi {SPRITE} {PROPERTY} per {VAL}
         options:
@@ -598,29 +589,11 @@ ca:
             '"right"': dret
             '"space"': espai
             '"x"': x
-      gamelab_layoutSprites:
-        options:
-          FORMAT:
-            '"border"': frontera
-            '"inner"': plaça interior
-            '"circle"': cercle
-            '"grid"': quadrícula
-            '"row"': filera
-            '"column"': columna
-            '"x"': cruïlla
-            '"plus"': més
-            '"random"': atzar
-      gamelab_locationDelta:
-        options:
-          DIR:
-            "'random'": atzar
       gamelab_mirrorSprite:
         options:
           DIRECTION:
             '"right"': dret
             '"left"': esquerra
-      gamelab_mixColors:
-        text: barrejar {COLOR1} i {COLOR2}
       gamelab_randColor:
         text: color aleatori
       gamelab_randomColor:
@@ -637,20 +610,6 @@ ca:
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': Arc de Sant Martí
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': sota l'aigua
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': l'hivern
-      gamelab_setPosition:
-        text: moure {THIS} a la posició {POSITION}
-        options:
-          POSITION:
-            "{x: 50, y: 50}": part superior esquerra
-            "{x: 200, y: 50}": centre superior
-            "{x: 350, y: 50}": part superior dreta
-            "{x: 50, y: 200}": centre esquerra
-            "{x: 200, y: 200}": centre
-            "{x: 350, y: 200}": centre dreta
-            "{x: 50, y: 350}": part inferior esquerra
-            "{x: 200, y: 350}": part inferior central
-            "{x: 350, y: 350}": part inferior dreta
-            '"random"': atzar
       gamelab_setProp:
         options:
           PROPERTY:
@@ -664,28 +623,11 @@ ca:
             '"scale"': mida
             '"width"': amplada
             '"height"': alçcada
-      gamelab_setup:
-        text: configuració
       gamelab_spriteClicked:
         options:
           CONDITION:
             '"when"': quan
             '"while"': mentres
-      gamelab_spriteClickedSet:
-        options:
-          CONDITION:
-            '"when"': quan
-            '"while"': mentres
-      gamelab_spritesWhere:
-        options:
-          PROPERTY:
-            '"scale"': mida
-            '"direction"': direcció del moviment
-      gamelab_spritesWhereGenerator:
-        options:
-          PROPERTY:
-            '"scale"': mida
-            '"direction"': direcció del moviment
       gamelab_turn:
         options:
           DIRECTION:
@@ -707,11 +649,6 @@ ca:
             "'down'": avall
             "'left'": esquerra
             "'right'": dret
-      gamelab_whenTouchingSet:
-        options:
-          CONDITION:
-            '"when"': quan
-            '"while"': mentres
       gamelab_whileKey:
         options:
           KEY:

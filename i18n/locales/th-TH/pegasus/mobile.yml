@@ -293,6 +293,7 @@
   homepage_slot_text_link_stats: "ดูสถิติ"
   homepage_slot_text_link_buy: "มาร่วมกับเราสิ"
   homepage_slot_text_link_donate: "ร่วมบริจาค"
+  homepage_gallery_header: "โครงงานของ Code.org ได้ถูกสร้างมาแล้วมากกว่า %{project_count} ล้านโครงการ"
   homepage_header_donors: "Code.org ขอขอบคุณพันธมิตร"
   homepage_donors_seall: "ดูทั้งหมด"
   homepage_donors_donate: "ร่วมบริจาค"
@@ -509,6 +510,7 @@
   dashboard_sections_secret_none: "ถ้าคุณต้องการให้นักเรียนจัดการบัญชีของตนเอง ซึ่งรวมทั้งการเลือกรหัสผ่านของตนเอง ให้เลือกชนิดความลับเป็น<b>ไม่มี</b>"
   dashboard_sections_print_secrets: "คุณสามารถพิมพ์บัตรข้อมูลเกี่ยวกับบัญชี เพื่อแจกจ่ายให้แก่นักเรียนของคุณแต่ละคนได้"
   dashboard_sections_switch_section: 'สลับกลุ่ม'
+  dashboard_sections_close: "ปิด"
   dashboard_sections_assign_activity: "กำหนดหลักสูตร"
   dashboard_students_add_multiple: 'พิมพ์ชื่อของนักเรียนของคุณ หนึ่งชื่อต่อหนึ่งบรรทัด'
   dashboard_students_new_section: "คุณได้สร้างกลุ่มใหม่แล้ว! ตอนนี้ให้คุณ<b>เพิ่มนักเรียน</b>หรือ<b>เพิ่มนักเรียนทีละหลายคน</b> ด้วยปุ่มด้านบน"
@@ -666,9 +668,6 @@
   iceage_name: "ยุคน้ำแข็ง (Ice Age)"
   minecraft_name: "ไมน์คราฟท์"
   starwarsblocks_name: "สตาร์วอร์ส (บล็อก)"
-  math_category_name: "คำนวณ"
-  hoc_category_name: "ช่วงเวลาของ Code"
-  csf_category_name: "พื้นฐานด้านวิทยาการคอมพิวเตอร์"
   applab_name: "แอ๊ปแล็บ"
   gamelab_name: "เกมแล๊บ (Game Lab)"
   codeorg_gradelevel: "อายุ 4 - 104 ปี"
@@ -730,6 +729,8 @@
   coursee-2017_gradelevel: อายุ 8-12 ปี
   coursed-2018_gradelevel: เกรด 8 +
   coursee-2018_gradelevel: อายุ 8-12 ปี
+  coursed-2019_gradelevel: เกรด 8 +
+  coursee-2019_gradelevel: อายุ 8-12 ปี
   accelerated_gradelevel: "อายุ 10-18 ปี"
   codeorg_platformtext: "เบราว์เซอร์ที่ทันสมัย สมาร์ทโฟน แท็บเล็ต"
   codeintl_platformtext: "เบราว์เซอร์ที่ทันสมัย สมาร์ทโฟน แท็บเล็ต"
@@ -999,8 +1000,16 @@
   header_project_gallery: "โปรเจกต์"
   header_professional_learning: "การเรียนรู้อย่างมืออาชีพ"
   header_educate_hoc: "ช่วงเวลาของ Code"
+  header_about_us: "เกี่ยวกับเรา"
+  header_about_donors: "ผู้บริจาค"
+  header_about_jobs: "งาน"
+  header_about_contact: "ติดต่อเรา"
+  header_learn: "เรียนรู้"
+  header_teach: "สอน"
   header_stats: "สถิติ"
   header_help_us: "ช่วยเรา"
+  header_about: "เกี่ยวกับ"
+  header_teacher_community: "ชุมชนครูผู้สอน"
   user_header_label: "สวัสดี %{username}"
   user_header_team: "ทีม"
   user_header_settings: "บัญชีของฉัน"

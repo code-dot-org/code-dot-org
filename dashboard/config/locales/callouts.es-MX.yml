@@ -20,6 +20,42 @@ es-MX:
           Si no, presiona 'Restablecer', cambia tu código y presiona 'Ejecutar' nuevamente."
       AppLab Intro 7 - thisOrThatAddButton:
         AppLabHoCFinal11: Ahora estás en modo de diseño.
+      CSD U3 - conditionals - transition:
+        CSD_U3_L8_S6_C1: Pon la instrucción de registro de la consola aquí
+      CSD U3 - conditionals - transition_2018:
+        CSD_U3_L8_S6_C1: Pon la instrucción de registro de la consola aquí
+      CSD U3 - conditionals - transition_2019:
+        CSD_U3_L8_S6_C1: Pon la instrucción de registro de la consola aquí
+      CSD U3 Boolean Predict:
+        '': Este programa imprimirá un resultado aquí
+      CSD U3 Boolean Predict_2018:
+        '': Este programa imprimirá un resultado aquí
+      CSD U3 Boolean Predict_2019:
+        '': Este programa imprimirá un resultado aquí
+      CSD U3 Sprites anitab 1:
+        '': Haz clic aquí para abrir la pestaña Animación
+      CSD U3 Sprites anitab 1_2018:
+        '': Haz clic aquí para abrir la pestaña Animación
+      CSD U3 Sprites anitab 1_2019:
+        '': Haz clic aquí para abrir la pestaña Animación
+      CSD U3 Sprites intro sprites:
+        '': Usa este bloque para crear un sprite
+      CSD U3 Sprites intro sprites_2018:
+        '': Usa este bloque para crear un sprite
+      CSD U3 Sprites intro sprites_2019:
+        '': Usa este bloque para crear un sprite
+      CSD U3 Sprites text:
+        '': Usa este bloque para poner texto en la pantalla
+      CSD U3 Sprites text_2018:
+        '': Usa este bloque para poner texto en la pantalla
+      CSD U3 Sprites text_2019:
+        '': Usa este bloque para poner texto en la pantalla
+      CSD U3 UP_ARROW:
+        '': Agrega una sentencia si y coloca tu código de movimiento dentro de ella
+      CSD U3 UP_ARROW_2018:
+        '': Agrega una sentencia si y coloca tu código de movimiento dentro de ella
+      CSD U3 UP_ARROW_2018_2019:
+        '': Agrega una sentencia si y coloca tu código de movimiento dentro de ella
       CSD U3 Variables Predict Where X:
         CSD_U3_variables: Cambia el número aquí
       CSD U3 Variables Predict Where XY:
@@ -32,6 +68,117 @@ es-MX:
         CSD_U3_variables: Cambia el número aquí
       CSD U3 Variables Predict Where X_2019:
         CSD_U3_variables: Cambia el número aquí
+      CSD U3 abstraction accelerateX:
+        CSD_U3_L11_S6_C1: Agrega tu código aquí.
+      CSD U3 abstraction accelerateX_2018:
+        CSD_U3_L11_S6_C1: Agrega tu código aquí.
+      CSD U3 abstraction accelerateX_2019:
+        CSD_U3_L11_S6_C1: Agrega tu código aquí.
+      CSD U3 abstraction accelerateY:
+        CSD_U3_L11_S7_C1: Agrega tu código aquí.
+      CSD U3 abstraction accelerateY_2018:
+        CSD_U3_L11_S7_C1: Agrega tu código aquí.
+      CSD U3 abstraction accelerateY_2019:
+        CSD_U3_L11_S7_C1: Agrega tu código aquí.
+      CSD U3 abstraction jump:
+        CSD_U3_L11_S17_C1: Observa esta sentencia si
+        CSD_U3_L11_S17_C2: Envía la rana de vuelta aquí
+      CSD U3 abstraction jump_2018:
+        CSD_U3_L11_S17_C1: Observa esta sentencia si
+        CSD_U3_L11_S17_C2: Envía la rana de vuelta aquí
+      CSD U3 abstraction jump_2018_2019:
+        CSD_U3_L11_S17_C1: Observa esta sentencia si
+        CSD_U3_L11_S17_C2: Envía la rana de vuelta aquí
+      CSD U3 abstraction jumping:
+        CSD_U3_L13_S8_C1: Establece la velocidad aquí
+      CSD U3 abstraction jumping_2018:
+        CSD_U3_L13_S8_C1: Establece la velocidad aquí
+      CSD U3 abstraction jumping_2019:
+        CSD_U3_L13_S8_C1: Establece la velocidad aquí
+      CSD U3 abstraction looping:
+        CSD_U3_L11_S17_C1: Observa esta sentencia si
+      CSD U3 abstraction looping_2018:
+        CSD_U3_L11_S17_C1: Observa esta sentencia si
+      CSD U3 abstraction looping_2019:
+        CSD_U3_L11_S17_C1: Observa esta sentencia si
+      CSD U3 abstraction rotation:
+        CSD_U3_L11_S4_C1: Usa el bloque velocidadRotación aquí
+      CSD U3 abstraction rotation control:
+        CSD_U3_L11_S5_C1: Observa este código.
+      CSD U3 abstraction rotation control_2018:
+        CSD_U3_L11_S5_C1: Observa este código.
+      CSD U3 abstraction rotation control_2019:
+        CSD_U3_L11_S5_C1: Observa este código.
+      CSD U3 abstraction rotation_2018:
+        CSD_U3_L11_S4_C1: Usa el bloque velocidadRotación aquí
+      CSD U3 abstraction rotation_2019:
+        CSD_U3_L11_S4_C1: Usa el bloque velocidadRotación aquí
+      CSD U3 abstraction tumbleweed:
+        CSD_U3_L11_S17_C1: Observa esta sentencia si
+      CSD U3 abstraction tumbleweed_2018:
+        CSD_U3_L11_S17_C1: Observa esta sentencia si
+      CSD U3 abstraction tumbleweed_2019:
+        CSD_U3_L11_S17_C1: Observa esta sentencia si
+      CSD U3 abstraction velocityX:
+        CSD_U3_L11_S4_C1: Agrega tu bloque aquí.
+      CSD U3 abstraction velocityX control:
+        CSD_U3_L11_S5_C1: Observa este código.
+      CSD U3 abstraction velocityX control_2018:
+        CSD_U3_L11_S5_C1: Observa este código.
+      CSD U3 abstraction velocityX control_2019:
+        CSD_U3_L11_S5_C1: Observa este código.
+      CSD U3 abstraction velocityX if-statements:
+        CSD_U3_L11_S5_C1: Observa este código.
+      CSD U3 abstraction velocityX if-statements_2018:
+        CSD_U3_L11_S5_C1: Observa este código.
+      CSD U3 abstraction velocityX if-statements_2019:
+        CSD_U3_L11_S5_C1: Observa este código.
+      CSD U3 abstraction velocityX_2018:
+        CSD_U3_L11_S4_C1: Agrega tu bloque aquí.
+      CSD U3 abstraction velocityX_2019:
+        CSD_U3_L11_S4_C1: Agrega tu bloque aquí.
+      CSD U3 abstraction velocityY:
+        CSD_U3_L11_S5_C1: Agrega tu bloque aquí.
+      CSD U3 abstraction velocityY control:
+        CSD_U3_L11_S5_C1: Observa este código.
+      CSD U3 abstraction velocityY control_2018:
+        CSD_U3_L11_S5_C1: Observa este código.
+      CSD U3 abstraction velocityY control_2019:
+        CSD_U3_L11_S5_C1: Observa este código.
+      CSD U3 abstraction velocityY_2018:
+        CSD_U3_L11_S5_C1: Agrega tu bloque aquí.
+      CSD U3 abstraction velocityY_2019:
+        CSD_U3_L11_S5_C1: Agrega tu bloque aquí.
+      CSD U3 collisions isTouching intro:
+        CSD_U3_L12_S2_C1: Agrega tu bloque aquí.
+      CSD U3 collisions isTouching intro_2018:
+        CSD_U3_L12_S2_C1: Agrega tu bloque aquí.
+      CSD U3 collisions isTouching intro_2019:
+        CSD_U3_L12_S2_C1: Agrega tu bloque aquí.
+      CSD U3 collisions scoreboard:
+        CSD_U3_L12_S8_C1: Estos bloques muestran la puntuación.
+        CSD_U3_L12_S8_C2: Los bloques que determinan si el conejito atrapó la zanahoria
+          van aquí.
+      CSD U3 collisions scoreboard_2018:
+        CSD_U3_L12_S8_C1: Estos bloques muestran la puntuación.
+        CSD_U3_L12_S8_C2: Los bloques que determinan si el conejito atrapó la zanahoria
+          van aquí.
+      CSD U3 collisions scoreboard_2019:
+        CSD_U3_L12_S8_C1: Estos bloques muestran la puntuación.
+        CSD_U3_L12_S8_C2: Los bloques que determinan si el conejito atrapó la zanahoria
+          van aquí.
+      CSD U3 collisions try blocks:
+        CSD_U3_L13_S6_C1: Cambia este bloque.
+      CSD U3 collisions try blocks_2018:
+        CSD_U3_L13_S6_C1: Cambia este bloque.
+      CSD U3 collisions try blocks_2019:
+        CSD_U3_L13_S6_C1: Cambia este bloque.
+      CSD U3 collisions types:
+        CSD_U3_L13_S6_C1: Agrega tu código aquí.
+      CSD U3 collisions types_2018:
+        CSD_U3_L13_S6_C1: Agrega tu código aquí.
+      CSD U3 collisions types_2019:
+        CSD_U3_L13_S6_C1: Agrega tu código aquí.
       CSD U3 debug:
         CSD_U3_rect_c1: Aquí está el código
         CSD_U3_rect_c2: Arrastra este bloque dentro del área de código.
@@ -59,6 +206,60 @@ es-MX:
       CSD U3 fill_2019:
         CSD_U3_rect_c1: Aquí está el código
         CSD_U3_rect_c2: Arrastra este bloque dentro del área de código.
+      CSD U3 game backgrounds:
+        CSD_U3_S18_L4_C1: Este bloque llama a tu función.
+        CSD_U3_L18_S4_C2: Área de funciones
+      CSD U3 game backgrounds_2018:
+        CSD_U3_S18_L4_C1: Este bloque llama a tu función.
+        CSD_U3_L18_S4_C2: Área de funciones
+      CSD U3 game backgrounds_2019:
+        CSD_U3_S18_L4_C1: Este bloque llama a tu función.
+        CSD_U3_L18_S4_C2: Área de funciones
+      CSD U3 game variables:
+        CSD_U3_S18_L3_C1: Este bloque crea una nueva variable.
+        CSD_U3_L18_S3_C2: Área de variables
+      CSD U3 game variables_2018:
+        CSD_U3_S18_L3_C1: Este bloque crea una nueva variable.
+        CSD_U3_L18_S3_C2: Área de variables
+      CSD U3 game variables_2019:
+        CSD_U3_S18_L3_C1: Este bloque crea una nueva variable.
+        CSD_U3_L18_S3_C2: Área de variables
+      CSD U3 keydown conditional:
+        '': Agrega tu bloque dentro de esta sentencia si
+      CSD U3 keydown conditional_2018:
+        '': Agrega tu bloque dentro de esta sentencia si
+      CSD U3 keydown conditional_2018_2019:
+        '': Agrega tu bloque dentro de esta sentencia si
+      CSD U3 platform background1:
+        CSD_U3_L16_S3_C1: la función que dibuja el fondo
+        CSD_U3_L16_S3_C2: el código que llama a la función
+        CSD_U3_L16_S3_C3: Cambia esta función.
+      CSD U3 platform background1_2018:
+        CSD_U3_L16_S3_C1: la función que dibuja el fondo
+        CSD_U3_L16_S3_C2: el código que llama a la función
+        CSD_U3_L16_S3_C3: Cambia esta función.
+      CSD U3 platform background1_2019:
+        CSD_U3_L16_S3_C1: la función que dibuja el fondo
+        CSD_U3_L16_S3_C2: el código que llama a la función
+        CSD_U3_L16_S3_C3: Cambia esta función.
+      CSD U3 platform platform1:
+        CSD_U3_S17_L8_C1: Este bloque crea un nuevo sprite.
+      CSD U3 platform platform1_2018:
+        CSD_U3_S17_L8_C1: Este bloque crea un nuevo sprite.
+      CSD U3 platform platform1_2019:
+        CSD_U3_S17_L8_C1: Este bloque crea un nuevo sprite.
+      CSD U3 platform scoreboard:
+        CSD_U3_L17_S7_C1: La puntuación se imprime aquí.
+      CSD U3 platform scoreboard_2018:
+        CSD_U3_L17_S7_C1: La puntuación se imprime aquí.
+      CSD U3 platform scoreboard_2019:
+        CSD_U3_L17_S7_C1: La puntuación se imprime aquí.
+      CSD U3 platform variable1:
+        callout: Este bloque crea una variable.
+      CSD U3 platform variable1_2018:
+        callout: Este bloque crea una variable.
+      CSD U3 platform variable1_2019:
+        callout: Este bloque crea una variable.
       CSD U3 rect:
         CSD_U3_rect_c1: Aquí está el código
         CSD_U3_rect_c2: Éste es el botón "Ejecutar".
@@ -81,6 +282,12 @@ es-MX:
         CSDU6L10_rainbow: Agrega tu código aquí
       CSD U6 colorLeds intensity_2019:
         CSDU6L10_rainbow: Agrega tu código aquí
+      CSD U6 getProperty input:
+        CSD_U6L06P03: Agrega tu bloque aquí.
+      CSD U6 getProperty input_2018:
+        CSD_U6L06P03: Agrega tu bloque aquí.
+      CSD U6 getProperty input_2019:
+        CSD_U6L06P03: Agrega tu bloque aquí.
       CSD U6 light show:
         CSDUDL03P09: "¿Qué hace esta línea?"
       CSD U6 light show_2018:
@@ -394,8 +601,6 @@ es-MX:
       courseA_collector_loops3_2019:
         gradek_adventurer_loops2_1: Este número indica cuántos de estos bloques se
           pueden utilizar en este desafío.
-      courseA_collector_preLoops1:
-        courseA_collector_preLoops1_1: "¡Haz click aquí para ver tu código ejecutarse!"
       courseA_collector_preLoops2:
         courseA_collector_loops1_1: "¿Ves algunos bloques nuevos en la caja de herramientas?
           No te preocupes, te mostraremos cómo utilizarlos más adelante en el escenario."
@@ -616,6 +821,15 @@ es-MX:
       courseC_maze_programming4_2019:
         courseC_maze_programming4_1: Este es tu limite de bloques. Te dice cuántos
           de estos bloques te quedan por usar.
+      courseC_maze_programming5:
+        '': Estos bloques no incluyen números. ¡Puedes usarlos todas las veces que
+          quieras!
+      courseC_maze_programming5_2018:
+        '': Estos bloques no incluyen números. ¡Puedes usarlos todas las veces que
+          quieras!
+      courseC_maze_programming5_2019:
+        '': Estos bloques no incluyen números. ¡Puedes usarlos todas las veces que
+          quieras!
       courseC_maze_programming7:
         courseC_maze_programming7_1: "¡Este es tu primer súper desafío! Estos están
           hechos difíciles a propósito y pueden implicar varios intentos."
@@ -691,6 +905,9 @@ es-MX:
       courseD_maze_intro4_2019:
         courseC_maze_programming4_1: Este es tu limite de bloques. Te dice cuántos
           de estos bloques te quedan por usar.
+      courseD_maze_intro5a_2019:
+        '': Estos bloques no incluyen números. ¡Puedes usarlos todas las veces que
+          quieras!
       courseD_maze_ramp1:
         grade2_CaringForNewPet_0_1: Luego de conectar todos los bloques, presiona
           "Ejecutar" para comenzar tu programa.
@@ -730,6 +947,24 @@ es-MX:
       courseD_maze_ramp4_2019:
         courseC_maze_programming4_1: Este es tu limite de bloques. Te dice cuántos
           de estos bloques te quedan por usar.
+      courseD_maze_ramp5:
+        '': Estos bloques no incluyen números. ¡Puedes usarlos todas las veces que
+          quieras!
+      courseD_maze_ramp5_2018:
+        '': Estos bloques no incluyen números. ¡Puedes usarlos todas las veces que
+          quieras!
+      courseD_maze_ramp5_2019:
+        '': Estos bloques no incluyen números. ¡Puedes usarlos todas las veces que
+          quieras!
+      courseD_maze_ramp5a:
+        '': Estos bloques no incluyen números. ¡Puedes usarlos todas las veces que
+          quieras!
+      courseD_maze_ramp5a_2018:
+        '': Estos bloques no incluyen números. ¡Puedes usarlos todas las veces que
+          quieras!
+      courseD_maze_ramp5a_2019:
+        '': Estos bloques no incluyen números. ¡Puedes usarlos todas las veces que
+          quieras!
       courseD_maze_ramp6:
         courseD_maze_ramp6_1: Cualquier código que ingreses aquí se repetirá tantas
           veces como lo indiques, luego continúa ejecutando el resto del programa.
@@ -741,9 +976,6 @@ es-MX:
         courseD_playLab_condFP_1: hemos organizado los bloques en categorías para
           darte más códigos con los que jugar. Has click aquí para ver adónde fue
           todo.
-      courseD_scrat_predict1:
-        courseD_maze_ramp6_1: Cualquier código que ingreses aquí se repetirá tantas
-          veces como lo indiques, luego continúa ejecutando el resto del programa.
       courseD_scrat_ramp1:
         grade2_CaringForNewPet_0_1: Luego de conectar todos los bloques, presiona
           "Ejecutar" para comenzar tu programa.
@@ -756,16 +988,18 @@ es-MX:
       courseD_scrat_ramp4:
         courseC_maze_programming4_1: Este es tu limite de bloques. Te dice cuántos
           de estos bloques te quedan por usar.
+      courseD_scrat_ramp5:
+        '': Estos bloques no incluyen números. ¡Puedes usarlos todas las veces que
+          quieras!
       courseD_scrat_ramp6:
         courseD_maze_ramp6_1: Cualquier código que ingreses aquí se repetirá tantas
           veces como lo indiques, luego continúa ejecutando el resto del programa.
       courseD_scrat_ramp7:
+        courseD_maze_ramp6_1: Cualquier código que ingreses aquí se repetirá tantas
+          veces como lo indiques, luego continúa ejecutando el resto del programa.
+      courseD_scrat_ramp8:
         courseD_maze_ramp7_1: "¡Este es tu primer súper desafío! Estos están hechos
           difíciles a propósito y pueden implicar varios intentos."
-      courseD_scrat_ramp8:
-        courseE_artist_ramp8_1: Puedes cambiar este número.
-        courseE_artist_ramp8_2: Haz click aquí para ingresar el número de veces que
-          tu código se repite.
       courseE_artist_functions1:
         courseD_artist_functions1_1: Comencemos usando este bloque para ayudar a crear
           el primer cuadrado.
@@ -831,7 +1065,7 @@ es-MX:
       courseE_farmer_functions1:
         courseE_farmer_functions1_2: "¡La caja de herramientas está organizada un
           poco diferente esta vez! Haz clic en las diferentes categorías para ver
-          que bloques tienes."
+          qué bloques tienes."
       courseE_farmer_functions13_2018:
         courseE_farmer_functions1a_1: Esta verdura es desconocida. Cambia cada vez
           que ejecutas el programa.
@@ -841,11 +1075,11 @@ es-MX:
       courseE_farmer_functions1_2018:
         courseE_farmer_functions1_2: "¡La caja de herramientas está organizada un
           poco diferente esta vez! Haz clic en las diferentes categorías para ver
-          que bloques tienes."
+          qué bloques tienes."
       courseE_farmer_functions1_2019:
         courseE_farmer_functions1_2: "¡La caja de herramientas está organizada un
           poco diferente esta vez! Haz clic en las diferentes categorías para ver
-          que bloques tienes."
+          qué bloques tienes."
       courseE_farmer_functions1a:
         courseE_farmer_functions1a_1: Esta verdura es desconocida. Cambia cada vez
           que ejecutas el programa.

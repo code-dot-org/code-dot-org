@@ -170,14 +170,6 @@ bn:
             '"right"': ডানে
             '"space"': স্থান
             '"x"': এক্স
-      gamelab_layoutSprites:
-        options:
-          FORMAT:
-            '"random"': এলোমেলো
-      gamelab_locationDelta:
-        options:
-          DIR:
-            "'random'": এলোমেলো
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -197,10 +189,6 @@ bn:
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': পানির
               নিচে
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': শীতকাল
-      gamelab_setPosition:
-        options:
-          POSITION:
-            '"random"': এলোমেলো
       gamelab_setProp:
         options:
           PROPERTY:
@@ -215,19 +203,6 @@ bn:
           CONDITION:
             '"when"': যখন
             '"while"': যখন
-      gamelab_spriteClickedSet:
-        options:
-          CONDITION:
-            '"when"': যখন
-            '"while"': যখন
-      gamelab_spritesWhere:
-        options:
-          PROPERTY:
-            '"scale"': আকার
-      gamelab_spritesWhereGenerator:
-        options:
-          PROPERTY:
-            '"scale"': আকার
       gamelab_turn:
         options:
           DIRECTION:
@@ -248,11 +223,6 @@ bn:
             "'down'": নিচে
             "'left'": বামে
             "'right'": ডানে
-      gamelab_whenTouchingSet:
-        options:
-          CONDITION:
-            '"when"': যখন
-            '"while"': যখন
       gamelab_whileKey:
         options:
           KEY:

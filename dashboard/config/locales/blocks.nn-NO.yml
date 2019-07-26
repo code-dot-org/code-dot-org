@@ -642,26 +642,6 @@ nn:
             '2': diskant
       Dancelab_whenSetup:
         text: oppsett
-      gamelab_add:
-        text: legg {SPRITE} til i gruppen {THIS}
-      gamelab_beginBehavior:
-        text: start {BEHAVIOR}
-      gamelab_bounceOffEdges:
-        text: "{SPRITE} spretter vekk fra kanter"
-      gamelab_changeColor:
-        text: endre {COLOR} {METHOD} med {AMOUNT}
-        options:
-          METHOD:
-            '"tint"': farge
-            '"tone"': tone
-            '"shade"': skygge
-      gamelab_changeColorBy:
-        text: endre {COLOR} {METHOD} med {AMOUNT}
-        options:
-          METHOD:
-            '"hue"': nyanse
-            '"saturation"': metning
-            '"brightness"': lysstyrke
       gamelab_changePropBy:
         text: endre {SPRITE} {PROPERTY} med {VAL}
         options:
@@ -696,20 +676,6 @@ nn:
         text: er flyttbar
       gamelab_edgesDisplace:
         text: kantene blokkerer {SPRITE} fra å flytte seg
-      gamelab_enableDebug:
-        text: aktivere feilsøking
-      gamelab_firstTouched:
-        text: første berørte figur
-      gamelab_forEachSpriteWithCostume:
-        text: |-
-          for hver {VALUE} figur
-          gjør {STATEMENT}
-      gamelab_getAnim:
-        text: "{SPRITE} {COSTUME}"
-      gamelab_getDirection:
-        text: "{SPRITE} bevegelsesretning"
-      gamelab_getFrameDelay:
-        text: "{THIS} forsinkelse"
       gamelab_getProp:
         text: "{SPRITE} {PROPERTY}"
         options:
@@ -724,16 +690,10 @@ nn:
         options:
           CHOICE:
             '"this"': denne
-      gamelab_groupLength:
-        text: antall figurer i {THIS}
-      gamelab_hasBehavior:
-        text: "{SPRITE} er foreløpig {BEHAVIOR}"
       gamelab_hideTitleScreen:
         text: skjul tittelskjerm
       gamelab_jumpTo:
         text: "{SPRITE} hoppar til {LOCATION}"
-      gamelab_keyDown:
-        text: tast er nede {KEY}
       gamelab_keyPressed:
         options:
           CONDITION:
@@ -765,77 +725,22 @@ nn:
             '"x"': x
             '"y"': y
             '"z"': z
-      gamelab_layoutSprites:
-        options:
-          FORMAT:
-            '"border"': kantlinje
-            '"inner"': indre kvadrat
-            '"circle"': sirkel
-            '"grid"': rutenett
-            '"row"': rad
-            '"column"': kolonne
-            '"x"': kryss
-            '"plus"': pluss
-            '"random"': tilfeldig
-      gamelab_locationAdd:
-        text: "{LOC1} {OPERATOR} {LOC2}"
-        options:
-          OPERATOR:
-            "'plus'": "\\+"
-            "'minus'": "\\-"
       gamelab_locationAt:
         text: 'plassering x: {X} y: {Y}'
-      gamelab_locationConstant:
-        text: "{DIR}"
-        options:
-          DIR:
-            "'north'": nord
-            "'south'": sør
-            "'east'": øst
-            "'west'": vest
-      gamelab_locationDelta:
-        text: "{DISTANCE} piksler {DIR} av {LOCATION}"
-        options:
-          DIR:
-            "'north'": nord
-            "'south'": sør
-            "'east'": øst
-            "'west'": vest
-            "'random'": tilfeldig
-      gamelab_locationEast:
-        text: øst
       gamelab_locationMouse:
         text: musens plassering
-      gamelab_locationNorth:
-        text: nord
       gamelab_locationOf:
         text: plassering av {SPRITE}
-      gamelab_locationSouth:
-        text: sør
-      gamelab_locationWest:
-        text: vest
       gamelab_location_picker:
         text: "{LOCATION}"
-      gamelab_location_variable_get:
-        text: plassering av {VAR}
-      gamelab_location_variable_set:
-        text: sett plassering for {VAR} til {VAL}
-      gamelab_makeNewGroup:
-        text: lag en ny gruppe
       gamelab_mirrorSprite:
         text: "{SPRITE} se til {DIRECTION}"
         options:
           DIRECTION:
             '"right"': høgre
             '"left"': venstre
-      gamelab_mixColors:
-        text: bland {COLOR1} og {COLOR2}
-      gamelab_mouseDown:
-        text: museknapp er nede
       gamelab_mouseLocation:
         text: musens plassering
-      gamelab_moveDown:
-        text: "{THIS} gå ned"
       gamelab_moveForward:
         text: gå {SPRITE} {DISTANCE} piksler fremover
       gamelab_moveInDirection:
@@ -846,16 +751,8 @@ nn:
             '"East"': Øst
             '"South"': Sør
             '"West"': Vest
-      gamelab_moveInDirection2:
-        text: gå {SPRITE} piksler {DISTANCE} mot {DIRECTION}
-      gamelab_moveLeft:
-        text: "{THIS} gå venstre"
-      gamelab_moveRight:
-        text: "{THIS} gå høyre"
       gamelab_moveToward:
-        text: gå {SPRITE} distanse {DISTANCE} mot {TARGET}
-      gamelab_moveUp:
-        text: "{THIS} gå opp"
+        text: flytt {SPRITE} piksler {DISTANCE} mot {TARGET}
       gamelab_playSound:
         text: spillLyd {SOUND}
       gamelab_pointInDirection:
@@ -866,8 +763,6 @@ nn:
             '"East"': Øst
             '"South"': Sør
             '"West"': Vest
-      gamelab_pointToward:
-        text: pek {SPRITE} mot {LOCATION}
       gamelab_randColor:
         text: tilfeldig farge
       gamelab_randomColor:
@@ -880,8 +775,6 @@ nn:
         text: figur {SPRITE} stopper {BEHAVIOR}
       gamelab_removeTint:
         text: fjern farge fra {THIS}
-      gamelab_secondTouched:
-        text: andre berørte figur
       gamelab_setBackground:
         text: vel bakgrunnsfarge {COLOR}
       gamelab_setBackgroundImage:
@@ -894,20 +787,6 @@ nn:
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': regnboge
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': undervass
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': vinter
-      gamelab_setPosition:
-        text: flytt {THIS} til {POSITION}
-        options:
-          POSITION:
-            "{x: 50, y: 50}": øvst til venstre
-            "{x: 200, y: 50}": i midten
-            "{x: 350, y: 50}": øvst til høgre
-            "{x: 50, y: 200}": i midten til venstre
-            "{x: 200, y: 200}": i midten
-            "{x: 350, y: 200}": i midten til høyre
-            "{x: 50, y: 350}": nedst til venstre
-            "{x: 200, y: 350}": i midten nedst
-            "{x: 350, y: 350}": nedst til høgre
-            '"random"': tilfeldig
       gamelab_setProp:
         options:
           PROPERTY:
@@ -924,43 +803,11 @@ nn:
             '"scale"': størrelse
             '"width"': breidde
             '"height"': høgd
-      gamelab_setup:
-        text: oppsett
       gamelab_spriteClicked:
         options:
           CONDITION:
             '"when"': når
             '"while"': så lenge
-      gamelab_spriteClickedSet:
-        options:
-          CONDITION:
-            '"when"': når
-            '"while"': så lenge
-      gamelab_spriteDirection:
-        options:
-          DIRECTION:
-            '"North"': Nord
-            '"East"': Øst
-            '"South"': Sør
-            '"West"': Vest
-      gamelab_spritesWhere:
-        options:
-          PROPERTY:
-            '"scale"': størrelse
-            '"x"': x-posisjon
-            '"y"': y-posisjon
-            '"direction"': retninga til rørsla
-            '"tint"': farge
-      gamelab_spritesWhereFirst:
-        text: første {VALUE}
-      gamelab_spritesWhereGenerator:
-        options:
-          PROPERTY:
-            '"scale"': størrelse
-            '"x"': x-posisjon
-            '"y"': y-posisjon
-            '"direction"': retninga til rørsla
-            '"tint"': farge
       gamelab_turn:
         options:
           DIRECTION:
@@ -986,11 +833,6 @@ nn:
             "'down'": ned
             "'left'": venstre
             "'right'": høgre
-      gamelab_whenTouchingSet:
-        options:
-          CONDITION:
-            '"when"': når
-            '"while"': så lenge
       gamelab_whileKey:
         options:
           KEY:

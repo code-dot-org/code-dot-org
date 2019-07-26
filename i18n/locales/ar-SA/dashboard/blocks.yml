@@ -583,6 +583,7 @@ ar:
             '"right"': اليمين
             '"space"': الفضاء
             '"x"': x
+            '"y"': 'y'
       Dancelab_whenPeak:
         text: عند ذروة {RANGE}
         options:
@@ -592,18 +593,6 @@ ar:
             '2': طنين ثلاثي
       Dancelab_whenSetup:
         text: الإعداد
-      gamelab_changeColor:
-        text: غيّر {COLOR} {METHOD} بمقدار {AMOUNT}
-        options:
-          METHOD:
-            '"tint"': لون خفيف
-      gamelab_changeColorBy:
-        text: غيّر {COLOR} {METHOD} بمقدار {AMOUNT}
-        options:
-          METHOD:
-            '"hue"': درجة اللون
-            '"saturation"': التشبّع اللوني
-            '"brightness"': السطوع
       gamelab_changePropBy:
         text: غيّر {SPRITE} {PROPERTY} بمقدار {VAL}
         options:
@@ -623,8 +612,6 @@ ar:
           VAL:
             'true': صحيح
             'false': خطأ
-      gamelab_eval:
-        text: تقييم{CODE}
       gamelab_getProp:
         text: "{SPRITE} {PROPERTY}"
         options:
@@ -649,29 +636,12 @@ ar:
             '"right"': اليمين
             '"space"': الفضاء
             '"x"': x
-      gamelab_layoutSprites:
-        options:
-          FORMAT:
-            '"border"': الحدود
-            '"inner"': مربع داخلي
-            '"circle"': دائرة
-            '"grid"': شبكة
-            '"row"': صف
-            '"column"': عمود
-            '"x"': متقاطع
-            '"plus"': زائد
-            '"random"': عشوائي
-      gamelab_locationDelta:
-        options:
-          DIR:
-            "'random'": عشوائي
+            '"y"': 'y'
       gamelab_mirrorSprite:
         options:
           DIRECTION:
             '"right"': اليمين
             '"left"': اليسار
-      gamelab_mixColors:
-        text: امزج {COLOR1} و{COLOR2}
       gamelab_randColor:
         text: لون عشوائي
       gamelab_randomColor:
@@ -688,20 +658,6 @@ ar:
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': قوس قزح
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': تحت الماء
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': الشتاء
-      gamelab_setPosition:
-        text: انقل {THIS} إلى الموضع {POSITION}
-        options:
-          POSITION:
-            "{x: 50, y: 50}": أعلى اليسار
-            "{x: 200, y: 50}": أعلى المنتصف
-            "{x: 350, y: 50}": أعلى اليمين
-            "{x: 50, y: 200}": منتصف اليسار
-            "{x: 200, y: 200}": المنتصف
-            "{x: 350, y: 200}": منتصف اليمين
-            "{x: 50, y: 350}": أسفل اليسار
-            "{x: 200, y: 350}": منتصف اليسار
-            "{x: 350, y: 350}": أسفل اليمين
-            '"random"': عشوائي
       gamelab_setProp:
         options:
           PROPERTY:
@@ -718,34 +674,11 @@ ar:
             '"scale"': الحجم
             '"width"': العرض
             '"height"': الارتفاع
-      gamelab_setup:
-        text: الإعداد
       gamelab_spriteClicked:
         options:
           CONDITION:
             '"when"': عندما
             '"while"': التكرار طالما
-      gamelab_spriteClickedSet:
-        options:
-          CONDITION:
-            '"when"': عندما
-            '"while"': التكرار طالما
-      gamelab_spritesWhere:
-        options:
-          PROPERTY:
-            '"scale"': الحجم
-            '"x"': الموضع س
-            '"y"': الموضع ص
-            '"direction"': اتجاه الحركة
-            '"tint"': لون خفيف
-      gamelab_spritesWhereGenerator:
-        options:
-          PROPERTY:
-            '"scale"': الحجم
-            '"x"': الموضع س
-            '"y"': الموضع ص
-            '"direction"': اتجاه الحركة
-            '"tint"': لون خفيف
       gamelab_turn:
         options:
           DIRECTION:
@@ -767,11 +700,6 @@ ar:
             "'down'": الأسفل
             "'left'": اليسار
             "'right'": اليمين
-      gamelab_whenTouchingSet:
-        options:
-          CONDITION:
-            '"when"': عندما
-            '"while"': التكرار طالما
       gamelab_whileKey:
         options:
           KEY:

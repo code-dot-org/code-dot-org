@@ -237,3 +237,15 @@ hi:
           stages:
             The Internet:
               name: इंटरनेट
+        csd2-pilot:
+          stages:
+            Lists:
+              name: सूचियाँ
+        csd3-pilot:
+          stages:
+            Variables:
+              name: चर
+            Conditionals:
+              name: शर्तें
+            Functions:
+              name: कार्य

@@ -92,12 +92,25 @@ export default project => {
       }
       if (privateOrProfane) {
         $('.privacy-profanity').show();
+        var textViolationEnglish = project.privacyProfanityDetailsEnglish();
+        if (textViolationEnglish) {
+          $('.eng-flagged-text').text(textViolationEnglish);
+          $('.privacy-profanity-details-english').show();
+        }
+        var textViolationsIntl = project.privacyProfanityDetailsIntl();
+        var secondLanguage = project.privacyProfanitySecondLanguage();
+        if (textViolationsIntl && secondLanguage) {
+          $('.intl-flagged-text').text(textViolationsIntl);
+          $('.intl-flagged-language').text(secondLanguage);
+          $('.privacy-profanity-details-intl').show();
+        }
       }
       if (abusive) {
         // The image moderation service sets the abuse score to 15 to
         // differentiate from manual reports.
         if (abuseScore === 15) {
           $('.abusive-image').show();
+          $('.image-mod-controls').show();
         } else {
           $('.reported-abuse').show();
         }

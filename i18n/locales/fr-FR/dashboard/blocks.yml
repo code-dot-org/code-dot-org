@@ -98,7 +98,9 @@ fr:
             '"UNICORN"': Toutes les licornes
           MOVE:
             '"rand"': "(Aléatoire)"
+            MOVES.XBend: Pliez
             MOVES.Roll: Roulis de caisse
+            MOVES.XClapSide: Tapez
             MOVES.ClapHigh: Tapez des mains en haut
             MOVES.Dab: Dab
             MOVES.XFever: Disco
@@ -108,7 +110,14 @@ fr:
             MOVES.Fresh: Fresh dance
             MOVES.Clown: Gangnam
             MOVES.XHeadHips: Tête + hanches
+            MOVES.XHop: Saut
+            MOVES.XHighKick: Donnez un coup
+            MOVES.XKnee: Genoux
+            MOVES.XKneel: S'agenouiller
+            MOVES.XArmsSide: Atteindre
+            MOVES.XSlide: Faire glisser
             MOVES.Kick: Étoile
+            MOVES.XArmsUp: Étendu
             MOVES.ThisOrThat: Ceci ou cela
             MOVES.Rest: Aucun
           DIR:
@@ -119,7 +128,9 @@ fr:
         options:
           MOVE:
             '"rand"': "(Aléatoire)"
+            MOVES.XBend: Pliez
             MOVES.Roll: Roulis de caisse
+            MOVES.XClapSide: Tapez
             MOVES.ClapHigh: Tapez des mains en haut
             MOVES.Dab: Dab
             MOVES.XFever: Disco
@@ -129,7 +140,14 @@ fr:
             MOVES.Fresh: Fresh dance
             MOVES.Clown: Gangnam
             MOVES.XHeadHips: Tête + hanches
+            MOVES.XHop: Saut
+            MOVES.XHighKick: Donnez un coup
+            MOVES.XKnee: Genoux
+            MOVES.XKneel: S'agenouiller
+            MOVES.XArmsSide: Atteindre
+            MOVES.XSlide: Faire glisser
             MOVES.Kick: Étoile
+            MOVES.XArmsUp: Étendu
             MOVES.ThisOrThat: Ceci ou cela
             MOVES.Rest: Aucun
           DIR:
@@ -243,6 +261,7 @@ fr:
             '"grid"': grille
             '"row"': ligne
             '"column"': colonne
+            '"x"': entrecroisement
             '"plus"': plus
             '"random"': aléatoire
       Dancelab_makeNewDanceSprite:
@@ -317,6 +336,7 @@ fr:
             '"grid"': grille
             '"row"': ligne
             '"column"': colonne
+            '"x"': entrecroisement
             '"plus"': plus
             '"random"': aléatoire
       Dancelab_mixColors:
@@ -613,6 +633,14 @@ fr:
             '"x"': x
             '"y"': 'y'
             '"z"': z
+            '"2"': '2'
+            '"3"': '3'
+            '"4"': '4'
+            '"5"': '5'
+            '"6"': '6'
+            '"7"': '7'
+            '"8"': '8'
+            '"9"': '9'
       Dancelab_whenPeak:
         text: Lorsque {RANGE} pic
         options:
@@ -622,28 +650,8 @@ fr:
             '2': aigu
       Dancelab_whenSetup:
         text: configuration
-      gamelab_add:
-        text: ajouter {SPRITE} au groupe {THIS}
       gamelab_addBehaviorSimple:
         text: le sprite {SPRITE} commence {BEHAVIOR}
-      gamelab_beginBehavior:
-        text: commencer {BEHAVIOR}
-      gamelab_bounceOff:
-        text: "{SPRITE} rebondit sur {TARGET}"
-      gamelab_changeColor:
-        text: changer {COLOR} {METHOD} de {AMOUNT}
-        options:
-          METHOD:
-            '"tint"': nuance
-            '"tone"': ton
-            '"shade"': nuance
-      gamelab_changeColorBy:
-        text: changer {COLOR} {METHOD} de {AMOUNT}
-        options:
-          METHOD:
-            '"hue"': teinte
-            '"saturation"': saturation
-            '"brightness"': luminosité
       gamelab_changePropBy:
         text: changer {SPRITE} {PROPERTY} par {VAL}
         options:
@@ -672,19 +680,8 @@ fr:
         text: enlever {THIS}
       gamelab_displace:
         text: "{THIS} empêche {SPRITE} de bouger"
-      gamelab_distance:
-        text: distance de {LOCATION1} à {LOCATION2}
       gamelab_edgesDisplace:
         text: les bords empêchent {SPRITE} de bouger
-      gamelab_enableDebug:
-        text: activer le débogage
-      gamelab_getAnim:
-        text: "{SPRITE} {COSTUME}"
-        options:
-          COSTUME:
-            '"costume"': costume
-      gamelab_getDirection:
-        text: "{SPRITE} direction du mouvement"
       gamelab_getProp:
         text: "{SPRITE} {PROPERTY}"
         options:
@@ -699,24 +696,12 @@ fr:
         options:
           CHOICE:
             '"this"': ceci
-      gamelab_groupLength:
-        text: nombre de sprites dans {THIS}
-      gamelab_hasBehavior:
-        text: "{SPRITE} fait actuellement {BEHAVIOR}"
       gamelab_hideTitleScreen:
         text: cacher l'écran-titre
-      gamelab_hsbColor:
-        text: |-
-          Couleur TSV
-          T{HUE}S{SATURATION}V{BRIGHTNESS}
       gamelab_isTouchingEdges:
         text: "{SPRITE} touche les bords"
-      gamelab_joystickDirection:
-        text: direction du joystick
       gamelab_jumpTo:
         text: "{SPRITE} passer à {LOCATION}"
-      gamelab_keyDown:
-        text: touche pressée {KEY}
       gamelab_keyPressed:
         options:
           CONDITION:
@@ -748,65 +733,19 @@ fr:
             '"x"': x
             '"y"': 'y'
             '"z"': z
-      gamelab_layoutSprites:
-        options:
-          FORMAT:
-            '"border"': frontière
-            '"inner"': carré intérieur
-            '"circle"': cercle
-            '"grid"': grille
-            '"row"': ligne
-            '"column"': colonne
-            '"plus"': plus
-            '"random"': aléatoire
-      gamelab_locationAdd:
-        text: "{LOC1} {OPERATOR} {LOC2}"
-        options:
-          OPERATOR:
-            "'plus'": "\\+"
-            "'minus'": "\\-"
       gamelab_locationAt:
         text: 'emplacement x: {X} y: {Y}'
-      gamelab_locationConstant:
-        text: "{DIR}"
-        options:
-          DIR:
-            "'north'": nord
-            "'south'": sud
-            "'east'": est
-            "'west'": ouest
-      gamelab_locationDelta:
-        text: "{DISTANCE} pixels {DIR} de {LOCATION}"
-        options:
-          DIR:
-            "'north'": nord
-            "'south'": sud
-            "'east'": est
-            "'west'": ouest
-            "'random'": aléatoire
-      gamelab_locationEast:
-        text: est
       gamelab_locationMouse:
         text: emplacement de la souris
-      gamelab_locationNorth:
-        text: nord
       gamelab_locationOf:
         text: emplacement de {SPRITE}
-      gamelab_locationSouth:
-        text: sud
-      gamelab_locationWest:
-        text: ouest
       gamelab_location_picker:
         text: "{LOCATION}"
-      gamelab_location_variable_get:
-        text: emplacement de {VAR}
       gamelab_mirrorSprite:
         options:
           DIRECTION:
             '"right"': vers la droite
             '"left"': vers la gauche
-      gamelab_mixColors:
-        text: mélanger {COLOR1} et {COLOR2}
       gamelab_mouseLocation:
         text: emplacement de la souris
       gamelab_moveInDirection:
@@ -816,14 +755,8 @@ fr:
             '"East"': Est
             '"South"': Sud
             '"West"': Ouest
-      gamelab_moveLeft:
-        text: "{THIS} déplacer à gauche"
-      gamelab_moveRight:
-        text: "{THIS} déplacer à droite"
       gamelab_moveToward:
         text: bouger {SPRITE} distance {DISTANCE} vers {TARGET}
-      gamelab_moveUp:
-        text: "{THIS} déplacer en haut"
       gamelab_pointInDirection:
         options:
           DIRECTION:
@@ -831,8 +764,6 @@ fr:
             '"East"': Est
             '"South"': Sud
             '"West"': Ouest
-      gamelab_pointToward:
-        text: tourner {SPRITE} vers {LOCATION}
       gamelab_randColor:
         text: couleur aléatoire
       gamelab_randomColor:
@@ -857,20 +788,6 @@ fr:
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': arc-en-ciel
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': sous-marin
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': hiver
-      gamelab_setPosition:
-        text: déplacer {THIS} à la position {POSITION}
-        options:
-          POSITION:
-            "{x: 50, y: 50}": vers le haut à gauche
-            "{x: 200, y: 50}": vers le centre supérieur
-            "{x: 350, y: 50}": vers le haut à droite
-            "{x: 50, y: 200}": vers le centre à gauche
-            "{x: 200, y: 200}": vers le centre
-            "{x: 350, y: 200}": vers le centre à droit
-            "{x: 50, y: 350}": vers le bas à gauche
-            "{x: 200, y: 350}": vers le centre inférieur
-            "{x: 350, y: 350}": vers le haut à droite
-            '"random"': aléatoire
       gamelab_setProp:
         options:
           PROPERTY:
@@ -889,64 +806,11 @@ fr:
             '"height"': hauteur
       gamelab_setTint:
         text: changer la couleur de {THIS} en {COLOR}
-      gamelab_setup:
-        text: configuration
       gamelab_spriteClicked:
         options:
           CONDITION:
             '"when"': quand
             '"while"': tant que
-      gamelab_spriteClickedSet:
-        options:
-          CONDITION:
-            '"when"': quand
-            '"while"': tant que
-      gamelab_spriteCostume:
-        text: "{COSTUME}"
-      gamelab_spriteDirection:
-        text: "{DIRECTION}"
-        options:
-          DIRECTION:
-            '"North"': Nord
-            '"East"': Est
-            '"South"': Sud
-            '"West"': Ouest
-      gamelab_spritesWhere:
-        options:
-          PROPERTY:
-            '"scale"': taille
-            '"x"': position x
-            '"y"': position y
-            '"costume"': costume
-            '"direction"': direction du mouvement
-            '"rotation"': rotation ou direction
-            '"tint"': nuance
-      gamelab_spritesWhereFirst:
-        text: premier {VALUE}
-      gamelab_spritesWhereGenerator:
-        text: sprites où {PROPERTY} {OP} {VALUE}
-        options:
-          PROPERTY:
-            '"scale"': taille
-            '"x"': position x
-            '"y"': position y
-            '"costume"': costume
-            '"direction"': direction du mouvement
-            '"rotation"': rotation ou direction
-            '"tint"': nuance
-          OP:
-            '"="': "="
-            '">"': ">"
-            '"<"': "\\<"
-      gamelab_spritesWhereLast:
-        text: dernier {VALUE}
-      gamelab_spritesWhereRandom:
-        text: au hasard dans le groupe {VALUE}
-      gamelab_thisBeginsBehaviorSimple:
-        text: le sprite {SPRITE} commence {BEHAVIOR}
-        options:
-          SPRITE:
-            abc: ce sprite
       gamelab_turn:
         text: tourner {SPRITE} vers {DIRECTION} de {N} degrés
         options:
@@ -955,8 +819,6 @@ fr:
             '"left"': vers la gauche
       gamelab_whenDownArrow:
         text: quand on appuie sur la flèche du bas
-      gamelab_whenJoystick:
-        text: quand joystick
       gamelab_whenKey:
         text: En appuyant sur {KEY}
         options:
@@ -972,8 +834,6 @@ fr:
             '"d"': d
       gamelab_whenLeftArrow:
         text: quand on appuie sur la flèche de gauche
-      gamelab_whenMouseClicked:
-        text: quand on clique
       gamelab_whenPressedAndReleased:
         text: |-
           quand on appuie sur {DIR}
@@ -987,13 +847,6 @@ fr:
             "'right'": vers la droite
       gamelab_whenRightArrow:
         text: quand on appuie sur la flèche de droite
-      gamelab_whenTouchingSet:
-        options:
-          CONDITION:
-            '"when"': quand
-            '"while"': tant que
-      gamelab_whenTrue:
-        text: quand {CONDITION} vrai
       gamelab_whileKey:
         options:
           KEY:

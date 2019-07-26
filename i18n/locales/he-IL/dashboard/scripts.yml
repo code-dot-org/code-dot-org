@@ -21,6 +21,8 @@ he:
               name: 'דבורה: לולאות'
             'Bee: Sequence':
               name: 'דבורה: רצף'
+            Getting Loopy:
+              name: עוברים ללולאות
             Happy Maps:
               name: מפות שמחות
             'Jigsaw: Learn to drag and drop':
@@ -67,12 +69,16 @@ he:
               name: תנאים
             Flappy:
               name: פלאפי
+            Getting Loopy:
+              name: עוברים ללולאות
             Graph Paper Programming:
               name: תכנות לנייר משבצות
             'Maze: Loops':
               name: 'מבוך: לולאות'
             'Maze: Sequence':
               name: 'מבוך: רצף'
+            'Real-life Algorithms: Paper Planes':
+              name: 'אלגוריתמים מהחיים: מטוסי נייר'
             'Studio: Create a Story':
               name: 'מעבדת הצעצועים: צור סיפור'
             The Big Event:
@@ -283,13 +289,13 @@ he:
             The Artist:
               name: האמן
             The Artist 2:
-              name: האומן 2
+              name: האמן 2
             The Artist 3:
-              name: האומן 3
+              name: האמן 3
             The Artist 4:
               name: האמן 4
             The Artist 5:
-              name: האומן 5
+              name: האמן 5
             The Farmer:
               name: האיכר
             The Farmer 2:
@@ -529,6 +535,8 @@ he:
           stages:
             Binary Bracelets:
               name: צמידים בינארים
+            Getting Loopy:
+              name: עוברים ללולאות
             Graph Paper Programming:
               name: תכנות לנייר משבצות
             Happy Maps:
@@ -756,6 +764,8 @@ he:
               name: פלאפי
             Binary Bracelets:
               name: צמידים בינארים
+            'Real-life Algorithms: Paper Planes':
+              name: 'אלגוריתמים מהחיים: מטוסי נייר'
             The Big Event:
               name: האירוע הגדול
         k5concepts:
@@ -838,6 +848,8 @@ he:
           stages:
             Programming in Maze:
               name: תכנות במבוך
+            'Real-life Algorithms: Paper Planes':
+              name: 'אלגוריתמים מהחיים: מטוסי נייר'
             Loops in Maze:
               name: לולאות במבוך
             Binary Bracelets:
@@ -1045,6 +1057,8 @@ he:
               name: תכנות במבוך
             Debugging in Maze:
               name: איתור באגים במבוך
+            'Real-life Algorithms: Paper Planes':
+              name: 'אלגוריתמים מהחיים: מטוסי נייר'
             Loops in Maze:
               name: לולאות במבוך
             Binary Bracelets:
@@ -1323,6 +1337,8 @@ he:
               name: תכנות עם ציפורים כועסות
             Debugging in Maze:
               name: ניפוי שגיאות עם סקראט
+            'Loops: Getting Loopy':
+              name: עוברים ללולאות
             Conditionals with Cards:
               name: התניות עם כרטיסים
             'Functions: Songwriting':
@@ -1392,6 +1408,10 @@ he:
               name: תכנות עם ציפורים כועסות
             Debugging in Maze:
               name: איתור באגים עם ציפורים כועסות
+            'Real-life Algorithms: Paper Planes':
+              name: מטוסי נייר
+            'Loops: Getting Loopy':
+              name: עוברים ללולאות
             'Events: The Big Event':
               name: האירוע הגדול
             Binary Bracelets:
@@ -1613,6 +1633,8 @@ he:
               name: תכנות עם ציפורים כועסות
             Debugging in Maze:
               name: איתור באגים במבוך
+            'Real-life Algorithms: Paper Planes':
+              name: 'אלגוריתמים מהחיים: מטוסי נייר'
             'Events: The Big Event':
               name: האירוע הגדול
             Binary Bracelets:
@@ -1639,6 +1661,8 @@ he:
               name: זוזו, זוזו
             Loops in Ice Age:
               name: לולאות בעידן הקרח
+            'Loops: Getting Loopy':
+              name: עוברים ללולאות
             Programming in Maze:
               name: תכנות עם ציפורים כועסות
             Sequencing in Maze:
@@ -1708,3 +1732,20 @@ he:
               name: תכנות לנייר משבצות
             Programming in Maze:
               name: תכנות במבוך
+        csd2-pilot:
+          stages:
+            Intro to HTML:
+              description_teacher: בשיעור זה תלמידים ילמדו לראשונה HTML כשיטה שתסביר למחשב איך להציג תוכן ומבנה של אתר. השיעור מתחיל עם פעילות ללא מחשב המדגימה את האתגרים בהגדרת מבנה של אתר אינטרנט. התלמידים יסתכלו במבנה דף HTML לדוגמה במעבדת האינטרנט וידונו עם חבריהם לכיתה איך תגיות HTML עוזרות לפתור את הבעיה. לאחר מכן, התלמידים יכתבו את דף ה-HTML הראשון שלהם. לבסוף, יהיה דיון מסכם אשר יעזור לחזק את ההבנה שלהם ביחס שבין התוכן למבנה כפי שנבנה במהלך השיעור.
+            Headings:
+              description_student: שיעור זה ממשיך את ההיכרות עם תגיות HTML, הפעם עם כותרות. הכיתה מתרגלת שימוש בתגיות מסוג כותרת כדי לייצר כותרות דף ומקטעים ולומדים כיצד הכותרות מוצגות כברירת מחדל. לאחר מכן, הכיתה תתכנן כיצד לארגן את התוכן בדפי האינטרנט הפרטיים שלהם אשר יבנו לאורך כל יחידת הלימוד ויתחילו את הדף הראשון בפרויקט שלהם.
+              description_teacher: בשיעור זה, תלמידים ממשיכים להשתמש ב-HTML כדי לשבץ טקסט באתר שלהם, הפעם בעזרת כותרות. התלמידים לומדים איך הכותרות השונות מופיעים כברירת מחדל ומתרגלים שימוש בהם כדי לייצר כותרות דף וכותרות מקטעים. לאחר מכן, התלמידים מתחילים להחליט כיצד הם רוצים לארגן את התוכן שלהם בדפי האינטרנט הפרטיים שלהם. בשלב האחרון, התלמידים יתחילו את הפרויקט שעליו ימשיכו לעבוד לאורך כל יחידת הלימוד.
+            Lists:
+              name: רשימות
+        csd3-pilot:
+          stages:
+            Variables:
+              name: משתנים
+            Conditionals:
+              name: תנאים
+            Functions:
+              name: פונקציות

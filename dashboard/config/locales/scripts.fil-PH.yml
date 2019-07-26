@@ -13594,6 +13594,8 @@ fil:
           stages:
             new stage:
               name: bagong yugto
+            Number Systems:
+              name: Mga Sistema ng Pagbilang
         csd-videos:
           stages:
             new stage:
@@ -13665,3 +13667,854 @@ fil:
           stages:
             Wrap Up:
               name: Tapusin Na
+        csd1-pilot:
+          description_short: "  Alamin kung paano ang mga tao gumagamit ng mga kompyuter
+            para lutasan ang mga problema."
+          stages:
+            CS Discoveries Pre-survey:
+              name: Pre-surbey ng CS Discoveries
+            Intro to Problem Solving:
+              name: Panimula sa Paglutas ng Problema
+              description_student: 'Ang klase ay magtatrabaho sa isang grupo para
+                magdisenyo ng aluminum foils na mga bangka na susuporta ng maraming
+                mga barya hangga''t maaari. Sa pagtatapos ng aralin, ang mga grupo
+                ay mag-iisip sa kanilang karanasan sa gawain at gumawa ng koneksyon
+                sa mga tipo ng paglutas ng problema na gagawin nila sa natirang bahagi
+                ng kurso. '
+              description_teacher: Sa araling ito, ang mga estudyante ay magtatrabaho
+                sa loob ng mga grupo para makadisenyo ng aluminum foil na mga bangka
+                na susuporta sa maraming mga barya hangga't maaari. Ang mga grupo
+                ay mayroong dalawang pagkakataon para magawa ang kanilang mga bangka,
+                na may layunin na makakarga ng mas marami pang barya kaysa sa nagawa
+                nila sa unang pagkakataon. Ang istraktura ng gawain ay nagpapahiwatig
+                sa iba't ibang hakbang sa proseso ng paglutas ng problema na ipapakilala
+                ng mas detalyado sa sumusunod na mga aralin. Sa pagtatapos ng aralin,
+                ang mga estudyante ay mag-iisip sa kanilang mga karanasan sa gawain
+                at gagawa ng mga koneksyon sa mga uri ng paglutas ng problema na gagawin
+                nila sa natitirang bahagi ng kurso.
+            The Problem Solving Process:
+              name: Ang Proseso ng Pagtuklas ng Problema
+              description_student: Ang araling ito ay nagpapakila sa pormal na proseso
+                ng paglutas ng problema na gagamitin ng klase sa loob ng isang taon,
+                Paglalarawan - Paghahanda - Pagsubok - Pag-iisip, Ang klase ay mag-uugnay
+                sa mga hakbang na ito sa problema sa mga aluminum na mga bangka sa
+                nakaraang aralin, pagkatapos ang isang problema na sanay na sila sa
+                paglutas, pagkatapos ay isang problema na gusto nilang pahusayin ang
+                paglutas. Sa bandang huli ng aralin, ang klase ay kukolekta ng isang
+                listahan ng mga nakakatulong na mga estratehiya para sa bawat hakbang
+                ng proseso na ilagay sa mga poster na gagamitin nila sa buong yunit
+                at taon.
+              description_teacher: Ang araling ito ay nagpapakila sa pormal na proseso
+                ng paglutas ng problema na gagamitin ng mga estudyante sa loob ng
+                isang taon, Paglalarawan - Paghahanda - Pagsubok - Pag-iisip. Ang
+                aralin ay magsisimula sa paghikayat sa mga estudyante na mag-isip
+                sa lahat ng iba't ibang uri ng mga problema na matagpuan nila sa pang-araw-araw
+                na buhay. Ang mga estudyante ay papakitaan ng apat na mga hakbang
+                sa proseso ng paglutas ng problema at sama-samang magtrabaho para
+                iugnay ang mga nilahat na mga hakbang sa kanilang aktwal na mga karanasan
+                sa paglutas ng mga problema. Ang mga estudyante ay unang mag-ugnay
+                sa mga hakbang na ito sa problema sa mga aluminum na bangka sa nakaraang
+                aralin, pagkatapos ang isang problema na sanay na silang maglutas,
+                pagkatapos ay isang problema na gusto nilang pahusayin pa ang paglutas.
+                Sa bandang huli ng aralin, ang klase ay kukolekta ng mga nakakatulong
+                na mga estratehiya para sa bawat hakbang ng proseso na ilalagay sa
+                mga poster na gagamitin nila sa buong yunit at taon.
+            Exploring Problem Solving:
+              name: Pagtuklas sa Paglutas ng Problema
+              description_student: 'Sa araling ito ang klase ay gagamit sa proseso
+                ng paglutas ng problema sa tatlong iba''t ibang mga problema: paghahanap
+                ng salita, pag-aayos ng upuan para sa isang birthday party, at ang
+                pagpaplano ng paglalakbay. Ang mga problema ay naging mas kumplikado
+                at hindi masyadong inilarawan para ipakita kung paano ang proseso
+                ng paglutas ng problema nakakatulong sa pagharap ng ganitong mga tipo
+                ng mga problema.'
+              description_teacher: |-
+                Sa araling ito ang mga estudyante ay gagamit ng proseso sa paglutas ng problema sa tatlong magkaibang mga problema para mas maintindihan pa nila ang kahalagahan ng bawat hakbang. Sila ay lulutas sa isang paghahanap ng salita, pag-aayos ng mga upuan para sa isang birthday party, at pagplano ng isang paglalakbay. Ang mga problema ay mas kumplikado at hindi masyadong inilarawan para ipakita kung paano ang proseso ng paglutas ng problema nakakatulong sa pagharap ng ganitong mga tipo ng mga problema. Ang aralin ay magtatapos sa pag-iisip ng mga estudyante tungkol sa kanilang karanasan sa proseso ng paglutas ng problema. Bibigyan nila ng katwiran ang pagdagdag sa bawat hakbang at mag-iisip ng mga katanungan at mga istratehiya na maaaring makakatulong sa kanilang paglalarawan sa mga walang-katapusan na mga problema, dahil ito kadalasan ang pinaka-kritikal na hakbang.
+
+                Ang araling ito ay parang tatagal ng dalawang oras ng klase o higit pa para makumpleto. Ang unang dalawang problema ay maaaring gawin sa isang klase ngunit ang pangatlo ay kailangang gawin sa pangalawang araw.
+            What is a Computer?:
+              name: Ano ang isang Kompyuter?
+              description_student: Sa araling ito, ang klase ay magkakaroon ng panimulang
+                kahulugan ng isang kompyuter. Pagkatapos mag-isip sa mga posibleng
+                kahulugan para sa isang kompyuter, ang klase ay magtatrabaho sa isang
+                grupo para ayusin ang mga larawan kung "isang kompyuter" ba o "hindi
+                isang kompyuter" sa poster paper at ipaliwanag ang nag-udyok sa kanila
+                na pumili sa iilang napakahirap na mga kategorisasyon. Ang mga guro
+                ay magpapakilala ng isang kahulugan ng kompyuter at pahintulotan ang
+                mga grupo na baguhin ang kanilang mga poster ayon sa mga bagong kahulugan.
+              description_teacher: Sa araling ito, ang mga estudyante ay magkakaroon
+                ng panimulang kahulugan ng isang kompyuter. Para masimulan ang aralin,
+                ang klase ay mag-iisip sa mga posibleng kahulugan para sa isang kompyuter
+                at ilagay ang mga resulta sa pag-iisip na ito sa pisara. Sunod nito,
+                ang mga estudyante ay magtatrabaho sa isang grupo para ayusin ang
+                mga larawan kung "isang kompyuter" ba o "hindi isang kompyuter" sa
+                poster na papel. Ang mga grupo ay maglagay sa kanilang mga poster
+                sa paligid ng silid at madaliang ipaliwanag ang nag-udyok sa kanila
+                na pumili sa ilang napakahirap na mga kategorisasyon. Ang guro ay
+                magpapakilala din ng isang kahulugan ng isang kompyuter at pahintulutan
+                ang mga estudyante na bumago sa kanilang mga poster ayon sa bagong
+                kahulugan.
+            Input and Output:
+              name: Input at Output
+              description_student: Sa klaseng ito, ang mga estudyante ay magsaalang-alang
+                sa ilang mga computing na mga kagamitan para matukoy kung anong mga
+                tipo ng mga input at mga output ang gagamitin nila. Ang mga grupo
+                ay aatasan ng isang computing na kagamitan at ayon sa binigay ng guro
+                na kahulugan ng input at output, maglilista ng mga input at mga output
+                ng device nila. Para matapos ang aralin, ang klase ay magsusuri sa
+                mga karaniwang gawain na ginagawa nila sa isang computing na kagamitan
+                at pipili ng mga input at mga output na magagamit para sa gawaing
+                iyon mula sa tsart.
+              description_teacher: Sa klaseng ito, ang mga estudyante ay magsaalang-alang
+                sa ilang mga computing na mga kagamitan para matukoy kung anong mga
+                tipo ng mga input at mga output ang gagamitin nila. Ang mga grupo
+                ay aatasan ng isang computing na kagamitan at ayon sa binigay ng guro
+                na kahulugan ng input at output, maglilista ng mga input at mga output
+                ng device nila. Bago pa ang gawaing ito, ang mga estudyante ay hinikayat
+                na magtuon sa mas halatang mga pisikal na mga input at mga output
+                (e.g. isang keyboard bilang input o isang screen bilang output) ngunit
+                ang mga diskusyon mamaya ay magdadala sa mga estudyante para mapansin
+                nila ang mga hindi masyadong halata na mga halimbawa (e.g. ang touch
+                screen ay parehong input at output o ang katunayan na ang Internet
+                ay maaaring maging parehong input at output). Sa kabuoan ng aralin,
+                ang guro ay magtatala ng mga input at mga output na natukoy at inilagay
+                sa isang T-chart sa harap ng silid. Para tapusin ang leksyon, ang
+                mga estudyante ay susuri sa mga karaniwang gawain na ginagawa nila
+                isang computing device at pipili ng mga inputs at outputs na ginagamit
+                para sa gawaing iyan mula sa tsart.
+            Processing:
+              name: Pagproseso
+              description_student: Ang araling ito ay tumitingin nang mas malalim
+                sa konsepto ng pagproseso na ipinakilala bilang bahagi ng pagbibigay
+                ng kahulugan sa isang kompyuter. Ang mga pares ay nagsama-samang magtrabaho
+                para mailagay ang isang kahon ng mga baraha sa tamang pagkakasunod-sunod,
+                isang anyo ng pag-proseso ng mga impormasyon. Sa bandang huli, ang
+                klase ay mag-uusap kung ano ang ibig sabihin ng pagproseso sa loob
+                ng konteksto ng paglutas ng mga problema sa impormasyon.
+              description_teacher: Ang mga estudyante ay kukumpleto sa dalawang unplugged
+                na mga gawain sa pag-aayos ng baraha para tuklasin ang kahulugan ng
+                pagproseso at ang relasyon nito sa paglutas ng problema. Ang una ay
+                mayroong ilang mga kondisyon at ginagamit para ipakilala ang high-level
+                na kahulugan ng pagproseso. Ang sunod ay nagpapakila sa isang karadagang
+                mga kondisyon para mapuwersa ang mga estudyante na makagawa ng algoritmo
+                na palaging matagumpay ang pagproseso sa mga baraha. Ang estudyante
+                ay palaging mag-develop, mag-test, at magbahagi ng kanilang mga algoritmo
+                sa kanilang mga kamag-aral. Isang wrap-up na diskusyon ay nakapagpaisip
+                sa mga estudyante tungkol sa iba't ibang tipo ng paglutas ng problema
+                na nagagamit nila sa mga gawaing ito at ang halaga ng pagbuo ng isang
+                algoritmo para lutasin ang problema.
+            Apps and Storage:
+              description_student: 'Ang araling ito ay sumasaklaw sa input at output
+                na mga aspeto ng mga kompyuter sa loob ng konteksto na makabuluhan
+                at pamilyar sa mga estudyante: ang mga app. Ang klase ay magtatasa
+                sa iba''t ibang mga aplikasyon sa web para suriin ang mga tiyak na
+                mga problema na dinisenyo para lutasin nila, ang mga input na kailangan
+                nilang gawin, ang mga output na ibinigay sa mga gumagamit. Ang klase
+                ay nagtatapos sa isang mga pag-talakay sa mga app na ito, pati na
+                rin ang isang diskusyon na pinanguluhan ng isang guro tungkol sa epekto
+                ng mga app sa lipunan. '
+            Project - Propose an App:
+              name: Proyekto - Pagmungkahi ng App
+              description_student: Para tapusin ang pag-aaral sa proseso ng paglutas
+                ng problema at ang input/output/store/proceso na modelo ng isang kompyuter,
+                ang klase ay mag-mungkahi ng mga app na dinisenyo para maglutas ng
+                mga problema sa totoong buhay. Ang proyektong ito makokumpleto sa
+                loob ng ilang mga araw at magtatapos sa isang poster na presentasyon
+                na nagpapakita sa mga katangian ng bawat app. Ang proyekto ay dinisenyo
+                nang may kapares pero maaari pa rin itong makumpleto nang mag-isa.
+              description_teacher: Para tapusin ang kanilang pag-aaral sa proseso
+                ng paglutas ng problema at ang input/output/store/proseso na modelo
+                ng isang kompyuter, ang mga estudyante ay magmumungkahi ng isang app
+                na dinisenyo para lumutas ng problema sa totoong buhay. Ang proyektong
+                ito ay gagawin sa loob ng iilang mga araw at magresulta sa paglikha
+                ng mga estudyante ng isang poster na nagpapakita sa mga katangian
+                ng kanilang app na ipapakita nila sa kanilang mga kamag-aral. Ang
+                gabay ng proyekto ay nagbibigay ng sunod-sunod na mga instruksyon
+                para sa mga estudyante at tumutulong sa kanila na mag-ayos ng kanilang
+                mga naisip. Ang proyekto ay dinisenyo para kumpletohin nang may kasama
+                pero maaari rin itong gawin na mag-isa lang.
+        csd2-pilot:
+          description: " Sa Yunit 2, matutunan mo kung paano lumikha at magbahagi
+            ng nilalaman sa sarili mong mga web na pahina. Pagkatapos makapili kung
+            anong nilalaman ang gusto mong ibahagi sa mundo, matutunan mo kung paano
+            gawin at pagandahin ang iyong mga pahina gamit ang HTML at CSS. Ikaw ay
+            magsasanay din sa isang napakahalagang kakayahan sa pag-program gaya ng
+            pag-debug at paglagay ng mga komento. Sa pagtatapos ng yunit, ikaw ay
+            magkakaroon ng isang sariling website na maaari mong ilathala sa Internet."
+          description_short: "  Matutong bumuo ng iyong sariling we site sa Web Lab."
+          stages:
+            Exploring Websites:
+              name: Paggalugad sa mga Website
+              description_student: Ang araling ito ay sumasaklaw sa mga layunin na
+                ang isang website ay maaaring nabuo, pareho sa mga gumagamit at sa
+                mga naglikha. Ang klase ay tutuklas sa iilang website na kadalasang
+                ginagamit sa Estados Unidos at pag-usapan kung paano ang bawat isa
+                sa mga site na ito ay nakakatulong sa mga gumagamit at kung paano
+                ito maaaring makapaglingkod sa mga naglikha.
+              description_teacher: Bawat website ay may layunin, isang rason kung
+                bakit may naglikha nito at kung bakit ito ginanagamit ng iba. Sa araling
+                ito, ang mga estudyante ay magsisimulang magbigay pansin sa mga layunin
+                ng isang website, pareho sa mga gumagamit at sa mga naglikha. Ang
+                mga estudyante ay tutuklas sa iilang mga website na kadalasang ginagamit
+                sa Estados Unidos at subukang alamin kung paano ang bawat isa sa mga
+                site na ito ang nakakatulong sa mga gumagamit at kung paano ito nakapaglingkod
+                sa mga naglikha nito.
+            'Websites for Expression ':
+              name: 'Mga Website para sa Pagpapahayag '
+              description_student: 'Ang araling ito ay nagpapakilala sa mga website
+                bilang paraan ng pagpapahayag sa sarili. Ang klase ay unang magtatalakay
+                sa iba''t ibang pamamaraan na ang mga tao ay magpahayag at magbahagi
+                ng kanilang mga interes at mga ideya, pagkatapos ay tingnan ang iilang
+                halimbawa ng mga website na ginawa ng mga estudyante sa nakaraang
+                kurso. Sa huli, ang lahat ay mag-iisip at magbahagi ng listahan ng
+                mga paksa at mga interes na ilalakip, paglikha ng resource para sa
+                pag-develop ng isang personal website sa loob ng yunit. '
+              description_teacher: Sa araling ito, ang mga estudyante ay magsisiyasat
+                na mga pamamaraan para gamitin ang mga website bilang paraan ng pagpapahayag
+                ng sarili at mag-develop ng listahan ng mga paksa at mga interes na
+                gusto nilang ilagay sa isang personal na website. Para simulan ang
+                aralin, ang mga mag-aaral ay mag-iisip ng iba't ibang pamamaraan na
+                ang mga tao ay magpahayag at magbahagi ng kanilang mga interes at
+                mga ideya. Ang mga estudyante ay titingin din sa iilang mga halimbawang
+                website na nagawa ng mga estudyante sa nakaraang CS Discoveries na
+                kurso para matukoy ang paraan na sila ay nagpapahayag ng kanilang
+                mga ideya. Sa wakas, ang mga estudyante ay mag-iisip at magbahagi
+                ng lista ng mga paksa at mga interes na gusto nilang ilakip sa isang
+                personal na website kung saan maari silang tumingin habang patuloy
+                ang pag-unlad nila sa yunit.
+            Intro to HTML:
+              name: Panimula sa HTML
+              description_student: Ang araling ito ay nagpapakilala sa HTML bilang
+                isang solusyon sa problema kung paano makipag-usap ang kapwa nilalaman
+                at istraktura ng website sa isang kompyuter. Ang aralin ay magsisimula
+                sa isang madaliang unplugged na gawain na nagpapakita sa mga hamon
+                ng epektibong pakikipag-ugnayan sa istraktura ng isang web na pahina.
+                Ang klase ay titingin sa isang HTML na pahina sa Web Lab at pag-uusapan
+                kung paano ang HTML na mga tag nakakatulong para lutasin ang problemang
+                ito, pagkatapos ay gagamit ng HTML para magsulat ng unang mga web
+                na pahina sa yunit.
+              description_teacher: Sa araling ito, ang mga estudyante ay ipapakilala
+                sa HTML bilang isang solusyon sa problema kung paano makipag-usap
+                ang kapwa nilalaman at istraktura ng isang website sa isang kompyuter.
+                Ang aralin ay magsisimula sa isang madaliang unplugged na gawain na
+                nagpapakita sa mga hamon ng epektibong pakikipag-ugnayan sa istraktura
+                ng web na pahina. Ang mga estudyante ay titingin ngayon sa isang halimbawa
+                ng isang HTML na pahina sa Web Lab at tatalakayin kasama ang kanilang
+                mga kamag-aral kung paano ang HTML na mga tags nakakatulong para maglutas
+                sa problemang ito. Ang mga estudyante ay magsusulat ng kanilang unang
+                HTML. Ang pinaikling diskusyon ay nakakatulong para mapatibay ang
+                kanilang kaalaman sa nilalaman vs. istraktura na ginawa sa buong aralin.
+            Headings:
+              name: Mga Heading
+              description_student: Ang araling ito ay nagpapatuloy sa introduksyon
+                sa mga HTML na tag, ngayon ay tungkol sa mga header. Ang klase ay
+                magsasanay sa paggamit ng mga header na tag para lumikha ng pahina
+                at mga pamagat ng seksiyon at matututo kung paano ang iba't ibang
+                mga elemento ng header ay naka-display ayon sa default. Sa sunod,
+                ang klase ay magpaplano kung paano mag-organisa sa kanilang nilalaman
+                sa personal na mga pahina sa web na gagawin sa loob ng yunit at nagsisimula
+                sa unang pahina ng proyekto.
+              description_teacher: Sa araling ito, ang mga estudyante ay patuloy na
+                gagamit sa HTML para gumawa ng istraktura ng teksto sa mga web na
+                pahina, ngayon ay may mga headings na. Ang mga estudyante ay matututo
+                kung paano ang iba't ibang mga heading na elemento ay naka-display
+                nang default at magsasanay sa paggamit ng mga ito para maglikha ng
+                pahina at seksyon na mga pamagat. Ang mga estudyante ay pipili na
+                din kung paano nila i-organisa ang kanilang nilalaman sa kanilang
+                sariling personal na mga web na pahina. Sa huling antas, ang mga estudyante
+                ay magsisimula sa proyekto na patuloy nilang gagawin sa buong yunit.
+            Digital Footprint:
+              name: Digital na Bakas
+              description_student: Sa araling ito ay atin munang ihinto sandali ang
+                paglikha ng personal website para pag-usapan ang tungkol sa mga personal
+                na impormasyon na pinili ng mga tao na ibahagi sa digital na mundo.
+                Ang klase ay magsisimula sa pag-uusap kung anong mga uri ng impormasyon
+                ang magandang ibahagi sa ibang tao, pagkatapos ay titingnan natin
+                ang iilang halimbawa ng social media na mga pahina para makita kung
+                anong uri ng mga personal na impormasyon ang maaaring mabahagi ng
+                sinasadya o hindi sinasadya. Sa wakas, ang klase ay gagawa ng isang
+                listahan ng mga tagubilin na dapat sundin habang naglalagay ng impormasyon
+                online.
+              description_teacher: "Dahil ang mga estudyante ay bago lang naglaan
+                ng oras para mag-isip tungkol sa aktwal na nilalaman na mapupunta
+                sa kanilang personal na website, ang araling ito ay bumabalik sa isang
+                buong yunit na proyekto (paglathala ng personal na website) para matulungan
+                ang mga estudyante na susihin kung ano ang personal na impormasyon
+                ang pipiliin nilang ibahagi sa digital na mundo at kung kanino. Ito
+                rin ay nagpapalakas sa pag-aakala na karamihan sa mga impormasyon
+                na pinili nilang ibahagi sa digital na mundo ay wala ka nang magagawa
+                sa panahong napalabas mo na ito. \r\n\r\nAng mga estudyante ay magsisimula
+                sa pamamagitan ng pagtukoy ng mga angkop na mga tagapakinig na kung
+                saan sila ay kumportableng magbahagi ng binagay na mga piraso ng personal
+                na impormasyon. Sila ay titingin sa iilang social media na mga pahina
+                para matukoy kung anong klase ng mga impormasyon ang ibinabahagi ng
+                mga tao tungkol sa sarili nila o sa iba. Sa huli, ang mga estudyante
+                ay mag-iisip ng mga tagubilin na naisip nilang angkop para sa pag-post
+                ng mga impormasyon online.\r\n\r\nAng pinakapunto ng araling ito ay
+                hindi para takutin ang mga estudyante, kung hindi para aktwal na mararanasan
+                ng mga estudyante ang eksaktong pag-uunawa kung ano ang antas ng kontrol
+                na wala sila tungkol sa pagpalabas ng mga impormasyon sa web."
+            Lists:
+              name: Mga listahan
+              description_student: Ang araling ito ay nagpapakilala sa mga ordered
+                at unordered na mga listahan at ang kaugnay na  &lt;ul&gt;, &lt;ol&gt;,
+                and &lt;li&gt;  mga HTML na tag. Ang klase ay magsasanay sa paggamit
+                ng mga tags, pagkatapos ay babalik sa proyekto na personal na pahina
+                sa web para idagdag ang bagong HTML na pahina na naglalaman ng mga
+                bagong tags.
+              description_teacher: Ang mga estudyante ay ipinakilala sa ordered at
+                unordered na mga listahan sa HTML at magtrabaho sa pagitan ng iilang
+                mga antas kung saan gagamitin nila ang  &lt;ul&gt;, &lt;ol&gt;, and
+                &lt;li&gt; na mga tags. Pagkatapos ay babalik sila sa kanilang proyekto,
+                kung saan magdadagdag sila ng bagong HTML na pahina. Sa loob ng bagong
+                pahina, sila ay magsusulat ng HTML para maipakita ang isang resipe,
+                top ten na listahan, o kahit na anong nilalaman na gumagamit ng mga
+                bagong tags na natutunan nila.
+            Intellectual Property and Images:
+              name: Intelektwal na mga Pag-aari at mga Larawan
+              description_student: Ang araling ito ay sumasaklaw sa kung paano gamitin
+                ang media gaya ng mga larawan, video, o musika na nilika ng iba sa
+                isang website habang gumagalang sa mga naglikha ng media na iyon.
+                Pagkatapos unang pag-aralan ang Creative Commons na pag-lisensya,
+                ang klase ay matututo kung paano magdagdag ng mga larawan sa kanilang
+                mga pahina sa web, at kung paano magbigay ng wastong pagpalagay kapag
+                ginawa ito.
+              description_teacher: "Magsisimula sa isang diskusyon tungkol sa kanilang
+                personal na mga opinyon kung paano papayagan ang iba na gagamit sa
+                kanilang nagawa, ang klase ay tutuklas sa layunin at papel ng copyright
+                para sa mga kapwang naglikha at mga gumagamit ng malikhaing mga nilalaman.
+                Pagkatapos ay lilipat sila sa isang gawain na nagtutuklas sa iba't
+                ibang lisensya ng Creative Commons bilang isang solusyon sa kahirapan
+                sa pagpangasiwa ng copyright. \r\n\r\nSa huli, sa isang karaniwang
+                pag-uunawa sa mga pagbabawal sa iba't ibang mga lisensya ng Creative
+                Commons, ang mga estudyante ay matuto kung paano magdagdag ng mga
+                larawan sa kanilang mga pahina sa web gamit ang &lt;img&gt; na tag."
+            Clean Code and Debugging:
+              name: Linisin ang Code at Pag-Debug
+              description_student: Ang araling ito ay sumasaklaw sa mga karaniwang
+                isyu na mangyayari habang nagdidisenyo ng mga web na pahina sa HTML.
+                Ang klase ay magtatama sa mga pagkakamali sa pagkakasunod na mas lalong
+                naging kumplikadong mga web pahina na makikita sa Code Studio at pag-aralan
+                ang kahalagahan ng mga komento, whitespace, at pag-indent bilang mga
+                kagamitan para magawang madaling mabasa ang mga web na pahina.
+              description_teacher: Ang mga estudyante ay haharap sa mga karaniwang
+                isyu na nagaganap habang nagdidisenyo ng mga web na pahina sa HTML.
+                Ang estudyante ay magtatama ng mga mali sa pagkakasunod na mas lalong
+                naging kumplikadong mga web na pahina. Sa proseso ay matutunan nila
+                ang kahalagahan ng mga komento, whitespace, at pag-indent bilang mga
+                kagamitan para mas madling basahin ang mga web na pahita. Sa bandang
+                huli ng aralin, ang mga estudyante ay lilikha ng isang listahan ng
+                mga istratehiya para sa pag-debug ng mga web na pahina at masiguro
+                na sila ay madaling basahin at i-maintain.
+            Project - Multi-Page Websites:
+              name: Proyekto - Maraming-Pahina na mga Website
+              description_student: 'Ang araling ito ay sumasaklaw sa mga hyperlinks,
+                na nagbibigay paraan sa mga web developer na magkonekta ng mga pahina
+                nang sama-sama sa isang website. Ang klase ay sama-samang mag-ugnay
+                sa lahat ng naunang mga pahina sa isang proyekto, at maglikha ng mga
+                navigation bar para sa bawat pahina bago ilathala ang buong site sa
+                Web.  '
+              description_teacher: "Matapos mapag-aralan ang tungkol sa kung paano
+                mag-ugnay ng mga pahina ng web sa bawat isa, ang mga estudyante ay
+                sa waka maglathala sa kanilang website na ginagawa. Sa araling ito,
+                sila ay mag-uugnay sa lahat ng naunang mga pahina na nalikha nila
+                sa isang proyekto, maglikha ng bagong pahina, at magdagdag ng nabigasyon
+                sa pagitan ng mga pahina bago ilathala ang buong site sa Web. \r\n\r\n"
+            Styling Text with CSS:
+              name: Pag-style ng Teksto gamit ang CSS
+              description_student: Ang araling ito ay nagpapakilala sa CSS bilang
+                pamamaran para malagyan ng istilo ang mga elemento na nasa pahina.
+                Ang klase ay matututo tungkol sa pangunahing sintax para sa CSS na
+                rule-sets at pagkatapos ay tutuklas sa mga katangian na nakakaapekto
+                sa mga teksto na mga elemento ng HTML. Sa wakas, ang lahat ay gagamit
+                ng mga istilo ng teksto sa kanilang mga personal na website.
+              description_teacher: "Ang araling ito ay nagpapakilala sa CSS bilang
+                pamamaran para malagyan ng istilo ang mga elemento na nasa pahina.
+                Ang mga estudyante ay matututo tungkol sa pangunahing sintaks para
+                sa CSS na rule-sets at pagkatapos ay tutuklas sa mga katangian na
+                nakakaapekto sa mga teksto na mga elemento ng HTML. Sila ay magtatrabaho
+                sa isang HTML na page tungkol sa mga Guiness World Record holders,
+                magdagdag ng kanilang sariling istilo sa binigay na pahina. Sa huling
+                antas, ang mga estudyante ay gagamit sa mga natutunan nila tungkol
+                sa mga istilo para sa mga teksto na elemento sa kanilang personal
+                na web na pahina.\r\n\r\n"
+            Styling Elements with CSS:
+              name: Pag-istilo sa mga Elemento gamit ang CSS
+              description_student: Ang araling ito ay nagpapatuloy sa pagpapakilala
+                sa mga katangian ng istilo ng CSS, ngayon ay mas bigyan nating pansin
+                ang mga hindi-teksto na mga elemento. Ang klase ay magsisimula sa
+                pamamagitan ng pag-imbestiga at pagbago sa mga bagong CSS na mga istilo
+                sa Desserts of the World na pahina. Pagkatapos, lahat ay gagamit sa
+                bagong kaalaman na ito sa kanilang mga personal na website.
+              description_teacher: Ang araling ito ay nagpapatuloy sa pagpapakilala
+                sa mga katangian ng istilo ng CSS, ngayon ay mas bigyan nating pansin
+                ang mga hindi-teksto na mga elemento. Ang mga estudyante ay magsisimula
+                sa pamamagitan ng pagtingin sa isang website tungkol sa Desserts of
+                the Worlds. Sila ay mag-imbestiga at mag-bago sa mga bagong CSS na
+                mga istilo sa website na ito. Pagkatapos magtrabaho sa Desserts na
+                pahina, ang mga estudyante ay gagamit sa kanilang kaalaman sa mga
+                bagong katangian ng CSS para makagawa pa na ibang pag-istilo sa kanilang
+                mga personal na website.
+            Sources and Search Engines:
+              name: Mga Source at mga Search Engine
+              description_student: Pagkatapos unang makumpleto ang web search na scavenger
+                hunt, ang klase ay matututo tungkol sa mga prosesong naganap sa mga
+                search engines at magkakaroon ng pagkakataon para pahusayin ang kanilang
+                mga kakayahan sa pagsusuri sa isang paghahanap para sa mga kakaiba
+                at hindi kapani-paniwalang mga hayop.
+              description_teacher: Ang araling ito ay naghihikayat sa mga estudyante
+                na mas maging kritikal pa mag-isip tungkol sa kung paano gumagana
+                ang paghahanap sa web at kung paano makahanap ng mga mahalaga at magpakakatiwalaang
+                impormasyon online. Pagkatapos tingnan at pag-usapan ang video tungkol
+                sa kung paano gumagana ang mga search engine, ang mga estudyante ay
+                maghahanap ng mga impormasyon tungkol sa iilang hindi kapani-paniwalang
+                mga hayop. Kakailanganin nilang magsusuri sa mga sites na nakita nila
+                na mapanaligan para matukoy nila kung aling mga hayop ang talagang
+                biro lang.
+            RGB Colors and Classes:
+              name: RGB na mga Kulay at mga Klase
+              description_student: Ang araling ito ay sumasaklaw sa mga class at mga
+                custom na kulay. Ang klase ay unang matuto kung paano magtukoy ng
+                custom na mga kulay gamit ang mga RGB (red, green, blue) na mga halaga,
+                pagkatapos ay gagamitin nila ang mga kulay na ito sa isang bagong
+                Four Seasons na pahina sa web, kung saan gagamit sa mga CSS na class.
+                Gamit ang mga class, ang klase ay magdadagdag ng maraming pang mga
+                istilo sa Four Seasons na pahina sa web, pagkatapos ay gagamitin ang
+                mga ito para magdagdag ng istilo sa kanilang personal na mga website.
+              description_teacher: Sa araling ito, ang mga estudyante ay unang matuto
+                kung paano magtukoy ng mga custom na kulay gamit ang kanilang RGB
+                (red, green, blue) na mga halaga. Pagkatapos, sila ay gagamit sa mga
+                kulay na ito sa isang bagong Four Seasons na pahina sa web, kung saan
+                gumagamit ng mga CSS na class. Ang mga CSS na class ay nagbibigay
+                daan sa mga web developer para tratohin ang mga grupo ng mga elemento
+                na gusto nilang malagyan ng ibang istilo kaysa sa ibang mga elemento
+                na pareho ang tipo. Gamit ang mga class, ang mga estudyante ay magdadagdag
+                ng iba pang istilo sa Four Seasons na pahina ng web, pagkatapos ay
+                gagamitin ang mga ito para lagyan ng istilo ang kanilang personal
+                na mga website.
+            Project - Personal Portfolio Website:
+              name: Proyekto - Personal na Portfolio na Website
+              description_student: Sa huling iilang mga araw sa yunit, ang klase ay
+                magtatapos sa kanilang mga personal na website, nagtatrabaho kasama
+                ang kanilang mga kasamahan para makakuha ng feedback, pagrepasu sa
+                rubric, at paglagay nang panghuling mga detalye sa site. Para tapusin
+                ang yunit, ang lahat ay magbabahagi sa kanilang mga proyekto at kung
+                paano nila ito nagawa.
+              description_teacher: "Ang mga estudyante ay gumugol ng maraming oras
+                sa buong yunit sa pagtatrabaho ng kanilang Personal na Website. Sa
+                huling ilang mga araw, ang mga estudyante ay magtatapos sa kanilang
+                mga website. Sila ay magtatrabaho kasama ang kanilang mga kasamahan
+                para makakuha ng feedback, maglalagay ng mga panghuling detalye sa
+                mga website, pagrerepasu sa rubrik at mag-isip tungkol sa kanilang
+                proseso. Para tapusin ang yunit, sila ay magbabahagi ng kanilang mga
+                proyekto at pati na rin ang isang pangkalahatang ideya sa proseso
+                na ginawa nila para makuha ang pangwakas na disenyo.\r\n"
+            Intellectual Property:
+              name: Intelektwal na Pag-aari
+            Images:
+              name: Mga Larawan
+        csd3-pilot:
+          description_short: " Matutong mag-program ng mga animasyon, inter-aktib
+            na sining, at mga laro sa Game Lab."
+          stages:
+            Programming for Entertainment:
+              name: Pag-program para sa Libangan
+              description_student: Ang klase ay hinihikayat na isaalang-alang ang
+                mga "problema" ng pagkainip at pagpapahayag sa sarili, at para pag-isipan
+                kung paano nila haharapin ang ganoong mga problema sa kanilang sariling
+                buhay. Mula doon, sila ay tutuklas kung paano ang Computer Sciece
+                sa pangkalahatag, at lalo na sa pagprogram, may ginagampanan na papel
+                sa tiyak na uri ng paglilibang o bilang isang sasakyan sa pagpapahayag
+                ng sarili.
+              description_teacher: Ang mga estudyante ay hinihikayat ng isaalang-alang
+                ang mga "problema" sa pagkainip at pagpapahayag sa sarili, at para
+                pag-isipan kung paano nila harapin ang ganoong mga problema sa kanilang
+                sariling buhat. Mula doon, ang mga estudyante ay tutuklas kung paano
+                ang Computer Science sa pangkalahatan, at lalo na sa pag-program,
+                may ginagampanan na papel sa tiyak na uri ng paglilibang o isang sasakyan
+                para sa pagpapahayag sa sarli.
+            Plotting Shapes:
+              name: Pag-plot ng mga Hugis
+              description_student: Ang mga estudyante ay tutuklas sa mga hamon sa
+                pakikipag-usap kung paano guguhit ng mga hugis at gumamit ng mga kagamitan
+                na nagpapakilala kung paano harapin ang problemang ito sa Game Lab.
+                Ang isang pagpapainit na gawain ay madaling nagpapakita sa mga hamon
+                sa pakikipag-usap sa posisyon na walang iilang mga nakabahaging punto
+                ng pagbabatayan. Sa pangunahing gawain, ang mga estudyante ay tutuklas
+                sa Game Lab na kagamitan na nagbibigay ng paraan sa mga estudyante
+                na inter-aktibong maglagay ng mga hugis sa 400 x 400 na grid ng Game
+                Lab. Pagkatapos sila ay maghalinhinan sa pagbigay ng instruksyon sa
+                kanilang kasama kung paano gumuhit ng nakatagong larawan gamit ang
+                kagamitang ito, binibigyang diin ang mga maraming pagsubok na haharapin
+                ng mga estudyante habang nag-program sa Game Lab. Ang mga estudyante
+                ay pwede makalikha ng kanilang sariling larawan para makipag-usap
+                bago ang isang debrief na diskusyon.
+              description_teacher: Ang mga estudyante ay tutuklas sa mga hamon sa
+                pakikipag-usap kung paano guguhit ng mga hugis at gumamit ng mga kagamitan
+                na nagpapakilala kung paano harapin ang problemang ito sa Game Lab.
+                Ang isang pagpapainit na gawain ay madaling nagpapakita sa mga hamon
+                sa pakikipag-usap sa posisyon na walang iilang mga nakabahaging punto
+                ng pagbabatayan. Sa pangunahing gawain, ang mga estudyante ay tutuklas
+                sa Game Lab na kagamitan na nagbibigay ng paraan sa mga estudyante
+                na inter-aktibong maglagay ng mga hugis sa 400 x 400 na grid ng Game
+                Lab. Pagkatapos sila ay maghalinhinan sa pagbigay ng instruksyon sa
+                kanilang kasama kung paano gumuhit ng nakatagong larawan gamit ang
+                kagamitang ito, binibigyang diin ang mga maraming pagsubok na haharapin
+                ng mga estudyante habang nag-program sa Game Lab. Ang mga estudyante
+                ay pwede makalikha ng kanilang sariling larawan para makipag-usap
+                bago ang isang debrief na diskusyon.
+            Drawing in Game Lab:
+              name: Pagguhit sa Game Lab
+              description_student: Ang klase ay ipapakilala sa Game Lab, isang kapaligiran
+                sa pag-program para sa yunit na ito, at magsisimulang gumanit nito
+                para maposisyon ang mga hugis sa screen. Ang mga aralin ay bumubuo
+                sa mga pangunahing kaalaman sa pagsunod-sunod at pagdedebug, pati
+                na rin ang iilang simpleng mga utos. Sa pagtatapos ng aralin, ang
+                klase ay lilikha ng isang online na bersyon ng larawan na dinisenyo
+                nila sa nakaraang aralin.
+              description_teacher: Ang mga estudyante ay ipapakilala sa Game Lab,
+                ang pang-program na kapaligiran para sa yunit na ito, at magsimulang
+                gamitin ito para iposisyon ang mga hugis sa screen. Matutunan nila
+                ang mga pangunahing konsepto sa pagsunod-sunod at pagdedebug, pati
+                na rin ang iilang mga simpleng mga utos. Sa bandang huli ng aralin,
+                ang mga estudyante ay makaka-program sa mga larawan gaya ng ginawa
+                nila sa pangdrowing na kagamitan sa nakaraang aralin.
+            Shapes and Randomization:
+              name: Mga Hugis at Randomisasyon
+            Variables:
+              name: Mga variable
+              description_student: Ang araling ito ay nagpapakilala sa mga variable
+                bilang paraan para malagyan ng marka ang isang numero sa loob ng program
+                o para mag-save ng random na nabuong halaga. Ang klase ay magsisimula
+                sa aralin gamit ang pinakasimpleng paglalarawan sa layunin ng isang
+                variable at ang mga gawain sa paggamit ng mga bagong bloke. Pagkatapos,
+                ang klase ay gagamit ng mga variable para mag-save ng isang random
+                na numero, na nagpapahintulot sa programa na gumamit sa parehong random
+                na numero nang maraming beses.
+              description_teacher: Sa araling ito, ang mga estudyante ay matututo
+                kung paano gumamit ng mga variables para mamarkahan ang isang numero
+                sa kanilang programa o mag-save ng isang random na nalikhang halaga.
+                Ang mga estudyante ay magsisimula sa pinakasimpleng paglalarawan sa
+                layunin ng isang variable. Ang mga estudyante ay kukumpleto sa isang
+                antas na progresyon na nagpapatibay sa modelo ng isang variable bilang
+                paraan sa pagmarka o pagbigay ng pangalan sa isang numero. Ang mga
+                estudyante ay gagamit ng mga variables para mag-save ng random na
+                numero para makita na ang mga variables ay talagang nag-store at nag-save
+                ng kanilang mga halaga, na nagbibigay-daan sa kanila na gamitin ang
+                parehong random na numero nang maraming beses sa kanilang mga programa.
+            Sprites:
+              name: Mga Sprites
+              description_student: Upang makalikha ng mas kawili-wili at detalyadong
+                mga larawan, ang klase ay ipapakilala sa sprite na object. Bawat sprite
+                ay maaaring lagyan ng larawan na ipapakita, at ang sprite ay magsusubaybay
+                din sa mga maraming halaga tungkol sa sarili nito, kung saan magpapatunay
+                sa kahalagahan nito sa landas ng paggawa ng mga animasyon. Sa dulo
+                ng araling ito, ang lahat ay lilikha ng isang tagpo gamit ang mga
+                sprite.
+              description_teacher: Para makalikha ng mas kawili-wili at detalyadong
+                mga larawan, ang mga estudyante ay ipapakilala sa mga sprite object.
+                Bawat sprite ay maaaring lagyan ng larawan na ipapakita, at ang mga
+                sprite ay magsusubaybay din sa mga maraming halaga tungkol sa sarili
+                nito, kung saan magpapatunay na mahalaga sa landas ng paglikha ng
+                mga animasyon.
+            The Draw Loop:
+              name: Ang Draw na Loop
+              description_student: Ang araling ito ay nagpapakilala sa draw na loop,
+                isa sa pinakapusod ng pag-program na pananaw sa Game Lab. Ang klase
+                ay maghahalo sa draw na loop sa mga random na numero para manipulahin
+                ang iilang mga simpleng animasyon na may mga dot at pagkatapos sa
+                mga sprites naman.  Pagkatapos, ang lahat ay gagamit sa natutonan
+                nila para ma-update ang eksena ng sprite mula sa nakaraang aralin.
+              description_teacher: Sa araling ito, ang mga estudyante ay ipapakilala
+                sa draw na loop, isa sa pinakasentro ng pang-program na pananaw sa
+                Game Lab. Para masimulan ang aralin, ang mga estudyante ay titingin
+                sa iilang pisikal na mga flipbooks para makita na ang pagkaroon ng
+                maraming mga frame na may iba't ibang larawan ay lilikha ng impresyon
+                ng paggalaw. Ang mga estudyante ay manonood ng isang video na nagpapaliwanag
+                kung paano ang draw loop nakakatulong sa Game Lab na maglikha ng parehang
+                impresyon sa kanilang mga programa. Ang mga estudyante ay magsama-sama
+                sa mga draw loop na may mga random na numero para imanipula ang ilang
+                mga simpleng mga animasyon na mga dot at pagkatapos ang mga may sprites
+                naman. Sa huli ng aralin, ang mga estudyante ay gagamit sa mga natutunan
+                nila para ma-update ang eksena ng kanilang sprite mula sa nakaraang
+                aralin.
+            The Counter Pattern Unplugged:
+              name: Ang Counter na Patter na Naka-Unplugged
+              description_student: Ang unplugged na araling ito ay nagtutuklas sa
+                mga pangunahing gawi ng mga variable. Ang paggamit ng mga notecard
+                at string para ma-simulate ang mga variables sa loob ng programa,
+                ang klase ay gagawa ng iilang malilit na mga programa. Kapag komportable
+                na sila sa sintaks na ito, ang klase ay gagamit ng parehong proseso
+                sa mga katangian ng sprite, pagsubaybay ng pag-unlad ng sprite patawid
+                sa screen.
+              description_teacher: Ang mga estudyante ay tutuklas sa mga pangunahin
+                gawi ng mga variable sa pamamagitan ng isang unplugged na gawain.
+                Gamit ang mga notecards at string para mai-simulate ang mga variables
+                sa loob ng programa, ang mga estudyante ay makakagaw ng iilang maikling
+                mga programa. Kapag komportable na sa sintaks na ito, ang mga estudyante
+                ay gagamin ng parehong proseso sa mga katangian ng sprites, pagsubaybay
+                ng pag-unlad ng sprite sa pagtawid sa screen.
+            Sprite Movement:
+              name: Galaw ng mga Sprite
+              description_student: Sa pamamagitan ng paghalo ng Draw Loop at nang
+                Counter Pattern, ang klase ay magsusulat ng mga programa na magpapagalaw
+                sa mga sprite sa paligid ng screen, pati na rin ang pag-animate ng
+                ibang mga katangian ng sprite.
+              description_teacher: Sa pamamagitan ng paghalo ng Draw Loop at nang
+                Counter Pattern, ang mga estudyante ay makakasulat ng mga programa
+                na magpapagalaw sa mga sprite sa kabila ng screen, pati na rin ang
+                pag-animate ng ibang mga katangian ng sprite.
+            Booleans Unplugged:
+              name: Mga Booleans na Unplugged
+              description_student: Ang araling ito ay nagpapakilala sa mga boolean
+                na mga halaga at lohika, pati na rin ang kondisyonal na mga pahayag.
+                Ang klase ay magsisimula sa pamamagitan ng paglaro ng isang simpleng
+                laro ng Pagtayo, Pag-upo kung saan ang boolean (true/false) na mga
+                pahayag ay naglalarawan ng mga personal na katangian (kulay ng buhok
+                o mate, tipo ng pananamit, edad, atbp). Pagkatapos ang klase ay gagawa
+                ng grupo ng mga object ayon mas lalong naging kumplikado na mga boolean
+                na pahayag, at titingin kung paano ang mga kondisyonal nakakaepekto
+                sa daloy ng programa.
+              description_teacher: |-
+                Sa araling ito, ang estudyante ay ipapakilala sa mga boolean na halaga at lohika, pati na rin ang mga kondisyonal na mga pahayag. Ang klase ay magsisimula sa paglalaro ng isang simpleng Pagtayo, Pag-upo kung saan ang mga boolean (true/false) na mga pahayag ay naglalarawan ng mga personal na katangian (kulay ng buhok o mata, tipo ng pananamit, edad, atbp). Ito ay nagpapaisip sa mga estudyante kung paano nila ikuwadro ang isang katangian na may maraming mga halaga na pwedeng gamitin (gaya ng edad) gamit ang mga binary na katanungan.
+
+                Mula doon, ang mga estudyante ay bibigyan ng isang grupo ng mga bagay na may kapareho, ngunit may iba't ibang, mga pisikal na mga katangian. Kasama ang isang kasamahan, sila ay maggrugrupo sa mga object na iyon ayon sa mas lalong naging kumplikado na mga boolean na pahayag, kasama na ang compound na mga boolean gamit ang AND at OR.
+
+                Sa huli, ating ipapakita ang mga Kondisyonal bilang isang kagamitan para makagawa ng mga desisyon o epekto sa daloy ng programa gamit ang mga boolean na pahayang bilang input.
+            Conditionals:
+              name: Mga conditional
+              description_student: Ang klase ay magsisimula sa pamamagitan ng paggamit
+                ng mga boolean para maihambing ang kasalukuyang halaga ng isang katangian
+                ng sprite sa isang nakatakdang halaga, ang paggamit sa paghahambing
+                na ito para malaman kung ang sprite ay nakarating na sa isang punto
+                sa screen, lumaki na sa nakatakdang laki, o kung nakaabot na sa isang
+                halaga gamit ang counter na pattern. Pagkatapos ang direktang paggamit
+                ng mga boolean para imbestigahan ang mga halaga o ang mga katangian
+                ng sprite, ang klase ay magdadagdag ng kondisyonal na mga if na pahayag
+                para makasulat ng code na tumutugon sa mga boolean na paghahambing
+                na iyon.
+              description_teacher: Ang mga estudyante ay magsisimula sa pamamagitan
+                ng paggamit ng mga boolean para maihambing ang kasalukuyang halaga
+                ng isang katangian ng sprite sa isang nakatakdang halaga, ang paggamit
+                sa paghahambing na ito para malaman kung ang sprite ay nakarating
+                na sa isang punto sa screen, lumaki na sa nakatakdang laki, o kung
+                nakaabot na sa isang halaga gamit ang counter na pattern. Pagkatapos
+                nang direktang paggamit ng mga boolean para imbestigahan ang mga halaga
+                o ang mga katangian ng sprite, ang mga estdudyante ay magdadagdag
+                ng kondisyonal na mga _if_ na pahayag para makasulat ng code na tumutugon
+                sa mga boolean na paghahambing na iyon.
+            Keyboard Input:
+              name: Keyboard na Input
+              description_student: Ang sumunod na introduksyon sa mga boolean at sa
+                mga if na pahayag sa nakaraang aralin, ang mga estudyante ay ipapakilala
+                sa bagong bloke na tinatawag na keyDown() na nagsasauli ng isang boolean
+                at maaaring gamitin sa mga kondisyonal na mga pahayag para mapagalaw
+                ang mga sprite sa kabila ng screen. Sa bandang huli ng araling ito,
+                ang mga estudyante ay makakasulat ng mga programa na kukuha ng input
+                sa keyboard ng gumagamit para makontrol ang mga sprite na nasa screen.
+              description_teacher: Ang sumunod na introduksyon sa mga boolean at sa
+                mga _if_ na pahayag sa nakaraang aralin, ang mga estudyante ay ipapakilala
+                sa bagong bloke na tinatawag na `keyDown()` na nagsasauli ng isang
+                boolean at maaaring gamitin sa mga kondisyonal na mga pahayag para
+                mapagalaw ang mga sprite sa kabila ng screen. Sa bandang huli ng araling
+                ito, ang mga estudyante ay makakasulat ng mga programa na kukuha ng
+                input sa keyboard ng gumagamit para makontrol ang mga sprite na nasa
+                screen.
+            Other Forms of Input:
+              name: Ibang Uri ng mga Input
+              description_student: Ang klase ay magpapatuloy sa pagtuklas ng mga pamamaraan
+                para magamit ang mga kondisyonal na pahayag para kumuha ng input ng
+                gumagamit. Bukod pa sa simpleng keyDown() na kautusan na natutunan
+                natin kahapon, ang klase ay natututo tungkol sa iilang ibang mga kautusan
+                sa input ng keyboard, pati na rin ang iilang pamamaraan para makakuha
+                ng input galing sa mouse.
+              description_teacher: Sa araling ito, ang mga estudyante ay patuloy na
+                tutuklas sa mga pamamaraan ng paggamit ng mga kondisyonal na mga pahayag
+                para makakuha ng input ng gumagamit. Bukod pa sa simpleng `keyDown()`
+                na kautusan na natutunan natin kahapon, ang mga estudyante ay matututo
+                tungkol sa iilang ibang mga kautusan sa input ng keyboard, pati na
+                rin ang iilang pamamaraan para makakuha ng input galing sa mouse.
+            Project - Interactive Card:
+              name: Proyekto - Inter-aktib na Baraha
+              description_student: Sa pinagsamang proyektong ito para sa Kabanata
+                1, ang klase ay gagawa ng plano at gagawa ng isang inter-aktib na
+                greeting card gamit ang lahat ng mga pang-program na pamamaraan na
+                natutunan nila sa puntong ito.
+              description_teacher: Sa pinagsamang proyektong ito para sa Kabanata
+                1, ang mga estudyante ay gagawa ng plano at gagawa ng isang inter-aktib
+                na greeting card gamit ang lahat ng mga pang-program na pamamaraan
+                na natutunan nila sa puntong ito.
+            Velocity:
+              name: Belosidad
+              description_student: Pagkatapos ng isang maikling pagbalik-aral kung
+                paano ginamit ang counter pattern para mapagalaw ang mga sprite, ang
+                klase ay ipapakilala sa mga katangian na nagtatakda ng kaliksihan
+                at bilis ng pag-ikot nang direkta. Habang ginagamit nila ang mga bagong
+                katangian sa iba't ibang pamamaraan, mabubuo nila ang mga kakayahan
+                na kailangan nila para makalikha ng isang simpleng side scroller na
+                laro.
+              description_teacher: Pagkatapos ng isang maikling pagbalik-aral kung
+                paano ginagamit ang counter pattern para mapagalaw ang mga sprites
+                sa nakaraang aralin, ang mga estudyante ay ipapakilala sa mga katangian
+                na direktang nagtakda sa kaliksihan at bilis ng pag-ikot. Habang ginagamit
+                nila ang mga bagong katangian na ito sa iba't ibang pamamaraan, mabubuo
+                nila ang mga kakayahan na kakailanganin nila para makalikha ng isang
+                pangunahing side scroller na laro.
+            Collision Detection:
+              name: Pagtukoy sa mga Banggaan
+              description_student: Ang klase ay matututo tungkol sa pagtukoy ng banggaan
+                sa kompyuter. Ang pares ay tutuklas kung paano ang kompyuter maaaring
+                gumamit sa lokasyon ng sprite at mga katangian sa laki at matematika
+                para matukoy kung ang dalawang sprites ay nagkadikit. Ang klase ay
+                gagamit ng isTouching() na bloke para makalikha ng iba't ibang mga
+                effects kapag nagkabangga ang mga sprites, kalakip na ang pagpapatunog
+                ng mga tunog. Sa huli, gagamitin nila ang kanilang bagong kakayahan
+                para mapahusay ang sidescroller na laro na nasimulan nila sa nakaraan
+                aralin.
+              description_teacher: Ang mga estudyante ay matututo tungkol sa pagtukoy
+                ng mga banggan sa kompyuter. Habang nagtrabaho na may pares, sila
+                ay tutuklas kung paano ang kompyuter maaaring gunamit ng lokasyon
+                ng sprite at ang mga katangian sa laki at matematika para matukoy
+                kung ang dalawang sprites ay nagkadikit. Ang klase ay gagamit ng `isTouching()`
+                na bloke para makalikha ng iba't ibang effects kapag nagkabangga ang
+                mga sprites, kalakip na ang pagpapatunog ng mga tunog. Sa huli, gagamitin
+                nila ang kanilang mga bagong kakayahan para mapahusay ang sidescroller
+                na laro na nasimulan nila sa nakaraang aralin.
+            Complex Sprite Movement:
+              name: Kumplikadong Sprite na Kilusan
+              description_student: 'Ang klase ay matututong magsamasama sa kaliksihan
+                na mga katangian ng sprites sa mga counter pattern para makalikha
+                ng mas kumplikadong galaw ng sprite, gaya ng pag-simulate sa gravity,
+                paggawa ng talon sa sprite, at pagbigay-daan sa sprite na lilitaw
+                sa kaliwa o sa kanan. Sa huling mga antas, ang klase ay magsama-sama
+                sa mga galaw na mga ito para ma-animate at makontrol ang isang sprite
+                at makabuo ng isang simpleng laro kung saan ang karakter ay lumilipad
+                sa paligid at nangongolekta ng mga barya. '
+              description_teacher: Ang mga estudyante ay matututo kung paano magsama-sama
+                ng kaliksihan na mga katangian ng sprites kasama ang mga tagabilang
+                ng mga pattern para makalikha ng mas kumplikadong mga galaw ng sprite.
+                Lalo na ang mga estudyante ay matututo kung paano mag-simulate ng
+                gravity, patalonin ang sprite, at payagan ang sprite na lumitaw pakaliwa
+                o pakanan. Sa huling mga anyas ng pag-usad ng Code Studio, ang mga
+                estudyante ay maghalo-halo sa mga galaw na ito para maanimate at makontrol
+                ang isang sprite at bumuo ng isang simpleng laro kung saan ang mga
+                character ay lumilipad sa paligid at nagkokolekta ng mga barya. Ang
+                mga estudyante ay hinihikayat na gumawa na kanilang sariling pangdagdag
+                sa laro sa huling antas.
+            Collisions:
+              name: Mga Banggaan
+              description_student: Ang klase ay mag-program ng kanilang mga sprite
+                para makipag-ugnayan sa mga bagong pamamaraan. Pagkatapos ng mailing
+                pagbabalik-aral kung paano nila ginamit ang isTouching na bloke, ang
+                klase ay mag-iisip ng ibang mga paraan na ang dalawang mga sprite
+                ay maaaring makipag-ugnayan. Pagkatapos ay gagamitin nila ang isTouching
+                para mapagawa ang isang sprite na magtulak sa isa sa kabila ng screen
+                bago magsasanay sa apat na mga collision na mga bloke (collide, displace,
+                bounce, at bounceOff).
+              description_teacher: Ang mga estudyante ay mag-program ng kanilang mga
+                sprite para makipag-ugnayan sa mga bagong pamamaraan. Pagkatapos ng
+                mailing pagbabalik-aral kung paano nila ginamit ang `isTouching` na
+                bloke, ang klase ay mag-iisip ng ibang mga paraan na ang dalawang
+                mga sprite ay maaaring makipag-ugnayan. Pagkatapos ay gagamitin nila
+                ang `isTouching` para mapagawa ang isang sprite na magtulak sa isa
+                sa kabila ng screen bago magsasanay sa apat na mga collision na mga
+                bloke (`collide`,`displace`, `bounce`, at `bounceOff`).
+            Functions:
+              name: Mga function
+              description_student: Ang aralin na ito ay sumasaklaw sa mga function
+                bilang isang paraan para maayos ang kanilang mga code, magawa itong
+                madaling mabasa, at matanggal ang mga inuulit na mga bloke ng code.
+                Ang klase ay matututo na ang mataas na antas o mas linalahat na mga
+                hakbang ang nagpapadali na maintindihan at mangatwiran tungkol sa
+                mga hakbang, pagkatapos ay magsimulang lumikha ng mga functions sa
+                Game Lab. Sa bandang huli ng aralin, ang klase ay gagamit sa mga kakayahang
+                ito para makatatag at makadagdag ng functionality sa huling bersyon
+                ng kanilang side scroller na laro.
+              description_teacher: Ang mga estudyante ay matututo kung pano lumikha
+                ng mga functions para maayos ang kanilang code, gawin itong mas madaling
+                mabasa, at matanggal ang mga inuulit na mga bloke ng code. Ang isang
+                unplugged na pangpapainit ang nagtutuklas kung paano ang mga direksyon
+                sa iba't ibang mga antas ng detalye ang maaaring nakakatulong depende
+                sa konteksto. Ang mga estudyante ay matututo na ang mataas na antas
+                o mas nilalahat na mga hakbang ang nagpapadaling maintindihan at mangatwiran
+                sa mga hakbang. Pagkatapos ang estudyante ay matututong lumikha ng
+                mga functionsa Game Lab. Sila ay gagamit ng mga function para magtanggal
+                ng mga mataas na mga bloke ng code mula sa kanilang draw loop at para
+                palitan ang mga paulit-ulit na mga piraso ng code sa isang function.
+                Sa huli ng aralin, ang mga estudyante ay gagamit sa mga kakayahang
+                ito para mag-ayos at magdagdag ng functionality sa huling bersyon
+                ng kanilang side scroller na laro.
+            The Game Design Process:
+              name: Ang Proseso ng Pagdisenyo ng Laro
+              description_student: Ang araling ito ay nagpapakilala sa proseso na
+                gagamitin ng klase para magdisenyo ng mga laro sa natitirang mga oras
+                sa yunit. Ang klase ay dadaanan ang mga prosesong ito sa isang serye
+                ng mga antas. Bilang bahagi ng mga aralin, ang klase ay matututo ding
+                gumamit na mga multi-frame na mga animasyon sa Game lab. Sa huli ng
+                aralin, sila ay magkakaroon ng oportunidad na makagawa ng mga pagbabago
+                sa laro para magawa nila itong sarili nila.
+              description_teacher: Ang araling ito ay nagpapakila sa mga estudyante
+                sa proseso na gagamitin nila pra magdisenyo ng mga laro para sa natitirang
+                oras ng yunit. Ang prosesong ito ay nakasentro sa isang gabay ng proyekto
+                na nagtatanong sa mga estudyante na magbigay kahulugan sa kanilang
+                mga sprites, mga variables, at mga functions bago sila magsimulang
+                mag-program ng kanilang laro. Sa araling ito, ang mga estudyante ay
+                magsisimula sa pamamagitan ng paglaro ng isang laro sa Game Lab kung
+                saan ang code ay nakatago. Sila ay magtatalakay kung ano ang naisip
+                nila tungkol sa mga sprites, mga variables, at mga functions na kakailanganin
+                para makagawa ng laro. Pagkatapos sila ay bibigyan ng isang kompletong
+                gabay ng proyekto na nagpapakita sa isang paraan para gawin ang laro.
+                Ang mga estudyante ay gagabayan sa prosesong ito sa pamamagitang ng
+                isang serye ng mga antas. Bilang bahagi ng araling ito, ang mga mag-aaral
+                ay matututo agad na gumamit ng multi-frame na mga animasyon sa Game
+                Lab. Sa bandang huli ng araling, ang mga estudyante ay magkakaroon
+                ng pagkakataon na makagawa ng mga pagbabago sa laro para magawa itong
+                sarili nila.
+            Using the Game Design Process:
+              name: Gamitin ang Proseso ng Pagdisenyo ng Laro
+              description_student: Sa multi-day na araling ito, ang klase ay gagamit
+                ng proseso sa paglutas ng problema mula sa Yunit 1 para makalikha
+                ng isang laro na pagtalon sa plataporma. Pagkatapos tingnan ang isang
+                halimbawang laro, ang klase ay maglalarawan kung ano ang hitsura ng
+                kanilang mga laro at gumagamit ng maayos na proseso para malikha ang
+                mga ito. Sa huli, ang klase ay mag-iisip kung paano mapahusay ang
+                mga laro at kung paano gamit ang mga pagbabagong iyon.
+              description_teacher: Sa multi-day day na araling ito, ang mga estudyante
+                ay gagamit ng proseso sa paglutas ng problema mula sa Yunit 1 para
+                makalikha ng isang laro na pagtalon sa plataporma. Sila ay magisimula
+                sa pagtingin ng isang halimbawa ng tagatalon sa plataporma, pagkatapos
+                ay maglalarawan kung ano ang hitsura ng kanilang mga laro. Sa sunod,
+                gagamit sila ng isang maayos na proseso para magplano ng mga background,
+                mga variable, mga sprite, at mga functions na kakailanganin nila para
+                mabuo ang laro. Pagkatapos magsulat ng code para sa laro, ang mga
+                estudyante ay mag-iisip kung paano nila mapahusay ang laro, at kung
+                paano gawin ang mga pagbabagong iyon.
+            Project - Design a Game:
+              name: Proyekto - Pagdisenyo ng Laro
+              description_student: Ang klase ay gagawa ng plano at bubuo ng mga orihinal
+                na laro gamit ang gabay ng proyekto mula sa nakaraang dalawang aralin.
+                Habang nagtatrabaho ng isa o may kasama, ang klase ay magpaplano,
+                magde-develop, at magbigay ng puna sa mga laro. Pagkatapos ilakip
+                ang puna ng mga kasamahan, ang klase ay magbabahagi sa nakompletong
+                mga laro.
+              description_teacher: Ang mga estudyante ay magpaplano at bubuo ng kanilang
+                sariling laro gamit ang gabay ng proyekto mula sa nakaraang dalawang
+                aralin para gabayan sila sa kanilang proyekto. Habang nagtatrabaho
+                nang mag-isa o may kasama, ang mga estudyante ay unang magdesisyon
+                kung anong uri ng laro ang gusto nilang gawin, habang kumukuha ng
+                inspirasyon sa isang grupo ng mga halimbawang mga laro. Sila ay kukumpleto
+                sa isang blankong gabay sa proyekto kung saan ilalarawan nila ang
+                paggalaw ng laro at ihanda ang mga variables, mga sprites, at mga
+                functions na kailangan nilang gawin. Sa Code Studio, isang serye ng
+                mga antas ay nag-prompt sa kanila sa isang pangkalahatang pagkasunod-sunod
+                na maaari nilang gamitin para ipatupad ang planong ito. Sa kalagitnaan
+                ng proseso, ang mga estudyante ay magbabahagi sa kanilang mga proyekto
+                para repasuhin ng mga kasamahan at kanilang isama ang mga puna habang
+                tinatapos nila ang kanilang laro. Sa bandang huli ng aralin, ang mga
+                estudyante ay magbabahagi ng kanilang nakumpletong mga laro sa kanilang
+                mga kamag-aral. Ang proyektong ito ay tatagal ng ilang klase at maaring
+                aabot kahit saan hanggang sa 3-5 na oras ng klase.
+        maddie-test:
+          stages:
+            new stage:
+              name: bagong yugto

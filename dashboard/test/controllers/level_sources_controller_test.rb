@@ -120,7 +120,7 @@ class LevelSourcesControllerTest < ActionController::TestCase
   end
 
   def expect_s3_upload
-    CDO.disable_s3_image_uploads = false
+    CDO.stubs(disable_s3_image_uploads: false)
     AWS::S3.expects(:upload_to_bucket).returns(true).twice
   end
 

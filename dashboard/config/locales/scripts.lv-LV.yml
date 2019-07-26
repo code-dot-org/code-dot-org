@@ -1375,3 +1375,17 @@ lv:
           stages:
             Graph Paper Programming:
               name: Rūtiņpapīra programmēšana
+        csd2-pilot:
+          stages:
+            Lists:
+              name: Saraksti
+        csd3-pilot:
+          stages:
+            Variables:
+              name: Mainīgie
+            Conditionals:
+              name: Sazarojumi
+            Velocity:
+              name: Ātrums
+            Functions:
+              name: Funkcijas

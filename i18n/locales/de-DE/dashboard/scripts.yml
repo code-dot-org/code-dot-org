@@ -280,6 +280,8 @@ de:
               name: Sam die Fledermaus
             'Play Lab: Collision Detection (Big Game)':
               name: Das große Spiel - Kollisionserkennung
+            'Play Lab: Defining Functions':
+              name: Höhe der Rakete
             'Play Lab: Defining Variables (Big Game)':
               name: Das große Spiel - Variablen
             'Unplugged: Booleans':
@@ -458,8 +460,12 @@ de:
               name: Formatierten Text senden
             Sending Numbers:
               name: Zahlen senden
+            Text Compression:
+              name: Text-Kompression
         algebraPD:
           stages:
+            Course Overview:
+              name: Kursübersicht
             Evaluation Blocks:
               name: Auswertungsbausteine
             Teacher Dashboard:
@@ -476,6 +482,13 @@ de:
               name: Sam die Fledermaus
             Strings and Images:
               name: Zeichenfolgen und Bilder
+            Your Game - Animation:
+              name: Dein Spiel - Animation
+        text-compression:
+          title: Text-Kompression
+          stages:
+            Text Compression:
+              name: Text-Kompression
         CSPLessonSamples:
           stages:
             Lesson 14:
@@ -484,15 +497,23 @@ de:
               name: Lektion 15
         sciencePD:
           stages:
+            Introduction to StarLogo Nova:
+              name: Einführung in StarLogo Nova
             The Tutorial:
               name: Das Tutorial
             What to Expect:
               name: Was Sie erwartet
+        rbo-reference:
+          stages:
+            reference:
+              name: Referenz
         cspunit3:
           description_short: Programmierung
           stages:
             Creating Functions:
               name: Funktionen erstellen
+            Creating functions with Parameters:
+              name: Funktionen mit Parametern erstellen
             Events Unplugged:
               name: Offline-Events
             Introduction to Arrays:
@@ -505,6 +526,8 @@ de:
               name: Solange-Schleifen
         algebraPD3:
           stages:
+            Course Overview:
+              name: Kursübersicht
             Evaluation Blocks:
               name: Auswertungsbausteine
             Next Steps:
@@ -519,24 +542,32 @@ de:
               name: Das Design-Rezept
         algebraPD-NexTech:
           stages:
+            Course Overview:
+              name: Kursübersicht
             Evaluation Blocks:
               name: Auswertungsbausteine
             Teacher Dashboard:
               name: Lehrer-Dashboard
         algebraPD-iZone:
           stages:
+            Course Overview:
+              name: Kursübersicht
             Evaluation Blocks:
               name: Auswertungsbausteine
             Teacher Dashboard:
               name: Lehrer-Dashboard
         sciencePD-NexTech:
           stages:
+            Introduction to StarLogo Nova:
+              name: Einführung in StarLogo Nova
             The Tutorial:
               name: Das Tutorial
             What to Expect:
               name: Was Sie erwartet
         sciencePD-iZone:
           stages:
+            Introduction to StarLogo Nova:
+              name: Einführung in StarLogo Nova
             The Tutorial:
               name: Das Tutorial
             What to Expect:
@@ -552,6 +583,8 @@ de:
         cspunit2:
           description_short: Programmierung
           stages:
+            Algorithms Detour - How Routers Learn:
+              name: Wie Router lernen
             The Internet:
               name: Das Internet ist für alle da
         algebraPD2a:
@@ -576,14 +609,22 @@ de:
               name: Das Design-Rezept
         allthethings:
           stages:
+            Anonymous student survey:
+              name: Anonyme Studentenumfrage
+            AppLab:
+              name: AppLab
             Artist:
               name: Künstler
             Bee:
               name: Biene
             Bounce:
               name: Bounce
+            Farmer:
+              name: Bauer
             Flappy:
               name: Flappy
+            Gamelab:
+              name: Spielelabor
             Jigsaw:
               name: Puzzle
             Match:
@@ -594,18 +635,26 @@ de:
               name: Minecraft
             Multi:
               name: Multi
+            Star wars:
+              name: Star wars
             Studio:
               name: Studio
+            Text Compression:
+              name: Text-Kompression
             Web Lab:
               name: Web Lab
             Standalone video:
               name: Video
+            Mini Rubric:
+              name: Mini Rubrik
         algebraPD2b:
           description: 'Phase 2 Online: Gemischtes Sommerstudium'
           description_short: 'Phase 2 Online: Gemischtes Sommerstudium'
           stages:
             Booleans:
               name: Boolesche Werte
+            Course Overview:
+              name: Kursübersicht
             Defining Functions:
               name: Funktionen definieren
             Defining Variables:
@@ -634,8 +683,14 @@ de:
           stages:
             Computer Science Fundamentals:
               name: Informatik Grundlagen
+            Getting Started:
+              name: Erste Schritte
+            Looking Ahead:
+              name: Nach vorne schauen
             Next Steps:
               name: Nächste Schritte
+            Planning:
+              name: Planung
         ECSPD2:
           description: 'Phase 2 Online: Gemischtes Sommerstudium'
           description_short: 'Phase 2 Online: Gemischtes Sommerstudium'
@@ -650,12 +705,18 @@ de:
               name: Willkommen!
             Wrap-up:
               name: Zusammenfassung
+        equityPD:
+          stages:
+            Necessary Background:
+              name: Erforderlicher Hintergrund
         algebraPD2:
           description: 'Phase 2 Online: Gemischtes Sommerstudium'
           description_short: 'Phase 2 Online: Gemischtes Sommerstudium'
           stages:
             Teacher Dashboard:
               name: Lehrer-Dashboard
+            Teaching with Puzzles:
+              name: Lernen mit Puzzeln
             The Design Recipe:
               name: Das Design-Rezept
             Welcome!:
@@ -668,6 +729,10 @@ de:
               name: Willkommen!
             Wrap-Up:
               name: Zusammenfassung
+        equity-pd:
+          stages:
+            Necessary Background:
+              name: Erforderlicher Hintergrund
         science-PD2:
           description: 'Phase 2 Online: Gemischtes Sommerstudium'
           description_short: 'Phase 2 Online: Gemischtes Sommerstudium'
@@ -678,6 +743,8 @@ de:
               name: Zusammenfassung
         Equity-OnlinePD:
           stages:
+            Getting Started:
+              name: Erste Schritte
             Next Steps:
               name: Nächste Schritte
         sciencePD2b-iZone:
@@ -716,6 +783,10 @@ de:
               name: Willkommen!
             Wrap-up:
               name: Zusammenfassung
+        CSPPD2:
+          stages:
+            Getting Started:
+              name: Erste Schritte
         asUnplugged:
           stages:
             Binary Bracelets:
@@ -736,16 +807,101 @@ de:
               name: Songschreiben
             The Big Event:
               name: Der große Event
+        ECSPD3-Unit2:
+          stages:
+            Getting Started:
+              name: Erste Schritte
+            Intro to Unit 2:
+              name: Einführung in Einheit 2
+            Lesson Overviews:
+              name: Unterrichtsübersicht
+            Unit 2 Challenge:
+              name: Einheit 2 - Herausforderung
+        ECSPD3-Unit3:
+          stages:
+            Getting Started:
+              name: Erste Schritte
+            Intro to Unit 3:
+              name: Einführung in Einheit 3
+            Unit 3 Challenge:
+              name: Einheit 3 - Herausforderung
+            Unit 3 Day-by-Day:
+              name: Einheit 3 - Tag für Tag
+        ECSPD3-Unit4:
+          stages:
+            Getting Started:
+              name: Erste Schritte
+            Intro to Unit 4:
+              name: Einführung in Einheit 4
+            Unit 4 Challenge:
+              name: Einheit 4 - Herausforderung
+            Unit 4 Day-by-Day:
+              name: Einheit 4 - Tag für Tag
+        ECSPD3-Unit5:
+          stages:
+            Complete the Challenge:
+              name: Herausforderung abschließen
+            Getting Started:
+              name: Erste Schritte
+            Introduction to the Unit 5 Challenge:
+              name: Einführung in die Herausforderung von Einheit 5
+            Share out and Submit:
+              name: Teilen und Absenden
+            Unit 5 Overview:
+              name: Einheit 5 - Übersicht
+            Unit 5 lessons:
+              name: Einheit 5 - Unterricht
+        ECSPD3-Unit6:
+          stages:
+            Alternative Ideas for Unit 6:
+              name: Andere Ideen für Einheit 6
+            Getting Started:
+              name: Erste Schritte
+            Share out and Submit:
+              name: Teilen und Absenden
+            Unit 6 Challenge:
+              name: Einheit 6 - Herausforderung
+            Unit 6 Overview:
+              name: Einheit 6 - Übersicht
+            Unit 6 lessons:
+              name: Einheit 6 - Unterricht
+        cspunit4draft:
+          stages:
+            Check Your Assumptions:
+              name: Prüfe deine Voraussetzungen
+            Creating Javascript Objects:
+              name: Javascript Objekte erstellen
+            Creating Summary Tables:
+              name: Zusammenfassungstabellen erstellen
         ScienceP3OLPT2:
           stages:
             Welcome!:
               name: Willkommen!
             Wrap-Up:
               name: Zusammenfassung
+        algebraPD3b:
+          stages:
+            Close and Next Steps:
+              name: Schließen und nächste Schritte
+            Getting Started:
+              name: Erste Schritte
+        CSPPD3-Unit2:
+          stages:
+            Complete the Challenge:
+              name: Herausforderung abschließen
+            Getting Started:
+              name: Erste Schritte
+            Share out and Submit:
+              name: Teilen und Absenden
+            Unit 2 Overview:
+              name: Einheit 2 - Übersicht
         Special Fun:
           description_audience: 'Alter: 10-18'
         SpecialSeries:
           description_audience: 'Alter: 10-18'
+          stages:
+            Spring 2016:
+              name: Frühling 2016
         iceage:
           title: Ice Age Spielelabor
           description: Erstelle eine Geschichte oder ein Spiel mit dem Spielelabor!
@@ -753,6 +909,14 @@ de:
           stages:
             Ice Age Play Lab:
               name: Ice Age Spielelabor
+        CSPPD3-Unit3:
+          stages:
+            Complete the Challenge:
+              name: Herausforderung abschließen
+            Getting Started:
+              name: Erste Schritte
+            Share out and Submit:
+              name: Teilen und Absenden
         cspunit3temp:
           description_short: Programmierung
           stages:
@@ -790,6 +954,12 @@ de:
           stages:
             Hour of Code 2015:
               name: Programmierstunde 2015
+        CSPPD3-Unit3-pt2:
+          stages:
+            Complete the Challenge:
+              name: Herausforderung abschließen
+            Share out and Submit:
+              name: Teilen und Absenden
         ScienceP3OLPT3:
           stages:
             Welcome!:
@@ -800,6 +970,61 @@ de:
           description_short: Programmierung
         cspunit4:
           description_short: Programmierung
+          stages:
+            Check Your Assumptions:
+              name: Prüfe deine Voraussetzungen
+            Creating Summary Tables:
+              name: Zusammenfassungstabellen erstellen
+            What is Big Data?:
+              name: Was ist Big Data?
+        CSPPD3-Unit4:
+          stages:
+            Chapter 1 Overview:
+              name: Kapitel 1 - Übersicht
+            Chapter 2 Overview:
+              name: Kapitel 2 - Übersicht
+            Complete the Challenge:
+              name: Herausforderung abschließen
+            Getting Started:
+              name: Erste Schritte
+            Share out and Submit:
+              name: Teilen und Absenden
+            Unit 4 Overview:
+              name: Einheit 4 - Übersicht
+        cspunit6draft:
+          stages:
+            Creating Javascript Objects:
+              name: Javascript Objekte erstellen
+            Deleting Records:
+              name: Datensätze löschen
+            Final Project:
+              name: Abschließende Herausforderung
+            Updating Records:
+              name: Datensätze aktualisieren
+            Visualizing Data:
+              name: Datensätze anzeigen
+        CSPPD3-Unit5:
+          stages:
+            Complete the Challenge:
+              name: Herausforderung abschließen
+            Getting Started:
+              name: Erste Schritte
+            Share out and Submit:
+              name: Teilen und Absenden
+            Unit 5 Overview:
+              name: Einheit 5 - Übersicht
+        cspunit6:
+          stages:
+            Creating Javascript Objects:
+              name: Javascript Objekte erstellen
+            Deleting Records:
+              name: Datensätze löschen
+            Final Project:
+              name: Abschließende Herausforderung
+            Updating Records:
+              name: Datensätze aktualisieren
+            Visualizing Data:
+              name: Datensätze anzeigen
         AlgebraA:
           description: Lerne funktionales Programmieren mithilfe von Algebra
           description_short: Lerne funktionales Programmieren mithilfe von Algebra
@@ -846,10 +1071,16 @@ de:
         algebraPD1:
           title: CS in Algebra Teil 1
           stages:
+            Course Overview:
+              name: Kursübersicht
             Evaluation Blocks:
               name: Auswertungsbausteine
             Teacher Dashboard:
               name: Lehrer-Dashboard
+        algebraPD3c:
+          stages:
+            Getting Started:
+              name: Erste Schritte
         csp1-2017:
           stages:
             Binary Numbers:
@@ -866,15 +1097,25 @@ de:
           stages:
             Bytes and File Sizes:
               name: Bytes und Dateigrößen
+            Check Your Assumptions:
+              name: Prüfe deine Voraussetzungen
+            Creating Summary Tables:
+              name: Zusammenfassungstabellen erstellen
+            Text Compression:
+              name: Text-Kompression
         csp3-2017:
           description_short: Programmierung
           stages:
             Creating Functions:
               name: Funktionen erstellen
+            Creating Functions with Parameters:
+              name: Funktionen mit Parametern erstellen
         csp4-2017:
           stages:
             Simple Encryption:
               name: Einfache Verschlüsselung
+            What is Big Data?:
+              name: Was ist Big Data?
         csp5-2017:
           stages:
             Events Unplugged:
@@ -887,15 +1128,23 @@ de:
               name: Schleifen und Simulationen
             While Loops:
               name: Solange-Schleifen
+            Unit 3 Assessment 3:
+              name: Einheit 3 - Herausforderung 3
+            Unit 3 Assessment 4:
+              name: Einheit 3 - Herausforderung 4
         CSDU3-Draft:
           description_short: Programmierung
           stages:
             Functions:
               name: Funktionen
+            Defender:
+              name: Verteidiger
             Velocity:
               name: Geschwindigkeit
         2016_sciencePD_phase1:
           stages:
+            Introduction to StarLogo Nova:
+              name: Einführung in StarLogo Nova
             The Tutorial:
               name: Das Tutorial
             What to Expect:
@@ -912,20 +1161,54 @@ de:
               name: Lehrer-Dashboard
         sciencePD1:
           stages:
+            Introduction to StarLogo Nova:
+              name: Einführung in StarLogo Nova
             The Tutorial:
               name: Das Tutorial
             What to Expect:
               name: Was Sie erwartet
         cspunit1-support:
           stages:
+            Chapter Overviews:
+              name: Übersicht über die Kapitel
+            Intro to the Unit:
+              name: Einführung in Einheit
             Sending Binary Messages:
               name: Binäre Nachrichten senden
         allthehiddenthings:
           stages:
             Game Lab:
               name: Spielelabor
+        cspunit1-support-test:
+          stages:
+            Unit 1 Overview:
+              name: Einheit 1 - Übersicht
+        csp-facilitators:
+          stages:
+            Introduction to Events:
+              name: Einführung in Ereignisse
+            Introduction to Text Compression:
+              name: Einführung in Textkompression
+        CSDU4-Draft:
+          stages:
+            Design Mode:
+              name: Entwurfsmodus
         CSDU2-Draft:
           stages:
+            Digital Footprint:
+              name: Digitaler Fußabdruck
+            Images on the Web:
+              name: Bilder im Web
+            Designing Web Pages:
+              name: Webseiten entwerfen
+            Holding:
+              name: Halten
+            Describing Web pages:
+              name: Webseiten beschreiben
+            Multi-Page Websites:
+              name: Webseiten mit mehreren Seiten
+            Classes:
+              name: Klassen
             Peer Review:
               name: Peer Review
         MikeTest:
@@ -948,14 +1231,24 @@ de:
               name: 'Jigsaw: Erlerne Drag und Drop'
             Loops:
               name: Schleifen
+            Loops Intro:
+              name: Einführung in Schleifen
+            Loops Unplugged:
+              name: 'Offline: Schleifen'
             Programming:
               name: Programmierung
             'Real-life Algorithms: Plant a Seed':
               name: 'Real-Life-Algorithmen: Pflanze Samen'
         grade4:
           stages:
+            Build a Star Wars Game!:
+              name: Erstelle ein Star Wars Spiel!
             Digital Citizenship:
               name: Digitalen Staatsbürgerschaft
+            Explore project ideas:
+              name: Entdecke Projektideen
+            'Farmer: Functions (New)':
+              name: 'Bauer: Funktionen (Neu)'
             Songwriting:
               name: Songschreiben
         grade1:
@@ -968,6 +1261,10 @@ de:
               name: 'Jigsaw: Erlerne Drag und Drop'
             Loops:
               name: Schleifen
+            Loops Intro:
+              name: Einführung in Schleifen
+            Loops Unplugged:
+              name: 'Offline: Schleifen'
             Programming:
               name: Programmierung
             Unspotted Bugs:
@@ -986,6 +1283,8 @@ de:
               name: 'Biene: Funktionen mit Parametern'
             Digital Citizenship:
               name: Digitalen Staatsbürgerschaft
+            Explore project ideas:
+              name: Entdecke Projektideen
             'Play Lab: Variables':
               name: 'Spielelabor: Variablen'
             'Unplugged: Envelope Variables':
@@ -1006,16 +1305,100 @@ de:
               name: Willkommen!
             Wrap-up:
               name: Zusammenfassung
+        ecs-unit2:
+          stages:
+            Getting Started:
+              name: Erste Schritte
+            Intro to Unit 2:
+              name: Einführung in Einheit 2
+            Lesson Overviews:
+              name: Unterrichtsübersicht
+            Unit 2 Challenge:
+              name: Einheit 2 - Herausforderung
+        ecs-unit3:
+          stages:
+            Getting Started:
+              name: Erste Schritte
+            Intro to Unit 3:
+              name: Einführung in Einheit 3
+            Unit 3 Challenge:
+              name: Einheit 3 - Herausforderung
+            Unit 3 Day-by-Day:
+              name: Einheit 3 - Tag für Tag
+        ecs-unit4:
+          stages:
+            Getting Started:
+              name: Erste Schritte
+            Intro to Unit 4:
+              name: Einführung in Einheit 4
+            Unit 4 Challenge:
+              name: Einheit 4 - Herausforderung
+            Unit 4 Day-by-Day:
+              name: Einheit 4 - Tag für Tag
+        ecs-unit5:
+          stages:
+            Complete the Challenge:
+              name: Herausforderung abschließen
+            Getting Started:
+              name: Erste Schritte
+            Introduction to the Unit 5 Challenge:
+              name: Einführung in die Herausforderung von Einheit 5
+            Share out and Submit:
+              name: Teilen und Absenden
+            Unit 5 Overview:
+              name: Einheit 5 - Übersicht
+            Unit 5 lessons:
+              name: Einheit 5 - Unterricht
+            Unit 5 Challenge:
+              name: Einheit 5 - Herausforderung
+        ecs-unit6:
+          stages:
+            Alternative Ideas for Unit 6:
+              name: Andere Ideen für Einheit 6
+            Getting Started:
+              name: Erste Schritte
+            Share out and Submit:
+              name: Teilen und Absenden
+            Unit 6 Challenge:
+              name: Einheit 6 - Herausforderung
+            Unit 6 Overview:
+              name: Einheit 6 - Übersicht
+            Unit 6 lessons:
+              name: Einheit 6 - Unterricht
         grade3:
           stages:
+            " Bee: Conditionals":
+              name: " Biene: Bedingungen"
             'Artist: Nested Loops':
               name: 'Künstler: Verschachtelte Schleifen'
             Bee Debugging:
               name: Biene Debuggen
             Bounce:
               name: Bounce
+            Build a Game:
+              name: Erstelle ein Spiel
             'Farmer: While Loops':
               name: 'Bauer: Solange-Schleifen'
+            'Maze: Nested Loops':
+              name: 'Labyrinth: verschachtelte Schleifen'
+        alltheplcthings:
+          stages:
+            Lesson 1,10:
+              name: Lektion 1,10
+            Lesson 1,11:
+              name: Lektion 1,11
+            Lesson 1,4:
+              name: Lektion 1,4
+            Lesson 1,6:
+              name: Lektion 1,6
+            Lesson 1,9:
+              name: Lektion 1,9
+            Lesson 2,10:
+              name: Lektion 2,10
+            Lesson 2,2:
+              name: Lektion 2,2
+            Lesson 2,3:
+              name: Lektion 2,3
         csd3-2017:
           description_short: Programmierung
           stages:
@@ -1063,10 +1446,24 @@ de:
           stages:
             Teacher Dashboard:
               name: Lehrer-Dashboard
+            Teaching with Puzzles:
+              name: Lernen mit Puzzeln
             The Design Recipe:
               name: Das Design-Rezept
             Welcome!:
               name: Willkommen!
+        csp-online-test:
+          stages:
+            Unit 1 Overview:
+              name: Einheit 1 - Übersicht
+            Unit 2 Overview:
+              name: Einheit 2 - Übersicht
+            Unit 5 Overview:
+              name: Einheit 5 - Übersicht
+        csp1-support:
+          stages:
+            Unit 1 Overview:
+              name: Einheit 1 - Übersicht
         basketball:
           title: Wähle Dein Team und spiele eine Runde Basketball
           description_short: Wähle Dein Team und spiele eine Runde Basketball
@@ -1089,10 +1486,24 @@ de:
               name: Spielelabor
         csd2-2017:
           stages:
+            Describing Web pages:
+              name: Webseiten beschreiben
+            Images on the Web:
+              name: Bilder im Web
+            Multi-Page Websites:
+              name: Webseiten mit mehreren Seiten
+            Classes:
+              name: Klassen
             Peer Review:
               name: Peer Review
+            Digital Footprint:
+              name: Digitaler Fußabdruck
             Lists:
               name: Listen
+        csp2-support:
+          stages:
+            Unit 2 Overview:
+              name: Einheit 2 - Übersicht
         minecraft:
           title: 'Mincecraft-Designer: Stunde des Codes'
           description_short: Baue ein Minecraft-Spiel. Erschaffe deine eigene Version von Hühnern, Schafen, Creepern, Zombies und mehr.
@@ -1180,6 +1591,9 @@ de:
           title: Programmiere Dein eigenes Sport-Spiel
           description_short: Kombiniere Elemente unterschiedlicher Sportarten
           description: Kombiniere Elemente unterschiedlicher Sportarten
+          stages:
+            Sports:
+              name: Sport
         2016_sciencePD-phase2b:
           stages:
             Welcome!:
@@ -1192,6 +1606,10 @@ de:
               name: Willkommen!
             Wrap-Up:
               name: Zusammenfassung
+        csp4-support:
+          stages:
+            Unit 4 Overview:
+              name: Einheit 4 - Übersicht
         sciencepd4:
           stages:
             Welcome!:
@@ -1214,6 +1632,22 @@ de:
               name: Willkommen!
             Wrap-Up:
               name: Zusammenfassung
+        csp5-support:
+          stages:
+            Unit 5 Overview:
+              name: Einheit 5 - Übersicht
+        csppostap-2017:
+          stages:
+            Creating Javascript Objects:
+              name: Javascript Objekte erstellen
+            Deleting Records:
+              name: Datensätze löschen
+            Updating Records:
+              name: Datensätze aktualisieren
+            Visualizing Data:
+              name: Datensätze anzeigen
+            Final Project:
+              name: Abschließende Herausforderung
         gamelab-demo:
           stages:
             Simple Sprite Movement:
@@ -1274,6 +1708,8 @@ de:
               name: Funktionen
         csd2-draft:
           stages:
+            Digital Footprint:
+              name: Digitaler Fußabdruck
             Lists:
               name: Listen
         csd3-chapters:
@@ -1296,8 +1732,16 @@ de:
               name: Ice Age Spielelabor
         csd2-old:
           stages:
+            Describing Web pages:
+              name: Webseiten beschreiben
+            Multi-Page Websites:
+              name: Webseiten mit mehreren Seiten
+            Classes:
+              name: Klassen
             Peer Review:
               name: Peer Review
+            Digital Footprint:
+              name: Digitaler Fußabdruck
         artist-and-bb8:
           stages:
             Ice Age Play Lab:
@@ -1401,6 +1845,8 @@ de:
               name: Künstler Binär
             Building a Foundation:
               name: Grundlagen aufbauen
+            Loops in Ice Age:
+              name: Schleifen in Ice Age
         new-express:
           stages:
             Introduction:
@@ -1502,6 +1948,8 @@ de:
               name: Funktionen
         csd2-2018:
           stages:
+            Digital Footprint:
+              name: Digitaler Fußabdruck
             Lists:
               name: Listen
         coursea-2018:
@@ -1576,6 +2024,8 @@ de:
               name: Binärbilder
             Artist Binary:
               name: Künstler Binär
+            Loops in Ice Age:
+              name: Schleifen in Ice Age
             Graph Paper Programming:
               name: Programmieren auf Millimeterpapier
             Relay Programming:
@@ -1646,15 +2096,27 @@ de:
           stages:
             Bytes and File Sizes:
               name: Bytes und Dateigrößen
+            Text Compression:
+              name: Text-Kompression
+            Check Your Assumptions:
+              name: Prüfe deine Voraussetzungen
+            Creating Summary Tables:
+              name: Zusammenfassungstabellen erstellen
         csp3-2018:
           description_short: Programmierung
           stages:
             Creating Functions:
               name: Funktionen erstellen
+            Creating Functions with Parameters:
+              name: Funktionen mit Parametern erstellen
         csp4-2018:
           stages:
+            What is Big Data?:
+              name: Was ist Big Data?
             Simple Encryption:
               name: Einfache Verschlüsselung
+            Check Your Assumptions:
+              name: Prüfe deine Voraussetzungen
         csp5-2018:
           stages:
             While Loops:
@@ -1663,6 +2125,22 @@ de:
               name: Schleifen und Simulationen
             Introduction to Arrays:
               name: Einführung in Arrays
+        csppostap-2018:
+          stages:
+            Creating Javascript Objects:
+              name: Javascript Objekte erstellen
+            Deleting Records:
+              name: Datensätze löschen
+            Updating Records:
+              name: Datensätze aktualisieren
+            Visualizing Data:
+              name: Datensätze anzeigen
+            Final Project:
+              name: Abschließende Herausforderung
+            Check Your Assumptions:
+              name: Prüfe deine Voraussetzungen
+            Creating Summary Tables:
+              name: Zusammenfassungstabellen erstellen
         pre-express-2018:
           stages:
             'Debugging: Unspotted Bugs':
@@ -1735,6 +2213,8 @@ de:
               name: Programmieren auf Millimeterpapier
             Relay Programming:
               name: Relais-Programmierung
+            Loops in Ice Age:
+              name: Schleifen in Ice Age
             Conditionals with Cards:
               name: Bedingungen mit Karten
             Digital Citizenship:
@@ -1812,6 +2292,8 @@ de:
               name: Bewegung, Bewegung
             Your Digital Footprint:
               name: Dein digitaler Fußabdruck
+            Loops in Ice Age:
+              name: Schleifen in Ice Age
             'Loops: Getting Loopy':
               name: Schöne Schleifen
         pre-express-2019:
@@ -1828,6 +2310,8 @@ de:
               name: 'Real-Life-Algorithmen: Pflanze Samen'
         csd2-2019:
           stages:
+            Digital Footprint:
+              name: Digitaler Fußabdruck
             Lists:
               name: Listen
         csd3-2019:
@@ -1865,6 +2349,8 @@ de:
           stages:
             Bytes and File Sizes:
               name: Bytes und Dateigrößen
+            Text Compression:
+              name: Text-Kompression
         csp3-2019:
           description_short: Programmierung
           stages:
@@ -1872,6 +2358,10 @@ de:
               name: Funktionen erstellen
         csp4-2019:
           stages:
+            What is Big Data?:
+              name: Was ist Big Data?
+            Check Your Assumptions:
+              name: Prüfe deine Voraussetzungen
             Simple Encryption:
               name: Einfache Verschlüsselung
         csp5-2019:
@@ -1882,6 +2372,20 @@ de:
               name: Schleifen und Simulationen
             Introduction to Arrays:
               name: Einführung in Arrays
+        csppostap-2019:
+          stages:
+            Creating Summary Tables:
+              name: Zusammenfassungstabellen erstellen
+            Creating Javascript Objects:
+              name: Javascript Objekte erstellen
+            Deleting Records:
+              name: Datensätze löschen
+            Updating Records:
+              name: Datensätze aktualisieren
+            Visualizing Data:
+              name: Datensätze anzeigen
+            Final Project:
+              name: Abschließende Herausforderung
         time4csdemo:
           stages:
             Crowdsourcing:
@@ -1890,7 +2394,28 @@ de:
               name: Bedingungen mit Karten
             Building a Foundation:
               name: Grundlagen aufbauen
+        csp7-pilot-staging:
+          stages:
+            Libraries:
+              name: Bibliotheken
         express-2018-vn:
           stages:
             Graph Paper Programming:
               name: Programmieren auf Millimeterpapier
+        csd2-pilot:
+          stages:
+            Digital Footprint:
+              name: Digitaler Fußabdruck
+            Lists:
+              name: Listen
+        csd3-pilot:
+          description_short: "Programmierung"
+          stages:
+            Variables:
+              name: Variablen
+            Conditionals:
+              name: Bedingungen
+            Velocity:
+              name: Geschwindigkeit
+            Functions:
+              name: Funktionen

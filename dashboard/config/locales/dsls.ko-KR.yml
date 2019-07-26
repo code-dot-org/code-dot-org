@@ -1,71 +1,744 @@
 ---
-ko:
+ko-KR:
   data:
-    external:
+    dsls:
+      2-3 Algorithms Multi 1:
+        title: 객관식
+        questions:
+        - text: 주어진 이미지를 위한 알고리즘을 고르세요.
+        answers:
+        - text: 사각형에서 시작해서<br/>사각형 위에 삼각형을 그리고<br/>사각형 위에 삼각형을 그리세요.
+        - {}
+        - text: 사각형으로 시작하세요<br/>사각형의 위쪽에 삼각형을 놓으세요<br/>평행 사변형의 오른쪽에 삼각형을 놓으세요
+        - text: 사각형으로 시작하세요<br/>사각형의 아래쪽에 삼각형을 놓으세요<br/>삼각형의 오른쪽에 평행 사변형을 놓으세요
+      2-3 Algorithms Multi 2:
+        title: 객관식
+        content1: 삼각형에서 시작해서<br/>삼각형 아래에 사각형을 그리고<br/>사각형 아래에 또 다른 삼각형을 그리세요.
+        questions:
+        - text: 어떤 이미지가 이 알고리즘으로 만들 수 <em>없나요?</em>
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 Big Event Match 1:
+        title: 맞추기
+        content2: 단추에 알맞은 춤 동작을 고르세요.
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 Binary Match 1:
+        title: 맞추기
+        content2: 키를 사용해 코드와 글자를 맞추세요.
+        questions:
+        - text: "<strong>N</strong>"
+        - text: "<strong>O</strong>"
+        - text: "<strong>P</strong>"
+        - text: "<strong>Q</strong>"
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 Conditionals Multi 1:
+        title: 객관식
+        questions:
+        - text: 게임의 규칙에 따라 정확하게 점수가 부여된 카드 세트는?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 Getting Loopy Multi 1:
+        title: 객관식
+        questions:
+        - text: 반복을 이용해 이 순차실행을 간단히 할 수 있을까요?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 Graph Paper Match 1:
+        title: 맞추기
+        content1: 프로그램에 그리드,격자무늬를 맞추세요
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      2-3 Graph Paper Multi 1:
+        title: 객관식
+        questions:
+        - text: 어떤 프로그램이 이 그림을 그릴 수 있을까요?
+        answers:
+        - {}
+        - {}
+        - {}
+      2-3 Maze Match 2:
+        title: 미로 퍼즐 짝맞추기
+        content1: 퍼즐 블록 맞추기
+        pre_title: 소개
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      2-3 Maze Multi 2:
+        title: 미로 퍼즐 객관식
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 Relay Programming Multi 1:
+        title: 객관식
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      2-3 Relay Programming Multi 2:
+        title: 객관식
+        questions:
+        - text: 어떤 프로그램이 오류가 없을까요?
+        answers:
+        - {}
+        - {}
+        - {}
+      2-3 artist debug multi 1:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 artist functions multi 1:
+        title: 예술가 함수 다중선택1
+        questions:
+        - text: 주어진 함수들을 사용해서 이미지를 그리기 위해 적당한 블럭들을 선택하세요.
+        answers:
+        - {}
+        - {}
+        - {}
+      2-3 artist loops match 1:
+        content2: 똑같이 맞춰 그리기
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 artist loops multi 1:
+        title: 예술가 반복 다중 선택
+        questions:
+        - text: 이 반복으로 어떤 모양이 만들어질까요?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 artist loops multi 2:
+        title: 예술가 반복 다중 선택
+        questions:
+        - text: 이 프로그램으로 어떤 모양이 만들어질까요?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 artist match 1:
+        title: 예술가 똑같이 그리기
+        content1: 블럭들을 사용해서 똑같은 모양을 맞추세요.
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 bee conditionals multi 1:
+        questions:
+        - text: 다음 중 맞는 것은?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 bee conditionals multi 3:
+        questions:
+        - text: 가장 적합한 블록들을 고르세요.
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 bee loops multi 1:
+        title: 꿀벌 반복 다중선택1
+        questions:
+        - text: 어떤 블록을 사용해야 꽃꿀을 모두 모을 수 있을까요?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 maze match 1:
+        title: 미로 퍼즐 맞추기1
+        content1: 퍼즐 블록 맞추기
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      2-3 maze multi 1:
+        title: 미로 퍼즐 객관식1
+        questions:
+        - text: 다음중 어떤 블록들이 정답일까요?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 Algorithms Match 1:
+        title: 맞추기
+        content1: 알고리즘에서 나타나도록 주사위 레이스 게임에서 단계들을 맞추세요.
+        questions:
+        - text: "<h4>1)</h4>"
+        - text: "<h4>2)</h4>"
+        - text: "<h4>3)</h4>"
+        - text: "<h4>4)</h4>"
+        answers:
+        - text: "<h4>Player 1 점수를 0점으로</h4>"
+        - text: "<h4>Player 1이 주사위를 굴립니다.</h4>"
+        - text: "<h4>Player 1 점수를 총점으로 합칩니다.</h4>"
+        - text: "<h4>누가 이겼는지 비교합니다.</h4>"
+      4-5 Algorithms Multi 1:
+        title: 객관식
+        questions:
+        - text: 다음 중 알고리즘으로 표현하기 가장 어려운 것은?
+        answers:
+        - text: 양치질
+        - text: 쿠키를 굽고
+        - text: 식료품 리스트를 쇼핑
+        - text: 바나나
+      4-5 Computational Thinking Match 1:
+        title: 맞추기
+        content1: 각각의 자동차들이 조각내어졌습니다. 자동차들의 짝을 맞추세요.
+        questions:
+        - text: "<h3>Wheels/side: 2<br/>Windows/side: 0</h3>"
+        - text: "<h3>Wheels/side: 2<br/>Windows/side: 1</h3>"
+        - text: "<h3>Wheels/side: 2<br/>Windows/side: 6</h3>"
+        - text: "<h3>Wheels/side: 3<br/>Windows/side: 2</h3>"
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 Computational Thinking Multi 1:
+        title: 객관식
+        questions:
+        - text: 시애틀은 대도시. <br/> 유진은 중간 도시 <br/> 힐뷰는 작은 도시입니다.
+        answers:
+        - text: 시애틀 _____ _____ _____입니다.
+        - text: _____은 _____ 도시입니다.
+        - text: _____ _____는 _____입니다.
+        - text: Eugene는 _____ 도시입니다.
+      4-5 Crowdsourcing Multi 1:
+        title: 객관식
+        questions:
+        - text: 다음 크라우드 소싱을 가장 잘 표현하는 것은?
+        answers:
+        - {}
+        - {}
+      4-5 Crowdsourcing Multi 2:
+        title: 객관식
+        questions:
+        - text: 클라우드소싱을 연습하기에 가장 좋은 활동은?
+        answers:
+        - text: 방 청소
+        - text: 디저트를 먹는
+        - text: 머리를 빗질하는
+        - text: 세수하는
+      4-5 Digital Footprint Multi 1:
+        title: 객관식
+        questions:
+        - text: 다음 중 인터넷을 통해 공유하기 적당한 정보는?
+        answers:
+        - text: 생일
+        - text: 좋아하는 음식
+        - text: 주소
+        - text: 부모의 신용 카드 번호
+      4-5 Internet Multi 1:
+        title: 객관식
+        questions:
+        - text: code.org에 접속하기 위해 사용하는 IP 주소로 가장 적당한 것은?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 Internet Multi 2:
+        title: 객관식
+        questions:
+        - text: IP 주소 100.42.50.110 을 입력하면 나오는 웹페이지는?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 Songwriting Multi 1:
+        title: 객관식
+        questions:
+        - {}
+        answers:
+        - text: Lou, Lou, skip to my Lou,
+        - text: Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou,
+            Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.
+        - {}
+        - {}
+      4-5 Suncatchers Match 1:
+        title: 맞추기
+        content1: 주어진 방법들의 프로그램과 단어를 맞추세요.
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - text: "<h4>STACK</h4>"
+        - text: "<h4>STAMP</h4>"
+        - text: "<h4>STAR</h4>"
+        - text: "<h4>RAMP</h4>"
+      4-5 Suncatchers Multi 1:
+        title: 객관식
+        questions:
+        - text: 아래 프로그램 중 프로그램 1과 정확하게 동일한 시퀀스를 <em>만들지 않는가</em>  ?
+        answers:
+        - {}
+        - {}
+        - {}
+      4-5 artist loops multi 1:
+        title: 예술가 반복 다중 선택
+        questions:
+        - text: 어떤 블럭이 같은 모양을 만들어낼 수 있을까요?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 artist multi 1:
+        title: 예술가 객관식
+        questions:
+        - text: 둘레의 길이가 100인 사각형을 그리는 블록들은?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 artist multi 2:
+        title: 예술가 객관식
+        questions:
+        - text: 대칭을 그릴 수 있는 것은?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 bee conditionals multi 1:
+        title: 꿀벌 조건선택 객관식
+        questions:
+        - text: 가장 적합한 블록들을 고르세요.
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 bee debug multi 1:
+        title: 꿀벌 디버깅 객관식
+        questions:
+        - text: 제대로 동작하는 함수는?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 bee loops multi 1:
+        title: 꿀벌 반복 객관식
+        questions:
+        - text: 어떤 블록이 퍼즐을 해결할 수 있을까요?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 maze conditionals multi 1:
+        title: 미로 퍼즐 조건 객관식
+        questions:
+        - text: 어떤 블록이 퍼즐을 해결할 수 있을까요?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 maze match 1:
+        title: 미로 퍼즐 짝맞추기
+        content1: 퍼즐 블록 맞추기
+        pre_title: 소개
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      4-5 maze multi 1:
+        title: 미로 퍼즐 객관식
+        questions:
+        - text: 어떤 블록이 퍼즐을 해결할 수 있을까요?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
       Begin planning your project:
-        content1: 설명 입력
         title: 제목화면 주제
+        content1: 설명 입력
       Begin planning your project_2018:
         content1: 설명 입력
       Begin planning your project_2018_2019:
         content1: 설명 입력
+      CSD Header Size MC:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD Header Size MC_2018:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD Header Size MC_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
       CSD U2 Design Project:
-        content1: 설명 입력
         title: 제목화면 주제
+        content1: 설명 입력
       CSD U2 Design Project_2018:
-        content1: 설명 입력
         title: 제목화면 주제
+        content1: 설명 입력
       CSD U2 Design Project_2018_2019:
-        content1: 설명 입력
         title: 제목화면 주제
-      CSD U2 L1 Overview:
         content1: 설명 입력
-        title: 제목화면 주제
       CSD U2 L2 Overview:
-        content1: 설명 입력
         title: 제목화면 주제
+        content1: 설명 입력
       CSD U2 L3 Overview:
-        content1: 설명 입력
         title: 제목화면 주제
+        content1: 설명 입력
       CSD U2 L4 Overview:
-        content1: 설명 입력
         title: 제목화면 주제
+        content1: 설명 입력
       CSD U2 L5 Overview:
-        content1: 설명 입력
         title: 제목화면 주제
+        content1: 설명 입력
       CSD U2 L6 Overview:
-        content1: 설명 입력
         title: 제목화면 주제
+        content1: 설명 입력
       CSD U2 Lesson 6 Overview:
         content1: 설명 입력
       CSD U2 expand project:
-        content1: 설명 입력
         title: 제목화면 주제
+        content1: 설명 입력
       CSD U2 expand project_2018:
-        content1: 설명 입력
         title: 제목화면 주제
+        content1: 설명 입력
       CSD U2 expand project_2018_2019:
-        content1: 설명 입력
         title: 제목화면 주제
+        content1: 설명 입력
+      CSD U2 image debug match:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U2 lists match:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U2 lists match_2018:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U2 lists match_2018_2019:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
       CSD U2 project guide:
         content1: 설명 입력
       CSD U2 project guide_2018:
         content1: 설명 입력
       CSD U2 project guide_2018_2019:
         content1: 설명 입력
+      CSD U3 - conditionals - Matching:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 - conditionals - Matching_2018:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 - conditionals - Matching_2018_2019:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Boolean MC:
+        title: 제목화면 주제
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Boolean MC_2018:
+        title: 제목화면 주제
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Boolean MC_2018_2019:
+        title: 제목화면 주제
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
       CSD U3 Card Examples_2018:
         content1: 설명 입력
       CSD U3 Card Examples_2018_2019:
         content1: 설명 입력
+      CSD U3 Functions Prediction define first:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Functions Prediction define first_2018:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Functions Prediction define first_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Keypress Matching:
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      CSD U3 Keypress Matching_2018:
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      CSD U3 Keypress Matching_2018_2019:
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      CSD U3 Sprite Movement Predict Multi:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Sprite Movement Predict Multi_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Sprite Movement Predict Multi_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Sprites intro predict multi:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Sprites intro predict multi_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Sprites intro predict multi_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
       CSD U3 combining rep:
-        content1: 설명 입력
         title: 제목화면 주제
+        content1: 설명 입력
       CSD U3 combining rep_2018:
-        content1: 설명 입력
         title: 제목화면 주제
+        content1: 설명 입력
       CSD U3 combining rep_2018_2019:
-        content1: 설명 입력
         title: 제목화면 주제
+        content1: 설명 입력
+      CSD U3 drawSprites placement match:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 drawSprites placement match_2019:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
       CSD U3 game intro:
         content1: 설명 입력
       CSD U3 game intro_2018:
@@ -79,14 +752,14 @@ ko:
       CSD U3 platform intro_2018_2019:
         content1: 설명 입력
       CSD U5 Encryption 1:
-        content1: 설명 입력
         title: 제목화면 주제
+        content1: 설명 입력
       CSD U5 Encryption 1_2018:
-        content1: 설명 입력
         title: 제목화면 주제
+        content1: 설명 입력
       CSD U5 Encryption 1_2018_2019:
-        content1: 설명 입력
         title: 제목화면 주제
+        content1: 설명 입력
       CSD U5 Encryption 2:
         content1: 설명 입력
       CSD U5 Encryption 2_2018:
@@ -94,8 +767,8 @@ ko:
       CSD U5 Encryption 2_2018_2019:
         content1: 설명 입력
       CSD U5 L13 SFLP Interpreting Data:
-        content1: 설명 입력
         title: 제목화면 주제
+        content1: 설명 입력
       CSD U5 crosstab warmup:
         content1: 설명 입력
       CSD U5 crosstab warmup_2018:
@@ -103,1274 +776,970 @@ ko:
       CSD U5 crosstab warmup_2018_2019:
         content1: 설명 입력
       CSD U5 data visualization:
-        content1: 설명 입력
         title: 제목화면 주제
+        content1: 설명 입력
       CSD U5 data visualization_2018:
-        content1: 설명 입력
         title: 제목화면 주제
+        content1: 설명 입력
       CSD U5 data visualization_2018_2019:
-        content1: 설명 입력
         title: 제목화면 주제
+        content1: 설명 입력
       CSD U5 student record:
-        content1: 설명 입력
         title: 제목화면 주제
+        content1: 설명 입력
       CSD U5 student record_2018:
-        content1: 설명 입력
         title: 제목화면 주제
+        content1: 설명 입력
       CSD U5 student record_2018_2019:
-        content1: 설명 입력
         title: 제목화면 주제
+        content1: 설명 입력
       CSD U6 LED create intro:
         content1: 설명 입력
       CSD U6 LED create intro_2018:
         content1: 설명 입력
       CSD U6 LED create intro_2018_2019:
         content1: 설명 입력
+      CSD U6 array multi:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U6 array multi_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U6 array multi_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
       CSD U6 final intro:
         content1: 설명 입력
       CSD U6 final intro_2018:
         content1: 설명 입력
       CSD U6 final intro_2018_2019:
         content1: 설명 입력
+      CSD U6 setProperty predict multi:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U6 setProperty predict multi_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
       Internet Simulator Setup:
         content1: 설명 입력
       Internet Simulator Setup 2:
-        content1: 설명 입력
         title: 제목화면 주제
+        content1: 설명 입력
       Internet Simulator Setup 3:
         content1: 설명 입력
+      K-1 Artist 1 Multi 1:
+        title: 객관식
+        questions:
+        - text: 어떤 블록이 퍼즐을 해결할 수 있을까요?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Artist 1 Multi 2:
+        title: 객관식
+        questions:
+        - text: 어떤 블록들이 사각형을 그릴 수 있을까요?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Artist 2 Match 2:
+        title: 맞추기
+        content2: 형태에 따라 모양을 맞추세요.
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Bee 1 Multi 1:
+        title: 객관식
+        questions:
+        - text: 꽃꿀은 몇 개 일까요?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Bee 1 Multi 2:
+        title: 객관식
+        questions:
+        - text: 꽃꿀은 몇 개 일까요?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Bee Loops Match 1:
+        title: 맞추기
+        content2: 블럭을 맞추세요.
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Big Event Match 1:
+        title: 맞추기
+        content2: 단추에 알맞은 춤 동작을 고르세요.
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      K-1 Digital Footprint Multi 1:
+        title: 객관식
+        questions:
+        - text: 디지털 흔적을 <strong>가장 적게</strong> 남기는 동물은?
+        answers:
+        - {}
+        - {}
+        - {}
+      K-1 Getting Loopy Multi 1:
+        title: 객관식
+        questions:
+        - text: 반복을 이용해 이 순차실행을 간단히 할 수 있을까요?
+        answers:
+        - {}
+        - {}
+        - {}
+      K-1 Happy Maps Multi 1:
+        title: 객관식
+        questions:
+        - text: 어떤 방향키로 플러브를 보물로 보낼 수 있을까요?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Keep it Private Multi 1:
+        title: 객관식
+        questions:
+        - text: 온라인으로 공유하지 <strong>말아야 할</strong> 정보는?
+        answers:
+        - {}
+        - {}
+        - {}
+      K-1 Maze Debugging Multi 1:
+        title: 객관식
+        questions:
+        - text: 마지막 블록으로 적절한 것은?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Maze Loops Multi 1:
+        title: 객관식
+        questions:
+        - text: 같은 반복 블럭은?
+        answers:
+        - {}
+        - {}
+        - {}
+      K-1 Maze Loops Multi 2:
+        title: 객관식
+        questions:
+        - text: 적절한 반복 블록을 고르세요.
+        answers:
+        - {}
+        - {}
+        - {}
+      K-1 Maze Match 1:
+        title: 맞추기
+        content2: 퍼즐들과 블럭들을 맞추세요.
+        pre_title: 소개
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Maze Multiple Choice 2:
+        title: 미로
+        questions:
+        - text: 이 레벨을 해결할 수 있는 답은?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Move It Multi 1:
+        title: 객관식
+        questions:
+        - text: 어떤 알고리즘이 플러브를 꽃에 보낼 수 있을까요?
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Plant a Seed Multi 1:
+        title: 객관식
+        questions:
+        - text: 이 알고리즘의 처음에 시작해야하는 단계는?
+        answers:
+        - {}
+        - {}
+        - {}
+      K-1 Plant a Seed Multi 2:
+        title: 객관식
+        questions:
+        - text: 이 알고리즘의 빈 칸에 채워야 하는 것은?
+        answers:
+        - {}
+        - {}
+        - {}
+      K-1 Word Search Multi 1:
+        title: 객관식
+        questions:
+        - text: '"이동하기" 블록은?'
+        answers:
+        - {}
+        - {}
+        - {}
+      K-1 Word Search Multi 3:
+        title: 객관식
+        questions:
+        - text: 말한 단어는?
+        answers:
+        - text: 집합
+        - text: 사각형
+        - text: 아래쪽
       Multi-Screen Apps:
-        content1: 설명 입력
         title: 제목화면 주제
+        content1: 설명 입력
       New Challenge Introduction:
-        content1: 설명 입력
         title: 제목화면 주제
+        content1: 설명 입력
       OPD-K5 Stage3aGo:
-        content1: 설명 입력
         title: 제목화면 주제
+        content1: 설명 입력
       Prepare for your presentation:
-        content1: 설명 입력
         title: 제목화면 주제
+        content1: 설명 입력
       'Technique: Frequency Analysis':
         content1: 설명 입력
       Terminology Recap:
         content1: 설명 입력
-    match:
-      2-3 Big Event Match 1:
-        content2: 단추에 알맞은 춤 동작을 고르세요.
-        title: 맞추기
-      2-3 Binary Match 1:
-        content2: 키를 사용해 코드와 글자를 맞추세요.
-        questions:
-        - text: "<strong>N</strong>"
-        - text: "<strong>O</strong>"
-        - text: "<strong>P</strong>"
-        - text: "<strong>Q</strong>"
-        title: 맞추기
-      2-3 Graph Paper Match 1:
-        content1: 프로그램에 그리드,격자무늬를 맞추세요
-        title: 맞추기
-      2-3 Maze Match 2:
-        content1: 퍼즐 블록 맞추기
-        pre_title: 소개
-        title: 미로 퍼즐 짝맞추기
-      2-3 artist loops match 1:
-        content2: 똑같이 맞춰 그리기
-      2-3 artist match 1:
-        content1: 블럭들을 사용해서 똑같은 모양을 맞추세요.
-        title: 예술가 똑같이 그리기
-      2-3 maze match 1:
-        content1: 퍼즐 블록 맞추기
-        title: 미로 퍼즐 맞추기1
-      4-5 Algorithms Match 1:
-        answers:
-        - text: "<h4>Player 1 점수를 0점으로</h4>"
-        - text: "<h4>Player 1이 주사위를 굴립니다.</h4>"
-        - text: "<h4>Player 1 점수를 총점으로 합칩니다.</h4>"
-        - text: "<h4>누가 이겼는지 비교합니다.</h4>"
-        content1: 알고리즘에서 나타나도록 주사위 레이스 게임에서 단계들을 맞추세요.
-        questions:
-        - text: "<h4>1)</h4>"
-        - text: "<h4>2)</h4>"
-        - text: "<h4>3)</h4>"
-        - text: "<h4>4)</h4>"
-        title: 맞추기
-      4-5 Computational Thinking Match 1:
-        content1: 각각의 자동차들이 조각내어졌습니다. 자동차들의 짝을 맞추세요.
-        questions:
-        - text: "<h3>Wheels/side: 2<br/>Windows/side: 0</h3>"
-        - text: "<h3>Wheels/side: 2<br/>Windows/side: 1</h3>"
-        - text: "<h3>Wheels/side: 2<br/>Windows/side: 6</h3>"
-        - text: "<h3>Wheels/side: 3<br/>Windows/side: 2</h3>"
-        title: 맞추기
-      4-5 Suncatchers Match 1:
-        answers:
-        - text: "<h4>STACK</h4>"
-        - text: "<h4>STAMP</h4>"
-        - text: "<h4>STAR</h4>"
-        - text: "<h4>RAMP</h4>"
-        content1: 주어진 방법들의 프로그램과 단어를 맞추세요.
-        title: 맞추기
-      4-5 maze match 1:
-        content1: 퍼즐 블록 맞추기
-        pre_title: 소개
-        title: 미로 퍼즐 짝맞추기
-      K-1 Artist 2 Match 2:
-        content2: 형태에 따라 모양을 맞추세요.
-        title: 맞추기
-      K-1 Bee Loops Match 1:
-        content2: 블럭을 맞추세요.
-        title: 맞추기
-      K-1 Big Event Match 1:
-        content2: 단추에 알맞은 춤 동작을 고르세요.
-        title: 맞추기
-      K-1 Maze Match 1:
-        content2: 퍼즐들과 블럭들을 맞추세요.
-        pre_title: 소개
-        title: 맞추기
-    multi:
-      2-3 Algorithms Multi 1:
-        answers:
-        - text: 사각형에서 시작해서<br/>사각형 위에 삼각형을 그리고<br/>사각형 위에 삼각형을 그리세요.
-          correct: false
-        - correct: true
-        - text: 사각형으로 시작하세요<br/>사각형의 위쪽에 삼각형을 놓으세요<br/>평행 사변형의 오른쪽에 삼각형을 놓으세요
-          correct: false
-        - text: 사각형으로 시작하세요<br/>사각형의 아래쪽에 삼각형을 놓으세요<br/>삼각형의 오른쪽에 평행 사변형을 놓으세요
-          correct: false
-        questions:
-        - text: 주어진 이미지를 위한 알고리즘을 고르세요.
-        title: 객관식
-      2-3 Algorithms Multi 2:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        content1: 삼각형에서 시작해서<br/>삼각형 아래에 사각형을 그리고<br/>사각형 아래에 또 다른 삼각형을 그리세요.
-        questions:
-        - text: 어떤 이미지가 이 알고리즘으로 만들 수 <em>없나요?</em>
-        title: 객관식
-      2-3 Conditionals Multi 1:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: 게임의 규칙에 따라 정확하게 점수가 부여된 카드 세트는?
-        title: 객관식
-      2-3 Getting Loopy Multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        questions:
-        - text: 반복을 이용해 이 순차실행을 간단히 할 수 있을까요?
-        title: 객관식
-      2-3 Graph Paper Multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: 어떤 프로그램이 이 그림을 그릴 수 있을까요?
-        title: 객관식
-      2-3 Maze Multi 2:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        title: 미로 퍼즐 객관식
-      2-3 Relay Programming Multi 1:
-        answers:
-        - 
-        - 
-        - correct: true
-        title: 객관식
-      2-3 Relay Programming Multi 2:
-        answers:
-        - 
-        - 
-        - correct: true
-        questions:
-        - text: 어떤 프로그램이 오류가 없을까요?
-        title: 객관식
-      2-3 artist debug multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      2-3 artist functions multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: 주어진 함수들을 사용해서 이미지를 그리기 위해 적당한 블럭들을 선택하세요.
-        title: 예술가 함수 다중선택1
-      2-3 artist loops multi 1:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: 이 반복으로 어떤 모양이 만들어질까요?
-        title: 예술가 반복 다중 선택
-      2-3 artist loops multi 2:
-        answers:
-        - 
-        - 
-        - 
-        - correct: true
-        questions:
-        - text: 이 프로그램으로 어떤 모양이 만들어질까요?
-        title: 예술가 반복 다중 선택
-      2-3 bee conditionals multi 1:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: 다음 중 맞는 것은?
-      2-3 bee conditionals multi 3:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: 가장 적합한 블록들을 고르세요.
-      2-3 bee loops multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        questions:
-        - text: 어떤 블록을 사용해야 꽃꿀을 모두 모을 수 있을까요?
-        title: 꿀벌 반복 다중선택1
-      2-3 maze multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: 다음중 어떤 블록들이 정답일까요?
-        title: 미로 퍼즐 객관식1
-      4-5 Algorithms Multi 1:
-        answers:
-        - text: 양치질
-          correct: false
-        - text: 쿠키를 굽고
-          correct: false
-        - text: 식료품 리스트를 쇼핑
-          correct: false
-        - text: 바나나
-          correct: true
-        questions:
-        - text: 다음 중 알고리즘으로 표현하기 가장 어려운 것은?
-        title: 객관식
-      4-5 Computational Thinking Multi 1:
-        answers:
-        - text: 시애틀 _____ _____ _____입니다.
-          correct: false
-        - text: _____은 _____ 도시입니다.
-          correct: true
-        - text: _____ _____는 _____입니다.
-          correct: false
-        - text: Eugene는 _____ 도시입니다.
-          correct: false
-        questions:
-        - text: 시애틀은 대도시. <br/> 유진은 중간 도시 <br/> 힐뷰는 작은 도시입니다.
-        title: 객관식
-      4-5 Crowdsourcing Multi 1:
-        answers:
-        - 
-        - correct: true
-        questions:
-        - text: 다음 크라우드 소싱을 가장 잘 표현하는 것은?
-        title: 객관식
-      4-5 Crowdsourcing Multi 2:
-        answers:
-        - text: 방 청소
-          correct: true
-        - text: 디저트를 먹는
-          correct: false
-        - text: 머리를 빗질하는
-          correct: false
-        - text: 세수하는
-          correct: false
-        questions:
-        - text: 클라우드소싱을 연습하기에 가장 좋은 활동은?
-        title: 객관식
-      4-5 Digital Footprint Multi 1:
-        answers:
-        - text: 생일
-          correct: false
-        - text: 좋아하는 음식
-          correct: true
-        - text: 주소
-          correct: false
-        - text: 부모의 신용 카드 번호
-          correct: false
-        questions:
-        - text: 다음 중 인터넷을 통해 공유하기 적당한 정보는?
-        title: 객관식
-      4-5 Internet Multi 1:
-        answers:
-        - 
-        - 
-        - 
-        - correct: true
-        questions:
-        - text: code.org에 접속하기 위해 사용하는 IP 주소로 가장 적당한 것은?
-        title: 객관식
-      4-5 Internet Multi 2:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: IP 주소 100.42.50.110 을 입력하면 나오는 웹페이지는?
-        title: 객관식
-      4-5 Songwriting Multi 1:
-        answers:
-        - text: Lou, Lou, skip to my Lou,
-          correct: false
-        - text: Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou,
-            Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.
-          correct: true
-        - 
-        - 
-        title: 객관식
-      4-5 Suncatchers Multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: 아래 프로그램 중 프로그램 1과 정확하게 동일한 시퀀스를 <em>만들지 않는가</em>  ?
-        title: 객관식
-      4-5 artist loops multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: 어떤 블럭이 같은 모양을 만들어낼 수 있을까요?
-        title: 예술가 반복 다중 선택
-      4-5 artist multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: 둘레의 길이가 100인 사각형을 그리는 블록들은?
-        title: 예술가 객관식
-      4-5 artist multi 2:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: 대칭을 그릴 수 있는 것은?
-        title: 예술가 객관식
-      4-5 bee conditionals multi 1:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: 가장 적합한 블록들을 고르세요.
-        title: 꿀벌 조건선택 객관식
-      4-5 bee debug multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: 제대로 동작하는 함수는?
-        title: 꿀벌 디버깅 객관식
-      4-5 bee loops multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        questions:
-        - text: 어떤 블록이 퍼즐을 해결할 수 있을까요?
-        title: 꿀벌 반복 객관식
-      4-5 maze conditionals multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        questions:
-        - text: 어떤 블록이 퍼즐을 해결할 수 있을까요?
-        title: 미로 퍼즐 조건 객관식
-      4-5 maze multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        questions:
-        - text: 어떤 블록이 퍼즐을 해결할 수 있을까요?
-        title: 미로 퍼즐 객관식
-      CSD Header Size MC:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      CSD Header Size MC_2018:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      CSD Header Size MC_2018_2019:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      CSD U3 Boolean MC:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        title: 제목화면 주제
-      CSD U3 Boolean MC_2018:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        title: 제목화면 주제
-      CSD U3 Boolean MC_2018_2019:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        title: 제목화면 주제
-      CSD U3 Functions Prediction define first:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      CSD U3 Functions Prediction define first_2018:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      CSD U3 Functions Prediction define first_2018_2019:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      CSD U3 Sprite Movement Predict Multi:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      CSD U3 Sprite Movement Predict Multi_2018:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      CSD U3 Sprite Movement Predict Multi_2018_2019:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      CSD U3 Sprites intro predict multi:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      CSD U3 Sprites intro predict multi_2018:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      CSD U3 Sprites intro predict multi_2018_2019:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      CSD U6 array multi:
-        answers:
-        - 
-        - 
-        - 
-        - correct: true
-      CSD U6 array multi_2018:
-        answers:
-        - 
-        - 
-        - 
-        - correct: true
-      CSD U6 array multi_2018_2019:
-        answers:
-        - 
-        - 
-        - 
-        - correct: true
-      CSD U6 setProperty predict multi:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      CSD U6 setProperty predict multi_2018:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      CSD U6 setProperty predict multi_2018_2019:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      K-1 Artist 1 Multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: 어떤 블록이 퍼즐을 해결할 수 있을까요?
-        title: 객관식
-      K-1 Artist 1 Multi 2:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        questions:
-        - text: 어떤 블록들이 사각형을 그릴 수 있을까요?
-        title: 객관식
-      K-1 Bee 1 Multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: 꽃꿀은 몇 개 일까요?
-        title: 객관식
-      K-1 Bee 1 Multi 2:
-        answers:
-        - 
-        - 
-        - 
-        - correct: true
-        questions:
-        - text: 꽃꿀은 몇 개 일까요?
-        title: 객관식
-      K-1 Digital Footprint Multi 1:
-        answers:
-        - 
-        - 
-        - correct: true
-        questions:
-        - text: 디지털 흔적을 <strong>가장 적게</strong> 남기는 동물은?
-        title: 객관식
-      K-1 Getting Loopy Multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: 반복을 이용해 이 순차실행을 간단히 할 수 있을까요?
-        title: 객관식
-      K-1 Happy Maps Multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: 어떤 방향키로 플러브를 보물로 보낼 수 있을까요?
-        title: 객관식
-      K-1 Keep it Private Multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: 온라인으로 공유하지 <strong>말아야 할</strong> 정보는?
-        title: 객관식
-      K-1 Maze Debugging Multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        questions:
-        - text: 마지막 블록으로 적절한 것은?
-        title: 객관식
-      K-1 Maze Loops Multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: 같은 반복 블럭은?
-        title: 객관식
-      K-1 Maze Loops Multi 2:
-        answers:
-        - 
-        - 
-        - correct: true
-        questions:
-        - text: 적절한 반복 블록을 고르세요.
-        title: 객관식
-      K-1 Maze Multiple Choice 2:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: 이 레벨을 해결할 수 있는 답은?
-        title: 미로
-      K-1 Move It Multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: 어떤 알고리즘이 플러브를 꽃에 보낼 수 있을까요?
-        title: 객관식
-      K-1 Plant a Seed Multi 1:
-        answers:
-        - 
-        - 
-        - correct: true
-        questions:
-        - text: 이 알고리즘의 처음에 시작해야하는 단계는?
-        title: 객관식
-      K-1 Plant a Seed Multi 2:
-        answers:
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: 이 알고리즘의 빈 칸에 채워야 하는 것은?
-        title: 객관식
-      K-1 Word Search Multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: '"이동하기" 블록은?'
-        title: 객관식
-      K-1 Word Search Multi 3:
-        answers:
-        - text: 집합
-          correct: false
-        - text: 사각형
-          correct: true
-        - text: 아래쪽
-          correct: false
-        questions:
-        - text: 말한 단어는?
-        title: 객관식
       behaviors 1 predict:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - correct: false
-          feedback: 틀림
+        - {}
+        - {}
+        - {}
+        - feedback: 틀림
       behaviors 4 predict:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - correct: false
-          feedback: 틀림
+        - {}
+        - {}
+        - {}
+        - feedback: 틀림
       courseC_multi_artist_prog6_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseC_multi_artist_prog6_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseC_multi_artist_prog6_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseC_multi_harvester_loops11_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseC_multi_harvester_loops11_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseC_multi_harvester_loops11_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseC_multi_maze_debugging8_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseC_multi_maze_debugging8_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseC_multi_maze_debugging8_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseC_multi_maze_programming8_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseC_multi_maze_programming8_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseC_multi_maze_programming8_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseC_multi_starWars_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
+        - {}
+        - {}
+        - {}
         - text: 잘 모르겠음
-          correct: false
       courseC_multi_starWars_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
+        - {}
+        - {}
+        - {}
         - text: 잘 모르겠음
-          correct: false
       courseC_multi_starWars_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
+        - {}
+        - {}
+        - {}
         - text: 잘 모르겠음
-          correct: false
       courseC_multi_starWars_predict2:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseC_multi_starWars_predict2_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseC_multi_starWars_predict2_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_artist_binary8_predict1:
+        questions:
+        - {}
         answers:
         - text: A
-          correct: false
         - text: B
-          correct: false
         - text: C
-          correct: false
         - text: D
-          correct: true
       courseD_multi_artist_binary8_predict1_2018:
+        questions:
+        - {}
         answers:
         - text: A
-          correct: false
         - text: B
-          correct: false
         - text: C
-          correct: false
         - text: D
-          correct: true
       courseD_multi_artist_binary8_predict1_2018_2019:
+        questions:
+        - {}
         answers:
         - text: A
-          correct: false
         - text: B
-          correct: false
         - text: C
-          correct: false
         - text: D
-          correct: true
       courseD_multi_artist_nestedLoops9_predict1:
+        questions:
+        - {}
         answers:
         - text: A
-          correct: true
         - text: B
-          correct: false
         - text: C
-          correct: false
-        - 
+        - {}
       courseD_multi_artist_nestedLoops9_predict1_2018:
+        questions:
+        - {}
         answers:
         - text: A
-          correct: true
         - text: B
-          correct: false
         - text: C
-          correct: false
-        - 
+        - {}
       courseD_multi_artist_nestedLoops9_predict1_2018_2019:
+        questions:
+        - {}
         answers:
         - text: A
-          correct: true
         - text: B
-          correct: false
         - text: C
-          correct: false
-        - 
+        - {}
       courseD_multi_bee_conditionals1_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_bee_conditionals1_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_bee_conditionals1_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_bee_conditionals7_predict2:
+        questions:
+        - {}
         answers:
-        - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_bee_conditionals7_predict2_2018:
+        questions:
+        - {}
         answers:
-        - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_bee_conditionals7_predict2_2018_2019:
+        questions:
+        - {}
         answers:
-        - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_bee_nestedLoops2_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_bee_nestedLoops2_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_bee_nestedLoops2_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_bee_nestedLoops9_predict2:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_bee_nestedLoops9_predict2_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_bee_nestedLoops9_predict2_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_collector_debugging10_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_farmer_condLoops9_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_farmer_condLoops9_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_farmer_condLoops9_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_farmer_ramp13:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_farmer_while10_predict2:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_farmer_while10_predict2_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_farmer_while10_predict2_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_farmer_while4_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_farmer_while4_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_farmer_while4_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_maze_until10_predict2:
+        questions:
+        - {}
         answers:
-        - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_maze_until10_predict2_2018:
+        questions:
+        - {}
         answers:
-        - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_maze_until10_predict2_2018_2019:
+        questions:
+        - {}
         answers:
-        - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_maze_until2_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_maze_until2_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_maze_until2_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseD_multi_scrat_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
-      courseE_multi_artist_predict1:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseE_multi_bee_functions_predict1:
+        questions:
+        - {}
         answers:
-        - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseE_multi_farmer_functions11_predict:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - 
-        - correct: true
+        - {}
+        - {}
+        - {}
+        - {}
       courseE_multi_farmer_functions11_predict_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseE_multi_farmer_functions11_predict_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
-      courseE_multi_farmer_predict1:
-        answers:
-        - 
-        - 
-        - correct: true
-        - text: 잘 모르겠음
-          correct: false
-      courseE_multi_farmer_predict2:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      courseE_multi_maze_predict1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseE_prediction_artistFunction1:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - 
-        - correct: true
+        - {}
+        - {}
+        - {}
+        - {}
       courseE_prediction_artistFunction1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - 
-        - correct: true
+        - {}
+        - {}
+        - {}
+        - {}
       courseE_prediction_artistFunction1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - 
-        - correct: true
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_bee_variables_8a_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_bee_variables_8a_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_multi_artist_for10_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_multi_artist_for10_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_multi_artist_for10_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - 
-        - correct: true
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_multi_artist_fwp2_predict1:
+        questions:
+        - {}
         answers:
-        - correct: true
-        - 
-        - 
-        - 
-      courseF_multi_artist_predict1:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_multi_artist_variables3a_predict1:
+        questions:
+        - {}
         answers:
-        - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_multi_artist_variables3a_predict1_2018:
+        questions:
+        - {}
         answers:
-        - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_multi_artist_variables3a_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_multi_bee_conditionals1_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_multi_bee_conditionals7_predict2:
+        questions:
+        - {}
         answers:
-        - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_multi_bee_for3_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_multi_bee_for3_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_multi_bee_for3_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_multi_bee_fwp9_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       courseF_multi_playlab_variables4c_predictive1:
+        questions:
+        - {}
         answers:
-        - correct: true
-        - 
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       coursee_prediction_artistfunction2:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       coursee_prediction_artistfunction2_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       coursee_prediction_artistfunction2_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       grade2_multi_collector_A_predict1:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       grade2_multi_collector_A_predict1_2018:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}
       grade2_multi_collector_A_predict1_2018_2019:
+        questions:
+        - {}
         answers:
-        - 
-        - correct: true
-        - 
-        - 
+        - {}
+        - {}
+        - {}
+        - {}

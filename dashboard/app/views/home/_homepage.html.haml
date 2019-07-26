@@ -29,6 +29,7 @@
   - else
     - homepage_data[:sections] = @student_sections
     - homepage_data[:isTeacher] = false
+    - homepage_data[:studentId] = current_user.id
   - homepage_data[:canViewAdvancedTools] = !(current_user.under_13? && current_user.terms_version.nil?)
 
 - content_for(:head) do

@@ -535,7 +535,6 @@ ga:
   pdf_download: 'Íoslódáil PDF'
   download_coming_soon: 'Gníomhaíocht in-íoslódáilte le teacht go luath.'
   video_coming_soon: 'Físeán le teacht go luath!'
-  not_started: 'Níor bhain an dalta triail as an leibhéal seo fós.'
   share_code:
     title: "Cliceáil 'Rith' chun mo ríomhchlár a fheiceáil"
     bounce_og_title: "Féach ar mo Chluiche Liathróide"

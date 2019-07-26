@@ -5155,6 +5155,8 @@ zh-TW:
           stages:
             new stage:
               name: 新的階段
+            Number Systems:
+              name: 數字系統
         csd-tests:
           stages:
             Computers and Problem Solving:
@@ -5285,3 +5287,73 @@ zh-TW:
               name: 第 4 天
             Wrap Up:
               name: 總結
+        csd1-pilot:
+          title: CSD 單元 1 - 問題解決 ('19-'20)
+          stages:
+            Intro to Problem Solving:
+              name: 問題解決能力的介紹
+            The Problem Solving Process:
+              name: 問題解決流程
+            Exploring Problem Solving:
+              name: 問題解決探索
+            What is a Computer?:
+              name: 電腦是什麼？
+            Input and Output:
+              name: 輸入與輸出
+        csd2-pilot:
+          title: CSD 單元 2 - Web 開發 ('19-'20)
+          stages:
+            Headings:
+              name: 標題
+            Digital Footprint:
+              name: 數位足跡
+            Lists:
+              name: 清單
+            Clean Code and Debugging:
+              name: 乾淨代碼和偵錯調試
+            Project - Multi-Page Websites:
+              name: 專案 - 多頁式網站
+            Styling Text with CSS:
+              name: 透過 CSS 修改文字樣式
+            Styling Elements with CSS:
+              name: 透過 CSS 修改元素樣式
+            Sources and Search Engines:
+              name: 來源和搜尋引擎
+            Images:
+              name: 圖像
+        csd3-pilot:
+          title: CSD 單元 3 -互動式遊戲和動畫
+          description_short: Game Lab 編程環境介紹
+          stages:
+            Programming for Entertainment:
+              name: 娛樂用途的程式設計
+            Plotting Shapes:
+              name: 幾何繪圖
+            Drawing in Game Lab:
+              name: 用 Game Lab 繪圖
+            Variables:
+              name: 變數
+            Sprites:
+              name: 角色
+            Sprite Movement:
+              name: 角色動作
+            Conditionals:
+              name: 條件判斷（Conditionals）
+            Project - Interactive Card:
+              name: 專案 - 互動式卡片
+            Velocity:
+              name: 速度
+            Complex Sprite Movement:
+              name: 複合角色動作
+            Collisions:
+              name: 碰撞
+            Functions:
+              name: 函式
+            Using the Game Design Process:
+              name: 使用遊戲設計流程
+            Project - Design a Game:
+              name: 專案 - 設計一個遊戲
+        maddie-test:
+          stages:
+            new stage:
+              name: 新的階段

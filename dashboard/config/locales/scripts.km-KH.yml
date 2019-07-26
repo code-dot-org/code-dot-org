@@ -314,3 +314,15 @@ km:
           stages:
             The Internet:
               name: អ៊ីនធឺណិត
+        csd2-pilot:
+          stages:
+            Lists:
+              name: បញ្ជី
+        csd3-pilot:
+          stages:
+            Variables:
+              name: អ​ថេរ
+            Conditionals:
+              name: លក្ខខណ្ឌ
+            Functions:
+              name: អនុ​គមន៍

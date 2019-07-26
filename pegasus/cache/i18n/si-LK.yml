@@ -1037,24 +1037,7 @@ si-LK:
   course2_name: පාඨමාලාව 2
   course3_name: පාඨමාලාව 3
   course4_name: පාඨමාලාව 4
-  cspunit2_name: 'පාඩම් අංක 2: අන්තර්ජාලය'
-  cspunit3_name: "(පැරණි) 3 වන ඒකකය: ක්‍රමලේඛනය"
-  cspunit4_name: "(පැරණි) 4 වෙනි ඒකකය: දත්ත"
-  cspunit5_name: "(පැරණි) ඒකකය 5: PT ගවේෂණය කර තනන්න"
-  cspunit6_name: 'පසු-AP: යෙදුම් තුළ දත්ත සංචිත'
-  csp1-2017_name: 'පාඩම් අංක 1: අන්තර්ජාලය'
-  csp2-2017_name: '2වන ඒකකය: අංකිත තොරතුරු'
-  csp3-2017_name: '3 වැනි ඒකකය: ඇල්ගොරිතම සහ ක්‍රමලේඛනය'
-  csp1-2018_name: 'පාඩම් අංක 1: අන්තර්ජාලය'
-  csp2-2018_name: '2වන ඒකකය: අංකිත තොරතුරු'
-  csp3-2018_name: '3 වැනි ඒකකය: ඇල්ගොරිතම සහ ක්‍රමලේඛනය'
-  csp1_name: 'පාඩම් අංක 1: අන්තර්ජාලය'
-  csp2_name: '2වන ඒකකය: අංකිත තොරතුරු'
-  csp3_name: '3 වැනි ඒකකය: ඇල්ගොරිතම සහ ක්‍රමලේඛනය'
-  cspassessment_name: පූර්ණ පරීක්ෂණය - 50 ප්රශ්න
-  cspexam1-mWU7ilDYM9_name: පරීක්ෂණය 1 වැනි කොටස - ප්‍රශ්න 25
-  cspexam2-AKwgAh1ac5_name: පරීක්ෂණය 2 වැනි කොටස - ප්‍රශ්න 25
-  cspunit3_gradelevel: 9 ශ්‍රේණියේ සිට 12 ශ්‍රේණිය දක්වා
+  accelerated_name: කඩිනම් පාඨමාලා
   20-hour_name: කඩිනම් පාඨමාලා
   algebra_name: පරිගණක විද්‍යාවේ වීජ ගණිතය
   AlgebraA_name: වීජ ගණිතයේ පරිගණක විද්‍යා පාඨමාලාව A
@@ -1064,12 +1047,6 @@ si-LK:
   iceage_name: Ice Age
   minecraft_name: Minecraft
   starwarsblocks_name: Star Wars (කොටස්)
-  math_category_name: ගණිත
-  hoc_category_name: Hour of Code
-  csf_category_name: පරිගණක විද්‍යාවේ මූලිකාංග
-  csp_category_name: "'15-'16 පරිගණක විද්‍යාවේ මූලිකාංග"
-  csp17_category_name: "'16-'17 පරිගණක විද්‍යාවේ මූලිකාංග"
-  cspexams_category_name: පරිගණක විද්‍යාවේ මූලිකාංග පුහුණු පරික්ශණය
   applab_name: මෘදුකාංග විද්‍යාගාරය
   applab_gradelevel: වයස් 13+
   applab_shortdescription_congrats: App Lab යනු වැඩ සටහන් සම්පාදක පරිසරයකි. එය භාවිතා
@@ -1134,6 +1111,8 @@ si-LK:
   coursee-2017_gradelevel: වයස 8-12
   coursed-2018_gradelevel: 8 ශ්‍රේණියේ සිට ඉහලට
   coursee-2018_gradelevel: වයස 8-12
+  coursed-2019_gradelevel: 8 ශ්‍රේණියේ සිට ඉහලට
+  coursee-2019_gradelevel: වයස 8-12
   accelerated_gradelevel: වයස අවුරුදු 10-18
   codeorg_platformtext: නවීන බ්‍රවුසර, ස්මාර්ට් දුරකථන, ටැබ්ලට්
   codeintl_platformtext: නවීන බ්‍රවුසර, ස්මාර්ට් දුරකථන, ටැබ්ලට්
@@ -1765,7 +1744,6 @@ si-LK:
   header_project_gallery: ව්යාපෘති
   header_educate_hoc: Hour of Code
   header_stats: සංඛ්‍යාන
-  csp_name: "'16-'17 පරිගණක විද්‍යාවේ මූලිකාංග"
   user_header_label: ආයුබෝවන් %{username}
   user_header_team: කණ්ඩායම
   user_header_settings: මගේ ගිණුම

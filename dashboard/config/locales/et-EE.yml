@@ -524,7 +524,6 @@ et:
   pdf_download: Lae alla PDF-fail
   download_coming_soon: Allalaaditav tegevus tuleb varsti.
   video_coming_soon: Video tuleb varsti!
-  not_started: Õpilane pole seda taset veel proovinud.
   share_code:
     title: Klikka 'Run', et programm alustaks
     bounce_og_title: Tsekka mu Põrke mängu (Bounce Game)

@@ -2,72 +2,16 @@
 lt-LT:
   data:
     long_instructions:
-      2-3 Artist 3.4: Naudodamas naują peršokimo blokelį, gali padaryti taip, kad
-        menininkas judėtų nepiešdamas. Nubrėžk punktyrinę liniją naudodamas peršokimo
-        ir piešimo mygtukus.
       2-3 Artist 4: Padėk man užbaigti namą šiai katei.
-      2-3 Artist 9: Užbaik šį aitvarą
-      2-3 Artist Debugging 10: |-
-        Pliuso mygtukai yra per siauri.
-        Patarimas: Padaryk ji platesnį 10 pikselių
-      2-3 Artist Debugging 11: |-
-        Padėk man pabaigti šią gražią snaigę.
-        Kiek kartų turiu aš "kartoti", kad ją pabaigčiau?
-      2-3 Artist Debugging 2: |-
-        Kodas trims ūsams, kurį
-        dabar matai yra blogas. Patarimas: kiekvienas ūsas yra 75 pikselių ilgumo.
-        Pataisyk šį kodą, kad nupieštum ūsus.
-      2-3 Artist Debugging 3: |-
-        Mano valtyje yra skylė! Ar galėtum ją sutaisyti
-        pakeisdamas linijos kryptį? Patarimas: paskutinis kampas buvo 15 laipsnių.
-      2-3 Artist Debugging 5: |-
-        Kodas kojai ir pėdai, kurią tu matai
-        yra blogas. Patarimas: pėda yra per ilga, mums derėtų ištrinti žingsnį
-      2-3 Artist Debugging 6: |-
-        Man atrodo, kad aš sėdžiu ant kėdės,
-        kuriai trūksta kojos. Pakeisk blokus, kad nupieštum koją.
-      2-3 Artist Debugging 7: |-
-        Atrodo, kad šiame kode C raidė yra nupiešta priešingai.
-        Ar gali ją pakeisti, kad ji būtų panaši į C?
-      2-3 Artist Debugging 8: |-
-        Mano suktukas nėra pabaigtas. Kiek kartų
-        aš turiu kartoti, kad jį pabaigčiau?
-      2-3 Artist Debugging 9: |-
-        Kodas šiam kotui yra neteisingas.
-        Patarimas: Kampas yra 60 laipsnių
+      2-3 Artist 9 NEW: Užbaik šį aitvarą
       2-3 Artist Free Play: O dabar gali nupiešti ką tik nori.
-      2-3 Artist Functions 11.5: Štai tau ta pati komanda „nubrėžk šešiakampį“. Kas
-        nutiks, jei kiekvieną kartą pasisuksi po 60 laipsnių, nubrėžęs kiekvieną šešiakampį?
-      2-3 Artist Functions 12: 'Sudėtinės komandos labai praverčia, jei norime nupiešti
-        daug sudėtingų objektų. Panaudok komandą „nupiešk gėlę“ ir užbaik piešinį.
-        (Sufleris: tarp kiekvienos gėlės yra 100 pikselių atstumai)  '
-      2-3 Artist Functions 2: Sudėtinės komandos (arba funkcijos) leidžia susikurti
-        naujus blokelius pačiam! Aš sukūriau komandą ir pavadinau ją „nubrėžk kvadratą“.
-        Ar gali nupiešti tuos pačius akinius naudodamas tą naują komandą? Tarp kvadratų
-        yra 75 pikselių atstumas.
-      2-3 Artist Functions 3: Pataisyk komandą, kad piešiamo kvadrato kraštinės ilgis
-        būtų 115 ir nupiešk didesnius akinius. Atstumas tarp stiklų dabar yra 45 pikseliai.
-      2-3 Artist Functions 4: Panaudok kartojimo blokelį ir nupiešk tris kvadratus.
       2-3 Artist Nested Loops Free Play: Nupiešk ką nors įdomaus, naudodamas kartojimą
         kartojime.
-      2-3 Bee Conditionals 11: Rinkti nektarą, kur gėlės turi nektaro.
-      2-3 Bee Conditionals 15: Surink nektarą iš visų keturių gėlių.
-      4-5 Artist 2: Ar gali panaudodamas kartojimo blokelį nubrėžti kvadratą?
-      4-5 Artist 5: Kokį kampą reikėtų įrašyti?
-      4-5 Artist 6: Štai lygiakraštis trikampis. Kiekvienas jo kampas yra po 60 laipsnių,
-        o kiekviena jo kraštinė po 200 pikselių. Užbaik piešinį.
-      4-5 Artist Patterns Free Play: Pamėgink sukurti savo ornamentą!
-      4-5 Bee Nested Loops Assessment 1: Iššūkis – surink visą nektarą ir pagamink
-        medų visuose koriuose naudodamas kartojimą.
-      4-5 Maze Conditionals 7: Pamėginkime dar kartą – užduotis labai panaši, bet
-        šį kartą saugokis piktų gėlių!
-      4-5 Maze Conditionals 8: Blokelis „jei-kitu atveju“ tikrina sąlygą, o po to
-        atlieka vieną ARBA kitą veiksmą. Padėk man pasiekti saulėgrąžą, panaudodamas
-        šį blokelį.
-      4-5 Maze Conditionals 9: Pamėgink dar kartą panaudoti blokelį „jei-kitu atveju“.
-        Ar sugebėsi išspręsti užduotį iš pirmo karto?
       4-5 Maze Conditionals Assessment 1: "**Užduotis:** Panaudok blokelius „kartok
         kol...“ ir „jei...“. Naudojant juos reikės žymiai mažiau blokelių."
+      4-5 Nested Loops 1: 'Užbaik kodą, kad gautum šiuos trikampius. Pirmasis trikampis
+        tau jau yra duotas. Patarimas: apskritimo ilgis yra 360 laipsnių. Įsivaizduok,
+        kad šie trikampiai yra apskritimo viduje.'
       4-5 Nested Loops 3: Nupiešk saulę, sukurdama(-s) kartojimą kartojime.
       4-5 Nested Loops 5: Įdėk duotą kodą į kartojimą, kad gautumei malūnėlį.
       4-5 Nested Loops 7: "Pakartok šį kodą 10 kartų. \n\nPo kiek laipsnių reikia
@@ -75,14 +19,7 @@ lt-LT:
       4-5 Nested Loops 8: "Pakartok šį kodą 6 kartus. \n\nPo kiek laipsnių reikia
         pasisukti kiekviename kartojime? "
       4-5 Nested Loops 9: Nupiešk krokodilo dantis!
-      K-1 Bee Loops 2: Judėjimui panaudok kartojimo blokelį, o po to paimk nektarą
-        ir pagamink medų!
-      K-1 Bee Loops 4: Naudok kartojimą nektaro gavimui, medaus gamybai ir judėjimui!
-      K-1 Bee Loops 6: Naudok kartojimą nektaro gavimui, medaus gamybai ir judėjimui!
-      K-1 Maze Loops 11: Nuvesk mane pas kiaulę! Naudok kartojimo blokelį.
-      K-1 Maze Loops 12: Nuvesk mane pas kiaulę! Naudok kartojimo blokelį.
       K-1 Maze Loops 2: Naudok kartojimo blokelį ir nuvesk mane pas kiaulę!
-      K-1 Maze Loops 8: Nuvesk mane pas kiaulę! Naudok kartojimo blokelį.
       Overworld Move to Sheep: Pridėk antrą "ženk į priekį" komandą, kad pasiektum
         avį.
       Overworld Move to Sheep_2019: Pridėk antrą "ženk į priekį" komandą, kad pasiektum

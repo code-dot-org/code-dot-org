@@ -461,3 +461,15 @@ ms:
           stages:
             Graph Paper Programming:
               name: Pengaturcaraan kertas graf
+        csd2-pilot:
+          stages:
+            Lists:
+              name: Senarai
+        csd3-pilot:
+          stages:
+            Variables:
+              name: Pembolehubah
+            Conditionals:
+              name: Bersyarat
+            Functions:
+              name: Fungsi

@@ -1260,34 +1260,10 @@ it-IT:
   coursef-2018_name: Corso F (2018)
   express-2018_name: Corso Rapido
   pre-express-2018_name: Corso Rapido pre-scolare (2018)
-  cspunit2_name: Princìpi dell'Informatica - Unità 2
-  cspunit3_name: Princìpi dell'Informatica - Unità 3
-  cspunit4_name: Princìpi dell'Informatica - Unità 4
-  cspunit5_name: Princìpi dell'Informatica - Unità 5
-  cspunit6_name: 'Dopo il corso Princìpi dell''Informatica: uso di database nelle
-    App'
-  csd5_name: 'Unit 5: Dati e società'
-  csd6_name: 'Unit 6: Informatica applicata'
-  csd5-2017_name: 'Unit 5: Dati e società'
-  csd6-2017_name: 'Unit 6: Informatica applicata'
-  csd5-2018_name: 'Unit 5: Dati e società'
-  csd6-2018_name: 'Unit 6: Informatica applicata'
-  csp1-2017_name: 'Unità 1: Internet'
-  csp2-2017_name: 'Unità 2: Informazioni digitali'
-  csppostap-2017_name: 'Messaggio AP: Database in Apps'
-  csp1-2018_name: 'Unità 1: Internet'
-  csp2-2018_name: 'Unità 2: Informazioni digitali'
-  csppostap-2018_name: 'Messaggio AP: Database in Apps'
-  csp1_name: 'Unità 1: Internet'
-  csp2_name: 'Unità 2: Informazioni digitali'
-  csp3-a_name: 'Unità 3: Introduzione alla programmazione (versione A)'
-  csp3-research-mxghyt_name: 'Unità 3: Introduzione alla programmazione (Obiettivi)'
-  csppostap_name: 'Messaggio AP: Database in Apps'
-  csp-post-survey_name: Sondaggio per studenti che hanno partecipato al corso
-  cspassessment_name: Test completo - 50 domande
-  cspexam1-mWU7ilDYM9_name: Prova parte 1-25 domande
-  cspexam2-AKwgAh1ac5_name: Prova parte 2-25 domande
-  cspunit3_gradelevel: Da 14 a 17 anni
+  pre-express-2019_name: Corso Rapido pre-scolare (2019)
+  accelerated_name: Corso rapido
+  express_name: Corso Rapido
+  pre-express_name: Corso Rapido pre-scolare
   20-hour_name: Corso rapido
   algebra_name: L'informatica in algebra
   AlgebraA_name: Informatica nell'algebra Corso A
@@ -1299,17 +1275,6 @@ it-IT:
   starwarsblocks_name: Guerre Stellari (Blocchi)
   hoc-encryption_name: Crittografia semplice
   text-compression_name: Compressione del testo
-  math_category_name: Matematica
-  hoc_category_name: L'Ora del Codice
-  csf_category_name: Corsi base
-  csf_2017_category_name: Fondamenti di Informatica (2017)
-  csf_2018_category_name: Fondamenti di Informatica (2018)
-  csf_international_category_name: Fondamenti di Informatica (in Italiano)
-  csf2_draft_category_name: 'Corsi A - F: In fase di sviluppo'
-  csp_category_name: Princìpi dell'Informatica (versione 2015-16)
-  csp17_category_name: CS Principles ('17-'18)
-  csp_2018_category_name: Principi di informatica ('18-'19)
-  cspexams_category_name: Prova pratica di principi d'informatica
   applab_name: Sviluppo App
   gamelab_name: Sviluppo Giochi
   basketball_name: Crea una partita di basket
@@ -1389,6 +1354,12 @@ it-IT:
   coursed-2018_gradelevel: Da 7 a 11 anni
   coursee-2018_gradelevel: Da 8 a 12 anni
   coursef-2018_gradelevel: Da 9 a 13 anni
+  coursea-2019_gradelevel: Da 4 a 7 anni
+  courseb-2019_gradelevel: Da 5 a 8 anni
+  coursec-2019_gradelevel: Da 6 a 10 anni
+  coursed-2019_gradelevel: Da 7 a 11 anni
+  coursee-2019_gradelevel: Da 8 a 12 anni
+  coursef-2019_gradelevel: Da 9 a 13 anni
   accelerated_gradelevel: Da 10 anni in su (dopo il Corso 3)
   codeorg_platformtext: Browser moderni, smartphone, tablet
   codeintl_platformtext: Browser moderni, smartphone, tablet
@@ -1565,6 +1536,19 @@ it-IT:
   coursee-2018_shortdescription_congrats: Vengono ripresi brevemente i concetti dei
     corsi C e D e viene aggiunto il concetto di funzione.
   coursef-2018_shortdescription_congrats: Impara tutti i concetti dei corsi di fondamenti
+    di informatica e crea disegni, storie o giochi interattivi.
+  coursea-2019_shortdescription_congrats: Introduzione all'informatica per bambini
+    che non leggono ancora.
+  courseb-2019_shortdescription_congrats: Introduzione all'informatica per bambini
+    che stanno appena imparando a leggere. (Simile al Corso A, ma con maggior varietà
+    per bambini leggermente più grandi.)
+  coursec-2019_shortdescription_congrats: Impara le basi dell'informatica e crea disegni,
+    storie animate o giochi interattivi.
+  coursed-2019_shortdescription_congrats: Vengono ripresi brevemente i concetti del
+    corso C ed aggiunti algoritmi, cicli annidati, istruzioni condizioni e altro ancora.
+  coursee-2019_shortdescription_congrats: Vengono ripresi brevemente i concetti dei
+    corsi C e D e viene aggiunto il concetto di funzione.
+  coursef-2019_shortdescription_congrats: Impara tutti i concetti dei corsi di fondamenti
     di informatica e crea disegni, storie o giochi interattivi.
   codeorg_longdescription: Impara i concetti di base dell'informatica con la programmazione
     visuale. Questo è un corso divertente, illustrato da lezioni video di Bill Gates
@@ -2123,8 +2107,6 @@ it-IT:
   header_report_bug: Report Bug
   header_tutorials: Corsi
   header_documentation: Documentazione
-  csp_name: CS Principles
-  full_course_category_name: Corsi Avanzati
   user_header_label: Ciao %{username}
   user_header_team: Squadra
   user_header_my_projects: Collezione Privata
@@ -2332,7 +2314,7 @@ it-IT:
     tradizionale)
   hoc2018_dance_teacher_resources_tile2_description: Non sono necessari computer!
     Impara i concetti di programmazione creando tutti insieme una coreografia di ballo.
-  hoc2018_dance_teacher_resources_tile2_button: Attività Tradizionale
+  hoc2018_dance_teacher_resources_tile2_button: Attività tradizionale
   hoc2018_dance_featured_student_creations_title: Creazioni degli studenti consigliate
   hoc2018_dance_videos_section_heading: Cerca l'ispirazione
   hoc2018_dance_video_title_what_is_creativity: Cos'è la creatività?

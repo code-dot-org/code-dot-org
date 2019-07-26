@@ -78,7 +78,7 @@ it:
   courses_page:
     title_student: Impara l'informatica
     title_teacher: Insegna l'informatica
-  unplugged_activity: Attività Tradizionale
+  unplugged_activity: Attività tradizionale
   of: di
   more: DI PIÙ
   less: DI MENO
@@ -401,7 +401,7 @@ it:
       gamelab_jr: Sviluppo Giochi (versione provvisoria)
       gumball: Lo straordinario mondo di Gumball
       iceage: L'Era Glaciale
-      infinity: Infiniti
+      infinity: Infinito
       minecraft_adventurer: Un'avventura con Minecraft
       minecraft_aquatic: Minecraft Acquatico
       minecraft_designer: Minecraft
@@ -766,7 +766,7 @@ it:
   reference_area:
     title: Hai bisogno di aiuto?
     subtitle: Guarda questi video e suggerimenti
-    teacher: Vedi la soluzione
+    teacher: Vedi una soluzione
     teacher_no_solution: Smetti di vedere la soluzione
     auth_error: Non sei autorizzato a vedere la soluzione.
     submit: Aggiorna la posizione dell'Artista
@@ -807,7 +807,6 @@ it:
   pdf_download: Scarica il PDF
   download_coming_soon: La descrizione di questa attività è in corso di preparazione.
   video_coming_soon: Il video è in corso di preparazione!
-  not_started: Lo studente non ha provato questo esercizio.
   share_code:
     title: Clicca su "Esegui" per vedere il mio programma in azione
     bounce_og_title: Prova la mia versione del Ping-Pong
@@ -1220,7 +1219,7 @@ it:
     csf_nested_loops: Cicli annidati
     csf_functions: Funzioni
     csf_variables: Variabili
-    csf_for_loops: Cicli con Contatore
+    csf_for_loops: Cicli con contatore
     csf_internet: Internet
     csf_warmup: Riscaldamento
     csd1_1: 'Capitolo 1: il Problem Solving'

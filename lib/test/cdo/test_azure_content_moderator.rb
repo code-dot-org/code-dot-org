@@ -6,10 +6,6 @@ require 'open-uri'
 class AzureContentModeratorTest < Minitest::Test
   include SetupTest
 
-  # Comment these out when regenerating VCR file.
-  CDO.azure_content_moderation_endpoint = 'https://region.api.cognitive.microsoft.com/contentmoderator'
-  CDO.azure_content_moderation_key = 'fake_azure_api_key'
-
   # Do additional VCR configuration so as to prevent the api key from being logged to the
   # YML cassette, instead replacing it with a placeholder string.
   VCR.configure do |c|
@@ -18,6 +14,9 @@ class AzureContentModeratorTest < Minitest::Test
   end
 
   def setup
+    # Comment these out when regenerating VCR file.
+    CDO.stubs(azure_content_moderation_endpoint: 'https://region.api.cognitive.microsoft.com/contentmoderator')
+    CDO.stubs(azure_content_moderation_key: 'fake_azure_api_key')
     @acm = AzureContentModerator.new(
       endpoint: CDO.azure_content_moderation_endpoint,
       api_key: CDO.azure_content_moderation_key

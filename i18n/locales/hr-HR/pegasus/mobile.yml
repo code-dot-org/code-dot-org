@@ -541,11 +541,10 @@
   course2_name: "Tečaj 2"
   course3_name: "Tečaj 3"
   course4_name: "Tečaj 4"
+  accelerated_name: "Ubrzani tečaj"
   20-hour_name: Ubrzani tečaj
   classicmaze_name: "Klasični labirint"
   minecraft_name: "Minecraft"
-  math_category_name: "Matematika"
-  hoc_category_name: "Hour of Code"
   applab_name: "Laboratorij aplikacija"
   codeorg_gradelevel: "Dob 4-104"
   codeintl_gradelevel: "Dob 4-104"
@@ -598,6 +597,7 @@
   coursee_gradelevel: "Dob 8-12"
   coursee-2017_gradelevel: Dob 8-12
   coursee-2018_gradelevel: Dob 8-12
+  coursee-2019_gradelevel: Dob 8-12
   accelerated_gradelevel: "Dob 10+ (nakon Tečaja 3)"
   codeorg_platformtext: "Suvremeni preglednici, mobiteli, tableti"
   codeintl_platformtext: "Suvremeni preglednici, mobiteli, tableti"

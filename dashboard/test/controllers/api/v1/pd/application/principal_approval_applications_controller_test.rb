@@ -5,6 +5,8 @@ module Api::V1::Pd::Application
     include Pd::Application::ActiveApplicationModels
     include Pd::Application::ApplicationConstants
 
+    self.use_transactional_test_case = true
+
     setup_all do
       @teacher_application = create TEACHER_APPLICATION_FACTORY, application_guid: SecureRandom.uuid
       @test_params = {

@@ -565,7 +565,8 @@ module AWS
         object_exists = Aws::S3::Client.new.head_object(bucket: S3_BUCKET, key: key) rescue nil
         unless object_exists
           CDO.log.info("Uploading Lambda zip package to S3 (#{code_zip.length} bytes)...")
-          AWS::S3.upload_to_bucket(S3_BUCKET, key, code_zip, no_random: true)
+          Aws::S3::Client.new(http_read_timeout: 30).
+              put_object({bucket: S3_BUCKET, key: key, body: code_zip})
         end
         {
           S3Bucket: S3_BUCKET,

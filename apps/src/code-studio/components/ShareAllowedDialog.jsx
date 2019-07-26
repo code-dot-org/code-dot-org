@@ -10,7 +10,7 @@ import AbuseError from './AbuseError';
 import SendToPhone from './SendToPhone';
 import color from '../../util/color';
 import * as applabConstants from '../../applab/constants';
-import * as gamelabConstants from '../../gamelab/constants';
+import * as gamelabConstants from '@cdo/apps/gamelab/constants';
 import {SongTitlesToArtistTwitterHandle} from '../dancePartySongArtistTags';
 import {hideShareDialog, unpublishProject} from './shareDialogRedux';
 import DownloadReplayVideoButton from './DownloadReplayVideoButton';
@@ -19,8 +19,6 @@ import PublishDialog from '../../templates/projects/publishDialog/PublishDialog'
 import {createHiddenPrintWindow} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
-import PublishLibraryDialog from './PublishLibraryDialog';
-import experiments from '@cdo/apps/util/experiments';
 
 function recordShare(type) {
   if (!window.dashboard) {
@@ -500,9 +498,6 @@ class ShareAllowedDialog extends React.Component {
           )}
         </BaseDialog>
         <PublishDialog />
-        {experiments.isEnabled('student-libraries') && (
-          <PublishLibraryDialog channelId={this.props.channelId} />
-        )}
       </div>
     );
   }

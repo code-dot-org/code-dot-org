@@ -1888,3 +1888,18 @@ uk:
           stages:
             Graph Paper Programming:
               name: Програмування по клітинках
+        csd2-pilot:
+          stages:
+            Lists:
+              name: Списки
+        csd3-pilot:
+          description_short: Програмування
+          stages:
+            Variables:
+              name: змінні
+            Conditionals:
+              name: Умови
+            Velocity:
+              name: Швидкість
+            Functions:
+              name: функції

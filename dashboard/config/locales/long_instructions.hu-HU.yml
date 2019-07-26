@@ -2,154 +2,24 @@
 hu-HU:
   data:
     long_instructions:
-      2-3 Artist 1 new: Szia, én egy művész vagyok. Ha kódot írsz nekem, akkor szinte
-        bármit le tudok rajzolni. Használj fel néhány blokkot, hogy a szürke vonalakat
-        követve rajzoljak. (Minden vonal 100 pixel hosszú.)
-      2-3 Artist 11: 'Készítsd el a stoptábla keretét egy olyan nyolcszög megrajzolásával,
-        aminek minden oldala 100 pixel hosszú. '
-      2-3 Artist 12: "Hozzon létre egy kört, hogy befejezze a szemgolyó! \\\r \\\r
-        ha a művész 1 fokot fordul minden körben, hányszor kell ismételnie a kódot,
-        hogy egy kört rajzoljon? "
-      2-3 Artist 2 new: Ebben a házban van egy félig kész fal. Minden oldal 100 hosszú,
-        de a félig kész fal csak 50. Fejezd be a falat.
-      2-3 Artist 3.4: |-
-        Az "ugrás" blokk vonalhúzás nélkül mozgatja a művészt.
-        Rajzolj szaggatott vonalat az "ugrás" és a "menj" blokkok segítségével.
-      2-3 Artist 3new: A vörös kalap 100 pixel magas. Fejezd be a fekete kalapot,
-        ami 70 pixellel alacsonyabb. A fekete kalap szélessége 50 pixel
       2-3 Artist 4: Segíts befejezni a cica házát!
-      2-3 Artist 6: "Erre a házra kell egy tető! Rajzold meg a háromszöget.  \\\r
-        \\\r Tipp: mindhárom oldal azonos hosszúságú. \\\r \\\r <img src=\"https://images.code.org/8b10073fd1a7fe53b4da33ec2229894b-image-1468018903891.gif\"
-        width=\"300\"/>"
-      2-3 Artist 9: Fejezd be a sárkányt
-      2-3 Artist Assessment 1: 'Értékelés: Fejezd be az utolsó fog megrajzolását:
-        25 pixel széles és 25 pixel magas.'
-      2-3 Artist Debugging 1: "Ennek a kalapnak csak 50 pixel szélesnek kell lennie.
-        \\\r Ki tudod javítani? \\\r \\\r <br/> \\\r"
-      2-3 Artist Debugging 10: "Az iránytópad a játékban túl szűk. \\\r \\\r Ki tudod
-        szélesíteni 10 képponttal? \\\r \\\r először próbál a kódot lefuttatni, hogy
-        lásd mi lehet rossz."
-      2-3 Artist Debugging 11: Segíts befejeznem a csodálatos hópelyhemet. Hányszor
-        kell megismételnem a befejezéshez?
-      2-3 Artist Debugging 2: 'A három darukar rajzolásához írt kód láthatóan rossz.
-        Tipp: minden kar 75 pixel hosszú. Javítsd ki a kódot a darukarok megrajzolásához.'
-      2-3 Artist Debugging 3: 'A hajómon van egy lék! Meg tudod javítani a szakaszok
-        által bezárt szögek javításával? Tipp: az utolsó szögnél 15° az eltérés.'
-      2-3 Artist Debugging 5: "A kódot, a lábhoz és a talphoz rossz. \\\r \\\r Ki
-        tudod javítani?"
-      2-3 Artist Debugging 6: Úgy néz ki, egy olyan székre ültem, aminek hiányzik
-        az egyik lába. Szerkeszd össze a blokkokat egy székláb megrajzolásához.
-      2-3 Artist Debugging 7: Úgy tűnik, a C-t visszafelé rajzolja meg a kód. Meg
-        tudod csinálni, hogy igazi C-nek nézzen ki?
-      2-3 Artist Debugging 8: A szélkerekem nincs befejezve. Hányszor kell ismételnem
-        a befejezéshez?
-      2-3 Artist Debugging 9: Helytelen a szár kódja. Az eltérés 60°-os.
+      2-3 Artist 9 NEW: Fejezd be a sárkányt
       2-3 Artist Free Play: Szabad játék! Rajzolj, amit akarsz.
-      2-3 Artist Functions 11: Átneveztük a "rajzolj egy négyzetet" függvényt "rajzolj
-        egy hatszöget"-re, de még mindig négyzetet rajzol! Meg tudod változtatni a
-        "rajzolj egy hatszöget" függvényt úgy, hogy 50 pixeles oldalhosszúságú hatszöget
-        rajzoljon? Rajzold meg a képet az új függvénnyel!
-      2-3 Artist Functions 11.5: Itt van ugyanaz a "Rajzolj egy hatszöget" függvény.
-        Mi történik, ha minden ismétlésnél csak 60 fokkal fordulnál el?
-      2-3 Artist Functions 12: 'A függvények nagyszerűen használhatók összetett dolgok
-        többszöri megrajzolására. Fel tudod használni a "rajzolj egy virágot" függvényt  az
-        egész láda beültetésére? (Tipp: A növények 100 pixeles távolságban állnak
-        egymástól.)'
-      2-3 Artist Functions 2: A függvények segítségével új blokkokat határozhatsz
-        meg! A "rajzoljon egy négyzetet" függvény megalkotásához belehúztuk a szükséges
-        blokkokat. Fel tudod használni a "rajzoljon egy négyzetet" függvényt szemüveg
-        készítéséhez? A négyzetek 75 pixel távolságra vannak egymástól.
-      2-3 Artist Functions 3: Módosítsd a függvényt, hogy 115 pixel oldalú négyzetet
-        rajzolj, és nagyobb legyen a szemüveg. A négyzetek most 45 pixel távolságra
-        vannak egymástól.
-      2-3 Artist Functions 4: Használd az "ismételd" blokkot a három négyzet megrajzolásához.
-      2-3 Artist Loops New 1: Rajzoljuk meg a robot fejét! Tudnál rajzolni egy négyzetet,
-        aminek az oldalai 100 pixel hosszúak
-      2-3 Artist Loops New 10: Most kössük össze ezt a sok V alakot! Rajzold őket
-        egy ciklusban!
-      2-3 Artist Loops New 12: 'Rajzold meg a gyémántot 100 pixel hosszú oldalakkal. '
-      2-3 Artist Loops New 13: Most rajzold le a gyémántot háromszor egy ciklusban.
-      2-3 Artist Loops New 15: "Most, rajzolj amit csak akarsz! \\\r <br/> <br/> \\\r
-        \\\r"
-      2-3 Artist Loops New 2: Itt van egy része annak a kódnak, amivel a négyzetet
-        rajzoltad. Mi történne, ha ezt a részt egy ismétlő elembe raknád, hogy megismétlődjön
-        4-szer?
-      2-3 Artist Loops New 9: Rajzolj egy egyszerű V betűt, aminek mind a két oldala
-        50 pixel hosszú, hogy elkészüljön az nyíl.
-      2-3 Artist Nested Loops 10: Ismételd a ciklust 12-szer, hogy elkészítsd a mintát.
-      2-3 Artist Nested Loops 11: Ismételd 4-szer a kódot, hogy elkészítsd a mintát.
-        Minden kör után fordulj 90 fokot.
-      2-3 Artist Nested Loops 12: Ismételd a ciklust 12-szer, hogy elkészítsd a mintát.
-      2-3 Artist Nested Loops 2: Ismételd a háromszög rajzolást 6-szor. Minden háromszög
-        után el kell fordulnod 60 fokot, mielőtt nekikezdesz a következő rajzolásának.
-      2-3 Artist Nested Loops 3: A háromszög rajzolását 12-szer kell ismételned ennek
-        a mintának a megrajzolásához. Oszd el a teljes körfordulat fokszámát (360)
-        a rajzolni kívánt formák számával (12), hogy kiszámold, hány fokot kell fordulni
-        az egyes formák rajzolása után.
-      2-3 Artist Nested Loops 4: 'Ismételd 12 alkalommal a gyémánt rajzolást a virág
-        megrajzolásához. Tipp: a 12 gyémánt hasonló, mint a korábban rajzolt 12 háromszög
-        - mennyit kell fordulni egy-egy forma megrajzolása után?'
-      2-3 Artist Nested Loops 5: Rajzold meg ennek az épületnek az ablakait egymásba
-        ágyazott ciklusokkal. Az alakok oldalai 20 pixel szélesek, és 20 pixel távolságra
-        vannak egymástól.
-      2-3 Artist Nested Loops 7: Ismételd 10-szer ezt a háromszöget a Nap megrajzolásához.
-        Minden háromszög után el kell fordulnod. Kitalálhatod, hány fokkal kell elfordulni,
-        ha elosztod a teljes fordulat fokszámát a Napot alkotó formák számával.
-      2-3 Artist Nested Loops 8: Most rajzoljunk a képre füvet. A fűcsomók 50 képpont
-        távolságra vannak egymástól.
-      2-3 Artist Nested Loops 9: A kép egy virág rajzolásával lesz teljes. Ismételd
-        a gyémánt rajzolását 12-szer, hogy megrajzold a virágot.
+      2-3 Artist Nested Loops 10: Ismételd a ciklust 12-szer, hogy elkészítsd a mintát!
+      2-3 Artist Nested Loops 12: Ismételd a kódot 12-szer hogy elkészítsd a köröket.
       2-3 Artist Nested Loops Free Play: Szabad játék! Rajzolj valami izgalmasat egymásba
         ágyazott ciklusokkal!
-      2-3 Bee Conditionals 11: Gyűjts nektárt azokból a virágokból, amelyekben van
-        nektár.
-      2-3 Bee Conditionals 13: 'Gyűjts nektárt és készíts mézet! Tipp: mi történik,
-        ha a piros virágra alkalmazod a  "ha nektár" feltételt? Meg tudod csinálni
-        ezt a feladatot egy ciklussal?'
-      2-3 Bee Conditionals 15: Mind a négy virágból gyűjts nektárt.
-      2-3 Bee Conditionals 3: Segíts nekem nektárt gyűjteni a virágokból és mézet
-        készíteni. Használj ciklust.
-      2-3 Bee Debugging 3: Ezek a blokkok igazán bogarasak. Javítsd ki a kódot, hogy
-        összegyűjtsük az összes nektárt és elkészítsük az összes mézet.
-      2-3 Bee Debugging 6: Ezek a blokkok igazán bogarasak. Javítsd ki a kódot, hogy
-        összegyűjtsük az összes nektárt és elkészítsük az összes mézet.
-      2-3 Bee Debugging 9: Ezek a blokkok igazán bogarasak. Javítsd ki a kódot, hogy
-        összegyűjtsük az összes nektárt és elkészítsük az összes mézet.
-      2-3 Bee Functions 10: A lila virágokban 1 vagy 0 nektár van. Készíts olyan függvényt,
-        amely csak azokból a virágokból gyűjt nektárt, amelyekben van nektár.
-      2-3 Bee Functions 2: A függvények olyan kódot tartalmazó blokkok, amelyek elvégeznek
-        egy feladatot.  Használd a "gyűjts 5" függvényt, hogy egyszerre 5 egység nektárt
-        össze tudj gyűjteni. Ne felejts el ciklust használni és ügyelj a számlálóra
-        is.
-      2-3 Bee Functions 4: A "menj és gyűjts nektárt" függvény hatására a méh elfordul,
-        nektárt gyűjt, majd visszatér a kiindulási pontra. Használd a függvényt, hogy
-        az összes nektárt összegyűjtsd.
-      2-3 Bee Loops 1: Minden virág egy egység nektárt tartalmaz. Minden virágról
-        gyűjtsd be a nektárt.
       2-3 Bee Loops 3A: Fel tudsz használni egy ciklust a nektár összegyűjtéséhez?
-      2-3 Bee Loops 3B: Most használd az "ismételd" blokkot, hogy összegyűjtsük az
-        összes nektárt és elkészítsük az összes mézet.
-      2-3 Bee Loops 4A: Mi történik, ha 3 alkalommal ismételed ezt a sorozatot? Ne
-        felejtsd el elkészíteni a mézet a végén!
-      2-3 Bee Loops 8: A lila virágokról nem tudjuk, hogy mennyi nektárral rendelkeznek.
-        Használd az "amíg nektár" ciklust az összes nektár összegyűjtéséhez. Ez a
-        ciklus addig fog futni, amíg a megadott feltétel teljesül, jelen esetben amíg
-        a nektárok száma > 0.
       2-3 Maze 13: Hadd jussak el a malachoz! Egyszerre csak egy 'előrelépni' blokkot
         használhatsz!
-      2-3 Maze 15: Használd a ciklusokat, hogy kevesebb blokkal jussunk a malacig.
-      2-3 Maze Loops 18: Juttass el a napraforgóhoz!
       2-3 Maze Loops 19: |-
         Emeljük ezt egy másik szintre!
 
         Használj ismétléseket, hogy eljussak a napraforgóhoz a lehető legkevesebb blokk felhasználásával.
       2-3 Maze Loops Assessment 1: 'Értékelés: juttass el a napraforgóhoz csak 5 blokk
         felhasználásával! '
-      4-5 Artist 1: Segíts befejezni a doboz rajzolását! (Minden vonal 300 képpont
-        hosszú.)
       4-5 Artist 11: Rajzold meg a zöld vonalakat! A vonalak 300 képpont hosszúak
         és 15 képpont távolságra vannak egymástól.
-      4-5 Artist 2: Megtudnád adni ciklussal a kódot, hogy kitöltsd a négyzetet?
       4-5 Artist 3: "Ennek a téglalap alakú virágágyásnak a kerülete 600 képpont.
         A hosszabbik oldala 200 képpont hosszú. \n\nRajzold meg a téglalapot a lehető
         legkevesebb blokk felhasználásával."
@@ -158,123 +28,133 @@ hu-HU:
         hogy kirajzolódjon a teljes ábra!
       4-5 Artist 4: "Hány fokos a kör? \n\nIsmételd a blokkokat hogy elkészüljön a
         színes kör!"
-      4-5 Artist 5: Milyen szöget használsz?
-      4-5 Artist 6: Az egyenlő oldalú háromszög szögei 60, 60 és 60 fokosak. Minden
-        oldal 200 képpont hosszú. Készítsd el a rajzot!
       4-5 Artist 7: "A derékszögű háromszög szögei 30, 60 és 90 fokosak. A ferde oldal
         hossza kétszer annyi, mint a 100 képpontos magasság. \n\nKészítsd el a rajzot!"
-      4-5 Artist 8: "A futballpálya felezővonala merőleges az oldalvonalakra. A pálya
-        kerülete 800 képpont és a hossza 240 képpont. Milyen széles? \n\nRajzold meg
-        a határokat és a felezővonalat!"
       4-5 Artist 9: "Rajzold meg a másik oldalát is, hogy szimmetrikus legyen a rajz!
         \nA háromszögek egyenlő oldalúak, oldalaik 50 képpont hosszúak."
       4-5 Artist Assessment 1: 'Értékelés: használj ciklust egy egyenlő oldalú háromszög
         rajzolásához! Minden oldal 300 képpont hosszú.'
       4-5 Artist Free Draw 1: Szabadon rajzolhatsz! Rajzolj bármit, amihez kedved
         van.
-      4-5 Artist Patterns 1: Tudsz négyzetet rajzolni egy ciklus segítségével? Minden
-        oldala legyen 20 pixeles.
       4-5 Artist Patterns 10: 'Ez a kód két sor hatszöget rajzol – ismételd meg az
         egészet négyszer, hogy egy teljes méhsejtet rajzolj. Tipp: Vissza kell ugranod
         120 pixelt a legkülső ciklusban, hogy a művész ne menjen ki a képernyőből.'
       4-5 Artist Patterns 11: Hányszor kell megismételned a gyémántot, hogy a virágot
         lerajzold?
-      4-5 Artist Patterns 12: Hogyha lemásolod a ciklust és balra fordulsz jobb helyett,
-        mi történik? Tudod úgy ismételni, hogy ezt a hullámot rajzolja le?
-      4-5 Artist Patterns 13: Most ismételjük a ciklust négyszer, hogy elkészüljön
-        ez a képkeret. Figyelj a sarkokra - nem fordulhatsz csak úgy 90 fokot! Ha
-        egy 3 fokos fordulatot 60-szor ismételve egy félkört kapunk, melyik blokkal
-        kapunk a sarkokhoz egy negyed kört?
       4-5 Artist Patterns 2: Ha egy ciklust egy másik ciklusba helyezünk, azt beágyazott
         ciklusnak hívják. Mit kell a külső ciklushoz adni, hogy mind a 15 négyzet
         egy sorba kerüljön?
-      4-5 Artist Patterns 3: |-
-        Most menjünk egy szinttel mélyebbre! Már beágyaztuk az egész kódblokkot egy másik ciklusba, de a
-        művészt vissza kell helyezned, hogy megrajzold a következő vonalat. Melyik blokkot kell a külső ciklus végére
-        helyezned a teljes rács megrajzolásához?
-      4-5 Artist Patterns 8: Használj ciklust egy 40 pixel hosszú oldalú hatszög rajzolásához.
-        A fordulatok 60 fokosak.
-      4-5 Artist Patterns 9: 'Ismételd ezt a kódot 3-szor, hogy egy teljes sort rajzolj.
-        Tipp: minden hatszög 80 pixel széles.'
-      4-5 Artist Patterns Free Play: Szabad játék! Rajzolj amit szeretnél!
-      4-5 Bee Conditionals 2: A méh most csak nektárt akar gyűjteni. Emlékezz rá,
-        hogy nem minden elrejtett objektum virág, így először ellenőrizni kell, mert
-        csak virágról tud nektárt gyűjteni.
-      4-5 Bee Conditionals 5: Minden felhő alatt egy virágnak vagy egy lépnek kell
-        lennie. Használd a ha/különben blokkot nektár gyűjtésére, ha ott egy virág
-        van, különben készíts mézet (mert ez egy lép).
-      4-5 Bee Conditionals 6: Ennek a lila virágnak 3, 2 vagy 1 nektárja lehet. Itt
-        egy ha/különben blokk van kombinálva egy másik ha/különben blokkal,és így
-        létrejött egy ha, különben-ha, különben blokk. Egészítsd ki ezt a megoldást
-        úgy, hogy ismeretlen mennyiségű nektárt tudjon gyűjteni.
-      4-5 Bee Conditionals 7: Emlékezz, hogy a lila virágnak 3, 2 vagy 1 nektárja
-        lehet. Fejezd be a "check purple flower" (ellenőrizd a lila virágot) függvényt,
-        és használd az összes virág összes nektárjának összegyűjtésére.
-      4-5 Bee Conditionals 8: Írd meg a "check flower make honey" (ellenőrizd a virágot
-        és készíts mézet) függvényt.  A függvényednek ellenőriznie kell, hogy hány
-        nektárja van a lila virágnak, azokat összegyűjteni, előrelépni, és aztán mézet
-        készíteni.
-      4-5 Bee Conditionals Assessment 1: 'Értékelés: Ez a kód hibás. Egészítsd ki
-        a "get nectar or make honey" (gyűjts nektárt vagy készíts mézet) függvényt,
-        majd hívd meg futtatáskor, hogy összegyűjtse az összes nektárt és elkészítse
-        az összes mézet. Emlékezz, hogy a lila virágnak 3, 2 vagy 1 nektárja lehet.'
-      4-5 Bee Debugging 1: Ezek a blokkok zizik. Ki tudod javítani őket?
-      4-5 Bee Debugging 6: A lila virágban nem tudjuk, mennyi nektár van. Javítsd
-        a kódot, hogy összegyűjtsük az összes nektárt a virágból.
-      4-5 Bee Nested Loops 4: Gyűjtsd össze az összes nektárt az összes virágról,
-        és készíts mézet minden lépbe. Használj beágyazott ciklust!
-      4-5 Bee Nested Loops Assessment 1: Értékelés - Gyűjtsd össze az összes nektárt,
-        és készítsd el az összes mézet ciklusok használatával!
-      4-5 Maze 9: Készíts ciklust az "ismételd amíg" blokkal!
-      4-5 Maze Conditionals 1: Használd az "ismételd amíg" blokkot, hogy elvezesd
-        a zombit a napraforgóhoz.
-      4-5 Maze Conditionals 10: "Tudsz segíteni kijutni ebből az összetett útvesztőből
-        mindössze 3 blokk hozzáadásával?\\\r\n\\\r\nHa jól csinálod, akkor bármilyen
-        kacskaringós utat\n be tud járni annak hosszától függetlenül!"
-      4-5 Maze Conditionals 2: Használd az "ismételd amíg" blokkot, hogy elvezesd
-        a zombit a napraforgóhoz.
-      4-5 Maze Conditionals 3: 'Használd a "ha" blokkot, annak eldöntésére, hogy merre
-        kell fordulni. Tipp: már csak egy blokkot kell hozzátenni, de jegyezd meg,
-        hogy hogyan készítettük el ezt a kódot, hogy legközelebb neked is menjen.'
-      4-5 Maze Conditionals 4: OK, ez majdnem olyan mint az előző feladvány, de vissza
-        kell emlékezned, hogyan alkalmaztuk együtt a "ha" és az "ismételd amíg" blokkokat.
-      4-5 Maze Conditionals 5: Napraforgót akarok! Használj egy "ha" blokkot, hogy
-        elvigyél engem oda a lehető legkevesebb blokk felhasználásával.
-      4-5 Maze Conditionals 6: Napraforgót akarok! Használj egy "ha" blokkot, hogy
-        elvigyél engem oda a lehető legkevesebb blokk felhasználásával.
-      4-5 Maze Conditionals 7: Oké, csináljuk meg még egyszer gyakorlásképpen -  hasonló
-        a feladat, de vigyázz a húsevő növényekre!
-      4-5 Maze Conditionals 8: A "ha/különben" blokk ellenőriz egy állapotot, és aztán
-        tesz valamit VAGY más valamit. Próbáld ki ezt az új blokkot, és juttass el
-        engem a napraforgóhoz.
-      4-5 Maze Conditionals 9: Még egy gyakorlat a „ha-különben” blokkhoz. Meg tudod
-        csinálni elsőre?
-      4-5 Maze Conditionals Assessment 1: Használj fel egy "ismételd amíg" és egy
-        "ha/különben" blokkot, hogy olyan kevés blokkal juttass el engem a napraforgóhoz,
-        amennyivel csak lehetséges.
+      4-5 Artist Patterns 7: "Módosítsuk az előző feladvány kódját, és készítsünk
+        egy még bonyolultabb mintát.\nFigyeld meg, hogyan fedik most egymást a gyémántok.
+        Próbáld meg módosítani az \nelső \"ugrás hátra\" blokkot 100-ról 50-re (fele
+        olyan messze) - most milyen messze kell \nugrania a művésznek a második \"ugrás
+        hátra\" blokkban?"
       4-5 Nested Loops 12: Meg tudod rajzolni ezt a 36 darab háromszöget egymásba
         ágyazott ciklusok segítségével?
-      4-5 Nested Loops 3: "Készíts egy napocskát a kiindulási kód másik ciklusba ágyazásával.
-        Ezt hívják egymásba ágyazott ciklusnak.\\\r"
       4-5 Nested Loops 5: Ismételd meg a megadott kódot annyiszor, hogy szélmalmot
         készíts.
       4-5 Nested Loops 6: Meg tudod rajzolni a hatszöget a háromszög rajzoló kód ciklusba
         ágyazásával?
-      4-5 Nested Loops 7: 'Rajzold meg ezt az alakzatot tízszer. Hány fokot kell fordulnod
-        minden egyes ismétlésnél? (Tipp: Mennyi 360 osztva 10-zel?)'
-      4-5 Nested Loops 8: 'Ismételd meg azt az alakzatot hatszor. Hány fokot kell
-        elfordulnod ismétlésenként? (Tipp: Mennyi 360 osztva 6-tal?)'
       4-5 Nested Loops 9: Rajzold meg az alligátor alsó fogsorát!
-      4-5 While Loops 1: Vigyél el a lyukig, és töltsd fel két lapát földdel. Használd
-        a "töltsd fel" blokkot.
-      4-5 While Loops 2: Vigyél el a földkupachoz, és távolítsd el azt 5 lapátolással.
-        Használd a "távolítsd el" blokkot.
-      4-5 While Loops 3: 'Vigyél el a földkupacig, és távolítsd el az egészet, aztán
-        vigyél a lyukhoz, és töltsd azt fel teljesen. Tipp: A lehető legkevesebb blokkot
-        használd fel.'
-      4-5 While Loops 4: 'Hoppá! Egy tényleg mély lyukat találtam! Nem tudom, hány
-        lapátnyi földre van szükségem. Tudsz olyan programot írni, ami teljesen feltölti
-        a lyukat a föld színéig? Tipp: Most az "amíg van" ciklust használd.'
+      CSD Problem Solving Process Video: |-
+        ## megfontolandó kérdések
+
+        -   Hogyan követte az utolsó leckében a problémamegoldási folyamatot?
+        -   Hogyan használhatnád ezt a folyamatot a mindennapi életed problémájára?
+      CSD U2 HTML Adding Paragraphs pt 2_2019: |-
+        <div class="no-pullthrough" style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+        <details>
+
+        <summary>
+        <strong>Mi a bekezdés címke?</strong>
+        </summary>
+
+        A bekezdéseket a (`<p>`) nyitó és (`</p>`) záró címkékkel jelöljük. A HTML-bekezdések bármekkora szövegek lehetnek egy szótól sok-sok mondatig terjedhetnek. A bekezdések csoportosítják a mondatok halmazait, és egy kis üres helyet képeznek a szövegcsoport és a következő szövegcsoport között.
+
+        </details>
+        <details>
+        <summary>
+        <strong>Hogyan készíthetek több bekezdést?</strong>
+        </summary>
+
+        Íme egy példa több bekezdéscímkére egy sorban. Ezt a kódot a weboldalának body részébe kell írni.
+
+            <p>Ez egy bekezdés. Két mondatból áll.</p>
+            <p>Ez egy másik bekezdés.</p>
+
+        </details>
+        </div>
+
+        # Bekezdés címke használata
+
+        A `<p>` `</p>` címkék vagy a "bekezdés" kezdő- és végcímkék a szöveg körül helyezkednek el, jelezve, hogy ez egy bekezdés. A szöveget elhelyezve a bekezdés elejére és végére vonatkozó címkék közé a számítógép tudja, hogy ezt a szöveget másképpen kell kezelni, legtöbbször csak a másik szövegektől távolabb írva.
+
+        # Csináld ezt
+
+        -   Helyezzen az írott szövegbe legalább két különálló bekezdést úgy, hogy a <p> `és` </p> \`címkékkel körülveszi azt
+        -   Hasonlítsa össze az eredményeket egy szomszéddal. Mi változott a szöveg megjelenítésének módjában?
+      CSD U2 HTML Debug Paragraphs_2019: |-
+        <div class="no-pullthrough" style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px">
+        <details>
+
+        <summary>
+        <strong>Mi a bekezdés elem?</strong>
+        </summary>
+
+        A bekezdések egy nyitó( `<p>` ) és egy záró( `</p>` ) taggel vannak jelölve. A bekezdés a HTML-ben bármilyen hosszú szöveg lehet, akár egy szó vagy brutál sok mondat is. A bekezdések a szöveget tagolják, a bennük lévő szöveget egybefogják és a másik bekezdéstől egy kis térrel választják el.
+
+        </details>
+        <details>
+        <summary>
+        <strong>Why does HTML seem to work even when it's broken?</strong>
+
+        </summary>
+
+        A HTML-t a böngésződ olvassa és ebből generálja a weblapokat. Mivel az emberek szoktak hibázni a böngészőket úgy programozták, hogy próbálja azt megjeleníteni amit szeretnél. Néha a különböző böngészők egész eltérően találgatnak! Az egyetlen megoldás, hogy pontosan azt kapd amit szeretnél, ha megbizonyosodsz róla, hogy a tag-eket mindig pontosan használod.
+
+        </details>
+        <details>
+        <summary>
+        <strong>Miért vált néha rózsaszínbe a kód?</strong>
+        </summary>
+
+        A Web Lab programozott, hogy automatikusan felismerje a HTML hibáit. Amikor hibát észlel, ez a kód rózsaszínre vált. A hiba lehet a rózsaszín rész, vagy lehet, hogy valahol a rózsaszínű kód előtt. Gondoskodni kell a hibakeresésről.
+
+        </details>
+        </div>
+
+        # Hibakeresés: A hibás címkék rögzítése
+
+        Ez az egyszerű weboldal néhány olyan problémával rendelkezik, amelyek megakadályozzák a tartalom helyes megjelenítését. A problémákat azonosítani és javítani kell. Ezt a gyakorlatot a kód hibakeresésnek is nevezik.
+
+        # Csináld ezt
+
+        -   Javítsa a hibás kódot, hogy a weblap helyesen jelenjen meg
+        -   Hasonlítsa össze a szomszéddal a javított problémákat
+      CSD U2 Inspector Warm Up_2019: |-
+        <div class="no-pullthrough" style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px">
+        <details>
+
+        <summary>
+        <strong><span> Hogyan használhatom az Inspector eszközt? </span></strong>
+        </summary>
+
+        Az Inspector eszköz egy nagyszerű módja annak, hogy többet megtudjon a Web Lab ismeretlen kódjáról. Az Inspector eszköz bekapcsolásához kattintson a gombra.  <img src="https://images.code.org/188579d7c6e7645d0d2edd203a33bd63-image-1480361561351.31.56 PM.png" style="width:100px">. Tudni fogja, hogy az Inspector Tool be van kapcsolva, mert a gomb fehérre vált és azt látja: "Inspector: On". Miután bekapcsolta az Inspector eszközt, az előnézeti területen bárhová léphet, és a Web Lab kijelöli azt a kódot, amelyik az oldalt megjeleníti.
+
+        </details>
+        </div>
+
+        # HTML felfedezése
+
+        Ez egy weblap, amely HTML-ben van írva, a web nyelvén. Tudjon meg többet arról, hogyan működik, de először vizsgálja meg az Inspector Tool segítségével.
+
+        # Csináld ezt
+
+        -   Kattintson a Tipp "Hogyan használhatom az Inspector toolt?" a jobb oldalon, hogy megtudja, hogyan kell használni az Inspector eszközt.
+        -   Kövesse a weboldalon megjelenő utasításokat a weblap felfedezéséhez és beszélje meg a partnerével a működés elvét.
+      CSD U2 Pair Programming Video_2019: "## megfontolandó kérdések\n\n-   Miért
+        gondolod, hogy a profi programozók párprogramozást használnak? \n-   Szerinted
+        hogyan segít a párosprogramozás a programozásban?"
       CSD U2 create page: "# Hozd létre, és nevezd el az új oldaladat\\\r\n\n\\\r\nMielőtt\nelkezdesz
         kódolni, meg kell bizonyosodnod róla, hogy minden lap megvan,\namire szükséged
         lesz a projektben.\\\r\n\\\r\n\n# Tedd a következőt\\\r\n\n-   Hozz létre
@@ -314,10 +194,70 @@ hu-HU:
         A fejléc átismétléséhez keresd fel a\n    [9. szint 3. feladványát](/s/csd2/stage/9/puzzle/3).\\\r\n-
         \  Minden oldal esetén\n    bizonyosodj meg róla, hogy van lábléc, amely tartalmazza
         az oldal felhasználási feltételeit.\\\r\n    \\\r"
-      Course 4 Artist 1: Segíts nekem befejezni a dobozom rajzolását. (Minden vonal
-        200 pixel hosszú)
-      Course 4 Artist 13: Még mindig játszol? Itt egy üres vászon, amire azt rajzolsz,
-        amit csak akarsz!
+      CSD U5 binary video_2019: |-
+        # megfontolandó kérdések
+
+        -   Miért tárolják a számítógépen az összes adattípust számként?
+        -   Ha mindent számként tárol, hogyan tudja a számítógép a különbséget a számok, betűk, képek és hang között?
+      CSD U6 arrays video: "## megfontolandó kérdések\n\n-   Mikor lehet egy tömb
+        hasznosabb, mint egy változó? \n-   Miért kell mindig hozzárendelni egy tömböt
+        egy változóhoz? \n-   Hogyan érheti el a tömb elemeit?"
+      CSD U6 for loop led color_2019: |-
+        # Adj hozzá színeket
+
+        Most, hogy be- és kikapcsolhatod a LED-eket, itt az ideje, hogy hozzáadj néhány színt.
+
+        # Csináld ezt
+
+        Adj eseménykezelőt „gomb \\ _vörös” és a „gomb\\_zöld" -ekhez, amely a saját színére állítja LED-eket.
+      CSD U6 for loop led personalize_2019: "# Készítsd el a sajátodat\n\nGondolj
+        egy új gombra, amit használsz majd a projektben. Ne felejtsd el a többi LED-es
+        opciót, például az pulzálást és a villogást. \n\n# Csináld ezt\n\nAdj hozzá
+        egy új gombot a projekthez, és programozd azt választott viselkedésre."
+      CSD U6 functions paramters video_2019: "## megfontolandó kérdések\n\n-   Hogyan
+        teszik a paraméterek hasznosabbá a funkciókat? \n-   Honnan tudod, mikor kombinálhatsz
+        több funkciót egybe?"
+      CSD U6 hardware software video_2019: "## megfontolandó kérdések\n\n-   Mi a
+        különbség a hardver és a szoftver között? \n-   Mit csinál a számítógép operációs
+        rendszere?"
+      CSD U6 params modify clouds_2019: "# Felhők\n\nEz a program lehetővé teszi a
+        felhők mozgását, amikor a hangérzékelőt fújja, de nem fejeződött be. \n\n#
+        Csináld ezt\n\n-   Hozz létre egy új függvényt `moveCloud (name)`, amely bármilyen
+        felhőt mozgat. \n    -   (Tipp: majdnem ugyanazokat a kódokat fogjuk használni,
+        mint a `moveCloud0` függvény.)\n-   Hívja az új `moveCloud (name)` funkciót
+        az eseményblokkon belül, egyszer minden egyes felhőnévre. \n    -   (Tipp:
+        ez hasonlít ahhoz, hogy a \\`loopCloud (name)' függvényt többször is hívják.)"
+      CSD U6 setProperty hidden 2_2019: "# Mutatás / Elrejtés\n\nEz a riasztó alkalmazás
+        nem túl hasznos, ha nem bírja kikapcsolni a riasztást, miután bekapcsolta.
+        Javítsuk meg.\n\n# Csináld a következőt:\n\nHozzon létre egy második eseményt,
+        hogy megnézze a \"stopAlarmButton\" -t. Az esemény bekapcsolásakor: \n\n-
+        \  Állítsa az állapot szövegét \"OFF\" -ra \n-   A \"stopAlarmButton\" elrejtése
+        \n\n\\_segítség: \"rejtett\" egy logikai tulajdonság. Ha a \"false\" -t használjuk
+        a gomb megjelenítéséhez, mit kell használnod, hogy újra elrejtse? \\_"
+      CSD What Makes a Computer a Computer Video_2019: |-
+        ## gondolkodtató kérdések
+
+        -   Miben különböznek a számítógépek a korábbi gépektől?
+        -   Gondolj valamire, amit a számítógépen csinálsz. Milyen bemenet, kimenet, tárolás és feldolgozás történik?
+      'CSD: For Loop_2019': |-
+        ## megfontolandó kérdések
+
+        -   Melyek a programozáshoz használt ciklusok?
+        -   Hol találhatóak a ciklusok a kódodba?
+      CSDU4 Design Mode Video_2019: |-
+        ## megfontolandó kérdések
+
+        -   Hol lehet az App Labben megtervezni az alkalmazás felhasználói felületét?
+        -   Milyen típusú elemek adhatók hozzá az alkalmazáshoz?
+      CSDU6 making new arrays_2019: |-
+        # Új tömbök készítése
+
+        Most, hogy meg tudod változtatni a tömböket, itt az ideje, hogy készítsd el a sajátodat.
+
+        # Csináld ezt
+
+        -   Készíts egy új tömböt a kívánt célra. Különböző oktávok lehetnek, egy bizonyos kulcsban elrendezve, stb.
+        -   Ha a \*\* jobb \*\* gombot megnyomja, a zümmögő véletlenszerűen írjon egy jegyet a tömbbe.
       Course 4 Artist 2: Ciklusba tudnád rakni ezt a kód részletet, hogy a szürke
         négyzet kirajzolódjon? (Minden oldal 300 pixel hosszú)
       Course 4 Artist 3: Rendben, most próbáld meg kitalálni, hogy mi fog történni,
@@ -332,14 +272,6 @@ hu-HU:
         oldalú háromszög.
       Course 4 Artist 7: Az alábbi ismétlést ágyazd be egy másik ismétlésbe, hogy
         így rajzolj 10 elforgatott háromszöget.
-      Course 4 Artist 8: Rajzold meg ezt a napocskát egy ciklussal, ami 12 háromszöget
-        rajzol.
-      Course 4 Artist 8a: Emlékszel erre az alakzatra? Most megrajzolhatod úgy, hogy
-        nincsenek kiinduló blokkok!
-      Course 4 Artist For Loops 4: 'Mit módosítanál a tanultakon, hogy megrajzold
-        ezeket a négyzeteket? 15 képpont oldalhosszú a legkisebb, 300 képpont a legnagyobb
-        négyzet oldalhossza, és minden négyzet 15 képponttal hosszabb oldalakkal rendelkezik,
-        mint az előző. '
       Course 4 Artist For Loops 6a: Végezz el három kis módosítást az előző kódon,
         hogy ezt kapd!
       Course 4 Bee 1: "A méh nem tudja, mi van a felhő alatt! \nHasználd a 'ha' blokkot,
@@ -351,10 +283,6 @@ hu-HU:
       Course 4 Bee 3: Az ismeretlen objektum vagy virág vagy lép. Használd a ha/különben
         blokkot nektár gyűjtéséhez, ha ez virág, különben pedig készíts mézet (mert
         ez egy lép).
-      Course 4 Bee Params 1: Használd a "gyűjts 3 nektárt" függvényt, amelynek hatására
-        elfordulok, mozgok, nektárt gyűjtök és aztán visszatérek a kiindulási pontra.
-        Írj egy kódot a "gyűjts 3 nektárt" függvény felhasználásával, amellyel az
-        összes nektárt összegyűjtjük.
       Course 4 Play Lab Params 4: "Itt van egy járőr nevű függvény. \n\nSzerkeszd
         a \"járőr\" függvényt úgy, hogy a macska 400 képpontot fel, majd 400 képpontot
         lefelé menjen."
@@ -365,17 +293,6 @@ hu-HU:
         függvényhez. Használd a "sebesség beállítása" blokkot az új "sebesség" paraméterrel,
         és segíts a Pingvinnek elérni mindkét zászlót, mielőtt a többi szereplő akárcsak
         egyet is elérne.
-      Course 4 Play Lab Params 8: Használd az "amikor a szereplő megérinti" blokkot,
-        és csak akkor küldd vissza a Kutyát a bal felső sarokba, amikor a Kutya megérint
-        más szereplőket.
-      Course 4 Play Lab Vars 2: Az előző feladvány versenye nem volt igazán fair.
-        Változtasd meg a `dog_speed` változó értékét úgy, hogy biztosan több zászlót
-        szerezz meg, mint a Macska. Az nyer, aki előbb összegyűjt 10 zászlót!
-      Course 4 Play Labs For Loops 1: Mondassuk ki a kutyával az összes számot 1-től
-        100-ig. Használj egy `számold` (for) ciklust és a counter (számláló) blokkot,
-        és mondasd ki a változó aktuális értékét minden cikluslépésben.
-      Course 4 Playlab For Loops 5b: Módosítsd a `számold` (for) ciklusok lépésközét
-        úgy, hogy a két karakter ugyanazon a helyen álljon meg.
       CourseD_Dance_Party_01: |-
         _Induljon a buli és a tánc!_
 
@@ -462,7 +379,7 @@ hu-HU:
       CourseE_HOC 2018 Level_4: Hadd egye meg a tőkehalat a **delfin** ![](https://images.code.org/8c240fd4df4da2795ba7ca942b77a057-image-1538947890991.png).
         Ismétlő blokkal gyorsabban átjutsz az óceánon.
       CourseE_HOC 2018 Level_5: Valahol egy **nautiluszhéj** ![](https://images.code.org/2eb084fa0c718dee6ca4b6379381f735-image-1538698936660.png)
-        rejtőzik! Kutasd át az elsüllyedt hajót, hogy megleld a **ládát** \!\[  (<https://images.code.org/16cdd5779b38909d4bf47b29535c92b0-image-1538698950602.png>).
+        rejtőzik! Kutasd át az elsüllyedt hajót, hogy megleld a **ládát** !\[  (<https://images.code.org/16cdd5779b38909d4bf47b29535c92b0-image-1538698950602.png>).
       CourseE_HOC 2018 Level_6: Úgy tűnik, irtó hideg van odakint! A víz alatti romokhoz
         vezető utad során fogj egy **lazacot** ![](https://images.code.org/c66eadf25b3cdfe20bbfdc91e2c28c94-image-1538699000102.png).
       CourseE_HOC 2018 Level_7a: Megtaláltad a víz alatti romokat. Keress a homokkőben
@@ -617,7 +534,7 @@ hu-HU:
       HOC 2018 Level_4: Hadd egye meg a tőkehalat a **delfin** ![](https://images.code.org/8c240fd4df4da2795ba7ca942b77a057-image-1538947890991.png).
         Ismétlő blokkal gyorsabban átjutsz az óceánon.
       HOC 2018 Level_5: Valahol egy **nautiluszhéj** ![](https://images.code.org/2eb084fa0c718dee6ca4b6379381f735-image-1538698936660.png)
-        rejtőzik! Kutasd át az elsüllyedt hajót, hogy megleld a **ládát** \!\[  (<https://images.code.org/16cdd5779b38909d4bf47b29535c92b0-image-1538698950602.png>).
+        rejtőzik! Kutasd át az elsüllyedt hajót, hogy megleld a **ládát** !\[  (<https://images.code.org/16cdd5779b38909d4bf47b29535c92b0-image-1538698950602.png>).
       HOC 2018 Level_6: Úgy tűnik, irtó hideg van odakint! A víz alatti romokhoz vezető
         utad során fogj egy **lazacot** ![](https://images.code.org/c66eadf25b3cdfe20bbfdc91e2c28c94-image-1538699000102.png).
       HOC 2018 Level_7a: Megtaláltad a víz alatti romokat. Keress a homokkőben egy
@@ -630,17 +547,19 @@ hu-HU:
       HOC 2018 Level_9b: Elérted a zátonyt, most keresd meg a **Tenger szívét** ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png)
         ! A kék és vörös korall segítségével juss el a kincset tartalmazó **ládához**
         ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png).
-      K-1 Bee Loops 2: Használj egy ciklust, hogy nektárt gyűjts és mézet készíts!
-      K-1 Bee Loops 3: Használj ciklusokat, hogy nektárt gyűjts és mézet készíts!
-      K-1 Bee Loops 4: Használj ciklusokat, hogy nektárt gyűjts, mézet készíts, és
-        hogy mozogj!
+      Intro to Web Lab - Part 1_2019: |-
+        ## megfontolandó kérdés:
+
+        -   Melyek a Web Lab különböző részei, és mire használhatók?
+      Intro to Web Lab - Part 2_2019: "## megfontolandó kérdés:\n\n-   Miért hasznosak
+        a HTML-címkék? \n-   Mit csinál a bekezdéscímke?"
       K-1 Bee Loops 5: Használj ciklusokat, hogy nektárt gyűjts és mézet készíts!
-      K-1 Bee Loops 6: Használj ciklusokat, hogy nektárt gyűjts, mézet készíts, és
-        hogy mozogj!
-      K-1 Maze Loops 11: Juttass el a malachoz! Használd az ismételd ciklust.
-      K-1 Maze Loops 12: Juttass el a malachoz! Használd az ismételd ciklust.
       K-1 Maze Loops 2: Használd az Ismételd blokkot és juttass el a malachoz!
-      K-1 Maze Loops 8: Juttass el a malachoz! Használd az ismételd ciklust.
+      MC HOC 2016 SCORE LEVEL: "Néhány játék lehetővé teszi a pontszámok megtartását.
+        Játssz a címkézésével ezeknek az Iron Golemeknek és használd a blokkot <xml>
+        \ <block type=\"craft_addScore\">\n    <title name=\"SCORE\">1</title>\n  </block></xml>
+        hogy adj magadnak egy pontot, amikor címkézed őket.  \n\n  Szerezz öt pontot
+        hogy nyerj!"
       MC_HOC_2017_01_RETRY: "{currentPlayerName} a ház foglya, de az Agent a segítségére
         siet!   \\\r\n \\\r\n   \\\r\nIllessz egy \"mozgás előre\" blokkot az \"amikor
         fut\" blokkba a munkaterületen, hogy az Agentet a [PressurePlate_Up] nyomólapra
@@ -713,32 +632,67 @@ hu-HU:
         fedezd fel a világot."
       MC_HOC_2017_FP20x20_2019: "**Szabad játék:** Most rajtad múlik! Az Agent kódja
         segítségével fedezd fel a világot."
-      NEW Course 4 Artist Functions 12: Használd az előző feladvány `draw a line of
-        squares` függvényét az alábbi minta megrajzolásához.
-      NEW Course 4 Artist Functions 3: "Itt van egy új blokktípus. Ezt úgy hívják,
-        hogy `függvény` blokk. Kattints a \"szerkeszt\" gombra, és töltsd ki olyan
-        kóddal, ami egy 100 képpont oldalhosszúságú négyzetet rajzol.\\\r\n\\\r\nAmikor
-        végeztél a függvény szerkesztésével, kattints a \"Bezár\" gombra a programhoz
-        való visszatéréshez."
-      NEW Course 4 Artist Functions 9: Meg tudod ezt oldani egyetlen blokk hozzáadásával?
-      NEW Course 4 Artist Params 4: Észreveszel valamilyen különbséget ezekben a függvényekben?
-        Kattints a "Futtatás" gombra, és nézd meg, mi történik.
-      NEW Course 4 Artist Vars 12: Most csináld meg újra az előző pálya fejtörőjét
-        és rajzolj egy ötszöget 150 pixel széles oldalakkal.
-      NEW Course 4 Artist Vars 4: "Próbáljuk meg újra!\\\r\n\\\r\nBe tudod állítani
-        a `hossz` változó értékét 60-ra, hogy elkészítsd ezt a hatszögekből álló klassz
-        mintát?"
-      NEW Course 4 Artist Vars 6: "Rajzold meg ezt a 100 képpont oldalhosszúságú ötszögekből
-        álló mintát úgy, hogy beállítod a `hossz` értékét, majd a megfelelő helyekre
-        elhelyezed a `hossz` változót.\\\r\n\\\r\nLátod, hogy csak egyszer kell beállítanod
-        a `hossz` változó értékét, és mindenhol a helyes értéket használja a kód?"
       Overworld Move to Sheep: Adj hozzá egy második előrelépni parancsot, hogy elérd
         a bárányt.
       Overworld Move to Sheep_2019: Adj hozzá egy második előrelépni parancsot, hogy
         elérd a bárányt.
+      U4 Model Program 5_2019: "# A többi gomb felszerelése\n\nMost, hogy készült
+        egy működő gomb, csak ismételd tovább mintát. \n\n# Csináld ezt\n\n-   Minden
+        gomb megnyomásakor hozzon létre egy eseményt, amely a gomb megnyomásakor hivatkozik
+        a megfelelő képernyőre. \n-   Futtassa az alkalmazást és tesztelje, hogy az
+        összes gomb működik-e."
       course4_artist_fwp_challenge1: Próbálja meg futtatni ezt a programot, és változtassa
         meg, hogy lássa, mi történik. Ki tudja kitalálni, hogyan fog működni? (Akár
         törölheti az egészet, és írhat helyette valami teljesen mást)
+      courseA_artist_loops4_2019: |-
+        Most használd a <xml><block type="controls_repeat_simplified_dropdown" block-text="repeat"><title name="TIMES" config="2-6">5</title></block></xml> ciklust, a vonal megrajzolásához ötször!
+
+        ![](https://images.code.org/b2bc7f52ffdac2ad0d8e7c2d798c24df-image-1501875818062.gif)
+      courseA_artist_loops7_2019: |-
+        Használd a <xml><block type="controls_repeat_simplified_dropdown" block-text="repeat"><title name="TIMES" config="3-10">???</title></block></xml> ciklust, hogy hullámos legyen a víz!
+
+        ![expandable](https://images.code.org/01c5f6772a8b608a2fca5f6de7e25c67-image-1498062629139.gif)
+      courseA_collector_loops2_2019: 'Szerezd meg mind a három cölöpöt! Mozgasd Laurel-t
+        minden egyes kincses darabhoz, majd használd a <xml><block type="collector_collect"
+        block-text="get treasure"/></xml> blokkot. '
+      courseA_collector_loops3_2019: Hogyan tudja Laurel megkapni mind az öt kincset
+        mindössze egy<xml><block type="maze_moveEast" block-text="move east"/></xml>
+        blokk segítségével?
+      courseA_maze_ramp3a_2019: Fogja meg a <xml><block type="maze_moveNorth" block-text="move
+        north"/></xml> blokkot az eszköztárból, és adja hozzá a többi blokk aljához,
+        hogy befejezze ezt a kódot, majd kattintson az "▶ Futtatás" gombra.
+      courseA_playLab_events3_2019: |-
+        Segít Jorge kutyának mozogni a <xml><block type="studio_move" block-text="move dog west">
+            <title name="SPRITE">1</title>
+            <title name="DIR">8</title>
+          </block></xml> blokkhoz és<xml><block type="studio_whenArrow" block-text="when left arrow">
+            <title name="VALUE">left</title>
+          </block></xml> esemény blokkhoz kapcsolva, amelyek már a munkaterületen vannak.
+
+        Vidd Jorge-t a zászlóhoz a szint teljesítéséhez!
+      courseB_Scrat_ramp1_2019: Ahhoz, hogy Scrat eljusson a makkhoz, kattints a <xml><block
+        type="maze_moveEast" block-text="move East"/></xml> blokkra a <xml><block
+        type="when_run" block-text="when run"/></xml> blokk alján, majd nyomd meg
+        a "▶ Run"!
+      courseB_Scrat_ramp2_2019: A kód <xml><block type="maze_moveEast" block-text="move
+        east"/></xml> befejezéséhez kattints mindkét blokkon a <xml><block type="when_run"
+        block-text="when run"/></xml> blokk aljára, majd kattintson az "▶ Run" gombra.
+      courseB_Scrat_ramp3a_2019: Fogja meg a <xml><block type="maze_moveNorth" block-text="move
+        north"/></xml> blokkot az eszköztárból, és adja hozzá a többi blokk aljához,
+        hogy befejezze ezt a kódot, majd kattintson az "▶ Futtatás" gombra.
+      courseB_collector_loops3_2019: Hogyan tudja Laurel megkapni mind az öt kincset
+        mindössze egy<xml><block type="maze_moveEast" block-text="move east"/></xml>
+        blokk segítségével?
+      courseB_iceage_loops2_2019: Használd minkét, ezt <xml><block type="maze_moveWest"
+        block_text="move west"/></xml> és ezt<xml><block type="maze_moveSouth" block_text="move
+        south"/></xml> a blokkot, hogy eljuss a makkhoz!
+      courseB_iceage_loops3_2019: El tudod érni a makkot egy <xml><block type="maze_moveWest"
+        block-text="move west"/></xml> blokkal? Próbálj ciklust használni!
+      courseC_collector_prog2_2019: Move Laurelt a kincshez, majd használja <xml><block
+        type="collector_collect" block-text="collect"/></xml> blokkot, hogy felvegye.
+      courseC_maze_programming2_2019: Húzz egy extra <xml><block type="maze_moveForward"
+        block-text="move forward"/></xml> blokkot elő a eszköztárból, hogy befejezd
+        a kódod.
       courseD_bee_nestedLoops8: Gyűjtsd össze az összes nektárt az összes virágról,
         és készíts mézet minden lépbe. Használj beágyazott ciklust!
       courseD_bee_nestedLoops8_2018: Gyűjtsd össze az összes nektárt az összes virágról,

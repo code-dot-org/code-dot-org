@@ -138,13 +138,13 @@ describe('FormController', () => {
 
       describe('Submitting', () => {
         let server;
-        let submitButton;
+
+        const submitButton = () =>
+          form.find('button').filterWhere(button => button.text() === 'Submit');
+
         beforeEach(() => {
           server = sinon.fakeServer.create();
           form.setState({currentPage: 2});
-          submitButton = form
-            .find('button')
-            .findWhere(button => button.text() === 'Submit');
         });
         afterEach(() => {
           server.restore();
@@ -152,15 +152,16 @@ describe('FormController', () => {
 
         it('Does not submit when the last page has errors', () => {
           validateCurrentPageRequiredFields.returns(false);
-          submitButton.simulate('submit');
+          submitButton().simulate('submit');
 
+          form.update();
           expect(validateCurrentPageRequiredFields).to.have.been.calledOnce;
           expect(server.requests).to.be.empty;
         });
 
         it('Submits when the last page has no errors', () => {
           validateCurrentPageRequiredFields.returns(true);
-          submitButton.simulate('submit');
+          submitButton().simulate('submit');
 
           expect(validateCurrentPageRequiredFields).to.have.been.calledOnce;
           expect(server.requests).to.have.length(1);
@@ -169,9 +170,9 @@ describe('FormController', () => {
 
         it('Disables the submit button during submit', () => {
           validateCurrentPageRequiredFields.returns(true);
-          submitButton.simulate('submit');
+          submitButton().simulate('submit');
           expect(form.state('submitting')).to.be.true;
-          expect(submitButton.prop('disabled')).to.be.true;
+          expect(submitButton().prop('disabled')).to.be.true;
         });
 
         it('Re-enables the submit button on error', () => {
@@ -184,7 +185,7 @@ describe('FormController', () => {
             })
           ]);
 
-          submitButton.simulate('submit');
+          submitButton().simulate('submit');
           server.respond();
           expect(form.state('submitting')).to.be.false;
           expect(form.state('errors')).to.eql(['an error']);
@@ -202,35 +203,31 @@ describe('FormController', () => {
             'onSuccessfulSubmit'
           );
 
-          submitButton.simulate('submit');
+          submitButton().simulate('submit');
           server.respond();
 
           expect(form.state('submitting')).to.be.true;
-          expect(submitButton.prop('disabled')).to.be.true;
+          expect(submitButton().prop('disabled')).to.be.true;
           expect(onSuccessfulSubmit).to.be.calledOnce;
         });
       });
     });
 
     describe('validateCurrentPageRequiredFields()', () => {
-      let sandbox;
-      before(() => {
-        sandbox = sinon.createSandbox();
-      });
       afterEach(() => {
-        sandbox.restore();
+        sinon.restore();
       });
 
       let render;
       before(() => {
         // Skip rendering
-        render = sandbox.stub(DummyForm.prototype, 'render');
+        render = sinon.stub(DummyForm.prototype, 'render');
         render.returns(null);
       });
 
       let getRequiredFields;
       const stubRequiedFields = requriredFields => {
-        getRequiredFields = sandbox.stub(
+        getRequiredFields = sinon.stub(
           DummyForm.prototype,
           'getRequiredFields'
         );
@@ -242,7 +239,7 @@ describe('FormController', () => {
         stubRequiedFields(['included', 'excluded']);
         DummyPage1.associatedFields = ['included'];
 
-        const validated = form.getNode().validateCurrentPageRequiredFields();
+        const validated = form.instance().validateCurrentPageRequiredFields();
         expect(validated).to.be.false;
         expect(form.state('errors')).to.eql(['included']);
       });
@@ -266,7 +263,7 @@ describe('FormController', () => {
           'onlySpaces'
         ];
 
-        form.getNode().validateCurrentPageRequiredFields();
+        form.instance().validateCurrentPageRequiredFields();
         expect(form.state('data')).to.deep.eql({
           textFieldWithSpace: 'trim',
           textFieldWithNoSpace: 'nothing to trim',
@@ -284,7 +281,7 @@ describe('FormController', () => {
           page1Field3: 'will be modified'
         };
 
-        const processPageData = sandbox.stub(DummyPage1, 'processPageData');
+        const processPageData = sinon.stub(DummyPage1, 'processPageData');
         processPageData.withArgs(pageData).returns({
           page1Field2: undefined,
           page1Field3: 'modified'
@@ -303,7 +300,7 @@ describe('FormController', () => {
           }
         });
 
-        form.getNode().validateCurrentPageRequiredFields();
+        form.instance().validateCurrentPageRequiredFields();
         expect(processPageData).to.be.calledOnce;
         expect(form.state('data')).to.deep.eql({
           page1Field1: 'value1',

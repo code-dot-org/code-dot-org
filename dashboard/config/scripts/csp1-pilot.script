@@ -1,5 +1,48 @@
 login_required true
+family_name ''
 pilot_experiment 'csp-piloters'
 
 stage 'new stage'
 level 'csp_socialBelonging_control_2018'
+
+stage 'Bit Sending Device'
+level 'CSP U1L2 Multiple Choice Assessment Question', progression: 'Check For Understanding'
+
+stage 'Number Systems'
+level 'Widget: Binary Odometer_2020', progression: 'Widget: Binary Odometer'
+level 'U1L4 CYU1', progression: 'Check For Understanding'
+level 'CSP U1L4 CYU2', progression: 'Check For Understanding'
+level 'CSP U1L4 CYU3', progression: 'Check For Understanding'
+
+stage 'Flippy Do Pt 1'
+level 'U1L5 CFU how many bits', progression: 'Check For Understanding'
+level 'U1L5 CFU adding bits', progression: 'Check For Understanding'
+level 'U1L5 CFU bin dec similarities', progression: 'Check For Understanding'
+
+stage 'Flippy Do Pt 2'
+level 'U1L6 CFU beyond odometer', progression: 'Check For Understanding'
+level 'U1L6 CFU representing fractions', progression: 'Check For Understanding'
+
+stage 'Sending Text'
+level 'Internet Simulator: Sending Text CSP U1', progression: 'Widget: Internet Simulator'
+level 'U1L8 Reflection Multiple Representations CSP', progression: 'Check For Understanding'
+
+stage 'Black and White Images'
+level 'U1 L9 Introduction to Pixelation', progression: 'Video: Intro to Pixelation Encoding B&W'
+level 'U1L9 Pixelation - Make the Letter A_2019', progression: 'Pixelation Widget: B&W'
+level 'U1L9 Pixelation Widget Fix bit offset', progression: 'Pixelation Widget: B&W'
+level 'U1L9 Pixelation Widget challenge a', progression: 'Pixelation Widget: B&W'
+level 'U1L9 Pixelation Widget challenge B', progression: 'Pixelation Widget: B&W'
+level 'U1L9 CFU pixel data', progression: 'Check For Understanding'
+level 'U1L9 Multiple Choice Digital Analog', progression: 'Check For Understanding'
+level 'U1L9 CFU Sampling', progression: 'Check For Understanding'
+
+stage 'Color Images'
+level 'U1L10 Multiple Choice analog vs digital', progression: 'Check For Understanding'
+level 'U1L10 CFU Sampling', progression: 'Check For Understanding'
+
+stage 'Lossless Compression'
+level 'U1L11 Widget: Text Compression', progression: 'Widget: Text Compression'
+level 'U1 L11 Text Compression Widget Aloe Blacc', progression: 'Video: Text Compression Widget with Aloe Blacc'
+level 'U1L11 Multiple Choice lossless compression', progression: 'Check For Understanding'
+level 'U1L11 CFU Compression for Email', progression: 'Check For Understanding'

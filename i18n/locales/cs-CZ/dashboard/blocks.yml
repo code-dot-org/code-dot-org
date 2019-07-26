@@ -612,19 +612,6 @@ cs:
             '2': výšky
       Dancelab_whenSetup:
         text: nastavení
-      gamelab_changeColor:
-        text: změnit {COLOR} {METHOD} o {AMOUNT}
-        options:
-          METHOD:
-            '"tint"': odstín
-            '"shade"': stín
-      gamelab_changeColorBy:
-        text: změnit {COLOR} {METHOD} o {AMOUNT}
-        options:
-          METHOD:
-            '"hue"': odstín
-            '"saturation"': sytost
-            '"brightness"': jas
       gamelab_changePropBy:
         text: změnit {SPRITE} {PROPERTY} o {VAL}
         options:
@@ -643,8 +630,6 @@ cs:
         text: po klepnutí na {SPRITE}
       gamelab_comment:
         text: 'komentář: {COMMENT}'
-      gamelab_countByCostume:
-        text: počet {COSTUME}
       gamelab_createNewSprite:
         text: "vytvořit novou postavu \n nazvanou {NAME} \n s kostýmem {COSTUME} \n kde {LOCATION}"
       gamelab_debugSprite:
@@ -655,10 +640,6 @@ cs:
             'false': záporné
       gamelab_destroy:
         text: odstranit {THIS}
-      gamelab_distance:
-        text: vzdálenost od {LOCATION1} do {LOCATION2}
-      gamelab_enableDebug:
-        text: povolení ladění
       gamelab_getProp:
         text: "{SPRITE} {PROPERTY}"
         options:
@@ -701,29 +682,11 @@ cs:
             '"x"': x
             '"y"': 'y'
             '"z"': z
-      gamelab_layoutSprites:
-        options:
-          FORMAT:
-            '"border"': hranice
-            '"inner"': vnitřní čtverec
-            '"circle"': kruh
-            '"grid"': mřížka
-            '"row"': řádek
-            '"column"': sloupec
-            '"x"': křížem krážem
-            '"plus"': plus
-            '"random"': náhodně
-      gamelab_locationDelta:
-        options:
-          DIR:
-            "'random'": náhodně
       gamelab_mirrorSprite:
         options:
           DIRECTION:
             '"right"': vpravo
             '"left"': vlevo
-      gamelab_mixColors:
-        text: smíchat {COLOR1} a {COLOR2}
       gamelab_randColor:
         text: náhodná barva
       gamelab_randomColor:
@@ -744,20 +707,6 @@ cs:
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': duha
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': pod vodou
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': zima
-      gamelab_setPosition:
-        text: přesunout {THIS} na pozici {POSITION}
-        options:
-          POSITION:
-            "{x: 50, y: 50}": nahoře vlevo
-            "{x: 200, y: 50}": nahoře uprostřed
-            "{x: 350, y: 50}": nahoře vpravo
-            "{x: 50, y: 200}": uprostřed vlevo
-            "{x: 200, y: 200}": uprostřed
-            "{x: 350, y: 200}": uprostřed vpravo
-            "{x: 50, y: 350}": dole vlevo
-            "{x: 200, y: 350}": dole uprostřed
-            "{x: 350, y: 350}": dole vpravo
-            '"random"': náhodně
       gamelab_setProp:
         options:
           PROPERTY:
@@ -774,34 +723,11 @@ cs:
             '"scale"': velikost
             '"width"': šířka
             '"height"': výška
-      gamelab_setup:
-        text: nastavení
       gamelab_spriteClicked:
         options:
           CONDITION:
             '"when"': když
             '"while"': dokud
-      gamelab_spriteClickedSet:
-        options:
-          CONDITION:
-            '"when"': když
-            '"while"': dokud
-      gamelab_spritesWhere:
-        options:
-          PROPERTY:
-            '"scale"': velikost
-            '"x"': souřadnice X
-            '"y"': souřadnice Y
-            '"direction"': směr pohybu
-            '"tint"': odstín
-      gamelab_spritesWhereGenerator:
-        options:
-          PROPERTY:
-            '"scale"': velikost
-            '"x"': souřadnice X
-            '"y"': souřadnice Y
-            '"direction"': směr pohybu
-            '"tint"': odstín
       gamelab_turn:
         options:
           DIRECTION:
@@ -831,11 +757,6 @@ cs:
         text: |-
           když {SPRITE1} se začne dotýkat {SPRITE2} {STATEMENT1}když se přestanou dotýkat
           {STATEMENT2}
-      gamelab_whenTouchingSet:
-        options:
-          CONDITION:
-            '"when"': když
-            '"while"': dokud
       gamelab_whileKey:
         options:
           KEY:

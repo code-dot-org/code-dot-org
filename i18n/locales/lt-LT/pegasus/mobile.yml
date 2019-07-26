@@ -525,12 +525,11 @@
   course2_name: "Kursas 2"
   course3_name: "Kursas 3"
   course4_name: "Kursas 4"
+  accelerated_name: "Pagreitintas kursas"
   20-hour_name: Pagreitintas kursas
   classicmaze_name: "Klasikinis labirintas"
   iceage_name: "Ledynmetis"
   minecraft_name: "Minecraft"
-  math_category_name: "Matematika"
-  hoc_category_name: "„Programavimo valanda“"
   applab_name: "App Lab"
   gamelab_name: "Žaidimų laboratorija"
   basketball_name: "Sukurk kreipšinio žaidimą"
@@ -587,6 +586,7 @@
   coursee_gradelevel: "Amžius 8-12"
   coursee-2017_gradelevel: Amžius 8-12
   coursee-2018_gradelevel: Amžius 8-12
+  coursee-2019_gradelevel: Amžius 8-12
   accelerated_gradelevel: "Amžius 10-18"
   codeorg_platformtext: "Šiuolaikinės naršyklės, išmanieji telefonai, planšetės"
   codeintl_platformtext: "Šiuolaikinės naršyklės, išmanieji telefonai, planšetės"

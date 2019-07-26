@@ -260,6 +260,16 @@ function initializeAccelerometer(board) {
         accelerometer.getOrientation('z')
       ];
     }
+
+    // Accelerometer on the express board is rotated 90 degrees from classic board.
+    // Conditional ensures consistent output of 'pitch'/'roll' across both boards
+    if (board.isExpressBoard) {
+      if (orientationType === 'pitch') {
+        return accelerometer['roll'];
+      } else if (orientationType === 'roll') {
+        return -1 * accelerometer['pitch'];
+      }
+    }
     return accelerometer[orientationType];
   };
   accelerometer.getAcceleration = function(accelerationDirection) {

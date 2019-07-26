@@ -36,76 +36,75 @@ module Pd::SurveyPipeline
       end
     end
 
+    test 'raise if missing input key' do
+      context = {}
+
+      exception = assert_raises RuntimeError do
+        DailySurveyRetriever.process_data context
+      end
+
+      assert exception.message.start_with?('Missing required input key')
+    end
+
     test 'can retrieve all data if no filter' do
-      retriever = Pd::SurveyPipeline::DailySurveyRetriever.new
+      context = {filters: {}}
+      DailySurveyRetriever.process_data context
 
-      result = retriever.retrieve_data
-
-      assert_equal @workshop_submissions.length, result[:workshop_submissions]&.length
-      assert_equal @facilitator_submissions.length, result[:facilitator_submissions]&.length
-      assert_equal @survey_questions.length, result[:survey_questions]&.length
+      assert_equal @workshop_submissions.length, context[:workshop_submissions]&.length
+      assert_equal @facilitator_submissions.length, context[:facilitator_submissions]&.length
+      assert_equal @survey_questions.length, context[:survey_questions]&.length
     end
 
     test 'can retrieve data using workshop id filter' do
-      filter = {workshop_ids: @workshops.first.id}
-      retriever = Pd::SurveyPipeline::DailySurveyRetriever.new filter
-
-      result = retriever.retrieve_data
+      context = {filters: {workshop_ids: @workshops.first.id}}
+      DailySurveyRetriever.process_data context
 
       assert_equal @workshop_submissions.length / @workshops.length,
-        result[:workshop_submissions]&.length
+        context[:workshop_submissions]&.length
       assert_equal @facilitator_submissions.length / @workshops.length,
-        result[:facilitator_submissions]&.length
+        context[:facilitator_submissions]&.length
       assert_equal @workshop_form_ids.length + @facilitator_form_ids.length,
-        result[:survey_questions]&.length
+        context[:survey_questions]&.length
     end
 
     test 'can retrieve data using form id filter' do
-      filter = {form_ids: @workshop_form_ids.first}
-      retriever = Pd::SurveyPipeline::DailySurveyRetriever.new filter
-
-      result = retriever.retrieve_data
+      context = {filters: {form_ids: @workshop_form_ids.first}}
+      DailySurveyRetriever.process_data context
 
       assert_equal @workshop_submissions.length / @workshop_form_ids.length,
-        result[:workshop_submissions]&.length
-      assert_equal 0, result[:facilitator_submissions]&.length
-      assert_equal 1, result[:survey_questions]&.length
+        context[:workshop_submissions]&.length
+      assert_equal 0, context[:facilitator_submissions]&.length
+      assert_equal 1, context[:survey_questions]&.length
     end
 
     test 'can retrieve data using both workshop id and form id filters' do
-      filter = {workshop_ids: @workshops.first.id, form_ids: @facilitator_form_ids.first}
-      retriever = Pd::SurveyPipeline::DailySurveyRetriever.new filter
+      context = {filters: {workshop_ids: @workshops.first.id, form_ids: @facilitator_form_ids.first}}
+      DailySurveyRetriever.process_data context
 
-      result = retriever.retrieve_data
-
-      assert_equal 0, result[:workshop_submissions]&.length
+      assert_equal 0, context[:workshop_submissions]&.length
       assert_equal @facilitator_submissions.size / (@workshops.length * @facilitator_form_ids.size),
-        result[:facilitator_submissions]&.length
-      assert_equal 1, result[:survey_questions]&.length
+        context[:facilitator_submissions]&.length
+      assert_equal 1, context[:survey_questions]&.length
     end
 
     test 'return empty if workshop does not have submission' do
       # Use non-existence workshop id as filter
-      filter = {workshop_ids: @workshops.pluck(:id).max + 1}
-      retriever = Pd::SurveyPipeline::DailySurveyRetriever.new filter
+      context = {filters: {workshop_ids: @workshops.pluck(:id).max + 1}}
+      DailySurveyRetriever.process_data context
 
-      result = retriever.retrieve_data
-
-      assert_equal 0, result[:workshop_submissions]&.length
-      assert_equal 0, result[:facilitator_submissions]&.length
-      assert_equal 0, result[:survey_questions]&.length
+      assert_equal 0, context[:workshop_submissions]&.length
+      assert_equal 0, context[:facilitator_submissions]&.length
+      assert_equal 0, context[:survey_questions]&.length
     end
 
     test 'return empty if form does not have submission' do
       # Use non-existence form id as filter
-      filter = {form_ids: @workshop_form_ids.max + 1}
-      retriever = Pd::SurveyPipeline::DailySurveyRetriever.new filter
+      context = {filters: {form_ids: @workshop_form_ids.max + 1}}
+      DailySurveyRetriever.process_data context
 
-      result = retriever.retrieve_data
-
-      assert_equal 0, result[:workshop_submissions]&.length
-      assert_equal 0, result[:facilitator_submissions]&.length
-      assert_equal 0, result[:survey_questions]&.length
+      assert_equal 0, context[:workshop_submissions]&.length
+      assert_equal 0, context[:facilitator_submissions]&.length
+      assert_equal 0, context[:survey_questions]&.length
     end
   end
 end

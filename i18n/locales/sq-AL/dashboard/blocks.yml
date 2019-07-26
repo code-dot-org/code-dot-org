@@ -170,14 +170,6 @@ sq:
             '"right"': djathtas
             '"space"': hapësirë
             '"x"': x
-      gamelab_layoutSprites:
-        options:
-          FORMAT:
-            '"random"': zakonshëm
-      gamelab_locationDelta:
-        options:
-          DIR:
-            "'random'": zakonshëm
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -196,10 +188,6 @@ sq:
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': ylber
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': nën ujë
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': dimër
-      gamelab_setPosition:
-        options:
-          POSITION:
-            '"random"': zakonshëm
       gamelab_setProp:
         options:
           PROPERTY:
@@ -214,19 +202,6 @@ sq:
           CONDITION:
             '"when"': kur
             '"while"': ndërsa
-      gamelab_spriteClickedSet:
-        options:
-          CONDITION:
-            '"when"': kur
-            '"while"': ndërsa
-      gamelab_spritesWhere:
-        options:
-          PROPERTY:
-            '"scale"': madhësia
-      gamelab_spritesWhereGenerator:
-        options:
-          PROPERTY:
-            '"scale"': madhësia
       gamelab_turn:
         options:
           DIRECTION:
@@ -247,11 +222,6 @@ sq:
             "'down'": poshtë
             "'left'": majtas
             "'right'": djathtas
-      gamelab_whenTouchingSet:
-        options:
-          CONDITION:
-            '"when"': kur
-            '"while"': ndërsa
       gamelab_whileKey:
         options:
           KEY:

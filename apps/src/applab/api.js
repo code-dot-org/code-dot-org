@@ -324,14 +324,6 @@ export function open(url) {
   return Applab.executeCmd(null, 'openUrl', {url: url});
 }
 
-export function getList(tableName, columnName, callback) {
-  return Applab.executeCmd(null, 'getList', {
-    tableName: tableName,
-    columnName: columnName,
-    callback: callback
-  });
-}
-
 export function startWebRequest(url, func) {
   return Applab.executeCmd(null, 'startWebRequest', {url: url, func: func});
 }
@@ -505,22 +497,6 @@ export function penColor(color) {
 
 export function penRGB(r, g, b, a) {
   return Applab.executeCmd(null, 'penRGB', {r: r, g: g, b: b, a: a});
-}
-
-export function insertItem(array, index, item) {
-  return Applab.executeCmd(null, 'insertItem', {
-    array: array,
-    index: index,
-    item: item
-  });
-}
-
-export function appendItem(array, item) {
-  return Applab.executeCmd(null, 'appendItem', {array: array, item: item});
-}
-
-export function removeItem(array, index) {
-  return Applab.executeCmd(null, 'removeItem', {array: array, index: index});
 }
 
 export function drawChart(chartId, chartType, chartData, options, callback) {

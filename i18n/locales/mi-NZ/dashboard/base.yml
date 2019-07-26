@@ -382,7 +382,6 @@ mi:
   pdf_download: 'Tikiake i te PDF'
   download_coming_soon: 'Ākuanei ka puta mai te ngohe tikiake.'
   video_coming_soon: 'Ākuanei ka Puta te Ataata!'
-  not_started: 'Kāore anō te ākonga kia whakamātau i tēnei taumata.'
   share_code:
     title: "Pāwhiri 'Whakahaere' kia kitea taku papatono e rere ana"
     bounce_og_title: "Tirohia taku Kēmu Bounce"

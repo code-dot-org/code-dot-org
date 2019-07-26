@@ -55,16 +55,15 @@ Dashboard::Application.configure do
 
   config.assets.quiet = true
 
+  # skip precompiling of all assets on the first request for any asset.
+  config.assets.check_precompiled_asset = false
+
   # Whether or not to display pretty apps (formerly called blockly).
   config.pretty_apps = true
 
   # Whether or not to skip script preloading. Setting this to true
   # significantly speeds up server startup time
   config.skip_script_preload = true
-
-  # Disable this for developers by default, it won't make much sense because we
-  # have our own db.
-  CDO.disable_s3_image_uploads = true
 
   # Set to :debug to see everything in the log.
   config.log_level = :debug

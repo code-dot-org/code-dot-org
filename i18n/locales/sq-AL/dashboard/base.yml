@@ -448,7 +448,6 @@ sq:
   pdf_download: 'Shkarko PDF'
   download_coming_soon: 'Së shpejti veprime me shkarkim.'
   video_coming_soon: 'Video vjen së shpejti!'
-  not_started: 'Studenti nuk e ka tentuar këtë nivel.'
   share_code:
     title: "Kliko 'Run' të shohësh programin tim në veprim"
     bounce_og_title: "Shiko Lojën time me Përplasje"

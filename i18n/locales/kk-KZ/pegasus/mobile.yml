@@ -661,13 +661,11 @@
   course2_name: "Курс 2"
   course3_name: "Курс 3"
   course4_name: "Курс 4"
-  cspunit3_gradelevel: "9-12 сыныптар"
+  accelerated_name: "Жеделдетілген курс"
   20-hour_name: Жеделдетілген курс
   classicmaze_name: "Классикалық лабиринт"
   iceage_name: "Мұз дәуірі"
   minecraft_name: "Minecraft"
-  math_category_name: "Математика"
-  hoc_category_name: "Код жазу Сағаты"
   applab_name: "Қосымшалар Лабораториясы"
   basketball_name: "Баскетбол ойынды жасау"
   sports_name: "Спорттар"
@@ -731,6 +729,8 @@
   coursee-2017_gradelevel: Жас аралығы 8-12
   coursed-2018_gradelevel: 8-сыныптан бастап
   coursee-2018_gradelevel: Жас аралығы 8-12
+  coursed-2019_gradelevel: 8-сыныптан бастап
+  coursee-2019_gradelevel: Жас аралығы 8-12
   accelerated_gradelevel: "10-18 жастағылар үшін"
   codeorg_platformtext: "Заманауи браузерлер, смартфондар, планшеттер"
   codeintl_platformtext: "Заманауи браузерлер, смартфондар, планшеттер"

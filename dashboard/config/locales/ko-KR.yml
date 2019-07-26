@@ -598,7 +598,6 @@ ko:
   pdf_download: PDF 다운로드
   download_coming_soon: 활동 자료 다운로드(예정)
   video_coming_soon: 동영상 자료(예정)
-  not_started: 이 레벨을 시도한 적이 없습니다.
   share_code:
     title: 프로그램을 확인하기 위해 "실행하기"를 클릭하세요.
     bounce_og_title: 내가 만든 바운스 게임 확인하기

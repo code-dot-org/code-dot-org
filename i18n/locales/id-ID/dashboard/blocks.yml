@@ -329,20 +329,6 @@ id:
             '0': Kecil
             '1': Sedang
             '2': Besar
-      gamelab_changeColor:
-        text: ubah {COLOR}{METHOD} dengan {AMOUNT}
-        options:
-          METHOD:
-            '"tint"': Mewarnai
-            '"tone"': Nada
-            '"shade"': Corak
-      gamelab_changeColorBy:
-        text: ubah {COLOR}{METHOD} dengan {AMOUNT}
-        options:
-          METHOD:
-            '"hue"': Corak warna warni
-            '"saturation"': Saturasi
-            '"brightness"': Kecerahan
       gamelab_changePropBy:
         options:
           PROPERTY:
@@ -361,10 +347,6 @@ id:
           VAL:
             'true': Benar
             'false': Salah
-      gamelab_enableDebug:
-        text: mengaktifkan debugging
-      gamelab_firstTouched:
-        text: Sentuhan pertama sprite
       gamelab_getProp:
         options:
           PROPERTY:
@@ -376,8 +358,6 @@ id:
             '"tint"': Mewarnai
       gamelab_hideTitleScreen:
         text: menyembunyikan judul layar
-      gamelab_joystickDirection:
-        text: Arah joystick
       gamelab_keyPressed:
         options:
           CONDITION:
@@ -391,55 +371,19 @@ id:
             '"space"': luar angkasa
             '"x"': x
             '"y"': 'y'
-      gamelab_layoutSprites:
-        options:
-          FORMAT:
-            '"grid"': Kisi
-            '"row"': baris
-            '"column"': kolom
-            '"random"': acak
-      gamelab_locationConstant:
-        options:
-          DIR:
-            "'north'": Utara
-            "'south'": Selatan
-            "'east'": Timur
-            "'west'": Barat
-      gamelab_locationDelta:
-        options:
-          DIR:
-            "'north'": Utara
-            "'south'": Selatan
-            "'east'": Timur
-            "'west'": Barat
-            "'random'": acak
-      gamelab_locationEast:
-        text: Timur
       gamelab_locationMouse:
         text: Lokasi tetikus
-      gamelab_locationNorth:
-        text: Utara
-      gamelab_locationSouth:
-        text: Selatan
-      gamelab_locationWest:
-        text: Barat
-      gamelab_makeNewGroup:
-        text: Buat grup baru
       gamelab_mirrorSprite:
         options:
           DIRECTION:
             '"right"': kanan
             '"left"': kiri
-      gamelab_mouseDown:
-        text: mouse turun
       gamelab_mouseLocation:
         text: Lokasi tetikus
       gamelab_randColor:
         text: warna acak
       gamelab_randomColor:
         text: warna acak
-      gamelab_secondTouched:
-        text: Sentuhan kedua sprite
       gamelab_setBackgroundImage:
         options:
           IMG:
@@ -450,11 +394,6 @@ id:
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': pelangi
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': dalam air
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': musim dingin
-      gamelab_setPosition:
-        options:
-          POSITION:
-            "{x: 200, y: 200}": Tengah
-            '"random"': acak
       gamelab_setProp:
         options:
           PROPERTY:
@@ -474,27 +413,6 @@ id:
           CONDITION:
             '"when"': ketika
             '"while"': Selagi
-      gamelab_spriteClickedSet:
-        options:
-          CONDITION:
-            '"when"': ketika
-            '"while"': Selagi
-      gamelab_spritesWhere:
-        options:
-          PROPERTY:
-            '"scale"': ukuran
-            '"x"': posisi x
-            '"y"': posisi y
-            '"direction"': Arah pergerakan
-            '"tint"': Mewarnai
-      gamelab_spritesWhereGenerator:
-        options:
-          PROPERTY:
-            '"scale"': ukuran
-            '"x"': posisi x
-            '"y"': posisi y
-            '"direction"': Arah pergerakan
-            '"tint"': Mewarnai
       gamelab_turn:
         options:
           DIRECTION:
@@ -515,11 +433,6 @@ id:
             "'down'": turun
             "'left'": kiri
             "'right'": kanan
-      gamelab_whenTouchingSet:
-        options:
-          CONDITION:
-            '"when"': ketika
-            '"while"': Selagi
       gamelab_whileKey:
         options:
           KEY:

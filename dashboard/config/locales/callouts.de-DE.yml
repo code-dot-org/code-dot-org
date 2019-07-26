@@ -8,6 +8,11 @@ de-DE:
       4-5 Bee Conditionals 2:
         4_5_Bee_Conditionals_2_1: Denk daran zu überprüfen ob JEDE Wolke eine Blume
           hat. Du musst überhaupt nicht auf Honigwaben prüfen.
+      AppLab Intro 7 - Change Screen Color:
+        applab_hoc_finish: Wurde der Bildschirm grün? Wenn ja, drücke 'beenden'. Wenn
+          nicht, drücke 'reset', ändere deinen Code, und drücke erneut 'start'.
+      AppLab Intro 7 - thisOrThatAddButton:
+        AppLabHoCFinal11: Du befindest dich nun im Designmodus.
       Course 4 Artist 4:
         repeat_full_circle: Füge die Anzahl der Bewegungen ein, die der Zombie machen
           muss, um eine volle Runde zu laufen
@@ -49,7 +54,7 @@ de-DE:
       CourseD_Dance_Party_04:
         dance_callout_04: Fügen Sie diesen Block Ihrem Programm hinzu!
       CourseD_Dance_Party_06:
-        dance_callout_06: Fügen Sie Sie hier Ihren neuen Tänzer hinzu
+        dance_callout_06: Fügen Sie hier Ihren neuen Tänzer hinzu
       CourseD_Dance_Party_11:
         dance_callout_11_a: Neuer Block!
         dance_callout_11_b: Neuer Block!
@@ -60,7 +65,7 @@ de-DE:
       Dance_Party_04:
         dance_callout_04: Fügen Sie diesen Block Ihrem Programm hinzu!
       Dance_Party_06:
-        dance_callout_06: Fügen Sie Sie hier Ihren neuen Tänzer hinzu
+        dance_callout_06: Fügen Sie hier Ihren neuen Tänzer hinzu
       Dance_Party_11:
         dance_callout_11_a: Neuer Block!
         dance_callout_11_b: Neuer Block!
@@ -86,6 +91,8 @@ de-DE:
       MC HOC 2016 Level 2-2:
         craft2_run_button_callout: Mit "Ausführen" testest du dein Programm, wenn
           du fertig bist.
+      MC HOC 2016 New Walk:
+        MC_HOC_2016_New_Walk_callout2: Drücke auf "Ausführen" um loszugehen.
       MC_HOC_2017_03_Cole:
         MC_HOC_2017_03_Cole_1: Dies ist eine "wiederholen"-Schleife.  Klicke in den
           Arbeitsbereich und füge den Code hinzu, der immer wieder ausgeführt werden

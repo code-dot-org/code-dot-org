@@ -65,7 +65,7 @@ export function getAnimationsInUse() {
  * @param {string} animation
  * @return {number} Number of behaviors associated with the specified animation.
  */
-export function getBehaviorsForAnimation(animation) {
+export function getNumBehaviorsForAnimation(animation) {
   let numBehaviors = 0;
   behaviors.forEach(behavior => {
     if (behavior.sprite.getAnimationLabel() === animation) {
@@ -79,7 +79,7 @@ export function getBehaviorsForAnimation(animation) {
  * @param {number} spriteId
  * @return {number} Number of behaviors associated with the specified sprite
  */
-export function getBehaviorsForSpriteId(spriteId) {
+export function getNumBehaviorsForSpriteId(spriteId) {
   let numBehaviors = 0;
   behaviors.forEach(behavior => {
     if (behavior.sprite.id === spriteId) {
@@ -122,90 +122,109 @@ export function addEvent(type, args, callback) {
 }
 
 function whenPressEvent(inputEvent, p5Inst) {
-  return {
-    shouldEventFire: p5Inst.keyWentDown(inputEvent.args.key),
-    extraArgs: {}
-  };
+  if (p5Inst.keyWentDown(inputEvent.args.key)) {
+    // Call callback with no extra args
+    return [{}];
+  } else {
+    // Don't call callback
+    return [];
+  }
 }
 
 function whilePressEvent(inputEvent, p5Inst) {
-  return {shouldEventFire: p5Inst.keyDown(inputEvent.args.key), extraArgs: {}};
+  if (p5Inst.keyDown(inputEvent.args.key)) {
+    // Call callback with no extra args
+    return [{}];
+  } else {
+    // Don't call callback
+    return [];
+  }
 }
 
 function whenTouchEvent(inputEvent) {
-  let shouldEventFire = false;
-  let extraArgs = {};
+  let getFired = function(map, spriteId, targetId) {
+    if (map && map[spriteId] && map[spriteId][targetId]) {
+      return map[spriteId][targetId].firedOnce;
+    }
+  };
+  let setFired = function(map, spriteId, targetId, fired) {
+    if (!map) {
+      map = {};
+    }
+    if (!map[spriteId]) {
+      map[spriteId] = {};
+    }
+    if (!map[spriteId][targetId]) {
+      map[spriteId][targetId] = {};
+    }
+    map[spriteId][targetId].firedOnce = fired;
+  };
   let sprites = getSpriteArray(inputEvent.args.sprite1);
   let targets = getSpriteArray(inputEvent.args.sprite2);
-  let overlap = false;
+  let callbackArgList = [];
+  let previousCollisions = inputEvent.previous;
+
+  // We need to clear out previous, so that events get re-triggered when sprite animations change
+  inputEvent.previous = {};
   sprites.forEach(sprite => {
     targets.forEach(target => {
+      let firedOnce = getFired(previousCollisions, sprite.id, target.id);
       if (sprite.overlap(target)) {
-        extraArgs.sprite = sprite.id;
-        extraArgs.target = target.id;
-        overlap = true;
+        if (!firedOnce) {
+          // Sprites are overlapping, and we haven't fired yet for this collision,
+          // so we should fire the callback
+          callbackArgList.push({sprite: sprite.id, target: target.id});
+          firedOnce = true;
+        }
+      } else {
+        // Sprites are not overlapping (anymore), so we should make sure firedOnce is
+        // set to false, so that if the sprites overlap again, we will fire the callback.
+        // This is required to handle the case where sprites start touching, stop touching, and start
+        // touching again- we want the callback to fire two times.
+        firedOnce = false;
       }
+      setFired(inputEvent.previous, sprite.id, target.id, firedOnce);
     });
   });
-  // Sprites are overlapping, and we haven't fired yet for this collision,
-  // so we should fire the callback
-  if (overlap && !inputEvent.firedOnceForCollision) {
-    shouldEventFire = true;
-    inputEvent.firedOnceForCollision = true;
-  }
-  // Sprites are not overlapping (anymore), so we should make sure firedOnceForCollision is
-  // set to false, so that if the sprites overlap again, we will fire the callback.
-  // This is required to handle the case where sprites start touching, stop touching, and start
-  // touching again- we want the callback to fire two times.
-  if (!overlap) {
-    inputEvent.firedOnceForCollision = false;
-  }
-  return {shouldEventFire: shouldEventFire, extraArgs: extraArgs};
+  return callbackArgList;
 }
 
 function whileTouchEvent(inputEvent) {
-  let shouldEventFire = false;
-  let extraArgs = {};
+  let callbackArgList = [];
   let sprites = getSpriteArray(inputEvent.args.sprite1);
   let targets = getSpriteArray(inputEvent.args.sprite2);
   sprites.forEach(sprite => {
     targets.forEach(target => {
       if (sprite.overlap(target)) {
-        extraArgs.sprite = sprite.id;
-        extraArgs.target = target.id;
-        shouldEventFire = true;
+        callbackArgList.push({sprite: sprite.id, target: target.id});
       }
     });
   });
-  return {shouldEventFire: shouldEventFire, extraArgs: extraArgs};
+  return callbackArgList;
 }
 
 function whenClickEvent(inputEvent, p5Inst) {
-  let shouldEventFire = false;
-  let extraArgs = {};
+  let callbackArgList = [];
   if (p5Inst.mouseWentDown('leftButton')) {
     let sprites = getSpriteArray(inputEvent.args.sprite);
     sprites.forEach(sprite => {
       if (p5Inst.mouseIsOver(sprite)) {
-        extraArgs.sprite = sprite.id;
-        shouldEventFire = true;
+        callbackArgList.push({sprite: sprite.id});
       }
     });
   }
-  return {shouldEventFire: shouldEventFire, extraArgs: extraArgs};
+  return callbackArgList;
 }
 
 function whileClickEvent(inputEvent, p5Inst) {
-  let shouldEventFire = false;
-  let extraArgs = {};
+  let callbackArgList = [];
   let sprites = getSpriteArray(inputEvent.args.sprite);
   sprites.forEach(sprite => {
     if (p5Inst.mousePressedOver(sprite)) {
-      extraArgs.sprite = sprite.id;
-      shouldEventFire = true;
+      callbackArgList.push({sprite: sprite.id});
     }
   });
-  return {shouldEventFire: shouldEventFire, extraArgs: extraArgs};
+  return callbackArgList;
 }
 
 function checkEvent(inputEvent, p5Inst) {
@@ -227,10 +246,10 @@ function checkEvent(inputEvent, p5Inst) {
 
 export function runEvents(p5Inst) {
   inputEvents.forEach(inputEvent => {
-    let check = checkEvent(inputEvent, p5Inst);
-    if (check && check.shouldEventFire) {
-      inputEvent.callback(check.extraArgs);
-    }
+    let callbackArgList = checkEvent(inputEvent, p5Inst);
+    callbackArgList.forEach(args => {
+      inputEvent.callback(args);
+    });
   });
 }
 

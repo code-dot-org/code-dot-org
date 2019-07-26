@@ -129,14 +129,6 @@ ur:
             '"space"': خلاء
             '"x"': x
             '"y"': وائے
-      gamelab_layoutSprites:
-        options:
-          FORMAT:
-            '"random"': بےترتیب
-      gamelab_locationDelta:
-        options:
-          DIR:
-            "'random'": بےترتیب
       gamelab_randColor:
         text: بے ترتیب رنگ
       gamelab_randomColor:
@@ -150,16 +142,7 @@ ur:
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': دھنک
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': پانی کے اندر
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': سردیاں
-      gamelab_setPosition:
-        options:
-          POSITION:
-            '"random"': بےترتیب
       gamelab_spriteClicked:
-        options:
-          CONDITION:
-            '"when"': کب
-            '"while"': جب تک
-      gamelab_spriteClickedSet:
         options:
           CONDITION:
             '"when"': کب
@@ -168,11 +151,6 @@ ur:
         options:
           KEY:
             '"space"': خلاء
-      gamelab_whenTouchingSet:
-        options:
-          CONDITION:
-            '"when"': کب
-            '"while"': جب تک
       gamelab_whileKey:
         options:
           KEY:

@@ -215,19 +215,6 @@ mi:
           CONDITION:
             '"when"': ina
             '"while"': i te
-      gamelab_spriteClickedSet:
-        options:
-          CONDITION:
-            '"when"': ina
-            '"while"': i te
-      gamelab_spritesWhere:
-        options:
-          PROPERTY:
-            '"scale"': rahinga
-      gamelab_spritesWhereGenerator:
-        options:
-          PROPERTY:
-            '"scale"': rahinga
       gamelab_turn:
         options:
           DIRECTION:
@@ -248,11 +235,6 @@ mi:
             "'down'": raro
             "'left'": mauī
             "'right'": matau
-      gamelab_whenTouchingSet:
-        options:
-          CONDITION:
-            '"when"': ina
-            '"while"': i te
       gamelab_whileKey:
         options:
           KEY:

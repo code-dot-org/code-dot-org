@@ -6,11 +6,6 @@ style_min: true
 
 # How to Help
 
-## Nominate a teacher for a computer science scholarship
-Help bring computer science education to all schools by nominating a favorite K-12 teacher for a scholarship to participate in Code.org’s professional learning program. Thanks to our [generous donors](/about/donors), eligible teachers can receive [**full scholarships**](/educate/professional-learning/middle-high) and all teachers will learn about free resources to support their students. We welcome teachers from all subject areas – no CS experience needed!
-
-[<button>Nominate a favorite teacher</button>](/nominate)
-
 ## Ask your school to teach computer science
 Encourage your local school to start teaching computer science. To make it easier, Code.org offers [courses for every grade level](https://studio.code.org/courses?view=teacher) from kindergarten through high school at no cost. And, teachers can enroll in our [hands-on professional learning workshops](/educate/professional-learning) offered locally across the United States.
 

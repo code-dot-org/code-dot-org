@@ -360,7 +360,6 @@ eu:
   pdf_download: 'Jaitsi PDFa'
   download_coming_soon: 'Jarduera deskargagarria aurki.'
   video_coming_soon: 'Bideoa laster!'
-  not_started: 'Ikaslea ez da saiatu maila honetan.'
   share_code:
     title: "Sakatu \"Hasi\" nire programa martxan ikusteko"
     bounce_og_title: "Berrikusi nire errebote jokoa"

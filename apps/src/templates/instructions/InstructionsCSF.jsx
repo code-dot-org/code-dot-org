@@ -17,7 +17,7 @@ import ChatBubble from './ChatBubble';
 import LegacyButton from '../LegacyButton';
 import {Z_INDEX as OVERLAY_Z_INDEX} from '../Overlay';
 import i18n from '@cdo/locale';
-import UnsafeRenderedMarkdown from '../UnsafeRenderedMarkdown';
+import SafeMarkdown from '../SafeMarkdown';
 import {getOuterHeight, scrollTo, shouldDisplayChatTips} from './utils';
 import {levenshtein} from '../../utils';
 import color from '../../util/color';
@@ -614,9 +614,7 @@ class InstructionsCSF extends React.Component {
               />
               {this.props.shortInstructions2 && (
                 <div className="secondary-instructions">
-                  <UnsafeRenderedMarkdown
-                    markdown={this.props.shortInstructions2}
-                  />
+                  <SafeMarkdown markdown={this.props.shortInstructions2} />
                 </div>
               )}
               {this.props.overlayVisible && (

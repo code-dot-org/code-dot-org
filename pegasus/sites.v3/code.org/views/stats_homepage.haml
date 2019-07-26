@@ -1,5 +1,5 @@
 :ruby
-  student_accounts_percent = "30%"
+  student_accounts_percent = "40%"
   female_students = "15M"
   project_count = fetch_project_count['rounded_down_millions']
   project_count = project_count.to_s + "M"
@@ -35,7 +35,7 @@
   showing_below_hero_announcement = Homepage.get_below_hero_announcement[:showing]
 
 - if !showing_below_hero_announcement
-  .make-difference Every student in every school
+  .every-student Every student in every school should have the opportunity to learn computer science
 
 .statistics
   %a.nounderscorehover.col-20.stats-box.linktag{href: CDO.studio_url('/courses'), id: "stats-0"}

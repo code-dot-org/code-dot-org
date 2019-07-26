@@ -583,18 +583,6 @@ ko:
             '2': 고음
       Dancelab_whenSetup:
         text: 설정
-      gamelab_changeColor:
-        text: "{COLOR} {METHOD}을(를) {AMOUNT}만큼 변경하기"
-        options:
-          METHOD:
-            '"tint"': 색조
-      gamelab_changeColorBy:
-        text: "{COLOR} {METHOD}을(를) {AMOUNT}만큼 변경하기"
-        options:
-          METHOD:
-            '"hue"': 색조
-            '"saturation"': 채도
-            '"brightness"': 명도
       gamelab_changePropBy:
         text: "{SPRITE}{PROPERTY}을(를) {VAL}만큼 변경"
         options:
@@ -638,29 +626,11 @@ ko:
             '"space"': 우주
             '"x"': x
             '"y"': 예
-      gamelab_layoutSprites:
-        options:
-          FORMAT:
-            '"border"': 테두리
-            '"inner"': 내부 사각형
-            '"circle"': 원
-            '"grid"': 그리드
-            '"row"': 행
-            '"column"': 열
-            '"x"': 교차
-            '"plus"': 더하기
-            '"random"': random(랜덤)
-      gamelab_locationDelta:
-        options:
-          DIR:
-            "'random'": random(랜덤)
       gamelab_mirrorSprite:
         options:
           DIRECTION:
             '"right"': 오른쪽으로
             '"left"': 왼쪽으로
-      gamelab_mixColors:
-        text: "{COLOR1} 및 {COLOR2} 혼합"
       gamelab_randColor:
         text: 랜덤 색
       gamelab_randomColor:
@@ -677,20 +647,6 @@ ko:
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': 비
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': 물속
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': 겨울
-      gamelab_setPosition:
-        text: "{THIS}을(를) {POSITION} 위치로 이동"
-        options:
-          POSITION:
-            "{x: 50, y: 50}": 왼쪽 위
-            "{x: 200, y: 50}": 위쪽 가운데
-            "{x: 350, y: 50}": 오른쪽 위
-            "{x: 50, y: 200}": 왼쪽 가운데
-            "{x: 200, y: 200}": 중간
-            "{x: 350, y: 200}": 오른쪽 가운데
-            "{x: 50, y: 350}": 왼쪽 아래
-            "{x: 200, y: 350}": 아래쪽 가운데
-            "{x: 350, y: 350}": 오른쪽 아래
-            '"random"': random(랜덤)
       gamelab_setProp:
         options:
           PROPERTY:
@@ -707,34 +663,11 @@ ko:
             '"scale"': 크기
             '"width"': 너비
             '"height"': '높이:'
-      gamelab_setup:
-        text: 설정
       gamelab_spriteClicked:
         options:
           CONDITION:
             '"when"': "~할 때"
             '"while"': '반복(~인 동안):'
-      gamelab_spriteClickedSet:
-        options:
-          CONDITION:
-            '"when"': "~할 때"
-            '"while"': '반복(~인 동안):'
-      gamelab_spritesWhere:
-        options:
-          PROPERTY:
-            '"scale"': 크기
-            '"x"': x 좌표
-            '"y"': y 좌표
-            '"direction"': 움직임 방향
-            '"tint"': 색조
-      gamelab_spritesWhereGenerator:
-        options:
-          PROPERTY:
-            '"scale"': 크기
-            '"x"': x 좌표
-            '"y"': y 좌표
-            '"direction"': 움직임 방향
-            '"tint"': 색조
       gamelab_turn:
         options:
           DIRECTION:
@@ -756,11 +689,6 @@ ko:
             "'down'": 아래로
             "'left'": 왼쪽으로
             "'right'": 오른쪽으로
-      gamelab_whenTouchingSet:
-        options:
-          CONDITION:
-            '"when"': "~할 때"
-            '"while"': '반복(~인 동안):'
       gamelab_whileKey:
         options:
           KEY:

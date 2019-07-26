@@ -155,8 +155,8 @@ class StorageAppsTest < Minitest::Test
     # Create a new typeless project
     # abuse_score should be 0 by default on project creation for projects of any type.
     new_project_channel_id = storage_apps.create({}, ip: 123)
-    assert_equal 0, storage_apps.get_abuse(new_project_channel_id)
+    assert_equal 0, StorageApps.get_abuse(new_project_channel_id)
     storage_apps.buffer_abuse_score(new_project_channel_id)
-    assert_equal (-50), storage_apps.get_abuse(new_project_channel_id)
+    assert_equal (-50), StorageApps.get_abuse(new_project_channel_id)
   end
 end

@@ -3,6 +3,8 @@ require 'test_helper'
 class StageLockTest < ActionDispatch::IntegrationTest
   include LevelsHelper # for build_script_level_path
 
+  self.use_transactional_test_case = true
+
   setup_all do
     @student = create :student
     @teacher = create :authorized_teacher

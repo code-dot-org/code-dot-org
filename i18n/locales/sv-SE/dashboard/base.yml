@@ -445,7 +445,6 @@ sv:
   pdf_download: 'Ladda ner PDF'
   download_coming_soon: 'Nedladdningsbar aktivitet kommer snart.'
   video_coming_soon: 'Video kommer snart!'
-  not_started: 'Studenten har inte försökt på denna nivå.'
   share_code:
     title: "Klicka på 'Kör' för att testa mitt program"
     bounce_og_title: "Kolla in mitt Studsa Spel"

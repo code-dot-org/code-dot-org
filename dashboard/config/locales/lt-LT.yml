@@ -463,7 +463,6 @@ lt:
   pdf_download: Parsisiųsti PDF
   download_coming_soon: Jau netrukus bus galima parsisiųsti įvairias veiklas.
   video_coming_soon: Vaizdo įrašas bus jau netrukus!
-  not_started: Mokinys dar nebandė šio lygio.
   share_code:
     title: Nuspausk „Paleisti“, kad programa būtų įvykdyta
     bounce_og_title: Peržiūrėk mano Bounce žaidimą

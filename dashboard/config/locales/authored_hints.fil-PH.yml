@@ -26,8 +26,6 @@ fil-PH:
         2-3_Artist_4_a: Para tapusin ang bahay, ang kailangan lang nating gawin ay
           guguhit ng parisukat!
       2-3 Artist 6:
-        2-3_Artist_6_a: 'Para magawa ang mga maliliit na mga anggulo, kailangan mong
-          lumiko sa bawat beses nang _mas malayo_ kaysa sa ginawa mo sa parisukat.   '
         2-3_Artist_6_b: Dahil ako ay nakaharap na pakanan, ito ay pinakamadaling magsimula
           sa paggalaw paharap, pagkatapos ay gawin ang pagliko ng pakaliwa para makalikha
           ng tatsulok.
@@ -40,12 +38,9 @@ fil-PH:
       2-3 Artist 8:
         2-3_Artist_8_a: Kung hahatiin mo ito sa dalawa, ilang pixels ba kailangan
           dapat ang bawat parisukat?
-      2-3 Artist 9:
+      2-3 Artist 9 NEW:
         2-3_Artist_9_a: Ang dyamanteng ito ay isa lang parisukat na nasa gilid nito
       2-3 Artist Debugging 10:
-        2-3_Artist_Debugging_10_a: Tandaan, kung gusto mo ang control panel na 10
-          pixels na _mas mahaba_... kaya siguraduhing **magdagdag** nang 10 sa kahit
-          anong numero ang iyong babaguhin.
         2-3_Artist_Debugging_10_b: "**Pagsubok at kamalian ay perpekto lang dito!**
           \n\nMagsimula sa pamamagitan ng pagbago nang isang numero sa bawat beses.
           \  \n\nAling mga numero ang gumagawa nito?  \n\nKung ikaw ay nawawala, i-click
@@ -60,13 +55,6 @@ fil-PH:
         2-3_Artist_Debugging_7_a: Ano ang mangyayari kung magagawa mo ang artista
           na mapagalaw at mapatalon patalikod pagkatapos niyang maiguhit ang unang
           linya?
-      2-3 Artist Debugging 8:
-        2-3_Artist_Debugging_8_a: |-
-          Ilang beses ba naiulit ang aking hugis?
-
-          Ilang beses ba _dapat_ uulitin ang hugis?
-
-          Saan mo maaaring mapalitan ito sa loob ng programa?
       2-3 Artist Debugging 9:
         2-3_Artist_Debugging_9_a: Ang artista ay kailangang lumiko ng 60 degrees palayo
           sa kaliwa bago ka magsimulang gumuhit!
@@ -99,49 +87,6 @@ fil-PH:
         2-3_Artist_Functions_4_a: Ang artista ay kailangang liliko nang 120 degrees
           sa pagitan ng bawat parisukat para makumpleto ang disenyong ito.
       2-3 Artist Loops New 11:
-        2-3_Artist_Loops_New_11_a: |-
-          Natandaan mo ang code na iyon mula sa huling palaisipan:
-
-          <xml>
-          <block type="when_run" deletable="false" movable="false">
-          <next>
-          <block type="controls_repeat">
-          <title name="TIMES">8</title>
-          <statement name="DO">
-          <block type="draw_colour" inline="true">
-          <value name="COLOUR">
-          <block type="colour_random"/>
-          </value>
-          <next>
-          <block type="draw_turn_by_constant_dropdown">
-          <title name="DIR">turnRight</title>
-          <title name="VALUE" config="45,60,90,120,180">45</title>
-          <next>
-          <block type="draw_move_by_constant">
-          <title name="DIR">moveForward</title>
-          <title name="VALUE">50</title>
-          <next>
-          <block type="draw_turn_by_constant_dropdown">
-          <title name="DIR">turnLeft</title>
-          <title name="VALUE" config="45,60,90,120,180">90</title>
-          <next>
-          <block type="draw_move_by_constant">
-          <title name="DIR">moveForward</title>
-          <title name="VALUE">50</title>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </statement>
-          </block>
-          </next>
-          </block>
-          </xml>
         2-3_Artist_Loops_New_11_b: Ang iyong bagong pagliko ay dapat pupunta sa **dulo**
           ng code sa loob ng loop.
       2-3 Artist Loops New 12:
@@ -157,9 +102,6 @@ fil-PH:
           na sa tamang direksyon para masimulan ang sunod na isa.  \n\nDahil dito,
           hindi na natin kailangang magdagdag ng ekstrang `turn left by` na bloke
           bago tayo magsimula ulit."
-        2-3_Artist_Loops_New_13_b: "Para magawa ang bawat dyamante, ang artista ay
-          kailangang:  \n\n-   gumalaw\n-   lumiko pakanan nang 120 degrees\n-   gumalaw\n-
-          \  lumiko pakanan nang 60 degrees  \n\nPagkatapos ay gawin ito lahat ulit!"
       2-3 Artist Loops New 9:
         2-3_Artist_Loops_New_9_a: Ang artista ay kailangang liliko nang 45 degrees
           pakanan bago ka magsimulang gumuhit.
@@ -170,13 +112,15 @@ fil-PH:
         2-3_Artist_Nested_Loops_1_a: Tandaan na gawin ang lahat ng mga abong mga bloke
           sa loob ng iyong loop.
       2-3 Artist Nested Loops 3:
-        2-3_Artist_Nested_Loops_3_a: "Nangangailangan ng tulong sa mga anggulo?  \n**360/12
-          = 30**"
+        2-3_Artist_Nested_Loops_3_a: |-
+          Nangangailangan ng tulong sa mga anggulo?\
+          **360/12 = 30**
         2-3_Artist_Nested_Loops_3_b: Tandaang ilagay ang lahat ng mga kulay abo na
           code at iyong pagliko na bloke sa loob ng isang loop.
       2-3 Artist Nested Loops 4:
-        2-3_Artist_Nested_Loops_3_a: "Nangangailangan ng tulong sa mga anggulo?  \n**360/12
-          = 30**"
+        2-3_Artist_Nested_Loops_3_a: |-
+          Nangangailangan ng tulong sa mga anggulo?\
+          **360/12 = 30**
       2-3 Artist Nested Loops 5:
         2-3_Artist_Nested_Loops_5_a: "Subukang gumamit ng `jump forward` na bloke
           para makuha mula sa taas ng isang parisukat sa lugar kung saan nagsimula
@@ -197,12 +141,6 @@ fil-PH:
         2-3_Bee_Conditionals_14_b: Kung ang pulang bulaklak ay lila, maaari mo bang
           matukung kung paano gamitin ang ekstrang `repeat` na loop para maputol sa
           code?
-        2-3_Bee_Conditionals_14_c: "Subukang paghiwalayin ito sa dalawang magkahiwalay
-          na bahagi:  \n\n![](https://images.code.org/895a52f3febff9edb83979f7861cf67a-image-1469640892331.png)\n\n1.
-          \ Magtipon ng mga nektar nang 3 beses\n\n2.  Gumalaw pasuong nang 5 beses\n\n3.
-          \ Suriin para makita kung nektar, kung gayon: kunin ito\n\n4.  Lumiko pakaliwa\n\n5.
-          \ Gumawa ng pulot\n\n6.  Gumalaw pasulong nang isang pagkakataon\n\n7.  Gumawa
-          nang dalawang pulot"
       2-3 Bee Conditionals 15:
         2-3_Bee_Conditionals_15_a: 'Tandaan: Ang mga lilang bulaklak ay mayroong 0
           o 1 na nektar at sila ay maaaring magbago sa bawat beses na ipapatakbo mo
@@ -287,9 +225,9 @@ fil-PH:
           sa toolbar na lugar papunta sa workspace at ikonekta ito sa `when run` na
           bloke.
       2-3 Maze 16:
-        2-3_Maze_16_a: Kung ang pattern ay mahirap makita, subukang i-code muna ang
-          lahat ng ito at tingnan kung anong mga bagay ang paulit-ulit bago mo ilagay
-          ang mga loop.
+        2-3_Maze_16_a: Kung ang pattern ay mahirap makita, subukang i-code ang lahat
+          muna at tingnan kung ano ang mga bagay ang paulit-ulit bago mo ilagay ang
+          mga loop.
         2-3_Maze_16_b: "Para makalagay ng maraming mga bloke sa loob ng isang `repeat`
           na loop. Kaladkarin lang ang loop palabas sa workspace, pagkatapos ay kaladkarin
           ang lahat ng mga bloke mula sa panimulang programa sa loob nito.  \n\nIkonekta
@@ -298,15 +236,15 @@ fil-PH:
         2-3_Maze_6_a: Mayroong dalawang mga pamamaraan para malutas ang palaisipang
           ito!
       2-3 Maze Loops 17:
-        2-3_Maze_Loops_17_a: Kung ang pattern ay mahirap makita, subukang i-code muna
-          ang lahat ng ito at tingnan kung anong mga bagay ang paulit-ulit bago mo
-          ilagay ang mga loop.
+        2-3_Maze_Loops_17_a: Kung ang pattern ay mahirap makita, subukang i-code ang
+          lahat muna at tingnan kung ano ang mga bagay ang paulit-ulit bago mo ilagay
+          ang mga loop.
         2-3_Maze_Loops_17_b: Nabura ba ang panimulang code? I-click ang `start over`
           para makuha ito pabalik!
       2-3 Maze Loops 18:
-        2-3_Maze_Loops_18_a: Kung ang pattern ay mahirap makita, subukang i-code muna
-          ang lahat ng ito at tingnan kung anong mga bagay ang paulit-ulit bago mo
-          ilagay ang mga loop.
+        2-3_Maze_Loops_18_a: Kung ang pattern ay mahirap makita, subukang i-code ang
+          lahat muna at tingnan kung ano ang mga bagay ang paulit-ulit bago mo ilagay
+          ang mga loop.
       2-3 Maze Loops 19:
         2-3_Maze_Loops_19_a: Kung hindi ka makausad, subukang magsulat ng code nang
           wala munang mga loop at maghanap ng mga patterns.
@@ -339,11 +277,6 @@ fil-PH:
         4-5_Artist_4_a: "Mayroong 360 degrees sa isang bilog! \n\nIyan ang ilang beses
           ka kailangan mag-ulit sa code (lumiko nang 1 degree bawat beses) bago matapos
           ang bilog!"
-      4-5 Artist 5:
-        4-5_Artist_5_a: |-
-          Ang pagsubok at kamalian ay isang magandang pamamaraan, ngunit maaari mo ring lutasin ang problema sa pamamagitan ng paghati nang 90 degree anggulo sa tatlong mga bahagi.
-
-          **90 / 3 == **\_****
       4-5 Artist 7:
         4-5_Artist_7_a: 'Aling anggulo ang pinakamaliit? Saang anggulo nakatayo ang
           artista? '
@@ -351,14 +284,7 @@ fil-PH:
         4-5_Artist_8_a: "Ang mahabang mga gilid ay 240 pixels ang bawat isa. Ibig
           sabihin na ang 2 makiling mga gilid ay dapat bubuo:\n\n**800 - 240 - 240
           = 320**\n\nAno ang **320.2** ? "
-        4-5_Artist_8_b: "Ang larawang ito ay maaaring gawin sa dalawang pamamaraan!
-          \ \n\n-   Iguhit ang dalawang parihaba na **120** ang haba at **160** ang
-          taas, na may nagkapatung-patong na gilid.\n-   Iguhit ang isang parihaba
-          na **240** ang haba at **160**  ang taas, pagkatapos ay magdagdag ng linya
-          sa gitna."
       4-5 Artist 9:
-        4-5_Artist_9_a: Kapag ang tatsulok ay isang paragilid, lahat ng mga gilid
-          at lahat ng mga anggulo ay parehas.
         4-5_Artist_9_b: Kakailanganin mong iguhit ang tatlong mga tatsulok na pareho
           ang laki. Huwag kalimutang tumalon sa iyong bagong posisyon pagkatapos ng
           bawat isa.
@@ -459,64 +385,6 @@ fil-PH:
           ng hexagon**, na sinusundan ng **2/3 ng tatsulok**. '
         Course_4_Artist_12_b: 'Ang hugis ng yunit ay halos kapareha ng huling palaisipan,
           maliban nalang na ang kalahating hexagon ay malaki nang kaunt. '
-        Course_4_Artist_12_c: "1.  Ang unang tatong mga linya ay 60 pixels ang haba
-          at ikaw kakailangan lumiko nang 60 degrees. \n    2, Ang susunod na dalawang
-          mga linya ay 80 pixels ang haba at kakailanganin mong lumiko nang 120 degrees "
-        Course_4_Artist_12_d: |-
-          **Solusyon:**
-
-          <xml>
-          <block type="when_run" deletable="false" movable="false">
-          <next>
-          <block type="draw_colour" inline="true" id="draw-color">
-          <value name="COLOUR">
-          <block type="colour_picker">
-          <title name="COLOUR">#843179</title>
-          </block>
-          </value>
-          <next>
-          <block type="controls_repeat">
-          <title name="TIMES">6</title>
-          <statement name="DO">
-          <block type="controls_repeat">
-          <title name="TIMES">3</title>
-          <statement name="DO">
-          <block type="draw_move_by_constant">
-          <title name="DIR">moveForward</title>
-          <title name="VALUE">60</title>
-          <next>
-          <block type="draw_turn_by_constant">
-          <title name="DIR">turnRight</title>
-          <title name="VALUE">60</title>
-          </block>
-          </next>
-          </block>
-          </statement>
-          <next>
-          <block type="controls_repeat">
-          <title name="TIMES">2</title>
-          <statement name="DO">
-          <block type="draw_move_by_constant">
-          <title name="DIR">moveForward</title>
-          <title name="VALUE">80</title>
-          <next>
-          <block type="draw_turn_by_constant">
-          <title name="DIR">turnRight</title>
-          <title name="VALUE">120</title>
-          </block>
-          </next>
-          </block>
-          </statement>
-          </block>
-          </next>
-          </block>
-          </statement>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </xml>
       Course 4 Artist 6:
         Course_4_Artist_6_a: Mayroong 3 mga tatsulok sa loob nang 360 degree na pag-ikot...
           ilang beses ba ang 3 papasok sa loob ng 360?
@@ -562,10 +430,12 @@ fil-PH:
           ang iyong galawa, siguradohin na ikaw ay gumagamit sa `counter` bilang distansya
           mo.
       Course 4 Artist For Loops 4:
-        Course_4_Artist_For_Loops_4_a: "**Ano ang pinakamaliit na numero na kakailanganin
-          mo?  \nAno ang pinakamalaking numero?  \nGaano kalaki ang paglaki as bawat
-          beses?**\n\nIyon ay ang mga katanungan na kailangan mung tanungin para mapunan
-          ang mga puwang ng `for` na loop."
+        Course_4_Artist_For_Loops_4_a: |-
+          **Ano ang pinakamaliit na numero na kakailanganin mo?\
+          Ano ang pinakamalaking numero?\
+          Gaano kalaki ang paglaki as bawat beses?**
+
+          Iyon ay ang mga katanungan na kailangan mung tanungin para mapunan ang mga puwang ng `for` na loop.
       Course 4 Artist For Loops Challenge:
         Course_4_Artist_For_Loops_Challenge_a: Ang pinakamalaking hugis ay mayroong
           19 na gilid. Ang pinakamaliit ay mayroong dalawa lang.
@@ -644,72 +514,6 @@ fil-PH:
           ng isang repeat na loop.
         Course_4_Artist_Functions_Inspiration_b: Subukang lumiko nang higit pa sa
           90 degrees sa labas ng `repeat loop`, pero sa loob pa rin ng `for loop`.
-        Course_4_Artist_Functions_Inspiration_c: |-
-          **Solusyon:**
-          <xml>
-          <block type="when_run" deletable="false" movable="false">
-          <next>
-          <block type="controls_for_counter" inline="true">
-          <mutation counter="counter"></mutation>
-          <value name="FROM">
-          <block type="math_number">
-
-          <title name="NUM">1</title>
-          </block>
-          </value>
-          <value name="TO">
-          <block type="math_number">
-          <title name="NUM">14</title>
-          </block>
-          </value>
-          <value name="BY">
-          <block type="math_number">
-          <title name="NUM">1</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="draw_colour" inline="true" id="draw-color">
-          <value name="COLOUR">
-          <block type="colour_random"/>
-          </value>
-          <next>
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="variables_get">
-          <title name="VAR">counter</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="procedures_callnoreturn">
-          <mutation name="draw a square 20"></mutation>
-          <next>
-          <block type="jump_by_constant">
-          <title name="DIR">jumpForward</title>
-          <title name="VALUE">20</title>
-          <next>
-          <block type="draw_turn_by_constant">
-          <title name="DIR">turnRight</title>
-          <title name="VALUE">3</title>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </statement>
-          <next>
-          <block type="draw_turn_by_constant">
-          <title name="DIR">turnLeft</title>
-          <title name="VALUE">100</title>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </statement>
-          </block>
-          </next>
-          </block>
-          </xml>
       Course 4 Artist Functions challenge:
         Course_4_Artist_Functions_challenge_a: Bahagi ng pag-uunawa sa kung paano
           gamitin ang mga function ay ang pagtukoy sa aling sa mga ito ang kailangan
@@ -723,33 +527,11 @@ fil-PH:
           nang 90 degrees sa labas ng iyong `repeat`, pero nasa loob pa rin ng `for
           loop`.
       Course 4 Artist Inspire:
-        Course_4_Artist_Inspire_a: Pagkatapos mong makumpleto ang isang parisukat,
-          subukang tumalong pasulong nang kalahati sa haba nito bago liliko at gumawa
-          ng isa pa.
         Course_4_Artist_Inspire_b: Bawat parisukat at talon ay inuulit nang apat na
           beses (gamit ang pagliko sa kaliwa sa pagitan) para makagawa ng isang buong
           gayang-pinwheel na yunit.
         Course_4_Artist_Inspire_c: Bawat pinwheel ay inuulit din nang apat na beses,
           na may kanang pagliko na **360/gilid**.
-        Course_4_Artist_Inspire_d: |-
-          **Solusyon:**
-
-          <xml>
-          <block type="when_run" deletable="false" movable="false">
-          <next>
-          <block type="draw_colour" inline="true" id="draw-color">
-          <value name="COLOUR">
-          <block type="colour_picker">
-          <title name="COLOUR">#843179</title>
-          </block>
-          </value>
-          <next>
-          <block type="variables_set" inline="false">
-          <title name="VAR">sides</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">4</title>
-          </block>
       Course 4 Artist Vars 13:
         Course_4_Artist_Vars_13_a: Kakailanganin mo nang dalawang repeat na loop (ang
           isa ay nasa loob ng isa pa) na parehong inuulit nang `sides` na beses.
@@ -813,537 +595,15 @@ fil-PH:
           \ \n\nKapag ikaw ay nasa tamang pahilis na lokasyon, kailangan mong pabalikin
           ulit ang iyong artista at tumalon pabalik nang 440 pixels (mas malayo nang
           120 pixels kaysa iyong `shift down/forward` function. "
-        Course_4_SCF_1_e: |-
-          **Solusyon:**
-
-          <xml>
-          <block type="when_run" deletable="false" movable="false">
-          <next>
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="math_number">
-          <title name="NUM">2</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="procedures_callnoreturn">
-          <mutation name="draw a line of hexagons"></mutation>
-          <next>
-          <block type="procedures_callnoreturn">
-          <mutation name="shift down/forward"></mutation>
-          <next>
-          <block type="procedures_callnoreturn">
-          <mutation name="draw a line of hexagons"></mutation>
-          <next>
-          <block type="procedures_callnoreturn">
-          <mutation name="shift down/backward"></mutation>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </statement>
-          </block>
-          </next>
-          </block>
-          <block type="procedures_defnoreturn">
-          <mutation></mutation>
-          <title name="NAME">draw a hexagon</title>
-          <statement name="STACK">
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="math_number">
-          <title name="NUM">6</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="draw_move" inline="true">
-          <title name="DIR">moveForward</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">40</title>
-          </block>
-          </value>
-          <next>
-          <block type="draw_turn" inline="true">
-          <title name="DIR">turnRight</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">60</title>
-          </block>
-          </value>
-          </block>
-          </next>
-          </block>
-          </statement>
-          </block>
-          </statement>
-          </block>
-          <block type="procedures_defnoreturn">
-          <mutation></mutation>
-          <title name="NAME">shift down/backward</title>
-          <statement name="STACK">
-          <block type="draw_turn" inline="true">
-          <title name="DIR">turnRight</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">60</title>
-          </block>
-          </value>
-          <next>
-          <block type="jump" inline="true">
-          <title name="DIR">jumpForward</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">40</title>
-          </block>
-          </value>
-          <next>
-          <block type="draw_turn" inline="true">
-          <title name="DIR">turnLeft</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">60</title>
-          </block>
-          </value>
-          <next>
-          <block type="jump" inline="true">
-          <title name="DIR">jumpBackward</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">440</title>
-          </block>
-          </value>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </statement>
-          </block>
-          <block type="procedures_defnoreturn">
-          <mutation></mutation>
-          <title name="NAME">draw a line of hexagons</title>
-          <statement name="STACK">
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="math_number">
-          <title name="NUM">3</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="procedures_callnoreturn">
-          <mutation name="draw a hexagon"></mutation>
-          <next>
-          <block type="jump" inline="true">
-          <title name="DIR">jumpForward</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">120</title>
-          </block>
-          </value>
-          </block>
-          </next>
-          </block>
-          </statement>
-          </block>
-          </statement>
-          </block>
-          <block type="procedures_defnoreturn">
-          <mutation></mutation>
-          <title name="NAME">shift down/forward</title>
-          <statement name="STACK">
-          <block type="draw_turn" inline="true">
-          <title name="DIR">turnRight</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">60</title>
-          </block>
-          </value>
-          <next>
-          <block type="jump" inline="true">
-          <title name="DIR">jumpForward</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">40</title>
-          </block>
-          </value>
-          <next>
-          <block type="draw_turn" inline="true">
-          <title name="DIR">turnLeft</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">60</title>
-          </block>
-          </value>
-          <next>
-          <block type="jump" inline="true">
-          <title name="DIR">jumpBackward</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">320</title>
-          </block>
-          </value>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </statement>
-          </block>
-          </xml>
       Course 4 SCF 1a:
         Course_4_SCF_1a_a: Tandaan ang iyong mga function mula sa yugtong 16.
-        Course_4_SCF_1a_b: "Tingnan ang landas na ito sa iyong pangunahing ruta:  \n\n![](https://images.code.org/1c3feab70af706409b3a05af4dc83c2e-image-1469726967858.png)"
         Course_4_SCF_1a_c: Dapat mong bigyang-pansin ang paggamit ng `for loop`. Hindi
           para sa mga hakbang, kundi para sa parameter ng function.
-        Course_4_SCF_1a_d: |-
-          **Solusyon:**
-
-          <xml>
-          <block type="when_run" deletable="false" movable="false" uservisible="false" y="14">
-          <next>
-          <block type="variables_set" inline="false" uservisible="false">
-          <title name="VAR">left</title>
-          <value name="VALUE">
-          <block type="math_number" uservisible="false">
-          <title name="NUM">1</title>
-          </block>
-          </value>
-          <next>
-          <block type="variables_set" inline="false" uservisible="false">
-          <title name="VAR">right</title>
-          <value name="VALUE">
-          <block type="math_number" uservisible="false">
-          <title name="NUM">0</title>
-          </block>
-          </value>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          <block type="when_run" deletable="false" movable="false">
-          <next>
-          <block type="controls_for" inline="true">
-          <title name="VAR">counter</title>
-          <value name="FROM">
-          <block type="math_number">
-          <title name="NUM">3</title>
-          </block>
-          </value>
-          <value name="TO">
-          <block type="math_number">
-          <title name="NUM">21</title>
-          </block>
-          </value>
-          <value name="BY">
-          <block type="math_number">
-          <title name="NUM">3</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="maze_move">
-          <title name="DIR">moveForward</title>
-          <next>
-          <block type="maze_if">
-          <title name="DIR">isPathLeft</title>
-          <statement name="DO">
-          <block type="procedures_callnoreturn" inline="false">
-          <mutation name="get nectar">
-          <arg name="dir"></arg>
-          <arg name="counter"></arg>
-          </mutation>
-          <value name="ARG0">
-          <block type="variables_get">
-          <title name="VAR">left</title>
-          </block>
-          </value>
-          <value name="ARG1">
-          <block type="variables_get">
-          <title name="VAR">counter</title>
-          </block>
-          </value>
-          </block>
-          </statement>
-          <next>
-          <block type="maze_turn">
-          <title name="DIR">turnRight</title>
-          <next>
-          <block type="maze_move">
-          <title name="DIR">moveForward</title>
-          <next>
-          <block type="maze_turn">
-          <title name="DIR">turnLeft</title>
-          <next>
-          <block type="maze_if">
-          <title name="DIR">isPathRight</title>
-          <statement name="DO">
-          <block type="procedures_callnoreturn" inline="false">
-          <mutation name="get nectar">
-          <arg name="dir"></arg>
-          <arg name="counter"></arg>
-          </mutation>
-          <value name="ARG0">
-          <block type="variables_get">
-          <title name="VAR">right</title>
-          </block>
-          </value>
-          <value name="ARG1">
-          <block type="variables_get">
-          <title name="VAR">counter</title>
-          </block>
-          </value>
-          </block>
-          </statement>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </statement>
-          </block>
-          </next>
-          </block>
-          <block type="procedures_defnoreturn" editable="false" usercreated="true">
-          <mutation>
-          <arg name="dir"></arg>
-          <arg name="counter"></arg>
-          </mutation>
-          <title name="NAME">get nectar</title>
-          <statement name="STACK">
-          <block type="controls_if" inline="false">
-          <mutation else="1"></mutation>
-          <value name="IF0">
-          <block type="logic_compare" inline="true" movable="false">
-          <title name="OP">EQ</title>
-          <value name="A">
-          <block type="parameters_get">
-          <title name="VAR">dir</title>
-          </block>
-          </value>
-          <value name="B">
-          <block type="variables_get">
-          <title name="VAR">left</title>
-          </block>
-          </value>
-          </block>
-          </value>
-          <statement name="DO0">
-          <block type="maze_turn">
-          <title name="DIR">turnLeft</title>
-          </block>
-          </statement>
-          <statement name="ELSE">
-          <block type="maze_turn">
-          <title name="DIR">turnRight</title>
-          </block>
-          </statement>
-          <next>
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="math_number">
-          <title name="NUM">3</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="maze_move">
-          <title name="DIR">moveForward</title>
-          </block>
-          </statement>
-          <next>
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="parameters_get">
-          <title name="VAR">counter</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="maze_nectar"></block>
-          </statement>
-          <next>
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="math_number">
-          <title name="NUM">3</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="maze_move">
-          <title name="DIR">moveBackward</title>
-          </block>
-          </statement>
-          <next>
-          <block type="controls_if" inline="false">
-          <mutation else="1"></mutation>
-          <value name="IF0">
-          <block type="logic_compare" inline="true" movable="false">
-          <title name="OP">EQ</title>
-          <value name="A">
-          <block type="parameters_get">
-          <title name="VAR">dir</title>
-          </block>
-          </value>
-          <value name="B">
-          <block type="variables_get">
-          <title name="VAR">left</title>
-          </block>
-          </value>
-          </block>
-          </value>
-          <statement name="DO0">
-          <block type="maze_turn">
-          <title name="DIR">turnRight</title>
-          </block>
-          </statement>
-          <statement name="ELSE">
-          <block type="maze_turn">
-          <title name="DIR">turnLeft</title>
-          </block>
-          </statement>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </statement>
-          </block>
-          </xml>
       Course 4 SCF 1b:
         Course_4_SCF_1b_a: "Pansinin na ang hugis ng lahat ng mga puntos ng pulot
           ay pareha lang.  \n\nMagandang lugar para sa isang function!"
-        Course_4_SCF_1b_b: "Tingnan ang ideyang ito para kung paano ang bubuyog maaaring
-          maglakbay:  \n\n![](https://images.code.org/996ab4a2de6048cbb99b84c56cc4ad61-image-1469726859769.png)"
         Course_4_SCF_1b_c: Dapat mong isaalang-alang ang paggamit ng `for loop` para
           sa distansya na lalakbayan ng bubuyog.
-        Course_4_SCF_1b_d: |-
-          **Solusyon:**
-
-          <xml>
-          <block type="when_run" deletable="false" movable="false">
-          <next>
-          <block type="controls_for" inline="true">
-          <title name="VAR">counter</title>
-          <value name="FROM">
-          <block type="math_number">
-          <title name="NUM">2</title>
-          </block>
-          </value>
-          <value name="TO">
-          <block type="math_number">
-          <title name="NUM">4</title>
-          </block>
-          </value>
-          <value name="BY">
-          <block type="math_number">
-          <title name="NUM">1</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="procedures_callnoreturn">
-          <mutation name="make honey up and over"></mutation>
-          <next>
-          <block type="maze_turn">
-          <title name="DIR">turnLeft</title>
-          <next>
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="variables_get">
-          <title name="VAR">counter</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="maze_move">
-          <title name="DIR">moveForward</title>
-          </block>
-          </statement>
-          <next>
-          <block type="maze_turn">
-          <title name="DIR">turnRight</title>
-          <next>
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="variables_get">
-          <title name="VAR">counter</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="maze_move">
-          <title name="DIR">moveForward</title>
-          </block>
-          </statement>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </statement>
-          </block>
-          </next>
-          </block>
-          <block type="procedures_defnoreturn" editable="false" usercreated="true">
-          <mutation></mutation>
-          <title name="NAME">make honey up and over</title>
-          <statement name="STACK">
-          <block type="maze_move">
-          <title name="DIR">moveForward</title>
-          <next>
-          <block type="maze_turn">
-          <title name="DIR">turnRight</title>
-          <next>
-          <block type="maze_move">
-          <title name="DIR">moveForward</title>
-          <next>
-          <block type="maze_honey">
-          <next>
-          <block type="maze_honey">
-          <next>
-          <block type="maze_move">
-          <title name="DIR">moveBackward</title>
-          <next>
-          <block type="maze_turn">
-          <title name="DIR">turnLeft</title>
-          <next>
-          <block type="maze_move">
-          <title name="DIR">moveBackward</title>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </statement>
-          </block>
-          </xml>
       Course 4 SCF 2:
         Course_4_SCF_2_a: Bawat octagon ay mayroong 40 pixel na mga gilid.
         Course_4_SCF_2_b: Mayroong 136 pixel na mga pagtalon sa pagitan ng bawat octagon
@@ -1356,175 +616,6 @@ fil-PH:
           Bigyang-pansin na dahil mayroon lang kaunting mga octagon sa isang even na mga hilera, hindi mo na kailangang tumalon pabalik pa sa panimulang lugar para sa mga bilang na gansal na mga hanay.
 
           Ibig sabihin nito na maaari mong gamitin ang parehong function para sa lahat ng mga hanay.
-        Course_4_SCF_2_e: |-
-          **Solusyon:**
-
-          <xml>
-          <block type="when_run" deletable="false" movable="false">
-          <next>
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="math_number">
-          <title name="NUM">2</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="procedures_callnoreturn" inline="false">
-          <mutation name="draw octagons">
-          <arg name="numOctagons"></arg>
-          </mutation>
-          <value name="ARG0">
-          <block type="math_number">
-          <title name="NUM">2</title>
-          </block>
-          </value>
-          <next>
-          <block type="procedures_callnoreturn">
-          <mutation name="shift down"></mutation>
-          <next>
-          <block type="procedures_callnoreturn" inline="false">
-          <mutation name="draw octagons">
-          <arg name="numOctagons"></arg>
-          </mutation>
-          <value name="ARG0">
-          <block type="math_number">
-          <title name="NUM">3</title>
-          </block>
-          </value>
-          <next>
-          <block type="procedures_callnoreturn">
-          <mutation name="shift down"></mutation>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </statement>
-          <next>
-          <block type="procedures_callnoreturn" inline="false">
-          <mutation name="draw octagons">
-          <arg name="numOctagons"></arg>
-          </mutation>
-          <value name="ARG0">
-          <block type="math_number">
-          <title name="NUM">2</title>
-          </block>
-          </value>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          <block type="procedures_defnoreturn" editable="false">
-          <mutation>
-          <arg name="numOctagons"></arg>
-          </mutation>
-          <title name="NAME">draw octagons</title>
-          <statement name="STACK">
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="parameters_get">
-          <title name="VAR">numOctagons</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="procedures_callnoreturn">
-          <mutation name="draw an octagon"></mutation>
-          <next>
-          <block type="jump" inline="true">
-          <title name="DIR">jumpForward</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">136</title>
-          </block>
-          </value>
-          </block>
-          </next>
-          </block>
-          </statement>
-          </block>
-          </statement>
-          </block>
-          <block type="procedures_defnoreturn" editable="false">
-          <mutation></mutation>
-          <title name="NAME">draw an octagon</title>
-          <statement name="STACK">
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="math_number">
-          <title name="NUM">8</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="draw_move" inline="true">
-          <title name="DIR">moveForward</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">40</title>
-          </block>
-          </value>
-          <next>
-          <block type="draw_turn" inline="true">
-          <title name="DIR">turnRight</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">45</title>
-          </block>
-          </value>
-          </block>
-          </next>
-          </block>
-          </statement>
-          </block>
-          </statement>
-          </block>
-          <block type="procedures_defnoreturn" editable="false">
-          <mutation></mutation>
-          <title name="NAME">shift down</title>
-          <statement name="STACK">
-          <block type="draw_turn" inline="true">
-          <title name="DIR">turnRight</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">45</title>
-          </block>
-          </value>
-          <next>
-          <block type="jump" inline="true">
-          <title name="DIR">jumpForward</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">96</title>
-          </block>
-          </value>
-          <next>
-          <block type="draw_turn" inline="true">
-          <title name="DIR">turnLeft</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">45</title>
-          </block>
-          </value>
-          <next>
-          <block type="jump" inline="true">
-          <title name="DIR">jumpBackward</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">408</title>
-          </block>
-          </value>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </statement>
-          </block>
-          </xml>
       Course 4 SCF 3:
         Course_4_SCF_3_a: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
         Course_4_SCF_3_b: 'Ito ay isang serye ng mga octagon na may mga gilid na `counter`
@@ -1535,152 +626,6 @@ fil-PH:
           iterasyon. '
         Course_4_SCF_3_e: Ang parehong kulay ng bawat octagot at ang lapad na pen
           ay kinokontrol ng `counter` na variable.
-        Course_4_SCF_3_f: |-
-          **Solusyon:**
-
-          <xml>
-          <block type="procedures_defnoreturn" editable="false">
-          <mutation>
-          <arg name="length"></arg>
-          </mutation>
-          <title name="NAME">draw an octagon</title>
-          <statement name="STACK">
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="math_number">
-          <title name="NUM">8</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="draw_move" inline="true">
-          <title name="DIR">moveForward</title>
-          <value name="VALUE">
-          <block type="parameters_get">
-          <title name="VAR">length</title>
-          </block>
-          </value>
-          <next>
-          <block type="draw_turn" inline="true">
-          <title name="DIR">turnRight</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">45</title>
-          </block>
-          </value>
-          </block>
-          </next>
-          </block>
-          </statement>
-          </block>
-          </statement>
-          </block>
-          <block type="when_run" deletable="false" movable="false">
-          <next>
-          <block type="controls_for_counter" inline="true">
-          <mutation counter="counter"></mutation>
-          <value name="FROM">
-          <block type="math_number">
-          <title name="NUM">200</title>
-          </block>
-          </value>
-          <value name="TO">
-          <block type="math_number">
-          <title name="NUM">2</title>
-          </block>
-          </value>
-          <value name="BY">
-          <block type="math_number">
-          <title name="NUM">2</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="draw_colour" inline="true" id="draw-color">
-          <value name="COLOUR">
-          <block type="colour_rgb" inline="false">
-          <value name="RED">
-          <block type="math_arithmetic" inline="true">
-          <title name="OP">MINUS</title>
-          <value name="A">
-          <block type="math_number">
-          <title name="NUM">255</title>
-          </block>
-          </value>
-          <value name="B">
-          <block type="variables_get">
-          <title name="VAR">counter</title>
-          </block>
-          </value>
-          </block>
-          </value>
-          <value name="GREEN">
-          <block type="variables_get">
-          <title name="VAR">counter</title>
-          </block>
-          </value>
-          <value name="BLUE">
-          <block type="math_arithmetic" inline="true">
-          <title name="OP">MULTIPLY</title>
-          <value name="A">
-          <block type="variables_get">
-          <title name="VAR">counter</title>
-          </block>
-          </value>
-          <value name="B">
-          <block type="math_number">
-          <title name="NUM">2</title>
-          </block>
-          </value>
-          </block>
-          </value>
-          </block>
-          </value>
-          <next>
-          <block type="draw_width" inline="false">
-          <value name="WIDTH">
-          <block type="math_arithmetic" inline="true">
-          <title name="OP">DIVIDE</title>
-          <value name="A">
-          <block type="variables_get">
-          <title name="VAR">counter</title>
-          </block>
-          </value>
-          <value name="B">
-          <block type="math_number">
-          <title name="NUM">4</title>
-          </block>
-          </value>
-          </block>
-          </value>
-          <next>
-          <block type="procedures_callnoreturn" inline="false">
-          <mutation name="draw an octagon">
-          <arg name="length"></arg>
-          </mutation>
-          <value name="ARG0">
-          <block type="variables_get">
-          <title name="VAR">counter</title>
-          </block>
-          </value>
-          <next>
-          <block type="draw_turn" inline="true">
-          <title name="DIR">turnLeft</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">22.5</title>
-          </block>
-          </value>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </statement>
-          </block>
-          </next>
-          </block>
-          </xml>
       Course 4 SCFL 1:
         Course_4_SCFL_1_a: "Tingnan ang opsyon na ito para sa paggalaw: \n\n![](https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png)"
         Course_4_SCFL_1_b: 'Subukang gamitin ang dalawang `for` na mga loops: Isa
@@ -1832,148 +777,9 @@ fil-PH:
           parehong pattern, ngunit may mga pagbabago sa iilang mga hakbang. Bigyang-pansin
           na ang bilang ng mga hakbang ay kailangang paliitin ng 1 mula 7 hanggang
           sa 5.
-        Course_4_SCFL_1a_d: |-
-          **Solusyon:**
-
-          <xml>
-          <block type="when_run" deletable="false" movable="false">
-          <next>
-          <block type="controls_for" inline="true">
-          <title name="VAR">counter</title>
-          <value name="FROM">
-          <block type="math_number">
-          <title name="NUM">7</title>
-          </block>
-          </value>
-          <value name="TO">
-          <block type="math_number">
-          <title name="NUM">5</title>
-          </block>
-          </value>
-          <value name="BY">
-          <block type="math_number">
-          <title name="NUM">1</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="math_number">
-          <title name="NUM">2</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="maze_moveForward"/>
-          </statement>
-          <next>
-          <block type="maze_turn">
-          <title name="DIR">turnLeft</title>
-          <next>
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="variables_get">
-          <title name="VAR">counter</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="maze_moveForward"/>
-          </statement>
-          <next>
-          <block type="maze_turn">
-          <title name="DIR">turnLeft</title>
-          <next>
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="math_number">
-          <title name="NUM">2</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="maze_moveForward"/>
-          </statement>
-          <next>
-          <block type="maze_turn">
-          <title name="DIR">turnLeft</title>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </statement>
-          </block>
-          </next>
-          </block>
-          </xml>
       Course 4 SCFL 1b:
         Course_4_SCFL_1b_a: Subukang gamitin ang `for loop`.
         Course_4_SCFL_1b_b: "Tingnan ang opsyon na ito para sa paggalaw: \n\n![](https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png)"
-        Course_4_SCFL_1b_c: |-
-          **Solusyon:**
-
-          <xml>
-          <block type="when_run" deletable="false" movable="false">
-          <next>
-          <block type="controls_for" inline="true">
-          <title name="VAR">counter</title>
-          <value name="FROM">
-          <block type="math_number">
-          <title name="NUM">3</title>
-          </block>
-          </value>
-          <value name="TO">
-          <block type="math_number">
-          <title name="NUM">1</title>
-          </block>
-          </value>
-          <value name="BY">
-          <block type="math_number">
-          <title name="NUM">1</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="variables_get">
-          <title name="VAR">counter</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="maze_moveForward"/>
-          </statement>
-          <next>
-          <block type="maze_turn">
-          <title name="DIR">turnLeft</title>
-          <next>
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="variables_get">
-          <title name="VAR">counter</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="maze_moveForward"/>
-          </statement>
-          <next>
-          <block type="maze_turn">
-          <title name="DIR">turnRight</title>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </statement>
-          </block>
-          </next>
-          </block>
-          </xml>
       Course 4 SCFL 2:
         Course_4_SCFL_2_a: "Tingnan ang opsyon na ito para sa paggalaw: \n\n![](https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png)"
         Course_4_SCFL_2_b: Bigyang-pansin na mayrong tatlong mga puntos sa panahon
@@ -1982,124 +788,6 @@ fil-PH:
         Course_4_SCFL_2_c: Sa panahon ng bawat iterasyon ng `for` na loop, ang numero
           para sa bawat object ay may kaugnayan sa `counter` na variable sa ilang
           pamamaraan.
-        Course_4_SCFL_2_d: |-
-          **Solusyon:**
-
-          <xml>
-          <block type="when_run" deletable="false" movable="false">
-          <next>
-          <block type="controls_for" inline="true">
-          <title name="VAR">counter</title>
-          <value name="FROM">
-          <block type="math_number">
-          <title name="NUM">1</title>
-          </block>
-          </value>
-          <value name="TO">
-          <block type="math_number">
-          <title name="NUM">4</title>
-          </block>
-          </value>
-          <value name="BY">
-          <block type="math_number">
-          <title name="NUM">1</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="maze_moveForward">
-          <next>
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="variables_get">
-          <title name="VAR">counter</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="maze_nectar"/>
-          </statement>
-          <next>
-          <block type="maze_turn">
-          <title name="DIR">turnRight</title>
-          <next>
-          <block type="maze_moveForward">
-          <next>
-          <block type="maze_moveForward">
-          <next>
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="math_arithmetic" inline="true">
-          <title name="OP">MULTIPLY</title>
-          <value name="A">
-          <block type="variables_get">
-          <title name="VAR">counter</title>
-          </block>
-          </value>
-          <value name="B">
-          <block type="math_number">
-          <title name="NUM">3</title>
-          </block>
-          </value>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="maze_honey"/>
-          </statement>
-          <next>
-          <block type="maze_turn">
-          <title name="DIR">turnLeft</title>
-          <next>
-          <block type="maze_moveForward">
-          <next>
-          <block type="maze_moveForward">
-          <next>
-          <block type="maze_turn">
-          <title name="DIR">turnRight</title>
-          <next>
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="math_arithmetic" inline="true">
-          <title name="OP">POWER</title>
-          <value name="A">
-          <block type="math_number">
-          <title name="NUM">2</title>
-          </block>
-          </value>
-          <value name="B">
-          <block type="variables_get">
-          <title name="VAR">counter</title>
-          </block>
-          </value>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="maze_nectar"/>
-          </statement>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </statement>
-          </block>
-          </next>
-          </block>
-          </xml>
       Course 4 SCFL 3:
         Course_4_SCFL_3_a: Ang `pen width` ay 1. Ang unang parisukat ay mayroong 50
           pixel na mga gilid, at bawat parisukay ay mas malapad nang 50 pixels kaysa
@@ -2249,110 +937,6 @@ fil-PH:
           na haba, nagsisimula sa 5px, at lumalaki nang 5px hanggang sa 200px.
         Course_4_SCFL_4_c: Ang artista ay lumiliko ng 15 degrees sa pagitan ng bawat
           parisukat.
-        Course_4_SCFL_4_d: |-
-          **Solusyon:**
-
-          <xml>
-          <block type="when_run" deletable="false" movable="false">
-          <next>
-          <block type="draw_width" inline="false">
-          <value name="WIDTH">
-          <block type="math_number">
-          <title name="NUM">1</title>
-          </block>
-          </value>
-          <next>
-          <block type="controls_for_counter" inline="true">
-          <mutation counter="counter"></mutation>
-          <value name="FROM">
-          <block type="math_number">
-          <title name="NUM">5</title>
-          </block>
-          </value>
-          <value name="TO">
-          <block type="math_number">
-          <title name="NUM">200</title>
-          </block>
-          </value>
-          <value name="BY">
-          <block type="math_number">
-          <title name="NUM">5</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="draw_colour" inline="true" id="draw-color">
-          <value name="COLOUR">
-          <block type="colour_rgb" inline="false">
-          <value name="RED">
-          <block type="variables_get">
-          <title name="VAR">counter</title>
-          </block>
-          </value>
-          <value name="GREEN">
-          <block type="math_arithmetic" inline="true">
-          <title name="OP">MINUS</title>
-          <value name="A">
-          <block type="math_number">
-          <title name="NUM">255</title>
-          </block>
-          </value>
-          <value name="B">
-          <block type="variables_get">
-          <title name="VAR">counter</title>
-          </block>
-          </value>
-          </block>
-          </value>
-          <value name="BLUE">
-          <block type="math_number">
-          <title name="NUM">255</title>
-          </block>
-          </value>
-          </block>
-          </value>
-          <next>
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="math_number">
-          <title name="NUM">4</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="draw_move" inline="true">
-          <title name="DIR">moveForward</title>
-          <value name="VALUE">
-          <block type="variables_get">
-          <title name="VAR">counter</title>
-          </block>
-          </value>
-          <next>
-          <block type="draw_turn_by_constant">
-          <title name="DIR">turnRight</title>
-          <title name="VALUE">90</title>
-          </block>
-          </next>
-          </block>
-          </statement>
-          <next>
-          <block type="draw_turn" inline="true">
-          <title name="DIR">turnLeft</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">15</title>
-          </block>
-          </value>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </statement>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </xml>
       Course 4 SCFL 6:
         Course_4_SCFL_6_a: Ang pagbabago ng kulay ay nangyayari gamit ang `set color
           with red, gree, blue` na bloke. Ang red ay hindi nagbabago na 255, ang green
@@ -2463,216 +1047,6 @@ fil-PH:
           lapad ng iyong width sa `counter` bago mo gawin ito!
         Course_4_SCFL_7_d: Kakailanganin mong lumiko pakaliwa nang 225 degrees sa
           pagitan ng dalawang `for loops`.
-        Course_4_SCFL_7_e: |-
-          **Solusyon:**
-
-          <xml>
-          <block type="when_run" deletable="false" movable="false">
-          <next>
-          <block type="alpha" inline="true" id="alpha">
-          <value name="VALUE">
-          <block type="math_number_dropdown">
-          <title name="NUM" config="100,90,80,70,60,50,40,30,20,10,0">20</title>
-          </block>
-          </value>
-          <next>
-          <block type="controls_for_counter" inline="true">
-          <mutation counter="counter"></mutation>
-          <value name="FROM">
-          <block type="math_number">
-          <title name="NUM">5</title>
-          </block>
-          </value>
-          <value name="TO">
-          <block type="math_number">
-          <title name="NUM">200</title>
-          </block>
-          </value>
-          <value name="BY">
-          <block type="math_number">
-          <title name="NUM">2</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="draw_width" inline="false">
-          <value name="WIDTH">
-          <block type="variables_get">
-          <title name="VAR">counter</title>
-          </block>
-          </value>
-          <next>
-          <block type="draw_colour" inline="true" id="draw-color">
-          <value name="COLOUR">
-          <block type="colour_rgb" inline="false">
-          <value name="RED">
-          <block type="variables_get">
-          <title name="VAR">counter</title>
-          </block>
-          </value>
-          <value name="GREEN">
-          <block type="math_arithmetic" inline="true">
-          <title name="OP">MINUS</title>
-          <value name="A">
-          <block type="math_number">
-          <title name="NUM">255</title>
-          </block>
-          </value>
-          <value name="B">
-          <block type="variables_get">
-          <title name="VAR">counter</title>
-          </block>
-          </value>
-          </block>
-          </value>
-          <value name="BLUE">
-          <block type="math_number">
-          <title name="NUM">255</title>
-          </block>
-          </value>
-          </block>
-          </value>
-          <next>
-          <block type="draw_move" inline="true">
-          <title name="DIR">moveForward</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">5</title>
-          </block>
-          </value>
-          <next>
-          <block type="draw_turn" inline="true">
-          <title name="DIR">turnLeft</title>
-          <value name="VALUE">
-          <block type="math_arithmetic" inline="true">
-          <title name="OP">DIVIDE</title>
-          <value name="A">
-          <block type="math_number">
-          <title name="NUM">360</title>
-          </block>
-          </value>
-          <value name="B">
-          <block type="variables_get">
-          <title name="VAR">counter</title>
-          </block>
-          </value>
-          </block>
-          </value>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </statement>
-          <next>
-          <block type="draw_turn" inline="true">
-          <title name="DIR">turnLeft</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">225</title>
-          </block>
-          </value>
-          <next>
-          <block type="controls_for_counter" inline="true">
-          <mutation counter="counter"></mutation>
-          <value name="FROM">
-          <block type="math_number">
-          <title name="NUM">200</title>
-          </block>
-          </value>
-          <value name="TO">
-          <block type="math_number">
-          <title name="NUM">5</title>
-          </block>
-          </value>
-          <value name="BY">
-          <block type="math_number">
-          <title name="NUM">2</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="draw_width" inline="false">
-          <value name="WIDTH">
-          <block type="variables_get">
-          <title name="VAR">counter</title>
-          </block>
-          </value>
-          <next>
-          <block type="draw_colour" inline="true" id="draw-color">
-          <value name="COLOUR">
-          <block type="colour_rgb" inline="false">
-          <value name="RED">
-          <block type="variables_get">
-          <title name="VAR">counter</title>
-          </block>
-          </value>
-          <value name="GREEN">
-          <block type="math_arithmetic" inline="true">
-          <title name="OP">MINUS</title>
-          <value name="A">
-          <block type="math_number">
-          <title name="NUM">255</title>
-          </block>
-          </value>
-          <value name="B">
-          <block type="variables_get">
-          <title name="VAR">counter</title>
-          </block>
-          </value>
-          </block>
-          </value>
-          <value name="BLUE">
-          <block type="math_number">
-          <title name="NUM">255</title>
-          </block>
-          </value>
-          </block>
-          </value>
-          <next>
-          <block type="draw_move" inline="true">
-          <title name="DIR">moveForward</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">5</title>
-          </block>
-          </value>
-          <next>
-          <block type="draw_turn" inline="true">
-          <title name="DIR">turnRight</title>
-          <value name="VALUE">
-          <block type="math_arithmetic" inline="true">
-          <title name="OP">DIVIDE</title>
-          <value name="A">
-          <block type="math_number">
-          <title name="NUM">360</title>
-          </block>
-          </value>
-          <value name="B">
-          <block type="variables_get">
-          <title name="VAR">counter</title>
-          </block>
-          </value>
-          </block>
-          </value>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </statement>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </xml>
       Course 4 SCV 1:
         Course_4_SCV_1_a: 'Ang mga variables ay nakakatulon dahil maaari kang magdagdag
           sa mga ito sa bawat beses sa pamamagitan ng loop. '
@@ -2683,160 +1057,7 @@ fil-PH:
           `length` ay nagpapalinis sa ating code dahil maaari mong i-loop ang parehong
           code nang ilang ulit, sa halip nang paglikha ng bagong kopya para sa bawat
           hanay ng mga numero.
-        Course_4_SCV_1_d: |-
-          **Solusyon:**
-
-          <xml>
-          <block type="when_run" deletable="false" movable="false">
-          <next>
-          <block type="draw_width" inline="false">
-          <value name="WIDTH">
-          <block type="math_number">
-          <title name="NUM">1</title>
-          </block>
-          </value>
-          <next>
-          <block type="variables_set" inline="false">
-          <title name="VAR">length</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">500</title>
-          </block>
-          </value>
-          <next>
-          <block type="variables_set" inline="false">
-          <title name="VAR">sides</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">0</title>
-          </block>
-          </value>
-          <next>
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="math_number">
-          <title name="NUM">2</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="draw_colour" inline="true" id="draw-color">
-          <value name="COLOUR">
-          <block type="colour_random"/>
-          </value>
-          <next>
-          <block type="variables_set" inline="false">
-          <title name="VAR">sides</title>
-          <value name="VALUE">
-          <block type="math_arithmetic" inline="true">
-          <title name="OP">ADD</title>
-          <value name="A">
-          <block type="variables_get">
-          <title name="VAR">sides</title>
-          </block>
-          </value>
-          <value name="B">
-          <block type="math_number">
-          <title name="NUM">5</title>
-          </block>
-          </value>
-          </block>
-          </value>
-          <next>
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="variables_get">
-          <title name="VAR">sides</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="variables_get">
-          <title name="VAR">sides</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="draw_move" inline="true">
-          <title name="DIR">moveForward</title>
-          <value name="VALUE">
-          <block type="math_arithmetic" inline="true">
-          <title name="OP">DIVIDE</title>
-          <value name="A">
-          <block type="variables_get">
-          <title name="VAR">length</title>
-          </block>
-          </value>
-          <value name="B">
-          <block type="variables_get">
-          <title name="VAR">sides</title>
-          </block>
-          </value>
-          </block>
-          </value>
-          <next>
-          <block type="draw_turn" inline="true">
-          <title name="DIR">turnLeft</title>
-          <value name="VALUE">
-          <block type="math_arithmetic" inline="true">
-          <title name="OP">DIVIDE</title>
-          <value name="A">
-          <block type="math_number">
-          <title name="NUM">360</title>
-          </block>
-          </value>
-          <value name="B">
-          <block type="variables_get">
-          <title name="VAR">sides</title>
-          </block>
-          </value>
-          </block>
-          </value>
-          </block>
-          </next>
-          </block>
-          </statement>
-          <next>
-          <block type="draw_turn" inline="true">
-          <title name="DIR">turnRight</title>
-          <value name="VALUE">
-          <block type="math_arithmetic" inline="true">
-          <title name="OP">DIVIDE</title>
-          <value name="A">
-          <block type="math_number">
-          <title name="NUM">360</title>
-          </block>
-          </value>
-          <value name="B">
-          <block type="variables_get">
-          <title name="VAR">sides</title>
-          </block>
-          </value>
-          </block>
-          </value>
-          </block>
-          </next>
-          </block>
-          </statement>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </statement>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </xml>
       Course 4 SCV 2:
-        Course_4_SCV_2_a: "Ang nakompletong image ay binuo nang 10 sa mga \"bulaklak\"
-          na ito: \n![](https://images.code.org/bac2a606dfa59c00409294499540267d-image-1469641972385.png)\n\n..
-          kung saan ay gawa sa 10 mga decagon na ito: \n![](https://images.code.org/1e15f278c9c1606f90a2490ec3a94eb4-image-1469642051512.png)"
         Course_4_SCV_2_b: 'Ang disenyong ito ay gumagamit na mga naka-nest na mga
           loop (tatlo ang lalim). Lahat ng mga loop ay tumatakbo nang `sides` na beses. '
         Course_4_SCV_2_c: Ang artista ay lumiko pakaliwa kapag nilikha ang bawat decagon,
@@ -2845,213 +1066,11 @@ fil-PH:
           sa parehong lugar, siguradohing tumalon pasulong ng `length`/`sides` bago
           ka liliko nang 360/`sides` degrees bilang bahagi ng iyong pinakalabas na
           loob.
-        Course_4_SCV_2_e: |-
-          **Solusyon:**
-
-          <xml>
-          <block type="when_run" deletable="false" movable="false">
-          <next>
-          <block type="draw_width" inline="false">
-          <value name="WIDTH">
-          <block type="math_number">
-          <title name="NUM">1</title>
-          </block>
-          </value>
-          <next>
-          <block type="variables_set" inline="false">
-          <title name="VAR">length</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">400</title>
-          </block>
-          </value>
-          <next>
-          <block type="variables_set" inline="false">
-          <title name="VAR">sides</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">10</title>
-          </block>
-          </value>
-          <next>
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="variables_get">
-          <title name="VAR">sides</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="draw_colour" inline="true" id="draw-color">
-          <value name="COLOUR">
-          <block type="colour_picker">
-          <title name="COLOUR">#ff0000</title>
-          </block>
-          </value>
-          <next>
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="variables_get">
-          <title name="VAR">sides</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="variables_get">
-          <title name="VAR">sides</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="draw_move" inline="true">
-          <title name="DIR">moveForward</title>
-          <value name="VALUE">
-          <block type="math_arithmetic" inline="true">
-          <title name="OP">DIVIDE</title>
-          <value name="A">
-          <block type="variables_get">
-          <title name="VAR">length</title>
-          </block>
-          </value>
-          <value name="B">
-          <block type="variables_get">
-          <title name="VAR">sides</title>
-          </block>
-          </value>
-          </block>
-          </value>
-          <next>
-          <block type="draw_turn" inline="true">
-          <title name="DIR">turnLeft</title>
-          <value name="VALUE">
-          <block type="math_arithmetic" inline="true">
-          <title name="OP">DIVIDE</title>
-          <value name="A">
-          <block type="math_number">
-          <title name="NUM">360</title>
-          </block>
-          </value>
-          <value name="B">
-          <block type="variables_get">
-          <title name="VAR">sides</title>
-          </block>
-          </value>
-          </block>
-          </value>
-          </block>
-          </next>
-          </block>
-          </statement>
-          <next>
-          <block type="draw_turn" inline="true">
-          <title name="DIR">turnRight</title>
-          <value name="VALUE">
-          <block type="math_arithmetic" inline="true">
-          <title name="OP">DIVIDE</title>
-          <value name="A">
-          <block type="math_number">
-          <title name="NUM">360</title>
-          </block>
-          </value>
-          <value name="B">
-          <block type="variables_get">
-          <title name="VAR">sides</title>
-          </block>
-          </value>
-          </block>
-          </value>
-          </block>
-          </next>
-          </block>
-          </statement>
-          <next>
-          <block type="jump" inline="true">
-          <title name="DIR">jumpForward</title>
-          <value name="VALUE">
-          <block type="math_arithmetic" inline="true">
-          <title name="OP">DIVIDE</title>
-          <value name="A">
-          <block type="variables_get">
-          <title name="VAR">length</title>
-          </block>
-          </value>
-          <value name="B">
-          <block type="variables_get">
-          <title name="VAR">sides</title>
-          </block>
-          </value>
-          </block>
-          </value>
-          <next>
-          <block type="draw_turn" inline="true">
-          <title name="DIR">turnRight</title>
-          <value name="VALUE">
-          <block type="math_arithmetic" inline="true">
-          <title name="OP">DIVIDE</title>
-          <value name="A">
-          <block type="math_number">
-          <title name="NUM">360</title>
-          </block>
-          </value>
-          <value name="B">
-          <block type="variables_get">
-          <title name="VAR">sides</title>
-          </block>
-          </value>
-          </block>
-          </value>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </statement>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </xml>
       Course 4 SCV 3:
         Course_4_SCV_3_a: 'Gamitin ang iyong math na bloke para magdagdag at magbawas
           ng puntos sa `points` na variables kapag nagkabangga ang mga sprite. '
         Course_4_SCV_3_b: Maaari mong baguhin ang parameter para sa kung gaano kalayo
           ilipat ang iyong sprite sa bawat beses na ang isa sa mga arrow keys ay napindot.
-        Course_4_SCV_3_c: |-
-          **Solusyon:**
-
-          <xml><block type="when_run"><next><block type="variables_set" inline="false"><title name="VAR">points</title><value name="VALUE"><block type="math_number"><title name="NUM">0</title></block></value></block></next></block><block type="studio_whenArrow"><title name="VALUE">up</title><next><block type="studio_moveDistanceParams" inline="true"><title name="SPRITE">0</title><title name="DIR">1</title><value name="DISTANCE"><block type="math_number"><title name="NUM">25</title></block></value></block></next></block><block type="studio_whenArrow"><title name="VALUE">down</title><next><block type="studio_moveDistanceParams" inline="true"><title name="SPRITE">0</title><title name="DIR">4</title><value name="DISTANCE"><block type="math_number"><title name="NUM">25</title></block></value></block></next></block><block type="studio_whenArrow"><title name="VALUE">left</title><next><block type="studio_moveDistanceParams" inline="true"><title name="SPRITE">0</title><title name="DIR">8</title><value name="DISTANCE"><block type="math_number"><title name="NUM">25</title></block></value></block></next></block><block type="studio_whenArrow"><title name="VALUE">right</title><next><block type="studio_moveDistanceParams" inline="true"><title name="SPRITE">0</title><title name="DIR">2</title><value name="DISTANCE"><block type="math_number"><title name="NUM">25</title></block></value></block></next></block><block type="studio_whenSpriteCollided"><title name="SPRITE1">0</title><title name="SPRITE2">1</title><next><block type="variables_set" inline="false"><title name="VAR">points</title><value name="VALUE"><block type="math_arithmetic" inline="true"><title name="OP">ADD</title><value name="A"><block type="variables_get"><title name="VAR">points</title></block></value><value name="B"><block type="math_number"><title name="NUM">2</title></block></value></block></value></block></next></block><block type="studio_whenSpriteCollided"><title name="SPRITE1">0</title><title name="SPRITE2">2</title><next><block type="variables_set" inline="false"><title name="VAR">points</title><value name="VALUE"><block type="math_arithmetic" inline="true"><title name="OP">ADD</title><value name="A"><block type="variables_get"><title name="VAR">points</title></block></value><value name="B"><block type="math_number"><title name="NUM">3</title></block></value></block></value></block></next></block>
-          <block type="studio_whenSpriteCollided">
-
-          <title name="SPRITE1">1</title>
-          <title name="SPRITE2">2</title>
-          <next>
-          <block type="variables_set" inline="false">
-          <title name="VAR">points</title>
-          <value name="VALUE">
-          <block type="math_arithmetic" inline="true">
-          <title name="OP">MINUS</title>
-          <value name="A">
-          <block type="variables_get">
-          <title name="VAR">points</title>
-          </block>
-          </value>
-          <value name="B">
-          <block type="math_number">
-          <title name="NUM">1</title>
-          </block>
-          </value>
-          </block>
-          </value>
-          </block>
-          </next>
-          </block>
-          </xml>
       Course 4 SCV 4:
         Course_4_SCV_4_a: Ang tatlong mga variable ay makakatulong sa iyo dito. Isa
           para sa mga yunit ng nektar, isa para sa yunit ng pulot, at isa para kung
@@ -3060,278 +1079,14 @@ fil-PH:
           loop ay lubhang nakakatulong. Isa para sa paggalaw pasulong, isa para sa
           pagkolekta ng nektar at isa para sa paggawa ng pulot. '
         Course_4_SCV_4_c: "Tingnan ang opsyon na ito para sa paggalaw: \n\n![](https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png)"
-        Course_4_SCV_4_d: |-
-          **Solusyon:**
-
-          <xml>
-          <block type="when_run" deletable="false" movable="false">
-          <next>
-          <block type="variables_set" inline="false">
-          <title name="VAR">honey</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">4</title>
-          </block>
-          </value>
-          <next>
-          <block type="variables_set" inline="false">
-          <title name="VAR">nectar</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">6</title>
-          </block>
-          </value>
-          <next>
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="math_number">
-          <title name="NUM">5</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="math_arithmetic" inline="true">
-          <title name="OP">MINUS</title>
-          <value name="A">
-          <block type="variables_get">
-          <title name="VAR">nectar</title>
-          </block>
-          </value>
-          <value name="B">
-          <block type="math_number">
-          <title name="NUM">1</title>
-          </block>
-          </value>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="maze_moveForward"/>
-          </statement>
-          <next>
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="variables_get">
-          <title name="VAR">nectar</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="maze_nectar"/>
-          </statement>
-          <next>
-          <block type="maze_moveForward">
-          <next>
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="variables_get">
-          <title name="VAR">honey</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="maze_honey"/>
-          </statement>
-          <next>
-          <block type="maze_moveForward">
-          <next>
-          <block type="maze_turn">
-          <title name="DIR">turnRight</title>
-          <next>
-          <block type="variables_set" inline="false">
-          <title name="VAR">honey</title>
-          <value name="VALUE">
-          <block type="math_arithmetic" inline="true">
-          <title name="OP">ADD</title>
-          <value name="A">
-          <block type="variables_get">
-          <title name="VAR">honey</title>
-          </block>
-          </value>
-          <value name="B">
-          <block type="math_number">
-          <title name="NUM">1</title>
-          </block>
-          </value>
-          </block>
-          </value>
-          <next>
-          <block type="variables_set" inline="false">
-          <title name="VAR">nectar</title>
-          <value name="VALUE">
-          <block type="math_arithmetic" inline="true">
-          <title name="OP">MINUS</title>
-          <value name="A">
-          <block type="variables_get">
-          <title name="VAR">nectar</title>
-          </block>
-          </value>
-          <value name="B">
-          <block type="math_number">
-          <title name="NUM">1</title>
-          </block>
-          </value>
-          </block>
-          </value>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </statement>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </xml>
       Course 4 SCV 5:
-        Course_4_SCV_5_a: "Tingnan ang opsyon na mga ito para sa paggalaw: \n\n![](https://images.code.org/7f6f09c55cf9552a91fc1d33f44a7315-image-1469641639330.png)"
         Course_4_SCV_5_b: Bawat beses sa pag-loop, ang mga bulaklak ay mababawasan
           ng dalawang nektar at ang bubuyog ay nangangailangang makagawa ng isang
           pang pulot.
         Course_4_SCV_5_c: Bigyang pansin na sa simula ng ating panlabas na loob, ang
           bubugyog ay gumalaw nang napakaraming beses hangga't mayroon pang nektar
           sa sunod na bulaklak.
-        Course_4_SCV_5_d: |-
-          **Solusyon:**
-
-          <xml>
-          <block type="when_run" deletable="false" movable="false">
-          <next>
-          <block type="variables_set" inline="false">
-          <title name="VAR">honey</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">1</title>
-          </block>
-          </value>
-          <next>
-          <block type="variables_set" inline="false">
-          <title name="VAR">nectar</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">5</title>
-          </block>
-          </value>
-          <next>
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="math_number">
-          <title name="NUM">3</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="variables_get">
-          <title name="VAR">nectar</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="maze_move">
-          <title name="DIR">moveForward</title>
-          </block>
-          </statement>
-          <next>
-          <block type="maze_turn">
-          <title name="DIR">turnRight</title>
-          <next>
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="variables_get">
-          <title name="VAR">nectar</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="maze_nectar"/>
-          </statement>
-          <next>
-          <block type="maze_move">
-          <title name="DIR">moveForward</title>
-          <next>
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="variables_get">
-          <title name="VAR">honey</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="maze_honey"/>
-          </statement>
-          <next>
-          <block type="variables_set" inline="false">
-          <title name="VAR">honey</title>
-          <value name="VALUE">
-          <block type="math_arithmetic" inline="true">
-          <title name="OP">ADD</title>
-          <value name="A">
-          <block type="variables_get">
-          <title name="VAR">honey</title>
-          </block>
-          </value>
-          <value name="B">
-          <block type="math_number">
-          <title name="NUM">1</title>
-          </block>
-          </value>
-          </block>
-          </value>
-          <next>
-          <block type="variables_set" inline="false">
-          <title name="VAR">nectar</title>
-          <value name="VALUE">
-          <block type="math_arithmetic" inline="true">
-          <title name="OP">MINUS</title>
-          <value name="A">
-          <block type="variables_get">
-          <title name="VAR">nectar</title>
-          </block>
-          </value>
-          <value name="B">
-          <block type="math_number">
-          <title name="NUM">2</title>
-          </block>
-          </value>
-          </block>
-          </value>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </statement>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </xml>
       Course 4 SCV 6:
-        Course_4_SCV_6_a: |-
-          Tingnan kung ano ang hitsura ng isang nakompletong hugis
-
-          ![](https://images.code.org/9e30d3a87186cefe730984feee195806-image-1469642178866.png)
         Course_4_SCV_6_b: 'Makakatulong sa iyo ang paglikha nang 8 mga variable: red1,
           green1, blue1, red2, green2, blue2, length, at sides.'
         Course_4_SCV_6_c: Bawat isa sa limang mga gilid ng hugis ay binubuo ng mga
@@ -3339,310 +1094,6 @@ fil-PH:
           at ang zag ay lila (rgb = 100, 50, 150).
         Course_4_SCV_6_d: 'Para maka-zig, lumiko pakaliwa nang `360`/`sides`. Para
           maka-zag, lumiko pakanan nang `360`/`sides`. '
-        Course_4_SCV_6_e: 'Ang lahat ng programa ay ang pinakapamantayan sa paggawa
-          ng buong 360 degree na pag-ikot mula sa isang hugis, maliban nalang na ating
-          pinatung-patong ang hugis sa kalahati nito, para kailangan nating lumiko
-          pakanan nang `180`/`sides`, kung saan ay ibig sabihin ay kakailanganin nating
-          gumawa ng makalawa ang arami kaysa sa karaniwan (`sides`\*`2` na pag-ulit). '
-        Course_4_SCV_6_f: |-
-          **Solusyon:**
-
-          <xml>
-          <block type="when_run" deletable="false" movable="false">
-          <next>
-          <block type="draw_width" inline="false">
-          <value name="WIDTH">
-          <block type="math_number">
-          <title name="NUM">1</title>
-          </block>
-          </value>
-          <next>
-          <block type="variables_set" inline="false">
-          <title name="VAR">red1</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">0</title>
-          </block>
-          </value>
-          <next>
-          <block type="variables_set" inline="false">
-          <title name="VAR">green1</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">175</title>
-          </block>
-          </value>
-          <next>
-          <block type="variables_set" inline="false">
-          <title name="VAR">blue1</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">200</title>
-          </block>
-          </value>
-          <next>
-          <block type="variables_set" inline="false">
-          <title name="VAR">red2</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">100</title>
-          </block>
-          </value>
-          <next>
-          <block type="variables_set" inline="false">
-          <title name="VAR">green2</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">50</title>
-          </block>
-          </value>
-          <next>
-          <block type="variables_set" inline="false">
-          <title name="VAR">blue2</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">150</title>
-          </block>
-          </value>
-          <next>
-          <block type="variables_set" inline="false">
-          <title name="VAR">length</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">70</title>
-          </block>
-          </value>
-          <next>
-          <block type="variables_set" inline="false">
-          <title name="VAR">sides</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">5</title>
-          </block>
-          </value>
-          <next>
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="math_arithmetic" inline="true">
-          <title name="OP">MULTIPLY</title>
-          <value name="A">
-          <block type="math_number">
-          <title name="NUM">2</title>
-          </block>
-          </value>
-          <value name="B">
-          <block type="variables_get">
-          <title name="VAR">sides</title>
-          </block>
-          </value>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="variables_get">
-          <title name="VAR">sides</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="variables_get">
-          <title name="VAR">sides</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="draw_colour" inline="true" id="draw-color">
-          <value name="COLOUR">
-          <block type="colour_rgb" inline="false">
-          <value name="RED">
-          <block type="variables_get">
-          <title name="VAR">red1</title>
-          </block>
-          </value>
-          <value name="GREEN">
-          <block type="variables_get">
-          <title name="VAR">green1</title>
-          </block>
-          </value>
-          <value name="BLUE">
-          <block type="variables_get">
-          <title name="VAR">blue1</title>
-          </block>
-          </value>
-          </block>
-          </value>
-          <next>
-          <block type="draw_move" inline="true">
-          <title name="DIR">moveForward</title>
-          <value name="VALUE">
-          <block type="math_arithmetic" inline="true">
-          <title name="OP">DIVIDE</title>
-          <value name="A">
-          <block type="variables_get">
-          <title name="VAR">length</title>
-          </block>
-          </value>
-          <value name="B">
-          <block type="variables_get">
-          <title name="VAR">sides</title>
-          </block>
-          </value>
-          </block>
-          </value>
-          <next>
-          <block type="draw_turn" inline="true">
-          <title name="DIR">turnLeft</title>
-          <value name="VALUE">
-          <block type="math_arithmetic" inline="true">
-          <title name="OP">DIVIDE</title>
-          <value name="A">
-          <block type="math_number">
-          <title name="NUM">360</title>
-          </block>
-          </value>
-          <value name="B">
-          <block type="variables_get">
-          <title name="VAR">sides</title>
-          </block>
-          </value>
-          </block>
-          </value>
-          <next>
-          <block type="draw_colour" inline="true" id="draw-color">
-          <value name="COLOUR">
-          <block type="colour_rgb" inline="false">
-          <value name="RED">
-          <block type="variables_get">
-          <title name="VAR">red2</title>
-          </block>
-          </value>
-          <value name="GREEN">
-          <block type="variables_get">
-          <title name="VAR">green2</title>
-          </block>
-          </value>
-          <value name="BLUE">
-          <block type="variables_get">
-          <title name="VAR">blue2</title>
-          </block>
-          </value>
-          </block>
-          </value>
-          <next>
-          <block type="draw_move" inline="true">
-          <title name="DIR">moveForward</title>
-          <value name="VALUE">
-          <block type="math_arithmetic" inline="true">
-          <title name="OP">DIVIDE</title>
-          <value name="A">
-          <block type="variables_get">
-          <title name="VAR">length</title>
-          </block>
-          </value>
-          <value name="B">
-          <block type="variables_get">
-          <title name="VAR">sides</title>
-          </block>
-          </value>
-          </block>
-          </value>
-          <next>
-          <block type="draw_turn" inline="true">
-          <title name="DIR">turnRight</title>
-          <value name="VALUE">
-          <block type="math_arithmetic" inline="true">
-          <title name="OP">DIVIDE</title>
-          <value name="A">
-          <block type="math_number">
-          <title name="NUM">360</title>
-          </block>
-          </value>
-          <value name="B">
-          <block type="variables_get">
-          <title name="VAR">sides</title>
-          </block>
-          </value>
-          </block>
-          </value>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </statement>
-          <next>
-          <block type="draw_turn" inline="true">
-          <title name="DIR">turnRight</title>
-          <value name="VALUE">
-          <block type="math_arithmetic" inline="true">
-          <title name="OP">DIVIDE</title>
-          <value name="A">
-          <block type="math_number">
-          <title name="NUM">360</title>
-          </block>
-          </value>
-          <value name="B">
-          <block type="variables_get">
-          <title name="VAR">sides</title>
-          </block>
-          </value>
-          </block>
-          </value>
-          </block>
-          </next>
-          </block>
-          </statement>
-          <next>
-          <block type="draw_turn" inline="true">
-          <title name="DIR">turnRight</title>
-          <value name="VALUE">
-          <block type="math_arithmetic" inline="true">
-          <title name="OP">DIVIDE</title>
-          <value name="A">
-          <block type="math_number">
-          <title name="NUM">180</title>
-          </block>
-          </value>
-          <value name="B">
-          <block type="variables_get">
-          <title name="VAR">sides</title>
-          </block>
-          </value>
-          </block>
-          </value>
-          </block>
-          </next>
-          </block>
-          </statement>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </xml>
       Function intro Ryan:
         Function_intro_Ryan_b: Kung tatawagin mo ang mga functions nang tamo, ito
           ang landas na lalakbayin mo...
@@ -3824,131 +1275,13 @@ fil-PH:
       NEW Course 4 Artist Params 11:
         NEW_Course_4_Artist_Params_11_a: Mayroong higit sa isang numero ang kailangang
           papalitan ng isang variable sa loob ng function.
-      NEW Course 4 Artist Params 13:
-        NEW_Course_4_Artist_Params_13_a: 'Kailangan mong hatiin ang _perimeter_ ayon
-          sa bilang ng ma gilid para panatilihin ang pangkalahatang laki ng mga hugis. '
       NEW Course 4 Artist Params inspire:
         brush_width: Ating itinakda ang lapad ng brush sa 1, pagkatapos ang kulay
           sa asul bago natin idagdag ang kahit na ano.
         double_loop: Subukang maglagay ng `for loop` sa loob ng isang `repeat` na
           loop.
-        specifics: |-
-          Ang `for loop` ay tumatakbo mula tatlo hanggang labing-pito para sa bawat isa sa anim na mga "petals" bago magpatuloy sa paglikha ng kasunod, gumuhit ng mga hugis gamit lang ang mga gansal na bilang ng mga gilid.
-
-          Ang `set alpha` na bloke ay gumagamit ng dibisyon para magawa ang pagkupas ng kulay habang ang bilang ay unti-unting tumataas.
         after: Kapag tapos ka na sa bawat "petal", siguraduhin mong `gumalaw pasulong`
           ng 60 pixels bago ka makagawa ng 60 degree na rotasyon.
-        solution: |-
-          **Solusyon**
-
-          <xml>
-          <block type="when_run" deletable="false" movable="false">
-          <next>
-          <block type="draw_width" inline="false">
-          <value name="WIDTH">
-          <block type="math_number">
-          <title name="NUM">1</title>
-          </block>
-          </value>
-          <next>
-          <block type="draw_colour" inline="true" id="draw-color">
-          <value name="COLOUR">
-          <block type="colour_picker">
-          <title name="COLOUR">#0000cd</title>
-          </block>
-          </value>
-          <next>
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="math_number">
-          <title name="NUM">6</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="controls_for_counter" inline="true">
-          <mutation counter="counter"></mutation>
-          <value name="FROM">
-          <block type="math_number">
-          <title name="NUM">3</title>
-          </block>
-          </value>
-          <value name="TO">
-          <block type="math_number">
-          <title name="NUM">17</title>
-          </block>
-          </value>
-          <value name="BY">
-          <block type="math_number">
-          <title name="NUM">2</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="alpha" inline="true" id="alpha">
-          <value name="VALUE">
-          <block type="math_arithmetic" inline="true">
-          <title name="OP">DIVIDE</title>
-          <value name="A">
-          <block type="math_number">
-          <title name="NUM">500</title>
-          </block>
-          </value>
-          <value name="B">
-          <block type="variables_get">
-          <title name="VAR">counter</title>
-          </block>
-          </value>
-          </block>
-          </value>
-          <next>
-          <block type="procedures_callnoreturn" inline="false">
-          <mutation name="draw a polygon">
-          <arg name="length"></arg>
-          <arg name="sides"></arg>
-          </mutation>
-          <value name="ARG0">
-          <block type="math_number">
-          <title name="NUM">30</title>
-          </block>
-          </value>
-          <value name="ARG1">
-          <block type="variables_get">
-          <title name="VAR">counter</title>
-          </block>
-          </value>
-          </block>
-          </next>
-          </block>
-          </statement>
-          <next>
-          <block type="draw_move" inline="true">
-          <title name="DIR">moveForward</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">20</title>
-          </block>
-          </value>
-          <next>
-          <block type="draw_turn" inline="true">
-          <title name="DIR">turnRight</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">60</title>
-          </block>
-          </value>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </statement>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </xml>
       NEW Course 4 Bee For Loops 8:
         NEW_Course_4_Bee_For_Loops_8_a: "Kung ang iyong loop ay nagbibilang pataas,
           ang increment ay idinagdag sa iyong counter na variable bawat beses. \n\nAno
@@ -4111,12 +1444,6 @@ fil-PH:
         mc_9_c: Gamitin ang `place torch` para maglagay ng sulo sa puwang kung saan
           ka nakatayo.
       course1_artist_loops_challenge1:
-        courseA_artist_loops_challenge1_a: |-
-          Maaari mong gamitin ang mga loop gaya nito para makalikha ng mga pader at bubong. Subukang mag-ulit sa iba-ibang mga bloke.
-
-          ![](https://images.code.org/1581a2f599b501103064fc9864aa964d-image-1491863694560.png)
-
-          Mag-disenyo ng iyong sarili o i-click ang ![](https://images.code.org/53090194cea5dbf35ce9e35205156f5d-image-1491864793265.png) para sa ilang mga ideya!
         courseA_artist_loops_challenge1_b: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
         courseA_artist_loops_challenge1_c: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
         courseA_artist_loops_challenge1_d: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
@@ -4140,25 +1467,6 @@ fil-PH:
           kanang gilid ng kuweba, ngunit kailangan mo lang gumalaw at magkolekta ng
           5 beses. Alam mo ba kung bakit?
       course1_collector_loops_challenge3:
-        courseB_collector_loops_challenge1_b: |-
-          Magsimula sa pmamagita ng pag-loop sa mga utos na `move south` at `get treasure`.
-          <xml>
-          <block type="maze_moveSouth"/><next>
-          <block type="collector_collect"/></next>
-          </xml>
-        courseB_collector_loops_challenge1_a: |-
-          Ang hilagang pattern ay medyo kakaiba kaysa timog na pattern.
-          <xml>
-          <block type="collector_collect"/><next>
-          <block type="maze_moveNorth"/></next>next>
-          </xml>
-        courseB_collector_loops_challenge1_c: |-
-          Gumalaw pasilakangan nang dalawang beses sa bawat landas.
-          <xml>
-            <block type="maze_moveEast"/><next>
-            <block type="maze_moveEast"/></next>next>
-            </xml>
-          Maaari mong magawa ito gamit ang 14 na mga bloke lang. I-click para sa isa pang pahiwatig para makita ang solusyon.
         courseB_collector_loops_challenge1_d: |-
           Subukan ito!
           <xml>
@@ -4253,11 +1561,6 @@ fil-PH:
           \   <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
           \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">6</title>\n
           \     </block>\n    </next>\n  </block></xml>"
-        courseA_playlab_events_challenge1_e: "Sa wakas, ipakita si Wendel ang Salamangkero
-          kapag na-click mo si Spiff!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n
-          \   <title name=\"SPRITE\">6</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
-          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">7</title>\n
-          \     </block>\n    </next>\n  </block></xml>"
       course1_playlab_events_challenge2:
         courseA_playlab_events_challenge2_a: "Maaari mong mapaawit ang ibon.\n<xml>
           \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n
@@ -4338,14 +1641,7 @@ fil-PH:
         courseC_harvester_loops_challenge1_b: Maaari mong ulitin ang `move forward`
           at `pick corn` nang napakaraming ulit hangga't kailangan mo, pagkatapos
           `turn right` sa bawat kanto.
-      course2_maze_loops_challenge1:
-        courseC_maze_loops_challenge1_c: "Kung nakaabot ka sa ganito kalayo, kailangan
-          mo lang `turn left` pagkatapos ay `move forward` nang ilang ulit. Huwag
-          susuko! \n\n![](<https://images.code.org/7696c5c16b8ddf1d53436cdc7fb6346d-image-1494101728016.14.34
-          PM.png>)"
       course2_maze_programming_challenge2:
-        courseC_maze_programming_challenge2_a: _Kung ipapadala mo ako nang patalikod,
-          maging sobrang mag-ingan na ako ay liliko sa tamang daan!_
         courseC_maze_programming_challenge2_b: Ang pinakamaikling solusyon ay gumagamit
           lang nang 5 mga bloke, ngunit ito ay gumagamit nang `repeat` na bloke!
       course3_bee_functions_challenge1:
@@ -4358,123 +1654,6 @@ fil-PH:
           hamon, subukang gawin ang iyong function nang paunti-unti.      \n\nMagdagdag
           ng ilang mga bloke, pagkatapos ay subukan ito. Magdagdag pa, pagkatapos
           ay subukan ito ulit. Maya-maya, makakarating ka rin doon!"
-      course3_bee_functions_challenge4:
-        courseF_bee_functions_challenge2_b: |-
-          **Solusyon:**
-
-          <xml>
-          <block type="when_run" deletable="false" movable="false">
-          <next>
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="math_number">
-          <title name="NUM">4</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="maze_untilBlocked">
-          <statement name="DO">
-          <block type="maze_move">
-          <title name="DIR">moveForward</title>
-          <next>
-          <block type="maze_if">
-          <title name="DIR">isPathRight</title>
-          <statement name="DO">
-          <block type="procedures_callnoreturn" id="function">
-          <mutation name="move and check"/>
-          </block>
-          </statement>
-          </block>
-          </next>
-          </block>
-          </statement>
-          <next>
-          <block type="maze_turn">
-          <title name="DIR">turnLeft</title>
-          </block>
-          </next>
-          </block>
-          </statement>
-          </block>
-          </next>
-          </block>
-          <block type="procedures_defnoreturn" editable="false" usercreated="true">
-          <mutation/>
-          <title name="NAME">check nectar or honey</title>
-          <statement name="STACK">
-          <block type="bee_ifElseFlower">
-          <title name="LOC">atFlower</title>
-          <statement name="DO">
-          <block type="bee_whileNectarAmount">
-          <title name="ARG1">nectarRemaining</title>
-          <title name="OP">&gt;</title>
-          <title name="ARG2">0</title>
-          <statement name="DO">
-          <block type="maze_nectar"/>
-          </statement>
-          </block>
-          </statement>
-          <statement name="ELSE">
-          <block type="bee_whileNectarAmount">
-          <title name="ARG1">honeyAvailable</title>
-          <title name="OP">&gt;</title>
-          <title name="ARG2">0</title>
-          <statement name="DO">
-          <block type="maze_honey"/>
-          </statement>
-          </block>
-          </statement>
-          </block>
-          </statement>
-          </block>
-          <block type="procedures_defnoreturn" deletable="false" movable="false" editable="false">
-          <mutation/>
-          <title name="NAME">move and check</title>
-          <statement name="STACK">
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="math_number">
-          <title name="NUM">2</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="procedures_callnoreturn">
-          <mutation name="check nectar or honey"/>
-          <next>
-          <block type="maze_turn">
-          <title name="DIR">turnRight</title>
-          <next>
-          <block type="maze_untilBlocked">
-          <statement name="DO">
-          <block type="maze_move">
-          <title name="DIR">moveForward</title>
-          </block>
-          </statement>
-          <next>
-          <block type="maze_turn">
-          <title name="DIR">turnRight</title>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </statement>
-          </block>
-          </statement>
-          </block>
-          </xml>
-      course3_collector_debugging_challenge2:
-        courseD_collector_debugging_challenge2_a: "Magsimula sa pamamagitan ng pagbigay
-          diin sa pagkolekta ng DALAWANG mga hiyas mula sa bawat isa sa unang dalawang
-          mga tumpok.\n\n![](<https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04
-          AM copy.png>)\nGamitin ang mga blokeng ito.\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block
-          type=\"controls_repeat\" limit=\"2\">\n    <title name=\"TIMES\">2</title>\n
-          \ </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title
-          name=\"DIR\">moveForward</title>\n\n                  </block>\n                  \n\n
-          \  <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n
-          \   <title name=\"TIMES\">2</title>\n  </block>\n\n</xml>"
       course3_farmer_condLoops_challenge1:
         courseD_farmer_condLoops_challenge1_a: Ang `STEP` na button ay lubhang nakakatulong
           sa hamon na ito.
@@ -4493,10 +1672,6 @@ fil-PH:
         courseC_maze_debugging_challenge2_b: Kung ikaw ay hindi makausad, maaari kang
           magsimula ulit o magtanggal sa lahat ng code at maghanap ng sarili mong
           paraan!
-        courseC_maze_debugging_challenge2_c: |-
-          Mayroong dalawang iba't ibang mga landas ang maaari mong sundin na gumagamit lang ng `move forward, at apat na mga pagliko lang. Kung nakakahanap ka ng daan para magamit ang`repeat\` na bloke, maaaring may mas marami pa!
-
-          ![](<https://images.code.org/8a4665671cda35fea1f629a5bcc39e26-image-1493502743154.48.05 PM.png>)
       course4_bee_fwp_challenge1:
         courseF_bee_fwp_challenge1_b: |-
           Tingnan kung ilang mais ang maaaring anihin sa bawat puwang. Nakakita ka ba ng tagabilang na patter? Ang `length` na parameter ay dapat gagamitin para itakda ang pinakamalaking halaga sa loob ng `for loop`.
@@ -4506,10 +1681,6 @@ fil-PH:
           Sa loob ng `for loop` maaaring gugustuhin mong gumawa ng `move forward` pagkatapos ay gumawa ng `get nectar` nang **counter na beses. Pagkatapos ng `for loop`, maaari ka lang gumagawa ng `move backward` nang \*\*length na beses**.
 
           Maaaring kakailanganin mong basahin ang pahiwatig nang iilang ulit para maunawaan ito. Ang bahagi na **bold** ay isang pahiwatig tungkol sa kung paano gamitin ang dalawang `repeat` na mga loop na kakailanganin mo.
-      course4_bee_fwp_challenge2:
-        courseF_bee_fwp_challenge2_b: "Nauubusan ka ba ng `move forward` na mga bloke?\nSubukang
-          gumamit ng _pangalawang_ `for loop` sa iyong pangunahing programa. \n\n**Tandaan:**
-          Mag-ingat na hindi malito sa `counter` at `counter2` sa iyong code."
       courseA_artist_loops2:
         courseA_artist_loops2_a: Hindi matukoy kung paano iguhit ang linya? Magsimulang
           maglakip ng mga bloke sa <xml><block type="when_run"/></xml> na bloke para
@@ -4649,20 +1820,26 @@ fil-PH:
         courseA_artist_loops8_a: Subukang patakbuhin ang code para makita kung ana
           ang naisulat para sa iyo.
         courseA_artist_loops8_b: Paano mo i-loop ang iyong code na ibinigay sa iyo?
-        courseA_artist_loops8_c: "Ano ang ginagawa ng code?  \nAno ang dapat gawin
-          nito?  \nAno ang sinabi nito sa iyo?"
+        courseA_artist_loops8_c: |-
+          Ano ang ginagawa ng code?\
+          Ano ang dapat gawin nito?\
+          Ano ang sinabi nito sa iyo?
       courseA_artist_loops8_2018:
         courseA_artist_loops8_a: Subukang patakbuhin ang code para makita kung ana
           ang naisulat para sa iyo.
         courseA_artist_loops8_b: Paano mo i-loop ang iyong code na ibinigay sa iyo?
-        courseA_artist_loops8_c: "Ano ang ginagawa ng code?  \nAno ang dapat gawin
-          nito?  \nAno ang sinabi nito sa iyo?"
+        courseA_artist_loops8_c: |-
+          Ano ang ginagawa ng code?\
+          Ano ang dapat gawin nito?\
+          Ano ang sinabi nito sa iyo?
       courseA_artist_loops8_2019:
         courseA_artist_loops8_a: Subukang patakbuhin ang code para makita kung ana
           ang naisulat para sa iyo.
         courseA_artist_loops8_b: Paano mo i-loop ang iyong code na ibinigay sa iyo?
-        courseA_artist_loops8_c: "Ano ang ginagawa ng code?  \nAno ang dapat gawin
-          nito?  \nAno ang sinabi nito sa iyo?"
+        courseA_artist_loops8_c: |-
+          Ano ang ginagawa ng code?\
+          Ano ang dapat gawin nito?\
+          Ano ang sinabi nito sa iyo?
       courseA_artist_loops9:
         courseA_artist_loops9_a: Magdagdag ng isa pang bloke sa iyong code na ibinigay
           sa iyo iguhit ang natitirang mga hagdanan.
@@ -4757,8 +1934,6 @@ fil-PH:
           sa loob ng <xml><block type="controls_repeat_simplified_dropdown"><title
           name="TIMES" config="3-10">???</title></block></xml> na loop.
       courseA_collector_loops3_2019:
-        courseA_collector_loops3_a: Subukang gumamit ng <xml><block type="controls_repeat_simplified_dropdown"><title
-          name="TIMES" config="3-10">???</title></block></xml> na loop!
         courseA_collector_loops3_b: Tandaan, maaari kang maglagay ng higit sa 1 bloke
           sa loob ng <xml><block type="controls_repeat_simplified_dropdown"><title
           name="TIMES" config="3-10">???</title></block></xml> na loop.
@@ -4954,11 +2129,6 @@ fil-PH:
           </block>
           </next>
           </block></xml>
-      courseA_collector_loops_challenge2:
-        courseA_collector_loops_challenge2_b: Kailangan mo lang gumamit ng 1 bloke
-          para malutas ito.
-        courseA_collector_loops_challenge2_a: Maaari kang gumalaw pabilik sa isang
-          landas sa pangalawang pagkakataon bago gumalaw papuntang timog.
       courseA_collector_loops_challenge2kp:
         courseA_collector_loops_challenge2kp_b: Subukan ang landas na ito para makarating
           sa isang solusyon.
@@ -4974,17 +2144,6 @@ fil-PH:
           sa isang solusyon.
         courseA_collector_loops_challenge2kp_a: Maaari ka bang gumamit ng mga loop
           para malutas ang palaisipang ito?
-      courseA_collector_preLoops4:
-        courseA_collector_preLoops4_a: Para makuha ang mga kayamanan, mag-snap ng
-          dalawang ![](https://images.code.org/2df8a25d7e96207f57d1a6b504950b70-image-1508906116743.34.37.png)
-          mga bloke at isang ![](https://images.code.org/563c0deb5c51d43cdfa72d62dec3419d-image-1508904559201.05.30.png)
-          na bloke sa ilalim ng programa at pindutin ang "Run"!
-      courseA_collector_preLoops5:
-        courseA_collector_preLoops5_a: Kailangan mong pumunta sa dalawang magkaibang
-          direskyon para makakuha ng kahit isang hiyas!
-      courseA_collector_preLoops6:
-        courseA_collector_preLoops6_a: Kailangan mong gumamit ng dalawang ![](https://images.code.org/563c0deb5c51d43cdfa72d62dec3419d-image-1508904559201.05.30.png)
-          mga bloke para malutas ang palaisipang ito.
       courseA_collector_preLoops7:
         courseA_collector_loops2_b: |-
           Pagkatapos mong makalipat sa isang parisukat na may kayamanan, gamitin ang blokeng ito para mapulot ito.
@@ -5794,11 +2953,17 @@ fil-PH:
         courseC_flappy_events1_a: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       courseC_flappy_events1_2019:
         courseC_flappy_events1_a: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+      courseC_maze_debugging2:
+        courseC_maze_debugging2_c: Matukoy mo ba kung ano ang mali? Subukang patakbuhin
+          ang code nang ilang beses para makita kung ano ang nangyayari.
       courseC_maze_debugging2_2018:
         courseC_maze_debugging2_c: Matukoy mo ba kung ano ang mali? Subukang patakbuhin
           ang code nang ilang beses para makita kung ano ang nangyayari.
       courseC_maze_debugging2_2019:
         courseC_maze_debugging2_c: Matukoy mo ba kung ano ang mali? Subukang patakbuhin
+          ang code nang ilang beses para makita kung ano ang nangyayari.
+      courseC_maze_debugging3:
+        courseC_maze_debugging3_b: Matukoy mo ba kung ano ang mali? Subukang patakbuhin
           ang code nang ilang beses para makita kung ano ang nangyayari.
       courseC_maze_debugging3_2018:
         courseC_maze_debugging3_b: Matukoy mo ba kung ano ang mali? Subukang patakbuhin
@@ -5881,11 +3046,8 @@ fil-PH:
       courseD_maze_ramp6:
         courseC_maze_programming6_a: Mayroong dalawang mga pamamaraan para malutas
           ang palaisipang ito!
-      courseD_scrat_predict1:
-        courseF_maze_ramp6_a: Mayroong dalawang mga pamamaraan para malutas ang palaisipang
-          ito!
-      courseD_scrat_ramp6:
-        courseC_maze_programming6_a: Mayroong dalawang mga pamamaraan para malutas
+      courseD_scrat_ramp7:
+        courseD_scrat_programming6_a: Mayroong dalawang mga pamamaraan para malutas
           ang palaisipang ito!
       courseE_artist_concept_challenge1:
         courseE_artist_concept_challenge1_a: 'Ang kalahating hexagon ay mayroong **haba
@@ -5955,20 +3117,26 @@ fil-PH:
           ng ilang mga bloke, pagkatapos ay subukan ito. Magdagdag pa, pagkatapos
           ay subukan ito ulit. Maya-maya, makakarating ka rin doon!"
       courseF_artist_for4:
-        courseF_artist_for4_a: "**Ano ang pinakamaliit na numero na kakailanganin
-          mo?  \nAno ang pinakamalaking numero?  \nGaano kalaki ang paglaki as bawat
-          beses?**\n\nIyon ay ang mga katanungan na kailangan mung tanungin para mapunan
-          ang mga puwang ng `for` na loop."
+        courseF_artist_for4_a: |-
+          **Ano ang pinakamaliit na numero na kakailanganin mo?\
+          Ano ang pinakamalaking numero?\
+          Gaano kalaki ang paglaki as bawat beses?**
+
+          Iyon ay ang mga katanungan na kailangan mung tanungin para mapunan ang mga puwang ng `for` na loop.
       courseF_artist_for4_2018:
-        courseF_artist_for4_a: "**Ano ang pinakamaliit na numero na kakailanganin
-          mo?  \nAno ang pinakamalaking numero?  \nGaano kalaki ang paglaki as bawat
-          beses?**\n\nIyon ay ang mga katanungan na kailangan mung tanungin para mapunan
-          ang mga puwang ng `for` na loop."
+        courseF_artist_for4_a: |-
+          **Ano ang pinakamaliit na numero na kakailanganin mo?\
+          Ano ang pinakamalaking numero?\
+          Gaano kalaki ang paglaki as bawat beses?**
+
+          Iyon ay ang mga katanungan na kailangan mung tanungin para mapunan ang mga puwang ng `for` na loop.
       courseF_artist_for4_2019:
-        courseF_artist_for4_a: "**Ano ang pinakamaliit na numero na kakailanganin
-          mo?  \nAno ang pinakamalaking numero?  \nGaano kalaki ang paglaki as bawat
-          beses?**\n\nIyon ay ang mga katanungan na kailangan mung tanungin para mapunan
-          ang mga puwang ng `for` na loop."
+        courseF_artist_for4_a: |-
+          **Ano ang pinakamaliit na numero na kakailanganin mo?\
+          Ano ang pinakamalaking numero?\
+          Gaano kalaki ang paglaki as bawat beses?**
+
+          Iyon ay ang mga katanungan na kailangan mung tanungin para mapunan ang mga puwang ng `for` na loop.
       courseF_artist_for_challenge1:
         courseF_artist_for_challenge1_a: Ang `pen width` ay 1. Ang unang parisukat
           ay mayroong 50 pixel na mga gilid, at bawat parisukay ay mas malapad nang

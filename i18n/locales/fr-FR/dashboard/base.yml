@@ -315,6 +315,7 @@ fr:
       district_dashboard: 'Tableau de bord du district'
       label: 'Bonjour %{username}'
       stats: 'Code Studio'
+      my_projects: 'Mes projets'
       settings: 'Mon compte'
       logout: 'Déconnexion'
       signin: 'Connexion'
@@ -577,7 +578,6 @@ fr:
   pdf_download: 'Télécharger le PDF'
   download_coming_soon: 'Activité téléchargeable prochainement.'
   video_coming_soon: 'Vidéo bientôt disponible !'
-  not_started: 'L''élève n''a pas tenté ce niveau.'
   share_code:
     title: "Clique sur « Démarrer » pour voir mon programme en action."
     bounce_og_title: "Vérifier mon jeu de rebond"

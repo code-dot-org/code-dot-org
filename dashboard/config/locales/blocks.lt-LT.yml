@@ -174,14 +174,6 @@ lt:
             '"right"': dešinėn
             '"space"': kosmosas
             '"x"': x
-      gamelab_layoutSprites:
-        options:
-          FORMAT:
-            '"random"': atsitiktinis
-      gamelab_locationDelta:
-        options:
-          DIR:
-            "'random'": atsitiktinis
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -201,10 +193,6 @@ lt:
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': po
               vandeniu
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': žiema
-      gamelab_setPosition:
-        options:
-          POSITION:
-            '"random"': atsitiktinis
       gamelab_setProp:
         options:
           PROPERTY:
@@ -221,23 +209,6 @@ lt:
           CONDITION:
             '"when"': kada
             '"while"': kol
-      gamelab_spriteClickedSet:
-        options:
-          CONDITION:
-            '"when"': kada
-            '"while"': kol
-      gamelab_spritesWhere:
-        options:
-          PROPERTY:
-            '"scale"': dydis
-            '"x"': x pozicija
-            '"y"': y pozicija
-      gamelab_spritesWhereGenerator:
-        options:
-          PROPERTY:
-            '"scale"': dydis
-            '"x"': x pozicija
-            '"y"': y pozicija
       gamelab_turn:
         options:
           DIRECTION:
@@ -258,11 +229,6 @@ lt:
             "'down'": žemyn
             "'left'": kairėn
             "'right'": dešinėn
-      gamelab_whenTouchingSet:
-        options:
-          CONDITION:
-            '"when"': kada
-            '"while"': kol
       gamelab_whileKey:
         options:
           KEY:

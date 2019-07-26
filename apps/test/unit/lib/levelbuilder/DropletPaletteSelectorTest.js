@@ -74,6 +74,7 @@ describe('DropletPaletteSelector', () => {
         ).to.be.true;
 
         editor.setValue(JSON.stringify({a: null, b: null}));
+        selector.update();
         expect(
           selector.containsMatchingElement(
             <select>
@@ -93,6 +94,7 @@ describe('DropletPaletteSelector', () => {
           />
         );
         editor.setValue('invalud json');
+        selector.update();
         expect(
           selector.containsMatchingElement(
             <select disabled>
@@ -115,6 +117,7 @@ describe('DropletPaletteSelector', () => {
           .find('select')
           .props()
           .onChange({target: {value: 'b'}});
+        selector.update();
         expect(editor.getValue()).to.equal(`{
   "b": null
 }`);
@@ -131,6 +134,7 @@ describe('DropletPaletteSelector', () => {
           .find('select')
           .props()
           .onChange({target: {value: 'a'}});
+        selector.update();
 
         expect(
           selector.containsMatchingElement(

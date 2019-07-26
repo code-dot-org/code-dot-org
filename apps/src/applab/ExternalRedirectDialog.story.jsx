@@ -1,5 +1,6 @@
 import React from 'react';
 import {UnconnectedExternalRedirectDialog as ExternalRedirectDialog} from '@cdo/apps/applab/ExternalRedirectDialog';
+import {REDIRECT_RESPONSE} from './redux/applab';
 
 export default storybook => {
   storybook.storiesOf('ExternalRedirectDialog', module).addStoryTable([
@@ -12,7 +13,7 @@ export default storybook => {
             {
               url:
                 'www.google.com/super_duper/long_url/should_be_wrapped/to-the-next-line.html',
-              approved: true
+              approved: REDIRECT_RESPONSE.APPROVED
             }
           ]}
         />
@@ -23,7 +24,26 @@ export default storybook => {
       story: () => (
         <ExternalRedirectDialog
           handleClose={() => {}}
-          redirects={[{url: 'www.google.com', approved: false}]}
+          redirects={[
+            {
+              url: 'www.google.com',
+              approved: REDIRECT_RESPONSE.REJECTED
+            }
+          ]}
+        />
+      )
+    },
+    {
+      name: 'Unsupported Site',
+      story: () => (
+        <ExternalRedirectDialog
+          handleClose={() => {}}
+          redirects={[
+            {
+              url: 'www.google.com',
+              approved: REDIRECT_RESPONSE.UNSUPPORTED
+            }
+          ]}
         />
       )
     }

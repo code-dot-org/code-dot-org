@@ -222,14 +222,6 @@ km:
             '"space"': លំហ​អាកាស
             '"x"': x
             '"y"': 'y'
-      gamelab_layoutSprites:
-        options:
-          FORMAT:
-            '"random"': ព្រាវ
-      gamelab_locationDelta:
-        options:
-          DIR:
-            "'random'": ព្រាវ
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -248,10 +240,6 @@ km:
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': ឥន្ទធនូ
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': ក្រោម​ទឹក
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': រដូវរងារ
-      gamelab_setPosition:
-        options:
-          POSITION:
-            '"random"': ព្រាវ
       gamelab_setProp:
         options:
           PROPERTY:
@@ -268,23 +256,6 @@ km:
           CONDITION:
             '"when"': នៅ​ពេល
             '"while"': នៅ​ពេល
-      gamelab_spriteClickedSet:
-        options:
-          CONDITION:
-            '"when"': នៅ​ពេល
-            '"while"': នៅ​ពេល
-      gamelab_spritesWhere:
-        options:
-          PROPERTY:
-            '"scale"': ទំហំ
-            '"x"': គូល​x
-            '"y"': គូល​y
-      gamelab_spritesWhereGenerator:
-        options:
-          PROPERTY:
-            '"scale"': ទំហំ
-            '"x"': គូល​x
-            '"y"': គូល​y
       gamelab_turn:
         options:
           DIRECTION:
@@ -305,11 +276,6 @@ km:
             "'down'": ចុះ
             "'left'": ឆ្វេង
             "'right'": ស្តាំ
-      gamelab_whenTouchingSet:
-        options:
-          CONDITION:
-            '"when"': នៅ​ពេល
-            '"while"': នៅ​ពេល
       gamelab_whileKey:
         options:
           KEY:

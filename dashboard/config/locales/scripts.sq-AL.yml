@@ -1742,6 +1742,10 @@ sq:
           stages:
             While Loops:
               name: Përsëritjet Ndërsa
+        csp1-pilot:
+          stages:
+            Number Systems:
+              name: Sistemi Numerik
         time4csdemo:
           stages:
             Crowdsourcing:
@@ -1754,3 +1758,15 @@ sq:
           stages:
             Graph Paper Programming:
               name: Programimi Grafik me Letër
+        csd2-pilot:
+          stages:
+            Lists:
+              name: Listat
+        csd3-pilot:
+          stages:
+            Variables:
+              name: variabla
+            Conditionals:
+              name: Kushtet
+            Functions:
+              name: funksione

@@ -1621,3 +1621,16 @@ da:
           stages:
             Graph Paper Programming:
               name: Programmering på millimeterpapir
+        csd2-pilot:
+          stages:
+            Lists:
+              name: Lister
+        csd3-pilot:
+          description_short: "Programmering"
+          stages:
+            Variables:
+              name: Variabler
+            Conditionals:
+              name: Betingelser
+            Functions:
+              name: Funktioner

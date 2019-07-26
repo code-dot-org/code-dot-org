@@ -1135,30 +1135,7 @@ cs-CZ:
   coursee_name: Kurz E
   coursef-draft_name: Kurz F
   coursef_name: Kurz F
-  cspunit2_name: '2. lekce: Internet'
-  cspunit3_name: '3. lekce: Programování'
-  cspunit4_name: '4. lekce: Data'
-  cspunit5_name: '5. lekce: Prozkoumejte a vytvořte projekt'
-  cspunit6_name: 'Po testu: Databáze v aplikacích'
-  csd5_name: 'Lekce 5: Data a společnost'
-  csd6_name: 'Lekce 6: Fyzikální výpočty'
-  csd5-2017_name: 'Lekce 5: Data a společnost'
-  csd6-2017_name: 'Lekce 6: Fyzikální výpočty'
-  csd5-2018_name: 'Lekce 5: Data a společnost'
-  csd6-2018_name: 'Lekce 6: Fyzikální výpočty'
-  csp1-2017_name: '1. lekce: Internet'
-  csp2-2017_name: '2. lekce: Digitální informace'
-  csppostap-2017_name: 'Po testu: Databáze v aplikacích'
-  csp1-2018_name: '1. lekce: Internet'
-  csp2-2018_name: '2. lekce: Digitální informace'
-  csppostap-2018_name: 'Po testu: Databáze v aplikacích'
-  csp1_name: '1. lekce: Internet'
-  csp2_name: '2. lekce: Digitální informace'
-  csppostap_name: 'Po testu: Databáze v aplikacích'
-  cspassessment_name: Úplný test - 50 otázek
-  cspexam1-mWU7ilDYM9_name: 1. část testu - 25 otázek
-  cspexam2-AKwgAh1ac5_name: 2. část testu - 25 otázek
-  cspunit3_gradelevel: Věk 15-18
+  accelerated_name: Zrychlený kurz
   20-hour_name: Zrychlený kurz
   algebra_name: Informatika v algebře
   AlgebraA_name: Informatika v algebře, kurz A
@@ -1169,13 +1146,6 @@ cs-CZ:
   minecraft_name: Minecraft
   starwarsblocks_name: Hvězdné války (kostky)
   hoc-encryption_name: Jednoduché šifrování
-  math_category_name: Matematika
-  hoc_category_name: Hodina kódu
-  csf_category_name: Základy informatiky
-  csf2_draft_category_name: 'Ve vývoji: Kurzy A - F'
-  csp_category_name: Principy informatiky 2015-2016
-  csp17_category_name: Principy informatiky 2016-2017
-  cspexams_category_name: Praktický test z principů informatiky
   applab_name: App Lab
   basketball_name: Vytvoř basketbalovou hru
   sports_name: Naprogramuj svoji vlastní sportovní hru
@@ -1242,6 +1212,8 @@ cs-CZ:
   coursee-2017_gradelevel: Věk 8-12
   coursed-2018_gradelevel: Známky 8+
   coursee-2018_gradelevel: Věk 8-12
+  coursed-2019_gradelevel: Známky 8+
+  coursee-2019_gradelevel: Věk 8-12
   accelerated_gradelevel: Stáří 10-13
   codeorg_platformtext: Moderní prohlížeče, smartphony, tablety
   codeintl_platformtext: Moderní prohlížeče, smartphony, tablety
@@ -1872,7 +1844,6 @@ cs-CZ:
   header_report_bug: Nahlásit chybu
   header_tutorials: Návody
   header_documentation: Dokumentace
-  csp_name: Principy informatiky 2016-2017
   user_header_label: Ahoj %{username}
   user_header_team: Tým
   user_header_settings: Můj účet

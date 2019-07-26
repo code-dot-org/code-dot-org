@@ -81,22 +81,10 @@ mt:
           VAL:
             'true': veru/minnu
             'false': falz
-      gamelab_layoutSprites:
-        options:
-          FORMAT:
-            '"random"': bl-addoċċ
-      gamelab_locationDelta:
-        options:
-          DIR:
-            "'random'": bl-addoċċ
       gamelab_randColor:
         text: kulur bl-addoċċ
       gamelab_randomColor:
         text: kulur bl-addoċċ
-      gamelab_setPosition:
-        options:
-          POSITION:
-            '"random"': bl-addoċċ
       Mikelab_randomColor:
         text: kulur bl-addoċċ
       aalab_setCollidable:

@@ -6,7 +6,7 @@ class ChatClientTest < Minitest::Test
   FAKE_ROOM = 'fake-room'.freeze
 
   def setup
-    CDO.hip_chat_logging = true
+    CDO.stubs(hip_chat_logging: true)
   end
 
   def test_message_calls_slack

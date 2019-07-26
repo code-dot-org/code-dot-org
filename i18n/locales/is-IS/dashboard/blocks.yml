@@ -613,14 +613,19 @@ is:
         text: þegar ýtt er á {KEY}
         options:
           KEY:
-            '"up"': uppi
+            '"up"': upp
             '"left"': vinstri
-            '"down"': niðri
+            '"down"': niður
             '"right"': hægri
             '"space"': geimur
             '"enter"': Enter
             '"a"': a
+            '"b"': b
+            '"c"': c
             '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
             '"h"': h
             '"i"': i
             '"j"': j
@@ -630,6 +635,7 @@ is:
             '"n"': 'n'
             '"o"': o
             '"p"': p
+            '"q"': q
             '"r"': r
             '"s"': s
             '"t"': t
@@ -637,7 +643,18 @@ is:
             '"v"': v
             '"w"': w
             '"x"': x
+            '"y"': 'y'
             '"z"': z
+            '"0"': '0'
+            '"1"': '1'
+            '"2"': '2'
+            '"3"': '3'
+            '"4"': '4'
+            '"5"': '5'
+            '"6"': '6'
+            '"7"': '7'
+            '"8"': '8'
+            '"9"': '9'
       Dancelab_whenPeak:
         text: þegar {RANGE} hæst
         options:
@@ -647,34 +664,10 @@ is:
             '2': háhljóð
       Dancelab_whenSetup:
         text: uppstilling
-      gamelab_add:
-        text: bæta {SPRITE} í hóp {THIS}
       gamelab_addBehaviorSimple:
         text: vera {SPRITE} byrjar {BEHAVIOR}
-      gamelab_addBehaviorUntil:
-        text: vera {SPRITE} gerir {BEHAVIOR} þar til {CONDITION}
       gamelab_allSpritesWithAnimation:
         text: aalab allar {ANIMATION}
-      gamelab_beginBehavior:
-        text: byrjar {BEHAVIOR}
-      gamelab_bounceOff:
-        text: "{SPRITE} endurkastast af {TARGET}"
-      gamelab_bounceOffEdges:
-        text: "{SPRITE} endurkastast frá brúnum"
-      gamelab_changeColor:
-        text: breyta {COLOR} {METHOD} um {AMOUNT}
-        options:
-          METHOD:
-            '"tint"': litur
-            '"tone"': tónn
-            '"shade"': litur
-      gamelab_changeColorBy:
-        text: breyta {COLOR} {METHOD} um {AMOUNT}
-        options:
-          METHOD:
-            '"hue"': litblær
-            '"saturation"': litamettun
-            '"brightness"': birtustig
       gamelab_changePropBy:
         text: breyta {SPRITE} {PROPERTY} um {VAL}
         options:
@@ -698,8 +691,6 @@ is:
         text: 'athugasemd: {COMMENT}'
       gamelab_console.log:
         text: skrá boð {MESSAGE}
-      gamelab_countByCostume:
-        text: fjöldi {COSTUME}
       gamelab_createNewSprite:
         text: "búa til nýja veru \n nafn {NAME} \n búningur {COSTUME} \n staður {LOCATION}"
       gamelab_debugSprite:
@@ -712,29 +703,10 @@ is:
         text: fjarlægja {THIS}
       gamelab_displace:
         text: "{THIS} hindra {SPRITE} að hreyfast"
-      gamelab_distance:
-        text: fjarlægð frá {LOCATION1} til {LOCATION2}
       gamelab_draggable:
         text: er hægt að draga
       gamelab_edgesDisplace:
         text: brúnir hindra {SPRITE} að hreyfast
-      gamelab_enableDebug:
-        text: virkja aflúsun
-      gamelab_firstTouched:
-        text: fyrsta snerta veran
-      gamelab_forEachSpriteWithCostume:
-        text: |-
-          fyrir hverja {VALUE} veru
-          gera {STATEMENT}
-      gamelab_getAnim:
-        text: "{SPRITE} {COSTUME}"
-        options:
-          COSTUME:
-            '"costume"': búningur
-      gamelab_getDirection:
-        text: átt sem {SPRITE} hreyfist í
-      gamelab_getFrameDelay:
-        text: rammatöf {THIS}
       gamelab_getProp:
         text: "{SPRITE} {PROPERTY}"
         options:
@@ -750,26 +722,12 @@ is:
         options:
           CHOICE:
             '"this"': þetta
-      gamelab_groupLength:
-        text: fjöldi vera í {THIS}
-      gamelab_hasBehavior:
-        text: hegðun {SPRITE} er nú {BEHAVIOR}
       gamelab_hideTitleScreen:
         text: fela titilinn
-      gamelab_hsbColor:
-        text: |-
-          HSB litur
-          H{HUE}S{SATURATION}B{BRIGHTNESS}
-      gamelab_isTouching:
-        text: "{THIS} snertir {TARGET}"
       gamelab_isTouchingEdges:
         text: "{SPRITE} snertir brúnir"
-      gamelab_joystickDirection:
-        text: stefna leikjastýris
       gamelab_jumpTo:
         text: "{SPRITE} hoppa til {LOCATION}"
-      gamelab_keyDown:
-        text: ýtt er á hnapp {KEY}
       gamelab_keyPressed:
         text: "{CONDITION} {KEY} niðri"
         options:
@@ -777,13 +735,18 @@ is:
             '"when"': þegar
             '"while"': meðan
           KEY:
-            '"up"': uppi
-            '"down"': niðri
+            '"up"': upp
+            '"down"': niður
             '"left"': vinstri
             '"right"': hægri
             '"space"': geimur
             '"a"': a
+            '"b"': b
+            '"c"': c
             '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
             '"h"': h
             '"i"': i
             '"j"': j
@@ -793,6 +756,7 @@ is:
             '"n"': 'n'
             '"o"': o
             '"p"': p
+            '"q"': q
             '"r"': r
             '"s"': s
             '"t"': t
@@ -800,65 +764,16 @@ is:
             '"v"': v
             '"w"': w
             '"x"': x
+            '"y"': 'y'
             '"z"': z
-      gamelab_layoutSprites:
-        text: stilla {COSTUME} upp sem {FORMAT}
-        options:
-          FORMAT:
-            '"border"': rammi
-            '"inner"': ferningur
-            '"circle"': hringur
-            '"grid"': fylking
-            '"row"': hlið við hlið
-            '"column"': í röð upp
-            '"x"': þvers-og-kruss
-            '"plus"': plús
-            '"random"': eitthvað
-      gamelab_locationAdd:
-        text: "{LOC1} {OPERATOR} {LOC2}"
-        options:
-          OPERATOR:
-            "'plus'": "\\+"
-            "'minus'": "\\-"
       gamelab_locationAt:
         text: 'staður x: {X} y: {Y}'
-      gamelab_locationConstant:
-        text: "{DIR}"
-        options:
-          DIR:
-            "'north'": norður
-            "'south'": suður
-            "'east'": austur
-            "'west'": vestur
-      gamelab_locationDelta:
-        text: "{DISTANCE} dílar {DIR} af {LOCATION}"
-        options:
-          DIR:
-            "'north'": norður
-            "'south'": suður
-            "'east'": austur
-            "'west'": vestur
-            "'random'": eitthvað
-      gamelab_locationEast:
-        text: austur
       gamelab_locationMouse:
         text: staður músar
-      gamelab_locationNorth:
-        text: norður
       gamelab_locationOf:
         text: staður {SPRITE}
-      gamelab_locationSouth:
-        text: suður
-      gamelab_locationWest:
-        text: vestur
       gamelab_location_picker:
         text: "{LOCATION}"
-      gamelab_location_variable_get:
-        text: staður {VAR}
-      gamelab_location_variable_set:
-        text: stilla stað {VAR} á {VAL}
-      gamelab_makeNewGroup:
-        text: búa til nýjan hóp
       gamelab_makeNewSpriteAnon:
         text: aalab búa til nýja {ANIMATION_NAME} veru á stað {LOCATION}
       gamelab_mirrorSprite:
@@ -867,14 +782,8 @@ is:
           DIRECTION:
             '"right"': hægri
             '"left"': vinstri
-      gamelab_mixColors:
-        text: blanda litum {COLOR1} og {COLOR2}
-      gamelab_mouseDown:
-        text: mús er niðri
       gamelab_mouseLocation:
         text: staður músar
-      gamelab_moveDown:
-        text: "{THIS} færa niður"
       gamelab_moveForward:
         text: færa {SPRITE} {DISTANCE} díla áfram
       gamelab_moveInDirection:
@@ -885,18 +794,8 @@ is:
             '"East"': austur
             '"South"': suður
             '"West"': vestur
-      gamelab_moveInDirection2:
-        text: færa {SPRITE} díla {DISTANCE} í {DIRECTION}
-      gamelab_moveLeft:
-        text: "{THIS} færa til vinstri"
-      gamelab_moveRight:
-        text: "{THIS} færa til hægri"
       gamelab_moveToward:
         text: færa {SPRITE} vegalengd {DISTANCE} til {TARGET}
-      gamelab_moveUp:
-        text: "{THIS} færa upp"
-      gamelab_objectSprite:
-        text: þolandi vera
       gamelab_playSound:
         text: spilaHljóð {SOUND}
       gamelab_pointInDirection:
@@ -907,8 +806,6 @@ is:
             '"East"': austur
             '"South"': suður
             '"West"': vestur
-      gamelab_pointToward:
-        text: beina {SPRITE} í átt til {LOCATION}
       gamelab_printText:
         text: prenta {TEXT}
       gamelab_randColor:
@@ -923,10 +820,6 @@ is:
         text: vera {SPRITE} hættir {BEHAVIOR}
       gamelab_removeTint:
         text: fjarlægja lit af {THIS}
-      gamelab_say:
-        text: "{THIS} segir {TEXT}"
-      gamelab_secondTouched:
-        text: önnur snert vera
       gamelab_setAnimation:
         text: breyta búningi {THIS} í {ANIMATION}
       gamelab_setBackground:
@@ -947,24 +840,6 @@ is:
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': neðansjávar
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': vetur
             undefined: ekkert
-      gamelab_setDirection:
-        text: láta {SPRITE} hreyfast í stefnu {DIRECTION}
-      gamelab_setFrameDelay:
-        text: stilla rammatöf {THIS} á {VAL}
-      gamelab_setPosition:
-        text: færa {THIS} á staðinn {POSITION}
-        options:
-          POSITION:
-            "{x: 50, y: 50}": efst til vinstri
-            "{x: 200, y: 50}": efst í miðju
-            "{x: 350, y: 50}": efst til hægri
-            "{x: 50, y: 200}": í miðið til vinstri
-            "{x: 200, y: 200}": í miðju
-            "{x: 350, y: 200}": í miðið til hægri
-            "{x: 50, y: 350}": neðst til vinstri
-            "{x: 200, y: 350}": neðst í miðju
-            "{x: 350, y: 350}": neðst til hægri
-            '"random"': eitthvað
       gamelab_setProp:
         text: stilla {SPRITE} {PROPERTY} á {VAL}
         options:
@@ -984,8 +859,6 @@ is:
             '"height"': hæð
       gamelab_setTint:
         text: breyta lit {THIS} í {COLOR}
-      gamelab_setup:
-        text: uppstilling
       gamelab_setupSim:
         text: |-
           stilla upp hermi þar sem
@@ -1001,61 +874,6 @@ is:
           CONDITION:
             '"when"': þegar
             '"while"': meðan
-      gamelab_spriteClickedSet:
-        text: "{CONDITION} {SPRITE} er smellt þá stilla {CLICK}"
-        options:
-          CONDITION:
-            '"when"': þegar
-            '"while"': meðan
-      gamelab_spriteCostume:
-        text: "{COSTUME}"
-      gamelab_spriteDirection:
-        text: "{DIRECTION}"
-        options:
-          DIRECTION:
-            '"North"': norður
-            '"East"': austur
-            '"South"': suður
-            '"West"': vestur
-      gamelab_spritesWhere:
-        text: verur með {PROPERTY} = {VALUE}
-        options:
-          PROPERTY:
-            '"scale"': stærð
-            '"x"': x staða
-            '"y"': y staða
-            '"costume"': búningur
-            '"direction"': stefna hreyfingar
-            '"rotation"': snúningur eða stefna
-            '"tint"': litur
-      gamelab_spritesWhereFirst:
-        text: fyrsta {VALUE}
-      gamelab_spritesWhereGenerator:
-        text: verur sem hafa {PROPERTY} {OP} {VALUE}
-        options:
-          PROPERTY:
-            '"scale"': stærð
-            '"x"': x staða
-            '"y"': y staða
-            '"costume"': búningur
-            '"direction"': stefna hreyfingar
-            '"rotation"': snúningur eða stefna
-            '"tint"': litur
-          OP:
-            '"="': "="
-            '">"': ">"
-            '"<"': "\\<"
-      gamelab_spritesWhereLast:
-        text: síðasta {VALUE}
-      gamelab_spritesWhereRandom:
-        text: af handahófi í hóp {VALUE}
-      gamelab_subjectSprite:
-        text: gerandi vera
-      gamelab_thisBeginsBehaviorSimple:
-        text: vera {SPRITE} byrjar {BEHAVIOR}
-        options:
-          SPRITE:
-            abc: þessi vera
       gamelab_turn:
         text: "{SPRITE} snýr {DIRECTION} {N} gráður"
         options:
@@ -1064,14 +882,12 @@ is:
             '"left"': vinstri
       gamelab_whenDownArrow:
         text: þegar ýtt er á ör niður
-      gamelab_whenJoystick:
-        text: þegar leikjastýri
       gamelab_whenKey:
         text: þegar ýtt er á {KEY}
         options:
           KEY:
-            '"up"': uppi
-            '"down"': niðri
+            '"up"': upp
+            '"down"': niður
             '"left"': vinstri
             '"right"': hægri
             '"space"': geimur
@@ -1081,14 +897,12 @@ is:
             '"d"': d
       gamelab_whenLeftArrow:
         text: þegar ýtt er á vinstri ör
-      gamelab_whenMouseClicked:
-        text: þegar mús er smellt
       gamelab_whenPressedAndReleased:
         text: "þegar {DIR} haldið \n{STATEMENT1} þegar sleppt \n{STATEMENT2}"
         options:
           DIR:
-            "'up'": uppi
-            "'down'": niðri
+            "'up'": upp
+            "'down'": niður
             "'left'": vinstri
             "'right'": hægri
       gamelab_whenRightArrow:
@@ -1099,28 +913,16 @@ is:
           {STATEMENT2}
       gamelab_whenTouching:
         text: þegar {SPRITE1} snertir {SPRITE2}
-      gamelab_whenTouchingAny:
-        text: þegar {SPRITE} snertir einhvern {GROUP}
-      gamelab_whenTouchingSet:
-        text: "{CONDITION} {SPRITE1} snertir {SPRITE2} þá stilla {SPRITEA} og stilla {SPRITEB}"
-        options:
-          CONDITION:
-            '"when"': þegar
-            '"while"': meðan
-      gamelab_whenTrue:
-        text: þegar {CONDITION} er satt
       gamelab_whenUpArrow:
         text: þegar ýtt er á ör upp
       gamelab_whileDownArrow:
         text: meðan ýtt er á ör niður
-      gamelab_whileJoystick:
-        text: meðan leikjastýri
       gamelab_whileKey:
         text: meðan ýtt er á {KEY}
         options:
           KEY:
-            '"up"': uppi
-            '"down"': niðri
+            '"up"': upp
+            '"down"': niður
             '"left"': vinstri
             '"right"': hægri
             '"space"': geimur
@@ -1136,8 +938,6 @@ is:
         text: meðan {SPRITE1} snertir {SPRITE2}
       gamelab_whileUpArrow:
         text: meðan ýtt er á ör upp
-      gamelab_worldSeconds:
-        text: sekúndur liðnar
       gamelab_xLocationOf:
         text: x hnit {SPRITE}
       gamelab_yLocationOf:
@@ -1463,8 +1263,8 @@ is:
             '"when"': þegar
             '"while"': meðan
           KEY:
-            '"up"': uppi
-            '"down"': niðri
+            '"up"': upp
+            '"down"': niður
             '"left"': vinstri
             '"right"': hægri
             '"space"': geimur
@@ -1572,16 +1372,16 @@ is:
         text: færa {DIR}
         options:
           DIR:
-            '"up"': uppi
-            '"down"': niðri
+            '"up"': upp
+            '"down"': niður
             '"left"': vinstri
             '"right"': hægri
       binary_whenKey:
         text: þegar ýtt er á {KEY}
         options:
           KEY:
-            '"up"': uppi
-            '"down"': niðri
+            '"up"': upp
+            '"down"': niður
             '"left"': vinstri
             '"right"': hægri
             '"space"': geimur

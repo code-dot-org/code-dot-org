@@ -1,7 +1,7 @@
 import React from 'react';
 import {mount, shallow} from 'enzyme';
 import sinon from 'sinon';
-import {expect} from '../../../util/configuredChai';
+import {expect} from '../../../util/reconfiguredChai';
 import {Body} from '@cdo/apps/templates/Dialog';
 import SchoolInfoInterstitial from '@cdo/apps/lib/ui/SchoolInfoInterstitial';
 import SchoolInfoConfirmationDialog from '@cdo/apps/lib/ui/SchoolInfoConfirmationDialog';
@@ -30,7 +30,7 @@ describe('SchoolInfoConfirmationDialog', () => {
       />
     );
 
-    wrapper.instance().setState({showSchoolInterstitial: true});
+    wrapper.setState({showSchoolInterstitial: true});
     expect(wrapper.find(SchoolInfoInterstitial)).to.have.lengthOf(1);
   });
 
@@ -67,7 +67,7 @@ describe('SchoolInfoConfirmationDialog', () => {
       'handleClickUpdate'
     );
     handleClickUpdateStub.callsFake(() => {});
-    wrapper.instance().setState({showSchoolInterstitial: false});
+    wrapper.setState({showSchoolInterstitial: false});
     wrapper.find('Button');
     expect(wrapper.find('Button').length).to.equal(2);
   });
@@ -102,7 +102,7 @@ describe('SchoolInfoConfirmationDialog', () => {
       it('calls handleClickUpdate method when a user clicks the button to update school information', async () => {
         const wrapperInstance = wrapper.instance();
         sinon.spy(wrapperInstance, 'handleClickUpdate');
-        wrapper.instance().setState({showSchoolInterstitial: false});
+        wrapper.setState({showSchoolInterstitial: false});
         wrapper.find('div#update-button').simulate('click');
 
         expect(wrapperInstance.handleClickUpdate).to.have.been.called;
@@ -113,8 +113,8 @@ describe('SchoolInfoConfirmationDialog', () => {
       it('calls handleClickYes method when a user does not need to update school information', async () => {
         stubedFetch.resolves();
         const wrapperInstance = wrapper.instance();
-        const handleclickYesSpy = sinon.spy(wrapperInstance, 'handleClickYes');
-        wrapper.instance().setState({showSchoolInterstitial: false});
+        const handleClickYesSpy = sinon.spy(wrapperInstance, 'handleClickYes');
+        wrapper.setState({showSchoolInterstitial: false});
         wrapper.find('div#yes-button').simulate('click');
 
         expect(wrapperInstance.handleClickYes).to.have.been.called;
@@ -122,7 +122,7 @@ describe('SchoolInfoConfirmationDialog', () => {
         expect(onClose).to.have.been.called;
         await setTimeout(() => {}, 50);
         expect(wrapper.state('showSchoolInterstitial')).to.be.false;
-        handleclickYesSpy.restore();
+        handleClickYesSpy.restore();
       });
     });
   });
@@ -149,7 +149,7 @@ describe('SchoolInfoConfirmationDialog', () => {
         wrapperInstance,
         'renderSchoolInformationForm'
       );
-      wrapper.instance().setState({showSchoolInterstitial: true});
+      wrapper.setState({showSchoolInterstitial: true});
 
       expect(renderSchoolInformationForm).to.have.been.called;
     });
@@ -160,7 +160,7 @@ describe('SchoolInfoConfirmationDialog', () => {
         wrapperInstance,
         'renderInitialContent'
       );
-      wrapper.instance().setState({showSchoolInterstitial: false});
+      wrapper.setState({showSchoolInterstitial: false});
 
       expect(renderSchoolInfoConfirmationDialog).to.have.been.called;
     });

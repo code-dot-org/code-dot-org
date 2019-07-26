@@ -1,71 +1,798 @@
 ---
-it:
+it-IT:
   data:
-    external:
+    dsls:
+      2-3 Algorithms Multi 1:
+        title: Esercizio di Verifica (Risposte Multiple)
+        questions:
+        - text: Scegli l'algoritmo che ti fa disegnare questa figura.
+        answers:
+        - text: Inizia con un quadrato<br/>Metti un triangolo sopra il quadrato<br/>Metti
+            un triangolo sotto il quadrato
+        - text: Inizia con un quadrato<br/>Disegna un triangolo a destra del quadrato<br/>Disegna
+            un parallelogramma sotto il quadrato<br/>Disegna un triangolo a destra
+            del parallelogramma
+          correct: true
+        - text: Inizia con un quadrato<br/>Metti un parallelogramma sopra il quadrato<br/>Metti
+            un triangolo a destra del parallelogramma
+        - text: Inizia con un quadrato<br/>Metti un triangolo sotto il quadrato<br/>Metti
+            un parallelogramma a destra del triangolo
+      2-3 Algorithms Multi 2:
+        title: Esercizio di Verifica (Risposte Multiple)
+        content1: Inizia con un triangolo<br/>Metti un quadrato sotto il triangolo<br/>Metti
+          un altro triangolo sotto il quadrato
+        questions:
+        - text: Quale figura <em>non</em> può essere disegnata seguendo questo algoritmo?
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+      2-3 Big Event Match 1:
+        title: Esercizio di Verifica (Corrispondenza)
+        content2: Associa ogni sequenza di figure alla relativa sequenza di mosse
+          di danza, usando la corrispondenza sopra illustrata.
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 Binary Match 1:
+        title: Esercizio di Verifica (Corrispondenza)
+        content2: Utilizza la chiave qua sopra per associare ogni codice alla lettera
+          cui è abbinato.
+        questions:
+        - text: "<strong>N</strong>"
+        - text: "<strong>O</strong>"
+        - text: "<strong>P</strong>"
+        - text: "<strong>Q</strong>"
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 Conditionals Multi 1:
+        title: Esercizio di Verifica (Risposte Multiple)
+        questions:
+        - text: |-
+            Applicando queste regole, a quale insieme di carte viene assegnato il punteggio corretto?<br>
+            <br>
+            Se (la CARTA è minore di 5)<br>
+            &emsp; Se (la CARTA è NERA)<br>
+            &emsp; &emsp; Assegna alla TUA squadra lo stesso numero di punti che leggi sulla carta<br>
+            &emsp; Altrimenti<br>
+            &emsp; &emsp; Assegna all'ALTRA squadra 1 punto.<br>
+            Altrimenti<br>
+            &emsp; Se (la CARTA è di CUORI)<br>
+            &emsp; &emsp; Assegna alla TUA squadra 1 punto.
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+      2-3 Getting Loopy Multi 1:
+        title: Esercizio di Verifica (Risposte Multiple)
+        questions:
+        - text: Come semplificheresti la sequenza di blocchi sulla sinistra usando
+            i blocchi `ripeti`, cioè i <i>cicli</i>?
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+      2-3 Graph Paper Match 1:
+        title: Esercizio di Verifica (Corrispondenza)
+        content1: Associa ad ogni figura il programma corretto.
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      2-3 Graph Paper Multi 1:
+        title: Esercizio di Verifica (Risposte Multiple)
+        questions:
+        - text: Quale programma ti fa disegnare questa figura?
+        answers:
+        - {}
+        - correct: true
+        - {}
+      2-3 Maze Match 2:
+        title: Esercizio di Verifica (Associazioni)
+        content1: Associa ad ogni situazione la sequenza di blocchi corretta.
+        pre_title: Istruzioni
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      2-3 Maze Multi 2:
+        title: Esercizio di Verifica (Risposte Multiple)
+        questions:
+        - text: Quale di queste sequenze di istruzioni mi fa arrivare fino al maialino?
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+      2-3 Relay Programming Multi 1:
+        title: Esercizio di Verifica (Risposte Multiple)
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - correct: true
+      2-3 Relay Programming Multi 2:
+        title: Esercizio di Verifica (Risposte Multiple)
+        questions:
+        - text: Quale delle seguenti coppie figura-programma non contiene errori?
+        answers:
+        - {}
+        - {}
+        - correct: true
+      2-3 artist debug multi 1:
+        questions:
+        - {}
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+      2-3 artist functions multi 1:
+        title: Esercizio di Verifica (Risposte Multiple)
+        questions:
+        - text: Scegli la sequenza di blocchi che disegna correttamente la figura
+            qui a fianco usando la funzione `draw a rectangle` (<i>disegna un rettangolo</i>)
+            illustrata ancora più a sinistra.
+        answers:
+        - correct: true
+        - {}
+        - {}
+      2-3 artist loops match 1:
+        content2: Associa ogni figura con il ciclo che la disegna.
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 artist loops multi 1:
+        title: Esercizio di Verifica (Risposte Multiple)
+        questions:
+        - text: Quale figura viene disegnata da questo ciclo?
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+      2-3 artist loops multi 2:
+        title: Esercizio di Verifica (Risposte Multiple)
+        questions:
+        - text: Quale figura viene disegnata da questo programma?
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+      2-3 artist match 1:
+        title: Esercizio di Verifica (Corrispondenza)
+        content1: Associa ad ogni figura l'insieme dei blocchi che la completa.
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      2-3 bee conditionals multi 1:
+        title: Esercizio di Verifica (Risposte Multiple)
+        questions:
+        - text: Quale confronto qua sotto è vero?
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+      2-3 bee conditionals multi 3:
+        title: Esercizio di Verifica (Risposte Multiple)
+        questions:
+        - text: Scegli la sequenza di blocchi che risolve l'esercizio.
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+      2-3 bee loops multi 1:
+        title: Esercizio di Verifica (Risposte Multiple)
+        questions:
+        - text: Quale sequenza di blocchi ti fa raccogliere tutto il nettare?
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+      2-3 maze match 1:
+        title: Esercizio di Verifica (Corrispondenza)
+        content1: Associa ad ogni situazione la sequenza di blocchi corretta.
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      2-3 maze multi 1:
+        title: Esercizio di Verifica (Risposte Multiple)
+        questions:
+        - text: Quale sequenza di blocchi è corretta?
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+      4-5 Algorithms Match 1:
+        title: Esercizio di Verifica (Corrispondenza)
+        content1: Definisci l'ordine in cui le fasi di una Gara con i Dadi dovrebbero
+          apparire in un algoritmo.
+        questions:
+        - text: "<h4>1)</h4>"
+        - text: "<h4>2)</h4>"
+        - text: "<h4>3)</h4>"
+        - text: "<h4>4)</h4>"
+        answers:
+        - text: "<h4>Imposta a 0 il punteggio del Giocatore 1</h4>"
+        - text: "<h4>il Giocatore 1 tira il dado</h4>"
+        - text: "<h4>Aggiungi il punteggio del Giocatore 1 al punteggio totale</h4>"
+        - text: "<h4>Confronta il punteggio dei giocatori per vedere chi vince</h4>"
+      4-5 Algorithms Multi 1:
+        title: Esercizio di Verifica (Risposte Multiple)
+        questions:
+        - text: Tra queste situazioni, quale è la più difficile da descrivere con
+            un algoritmo?
+        answers:
+        - text: Lavarsi i denti
+        - text: Cuocere i biscotti
+        - text: Acquistare i prodotti di una lista della spesa
+        - text: " Una banana (il frutto)"
+          correct: true
+      4-5 Computational Thinking Match 1:
+        title: Esercizio di Verifica (Corrispondenza)
+        content1: Ognuno di questi veicoli può essere individuato in base al numero
+          di ruote e finestre che possiede per ciascun lato. Associa ogni veicolo
+          alla lista di elementi che lo rappresenta.
+        questions:
+        - text: "<h3>Ruote per lato: 2<br/>Finestre per lato: 0</h3>"
+        - text: "<h3>Ruote per lato: 2<br/>Finestre per lato: 1</h3>"
+        - text: "<h3>Ruote per lato: 2<br/>Finestre per lato: 6</h3>"
+        - text: "<h3>Ruote per lato: 3<br/>Finestre per lato: 2</h3>"
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      4-5 Computational Thinking Multi 1:
+        title: Esercizio di Verifica (Risposte Multiple)
+        content1: Ecco tre frasi. Quale degli schemi qua sotto è un'astrazione in
+          grado di rappresentarle tutte e tre in modo corretto?
+        questions:
+        - text: 'Ecco tre frasi: <br>1. Seattle è una città grande. <br>2. Eugene
+            è una città media. <br>3. Hillview è una città piccola. <br>Quale degli
+            schemi di frase qua sotto è un''astrazione in grado di rappresentarle
+            tutte e tre in modo corretto?'
+        answers:
+        - text: Seattle _____ una _____ _____.
+        - text: _____ è una città  _____.
+          correct: true
+        - text: _____ è _____ una _____.
+        - text: Eugene è una città _____.
+      4-5 Crowdsourcing Multi 1:
+        title: Esercizio di Verifica (Risposte Multiple)
+        questions:
+        - text: Quale di queste immagini rappresenta meglio l'intelligenza collettiva?
+        answers:
+        - {}
+        - correct: true
+      4-5 Crowdsourcing Multi 2:
+        title: Esercizio di Verifica (Risposte Multiple)
+        questions:
+        - text: Quale di queste attività sarebbe meglio compiere per esercitare l'intelligenza
+            collettiva?
+        answers:
+        - text: Pulire la propria camera
+          correct: true
+        - text: Mangiare il proprio dolce
+        - text: Lavarsi i capelli
+        - text: Lavarsi il viso
+      4-5 Digital Footprint Multi 1:
+        title: Esercizio di Verifica (Risposte Multiple)
+        questions:
+        - text: Quale informazione tra quelle elencate qua sotto può essere condivisa
+            su internet?
+        answers:
+        - text: Il tuo compleanno
+        - text: Il tuo cibo preferito
+          correct: true
+        - text: Il tuo indirizzo
+        - text: Il numero della carta di credito di tua madre
+      4-5 Internet Multi 1:
+        title: Esercizio di Verifica (Risposte Multiple)
+        questions:
+        - text: Quando ti colleghi a code.org, a quale indirizzo IP fra quelli elencati
+            in questa tabella ti farà arrivare il DNS?
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+      4-5 Internet Multi 2:
+        title: Esercizio di Verifica (Risposte Multiple)
+        questions:
+        - text: Se il DNS ti ha fatto arrivare ad una pagina con indirizzo IP 100.42.50.110,
+            su quale sito web fra quelli elencati in questa tabella sei arrivato?
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+      4-5 Songwriting Multi 1:
+        title: Esercizio di Verifica (Risposte Multiple)
+        questions:
+        - text: Qual è il pezzo più lungo di questa canzone che puoi definire come
+            ritornello, in modo tale che il ritornello sia ripetuto esattamente ogni
+            volta che viene richiamato?
+        answers:
+        - text: Lou, Lou, skip to my Lou,
+        - text: Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou,
+            Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.
+          correct: true
+        - text: Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou,
+            Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's
+            in the buttermilk, <br/>Shoo, fly, shoo,
+        - text: Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk,
+            <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo,
+            <br/>Skip to my Lou, my darlin.
+      4-5 Suncatchers Match 1:
+        title: Esercizio di Verifica (Corrispondenza)
+        content1: Utilizzando i gruppi di istruzioni (o "skill") che vengono forniti,
+          associa ogni programma alla parola che esso restituisce.
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - text: "<h4>STACK</h4>"
+        - text: "<h4>STAMP</h4>"
+        - text: "<h4>STAR</h4>"
+        - text: "<h4>RAMP</h4>"
+      4-5 Suncatchers Multi 1:
+        title: Esercizio di Verifica (Risposte Multiple)
+        questions:
+        - text: Quale dei programmi qui sotto <em>non</em> produce la stessa sequenza
+            di istruzioni definita dal programma 1?
+        answers:
+        - {}
+        - correct: true
+        - {}
+      4-5 artist loops multi 1:
+        title: Esercizio di Verifica (Risposte Multiple)
+        questions:
+        - text: Quale sequenza di blocchi disegna la figura geometrica qui a sinistra?
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+      4-5 artist multi 1:
+        title: Esercizio di Verifica (Risposte Multiple)
+        questions:
+        - text: Quale sequenza di blocchi ti fa disegnare un rettangolo avente il
+            perimetro pari a 100 pixel?
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+      4-5 artist multi 2:
+        title: Esercizio di Verifica (Risposte Multiple)
+        questions:
+        - text: Quale figura è simmetrica (rispetto ad un asse verticale)?
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+      4-5 bee conditionals multi 1:
+        title: Esercizio di Verifica (Risposte Multiple)
+        content2: Un fiore viola può avere 3, 2 oppure 1 dose di nettare, ma non puoi
+          saperlo prima di eseguire il programma. Quali blocchi controllano e raccolgono
+          correttamente tutto il nettare da un fiore viola?
+        questions:
+        - text: Scegli la sequenza di blocchi che risolve l'esercizio.
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+      4-5 bee debug multi 1:
+        title: Esercizio di Verifica (Risposte Multiple)
+        questions:
+        - text: Quale versione della funzione è corretta?
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+      4-5 bee loops multi 1:
+        title: Esercizio di Verifica (Risposte Multiple)
+        questions:
+        - text: Quale sequenza di blocchi è corretta?
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+      4-5 maze conditionals multi 1:
+        title: Esercizio di Verifica (Risposte Multiple)
+        questions:
+        - text: Quale sequenza di blocchi è corretta?
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+      4-5 maze match 1:
+        title: Esercizio di Verifica (Associazioni)
+        content1: Associa ad ogni situazione la sequenza di blocchi corretta.
+        pre_title: Istruzioni
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      4-5 maze multi 1:
+        title: Esercizio di Verifica (Risposte Multiple)
+        questions:
+        - text: Quale sequenza di blocchi è corretta?
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
       Begin planning your project:
-        content1: Descrizione qui
         title: titolo
+        content1: Descrizione qui
       Begin planning your project_2018:
         content1: Descrizione qui
       Begin planning your project_2018_2019:
         content1: Descrizione qui
+      CSD Header Size MC:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+      CSD Header Size MC_2018:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+      CSD Header Size MC_2018_2019:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
       CSD U2 Design Project:
-        content1: Descrizione qui
         title: titolo
+        content1: Descrizione qui
       CSD U2 Design Project_2018:
-        content1: Descrizione qui
         title: titolo
+        content1: Descrizione qui
       CSD U2 Design Project_2018_2019:
-        content1: Descrizione qui
         title: titolo
-      CSD U2 L1 Overview:
         content1: Descrizione qui
-        title: titolo
       CSD U2 L2 Overview:
-        content1: Descrizione qui
         title: titolo
+        content1: Descrizione qui
       CSD U2 L3 Overview:
-        content1: Descrizione qui
         title: titolo
+        content1: Descrizione qui
       CSD U2 L4 Overview:
-        content1: Descrizione qui
         title: titolo
+        content1: Descrizione qui
       CSD U2 L5 Overview:
-        content1: Descrizione qui
         title: titolo
+        content1: Descrizione qui
       CSD U2 L6 Overview:
-        content1: Descrizione qui
         title: titolo
+        content1: Descrizione qui
       CSD U2 Lesson 6 Overview:
         content1: Descrizione qui
       CSD U2 expand project:
-        content1: Descrizione qui
         title: titolo
+        content1: Descrizione qui
       CSD U2 expand project_2018:
-        content1: Descrizione qui
         title: titolo
+        content1: Descrizione qui
       CSD U2 expand project_2018_2019:
-        content1: Descrizione qui
         title: titolo
+        content1: Descrizione qui
+      CSD U2 image debug match:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U2 lists match:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U2 lists match_2018:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U2 lists match_2018_2019:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
       CSD U2 project guide:
         content1: Descrizione qui
       CSD U2 project guide_2018:
         content1: Descrizione qui
       CSD U2 project guide_2018_2019:
         content1: Descrizione qui
+      CSD U3 - conditionals - Matching:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 - conditionals - Matching_2018:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 - conditionals - Matching_2018_2019:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Boolean MC:
+        title: titolo
+        questions:
+        - {}
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+      CSD U3 Boolean MC_2018:
+        title: titolo
+        questions:
+        - {}
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+      CSD U3 Boolean MC_2018_2019:
+        title: titolo
+        questions:
+        - {}
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
       CSD U3 Card Examples_2018:
         content1: Descrizione qui
       CSD U3 Card Examples_2018_2019:
         content1: Descrizione qui
+      CSD U3 Functions Prediction define first:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+      CSD U3 Functions Prediction define first_2018:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+      CSD U3 Functions Prediction define first_2018_2019:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+      CSD U3 Keypress Matching:
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      CSD U3 Keypress Matching_2018:
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      CSD U3 Keypress Matching_2018_2019:
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      CSD U3 Sprite Movement Predict Multi:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+      CSD U3 Sprite Movement Predict Multi_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+      CSD U3 Sprite Movement Predict Multi_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+      CSD U3 Sprites intro predict multi:
+        questions:
+        - {}
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+      CSD U3 Sprites intro predict multi_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+      CSD U3 Sprites intro predict multi_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
       CSD U3 combining rep:
-        content1: Descrizione qui
         title: titolo
+        content1: Descrizione qui
       CSD U3 combining rep_2018:
-        content1: Descrizione qui
         title: titolo
+        content1: Descrizione qui
       CSD U3 combining rep_2018_2019:
-        content1: Descrizione qui
         title: titolo
+        content1: Descrizione qui
+      CSD U3 drawSprites placement match:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 drawSprites placement match_2019:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
       CSD U3 game intro:
         content1: Descrizione qui
       CSD U3 game intro_2018:
@@ -79,14 +806,14 @@ it:
       CSD U3 platform intro_2018_2019:
         content1: Descrizione qui
       CSD U5 Encryption 1:
-        content1: Descrizione qui
         title: titolo
+        content1: Descrizione qui
       CSD U5 Encryption 1_2018:
-        content1: Descrizione qui
         title: titolo
+        content1: Descrizione qui
       CSD U5 Encryption 1_2018_2019:
-        content1: Descrizione qui
         title: titolo
+        content1: Descrizione qui
       CSD U5 Encryption 2:
         content1: Descrizione qui
       CSD U5 Encryption 2_2018:
@@ -94,8 +821,8 @@ it:
       CSD U5 Encryption 2_2018_2019:
         content1: Descrizione qui
       CSD U5 L13 SFLP Interpreting Data:
-        content1: Descrizione qui
         title: titolo
+        content1: Descrizione qui
       CSD U5 crosstab warmup:
         content1: Descrizione qui
       CSD U5 crosstab warmup_2018:
@@ -103,1059 +830,571 @@ it:
       CSD U5 crosstab warmup_2018_2019:
         content1: Descrizione qui
       CSD U5 data visualization:
-        content1: Descrizione qui
         title: titolo
+        content1: Descrizione qui
       CSD U5 data visualization_2018:
-        content1: Descrizione qui
         title: titolo
+        content1: Descrizione qui
       CSD U5 data visualization_2018_2019:
-        content1: Descrizione qui
         title: titolo
+        content1: Descrizione qui
       CSD U5 student record:
-        content1: Descrizione qui
         title: titolo
+        content1: Descrizione qui
       CSD U5 student record_2018:
-        content1: Descrizione qui
         title: titolo
+        content1: Descrizione qui
       CSD U5 student record_2018_2019:
-        content1: Descrizione qui
         title: titolo
+        content1: Descrizione qui
       CSD U6 LED create intro:
         content1: Descrizione qui
       CSD U6 LED create intro_2018:
         content1: Descrizione qui
       CSD U6 LED create intro_2018_2019:
         content1: Descrizione qui
+      CSD U6 array multi:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+      CSD U6 array multi_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+      CSD U6 array multi_2018_2019:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
       CSD U6 final intro:
         content1: Descrizione qui
       CSD U6 final intro_2018:
         content1: Descrizione qui
       CSD U6 final intro_2018_2019:
         content1: Descrizione qui
+      CSD U6 setProperty predict multi:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+      CSD U6 setProperty predict multi_2018:
+        questions:
+        - {}
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
       Internet Simulator Setup:
         content1: Descrizione qui
       Internet Simulator Setup 2:
-        content1: Descrizione qui
         title: titolo
+        content1: Descrizione qui
       Internet Simulator Setup 3:
         content1: Descrizione qui
+      K-1 Artist 1 Multi 1:
+        title: Esercizio di Verifica (Risposte Multiple)
+        questions:
+        - text: Quale sequenza di blocchi ti fa completare il disegno?
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+      K-1 Artist 1 Multi 2:
+        title: Esercizio di Verifica (Risposte Multiple)
+        questions:
+        - text: Quale sequenza di blocchi ti fa disegnare un quadrato?
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+      K-1 Artist 2 Match 2:
+        title: Esercizio di Verifica (Corrispondenza)
+        content2: Associa ogni figura a destra con la figura a sinistra che è dello
+          stesso tipo.
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Bee 1 Multi 1:
+        title: Esercizio di Verifica (Risposte Multiple)
+        questions:
+        - text: Sommando il nettare contenuto nei due fiori in alto a sinistra, quante
+            dosi di nettare ottieni?
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+      K-1 Bee 1 Multi 2:
+        title: Esercizio di Verifica (Risposte Multiple)
+        questions:
+        - text: Sommando il nettare contenuto nei due fiori in alto a sinistra, quante
+            dosi di nettare ottieni?
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+      K-1 Bee Loops Match 1:
+        title: Esercizio di Verifica (Corrispondenza)
+        content2: Associa ciascun blocco sulla destra con il blocco sulla sinistra
+          che esegue le stesse azioni.
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Big Event Match 1:
+        title: Esercizio di Verifica (Corrispondenza)
+        content2: Associa ogni sequenza di figure alla relativa sequenza di mosse
+          di danza, usando la corrispondenza sopra illustrata.
+        questions:
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+      K-1 Digital Footprint Multi 1:
+        title: Esercizio di Verifica (Risposte Multiple)
+        questions:
+        - text: Quale animale ha l'impronta digitale che lo rende <strong>il più insicuro</strong>?
+        answers:
+        - {}
+        - {}
+        - correct: true
+      K-1 Getting Loopy Multi 1:
+        title: Esercizio di Verifica (Risposte Multiple)
+        questions:
+        - text: Come semplificheresti la sequenza di blocchi sulla sinistra usando
+            i blocchi `ripeti`, cioè i <i>cicli</i>?
+        answers:
+        - correct: true
+        - {}
+        - {}
+      K-1 Happy Maps Multi 1:
+        title: Esercizio di Verifica (Risposte Multiple)
+        questions:
+        - text: Quale freccia fa arrivare il Flurb al tesoro?
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+      K-1 Keep it Private Multi 1:
+        title: Esercizio di Verifica (Risposte Multiple)
+        questions:
+        - text: Quali informazioni dovresti <strong>non condividere online</strong>?
+        answers:
+        - correct: true
+        - {}
+        - {}
+      K-1 Maze Debugging Multi 1:
+        title: Esercizio di Verifica (Risposte Multiple)
+        questions:
+        - text: Quale blocco devi aggiungere alla sequenza mostrata qua a sinistra
+            per farmi arrivare al maialino?
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+      K-1 Maze Loops Multi 1:
+        title: Esercizio di Verifica (Risposte Multiple)
+        questions:
+        - text: Quale blocco `ripeti` fa gli stessi movimenti della sequenza di blocchi
+            sulla sinistra?
+        answers:
+        - correct: true
+        - {}
+        - {}
+      K-1 Maze Loops Multi 2:
+        title: Esercizio di Verifica (Risposte Multiple)
+        questions:
+        - text: Scegli il blocco `ripeti` che esegue gli stessi movimenti della sequenza
+            di blocchi sulla sinistra.
+        answers:
+        - {}
+        - {}
+        - correct: true
+      K-1 Maze Match 1:
+        title: Esercizio di Verifica (Corrispondenza)
+        content2: Associa ad ogni situazione la sequenza di blocchi che mi fa arrivare
+          al maialino.
+        pre_title: Istruzioni
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      K-1 Maze Multiple Choice 2:
+        title: 'Labirinto: Sequenze e Cicli'
+        questions:
+        - text: Quale sequenza di blocchi mi fa arrivare al maialino?
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+      K-1 Move It Multi 1:
+        title: Esercizio di Verifica (Risposte Multiple)
+        questions:
+        - text: Quali frecce fanno arrivare il Flurb ai fiori?
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+      K-1 Plant a Seed Multi 1:
+        title: Esercizio di Verifica (Risposte Multiple)
+        questions:
+        - text: Quale immagine scegli per descrivere il primo passo di questo algoritmo?
+        answers:
+        - {}
+        - {}
+        - correct: true
+      K-1 Plant a Seed Multi 2:
+        title: Esercizio di Verifica (Risposte Multiple)
+        questions:
+        - text: Quale immagine scegli per descrivere il passo di questo algoritmo
+            rappresentato dal punto interrogativo?
+        answers:
+        - {}
+        - correct: true
+        - {}
+      K-1 Word Search Multi 1:
+        title: Esercizio di Verifica (Risposte Multiple)
+        questions:
+        - text: Quale sequenza di blocchi devi scegliere per scrivere le lettere della
+            parola "MOVE"?
+        answers:
+        - {}
+        - correct: true
+        - {}
+      K-1 Word Search Multi 3:
+        title: Esercizio di Verifica (Risposte Multiple)
+        questions:
+        - text: Con la sequenza di spostamenti che ti è stata data, quale parola riesci
+            a scrivere?
+        answers:
+        - text: SET
+        - text: SQUARE
+          correct: true
+        - text: SOUTH
       Multi-Screen Apps:
-        content1: Descrizione qui
         title: titolo
+        content1: Descrizione qui
       New Challenge Introduction:
-        content1: Descrizione qui
         title: titolo
+        content1: Descrizione qui
       OPD-K5 Stage3aGo:
-        content1: Descrizione qui
         title: titolo
+        content1: Descrizione qui
       Prepare for your presentation:
-        content1: Descrizione qui
         title: titolo
+        content1: Descrizione qui
       'Technique: Frequency Analysis':
         content1: Descrizione qui
       Terminology Recap:
         content1: Descrizione qui
-    match:
-      2-3 Big Event Match 1:
-        content2: Associa ogni sequenza di figure alla relativa sequenza di mosse
-          di danza, usando la corrispondenza sopra illustrata.
-        title: Esercizio di Verifica (Corrispondenza)
-      2-3 Binary Match 1:
-        content2: Utilizza la chiave qua sopra per associare ogni codice alla lettera
-          cui è abbinato.
-        questions:
-        - text: "<strong>N</strong>"
-        - text: "<strong>O</strong>"
-        - text: "<strong>P</strong>"
-        - text: "<strong>Q</strong>"
-        title: Esercizio di Verifica (Corrispondenza)
-      2-3 Graph Paper Match 1:
-        content1: Associa ad ogni figura il programma corretto.
-        title: Esercizio di Verifica (Corrispondenza)
-      2-3 Maze Match 2:
-        content1: Associa ad ogni situazione la sequenza di blocchi corretta.
-        pre_title: Istruzioni
-        title: Esercizio di Verifica (Associazioni)
-      2-3 artist loops match 1:
-        content2: Associa ogni figura con il ciclo che la disegna.
-      2-3 artist match 1:
-        content1: Associa ad ogni figura l'insieme dei blocchi che la completa.
-        title: Esercizio di Verifica (Corrispondenza)
-      2-3 maze match 1:
-        content1: Associa ad ogni situazione la sequenza di blocchi corretta.
-        title: Esercizio di Verifica (Corrispondenza)
-      4-5 Algorithms Match 1:
-        answers:
-        - text: "<h4>Imposta a 0 il punteggio del Giocatore 1</h4>"
-        - text: "<h4>il Giocatore 1 tira il dado</h4>"
-        - text: "<h4>Aggiungi il punteggio del Giocatore 1 al punteggio totale</h4>"
-        - text: "<h4>Confronta il punteggio dei giocatori per vedere chi vince</h4>"
-        content1: Definisci l'ordine in cui le fasi di una Gara con i Dadi dovrebbero
-          apparire in un algoritmo.
-        questions:
-        - text: "<h4>1)</h4>"
-        - text: "<h4>2)</h4>"
-        - text: "<h4>3)</h4>"
-        - text: "<h4>4)</h4>"
-        title: Esercizio di Verifica (Corrispondenza)
-      4-5 Computational Thinking Match 1:
-        content1: Ognuno di questi veicoli può essere individuato in base al numero
-          di ruote e finestre che possiede per ciascun lato. Associa ogni veicolo
-          alla lista di elementi che lo rappresenta.
-        questions:
-        - text: "<h3>Ruote per lato: 2<br/>Finestre per lato: 0</h3>"
-        - text: "<h3>Ruote per lato: 2<br/>Finestre per lato: 1</h3>"
-        - text: "<h3>Ruote per lato: 2<br/>Finestre per lato: 6</h3>"
-        - text: "<h3>Ruote per lato: 3<br/>Finestre per lato: 2</h3>"
-        title: Esercizio di Verifica (Corrispondenza)
-      4-5 Suncatchers Match 1:
-        answers:
-        - text: "<h4>STACK</h4>"
-        - text: "<h4>STAMP</h4>"
-        - text: "<h4>STAR</h4>"
-        - text: "<h4>RAMP</h4>"
-        content1: Utilizzando i gruppi di istruzioni (o "skill") che vengono forniti,
-          associa ogni programma alla parola che esso restituisce.
-        title: Esercizio di Verifica (Corrispondenza)
-      4-5 maze match 1:
-        content1: Associa ad ogni situazione la sequenza di blocchi corretta.
-        pre_title: Istruzioni
-        title: Esercizio di Verifica (Associazioni)
-      K-1 Artist 2 Match 2:
-        content2: Associa ogni figura a destra con la figura a sinistra che è dello
-          stesso tipo.
-        title: Esercizio di Verifica (Corrispondenza)
-      K-1 Bee Loops Match 1:
-        content2: Associa ciascun blocco sulla destra con il blocco sulla sinistra
-          che esegue le stesse azioni.
-        title: Esercizio di Verifica (Corrispondenza)
-      K-1 Big Event Match 1:
-        content2: Associa ogni sequenza di figure alla relativa sequenza di mosse
-          di danza, usando la corrispondenza sopra illustrata.
-        title: Esercizio di Verifica (Corrispondenza)
-      K-1 Maze Match 1:
-        content2: Associa ad ogni situazione la sequenza di blocchi che mi fa arrivare
-          al maialino.
-        pre_title: Istruzioni
-        title: Esercizio di Verifica (Corrispondenza)
-    multi:
-      2-3 Algorithms Multi 1:
-        answers:
-        - text: Inizia con un quadrato<br/>Metti un triangolo sopra il quadrato<br/>Metti
-            un triangolo sotto il quadrato
-          correct: false
-        - correct: true
-        - text: Inizia con un quadrato<br/>Metti un parallelogramma sopra il quadrato<br/>Metti
-            un triangolo a destra del parallelogramma
-          correct: false
-        - text: Inizia con un quadrato<br/>Metti un triangolo sotto il quadrato<br/>Metti
-            un parallelogramma a destra del triangolo
-          correct: false
-        questions:
-        - text: Scegli l'algoritmo che ti fa disegnare questa figura.
-        title: Esercizio di Verifica (Risposte Multiple)
-      2-3 Algorithms Multi 2:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        content1: Inizia con un triangolo<br/>Metti un quadrato sotto il triangolo<br/>Metti
-          un altro triangolo sotto il quadrato
-        questions:
-        - text: Quale figura <em>non</em> può essere disegnata seguendo questo algoritmo?
-        title: Esercizio di Verifica (Risposte Multiple)
-      2-3 Conditionals Multi 1:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: |-
-            Applicando queste regole, a quale insieme di carte viene assegnato il punteggio corretto?<br>
-            <br>
-            Se (la CARTA è minore di 5)<br>
-            &emsp; Se (la CARTA è NERA)<br>
-            &emsp; &emsp; Assegna alla TUA squadra lo stesso numero di punti che leggi sulla carta<br>
-            &emsp; Altrimenti<br>
-            &emsp; &emsp; Assegna all'ALTRA squadra 1 punto.<br>
-            Altrimenti<br>
-            &emsp; Se (la CARTA è di CUORI)<br>
-            &emsp; &emsp; Assegna alla TUA squadra 1 punto.
-        title: Esercizio di Verifica (Risposte Multiple)
-      2-3 Getting Loopy Multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        questions:
-        - text: Come semplificheresti la sequenza di blocchi sulla sinistra usando
-            i blocchi `ripeti`, cioè i <i>cicli</i>?
-        title: Esercizio di Verifica (Risposte Multiple)
-      2-3 Graph Paper Multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: Quale programma ti fa disegnare questa figura?
-        title: Esercizio di Verifica (Risposte Multiple)
-      2-3 Maze Multi 2:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Quale di queste sequenze di istruzioni mi fa arrivare fino al maialino?
-        title: Esercizio di Verifica (Risposte Multiple)
-      2-3 Relay Programming Multi 1:
-        answers:
-        - 
-        - 
-        - correct: true
-        title: Esercizio di Verifica (Risposte Multiple)
-      2-3 Relay Programming Multi 2:
-        answers:
-        - 
-        - 
-        - correct: true
-        questions:
-        - text: Quale delle seguenti coppie figura-programma non contiene errori?
-        title: Esercizio di Verifica (Risposte Multiple)
-      2-3 artist debug multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      2-3 artist functions multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Scegli la sequenza di blocchi che disegna correttamente la figura
-            qui a fianco usando la funzione `draw a rectangle` (<i>disegna un rettangolo</i>)
-            illustrata ancora più a sinistra.
-        title: Esercizio di Verifica (Risposte Multiple)
-      2-3 artist loops multi 1:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: Quale figura viene disegnata da questo ciclo?
-        title: Esercizio di Verifica (Risposte Multiple)
-      2-3 artist loops multi 2:
-        answers:
-        - 
-        - 
-        - 
-        - correct: true
-        questions:
-        - text: Quale figura viene disegnata da questo programma?
-        title: Esercizio di Verifica (Risposte Multiple)
-      2-3 bee conditionals multi 1:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: Quale confronto qua sotto è vero?
-        title: Esercizio di Verifica (Risposte Multiple)
-      2-3 bee conditionals multi 3:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Scegli la sequenza di blocchi che risolve l'esercizio.
-        title: Esercizio di Verifica (Risposte Multiple)
-      2-3 bee loops multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        questions:
-        - text: Quale sequenza di blocchi ti fa raccogliere tutto il nettare?
-        title: Esercizio di Verifica (Risposte Multiple)
-      2-3 maze multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Quale sequenza di blocchi è corretta?
-        title: Esercizio di Verifica (Risposte Multiple)
-      4-5 Algorithms Multi 1:
-        answers:
-        - text: Lavarsi i denti
-          correct: false
-        - text: Cuocere i biscotti
-          correct: false
-        - text: Acquistare i prodotti di una lista della spesa
-          correct: false
-        - text: " Una banana (il frutto)"
-          correct: true
-        questions:
-        - text: Tra queste situazioni, quale è la più difficile da descrivere con
-            un algoritmo?
-        title: Esercizio di Verifica (Risposte Multiple)
-      4-5 Computational Thinking Multi 1:
-        answers:
-        - text: Seattle _____ una _____ _____.
-          correct: false
-        - text: _____ è una città  _____.
-          correct: true
-        - text: _____ è _____ una _____.
-          correct: false
-        - text: Eugene è una città _____.
-          correct: false
-        questions:
-        - text: 'Ecco tre frasi: <br>1. Seattle è una città grande. <br>2. Eugene
-            è una città media. <br>3. Hillview è una città piccola. <br>Quale degli
-            schemi di frase qua sotto è un''astrazione in grado di rappresentarle
-            tutte e tre in modo corretto?'
-        title: Esercizio di Verifica (Risposte Multiple)
-      4-5 Crowdsourcing Multi 1:
-        answers:
-        - 
-        - correct: true
-        questions:
-        - text: Quale di queste immagini rappresenta meglio l'intelligenza collettiva?
-        title: Esercizio di Verifica (Risposte Multiple)
-      4-5 Crowdsourcing Multi 2:
-        answers:
-        - text: Pulire la propria camera
-          correct: true
-        - text: Mangiare il proprio dolce
-          correct: false
-        - text: Lavarsi i capelli
-          correct: false
-        - text: Lavarsi il viso
-          correct: false
-        questions:
-        - text: Quale di queste attività sarebbe meglio compiere per esercitare l'intelligenza
-            collettiva?
-        title: Esercizio di Verifica (Risposte Multiple)
-      4-5 Digital Footprint Multi 1:
-        answers:
-        - text: Il tuo compleanno
-          correct: false
-        - text: Il tuo cibo preferito
-          correct: true
-        - text: Il tuo indirizzo
-          correct: false
-        - text: Il numero della carta di credito di tua madre
-          correct: false
-        questions:
-        - text: Quale informazione tra quelle elencate qua sotto può essere condivisa
-            su internet?
-        title: Esercizio di Verifica (Risposte Multiple)
-      4-5 Internet Multi 1:
-        answers:
-        - 
-        - 
-        - 
-        - correct: true
-        questions:
-        - text: Quando ti colleghi a code.org, a quale indirizzo IP fra quelli elencati
-            in questa tabella ti farà arrivare il DNS?
-        title: Esercizio di Verifica (Risposte Multiple)
-      4-5 Internet Multi 2:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Se il DNS ti ha fatto arrivare ad una pagina con indirizzo IP 100.42.50.110,
-            su quale sito web fra quelli elencati in questa tabella sei arrivato?
-        title: Esercizio di Verifica (Risposte Multiple)
-      4-5 Songwriting Multi 1:
-        answers:
-        - text: Lou, Lou, skip to my Lou,
-          correct: false
-        - text: Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou,
-            Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.
-          correct: true
-        - 
-        - 
-        title: Esercizio di Verifica (Risposte Multiple)
-      4-5 Suncatchers Multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: Quale dei programmi qui sotto <em>non</em> produce la stessa sequenza
-            di istruzioni definita dal programma 1?
-        title: Esercizio di Verifica (Risposte Multiple)
-      4-5 artist loops multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Quale sequenza di blocchi disegna la figura geometrica qui a sinistra?
-        title: Esercizio di Verifica (Risposte Multiple)
-      4-5 artist multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Quale sequenza di blocchi ti fa disegnare un rettangolo avente il
-            perimetro pari a 100 pixel?
-        title: Esercizio di Verifica (Risposte Multiple)
-      4-5 artist multi 2:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: Quale figura è simmetrica (rispetto ad un asse verticale)?
-        title: Esercizio di Verifica (Risposte Multiple)
-      4-5 bee conditionals multi 1:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: Scegli la sequenza di blocchi che risolve l'esercizio.
-        title: Esercizio di Verifica (Risposte Multiple)
-      4-5 bee debug multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Quale versione della funzione è corretta?
-        title: Esercizio di Verifica (Risposte Multiple)
-      4-5 bee loops multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        questions:
-        - text: Quale sequenza di blocchi è corretta?
-        title: Esercizio di Verifica (Risposte Multiple)
-      4-5 maze conditionals multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        questions:
-        - text: Quale sequenza di blocchi è corretta?
-        title: Esercizio di Verifica (Risposte Multiple)
-      4-5 maze multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        questions:
-        - text: Quale sequenza di blocchi è corretta?
-        title: Esercizio di Verifica (Risposte Multiple)
-      CSD Header Size MC:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      CSD Header Size MC_2018:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      CSD Header Size MC_2018_2019:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      CSD U3 Boolean MC:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        title: titolo
-      CSD U3 Boolean MC_2018:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        title: titolo
-      CSD U3 Boolean MC_2018_2019:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        title: titolo
-      CSD U3 Functions Prediction define first:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      CSD U3 Functions Prediction define first_2018:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      CSD U3 Functions Prediction define first_2018_2019:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      CSD U3 Sprite Movement Predict Multi:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      CSD U3 Sprite Movement Predict Multi_2018:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      CSD U3 Sprite Movement Predict Multi_2018_2019:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      CSD U3 Sprites intro predict multi:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      CSD U3 Sprites intro predict multi_2018:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      CSD U3 Sprites intro predict multi_2018_2019:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-      CSD U6 array multi:
-        answers:
-        - 
-        - 
-        - 
-        - correct: true
-      CSD U6 array multi_2018:
-        answers:
-        - 
-        - 
-        - 
-        - correct: true
-      CSD U6 array multi_2018_2019:
-        answers:
-        - 
-        - 
-        - 
-        - correct: true
-      CSD U6 setProperty predict multi:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      CSD U6 setProperty predict multi_2018:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      CSD U6 setProperty predict multi_2018_2019:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-      K-1 Artist 1 Multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Quale sequenza di blocchi ti fa completare il disegno?
-        title: Esercizio di Verifica (Risposte Multiple)
-      K-1 Artist 1 Multi 2:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        questions:
-        - text: Quale sequenza di blocchi ti fa disegnare un quadrato?
-        title: Esercizio di Verifica (Risposte Multiple)
-      K-1 Bee 1 Multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Sommando il nettare contenuto nei due fiori in alto a sinistra, quante
-            dosi di nettare ottieni?
-        title: Esercizio di Verifica (Risposte Multiple)
-      K-1 Bee 1 Multi 2:
-        answers:
-        - 
-        - 
-        - 
-        - correct: true
-        questions:
-        - text: Sommando il nettare contenuto nei due fiori in alto a sinistra, quante
-            dosi di nettare ottieni?
-        title: Esercizio di Verifica (Risposte Multiple)
-      K-1 Digital Footprint Multi 1:
-        answers:
-        - 
-        - 
-        - correct: true
-        questions:
-        - text: Quale animale ha l'impronta digitale che lo rende <strong>il più insicuro</strong>?
-        title: Esercizio di Verifica (Risposte Multiple)
-      K-1 Getting Loopy Multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Come semplificheresti la sequenza di blocchi sulla sinistra usando
-            i blocchi `ripeti`, cioè i <i>cicli</i>?
-        title: Esercizio di Verifica (Risposte Multiple)
-      K-1 Happy Maps Multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Quale freccia fa arrivare il Flurb al tesoro?
-        title: Esercizio di Verifica (Risposte Multiple)
-      K-1 Keep it Private Multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Quali informazioni dovresti <strong>non condividere online</strong>?
-        title: Esercizio di Verifica (Risposte Multiple)
-      K-1 Maze Debugging Multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        - 
-        questions:
-        - text: Quale blocco devi aggiungere alla sequenza mostrata qua a sinistra
-            per farmi arrivare al maialino?
-        title: Esercizio di Verifica (Risposte Multiple)
-      K-1 Maze Loops Multi 1:
-        answers:
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Quale blocco `ripeti` fa gli stessi movimenti della sequenza di blocchi
-            sulla sinistra?
-        title: Esercizio di Verifica (Risposte Multiple)
-      K-1 Maze Loops Multi 2:
-        answers:
-        - 
-        - 
-        - correct: true
-        questions:
-        - text: Scegli il blocco `ripeti` che esegue gli stessi movimenti della sequenza
-            di blocchi sulla sinistra.
-        title: Esercizio di Verifica (Risposte Multiple)
-      K-1 Maze Multiple Choice 2:
-        answers:
-        - 
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: Quale sequenza di blocchi mi fa arrivare al maialino?
-        title: 'Labirinto: Sequenze e Cicli'
-      K-1 Move It Multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - 
-        questions:
-        - text: Quali frecce fanno arrivare il Flurb ai fiori?
-        title: Esercizio di Verifica (Risposte Multiple)
-      K-1 Plant a Seed Multi 1:
-        answers:
-        - 
-        - 
-        - correct: true
-        questions:
-        - text: Quale immagine scegli per descrivere il primo passo di questo algoritmo?
-        title: Esercizio di Verifica (Risposte Multiple)
-      K-1 Plant a Seed Multi 2:
-        answers:
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: Quale immagine scegli per descrivere il passo di questo algoritmo
-            rappresentato dal punto interrogativo?
-        title: Esercizio di Verifica (Risposte Multiple)
-      K-1 Word Search Multi 1:
-        answers:
-        - 
-        - correct: true
-        - 
-        questions:
-        - text: Quale sequenza di blocchi devi scegliere per scrivere le lettere della
-            parola "MOVE"?
-        title: Esercizio di Verifica (Risposte Multiple)
-      K-1 Word Search Multi 3:
-        answers:
-        - text: SET
-          correct: false
-        - text: SQUARE
-          correct: true
-        - text: SOUTH
-          correct: false
-        questions:
-        - text: Con la sequenza di spostamenti che ti è stata data, quale parola riesci
-            a scrivere?
-        title: Esercizio di Verifica (Risposte Multiple)
       behaviors 1 predict:
+        questions:
+        - {}
         answers:
-        - correct: false
-          feedback: Sbagliato.
+        - feedback: Sbagliato.
         - correct: true
           feedback: Corretto!
-        - correct: false
-          feedback: Sbagliato.
-        - correct: false
-          feedback: Sbagliata
+        - feedback: Sbagliato.
+        - feedback: Sbagliata
       behaviors 4 predict:
+        questions:
+        - {}
         answers:
-        - correct: false
-          feedback: Sbagliato.
+        - feedback: Sbagliato.
         - correct: true
           feedback: Corretto!
-        - 
-        - correct: false
-          feedback: Sbagliata
+        - {}
+        - feedback: Sbagliata
       courseC_multi_artist_prog6_predict1:
+        questions:
+        - text: Guarda molto attentamente il codice riportato nell'area di lavoro.
+            Cosa succede quando si clicca su "Esegui"?
         answers:
         - text: L'artista disegnerà un triangolo con tre lati uguali.
-          correct: false
           feedback: Sbagliato. L'artista disegna un quadrato.
         - text: L'artista disegnerà una singola linea.
-          correct: false
           feedback: Sbagliato. L'artista disegna un quadrato.
         - text: L'artista disegna un quadrato.
           correct: true
           feedback: Corretto!
         - text: Non lo so.
-          correct: false
           feedback: L'artista disegna un quadrato.
-        questions:
-        - text: Guarda molto attentamente il codice riportato nell'area di lavoro.
-            Cosa succede quando si clicca su "Esegui"?
       courseC_multi_artist_prog6_predict1_2018:
+        questions:
+        - text: Guarda molto attentamente il codice riportato nell'area di lavoro.
+            Cosa succede quando si clicca su "Esegui"?
         answers:
         - text: L'artista disegnerà un triangolo con tre lati uguali.
-          correct: false
           feedback: Sbagliato. L'artista disegna un quadrato.
         - text: L'artista disegnerà una singola linea.
-          correct: false
           feedback: Sbagliato. L'artista disegna un quadrato.
         - text: L'artista disegnerà un quadrato.
           correct: true
           feedback: Corretto!
         - text: Non lo so.
-          correct: false
           feedback: L'artista disegna un quadrato.
-        questions:
-        - text: Guarda molto attentamente il codice riportato nell'area di lavoro.
-            Cosa succede quando si clicca su "Esegui"?
       courseC_multi_artist_prog6_predict1_2018_2019:
+        questions:
+        - text: Guarda molto attentamente il codice riportato nell'area di lavoro.
+            Cosa succede quando si clicca su "Esegui"?
         answers:
         - text: L'artista disegnerà un triangolo con tre lati uguali.
-          correct: false
           feedback: Sbagliato. L'artista disegna un quadrato.
         - text: L'artista disegnerà una singola linea.
-          correct: false
           feedback: Sbagliato. L'artista disegna un quadrato.
         - text: L'artista disegnerà un quadrato.
           correct: true
           feedback: Corretto!
         - text: Non lo so.
-          correct: false
           feedback: L'artista disegna un quadrato.
-        questions:
-        - text: Guarda molto attentamente il codice riportato nell'area di lavoro.
-            Cosa succede quando si clicca su "Esegui"?
       courseC_multi_harvester_loops11_predict1:
-        answers:
-        - correct: false
-          feedback: 'Sbagliato. La contadina raccoglierà 4 zucche in ognuno dei 3
-            cicli: 4 x 3 = 12!'
-        - correct: true
-          feedback: Corretto!
-        - correct: false
-          feedback: 'Sbagliato. La contadina raccoglierà 4 zucche in ognuno dei 3
-            cicli: 4 x 3 = 12!'
-        - text: Non lo so.
-          correct: false
-          feedback: 'La contadina raccoglierà 4 zucche in ognuno dei 3 cicli: 4 x
-            3 = 12!'
         questions:
         - text: Guarda molto attentamente il codice presente nell'area di lavoro.
             Quante zucche raccoglierà la contadina dopo che avrai premuto su "Esegui"?
+        answers:
+        - text: '4'
+          feedback: 'Sbagliato. La contadina raccoglierà 4 zucche in ognuno dei 3
+            cicli: 4 x 3 = 12!'
+        - text: '12'
+          correct: true
+          feedback: Corretto!
+        - text: '15'
+          feedback: 'Sbagliato. La contadina raccoglierà 4 zucche in ognuno dei 3
+            cicli: 4 x 3 = 12!'
+        - text: Non lo so.
+          feedback: 'La contadina raccoglierà 4 zucche in ognuno dei 3 cicli: 4 x
+            3 = 12!'
       courseC_multi_harvester_loops11_predict1_2018:
-        answers:
-        - correct: false
-          feedback: 'Sbagliato. La contadina raccoglierà 4 zucche in ognuno dei 3
-            cicli: 4 x 3 = 12!'
-        - correct: true
-          feedback: Corretto!
-        - correct: false
-          feedback: 'Sbagliato. La contadina raccoglierà 4 zucche in ognuno dei 3
-            cicli: 4 x 3 = 12!'
-        - text: Non lo so.
-          correct: false
-          feedback: 'La contadina raccoglierà 4 zucche in ognuno dei 3 cicli: 4 x
-            3 = 12!'
         questions:
         - text: Guarda molto attentamente il codice presente nell'area di lavoro.
             Quante zucche raccoglierà la contadina dopo che avrai premuto su "Esegui"?
+        answers:
+        - text: '4'
+          feedback: 'Sbagliato. La contadina raccoglierà 4 zucche in ognuno dei 3
+            cicli: 4 x 3 = 12!'
+        - text: '12'
+          correct: true
+          feedback: Corretto!
+        - text: '15'
+          feedback: 'Sbagliato. La contadina raccoglierà 4 zucche in ognuno dei 3
+            cicli: 4 x 3 = 12!'
+        - text: Non lo so.
+          feedback: 'La contadina raccoglierà 4 zucche in ognuno dei 3 cicli: 4 x
+            3 = 12!'
       courseC_multi_harvester_loops11_predict1_2018_2019:
-        answers:
-        - correct: false
-          feedback: 'Sbagliato. La contadina raccoglierà 4 zucche in ognuno dei 3
-            cicli: 4 x 3 = 12!'
-        - correct: true
-          feedback: Corretto!
-        - correct: false
-          feedback: 'Sbagliato. La contadina raccoglierà 4 zucche in ognuno dei 3
-            cicli: 4 x 3 = 12!'
-        - text: Non lo so.
-          correct: false
-          feedback: 'La contadina raccoglierà 4 zucche in ognuno dei 3 cicli: 4 x
-            3 = 12!'
         questions:
         - text: Guarda molto attentamente il codice presente nell'area di lavoro.
             Quante zucche raccoglierà la contadina dopo che avrai premuto su "Esegui"?
+        answers:
+        - text: '4'
+          feedback: 'Sbagliato. La contadina raccoglierà 4 zucche in ognuno dei 3
+            cicli: 4 x 3 = 12!'
+        - text: '12'
+          correct: true
+          feedback: Corretto!
+        - text: '15'
+          feedback: 'Sbagliato. La contadina raccoglierà 4 zucche in ognuno dei 3
+            cicli: 4 x 3 = 12!'
+        - text: Non lo so.
+          feedback: 'La contadina raccoglierà 4 zucche in ognuno dei 3 cicli: 4 x
+            3 = 12!'
       courseC_multi_maze_debugging8_predict1:
+        questions:
+        - text: 'Guarda attentamente il codice riportato di seguito.  Qual è il primo
+            errore che farà fallire l''esecuzione di questo programma? '
         answers:
         - text: Il programma non fallirà. Scrat riuscirà a raggiungere la ghianda.
-          correct: false
           feedback: Sbagliato. Scrat va nella direzione sbagliata dopo l'ultima curva.
         - text: Scrat andrà nella direzione sbagliata dopo l'ultima curva.
           correct: true
           feedback: Corretto!
         - text: Scrat non fa abbastanza passi e si ferma prima di aver raggiunto la
             ghianda.
-          correct: false
           feedback: Sbagliato. Il fatto che Scrat non faccia abbastanza passi avviene
             dopo che ha già girato nella direzione sbagliata.
         - text: Non lo so.
-          correct: false
           feedback: Il primo errore è che Scrat va nella direzione sbagliata dopo
             l'ultima curva.
-        questions:
-        - text: 'Guarda attentamente il codice riportato di seguito.  Qual è il primo
-            errore che farà fallire l''esecuzione di questo programma? '
       courseC_multi_maze_debugging8_predict1_2018:
+        questions:
+        - text: 'Guarda attentamente il codice riportato di seguito.  Qual è il primo
+            errore che farà fallire l''esecuzione di questo programma? '
         answers:
         - text: Il programma non fallirà. Scrat riuscirà a raggiungere la ghianda.
-          correct: false
           feedback: Sbagliato. Scrat va nella direzione sbagliata dopo l'ultima curva.
         - text: Scrat andrà nella direzione sbagliata dopo l'ultima curva.
           correct: true
           feedback: Corretto!
         - text: Scrat non fa abbastanza passi e si ferma prima di aver raggiunto la
             ghianda.
-          correct: false
           feedback: Sbagliato. Il fatto che Scrat non faccia abbastanza passi avviene
             dopo che ha già girato nella direzione sbagliata.
         - text: Non lo so.
-          correct: false
           feedback: Il primo errore è che Scrat va nella direzione sbagliata dopo
             l'ultima curva.
-        questions:
-        - text: 'Guarda attentamente il codice riportato di seguito.  Qual è il primo
-            errore che farà fallire l''esecuzione di questo programma? '
       courseC_multi_maze_debugging8_predict1_2018_2019:
+        questions:
+        - text: 'Guarda attentamente il codice riportato di seguito.  Qual è il primo
+            errore che farà fallire l''esecuzione di questo programma? '
         answers:
         - text: Il programma non fallirà. Scrat riuscirà a raggiungere la ghianda.
-          correct: false
           feedback: Sbagliato. Scrat va nella direzione sbagliata dopo l'ultima curva.
         - text: Scrat andrà nella direzione sbagliata dopo l'ultima curva.
           correct: true
           feedback: Corretto!
         - text: Scrat non fa abbastanza passi e si ferma prima di aver raggiunto la
             ghianda.
-          correct: false
           feedback: Sbagliato. Il fatto che Scrat non faccia abbastanza passi avviene
             dopo che ha già girato nella direzione sbagliata.
         - text: Non lo so.
-          correct: false
           feedback: Il primo errore è che Scrat va nella direzione sbagliata dopo
             l'ultima curva.
-        questions:
-        - text: 'Guarda attentamente il codice riportato di seguito.  Qual è il primo
-            errore che farà fallire l''esecuzione di questo programma? '
       courseC_multi_maze_programming8_predict1:
+        questions:
+        - text: Leggi molto attentamente il codice riportato nell'area di lavoro.
+            Cosa succederà quando cliccherai su "Esegui"?
         answers:
         - text: L'uccellino si fermerà un passo prima di raggiungere il maialino.
-          correct: false
           feedback: Sbagliato. Questo programma fa in modo che l'uccellino raggiunga
             perfettamente il maialino.
         - text: L'uccellino raggiungerà il maialino.
           correct: true
           feedback: Corretto!
         - text: L'uccellino finirà contro la dinamite (TNT).
-          correct: false
           feedback: Sbagliato. Questo programma fa in modo che l'uccellino raggiunga
             perfettamente il maialino.
         - text: Non lo so.
-          correct: false
           feedback: Questo programma fa in modo che l'uccellino raggiunga perfettamente
             il maialino.
-        questions:
-        - text: Leggi molto attentamente il codice riportato nell'area di lavoro.
-            Cosa succederà quando cliccherai su "Esegui"?
       courseC_multi_maze_programming8_predict1_2018:
+        questions:
+        - text: Leggi molto attentamente il codice riportato nell'area di lavoro.
+            Cosa succederà quando cliccherai su "Esegui"?
         answers:
         - text: L'uccellino si fermerà un passo prima di raggiungere il maialino.
-          correct: false
           feedback: Sbagliato. Questo programma fa in modo che l'uccellino raggiunga
             perfettamente il maialino.
         - text: L'uccellino raggiungerà il maialino.
           correct: true
           feedback: Corretto!
         - text: L'uccellino finirà contro la dinamite (TNT).
-          correct: false
           feedback: Sbagliato. Questo programma fa in modo che l'uccellino raggiunga
             perfettamente il maialino.
         - text: Non lo so.
-          correct: false
           feedback: Questo programma fa in modo che l'uccellino raggiunga perfettamente
             il maialino.
-        questions:
-        - text: Leggi molto attentamente il codice riportato nell'area di lavoro.
-            Cosa succederà quando cliccherai su "Esegui"?
       courseC_multi_maze_programming8_predict1_2018_2019:
+        questions:
+        - text: Leggi molto attentamente il codice riportato nell'area di lavoro.
+            Cosa succederà quando cliccherai su "Esegui"?
         answers:
         - text: L'uccellino si fermerà un passo prima di raggiungere il maialino.
-          correct: false
           feedback: Sbagliato. Questo programma fa in modo che l'uccellino raggiunga
             perfettamente il maialino.
         - text: L'uccellino raggiungerà il maialino.
           correct: true
           feedback: Corretto!
         - text: L'uccellino finirà contro la dinamite (TNT).
-          correct: false
           feedback: Sbagliato. Questo programma fa in modo che l'uccellino raggiunga
             perfettamente il maialino.
         - text: Non lo so.
-          correct: false
           feedback: Questo programma fa in modo che l'uccellino raggiunga perfettamente
             il maialino.
-        questions:
-        - text: Leggi molto attentamente il codice riportato nell'area di lavoro.
-            Cosa succederà quando cliccherai su "Esegui"?
       courseC_multi_starWars_predict1:
+        questions:
+        - text: Cosa pensi che succederà quando cliccherai su "Esegui"?
         answers:
         - text: BB-8 non si muoverà.
-          correct: false
           feedback: Sbagliato. Il blocco "ripeti ... volte" fa andare avanti BB-8
             per 5 volte.
         - text: BB-8 si muoverà solo di una casella.
-          correct: false
           feedback: Sbagliato. Il blocco "ripeti ... volte" fa andare avanti BB-8
             per 5 volte.
         - text: BB-8 si sposterà 5 volte e recupererà tutti i rottami metallici.
           correct: true
           feedback: Corretto!
         - text: Non lo so
-          correct: false
           feedback: Il blocco "ripeti ... volte" fa andare avanti BB-8 per 5 volte.
-        questions:
-        - text: Cosa pensi che succederà quando cliccherai su "Esegui"?
       courseC_multi_starWars_predict1_2018:
+        questions:
+        - text: Cosa pensi che succederà quando cliccherai su "Esegui"?
         answers:
         - text: BB-8 non si muoverà.
-          correct: false
           feedback: Sbagliato. Il blocco "ripeti ... volte" fa andare avanti BB-8
             per 5 volte.
         - text: BB-8 si muoverà solo di una casella.
-          correct: false
           feedback: Sbagliato. Il blocco "ripeti ... volte" fa andare avanti BB-8
             per 5 volte.
         - text: BB-8 si sposterà 5 volte e recupererà tutti i rottami metallici.
           correct: true
           feedback: Corretto!
         - text: Non lo so
-          correct: false
           feedback: Il blocco "ripeti ... volte" fa andare avanti BB-8 per 5 volte.
-        questions:
-        - text: Cosa pensi che succederà quando cliccherai su "Esegui"?
       courseC_multi_starWars_predict1_2018_2019:
+        questions:
+        - text: Cosa pensi che succederà quando cliccherai su "Esegui"?
         answers:
         - text: BB-8 non si muoverà.
-          correct: false
           feedback: Sbagliato. Il blocco "ripeti ... volte" fa andare avanti BB-8
             per 5 volte.
         - text: BB-8 si muoverà solo di una casella.
-          correct: false
           feedback: Sbagliato. Il blocco "ripeti ... volte" fa andare avanti BB-8
             per 5 volte.
         - text: BB-8 si sposterà 5 volte e recupererà tutti i rottami metallici.
           correct: true
           feedback: Corretto!
         - text: Non lo so
-          correct: false
           feedback: Il blocco "ripeti ... volte" fa andare avanti BB-8 per 5 volte.
-        questions:
-        - text: Cosa pensi che succederà quando cliccherai su "Esegui"?
       courseC_multi_starWars_predict2:
+        questions:
+        - text: Guarda molto attentamente il codice presente nell'area di lavoro.
+            Cosa succederà quando cliccherai su "Esegui"?
         answers:
         - text: BB-8 va troppo avanti nel primo ciclo.
-          correct: false
           feedback: Sbagliato. Il primo ciclo fa andare avanti BB-8 solo di 2 caselle,
             mentre dovrebbe andare avanti di 3.
         - text: BB-8 non va abbastanza lontano nel primo ciclo per riuscire a raccogliere
@@ -1163,20 +1402,17 @@ it:
           correct: true
           feedback: Corretto!
         - text: BB-8 raccoglierà tutti i rottami metallici senza problemi.
-          correct: false
           feedback: Sbagliato. Il primo ciclo fa andare avanti BB-8 solo di 2 caselle,
             mentre dovrebbe andare avanti di 3.
         - text: Non lo so.
-          correct: false
           feedback: Il primo ciclo fa andare avanti BB-8 solo di 2 caselle, mentre
             dovrebbe andare avanti di 3.
-        questions:
-        - text: Guarda molto attentamente il codice presente nell'area di lavoro.
-            Cosa succederà quando cliccherai su "Esegui"?
       courseC_multi_starWars_predict2_2018:
+        questions:
+        - text: Guarda molto attentamente il codice presente nell'area di lavoro.
+            Cosa succederà quando cliccherai su "Esegui"?
         answers:
         - text: BB-8 va troppo avanti nel primo ciclo.
-          correct: false
           feedback: Sbagliato. Il primo ciclo fa andare avanti BB-8 solo di 2 caselle,
             mentre dovrebbe andare avanti di 3.
         - text: BB-8 non va abbastanza lontano nel primo ciclo per riuscire a raccogliere
@@ -1184,20 +1420,17 @@ it:
           correct: true
           feedback: Corretto!
         - text: BB-8 raccoglierà tutti i rottami metallici senza problemi.
-          correct: false
           feedback: Sbagliato. Il primo ciclo fa andare avanti BB-8 solo di 2 caselle,
             mentre dovrebbe andare avanti di 3.
         - text: Non lo so.
-          correct: false
           feedback: Il primo ciclo fa andare avanti BB-8 solo di 2 caselle, mentre
             dovrebbe andare avanti di 3.
-        questions:
-        - text: Guarda molto attentamente il codice presente nell'area di lavoro.
-            Cosa succederà quando cliccherai su "Esegui"?
       courseC_multi_starWars_predict2_2018_2019:
+        questions:
+        - text: Guarda molto attentamente il codice presente nell'area di lavoro.
+            Cosa succederà quando cliccherai su "Esegui"?
         answers:
         - text: BB-8 va troppo avanti nel primo ciclo.
-          correct: false
           feedback: Sbagliato. Il primo ciclo fa andare avanti BB-8 solo di 2 caselle,
             mentre dovrebbe andare avanti di 3.
         - text: BB-8 non va abbastanza lontano nel primo ciclo per riuscire a raccogliere
@@ -1205,132 +1438,114 @@ it:
           correct: true
           feedback: Corretto!
         - text: BB-8 raccoglierà tutti i rottami metallici senza problemi.
-          correct: false
           feedback: Sbagliato. Il primo ciclo fa andare avanti BB-8 solo di 2 caselle,
             mentre dovrebbe andare avanti di 3.
         - text: Non lo so.
-          correct: false
           feedback: Il primo ciclo fa andare avanti BB-8 solo di 2 caselle, mentre
             dovrebbe andare avanti di 3.
-        questions:
-        - text: Guarda molto attentamente il codice presente nell'area di lavoro.
-            Cosa succederà quando cliccherai su "Esegui"?
       courseD_multi_artist_binary8_predict1:
+        questions:
+        - text: Dai una bella occhiata al codice presente nell'area di lavoro. Che
+            immagine verrà creata quando cliccherai su "Esegui"?
         answers:
         - text: A
-          correct: false
           feedback: Sbagliato.
         - text: B
-          correct: false
           feedback: Sbagliato.
         - text: C
-          correct: false
           feedback: Sbagliato.
         - text: D
           correct: true
           feedback: Corretto!
-        questions:
-        - text: Dai una bella occhiata al codice presente nell'area di lavoro. Che
-            immagine verrà creata quando cliccherai su "Esegui"?
       courseD_multi_artist_binary8_predict1_2018:
+        questions:
+        - text: Dai una bella occhiata al codice presente nell'area di lavoro. Che
+            immagine verrà creata quando cliccherai su "Esegui"?
         answers:
         - text: A
-          correct: false
           feedback: Sbagliato.
         - text: B
-          correct: false
           feedback: Sbagliato.
         - text: C
-          correct: false
           feedback: Sbagliato.
         - text: D
           correct: true
           feedback: Corretto!
-        questions:
-        - text: Dai una bella occhiata al codice presente nell'area di lavoro. Che
-            immagine verrà creata quando cliccherai su "Esegui"?
       courseD_multi_artist_binary8_predict1_2018_2019:
+        questions:
+        - text: Dai una bella occhiata al codice presente nell'area di lavoro. Che
+            immagine verrà creata quando cliccherai su "Esegui"?
         answers:
         - text: A
-          correct: false
           feedback: Sbagliato.
         - text: B
-          correct: false
           feedback: Sbagliato.
         - text: C
-          correct: false
           feedback: Sbagliato.
         - text: D
           correct: true
           feedback: Corretto!
-        questions:
-        - text: Dai una bella occhiata al codice presente nell'area di lavoro. Che
-            immagine verrà creata quando cliccherai su "Esegui"?
       courseD_multi_artist_nestedLoops9_predict1:
+        questions:
+        - text: Dai un'occhiata al codice presente nell'area di lavoro. Che disegno
+            realizzerà questo programma quando cliccherai su "Esegui"?
         answers:
         - text: A
           correct: true
           feedback: Corretto!
         - text: B
-          correct: false
           feedback: Sbagliato. Il ciclo interno realizza un pentagono e quello esterno
             lo ripete 4 volte in cerchio.
         - text: C
-          correct: false
           feedback: Sbagliato. Il ciclo interno realizza un pentagono e quello esterno
             lo ripete 4 volte in cerchio.
         - text: Non lo so.
-          correct: false
           feedback: Il ciclo interno realizza un pentagono e quello esterno lo ripete
             4 volte in cerchio.
-        questions:
-        - text: Dai un'occhiata al codice presente nell'area di lavoro. Che disegno
-            realizzerà questo programma quando cliccherai su "Esegui"?
       courseD_multi_artist_nestedLoops9_predict1_2018:
+        questions:
+        - text: Dai un'occhiata al codice presente nell'area di lavoro. Che disegno
+            realizzerà questo programma quando cliccherai su "Esegui"?
         answers:
         - text: A
           correct: true
           feedback: Corretto!
         - text: B
-          correct: false
           feedback: Sbagliato. Il ciclo interno realizza un pentagono e quello esterno
             lo ripete 4 volte in cerchio.
         - text: C
-          correct: false
           feedback: Sbagliato. Il ciclo interno realizza un pentagono e quello esterno
             lo ripete 4 volte in cerchio.
         - text: Non lo so.
-          correct: false
           feedback: Il ciclo interno realizza un pentagono e quello esterno lo ripete
             4 volte in cerchio.
-        questions:
-        - text: Dai un'occhiata al codice presente nell'area di lavoro. Che disegno
-            realizzerà questo programma quando cliccherai su "Esegui"?
       courseD_multi_artist_nestedLoops9_predict1_2018_2019:
+        questions:
+        - text: Dai un'occhiata al codice presente nell'area di lavoro. Che disegno
+            realizzerà questo programma quando cliccherai su "Esegui"?
         answers:
         - text: A
           correct: true
           feedback: Corretto!
         - text: B
-          correct: false
           feedback: Sbagliato. Il ciclo interno realizza un pentagono e quello esterno
             lo ripete 4 volte in cerchio.
         - text: C
-          correct: false
           feedback: Sbagliato. Il ciclo interno realizza un pentagono e quello esterno
             lo ripete 4 volte in cerchio.
         - text: Non lo so.
-          correct: false
           feedback: Il ciclo interno realizza un pentagono e quello esterno lo ripete
             4 volte in cerchio.
-        questions:
-        - text: Dai un'occhiata al codice presente nell'area di lavoro. Che disegno
-            realizzerà questo programma quando cliccherai su "Esegui"?
       courseD_multi_bee_conditionals1_predict1:
+        questions:
+        - text: La nuvola sta bloccando la visuale. Potrebbe esserci un fiore sotto
+            questa nuvola. Se c'è un fiore, l'ape dovrebbe raccogliere il nettare
+            una volta. Se non c'è alcun fiore, l'ape non dovrebbe fare nulla. Dai
+            un'occhiata al codice presente nell'area di lavoro. Cosa pensi che succederà
+            quando cliccherai su "Esegui"?
         answers:
         - text: 'L''ape andrà fin sotto la nuvola e cercherà in ogni caso di prendere
             una dose di nettare. '
-          correct: false
           feedback: Sbagliato. Grazie al blocco `se c'è un fiore`, l'ape prende il
             nettare solo se c'è un fiore sotto alla nuvola.
         - text: L'ape andrà fin sotto la nuvola e prenderà una dose di nettare solo
@@ -1338,18 +1553,21 @@ it:
           correct: true
           feedback: Corretto!
         - text: 'L''ape andrà fin sotto la nuvola e non farà nulla in ogni caso. '
-          correct: false
           feedback: Sbagliato. Grazie al blocco `se c'è un fiore`, l'ape prende il
             nettare se c'è un fiore sotto alla nuvola.
         - text: Non lo so.
-          correct: false
           feedback: Grazie al blocco `se c'è un fiore`, l'ape prende il nettare solo
             se c'è un fiore sotto alla nuvola.
       courseD_multi_bee_conditionals1_predict1_2018:
+        questions:
+        - text: La nuvola sta bloccando la visuale. Potrebbe esserci un fiore sotto
+            questa nuvola. Se c'è un fiore, l'ape dovrebbe raccogliere il nettare
+            una volta. Se non c'è alcun fiore, l'ape non dovrebbe fare nulla. Dai
+            un'occhiata al codice presente nell'area di lavoro. Cosa pensi che succederà
+            quando cliccherai su "Esegui"?
         answers:
         - text: 'L''ape andrà fin sotto la nuvola e cercherà in ogni caso di prendere
             una dose di nettare. '
-          correct: false
           feedback: Sbagliato. Grazie al blocco `se c'è un fiore`, l'ape prende il
             nettare solo se c'è un fiore sotto alla nuvola.
         - text: L'ape andrà fin sotto la nuvola e prenderà una dose di nettare solo
@@ -1357,18 +1575,21 @@ it:
           correct: true
           feedback: Corretto!
         - text: 'L''ape andrà fin sotto la nuvola e non farà nulla in ogni caso. '
-          correct: false
           feedback: Sbagliato. Grazie al blocco `se c'è un fiore`, l'ape prende il
             nettare se c'è un fiore sotto alla nuvola.
         - text: Non lo so.
-          correct: false
           feedback: Grazie al blocco `se c'è un fiore`, l'ape prende il nettare solo
             se c'è un fiore sotto alla nuvola.
       courseD_multi_bee_conditionals1_predict1_2018_2019:
+        questions:
+        - text: La nuvola sta bloccando la visuale. Potrebbe esserci un fiore sotto
+            questa nuvola. Se c'è un fiore, l'ape dovrebbe raccogliere il nettare
+            una volta. Se non c'è alcun fiore, l'ape non dovrebbe fare nulla. Dai
+            un'occhiata al codice presente nell'area di lavoro. Cosa pensi che succederà
+            quando cliccherai su "Esegui"?
         answers:
         - text: 'L''ape andrà fin sotto la nuvola e cercherà in ogni caso di prendere
             una dose di nettare. '
-          correct: false
           feedback: Sbagliato. Grazie al blocco `se c'è un fiore`, l'ape prende il
             nettare solo se c'è un fiore sotto alla nuvola.
         - text: L'ape andrà fin sotto la nuvola e prenderà una dose di nettare solo
@@ -1376,314 +1597,350 @@ it:
           correct: true
           feedback: Corretto!
         - text: 'L''ape andrà fin sotto la nuvola e non farà nulla in ogni caso. '
-          correct: false
           feedback: Sbagliato. Grazie al blocco `se c'è un fiore`, l'ape prende il
             nettare se c'è un fiore sotto alla nuvola.
         - text: Non lo so.
-          correct: false
           feedback: Grazie al blocco `se c'è un fiore`, l'ape prende il nettare solo
             se c'è un fiore sotto alla nuvola.
       courseD_multi_bee_conditionals7_predict2:
+        questions:
+        - text: 'Guarda molto attentamente il codice presente nell''area di lavoro.
+            Cosa pensi che succederà quando cliccherai su "Esegui"? Ricorda: sotto
+            ad ogni nuvola ci sarà sempre *un* fiore o *un* favo.'
         answers:
         - text: L'ape prenderà il nettare da ogni fiore e farà il miele in ogni favo.
           correct: true
           feedback: Corretto!
         - text: L'ape cercherà di prendere il nettare sia dai fiori che dai favi.
-          correct: false
           feedback: Sbagliato. Il blocco `se c'è un fiore` permette all'ape di prendere
             il nettare da ogni fiore e fare il miele in ogni favo.
         - text: L'ape cercherà di fare il miele sia sui fiori che sui favi.
-          correct: false
           feedback: Sbagliato. Il blocco `se c'è un fiore` permette all'ape di prendere
             il nettare da ogni fiore e fare il miele in ogni favo.
         - text: Non lo so.
-          correct: false
           feedback: Il blocco `se c'è un fiore` permette all'ape di prendere il nettare
             da ogni fiore e fare il miele in ogni favo.
       courseD_multi_bee_conditionals7_predict2_2018:
+        questions:
+        - text: 'Guarda molto attentamente il codice presente nell''area di lavoro.
+            Cosa pensi che succederà quando cliccherai su "Esegui"? Ricorda: sotto
+            ad ogni nuvola ci sarà sempre *un* fiore o *un* favo.'
         answers:
         - text: L'ape prenderà il nettare da ogni fiore e farà il miele in ogni favo.
           correct: true
           feedback: Corretto!
         - text: L'ape cercherà di prendere il nettare sia dai fiori che dai favi.
-          correct: false
           feedback: Sbagliato. Il blocco `se c'è un fiore` permette all'ape di prendere
             il nettare da ogni fiore e fare il miele in ogni favo.
         - text: L'ape cercherà di fare il miele sia sui fiori che sui favi.
-          correct: false
           feedback: Sbagliato. Il blocco `se c'è un fiore` permette all'ape di prendere
             il nettare da ogni fiore e fare il miele in ogni favo.
         - text: Non lo so.
-          correct: false
           feedback: Il blocco `se c'è un fiore` permette all'ape di prendere il nettare
             da ogni fiore e fare il miele in ogni favo.
       courseD_multi_bee_conditionals7_predict2_2018_2019:
+        questions:
+        - text: 'Guarda molto attentamente il codice presente nell''area di lavoro.
+            Cosa pensi che succederà quando cliccherai su "Esegui"? Ricorda: sotto
+            ad ogni nuvola ci sarà sempre *un* fiore o *un* favo.'
         answers:
         - text: L'ape prenderà il nettare da ogni fiore e farà il miele in ogni favo.
           correct: true
           feedback: Corretto!
         - text: L'ape cercherà di prendere il nettare sia dai fiori che dai favi.
-          correct: false
           feedback: Sbagliato. Il blocco `se c'è un fiore` permette all'ape di prendere
             il nettare da ogni fiore e fare il miele in ogni favo.
         - text: L'ape cercherà di fare il miele sia sui fiori che sui favi.
-          correct: false
           feedback: Sbagliato. Il blocco `se c'è un fiore` permette all'ape di prendere
             il nettare da ogni fiore e fare il miele in ogni favo.
         - text: Non lo so.
-          correct: false
           feedback: Il blocco `se c'è un fiore` permette all'ape di prendere il nettare
             da ogni fiore e fare il miele in ogni favo.
       courseD_multi_bee_nestedLoops2_predict1:
+        questions:
+        - text: Guarda molto attentamente i cicli annidati presenti nell'area di lavoro.
+            Cosa succederà quando cliccherai su "Esegui"?
         answers:
         - text: L'ape andrà avanti e raccoglierà il nettare solo una volta.
-          correct: false
           feedback: Sbagliato.  L'ape ripete tre volte il ciclo che la fa andare avanti
             e raccogliere il nettare, riuscendo così a risolvere l'esercizio.
         - text: L'ape raccoglierà solo 2 dosi di nettare.
-          correct: false
           feedback: Sbagliato.  L'ape ripete tre volte il ciclo che la fa andare avanti
             e raccogliere il nettare, riuscendo così a risolvere l'esercizio.
         - text: L'ape raccoglierà tutto il nettare.
           correct: true
           feedback: Corretto!
         - text: Non lo so.
-          correct: false
           feedback: L'ape ripete tre volte il ciclo che la fa andare avanti e raccogliere
             il nettare, riuscendo così a risolvere l'esercizio.
-        questions:
-        - text: Guarda molto attentamente i cicli annidati presenti nell'area di lavoro.
-            Cosa succederà quando cliccherai su "Esegui"?
       courseD_multi_bee_nestedLoops2_predict1_2018:
+        questions:
+        - text: Guarda molto attentamente i cicli annidati presenti nell'area di lavoro.
+            Cosa succederà quando cliccherai su "Esegui"?
         answers:
         - text: L'ape andrà avanti e raccoglierà il nettare solo una volta.
-          correct: false
           feedback: Sbagliato.  L'ape ripete tre volte il ciclo che la fa andare avanti
             e raccogliere il nettare, riuscendo così a risolvere l'esercizio.
         - text: L'ape raccoglierà solo 2 dosi di nettare.
-          correct: false
           feedback: Sbagliato.  L'ape ripete tre volte il ciclo che la fa andare avanti
             e raccogliere il nettare, riuscendo così a risolvere l'esercizio.
         - text: L'ape raccoglierà tutto il nettare.
           correct: true
           feedback: Corretto!
         - text: Non lo so.
-          correct: false
           feedback: L'ape ripete tre volte il ciclo che la fa andare avanti e raccogliere
             il nettare, riuscendo così a risolvere l'esercizio.
-        questions:
-        - text: Guarda molto attentamente i cicli annidati presenti nell'area di lavoro.
-            Cosa succederà quando cliccherai su "Esegui"?
       courseD_multi_bee_nestedLoops2_predict1_2018_2019:
+        questions:
+        - text: Guarda molto attentamente i cicli annidati presenti nell'area di lavoro.
+            Cosa succederà quando cliccherai su "Esegui"?
         answers:
         - text: L'ape andrà avanti e raccoglierà il nettare solo una volta.
-          correct: false
           feedback: Sbagliato.  L'ape ripete tre volte il ciclo che la fa andare avanti
             e raccogliere il nettare, riuscendo così a risolvere l'esercizio.
         - text: L'ape raccoglierà solo 2 dosi di nettare.
-          correct: false
           feedback: Sbagliato.  L'ape ripete tre volte il ciclo che la fa andare avanti
             e raccogliere il nettare, riuscendo così a risolvere l'esercizio.
         - text: L'ape raccoglierà tutto il nettare.
           correct: true
           feedback: Corretto!
         - text: Non lo so.
-          correct: false
           feedback: L'ape ripete tre volte il ciclo che la fa andare avanti e raccogliere
             il nettare, riuscendo così a risolvere l'esercizio.
-        questions:
-        - text: Guarda molto attentamente i cicli annidati presenti nell'area di lavoro.
-            Cosa succederà quando cliccherai su "Esegui"?
       courseD_multi_bee_nestedLoops9_predict2:
-        answers:
-        - 
-        - correct: true
-          feedback: Corretto!
-        - 
-        - text: Non lo so.
-          correct: false
         questions:
         - text: Guarda molto attentamente il codice presente nell'area di lavoro.
             Quanto miele verrà prodotto quando cliccherai su "Esegui"?
+        answers:
+        - text: '4'
+          feedback: Sbagliato. L'ape raccoglie 2 dosi di nettare nel primo ciclo spostandosi
+            in avanti, poi altre 2 dosi nel secondo ciclo andando verso il basso.
+            Tutto ciò è racchiuso in un altro ciclo che si ripete per due volte. 4
+            x 2 = 8!
+        - text: '8'
+          correct: true
+          feedback: Corretto!
+        - text: '12'
+          feedback: Sbagliato. L'ape raccoglie 2 dosi di nettare nel primo ciclo spostandosi
+            in avanti, poi altre 2 dosi nel secondo ciclo andando verso il basso.
+            Tutto ciò è racchiuso in un altro ciclo che si ripete per due volte. 4
+            x 2 = 8!
+        - text: Non lo so.
+          feedback: L'ape raccoglie 2 dosi di nettare nel primo ciclo spostandosi
+            in avanti, poi altre 2 dosi nel secondo ciclo andando verso il basso.
+            Tutto ciò è racchiuso in un altro ciclo che si ripete per due volte. 4
+            x 2 = 8!
       courseD_multi_bee_nestedLoops9_predict2_2018:
-        answers:
-        - 
-        - correct: true
-          feedback: Corretto!
-        - 
-        - text: Non lo so.
-          correct: false
         questions:
         - text: Guarda molto attentamente il codice presente nell'area di lavoro.
             Quanto miele verrà prodotto quando cliccherai su "Esegui"?
+        answers:
+        - text: '4'
+          feedback: Sbagliato. L'ape raccoglie 2 dosi di nettare nel primo ciclo spostandosi
+            in avanti, poi altre 2 dosi nel secondo ciclo andando verso il basso.
+            Tutto ciò è racchiuso in un altro ciclo che si ripete per due volte. 4
+            x 2 = 8!
+        - text: '8'
+          correct: true
+          feedback: Corretto!
+        - text: '12'
+          feedback: Sbagliato. L'ape raccoglie 2 dosi di nettare nel primo ciclo spostandosi
+            in avanti, poi altre 2 dosi nel secondo ciclo andando verso il basso.
+            Tutto ciò è racchiuso in un altro ciclo che si ripete per due volte. 4
+            x 2 = 8!
+        - text: Non lo so.
+          feedback: L'ape raccoglie 2 dosi di nettare nel primo ciclo spostandosi
+            in avanti, poi altre 2 dosi nel secondo ciclo andando verso il basso.
+            Tutto ciò è racchiuso in un altro ciclo che si ripete per due volte. 4
+            x 2 = 8!
       courseD_multi_bee_nestedLoops9_predict2_2018_2019:
-        answers:
-        - 
-        - correct: true
-          feedback: Corretto!
-        - 
-        - text: Non lo so.
-          correct: false
         questions:
         - text: Guarda molto attentamente il codice presente nell'area di lavoro.
             Quanto miele verrà prodotto quando cliccherai su "Esegui"?
+        answers:
+        - text: '4'
+          feedback: Sbagliato. L'ape raccoglie 2 dosi di nettare nel primo ciclo spostandosi
+            in avanti, poi altre 2 dosi nel secondo ciclo andando verso il basso.
+            Tutto ciò è racchiuso in un altro ciclo che si ripete per due volte. 4
+            x 2 = 8!
+        - text: '8'
+          correct: true
+          feedback: Corretto!
+        - text: '12'
+          feedback: Sbagliato. L'ape raccoglie 2 dosi di nettare nel primo ciclo spostandosi
+            in avanti, poi altre 2 dosi nel secondo ciclo andando verso il basso.
+            Tutto ciò è racchiuso in un altro ciclo che si ripete per due volte. 4
+            x 2 = 8!
+        - text: Non lo so.
+          feedback: L'ape raccoglie 2 dosi di nettare nel primo ciclo spostandosi
+            in avanti, poi altre 2 dosi nel secondo ciclo andando verso il basso.
+            Tutto ciò è racchiuso in un altro ciclo che si ripete per due volte. 4
+            x 2 = 8!
       courseD_multi_collector_debugging10_predict1:
+        questions:
+        - text: 'Guarda molto attentamente il codice presente nell''area di lavoro.
+            Perché, quando cliccherai su "Esegui", Laura non riuscirà a raccogliere
+            tutti i diamanti? Attenzione: Questa è una domanda difficile, leggi bene
+            tutte le opzioni prima di rispondere!'
         answers:
         - text: Laura girerà dalla parte sbagliata mentre cercherà di realizzare il
             percorso a quadrato.
-          correct: false
           feedback: 'Sbagliato. La tua risposta è incompleta: il ciclo non sarebbe
             comunque ripetuto un numero sufficiente di volte per consentire a Laura
             di raccogliere tutti i diamanti.'
         - text: 'Il ciclo non sarà ripetuto un numero sufficiente di volte per consentire
             a Laura di raccogliere tutti i diamanti. '
-          correct: false
         - text: Laura girerà dalla parte sbagliata mentre cercherà di realizzare il
             percorso a quadrato *inoltre* il ciclo non sarebbe ripetuto un numero
             sufficiente di volte per consentire a Laura di raccogliere tutti i diamanti.
           correct: true
           feedback: Corretto!
         - text: Non lo so.
-          correct: false
           feedback: Laura girerà dalla parte sbagliata mentre cercherà di realizzare
             il percorso a quadrato *inoltre* il ciclo non sarebbe ripetuto un numero
             sufficiente di volte per consentire a Laura di raccogliere tutti i diamanti.
       courseD_multi_farmer_condLoops9_predict1:
+        questions:
+        - text: Dai una bella occhiata al codice presente nell'area di lavoro. Cosa
+            succederà quando cliccherai su "Esegui"?
         answers:
         - text: La contadina raccoglierà tutte le colture.
-          correct: false
           feedback: Sbagliato. Non c'è alcuna istruzione per raccogliere la zucca.
         - text: La contadina non riuscirà a raccogliere nulla seguendo il percorso
             programmato.
-          correct: false
+          feedback: Sbagliato. Il programma fa in modo che la contadina esegua ripetutamente
+            un percorso a scalinata e raccolga tutte le pannocchie e le lattughe che
+            incontra. Ma alla fine non raccoglie la zucca.
         - text: La contadina raccoglierà tutte le colture, eccetto la zucca.
           correct: true
           feedback: Corretto!
         - text: Non lo so.
-          correct: false
-        questions:
-        - text: Dai una bella occhiata al codice presente nell'area di lavoro. Cosa
-            succederà quando cliccherai su "Esegui"?
+          feedback: Il programma fa in modo che la contadina esegua ripetutamente
+            un percorso a scalinata e raccolga tutte le pannocchie e le lattughe che
+            incontra. Ma alla fine non raccoglie la zucca.
       courseD_multi_farmer_condLoops9_predict1_2018:
+        questions:
+        - text: Dai una bella occhiata al codice presente nell'area di lavoro. Cosa
+            succederà quando cliccherai su "Esegui"?
         answers:
         - text: La contadina raccoglierà tutte le colture.
-          correct: false
           feedback: Sbagliato. Non c'è alcuna istruzione per raccogliere la zucca.
         - text: La contadina non riuscirà a raccogliere nulla seguendo il percorso
             programmato.
-          correct: false
+          feedback: Sbagliato. Il programma fa in modo che la contadina esegua ripetutamente
+            un percorso a scalinata e raccolga tutte le pannocchie e le lattughe che
+            incontra. Ma alla fine non raccoglie la zucca.
         - text: La contadina raccoglierà tutte le colture, eccetto la zucca.
           correct: true
           feedback: Corretto!
         - text: Non lo so.
-          correct: false
-        questions:
-        - text: Dai una bella occhiata al codice presente nell'area di lavoro. Cosa
-            succederà quando cliccherai su "Esegui"?
+          feedback: Il programma fa in modo che la contadina esegua ripetutamente
+            un percorso a scalinata e raccolga tutte le pannocchie e le lattughe che
+            incontra. Ma alla fine non raccoglie la zucca.
       courseD_multi_farmer_condLoops9_predict1_2018_2019:
+        questions:
+        - text: Dai una bella occhiata al codice presente nell'area di lavoro. Cosa
+            succederà quando cliccherai su "Esegui"?
         answers:
         - text: La contadina raccoglierà tutte le colture.
-          correct: false
           feedback: Sbagliato. Non c'è alcuna istruzione per raccogliere la zucca.
         - text: La contadina non riuscirà a raccogliere nulla seguendo il percorso
             programmato.
-          correct: false
+          feedback: Sbagliato. Il programma fa in modo che la contadina esegua ripetutamente
+            un percorso a scalinata e raccolga tutte le pannocchie e le lattughe che
+            incontra. Ma alla fine non raccoglie la zucca.
         - text: La contadina raccoglierà tutte le colture, eccetto la zucca.
           correct: true
           feedback: Corretto!
         - text: Non lo so.
-          correct: false
-        questions:
-        - text: Dai una bella occhiata al codice presente nell'area di lavoro. Cosa
-            succederà quando cliccherai su "Esegui"?
+          feedback: Il programma fa in modo che la contadina esegua ripetutamente
+            un percorso a scalinata e raccolga tutte le pannocchie e le lattughe che
+            incontra. Ma alla fine non raccoglie la zucca.
       courseD_multi_farmer_ramp13:
+        questions:
+        - {}
         answers:
         - text: La contadina avanzerà fino alla fine del percorso e raccoglierà la
             zucca.
-          correct: false
+          feedback: Sbagliato. Il blocco `prendi zucca` è all'interno del ciclo, quindi
+            la contadina cerca di prendere le zucche ogni volta che esegue il ciclo,
+            invece di farlo solo alla fine del percorso.
         - text: La contadina cercherà di prendere le zucche in ogni casella vuota
             e non lo farà nell'ultima casella in cui c'è effettivamente la zucca.
           correct: true
           feedback: Corretto!
         - text: La contadina andrà avanti di quattro caselle e poi cercherà di prendere
             una zucca.
-          correct: false
+          feedback: Sbagliato. Il blocco `prendi zucca` è all'interno del ciclo, quindi
+            la contadina cerca di prendere le zucche ogni volta che esegue il ciclo,
+            invece di farlo solo alla fine del percorso.
         - text: Non lo so.
-          correct: false
           feedback: Il blocco `prendi zucca` è all'interno del ciclo, quindi la contadina
             cerca di prendere le zucche ogni volta che esegue il ciclo, invece di
             farlo solo alla fine del percorso.
       courseD_multi_farmer_while10_predict2:
+        questions:
+        - text: Dai una bella occhiata al codice riportato di seguito. Cosa rimarrà
+            dopo l'esecuzione di questo programma?
         answers:
         - text: Nulla. Questo programma lascerà il terreno tutto livellato.
-          correct: false
           feedback: Sbagliato. Non ci sono blocchi di codice per rimuovere i mucchi
             di terra.
         - text: Questo programma non livellerà i mucchi.
           correct: true
           feedback: Corretto!
         - text: Questo programma non livellerà le buche.
-          correct: false
           feedback: Sbagliato. Il ciclo `mentre` può essere eseguito tutte le volte
             che serve, ma non ci sono blocchi di codice per rimuovere i mucchi di
             terra.
         - text: Non lo so.
-          correct: false
           feedback: Il ciclo `mentre` può essere eseguito tutte le volte che serve,
             ma non ci sono blocchi di codice per rimuovere i mucchi di terra.
-        questions:
-        - text: Dai una bella occhiata al codice riportato di seguito. Cosa rimarrà
-            dopo l'esecuzione di questo programma?
       courseD_multi_farmer_while10_predict2_2018:
+        questions:
+        - text: Dai una bella occhiata al codice riportato di seguito. Cosa rimarrà
+            dopo l'esecuzione di questo programma?
         answers:
         - text: Nulla. Questo programma lascerà il terreno tutto livellato.
-          correct: false
           feedback: Sbagliato. Non ci sono blocchi di codice per rimuovere i mucchi
             di terra.
         - text: Questo programma non livellerà i mucchi.
           correct: true
           feedback: Corretto!
         - text: Questo programma non livellerà le buche.
-          correct: false
           feedback: Sbagliato. Il ciclo `mentre` può essere eseguito tutte le volte
             che serve, ma non ci sono blocchi di codice per rimuovere i mucchi di
             terra.
         - text: Non lo so.
-          correct: false
           feedback: Il ciclo `mentre` può essere eseguito tutte le volte che serve,
             ma non ci sono blocchi di codice per rimuovere i mucchi di terra.
-        questions:
-        - text: Dai una bella occhiata al codice riportato di seguito. Cosa rimarrà
-            dopo l'esecuzione di questo programma?
       courseD_multi_farmer_while10_predict2_2018_2019:
+        questions:
+        - text: Dai una bella occhiata al codice riportato di seguito. Cosa rimarrà
+            dopo l'esecuzione di questo programma?
         answers:
         - text: Nulla. Questo programma lascerà il terreno tutto livellato.
-          correct: false
           feedback: Sbagliato. Non ci sono blocchi di codice per rimuovere i mucchi
             di terra.
         - text: Questo programma non livellerà i mucchi.
           correct: true
           feedback: Corretto!
         - text: Questo programma non livellerà le buche.
-          correct: false
           feedback: Sbagliato. Il ciclo `mentre` può essere eseguito tutte le volte
             che serve, ma non ci sono blocchi di codice per rimuovere i mucchi di
             terra.
         - text: Non lo so.
-          correct: false
           feedback: Il ciclo `mentre` può essere eseguito tutte le volte che serve,
             ma non ci sono blocchi di codice per rimuovere i mucchi di terra.
-        questions:
-        - text: Dai una bella occhiata al codice riportato di seguito. Cosa rimarrà
-            dopo l'esecuzione di questo programma?
       courseD_multi_farmer_while4_predict1:
+        questions:
+        - text: Guarda molto attentamente il codice presente nell'area di lavoro.
+            Cosa succederà quando cliccherai su "Esegui"?
         answers:
         - text: Non succederà nulla.
-          correct: false
           feedback: Sbagliato. La contadina rimuove la terra mentre ce n'è, smettendo
             appena il mucchio è finito
         - text: La contadina non smetterà più di rimuovere palate di terra.
-          correct: false
           feedback: Sbagliato. La contadina rimuove la terra mentre ce n'è, smettendo
             appena il mucchio è finito
         - text: La contadina rimuoverà la terra mentre ce ne sarà, smettendo appena
@@ -1691,20 +1948,17 @@ it:
           correct: true
           feedback: Corretto!
         - text: Non lo so.
-          correct: false
           feedback: La contadina rimuove la terra mentre ce n'è, smettendo appena
             il mucchio è finito
-        questions:
-        - text: Guarda molto attentamente il codice presente nell'area di lavoro.
-            Cosa succederà quando cliccherai su "Esegui"?
       courseD_multi_farmer_while4_predict1_2018:
+        questions:
+        - text: Guarda molto attentamente il codice presente nell'area di lavoro.
+            Cosa succederà quando cliccherai su "Esegui"?
         answers:
         - text: Non succederà nulla.
-          correct: false
           feedback: Sbagliato. La contadina rimuove la terra mentre ce n'è, smettendo
             appena il mucchio è finito
         - text: La contadina non smetterà più di rimuovere palate di terra.
-          correct: false
           feedback: Sbagliato. La contadina rimuove la terra mentre ce n'è, smettendo
             appena il mucchio è finito
         - text: La contadina rimuoverà la terra mentre ce ne sarà, smettendo appena
@@ -1712,20 +1966,17 @@ it:
           correct: true
           feedback: Corretto!
         - text: Non lo so.
-          correct: false
           feedback: La contadina rimuove la terra mentre ce n'è, smettendo appena
             il mucchio è finito
-        questions:
-        - text: Guarda molto attentamente il codice presente nell'area di lavoro.
-            Cosa succederà quando cliccherai su "Esegui"?
       courseD_multi_farmer_while4_predict1_2018_2019:
+        questions:
+        - text: Guarda molto attentamente il codice presente nell'area di lavoro.
+            Cosa succederà quando cliccherai su "Esegui"?
         answers:
         - text: Non succederà nulla.
-          correct: false
           feedback: Sbagliato. La contadina rimuove la terra mentre ce n'è, smettendo
             appena il mucchio è finito
         - text: La contadina non smetterà più di rimuovere palate di terra.
-          correct: false
           feedback: Sbagliato. La contadina rimuove la terra mentre ce n'è, smettendo
             appena il mucchio è finito
         - text: La contadina rimuoverà la terra mentre ce ne sarà, smettendo appena
@@ -1733,239 +1984,201 @@ it:
           correct: true
           feedback: Corretto!
         - text: Non lo so.
-          correct: false
           feedback: La contadina rimuove la terra mentre ce n'è, smettendo appena
             il mucchio è finito
+      courseD_multi_maze_until10_predict2:
         questions:
         - text: Guarda molto attentamente il codice presente nell'area di lavoro.
             Cosa succederà quando cliccherai su "Esegui"?
-      courseD_multi_maze_until10_predict2:
         answers:
         - text: Lo zombie girerà immediatamente a destra e poco dopo si bloccherà.
           correct: true
           feedback: Corretto!
         - text: Lo zombie raggiungerà il girasole.
-          correct: false
+          feedback: Sbagliato. In questo programma, si cerca una possibile svolta
+            a destra prima di controllare se è possibile andare avanti. Per questo
+            motivo il programma fallisce.
         - text: Lo zombie prenderà il percorso a destra e girerà in tondo per sempre.
-          correct: false
+          feedback: Sbagliato. Lo zombie cerca solo una svolta a destra o un percorso
+            in avanti. Non prova mai a girare a sinistra, quindi si blocca quasi immediatamente.
         - text: Non lo so.
-          correct: false
           feedback: In questo programma, si cerca una possibile svolta a destra prima
             di controllare se è possibile andare avanti. Per questo motivo il programma
             fallisce.
-        questions:
-        - text: Guarda molto attentamente il codice presente nell'area di lavoro.
-            Cosa succederà quando cliccherai su "Esegui"?
       courseD_multi_maze_until10_predict2_2018:
+        questions:
+        - text: Guarda molto attentamente il codice presente nell'area di lavoro.
+            Cosa succederà quando cliccherai su "Esegui"?
         answers:
         - text: Lo zombie oltrepasserà il bivio corretto e finirà per andare avanti
             e indietro per sempre.
           correct: true
           feedback: Corretto!
         - text: Lo zombie raggiungerà il girasole.
-          correct: false
           feedback: Errato. Lo zombie oltrepasserà il bivio corretto e finirà per
             andare avanti e indietro per sempre.
         - text: Lo zombie prenderà il percorso a destra e girerà in tondo per sempre.
-          correct: false
           feedback: Errato. Lo zombie oltrepasserà il bivio corretto e finirà per
             andare avanti e indietro per sempre.
         - text: Non lo so.
-          correct: false
           feedback: In questo programma, lo zombie oltrepasserà il bivio corretto
             e finirà per andare avanti e indietro per sempre.
-        questions:
-        - text: Guarda molto attentamente il codice presente nell'area di lavoro.
-            Cosa succederà quando cliccherai su "Esegui"?
       courseD_multi_maze_until10_predict2_2018_2019:
+        questions:
+        - text: Guarda molto attentamente il codice presente nell'area di lavoro.
+            Cosa succederà quando cliccherai su "Esegui"?
         answers:
         - text: Lo zombie oltrepasserà il bivio corretto e finirà per andare avanti
             e indietro per sempre.
           correct: true
           feedback: Corretto!
         - text: Lo zombie raggiungerà il girasole.
-          correct: false
           feedback: Errato. Lo zombie oltrepasserà il bivio corretto e finirà per
             andare avanti e indietro per sempre.
         - text: Lo zombie prenderà il percorso a destra e girerà in tondo per sempre.
-          correct: false
           feedback: Errato. Lo zombie oltrepasserà il bivio corretto e finirà per
             andare avanti e indietro per sempre.
         - text: Non lo so.
-          correct: false
           feedback: In questo programma, lo zombie oltrepasserà il bivio corretto
             e finirà per andare avanti e indietro per sempre.
-        questions:
-        - text: Guarda molto attentamente il codice presente nell'area di lavoro.
-            Cosa succederà quando cliccherai su "Esegui"?
       courseD_multi_maze_until2_predict1:
+        questions:
+        - text: Dai una bella occhiata al codice presente nell'area di lavoro. Cosa
+            pensi che succederà quando cliccherai su "Esegui"?
         answers:
         - text: L'uccellino non si muoverà.
-          correct: false
+          feedback: Sbagliato. Il programma fa andare l'uccellino avanti mentre c'è
+            strada in avanti, poi gira a sinistra. Continua a fare ciò fino a quando
+            non raggiunge il maiale!
         - text: L'uccellino raggiungerà il maialino.
           correct: true
           feedback: Corretto!
         - text: L'uccellino andrà avanti e sbatterà contro alla dinamite (TNT).
-          correct: false
+          feedback: Sbagliato. Il programma fa andare l'uccellino avanti mentre c'è
+            strada in avanti, poi gira a sinistra. Continua a fare ciò fino a quando
+            non raggiunge il maiale!
         - text: Non lo so.
-          correct: false
           feedback: Il programma fa andare l'uccellino avanti mentre c'è strada in
             avanti, poi gira a sinistra. Continua a fare ciò fino a quando non raggiunge
             il maialino!
-        questions:
-        - text: Dai una bella occhiata al codice presente nell'area di lavoro. Cosa
-            pensi che succederà quando cliccherai su "Esegui"?
       courseD_multi_maze_until2_predict1_2018:
+        questions:
+        - text: Dai una bella occhiata al codice presente nell'area di lavoro. Cosa
+            pensi che succederà quando cliccherai su "Esegui"?
         answers:
         - text: L'uccellino non si muoverà.
-          correct: false
+          feedback: Sbagliato. Il programma fa andare l'uccellino avanti mentre c'è
+            strada in avanti, poi gira a sinistra. Continua a fare ciò fino a quando
+            non raggiunge il maiale!
         - text: L'uccellino raggiungerà il maialino.
           correct: true
           feedback: Corretto!
         - text: L'uccellino andrà avanti e sbatterà contro alla dinamite (TNT).
-          correct: false
+          feedback: Sbagliato. Il programma fa andare l'uccellino avanti mentre c'è
+            strada in avanti, poi gira a sinistra. Continua a fare ciò fino a quando
+            non raggiunge il maiale!
         - text: Non lo so.
-          correct: false
           feedback: Il programma fa andare l'uccellino avanti mentre c'è strada in
             avanti, poi gira a sinistra. Continua a fare ciò fino a quando non raggiunge
             il maialino!
-        questions:
-        - text: Dai una bella occhiata al codice presente nell'area di lavoro. Cosa
-            pensi che succederà quando cliccherai su "Esegui"?
       courseD_multi_maze_until2_predict1_2018_2019:
+        questions:
+        - text: Dai una bella occhiata al codice presente nell'area di lavoro. Cosa
+            pensi che succederà quando cliccherai su "Esegui"?
         answers:
         - text: L'uccellino non si muoverà.
-          correct: false
+          feedback: Sbagliato. Il programma fa andare l'uccellino avanti mentre c'è
+            strada in avanti, poi gira a sinistra. Continua a fare ciò fino a quando
+            non raggiunge il maiale!
         - text: L'uccellino raggiungerà il maialino.
           correct: true
           feedback: Corretto!
         - text: L'uccellino andrà avanti e sbatterà contro alla dinamite (TNT).
-          correct: false
+          feedback: Sbagliato. Il programma fa andare l'uccellino avanti mentre c'è
+            strada in avanti, poi gira a sinistra. Continua a fare ciò fino a quando
+            non raggiunge il maiale!
         - text: Non lo so.
-          correct: false
           feedback: Il programma fa andare l'uccellino avanti mentre c'è strada in
             avanti, poi gira a sinistra. Continua a fare ciò fino a quando non raggiunge
             il maialino!
-        questions:
-        - text: Dai una bella occhiata al codice presente nell'area di lavoro. Cosa
-            pensi che succederà quando cliccherai su "Esegui"?
       courseD_multi_scrat_predict1:
+        questions:
+        - {}
         answers:
-        - 
+        - {}
         - correct: true
           feedback: Corretto!
-        - 
+        - {}
         - text: Non lo so.
-          correct: false
-      courseE_multi_artist_predict1:
-        answers:
-        - correct: true
-          feedback: Corretto!
-        - 
-        - 
-        - text: Non lo so.
-          correct: false
+          feedback: Visto che il blocco `vai avanti` è inserito in un blocco `ripeti
+            ... volte`, Scrat si muove avanti per tre volte. Poi si gira e va avanti
+            altre tre volte, arrivando quindi fino alla ghianda!
       courseE_multi_bee_functions_predict1:
+        questions:
+        - text: Qui trovi lo stesso programma del precedente esercizio, ma la quantità
+            di miele da produrre in questo caso è diversa. Cosa accadrà quando cliccherai
+            su "Esegui"?
         answers:
         - correct: true
-        - 
-        - 
+        - {}
+        - {}
         - text: Non lo so.
-          correct: false
       courseE_multi_farmer_functions11_predict:
+        questions:
+        - text: Guarda le funzioni definite qui sotto.  Cosa raccoglierà la contadina?
         answers:
         - text: La contadina raccoglierà due zucche.
-          correct: false
           feedback: Sbagliato. Il programma non richiama la funzione "controlla e
             prendi" fino a quando la contadina non raggiunge la pannocchia.
         - text: La contadina raccoglierà tutte le zucche.
-          correct: false
           feedback: Sbagliato. Il programma non richiama la funzione "controlla e
             prendi" fino a quando la contadina non raggiunge la pannocchia.
         - text: La contadina raccoglierà le lattughe.
-          correct: false
           feedback: Sbagliato. La contadina farà un solo giro e terminerà alla pannocchia.
         - text: La contadina raccoglierà le pannocchie.
           correct: true
           feedback: Corretto!
-        questions:
-        - text: Guarda le funzioni definite qui sotto.  Cosa raccoglierà la contadina?
       courseE_multi_farmer_functions11_predict_2018:
+        questions:
+        - text: Guarda le funzioni definite qui sotto.  Cosa raccoglierà la contadina?
         answers:
         - text: La contadina raccoglierà due zucche.
-          correct: false
           feedback: Sbagliato. La contadina va avanti fino alla fine del percorso,
             poi si gira e torna indietro fino a quando raccoglie la lattuga.
         - text: La contadina raccoglierà tutte le zucche.
-          correct: false
           feedback: Sbagliato. La contadina va avanti fino alla fine del percorso,
             poi si gira e torna indietro fino a quando raccoglie la lattuga.
         - text: La contadina raccoglierà le lattughe.
           correct: true
           feedback: Corretto!
         - text: La contadina raccoglierà le pannocchie.
-          correct: false
           feedback: Sbagliato. La contadina va avanti fino alla fine del percorso,
             poi si gira e torna indietro fino a quando raccoglie la lattuga.
-        questions:
-        - text: Guarda le funzioni definite qui sotto.  Cosa raccoglierà la contadina?
       courseE_multi_farmer_functions11_predict_2018_2019:
+        questions:
+        - text: Guarda le funzioni definite qui sotto.  Cosa raccoglierà la contadina?
         answers:
         - text: La contadina raccoglierà due zucche.
-          correct: false
           feedback: Sbagliato. La contadina va avanti fino alla fine del percorso,
             poi si gira e torna indietro fino a quando raccoglie la lattuga.
         - text: La contadina raccoglierà tutte le zucche.
-          correct: false
           feedback: Sbagliato. La contadina va avanti fino alla fine del percorso,
             poi si gira e torna indietro fino a quando raccoglie la lattuga.
         - text: La contadina raccoglierà le lattughe.
           correct: true
           feedback: Corretto!
         - text: La contadina raccoglierà le pannocchie.
-          correct: false
           feedback: Sbagliato. La contadina va avanti fino alla fine del percorso,
             poi si gira e torna indietro fino a quando raccoglie la lattuga.
-        questions:
-        - text: Guarda le funzioni definite qui sotto.  Cosa raccoglierà la contadina?
-      courseE_multi_farmer_predict1:
-        answers:
-        - 
-        - 
-        - correct: true
-          feedback: Corretto!
-        - text: Non lo so
-          correct: false
-        questions:
-        - text: 'Guarda molto attentamente il codice presente nell''area di lavoro.
-            Cosa pensi che succederà quando cliccherai su "Esegui"? '
-      courseE_multi_farmer_predict2:
-        answers:
-        - 
-        - correct: true
-          feedback: Corretto!
-        - 
-        - text: Non lo so.
-          correct: false
-      courseE_multi_maze_predict1:
-        answers:
-        - text: Niente. L'uccellino non si muoverà.
-          correct: false
-        - correct: true
-          feedback: Corretto!
-        - 
-        - text: Non lo so.
-          correct: false
       courseE_prediction_artistFunction1:
+        questions:
+        - text: Cosa succederà quando cliccherai su "Esegui"?
         answers:
         - text: Nulla. La funzione non viene richiamata nel programma.
-          correct: false
           feedback: Sbagliato. La funzione è richiamata due volte nel programma.
         - text: L'artista disegnerà un solo quadrato.
-          correct: false
           feedback: Sbagliato. La funzione è richiamata due volte nel programma.
         - text: L'artista disegnerà due quadrati sovrapposti.
-          correct: false
           feedback: Sbagliato. La lunghezza di ogni lato del quadrato è di soli 100
             pixel, ma l'artista salta di 175 pixel tra una esecuzione di funzione
             e la successiva.
@@ -1973,18 +2186,15 @@ it:
           correct: true
           feedback: Corretto! La funzione è richiamata due volte nel programma, con
             un salto in mezzo.
-        questions:
-        - text: Cosa succederà quando cliccherai su "Esegui"?
       courseE_prediction_artistFunction1_2018:
+        questions:
+        - text: Cosa succederà quando cliccherai su "Esegui"?
         answers:
         - text: Nulla. La funzione non viene richiamata nel programma.
-          correct: false
           feedback: Sbagliato. La funzione è richiamata due volte nel programma.
         - text: L'artista disegnerà un solo quadrato.
-          correct: false
           feedback: Sbagliato. La funzione è richiamata due volte nel programma.
         - text: L'artista disegnerà due quadrati sovrapposti.
-          correct: false
           feedback: Sbagliato. La lunghezza di ogni lato del quadrato è di soli 100
             pixel, ma l'artista salta di 175 pixel tra una esecuzione di funzione
             e la successiva.
@@ -1992,18 +2202,15 @@ it:
           correct: true
           feedback: Corretto! La funzione è richiamata due volte nel programma, con
             un salto in mezzo.
-        questions:
-        - text: Cosa succederà quando cliccherai su "Esegui"?
       courseE_prediction_artistFunction1_2018_2019:
+        questions:
+        - text: Cosa succederà quando cliccherai su "Esegui"?
         answers:
         - text: Nulla. La funzione non viene richiamata nel programma.
-          correct: false
           feedback: Sbagliato. La funzione è richiamata due volte nel programma.
         - text: L'artista disegnerà un solo quadrato.
-          correct: false
           feedback: Sbagliato. La funzione è richiamata due volte nel programma.
         - text: L'artista disegnerà due quadrati sovrapposti.
-          correct: false
           feedback: Sbagliato. La lunghezza di ogni lato del quadrato è di soli 100
             pixel, ma l'artista salta di 175 pixel tra una esecuzione di funzione
             e la successiva.
@@ -2011,56 +2218,116 @@ it:
           correct: true
           feedback: Corretto! La funzione è richiamata due volte nel programma, con
             un salto in mezzo.
-        questions:
-        - text: Cosa succederà quando cliccherai su "Esegui"?
       courseF_bee_variables_8a_2018:
+        questions:
+        - text: Guarda il programma qui sotto. Alla fine, quante dosi di nettare avrà
+            raccolto l'ape?
         answers:
         - text: L'ape non raccoglierà alcuna dose di nettare, perché il nome della
             variabile non è "raccogliere".
-          correct: false
           feedback: Sbagliato. Il nome della variabile non influisce in alcun modo
             sul suo valore e sul suo utilizzo.
         - text: L'ape raccoglierà solo 2 dosi di nettare.
           correct: true
           feedback: Corretto!
         - text: L'ape raccoglierà tutto il nettare.
-          correct: false
           feedback: Sbagliato. La variabile viene impostata nuovamente a 0 prima delle
             ultime due chiamate della funzione.
         - text: Non lo so.
-          correct: false
-        questions:
-        - text: Guarda il programma qui sotto. Alla fine, quante dosi di nettare avrà
-            raccolto l'ape?
+          feedback: La variabile viene impostata nuovamente a 0 prima delle ultime
+            due chiamate della funzione, in cui viene aggiunto 1 ogni volta. Quindi
+            poi l'ape raccoglie 2 dosi di nettare.
       courseF_bee_variables_8a_2018_2019:
+        questions:
+        - text: Guarda il programma qui sotto. Alla fine, quante dosi di nettare avrà
+            raccolto l'ape?
         answers:
         - text: L'ape non raccoglierà alcuna dose di nettare, perché il nome della
             variabile non è "raccogliere".
-          correct: false
           feedback: Sbagliato. Il nome della variabile non influisce in alcun modo
             sul suo valore e sul suo utilizzo.
         - text: L'ape raccoglierà solo 2 dosi di nettare.
           correct: true
           feedback: Corretto!
         - text: L'ape raccoglierà tutto il nettare.
-          correct: false
           feedback: Sbagliato. La variabile viene impostata nuovamente a 0 prima delle
             ultime due chiamate della funzione.
         - text: Non lo so.
-          correct: false
-        questions:
-        - text: Guarda il programma qui sotto. Alla fine, quante dosi di nettare avrà
-            raccolto l'ape?
+          feedback: La variabile viene impostata nuovamente a 0 prima delle ultime
+            due chiamate della funzione, in cui viene aggiunto 1 ogni volta. Quindi
+            poi l'ape raccoglie 2 dosi di nettare.
+      courseF_markdown_algorithms_end:
+        markdown: "# **Hai appena imparato cosa sono gli \"algoritmi\"!**  \n\n\n\n###
+          **Un algoritmo è semplicemente una sequenza di passi necessari per svolgere
+          una certa attività**. La cosa divertente degli algoritmi, è che si può decidere
+          cosa far accadere, passo dopo passo.\n\n### Un algoritmo scritto per una
+          macchina si chiama **programma**.  \n\n---\n\n## **Termini da conoscere**\n\n*
+          ### **Algoritmo** - Una sequenza di passi per svolgere un'attività\n\n*
+          ### **Programma** - Un algoritmo tradotto in un linguaggio comprensibile
+          ed eseguibile da una macchina\n"
+      courseF_markdown_algorithms_intro:
+        markdown: |
+          # **In questa lezione...**
+
+          ### Hai mai cercato di dire a qualcuno esattamente cosa fare? Ti ha sempre ascoltato?
+
+          ### Oggi, dirai ad una macchina cosa fare - passo dopo passo - e questa ti ascolterà!
+
+          ---
+
+          ## **Blocchi da conoscere**
+
+          ![](https://images.code.org/b2376dc67948e29247931dec5e9fef8f-image-1524678585868.png)
+
+          ![](https://images.code.org/bd2de01f2c3b86109329b10eb544a6e6-image-1524678600994.png)
+
+          ![](https://images.code.org/db76d28bb3dbabdb78edb2cf54c6cb11-image-1524678618646.png)
+      courseF_markdown_debugging_end:
+        markdown: |
+          # **Hai appena imparato cos'è il "debugging"!**
+
+          ### **Un "bug" è qualcosa che non funziona.** È un errore in un programma. Quando cerchi e correggi questi errori, stai eseguendo il "debugging".
+
+          ### Devi allenare la **preseveranza**, un sinonimo di "non arrendersi", per trovare e correggere tutti gli errori.
+
+          ---
+
+          ## **Termini da conoscere**
+
+          * ### **Bug** - Un errore che non fa funzionare un programma come vorresti
+
+          * ### **Debugging** - Trovare e correggere gli errori in algoritmi o programmi
+
+          * ### **Perseveranza** - Non arrendersi!
+      courseF_markdown_debugging_intro:
+        markdown: |
+          # In questa lezione...
+
+          ### A cosa pensi quando pensi ai "bug"?
+
+          ### In inglese i "bug" sono gli "insetti" e a volte sono fastidiosi. In informatica i "bug" non sono vivi, ma sono sempre molto fastidiosi!
+
+          ### Gli esercizi di questa lezione sono già stati risoli per te! Ma non così bene, infatti non funzionano. C'entrano i "bug" in questa facenda?
+
+          ---
+
+          ## Blocchi da conoscere
+
+          ![](https://images.code.org/b2376dc67948e29247931dec5e9fef8f-image-1524678585868.png)
+
+          ![](https://images.code.org/bd2de01f2c3b86109329b10eb544a6e6-image-1524678600994.png)
+
+          ![](https://images.code.org/db76d28bb3dbabdb78edb2cf54c6cb11-image-1524678618646.png)
       courseF_multi_artist_for10_predict1:
+        questions:
+        - text: Cosa succederà quando cliccherai su "Esegui"?
         answers:
         - text: L'artista disegnerà una linea retta che aumenta di spessore procedendo
             da una parte all'altra dell'area di gioco.
-          correct: false
           feedback: Sbagliato. L'artista gira di 59 gradi ad ogni iterazione del ciclo
             con contatore.
         - text: 'L''artista disegnerà una spirale e, ad ogni iterazione del ciclo
             con contatore, la linea diventa più lunga e più fine. '
-          correct: false
           feedback: Sbagliato. Ad ogni iterazione del ciclo con contatore, l'artista
             disegna una linea più lunga e più spessa.
         - text: L'artista disegnerà una spirale e, ad ogni iterazione del ciclo con
@@ -2068,21 +2335,18 @@ it:
           correct: true
           feedback: Corretto!
         - text: Non lo so.
-          correct: false
           feedback: Sbagliato. Ad ogni iterazione del ciclo con contatore, l'artista
             disegna una linea più lunga e più spessa.
-        questions:
-        - text: Cosa succederà quando cliccherai su "Esegui"?
       courseF_multi_artist_for10_predict1_2018:
+        questions:
+        - text: Cosa succederà quando cliccherai su "Esegui"?
         answers:
         - text: L'artista disegnerà una linea retta che aumenta di spessore procedendo
             da una parte all'altra dell'area di gioco.
-          correct: false
           feedback: Sbagliato. L'artista gira di 59 gradi ad ogni iterazione del ciclo
             con contatore.
         - text: 'L''artista disegnerà una spirale e, ad ogni iterazione del ciclo
             con contatore, la linea diventa più lunga e più fine. '
-          correct: false
           feedback: Sbagliato. Ad ogni iterazione del ciclo con contatore, l'artista
             disegna una linea più lunga e più spessa.
         - text: L'artista disegnerà una spirale e, ad ogni iterazione del ciclo con
@@ -2090,21 +2354,18 @@ it:
           correct: true
           feedback: Corretto!
         - text: Non lo so.
-          correct: false
           feedback: Sbagliato. Ad ogni iterazione del ciclo con contatore, l'artista
             disegna una linea più lunga e più spessa.
-        questions:
-        - text: Cosa succederà quando cliccherai su "Esegui"?
       courseF_multi_artist_for10_predict1_2018_2019:
+        questions:
+        - text: Cosa succederà quando cliccherai su "Esegui"?
         answers:
         - text: L'artista disegnerà una linea retta che aumenta di spessore procedendo
             da una parte all'altra dell'area di gioco.
-          correct: false
           feedback: Sbagliato. L'artista gira di 59 gradi ad ogni iterazione del ciclo
             con contatore.
         - text: 'L''artista disegnerà una spirale e, ad ogni iterazione del ciclo
             con contatore, la linea diventa più lunga e più fine. '
-          correct: false
           feedback: Sbagliato. Ad ogni iterazione del ciclo con contatore, l'artista
             disegna una linea più lunga e più spessa.
         - text: L'artista disegnerà una spirale e, ad ogni iterazione del ciclo con
@@ -2112,89 +2373,78 @@ it:
           correct: true
           feedback: Corretto!
         - text: Non lo so.
-          correct: false
           feedback: Sbagliato. Ad ogni iterazione del ciclo con contatore, l'artista
             disegna una linea più lunga e più spessa.
-        questions:
-        - text: Cosa succederà quando cliccherai su "Esegui"?
       courseF_multi_artist_fwp2_predict1:
+        questions:
+        - {}
         answers:
         - correct: true
           feedback: Corretto!
-        - 
-        - 
+        - {}
+        - {}
         - text: Non lo so.
-          correct: false
-      courseF_multi_artist_predict1:
-        answers:
-        - correct: true
-          feedback: Corretto!
-        - 
-        - 
-        - text: Non lo so.
-          correct: false
       courseF_multi_artist_variables3a_predict1:
+        questions:
+        - text: Abbiamo impostato la variabile "length" ("lunghezza") a 50. Cosa accadrà
+            quando cliccherai su "Esegui"?
         answers:
         - text: L'artista disegnerà un triangolo con lati lunghi 50 pixel.
           correct: true
           feedback: Corretto!
         - text: L'artista disegnerà un poligono di 50 lati lunghi 3 pixel.
-          correct: false
           feedback: Sbagliato. Sarebbe successo questo, se avessimo messo la variabile
             `length` nel ciclo `ripeti ... volte`.
         - text: L'artista disegnerà una forma aperta di tre lati con angoli di 50
             gradi.
-          correct: false
           feedback: Sbagliato. Sarebbe successo questo, se avessimo messo la variabile
             `length` nel blocco `gira`.
         - text: Non lo so.
-          correct: false
-        questions:
-        - text: Abbiamo impostato la variabile "length" ("lunghezza") a 50. Cosa accadrà
-            quando cliccherai su "Esegui"?
+          feedback: La variabile `length` è impostata a 50 e viene usata nel blocco
+            `vai avanti`, quindi l'artista disegna un triangolo con lati di 50 pixel.
       courseF_multi_artist_variables3a_predict1_2018:
+        questions:
+        - text: Abbiamo impostato la variabile "length" ("lunghezza") a 50. Cosa accadrà
+            quando cliccherai su "Esegui"?
         answers:
         - text: L'artista disegnerà un triangolo con lati lunghi 50 pixel.
           correct: true
           feedback: Corretto!
         - text: L'artista disegnerà un poligono di 50 lati lunghi 3 pixel.
-          correct: false
           feedback: Sbagliato. Sarebbe successo questo, se avessimo messo la variabile
             `length` nel ciclo `ripeti ... volte`.
         - text: L'artista disegnerà una forma aperta di tre lati con angoli di 50
             gradi.
-          correct: false
           feedback: Sbagliato. Sarebbe successo questo, se avessimo messo la variabile
             `length` nel blocco `gira`.
         - text: Non lo so.
-          correct: false
-        questions:
-        - text: Abbiamo impostato la variabile "length" ("lunghezza") a 50. Cosa accadrà
-            quando cliccherai su "Esegui"?
+          feedback: La variabile `length` è impostata a 50 e viene usata nel blocco
+            `vai avanti`, quindi l'artista disegna un triangolo con lati di 50 pixel.
       courseF_multi_artist_variables3a_predict1_2018_2019:
+        questions:
+        - text: Abbiamo impostato la variabile "length" ("lunghezza") a 50. Cosa accadrà
+            quando cliccherai su "Esegui"?
         answers:
         - text: L'artista disegnerà un triangolo con lati lunghi 50 pixel.
           correct: true
           feedback: Corretto!
         - text: L'artista disegnerà un poligono di 50 lati lunghi 3 pixel.
-          correct: false
           feedback: Sbagliato. Sarebbe successo questo, se avessimo messo la variabile
             `length` nel ciclo `ripeti ... volte`.
         - text: L'artista disegnerà una forma aperta di tre lati con angoli di 50
             gradi.
-          correct: false
           feedback: Sbagliato. Sarebbe successo questo, se avessimo messo la variabile
             `length` nel blocco `gira`.
         - text: Non lo so.
-          correct: false
-        questions:
-        - text: Abbiamo impostato la variabile "length" ("lunghezza") a 50. Cosa accadrà
-            quando cliccherai su "Esegui"?
+          feedback: La variabile `length` è impostata a 50 e viene usata nel blocco
+            `vai avanti`, quindi l'artista disegna un triangolo con lati di 50 pixel.
       courseF_multi_bee_conditionals1_predict1:
+        questions:
+        - text: Se non c'è un fiore, l'ape non deve fare nulla. Dai un'occhiata al
+            codice qui sotto. Cosa pensi che accadrà dopo aver cliccato su "Esegui"?
         answers:
         - text: 'L''ape andrà fin sotto la nuvola e cercherà in ogni caso di prendere
             una dose di nettare. '
-          correct: false
           feedback: Sbagliato. Grazie al blocco `se c'è un fiore`, l'ape prende il
             nettare solo se c'è un fiore sotto alla nuvola.
         - text: L'ape andrà fin sotto la nuvola e prenderà una dose di nettare solo
@@ -2202,27 +2452,29 @@ it:
           correct: true
           feedback: Corretto!
         - text: 'L''ape andrà fin sotto la nuvola e non farà nulla in ogni caso. '
-          correct: false
           feedback: Sbagliato. Grazie al blocco `se c'è un fiore`, l'ape prende il
             nettare se c'è un fiore sotto alla nuvola.
         - text: Non lo so.
-          correct: false
           feedback: Grazie al blocco `se c'è un fiore`, l'ape prende il nettare solo
             se c'è un fiore sotto alla nuvola.
       courseF_multi_bee_conditionals7_predict2:
+        questions:
+        - {}
         answers:
         - correct: true
           feedback: Corretto!
         - text: L'ape cercherà di prendere il nettare sia dai fiori che dai favi.
-          correct: false
+          feedback: Sbagliato. Il blocco `se c'è un fiore` permette all'ape di prendere
+            il nettare da ogni fiore e fare il miele se non c'è un fiore (e quindi
+            c'è un favo).
         - text: L'ape cercherà di fare il miele sia sui fiori che sui favi.
-          correct: false
         - text: Non lo so.
-          correct: false
       courseF_multi_bee_for3_predict1:
+        questions:
+        - text: Guarda il codice presente nell'area di lavoro. Cosa succederà quando
+            cliccherai su "Esegui"?
         answers:
         - text: 'L''ape andrà avanti e raccoglierà tutto il nettare da ogni fiore. '
-          correct: false
           feedback: Sbagliato. Il ciclo con contatore farà in modo che l'ape raccolga
             la giusta quantità di nettare, ma, così com'è impostata, permetterà di
             raggiungere solo 4 fiori.
@@ -2231,23 +2483,20 @@ it:
           correct: true
           feedback: Corretto!
         - text: 'L''ape andrà avanti e raccoglierà una dose di nettare da ogni fiore. '
-          correct: false
           feedback: Sbagliato. Il ciclo con contatore farà in modo che l'ape raccolga
             la giusta quantità di nettare, ma, così com'è impostata, permetterà di
             raggiungere solo 4 fiori.
         - text: 'L''ape andrà avanti e cercherà di raccogliere più nettare di quanto
             ve ne sia nei fiori. '
-          correct: false
           feedback: Sbagliato. Il ciclo con contatore farà in modo che l'ape raccolga
             la giusta quantità di nettare, ma, così com'è impostata, permetterà di
             raggiungere solo 4 fiori.
-        questions:
-        - text: Guarda il codice presente nell'area di lavoro. Cosa succederà quando
-            cliccherai su "Esegui"?
       courseF_multi_bee_for3_predict1_2018:
+        questions:
+        - text: Guarda il codice presente nell'area di lavoro. Cosa succederà quando
+            cliccherai su "Esegui"?
         answers:
         - text: 'L''ape andrà avanti e raccoglierà tutto il nettare da ogni fiore. '
-          correct: false
           feedback: Sbagliato. Il ciclo con contatore farà in modo che l'ape raccolga
             la giusta quantità di nettare, ma, così com'è impostata, permetterà di
             raggiungere solo 4 fiori.
@@ -2256,22 +2505,19 @@ it:
           correct: true
           feedback: Corretto!
         - text: 'L''ape andrà avanti e raccoglierà una dose di nettare da ogni fiore. '
-          correct: false
           feedback: Sbagliato. Il ciclo con contatore farà in modo che l'ape raccolga
             la giusta quantità di nettare, ma, così com'è impostata, permetterà di
             raggiungere solo 4 fiori.
         - text: 'Non lo so. '
-          correct: false
           feedback: Il ciclo con contatore farà in modo che l'ape raccolga la giusta
             quantità di nettare, ma, così com'è impostata, permetterà di raggiungere
             solo 4 fiori.
-        questions:
-        - text: Guarda il codice presente nell'area di lavoro. Cosa succederà quando
-            cliccherai su "Esegui"?
       courseF_multi_bee_for3_predict1_2018_2019:
+        questions:
+        - text: Guarda il codice presente nell'area di lavoro. Cosa succederà quando
+            cliccherai su "Esegui"?
         answers:
         - text: 'L''ape andrà avanti e raccoglierà tutto il nettare da ogni fiore. '
-          correct: false
           feedback: Sbagliato. Il ciclo con contatore farà in modo che l'ape raccolga
             la giusta quantità di nettare, ma, così com'è impostata, permetterà di
             raggiungere solo 4 fiori.
@@ -2280,95 +2526,87 @@ it:
           correct: true
           feedback: Corretto!
         - text: 'L''ape andrà avanti e raccoglierà una dose di nettare da ogni fiore. '
-          correct: false
           feedback: Sbagliato. Il ciclo con contatore farà in modo che l'ape raccolga
             la giusta quantità di nettare, ma, così com'è impostata, permetterà di
             raggiungere solo 4 fiori.
         - text: 'Non lo so. '
-          correct: false
           feedback: Il ciclo con contatore farà in modo che l'ape raccolga la giusta
             quantità di nettare, ma, così com'è impostata, permetterà di raggiungere
             solo 4 fiori.
-        questions:
-        - text: Guarda il codice presente nell'area di lavoro. Cosa succederà quando
-            cliccherai su "Esegui"?
       courseF_multi_bee_fwp9_predict1:
-        answers:
-        - 
-        - correct: true
-        - 
-        - text: Non lo so.
-          correct: false
         questions:
         - text: Cosa succederà quando cliccherai su "Esegui"?
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - text: Non lo so.
+          feedback: Se clicchi per guardare com'è fatta all'interno la funzione, vedi
+            che è progettata per raccogliere il numero di dosi di nettare o di miele
+            passato attraverso un parametro.
       courseF_multi_playlab_variables4c_predictive1:
+        questions:
+        - {}
         answers:
         - correct: true
-        - 
-        - 
+        - {}
+        - {}
         - text: Non lo so.
-          correct: false
       coursee_prediction_artistfunction2:
+        questions:
+        - text: Cosa succederà quando cliccherai su "Esegui"?
         answers:
         - text: L'artista risolverà correttamente l'esercizio.
-          correct: false
           feedback: Sbagliato. Il ciclo usa la funzione "disegna un poligono" al posto
             di "disegna una fila di poligoni".
         - text: L'artista disegnerà quattro quadrati in uno schema a finestra.
           correct: true
           feedback: Corretto!
         - text: L'artista disegnerà solo una fila di quadrati.
-          correct: false
           feedback: Sbagliato. Il programma non richiama mail la funzione "disegna
             una fila di poligoni".
         - text: L'artista disegnerà quattro quadrati uno sopra l'altro.
-          correct: false
           feedback: Sbagliato. Il ciclo gira di 90 gradi tra le due chiamate alla
             funzione "disegna un poligono".
-        questions:
-        - text: Cosa succederà quando cliccherai su "Esegui"?
       coursee_prediction_artistfunction2_2018:
+        questions:
+        - text: Cosa succederà quando cliccherai su "Esegui"?
         answers:
         - text: L'artista risolverà correttamente l'esercizio.
-          correct: false
           feedback: Sbagliato. Il ciclo usa la funzione "disegna un poligono" al posto
             di "disegna una fila di poligoni".
         - text: L'artista disegnerà quattro quadrati in uno schema a finestra.
           correct: true
           feedback: Corretto!
         - text: L'artista disegnerà solo una fila di quadrati.
-          correct: false
           feedback: Sbagliato. Il programma non richiama mail la funzione "disegna
             una fila di poligoni".
         - text: L'artista disegnerà quattro quadrati uno sopra l'altro.
-          correct: false
           feedback: Sbagliato. Il ciclo gira di 90 gradi tra le due chiamate alla
             funzione "disegna un poligono".
-        questions:
-        - text: Cosa succederà quando cliccherai su "Esegui"?
       coursee_prediction_artistfunction2_2018_2019:
+        questions:
+        - text: Cosa succederà quando cliccherai su "Esegui"?
         answers:
         - text: L'artista risolverà correttamente l'esercizio.
-          correct: false
           feedback: Sbagliato. Il ciclo usa la funzione "disegna un poligono" al posto
             di "disegna una fila di poligoni".
         - text: L'artista disegnerà quattro quadrati in uno schema a finestra.
           correct: true
           feedback: Corretto!
         - text: L'artista disegnerà solo una fila di quadrati.
-          correct: false
           feedback: Sbagliato. Il programma non richiama mail la funzione "disegna
             una fila di poligoni".
         - text: L'artista disegnerà quattro quadrati uno sopra l'altro.
-          correct: false
           feedback: Sbagliato. Il ciclo gira di 90 gradi tra le due chiamate alla
             funzione "disegna un poligono".
-        questions:
-        - text: Cosa succederà quando cliccherai su "Esegui"?
       grade2_multi_collector_A_predict1:
+        questions:
+        - text: Guarda molto attentamente il codice presente nell'area di lavoro.
+            Se il programma venisse eseguito fino alla fine (ignorando gli errori),
+            quanti diamanti riuscirebbe a raccogliere Laura?
         answers:
         - text: Usando questo codice Laura raccoglierà 4 diamanti.
-          correct: false
           feedback: Sbagliato. Il programma si blocca perché Laura cerca di raccogliere
             un diamante in una casella che non ne contiene.
         - text: Il programma provocherà un errore perché Laura cercherà di raccogliere
@@ -2376,17 +2614,17 @@ it:
           correct: true
           feedback: Corretto!
         - text: Usando questo codice Laura raccoglierà tutti i diamanti.
-          correct: false
           feedback: Sbagliato. Il programma si blocca perché Laura cerca di raccogliere
             un diamante in una casella che non ne contiene.
         - text: Non lo so.
-          correct: false
           feedback: Il programma si blocca perché Laura cerca di raccogliere un diamante
             in una casella che non ne contiene.
       grade2_multi_collector_A_predict1_2018:
+        questions:
+        - text: Guarda molto attentamente il codice riportato nell'area di lavoro.
+            Cosa succede quando si clicca su "Esegui"?
         answers:
         - text: Usando questo codice Laura raccoglierà 4 diamanti.
-          correct: false
           feedback: Sbagliato. Il programma si blocca perché Laura cerca di raccogliere
             un diamante in una casella che non ne contiene.
         - text: Il programma provocherà un errore perché Laura cercherà di raccogliere
@@ -2394,20 +2632,17 @@ it:
           correct: true
           feedback: Corretto!
         - text: Usando questo codice Laura raccoglierà tutti i diamanti.
-          correct: false
           feedback: Sbagliato. Il programma si blocca perché Laura cerca di raccogliere
             un diamante in una casella che non ne contiene.
         - text: Non lo so.
-          correct: false
           feedback: Il programma si blocca perché Laura cerca di raccogliere un diamante
             in una casella che non ne contiene.
-        questions:
-        - text: Guarda molto attentamente il codice riportato nell'area di lavoro.
-            Cosa succede quando si clicca su "Esegui"?
       grade2_multi_collector_A_predict1_2018_2019:
+        questions:
+        - text: Guarda molto attentamente il codice riportato nell'area di lavoro.
+            Cosa succede quando si clicca su "Esegui"?
         answers:
         - text: Usando questo codice Laura raccoglierà 4 diamanti.
-          correct: false
           feedback: Sbagliato. Il programma si blocca perché Laura cerca di raccogliere
             un diamante in una casella che non ne contiene.
         - text: Il programma provocherà un errore perché Laura cercherà di raccogliere
@@ -2415,13 +2650,8 @@ it:
           correct: true
           feedback: Corretto!
         - text: Usando questo codice Laura raccoglierà tutti i diamanti.
-          correct: false
           feedback: Sbagliato. Il programma si blocca perché Laura cerca di raccogliere
             un diamante in una casella che non ne contiene.
         - text: Non lo so.
-          correct: false
           feedback: Il programma si blocca perché Laura cerca di raccogliere un diamante
             in una casella che non ne contiene.
-        questions:
-        - text: Guarda molto attentamente il codice riportato nell'area di lavoro.
-            Cosa succede quando si clicca su "Esegui"?

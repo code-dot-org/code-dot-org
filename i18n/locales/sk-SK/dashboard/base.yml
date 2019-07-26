@@ -578,7 +578,6 @@ sk:
   pdf_download: 'Stiahnuť PDF'
   download_coming_soon: 'Stiahnuteľné aktivity už čoskoro.'
   video_coming_soon: 'Video už čoskoro!'
-  not_started: 'Študent neprešiel túto úroveň.'
   share_code:
     title: "Klikni na 'Spustiť' pre zobrazenie tvojho kódu v akcii"
     bounce_og_title: "Pozri si moju hru Bounce"

@@ -23,7 +23,6 @@
  * Shared
  *= require user-menu
  *= require user-progress
- *= require teacher-announcement
  *= require buttons
  *= require course-blocks
  *= require details-polyfill
@@ -318,9 +317,8 @@ img.video_thumbnail {
     }
   }
 
-  .user_menu, .create_menu {
+  .user_menu, .create_menu, .help_button {
     margin-top: 6px;
-
     .create_button, .display_name, .pairing_name {
       html[dir=rtl] & {
         float: right;
@@ -334,7 +332,7 @@ img.video_thumbnail {
       padding-top: 3px;
     }
 
-    .user_options {
+    .user_options, .help_contents {
       font-size: 14px;
       line-height: 20px;
     }
@@ -357,12 +355,13 @@ img.video_thumbnail {
 
   #hamburger {
     padding-top: 4px;
-    padding-left: 20px;
+    padding-left: 16px;
   }
 
-  #help-button {
+  .help_button {
+    margin-top: 0;
     padding-top: 4px;
-    padding-left: 20px;
+    padding-left: 16px;
   }
 
   #signin_button .header_button {
@@ -652,7 +651,7 @@ $small-footer-standard-width: 400px;
   display: inline-block;
 }
 
-.user_options {
+.user_options, .help_contents {
   display: none;
   a:link {
     color: $black;
@@ -943,7 +942,7 @@ input.header_input {
 
 .header_user {
   text-align: right;
-  margin-left: 5px;
+  margin-left: 6px;
   margin-top: 6px;
   height: 38px;
 }

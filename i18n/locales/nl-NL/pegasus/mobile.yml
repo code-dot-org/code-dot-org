@@ -749,16 +749,11 @@
   course2_name: "Cursus 2"
   course3_name: "Cursus 3"
   course4_name: "Les 4"
-  cspexam1-mWU7ilDYM9_name: Test deel 1-25 vragen
-  cspexam2-AKwgAh1ac5_name: Test deel 2 -25 vragen
+  accelerated_name: "versnelde cursus"
   20-hour_name: versnelde cursus
   classicmaze_name: "Klassiek doolhof"
   iceage_name: "Ice Age"
   minecraft_name: "Minecraft"
-  math_category_name: "wiskundige"
-  hoc_category_name: "Uur Code"
-  csp17_category_name: "CW Principes"
-  cspexams_category_name: "CW Principes Praktische Test"
   applab_name: "App Lab"
   gamelab_name: "Game Lab"
   applab_gradelevel: "Leeftijd 13+"
@@ -823,6 +818,8 @@
   coursee-2017_gradelevel: Leeftijden 8-12
   coursed-2018_gradelevel: Rang 8+
   coursee-2018_gradelevel: Leeftijden 8-12
+  coursed-2019_gradelevel: Rang 8+
+  coursee-2019_gradelevel: Leeftijden 8-12
   accelerated_gradelevel: "Leeftijden 10 + (na cursus 3)"
   codeorg_platformtext: "Moderne browsers, smartphones, tablets"
   codeintl_platformtext: "Moderne browsers, smartphones, tablets"
@@ -1179,8 +1176,6 @@
   header_report_bug: "Rapporteer bugs"
   header_tutorials: "Tutorials"
   header_documentation: "Documentatie"
-  csp_name: "CW Principes"
-  full_course_category_name: "Volledige Cursussen"
   user_header_label: "Hallo %{username}"
   user_header_team: "Team"
   user_header_settings: "Mijn account"

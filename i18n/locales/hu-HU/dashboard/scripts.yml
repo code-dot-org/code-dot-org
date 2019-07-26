@@ -1916,3 +1916,30 @@ hu:
           stages:
             What is a Computer?:
               name: Mi az a számítógép?
+        csd1-pilot:
+          description_short: "  Ismerd meg, hogyan működnek együtt az emberek és a számítógépek a problémák megoldásában."
+          stages:
+            Intro to Problem Solving:
+              name: Bevezetés a problémamegoldásba
+              description_student: 'A tanulók csoportokban dolgoznak, és alufóliából készült hajókat terveznek úgy, hogy azok minél több pénzérmét elbírjanak. A tanóra végén a csoportok reflektálnak a tevékenység során szerzett tapasztalataikra, és összefüggést keresnek azokkal a problémamegoldási helyzetekkel, amelyekkel a kurzus folyamán találkozni fognak. '
+              description_teacher: Ebben a leckében a tanulók csoportokban alufóliából kis hajókat készítenek azokat úgy megtervezve, hogy minél több pénzérmét elbírjanak. A csoportoknak két lehetősége lesz dolgozni a hajókon, természetesen a céljuk az lesz, hogy a második körben több érmét bírjon el a hajójuk, mint az első körben. A tevékenység felépítése előrevetíti azokat a problémamegoldási lépéseket, amelyekkel a tanulók részletesebben is megismerkednek a következő órán. A tanóra végén a csoportok reflektálnak a tevékenység során szerzett tapasztalataikra, és összefüggést keresnek azokkal a problémamegoldási helyzetekkel, amelyekkel a kurzus folyamán találkozni fognak. 
+            The Problem Solving Process:
+              name: A probléma-megoldási folyamat
+              description_student: 'Ez a tanóra bemutatja a problémamegoldási folyamatot, amit az osztály a tanév során használni fog: Meghatározás - Felkészülés - Próba - Reflektálás. Az osztály ezeket a lépéseket összekapcsolja az előző órai alufólia-csónak tervezési problémával, majd egy olyan problémával, aminek a megoldásában ők is jók, majd egy olyan problémával, amelynek a megoldásán javítani szeretnének. A tanóra végére az osztály a folyamat minden lépéséhez összegyűjti az általában használható stratégiákat, és elhelyezi ezeket egy poszteren, amit a fejezet és a tanév során referenciaként használ.'
+            What is a Computer?:
+              name: Mi az a számítógép?
+        csd2-pilot:
+          stages:
+            Lists:
+              name: Listák
+        csd3-pilot:
+          description_short: "Programozás"
+          stages:
+            Variables:
+              name: változók
+            Sprites:
+              name: Sprite-ok
+            Conditionals:
+              name: Feltételek
+            Functions:
+              name: funkciók
