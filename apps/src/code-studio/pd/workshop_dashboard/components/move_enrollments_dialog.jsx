@@ -7,8 +7,27 @@ export default class MoveEnrollmentsDialog extends React.Component {
     selectedEnrollments: PropTypes.array,
     show: PropTypes.bool,
     onCancel: PropTypes.func,
-    onConfirm: PropTypes.func
+    onMove: PropTypes.func
   };
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      destination_workshop_id: null
+    };
+
+    this.handleInputChange = this.handleInputChange.bind(this);
+    this.handleClickMove = this.handleClickMove.bind(this);
+  }
+
+  handleInputChange(e) {
+    this.setState({destination_workshop_id: e.target.value});
+  }
+
+  handleClickMove() {
+    this.props.onMove(this.state.destination_workshop_id);
+  }
 
   renderSelectedEnrollments() {
     const enrollments = this.props.selectedEnrollments.map((enrollment, i) => {
@@ -29,11 +48,17 @@ export default class MoveEnrollmentsDialog extends React.Component {
           <Modal.Title>Move Enrollments</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <h3>You are moving the following enrollments:</h3>
-          {this.renderSelectedEnrollments()}
+          <div>
+            <h3>You are moving the following enrollments:</h3>
+            {this.renderSelectedEnrollments()}
+
+            <h3>Destination workshop id:</h3>
+            <h4>(The number at the end of the workshop's url)</h4>
+            <input type="text" onChange={this.handleInputChange} />
+          </div>
         </Modal.Body>
         <Modal.Footer>
-          <Button bsStyle="primary" onClick={this.props.onConfirm}>
+          <Button bsStyle="primary" onClick={this.handleClickMove}>
             Move
           </Button>
           <Button onClick={this.props.onCancel}>Cancel</Button>

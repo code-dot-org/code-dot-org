@@ -127,9 +127,6 @@ export class WorkshopEnrollmentSchoolInfo extends React.Component {
   }
 
   handleClickMoveEnrollments() {
-    // when you click a specific action, apply it to all enrollments whose
-    // ids are in list of selected enrollments in state
-    // open a dialog with a text box
     this.setState({isMoveEnrollmentsDialogOpen: true});
   }
 
@@ -139,7 +136,7 @@ export class WorkshopEnrollmentSchoolInfo extends React.Component {
     });
   }
 
-  handleMoveEnrollmentsConfirmed() {
+  handleMoveEnrollmentsConfirmed(destination_workshop_id) {
     this.setState({
       isMoveEnrollmentsDialogOpen: false
     });
@@ -328,7 +325,7 @@ export class WorkshopEnrollmentSchoolInfo extends React.Component {
                     show={this.state.isMoveEnrollmentsDialogOpen}
                     selectedEnrollments={this.state.selectedEnrollments}
                     onCancel={this.handleMoveEnrollmentsCanceled}
-                    onConfirm={this.handleMoveEnrollmentsConfirmed}
+                    onMove={this.handleMoveEnrollmentsConfirmed}
                   />
                 </DropdownButton>
               </th>
