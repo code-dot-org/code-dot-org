@@ -296,6 +296,28 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     Pd::Workshop.any_instance.expects(:send_exit_surveys)
 
     @workshop.end!
+
+    # This is normally called by a cron job on production-daemon, but in this test
+    # we call it synchronously.
+    Pd::Workshop.process_ends
+  end
+
+  test 'end workshop second time attempts sending exit surveys but they do not send again' do
+    @workshop.sessions << create(:pd_session)
+    @workshop.start!
+
+    @workshop.end!
+    @workshop.update!(ended_at: nil)
+
+    @workshop.start!
+
+    @workshop.end!
+
+    Pd::Workshop.any_instance.expects(:send_exit_surveys)
+    Pd::Enrollment.any_instance.expects(:send_exit_survey).never
+
+    # This is normally called by a cron job on production-daemon, but in this test
+    # we call it synchronously.
     Pd::Workshop.process_ends
   end
 
