@@ -102,6 +102,11 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
     Pd::WorkshopMailer.organizer_cancel_receipt(enrollment).deliver_now
   end
 
+  # POST /platforms?platform_ids[]=0&platform_ids[]=1&platform_ids[]=2
+  # POST /api/v1/pd/workshops/1/enrollments/move
+  def move
+  end
+
   private
 
   def enrollment_params
