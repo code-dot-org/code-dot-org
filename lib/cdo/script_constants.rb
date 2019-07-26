@@ -91,6 +91,7 @@ module ScriptConstants
       COURSE2_NAME = 'course2'.freeze,
       COURSE3_NAME = 'course3'.freeze,
       COURSE4_NAME = 'course4'.freeze,
+      COURSE_CSL_NAME = 'csl-vn'.freeze
     ],
     math: [
       ALGEBRA_NAME = 'algebra'.freeze,
