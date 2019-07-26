@@ -110,6 +110,8 @@ module Dashboard
       I18n.fallbacks.map(es: :'es-MX')
     end
 
+    config.assets.css_compressor = :sass
+
     config.assets.gzip = false # cloudfront gzips everything for us on the fly.
     config.assets.paths << Rails.root.join('./public/blockly')
     config.assets.paths << Rails.root.join('../shared/css')
