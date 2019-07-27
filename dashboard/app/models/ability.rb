@@ -158,6 +158,7 @@ class Ability
         can :manage, Pd::Application::ApplicationBase
         can :manage, Pd::Application::Facilitator1920Application
         can :manage, Pd::Application::Teacher1920Application
+        can :move, :workshop_enrollments
       end
 
       if user.permission?(UserPermission::PROJECT_VALIDATOR)
