@@ -4,7 +4,6 @@
   language: 'English'
   front_title: 'Join the largest learning event in history, %{campaign_date}'
   coming_soon: 'Coming Soon'
-  compatibility_unsupported_browser: "Your browser is not supported. Please upgrade your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken."
 
   campaign_date_start_short: "Dec. 4"
   campaign_date_start_long: "December 4"
@@ -214,6 +213,7 @@
   register_now: 'Register Now'
   share_on_facebook: 'Share on Facebook'
   share_on_twitter: 'Share on Twitter'
+  promote_additional_resources: 'Additional resources coming soon!'
 
   front_join_us_heading: 'An Hour of Code for every student.'
   front_join_us_announcements: 'Announcements'
@@ -452,6 +452,7 @@
 
   title_country_resources: Country Specific Resources
   title_hoc_advisory_committee: Hour of Code and CSEdWeek Advisory Committee
+  title_hoc_review_committee: Hour of Code and CSEdWeek Review Committee
   title_how_to_promote: Spread the word
   title_how_to_districts: Hour of Code How-To for Districts
   title_how_to_events: Hour of Code Event How-To
