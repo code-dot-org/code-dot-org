@@ -1206,6 +1206,11 @@ id-ID:
         content1: desekripsi di sini
       Prepare for your presentation_2018:
         title: Persiapkan presentasimu
+      SimonSays-Unplugged:
+        markdown: |
+          #Kata Simon
+
+          Mainkan game dan pikirkan tentang perintah yang diperlukan untuk mendapat hasil yang baik.
       'Technique: Frequency Analysis':
         title: Bagaimana memecahkan sandi subtitusi
         content1: desekripsi di sini
@@ -1910,6 +1915,27 @@ id-ID:
       courseF_project_exemplars_2019:
         title: Tes halaman teksbook Markdown
         content1: Tes halaman teksbook Markdown
+        markdown: |+
+          # Contoh proyek
+
+
+          Anda hampir mulai di akhir proyek.Sebelum anda mulai,luangkan waktu untuk melihat contoh proyek.
+
+
+          ## Sprite Lab
+
+          | Cupcake Game (Sprite Lab) | Helicopter Game (Sprite Lab) |
+          |---|---|
+          | [![#Bunny Game (Sprite Lab)](https://images.code.org/c90080aaf05349fb6e1fbb6861e815df-image-1556809855136.png)](https://studio.code.org/projects/spritelab/gXM_YU_qL_QWo1o5Wkam96oiFrYY5VUp27m2xKlp7EQ/view) | [![#Helicopter Game (Sprite Lab)](https://images.code.org/1a273fd447b952367792423a70c5087a-image-1556812149075.png)](https://studio.code.org/projects/spritelab/QeROTy1pNyjNPC-ZZdBN1mcpkmTEMUc2FYwXX0SOFAY/view) |
+          | Try adding text or a score to this game! | Try adding text or a score to this game! |
+
+          ## Artist
+
+          | Flowers (Artist) | Spiral (Arist) |
+          |---|---|
+          | [![Flowers (Artist)](https://images.code.org/0f5adf63c318eab8c8acb397d9db7f2a-image-1556821537577.png)](https://studio.code.org/projects/artist/MIMh2pV2IiLm1ZzaiA6N7kKvg534lFck3abLXTsvZU8/view) | [![Spiral (Artist)](https://images.code.org/06514571a8cf2f8b0346006ac1adc219-image-1556819399386.png)](https://studio.code.org/projects/artist/66scPDPWa8RNNHkcXDaXdA/view) |
+          | Let's get creative with variables! | Let's get creative with For Loops! |
+
       coursee_prediction_artistfunction2:
         questions:
         - {}
