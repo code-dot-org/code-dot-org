@@ -2,6 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {Modal, Button} from 'react-bootstrap';
 
+const styles = {
+  warning: {
+    color: 'red'
+  }
+};
+
 export default class MoveEnrollmentsDialog extends React.Component {
   static propTypes = {
     selectedEnrollments: PropTypes.array,
@@ -51,7 +57,10 @@ export default class MoveEnrollmentsDialog extends React.Component {
           <div>
             <h3>You are moving the following enrollments:</h3>
             {this.renderSelectedEnrollments()}
-
+            <h3 style={styles.warning}>
+              Warning: moving enrollments will delete any associated attendance
+              data!
+            </h3>
             <h3>Destination workshop id:</h3>
             <h4>(The number at the end of the workshop's url)</h4>
             <input type="text" onChange={this.handleInputChange} />
