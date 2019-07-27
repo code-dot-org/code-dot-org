@@ -4,13 +4,16 @@ import {Provider} from 'react-redux';
 
 import ProjectInfo from '@cdo/apps/code-studio/components/header/ProjectInfo';
 import {getStore} from '@cdo/apps/redux';
+import $ from 'jquery';
 
-const container = document.getElementsByClassName('project_info');
-if (container.length) {
-  ReactDOM.render(
-    <Provider store={getStore()}>
-      <ProjectInfo />
-    </Provider>,
-    container[0]
-  );
-}
+$(document).ready(() => {
+  const container = document.getElementsByClassName('project_info');
+  if (container.length) {
+    ReactDOM.render(
+      <Provider store={getStore()}>
+        <ProjectInfo />
+      </Provider>,
+      container[0]
+    );
+  }
+});
