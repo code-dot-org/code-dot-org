@@ -3,6 +3,10 @@ AWSTemplateFormatVersion: 2010-09-09
 Description: >-
   IAM layer including global/shared roles and access permissions for Code.org infrastructure.
   Note: Admin permissions are required to manage some admin-only resources in this stack.
+Parameters:
+  GoogleDeveloperIDs:
+    Type: AWS::SSM::Parameter::Value<List<String>>
+    Default: /IAM/GoogleDeveloperIDs
 Resources:
   # Admin Service Role for managing all resources in CloudFormation stacks.
   # Only admins can update stacks using this service role.
@@ -105,7 +109,49 @@ Resources:
             Condition:
               StringNotEquals:
                 cloudformation:RoleARN: !Sub "arn:aws:iam::${AWS::AccountId}:role/admin/CloudFormationService"
-
+  Developer:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: Developer
+      Path: /admin/
+      AssumeRolePolicyDocument:
+        Version: 2012-10-17
+        Statement:
+        - Effect: Allow
+          Principal: {Federated: !Sub "arn:aws:iam::${AWS::AccountId}:saml-provider/Google"}
+          Action: sts:AssumeRoleWithSAML
+          Condition:
+            StringEquals:
+              SAML:aud: https://signin.aws.amazon.com/saml
+        - Effect: Allow
+          Principal: {Federated: accounts.google.com}
+          Action: sts:AssumeRoleWithWebIdentity
+          Condition:
+            StringEquals:
+              accounts.google.com:aud: '{{resolve:secretsmanager:admin/google_client_id}}'
+            ForAnyValue:StringEquals:
+              accounts.google.com:sub: !Ref GoogleDeveloperIDs
+        - Effect: Allow
+          Principal: {Service: ec2.amazonaws.com}
+          Action: sts:AssumeRole
+      Policies:
+      # Only allow developers to create/update stacks in specific environments.
+      - PolicyName: ProtectedStacks
+        PolicyDocument:
+          Statement:
+          - Effect: Deny
+            Action:
+            - cloudformation:CreateStack
+            - cloudformation:UpdateStack
+            - cloudformation:DeleteStack
+            - cloudformation:CreateChangeSet
+            Resource: '*'
+            Condition:
+              ForAnyValue:StringNotEquals:
+                aws:ResourceTag/environment: [adhoc, development]
+              ForAnyValue:StringEquals:
+                aws:TagKeys: environment
+      ManagedPolicyArns: [!Ref DevPermissions]
   # Used by FirehoseMicroservice Lambda function.
   # TODO move to Data stack
   FirehoseLambdaRole:
