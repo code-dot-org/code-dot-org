@@ -105,7 +105,9 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
   # POST /api/v1/pd/workshops/1/enrollments/move
   def move
     params[:enrollment_ids].each do |id|
-      @workshop.enrollments.find_by(id: id).update(pd_workshop_id: params[:destination_workshop_id])
+      enrollment = @workshop.enrollments.find_by(id: id)
+      enrollment.attendances.destroy_all
+      enrollment.update(pd_workshop_id: params[:destination_workshop_id])
     end
   end
 
