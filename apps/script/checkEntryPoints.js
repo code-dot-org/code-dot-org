@@ -76,6 +76,9 @@ const SILENCED = [
   'essential',
   'code-studio',
 
+  // referenced from application.html.haml
+  'layouts/_header',
+
   // referenced by multiple sites
   'tutorialExplorer',
   'cookieBanner',

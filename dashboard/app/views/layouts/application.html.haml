@@ -24,6 +24,11 @@
     %script{src: webpack_asset_path("js/#{js_locale}/common_locale.js")}
     = javascript_include_tag 'https://cdn.optimizely.com/js/12977480133.js' if Rails.env.production?
     %script{src: webpack_asset_path('js/code-studio-common.js')}
+
+    -# load this script outside of the partial it belongs to, in order to load
+    -# it within the head tag, so that it loads in parallel with other scripts.
+    %script{src: webpack_asset_path('js/layouts/_header.js')}
+
     = csrf_meta_tags
     = yield :head
     - if content_for? :og
