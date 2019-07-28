@@ -1,11 +1,11 @@
 /* global dashboard */
 
 import Sounds from '../../Sounds';
-var React = require('react');
-var ReactDOM = require('react-dom');
-var ImagePicker = require('../components/ImagePicker');
-var SoundPicker = require('../components/SoundPicker');
-var Dialog = require('../LegacyDialog');
+import React from 'react';
+import ReactDOM from 'react-dom';
+import ImagePicker from '../components/ImagePicker';
+import SoundPicker from '../components/SoundPicker';
+import Dialog from '../LegacyDialog';
 
 /**
  * Display the "Manage Assets" modal.
