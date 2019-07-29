@@ -68,7 +68,6 @@ export default class CountryAutocompleteDropdown extends Component {
             {showError && !singleLineLayout && errorDiv}
           </div>
           <VirtualizedSelect
-            id="country-unique"
             name={this.props.fieldName}
             options={COUNTRIES}
             value={value}
