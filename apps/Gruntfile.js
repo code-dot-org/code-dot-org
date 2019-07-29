@@ -65,22 +65,22 @@ describe('entry tests', () => {
 
   /** @const {string[]} */
   var ALL_APPS = [
-    'applab',
-    'bounce',
-    'calc',
-    'craft',
-    'dance',
-    'eval',
-    'flappy',
-    'gamelab',
-    'spritelab',
-    'jigsaw',
-    'maze',
-    'netsim',
-    'studio',
-    'turtle',
-    'scratch',
-    'weblab'
+    // 'applab',
+    // 'bounce',
+    // 'calc',
+    // 'craft',
+    // 'dance',
+    // 'eval',
+    // 'flappy',
+    // 'gamelab'
+    // 'spritelab',
+    // 'jigsaw',
+    // 'maze',
+    // 'netsim',
+    // 'studio',
+    // 'turtle',
+    // 'scratch',
+    // 'weblab'
   ];
 
   if (SINGLE_APP && ALL_APPS.indexOf(SINGLE_APP) === -1) {
@@ -487,173 +487,173 @@ describe('entry tests', () => {
   );
 
   var codeStudioEntries = {
-    blockly: './src/sites/studio/pages/blockly.js',
+    // blockly: './src/sites/studio/pages/blockly.js',
     'code-studio': './src/sites/studio/pages/code-studio.js',
-    'congrats/index': './src/sites/studio/pages/congrats/index.js',
-    'courses/index': './src/sites/studio/pages/courses/index.js',
-    'courses/show': './src/sites/studio/pages/courses/show.js',
-    'devise/registrations/_finish_sign_up':
-      './src/sites/studio/pages/devise/registrations/_finish_sign_up.js',
-    'devise/registrations/_old_sign_up_form':
-      './src/sites/studio/pages/devise/registrations/_old_sign_up_form.js',
-    'devise/registrations/edit':
-      './src/sites/studio/pages/devise/registrations/edit.js',
+    // 'congrats/index': './src/sites/studio/pages/congrats/index.js',
+    // 'courses/index': './src/sites/studio/pages/courses/index.js',
+    // 'courses/show': './src/sites/studio/pages/courses/show.js',
+    // 'devise/registrations/_finish_sign_up':
+    //   './src/sites/studio/pages/devise/registrations/_finish_sign_up.js',
+    // 'devise/registrations/_old_sign_up_form':
+    //   './src/sites/studio/pages/devise/registrations/_old_sign_up_form.js',
+    // 'devise/registrations/edit':
+    //   './src/sites/studio/pages/devise/registrations/edit.js',
     'home/_homepage': './src/sites/studio/pages/home/_homepage.js',
-    'layouts/_header': './src/sites/studio/pages/layouts/_header.js',
-    'layouts/_race_interstitial':
-      './src/sites/studio/pages/layouts/_race_interstitial.js',
-    'layouts/_school_info_confirmation_dialog':
-      './src/sites/studio/pages/layouts/_school_info_confirmation_dialog.js',
-    'layouts/_school_info_interstitial':
-      './src/sites/studio/pages/layouts/_school_info_interstitial.js',
-    'layouts/_terms_interstitial':
-      './src/sites/studio/pages/layouts/_terms_interstitial.js',
-    'levels/_bubble_choice':
-      './src/sites/studio/pages/levels/_bubble_choice.js',
-    'levels/_contract_match':
-      './src/sites/studio/pages/levels/_contract_match.js',
-    'levels/_curriculum_reference':
-      './src/sites/studio/pages/levels/_curriculum_reference.js',
-    'levels/_dialog': './src/sites/studio/pages/levels/_dialog.js',
-    'levels/_evaluation_multi':
-      './src/sites/studio/pages/levels/_evaluation_multi.js',
-    'levels/_external': './src/sites/studio/pages/levels/_external.js',
-    'levels/_external_link':
-      './src/sites/studio/pages/levels/_external_link.js',
-    'levels/_level_group': './src/sites/studio/pages/levels/_level_group.js',
-    'levels/_match': './src/sites/studio/pages/levels/_match.js',
-    'levels/_multi': './src/sites/studio/pages/levels/_multi.js',
-    'levels/_standalone_video':
-      './src/sites/studio/pages/levels/_standalone_video.js',
-    'levels/_teacher_panel':
-      './src/sites/studio/pages/levels/_teacher_panel.js',
-    'levels/_text_match': './src/sites/studio/pages/levels/_text_match.js',
-    'levels/_widget': './src/sites/studio/pages/levels/_widget.js',
-    'levels/show': './src/sites/studio/pages/levels/show.js',
-    'maker/discountcode': './src/sites/studio/pages/maker/discountcode.js',
-    'maker/home': './src/sites/studio/pages/maker/home.js',
-    'maker/setup': './src/sites/studio/pages/maker/setup.js',
-    'projects/featured': './src/sites/studio/pages/projects/featured.js',
-    'projects/index': './src/sites/studio/pages/projects/index.js',
-    'projects/public': './src/sites/studio/pages/projects/public.js',
-    'scripts/show': './src/sites/studio/pages/scripts/show.js',
-    'scripts/stage_extras': './src/sites/studio/pages/scripts/stage_extras.js',
-    'sections/show': './src/sites/studio/pages/sections/show.js',
-    'shared/_header_progress':
-      './src/sites/studio/pages/shared/_header_progress.js',
-    'shared/_school_info': './src/sites/studio/pages/shared/_school_info.js',
-    'teacher_dashboard/show':
-      './src/sites/studio/pages/teacher_dashboard/show.js',
-    'teacher_feedbacks/index':
-      './src/sites/studio/pages/teacher_feedbacks/index.js'
+    'layouts/_header': './src/sites/studio/pages/layouts/_header.js'
+    // 'layouts/_race_interstitial':
+    //   './src/sites/studio/pages/layouts/_race_interstitial.js',
+    // 'layouts/_school_info_confirmation_dialog':
+    //   './src/sites/studio/pages/layouts/_school_info_confirmation_dialog.js',
+    // 'layouts/_school_info_interstitial':
+    //   './src/sites/studio/pages/layouts/_school_info_interstitial.js',
+    // 'layouts/_terms_interstitial':
+    //   './src/sites/studio/pages/layouts/_terms_interstitial.js',
+    // 'levels/_bubble_choice':
+    //   './src/sites/studio/pages/levels/_bubble_choice.js',
+    // 'levels/_contract_match':
+    //   './src/sites/studio/pages/levels/_contract_match.js',
+    // 'levels/_curriculum_reference':
+    //   './src/sites/studio/pages/levels/_curriculum_reference.js',
+    // 'levels/_dialog': './src/sites/studio/pages/levels/_dialog.js',
+    // 'levels/_evaluation_multi':
+    //   './src/sites/studio/pages/levels/_evaluation_multi.js',
+    // 'levels/_external': './src/sites/studio/pages/levels/_external.js',
+    // 'levels/_external_link':
+    //   './src/sites/studio/pages/levels/_external_link.js',
+    // 'levels/_level_group': './src/sites/studio/pages/levels/_level_group.js',
+    // 'levels/_match': './src/sites/studio/pages/levels/_match.js',
+    // 'levels/_multi': './src/sites/studio/pages/levels/_multi.js',
+    // 'levels/_standalone_video':
+    //   './src/sites/studio/pages/levels/_standalone_video.js',
+    // 'levels/_teacher_panel':
+    //   './src/sites/studio/pages/levels/_teacher_panel.js',
+    // 'levels/_text_match': './src/sites/studio/pages/levels/_text_match.js',
+    // 'levels/_widget': './src/sites/studio/pages/levels/_widget.js',
+    // 'levels/show': './src/sites/studio/pages/levels/show.js',
+    // 'maker/discountcode': './src/sites/studio/pages/maker/discountcode.js',
+    // 'maker/home': './src/sites/studio/pages/maker/home.js',
+    // 'maker/setup': './src/sites/studio/pages/maker/setup.js',
+    // 'projects/featured': './src/sites/studio/pages/projects/featured.js',
+    // 'projects/index': './src/sites/studio/pages/projects/index.js',
+    // 'projects/public': './src/sites/studio/pages/projects/public.js'
+    // 'scripts/show': './src/sites/studio/pages/scripts/show.js',
+    // 'scripts/stage_extras': './src/sites/studio/pages/scripts/stage_extras.js',
+    // 'sections/show': './src/sites/studio/pages/sections/show.js',
+    // 'shared/_header_progress':
+    //   './src/sites/studio/pages/shared/_header_progress.js',
+    // 'shared/_school_info': './src/sites/studio/pages/shared/_school_info.js',
+    // 'teacher_dashboard/show':
+    //   './src/sites/studio/pages/teacher_dashboard/show.js',
+    // 'teacher_feedbacks/index':
+    //   './src/sites/studio/pages/teacher_feedbacks/index.js'
   };
 
   var internalEntries = {
-    'blocks/edit': './src/sites/studio/pages/blocks/edit.js',
-    'blocks/index': './src/sites/studio/pages/blocks/index.js',
-    'courses/edit': './src/sites/studio/pages/courses/edit.js',
-    levelbuilder: './src/sites/studio/pages/levelbuilder.js',
-    'levels/editors/_all': './src/sites/studio/pages/levels/editors/_all.js',
-    'levels/editors/_applab':
-      './src/sites/studio/pages/levels/editors/_applab.js',
-    'levels/editors/_blockly':
-      './src/sites/studio/pages/levels/editors/_blockly.js',
-    'levels/editors/_craft':
-      './src/sites/studio/pages/levels/editors/_craft.js',
-    'levels/editors/_droplet':
-      './src/sites/studio/pages/levels/editors/_droplet.js',
-    'levels/editors/_dsl': './src/sites/studio/pages/levels/editors/_dsl.js',
-    'levels/editors/_gamelab':
-      './src/sites/studio/pages/levels/editors/_gamelab.js',
-    'levels/editors/_pixelation':
-      './src/sites/studio/pages/levels/editors/_pixelation.js',
-    'levels/editors/_studio':
-      './src/sites/studio/pages/levels/editors/_studio.js',
-    'libraries/edit': './src/sites/studio/pages/libraries/edit.js',
-    'scripts/_form': './src/sites/studio/pages/scripts/_form.js',
-    'shared_blockly_functions/edit':
-      './src/sites/studio/pages/shared_blockly_functions/edit.js'
+    // 'blocks/edit': './src/sites/studio/pages/blocks/edit.js',
+    // 'blocks/index': './src/sites/studio/pages/blocks/index.js',
+    // 'courses/edit': './src/sites/studio/pages/courses/edit.js',
+    // levelbuilder: './src/sites/studio/pages/levelbuilder.js',
+    // 'levels/editors/_all': './src/sites/studio/pages/levels/editors/_all.js',
+    // 'levels/editors/_applab':
+    //   './src/sites/studio/pages/levels/editors/_applab.js',
+    // 'levels/editors/_blockly':
+    //   './src/sites/studio/pages/levels/editors/_blockly.js',
+    // 'levels/editors/_craft':
+    //   './src/sites/studio/pages/levels/editors/_craft.js',
+    // 'levels/editors/_droplet':
+    //   './src/sites/studio/pages/levels/editors/_droplet.js',
+    // 'levels/editors/_dsl': './src/sites/studio/pages/levels/editors/_dsl.js',
+    // 'levels/editors/_gamelab':
+    //   './src/sites/studio/pages/levels/editors/_gamelab.js',
+    // 'levels/editors/_pixelation':
+    //   './src/sites/studio/pages/levels/editors/_pixelation.js',
+    // 'levels/editors/_studio':
+    //   './src/sites/studio/pages/levels/editors/_studio.js',
+    // 'libraries/edit': './src/sites/studio/pages/libraries/edit.js',
+    // 'scripts/_form': './src/sites/studio/pages/scripts/_form.js',
+    // 'shared_blockly_functions/edit':
+    //   './src/sites/studio/pages/shared_blockly_functions/edit.js'
   };
 
   var pegasusEntries = {
-    // code.org
-    'code.org/public/administrators':
-      './src/sites/code.org/pages/public/administrators.js',
-    'code.org/public/dance': './src/sites/code.org/pages/public/dance.js',
-    'code.org/public/educate/curriculum/courses':
-      './src/sites/code.org/pages/public/educate/curriculum/courses.js',
-    'code.org/public/educate/regional-partner/playbook':
-      './src/sites/code.org/pages/public/educate/regional-partner/playbook.js',
-    'code.org/public/student/middle-high':
-      './src/sites/code.org/pages/public/student/middle-high.js',
-    'code.org/public/teacher-dashboard/index':
-      './src/sites/code.org/pages/public/teacher-dashboard/index.js',
-    'code.org/public/yourschool':
-      './src/sites/code.org/pages/public/yourschool.js',
-    'code.org/public/yourschool/thankyou':
-      './src/sites/code.org/pages/public/yourschool/thankyou.js',
-    'code.org/views/regional_partner_search':
-      './src/sites/code.org/pages/views/regional_partner_search.js',
-    'code.org/views/share_privacy':
-      './src/sites/code.org/pages/views/share_privacy.js',
-    'code.org/views/theme_common_head_after':
-      './src/sites/code.org/pages/views/theme_common_head_after.js',
-    'code.org/views/workshop_search':
-      './src/sites/code.org/pages/views/workshop_search.js',
-
-    // hourofcode.com
-    'hourofcode.com/public/index':
-      './src/sites/hourofcode.com/pages/public/index.js',
-    'hourofcode.com/views/theme_common_head_after':
-      './src/sites/hourofcode.com/pages/views/theme_common_head_after.js',
-
-    // shared between code.org and hourofcode.com
-    tutorialExplorer: './src/tutorialExplorer/tutorialExplorer.js'
+    // // code.org
+    // 'code.org/public/administrators':
+    //   './src/sites/code.org/pages/public/administrators.js',
+    // 'code.org/public/dance': './src/sites/code.org/pages/public/dance.js',
+    // 'code.org/public/educate/curriculum/courses':
+    //   './src/sites/code.org/pages/public/educate/curriculum/courses.js',
+    // 'code.org/public/educate/regional-partner/playbook':
+    //   './src/sites/code.org/pages/public/educate/regional-partner/playbook.js',
+    // 'code.org/public/student/middle-high':
+    //   './src/sites/code.org/pages/public/student/middle-high.js',
+    // 'code.org/public/teacher-dashboard/index':
+    //   './src/sites/code.org/pages/public/teacher-dashboard/index.js',
+    // 'code.org/public/yourschool':
+    //   './src/sites/code.org/pages/public/yourschool.js',
+    // 'code.org/public/yourschool/thankyou':
+    //   './src/sites/code.org/pages/public/yourschool/thankyou.js',
+    // 'code.org/views/regional_partner_search':
+    //   './src/sites/code.org/pages/views/regional_partner_search.js',
+    // 'code.org/views/share_privacy':
+    //   './src/sites/code.org/pages/views/share_privacy.js',
+    // 'code.org/views/theme_common_head_after':
+    //   './src/sites/code.org/pages/views/theme_common_head_after.js',
+    // 'code.org/views/workshop_search':
+    //   './src/sites/code.org/pages/views/workshop_search.js',
+    //
+    // // hourofcode.com
+    // 'hourofcode.com/public/index':
+    //   './src/sites/hourofcode.com/pages/public/index.js',
+    // 'hourofcode.com/views/theme_common_head_after':
+    //   './src/sites/hourofcode.com/pages/views/theme_common_head_after.js',
+    //
+    // // shared between code.org and hourofcode.com
+    // tutorialExplorer: './src/tutorialExplorer/tutorialExplorer.js'
   };
 
   var professionalDevelopmentEntries = {
-    'code.org/public/pd-workshop-survey/splat':
-      './src/sites/code.org/pages/public/pd-workshop-survey/splat.js',
-
-    'pd/_jotform_loader': './src/sites/studio/pages/pd/_jotform_loader.js',
-    'pd/_jotform_embed': './src/sites/studio/pages/pd/_jotform_embed.js',
-
-    'pd/workshop_dashboard/index':
-      './src/sites/studio/pages/pd/workshop_dashboard/index.js',
-    'pd/workshop_survey/new':
-      './src/sites/studio/pages/pd/workshop_survey/new.js',
-    'pd/pre_workshop_survey/new':
-      './src/sites/studio/pages/pd/pre_workshop_survey/new.js',
-    'pd/teachercon_survey/new':
-      './src/sites/studio/pages/pd/teachercon_survey/new.js',
-    'pd/application_dashboard/index':
-      './src/sites/studio/pages/pd/application_dashboard/index.js',
-    'pd/application/facilitator_application/new':
-      './src/sites/studio/pages/pd/application/facilitator_application/new.js',
-    'pd/application/teacher_application/new':
-      './src/sites/studio/pages/pd/application/teacher_application/new.js',
-    'pd/application/principal_approval_application/new':
-      './src/sites/studio/pages/pd/application/principal_approval_application/new.js',
-    'pd/fit_weekend_registration/new':
-      './src/sites/studio/pages/pd/fit_weekend_registration/new.js',
-    'pd/workshop_enrollment/new':
-      './src/sites/studio/pages/pd/workshop_enrollment/new.js',
-    'pd/workshop_enrollment/cancel':
-      './src/sites/studio/pages/pd/workshop_enrollment/cancel.js',
-
-    'pd/professional_learning_landing/index':
-      './src/sites/studio/pages/pd/professional_learning_landing/index.js',
-    'pd/regional_partner_contact/new':
-      './src/sites/studio/pages/pd/regional_partner_contact/new.js',
-    'pd/regional_partner_mini_contact/new':
-      './src/sites/studio/pages/pd/regional_partner_mini_contact/new.js',
-
-    'pd/international_opt_in/new':
-      './src/sites/studio/pages/pd/international_opt_in/new.js',
-
-    'peer_reviews/dashboard':
-      './src/sites/studio/pages/peer_reviews/dashboard.js',
-    'peer_reviews/show': './src/sites/studio/pages/peer_reviews/show.js'
+    // 'code.org/public/pd-workshop-survey/splat':
+    //   './src/sites/code.org/pages/public/pd-workshop-survey/splat.js',
+    //
+    // 'pd/_jotform_loader': './src/sites/studio/pages/pd/_jotform_loader.js',
+    // 'pd/_jotform_embed': './src/sites/studio/pages/pd/_jotform_embed.js',
+    //
+    // 'pd/workshop_dashboard/index':
+    //   './src/sites/studio/pages/pd/workshop_dashboard/index.js',
+    // 'pd/workshop_survey/new':
+    //   './src/sites/studio/pages/pd/workshop_survey/new.js',
+    // 'pd/pre_workshop_survey/new':
+    //   './src/sites/studio/pages/pd/pre_workshop_survey/new.js',
+    // 'pd/teachercon_survey/new':
+    //   './src/sites/studio/pages/pd/teachercon_survey/new.js',
+    // 'pd/application_dashboard/index':
+    //   './src/sites/studio/pages/pd/application_dashboard/index.js',
+    // 'pd/application/facilitator_application/new':
+    //   './src/sites/studio/pages/pd/application/facilitator_application/new.js',
+    // 'pd/application/teacher_application/new':
+    //   './src/sites/studio/pages/pd/application/teacher_application/new.js',
+    // 'pd/application/principal_approval_application/new':
+    //   './src/sites/studio/pages/pd/application/principal_approval_application/new.js',
+    // 'pd/fit_weekend_registration/new':
+    //   './src/sites/studio/pages/pd/fit_weekend_registration/new.js',
+    // 'pd/workshop_enrollment/new':
+    //   './src/sites/studio/pages/pd/workshop_enrollment/new.js',
+    // 'pd/workshop_enrollment/cancel':
+    //   './src/sites/studio/pages/pd/workshop_enrollment/cancel.js',
+    //
+    // 'pd/professional_learning_landing/index':
+    //   './src/sites/studio/pages/pd/professional_learning_landing/index.js',
+    // 'pd/regional_partner_contact/new':
+    //   './src/sites/studio/pages/pd/regional_partner_contact/new.js',
+    // 'pd/regional_partner_mini_contact/new':
+    //   './src/sites/studio/pages/pd/regional_partner_mini_contact/new.js',
+    //
+    // 'pd/international_opt_in/new':
+    //   './src/sites/studio/pages/pd/international_opt_in/new.js',
+    //
+    // 'peer_reviews/dashboard':
+    //   './src/sites/studio/pages/peer_reviews/dashboard.js',
+    // 'peer_reviews/show': './src/sites/studio/pages/peer_reviews/show.js'
   };
 
   var otherEntries = {
@@ -664,27 +664,27 @@ describe('entry tests', () => {
     // embedded video page, keeping it fairly lightweight.
     // (I wonder how much more we could slim it down by removing jQuery!)
     // @see embed.html.haml
-    embedVideo: './src/sites/studio/pages/embedVideo.js',
+    // embedVideo: './src/sites/studio/pages/embedVideo.js',
 
     // embedBlocks.js is just React, the babel-polyfill, and a few other dependencies
     // in a bundle to minimize the amount of stuff we need when loading blocks
     // in an iframe.
-    embedBlocks: './src/sites/studio/pages/embedBlocks.js',
+    // embedBlocks: './src/sites/studio/pages/embedBlocks.js',
 
-    publicKeyCryptography: './src/publicKeyCryptography/main.js',
-
-    brambleHost: './src/weblab/brambleHost.js',
-
-    'applab-api': './src/applab/api-entry.js',
-    'gamelab-api': './src/p5lab/gamelab/api-entry.js',
-
-    'shared/_check_admin': './src/sites/studio/pages/shared/_check_admin.js',
-
-    'census_reviewers/review_reported_inaccuracies':
-      './src/sites/studio/pages/census_reviewers/review_reported_inaccuracies.js',
-
-    regionalPartnerMiniContact:
-      './src/regionalPartnerMiniContact/regionalPartnerMiniContact',
+    // publicKeyCryptography: './src/publicKeyCryptography/main.js',
+    //
+    // brambleHost: './src/weblab/brambleHost.js',
+    //
+    // 'applab-api': './src/applab/api-entry.js',
+    // 'gamelab-api': './src/gamelab/api-entry.js',
+    //
+    // 'shared/_check_admin': './src/sites/studio/pages/shared/_check_admin.js',
+    //
+    // 'census_reviewers/review_reported_inaccuracies':
+    //   './src/sites/studio/pages/census_reviewers/review_reported_inaccuracies.js',
+    //
+    // regionalPartnerMiniContact:
+    //   './src/regionalPartnerMiniContact/regionalPartnerMiniContact',
 
     cookieBanner: './src/cookieBanner/cookieBanner.js'
   };
@@ -767,13 +767,13 @@ describe('entry tests', () => {
         splitChunks: {
           cacheGroups: {
             // Pull any module shared by 2+ appsEntries into the "common" chunk.
-            common: {
-              name: 'common',
-              minChunks: 2,
-              chunks: chunk => {
-                return _.keys(appsEntries).includes(chunk.name);
-              }
-            },
+            // common: {
+            //   name: 'common',
+            //   minChunks: 2,
+            //   chunks: chunk => {
+            //     return _.keys(appsEntries).includes(chunk.name);
+            //   }
+            // },
             // Pull any module shared by 2+ codeStudioEntries into the
             // "code-studio-common" chunk.
             'code-studio-common': {
@@ -784,7 +784,7 @@ describe('entry tests', () => {
                 return chunkNames.includes(chunk.name);
               },
               priority: 10
-            },
+            }
             // With just the cacheGroups listed above, we end up with many
             // duplicate modules between the "common" and "code-studio-common"
             // chunks. The next cache group eliminates some of this duplication
@@ -807,17 +807,17 @@ describe('entry tests', () => {
             // cacheGroups will go away.
             //
             // For more information see: https://webpack.js.org/guides/code-splitting/
-            'code-studio-multi': {
-              name: 'code-studio-common',
-              minChunks: _.keys(appsEntries).length + 1,
-              chunks: chunk => {
-                const chunkNames = _.keys(codeStudioEntries).concat(
-                  _.keys(appsEntries)
-                );
-                return chunkNames.includes(chunk.name);
-              },
-              priority: 20
-            }
+            // 'code-studio-multi': {
+            //   name: 'code-studio-common',
+            //   minChunks: _.keys(appsEntries).length + 1,
+            //   chunks: chunk => {
+            //     const chunkNames = _.keys(codeStudioEntries).concat(
+            //       _.keys(appsEntries)
+            //     );
+            //     return chunkNames.includes(chunk.name);
+            //   },
+            //   priority: 20
+            // }
           }
         }
       },
