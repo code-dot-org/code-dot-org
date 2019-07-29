@@ -289,21 +289,13 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     assert_equal [workshop_should_have_ended.id], Pd::Workshop.should_have_ended.pluck(:id)
   end
 
-  test 'process_ended_workshop_async' do
-    workshop = create :pd_ended_workshop
-    Pd::Workshop.expects(:find).with(workshop.id).returns(workshop)
-    workshop.expects(:send_exit_surveys)
+  test 'end workshop sends exit surveys' do
+    @workshop.sessions << create(:pd_session)
+    @workshop.start!
 
-    Pd::Workshop.process_ended_workshop_async workshop.id
-  end
+    @workshop.expects(:send_exit_surveys)
 
-  test 'process_ended_workshop_async for non-closed workshop raises error' do
-    workshop = create :pd_workshop
-
-    e = assert_raises RuntimeError do
-      Pd::Workshop.process_ended_workshop_async workshop.id
-    end
-    assert e.message.include? 'Unexpected workshop state'
+    @workshop.end!
   end
 
   test 'account_required_for_attendance?' do
