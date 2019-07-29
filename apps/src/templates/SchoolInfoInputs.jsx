@@ -126,6 +126,7 @@ export default class SchoolInfoInputs extends Component {
     return (
       <div style={{width: 600, ...this.props.styles}}>
         <CountryAutocompleteDropdown
+          id="randome-uniquie-id"
           onChange={this.props.onCountryChange}
           value={this.props.country}
           fieldName={this.props.fieldNames.country}
