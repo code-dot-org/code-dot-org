@@ -556,6 +556,30 @@ describe('SchoolInfoInterstitial', () => {
       );
     });
 
+    it('submits with only non-US', () => {
+      const wrapper = shallow(
+        <SchoolInfoInterstitial
+          {...MINIMUM_PROPS}
+          scriptData={{
+            ...MINIMUM_PROPS.scriptData,
+            existingSchoolInfo: {
+              country: 'Algeria',
+              school_type: ''
+            }
+          }}
+        />
+      );
+      wrapper.find('Button[id="save-button"]').simulate('click');
+      expect(server.requests[0].requestBody).to.equal(
+        [
+          '_method=patch',
+          'auth_token=fake_auth_token',
+          'user%5Bschool_info_attributes%5D%5Bcountry%5D=Algeria',
+          'user%5Bschool_info_attributes%5D%5Bschool_type%5D='
+        ].join('&')
+      );
+    });
+
     it('submits with non-US, NCES school type', () => {
       const wrapper = shallow(
         <SchoolInfoInterstitial
