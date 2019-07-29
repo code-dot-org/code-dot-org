@@ -510,6 +510,7 @@ describe('entry tests', () => {
       './src/sites/studio/pages/layouts/_terms_interstitial.js',
     'levels/_bubble_choice':
       './src/sites/studio/pages/levels/_bubble_choice.js',
+    'levels/_content': './src/sites/studio/pages/levels/_content.js',
     'levels/_contract_match':
       './src/sites/studio/pages/levels/_contract_match.js',
     'levels/_curriculum_reference':

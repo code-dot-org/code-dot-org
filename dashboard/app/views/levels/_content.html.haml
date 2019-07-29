@@ -4,8 +4,12 @@
 - app, data, content_class, source_level, hide_header, postcontent = %i(app data content_class source_level hide_header postcontent).map{ |x| local_assigns[x] }
 - level = source_level || @level
 
+- content_for(:head) do
+  %script{src: minifiable_asset_path('js/levels/_content.js')}
+
 - unless data['title'].blank? || hide_header
   %h1!= render_multi_or_match_content(level.localized_property('title')) unless app == 'external'
+
 %div.content-level{class: (content_class unless content_class.blank?)}
   - unless app == 'external'
     - unless data['content1'].blank?
@@ -14,8 +18,7 @@
       %p.content.content2!= render_multi_or_match_content(level.localized_property('content2'))
     - unless data['content3'].blank?
       %p.content.content3!= render_multi_or_match_content(level.localized_property('content3'))
-  / Markdown will be rendered clientside by _external.js
+  / Markdown will be rendered clientside by _content.js
   - if data['markdown'].present?
-    #markdown
-      = level.localized_property('markdown')
+    #markdown{data: {markdown: level.localized_property('markdown')}}
   = postcontent
