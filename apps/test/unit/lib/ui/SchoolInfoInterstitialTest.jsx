@@ -8,7 +8,7 @@ import Button from '@cdo/apps/templates/Button';
 import SchoolInfoInputs from '@cdo/apps/templates/SchoolInfoInputs';
 import SchoolInfoInterstitial from '@cdo/apps/lib/ui/SchoolInfoInterstitial';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
-import CountryAutocompleteDropdown from '@cdo/apps/templates/CountryAutocompleteDropdown';
+// import CountryAutocompleteDropdown from '@cdo/apps/templates/CountryAutocompleteDropdown';
 
 describe('SchoolInfoInterstitial', () => {
   const MINIMUM_PROPS = {
@@ -157,7 +157,7 @@ describe('SchoolInfoInterstitial', () => {
     );
   });
 
-  it('non-US', () => {
+  it('calls onChange function when country is changed from US to non-US', () => {
     let wrapper = mount(
       <SchoolInfoInterstitial
         {...MINIMUM_PROPS}
@@ -189,26 +189,20 @@ describe('SchoolInfoInterstitial', () => {
       />
     );
 
-
-
-
-
-    // import CountryAutocompleteDropdown from '@cdo/apps/templates/CountryAutocompleteDropdown';
-    console.log(wrapper.state("ncesSchoolId"));
-
-    const event= { value: 'Sweden' };
+    console.log(wrapper.state('ncesSchoolId'));
+    const event = {value: 'Sweden'};
     wrapper.instance().onCountryChange(undefined, event);
-
     console.log(wrapper.state());
     expect(wrapper.state('country')).to.equal('Sweden');
     expect(wrapper.state('ncesSchoolId')).to.equal('');
+    // Attempt to simulate user's behavior
     // wrapper.first(SchoolInfoInputs).simulate('change');
     // const countryInput = wrapper.first(CountryAutocompleteDropdown);
 
-//   countryInput.simulate('change', { value: "Sweden" });
-// console.log('===>', countryInput.html());
-//     console.log(wrapper.state('ncesSchoolId'));
-//     console.log(wrapper.state('ncesSchoolId'));
+    //   countryInput.simulate('change', { value: "Sweden" });
+    // console.log('===>', countryInput.html());
+    //     console.log(wrapper.state('ncesSchoolId'));
+    //     console.log(wrapper.state('ncesSchoolId'));
   });
 
   it('interprets initial country "US" as "United States"', () => {
