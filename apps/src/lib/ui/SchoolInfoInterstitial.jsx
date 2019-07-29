@@ -304,7 +304,6 @@ export default class SchoolInfoInterstitial extends React.Component {
   };
 
   onCountryChange = (_, event) => {
-    console.log('Event handler called ====>');
     const newCountry = event ? event.value : '';
     this.setState({country: newCountry, ncesSchoolId: '', errors: {}});
   };
@@ -351,7 +350,6 @@ export default class SchoolInfoInterstitial extends React.Component {
           <div style={styles.middle}>
             <p>{i18n.schoolInfoInterstitialDescription()}</p>
             <SchoolInfoInputs
-              onChange={() => console.log('Calling the test function')}
               ref={ref => (this.schoolInfoInputs = ref)}
               onCountryChange={this.onCountryChange}
               onSchoolTypeChange={this.onSchoolTypeChange}

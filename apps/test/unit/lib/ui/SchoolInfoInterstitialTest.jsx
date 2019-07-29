@@ -188,21 +188,10 @@ describe('SchoolInfoInterstitial', () => {
         onSchoolNotFoundChange={wrapper.instance().onSchoolNotFoundChange}
       />
     );
-
-    console.log(wrapper.state('ncesSchoolId'));
     const event = {value: 'Sweden'};
     wrapper.instance().onCountryChange(undefined, event);
-    console.log(wrapper.state());
     expect(wrapper.state('country')).to.equal('Sweden');
     expect(wrapper.state('ncesSchoolId')).to.equal('');
-    // Attempt to simulate user's behavior
-    // wrapper.first(SchoolInfoInputs).simulate('change');
-    // const countryInput = wrapper.first(CountryAutocompleteDropdown);
-
-    //   countryInput.simulate('change', { value: "Sweden" });
-    // console.log('===>', countryInput.html());
-    //     console.log(wrapper.state('ncesSchoolId'));
-    //     console.log(wrapper.state('ncesSchoolId'));
   });
 
   it('interprets initial country "US" as "United States"', () => {
