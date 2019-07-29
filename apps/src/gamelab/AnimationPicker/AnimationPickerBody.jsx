@@ -2,17 +2,17 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import Radium from 'radium';
-import color from '../../util/color';
+import color from '@cdo/apps/util/color';
 import {AnimationCategories, CostumeCategories} from '../constants';
-import gamelabMsg from '@cdo/gamelab/locale';
+var msg = require('@cdo/gamelab/locale') || require('@cdo/spritelab/locale');
 import animationLibrary from '../animationLibrary.json';
 import spriteCostumeLibrary from '../spriteCostumeLibrary.json';
 import ScrollableList from '../AnimationTab/ScrollableList.jsx';
 import styles from './styles';
 import AnimationPickerListItem from './AnimationPickerListItem.jsx';
 import AnimationPickerSearchBar from './AnimationPickerSearchBar.jsx';
-import PaginationWrapper from '../../templates/PaginationWrapper';
-import {searchAssets} from '../../code-studio/assets/searchAssets';
+import PaginationWrapper from '@cdo/apps/templates/PaginationWrapper';
+import {searchAssets} from '@cdo/apps/code-studio/assets/searchAssets';
 import {connect} from 'react-redux';
 
 const MAX_SEARCH_RESULTS = 27;
@@ -118,9 +118,9 @@ class AnimationPickerBody extends React.Component {
 
     return (
       <div>
-        <h1 style={styles.title}>{gamelabMsg.animationPicker_title()}</h1>
+        <h1 style={styles.title}>{msg.animationPicker_title()}</h1>
         {!this.props.is13Plus && !hideUploadOption && (
-          <WarningLabel>{gamelabMsg.animationPicker_warning()}</WarningLabel>
+          <WarningLabel>{msg.animationPicker_warning()}</WarningLabel>
         )}
         <AnimationPickerSearchBar
           value={this.state.searchQuery}
@@ -164,13 +164,13 @@ class AnimationPickerBody extends React.Component {
             pageCount === 0) && (
             <div>
               <AnimationPickerListItem
-                label={gamelabMsg.animationPicker_drawYourOwn()}
+                label={msg.animationPicker_drawYourOwn()}
                 icon="pencil"
                 onClick={this.props.onDrawYourOwnClick}
               />
               {!hideUploadOption && (
                 <AnimationPickerListItem
-                  label={gamelabMsg.animationPicker_uploadImage()}
+                  label={msg.animationPicker_uploadImage()}
                   icon="upload"
                   onClick={this.props.onUploadClick}
                 />

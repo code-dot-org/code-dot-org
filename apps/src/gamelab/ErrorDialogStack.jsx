@@ -3,15 +3,15 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import * as actions from './errorDialogStackModule';
 import {connect} from 'react-redux';
-import BaseDialog from '../templates/BaseDialog.jsx';
+import BaseDialog from '@cdo/apps/templates/BaseDialog.jsx';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
-import gamelabMsg from '@cdo/gamelab/locale';
+var labMsg = require('@cdo/gamelab/locale') || require('@cdo/spritelab/locale');
 import msg from '@cdo/locale';
 import Button from '@cdo/apps/templates/Button';
 import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
 import * as animationActions from './animationListModule';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
-import {getCurrentId} from '../code-studio/initApp/project';
+import {getCurrentId} from '@cdo/apps/code-studio/initApp/project';
 
 /**
  * Renders error dialogs in sequence, given a stack of errors.
@@ -87,7 +87,7 @@ class ErrorDialogStack extends React.Component {
         {error.error_type === 'anim_load' && (
           <div>
             <p>
-              {gamelabMsg.errorLoadingAnimation({animationName: animationName})}
+              {labMsg.errorLoadingAnimation({animationName: animationName})}
             </p>
             <p>
               {msg.contactWithoutEmail()}{' '}
