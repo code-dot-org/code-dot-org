@@ -49,13 +49,13 @@ module Pd::SurveyPipeline
       }
 
       summary_data = [
-        {workshop_id: @workshop.id, form_id: form_id, facilitator_id: @facilitators.first.id,
+        {workshop_id: @workshop.id, day: 0, form_id: form_id, facilitator_id: @facilitators.first.id,
           name: 'importance', reducer: 'histogram', reducer_result: {'Agree': 2}},
-        {workshop_id: @workshop.id, form_id: form_id, facilitator_id: @facilitators.first.id,
+        {workshop_id: @workshop.id, day: 0, form_id: form_id, facilitator_id: @facilitators.first.id,
           name: 'feedback', reducer: 'no_op', reducer_result: ['Feedback 1', 'Feedback 2']},
-        {workshop_id: @workshop.id, form_id: form_id, facilitator_id: @facilitators.last.id,
+        {workshop_id: @workshop.id, day: 0, form_id: form_id, facilitator_id: @facilitators.last.id,
           name: 'importance', reducer: 'histogram', reducer_result: {'Neutral': 1, 'Disagree': 1}},
-        {workshop_id: @workshop.id, form_id: form_id, facilitator_id: @facilitators.last.id,
+        {workshop_id: @workshop.id, day: 0, form_id: form_id, facilitator_id: @facilitators.last.id,
           name: 'feedback', reducer: 'no_op', reducer_result: ['Feedback 3']}
       ]
 
@@ -129,9 +129,9 @@ module Pd::SurveyPipeline
       }
 
       summary_data = [
-        {workshop_id: @workshop.id, form_id: form_id, name: 'importance',
+        {workshop_id: @workshop.id, day: 0, form_id: form_id, name: 'importance',
           reducer: 'histogram', reducer_result: {'Agree': 2, 'Neutral': 1, 'Disagree': 1}},
-        {workshop_id: @workshop.id, form_id: form_id, name: 'feedback',
+        {workshop_id: @workshop.id, day: 0, form_id: form_id, name: 'feedback',
           reducer: 'no_op', reducer_result: ['Feedback 1', 'Feedback 2', 'Feedback 3']}
       ]
 
