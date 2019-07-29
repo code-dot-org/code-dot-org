@@ -8,6 +8,7 @@ import Button from '@cdo/apps/templates/Button';
 import SchoolInfoInputs from '@cdo/apps/templates/SchoolInfoInputs';
 import SchoolInfoInterstitial from '@cdo/apps/lib/ui/SchoolInfoInterstitial';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import CountryAutocompleteDropdown from '@cdo/apps/templates/CountryAutocompleteDropdown';
 
 describe('SchoolInfoInterstitial', () => {
   const MINIMUM_PROPS = {
@@ -154,6 +155,60 @@ describe('SchoolInfoInterstitial', () => {
         onSchoolNotFoundChange={wrapper.instance().onSchoolNotFoundChange}
       />
     );
+  });
+
+  it('non-US', () => {
+    let wrapper = mount(
+      <SchoolInfoInterstitial
+        {...MINIMUM_PROPS}
+        scriptData={{
+          ...MINIMUM_PROPS.scriptData,
+          existingSchoolInfo: {
+            school_id: '123',
+            country: 'United States',
+            school_type: 'public',
+            school_name: 'Test School',
+            full_address: 'Seattle'
+          }
+        }}
+      />
+    );
+
+    expect(wrapper).to.containMatchingElement(
+      <SchoolInfoInputs
+        country={'United States'}
+        schoolType={'public'}
+        ncesSchoolId={'123'}
+        schoolName={'Test School'}
+        schoolLocation={'Seattle'}
+        useGoogleLocationSearch={true}
+        onCountryChange={wrapper.instance().onCountryChange}
+        onSchoolTypeChange={wrapper.instance().onSchoolTypeChange}
+        onSchoolChange={wrapper.instance().onSchoolChange}
+        onSchoolNotFoundChange={wrapper.instance().onSchoolNotFoundChange}
+      />
+    );
+
+
+
+
+
+    // import CountryAutocompleteDropdown from '@cdo/apps/templates/CountryAutocompleteDropdown';
+    console.log(wrapper.state("ncesSchoolId"));
+
+    const event= { value: 'Sweden' };
+    wrapper.instance().onCountryChange(undefined, event);
+
+    console.log(wrapper.state());
+    expect(wrapper.state('country')).to.equal('Sweden');
+    expect(wrapper.state('ncesSchoolId')).to.equal('');
+    // wrapper.first(SchoolInfoInputs).simulate('change');
+    // const countryInput = wrapper.first(CountryAutocompleteDropdown);
+
+//   countryInput.simulate('change', { value: "Sweden" });
+// console.log('===>', countryInput.html());
+//     console.log(wrapper.state('ncesSchoolId'));
+//     console.log(wrapper.state('ncesSchoolId'));
   });
 
   it('interprets initial country "US" as "United States"', () => {
