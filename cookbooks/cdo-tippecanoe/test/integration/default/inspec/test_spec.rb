@@ -1,6 +1,3 @@
-require 'serverspec'
-set :backend, :exec
-
 def file_exist(file)
   describe file(file) do
     it {should exist}
@@ -9,7 +6,7 @@ end
 
 def cmd(exec, match)
   describe command(exec) do
-    its(:stdout) {should match match}
+    its(:stderr) {should match match}
   end
 end
 
