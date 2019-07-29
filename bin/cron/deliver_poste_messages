@@ -9,6 +9,7 @@ require 'base64'
 require 'nokogiri'
 require src_dir 'forms'
 require src_dir 'abort_email_error'
+require 'cdo/aws/s3'
 
 if CDO.newrelic_logging
   require 'newrelic_rpm'

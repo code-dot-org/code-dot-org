@@ -209,29 +209,28 @@ module Poste2
     path
   end
 
-  # Takes a hash of name=>content, saves each to a file, and returns a
-  # hash of name=>saved_filename
+  # Takes a hash of name=>content, saves each to S3, and returns a
+  # hash of name=>saved_s3_key
   def self.save_attachments(attachments)
-    # Prevent saving attachments on a non-daemon server,
-    # to avoid missing file errors in deliver_poste_messages which runs on the daemon
-    raise "Emails with attachments can only be generated on a daemon server" unless CDO.daemon
-
     timestamp = DateTime.now.strftime('%Y%m%d_%H%M_%S%L')
     {}.tap do |saved|
       attachments.each do |name, content|
-        filename = File.expand_path "#{attachment_dir}/#{timestamp}-#{name}"
-        File.open(filename, 'w+b') {|f| f.write content}
-        saved[name] = filename
+        filename = "#{timestamp}-#{name}"
+        saved[name] = AWS::S3.upload_to_bucket(
+          'cdo-poste-attachments',
+          filename,
+          content
+        )
       end
     end
   end
 
-  # Takes a hash of name=>saved_filename, loads each file, and returns a
+  # Takes a hash of name=>saved_s3_key, loads each from S3, and returns a
   # hash of name=>content
   def self.load_attachments(attachments)
     {}.tap do |results|
       attachments.each do |name, filename|
-        content = File.binread(filename)
+        content = AWS::S3.download_from_bucket('cdo-poste-attachments', filename)
         results[name] = Base64.encode64(content)
       end
     end
