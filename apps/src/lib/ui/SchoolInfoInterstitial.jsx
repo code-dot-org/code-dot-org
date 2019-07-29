@@ -217,8 +217,8 @@ export default class SchoolInfoInterstitial extends React.Component {
     if (this.isBlank(country)) {
       errors.country = true;
       isValid = false;
-    } else {
-      if (this.isBlank(schoolType) && country === 'United States') {
+    } else if (country === 'United States') {
+      if (this.isBlank(schoolType)) {
         errors.schoolType = true;
         isValid = false;
       } else {
