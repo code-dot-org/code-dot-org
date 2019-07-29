@@ -8,7 +8,6 @@ import Button from '@cdo/apps/templates/Button';
 import SchoolInfoInputs from '@cdo/apps/templates/SchoolInfoInputs';
 import SchoolInfoInterstitial from '@cdo/apps/lib/ui/SchoolInfoInterstitial';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
-// import CountryAutocompleteDropdown from '@cdo/apps/templates/CountryAutocompleteDropdown';
 
 describe('SchoolInfoInterstitial', () => {
   const MINIMUM_PROPS = {
@@ -157,8 +156,8 @@ describe('SchoolInfoInterstitial', () => {
     );
   });
 
-  it('calls onChange function when country is changed from US to non-US', () => {
-    let wrapper = mount(
+  it('clears the school ID when country is changed', () => {
+    const wrapper = shallow(
       <SchoolInfoInterstitial
         {...MINIMUM_PROPS}
         scriptData={{
@@ -173,23 +172,9 @@ describe('SchoolInfoInterstitial', () => {
         }}
       />
     );
-
-    expect(wrapper).to.containMatchingElement(
-      <SchoolInfoInputs
-        country={'United States'}
-        schoolType={'public'}
-        ncesSchoolId={'123'}
-        schoolName={'Test School'}
-        schoolLocation={'Seattle'}
-        useGoogleLocationSearch={true}
-        onCountryChange={wrapper.instance().onCountryChange}
-        onSchoolTypeChange={wrapper.instance().onSchoolTypeChange}
-        onSchoolChange={wrapper.instance().onSchoolChange}
-        onSchoolNotFoundChange={wrapper.instance().onSchoolNotFoundChange}
-      />
-    );
-    const event = {value: 'Sweden'};
-    wrapper.instance().onCountryChange(undefined, event);
+    expect(wrapper.state('country')).to.equal('United States');
+    expect(wrapper.state('ncesSchoolId')).to.equal('123');
+    wrapper.instance().onCountryChange(undefined, {value: 'Sweden'});
     expect(wrapper.state('country')).to.equal('Sweden');
     expect(wrapper.state('ncesSchoolId')).to.equal('');
   });
