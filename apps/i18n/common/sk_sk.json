@@ -543,7 +543,6 @@
   "feedbackCommentAreaHeader": "Spätná väzba od učiteľa",
   "feedbackFrom": "Spätná väzba od {teacher}",
   "feedbackLoadError": "Došlo k chybe pri pripájaní na naše servery. Obnovte stránku a skúste znova.",
-  "feedbackNotificationLastUpdated": "Naposledy aktualizované:",
   "feedbackPlaceholder": "Sem zadajte prosím spätnú väzbu pre študenta. Tá sa študentovi zobrazí po kliknutí na \"Uložiť a zdielať\".",
   "feedbackSaveError": "Pri ukladaní spätnej väzby nastala chyba. Skúste ju, prosím, uložiť znova.",
   "fewerNumberOfBlocks": "Menej ako {numBlocks, plural,one {1 blok}other {# blokov}} použitých!",

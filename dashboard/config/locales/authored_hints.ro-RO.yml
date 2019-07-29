@@ -38,7 +38,7 @@ ro-RO:
       2-3 Artist 8:
         2-3_Artist_8_a: Dacă tăiaţi 200 în jumătate, cât de mulţi pixeli trebuie să
           aibă fiecare pătrat în lățime?
-      2-3 Artist 9:
+      2-3 Artist 9 NEW:
         2-3_Artist_9_a: Acest romb este într-adevăr doar un pătrat rotit într-o parte
       2-3 Artist Debugging 10:
         2-3_Artist_Debugging_10_b: "\\*\\* Încercare şi eroare este perfect în regulă
@@ -1502,10 +1502,8 @@ ro-RO:
           pe hârtie fără bucle prima dată și căutați modele de structură.
       courseD_maze_ramp6:
         courseC_maze_programming6_a: Există două metode de a rezolva acest puzzle!
-      courseD_scrat_predict1:
-        courseF_maze_ramp6_a: Există două metode de a rezolva acest puzzle!
-      courseD_scrat_ramp6:
-        courseC_maze_programming6_a: Există două metode de a rezolva acest puzzle!
+      courseD_scrat_ramp7:
+        courseD_scrat_programming6_a: Există două metode de a rezolva acest puzzle!
       courseE_artist_concept_challenge1:
         courseE_artist_concept_challenge1_a: 'Jumătatea de hexagon are o **lungime
           de 30** și se întoarce la dreapta cu **60 grade**.  '
@@ -1535,13 +1533,6 @@ ro-RO:
         courseD_artist_functions8_g: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       courseE_artist_functions8_2019:
         courseD_artist_functions8_g: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
-      courseE_artist_ramp9:
-        courseF_farmer_ramp11_a: Dacă aveți dificultăți în a vedea unde ar trebui
-          să meargă buclele, încercați să codificați totul, căutând ulterior un model.
-        courseF_farmer_ramp11_c: Nu este nevoie să utilizați 5 bucle repetitive pentru
-          a aduna toată salata verde. În schimb, glisați-vă bucla de repetiții cu
-          care culegeți salata în interiorul unei alte bucle (împreună cu un bloc
-          <xml><block type="maze_moveForward"/></xml>) și o veți avea!
       courseE_bee_concept3:
         courseE_bee_concept3a_b: Dacă nu reușiți să vă dați seama unde să puneți buclele,
           încercați să vă scrieți codul pas cu pas și să căutați modele.

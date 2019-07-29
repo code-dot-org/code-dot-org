@@ -536,6 +536,7 @@ ar-SA:
   sports_athlete_Harrison: هاريسون بارنز، صاحب الميدالية الذهبية الأولمبية وبطل الدوري
     الأميركي للمحترفين، دالاس مافيريكس
   watch_inspirational_videos: قبلَ أنْ تبدأ، شَاهِد أَحَدّ هَذِه الفِيديُوهات الإلْهَامِيَة
+  video_title_cs_is_everything: علوم الكمبيوتر تغير كل شيء
   video_title_inspire_girl: الهام بنت
   video_title_cs_intro: تقديم لعلوم الحاسوب
   video_title_schools_dont_teach: ما لا تدرسه معظم المدارس
@@ -1046,9 +1047,6 @@ ar-SA:
   coursee-2017_name: الدورة E (2017)
   coursef-2017_name: الدورة F (2017)
   pre-express-2018_name: دورة سريعة لمستوى ما قبل القراءة (2018)
-  cspunit2_name: "(قديم) الوحدة 2: الإنترنت"
-  cspunit3_name: "(قديم) الوحدة 3: البرمجة"
-  cspunit4_name: "(قديم) الوحدة 4: البيانات"
   accelerated_name: دورة تدريبية مسرّعة
   express_name: دورة سريعة
   20-hour_name: دورة تدريبية مسرّعة
@@ -1058,8 +1056,6 @@ ar-SA:
   classicmaze_name: المتاهة الكلاسيكية
   iceage_name: العصر الجليدي
   minecraft_name: Minecraft
-  math_category_name: العمليات الحسابية
-  hoc_category_name: ساعة البرمجة
   applab_name: مختبر التطبيق
   basketball_name: اصنع لعبة كرة السلة
   applab_gradelevel: للأعمار 13 +
@@ -1681,6 +1677,7 @@ ar-SA:
     يمكنك تجربة رؤية الصفحة, ولكن توقع أن لا تعمل بكافة الوظائف و قد تتعطل.
   starwars_shortcode: نجمة
   flappy_shortcode: رفرف
+  header_my_dashboard: لوحة التحكم
   header_courses: الدروس
   header_course_catalog: فهرس الدورة
   header_project_gallery: المشاريع
@@ -1769,6 +1766,7 @@ ar-SA:
   hoc2018_mc_video_5min: 5 دقائق
   hoc2018_mc_video_title_steph_curry: ساعة برمجة مع ستف كاري
   hoc2018_mc_video_title_sports: ادفع نفسك. يمكن لأي شخص أن يتعلم.
+  hoc2018_mc_video_title_cs_is_everything: علوم الكمبيوتر تغير كل شيء
   hoc2018_mc_video_title_inspire_girl: الهام بنت
   hoc2018_mc_video_title_cs_intro: تقديم لعلوم الحاسوب
   hoc2018_mc_video_title_schools_dont_teach: ما لا تدرسه معظم المدارس

@@ -2,18 +2,22 @@ is:
   data:
     script:
       category:
+        csd_category_name: Uppgötvanir tölvunarfræði ('17-'18)
         csd_2018_category_name: Uppgötvanir tölvunarfræði ('18-'19)
+        csd_2019_category_name: Uppgötvanir tölvunarfræði ('19-'20)
         csf_category_name: TF Grunnur
         csf_2018_category_name: Grunnatriði tölvunarfræði (2018)
         csf_international_category_name: Grunnatriði TF - alþjóðlegt
         csf2_draft_category_name: 'Í þróun: Námskeið A-F'
         csp_category_name: "'15-'16 TF Grundvöllur"
         csp_2018_category_name: Grunnhugtök tölvunarfræði ('18-'19)
+        csp_2019_category_name: Grunnhugtök tölvunarfræði ('19-'20)
         cspexams_category_name: Æfingapróf fyrir Undirstöðuatriði TF
         csp17_category_name: Grunnhugtök tölvunarfræði
         full_course_category_name: Heil námskeið
         hoc_category_name: Klukkustund kóðunar
         math_category_name: Reikningur
+        research_studies_category_name: Rannsóknanám
       name:
         course1:
           title: Námskeið 1
@@ -351,6 +355,8 @@ is:
               name: 'Forritunarhugtak: Föll'
             'Programming Concept: Loops':
               name: 'Forritunarhugtak: Lykkjur'
+            Reflection:
+              name: Endurlit
             Teacher Dashboard:
               name: Stjórnborð kennara
             Unplugged lessons:
@@ -1969,10 +1975,20 @@ is:
               name: Notkun líkana í skólastofunni
             What to Expect:
               name: Við hverju má búast
+        cspoptional:
+          stages:
+            Unit 4 - Hard Problems - The Traveling Salesperson Problem:
+              name: Kafli 4 - Erfið verkefni - Farandsalavandamálið
+            Unit 4 - One-Way Functions - The WiFi Hotspot Problem:
+              name: Kafli 4 - Einstefnuföll - Vandamál heitra reita
         cspunit1-support:
           stages:
             Chapter Overviews:
               name: Yfirlit kafla
+            Encoding and Sending Numbers:
+              name: Kóðun og sending talna
+            Intro to the Unit:
+              name: Kynning á kaflanum
             Sending Binary Messages:
               name: Sending stafrænna skilaboða
         allthehiddenthings:
@@ -4397,6 +4413,8 @@ is:
           stages:
             new stage:
               name: nýr áfangi
+            Libraries:
+              name: Söfn
         express-2018-vn:
           stages:
             Graph Paper Programming:

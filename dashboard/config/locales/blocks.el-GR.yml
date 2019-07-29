@@ -815,7 +815,7 @@ el:
             '"direction"': κατεύθυνση κίνησης
             '"tint"': απόχρωση
       gamelab_setSizes:
-        text: όρισε\* {SPRITE} {PROPERTY} στο {N}%
+        text: όρισε* {SPRITE} {PROPERTY} στο {N}%
         options:
           PROPERTY:
             '"scale"': μέγεθος

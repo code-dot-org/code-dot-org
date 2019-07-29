@@ -29,7 +29,7 @@ sk-SK:
           vľavo.
         2-3_Artist_6_c: Každá strana trojuhoníka je rovnako dlhá ako strany štvorca...
           100 pixelov!
-      2-3 Artist 9:
+      2-3 Artist 9 NEW:
         2-3_Artist_9_a: Tento diamand je vlastne len štvorec položený na strane
       2-3 Artist Debugging 2:
         2-3_Artist_Debugging_2_a: 'Nápoveda: Každý fúz je 75 pixelov dlhý.'
@@ -416,6 +416,16 @@ sk-SK:
           aby si mohol objavovať svet!
       NEW Course 4 Artist Params inspire:
         double_loop: Skús vložiť cyklus "for" dovnútra cyklu "opakuj".
+      NEW Course 4 Bee For Loops 10a:
+        NEW_Course_4_Bee_For_Loops_10a_a: Dokážeš nájsť vzťah medzi počtom krokov,
+          ktoré potrebuješ prejsť, a počtom nektárov, ktoré musíš pozbierať?
+        NEW_Course_4_Bee_For_Loops_10a_b: Potrebuješ použiť 2 opakovania, jedno použije
+          matematický blok.
+      NEW Course 4 Bee For Loops 7:
+        NEW_Course_4_Bee_For_Loops_7_a: |-
+          Skús spraviť nejaké výpočty s premennou počítadlo.
+
+          Čo musíš spraviť s počítadlom na každom kvete, aby sa to rovnalo množstvu nektáru, ktoré potrebuješ pozbierať?
       NEW Course 4 Bee For Loops 8:
         NEW_Course_4_Bee_For_Loops_8_a: |-
           Pri každom prechode tvojho cyklu sa prírastok pridáva k tvojej premennej počítadlo.
@@ -3984,8 +3994,6 @@ sk-SK:
           -   Stále všetko funguje aj po druhom kroku?
           -   Kde sa stala chyba?
         courseC_maze_debugging1_b: Na dokončenie tejto úlohy musíš pridať 1 blok.
-        courseD_collector_debugging1_c: 'Nezabudni po tom, ako sa ku drahokamu dostaneš
-          použiť blok "zbieraj".  '
       courseC_maze_debugging1_2018:
         courseC_maze_debugging1_a: |-
           -   Funguje všetko po prvom kroku?
@@ -4007,8 +4015,6 @@ sk-SK:
           -   Kde sa stala chyba?
         courseC_maze_debugging2_c: Nemôžeš prísť nato, kde je chyba? Vyskúšaj kód
           spustiť niekoľko krát a sleduj čo sa stane.
-        courseD_collector_debugging2_c: Skús pozbierať drahokamy z jednej strany tohoto
-          vzoru. Vieš to zopakovať na ďalších dvoch stranách?
       courseC_maze_debugging2_2018:
         courseC_maze_debugging2_a: Na pracovnej ploche už máš veľa užitočného kódu.  Nezmaž
           ho všetok a nezačínaj odznova!
@@ -4038,8 +4044,6 @@ sk-SK:
           ! \[] (<https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif>)
         courseC_maze_debugging3_b: Nemôžeš prísť nato, kde je chyba? Vyskúšaj kód
           spustiť niekoľko krát a sleduj čo sa stane.
-        courseD_collector_debugging3_a: Našiel si miesto, kde Laurel robí niečo, čo
-          nedáva zmysel? Čo sa stane, ak tieto bloky zmeníš?
       courseC_maze_debugging3_2018:
         courseC_maze_debugging3_a: |-
           Na vymazanie bloku zo stredu kódu, najprv odpoj bloky pod blokom, ktorý chceš vymazať.
@@ -4067,11 +4071,6 @@ sk-SK:
           o jeden blok. Pomohlo ti to nájsť riadok, kde sa stala chyba?
         courseC_maze_debugging4_b: Jedno z otočení posiela Scrata nesprávnym smerom.
           Dokážeš zistiť, ktoré z nich to je?
-        courseD_collector_debugging4_b: |-
-          Ak sa ti nedarí prísť na to, aké kroky sa pri schodoch opakujú, skús po nich prejsť prstom a príkazy si hovor nahlas.
-
-          Nezabudni na správny smer jednotlivých otočiek!
-        courseD_collector_debugging4_c: V tomto cykle chýba jediný blok. Zistiš ktorý?
       courseC_maze_debugging4_2018:
         courseC_maze_debugging4_a: Pomocou tlačidla "Krok" posunieš program vždy len
           o jeden blok. Pomohlo ti to nájsť riadok, kde sa stala chyba?
@@ -4113,8 +4112,6 @@ sk-SK:
           Keď nájdeš a opravíš prvú chybu v programe, začni s týmto procesom odznovu, aby si našiel aj druhú chybu.
 
           Opakuj to, až kým program nebude fungovať!
-        courseD_collector_debugging6_b: Zdá sa, že máš správne kroky, ale potreboval
-          by si ich viac. Ako vieš viackrát zopakovať akciu "zbieraj"?
       courseC_maze_debugging6_2018:
         courseC_maze_debugging6_a: |-
           -   Čo by mal Scrat robiť?
@@ -4144,8 +4141,6 @@ sk-SK:
           Keď nájdeš a opravíš prvú chybu v programe, začni s týmto procesom odznovu, aby si našiel aj druhú chybu.
 
           Opakuj to, až kým program nebude fungovať!
-        courseD_collector_debugging8_a: Vidíš nejaký vzor, ktorý by sa dal zjednodušiť
-          pomocou opakovacieho cyklu?
       courseC_maze_debugging7_2018:
         courseC_maze_debugging7_a: |-
           -   Funguje všetko po prvom kroku?
@@ -5814,26 +5809,14 @@ sk-SK:
         courseD_playLab_cond6_c: Na začiatok cyklu `opakuj donekonečna` kontrolujúceho
           pirátovu polohu pridaj blok `čakaj 1 sekundu` (ešte pred podmienku `AK`),
           aby sa mu body neodčítavali príliš rýchlo.
-      courseD_scrat_predict1:
-        courseF_maze_ramp6_a: Sú dve možnosti ako vyriešiť túto úlohu!
-        courseF_maze_ramp6_c: Neboj sa urobiť chybu! Pokús sa pridať bloky a spustiť
-          kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš vyriešenú
-          celú úlohu.
       courseD_scrat_ramp1:
-        courseF_maze_ramp1_a: Ak sa vták neposúva ku prasiatku, presvedč sa, či si
-          dobre spojil všetky bloky a stlač "Spustiť".
-        courseC_maze_programming1_0: Ak sa vták neposúva ku prasaťu, presvedč sa,
-          či si dobre spojil všetky bloky a stlač "Spustiť".
-        courseC_maze_programming1_b: Na vyriešenie tejto úlohy nepotrebuješ žiadne
-          ďalšie bloky z panela nástrojov!
+        courseC_maze_programming1_b: Neboj sa urobiť chybu! Pokús sa pridať bloky
+          a spustiť kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš
+          vyriešenú celú úlohu.
       courseD_scrat_ramp2:
         courseC_maze_programming2_b: Uisti sa, že všetky tri bloky `posuň sa dopredu`
           sú spojené s blokom `pri spustení`.
       courseD_scrat_ramp3:
-        courseF_maze_ramp3_a: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nAk
-          chceš vymazať blok zo stredu tvojho kódu, potiahni všetky bloky na okraj
-          pracovnej plochy. \n\nPrejdi na blok, ktorý chceš odstrániť a odtiahni ho
-          naspäť do panela nástrojov.\n\nNakoniec vráť zvyšné bloky, tam kde patria."
         courseC_maze_programming3_a: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nAk
           chceš vymazať blok zo stredu tvojho kódu, potiahni všetky bloky na okraj
           pracovnej plochy. \n\nPrejdi na blok, ktorý chceš odstrániť a odtiahni ho
@@ -5841,35 +5824,27 @@ sk-SK:
         courseC_maze_programming3_b: Nezabuni, že otáčanie sa vľavo a vpravo je vždy
           z vtáčikovej perspektívy.
       courseD_scrat_ramp4:
-        courseF_maze_ramp4_c: Neboj sa urobiť chybu! Pokús sa pridať bloky a spustiť
-          kód, aby si uvidel, čo sa stane, aj keď si ešte nevyriešil celú úlohu.
+        courseC_maze_programming4_a: Zo Scratovho pohľadu sa môžeš otočiť aj vľavo
+          aj vpravo. Ak si natočený vpravo, ďalšie otočenie sa vpravo ťa natočí smerom
+          dole.
+        courseC_maze_programming4_b: Ak chceš ísť po ceste, posuň sa dopredu a otoč
+          sa jedným smerom, znova sa pohni a otoč sa opačným smerom. Posuň sa dopredu
+          ešte jeden krát, aby si sa dostal až k žaluďu.
         courseC_maze_programming4_c: Neboj sa urobiť chybu! Pokús sa pridať bloky
           a spustiť kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš
           vyriešenú celú úlohu.
       courseD_scrat_ramp5:
-        courseF_maze_ramp5_a: Použi tlačidlo "Krok", aby si si prezrel svoj kód riadok
-          po riadku. Zistíš, čo spraviť ďalej?
         courseC_maze_programming5_a: Použi tlačidlo "Krok", aby si si prezrel svoj
           kód riadok po riadku. Zistíš, čo spraviť ďalej?
         courseC_maze_programming5_b: Ako ďaleko musíš zájsť, aby si sa dostal až do
           rohu?
         courseC_maze_programming5_c: Na rohu sa musíš otočiť vľavo, aby si sa dostal
           k prasiatku.
-      courseD_scrat_ramp6:
-        courseC_maze_programming6_a: Sú dve možnosti ako vyriešiť túto úlohu!
-        courseC_maze_programming6_b: Pamätaj, že sa musíš najprv otočiť, keďže na
-          začiatku je vták otočený smerom k stene.
-        courseC_maze_programming6_c: Neboj sa urobiť chybu! Pokús sa pridať bloky
+      courseD_scrat_ramp7:
+        courseD_scrat_programming6_a: Sú dve možnosti ako vyriešiť túto úlohu!
+        courseD_scrat_programming6_c: Neboj sa urobiť chybu! Pokús sa pridať bloky
           a spustiť kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš
           vyriešenú celú úlohu.
-      courseD_scrat_ramp7:
-        courseD_maze_ramp7_b: Nezabudli používať tlačidlo "Krok". Pomôže ti prejsť
-          bludiskom krok po kroku a nájsť chyby.
-        courseD_maze_ramp7_a: Použi bloky "opakuj", do ktorých vložíš buď jeden blok,
-          alebo viacero blokov, ktoré sa budú znovu a znovu opakovať.
-        courseD_maze_ramp7_c: Neboj sa urobiť chybu! Pokús sa pridať bloky a spustiť
-          kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš vyriešenú
-          celú úlohu.
       courseD_scrat_ramp8:
         courseD_maze_ramp7_b: Nezabudli používať tlačidlo "Krok". Pomôže ti prejsť
           bludiskom krok po kroku a nájsť chyby.
@@ -5878,17 +5853,14 @@ sk-SK:
         courseD_maze_ramp7_c: Neboj sa urobiť chybu! Pokús sa pridať bloky a spustiť
           kód, aby si uvidel, čo sa stane aj ak si ešte nemyslíš, že máš vyriešenú
           celú úlohu.
-      courseD_video_repeatUntil:
-        courseE_farmer_ramp12c: Neboj sa urobiť chybu! Pokús sa pridať bloky a spustiť
-          kód, aby si uvidel, čo sa stane, aj keď si ešte nevyriešil celú úlohu.
       courseE_artist_functions6:
         grade4_artist_functions_windows0_c: Neboj sa urobiť chybu! Pokús sa pridať
           bloky a spustiť kód, aby si uvidel, čo sa stane, aj keď si ešte nevyriešil
           celú úlohu.
-      courseE_artist_ramp8_2:
+      courseE_artist_ramp9:
         courseD_artist_ramp12_b: Môžeš použiť šípku nadol s rozbaľovacou ponukou na
           blokoch "otoč sa o", aby si zistil aký uhol potrebuješ!
-      courseE_artist_ramp9:
+      courseE_artist_ramp9_2:
         courseD_artist_ramp12_b: Môžeš použiť šípku nadol s rozbaľovacou ponukou na
           blokoch "otoč sa o", aby si zistil aký uhol potrebuješ!
       courseE_farmer_functions4b:
@@ -6174,6 +6146,48 @@ sk-SK:
           `opakuj`, aby si povedal, koľko krát sa má opakovať.
         courseF_bee_for1_b: Potrebuješ dva bloky v tvojom cykle ’opkauj’, aby si pozbieral
           všetok nektár.
+      courseF_bee_for10:
+        courseF_bee_for10_a: Dokážeš nájsť vzťah medzi počtom krokov, ktoré potrebuješ
+          prejsť, a počtom nektárov, ktoré musíš pozbierať?
+        courseF_bee_for10_b: Prvá skupina kvetov ma dokopy **14 kvetov**. Aby sa včela
+          dostala k tejto prvej skupine, tak musí preletieť nadol **7 políčok** (alebo
+          14 delené 2). Koľko kvetov je v ďalších skupinách a koľko políčok musí včela
+          prejsť, aby sa k nim dostala?
+        courseF_bee_for10_c: "V úlohe má prvá skupina kvetov **14** kvetov, druhá
+          skupina má **10** kvetov, tretia skupina má **6** kvetov a štvrtá skupina
+          má **2** kvety.\n\nVšimni si, že na tomto obrázku je **7** červených štvorcov,
+          **5** oranžových štvorcov, **3** zelené štvorce a **1** modrý štvorec. \n\n![](<https://images.code.org/602ce14659299af6a59a79ebd0bdb9d4-image-1493221855089.6.11
+          Hint Drawing.png>)\n\nAko súvisia tieto čísla?"
+        courseF_bee_for10_d: Potrebuješ použiť 2 opakovania, jedno použije matematický
+          blok.
+      courseF_bee_for10_2018:
+        courseF_bee_for10_a: Dokážeš nájsť vzťah medzi počtom krokov, ktoré potrebuješ
+          prejsť, a počtom nektárov, ktoré musíš pozbierať?
+        courseF_bee_for10_b: Prvá skupina kvetov ma dokopy **14 kvetov**. Aby sa včela
+          dostala k tejto prvej skupine, tak musí preletieť nadol **7 políčok** (alebo
+          14 delené 2). Koľko kvetov je v ďalších skupinách a koľko políčok musí včela
+          prejsť, aby sa k nim dostala?
+        courseF_bee_for10_c: "V úlohe má prvá skupina kvetov **14** kvetov, druhá
+          skupina má **10** kvetov, tretia skupina má **6** kvetov a štvrtá skupina
+          má **2** kvety.\n\nVšimni si, že na tomto obrázku je **7** červených štvorcov,
+          **5** oranžových štvorcov, **3** zelené štvorce a **1** modrý štvorec. \n\n![](<https://images.code.org/602ce14659299af6a59a79ebd0bdb9d4-image-1493221855089.6.11
+          Hint Drawing.png>)\n\nAko súvisia tieto čísla?"
+        courseF_bee_for10_d: Potrebuješ použiť 2 opakovania, jedno použije matematický
+          blok.
+      courseF_bee_for10_2019:
+        courseF_bee_for10_a: Dokážeš nájsť vzťah medzi počtom krokov, ktoré potrebuješ
+          prejsť, a počtom nektárov, ktoré musíš pozbierať?
+        courseF_bee_for10_b: Prvá skupina kvetov ma dokopy **14 kvetov**. Aby sa včela
+          dostala k tejto prvej skupine, tak musí preletieť nadol **7 políčok** (alebo
+          14 delené 2). Koľko kvetov je v ďalších skupinách a koľko políčok musí včela
+          prejsť, aby sa k nim dostala?
+        courseF_bee_for10_c: "V úlohe má prvá skupina kvetov **14** kvetov, druhá
+          skupina má **10** kvetov, tretia skupina má **6** kvetov a štvrtá skupina
+          má **2** kvety.\n\nVšimni si, že na tomto obrázku je **7** červených štvorcov,
+          **5** oranžových štvorcov, **3** zelené štvorce a **1** modrý štvorec. \n\n![](<https://images.code.org/602ce14659299af6a59a79ebd0bdb9d4-image-1493221855089.6.11
+          Hint Drawing.png>)\n\nAko súvisia tieto čísla?"
+        courseF_bee_for10_d: Potrebuješ použiť 2 opakovania, jedno použije matematický
+          blok.
       courseF_bee_for1_2018:
         courseF_bee_for1_a: Potiahni fialový čiselný blok do prázdneho miesta v cykle
           `opakuj`, aby si povedal, koľko krát sa má opakovať.
@@ -6307,6 +6321,33 @@ sk-SK:
           aby si sa dostal ku kvetom.
         courseF_bee_for8_c: Tvoj cyklus bude počítať _od 3 do 15_ s nejakým prírastkom.
           Aký to bude?
+      courseF_bee_for9:
+        courseF_bee_for9_a: |-
+          Skús spraviť nejaké výpočty s premennou počítadlo.
+
+          Čo musíš spraviť s počítadlom na každom kvete, aby sa to rovnalo množstvu nektáru, ktoré potrebuješ pozbierať?
+        courseF_bee_for9_c: Vyzerá to tak, že potrebuješ včelu otočit na začiatku
+          každej iterácie cyklu, ak chceš vyriešiť túto úlohu.
+        courseF_bee_for9_b: "**Nezabudni.** Ak tvoj cyklus pripočítava, tak prírastok
+          sa pridá k tvojej premennej `počítadlo` po každom prechode cez cyklus."
+      courseF_bee_for9_2018:
+        courseF_bee_for9_a: |-
+          Skús spraviť nejaké výpočty s premennou počítadlo.
+
+          Čo musíš spraviť s počítadlom na každom kvete, aby sa to rovnalo množstvu nektáru, ktoré potrebuješ pozbierať?
+        courseF_bee_for9_c: Vyzerá to tak, že potrebuješ včelu otočit na začiatku
+          každej iterácie cyklu, ak chceš vyriešiť túto úlohu.
+        courseF_bee_for9_b: "**Nezabudni.** Ak tvoj cyklus pripočítava, tak prírastok
+          sa pridá k tvojej premennej `počítadlo` po každom prechode cez cyklus."
+      courseF_bee_for9_2019:
+        courseF_bee_for9_a: |-
+          Skús spraviť nejaké výpočty s premennou počítadlo.
+
+          Čo musíš spraviť s počítadlom na každom kvete, aby sa to rovnalo množstvu nektáru, ktoré potrebuješ pozbierať?
+        courseF_bee_for9_c: Vyzerá to tak, že potrebuješ včelu otočit na začiatku
+          každej iterácie cyklu, ak chceš vyriešiť túto úlohu.
+        courseF_bee_for9_b: "**Nezabudni.** Ak tvoj cyklus pripočítava, tak prírastok
+          sa pridá k tvojej premennej `počítadlo` po každom prechode cez cyklus."
       courseF_bee_variables_3_2018:
         courseF_beevariables_3a: |-
           Môźeš použiť tento kód v tvojom programe, aby si odčítal jedna z premennej:

@@ -554,144 +554,151 @@
     }
   },
   "https://studio.code.org/s/coursef-2017/stage/11/puzzle/2": {
-    "long_instructions": "For this puzzle, connect all of the blocks from the workspace together below the <xml><block type=\"when_run\"/></xml> block and click \"Run\" to watch it go!",
+    "short_instructions": "For this puzzle, snap all of the blocks together and click \"Run\" to watch it go!",
+    "long_instructions": "For this puzzle, snap all of the blocks together and click \"Run\" to watch it go!",
     "authored_hints": {
-      "courseF_maze_ramp1_a": "If the bird isn't getting to the pig, make sure all of the blocks have been fully snapped together, then click \"Run\" again.",
-      "courseF_maze_ramp1_b": "You don't need any extra blocks from the toolbox here!"
+      "courseC_maze_programming1_a": "If Scrat isn't getting to the acorn, make sure all three of the blocks have been fully snapped together, then click \"Run\" again.",
+      "courseC_maze_programming1_b": "Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you don't think you've solved the puzzle yet."
     },
     "callouts": {
       "grade2_CaringForNewPet_0_1": "After connecting all the blocks, press \"Run\" to start your program."
     }
   },
   "https://studio.code.org/s/coursef-2017/stage/11/puzzle/3": {
-    "long_instructions": "Drag a <xml><block type=\"controls_repeat\"><title name=\"TIMES\">7</title></block></xml> block out of the toolbox and attach it to the <xml><block type=\"when_run\"/></xml> event.\n\nPlace the <xml><block type=\"maze_moveForward\"/></xml> block inside the loop to finish your code.",
+    "short_instructions": "Drag an extra `move forward` block out of the toolbox, then attach all blocks to `when run` to finish your code.",
+    "long_instructions": "Drag an extra `move forward` block out of the toolbox, then attach all blocks to `when run` to finish your code.",
     "authored_hints": {
-      "courseF_maze_ramp2_a": "To use a new block, drag it from the toolbox out into the workspace and connect it to the program that is attached to the <xml><block type=\"when_run\"/></xml> block.",
-      "courseF_maze_ramp2_b": "Make sure the <xml><block type=\"maze_moveForward\"/></xml> block is inside of the loop, so that it is repeated."
+      "courseC_maze_programming2_a": "To use a `move forward` block, drag it from the toolbox out into the workspace and connect it to the `when run` block.",
+      "courseC_maze_programming2_b": "Make sure all three `move forward` blocks are attached to the `when run` block."
     },
     "callouts": {
       "courseC_maze_programming2_1": "This is the toolbox. It’s where you’ll find extra blocks to complete your puzzles."
     }
   },
   "https://studio.code.org/s/coursef-2017/stage/11/puzzle/4": {
-    "short_instructions": "There is one extra block that is going to cause the bird to crash. Throw it away by dragging it back to the toolbox.",
-    "long_instructions": "_\"This pig is ruffling my feathers.\"_\n\nThere is one extra block that is going to cause the bird to crash.\\\nThrow it away by dragging it back to the toolbox.",
+    "short_instructions": "There is one extra block that is going to cause Scrat to crash. Throw it away by dragging it back to the toolbox.",
+    "long_instructions": "There is one extra block that is going to cause Scrat to crash.\\\nThrow it away by disconnecting it from the other blocks and dragging it back to the toolbox.",
     "authored_hints": {
-      "courseF_maze_ramp3_a": "[][0]\n\nTo delete a block from the middle of your code, drag all of the blocks underneath it away to the right and let them sit in the workspace for a while.  \n\nClick on the block you want to delete, and drag it back to the toolbox.\n\nFinally, put your other blocks back in place where they belong.",
-      "courseF_maze_ramp3_b": "Use the step button to go through the program line-by-line. Where does something go wrong?"
+      "courseC_maze_programming3_a": "[][0]\n\nTo delete a block from the middle of your code, drag all of the blocks underneath it away to the right and let them sit in the workspace for a while.  \n\nClick on the block you want to delete, and drag it back to the toolbox.\n\nFinally, put your other blocks back in place where they belong.",
+      "courseC_maze_programming3_b": "Remember that turns to the right and left are from Scrat's perspective."
     },
     "callouts": {
       "courseC_maze_programming3_2": "You can drag extra blocks to the toolbox to throw them away."
     }
   },
   "https://studio.code.org/s/coursef-2017/stage/11/puzzle/5": {
-    "short_instructions": "Avoid TNT or feathers will fly!",
-    "long_instructions": "_\"Trace the path and lead me to the silly pig.\"_ \n\nAvoid TNT or feathers will fly!",
+    "short_instructions": "Avoid the cracked ice to keep Scrat safe!",
+    "long_instructions": "Avoid the cracked ice to keep Scrat safe!",
     "authored_hints": {
-      "courseF_maze_ramp4_a": "You can turn right or left from the bird's point of view. If you are facing right, turning right will make you point downwards.",
-      "courseF_maze_ramp4_b": "To follow the path, move forward and turn one way, then move three times before turning the opposite way. Move forward one more time to reach the pig.",
-      "courseF_maze_ramp4_c": "Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you haven't solved the puzzle yet."
+      "courseC_maze_programming4_a": "You can turn right or left from Scrat's point of view. If you are facing right, turning right will make you point downwards.",
+      "courseC_maze_programming4_b": "To follow the path, move forward and turn one way, then move again and turn the opposite way. Move forward one more time to reach the acorn.",
+      "courseC_maze_programming4_c": "Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you don't think you've solved the puzzle yet."
     },
     "callouts": {
       "courseC_maze_programming4_1": "This is your block limit.  It tells you how many of these blocks you have left to use."
     }
   },
   "https://studio.code.org/s/coursef-2017/stage/11/puzzle/6": {
-    "short_instructions": "Avoid the TNT.",
-    "long_instructions": "_\"Follow this path to get me to the pig!\"_\n\nAvoid the TNT.",
+    "short_instructions": "Avoid the cracked ice.",
+    "long_instructions": "Avoid the cracked ice!",
     "authored_hints": {
-      "courseF_maze_ramp5_a": "Try using the \"Step\" button to run your code line by line. Can you figure out what you need to do next?",
-      "courseF_maze_ramp5_b": "There is more than one way to get to the pig.",
-      "courseF_maze_ramp5_c": "Try using a <xml><block type=\"controls_repeat\"><title name=\"TIMES\">3</title></block></xml> loop for shorter code!"
+      "courseC_maze_programming5_a": "Try using the \"Step\" button to run your code line by line. Can you figure out what you need to do next?",
+      "courseC_maze_programming5_b": "How far do you need to move to get to the corner?",
+      "courseC_maze_programming5_c": "You will need to turn left at the corner to get to the acorn."
     },
     "callouts": {
       "": "These blocks don't have numbers on them. You can use as many as you want!"
     }
   },
   "https://studio.code.org/s/coursef-2017/stage/11/puzzle/7": {
-    "short_instructions": "\"Keep calm and help me find the bad pig. Otherwise I might get angry!\"",
-    "long_instructions": "_\"Keep calm and help me find the bad pig. Otherwise I might get angry!\"_\n\nWhen you have several blocks in a row, try moving them inside of a <xml><block type=\"controls_repeat\"><title name=\"TIMES\">???</title></block></xml> loop.  This will do the same thing with less code!",
-    "authored_hints": {
-      "courseF_maze_ramp6_a": "There are two ways to solve this puzzle!",
-      "courseF_maze_ramp6_b": "The bird starts facing a wall, so remember to turn before moving!",
-      "courseF_maze_ramp6_c": "Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you don't think you've solved the puzzle yet."
-    },
-    "callouts": {
-      "courseD_maze_ramp6_1": "Whatever code you put in here will repeat as many times as you tell it to, then continue to run the rest of the program."
-    }
-  },
-  "https://studio.code.org/s/coursef-2017/stage/11/puzzle/9": {
-    "short_instructions": "Now make a square using Artist!",
-    "long_instructions": "Great!  Now let's make a square using Artist!  The blocks for artist are a little different than other puzzles, but the idea is the same.\n\n* * *\n\nEach side of the square has a length of 200 pixels, and you will need to turn 90 degrees to make each angle.",
-    "authored_hints": {
-      "courseF_artist_ramp8_a": "To draw a side, use the <xml><block type=\"draw_move_by_constant\"><title name=\"DIR\">moveForward</title><title name=\"VALUE\">100</title></block></xml> block, and change the 100 to a 200.",
-      "courseF_artist_ramp8_b": "To draw 4 sides, put the <xml><block type=\"draw_move_by_constant\"><title name=\"DIR\">moveForward</title><title name=\"VALUE\">200</title></block></xml> block inside of a repeat loop and make sure the loop is set to draw 4 times.\n\nDon't forget to turn afterward!",
-      "courseF_artist_ramp8_c": "Your turn will also go inside of the <xml><block type=\"controls_repeat\"><title name=\"TIMES\">3</title></block></xml> loop."
-    },
-    "callouts": {
-      "courseE_artist_ramp8_1": "You can change this number.",
-      "courseE_artist_ramp8_2": "Click here to type in the number of times to repeat your code."
-    }
-  },
-  "https://studio.code.org/s/coursef-2017/stage/11/puzzle/11": {
-    "short_instructions": "Use what you've learned to draw this triangle.",
-    "long_instructions": "Use what you've learned to draw this triangle.\n\n* * *\n\n##### The sides are each 100 pixels long. You will need to turn 120 degrees at each corner.",
-    "authored_hints": {
-      "courseF_artist_ramp9_a": "How is this similar to a square?  How is it different?",
-      "courseF_artist_ramp9_b": "You can use the drop down menu on the turn blocks to see which angle you need!",
-      "courseF_artist_ramp9_c": "You will want to move forward 100 pixels, then turn right 120 degrees for each side. Can you use a <xml><block type=\"controls_repeat\"><title name=\"TIMES\">3</title></block></xml> loop to make your code shorter?"
-    }
-  },
-  "https://studio.code.org/s/coursef-2017/stage/11/puzzle/12": {
     "contained levels": [
       {
         "dsls": {
           "questions": [
             {
-              "text": "Based on the code below, what do you think will happen if you press \"Run\"?"
+              "text": "This code uses a new block. What do you think will happen when you press \"Run\"?"
             }
           ],
           "answers": [
             {
-              "text": "The artist will draw the triangle from the last level four times in a rotated pattern.",
+              "text": "Nothing. Scrat will not move at all.",
+              "correct": false,
+              "feedback": "Incorrect. Putting the 'move forward' block inside the 'repeat' block will cause Scrat to move forward three times."
+            },
+            {
+              "text": "Scrat will move forward three times, turn, then move forward three more times, making it to the acorn!",
               "correct": true,
               "feedback": "Correct!"
             },
             {
-              "text": "The artist will draw the triangle from the last level four times in a straight line.",
+              "text": "Scrat will move forward, then turn and crash.",
               "correct": false,
-              "feedback": "Incorrect. Notice that there is a `turn 90 degrees` block inside the outer loop. This means that the artist will turn after drawing each triangle."
-            },
-            {
-              "text": "The artist will draw three squares in a rotated pattern.",
-              "correct": false,
-              "feedback": "Incorrect. Notice that the `repeat 3` loop is inside the `repeat 4` loop. This means that the drawing will be a three sided shape drawn four times."
+              "feedback": "Incorrect. Putting the 'move forward' block inside the 'repeat' block will cause Scrat to move forward three times."
             },
             {
               "text": "I don't know.",
               "correct": false,
-              "feedback": "The `repeat 3` loop is inside the `repeat 4` loop. This means that the artist will draw a triangle, then turn 90 degrees a total of 4 times."
+              "feedback": "Putting the 'move forward' block inside the 'repeat' block will cause Scrat to move forward three times. He then turns and moves forward another three times, making it to the acorn!"
             }
           ]
         }
       }
     ]
   },
-  "https://studio.code.org/s/coursef-2017/stage/11/puzzle/14": {
-    "short_instructions": "Now, drag the code for the last triangle into a new loop to spin it around and make a snowflake!",
-    "long_instructions": "Did you know you can put loops inside of other loops to make them more powerful?  That's called making a \"nested loop\".\n\n* * *\n\nDrag the code for the last triangle into a new loop to spin it around and make a snowflake!\n\n_(You will need to spin it 6 times at 60 degrees to get this pattern.)_",
+  "https://studio.code.org/s/coursef-2017/stage/11/puzzle/9": {
+    "short_instructions": "Help Scrat get to the acorn using a loop!",
+    "long_instructions": "Help Scrat get to the acorn using a loop!",
     "authored_hints": {
-      "courseF_artist_ramp10_a": "Don't forget to turn by 60 degrees after each triangle.  Which loop do you need to put that instruction inside?",
-      "courseF_artist_ramp10_b": "If your code for a triangle is in a <xml><block type=\"controls_repeat\"><title name=\"TIMES\">6</title></block></xml> loop, this task will be a lot simpler.",
-      "courseF_artist_ramp10_c": "You will draw six triangles in total for this design:\n\n[][0]"
+      "courseC_maze_programming6a_a": "Use a `repeat` loop to get Scrat moving!"
+    },
+    "callouts": {
+      "courseD_maze_ramp6_1": "Whatever code you put in here will repeat as many times as you tell it to, then continue to run the rest of the program."
+    }
+  },
+  "https://studio.code.org/s/coursef-2017/stage/11/puzzle/10": {
+    "short_instructions": "Help Scrat get to the acorn!",
+    "long_instructions": "Help Scrat get to the acorn!",
+    "authored_hints": {
+      "courseD_scrat_programming6_a": "There are two ways to solve this puzzle!",
+      "courseD_scrat_programming6_b": "Remember to turn first before moving, since Scrat is facing the wrong direction.",
+      "courseD_scrat_programming6_c": "Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you don't think you've solved the puzzle yet."
+    },
+    "callouts": {
+      "courseD_maze_ramp6_1": "Whatever code you put in here will repeat as many times as you tell it to, then continue to run the rest of the program."
+    }
+  },
+  "https://studio.code.org/s/coursef-2017/stage/11/puzzle/11": {
+    "short_instructions": "Use what you've learned to get Scrat to the acorn!",
+    "long_instructions": "**Challenge:** Use what you've learned to get Scrat to the acorn!",
+    "authored_hints": {
+      "courseD_maze_ramp7_b": "Don't forget to use the \"Step\" button to go through block by block and look for errors.",
+      "courseD_maze_ramp7_a": "Use repeat blocks to run either a single block or a chunk of code over and over.",
+      "courseD_maze_ramp7_c": "Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you don't think you've solved the puzzle yet."
+    },
+    "callouts": {
+      "courseD_maze_ramp7_1": "This is your first challenge puzzle! These are meant to be hard and may take several tries."
+    }
+  },
+  "https://studio.code.org/s/coursef-2017/stage/11/puzzle/13": {
+    "short_instructions": "Now make a square using Artist!",
+    "long_instructions": "Great!  Now let's use that `repeat` loop to make a square using Artist!  The blocks for artist are a little different than other puzzles, but the idea is the same.\n\n* * *\n\n##### Each side of the square has a length of 200 pixels, and you will need to turn 90 degrees to make each angle.",
+    "authored_hints": {
+      "courseE_artist_ramp8_a": "To draw a side, use the `move forward by 100 pixels` block, and change the 100 to a 200.",
+      "courseE_artist_ramp8_b": "To draw 4 sides, put the `move forward by 100 pixels` block inside of a repeat loop and make sure the loop is set to draw 4 times.\n\nDon't forget to turn afterward!",
+      "courseE_artist_ramp8_c": "Your loop should have two blocks inside of it: `move forward` and `turn right by 90 degrees`."
+    },
+    "callouts": {
+      "courseE_artist_ramp8_1": "You can change this number.",
+      "courseE_artist_ramp8_2": "Click here to type in the number of times to repeat your code."
     }
   },
   "https://studio.code.org/s/coursef-2017/stage/11/puzzle/15": {
-    "short_instructions": "This puzzle also uses nested loops.  Can you figure out how?",
+    "short_instructions": "Use what you've learned to draw this triangle.",
+    "long_instructions": "Use what you've learned to draw this triangle.\n\n* * *\n\n##### The sides are each 100 pixels long. You will need to turn 120 degrees at each corner.",
     "authored_hints": {
-      "courseF_farmer_ramp11_a": "If you're having a hard time seeing where the loops should go, try coding it all out then looking for a pattern.",
-      "courseF_farmer_ramp11_b": "How can you use a <xml><block type=\"controls_repeat\"><title name=\"TIMES\">???</title></block></xml> loop to pick lettuce, instead of dragging out 5 <xml><block type=\"harvester_lettuce\"/></xml> blocks?",
-      "courseF_farmer_ramp11_c": "You don't need to use 5 repeat loops to get all of the lettuce.  Instead, drag your lettuce picking repeat loop inside of another loop (along with a <xml><block type=\"maze_moveForward\"/></xml> block, and you'll have it!)"
+      "courseD_artist_ramp12_a": "How is this similar to a square?  How is it different?",
+      "courseD_artist_ramp12_b": "You can use the drop down menu on the `turn` blocks to see which angle you need!",
+      "courseD_artist_ramp12_c": "To draw each side, you will need to move forward 100 pixels, then turn right 120 degrees. How many sides do you need?"
     }
   },
   "https://studio.code.org/s/coursef-2017/stage/13/puzzle/1": {
@@ -2200,7 +2207,7 @@
     "dsls": {
       "title": "title",
       "content1": "description here",
-      "markdown": "# The Design Process\n\n<iframe src=\"https://docs.google.com/document/d/e/2PACX-1vS2GtTZLCnFf4QYXEswvBv_XHQBoYbyBDrqABx9FCRpHBndTD0VbpC34HuN56dBgQ6I3tMgKstI3r6G/pub?embedded=true\" style=\"width: 800px; height: 600px\"></iframe>\n"
+      "markdown": "# The Design Process\nDesigning software means solving lots of little problems, all the time. The main problem in software design is what to create in the first place.\n\nThis process is useful for all kinds of things, but we are going to focus on using it for app design.\n\n<!-- Translate the terms \"Define\", \"Prepare\", \"Try\", \"Reflect\" and change font size and positioning as needed-->\n<div style=\"position: relative; text-align: center; font-size: 1em\">\n  <img src=\"https://images.code.org/a157e5f67444573e19e980a507db16fb-image-1563319667694.png\" alt=\"Design Process\" style=\"width: 50%;\">\n  <div style=\"position: absolute; top: 24%; left: 49.8%; transform: translateX(-49.8%); font-weight: bold;\">Define</div> \n  <div style=\"position: absolute; top: 52%; left: 61%; transform: translateX(-61%); font-weight: bold;\">Prepare</div>\n  <div style=\"position: absolute; top: 79%; left: 49.8%; transform: translateX(-49.8%); font-weight: bold;\">Try</div>\n  <div style=\"position: absolute; top: 52%; left: 39%; transform: translateX(-39%); font-weight: bold;\">Reflect</div>\n</div>\n\n* **Define**\n  * What kind of app would you like to create?\n  * What are your constraints?\n  * What does success look like?\n* **Prepare**\n  * Brainstorm / research possible elements\n  * Compare pros and cons\n  * Make a plan\n* **Try**\n  * Put your plan into action\n* **Reflect**\n  * How do your results compare to the goals you set while defining the app?\n  * What can you learn from this or do better next time?\n  * What new problems have you discovered?\n\n# What it Looks Like\nOver the course of the next several weeks, you will have the opportunity to experiment with some existing games and design your own game based off of what you have learned.  After creating your game, you will get the chance to present it to others and receive feedback.  These steps are all critically important in the software industry, and getting practice with the elements of the design process will help you create better products more efficiently.  \n\nHere is what the coming weeks will hold as we learn more about the design process:\n\n1. **Define & Prepare**\n   * Play existing games to get ideas and understand limitations\n   * Brainstorm and plan your new or modified app\n1. **Try**\n   * Follow your plan to build an app\n1. **Reflect & Edit**\n   * Swap apps with another group to help make your projects better\n1. **Present**\n   * Show off your final product!\n"
     }
   },
   "https://studio.code.org/s/coursef-2017/stage/29/puzzle/1": {

@@ -915,39 +915,6 @@
   coursee_name: "Cúrsa E"
   coursef-draft_name: Cúrsa F
   coursef_name: "Cúrsa F"
-  cspunit2_name: "Aonad 2: An tIdirlíon"
-  cspunit3_name: "Aonad 3: Ríomhchlárú"
-  cspunit4_name: "Aonad 4: Sonraí"
-  cspunit5_name: "Aonad 5: Taiscéaladh agus Cruthú (Tasc Feidhmíochta)"
-  cspunit6_name: 'Tar Éis AP: Bunachair Sonraí in Aipeanna'
-  csd5_name: 'Aonad 5: Sonraí agus Sochaí'
-  csd6_name: 'Aonad 6: Ríomhaireacht Fisiceach'
-  csd5-2017_name: 'Aonad 5: Sonraí agus Sochaí'
-  csd6-2017_name: 'Aonad 6: Ríomhaireacht Fisiceach'
-  csd5-2018_name: 'Aonad 5: Sonraí agus Sochaí'
-  csd6-2018_name: 'Aonad 6: Ríomhaireacht Fisiceach'
-  csp1-2017_name: 'Aonad 1: An tIdirlíon'
-  csp2-2017_name: 'Aonad 2: Faisnéis dhigiteach'
-  csp-explore-2017_name: 'AP: Ullmhú don Tasc Taiscéalaíoch'
-  csp-create-2017_name: 'AP: Ullmhú don Tasc Cruthaitheach'
-  csppostap-2017_name: 'Iar-AP: Bunachair Sonraí in Aipeanna'
-  csp1-2018_name: 'Aonad 1: An tIdirlíon'
-  csp2-2018_name: 'Aonad 2: Faisnéis dhigiteach'
-  csp-explore-2018_name: 'AP: Ullmhú don Tasc Taiscéalaíoch'
-  csp-create-2018_name: 'AP: Ullmhú don Tasc Cruthaitheach'
-  csppostap-2018_name: 'Iar-AP: Bunachair Sonraí in Aipeanna'
-  csp1_name: 'Aonad 1: An tIdirlíon'
-  csp2_name: 'Aonad 2: Faisnéis dhigiteach'
-  csp3-a_name: 'Aonad 3: Buntús Ríomhchláraithe (leagan A)'
-  csp3-research-mxghyt_name: 'Aonad 3: Buntús Ríomhchláraithe (Fospriocanna)'
-  csp-ap_name: Tascanna Gníomhaíochta AP
-  csppostap_name: 'Iar-AP: Bunachair Sonraí in Aipeanna'
-  cspassessment_name: "An Scrúdú Iomlán - 50 ceist"
-  csp-explore_name: 'AP: Ullmhú don Tasc Taiscéalaíoch'
-  csp-create_name: 'AP: Ullmhú don Tasc Cruthaitheach'
-  cspexam1-mWU7ilDYM9_name: Cuid 1 den Scrúdú - 25 ceist
-  cspexam2-AKwgAh1ac5_name: Cuid 2 den Scrúdú - 25 ceist
-  cspunit3_gradelevel: "Blianta 9-12"
   accelerated_name: "Cúrsa Luathaithe"
   express_name: "Luaschúrsa"
   20-hour_name: Cúrsa Luathaithe
@@ -960,15 +927,6 @@
   minecraft_name: "Minecraft"
   starwarsblocks_name: "Star Wars (Blocanna)"
   hoc-encryption_name: Criptiú Simplí
-  math_category_name: "Matamaitic"
-  hoc_category_name: "An Uair Chódála"
-  csf_category_name: "Buntús na Ríomheolaíochta"
-  csf_international_category_name: "Buntús na Ríomheolaíochta: Idirnáisiúnta"
-  csf2_draft_category_name: 'Á bhforbairt: Cúrsaí A-F'
-  csd_category_name: "Fionnachtana sa Ríomheolaíocht"
-  csp_category_name: "'15-'16 Foras Feasa ar an Ríomheolaíocht"
-  csp17_category_name: "Foras Feasa ar an Ríomheolaíocht"
-  cspexams_category_name: "Scrúdú Cleachtaidh: Foras Feasa ar an Ríomheolaíocht"
   applab_name: "Saotharlann Aipeanna"
   gamelab_name: "An tSaotharlann Cluichíochta"
   basketball_name: "Déan do chluiche cispheile féin"
@@ -1435,10 +1393,6 @@
   header_report_bug: "Déan tuairisc ar fhadhb"
   header_tutorials: "Cúrsaí Teagaisc"
   header_documentation: "Doiciméadú"
-  csp_name: "Foras Feasa ar an Ríomheolaíocht"
-  csd_name: "Fionnachtana sa Ríomheolaíocht"
-  csd_2018_name: "Fionnachtana sa Ríomheolaíocht"
-  full_course_category_name: "Cúrsaí Iomlána"
   user_header_label: "Dia dhuit a %{username}"
   user_header_team: "Foireann"
   user_header_settings: "Mo chuntas"

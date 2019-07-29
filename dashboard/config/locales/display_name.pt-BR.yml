@@ -2,6 +2,7 @@
 pt-BR:
   data:
     display_name:
+      AB_Debug_Artist1: 'Depuração do Artista #1 (DA)'
       Alien Defender: Defensor alienígena
       App Lab Intro 8 - Video Design Mode: 'Vídeo: Modo de Design'
       App Lab Intro 8 - Video Getting Started: 'Vídeo: Introdução'
@@ -640,6 +641,9 @@ pt-BR:
       CSS U2 Body Map: O elemento do corpo
       CSS U2 Body Map_2018: O elemento do corpo
       CSS U2 Body Map_2019: O elemento do corpo
+      'Course E: Artist Project': Curso E Projeto Artístico
+      'Course E: Artist Project_2018': Curso E Projeto Artístico
+      'Course E: Artist Project_2019': Curso E Projeto Artístico
       'Course F: Artist Project - Revise_2018': Revisar Projeto Artista
       'Course F: Artist Project_2018': Curso F Projeto Artista
       'Course F: Artist Project_2019': Curso F Projeto Artista

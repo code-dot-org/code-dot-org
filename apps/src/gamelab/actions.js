@@ -1,7 +1,7 @@
 /** @file Redux action-creators for Game Lab.
  *  @see http://redux.js.org/docs/basics/Actions.html */
 import $ from 'jquery';
-import * as utils from '../utils';
+import * as utils from '@cdo/apps/utils';
 import {
   pickNewAnimation,
   show,

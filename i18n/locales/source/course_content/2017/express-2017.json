@@ -1,10 +1,10 @@
 {
   "https://studio.code.org/s/express-2017/stage/2/puzzle/2": {
-    "short_instructions": "For this puzzle, drag all of the blocks together and click \"Run\" to watch it go!",
-    "long_instructions": "For this puzzle, drag all of the blocks together and click \"Run\" to watch it go!",
+    "short_instructions": "For this puzzle, snap all of the blocks together and click \"Run\" to watch it go!",
+    "long_instructions": "For this puzzle, snap all of the blocks together and click \"Run\" to watch it go!",
     "authored_hints": {
-      "courseC_maze_programming1_0": "If the bird isn't getting to the pig, make sure all three of the blocks have been fully clicked together, then click \"Run\" again.",
-      "courseC_maze_programming1_b": "You don't need any extra blocks from the toolbox for this puzzle!"
+      "courseC_maze_programming1_a": "If Scrat isn't getting to the acorn, make sure all three of the blocks have been fully snapped together, then click \"Run\" again.",
+      "courseC_maze_programming1_b": "Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you don't think you've solved the puzzle yet."
     },
     "callouts": {
       "grade2_CaringForNewPet_0_1": "After connecting all the blocks, press \"Run\" to start your program."
@@ -22,22 +22,22 @@
     }
   },
   "https://studio.code.org/s/express-2017/stage/2/puzzle/4": {
-    "short_instructions": "There is one extra block that is going to cause the bird to crash. Throw it away by dragging it back to the toolbox.",
-    "long_instructions": "_\"This pig is ruffling my feathers.\"_\n\nThere is one extra block that is going to cause the bird to crash.\\\nThrow it away by dragging it back to the toolbox.",
+    "short_instructions": "There is one extra block that is going to cause Scrat to crash. Throw it away by dragging it back to the toolbox.",
+    "long_instructions": "There is one extra block that is going to cause Scrat to crash.\\\nThrow it away by disconnecting it from the other blocks and dragging it back to the toolbox.",
     "authored_hints": {
       "courseC_maze_programming3_a": "[][0]\n\nTo delete a block from the middle of your code, drag all of the blocks underneath it away to the right and let them sit in the workspace for a while.  \n\nClick on the block you want to delete, and drag it back to the toolbox.\n\nFinally, put your other blocks back in place where they belong.",
-      "courseC_maze_programming3_b": "Remember that turns to the right and left are from the bird's perspective."
+      "courseC_maze_programming3_b": "Remember that turns to the right and left are from Scrat's perspective."
     },
     "callouts": {
       "courseC_maze_programming3_2": "You can drag extra blocks to the toolbox to throw them away."
     }
   },
   "https://studio.code.org/s/express-2017/stage/2/puzzle/5": {
-    "short_instructions": "Avoid TNT or feathers will fly!",
-    "long_instructions": "_\"Trace the path and lead me to the silly pig.\"_ \n\nAvoid TNT or feathers will fly!",
+    "short_instructions": "Avoid the cracked ice to keep Scrat safe!",
+    "long_instructions": "Avoid the cracked ice to keep Scrat safe!",
     "authored_hints": {
-      "courseC_maze_programming4_a": "You can turn right or left from the bird's point of view. If you are facing right, turning right will make you point downwards.",
-      "courseC_maze_programming4_b": "To follow the path, move forward and turn one way, then move again and turn the opposite way. Move forward one more time to reach the pig.",
+      "courseC_maze_programming4_a": "You can turn right or left from Scrat's point of view. If you are facing right, turning right will make you point downwards.",
+      "courseC_maze_programming4_b": "To follow the path, move forward and turn one way, then move again and turn the opposite way. Move forward one more time to reach the acorn.",
       "courseC_maze_programming4_c": "Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you don't think you've solved the puzzle yet."
     },
     "callouts": {
@@ -45,47 +45,46 @@
     }
   },
   "https://studio.code.org/s/express-2017/stage/2/puzzle/6": {
-    "short_instructions": "Avoid the TNT.",
-    "long_instructions": "_\"Follow this path to get me to the pig!\"_\n\nAvoid the TNT.",
+    "short_instructions": "Avoid the cracked ice.",
+    "long_instructions": "Avoid the cracked ice!",
     "authored_hints": {
       "courseC_maze_programming5_a": "Try using the \"Step\" button to run your code line by line. Can you figure out what you need to do next?",
       "courseC_maze_programming5_b": "How far do you need to move to get to the corner?",
-      "courseC_maze_programming5_c": "You will need to turn left at the corner to get to the pig."
+      "courseC_maze_programming5_c": "You will need to turn left at the corner to get to the acorn."
     },
     "callouts": {
       "": "These blocks don't have numbers on them. You can use as many as you want!"
     }
   },
   "https://studio.code.org/s/express-2017/stage/2/puzzle/7": {
-    "short_instructions": "This code includes a new block. What do you think would happen if you press the \"Run\" block?",
     "contained levels": [
       {
         "dsls": {
           "questions": [
             {
-              "text": "This code uses a new block. What do you think would happen if you pressed 'Run'?"
+              "text": "This code uses a new block. What do you think will happen when you press \"Run\"?"
             }
           ],
           "answers": [
             {
-              "text": "Nothing. The bird will not move at all.",
+              "text": "Nothing. Scrat will not move at all.",
               "correct": false,
-              "feedback": "Incorrect. Putting the 'move forward' block inside the 'repeat' block will cause the bird to move forward three times."
+              "feedback": "Incorrect. Putting the 'move forward' block inside the 'repeat' block will cause Scrat to move forward three times."
             },
             {
-              "text": "The bird will move forward three times, turn, then move forward three more times, making it to the pig!",
+              "text": "Scrat will move forward three times, turn, then move forward three more times, making it to the acorn!",
               "correct": true,
               "feedback": "Correct!"
             },
             {
-              "text": "The bird will move forward, then turn and crash into a wall.",
+              "text": "Scrat will move forward, then turn and crash.",
               "correct": false,
-              "feedback": "Incorrect. Putting the 'move forward' block inside the 'repeat' block will cause the bird to move forward three times."
+              "feedback": "Incorrect. Putting the 'move forward' block inside the 'repeat' block will cause Scrat to move forward three times."
             },
             {
               "text": "I don't know.",
               "correct": false,
-              "feedback": "Putting the 'move forward' block inside the 'repeat' block will cause the bird to move forward three times. The bird then turns and moves forward another three times, making it to the pig!"
+              "feedback": "Putting the 'move forward' block inside the 'repeat' block will cause Scrat to move forward three times. He then turns and moves forward another three times, making it to the acorn!"
             }
           ]
         }
@@ -93,20 +92,30 @@
     ]
   },
   "https://studio.code.org/s/express-2017/stage/2/puzzle/9": {
-    "short_instructions": "\"Keep calm and help me find the bad pig. Otherwise I might get angry!\"",
-    "long_instructions": "_\"Keep calm and help me find the bad pig. Otherwise I might get angry!\"_\n\nWhen you have several blocks in a row, try moving them inside of a `repeat` loop.  This will do the same thing with less code!",
+    "short_instructions": "Help Scrat get to the acorn using a loop!",
+    "long_instructions": "Help Scrat get to the acorn using a loop!",
     "authored_hints": {
-      "courseC_maze_programming6_a": "There are two ways to solve this puzzle!",
-      "courseC_maze_programming6_b": "Remember to turn first before moving, since the bird starts facing a wall.",
-      "courseC_maze_programming6_c": "Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you don't think you've solved the puzzle yet."
+      "courseC_maze_programming6a_a": "Use a `repeat` loop to get Scrat moving!"
     },
     "callouts": {
       "courseD_maze_ramp6_1": "Whatever code you put in here will repeat as many times as you tell it to, then continue to run the rest of the program."
     }
   },
   "https://studio.code.org/s/express-2017/stage/2/puzzle/10": {
-    "short_instructions": "Use what you've learned to get the bird to the pig!",
-    "long_instructions": "_\"It's time to get angry!\"_\n\n**Challenge:** Use what you've learned to get the bird to the pig!",
+    "short_instructions": "Help Scrat get to the acorn!",
+    "long_instructions": "Help Scrat get to the acorn!",
+    "authored_hints": {
+      "courseD_scrat_programming6_a": "There are two ways to solve this puzzle!",
+      "courseD_scrat_programming6_b": "Remember to turn first before moving, since Scrat is facing the wrong direction.",
+      "courseD_scrat_programming6_c": "Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you don't think you've solved the puzzle yet."
+    },
+    "callouts": {
+      "courseD_maze_ramp6_1": "Whatever code you put in here will repeat as many times as you tell it to, then continue to run the rest of the program."
+    }
+  },
+  "https://studio.code.org/s/express-2017/stage/2/puzzle/11": {
+    "short_instructions": "Use what you've learned to get Scrat to the acorn!",
+    "long_instructions": "**Challenge:** Use what you've learned to get Scrat to the acorn!",
     "authored_hints": {
       "courseD_maze_ramp7_b": "Don't forget to use the \"Step\" button to go through block by block and look for errors.",
       "courseD_maze_ramp7_a": "Use repeat blocks to run either a single block or a chunk of code over and over.",
@@ -116,7 +125,7 @@
       "courseD_maze_ramp7_1": "This is your first challenge puzzle! These are meant to be hard and may take several tries."
     }
   },
-  "https://studio.code.org/s/express-2017/stage/2/puzzle/11": {
+  "https://studio.code.org/s/express-2017/stage/2/puzzle/13": {
     "short_instructions": "Now make a square using Artist!",
     "long_instructions": "Great!  Now let's use that `repeat` loop to make a square using Artist!  The blocks for artist are a little different than other puzzles, but the idea is the same.\n\n* * *\n\n##### Each side of the square has a length of 200 pixels, and you will need to turn 90 degrees to make each angle.",
     "authored_hints": {
@@ -129,7 +138,7 @@
       "courseE_artist_ramp8_2": "Click here to type in the number of times to repeat your code."
     }
   },
-  "https://studio.code.org/s/express-2017/stage/2/puzzle/13": {
+  "https://studio.code.org/s/express-2017/stage/2/puzzle/15": {
     "short_instructions": "Use what you've learned to draw this triangle.",
     "long_instructions": "Use what you've learned to draw this triangle.\n\n* * *\n\n##### The sides are each 100 pixels long. You will need to turn 120 degrees at each corner.",
     "authored_hints": {
@@ -138,145 +147,99 @@
       "courseD_artist_ramp12_c": "To draw each side, you will need to move forward 100 pixels, then turn right 120 degrees. How many sides do you need?"
     }
   },
-  "https://studio.code.org/s/express-2017/stage/2/puzzle/14": {
-    "contained levels": [
-      {
-        "dsls": {
-          "questions": [
-            {
-              "text": "Based on the code below, what do you think will happen if you press 'Run'?"
-            }
-          ],
-          "answers": [
-            {
-              "text": "The artist will draw the triangle from the last level four times in a rotated pattern.",
-              "correct": true,
-              "feedback": "Correct!"
-            },
-            {
-              "text": "The artist will draw the triangle from the last level four times in a straight line.",
-              "correct": false,
-              "feedback": "Incorrect. Notice that there is a `turn 90 degrees` block inside the outer loop. This means that the artist will turn after drawing each triangle."
-            },
-            {
-              "text": "The artist will draw three squares in a rotated pattern.",
-              "correct": false,
-              "feedback": "Incorrect. Notice that the `repeat 3` loop is inside the `repeat 4` loop. This means that the drawing will be a three sided shape drawn four times."
-            },
-            {
-              "text": "I don't know.",
-              "correct": false,
-              "feedback": "The `repeat 3` loop is inside the `repeat 4` loop. This means that the artist will draw a triangle, then turn 90 degrees a total of 4 times."
-            }
-          ]
-        }
-      }
-    ]
-  },
   "https://studio.code.org/s/express-2017/stage/4/puzzle/2": {
-    "short_instructions": "Fix the error(s) to collect all of the treasure.",
-    "long_instructions": "_\"Oh no! I see a problem.\"_\n\nFix the error(s) to collect all of the treasure.",
+    "short_instructions": "Fix the code to help get Scrat get to the acorn.",
+    "long_instructions": "This code isn't quite right!  \n\nFix the code to help Scrat get to the acorn.",
     "authored_hints": {
-      "courseD_collector_debugging1_a": "Use the \"Step\" button to see if everything is right at the first step.\n\nHow about the second?\n\nWhere does it go wrong?",
-      "courseD_collector_debugging1_b": "Do you see any patterns that could be made more simple using a `repeat` loop?",
-      "courseD_collector_debugging1_c": "Remember to use the `collect` block to pick up treasure once you have moved to it."
+      "courseC_maze_debugging1_a": "-   Does everything work after the first step?\n-   Does it still work after the second?\n-   Where does it go wrong?",
+      "courseC_maze_debugging1_b": "There is 1 block you need to add to complete this puzzle."
     }
   },
   "https://studio.code.org/s/express-2017/stage/4/puzzle/3": {
-    "short_instructions": "Fix the error(s) to collect all of the treasure.",
-    "long_instructions": "_\"You can do this!\"_\n\nFix the error(s) to collect all of the treasure.",
+    "short_instructions": "Use your debugging skills to get Scrat to the acorn.",
     "authored_hints": {
-      "courseD_collector_debugging2_a": "Use the \"Step\" button to see if everything is right at the first step.\n\nHow about the second?\n\nWhere does it go wrong?",
-      "courseD_collector_debugging2_b": "Do you see any patterns that could be made more simple using a `repeat` loop?",
-      "courseD_collector_debugging2_c": "Try collecting treasure for one side of this pattern. Can you repeat this to collect treasure on the other two sides?"
+      "courseC_maze_debugging2_a": "There is a lot of valuable code in the workspace.  Don't just delete it all and start over!",
+      "courseC_maze_debugging2_b": "-   Does everything work after the first step?\n-   Does it still work after the second?\n-   Where does it go wrong?",
+      "courseC_maze_debugging2_c": "Can't figure out what's wrong? Try running the code a couple of times to see what happens."
     }
   },
   "https://studio.code.org/s/express-2017/stage/4/puzzle/4": {
-    "short_instructions": "Fix the error(s) to collect all of the treasure.",
-    "long_instructions": "_\"Be persistent and you will figure this out.\"_\n\nFix the error(s) to collect all of the treasure.",
+    "short_instructions": "Remove blocks to get Scrat to the acorn!",
+    "long_instructions": "Something is not quite right. \n\nRemove blocks to get Scrat to the acorn!",
     "authored_hints": {
-      "courseD_collector_debugging3_a": "Is there any place where Laurel does something that doesn't make sense? What happens when you change those blocks?",
-      "courseD_collector_debugging3_b": "Try simplifying the code using nested loops."
+      "courseC_maze_debugging3_a": "To delete a block from the middle of your code, drag all of the blocks to another part of the workspace.\n\nDrag the block you want to delete back to the toolbox.\n\nFinally, put your other blocks back where they belong.\n\n[][0]",
+      "courseC_maze_debugging3_b": "Can't figure out what's wrong? Try running the code a couple of times to see what happens."
     }
   },
   "https://studio.code.org/s/express-2017/stage/4/puzzle/5": {
-    "short_instructions": "Fix the error(s) to collect all of the treasure.",
-    "long_instructions": "_\"Don't get frustrated. You can do it!\"_\n\nFix the error(s) to collect all of the treasure.",
+    "short_instructions": "Someone has their directions mixed up! Can you help?",
     "authored_hints": {
-      "courseD_collector_debugging4_a": "Try using the debugging process a couple of times in a row. \n\nWhat causes the first problem?\n\nOnce that problem is fixed, what goes wrong?",
-      "courseD_collector_debugging4_b": "If you're having a hard time figuring out how to make the stair step pattern, try tracing it with your finger and saying the commands out loud. \n\nDon't forget to point out the direction of the turns!",
-      "courseD_collector_debugging4_c": "This loop is only missing one block. Can you figure out which one?"
+      "courseC_maze_debugging4_a": "Use the \"Step\" button to run through the instructions one at a time.  Does that help you find the line where things go wrong?",
+      "courseC_maze_debugging4_b": "One of the turns is making Scrat go in the wrong direction. Can you figure out which one?"
     }
   },
   "https://studio.code.org/s/express-2017/stage/4/puzzle/6": {
-    "short_instructions": "All of the commands that you need are already here...now use your debugging skills to figure out how to solve this puzzle.",
-    "long_instructions": "_\"This puzzle is making me loopy!\"_\n\nAll of the commands that you need are already here...now use your debugging skills to figure out how to solve this puzzle.",
+    "short_instructions": "Debug this level by rearranging and changing blocks.",
     "authored_hints": {
-      "courseD_collector_debugging5_a": "Start by looking at just the first loop.\n\nWhat does it do?\n\nWhat is it supposed to do?\n\nWhat does that tell you?",
-      "courseD_collector_debugging5_b": "Once you have the first loop the way you want it, what is left over in your code?"
+      "courseC_maze_debugging5_a": "There are lots of helpful blocks in the workspace already.  Don't delete them all! \n\nUse the \"Step\" button to go through and figure out where the code goes wrong.",
+      "courseC_maze_debugging5_b": "Try saying what Scrat should do out loud.  Is it the same as the code in the workspace?  What goes wrong?"
+    },
+    "callouts": {
+      "courseC_maze_debugging5_1": "Grey blocks cannot be deleted!"
     }
   },
   "https://studio.code.org/s/express-2017/stage/4/puzzle/7": {
-    "short_instructions": "Challenge: Use your debugging skills to fix the errors and collect all of the treasure.",
-    "long_instructions": "**Challenge:**  All of the blocks that you need are already here...Now use your debugging skills to fix the errors and collect all of the treasure.",
+    "short_instructions": "Figure out what is wrong and get Scrat to the acorn.",
     "authored_hints": {
-      "courseD_collector_debugging6_a": "Try running through the code using the \"Step\" button.  Is everything good at the first step?\n\nHow about the second?\n\nWhere do things go wrong?",
-      "courseD_collector_debugging6_b": "It looks like all of the right steps are here, you just need more of them.  How can you repeat the `collect` action multiple times?"
+      "courseC_maze_debugging6_a": "-   What is Scrat supposed to do?\n-   What does Scrat do?\n-   What does that tell you?",
+      "courseC_maze_debugging6_b": "Once you've found and fixed the first bug, go through the debugging process again to find the second one.\n\nRepeat the process until the program works!"
     }
   },
   "https://studio.code.org/s/express-2017/stage/4/puzzle/8": {
-    "long_instructions": "_\"So much treasure!\"_\n\nHelp Laurel fix the code to get all the treasure.",
+    "short_instructions": "**Challenge:** Debug this level by rearranging, adding, and deleting blocks.",
     "authored_hints": {
-      "courseD_collector_debugging8_a": "Do you see a pattern that you can simplify with a loop?",
-      "courseD_collector_debugging8_b": "Try using a nested loop to make this code shorter."
+      "courseC_maze_debugging7_a": "-   Does everything work at the first step?\n-   How about the second step?\n-   Where does it go wrong?",
+      "courseC_maze_debugging7_b": "Don't forget to use the \"Step\" button to run the program line by line!",
+      "courseC_maze_debugging7_c": "After you find and fix the first bug, make sure to use the debugging process again to find the next one.\n\nRepeat the debugging process until the program works!"
     }
   },
   "https://studio.code.org/s/express-2017/stage/4/puzzle/9": {
-    "long_instructions": "_\"It's treasure island!\"_\n\nHelp Laurel fix the code to get all the treasure.",
-    "authored_hints": {
-      "courseD_collector_debugging9_a": "There are several ways to solve this problem...but they all involve turns!",
-      "courseD_collector_debugging9_b": "Figure out how you would solve the puzzle, then move step-by-step to try to make the code match what is in your head."
-    }
-  },
-  "https://studio.code.org/s/express-2017/stage/4/puzzle/10": {
-    "long_instructions": "_\"It's treasure island!\"_\n\nHelp Laurel fix the code to get all the treasure.",
-    "authored_hints": {
-      "courseD_collector_debugging9_a": "There are several ways to solve this problem...but they all involve turns!",
-      "courseD_collector_debugging9_b": "Figure out how you would solve the puzzle, then move step-by-step to try to make the code match what is in your head."
-    },
     "contained levels": [
       {
         "dsls": {
           "questions": [
             {
-              "text": "Look closely at the code below.  Why won't Laurel collect all of the treasure when you click \"Run\"? Warning: This is a tricky question, make sure you read all of the options before answering!"
+              "text": "Look closely at the code below.  What is the first bug that will make this program fail? "
             }
           ],
           "answers": [
             {
-              "text": "Laurel will turn the wrong way when making a square.",
+              "text": "The program won't fail. Scrat will get to the acorn.",
               "correct": false,
-              "feedback": "Incorrect. This was partially correct, but the loop also does not run long enough to get all of the treasure."
+              "feedback": "Incorrect. Scrat goes the wrong way after his final turn."
             },
             {
-              "text": "The loop does not run long enough for Laurel to get to all of the treasure. ",
-              "correct": false,
-              "feedback": "Incorrect. This was partially correct, but the bee also turns the wrong way when trying to make a square."
-            },
-            {
-              "text": "Laurel turns the wrong way *and* the loop doesn't run long enough for Laurel to get all of the treasure.",
+              "text": "Scrat will go the wrong way after his final turn.",
               "correct": true,
               "feedback": "Correct!"
             },
             {
+              "text": "Scrat takes one too few steps and ends up short of the acorn.",
+              "correct": false,
+              "feedback": "Incorrect. Taking one too few steps happens after Scrat turns the wrong way."
+            },
+            {
               "text": "I don't know.",
               "correct": false,
-              "feedback": "Laurel turns the wrong way *and* the loop doesn't run long enough for Laurel to get all of the treasure."
+              "feedback": "The first error is that Scrat goes the wrong way after his final turn. "
             }
           ]
         }
       }
     ]
+  },
+  "https://studio.code.org/s/express-2017/stage/4/puzzle/10": {
+    "short_instructions": "Debug this level to get Scrat to the acorn."
   },
   "https://studio.code.org/s/express-2017/stage/4/extras?level_name=courseC_maze_debugging_challenge1": {
     "short_instructions": "Help Scrat decide which way to turn to get to the acorn.",
@@ -2528,7 +2491,7 @@
     "dsls": {
       "title": "title",
       "content1": "description here",
-      "markdown": "# The Design Process\n\n<iframe src=\"https://docs.google.com/document/d/e/2PACX-1vS2GtTZLCnFf4QYXEswvBv_XHQBoYbyBDrqABx9FCRpHBndTD0VbpC34HuN56dBgQ6I3tMgKstI3r6G/pub?embedded=true\" style=\"width: 800px; height: 600px\"></iframe>\n"
+      "markdown": "# The Design Process\nDesigning software means solving lots of little problems, all the time. The main problem in software design is what to create in the first place.\n\nThis process is useful for all kinds of things, but we are going to focus on using it for app design.\n\n<!-- Translate the terms \"Define\", \"Prepare\", \"Try\", \"Reflect\" and change font size and positioning as needed-->\n<div style=\"position: relative; text-align: center; font-size: 1em\">\n  <img src=\"https://images.code.org/a157e5f67444573e19e980a507db16fb-image-1563319667694.png\" alt=\"Design Process\" style=\"width: 50%;\">\n  <div style=\"position: absolute; top: 24%; left: 49.8%; transform: translateX(-49.8%); font-weight: bold;\">Define</div> \n  <div style=\"position: absolute; top: 52%; left: 61%; transform: translateX(-61%); font-weight: bold;\">Prepare</div>\n  <div style=\"position: absolute; top: 79%; left: 49.8%; transform: translateX(-49.8%); font-weight: bold;\">Try</div>\n  <div style=\"position: absolute; top: 52%; left: 39%; transform: translateX(-39%); font-weight: bold;\">Reflect</div>\n</div>\n\n* **Define**\n  * What kind of app would you like to create?\n  * What are your constraints?\n  * What does success look like?\n* **Prepare**\n  * Brainstorm / research possible elements\n  * Compare pros and cons\n  * Make a plan\n* **Try**\n  * Put your plan into action\n* **Reflect**\n  * How do your results compare to the goals you set while defining the app?\n  * What can you learn from this or do better next time?\n  * What new problems have you discovered?\n\n# What it Looks Like\nOver the course of the next several weeks, you will have the opportunity to experiment with some existing games and design your own game based off of what you have learned.  After creating your game, you will get the chance to present it to others and receive feedback.  These steps are all critically important in the software industry, and getting practice with the elements of the design process will help you create better products more efficiently.  \n\nHere is what the coming weeks will hold as we learn more about the design process:\n\n1. **Define & Prepare**\n   * Play existing games to get ideas and understand limitations\n   * Brainstorm and plan your new or modified app\n1. **Try**\n   * Follow your plan to build an app\n1. **Reflect & Edit**\n   * Swap apps with another group to help make your projects better\n1. **Present**\n   * Show off your final product!\n"
     }
   },
   "https://studio.code.org/s/express-2017/stage/35/puzzle/1": {

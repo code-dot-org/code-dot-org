@@ -53,6 +53,7 @@ class XhrProxyController < ApplicationController
     data.cityofchicago.org
     data.gv.at
     data.nasa.gov
+    donordrive.com
     dweet.io
     enclout.com
     githubusercontent.com
@@ -61,8 +62,11 @@ class XhrProxyController < ApplicationController
     herokuapp.com
     hubblesite.org
     images-api.nasa.gov
+    icanhazdadjoke.com
     isenseproject.org
     lakeside-cs.org
+    opentdb.com
+    pokeapi.co
     qrng.anu.edu.au
     quandl.com
     quizlet.com
