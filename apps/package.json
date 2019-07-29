@@ -142,6 +142,7 @@
     "karma-webpack": "^4.0.2",
     "lazysizes": "^4.0.0-rc1",
     "load-grunt-tasks": "3.5.0",
+    "loadable-components": "2.2.3",
     "lodash": "^4.17.5",
     "marked": "^0.3.6",
     "messageformat": "0.2.2",
