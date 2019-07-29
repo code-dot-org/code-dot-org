@@ -98,6 +98,27 @@ describe('SchoolInfoInterstitial', () => {
     expect(wrapper.state('isOpen')).to.be.false;
   });
 
+  it('closes the school info confirmation dialog when the dismiss button is clicked', () => {
+    const onClose = sinon.spy();
+    const wrapper = mount(
+      <SchoolInfoInterstitial
+        {...MINIMUM_PROPS}
+        scriptData={{
+          ...MINIMUM_PROPS.scriptData,
+          existingSchoolInfo: {}
+        }}
+        onClose={onClose}
+      />
+    );
+    const wrapperInstance = wrapper.instance();
+    sinon.spy(wrapperInstance, 'dismissSchoolInfoForm');
+    wrapper.instance().forceUpdate();
+    wrapper.find('Button[id="dismiss-button"]').simulate('click');
+    expect(wrapperInstance.dismissSchoolInfoForm).to.have.been.called;
+    expect(wrapper.state('isOpen')).to.be.false;
+    expect(onClose).to.have.been.calledOnce;
+  });
+
   it('passes empty school info if created with no existing school info', () => {
     const wrapper = shallow(
       <SchoolInfoInterstitial
