@@ -3,8 +3,9 @@
 import Sounds from '../../Sounds';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import ImagePicker from '../components/ImagePicker';
-import SoundPicker from '../components/SoundPicker';
+import loadable from 'loadable-components';
+const ImagePicker = loadable(() => import('../components/ImagePicker'));
+const SoundPicker = loadable(() => import('../components/SoundPicker'));
 import Dialog from '../LegacyDialog';
 
 /**
