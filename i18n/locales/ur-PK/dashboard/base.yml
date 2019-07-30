@@ -137,8 +137,6 @@ ur:
   teacher:
     panel:
       student: 'Talib-e-ilm'
-  home:
-    announcement_learn_more_button: "مزید سیکھے"
   user_type:
     student: 'Talib-e-ilm'
   footer:
