@@ -17,6 +17,7 @@ import PublishPage from './PublishPage';
 import GeneratingPage from './GeneratingPage';
 
 const APK_BUILD_STATUS_CHECK_PERIOD = 60000;
+const DEFAULT_PLATFORM = 'android';
 
 function recordExport(type) {
   firehoseClient.putRecord(
@@ -124,7 +125,8 @@ class ExportDialog extends React.Component {
   };
 
   state = {
-    screen: 'intro'
+    screen: 'intro',
+    platform: DEFAULT_PLATFORM
   };
 
   componentDidUpdate(prevProps) {
@@ -217,6 +219,7 @@ class ExportDialog extends React.Component {
       iconFileUrl: undefined,
       iconUri: undefined,
       md5PublishSavedSources: undefined,
+      platform: DEFAULT_PLATFORM,
       splashImageUri: undefined,
       apkUri: undefined,
       generatingApk: false,
@@ -229,9 +232,15 @@ class ExportDialog extends React.Component {
     this.props.onClose();
   };
 
-  onIconSelected = url => {
+  onIconSelected = iconFileUrl => {
     this.setState({
-      iconFileUrl: url
+      iconFileUrl
+    });
+  };
+
+  onPlatformChanged = platform => {
+    this.setState({
+      platform
     });
   };
 
@@ -495,13 +504,18 @@ class ExportDialog extends React.Component {
   };
 
   renderMainContent() {
-    const {screen, iconFileUrl} = this.state;
+    const {screen, iconFileUrl, platform} = this.state;
 
     switch (screen) {
       case 'intro':
         return <IntroPage />;
       case 'platform':
-        return <PlatformPage />;
+        return (
+          <PlatformPage
+            platform={platform}
+            onPlatformChanged={this.onPlatformChanged}
+          />
+        );
       case 'icon':
         return (
           <IconPage
