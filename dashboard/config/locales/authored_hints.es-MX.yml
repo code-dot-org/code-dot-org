@@ -10694,6 +10694,8 @@ es-MX:
           (pero no dentro de la afirmación 'si') para evitar que los puntos se eliminen
           muy rápidamente.
       courseD_scrat_ramp1:
+        courseC_maze_programming1_a: Si Scrat no llega hasta la bellota, asegúrate
+          de que los tres bloques estén juntos y, luego, vuelve a hacer clic en "Ejecutar".
         courseC_maze_programming1_b: "¡No tengas miedo de cometer un error! Intenta
           agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees
           que aún no has resuelto el desafío."
@@ -10729,8 +10731,13 @@ es-MX:
           a la esquina?"
         courseC_maze_programming5_c: Tendrá que girar a la izquierda en la esquina
           para llegar al cerdo.
+      courseD_scrat_ramp6:
+        courseC_maze_programming6a_a: "¡Usa un bucle `repetir` para poner a Scrat
+          en movimiento!"
       courseD_scrat_ramp7:
         courseD_scrat_programming6_a: "¡Hay dos formas de resolver este desafío!"
+        courseD_scrat_programming6_b: Recuerda girar primero antes de moverte, ya
+          que Scrat está mirando en la dirección incorrecta.
         courseD_scrat_programming6_c: "¡No tengas miedo de cometer un error! Intenta
           agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees
           que aún no has resuelto el desafío."

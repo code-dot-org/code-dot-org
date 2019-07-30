@@ -14,10 +14,6 @@ steps:
   # Also fetch the target branch (which is staging for pull requests.) We need this for determining which tests to run based on changed files.
   - git remote set-branches --add origin $DRONE_TARGET_BRANCH
   - git fetch --depth 100 origin $DRONE_TARGET_BRANCH
-  # Merge so we're up-to-date with the target before running tests.
-  - git config user.name "Drone"
-  - git config user.email "drone-fake-user@code.org"
-  - git merge origin/$DRONE_TARGET_BRANCH
 
 - name: verify-pr
   image: joshlory/code-dot-org:0.10
@@ -114,7 +110,8 @@ steps:
   # Also fetch the target branch (which is staging for pull requests.) We need this for determining which tests to run based on changed files.
   - git remote set-branches --add origin $DRONE_TARGET_BRANCH
   - git fetch --depth 100 origin $DRONE_TARGET_BRANCH
-  # Merge so we're up-to-date with the target before running tests.
+  # Merge so we're up-to-date with the target before running tests. We only do this for UI tests, not unit tests,
+  # since it disrupts Codecov pull request reports.
   - git config user.name "Drone"
   - git config user.email "drone-fake-user@code.org"
   - git merge origin/$DRONE_TARGET_BRANCH
@@ -185,6 +182,9 @@ steps:
     rebuild: true
     mount:
       - /home/circleci/.rbenv
+      # Used to avoid re-seeding UI test data unless something changed - see cached_ui_test task in https://github.com/code-dot-org/code-dot-org/blob/staging/dashboard/lib/tasks/seed.rake
+      - dashboard/db/ui_test_data.hash
+      - dashboard/db/ui_test_data.sql
 
 volumes:
 - name: rbenv
@@ -199,6 +199,6 @@ trigger:
   - pull_request
 ---
 kind: signature
-hmac: 79d4be8e9397ef07b8896318ddfc617abda7f25e95a773604ddad6865c531d9e
+hmac: a6c327dc9c60d4997d4b02ff9026d450d50e89a77fbb829d748de834af424f15
 
 ...

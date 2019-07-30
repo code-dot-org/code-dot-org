@@ -110,28 +110,30 @@ def sanitize!(data)
 end
 
 def sanitize_file_and_write(loc_path, dest_path)
-  loc_data = case File.extname(loc_path)
-             when '.yaml', '.yml'
-               YAML.load_file(loc_path)
-             when '.json'
-               JSON.parse(File.read(loc_path))
-             else
-               raise "do not know how to parse localization file from #{loc_path}"
-             end
+  loc_data =
+    case File.extname(loc_path)
+    when '.yaml', '.yml'
+      YAML.load_file(loc_path)
+    when '.json'
+      JSON.parse(File.read(loc_path))
+    else
+      raise "do not know how to parse localization file from #{loc_path}"
+    end
   sanitize_data_and_write(loc_data, dest_path)
 end
 
 def sanitize_data_and_write(data, dest_path)
   sanitize! data
 
-  dest_data = case File.extname(dest_path)
-              when '.yaml', '.yml'
-                data.to_yaml
-              when '.json'
-                JSON.pretty_generate(data)
-              else
-                raise "do not know how to serialize localization data to #{dest_path}"
-              end
+  dest_data =
+    case File.extname(dest_path)
+    when '.yaml', '.yml'
+      data.to_yaml
+    when '.json'
+      JSON.pretty_generate(data)
+    else
+      raise "do not know how to serialize localization data to #{dest_path}"
+    end
 
   FileUtils.mkdir_p(File.dirname(dest_path))
   File.open(dest_path, 'w+') do |f|
@@ -247,28 +249,6 @@ def rebuild_blockly_js_files
   I18nScriptUtils.run_bash_script "apps/node_modules/@code-dot-org/blockly/i18n/codeorg-messages.sh"
   Dir.chdir('apps') do
     puts `yarn build`
-  end
-end
-
-# retrieves an ordered array of strings representing all image or link
-# values in the passed value; can support strings, arrays, or
-# (recursively) hashes. For hashes, results will be lexicographically
-# ordered by key.
-def get_links_and_images(value)
-  # regex to detect links and images in both markup and markdown formats
-  link_or_image_re = /(?:\]\(\S*\)|(?:src|href)=["']\S*["'])/
-
-  if value.nil?
-    return []
-  elsif value.instance_of? String
-    return value.scan(link_or_image_re)
-  elsif value.instance_of? Array
-    return value.join(' ').scan(link_or_image_re)
-  elsif value.instance_of? Hash
-    values = value.keys.sort.map do |key|
-      get_links_and_images(value[key])
-    end
-    return values.flatten
   end
 end
 
