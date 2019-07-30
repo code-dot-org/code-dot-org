@@ -20,7 +20,7 @@ import exportExpoIconPng from '@cdo/apps/templates/export/expo/icon.png';
 import exportExpoSplashPng from '@cdo/apps/templates/export/expo/splash.png';
 import logToCloud from '@cdo/apps/logToCloud';
 import project from '@cdo/apps/code-studio/initApp/project';
-import {GAME_WIDTH, GAME_HEIGHT} from './constants';
+import {GAME_WIDTH, GAME_HEIGHT} from '../constants';
 import {EXPO_SESSION_SECRET} from '@cdo/apps/constants';
 import {
   EXPO_SDK_VERSION,
