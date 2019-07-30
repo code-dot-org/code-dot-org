@@ -1,0 +1,5 @@
+name 'U1 L12 Lossy iframe widget'
+title 'Embedded Arduino Sketch Test'
+markdown <<MARKDOWN
+<iframe style="height: 700px; width: 100%; margin: 10px 0 10px;" allowTransparency="true" src="https://code-lossy-img-investigation.glitch.me/" frameborder="0"></iframe>
+MARKDOWN
