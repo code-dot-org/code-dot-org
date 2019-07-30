@@ -3,7 +3,7 @@
 import $ from 'jquery';
 import JSZip from 'jszip';
 import {saveAs} from 'filesaver.js';
-import {SnackSession} from '@code-dot-org/snack-sdk';
+import {SnackSession} from 'snack-sdk';
 
 import * as assetPrefix from '@cdo/apps/assetManagement/assetPrefix';
 import download from '@cdo/apps/assetManagement/download';
