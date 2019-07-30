@@ -9,7 +9,7 @@
     "edit_code": true,
     "embed": "false",
     "short_instructions": "Add a console.log command inside the function of your event handler. Use it to display the event parameter. Click on the screen to see the contents of the event parameter (Click to see full instructions)",
-    "long_instructions": "# The Event Parameter for Mouse Events\r\n\r\nWe'd like to change the app so that when the user clicks on the canvas we draw a circle right where they clicked. To do that, we need to learn more about the **parameter passed by our event handler function, which by default is called `event`**.\r\n\r\nRecall that when we wanted to know what key the user pressed on a `keyPress` event, we checked the value stored in `event.key`. **The event parameter actually stores a great deal more information about each event**. \r\n\r\nWhen using the mouse, the event parameter carries information like the location of the mouse, how fast it's moving, and some other things as well. \r\n\r\nLet's get acquainted with the event parameter and what we can find out about the mouse.\r\n\r\n# Do This:\r\n\r\n* Add the parameter `event` to the function of your event handler. \r\n\r\n<img src=\"https://images.code.org/b09a918da5e818c8fb678c753c652fff-image-1554732703483.gif\" width=\"800px\">\r\n<br><br>\r\n\r\n* Add a `console.log` command inside the function of your event handler. Use it to display the `event` parameter.\r\n* Run your program and click your canvas. **The full contents of the `event` parameter should be displayed in the console**. \r\n* **Which values do you think hold the x and y coordinates**?  What else is there?\r\n* We won't use all of these, but it's interesting to see just how much is available.\r\n* Once you have experimented a little, move to the next level.\r\n![](https://images.code.org/a6875e27019cb938a9576f0485648ca9-image-1448041792987.49.30 AM.png)",
+    "long_instructions": "# The Event Parameter for Mouse Events\r\n\r\nWe'd like to change the app so that when the user clicks on the canvas we draw a circle right where they clicked. To do that, we need to learn more about the **parameter passed by our event handler function, which by default is called `event`**.\r\n\r\nRecall that when we wanted to know what key the user pressed on a `keyPress` event, we checked the value stored in `event.key`. **The event parameter actually stores a great deal more information about each event**. \r\n\r\nWhen using the mouse, the event parameter carries information like the location of the mouse, how fast it's moving, and some other things as well. \r\n\r\nLet's get acquainted with the event parameter and what we can find out about the mouse.\r\n\r\n# Do This:\r\n\r\n* Add the parameter `event` to the function of your event handler. \r\n\r\n<img src=\"https://images.code.org/b09a918da5e818c8fb678c753c652fff-image-1554732703483.gif\" width=\"800px\">\r\n<br><br>\r\n\r\n* Add a `console.log` command inside the function of your event handler. Use it to display the `event` parameter.\r\n* Run your program and click your canvas. **The full contents of the `event` parameter should be displayed in the console**. \r\n* **Which values do you think hold the x and y coordinates**?  What else is there?\r\n* We won't use all of these, but it's interesting to see just how much is available.\r\n* Once you have experimented a little, move to the next level.\r\n\r\n![](https://images.code.org/4a7b1440864d3c8cecb6f67c19ae04e0-image-1564504050216.gif)",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -44,18 +44,18 @@
     "parent_level_id": 13869,
     "name_suffix": "_2019",
     "show_debug_watch": "true",
-    "preload_asset_list": null,
     "encrypted": "false",
     "instructions_important": "false",
     "mini_rubric": "false",
     "hide_share_and_remix": "false",
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
-    "makerlab_enabled": "false"
+    "makerlab_enabled": "false",
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2019-04-08 14:06:59 +0000\",\"changed\":[\"notes\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-04-08 14:12:06 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2019-04-08 14:06:59 +0000\",\"changed\":[\"notes\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-04-08 14:12:06 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-07-30 16:27:45 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
