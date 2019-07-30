@@ -9,14 +9,17 @@ export default function loadSpritelab(options) {
   options.skinsModule = skins;
   options.blocksModule = blocks;
   var spritelab = new SpriteLab();
-  var gamelab = spritelab.gamelab;
 
   // Bind helper that provides project metadata for gamelab autosave
-  options.getAnimationList = gamelab.getSerializedAnimationList.bind(gamelab);
-  options.getGeneratedProperties = gamelab.getGeneratedProperties.bind(gamelab);
+  options.getAnimationList = spritelab.getSerializedAnimationList.bind(
+    spritelab
+  );
+  options.getGeneratedProperties = spritelab.getGeneratedProperties.bind(
+    spritelab
+  );
 
-  gamelab.injectStudioApp(studioApp());
-  appMain(gamelab, levels, options);
+  spritelab.injectStudioApp(studioApp());
+  appMain(spritelab, levels, options);
 
-  return gamelab;
+  return spritelab;
 }
