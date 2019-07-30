@@ -13,7 +13,7 @@ nav: how_to_nav
 ## Get every school participating, every student learning!
 
 ### 1. Recruit local schools
-Share [this email]({{ promote/sample_emails}}) and [teacher how to guide]({{ urls/how_to_guide }}), or include a [short blurb]({{ promote/stats_url }}) in newsletters/district communications.
+Share [this email]({{ promote/sample_emails }}) and [teacher how to guide]({{ urls/how_to_guide }}), or include a [short blurb]({{ promote/stats_url }}) in newsletters/district communications.
 <br>
 
 ### 2. Provide a sample logistics plan for schools
@@ -33,6 +33,6 @@ See our [event how to guide]({{ urls/how_to_events }}) for a sample run of show,
 The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey:
 
 - Encourage students to continue to [learn online]({{ urls/learn_beyond }}).
-- [Attend]({{ urls/professional_dev_workshops }}) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
+- [Attend]({{ urls/professional_development_workshops }}) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
 
 {{ signup_button }}
