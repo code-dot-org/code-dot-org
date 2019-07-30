@@ -77,7 +77,7 @@ module Pd::SurveyPipeline
         next unless data_visible_to_user?(current_user, summary)
 
         day, facilitator_id = summary.values_at(:day, :facilitator_id)
-        context_name = get_context_name(workshop_id, day, facilitator_id, form_id)
+        context_name = get_survey_context(workshop_id, day, facilitator_id, form_id)
         q_name = summary[:name]
 
         # Create top structures if not already created
@@ -139,7 +139,7 @@ module Pd::SurveyPipeline
       true
     end
 
-    # Given metadata of a survey submission, returns context name for that submission.
+    # Given metadata of a survey submission, returns context of that submission.
     # Example return values: Pre Workshop, Post Workshop, Day <number>, and Facilitator.
     #
     # @param workshop_id [Number] must be valid workshop id
@@ -149,12 +149,13 @@ module Pd::SurveyPipeline
     #
     # @return [String] context name
     #
-    def self.get_context_name(workshop_id, day, facilitator_id, form_id)
-      workshop = Pd::Workshop.find(workshop_id)
-      return 'Invalid Metadata' unless workshop
+    def self.get_survey_context(workshop_id, day, facilitator_id, form_id)
+      workshop = Pd::Workshop.find_by_id(workshop_id)
+      return 'Invalid' unless workshop && day >= 0
 
       if workshop.csf?
         return 'Facilitator' if facilitator_id
+
         # CSF is a 1-day workshop and doesn't have daily survey.
         return day == 0 ? 'Pre Workshop' : 'Post Workshop'
       elsif workshop.summer?
@@ -162,6 +163,8 @@ module Pd::SurveyPipeline
         return day == 0 ? 'Pre Workshop' : "Day #{day}"
       else
         # Academic year workshop doesn't have pre-workshop survey.
+        return 'Invalid' if day == 0
+
         # Post workshop survey has the same "day" value as the last daily survey.
         # Use form name to distinguish them.
         session_count = workshop.sessions.size
