@@ -1,7 +1,9 @@
-import GameLab from '@cdo/apps/p5lab/gamelab/GameLab';
+import P5Lab from '../P5Lab';
 
 var SpriteLab = function() {
-  this.gamelab = new GameLab();
+  P5Lab.call(this);
 };
+
+SpriteLab.prototype = Object.create(P5Lab.prototype);
 
 module.exports = SpriteLab;
