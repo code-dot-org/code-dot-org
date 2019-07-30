@@ -2,13 +2,13 @@ import $ from 'jquery';
 import _ from 'lodash';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {changeInterfaceMode, viewAnimationJson} from './actions';
-import {startInAnimationTab} from './stateQueries';
+import {changeInterfaceMode, viewAnimationJson} from './gamelab/actions';
+import {startInAnimationTab} from './gamelab/stateQueries';
 import {
   GameLabInterfaceMode,
   GAME_WIDTH,
   SpritelabReservedWords
-} from './constants';
+} from './gamelab/constants';
 import experiments from '@cdo/apps/util/experiments';
 import {
   outputError,
@@ -19,17 +19,17 @@ import BlocklyModeErrorHandler from '@cdo/apps/BlocklyModeErrorHandler';
 var gamelabMsg = require('@cdo/gamelab/locale');
 var spritelabMsg = require('@cdo/spritelab/locale');
 import CustomMarshalingInterpreter from '@cdo/apps/lib/tools/jsinterpreter/CustomMarshalingInterpreter';
-var apiJavascript = require('./apiJavascript');
+var apiJavascript = require('./gamelab/apiJavascript');
 var consoleApi = require('@cdo/apps/consoleApi');
 var utils = require('@cdo/apps/utils');
-var dropletConfig = require('./dropletConfig');
+var dropletConfig = require('./gamelab/dropletConfig');
 var JSInterpreter = require('@cdo/apps/lib/tools/jsinterpreter/JSInterpreter');
 import * as apiTimeoutList from '@cdo/apps/lib/util/timeoutList';
 var JsInterpreterLogger = require('@cdo/apps/JsInterpreterLogger');
-var GameLabP5 = require('./GameLabP5');
-var gameLabSprite = require('./GameLabSprite');
-var gameLabGroup = require('./GameLabGroup');
-var gamelabCommands = require('./commands');
+var GameLabP5 = require('./gamelab/GameLabP5');
+var gameLabSprite = require('./gamelab/GameLabSprite');
+var gameLabGroup = require('./gamelab/GameLabGroup');
+var gamelabCommands = require('./gamelab/commands');
 import {initializeSubmitHelper, onSubmitComplete} from '@cdo/apps/submitHelper';
 var dom = require('@cdo/apps/dom');
 import {initFirebaseStorage} from '@cdo/apps/storage/firebaseStorage';
@@ -39,11 +39,11 @@ import {
   setInitialAnimationList,
   saveAnimations,
   withAbsoluteSourceUrls
-} from './animationListModule';
-import {getSerializedAnimationList} from './shapes';
+} from './gamelab/animationListModule';
+import {getSerializedAnimationList} from './gamelab/shapes';
 import {add as addWatcher} from '@cdo/apps/redux/watchedExpressions';
-var reducers = require('./reducers');
-var GameLabView = require('./GameLabView');
+var reducers = require('./gamelab/reducers');
+var GameLabView = require('./gamelab/GameLabView');
 var Provider = require('react-redux').Provider;
 import {shouldOverlaysBeVisible} from '@cdo/apps/templates/VisualizationOverlay';
 import {
@@ -53,13 +53,13 @@ import {
 } from '@cdo/apps/containedLevels';
 import {hasValidContainedLevelResult} from '@cdo/apps/code-studio/levels/codeStudioLevels';
 import {actions as jsDebugger} from '@cdo/apps/lib/tools/jsdebugger/redux';
-import {addConsoleMessage, clearConsole} from './textConsoleModule';
+import {addConsoleMessage, clearConsole} from './gamelab/textConsoleModule';
 import {captureThumbnailFromCanvas} from '@cdo/apps/util/thumbnail';
 import Sounds from '@cdo/apps/Sounds';
 import {TestResults, ResultType} from '@cdo/apps/constants';
 import {showHideWorkspaceCallouts} from '@cdo/apps/code-studio/callouts';
-import defaultSprites from './defaultSprites.json';
-import wrap from './debugger/replay';
+import defaultSprites from './gamelab/defaultSprites.json';
+import wrap from './gamelab/debugger/replay';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {
   clearMarks,
@@ -68,8 +68,8 @@ import {
   mark,
   measure
 } from '@cdo/apps/util/performance';
-import MobileControls from './MobileControls';
-import Exporter from './Exporter';
+import MobileControls from './gamelab/MobileControls';
+import Exporter from './gamelab/Exporter';
 import {
   expoGenerateApk,
   expoCheckApkBuild,
@@ -100,7 +100,7 @@ const DRAW_LOOP_MEASURE = 'drawLoop';
  * @constructor
  * @implements LogTarget
  */
-var GameLab = function() {
+var P5Lab = function() {
   this.skin = null;
   this.level = null;
   this.tickIntervalId = 0;
@@ -170,14 +170,14 @@ var GameLab = function() {
   };
 };
 
-module.exports = GameLab;
+module.exports = P5Lab;
 
 /**
  * Forward a log message to both logger objects.
  * @param {?} object
  * @param {string} logLevel
  */
-GameLab.prototype.log = function(object, logLevel) {
+P5Lab.prototype.log = function(object, logLevel) {
   this.consoleLogger_.log({output: object, fromConsoleLog: true});
   if (this.debuggerEnabled) {
     getStore().dispatch(
@@ -189,7 +189,7 @@ GameLab.prototype.log = function(object, logLevel) {
 /**
  * Inject the studioApp singleton.
  */
-GameLab.prototype.injectStudioApp = function(studioApp) {
+P5Lab.prototype.injectStudioApp = function(studioApp) {
   this.studioApp_ = studioApp;
   this.studioApp_.reset = this.resetHandler.bind(this);
   this.studioApp_.runButtonClick = this.runButtonClick.bind(this);
@@ -202,7 +202,7 @@ GameLab.prototype.injectStudioApp = function(studioApp) {
  * @param {!AppOptionsConfig} config
  * @param {!GameLabLevel} config.level
  */
-GameLab.prototype.init = function(config) {
+P5Lab.prototype.init = function(config) {
   if (!this.studioApp_) {
     throw new Error('GameLab requires a StudioApp');
   }
@@ -334,7 +334,7 @@ GameLab.prototype.init = function(config) {
 
     if (this.studioApp_.isUsingBlockly()) {
       // Custom blockly config options for game lab jr
-      config.valueTypeTabShapeMap = GameLab.valueTypeTabShapeMap(Blockly);
+      config.valueTypeTabShapeMap = P5Lab.valueTypeTabShapeMap(Blockly);
     }
 
     this.studioApp_.init(config);
@@ -470,7 +470,7 @@ GameLab.prototype.init = function(config) {
  * Export the project for web or use within Expo.
  * @param {Object} expoOpts
  */
-GameLab.prototype.exportApp = async function(expoOpts) {
+P5Lab.prototype.exportApp = async function(expoOpts) {
   await this.whenAnimationsAreReady();
   return this.exportAppWithAnimations(
     project.getCurrentName() || 'my-app',
@@ -479,7 +479,7 @@ GameLab.prototype.exportApp = async function(expoOpts) {
   );
 };
 
-GameLab.prototype.setAndroidExportProps = function(props) {
+P5Lab.prototype.setAndroidExportProps = function(props) {
   // Spread the previous object so changes here will always fail shallow
   // compare and trigger react prop changes
   this.generatedProperties.export = {
@@ -499,7 +499,7 @@ GameLab.prototype.setAndroidExportProps = function(props) {
  * @param {Object} animationList - object of {AnimationKey} to {AnimationProps}
  * @param {Object} expoOpts
  */
-GameLab.prototype.exportAppWithAnimations = function(
+P5Lab.prototype.exportAppWithAnimations = function(
   appName,
   animationList,
   expoOpts
@@ -525,7 +525,7 @@ GameLab.prototype.exportAppWithAnimations = function(
  * Subscribe to state changes on the store.
  * @param {!Store} store
  */
-GameLab.prototype.setupReduxSubscribers = function(store) {
+P5Lab.prototype.setupReduxSubscribers = function(store) {
   var state = {};
   store.subscribe(() => {
     var lastState = state;
@@ -568,15 +568,15 @@ GameLab.prototype.setupReduxSubscribers = function(store) {
   });
 };
 
-GameLab.prototype.onIsRunningChange = function() {
+P5Lab.prototype.onIsRunningChange = function() {
   this.setCrosshairCursorForPlaySpace();
 };
 
-GameLab.prototype.onIsDebuggingSpritesChange = function(isDebuggingSprites) {
+P5Lab.prototype.onIsDebuggingSpritesChange = function(isDebuggingSprites) {
   this.gameLabP5.debugSprites(isDebuggingSprites);
 };
 
-GameLab.prototype.onStepSpeedChange = function(stepSpeed) {
+P5Lab.prototype.onStepSpeedChange = function(stepSpeed) {
   this.gameLabP5.changeStepSpeed(stepSpeed);
 
   if (this.isTickTimerRunning()) {
@@ -590,18 +590,18 @@ GameLab.prototype.onStepSpeedChange = function(stepSpeed) {
  * a 'protected' div that React doesn't update, but eventually would rather do
  * this with React.
  */
-GameLab.prototype.setCrosshairCursorForPlaySpace = function() {
+P5Lab.prototype.setCrosshairCursorForPlaySpace = function() {
   var showOverlays = shouldOverlaysBeVisible(getStore().getState());
   $('#divGameLab').toggleClass('withCrosshair', showOverlays);
 };
 
-GameLab.prototype.loadAudio_ = function() {
+P5Lab.prototype.loadAudio_ = function() {
   this.studioApp_.loadAudio(this.skin.winSound, 'win');
   this.studioApp_.loadAudio(this.skin.startSound, 'start');
   this.studioApp_.loadAudio(this.skin.failureSound, 'failure');
 };
 
-GameLab.prototype.calculateVisualizationScale_ = function() {
+P5Lab.prototype.calculateVisualizationScale_ = function() {
   var divGameLab = document.getElementById('divGameLab');
   // Calculate current visualization scale:
   return divGameLab.getBoundingClientRect().width / divGameLab.offsetWidth;
@@ -611,7 +611,7 @@ GameLab.prototype.calculateVisualizationScale_ = function() {
  * @param {string} code The code to search for Data Storage APIs
  * @return {boolean} True if the code uses any data storage APIs
  */
-GameLab.prototype.hasDataStoreAPIs = function(code) {
+P5Lab.prototype.hasDataStoreAPIs = function(code) {
   return (
     /createRecord/.test(code) ||
     /updateRecord/.test(code) ||
@@ -622,7 +622,7 @@ GameLab.prototype.hasDataStoreAPIs = function(code) {
 /**
  * Code called after the blockly div + blockly core is injected into the document
  */
-GameLab.prototype.afterInject_ = function(config) {
+P5Lab.prototype.afterInject_ = function(config) {
   this.mobileControls = new MobileControls();
   this.mobileControls.init({
     notifyKeyCodeDown: code => this.gameLabP5.notifyKeyCodeDown(code),
@@ -670,13 +670,13 @@ GameLab.prototype.afterInject_ = function(config) {
  * @param {!boolean} areBreakpointsEnabled
  * @private
  */
-GameLab.prototype.afterEditorReady_ = function(areBreakpointsEnabled) {
+P5Lab.prototype.afterEditorReady_ = function(areBreakpointsEnabled) {
   if (areBreakpointsEnabled) {
     this.studioApp_.enableBreakpoints();
   }
 };
 
-GameLab.prototype.haltExecution_ = function() {
+P5Lab.prototype.haltExecution_ = function() {
   this.reportMetrics();
   clearMarks(DRAW_LOOP_START);
   clearMeasures(DRAW_LOOP_MEASURE);
@@ -687,18 +687,18 @@ GameLab.prototype.haltExecution_ = function() {
   this.tickCount = 0;
 };
 
-GameLab.prototype.isTickTimerRunning = function() {
+P5Lab.prototype.isTickTimerRunning = function() {
   return this.tickIntervalId !== 0;
 };
 
-GameLab.prototype.stopTickTimer = function() {
+P5Lab.prototype.stopTickTimer = function() {
   if (this.tickIntervalId !== 0) {
     window.clearInterval(this.tickIntervalId);
     this.tickIntervalId = 0;
   }
 };
 
-GameLab.prototype.startTickTimer = function() {
+P5Lab.prototype.startTickTimer = function() {
   if (this.isTickTimerRunning()) {
     console.warn('Tick timer is already running in startTickTimer()');
   }
@@ -719,7 +719,7 @@ GameLab.prototype.startTickTimer = function() {
  * @param {boolean} ignore Required by the API but ignored by this
  *     implementation.
  */
-GameLab.prototype.resetHandler = function(ignore) {
+P5Lab.prototype.resetHandler = function(ignore) {
   this.reset();
   if (this.isSpritelab) {
     this.gameLabP5.spritelab.preview.apply(this);
@@ -729,7 +729,7 @@ GameLab.prototype.resetHandler = function(ignore) {
 /**
  * Reset GameLab to its initial state.
  */
-GameLab.prototype.reset = function() {
+P5Lab.prototype.reset = function() {
   this.haltExecution_();
 
   /*
@@ -774,7 +774,7 @@ GameLab.prototype.reset = function() {
   getStore().dispatch(clearConsole());
 };
 
-GameLab.prototype.onPuzzleComplete = function(submit, testResult, message) {
+P5Lab.prototype.onPuzzleComplete = function(submit, testResult, message) {
   let msg = this.isSpritelab ? spritelabMsg : gamelabMsg;
   if (message && msg[message]) {
     this.message = msg[message]();
@@ -868,7 +868,7 @@ GameLab.prototype.onPuzzleComplete = function(submit, testResult, message) {
  * Function to be called when the service report call is complete
  * @param {MilestoneResponse} response - JSON response (if available)
  */
-GameLab.prototype.onReportComplete = function(response) {
+P5Lab.prototype.onReportComplete = function(response) {
   this.response = response;
   this.waitingForReport = false;
   this.studioApp_.onReportComplete(response);
@@ -878,7 +878,7 @@ GameLab.prototype.onReportComplete = function(response) {
 /**
  * Click the run button.  Start the program.
  */
-GameLab.prototype.runButtonClick = function() {
+P5Lab.prototype.runButtonClick = function() {
   this.studioApp_.toggleRunReset('reset');
   // document.getElementById('spinner').style.visibility = 'visible';
   if (this.studioApp_.isUsingBlockly()) {
@@ -902,7 +902,7 @@ GameLab.prototype.runButtonClick = function() {
 /**
  * Execute the user's code.  Heaven help us...
  */
-GameLab.prototype.execute = function() {
+P5Lab.prototype.execute = function() {
   Sounds.getSingleton().unmuteURLs();
 
   this.result = ResultType.UNSET;
@@ -943,7 +943,7 @@ GameLab.prototype.execute = function() {
   this.startTickTimer();
 };
 
-GameLab.prototype.initInterpreter = function(attachDebugger = true) {
+P5Lab.prototype.initInterpreter = function(attachDebugger = true) {
   const injectGamelabGlobals = () => {
     if (experiments.isEnabled('replay')) {
       wrap(this.gameLabP5.p5);
@@ -1053,7 +1053,7 @@ GameLab.prototype.initInterpreter = function(attachDebugger = true) {
   */
 };
 
-GameLab.prototype.onTick = function() {
+P5Lab.prototype.onTick = function() {
   this.tickCount++;
 
   if (this.JSInterpreter) {
@@ -1077,7 +1077,7 @@ GameLab.prototype.onTick = function() {
  * opportunity to create native event handlers that call down into interpreter
  * code for each event name.
  */
-GameLab.prototype.onP5ExecutionStarting = function() {
+P5Lab.prototype.onP5ExecutionStarting = function() {
   this.gameLabP5.p5eventNames.forEach(function(eventName) {
     this.gameLabP5.registerP5EventHandler(
       eventName,
@@ -1103,7 +1103,7 @@ GameLab.prototype.onP5ExecutionStarting = function() {
  *         calling notifyPreloadPhaseComplete is then necessary to continue
  *         loading the game.
  */
-GameLab.prototype.onP5Preload = function() {
+P5Lab.prototype.onP5Preload = function() {
   Promise.all([
     this.preloadAnimations_(this.level.pauseAnimationsByDefault),
     this.maybePreloadBackgrounds_(),
@@ -1114,7 +1114,7 @@ GameLab.prototype.onP5Preload = function() {
   return false;
 };
 
-GameLab.prototype.loadValidationCodeIfNeeded_ = function() {
+P5Lab.prototype.loadValidationCodeIfNeeded_ = function() {
   if (
     this.level.validationCode &&
     !this.level.helperLibraries.some(name => name === validationLibraryName)
@@ -1124,7 +1124,7 @@ GameLab.prototype.loadValidationCodeIfNeeded_ = function() {
 };
 
 // Preloads background images if this is Sprite Lab
-GameLab.prototype.maybePreloadBackgrounds_ = function() {
+P5Lab.prototype.maybePreloadBackgrounds_ = function() {
   if (!this.isSpritelab) {
     return Promise.resolve();
   }
@@ -1141,9 +1141,7 @@ GameLab.prototype.maybePreloadBackgrounds_ = function() {
  *          effect on the P5 preloadCount, so we don't need to track it here.
  * @private
  */
-GameLab.prototype.preloadAnimations_ = async function(
-  pauseAnimationsByDefault
-) {
+P5Lab.prototype.preloadAnimations_ = async function(pauseAnimationsByDefault) {
   await this.whenAnimationsAreReady();
   // Animations are ready - send them to p5 to be loaded into the engine.
   return this.gameLabP5.preloadAnimations(
@@ -1158,7 +1156,7 @@ GameLab.prototype.preloadAnimations_ = async function(
  * @returns {boolean}
  * @private
  */
-GameLab.prototype.areAnimationsReady_ = function() {
+P5Lab.prototype.areAnimationsReady_ = function() {
   const animationList = getStore().getState().animationList;
   return animationList.orderedKeys.every(
     key => animationList.propsByKey[key].loadedFromSource
@@ -1169,7 +1167,7 @@ GameLab.prototype.areAnimationsReady_ = function() {
  * Returns a Promise that resolves once the store says animations are ready.
  * @returns {Promise}
  */
-GameLab.prototype.whenAnimationsAreReady = function() {
+P5Lab.prototype.whenAnimationsAreReady = function() {
   return new Promise(resolve => {
     if (this.areAnimationsReady_()) {
       resolve();
@@ -1191,7 +1189,7 @@ GameLab.prototype.whenAnimationsAreReady = function() {
  *          otherwise will resolve when the preload handler has completed.
  * @private
  */
-GameLab.prototype.runPreloadEventHandler_ = function() {
+P5Lab.prototype.runPreloadEventHandler_ = function() {
   return new Promise(resolve => {
     this.initInterpreter();
     // Execute the interpreter for the first time:
@@ -1231,7 +1229,7 @@ GameLab.prototype.runPreloadEventHandler_ = function() {
  * Called on tick to check whether preload code is done running, and trigger
  * the appropriate report of completion if it is.
  */
-GameLab.prototype.completePreloadIfPreloadComplete = function() {
+P5Lab.prototype.completePreloadIfPreloadComplete = function() {
   // This function will have been created in runPreloadEventHandler if we
   // actually had an interpreter and might have run preload code.  It could
   // be null if we didn't have an interpreter, or we've already called it.
@@ -1261,7 +1259,7 @@ GameLab.prototype.completePreloadIfPreloadComplete = function() {
  * interpreter methods that were modified during preload, then call the user's
  * setup function.
  */
-GameLab.prototype.onP5Setup = function() {
+P5Lab.prototype.onP5Setup = function() {
   if (this.JSInterpreter) {
     // Re-marshal restored preload methods for the interpreter:
     const preloadMethods = _.intersection(
@@ -1290,7 +1288,7 @@ GameLab.prototype.onP5Setup = function() {
   }
 };
 
-GameLab.prototype.completeSetupIfSetupComplete = function() {
+P5Lab.prototype.completeSetupIfSetupComplete = function() {
   if (!this.setupInProgress) {
     return;
   }
@@ -1314,7 +1312,7 @@ GameLab.prototype.completeSetupIfSetupComplete = function() {
   }
 };
 
-GameLab.prototype.runValidationCode = function() {
+P5Lab.prototype.runValidationCode = function() {
   if (this.level.validationCode) {
     try {
       const validationResult = this.JSInterpreter.interpreter.marshalInterpreterToNative(
@@ -1347,7 +1345,7 @@ GameLab.prototype.runValidationCode = function() {
   }
 };
 
-GameLab.prototype.measureDrawLoop = function(name, callback) {
+P5Lab.prototype.measureDrawLoop = function(name, callback) {
   if (this.reportPerf) {
     mark(`${name}_start`);
     callback();
@@ -1363,7 +1361,7 @@ GameLab.prototype.measureDrawLoop = function(name, callback) {
  * This is called while this.gameLabP5 is in a draw() call. We call the user's
  * draw function.
  */
-GameLab.prototype.onP5Draw = function() {
+P5Lab.prototype.onP5Draw = function() {
   if (this.JSInterpreter && this.eventHandlers.draw) {
     this.drawInProgress = true;
     if (getStore().getState().runState.isRunning) {
@@ -1382,7 +1380,7 @@ GameLab.prototype.onP5Draw = function() {
  * Capture a thumbnail image of the play space if the app has been running
  * for long enough and we have not done so already.
  */
-GameLab.prototype.captureInitialImage = function() {
+P5Lab.prototype.captureInitialImage = function() {
   if (this.initialCaptureComplete || this.tickCount < CAPTURE_TICK_COUNT) {
     return;
   }
@@ -1393,7 +1391,7 @@ GameLab.prototype.captureInitialImage = function() {
 /**
  * Log some performance numbers to firehose
  */
-GameLab.prototype.reportMetrics = function() {
+P5Lab.prototype.reportMetrics = function() {
   const drawLoopTimes = getEntriesByName(DRAW_LOOP_MEASURE)
     .map(entry => entry.duration)
     .sort();
@@ -1415,7 +1413,7 @@ GameLab.prototype.reportMetrics = function() {
   });
 };
 
-GameLab.prototype.completeRedrawIfDrawComplete = function() {
+P5Lab.prototype.completeRedrawIfDrawComplete = function() {
   if (
     this.drawInProgress &&
     this.JSInterpreter.seenReturnFromCallbackDuringExecution
@@ -1426,11 +1424,7 @@ GameLab.prototype.completeRedrawIfDrawComplete = function() {
   }
 };
 
-GameLab.prototype.handleExecutionError = function(
-  err,
-  lineNumber,
-  outputString
-) {
+P5Lab.prototype.handleExecutionError = function(err, lineNumber, outputString) {
   outputError(outputString, lineNumber);
   if (err.native) {
     console.error(err.stack);
@@ -1442,7 +1436,7 @@ GameLab.prototype.handleExecutionError = function(
 /**
  * Executes an API command.
  */
-GameLab.prototype.executeCmd = function(id, name, opts) {
+P5Lab.prototype.executeCmd = function(id, name, opts) {
   var retVal = false;
   if (gamelabCommands[name] instanceof Function) {
     retVal = gamelabCommands[name](opts);
@@ -1454,7 +1448,7 @@ GameLab.prototype.executeCmd = function(id, name, opts) {
  * App specific displayFeedback function that calls into
  * this.studioApp_.displayFeedback when appropriate
  */
-GameLab.prototype.displayFeedback_ = function() {
+P5Lab.prototype.displayFeedback_ = function() {
   var level = this.level;
   let msg = this.isSpritelab ? spritelabMsg : gamelabMsg;
 
@@ -1485,7 +1479,7 @@ GameLab.prototype.displayFeedback_ = function() {
  * Bound to appOptions in gamelab/main.js, used in project.js for autosave.
  * @param {function(SerializedAnimationList)} callback
  */
-GameLab.prototype.getSerializedAnimationList = function(callback) {
+P5Lab.prototype.getSerializedAnimationList = function(callback) {
   getStore().dispatch(
     saveAnimations(() => {
       callback(getSerializedAnimationList(getStore().getState().animationList));
@@ -1497,7 +1491,7 @@ GameLab.prototype.getSerializedAnimationList = function(callback) {
  * Get the project properties for upload to the sources API.
  * Bound to appOptions in gamelab/main.js, used in project.js for autosave.
  */
-GameLab.prototype.getGeneratedProperties = function() {
+P5Lab.prototype.getGeneratedProperties = function() {
   // Must return a new object instance each time so the project
   // system can properly compare currentSources vs newSources
   return {
@@ -1511,7 +1505,7 @@ GameLab.prototype.getGeneratedProperties = function() {
  * it includes a sourceUrl for local project animations.
  * @param {function(SerializedAnimationList)} callback
  */
-GameLab.prototype.getExportableAnimationList = function(callback) {
+P5Lab.prototype.getExportableAnimationList = function(callback) {
   getStore().dispatch(
     saveAnimations(() => {
       const state = getStore().getState();
@@ -1526,7 +1520,7 @@ GameLab.prototype.getExportableAnimationList = function(callback) {
   );
 };
 
-GameLab.prototype.getAnimationDropdown = function() {
+P5Lab.prototype.getAnimationDropdown = function() {
   const animationList = getStore().getState().animationList;
   return animationList.orderedKeys.map(key => {
     const name = animationList.propsByKey[key].name;
@@ -1537,11 +1531,11 @@ GameLab.prototype.getAnimationDropdown = function() {
   });
 };
 
-GameLab.prototype.getAppReducers = function() {
+P5Lab.prototype.getAppReducers = function() {
   return reducers;
 };
 
-GameLab.valueTypeTabShapeMap = function(blockly) {
+P5Lab.valueTypeTabShapeMap = function(blockly) {
   return {
     [blockly.BlockValueType.SPRITE]: 'angle',
     [blockly.BlockValueType.BEHAVIOR]: 'rounded',
