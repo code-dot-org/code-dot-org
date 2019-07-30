@@ -1,4 +1,4 @@
-import {throwIfSerializedAnimationListIsInvalid} from '@cdo/apps/gamelab/shapes';
+import {throwIfSerializedAnimationListIsInvalid} from '@cdo/apps/p5lab/gamelab/shapes';
 import {expect} from '../../util/configuredChai';
 
 describe('GameLab Shapes', function() {
