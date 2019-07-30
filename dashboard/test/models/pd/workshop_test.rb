@@ -289,21 +289,36 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     assert_equal [workshop_should_have_ended.id], Pd::Workshop.should_have_ended.pluck(:id)
   end
 
-  test 'process_ended_workshop_async' do
-    workshop = create :pd_ended_workshop
-    Pd::Workshop.expects(:find).with(workshop.id).returns(workshop)
-    workshop.expects(:send_exit_surveys)
+  test 'end workshop sends exit surveys' do
+    @workshop.sessions << create(:pd_session)
+    @workshop.start!
 
-    Pd::Workshop.process_ended_workshop_async workshop.id
+    Pd::Workshop.any_instance.expects(:send_exit_surveys)
+
+    @workshop.end!
+
+    # This is normally called by a cron job on production-daemon, but in this test
+    # we call it synchronously.
+    Pd::Workshop.process_ends
   end
 
-  test 'process_ended_workshop_async for non-closed workshop raises error' do
-    workshop = create :pd_workshop
+  test 'end workshop second time attempts sending exit surveys but they do not send again' do
+    @workshop.sessions << create(:pd_session)
+    @workshop.start!
 
-    e = assert_raises RuntimeError do
-      Pd::Workshop.process_ended_workshop_async workshop.id
-    end
-    assert e.message.include? 'Unexpected workshop state'
+    @workshop.end!
+    @workshop.update!(ended_at: nil)
+
+    @workshop.start!
+
+    @workshop.end!
+
+    Pd::Workshop.any_instance.expects(:send_exit_surveys)
+    Pd::Enrollment.any_instance.expects(:send_exit_survey).never
+
+    # This is normally called by a cron job on production-daemon, but in this test
+    # we call it synchronously.
+    Pd::Workshop.process_ends
   end
 
   test 'account_required_for_attendance?' do
