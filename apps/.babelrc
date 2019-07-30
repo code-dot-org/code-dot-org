@@ -1,5 +1,8 @@
 {
-  "presets": ["env", "react" ],
+  "presets": [
+    ["env", {"modules": false}],
+    "react"
+  ],
   "plugins": [
     "add-module-exports",
     "syntax-async-functions",
