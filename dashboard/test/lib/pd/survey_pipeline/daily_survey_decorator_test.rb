@@ -222,5 +222,64 @@ module Pd::SurveyPipeline
         assert_equal true, DailySurveyDecorator.data_visible_to_user?(user, data_row)
       end
     end
+
+    test 'get context of CSF survey submissions' do
+      facilitator = create :facilitator
+      workshop = create :pd_workshop, course: COURSE_CSF, subject: SUBJECT_CSF_201,
+        num_sessions: 1, facilitators: [facilitator]
+      form_id = '1122334455'.to_i
+
+      survey_metadata_to_context = {
+        [workshop.id, 0, facilitator.id, form_id] => 'Facilitator',
+        [workshop.id, 0, nil, form_id] => 'Pre Workshop',
+        [workshop.id, 1, nil, form_id] => 'Post Workshop',
+        [workshop.id, -1, nil, form_id] => 'Invalid',
+        [0, 0, facilitator.id, form_id] => 'Invalid'
+      }
+
+      survey_metadata_to_context.each do |input, expected_output|
+        assert_equal expected_output, DailySurveyDecorator.get_survey_context(*input),
+          "Wrong output for input #{input}"
+      end
+    end
+
+    test 'get context of summer workshop survey submissions' do
+      facilitator = create :facilitator
+      workshop = create :pd_workshop, course: COURSE_CSD, subject: SUBJECT_SUMMER_WORKSHOP,
+        num_sessions: 1, facilitators: [facilitator]
+      form_id = '1122334455'.to_i
+
+      survey_metadata_to_context = {
+        [workshop.id, 0, nil, form_id] => 'Pre Workshop',
+        [workshop.id, 1, nil, form_id] => 'Day 1',
+        [workshop.id, 1, facilitator.id, form_id] => 'Day 1'
+      }
+
+      survey_metadata_to_context.each do |input, expected_output|
+        assert_equal expected_output, DailySurveyDecorator.get_survey_context(*input),
+          "Wrong output for input #{input}"
+      end
+    end
+
+    test 'get context of academic year workshop survey submissions' do
+      facilitator = create :facilitator
+      workshop = create :pd_workshop, course: COURSE_CSP, subject: SUBJECT_CSP_WORKSHOP_1,
+        num_sessions: 1, facilitators: [facilitator]
+      daily_form_id = '1122334455'.to_i
+      post_ws_form_id = '82115646319154'.to_i
+
+      survey_metadata_to_context = {
+        [workshop.id, 0, nil, daily_form_id] => 'Invalid',
+        [workshop.id, 1, nil, daily_form_id] => 'Day 1',
+        [workshop.id, 1, facilitator.id, daily_form_id] => 'Day 1',
+        [workshop.id, 1, nil, post_ws_form_id] => 'Post Workshop',
+        [workshop.id, 1, facilitator.id, post_ws_form_id] => 'Post Workshop',
+      }
+
+      survey_metadata_to_context.each do |input, expected_output|
+        assert_equal expected_output, DailySurveyDecorator.get_survey_context(*input),
+          "Wrong output for input #{input}"
+      end
+    end
   end
 end
