@@ -49,7 +49,7 @@ module Pd::SurveyPipeline
     # @param parsed_questions [Hash] question data get from DailySurveyParser.
     # @param parsed_submissions [Hash] submission data get from DailySurveyParser.
     # @param current_user [User] user making survey report request.
-    # @param errors [Array] non-fatal errors encounterd when calculating survey summaries.
+    # @param errors [Array] non-fatal errors encountered when calculating survey summaries.
     #
     # @return [Hash] data returned to client.
     #
@@ -93,9 +93,9 @@ module Pd::SurveyPipeline
         # General format:
         # Hash{context_name => {response_count => number, general => {question_name => summary_result}}}
         #
-        # Format for facilicator-specific result:
+        # Format for facilitator-specific result:
         # Hash{context_name => {response_count => number,
-        #   facilitator => {question_name => {factilitator_name => summary_result}}}}
+        #   facilitator => {question_name => {facilitator_name => summary_result}}}}
         #
         if facilitator_id
           facilitator_name = User.find_by_id(facilitator_id)&.name || facilitator_id.to_s
@@ -154,7 +154,7 @@ module Pd::SurveyPipeline
       return 'Invalid' unless workshop && day >= 0
 
       if workshop.csf?
-        return 'Facilitator' if facilitator_id
+        return 'Facilitators' if facilitator_id
 
         # CSF is a 1-day workshop and doesn't have daily survey.
         return day == 0 ? 'Pre Workshop' : 'Post Workshop'
