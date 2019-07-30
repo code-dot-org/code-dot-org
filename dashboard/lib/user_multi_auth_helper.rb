@@ -90,12 +90,7 @@ module UserMultiAuthHelper
     self.oauth_token = nil
     self.oauth_token_expiration = nil
     self.oauth_refresh_token = nil
-    unless save
-      Honeybadger.notify(
-        error_class: 'Failed to migrate user',
-        error_message: "User ID: #{id}. Error message(s): #{errors.full_messages.join(', ')}"
-      )
-    end
+    save!
     reload
   end
 

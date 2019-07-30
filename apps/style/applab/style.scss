@@ -485,10 +485,6 @@ div#visualizationResizeBar {
   text-decoration: underline;
 }
 
-.droplet-dropdown {
-  z-index: 500 !important;
-}
-
 // We don't want -webkit-user-select: none for our contenteditable div, otherwise
 // we're unable to add text to the div in Safari.
 *[contenteditable] {
