@@ -13,7 +13,8 @@ import commonStyles from './styles';
 import IntroPage from './IntroPage';
 import PlatformPage from './PlatformPage';
 import IconPage from './IconPage';
-import PublishPage from './PublishPage';
+import PublishAndroidPage from './PublishAndroidPage';
+import PublishIOSPage from './PublishIOSPage';
 import GeneratingPage from './GeneratingPage';
 
 const APK_BUILD_STATUS_CHECK_PERIOD = 60000;
@@ -445,7 +446,7 @@ class ExportDialog extends React.Component {
   }
 
   onActionButton = () => {
-    const {screen} = this.state;
+    const {screen, platform} = this.state;
 
     switch (screen) {
       case 'intro':
@@ -455,11 +456,17 @@ class ExportDialog extends React.Component {
         this.setState({screen: 'icon'});
         break;
       case 'icon':
-        this.setState({screen: 'publish'});
+        this.setState({
+          screen: platform === 'android' ? 'publishAndroid' : 'publishIOS'
+        });
         break;
-      case 'publish':
+      case 'publishAndroid':
         this.generateApkAsNeeded();
         this.setState({screen: 'generating'});
+        break;
+      case 'publishIOS':
+        // TODO: publish and navigate to Expo.io
+        this.close();
         break;
       case 'generating':
         this.close();
@@ -481,11 +488,12 @@ class ExportDialog extends React.Component {
       case 'icon':
         this.setState({screen: 'platform'});
         break;
-      case 'publish':
+      case 'publishAndroid':
+      case 'publishIOS':
         this.setState({screen: 'icon'});
         break;
       case 'generating':
-        this.setState({screen: 'publish'});
+        this.setState({screen: 'publishAndroid'});
         break;
       default:
         throw new Error(`ExportDialog: Unexpected screen: ${screen}`);
@@ -523,8 +531,10 @@ class ExportDialog extends React.Component {
             onIconSelected={this.onIconSelected}
           />
         );
-      case 'publish':
-        return <PublishPage />;
+      case 'publishAndroid':
+        return <PublishAndroidPage />;
+      case 'publishIOS':
+        return <PublishIOSPage />;
       case 'generating': {
         const {appType} = this.props;
         const {exportError, apkError, apkUri} = this.state;
@@ -559,8 +569,11 @@ class ExportDialog extends React.Component {
         info.text = 'Finish';
         info.enabled = !exporting && !generatingApk;
         break;
-      case 'publish':
+      case 'publishAndroid':
         info.text = 'Create';
+        break;
+      case 'publishIOS':
+        info.text = 'Continue with Expo.io';
         break;
     }
     return info;
