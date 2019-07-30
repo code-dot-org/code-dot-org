@@ -12,7 +12,6 @@ curriculum_umbrella 'CSD'
 
 stage 'Exploring Websites', flex_category: 'csd2_1'
 level 'CSD U2L01 TFMD_pilot', named: true
-level 'CSD U2 Top Websites_2018_2019_pilot', named: true
 
 stage 'Intro to HTML', flex_category: 'csd2_1'
 level 'CSD U2L03 TFMD_pilot', named: true
@@ -101,7 +100,7 @@ stage 'Purpose of a  Websites', flex_category: 'csd2_2'
 level 'CSD U2L01 TFMD_pilot', named: true
 level 'CSD U2 Top Websites_2018_2019_pilot', named: true
 
-stage 'Lists', flex_category: 'csd2_1'
+stage 'Lists', flex_category: 'csd2_2'
 level 'CSD U2L06 TFMD_pilot', named: true
 level 'CSD U2 lists intro_pilot', progression: 'Lists'
 level 'CSD U2 unordered list_pilot', progression: 'Lists'
@@ -112,7 +111,7 @@ level 'CSD U2 lists map_pilot', named: true
 level 'CSD U2 expand project_2018_2019_pilot', progression: 'Expanding Your Website'
 level 'CSD U2 new page_pilot', progression: 'Expanding Personal Website'
 
-stage 'Clean Code and Debugging', flex_category: 'csd2_1'
+stage 'Clean Code and Debugging', flex_category: 'csd2_2'
 level 'CSD U2L08 TFMD_pilot', named: true
 level 'CSD U2 Debugging 1_pilot', progression: 'Debugging'
 level 'CSD U2 Debugging 2_pilot', progression: 'Debugging'
