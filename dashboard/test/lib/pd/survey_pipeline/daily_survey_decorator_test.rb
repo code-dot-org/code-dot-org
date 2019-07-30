@@ -23,7 +23,7 @@ module Pd::SurveyPipeline
 
     test 'decorate facilitator survey results' do
       form_id = "91405279991164".to_i
-      form_name = 'Facilitator'
+      context_name = 'Facilitators'
 
       parsed_questions = {
         form_id => {
@@ -62,7 +62,7 @@ module Pd::SurveyPipeline
       expected_result = {
         course_name: COURSE_CSF,
         questions: {
-          form_name => {
+          context_name => {
             general: {},
             facilitator: {
               'importance' => parsed_questions[form_id]['1'].except(:name),
@@ -71,7 +71,7 @@ module Pd::SurveyPipeline
           }
         },
         this_workshop: {
-          form_name => {
+          context_name => {
             response_count: 4,
             general: {},
             facilitator: {
@@ -107,7 +107,7 @@ module Pd::SurveyPipeline
 
     test 'decorate general survey results' do
       form_id = "90066184161150".to_i
-      form_name = 'Pre Workshop'
+      context_name = 'Pre Workshop'
 
       parsed_questions = {
         form_id => {
@@ -138,7 +138,7 @@ module Pd::SurveyPipeline
       expected_result = {
         course_name: COURSE_CSF,
         questions: {
-          form_name => {
+          context_name => {
             general: {
               'importance' => parsed_questions[form_id]['1'].except(:name),
               'feedback' => parsed_questions[form_id]['2'].except(:name),
@@ -147,7 +147,7 @@ module Pd::SurveyPipeline
           }
         },
         this_workshop: {
-          form_name => {
+          context_name => {
             response_count: 4,
             general: {
               'importance' => {'Agree': 2, 'Neutral': 1, 'Disagree': 1},
@@ -230,7 +230,7 @@ module Pd::SurveyPipeline
       form_id = '1122334455'.to_i
 
       survey_metadata_to_context = {
-        [workshop.id, 0, facilitator.id, form_id] => 'Facilitator',
+        [workshop.id, 0, facilitator.id, form_id] => 'Facilitators',
         [workshop.id, 0, nil, form_id] => 'Pre Workshop',
         [workshop.id, 1, nil, form_id] => 'Post Workshop',
         [workshop.id, -1, nil, form_id] => 'Invalid',
