@@ -17,14 +17,14 @@ import TooltipOverlay, {
 } from '@cdo/apps/templates/TooltipOverlay';
 import i18n from '@cdo/locale';
 import {toggleGridOverlay} from './actions';
-import GridOverlay from './GridOverlay';
-import TextConsole from './TextConsole';
+import GridOverlay from './gamelab/GridOverlay';
+import TextConsole from './spritelab/TextConsole';
 import {
   cancelLocationSelection,
   selectLocation,
   updateLocation,
   isPickingLocation
-} from './locationPickerModule';
+} from './spritelab/locationPickerModule';
 import {calculateOffsetCoordinates} from '@cdo/apps/utils';
 
 const MODAL_Z_INDEX = 1050;

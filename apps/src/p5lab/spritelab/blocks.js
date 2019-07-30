@@ -3,10 +3,10 @@
 import {SVG_NS} from '@cdo/apps/constants';
 import {getStore} from '@cdo/apps/redux';
 import {getLocation} from './locationPickerModule';
-import {GAME_HEIGHT, GameLabInterfaceMode} from './constants';
-import {animationSourceUrl} from './animationListModule';
-import {changeInterfaceMode} from './actions';
-import {Goal, show} from './AnimationPicker/animationPickerModule';
+import {GAME_HEIGHT, GameLabInterfaceMode} from '../constants';
+import {animationSourceUrl} from '../animationListModule';
+import {changeInterfaceMode} from '../actions';
+import {Goal, show} from '../AnimationPicker/animationPickerModule';
 import i18n from '@cdo/locale';
 
 function sprites() {

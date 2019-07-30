@@ -1,4 +1,4 @@
-import {CLEAR_CONSOLE, ADD_MESSAGE} from './actions';
+import {CLEAR_CONSOLE, ADD_MESSAGE} from '../actions';
 
 export default function textConsole(state, action) {
   state = state || [];

@@ -2,13 +2,13 @@ import $ from 'jquery';
 import _ from 'lodash';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {changeInterfaceMode, viewAnimationJson} from './gamelab/actions';
-import {startInAnimationTab} from './gamelab/stateQueries';
+import {changeInterfaceMode, viewAnimationJson} from './actions';
+import {startInAnimationTab} from './stateQueries';
 import {
   GameLabInterfaceMode,
   GAME_WIDTH,
   SpritelabReservedWords
-} from './gamelab/constants';
+} from './constants';
 import experiments from '@cdo/apps/util/experiments';
 import {
   outputError,
@@ -26,9 +26,9 @@ var dropletConfig = require('./gamelab/dropletConfig');
 var JSInterpreter = require('@cdo/apps/lib/tools/jsinterpreter/JSInterpreter');
 import * as apiTimeoutList from '@cdo/apps/lib/util/timeoutList';
 var JsInterpreterLogger = require('@cdo/apps/JsInterpreterLogger');
-var GameLabP5 = require('./gamelab/GameLabP5');
-var gameLabSprite = require('./gamelab/GameLabSprite');
-var gameLabGroup = require('./gamelab/GameLabGroup');
+var GameLabP5 = require('./GameLabP5');
+var gameLabSprite = require('./GameLabSprite');
+var gameLabGroup = require('./GameLabGroup');
 var gamelabCommands = require('./gamelab/commands');
 import {initializeSubmitHelper, onSubmitComplete} from '@cdo/apps/submitHelper';
 var dom = require('@cdo/apps/dom');
@@ -39,11 +39,11 @@ import {
   setInitialAnimationList,
   saveAnimations,
   withAbsoluteSourceUrls
-} from './gamelab/animationListModule';
-import {getSerializedAnimationList} from './gamelab/shapes';
+} from './animationListModule';
+import {getSerializedAnimationList} from './shapes';
 import {add as addWatcher} from '@cdo/apps/redux/watchedExpressions';
-var reducers = require('./gamelab/reducers');
-var GameLabView = require('./gamelab/GameLabView');
+var reducers = require('./reducers');
+var GameLabView = require('./GameLabView');
 var Provider = require('react-redux').Provider;
 import {shouldOverlaysBeVisible} from '@cdo/apps/templates/VisualizationOverlay';
 import {
@@ -53,12 +53,12 @@ import {
 } from '@cdo/apps/containedLevels';
 import {hasValidContainedLevelResult} from '@cdo/apps/code-studio/levels/codeStudioLevels';
 import {actions as jsDebugger} from '@cdo/apps/lib/tools/jsdebugger/redux';
-import {addConsoleMessage, clearConsole} from './gamelab/textConsoleModule';
+import {addConsoleMessage, clearConsole} from './spritelab/textConsoleModule';
 import {captureThumbnailFromCanvas} from '@cdo/apps/util/thumbnail';
 import Sounds from '@cdo/apps/Sounds';
 import {TestResults, ResultType} from '@cdo/apps/constants';
 import {showHideWorkspaceCallouts} from '@cdo/apps/code-studio/callouts';
-import defaultSprites from './gamelab/defaultSprites.json';
+import defaultSprites from './spritelab/defaultSprites.json';
 import wrap from './gamelab/debugger/replay';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {

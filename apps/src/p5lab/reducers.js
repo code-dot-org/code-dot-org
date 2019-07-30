@@ -10,8 +10,8 @@ import {reducers as jsDebuggerReducers} from '@cdo/apps/lib/tools/jsdebugger/red
 import animationList from './animationListModule';
 import animationPicker from './AnimationPicker/animationPickerModule';
 import animationTab from './AnimationTab/animationTabModule';
-import locationPicker from './locationPickerModule';
-import textConsole from './textConsoleModule';
+import locationPicker from './spritelab/locationPickerModule';
+import textConsole from './spritelab/textConsoleModule';
 var errorDialogStack = require('./errorDialogStackModule').default;
 var GameLabInterfaceMode = require('./constants').GameLabInterfaceMode;
 
