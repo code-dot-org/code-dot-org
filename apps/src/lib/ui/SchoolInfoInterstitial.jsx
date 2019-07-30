@@ -306,7 +306,7 @@ export default class SchoolInfoInterstitial extends React.Component {
 
   onCountryChange = (_, event) => {
     const newCountry = event ? event.value : '';
-    this.setState({country: newCountry, errors: {}});
+    this.setState({country: newCountry, ncesSchoolId: '', errors: {}});
   };
 
   onSchoolTypeChange = event => {

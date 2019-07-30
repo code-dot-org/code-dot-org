@@ -177,6 +177,29 @@ describe('SchoolInfoInterstitial', () => {
     );
   });
 
+  it('clears the school ID when country is changed', () => {
+    const wrapper = shallow(
+      <SchoolInfoInterstitial
+        {...MINIMUM_PROPS}
+        scriptData={{
+          ...MINIMUM_PROPS.scriptData,
+          existingSchoolInfo: {
+            school_id: '123',
+            country: 'United States',
+            school_type: 'public',
+            school_name: 'Test School',
+            full_address: 'Seattle'
+          }
+        }}
+      />
+    );
+    expect(wrapper.state('country')).to.equal('United States');
+    expect(wrapper.state('ncesSchoolId')).to.equal('123');
+    wrapper.instance().onCountryChange(undefined, {value: 'Sweden'});
+    expect(wrapper.state('country')).to.equal('Sweden');
+    expect(wrapper.state('ncesSchoolId')).to.equal('');
+  });
+
   it('interprets initial country "US" as "United States"', () => {
     const wrapper = shallow(
       <SchoolInfoInterstitial
