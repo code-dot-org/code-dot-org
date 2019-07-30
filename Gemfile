@@ -246,6 +246,7 @@ gem 'aws-sdk-firehose', '~> 1.6'
 gem 'aws-sdk-rds', '>= 1.38.1'
 gem 'aws-sdk-route53', '~> 1'
 gem 'aws-sdk-s3', '~> 1'
+gem 'aws-sdk-secretsmanager', '~> 1'
 gem 'aws-sdk-sqs', '~> 1'
 
 # Lint tools

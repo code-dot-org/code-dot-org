@@ -316,6 +316,9 @@ GEM
       aws-sdk-core (~> 3, >= 3.21.2)
       aws-sdk-kms (~> 1)
       aws-sigv4 (~> 1.0)
+    aws-sdk-secretsmanager (1.20.0)
+      aws-sdk-core (~> 3, >= 3.39.0)
+      aws-sigv4 (~> 1.0)
     aws-sdk-sqs (1.4.0)
       aws-sdk-core (~> 3)
       aws-sigv4 (~> 1.0)
@@ -897,6 +900,7 @@ DEPENDENCIES
   aws-sdk-rds (>= 1.38.1)
   aws-sdk-route53 (~> 1)
   aws-sdk-s3 (~> 1)
+  aws-sdk-secretsmanager (~> 1)
   aws-sdk-sqs (~> 1)
   bcrypt
   better_errors
