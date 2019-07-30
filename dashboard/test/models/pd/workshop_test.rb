@@ -1,3 +1,4 @@
+require_relative '../../../../shared/test/spy_newrelic_agent'
 require 'test_helper'
 
 class Pd::WorkshopTest < ActiveSupport::TestCase
@@ -203,6 +204,25 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     ended_at = @workshop.reload.ended_at
     @workshop.end!
     assert_equal ended_at, @workshop.reload.ended_at
+  end
+
+  test 'start and end log to New Relic' do
+    CDO.stubs(:newrelic_logging).returns(true)
+
+    metrics_logged = []
+    NewRelic::Agent.expects(:record_metric).twice.with do |key, value|
+      metrics_logged << {key: key, value: value}
+    end
+
+    @workshop.sessions << create(:pd_session)
+    @workshop.start!
+    @workshop.end!
+
+    # Both start! and end! record the same metric
+    metrics_logged.each {|metric| assert_equal('Custom/Workshops/InProgress', metric[:key])}
+    # The first call should _definitely_ be more than zero
+    # (Not making a stronger assertion here because it could interact with other tests)
+    assert metrics_logged[0][:value] > 0
   end
 
   test 'sessions must start on separate days' do

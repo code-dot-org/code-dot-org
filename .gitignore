@@ -51,8 +51,7 @@ npm-debug.log
 /coverage
 /crontab
 /dashboard/config/newrelic.yml
-/dashboard/db/ui_test_data.commit
-/dashboard/db/ui_test_data.sql
+/dashboard/db/ui_test_data.*
 /dashboard/public/blockly
 /dashboard/public/code-studio
 /dashboard/public/shared
