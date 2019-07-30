@@ -1,6 +1,6 @@
 * * *
 
-title: Computer Science Fundamentals Transition Guide theme: responsive style_min: true
+title: 信息技术基础过渡指南 theme: responsive style_min: true
 
 * * *
 
@@ -69,7 +69,7 @@ Here is how the circle-time stories are intended to be used:
 
 * 你还记得我们讨论过的主要想法吗？
 * How will you know if you see that idea today?
-* What did the character do to handle that idea? What would you do?
+* What did the character do to handle that idea? 你会做什么？
 
 ### Point out similarities between the story and the student’s situations when they intersect during an activity.
 
@@ -100,7 +100,7 @@ In some instances, we end our lessons with free-play style levels. These levels 
 * Remind students to be persistent and use their debugging skills on problems that feel tough.
 * Videos are often helpful. When students get stuck, have them rewatch the video a second, third, or even fourth time.
 * Require students to read the instructions. If they are having a hard time, let them read the instructions out loud to a classmate.
-* It’s okay to use hints! Students should use as many hints as they need, but be sure to attempt re-solving the puzzle at least one between each new offering.
+* 想用提示？不要紧！ Students should use as many hints as they need, but be sure to attempt re-solving the puzzle at least one between each new offering.
 
 <a id="unplugged"></a>
 
