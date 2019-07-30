@@ -45,6 +45,11 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ::ActionController::TestC
       {method: :post, path: "/api/v1/pd/enrollment/#{@enrollment.id}/scholarship_info"},
       {controller: CONTROLLER_PATH, action: 'update_scholarship_info', enrollment_id: @enrollment.id.to_s}
     )
+
+    assert_routing(
+      {method: :post, path: "/api/v1/pd/workshops/#{@workshop.id}/enrollments/move"},
+      {controller: CONTROLLER_PATH, action: 'move', enrollment_ids: [@enrollment.id], destination_workshop_id: @unrelated_workshop.id}
+    )
   end
 
   test 'admins can see enrollments for all workshops' do
@@ -338,6 +343,31 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ::ActionController::TestC
     post :update_scholarship_info, params: {enrollment_id: enrollment.id, scholarship_status: Pd::ScholarshipInfoConstants::YES_OTHER}
     assert_response 403
     assert_nil enrollment.scholarship_status
+  end
+
+  test 'move' do
+    origin_workshop = create :pd_workshop, num_sessions: 1, enrolled_and_attending_users: 1,
+      enrolled_unattending_users: 1
+    destination_workshop = create :pd_workshop
+
+    admin = create :workshop_admin
+    sign_in admin
+
+    assert_equal 2, origin_workshop.enrollments.length
+    assert_equal 1, origin_workshop.sessions.first.attendances.length
+
+    assert_equal 0, destination_workshop.enrollments.length
+
+    post :move, params: {
+      workshop_id: origin_workshop.id,
+      destination_workshop_id: destination_workshop.id,
+      enrollment_ids: [origin_workshop.enrollments]
+    }
+
+    assert_equal 0, origin_workshop.enrollments.length
+    assert_equal 0, origin_workshop.sessions.first.attendances.length
+
+    assert_equal 2, destination_workshop.enrollments.length
   end
 
   private
