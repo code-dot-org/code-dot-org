@@ -301,6 +301,7 @@ export default class SchoolInfoInterstitial extends React.Component {
 
   dismissSchoolInfoForm = () => {
     this.setState({isOpen: false});
+    this.props.onClose();
   };
 
   onCountryChange = (_, event) => {
