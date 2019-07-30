@@ -1677,6 +1677,8 @@ lt:
           stages:
             Number Systems:
               name: Skaičių sistemos
+            Sending Binary Messages:
+              name: Dvejetainių žinučių siuntimas
         time4csdemo:
           stages:
             Crowdsourcing:
