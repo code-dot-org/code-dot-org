@@ -109,6 +109,7 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
       enrollment.attendances.destroy_all
       enrollment.update(pd_workshop_id: params[:destination_workshop_id])
     end
+    head :no_content
   end
 
   private
