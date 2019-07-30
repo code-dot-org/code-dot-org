@@ -3,34 +3,34 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import PairingDialog from './components/pairing/PairingDialog.jsx';
 
-export default {
-  init(pairingUrl, hideUserOptions, showPairingDialog) {
-    let pairingDialog;
+export const init = (pairingUrl, hideUserOptions, showPairingDialog) => {
+  let pairingDialog;
 
-    function lazyInitDialog() {
-      if (!pairingDialog) {
-        const container = document.createElement('div');
-        container.id = 'pairing';
-        document.body.appendChild(container);
+  function lazyInitDialog() {
+    if (!pairingDialog) {
+      const container = document.createElement('div');
+      container.id = 'pairing';
+      document.body.appendChild(container);
 
-        pairingDialog = ReactDOM.render(
-          <PairingDialog source={pairingUrl} />,
-          container
-        );
-      }
-      pairingDialog.open();
+      pairingDialog = ReactDOM.render(
+        <PairingDialog source={pairingUrl} />,
+        container
+      );
     }
-
-    if (showPairingDialog) {
-      lazyInitDialog();
-    }
-
-    $('#pairing_link')
-      .show()
-      .click(function() {
-        lazyInitDialog();
-        hideUserOptions();
-        return false;
-      });
+    pairingDialog.open();
   }
+
+  if (showPairingDialog) {
+    lazyInitDialog();
+  }
+
+  $('#pairing_link')
+    .show()
+    .click(function() {
+      lazyInitDialog();
+      hideUserOptions();
+      return false;
+    });
 };
+
+export default {init};

@@ -442,10 +442,17 @@ class FilesApi extends CollectionsApi {
     );
   }
 }
-module.exports = {
-  animations: new CollectionsApi('animations'),
-  assets: new AssetsApi('assets'),
-  files: new FilesApi('files'),
-  sources: new CollectionsApi('sources'),
-  channels: new CollectionsApi('channels')
+
+export const animations = new CollectionsApi('animations');
+export const assets = new AssetsApi('assets');
+export const files = new FilesApi('files');
+export const sources = new CollectionsApi('sources');
+export const channels = new CollectionsApi('channels');
+
+export default {
+  animations,
+  assets,
+  files,
+  sources,
+  channels
 };

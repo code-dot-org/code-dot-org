@@ -4,10 +4,10 @@ import $ from 'jquery';
 import _ from 'lodash';
 
 import {
-  showProjectHeader,
-  showMinimalProjectHeader,
+  showProjectHeader as showProjectHeaderAction,
+  showMinimalProjectHeader as showMinimalProjectHeaderAction,
   showProjectBackedHeader,
-  showLevelBuilderSaveButton,
+  showLevelBuilderSaveButton as showLevelBuilderSaveButtonAction,
   setProjectUpdatedError,
   setProjectUpdatedSaving,
   showProjectUpdatedAt,
@@ -22,9 +22,6 @@ import {getStore} from '../redux';
 /**
  * Dynamic header generation and event bindings for header actions.
  */
-
-// Namespace for manipulating the header DOM.
-var header = {};
 
 /**
  * See ApplicationHelper::PUZZLE_PAGE_NONE.
@@ -58,7 +55,7 @@ const PUZZLE_PAGE_NONE = -1;
  * @param {boolean} stageExtrasEnabled Whether this user is in a section with
  *   stageExtras enabled for this script
  */
-header.build = function(
+export const build = function(
   scriptData,
   stageData,
   progressData,
@@ -197,13 +194,13 @@ function setupReduxSubscribers(store) {
 }
 setupReduxSubscribers(getStore());
 
-header.showMinimalProjectHeader = function() {
+export const showMinimalProjectHeader = function() {
   getStore().dispatch(refreshProjectName());
-  getStore().dispatch(showMinimalProjectHeader());
+  getStore().dispatch(showMinimalProjectHeaderAction());
 };
 
-header.showLevelBuilderSaveButton = function(getChanges) {
-  getStore().dispatch(showLevelBuilderSaveButton(getChanges));
+export const showLevelBuilderSaveButton = function(getChanges) {
+  getStore().dispatch(showLevelBuilderSaveButtonAction(getChanges));
 };
 
 /**
@@ -212,7 +209,7 @@ header.showLevelBuilderSaveButton = function(getChanges) {
  *   showExport: boolean
  * }}
  */
-header.showHeaderForProjectBacked = function(options) {
+export const showHeaderForProjectBacked = function(options) {
   if (options.showShareAndRemix) {
     getStore().dispatch(showProjectBackedHeader(options.showExport));
   }
@@ -221,31 +218,43 @@ header.showHeaderForProjectBacked = function(options) {
   header.updateTimestamp();
 };
 
-header.showProjectHeader = function(options) {
+export const showProjectHeader = function(options) {
   header.updateTimestamp();
   getStore().dispatch(refreshProjectName());
-  getStore().dispatch(showProjectHeader(options.showExport));
+  getStore().dispatch(showProjectHeaderAction(options.showExport));
 };
 
-header.updateTimestamp = function() {
+export const updateTimestamp = function() {
   const timestamp = dashboard.project.getCurrentTimestamp();
   getStore().dispatch(setProjectUpdatedAt(timestamp));
 };
 
-header.showProjectSaveError = () => {
+export const showProjectSaveError = () => {
   getStore().dispatch(setProjectUpdatedError());
 };
 
-header.showProjectSaving = () => {
+export const showProjectSaving = () => {
   getStore().dispatch(setProjectUpdatedSaving());
 };
 
-header.showTryAgainDialog = () => {
+export const showTryAgainDialog = () => {
   getStore().dispatch(setShowTryAgainDialog(true));
 };
 
-header.hideTryAgainDialog = () => {
+export const hideTryAgainDialog = () => {
   getStore().dispatch(setShowTryAgainDialog(false));
 };
 
+const header = {
+  build,
+  showMinimalProjectHeader,
+  showLevelBuilderSaveButton,
+  showHeaderForProjectBacked,
+  showProjectHeader,
+  updateTimestamp,
+  showProjectSaveError,
+  showProjectSaving,
+  showTryAgainDialog,
+  hideTryAgainDialog
+};
 export default header;

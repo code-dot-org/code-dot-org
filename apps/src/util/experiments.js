@@ -12,27 +12,26 @@ import trackEvent from './trackEvent';
 
 const queryString = require('query-string');
 
-const experiments = module.exports;
 const STORAGE_KEY = 'experimentsList';
 const GA_EVENT = 'experiments';
 const EXPERIMENT_LIFESPAN_HOURS = 12;
 
 // Specific experiment names
-experiments.REDUX_LOGGING = 'reduxLogging';
-experiments.SCHOOL_AUTOCOMPLETE_DROPDOWN_NEW_SEARCH =
+export const REDUX_LOGGING = 'reduxLogging';
+export const SCHOOL_AUTOCOMPLETE_DROPDOWN_NEW_SEARCH =
   'schoolAutocompleteDropdownNewSearch';
-experiments.SCHOOL_INFO_CONFIRMATION_DIALOG = 'schoolInfoConfirmationDialog';
-experiments.FEEDBACK_NOTIFICATION = 'feedbackNotification';
-experiments.ROLLUP_SURVEY_REPORT = 'rollupSurveyReport';
+export const SCHOOL_INFO_CONFIRMATION_DIALOG = 'schoolInfoConfirmationDialog';
+export const FEEDBACK_NOTIFICATION = 'feedbackNotification';
+export const ROLLUP_SURVEY_REPORT = 'rollupSurveyReport';
 
 /**
  * Get our query string. Provided as a method so that tests can mock this.
  */
-experiments.getQueryString_ = function() {
+export const getQueryString_ = function() {
   return window.location.search;
 };
 
-experiments.getStoredExperiments_ = function() {
+export const getStoredExperiments_ = function() {
   // Get experiments on current user from experiments cookie
   const experimentsCookie = Cookie.get('_experiments' + window.cookieEnvSuffix);
   const userExperiments = experimentsCookie
@@ -61,11 +60,11 @@ experiments.getStoredExperiments_ = function() {
   }
 };
 
-experiments.getEnabledExperiments = function() {
+export const getEnabledExperiments = function() {
   return this.getStoredExperiments_().map(experiment => experiment.key);
 };
 
-experiments.setEnabled = function(key, shouldEnable, expiration = undefined) {
+export const setEnabled = function(key, shouldEnable, expiration = undefined) {
   const allEnabled = this.getStoredExperiments_();
   const experimentIndex = allEnabled.findIndex(
     experiment => experiment.key === key
@@ -91,7 +90,7 @@ experiments.setEnabled = function(key, shouldEnable, expiration = undefined) {
  * @param {string} key - Name of experiment in question
  * @returns {bool}
  */
-experiments.isEnabled = function(key) {
+export const isEnabled = function(key) {
   const storedExperiments = this.getStoredExperiments_();
   let enabled =
     storedExperiments.some(experiment => experiment.key === key) ||
@@ -138,3 +137,17 @@ experiments.isEnabled = function(key) {
 
   return enabled;
 };
+
+const experiments = {
+  REDUX_LOGGING,
+  SCHOOL_AUTOCOMPLETE_DROPDOWN_NEW_SEARCH,
+  SCHOOL_INFO_CONFIRMATION_DIALOG,
+  FEEDBACK_NOTIFICATION,
+  ROLLUP_SURVEY_REPORT,
+  getQueryString_,
+  getStoredExperiments_,
+  getEnabledExperiments,
+  setEnabled,
+  isEnabled
+};
+export default experiments;

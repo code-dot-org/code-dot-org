@@ -9,9 +9,7 @@ var videojs = require('video.js');
 var testImageAccess = require('./url_test');
 var clientState = require('./clientState');
 
-var videos = (module.exports = {});
-
-videos.createVideoWithFallback = function(
+export const createVideoWithFallback = function(
   parentElement,
   options,
   width,
@@ -75,7 +73,7 @@ function createVideo(options) {
  * @param {AutoplayVideo} options
  * @param {boolean} [forceShowVideo=false]
  */
-videos.showVideoDialog = function(options, forceShowVideo) {
+export const showVideoDialog = function(options, forceShowVideo) {
   if (forceShowVideo === undefined) {
     forceShowVideo = false;
   }
@@ -293,7 +291,7 @@ function setupVideoFallback(
 }
 
 // This is exported (and placed on window) because it gets accessed externally for our video test page.
-videos.onYouTubeBlocked = function(youTubeBlockedCallback, videoInfo) {
+export const onYouTubeBlocked = function(youTubeBlockedCallback, videoInfo) {
   var key = videoInfo ? videoInfo.key : undefined;
 
   // Handle URLs with either youtube.com or youtube-nocookie.com.
@@ -431,3 +429,10 @@ function showFallbackPlayerCaptionLink(inDialog) {
     );
   }
 }
+
+const videos = {
+  createVideoWithFallback,
+  showVideoDialog,
+  onYouTubeBlocked
+};
+export default videos;

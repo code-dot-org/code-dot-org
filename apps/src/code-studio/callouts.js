@@ -1,6 +1,6 @@
 import $ from 'jquery';
 import 'qtip2';
-var clientState = require('./clientState');
+import clientState from './clientState';
 
 /**
  * @fileoverview handles creation and updating of dashboard tooltips, aka callouts.

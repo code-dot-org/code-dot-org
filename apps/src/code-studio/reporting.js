@@ -9,9 +9,7 @@ var clientState = require('./clientState');
 var lastAjaxRequest;
 var lastServerResponse = {};
 
-var reporting = module.exports;
-
-reporting.getLastServerResponse = function() {
+export const getLastServerResponse = function() {
   return lastServerResponse;
 };
 
@@ -217,7 +215,7 @@ function validateReport(report) {
  *
  * @param {MilestoneReport} report
  */
-reporting.sendReport = function(report) {
+export const sendReport = function(report) {
   // The list of report fields we want to send to the server
   const serverFields = [
     'program',
@@ -333,7 +331,7 @@ reporting.sendReport = function(report) {
   }
 };
 
-reporting.cancelReport = function() {
+export const cancelReport = function() {
   if (lastAjaxRequest) {
     lastAjaxRequest.abort();
   }
@@ -372,3 +370,10 @@ function reportComplete(report, response) {
     report.onComplete(response);
   }
 }
+
+const reporting = {
+  getLastServerResponse,
+  sendReport,
+  cancelReport
+};
+export default reporting;

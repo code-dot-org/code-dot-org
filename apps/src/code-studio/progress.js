@@ -28,8 +28,6 @@ import {
 import {setVerified} from '@cdo/apps/code-studio/verifiedTeacherRedux';
 import {queryLockStatus, renderTeacherPanel} from './teacherPanelHelpers';
 
-var progress = module.exports;
-
 function showDisabledBubblesModal() {
   const div = $('<div>');
   $(document.body).append(div);
@@ -40,7 +38,7 @@ function showDisabledBubblesModal() {
 /**
  * If milestone posts are disabled, show an alert about progress not being tracked.
  */
-progress.showDisabledBubblesAlert = function() {
+export const showDisabledBubblesAlert = function() {
   const store = getStore();
   const {postMilestoneDisabled} = store.getState().progress;
   if (!postMilestoneDisabled) {
@@ -71,7 +69,7 @@ progress.showDisabledBubblesAlert = function() {
  * @param {boolean} stageExtrasEnabled Whether this user is in a section with
  *   stageExtras enabled for this script
  */
-progress.renderStageProgress = function(
+export const renderStageProgress = function(
   scriptData,
   stageData,
   progressData,
@@ -138,7 +136,7 @@ progress.renderStageProgress = function(
  * @param {boolean} scriptData.age_13_required
  * Render our progress on the course overview page.
  */
-progress.renderCourseProgress = function(scriptData) {
+export const renderCourseProgress = function(scriptData) {
   const store = getStore();
   initializeStoreWithProgress(store, scriptData, null, true);
 
@@ -187,7 +185,7 @@ progress.renderCourseProgress = function(scriptData) {
  * @param {bool} student_detail_progress_view - Should we default to progress view
  *   user has
  */
-progress.renderMiniView = function(
+export const renderMiniView = function(
   element,
   scriptName,
   currentLevelId,
@@ -334,3 +332,11 @@ function initializeStoreWithProgress(
     });
   }
 }
+
+const progress = {
+  showDisabledBubblesAlert,
+  renderStageProgress,
+  renderCourseProgress,
+  renderMiniView
+};
+export default progress;

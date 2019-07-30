@@ -4,7 +4,7 @@
  */
 
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, {Component} from 'react';
 import color from '../util/color';
 import {connect} from 'react-redux';
 
@@ -91,7 +91,7 @@ const styles = {
   }
 };
 
-class HeaderBanner extends React.Component {
+class HeaderBanner extends Component {
   static propTypes = {
     headingText: PropTypes.string,
     subHeadingText: PropTypes.string,

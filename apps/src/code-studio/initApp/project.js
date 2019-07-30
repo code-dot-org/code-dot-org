@@ -18,11 +18,12 @@ var ABUSE_THRESHOLD = AbuseConstants.ABUSE_THRESHOLD;
 
 var hasProjectChanged = false;
 
-var assets = require('./clientApi').create('/v3/assets');
-var files = require('./clientApi').create('/v3/files');
-var sources = require('./clientApi').create('/v3/sources');
-var sourcesPublic = require('./clientApi').create('/v3/sources-public');
-var channels = require('./clientApi').create('/v3/channels');
+import clientApi from './clientApi';
+var assets = clientApi.create('/v3/assets');
+var files = clientApi.create('/v3/files');
+var sources = clientApi.create('/v3/sources');
+var sourcesPublic = clientApi.create('/v3/sources-public');
+var channels = clientApi.create('/v3/channels');
 
 var showProjectAdmin = require('../showProjectAdmin');
 var header = require('../header');
@@ -143,7 +144,7 @@ const PROJECT_URL_PATTERN = /^(.*\/projects\/\w+\/[\w\d-]+)\/.*/;
  */
 const THUMBNAIL_PATH = '.metadata/thumbnail.png';
 
-var projects = (module.exports = {
+const projects = {
   /**
    * @returns {string} id of the current project, or undefined if we don't have
    *   a current project.
@@ -1607,7 +1608,8 @@ var projects = (module.exports = {
       callback();
     }
   }
-});
+};
+export default projects;
 
 function fetchAbuseScore(resolve) {
   channels.fetch(current.id + '/abuse', function(err, data) {

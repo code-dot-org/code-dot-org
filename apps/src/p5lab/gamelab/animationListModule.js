@@ -14,11 +14,8 @@ import * as assetPrefix from '@cdo/apps/assetManagement/assetPrefix';
 import {selectAnimation} from './AnimationTab/animationTabModule';
 import {reportError} from './errorDialogStackModule';
 import {throwIfSerializedAnimationListIsInvalid} from './shapes';
-import {
-  projectChanged,
-  isOwner,
-  getCurrentId
-} from '@cdo/apps/code-studio/initApp/project';
+import project from '@cdo/apps/code-studio/initApp/project';
+const {projectChanged, isOwner, getCurrentId} = project;
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 // TODO: Overwrite version ID within session

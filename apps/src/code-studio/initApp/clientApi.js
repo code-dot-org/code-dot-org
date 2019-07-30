@@ -215,7 +215,7 @@ function errorString(request, status, error) {
   );
 }
 
-module.exports = {
+export default {
   /**
    * Create a ClientApi instance with the given base URL.
    * @param {!string} url - Custom API base url (e.g. '/v3/netsim')

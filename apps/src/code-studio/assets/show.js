@@ -20,7 +20,7 @@ var Dialog = require('../LegacyDialog');
  * @param [options.disableAudioRecording] {boolean} Do not display option to record and upload audio files
  * @param [options.elementId] {string} Logging Purposes: which element is the image chosen for
  */
-module.exports = function showAssetManager(
+export default function showAssetManager(
   assetChosen,
   typeFilter,
   onClose,
@@ -65,4 +65,4 @@ module.exports = function showAssetManager(
   );
 
   dialog.show();
-};
+}

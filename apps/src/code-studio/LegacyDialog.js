@@ -47,7 +47,7 @@ function sizeDialogToViewport(scrollableElementSelector) {
  * 'autoResizeScrollableElement': if selected, makes the specified selector's
  *           element scrollable and auto-resizes dialog to window's dimensions
  */
-var LegacyDialog = (module.exports = function(options) {
+const LegacyDialog = function(options) {
   // Cache visibility to avoid expensive lookup during debounced window resizing
   this.isVisible = true;
 
@@ -155,7 +155,7 @@ var LegacyDialog = (module.exports = function(options) {
   if (options.onKeydown) {
     $(this.div).on('keydown', options.onKeydown);
   }
-});
+};
 
 /**
  * Options is configurable with a top and left properties, both are integers.
@@ -253,3 +253,4 @@ LegacyDialog.prototype.processHideOptions = function(options) {
       $(this).modal('hide');
     });
 };
+export default LegacyDialog;

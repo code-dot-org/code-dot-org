@@ -23,8 +23,8 @@ store.dispatch(setRtlFromDOM());
 // Shim window.console to be safe in IE
 require('@cdo/apps/code-studio/consoleShim')(window);
 
-var Sounds = require('@cdo/apps/Sounds');
-var activateReferenceAreaOnLoad = require('@cdo/apps/code-studio/reference_area');
+import Sounds from '@cdo/apps/Sounds';
+import activateReferenceAreaOnLoad from '@cdo/apps/code-studio/reference_area';
 import {checkForUnsupportedBrowsersOnLoad} from '@cdo/apps/util/unsupportedBrowserWarning';
 import {initHamburger} from '@cdo/apps/hamburger/hamburger.js';
 
@@ -49,17 +49,27 @@ if ($.fn.modal) {
 }
 
 window.dashboard = window.dashboard || {};
-window.dashboard.clientState = require('@cdo/apps/code-studio/clientState');
-window.dashboard.createCallouts = require('@cdo/apps/code-studio/callouts').default;
+import clientState from '@cdo/apps/code-studio/clientState';
+window.dashboard.clientState = clientState;
+import createCallouts from '@cdo/apps/code-studio/callouts';
+window.dashboard.createCallouts = createCallouts;
 window.dashboard.hashEmail = hashEmail;
-window.dashboard.levelCompletions = require('@cdo/apps/code-studio/levelCompletions');
-window.dashboard.popupWindow = require('@cdo/apps/code-studio/popup-window');
-window.dashboard.reporting = require('@cdo/apps/code-studio/reporting');
-window.dashboard.header = require('@cdo/apps/code-studio/header');
-window.dashboard.videos = require('@cdo/apps/code-studio/videos');
-window.dashboard.assets = require('@cdo/apps/code-studio/assets');
-window.dashboard.pairing = require('@cdo/apps/code-studio/pairing');
-window.dashboard.project = require('@cdo/apps/code-studio/initApp/project');
+import levelCompletions from '@cdo/apps/code-studio/levelCompletions';
+window.dashboard.levelCompletions = levelCompletions;
+import popupWindow from '@cdo/apps/code-studio/popup-window';
+window.dashboard.popupWindow = popupWindow;
+import reporting from '@cdo/apps/code-studio/reporting';
+window.dashboard.reporting = reporting;
+import header from '@cdo/apps/code-studio/header';
+window.dashboard.header = header;
+import videos from '@cdo/apps/code-studio/videos';
+window.dashboard.videos = videos;
+import assets from '@cdo/apps/code-studio/assets';
+window.dashboard.assets = assets;
+import pairing from '@cdo/apps/code-studio/pairing';
+window.dashboard.pairing = pairing;
+import project from '@cdo/apps/code-studio/initApp/project';
+window.dashboard.project = project;
 
 // only stick the necessary methods onto dashboard.codeStudioLevels
 import {
