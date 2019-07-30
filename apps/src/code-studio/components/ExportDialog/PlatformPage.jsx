@@ -1,16 +1,11 @@
+import PropTypes from 'prop-types';
 import React from 'react';
-import color from '../../../util/color';
 import commonStyles from './styles';
 
 const styles = {
   radioLabel: {
     ...commonStyles.text,
     display: 'inline-block'
-  },
-  radioLabelDisabled: {
-    ...commonStyles.text,
-    display: 'inline-block',
-    color: color.light_gray
   },
   radioInput: {
     height: 18,
@@ -22,7 +17,20 @@ const styles = {
  * Platform Page in Export Dialog
  */
 export default class PlatformPage extends React.Component {
+  static propTypes = {
+    platform: PropTypes.oneOf(['ios', 'android']).isRequired,
+    onPlatformChanged: PropTypes.func.isRequired
+  };
+
+  onRadioChange = ({target}) => {
+    const {id} = target;
+    const {onPlatformChanged} = this.props;
+    const platform = id === 'radioAndroid' ? 'android' : 'ios';
+    onPlatformChanged(platform);
+  };
+
   render() {
+    const {platform} = this.props;
     return (
       <div>
         <div style={commonStyles.section}>
@@ -34,8 +42,8 @@ export default class PlatformPage extends React.Component {
               style={styles.radioInput}
               type="radio"
               id="radioAndroid"
-              readOnly
-              checked
+              checked={platform === 'android'}
+              onChange={this.onRadioChange}
             />
             <label htmlFor="radioAndroid" style={styles.radioLabel}>
               I have an Android device
@@ -46,10 +54,11 @@ export default class PlatformPage extends React.Component {
               style={styles.radioInput}
               type="radio"
               id="radioIOS"
-              disabled
+              checked={platform === 'ios'}
+              onChange={this.onRadioChange}
             />
-            <label htmlFor="radioIOS" style={styles.radioLabelDisabled}>
-              I have an iOS device (currently not supported)
+            <label htmlFor="radioIOS" style={styles.radioLabel}>
+              I have an iOS device
             </label>
           </div>
         </div>
