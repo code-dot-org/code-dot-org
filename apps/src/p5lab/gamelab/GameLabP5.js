@@ -2,8 +2,7 @@ import {getStore} from '@cdo/apps/redux';
 import {allAnimationsSingleFrameSelector} from './animationListModule';
 var gameLabSprite = require('./GameLabSprite');
 var gameLabGroup = require('./GameLabGroup');
-var Spritelab = require('./spritelab/Spritelab');
-import {backgrounds} from './spritelab/backgrounds.json';
+import {backgrounds} from '../spritelab/backgrounds.json';
 import * as assetPrefix from '@cdo/apps/assetManagement/assetPrefix';
 
 const defaultFrameRate = 30;
@@ -150,10 +149,6 @@ GameLabP5.prototype.init = function(options) {
       arguments
     );
   }.bind(this);
-
-  if (options.spritelab) {
-    this.spritelab = new Spritelab();
-  }
 };
 
 /**
@@ -161,9 +156,6 @@ GameLabP5.prototype.init = function(options) {
  */
 GameLabP5.prototype.resetExecution = function() {
   gameLabSprite.setCreateWithDebug(false);
-  if (this.spritelab) {
-    this.spritelab.reset();
-  }
 
   if (this.p5) {
     this.p5.remove();
