@@ -459,7 +459,7 @@ class TopInstructions extends Component {
 
   scrollToTopOfTab = () => {
     var myDiv = document.getElementById('scroll-container');
-    myDiv.scrollTo(0, 0);
+    myDiv.scrollTop = 0;
   };
 
   /**
