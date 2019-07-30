@@ -1,8 +1,8 @@
 /* global p5 */
-import {expect} from '../../../util/reconfiguredChai';
-import {commands} from '@cdo/apps/gamelab/spritelab/spriteCommands';
-import * as spriteUtils from '@cdo/apps/gamelab/spritelab/spriteUtils';
-import createGameLabP5 from '../../../util/gamelab/TestableGameLabP5';
+import {expect} from '../../util/reconfiguredChai';
+import {commands} from '@cdo/apps/p5lab/spritelab/spriteCommands';
+import * as spriteUtils from '@cdo/apps/p5lab/spritelab/spriteUtils';
+import createGameLabP5 from '../../util/gamelab/TestableGameLabP5';
 
 describe('Sprite Commands', () => {
   let gameLabP5, createSprite, animation;
