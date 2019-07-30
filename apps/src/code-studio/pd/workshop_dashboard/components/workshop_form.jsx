@@ -698,9 +698,12 @@ export class WorkshopForm extends React.Component {
         this.state.sessions,
         this.state.destroyedSessions
       ),
-      regional_partner_id: this.state.regional_partner_id,
-      organizer_id: this.state.organizer.id
+      regional_partner_id: this.state.regional_partner_id
     };
+
+    if (this.state.organizer) {
+      workshop_data.organizer_id = this.state.organizer.id;
+    }
 
     let method, url;
     if (this.props.workshop) {
@@ -969,7 +972,7 @@ export class WorkshopForm extends React.Component {
               readOnly={this.props.readOnly}
             />
           )}
-          {this.props.permission.has(WorkshopAdmin) && (
+          {this.props.permission.has(WorkshopAdmin) && this.props.workshop && (
             <OrganizerFormPart
               potential_organizers={this.props.workshop.potential_organizers}
               organizer_id={this.state.organizer.id}

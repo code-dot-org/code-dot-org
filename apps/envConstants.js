@@ -13,8 +13,14 @@ function getBoolEnv(name) {
 function getMoocEnv(name) {
   var moocName = 'MOOC_' + name;
   if (process.env.moocName) {
-    console.warn('The ' + moocName + ' environment variable is deprecated. ' +
-      'Use ' + name + ' instead.');
+    console.warn(
+      'The ' +
+        moocName +
+        ' environment variable is deprecated. ' +
+        'Use ' +
+        name +
+        ' instead.'
+    );
   }
   return process.env[name] || process.env['MOOC_' + name];
 }
@@ -36,12 +42,13 @@ module.exports = {
   // Used by karma to force singleRun mode
   WATCH: !!getMoocEnv('WATCH'),
   // If set, will collect code coverage info
-  COVERAGE: getBoolEnv('COVERAGE') || getBoolEnv('CIRCLECI'),
+  COVERAGE: getBoolEnv('COVERAGE') || getBoolEnv('DRONE'),
   NODE_ENV: process.env.NODE_ENV,
   CIRCLECI: process.env.CIRCLECI,
+  DRONE: process.env.DRONE,
   CIRCLE_TEST_REPORTS: process.env.CIRCLE_TEST_REPORTS,
   BROWSER: process.env.BROWSER,
   // If set, will turn on react hot loader and run the webpack dev server
   HOT: !!process.env.HOT,
-  LEVEL_TYPE: process.env.LEVEL_TYPE,
+  LEVEL_TYPE: process.env.LEVEL_TYPE
 };

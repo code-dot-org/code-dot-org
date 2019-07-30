@@ -33,7 +33,6 @@ class Ability
       Pd::CourseFacilitator,
       Pd::TeacherApplication,
       :workshop_organizer_survey_report,
-      Pd::WorkshopMaterialOrder,
       :pd_workshop_user_management,
       :pd_workshop_admins,
       :peer_review_submissions,
@@ -86,7 +85,6 @@ class Ability
           !script.professional_learning_course?
         end
         can [:read, :find], :regional_partner_workshops
-        can [:new, :create, :read], Pd::WorkshopMaterialOrder, user_id: user.id
         can [:new, :create, :read], Pd::Application::Facilitator1819Application, user_id: user.id
         can [:new, :create, :read], Pd::Application::Facilitator1920Application, user_id: user.id
         can [:new, :create, :read], Pd::Application::Teacher1819Application, user_id: user.id
@@ -144,7 +142,6 @@ class Ability
 
       if user.workshop_admin?
         can :manage, Pd::Workshop
-        can :manage, Pd::WorkshopMaterialOrder
         can :manage, Pd::CourseFacilitator
         can :manage, :workshop_organizer_survey_report
         can :manage, :pd_workshop_summary_report
@@ -159,6 +156,7 @@ class Ability
         can :manage, Pd::Application::Facilitator1920Application
         can :manage, Pd::Application::Teacher1920Application
         can :move, :workshop_enrollments
+        can :update_scholarship_info, Pd::Enrollment
       end
 
       if user.permission?(UserPermission::PROJECT_VALIDATOR)
