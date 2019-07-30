@@ -774,15 +774,16 @@ class UserTest < ActiveSupport::TestCase
   test "find_for_authentication finds migrated multi-auth email user first" do
     email = 'test@foo.bar'
     migrated_student = create(:student, email: email)
-    migrated_student.primary_contact_info = migrated_student.primary_contact_info
-    migrated_student.primary_contact_info.update(authentication_id: User.hash_email(email))
+
     legacy_student = build(:student, email: email)
-    # skip duplicate email validation
-    legacy_student.save(validate: false)
+    # ignore "Email has already been taken" error
+    assert_raises(ActiveRecord::RecordInvalid) do
+      legacy_student.save(validate: false)
+    end
+    legacy_student.demigrate_from_multi_auth
+    assert_equal legacy_student.hashed_email, migrated_student.hashed_email
 
     looked_up_user = User.find_for_authentication(hashed_email: User.hash_email(email))
-
-    assert_equal legacy_student.hashed_email, migrated_student.hashed_email
     assert_equal migrated_student, looked_up_user
   end
 
