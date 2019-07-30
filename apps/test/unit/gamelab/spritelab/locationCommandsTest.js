@@ -1,6 +1,6 @@
 import {expect} from '../../../util/reconfiguredChai';
-import {commands} from '@cdo/apps/gamelab/spritelab/locationCommands';
-import * as spriteUtils from '@cdo/apps/gamelab/spritelab/spriteUtils';
+import {commands} from '@cdo/apps/p5lab/gamelab/spritelab/locationCommands';
+import * as spriteUtils from '@cdo/apps/p5lab/gamelab/spritelab/spriteUtils';
 import createGameLabP5 from '../../../util/gamelab/TestableGameLabP5';
 
 describe('Location Commands', () => {
