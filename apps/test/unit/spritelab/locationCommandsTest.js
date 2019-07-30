@@ -1,7 +1,7 @@
-import {expect} from '../../../util/reconfiguredChai';
-import {commands} from '@cdo/apps/p5lab/gamelab/spritelab/locationCommands';
-import * as spriteUtils from '@cdo/apps/p5lab/gamelab/spritelab/spriteUtils';
-import createGameLabP5 from '../../../util/gamelab/TestableGameLabP5';
+import {expect} from '../../util/reconfiguredChai';
+import {commands} from '@cdo/apps/p5lab/spritelab/locationCommands';
+import * as spriteUtils from '@cdo/apps/p5lab/spritelab/spriteUtils';
+import createGameLabP5 from '../../util/gamelab/TestableGameLabP5';
 
 describe('Location Commands', () => {
   let gameLabP5, createSprite;
