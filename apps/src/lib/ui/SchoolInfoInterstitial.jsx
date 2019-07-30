@@ -217,32 +217,30 @@ export default class SchoolInfoInterstitial extends React.Component {
     if (this.isBlank(country)) {
       errors.country = true;
       isValid = false;
-    } else {
+    } else if (country === 'United States') {
       if (this.isBlank(schoolType)) {
         errors.schoolType = true;
         isValid = false;
       } else {
-        if (country === 'United States') {
-          /**
-           * NCES (National center for education statistics) only stores information
-           * for private, public and charter schools in the United States.
-           * Teachers with NCES school IDs are unique becuase of the useful information
-           * that is provided by NCES that the data team can join onto/use such as the
-           * the number of students in a school, % of URM students.
-           */
-          const ncesSchoolType = ['public', 'private', 'charter'];
-          if (ncesSchoolType.includes(schoolType)) {
-            if (this.isBlank(ncesSchoolId)) {
-              errors.ncesSchoolId = true;
-              isValid = false;
-            }
+        /**
+         * NCES (National center for education statistics) only stores information
+         * for private, public and charter schools in the United States.
+         * Teachers with NCES school IDs are unique becuase of the useful information
+         * that is provided by NCES that the data team can join onto/use such as the
+         * the number of students in a school, % of URM students.
+         */
+        const ncesSchoolType = ['public', 'private', 'charter'];
+        if (ncesSchoolType.includes(schoolType)) {
+          if (this.isBlank(ncesSchoolId)) {
+            errors.ncesSchoolId = true;
+            isValid = false;
+          }
 
-            // ncesSchoolId is set to -1 when the checkbox for school not found is clicked
-            // For a US, NCES school type, No NCES school id, school name is required.
-            if (ncesSchoolId === '-1' && this.isBlank(schoolName)) {
-              errors.schoolName = true;
-              isValid = false;
-            }
+          // ncesSchoolId is set to -1 when the checkbox for school not found is clicked
+          // For a US, NCES school type, No NCES school id, school name is required.
+          if (ncesSchoolId === '-1' && this.isBlank(schoolName)) {
+            errors.schoolName = true;
+            isValid = false;
           }
         }
       }
