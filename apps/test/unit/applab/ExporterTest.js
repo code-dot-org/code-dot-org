@@ -2,6 +2,7 @@ import {assert} from '../../util/configuredChai';
 import sinon from 'sinon';
 
 var testUtils = require('../../util/testUtils');
+import {expect} from '../../util/reconfiguredChai';
 import * as assetPrefix from '@cdo/apps/assetManagement/assetPrefix';
 import {setAppOptions} from '@cdo/apps/code-studio/initApp/loadApp';
 import Exporter, {getAppOptionsFile} from '@cdo/apps/applab/Exporter';
@@ -841,6 +842,30 @@ describe('Applab Exporter,', function() {
         `<div><div class="screen" id="screen1" tabindex="1"></div></div>`,
         done,
         'webRequestPromise'
+      );
+    });
+
+    it('should run custom marshall methods', done => {
+      sinon.spy(window, 'write');
+      runExportedApp(
+        `
+        var a = 'abcdef'.split('');
+        insertItem(a, 3, 'hi');
+        write(a);
+        `,
+        `<div><div class="screen" id="screen1" tabindex="1"></div></div>`,
+        () => {
+          expect(window.write).to.have.been.calledWith([
+            'a',
+            'b',
+            'c',
+            'hi',
+            'd',
+            'e',
+            'f'
+          ]);
+          done();
+        }
       );
     });
   });

@@ -94,6 +94,21 @@ module.exports = {
       expect: '"message"'
     }),
 
+    // These exercise some simple use cases for the list blocks:
+    // insertItem, appendItem, and removeItem
+    testApplabConsoleOutput({
+      testName: 'List blocks',
+      source: `
+        var list = ["a", "b", "d"];
+        var g = list.length;
+        insertItem(list, 2, "c");
+        appendItem(list, "f");
+        removeItem(list, 0);
+        console.log(g + ' ' + list.length + ' ' + list.join(','));
+      `,
+      expect: '"3 4 b,c,d,f"'
+    }),
+
     // These exercise all of the blocks in canvas category
     // It does not validate that they behave correctly, just that we don't end
     // up with any errors
