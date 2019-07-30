@@ -1884,6 +1884,7 @@ es-ES:
         courseD_farmer_condLoops_challenge2_a: La cantidad de cada vegetal en cada
           espacio varía. Usa bucles "while" para éstos.
       course3_maze_debugging_challenge1:
+        courseC_maze_debugging_challenge1_a: "¿Izquierda o derecha? ¡Decide tú!"
         courseC_maze_debugging_challenge1_b: El camino de Scrat es la forma de un
           rectángulo! Necesita girar en el mismo sentido cada vez!
         courseC_maze_debugging_challenge1_c: Si te quedas atascado, siempre puedes
@@ -4430,50 +4431,172 @@ es-ES:
           Añade dos de estos bloques al bloque `al ejecutar`:
 
           <xml>   <block type="studio_saySpriteChoices">     <title name="SPRITE">0</title>     <title name="VALUE">Hi there.</title>   </block> </xml>
+        courseC_PlayLab_events2_b: Utiliza el menú desplegable del segundo bloque
+          `actor __ dice` para cambiar el actor que habla.
       courseC_PlayLab_events2_2018:
         courseC_PlayLab_events2_a: |-
           Añade dos de estos bloques al bloque `al ejecutar`:
 
           <xml>   <block type="studio_saySpriteChoices">     <title name="SPRITE">0</title>     <title name="VALUE">Hi there.</title>   </block> </xml>
+        courseC_PlayLab_events2_b: Utiliza el menú desplegable del segundo bloque
+          `actor __ dice` para cambiar el actor que habla.
       courseC_PlayLab_events2_2019:
         courseC_PlayLab_events2_a: |-
           Añade dos de estos bloques al bloque `al ejecutar`:
 
           <xml>   <block type="studio_saySpriteChoices">     <title name="SPRITE">0</title>     <title name="VALUE">Hi there.</title>   </block> </xml>
+        courseC_PlayLab_events2_b: Utiliza el menú desplegable del segundo bloque
+          `actor __ dice` para cambiar el actor que habla.
       courseC_PlayLab_events3:
+        courseC_PlayLab_events3_a: Sólo tienes que mover a Jorge a la derecha 25 píxeles
+          para resolver este puzle.
+        courseC_PlayLab_events3_b: "¿Hay algún bloque en la caja de herramientas que
+          parezca que podría mover a un actor?"
         courseC_PlayLab_events3_c: "Añade este bloque al bloque `al ejecutar`:\n\n<xml>
           \  \n  <block type=\"studio_saySpriteChoices\">     \n    <title name=\"SPRITE\">0</title>
           \    \n    <title name=\"DIR\">2</title>     \n    <title name=\"DISTANCE\">25</title>\n
           \ </block>\n</xml>"
       courseC_PlayLab_events3_2018:
+        courseC_PlayLab_events3_a: Sólo tienes que mover a Jorge a la derecha 25 píxeles
+          para resolver este puzle.
+        courseC_PlayLab_events3_b: "¿Hay algún bloque en la caja de herramientas que
+          parezca que podría mover a un actor?"
         courseC_PlayLab_events3_c: "Añade este bloque al bloque `al ejecutar`:\n\n<xml>
           \  \n  <block type=\"studio_saySpriteChoices\">     \n    <title name=\"SPRITE\">0</title>
           \    \n    <title name=\"DIR\">2</title>     \n    <title name=\"DISTANCE\">25</title>\n
           \ </block>\n</xml>"
       courseC_PlayLab_events3_2019:
+        courseC_PlayLab_events3_a: Sólo tienes que mover a Jorge a la derecha 25 píxeles
+          para resolver este puzle.
+        courseC_PlayLab_events3_b: "¿Hay algún bloque en la caja de herramientas que
+          parezca que podría mover a un actor?"
         courseC_PlayLab_events3_c: "Añade este bloque al bloque `al ejecutar`:\n\n<xml>
           \  \n  <block type=\"studio_saySpriteChoices\">     \n    <title name=\"SPRITE\">0</title>
           \    \n    <title name=\"DIR\">2</title>     \n    <title name=\"DISTANCE\">25</title>\n
           \ </block>\n</xml>"
       courseC_PlayLab_events4:
+        courseC_PlayLab_events4_b: Cuando se pulse el botón "Ejecutar", Jorge necesita
+          moverse a la derecha **100** píxeles para alcanzar a Olive la Gata.
         courseC_PlayLab_events4_a: Tienes que unir un bloque `actor __ dice` al evento
           `cuando el actor toca` para resolver este puzle.
       courseC_PlayLab_events4_2018:
+        courseC_PlayLab_events4_b: Cuando se pulse el botón "Ejecutar", Jorge necesita
+          moverse a la derecha **100** píxeles para alcanzar a Olive la Gata.
         courseC_PlayLab_events4_a: Tienes que unir un bloque `actor __ dice` al evento
           `cuando el actor toca` para resolver este puzle.
       courseC_PlayLab_events4_2019:
+        courseC_PlayLab_events4_b: Cuando se pulse el botón "Ejecutar", Jorge necesita
+          moverse a la derecha **100** píxeles para alcanzar a Olive la Gata.
         courseC_PlayLab_events4_a: Tienes que unir un bloque `actor __ dice` al evento
           `cuando el actor toca` para resolver este puzle.
+      courseC_PlayLab_events5:
+        courseC_PlayLab_events5_a: Tienes que pulsar en el menú desplegable del bloque
+          `actor dice` para encontrar el texto "¿Qué hay de nuevo?"
+        courseC_PlayLab_events5_b: "¡Pulsa en Octavia cuando ejecutes tu programa
+          para comprobar que funciona!"
+      courseC_PlayLab_events5_2018:
+        courseC_PlayLab_events5_a: Tienes que pulsar en el menú desplegable del bloque
+          `actor dice` para encontrar el texto "¿Qué hay de nuevo?"
+        courseC_PlayLab_events5_b: "¡Pulsa en Octavia cuando ejecutes tu programa
+          para comprobar que funciona!"
+      courseC_PlayLab_events5_2019:
+        courseC_PlayLab_events5_a: Tienes que pulsar en el menú desplegable del bloque
+          `actor dice` para encontrar el texto "¿Qué hay de nuevo?"
+        courseC_PlayLab_events5_b: "¡Pulsa en Octavia cuando ejecutes tu programa
+          para comprobar que funciona!"
+      courseC_PlayLab_events6:
+        courseC_PlayLab_events6_a: Debería haber una accion debajo de cada bloque
+          verde `cuando se pulse la tecla`.
+        courseC_PlayLab_events6_b: Utiliza el menú desplegable del bloque `mover actor
+          1` para cambiar la dirección en la que se mueve Waddles.
+        courseC_PlayLab_events6_c: Cuando hayas acabado, ¡deberías de ser capaz de
+          mover a Waddles usando las teclas de flechas de tu ordenador!
+      courseC_PlayLab_events6_2018:
+        courseC_PlayLab_events6_a: Debería haber una accion debajo de cada bloque
+          verde `cuando se pulse la tecla`.
+        courseC_PlayLab_events6_b: Utiliza el menú desplegable del bloque `mover actor
+          1` para cambiar la dirección en la que se mueve Waddles.
+        courseC_PlayLab_events6_c: Cuando hayas acabado, ¡deberías de ser capaz de
+          mover a Waddles usando las teclas de flechas de tu ordenador!
+      courseC_PlayLab_events6_2019:
+        courseC_PlayLab_events6_a: Debería haber una accion debajo de cada bloque
+          verde `cuando se pulse la tecla`.
+        courseC_PlayLab_events6_b: Utiliza el menú desplegable del bloque `mover actor
+          1` para cambiar la dirección en la que se mueve Waddles.
+        courseC_PlayLab_events6_c: Cuando hayas acabado, ¡deberías de ser capaz de
+          mover a Waddles usando las teclas de flechas de tu ordenador!
+      courseC_PlayLab_events7:
+        courseC_PlayLab_events7_a: 'Utiliza los bloques `mover actor 2 arriba 400
+          píxeles` y `mover actor 2 abajo 400 píxeles` dentro de un bucle `Repetir
+          para siempre` para resolver este puzle. '
+        courseC_PlayLab_events7_b: El bucle `Repetir para siempre` no necesita estar
+          conectado a ningún bloque de evento; se ejecutará por si mismo.
+      courseC_PlayLab_events7_2018:
+        courseC_PlayLab_events7_a: 'Utiliza los bloques `mover actor 2 arriba 400
+          píxeles` y `mover actor 2 abajo 400 píxeles` dentro de un bucle `Repetir
+          para siempre` para resolver este puzle. '
+        courseC_PlayLab_events7_b: El bucle `Repetir para siempre` no necesita estar
+          conectado a ningún bloque de evento; se ejecutará por si mismo.
+      courseC_PlayLab_events7_2019:
+        courseC_PlayLab_events7_a: 'Utiliza los bloques `mover actor 2 arriba 400
+          píxeles` y `mover actor 2 abajo 400 píxeles` dentro de un bucle `Repetir
+          para siempre` para resolver este puzle. '
+        courseC_PlayLab_events7_b: El bucle `Repetir para siempre` no necesita estar
+          conectado a ningún bloque de evento; se ejecutará por si mismo.
+      courseC_PlayLab_events8:
+        courseC_PlayLab_events8_a: Necesitas conectar otros bloques al bloque `cuando
+          el actor toca` para que esto funcione.
+        courseC_PlayLab_events8_b: "¡Los bloques `actor dice` y `reproducir sonido`
+          de la caja de herramientas deberían ayudarte!"
+      courseC_PlayLab_events8_2018:
+        courseC_PlayLab_events8_a: Necesitas conectar otros bloques al bloque `cuando
+          el actor toca` para que esto funcione.
+        courseC_PlayLab_events8_b: "¡Los bloques `actor dice` y `reproducir sonido`
+          de la caja de herramientas deberían ayudarte!"
+      courseC_PlayLab_events8_2019:
+        courseC_PlayLab_events8_a: Necesitas conectar otros bloques al bloque `cuando
+          el actor toca` para que esto funcione.
+        courseC_PlayLab_events8_b: "¡Los bloques `actor dice` y `reproducir sonido`
+          de la caja de herramientas deberían ayudarte!"
+      courseC_PlayLab_events9:
+        courseC_PlayLab_events9_a: El bloque `anotar punto` te ayudará a resolver
+          este puzle.
+        courseC_PlayLab_events9_b: Asegúrate de que tu nuevo bloque `cuando el actor
+          toca` dice "el actor **1**" y "el actor **3**".
+        courseC_PlayLab_events9_c: Puedes tener más de un evento `cuando el actor
+          toca` en el espacio de trabajo, así que ¡no tienes que quitar el primero!
+      courseC_PlayLab_events9_2018:
+        courseC_PlayLab_events9_a: El bloque `anotar punto` te ayudará a resolver
+          este puzle.
+        courseC_PlayLab_events9_b: Asegúrate de que tu nuevo bloque `cuando el actor
+          toca` dice "el actor **1**" y "el actor **3**".
+        courseC_PlayLab_events9_c: Puedes tener más de un evento `cuando el actor
+          toca` en el espacio de trabajo, así que ¡no tienes que quitar el primero!
+      courseC_PlayLab_events9_2019:
+        courseC_PlayLab_events9_a: El bloque `anotar punto` te ayudará a resolver
+          este puzle.
+        courseC_PlayLab_events9_b: Asegúrate de que tu nuevo bloque `cuando el actor
+          toca` dice "el actor **1**" y "el actor **3**".
+        courseC_PlayLab_events9_c: Puedes tener más de un evento `cuando el actor
+          toca` en el espacio de trabajo, así que ¡no tienes que quitar el primero!
       courseC_PlayLab_eventsA:
+        courseC_PlayLab_eventsA_a: Utiliza el bloque `establecer fondo` y el bloque
+          `definir actor __ a una velocidad ___` para resolver este puzle.
         courseC_PlayLab_eventsA_b: Tienes que arrastar un bloque del evento `al ejecutar`
           al espacio de trabajo para resolver este puzle.
       courseC_PlayLab_eventsA_2018:
+        courseC_PlayLab_eventsA_a: Utiliza el bloque `establecer fondo` y el bloque
+          `definir actor __ a una velocidad ___` para resolver este puzle.
         courseC_PlayLab_eventsA_b: Tienes que arrastar un bloque del evento `al ejecutar`
           al espacio de trabajo para resolver este puzle.
       courseC_PlayLab_eventsA_2019:
+        courseC_PlayLab_eventsA_a: Utiliza el bloque `establecer fondo` y el bloque
+          `definir actor __ a una velocidad ___` para resolver este puzle.
         courseC_PlayLab_eventsA_b: Tienes que arrastar un bloque del evento `al ejecutar`
           al espacio de trabajo para resolver este puzle.
       courseC_PlayLab_eventsA_embed_2019:
+        courseC_PlayLab_eventsA_a: Utiliza el bloque `establecer fondo` y el bloque
+          `definir actor __ a una velocidad ___` para resolver este puzle.
         courseC_PlayLab_eventsA_b: Tienes que arrastar un bloque del evento `al ejecutar`
           al espacio de trabajo para resolver este puzle.
       courseC_PlayLab_eventsFP:
@@ -4528,17 +4651,41 @@ es-ES:
 
           **Pinball** - Haz que un personaje se mueva usando las teclas de las flechas (usa los bloques `cuando flecha hacia arriba` y `cuando flecha hacia abajo`) y haz que suene un sonido aleatorio cuando choque con otros personajes en la pantalla.
       courseC_PlayLab_events_challenge1:
+        courseC_PlayLab_events_challenge_a: |-
+          Puedes usar este bloque para mover a los actores a diferentes lugares en el espacio de juego.
+
+          <xml> <block type="studio_setSpritePosition">     <title name="SPRITE">0</title>     <title name="VALUE">12</title>   </block></xml>
         courseC_PlayLab_events_challenge_b: Intenta usar `colocar actor 1 en la posición
           central izquierda` cuando toque a cualquiera de los otros actores. ¡Esto
           reiniciará el juego para que el jugador pueda seguir intentándolo!
+        courseC_PlayLab_events_challenge_c: |-
+          ¡Puedes probar también cambiando la velocidad de los actores para hacer que el juego sea más fácil o más difícil!
+
+           <xml> <block type="studio_setSpriteSpeed">     <title name="SPRITE">0</title>     <title name="VALUE">Studio.SpriteSpeed.FAST</title>   </block></xml>
       courseC_PlayLab_events_challenge1_2018:
+        courseC_PlayLab_events_challenge_a: |-
+          Puedes usar este bloque para mover a los actores a diferentes lugares en el espacio de juego.
+
+          <xml> <block type="studio_setSpritePosition">     <title name="SPRITE">0</title>     <title name="VALUE">12</title>   </block></xml>
         courseC_PlayLab_events_challenge_b: Intenta usar `colocar actor 1 en la posición
           central izquierda` cuando toque a cualquiera de los otros actores. ¡Esto
           reiniciará el juego para que el jugador pueda seguir intentándolo!
+        courseC_PlayLab_events_challenge_c: |-
+          ¡Puedes probar también cambiando la velocidad de los actores para hacer que el juego sea más fácil o más difícil!
+
+           <xml> <block type="studio_setSpriteSpeed">     <title name="SPRITE">0</title>     <title name="VALUE">Studio.SpriteSpeed.FAST</title>   </block></xml>
       courseC_PlayLab_events_challenge1_2019:
+        courseC_PlayLab_events_challenge_a: |-
+          Puedes usar este bloque para mover a los actores a diferentes lugares en el espacio de juego.
+
+          <xml> <block type="studio_setSpritePosition">     <title name="SPRITE">0</title>     <title name="VALUE">12</title>   </block></xml>
         courseC_PlayLab_events_challenge_b: Intenta usar `colocar actor 1 en la posición
           central izquierda` cuando toque a cualquiera de los otros actores. ¡Esto
           reiniciará el juego para que el jugador pueda seguir intentándolo!
+        courseC_PlayLab_events_challenge_c: |-
+          ¡Puedes probar también cambiando la velocidad de los actores para hacer que el juego sea más fácil o más difícil!
+
+           <xml> <block type="studio_setSpriteSpeed">     <title name="SPRITE">0</title>     <title name="VALUE">Studio.SpriteSpeed.FAST</title>   </block></xml>
       courseC_artist_loop1:
         courseC_artist_loop1_a: No tienes que hacer ningún cambio en el bucle, sólo
           poner un bloque encima de él.
@@ -4638,6 +4785,30 @@ es-ES:
           sacaré una línea automáticamente.
         courseC_artist_prog2_b: "¿Tienes problemas girando la esquina? Usa el bloque
           `girar a la derecha 90 grados`."
+      courseC_artist_prog5:
+        courseC_artist_prog5_b: "¡No tengas miedo de cometer un error! Prueba a añadir
+          bloques y a ejecutar el código para ver que pasará, incluso aunque sepas
+          que no has resuelto el puzle todavía."
+      courseC_artist_prog5_2018:
+        courseC_artist_prog5_b: "¡No tengas miedo de cometer un error! Prueba a añadir
+          bloques y a ejecutar el código para ver que pasará, incluso aunque sepas
+          que no has resuelto el puzle todavía."
+      courseC_artist_prog5_2019:
+        courseC_artist_prog5_b: "¡No tengas miedo de cometer un error! Prueba a añadir
+          bloques y a ejecutar el código para ver que pasará, incluso aunque sepas
+          que no has resuelto el puzle todavía."
+      courseC_artist_prog7:
+        courseC_artist_prog7_e: "¡No tengas miedo de cometer un error! Prueba a añadir
+          bloques y a ejecutar el código para ver que pasará, incluso aunque sepas
+          que no has resuelto el puzle todavía."
+      courseC_artist_prog7_2018:
+        courseC_artist_prog7_e: "¡No tengas miedo de cometer un error! Prueba a añadir
+          bloques y a ejecutar el código para ver que pasará, incluso aunque sepas
+          que no has resuelto el puzle todavía."
+      courseC_artist_prog7_2019:
+        courseC_artist_prog7_e: "¡No tengas miedo de cometer un error! Prueba a añadir
+          bloques y a ejecutar el código para ver que pasará, incluso aunque sepas
+          que no has resuelto el puzle todavía."
       courseC_collector_loops_challenge2:
         courseC_maze_loops_challenge2_b: "¡Usa bucles para no quedarte sin bloques
           `junta`!"
@@ -4667,16 +4838,25 @@ es-ES:
           name="DIR">moveForward</title></block></xml> o usar el bloque <xml><block
           type="controls_repeat_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>
           para que tu programa sea más corto.
+        courseC_collector_prog2_b: "¡No tengas miedo de cometer un error! Prueba a
+          añadir bloques y a ejecutar el código para ver que pasará, incluso aunque
+          sepas que no has resuelto el puzle todavía."
       courseC_collector_prog2_2018:
         courseC_collector_prog2_a: Puedes usar cuatro bloques <xml><block type="maze_move"><title
           name="DIR">moveForward</title></block></xml> o usar el bloque <xml><block
           type="controls_repeat_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>
           para que tu programa sea más corto.
+        courseC_collector_prog2_b: "¡No tengas miedo de cometer un error! Prueba a
+          añadir bloques y a ejecutar el código para ver que pasará, incluso aunque
+          sepas que no has resuelto el puzle todavía."
       courseC_collector_prog2_2019:
         courseC_collector_prog2_a: Puedes usar cuatro bloques <xml><block type="maze_move"><title
           name="DIR">moveForward</title></block></xml> o usar el bloque <xml><block
           type="controls_repeat_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>
           para que tu programa sea más corto.
+        courseC_collector_prog2_b: "¡No tengas miedo de cometer un error! Prueba a
+          añadir bloques y a ejecutar el código para ver que pasará, incluso aunque
+          sepas que no has resuelto el puzle todavía."
       courseC_collector_prog3:
         courseC_collector_prog3_a: El programa sólo ejecutará los bloques que estén
           conectados al bloque <xml><block type="when_run"/></xml>.
@@ -4701,14 +4881,23 @@ es-ES:
       courseC_collector_prog4:
         courseC_collector_prog4_a: Si te atascas, prueba a escribir los pasos en un
           trozo de papel.
+        courseC_collector_prog4_b: "¡No tengas miedo de cometer un error! Prueba a
+          añadir bloques y a ejecutar el código para ver que pasará, incluso aunque
+          sepas que no has resuelto el puzle todavía."
         courseC_collector_prog4_c: Prueba este camino.
       courseC_collector_prog4_2018:
         courseC_collector_prog4_a: Si te atascas, prueba a escribir los pasos en un
           trozo de papel.
+        courseC_collector_prog4_b: "¡No tengas miedo de cometer un error! Prueba a
+          añadir bloques y a ejecutar el código para ver que pasará, incluso aunque
+          sepas que no has resuelto el puzle todavía."
         courseC_collector_prog4_c: Prueba este camino.
       courseC_collector_prog4_2019:
         courseC_collector_prog4_a: Si te atascas, prueba a escribir los pasos en un
           trozo de papel.
+        courseC_collector_prog4_b: "¡No tengas miedo de cometer un error! Prueba a
+          añadir bloques y a ejecutar el código para ver que pasará, incluso aunque
+          sepas que no has resuelto el puzle todavía."
         courseC_collector_prog4_c: Prueba este camino.
       courseC_collector_prog5:
         courseC_collector_prog5_a: |-
@@ -4861,6 +5050,42 @@ es-ES:
       courseC_flappy_events5_2019:
         courseC_flappy_events5_a: Necesitas usar el bloque `anotar un punto` para
           pasar este nivel.
+      courseC_flappy_events6:
+        courseC_flappy_events6_a: Prueba a conectar el bloque `aletear ____` al evento
+          `Cuando haga click`.
+      courseC_flappy_events6_2018:
+        courseC_flappy_events6_a: Prueba a conectar el bloque `aletear ____` al evento
+          `Cuando haga click`.
+      courseC_flappy_events6_2019:
+        courseC_flappy_events6_a: Prueba a conectar el bloque `aletear ____` al evento
+          `Cuando haga click`.
+      courseC_flappy_events7:
+        courseC_flappy_events7_a: 'Puedes cambiar el fondo usando el bloque `establecer
+          escena`. '
+      courseC_flappy_events7_2018:
+        courseC_flappy_events7_a: 'Puedes cambiar el fondo usando el bloque `establecer
+          escena`. '
+      courseC_flappy_events7_2019:
+        courseC_flappy_events7_a: 'Puedes cambiar el fondo usando el bloque `establecer
+          escena`. '
+      courseC_flappy_events8:
+        courseC_flappy_events8_a: Prueba a conectar un segundo bloque `establecer
+          escena` en el evento `cuando choca con un obstáculo` para pasar el nivel.
+      courseC_flappy_events8_2018:
+        courseC_flappy_events8_a: Prueba a conectar un segundo bloque `establecer
+          escena` en el evento `cuando choca con un obstáculo` para pasar el nivel.
+      courseC_flappy_events8_2019:
+        courseC_flappy_events8_a: Prueba a conectar un segundo bloque `establecer
+          escena` en el evento `cuando choca con un obstáculo` para pasar el nivel.
+      courseC_flappy_events9:
+        courseC_flappy_events9_a: Conecta el bloque `Establece el puntaje 0` al evento
+          `cuando choca con un obstáculo` para pasar este nivel.
+      courseC_flappy_events9_2018:
+        courseC_flappy_events9_a: Conecta el bloque `Establece el puntaje 0` al evento
+          `cuando choca con un obstáculo` para pasar este nivel.
+      courseC_flappy_events9_2019:
+        courseC_flappy_events9_a: Conecta el bloque `Establece el puntaje 0` al evento
+          `cuando choca con un obstáculo` para pasar este nivel.
       courseC_harvester_loops1:
         courseC_harvester_loops1_a: Cuanto te hayas movido hasta una calabaza, usa
           <xml><block type="harvester_pumpkin"/></xml> para recogerla.
@@ -5083,6 +5308,45 @@ es-ES:
       courseC_maze_debugging3_2019:
         courseC_maze_debugging3_b: "¿No puedes averiguar lo que está mal? Intenta
           ejecutar el código un par de veces para ver lo que sucede."
+      courseC_maze_debugging_challenge1:
+        courseC_maze_debugging_challenge1_a: "¿Izquierda o derecha? ¡Decide tú!"
+        courseC_maze_debugging_challenge1_b: "¡El camino de Scrat tiene la forma de
+          un rectángulo! Tiene que girar en el mismo sentido todas las veces."
+        courseC_maze_debugging_challenge1_c: Si te atascas, siempre puedes volver
+          a empezar ¡y encontrar un camino nuevo!
+      courseC_maze_debugging_challenge1_2018:
+        courseC_maze_debugging_challenge1_a: "¿Izquierda o derecha? ¡Decide tú!"
+        courseC_maze_debugging_challenge1_b: "¡El camino de Scrat tiene la forma de
+          un rectángulo! Tiene que girar en el mismo sentido todas las veces."
+        courseC_maze_debugging_challenge1_c: Si te atascas, siempre puedes volver
+          a empezar ¡y encontrar un camino nuevo!
+      courseC_maze_debugging_challenge1_2019:
+        courseC_maze_debugging_challenge1_a: "¿Izquierda o derecha? ¡Decide tú!"
+        courseC_maze_debugging_challenge1_b: "¡El camino de Scrat tiene la forma de
+          un rectángulo! Tiene que girar en el mismo sentido todas las veces."
+        courseC_maze_debugging_challenge1_c: Si te atascas, siempre puedes volver
+          a empezar ¡y encontrar un camino nuevo!
+      courseC_maze_debugging_challenge2:
+        courseC_maze_debugging_challenge2_b: Si te atascas, prueba a depurar el código.
+          ¿Dónde lo hace mal?
+        courseC_maze_debugging_challenge2_c: |-
+          Hay dos caminos diferentes que puedes seguir moviéndote sólo hacia adelante y girando cuatro veces. Si encuentras una forma de usar bucles, ¡puede haber más!
+
+           ![](<https://images.code.org/8a4665671cda35fea1f629a5bcc39e26-image-1493502743154.48.05 PM.png>)
+      courseC_maze_debugging_challenge2_2018:
+        courseC_maze_debugging_challenge2_b: Si te atascas, prueba a depurar el código.
+          ¿Dónde lo hace mal?
+        courseC_maze_debugging_challenge2_c: |-
+          Hay dos caminos diferentes que puedes seguir moviéndote sólo hacia adelante y girando cuatro veces. Si encuentras una forma de usar bucles, ¡puede haber más!
+
+           ![](<https://images.code.org/8a4665671cda35fea1f629a5bcc39e26-image-1493502743154.48.05 PM.png>)
+      courseC_maze_debugging_challenge2_2019:
+        courseC_maze_debugging_challenge2_b: Si te atascas, prueba a depurar el código.
+          ¿Dónde lo hace mal?
+        courseC_maze_debugging_challenge2_c: |-
+          Hay dos caminos diferentes que puedes seguir moviéndote sólo hacia adelante y girando cuatro veces. Si encuentras una forma de usar bucles, ¡puede haber más!
+
+           ![](<https://images.code.org/8a4665671cda35fea1f629a5bcc39e26-image-1493502743154.48.05 PM.png>)
       courseC_maze_loops_challenge1a:
         courseC_maze_loops_challenge1_a: Piensa que este camino está formado por dos
           trozos diferentes. Cada uno tiene un patrón que puedes repetir.
@@ -5192,16 +5456,22 @@ es-ES:
           -   gira al otro lado
           -   avanza
       courseC_maze_programming5:
+        courseC_maze_programming5_a: Prueba a usar el botón "Paso" para ejecutar tu
+          código línea a línea. ¿Puedes averiguar qué tienes que hacer después?
         courseC_maze_programming5_b: El pájaro necesita girar para completar este
           puzle. ¿Puedes descubrir hacia qué lado?
         courseC_maze_programming5_c: La solución tendrá dos bloques `avanzar`, un
           giro y otros dos bloques `avanzar`.
       courseC_maze_programming5_2018:
+        courseC_maze_programming5_a: Prueba a usar el botón "Paso" para ejecutar tu
+          código línea a línea. ¿Puedes averiguar qué tienes que hacer después?
         courseC_maze_programming5_b: El pájaro necesita girar para completar este
           puzle. ¿Puedes descubrir hacia qué lado?
         courseC_maze_programming5_c: La solución tendrá dos bloques `avanzar`, un
           giro y otros dos bloques `avanzar`.
       courseC_maze_programming5_2019:
+        courseC_maze_programming5_a: Prueba a usar el botón "Paso" para ejecutar tu
+          código línea a línea. ¿Puedes averiguar qué tienes que hacer después?
         courseC_maze_programming5_b: El pájaro necesita girar para completar este
           puzle. ¿Puedes descubrir hacia qué lado?
         courseC_maze_programming5_c: La solución tendrá dos bloques `avanzar`, un
@@ -5245,12 +5515,21 @@ es-ES:
       courseC_maze_programming8:
         courseC_maze_programming8_a: Recuerda que puedes usar el botón "Paso" para
           revisar tu código línea a línea si te atascas.
+        courseC_maze_programming8_b: "¡No tengas miedo de cometer un error! Prueba
+          a añadir bloques y a ejecutar el código para ver que pasará, incluso aunque
+          sepas que no has resuelto el puzle todavía."
       courseC_maze_programming8_2018:
         courseC_maze_programming8_a: Recuerda que puedes usar el botón "Paso" para
           revisar tu código línea a línea si te atascas.
+        courseC_maze_programming8_b: "¡No tengas miedo de cometer un error! Prueba
+          a añadir bloques y a ejecutar el código para ver que pasará, incluso aunque
+          sepas que no has resuelto el puzle todavía."
       courseC_maze_programming8_2019:
         courseC_maze_programming8_a: Recuerda que puedes usar el botón "Paso" para
           revisar tu código línea a línea si te atascas.
+        courseC_maze_programming8_b: "¡No tengas miedo de cometer un error! Prueba
+          a añadir bloques y a ejecutar el código para ver que pasará, incluso aunque
+          sepas que no has resuelto el puzle todavía."
       courseC_maze_programming_challenge1:
         courseC_maze_programming_challenge1_a: Hay muchas formas de llegar hasta el
           cerdo. Usa tu dedo para encontrar un camino y luego ¡programalo!
@@ -5490,16 +5769,173 @@ es-ES:
           esquina, y otra después de la esquina.
         courseD_iceage_loops2_b: Si te atascas, intenta decir los pasos en voz alta.
         courseD_iceage_loops2_c: Sigue esta ruta para llevar a Scrat a la bellota.
+      courseD_maze_intro5a_2019:
+        courseC_maze_programming5_a: Prueba a usar el botón "Paso" para ejecutar tu
+          código línea a línea. ¿Puedes averiguar qué tienes que hacer después?
+        courseC_maze_programming5_c: "¡No tengas miedo de cometer un error! Prueba
+          a añadir bloques y a ejecutar el código para ver que pasará, incluso aunque
+          sepas que no has resuelto el puzle todavía."
+      courseD_maze_ramp1:
+        courseC_maze_programming1_b: "¡No tengas miedo de cometer un error! Prueba
+          a añadir bloques y a ejecutar el código para ver que pasará, incluso aunque
+          sepas que no has resuelto el puzle todavía."
+      courseD_maze_ramp1_2018:
+        courseC_maze_programming1_b: "¡No tengas miedo de cometer un error! Prueba
+          a añadir bloques y a ejecutar el código para ver que pasará, incluso aunque
+          sepas que no has resuelto el puzle todavía."
+      courseD_maze_ramp1_2019:
+        courseC_maze_programming1_b: "¡No tengas miedo de cometer un error! Prueba
+          a añadir bloques y a ejecutar el código para ver que pasará, incluso aunque
+          sepas que no has resuelto el puzle todavía."
+      courseD_maze_ramp2:
+        courseC_maze_programming2_a: Para usar un bloque `avanzar`, arrástralo desde
+          la caja de herramientas al espacio de trabajo y conéctalo al bloque `al
+          ejecutar`.
+      courseD_maze_ramp2_2018:
+        courseC_maze_programming2_a: Para usar un bloque `avanzar`, arrástralo desde
+          la caja de herramientas al espacio de trabajo y conéctalo al bloque `al
+          ejecutar`.
+      courseD_maze_ramp2_2019:
+        courseC_maze_programming2_a: Para usar un bloque `avanzar`, arrástralo desde
+          la caja de herramientas al espacio de trabajo y conéctalo al bloque `al
+          ejecutar`.
+      courseD_maze_ramp3:
+        courseC_maze_programming3_a: |-
+          ![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)
+
+          Para eliminar un bloque que está en mitad de tu código, arrastra todos los bloques que están debajo de él hacia la derecha y dejalos ahí de momento.
+
+          Haz click en el bloque que quieres eliminar y arrástralo de vuelta a la caja de herramientas.
+
+          Luego, devuelve los otros bloques al lugar en el que deben estar.
+      courseD_maze_ramp3_2018:
+        courseC_maze_programming3_a: |-
+          ![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)
+
+          Para eliminar un bloque que está en mitad de tu código, arrastra todos los bloques que están debajo de él hacia la derecha y dejalos ahí de momento.
+
+          Haz click en el bloque que quieres eliminar y arrástralo de vuelta a la caja de herramientas.
+
+          Luego, devuelve los otros bloques al lugar en el que deben estar.
+      courseD_maze_ramp3_2019:
+        courseC_maze_programming3_a: |-
+          ![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)
+
+          Para eliminar un bloque que está en mitad de tu código, arrastra todos los bloques que están debajo de él hacia la derecha y dejalos ahí de momento.
+
+          Haz click en el bloque que quieres eliminar y arrástralo de vuelta a la caja de herramientas.
+
+          Luego, devuelve los otros bloques al lugar en el que deben estar.
+      courseD_maze_ramp5:
+        courseC_maze_programming5_a: Prueba a usar el botón "Paso" para ejecutar tu
+          código línea a línea. ¿Puedes averiguar qué tienes que hacer después?
+        courseC_maze_programming5_c: "¡No tengas miedo de cometer un error! Prueba
+          a añadir bloques y a ejecutar el código para ver que pasará, incluso aunque
+          sepas que no has resuelto el puzle todavía."
+      courseD_maze_ramp5_2018:
+        courseC_maze_programming5_a: Prueba a usar el botón "Paso" para ejecutar tu
+          código línea a línea. ¿Puedes averiguar qué tienes que hacer después?
+        courseC_maze_programming5_c: "¡No tengas miedo de cometer un error! Prueba
+          a añadir bloques y a ejecutar el código para ver que pasará, incluso aunque
+          sepas que no has resuelto el puzle todavía."
+      courseD_maze_ramp5_2019:
+        courseC_maze_programming5_a: Prueba a usar el botón "Paso" para ejecutar tu
+          código línea a línea. ¿Puedes averiguar qué tienes que hacer después?
+        courseC_maze_programming5_c: "¡No tengas miedo de cometer un error! Prueba
+          a añadir bloques y a ejecutar el código para ver que pasará, incluso aunque
+          sepas que no has resuelto el puzle todavía."
+      courseD_maze_ramp5a:
+        courseC_maze_programming5_a: Prueba a usar el botón "Paso" para ejecutar tu
+          código línea a línea. ¿Puedes averiguar qué tienes que hacer después?
+        courseC_maze_programming5_c: "¡No tengas miedo de cometer un error! Prueba
+          a añadir bloques y a ejecutar el código para ver que pasará, incluso aunque
+          sepas que no has resuelto el puzle todavía."
+      courseD_maze_ramp5a_2018:
+        courseC_maze_programming5_a: Prueba a usar el botón "Paso" para ejecutar tu
+          código línea a línea. ¿Puedes averiguar qué tienes que hacer después?
+        courseC_maze_programming5_c: "¡No tengas miedo de cometer un error! Prueba
+          a añadir bloques y a ejecutar el código para ver que pasará, incluso aunque
+          sepas que no has resuelto el puzle todavía."
+      courseD_maze_ramp5a_2019:
+        courseC_maze_programming5_a: Prueba a usar el botón "Paso" para ejecutar tu
+          código línea a línea. ¿Puedes averiguar qué tienes que hacer después?
+        courseC_maze_programming5_c: "¡No tengas miedo de cometer un error! Prueba
+          a añadir bloques y a ejecutar el código para ver que pasará, incluso aunque
+          sepas que no has resuelto el puzle todavía."
+      courseD_maze_ramp5b:
+        courseC_maze_programming5_a: Prueba a usar el botón "Paso" para ejecutar tu
+          código línea a línea. ¿Puedes averiguar qué tienes que hacer después?
+        courseC_maze_programming5_c: "¡No tengas miedo de cometer un error! Prueba
+          a añadir bloques y a ejecutar el código para ver que pasará, incluso aunque
+          sepas que no has resuelto el puzle todavía."
+      courseD_maze_ramp5b_2018:
+        courseC_maze_programming5_a: Prueba a usar el botón "Paso" para ejecutar tu
+          código línea a línea. ¿Puedes averiguar qué tienes que hacer después?
+        courseC_maze_programming5_c: "¡No tengas miedo de cometer un error! Prueba
+          a añadir bloques y a ejecutar el código para ver que pasará, incluso aunque
+          sepas que no has resuelto el puzle todavía."
+      courseD_maze_ramp5b_2019:
+        courseC_maze_programming5_a: Prueba a usar el botón "Paso" para ejecutar tu
+          código línea a línea. ¿Puedes averiguar qué tienes que hacer después?
+        courseC_maze_programming5_c: "¡No tengas miedo de cometer un error! Prueba
+          a añadir bloques y a ejecutar el código para ver que pasará, incluso aunque
+          sepas que no has resuelto el puzle todavía."
       courseD_maze_ramp6:
         courseC_maze_programming6_a: "¡Aquí tienes dos caminos para resolver el puzzle!"
       courseD_maze_ramp7:
         courseD_maze_ramp7_b: No olvides usar el botón "Paso" para avanzar de bloque
           en bloque y buscar errores.
+      courseD_scrat_ramp1:
+        courseC_maze_programming1_a: Si Scrat no llega a la bellota, asegúrate de
+          que los tres bloques están bien colocados juntos, luego pulsa "Ejecutar"
+          de nuevo.
+        courseC_maze_programming1_b: "¡No tengas miedo de cometer un error! Prueba
+          a añadir bloques y a ejecutar el código para ver que pasará, incluso aunque
+          sepas que no has resuelto el puzle todavía."
+      courseD_scrat_ramp2:
+        courseC_maze_programming2_a: Para usar un bloque `avanzar`, arrástralo desde
+          la caja de herramientas al espacio de trabajo y conéctalo al bloque `al
+          ejecutar`.
+        courseC_maze_programming2_b: Asegúrate de que los tres bloques `avanzar` están
+          unidos al bloque `al ejecutar`.
+      courseD_scrat_ramp3:
+        courseC_maze_programming3_a: |-
+          ![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)
+
+          Para eliminar un bloque que está en mitad de tu código, arrastra todos los bloques que están debajo de él hacia la derecha y dejalos ahí de momento.
+
+          Haz click en el bloque que quieres eliminar y arrástralo de vuelta a la caja de herramientas.
+
+          Luego, devuelve los otros bloques al lugar en el que deben estar.
+        courseC_maze_programming3_b: Recuerda que los giros a izquierda y derecha
+          se hacen desde el punto de vista de Scrat.
+      courseD_scrat_ramp4:
+        courseC_maze_programming4_c: "¡No tengas miedo de cometer un error! Prueba
+          a añadir bloques y a ejecutar el código para ver que pasará, incluso aunque
+          sepas que no has resuelto el puzle todavía."
+      courseD_scrat_ramp5:
+        courseC_maze_programming5_a: Prueba a usar el botón "Paso" para ejecutar tu
+          código línea a línea. ¿Puedes averiguar qué tienes que hacer después?
+        courseC_maze_programming5_b: "¿Cómo de lejos tienes que moverte para llegar
+          a la esquina?"
+        courseC_maze_programming5_c: Tendrás que girar a la izquierda en la esquina
+          para llegar a la bellota.
+      courseD_scrat_ramp6:
+        courseC_maze_programming6a_a: "¡Usa un bucle `repetir` para hacer que Scrat
+          se mueva!"
       courseD_scrat_ramp7:
         courseD_scrat_programming6_a: "¡Aquí tienes dos caminos para resolver el puzzle!"
+        courseD_scrat_programming6_b: Recuerda girar antes de moverte, ya que Scrat
+          está mirando en la dirección equivocada.
+        courseD_scrat_programming6_c: "¡No tengas miedo de cometer un error! Prueba
+          a añadir bloques y a ejecutar el código para ver que pasará, incluso aunque
+          sepas que no has resuelto el puzle todavía."
       courseD_scrat_ramp8:
         courseD_maze_ramp7_b: No olvides usar el botón "Paso" para avanzar de bloque
           en bloque y buscar errores.
+        courseD_maze_ramp7_c: "¡No tengas miedo de cometer un error! Prueba a añadir
+          bloques y a ejecutar el código para ver que pasará, incluso aunque sepas
+          que no has resuelto el puzle todavía."
       courseE_artist_concept_challenge1:
         courseE_artist_concept_challenge1_a: 'El semi-hexágono tiene una \*\* longitud
           de 30 \*\* y gira a la derecha por \*\* 60 grados \*\*.  '

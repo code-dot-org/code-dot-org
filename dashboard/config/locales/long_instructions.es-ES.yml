@@ -833,6 +833,10 @@ es-ES:
         Cuando hayas acabado, juega para hacer que pase.
 
         ![](https://images.code.org/a634f249021651f60a1acf37bf78d07d-image-1475342557950.gif)
+      courseC_PlayLab_events_challenge1: |-
+        Usa un bloque nuevo para hacer que Waddles vuelva al principio cuando se choque con Dinosaurio y cuando anote un punto. ¡Eso hará que el juego sea más difícil y más divertido!
+
+        Juega y mueve a Waddles con las flechas hasta que ganes suficientes puntos. Waddles debe moverse hasta la posición `media izquierda` para completar el desafío.
       courseC_artist_loop1: |-
         ¡Fantástico!
 
@@ -1165,6 +1169,21 @@ es-ES:
         * * *
 
         Haz click o toca en el espacio de juego para llevar a Flappy al objetivo.
+      courseC_flappy_events10: |-
+        ¡Crea tu propio juego de Flappy!
+
+        Puedes cambiar el aspecto y la reglas... ¡incluso la gravedad!
+        Cuando acabes, pulsa "Terminar" para compartir el juego con tus amigos en sus móviles.
+      courseC_flappy_events10_2018: |-
+        ¡Crea tu propio juego de Flappy!
+
+        Puedes cambiar el aspecto y la reglas... ¡incluso la gravedad!
+        Cuando acabes, pulsa "Terminar" para compartir el juego con tus amigos en sus móviles.
+      courseC_flappy_events10_2019: |-
+        ¡Crea tu propio juego de Flappy!
+
+        Puedes cambiar el aspecto y la reglas... ¡incluso la gravedad!
+        Cuando acabes, pulsa "Terminar" para compartir el juego con tus amigos en sus móviles.
       courseC_flappy_events1_2018: |-
         Junta el bloque `aletear normalmente` a `Cuando haga click`, después haz click en "Ejecutar".
 
@@ -1252,6 +1271,15 @@ es-ES:
         un bloque al evento `al ejecutar`.
       courseC_flappy_events7_2019: Ahora, prueba a cambiar el escenario añadiendo
         un bloque al evento `al ejecutar`.
+      courseC_flappy_events8: "Puedes poner el fondo en cualquier evento, no sólo
+        cuando empieza el juego. \n\nPrueba a poner una escena **al azar** cuando
+        ocurran otros eventos... por ejemplo, al atravesar un obstáculo."
+      courseC_flappy_events8_2018: "Puedes poner el fondo en cualquier evento, no
+        sólo cuando empieza el juego. \n\nPrueba a poner una escena **al azar** cuando
+        ocurran otros eventos... por ejemplo, al atravesar un obstáculo."
+      courseC_flappy_events8_2019: "Puedes poner el fondo en cualquier evento, no
+        sólo cuando empieza el juego. \n\nPrueba a poner una escena **al azar** cuando
+        ocurran otros eventos... por ejemplo, al atravesar un obstáculo."
       courseC_flappy_events9: Para juntar las cosas, en lugar de terminar el juego
         cuando Flappy golpee un obstáculo, prueba a poner el marcador a 0.
       courseC_flappy_events9_2018: Para juntar las cosas, en lugar de terminar el
@@ -1351,6 +1379,12 @@ es-ES:
         Algo no está del todo bien.
 
         ¡Elimina bloques para conseguir que Scrat consiga la bellota!
+      courseC_maze_debugging_challenge2: Si Scrat gira muy a menudo, ¡se mareará!
+        Ayúdale a alcanzar la bellota sólo con cuatro comandos `girar`.
+      courseC_maze_debugging_challenge2_2018: Si Scrat gira muy a menudo, ¡se mareará!
+        Ayúdale a alcanzar la bellota sólo con cuatro comandos `girar`.
+      courseC_maze_debugging_challenge2_2019: Si Scrat gira muy a menudo, ¡se mareará!
+        Ayúdale a alcanzar la bellota sólo con cuatro comandos `girar`.
       courseC_maze_programming1: En este puzle, ¡une todos los bloques y pulsa Ejecutar
         para ver qué ocurre!
       courseC_maze_programming1_2018: En este puzle, ¡une todos los bloques y pulsa
@@ -1653,10 +1687,15 @@ es-ES:
         "Ejecutar"!
       courseD_scrat_ramp2: Arrastra otro bloque `avanzar` de la caja de herramientas,
         después une todos los bloques a `al ejecutar` para terminar tu código.
+      courseD_scrat_ramp3: |-
+        Hay un bloque extra que va a hacer que Scrat se estrelle.\
+        Quítalo desconectándolo de los otros bloques y arrastrándolo de vuelta a la caja de herramientas.
+      courseD_scrat_ramp4: "¡Evita el hielo agrietado para mantener a Scrat a salvo!"
       courseD_scrat_ramp5: |-
         _"¡Sigue este camino para llevarme hasta el cerdo!"_
 
         Evita el TNT.
+      courseD_scrat_ramp6: "¡Ayuda a Scrat a coger la bellota usando un bucle!"
       courseD_scrat_ramp7: "¡Ayuda a Scrat a conseguir la bellota!"
       courseD_scrat_ramp8: "**Desafío:**¡ Usa lo que has aprendido para llevar a Scrat
         hasta la bellota!"

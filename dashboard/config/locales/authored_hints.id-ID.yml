@@ -664,6 +664,11 @@ id-ID:
           = 100, 50, 150).
         Course_4_SCV_6_d: 'Zig, belok kiri oleh `360` /`sisi`. Untuk zag, belok kanan
           oleh `360` /`sisi`. '
+      CourseE_HOC 2018 Level_7a:
+        aquatic7: Anda bisa menggunakan blok jalan if untuk membantu berbelok.
+      CourseE_HOC 2018 Level_9b:
+        voyage_aquatic_9a: Lihat blok karang merah dan biru? Gunakan mereka sebagai
+          tongkat penunjuk jalan untuk belok kiri atau kanan melalui batu karang.
       Function intro Ryan:
         Function_intro_Ryan_b: Jika anda menyebut fungsi dengan benar, ini adalah
           jalan yang akan anda tempuh...
@@ -674,6 +679,11 @@ id-ID:
           jalan yang akan anda tempuh...
         Function_intro_Ryan_a: Kamu bisa memanggil fungsi berulang kali di dalam program!  Coba
           panggil dua kali untuk memecahkan teka-teki ini.
+      HOC 2018 Level_7a:
+        aquatic7: Anda bisa menggunakan blok jalan if untuk membantu berbelok.
+      HOC 2018 Level_9b:
+        voyage_aquatic_9a: Lihat blok karang merah dan biru? Gunakan mereka sebagai
+          tongkat penunjuk jalan untuk belok kiri atau kanan melalui batu karang.
       MC_HOC_2017_01_RETRY:
         MC_HOC_2017_01_RETRY_a: Tarik satu blok `pindah maju` dari kotak alat ke ruang
           kerja dan posisikan di bawah blok `ketika dijalankan`.

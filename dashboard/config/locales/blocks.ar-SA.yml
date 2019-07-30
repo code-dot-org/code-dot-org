@@ -583,6 +583,7 @@ ar:
             '"right"': اليمين
             '"space"': الفضاء
             '"x"': x
+            '"y"': y
       Dancelab_whenPeak:
         text: عند ذروة {RANGE}
         options:
@@ -635,6 +636,7 @@ ar:
             '"right"': اليمين
             '"space"': الفضاء
             '"x"': x
+            '"y"': y
       gamelab_mirrorSprite:
         options:
           DIRECTION:

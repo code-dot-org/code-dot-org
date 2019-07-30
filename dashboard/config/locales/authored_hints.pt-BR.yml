@@ -10487,14 +10487,23 @@ pt-BR:
         courseD_maze_nestedLoops6_c: Serão necessários dois conjuntos de laços 'repetir\`
           aninhados para resolver esse quebra-cabeça.
       courseD_maze_ramp1:
+        courseC_maze_programming1_a: Se o pássaro não está chegando até o porco, certifique-se
+          que todos os três blocos tenham sido totalmente clicados ao mesmo tempo,
+          então clique em "Rodar" novamente.
         courseC_maze_programming1_b: Não tenha medo de cometer um erro! Tente adicionar
           blocos e executar o código para ver o que vai acontecer, mesmo se você achar
           que ainda não resolveu o quebra-cabeça.
       courseD_maze_ramp1_2018:
+        courseC_maze_programming1_a: Se o pássaro não está chegando até o porco, certifique-se
+          que todos os três blocos tenham sido totalmente clicados ao mesmo tempo,
+          então clique em "Rodar" novamente.
         courseC_maze_programming1_b: Não tenha medo de cometer um erro! Tente adicionar
           blocos e executar o código para ver o que vai acontecer, mesmo se você achar
           que ainda não resolveu o quebra-cabeça.
       courseD_maze_ramp1_2019:
+        courseC_maze_programming1_a: Se o pássaro não está chegando até o porco, certifique-se
+          que todos os três blocos tenham sido totalmente clicados ao mesmo tempo,
+          então clique em "Rodar" novamente.
         courseC_maze_programming1_b: Não tenha medo de cometer um erro! Tente adicionar
           blocos e executar o código para ver o que vai acontecer, mesmo se você achar
           que ainda não resolveu o quebra-cabeça.
@@ -10525,6 +10534,20 @@ pt-BR:
           abaixo dele para a direita solte-os na área de trabalho por um tempo.\n\nClique
           sobre o bloco que você deseja excluir e arraste-o de volta à caixa de ferramentas.
           \n\nFinalmente, coloque seus outros blocos no lugar onde eles pertencem."
+      courseD_maze_ramp4:
+        courseC_maze_programming4_a: Você pode virar a direita ou a esquerda do ponto
+          de vista do pássaro. Se você estiver virado para a direita, virar a direita
+          irá fazer com que fique você fique virado para baixo.
+        courseC_maze_programming4_b: Para seguir o caminho, siga em frente e vire
+          para um lado, então mova-se novamente e vire para o lado oposto. Siga em
+          frente uma última vez para alcançar o porco.
+      courseD_maze_ramp4_2018:
+        courseC_maze_programming4_a: Você pode virar a direita ou a esquerda do ponto
+          de vista do pássaro. Se você estiver virado para a direita, virar a direita
+          irá fazer com que fique você fique virado para baixo.
+        courseC_maze_programming4_b: Para seguir o caminho, siga em frente e vire
+          para um lado, então mova-se novamente e vire para o lado oposto. Siga em
+          frente uma última vez para alcançar o porco.
       courseD_maze_ramp4_2019:
         courseC_maze_programming4_a: Você pode virar à direita ou à esquerda do ponto
           de vista do Scrat. Se você estiver olhando para a direita, virar à direita

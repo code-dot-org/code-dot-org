@@ -627,6 +627,17 @@ es-ES:
       courseC_PlayLab_eventsFP_2019: Crea tu propia historia. Cuando acabes, haz click
         en "Terminar" para compartirla con tus amigos. Las pistas te darán ideas para
         las historias.
+      courseC_PlayLab_events_challenge1: "Usa un bloque nuevo para hacer que Waddles
+        vuelva al principio cuando se choque con Dinosaurio y cuando anote un punto.
+        \nJuega y mueve a Waddles con las flechas hasta que ganes suficientes puntos."
+      courseC_PlayLab_events_challenge1_2018: "Usa un bloque nuevo para hacer que
+        Waddles vuelva al principio cuando se choque con Dinosaurio y cuando anote
+        un punto. \nJuega y mueve a Waddles con las flechas hasta que ganes suficientes
+        puntos."
+      courseC_PlayLab_events_challenge1_2019: "Usa un bloque nuevo para hacer que
+        Waddles vuelva al principio cuando se choque con Dinosaurio y cuando anote
+        un punto. \nJuega y mueve a Waddles con las flechas hasta que ganes suficientes
+        puntos."
       courseC_artist_loop1: "¡Pongamos un poco de chispa!"
       courseC_artist_loops2a: Ahora usa un bucle para girar tu pájaro 12 veces con
         un giro de 30 grados.
@@ -727,6 +738,9 @@ es-ES:
       courseC_flappy_events1: Junta el bloque `aletear normalmente` a `Cuando haga
         click`, después haz click en "Ejecutar".  Haz click o toca en el espacio de
         juego para llevar a Flappy al objetivo.
+      courseC_flappy_events10: "¡Crea tu propio juego de Flappy! "
+      courseC_flappy_events10_2018: "¡Crea tu propio juego de Flappy! "
+      courseC_flappy_events10_2019: "¡Crea tu propio juego de Flappy! "
       courseC_flappy_events1_2018: Junta el bloque `aletear normalmente` a `Cuando
         haga click`, después haz click en "Ejecutar".  Haz click o toca en el espacio
         de juego para llevar a Flappy al objetivo.
@@ -778,6 +792,12 @@ es-ES:
         un bloque al evento `al ejecutar`.
       courseC_flappy_events7_2019: Ahora, prueba a cambiar el escenario añadiendo
         un bloque al evento `al ejecutar`.
+      courseC_flappy_events8: Prueba a poner una escena **al azar** cuando ocurran
+        otros eventos... por ejemplo, al atravesar un obstáculo.
+      courseC_flappy_events8_2018: Prueba a poner una escena **al azar** cuando ocurran
+        otros eventos... por ejemplo, al atravesar un obstáculo.
+      courseC_flappy_events8_2019: Prueba a poner una escena **al azar** cuando ocurran
+        otros eventos... por ejemplo, al atravesar un obstáculo.
       courseC_flappy_events9: Para juntar las cosas, en lugar de terminar el juego
         cuando Flappy golpee un obstáculo, prueba a poner el marcador a 0.
       courseC_flappy_events9_2018: Para juntar las cosas, en lugar de terminar el
@@ -858,6 +878,18 @@ es-ES:
         añadiendo y eliminando bloques."
       courseC_maze_debugging9: Depura este nivel para que Scrat consiga la bellota.
       courseC_maze_debugging9_2018: Depura este nivel para que Scrat consiga la bellota.
+      courseC_maze_debugging_challenge1: Ayuda a Scrat a decidir hacia qué lado girar
+        para conseguir la bellota.
+      courseC_maze_debugging_challenge1_2018: Ayuda a Scrat a decidir hacia qué lado
+        girar para conseguir la bellota.
+      courseC_maze_debugging_challenge1_2019: Ayuda a Scrat a decidir hacia qué lado
+        girar para conseguir la bellota.
+      courseC_maze_debugging_challenge2: Ayuda a Scrat a conseguir la bellota sólo
+        con cuatro comandos `girar`.
+      courseC_maze_debugging_challenge2_2018: Ayuda a Scrat a conseguir la bellota
+        sólo con cuatro comandos `girar`.
+      courseC_maze_debugging_challenge2_2019: Ayuda a Scrat a conseguir la bellota
+        sólo con cuatro comandos `girar`.
       courseC_maze_loops_challenge1a: "¡Ahora Scrat quiere usar bucles para encontrar
         su bellota! "
       courseC_maze_loops_challenge1a_2018: "¡Ahora Scrat quiere usar bucles para encontrar
@@ -1091,6 +1123,11 @@ es-ES:
         "Ejecutar"!
       courseD_scrat_ramp2: Arrastra otro bloque `avanzar` de la caja de herramientas,
         después une todos los bloques a `al ejecutar` para terminar tu código.
+      courseD_scrat_ramp3: Hay un bloque extra que va a hacer que Scrat se estrelle.
+        Quítalo arrastrándolo de vuelta a la caja de herramientas.
+      courseD_scrat_ramp4: "¡Evita el hielo agrietado para mantener a Scrat a salvo!"
+      courseD_scrat_ramp5: Evita el hielo agrietado.
+      courseD_scrat_ramp6: "¡Ayuda a Scrat a coger la bellota usando un bucle!"
       courseD_scrat_ramp7: "¡Ayuda a Scrat a conseguir la bellota!"
       courseE_artist_functions1: |-
         Hola. Yo artista zombie. Yo amo dibujar!

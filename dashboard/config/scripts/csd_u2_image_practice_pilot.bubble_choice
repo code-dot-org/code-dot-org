@@ -4,4 +4,10 @@ description 'Practice your new skills here.'
 
 sublevels
 level 'CSD U2 image debug match_pilot'
+level 'CSD U2 Image Tag No End Quote'
+level 'CSD U2 Image Tag Mispelled src'
+level 'CSD U2 Image Tag Inconsistent Spelling'
+level 'CSD U2 Image Tag Add Alt'
+level 'CSD U2 Image Tag Add Image Link'
+level 'CSD U2 Image Tag Add Image'
 
