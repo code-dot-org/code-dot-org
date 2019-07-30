@@ -54,6 +54,7 @@ var ALLOWED_KEYS = new Set([
   'is13Plus',
   'isSignedIn',
   'userId',
+  'verifiedTeacher',
   'isK1',
   'textToSpeechEnabled',
   'documentationUrl',

@@ -177,7 +177,8 @@ class TopInstructions extends Component {
     hidden: PropTypes.bool.isRequired,
     shortInstructions: PropTypes.string,
     isMinecraft: PropTypes.bool.isRequired,
-    isRtl: PropTypes.bool.isRequired
+    isRtl: PropTypes.bool.isRequired,
+    verifiedTeacher: PropTypes.bool
   };
 
   constructor(props) {
@@ -492,7 +493,8 @@ class TopInstructions extends Component {
       hidden,
       shortInstructions,
       longInstructions,
-      hasContainedLevels
+      hasContainedLevels,
+      verifiedTeacher
     } = this.props;
 
     const isCSF = !this.props.noInstructionsWhenCollapsed;
@@ -610,6 +612,7 @@ class TopInstructions extends Component {
               )}
               {isCSDorCSP &&
                 displayFeedback &&
+                verifiedTeacher &&
                 (!this.state.fetchingData || teacherOnly) && (
                   <InstructionsTab
                     className="uitest-feedback"
@@ -703,7 +706,7 @@ class TopInstructions extends Component {
                 referenceLinks={this.props.referenceLinks}
               />
             )}
-            {displayFeedback && !this.state.fetchingData && (
+            {displayFeedback && !this.state.fetchingData && verifiedTeacher && (
               <TeacherFeedback
                 user={this.props.user}
                 visible={this.state.tabSelected === TabType.COMMENTS}
@@ -764,7 +767,8 @@ export default connect(
     teacherMarkdown: state.instructions.teacherMarkdown,
     hidden: state.pageConstants.isShareView,
     shortInstructions: state.instructions.shortInstructions,
-    isRtl: state.isRtl
+    isRtl: state.isRtl,
+    verifiedTeacher: state.pageConstants.verifiedTeacher
   }),
   dispatch => ({
     toggleInstructionsCollapsed() {
