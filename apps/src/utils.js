@@ -62,7 +62,7 @@ export function quote(str) {
  * NOTE: For new code, use Object.assign({}, defaults, options) instead
  */
 export function extend(defaults, options) {
-  var finalOptions = exports.shallowCopy(defaults);
+  var finalOptions = shallowCopy(defaults);
   for (var prop in options) {
     finalOptions[prop] = options[prop];
   }
@@ -803,3 +803,52 @@ export function calculateOffsetCoordinates(element, clientX, clientY) {
 export function escapeRegExp(str) {
   return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 }
+
+export default {
+  isSubsequence,
+  shallowCopy,
+  cloneWithoutFunctions,
+  quote,
+  extend,
+  escapeHtml,
+  mod,
+  range,
+  executeIfConditional,
+  stripQuotes,
+  wrapNumberValidatorsForLevelBuilder,
+  randomValue,
+  randomKey,
+  createUuid,
+  fireResizeEvent,
+  valueOr,
+  isInfiniteRecursionError,
+  unescapeText,
+  escapeText,
+  showGenericQtip,
+  showUnusedBlockQtip,
+  tryGetLocalStorage,
+  trySetLocalStorage,
+  tryGetSessionStorage,
+  trySetSessionStorage,
+  makeEnum,
+  ellipsify,
+  deepMergeConcatArrays,
+  createEvent,
+  normalize,
+  xFromPosition,
+  yFromPosition,
+  levenshtein,
+  bisect,
+  flatten,
+  reload,
+  currentLocation,
+  windowOpen,
+  navigateToHref,
+  stringifyQueryParams,
+  resetAniGif,
+  interpolateColors,
+  getTabId,
+  createHiddenPrintWindow,
+  calculateOffsetCoordinates,
+  escapeRegExp
+};
