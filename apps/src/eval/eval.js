@@ -14,7 +14,8 @@
  * limitations under the License.
  */
 
-var Eval = module.exports;
+var Eval = {};
+module.exports = Eval;
 
 /**
  * Create a namespace for the application.

@@ -12,7 +12,8 @@ import trackEvent from './trackEvent';
 
 const queryString = require('query-string');
 
-const experiments = module.exports;
+const experiments = {};
+module.exports = experiments;
 const STORAGE_KEY = 'experimentsList';
 const GA_EVENT = 'experiments';
 const EXPERIMENT_LIFESPAN_HOURS = 12;

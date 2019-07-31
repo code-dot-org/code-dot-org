@@ -1,6 +1,7 @@
 var vsprintf = require('sprintf-js').vsprintf;
 
-var consoleApi = module.exports;
+var consoleApi = {};
+module.exports = consoleApi;
 var logMethod = function() {};
 
 consoleApi.setLogMethod = function(newLogMethod) {

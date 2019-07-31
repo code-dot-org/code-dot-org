@@ -17,7 +17,8 @@ import {getStore} from '../redux';
 /**
  * Create a namespace for the application.
  */
-var Jigsaw = module.exports;
+var Jigsaw = {};
+module.exports = Jigsaw;
 
 var level;
 var skin;

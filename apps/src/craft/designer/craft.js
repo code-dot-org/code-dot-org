@@ -45,7 +45,8 @@ const ArrowIds = {
 /**
  * Create a namespace for the application.
  */
-var Craft = module.exports;
+var Craft = {};
+module.exports = Craft;
 
 window.Craft = Craft;
 window.Blockly = Blockly;

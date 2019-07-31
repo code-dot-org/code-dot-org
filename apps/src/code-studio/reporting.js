@@ -9,7 +9,8 @@ var clientState = require('./clientState');
 var lastAjaxRequest;
 var lastServerResponse = {};
 
-var reporting = module.exports;
+var reporting = {};
+module.exports = reporting;
 
 reporting.getLastServerResponse = function() {
   return lastServerResponse;

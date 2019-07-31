@@ -29,7 +29,8 @@ var MEDIA_URL = '/blockly/media/craft/';
 /**
  * Create a namespace for the application.
  */
-var Craft = module.exports;
+var Craft = {};
+module.exports = Craft;
 
 var characters = {
   Steve: {

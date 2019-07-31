@@ -13,7 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-var Calc = module.exports;
+var Calc = {};
+module.exports = Calc;
 
 /**
  * Create a namespace for the application.

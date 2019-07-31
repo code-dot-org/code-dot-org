@@ -28,7 +28,8 @@ import {
 import {setVerified} from '@cdo/apps/code-studio/verifiedTeacherRedux';
 import {queryLockStatus, renderTeacherPanel} from './teacherPanelHelpers';
 
-var progress = module.exports;
+var progress = {};
+module.exports = progress;
 
 function showDisabledBubblesModal() {
   const div = $('<div>');

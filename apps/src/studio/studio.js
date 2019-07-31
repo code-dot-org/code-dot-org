@@ -76,7 +76,8 @@ var showDebugInfo = false;
 /**
  * Create a namespace for the application.
  */
-let Studio = module.exports;
+let Studio = {};
+module.exports = Studio;
 
 Studio.keyState = {};
 Studio.gesturesObserved = {};

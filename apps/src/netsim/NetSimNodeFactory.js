@@ -6,7 +6,8 @@ var NetSimConstants = require('./NetSimConstants');
 
 var NodeType = NetSimConstants.NodeType;
 
-var NetSimNodeFactory = module.exports;
+var NetSimNodeFactory = {};
+module.exports = NetSimNodeFactory;
 
 /**
  * Given a set of rows from the node table on a shard, gives back a set of node

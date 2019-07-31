@@ -13,7 +13,8 @@ import {commands as timeoutCommands} from '@cdo/apps/lib/util/timeoutApi';
   as part of a standard config (see dropletUtils.js) and, in Gamelab's case,
   some are dynamically grabbed from the p5/p5.play libraries.
 */
-let gamelabCommands = module.exports;
+let gamelabCommands = {};
+module.exports = gamelabCommands;
 
 gamelabCommands.getUserId = function() {
   if (!studioApp().labUserId) {

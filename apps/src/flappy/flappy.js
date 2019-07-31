@@ -29,7 +29,8 @@ import {SignInState} from '../code-studio/progressRedux';
 /**
  * Create a namespace for the application.
  */
-var Flappy = module.exports;
+var Flappy = {};
+module.exports = Flappy;
 
 Flappy.GameStates = {
   WAITING: 0,
