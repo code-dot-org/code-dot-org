@@ -1,7 +1,8 @@
 /** @file Dropdown with positive integer options, used in crypto widget */
 import PropTypes from 'prop-types';
 import React from 'react';
-import VirtualizedSelect from 'react-virtualized-select';
+import loadable from 'loadable-components';
+const VirtualizedSelect = loadable(() => import('react-virtualized-select'));
 import classNames from 'classnames';
 import {LINE_HEIGHT} from './style';
 import 'react-virtualized/styles.css';
