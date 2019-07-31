@@ -1,9 +1,8 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
-import {Table, DropdownButton, MenuItem} from 'react-bootstrap';
+import {Table} from 'react-bootstrap';
 import ConfirmationDialog from '../../components/confirmation_dialog';
-import MoveEnrollmentsDialog from './move_enrollments_dialog';
 import {enrollmentShape} from '../types';
 import {workshopEnrollmentStyles as styles} from '../workshop_enrollment_styles';
 import {ScholarshipDropdown} from '../../components/scholarshipDropdown';
@@ -24,25 +23,13 @@ export class WorkshopEnrollmentSchoolInfo extends React.Component {
     this.state = {
       pendingDelete: null,
       pendingScholarshipUpdates: [],
-      enrollments: this.props.enrollments,
-      selectedEnrollments: [],
-      isMoveEnrollmentsDialogOpen: false
+      enrollments: this.props.enrollments
     };
 
     this.handleClickDelete = this.handleClickDelete.bind(this);
     this.handleDeleteCanceled = this.handleDeleteCanceled.bind(this);
     this.handleDeleteConfirmed = this.handleDeleteConfirmed.bind(this);
     this.handleScholarshipStatusChange = this.handleScholarshipStatusChange.bind(
-      this
-    );
-    this.handleClickSelect = this.handleClickSelect.bind(this);
-    this.handleClickMoveEnrollments = this.handleClickMoveEnrollments.bind(
-      this
-    );
-    this.handleMoveEnrollmentsCanceled = this.handleMoveEnrollmentsCanceled.bind(
-      this
-    );
-    this.handleMoveEnrollmentsConfirmed = this.handleMoveEnrollmentsConfirmed.bind(
       this
     );
   }
@@ -106,44 +93,6 @@ export class WorkshopEnrollmentSchoolInfo extends React.Component {
     });
   }
 
-  handleClickSelect(enrollment) {
-    if (this.isEnrollmentSelected(enrollment)) {
-      this.setState(state => {
-        const selectedEnrollments = state.selectedEnrollments.filter(e => {
-          return e.id !== enrollment.id;
-        });
-        return {selectedEnrollments};
-      });
-    } else {
-      this.setState(state => {
-        state.selectedEnrollments.push({
-          id: enrollment.id,
-          email: enrollment.email,
-          first_name: enrollment.first_name,
-          last_name: enrollment.last_name
-        });
-      });
-    }
-  }
-
-  handleClickMoveEnrollments() {
-    this.setState({isMoveEnrollmentsDialogOpen: true});
-  }
-
-  handleMoveEnrollmentsCanceled() {
-    this.setState({
-      isMoveEnrollmentsDialogOpen: false
-    });
-  }
-
-  handleMoveEnrollmentsConfirmed(destinationWorkshopId) {
-    this.setState({
-      isMoveEnrollmentsDialogOpen: false,
-      selectedEnrollments: []
-    });
-    this.props.onMove(destinationWorkshopId, this.state.selectedEnrollments);
-  }
-
   formatCsfCourseExperience(csf_course_experience) {
     if (!csf_course_experience) {
       return NA;
@@ -179,21 +128,16 @@ export class WorkshopEnrollmentSchoolInfo extends React.Component {
     }
   }
 
-  isEnrollmentSelected(enrollment) {
-    return (
-      this.state.selectedEnrollments.findIndex(e => e.id === enrollment.id) >= 0
-    );
-  }
-
   renderSelectCell(enrollment) {
-    const checkBoxClass = this.isEnrollmentSelected(enrollment)
-      ? 'fa fa-check-square-o'
-      : 'fa fa-square-o';
+    const checkBoxClass =
+      this.props.selectedEnrollments.findIndex(e => e.id === enrollment.id) >= 0
+        ? 'fa fa-check-square-o'
+        : 'fa fa-square-o';
     return (
       <td>
         <div
           style={styles.contents}
-          onClick={this.handleClickSelect.bind(this, enrollment)}
+          onClick={this.props.onClickSelect.bind(this, enrollment)}
         >
           <i className={checkBoxClass} />
         </div>
@@ -312,25 +256,7 @@ export class WorkshopEnrollmentSchoolInfo extends React.Component {
           <tr>
             <th style={styles.th} />
             {this.props.permissionList.has(WorkshopAdmin) && (
-              <th style={styles.th}>
-                <DropdownButton
-                  bsSize="xsmall"
-                  title="Actions (admin)"
-                  id="admin-actions-dropdown"
-                  disabled={this.state.selectedEnrollments.length === 0}
-                  noCaret
-                >
-                  <MenuItem onSelect={this.handleClickMoveEnrollments}>
-                    Move
-                  </MenuItem>
-                  <MoveEnrollmentsDialog
-                    show={this.state.isMoveEnrollmentsDialogOpen}
-                    selectedEnrollments={this.state.selectedEnrollments}
-                    onCancel={this.handleMoveEnrollmentsCanceled}
-                    onMove={this.handleMoveEnrollmentsConfirmed}
-                  />
-                </DropdownButton>
-              </th>
+              <th style={styles.th} />
             )}
             <th style={styles.th}>#</th>
             <th style={styles.th}>First Name</th>
@@ -380,10 +306,11 @@ WorkshopEnrollmentSchoolInfo.propTypes = {
   accountRequiredForAttendance: PropTypes.bool.isRequired,
   scholarshipWorkshop: PropTypes.bool.isRequired,
   onDelete: PropTypes.func.isRequired,
-  onMove: PropTypes.func.isRequired,
+  onClickSelect: PropTypes.func.isRequired,
   workshopCourse: PropTypes.string.isRequired,
   workshopSubject: PropTypes.string.isRequired,
-  numSessions: PropTypes.number.isRequired
+  numSessions: PropTypes.number.isRequired,
+  selectedEnrollments: PropTypes.array
 };
 
 export default connect(state => ({
