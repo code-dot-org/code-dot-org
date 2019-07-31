@@ -10,16 +10,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 import moment from 'moment';
-import {
-  Grid,
-  Row,
-  Col,
-  Panel,
-  ButtonToolbar,
-  Button,
-  DropdownButton,
-  MenuItem
-} from 'react-bootstrap';
+import {Grid, Row, Col, Panel, ButtonToolbar, Button} from 'react-bootstrap';
 import {DATE_FORMAT} from './workshopConstants';
 import ConfirmationDialog from '../components/confirmation_dialog';
 import MoveEnrollmentsDialog from './components/move_enrollments_dialog';
@@ -218,7 +209,7 @@ export class Workshop extends React.Component {
     }
   };
 
-  handleClickMoveEnrollments = () => {
+  handleClickMove = () => {
     this.setState({isMoveEnrollmentsDialogOpen: true});
   };
 
@@ -820,21 +811,19 @@ export class Workshop extends React.Component {
           <i className="fa fa-arrow-circle-down" />
         </Button>
         {this.props.permission.has(WorkshopAdmin) && (
-          <DropdownButton
+          <Button
             bsSize="xsmall"
-            title="Actions (admin)"
-            id="admin-actions-dropdown"
             disabled={this.state.selectedEnrollments.length === 0}
-            noCaret
+            onClick={this.handleClickMove}
           >
-            <MenuItem onSelect={this.handleClickMoveEnrollments}>Move</MenuItem>
+            Move (admin)
             <MoveEnrollmentsDialog
               show={this.state.isMoveEnrollmentsDialogOpen}
               selectedEnrollments={this.state.selectedEnrollments}
               onCancel={this.handleMoveEnrollmentsCanceled}
               onMove={this.handleMoveEnrollmentsConfirmed}
             />
-          </DropdownButton>
+          </Button>
         )}
       </div>
     );
