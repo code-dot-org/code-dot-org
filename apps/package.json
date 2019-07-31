@@ -62,6 +62,7 @@
     "babel-plugin-add-module-exports": "^0.2.1",
     "babel-plugin-syntax-async-functions": "^6.8.0",
     "babel-plugin-transform-class-properties": "^6.23.0",
+    "babel-plugin-transform-commonjs-es2015-modules": "^4.0.1",
     "babel-plugin-transform-es2015-classes": "^6.9.0",
     "babel-plugin-transform-object-rest-spread": "^6.8.0",
     "babel-plugin-transform-react-jsx": "^6.8.0",

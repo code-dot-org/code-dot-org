@@ -134,6 +134,7 @@ var baseConfig = {
         exclude: [path.resolve(__dirname, 'src', 'lodash.js')],
         loader: 'babel-loader',
         query: {
+          plugins: ['transform-commonjs-es2015-modules'],
           cacheDirectory: path.resolve(__dirname, '.babel-cache'),
           compact: false
         }

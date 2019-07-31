@@ -4,7 +4,6 @@
     "react"
   ],
   "plugins": [
-    "add-module-exports",
     "syntax-async-functions",
     "transform-object-rest-spread",
     "transform-class-properties",
