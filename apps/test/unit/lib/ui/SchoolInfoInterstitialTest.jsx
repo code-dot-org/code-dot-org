@@ -200,6 +200,29 @@ describe('SchoolInfoInterstitial', () => {
     expect(wrapper.state('ncesSchoolId')).to.equal('');
   });
 
+  it('clears the school ID when school_type is changed', () => {
+    const wrapper = shallow(
+      <SchoolInfoInterstitial
+        {...MINIMUM_PROPS}
+        scriptData={{
+          ...MINIMUM_PROPS.scriptData,
+          existingSchoolInfo: {
+            school_id: '123',
+            country: 'United States',
+            school_type: 'public',
+            school_name: 'Test School',
+            full_address: 'Seattle'
+          }
+        }}
+      />
+    );
+    expect(wrapper.state('school_type')).to.equal('public');
+    expect(wrapper.state('ncesSchoolId')).to.equal('123');
+    wrapper.instance().onSchoolTypeChange({target: {value: 'after school'}});
+    expect(wrapper.state('school_type')).to.equal('after school');
+    expect(wrapper.state('ncesSchoolId')).to.equal('');
+  });
+
   it('interprets initial country "US" as "United States"', () => {
     const wrapper = shallow(
       <SchoolInfoInterstitial
