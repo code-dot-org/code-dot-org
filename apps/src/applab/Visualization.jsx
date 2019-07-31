@@ -75,10 +75,14 @@ class Visualization extends React.Component {
     return (
       <div
         id={VISUALIZATION_DIV_ID}
-        className={classNames({
-          responsive: this.props.isResponsive,
-          with_padding: this.props.visualizationHasPadding
-        })}
+        className={
+          this.props.widgetMode
+            ? 'widgetWidth widgetHeight'
+            : classNames({
+                responsive: this.props.isResponsive,
+                with_padding: this.props.visualizationHasPadding
+              })
+        }
         style={[
           !this.props.isResponsive && {
             ...styles.nonResponsive,
