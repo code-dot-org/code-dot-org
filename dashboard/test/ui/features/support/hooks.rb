@@ -18,6 +18,14 @@ Before('@as_teacher') do
   steps 'Given I am a teacher'
 end
 
+Before('@eyesie and @scroll_stitch_mode') do
+  @eyes.stitch_mode = :scroll
+end
+
+After('@eyesie and @scroll_stitch_mode') do
+  @eyes.stitch_mode = :css
+end
+
 # Add After hook as the last one, which results in it being run before
 # sign-out steps etc. change the page the browser is currently on.
 After do
