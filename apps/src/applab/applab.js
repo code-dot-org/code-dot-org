@@ -677,7 +677,8 @@ Applab.init = function(config) {
     showDebugWatch:
       !!config.level.isProjectLevel || config.level.showDebugWatch,
     showMakerToggle:
-      !!config.level.isProjectLevel || config.level.makerlabEnabled
+      !!config.level.isProjectLevel || config.level.makerlabEnabled,
+    widgetMode: config.level.widgetMode
   });
 
   config.dropletConfig = dropletConfig;
