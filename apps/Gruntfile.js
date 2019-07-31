@@ -528,6 +528,7 @@ describe('entry tests', () => {
       './src/sites/studio/pages/devise/registrations/_old_sign_up_form.js',
     'devise/registrations/edit':
       './src/sites/studio/pages/devise/registrations/edit.js',
+    essential: './src/sites/studio/pages/essential.js',
     'home/_homepage': './src/sites/studio/pages/home/_homepage.js',
     'layouts/_header': './src/sites/studio/pages/layouts/_header.js',
     'layouts/_race_interstitial':
@@ -694,8 +695,6 @@ describe('entry tests', () => {
   };
 
   var otherEntries = {
-    essential: './src/sites/studio/pages/essential.js',
-
     // Build embedVideo.js in its own step (skipping factor-bundle) so that
     // we don't have to include the large code-studio-common file in the
     // embedded video page, keeping it fairly lightweight.
