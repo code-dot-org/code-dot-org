@@ -1,5 +1,6 @@
 @eyes
 @eyes_ie
+@scroll_stitch_mode
 Feature: Looking at a few things with Applitools Eyes - Part 2
 
   Background:
