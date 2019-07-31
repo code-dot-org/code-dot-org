@@ -4,11 +4,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {changeInterfaceMode, viewAnimationJson} from './actions';
 import {startInAnimationTab} from './stateQueries';
-import {
-  GameLabInterfaceMode,
-  GAME_WIDTH,
-  SpritelabReservedWords
-} from './constants';
+import {GameLabInterfaceMode, GAME_WIDTH} from './constants';
+import {SpritelabReservedWords} from './spritelab/constants';
 import experiments from '@cdo/apps/util/experiments';
 import {
   outputError,
