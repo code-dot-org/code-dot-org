@@ -2,27 +2,52 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import Notification, {NotificationType} from '@cdo/apps/templates/Notification';
 import i18n from '@cdo/locale';
+import $ from 'jquery';
 
 export default class StudentFeedbackNotification extends Component {
   static propTypes = {
-    numFeedbackLevels: PropTypes.string.isRequired,
-    linkToFeedbackOverview: PropTypes.string.isRequired
+    studentId: PropTypes.number.isRequired
   };
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      numFeedbackLevels: 0
+    };
+  }
+
+  componentWillMount() {
+    const {studentId} = this.props;
+
+    $.ajax({
+      url: `/api/v1/teacher_feedbacks/count?student_id=${studentId}`,
+      method: 'GET',
+      dataType: 'json'
+    }).done(data => {
+      this.setState({
+        numFeedbackLevels: data
+      });
+    });
+  }
 
   render() {
     const notificationDetails = i18n.feedbackNotificationDetails({
-      numFeedbackLevels: this.props.numFeedbackLevels
+      numFeedbackLevels: this.state.numFeedbackLevels
     });
 
     return (
-      <Notification
-        type={NotificationType.feedback}
-        notice={i18n.feedbackNotification()}
-        details={notificationDetails}
-        buttonText={i18n.feedbackNotificationButton()}
-        buttonLink={this.props.linkToFeedbackOverview}
-        dismissible={false}
-      />
+      <div>
+        {this.state.numFeedbackLevels > 0 && (
+          <Notification
+            type={NotificationType.feedback}
+            notice={i18n.feedbackNotification()}
+            details={notificationDetails}
+            buttonText={i18n.feedbackNotificationButton()}
+            buttonLink="/feedback"
+            dismissible={false}
+          />
+        )}
+      </div>
     );
   }
 }

@@ -1,6 +1,6 @@
 - if (current_user && current_user.show_school_info_interstitial?) || @force_school_info_interstitial
   = render partial: 'layouts/school_info_interstitial', locals: {show_header: false, user: current_user, form_name: "user[school_info_attributes]"}
 
-%script{src: minifiable_asset_path('js/jotformLoader.js')}
+= render partial: 'pd/jotform_loader'
 = jotform_iframe @form_id, @form_params
-%script{src: minifiable_asset_path('js/jotformEmbed.js'), id: "jotform-embed", data: {formId: @form_id}}
+= render partial: 'pd/jotform_embed'

@@ -105,7 +105,7 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
     sign_in @teacher
 
     submit_blank_school_info
-    assert_response :success, response.body
+    assert_response 422
 
     @teacher.reload
     assert_nil @teacher.school_info
@@ -118,12 +118,11 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
     Timecop.travel 1.hour
 
     submit_partial_school_info
-    assert_response :success, response.body
+    assert_response 422
 
     @teacher.reload
-    refute_nil @teacher.school_info
-    assert @teacher.school_info.school_name.nil?
-    assert_first_tenure(@teacher)
+    assert_nil @teacher.school_info
+    assert_equal 0, @teacher.user_school_infos.count
   end
 
   test 'initial, no previous, complete, drop down' do
@@ -172,10 +171,11 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
 
     Timecop.travel 1.hour
     submit_blank_school_info
+    assert_response 422
 
     @teacher.reload
 
-    assert_response :success, response.body
+    assert_response 422, response.body
     assert_equal @teacher.school_info.id, school_info.id
     assert_equal @teacher.school_info, school_info
     refute_nil @teacher.school_info.country
@@ -192,14 +192,13 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
 
     Timecop.travel 1.hour
     submit_partial_school_info
+    assert_response 422
 
     @teacher.reload
 
-    assert_response :success, response.body
-
-    refute_equal @teacher.school_info.id, school_info.id
-    refute_equal @teacher.school_info, school_info
-    assert_first_tenure(@teacher)
+    assert_response 422
+    assert_equal @teacher.school_info.id, school_info.id
+    assert_equal @teacher.school_info, school_info
     assert_nil @teacher.school_info.school_name
     refute_nil @teacher.school_info.country
   end
@@ -256,8 +255,6 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
 
     @teacher.reload
 
-    assert_response :success, response.body
-
     refute_nil @teacher.school_info
     refute_empty @teacher.user_school_infos
     assert_equal @teacher.user_school_infos.count, 1
@@ -305,15 +302,12 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
 
     Timecop.travel 1.year
     submit_partial_school_info
+    assert_response 422
 
     @teacher.reload
-
-    assert_response :success, response.body
     refute_nil @teacher.school_info
-    assert_equal @teacher.user_school_infos.count, 2
+    assert_equal 1, @teacher.user_school_infos.count
     assert_nil @teacher.user_school_infos.last.end_date
-    assert_equal Time.now.utc.to_date, @teacher.user_school_infos.last.start_date.to_date
-    assert_equal Time.now.utc.to_date, @teacher.user_school_infos.first.end_date.to_date
   end
 
   test 'confirmation, complete previous, complete, dropdown' do
@@ -333,14 +327,14 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
     assert_response :success, response.body
 
     refute_nil @teacher.school_info
-    assert_equal @teacher.user_school_infos.count, 2
+    assert_equal 2, @teacher.user_school_infos.count
     assert_nil @teacher.user_school_infos.last.end_date
     assert_equal Time.now.utc.to_date, @teacher.user_school_infos.last.start_date.to_date
     assert_equal Time.now.utc.to_date, @teacher.user_school_infos.first.end_date.to_date
   end
 
   test 'confirmation, complete previous, complete, manual' do
-    school_info = SchoolInfo.create({country: 'United States', school_type: 'public', school_name: 'Philly High Harmony', full_address: 'Seattle, Washington', validation_type: SchoolInfo::VALIDATION_NONE})
+    school_info = SchoolInfo.create({country: 'United States', school_type: 'public', school_name: 'Philly High Harmony', full_address: 'Seattle, Washington', validation_type: SchoolInfo::VALIDATION_COMPLETE})
 
     @teacher.update school_info: school_info
     sign_in @teacher
@@ -365,75 +359,77 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'confirmation, partial previous, blank, manual' do
-    complete_school_info = SchoolInfo.create({country: 'United States', school_type: 'public', school_name: 'Philly High Harmony', full_address: 'Seattle, Washington', validation_type: SchoolInfo::VALIDATION_NONE})
+    complete_school_info = SchoolInfo.create({country: 'United States', school_type: 'public', school_name: 'Philly High Harmony', full_address: 'Seattle, Washington', validation_type: SchoolInfo::VALIDATION_COMPLETE})
     @teacher.update(school_info: complete_school_info)
 
     Timecop.travel 1.year
 
-    partial_school_info = SchoolInfo.create({country: 'United States', school_type: 'public', school_name: nil, full_address: 'Seattle, Washington', validation_type: SchoolInfo::VALIDATION_NONE})
-    @teacher.update(school_info: partial_school_info)
+    partial_school_info = SchoolInfo.create({country: 'United States', school_type: 'public', school_name: nil, full_address: 'Seattle, Washington', validation_type: SchoolInfo::VALIDATION_COMPLETE})
+    result = @teacher.update(school_info: partial_school_info)
+    assert_equal false, result
 
     Timecop.travel 7.days
 
     sign_in @teacher
     submit_blank_school_info
 
-    assert_nil @teacher.user_school_infos.last.school_info.school_name
-    assert_equal 2, @teacher.user_school_infos.count
+    assert_response 422
+    refute_nil @teacher.user_school_infos.last.school_info.school_name
+    assert_equal 1, @teacher.user_school_infos.count
   end
 
   test 'confirmation, partial previous, unchanged, manual' do
-    complete_school_info = SchoolInfo.create({country: 'United States', school_type: 'public', school_name: 'Philly High Harmony', full_address: 'Seattle, Washington', validation_type: SchoolInfo::VALIDATION_NONE})
+    complete_school_info = SchoolInfo.create({country: 'US', school_type: 'public', school_name: 'Philly High Harmony', full_address: 'Seattle, Washington', validation_type: SchoolInfo::VALIDATION_COMPLETE})
     @teacher.update(school_info: complete_school_info)
 
     Timecop.travel 1.year
 
-    partial_school_info = SchoolInfo.create({country: 'United States', school_type: 'public', school_name: nil, full_address: 'Seattle, Washington', validation_type: SchoolInfo::VALIDATION_NONE})
+    partial_school_info = SchoolInfo.create({country: 'US', school_type: 'public', school_name: nil, full_address: 'Seattle, Washington', validation_type: SchoolInfo::VALIDATION_COMPLETE})
     @teacher.update(school_info: partial_school_info)
 
     Timecop.travel 7.days
 
     sign_in @teacher
     submit_unchanged_school_info partial_school_info
-    assert_response :success, response.body
+    assert_response 422
 
     @teacher.reload
-    assert_equal @teacher.user_school_infos.count, 2
+    assert_equal 1, @teacher.user_school_infos.count
     new_tenure = @teacher.user_school_infos.last
-    assert_nil new_tenure.school_info.school_name
-    assert_same_date Time.now, new_tenure.last_confirmation_date
+    refute_nil new_tenure.school_info.school_name
   end
 
   test 'confirmation, partial previous, partial, manual' do
-    complete_school_info = SchoolInfo.create({country: 'United States', school_type: 'public', school_name: 'Philly High Harmony', full_address: 'Seattle, Washington', validation_type: SchoolInfo::VALIDATION_NONE})
+    complete_school_info = SchoolInfo.create({country: 'United States', school_type: 'public', school_name: 'Philly High Harmony', full_address: 'Seattle, Washington', validation_type: SchoolInfo::VALIDATION_COMPLETE})
     @teacher.update(school_info: complete_school_info)
 
     Timecop.travel 1.year
 
-    partial_school_info = SchoolInfo.create({country: 'United States', school_type: 'public', school_name: nil, full_address: 'Seattle, Washington', validation_type: SchoolInfo::VALIDATION_NONE})
+    partial_school_info = SchoolInfo.create({country: 'United States', school_type: 'public', school_name: nil, full_address: 'Seattle, Washington', validation_type: SchoolInfo::VALIDATION_COMPLETE})
     @teacher.update(school_info: partial_school_info)
 
     Timecop.travel 7.days
 
     sign_in @teacher
     submit_partial_school_info
+    assert_response 422
 
     new_tenure = @teacher.user_school_infos.last
-    assert_nil @teacher.user_school_infos.last.school_info.school_name
-    assert_equal 3, @teacher.user_school_infos.count
-    assert_same_date Time.now, new_tenure.last_confirmation_date
-    refute_equal @teacher.user_school_infos.last.school_info.full_address, 'Seattle, Washington'
+    refute_nil @teacher.user_school_infos.last.school_info.school_name
+    assert_equal 1, @teacher.user_school_infos.count
+    refute_equal Time.now, new_tenure.last_confirmation_date
+    assert_equal @teacher.user_school_infos.last.school_info.full_address, 'Seattle, Washington'
   end
 
   test 'confirmation, partial previous, complete, dropdown' do
     new_school = create :school
 
-    complete_school_info = SchoolInfo.create({country: 'United States', school_type: 'public', school_name: 'Philly High Harmony', full_address: 'Seattle, Washington', validation_type: SchoolInfo::VALIDATION_NONE})
+    complete_school_info = SchoolInfo.create({country: 'United States', school_type: 'public', school_name: 'Philly High Harmony', full_address: 'Seattle, Washington', validation_type: SchoolInfo::VALIDATION_COMPLETE})
     @teacher.update(school_info: complete_school_info)
 
     Timecop.travel 1.year
 
-    partial_school_info = SchoolInfo.create({country: 'United States', school_type: 'public', school_name: nil, full_address: 'Seattle, Washington', validation_type: SchoolInfo::VALIDATION_NONE})
+    partial_school_info = SchoolInfo.create({country: 'United States', school_type: 'public', school_name: nil, full_address: 'Seattle, Washington', validation_type: SchoolInfo::VALIDATION_COMPLETE})
     @teacher.update(school_info: partial_school_info)
 
     Timecop.travel 7.days
@@ -444,18 +440,18 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
     @teacher.reload
 
     new_tenure = @teacher.user_school_infos.last
-    assert_equal @teacher.user_school_infos.count, 3
+    assert_equal 2, @teacher.user_school_infos.count
     assert_same_date Time.now, new_tenure.last_confirmation_date
     assert_equal new_tenure.school_info.school, new_school
   end
 
   test 'confirmation, partial previous, complete, manual' do
-    complete_school_info = SchoolInfo.create({country: 'United States', school_type: 'public', school_name: 'Philly High Harmony', full_address: 'Seattle, Washington', validation_type: SchoolInfo::VALIDATION_NONE})
+    complete_school_info = SchoolInfo.create({country: 'United States', school_type: 'public', school_name: 'Philly High Harmony', full_address: 'Seattle, Washington', validation_type: SchoolInfo::VALIDATION_COMPLETE})
     @teacher.update(school_info: complete_school_info)
 
     Timecop.travel 1.year
 
-    partial_school_info = SchoolInfo.create({country: 'United States', school_type: 'public', school_name: nil, full_address: 'Seattle, Washington', validation_type: SchoolInfo::VALIDATION_NONE})
+    partial_school_info = SchoolInfo.create({country: 'United States', school_type: 'public', school_name: nil, full_address: 'Seattle, Washington', validation_type: SchoolInfo::VALIDATION_COMPLETE})
     @teacher.update(school_info: partial_school_info)
 
     Timecop.travel 7.days
@@ -466,7 +462,7 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
     @teacher.reload
     assert_response :success, response.body
 
-    assert_equal 3, @teacher.user_school_infos.count
+    assert_equal 2, @teacher.user_school_infos.count
     new_tenure = @teacher.user_school_infos.last
     refute_equal new_tenure.school_info.school_name, 'Philly High Harmony'
     refute_nil new_tenure.school_info.school_name
@@ -476,15 +472,15 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
   test 'confirmation, partial previous, complete, dropdown, two users with the same school info, update only one user' do
     new_school = create :school
 
-    complete_school_info = SchoolInfo.create({country: 'United States', school_type: 'public', school_name: 'Philly High Harmony', full_address: 'Seattle, Washington', validation_type: SchoolInfo::VALIDATION_NONE})
+    complete_school_info = SchoolInfo.create({country: 'United States', school_type: 'public', school_name: 'Philly High Harmony', full_address: 'Seattle, Washington', validation_type: SchoolInfo::VALIDATION_COMPLETE})
     @teacher.update(school_info: complete_school_info)
 
-    second_teacher_complete_school_info = SchoolInfo.create({country: 'United States', school_type: 'public', school_name: 'School of Rock', full_address: 'Harrisburg, PA', validation_type: SchoolInfo::VALIDATION_NONE})
+    second_teacher_complete_school_info = SchoolInfo.create({country: 'United States', school_type: 'public', school_name: 'School of Rock', full_address: 'Harrisburg, PA', validation_type: SchoolInfo::VALIDATION_COMPLETE})
     @second_teacher.update(school_info: second_teacher_complete_school_info)
 
     Timecop.travel 1.year
 
-    partial_school_info = SchoolInfo.create({country: 'United States', school_type: 'public', school_name: nil, full_address: 'Seattle, Washington', validation_type: SchoolInfo::VALIDATION_NONE})
+    partial_school_info = SchoolInfo.create({country: 'United States', school_type: 'public', school_name: nil, full_address: 'Seattle, Washington', validation_type: SchoolInfo::VALIDATION_COMPLETE})
     @teacher.update(school_info: partial_school_info)
     @second_teacher.update(school_info: partial_school_info)
 
@@ -497,51 +493,55 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
     assert_response :success, response.body
 
     new_tenure = @teacher.user_school_infos.last
-    assert_equal @teacher.user_school_infos.count, 3
+    assert_equal 2, @teacher.user_school_infos.count
     assert_same_date Time.now, new_tenure.last_confirmation_date
     assert_equal new_tenure.school_info.school, new_school
-    assert_nil @second_teacher.user_school_infos.last.school_info.school_name
+    refute_nil @second_teacher.user_school_infos.last.school_info.school_name
     refute_equal @second_teacher.user_school_infos.last.school_info.school, new_school
   end
 
-  test 'confirmation, previous complete and partial infos, submit unchanged complete info' do
-    # A gross edge case involving partial school info:
+  test 'confirmation complete submit unchanged manual info' do
+    # Edge case involving complete school info
+
+    # Given a user with a complete (dropdown OR manual) school info `A`
+    school_info = SchoolInfo.create({country: 'US', school_type: 'public', school_name: 'Acme Inc', full_address: nil, validation_type: SchoolInfo::VALIDATION_NONE})
+    @teacher.update school_info: school_info
+    tenure_c = @teacher.user_school_infos.first
+    assert tenure_c.school_info.complete?
+
+    # When a year later they click "No" and "Save" without changing anything
+    Timecop.travel 1.year
+    sign_in @teacher
+    submit_complete_school_info_manual_no_school_params
+    assert_response :success, response.body
+
+    # Then, only update the last confirmation date
+    @teacher.reload
+    assert_equal 1, @teacher.user_school_infos.count
+    assert tenure_c.school_info.complete?
+    assert_equal @teacher.school_info.id, school_info.id
+  end
+
+  test 'confirmation, complete, submit unchanged complete info' do
+    # Edge case involving complete school info
 
     # Given a user with a complete (dropdown OR manual) school info `A`
     school_info = create :school_info
     @teacher.update school_info: school_info
-    tenure_a = @teacher.user_school_infos.first
-    assert tenure_a.school_info.complete?
+    tenure_d = @teacher.user_school_infos.first
+    assert tenure_d.school_info.complete?
 
-    # When a year later they click "No" and enter an incomplete school info
+    # When a year later they click "No" and "Save" without changing anything
     Timecop.travel 1.year
     sign_in @teacher
-    submit_partial_school_info
-    assert_response :success, response.body
-
-    # Then we make a new, incomplete school info `B`
-    @teacher.reload
-    assert_equal 2, @teacher.user_school_infos.count
-    tenure_b = @teacher.user_school_infos.last
-    refute tenure_b.school_info.complete?
-
-    # When 7 days later they click "No" and "Save" without changing anything
-    # (Because we loaded the last _complete_ school info into the dialog)
-    Timecop.travel 7.days
     submit_complete_school_info_from_dropdown school_info.school
     assert_response :success, response.body
 
-    # `A`'s confirmation date is updated, and `B` is unchanged.
+    # Then, only update the last confirmation date
     @teacher.reload
-    assert_equal 2, @teacher.user_school_infos.count
-
-    tenure_a.reload
-    assert tenure_a.school_info.complete?
-    assert_same_date Time.now, tenure_a.last_confirmation_date
-
-    tenure_b.reload
-    refute tenure_b.school_info.complete?
-    assert_same_date 7.days.ago, tenure_b.last_confirmation_date
+    assert_equal 1, @teacher.user_school_infos.count
+    assert tenure_d.school_info.complete?
+    assert_equal @teacher.school_info.id, school_info.id
   end
 
   private def partial_manual_school_info
@@ -550,7 +550,7 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
       school_type: 'public',
       school_name: 'Philly High Harmony',
       full_address: 'Seattle, Washington',
-      validation_type: SchoolInfo::VALIDATION_NONE
+      validation_type: SchoolInfo::VALIDATION_COMPLETE
     )
   end
 
@@ -594,6 +594,19 @@ class UserSchoolInfosControllerTest < ActionDispatch::IntegrationTest
           school_type: 'public',
           school_name: 'Acme Inc',
           full_address: 'Seattle, Washington'
+        }
+      }
+    }
+  end
+
+  private def submit_complete_school_info_manual_no_school_params
+    patch "/api/v1/user_school_infos", params: {
+      user: {
+        school_info_attributes: {
+          country: 'United States',
+          school_type: 'public',
+          school_name: 'Acme Inc',
+          full_address: ''
         }
       }
     }

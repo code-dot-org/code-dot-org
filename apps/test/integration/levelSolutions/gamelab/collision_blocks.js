@@ -302,9 +302,10 @@ module.exports = {
       },
       function validateResult(assert) {
         var debugOutput = document.getElementById('debug-output');
-        assert.equal(
-          debugOutput.textContent,
-          ['in callback', 'after callback', 'done'].join('\n')
+        assert(
+          debugOutput.textContent.includes(
+            '"in callback"' + '"after callback"' + '"done"'
+          )
         );
       }
     )

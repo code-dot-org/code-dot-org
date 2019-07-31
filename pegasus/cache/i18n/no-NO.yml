@@ -1179,39 +1179,7 @@ no-NO:
   coursee_name: Kurs E
   coursef-draft_name: Kurs F
   coursef_name: Kurs F
-  cspunit2_name: "(gammel) Enhet 2: Internett"
-  cspunit3_name: "(gammel) Enhet 3: Programmering"
-  cspunit4_name: "(gammel) Enhet 4: Data"
-  cspunit5_name: "(gammel) Enhet 5: Utforsk og lag PT"
-  cspunit6_name: 'Post-AP: Databaser i apper'
-  csd5_name: 'Enhet 5: Data og samfunn'
-  csd6_name: 'Enhet 6: Fysisk programmering'
-  csd5-2017_name: 'Enhet 5: Data og samfunn'
-  csd6-2017_name: 'Enhet 6: Fysisk programmering'
-  csd5-2018_name: 'Enhet 5: Data og samfunn'
-  csd6-2018_name: 'Enhet 6: Fysisk programmering'
-  csp1-2017_name: 'Enhet 1: Internett'
-  csp2-2017_name: 'Enhet 2: Digital informasjon'
-  csp-explore-2017_name: Utforsk PT forberedelse
-  csp-create-2017_name: Lag en PT forberedelse
-  csppostap-2017_name: 'Post AP: Databaser i appen'
-  csp1-2018_name: 'Enhet 1: Internett'
-  csp2-2018_name: 'Enhet 2: Digital informasjon'
-  csp-explore-2018_name: Utforsk PT forberedelse
-  csp-create-2018_name: Lag en PT forberedelse
-  csppostap-2018_name: 'Post AP: Databaser i appen'
-  csp1_name: 'Enhet 1: Internett'
-  csp2_name: 'Enhet 2: Digital informasjon'
-  csp3-a_name: 'Enhet 3: Introduksjon til programmering(Versjon A)'
-  csp3-research-mxghyt_name: 'Enhet 3: Introduksjon til programmering (Delmål)'
-  csp-ap_name: AP ytelsesaktiviteter
-  csppostap_name: 'Post AP: Databaser i appen'
-  cspassessment_name: Full Test - 50 spørsmål
-  csp-explore_name: Utforsk PT forberedelse
-  csp-create_name: Lag en PT forberedelse
-  cspexam1-mWU7ilDYM9_name: 'Test del 1: 25 spørsmål'
-  cspexam2-AKwgAh1ac5_name: Test del 2 - 25 spørsmål
-  cspunit3_gradelevel: 9.-12. klasse
+  accelerated_name: Framskyndet kurs
   20-hour_name: Framskyndet kurs
   algebra_name: Informatikk i algebra
   AlgebraA_name: Informatikk i algebra Kurs A
@@ -1222,14 +1190,6 @@ no-NO:
   minecraft_name: Minecraft
   starwarsblocks_name: Star Wars (blokker)
   hoc-encryption_name: Enkel kryptering
-  math_category_name: Matematikk
-  hoc_category_name: Kodetimen
-  csf_category_name: Grunnleggende informatikk
-  csf_international_category_name: Grunnleggende informatikk internasjonalt
-  csf2_draft_category_name: 'Under utvikling: Kurs A - F'
-  csp_category_name: "'15-'16 Prinsipper i informatikk"
-  csp17_category_name: "'17-'18 Prinsipper i informatikk"
-  cspexams_category_name: Prinsipper i informatikk teoriprøve
   applab_name: App Lab
   gamelab_name: Spill-lab
   basketball_name: Lag et basketball-spill
@@ -1952,8 +1912,6 @@ no-NO:
   header_report_bug: Rapporter feil
   header_tutorials: Guide
   header_documentation: Dokumentasjon
-  csp_name: Prinsipper i informatikk
-  full_course_category_name: Alle kurs
   user_header_label: Hei %{username}
   user_header_team: Team
   user_header_settings: Min konto

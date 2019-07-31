@@ -42,7 +42,7 @@ class DSLDefined < Level
     # actually only returns the first element
     localized = I18n.t(
       property,
-      scope: ['data', type.underscore, name],
+      scope: ['data', 'dsls', name],
       separator: I18n::Backend::Flatten::SEPARATOR_ESCAPE_CHAR,
       default: nil,
       smart: true

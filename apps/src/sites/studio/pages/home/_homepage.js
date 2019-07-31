@@ -79,6 +79,7 @@ function showHomepage() {
             topCourse={homepageData.topCourse}
             sections={homepageData.sections}
             canViewAdvancedTools={homepageData.canViewAdvancedTools}
+            studentId={homepageData.studentId}
           />
         )}
       </div>

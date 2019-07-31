@@ -19,8 +19,10 @@ module Pd
     ].freeze
 
     SUBJECT_TEACHER_CON = 'Code.org TeacherCon'.freeze
-    SUBJECT_FIT = 'Code.org Facilitator Weekend'.freeze
-    SUBJECT_SUMMER_WORKSHOP = '5-day Summer'.freeze
+    SUBJECT_NAMES = {
+      SUBJECT_FIT: SUBJECT_FIT = 'Code.org Facilitator Weekend'.freeze,
+      SUBJECT_SUMMER_WORKSHOP: SUBJECT_SUMMER_WORKSHOP = '5-day Summer'.freeze
+    }
     SUBJECTS = {
       COURSE_ECS => [
         SUBJECT_ECS_PHASE_2 = 'Phase 2 in-person'.freeze,

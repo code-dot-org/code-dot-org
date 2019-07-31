@@ -376,18 +376,18 @@ module.exports = {
         $('#designModeButton').click();
         testUtils.dragToVisualization('BUTTON', 10, 20);
         assertPropertyRowValue(0, 'id', 'button1', assert);
-        assertPropertyRowValue(2, 'width (px)', 80, assert);
-        assertPropertyRowValue(3, 'height (px)', 30, assert);
+        assertPropertyRowValue(2, 'width (px)', 100, assert);
+        assertPropertyRowValue(3, 'height (px)', 40, assert);
         assertPropertyRowValue(4, 'x position (px)', 10, assert);
         assertPropertyRowValue(5, 'y position (px)', 20, assert);
 
         resizeElement(document.getElementById('design_button1'), 20, 0);
-        assertPropertyRowValue(2, 'width (px)', 100, assert);
-        assertPropertyRowValue(3, 'height (px)', 30, assert);
+        assertPropertyRowValue(2, 'width (px)', 120, assert);
+        assertPropertyRowValue(3, 'height (px)', 40, assert);
 
         resizeElement(document.getElementById('design_button1'), 0, 20);
-        assertPropertyRowValue(2, 'width (px)', 100, assert);
-        assertPropertyRowValue(3, 'height (px)', 50, assert);
+        assertPropertyRowValue(2, 'width (px)', 120, assert);
+        assertPropertyRowValue(3, 'height (px)', 60, assert);
 
         Applab.onPuzzleComplete();
       },
@@ -405,8 +405,8 @@ module.exports = {
         $('#designModeButton').click();
         testUtils.dragToVisualization('BUTTON', 10, 20);
         assertPropertyRowValue(0, 'id', 'button1', assert);
-        assertPropertyRowValue(2, 'width (px)', 80, assert);
-        assertPropertyRowValue(3, 'height (px)', 30, assert);
+        assertPropertyRowValue(2, 'width (px)', 100, assert);
+        assertPropertyRowValue(3, 'height (px)', 40, assert);
         assertPropertyRowValue(4, 'x position (px)', 10, assert);
         assertPropertyRowValue(5, 'y position (px)', 20, assert);
 
@@ -670,10 +670,10 @@ module.exports = {
         assertPropertyRowValue(3, 'height (px)', 100, assert);
         assertPropertyRowValue(4, 'x position (px)', 0, assert);
         assertPropertyRowValue(5, 'y position (px)', 0, assert);
-        assertPropertyRowValue(6, 'text color', '#000000', assert);
-        assertPropertyRowValue(7, 'background color', '#ffffff', assert);
+        assertPropertyRowValue(6, 'text color', '#4d575f', assert);
+        assertPropertyRowValue(7, 'background color', '#f2f2f2', assert);
         assertPropertyRowValue(8, 'font family', 'Arial', assert);
-        assertPropertyRowValue(9, 'font size (px)', 14, assert);
+        assertPropertyRowValue(9, 'font size (px)', 13, assert);
 
         var textArea = designModeViz.find('.textArea');
         var manipulator = textArea.parent();
@@ -899,8 +899,8 @@ module.exports = {
         var maxLeft = designModeViz.outerWidth();
         var maxTop = designModeViz.outerHeight();
 
-        // Relies on default button dimensions (80px width, 30px height)
-        testUtils.dragToVisualization('BUTTON', maxLeft - 80, maxTop - 30);
+        // Relies on default button dimensions (100px width, 40px height)
+        testUtils.dragToVisualization('BUTTON', maxLeft - 100, maxTop - 40);
 
         var newButton = designModeViz.find('button');
         assert.equal(newButton.length, 1);
@@ -917,8 +917,8 @@ module.exports = {
         var buttons = designModeViz.find('button');
         assert.equal(buttons.length, 2);
         var button2 = buttons[1];
-        assert.equal(parseInt(button2.style.left), maxLeft - 80);
-        assert.equal(parseInt(button2.style.top), maxTop - 30);
+        assert.equal(parseInt(button2.style.left), maxLeft - 100);
+        assert.equal(parseInt(button2.style.top), maxTop - 40);
 
         Applab.onPuzzleComplete();
       },
@@ -981,8 +981,8 @@ module.exports = {
         var maxLeft = designModeViz.outerWidth();
         var maxTop = designModeViz.outerHeight();
 
-        // Relies on default button dimensions (80px width, 30px height)
-        testUtils.dragToVisualization('BUTTON', maxLeft - 80, maxTop - 30);
+        // Relies on default button dimensions (100px width, 40px height)
+        testUtils.dragToVisualization('BUTTON', maxLeft - 100, maxTop - 40);
 
         var newButton = designModeViz.find('button');
         assert.equal(newButton.length, 1);
@@ -997,8 +997,8 @@ module.exports = {
         var buttons = designModeViz.find('button');
         assert.equal(buttons.length, 2);
         var button2 = buttons[1];
-        assert.equal(parseInt(button2.style.left), maxLeft - 80);
-        assert.equal(parseInt(button2.style.top), maxTop - 30);
+        assert.equal(parseInt(button2.style.left), maxLeft - 100);
+        assert.equal(parseInt(button2.style.top), maxTop - 40);
 
         Applab.onPuzzleComplete();
       },

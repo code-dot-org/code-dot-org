@@ -122,6 +122,22 @@ class AuthenticationOptionTest < ActiveSupport::TestCase
     assert option.oauth?
   end
 
+  test 'primary?' do
+    user = create(:user)
+
+    assert_equal 1, user.authentication_options.count
+    refute_nil user.primary_contact_info
+    old_primary_ao = user.primary_contact_info
+    assert old_primary_ao.primary?
+
+    google_ao = create(:google_authentication_option, user: user)
+    user.update!(primary_contact_info: google_ao)
+    old_primary_ao.reload
+
+    assert google_ao.primary?
+    refute old_primary_ao.primary?
+  end
+
   test 'update_oauth_credential_tokens raises an error if auth option is not oauth' do
     not_oauth = build :authentication_option, credential_type: AuthenticationOption::EMAIL
     assert_raises(RuntimeError) do

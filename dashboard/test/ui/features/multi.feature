@@ -35,7 +35,7 @@ Scenario: Rendering in another language
   Then I rotate to landscape
   And I wait to see ".submitButton"
   And element ".submitButton" is visible
-  Then element ".multi h1" has "es-MX" text from key "data.multi.2-3 Algorithms Multi 1.title"
+  Then element ".multi h1" has "es-MX" text from key "data.dsls.2-3 Algorithms Multi 1.title"
 
 Scenario: Does not scroll horizontally
   Given I am on "http://studio.code.org/s/allthethings/stage/9/puzzle/2?noautoplay=true"

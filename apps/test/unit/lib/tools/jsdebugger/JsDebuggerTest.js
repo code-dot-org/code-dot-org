@@ -15,6 +15,7 @@ import {
 import commonReducers from '@cdo/apps/redux/commonReducers';
 import {setPageConstants} from '@cdo/apps/redux/pageConstants';
 import {sandboxDocumentBody} from '../../../../util/testUtils';
+import dom from '@cdo/apps/dom';
 
 describe('The JSDebugger component', () => {
   let root, jsDebugger, addEventSpy, removeEventSpy, codeApp;
@@ -45,6 +46,12 @@ describe('The JSDebugger component', () => {
     getStore().dispatch(actions.initialize({runApp}));
     getStore().dispatch(actions.open());
 
+    // Stub getTouchEventName to return valid event names as if we were in Chrome on a
+    // mobile device, regardless of what browser the tests are running on.
+    sinon
+      .stub(dom, 'getTouchEventName')
+      .callsFake(name => dom.TOUCH_MAP[name]['standard']);
+
     ({addEventSpy, removeEventSpy} = getBodyEventSpies());
     ['mousemove', 'touchmove', 'mouseup', 'touchend'].forEach(e => {
       addEventSpy.withArgs(e);
@@ -63,6 +70,7 @@ describe('The JSDebugger component', () => {
 
   afterEach(() => {
     root.unmount();
+    dom.getTouchEventName.restore();
     restoreRedux();
   });
 
@@ -180,13 +188,17 @@ describe('The JSDebugger component', () => {
 
       describe('when the mouse is moved', () => {
         it('changes the height of the debugger', () => {
-          document.body.dispatchEvent(createMouseEvent('touchmove', 0, 100));
+          document.body.dispatchEvent(
+            createMouseEvent('touchmove', 0, window.innerHeight - 200)
+          );
           jsDebugger.update();
           expect(debugAreaEl().instance().style.height).to.equal('200px');
         });
 
         it('and will do so multiple times', () => {
-          document.body.dispatchEvent(createMouseEvent('touchmove', 0, 120));
+          document.body.dispatchEvent(
+            createMouseEvent('touchmove', 0, window.innerHeight - 180)
+          );
           jsDebugger.update();
           expect(debugAreaEl().instance().style.height).to.equal('180px');
         });

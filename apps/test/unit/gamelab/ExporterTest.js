@@ -3,7 +3,7 @@ import sinon from 'sinon';
 
 var testUtils = require('../../util/testUtils');
 import * as assetPrefix from '@cdo/apps/assetManagement/assetPrefix';
-import Exporter from '@cdo/apps/gamelab/Exporter';
+import Exporter from '@cdo/apps/p5lab/gamelab/Exporter';
 
 const emptyAnimationOpts = {
   animationList: {

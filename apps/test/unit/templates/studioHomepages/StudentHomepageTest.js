@@ -14,6 +14,7 @@ describe('StudentHomepage', () => {
         topCourse={topCourse}
         sections={[]}
         codeOrgUrlPrefix="http://localhost:3000/"
+        studentId={123}
       />
     );
     const headerBanner = wrapper.find(HeaderBanner);
@@ -30,6 +31,7 @@ describe('StudentHomepage', () => {
         topCourse={topCourse}
         sections={[]}
         codeOrgUrlPrefix="http://localhost:3000/"
+        studentId={123}
       />
     );
     expect(wrapper.find('ProtectedStatefulDiv').exists()).to.be.true;
@@ -42,6 +44,7 @@ describe('StudentHomepage', () => {
         topCourse={topCourse}
         sections={[]}
         codeOrgUrlPrefix="http://localhost:3000/"
+        studentId={123}
       />
     );
     const recentCourses = wrapper.find('RecentCourses');
@@ -59,6 +62,7 @@ describe('StudentHomepage', () => {
         topCourse={topCourse}
         sections={joinedSections}
         codeOrgUrlPrefix="http://localhost:3000/"
+        studentId={123}
       />
     );
     expect(wrapper.find('ProjectWidgetWithData').exists()).to.be.true;
@@ -71,6 +75,7 @@ describe('StudentHomepage', () => {
         topCourse={topCourse}
         sections={joinedSections}
         codeOrgUrlPrefix="http://localhost:3000/"
+        studentId={123}
       />
     );
     const studentSections = wrapper.find(StudentSections);

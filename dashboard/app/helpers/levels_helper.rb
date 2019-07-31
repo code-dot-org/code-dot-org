@@ -248,6 +248,10 @@ module LevelsHelper
         view_options.camelize_keys
       end
 
+    if @script_level && @level.can_have_feedback?
+      @app_options[:serverScriptLevelId] = @script_level.id
+    end
+
     # Blockly caches level properties, whereas this field depends on the user
     @app_options['teacherMarkdown'] = @level.properties['teacher_markdown'] if I18n.en? && can_view_teacher_markdown?
 

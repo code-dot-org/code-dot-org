@@ -412,10 +412,11 @@ class Script < ActiveRecord::Base
   end
 
   def cached
+    return self unless Script.should_cache?
     self.class.get_from_cache(id)
   end
 
-  def self.get_without_cache(id_or_name, version_year: nil)
+  def self.get_without_cache(id_or_name, version_year: nil, with_associated_models: true)
     # Also serve any script by its new_name, if it has one.
     script = id_or_name && Script.find_by(new_name: id_or_name)
     return script if script
@@ -424,7 +425,8 @@ class Script < ActiveRecord::Base
     # names which are strings that may contain numbers (eg. 2-3)
     is_id = id_or_name.to_i.to_s == id_or_name.to_s
     find_by = is_id ? :id : :name
-    script = Script.with_associated_models.find_by(find_by => id_or_name)
+    script_model = with_associated_models ? Script.with_associated_models : Script
+    script = script_model.find_by(find_by => id_or_name)
     return script if script
 
     raise ActiveRecord::RecordNotFound.new("Couldn't find Script with id|name=#{id_or_name}")
@@ -447,7 +449,7 @@ class Script < ActiveRecord::Base
       raise "Do not call Script.get_from_cache with a family_name. Call Script.get_script_family_redirect_for_user instead.  Family: #{id_or_name}"
     end
 
-    return get_without_cache(id_or_name, version_year: version_year) unless should_cache?
+    return get_without_cache(id_or_name, version_year: version_year, with_associated_models: false) unless should_cache?
     cache_key_suffix = version_year ? "/#{version_year}" : ''
     cache_key = "#{id_or_name}#{cache_key_suffix}"
     script_cache.fetch(cache_key) do
@@ -1257,10 +1259,10 @@ class Script < ActiveRecord::Base
           }
         end
       end
-      # unlike stages_i18n, we don't expect meta_i18n to have the full tree
       metadata_i18n = {'en' => {'data' => {'script' => {'name' => {script_name => metadata_i18n.to_h}}}}}
     end
 
+    stages_i18n = {'en' => {'data' => {'script' => {'name' => stages_i18n}}}}
     existing_i18n.deep_merge(stages_i18n) {|_, old, _| old}.deep_merge!(metadata_i18n)
   end
 
