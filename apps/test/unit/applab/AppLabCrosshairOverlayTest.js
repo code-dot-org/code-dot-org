@@ -37,7 +37,7 @@ describe('AppLabCrosshairOverlay', () => {
 
     var overlay = element.find('CrosshairOverlay');
     var props = overlay.props();
-    expect(overlay.length).to.equal(1);
+    expect(overlay.length).to.equal(2);
     expect(props.width).to.equal(TEST_APP_WIDTH);
     expect(props.height).to.equal(TEST_APP_HEIGHT);
     expect(props.mouseX).to.equal(TEST_MOUSE_X);
