@@ -55,7 +55,6 @@ window.dashboard.levelCompletions = require('@cdo/apps/code-studio/levelCompleti
 window.dashboard.popupWindow = require('@cdo/apps/code-studio/popup-window');
 window.dashboard.reporting = require('@cdo/apps/code-studio/reporting');
 window.dashboard.header = require('@cdo/apps/code-studio/header');
-window.dashboard.videos = require('@cdo/apps/code-studio/videos');
 window.dashboard.assets = require('@cdo/apps/code-studio/assets');
 window.dashboard.pairing = require('@cdo/apps/code-studio/pairing');
 window.dashboard.project = require('@cdo/apps/code-studio/initApp/project');

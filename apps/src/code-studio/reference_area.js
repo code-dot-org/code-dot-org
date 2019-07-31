@@ -1,5 +1,4 @@
 import $ from 'jquery';
-var showVideoDialog = require('./videos').showVideoDialog;
 
 // It would be nice if we could share this with the addClickTouchEvent in
 // apps/src/dom.js
@@ -25,18 +24,20 @@ module.exports = function activateReferenceAreaOnLoad() {
       addClickTouchEvent(
         $(this),
         $.proxy(function() {
-          showVideoDialog(
-            {
-              src: $(this).attr('data-src'),
-              name: $(this).attr('data-name'),
-              key: $(this).attr('data-key'),
-              download: $(this).attr('data-download'),
-              thumbnail: $(this).attr('data-thumbnail'),
-              enable_fallback: true,
-              autoplay: true
-            },
-            true
-          );
+          import('./videos').then(({showVideoDialog}) => {
+            showVideoDialog(
+              {
+                src: $(this).attr('data-src'),
+                name: $(this).attr('data-name'),
+                key: $(this).attr('data-key'),
+                download: $(this).attr('data-download'),
+                thumbnail: $(this).attr('data-thumbnail'),
+                enable_fallback: true,
+                autoplay: true
+              },
+              true
+            );
+          });
         }, this)
       );
     });

@@ -1,5 +1,6 @@
 /* global levelbuilder */
 import $ from 'jquery';
+import videos from '@cdo/apps/code-studio/videos';
 
 $(document).ready(initPage);
 
@@ -78,12 +79,7 @@ function initPage() {
     if (selectionValue) {
       var videoInfo = videoInfos[selectionValue];
       $('.video-preview').html(
-        window.dashboard.videos.createVideoWithFallback(
-          null,
-          videoInfo,
-          400,
-          400
-        )
+        videos.createVideoWithFallback(null, videoInfo, 400, 400)
       );
       $('.video-preview').show();
     } else {

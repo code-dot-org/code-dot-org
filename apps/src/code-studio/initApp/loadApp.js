@@ -20,7 +20,6 @@ var project = require('@cdo/apps/code-studio/initApp/project');
 var createCallouts = require('@cdo/apps/code-studio/callouts').default;
 var reporting = require('@cdo/apps/code-studio/reporting');
 var LegacyDialog = require('@cdo/apps/code-studio/LegacyDialog');
-var showVideoDialog = require('@cdo/apps/code-studio/videos').showVideoDialog;
 import {
   lockContainedLevelAnswers,
   getContainedLevelId
@@ -186,7 +185,9 @@ export function setupApp(appOptions) {
     onContinue: function() {
       var lastServerResponse = reporting.getLastServerResponse();
       if (lastServerResponse.videoInfo) {
-        showVideoDialog(lastServerResponse.videoInfo);
+        import('@cdo/apps/code-studio/videos').then(videos => {
+          videos.showVideoDialog(lastServerResponse.videoInfo);
+        });
       } else if (lastServerResponse.endOfStageExperience) {
         const body = document.createElement('div');
         const stageInfo = lastServerResponse.previousStageInfo;
@@ -236,7 +237,9 @@ export function setupApp(appOptions) {
         if (hasInstructions) {
           appOptions.autoplayVideo.onClose = afterVideoCallback;
         }
-        showVideoDialog(appOptions.autoplayVideo);
+        import('@cdo/apps/code-studio/videos').then(videos => {
+          videos.showVideoDialog(appOptions.autoplayVideo);
+        });
       } else {
         if (hasVideo && noAutoplay) {
           clientState.recordVideoSeen(appOptions.autoplayVideo.key);
