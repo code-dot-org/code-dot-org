@@ -3,7 +3,7 @@ import unzip from 'lodash/unzip';
 import assetUrl from '@cdo/apps/code-studio/assetUrl';
 
 import {install, customInputTypes} from '@cdo/apps/p5lab/gamelab/blocks';
-import {valueTypeTabShapeMap} from '@cdo/apps/p5lab/gamelab/GameLab';
+import {valueTypeTabShapeMap} from '@cdo/apps/p5lab/P5Lab';
 import {installCustomBlocks} from '@cdo/apps/block_utils';
 
 const customSimpleDialog = function({
