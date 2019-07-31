@@ -348,5 +348,20 @@ function createNewFirehose() {
   });
 }
 
-const firehoseClient = new FirehoseClient();
-export default firehoseClient;
+let singleton;
+function getSingleton() {
+  if (!singleton) {
+    singleton = new FirehoseClient();
+  }
+  return singleton;
+}
+
+function putRecord(data, options) {
+  getSingleton().putRecord(data, options);
+}
+
+function putRecordBatch(data, options) {
+  getSingleton().putRecordBatch(data, options);
+}
+
+export default {putRecord, putRecordBatch};
