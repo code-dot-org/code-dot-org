@@ -13,14 +13,8 @@ function getBoolEnv(name) {
 function getMoocEnv(name) {
   var moocName = 'MOOC_' + name;
   if (process.env.moocName) {
-    console.warn(
-      'The ' +
-        moocName +
-        ' environment variable is deprecated. ' +
-        'Use ' +
-        name +
-        ' instead.'
-    );
+    console.warn('The ' + moocName + ' environment variable is deprecated. ' +
+      'Use ' + name + ' instead.');
   }
   return process.env[name] || process.env['MOOC_' + name];
 }
@@ -50,5 +44,5 @@ module.exports = {
   BROWSER: process.env.BROWSER,
   // If set, will turn on react hot loader and run the webpack dev server
   HOT: !!process.env.HOT,
-  LEVEL_TYPE: process.env.LEVEL_TYPE
+  LEVEL_TYPE: process.env.LEVEL_TYPE,
 };
