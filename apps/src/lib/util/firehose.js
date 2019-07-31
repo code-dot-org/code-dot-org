@@ -56,6 +56,10 @@ const deliveryStreamName = 'analysis-events';
 // TODO(asher): Determine whether any of the utility functions herein should be
 // moved elsewhere, e.g., to apps/src/util.js.
 class FirehoseClient {
+  constructor() {
+    this.firehose = createNewFirehose();
+  }
+
   /**
    * Returns the current environment.
    * @return {string} The current environment, e.g., "staging" or "production".
@@ -240,7 +244,7 @@ class FirehoseClient {
       return;
     }
 
-    FIREHOSE.putRecord(
+    this.firehose.putRecord(
       {
         DeliveryStreamName: deliveryStreamName,
         Record: {
@@ -298,7 +302,7 @@ class FirehoseClient {
       };
     });
 
-    FIREHOSE.putRecordBatch(
+    this.firehose.putRecordBatch(
       {
         DeliveryStreamName: deliveryStreamName,
         Records: batch
@@ -344,6 +348,5 @@ function createNewFirehose() {
   });
 }
 
-const FIREHOSE = createNewFirehose();
 const firehoseClient = new FirehoseClient();
 export default firehoseClient;
