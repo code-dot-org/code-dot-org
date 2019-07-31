@@ -2764,6 +2764,53 @@ is:
         text: Þegar leikurinn er tilbúinn getur þú valið að deila til að fá tengil
           sem þú getur látið vini þína fá eða til að spila leikinn í símanum þínum.
           Hafðu gaman af! Ég hlakka til að spila þína útgáfu af Minecraft.
+    applab_intro_welcome:
+      1:
+        text: Ég heiti Mei'lani. Ég er lærlingur hjá code.org og ég er líka nemi í
+          tölvunarfræði. Mér líkar við tölvunarfræði því að hún er mjög skapandi.
+          Ég fæ að finna lausnir á vandamálum. Ég fæ að láta allt virka eins og ég
+          vil. Og ég líka að vera hönnuðurinn. Ég fæ að vera listamaðurinn og velja
+          allt sem snýr að útlitinu.
+      2:
+        text: Að búa til þín eigin öpp er mjög auðvelt í Appsmiðjunni! Hvort sem þú
+          ert að byrja að kóða eða hefur reynslu. Appsmiðjan er fínt verkfæri til
+          að smíða ný öpp og deila þeim með vinum.
+      3:
+        text: Þetta er Appsmiðjan. Vinstra megin er appið. Hægra megin er kóðinn sem
+          fær það til að virka. Þú byggir forritið með því að draga kubba úr verkfærakassanum.
+          Til að byrja með hefur þú bara einn kubb sem heitir 'setProperty'.
+      4:
+        text: "'setproperty' kubburinn breytir útliti eininganna á skjánum. Hnappanna,
+          texta, eða jafnvel sjálfum skjánum. Fyrst þarft þú að ákveða hvaða einingu
+          þú vilt breyta. Ef þú setur músina á hlut í appinu þá sérðu heiti hennar
+          eða ID. Þú getur þá valið þetta ID úr fyrsta fellilistanum."
+      5:
+        text: Einingar appsins hafa marga eiginleika sem þú getur breytt t. d. textalit,
+          bakgrunnslit eða leturstærð. Þú sérð þá alla og getur valið hvaða eiginleika
+          þú vilt breyta í öðrum fellilistanum.
+      6:
+        text: Síðasti fellilistinn er þar sem þú munt skrifa gildið sem þú vilt nota.
+          Kubburinn mun koma með tillögu fyrir þig. En þú getur alltaf skrifað annan
+          lit eða tölur.
+      7:
+        text: 'Þegar þú ert búinn er hægt lesa kubbinn eins og setningu: ''Stilla
+          button1 bakgrunnslit grænan.'' Ýttu á Keyra til að sjá breytingarnar sem
+          þú ert að kóða. Ef þú endurstillir getur þú dregið inn fleiri kubba til
+          að breyta öðru í appinu. Eins og textanum!'
+      8:
+        text: Í þessari æfingu munum við vinna í kubbastöðu en Appsmiðjan styður líka
+          að vinna með texta.
+      9:
+        text: Hvort sem er munt þú forrita í Javascript, sem er forritunarmál vefsins.
+          Hver áfangi hefur markmið, leiðbeiningar og mynd af því sem þú stefnir á
+          að búa til.
+      10:
+        text: Ef þú festist, getur þú smellt á þessa mynd og hún mun sýna þér nákvæmlega
+          hvernig á að ljúka áfanganum. En gáðu fyrst hvort þú getur gert það án hjálpar.
+      11:
+        text: Þegar þú hefur náð markmiðinu fyrir þennan áfanga smellir þú á Ljúka
+          til að halda áfram. Þetta er allt og sumt! Smelltu á appelsínugula "áfram"
+          hnappinn og leggðu upp í ævintýri með Appsmiðjunni!
     mc_2017_agent_intro:
       11:
         text: Ef þú gleymir hvað á að gera, getur þú lesið leiðbeiningarnar efst.

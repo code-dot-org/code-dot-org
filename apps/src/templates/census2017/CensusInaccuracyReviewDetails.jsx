@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import * as Table from 'reactabular-table';
+import {Table} from 'reactabular';
 import Button from '../Button';
 import color from '../../util/color';
 
