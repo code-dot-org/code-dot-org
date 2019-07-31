@@ -71,7 +71,7 @@ def main
   file = Tempfile.new(['census', 'geojson'])
   tiles = Tempfile.new(['censustiles', 'mbtiles'])
   file.write(JSON.pretty_generate(geojson))
-  _stdout, stderr, tippecanoe_status = Open3.capture2(
+  _stdout, stderr, tippecanoe_status = Open3.capture3(
     # Tippecanoe will generate a map that has a min zoom of 1 (approx the whole world),
     # clusters points that are approximately 2 pixels apart, and drops points to make them fit if they can't.
     # The layer is called "census". DO NOT change the layer name without changing the map
