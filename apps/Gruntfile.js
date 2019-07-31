@@ -76,7 +76,7 @@ describe('entry tests', () => {
     'spritelab',
     'jigsaw',
     // 'maze',
-    'netsim',
+    // 'netsim',
     // 'studio',
     'turtle',
     'scratch',
