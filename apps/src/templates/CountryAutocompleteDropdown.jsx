@@ -75,6 +75,7 @@ export default class CountryAutocompleteDropdown extends Component {
             placeholder={i18n.searchForCountry()}
             labelKey="value"
             matchPos="start"
+            maxHeight={160}
           />
         </div>
         {showError && singleLineLayout && errorDiv}
