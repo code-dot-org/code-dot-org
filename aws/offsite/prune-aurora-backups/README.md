@@ -31,15 +31,18 @@ Run the following command to package the Lambda function to S3 and generate the 
 
 ```bash
 sam package \
+    --profile <aws cli profile name> \
     --output-template-file packaged.yaml \
     --s3-bucket REPLACE_THIS_WITH_YOUR_S3_BUCKET_NAME
 ```
 
-Next, the following command will create a Cloudformation Stack and deploy your SAM resources.
+Next, the following command will create a Cloudformation Stack and deploy your SAM resources. Specify parameters via --parameter-overrides only if required. For updating existing stacks, if a parameter isn't specified, it'll use the existing value.
 
 ```bash
 sam deploy \
+    --profile <aws cli profile name> \
     --template-file packaged.yaml \
     --stack-name prune-aurora-backups \
-    --capabilities CAPABILITY_NAMED_IAM
+    --capabilities CAPABILITY_NAMED_IAM \
+    --parameter-overrides <parameter name 1>=<parameter value1> ...
 ```
