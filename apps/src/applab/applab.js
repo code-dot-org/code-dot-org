@@ -147,7 +147,10 @@ function loadLevel() {
   // This led to lots of hackery in the code to properly scale the visualization
   // area. Width/height are now constant, but much of the hackery still remains
   // since I don't understand it well enough.
-  Applab.appWidth = applabConstants.APP_WIDTH;
+  Applab.appWidth = level.widgetMode
+    ? applabConstants.WIDGET_WIDTH
+    : applabConstants.APP_WIDTH;
+
   Applab.appHeight = applabConstants.APP_HEIGHT;
 
   // In share mode we need to reserve some number of pixels for our in-app
@@ -567,7 +570,9 @@ Applab.init = function(config) {
 
   config.appMsg = applabMsg;
 
-  config.mobileNoPaddingShareWidth = applabConstants.APP_WIDTH;
+  config.mobileNoPaddingShareWidth = config.level.widgetMode
+    ? applabConstants.WIDGET_WIDTH
+    : applabConstants.APP_WIDTH;
 
   config.enableShowLinesCount = false;
 
@@ -663,7 +668,9 @@ Applab.init = function(config) {
       config.expoSession,
       Applab.setAndroidExportProps
     ),
-    nonResponsiveVisualizationColumnWidth: applabConstants.APP_WIDTH,
+    nonResponsiveVisualizationColumnWidth: config.level.widgetMode
+      ? applabConstants.WIDGET_WIDTH
+      : applabConstants.APP_WIDTH,
     visualizationHasPadding: !config.noPadding,
     hasDataMode: !config.level.hideViewDataButton,
     hasDesignMode: !config.level.hideDesignMode,

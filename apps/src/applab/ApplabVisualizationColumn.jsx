@@ -65,6 +65,7 @@ class ApplabVisualizationColumn extends React.Component {
     pinWorkspaceToBottom: PropTypes.bool.isRequired,
     isPaused: PropTypes.bool,
     awaitingContainedResponse: PropTypes.bool.isRequired,
+    widgetMode: PropTypes.bool,
 
     // non redux backed
     isEditingProject: PropTypes.bool.isRequired,
@@ -73,12 +74,15 @@ class ApplabVisualizationColumn extends React.Component {
   };
 
   render() {
+    let appWidth = this.props.widgetMode
+      ? applabConstants.WIDGET_WIDTH
+      : applabConstants.APP_WIDTH;
     let visualization = [
       <Visualization key="1" />,
       this.props.isIframeEmbed && !this.props.isRunning && (
         <IFrameEmbedOverlay
           key="2"
-          appWidth={applabConstants.APP_WIDTH}
+          appWidth={appWidth}
           appHeight={applabConstants.APP_HEIGHT}
         />
       )
@@ -171,6 +175,7 @@ export default connect(function propsFromStore(state) {
     awaitingContainedResponse: state.runState.awaitingContainedResponse,
     isPaused: state.runState.isDebuggerPaused,
     playspacePhoneFrame: state.pageConstants.playspacePhoneFrame,
-    pinWorkspaceToBottom: state.pageConstants.pinWorkspaceToBottom
+    pinWorkspaceToBottom: state.pageConstants.pinWorkspaceToBottom,
+    widgetMode: state.pageConstants.widgetMode
   };
 })(Radium(ApplabVisualizationColumn));
