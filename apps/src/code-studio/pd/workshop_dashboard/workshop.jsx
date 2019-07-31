@@ -170,20 +170,13 @@ export class Workshop extends React.Component {
     const enrollmentIds = selectedEnrollments.map(enrollment => {
       return enrollment.id;
     });
-    const urlParams = `enrollment_ids[]=${enrollmentIds.join(
+    const urlParams = `destination_workshop_id=${destinationWorkshopId}&enrollment_ids[]=${enrollmentIds.join(
       '&enrollment_ids[]='
     )}`;
     this.moveEnrollmentRequest = $.ajax({
       method: 'POST',
-      url: `/api/v1/pd/workshops/${
-        this.props.params.workshopId
-      }/enrollments/move?${urlParams}`,
-      traditional: true,
-      data: {
-        enrollments: selectedEnrollments,
-        destination_workshop_id: destinationWorkshopId
-      },
-      dataType: 'json'
+      url: `/api/v1/pd/enrollments/move?${urlParams}`,
+      traditional: true
     }).done(() => {
       // reload
       this.loadEnrollments();
