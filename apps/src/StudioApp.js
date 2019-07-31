@@ -12,7 +12,7 @@ import cookies from 'js-cookie';
 
 // Make sure polyfills are available in all code studio apps and level tests.
 import './polyfills';
-import * as aceMode from './acemode/mode-javascript_codeorg';
+import aceMode from './acemode/mode-javascript_codeorg';
 import * as assetPrefix from './assetManagement/assetPrefix';
 import * as assets from './code-studio/assets';
 import * as blockUtils from './block_utils';
@@ -3284,10 +3284,10 @@ export function singleton() {
   return instance;
 }
 
-if (IN_UNIT_TEST) {
-  let __oldInstance;
+let __oldInstance;
 
-  module.exports.stubStudioApp = function() {
+module.exports.stubStudioApp = function() {
+  if (IN_UNIT_TEST) {
     if (__oldInstance) {
       throw new Error(
         'StudioApp has already been stubbed. Did you forget to call restore?'
@@ -3295,9 +3295,11 @@ if (IN_UNIT_TEST) {
     }
     __oldInstance = instance;
     instance = null;
-  };
+  }
+};
 
-  module.exports.restoreStudioApp = function() {
+module.exports.restoreStudioApp = function() {
+  if (IN_UNIT_TEST) {
     instance.removeAllListeners();
     instance.libraries = {};
     if (instance.changeListener) {
@@ -3305,5 +3307,5 @@ if (IN_UNIT_TEST) {
     }
     instance = __oldInstance;
     __oldInstance = null;
-  };
-}
+  }
+};

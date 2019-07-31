@@ -37,11 +37,11 @@ if (process.env.NODE_ENV !== 'production') {
 let reduxStore;
 let globalReducers = {};
 
-if (IN_UNIT_TEST) {
-  let __oldReduxStore;
-  let __oldGlobalReducers;
+let __oldReduxStore;
+let __oldGlobalReducers;
 
-  module.exports.stubRedux = function() {
+export const stubRedux = function() {
+  if (IN_UNIT_TEST) {
     if (__oldReduxStore) {
       throw new Error(
         'Redux store has already been stubbed. Did you forget to call restore?'
@@ -51,21 +51,20 @@ if (IN_UNIT_TEST) {
     __oldGlobalReducers = globalReducers;
     reduxStore = null;
     globalReducers = {};
-  };
+  }
+};
 
-  module.exports.restoreRedux = function() {
+export const restoreRedux = function() {
+  if (IN_UNIT_TEST) {
     reduxStore = __oldReduxStore;
     globalReducers = __oldGlobalReducers;
     __oldReduxStore = null;
     __oldGlobalReducers = null;
-  };
-}
+  }
+};
 
-if (IN_STORYBOOK || IN_UNIT_TEST) {
-  // Storybooks need the ability to create multiple distinct stores instead of
-  // using a singleton
-  module.exports.createStoreWithReducers = createStoreWithReducers;
-}
+// Storybooks need the ability to create multiple distinct stores instead of
+// using a singleton
 
 /**
  * Get a reference to our redux store. If it doesn't exist yet, create it.
@@ -85,7 +84,7 @@ export function getStore() {
 /**
  * Create our store
  */
-function createStoreWithReducers() {
+export function createStoreWithReducers() {
   return createStore(
     Object.keys(globalReducers).length > 0
       ? redux.combineReducers(globalReducers)

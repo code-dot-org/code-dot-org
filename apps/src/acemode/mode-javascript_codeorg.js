@@ -2,13 +2,15 @@
 import {getAllAvailableDropletBlocks} from '../dropletUtils';
 var annotationList = require('./annotationList');
 
+const aceMode = {};
+
 /**
  * @param {dropletConfig} Required
  * @param {unusedConfig} array of function names to be ignored by the linter. Optional.
  * @param {dropletEditor} Required
  * @param {appType} string, either 'Applab' or 'Gamelab'. Optional.
  */
-exports.defineForAce = function(
+aceMode.defineForAce = function(
   dropletConfig,
   unusedConfig,
   dropletEditor,
@@ -133,7 +135,9 @@ exports.defineForAce = function(
         };
       }.call(Mode.prototype));
 
-      exports.Mode = Mode;
+      aceMode.Mode = Mode;
     }
   );
 };
+
+export default aceMode;

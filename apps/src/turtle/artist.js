@@ -54,7 +54,7 @@ import {blockAsXmlNode, cleanBlocks} from '../block_utils';
 import ArtistSkins from './skins';
 import dom from '../dom';
 import {SignInState} from '../code-studio/progressRedux';
-import Visualization from '@code-dot-org/artist';
+import ArtistVisualization from '@code-dot-org/artist';
 import experiments from '../util/experiments';
 import {ArtistAutorunOptions} from '@cdo/apps/util/sharedConstants';
 import {DEFAULT_EXECUTION_INFO} from '@cdo/apps/lib/tools/jsinterpreter/CustomMarshalingInterpreter';
@@ -193,7 +193,7 @@ var Artist = function() {
 };
 
 module.exports = Artist;
-module.exports.Visualization = Visualization;
+module.exports.Visualization = ArtistVisualization;
 
 /**
  * todo
@@ -301,7 +301,7 @@ Artist.prototype.init = function(config) {
 
   this.linePatterns = config.skin.linePatterns;
 
-  this.visualization = new Visualization({
+  this.visualization = new ArtistVisualization({
     avatar: config.skin.avatarSettings,
     isK1: config.level.isK1,
     isFrozenSkin: this.isFrozenSkin(),
