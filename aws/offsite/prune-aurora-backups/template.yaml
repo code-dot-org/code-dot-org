@@ -12,7 +12,7 @@ Parameters:
 # More info about Globals: https://github.com/awslabs/serverless-application-model/blob/master/docs/globals.rst
 Globals:
   Function:
-    Timeout: 3
+    Timeout: 900
 
 Resources:
   PruneAuroraBackupsRole:
