@@ -47,7 +47,7 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ::ActionController::TestC
     )
 
     assert_routing(
-      {method: :post, path: "/api/v1/pd/workshops/#{@workshop.id}/enrollments/move"},
+      {method: :post, path: "/api/v1/pd/enrollments/move"},
       {controller: CONTROLLER_PATH, action: 'move', enrollment_ids: [@enrollment.id], destination_workshop_id: @unrelated_workshop.id}
     )
   end
@@ -359,7 +359,6 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ::ActionController::TestC
     assert_equal 0, destination_workshop.enrollments.length
 
     post :move, params: {
-      workshop_id: origin_workshop.id,
       destination_workshop_id: destination_workshop.id,
       enrollment_ids: [origin_workshop.enrollments]
     }
