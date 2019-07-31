@@ -774,15 +774,16 @@ class UserTest < ActiveSupport::TestCase
   test "find_for_authentication finds migrated multi-auth email user first" do
     email = 'test@foo.bar'
     migrated_student = create(:student, email: email)
-    migrated_student.primary_contact_info = migrated_student.primary_contact_info
-    migrated_student.primary_contact_info.update(authentication_id: User.hash_email(email))
+
     legacy_student = build(:student, email: email)
-    # skip duplicate email validation
-    legacy_student.save(validate: false)
+    # ignore "Email has already been taken" error
+    assert_raises(ActiveRecord::RecordInvalid) do
+      legacy_student.save(validate: false)
+    end
+    legacy_student.demigrate_from_multi_auth
+    assert_equal legacy_student.hashed_email, migrated_student.hashed_email
 
     looked_up_user = User.find_for_authentication(hashed_email: User.hash_email(email))
-
-    assert_equal legacy_student.hashed_email, migrated_student.hashed_email
     assert_equal migrated_student, looked_up_user
   end
 
@@ -4183,5 +4184,35 @@ class UserTest < ActiveSupport::TestCase
 
   test 'find_channel_owner returns nil for a malformed channel id' do
     assert_nil User.find_channel_owner 'not-a-channel-id'
+  end
+
+  test 'user_school_info count is > 0 and school info is incomplete' do
+    user_school_info = create :user_school_info
+    teacher = user_school_info.user
+    school_info = create :school_info, country: nil, school_id: nil, validation_type: SchoolInfo::VALIDATION_NONE
+    refute teacher.update(school_info: school_info)
+    assert_includes teacher.errors.full_messages, "School info cannot add new school id"
+  end
+
+  test 'user_school_info_count == 0 and school info is not complete' do
+    teacher = create :teacher
+    school_info = create :school_info, country: nil, school_id: nil, validation_type: SchoolInfo::VALIDATION_NONE
+    assert teacher.update(school_info: school_info)
+    assert_equal teacher.user_school_infos.count, 1
+  end
+
+  test 'user_school_info_count == 0 and school info is complete' do
+    teacher = create :teacher
+    school_info = create :school_info
+    assert teacher.update(school_info: school_info)
+    assert_equal teacher.user_school_infos.count, 1
+  end
+
+  test 'count is > 0 and school info is complete' do
+    user_school_info = create :user_school_info
+    teacher = user_school_info.user
+    school_info = create :school_info
+    assert teacher.update(school_info: school_info)
+    assert_equal teacher.user_school_infos.count, 2
   end
 end

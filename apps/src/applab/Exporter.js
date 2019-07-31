@@ -574,7 +574,13 @@ export default {
   exportApp(appName, code, levelHtml, suppliedExpoOpts, config) {
     const expoOpts = suppliedExpoOpts || {};
     if (expoOpts.mode === 'expoPublish') {
-      return this.publishToExpo(appName, code, levelHtml, config);
+      return this.publishToExpo(
+        appName,
+        code,
+        levelHtml,
+        expoOpts.iconFileUrl,
+        config
+      );
     }
     return this.exportAppToZip(
       appName,
@@ -588,7 +594,7 @@ export default {
     });
   },
 
-  async publishToExpo(appName, code, levelHtml, config) {
+  async publishToExpo(appName, code, levelHtml, iconFileUrl, config) {
     const {css, outerHTML} = transformLevelHtml(levelHtml);
     const fontAwesomeCSS = exportFontAwesomeCssEjs({
       fontPath: fontAwesomeWOFFPath
@@ -680,13 +686,13 @@ export default {
       assetLocation: 'appassets/'
     });
     appAssets.push({
-      url: exportExpoIconPng,
+      url: iconFileUrl || exportExpoIconPng,
       dataType: 'binary',
       filename: 'icon.png',
       assetLocation: 'appassets/'
     });
     appAssets.push({
-      url: exportExpoSplashPng,
+      url: iconFileUrl || exportExpoSplashPng,
       dataType: 'binary',
       filename: 'splash.png',
       assetLocation: 'appassets/'
