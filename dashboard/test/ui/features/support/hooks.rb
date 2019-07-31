@@ -18,11 +18,11 @@ Before('@as_teacher') do
   steps 'Given I am a teacher'
 end
 
-Before('@eyesie and @scroll_stitch_mode') do
+Before('@eyes_ie and @scroll_stitch_mode') do
   @eyes.stitch_mode = :scroll
 end
 
-After('@eyesie and @scroll_stitch_mode') do
+After('@eyes_ie and @scroll_stitch_mode') do
   @eyes.stitch_mode = :css
 end
 
