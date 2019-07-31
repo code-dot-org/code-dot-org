@@ -2,12 +2,7 @@ import $ from 'jquery';
 import * as utils from '../../utils';
 import * as elementUtils from './elementUtils';
 import designMode from '../designMode';
-import experiments from '../../util/experiments';
-import {
-  themeOptions,
-  DEFAULT_THEME_INDEX,
-  CLASSIC_THEME_INDEX
-} from '../constants';
+import {themeOptions, DEFAULT_THEME_INDEX} from '../constants';
 /**
  * A map from prefix to the next numerical suffix to try to
  * use as an id in the applab app's DOM.
@@ -158,11 +153,18 @@ export default {
             return ElementType.TEXT_INPUT;
         }
     }
+    let errorMessage =
+      'Project contains an element with an unknown type' +
+      `\nType: ${element.tagName}` +
+      `\nId: ${element.id}` +
+      `\nClass: ${element.className}`;
     // Unknown elements are expected. Return null because we don't know type.
     if (allowUnknown) {
+      console.warn(errorMessage);
       return null;
     }
-    throw new Error('unknown element type');
+    // TODO: Gracefully handle errors from malformed design mode elements
+    throw new Error(errorMessage);
   },
 
   /**
@@ -175,12 +177,9 @@ export default {
   },
 
   getCurrentTheme: function(parentScreen) {
-    const defaultThemeIndex = experiments.isEnabled('applabThemes')
-      ? DEFAULT_THEME_INDEX
-      : CLASSIC_THEME_INDEX;
     return (
       (parentScreen && parentScreen.getAttribute('data-theme')) ||
-      themeOptions[defaultThemeIndex]
+      themeOptions[DEFAULT_THEME_INDEX]
     );
   },
 
@@ -203,9 +202,13 @@ export default {
    * Code to be called after deserializing element, allowing us to attach any
    * necessary event handlers.
    */
-  onDeserialize: function(element, updateProperty) {
-    var elementType = this.getElementType(element);
-    if (elements[elementType] && elements[elementType].onDeserialize) {
+  onDeserialize: function(element, updateProperty, skipIfUnknown) {
+    var elementType = this.getElementType(element, skipIfUnknown);
+    if (
+      elementType &&
+      elements[elementType] &&
+      elements[elementType].onDeserialize
+    ) {
       elements[elementType].onDeserialize(element, updateProperty);
     }
   },

@@ -2,7 +2,6 @@
 hu-HU:
   data:
     display_name:
-      AB_Debug_Artist1: 'Művész hibakeresés #1 (AB)'
       Alien Defender: Földönkívüli támadás
       App Lab Intro 8 - Video Design Mode: 'Videó: Tervező mód'
       App Lab Intro 8 - Video Getting Started: 'Videó: Kezdő lépések'
@@ -34,8 +33,8 @@ hu-HU:
       CSD LEDs Map: 'Áramkör játszótér: LED-EK'
       CSD LEDs Map_2018: 'Áramkör játszótér: LED-EK'
       CSD LEDs Map_2019: 'Áramkör játszótér: LED-EK'
+      CSD Problem Solving Process Video: 'Videó: probléma-megoldási folyamat'
       CSD U1L02 TFMD_2018: Lecke áttekintése
-      CSD U1L02 TFMD_2019: Lecke áttekintése
       CSD U1L03 TFMD_2018: Lecke áttekintése
       CSD U1L03 TFMD_2019: Lecke áttekintése
       CSD U1L04 TFMD_2018: Lecke áttekintése
@@ -99,10 +98,9 @@ hu-HU:
       CSD U2 lists map: HTML listák
       CSD U2 lists map_2018: HTML listák
       CSD U2 lists map_2019: HTML listák
+      CSD U2 publish video: Webhelyének közzététele
       CSD U2L01 TFMD_2018: Lecke áttekintése
-      CSD U2L01 TFMD_2019: Lecke áttekintése
       CSD U2L02 TFMD_2018: Lecke áttekintése
-      CSD U2L02 TFMD_2019: Lecke áttekintése
       CSD U2L03 TFMD_2018: Lecke áttekintése
       CSD U2L03 TFMD_2019: Lecke áttekintése
       CSD U2L04 TFMD_2018: Lecke áttekintése
@@ -186,7 +184,6 @@ hu-HU:
       CSD U3 L9 Freeplay_2019: Ingyenes Játék
       CSD U3 Plotting Shapes Shape Lab: Síkidomok rajzolása
       CSD U3 Plotting Shapes Shape Lab_2018: Síkidomok rajzolása
-      CSD U3 Plotting Shapes Shape Lab_2019: Síkidomok rajzolása
       CSD U3 Random Number Map Level: Véletlen számok
       CSD U3 Random Number Map Level_2018: Véletlen számok
       CSD U3 Random Number Map Level_2019: Véletlen számok
@@ -229,10 +226,7 @@ hu-HU:
       CSD U3 velocity map: Sprite sebesség
       CSD U3 velocity map_2018: Sprite sebesség
       CSD U3 velocity map_2019: Sprite sebesség
-      CSD U3L01 TFMD_2018: Lecke áttekintése
-      CSD U3L01 TFMD_2019: Lecke áttekintése
       CSD U3L02 TFMD_2018: Lecke áttekintése
-      CSD U3L02 TFMD_2019: Lecke áttekintése
       CSD U3L03 TFMD_2018: Lecke áttekintése
       CSD U3L03 TFMD_2019: Lecke áttekintése
       CSD U3L04 TFMD_2018: Lecke áttekintése
@@ -274,9 +268,7 @@ hu-HU:
       CSD U3L22 TFMD_2018: Lecke áttekintése
       CSD U3L22 TFMD_2019: Lecke áttekintése
       CSD U4L01 autoSFLP_2018: Lecke áttekintése
-      CSD U4L01 autoSFLP_2019: Lecke áttekintése
       CSD U4L02 autoSFLP_2018: Lecke áttekintése
-      CSD U4L02 autoSFLP_2019: Lecke áttekintése
       CSD U4L03 autoSFLP_2018: Lecke áttekintése
       CSD U4L03 autoSFLP_2019: Lecke áttekintése
       CSD U4L04 autoSFLP_2018: Lecke áttekintése
@@ -305,10 +297,11 @@ hu-HU:
       CSD U4L15 autoSFLP_2019: Lecke áttekintése
       CSD U4L16 autoSFLP_2018: Lecke áttekintése
       CSD U4L16 autoSFLP_2019: Lecke áttekintése
+      CSD U5 Amazon Data Video_2019: Hogyan használja az Amazon az adatokat
+      CSD U5 Netflix Data Video_2019: Hogyan használja a Netflix az adatokat
+      CSD U5 Waze Data Video_2019: Hogyan használja a Waze az adatokat
       CSD U5L01 autoSFLP_2018: Lecke áttekintése
-      CSD U5L01 autoSFLP_2019: Lecke áttekintése
       CSD U5L02 autoSFLP_2018: Lecke áttekintése
-      CSD U5L02 autoSFLP_2019: Lecke áttekintése
       CSD U5L03 autoSFLP_2018: Lecke áttekintése
       CSD U5L03 autoSFLP_2019: Lecke áttekintése
       CSD U5L04 autoSFLP_2018: Lecke áttekintése
@@ -335,6 +328,7 @@ hu-HU:
       CSD U5L14 autoSFLP_2019: Lecke áttekintése
       CSD U5L15 autoSFLP_2018: Lecke áttekintése
       CSD U5L15 autoSFLP_2019: Lecke áttekintése
+      CSD U6 arrays video: 'Videó: bevezető a Tömbök-höz'
       CSD U6 challenge motorcycle_2018: 'Kihívás: Motorbicikli'
       CSD U6 challenge motorcycle_2019: 'Kihívás: Motorbicikli'
       CSD U6 circuit LED map: Áramkörök és LED-ek
@@ -350,12 +344,9 @@ hu-HU:
       CSD U6 functions paramters video: Paraméteres függvények
       CSD U6 functions paramters video_2018: Paraméteres függvények
       CSD U6 functions paramters video_2019: Paraméteres függvények
-      CSD U6L01 TFMD: Lecke áttekintése
       CSD U6L01 TFMD_2018: Lecke áttekintése
-      CSD U6L01 TFMD_2019: Lecke áttekintése
       CSD U6L02 TFMD: Lecke áttekintése
       CSD U6L02 TFMD_2018: Lecke áttekintése
-      CSD U6L02 TFMD_2019: Lecke áttekintése
       CSD U6L03 TFMD: Lecke áttekintése
       CSD U6L03 TFMD_2018: Lecke áttekintése
       CSD U6L03 TFMD_2019: Lecke áttekintése
@@ -402,6 +393,7 @@ hu-HU:
       'CSD: Animating Sprite Movement_2018': 'Videó: mozgó sprite'
       'CSD: Animating Sprite Movement_2019': 'Videó: mozgó sprite'
       'CSD: For Loop_2018': Számláló ciklusok
+      'CSD: For Loop_2019': 'Videó: Ciklusok'
       'CSD: Sprite Velocity': 'Videó: sebesség'
       'CSD: Sprite Velocity_2018': 'Videó: sebesség'
       'CSD: Sprite Velocity_2019': 'Videó: sebesség'

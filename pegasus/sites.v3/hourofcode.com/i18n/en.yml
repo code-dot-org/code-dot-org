@@ -4,7 +4,6 @@
   language: 'English'
   front_title: 'Join the largest learning event in history, %{campaign_date}'
   coming_soon: 'Coming Soon'
-  compatibility_unsupported_browser: "Your browser is not supported. Please upgrade your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken."
 
   campaign_date_start_short: "Dec. 4"
   campaign_date_start_long: "December 4"
@@ -214,6 +213,7 @@
   register_now: 'Register Now'
   share_on_facebook: 'Share on Facebook'
   share_on_twitter: 'Share on Twitter'
+  promote_additional_resources: 'Additional resources coming soon!'
 
   front_join_us_heading: 'An Hour of Code for every student.'
   front_join_us_announcements: 'Announcements'
@@ -452,6 +452,7 @@
 
   title_country_resources: Country Specific Resources
   title_hoc_advisory_committee: Hour of Code and CSEdWeek Advisory Committee
+  title_hoc_review_committee: Hour of Code and CSEdWeek Review Committee
   title_how_to_promote: Spread the word
   title_how_to_districts: Hour of Code How-To for Districts
   title_how_to_events: Hour of Code Event How-To
@@ -578,7 +579,6 @@
   tutorial_tynkerspin_name: "Spin Draw Animation Kit"
   tutorial_code-avengers_name: "Build a Game with JavaScript"
   tutorial_tynkercq_name: "Candy Quest"
-  tutorial_makeschool_name: "Build an iPhone game in your browser!"
   tutorial_cmgame_name: "CodeMonkey's Game Builder"
   tutorial_codesters_name: "Codesters"
   tutorial_qrm_name: "Accessible programming (with screenreader support)"
@@ -1159,7 +1159,6 @@
   tutorial_tynkerspin_shortdescription: "Create a fun pen that draws a rotating image."
   tutorial_code-avengers_shortdescription: "Learn \"JavaScript\" programming, in a web-browser."
   tutorial_tynkercq_shortdescription: "Go on a quest for candy!"
-  tutorial_makeschool_shortdescription: "Make an iPhone game! Learn by writing code to teach your monster new moves!"
   tutorial_cmgame_shortdescription: "Create your own online game using CoffeeScript, a real-world programming language. "
   tutorial_codesters_shortdescription: "Create your own games, animations, and artwork using Python."
   tutorial_qrm_shortdescription: "Join Mary in her first week programming in a biology lab as she learns Quorum."
@@ -1740,7 +1739,6 @@
   tutorial_tynkerspin_longdescription: "In this project, you'll create an awesome customizable drawing tool. Program your pen, choose an image (or upload your own), and you'll be able to draw a rotating version of that image."
   tutorial_code-avengers_longdescription: "Build a 2 player 2D top-down game with JavaScript in 10 short tasks. Then continue learning some basics of programming (variables and if statements) as you create a Quiz to share with friends. Along the way  earn points and badges as you compete to reach the top of the class leaderboard."
   tutorial_tynkercq_longdescription: "Design your own candy troll character and go on a multi-level quest for candy to help your character find its way home. You'll solve coding puzzles to navigate your character through the human world, while avoiding obstacles and collecting gumdrops and mints."
-  tutorial_makeschool_longdescription: "Learn to code by making an iPhone game using a brand new and beginner-friendly programming language called Swift! Create a Pokemon-inspired action game and write code to teach your monster new moves. You will learn how to use variables, methods, and objects to help your monster win!"
   tutorial_cmgame_longdescription: "Take your coding skills to the next level by learning to build your own games. In this course, you will learn keyboard user-interface and game mechanics as you build a Super Mario™-styled game. Afterwards, you will be able to share your game!"
   tutorial_codesters_longdescription: "Create your own games, animations, and artwork using Python.  Once you're done, share them with friends! Program in Python, a real programming language used every day at companies - our drag and drop toolkit makes it easy to learn!  Try building a basketball game, choreographing a dance, or designing an animated card! "
   tutorial_qrm_longdescription: "Join Mary in learning the Quorum programming language as part of a light hearted and entertaining journey in biology. The activities are student-guided, with online examples, and are accessible to the blind and visually impaired."
@@ -2321,7 +2319,6 @@
   tutorial_tynkerspin_language: "English only"
   tutorial_code-avengers_language: "English, Spanish, Dutch, Russian, Portuguese"
   tutorial_tynkercq_language: "English only"
-  tutorial_makeschool_language: "English only"
   tutorial_cmgame_language: "English only"
   tutorial_codesters_language: "English only"
   tutorial_qrm_language: "English, German"
@@ -2902,7 +2899,6 @@
   tutorial_tynkerspin_string_detail_grades: "Pre-reader - Grade 8"
   tutorial_code-avengers_string_detail_grades: "Grades 6+"
   tutorial_tynkercq_string_detail_grades: "Pre-reader - Grade 5"
-  tutorial_makeschool_string_detail_grades: "Grades 6+"
   tutorial_cmgame_string_detail_grades: "Grades 6+"
   tutorial_codesters_string_detail_grades: "do-not-show"
   tutorial_qrm_string_detail_grades: "Grades 6+"
@@ -3443,7 +3439,7 @@
   tutorial_frzn_string_platforms: "All modern browsers, Android, iOS"
   tutorial_cocom_string_platforms: "All modern browsers"
   tutorial_play-lab_string_platforms: "All modern browsers, Android, iOS"
-  tutorial_boxisland_string_platforms: "Android tablet, iPad, Android phone, iPhone"
+  tutorial_boxisland_string_platforms: "iPad, iPhone"
   tutorial_textcomp_string_platforms: "All modern browsers"
   tutorial_encryption_string_platforms: "All modern browsers"
   tutorial_kanopixel_string_platforms: "Internet Explorer 11, Microsoft Edge, Chrome, Firefox, Safari, Android tablet, iPad"
@@ -3483,7 +3479,6 @@
   tutorial_tynkerspin_string_platforms: "Internet Explorer 11, Microsoft Edge, Chrome, Firefox, Safari, Android tablet, iPad"
   tutorial_code-avengers_string_platforms: "Internet Explorer 11, Microsoft Edge, Chrome, Firefox, Safari"
   tutorial_tynkercq_string_platforms: "Internet Explorer 11, Microsoft Edge, Chrome, Firefox, Safari, Android tablet, iPad"
-  tutorial_makeschool_string_platforms: "Internet Explorer 11, Chrome, Firefox, Safari"
   tutorial_cmgame_string_platforms: "All modern browsers"
   tutorial_codesters_string_platforms: "do-not-show"
   tutorial_qrm_string_platforms: "All modern browsers"
@@ -4064,7 +4059,6 @@
   tutorial_tynkerspin_string_detail_platforms: ""
   tutorial_code-avengers_string_detail_platforms: ""
   tutorial_tynkercq_string_detail_platforms: ""
-  tutorial_makeschool_string_detail_platforms: ""
   tutorial_cmgame_string_detail_platforms: ""
   tutorial_codesters_string_detail_platforms: "do-not-show"
   tutorial_qrm_string_detail_platforms: ""
@@ -4645,7 +4639,6 @@
   tutorial_tynkerspin_string_detail_programming_languages: "Blocks, Tynker, JavaScript, Python"
   tutorial_code-avengers_string_detail_programming_languages: "JavaScript"
   tutorial_tynkercq_string_detail_programming_languages: "Blocks, Tynker"
-  tutorial_makeschool_string_detail_programming_languages: "iOS/Swift"
   tutorial_cmgame_string_detail_programming_languages: "CoffeeScript"
   tutorial_codesters_string_detail_programming_languages: "do-not-show"
   tutorial_qrm_string_detail_programming_languages: "Quorum"

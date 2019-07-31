@@ -613,14 +613,19 @@ is:
         text: þegar ýtt er á {KEY}
         options:
           KEY:
-            '"up"': uppi
+            '"up"': upp
             '"left"': vinstri
-            '"down"': niðri
+            '"down"': niður
             '"right"': hægri
             '"space"': geimur
             '"enter"': Enter
             '"a"': a
+            '"b"': b
+            '"c"': c
             '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
             '"h"': h
             '"i"': i
             '"j"': j
@@ -630,6 +635,7 @@ is:
             '"n"': n
             '"o"': o
             '"p"': p
+            '"q"': q
             '"r"': r
             '"s"': s
             '"t"': t
@@ -637,7 +643,18 @@ is:
             '"v"': v
             '"w"': w
             '"x"': x
+            '"y"': y
             '"z"': z
+            '"0"': '0'
+            '"1"': '1'
+            '"2"': '2'
+            '"3"': '3'
+            '"4"': '4'
+            '"5"': '5'
+            '"6"': '6'
+            '"7"': '7'
+            '"8"': '8'
+            '"9"': '9'
       Dancelab_whenPeak:
         text: þegar {RANGE} hæst
         options:
@@ -718,13 +735,18 @@ is:
             '"when"': þegar
             '"while"': meðan
           KEY:
-            '"up"': uppi
-            '"down"': niðri
+            '"up"': upp
+            '"down"': niður
             '"left"': vinstri
             '"right"': hægri
             '"space"': geimur
             '"a"': a
+            '"b"': b
+            '"c"': c
             '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
             '"h"': h
             '"i"': i
             '"j"': j
@@ -734,6 +756,7 @@ is:
             '"n"': n
             '"o"': o
             '"p"': p
+            '"q"': q
             '"r"': r
             '"s"': s
             '"t"': t
@@ -741,6 +764,7 @@ is:
             '"v"': v
             '"w"': w
             '"x"': x
+            '"y"': y
             '"z"': z
       gamelab_locationAt:
         text: 'staður x: {X} y: {Y}'
@@ -862,8 +886,8 @@ is:
         text: þegar ýtt er á {KEY}
         options:
           KEY:
-            '"up"': uppi
-            '"down"': niðri
+            '"up"': upp
+            '"down"': niður
             '"left"': vinstri
             '"right"': hægri
             '"space"': geimur
@@ -877,8 +901,8 @@ is:
         text: "þegar {DIR} haldið \n{STATEMENT1} þegar sleppt \n{STATEMENT2}"
         options:
           DIR:
-            "'up'": uppi
-            "'down'": niðri
+            "'up'": upp
+            "'down'": niður
             "'left'": vinstri
             "'right'": hægri
       gamelab_whenRightArrow:
@@ -897,8 +921,8 @@ is:
         text: meðan ýtt er á {KEY}
         options:
           KEY:
-            '"up"': uppi
-            '"down"': niðri
+            '"up"': upp
+            '"down"': niður
             '"left"': vinstri
             '"right"': hægri
             '"space"': geimur
@@ -1240,8 +1264,8 @@ is:
             '"when"': þegar
             '"while"': meðan
           KEY:
-            '"up"': uppi
-            '"down"': niðri
+            '"up"': upp
+            '"down"': niður
             '"left"': vinstri
             '"right"': hægri
             '"space"': geimur
@@ -1349,16 +1373,16 @@ is:
         text: færa {DIR}
         options:
           DIR:
-            '"up"': uppi
-            '"down"': niðri
+            '"up"': upp
+            '"down"': niður
             '"left"': vinstri
             '"right"': hægri
       binary_whenKey:
         text: þegar ýtt er á {KEY}
         options:
           KEY:
-            '"up"': uppi
-            '"down"': niðri
+            '"up"': upp
+            '"down"': niður
             '"left"': vinstri
             '"right"': hægri
             '"space"': geimur

@@ -42,7 +42,6 @@ class Pd::Enrollment < ActiveRecord::Base
   belongs_to :workshop, class_name: 'Pd::Workshop', foreign_key: :pd_workshop_id
   belongs_to :school_info
   belongs_to :user
-  has_one :workshop_material_order, class_name: 'Pd::WorkshopMaterialOrder', foreign_key: :pd_enrollment_id
   has_one :pre_workshop_survey, class_name: 'Pd::PreWorkshopSurvey', foreign_key: :pd_enrollment_id
   has_many :attendances, class_name: 'Pd::Attendance', foreign_key: :pd_enrollment_id
   auto_strip_attributes :first_name, :last_name
@@ -116,8 +115,16 @@ class Pd::Enrollment < ActiveRecord::Base
   scope :not_attended, -> {includes(:attendances).where(pd_attendances: {pd_enrollment_id: nil})}
   scope :for_ended_workshops, -> {joins(:workshop).where.not(pd_workshops: {ended_at: nil})}
 
-  # Any enrollment with attendance, for an ended workshop, has a survey
-  scope :with_surveys, -> {for_ended_workshops.attended}
+  # Any enrollment with attendance, for an ended workshop, has a survey.
+  # Except for FiT workshops - no exit surveys for them!
+  # This scope is used in ProfessionalLearningLandingController to direct the teacher
+  #   to their latest pending survey.
+  scope :with_surveys, (lambda do
+    for_ended_workshops.
+      attended.
+      where.not(pd_workshops: {course: COURSE_FACILITATOR}).
+      where('pd_workshops.subject != ? or pd_workshops.subject is null', [SUBJECT_FIT])
+  end)
 
   def has_user?
     user_id

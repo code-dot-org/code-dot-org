@@ -13,6 +13,7 @@ import wrappedSortable from '@cdo/apps/templates/tables/wrapped_sortable';
 import {workshopShape} from '../types.js';
 import {Button} from 'react-bootstrap';
 import {CSF, CSD, CSP} from '../../application/ApplicationConstants';
+import {SubjectNames} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 
 const styles = {
   container: {
@@ -294,7 +295,7 @@ export default class WorkshopTable extends React.Component {
         showSurveyUrl={
           state === 'Ended' ||
           ([CSD, CSP].includes(course) &&
-            subject !== 'Code.org Facilitator Weekend') ||
+            subject !== SubjectNames.SUBJECT_FIT) ||
           (course === CSF && subject === 'Deep Dive')
         }
       />

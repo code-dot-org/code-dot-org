@@ -1114,7 +1114,8 @@ function getUnsafeHtmlReporter(sanitizationTarget) {
 designMode.parseScreenFromLevelHtml = function(
   screenEl,
   allowDragging,
-  prefix
+  prefix,
+  skipUnknownElements
 ) {
   var screen = $(screenEl);
   elementUtils.addIdPrefix(screen[0], prefix);
@@ -1132,7 +1133,8 @@ designMode.parseScreenFromLevelHtml = function(
     var element = $(this).hasClass('ui-draggable') ? this.firstChild : this;
     elementLibrary.onDeserialize(
       element,
-      designMode.updateProperty.bind(element)
+      designMode.updateProperty.bind(element),
+      skipUnknownElements
     );
   });
   return screen[0];
@@ -1164,7 +1166,12 @@ designMode.parseFromLevelHtml = function(rootEl, allowDragging, prefix) {
   );
   var children = $(levelDom).children();
   children.each(function() {
-    designMode.parseScreenFromLevelHtml(this, allowDragging, prefix);
+    designMode.parseScreenFromLevelHtml(
+      this,
+      allowDragging,
+      prefix,
+      true /* skipUnknownElements */
+    );
   });
   children.appendTo(rootEl);
 };

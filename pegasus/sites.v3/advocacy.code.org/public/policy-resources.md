@@ -22,9 +22,13 @@ style_min: true
   * [Models for computer science professional funding](https://docs.google.com/document/d/1yU2YS5YWHEZBN363pUUIy-FBqDDQVoOSFOsSb06qMbM/edit?usp=sharing)
   * [State examples of budget language](https://docs.google.com/document/d/1HYSGUkS4kURfuz-1EZsf9jUOy3bCdz4h60PFiJXtKrU/edit?usp=sharing)
 
+### Teacher certification resources
+* [Recommendations for creating teacher pathways including certification](https://code.org/files/TeacherPathwayRecommendations.pdf)
+* [Micro-credentials: Addressing certification and professional learning](https://advocacy.code.org/micro-credentials.pdf)
+* [Resource listing certification requirements to teach particular courses per state](http://bit.ly/cscertification)
+
 ### Planning and implementation
   * [State planning toolkit](https://docs.google.com/document/d/13N843-BjK9JHXNWKFzJlxhpw7f6Y2pJF6tpV2aHM1HU/edit?usp=sharing)
-  * [Recommendations for creating teacher pathways](https://code.org/files/TeacherPathwayRecommendations.pdf)
   * [Superintendent stories of computer science implementation](https://docs.google.com/document/d/1MFGAPqXh7GjPx0LhUMGR0Co-tT7junpzLlSM_VSziRk/edit?usp=sharing)
   * [District computer science implementation examples](https://docs.google.com/document/d/102y3-j0uZBqSnqWHTiTbo81LyDUX2sZITYF9aHnZ_yc/edit?usp=sharing)
   * [Guidance for standards developers (from the K-12 Computer Science Framework)](http://k12cs.org/wp-content/uploads/2016/09/K%E2%80%9312-CS-Framework-Guidance-for-Standards-Developers.pdf)

@@ -26,8 +26,6 @@ id-ID:
         2-3_Artist_4_a: Untuk menyelesaikan rumah, semua yang perlu kita lakukan adalah
           menggambar persegi!
       2-3 Artist 6:
-        2-3_Artist_6_a: 'Untuk membuat sudut kecil tersebut, Anda harus memutar _lebih
-          jauh_ dari yang kamu buat sebelumnya dengan bujur sangkar.   '
         2-3_Artist_6_b: Karena aku sudah menghadap ke kanan, akan lebih mudah memulai
           dengan berjalan maju, lalu putar ke arah kiri untuk membuat segitiga.
         2-3_Artist_6_c: Tiap sisi dari segitiga sama panjang dengan setiap sisi dari
@@ -39,12 +37,9 @@ id-ID:
       2-3 Artist 8:
         2-3_Artist_8_a: Jika kamu memotong 200 menjadi setengah, berapa lebar piksel
           untuk setiap bujur sangkar?
-      2-3 Artist 9:
+      2-3 Artist 9 NEW:
         2-3_Artist_9_a: Berlian ini benar-benar nyata terdapat persegi pada sisinya
       2-3 Artist Debugging 10:
-        2-3_Artist_Debugging_10_a: Ingat, kamu harus mengganti kontrop panel 10 piksel
-          _lebih lebar_...jadi pastikan untuk **menambah** 10 dari angka apapun yang
-          kamu ganti.
         2-3_Artist_Debugging_10_b: |-
           **Coba dan gagal diterima di sini!**
           Mulai dengan mengganti satu angka satu persatu.
@@ -60,11 +55,6 @@ id-ID:
       2-3 Artist Debugging 7:
         2-3_Artist_Debugging_7_a: Apa yang terjadi jika si pelukis berjalan atau melompat
           ke belakang setelah dia menggambar garis pertama?
-      2-3 Artist Debugging 8:
-        2-3_Artist_Debugging_8_a: |-
-          Berapa kali gambar figur saya digambar ulang?
-          Berapa kali gambar tersebut "sebaiknya" digambar ulang?
-          Pada bagian program mana yang harus kamu rubah?
       2-3 Artist Debugging 9:
         2-3_Artist_Debugging_9_a: Si pelukis harus berbelok 60 derajat ke kiri sebelum
           mulai menggambar!
@@ -97,48 +87,6 @@ id-ID:
         2-3_Artist_Functions_4_a: Seniman membutuhkan 120 derajat antara setiap persegi
           untuk menyelesaikan desain ini.
       2-3 Artist Loops New 11:
-        2-3_Artist_Loops_New_11_a: |-
-          Mengingat kode tersebut dari teka-teki terakhir :
-          <xml>
-          <block type="when_run" deletable="false" movable="false">
-          <next>
-          <block type="controls_repeat">
-
-          <title name="TIMES">8</title>
-          <statement name="DO">
-          <block type="draw_colour" inline="true">
-          <value name="COLOUR">
-          <block type="colour_random"/>
-          </value>
-          <next><block type="draw_turn_by_constant_dropdown">
-          <title name="DIR">putarkekanan</title>
-          <title name="VALUE" config="45,60,90,120,180">45</title>
-          <next>
-          <block type="draw_move_by_constant">
-          <title name="DIR">bergerakmaju</title>
-          <title name="VALUE">50</title>
-          <next>
-          <block type="draw_turn_by_constant_dropdown">
-          <title name="DIR">putarkekiri</title>
-          <title name="VALUE" config="45,60,90,120,180">90</title>
-          <next>
-          <block type="draw_move_by_constant">
-          <title name="DIR">bergerakmaju</title>
-          <title name="VALUE">50</title>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </statement>
-          </block>
-          </next>
-          </block>
-          </xml>
         2-3_Artist_Loops_New_11_b: Giliran baru anda harus berada di **akhir** pada
           kode dalam lingkaran.
       2-3 Artist Loops New 12:
@@ -153,9 +101,6 @@ id-ID:
           ke arah yang benar untuk memulai yang berikutnya.  Karena ini, kami tidak
           ingin menambahkan sebuah tambahan 'belok ke kiri oleh' blok sebelum memulai
           kembali.
-        2-3_Artist_Loops_New_13_b: 'Untuk membuat setiap berlian, seniman membutuhkan:   -
-          bergerak- belok ke kanan 120 derajat- bergerak- belok ke kanan 60 derajat  Kemudian
-          mengerjakan semua nya kembali!'
       2-3 Artist Loops New 9:
         2-3_Artist_Loops_New_9_a: Seniman butuh untuk belok 45 derajat ke kanan sebelum
           memulai menggambar.
@@ -186,10 +131,6 @@ id-ID:
           memblok ke bawah? Mencoba memperlakukan bunga merah sama seperti bunga ungu!
         2-3_Bee_Conditionals_14_b: Jika bunga merah itu ungu, bisakah Anda mencari
           tahu bagaimana menggunakan loop `ulangi` tambahan untuk mengurangi kode?
-        2-3_Bee_Conditionals_14_c: |-
-          Mencoba memecahkan ini menjadi dua bagian terpisah:  ![](https://images.code.org/895a52f3febff9edb83979f7861cf67a-image-1469640892331.png)
-
-          1.  Mengumpulkan nektar 3 kali  - Bergerak maju 5 kali  - Periksa untuk melihat jika nektar, menjadi: mendapatkannya  - Putar kiri  2) Membuat madu   - Bergerak maju satu kali  - Membuat dua madu
       2-3 Bee Conditionals 15:
         2-3_Bee_Conditionals_15_a: 'Ingat: Bunga ungu hanya memiliki sekitar 0 atau
           1 nektar dan mereka dapat mengubah setiap kali anda menjalankan program.'
@@ -307,10 +248,6 @@ id-ID:
         4-5_Artist_4_a: |-
           Satu lingkaran penuh adalah 360 derajat!
           Itulah jumlah berapa banyak pengulangan pada kode ini sebelum satu lingkaran diselesaikan (begeser tiap 1 derajat sekali)!
-      4-5 Artist 5:
-        4-5_Artist_5_a: |-
-          "Trial dan Error" adalah metode yang baik, namun kamu bisa menyelesaikan program dengan membagi 90 derajat sepertiga.
-          **90 / 3 = **\_****
       4-5 Artist 7:
         4-5_Artist_7_a: 'Sudut mana yang paling kecil? pada sudut berapa si pelukis
           bediri? '
@@ -318,14 +255,7 @@ id-ID:
         4-5_Artist_8_a: "Panjang dari tiap sisi adalah 240 piksel. Artinya, panjang
           dari dua garis pendek tersebut adalah:\n**800 - 240 - 240 = 320**\nBerapa
           hasil dari **320/2** ? "
-        4-5_Artist_8_b: |-
-          Soal pada gambar ini dapat dipecahkan dengan 2 cara!
-
-          -   Gambarlah dua persegi panjang yang panjangnya **120** dan tingginya **160** dengan sisi yang tumpang tindih.
-          -   Gambar satu persegi panjang dengan panjang **240** dan tinggi **160**, lalu tambahkan sebuah garis di tengah-tengahnya.
       4-5 Artist 9:
-        4-5_Artist_9_a: 'Ketika sebuah segitiga sama sisi, semua sisi dan semua sudut
-          nya sama.  '
         4-5_Artist_9_b: Anda akan perlu untuk menggambar tiga segitiga pada ukuran
           yang sama. Jangan lupa untuk lompat ke posisi yang baru anda setelah masing-masing.
       4-5 Artist Assessment 1:
@@ -412,64 +342,6 @@ id-ID:
           dari hexagon \*\*, diikuti oleh \*\* 2/3 dari segitiga \*\*. '
         Course_4_Artist_12_b: 'Bentuk unitnya hampir sama seperti pada teka-teki terakhir,
           kecuali setengah segi sedikit lebih besar. '
-        Course_4_Artist_12_c: '1.  Tiga baris pertama panjangnya 60 piksel dan Anda
-          perlu memutar 60 derajat. 2) Dua baris berikutnya panjangnya 80 piksel dan
-          Anda perlu memutar 120 derajat '
-        Course_4_Artist_12_d: |-
-          **Solusi**
-
-          <xml>
-          <block type="when_run" deletable="false" movable="false">
-          <next>
-          <block type="draw_colour" inline="true" id="draw-color">
-          <value name="COLOUR">
-          <block type="colour_picker">
-          <title name="COLOUR">#843179</title>
-          </block>
-          </value>
-          <next>
-          <block type="controls_repeat">
-          <title name="TIMES">6</title>
-          <statement name="DO">
-          <block type="controls_repeat">
-          <title name="TIMES">3</title>
-          <statement name="DO">
-          <block type="draw_move_by_constant">
-          <title name="DIR">moveForward</title>
-          <title name="VALUE">60</title>
-          <next>
-          <block type="draw_turn_by_constant">
-          <title name="DIR">turnRight</title>
-          <title name="VALUE">60</title>
-          </block>
-          </next>
-          </block>
-          </statement>
-          <next>
-          <block type="controls_repeat">
-          <title name="TIMES">2</title>
-          <statement name="DO">
-          <block type="draw_move_by_constant">
-          <title name="DIR">moveForward</title>
-          <title name="VALUE">80</title>
-          <next>
-          <block type="draw_turn_by_constant">
-          <title name="DIR">turnRight</title>
-          <title name="VALUE">120</title>
-          </block>
-          </next>
-          </block>
-          </statement>
-          </block>
-          </next>
-          </block>
-          </statement>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </xml>
       Course 4 Artist 6:
         Course_4_Artist_6_a: Ada 3 segitiga dalam 360 derajat rotasi... berapa kali
           tidak 3 pergi ke 360?
@@ -591,72 +463,6 @@ id-ID:
           ulangi.
         Course_4_Artist_Functions_Inspiration_b: Mencoba mengubah dengan lebih dari
           90 derajat di luar 'ulangi loop', tetapi masih di dalam 'untuk loop'.
-        Course_4_Artist_Functions_Inspiration_c: |-
-          **solusi:**
-          <xml>
-          <block type="when_run" deletable="false" movable="false">
-          <next>
-          <block type="controls_for_counter" inline="true">
-          <mutation counter="counter"></mutation>
-          <value name="FROM">
-          <block type="math_number">
-
-          <title name="NUM">1</title>
-          </block>
-          </value>
-          <value name="TO">
-          <block type="math_number">
-          <title name="NUM">14</title>
-          </block>
-          </value>
-          <value name="BY">
-          <block type="math_number">
-          <title name="NUM">1</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="draw_colour" inline="true" id="draw-color">
-          <value name="COLOUR">
-          <block type="colour_random"/>
-          </value>
-          <next>
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="variables_get">
-          <title name="VAR">membalas</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="procedures_callnoreturn">
-          <mutation name="draw a square 20"></mutation>
-          <next>
-          <block type="jump_by_constant">
-          <title name="DIR">melompat maju</title>
-          <title name="VALUE">20</title>
-          <next>
-          <block type="draw_turn_by_constant">
-          <title name="DIR">belok kekana</title>
-          <title name="VALUE">3</title>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </statement>
-          <next>
-          <block type="draw_turn_by_constant">
-          <title name="DIR">belok kekiri</title>
-          <title name="VALUE">100</title>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </statement>
-          </block>
-          </next>
-          </block>
-          </xml>
       Course 4 Artist Functions challenge:
         Course_4_Artist_Functions_challenge_a: Bagian dari memahami bagaimana menggunakan
           fungsi adalah mencari tahu mana yang Anda butuhkan, dan mana yang tidak.
@@ -667,46 +473,10 @@ id-ID:
         Course_4_Artist_Functions_challenge_d: Anda akan perlu untuk berbelok ke kiri
           90 derejat di luar 'ulang', tetapi masih didalam 'untuk loop'.
       Course 4 Artist Inspire:
-        Course_4_Artist_Inspire_a: Setelah anda menyelesaikan satu persegi, cobalah
-          melompat baju setengah panjangnya sebelum berbalik dan membuat lain.
         Course_4_Artist_Inspire_b: Setiap persegi dan lompatan diulang (menggunakan
           peralihan belok kiri) untuk membuat sebuah unit penuh seperti pinwheel.
         Course_4_Artist_Inspire_c: Setiap pinwheel juga diulang empat kali, dengan
           belok kekanan dari **360/sisi**.
-        Course_4_Artist_Inspire_d: '**solusi:**<xml><block type="when_run" deletable="false"
-          movable="false"><next><block type="draw_colour" inline="true" id="draw-color"><value
-          name="COLOUR"><block type="colour_picker"><title name="COLOUR">#843179</title></block></value><next><block
-          type="variables_set" inline="false"><title name="VAR">sisi</title><value
-          name="VALUE"><block type="math_number"><title name="NUM"></block></value><next><block
-          type="variables_set" inline="false"><title name="VAR">panjang</title><value
-          name="VALUE"><block type="math_arithmetic" inline="true"><title name="OP">PEMBAGI</title><value
-          name="A"><block type="math_number"><title name="NUM">200</title></block></value><value
-          name="B"><block type="variables_get"><title name="VAR">sisi</title></block></value></block></value><next><block
-          type="controls_repeat_ext" inline="true"><value name="TIMES"><block type="variables_get"><title
-          name="VAR">sisi</title></block></value><statement name="DO"><block type="controls_repeat_ext"
-          inline="true"><value name="TIMES"><block type="variables_get"><title name="VAR">sisi</title></block></value><statement
-          name="DO"><block type="controls_repeat_ext" inline="true"><value name="TIMES"><block
-          type="variables_get"><title name="VAR">sisi</title></block></value><statement
-          name="DO"><block type="draw_move" inline="true"><title name="DIR">bergerakMaju</title><value
-          name="VALUE"><block type="variables_get"><title name="VAR">panjang</title></block></value><next><block
-          type="draw_turn" inline="true"><title name="DIR">belokKanan</title><value
-          name="VALUE"><block type="math_arithmetic" inline="true"><title name="OP">PEMBAGI</title><value
-          name="A"><block type="math_number"><title name="NUM">360</title></block></value><value
-          name="B"><block type="variables_get"><title name="VAR">sisi</title></block></value></block></value></block></next></block></statement><next><block
-          type="jump" inline="true"><title name="DIR">lompatkedepan</title><value
-          name="VALUE"><block type="math_arithmetic" inline="true"><title name="OP">PEMBAGI</title><value
-          name="A"><block type="variables_get"><title name="VAR">panjang</title></block></value><value
-          name="B"><block type="math_number"><title name="NUM">2</title></block></value></block></value><next><block
-          type="draw_turn" inline="true"><title name="DIR">belokKIri</title><value
-          name="VALUE"><block type="math_arithmetic" inline="true"><title name="OP">PEMBAGI</title><value
-          name="A"><block type="math_number"><title name="NUM">360</title></block></value><value
-          name="B"><block type="variables_get"><title name="VAR">sisi</title></block></value></block></value></block></next></block></next></block></statement><next><block
-          type="jump" inline="true"><title name="DIR">lompatMaju</title><value name="VALUE"><block
-          type="variables_get"><title name="VAR">panjang</title></block></value><next><block
-          type="draw_turn" inline="true"><title name="DIR">blokKanan</title><value
-          name="VALUE"><block type="math_arithmetic" inline="true"><title name="OP">PEMBAGI</title><value
-          name="A"><block type="math_number"><title name="NUM">360</title></block></value><value
-          name="B"><block type="variables_get"><title name="VAR">sisi</title></block></value></block></value></block></next></block></next></block></statement></block></next></block></next></block></next></block></next></block></xml>'
       Course 4 Artist Vars 13:
         Course_4_Artist_Vars_13_a: Anda memerlukan dua ulangi loop (satu di dalam
           yang lain) 'sisi' kedua berulang kali.
@@ -769,16 +539,11 @@ id-ID:
           fungsi. "
       Course 4 SCF 1a:
         Course_4_SCF_1a_a: Ingat fungsi anda dari tahap 16.
-        Course_4_SCF_1a_b: "Lihatlah jalan ini sebagai rute utama Anda: \n\n![](https://images.code.org/1c3feab70af706409b3a05af4dc83c2e-image-1469726967858.png)"
         Course_4_SCF_1a_c: Anda harus mempertimbangkan penggunaan `untuk loop`. tidak
           untuk langkah, tapi untuk fungsi parameter.
       Course 4 SCF 1b:
         Course_4_SCF_1b_a: "Perhatikan bentuk dari semua poin madu yang serupa. \n\nTempatan
           yang bagus untuk fungsi!"
-        Course_4_SCF_1b_b: |-
-          Lihatlah ide ini  untuk bagaimana lebah mungkin berpergian:
-
-          ! \[] (<https://images.code.org/996ab4a2de6048cbb99b84c56cc4ad61-image-1469726859769.png>)
         Course_4_SCF_1b_c: Anda harus mempertimbangkan penggunaan dari `untuk loop`
           untuk jarak tempuh lebah.
       Course 4 SCF 2:
@@ -865,8 +630,6 @@ id-ID:
           membuat kode lebih bersih karena Anda dapat mengulang kode yang sama beberapa
           kali, sebagai gantinya membuat salinan baru untuk setiap rangkaian angka.
       Course 4 SCV 2:
-        Course_4_SCV_2_a: "Lengkapilah gambar dari 10 bunga ini: \n![](https://images.code.org/bac2a606dfa59c00409294499540267d-image-1469641972385.png)
-          \ \nyang terdiri dari 10 dekagons ini: \n![](https://images.code.org/1e15f278c9c1606f90a2490ec3a94eb4-image-1469642051512.png)"
         Course_4_SCV_2_b: 'Desain ini menggunakan loop bersarang (tiga deep). Semua
           loop menjalankan `sisi` kali. '
         Course_4_SCV_2_c: Seniman berubah ke kiri saat membuat setiap decagon, tapi
@@ -889,13 +652,11 @@ id-ID:
           satu untuk membuat madu. '
         Course_4_SCV_4_c: "Lihatlah suatu pilihan ini untuk gerakan: \n\n![](https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png)"
       Course 4 SCV 5:
-        Course_4_SCV_5_a: Lihatlah pilihan gerakan ini:![](https://images.code.org/7f6f09c55cf9552a91fc1d33f44a7315-image-1469641639330.png)
         Course_4_SCV_5_b: Melalui loop Setiap waktu, bunga-bunga memiliki dua kurang
           nektar dan lebah perlu untuk membuat satu lagi madu.
         Course_4_SCV_5_c: Perhatikan bahwa pada awal loop diluar, lebah bergerak beberapa
           kali yang ada nektar di bunga berikutnya.
       Course 4 SCV 6:
-        Course_4_SCV_6_a: Lihatlah seperti apa bentuk tunggal yang lengkap![](https://images.code.org/9e30d3a87186cefe730984feee195806-image-1469642178866.png)
         Course_4_SCV_6_b: 'Anda akan mendapatkan keuntungan dari menciptakan 8 variabel:
           merah1, hijau1, biru1, merah2, hijau2, biru2, panjang, dan sisi.'
         Course_4_SCV_6_c: Masing-masing bentuk 5 sisi ini rusak menjadi potongan panjang
@@ -903,11 +664,11 @@ id-ID:
           = 100, 50, 150).
         Course_4_SCV_6_d: 'Zig, belok kiri oleh `360` /`sisi`. Untuk zag, belok kanan
           oleh `360` /`sisi`. '
-        Course_4_SCV_6_e: 'Sisa dari program ini adalah sangat standar untuk membuat
-          penuh rotasi 360 derajat dari bentuk, kecuali bahwa kita adalah tumpang
-          tindih bentuk setengah, jadi kita harus belok ke kanan dengan`180`/`sisi`,
-          yang berarti bahwa kita perlu dua kali lebih banyak seperti biasanya dari
-          mereka (`sisi`\*`2` pengulangan). '
+      CourseE_HOC 2018 Level_7a:
+        aquatic7: Anda bisa menggunakan blok jalan if untuk membantu berbelok.
+      CourseE_HOC 2018 Level_9b:
+        voyage_aquatic_9a: Lihat blok karang merah dan biru? Gunakan mereka sebagai
+          tongkat penunjuk jalan untuk belok kiri atau kanan melalui batu karang.
       Function intro Ryan:
         Function_intro_Ryan_b: Jika anda menyebut fungsi dengan benar, ini adalah
           jalan yang akan anda tempuh...
@@ -918,6 +679,11 @@ id-ID:
           jalan yang akan anda tempuh...
         Function_intro_Ryan_a: Kamu bisa memanggil fungsi berulang kali di dalam program!  Coba
           panggil dua kali untuk memecahkan teka-teki ini.
+      HOC 2018 Level_7a:
+        aquatic7: Anda bisa menggunakan blok jalan if untuk membantu berbelok.
+      HOC 2018 Level_9b:
+        voyage_aquatic_9a: Lihat blok karang merah dan biru? Gunakan mereka sebagai
+          tongkat penunjuk jalan untuk belok kiri atau kanan melalui batu karang.
       MC_HOC_2017_01_RETRY:
         MC_HOC_2017_01_RETRY_a: Tarik satu blok `pindah maju` dari kotak alat ke ruang
           kerja dan posisikan di bawah blok `ketika dijalankan`.
@@ -1078,18 +844,10 @@ id-ID:
       NEW Course 4 Artist Params 11:
         NEW_Course_4_Artist_Params_11_a: Terdapat lebih dari satu nomor yang perlu
           diganti dengan variabel di dalam fungsi.
-      NEW Course 4 Artist Params 13:
-        NEW_Course_4_Artist_Params_13_a: 'Anda akan perlu untuk membagi _sekeliling_
-          dengan jumlah sisi dalam rangka untuk menjaga bentuk ukuran yang sama secara
-          keseluruhan. '
       NEW Course 4 Artist Params inspire:
         brush_width: Setiap item akan perlu loop sendiri 'sementara'. Kami menetapkan
           sikat lebar 1, kemudian warna biru sebelum kita melakukan apa pun.
         double_loop: Mencoba menempatkan 'untuk loop' dalam 'ulangi' loop.
-        specifics: "'Untuk loop' berjalan dari tiga sampai tujuh belas untuk masing-masing
-          dari enam \"kelopak\" sebelum pindah ke membuat berikutnya, menggambar bentuk
-          dengan hanya angka ganjil dari sisi. \n\nBlok 'diatur alpha' menggunakan
-          Divisi memudar warna seperti counter semakin tinggi."
         after: Ketika Anda selesai dengan "petal", pastikan untuk 'bergerak maju'
           20 piksel sebelum Anda membuat 60 derajat rotasi.
       NEW Course 4 Bee For Loops 8:
@@ -1232,6 +990,36 @@ id-ID:
         mc_9_b: Bintik hitam di dinding adalah batubara! Gunakan `hancurkan blok`
           untuk menambang batubara.
         mc_9_c: Gunakan `letakkan obor` untuk menempatkan obor di tempat anda berdiri.
+      behaviors 2:
+        behavior hint: |-
+          Coba edit perilaku!
+
+          \-Ke arah mana roket perlu bergerak?
+      behaviors 3:
+        behavior hint: |-
+          Coba edit perilaku!
+
+          \-Nilai yang mana yang mengontrol kecepatan setiap peri?
+      behaviors 3a:
+        behavior hint: |-
+          Coba edit perilaku!
+
+          \-Nilai yang mana yang mengontrol kecepatan setiap peri?
+      behaviors 5:
+        target hint: Anda bisa memilih domba mana saja dari empat domba. Yang manakah
+          yang diinginkan astronot?
+        behavior hint: Edit perilaku untuk memecahkan teka teki. Peri astronot perlu
+          bergerak dalam dua arah untuk berhenti secara diagonal.
+      behaviors 6:
+        behavior hint: |-
+          Coba edit perilaku!
+
+          \-Nilai yang mana yang mengontrol kecepatan setiap peri?
+      behaviors 7:
+        behavior hint: |-
+          Coba edit perilaku!
+
+          \-Nilai yang mana yang mengontrol kecepatan setiap peri?
       course1_artist_loops_challenge1:
         courseA_artist_loops_challenge1_b: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
         courseA_artist_loops_challenge1_c: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
@@ -1257,26 +1045,6 @@ id-ID:
         courseA_collector_loops_challenge1_c: Terdapat 6 permata di sisi kanan gua,
           tetapi anda hanya butuh untuk bergerak dan mengumpulkan 5 kali. Anda tahu
           kenapa?
-      course1_collector_loops_challenge3:
-        courseB_collector_loops_challenge1_b: |-
-          Mulailah dengan mengulang perintahnya `pindah ke selatan` dan\` lihat hasilnya '.
-          <xml>
-          <block type="maze_moveSouth"/><next>
-          <block type="collector_collect"/></next>
-          </xml>
-        courseB_collector_loops_challenge1_a: |-
-          Model utara sedikit berbeda dengan model selatan.
-          <xml>
-          <block type="collector_collect"/><next>
-          <block type="maze_moveNorth"/></next>next>
-          </xml>
-        courseB_collector_loops_challenge1_c: |-
-          Pindahkan dua kali ke Timur di antara setiap jalur.
-          <xml>
-            <block type="maze_moveEast"/><next>
-            <block type="maze_moveEast"/></next>next>
-            </xml>
-          Kamu dapat melakukan dengan 14 blok saja. Klik satu petunjuk lagi untuk melihat solusinya.
       course1_collector_loops_challenge4:
         courseB_collector_loops_challenge2_a: Jika terjadi sesuatu kesalahan, jangan
           takut untuk memulai kembali. Jangan menyerah!
@@ -1350,13 +1118,7 @@ id-ID:
           berbeda. Masing-masing mempunyai pola yang dapat anda ulangi.
         courseC_maze_loops_challenge1_b: Di antara setiap blok `repeat`, anda akan
           perlu`belok kiri` atau `belok kanan` untuk mencari Scrat untuk pola selanjutnya.
-        courseC_maze_loops_challenge1_c: |-
-          Jika kamu membuatnya jauh, Anda hanya perlu `belok kiri` lalu`maju sedikit` beberapa kali. Jangan menyerah!
-
-          ![](<https://images.code.org/7696c5c16b8ddf1d53436cdc7fb6346d-image-1494101728016.14.34 PM.png>)
       course2_maze_programming_challenge2:
-        courseC_maze_programming_challenge2_a: "-   Jika kamu menyuruh saya mundur,
-          berhati-hatilah agar saya membuat cara yang benar! \\*"
         courseC_maze_programming_challenge2_b: Solusi terpendek hanya menggunakan
           5 blok, tapi menggunakan blok `repeat`!
       course3_bee_debugging_challenge1:
@@ -1400,10 +1162,6 @@ id-ID:
           dengan menambahkan lebih banyak langkah maju di antara belokan.
         courseC_maze_debugging_challenge2_b: Jika Anda terjebak, Anda dapat selalu
           memulai dari awal atau menghapus semua kode dan menemukan caramu sendiri!
-        courseC_maze_debugging_challenge2_c: |-
-          Ada dua bagian berbeda yang bisa Anda ikuti hanya dengan menggunakan `move forward`, dan hanya empat belokan. Jika Anda menemukan cara untuk menggunakan blok `repeat`, mungkin disana ada lebih banyak!
-
-          ![](<https://images.code.org/8a4665671cda35fea1f629a5bcc39e26-image-1493502743154.48.05 PM.png>)
       course4_artist_binary_challenge2:
         courseD_artist_binary_challenge2_a: Hanya ada beberapa baris yang salah dalam
           program aslinya. Jika salah satu pendekatan gagal, kembali dan coba lagi.
@@ -1418,10 +1176,6 @@ id-ID:
           Setelah`for loop`Anda bisa` mundur kebelakang\` \*\* waktu lama \*\*.
 
           Kamu mungkin perlu membaca petunjuk ini beberapa kali untuk memahaminya. Dalam bagian \*\* bold \*\* adalah petunjuk tentang bagaimana menggunakan dua loop `repeat` yang kamu perlukan.
-      course4_bee_fwp_challenge2:
-        courseF_bee_fwp_challenge2_b: |-
-          Apakah Anda kehabisan blok 'move forward`?
-          Coba gunakan * detik *`for loop`di program utama anda. ** Catatan: ** Berhati-hatilah untuk tidak membingungkan`counter`dengan` counter2\` dalam kode anda.
       course4_collector_nested_loops_challenge2:
         courseD_bee_nested_loops_challenge2_a: Jangan lupa bahwa anda bisa `repeat`
           satu perintah atau pola yang lebih panjang. anda bahkan bisa `repeat` sebuah
@@ -1695,11 +1449,6 @@ id-ID:
         courseA_collector_loops_challenge1_c: Terdapat 6 permata di sisi kanan gua
           saat anda memulai, tetapi anda hanya perlu bergerak untuk mendapatkan harta
           karun 5 kali ke Selatan. Anda tahu kenapa?
-      courseA_collector_loops_challenge2:
-        courseA_collector_loops_challenge2_b: Anda hanya perlu menggunakan 1 blok
-          untuk memecahkan ini.
-        courseA_collector_loops_challenge2_a: Anda dapat memindahkan kembali atas
-          jalan yang kedua kalinya sebelum bergerak ke selatan.
       courseA_collector_loops_challenge2kp:
         courseA_collector_loops_challenge2kp_b: Cobalah jalan ini untuk membuat anda
           mendapatkan sebuah solusi.
@@ -1715,9 +1464,6 @@ id-ID:
           mendapatkan sebuah solusi.
         courseA_collector_loops_challenge2kp_a: Bisakah Anda menggunakan loop untuk
           memecahkan teka-teki ini?
-      courseA_collector_preLoops5:
-        courseA_collector_preLoops5_a: Anda harus pergi dua arah yang berbeda untuk
-          mendapatkan satu permata!
       courseA_harvester_loops3:
         courseA_harvester_loops3_b: Untuk mengulang kode, seret sebuah loop `repeat`,
           kemudian letakkan blok yang anda inginkan di dalamnya.
@@ -3291,12 +3037,8 @@ id-ID:
         courseC_harvester_loops_challenge2_b: Anda bisa mengulang `bergerak maju`
           dan`memilih lettuce` sebanyak yang Anda butuhkan, lalu belok di setiap sudut.
       courseC_maze_debugging1:
-        courseD_collector_debugging1_a: |-
-          Gunakan tombol "step" untuk melihat apakah semuanya benar pada langkah pertama.
-          Bagaimana dengan yang kedua?
-          Di mana salahnya?
-        courseD_collector_debugging1_b: Apakah anda melihat pola yang bisa dibuat
-          lebih sederhana menggunakan loop `repeat`?
+        courseC_maze_debugging1_b: Ada 1 blok yang perlu ditambahkan untuk melengkapi
+          teka-teki ini.
       courseC_maze_debugging1_2018:
         courseC_maze_debugging1_b: Ada 1 blok yang perlu ditambahkan untuk melengkapi
           teka-teki ini.
@@ -3304,12 +3046,10 @@ id-ID:
         courseC_maze_debugging1_b: Ada 1 blok yang perlu ditambahkan untuk melengkapi
           teka-teki ini.
       courseC_maze_debugging2:
-        courseD_collector_debugging2_a: |-
-          Gunakan tombol "step" untuk melihat apakah semuanya benar pada langkah pertama.
-          Bagaimana dengan yang kedua?
-          Di mana salahnya?
-        courseD_collector_debugging2_b: Apakah anda melihat pola yang bisa dibuat
-          lebih sederhana menggunakan loop `repeat`?
+        courseC_maze_debugging2_a: Ada banyak kode berharga di ruang kerja. Jangan
+          hanya menghapus semuanya dan memulai lagi dari awal!
+        courseC_maze_debugging2_c: Tidak tahu apa yang salah? Coba jalankan kode beberapa
+          kali untuk melihat apa yang terjadi.
       courseC_maze_debugging2_2018:
         courseC_maze_debugging2_a: Ada banyak kode berharga di ruang kerja. Jangan
           hanya menghapus semuanya dan memulai lagi dari awal!
@@ -3321,10 +3061,8 @@ id-ID:
         courseC_maze_debugging2_c: Tidak tahu apa yang salah? Coba jalankan kode beberapa
           kali untuk melihat apa yang terjadi.
       courseC_maze_debugging3:
-        courseD_collector_debugging3_a: Adakah tempat dimana Laurel melakukan suatu
-          hal yang tidak masuk akal? apa yang terjadi ketika kamu mengganti blok tersebut?
-        courseD_collector_debugging3_b: Cobalah menyederhanakan kode menggunakan loop
-          bersarang.
+        courseC_maze_debugging3_b: Tidak tahu apa yang salah? Coba jalankan kode beberapa
+          kali untuk melihat apa yang terjadi.
       courseC_maze_debugging3_2018:
         courseC_maze_debugging3_b: Tidak tahu apa yang salah? Coba jalankan kode beberapa
           kali untuk melihat apa yang terjadi.
@@ -3332,15 +3070,11 @@ id-ID:
         courseC_maze_debugging3_b: Tidak tahu apa yang salah? Coba jalankan kode beberapa
           kali untuk melihat apa yang terjadi.
       courseC_maze_debugging4:
-        courseD_collector_debugging4_a: "Coba gunakan proses debug beberapa kali berturut-turut.
-          \nApa yang menyebabkan masalah pertama?\nSetelah masalah itu diperbaiki,
-          apa yang salah?"
-        courseD_collector_debugging4_b: Jika anda mengalami kesulitan untuk mencari
-          tahu bagaimana membuat pola langkah tangga, cobalah menelusuri dengan jari
-          anda dan ucapkan perintah dengan suara keras. Jangan lupa tunjukkan arah
-          belokan!
-        courseD_collector_debugging4_c: Loop ini hanya kehilangan satu blok. Bisakah
-          kamu temukan?
+        courseC_maze_debugging4_a: Gunakan tombol "step" untuk menjalankan instruksi
+          satu per satu. Apakah itu membantu anda menemukan garis di mana ada yang
+          salah?
+        courseC_maze_debugging4_b: Salah satu belokannya membuat Scrat masuk ke arah
+          yang salah. Bisakah kamu mencari tahu yang mana?
       courseC_maze_debugging4_2018:
         courseC_maze_debugging4_a: Gunakan tombol "step" untuk menjalankan instruksi
           satu per satu. Apakah itu membantu anda menemukan garis di mana ada yang
@@ -3354,8 +3088,8 @@ id-ID:
         courseC_maze_debugging4_b: Salah satu belokannya membuat Scrat masuk ke arah
           yang salah. Bisakah kamu mencari tahu yang mana?
       courseC_maze_debugging5:
-        courseD_collector_debugging5_b: Setelah anda memiliki loop pertama seperti
-          yang anda inginkan, apa yang tersisa dalam kode anda?
+        courseC_maze_debugging5_b: Coba katakan apa yang harus dilakukan Scrat dengan
+          suara keras. Apakah sama seperti kode di workspace? Apa yang salah?
       courseC_maze_debugging5_2018:
         courseC_maze_debugging5_b: Coba katakan apa yang harus dilakukan Scrat dengan
           suara keras. Apakah sama seperti kode di workspace? Apa yang salah?
@@ -3363,13 +3097,9 @@ id-ID:
         courseC_maze_debugging5_b: Coba katakan apa yang harus dilakukan Scrat dengan
           suara keras. Apakah sama seperti kode di workspace? Apa yang salah?
       courseC_maze_debugging6:
-        courseD_collector_debugging6_a: |-
-          Coba jalankan melalui kode menggunakan tombol "step". Apakah semuanya baik pada langkah pertama?
-          Bagaimana dengan yang kedua?
-          Di mana ada yang salah?
-        courseD_collector_debugging6_b: Tampaknya semua langkah sudah benar, kamu
-          hanya butuh sedikit lagi. Bagaimana kamu bisa mengulang aksi 'collect' berulang
-          kali?
+        courseC_maze_debugging6_b: Setelah Anda menemukan dan tetap yang pertama bug,
+          melalui proses debugging lagi untuk menemukan yang kedua. Ulangi proses
+          sampai program bekerja!
       courseC_maze_debugging6_2018:
         courseC_maze_debugging6_b: Setelah Anda menemukan dan tetap yang pertama bug,
           melalui proses debugging lagi untuk menemukan yang kedua. Ulangi proses
@@ -3379,10 +3109,11 @@ id-ID:
           melalui proses debugging lagi untuk menemukan yang kedua. Ulangi proses
           sampai program bekerja!
       courseC_maze_debugging7:
-        courseD_collector_debugging8_a: Apakah anda melihat pola yang bisa anda simpulkan
-          dengan sebuah loop?
-        courseD_collector_debugging8_b: Coba gunakan loop bersarang untuk membuat
-          kode ini lebih pendek.
+        courseC_maze_debugging7_b: Jangan lupa gunakan tombol "Step" untuk menjalankan
+          program baris demi baris!
+        courseC_maze_debugging7_c: |-
+          Setelah menemukan dan memperbaiki bug pertama, pastikan untuk menggunakan proses debug lagi untuk menemukan yang berikutnya.
+          Ulangi proses debug sampai program bekerja!
       courseC_maze_debugging7_2018:
         courseC_maze_debugging7_b: Jangan lupa gunakan tombol "Step" untuk menjalankan
           program baris demi baris!
@@ -3395,18 +3126,6 @@ id-ID:
         courseC_maze_debugging7_c: |-
           Setelah menemukan dan memperbaiki bug pertama, pastikan untuk menggunakan proses debug lagi untuk menemukan yang berikutnya.
           Ulangi proses debug sampai program bekerja!
-      courseC_maze_debugging8_predict1:
-        courseD_collector_debugging9_a: Ada beberapa cara untuk mengatasi masalah
-          ini... tapi mereka semuanya melibatkan belokan!
-        courseD_collector_debugging9_b: Cari tahu bagaimana anda bisa memecahkan teka-teki
-          itu, kemudian pindahkan langkah demi langkah untuk mencoba membuat kode
-          sesuai dengan apa yang ada di kepala anda.
-      courseC_maze_debugging9:
-        courseD_collector_debugging9_a: Ada beberapa cara untuk mengatasi masalah
-          ini... tapi mereka semuanya melibatkan belokan!
-        courseD_collector_debugging9_b: Cari tahu bagaimana anda bisa memecahkan teka-teki
-          itu, kemudian pindahkan langkah demi langkah untuk mencoba membuat kode
-          sesuai dengan apa yang ada di kepala anda.
       courseC_maze_debugging_challenge1:
         courseC_maze_debugging_challenge1_a: Kiri atau kanan? Terserah kamu!
         courseC_maze_debugging_challenge1_b: Scrat jalan adalah bentuk sebuah persegi
@@ -3599,9 +3318,9 @@ id-ID:
         courseC_starWars_loops10_a: Tidak pola ini terlihat seperti sebuah raksasa
           set dari anak tangga? Lihat apakah Anda bisa menggunakan apa yang Anda pelajari
           dari puzzle sebelumnya untuk mendapatkan semua belokan.
-        courseC_starWars_loops10_b: "Jika Anda ingin menggunakan kode kurang, Anda
-          dapat menempatkan satu `ulangi` lingkaran dalam yang lain!  \nIni disebut
-          sebuah bersarang \\*\\* lingkaran \\*\\*."
+        courseC_starWars_loops10_b: |-
+          Jika Anda ingin menggunakan kode kurang, Anda dapat menempatkan satu `ulangi` lingkaran dalam yang lain!\
+          Ini disebut sebuah bersarang \*\* lingkaran \*\*.
         courseC_starWars_loops10_c: Jangan takut untuk membuat kesalahan! Jalankan
           kode untuk melihat apa yang terjadi, bahkan jika anda belum memecahkan teka-teki
           itu.
@@ -3609,9 +3328,9 @@ id-ID:
         courseC_starWars_loops10_a: Tidak pola ini terlihat seperti sebuah raksasa
           set dari anak tangga? Lihat apakah Anda bisa menggunakan apa yang Anda pelajari
           dari puzzle sebelumnya untuk mendapatkan semua belokan.
-        courseC_starWars_loops10_b: "Jika Anda ingin menggunakan kode kurang, Anda
-          dapat menempatkan satu `ulangi` lingkaran dalam yang lain!  \nIni disebut
-          sebuah bersarang \\*\\* lingkaran \\*\\*."
+        courseC_starWars_loops10_b: |-
+          Jika Anda ingin menggunakan kode kurang, Anda dapat menempatkan satu `ulangi` lingkaran dalam yang lain!\
+          Ini disebut sebuah bersarang \*\* lingkaran \*\*.
         courseC_starWars_loops10_c: Jangan takut untuk membuat kesalahan! Jalankan
           kode untuk melihat apa yang terjadi, bahkan jika anda belum memecahkan teka-teki
           itu.
@@ -3619,9 +3338,9 @@ id-ID:
         courseC_starWars_loops10_a: Tidak pola ini terlihat seperti sebuah raksasa
           set dari anak tangga? Lihat apakah Anda bisa menggunakan apa yang Anda pelajari
           dari puzzle sebelumnya untuk mendapatkan semua belokan.
-        courseC_starWars_loops10_b: "Jika Anda ingin menggunakan kode kurang, Anda
-          dapat menempatkan satu `ulangi` lingkaran dalam yang lain!  \nIni disebut
-          sebuah bersarang \\*\\* lingkaran \\*\\*."
+        courseC_starWars_loops10_b: |-
+          Jika Anda ingin menggunakan kode kurang, Anda dapat menempatkan satu `ulangi` lingkaran dalam yang lain!\
+          Ini disebut sebuah bersarang \*\* lingkaran \*\*.
         courseC_starWars_loops10_c: Jangan takut untuk membuat kesalahan! Jalankan
           kode untuk melihat apa yang terjadi, bahkan jika anda belum memecahkan teka-teki
           itu.
@@ -3686,21 +3405,21 @@ id-ID:
       courseC_starWars_loops6:
         courseC_starWars_loops6_a: Mencoba menulis semua bergerak di atas sebuah kertas
           dan mencari sebuah pola.
-        courseC_starWars_loops6_b: "Jika Anda ingin menggunakan kode kurang, Anda
-          dapat menempatkan satu `ulangi` lingkaran dalam yang lain!  \nIni disebut
-          sebuah bersarang \\*\\* lingkaran \\*\\*."
+        courseC_starWars_loops6_b: |-
+          Jika Anda ingin menggunakan kode kurang, Anda dapat menempatkan satu `ulangi` lingkaran dalam yang lain!\
+          Ini disebut sebuah bersarang \*\* lingkaran \*\*.
       courseC_starWars_loops6_2018:
         courseC_starWars_loops6_a: Mencoba menulis semua bergerak di atas sebuah kertas
           dan mencari sebuah pola.
-        courseC_starWars_loops6_b: "Jika Anda ingin menggunakan kode kurang, Anda
-          dapat menempatkan satu `ulangi` lingkaran dalam yang lain!  \nIni disebut
-          sebuah bersarang \\*\\* lingkaran \\*\\*."
+        courseC_starWars_loops6_b: |-
+          Jika Anda ingin menggunakan kode kurang, Anda dapat menempatkan satu `ulangi` lingkaran dalam yang lain!\
+          Ini disebut sebuah bersarang \*\* lingkaran \*\*.
       courseC_starWars_loops6_2019:
         courseC_starWars_loops6_a: Mencoba menulis semua bergerak di atas sebuah kertas
           dan mencari sebuah pola.
-        courseC_starWars_loops6_b: "Jika Anda ingin menggunakan kode kurang, Anda
-          dapat menempatkan satu `ulangi` lingkaran dalam yang lain!  \nIni disebut
-          sebuah bersarang \\*\\* lingkaran \\*\\*."
+        courseC_starWars_loops6_b: |-
+          Jika Anda ingin menggunakan kode kurang, Anda dapat menempatkan satu `ulangi` lingkaran dalam yang lain!\
+          Ini disebut sebuah bersarang \*\* lingkaran \*\*.
       courseC_starWars_loops7:
         courseC_starWars_loops7_a: Pola ini terlihat lebih keras dari itu! Mulailah
           dengan sebuah langkah tangga sederhana. Apakah itu mencakup semua logam
@@ -5334,26 +5053,22 @@ id-ID:
         courseD_playLab_cond6_c: Tambahkan sebuah blok `wait 1 second` ke bagian atas
           loop 'repeat forever' yang memeriksa posisi bajak laut (tapi tidak di dalam
           pernyataan`if`) untuk mtnjaga poin agar tidak dihapus terlalu cepat.
-      courseD_scrat_predict1:
-        courseF_maze_ramp6_a: Ada dua alternatif untuk menyelesaikan teka-teki ini!
-        courseF_maze_ramp6_c: Jangan takut membuat kesalahan! Cobalah menambahkan
+      courseD_scrat_ramp1:
+        courseC_maze_programming1_b: Jangan takut membuat kesalahan! Cobalah menambahkan
           blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika
           anda berpikir bahwa anda belum menyelesaikan teka-teki itu.
-      courseD_scrat_ramp1:
-        courseC_maze_programming1_0: Jika burung tersebut tidak sampai ke babi, pastikan
-          ketiga blok telah diklik sepenuhnya bersama-sama, lalu klik "Run" lagi.
       courseD_scrat_ramp2:
         courseC_maze_programming2_a: Untuk menggunakan sebuah blok `move forward`,
           seret dari toolbox ke dalam ruang kerja dan hubungkan ke blok`when run`.
         courseC_maze_programming2_b: Pastikan ketiga blok 'move forward`terpasang
           pada blok`when run\`.
       courseD_scrat_ramp4:
-        courseC_maze_programming4_a: Anda bisa belok kanan atau kiri dari sudut pandang
-          burung. Jika anda menghadap ke kanan, belok ke kanan akan membuat anda menunjuk
+        courseC_maze_programming4_a: Anda dapat belok kanan atau kiri dari sudut pandang
+          Scrat. Jika anda menghadap ke kanan, belok ke kanan akan membuat anda menunjuk
           ke bawah.
         courseC_maze_programming4_b: Untuk mengikuti jalan, bergerak maju dan berbelok
           ke satu arah, kemudian bergerak lagi dan berbelok sebaliknya. Maju terus
-          satu kali lagi untuk menjangkau babi.
+          satu kali lagi untuk menjangkau acorn.
         courseC_maze_programming4_c: Jangan takut membuat kesalahan! Cobalah menambahkan
           blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika
           anda berpikir bahwa anda belum menyelesaikan teka-teki itu.
@@ -5361,25 +5076,18 @@ id-ID:
         courseC_maze_programming5_a: Coba gunakan tombol "step" untuk menjalankan
           kode baris demi baris. Bisakah anda mencari tahu apa yang perlu anda lakukan
           selanjutnya?
-      courseD_scrat_ramp6:
-        courseC_maze_programming6_a: Ada dua alternatif untuk menyelesaikan teka-teki
+      courseD_scrat_ramp7:
+        courseD_scrat_programming6_a: Ada dua alternatif untuk menyelesaikan teka-teki
           ini!
-        courseC_maze_programming6_c: Jangan takut membuat kesalahan! Cobalah menambahkan
+        courseD_scrat_programming6_c: Jangan takut membuat kesalahan! Cobalah menambahkan
           blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika
           anda berpikir bahwa anda belum menyelesaikan teka-teki itu.
-      courseD_scrat_ramp7:
+      courseD_scrat_ramp8:
         courseD_maze_ramp7_b: Jangan lupa gunakan tombol "Step" untuk melewati blok
           demi blok dan mencari kesalahan.
         courseD_maze_ramp7_c: Jangan takut membuat kesalahan! Cobalah menambahkan
           blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika
           anda berpikir bahwa anda belum menyelesaikan teka-teki itu.
-      courseD_scrat_ramp8:
-        courseE_artist_ramp8_a: Untuk menggambar sebuah sisi, gunakan `bergerak maju
-          dengan 100 piksel` blok, dan mengubah 100 untuk sebuah 200.
-      courseD_video_repeatUntil:
-        courseE_farmer_ramp12c: Jangan takut untuk membuat kesalahan! Cobalah menambahkan
-          blok dan menjalankan kode untuk melihat apa yang terjadi, bahkan jika anda
-          belum memecahkan teka-teki itu.
       courseE_artist_concept_challenge1:
         courseE_artist_concept_challenge1_a: 'Setengah segi enam memiliki **panjang
           30** dan belok kanan **60 derajat**.  '
@@ -5458,8 +5166,8 @@ id-ID:
         courseE_artist_ramp8_a: Untuk menggambar sebuah sisi, gunakan `bergerak maju
           dengan 100 piksel` blok, dan mengubah 100 untuk sebuah 200.
       courseE_artist_ramp8_2:
-        courseD_artist_ramp12_b: Anda bisa menggunakan menu drop dwon pada blok `ubah`
-          untuk melihat sudut mana yang Anda butuhkan!
+        courseE_artist_ramp8_a: Untuk menggambar sebuah sisi, gunakan `bergerak maju
+          dengan 100 piksel` blok, dan mengubah 100 untuk sebuah 200.
       courseE_artist_ramp9:
         courseD_artist_ramp12_b: Anda bisa menggunakan menu drop dwon pada blok `ubah`
           untuk melihat sudut mana yang Anda butuhkan!
@@ -5615,6 +5323,9 @@ id-ID:
       courseF_artist_variables4_2018:
         courseF_artist_variables4_b: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       courseF_artist_variables4_2019:
+        courseF_artist_variables4_a: Kode anda tidak akan jauh berbeda dengan yang
+          ada di teka teki terakhir, kecuali anda perlu untuk mengganti artis untuk
+          terjun, kemudian memutarnya balik untuk bersiap menggambar segitiga berikutnya.
         courseF_artist_variables4_b: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       courseF_artist_variables_challenge2:
         courseF_artist_variables_challenge2_a: 'Variabel sangat membantu Anda karena
@@ -5710,6 +5421,10 @@ id-ID:
           judul fungsi anda pada suatu waktu.  Tambah beberapa blok, kemudian mencobanya.
           Tambahkan lebih banyak, kemudian coba lagi. Segera, anda akan sampai di
           sana!
+      courseF_bee_variables_4_2019:
+        courseF_bee_variables_4_2019_1: Sebagai ganti pengurangan 1 dari'gather' tambahkan
+          1 setiap waktu sebagai pengganti. keuntungan apa yang seharusnya dimiliki
+          variabel pertama kali?
       courseF_playlab_variables_challenge2:
         courseF_playlab_variables_challenge2_b: Anda dapat mengubah parameter seberapa
           jauh sprite anda bergerak salah satu tombol panah ditekan setiap kali.

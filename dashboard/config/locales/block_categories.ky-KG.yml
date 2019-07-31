@@ -1,14 +1,18 @@
 ---
-ky-KG:
+ky:
   data:
     block_categories:
       Actions: Иш-аракеттер
+      Loops: Циклдер
+      Functions: Функциялар
       Color: Түс
+      Math: Математика
+      Logic: Логика
+      Variables: Өзгөрмөлөр
       Conditionals: Шартуулар
       Events: Окуялар
-      Functions: Функциялар
-      Logic: Логика
-      Loops: Циклдер
-      Math: Математика
       Text: Тексттер
-      Variables: Өзгөрмөлөр
+      Start: Башта
+      test: текшерүү
+      Name: Аты
+      Function: Функция

@@ -53,6 +53,7 @@ class XhrProxyController < ApplicationController
     data.cityofchicago.org
     data.gv.at
     data.nasa.gov
+    donordrive.com
     dweet.io
     enclout.com
     githubusercontent.com
@@ -60,8 +61,11 @@ class XhrProxyController < ApplicationController
     hamlin.myschoolapp.com
     herokuapp.com
     hubblesite.org
+    images-api.nasa.gov
     isenseproject.org
     lakeside-cs.org
+    opentdb.com
+    pokeapi.co
     qrng.anu.edu.au
     quandl.com
     quizlet.com
@@ -73,6 +77,7 @@ class XhrProxyController < ApplicationController
     nuevaschool3.ngrok.io
     numbersapi.com
     random.org
+    restcountries.eu
     rhcloud.com
     runescape.com
     samples.openweathermap.org

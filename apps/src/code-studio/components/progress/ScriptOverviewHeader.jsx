@@ -22,6 +22,8 @@ import AssignmentVersionSelector, {
   setRecommendedAndSelectedVersions
 } from '@cdo/apps/templates/teacherDashboard/AssignmentVersionSelector';
 import {assignmentVersionShape} from '@cdo/apps/templates/teacherDashboard/shapes';
+import StudentFeedbackNotification from '@cdo/apps/templates/feedback/StudentFeedbackNotification';
+import experiments from '@cdo/apps/util/experiments';
 import VerifiedResourcesNotification from '@cdo/apps/templates/courseOverview/VerifiedResourcesNotification';
 
 const SCRIPT_OVERVIEW_WIDTH = 1100;
@@ -86,7 +88,8 @@ class ScriptOverviewHeader extends Component {
     versions: PropTypes.arrayOf(assignmentVersionShape).isRequired,
     showHiddenUnitWarning: PropTypes.bool,
     courseName: PropTypes.string,
-    locale: PropTypes.string
+    locale: PropTypes.string,
+    userId: PropTypes.number
   };
 
   componentDidMount() {
@@ -161,6 +164,7 @@ class ScriptOverviewHeader extends Component {
       versions,
       showHiddenUnitWarning,
       courseName,
+      userId,
       verificationCheckComplete,
       isVerifiedTeacher,
       hasVerifiedResources
@@ -207,6 +211,9 @@ class ScriptOverviewHeader extends Component {
             announcements={this.filterAnnouncements(viewAs)}
             width={SCRIPT_OVERVIEW_WIDTH}
           />
+        )}
+        {experiments.isEnabled(experiments.FEEDBACK_NOTIFICATION) && userId && (
+          <StudentFeedbackNotification studentId={userId} />
         )}
         {displayVerifiedResources && (
           <VerifiedResourcesNotification width={SCRIPT_OVERVIEW_WIDTH} />

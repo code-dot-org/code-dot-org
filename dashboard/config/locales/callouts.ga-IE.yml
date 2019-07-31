@@ -443,8 +443,6 @@ ga-IE:
       courseA_collector_loops3_2019:
         gradek_adventurer_loops2_1: Is éard atá san uimhir seo ná an líon blocanna
           den chineál seo is féidir leat a úsáid sa dúshlán seo.
-      courseA_collector_preLoops1:
-        courseA_collector_preLoops1_1: Cliceáil anseo le féachaint ar an gcód ag rith!
       courseA_collector_preLoops2:
         courseA_collector_loops1_1: An bhfeiceann tú blocanna nua sa mbosca uirlisí?
           Ná buair do cheann, taispeánfaimid duit an bealach chun iad a úsáid níos
@@ -799,10 +797,6 @@ ga-IE:
         courseD_playLab_condFP_1: táimid tar éis na blocanna a leagan amach ina gcatagóirí
           chun tuilleadh spáis a thabhairt don chód! Cliceáil anseo le féachaint cá
           bhfuil na blocanna go léir anois.
-      courseD_scrat_predict1:
-        courseD_maze_ramp6_1: Athdhéanfar aon chód a chuireann tú isteach anseo an
-          líon uaireanta a shonraíonn tú, agus tar éis sin leanfar ar aghaidh leis
-          an gcuid eile den chlár.
       courseD_scrat_ramp1:
         grade2_CaringForNewPet_0_1: Tar éis duit na blocanna go léir a cheangal, cliceáil
           "Rith" chun an clár a thosú.
@@ -820,12 +814,12 @@ ga-IE:
           líon uaireanta a shonraíonn tú, agus tar éis sin leanfar ar aghaidh leis
           an gcuid eile den chlár.
       courseD_scrat_ramp7:
+        courseD_maze_ramp6_1: Athdhéanfar aon chód a chuireann tú isteach anseo an
+          líon uaireanta a shonraíonn tú, agus tar éis sin leanfar ar aghaidh leis
+          an gcuid eile den chlár.
+      courseD_scrat_ramp8:
         courseD_maze_ramp7_1: Seo é an chéad ard-dúshlán! Tá na dúshláin seo níos
           deacra agus seans go mbeidh ort níos mó ná iarracht amháin a dhéanamh.
-      courseD_scrat_ramp8:
-        courseE_artist_ramp8_1: Is féidir leat an uimhir seo a athrú.
-        courseE_artist_ramp8_2: Cliceáil anseo chun an líon uaireanta ba mhaith leat
-          an cód a athdhéanamh a chur isteach.
       courseE_artist_functions1:
         courseD_artist_functions1_1: I dtús báire, úsáid an bloc seo chun cabhrú leat
           an chéad chearnóg a chruthú.

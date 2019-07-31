@@ -1,8 +1,8 @@
 import {assert} from '../../util/configuredChai';
 import sinon from 'sinon';
-import fakeFetch from 'fake-fetch';
 
 var testUtils = require('../../util/testUtils');
+import {expect} from '../../util/reconfiguredChai';
 import * as assetPrefix from '@cdo/apps/assetManagement/assetPrefix';
 import {setAppOptions} from '@cdo/apps/code-studio/initApp/loadApp';
 import Exporter, {getAppOptionsFile} from '@cdo/apps/applab/Exporter';
@@ -113,8 +113,13 @@ describe('Applab Exporter,', function() {
     server.respondWith('/blockly/media/third.jpg', 'blockly third.jpg content');
 
     // Needed to simulate fetch() response to '/projects/applab/fake_id/export_create_channel'
-    fakeFetch.install();
-    fakeFetch.respondWith(JSON.stringify({channel_id: 'new_fake_id'}));
+    sinon
+      .stub(window, 'fetch')
+      .returns(
+        Promise.resolve(
+          new Response(JSON.stringify({channel_id: 'new_fake_id'}))
+        )
+      );
 
     setAppOptions({
       levelGameName: 'Applab',
@@ -230,7 +235,7 @@ describe('Applab Exporter,', function() {
 
   afterEach(function() {
     server.restore();
-    fakeFetch.restore();
+    window.fetch.restore();
     assetPrefix.init({});
     window.userNameCookieKey = stashedCookieKey;
   });
@@ -837,6 +842,30 @@ describe('Applab Exporter,', function() {
         `<div><div class="screen" id="screen1" tabindex="1"></div></div>`,
         done,
         'webRequestPromise'
+      );
+    });
+
+    it('should run custom marshall methods', done => {
+      sinon.spy(window, 'write');
+      runExportedApp(
+        `
+        var a = 'abcdef'.split('');
+        insertItem(a, 3, 'hi');
+        write(a);
+        `,
+        `<div><div class="screen" id="screen1" tabindex="1"></div></div>`,
+        () => {
+          expect(window.write).to.have.been.calledWith([
+            'a',
+            'b',
+            'c',
+            'hi',
+            'd',
+            'e',
+            'f'
+          ]);
+          done();
+        }
       );
     });
   });

@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
-import UnsafeRenderedMarkdown from '@cdo/apps/templates/UnsafeRenderedMarkdown';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import color from '../../util/color';
 import i18n from '@cdo/locale';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
@@ -36,7 +36,7 @@ const TeacherOnlyMarkdown = ({content}) => {
     <div style={styles.container}>
       <div style={styles.header}>{i18n.forTeachersOnly()}</div>
       <div style={styles.content}>
-        <UnsafeRenderedMarkdown markdown={content} />
+        <SafeMarkdown markdown={content} />
       </div>
     </div>
   );

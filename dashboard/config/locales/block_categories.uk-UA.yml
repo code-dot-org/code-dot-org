@@ -1,24 +1,37 @@
 ---
-uk-UA:
+uk:
   data:
     block_categories:
       Actions: Дії
-      Advanced: Розширені
-      Color: Колір
-      Comment: Коментар
-      Comments: Коментарі
-      Conditionals: Умови
-      Dancers: Виконавці
-      Default: Типова
-      Events: Події
-      Functions: функції
-      'Functions ': 'Функції '
-      Groups: Групи
-      Locations: Розташування
-      Logic: Логіка
       Loops: Цикли
+      Functions: функції
+      Color: Колір
       Math: Математика
-      Numbers: Числа
-      Text: Текст
+      Logic: Логіка
       Variables: змінні
+      Number: Число
+      String: Рядок
+      Image: Зображення
+      Boolean: Логічне
+      Conditionals: Умови
+      Events: Події
+      Comments: Коментарі
+      Category: Категорія
+      Text: Текст
+      Comment: Коментар
       World: Світ
+      Default: Типова
+      Locations: Розташування
+      Location: Місце знаходження
+      numbers: числа
+      Numbers: Числа
+      Dancers: Виконавці
+      Groups: Групи
+      Advanced: Розширені
+      Start: Початок
+      Booleans: Логічні вирази
+      Functional: Функції
+      test: тест
+      Name: Ім’я
+      'Functions ': 'Функції '
+      Function: Функція

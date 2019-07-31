@@ -24,8 +24,6 @@ pl-PL:
       2-3 Artist 4:
         2-3_Artist_4_a: Aby dokończyć dom wystarczy tylko narysować kwadrat!
       2-3 Artist 6:
-        2-3_Artist_6_a: 'Aby zrobić te ostre kąty musisz za każdym razem skręcić _bardziej_
-          niż w przypadku kwadratu.   '
         2-3_Artist_6_b: Skoro już patrzę w prawo, będzie łatwiej pójść najpierw do
           przodu a potem, skręcając w lewo, stworzyć trójkąt.
         2-3_Artist_6_c: Każdy bok trójkąta ma taką samą długość jak każdy bok kwadratu...
@@ -37,12 +35,9 @@ pl-PL:
       2-3 Artist 8:
         2-3_Artist_8_a: Jeśli podzielisz 200 pikseli na pół, jaką szerokość powinien
           mieć każdy kwadrat?
-      2-3 Artist 9:
+      2-3 Artist 9 NEW:
         2-3_Artist_9_a: Ten diament to tak na prawdę kwadrat obrócony na bok
       2-3 Artist Debugging 10:
-        2-3_Artist_Debugging_10_a: Pamiętaj, że chcesz aby podkładka kierunkowa była
-          o 10 pikseli _szersza_... upewnij się, że **dodajesz** 10 do liczby, którą
-          zmieniasz.
         2-3_Artist_Debugging_10_b: |-
           **Metoda prób i błędów sprawdza się tu doskonale!**
 
@@ -58,9 +53,6 @@ pl-PL:
       2-3 Artist Debugging 7:
         2-3_Artist_Debugging_7_a: Co się stanie, jeśli masz tryb Artysta i ruszają
           lub skaczą przez pierwszy wiersz?
-      2-3 Artist Debugging 8:
-        2-3_Artist_Debugging_8_a: Ile razy powtórzył się mój kształt? Ile razy _powinien_
-          powtórzyć się kształt? Gdzie możesz to zmienić w programie?
       2-3 Artist Debugging 9:
         2-3_Artist_Debugging_9_a: Artysta musi obrócić się jeszcze w lewo o 60 stopni
           zanim rozpocznie rysowanie!
@@ -85,16 +77,6 @@ pl-PL:
         2-3_Artist_Functions_4_a: Aby stworzyć ten wzór artysta musi obrócić się o
           120 stopni pomiędzy każdym bokiem.
       2-3 Artist Loops New 11:
-        2-3_Artist_Loops_New_11_a: "Pamiętaj, że kod z poprzedniego zadania wyglądał
-          tak: \n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block
-          type=\"controls_repeat\">\n<title name=\"TIMES\">8</title>\n<statement name=\"DO\">\n<block
-          type=\"draw_colour\" inline=\"true\">\n<value name=\"COLOUR\">\n<block type=\"colour_random\"/>\n</value>\n<next>\n<block
-          type=\"draw_turn_by_constant_dropdown\">\n<title name=\"DIR\">turnRight</title>\n<title
-          name=\"VALUE\" config=\"45,60,90,120,180\">45</title>\n<next>\n<block type=\"draw_move_by_constant\">\n<title
-          name=\"DIR\">moveForward</title>\n<title name=\"VALUE\">50</title>\n<next>\n<block
-          type=\"draw_turn_by_constant_dropdown\">\n<title name=\"DIR\">turnLeft</title>\n<title
-          name=\"VALUE\" config=\"45,60,90,120,180\">90</title>\n<next>\n<block type=\"draw_move_by_constant\">\n<title
-          name=\"DIR\">moveForward</title>\n<title name=\"VALUE\">50</title>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</statement>\n</block>\n</next>\n</block>\n</xml>"
         2-3_Artist_Loops_New_11_b: Twój następny ruch powinien zacząć się na \*\*
           koniec \*\* kodu poprzedniej pętli.
       2-3 Artist Loops New 12:
@@ -109,10 +91,6 @@ pl-PL:
           we właściwym kierunku, do rozpoczęcia kolejnego.    W związku z tym nie
           trzeba dodać dodatkowej komendy 'skręcić w lewo przez', zanim zaczniemy
           ponownie rysować.
-        2-3_Artist_Loops_New_13_b: "Aby narysować każdy diament, artysta musi wykonać
-          komendy: \n\n-   idź do przodu \n-   skręć w prawo o 120 stopni\n-   idź
-          do przodu \n-   skręć w prawo o 60 stopni\n\nTeraz zrób to wszystko jeszcze
-          raz!"
       2-3 Artist Loops New 9:
         2-3_Artist_Loops_New_9_a: Artysta musi skręcić o 45 stopni w prawo, zanim
           zacznie rysować.
@@ -122,13 +100,15 @@ pl-PL:
         2-3_Artist_Nested_Loops_1_a: Pamiętaj, aby umieścić wszystkie szare bloki
           kodu wewnątrz swojej pętli.
       2-3 Artist Nested Loops 3:
-        2-3_Artist_Nested_Loops_3_a: "Potrzebujesz pomocy z obliczania kątów?  \n\\*\\*
-          360/12 = 30 \\*\\*"
+        2-3_Artist_Nested_Loops_3_a: |-
+          Potrzebujesz pomocy z obliczania kątów?\
+          \*\* 360/12 = 30 \*\*
         2-3_Artist_Nested_Loops_3_b: Pamiętaj, aby umieścić wszystkie szare bloki
           kodu i twój ruch wewnątrz pętli.
       2-3 Artist Nested Loops 4:
-        2-3_Artist_Nested_Loops_3_a: "Potrzebujesz pomocy z obliczania kątów?  \n\\*\\*
-          360/12 = 30 \\*\\*"
+        2-3_Artist_Nested_Loops_3_a: |-
+          Potrzebujesz pomocy z obliczania kątów?\
+          \*\* 360/12 = 30 \*\*
       2-3 Artist Nested Loops 5:
         2-3_Artist_Nested_Loops_5_a: "Spróbuj użyć bloku 'skok do przodu', aby przejść
           o jeden kwadrat do miejsca, w którym rozpocznie się rysowanie następnego.
@@ -147,10 +127,6 @@ pl-PL:
           kolejne bloki? Potraktuj czerwony kwiat dokładnie tak samo, jak fioletowy!
         2-3_Bee_Conditionals_14_b: Gdyby czerwony kwiat był fioletowy, czy możesz
           sobie wyobrazić, jak używać dodatkowych powtórzeń pętli skrócenia kodu?
-        2-3_Bee_Conditionals_14_c: "Spróbuj zrobić to w 2 oddzielnych krokach:  \n\n![](https://images.code.org/895a52f3febff9edb83979f7861cf67a-image-1469640892331.png)\n\n1.
-          \ Pobierz nektar 3 razy\n\n2.  Przejdź o 5 pól\n\n3.  Sprawdź, czy jest
-          nektar, jeśli tak, weź go\n\n4.  Skręć w lewo\n\n5.  Zrób miód \n\n6.  Przesuń
-          się na nastepne pole\n\n7.  Zrób miód 2 razy"
       2-3 Bee Conditionals 15:
         2-3_Bee_Conditionals_15_a: 'Pamiętaj: Fioletowe kwiaty mogą mieć nektar lub
           nie (0 lub 1) i mogą zmienić ten stan za każdym uruchomieniem programu.'
@@ -262,25 +238,13 @@ pl-PL:
       4-5 Artist 4:
         4-5_Artist_4_a: "Koło ma 360 stopni! \n\nWięc ile razy trzeba powtarzać ten
           kod (ruch o 1 stopień) aby narysować pełne koło?"
-      4-5 Artist 5:
-        4-5_Artist_5_a: "Metoda prób i błędów to świetny sposób, ale można również
-          rozwiązać ten problem dzieląc kąt 90 stopni na trzy równe części. \n\n\\*\\*
-          90 / 3 = **\\_** \\*\\*"
       4-5 Artist 7:
         4-5_Artist_7_a: 'Jaki kąt jest najmniejszy?  Pod jakim kątem stoi artysta? '
       4-5 Artist 8:
         4-5_Artist_8_a: "Dłuższe boki mają po 240 pikseli.  Oznacza to, że 2 krótsze
           boki mają razem: \n\n\\*\\* 800-240 - 240 = 320 \\*\\*\n\nIle to \\*\\*
           320/2 \\*\\*? "
-        4-5_Artist_8_b: |-
-          Te linie można narysować na 2 sposoby!
-
-          -   Najpierw narysuj dwa prostokąty o wymiarach \*\* 120 \*\* długości i \*\* 160 \*\* szerokości, ze wspólną ścianą boczną
-
-          -   Po prostu narysuj jeden prostokąt, o wymiarach \*\* 120 \*\* długości i \*\* 160 \*\* szerokości, a następnie dodaj linię w środku.
       4-5 Artist 9:
-        4-5_Artist_9_a: W trójkącie równobocznym, wszystkie boki oraz wszystkie kąty
-          są takie same.
         4-5_Artist_9_b: Trzeba będzie narysować trzy trójkąty tej samej wielkości.
           Nie zapomnij, aby skoczyć na nową pozycję, po narysowaniu każdego z nich.
       4-5 Artist Assessment 1:
@@ -341,12 +305,15 @@ pl-PL:
           przodu ' więcej niż dwa kroki.
         4-5_Maze_5_b: Można użyć więcej niż jednej pętli 'powtórz' w tym labiryncie.
       4-5 Maze 6:
-        4-5_Maze_6_a: "Jeśli masz kłopot, wskaż sobie palcem drogę.  \nCzy jest to
-          najkrótsza droga, którą można znaleźć?"
+        4-5_Maze_6_a: |-
+          Jeśli masz kłopot, wskaż sobie palcem drogę.\
+          Czy jest to najkrótsza droga, którą można znaleźć?
       4-5 Maze 7:
-        4-5_Maze_7_a: "\\*\\* Chcesz otrzymać kod tak mały, jak może być? \\*\\*\n\nSzukaj
-          powtarzających się elementów w bloków. Czy widzisz co się powtarza?  \nZamiast
-          powtarzać, zrób pętlę!"
+        4-5_Maze_7_a: |-
+          \*\* Chcesz otrzymać kod tak mały, jak może być? \*\*
+
+          Szukaj powtarzających się elementów w bloków. Czy widzisz co się powtarza?\
+          Zamiast powtarzać, zrób pętlę!
       4-5 Nested Loops 12:
         4-5_Nested_Loops_12_a: "\\*\\* 360 / 36 =? \\*\\*"
       4-5 Nested Loops 6:
@@ -370,22 +337,6 @@ pl-PL:
           i **2/3 trójkąta**. '
         Course_4_Artist_12_b: 'Ten kształt jest prawie taki sam jak w poprzednim przykładzie,
           za wyjątkiem połowy sześciokąta, który jest nieco większy. '
-        Course_4_Artist_12_c: "1.  Pierwsze trzy linie mają długość 60 pikseli i trzeba
-          wykonać obrót o 60 stopni. \n2.  Kolejne dwie mają długość 80 pikseli i
-          trzeba wykonać obrót o 120 stopni "
-        Course_4_Artist_12_d: "\\*\\* Rozwiązanie: \\*\\* \n\n<xml>\n<block type=\"when_run\"
-          deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"draw_colour\"
-          inline=\"true\" id=\"draw-color\">\n<value name=\"COLOUR\"> <block type=\"colour_picker\">\n<title
-          name=\"COLOUR\"> #843179</title> \n</block>\n</value>\n<next>\n<block type=\"controls_repeat\">\n<title
-          name=\"TIMES\"> 6</title>\n<statement name=\"DO\"> <block type=\"controls_repeat\">\n<title
-          name=\"TIMES\"> 3</title>\n<statement name=\"DO\">\n<block type=\"draw_move_by_constant\">\n<title
-          name=\"DIR\"> moveForward</title>\n<title name=\"VALUE\"> 60</title>\n<next>\n<block
-          type=\"draw_turn_by_constant\">\n<title name=\"DIR\"> obróć_w_prawo</title>\n<title
-          name=\"VALUE\"> 60</title>\n</block>\n</next>\n</block>\n</statement>\n<next>\n<block
-          type=\"controls_repeat\">\n<title name=\"TIMES\"> 2</title>\n<statement
-          name=\"DO\">\n<block type=\"draw_move_by_constant\">\n<title name=\"DIR\">
-          moveForward</title>\n<title name=\"VALUE\"> 80</title>\n<next><block type=\"draw_turn_by_constant\">\n<title
-          name=\"DIR\"> obróć_w_prawo </title>\n<title name=\"VALUE\"> 120</title>\n</block>\n</next>\n</block>\n</statement>\n</block>\n</next>\n</block>\n</statement>\n</block>\n</next></block>\n</next>\n</block>\n</xml>"
       Course 4 Artist 6:
         Course_4_Artist_6_a: To 3 trójkąty wpisane w pełne koło (360 stopni)... ile
           razy 3 mieści się w 360?
@@ -441,8 +392,6 @@ pl-PL:
         Course_4_Artist_Functions_challenge_d: Musisz się obrócić o 90 stopni w lewo
           poza Twoim `repeat`, ale cały czas wewnątrz `for loop`.
       Course 4 Artist Inspire:
-        Course_4_Artist_Inspire_a: Po skończeniu kwadratu, spróbuj przejść dalej o
-          połowę jego długości zanim się obrócisz i zaczniesz tworzyć inny.
         Course_4_Artist_Inspire_b: Każdy kwadrat i przejście jest powtarzane czterokrotnie
           (przy wykorzystaniu skrętu w lewo) aby stworzyć jednostkę podobną do pinwheel.
       Course 4 Artist Vars 13:
@@ -520,152 +469,6 @@ pl-PL:
           iteracji. '
         Course_4_SCF_3_e: Zarówno kolor każdego ośmiokąta jak i szerokość pióra są
           sterowane przez zmienną 'licznik'.
-        Course_4_SCF_3_f: |-
-          **Solution:**
-
-          <xml>
-          <block type="procedures_defnoreturn" editable="false">
-          <mutation>
-          <arg name="length"></arg>
-          </mutation>
-          <title name="NAME">narysuj ośmiokąt</title>
-          <statement name="STACK">
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="math_number">
-          <title name="NUM">8</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="draw_move" inline="true">
-          <title name="DIR">idź do przodu</title>
-          <value name="VALUE">
-          <block type="parameters_get">
-          <title name="VAR">długość</title>
-          </block>
-          </value>
-          <next>
-          <block type="draw_turn" inline="true">
-          <title name="DIR">turnRight</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">45</title>
-          </block>
-          </value>
-          </block>
-          </next>
-          </block>
-          </statement>
-          </block>
-          </statement>
-          </block>
-          <block type="when_run" deletable="false" movable="false">
-          <next>
-          <block type="controls_for_counter" inline="true">
-          <mutation counter="counter"></mutation>
-          <value name="FROM">
-          <block type="math_number">
-          <title name="NUM">200</title>
-          </block>
-          </value>
-          <value name="TO">
-          <block type="math_number">
-          <title name="NUM">2</title>
-          </block>
-          </value>
-          <value name="BY">
-          <block type="math_number">
-          <title name="NUM">2</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="draw_colour" inline="true" id="draw-color">
-          <value name="COLOUR">
-          <block type="colour_rgb" inline="false">
-          <value name="RED">
-          <block type="math_arithmetic" inline="true">
-          <title name="OP">MINUS</title>
-          <value name="A">
-          <block type="math_number">
-          <title name="NUM">255</title>
-          </block>
-          </value>
-          <value name="B">
-          <block type="variables_get">
-          <title name="VAR">licznik</title>
-          </block>
-          </value>
-          </block>
-          </value>
-          <value name="GREEN">
-          <block type="variables_get">
-          <title name="VAR">licznik</title>
-          </block>
-          </value>
-          <value name="BLUE">
-          <block type="math_arithmetic" inline="true">
-          <title name="OP">MULTIPLY</title>
-          <value name="A">
-          <block type="variables_get">
-          <title name="VAR">licznik</title>
-          </block>
-          </value>
-          <value name="B">
-          <block type="math_number">
-          <title name="NUM">2</title>
-          </block>
-          </value>
-          </block>
-          </value>
-          </block>
-          </value>
-          <next>
-          <block type="draw_width" inline="false">
-          <value name="WIDTH">
-          <block type="math_arithmetic" inline="true">
-          <title name="OP">DIVIDE</title>
-          <value name="A">
-          <block type="variables_get">
-          <title name="VAR">licznik</title>
-          </block>
-          </value>
-          <value name="B">
-          <block type="math_number">
-          <title name="NUM">4</title>
-          </block>
-          </value>
-          </block>
-          </value>
-          <next>
-          <block type="procedures_callnoreturn" inline="false">
-          <mutation name="draw an octagon">
-          <arg name="length"></arg>
-          </mutation>
-          <value name="ARG0">
-          <block type="variables_get">
-          <title name="VAR">licznik</title>
-          </block>
-          </value>
-          <next>
-          <block type="draw_turn" inline="true">
-          <title name="DIR">skręć w lewo</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">22.5</title>
-          </block>
-          </value>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </statement>
-          </block>
-          </next>
-          </block>
-          </xml>
       Course 4 SCFL 1:
         Course_4_SCFL_1_a: Spójrz na tę opcję dla ruchu:! \[] (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)
         Course_4_SCFL_1_b: 'Spróbuj użyć dwóch pętlach "dla": jednej dla wznoszenia
@@ -686,124 +489,6 @@ pl-PL:
           obiektu.
         Course_4_SCFL_2_c: Podczas każdej iteracji pętli `for`, liczba każdego elementu
           odpowiada w jakiś sposób zmiennej `counter`.
-        Course_4_SCFL_2_d: |-
-          **Rozwiązanie:**
-
-          <xml>
-          <block type="when_run" deletable="false" movable="false">
-          <next>
-          <block type="controls_for" inline="true">
-          <title name="VAR">counter</title>
-          <value name="FROM">
-          <block type="math_number">
-          <title name="NUM">1</title>
-          </block>
-          </value>
-          <value name="TO">
-          <block type="math_number">
-          <title name="NUM">4</title>
-          </block>
-          </value>
-          <value name="BY">
-          <block type="math_number">
-          <title name="NUM">1</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="maze_moveForward">
-          <next>
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="variables_get">
-          <title name="VAR">counter</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="maze_nectar"/>
-          </statement>
-          <next>
-          <block type="maze_turn">
-          <title name="DIR">turnRight</title>
-          <next>
-          <block type="maze_moveForward">
-          <next>
-          <block type="maze_moveForward">
-          <next>
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="math_arithmetic" inline="true">
-          <title name="OP">MULTIPLY</title>
-          <value name="A">
-          <block type="variables_get">
-          <title name="VAR">counter</title>
-          </block>
-          </value>
-          <value name="B">
-          <block type="math_number">
-          <title name="NUM">3</title>
-          </block>
-          </value>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="maze_honey"/>
-          </statement>
-          <next>
-          <block type="maze_turn">
-          <title name="DIR">turnLeft</title>
-          <next>
-          <block type="maze_moveForward">
-          <next>
-          <block type="maze_moveForward">
-          <next>
-          <block type="maze_turn">
-          <title name="DIR">turnRight</title>
-          <next>
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="math_arithmetic" inline="true">
-          <title name="OP">POWER</title>
-          <value name="A">
-          <block type="math_number">
-          <title name="NUM">2</title>
-          </block>
-          </value>
-          <value name="B">
-          <block type="variables_get">
-          <title name="VAR">counter</title>
-          </block>
-          </value>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="maze_nectar"/>
-          </statement>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </statement>
-          </block>
-          </next>
-          </block>
-          </xml>
       Course 4 SCFL 3:
         Course_4_SCFL_3_a: "`pen width` wynosi 1. Pierwszy kwadrat ma boki o szerokości
           50 pikseli, kolejny kwadrat jest o 50 pikseli szerszy od poprzedniego."
@@ -1224,9 +909,6 @@ pl-PL:
       NEW Course 4 Artist Params 11:
         NEW_Course_4_Artist_Params_11_a: Istnieje więcej niż jedna liczba, którą należałoby
           wymienić na zmienną wewnątrz funkcji.
-      NEW Course 4 Artist Params 13:
-        NEW_Course_4_Artist_Params_13_a: 'Musisz podzielić _obwód_ przez liczbę boków
-          aby zachować kształty w takiej samej proporcji. '
       NEW Course 4 Artist Params inspire:
         brush_width: Ustawiamy szerokość pędzla do 1, a następnie kolor na niebieski,
           zanim zrobimy cokolwiek innego.
@@ -1410,10 +1092,6 @@ pl-PL:
           jest dodanie więcej kroków naprzód pomiędzy skrętami.
         courseC_maze_debugging_challenge2_b: Jeśli utkniesz, zawsze możesz zacząć
           od nowa lub usunąć cały kod i znaleźć własną drogę!
-        courseC_maze_debugging_challenge2_c: |-
-          Są dwie różne ścieżki, które możesz śledzić używając `move forward`, i tylko 4 zakręty. Jeśli znajdziesz sposób, aby wykorzystać blok `repeat`, może być nawet więcej!
-
-          ![](<https://images.code.org/8a4665671cda35fea1f629a5bcc39e26-image-1493502743154.48.05 PM.png>)
       course4_bee_fwp_challenge1:
         courseF_bee_fwp_challenge1_b: |-
           Zobacz ile gotowej do żniw kukurydzy w każdym z miejsc. Czy widzisz wzór liczenia? Parametr `Length` powinien być wykorzystany do ustawienia maksymalnej wartości w `for loop`.
@@ -1575,11 +1253,6 @@ pl-PL:
           jeśli coś wydaje się źle.
         courseA_collector_loops_challenge1_b: Nie musisz używać pętli jeśli robisz
           coś tylko jeden raz.
-      courseA_collector_loops_challenge2:
-        courseA_collector_loops_challenge2_b: Potrzebujesz tylko 1 bloku, aby to rozwiązać.
-      courseA_collector_preLoops5:
-        courseA_collector_preLoops5_a: Będziesz musiał iść w dwóch różnych kierunkach
-          aby dostać klejnot!
       courseA_harvester_loops3:
         courseA_harvester_loops3_b: Aby powtórzyć kod, przeciągnij pętlę `repeat`,
           następnie umieść tam blok, który chcesz aby się powtarzał.
@@ -2060,17 +1733,26 @@ pl-PL:
         courseC_harvester_loops_challenge1_a: To jest zbyt trudne bez pętel!
       courseC_harvester_loops_challenge1a_2019:
         courseC_harvester_loops_challenge1_a: To jest zbyt trudne bez pętel!
+      courseC_maze_debugging1:
+        courseC_maze_debugging1_b: Jest jeden blok, który musisz dodać aby skończyć
+          tą zagadkę.
       courseC_maze_debugging1_2018:
         courseC_maze_debugging1_b: Jest jeden blok, który musisz dodać aby skończyć
           tą zagadkę.
       courseC_maze_debugging1_2019:
         courseC_maze_debugging1_b: Jest jeden blok, który musisz dodać aby skończyć
           tą zagadkę.
+      courseC_maze_debugging2:
+        courseC_maze_debugging2_c: Nie możesz dowiedzieć się do jest źle? Spróbuj
+          uruchomić kod kilkukrotnie, aby zobaczyć co się dzieje.
       courseC_maze_debugging2_2018:
         courseC_maze_debugging2_c: Nie możesz dowiedzieć się do jest źle? Spróbuj
           uruchomić kod kilkukrotnie, aby zobaczyć co się dzieje.
       courseC_maze_debugging2_2019:
         courseC_maze_debugging2_c: Nie możesz dowiedzieć się do jest źle? Spróbuj
+          uruchomić kod kilkukrotnie, aby zobaczyć co się dzieje.
+      courseC_maze_debugging3:
+        courseC_maze_debugging3_b: Nie możesz dowiedzieć się do jest źle? Spróbuj
           uruchomić kod kilkukrotnie, aby zobaczyć co się dzieje.
       courseC_maze_debugging3_2018:
         courseC_maze_debugging3_b: Nie możesz dowiedzieć się do jest źle? Spróbuj
@@ -2302,10 +1984,8 @@ pl-PL:
           Będziesz potrzebował użyć bloku warunkowego ('if' lub ' if/else') do rozwiązania problemu.
       courseD_maze_ramp6:
         courseC_maze_programming6_a: Istnieją dwa sposoby, aby rozwiązać ten problem!
-      courseD_scrat_predict1:
-        courseF_maze_ramp6_a: Istnieją dwa sposoby, aby rozwiązać ten problem!
-      courseD_scrat_ramp6:
-        courseC_maze_programming6_a: Istnieją dwa sposoby, aby rozwiązać ten problem!
+      courseD_scrat_ramp7:
+        courseD_scrat_programming6_a: Istnieją dwa sposoby, aby rozwiązać ten problem!
       courseE_artist_concept_challenge1:
         courseE_artist_concept_challenge1_a: 'Połowa sześciokąta ma **długość 30**
           i wymaga obrotu w prawo o **60 stopni**.  '

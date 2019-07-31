@@ -3,9 +3,9 @@ ja-JP:
   data:
     callouts:
       2-3 Artist Debugging 1:
-        2-3_Artist_Debugging_1_a: アーティストは「ステップ」実行ボタンを持っていませんが、スライダーを左にドラッグすれば、プログラムを、ゆっくり動かすことが出来ます。
+        2-3_Artist_Debugging_1_a: アーティストは「ステップ」実行（じっこう）ボタンを持っていませんが、スライダーを左にドラッグすれば、プログラムを、ゆっくり動（うご）かすことができます。
       2-3 Bee Conditionals 5:
-        Bee_Cond_5_1a: むらさき色の花は、1 または 0 の、みつ をもっていますが、プログラムを動かすまでは、わからないんです！
+        Bee_Cond_5_1a: ムラサキ色の花は、1 または 0 の、ミツをもっていますが、プログラムを動（うご）かすまでは、わからないんです！
       4-5 Artist Patterns Free Play:
         4-5_Artist_Patterns_Free_Play_1: 全部のお気に入りブロックが、種類ごとに分けられました。これらの言葉をクリックすると、どうなったか確認できます。
       AppLab Intro 7 - Change Screen Color:
@@ -134,8 +134,6 @@ ja-JP:
         craft_what_is_iron: 鉄を掘りましょう！
       Underground Iron_2019:
         craft_what_is_iron: 鉄を掘りましょう！
-      courseA_collector_preLoops1:
-        courseA_collector_preLoops1_1: ここをクリックしてプログラムが動くのを見てみよう！
       courseB_Scrat_ramp1_2018:
         grade2_CaringForNewPet_0_1: すべてのブロックをつなげたら「実行」を押してプログラムを開始してください。
       courseB_Scrat_ramp1_2019:

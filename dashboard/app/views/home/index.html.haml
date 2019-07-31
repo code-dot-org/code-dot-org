@@ -28,21 +28,3 @@
 
 :javascript
   $("#section_code").placeholder();
-
-:javascript
-  $(document).ready(function() {
-    // Show teacher announcements for US or non-US depending on location.
-    $.getJSON( "/v2/client-location", function (data) {
-      country_code = data['country_code'];
-      if (country_code === 'US' || country_code === 'RD') {
-        $('#us-announcement').show();
-      } else {
-        $('#non-us-announcement').show();
-      }
-    });
-    $(".track-link").each(function () {
-      $(this).click(function () {
-        trackEvent('teacher_announcement','click', $(this).data('id'));
-      });
-    });
-  });

@@ -17,7 +17,6 @@ Dashboard::Application.routes.draw do
 
   get '/terms-and-privacy', to: 'home#terms_and_privacy'
   get '/dashboardapi/terms-and-privacy', to: "home#terms_and_privacy"
-  get '/dashboardapi/teacher-announcements', to: "home#teacher_announcements"
   get '/dashboardapi/hoc-courses-teacher-guides', to: "home#hoc_courses_teacher_guides"
   get '/dashboardapi/hoc-courses-challenge', to: "home#hoc_courses_challenge"
 
@@ -401,6 +400,7 @@ Dashboard::Application.routes.draw do
         get :workshop_survey_report, action: :workshop_survey_report, controller: 'workshop_survey_report'
         get :local_workshop_survey_report, action: :local_workshop_survey_report, controller: 'workshop_survey_report'
         get :generic_survey_report, action: :generic_survey_report, controller: 'workshop_survey_report'
+        get :experiment_survey_report, action: :experiment_survey_report, controller: 'workshop_survey_report'
         get :teachercon_survey_report, action: :teachercon_survey_report, controller: 'workshop_survey_report'
         get :workshop_organizer_survey_report, action: :workshop_organizer_survey_report, controller: 'workshop_organizer_survey_report'
       end
@@ -505,10 +505,6 @@ Dashboard::Application.routes.draw do
     get 'workshop_enrollment/:code', action: 'show', controller: 'workshop_enrollment'
     get 'workshop_enrollment/:code/thanks', action: 'thanks', controller: 'workshop_enrollment'
     get 'workshop_enrollment/:code/cancel', action: 'cancel', controller: 'workshop_enrollment'
-
-    get 'workshop_materials/:enrollment_code', action: 'new', controller: 'workshop_material_orders'
-    post 'workshop_materials/:enrollment_code', action: 'create', controller: 'workshop_material_orders'
-    get 'workshop_materials', action: 'admin_index', controller: 'workshop_material_orders'
 
     get 'pre_workshop_survey/:enrollment_code', action: 'new', controller: 'pre_workshop_survey', as: 'new_pre_workshop_survey'
     get 'teachercon_survey/:enrollment_code', action: 'new', controller: 'teachercon_survey', as: 'new_teachercon_survey'
@@ -631,10 +627,11 @@ Dashboard::Application.routes.draw do
       get 'peer_review_submissions/index', to: 'peer_review_submissions#index'
       get 'peer_review_submissions/report_csv', to: 'peer_review_submissions#report_csv'
 
-      resources :teacher_feedbacks, only: [:create] do
+      resources :teacher_feedbacks, only: [:index, :create] do
         collection do
           get 'get_feedback_from_teacher'
           get 'get_feedbacks'
+          get 'count'
         end
         member do
           post 'increment_visit_count'
@@ -642,6 +639,8 @@ Dashboard::Application.routes.draw do
       end
     end
   end
+
+  resources :feedback, controller: 'teacher_feedbacks'
 
   get '/dashboardapi/v1/users/:user_id/contact_details', to: 'api/v1/users#get_contact_details'
   post '/dashboardapi/v1/users/accept_data_transfer_agreement', to: 'api/v1/users#accept_data_transfer_agreement'

@@ -388,20 +388,51 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
   end
 
   test 'with_surveys scope' do
+    # Ended workshop with attendance
+    # (ONLY this one should show up in the scope at the end of the test)
     ended_workshop = create :pd_ended_workshop, num_sessions: 1
     expected_enrollment = create :pd_enrollment, workshop: ended_workshop
     create :pd_attendance, session: ended_workshop.sessions.first, enrollment: expected_enrollment
 
+    # Ended FiT workshop, with attendance
+    # (Checks a special case: FiT workshops don't have exit surveys)
+    fit_workshop = create :pd_ended_workshop, num_sessions: 1, subject: SUBJECT_FIT
+    fit_enrollment = create :pd_enrollment, workshop: fit_workshop
+    create :pd_attendance, session: fit_workshop.sessions.first, enrollment: fit_enrollment
+
+    # Ended Facilitator workshop, with attendance
+    # (Checks a special case: Facilitator workshops don't have exit surveys)
+    facilitator_workshop = create :pd_ended_workshop, num_sessions: 1, course: COURSE_FACILITATOR
+    facilitator_enrollment = create :pd_enrollment, workshop: facilitator_workshop
+    create :pd_attendance, session: facilitator_workshop.sessions.first, enrollment: facilitator_enrollment
+
     # Non-ended workshop, no attendance
+    # (No surveys because not ended)
     non_ended_workshop = create :pd_workshop, num_sessions: 1
     create :pd_enrollment, workshop: non_ended_workshop
 
     # Non-ended workshop, with attendance
+    # (No surveys because not ended)
     create :pd_enrollment, workshop: non_ended_workshop
     create :pd_attendance, session: non_ended_workshop.sessions.first
 
     # Ended workshop, no attendance
+    # (No surveys because no attendance)
     create :pd_enrollment, workshop: ended_workshop
+
+    assert_equal [expected_enrollment], Pd::Enrollment.with_surveys
+  end
+
+  test 'with_surveys scope includes workshops with no subject' do
+    # Cover a regression introduced in https://github.com/code-dot-org/code-dot-org/pull/29511
+    # where pending exit surveys for a workshop with no subject would not show up on the
+    # professional learning landing page.
+    # Root cause: WHERE subject != 'xyz' implicitly excludes rows where subject IS NULL too.
+
+    # Ended Admin workshop with attendance; Admin workshops have no subject.
+    admin_workshop = create :pd_ended_workshop, num_sessions: 1, course: COURSE_ADMIN, subject: nil
+    expected_enrollment = create :pd_enrollment, workshop: admin_workshop
+    create :pd_attendance, session: admin_workshop.sessions.first, enrollment: expected_enrollment
 
     assert_equal [expected_enrollment], Pd::Enrollment.with_surveys
   end

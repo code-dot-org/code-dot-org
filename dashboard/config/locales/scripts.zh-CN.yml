@@ -3642,8 +3642,8 @@ zh-CN:
               name: 计算机科学发现课后问卷
         minecraft:
           title: 我的世界 编码时间设计师
-          description_short: 建立一个 我的世界 游戏。创造您自己版本的鸡、羊、爬行者、僵尸等等。
-          description: 建立一个 我的世界 游戏。创造您自己版本的鸡、羊、爬行者、僵尸等等。
+          description_short: 在你自建的《我的世界》中对各种动物和其他生物进行编程。
+          description: 在你自建的《我的世界》中对各种动物和其他生物进行编程。
           stages:
             Minecraft Hour of Code Designer:
               name: 我的世界 编码时间设计师
@@ -9353,6 +9353,16 @@ zh-CN:
               name: 模块 1
             module2:
               name: 模块 2
+            andrea-g1:
+              name: andrea-g1
+            andrea-g2:
+              name: andrea-g2
+            andrea-g3:
+              name: andrea-g3
+            andrea-s1:
+              name: andrea-s1
+            andrea-s3:
+              name: andrea-s3
             'null':
               name: 空
             Deeper Learning Overview:
@@ -10365,6 +10375,8 @@ zh-CN:
           stages:
             new stage:
               name: 新的阶段
+            Number Systems:
+              name: 数字系统
           title: 计算机科学原理 单元1 试验
         csd-tests:
           stages:
@@ -10448,6 +10460,8 @@ zh-CN:
               name: 艺术家之间的功能
             Determine the Concept:
               name: 确定概念
+            Debate:
+              name: 辩论
           title: 计算机科学时间 佛罗里达的多样性
           description_audience: 4年级
           description_short: 该模块侧重于四年级的科学和社会学习标准。在科学方面，他们认为生命标准包括栖息地、生态系统、本地物种和入侵物种。在社会研究方面，学生们考虑佛罗里达州政府的分支，以及日常公民如何影响当地和州政策。
@@ -10634,6 +10648,8 @@ zh-CN:
               name: 循环探索
             Traversals Explore:
               name: 遍历探索
+            Mini PT:
+              name: 迷你表演任务
           title: '单元 5: 列表、循环和遍历'
         csp6-pilot-staging:
           stages:
@@ -10847,6 +10863,8 @@ zh-CN:
               name: 循环探索
             Traversals Explore:
               name: 遍历探索
+            Mini PT:
+              name: 迷你表演任务
           title: '单元 5: 列表、循环和遍历'
         fit2019-novice:
           stages:
@@ -11184,5 +11202,7 @@ zh-CN:
               name: 项目后测试
         maddie-test:
           stages:
+            stage 1:
+              name: 第一阶段
             new stage:
               name: 新的阶段

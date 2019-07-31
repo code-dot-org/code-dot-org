@@ -11,8 +11,7 @@ import designMode from '../designMode';
 import elementLibrary from './library';
 import * as applabConstants from '../constants';
 import * as elementUtils from './elementUtils';
-import themeColor from '../themeColor';
-import experiments from '../../util/experiments';
+import themeValues from '../themeValues';
 
 class ScreenProperties extends React.Component {
   static propTypes = {
@@ -53,12 +52,10 @@ class ScreenProperties extends React.Component {
           handleChange={this.props.handleChange.bind(this, 'id')}
           isIdRow={true}
         />
-        {experiments.isEnabled('applabThemes') && (
-          <ThemePropertyRow
-            initialValue={element.getAttribute('data-theme')}
-            handleChange={this.props.handleChange.bind(this, 'theme')}
-          />
-        )}
+        <ThemePropertyRow
+          initialValue={element.getAttribute('data-theme')}
+          handleChange={this.props.handleChange.bind(this, 'theme')}
+        />
         <ColorPickerPropertyRow
           desc={'background color'}
           initialValue={elementUtils.rgb2hex(element.style.backgroundColor)}
@@ -153,12 +150,7 @@ class ScreenEvents extends React.Component {
 export default {
   PropertyTab: ScreenProperties,
   EventTab: ScreenEvents,
-  themeValues: {
-    backgroundColor: {
-      type: 'color',
-      ...themeColor.background
-    }
-  },
+  themeValues: themeValues.screen,
 
   create: function() {
     const element = document.createElement('div');

@@ -2,7 +2,6 @@
 es-ES:
   data:
     display_name:
-      AB_Debug_Artist1: 'Artista de la depuración #1 (AB)'
       Alien Defender: Defensor alienígena
       App Lab Intro 8 - Video Design Mode: 'Vídeo: Modo diseño'
       App Lab Intro 8 - Video Getting Started: 'Vídeo: Cómo empezar'
@@ -49,7 +48,6 @@ es-ES:
       CSD Set Scale Map_2018: Cambiar escala de sensor
       CSD Set Scale Map_2019: Cambiar escala de sensor
       CSD U1L02 TFMD_2018: Resumen de la lección
-      CSD U1L02 TFMD_2019: Resumen de la lección
       CSD U1L03 TFMD_2018: Resumen de la lección
       CSD U1L03 TFMD_2019: Resumen de la lección
       CSD U1L04 TFMD_2018: Resumen de la lección
@@ -118,9 +116,7 @@ es-ES:
       CSD U2 lists map_2019: Listas en HTML
       CSD U2 publish video: Publicando tu sitio web
       CSD U2L01 TFMD_2018: Resumen de la lección
-      CSD U2L01 TFMD_2019: Resumen de la lección
       CSD U2L02 TFMD_2018: Resumen de la lección
-      CSD U2L02 TFMD_2019: Resumen de la lección
       CSD U2L03 TFMD_2018: Resumen de la lección
       CSD U2L03 TFMD_2019: Resumen de la lección
       CSD U2L04 TFMD_2018: Resumen de la lección
@@ -232,7 +228,6 @@ es-ES:
       CSD U3 L9 Freeplay_2019: Juego libre
       CSD U3 Plotting Shapes Shape Lab: Dibujar formas
       CSD U3 Plotting Shapes Shape Lab_2018: Dibujar formas
-      CSD U3 Plotting Shapes Shape Lab_2019: Dibujar formas
       CSD U3 Random Number Map Level: Números aleatorios
       CSD U3 Random Number Map Level_2018: Números aleatorios
       CSD U3 Random Number Map Level_2019: Números aleatorios
@@ -319,10 +314,7 @@ es-ES:
       CSD U3 velocity map: Velocidad de gráficos
       CSD U3 velocity map_2018: Velocidad de gráficos
       CSD U3 velocity map_2019: Velocidad de gráficos
-      CSD U3L01 TFMD_2018: Resumen de la lección
-      CSD U3L01 TFMD_2019: Resumen de la lección
       CSD U3L02 TFMD_2018: Resumen de la lección
-      CSD U3L02 TFMD_2019: Resumen de la lección
       CSD U3L03 TFMD_2018: Resumen de la lección
       CSD U3L03 TFMD_2019: Resumen de la lección
       CSD U3L04 TFMD_2018: Resumen de la lección
@@ -382,9 +374,7 @@ es-ES:
       CSD U4 User Input Map_2018: Responder a la entrada del usuario
       CSD U4 User Input Map_2019: Responder a la entrada del usuario
       CSD U4L01 autoSFLP_2018: Resumen de la lección
-      CSD U4L01 autoSFLP_2019: Resumen de la lección
       CSD U4L02 autoSFLP_2018: Resumen de la lección
-      CSD U4L02 autoSFLP_2019: Resumen de la lección
       CSD U4L03 autoSFLP_2018: Resumen de la lección
       CSD U4L03 autoSFLP_2019: Resumen de la lección
       CSD U4L04 autoSFLP_2018: Resumen de la lección
@@ -415,11 +405,8 @@ es-ES:
       CSD U4L16 autoSFLP_2019: Resumen de la lección
       CSD U5 Amazon Data Video: Recopilar información sobre los usuarios
       CSD U5 Amazon Data Video_2018: Recopilar información sobre los usuarios
-      CSD U5 Amazon Data Video_2019: Recopilar información sobre los usuarios
-      CSD U5 Netflix Data Video_2019: Cómo Netflix utiliza datos
       CSD U5 Waze Data Video: Recopilar información sobre los usuarios
       CSD U5 Waze Data Video_2018: Recopilar información sobre los usuarios
-      CSD U5 Waze Data Video_2019: Recopilar información sobre los usuarios
       CSD U5 binary video: Binario y datos
       CSD U5 binary video_2018: Binario y datos
       CSD U5 binary video_2019: Binario y datos
@@ -447,9 +434,7 @@ es-ES:
       CSD U5 black white images pixelation_2018: Widget de pixelación en negro y blanco
       CSD U5 black white images pixelation_2019: Widget de pixelación en negro y blanco
       CSD U5L01 autoSFLP_2018: Resumen de la lección
-      CSD U5L01 autoSFLP_2019: Resumen de la lección
       CSD U5L02 autoSFLP_2018: Resumen de la lección
-      CSD U5L02 autoSFLP_2019: Resumen de la lección
       CSD U5L03 autoSFLP_2018: Resumen de la lección
       CSD U5L03 autoSFLP_2019: Resumen de la lección
       CSD U5L04 autoSFLP_2018: Resumen de la lección
@@ -529,12 +514,9 @@ es-ES:
       CSD U6 tugowar final: Hazlo por ti mismo
       CSD U6 tugowar final_2018: Hazlo por ti mismo
       CSD U6 tugowar final_2019: Hazlo por ti mismo
-      CSD U6L01 TFMD: Resumen de la lección
       CSD U6L01 TFMD_2018: Resumen de la lección
-      CSD U6L01 TFMD_2019: Resumen de la lección
       CSD U6L02 TFMD: Resumen de la lección
       CSD U6L02 TFMD_2018: Resumen de la lección
-      CSD U6L02 TFMD_2019: Resumen de la lección
       CSD U6L03 TFMD: Resumen de la lección
       CSD U6L03 TFMD_2018: Resumen de la lección
       CSD U6L03 TFMD_2019: Resumen de la lección
@@ -634,7 +616,6 @@ es-ES:
       CSDU4 Project Import: 'Proyecto de aplicación: Importación de pantalla'
       CSDU4 Project Import_2018: 'Proyecto de aplicación: Importación de pantalla'
       CSDU4 Project Import_2019: 'Proyecto de aplicación: Importación de pantalla'
-      CSDU6 - UI and Inputs - getNumber: conseguirNúmero
       CSDU6 - board event challenge_2018: Tabla de sonido
       CSDU6 - board event challenge_2019: Tabla de sonido
       CSDU6 buzzer 2d arrays_2018: Vectores 2D

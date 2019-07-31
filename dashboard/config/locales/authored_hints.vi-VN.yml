@@ -8,8 +8,8 @@ vi-VN:
         2-3_Artist_1_new_b: Gặp khó khăn khi rẽ ở góc? Hãy dùng block `rẽ phải 90
           độ`.
       2-3 Artist 11:
-        2-3_Artist_11_a: 'Gặp khó khăn với các góc? Bạn cần xoay 360 độ trong 8 lần.
-          360/8 bằng bao nhiêu? '
+        2-3_Artist_11_a: 'Gặp rắc rối với các góc? Bạn cần phải đi 360 độ 8 lần lượt.  360/8
+          là gì? '
       2-3 Artist 12:
         2-3_Artist_12_a: Một vòng tròn có 360 độ, vì vậy nếu người hoạ sĩ xoay 1 độ
           mỗi lần trong loop code, anh ta sẽ cần xoay 360 lần.
@@ -25,8 +25,6 @@ vi-VN:
         2-3_Artist_4_a: Để hoàn thành ngôi nhà, tất cả chúng ta cần làm là vẽ một
           hình vuông!
       2-3 Artist 6:
-        2-3_Artist_6_a: 'Để tạo những góc nhỏ này, bạn cần xoay _xa hơn_ mỗi lần so
-          với lúc bạn xoay hình vuông.   '
         2-3_Artist_6_b: Vì tôi đã hướng về bên phải, sẽ dễ hơn khi bắt đầu di chuyển
           về phía trước, sau đó quẹo trái để tạo thành hình tam giác.
         2-3_Artist_6_c: Mỗi cạnh của hình tam giác có chiều dài tương tự như mỗi cạnh
@@ -38,17 +36,15 @@ vi-VN:
       2-3 Artist 8:
         2-3_Artist_8_a: Nếu bạn giảm một nửa của 200, mỗi hình vuông cần bao nhiêu
           pixels chiều rộng?
-      2-3 Artist 9:
+      2-3 Artist 9 NEW:
         2-3_Artist_9_a: Kim cương này thật ra chỉ là một hình vuông nằm ở góc 45 độ
       2-3 Artist Debugging 10:
-        2-3_Artist_Debugging_10_a: Hãy nhớ rằng, bạn muốn bảng điều khiển _rộng hơn_
-          10 pixels...vậy nên hãy chắc chắn **thêm** 10 vào con số mà bạn thay đổi.
         2-3_Artist_Debugging_10_b: "**Thử và phạm lỗi là hoàn toàn bình thường ở đây!**
           \n\nHãy bắt đầu bằng việc thay đổi một con số mỗi lần.\n\nNhững con số nào
           làm điều đó?\n\nNếu bạn không thể, chỉ cần click \"Bắt đầu lại\" và code
           của bạn sẽ được reset."
       2-3 Artist Debugging 2:
-        2-3_Artist_Debugging_2_a: 'Gợi ý: Cứ mỗi ria mèo là 75 độ dài pixel.'
+        2-3_Artist_Debugging_2_a: 'Gợi ý: Các thác từng là 75 điểm ảnh lâu dài.'
       2-3 Artist Debugging 3:
         2-3_Artist_Debugging_3_a: Mỗi lượt lag 15 độ tối thiểu.
         2-3_Artist_Debugging_3_b: Nếu chương trình chạy quá nhanh để xem chuyện gì
@@ -56,13 +52,6 @@ vi-VN:
       2-3 Artist Debugging 7:
         2-3_Artist_Debugging_7_a: Chuyện gì sẽ xảy ra nếu họa sĩ di chuyển hoặc nhảy
           về sau khi ông vẽ nét đầu tiên?
-      2-3 Artist Debugging 8:
-        2-3_Artist_Debugging_8_a: |-
-          Hình của tôi đã lặp lại bao nhiêu lần?
-
-          Hình đó _cần_ lặp lại bao nhiêu lần?
-
-          Bạn có thể thay đổi điều đó ở đâu trong chương trình?
       2-3 Artist Debugging 9:
         2-3_Artist_Debugging_9_a: Người họa sĩ cần quay thêm 60 độ về bên trái trước
           khi bắt đầu vẽ!
@@ -92,49 +81,6 @@ vi-VN:
         2-3_Artist_Functions_4_a: Nhà họa sĩ cần quay 120 độ giữa những hình vuông
           để hoàn thành thiết kế này.
       2-3 Artist Loops New 11:
-        2-3_Artist_Loops_New_11_a: |-
-          Hãy nhớ, đây là mã nguồn của câu đố lúc nãy:
-
-          <xml>
-          <block type="when_run" deletable="false" movable="false">
-          <next>
-          <block type="controls_repeat">
-          <title name="TIMES">8</title>
-          <statement name="DO">
-          <block type="draw_colour" inline="true">
-          <value name="COLOUR">
-          <block type="colour_random"/>
-          </value>
-          <next>
-          <block type="draw_turn_by_constant_dropdown">
-          <title name="DIR">turnRight</title>
-          <title name="VALUE" config="45,60,90,120,180">45</title>
-          <next>
-          <block type="draw_move_by_constant">
-          <title name="DIR">moveForward</title>
-          <title name="VALUE">50</title>
-          <next>
-          <block type="draw_turn_by_constant_dropdown">
-          <title name="DIR">turnLeft</title>
-          <title name="VALUE" config="45,60,90,120,180">90</title>
-          <next>
-          <block type="draw_move_by_constant">
-          <title name="DIR">moveForward</title>
-          <title name="VALUE">50</title>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </statement>
-          </block>
-          </next>
-          </block>
-          </xml>
         2-3_Artist_Loops_New_11_b: Khối rẽ mới của bạn nên nằm ở phần **cuối** của
           đoạn mã bên trong vòng lặp.
       2-3 Artist Loops New 12:
@@ -148,9 +94,6 @@ vi-VN:
         2-3_Artist_Loops_New_13_a: "Ở cuối mỗi hình thoi, nhà họa sĩ đã ở đúng góc
           để bắt đầu hình tiếp theo. \n\n Do đó, chúng ta không cần thêm một khối
           `rẽ trái bởi` trước khi bắt đầu lại."
-        2-3_Artist_Loops_New_13_b: "Để làm mỗi hình thoi, nhà họa sĩ cần: \n\n-   đi\n-
-          \  rẽ phải 120 độ\n-   đi\n-   rẽ phải 60 độ \n\nXong rồi làm lại tất cả
-          từ đầu!"
       2-3 Artist Loops New 9:
         2-3_Artist_Loops_New_9_a: Nhà họa sĩ cần rẽ phải 45 độ trước khi bắt đầu vẽ.
         2-3_Artist_Loops_New_9_b: Chữ V này thật ra chỉ là một nửa hình vuông.  Cái
@@ -179,10 +122,6 @@ vi-VN:
           coi bông hoa đỏ giống hệt bông hoa tím xem!
         2-3_Bee_Conditionals_14_b: Nếu bông hoa đỏ có màu tím, bạn có thể tìm ra cách
           dùng thêm một vòng lặp để giảm số khối trong mã không?
-        2-3_Bee_Conditionals_14_c: "Thử chia việc này thành hai việc riêng biệt: \n\n![](https://images.code.org/895a52f3febff9edb83979f7861cf67a-image-1469640892331.png)\n\n1.
-          \ Thu hoạch mật hoa 3 lần\n\n2.  Đi thẳng 5 lần\n\n3.  Kiểm tra xem có mật
-          hoa không, nếu có: thu hoạch nó\n\n4.  Rẽ trái\n\n5.  Làm mật ong\n\n6.
-          \ Đi thẳng 1 lần\n\n7.  Làm mật ong 2 lần"
       2-3 Bee Conditionals 15:
         2-3_Bee_Conditionals_15_a: 'Nhớ rằng: Những bông hoa tím có 0 hoặc 1 mật hoa
           và nó có thể thay đổi mỗi làn bạn chạy chương trình.'
@@ -656,10 +595,8 @@ vi-VN:
           xa?"
       courseD_maze_ramp6:
         courseC_maze_programming6_a: Có hai cách để giải câu đố này!
-      courseD_scrat_predict1:
-        courseF_maze_ramp6_a: Có hai cách để giải câu đố này!
-      courseD_scrat_ramp6:
-        courseC_maze_programming6_a: Có hai cách để giải câu đố này!
+      courseD_scrat_ramp7:
+        courseD_scrat_programming6_a: Có hai cách để giải câu đố này!
       courseE_artist_functions1:
         courseE_artist_functions1_a: Mỗi hình vuông có cạnh dài 100 điểm ảnh, điều
           đó có nghĩa là bạn cần đi về phía trước 175 điểm ảnh trước khi vẽ hình vuông

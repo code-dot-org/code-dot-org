@@ -11,13 +11,6 @@ function cp_in() {
   cp $1 $2
 }
 
-# make sure we're on staging
-branch=$(git branch | sed -n '/\* /s///p')
-if [ "$branch" != "staging" ]; then
-  echo "Must run from staging branch"
-  exit
-fi
-
 ### Dashboard
 
 orig_dir=dashboard/config/locales
@@ -29,7 +22,6 @@ cp_in $orig_dir/en.yml $loc_dir/base.yml
 
 # Copy in needed files from dashboard
 cp_in $orig_dir/blocks.en.yml $loc_dir/blocks.yml
-cp_in $orig_dir/dsls.en.yml $loc_dir/dsls.yml
 cp_in $orig_dir/data.en.yml $loc_dir/data.yml
 cp_in $orig_dir/devise.en.yml $loc_dir/devise.yml
 cp_in $orig_dir/scripts.en.yml $loc_dir/scripts.yml
