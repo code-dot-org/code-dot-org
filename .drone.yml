@@ -63,7 +63,10 @@ steps:
     - rm -rf "$(pwd)/home/circleci/.rbenv"
     # Depended on by CircleUtils: https://github.com/code-dot-org/code-dot-org/blob/56c4061afb55432ba8ccecc72b5b960ebd9480aa/lib/cdo/circle_utils.rb#L19
     - export CIRCLE_SHA1=$DRONE_COMMIT
-    - /entrypoint.sh docker/unit_tests.sh
+    - EXIT_CODE=0
+    - /entrypoint.sh docker/unit_tests.sh || EXIT_CODE=$?
+    - while pgrep bash >/dev/null; do echo "found bash process; keeping container alive"; sleep 20; done
+    - exit $EXIT_CODE
 
 - name: update-cache
   image: plugins/s3-cache
@@ -170,7 +173,10 @@ steps:
     - cp -rn "$(pwd)/home/circleci/.rbenv" /home/circleci || true
     # Depended on by CircleUtils: https://github.com/code-dot-org/code-dot-org/blob/56c4061afb55432ba8ccecc72b5b960ebd9480aa/lib/cdo/circle_utils.rb#L19
     - export CIRCLE_SHA1=$DRONE_COMMIT
-    - /entrypoint.sh docker/ui_tests.sh
+    - EXIT_CODE=0
+    - /entrypoint.sh docker/ui_tests.sh || EXIT_CODE=$?
+    - while pgrep bash >/dev/null; do echo "found bash process; keeping container alive"; sleep 20; done
+    - exit $EXIT_CODE
 
 - name: update-cache
   image: plugins/s3-cache
@@ -199,6 +205,6 @@ trigger:
   - pull_request
 ---
 kind: signature
-hmac: a6c327dc9c60d4997d4b02ff9026d450d50e89a77fbb829d748de834af424f15
+hmac: 87eaf56f835b7821cea0e3bebd3bddf68dbaeb37e3b155340f4693ce9cdfe888
 
 ...
