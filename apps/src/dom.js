@@ -1,4 +1,7 @@
-exports.addReadyListener = function(callback) {
+const dom = {};
+export default dom;
+
+dom.addReadyListener = function(callback) {
   if (document.readyState === 'complete') {
     setTimeout(callback, 1);
   } else {
@@ -6,7 +9,7 @@ exports.addReadyListener = function(callback) {
   }
 };
 
-exports.getTouchEventName = function(eventName) {
+dom.getTouchEventName = function(eventName) {
   var isIE11Touch = window.navigator.pointerEnabled;
   var isIE10Touch = window.navigator.msPointerEnabled;
   var isStandardTouch = 'ontouchend' in document.documentElement;
@@ -58,7 +61,7 @@ var addEvent = function(
   bindEvent('click', eventName, handler);
 
   // Optionally add touch handler
-  var touchEvent = exports.getTouchEventName(eventName);
+  var touchEvent = dom.getTouchEventName(eventName);
   if (touchEvent) {
     bindEvent('touch', touchEvent, function(e) {
       // Stop mouse events and suppress default event handler to prevent
@@ -78,11 +81,11 @@ var addEvent = function(
   };
 };
 
-exports.addMouseDownTouchEvent = function(element, handler) {
+dom.addMouseDownTouchEvent = function(element, handler) {
   return addEvent(element, 'mousedown', handler);
 };
 
-exports.addMouseUpTouchEvent = function(
+dom.addMouseUpTouchEvent = function(
   element,
   handler,
   suppressTouchDefault = true
@@ -90,11 +93,11 @@ exports.addMouseUpTouchEvent = function(
   return addEvent(element, 'mouseup', handler, suppressTouchDefault);
 };
 
-exports.addMouseMoveTouchEvent = function(element, handler) {
+dom.addMouseMoveTouchEvent = function(element, handler) {
   return addEvent(element, 'mousemove', handler);
 };
 
-exports.addClickTouchEvent = function(element, handler) {
+dom.addClickTouchEvent = function(element, handler) {
   return addEvent(element, 'click', handler);
 };
 
@@ -122,29 +125,29 @@ var TOUCH_MAP = {
     ie11: 'pointermove'
   }
 };
-exports.TOUCH_MAP = TOUCH_MAP;
+dom.TOUCH_MAP = TOUCH_MAP;
 
-exports.isMobile = function() {
+dom.isMobile = function() {
   var reg = /Mobile|iP(hone|od|ad)|Android|BlackBerry|IEMobile/;
   return reg.test(window.navigator.userAgent);
 };
 
-exports.isWindowsTouch = function() {
+dom.isWindowsTouch = function() {
   var reg = /MSIE.*Touch/;
   return reg.test(window.navigator.userAgent);
 };
 
-exports.isAndroid = function() {
+dom.isAndroid = function() {
   var reg = /Android/;
   return reg.test(window.navigator.userAgent);
 };
 
-exports.isIOS = function() {
+dom.isIOS = function() {
   var reg = /iP(hone|od|ad)/;
   return reg.test(window.navigator.userAgent);
 };
 
-exports.isIPad = function() {
+dom.isIPad = function() {
   var reg = /iPad/i;
   return reg.test(window.navigator.userAgent);
 };
