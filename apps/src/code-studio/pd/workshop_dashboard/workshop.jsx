@@ -10,9 +10,19 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 import moment from 'moment';
-import {Grid, Row, Col, Panel, ButtonToolbar, Button} from 'react-bootstrap';
+import {
+  Grid,
+  Row,
+  Col,
+  Panel,
+  ButtonToolbar,
+  Button,
+  DropdownButton,
+  MenuItem
+} from 'react-bootstrap';
 import {DATE_FORMAT} from './workshopConstants';
 import ConfirmationDialog from '../components/confirmation_dialog';
+import MoveEnrollmentsDialog from './components/move_enrollments_dialog';
 import WorkshopForm from './components/workshop_form';
 import WorkshopEnrollment from './components/workshop_enrollment';
 import Spinner from '../components/spinner';
@@ -59,7 +69,9 @@ export class Workshop extends React.Component {
         loadingEnrollments: true,
         enrollmentActiveTab: 0,
         pendingAdminAction: null,
-        showAdminEditConfirmation: false
+        showAdminEditConfirmation: false,
+        selectedEnrollments: [],
+        isMoveEnrollmentsDialogOpen: false
       };
     }
   }
@@ -166,7 +178,7 @@ export class Workshop extends React.Component {
     });
   };
 
-  handleMoveEnrollment = (destinationWorkshopId, selectedEnrollments) => {
+  handleMoveEnrollments = (destinationWorkshopId, selectedEnrollments) => {
     const enrollmentIds = selectedEnrollments.map(enrollment => {
       return enrollment.id;
     });
@@ -182,6 +194,49 @@ export class Workshop extends React.Component {
       this.loadEnrollments();
       this.moveEnrollmentRequest = null;
     });
+  };
+
+  handleClickSelect = enrollment => {
+    if (
+      this.state.selectedEnrollments.findIndex(e => e.id === enrollment.id) >= 0
+    ) {
+      this.setState(state => {
+        const selectedEnrollments = state.selectedEnrollments.filter(e => {
+          return e.id !== enrollment.id;
+        });
+        return {selectedEnrollments};
+      });
+    } else {
+      this.setState(state => {
+        state.selectedEnrollments.push({
+          id: enrollment.id,
+          email: enrollment.email,
+          first_name: enrollment.first_name,
+          last_name: enrollment.last_name
+        });
+      });
+    }
+  };
+
+  handleClickMoveEnrollments = () => {
+    this.setState({isMoveEnrollmentsDialogOpen: true});
+  };
+
+  handleMoveEnrollmentsCanceled = () => {
+    this.setState({
+      isMoveEnrollmentsDialogOpen: false
+    });
+  };
+
+  handleMoveEnrollmentsConfirmed = destinationWorkshopId => {
+    this.setState({
+      isMoveEnrollmentsDialogOpen: false,
+      selectedEnrollments: []
+    });
+    this.handleMoveEnrollments(
+      destinationWorkshopId,
+      this.state.selectedEnrollments
+    );
   };
 
   componentWillUnmount() {
@@ -764,6 +819,23 @@ export class Workshop extends React.Component {
         >
           <i className="fa fa-arrow-circle-down" />
         </Button>
+        {this.props.permission.has(WorkshopAdmin) && (
+          <DropdownButton
+            bsSize="xsmall"
+            title="Actions (admin)"
+            id="admin-actions-dropdown"
+            disabled={this.state.selectedEnrollments.length === 0}
+            noCaret
+          >
+            <MenuItem onSelect={this.handleClickMoveEnrollments}>Move</MenuItem>
+            <MoveEnrollmentsDialog
+              show={this.state.isMoveEnrollmentsDialogOpen}
+              selectedEnrollments={this.state.selectedEnrollments}
+              onCancel={this.handleMoveEnrollmentsCanceled}
+              onMove={this.handleMoveEnrollmentsConfirmed}
+            />
+          </DropdownButton>
+        )}
       </div>
     );
 
@@ -783,13 +855,14 @@ export class Workshop extends React.Component {
           numSessions={this.state.workshop.sessions.length}
           enrollments={this.state.enrollments}
           onDelete={this.handleDeleteEnrollment}
-          onMove={this.handleMoveEnrollment}
+          onClickSelect={this.handleClickSelect}
           accountRequiredForAttendance={
             this.state.workshop['account_required_for_attendance?']
           }
           scholarshipWorkshop={this.state.workshop['scholarship_workshop?']}
           activeTab={this.state.enrollmentActiveTab}
           onTabSelect={this.handleEnrollmentActiveTabSelect}
+          selectedEnrollments={this.state.selectedEnrollments}
         />
       );
     }
