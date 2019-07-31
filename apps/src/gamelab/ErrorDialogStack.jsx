@@ -11,7 +11,8 @@ import Button from '@cdo/apps/templates/Button';
 import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
 import * as animationActions from './animationListModule';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
-import {getCurrentId} from '@cdo/apps/code-studio/initApp/project';
+import project from '@cdo/apps/code-studio/initApp/project';
+const {getCurrentId} = project;
 
 /**
  * Renders error dialogs in sequence, given a stack of errors.
