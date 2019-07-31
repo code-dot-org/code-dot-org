@@ -22,8 +22,9 @@ Feature: BubbleChoice
     # View progress from script overview page
     Given I am on "http://studio.code.org/s/allthethings"
     And I wait until element ".teacher-panel" is visible
-    When I click selector ".teacher-panel table td:contains(Alice)" once I see it to load a new page
+    When I click selector ".teacher-panel table td:contains(Alice)" once I see it
     And I wait until element "td:contains(Bubble Choice)" is visible
+    And I wait for 2 seconds
     Then I verify progress for stage 40 level 1 is "perfect"
 
     # View progress from BubbleChoice activity page
@@ -31,6 +32,7 @@ Feature: BubbleChoice
     And I wait until element ".teacher-panel" is visible
     # Teacher has not completed level, so make sure it is not shown as complete
     And element ".uitest-bubble-choice:eq(0) i.fa-check" is not visible
-    When I click selector ".teacher-panel table td:contains(Alice)" once I see it to load a new page
+    When I click selector ".teacher-panel table td:contains(Alice)" once I see it
     And I wait until element ".uitest-bubble-choice:eq(0)" is visible
+    And I wait for 2 seconds
     And element ".uitest-bubble-choice:eq(0) i.fa-check" is visible
