@@ -1399,6 +1399,16 @@ describe('progressReduxTest', () => {
       });
     });
 
+    it('does not clear progress with no userId', () => {
+      serverResponse({});
+      const promise = userProgressFromServer(state, dispatch);
+      server.respond();
+      return promise.then(responseData => {
+        assert.equal(0, dispatch.callCount);
+        assert.deepEqual({}, responseData);
+      });
+    });
+
     it('requests user progress and dispatches appropriate actions', () => {
       const responseData = {
         isVerifiedTeacher: true,

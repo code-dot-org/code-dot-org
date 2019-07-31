@@ -316,14 +316,17 @@ export function processedStages(stages, isPlc) {
  * Requests user progress from the server and dispatches other redux actions
  * based on the server's response data.
  */
-const userProgressFromServer = (state, dispatch, userId) => {
+const userProgressFromServer = (state, dispatch, userId = null) => {
   if (!state.scriptName) {
     const message = `Could not request progress for user ID ${userId} from server: scriptName must be present in progress redux.`;
     throw new Error(message);
   }
 
-  // Clear any existing progress before getting new progress.
-  dispatch({type: CLEAR_PROGRESS});
+  // If we have a userId, we can clear any progress in redux and request all progress
+  // from the server.
+  if (userId) {
+    dispatch({type: CLEAR_PROGRESS});
+  }
 
   return $.ajax({
     url: `/api/user_progress/${state.scriptName}`,
