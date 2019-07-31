@@ -19,11 +19,11 @@ Before('@as_teacher') do
 end
 
 Before('@eyes_ie and @scroll_stitch_mode') do
-  @eyes.stitch_mode = :scroll
+  $stitch_mode = :scroll
 end
 
 After('@eyes_ie and @scroll_stitch_mode') do
-  @eyes.stitch_mode = :css
+  $stitch_mode = :css
 end
 
 # Add After hook as the last one, which results in it being run before

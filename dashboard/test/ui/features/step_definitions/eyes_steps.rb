@@ -38,7 +38,8 @@ When(/^I open my eyes to test "([^"]*)"$/) do |test_name|
   end
   @browser.capabilities[:takes_screenshot] = true
   @eyes.force_full_page_screenshot = true
-  @eyes.stitch_mode = :css
+  # Use CSS Stitch Mode unless a before hook sets it to :scroll based on a tag.
+  @eyes.stitch_mode = ($stitch_mode || :css)
   @eyes.open(config)
 end
 
