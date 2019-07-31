@@ -35,18 +35,6 @@ export default class MoveEnrollmentsDialog extends React.Component {
     this.props.onMove(this.state.destination_workshop_id);
   }
 
-  renderSelectedEnrollments() {
-    const enrollments = this.props.selectedEnrollments.map((enrollment, i) => {
-      return (
-        <li key={i}>
-          {enrollment.first_name} {enrollment.last_name} ({enrollment.email})
-        </li>
-      );
-    });
-
-    return <ul>{enrollments}</ul>;
-  }
-
   render() {
     return (
       <Modal show={this.props.show} onHide={this.props.onCancel}>
@@ -56,7 +44,7 @@ export default class MoveEnrollmentsDialog extends React.Component {
         <Modal.Body>
           <div>
             <h3>You are moving the following enrollments:</h3>
-            {this.renderSelectedEnrollments()}
+            <EnrollmentList enrollments={this.props.selectedEnrollments} />
             <h3 style={styles.warning}>
               Warning: moving enrollments will delete any associated attendance
               data!
@@ -76,3 +64,19 @@ export default class MoveEnrollmentsDialog extends React.Component {
     );
   }
 }
+
+const EnrollmentList = ({enrollments}) => {
+  return (
+    <ul>
+      {enrollments.map((enrollment, i) => {
+        <li key={i}>
+          {enrollment.first_name} {enrollment.last_name} ({enrollment.email})
+        </li>;
+      })}
+    </ul>
+  );
+};
+
+EnrollmentList.propTypes = {
+  enrollments: PropTypes.array
+};
