@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Radium from 'radium';
-import * as color from '../../util/color';
+import color from '../../util/color';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 const styles = {

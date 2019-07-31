@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import SoundList from './SoundList';
 import SoundCategory from './SoundCategory';
-import * as color from '../../util/color';
+import color from '../../util/color';
 import Sounds from '../../Sounds';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 

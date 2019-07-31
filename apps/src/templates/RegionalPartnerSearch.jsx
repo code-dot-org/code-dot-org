@@ -6,7 +6,7 @@ import {
 } from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 import {RegionalPartnerMiniContactPopupLink} from '@cdo/apps/code-studio/pd/regional_partner_mini_contact/RegionalPartnerMiniContact';
 import Notification from '@cdo/apps/templates/Notification';
-import * as color from '../util/color';
+import color from '../util/color';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {studio} from '@cdo/apps/lib/util/urlHelpers';
 import PropTypes from 'prop-types';
