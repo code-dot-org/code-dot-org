@@ -38,7 +38,6 @@ require('@cdo/apps/code-studio/components/AbuseError');
 require('@cdo/apps/code-studio/components/ReportAbuseForm');
 require('@cdo/apps/code-studio/components/SendToPhone');
 require('@cdo/apps/code-studio/components/SmallFooter');
-require('@cdo/apps/code-studio/components/GridEditor');
 require('@cdo/apps/code-studio/components/Attachments');
 
 // Prevent callstack exceptions when opening multiple dialogs
