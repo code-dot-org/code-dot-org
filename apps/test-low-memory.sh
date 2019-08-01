@@ -1,6 +1,7 @@
 #!/bin/bash
 set -e
 
+NPROC=$(nproc)
 MEM_PER_PROCESS=4096
 GRUNT_CMD="node --max_old_space_size=${MEM_PER_PROCESS} `npm bin`/grunt"
 
@@ -9,6 +10,9 @@ if [ -n "$DRONE" ]; then
   curl -s https://codecov.io/bash > ${CODECOV}
   chmod +x ${CODECOV}
   CODECOV="$CODECOV -C $DRONE_COMMIT_SHA"
+
+  # As of 8/1/2019, PhantomJS seems to frequently crash on drone instances when using > 2 processes.
+  NPROC=2
 else
   # For non-Drone runs, stub-out codecov.
   CODECOV=: # stub
@@ -23,7 +27,6 @@ fi
 
 # Don't run more processes than can fit in free memory.
 MEM_PROCS=$(awk "/${MEM_METRIC}/ {printf \"%d\", \$2/1024/${MEM_PER_PROCESS}}" /proc/meminfo)
-NPROC=$(nproc)
 PROCS=$(( ${MEM_PROCS} < ${NPROC} ? ${MEM_PROCS} : ${NPROC} ))
 
 if [ $PROCS -eq 0 ]; then
