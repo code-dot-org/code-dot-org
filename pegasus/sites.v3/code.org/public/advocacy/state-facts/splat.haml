@@ -319,7 +319,7 @@ theme: pdf
       at
       = succeed "." do
         = state_info[:code_email_s]
-    - if true || state_info[:ecep_name_s] != "NA"
+    - if state_info[:ecep_name_s] != "NA"
       %li
         The Expanding Computing Education Pathways (ECEP) Alliance
         = precede "(" do
