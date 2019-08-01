@@ -10,7 +10,7 @@ class CurriculumTrackingPixelController < ApplicationController
     end
 
     if curriculum_page
-      FirehoseClient.putRecord(
+      FirehoseClient.instance.put_record(
         {
           study: STUDY_NAME,
           study_group: 'v1',
