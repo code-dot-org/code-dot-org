@@ -12977,3 +12977,19 @@ en:
           description_audience: Tuổi 5-10
           description_short: Khoa học máy tính cơ bản cho học sinh Việt Nam
           description: 'Khoa Học Máy Tính (Computer Science) là môn học cơ bản của thời đại kinh tế số và đã được đưa vào dạy đại trà từ tiểu học ở Mỹ, Canada, Anh, Nhật và các nước phát triển khác. Khoá học này nhằm giới thiệu Khoa Học Máy Tính cơ bản đến với học sinh Việt Nam. Chương trình được xây dựng trực tiếp từ chương trình hiện hành cho học sinh tiểu học ở Mỹ và cô đọng cho phù hợp với học sinh Việt Nam. '
+        dlp19-csd-mod-fit:
+          stages:
+            Deeper Learning Overview:
+              name: Deeper Learning Overview
+          title: CS Discoveries Deeper Learning 2019 Overview
+          description_audience: CS Discoveries Facilitators in Training 2019
+          description_short: ''
+          description: ''
+        dlp19-csp-mod-fit:
+          stages:
+            Deeper Learning Overview:
+              name: Deeper Learning Overview
+          title: CS Principles Deeper Learning 2019 FiT Workshop
+          description_audience: ''
+          description_short: ''
+          description: ''

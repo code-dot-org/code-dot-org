@@ -8,7 +8,7 @@ level 'csp_socialBelonging_control_2018', progression: 'Check For Understanding'
 
 stage 'Sending Binary Messages'
 level 'CSP U1L2 SFLP 20-21', progression: 'Lesson Overview'
-level 'CSP U1L2 Multiple Choice Assessment Question', progression: 'Check For Understanding'
+level 'U1L3 CFU Sending Complex Messages', progression: 'Check For Understanding'
 
 stage 'Sending Binary Messages with the Internet Simulator'
 level 'CSP U1L3 SFLP 20-21', progression: 'Lesson Overview'
