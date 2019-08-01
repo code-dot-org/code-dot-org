@@ -11,7 +11,7 @@ layout: wide_index
 
   = view :header
 %h2.center-text= view :hoc_events_counter
-- use_mapbox = DCDO.get("use_mapbox", false)
+- use_mapbox = DCDO.get("use_mapbox", false) || params[:use_mapbox]
 - if use_mapbox
   = view :hoc_events_map_replacement
 - else
