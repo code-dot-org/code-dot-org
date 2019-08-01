@@ -105,11 +105,19 @@ class ContactRollups
     coursed-2018
     coursee-2018
     coursef-2018
+    coursea-2019
+    courseb-2019
+    coursec-2019
+    coursed-2019
+    coursee-2019
+    coursef-2019
     20-hour
-    express-2018
-    pre-express-2018
     express-2017
     pre-express-2017
+    express-2018
+    pre-express-2018
+    express-2019
+    pre-express-2019
   ).freeze
 
   CSF_SCRIPT_LIST = CSF_SCRIPT_ARRAY.map {|x| "'#{x}'"}.join(',')
@@ -510,6 +518,8 @@ class ContactRollups
     add_role_from_course_sections_taught("CSP Teacher", "csp-2017")
     add_role_from_course_sections_taught("CSD Teacher", "csd-2018")
     add_role_from_course_sections_taught("CSP Teacher", "csp-2018")
+    add_role_from_course_sections_taught("CSD Teacher", "csd-2019")
+    add_role_from_course_sections_taught("CSP Teacher", "csp-2019")
     log_completion(start)
   end
 

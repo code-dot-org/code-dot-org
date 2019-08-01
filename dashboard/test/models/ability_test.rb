@@ -218,4 +218,11 @@ class AbilityTest < ActiveSupport::TestCase
 
     refute Ability.new(teacher).can? :get_feedbacks, feedback
   end
+
+  test 'workshop admin can update scholarship info' do
+    workshop_admin = create :workshop_admin
+    pd_enrollment = create :pd_enrollment
+
+    assert Ability.new(workshop_admin).can? :update_scholarship_info, pd_enrollment
+  end
 end

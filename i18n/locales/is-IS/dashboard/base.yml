@@ -36,7 +36,7 @@ is:
   welcome_back: "Velkomin/n aftur, %{name}"
   your_professional_learning_plan: "Námsáætlun þín í faginu"
   see_your_learning_plan: "Skoða námsáætlun þína"
-  submit: Senda inn
+  submit: Staðfesta
   unsubmit: Afturkalla innsendingu
   previous_page: Fyrri síða
   next_page: Næsta síða
@@ -192,7 +192,7 @@ is:
       title: 'Gleymdir þú lykilorðinu þínu ?'
       instructions: "Skrifaðu netfangið þitt hér fyrir neðan til að fá leiðbeiningar varðandi endurstillingu aðgangsorðs."
       email: 'Netfang'
-      submit: 'Senda inn'
+      submit: 'Staðfesta'
     reset_errors:
       captcha_required: 'Vinsamlegast kláraðu skynprófið til að endurstilla leyniorðið.'
       invalid_email: 'Svo virðist sem þú hafir skráð þig með ógildu netfangi. Vinsamlegast sendu póst á support@code.org til að fá tengil fyrir endurstillingu lykilorðs.'
@@ -256,7 +256,7 @@ is:
     edit: 'Breyta'
     edit_model: 'Breyta %{model}'
     update: 'Uppfæra'
-    submit: 'Senda inn'
+    submit: 'Staðfesta'
     destroy: 'Eyða'
     back: 'Til baka'
     confirm: 'Ertu viss?'
@@ -788,7 +788,7 @@ is:
       american_indian: "Amerískur indíáni / Alaska frumbyggi"
       other: "Annað"
       opt_out: "Vil ekki gefa upp"
-    submit: "Senda inn"
+    submit: "Staðfesta"
     decline: "Loka"
   zendesk_too_young_message: 'Því miður mega yngri notendur ekki skrá sig á hjálparvefinn. Þú getur skoðað <a href="http://support.code.org">support.code.org</a> án þess að skrá þig inn eða beðið foreldri eða kennara að hafa samband við okkur fyrir þig.'
   progress:

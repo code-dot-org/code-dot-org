@@ -1,6 +1,7 @@
 require 'csv'
 require '../lib/cdo/git_utils'
 require '../lib/cdo/rake_utils'
+require '../lib/cdo/hash_utils'
 
 namespace :seed do
   verbose false
@@ -278,35 +279,30 @@ namespace :seed do
   end
 
   task :cached_ui_test do
-    if File.exist?('db/ui_test_data.commit')
-      dump_commit = File.read('db/ui_test_data.commit')
-      if GitUtils.valid_commit?(dump_commit)
-        files_changed = GitUtils.files_changed_in_branch_or_local(
-          dump_commit,
-          [
-            'dashboard/app/dsl/**/*',
-            'dashboard/config/**/*',
-            'dashboard/db/**/*',
-            'dashboard/lib/tasks/**/*',
-          ],
-          ignore_patterns: [
-            'dashboard/db/ui_test_data.*',
-          ],
-        )
-        if files_changed.empty?
-          puts 'Cache hit! Loading from db dump'
-          sh('mysql -u root < db/ui_test_data.sql')
-          next
-        end
-        puts files_changed
-      else
-        puts 'SQL dump created on unreachable commit'
+    HASH_FILE = 'db/ui_test_data.hash'
+
+    # patterns are relative to dashboard directory
+    watched_files = FileList[
+      'app/dsl/**/*',
+      'config/**/*',
+      'db/**/*',
+      'lib/tasks/**/*',
+    ].exclude('db/ui_test_data.*')
+    current_hash = HashUtils.file_contents_hash(watched_files)
+
+    if File.exist?(HASH_FILE)
+      dump_hash = File.read(HASH_FILE)
+
+      if current_hash == dump_hash
+        puts 'Cache hit! Loading from db dump'
+        sh('mysql -u root < db/ui_test_data.sql')
+        next
       end
     end
 
     puts 'Cache mismatch, running full ui test seed'
     Rake::Task['seed:ui_test'].invoke
-    File.write('db/ui_test_data.commit', GitUtils.git_revision_branch('origin/' + GitUtils.current_branch))
+    File.write(HASH_FILE, current_hash)
     sh('mysqldump -u root -B dashboard_test > db/ui_test_data.sql')
   end
 

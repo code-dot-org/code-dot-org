@@ -1463,6 +1463,52 @@ pt-BR:
         # Imagens
 
         Uma página da web Cachorro X Gato foi iniciada para você. A imagem do cachorro já foi adicionada à página abaixo. Use uma tag de imagem para adicionar a imagem `cat.jpeg` à página abaixo do cabeçalho do gato.
+      CSD U2 Image Tag 1_2019: |-
+        <div class="no-pullthrough" style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px">
+        <details>
+
+        <summary>
+        <strong>Como eu adiciono imagens?</strong>
+        </summary>
+
+        A tag `<img>` permite que você exiba imagens em sua página web. <br><br>
+
+        Exemplo:
+
+        <pre>&lt;img src="dog.png" alt="cão saltando"&gt;</pre><br><br>
+
+        Para informar ao browser qual imagem deve ser exibida, uma informação adicional, chamada **atributo**, é acrescentada à tag \<img> dentro dos colchetes. O atributo `src` representa **s**ou**rc**e ("origem") e contém o nome da imagem. Arquivos de imagens incluem extensões que dizem ao computador qual o tipo da imagem com que eles estão trabalhando. Extensões comuns são .jpg, .jpeg, .png. <br><br>
+
+        Além do atributo src, elementos de imagem também possuem o atributo `alt` que descreve a imagem. Isto é importante caso a imagem não carregue, ou para pessoas que têm problemas visuais. <br><br>
+
+        Uma tag `<img>`  é um exemplo de uma tag com **auto fechamento**, porque ela inicia e termina na mesma tag.
+
+        </details>
+        <details>
+        <summary>
+        <strong>Por que uma imagem não tem uma tag de fechamento?</strong>
+        </summary>
+        Uma tag de imagem não precisa de uma tag de fechamento porque não há conteúdo de texto que precisa ser envolvido entre tags. O conteúdo que é exibido na tela é especificado através dos atributos.
+        </details>
+        <details>
+        <summary>
+        <strong>O que é um atributo?</strong>
+        </summary>
+
+        Atributos são informações adicionais que são incluídas em uma tag. Atributos têm nomes e valores. O nome indica qual o tipo de informação está sendo fornecido, e então o valor fornece a informação específica para esta tag.
+
+        Por exemplo as tags \<img> têm dois atributos, src and alt. src especifica o nome do arquivo da imagem e alt diz ao browser, em texto legível, o que a imagem contém.
+
+        </details>
+        </div>
+
+        # Imagens
+
+        Uma página web Cão vs Gato foi iniciada para você. A imagem do cão já foi adicionada à página abaixo. Observe o código que fez a imagem do cão aparecer, e então use uma tag image para acrescentar a imagem `cat.jpeg` na página abaixo do título do gato.
+
+        Esta imagem foi encontrada no Pixabay e foi fornecida pelo usuário "Alexas\_Fotos", que usou uma licença "livre para uso comercial" e "atribuição de autoria não requerida".
+
+        <https://studio.code.org/s/csd2-2019/stage/7/puzzle/2> -> long\_instructions.
       CSD U2 Image Tag 2: |-
         <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
         <details>
@@ -1509,6 +1555,56 @@ pt-BR:
         -   Envie pelo menos uma imagem para esta página da web
         -   Use a tag `<img>` para exibir a (s) imagem (ns) em seu site.
         -   Certifique-se de adicionar um atributo `alt`.
+      CSD U2 Image Tag 2_2019: |-
+        <div class="no-pullthrough" style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+        <details>
+
+        <summary>
+        <strong>Como eu adiciono imagens?</strong>
+        </summary>
+
+        A tag `<img>` permite que você exiba imagens em sua página web. <br><br>
+
+        Exemplo:
+
+        <pre>&lt;img src="dog.png" alt="cão saltando"&gt;</pre><br><br>
+
+        Para informar ao browser qual imagem deve ser exibida, uma informação adicional, chamada **atributo**, é acrescentada à tag \<img> dentro dos colchetes. O atributo `src` representa **s**ou**rc**e ("origem") e contém o nome da imagem. Arquivos de imagens incluem extensões que dizem ao computador qual o tipo da imagem com que eles estão trabalhando. Extensões comuns são .jpg, .jpeg, .png. <br><br>
+
+        Além do atributo src, elementos de imagem também possuem o atributo `alt` que descreve a imagem. Isto é importante caso a imagem não carregue, ou para pessoas que têm problemas visuais. <br><br>
+
+        Uma tag `<img>`  é um exemplo de uma tag com **auto fechamento**, porque ela inicia e termina na mesma tag.
+
+        </details>
+        <details>
+        <summary>
+        <strong>Por que uma imagem não tem uma tag de fechamento?</strong>
+        </summary>
+        Uma tag de imagem não precisa de uma tag de fechamento porque não há conteúdo de texto que precisa ser envolvido entre tags. O conteúdo que é exibido na tela é especificado através dos atributos.
+        </details>
+        <details>
+        <summary>
+        <strong>O que é um atributo?</strong>
+        </summary>
+
+        Atributos são informações adicionais que são incluídas em uma tag. Atributos têm nomes e valores. O nome indica qual o tipo de informação está sendo fornecido, e então o valor fornece a informação específica para esta tag.
+
+        Por exemplo as tags \<img> têm dois atributos, src and alt. src especifica o nome do arquivo da imagem e alt diz ao browser, em texto legível, o que a imagem contém.
+
+        </details>
+        </div>
+
+        # Carregando Imagens
+
+        Você pode carregar imagens que você encontrou em outros lugares usando o botão **Adicionar Imagem**. Procure uma imagem de um tipo diferente de pet que você goste e baixe no seu computador (usando clique direito "Salvar Como").
+
+        Quanto você tiver suas imagens, clique ![](<https://images.code.org/c35789d00e59b0dbe42879390dabf925-image-1493240590385.01.49 PM.png>) e carregue a imagem do seu computador para o seu projeto, onde você pode então usá-la em sua página.
+
+        # Faça Isto
+
+        -   Carregue ao menos uma image nesta página web
+        -   Use a tag `<img>` para exibir a(s) imagens(s) no seu website.
+        -   Tenha certeza de adicionar um atributo `alt`.
       CSD U2 Image Tag Attribution: |-
         <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
         <details>
@@ -1555,6 +1651,56 @@ pt-BR:
         -   O nome do criador (se disponível)
         -   O site em que foi encontrado (por exemplo, commons.wikimedia.org)
         -   A licença em que foi publicada (por exemplo, CC-BY)
+      CSD U2 Image Tag Attribution_2019: |-
+        <div class="no-pullthrough" style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+        <details>
+
+        <summary>
+        <strong>Como eu adiciono imagens?</strong>
+        </summary>
+
+        A tag `<img>` permite que você exiba imagens em sua página web. <br><br>
+
+        Exemplo:
+
+        <pre>&lt;img src="dog.png" alt="cão saltando"&gt;</pre><br><br>
+
+        Para informar ao browser qual imagem deve ser exibida, uma informação adicional, chamada **atributo**, é acrescentada à tag \<img> dentro dos colchetes. O atributo `src` representa **s**ou**rc**e ("origem") e contém o nome da imagem. Arquivos de imagens incluem extensões que dizem ao computador qual o tipo da imagem com que eles estão trabalhando. Extensões comuns são .jpg, .jpeg, .png. <br><br>
+
+        Além do atributo src, elementos de imagem também possuem o atributo `alt` que descreve a imagem. Isto é importante caso a imagem não carregue, ou para pessoas que têm problemas visuais. <br><br>
+
+        Uma tag `<img>`  é um exemplo de uma tag com **auto fechamento**, porque ela inicia e termina na mesma tag.
+
+        </details>
+        <details>
+        <summary>
+        <strong>Por que uma imagem não tem uma tag de fechamento?</strong>
+        </summary>
+        Uma tag de imagem não precisa de uma tag de fechamento porque não há conteúdo de texto que precisa ser envolvido entre tags. O conteúdo que é exibido na tela é especificado através dos atributos.
+        </details>
+        <details>
+        <summary>
+        <strong>O que é um atributo?</strong>
+        </summary>
+
+        Atributos são informações adicionais que são incluídas em uma tag. Atributos têm nomes e valores. O nome indica qual o tipo de informação está sendo fornecido, e então o valor fornece a informação específica para esta tag.
+
+        Por exemplo as tags \<img> têm dois atributos, src and alt. src especifica o nome do arquivo da imagem e alt diz ao browser, em texto legível, o que a imagem contém.
+
+        </details>
+        </div>
+
+        # Atribuindo Créditos
+
+        Ao utilizar uma imagem com licença Creative Commons, você precisar dar o crédito para o criador original (isto é também chamado _atribuição_). Existem várias maneiras de prover atribuição, mas a forma mais simples é acrescentar texto abaixo da imagem que identifica o autor e website de onde ela foi obtida.
+
+        # Faça Isto
+
+        Nesta página nós já adicionamos e atribuimos uma imagem de um sapo. Use o mecanismo de busca da Creative Commons para encontrar uma outra imagem de um anfíbio. Acrescente sua imagem a esta página, juntamente com a devida atribuição, incluindo:
+
+        -   O nome do autor (se disponível)
+        -   O website em que foi encontrada (ex: commons.wikimedia.org)
+        -   A licença utilizada para publicação (ex: CC-BY)
       CSD U2 Image Tag Debug: |-
         <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
         <details>
@@ -1598,6 +1744,50 @@ pt-BR:
         O atributo `src` precisa apontar para o _exato_nome do arquivo da imagem que você deseja usar. Isso significa que você precisa prestar atenção à ortografia, ao uso de letras maiúsculas e à extensão do arquivo. Cada uma das três imagens nesta página está quebrada devido a um atributo `src` inadequado. Usando o menu de arquivos para referência, corrija cada uma das tags de imagem.
 
         _Nota: mesmo que as imagens não estejam sendo carregadas corretamente, nosso site ainda está mostrando um texto descritivo do que deveria estar lá porque usamos os atributos `alt`. Legal!_
+      CSD U2 Image Tag Debug_2019: |-
+        <div class="no-pullthrough" style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+        <details>
+
+        <summary>
+        <strong>Como eu adiciono imagens?</strong>
+        </summary>
+
+        A tag `<img>` permite que você exiba imagens em sua página web. <br><br>
+
+        Exemplo:
+
+        <pre>&lt;img src="dog.png" alt="cão saltando"&gt;</pre><br><br>
+
+        Para informar ao browser qual imagem deve ser exibida, uma informação adicional, chamada **atributo**, é acrescentada à tag \<img> dentro dos colchetes. O atributo `src` representa **s**ou**rc**e ("origem") e contém o nome da imagem. Arquivos de imagens incluem extensões que dizem ao computador qual o tipo da imagem com que eles estão trabalhando. Extensões comuns são .jpg, .jpeg, .png. <br><br>
+
+        Além do atributo src, elementos de imagem também possuem o atributo `alt` que descreve a imagem. Isto é importante caso a imagem não carregue, ou para pessoas que têm problemas visuais. <br><br>
+
+        Uma tag `<img>`  é um exemplo de uma tag com **auto fechamento**, porque ela inicia e termina na mesma tag.
+
+        </details>
+        <details>
+        <summary>
+        <strong>Por que uma imagem não tem uma tag de fechamento?</strong>
+        </summary>
+        Uma tag de imagem não precisa de uma tag de fechamento porque não há conteúdo de texto que precisa ser envolvido entre tags. O conteúdo que é exibido na tela é especificado através dos atributos.
+        </details>
+        <details>
+        <summary>
+        <strong>O que é um atributo?</strong>
+        </summary>
+
+        Atributos são informações adicionais que são incluídas em uma tag. Atributos têm nomes e valores. O nome indica qual o tipo de informação está sendo fornecido, e então o valor fornece a informação específica para esta tag.
+
+        Por exemplo as tags \<img> têm dois atributos, src and alt. src especifica o nome do arquivo da imagem e alt diz ao browser, em texto legível, o que a imagem contém.
+
+        </details>
+        </div>
+
+        # Os Detalhes Fazem a Diferença
+
+        O atributo `src` deve apontar para o nome do arquivo _exato_ da imagem que você quer usar. Isso significa que você deve prestar atenção para a ortografia, letras maiúsculas e minúsculas, e a extensão do arquivo. Cada uma das três imagens desta página estão com defeito por causa do atributo `src` inadequado. Usando o menu de arquivos como referência, conserte cada uma das tags de imagem.
+
+        _Nota: Apesar de as imagens não estarem sendo carregadas, nosso website está mostrando os textos descritivos do que deveria estar lá porque usamos os atributos `alt`. Muito legal!_
       CSD U2 Info Page Final Touches: |-
         <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px">
 
@@ -3991,6 +4181,26 @@ pt-BR:
         -   Encontre a propriedade `margin` no conjunto de regras`img`.
         -   Altere a margem para maior e discuta o efeito com um parceiro.
         -   Escolha outro tipo de elemento e dê uma margem também.
+      CSD U2 layout style margin_2019: "<div class=\"no-pullthrough\" style=\"float:
+        right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"
+        markdown=\"1\">\n<details>\n\n<summary>\n<strong>Como o código funciona?</strong>\n</summary>\n\nAqui
+        está o código que está colocando um espaço extra ao redor das imagens:\n\n<pre>img
+        {\n\tmargin: 10px;\n}</pre>\n\n-   `img` é o _seletor_.  Ele especifica quais
+        elementos deverão seguir as regras que estiverem entre as chaves, no caso,
+        as imagens.\n-   `margin: 10px` é a regra que coloca 10 pixels de espaço ao
+        redor da imagem.\n    </details>\n    <details>\n    <summary>\n    <strong>O
+        que faz a propriedade `margin`?</strong>\n    </summary>\n\nA propriedade
+        `margin` determina quanto espaço será colocado ao redor da imagem. Na maior
+        parte do tempo, você irá definir a margem em pixels. Você pode ser mais sobre
+        esta propriedade em <a href=\"http://www.w3schools.com/cssref/pr_margin.asp\"
+        target=\"_new\">W3Schools - CSS margin Property</a>\n\n</details>\n<details>\n<summary>\n<strong>O
+        que significa `px` / O que é um pixel?</strong>\n</summary>\n\nPixel, que
+        é abreviado por `px`, é como os elementos são mensurados em CSS. É o tamanho
+        em um ponto único de luz na tela.\n\n</details>\n</div>\n\n# Margem\n\nMargens
+        definem quanto espaço deve haver ao redor de um elemento.\n\n-   Encontre
+        a propriedade `margin` no conjunto de regras `img`.\n-   Altere a margem para
+        que fique maior, e discuta o efeito com um colega.\n-   Escolha um outro tipo
+        de elemento, e dê a ele uma margem, também."
       CSD U2 layout style sample: |-
         <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
         <details>
@@ -4169,6 +4379,44 @@ pt-BR:
         -   Altere a largura das imagens para maior ou menor.
         -   Crie uma nova regra com uma propriedade `height` para controlar a altura das imagens.
         -   Use a propriedade `width` no conjunto de regras`p` para alterar a largura dos seus parágrafos.
+      CSD U2 layout style width_2019: "<div class=\"no-pullthrough\" style=\"float:
+        right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\n<details>\n\n<summary>\n<strong>Como
+        o código funciona?</strong>\n</summary>\n\nAqui está o código que está fazendo
+        a imagem ter seu tamanho atual:\n\n    img {\n    \twidth: 250px;\n    }\n\n-
+        \  `img` é o _seletor_.  Ele especifica quais elementos deverão seguir as
+        regras que estiverem entre as chaves, no caso, as imagens.\n-   `width: 250px`
+        é a regra que faz a imagem ter 250 pixels de largura.  Ela também altera a
+        altura para que a imagem não fique esticada.\n\n</details>\n<details>\n<summary>\n<strong>O
+        que faz a propriedade <code>width</code>?</strong>\n</summary>\n\nA propriedade
+        `width` define o quão largo o elemento será. Na maior parte do tempo, você
+        irá definir a largura em pixels, que faz o elemento ocupar uma quantidade
+        exata de espaço na tela. A definição da largura também altera a altura para
+        que a imagem não estique, a não ser que você tenha definido também a altura.
+        Você pode ler mais sobre esta propriedade em <a href=\"http://www.w3schools.com/cssref/pr_dim_width.asp\"
+        target=\"_new\">W3Schools - CSS width Property</a>\n\n</details>\n<details>\n<summary>\n<strong>O
+        que faz a propriedade <code>height</code>?</strong>\n</summary>\n\nA propriedade
+        `height` define o quão alto um elemento será. Na maior parte do tempo, você
+        irá definir a altura em pixels, o que faz com que o elemento ocupe uma quantidade
+        de espaço exata na tela. Definindo a altura também irá alterar a largura para
+        que a imagem não estique, a não ser que você também tenha definido a largura.
+        Você pode ler mais sobre esta propriedade em <a href=\"http://www.w3schools.com/cssref/pr_dim_height.asp\"
+        target=\"_new\">W3Schools - CSS height Property</a>\n\n</details>\n<details>\n<summary>\n<strong>O
+        que significa <code>px</code> / O que é um pixel?</strong>\n</summary>\n\nPixel,
+        que é abreviado por `px`, é como os elementos são mensurados em CSS. É o tamanho
+        em um ponto único de luz na tela.\n\n</details>\n<details>\n<summary>\n<strong>Por
+        que às vezes a imagem fica distorcida, ao se usar regras width e height ao
+        mesmo tempo?</strong>\n</summary>\n\nQuando a largura de uma imagem é alterada,
+        a altura deve mudar na mesma porcentagem, caso contrário a imagem será distorcida.
+        Por exemplo, de você duplicar a largura de uma imagem, você também deverá
+        duplicar a altura, ou a imagem será esticada horizontalmente. Quando você
+        somente define a largura ou a altura, o computador irá mudar automaticamente
+        a outra propriedade para que a imagem se pareça a mesma.\n\n</details>\n</div>\n\n#
+        Largura e Altura\n\n-   Encontre a propriedade na folha de estilos que controla
+        a largura das imagens.\n-   Altere a largura das imagens para que fiquem maiores
+        ou menores.\n-   Crie uma nova regra com uma propriedade `height` para controlar
+        a altura das imagens.\n-   Use a propriedade `width` no conjunto de regras
+        `p` para alterar a largura de seus parágrafos.\n\n<https://studio.code.org/s/csd2-2019/stage/11/puzzle/9>
+        -> long\\_instructions."
       CSD U2 link demo: |-
         # Criando um site de várias páginas
 
@@ -9575,6 +9823,123 @@ pt-BR:
         -   **Leia o programa** e preveja o que o programa fará.
         -   **Execute o programa** para verificar sua previsão.
         -   **Olhe para os observadores** e explique a um vizinho o que você está vendo.
+      CSD U3 abstraction decelerateY: |-
+        # Simulando a gravidade
+
+        No último nível você desacelerou o carro com o bloco `sprite.velocityX` e o padrão de contador. Quase parecia que o carro estava sendo puxado para a esquerda.
+
+        Se você usar esse mesmo padrão com o bloco `sprite.velocityY`, parecerá que seu sprite está sempre sendo puxado para baixo, o que é exatamente o que a gravidade faz!
+
+        # Faça isso
+
+        A rocha é lançada no ar, mas nunca cai de volta.
+
+        -   Use o bloco `sprite.velocityY` com o padrão de contador para fazer a pedra diminuir a velocidade e depois cair na outra direção.
+        -   Experimente com valores diferentes no seu padrão de contador. Você quer que a rocha diminua a velocidade rapidamente ou gradualmente? O que parece mais realista para você?
+        -   Discuta com seu parceiro: Por que você está definindo a velocidade inicial da rocha fora do loop de desenho? Por que você está mudando a velocidade do sprite dentro do loop de draw?
+      CSD U3 abstraction decelerateY_2018: |-
+        # Simulando a gravidade
+
+        No último nível você desacelerou o carro com o bloco `sprite.velocityX` e o padrão de contador. Quase parecia que o carro estava sendo puxado para a esquerda.
+
+        Se você usar esse mesmo padrão com o bloco `sprite.velocityY`, parecerá que seu sprite está sempre sendo puxado para baixo, o que é exatamente o que a gravidade faz!
+
+        # Faça isso
+
+        A rocha é lançada no ar, mas nunca cai de volta.
+
+        -   Use o bloco `sprite.velocityY` com o padrão de contador para fazer a pedra diminuir a velocidade e depois cair na outra direção.
+        -   Experimente com valores diferentes no seu padrão de contador. Você quer que a rocha diminua a velocidade rapidamente ou gradualmente? O que parece mais realista para você?
+        -   Discuta com seu parceiro: Por que você está definindo a velocidade inicial da rocha fora do loop de desenho? Por que você está mudando a velocidade do sprite dentro do loop de draw?
+      CSD U3 abstraction decelerateY_2019: |-
+        # Simulando a gravidade
+
+        No último nível você desacelerou o carro com o bloco `sprite.velocityX` e o padrão de contador. Quase parecia que o carro estava sendo puxado para a esquerda.
+
+        Se você usar esse mesmo padrão com o bloco `sprite.velocityY`, parecerá que seu sprite está sempre sendo puxado para baixo, o que é exatamente o que a gravidade faz!
+
+        # Faça isso
+
+        A rocha é lançada no ar, mas nunca cai de volta.
+
+        -   Use o bloco `sprite.velocityY` com o padrão de contador para fazer a pedra diminuir a velocidade e depois cair na outra direção.
+        -   Experimente com valores diferentes no seu padrão de contador. Você quer que a rocha diminua a velocidade rapidamente ou gradualmente? O que parece mais realista para você?
+        -   Discuta com seu parceiro: Por que você está definindo a velocidade inicial da rocha fora do loop de desenho? Por que você está mudando a velocidade do sprite dentro do loop de draw?
+      CSD U3 abstraction jumping: |-
+        # Salto
+
+        Aumentar a velocidade de um sprite dentro do padrão do contador pode simular a gravidade. Ao adicionar interações do usuário, você pode fazer com que seu sprite pareça saltar também. Para começar, você fará um simples salto e, em seguida, fará com que seja mais realista, procurando o próximo nível.
+
+        # Faça isso
+
+        Um sprite já foi criado para você que cai porque sua velocidade é aumentada dentro do loop de desenho. Você precisará fazer este sprite parecer saltar.
+
+        -   Dentro do bloco `if` que verifica se a seta para cima foi pressionada, defina a velocidade y do sprite para -5. ([Mostre-me onde] [0])
+        -   Discuta com um vizinho: por que esse código é executado da maneira como funciona? Como usar um número além de -5 afeta a maneira como o código funciona? Como você poderia pular mais alto ou mais baixo?
+      CSD U3 abstraction jumping_2018: |-
+        # Salto
+
+        Aumentar a velocidade de um sprite dentro do padrão do contador pode simular a gravidade. Ao adicionar interações do usuário, você pode fazer com que seu sprite pareça saltar também. Para começar, você fará um simples salto e, em seguida, fará com que seja mais realista, procurando o próximo nível.
+
+        # Faça isso
+
+        Um sprite já foi criado para você que cai porque sua velocidade é aumentada dentro do loop de desenho. Você precisará fazer este sprite parecer saltar.
+
+        -   Dentro do bloco `if` que verifica se a seta para cima foi pressionada, defina a velocidade y do sprite para -5. ([Mostre-me onde] [0])
+        -   Discuta com um vizinho: por que esse código é executado da maneira como funciona? Como usar um número além de -5 afeta a maneira como o código funciona? Como você poderia pular mais alto ou mais baixo?
+      CSD U3 abstraction jumping_2019: |-
+        # Salto
+
+        Aumentar a velocidade de um sprite dentro do padrão do contador pode simular a gravidade. Ao adicionar interações do usuário, você pode fazer com que seu sprite pareça saltar também. Para começar, você fará um simples salto e, em seguida, fará com que seja mais realista, procurando o próximo nível.
+
+        # Faça isso
+
+        Um sprite já foi criado para você que cai porque sua velocidade é aumentada dentro do loop de desenho. Você precisará fazer este sprite parecer saltar.
+
+        -   Dentro do bloco `if` que verifica se a seta para cima foi pressionada, defina a velocidade y do sprite para -5. ([Mostre-me onde] [0])
+        -   Discuta com um vizinho: por que esse código é executado da maneira como funciona? Como usar um número além de -5 afeta a maneira como o código funciona? Como você poderia pular mais alto ou mais baixo?
+      CSD U3 abstraction left right counter: |-
+        # Flutuando à direita
+
+        Agora você está usando o padrão contador com a velocidade Y do sprite para simular gravidade e salto. Se você usar a velocidade X do sprite no padrão do contador, então você pode fazer seu sprite flutuar de lado a lado também.
+
+        # Faça isso
+
+        Neste nível você fará seu sprite começar a flutuar para a direita quando a seta direita for pressionada.
+
+        -   Adicione uma instrução `if` dentro do seu loop de desenho abaixo da que você criou para a seta "para cima".
+        -   Use o bloco `keyDown` para fazer com que a instrução`if` responda quando a seta "right" é pressionada.
+        -   Dentro do bloco `if` use o padrão contador com o bloco`sprite.velocityX` para adicionar 0.1 à velocidade X do sprite.
+
+        Execute seu código para ver como funciona. O sprite deve começar a flutuar para a direita quando você pressiona a seta para a direita e pula quando você pressiona "para cima". Você fará a seta da esquerda funcionar no próximo nível.
+      CSD U3 abstraction left right counter_2018: |-
+        # Flutuando à direita
+
+        Agora você está usando o padrão contador com a velocidade Y do sprite para simular gravidade e salto. Se você usar a velocidade X do sprite no padrão do contador, então você pode fazer seu sprite flutuar de lado a lado também.
+
+        # Faça isso
+
+        Neste nível você fará seu sprite começar a flutuar para a direita quando a seta direita for pressionada.
+
+        -   Adicione uma instrução `if` dentro do seu loop de desenho abaixo da que você criou para a seta "para cima".
+        -   Use o bloco `keyDown` para fazer com que a instrução`if` responda quando a seta "right" é pressionada.
+        -   Dentro do bloco `if` use o padrão contador com o bloco`sprite.velocityX` para adicionar 0.1 à velocidade X do sprite.
+
+        Execute seu código para ver como funciona. O sprite deve começar a flutuar para a direita quando você pressiona a seta para a direita e pula quando você pressiona "para cima". Você fará a seta da esquerda funcionar no próximo nível.
+      CSD U3 abstraction left right counter_2019: |-
+        # Flutuando à direita
+
+        Agora você está usando o padrão contador com a velocidade Y do sprite para simular gravidade e salto. Se você usar a velocidade X do sprite no padrão do contador, então você pode fazer seu sprite flutuar de lado a lado também.
+
+        # Faça isso
+
+        Neste nível você fará seu sprite começar a flutuar para a direita quando a seta direita for pressionada.
+
+        -   Adicione uma instrução `if` dentro do seu loop de desenho abaixo da que você criou para a seta "para cima".
+        -   Use o bloco `keyDown` para fazer com que a instrução`if` responda quando a seta "right" é pressionada.
+        -   Dentro do bloco `if` use o padrão contador com o bloco`sprite.velocityX` para adicionar 0.1 à velocidade X do sprite.
+
+        Execute seu código para ver como funciona. O sprite deve começar a flutuar para a direita quando você pressiona a seta para a direita e pula quando você pressiona "para cima". Você fará a seta da esquerda funcionar no próximo nível.
       CSD U3 abstraction make it your own: |-
         # Faça o seu próprio
 
@@ -10152,8 +10517,8 @@ pt-BR:
         # Faça isso
 
         -   Com o seu parceiro, responda às seguintes perguntas:
-                 1\. Qual é o maior número que você pode fazer com esta ferramenta?
-                 2\. O recorde de mais saltos de um cão e pessoa em um minuto é 59. Como você codificaria 59 em binário?
+                 1. Qual é o maior número que você pode fazer com esta ferramenta?
+                 2. O recorde de mais saltos de um cão e pessoa em um minuto é 59. Como você codificaria 59 em binário?
       CSD U5 binary 2_2018: |-
         # Número de 6 bits
 
@@ -10162,8 +10527,8 @@ pt-BR:
         # Faça isso
 
         -   Com o seu parceiro, responda às seguintes perguntas:
-                 1\. Qual é o maior número que você pode fazer com esta ferramenta?
-                 2\. O recorde de mais saltos de um cão e pessoa em um minuto é 59. Como você codificaria 59 em binário?
+                 1. Qual é o maior número que você pode fazer com esta ferramenta?
+                 2. O recorde de mais saltos de um cão e pessoa em um minuto é 59. Como você codificaria 59 em binário?
       CSD U5 binary 2_2019: |-
         # Número de 6 bits
 
@@ -10172,8 +10537,8 @@ pt-BR:
         # Faça isso
 
         -   Com o seu parceiro, responda às seguintes perguntas:
-                 1\. Qual é o maior número que você pode fazer com esta ferramenta?
-                 2\. O recorde de mais saltos de um cão e pessoa em um minuto é 59. Como você codificaria 59 em binário?
+                 1. Qual é o maior número que você pode fazer com esta ferramenta?
+                 2. O recorde de mais saltos de um cão e pessoa em um minuto é 59. Como você codificaria 59 em binário?
       CSD U5 binary 4-new: |-
         # Decodificando vários números
 
@@ -10493,6 +10858,81 @@ pt-BR:
         -   Quando uma matriz pode ser mais útil do que uma variável?
         -   Por que você sempre deve atribuir uma matriz a uma variável?
         -   Como você pode acessar os elementos em sua matriz?
+      CSD U6 create LED app: |-
+        # Faça seu aplicativo - a tela
+
+        Agora, você e seu parceiro podem criar seu próprio aplicativo usando o LED. Discuta com seu parceiro que tipo de aplicativo você deseja criar.
+
+        # Faça isso
+
+        -   Discuta com seu parceiro quais elementos de tela serão necessários em seu aplicativo. Você quer...
+                 Botões?
+                 Imagens?
+                 \- texto?
+        -   No Modo de Design, adicione os elementos, certificando-se de atribuir a cada um ID significativo.
+      CSD U6 create LED app 2: |-
+        # Faça seu aplicativo - o código
+
+        Em seguida, você precisará adicionar o código que faz seu aplicativo funcionar.
+
+        # Faça isso
+
+        -   Discuta com seu parceiro qual código você precisará no seu aplicativo. Você precisa...
+                 \- Eventos?
+                 \- Variáveis?
+                 \- Setters?
+                 \-   Números aleatórios?
+        -   No modo de código, adicione o código que fará seu aplicativo funcionar.
+      CSD U6 create LED app 2_2018: |-
+        # Faça seu aplicativo - o código
+
+        Em seguida, você precisará adicionar o código que faz seu aplicativo funcionar.
+
+        # Faça isso
+
+        -   Discuta com seu parceiro qual código você precisará no seu aplicativo. Você precisa...
+                 \- Eventos?
+                 \- Variáveis?
+                 \- Setters?
+                 \-   Números aleatórios?
+        -   No modo de código, adicione o código que fará seu aplicativo funcionar.
+      CSD U6 create LED app 2_2019: |-
+        # Faça seu aplicativo - o código
+
+        Em seguida, você precisará adicionar o código que faz seu aplicativo funcionar.
+
+        # Faça isso
+
+        -   Discuta com seu parceiro qual código você precisará no seu aplicativo. Você precisa...
+                 \- Eventos?
+                 \- Variáveis?
+                 \- Setters?
+                 \-   Números aleatórios?
+        -   No modo de código, adicione o código que fará seu aplicativo funcionar.
+      CSD U6 create LED app_2018: |-
+        # Faça seu aplicativo - a tela
+
+        Agora, você e seu parceiro podem criar seu próprio aplicativo usando o LED. Discuta com seu parceiro que tipo de aplicativo você deseja criar.
+
+        # Faça isso
+
+        -   Discuta com seu parceiro quais elementos de tela serão necessários em seu aplicativo. Você quer...
+                 Botões?
+                 Imagens?
+                 \- texto?
+        -   No Modo de Design, adicione os elementos, certificando-se de atribuir a cada um ID significativo.
+      CSD U6 create LED app_2019: |-
+        # Faça seu aplicativo - a tela
+
+        Agora, você e seu parceiro podem criar seu próprio aplicativo usando o LED. Discuta com seu parceiro que tipo de aplicativo você deseja criar.
+
+        # Faça isso
+
+        -   Discuta com seu parceiro quais elementos de tela serão necessários em seu aplicativo. Você quer...
+                 Botões?
+                 Imagens?
+                 \- texto?
+        -   No Modo de Design, adicione os elementos, certificando-se de atribuir a cada um ID significativo.
       CSD U6 for loop led color_2019: |-
         # Acrescente Cor
 
@@ -10668,6 +11108,42 @@ pt-BR:
 
         -   O que fez os computadores serem maquinas diferentes das que vieram antes deles?
         -   Pense em algo que você faz no computador. Que tipo de entrada, saída, armazenamento e processamento estão acontecendo?
+      CSD-Arrays: |-
+        Hoje você aprenderá a usar e criar \*\* funções \*\*.
+
+        Criar uma função permite que você crie seus próprios blocos! Existem duas partes para uma função:
+
+        Fazendo um bloco recém-nomeado que tem todo o código que você quer rodar dentro dele.
+        \-xml de definição de função-
+
+        O único bloco verde que você usa, ou chama, para executar a função que você criou.
+        \-xml de chamada de função-
+
+        Prepare-se para se familiarizar com as funções, aprenda a editá-las e crie as suas próprias!
+      CSD-Arrays_2018: |-
+        Hoje você aprenderá a usar e criar \*\* funções \*\*.
+
+        Criar uma função permite que você crie seus próprios blocos! Existem duas partes para uma função:
+
+        Fazendo um bloco recém-nomeado que tem todo o código que você quer rodar dentro dele.
+        \-xml de definição de função-
+
+        O único bloco verde que você usa, ou chama, para executar a função que você criou.
+        \-xml de chamada de função-
+
+        Prepare-se para se familiarizar com as funções, aprenda a editá-las e crie as suas próprias!
+      CSD-Arrays_2019: |-
+        Hoje você aprenderá a usar e criar \*\* funções \*\*.
+
+        Criar uma função permite que você crie seus próprios blocos! Existem duas partes para uma função:
+
+        Fazendo um bloco recém-nomeado que tem todo o código que você quer rodar dentro dele.
+        \-xml de definição de função-
+
+        O único bloco verde que você usa, ou chama, para executar a função que você criou.
+        \-xml de chamada de função-
+
+        Prepare-se para se familiarizar com as funções, aprenda a editá-las e crie as suas próprias!
       'CSD: Animating Sprite Movement_2019': |-
         ## Perguntas a considerar
 
@@ -11036,6 +11512,105 @@ pt-BR:
         # Funcionalidade ausente nesse protótipo
 
         -   As perguntas não são realmente verificadas quanto à exatidão
+      CSDU6 - LED toggle buttonL up: |-
+        # Outros eventos de teclado com os botões
+
+        Em vez de usar o botão direito, você pode fazer o LED desligar quando o botão esquerdo voltar.
+
+        # Faça isso
+
+        -   Crie um evento 'up' para o botão esquerdo.
+        -   Adicione o código para desligar o LED quando o botão aparecer novamente.
+      CSDU6 - LED toggle buttonL up_2018: |-
+        # Outros eventos de teclado com os botões
+
+        Em vez de usar o botão direito, você pode fazer o LED desligar quando o botão esquerdo voltar.
+
+        # Faça isso
+
+        -   Crie um evento 'up' para o botão esquerdo.
+        -   Adicione o código para desligar o LED quando o botão aparecer novamente.
+      CSDU6 - LED toggle buttonL up_2019: |-
+        # Outros eventos de teclado com os botões
+
+        Em vez de usar o botão direito, você pode fazer o LED desligar quando o botão esquerdo voltar.
+
+        # Faça isso
+
+        -   Crie um evento 'up' para o botão esquerdo.
+        -   Adicione o código para desligar o LED quando o botão aparecer novamente.
+      CSDU6 - button LED prediction: Veja o nível contido para o markdown
+      CSDU6 - button LED prediction_2018: Veja o nível contido para o markdown
+      CSDU6 - button LED prediction_2019: Veja o nível contido para o markdown
+      CSDU6 - toggle state LED prediction: Veja o nível contido para o markdown
+      CSDU6 - toggle state LED prediction_2018: Veja o nível contido para o markdown
+      CSDU6 - toggle state LED prediction_2019: Veja o nível contido para o markdown
+      CSDU6 AppLab Input 1: |-
+        # Entrada no Laboratório de App
+
+        _Você não precisa fazer alterações no código aqui_
+
+        Reserve um minuto para ler o código e executar o programa. Discutir com um parceiro:
+
+        1.  Qual é a fonte de entrada?
+        2.  Onde e como o programa verifica a entrada?
+        3.  O que o programa faz quando obtém a entrada correta?
+        4.  O que o programa está fazendo quando não há entrada?
+      CSDU6 AppLab Input 1_2018: |-
+        # Entrada no Laboratório de App
+
+        _Você não precisa fazer alterações no código aqui_
+
+        Reserve um minuto para ler o código e executar o programa. Discutir com um parceiro:
+
+        1.  Qual é a fonte de entrada?
+        2.  Onde e como o programa verifica a entrada?
+        3.  O que o programa faz quando obtém a entrada correta?
+        4.  O que o programa está fazendo quando não há entrada?
+      CSDU6 AppLab Input 1_2019: |-
+        # Entrada no Laboratório de App
+
+        _Você não precisa fazer alterações no código aqui_
+
+        Reserve um minuto para ler o código e executar o programa. Discutir com um parceiro:
+
+        1.  Qual é a fonte de entrada?
+        2.  Onde e como o programa verifica a entrada?
+        3.  O que o programa faz quando obtém a entrada correta?
+        4.  O que o programa está fazendo quando não há entrada?
+      CSDU6 GameLab Input 1: |-
+        # Entrada no Laboratório de Jogo
+
+        _Você não precisa fazer alterações no código aqui_
+
+        Reserve um minuto para ler o código e executar o programa. Discutir com um parceiro:
+
+        1.  Qual é a fonte de entrada?
+        2.  Onde e como o programa verifica a entrada?
+        3.  O que o programa faz quando obtém a entrada correta?
+        4.  O que o programa está fazendo quando não há entrada?
+      CSDU6 GameLab Input 1_2018: |-
+        # Entrada no Laboratório de Jogo
+
+        _Você não precisa fazer alterações no código aqui_
+
+        Reserve um minuto para ler o código e executar o programa. Discutir com um parceiro:
+
+        1.  Qual é a fonte de entrada?
+        2.  Onde e como o programa verifica a entrada?
+        3.  O que o programa faz quando obtém a entrada correta?
+        4.  O que o programa está fazendo quando não há entrada?
+      CSDU6 GameLab Input 1_2019: |-
+        # Entrada no Laboratório de Jogo
+
+        _Você não precisa fazer alterações no código aqui_
+
+        Reserve um minuto para ler o código e executar o programa. Discutir com um parceiro:
+
+        1.  Qual é a fonte de entrada?
+        2.  Onde e como o programa verifica a entrada?
+        3.  O que o programa faz quando obtém a entrada correta?
+        4.  O que o programa está fazendo quando não há entrada?
       CSDU6 making new arrays_2019: |-
         # Criando Novas Matrizes
 
@@ -11827,6 +12402,42 @@ pt-BR:
         para ajudá-lo a explorar este mundo."
       MC_HOC_2017_FP20x20_2019: "**Jogo Livre:** Agora é com você! Use o código do
         Agent para ajudá-lo a explorar este mundo."
+      Making Music: |-
+        Hoje você aprenderá a usar e criar \*\* funções \*\*.
+
+        Criar uma função permite que você crie seus próprios blocos! Existem duas partes para uma função:
+
+        Fazendo um bloco recém-nomeado que tem todo o código que você quer rodar dentro dele.
+        \-xml de definição de função-
+
+        O único bloco verde que você usa, ou chama, para executar a função que você criou.
+        \-xml de chamada de função-
+
+        Prepare-se para se familiarizar com as funções, aprenda a editá-las e crie as suas próprias!
+      Making Music_2018: |-
+        Hoje você aprenderá a usar e criar \*\* funções \*\*.
+
+        Criar uma função permite que você crie seus próprios blocos! Existem duas partes para uma função:
+
+        Fazendo um bloco recém-nomeado que tem todo o código que você quer rodar dentro dele.
+        \-xml de definição de função-
+
+        O único bloco verde que você usa, ou chama, para executar a função que você criou.
+        \-xml de chamada de função-
+
+        Prepare-se para se familiarizar com as funções, aprenda a editá-las e crie as suas próprias!
+      Making Music_2019: |-
+        Hoje você aprenderá a usar e criar \*\* funções \*\*.
+
+        Criar uma função permite que você crie seus próprios blocos! Existem duas partes para uma função:
+
+        Fazendo um bloco recém-nomeado que tem todo o código que você quer rodar dentro dele.
+        \-xml de definição de função-
+
+        O único bloco verde que você usa, ou chama, para executar a função que você criou.
+        \-xml de chamada de função-
+
+        Prepare-se para se familiarizar com as funções, aprenda a editá-las e crie as suas próprias!
       NEW Course 4 Artist Functions 1: |-
         Você consegue desenhar um quadrado com
         100 pixels de comprimento usando um laço?
@@ -11955,6 +12566,42 @@ pt-BR:
         # Exemplo de mais bits por pixel
 
         Aqui está uma imagem maior em 9 bits por pixel. Com 9 bits por pixel você expressar 512 cores diferentes. Clique para ver a próxima imagem que é ainda mais sofisticada, mas mais fácil de entender.
+      Revisiting the Counter Pattern: |-
+        Hoje você aprenderá a usar e criar \*\* funções \*\*.
+
+        Criar uma função permite que você crie seus próprios blocos! Existem duas partes para uma função:
+
+        Fazendo um bloco recém-nomeado que tem todo o código que você quer rodar dentro dele.
+        \-xml de definição de função-
+
+        O único bloco verde que você usa, ou chama, para executar a função que você criou.
+        \-xml de chamada de função-
+
+        Prepare-se para se familiarizar com as funções, aprenda a editá-las e crie as suas próprias!
+      Revisiting the Counter Pattern_2018: |-
+        Hoje você aprenderá a usar e criar \*\* funções \*\*.
+
+        Criar uma função permite que você crie seus próprios blocos! Existem duas partes para uma função:
+
+        Fazendo um bloco recém-nomeado que tem todo o código que você quer rodar dentro dele.
+        \-xml de definição de função-
+
+        O único bloco verde que você usa, ou chama, para executar a função que você criou.
+        \-xml de chamada de função-
+
+        Prepare-se para se familiarizar com as funções, aprenda a editá-las e crie as suas próprias!
+      Revisiting the Counter Pattern_2019: |-
+        Hoje você aprenderá a usar e criar \*\* funções \*\*.
+
+        Criar uma função permite que você crie seus próprios blocos! Existem duas partes para uma função:
+
+        Fazendo um bloco recém-nomeado que tem todo o código que você quer rodar dentro dele.
+        \-xml de definição de função-
+
+        O único bloco verde que você usa, ou chama, para executar a função que você criou.
+        \-xml de chamada de função-
+
+        Prepare-se para se familiarizar com as funções, aprenda a editá-las e crie as suas próprias!
       Robot Doodle: "**Ideia de projeto:** Crie uma imagem de algo comum no mundo
         real. Isso requer persistência e planejamento!"
       Robot Doodle_2018: "**Ideia de projeto:** Crie uma imagem de algo comum no mundo
@@ -11986,6 +12633,42 @@ pt-BR:
         que ela desenhe um padrão de quadrados, triângulos ou octógonos?
       Standalone_Artist_9: Agora vá em frente e faça a imagem que mais gostar! Você
         tem até uma função vazia para usar para fazer o que quiser!
+      The Accelerometer: |-
+        Hoje você aprenderá a usar e criar \*\* funções \*\*.
+
+        Criar uma função permite que você crie seus próprios blocos! Existem duas partes para uma função:
+
+        Fazendo um bloco recém-nomeado que tem todo o código que você quer rodar dentro dele.
+        \-xml de definição de função-
+
+        O único bloco verde que você usa, ou chama, para executar a função que você criou.
+        \-xml de chamada de função-
+
+        Prepare-se para se familiarizar com as funções, aprenda a editá-las e crie as suas próprias!
+      The Accelerometer_2018: |-
+        Hoje você aprenderá a usar e criar \*\* funções \*\*.
+
+        Criar uma função permite que você crie seus próprios blocos! Existem duas partes para uma função:
+
+        Fazendo um bloco recém-nomeado que tem todo o código que você quer rodar dentro dele.
+        \-xml de definição de função-
+
+        O único bloco verde que você usa, ou chama, para executar a função que você criou.
+        \-xml de chamada de função-
+
+        Prepare-se para se familiarizar com as funções, aprenda a editá-las e crie as suas próprias!
+      The Accelerometer_2019: |-
+        Hoje você aprenderá a usar e criar \*\* funções \*\*.
+
+        Criar uma função permite que você crie seus próprios blocos! Existem duas partes para uma função:
+
+        Fazendo um bloco recém-nomeado que tem todo o código que você quer rodar dentro dele.
+        \-xml de definição de função-
+
+        O único bloco verde que você usa, ou chama, para executar a função que você criou.
+        \-xml de chamada de função-
+
+        Prepare-se para se familiarizar com as funções, aprenda a editá-las e crie as suas próprias!
       U4 Model Program 1: |-
         # Adicionando uma nova tela
 
@@ -12085,6 +12768,42 @@ pt-BR:
 
         -   Para cada botâo, crie um evento que faz a ligação com a tela apropriada quando o botão é pressionado.
         -   Rode sua aplicação e teste o funcionamento de todos os botões.
+      Using Accelerometer Events: |-
+        Hoje você aprenderá a usar e criar \*\* funções \*\*.
+
+        Criar uma função permite que você crie seus próprios blocos! Existem duas partes para uma função:
+
+        Fazendo um bloco recém-nomeado que tem todo o código que você quer rodar dentro dele.
+        \-xml de definição de função-
+
+        O único bloco verde que você usa, ou chama, para executar a função que você criou.
+        \-xml de chamada de função-
+
+        Prepare-se para se familiarizar com as funções, aprenda a editá-las e crie as suas próprias!
+      Using Accelerometer Events_2018: |-
+        Hoje você aprenderá a usar e criar \*\* funções \*\*.
+
+        Criar uma função permite que você crie seus próprios blocos! Existem duas partes para uma função:
+
+        Fazendo um bloco recém-nomeado que tem todo o código que você quer rodar dentro dele.
+        \-xml de definição de função-
+
+        O único bloco verde que você usa, ou chama, para executar a função que você criou.
+        \-xml de chamada de função-
+
+        Prepare-se para se familiarizar com as funções, aprenda a editá-las e crie as suas próprias!
+      Using Accelerometer Events_2019: |-
+        Hoje você aprenderá a usar e criar \*\* funções \*\*.
+
+        Criar uma função permite que você crie seus próprios blocos! Existem duas partes para uma função:
+
+        Fazendo um bloco recém-nomeado que tem todo o código que você quer rodar dentro dele.
+        \-xml de definição de função-
+
+        O único bloco verde que você usa, ou chama, para executar a função que você criou.
+        \-xml de chamada de função-
+
+        Prepare-se para se familiarizar com as funções, aprenda a editá-las e crie as suas próprias!
       'Video: Intro to CSS Part 2_2019': |-
         ## Pergunta para Consideração
 
@@ -13744,6 +14463,24 @@ pt-BR:
 
         Há um bloco extra que fará o pássaro cair.
         Jogue-o fora desencaixando-o dos blocos cinzentos e arrastando-o de volta para a caixa de ferramentas.
+      courseC_maze_programming4: "_\"Faça o caminho e me guie até o porco bobo\"_
+        \n\nEvite as TNTs ou penas irão voar!"
+      courseC_maze_programming4_2018: "_\"Faça o caminho e me guie até o porco bobo\"_
+        \n\nEvite as TNTs ou penas irão voar!"
+      courseC_maze_programming4_2019: "_\"Faça o caminho e me guie até o porco bobo\"_
+        \n\nEvite as TNTs ou penas irão voar!"
+      courseC_maze_programming5: |-
+        _"Siga esse caminho para me levar ao porco!"_
+
+        Evite a TNT.
+      courseC_maze_programming5_2018: |-
+        _"Siga esse caminho para me levar ao porco!"_
+
+        Evite a TNT.
+      courseC_maze_programming5_2019: |-
+        _"Siga esse caminho para me levar ao porco!"_
+
+        Evite a TNT.
       courseC_maze_programming6: |-
         \_ "Mantenha a calma e me ajude a encontrar o porco ruim. Caso contrário, eu posso ficar com raiva!"
 
@@ -14314,6 +15051,91 @@ pt-BR:
       courseD_bee_nestedLoops9_predict2: Faça todo o mel.
       courseD_bee_nestedLoops9_predict2_2018: Faça todo o mel.
       courseD_bee_nestedLoops9_predict2_2019: Faça todo o mel.
+      courseD_collector_debugging1: |-
+        _"O não! Eu vejo um problema."_
+
+        Conserte o(s) erro(s) para coletar todo o tesouro.
+      courseD_collector_debugging10_predict1: |-
+        _"É uma ilha do tesouro"_
+
+        Ajude Laura a consertar o código para pegar todo o tesouro.
+      courseD_collector_debugging1a_2018: |-
+        _"O não! Eu vejo um problema."_
+
+        Conserte o(s) erro(s) para coletar todo o tesouro.
+      courseD_collector_debugging1a_2019: |-
+        _"O não! Eu vejo um problema."_
+
+        Conserte o(s) erro(s) para coletar todo o tesouro.
+      courseD_collector_debugging2: |-
+        _"Você consegue fazer isso!"_
+        Conserte o(s) erro(s) para coletar todo o tesouro.
+      courseD_collector_debugging2a_2018: |-
+        _"Você consegue fazer isso!"_
+        Conserte o(s) erro(s) para coletar todo o tesouro.
+      courseD_collector_debugging2a_2019: |-
+        _"Você consegue fazer isso!"_
+        Conserte o(s) erro(s) para coletar todo o tesouro.
+      courseD_collector_debugging3: |-
+        _"Seja persistente e você conseguirá descobrir como resolver isso."_
+        Conserte o(s) erro(s) para coletar todo o tesouro.
+      courseD_collector_debugging3a_2018: |-
+        _"Seja persistente e você conseguirá descobrir como resolver isso."_
+        Conserte o(s) erro(s) para coletar todo o tesouro.
+      courseD_collector_debugging3a_2019: |-
+        _"Seja persistente e você conseguirá descobrir como resolver isso."_
+        Conserte o(s) erro(s) para coletar todo o tesouro.
+      courseD_collector_debugging4: |-
+        _"Não fique chateado. Você consegue fazer isto!"_
+
+        Conserte o(s) erro(s) para coletar todo o tesouro.
+      courseD_collector_debugging4a_2018: |-
+        _"Não fique chateado. Você consegue fazer isto!"_
+
+        Conserte o(s) erro(s) para coletar todo o tesouro.
+      courseD_collector_debugging4a_2019: |-
+        _"Não fique chateado. Você consegue fazer isto!"_
+
+        Conserte o(s) erro(s) para coletar todo o tesouro.
+      courseD_collector_debugging5: |-
+        _"Este quebra-cabeça está de deixando louco!"_
+
+        Todos os comandos que você precisa já estão aí... agora use sua habilidade de investigação para descobrir como resolver este quebra-cabeça.
+      courseD_collector_debugging5a_2018: |-
+        _"Este quebra-cabeça está de deixando louco!"_
+
+        Todos os comandos que você precisa já estão aí... agora use sua habilidade de investigação para descobrir como resolver este quebra-cabeça.
+      courseD_collector_debugging5a_2019: |-
+        _"Este quebra-cabeça está de deixando louco!"_
+
+        Todos os comandos que você precisa já estão aí... agora use sua habilidade de investigação para descobrir como resolver este quebra-cabeça.
+      courseD_collector_debugging6: "**Desafio.** Todos os blocos que você precisa
+        já estão aí... Agora use suas habilidades de investigação para consertar os
+        erros e coletar todo o tesouro."
+      courseD_collector_debugging8: |-
+        _"São tantos tesouros!"_
+
+        Ajude Laura a consertar o código para pegar todo o tesouro.
+      courseD_collector_debugging8a_2018: |-
+        _"São tantos tesouros!"_
+
+        Ajude Laura a consertar o código para pegar todo o tesouro.
+      courseD_collector_debugging8a_2019: |-
+        _"São tantos tesouros!"_
+
+        Ajude Laura a consertar o código para pegar todo o tesouro.
+      courseD_collector_debugging9: |-
+        _"É uma ilha do tesouro"_
+
+        Ajude Laura a consertar o código para pegar todo o tesouro.
+      courseD_collector_debugging9a_2018: |-
+        _"É uma ilha do tesouro"_
+
+        Ajude Laura a consertar o código para pegar todo o tesouro.
+      courseD_collector_debugging9a_2019: |-
+        _"É uma ilha do tesouro"_
+
+        Ajude Laura a consertar o código para pegar todo o tesouro.
       courseD_collector_nested_loops_challenge2a: |-
         _"Vamos caçar tesouros - utilizando laços!"_
 
@@ -14416,7 +15238,23 @@ pt-BR:
         Ajude o pássaro a chegar no porco. Há um bloco azul extra de "avance".
 
         Jogue fora o bloco que está sobrando desconectando-o dos outros blocos e arrastando-o de volta para a caixa de ferramentas.
+      courseD_maze_ramp4: "_\"Faça o caminho e me guie até o porco bobo\"_ \n\nEvite
+        as TNTs ou penas irão voar!"
+      courseD_maze_ramp4_2018: "_\"Faça o caminho e me guie até o porco bobo\"_ \n\nEvite
+        as TNTs ou penas irão voar!"
       courseD_maze_ramp4_2019: _"Encontre o caminho que me leva até a noz."_
+      courseD_maze_ramp5: |-
+        _"Siga esse caminho para me levar ao porco!"_
+
+        Evite a TNT.
+      courseD_maze_ramp5_2018: |-
+        _"Siga esse caminho para me levar ao porco!"_
+
+        Evite a TNT.
+      courseD_maze_ramp5_2019: |-
+        _"Siga esse caminho para me levar ao porco!"_
+
+        Evite a TNT.
       courseD_maze_ramp5a: Preste atenção na sequência e veja se consegue descobrir
         como chegar a esse porco!
       courseD_maze_ramp5a_2018: Preste atenção na sequência e veja se consegue descobrir
@@ -14437,7 +15275,7 @@ pt-BR:
       courseD_maze_ramp6: |-
         _"Se mantenha calmo e me ajude a encontrar o porco malvado. Se não eu posso ficar bravo!"_
 
-        Quando você possui vários de um mesmo bloco seguidos, tente utilizar um laço de repetição ao invés disso. Isso fará a mesma coisa só que com menos código!
+        Quando você possui vários bloco iguais seguidos, tente utilizar um laço de repetição no lugar. Isso fará a mesma coisa só que com menos código!
       courseD_maze_ramp7: |-
         _"É hora de ficar bravo!"_
 
@@ -14694,6 +15532,10 @@ pt-BR:
         uma função que nós definimos. '
       courseE_artist_functions_predict1_2019: 'Aqui está um quebra-cabeça que usa
         uma função que nós definimos. '
+      courseE_artist_ramp9: Cada lado tem 100 pixels. Você precisa girar 120 graus
+        em cada canto.
+      courseE_artist_ramp9_2: Cada lado tem 100 pixels. Você precisa girar 120 graus
+        em cada canto.
       courseE_bee_concept1: "_\"Você consegue acreditar nessa quantidade de flores?\"_\n\nColete
         todo o nectar de cada flor. "
       courseE_bee_concept1_2018: "_\"Você consegue acreditar nessa quantidade de flores?\"_\n\nColete
@@ -15008,6 +15850,45 @@ pt-BR:
         \n\nEle deve ter exatamente 50 pixels de comprimento em cada lado."
       grade5_artist_variables_triangles1_2019: "Vamos desenhar um triângulo equilátero.
         \n\nEle deve ter exatamente 50 pixels de comprimento em cada lado."
+      iceage_click_hello: "Você consegue ajudar Sid a chamar seus amigos quando você
+        clicar nele? \nQuando acabar, aperte \"Rodar\" para continuar. Clique no Sid
+        para ver seu código funcionar!"
+      iceage_free_play: |-
+        Hora de criar sua própria história ou jogo!
+
+        Quando finalizar, clique em "Finalizar" para permitir que seus amigos testem seu jogo em seus respectivos, telefones, tablets ou computadores!
+        Não sabe o que fazer? Clique em dicas para detalhes.
+      iceage_hello1: |-
+        Sid (ator 1) quer juntar todo mundo para uma nova aventura. Você consegue ajuda-lo a dizer "Olá!" buscando bloco `falar` e ligando ele abaixo do evento `quando rodar`?
+
+        Não se esqueça de digitar "Olá!" dentro!
+      iceage_hello2: Manny (ator 2) achou Sid (ator 1) e quer convida-lo para uma
+        aventura. Ajude-os a se cumprimentar utilizando duas vezes o bloco `ator ___
+        diz`.
+      iceage_move_events: "Scrat está procurando por noses! \nAjude-o a correr por
+        aí ligando um bloco `morrer ator 1` a cada evento alterando a direção para
+        funcionar para cada seta do teclado. \nQuando acabar, clique \"Rodar\" e tente
+        coletar todas as noses."
+      iceage_move_to_actor: Diego (ator 1) está procurando pelo Manny (ator 2). Você
+        consegue levar um ao outro? Ligue um bloco ao evento `quando ator tocar` para
+        tocar um som quando eles se encontrarem.
+      iceage_move_to_flag: Scrat está procurando pela nós dele! Você consegue ajuda-lo
+        a andar os últimos 200 pixels?
+      iceage_repeat: O bloco `repetir para sempre` te permite rodar um código sem
+        parar. Você consegue colocar blocos dentro dele para ajudar Granny a se exercitar
+        andando para esquerda e para direita repetidamente?
+      iceage_sound_and_points: "Aqui está seu código do último quebra-cabeça, assim
+        como o código para mover Granny para esquerda e para direita. \nVocê consegue
+        finalizar o programa para que você **toque um som** e **marque um ponto**
+        quando Sid e Granny se encontrarem? \nAperte \"Rodar\" para jogar o jogo."
+      iceage_throw_hearts: "Sid quer mostrar a sua avó, Granny, que ele a ama. \n\nUtilize
+        o comando `ator __ joga` para fazer com que Sid (ator 1) jogue um coração
+        para Granny (ator 2)!\nAltere o humor de Granny para feliz quando ela for
+        atingida pelos corações."
+      iceage_warn_ice_age: "Todo mundo precisa andar rápido pois uma nevasca está
+        chegando! \nAltere o cenário para um fundo de gelo e altere a velocidade se
+        Sid (ator 1) para mais rápido.\nAperte \"Rodar\" e mova Sid até Diego para
+        alerta-lo."
       ramp_artist_loops4_2019: Você pode criar essa estrela repetindo a sequencia
         de blocos `avance` e `vire à direita em 144 graus`.
       ramp_artist_loops9: Resolva este enigma desenhando um quadrado com lados de

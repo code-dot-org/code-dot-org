@@ -60,6 +60,7 @@ my:
     print: ပုံနှိပ်သည်
   race_interstitial:
     submit: ပေးပို့ပါ
+    decline: ပိတ်မည်
   project:
     name: အမည္
     saved: သိမ်းထားပြီးပါပြီ
