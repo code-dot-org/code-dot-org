@@ -179,7 +179,7 @@ class TopInstructions extends Component {
     shortInstructions: PropTypes.string,
     isMinecraft: PropTypes.bool.isRequired,
     isRtl: PropTypes.bool.isRequired,
-    widgetMode: PropTypes.bool.isRequired
+    widgetMode: PropTypes.bool
   };
 
   constructor(props) {
