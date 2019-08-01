@@ -256,7 +256,8 @@ function queryUserProgress(store, scriptData, currentLevelId) {
         scriptData.section,
         scriptData.name,
         null,
-        pageType
+        pageType,
+        onOverviewPage
       );
     }
   });
