@@ -12,7 +12,8 @@ class Api::V1::TeacherFeedbacksControllerTest < ActionDispatch::IntegrationTest
   self.use_transactional_test_case = true
   setup_all do
     #create student, teacher, and level and register student in teacher's section
-    @teacher = create :teacher
+    @teacher = create :authorized_teacher
+    @not_authorized_teacher = create :teacher
     @student = create :student
     @section = create :section, user: @teacher
     @section.add_student(@student)
@@ -171,6 +172,16 @@ class Api::V1::TeacherFeedbacksControllerTest < ActionDispatch::IntegrationTest
     )
 
     get "#{API}/count"
+    assert_equal "0", formatted_response
+  end
+
+  test 'count does not include feedback from a not authorized teacher' do
+    teacher_sign_in_and_give_feedback(@not_authorized_teacher, @student, @level, COMMENT1, PERFORMANCE1)
+    sign_out @not_authorized_teacher
+
+    sign_in @student
+    get "#{API}/count"
+
     assert_equal "0", formatted_response
   end
 
