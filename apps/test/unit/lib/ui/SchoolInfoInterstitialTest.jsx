@@ -216,10 +216,10 @@ describe('SchoolInfoInterstitial', () => {
         }}
       />
     );
-    expect(wrapper.state('school_type')).to.equal('public');
+    expect(wrapper.state('schoolType')).to.equal('public');
     expect(wrapper.state('ncesSchoolId')).to.equal('123');
     wrapper.instance().onSchoolTypeChange({target: {value: 'after school'}});
-    expect(wrapper.state('school_type')).to.equal('after school');
+    expect(wrapper.state('schoolType')).to.equal('after school');
     expect(wrapper.state('ncesSchoolId')).to.equal('');
   });
 
