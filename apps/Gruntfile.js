@@ -767,6 +767,7 @@ describe('entry tests', () => {
           name: 'webpack-runtime'
         },
         splitChunks: {
+          maxInitialRequests: 100,
           cacheGroups: {
             // Pull any module shared by 2+ appsEntries into the "common" chunk.
             common: {
