@@ -11,7 +11,8 @@ require 'logger'
 # See http://support.applitools.com/customer/en/portal/articles/2099488-match-timeout
 MATCH_TIMEOUT = 5
 
-When(/^I open my eyes to test "([^"]*)"$/) do |test_name|
+# A Feature can optionally specify the stitch mode ('css' or 'scroll') for Eyes to create the full screenshot.
+When(/^I open my eyes to test "([^"]*)"( "([^"]*)")?$/) do |test_name, stitch_mode|
   next if CDO.disable_all_eyes_running
   ensure_eyes_available
 
@@ -38,8 +39,7 @@ When(/^I open my eyes to test "([^"]*)"$/) do |test_name|
   end
   @browser.capabilities[:takes_screenshot] = true
   @eyes.force_full_page_screenshot = true
-  # Use CSS Stitch Mode unless a before hook sets it to :scroll based on a tag.
-  @eyes.stitch_mode = ($stitch_mode || :css)
+  @eyes.stitch_mode = (stitch_mode&.strip&.to_sym || :css)
   @eyes.open(config)
 end
 
