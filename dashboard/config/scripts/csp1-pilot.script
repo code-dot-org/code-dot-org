@@ -16,8 +16,6 @@ level 'csp_socialBelonging_control_2018'
 
 stage 'AB Patterns'
 level 'CSP U1L4 SFLP 20-21', progression: 'Lesson Overview'
-level 'Widget: Binary Odometer_2020', progression: 'Widget: Binary Odometer'
-level 'U1L4 CYU1', progression: 'Check For Understanding'
 level 'CSP U1L4 CYU2', progression: 'Check For Understanding'
 level 'CSP U1L4 CYU3', progression: 'Check For Understanding'
 
@@ -28,6 +26,7 @@ level 'U1L5 CFU adding bits', progression: 'Check For Understanding'
 level 'U1L5 CFU bin dec similarities', progression: 'Check For Understanding'
 
 stage 'Flippy Do, pt 2'
+level 'Widget: Binary Odometer_2020', progression: 'Widget: Binary Odometer'
 level 'CSP U1L6 SFLP 20-21', progression: 'Lesson Overview'
 level 'U1L6 CFU beyond odometer', progression: 'Check For Understanding'
 level 'U1L6 CFU representing fractions', progression: 'Check For Understanding'
