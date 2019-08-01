@@ -12,7 +12,7 @@ require 'logger'
 MATCH_TIMEOUT = 5
 
 # A Feature can optionally specify the stitch mode ('css' or 'scroll') for Eyes to create the full screenshot.
-When(/^I open my eyes to test "([^"]*)"( "([^"]*)")?$/) do |test_name, stitch_mode|
+When(/^I open my eyes to test "([^"]*)"( using stitch mode "([^"]*)")?$/) do |test_name, stitch_mode|
   next if CDO.disable_all_eyes_running
   ensure_eyes_available
 
@@ -39,7 +39,9 @@ When(/^I open my eyes to test "([^"]*)"( "([^"]*)")?$/) do |test_name, stitch_mo
   end
   @browser.capabilities[:takes_screenshot] = true
   @eyes.force_full_page_screenshot = true
-  @eyes.stitch_mode = (stitch_mode&.strip&.to_sym || :css)
+  # Search for 'scroll' in the string captured by the regular expression.  Default to css stitch mode.
+  # Use the safe navigation operator to ensure that nil is not converted by to_s to an empty string.
+  @eyes.stitch_mode = (/scroll/.match(stitch_mode)&.to_s&.to_sym || :css)
   @eyes.open(config)
 end
 
