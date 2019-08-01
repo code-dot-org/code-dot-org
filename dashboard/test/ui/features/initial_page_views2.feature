@@ -14,7 +14,7 @@ Feature: Looking at a few things with Applitools Eyes - Part 2
     And I close the instructions overlay if it exists
     # hack to deflake "free response" scenario below
     And element ".uitest-attachment" is not visible
-    Then I see no difference for "initial load" "<stitch_mode>"
+    Then I see no difference for "initial load" using stitch mode "<stitch_mode>"
     And I close my eyes
     And I sign out
     Examples:
