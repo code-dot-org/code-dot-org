@@ -570,9 +570,7 @@ Applab.init = function(config) {
 
   config.appMsg = applabMsg;
 
-  config.mobileNoPaddingShareWidth = config.level.widgetMode
-    ? applabConstants.WIDGET_WIDTH
-    : applabConstants.APP_WIDTH;
+  config.mobileNoPaddingShareWidth = applabConstants.APP_WIDTH;
 
   config.enableShowLinesCount = false;
 
@@ -668,9 +666,7 @@ Applab.init = function(config) {
       config.expoSession,
       Applab.setAndroidExportProps
     ),
-    nonResponsiveVisualizationColumnWidth: config.level.widgetMode
-      ? applabConstants.WIDGET_WIDTH
-      : applabConstants.APP_WIDTH,
+    nonResponsiveVisualizationColumnWidth: applabConstants.APP_WIDTH,
     visualizationHasPadding: !config.noPadding,
     hasDataMode: !config.level.hideViewDataButton,
     hasDesignMode: !config.level.hideDesignMode,
