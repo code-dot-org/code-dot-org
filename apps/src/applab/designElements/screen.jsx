@@ -154,9 +154,11 @@ export default {
   themeValues: themeValues.screen,
 
   create: function() {
-    let width = getStore().getState().pageConstants.widgetMode
-      ? applabConstants.WIDGET_WIDTH
-      : applabConstants.APP_WIDTH;
+    let pageConstants = getStore().getState().pageConstants;
+    let width =
+      pageConstants && pageConstants.widgetMode
+        ? applabConstants.WIDGET_WIDTH
+        : applabConstants.APP_WIDTH;
     const element = document.createElement('div');
     element.setAttribute('class', 'screen');
     element.setAttribute('tabIndex', '1');
