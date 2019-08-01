@@ -8,7 +8,7 @@
 #  from_instructor :boolean          default(FALSE), not null
 #  script_id       :integer          not null
 #  level_id        :integer          not null
-#  level_source_id :integer          not null
+#  level_source_id :integer          unsigned, not null
 #  data            :text(65535)
 #  status          :integer
 #  created_at      :datetime         not null
