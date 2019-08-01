@@ -28,7 +28,7 @@
     #previous-reviews
       %p Previous reviews
       - @peer_review.related_reviews.where.not(reviewer: nil).each do |peer_review|
-        .peer-review-content
+        .peer-review-content{class: peer_review.css_classes}
           %p.peer-review-title
             %strong="#{peer_review.reviewer.name} added #{time_ago_in_words(peer_review.updated_at)} ago"
           %p.peer-review-status= peer_review.localized_status_description
