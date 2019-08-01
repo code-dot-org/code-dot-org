@@ -160,11 +160,11 @@ module Pd::SurveyPipeline::Helper
   #
   def report_single_workshop(workshop, current_user)
     # Fields used to group survey answers
-    group_config = [:workshop_id, :form_id, :facilitator_id, :name, :type, :answer_type]
+    group_config = [:workshop_id, :day, :facilitator_id, :form_id, :name, :type, :answer_type]
 
     # Rules to map groups of survey answers to reducers
     is_single_select_answer = lambda {|hash| hash.dig(:answer_type) == 'singleSelect'}
-    is_free_format_question = lambda {|hash| ['textbox', 'textarea'].include?(hash[:type])}
+    not_single_select_answer = lambda {|hash| hash.dig(:answer_type) != 'singleSelect'}
 
     map_config = [
       {
@@ -173,7 +173,7 @@ module Pd::SurveyPipeline::Helper
         reducers: [Pd::SurveyPipeline::HistogramReducer]
       },
       {
-        condition: is_free_format_question,
+        condition: not_single_select_answer,
         field: :answer,
         reducers: [Pd::SurveyPipeline::NoOpReducer]
       }
@@ -183,7 +183,7 @@ module Pd::SurveyPipeline::Helper
     # Workers read from and write to this object.
     context = {
       current_user: current_user,
-      filters: {workshop_ids: @workshop.id}
+      filters: {workshop_ids: workshop.id}
     }
 
     # Assembly line to summarize CSF surveys

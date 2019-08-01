@@ -9,5 +9,5 @@ wrong '<img src="https://images.code.org/ae34c1d87e697c789303c5c1b602b7c6-image-
 right '<img src="https://images.code.org/d220337a4cd1ec31b0a5bb70eaf6bffe-image-1512686800364.42.00 PM.png" width="200px"'
 
 markdown <<MARKDOWN
-![expandable](https://images.code.org/134a993836c148f64a7045d489ec58dc-image-1512686800350.45.08 PM.png)
+![](https://images.code.org/134a993836c148f64a7045d489ec58dc-image-1512686800350.45.08 PM.png)
 MARKDOWN

@@ -771,6 +771,19 @@ class LevelsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
+  test 'external markdown levels will render <user_id/> as the actual user id' do
+    dsl_text = <<DSL
+name 'user_id_replace'
+title 'title for user_id_replace'
+markdown 'this is the markdown for <user_id/>'
+DSL
+    level = External.create_from_level_builder({}, {name: 'my_user_id_replace', dsl_text: dsl_text})
+    sign_in @not_admin
+    get :show, params: {id: level}
+    assert_response :success
+    assert_select '#markdown', "this is the markdown for #{@not_admin.id}"
+  end
+
   private
 
   # Assert that the url is a real S3 url, and not a placeholder.
