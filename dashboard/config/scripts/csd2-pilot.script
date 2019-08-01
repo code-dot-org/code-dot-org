@@ -48,6 +48,7 @@ level 'CSD U2 text style size_pilot', progression: 'Styling Text'
 level 'Video: Intro to CSS Part 2_pilot', named: true
 level 'CSD U2 add file_pilot', progression: 'Styling your Website'
 level 'CSD U2 CSS practice_pilot', progression: 'Styling Text'
+level 'CSD Web CSS Assessment', progression: 'Styling Text', assessment: true
 level 'CSD U2 CSS challenge_pilot', progression: 'Styling Text'
 
 stage 'Intellectual Property', flex_category: 'csd2_1'
