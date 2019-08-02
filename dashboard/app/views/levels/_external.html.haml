@@ -1,7 +1,6 @@
 - level ||= @level
 - last_attempt = @last_attempt unless local_assigns.has_key? :last_attempt
 - in_level_group ||= false
-- level_props = level.properties_with_replaced_markdown(current_user)
 - video_key = @level.video_key
 - video =  video_key ? Video.current_locale.find_by_key(video_key) : nil
 - use_large_video_player = level.properties["use_large_video_player"]
@@ -12,7 +11,7 @@
 - content_for(:head) do
   %script{src: minifiable_asset_path('js/levels/_external.js'), data: {external: { in_level_group: in_level_group }.to_json}}
   :javascript
-    var options = #{level_props['options'].to_json}
+    var options = #{level.properties['options'].to_json}
 
 .external
   - postcontent = capture_haml do
@@ -22,8 +21,8 @@
       - elsif !(video && use_large_video_player)
         %a.btn.btn-large.btn-primary.next-stage.submitButton.pull-right= t('continue')
 
-  = render partial: 'levels/content', locals: {app: 'external', data: level_props, content_class: level_props['options'].try(:[], 'css'), postcontent: postcontent, source_level: level}
-  = render partial: 'levels/teacher_markdown', locals: {data: level_props}
+  = render partial: 'levels/content', locals: {app: 'external', data: level.properties, content_class: level.properties['options'].try(:[], 'css'), postcontent: postcontent, source_level: level}
+  = render partial: 'levels/teacher_markdown', locals: {data: level.properties}
 
 - if in_level_group
   -# This partial will take care of milestone posts in the contexts of levelgroups,
