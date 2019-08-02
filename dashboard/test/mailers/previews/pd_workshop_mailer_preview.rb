@@ -232,7 +232,7 @@ class Pd::WorkshopMailerPreview < ActionMailer::Preview
       location_address: '1501 4th Ave, Suite 900, Seattle, WA',
       facilitators: [facilitator]
     }
-    workshop = build :pd_workshop, default_workshop_params.merge(workshop_params)
+    workshop = build :workshop, default_workshop_params.merge(workshop_params)
 
     teacher = build :teacher, name: 'Tracy Teacher', email: 'tracy_teacher@example.net'
 

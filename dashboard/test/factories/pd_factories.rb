@@ -65,7 +65,7 @@ FactoryGirl.define do
     mappings {[create(:pd_regional_partner_mapping, zip_code: "90210", state: nil)]}
   end
 
-  factory :pd_ended_workshop, parent: :pd_workshop, class: 'Pd::Workshop' do
+  factory :pd_ended_workshop, parent: :workshop, class: 'Pd::Workshop' do
     num_sessions 1
     started_at {Time.zone.now}
     ended_at {Time.zone.now}
@@ -75,7 +75,7 @@ FactoryGirl.define do
     transient do
       duration_hours 6
     end
-    association :workshop, factory: :pd_workshop
+    association :workshop, factory: :workshop
     start {Date.current + 9.hours}
     self.end {start + duration_hours.hours}
 
@@ -463,7 +463,7 @@ FactoryGirl.define do
   end
 
   factory :pd_enrollment, class: 'Pd::Enrollment' do
-    association :workshop, factory: :pd_workshop
+    association :workshop
     sequence(:first_name) {|n| "Participant#{n}"}
     last_name 'Codeberg'
     email {"participant_#{(User.maximum(:id) || 0) + 1}@example.com.xx"}
