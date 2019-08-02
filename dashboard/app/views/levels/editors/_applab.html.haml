@@ -10,6 +10,8 @@
 .field
   = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :design_mode_at_start, description: "Start in Design Mode"}
 .field
+  = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :widget_mode, description: "Use Widget Mode"}
+.field
   = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :hide_design_mode, description: "Hide Design Mode"}
 .field
   = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :makerlab_enabled, description: "Enable Maker APIs"}

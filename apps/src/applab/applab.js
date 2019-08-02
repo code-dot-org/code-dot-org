@@ -147,7 +147,10 @@ function loadLevel() {
   // This led to lots of hackery in the code to properly scale the visualization
   // area. Width/height are now constant, but much of the hackery still remains
   // since I don't understand it well enough.
-  Applab.appWidth = applabConstants.APP_WIDTH;
+  Applab.appWidth = level.widgetMode
+    ? applabConstants.WIDGET_WIDTH
+    : applabConstants.APP_WIDTH;
+
   Applab.appHeight = applabConstants.APP_HEIGHT;
 
   // In share mode we need to reserve some number of pixels for our in-app
@@ -677,7 +680,8 @@ Applab.init = function(config) {
     showDebugWatch:
       !!config.level.isProjectLevel || config.level.showDebugWatch,
     showMakerToggle:
-      !!config.level.isProjectLevel || config.level.makerlabEnabled
+      !!config.level.isProjectLevel || config.level.makerlabEnabled,
+    widgetMode: config.level.widgetMode
   });
 
   config.dropletConfig = dropletConfig;
