@@ -289,6 +289,19 @@ class PeerReview < ActiveRecord::Base
     )
   end
 
+  # Whether this peer review is a review of the latest version of the submitter's answer
+  def current?
+    level_source == submitter.last_attempt(level, script).level_source
+  end
+
+  # Classes applied to the .peer-review-content div whenever this review is rendered
+  def css_classes
+    classes = []
+    classes << 'outdated' unless current?
+    classes << 'from-instructor' if from_instructor
+    classes.join(' ')
+  end
+
   private
 
   def append_audit_trail(message)
