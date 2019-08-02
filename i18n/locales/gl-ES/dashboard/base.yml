@@ -423,9 +423,6 @@ gl:
     no_primary_course: "Faga un curso no Code Studio"
     choose_next_course: "Experimenta un dos seguintes cursos do Code Studio"
     print_certificate: "Imprimir certificado"
-    announcement_title: "Anuncios"
-    announcement_learn_more_button: "Aprender máis"
-    announcement_try_now_button: "Proba agora"
   move_students:
     all_students_must_be_in_current_section: "Todo o alumnado debe estar inscrito no teu grupo."
     already_enrolled_in_new_section: "No puedes mover a estes estudantes porque xa están no novo grupo."
