@@ -1219,6 +1219,10 @@ sk-SK:
         -   Oba útvary majú **strany o dĺžke 50 pixelov**
         -   Pri kreslení _osemuholníkov_ sa musíš otáčať o \*\* 45 stupňov\*\*.
         -   Pri kreslení _trojuholníkov_ sa musíš otáčať o **120 stupňov**.
+      course4_artist_binary_challenge2: |-
+        V tejto mriežke je 256 bitov - to znamená, že aj pri malej zmene môžu vzniknúť veľké problémy. Si dostatočne vytrvalý/á, aby si vrátil/a logo späť do pôvodného stavu?
+
+        ![](https://images.code.org/74e15f513982b47762dd33ebbc21e5e9-image-1498776314610.png)
       course4_artist_fwp_challenge1: Skús spustiť tento program a spraviť v ňom zmeny
         a pozri, čo sa stane. Vedel by si povedať ako funguje? (Alebo ho celý vymaž
         a nahraď niečim úplne iným)
@@ -2409,6 +2413,14 @@ sk-SK:
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Pokračuj!"_
 
         Použi, čo si sa zatiaľ naučil a pozbieraj všetok šrot!
+      courseD_artist_binary_challenge2_2018: |-
+        V tejto mriežke je 256 bitov - to znamená, že aj pri malej zmene môžu vzniknúť veľké problémy. Si dostatočne vytrvalý/á, aby si vrátil/a logo späť do pôvodného stavu?
+
+        ![](https://images.code.org/74e15f513982b47762dd33ebbc21e5e9-image-1498776314610.png)
+      courseD_artist_binary_challenge2_2019: |-
+        V tejto mriežke je 256 bitov - to znamená, že aj pri malej zmene môžu vzniknúť veľké problémy. Si dostatočne vytrvalý/á, aby si vrátil/a logo späť do pôvodného stavu?
+
+        ![](https://images.code.org/74e15f513982b47762dd33ebbc21e5e9-image-1498776314610.png)
       courseD_artist_nestedLoops1a: "Teraz tento trojuholník zopakuj 6 krát.\n\nPo
         každom trojuholníku sa musíš otočiť o 60 stupňov, aby si mohol nakresliť ďalší. "
       courseD_artist_nestedLoops1a_2018: "Teraz tento trojuholník zopakuj 6 krát.\n\nPo
