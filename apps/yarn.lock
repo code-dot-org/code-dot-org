@@ -14361,6 +14361,14 @@ smart-buffer@^1.0.13:
   version "1.1.15"
   resolved "https://registry.yarnpkg.com/smart-buffer/-/smart-buffer-1.1.15.tgz#7f114b5b65fab3e2a35aa775bb12f0d1c649bf16"
 
+snack-build@0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/snack-build/-/snack-build-0.0.1.tgz#dc57a5941dda6e71dc2e15c418cfdf887f0016a9"
+  integrity sha512-PeO6RrtejGI4BNR8qxAgBpTZ6CPteAXK7KCVeQvLMSFRX0MEuqOMxeLgXNzX0ql8Q1T3ZHQL6n5z/p+fVQp/aw==
+  dependencies:
+    babel-runtime "^6.23.0"
+    graphql-request "^1.8.2"
+
 snack-sdk@2.3.1:
   version "2.3.1"
   resolved "https://registry.yarnpkg.com/snack-sdk/-/snack-sdk-2.3.1.tgz#cc194aede2210671bfa63ee736942ca6a511867c"
