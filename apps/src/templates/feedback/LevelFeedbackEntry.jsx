@@ -139,7 +139,10 @@ export default class LevelFeedbackEntry extends Component {
     const showDownCaret = this.longComment() && this.state.expanded;
 
     return (
-      <div style={style}>
+      <div
+        style={style}
+        onClick={this.state.expanded ? this.collapse : this.expand}
+      >
         <div style={styles.lessonDetails}>
           <a href={linkToLevel}>
             <div style={styles.lessonLevel}>
@@ -166,20 +169,12 @@ export default class LevelFeedbackEntry extends Component {
         <div style={performanceStyle}>{rubricPerformance[performance]}</div>
         {showRightCaret ? (
           <span style={styles.iconBox}>
-            <FontAwesome
-              style={styles.icon}
-              icon="caret-right"
-              onClick={this.expand}
-            />
+            <FontAwesome style={styles.icon} icon="caret-right" />
           </span>
         ) : null}
         {showDownCaret ? (
           <span style={styles.iconBox}>
-            <FontAwesome
-              style={styles.icon}
-              icon="caret-down"
-              onClick={this.collapse}
-            />
+            <FontAwesome style={styles.icon} icon="caret-down" />
           </span>
         ) : null}
         <span style={styles.commentBox}>
