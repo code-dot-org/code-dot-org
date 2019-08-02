@@ -45,7 +45,6 @@ var NetSimVizWire = (module.exports = function(localNode, remoteNode) {
    * @type {jQuery} wrapped around a SVGTextElement
    * @private
    */
-
   this.questionMark_ = jQuerySvgElement('text')
     .text('?')
     .addClass('question-mark')
