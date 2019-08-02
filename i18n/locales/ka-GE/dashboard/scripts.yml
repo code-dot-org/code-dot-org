@@ -5444,6 +5444,10 @@ ka:
           stages:
             new stage:
               name: ახალი დონე
+            Sending Binary Messages:
+              name: ორობითი წერილების გაგზავნა
+            Intellectual Property:
+              name: ინტელექტუალური ქონება
         csd-videos:
           stages:
             new stage:
@@ -5607,3 +5611,13 @@ ka:
           stages:
             new stage:
               name: ახალი დონე
+        csl-vn:
+          stages:
+            Programming in Maze:
+              name: პროგრამირება ლაბირინთში
+            Programming with Rey and BB-8:
+              name: პროგრამირება რეისთან და BB-8-სთან ერთად
+            Loops in Ice Age:
+              name: ციკლები გამყინვარების პერიოდში
+            Ocean Scene with Loops:
+              name: ციკლები მხატვარში

@@ -2,7 +2,7 @@
   "danceFeedbackNeedNewDancer": "คุณต้องสร้างนักเต้นขึ้นมาหนึ่งคน",
   "danceFeedbackNoDancers": "คุณไม่มีนักเต้นเลย",
   "danceFeedbackNoBackground": "คุณต้องเพิ่มแบ็กกราวนด์เอฟเฟกต์",
-  "danceFeedbackTooManyDancers": "ระวังด้วย! ถ้าคุณใส่บล็อก 'สร้างใหม่' ภายใน 'ทุกๆ 2 ห้องดนตรี' คุณจะสร้างนักเต้นได้มากมาย",
+  "danceFeedbackTooManyDancers": "ระวังด้วย! ถ้าคุณใส่บล็อก 'สร้างใหม่' ภายใน 'ทุกๆ 2 ห้องดนตรี' คุณจะสร้างนักเต้นมากเกินควร",
   "danceFeedbackUseSetSize": "ใช้บล็อก 'set backup_dancer2 size' เพื่อทำให้นักเต้นมีขนาดเล็กลง",
   "danceFeedbackUseSetTint": "ใช้บล็อก 'set tint' เพื่อเปลี่ยนระดับอ่อนสีของนักเต้น",
   "danceFeedbackUseStartMapping": "ลองเพิ่มบล็อก <xml><block type=\"Dancelab_startMapping\"><title name=\"SPRITE\">right_pineapple</title><title name=\"PROPERTY\">\"scale\"</title><title name=\"RANGE\">\"bass\"</title></block></xml> ในโปรแกรมของคุณ",
