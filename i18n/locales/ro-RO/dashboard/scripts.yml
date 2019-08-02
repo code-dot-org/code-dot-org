@@ -4449,6 +4449,10 @@ ro:
           stages:
             Number Systems:
               name: Sisteme de numere
+            Sending Binary Messages:
+              name: Transmiterea mesajelor binare
+            Sending Binary Messages with the Internet Simulator:
+              name: Transmiterea mesajelor binare cu simulatorul de internet
           description_audience: '[șir gol]'
           description_short: '[șir gol]'
           description: '[șir gol]'
@@ -4585,3 +4589,11 @@ ro:
           description_audience: '[șir gol]'
           description_short: '[șir gol]'
           description: '[șir gol]'
+        csp3-pilot:
+          description_audience: '[șir gol]'
+          description_short: '[șir gol]'
+          description: '[șir gol]'
+        csl-vn:
+          stages:
+            Loops in Ice Age:
+              name: Bucle în Ice Age

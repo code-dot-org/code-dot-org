@@ -13,18 +13,15 @@ DSL
   test "replaces <user_id/> with user's id" do
     user1 = create :user
     user2 = create :user
-    properties1 = @level.properties_with_replaced_markdown(user1)
-    properties2 = @level.properties_with_replaced_markdown(user2)
+    markdown1 = @level.localized_replaced_markdown(user1)
+    markdown2 = @level.localized_replaced_markdown(user2)
 
-    assert_equal("this is the markdown for #{user1.id}", properties1['markdown'])
-    assert_equal("this is the markdown for #{user2.id}", properties2['markdown'])
-
-    # make sure we didn't lose other properties
-    assert_equal('title for user_id_replace', properties1['title'])
+    assert_equal("this is the markdown for #{user1.id}", markdown1)
+    assert_equal("this is the markdown for #{user2.id}", markdown2)
   end
 
   test "replaces <user_id/> with empty string if no user" do
-    properties = @level.properties_with_replaced_markdown(nil)
-    assert_equal("this is the markdown for ", properties['markdown'])
+    markdown = @level.localized_replaced_markdown(nil)
+    assert_equal("this is the markdown for ", markdown)
   end
 end

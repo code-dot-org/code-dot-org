@@ -1197,8 +1197,8 @@
   "https://studio.code.org/s/coursec-2019/stage/16/puzzle/12": {
     "short_instructions": "Create your own story. When you're done, click \"Finish\" to share with friends. See story ideas in the hints.",
     "authored_hints": {
-      "idea1": "_Need an idea?_\n\n**Who's there?** Make characters appear with random images, so no one knows who's showing up next.\n\n[][0]",
-      "idea2": "_Need an idea?_\n\n**Going on an Adventure** - Change the background, then have the characters talk about where they are now.\n\n[][0]",
+      "idea1": "_Need an idea?_\n\n**Who's there?** Make characters appear with random images, so no one knows who's showing up next.\n\n<img src= \"https://images.code.org/dbd6ece9d0fb213039ea5dccb91fc425-image-1563577859889.gif\" style=\"width: 200px\">",
+      "idea2": "_Need an idea?_\n\n**Going on an Adventure** - Change the background, then have the characters talk about where they are now.\n\n<img src= \"https://images.code.org/a7f740d73074deb128cdc2826abda9e6-image-1563576781779.gif\" style=\"width: 200px\">",
       "idea3": "_Need an idea?_\n\n**Pinball** - Make one character move using the arrow keys (use `when up arrow`, `when down arrow` blocks), then play random sounds when it collides with other characters on the screen."
     }
   },

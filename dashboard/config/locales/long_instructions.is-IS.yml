@@ -7002,6 +7002,35 @@ is-IS:
         ull af báðum kindunum.
       Overworld Shear Sheep_2019: Nú þarf að rýja rollur! Notaðu `rýja` skipunina
         til safna ull af báðum kindunum.
+      Pixelation - Lesson 15 - Color Shades: |-
+        # Dílamynstur í lit: Verkefni 2
+
+        **Leiðbeiningar:**
+        <img src='https://images.code.org/548d1daa698a17b1005b1747f152587f-image-1439476855059.png' style="width: 150px; float:right">Við byrjum með röðina af rauðum litbrigðum sem Maddie bjó til í myndbandinu. Gerðu tilraunir með 6-bita lit með því að fylla neðri röð myndarinnar með litbrigðum í öðrum lit. Hér er dæmi með nokkrum bláum litbrigðum. Prófaðu þinn eigin lit!
+      Pixelation - Lesson 15 - Color Shades 4x4: "# Dílamynstur: Verkefni 3\n\n<img
+        src = \"https://code.org/images/cspunit1/ColorTask3.png\" style=\"float:right;
+        margin:0 20px\" width=200>\n\n**Leiðbeiningar:**\nVið byrjum með 4x4 myndina
+        sem Maddie bjó til í myndbandinu. \n\nVerkefni þitt er að fylla 4x4 grindina
+        með litum með _12 bitum fyrir hvern díl_.  Útkoman ætti að vera svipuð (en
+        ekki eins) og myndin hér til hægri. \n\nHér eru kröfurnar:\n\n-   Röð 1 -
+        fylla með rauðum litbrigðum. \n-   Röð 2 - græn litbrigði. \n-   Röð 3 - blá
+        litbrigði. \n-   Röð 4 - grá litbrigði."
+      Pixelation - Lesson 15 - Complete 3-bit color: "# Dílamynstur í lit: Verkefni
+        1\n\n**Leiðbeiningar:**\n\n-   Þú byrjar með 4x4 myndina sem Maddie var að
+        búa til, en við höfum sleppt síðustu tveimur reitunum. \n-   Ljúktu við myndina
+        með því að finna út hvaða liti vantar og kóða þá."
+      Pixelation 4x4 Empty: Breiddin og hæðin eru nú hluti af gögnunum. Getur þú fundið
+        út hvernig á að stilla þessar víddir?
+      Pixelation Bee: "# Dæmi með 12 bita á hvern díl\n\n-   Þessi stærri mynd af
+        býflugu kóðar lit með 12 bitum í hverjum díl, en með því að skoða þetta í
+        hex er auðveldara að sjá litinn í hverjum díl. \n-   Ef þú skiptir yfir í
+        tvíundir - haltu þér fast - þá færðu mikið af bitum. \n-   Hér er annað sem
+        gefur furðulega útkomu: færðu bitana á hvern díl upp í 24 bita á díl. Hvað
+        gerist? Getur þú útskýrt þessa hegðun?"
+      Pixelation Flappy: |-
+        # Dæmi með fleiri bita í hverjum díl
+
+        Hér er stærri mynd með 9 bitum í hverjum díl. Með 9 bitum getur þú haft 512 mismunandi liti. Smelltu áfram til að sjá næstu mynd sem er jafnvel enn háþróaðri en auðveldari að skilja.
       Robot Doodle: "**Hugmynd að verkefni:** Búðu til mynd af einhverju kunnuglegu
         úr raunheimi. Þetta krefst úthalds og skipulagningar!"
       Robot Doodle_2018: "**Hugmynd að verkefni:** Búðu til mynd af einhverju kunnuglegu

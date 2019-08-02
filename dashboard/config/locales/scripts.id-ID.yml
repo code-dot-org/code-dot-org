@@ -5458,6 +5458,12 @@ id:
           stages:
             Number Systems:
               name: Sistem nomor
+            Sending Binary Messages:
+              name: Mengirim pesan biner
+            Sending Binary Messages with the Internet Simulator:
+              name: Mengirim Pesan Biner dengan Internet Simulator
+            Intellectual Property:
+              name: Hak milik intelektual
         time4csdemo:
           stages:
             Crowdsourcing:

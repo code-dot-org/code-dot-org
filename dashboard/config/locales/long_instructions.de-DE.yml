@@ -37,6 +37,15 @@ de-DE:
         sich jetzt überdecken. Versuche es mit einer Änderung des ersten "springe
         rückwärts" Bausteins von 100 auf 50 (halb so weit). Wie weit sollte der Künstler
         beim zweiten "springe rückwärts" Baustein gehen?
+      4-5 Maze 7: "Bringe den Zombie auf schnellstem Weg zur Sonnenblume. \nKannst
+        Du die Aufgabe mit weniger als 11 Blöcken lösen?"
+      4-5 Maze 9: |-
+        Jetzt gibt es einen "Wiederhole bis"-Baustein.
+        Hiermit können wir Befehle wiederholen bis der Zombie auf die Sonnenblume trifft.
+
+        Verwende den "Wiederhole bis"-Baustein, um die Aufgabe mit so wenig Blöcken wie möglich zu lösen.
+      4-5 Maze Assessment 1: "**Aufgabe:** Gehe zur Sonnenblume und verwende dabei
+        so wenig Bausteine wie möglich."
       4-5 Nested Loops 5: Benutze den angegebenen Code in einer Schleife, um eine
         Windmühle zu erstellen.
       4-5 Nested Loops 9: Zeichne die Zähne im Mund des Alligators!
@@ -45,6 +54,24 @@ de-DE:
         Bildschirm. \n\n**Wie:** Ziehe einen `setProperty()` Block in den Arbeisbereich.
         Nutze im Dropdown Menü `\"hintergrundfarbe\"` um sie auf `\"grün\"` zu setzen.
         Drücke dann \"Start\".\n\n**Hängst du fest? Kliecke hier:** ![expandable](https://images.code.org/3b5e70522b02867a1df1d5b5e481785e-image-1511279858395.gif)"
+      AppLab Intro 7 - Change Text 2: |-
+        <div style="float:right">
+        <img src="https://images.code.org/39ead723fbd2b047aa2d1e401cbfec8a-image-1506545619076.34.29 PM.png" style="height:200px;">
+        </div>
+
+        **Ziel:** Vergrößere den Texte und färbe ihn blau.
+
+        **Wie:**  Du brauchst 2 Codezeilen. Setze bei `"label1"` `"font-size"` auf `80` und `"text-color"` auf `"blue"`.
+
+        **Klappt nicht? Klicke hier:** ![expandable](https://images.code.org/2d5d46a03082af3b01847aad6602e2ea-image-1511280140482.gif)
+      AppLab Intro 7 - Full Text: "<div style=\"float:right\">\n<img src=\"https://images.code.org/1e81d5bcdd69172f4127de55d045225f-image-1507565161167.05.19
+        AM.png\" style=\"height:200px\">\n</div>\n\n**Ziel:** Mache die Schaltflächen
+        `\"red\"` und `\"blue\"`. Ändere dann den Text in derm groß orangenen Etikett.\n\n**Wie:**
+        \n\n-   Du kannst die Maus über Elemente bewegen um ihr `\"id\"` zu sehen.\n-
+        \  Setze `\"background-color\"` der Schaltflächen auf `\"red\"` und `\"blue\"`.\n-
+        \  Ändere die `\"text\"` Eigenschaft des Etiketts so wie du möchstest, zum
+        Beispiel `\"Willkommen bei meiner App!\"`.\n\n**Klappt nicht? Klicke hier:**
+        ![expandable](https://images.code.org/4bf99e7352e7c17a5bf73ced80171f6a-image-1511280628092.gif)"
       Course 4 Artist For Loops 6a: Nimm drei kleine Änderungen an dem Code aus dem
         vorherigem Level vor, um dies zu erreichen!
       CourseD_Dance_Party_01: |-
@@ -408,6 +435,7 @@ de-DE:
         sich wiederholen). Trage die Muster die du findest in das Wörterbuch rechts
         ein. Wenn du einen Eintrag in das Wörterbuch machst, wird das Symbol des Eintrags
         die Muster im Text ersetzen.
+      course3_maze_debugging_challenge1: _"Gehe ich hier nur immer im Kreis herum?"_
       course4_artist_fwp_challenge1: Versuche, dieses Programm auszuführen und verändere
         es, um zu sehen, was passiert. Kannst du herausfinden, wie es funktioniert?
         (Oder lösche es und ersetze es durch etwas ganz anderes)

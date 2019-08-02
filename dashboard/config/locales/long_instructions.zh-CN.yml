@@ -159,6 +159,11 @@ zh-CN:
         这样做\\\r\n\n\\\r\n\n-   使用所有有关板事件的按钮(上，下) 来为每一个事件演奏一段独特的声音或歌曲。\\\r\n-   有没有可以演奏更多声音/歌曲的任何其他事件？"
       CDU U6 Playground Sound Board_2019: "# 声音面板 2.0\\\r\n\n\\\r\n现在可以播放声音、音符、和歌曲了！利用这些新知识，你甚至可以把主板变成声音面板。\\\r\n\\\r\n在工具箱中，你可以处置所有的蜂鸣器和相关的模块。看看你能做出些什么很酷东西！\\\r\n\\\r\n\n#
         这样做\\\r\n\n\\\r\n\n-   使用所有有关板事件的按钮(上，下) 来为每一个事件演奏一段独特的声音或歌曲。\\\r\n-   有没有可以演奏更多声音/歌曲的任何其他事件？"
+      CSD Problem Solving Process Video: |-
+        ## 需要仔细思考的问题
+
+        -   上节课你是如何运用解决问题的方法的？
+        -   你将如何运用这个方法去解决日常生活中的问题呢？
       CSD U2 CSS explore CSS: "<div style=\"float: right;\nheight: 250px; width: 40%;
         overflow-y: scroll; margin-left: 20px; font-size:14px\"\nmarkdown=\"1\">\n<details>\n\n<summary>\n\n\\*\\*
         如何在文件之间切换？ \\*\\* \n\n</summary> \n单击要查看的文件的名称。菜单在屏幕左侧. \n\n</details> \n</div>
@@ -5887,6 +5892,11 @@ zh-CN:
         \  找到函数是在哪里定义的 ( [显示在哪里](#triggercallout=block_trigger) )\\\r\n-   创建一个叫做`player_y`（玩家\\_y位置），并将它赋值给玩家的\"y\"属性\\\r\n-
         \  \\*\n    要么使用`console.log()`（控制台输出）命令，或者用监视器来报告`player_y`的值。\\\r\n-   \\*\n
         \   就用一个按钮来玩游戏，然后观察`player_y`值得变化。\\\r\n-   \\*\n    决定`player_y`是多少时，表明它到了屏幕底端。"
+      CSD What Makes a Computer a Computer Video_2019: |-
+        ## 需要考虑的问题
+
+        -   计算机相比于更早诞生的其他机器而言，有哪些不同？
+        -   想想你会利用计算机做些什么事。会有什么输入、输出、存储和程序呢？
       CSDU2 - PW - Class Style Personal Site: "# 自由游戏样式\\\r\n\n\\\r\n现在轮到你来决定用什么样的样式了！使用classes（类）样式和RGB颜色来改进你的个人网站。\\\r\n\\\r\n\\*\n确保你完成了下面的检查清单。\\\r\n\n-
         \  先保存一个你的首页的快照，然后将它存到电脑的某个地方，以便于过会儿能找到它。\\\r\n    \\\r\n    ## \n    检查清单\\\r\n
         \   \\\r\n-   在你的站点某处，给用RGB值给文本一个特别的颜色。\\\r\n-   在你的泪飙页面，给所有的列表元素用上相同的背景颜色。\\\r\n-
@@ -6541,7 +6551,7 @@ zh-CN:
         它已经有一个`边数`参数了。现在，再加一个`长度`参数。
 
         每个图形的周长是200像素。你还记得当多边形有不同数量的边时，如何让它们一样长的等式吗？
-      NEW Course 4 Artist Params 2: 从头开始创建一个 "绘制三角形" 函数, 使三角形具有50像素边。
+      NEW Course 4 Artist Params 2: 从头开始创建一个 "绘制三角形" 函数，使三角形具有50像素边。
       Overworld Chop Tree: 木材是一种非常重要的资源。许多东西都是由它制成的。走到树边, 并使用`摧毁方块`模块命令将它砍倒。
       Overworld Chop Tree_2019: 木材是一种非常重要的资源。许多东西都是由它制成的。走到树边, 并使用`摧毁方块`模块命令将它砍倒。
       Overworld House Frame Chosen: 用你想要的任何材料来建立房子的剩余部分。`重复`命令将派上用场。
@@ -7487,9 +7497,9 @@ zh-CN:
       courseC_maze_debugging_challenge2: 如果斯奎特转得太频繁，他可能会头晕！只用4个`转向`命令来帮它拿到橡子。
       courseC_maze_debugging_challenge2_2018: 如果斯奎特转得太频繁，他可能会头晕！只用4个`转向`命令来帮它拿到橡子。
       courseC_maze_debugging_challenge2_2019: 如果斯奎特转得太频繁，他可能会头晕！只用4个`转向`命令来帮它拿到橡子。
-      courseC_maze_programming1: 对于这个关卡, 把所有的方块拖在一起, 并点击 "运行" 开始!
-      courseC_maze_programming1_2018: 对于这个关卡, 把所有的方块拖在一起, 并点击 "运行" 开始!
-      courseC_maze_programming1_2019: 对于这个关卡, 把所有的方块拖在一起, 并点击 "运行" 开始!
+      courseC_maze_programming1: 对于这个关卡，把所有的方块拖在一起，并点击 "运行" 开始!
+      courseC_maze_programming1_2018: 对于这个关卡，把所有的方块拖在一起，并点击 "运行" 开始!
+      courseC_maze_programming1_2019: 对于这个关卡，把所有的方块拖在一起，并点击 "运行" 开始!
       courseC_maze_programming2: |-
         从工具箱中拖出一个额外的<xml><block
         type="maze_moveForward"/></xml>模块来完成你的代码。

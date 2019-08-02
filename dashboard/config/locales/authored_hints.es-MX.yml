@@ -6335,10 +6335,6 @@ es-MX:
 
           \*\* Pinball\*\* - Haz que un personaje se mueva con las flechas (usa los bloques `cuando flecha arriba`, `cuando flecha abajo`), y luego reproduce sonidos al azar cuando choca con otros personajes en la pantalla.
       courseC_PlayLab_eventsFP_2019:
-        idea1: "_¿Necesitas una idea?_\n\n**¿Quién está allí?** Haz que los personajes
-          aparezcan con imágenes aleatorias, para que nadie sepa quién sigue. \n\n![](https://images.code.org/a56e03479801995d93ad5a4e4384a79e-image-1475340154498.gif)"
-        idea2: "_¿Necesitas una idea?_\n\n**Salir de aventura** - Cambia el fondo
-          y, luego, haz que los personajes hablen sobre dónde están ahora. \n\n![](https://images.code.org/010c4d919f841d6049caf9211ab65ccc-image-1475340583052.gif)"
         idea3: |-
           _¿Necesitas una idea?_
 
@@ -10694,6 +10690,8 @@ es-MX:
           (pero no dentro de la afirmación 'si') para evitar que los puntos se eliminen
           muy rápidamente.
       courseD_scrat_ramp1:
+        courseC_maze_programming1_a: Si Scrat no llega hasta la bellota, asegúrate
+          de que los tres bloques estén juntos y, luego, vuelve a hacer clic en "Ejecutar".
         courseC_maze_programming1_b: "¡No tengas miedo de cometer un error! Intenta
           agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees
           que aún no has resuelto el desafío."
@@ -10729,8 +10727,13 @@ es-MX:
           a la esquina?"
         courseC_maze_programming5_c: Tendrá que girar a la izquierda en la esquina
           para llegar al cerdo.
+      courseD_scrat_ramp6:
+        courseC_maze_programming6a_a: "¡Usa un bucle `repetir` para poner a Scrat
+          en movimiento!"
       courseD_scrat_ramp7:
         courseD_scrat_programming6_a: "¡Hay dos formas de resolver este desafío!"
+        courseD_scrat_programming6_b: Recuerda girar primero antes de moverte, ya
+          que Scrat está mirando en la dirección incorrecta.
         courseD_scrat_programming6_c: "¡No tengas miedo de cometer un error! Intenta
           agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees
           que aún no has resuelto el desafío."

@@ -1,4 +1,5 @@
 import {assert} from 'chai';
+import sinon from 'sinon';
 import {TestResults} from '@cdo/apps/constants';
 import {LevelStatus, LevelKind} from '@cdo/apps/util/sharedConstants';
 import {ViewType, setViewType} from '@cdo/apps/code-studio/viewAsRedux';
@@ -1361,6 +1362,85 @@ describe('progressReduxTest', () => {
         pages_completed: [-50, null, null, null, null]
       });
       assert.strictEqual(result, TestResults.READONLY_SUBMISSION_RESULT);
+    });
+  });
+
+  describe('userProgressFromServer', () => {
+    let server, state, dispatch;
+    const {userProgressFromServer} = __testonly__;
+
+    beforeEach(() => {
+      server = sinon.fakeServer.create();
+      state = {scriptName: 'my-script'};
+      dispatch = sinon.spy();
+    });
+
+    afterEach(() => server.restore());
+
+    const serverResponse = data => {
+      server.respondWith([
+        200,
+        {'Content-Type': 'application/json'},
+        JSON.stringify(data)
+      ]);
+    };
+
+    const getDispatchActions = () => {
+      return dispatch.getCalls().map(call => call.args[0].type);
+    };
+
+    it('requests user progress and does not set new progress with no data', () => {
+      serverResponse({});
+      const promise = userProgressFromServer(state, dispatch, 1);
+      server.respond();
+      return promise.then(responseData => {
+        assert.deepEqual(['progress/CLEAR_PROGRESS'], getDispatchActions());
+        assert.deepEqual({}, responseData);
+      });
+    });
+
+    it('does not clear progress with no userId', () => {
+      serverResponse({});
+      const promise = userProgressFromServer(state, dispatch);
+      server.respond();
+      return promise.then(responseData => {
+        assert.equal(0, dispatch.callCount);
+        assert.deepEqual({}, responseData);
+      });
+    });
+
+    it('requests user progress and dispatches appropriate actions', () => {
+      const responseData = {
+        isVerifiedTeacher: true,
+        teacherViewingStudent: true,
+        professionalLearningCourse: false,
+        focusAreaStageIds: [1, 2],
+        lockableAuthorized: true,
+        completed: true,
+        levels: {},
+        peerReviewsPerformed: true,
+        current_stage: 1
+      };
+      serverResponse(responseData);
+      const promise = userProgressFromServer(state, dispatch, 1);
+      server.respond();
+
+      const expectedDispatchActions = [
+        'progress/CLEAR_PROGRESS',
+        'verifiedTeacher/SET_VERIFIED',
+        'progress/SET_IS_SUMMARY_VIEW',
+        'progress/SHOW_TEACHER_INFO',
+        'progress/UPDATE_FOCUS_AREAS',
+        'stageLock/AUTHORIZE_LOCKABLE',
+        'progress/SET_SCRIPT_COMPLETED',
+        'progress/MERGE_PROGRESS',
+        'progress/MERGE_PEER_REVIEW_PROGRESS',
+        'progress/SET_CURRENT_STAGE_ID'
+      ];
+      return promise.then(serverResponseData => {
+        assert.deepEqual(expectedDispatchActions, getDispatchActions());
+        assert.deepEqual(responseData, serverResponseData);
+      });
     });
   });
 });

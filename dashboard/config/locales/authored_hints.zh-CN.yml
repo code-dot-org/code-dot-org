@@ -390,7 +390,7 @@ zh-CN:
         Course_4_SCF_2_a: 每个八边形的边长都是40像素。
         Course_4_SCF_2_b: 每个八边形之间需水平跳转136像素
         Course_4_SCF_2_c: "当你画第二行八边形的之前，你需要向右转45度并且向前跳转96像素。 \n\n一旦你达到正确的垂直位置，你需要再次向后转小艺术家并且跳408像素。 "
-        Course_4_SCF_2_d: "请注意, 由于偶数行中的八角形较少, 因此不必再跳到后面, 就可以到达奇数行的起始位置。   \n\n这意味着您可以对所有行使用相同的函数。"
+        Course_4_SCF_2_d: "请注意，由于偶数行中的八角形较少，因此不必再跳到后面，就可以到达奇数行的起始位置。   \n\n这意味着您可以对所有行使用相同的函数。"
       Course 4 SCF 3:
         Course_4_SCF_3_a: "![](https://images.code.org/52f474adbbc3bdd87aaae407c9ebf588-image-1515690462464.png)"
         Course_4_SCF_3_b: '这是一系列的八角形, 两侧是`counter`（计数器）像素长。 '
@@ -558,8 +558,8 @@ zh-CN:
           看看这个移动选项:
 
           \!\[] (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)
-        Course_4_SCFL_2_b: 请注意, 在`计数循环` 的每次迭代中，在你停止与目标互动后，都有3个点。
-        Course_4_SCFL_2_c: 在`计数循环`的每次迭代中, 每个对象的数字都与 `counter`（计数器）变量有某种关联。
+        Course_4_SCFL_2_b: 请注意，在`计数循环` 的每次迭代中，在你停止与目标互动后，都有3个点。
+        Course_4_SCFL_2_c: 在`计数循环`的每次迭代中，每个对象的数字都与 `counter`（计数器）变量有某种关联。
       Course 4 SCFL 3:
         Course_4_SCFL_3_a: "·笔宽度·是1。第一个正方形有50像素边, 每个正方形比前一个宽50像素。"
         Course_4_SCFL_3_b: 画笔上的不透明度始终是 `counter`/2 （计数器/2）。
@@ -698,9 +698,8 @@ zh-CN:
           </block>
           </xml>
       Course 4 SCFL 4:
-        Course_4_SCFL_4_a: 颜色的变化使用`用红色, 绿色, 蓝色设置颜色`模块。 红色一直设置为`counter`（计数器）的值。绿色一直为`255-counter`,
-          蓝色设置为常量255。
-        Course_4_SCFL_4_b: 每一个形状是一个正方形，边长是`counter`（计数器）像素长，从5px 开始, 每次增加5像素，一直到200像素。
+        Course_4_SCFL_4_a: 颜色的变化使用`用红色，绿色，蓝色设置颜色`模块。 红色一直设置为`counter`（计数器）的值。绿色一直为`255-counter`，蓝色设置为常量255。
+        Course_4_SCFL_4_b: 每一个形状是一个正方形，边长是`counter`（计数器）像素长，从5px 开始，每次增加5像素，一直到200像素。
         Course_4_SCFL_4_c: 小艺术家在每个正方形之间旋转15度。
       Course 4 SCFL 6:
         Course_4_SCFL_6_a: 使用`用红色，绿色和蓝色设置颜色`的模块。红色设为常量255，绿色一直是`counter`（计数器）的值，蓝色一直是`255-counter`。
@@ -796,36 +795,34 @@ zh-CN:
           </block>
           </xml>
       Course 4 SCFL 7:
-        Course_4_SCFL_7_a: 颜色的变化使用`用红色, 绿色, 蓝色设置颜色`模块。 红色设置为`counter`（计数器）的值。绿色为`255-counter`,
-          蓝色设置为常量255。
-        Course_4_SCFL_7_b: '此绘图使用了两个类似的`计数循环`。 一个以2为增量从5到200, 另一个以2为减量从200到5。 '
+        Course_4_SCFL_7_a: 颜色的变化使用`用红色，绿色，蓝色设置颜色`模块。 红色设置为`counter`（计数器）的值。绿色为`255-counter`，蓝色设置为常量255。
+        Course_4_SCFL_7_b: '此绘图使用了两个类似的`计数循环`。 一个以2为增量从5到200，另一个以2为减量从200到5。 '
         Course_4_SCFL_7_c: 在每个`计数循环`中，在转向`360 / counter`之前，向前移动5像素。别忘了在你做之前，设置画笔宽度为`counter`！
         Course_4_SCFL_7_d: 你需要在两个`计数循环`之间左转225度。
       Course 4 SCV 1:
-        Course_4_SCV_1_a: '变量是有帮助的, 因为您可以通过循环每次增加它们。 '
-        Course_4_SCV_1_b: 这个谜题有一个循环来创建多边形, 一个循环来重复多边形`sides`（边）的次数，然后另一个循环在把5加到到`sides`（边）后重新计算。
-        Course_4_SCV_1_c: 使用`sides`和`length`的变量使代码更干净, 因为您可以多次循环相同的代码, 而不是为每组数字创建一个新的副本。
+        Course_4_SCV_1_a: '变量是有帮助的，因为您可以通过循环每次增加它们。 '
+        Course_4_SCV_1_b: 这个谜题有一个循环来创建多边形，一个循环来重复多边形`sides`（边）的次数，然后另一个循环在把5加到到`sides`（边）后重新计算。
+        Course_4_SCV_1_c: 使用`sides`和`length`的变量使代码更干净，因为您可以多次循环相同的代码，而不是为每组数字创建一个新的副本。
       Course 4 SCV 2:
         Course_4_SCV_2_b: '此设计使用嵌套循环（有三层深）。所有循环运行`sides`（边数）次。 '
-        Course_4_SCV_2_c: 艺术家在创建每个对角线时向左拐, 但在其他两个循环中向右转。
+        Course_4_SCV_2_c: 艺术家在创建每个对角线时向左拐，但在其他两个循环中向右转。
         Course_4_SCV_2_d: 为了防止你的10朵"花"画在同一个地方，确保在最外层的循环中，在转向`360/sides`度前，向前跳`length`/`sides`。
       Course 4 SCV 3:
         Course_4_SCV_3_a: '当精灵碰到一起时，用数学模块来给`points` （分数）变量加上或减去分数。 '
         Course_4_SCV_3_b: 你可以用这个参数来改变每次按下方向键时，精灵移动得距离。
       Course 4 SCV 4:
-        Course_4_SCV_4_a: 这里的三个变量能帮你。 一个是花蜜的单位, 一个是蜂蜜的单位, 一个是蜜蜂每次迭代移动的距离。
-        Course_4_SCV_4_b: '在你的主循环里使用三个循环会非常有帮助。 一个用于前进, 一个用于收集花蜜, 一个用于制作蜂蜜。 '
+        Course_4_SCV_4_a: 这里的三个变量能帮你。 一个是花蜜的单位，一个是蜂蜜的单位，一个是蜜蜂每次迭代移动的距离。
+        Course_4_SCV_4_b: '在你的主循环里使用三个循环会非常有帮助。 一个用于前进，一个用于收集花蜜，一个用于制作蜂蜜。 '
         Course_4_SCV_4_c: |-
           看看这个移动选项:
 
           \!\[] (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)
       Course 4 SCV 5:
         Course_4_SCV_5_b: 每次循环后，会少两个花蜜，蜜蜂需要多制作一个蜂蜜。
-        Course_4_SCV_5_c: 请注意, 在外层循环开始的地方，蜜蜂需要尽可能多的移动，直到下一朵花里有花蜜。
+        Course_4_SCV_5_c: 请注意，在外层循环开始的地方，蜜蜂需要尽可能多的移动，直到下一朵花里有花蜜。
       Course 4 SCV 6:
-        Course_4_SCV_6_b: 你会从创建8个变量中获益： red1, green1， blue1, red2, green2, blue2,
-          length, 和sides。（变量分别表示红色1，绿色1，蓝色1，红色2，绿色2，蓝色2，长度和边数）
-        Course_4_SCV_6_c: 当锯齿是青色 (rgb = 0,175,200) 和紫色的 (rgb = 100, 50, 150) 时候，将每个形状的5边分成`length`/`sides`部分。
+        Course_4_SCV_6_b: 你会从创建8个变量中获益： red1，green1， blue1，red2，green2，blue2，length，和sides。（变量分别表示红色1，绿色1，蓝色1，红色2，绿色2，蓝色2，长度和边数）
+        Course_4_SCV_6_c: 当锯齿是青色 (rgb = 0,175,200) 和紫色的 (rgb = 100，50，150) 时候，将每个形状的5边分成`length`/`sides`部分。
         Course_4_SCV_6_d: '先左转`360`/`sides`，再右转`360`/`sides`。 '
       CourseD_Dance_Party_01:
         validation: |-
@@ -1110,14 +1107,13 @@ zh-CN:
       MC_HOC_2017_FP20x20_2019:
         MC_HOC_2017_13_Cole_a: 尝试让代理人建造一些桥梁，这样艾莉克斯和史蒂夫就可以在地图边缘以外的地区走动了。
       NEW Course 4 Artist Functions 13:
-        NEW_Course_4_Artist_Functions_13_a: 尝试编辑`draw a line of squares`（用正方形画一条线）的函数,
-          这样你就不必两次调用它。
-        NEW_Course_4_Artist_Functions_13_c: 如果你要尝试用普通的线条而不是盒子来做星星, 你需要什么代码？
+        NEW_Course_4_Artist_Functions_13_a: 尝试编辑`draw a line of squares`（用正方形画一条线）的函数，这样你就不必两次调用它。
+        NEW_Course_4_Artist_Functions_13_c: 如果你要尝试用普通的线条而不是盒子来做星星，你需要什么代码？
       NEW Course 4 Artist Functions 4:
-        NEW_Course_4_Artist_Functions_4_a: 在每个正方形之后, 您必须使用`向右转120度`模块。
+        NEW_Course_4_Artist_Functions_4_a: 在每个正方形之后，您必须使用`向右转120度`模块。
       NEW Course 4 Artist Functions 9:
-        NEW_Course_4_Artist_Functions_9_a: 在添加任何块之前, 请尝试运行代码。  是什么使绘图看起来有点不对？
-        NEW_Course_4_Artist_Functions_9_b: 如果你不能很好地发现哪里出了问题, 试着通过向左移动滑块来减慢艺术家的速度。
+        NEW_Course_4_Artist_Functions_9_a: 在添加任何块之前，请尝试运行代码。  是什么使绘图看起来有点不对？
+        NEW_Course_4_Artist_Functions_9_b: 如果你不能很好地发现哪里出了问题，试着通过向左移动滑块来减慢艺术家的速度。
       NEW Course 4 Artist Params 11:
         NEW_Course_4_Artist_Params_11_a: 有多个需要由函数内的变量替换的数字。
       NEW Course 4 Artist Params 14:
@@ -1265,16 +1261,16 @@ zh-CN:
       course1_artist_loops_challenge3:
         courseA_artist_loops_challenge2_a: '像这样的块: <xml> <block type="simple_move_up_left"/></xml>将让您的艺术家在斜面上移动!'
         courseA_artist_loops_challenge2_b: 当你完成一个鸟舍后，`跳`到下一个!
-        courseA_artist_loops_challenge2_c: 在这个挑战中, 您需要在循环中放很多模块。
+        courseA_artist_loops_challenge2_c: 在这个挑战中，您需要在循环中放很多模块。
       course1_artist_loops_challenge4:
         courseB_artist_loops_challenge1_a: '像这样的模块:  <xml> <block type="simple_move_up_right"/></xml>
           将让您的艺术家在斜线上移动！'
         courseB_artist_loops_challenge1_b: 当你完成一个骰子, `跳`到下一个!
         courseB_artist_loops_challenge1_c: '您将需要`移动`或`跳过`一些相同的行两次。 '
       course1_collector_loops_challenge1:
-        courseA_collector_loops_challenge1_a: 如果有问题, 请尝试更改每个循环中的数字。
+        courseA_collector_loops_challenge1_a: 如果有问题，请尝试更改每个循环中的数字。
         courseA_collector_loops_challenge1_b: 如果有什么事情只做一次，就不需要使用循环, 。
-        courseA_collector_loops_challenge1_c: 有6块宝石在右侧的洞穴, 但你只需要移动和收集5次。你知道为什么吗？
+        courseA_collector_loops_challenge1_c: 有6块宝石在右侧的洞穴，但你只需要移动和收集5次。你知道为什么吗？
       course1_collector_loops_challenge3:
         courseB_collector_loops_challenge1_d: |-
           试试这个！
@@ -1382,7 +1378,7 @@ zh-CN:
           </block>
           </xml>
       course1_maze_debugging_challenge1:
-        courseA_maze_seq_challenge1_a: 如果你走得太远, 有些小路会通向 TNT（炸弹）。
+        courseA_maze_seq_challenge1_a: 如果你走得太远，有些小路会通向 TNT（炸弹）。
       course1_maze_debugging_challenge2:
         courseB_maze_seq_challenge2_a: 您不需要添加或删除块来解决此关卡。
         courseB_maze_seq_challenge2_b: 重新排列模块并走中间路径。
@@ -1468,7 +1464,7 @@ zh-CN:
         courseD_artist_nestedLoops_challenge2_a: 要画一个正八边形, 艺术家需要转45度8次。
         courseD_artist_nestedLoops_challenge2_b: 要画正方形, 艺术家需要转动90度4次。
       course2_artist_prog_challenge1:
-        courseC_artist_prog_challenge1_a: '矩形是200像素宽, 100 像素高。 '
+        courseC_artist_prog_challenge1_a: '矩形是200像素宽，100 像素高。 '
       course2_artist_prog_challenge2:
         courseC_artist_prog_challenge2_a: |-
           可以将命令放在`重复`模块中, 将它们反复循环。试试看！
@@ -1517,12 +1513,12 @@ zh-CN:
           ![](<https://images.code.org/0bfc0a0ed6783fae908368a6e6d12c02-image-1493501358990.18.52 PM.png>)
       course2_maze_loops_challenge1:
         courseC_maze_loops_challenge1_a: 把这条路看成是三个不同的部分。每一个都有一个你可以重复的模式。
-        courseC_maze_loops_challenge1_b: 在每个`重复`模块之间, 您需要`向左转`或`向右转`, 以便斯奎特为下一个模式作好准备
+        courseC_maze_loops_challenge1_b: 在每个`重复`模块之间，您需要`向左转`或`向右转`，以便斯奎特为下一个模式作好准备
           。
       course2_maze_programming_challenge2:
         courseC_maze_programming_challenge2_b: 最短的解决方案仅使用了5个模块，但它使用了`重复`模块！
       course3_artist_functions_challenge1:
-        courseE_artist_functions_challenge1_a: 如果再次调用该函数, 则可以在最后一个角创建相同的设计。你也可以随你所想`跳到`其他位置，或者将整个改成自己想要的样子！
+        courseE_artist_functions_challenge1_a: 如果再次调用该函数，则可以在最后一个角创建相同的设计。你也可以随你所想`跳到`其他位置，或者将整个改成自己想要的样子！
       course3_artist_functions_challenge2:
         courseE_artist_functions_challenge1_a: |-
           <xml>
@@ -1630,10 +1626,10 @@ zh-CN:
       course3_maze_debugging_challenge1:
         courseC_maze_debugging_challenge1_a: 向左还是向右？由你决定!
         courseC_maze_debugging_challenge1_b: 斯奎特的路径是一个矩形！他每次都要以同样的方式转动！
-        courseC_maze_debugging_challenge1_c: 如果被难住了, 可以随时重新开始, 或删除所有的代码, 找到自己的方法!
+        courseC_maze_debugging_challenge1_c: 如果被难住了，可以随时重新开始，或删除所有的代码，找到自己的方法!
       course3_maze_debugging_challenge2:
         courseC_maze_debugging_challenge2_a: 解决这一问题的一个方法是在转角之间增加更多的步骤。
-        courseC_maze_debugging_challenge2_b: 如果你被卡住了, 你可以随时重新开始, 或删除所有的代码, 找到自己的方法!
+        courseC_maze_debugging_challenge2_b: 如果你被卡住了，你可以随时重新开始，或删除所有的代码，找到自己的方法!
         courseC_maze_debugging_challenge2_c: |-
           有两条不同的路线只需要使用“向前移动”指令块和四个“转向”指令。如果你想出办法来使用“重复”指令块，你甚至只需要更少的指令。
 
@@ -1657,7 +1653,7 @@ zh-CN:
           -   设置新的背景。\*
               让所有的演员消失, 并显示一个"游戏结束"的消息。
       course4_artist_binary_challenge2:
-        courseD_artist_binary_challenge2_a: 我给你的最好的提示是, 如果开始变得非常混乱, 请按 `⟲重新开始`。 原来的程序中只有几行错误。如果一种方法失败了，请备份并重试。这里有解决方案!
+        courseD_artist_binary_challenge2_a: 我给你的最好的提示是，如果开始变得非常混乱，请按 `⟲重新开始`。 原来的程序中只有几行错误。如果一种方法失败了，请备份并重试。这里有解决方案!
       course4_artist_concept_challenge2:
         courseE_artist_concept_challenge2_a: 一旦你定义了一个函数, 你可以一次又一次地调用它 - 任何想用的地方或时机！
         courseE_artist_concept_challenge2_b: |-
@@ -1948,8 +1944,8 @@ zh-CN:
           </statement>
           </block></xml>
         courseF_bee_fwp_challenge1_d: |-
-          在`计数循环`里，要`向前移动`, 然后`采花蜜` **计数器次数 \*\*。
-          在`计数循环`后, 你只需要1向后移动1** 长度次数 \*\*。
+          在`计数循环`里，要`向前移动`，然后`采花蜜` **计数器次数 \*\*。
+          在`计数循环`后，你只需要1向后移动1** 长度次数 \*\*。
 
           您可能需要多次阅读此提示才能理解它。在 **黑体** 的部分是一个你需要用到的关于如何使用两个`重复`循环的提示。
         courseF_bee_fwp_challenge1_e: |-
@@ -2226,8 +2222,7 @@ zh-CN:
           </block>
           </xml>
       course4_harvester_nested_loops_challenge1:
-        courseD_harvester_nested_loops_challenge1_a: 您可能已经使用了一个循环来创建一个之字形图案。如果你记得那个算法,
-          可以加到这里。
+        courseD_harvester_nested_loops_challenge1_a: 您可能已经使用了一个循环来创建一个之字形图案。如果你记得那个算法，可以加到这里。
       course4_playlab_variables_challenge1:
         courseF_playlab_variables_challenge1_a: |-
           要用到工具箱里别的模块，来让演员说话。
@@ -5284,13 +5279,6 @@ zh-CN:
 
           **弹球游戏**- 使用箭头键让一个人物移动（使用`当上方向键按下时`，`当下方向键按下时`模块），然后当与屏幕上的其他人物相撞的时候播放随机声音。
       courseC_PlayLab_eventsFP_2019:
-        idea1: |-
-          -   需要一个主意？\*
-
-          \*\* 谁在哪里？ \*\* 使演员的随机图像出现, 因此没有人知道下一个显示的是谁。
-
-          ![](https://images.code.org/a56e03479801995d93ad5a4e4384a79e-image-1475340154498.gif)
-        idea2: "-   需要一个主意？\\* \n\n\\*\\* 去冒险 \\*\\*- 改变背景, 然后让人物谈论他们现在在哪里。 \n\n![](https://images.code.org/010c4d919f841d6049caf9211ab65ccc-image-1475340583052.gif)"
         idea3: |-
           _需要一个想法？_
 
@@ -7158,7 +7146,7 @@ zh-CN:
 
           <img src="https://images.code.org/37ca9779bafd2ccc5cc801f82358008e-image-1495823683964.34.09.png" width="200px" />
       courseD_artist_ramp11:
-        courseD_artist_ramp11a: 若要绘制一条边，使用`向前移动100像素`模块, 并将100更改为200。
+        courseD_artist_ramp11a: 若要绘制一条边，使用`向前移动100像素`模块，并将100更改为200。
         courseD_artist_ramp11b: |-
           若要绘制4条边，将`向前移动100像素`模块放在重复循环里面, 并确保该循环设置为绘制4次。
 
@@ -7615,10 +7603,10 @@ zh-CN:
 
           哪里出问题了？
         courseD_collector_debugging1_b: 是否看到了可以使用`重复`循环来简化事情的规律？
-        courseD_collector_debugging1_c: '记住, 一旦你到了那里, 就用`收集`模块去捡宝藏。  '
+        courseD_collector_debugging1_c: '记住，一旦你到了那里，就用`收集`模块去捡宝藏。  '
       courseD_collector_debugging10_predict1:
         courseD_collector_debugging9_a: 有几种方法可以解决这个问题...但它们都需要转弯！
-        courseD_collector_debugging9_b: 弄清楚将如何通过这个关卡, 然后逐步移动, 尝试使代码与你头脑所想相匹配。
+        courseD_collector_debugging9_b: 弄清楚将如何通过这个关卡，然后逐步移动，尝试使代码与你头脑所想相匹配。
       courseD_collector_debugging1a_2018:
         courseD_collector_debugging1_a: |-
           使用"步进"按钮来查看在第一步是否一切都正确。
@@ -7626,7 +7614,7 @@ zh-CN:
           那第二步呢？
 
           哪里出问题了？
-        courseD_collector_debugging1_c: '记住, 一旦你到了那里, 就用`收集`模块去捡宝藏。  '
+        courseD_collector_debugging1_c: '记住，一旦你到了那里，就用`收集`模块去捡宝藏。  '
       courseD_collector_debugging1a_2019:
         courseD_collector_debugging1_a: |-
           使用"步进"按钮来查看在第一步是否一切都正确。
@@ -7634,7 +7622,7 @@ zh-CN:
           那第二步呢？
 
           哪里出问题了？
-        courseD_collector_debugging1_c: '记住, 一旦你到了那里, 就用`收集`模块去捡宝藏。  '
+        courseD_collector_debugging1_c: '记住，一旦你到了那里，就用`收集`模块去捡宝藏。  '
       courseD_collector_debugging2:
         courseD_collector_debugging2_a: |-
           使用"步进"按钮来查看在第一步是否一切都正确。
@@ -7675,7 +7663,7 @@ zh-CN:
 
           一旦问题解决了，是什么地方错了？
         courseD_collector_debugging4_b: |-
-          如果很难弄清楚如何制作楼梯的步进模式, 请尝试用手指跟踪它并大声说出指令。
+          如果很难弄清楚如何制作楼梯的步进模式，请尝试用手指跟踪它并大声说出指令。
 
           别忘了指出转弯的方向!
         courseD_collector_debugging4_c: 此循环只缺少一个模块。你能找出是哪一个吗？
@@ -7687,7 +7675,7 @@ zh-CN:
 
           一旦问题解决了，是什么地方错了？
         courseD_collector_debugging4_b: |-
-          如果很难弄清楚如何制作楼梯的步进模式, 请尝试用手指跟踪它并大声说出指令。
+          如果很难弄清楚如何制作楼梯的步进模式，请尝试用手指跟踪它并大声说出指令。
 
           别忘了指出转弯的方向!
       courseD_collector_debugging4a_2019:
@@ -7698,7 +7686,7 @@ zh-CN:
 
           一旦问题解决了，是什么地方错了？
         courseD_collector_debugging4_b: |-
-          如果很难弄清楚如何制作楼梯的步进模式, 请尝试用手指跟踪它并大声说出指令。
+          如果很难弄清楚如何制作楼梯的步进模式，请尝试用手指跟踪它并大声说出指令。
 
           别忘了指出转弯的方向!
       courseD_collector_debugging5:
@@ -7720,7 +7708,7 @@ zh-CN:
       courseD_collector_debugging6:
         courseD_collector_debugging6_a: "尝试使用\"步进\"按钮运行代码。是否一切在第一步的时候都是好？ \n\n那么第二步呢？
           \n\n哪里错了？"
-        courseD_collector_debugging6_b: 看起来所有正确的步骤都在这里, 你只是需要更多。 你如何多次重复`收集`？
+        courseD_collector_debugging6_b: 看起来所有正确的步骤都在这里，你只是需要更多。 你如何多次重复`收集`？
       courseD_collector_debugging6a_2018:
         courseD_collector_debugging6_a: "尝试使用\"步进\"按钮运行代码。是否一切在第一步的时候都是好？ \n\n那么第二步呢？
           \n\n哪里错了？"
@@ -7734,7 +7722,7 @@ zh-CN:
         courseD_collector_debugging8_b: 尝试使用嵌套循环使得代码更短。
       courseD_collector_debugging9:
         courseD_collector_debugging9_a: 有几种方法可以解决这个问题...但它们都需要转弯！
-        courseD_collector_debugging9_b: 弄清楚将如何通过这个关卡, 然后逐步移动, 尝试使代码与你头脑所想相匹配。
+        courseD_collector_debugging9_b: 弄清楚将如何通过这个关卡，然后逐步移动，尝试使代码与你头脑所想相匹配。
       courseD_collector_debugging_challenge2:
         courseD_collector_debugging_challenge2_a: |-
           只从前**两堆**里收集头**两个**宝石开始。
@@ -9069,21 +9057,21 @@ zh-CN:
 
           ![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)
       courseE_artist_ramp8:
-        courseE_artist_ramp8_a: 若要绘制一条边，使用`向前移动100像素`模块, 并将100更改为200。
-        courseE_artist_ramp8_b: 若要绘制4条边, 请将`向前移动100像素`模块放在重复循环里面, 并确保该循环设置为4次。然后别忘了转向！
+        courseE_artist_ramp8_a: 若要绘制一条边，使用`向前移动100像素`模块，并将100更改为200。
+        courseE_artist_ramp8_b: 若要绘制4条边，请将`向前移动100像素`模块放在重复循环里面，并确保该循环设置为4次。然后别忘了转向！
         courseE_artist_ramp8_c: 你的循环应该有两个模块在里面：`向前移动`和`向右转90度`。
       courseE_artist_ramp8_2:
-        courseE_artist_ramp8_a: 若要绘制一条边，使用`向前移动100像素`模块, 并将100更改为200。
-        courseE_artist_ramp8_b: 若要绘制4条边, 请将`向前移动100像素`模块放在重复循环里面, 并确保该循环设置为4次。然后别忘了转向！
+        courseE_artist_ramp8_a: 若要绘制一条边，使用`向前移动100像素`模块，并将100更改为200。
+        courseE_artist_ramp8_b: 若要绘制4条边，请将`向前移动100像素`模块放在重复循环里面，并确保该循环设置为4次。然后别忘了转向！
         courseE_artist_ramp8_c: 你的循环应该有两个模块在里面：`向前移动`和`向右转90度`。
       courseE_artist_ramp9:
         courseD_artist_ramp12_a: 这和正方形有什么相似之处？ 又有什么不同？
         courseD_artist_ramp12_b: 您可以使用`转向`模块的下拉菜单来查看所需的角度!
-        courseD_artist_ramp12_c: 若要绘制每条边，需要向前移动100像素, 然后向右转120度。你需要几条边？
+        courseD_artist_ramp12_c: 若要绘制每条边，需要向前移动100像素，然后向右转120度。你需要几条边？
       courseE_artist_ramp9_2:
         courseD_artist_ramp12_a: 这和正方形有什么相似之处？ 又有什么不同？
         courseD_artist_ramp12_b: 您可以使用`转向`模块的下拉菜单来查看所需的角度!
-        courseD_artist_ramp12_c: 若要绘制每条边，需要向前移动100像素, 然后向右转120度。你需要几条边？
+        courseD_artist_ramp12_c: 若要绘制每条边，需要向前移动100像素，然后向右转120度。你需要几条边？
       courseE_bee_concept1:
         courseE_bee_concept1_b: 这里有没有_重复_的规律？
         courseE_bee_concept1_a: 如果不了解如何在此处使用嵌套循环, 请尝试在一张纸上逐步写出说明。圈出所看到的规律。

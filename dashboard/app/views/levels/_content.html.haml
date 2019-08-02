@@ -17,6 +17,7 @@
   / Markdown support using the 'markdown' property.
   - if data['markdown'].present?
     #markdown
+      - level_markdown = level.try(:localized_replaced_markdown, current_user) || level.localized_property('markdown')
       / Render markdown text through the ActionView template engine.
-      = ActionView::Base.new.render(inline: level.localized_property('markdown'), type: :md)
+      = ActionView::Base.new.render(inline: level_markdown, type: :md)
   = postcontent

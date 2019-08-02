@@ -23,7 +23,6 @@
  * Shared
  *= require user-menu
  *= require user-progress
- *= require teacher-announcement
  *= require buttons
  *= require course-blocks
  *= require details-polyfill
@@ -2081,9 +2080,7 @@ a.download-video {
   border-radius: 5px;
   padding: 10px;
   margin-bottom: 1em;
-  &.outdated {
-    color: $light_gray;
-  }
+
   &:last-child {
     margin-bottom: 0;
   }
@@ -2092,8 +2089,22 @@ a.download-video {
   }
   .peer-review-status {
     font-size: 1em;
-    & > strong {
-      font-family: inherit;
+  }
+  &.from-instructor {
+    border: 2px solid $cyan;
+
+    .peer-review-title {
+      color: $cyan;
+    }
+  }
+  &.outdated {
+    color: $light_gray;
+    &.from-instructor {
+      border: 2px solid $lighter_cyan;
+
+      .peer-review-title {
+        color: $lighter_cyan;
+      }
     }
   }
 }

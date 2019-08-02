@@ -38,6 +38,8 @@ ca:
         NetSim: Simulador d'Internet
         Custom: Artista
         CustomStudio: Play Lab
+        Gamelab: Laboratori de jocs
+        Spritelab: Laboratori de personatges
     trophy:
       name:
         Bronze: Bronze
@@ -552,6 +554,7 @@ ca:
         csp_applab_functions: Introducció a les funcions
         csp_applab_functions_parameters: Funcions amb Paràmetres
         csp_applab_loops: Bucles
+        csp_cs_is_changing_everything: La informàtica ho està canviant tot
         starwars_intro: 'Star Wars: Construint una Galaxia amb Codi - Introducció'
         starwars_typing: 'Star Wars: Creant una Galaxia amb Codi - JavaScript'
         starwars_events: 'Star Wars: Creant una galaxia amb codi - Esdeveniments'

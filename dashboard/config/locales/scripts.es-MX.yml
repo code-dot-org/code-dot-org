@@ -1153,6 +1153,8 @@ es-MX:
               name: Prueba de Pluralsight
             Externals Optionally Displayed as Unplugged:
               name: Externos opcionalmente mostrados como sin conexión
+            Bubble Choice:
+              name: Bubble Choice
         algebraPD2b:
           title: Ciencias de la computación en álgebra PD
           description: Enseñar programación funcional a través de álgebra
@@ -3151,10 +3153,11 @@ es-MX:
               name: Colisiones
               description_student: La clase programa sus sprites para interactuar
                 de nuevas maneras. Después de una breve revisión de cómo usaron el
-                bloque isTouching, la clase intercambia ideas sobre otras formas en
-                que dos sprites podrían interactuar. Luego, usan isTouching para hacer
-                que un sprite presione a otro en la pantalla antes de practicar con
-                los cuatro bloques de colisión (colisionar, desplazar, rebotar y rebotarEn).
+                bloque estáTocando, la clase intercambia ideas sobre otras formas
+                en que dos sprites podrían interactuar. Luego, usan estáTocando para
+                hacer que un sprite presione a otro en la pantalla antes de practicar
+                con los cuatro bloques de colisión (colisionar, desplazar, rebotar
+                y rebotarEn).
               description_teacher: Los estudiantes programan sus sprites para interactuar
                 de nuevas maneras. Después de una breve revisión de cómo usaron el
                 bloque `estáTocando`, los estudiantes intercambian ideas sobre otras
@@ -9317,10 +9320,11 @@ es-MX:
               name: Colisiones
               description_student: La clase programa sus sprites para interactuar
                 de nuevas maneras. Después de una breve revisión de cómo usaron el
-                bloque isTouching, la clase intercambia ideas sobre otras formas en
-                que dos sprites podrían interactuar. Luego, usan isTouching para hacer
-                que un sprite presione a otro en la pantalla antes de practicar con
-                los cuatro bloques de colisión (colisionar, desplazar, rebotar y rebotarEn).
+                bloque estáTocando, la clase intercambia ideas sobre otras formas
+                en que dos sprites podrían interactuar. Luego, usan estáTocando para
+                hacer que un sprite presione a otro en la pantalla antes de practicar
+                con los cuatro bloques de colisión (colisionar, desplazar, rebotar
+                y rebotarEn).
               description_teacher: Los estudiantes programan sus sprites para interactuar
                 de nuevas maneras. Después de una breve revisión de cómo usaron el
                 bloque `estáTocando`, los estudiantes intercambian ideas sobre otras
@@ -14772,10 +14776,11 @@ es-MX:
               name: Colisiones
               description_student: La clase programa sus sprites para interactuar
                 de nuevas maneras. Después de una breve revisión de cómo usaron el
-                bloque isTouching, la clase intercambia ideas sobre otras formas en
-                que dos sprites podrían interactuar. Luego, usan isTouching para hacer
-                que un sprite presione a otro en la pantalla antes de practicar con
-                los cuatro bloques de colisión (colisionar, desplazar, rebotar y rebotarEn).
+                bloque estáTocando, la clase intercambia ideas sobre otras formas
+                en que dos sprites podrían interactuar. Luego, usan estáTocando para
+                hacer que un sprite presione a otro en la pantalla antes de practicar
+                con los cuatro bloques de colisión (colisionar, desplazar, rebotar
+                y rebotarEn).
               description_teacher: Los estudiantes programan sus sprites para interactuar
                 de nuevas maneras. Después de una breve revisión de cómo usaron el
                 bloque `estáTocando`, los estudiantes intercambian ideas sobre otras
@@ -15901,6 +15906,14 @@ es-MX:
               name: nueva etapa
             Number Systems:
               name: Sistemas numéricos
+            Sending Text:
+              name: Envío de texto
+            Sending Binary Messages:
+              name: Envío de mensajes binarios
+            Sending Binary Messages with the Internet Simulator:
+              name: Envío de mensajes binarios con el simulador de Internet
+            Intellectual Property:
+              name: Propiedad intelectual
           title: Piloto de la Unidad 1 de CSP
         csd-tests:
           stages:
@@ -17420,10 +17433,11 @@ es-MX:
               name: Colisiones
               description_student: La clase programa sus sprites para interactuar
                 de nuevas maneras. Después de una breve revisión de cómo usaron el
-                bloque isTouching, la clase intercambia ideas sobre otras formas en
-                que dos sprites podrían interactuar. Luego, usan isTouching para hacer
-                que un sprite presione a otro en la pantalla antes de practicar con
-                los cuatro bloques de colisión (colisionar, desplazar, rebotar y rebotarEn).
+                bloque estáTocando, la clase intercambia ideas sobre otras formas
+                en que dos sprites podrían interactuar. Luego, usan estáTocando para
+                hacer que un sprite presione a otro en la pantalla antes de practicar
+                con los cuatro bloques de colisión (colisionar, desplazar, rebotar
+                y rebotarEn).
               description_teacher: Los estudiantes programan sus sprites para interactuar
                 de nuevas maneras. Después de una breve revisión de cómo usaron el
                 bloque `estáTocando`, los estudiantes intercambian ideas sobre otras
@@ -17530,3 +17544,36 @@ es-MX:
               name: etapa 1
             new stage:
               name: nueva etapa
+        csp3-pilot:
+          stages:
+            Introduction to Apps:
+              name: Introducción a las aplicaciones
+            Project - Designing an App Part 1:
+              name: Proyecto - Diseñar una aplicación Parte 1
+            Project - Designing an App Part 2:
+              name: Proyecto - Diseñar una aplicación Parte 2
+            Programs Investigate:
+              name: Investigar programas
+            Programs Practice:
+              name: Práctica de programas
+            Project - Designing an App Part 3:
+              name: Proyecto - Diseñar una aplicación Parte 3
+            Project - Designing an App Part 4:
+              name: Proyecto - Diseñar una aplicación Parte 4
+            'Project: Share Your App':
+              name: 'Proyecto: comparte tu aplicación'
+            The Need for Programming Languages:
+              name: La necesidad de lenguajes de programación
+          title: 'Unidad 3: Introducción al diseño de aplicaciones'
+        csl-vn:
+          stages:
+            Sequencing with Scrat:
+              name: Secuencias con Scrat
+            Programming in Maze:
+              name: Programación en Laberinto
+            Programming with Rey and BB-8:
+              name: Programación con Rey y BB-8
+            Loops in Ice Age:
+              name: Bucles de la Era de Hielo
+            Ocean Scene with Loops:
+              name: Escena del océano con bucles
