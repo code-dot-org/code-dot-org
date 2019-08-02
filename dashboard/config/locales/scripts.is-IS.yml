@@ -5113,6 +5113,10 @@ is:
               name: nýr áfangi
             Number Systems:
               name: Talnakerfi
+            Sending Binary Messages:
+              name: Sending stafrænna skilaboða
+            Sending Binary Messages with the Internet Simulator:
+              name: Sending tvenndarboða með Internet-herminum
         csd-videos:
           stages:
             new stage:
@@ -5340,3 +5344,7 @@ is:
           stages:
             new stage:
               name: nýr áfangi
+        csl-vn:
+          stages:
+            Loops in Ice Age:
+              name: Lykkjur í Ísöld

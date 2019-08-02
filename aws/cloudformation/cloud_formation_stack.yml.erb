@@ -26,6 +26,7 @@ ami = commit[0..4]
 frontends = @frontends = rack_env?(:production) || ENV['FRONTENDS']
 database = @database = [:staging, :test, :levelbuilder].include?(rack_env) || ENV['DATABASE']
 load_balancer = @load_balancer = !rack_env?(:adhoc) || ENV['FRONTENDS']
+alarms = @alarms = !rack_env?(:adhoc) || ENV['ALARMS']
 
 unless dry_run
   update_certs.call unless load_balancer
@@ -669,6 +670,7 @@ Resources:
           - !ImportValue VPC-ELBSecurityGroup # Accept HTTP traffic on daemon
 <%  end -%>
 <%end-%>
+<% if alarms %>
   DaemonStorageUtilizationAlarm:
     Type: "AWS::CloudWatch::Alarm"
     Properties:
@@ -709,6 +711,7 @@ Resources:
       Statistic: Maximum
       Threshold: 87
       TreatMissingData: missing
+<% end -%>
 <% if database -%>
   AuroraCluster:
     Type: AWS::RDS::DBCluster

@@ -4661,6 +4661,12 @@ pl:
               name: nowy etap
             Number Systems:
               name: Systemy liczbowe
+            Sending Binary Messages:
+              name: Wysyłanie wiadomości binarnych
+            Sending Binary Messages with the Internet Simulator:
+              name: Wysyłanie wiadomości binarnych z wykorzystaniem symulatora internetu
+            Intellectual Property:
+              name: Własność intelektualna
         csd-videos:
           stages:
             new stage:
@@ -4778,3 +4784,9 @@ pl:
           stages:
             new stage:
               name: nowy etap
+        csl-vn:
+          stages:
+            Programming in Maze:
+              name: Programowanie w labiryncie
+            Loops in Ice Age:
+              name: Pętle w Epoce Lodowcowej
