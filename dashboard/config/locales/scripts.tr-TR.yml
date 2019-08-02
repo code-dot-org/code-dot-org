@@ -11935,6 +11935,12 @@ tr:
               name: yeni kademe
             Number Systems:
               name: Sayı Sistemleri
+            Sending Binary Messages:
+              name: İkili Mesajları Gönderiyor
+            Sending Binary Messages with the Internet Simulator:
+              name: Internet simülatörü ile ikili ileti gönderme
+            Intellectual Property:
+              name: Fikri Mülkiyet
         csd-videos:
           stages:
             new stage:
@@ -12712,3 +12718,11 @@ tr:
           stages:
             new stage:
               name: yeni kademe
+        csl-vn:
+          stages:
+            Programming in Maze:
+              name: Labirentte Programlama
+            Programming with Rey and BB-8:
+              name: Rey ve BB-8 ile programlama
+            Ocean Scene with Loops:
+              name: Sanatçıların Döngüleri

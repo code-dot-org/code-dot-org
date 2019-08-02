@@ -322,6 +322,61 @@ vi-VN:
       course4_artist_fwp_challenge1: Thử chạy chương trình này, và tạo vài thay đổi
         để xem điều gì sẽ xảy ra. Bạn có thể tìm ra cách mà nó hoạt động? (Hoặc xóa
         nó và thay thế nó bằng một cái gì đó hoàn toàn khác)
+      courseA_maze_seq1: _"Chơi với những khối lệnh và giúp tôi di chuyển đến chỗ
+        chú lợn xấu xa"_
+      courseA_maze_seq10_2018: "**Thử thách:** Tránh những thùng TNT và đưa chú chim
+        đến chỗ chú lợn!"
+      courseA_maze_seq10_2019: "**Thử thách:** Tránh những thùng TNT và đưa chú chim
+        đến chỗ chú lợn!"
+      courseA_maze_seq11_2018: Giờ là một câu đố ngắn! Đi về một hướng, rồi một hướng
+        khác để đưa chú chim đến chỗ chú lợn.
+      courseA_maze_seq11_2019: Giờ là một câu đố ngắn! Đi về một hướng, rồi một hướng
+        khác để đưa chú chim đến chỗ chú lợn.
+      courseA_maze_seq12_2018: Đến chỗ chú lợn đó!
+      courseA_maze_seq12_2019: Đến chỗ chú lợn đó!
+      courseA_maze_seq1_2018: _"Chơi với những khối lệnh và giúp tôi di chuyển đến
+        chỗ chú lợn xấu xa"_
+      courseA_maze_seq1_2019: _"Chơi với những khối lệnh và giúp tôi di chuyển đến
+        chỗ chú lợn xấu xa"_
+      courseA_maze_seq5_2018: Hãy thử giải câu đố này.
+      courseA_maze_seq5_2019: Hãy thử giải câu đố này.
+      courseA_maze_seq5a_2018: |-
+        _"Lợn đây rồi!"_
+
+        Bạn cần thêm khối lệnh nào vào chương trình này để chú chim đến được chỗ chú lợn?
+      courseA_maze_seq5a_2019: |-
+        _"Lợn đây rồi!"_
+
+        Bạn cần thêm khối lệnh nào vào chương trình này để chú chim đến được chỗ chú lợn?
+      courseA_maze_seq6: |-
+        Đi về một hướng, sau đó đổi sang hướng khác để chú chim đến được chỗ chú lợn!
+
+        ![expandable](https://images.code.org/8f71c406afa60c6898937d950c670205-image-1497996506419.gif)
+      courseA_maze_seq8: |-
+        Giải quyết câu đố này và đưa chú chim đến chỗ chú lợn!
+
+        ![expandable](https://images.code.org/fb4735244f74a4e001d1fa7b5c6028f9-image-1497998330218.gif)
+      courseA_playLab_events3_2019: |-
+        Giúp chú chó Jorge di chuyển bằng cách nối khối <xml><block type="studio_move" block-text="move dog west">
+            <title name="SPRITE">1</title>
+            <title name="DIR">8</title>
+          </block></xml> vào sau khối sự kiện <xml><block type="studio_whenArrow" block-text="when left arrow">
+            <title name="VALUE">left</title>
+          </block></xml>.
+
+        Đưa chú chó Jorge đến cây cờ để hoàn thành câu đố này!
+      courseA_playLab_events7_2018: _Chơi tự do:_ Thêm bất cứ thứ gì bạn thích vào
+        trò chơi. Bạn có thể làm chú khủng long biến mất khi chú chó Jorge va vào
+        nó không?
+      courseA_playLab_events7_2019: _Chơi tự do:_ Thêm bất cứ thứ gì bạn thích vào
+        trò chơi. Bạn có thể làm chú khủng long biến mất khi chú chó Jorge va vào
+        nó không?
+      courseB_Scrat_ramp1_2019: Để giúp Scrat đến hạt thông, gắn khối <xml><block
+        type="maze_moveEast" block-text="move East"/></xml> vào dưới khối <xml><block
+        type="when_run" block-text="when run"/></xml> rồi ấn "▶ Chạy"!
+      courseB_Scrat_ramp2_2019: Gắn cả hai khối <xml><block type="maze_moveEast" block-text="move
+        east"/></xml> vào dưới khối <xml><block type="when_run" block-text="when run"/></xml>
+        để hoàn thành chương trình, rồi ấn "▶ Chạy".
       courseE_bee_functions3: "Hàm là khối lệnh thực hiện một nhiệm vụ.  \\\r \\\r
         sử dụng hàm 'lấy 5' để lấy  5 phấn hoa một lần."
       frozen circle: Đường tròn là một hình đặc biệt. Bạn có thể tìm ra con số thay
