@@ -837,8 +837,7 @@ describe('entry tests', () => {
               },
               test(module) {
                 return [
-                  'canvg',
-                  'core-js',
+                  'babel-polyfill',
                   'immutable',
                   'lodash',
                   'moment',
