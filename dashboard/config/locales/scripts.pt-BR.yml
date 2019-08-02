@@ -6289,6 +6289,12 @@ pt-BR:
               name: nova fase
             Number Systems:
               name: Sistemas numéricos
+            Sending Binary Messages:
+              name: Enviando mensagens binárias
+            Sending Binary Messages with the Internet Simulator:
+              name: Enviando Mensagens Binárias com o Simulador de Internet
+            Intellectual Property:
+              name: Propriedade intelectual
         csd-videos:
           stages:
             new stage:
@@ -6675,3 +6681,15 @@ pt-BR:
           stages:
             new stage:
               name: nova fase
+        csl-vn:
+          stages:
+            Sequencing with Scrat:
+              name: Sequenciando com Scrat
+            Programming in Maze:
+              name: Programação no labirinto
+            Programming with Rey and BB-8:
+              name: Programação com Rey e BB-8
+            Loops in Ice Age:
+              name: Laços na Era do gelo
+            Ocean Scene with Loops:
+              name: Cena do Oceano com Repetições
