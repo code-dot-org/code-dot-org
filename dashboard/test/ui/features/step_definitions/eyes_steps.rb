@@ -11,8 +11,7 @@ require 'logger'
 # See http://support.applitools.com/customer/en/portal/articles/2099488-match-timeout
 MATCH_TIMEOUT = 5
 
-# A Feature can optionally specify the stitch mode ('css' or 'scroll') for Eyes to create the full screenshot.
-When(/^I open my eyes to test "([^"]*)"(?: using stitch mode "([^"]*)")?$/) do |test_name, stitch_mode|
+When(/^I open my eyes to test "([^"]*)"$/) do |test_name|
   next if CDO.disable_all_eyes_running
   ensure_eyes_available
 
@@ -39,7 +38,9 @@ When(/^I open my eyes to test "([^"]*)"(?: using stitch mode "([^"]*)")?$/) do |
   end
   @browser.capabilities[:takes_screenshot] = true
   @eyes.force_full_page_screenshot = true
-  @eyes.stitch_mode = (stitch_mode&.to_sym || :css)
+  # Default stitch mode can be customized for each checkpoint in the I See No Difference step.
+  @eyes.stitch_mode = :css
+
   @eyes.open(config)
 end
 
@@ -55,10 +56,14 @@ And(/^I close my eyes$/) do
   end
 end
 
-And(/^I see no difference for "([^"]*)"$/) do |identifier|
+# A Feature can optionally specify the stitch mode ('css' or 'scroll') for Eyes to create the full screenshot.
+And(/^I see no difference for "([^"]*)"(?: using stitch mode "([^"]*)")?$/) do |identifier, stitch_mode|
   next if CDO.disable_all_eyes_running
 
+  @eyes.stitch_mode = (stitch_mode&.to_sym || :css)
   @eyes.check_window(identifier, MATCH_TIMEOUT)
+  # Return to default stitch mode for remaining checkpoints in this Scenario.
+  @eyes.stitch_mode = :css
 end
 
 def ensure_eyes_available
