@@ -369,6 +369,16 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ::ActionController::TestC
     assert_equal 2, destination_workshop.enrollments.length
   end
 
+  test 'non-workshop-admins cannot move enrollments' do
+    sign_in @program_manager
+
+    post :move, params: {
+      destination_workshop_id: @unrelated_workshop.id,
+      enrollment_ids: [@enrollment.id]
+    }
+    assert_response 403
+  end
+
   private
 
   def enrollment_test_params(teacher = nil)
