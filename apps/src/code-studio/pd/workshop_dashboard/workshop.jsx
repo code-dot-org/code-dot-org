@@ -33,6 +33,11 @@ const styles = {
   },
   adminActionButton: {
     float: 'right'
+  },
+  error: {
+    color: 'red',
+    display: 'inline',
+    paddingLeft: '10px'
   }
 };
 
@@ -180,11 +185,19 @@ export class Workshop extends React.Component {
       method: 'POST',
       url: `/api/v1/pd/enrollments/move?${urlParams}`,
       traditional: true
-    }).done(() => {
-      // reload
-      this.loadEnrollments();
-      this.moveEnrollmentRequest = null;
-    });
+    })
+      .done(() => {
+        // reload
+        this.loadEnrollments();
+        this.moveEnrollmentRequest = null;
+      })
+      .fail(() => {
+        this.setState({
+          error: 'Error: unable to move enrollments'
+        });
+        this.loadEnrollments();
+        this.moveEnrollmentRequest = null;
+      });
   };
 
   handleClickSelect = enrollment => {
@@ -825,6 +838,7 @@ export class Workshop extends React.Component {
             />
           </Button>
         )}
+        <p style={styles.error}>{this.state.error}</p>
       </div>
     );
 

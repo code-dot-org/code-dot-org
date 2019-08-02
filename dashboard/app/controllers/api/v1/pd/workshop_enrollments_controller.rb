@@ -107,9 +107,8 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
     Pd::Enrollment.transaction do
       enrollments = Pd::Enrollment.where(id: params[:enrollment_ids])
       Pd::Attendance.where(pd_enrollment_id: enrollments).delete_all
-      enrollments.each {|e| e.update(pd_workshop_id: params[:destination_workshop_id])}
+      enrollments.each {|e| e.update!(pd_workshop_id: params[:destination_workshop_id])}
     end
-    head :no_content
   end
 
   private
