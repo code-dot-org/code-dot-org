@@ -107,7 +107,8 @@ export default class LevelFeedbackEntry extends Component {
       linkToUnit,
       created_at,
       comment,
-      performance
+      performance,
+      performance_details
     } = this.props.feedback;
 
     const seenByStudent = seen_on_feedback_page_at || student_first_visited_at;
@@ -164,6 +165,7 @@ export default class LevelFeedbackEntry extends Component {
         </div>
         <TimeAgo style={styles.time} dateString={created_at} />
         <div style={performanceStyle}>{rubricPerformance[performance]}</div>
+        <div>{performance_details}</div>
         {showRightCaret ? (
           <span style={styles.iconBox}>
             <FontAwesome
