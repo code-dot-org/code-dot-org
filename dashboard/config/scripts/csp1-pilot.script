@@ -49,6 +49,13 @@ level 'U1L9 CFU Sampling', progression: 'Check For Understanding'
 
 stage 'Color Images'
 level 'CSP U1L9 SFLP 20-21', progression: 'Lesson Overview'
+level 'CSP U1L10 RGB', progression: 'RGB Color'
+level 'CSP U1L10 Color Pixelation Widget 1', progression: 'Pixelation Widget: Color'
+level 'CSP U1L10 More Shades of Color', progression: 'More Shades of Color'
+level 'CSP U1L10 Color Pixelation Widget 2', progression: 'Pixelation Widget: Color'
+level 'CSP U1L10 Color Pixelation Widget 3', progression: 'Pixelation Widget: Color'
+level 'CSP U1L10 Color Sampling', progression: 'Color Sampling'
+level 'CSP U1L10 Color Pixelation Widget 4', progression: 'Pixelation Widget: Color'
 level 'U1L10 Multiple Choice analog vs digital', progression: 'Check For Understanding'
 level 'U1L10 CFU Sampling', progression: 'Check For Understanding'
 
