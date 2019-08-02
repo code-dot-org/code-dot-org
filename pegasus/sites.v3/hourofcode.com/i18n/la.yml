@@ -15,13 +15,13 @@ la:
   codeorg_homepage_hoc2018_dance_heading: 'Create your own <span class="highlight-word">Dance&nbsp;Party</span>'
   codeorg_homepage_hoc2018_header_line1: 'The Hour of Code is coming...'
   codeorg_homepage_hoc2018_header_line2_desktop: 'What will you <span class="hoc2018-highlight-word">create?</span>'
-  codeorg_homepage_hoc2018_header_line2_mobile: 'What will you create?'
+  codeorg_homepage_hoc2018_header_line2_mobile: '¿Qué crearás?'
   codeorg_homepage_hoc2018_header_line3: 'Give flight to imagination and birth to innovation. Start with an Hour of Code and your own brand of creativity, whatever it may be.'
   codeorg_homepage_hoc2018_musician_before: 'Featuring'
   codeorg_homepage_hoc2018_musician_after: 'and more!'
   codeorg_homepage_hoc2018_video: 'Watch our video'
-  hourofcode_homepage_hoc2018_header_line1: 'Anyone, anywhere can organize an Hour of Code event. One-hour tutorials in over 45 languages. No experience needed.'
-  hourofcode_homepage_hoc2018_header_line2: 'Ages 4 to 104.'
+  hourofcode_homepage_hoc2018_header_line1: 'Cualquiera, en cualquier lugar, puede organizar una “Hora del Código”. Hay tutoriales de una hora en más de 45 idiomas. No se necesita experiencia alguna.'
+  hourofcode_homepage_hoc2018_header_line2: 'Edades de 4 a 104.'
   hoc2018_tutorial_mchoc_description: 'Usa bloques de código para llevar a Alex o Steve en una aventura por este mundo de Minecraft.'
   hoc2018_minecraft_aquatic_title1: "Minecraft Voyage Aquatic"
   hoc2018_minecraft_with_microsoft: "In partnership with"
@@ -31,7 +31,7 @@ la:
   cookie_banner_accept: 'Acepto'
   front_header_banner: 'Únete al mayor evento educativo la historia, %{campaign_date}'
   front_intro_default: 'La Hora de Código es un movimiento global alcanzando decenas de millones de estudiantes en más de 180 países. Cualquiera, en cualquier lugar puede organizar un evento de la Hora de Código. los tutoriales de una-hora están disponibles en más de 45 idiomas. No se requiere tener experiencia. <strong>Edades de 4 a 104.</strong>'
-  front_intro_default_2: 'A global movement in 180+ countries.'
+  front_intro_default_2: 'Un movimiento global en más de 180 países.'
   front_watch_video: 'Ve el nueva video'
   front_watch_regular_video: 'Vee el video'
   front_volunteers: 'Nosotros necesitamos voluntarios técnicos'
@@ -243,7 +243,7 @@ la:
   front_join_us_support: "Apóyala"
   front_join_us_more_info: "Para más información, por favor visite <a href='https://code.org'>code.org</a>."
   front_join_us_code_info: "Para más información, por favor visite code.org"
-  front_join_us_n_students_served: "# estudiantes que an sido apoyados"
+  front_join_us_n_students_served: "# estudiantes que han sido apoyados."
   front_join_us_challenge: "¡Gane una video conferencias con una celebridad para su clase!"
   front_join_us_learn_more: "Aprender más"
   signup_closed: 'Registro para Hour of Code está cerrado. Por favor verifique de nuevo en Octubre para inscribirse para el siguiente Hour of Code.'
@@ -306,7 +306,7 @@ la:
   social_hoc2018_join: "Hora del Código: únete al movimiento"
   social_hoc2018_mc: "Minecraft is back for the Hour of Code, and you’re the hero! Write code to journey through Minecraft biomes."
   social_hoc2018_mc_creativity: "Use your creativity and problem solving skills to explore and build underwater worlds with code."
-  social_hoc2018_what_create: "What will you create?"
+  social_hoc2018_what_create: "¿Qué crearás?"
   social_hoc2018_global_movement: "The Hour of Code is a global movement reaching tens of millions of students. One-hour tutorials are available in 45+ languages for all ages."
   map_title: "Mapa de Hour of Code"
   map_header: 'Numero de eventos registrados para hora de codigo en 2017'
