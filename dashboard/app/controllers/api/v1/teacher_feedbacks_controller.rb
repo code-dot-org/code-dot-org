@@ -35,19 +35,21 @@ class Api::V1::TeacherFeedbacksController < Api::V1::JsonApiController
     render json: @level_feedbacks, each_serializer: Api::V1::TeacherFeedbackSerializer
   end
 
-  # Determine how many not yet seen feedback entries from any teacher
+  # Determine how many not yet seen feedback entries from any verified teacher
   # for any level are associated with the current user
   def count
     # Setting CSRF token header allows us to access the token manually in subsequent POST requests.
     headers['csrf-token'] = form_authenticity_token
 
-    @all_unseen_feedbacks_count = TeacherFeedback.where(
+    @all_unseen_feedbacks = TeacherFeedback.where(
       student_id: current_user.id,
       seen_on_feedback_page_at: nil,
       student_first_visited_at: nil
-    ).length
+    ).select do |feedback|
+      User.find(feedback.teacher_id).authorized_teacher?
+    end
 
-    render json: @all_unseen_feedbacks_count, each_serializer: Api::V1::TeacherFeedbackSerializer
+    render json: @all_unseen_feedbacks.count, each_serializer: Api::V1::TeacherFeedbackSerializer
   end
 
   # POST /teacher_feedbacks

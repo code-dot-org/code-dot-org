@@ -56,8 +56,25 @@ module Cdo
       end
     end
 
+    module MarkdownTranslate
+      # If called with the :markdown option, render the translation as
+      # markdown. Note we use Redcarpet's Safe renderer to protect against XSS
+      # injection, which also means we don't support using this option with
+      # source strings that include HTML
+      def translate(locale, key, options = ::I18n::EMPTY_HASH)
+        translation = super(locale, key, options)
+        if options.fetch(:markdown, false)
+          @renderer ||= Redcarpet::Markdown.new(Redcarpet::Render::Safe)
+          @renderer.render(translation)
+        else
+          translation
+        end
+      end
+    end
+
     class SimpleBackend < ::I18n::Backend::Simple
       include SmartTranslate
+      include MarkdownTranslate
     end
 
     # I18n backend instance used by the web application.

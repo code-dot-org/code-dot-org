@@ -16,6 +16,7 @@ var toTranspileWithinNodeModules = [
   path.resolve(__dirname, 'node_modules', 'chai-as-promised'),
   path.resolve(__dirname, 'node_modules', 'enzyme-wait'),
   path.resolve(__dirname, 'node_modules', 'json-parse-better-errors'),
+  path.resolve(__dirname, 'node_modules', '@code-dot-org', 'dance-party'),
   path.resolve(__dirname, 'node_modules', '@code-dot-org', 'snack-sdk'),
   // parse5 ships in ES6: https://github.com/inikulin/parse5/issues/263#issuecomment-410745073
   path.resolve(__dirname, 'node_modules', 'parse5')
@@ -49,7 +50,15 @@ var baseConfig = {
       '@cdo/gamelab/locale': path.resolve(
         __dirname,
         'src',
+        'p5lab',
         'gamelab',
+        'locale-do-not-import.js'
+      ),
+      '@cdo/spritelab/locale': path.resolve(
+        __dirname,
+        'src',
+        'p5lab',
+        'spritelab',
         'locale-do-not-import.js'
       ),
       '@cdo/weblab/locale': path.resolve(

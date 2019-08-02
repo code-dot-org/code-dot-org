@@ -73,6 +73,7 @@ describe('entry tests', () => {
     'eval',
     'flappy',
     'gamelab',
+    'spritelab',
     'jigsaw',
     'maze',
     'netsim',
@@ -605,6 +606,8 @@ describe('entry tests', () => {
       './src/sites/hourofcode.com/pages/public/index.js',
     'hourofcode.com/views/theme_common_head_after':
       './src/sites/hourofcode.com/pages/views/theme_common_head_after.js',
+    'hourofcode.com/views/hoc_events_map_replacement':
+      './src/sites/hourofcode.com/pages/views/hoc_events_map_replacement.js',
 
     // shared between code.org and hourofcode.com
     tutorialExplorer: './src/tutorialExplorer/tutorialExplorer.js'
@@ -675,7 +678,7 @@ describe('entry tests', () => {
     brambleHost: './src/weblab/brambleHost.js',
 
     'applab-api': './src/applab/api-entry.js',
-    'gamelab-api': './src/gamelab/api-entry.js',
+    'gamelab-api': './src/p5lab/gamelab/api-entry.js',
 
     'shared/_check_admin': './src/sites/studio/pages/shared/_check_admin.js',
 
