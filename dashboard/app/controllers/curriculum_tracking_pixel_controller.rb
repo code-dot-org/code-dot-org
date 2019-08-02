@@ -8,17 +8,18 @@ class CurriculumTrackingPixelController < ApplicationController
     if params[:from]
       curriculum_page = URI.unescape(params[:from])
     end
-    user_id = current_user&.id
 
     if curriculum_page
       FirehoseClient.instance.put_record(
-        study: STUDY_NAME,
-        study_group: 'v0',
-        event: EVENT_NAME,
-        data_json: {
-          curriculumBuilderUrl: curriculum_page,
-          userId: user_id
-        }.to_json
+        {
+          study: STUDY_NAME,
+          study_group: 'v1',
+          event: EVENT_NAME,
+          data_json: {
+            curriculumBuilderUrl: curriculum_page
+          }.to_json
+        },
+        {includeUserId: true}
       )
     end
 
