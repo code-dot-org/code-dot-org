@@ -138,7 +138,7 @@
   "censusRequiredSelect": "Thông tin bắt buộc. Xin vui lòng chọn một nội dung.",
   "censusTextBased": "Các ngôn ngữ lập trình sử dụng chữ viết như Java, JavaScript, Python, c + +, vv (không bao gồm HTML hoặc CSS)",
   "censusWebDesign": "Thiết kế web bằng HTML hoặc CSS",
-  "challengeLevelIntro": "Thử thách câu đố là những bài học được thiết kế để phát triển tư duy của bạn! Chỉ cần cố gắng hoàn thành chúng tốt nhất có thể!",
+  "challengeLevelIntro": "Thử thách câu đố là những bài học được thiết kế để phát triển tư duy của bạn! Chỉ cần cố gắng hoàn thành chúng tốt nhất có thể thôi nhé!",
   "challengeLevelPassTitle": "Bạn đã làm được!",
   "challengeLevelPassText": "Tuy nhiên, bạn có thể đã làm nó chỉ với {idealBlocks, plural, one {1 block} other {# blocks}}. Bạn có thể thực hiện tốt hơn không?",
   "challengeLevelPerfectTitle": "Hoàn thành thử thách!",
