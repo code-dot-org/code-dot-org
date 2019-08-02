@@ -99,6 +99,7 @@ export function setupApp(appOptions) {
         appOptions.level.projectTemplateLevelName ||
         appOptions.app === 'applab' ||
         appOptions.app === 'gamelab' ||
+        appOptions.app === 'spritelab' ||
         appOptions.app === 'weblab'
       ) {
         $('#clear-puzzle-header').hide();

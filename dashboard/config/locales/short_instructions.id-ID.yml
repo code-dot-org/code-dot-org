@@ -14,7 +14,7 @@ id-ID:
       2-3 Artist 4: Bantu saya menyelesaikan rumah untuk kucing ini.
       2-3 Artist 6: 'Rumah ini membutuhkan atap! Gambarlah segitiga.  Petunjuk: semua
         tiga sisi memiliki panjang yang sama.'
-      2-3 Artist 9: Selesaikan layang-layang ini
+      2-3 Artist 9 NEW: Selesaikan layang-layang ini
       2-3 Artist Free Play: Permainan bebas! Gambarlah apa pun yang Anda suka.
       2-3 Artist Loops New 15: Gambar sesuatu yang menyenangkan.
       2-3 Artist Nested Loops 10: Ulangi kode ini sebanyak 12 kali untuk menyelesaikan
@@ -273,8 +273,23 @@ id-ID:
       Course 4 SCV 4: Selesaikan teka-teki ini dengan menggunakan blok sesedikit mungkin.
       Course 4 SCV 5: Selesaikan teka-teki ini dengan menggunakan blok sesedikit mungkin.
       Course 4 SCV 6: Klik disini untuk melihat petunjuk lagi.
+      CourseE_HOC 2018 Level_1: Kumpulkan perahu dari peti.
+      CourseE_HOC 2018 Level_10: Menuju jalan masuk Ocean Monument.
+      CourseE_HOC 2018 Level_4: Gunakan sebuah pengulangan untuk sampai ke lumba-lumba.
+      CourseE_HOC 2018 Level_6: Navigasi lewat es untuk meraih salmon.
+      CourseE_HOC 2018 Level_7a: Pencarian di reruntuhan bawah laut untuk sebuah peti.
+      CourseE_HOC 2018 Level_9b: Gunakan karang sebagai titik acuan untuk mencapai
+        harta karun.
       Crack Random Substitution: instruksi
       Crack a Caesar Cipher: instruksi
+      Dance Party 3_2019: 'Buat peri baru yang nampak seperti alien pink dan buat
+        agar melakukan berbagai gerakan saat di klik.  '
+      Dance Party 4_2019: Buat peri ketiga yang terlihat seperti alien kuning, buat
+        dia berdansa saat diklik. dan atur semua alien untuk berdiri di garis hirizontal.
+      Dance Party 6_2019: Tambahkan peri yang terlihat seperti bel, kemudian tambahkan
+        acara yang membuat alien berhenti menari saat diklik.
+      Dance Party 7_2019: Buat alien biru memulai sebuah tarian baru saat alien pink
+        menyentuhnya. Gunakan acara 'saat menyentuh'.
       Dance_Party_extras_battle: Kru menari ( klik"lainnya" untuk rincian)
       Dance_Party_extras_every_beat: Seperempat not ( klik" lainnya" untuk rincian)
       Dance_Party_extras_layout: Ayo masuk formasi (klik"Lainnya" untuk rincian)
@@ -283,12 +298,21 @@ id-ID:
       Dance_Party_extras_speed: Mempercepatnya, Memperlambat Down (Klik “Lainnya”
         untuk rincian)
       Dance_Party_extras_visible: Kemana mereka pergi? (Klik "lainnya" untuk rincian)
+      Fish Tank 2-validated_2019: Ubah tumbleweed ke berbagai macam ikan!
+      Fish Tank 4-validated_2019: Gunakan blok 'atur warna latar'untuk membuat berbagai
+        warna latar.
       FoodFight: Ini adalah contoh sebuah permainan yang dapat Anda buat di play lab.
       Function intro Ryan: Gunakan fungsi `bangun jembatan` dua kali untuk membuat
         jalur menuju obor.
       Function intro Ryan_2019: Gunakan fungsi `bangun jembatan` dua kali untuk membuat
         jalur menuju obor.
+      HOC 2018 Level_1: Kumpulkan perahu dari peti.
+      HOC 2018 Level_10: Menuju jalan masuk Ocean Monument.
       HOC 2018 Level_12: Rancang lingkungan bawah airmu, terserah padamu!
+      HOC 2018 Level_4: Gunakan sebuah pengulangan untuk sampai ke lumba-lumba.
+      HOC 2018 Level_6: Navigasi lewat es untuk meraih salmon.
+      HOC 2018 Level_7a: Pencarian di reruntuhan bawah laut untuk sebuah peti.
+      HOC 2018 Level_9b: Gunakan karang sebagai titik acuan untuk mencapai harta karun.
       Infinity_catch: Apakah kamu bisa membuat Elsa ("aktor 2") menyusul Anna dengan
         menggunakan tombol panah?
       Infinity_finale: Buat apapun yang Anda suka dan bagikanlah!
@@ -525,10 +549,21 @@ id-ID:
       Underground Mining Coal_2019: Kamu akan menemukan sumber daya paling berharga
         di bawah tanah, tapi di sana bisa jadi gelap. Tempatkan setidaknya 2 obor
         dan tambang setidaknya 2 batu bara.
+      Virtual Pet 8_2019: "**Permainan bebas**Apalagi yang anda bisa lakukan pada
+        binatang peliharaan anda? Coba sesuatu yang anda suka!"
       'Widget: Text Compression': Perhatikan pola (pengulangan kata atau frase) dalam
         teks.Masukkan pola yang anda lihat ke dalam kamus dengan benar. Ketika anda
         mengetik entri kedalam kamus,simbol untuk entri dimasukkan kedalam teks di
         tempat pola tersebut.
+      behaviors 1: Buat sebuah prediksi!
+      behaviors 2: Terbangkan roket menuju bintang!
+      behaviors 3: Bantu bajak berlari lebih cepat melampaui robot!
+      behaviors 3a: 'Debug: Buat semua bintang berputar dengan cara sama!'
+      behaviors 4: Buat sebuah prediksi!
+      behaviors 5: Pindahkan astronot secara diagonal.
+      behaviors 6: Buat bola menggelinding.
+      behaviors 7: Pergi ke horizon!
+      behaviors free play: 'Permainan bebas: Ciptakan layar ruang angaksamu!'
       bounce_1: Tempatkan satu blok ke blok "Jika anak panah kiri" dan tekan "Jalankan
         Program". Gerakkan menggunakan tombol panah kiri untuk mencapai target.
       bounce_10: Ada sebuah target di atas. Tempelkan blok "Skor poin" dan blok "Skor

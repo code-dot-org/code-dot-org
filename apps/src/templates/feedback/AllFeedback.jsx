@@ -11,10 +11,12 @@ export default class AllFeedback extends Component {
 
   render() {
     const {feedbacks} = this.props;
+    const noFeedback = feedbacks.length === 0;
 
     return (
       <div>
         <h1>{i18n.feedbackAll()}</h1>
+        {noFeedback && <div>{i18n.feedbackNoneYet()}</div>}
         {feedbacks.map((feedback, i) => {
           return <LevelFeedbackEntry key={i} feedback={feedback} />;
         })}

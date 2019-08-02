@@ -36,7 +36,7 @@ is:
   welcome_back: "Velkomin/n aftur, %{name}"
   your_professional_learning_plan: "Námsáætlun þín í faginu"
   see_your_learning_plan: "Skoða námsáætlun þína"
-  submit: Senda inn
+  submit: Staðfesta
   unsubmit: Afturkalla innsendingu
   previous_page: Fyrri síða
   next_page: Næsta síða
@@ -192,7 +192,7 @@ is:
       title: 'Gleymdir þú lykilorðinu þínu ?'
       instructions: "Skrifaðu netfangið þitt hér fyrir neðan til að fá leiðbeiningar varðandi endurstillingu aðgangsorðs."
       email: 'Netfang'
-      submit: 'Senda inn'
+      submit: 'Staðfesta'
     reset_errors:
       captcha_required: 'Vinsamlegast kláraðu skynprófið til að endurstilla leyniorðið.'
       invalid_email: 'Svo virðist sem þú hafir skráð þig með ógildu netfangi. Vinsamlegast sendu póst á support@code.org til að fá tengil fyrir endurstillingu lykilorðs.'
@@ -256,7 +256,7 @@ is:
     edit: 'Breyta'
     edit_model: 'Breyta %{model}'
     update: 'Uppfæra'
-    submit: 'Senda inn'
+    submit: 'Staðfesta'
     destroy: 'Eyða'
     back: 'Til baka'
     confirm: 'Ertu viss?'
@@ -339,8 +339,10 @@ is:
       gumball: 'The Amazing World of Gumball'
       iceage: 'Ice Age'
       infinity: 'Óendanleiki'
+      makerlab: 'Maker Toolkit'
       minecraft_adventurer: 'Minecraft Könnuður'
       minecraft_aquatic: 'Minecraft Vatnaveröld'
+      minecraft_codebuilder: 'Minecraft: Code Connection'
       minecraft_designer: 'Minecraft'
       minecraft_hero: 'Minecraft Hetja'
       playlab: 'Leikjasmiðjan'
@@ -786,7 +788,7 @@ is:
       american_indian: "Amerískur indíáni / Alaska frumbyggi"
       other: "Annað"
       opt_out: "Vil ekki gefa upp"
-    submit: "Senda inn"
+    submit: "Staðfesta"
     decline: "Loka"
   zendesk_too_young_message: 'Því miður mega yngri notendur ekki skrá sig á hjálparvefinn. Þú getur skoðað <a href="http://support.code.org">support.code.org</a> án þess að skrá þig inn eða beðið foreldri eða kennara að hafa samband við okkur fyrir þig.'
   progress:
@@ -876,8 +878,10 @@ is:
     csf_f_2: 'Innihald Námskeiðs F'
     csf_digcit: 'Stafrænn borgari'
     csf_jigsaw: 'Púsl'
+    csf_sequencing: 'Skipanaröð'
     csf_loops: 'Lykkjur'
     csf_events: 'Atvik'
+    csf_online_safety: 'Netöryggi'
     csf_binary: 'Tvíundir'
     csf_data: 'Gögn'
     csf_conditionals: 'Skilyrði'
@@ -888,6 +892,7 @@ is:
     csf_variables: 'Breytur'
     csf_for_loops: 'Frá lykkjur'
     csf_internet: 'Internet'
+    csf_warmup: 'Upphitun'
     csd1_1: 'Kafli 1: Lausn vandamála sem ferli'
     csd1_2: 'Kafli 2: Tölvur og lausn vandamála'
     csd2_1: 'Kafli 1: Innihald vefja og HTML'
@@ -921,9 +926,18 @@ is:
     csp_variables: 'Breytur'
     csp_conditionals: 'Skilyrði'
     csp_functions: 'Föll'
+    csp_project: 'Verkefni'
     csp_lists: 'Listar'
     csp_loops: 'Lykkjur'
+    csp_traversals: 'Yfirferðir'
+    csp_libraries: 'Söfn'
+    csp_parameters_return_values: 'Stikar og skilagildi'
     dlp: 'Kvaðningar um íhugun'
+    time4cs_c1: 'Everglades og vistkerfi þess'
+    time4cs_c2: 'Fæðukeðjur í Everglades'
+    time4cs_c3: 'Líf í Everglades'
+    time4cs_c4: 'Utanaðkomandi áhrif í Everglades'
+    time4cs_c5: 'Borgarar til hins betra í Everglades'
   external_links:
     disclaimer: Afsal ábyrgðar
     leaving_domain: Þú ert nú að yfirgefa þetta vefsvæði og fara á svæði sem Code.org sér ekki um.
@@ -986,6 +1000,8 @@ is:
   locked_stage: 'Innihald þessa áfanga er ekki sýnilegt eins og er vegna þess að áfanginn er læstur. Kennarinn þinn getur aflæst áfanganum þegar tími er kominn til að vinna með hann eða til að fara yfir svörin.'
   hidden_stage: "Kennarinn þinn bjóst ekki við að þú værir hér. Vinsamlegast spurðu kennarann í hvaða verkefni þú ættir að vera."
   hidden_script: "Kennarinn þinn bjóst ekki við að þú værir hér. Vinsamlegast spurðu kennarann í hvaða verkefni þú ættir að vera."
+  no_script_access_student: "Þú hefur ekki aðgang að þessari einingu. Vinsamlegast spurðu kennarann þinn í hvaða einingu þú ættir að vera."
+  no_script_access_teacher: "Þú hefur ekki aðgang að þessari einingu. Ef þú telur að þú ættir að hafa aðgang að þessari einingu, skrifaðu þá til support@code.org svo að við getum bætt úr því."
   return_unit_overview: 'Fara í yfirlit kafla'
   return_course_overview: 'Fara í yfirlit kafla'
   view_all_units: 'Sjá allar einingar'

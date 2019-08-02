@@ -1191,7 +1191,7 @@ ar-SA:
         - {}
         - {}
         - {}
-        - {}
+        - text: لا أعرف
       courseC_multi_starWars_predict1_2018:
         questions:
         - {}
@@ -1199,7 +1199,7 @@ ar-SA:
         - {}
         - {}
         - {}
-        - {}
+        - text: لا أعرف
       courseC_multi_starWars_predict1_2018_2019:
         questions:
         - {}
@@ -1207,7 +1207,7 @@ ar-SA:
         - {}
         - {}
         - {}
-        - {}
+        - text: لا أعرف
       courseC_multi_starWars_predict2:
         questions:
         - {}

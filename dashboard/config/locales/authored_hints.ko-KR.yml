@@ -27,7 +27,7 @@ ko-KR:
           향하게 하여 끝냅니다. '
       2-3 Artist 8:
         2-3_Artist_8_a: 만약 여러분이 200에서 반으로 줄이면, 각 사각형의 면은 얼마나 많은 픽셀을 필요로 할까요?
-      2-3 Artist 9:
+      2-3 Artist 9 NEW:
         2-3_Artist_9_a: '이 다이아몬드의 면은 정확히 사각형입니다. '
       2-3 Artist Debugging 10:
         2-3_Artist_Debugging_10_b: "**여기서의 시행착오는 아주 좋습니다!**\n한번에 숫자 한개씩 변경하면서 시작하세요.\n어떤
@@ -1647,10 +1647,8 @@ ko-KR:
           </xml>
       courseD_maze_ramp6:
         courseC_maze_programming6_a: 이 퍼즐을 푸는 데는 두 가지 방법이 있습니다!
-      courseD_scrat_predict1:
-        courseF_maze_ramp6_a: 이 퍼즐을 푸는 데는 두 가지 방법이 있습니다!
-      courseD_scrat_ramp6:
-        courseC_maze_programming6_a: 이 퍼즐을 푸는 데는 두 가지 방법이 있습니다!
+      courseD_scrat_ramp7:
+        courseD_scrat_programming6_a: 이 퍼즐을 푸는 데는 두 가지 방법이 있습니다!
       courseE_artist_concept_challenge1:
         courseE_artist_concept_challenge1_a: '반 육각형은 \*\* 길이가 30 \*\*이며 \*\*는 \*\*
           60도 오른쪽으로 회전합니다 \*\*.  '

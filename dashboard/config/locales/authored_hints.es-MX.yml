@@ -37,7 +37,7 @@ es-MX:
       2-3 Artist 8:
         2-3_Artist_8_a: Si cortas 200 por la mitad,¿de cuántos pixeles de ancho necesita
           ser cada cuadrado?
-      2-3 Artist 9:
+      2-3 Artist 9 NEW:
         2-3_Artist_9_a: Este diamante es realmente sólo un cuadrado de lado
       2-3 Artist Debugging 10:
         2-3_Artist_Debugging_10_b: |-
@@ -5148,10 +5148,9 @@ es-MX:
       courseB_iceage_loops3_2019:
         courseB_iceage_loops3_a: |-
           ¡Usa este nuevo bloque!
-          <xml><block type="controls_repeat_simplified_dropdown">
-
-          <title name="TIMES" config="3-10">5</title>
-          </block></xml>
+           <xml><block type="controls_repeat_simplified_dropdown">
+              <title name="TIMES" config="3-10">5</title>
+              </block></xml>
         courseB_iceage_loops3_b: |-
           Para repetir el código, arrastra un loop ´repetir´ <xml><block type="controls_repeat_simplified">
 
@@ -7510,12 +7509,6 @@ es-MX:
           -   ¿Cuándo deja de funcionar?
         courseC_maze_debugging1_b: Hay un bloque que necesitas agregar para completar
           este desafío.
-        courseD_collector_debugging1_a: "Usa el botón \"Paso\" para ver si todo está
-          bien en el primer paso. \n\n¿Qué tal el segundo? \n\n¿Dónde falla?"
-        courseD_collector_debugging1_b: "¿Ha observado algunos patrones que podrían
-          ser hechos más simple usando un ciclo de repetición?"
-        courseD_collector_debugging1_c: Recuerda usar el bloque 'recoger' para obtener
-          el tesoro una vez que hayas llegado a él.
       courseC_maze_debugging1_2018:
         courseC_maze_debugging1_a: |-
           -   ¿Funciona todo después del primer paso?
@@ -7539,12 +7532,6 @@ es-MX:
           -   ¿Cuándo deja de funcionar?
         courseC_maze_debugging2_c: "¿No puede descubrir qué pasa? Intenta ejecutar
           el código un par de veces para ver qué pasa."
-        courseD_collector_debugging2_a: "Usa el botón \"Paso\" para ver si todo está
-          bien en el primer paso. \n\n¿Qué tal el segundo? \n\n¿Dónde falla?"
-        courseD_collector_debugging2_b: "¿Ha observado algunos patrones que podrían
-          ser hechos más simple usando un ciclo de repetición?"
-        courseD_collector_debugging2_c: Intenta recoger tesoros por un lado de este
-          patrón. ¿Puedes repetir esto para recoger tesoros en los otros dos lados?
       courseC_maze_debugging2_2018:
         courseC_maze_debugging2_a: Hay un montón de código valioso en el espacio de
           trabajo. ¡No lo elimines todo y comienza de nuevo!
@@ -7574,10 +7561,6 @@ es-MX:
           ![](https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif)
         courseC_maze_debugging3_b: "¿No puede descubrir qué pasa? Intenta ejecutar
           el código un par de veces para ver qué pasa."
-        courseD_collector_debugging3_a: "¿Hay algún lugar donde Laurel haga algo que
-          no tiene sentido? ¿Qué pasa cuando cambias esos bloques?"
-        courseD_collector_debugging3_b: Intenta simplificar el código utilizando loops
-          anidados.
       courseC_maze_debugging3_2018:
         courseC_maze_debugging3_a: |-
           Para eliminar un bloque en el medio de tu código, arrastra todos los bloques a otro lugar del espacio de trabajo.
@@ -7605,14 +7588,6 @@ es-MX:
           una a la vez. ¿Te ayuda ésto a encontrar la línea donde las cosas van mal?
         courseC_maze_debugging4_b: Uno de los giros está haciendo que Scrat vaya en
           la dirección equivocada. ¿Puedes averiguar cuál?
-        courseD_collector_debugging4_a: "Intenta utilizar el proceso de depuración
-          varias veces seguidas. \n\n¿Qué causa el primer problema? \n\nUna vez que
-          se resuelve ese problema, ¿qué sale mal?"
-        courseD_collector_debugging4_b: "Si tienes dificultades para descubrir cómo
-          hacer el patrón de escalón, intenta trazarlo con el dedo y decir los comandos
-          en voz alta. \n\n¡No olvides señalar la dirección de los giros!"
-        courseD_collector_debugging4_c: En este loop solo falta un bloque. ¿Puedes
-          averiguar cuál?
       courseC_maze_debugging4_2018:
         courseC_maze_debugging4_a: Usa el botón "Paso" para ejecutar las instrucciones
           una a la vez. ¿Te ayuda ésto a encontrar la línea donde las cosas van mal?
@@ -7630,10 +7605,6 @@ es-MX:
           Usa el botón "Paso" para recorrer el código y averiguar donde hay un error.
         courseC_maze_debugging5_b: Intenta decir lo que Scrat debería hacer en voz
           alta. ¿Es lo mismo que el código en el área de trabajo? ¿Dónde falla?
-        courseD_collector_debugging5_a: Comienza mirando sólo el primer loop. ¿Qué
-          hace? ¿Qué se supone que haga? ¿Qué te dice eso?
-        courseD_collector_debugging5_b: Una vez que tengas el primer loop como lo
-          deseas, ¿Qué queda en tu código?
       courseC_maze_debugging5_2018:
         courseC_maze_debugging5_a: |-
           Hay muchos bloques útiles en el área de trabajo. ¡No los borres!
@@ -7661,12 +7632,6 @@ es-MX:
           Una vez que hayas encontrado el primer bug, asegúrate de realizar el proceso de depuración para encontrar el segundo error.
 
           ¡Repite el proceso hasta que el programa funcione!
-        courseD_collector_debugging6_a: "Intenta ejecutar el código con el botón \"Paso\".
-          \n\n¿Todo está bien en el primer paso? \n\n¿Qué tal el segundo? \n\n¿Dónde
-          fallan las cosas?"
-        courseD_collector_debugging6_b: Parece que todos los pasos correctos están
-          aquí, solo necesitas más de ellos. ¿Cómo puedes repetir la acción `recolectar`
-          varias veces?
       courseC_maze_debugging6_2018:
         courseC_maze_debugging6_a: |-
           -   ¿Qué se supone que haga Scrat?
@@ -7696,10 +7661,6 @@ es-MX:
           Despues de encontrar y arreglar el primer error, asegurate de usar el proceso de depuración para encontrar el iguiente.
 
           ¡Repite el proceso de depuración hasta que el programa funcione!
-        courseD_collector_debugging8_a: "¿Ves un patrón que puedes simplificar con
-          un loop?"
-        courseD_collector_debugging8_b: Trata de usar un loop anidado para hacer el
-          código más corto.
       courseC_maze_debugging7_2018:
         courseC_maze_debugging7_a: |-
           -   ¿Todo funciona desde el primer paso?
@@ -7722,18 +7683,6 @@ es-MX:
           Despues de encontrar y arreglar el primer error, asegurate de usar el proceso de depuración para encontrar el iguiente.
 
           ¡Repite el proceso de depuración hasta que el programa funcione!
-      courseC_maze_debugging8_predict1:
-        courseD_collector_debugging9_a: Hay varias formas de resolver este problema...
-          ¡pero todas involucran giros!
-        courseD_collector_debugging9_b: Averigua cómo resolverías el acertijo, luego
-          muévete paso a paso para intentar que el código coincida con lo que tienes
-          en la cabeza.
-      courseC_maze_debugging9:
-        courseD_collector_debugging9_a: Hay varias formas de resolver este problema...
-          ¡pero todas involucran giros!
-        courseD_collector_debugging9_b: Averigua cómo resolverías el acertijo, luego
-          muévete paso a paso para intentar que el código coincida con lo que tienes
-          en la cabeza.
       courseC_maze_debugging_challenge1:
         courseC_maze_debugging_challenge1_a: "¿Izquierda o derecha? ¡Es tu decisión!"
         courseC_maze_debugging_challenge1_b: "¡El camino de Scrat tiene la forma de
@@ -8115,16 +8064,6 @@ es-MX:
           No necesitas girar a la izquierda para resolver este desafío. Todos tus giros pueden ser a la derecha.
 
           ![](https://images.code.org/3dd00d424aa4112934053548b48bbb69-image-1510198997590.40.57.png)
-      courseC_video_angles2:
-        courseF_artist_ramp10_a: No olvide girar 60 grados después de cada triángulo.
-          ¿Qué ciclo necesitas para poner esa instrucción adentro?
-        courseF_artist_ramp10_b: Si el código de un triángulo está en un <xml><block
-          type="controls_repeat"><title name="TIMES">6</title></block></xml> ciclo,
-          esta tarea será mucho más sencilla.
-        courseF_artist_ramp10_c: |-
-          Dibujarás seis triángulos en total para este diseño:
-
-          ![](https://images.code.org/bc62bed22e90d35e420b0a116ac487ef-image-1500347536221.2_solution2.gif)
       courseD_artist_1_2018:
         courseD_artist_project1_a: "¡Puedes utilizar el menú desplegable en los bloques
           'girar' para ver qué ángulo necesitas!"
@@ -10754,43 +10693,19 @@ es-MX:
           superior del loop 'repetir siempre' que comprueba la posición del pirata
           (pero no dentro de la afirmación 'si') para evitar que los puntos se eliminen
           muy rápidamente.
-      courseD_scrat_predict1:
-        courseF_maze_ramp6_a: "¡Hay dos formas de resolver este desafío!"
-        courseF_maze_ramp6_b: El pájaro comienza mirando a la pared, ¡así que recuerda
-          girar antes de moverte!
-        courseF_maze_ramp6_c: "¡No tengas miedo de cometer un error! Intenta agregar
-          bloques y ejecutar el código para ver qué sucederá, incluso si crees que
-          aún no has resuelto el desafío."
       courseD_scrat_ramp1:
-        courseF_maze_ramp1_a: Si el pájaro no alcanza a llegar al cerdo, asegúrate
-          que los bloques estén totalmente ensamblados y haz clic en "Ejecutar" de
-          nuevo.
-        courseF_maze_ramp1_b: "¡No necesitas más bloques de la caja de herramientas
-          aquí!"
-        courseC_maze_programming1_0: Si el pájaro no llega hasta el cerdo, asegúrate
-          de que los tres bloques están juntos y, luego, vuelve a hacer clic en "Ejecutar".
-        courseC_maze_programming1_b: "¡No necesitas ningún bloque adicional de la
-          caja de herramientas para este rompecabezas!"
+        courseC_maze_programming1_a: Si Scrat no llega hasta la bellota, asegúrate
+          de que los tres bloques estén juntos y, luego, vuelve a hacer clic en "Ejecutar".
+        courseC_maze_programming1_b: "¡No tengas miedo de cometer un error! Intenta
+          agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees
+          que aún no has resuelto el desafío."
       courseD_scrat_ramp2:
-        courseF_maze_ramp2_a: Para utilizar un nuevo bloque, arrástralo desde el cuadro
-          de herramientas hacia afuera en el espacio de trabajo y conéctalo al programa
-          que se une al bloque de<xml><block type="when_run"/>.</xml>.
-        courseF_maze_ramp2_b: Asegúrate de que el bloque <xml><block type="maze_moveForward"/></xml>
-          está dentro del ciclo, para que se repita.
         courseC_maze_programming2_a: Para usar un bloque `avanzar`, arrástralo desde
           la barra de herramientas hacia el espacio de trabajo y conéctalo al bloque
           `cuando se ejecuta`.
         courseC_maze_programming2_b: Asegúrate que los tres bloques 'avanzar' estén
           unidos al bloque 'cuando corre'.
       courseD_scrat_ramp3:
-        courseF_maze_ramp3_a: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nPara
-          eliminar un bloque en el medio de tu código, arrastra todos los bloques
-          debajo de él hacia la derecha y déjalos en el espacio de trabajo por un
-          tiempo. \n\nHaz clic en el bloque que deseas eliminar y arrástralo nuevamente
-          a la caja de herramientas. \n\nFinalmente, vuelve a poner los otros bloques
-          en su lugar."
-        courseF_maze_ramp3_b: Use el botón de paso para recorrer el programa línea
-          por línea. ¿Dónde hay un error?
         courseC_maze_programming3_a: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nPara
           eliminar un bloque en el medio de tu código, arrastra todos los bloques
           debajo de él hacia la derecha y déjalos en el espacio de trabajo por un
@@ -10800,30 +10715,16 @@ es-MX:
         courseC_maze_programming3_b: Recuerda que gira a la derecha e izquierda desde
           la perspectiva del pájaro.
       courseD_scrat_ramp4:
-        courseF_maze_ramp4_a: Puedes girar a la derecha o a la izquierda desde el
-          punto de vista del pájaro. Si miras hacia la derecha, girar a la derecha
-          te hará apuntar hacia abajo.
-        courseF_maze_ramp4_b: Para seguir el camino, avanza y gira en un sentido,
-          luego muévete de nuevo y gira en el sentido opuesto. Avanza una vez más
-          para alcanzar al cerdo.
-        courseF_maze_ramp4_c: "¡No tengas miedo de cometer un error! Intenta agregar
-          bloques y ejecutar el código para ver qué sucederá, incluso si aún no has
-          resuelto el desafío."
         courseC_maze_programming4_a: Puedes girar a la derecha o a la izquierda desde
-          el punto de vista del pájaro. Si miras hacia la derecha, girar a la derecha
-          te hará apuntar hacia abajo.
-        courseC_maze_programming4_b: Para seguir el camino, avanza y gira en un sentido;
-          luego, vuelve a moverte y gira en el sentido opuesto. Avanza una vez más
-          para llegar hasta el cerdo.
+          el punto de vista de Scrat. Si estás mirando hacia la derecha, girar a la
+          derecha te hará apuntar hacia abajo.
+        courseC_maze_programming4_b: Para seguir el camino, avanza y gira en un sentido,
+          luego muévete de nuevo y gira en el sentido opuesto. Avanza una vez más
+          para alcanzar la bellota.
         courseC_maze_programming4_c: "¡No tengas miedo de cometer un error! Intenta
           agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees
           que aún no has resuelto el desafío."
       courseD_scrat_ramp5:
-        courseF_maze_ramp5_a: Intenta usar el botón "Paso" para ejecutar tu código
-          línea por línea. ¿Puedes averiguar lo que tienes que hacer a continuación?
-        courseF_maze_ramp5_b: Hay más de una vía para llegar al cerdo.
-        courseF_maze_ramp5_c: ¡Trata de usar un ciclo <xml><block type="controls_repeat"><title
-          name="TIMES">3</title></block></xml> para hacer el código más corto!
         courseC_maze_programming5_a: Intenta usar el botón "Paso" para ejecutar tu
           código línea por línea. ¿Puedes averiguar lo que tienes que hacer a continuación?
         courseC_maze_programming5_b: "¿Qué tan lejos necesitas moverte para llegar
@@ -10831,37 +10732,16 @@ es-MX:
         courseC_maze_programming5_c: Tendrá que girar a la izquierda en la esquina
           para llegar al cerdo.
       courseD_scrat_ramp6:
-        courseF_artist_ramp8_a: Para dibujar un lado, usa el bloque <xml><block type="draw_move_by_constant"><title
-          name="DIR">moverHaciaAdelante</title><title name="VALUE">100</title></block></xml>
-          y cambia el 100 a 200.
-        courseF_artist_ramp8_b: |-
-          Para dibujar los 4 lados, pon el bloque <xml><block type="draw_move_by_constant"><title name="DIR">moverHaciaAdelante</title><title name="VALUE">200</title></block></xml> dentro de un ciclo de repetición y asegúrate de que el bucle se dibuja 4.
-
-          ¡No olvides girar después!
-        courseF_artist_ramp8_c: Tu giro también irá dentro del bucle <xml><block type="controls_repeat"><title
-          name="TIMES">3</title></block></xml>.
-        courseC_maze_programming6_a: "¡Hay dos formas de resolver este desafío!"
-        courseC_maze_programming6_b: Recuerde girar primero antes de moverse, ya que
-          el pájaro comienza a mirar hacia la pared.
-        courseC_maze_programming6_c: "¡No tengas miedo de cometer un error! Intenta
+        courseC_maze_programming6a_a: "¡Usa un bucle `repetir` para poner a Scrat
+          en movimiento!"
+      courseD_scrat_ramp7:
+        courseD_scrat_programming6_a: "¡Hay dos formas de resolver este desafío!"
+        courseD_scrat_programming6_b: Recuerda girar primero antes de moverte, ya
+          que Scrat está mirando en la dirección incorrecta.
+        courseD_scrat_programming6_c: "¡No tengas miedo de cometer un error! Intenta
           agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees
           que aún no has resuelto el desafío."
-      courseD_scrat_ramp7:
-        courseD_maze_ramp7_b: No te olvides de utilizar el botón "Paso" para ir bloque
-          por bloque buscando errores.
-        courseD_maze_ramp7_a: Usa bloques repetir para ejecutar un solo bloque o un
-          fragmento de código una y otra vez.
-        courseD_maze_ramp7_c: "¡No tengas miedo de cometer un error! Intenta agregar
-          bloques y ejecutar el código para ver qué sucederá, incluso si crees que
-          aún no has resuelto el desafío."
       courseD_scrat_ramp8:
-        courseF_artist_ramp9_a: "¿Cómo es esto similar a un cuadrado? ¿Como es diferente?"
-        courseF_artist_ramp9_b: "¡Puedes utilizar el menú desplegable en los bloques
-          de 'girar' para ver qué ángulo necesitas!"
-        courseF_artist_ramp9_c: Tienes que moverte 100 píxeles hacia adelante, luego
-          girar a la derecha 120 grados para cada lado. ¿Puedes utilizar un loop <xml><block
-          type="controls_repeat"><title name="TIMES">3</title></block></xml> para
-          hacer el código más corto?
         courseD_maze_ramp7_b: No te olvides de utilizar el botón "Paso" para ir bloque
           por bloque buscando errores.
         courseD_maze_ramp7_a: Usa bloques repetir para ejecutar un solo bloque o un
@@ -10869,21 +10749,6 @@ es-MX:
         courseD_maze_ramp7_c: "¡No tengas miedo de cometer un error! Intenta agregar
           bloques y ejecutar el código para ver qué sucederá, incluso si crees que
           aún no has resuelto el desafío."
-        courseE_artist_ramp8_a: Para dibujar un lado, utiliza el bloque `avanzar 100
-          pixeles`, y cambiar el 100 a un 200.
-        courseE_artist_ramp8_b: "Para dibujar 4 lados, ubica el bloque `avanzar por
-          100 píxeles` dentro de un loop repetir y asegúrate que el loop esté ajustado
-          para dibujar 4 veces. \n\n¡No te olvides de girar después!"
-        courseE_artist_ramp8_c: 'Tu loop debe tener dos bloques dentro: `avanzar ''y`
-          girar 90 grados hacia la derecha\`.'
-      courseD_video_repeatUntil:
-        courseE_farmer_ramp12b: Usted tendrá que comprobar sus declaraciones \` si
-          ' 21 veces para resolver este rompecabezas.
-        courseE_farmer_ramp12c: "¡No tengas miedo de cometer un error! Intenta agregar
-          bloques y ejecutar el código para ver qué sucederá, incluso si aún no has
-          resuelto el desafío."
-        courseE_farmer_ramp12d: Solo habrá lechuga, por lo que no tendrá que preocuparse
-          por los espacios vacíos, el maíz o las calabazas.
       courseE_artist_concept1:
         courseE_artist_concept1_a: Los hexágonos tienen lados de 50 pixeles y giros
           de 60 grados hacia la derecha.
@@ -11280,21 +11145,20 @@ es-MX:
         courseE_artist_ramp8_c: 'Tu loop debe tener dos bloques dentro: `avanzar ''y`
           girar 90 grados hacia la derecha\`.'
       courseE_artist_ramp8_2:
+        courseE_artist_ramp8_a: Para dibujar un lado, utiliza el bloque `avanzar 100
+          pixeles`, y cambiar el 100 a un 200.
+        courseE_artist_ramp8_b: "Para dibujar 4 lados, ubica el bloque `avanzar por
+          100 píxeles` dentro de un loop repetir y asegúrate que el loop esté ajustado
+          para dibujar 4 veces. \n\n¡No te olvides de girar después!"
+        courseE_artist_ramp8_c: 'Tu loop debe tener dos bloques dentro: `avanzar ''y`
+          girar 90 grados hacia la derecha\`.'
+      courseE_artist_ramp9:
         courseD_artist_ramp12_a: "¿Cómo es esto similar a un cuadrado? ¿Como es diferente?"
         courseD_artist_ramp12_b: "¡Puedes utilizar el menú desplegable en los bloques
           'girar' para ver qué ángulo necesitas!"
         courseD_artist_ramp12_c: Para dibujar cada lado, deberás avanzar 100 píxeles,
           luego girar a la derecha 120 grados. ¿Cuántos lados necesitas?
-      courseE_artist_ramp9:
-        courseF_farmer_ramp11_a: Si tienes problemas para ver donde van los ciclos,
-          intenta programarlo y buscar patrones.
-        courseF_farmer_ramp11_b: ¿Cómo puedes usar un <xml><block type="controls_repeat"><title
-          name="TIMES">???</title></block></xml> ciclo para recoger lechuga, en vez
-          de arrastrar 5 <xml><block type="harvester_lettuce"/></xml> bloques?
-        courseF_farmer_ramp11_c: No es necesario utilizar 5 loops para obtener toda
-          la lechuga. En lugar de eso, arrastra tu loop repetir recoger lechuga dentro
-          de otro loop (junto con el bloque <xml><block type="maze_moveForward"/></xml>
-          ¡y lo tendrás!)
+      courseE_artist_ramp9_2:
         courseD_artist_ramp12_a: "¿Cómo es esto similar a un cuadrado? ¿Como es diferente?"
         courseD_artist_ramp12_b: "¡Puedes utilizar el menú desplegable en los bloques
           'girar' para ver qué ángulo necesitas!"
@@ -11676,31 +11540,26 @@ es-MX:
           ''mientras hay tierra''.  '
         courseE_farmer_ramp12_b: Solo necesitas avanzar una vez para llegar a la tierra.
       courseE_farmer_ramp11b:
-        courseE_farmer_ramp12_b: Todavía necesitarás usar un loop 'repetir' en el
-          exterior para decirle la granjera cuántas veces debe caminar y obtener lechuga.
+        courseE_farmer_ramp11b_a: Puedes anidar tu loop `while` en el interior de
+          un loop \`repetir' para hacer tu código más corto.
       courseE_farmer_ramp11b_2018:
         courseE_farmer_ramp11b_a: Puedes anidar tu loop `while` en el interior de
           un loop \`repetir' para hacer tu código más corto.
       courseE_farmer_ramp11b_2019:
         courseE_farmer_ramp11b_a: Puedes anidar tu loop `while` en el interior de
           un loop \`repetir' para hacer tu código más corto.
+      courseE_farmer_ramp12_forswap:
+        courseE_farmer_ramp12_b: Todavía necesitarás usar un loop 'repetir' en el
+          exterior para decirle la granjera cuántas veces debe caminar y obtener lechuga.
       courseE_farmer_ramp12_forswap_2018:
         courseE_farmer_ramp12_b: Todavía necesitarás usar un loop 'repetir' en el
           exterior para decirle la granjera cuántas veces debe caminar y obtener lechuga.
       courseE_farmer_ramp12_forswap_2019:
         courseE_farmer_ramp12_b: Todavía necesitarás usar un loop 'repetir' en el
           exterior para decirle la granjera cuántas veces debe caminar y obtener lechuga.
-      courseE_farmer_ramp12b:
-        courseE_farmer_ramp12a: No dudes en volver al último acertijo si necesitas
-          un recordatorio de cómo recoger cultivos solo **mientras** hay cultivos
-          para recoger.
       courseE_farmer_ramp12c:
-        courseE_farmer_ramp13_a: Puede haber más de uno de los cultivos en un espacio,
-          así que asegúrese de usar los ciclos`while` para elegirlos a todos!
-        courseE_farmer_ramp13_b: Utilizar un ciclo de repetición de modo que usted
-          no tiene que escribir una por separado si la declaración de cada cuadrado.
-        courseE_farmer_ramp13_c: Si no puedes descubrir dónde colocar los bucles,
-          intentar escribir el código paso a paso y buscar los patrones.
+        courseE_farmer_ramp12b_b: Todavía necesitarás usar primero un loop 'hasta',
+          luego use un loop 'mientras' una vez que llegues a la lechuga.
       courseE_farmer_ramp12c_2018:
         courseE_farmer_ramp12b_b: Todavía necesitarás usar primero un loop 'hasta',
           luego use un loop 'mientras' una vez que llegues a la lechuga.
@@ -11708,19 +11567,17 @@ es-MX:
         courseE_farmer_ramp12b_b: Todavía necesitarás usar primero un loop 'hasta',
           luego use un loop 'mientras' una vez que llegues a la lechuga.
       courseE_farmer_ramp12d:
-        courseE_bee_ramp14_a: La abeja funciona igual que el agricultor en el rompecabezas
-          anterior. Zumba a lo largo del camino y recoge el néctar mientras hay néctar
-          (mientras néctar> 0) y haz toda la miel.
-        courseE_bee_ramp14_b: Puede haber más de una flor o nido de abeja en cada
-          espacio, ¡así que asegúrese de usar los ciclos `while` para obtenerlos todos!
-        courseE_bee_ramp14_c: El acertijo es casi identico al anterior, solo con miel
-          y nectar en vez de vegetales.
+        courseE_farmer_ramp12d_b: "¡De todos modos tendrás que poner sus loops 'hasta`y
+          'mientras` dentro de un loop 'repetir' para resolver este desafío!"
       courseE_farmer_ramp12d_2018:
         courseE_farmer_ramp12d_b: "¡De todos modos tendrás que poner sus loops 'hasta`y
           'mientras` dentro de un loop 'repetir' para resolver este desafío!"
       courseE_farmer_ramp12d_2019:
         courseE_farmer_ramp12d_b: "¡De todos modos tendrás que poner sus loops 'hasta`y
           'mientras` dentro de un loop 'repetir' para resolver este desafío!"
+      courseE_farmer_ramp12e:
+        courseE_farmer_ramp12e_b: La solución a este desafío se parecerá mucho a la
+          solución al último desafío, pero girando en la otra dirección.
       courseE_farmer_ramp12e_2018:
         courseE_farmer_ramp12e_b: La solución a este desafío se parecerá mucho a la
           solución al último desafío, pero girando en la otra dirección.
@@ -11728,12 +11585,8 @@ es-MX:
         courseE_farmer_ramp12e_b: La solución a este desafío se parecerá mucho a la
           solución al último desafío, pero girando en la otra dirección.
       courseE_farmer_ramp12f:
-        courseE_farmer_ramp15_a: Usar el bloque de 'repetir hasta en calabaza' para
-          llegar al final de la ruta.
-        courseE_farmer_ramp15_b: "¿Qué más se debe hacer cuando se mueve a lo largo
-          de la ruta de acceso a la calabaza?"
-        courseE_farmer_ramp15_c: Los brotes esconden varias cantidades de maíz o de
-          lechuga para cosechar en tu camino a la calabaza.
+        courseE_farmer_ramp12f_b: Usa un bloque `si/ si no` para ayudar la granjera
+          a decidir si necesita girar a la derecha o a la izquierda.
       courseE_farmer_ramp12f_2018:
         courseE_farmer_ramp12f_b: Usa un bloque `si/ si no` para ayudar la granjera
           a decidir si necesita girar a la derecha o a la izquierda.

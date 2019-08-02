@@ -32,7 +32,10 @@ export default function initPage(scriptEditorData) {
           videoKey: level.videoKey,
           concepts: level.concepts,
           conceptDifficulty: level.conceptDifficulty,
-          progression: level.progression
+          progression: level.progression,
+          named: !!level.name,
+          assessment: level.assessment,
+          challenge: level.challenge
         }))
     }));
   const locales = scriptEditorData.locales;

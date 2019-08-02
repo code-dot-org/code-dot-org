@@ -32,7 +32,7 @@ ar-SA:
           نوجه الرسام إلى الأسفل قبل البدء برسم المربع الثاني.
       2-3 Artist 8:
         2-3_Artist_8_a: إذا قمت بقص 200 إلى نصفين، كم يجب أن يكون عرض المربع بالنقاط؟
-      2-3 Artist 9:
+      2-3 Artist 9 NEW:
         2-3_Artist_9_a: هذا المعين هو في الحقيقة مجرد مربع مائل على أحد جوانبه
       2-3 Artist Debugging 10:
         2-3_Artist_Debugging_10_b: "**التجربة و الخطأ جيدة تماما هنا!** \n\nابدأ بتغيير
@@ -1390,10 +1390,8 @@ ar-SA:
           هذا التحدي."
       courseD_maze_ramp6:
         courseC_maze_programming6_a: هناك طريقتان لحل هذا اللغز!
-      courseD_scrat_predict1:
-        courseF_maze_ramp6_a: هناك طريقتان لحل هذا اللغز!
-      courseD_scrat_ramp6:
-        courseC_maze_programming6_a: هناك طريقتان لحل هذا اللغز!
+      courseD_scrat_ramp7:
+        courseD_scrat_programming6_a: هناك طريقتان لحل هذا اللغز!
       courseE_artist_concept_challenge1:
         courseE_artist_concept_challenge1_a: 'يمتلك نصف السداسي **طول 30** ويستدير
           يميناً بمقدار **60 درجة**.  '

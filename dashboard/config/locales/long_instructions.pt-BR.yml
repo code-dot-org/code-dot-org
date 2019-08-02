@@ -33,7 +33,7 @@ pt-BR:
         Dica: O retângulo tem 200 pixels de largura e 100 de altura.
 
         Há muitas maneiras diferentes de resolver este quebra-cabeça.
-      2-3 Artist 9: Termine esta pipa
+      2-3 Artist 9 NEW: Termine esta pipa
       2-3 Artist Assessment 1: "**Avaliação:** Termine de desenhar o último dente.
         Ele tem 25 pixels de largura e 25 pixels de altura."
       2-3 Artist Free Play: Atividade livre! Desenhe qualquer coisa que você quiser.
@@ -1463,6 +1463,52 @@ pt-BR:
         # Imagens
 
         Uma página da web Cachorro X Gato foi iniciada para você. A imagem do cachorro já foi adicionada à página abaixo. Use uma tag de imagem para adicionar a imagem `cat.jpeg` à página abaixo do cabeçalho do gato.
+      CSD U2 Image Tag 1_2019: |-
+        <div class="no-pullthrough" style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px">
+        <details>
+
+        <summary>
+        <strong>Como eu adiciono imagens?</strong>
+        </summary>
+
+        A tag `<img>` permite que você exiba imagens em sua página web. <br><br>
+
+        Exemplo:
+
+        <pre>&lt;img src="dog.png" alt="cão saltando"&gt;</pre><br><br>
+
+        Para informar ao browser qual imagem deve ser exibida, uma informação adicional, chamada **atributo**, é acrescentada à tag \<img> dentro dos colchetes. O atributo `src` representa **s**ou**rc**e ("origem") e contém o nome da imagem. Arquivos de imagens incluem extensões que dizem ao computador qual o tipo da imagem com que eles estão trabalhando. Extensões comuns são .jpg, .jpeg, .png. <br><br>
+
+        Além do atributo src, elementos de imagem também possuem o atributo `alt` que descreve a imagem. Isto é importante caso a imagem não carregue, ou para pessoas que têm problemas visuais. <br><br>
+
+        Uma tag `<img>`  é um exemplo de uma tag com **auto fechamento**, porque ela inicia e termina na mesma tag.
+
+        </details>
+        <details>
+        <summary>
+        <strong>Por que uma imagem não tem uma tag de fechamento?</strong>
+        </summary>
+        Uma tag de imagem não precisa de uma tag de fechamento porque não há conteúdo de texto que precisa ser envolvido entre tags. O conteúdo que é exibido na tela é especificado através dos atributos.
+        </details>
+        <details>
+        <summary>
+        <strong>O que é um atributo?</strong>
+        </summary>
+
+        Atributos são informações adicionais que são incluídas em uma tag. Atributos têm nomes e valores. O nome indica qual o tipo de informação está sendo fornecido, e então o valor fornece a informação específica para esta tag.
+
+        Por exemplo as tags \<img> têm dois atributos, src and alt. src especifica o nome do arquivo da imagem e alt diz ao browser, em texto legível, o que a imagem contém.
+
+        </details>
+        </div>
+
+        # Imagens
+
+        Uma página web Cão vs Gato foi iniciada para você. A imagem do cão já foi adicionada à página abaixo. Observe o código que fez a imagem do cão aparecer, e então use uma tag image para acrescentar a imagem `cat.jpeg` na página abaixo do título do gato.
+
+        Esta imagem foi encontrada no Pixabay e foi fornecida pelo usuário "Alexas\_Fotos", que usou uma licença "livre para uso comercial" e "atribuição de autoria não requerida".
+
+        <https://studio.code.org/s/csd2-2019/stage/7/puzzle/2> -> long\_instructions.
       CSD U2 Image Tag 2: |-
         <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
         <details>
@@ -1509,6 +1555,56 @@ pt-BR:
         -   Envie pelo menos uma imagem para esta página da web
         -   Use a tag `<img>` para exibir a (s) imagem (ns) em seu site.
         -   Certifique-se de adicionar um atributo `alt`.
+      CSD U2 Image Tag 2_2019: |-
+        <div class="no-pullthrough" style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+        <details>
+
+        <summary>
+        <strong>Como eu adiciono imagens?</strong>
+        </summary>
+
+        A tag `<img>` permite que você exiba imagens em sua página web. <br><br>
+
+        Exemplo:
+
+        <pre>&lt;img src="dog.png" alt="cão saltando"&gt;</pre><br><br>
+
+        Para informar ao browser qual imagem deve ser exibida, uma informação adicional, chamada **atributo**, é acrescentada à tag \<img> dentro dos colchetes. O atributo `src` representa **s**ou**rc**e ("origem") e contém o nome da imagem. Arquivos de imagens incluem extensões que dizem ao computador qual o tipo da imagem com que eles estão trabalhando. Extensões comuns são .jpg, .jpeg, .png. <br><br>
+
+        Além do atributo src, elementos de imagem também possuem o atributo `alt` que descreve a imagem. Isto é importante caso a imagem não carregue, ou para pessoas que têm problemas visuais. <br><br>
+
+        Uma tag `<img>`  é um exemplo de uma tag com **auto fechamento**, porque ela inicia e termina na mesma tag.
+
+        </details>
+        <details>
+        <summary>
+        <strong>Por que uma imagem não tem uma tag de fechamento?</strong>
+        </summary>
+        Uma tag de imagem não precisa de uma tag de fechamento porque não há conteúdo de texto que precisa ser envolvido entre tags. O conteúdo que é exibido na tela é especificado através dos atributos.
+        </details>
+        <details>
+        <summary>
+        <strong>O que é um atributo?</strong>
+        </summary>
+
+        Atributos são informações adicionais que são incluídas em uma tag. Atributos têm nomes e valores. O nome indica qual o tipo de informação está sendo fornecido, e então o valor fornece a informação específica para esta tag.
+
+        Por exemplo as tags \<img> têm dois atributos, src and alt. src especifica o nome do arquivo da imagem e alt diz ao browser, em texto legível, o que a imagem contém.
+
+        </details>
+        </div>
+
+        # Carregando Imagens
+
+        Você pode carregar imagens que você encontrou em outros lugares usando o botão **Adicionar Imagem**. Procure uma imagem de um tipo diferente de pet que você goste e baixe no seu computador (usando clique direito "Salvar Como").
+
+        Quanto você tiver suas imagens, clique ![](<https://images.code.org/c35789d00e59b0dbe42879390dabf925-image-1493240590385.01.49 PM.png>) e carregue a imagem do seu computador para o seu projeto, onde você pode então usá-la em sua página.
+
+        # Faça Isto
+
+        -   Carregue ao menos uma image nesta página web
+        -   Use a tag `<img>` para exibir a(s) imagens(s) no seu website.
+        -   Tenha certeza de adicionar um atributo `alt`.
       CSD U2 Image Tag Attribution: |-
         <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
         <details>
@@ -1555,6 +1651,56 @@ pt-BR:
         -   O nome do criador (se disponível)
         -   O site em que foi encontrado (por exemplo, commons.wikimedia.org)
         -   A licença em que foi publicada (por exemplo, CC-BY)
+      CSD U2 Image Tag Attribution_2019: |-
+        <div class="no-pullthrough" style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+        <details>
+
+        <summary>
+        <strong>Como eu adiciono imagens?</strong>
+        </summary>
+
+        A tag `<img>` permite que você exiba imagens em sua página web. <br><br>
+
+        Exemplo:
+
+        <pre>&lt;img src="dog.png" alt="cão saltando"&gt;</pre><br><br>
+
+        Para informar ao browser qual imagem deve ser exibida, uma informação adicional, chamada **atributo**, é acrescentada à tag \<img> dentro dos colchetes. O atributo `src` representa **s**ou**rc**e ("origem") e contém o nome da imagem. Arquivos de imagens incluem extensões que dizem ao computador qual o tipo da imagem com que eles estão trabalhando. Extensões comuns são .jpg, .jpeg, .png. <br><br>
+
+        Além do atributo src, elementos de imagem também possuem o atributo `alt` que descreve a imagem. Isto é importante caso a imagem não carregue, ou para pessoas que têm problemas visuais. <br><br>
+
+        Uma tag `<img>`  é um exemplo de uma tag com **auto fechamento**, porque ela inicia e termina na mesma tag.
+
+        </details>
+        <details>
+        <summary>
+        <strong>Por que uma imagem não tem uma tag de fechamento?</strong>
+        </summary>
+        Uma tag de imagem não precisa de uma tag de fechamento porque não há conteúdo de texto que precisa ser envolvido entre tags. O conteúdo que é exibido na tela é especificado através dos atributos.
+        </details>
+        <details>
+        <summary>
+        <strong>O que é um atributo?</strong>
+        </summary>
+
+        Atributos são informações adicionais que são incluídas em uma tag. Atributos têm nomes e valores. O nome indica qual o tipo de informação está sendo fornecido, e então o valor fornece a informação específica para esta tag.
+
+        Por exemplo as tags \<img> têm dois atributos, src and alt. src especifica o nome do arquivo da imagem e alt diz ao browser, em texto legível, o que a imagem contém.
+
+        </details>
+        </div>
+
+        # Atribuindo Créditos
+
+        Ao utilizar uma imagem com licença Creative Commons, você precisar dar o crédito para o criador original (isto é também chamado _atribuição_). Existem várias maneiras de prover atribuição, mas a forma mais simples é acrescentar texto abaixo da imagem que identifica o autor e website de onde ela foi obtida.
+
+        # Faça Isto
+
+        Nesta página nós já adicionamos e atribuimos uma imagem de um sapo. Use o mecanismo de busca da Creative Commons para encontrar uma outra imagem de um anfíbio. Acrescente sua imagem a esta página, juntamente com a devida atribuição, incluindo:
+
+        -   O nome do autor (se disponível)
+        -   O website em que foi encontrada (ex: commons.wikimedia.org)
+        -   A licença utilizada para publicação (ex: CC-BY)
       CSD U2 Image Tag Debug: |-
         <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
         <details>
@@ -1598,6 +1744,50 @@ pt-BR:
         O atributo `src` precisa apontar para o _exato_nome do arquivo da imagem que você deseja usar. Isso significa que você precisa prestar atenção à ortografia, ao uso de letras maiúsculas e à extensão do arquivo. Cada uma das três imagens nesta página está quebrada devido a um atributo `src` inadequado. Usando o menu de arquivos para referência, corrija cada uma das tags de imagem.
 
         _Nota: mesmo que as imagens não estejam sendo carregadas corretamente, nosso site ainda está mostrando um texto descritivo do que deveria estar lá porque usamos os atributos `alt`. Legal!_
+      CSD U2 Image Tag Debug_2019: |-
+        <div class="no-pullthrough" style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+        <details>
+
+        <summary>
+        <strong>Como eu adiciono imagens?</strong>
+        </summary>
+
+        A tag `<img>` permite que você exiba imagens em sua página web. <br><br>
+
+        Exemplo:
+
+        <pre>&lt;img src="dog.png" alt="cão saltando"&gt;</pre><br><br>
+
+        Para informar ao browser qual imagem deve ser exibida, uma informação adicional, chamada **atributo**, é acrescentada à tag \<img> dentro dos colchetes. O atributo `src` representa **s**ou**rc**e ("origem") e contém o nome da imagem. Arquivos de imagens incluem extensões que dizem ao computador qual o tipo da imagem com que eles estão trabalhando. Extensões comuns são .jpg, .jpeg, .png. <br><br>
+
+        Além do atributo src, elementos de imagem também possuem o atributo `alt` que descreve a imagem. Isto é importante caso a imagem não carregue, ou para pessoas que têm problemas visuais. <br><br>
+
+        Uma tag `<img>`  é um exemplo de uma tag com **auto fechamento**, porque ela inicia e termina na mesma tag.
+
+        </details>
+        <details>
+        <summary>
+        <strong>Por que uma imagem não tem uma tag de fechamento?</strong>
+        </summary>
+        Uma tag de imagem não precisa de uma tag de fechamento porque não há conteúdo de texto que precisa ser envolvido entre tags. O conteúdo que é exibido na tela é especificado através dos atributos.
+        </details>
+        <details>
+        <summary>
+        <strong>O que é um atributo?</strong>
+        </summary>
+
+        Atributos são informações adicionais que são incluídas em uma tag. Atributos têm nomes e valores. O nome indica qual o tipo de informação está sendo fornecido, e então o valor fornece a informação específica para esta tag.
+
+        Por exemplo as tags \<img> têm dois atributos, src and alt. src especifica o nome do arquivo da imagem e alt diz ao browser, em texto legível, o que a imagem contém.
+
+        </details>
+        </div>
+
+        # Os Detalhes Fazem a Diferença
+
+        O atributo `src` deve apontar para o nome do arquivo _exato_ da imagem que você quer usar. Isso significa que você deve prestar atenção para a ortografia, letras maiúsculas e minúsculas, e a extensão do arquivo. Cada uma das três imagens desta página estão com defeito por causa do atributo `src` inadequado. Usando o menu de arquivos como referência, conserte cada uma das tags de imagem.
+
+        _Nota: Apesar de as imagens não estarem sendo carregadas, nosso website está mostrando os textos descritivos do que deveria estar lá porque usamos os atributos `alt`. Muito legal!_
       CSD U2 Info Page Final Touches: |-
         <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px">
 
@@ -3991,6 +4181,26 @@ pt-BR:
         -   Encontre a propriedade `margin` no conjunto de regras`img`.
         -   Altere a margem para maior e discuta o efeito com um parceiro.
         -   Escolha outro tipo de elemento e dê uma margem também.
+      CSD U2 layout style margin_2019: "<div class=\"no-pullthrough\" style=\"float:
+        right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"
+        markdown=\"1\">\n<details>\n\n<summary>\n<strong>Como o código funciona?</strong>\n</summary>\n\nAqui
+        está o código que está colocando um espaço extra ao redor das imagens:\n\n<pre>img
+        {\n\tmargin: 10px;\n}</pre>\n\n-   `img` é o _seletor_.  Ele especifica quais
+        elementos deverão seguir as regras que estiverem entre as chaves, no caso,
+        as imagens.\n-   `margin: 10px` é a regra que coloca 10 pixels de espaço ao
+        redor da imagem.\n    </details>\n    <details>\n    <summary>\n    <strong>O
+        que faz a propriedade `margin`?</strong>\n    </summary>\n\nA propriedade
+        `margin` determina quanto espaço será colocado ao redor da imagem. Na maior
+        parte do tempo, você irá definir a margem em pixels. Você pode ser mais sobre
+        esta propriedade em <a href=\"http://www.w3schools.com/cssref/pr_margin.asp\"
+        target=\"_new\">W3Schools - CSS margin Property</a>\n\n</details>\n<details>\n<summary>\n<strong>O
+        que significa `px` / O que é um pixel?</strong>\n</summary>\n\nPixel, que
+        é abreviado por `px`, é como os elementos são mensurados em CSS. É o tamanho
+        em um ponto único de luz na tela.\n\n</details>\n</div>\n\n# Margem\n\nMargens
+        definem quanto espaço deve haver ao redor de um elemento.\n\n-   Encontre
+        a propriedade `margin` no conjunto de regras `img`.\n-   Altere a margem para
+        que fique maior, e discuta o efeito com um colega.\n-   Escolha um outro tipo
+        de elemento, e dê a ele uma margem, também."
       CSD U2 layout style sample: |-
         <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
         <details>
@@ -4169,6 +4379,44 @@ pt-BR:
         -   Altere a largura das imagens para maior ou menor.
         -   Crie uma nova regra com uma propriedade `height` para controlar a altura das imagens.
         -   Use a propriedade `width` no conjunto de regras`p` para alterar a largura dos seus parágrafos.
+      CSD U2 layout style width_2019: "<div class=\"no-pullthrough\" style=\"float:
+        right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\n<details>\n\n<summary>\n<strong>Como
+        o código funciona?</strong>\n</summary>\n\nAqui está o código que está fazendo
+        a imagem ter seu tamanho atual:\n\n    img {\n    \twidth: 250px;\n    }\n\n-
+        \  `img` é o _seletor_.  Ele especifica quais elementos deverão seguir as
+        regras que estiverem entre as chaves, no caso, as imagens.\n-   `width: 250px`
+        é a regra que faz a imagem ter 250 pixels de largura.  Ela também altera a
+        altura para que a imagem não fique esticada.\n\n</details>\n<details>\n<summary>\n<strong>O
+        que faz a propriedade <code>width</code>?</strong>\n</summary>\n\nA propriedade
+        `width` define o quão largo o elemento será. Na maior parte do tempo, você
+        irá definir a largura em pixels, que faz o elemento ocupar uma quantidade
+        exata de espaço na tela. A definição da largura também altera a altura para
+        que a imagem não estique, a não ser que você tenha definido também a altura.
+        Você pode ler mais sobre esta propriedade em <a href=\"http://www.w3schools.com/cssref/pr_dim_width.asp\"
+        target=\"_new\">W3Schools - CSS width Property</a>\n\n</details>\n<details>\n<summary>\n<strong>O
+        que faz a propriedade <code>height</code>?</strong>\n</summary>\n\nA propriedade
+        `height` define o quão alto um elemento será. Na maior parte do tempo, você
+        irá definir a altura em pixels, o que faz com que o elemento ocupe uma quantidade
+        de espaço exata na tela. Definindo a altura também irá alterar a largura para
+        que a imagem não estique, a não ser que você também tenha definido a largura.
+        Você pode ler mais sobre esta propriedade em <a href=\"http://www.w3schools.com/cssref/pr_dim_height.asp\"
+        target=\"_new\">W3Schools - CSS height Property</a>\n\n</details>\n<details>\n<summary>\n<strong>O
+        que significa <code>px</code> / O que é um pixel?</strong>\n</summary>\n\nPixel,
+        que é abreviado por `px`, é como os elementos são mensurados em CSS. É o tamanho
+        em um ponto único de luz na tela.\n\n</details>\n<details>\n<summary>\n<strong>Por
+        que às vezes a imagem fica distorcida, ao se usar regras width e height ao
+        mesmo tempo?</strong>\n</summary>\n\nQuando a largura de uma imagem é alterada,
+        a altura deve mudar na mesma porcentagem, caso contrário a imagem será distorcida.
+        Por exemplo, de você duplicar a largura de uma imagem, você também deverá
+        duplicar a altura, ou a imagem será esticada horizontalmente. Quando você
+        somente define a largura ou a altura, o computador irá mudar automaticamente
+        a outra propriedade para que a imagem se pareça a mesma.\n\n</details>\n</div>\n\n#
+        Largura e Altura\n\n-   Encontre a propriedade na folha de estilos que controla
+        a largura das imagens.\n-   Altere a largura das imagens para que fiquem maiores
+        ou menores.\n-   Crie uma nova regra com uma propriedade `height` para controlar
+        a altura das imagens.\n-   Use a propriedade `width` no conjunto de regras
+        `p` para alterar a largura de seus parágrafos.\n\n<https://studio.code.org/s/csd2-2019/stage/11/puzzle/9>
+        -> long\\_instructions."
       CSD U2 link demo: |-
         # Criando um site de várias páginas
 
@@ -9575,6 +9823,123 @@ pt-BR:
         -   **Leia o programa** e preveja o que o programa fará.
         -   **Execute o programa** para verificar sua previsão.
         -   **Olhe para os observadores** e explique a um vizinho o que você está vendo.
+      CSD U3 abstraction decelerateY: |-
+        # Simulando a gravidade
+
+        No último nível você desacelerou o carro com o bloco `sprite.velocityX` e o padrão de contador. Quase parecia que o carro estava sendo puxado para a esquerda.
+
+        Se você usar esse mesmo padrão com o bloco `sprite.velocityY`, parecerá que seu sprite está sempre sendo puxado para baixo, o que é exatamente o que a gravidade faz!
+
+        # Faça isso
+
+        A rocha é lançada no ar, mas nunca cai de volta.
+
+        -   Use o bloco `sprite.velocityY` com o padrão de contador para fazer a pedra diminuir a velocidade e depois cair na outra direção.
+        -   Experimente com valores diferentes no seu padrão de contador. Você quer que a rocha diminua a velocidade rapidamente ou gradualmente? O que parece mais realista para você?
+        -   Discuta com seu parceiro: Por que você está definindo a velocidade inicial da rocha fora do loop de desenho? Por que você está mudando a velocidade do sprite dentro do loop de draw?
+      CSD U3 abstraction decelerateY_2018: |-
+        # Simulando a gravidade
+
+        No último nível você desacelerou o carro com o bloco `sprite.velocityX` e o padrão de contador. Quase parecia que o carro estava sendo puxado para a esquerda.
+
+        Se você usar esse mesmo padrão com o bloco `sprite.velocityY`, parecerá que seu sprite está sempre sendo puxado para baixo, o que é exatamente o que a gravidade faz!
+
+        # Faça isso
+
+        A rocha é lançada no ar, mas nunca cai de volta.
+
+        -   Use o bloco `sprite.velocityY` com o padrão de contador para fazer a pedra diminuir a velocidade e depois cair na outra direção.
+        -   Experimente com valores diferentes no seu padrão de contador. Você quer que a rocha diminua a velocidade rapidamente ou gradualmente? O que parece mais realista para você?
+        -   Discuta com seu parceiro: Por que você está definindo a velocidade inicial da rocha fora do loop de desenho? Por que você está mudando a velocidade do sprite dentro do loop de draw?
+      CSD U3 abstraction decelerateY_2019: |-
+        # Simulando a gravidade
+
+        No último nível você desacelerou o carro com o bloco `sprite.velocityX` e o padrão de contador. Quase parecia que o carro estava sendo puxado para a esquerda.
+
+        Se você usar esse mesmo padrão com o bloco `sprite.velocityY`, parecerá que seu sprite está sempre sendo puxado para baixo, o que é exatamente o que a gravidade faz!
+
+        # Faça isso
+
+        A rocha é lançada no ar, mas nunca cai de volta.
+
+        -   Use o bloco `sprite.velocityY` com o padrão de contador para fazer a pedra diminuir a velocidade e depois cair na outra direção.
+        -   Experimente com valores diferentes no seu padrão de contador. Você quer que a rocha diminua a velocidade rapidamente ou gradualmente? O que parece mais realista para você?
+        -   Discuta com seu parceiro: Por que você está definindo a velocidade inicial da rocha fora do loop de desenho? Por que você está mudando a velocidade do sprite dentro do loop de draw?
+      CSD U3 abstraction jumping: |-
+        # Salto
+
+        Aumentar a velocidade de um sprite dentro do padrão do contador pode simular a gravidade. Ao adicionar interações do usuário, você pode fazer com que seu sprite pareça saltar também. Para começar, você fará um simples salto e, em seguida, fará com que seja mais realista, procurando o próximo nível.
+
+        # Faça isso
+
+        Um sprite já foi criado para você que cai porque sua velocidade é aumentada dentro do loop de desenho. Você precisará fazer este sprite parecer saltar.
+
+        -   Dentro do bloco `if` que verifica se a seta para cima foi pressionada, defina a velocidade y do sprite para -5. ([Mostre-me onde] [0])
+        -   Discuta com um vizinho: por que esse código é executado da maneira como funciona? Como usar um número além de -5 afeta a maneira como o código funciona? Como você poderia pular mais alto ou mais baixo?
+      CSD U3 abstraction jumping_2018: |-
+        # Salto
+
+        Aumentar a velocidade de um sprite dentro do padrão do contador pode simular a gravidade. Ao adicionar interações do usuário, você pode fazer com que seu sprite pareça saltar também. Para começar, você fará um simples salto e, em seguida, fará com que seja mais realista, procurando o próximo nível.
+
+        # Faça isso
+
+        Um sprite já foi criado para você que cai porque sua velocidade é aumentada dentro do loop de desenho. Você precisará fazer este sprite parecer saltar.
+
+        -   Dentro do bloco `if` que verifica se a seta para cima foi pressionada, defina a velocidade y do sprite para -5. ([Mostre-me onde] [0])
+        -   Discuta com um vizinho: por que esse código é executado da maneira como funciona? Como usar um número além de -5 afeta a maneira como o código funciona? Como você poderia pular mais alto ou mais baixo?
+      CSD U3 abstraction jumping_2019: |-
+        # Salto
+
+        Aumentar a velocidade de um sprite dentro do padrão do contador pode simular a gravidade. Ao adicionar interações do usuário, você pode fazer com que seu sprite pareça saltar também. Para começar, você fará um simples salto e, em seguida, fará com que seja mais realista, procurando o próximo nível.
+
+        # Faça isso
+
+        Um sprite já foi criado para você que cai porque sua velocidade é aumentada dentro do loop de desenho. Você precisará fazer este sprite parecer saltar.
+
+        -   Dentro do bloco `if` que verifica se a seta para cima foi pressionada, defina a velocidade y do sprite para -5. ([Mostre-me onde] [0])
+        -   Discuta com um vizinho: por que esse código é executado da maneira como funciona? Como usar um número além de -5 afeta a maneira como o código funciona? Como você poderia pular mais alto ou mais baixo?
+      CSD U3 abstraction left right counter: |-
+        # Flutuando à direita
+
+        Agora você está usando o padrão contador com a velocidade Y do sprite para simular gravidade e salto. Se você usar a velocidade X do sprite no padrão do contador, então você pode fazer seu sprite flutuar de lado a lado também.
+
+        # Faça isso
+
+        Neste nível você fará seu sprite começar a flutuar para a direita quando a seta direita for pressionada.
+
+        -   Adicione uma instrução `if` dentro do seu loop de desenho abaixo da que você criou para a seta "para cima".
+        -   Use o bloco `keyDown` para fazer com que a instrução`if` responda quando a seta "right" é pressionada.
+        -   Dentro do bloco `if` use o padrão contador com o bloco`sprite.velocityX` para adicionar 0.1 à velocidade X do sprite.
+
+        Execute seu código para ver como funciona. O sprite deve começar a flutuar para a direita quando você pressiona a seta para a direita e pula quando você pressiona "para cima". Você fará a seta da esquerda funcionar no próximo nível.
+      CSD U3 abstraction left right counter_2018: |-
+        # Flutuando à direita
+
+        Agora você está usando o padrão contador com a velocidade Y do sprite para simular gravidade e salto. Se você usar a velocidade X do sprite no padrão do contador, então você pode fazer seu sprite flutuar de lado a lado também.
+
+        # Faça isso
+
+        Neste nível você fará seu sprite começar a flutuar para a direita quando a seta direita for pressionada.
+
+        -   Adicione uma instrução `if` dentro do seu loop de desenho abaixo da que você criou para a seta "para cima".
+        -   Use o bloco `keyDown` para fazer com que a instrução`if` responda quando a seta "right" é pressionada.
+        -   Dentro do bloco `if` use o padrão contador com o bloco`sprite.velocityX` para adicionar 0.1 à velocidade X do sprite.
+
+        Execute seu código para ver como funciona. O sprite deve começar a flutuar para a direita quando você pressiona a seta para a direita e pula quando você pressiona "para cima". Você fará a seta da esquerda funcionar no próximo nível.
+      CSD U3 abstraction left right counter_2019: |-
+        # Flutuando à direita
+
+        Agora você está usando o padrão contador com a velocidade Y do sprite para simular gravidade e salto. Se você usar a velocidade X do sprite no padrão do contador, então você pode fazer seu sprite flutuar de lado a lado também.
+
+        # Faça isso
+
+        Neste nível você fará seu sprite começar a flutuar para a direita quando a seta direita for pressionada.
+
+        -   Adicione uma instrução `if` dentro do seu loop de desenho abaixo da que você criou para a seta "para cima".
+        -   Use o bloco `keyDown` para fazer com que a instrução`if` responda quando a seta "right" é pressionada.
+        -   Dentro do bloco `if` use o padrão contador com o bloco`sprite.velocityX` para adicionar 0.1 à velocidade X do sprite.
+
+        Execute seu código para ver como funciona. O sprite deve começar a flutuar para a direita quando você pressiona a seta para a direita e pula quando você pressiona "para cima". Você fará a seta da esquerda funcionar no próximo nível.
       CSD U3 abstraction make it your own: |-
         # Faça o seu próprio
 
@@ -10152,8 +10517,8 @@ pt-BR:
         # Faça isso
 
         -   Com o seu parceiro, responda às seguintes perguntas:
-                 1\. Qual é o maior número que você pode fazer com esta ferramenta?
-                 2\. O recorde de mais saltos de um cão e pessoa em um minuto é 59. Como você codificaria 59 em binário?
+                 1. Qual é o maior número que você pode fazer com esta ferramenta?
+                 2. O recorde de mais saltos de um cão e pessoa em um minuto é 59. Como você codificaria 59 em binário?
       CSD U5 binary 2_2018: |-
         # Número de 6 bits
 
@@ -10162,8 +10527,8 @@ pt-BR:
         # Faça isso
 
         -   Com o seu parceiro, responda às seguintes perguntas:
-                 1\. Qual é o maior número que você pode fazer com esta ferramenta?
-                 2\. O recorde de mais saltos de um cão e pessoa em um minuto é 59. Como você codificaria 59 em binário?
+                 1. Qual é o maior número que você pode fazer com esta ferramenta?
+                 2. O recorde de mais saltos de um cão e pessoa em um minuto é 59. Como você codificaria 59 em binário?
       CSD U5 binary 2_2019: |-
         # Número de 6 bits
 
@@ -10172,8 +10537,8 @@ pt-BR:
         # Faça isso
 
         -   Com o seu parceiro, responda às seguintes perguntas:
-                 1\. Qual é o maior número que você pode fazer com esta ferramenta?
-                 2\. O recorde de mais saltos de um cão e pessoa em um minuto é 59. Como você codificaria 59 em binário?
+                 1. Qual é o maior número que você pode fazer com esta ferramenta?
+                 2. O recorde de mais saltos de um cão e pessoa em um minuto é 59. Como você codificaria 59 em binário?
       CSD U5 binary 4-new: |-
         # Decodificando vários números
 
@@ -10493,6 +10858,81 @@ pt-BR:
         -   Quando uma matriz pode ser mais útil do que uma variável?
         -   Por que você sempre deve atribuir uma matriz a uma variável?
         -   Como você pode acessar os elementos em sua matriz?
+      CSD U6 create LED app: |-
+        # Faça seu aplicativo - a tela
+
+        Agora, você e seu parceiro podem criar seu próprio aplicativo usando o LED. Discuta com seu parceiro que tipo de aplicativo você deseja criar.
+
+        # Faça isso
+
+        -   Discuta com seu parceiro quais elementos de tela serão necessários em seu aplicativo. Você quer...
+                 Botões?
+                 Imagens?
+                 \- texto?
+        -   No Modo de Design, adicione os elementos, certificando-se de atribuir a cada um ID significativo.
+      CSD U6 create LED app 2: |-
+        # Faça seu aplicativo - o código
+
+        Em seguida, você precisará adicionar o código que faz seu aplicativo funcionar.
+
+        # Faça isso
+
+        -   Discuta com seu parceiro qual código você precisará no seu aplicativo. Você precisa...
+                 \- Eventos?
+                 \- Variáveis?
+                 \- Setters?
+                 \-   Números aleatórios?
+        -   No modo de código, adicione o código que fará seu aplicativo funcionar.
+      CSD U6 create LED app 2_2018: |-
+        # Faça seu aplicativo - o código
+
+        Em seguida, você precisará adicionar o código que faz seu aplicativo funcionar.
+
+        # Faça isso
+
+        -   Discuta com seu parceiro qual código você precisará no seu aplicativo. Você precisa...
+                 \- Eventos?
+                 \- Variáveis?
+                 \- Setters?
+                 \-   Números aleatórios?
+        -   No modo de código, adicione o código que fará seu aplicativo funcionar.
+      CSD U6 create LED app 2_2019: |-
+        # Faça seu aplicativo - o código
+
+        Em seguida, você precisará adicionar o código que faz seu aplicativo funcionar.
+
+        # Faça isso
+
+        -   Discuta com seu parceiro qual código você precisará no seu aplicativo. Você precisa...
+                 \- Eventos?
+                 \- Variáveis?
+                 \- Setters?
+                 \-   Números aleatórios?
+        -   No modo de código, adicione o código que fará seu aplicativo funcionar.
+      CSD U6 create LED app_2018: |-
+        # Faça seu aplicativo - a tela
+
+        Agora, você e seu parceiro podem criar seu próprio aplicativo usando o LED. Discuta com seu parceiro que tipo de aplicativo você deseja criar.
+
+        # Faça isso
+
+        -   Discuta com seu parceiro quais elementos de tela serão necessários em seu aplicativo. Você quer...
+                 Botões?
+                 Imagens?
+                 \- texto?
+        -   No Modo de Design, adicione os elementos, certificando-se de atribuir a cada um ID significativo.
+      CSD U6 create LED app_2019: |-
+        # Faça seu aplicativo - a tela
+
+        Agora, você e seu parceiro podem criar seu próprio aplicativo usando o LED. Discuta com seu parceiro que tipo de aplicativo você deseja criar.
+
+        # Faça isso
+
+        -   Discuta com seu parceiro quais elementos de tela serão necessários em seu aplicativo. Você quer...
+                 Botões?
+                 Imagens?
+                 \- texto?
+        -   No Modo de Design, adicione os elementos, certificando-se de atribuir a cada um ID significativo.
       CSD U6 for loop led color_2019: |-
         # Acrescente Cor
 
@@ -10668,6 +11108,42 @@ pt-BR:
 
         -   O que fez os computadores serem maquinas diferentes das que vieram antes deles?
         -   Pense em algo que você faz no computador. Que tipo de entrada, saída, armazenamento e processamento estão acontecendo?
+      CSD-Arrays: |-
+        Hoje você aprenderá a usar e criar \*\* funções \*\*.
+
+        Criar uma função permite que você crie seus próprios blocos! Existem duas partes para uma função:
+
+        Fazendo um bloco recém-nomeado que tem todo o código que você quer rodar dentro dele.
+        \-xml de definição de função-
+
+        O único bloco verde que você usa, ou chama, para executar a função que você criou.
+        \-xml de chamada de função-
+
+        Prepare-se para se familiarizar com as funções, aprenda a editá-las e crie as suas próprias!
+      CSD-Arrays_2018: |-
+        Hoje você aprenderá a usar e criar \*\* funções \*\*.
+
+        Criar uma função permite que você crie seus próprios blocos! Existem duas partes para uma função:
+
+        Fazendo um bloco recém-nomeado que tem todo o código que você quer rodar dentro dele.
+        \-xml de definição de função-
+
+        O único bloco verde que você usa, ou chama, para executar a função que você criou.
+        \-xml de chamada de função-
+
+        Prepare-se para se familiarizar com as funções, aprenda a editá-las e crie as suas próprias!
+      CSD-Arrays_2019: |-
+        Hoje você aprenderá a usar e criar \*\* funções \*\*.
+
+        Criar uma função permite que você crie seus próprios blocos! Existem duas partes para uma função:
+
+        Fazendo um bloco recém-nomeado que tem todo o código que você quer rodar dentro dele.
+        \-xml de definição de função-
+
+        O único bloco verde que você usa, ou chama, para executar a função que você criou.
+        \-xml de chamada de função-
+
+        Prepare-se para se familiarizar com as funções, aprenda a editá-las e crie as suas próprias!
       'CSD: Animating Sprite Movement_2019': |-
         ## Perguntas a considerar
 
@@ -11036,6 +11512,105 @@ pt-BR:
         # Funcionalidade ausente nesse protótipo
 
         -   As perguntas não são realmente verificadas quanto à exatidão
+      CSDU6 - LED toggle buttonL up: |-
+        # Outros eventos de teclado com os botões
+
+        Em vez de usar o botão direito, você pode fazer o LED desligar quando o botão esquerdo voltar.
+
+        # Faça isso
+
+        -   Crie um evento 'up' para o botão esquerdo.
+        -   Adicione o código para desligar o LED quando o botão aparecer novamente.
+      CSDU6 - LED toggle buttonL up_2018: |-
+        # Outros eventos de teclado com os botões
+
+        Em vez de usar o botão direito, você pode fazer o LED desligar quando o botão esquerdo voltar.
+
+        # Faça isso
+
+        -   Crie um evento 'up' para o botão esquerdo.
+        -   Adicione o código para desligar o LED quando o botão aparecer novamente.
+      CSDU6 - LED toggle buttonL up_2019: |-
+        # Outros eventos de teclado com os botões
+
+        Em vez de usar o botão direito, você pode fazer o LED desligar quando o botão esquerdo voltar.
+
+        # Faça isso
+
+        -   Crie um evento 'up' para o botão esquerdo.
+        -   Adicione o código para desligar o LED quando o botão aparecer novamente.
+      CSDU6 - button LED prediction: Veja o nível contido para o markdown
+      CSDU6 - button LED prediction_2018: Veja o nível contido para o markdown
+      CSDU6 - button LED prediction_2019: Veja o nível contido para o markdown
+      CSDU6 - toggle state LED prediction: Veja o nível contido para o markdown
+      CSDU6 - toggle state LED prediction_2018: Veja o nível contido para o markdown
+      CSDU6 - toggle state LED prediction_2019: Veja o nível contido para o markdown
+      CSDU6 AppLab Input 1: |-
+        # Entrada no Laboratório de App
+
+        _Você não precisa fazer alterações no código aqui_
+
+        Reserve um minuto para ler o código e executar o programa. Discutir com um parceiro:
+
+        1.  Qual é a fonte de entrada?
+        2.  Onde e como o programa verifica a entrada?
+        3.  O que o programa faz quando obtém a entrada correta?
+        4.  O que o programa está fazendo quando não há entrada?
+      CSDU6 AppLab Input 1_2018: |-
+        # Entrada no Laboratório de App
+
+        _Você não precisa fazer alterações no código aqui_
+
+        Reserve um minuto para ler o código e executar o programa. Discutir com um parceiro:
+
+        1.  Qual é a fonte de entrada?
+        2.  Onde e como o programa verifica a entrada?
+        3.  O que o programa faz quando obtém a entrada correta?
+        4.  O que o programa está fazendo quando não há entrada?
+      CSDU6 AppLab Input 1_2019: |-
+        # Entrada no Laboratório de App
+
+        _Você não precisa fazer alterações no código aqui_
+
+        Reserve um minuto para ler o código e executar o programa. Discutir com um parceiro:
+
+        1.  Qual é a fonte de entrada?
+        2.  Onde e como o programa verifica a entrada?
+        3.  O que o programa faz quando obtém a entrada correta?
+        4.  O que o programa está fazendo quando não há entrada?
+      CSDU6 GameLab Input 1: |-
+        # Entrada no Laboratório de Jogo
+
+        _Você não precisa fazer alterações no código aqui_
+
+        Reserve um minuto para ler o código e executar o programa. Discutir com um parceiro:
+
+        1.  Qual é a fonte de entrada?
+        2.  Onde e como o programa verifica a entrada?
+        3.  O que o programa faz quando obtém a entrada correta?
+        4.  O que o programa está fazendo quando não há entrada?
+      CSDU6 GameLab Input 1_2018: |-
+        # Entrada no Laboratório de Jogo
+
+        _Você não precisa fazer alterações no código aqui_
+
+        Reserve um minuto para ler o código e executar o programa. Discutir com um parceiro:
+
+        1.  Qual é a fonte de entrada?
+        2.  Onde e como o programa verifica a entrada?
+        3.  O que o programa faz quando obtém a entrada correta?
+        4.  O que o programa está fazendo quando não há entrada?
+      CSDU6 GameLab Input 1_2019: |-
+        # Entrada no Laboratório de Jogo
+
+        _Você não precisa fazer alterações no código aqui_
+
+        Reserve um minuto para ler o código e executar o programa. Discutir com um parceiro:
+
+        1.  Qual é a fonte de entrada?
+        2.  Onde e como o programa verifica a entrada?
+        3.  O que o programa faz quando obtém a entrada correta?
+        4.  O que o programa está fazendo quando não há entrada?
       CSDU6 making new arrays_2019: |-
         # Criando Novas Matrizes
 
@@ -11696,6 +12271,10 @@ pt-BR:
         estão corretos! \\\r\n \\\r\nFixe o bloco verde pequeno duas vezes em sua
         área de trabalho para corrigir o caminho e levar o jogador {currentPlayerName}
         até a Tocha de Redstone [redstone_torch]."
+      Geometric Sun: "**Ideia de projeto** Crie um padrão utilizando geometria, como
+        formas. Isso requer persistência e planejamento!"
+      Geometric Sun_2018: "**Ideia de projeto** Crie um padrão utilizando geometria,
+        como formas. Isso requer persistência e planejamento!"
       HOC 2018 Level_1: Você precisa de suprimentos para a viagem adiante. Colete
         um **barco** ![](https://images.code.org/0b3162de9dc0abf3e0890d315b8cc699-image-1538697977747.png)
         de um **baú** ![](https://images.code.org/e0cf43fd36a50dd16ee06595047bfd8f-image-1538697999418.png).
@@ -11823,6 +12402,42 @@ pt-BR:
         para ajudá-lo a explorar este mundo."
       MC_HOC_2017_FP20x20_2019: "**Jogo Livre:** Agora é com você! Use o código do
         Agent para ajudá-lo a explorar este mundo."
+      Making Music: |-
+        Hoje você aprenderá a usar e criar \*\* funções \*\*.
+
+        Criar uma função permite que você crie seus próprios blocos! Existem duas partes para uma função:
+
+        Fazendo um bloco recém-nomeado que tem todo o código que você quer rodar dentro dele.
+        \-xml de definição de função-
+
+        O único bloco verde que você usa, ou chama, para executar a função que você criou.
+        \-xml de chamada de função-
+
+        Prepare-se para se familiarizar com as funções, aprenda a editá-las e crie as suas próprias!
+      Making Music_2018: |-
+        Hoje você aprenderá a usar e criar \*\* funções \*\*.
+
+        Criar uma função permite que você crie seus próprios blocos! Existem duas partes para uma função:
+
+        Fazendo um bloco recém-nomeado que tem todo o código que você quer rodar dentro dele.
+        \-xml de definição de função-
+
+        O único bloco verde que você usa, ou chama, para executar a função que você criou.
+        \-xml de chamada de função-
+
+        Prepare-se para se familiarizar com as funções, aprenda a editá-las e crie as suas próprias!
+      Making Music_2019: |-
+        Hoje você aprenderá a usar e criar \*\* funções \*\*.
+
+        Criar uma função permite que você crie seus próprios blocos! Existem duas partes para uma função:
+
+        Fazendo um bloco recém-nomeado que tem todo o código que você quer rodar dentro dele.
+        \-xml de definição de função-
+
+        O único bloco verde que você usa, ou chama, para executar a função que você criou.
+        \-xml de chamada de função-
+
+        Prepare-se para se familiarizar com as funções, aprenda a editá-las e crie as suas próprias!
       NEW Course 4 Artist Functions 1: |-
         Você consegue desenhar um quadrado com
         100 pixels de comprimento usando um laço?
@@ -11951,6 +12566,46 @@ pt-BR:
         # Exemplo de mais bits por pixel
 
         Aqui está uma imagem maior em 9 bits por pixel. Com 9 bits por pixel você expressar 512 cores diferentes. Clique para ver a próxima imagem que é ainda mais sofisticada, mas mais fácil de entender.
+      Revisiting the Counter Pattern: |-
+        Hoje você aprenderá a usar e criar \*\* funções \*\*.
+
+        Criar uma função permite que você crie seus próprios blocos! Existem duas partes para uma função:
+
+        Fazendo um bloco recém-nomeado que tem todo o código que você quer rodar dentro dele.
+        \-xml de definição de função-
+
+        O único bloco verde que você usa, ou chama, para executar a função que você criou.
+        \-xml de chamada de função-
+
+        Prepare-se para se familiarizar com as funções, aprenda a editá-las e crie as suas próprias!
+      Revisiting the Counter Pattern_2018: |-
+        Hoje você aprenderá a usar e criar \*\* funções \*\*.
+
+        Criar uma função permite que você crie seus próprios blocos! Existem duas partes para uma função:
+
+        Fazendo um bloco recém-nomeado que tem todo o código que você quer rodar dentro dele.
+        \-xml de definição de função-
+
+        O único bloco verde que você usa, ou chama, para executar a função que você criou.
+        \-xml de chamada de função-
+
+        Prepare-se para se familiarizar com as funções, aprenda a editá-las e crie as suas próprias!
+      Revisiting the Counter Pattern_2019: |-
+        Hoje você aprenderá a usar e criar \*\* funções \*\*.
+
+        Criar uma função permite que você crie seus próprios blocos! Existem duas partes para uma função:
+
+        Fazendo um bloco recém-nomeado que tem todo o código que você quer rodar dentro dele.
+        \-xml de definição de função-
+
+        O único bloco verde que você usa, ou chama, para executar a função que você criou.
+        \-xml de chamada de função-
+
+        Prepare-se para se familiarizar com as funções, aprenda a editá-las e crie as suas próprias!
+      Robot Doodle: "**Ideia de projeto:** Crie uma imagem de algo comum no mundo
+        real. Isso requer persistência e planejamento!"
+      Robot Doodle_2018: "**Ideia de projeto:** Crie uma imagem de algo comum no mundo
+        real. Isso requer persistência e planejamento!"
       Standalone_Artist_2: Desenhe este diamante com ângulos de 120 e 60 graus, e
         com lados de 150 pixels de comprimento.
       Standalone_Artist_3: Você pode desenhar este hexágono com lados de 100 pixels
@@ -11978,6 +12633,42 @@ pt-BR:
         que ela desenhe um padrão de quadrados, triângulos ou octógonos?
       Standalone_Artist_9: Agora vá em frente e faça a imagem que mais gostar! Você
         tem até uma função vazia para usar para fazer o que quiser!
+      The Accelerometer: |-
+        Hoje você aprenderá a usar e criar \*\* funções \*\*.
+
+        Criar uma função permite que você crie seus próprios blocos! Existem duas partes para uma função:
+
+        Fazendo um bloco recém-nomeado que tem todo o código que você quer rodar dentro dele.
+        \-xml de definição de função-
+
+        O único bloco verde que você usa, ou chama, para executar a função que você criou.
+        \-xml de chamada de função-
+
+        Prepare-se para se familiarizar com as funções, aprenda a editá-las e crie as suas próprias!
+      The Accelerometer_2018: |-
+        Hoje você aprenderá a usar e criar \*\* funções \*\*.
+
+        Criar uma função permite que você crie seus próprios blocos! Existem duas partes para uma função:
+
+        Fazendo um bloco recém-nomeado que tem todo o código que você quer rodar dentro dele.
+        \-xml de definição de função-
+
+        O único bloco verde que você usa, ou chama, para executar a função que você criou.
+        \-xml de chamada de função-
+
+        Prepare-se para se familiarizar com as funções, aprenda a editá-las e crie as suas próprias!
+      The Accelerometer_2019: |-
+        Hoje você aprenderá a usar e criar \*\* funções \*\*.
+
+        Criar uma função permite que você crie seus próprios blocos! Existem duas partes para uma função:
+
+        Fazendo um bloco recém-nomeado que tem todo o código que você quer rodar dentro dele.
+        \-xml de definição de função-
+
+        O único bloco verde que você usa, ou chama, para executar a função que você criou.
+        \-xml de chamada de função-
+
+        Prepare-se para se familiarizar com as funções, aprenda a editá-las e crie as suas próprias!
       U4 Model Program 1: |-
         # Adicionando uma nova tela
 
@@ -12077,6 +12768,42 @@ pt-BR:
 
         -   Para cada botâo, crie um evento que faz a ligação com a tela apropriada quando o botão é pressionado.
         -   Rode sua aplicação e teste o funcionamento de todos os botões.
+      Using Accelerometer Events: |-
+        Hoje você aprenderá a usar e criar \*\* funções \*\*.
+
+        Criar uma função permite que você crie seus próprios blocos! Existem duas partes para uma função:
+
+        Fazendo um bloco recém-nomeado que tem todo o código que você quer rodar dentro dele.
+        \-xml de definição de função-
+
+        O único bloco verde que você usa, ou chama, para executar a função que você criou.
+        \-xml de chamada de função-
+
+        Prepare-se para se familiarizar com as funções, aprenda a editá-las e crie as suas próprias!
+      Using Accelerometer Events_2018: |-
+        Hoje você aprenderá a usar e criar \*\* funções \*\*.
+
+        Criar uma função permite que você crie seus próprios blocos! Existem duas partes para uma função:
+
+        Fazendo um bloco recém-nomeado que tem todo o código que você quer rodar dentro dele.
+        \-xml de definição de função-
+
+        O único bloco verde que você usa, ou chama, para executar a função que você criou.
+        \-xml de chamada de função-
+
+        Prepare-se para se familiarizar com as funções, aprenda a editá-las e crie as suas próprias!
+      Using Accelerometer Events_2019: |-
+        Hoje você aprenderá a usar e criar \*\* funções \*\*.
+
+        Criar uma função permite que você crie seus próprios blocos! Existem duas partes para uma função:
+
+        Fazendo um bloco recém-nomeado que tem todo o código que você quer rodar dentro dele.
+        \-xml de definição de função-
+
+        O único bloco verde que você usa, ou chama, para executar a função que você criou.
+        \-xml de chamada de função-
+
+        Prepare-se para se familiarizar com as funções, aprenda a editá-las e crie as suas próprias!
       'Video: Intro to CSS Part 2_2019': |-
         ## Pergunta para Consideração
 
@@ -12193,6 +12920,12 @@ pt-BR:
         mas eles estão colocados na ordem errada!
       course1_maze_seq_challenge2: Você pode se mover somente até quatro vezes em
         cada direção. Você consegue encontrar um caminho antes de ficar sem blocos?
+      course2_artist_nestedLoops_challenge1: |-
+        Você consegue descobrir como fazer uma figura como essa?
+
+        -   Ambas imagens possuem **50 pixels laterais**
+        -   Os octágonos são feitos com **45 graus** de ângulo.
+        -   Os triângulos são feitos com **120 graus** de ângulo.
       course2_artist_nestedLoops_challenge2: |-
         Você consegue descobrir como fazer uma desenho igual a esse?
 
@@ -12203,6 +12936,9 @@ pt-BR:
         muitas maneiras de solucionar este quebra-cabeça, então divirta-se!
       course2_artist_prog_challenge2: _Ajude-me a pintar as linhas amarelas nesta
         estrada!_
+      course2_bee_conditionals_challenge2: Colete todo o nectar e fala todo o mel.
+        Você pode coletar todo o nectar em uma flor utilizando o laço `enquanto nectar
+        > 0`.
       course2_collector_prog_challenge1: Preste atenção! Você consegue coletar todas
         as **10** peças do tesouro?
       course2_harvester_loops_challenge1: Colete todo o milho.
@@ -12213,8 +12949,22 @@ pt-BR:
       course2_maze_programming_challenge2: |-
         Algumas vezes existe mais de uma forma de solucionar um problema.
         Algumas vezes é mais fácil ir para trás do que ir para frente!
+      course3_artist_functions_challenge1: A partir do momento que você definir uma
+        função, você pode chama-la quantas vezes precisar - quando quiser! Rode esse
+        código para ver como funciona, então mude-o para fazer o seu próprio desenho
+        impresionante!
+      course3_artist_functions_challenge2: |-
+        Você pode não apenas ir para algumas localizações pré-definidas, como também as bordas da tela, você também pode utilizar o comando `ir para` ir para o lugar exato que você deseje!
+
+        <xml>
+          <block type="jump_to_xy">
+            <title name="XPOS">???</title>
+            <title name="YPOS">???</title>
+            </block></xml>
       course3_bee_debugging_challenge1: Veja como a abelha pega o nectar. Você consegue
         usar o mesmo padrão para ajudar a abelha a fazer todo o mel?
+      course3_bee_functions_challenge1: Você está sozinho nesse desafio. Isso poderia
+        ser mais difícil do que parece!
       course3_bee_functions_challenge2: Você está por conta própria neste desafio!
       course3_collector_debugging_challenge2: Você é um especialista em laços aninhados?
         Use o que você aprendeu até agora para coletar todo o tesouro!
@@ -12229,6 +12979,25 @@ pt-BR:
       course3_maze_debugging_challenge1: _"Eu só estou andando em círculos?"_
       course3_maze_debugging_challenge2: _"Se eu virar com muita frequência, posso
         ficar tonto! Me ajude a chegar no porco com apenas quatro comandos de `virar`."_
+      course3_playLab_challenge1: "_Os **esquilos** estão morrendo de medo ao ver
+        que um **dinossauro** chegou na cidade! Será que o bravo **cavaleiro** consegue
+        impedi-los de se desesperar?_\n\nRegras:\n\n1.  _Encostar nos esquilos lhe
+        concede pontos._\n2.  _Encostar no dinossauro te tira muitos pontos._\n\nAqui
+        se encontra um tipo diferente de jogo que já foi iniciado para você! Jogue
+        para ver como funciona. \n\nAlguma coisa deveria acontecer quando você consegue
+        pontos o suficiente ou quando você perder todos os pontos. Adicione um código
+        para as funções de `ganhar jogo` e `perder jogo` para fazer o jogo funcionar
+        da forma como devia. \nClique nos dicas para ideias!"
+      course4_artist_concept_challenge2: Crie cinco desenhos de cata-vento utilizando
+        o código abaixo.
+      course4_artist_functions_challenge2: |-
+        Você pode não apenas ir para algumas localizações pré-definidas, como também as bordas da tela, você também pode utilizar o comando `ir para` ir para o lugar exato que você deseje!
+
+        <xml>
+          <block type="jump_to_xy">
+            <title name="XPOS">???</title>
+            <title name="YPOS">???</title>
+            </block></xml>
       course4_artist_fwp_challenge1: Execute este programa e faça alterações para
         ver o que acontece. Você pode descobrir como ele funciona? (Ou exclua-o e
         substitua-o por algo totalmente diferente)
@@ -13046,9 +13815,17 @@ pt-BR:
         _"Você consegue!"_'
       courseB_starWars_prog9_2019: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"Você consegue!"_'
+      courseC19_playLab_EOC1: |-
+        É incrível o quanto você aprendeu! Vamos fazer um jogo passo a passo.
+
+        Utilizando novos blocos da caixa de ferramentas, escolha um novo fundo, e então escolha um ator para estar no seu jogo.
       courseC19_playLab_EOC2: "Use blocos como \"eventos\" e \"ações\" para fazer
         seu personagem se mover quando você pressionar as teclas do teclado. \n\nConduza
         o personagem aos alvos para completar o desafio."
+      courseC19_playLab_EOC3: |-
+        Vamos adicionar mais alguns personagens ao seu jogo!
+
+        Utilize o bloco `escolher ator` para adicionar personagens e então vá para o objetivo para completar esse quebra-cabeça.
       courseC19_playLab_EOC4: |-
         Ter diversos personagens e fazê-los se mover é uma ótima forma de começar um jogo, mas precisamos de muito mais para isso parecer um jogo de verdade. Vamos adicionar um sistema de pontuação!
 
@@ -13056,11 +13833,40 @@ pt-BR:
       courseC19_playLab_EOC5: Bom trabalho! Você tem todos os componentes básicos
         de um jogo. Agora use seu tempo para verificar se o jogo está funcionando
         do jeito que você gostaria. Quando estiver tudo pronto, clique em "Finalizar"!
+      courseC19_playLab_EOC6: Você acabou! Agora você pode jogar o seu jogo ou compartilha-lo
+        com seus amigos e colegas de classe!
       courseC_PlayLab_events6_2019: Agora escreva um programa que faça Valfredo o
         Penguin se mover usando as teclas com as setas para cima / para baixo / à
         esquerda / à direita, para atingir todos os alvos!
+      courseC_PlayLab_events7: |-
+        O bloco `repetir para sempre` permite que você execute o código repetidamente para sempre. Use este bloco para mover Chomp o Dinossauro (ator 2) para cima e para baixo em 400 pixels para sempre.
+
+        ![](https://images.code.org/0cbe6dd5f4e2251e3f121dbabc0cc19d-image-1523040103822.com-resize.gif)
+      courseC_PlayLab_events7_2018: |-
+        O bloco `repetir para sempre` permite que você execute o código repetidamente para sempre. Use este bloco para mover Chomp o Dinossauro (ator 2) para cima e para baixo em 400 pixels para sempre.
+
+        ![](https://images.code.org/0cbe6dd5f4e2251e3f121dbabc0cc19d-image-1523040103822.com-resize.gif)
+      courseC_PlayLab_events7_2019: |-
+        O bloco `repetir para sempre` permite que você execute o código repetidamente para sempre. Use este bloco para mover Chomp o Dinossauro (ator 2) para cima e para baixo em 400 pixels para sempre.
+
+        ![](https://images.code.org/0cbe6dd5f4e2251e3f121dbabc0cc19d-image-1523040103822.com-resize.gif)
+      courseC_PlayLab_events8: "Você pode ter Waddles (ator 1) dizer \"Ai!\" e tocar
+        um som \"batida\" se ele topar com Chomp? \n\nQuando terminar, jogue o jogo
+        para que isso aconteça.\n\n![](https://images.code.org/a634f249021651f60a1acf37bf78d07d-image-1475342557950.gif)"
+      courseC_PlayLab_events8_2018: "Você pode ter Waddles (ator 1) dizer \"Ai!\"
+        e tocar um som \"batida\" se ele topar com Chomp? \n\nQuando terminar, jogue
+        o jogo para que isso aconteça.\n\n![](https://images.code.org/a634f249021651f60a1acf37bf78d07d-image-1475342557950.gif)"
+      courseC_PlayLab_events8_2019: "Você pode ter Waddles (ator 1) dizer \"Ai!\"
+        e tocar um som \"batida\" se ele topar com Chomp? \n\nQuando terminar, jogue
+        o jogo para que isso aconteça.\n\n![](https://images.code.org/a634f249021651f60a1acf37bf78d07d-image-1475342557950.gif)"
       courseC_PlayLab_eventsA_embed_2019: Vamos jogar um jogo. Marque 5 pontos quando
         mover o Pinguim para o Polvo!
+      courseC_PlayLab_events_challenge1: |-
+        Utilize um novo bloco para fazer Waddles automaticamente voltar para o começo quando ele encostar no dinossauro e também quando ele marcar um ponto. Isso fará o seu jogo mais desafiados e divertido!
+
+        Jogue o jogo e mova Waddles com as setas até você conseguir pontos o suficiente. Waddles precisa ser movido para a posição `centro à esquerda` da tela para completar o desafio.
+      courseC_artist_loop1: "Fantástico!  \n\nVamos adicionar um pouco de estilo mudando
+        o pincel usando o bloco `definir padrão` antes do início da repetição."
       courseC_artist_loop1_2019: "_\"Fantástico!\"_ \n\nVamos adicionar um pouco de
         estilo, mudando o pincel utilizando o bloco <xml><block type=\"draw_line_style_pattern\"
         block-text=\"set pattern\"> <title name=\"VALUE\">DEFAULT</title></block></xml>
@@ -13115,6 +13921,24 @@ pt-BR:
         ![expandable](https://images.code.org/5774170704916cfddcf2e98c2c01d718-image-1553099207939.png)
         ![expandable](https://images.code.org/9b016314df4aed5165c76282bab0cea1-image-1553099212229.png)
         ![expandable](https://images.code.org/2cf50b8e9ae75803f15908304c22a10b-image-1553099215987.png)
+      courseC_artist_loops5a: |-
+        O que acontece quando você substitui um ou ambos os adesivos por uma criatura diferente?
+
+        * * *
+
+        ![expandable](https://images.code.org/cadb5e244db64a781bc02b55f2e7ccca-image-1496711397989.08.28.png)
+      courseC_artist_loops5a_2018: |-
+        O que acontece quando você substitui um ou ambos os adesivos por uma criatura diferente?
+
+        * * *
+
+        ![expandable](https://images.code.org/cadb5e244db64a781bc02b55f2e7ccca-image-1496711397989.08.28.png)
+      courseC_artist_loops5a_2019: |-
+        O que acontece quando você substitui um ou ambos os adesivos por uma criatura diferente?
+
+        * * *
+
+        ![expandable](https://images.code.org/cadb5e244db64a781bc02b55f2e7ccca-image-1496711397989.08.28.png)
       courseC_artist_loops5b_2019: |-
         O que acontece quando você `avança` e então `volta` 100, 200 ou 400 pixels em algum ponto dentro da repetição?
 
@@ -13125,6 +13949,22 @@ pt-BR:
         [expandable] [0]
         [expandable] [1]
         [expandable] [2]
+      courseC_artist_loops6a: |-
+        Adicione um terceiro adesivo em qualquer lugar na repetição que você quiser! O que parece agora?
+
+        -   Mude o padrão no seu pincel para mais variedade!
+
+        * * *
+
+        ![expandable](https://images.code.org/b0f999ef4b9ab6bd9780e9fbac07dc8d-image-1497040845047.39.55.png)
+      courseC_artist_loops6a_2018: |-
+        Adicione um terceiro adesivo em qualquer lugar na repetição que você quiser! O que parece agora?
+
+        -   Mude o padrão no seu pincel para mais variedade!
+
+        * * *
+
+        ![expandable](https://images.code.org/b0f999ef4b9ab6bd9780e9fbac07dc8d-image-1497040845047.39.55.png)
       courseC_artist_loops6a_2019: |-
         Adicione um terceiro adesivo em qualquer lugar do laço que você queira! Como se parece agora?
 
@@ -13135,6 +13975,30 @@ pt-BR:
         ![expandable](https://images.code.org/edc53f27379e018e61a6ab9dcc2717ea-image-1560984648573.png)
         ![expandable](https://images.code.org/c41b00a743f245f98d2cfb66cb18e771-image-1560984690182.png)
         ![expandable](https://images.code.org/4c8910f72a7f0cd81713ded7b866a883-image-1560984706203.png)
+      courseC_artist_loops7a: |-
+        Tente mudar a repetição `repetir` para rodar um número diferente de vezes. Até que ponto você precisa virar para dar a volta em um círculo completo?
+
+        -   Tente mudar quantas vezes você gira
+            -   Tente um giro de 60 graus por 6 vezes
+                    \- Tente um giro de 20 graus por 18 vezes
+
+        * * *
+
+        Esta imagem usa um pirata, um ninja e uma girafa. Eles fazem uma repetição de 18 vezes com um giro de 20 graus.
+
+        ![expandable](https://images.code.org/99411638acb44e8a7ba5b9696fe11fa4-image-1496714175039.53.24.png)
+      courseC_artist_loops7a_2018: |-
+        Tente mudar a repetição `repetir` para rodar um número diferente de vezes. Até que ponto você precisa virar para dar a volta em um círculo completo?
+
+        -   Tente mudar quantas vezes você gira
+            -   Tente um giro de 60 graus por 6 vezes
+                    \- Tente um giro de 20 graus por 18 vezes
+
+        * * *
+
+        Esta imagem usa um pirata, um ninja e uma girafa. Eles fazem uma repetição de 18 vezes com um giro de 20 graus.
+
+        ![expandable](https://images.code.org/99411638acb44e8a7ba5b9696fe11fa4-image-1496714175039.53.24.png)
       courseC_artist_loops7a_2019: |-
         Experimente alterar o ciclo `repita` para executar um número diferente de vezes. Quanto você usar para que o giro descreva um círculo completo?
 
@@ -13150,6 +14014,21 @@ pt-BR:
         ![expandable](https://images.code.org/9f28cb9b434b914846c3846bc6652f66-image-1560982666379.png)
         ![expandable](https://images.code.org/e9128684956504b0172708d63b65f93a-image-1560982686482.png)
         ![expandable](https://images.code.org/8e9cf52ecaf72678c65558f18f3e0d3e-image-1560982695632.png)
+      courseC_artist_loopsPre1a: |-
+        Agora, coloque este código em um bloco `repetir` e faça a repetição **6** vezes.
+
+        -   Observe que adicionamos um giro de 60 graus no final do código em repetição para ter uma rotação completa.
+      courseC_artist_loopsPre1a_2018: |-
+        Agora, coloque este código em um bloco `repetir` e faça a repetição **6** vezes.
+
+        -   Observe que adicionamos um giro de 60 graus no final do código em repetição para ter uma rotação completa.
+      courseC_artist_loopsPre1a_2019: |-
+        Agora, coloque este código em um bloco `repetir` e faça a repetição **6** vezes.
+
+        -   Observe que adicionamos um giro de 60 graus no final do código em repetição para ter uma rotação completa.
+      courseC_artist_loopsPrePre1a: |-
+        Use o bloco <xml><block type="jump_to_xy" id="callMe"><title name="XPOS">200</title><title name="YPOS">200</title></block></xml> para levar o artista ao centro da área de jogo.\
+        Em seguida, desenhe uma linha de 50 pixels de comprimento com o bloco <xml><block type="draw_move_by_constant"><title name="DIR">moveForward</title><title name="VALUE">50</title></block></xml>.
       courseC_artist_loopsPrePre1a_2019: |-
         O artista está no lugar errado!
 
@@ -13194,6 +14073,21 @@ pt-BR:
         \_ "Esta espaçonave precisa de uma janela!"
 
         Cada lado do quadrado interno é de 100 pixels e todos os ângulos são de 90 graus.
+      courseC_artist_prog4: |-
+        _"Ah não!  O bichinho de estimação da Starla acabou de voar! Vamos ajudar a moça espacial!"_
+
+        Finalize o foguete de Starla para que ela possa ir atrás do seu bichinho.\
+        (Cada lado do triângulo possui 100 pixels de tamanho e 120 graus nos ângulos.)
+      courseC_artist_prog4_2018: |-
+        _"Ah não!  O bichinho de estimação da Starla acabou de voar! Vamos ajudar a moça espacial!"_
+
+        Finalize o foguete de Starla para que ela possa ir atrás do seu bichinho.\
+        (Cada lado do triângulo possui 100 pixels de tamanho e 120 graus nos ângulos.)
+      courseC_artist_prog4_2019: |-
+        _"Ah não!  O bichinho de estimação da Starla acabou de voar! Vamos ajudar a moça espacial!"_
+
+        Finalize o foguete de Starla para que ela possa ir atrás do seu bichinho.\
+        (Cada lado do triângulo possui 100 pixels de tamanho e 120 graus nos ângulos.)
       courseC_artist_prog5: |-
         \_ "Talvez devêssemos fazer uma plaquinha para cada um dos nossos animais de estimação, caso eles se percam!"
 
@@ -13258,8 +14152,96 @@ pt-BR:
         \_ "Ajude-me a pintar as linhas amarelas nesta estrada!"
 
         Os três segmentos de linha têm comprimentos de 150, 100 e 200 pixels!
+      courseC_collector_loops_challenge2: |-
+        \_ "Vamos caçar tesouros!" \_
+
+        Ajude o colecionador a obter pelo menos **5** peças de tesouro.
+      courseC_collector_loops_challenge2_2018: |-
+        \_ "Vamos caçar tesouros!" \_
+
+        Ajude o colecionador a obter pelo menos **5** peças de tesouro.
+      courseC_collector_loops_challenge2_2019: |-
+        \_ "Vamos caçar tesouros!" \_
+
+        Ajude o colecionador a obter pelo menos **5** peças de tesouro.
+      courseC_collector_prog1: |-
+        **Jogo Livre:** Esta é Laurel, a Aventureiro! Mova-a e pegue o máximo de tesouros que puder. Use o bloco `coletar` para pegar o tesouro!
+
+        Arraste blocos para o espaço de trabalho e tente descobrir como pegar um tesouro. Pegue pelo menos um item para passar desse nível.
+      courseC_collector_prog1_2018: |-
+        **Jogo Livre:** Esta é Laurel, a Aventureiro! Mova-a e pegue o máximo de tesouros que puder. Use o bloco `coletar` para pegar o tesouro!
+
+        Arraste blocos para o espaço de trabalho e tente descobrir como pegar um tesouro. Pegue pelo menos um item para passar desse nível.
+      courseC_collector_prog1_2019: |-
+        **Jogo Livre:** Esta é Laurel, a Aventureiro! Mova-a e pegue o máximo de tesouros que puder. Use o bloco `coletar` para pegar o tesouro!
+
+        Arraste blocos para o espaço de trabalho e tente descobrir como pegar um tesouro. Pegue pelo menos um item para passar desse nível.
+      courseC_collector_prog2: Mova Laurel para o tesouro, então use <xml><block type="collector_collect"/></xml>
+        para pegá-lo.
+      courseC_collector_prog2_2018: Mova Laurel para o tesouro, então use <xml><block
+        type="collector_collect"/></xml> para pegá-lo.
       courseC_collector_prog2_2019: Mova Laurel para o tesouro, então use o bloco
         <xml><block type="collector_collect" block-text="collect"/></xml> para coletá-lo.
+      courseC_collector_prog3: "\\_ \"A sequência é importante!\" \\_ \n\nOs blocos
+        que você precisa já estão no espaço de trabalho, mas não conectados.\\\nOrdene
+        estes blocos para recolher o tesouro e resolver o enigma."
+      courseC_collector_prog3_2018: "\\_ \"A sequência é importante!\" \\_ \n\nOs
+        blocos que você precisa já estão no espaço de trabalho, mas não conectados.\\\nOrdene
+        estes blocos para recolher o tesouro e resolver o enigma."
+      courseC_collector_prog3_2019: "\\_ \"A sequência é importante!\" \\_ \n\nOs
+        blocos que você precisa já estão no espaço de trabalho, mas não conectados.\\\nOrdene
+        estes blocos para recolher o tesouro e resolver o enigma."
+      courseC_collector_prog4: "\\_ \"A sequência é importante!\" \\_\n\nOs blocos
+        de que você precisa já estão no espaço de trabalho, mas não estão conectados.
+        \ \n\nColoque esses blocos em ordem para coletar todo o tesouro e resolver
+        o quebra-cabeça."
+      courseC_collector_prog4_2018: "\\_ \"A sequência é importante!\" \\_\n\nOs blocos
+        de que você precisa já estão no espaço de trabalho, mas não estão conectados.
+        \ \n\nColoque esses blocos em ordem para coletar todo o tesouro e resolver
+        o quebra-cabeça."
+      courseC_collector_prog4_2019: "\\_ \"A sequência é importante!\" \\_\n\nOs blocos
+        de que você precisa já estão no espaço de trabalho, mas não estão conectados.
+        \ \n\nColoque esses blocos em ordem para coletar todo o tesouro e resolver
+        o quebra-cabeça."
+      courseC_collector_prog5: |-
+        \_ "Ajude-me a recolher cada pedacinho do tesouro!"
+
+        Esses blocos estão na ordem errada. Você pode corrigi-los?
+      courseC_collector_prog5_2018: |-
+        \_ "Ajude-me a recolher cada pedacinho do tesouro!"
+
+        Esses blocos estão na ordem errada. Você pode corrigi-los?
+      courseC_collector_prog5_2019: |-
+        \_ "Ajude-me a recolher cada pedacinho do tesouro!"
+
+        Esses blocos estão na ordem errada. Você pode corrigi-los?
+      courseC_collector_prog6: |-
+        \_ "Ajude-me a recolher todo o tesouro!"
+
+        Esses blocos estão na ordem errada. Reordene-os para coletar todo o tesouro.
+      courseC_collector_prog6_2018: |-
+        \_ "Ajude-me a recolher todo o tesouro!"
+
+        Esses blocos estão na ordem errada. Reordene-os para coletar todo o tesouro.
+      courseC_collector_prog6_2019: |-
+        \_ "Ajude-me a recolher todo o tesouro!"
+
+        Esses blocos estão na ordem errada. Reordene-os para coletar todo o tesouro.
+      courseC_collector_prog7: |-
+        **Desafio:** _"O que está acontecendo aqui?"_
+
+        Mesmo se colocarmos estes na ordem certa, ainda haverá alguns faltando.\
+        Use blocos da caixa de ferramentas para coletar todo o tesouro.
+      courseC_collector_prog7_2018: |-
+        **Desafio:** _"O que está acontecendo aqui?"_
+
+        Mesmo se colocarmos estes na ordem certa, ainda haverá alguns faltando.\
+        Use blocos da caixa de ferramentas para coletar todo o tesouro.
+      courseC_collector_prog7_2019: |-
+        **Desafio:** _"O que está acontecendo aqui?"_
+
+        Mesmo se colocarmos estes na ordem certa, ainda haverá alguns faltando.\
+        Use blocos da caixa de ferramentas para coletar todo o tesouro.
       courseC_collector_prog8: _"Continue fazendo um bom trabalho! Me ajude a coletar
         todo o tesouro."_
       courseC_collector_prog8_2018: _"Continue fazendo um bom trabalho! Me ajude a
@@ -13269,14 +14251,107 @@ pt-BR:
       courseC_collector_prog9: _"Vamos pegar todo o tesouro!"_
       courseC_collector_prog9_2018: _"Vamos pegar todo o tesouro!"_
       courseC_collector_prog9_2019: _"Vamos pegar todo o tesouro!"_
+      courseC_collector_prog_challenge2: Existem 20 peças de tesouro nesta caverna.
+        Colete pelo menos **10** para terminar o desafio!
+      courseC_collector_prog_challenge2_2018: Existem 20 peças de tesouro nesta caverna.
+        Colete pelo menos **10** para terminar o desafio!
+      courseC_collector_prog_challenge2_2019: Existem 20 peças de tesouro nesta caverna.
+        Colete pelo menos **10** para terminar o desafio!
       courseC_data wizard: Execute o jogo. O mago fará os animais aparecerem. Conte
         quantos animais são. O que você notou?
+      courseC_flappy_events1: "Anexe o bloco `quantidade normal de bater de asas`
+        ao evento `quando clicar`, depois pressione \"Executar\".   \n\n* * *\n\nClique
+        ou toque no espaço de jogo para mover o Flappy para o alvo."
+      courseC_flappy_events10: "Crie o seu próprio jogo Flappy! \n\nVocê pode mudar
+        o visual e as regras... até a gravidade! \nQuando terminar, clique em \"Concluir\"
+        para compartilhar com amigos em seus telefones."
+      courseC_flappy_events10_2018: "Crie o seu próprio jogo Flappy! \n\nVocê pode
+        mudar o visual e as regras... até a gravidade! \nQuando terminar, clique em
+        \"Concluir\" para compartilhar com amigos em seus telefones."
+      courseC_flappy_events10_2019: "Crie o seu próprio jogo Flappy! \n\nVocê pode
+        mudar o visual e as regras... até a gravidade! \nQuando terminar, clique em
+        \"Concluir\" para compartilhar com amigos em seus telefones."
+      courseC_flappy_events1_2018: "Anexe o bloco `quantidade normal de bater de asas`
+        ao evento `quando clicar`, depois pressione \"Executar\".   \n\n* * *\n\nClique
+        ou toque no espaço de jogo para mover o Flappy para o alvo."
+      courseC_flappy_events1_2019: "Anexe o bloco `quantidade normal de bater de asas`
+        ao evento `quando clicar`, depois pressione \"Executar\".   \n\n* * *\n\nClique
+        ou toque no espaço de jogo para mover o Flappy para o alvo."
+      courseC_flappy_events2: "O evento \\`quando executar' permite que você execute
+        o código assim que seu jogo iniciar.\n\nTente adicionar um bloco que defina
+        a velocidade do nível quando o botão \"Executar\" for pressionado. \n\n* *
+        *\n\nJogue o jogo e bata asas até o alvo para continuar."
+      courseC_flappy_events2_2018: "O evento \\`quando executar' permite que você
+        execute o código assim que seu jogo iniciar.\n\nTente adicionar um bloco que
+        defina a velocidade do nível quando o botão \"Executar\" for pressionado.
+        \n\n* * *\n\nJogue o jogo e bata asas até o alvo para continuar."
+      courseC_flappy_events2_2019: "O evento \\`quando executar' permite que você
+        execute o código assim que seu jogo iniciar.\n\nTente adicionar um bloco que
+        defina a velocidade do nível quando o botão \"Executar\" for pressionado.
+        \n\n* * *\n\nJogue o jogo e bata asas até o alvo para continuar."
+      courseC_flappy_events3: "Agora nós adicionamos o chão. \n\nAnexe o bloco `fim
+        de jogo` ao evento `quando encostar no chão`.\n\n* * *\n\nJogue o jogo e derrube
+        o pássaro no chão para continuar."
+      courseC_flappy_events3_2018: "Agora nós adicionamos o chão. \n\nAnexe o bloco
+        `fim de jogo` ao evento `quando encostar no chão`.\n\n* * *\n\nJogue o jogo
+        e derrube o pássaro no chão para continuar."
+      courseC_flappy_events3_2019: "Agora nós adicionamos o chão. \n\nAnexe o bloco
+        `fim de jogo` ao evento `quando encostar no chão`.\n\n* * *\n\nJogue o jogo
+        e derrube o pássaro no chão para continuar."
+      courseC_flappy_events4: "Flappy voará através dos obstáculos, a menos que você
+        escreva um código para fazê-lo bater. \n\nAnexe um bloco ao evento `quando
+        acertar um obstáculo` para que o jogo termine quando Flappy colidir com o
+        primeiro conjunto de tubos."
+      courseC_flappy_events4_2018: "Flappy voará através dos obstáculos, a menos que
+        você escreva um código para fazê-lo bater. \n\nAnexe um bloco ao evento `quando
+        acertar um obstáculo` para que o jogo termine quando Flappy colidir com o
+        primeiro conjunto de tubos."
+      courseC_flappy_events4_2019: "Flappy voará através dos obstáculos, a menos que
+        você escreva um código para fazê-lo bater. \n\nAnexe um bloco ao evento `quando
+        acertar um obstáculo` para que o jogo termine quando Flappy colidir com o
+        primeiro conjunto de tubos."
+      courseC_flappy_events5: "Nós adicionamos um placar para contar pontos quando
+        Flappy passa por obstáculos.  \n\nAdicione um bloco ao evento `quando passar
+        um obstáculo` que marca um ponto, então pressione \"Executar\" para Flappy
+        voar através do primeiro conjunto de tubos."
+      courseC_flappy_events5_2018: "Nós adicionamos um placar para contar pontos quando
+        Flappy passa por obstáculos.  \n\nAdicione um bloco ao evento `quando passar
+        um obstáculo` que marca um ponto, então pressione \"Executar\" para Flappy
+        voar através do primeiro conjunto de tubos."
+      courseC_flappy_events5_2019: "Nós adicionamos um placar para contar pontos quando
+        Flappy passa por obstáculos.  \n\nAdicione um bloco ao evento `quando passar
+        um obstáculo` que marca um ponto, então pressione \"Executar\" para Flappy
+        voar através do primeiro conjunto de tubos."
+      courseC_flappy_events6: "Clique na seta para baixo dentro do bloco `quantidade
+        normal de bater de asas` para escolher uma potência de bater de asas diferente.
+        \ \n\nVeja se você ainda pode marcar um ponto depois de fazer Flappy bater
+        asas ou uma quantidade menor ou maior cada vez que você clicar."
+      courseC_flappy_events6_2018: "Clique na seta para baixo dentro do bloco `quantidade
+        normal de bater de asas` para escolher uma potência de bater de asas diferente.
+        \ \n\nVeja se você ainda pode marcar um ponto depois de fazer Flappy bater
+        asas ou uma quantidade menor ou maior cada vez que você clicar."
+      courseC_flappy_events6_2019: "Clique na seta para baixo dentro do bloco `quantidade
+        normal de bater de asas` para escolher uma potência de bater de asas diferente.
+        \ \n\nVeja se você ainda pode marcar um ponto depois de fazer Flappy bater
+        asas ou uma quantidade menor ou maior cada vez que você clicar."
       courseC_flappy_events7: Em seguida, tente trocar a cena conectando outro bloco
         ao bloco de "quando o jogo começa".
       courseC_flappy_events7_2018: Em seguida, tente trocar a cena conectando outro
         bloco ao bloco de "quando o jogo começa".
       courseC_flappy_events7_2019: Em seguida, tente trocar a cena conectando outro
         bloco ao bloco de "quando o jogo começa".
+      courseC_flappy_events8: |-
+        Você pode definir o fundo em qualquer evento, não apenas quando o jogo começa.
+
+        Tente definir uma cena \*\* aleatória \*\* quando outros eventos acontecerem... por exemplo, ao passar um obstáculo.
+      courseC_flappy_events8_2018: |-
+        Você pode definir o fundo em qualquer evento, não apenas quando o jogo começa.
+
+        Tente definir uma cena \*\* aleatória \*\* quando outros eventos acontecerem... por exemplo, ao passar um obstáculo.
+      courseC_flappy_events8_2019: |-
+        Você pode definir o fundo em qualquer evento, não apenas quando o jogo começa.
+
+        Tente definir uma cena \*\* aleatória \*\* quando outros eventos acontecerem... por exemplo, ao passar um obstáculo.
       courseC_flappy_events9: Para misturar um pouco, ao invés de terminar o jogo
         quando o Flappy bater em um obstáculo, tente definir a pontuação para 0.
       courseC_flappy_events9_2018: Para misturar um pouco, ao invés de terminar o
@@ -13285,12 +14360,18 @@ pt-BR:
       courseC_flappy_events9_2019: Para misturar um pouco, ao invés de terminar o
         jogo quando o Flappy bater em um obstáculo, tente definir a pontuação para
         0.
+      courseC_harvester_loops1: "Repetições podem ser usadas para repetir mais que
+        movimentos.  \n\nUse repetições para coletar todas as quatro abóboras."
       courseC_harvester_loops10: Colete todo os milhos e as abóboras.
       courseC_harvester_loops10_2018: Colete todo os milhos e as abóboras.
       courseC_harvester_loops10_2019: Colete todo os milhos e as abóboras.
       courseC_harvester_loops11: Colete todo os milhos e as abóboras.
       courseC_harvester_loops11_2018: Colete todo os milhos e as abóboras.
       courseC_harvester_loops11_2019: Colete todo os milhos e as abóboras.
+      courseC_harvester_loops1_2018: "Repetições podem ser usadas para repetir mais
+        que movimentos.  \n\nUse repetições para coletar todas as quatro abóboras."
+      courseC_harvester_loops1_2019: "Repetições podem ser usadas para repetir mais
+        que movimentos.  \n\nUse repetições para coletar todas as quatro abóboras."
       courseC_harvester_loops2: Você consegue combinar dois laços diferentes para
         se mover até às abóboras, e coletar todas elas?
       courseC_harvester_loops2_2018: Você consegue combinar dois laços diferentes
@@ -13300,6 +14381,18 @@ pt-BR:
       courseC_harvester_loops3: Colete todas as abóboras.
       courseC_harvester_loops3_2018: Colete todas as abóboras.
       courseC_harvester_loops3_2019: Colete todas as abóboras.
+      courseC_harvester_loops4: |-
+        Agora também há milho crescendo!
+
+        Colete todo o milho e todas as abóboras.
+      courseC_harvester_loops4_2018: |-
+        Agora também há milho crescendo!
+
+        Colete todo o milho e todas as abóboras.
+      courseC_harvester_loops4_2019: |-
+        Agora também há milho crescendo!
+
+        Colete todo o milho e todas as abóboras.
       courseC_harvester_loops5: Colete todo os milhos e as abóboras.
       courseC_harvester_loops5_2018: Colete todo os milhos e as abóboras.
       courseC_harvester_loops5_2019: Colete todo os milhos e as abóboras.
@@ -13309,6 +14402,18 @@ pt-BR:
       courseC_harvester_loops7: Colete todo os milhos e as abóboras.
       courseC_harvester_loops7_2018: Colete todo os milhos e as abóboras.
       courseC_harvester_loops7_2019: Colete todo os milhos e as abóboras.
+      courseC_harvester_loops8: |-
+        **Desafio:** Colete todo o milho e todas as abóboras.
+
+        Você pode completar esse desafio da maneira que quiser, mas vai exigir muito trabalho ou muito raciocínio!
+      courseC_harvester_loops8_2018: |-
+        **Desafio:** Colete todo o milho e todas as abóboras.
+
+        Você pode completar esse desafio da maneira que quiser, mas vai exigir muito trabalho ou muito raciocínio!
+      courseC_harvester_loops8_2019: |-
+        **Desafio:** Colete todo o milho e todas as abóboras.
+
+        Você pode completar esse desafio da maneira que quiser, mas vai exigir muito trabalho ou muito raciocínio!
       courseC_harvester_loops9: Colete todo os milhos e as abóboras.
       courseC_harvester_loops9_2018: Colete todo os milhos e as abóboras.
       courseC_harvester_loops9_2019: Colete todo os milhos e as abóboras.
@@ -13318,15 +14423,88 @@ pt-BR:
         e os campos!
       courseC_harvester_loops_challenge2_2019: Colete todos os alfaces. Evite as árvores
         e os campos!
+      courseC_maze_debugging1: "Esse código não está exatamente certo! \n\nArrume
+        o código para ajudar Scrat a pegar a nós."
+      courseC_maze_debugging1_2018: "Esse código não está exatamente certo! \n\nArrume
+        o código para ajudar Scrat a pegar a nós."
+      courseC_maze_debugging1_2019: "Esse código não está exatamente certo! \n\nArrume
+        o código para ajudar Scrat a pegar a nós."
+      courseC_maze_debugging3: "Algo não está certo. \n\nRemova blocos para levar
+        Scrat até a nós!"
+      courseC_maze_debugging3_2018: "Algo não está certo. \n\nRemova blocos para levar
+        Scrat até a nós!"
+      courseC_maze_debugging3_2019: "Algo não está certo. \n\nRemova blocos para levar
+        Scrat até a nós!"
       courseC_maze_programming1: Neste quebra-cabeça, arraste todos os blocos juntos
         e clique em "Executar" para ver o que acontece!
       courseC_maze_programming1_2018: Neste quebra-cabeça, arraste todos os blocos
         juntos e clique em "Executar" para ver o que acontece!
       courseC_maze_programming1_2019: Neste quebra-cabeça, arraste todos os blocos
         juntos e clique em "Executar" para ver o que acontece!
+      courseC_maze_programming2: Arraste um bloco <xml><block type="maze_moveForward"/></xml>
+        extra para fora da caixa de ferramentas para terminar seu código.
+      courseC_maze_programming2_2018: Arraste um bloco <xml><block type="maze_moveForward"/></xml>
+        extra para fora da caixa de ferramentas para terminar seu código.
       courseC_maze_programming2_2019: Arraste um bloco extra <xml><block type="maze_moveForward"
         block-text="move forward"/></xml> para fora da caixa de ferramentas para concluir
         seu código.
+      courseC_maze_programming3: |-
+        \_ "Este porco está arrebentando minhas penas." \_
+
+        Há um bloco extra que fará o pássaro cair.
+        Jogue-o fora desencaixando-o dos blocos cinzentos e arrastando-o de volta para a caixa de ferramentas.
+      courseC_maze_programming3_2018: |-
+        \_ "Este porco está arrebentando minhas penas." \_
+
+        Há um bloco extra que fará o pássaro cair.
+        Jogue-o fora desencaixando-o dos blocos cinzentos e arrastando-o de volta para a caixa de ferramentas.
+      courseC_maze_programming3_2019: |-
+        \_ "Este porco está arrebentando minhas penas." \_
+
+        Há um bloco extra que fará o pássaro cair.
+        Jogue-o fora desencaixando-o dos blocos cinzentos e arrastando-o de volta para a caixa de ferramentas.
+      courseC_maze_programming4: "_\"Faça o caminho e me guie até o porco bobo\"_
+        \n\nEvite as TNTs ou penas irão voar!"
+      courseC_maze_programming4_2018: "_\"Faça o caminho e me guie até o porco bobo\"_
+        \n\nEvite as TNTs ou penas irão voar!"
+      courseC_maze_programming4_2019: "_\"Faça o caminho e me guie até o porco bobo\"_
+        \n\nEvite as TNTs ou penas irão voar!"
+      courseC_maze_programming5: |-
+        _"Siga esse caminho para me levar ao porco!"_
+
+        Evite a TNT.
+      courseC_maze_programming5_2018: |-
+        _"Siga esse caminho para me levar ao porco!"_
+
+        Evite a TNT.
+      courseC_maze_programming5_2019: |-
+        _"Siga esse caminho para me levar ao porco!"_
+
+        Evite a TNT.
+      courseC_maze_programming6: |-
+        \_ "Mantenha a calma e me ajude a encontrar o porco ruim. Caso contrário, eu posso ficar com raiva!"
+
+        Leve o pássaro até o porco e evite o TNT.
+      courseC_maze_programming6_2018: |-
+        \_ "Mantenha a calma e me ajude a encontrar o porco ruim. Caso contrário, eu posso ficar com raiva!"
+
+        Leve o pássaro até o porco e evite o TNT.
+      courseC_maze_programming6_2019: |-
+        \_ "Mantenha a calma e me ajude a encontrar o porco ruim. Caso contrário, eu posso ficar com raiva!"
+
+        Leve o pássaro até o porco e evite o TNT.
+      courseC_maze_programming7: |-
+        \_ "É hora de ficar com raiva!"
+
+        **Desafio:** Este código tem muitos bugs. Você precisará remover alguns blocos e adicionar outros.
+      courseC_maze_programming7_2018: |-
+        \_ "É hora de ficar com raiva!"
+
+        **Desafio:** Este código tem muitos bugs. Você precisará remover alguns blocos e adicionar outros.
+      courseC_maze_programming7_2019: |-
+        \_ "É hora de ficar com raiva!"
+
+        **Desafio:** Este código tem muitos bugs. Você precisará remover alguns blocos e adicionar outros.
       courseC_maze_programming8: _" Mantenha a calma e ajude-me a encontrar o porco
         mal."_
       courseC_maze_programming8_2018: _" Mantenha a calma e ajude-me a encontrar o
@@ -13360,6 +14538,117 @@ pt-BR:
       courseC_maze_programming_challenge2_2019: |-
         Algumas vezes existe mais de uma forma de solucionar um problema.
         Algumas vezes é mais fácil ir para trás do que ir para frente!
+      courseC_starWars_loops1: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        \\_ \"Vá buscar a sucata, BB-8!\"\\_ \n\nUse cinco dos mesmos blocos para
+        pegar a sucata. A sucata brilha assim: ![](https://images.code.org/5665566ab779d9b63d03cf8ba127a98f-image-1500570606896.gif)"
+      courseC_starWars_loops10: |-
+        [0]
+        _"Vai BB-8!"_
+
+        Você está indo muito bem! Continue assim!
+      courseC_starWars_loops10_2018: |-
+        [0]
+        _"Vai BB-8!"_
+
+        Você está indo muito bem! Continue assim!
+      courseC_starWars_loops10_2019: |-
+        [0]
+        _"Vai BB-8!"_
+
+        Você está indo muito bem! Continue assim!
+      courseC_starWars_loops11: |-
+        [0]_"Continue assim, BB-8!"_
+
+        Você está quase la! Dessa vez, escolha qualquer caminho que desejar!
+      courseC_starWars_loops11_2018: |-
+        [0]_"Continue assim, BB-8!"_
+
+        Você está quase la! Dessa vez, escolha qualquer caminho que desejar!
+      courseC_starWars_loops11_2019: |-
+        [0]_"Continue assim, BB-8!"_
+
+        Você está quase la! Dessa vez, escolha qualquer caminho que desejar!
+      courseC_starWars_loops1_2018: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        \\_ \"Vá buscar a sucata, BB-8!\"\\_ \n\nUse cinco dos mesmos blocos para
+        pegar a sucata. A sucata brilha assim: ![](https://images.code.org/5665566ab779d9b63d03cf8ba127a98f-image-1500570606896.gif)"
+      courseC_starWars_loops1_2019: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        \\_ \"Vá buscar a sucata, BB-8!\"\\_ \n\nUse cinco dos mesmos blocos para
+        pegar a sucata. A sucata brilha assim: ![](https://images.code.org/5665566ab779d9b63d03cf8ba127a98f-image-1500570606896.gif)"
+      courseC_starWars_loops2: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) \_ "Vai BB-8!" \_
+
+        Para obter toda a sucata, tente criar uma repetição que use apenas um bloco dentro de um bloco `repetir`.
+      courseC_starWars_loops2_2018: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) \_ "Vai BB-8!" \_
+
+        Para obter toda a sucata, tente criar uma repetição que use apenas um bloco dentro de um bloco `repetir`.
+      courseC_starWars_loops2_2019: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) \_ "Vai BB-8!" \_
+
+        Para obter toda a sucata, tente criar uma repetição que use apenas um bloco dentro de um bloco `repetir`.
+      courseC_starWars_loops4: |-
+        ![0]\_"Continue assim, BB-8."
+
+        Nesse quebra-cabeça, dois laços de repetição irão ajudar você a pegar todos os pedaços de metal para o BB-8 com o menor número possível de blocos!
+      courseC_starWars_loops4_2018: |-
+        ![0]\_"Continue assim, BB-8."
+
+        Nesse quebra-cabeça, dois laços de repetição irão ajudar você a pegar todos os pedaços de metal para o BB-8 com o menor número possível de blocos!
+      courseC_starWars_loops4_2019: |-
+        ![0]\_"Continue assim, BB-8."
+
+        Nesse quebra-cabeça, dois laços de repetição irão ajudar você a pegar todos os pedaços de metal para o BB-8 com o menor número possível de blocos!
+      courseC_starWars_loops5: '![0]\_"Vai BB-8!"'
+      courseC_starWars_loops5_2018: '![0]\_"Vai BB-8!"'
+      courseC_starWars_loops5_2019: '![0]\_"Vai BB-8!"'
+      courseC_starWars_loops6: |-
+        ![0]\_"Você consegue pegar todos?"
+
+        Laços funcionam também com mais de um bloco dentro! Você consegue repetir essa sequência?
+      courseC_starWars_loops6_2018: |-
+        ![0]\_"Você consegue pegar todos?"
+
+        Laços funcionam também com mais de um bloco dentro! Você consegue repetir essa sequência?
+      courseC_starWars_loops6_2019: |-
+        ![0]\_"Você consegue pegar todos?"
+
+        Laços funcionam também com mais de um bloco dentro! Você consegue repetir essa sequência?
+      courseC_starWars_loops7: |-
+        ![0]\_"Você consegue!"
+
+        Você pode tentar pegar todos os pedaços de metal utilizando apenas um laço de repetição? Tente ir programando para achar o código de repetição para colocar no laço.
+      courseC_starWars_loops7_2018: |-
+        ![0]\_"Você consegue!"
+
+        Você pode tentar pegar todos os pedaços de metal utilizando apenas um laço de repetição? Tente ir programando para achar o código de repetição para colocar no laço.
+      courseC_starWars_loops7_2019: |-
+        ![0]\_"Você consegue!"
+
+        Você pode tentar pegar todos os pedaços de metal utilizando apenas um laço de repetição? Tente ir programando para achar o código de repetição para colocar no laço.
+      courseC_starWars_loops8: |-
+        ![0]\_"Continue assim, BB-8,"
+
+        **Desafio:** Combine as ideias dos últimos quebra-cabeças para completar esse nível.
+      courseC_starWars_loops8_2018: |-
+        ![0]\_"Continue assim, BB-8,"
+
+        **Desafio:** Combine as ideias dos últimos quebra-cabeças para completar esse nível.
+      courseC_starWars_loops8_2019: |-
+        ![0]\_"Continue assim, BB-8,"
+
+        **Desafio:** Combine as ideias dos últimos quebra-cabeças para completar esse nível.
+      courseC_starWars_loops9: |-
+        ![0]\_"Continue!"
+
+        Utilize o que você aprendeu para coletar todos os pedaços de metal!
+      courseC_starWars_loops9_2018: |-
+        ![0]\_"Continue!"
+
+        Utilize o que você aprendeu para coletar todos os pedaços de metal!
+      courseC_starWars_loops9_2019: |-
+        ![0]\_"Continue!"
+
+        Utilize o que você aprendeu para coletar todos os pedaços de metal!
       courseD_artist_2_2018_2019: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
         _“Bom trabalho!”_\n\nDepois do seu exágono, vire **60** graus á direita, e
         depois desenhe uma linha com **150** pixels de comprimento.   \n\nFinalize
@@ -13374,6 +14663,210 @@ pt-BR:
         **Inspiração:** Você pode mudar seu desenho como quiser, mas aqui está uma ideia:
 
         -   Tente alterar os tipos de formas do centro do floco de neve com o do fim de cada linha!
+      courseD_artist_binary1: |-
+        Nós te fornecemos com uma grade de "pixels" para que você possa olhar e criar desenhos virando apenas alguns quadrados.
+
+        Utilize os blocos abaixo para fazer o artista desenhar "01010101" em binário na primeira linha.
+      courseD_artist_binary1_2018: |-
+        Nós te fornecemos com uma grade de "pixels" para que você possa olhar e criar desenhos virando apenas alguns quadrados.
+
+        Utilize os blocos abaixo para fazer o artista desenhar "01010101" em binário na primeira linha.
+      courseD_artist_binary1_2019: |-
+        Nós te fornecemos com uma grade de "pixels" para que você possa olhar e criar desenhos virando apenas alguns quadrados.
+
+        Utilize os blocos abaixo para fazer o artista desenhar "01010101" em binário na primeira linha.
+      courseD_artist_binary2: |-
+        Aqui está uma função que busca textos binários de 1s e 0s e instrui o artista a segui-los da esquerda para a direita, de cima para baixo.
+
+        * * *
+
+        O artista preencherá os quadrados quando ver um 1, e ignorar o quadrado quando ver um 0.
+
+        * * *
+
+        **Rode esse código para ver como utiliza os binários para desenhar esse padrão.**
+      courseD_artist_binary2_2018: |-
+        Aqui está uma função que busca textos binários de 1s e 0s e instrui o artista a segui-los da esquerda para a direita, de cima para baixo.
+
+        * * *
+
+        O artista preencherá os quadrados quando ver um 1, e ignorar o quadrado quando ver um 0.
+
+        * * *
+
+        **Rode esse código para ver como utiliza os binários para desenhar esse padrão.**
+      courseD_artist_binary2_2019: |-
+        Aqui está uma função que busca textos binários de 1s e 0s e instrui o artista a segui-los da esquerda para a direita, de cima para baixo.
+
+        * * *
+
+        O artista preencherá os quadrados quando ver um 1, e ignorar o quadrado quando ver um 0.
+
+        * * *
+
+        **Rode esse código para ver como utiliza os binários para desenhar esse padrão.**
+      courseD_artist_nestedLoops1a: "Agora repita o triângulo 6 vezes.\n\nApós cada
+        triângulo, você precisará virar 60 graus antes de desenhar o próximo. "
+      courseD_artist_nestedLoops1a_2018: "Agora repita o triângulo 6 vezes.\n\nApós
+        cada triângulo, você precisará virar 60 graus antes de desenhar o próximo. "
+      courseD_artist_nestedLoops1a_2019: "Agora repita o triângulo 6 vezes.\n\nApós
+        cada triângulo, você precisará virar 60 graus antes de desenhar o próximo. "
+      courseD_artist_nestedLoops2: |-
+        Dessa vez, complete o quebra-cabeça com o menor número de blocos possível.
+
+        Após cada triângulo, você precisará virar 60 graus antes de desenhar o próximo.
+        Vê o quão mais fácil é fazer isso com **laços aninhados**?
+      courseD_artist_nestedLoops2_2018: |-
+        Dessa vez, complete o quebra-cabeça com o menor número de blocos possível.
+
+        Após cada triângulo, você precisará virar 60 graus antes de desenhar o próximo.
+        Vê o quão mais fácil é fazer isso com **laços aninhados**?
+      courseD_artist_nestedLoops2_2019: |-
+        Dessa vez, complete o quebra-cabeça com o menor número de blocos possível.
+
+        Após cada triângulo, você precisará virar 60 graus antes de desenhar o próximo.
+        Vê o quão mais fácil é fazer isso com **laços aninhados**?
+      courseD_artist_nestedLoops4: |-
+        Ótimo! Faça a mesma coisa com esses círculos.
+
+        -   Cada círculo é feito movendo 1 pixel antes de virar 1 grau, 360 vezes.
+        -   Cada círculo começa 50 pixels após o último ter acabado
+      courseD_artist_nestedLoops4_2018: |-
+        Ótimo! Faça a mesma coisa com esses círculos.
+
+        -   Cada círculo é feito movendo 1 pixel antes de virar 1 grau, 360 vezes.
+        -   Cada círculo começa 50 pixels após o último ter acabado
+      courseD_artist_nestedLoops4_2019: |-
+        Ótimo! Faça a mesma coisa com esses círculos.
+
+        -   Cada círculo é feito movendo 1 pixel antes de virar 1 grau, 360 vezes.
+        -   Cada círculo começa 50 pixels após o último ter acabado
+      courseD_artist_nestedLoops5: |-
+        O que acontece se você também virar 90 graus entre os círculos?
+
+        (Para conseguir visualizar, você precisará pular 50 pixels entre os círculos)
+      courseD_artist_nestedLoops5_2018: |-
+        O que acontece se você também virar 90 graus entre os círculos?
+
+        (Para conseguir visualizar, você precisará pular 50 pixels entre os círculos)
+      courseD_artist_nestedLoops5_2019: |-
+        O que acontece se você também virar 90 graus entre os círculos?
+
+        (Para conseguir visualizar, você precisará pular 50 pixels entre os círculos)
+      courseD_artist_nestedLoops7: "Utilize o que você aprendeu para fazer esse desenho.\n\n-
+        \  Cada quadrado possui **100 pixeis** de tamanho nos lados e **90 graus**
+        de ângulo.\n-   Você vai precisar virar **60 graus entre os quadrados**. Por
+        que? Pois existem 6 quadrados, e 360 graus (uma volta completa) dividido por
+        6 é 60 graus. \n-   Certifique-se de pular **50 pixels a cada quadrado**"
+      courseD_artist_nestedLoops7_2018: "Utilize o que você aprendeu para fazer esse
+        desenho.\n\n-   Cada quadrado possui **100 pixeis** de tamanho nos lados e
+        **90 graus** de ângulo.\n-   Você vai precisar virar **60 graus entre os quadrados**.
+        Por que? Pois existem 6 quadrados, e 360 graus (uma volta completa) dividido
+        por 6 é 60 graus. \n-   Certifique-se de pular **50 pixels a cada quadrado**"
+      courseD_artist_nestedLoops7_2019: "Utilize o que você aprendeu para fazer esse
+        desenho.\n\n-   Cada quadrado possui **100 pixeis** de tamanho nos lados e
+        **90 graus** de ângulo.\n-   Você vai precisar virar **60 graus entre os quadrados**.
+        Por que? Pois existem 6 quadrados, e 360 graus (uma volta completa) dividido
+        por 6 é 60 graus. \n-   Certifique-se de pular **50 pixels a cada quadrado**"
+      courseD_artist_nestedLoops8: |-
+        Utilizando o que você aprendeu nos últimos quebra-cabeças, monte uma imagem do início.
+
+        -   Cada hexágono possui **50 pixels laterais** e **ângulos de 60 graus**
+      courseD_artist_nestedLoops8_2018: |-
+        Utilizando o que você aprendeu nos últimos quebra-cabeças, monte uma imagem do início.
+
+        -   Cada hexágono possui **50 pixels laterais** e **ângulos de 60 graus**
+      courseD_artist_nestedLoops8_2019: |-
+        Utilizando o que você aprendeu nos últimos quebra-cabeças, monte uma imagem do início.
+
+        -   Cada hexágono possui **50 pixels laterais** e **ângulos de 60 graus**
+      courseD_artist_nestedLoops9: |-
+        **Desafio:** Você consegue descobrir como fazer uma imagem como essa?
+
+        -   Ambas figuras possuem **50 pixels laterais**
+        -   Entre cada par de figuras, você precisará pular o tamanho de um lado, e virar 45 graus.
+      courseD_artist_nestedLoops9_2018: |-
+        **Desafio:** Você consegue descobrir como fazer uma imagem como essa?
+
+        -   Ambas figuras possuem **50 pixels laterais**
+        -   Entre cada par de figuras, você precisará pular o tamanho de um lado, e virar 45 graus.
+      courseD_artist_nestedLoops9_2019: |-
+        **Desafio:** Você consegue descobrir como fazer uma imagem como essa?
+
+        -   Ambas figuras possuem **50 pixels laterais**
+        -   Entre cada par de figuras, você precisará pular o tamanho de um lado, e virar 45 graus.
+      courseD_artist_nestedLoops9_predict1: |-
+        **Desafio:** Você consegue descobrir como fazer uma imagem como essa?
+
+        -   Ambas imagens possuem 50 pixels laterais
+      courseD_artist_nestedLoops9_predict1_2018: |-
+        **Desafio:** Você consegue descobrir como fazer uma imagem como essa?
+
+        -   Ambas imagens possuem 50 pixels laterais
+      courseD_artist_nestedLoops9_predict1_2019: |-
+        **Desafio:** Você consegue descobrir como fazer uma imagem como essa?
+
+        -   Ambas imagens possuem 50 pixels laterais
+      courseD_artist_nestedLoopsFP: |-
+        Agora é sua vez. Use as habilidades que você desenvolveu e faça algo que você ama!
+
+        Precisa de uma ideia? Tente fazer uma dessas:
+
+        ![expandable](https://images.code.org/7ac814e356b3548f57bfab8a9eb31dff-image-1497993113904.png)
+        ![expandable](https://images.code.org/bd29d35c9a8abf9d27591b90b0f3ec0f-image-1497993121072.png)
+        ![expandable](https://images.code.org/2970f34785e51ae98be7aff6fe0827ce-image-1497993126938.png)
+      courseD_artist_nestedLoopsFP_2018: |-
+        Agora é sua vez. Use as habilidades que você desenvolveu e faça algo que você ama!
+
+        Precisa de uma ideia? Tente fazer uma dessas:
+
+        ![expandable](https://images.code.org/7ac814e356b3548f57bfab8a9eb31dff-image-1497993113904.png)
+        ![expandable](https://images.code.org/bd29d35c9a8abf9d27591b90b0f3ec0f-image-1497993121072.png)
+        ![expandable](https://images.code.org/2970f34785e51ae98be7aff6fe0827ce-image-1497993126938.png)
+      courseD_artist_nestedLoopsFP_2019: |-
+        Agora é sua vez. Use as habilidades que você desenvolveu e faça algo que você ama!
+
+        Precisa de uma ideia? Tente fazer uma dessas:
+
+        ![expandable](https://images.code.org/7ac814e356b3548f57bfab8a9eb31dff-image-1497993113904.png)
+        ![expandable](https://images.code.org/bd29d35c9a8abf9d27591b90b0f3ec0f-image-1497993121072.png)
+        ![expandable](https://images.code.org/2970f34785e51ae98be7aff6fe0827ce-image-1497993126938.png)
+      courseD_artist_nestedLoops_challenge1: |-
+        Você consegue descobrir como fazer uma figura como essa?
+
+        -   Ambas imagens possuem **50 pixels laterais**
+        -   Os octágonos são feitos com **45 graus** de ângulo.
+        -   Os triângulos são feitos com **120 graus** de ângulo.
+      courseD_artist_nestedLoops_challenge1_2018: |-
+        Você consegue descobrir como fazer uma figura como essa?
+
+        -   Ambas imagens possuem **50 pixels laterais**
+        -   Os octágonos são feitos com **45 graus** de ângulo.
+        -   Os triângulos são feitos com **120 graus** de ângulo.
+      courseD_artist_nestedLoops_challenge1_2019: |-
+        Você consegue descobrir como fazer uma figura como essa?
+
+        -   Ambas imagens possuem **50 pixels laterais**
+        -   Os octágonos são feitos com **45 graus** de ângulo.
+        -   Os triângulos são feitos com **120 graus** de ângulo.
+      courseD_artist_nestedLoops_challenge2: |-
+        Esse código está ligeiramente errado! Você consegue arrumar para que produza a imagem corretamente no espaço abaixo?
+
+        -   O primeiro laço interno deve fazer um octágono.
+        -   O segundo laço interno deve fazer um hexágono.
+        -   O terceiro laço interno deve fazer um quadrado.
+      courseD_artist_nestedLoops_challenge2_2018: |-
+        Esse código está ligeiramente errado! Você consegue arrumar para que produza a imagem corretamente no espaço abaixo?
+
+        -   O primeiro laço interno deve fazer um octágono.
+        -   O segundo laço interno deve fazer um hexágono.
+        -   O terceiro laço interno deve fazer um quadrado.
+      courseD_artist_nestedLoops_challenge2_2019: |-
+        Esse código está ligeiramente errado! Você consegue arrumar para que produza a imagem corretamente no espaço abaixo?
+
+        -   O primeiro laço interno deve fazer um octágono.
+        -   O segundo laço interno deve fazer um hexágono.
+        -   O terceiro laço interno deve fazer um quadrado.
       courseD_artist_project2: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
         _\"Agora, deixe-me desenhar mais uma.\"_\n\nAgora selecione sua forma e desenhe
         duas ou três em sequência aumentando o número de pixels. \n\n-   Se você aumentar
@@ -13419,6 +14912,40 @@ pt-BR:
         -   O que acontece se você utilizar dois ângulos diferentes no seu padrão escada?
         -   O que acontece se você fizer um padrão diamante mais longo ou mais curto?
         -   O que acontece se você desenhar dois flocos de neve, um sobre o outro?
+      courseD_artist_ramp11: |-
+        Ótimo! Agora vamos fazer um quadrado utilizando Artist! Os blocos são um pouco diferentes, mas a ideia é a mesma.
+
+        * * *
+
+        Cado lado do quadrado possui uma tamanho de 200 pixels, e você precisará virar 90 graus para fazer cada ângulo.
+      courseD_artist_ramp12: |-
+        Utilize o que você aprendeu para desenhar um triângulo dentro do quadrado.
+
+        * * *
+
+        ##### Os lados possuem 200 pixels de tamanho. Você precisará virar 90 graus para fazer o quadrado, e 120 graus para fazer o triângulo.
+      courseD_autorun_binary2_2019: |-
+        Aqui está uma função que busca textos binários de 1s e 0s e instrui o artista a segui-los da esquerda para a direita, de cima para baixo.
+
+        * * *
+
+        O artista preencherá os quadrados quando ver um 1, e ignorar o quadrado quando ver um 0.
+
+        * * *
+
+        **Rode esse código para ver como utiliza os binários para desenhar esse padrão.**
+      courseD_bee_conditionals2: "Mais nuvens!\n\nVerifique abaixo de cada nuvem e
+        observe se ela está escondendo uma flor antes de colher o nectar. Se existir
+        uma flor abaixo da nuvem, a abelha vai precisar colher nectar _uma vez_. \n\nLembre-se:
+        Nem todas as nuvem escondem a mesma coisa!"
+      courseD_bee_conditionals2_2018: "Mais nuvens!\n\nVerifique abaixo de cada nuvem
+        e observe se ela está escondendo uma flor antes de colher o nectar. Se existir
+        uma flor abaixo da nuvem, a abelha vai precisar colher nectar _uma vez_. \n\nLembre-se:
+        Nem todas as nuvem escondem a mesma coisa!"
+      courseD_bee_conditionals2_2019: "Mais nuvens!\n\nVerifique abaixo de cada nuvem
+        e observe se ela está escondendo uma flor antes de colher o nectar. Se existir
+        uma flor abaixo da nuvem, a abelha vai precisar colher nectar _uma vez_. \n\nLembre-se:
+        Nem todas as nuvem escondem a mesma coisa!"
       courseD_bee_conditionals3: Você só pode coletar nectar das flores, mas você
         pode verificar qualquer espaço para ver se há uma flor. Se existe uma flor
         embaixo de alguma das nuvens, a abelha precisará coletar o nectar _uma vez_.
@@ -13430,8 +14957,88 @@ pt-BR:
         você pode verificar qualquer espaço para ver se há uma flor. Se existe uma
         flor embaixo de alguma das nuvens, a abelha precisará coletar o nectar _uma
         vez_.
+      courseD_bee_conditionals6: |-
+        _"Agora eu só quero fazer mel."_
+
+        Algumas das nuvens podem possuir colmeias abaixo delas. Certifique-se de que a colmeia está escondida atrás cada nuvem. Se existir uma colmeia, a abelha só precisará fazer mel _uma vez_.
+      courseD_bee_conditionals6_2018: |-
+        _"Agora eu só quero fazer mel."_
+
+        Algumas das nuvens podem possuir colmeias abaixo delas. Certifique-se de que a colmeia está escondida atrás cada nuvem. Se existir uma colmeia, a abelha só precisará fazer mel _uma vez_.
+      courseD_bee_conditionals6_2019: |-
+        _"Agora eu só quero fazer mel."_
+
+        Algumas das nuvens podem possuir colmeias abaixo delas. Certifique-se de que a colmeia está escondida atrás cada nuvem. Se existir uma colmeia, a abelha só precisará fazer mel _uma vez_.
+      courseD_bee_conditionals7: |-
+        As vezes a nuvem cobre a flor, as vezes sobre a colmeia!
+
+        Utilize os blocos `se/se não` para coletar nectar das flores e fazer mel na colmeia.
+        Lembre-se: Se existir uma flor, a abelha só precisa colher nectar _uma vez_. Se houver uma colmeia, a abelha só precisa fazer mel _uma vez_.
+      courseD_bee_conditionals7_2018: |-
+        As vezes a nuvem cobre a flor, as vezes sobre a colmeia!
+
+        Utilize os blocos `se/se não` para coletar nectar das flores e fazer mel na colmeia.
+        Lembre-se: Se existir uma flor, a abelha só precisa colher nectar _uma vez_. Se houver uma colmeia, a abelha só precisa fazer mel _uma vez_.
+      courseD_bee_conditionals7_2019: |-
+        As vezes a nuvem cobre a flor, as vezes sobre a colmeia!
+
+        Utilize os blocos `se/se não` para coletar nectar das flores e fazer mel na colmeia.
+        Lembre-se: Se existir uma flor, a abelha só precisa colher nectar _uma vez_. Se houver uma colmeia, a abelha só precisa fazer mel _uma vez_.
+      courseD_bee_conditionals7_predict2: "As vezes uma nuvem cobre uma flor, as vezes
+        cobre uma colmeia! \n\nUtilize os blocos `se/se não` para coletar nectar nas
+        flores e fazer mel na colmeia.\nLembre-se: só haverá uma **abelha**, _uma_
+        colemia ou _uma_ flor atrás de cada nuvem."
+      courseD_bee_conditionals8: |-
+        **Desafio:** Haverá ou uma flor, ou uma colmeia abaixo dessas nuvens!
+
+        Colete o nectar uma vez se houver uma flor
+        Se não, faça mel uma vez (pois já existe uma colmeia).
+      courseD_bee_conditionals8_2018: |-
+        **Desafio:** Haverá ou uma flor, ou uma colmeia abaixo dessas nuvens!
+
+        Colete o nectar uma vez se houver uma flor
+        Se não, faça mel uma vez (pois já existe uma colmeia).
+      courseD_bee_conditionals8_2019: |-
+        **Desafio:** Haverá ou uma flor, ou uma colmeia abaixo dessas nuvens!
+
+        Colete o nectar uma vez se houver uma flor
+        Se não, faça mel uma vez (pois já existe uma colmeia).
+      courseD_bee_conditionals9: Colete todo o nectar ou faça todo o mel. Você só
+        pode coletar nectar de flores e apenas fazer mel com colmeias. Verifique todos
+        lugares para ver se existe uma flor ou colmeia. Só poderá haver uma flor ou
+        uma colmeia atrás de cada nuvem.
+      courseD_bee_conditionals9_2018: Colete todo o nectar ou faça todo o mel. Você
+        só pode coletar nectar de flores e apenas fazer mel com colmeias. Verifique
+        todos lugares para ver se existe uma flor ou colmeia. Só poderá haver uma
+        flor ou uma colmeia atrás de cada nuvem.
+      courseD_bee_conditionals9_2019: Colete todo o nectar ou faça todo o mel. Você
+        só pode coletar nectar de flores e apenas fazer mel com colmeias. Verifique
+        todos lugares para ver se existe uma flor ou colmeia. Só poderá haver uma
+        flor ou uma colmeia atrás de cada nuvem.
+      courseD_bee_conditionals_challenge1: Colete todo o nectar e fala todo o mel.
+        Você só pode coletar nectar das flores e fazer mel com colmeias. Verifique
+        todos lugares para ver se há uma flor ou uma colmeia.
+      courseD_bee_conditionals_challenge1_2018: Colete todo o nectar e fala todo o
+        mel. Você só pode coletar nectar das flores e fazer mel com colmeias. Verifique
+        todos lugares para ver se há uma flor ou uma colmeia.
+      courseD_bee_conditionals_challenge1_2019: Colete todo o nectar e fala todo o
+        mel. Você só pode coletar nectar das flores e fazer mel com colmeias. Verifique
+        todos lugares para ver se há uma flor ou uma colmeia.
+      courseD_bee_conditionals_challenge2: Colete todo o nectar e fala todo o mel.
+        Você pode coletar todo o nectar em uma flor utilizando o laço `enquanto nectar
+        > 0`.
+      courseD_bee_conditionals_challenge2_2018: Colete todo o nectar e fala todo o
+        mel. Você pode coletar todo o nectar em uma flor utilizando o laço `enquanto
+        nectar > 0`.
+      courseD_bee_conditionals_challenge2_2019: Colete todo o nectar e fala todo o
+        mel. Você pode coletar todo o nectar em uma flor utilizando o laço `enquanto
+        nectar > 0`.
       courseD_bee_debugging_challenge1: Veja como as abelhas conseguem o néctar. Você
         pode usar o mesmo tipo de padrão para ajudar a abelha a fazer todo o mel?
+      courseD_bee_debugging_challenge1a: |-
+        _"Buzz buzz! U sei como pegar nectar, agora me ajude a fazer mel!"_
+
+        Observe como a abelha consegue o nectar. Você consegue utilizar o mesmo padrão para ajudar a abelha a fazer todo o mel?
       courseD_bee_nestedLoops8: "Colete todo o néctar de cada flor\ne produza mel
         na colmeia. \\\r\n\\\r\nUse um laço aninhado. "
       courseD_bee_nestedLoops8_2018: "Colete todo o néctar de cada flor\ne produza
@@ -13444,6 +15051,105 @@ pt-BR:
       courseD_bee_nestedLoops9_predict2: Faça todo o mel.
       courseD_bee_nestedLoops9_predict2_2018: Faça todo o mel.
       courseD_bee_nestedLoops9_predict2_2019: Faça todo o mel.
+      courseD_collector_debugging1: |-
+        _"O não! Eu vejo um problema."_
+
+        Conserte o(s) erro(s) para coletar todo o tesouro.
+      courseD_collector_debugging10_predict1: |-
+        _"É uma ilha do tesouro"_
+
+        Ajude Laura a consertar o código para pegar todo o tesouro.
+      courseD_collector_debugging1a_2018: |-
+        _"O não! Eu vejo um problema."_
+
+        Conserte o(s) erro(s) para coletar todo o tesouro.
+      courseD_collector_debugging1a_2019: |-
+        _"O não! Eu vejo um problema."_
+
+        Conserte o(s) erro(s) para coletar todo o tesouro.
+      courseD_collector_debugging2: |-
+        _"Você consegue fazer isso!"_
+        Conserte o(s) erro(s) para coletar todo o tesouro.
+      courseD_collector_debugging2a_2018: |-
+        _"Você consegue fazer isso!"_
+        Conserte o(s) erro(s) para coletar todo o tesouro.
+      courseD_collector_debugging2a_2019: |-
+        _"Você consegue fazer isso!"_
+        Conserte o(s) erro(s) para coletar todo o tesouro.
+      courseD_collector_debugging3: |-
+        _"Seja persistente e você conseguirá descobrir como resolver isso."_
+        Conserte o(s) erro(s) para coletar todo o tesouro.
+      courseD_collector_debugging3a_2018: |-
+        _"Seja persistente e você conseguirá descobrir como resolver isso."_
+        Conserte o(s) erro(s) para coletar todo o tesouro.
+      courseD_collector_debugging3a_2019: |-
+        _"Seja persistente e você conseguirá descobrir como resolver isso."_
+        Conserte o(s) erro(s) para coletar todo o tesouro.
+      courseD_collector_debugging4: |-
+        _"Não fique chateado. Você consegue fazer isto!"_
+
+        Conserte o(s) erro(s) para coletar todo o tesouro.
+      courseD_collector_debugging4a_2018: |-
+        _"Não fique chateado. Você consegue fazer isto!"_
+
+        Conserte o(s) erro(s) para coletar todo o tesouro.
+      courseD_collector_debugging4a_2019: |-
+        _"Não fique chateado. Você consegue fazer isto!"_
+
+        Conserte o(s) erro(s) para coletar todo o tesouro.
+      courseD_collector_debugging5: |-
+        _"Este quebra-cabeça está de deixando louco!"_
+
+        Todos os comandos que você precisa já estão aí... agora use sua habilidade de investigação para descobrir como resolver este quebra-cabeça.
+      courseD_collector_debugging5a_2018: |-
+        _"Este quebra-cabeça está de deixando louco!"_
+
+        Todos os comandos que você precisa já estão aí... agora use sua habilidade de investigação para descobrir como resolver este quebra-cabeça.
+      courseD_collector_debugging5a_2019: |-
+        _"Este quebra-cabeça está de deixando louco!"_
+
+        Todos os comandos que você precisa já estão aí... agora use sua habilidade de investigação para descobrir como resolver este quebra-cabeça.
+      courseD_collector_debugging6: "**Desafio.** Todos os blocos que você precisa
+        já estão aí... Agora use suas habilidades de investigação para consertar os
+        erros e coletar todo o tesouro."
+      courseD_collector_debugging8: |-
+        _"São tantos tesouros!"_
+
+        Ajude Laura a consertar o código para pegar todo o tesouro.
+      courseD_collector_debugging8a_2018: |-
+        _"São tantos tesouros!"_
+
+        Ajude Laura a consertar o código para pegar todo o tesouro.
+      courseD_collector_debugging8a_2019: |-
+        _"São tantos tesouros!"_
+
+        Ajude Laura a consertar o código para pegar todo o tesouro.
+      courseD_collector_debugging9: |-
+        _"É uma ilha do tesouro"_
+
+        Ajude Laura a consertar o código para pegar todo o tesouro.
+      courseD_collector_debugging9a_2018: |-
+        _"É uma ilha do tesouro"_
+
+        Ajude Laura a consertar o código para pegar todo o tesouro.
+      courseD_collector_debugging9a_2019: |-
+        _"É uma ilha do tesouro"_
+
+        Ajude Laura a consertar o código para pegar todo o tesouro.
+      courseD_collector_nested_loops_challenge2a: |-
+        _"Vamos caçar tesouros - utilizando laços!"_
+
+        Ajude Laurel a coletar pelo menos duas pilhas de tesouro utilizando apenas os blocos da caixa de ferramentas. É possível de se coletar todos os 4.
+      courseD_collector_ramp10: Mova Laurel por esse quadrado coletando tesouros quando
+        encontra-los.
+      courseD_collector_ramp8: |-
+        Esse quebra-cabeça é bem parecido com o anterior, mas agora é estrelado pela Laurel a Aventureira!
+
+        * * *
+
+        Utilize o mesmo caminho de antes, mas dessa vez, utilize um laço de repetição para coletar tesouros quando chegar la.
+      courseD_collector_ramp9: Agora existem mais tesouros. Você consegue ajudar Laurel
+        a coletar todos?
       courseD_farmer_while1: "_\"Oi, eu sou um fazendeiro. Eu preciso da sua ajuda
         para planificar o campo na minha fazenda para que ele fique pronto para a
         plantação!\"_ \n\nMova a pilha de terra e utilize o bloco 'remover' para removê-la."
@@ -13518,22 +15224,62 @@ pt-BR:
       courseD_maze_ramp2_2019: Arraste um bloco extra `avançar` para fora da caixa
         de ferramentas e, em seguida, anexe todos os blocos ao `quando executar` para
         concluir seu código.
+      courseD_maze_ramp3: |-
+        _"Esse porco está me incomodando."_
+
+        Existe um bloco a mais que fará com que o pássaro caia.\
+        Jogue-o fora removendo ele dos outros blocos e jogando dentro da caixa de ferramentas.
+      courseD_maze_ramp3_2018: |-
+        _"Esse porco está me incomodando."_
+
+        Existe um bloco a mais que fará com que o pássaro caia.\
+        Jogue-o fora removendo ele dos outros blocos e jogando dentro da caixa de ferramentas.
       courseD_maze_ramp3_2019: |-
         Ajude o pássaro a chegar no porco. Há um bloco azul extra de "avance".
 
         Jogue fora o bloco que está sobrando desconectando-o dos outros blocos e arrastando-o de volta para a caixa de ferramentas.
+      courseD_maze_ramp4: "_\"Faça o caminho e me guie até o porco bobo\"_ \n\nEvite
+        as TNTs ou penas irão voar!"
+      courseD_maze_ramp4_2018: "_\"Faça o caminho e me guie até o porco bobo\"_ \n\nEvite
+        as TNTs ou penas irão voar!"
       courseD_maze_ramp4_2019: _"Encontre o caminho que me leva até a noz."_
+      courseD_maze_ramp5: |-
+        _"Siga esse caminho para me levar ao porco!"_
+
+        Evite a TNT.
+      courseD_maze_ramp5_2018: |-
+        _"Siga esse caminho para me levar ao porco!"_
+
+        Evite a TNT.
+      courseD_maze_ramp5_2019: |-
+        _"Siga esse caminho para me levar ao porco!"_
+
+        Evite a TNT.
       courseD_maze_ramp5a: Preste atenção na sequência e veja se consegue descobrir
         como chegar a esse porco!
       courseD_maze_ramp5a_2018: Preste atenção na sequência e veja se consegue descobrir
         como chegar a esse porco!
       courseD_maze_ramp5a_2019: Conte os espaços na grade com cuidado!
+      courseD_maze_ramp5b: "**Desafio:** Ande pelo labirinto para ajudar o pássaro
+        a achar o porco!"
+      courseD_maze_ramp5b_2018: "**Desafio:** Ande pelo labirinto para ajudar o pássaro
+        a achar o porco!"
+      courseD_maze_ramp5b_2019: "**Desafio:** Ande pelo labirinto para ajudar o pássaro
+        a achar o porco!"
       courseD_maze_ramp5c: Ajude o pássaro a chegar até o porco.
       courseD_maze_ramp5c_2018: Ajude o pássaro a chegar até o porco.
       courseD_maze_ramp5c_2019: Ajude Scrat a chegar até a noz.
       courseD_maze_ramp5d: Leve o pássaro até o porco.
       courseD_maze_ramp5d_2018: Leve o pássaro até o porco.
       courseD_maze_ramp5d_2019: Leve o pássaro até o porco.
+      courseD_maze_ramp6: |-
+        _"Se mantenha calmo e me ajude a encontrar o porco malvado. Se não eu posso ficar bravo!"_
+
+        Quando você possui vários bloco iguais seguidos, tente utilizar um laço de repetição no lugar. Isso fará a mesma coisa só que com menos código!
+      courseD_maze_ramp7: |-
+        _"É hora de ficar bravo!"_
+
+        Utilize o que você aprendeu para levar o pássaro até o porco!
       courseD_maze_until10: Ajude o zumbi a chegar até o girassol.
       courseD_maze_until10_2018: Ajude o zumbi a chegar até o girassol.
       courseD_maze_until10_2019: Ajude o zumbi a chegar até o girassol.
@@ -13547,11 +15293,68 @@ pt-BR:
       courseD_maze_until7_2018: Ajude o zumbi a chegar até o girassol.
       courseD_maze_until7_2019: Ajude o zumbi a chegar até o girassol.
       courseD_maze_until8: Ajude o zumbi a chegar até o girassol.
-      courseD_scrat_ramp1: Neste quebra-cabeça, arraste todos os blocos juntos e clique
-        em "Executar" para ver o que acontece!
+      courseD_playLab_cond1: Para começar o jogo, o pirate PegLeg (ator 1) precisa
+        conseguir andar em todas direções. Ligue os blocos aos correspondentes eventos
+        para fazer PegLeg se mover.
+      courseD_playLab_cond1_2018: Para começar o jogo, o pirate PegLeg (ator 1) precisa
+        conseguir andar em todas direções. Ligue os blocos aos correspondentes eventos
+        para fazer PegLeg se mover.
+      courseD_playLab_cond2: "Hora de adicionar pontos!\n\nAltere o código para dar
+        a PegLeg (ator 1) um ponto quando ele chegar ao dragão (ator 2). "
+      courseD_playLab_cond2_2018: "Hora de adicionar pontos!\n\nAltere o código para
+        dar a PegLeg (ator 1) um ponto quando ele chegar ao dragão (ator 2). "
+      courseD_playLab_cond3: 'Utilize um laço `repetir para sempre` para fazer o dragão
+        (ator 2) trocar entre emoções aleatórias a cada segundo.  '
+      courseD_playLab_cond3_2018: 'Utilize um laço `repetir para sempre` para fazer
+        o dragão (ator 2) trocar entre emoções aleatórias a cada segundo.  '
+      courseD_playLab_cond3a: "É hora de utilizar o que aprendemos sobre condicionais
+        para fazer esse jogo ficar melhor ainda. \n\nAdicione um código para que quando
+        PegLeg, ao chegar no dragão, ganhe 2 pontos _se_ o dragão está feliz. Caso
+        não esteja, ele deve ganhar apenas um ponto adicionado ao placar."
+      courseD_playLab_cond3a_2018: "É hora de utilizar o que aprendemos sobre condicionais
+        para fazer esse jogo ficar melhor ainda. \n\nAdicione um código para que quando
+        PegLeg, ao chegar no dragão, ganhe 2 pontos _se_ o dragão está feliz. Caso
+        não esteja, ele deve ganhar apenas um ponto adicionado ao placar."
+      courseD_playLab_cond4: "As coisas estão ficando interessantes! \n\nAdicione
+        um código para que o ninja (ator 3) comece a seguir PegLeg assim que o jogo
+        comece. Termine o jogo com uma derrota caso o ninja o alcance."
+      courseD_playLab_cond4_2018: "As coisas estão ficando interessantes! \n\nAdicione
+        um código para que o ninja (ator 3) comece a seguir PegLeg assim que o jogo
+        comece. Termine o jogo com uma derrota caso o ninja o alcance."
+      courseD_playLab_cond5: |-
+        Agora precisamos de uma forma de vencer.
+
+        Adicione um laço `repetir para sempre` que sempre verifique **se** o placar é maior do que 5, e caso seja, termine o jogo com uma **vitória**.
+      courseD_playLab_cond5_2018: |-
+        Agora precisamos de uma forma de vencer.
+
+        Adicione um laço `repetir para sempre` que sempre verifique **se** o placar é maior do que 5, e caso seja, termine o jogo com uma **vitória**.
+      courseD_playLab_cond6: |-
+        Uau, esse jogo é difícil de vencer!
+
+        Vamos alterar esse jogo para faze-lo mais divertido. Esse desafio possui duas partes:
+
+        * * *
+
+        1.  Diminua a velocidade do ninja (ator 3) antes de você coloca-lo para seguir o pirata (ator 1).
+        2.  Utilize um laço `repita para sempre` para verificar se o pirata está na "zona segura" abaixo da linha de polvos  (225 pixels abaixo). Se ele estiver, coloque o ninja para **fugir** do pirata. Se não estiver, coloque o ninja para **seguir** o pirata.
+      courseD_playLab_cond6a: "Nós não queremos que o pirate fique na \"zona segura\"
+        por muito tempo! \n\nAdicione um código ao \"se\" abaixo para que se o pirata
+        (ator 1) estiver na zona segura, o programa espere um segundo, então reduza
+        um ponto enquanto ele estiver abaixo da linha do polvo."
+      courseD_playLab_cond6a_2018: "Nós não queremos que o pirate fique na \"zona
+        segura\" por muito tempo! \n\nAdicione um código ao \"se\" abaixo para que
+        se o pirata (ator 1) estiver na zona segura, o programa espere um segundo,
+        então reduza um ponto enquanto ele estiver abaixo da linha do polvo."
+      courseD_scrat_ramp1: Para este quebra-cabeça, junte todos os blocos e clique
+        em "Executar" para assistir!
       courseD_scrat_ramp2: Arraste um bloco extra `avançar` para fora da caixa de
         ferramentas e, em seguida, anexe todos os blocos ao `quando executar` para
         concluir seu código.
+      courseD_scrat_ramp4: Evite a(s) TNT(s) ou penas irão voar!
+      courseD_scrat_ramp7: Ajude Scrat a chegar até a noz!
+      courseD_scrat_ramp8: "**Desafio:** Utilize o que você aprendeu para levar Scrat
+        até a nós!"
       courseE_aboutme_1: |-
         ![](https://images.code.org/93e1c04857ff781bb5c4cc76b15ed563-image-1557179820861.png)_"Olá, mundo! Meu nome é Rikki, e aqui estão algumas coisas que eu gostaria de compartilhar sobre mim!"_
 
@@ -13598,12 +15401,320 @@ pt-BR:
         Escolha um plano de fundo que combine com o seu poster.\n-   Adicione comportamentos!
         Faça cada um dos seus sprites reagir de maneira diferente quando são clicados.\n-
         \  Adicione mais eventos! Use os outros blocos na categoria `Eventos`."
+      courseE_artist_concept1: "Refaça essa imagem. \n\n-   Os hexágonos possuem lados
+        de 50 pixels\n-   Os hexágonos estão a 100 pixels de distância\n-   As larguras
+        das canetas são de 1 pixel, 4 pixels e 8 pixels."
+      courseE_artist_concept1_2018: "Refaça essa imagem. \n\n-   Os hexágonos possuem
+        lados de 50 pixels\n-   Os hexágonos estão a 100 pixels de distância\n-   As
+        larguras das canetas são de 1 pixel, 4 pixels e 8 pixels."
+      courseE_artist_concept4: "Refaça essa desenho. \n\nCada quadrado possui um lado
+        de **20 pixels** e existem **15 quadrados or linha**."
+      courseE_artist_concept4_2018: "Refaça essa desenho. \n\nCada quadrado possui
+        um lado de **20 pixels** e existem **15 quadrados or linha**."
+      courseE_artist_concept_challenge1: |-
+        <img src="https://images.code.org/6cac10470af71bbb5d75bf5e2669046f-image-1439939145211.png" width="200px"/>
+
+        Agora um desafio!
+
+        Aqui está um desenho que utiliza apenas blocos dos quais você já foi apresentado. Você consegue descobrir como refaze-lo? Sinta-se livre para fazer por tentativa e erro. Você não precisa desenhar perfeitamente logo na primeira vez.
+      courseE_artist_concept_challenge1_2018: |-
+        <img src="https://images.code.org/6cac10470af71bbb5d75bf5e2669046f-image-1439939145211.png" width="200px"/>
+
+        Agora um desafio!
+
+        Aqui está um desenho que utiliza apenas blocos dos quais você já foi apresentado. Você consegue descobrir como refaze-lo? Sinta-se livre para fazer por tentativa e erro. Você não precisa desenhar perfeitamente logo na primeira vez.
+      courseE_artist_concept_challenge2: Crie cinco desenhos de cata-vento utilizando
+        o código abaixo.
+      courseE_artist_concept_challenge2_2018: Crie cinco desenhos de cata-vento utilizando
+        o código abaixo.
+      courseE_artist_functions1: |-
+        _"Mim ser zumbi artista. Mim amar desenhar!"_
+
+        Ajude o zumbi a desenhar óculos utilizando quadrados com lados de 100 pixels.\
+        A linha entre os óculos possui 75 pixels de tamanho.
+      courseE_artist_functions10: |-
+        Dessa vez, utilize linhas de 8 hexágonos com lados de 25 pixels.
+
+        -   Para fazer cada hexágono, repita o lado 6 vezes, virando 60 graus.
+        -   Pule 25 pixels entre cada hexágono.
+        -   Para desenhar um diamante, você vai precisar alterar entre virar 60 graus e 120 graus.
+      courseE_artist_functions10_2018: |-
+        Dessa vez, utilize linhas de 8 hexágonos com lados de 25 pixels.
+
+        -   Para fazer cada hexágono, repita o lado 6 vezes, virando 60 graus.
+        -   Pule 25 pixels entre cada hexágono.
+        -   Para desenhar um diamante, você vai precisar alterar entre virar 60 graus e 120 graus.
+      courseE_artist_functions10_2019: |-
+        Dessa vez, utilize linhas de 8 hexágonos com lados de 25 pixels.
+
+        -   Para fazer cada hexágono, repita o lado 6 vezes, virando 60 graus.
+        -   Pule 25 pixels entre cada hexágono.
+        -   Para desenhar um diamante, você vai precisar alterar entre virar 60 graus e 120 graus.
+      courseE_artist_functions2: |-
+        Funções te deixam criar novos blocos!
+
+        Nós movemos os blocos necessários para desenhar um quadrado para uma função chamada `desenhar um quadrado`. Dessa vez, utilize a função `desenhar um quadrado` para criar os óculos.
+
+        * * *
+
+        Os quadrados ficam a uma distância de 75 pixels.
+      courseE_artist_functions3: |-
+        Nós voltaremos para funções em breve. Vamos dar uma pausa para treinar fazer essa estrela.
+
+        Você pode fazer esse desenho utilizando um bloco de repetição.
+      courseE_artist_functions4: |-
+        Agora que você consegue desenhar uma estrela, tente desenhar quatro estrelas!
+
+        -   Cada braço da estrela possui 25 pixels de tamanho.
+        -   Vire 45 graus entre os braços
+        -   Pule 100 pixels entre cada estrela
+      courseE_artist_functions5: |-
+        Quando é mais difícil desenhar três estrelas em vez de quatro? Quando você também precisa pular por cima da lua!
+
+        Desenhe apenas essas três estrelas para finalizar o quebra-cabeça.
+      courseE_artist_functions6: |-
+        Você está indo muito bem!
+
+        Faça essa janela desenhando um quadrado, então vire 90 graus antes de começar a desenhar o próximo, e assim sucessivamente.
+      courseE_artist_functions7: |-
+        Vamos pegar o código para a janela e adiciona-lo à função `desenhar janela`. Agora, nós podemos chamar essa função a qualquer momento para desenhar uma janela sem ter que escrever o código novamente.
+
+        ![](https://images.code.org/615a5e93abdaffeed438a976a56fc1f5-image-1497998528859.gif)
+
+        Tente resolver esse quebra cabeça utilizando a função `desenhar janela` e chamando-a cinco vezes. Cuidado com a porta!
+
+        -   As janelas de cima estão a 50 pixels de distância entre elas.
+        -   As janelas de baixo estão a 100 pixels abaixo das de cima.
+      courseE_artist_functions8: Crie quantas funções achar necessário para criar
+        esse desenho quadrados de 50 pixels.
+      courseE_artist_functions9: "Cria essa imagem utilizando o número limitado de
+        blocos dados.\n\n-   Cada triângulo possui lados de **50 pixels** \n-   Para
+        desenhar um diamante, você precisa alterar entre virar **60 graus e 120 graus**."
+      courseE_artist_functions_challenge1: A partir do momento que você definir uma
+        função, você pode chama-la quantas vezes precisar - quando quiser! Rode esse
+        código para ver como funciona, então mude-o para fazer o seu próprio desenho
+        impresionante!
+      courseE_artist_functions_challenge1_2018: A partir do momento que você definir
+        uma função, você pode chama-la quantas vezes precisar - quando quiser! Rode
+        esse código para ver como funciona, então mude-o para fazer o seu próprio
+        desenho impresionante!
+      courseE_artist_functions_challenge1_2019: A partir do momento que você definir
+        uma função, você pode chama-la quantas vezes precisar - quando quiser! Rode
+        esse código para ver como funciona, então mude-o para fazer o seu próprio
+        desenho impresionante!
+      courseE_artist_functions_challenge2: |-
+        Você pode não apenas ir para algumas localizações pré-definidas, como também as bordas da tela, você também pode utilizar o comando `ir para` ir para o lugar exato que você deseje!
+
+        <xml>
+          <block type="jump_to_xy">
+            <title name="XPOS">???</title>
+            <title name="YPOS">???</title>
+            </block></xml>
+      courseE_artist_functions_challenge2_2018: |-
+        Você pode não apenas ir para algumas localizações pré-definidas, como também as bordas da tela, você também pode utilizar o comando `ir para` ir para o lugar exato que você deseje!
+
+        <xml>
+          <block type="jump_to_xy">
+            <title name="XPOS">???</title>
+            <title name="YPOS">???</title>
+            </block></xml>
+      courseE_artist_functions_challenge2_2019: |-
+        Você pode não apenas ir para algumas localizações pré-definidas, como também as bordas da tela, você também pode utilizar o comando `ir para` ir para o lugar exato que você deseje!
+
+        <xml>
+          <block type="jump_to_xy">
+            <title name="XPOS">???</title>
+            <title name="YPOS">???</title>
+            </block></xml>
+      courseE_artist_functions_predict1: 'Aqui está um quebra-cabeça que usa uma função
+        que nós definimos. '
+      courseE_artist_functions_predict1_2018: 'Aqui está um quebra-cabeça que usa
+        uma função que nós definimos. '
+      courseE_artist_functions_predict1_2019: 'Aqui está um quebra-cabeça que usa
+        uma função que nós definimos. '
+      courseE_artist_ramp9: Cada lado tem 100 pixels. Você precisa girar 120 graus
+        em cada canto.
+      courseE_artist_ramp9_2: Cada lado tem 100 pixels. Você precisa girar 120 graus
+        em cada canto.
+      courseE_bee_concept1: "_\"Você consegue acreditar nessa quantidade de flores?\"_\n\nColete
+        todo o nectar de cada flor. "
+      courseE_bee_concept1_2018: "_\"Você consegue acreditar nessa quantidade de flores?\"_\n\nColete
+        todo o nectar de cada flor. "
+      courseE_bee_concept2: "Ajude a abelha a fazer todo o mel. \n\nVocê só pode fazer
+        mel na colmeia, mas você pode verificar qualquer lugar para ver se há uma
+        colmeia."
+      courseE_bee_concept2_2018: "Ajude a abelha a fazer todo o mel. \n\nVocê só pode
+        fazer mel na colmeia, mas você pode verificar qualquer lugar para ver se há
+        uma colmeia."
+      courseE_bee_concept5: "Você consegue ajudar a abelha a coletar o nectar dessas
+        flores? \n\nVocê só pode coletar nectar de flores, mas você pode verificar
+        qualquer lugar para ver se existe uma flor."
+      courseE_bee_concept5_2018: "Você consegue ajudar a abelha a coletar o nectar
+        dessas flores? \n\nVocê só pode coletar nectar de flores, mas você pode verificar
+        qualquer lugar para ver se existe uma flor."
+      courseE_bee_functions10: |-
+        _"Me mostre o MEL!"_
+
+        Resolva esse quebra-cabeça criando uma função que faça com que a abelha:
+
+        -   vire para o galho no caminho
+        -   ande para frente
+        -   faça todo o mel
+        -   retorne para o caminho principal
+        -   vire-se para o caminho original
       courseE_bee_functions2: "As funções são blocos de código que realizam uma tarefa.
         \n\nUse a função `colete 2 néctares` para coletar o néctar de cada flor."
       courseE_bee_functions3: "As funções são blocos de código que realizam\numa tarefa.
         \\\r\n\\\r\nUse a função \"obtenha 5\" para obter 5 néctares por vez."
+      courseE_bee_functions4: "A função `ande e pegue nectar` vira a abelha, coleta
+        o nectar, e daí retorna a abelha para o ponto de partida. \n\nUtilize a função
+        `anda e pegue nectar` par coletar todo o nectar."
+      courseE_bee_functions8: "**Desafio:** Essas flores podem ter quantidades diferentes
+        de nectar cada vez qye você roda o quebra-cabeça. \n\nCria uma função que
+        colete todo o nectar de cada flor."
+      courseE_bee_functions_challenge1: Você está sozinho nesse desafio. Isso poderia
+        ser mais difícil do que parece!
+      courseE_farmer_functions1: |-
+        _"Já nos encontramos antes? Eu sou o agricultor!"_
+
+        Ajude o agricultor a chegar na abóbora e pega-la.
       courseE_farmer_functions10b: Use sua nova função duas vezes para resolver este
         desafio.
+      courseE_farmer_functions11_predict: Descubra qual função utilizar e qual remover,
+        então resolva o quebra-cabeça!
+      courseE_farmer_functions11_predict_2018: Descubra qual função utilizar e qual
+        remover, então resolva o quebra-cabeça!
+      courseE_farmer_functions11_predict_2019: Descubra qual função utilizar e qual
+        remover, então resolva o quebra-cabeça!
+      courseE_farmer_functions1_2018: |-
+        _"Já nos encontramos antes? Eu sou o agricultor!"_
+
+        Ajude o agricultor a chegar na abóbora e pega-la.
+      courseE_farmer_functions1_2019: |-
+        _"Já nos encontramos antes? Eu sou o agricultor!"_
+
+        Ajude o agricultor a chegar na abóbora e pega-la.
+      courseE_farmer_functions1a: "_\"Ahhh, vegetais estão crescendo em todo lugar!\"_\n\nAgora
+        ajude o agricultor a coletar todo o milho até chegar na abóbora no final do
+        caminho. \n\n* * *\n\n#### Nota: Todo quadrado no caminho que leva à abóbora
+        possui ou _um_ milho ou nada. Você precisará usar um `se` para verificar se
+        existe milho antes de tentar pega-lo!"
+      courseE_farmer_functions2b: |-
+        Ajude o agricultor a coletar milho e abóboras.
+
+        * * *
+
+        ##### Cada muda irá gerar _um_ milho ou nada.
+      courseE_farmer_functions2ba: "_\"Eu me sinto tão útil!\"_\n\nVocê percebeu que
+        havia código repetido no último quebra-cabeça? Não funciona coloca-los dentro
+        de um laço, mas nós **podemos** usar funções. \n\nPara esse quebra-cabeça,
+        nós movemos o código repetido para uma função chamada `milho e abóbora`. Agora,
+        tudo que você precisa fazer é colocar uma simples chamada à função `milho
+        e abóbora` no código onde precisar.\n\n* * *\n\n##### Cada muda irá gerar
+        _um_ milho ou nada."
+      courseE_farmer_functions3c: "Agora, preencha a função você mesmo retirando os
+        blocos do código e colocando-os na **definição de função**. \n\nNão se esqueça
+        de adicionar um simples bloco de **chamada à função** para usar a função no
+        programa que você fez."
+      courseE_farmer_functions5c: Sua função será útil aqui.
+      courseE_farmer_functions6c: |-
+        _"Alface ocupa toda a produção!"_
+
+        Agora as mudas podem ser milho **ou** alface. O que você precisa adicionar ao programa para verificar cada antes de coleta-las?
+
+        * * *
+
+        ##### Nota: Cada muda irá retornar ou **um** milho ou **uma** alface.
+      courseE_farmer_functions7b: |-
+        _"Essa colheita é maravilhosa!"_
+
+        Ajude o agricultor a encontrar a passagem correta nesse confuso caminho até a abóbora, virando a **esquerda** ao chegar no milho, e **direita** na alface.
+
+        _(Não se esqueça de coletar todos os produtos no caminho!)_
+      courseE_farmer_functions8b: "**Desafio:** Nem todos os cantos estão marcados
+        nesse labirinto, isso significa que você vai precisar utilizar seu código
+        de navegação mais de uma vez para chegar onde você precisa ir. \n\nVocê consegue
+        descobrir o que você precisa fazer?"
+      courseE_farmer_functions9b: De uma boa olhada nesse quebra-cabeça. Você consegue
+        descobrir o padrão?
+      courseE_farmer_ramp11a: "Jesus! Esse monte é tão grande que é difícil imaginar
+        quanta sujeira há nele. \n\n* * *\n\nAdicionamos um novo bloco na caixa de
+        ferramentas chamado de bloco `enquanto existir um monte`. Utilize esse bloco
+        para remover a sujeira apenas enquanto há sujeira para ser retirada! "
+      courseE_farmer_ramp11a_2018: "Jesus! Esse monte é tão grande que é difícil imaginar
+        quanta sujeira há nele. \n\n* * *\n\nAdicionamos um novo bloco na caixa de
+        ferramentas chamado de bloco `enquanto existir um monte`. Utilize esse bloco
+        para remover a sujeira apenas enquanto há sujeira para ser retirada! "
+      courseE_farmer_ramp11a_2019: "Jesus! Esse monte é tão grande que é difícil imaginar
+        quanta sujeira há nele. \n\n* * *\n\nAdicionamos um novo bloco na caixa de
+        ferramentas chamado de bloco `enquanto existir um monte`. Utilize esse bloco
+        para remover a sujeira apenas enquanto há sujeira para ser retirada! "
+      courseE_farmer_ramp12_forswap: Colete toda a alface.
+      courseE_farmer_ramp12_forswap_2018: Colete toda a alface.
+      courseE_farmer_ramp12_forswap_2019: Colete toda a alface.
+      courseE_farmer_ramp12c: "Meu deus! Olhe todas essas mudas. Algumas irão virar
+        milho, e outras alface.\n\nVá até o final de cada caminho para colher alface
+        enquanto existir alface, e colha milho enquanto existir milho. "
+      courseE_farmer_ramp12c_2018: "Meu deus! Olhe todas essas mudas. Algumas irão
+        virar milho, e outras alface.\n\nVá até o final de cada caminho para colher
+        alface enquanto existir alface, e colha milho enquanto existir milho. "
+      courseE_farmer_ramp12c_2019: "Meu deus! Olhe todas essas mudas. Algumas irão
+        virar milho, e outras alface.\n\nVá até o final de cada caminho para colher
+        alface enquanto existir alface, e colha milho enquanto existir milho. "
+      courseE_farmer_ramp12d: "As mesmas técnicas funcionam com nectar e com mel!
+        \n\nOlhe todas essas nuvens. Algumas delas irão virar mel, e outras virarão
+        nectar.\\\nAjude a abelha a seguir o caminho e resolva o quebra-cabeça."
+      courseE_farmer_ramp12d_2018: "As mesmas técnicas funcionam com nectar e com
+        mel! \n\nOlhe todas essas nuvens. Algumas delas irão virar mel, e outras virarão
+        nectar.\\\nAjude a abelha a seguir o caminho e resolva o quebra-cabeça."
+      courseE_farmer_ramp12d_2019: "As mesmas técnicas funcionam com nectar e com
+        mel! \n\nOlhe todas essas nuvens. Algumas delas irão virar mel, e outras virarão
+        nectar.\\\nAjude a abelha a seguir o caminho e resolva o quebra-cabeça."
+      courseE_farmer_ramp12e: "As mesmas técnicas funcionam com nectar e com mel!
+        \n\nOlhe todas essas nuvens. Algumas delas irão virar mel, e outras virarão
+        nectar.\\\nAjude a abelha a seguir o caminho e resolva o quebra-cabeça."
+      courseE_farmer_ramp12e_2018: "As mesmas técnicas funcionam com nectar e com
+        mel! \n\nOlhe todas essas nuvens. Algumas delas irão virar mel, e outras virarão
+        nectar.\\\nAjude a abelha a seguir o caminho e resolva o quebra-cabeça."
+      courseE_farmer_ramp12e_2019: "As mesmas técnicas funcionam com nectar e com
+        mel! \n\nOlhe todas essas nuvens. Algumas delas irão virar mel, e outras virarão
+        nectar.\\\nAjude a abelha a seguir o caminho e resolva o quebra-cabeça."
+      courseE_farmer_ramp12g: Vá adiante até chegar na alface, então vire a esquerda
+        **se** houver caminho a esquerda. Se não, vire a direita.
+      courseE_farmer_ramp12g_2018: Vá adiante até chegar na alface, então vire a esquerda
+        **se** houver caminho a esquerda. Se não, vire a direita.
+      courseE_farmer_ramp12g_2019: Vá adiante até chegar na alface, então vire a esquerda
+        **se** houver caminho a esquerda. Se não, vire a direita.
+      courseE_playLab_challenge1: "_Os **esquilos** estão morrendo de medo ao ver
+        que um **dinossauro** chegou na cidade! Será que o bravo **cavaleiro** consegue
+        impedi-los de se desesperar?_\n\nRegras:\n\n1.  _Encostar nos esquilos lhe
+        concede pontos._\n2.  _Encostar no dinossauro te tira muitos pontos._\n\nAqui
+        se encontra um tipo diferente de jogo que já foi iniciado para você! Jogue
+        para ver como funciona. \n\nAlguma coisa deveria acontecer quando você consegue
+        pontos o suficiente ou quando você perder todos os pontos. Adicione um código
+        para as funções de `ganhar jogo` e `perder jogo` para fazer o jogo funcionar
+        da forma como devia. \nClique nos dicas para ideias!"
+      courseE_playLab_scaffold1: |-
+        É incrível o quanto você aprendeu! Vamos fazer um jogo passo a passo.
+
+        Utilizando novos blocos da caixa de ferramentas, escolha um novo fundo, e então escolha um ator para estar no seu jogo.
+      courseE_playLab_scaffold2: "Utilize blocos como manipuladores de eventos e ações
+        para fazer o jogador se mover de acordo com as setas do seu teclado. \n\nLeve
+        o jogador até os alvos e complete o quebra-cabeça."
+      courseE_playLab_scaffold3: |-
+        Vamos adicionar mais alguns personagens ao seu jogo!
+
+        Utilize o bloco `escolher ator` para adicionar personagens e então vá para o objetivo para completar esse quebra-cabeça.
+      courseE_playLab_scaffold4: |-
+        Múltiplos personagens e fazer os atores se morrer é um bom início ao jogo, mas nós precisamos fazer mais para fazer com que isso se parece com um jogo de verdade. Vamos adicionar um placar!
+
+        Utilize blocos de evento como `quando o ator encostar` para trocar o placar. Marque 10 pontos para completar o quebra-cabeça.
+      courseE_playLab_scaffold5: Ótimo trabalho! Você possui todos os componentes
+        básicos de um jogo funcional. Agora gaste mais um tempo verificando se o jogo
+        funciona da forma como você espera. Inclua uma forma de vencer ou perder o
+        jogo, então jogue até que você chegue a todas essas condições.
+      courseE_playLab_scaffold6: Você acabou! Agora você pode jogar o seu jogo ou
+        compartilha-lo com seus amigos e colegas de classe!
       courseF_artist_variables9: "Hora de fazer arte! \n\nVeja o que acontece quando
         você repete o código do último desafio **30** vezes no lugar de apenas 3!\n\nSinta-se
         livre para criar suas linhas em qualquer ou padrão para diversão extra."
@@ -13724,6 +15835,12 @@ pt-BR:
         Você consegue criar um floco de neve usando o bloco
         "repita" para criar um quadrado 10 vezes e o bloco "vire" para virar 36
         graus entre cada quadrado?
+      grade2_collector_10: "Você está quase pronto!  \n\nColete o máximo de peças
+        de tesouro que puder para terminar a fase!"
+      grade2_collector_10_2018: "Você está quase pronto!  \n\nColete o máximo de peças
+        de tesouro que puder para terminar a fase!"
+      grade2_collector_10_2019: "Você está quase pronto!  \n\nColete o máximo de peças
+        de tesouro que puder para terminar a fase!"
       grade2_collector_A: Ajude Laurel a coletar todo o tesouro.
       grade2_collector_A_2018: Ajude Laurel a coletar todo o tesouro.
       grade2_collector_A_2019: Ajude Laurel a coletar todo o tesouro.
@@ -13733,6 +15850,45 @@ pt-BR:
         \n\nEle deve ter exatamente 50 pixels de comprimento em cada lado."
       grade5_artist_variables_triangles1_2019: "Vamos desenhar um triângulo equilátero.
         \n\nEle deve ter exatamente 50 pixels de comprimento em cada lado."
+      iceage_click_hello: "Você consegue ajudar Sid a chamar seus amigos quando você
+        clicar nele? \nQuando acabar, aperte \"Rodar\" para continuar. Clique no Sid
+        para ver seu código funcionar!"
+      iceage_free_play: |-
+        Hora de criar sua própria história ou jogo!
+
+        Quando finalizar, clique em "Finalizar" para permitir que seus amigos testem seu jogo em seus respectivos, telefones, tablets ou computadores!
+        Não sabe o que fazer? Clique em dicas para detalhes.
+      iceage_hello1: |-
+        Sid (ator 1) quer juntar todo mundo para uma nova aventura. Você consegue ajuda-lo a dizer "Olá!" buscando bloco `falar` e ligando ele abaixo do evento `quando rodar`?
+
+        Não se esqueça de digitar "Olá!" dentro!
+      iceage_hello2: Manny (ator 2) achou Sid (ator 1) e quer convida-lo para uma
+        aventura. Ajude-os a se cumprimentar utilizando duas vezes o bloco `ator ___
+        diz`.
+      iceage_move_events: "Scrat está procurando por noses! \nAjude-o a correr por
+        aí ligando um bloco `morrer ator 1` a cada evento alterando a direção para
+        funcionar para cada seta do teclado. \nQuando acabar, clique \"Rodar\" e tente
+        coletar todas as noses."
+      iceage_move_to_actor: Diego (ator 1) está procurando pelo Manny (ator 2). Você
+        consegue levar um ao outro? Ligue um bloco ao evento `quando ator tocar` para
+        tocar um som quando eles se encontrarem.
+      iceage_move_to_flag: Scrat está procurando pela nós dele! Você consegue ajuda-lo
+        a andar os últimos 200 pixels?
+      iceage_repeat: O bloco `repetir para sempre` te permite rodar um código sem
+        parar. Você consegue colocar blocos dentro dele para ajudar Granny a se exercitar
+        andando para esquerda e para direita repetidamente?
+      iceage_sound_and_points: "Aqui está seu código do último quebra-cabeça, assim
+        como o código para mover Granny para esquerda e para direita. \nVocê consegue
+        finalizar o programa para que você **toque um som** e **marque um ponto**
+        quando Sid e Granny se encontrarem? \nAperte \"Rodar\" para jogar o jogo."
+      iceage_throw_hearts: "Sid quer mostrar a sua avó, Granny, que ele a ama. \n\nUtilize
+        o comando `ator __ joga` para fazer com que Sid (ator 1) jogue um coração
+        para Granny (ator 2)!\nAltere o humor de Granny para feliz quando ela for
+        atingida pelos corações."
+      iceage_warn_ice_age: "Todo mundo precisa andar rápido pois uma nevasca está
+        chegando! \nAltere o cenário para um fundo de gelo e altere a velocidade se
+        Sid (ator 1) para mais rápido.\nAperte \"Rodar\" e mova Sid até Diego para
+        alerta-lo."
       ramp_artist_loops4_2019: Você pode criar essa estrela repetindo a sequencia
         de blocos `avance` e `vire à direita em 144 graus`.
       ramp_artist_loops9: Resolva este enigma desenhando um quadrado com lados de

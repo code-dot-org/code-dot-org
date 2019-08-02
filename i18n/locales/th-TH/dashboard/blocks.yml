@@ -844,7 +844,9 @@ th:
             '"left"': ลูกศรชี้ทางซ้าย
             '"right"': ลูกศรชี้ทางขวา
             '"w"': W
+            '"a"': ก
             '"s"': S
+            '"d"': ง
       Mikelab_whenKeyReleased:
         options:
           KEY:
@@ -853,7 +855,9 @@ th:
             '"left"': ลูกศรชี้ทางซ้าย
             '"right"': ลูกศรชี้ทางขวา
             '"w"': W
+            '"a"': ก
             '"s"': S
+            '"d"': ง
       Mikelab_whileKeyPressed:
         options:
           KEY:

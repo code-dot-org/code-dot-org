@@ -8,7 +8,7 @@ pl-PL:
       2-3 Artist 2 new: 'Ten dom ma ścianę wybudowaną w połowie. Każdy bok ma długość
         100, ale ściana w połowie ukończona ma 50. Ukończ tę ścianę. '
       2-3 Artist 4: Pomóż mi dokończyć domek dla tego kota.
-      2-3 Artist 9: Dokończ ten latawiec
+      2-3 Artist 9 NEW: Dokończ ten latawiec
       2-3 Artist Free Play: Czas na zabawę! Narysuj cokolwiek chcesz.
       2-3 Artist Loops New 15: Teraz narysuj coś, co Ci się spodoba!
       2-3 Artist Nested Loops 10: Powtórz w pętli ten kod 12 razy, aby ukończyć ten
@@ -846,12 +846,6 @@ pl-PL:
         i pól!
       courseC_harvester_loops_challenge2_2019: Zbierz wszystkie sałaty. Unikaj drzew
         i pól!
-      courseC_maze_debugging1: Napraw błędy, aby zebrać wszystkie skarby.
-      courseC_maze_debugging2: Napraw błędy, aby zebrać wszystkie skarby.
-      courseC_maze_debugging3: Napraw błędy, aby zebrać wszystkie skarby.
-      courseC_maze_debugging4: Napraw błędy, aby zebrać wszystkie skarby.
-      courseC_maze_debugging6: 'Wyzwanie: Użyj swoich umiejętności debugowania, aby
-        naprawić błędy i zebrać cały skarb.'
       courseC_maze_debugging_challenge1: _"Czy ja właśnie chodzę w kółko?"_
       courseC_maze_debugging_challenge1_2018: _"Czy ja właśnie chodzę w kółko?"_
       courseC_maze_debugging_challenge1_2019: _"Czy ja właśnie chodzę w kółko?"_
@@ -1081,9 +1075,6 @@ pl-PL:
       courseD_maze_ramp7: Doprowadź ptaka do świnki!
       courseD_maze_until_challenge1: Bez podpowiedzi, po prostu wyzwanie. Doprowadź
         zombie do słonecznika.
-      courseD_scrat_ramp7: |-
-        Wykorzystaj swoją wiedzę, by przenieść
-        ptaszka do świni!
       courseE_artist_concept_challenge1: Nie bój się popełniać błędów próbując. Nie
         oczekuj, że wszystko będzie doskonałe za pierwszym razem. Kliknij tutaj, jeśli
         chcesz zobaczyć więcej wskazówek!
@@ -1096,9 +1087,9 @@ pl-PL:
         utworzyć okulary. '
       courseE_artist_functions2_2019: 'Tym razem użyj funkcji `draw a square`, aby
         utworzyć okulary. '
-      courseE_artist_ramp8_2: Użyj tego, czego się nauczyłeś(-aś), by narysować ten
-        trójkąt.
       courseE_artist_ramp9: Użyj tego, czego się nauczyłeś(-aś), by narysować ten
+        trójkąt.
+      courseE_artist_ramp9_2: Użyj tego, czego się nauczyłeś(-aś), by narysować ten
         trójkąt.
       courseE_bee_concept1: 'Zbierz cały nektar z każdego kwiatka. Użyj zagnieżdżonej
         pętli. '
@@ -1115,8 +1106,6 @@ pl-PL:
         nektar), aby zebrać cały nektar.
       courseE_bee_functions_challenge2: Rozwiąż to wyzwanie na własną rękę!
       courseE_farmer_functions4b: Użyj swojej nowej funkcji, by rozwiązać tę zagadkę.
-      courseE_farmer_ramp12d: Pomóż pszczółce podążać ścieżką, aby zebrać cały nektar
-        i zrobić miód.
       courseE_playLab_scaffold5: Teraz poświęć trochę czasu, żeby upewnić się, że
         gra działa tak, jak chcesz. Ustaw sposób w jaki wygrywa się lub przegrywa
         twoją grę, a następnie zagraj, aby spełnić jeden z tych warunków.

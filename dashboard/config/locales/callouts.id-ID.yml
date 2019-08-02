@@ -166,6 +166,9 @@ id-ID:
         Course_4_SCV_6: Blok ini mengizinkan anda menyesuaikan warna anda dengan hampir
           semua hal yang ingin anda lihat! Bermainlah dengan angka ini untuk melihat
           apa yang terjadi!
+      Fish Tank 3-validated_2019:
+        spritelab_comment: Gunakan blok ini untuk membuat catatan untuk anda atau
+          guru anda tentang bagaimana kode bekerja.
       Function intro Ryan:
         Function_intro_Ryan_1: Instruksi kecil ini memberi tahu komputer untuk menjalankan
           potongan BESAR kode dengan nama yang sama di ruang kerja.
@@ -285,6 +288,19 @@ id-ID:
         craft_what_is_iron: Tambang besi ini!
       Underground Iron_2019:
         craft_what_is_iron: Tambang besi ini!
+      Virtual Pet 2_2019:
+        '': Klik disini!
+      behaviors 1:
+        behaviors_edit: Klik di sini untuk melihat bagaimana perilaku bekerja.
+      behaviors 3a:
+        behavior_callout: Mengapa perilaku ini tidak bekerja pada bintang menengah?
+        star2_callout: Hapus blok kostum ini dan gunakan blok pengganti "this sprite".
+      behaviors 4:
+        behaviors_edit: Klik di sini untuk melihat bagaimana perilaku bekerja.
+      behaviors 5:
+        behaviors_edit: Tambahkan kode untuk perilaku.
+      behaviors free play:
+        behaviors_edit: Tambahkan kode untuk perilaku.
       course2_bee_conditionals_challenge2:
         courseD_bee_conditionals_challenge2_1: Gunakan loop ini untuk mengumpulkan
           semua nektar (atau madu) dari satu bunga (atau sarang madu).
@@ -700,10 +716,6 @@ id-ID:
         courseD_playLab_condFP_1: kami sudah mengatur blok-blok kedalam kategori untuk
           memberikan kamu lebih banyak kode untuk dimainkan! Kilk disini untuk melihat
           kemana semua pergi.
-      courseD_scrat_predict1:
-        courseD_maze_ramp6_1: Apapun kode yang anda masukkan ke sini akan mengulangi
-          sebanyak yang anda kirimkan, kemudian klik tombol lanjutkan untuk menyelesaikan
-          program itu.
       courseD_scrat_ramp1:
         grade2_CaringForNewPet_0_1: Setelah menghubungkan semua blok, tekan "Jalankan"
           untuk memulai program mu.
@@ -717,21 +729,18 @@ id-ID:
         courseC_maze_programming4_1: Ini adalah batas jumlah blok kamu. Menunjukkan
           kepada kamu masih ada berapa blok yang bisa kamu gunakan.
       courseD_scrat_ramp6:
-        courseE_artist_ramp8_1: Kamu bisa merubah angka ini.
-        courseE_artist_ramp8_2: Klik di sini untuk mengetik berapa kali kamu mengulang
-          pembuatan kode kamu.
         courseD_maze_ramp6_1: Apapun kode yang anda masukkan ke sini akan mengulangi
           sebanyak yang anda kirimkan, kemudian klik tombol lanjutkan untuk menyelesaikan
           program itu.
       courseD_scrat_ramp7:
-        courseD_maze_ramp7_1: Ini merupakan tantangan teka-teki kamu yang pertama!
-          Akan sulit dan perlu dilakukan beberapa kali untuk menyusunnya.
+        courseD_maze_ramp6_1: Apapun kode yang anda masukkan ke sini akan mengulangi
+          sebanyak yang anda kirimkan, kemudian klik tombol lanjutkan untuk menyelesaikan
+          program itu.
       courseD_scrat_ramp8:
         courseD_maze_ramp7_1: Ini merupakan tantangan teka-teki kamu yang pertama!
           Akan sulit dan perlu dilakukan beberapa kali untuk menyusunnya.
-        courseE_artist_ramp8_1: Kamu bisa merubah angka ini.
-        courseE_artist_ramp8_2: Klik di sini untuk mengetik berapa kali kamu mengulang
-          pembuatan kode kamu.
+      courseE_aboutme_2:
+        '': Klik disini!
       courseE_artist_functions1:
         courseD_artist_functions1_1: Ayo kita mulai dengan menggunakan blok ini untuk
           membantu membuat kotak pertama.
@@ -787,6 +796,10 @@ id-ID:
         courseE_artist_functions_challenge2_callout2: Jika anda tidak menyukai desain
           ini, ubah desain ini menjadi apapun yang anda inginkan!
       courseE_artist_ramp8:
+        courseE_artist_ramp8_1: Kamu bisa merubah angka ini.
+        courseE_artist_ramp8_2: Klik di sini untuk mengetik berapa kali kamu mengulang
+          pembuatan kode kamu.
+      courseE_artist_ramp8_2:
         courseE_artist_ramp8_1: Kamu bisa merubah angka ini.
         courseE_artist_ramp8_2: Klik di sini untuk mengetik berapa kali kamu mengulang
           pembuatan kode kamu.

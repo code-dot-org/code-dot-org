@@ -169,7 +169,8 @@ describe('ExportDialog', () => {
     );
     wrapper.instance().publishExpoExport();
     expect(exportApp).to.have.been.calledOnce.and.calledWith({
-      mode: 'expoPublish'
+      mode: 'expoPublish',
+      iconFileUrl: undefined
     });
   });
 
@@ -181,7 +182,7 @@ describe('ExportDialog', () => {
       iconUri: 'iconUri',
       splashImageUri: 'splashUri'
     });
-    exportApp.withArgs({mode: 'expoPublish'}).returns(publishResult);
+    exportApp.returns(publishResult);
     const expoGenerateApk = sinon.stub();
     expoGenerateApk.returns(Promise.resolve('fakeBuildId'));
     const expoCheckApkBuild = sinon.stub();
@@ -206,7 +207,8 @@ describe('ExportDialog', () => {
     );
     await wrapper.instance().generateApkAsNeeded();
     expect(exportApp).to.have.been.calledOnce.and.calledWith({
-      mode: 'expoPublish'
+      mode: 'expoPublish',
+      iconFileUrl: undefined
     });
     expect(expoGenerateApk).to.have.been.calledOnce.and.calledWith({
       md5SavedSources: 'fakeHash',

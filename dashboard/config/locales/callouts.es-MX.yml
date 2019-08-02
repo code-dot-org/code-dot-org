@@ -976,9 +976,6 @@ es-MX:
         courseD_playLab_condFP_1: hemos organizado los bloques en categorías para
           darte más códigos con los que jugar. Has click aquí para ver adónde fue
           todo.
-      courseD_scrat_predict1:
-        courseD_maze_ramp6_1: Cualquier código que ingreses aquí se repetirá tantas
-          veces como lo indiques, luego continúa ejecutando el resto del programa.
       courseD_scrat_ramp1:
         grade2_CaringForNewPet_0_1: Luego de conectar todos los bloques, presiona
           "Ejecutar" para comenzar tu programa.
@@ -995,20 +992,14 @@ es-MX:
         '': Estos bloques no incluyen números. ¡Puedes usarlos todas las veces que
           quieras!
       courseD_scrat_ramp6:
-        courseE_artist_ramp8_1: Puedes cambiar este número.
-        courseE_artist_ramp8_2: Haz click aquí para ingresar el número de veces que
-          tu código se repite.
         courseD_maze_ramp6_1: Cualquier código que ingreses aquí se repetirá tantas
           veces como lo indiques, luego continúa ejecutando el resto del programa.
       courseD_scrat_ramp7:
-        courseD_maze_ramp7_1: "¡Este es tu primer súper desafío! Estos están hechos
-          difíciles a propósito y pueden implicar varios intentos."
+        courseD_maze_ramp6_1: Cualquier código que ingreses aquí se repetirá tantas
+          veces como lo indiques, luego continúa ejecutando el resto del programa.
       courseD_scrat_ramp8:
         courseD_maze_ramp7_1: "¡Este es tu primer súper desafío! Estos están hechos
           difíciles a propósito y pueden implicar varios intentos."
-        courseE_artist_ramp8_1: Puedes cambiar este número.
-        courseE_artist_ramp8_2: Haz click aquí para ingresar el número de veces que
-          tu código se repite.
       courseE_artist_functions1:
         courseD_artist_functions1_1: Comencemos usando este bloque para ayudar a crear
           el primer cuadrado.
@@ -1064,6 +1055,10 @@ es-MX:
         courseE_artist_functions_challenge2_callout2: Si no te gusta este diseño,
           ¡cámbialo por el que quieras!
       courseE_artist_ramp8:
+        courseE_artist_ramp8_1: Puedes cambiar este número.
+        courseE_artist_ramp8_2: Haz click aquí para ingresar el número de veces que
+          tu código se repite.
+      courseE_artist_ramp8_2:
         courseE_artist_ramp8_1: Puedes cambiar este número.
         courseE_artist_ramp8_2: Haz click aquí para ingresar el número de veces que
           tu código se repite.

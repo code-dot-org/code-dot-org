@@ -38,7 +38,7 @@ de-DE:
       2-3 Artist 8:
         2-3_Artist_8_a: Wenn man 200 halbiert, wie viele Pixel breit muss jedes Quadrat
           dann sein?
-      2-3 Artist 9:
+      2-3 Artist 9 NEW:
         2-3_Artist_9_a: Diese Raute ist einfach nur ein gedrehter Quader
       2-3 Artist Debugging 10:
         2-3_Artist_Debugging_10_b: |-
@@ -102,6 +102,27 @@ de-DE:
           Ein Kreis hat 360 Grad!
 
           So oft musst du diesen Block (um 1 Grad zu drehen) wiederholen damit der Kreis komplett ist!
+      4-5 Maze 10:
+        4-5_Maze_10_a: |-
+          Wenn Du Schwierigkeiten dabei hast die Aufgabe mithilfe der Schleifen zu lösen, dann versuche es auf herkömmlichen Wege und suche dann nach sich wiederholenden Bausteinen.
+          Um welche Teile kannst Du eine Schleife setzen, um den Code zu verkürzen?
+      4-5 Maze 4:
+        4-5_Maze_4_a: Wenn Du Schwierigkeiten dabei hast den "Wiederholen"-Baustein
+          einzusetzen, dann versuche erst ohne zu programmieren und suche dann nach
+          sich wiederholenden Bausteinen.
+      4-5 Maze 5:
+        4-5_Maze_5_a: Versuche den "Wiederholen"-Baustein immer dann einzusetzen,
+          wenn Du mehr als zwei Schritte vorwärts gehen musst.
+        4-5_Maze_5_b: Du kannst den "Wiederholen"-Baustein mehr als einmal in einer
+          Aufgabe verwenden.
+      4-5 Maze 6:
+        4-5_Maze_6_a: |-
+          Versuche den Weg mit dem Finger zu verfolgen.\
+          Ist es der kürzeste Weg den Du gehen kannst?
+      4-5 Maze 7:
+        4-5_Maze_7_a: |-
+          **Dein Code soll so kompakt wie möglich sein?**
+          Suche nach sich wiederholenden Teilen in Deinem Code und setze diese in eine Schleife!
       Course 4 SCF 1:
         Course_4_SCF_1_a: Jedes Hexagon hat 40 Pixel lange Seiten.
       Course 4 SCF 1a:
@@ -456,8 +477,6 @@ de-DE:
       courseD_maze_ramp6:
         courseC_maze_programming6_a: Es gibt zwei Möglichkeiten um dieses Puzzle zu
           lösen!
-      courseD_scrat_predict1:
-        courseF_maze_ramp6_a: Es gibt zwei Möglichkeiten um dieses Puzzle zu lösen!
-      courseD_scrat_ramp6:
-        courseC_maze_programming6_a: Es gibt zwei Möglichkeiten um dieses Puzzle zu
-          lösen!
+      courseD_scrat_ramp7:
+        courseD_scrat_programming6_a: Es gibt zwei Möglichkeiten um dieses Puzzle
+          zu lösen!

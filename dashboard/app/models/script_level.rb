@@ -314,6 +314,8 @@ class ScriptLevel < ActiveRecord::Base
       summary[:videoKey] = level.video_key
       summary[:concepts] = level.summarize_concepts
       summary[:conceptDifficulty] = level.summarize_concept_difficulty
+      summary[:assessment] = !!assessment
+      summary[:challenge] = !!challenge
     end
 
     if include_prev_next
@@ -447,12 +449,14 @@ class ScriptLevel < ActiveRecord::Base
   end
 
   def summary_for_feedback
+    lesson_num = stage.lockable ? stage.absolute_position : stage.relative_position
+
     {
       lessonName: stage.name,
+      lessonNum: lesson_num,
       levelNum: position,
       linkToLevel: path,
-      unitName: stage.script.localized_title,
-      linkToUnit: stage.script.link
+      unitName: stage.script.localized_title
     }
   end
 

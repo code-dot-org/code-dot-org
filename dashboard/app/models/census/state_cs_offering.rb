@@ -51,6 +51,7 @@ class Census::StateCsOffering < ApplicationRecord
     MT
     NC
     ND
+    NE
     NH
     NJ
     NM
@@ -75,13 +76,17 @@ class Census::StateCsOffering < ApplicationRecord
 
   SUPPORTED_UPDATES = [1, 2].freeze
 
-  # We want to use a consistent "V2" format for CSV source files, starting with some
-  # states in 2018-19, as listed here.  The expectation is that all states will use
-  # the new format as of 2019-20.
+  # The following states use the "V2" format for CSV files in 2017-2018.
+  # (The expectation is that all states will use the new format as of 2019-20.)
+  STATES_USING_FORMAT_V2_IN_2017_18 = %w(
+    CA
+    HI
+  ).freeze
+
+  # The following states use the "V2" format for CSV files in 2018-2019.
   STATES_USING_FORMAT_V2_IN_2018_19 = %w(
     AK
     AR
-    CA
     CO
     CT
     FL
@@ -99,6 +104,7 @@ class Census::StateCsOffering < ApplicationRecord
     MS
     MT
     ND
+    NE
     NM
     NY
     OH
@@ -115,6 +121,14 @@ class Census::StateCsOffering < ApplicationRecord
     VA
   ).freeze
 
+  # For a few states, we already placed a 2017-2018 CSV on S3 using their V1 format,
+  # but they are now getting an update mid-way through the year using the V2 format.
+  # For such states, we specify which update of the 2017-2018 file is in the V2
+  # format.
+  UPDATES_FOR_STATES_USING_FORMAT_V2_IN_MID_2017_18 = {
+    RI: 2
+  }.freeze
+
   # For a few states, we already placed a 2018-2019 CSV on S3 using their V1 format,
   # but they are now getting an update mid-way through the year using the V2 format.
   # For such states, we specify which update of the 2018-2019 file is in the V2
@@ -122,17 +136,24 @@ class Census::StateCsOffering < ApplicationRecord
   UPDATES_FOR_STATES_USING_FORMAT_V2_IN_MID_2018_19 = {
     DC: 2,
     DE: 2,
-    HI: 2,
     NH: 2,
     NJ: 2,
     VT: 2
   }.freeze
 
   def self.state_uses_format_v2(state_code, school_year, update)
+    state_uses_format_v2_in_2017 =
+      STATES_USING_FORMAT_V2_IN_2017_18.include?(state_code) ||
+      (UPDATES_FOR_STATES_USING_FORMAT_V2_IN_MID_2017_18.include?(state_code.to_sym) &&
+        update >= UPDATES_FOR_STATES_USING_FORMAT_V2_IN_MID_2017_18[state_code.to_sym])
     state_uses_format_v2_in_2018 =
       STATES_USING_FORMAT_V2_IN_2018_19.include?(state_code) ||
-      update >= UPDATES_FOR_STATES_USING_FORMAT_V2_IN_MID_2018_19[state_code.to_sym]
-    (school_year == 2018 && state_uses_format_v2_in_2018) || school_year >= 2019
+      (UPDATES_FOR_STATES_USING_FORMAT_V2_IN_MID_2018_19.include?(state_code.to_sym) &&
+        update >= UPDATES_FOR_STATES_USING_FORMAT_V2_IN_MID_2018_19[state_code.to_sym])
+
+    (school_year == 2017 && state_uses_format_v2_in_2017) ||
+      (school_year == 2018 && state_uses_format_v2_in_2018) ||
+      school_year >= 2019
   end
 
   # By default we treat the lack of state data for high schools as an
@@ -1493,6 +1514,19 @@ class Census::StateCsOffering < ApplicationRecord
 
   def self.seed
     if CDO.stub_school_data
+      STATES_USING_FORMAT_V2_IN_2017_18.each do |state_code|
+        school_year = 2017
+        update = 1
+        filename = construct_object_key(state_code, school_year, update)
+        seed_from_csv(state_code, school_year, update, "test/fixtures/census/actual_2017_2018/" + filename)
+      end
+
+      UPDATES_FOR_STATES_USING_FORMAT_V2_IN_MID_2017_18.each do |state_code, update|
+        school_year = 2017
+        filename = construct_object_key(state_code, school_year, update)
+        seed_from_csv(state_code.to_s, school_year, update, "test/fixtures/census/actual_2017_2018/" + filename)
+      end
+
       STATES_USING_FORMAT_V2_IN_2018_19.each do |state_code|
         school_year = 2018
         update = 1
