@@ -1563,13 +1563,13 @@ it-IT:
         mc_1_b: Controlla che entrambi i blocchi `vai avanti` siano agganciati al
           blocco `quando si clicca su "Esegui"`.
       Overworld Place Wall:
-        mc_5_a: Usa prima il blocco `metti` e poi `vai avanti`
+        mc_5_a: Usa prima il blocco `metti` e poi `vai avanti`.
         mc_5_b: Controlla che entrambi i blocchi siano all'interno del blocco `ripeti
           ... volte` per far eseguire il codice più di una volta.
         mc_5_c: Non aver paura di sbagliare! Esegui il codice per vedere cosa succede,
           anche se non hai ancora risolto l'esercizio.
       Overworld Place Wall_2019:
-        mc_5_a: Usa prima il blocco `metti` e poi `vai avanti`
+        mc_5_a: Usa prima il blocco `metti` e poi `vai avanti`.
         mc_5_b: Controlla che entrambi i blocchi siano all'interno del blocco `ripeti
           ... volte` per far eseguire il codice più di una volta.
         mc_5_c: Non aver paura di sbagliare! Esegui il codice per vedere cosa succede,
@@ -1585,21 +1585,23 @@ it-IT:
           scuro a fianco dell'acqua.
         mc_7_c: Puoi mettere più di un blocco all'interno del blocco `ripeti ... volte`.
       Overworld Powered Minecart:
-        mc_13_a: Usa il blocco `metti binario` per posare un tratto di binari nel
-          punto in cui ti trovi.
+        mc_13_a: Usa il blocco `metti binario` (_rail_) per posare un tratto di binari
+          nel punto in cui ti trovi.
         mc_13_b: Usa il blocco `ripeti ... volte` per accorciare il tuo programma.
       Overworld Powered Minecart_2019:
-        mc_13_a: Usa il blocco `metti binario` per posare un tratto di binari nel
-          punto in cui ti trovi.
+        mc_13_a: Usa il blocco `metti binario` (_rail_) per posare un tratto di binari
+          nel punto in cui ti trovi.
         mc_13_b: Usa il blocco `ripeti ... volte` per accorciare il tuo programma.
       Overworld Shear Sheep:
-        mc_3_a: 'Per usare il blocco `tosa` la pecora deve trovarsi di fronte a te.  '
+        mc_3_a: Per usare il blocco `tosa`, la pecora deve trovarsi di fronte a te.
+          Sei di fronte alla pecora?
         mc_3_b: Se hai bisogno di cambiare la direzione verso cui sei rivolto, usa
           il blocco `gira a ...`.
         mc_3_c: Non aver paura di sbagliare! Esegui il codice per vedere cosa succede,
           anche se non hai ancora risolto l'esercizio.
       Overworld Shear Sheep_2019:
-        mc_3_a: 'Per usare il blocco `tosa` la pecora deve trovarsi di fronte a te.  '
+        mc_3_a: Per usare il blocco `tosa`, la pecora deve trovarsi di fronte a te.
+          Sei di fronte alla pecora?
         mc_3_b: Se hai bisogno di cambiare la direzione verso cui sei rivolto, usa
           il blocco `gira a ...`.
         mc_3_c: Non aver paura di sbagliare! Esegui il codice per vedere cosa succede,
@@ -2098,7 +2100,7 @@ it-IT:
         courseD_bee_nested_loops_challenge2_a: Non dimenticare che puoi inserire nel
           blocco `ripeti ... volte` un singolo comando o uno schema più lungo. E si
           può anche ripetere un blocco `ripeti ... volte`!
-        courseD_bee_nested_loops_challenge2_b: Per raccogliere tutte e 4 le gemme,
+        courseD_bee_nested_loops_challenge2_b: Per raccogliere tutti e 4 i diamanti,
           prima di tutto usa un ciclo per allontanarti dal centro. Gira a sinistra
           o a destra, quindi usa un ciclo annidato per passare dal primo diamante
           al secondo. Se ripeti questo ciclo annidato abbastanza volte, la collezionista
@@ -2123,7 +2125,7 @@ it-IT:
           <title name="DIR">turnLeft</title>
           <next>
           <block type="controls_repeat_dropdown">
-          <title name="TIMES" config="3-10">3</title>
+          <title name="TIMES" config="3-10">4</title>
           <statement name="DO">
           <block type="collector_collect">
           <next>
@@ -5507,7 +5509,7 @@ it-IT:
           vedere cosa succede, anche se non hai ancora risolto l'esercizio.
         courseB_starWars_prog9_b: Ci sono molti modi per risolvere questo esercizio.
         courseB_starWars_prog9_c: |-
-          Un ciclo `ripeti` <xml><block type="controls_repeat_simplified">
+          Un ciclo <xml><block type="controls_repeat_simplified">
               <title name="TIMES">3</title>
             </block></xml> potrebbe aiutarti qui?
       courseB_starWars_prog9_2019:
@@ -5515,7 +5517,7 @@ it-IT:
           vedere cosa succede, anche se non hai ancora risolto l'esercizio.
         courseB_starWars_prog9_b: Ci sono molti modi per risolvere questo esercizio.
         courseB_starWars_prog9_c: |-
-          Un ciclo `ripeti` <xml><block type="controls_repeat_simplified">
+          Un ciclo <xml><block type="controls_repeat_simplified">
               <title name="TIMES">3</title>
             </block></xml> potrebbe aiutarti qui?
       courseC19_playLab_EOC1:
@@ -5820,18 +5822,6 @@ it-IT:
 
           **Flipper** - Fai in modo di muovere un personaggio con le frecce (usa gli eventi `quando si preme sulla freccia verso l'alto` e `quando si preme sulla freccia verso il basso`), quindi riproduci un suono casuale quando il personaggio sbatte contro gli altri.
       courseC_PlayLab_eventsFP_2019:
-        idea1: |-
-          _Serve un idea?_
-
-          **Chi c'è?** Fai comparire dei personaggi casuali, così nessuno potrà sapere quale sarà il successivo.
-
-          ![](https://images.code.org/a56e03479801995d93ad5a4e4384a79e-image-1475340154498.gif)
-        idea2: |-
-          _Serve un idea?_
-
-          **All'avventura!** - Cambia lo sfondo e fai raccontare ai personaggi dove si trovano.
-
-          ![](https://images.code.org/010c4d919f841d6049caf9211ab65ccc-image-1475340583052.gif)
         idea3: |-
           _Serve un idea?_
 
@@ -8738,11 +8728,11 @@ it-IT:
           Annida i blocchi su tre livelli, in questo modo:
 
           -   ripeti 4
-          -   ripeti 3
-          -   ripeti 12
-          -   prendi il nettare
-          -   vai avanti
-          -   gira a destra
+              -   ripeti 3
+                  -   ripeti 12
+                      -   prendi il nettare
+                  -   vai avanti
+              -   gira a destra
       courseD_bee_nestedLoops7_2018:
         courseD_bee_nestedLoops7_a: Devi ripetere il blocco `prendi il nettare` all'interno
           di un altro blocco `ripeti ... volte` che ha al suo interno anche il blocco
@@ -8753,11 +8743,11 @@ it-IT:
           Annida i blocchi su tre livelli, in questo modo:
 
           -   ripeti 4
-          -   ripeti 3
-          -   ripeti 12
-          -   prendi il nettare
-          -   vai avanti
-          -   gira a destra
+              -   ripeti 3
+                  -   ripeti 12
+                      -   prendi il nettare
+                  -   vai avanti
+              -   gira a destra
       courseD_bee_nestedLoops7_2019:
         courseD_bee_nestedLoops7_a: Devi ripetere il blocco `prendi il nettare` all'interno
           di un altro blocco `ripeti ... volte` che ha al suo interno anche il blocco
@@ -8768,11 +8758,11 @@ it-IT:
           Annida i blocchi su tre livelli, in questo modo:
 
           -   ripeti 4
-          -   ripeti 3
-          -   ripeti 12
-          -   prendi il nettare
-          -   vai avanti
-          -   gira a destra
+              -   ripeti 3
+                  -   ripeti 12
+                      -   prendi il nettare
+                  -   vai avanti
+              -   gira a destra
       courseD_bounce_events10s_2018:
         courseD_bounce_events10s_a: |-
           Dovresti avere entrambi questi eventi nel tuo codice:
@@ -9068,7 +9058,7 @@ it-IT:
         courseD_bee_nested_loops_challenge2_a: Non dimenticare che puoi inserire nel
           blocco `ripeti ... volte` un singolo comando o uno schema più lungo. E si
           può anche ripetere un blocco `ripeti ... volte`!
-        courseD_bee_nested_loops_challenge2_b: Per raccogliere tutte e 4 le gemme,
+        courseD_bee_nested_loops_challenge2_b: Per raccogliere tutti e 4 i diamanti,
           prima di tutto usa un ciclo per allontanarti dal centro. Gira a sinistra
           o a destra, quindi usa un ciclo annidato per passare dal primo diamante
           al secondo. Se ripeti questo ciclo annidato abbastanza volte, la collezionista
@@ -9093,7 +9083,7 @@ it-IT:
           <title name="DIR">turnLeft</title>
           <next>
           <block type="controls_repeat_dropdown">
-          <title name="TIMES" config="3-10">3</title>
+          <title name="TIMES" config="3-10">4</title>
           <statement name="DO">
           <block type="collector_collect">
           <next>
@@ -9135,7 +9125,7 @@ it-IT:
         courseD_bee_nested_loops_challenge2_a: Non dimenticare che puoi inserire nel
           blocco `ripeti ... volte` un singolo comando o uno schema più lungo. E si
           può anche ripetere un blocco `ripeti ... volte`!
-        courseD_bee_nested_loops_challenge2_b: Per raccogliere tutte e 4 le gemme,
+        courseD_bee_nested_loops_challenge2_b: Per raccogliere tutti e 4 i diamanti,
           prima di tutto usa un ciclo per allontanarti dal centro. Gira a sinistra
           o a destra, quindi usa un ciclo annidato per passare dal primo diamante
           al secondo. Se ripeti questo ciclo annidato abbastanza volte, la collezionista
@@ -9160,7 +9150,7 @@ it-IT:
           <title name="DIR">turnLeft</title>
           <next>
           <block type="controls_repeat_dropdown">
-          <title name="TIMES" config="3-10">3</title>
+          <title name="TIMES" config="3-10">4</title>
           <statement name="DO">
           <block type="collector_collect">
           <next>
@@ -9202,7 +9192,7 @@ it-IT:
         courseD_bee_nested_loops_challenge2_a: Non dimenticare che puoi inserire nel
           blocco `ripeti ... volte` un singolo comando o uno schema più lungo. E si
           può anche ripetere un blocco `ripeti ... volte`!
-        courseD_bee_nested_loops_challenge2_b: Per raccogliere tutte e 4 le gemme,
+        courseD_bee_nested_loops_challenge2_b: Per raccogliere tutti e 4 i diamanti,
           prima di tutto usa un ciclo per allontanarti dal centro. Gira a sinistra
           o a destra, quindi usa un ciclo annidato per passare dal primo diamante
           al secondo. Se ripeti questo ciclo annidato abbastanza volte, la collezionista
@@ -9227,7 +9217,7 @@ it-IT:
           <title name="DIR">turnLeft</title>
           <next>
           <block type="controls_repeat_dropdown">
-          <title name="TIMES" config="3-10">3</title>
+          <title name="TIMES" config="3-10">4</title>
           <statement name="DO">
           <block type="collector_collect">
           <next>
@@ -9652,21 +9642,21 @@ it-IT:
           quindi usa il blocco `mentre c'è strada in avanti` prima di usare il ciclo
           `mentre c'è una buca`.
         courseD_farmer_conditionals8_c: Nota che devi ripetere sei volte la sequenza
-          `mentre c'è strada in avanti` + `quando c'è una buca`.
+          `mentre c'è strada in avanti` + `mentre c'è una buca`.
       courseD_farmer_while8_2018:
         courseD_farmer_conditionals8_a: Avrai bisogno di usare più di un ciclo `mentre`.
         courseD_farmer_conditionals8_b: Ogni buca è alla fine di un tratto di percorso,
           quindi usa il blocco `mentre c'è strada in avanti` prima di usare il ciclo
           `mentre c'è una buca`.
         courseD_farmer_conditionals8_c: Nota che devi ripetere sei volte la sequenza
-          `mentre c'è strada in avanti` + `quando c'è una buca`.
+          `mentre c'è strada in avanti` + `mentre c'è una buca`.
       courseD_farmer_while8_2019:
         courseD_farmer_conditionals8_a: Avrai bisogno di usare più di un ciclo `mentre`.
         courseD_farmer_conditionals8_b: Ogni buca è alla fine di un tratto di percorso,
           quindi usa il blocco `mentre c'è strada in avanti` prima di usare il ciclo
           `mentre c'è una buca`.
         courseD_farmer_conditionals8_c: Nota che devi ripetere sei volte la sequenza
-          `mentre c'è strada in avanti` + `quando c'è una buca`.
+          `mentre c'è strada in avanti` + `mentre c'è una buca`.
       courseD_farmer_while_challenge1:
         courseD_farmer_while_challenge1_a: Le buche e i mucchi si trovano sempre una
           casella **prima** della fine del percorso.

@@ -9774,6 +9774,14 @@ zh-CN:
               name: 新的阶段
             Number Systems:
               name: 数字系统
+            Sending Text:
+              name: 发送文本
+            Sending Binary Messages:
+              name: 发送二进制消息
+            Sending Binary Messages with the Internet Simulator:
+              name: 在互联网模拟器上发送二进制消息
+            Intellectual Property:
+              name: 知识产权
           title: 计算机科学原理 单元1 试验
         csd-tests:
           stages:
@@ -10507,3 +10515,15 @@ zh-CN:
               name: 第一阶段
             new stage:
               name: 新的阶段
+        csl-vn:
+          stages:
+            Sequencing with Scrat:
+              name: 斯奎特和序列
+            Programming in Maze:
+              name: 迷宫编程
+            Programming with Rey and BB-8:
+              name: 与雷伊，BB-8一起编程
+            Loops in Ice Age:
+              name: 冰河时代里的循环
+            Ocean Scene with Loops:
+              name: 艺术家里的循环
