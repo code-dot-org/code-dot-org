@@ -65,12 +65,6 @@ FactoryGirl.define do
     mappings {[create(:pd_regional_partner_mapping, zip_code: "90210", state: nil)]}
   end
 
-  factory :pd_ended_workshop, parent: :workshop, class: 'Pd::Workshop' do
-    num_sessions 1
-    started_at {Time.zone.now}
-    ended_at {Time.zone.now}
-  end
-
   factory :pd_session, class: 'Pd::Session' do
     transient do
       duration_hours 6

@@ -92,5 +92,11 @@ FactoryGirl.define do
         end
       end
     end
+
+    factory :pd_ended_workshop do
+      num_sessions 1
+      started_at {Time.zone.now}
+      ended_at {Time.zone.now}
+    end
   end
 end
