@@ -9,7 +9,9 @@
 
 files: [{
   "source": "/public/international/about.md.partial",
-  "translation": "/i18n/%original_path%/%file_name%.%locale%.%file_extension%",
+  # cannot use %file_name% and %file_extension% helpers here, because crowdin
+  # doesn't handle multiple extensions like we'd want
+  "translation": "/i18n/%original_path%/about.%locale%.md.partial",
 }, {
   "source": "/public/educate/curriculum/csf-transition-guide.md",
   "translation": "/i18n/%original_path%/%file_name%.%locale%.%file_extension%",

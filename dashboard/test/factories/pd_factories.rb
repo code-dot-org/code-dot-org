@@ -591,18 +591,6 @@ FactoryGirl.define do
     course Pd::Workshop::COURSES.first
   end
 
-  factory :pd_workshop_material_order, class: 'Pd::WorkshopMaterialOrder' do
-    association :enrollment, factory: :pd_enrollment
-    association :user, factory: :teacher
-    street '1501 4th Ave'
-    apartment_or_suite 'Suite 900'
-    city 'Seattle'
-    state 'WA'
-    add_attribute :zip_code, '98101'
-    phone_number '555-111-2222'
-    address_override "0"
-  end
-
   factory :pd_pre_workshop_survey, class: 'Pd::PreWorkshopSurvey' do
     association :pd_enrollment
   end

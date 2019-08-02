@@ -102,6 +102,14 @@ module Dashboard
       end
     end
 
+    config.after_initialize do
+      # For some reason custom fallbacks need to be set on the I18n module
+      # itself and can't be configured using config.i18n.fallbacks.
+      # Following examples from: https://github.com/ruby-i18n/i18n/wiki/Fallbacks
+      # and http://pawelgoscicki.com/archives/2015/02/enabling-i18n-locale-fallbacks-in-rails/
+      I18n.fallbacks.map(es: :'es-MX')
+    end
+
     config.pretty_sharedjs = CDO.pretty_js
 
     config.assets.gzip = false # cloudfront gzips everything for us on the fly.
@@ -112,8 +120,7 @@ module Dashboard
     config.assets.precompile += %w(
       js/*
       css/*.css
-      assets/**/*
-      levels/*
+      levels/*.css
       jquery.handsontable.full.css
       jquery.handsontable.full.js
       video-js/*.css
