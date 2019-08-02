@@ -3124,14 +3124,11 @@ es-MX:
         clic en "Ejecutar" ¡para verlos funcionar!
       courseD_scrat_ramp2: Arrastra un bloque 'avanzar' extra desde la caja de herramientas,
         luego adjunta todos los bloques al 'cuando ejecute' para finalizar el código.
-      courseD_scrat_ramp3: Hay un bloque sobrante que hará que el pájaro se estrelle.
+      courseD_scrat_ramp3: Hay un bloque sobrante que hará que Scrat se estrelle.
         Arrástralo a la caja de herramientas para descartarlo.
-      courseD_scrat_ramp4: "¡Evita el TNT o volarán plumas!"
-      courseD_scrat_ramp5: Evita el TNT.
-      courseD_scrat_ramp6: |-
-        _"Mantén la calma y ayúdame a encontrar al cerdo malo. Si no, ¡puedo enfadarme!"_
-
-        Cuando tienes varios bloques seguidos, prueba moverlos dentro de un bucle `repetir`. ¡Esto hará lo mismo con menos código!
+      courseD_scrat_ramp4: "¡Evita el hielo roto para mantener a Scrat a salvo!"
+      courseD_scrat_ramp5: Evita el hielo roto.
+      courseD_scrat_ramp6: 'Usa un bucle para ayudar a Scrat a llegar hasta la bellota. '
       courseD_scrat_ramp7: "¡Ayuda a Scrat a llegar hasta la bellota!"
       courseD_scrat_ramp8: "¡Usa lo que has aprendido para que Scrat llegue hasta
         la bellota!"

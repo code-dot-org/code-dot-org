@@ -596,10 +596,13 @@ zh-CN:
         - {}
         - {}
       CSD U2 project guide:
+        title: 你的个人网站
         content1: 描述
       CSD U2 project guide_2018:
+        title: 你的个人网站
         content1: 描述
       CSD U2 project guide_2018_2019:
+        title: 你的个人网站
         content1: 描述
       CSD U3 - conditionals - Matching:
         questions:
@@ -668,8 +671,10 @@ zh-CN:
         - {}
         - {}
       CSD U3 Card Examples_2018:
+        title: 制作互动卡
         content1: 描述
       CSD U3 Card Examples_2018_2019:
+        title: 制作互动卡
         content1: 描述
       CSD U3 Functions Prediction define first:
         answers:
@@ -796,16 +801,22 @@ zh-CN:
         - {}
         - {}
       CSD U3 game intro:
+        title: 创建你自己的游戏
         content1: 描述
       CSD U3 game intro_2018:
+        title: 创建你自己的游戏
         content1: 描述
       CSD U3 game intro_2018_2019:
+        title: 创建你自己的游戏
         content1: 描述
       CSD U3 platform intro:
+        title: 建造跳台
         content1: 描述
       CSD U3 platform intro_2018:
+        title: 建造跳台
         content1: 描述
       CSD U3 platform intro_2018_2019:
+        title: 建造跳台
         content1: 描述
       CSD U5 Encryption 1:
         title: 标题
@@ -817,10 +828,13 @@ zh-CN:
         title: 标题
         content1: 描述
       CSD U5 Encryption 2:
+        title: 二进制串解码
         content1: 描述
       CSD U5 Encryption 2_2018:
+        title: 二进制串解码
         content1: 描述
       CSD U5 Encryption 2_2018_2019:
+        title: 二进制串解码
         content1: 描述
       CSD U5 L13 SFLP Interpreting Data:
         title: 标题
@@ -850,10 +864,13 @@ zh-CN:
         title: 标题
         content1: 描述
       CSD U6 LED create intro:
+        title: 使用LED制作应用程序
         content1: 描述
       CSD U6 LED create intro_2018:
+        title: 使用LED制作应用程序
         content1: 描述
       CSD U6 LED create intro_2018_2019:
+        title: 使用LED制作应用程序
         content1: 描述
       CSD U6 array multi:
         questions:
@@ -902,11 +919,13 @@ zh-CN:
         - correct: true
         - {}
       Internet Simulator Setup:
+        title: 互联网模拟器设置
         content1: 描述
       Internet Simulator Setup 2:
         title: 标题
         content1: 描述
       Internet Simulator Setup 3:
+        title: 互联网模拟器设置 3
         content1: 描述
       K-1 Artist 1 Multi 1:
         title: 选择题

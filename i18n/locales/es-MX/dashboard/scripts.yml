@@ -1089,6 +1089,8 @@ es-MX:
               name: Prueba de Pluralsight
             Externals Optionally Displayed as Unplugged:
               name: Externos opcionalmente mostrados como sin conexión
+            Bubble Choice:
+              name: Bubble Choice
         algebraPD2b:
           title: Ciencias de la computación en álgebra PD
           description: 'Enseñar programación funcional a través de álgebra'
@@ -10082,6 +10084,14 @@ es-MX:
               name: nueva etapa
             Number Systems:
               name: Sistemas numéricos
+            Sending Text:
+              name: Envío de texto
+            Sending Binary Messages:
+              name: Envío de mensajes binarios
+            Sending Binary Messages with the Internet Simulator:
+              name: Envío de mensajes binarios con el simulador de Internet
+            Intellectual Property:
+              name: Propiedad intelectual
           title: Piloto de la Unidad 1 de CSP
         csd-tests:
           stages:
@@ -11105,3 +11115,16 @@ es-MX:
               name: 'Proyecto: comparte tu aplicación'
             The Need for Programming Languages:
               name: La necesidad de lenguajes de programación
+          title: 'Unidad 3: Introducción al diseño de aplicaciones'
+        csl-vn:
+          stages:
+            Sequencing with Scrat:
+              name: Secuencias con Scrat
+            Programming in Maze:
+              name: Programación en Laberinto
+            Programming with Rey and BB-8:
+              name: Programación con Rey y BB-8
+            Loops in Ice Age:
+              name: Bucles de la Era de Hielo
+            Ocean Scene with Loops:
+              name: Escena del océano con bucles
