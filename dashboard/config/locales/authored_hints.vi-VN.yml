@@ -567,6 +567,203 @@ vi-VN:
         courseE_bee_functions_challenge1_a: "Nếu câu đố có vẻ khó khăn, thử xây dựng
           hàm của bạn từng chút một. \n\nThêm vài khối, rồi thử chúng. Thêm nhiều
           hơn, rồi thử lại.  Sẽ có lúc bạn hoàn thành nó!"
+      courseA_harvester_loops5:
+        courseA_harvester_loops5_a: Nếu bạn gặp rắc rối, hãy thử giải quyết câu đố
+          sau khi chia nó làm hai phần, phần trước góc và phần sau góc.
+      courseA_harvester_loops5_2019:
+        courseA_harvester_loops5_a: Nếu bạn gặp rắc rối, hãy thử giải quyết câu đố
+          sau khi chia nó làm hai phần, phần trước góc và phần sau góc.
+      courseA_harvester_seq2:
+        courseA_harvester_seq2_b: Thử viết các bước xuống một tờ giấy để tìm ra giải
+          pháp!
+      courseA_harvester_seq2_2019:
+        courseA_harvester_seq2_b: Thử viết các bước xuống một tờ giấy để tìm ra giải
+          pháp!
+      courseA_harvester_seq3:
+        courseA_harvester_seq3_b: Hãy nói to từng bước và xem việc này có thể giúp
+          bạn tìm ra giải pháp không.
+      courseA_harvester_seq3_2019:
+        courseA_harvester_seq3_b: Hãy nói to từng bước và xem việc này có thể giúp
+          bạn tìm ra giải pháp không.
+      courseA_maze_seq1:
+        courseA_maze_seq1_a: |-
+          Nếu bạn đang gặp vấn đề trong việc làm chú chim di chuyển, hãy chắc rằng những khối lệnh được gắn vào bên dưới <xml>
+            <block type="when_run"/>
+          </xml>
+        courseA_maze_seq1_b: |-
+          Chú chim cần di chuyển sang phía Tây 3 lần để đến chỗ chú lợn. Hãy thử dùng khối này:
+          <xml><block type="maze_moveWest"/></xml>
+      courseA_maze_seq10:
+        courseA_maze_seq10_a: Nếu bạn gặp khó khăn, hãy thử viết các bước xuống một
+          tờ giấy trước.
+      courseA_maze_seq10_2018:
+        courseA_maze_seq10_a: Nếu bạn gặp khó khăn, hãy thử viết các bước xuống một
+          tờ giấy trước.
+        courseA_maze_seq10_b: Bạn cần đi 3 hướng khác nhau để giải câu đố này.
+      courseA_maze_seq10_2019:
+        courseA_maze_seq10_a: Nếu bạn gặp khó khăn, hãy thử viết các bước xuống một
+          tờ giấy trước.
+        courseA_maze_seq10_b: Bạn cần đi 3 hướng khác nhau để giải câu đố này.
+      courseA_maze_seq13:
+        courseA_maze_seq13_a: Nếu con đường bạn cần không rõ ràng, dùng ngón tay để
+          vẽ đường từ chú chim đến chú lợn.
+        courseA_maze_seq13_b: Đừng lo lắng về việc mắc lỗi! Thử thêm các khối lệnh
+          và chạy chương trình xem điều gì sẽ xảy ra.
+      courseA_maze_seq13_2018:
+        courseA_maze_seq13_a: Nếu con đường bạn cần không rõ ràng, dùng ngón tay để
+          vẽ đường từ chú chim đến chú lợn.
+        courseA_maze_seq13_b: Đừng lo lắng về việc mắc lỗi! Thử thêm các khối lệnh
+          và chạy chương trình xem điều gì sẽ xảy ra.
+      courseA_maze_seq13_2019:
+        courseA_maze_seq13_a: Nếu con đường bạn cần không rõ ràng, dùng ngón tay để
+          vẽ đường từ chú chim đến chú lợn.
+        courseA_maze_seq13_b: Đừng lo lắng về việc mắc lỗi! Thử thêm các khối lệnh
+          và chạy chương trình xem điều gì sẽ xảy ra.
+        courseA_maze_seq13_c: |-
+          Những khối <xml><block type="maze_moveNorth"/></xml>
+
+          <xml><block type="maze_moveEast"/></xml> sẽ giúp bạn đến gần hơn với chú lợn.
+      courseA_maze_seq1_2018:
+        courseA_maze_seq1_a: |-
+          Nếu bạn đang gặp vấn đề trong việc làm chú chim di chuyển, hãy chắc rằng những khối lệnh được gắn vào bên dưới <xml>
+            <block type="when_run"/>
+          </xml>
+        courseA_maze_seq1_b: |-
+          Chú chim cần di chuyển sang phía Tây 3 lần để đến chỗ chú lợn. Hãy thử dùng khối này:
+          <xml><block type="maze_moveWest"/></xml>
+      courseA_maze_seq1_2019:
+        courseA_maze_seq1_a: |-
+          Nếu bạn đang gặp vấn đề trong việc làm chú chim di chuyển, hãy chắc rằng những khối lệnh được gắn vào bên dưới <xml>
+            <block type="when_run"/>
+          </xml>
+        courseA_maze_seq1_b: |-
+          Chú chim cần di chuyển sang phía Tây 3 lần để đến chỗ chú lợn. Hãy thử dùng khối này:
+          <xml><block type="maze_moveWest"/></xml>
+      courseA_maze_seq5:
+        courseA_maze_seq5_a: Thử viết các bước xuống một tờ giấy để tìm ra giải pháp!
+      courseA_maze_seq5_2018:
+        '1': Thử viết các bước xuống một tờ giấy để tìm ra giải pháp!
+        '2': |-
+          Bạn cần phải sử dụng khối lệnh này:
+
+          <xml><block type="maze_moveSouth"/></xml>
+      courseA_maze_seq5_2019:
+        '1': Thử viết các bước xuống một tờ giấy để tìm ra giải pháp!
+        '2': |-
+          Bạn cần phải sử dụng khối lệnh này:
+
+          <xml><block type="maze_moveSouth"/></xml>
+      courseA_maze_seq5a_2018:
+        '1': Hãy nói to từng bước và xem việc này có thể giúp bạn tìm ra giải pháp
+          không.
+      courseA_maze_seq5a_2019:
+        '1': Hãy nói to từng bước và xem việc này có thể giúp bạn tìm ra giải pháp
+          không.
+      courseA_maze_seq6:
+        courseA_maze_seq6_a: Chương trình của bạn cần có 3 khối lệnh.
+        courseA_maze_seq6_b: Nếu bạn gặp rắc rối, hãy thử giải quyết câu đố sau khi
+          chia nó làm hai phần, phần trước góc và phần sau góc.
+      courseA_maze_seq6_2018:
+        courseA_maze_seq6_a: Chương trình của bạn cần có 3 khối lệnh.
+        courseA_maze_seq6_b: Nếu bạn gặp rắc rối, hãy thử giải quyết câu đố sau khi
+          chia nó làm hai phần, phần trước góc và phần sau góc.
+      courseA_maze_seq6_2019:
+        courseA_maze_seq6_a: Chương trình của bạn cần có 3 khối lệnh.
+        courseA_maze_seq6_b: Nếu bạn gặp rắc rối, hãy thử giải quyết câu đố sau khi
+          chia nó làm hai phần, phần trước góc và phần sau góc.
+      courseA_maze_seq8:
+        courseA_maze_seq8_a: Nếu bạn mắc kẹt, hãy thử vẽ hình ảnh ra giấy để xem chú
+          chim nên di chuyển như thế nào.
+      courseA_maze_seq8_2018:
+        courseA_maze_seq8_a: Nếu bạn mắc kẹt, hãy thử vẽ hình ảnh ra giấy để xem chú
+          chim nên di chuyển như thế nào.
+      courseA_maze_seq8_2019:
+        courseA_maze_seq8_a: Nếu bạn mắc kẹt, hãy thử vẽ hình ảnh ra giấy để xem chú
+          chim nên di chuyển như thế nào.
+      courseA_playLab_events2:
+        courseA_playLab_events2_a: Tìm khối có thể khiến chú chó nói được.
+        courseA_playLab_events2_b: |-
+          Đây là đoạn code bạn cần dùng để hoàn thành câu hỏi này:
+
+          <xml>
+          <block type="when_run" movable="false" deletable="false">
+          <next>
+          <block type="studio_saySpriteChoices">
+              <title name="SPRITE">1</title>
+              <title name="VALUE">Hi there.</title>
+            </block>
+          </next>
+          </block>
+          </xml>
+      courseA_playLab_events2_2018:
+        courseA_playLab_events2_a: Tìm khối có thể khiến chú chó nói được.
+        courseA_playLab_events2_b: |-
+          Đây là đoạn code bạn cần dùng để hoàn thành câu hỏi này:
+
+          <xml>
+          <block type="when_run" movable="false" deletable="false">
+          <next>
+          <block type="studio_saySpriteChoices">
+              <title name="SPRITE">1</title>
+              <title name="VALUE">Hi there.</title>
+            </block>
+          </next>
+          </block>
+          </xml>
+      courseA_playLab_events2_2019:
+        courseA_playLab_events2_a: Tìm khối có thể khiến chú chó nói được.
+        courseA_playLab_events2_b: |-
+          Đây là đoạn code bạn cần dùng để hoàn thành câu hỏi này:
+
+          <xml>
+          <block type="when_run" movable="false" deletable="false">
+          <next>
+          <block type="studio_saySpriteChoices">
+              <title name="SPRITE">1</title>
+              <title name="VALUE">Hi there.</title>
+            </block>
+          </next>
+          </block>
+          </xml>
+      courseA_playLab_events3:
+        courseA_playLab_events3_a: |-
+          Kéo khối  <xml><block type="studio_move">
+              <title name="SPRITE">1</title>
+              <title name="DIR">8</title>
+            </block></xml> và gắn vào dưới khối <xml><block type="studio_whenArrow">
+              <title name="VALUE">left</title>
+            </block></xml>
+        courseA_playLab_events3_b: Dùng mũi tên trái để di chuyển Jorge tới cây cờ
+          khi chạy chương trình. Khi cây cờ chuyển sang màu xanh nghĩa là bạn đã hoàn
+          thành!
+      courseA_playLab_events3_2018:
+        courseA_playLab_events3_a: |-
+          Kéo khối  <xml><block type="studio_move">
+              <title name="SPRITE">1</title>
+              <title name="DIR">8</title>
+            </block></xml> và gắn vào dưới khối <xml><block type="studio_whenArrow">
+              <title name="VALUE">left</title>
+            </block></xml>
+        courseA_playLab_events3_b: Dùng mũi tên trái để di chuyển Jorge tới cây cờ
+          khi chạy chương trình. Khi cây cờ chuyển sang màu xanh nghĩa là bạn đã hoàn
+          thành!
+      courseA_playLab_events3_2019:
+        courseA_playLab_events3_a: |-
+          Kéo khối  <xml><block type="studio_move">
+              <title name="SPRITE">1</title>
+              <title name="DIR">8</title>
+            </block></xml> và gắn vào dưới khối <xml><block type="studio_whenArrow">
+              <title name="VALUE">left</title>
+            </block></xml>
+        courseA_playLab_events3_b: Dùng mũi tên trái để di chuyển Jorge tới cây cờ
+          khi chạy chương trình. Khi cây cờ chuyển sang màu xanh nghĩa là bạn đã hoàn
+          thành!
+      courseB_Scrat_ramp1_2018:
+        '1': Nếu Scrat không làm đúng những gì bạn muốn, hãy chắc chắn rằng cả hai
+          khối đã được ghép vào với nhau rồi ấn "Chạy" lần nữa.
+      courseB_Scrat_ramp1_2019:
+        '1': Nếu Scrat không làm đúng những gì bạn muốn, hãy chắc chắn rằng cả hai
+          khối đã được ghép vào với nhau rồi ấn "Chạy" lần nữa.
       courseB_maze_seq8:
         courseB_maze_seq8_b: Có hai cách để giải câu đố này!
       courseC19_playLab_EOC2:
