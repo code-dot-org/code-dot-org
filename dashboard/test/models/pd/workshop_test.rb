@@ -562,7 +562,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   test 'order_by_start' do
     # 5 workshops in date order, each with 1-5 sessions (only the first matters)
     workshops = 5.times.map do |i|
-      build :pd_workshop, num_sessions: rand(1..5), sessions_from: Date.today + i.days
+      build :workshop, num_sessions: rand(1..5), sessions_from: Date.today + i.days
     end
     # save out of order
     workshops.shuffle.each(&:save!)
@@ -581,8 +581,8 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     workshops = [
       @workshop,
       @organizer_workshop,
-      build(:pd_workshop, num_enrollments: 1),
-      build(:pd_workshop, num_enrollments: 2)
+      build(:workshop, num_enrollments: 1),
+      build(:workshop, num_enrollments: 2)
     ]
     # save out of order
     workshops.shuffle.each(&:save!)
@@ -596,8 +596,8 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     workshops = [
       @workshop,
       @organizer_workshop,
-      build(:pd_workshop),
-      build(:pd_workshop, num_enrollments: 1),
+      build(:workshop),
+      build(:workshop, num_enrollments: 1),
     ]
     # save out of order
     workshops.shuffle.each(&:save!)
@@ -610,7 +610,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     @workshop.started_at = Time.now
     workshops = [
       build(:pd_ended_workshop), # Ended
-      # build(:pd_workshop, started_at: Time.now), # In Progress
+      # build(:workshop, started_at: Time.now), # In Progress
       @workshop, # Not Started
       @organizer_workshop # Not Started
     ]
@@ -669,12 +669,12 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   end
 
   test 'time constraint lookup' do
-    workshop_bad_course = build :pd_workshop, course: 'nonexistent'
-    workshop_bad_subject = build :pd_workshop, course: Pd::Workshop::COURSE_CSP, subject: 'nonexistent'
+    workshop_bad_course = build :workshop, course: 'nonexistent'
+    workshop_bad_subject = build :workshop, course: Pd::Workshop::COURSE_CSP, subject: 'nonexistent'
 
     # Note, the Phase 2 subjects for ECS and CS_IN_A are identical: "Phase 2 in-person"
-    workshop_ambiguous_subject_ecs = build :pd_workshop, course: Pd::Workshop::COURSE_ECS, subject: Pd::Workshop::SUBJECT_ECS_PHASE_2
-    workshop_ambiguous_subject_cs_in_a = build :pd_workshop, course: Pd::Workshop::COURSE_CS_IN_A, subject: Pd::Workshop::SUBJECT_CS_IN_A_PHASE_2
+    workshop_ambiguous_subject_ecs = build :workshop, course: Pd::Workshop::COURSE_ECS, subject: Pd::Workshop::SUBJECT_ECS_PHASE_2
+    workshop_ambiguous_subject_cs_in_a = build :workshop, course: Pd::Workshop::COURSE_CS_IN_A, subject: Pd::Workshop::SUBJECT_CS_IN_A_PHASE_2
 
     assert_nil workshop_bad_course.time_constraint(:max_days)
     assert_nil workshop_bad_subject.time_constraint(:max_days)
@@ -988,7 +988,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     add_unit.call 'Unit 2', ['Unit 2 - Lesson 1', 'Unit 2 - Lesson 2']
     add_unit.call 'Unit 3', ['Unit 3 - Lesson 1']
 
-    workshop = build :pd_workshop
+    workshop = build :workshop
     workshop.expects(:pre_survey?).returns(true).twice
     workshop.stubs(:pre_survey_course_name).returns('pd-workshop-pre-survey-test')
 
@@ -1005,7 +1005,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     mock_course = mock
 
     # No pre-survey
-    workshop = build :pd_workshop
+    workshop = build :workshop
     workshop.stubs(:pre_survey?).returns(false)
     assert_nil workshop.pre_survey_course
 
@@ -1024,30 +1024,30 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   end
 
   test 'friendly date range same month' do
-    workshop = build :pd_workshop, num_sessions: 5, sessions_from: Date.new(2017, 3, 10)
+    workshop = build :workshop, num_sessions: 5, sessions_from: Date.new(2017, 3, 10)
     assert_equal 'March 10-14, 2017', workshop.friendly_date_range
   end
 
   test 'friendly date range different months' do
-    workshop = build :pd_workshop, num_sessions: 5, sessions_from: Date.new(2017, 3, 30)
+    workshop = build :workshop, num_sessions: 5, sessions_from: Date.new(2017, 3, 30)
     assert_equal 'March 30 - April 3, 2017', workshop.friendly_date_range
   end
 
   test 'date_and_location_name with processed location and sessions' do
-    workshop = build :pd_workshop, num_sessions: 5, sessions_from: Date.new(2017, 3, 30),
+    workshop = build :workshop, num_sessions: 5, sessions_from: Date.new(2017, 3, 30),
       processed_location: {city: 'Seattle', state: 'WA'}.to_json
 
     assert_equal 'March 30 - April 3, 2017, Seattle WA', workshop.date_and_location_name
   end
 
   test 'date_and_location_name with processed location but no sessions' do
-    workshop = build :pd_workshop, processed_location: {city: 'Seattle', state: 'WA'}.to_json
+    workshop = build :workshop, processed_location: {city: 'Seattle', state: 'WA'}.to_json
 
     assert_equal 'Dates TBA, Seattle WA', workshop.date_and_location_name
   end
 
   test 'date_and_location_name with no location but with sessions' do
-    workshop = build :pd_workshop, num_sessions: 5, sessions_from: Date.new(2017, 3, 30),
+    workshop = build :workshop, num_sessions: 5, sessions_from: Date.new(2017, 3, 30),
       processed_location: nil
 
     assert_equal 'March 30 - April 3, 2017, Location TBA', workshop.date_and_location_name
@@ -1060,30 +1060,30 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   end
 
   test 'date_and_location_name for teachercon' do
-    workshop = build :pd_workshop, :teachercon, num_sessions: 5, sessions_from: Date.new(2017, 3, 30),
+    workshop = build :workshop, :teachercon, num_sessions: 5, sessions_from: Date.new(2017, 3, 30),
       processed_location: {city: 'Seattle', state: 'WA'}.to_json
 
     assert_equal 'March 30 - April 3, 2017, Seattle WA TeacherCon', workshop.date_and_location_name
   end
 
   test 'friendly_location TBA' do
-    workshop = build :pd_workshop, location_address: 'tba'
+    workshop = build :workshop, location_address: 'tba'
     assert_equal 'Location TBA', workshop.friendly_location
   end
 
   test 'friendly_location with a city and state' do
-    workshop = build :pd_workshop, location_address: 'Seattle, WA',
+    workshop = build :workshop, location_address: 'Seattle, WA',
       processed_location: {city: 'Seattle', state: 'WA'}.to_json
     assert_equal 'Seattle WA', workshop.friendly_location
   end
 
   test 'friendly_location with an unprocessable location address returns the address as entered' do
-    workshop = build :pd_workshop, location_address: 'my custom unprocessable location', processed_location: nil
+    workshop = build :workshop, location_address: 'my custom unprocessable location', processed_location: nil
     assert_equal 'my custom unprocessable location', workshop.friendly_location
   end
 
   test 'friendly_location with no location returns tba' do
-    workshop = build :pd_workshop, location_address: '', processed_location: nil
+    workshop = build :workshop, location_address: '', processed_location: nil
     assert_equal 'Location TBA', workshop.friendly_location
   end
 
@@ -1101,7 +1101,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   end
 
   test 'csf funded workshops require a funding type' do
-    workshop = build :pd_workshop, course: Pd::Workshop::COURSE_CSF,
+    workshop = build :workshop, course: Pd::Workshop::COURSE_CSF,
       funded: true, funding_type: nil
     refute workshop.valid?
 
@@ -1110,7 +1110,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   end
 
   test 'csf unfunded workshops do not accept a funding type' do
-    workshop = build :pd_workshop, course: Pd::Workshop::COURSE_CSF,
+    workshop = build :workshop, course: Pd::Workshop::COURSE_CSF,
       funded: false, funding_type: Pd::Workshop::FUNDING_TYPE_FACILITATOR
     refute workshop.valid?
 
@@ -1125,7 +1125,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
       [{funded: true, funding_type: nil}, true],
       [{funded: false, funding_type: nil}, true]
     ].each do |params, expected_validity|
-      workshop = build :pd_workshop, course: Pd::Workshop::COURSE_CSP, **params
+      workshop = build :workshop, course: Pd::Workshop::COURSE_CSP, **params
       assert_equal(
         expected_validity,
         workshop.valid?,
@@ -1153,7 +1153,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
         'Yes: facilitator'
       ]
     ].each do |params, expected|
-      workshop = build :pd_workshop, **params
+      workshop = build :workshop, **params
       assert_equal(
         expected,
         workshop.funding_summary,
@@ -1215,7 +1215,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     teacher = create :teacher
 
     # 2 workshops on the same day
-    workshops = create_list :pd_workshop, 2, num_sessions: 2, sessions_from: Date.today - 1.day
+    workshops = create_list :workshop, 2, num_sessions: 2, sessions_from: Date.today - 1.day
 
     # Attend first session from one
     create :pd_attendance, session: workshops[0].sessions[0], teacher: teacher
@@ -1236,8 +1236,8 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     other_teacher = create :teacher
 
     # 2 workshops on the same day for each course
-    csd_workshops = create_list :pd_workshop, 2, num_sessions: 2, sessions_from: Date.today - 1.day, course: COURSE_CSD
-    csp_workshops = create_list :pd_workshop, 2, num_sessions: 2, sessions_from: Date.today - 1.day, course: COURSE_CSP
+    csd_workshops = create_list :workshop, 2, num_sessions: 2, sessions_from: Date.today - 1.day, course: COURSE_CSD
+    csp_workshops = create_list :workshop, 2, num_sessions: 2, sessions_from: Date.today - 1.day, course: COURSE_CSP
 
     # Enroll in the first of each
     create :pd_enrollment, :from_user, user: teacher, workshop: csd_workshops[0]

@@ -8,7 +8,7 @@ module Pd::SurveyPipeline
     self.use_transactional_test_case = true
     setup_all do
       @facilitators = create_list :facilitator, 2
-      @workshop = create :pd_workshop, course: COURSE_CSF, subject: SUBJECT_CSF_201,
+      @workshop = create :workshop, course: COURSE_CSF, subject: SUBJECT_CSF_201,
         num_sessions: 1, facilitators: @facilitators
 
       @program_manager = create :program_manager
@@ -225,7 +225,7 @@ module Pd::SurveyPipeline
 
     test 'get context of CSF survey submissions' do
       facilitator = create :facilitator
-      workshop = create :pd_workshop, course: COURSE_CSF, subject: SUBJECT_CSF_201,
+      workshop = create :workshop, course: COURSE_CSF, subject: SUBJECT_CSF_201,
         num_sessions: 1, facilitators: [facilitator]
       form_id = '1122334455'.to_i
 
@@ -245,7 +245,7 @@ module Pd::SurveyPipeline
 
     test 'get context of summer workshop survey submissions' do
       facilitator = create :facilitator
-      workshop = create :pd_workshop, course: COURSE_CSD, subject: SUBJECT_SUMMER_WORKSHOP,
+      workshop = create :workshop, course: COURSE_CSD, subject: SUBJECT_SUMMER_WORKSHOP,
         num_sessions: 1, facilitators: [facilitator]
       form_id = '1122334455'.to_i
 
@@ -263,7 +263,7 @@ module Pd::SurveyPipeline
 
     test 'get context of academic year workshop survey submissions' do
       facilitator = create :facilitator
-      workshop = create :pd_workshop, course: COURSE_CSP, subject: SUBJECT_CSP_WORKSHOP_1,
+      workshop = create :workshop, course: COURSE_CSP, subject: SUBJECT_CSP_WORKSHOP_1,
         num_sessions: 1, facilitators: [facilitator]
       daily_form_id = '1122334455'.to_i
       post_ws_form_id = '82115646319154'.to_i

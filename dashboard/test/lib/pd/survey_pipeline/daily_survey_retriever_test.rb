@@ -10,7 +10,7 @@ module Pd::SurveyPipeline
     setup_all do
       @workshop_form_ids = [11_000_000_000_000, 11_000_000_000_001]
       @facilitator_form_ids = [22_000_000_000_000, 22_000_000_000_001]
-      @workshops = create_list :pd_workshop, 2,
+      @workshops = create_list :workshop, 2,
         course: COURSE_CSF, subject: SUBJECT_CSF_201, num_sessions: 2
 
       teachers = create_list :teacher, 2
