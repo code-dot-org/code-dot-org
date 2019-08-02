@@ -153,23 +153,6 @@ Given(/^I am an organizer with completed courses$/) do
   }
 end
 
-Given(/^I am a teacher named "([^"]*)" going to TeacherCon and am on the TeacherCon registration page$/) do |name|
-  require_rails_env
-
-  teacher_email, teacher_password = generate_user(name)
-
-  teacher = FactoryGirl.create :teacher, name: name, password: teacher_password, email: teacher_email, school_info: SchoolInfo.first
-  teachercon = FactoryGirl.create :pd_workshop, :teachercon, num_sessions: 5, organizer: (FactoryGirl.create :workshop_organizer, email: "organizer_#{SecureRandom.hex}@code.org"), processed_location: {city: 'Seattle'}.to_json
-  application_hash = FactoryGirl.build :pd_teacher1920_application_hash, school: School.first, preferred_first_name: 'Minerva', last_name: 'McGonagall'
-  application = FactoryGirl.create :pd_teacher1920_application, :locked, user: teacher, form_data: application_hash.to_json
-  application.update(pd_workshop_id: teachercon.id)
-
-  steps %Q{
-    And I sign in as "#{name}"
-    And I am on "http://studio.code.org/pd/teachercon_registration/#{application.application_guid}"
-  }
-end
-
 And(/^I make the teacher named "([^"]*)" a facilitator for course "([^"]*)"$/) do |name, course|
   require_rails_env
 
