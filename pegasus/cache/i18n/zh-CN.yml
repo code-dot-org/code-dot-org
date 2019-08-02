@@ -16,10 +16,10 @@ zh-CN:
     white; text-decoration:underline; font-weight:bold">策划您自己的编程一小时</a>。'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400">您是一位计算机科学教师吗？请您参阅更多计算机科学教育周的资源</a>'
-  n_have_learned_an_hoc: "<h1>尝试</h1><h2>编程一小时</h2><h3># 送达</h3>"
+  n_have_learned_an_hoc: "<h1>尝试</h1><h2>编程一小时</h2><h3>#次参与</h3>"
   anybody_can_learn: 任何人都可以学习。
   learn_now: 现在开始学习
-  petition_message: 在每个学校每个学生都应该有机会学习计算机科学
+  petition_message: 任何学校的任何学生都应有机会学习计算机科学
   petition_sign_message: 如果同意，签名并像其他#人一样加入邮件列表。
   petition_sign_message_support: 如果支持我们，签名并像其他#人一样加入邮件列表。
   petition_join_others: '加入 # 其他'
@@ -349,13 +349,13 @@ zh-CN:
   homepage_slot_text_link_hocserved: "# 次参与"
   homepage_solot_text_link_volunteer: 成为编程一小时志愿者
   homepage_slot_text_title_students: 学生
-  homepage_slot_text_blurb_students: 体验我们所有的教程
+  homepage_slot_text_blurb_students: 探索我们所有的教程
   homepage_slot_text_blurb_students_courses: 探索我们的课程
   homepage_slot_text_link_codestudio: 尝试代码工作室
   homepage_slot_text_link_local: 找一个当地的班级
   homepage_slot_text_link_othercourses: 其他在线的课程
   homepage_slot_text_title_educators: 教育工作者
-  homepage_slot_text_blurb_educators: 教你的学生
+  homepage_slot_text_blurb_educators: 教导你的学生
   homepage_slot_text_link_elementary: 小学
   homepage_slot_text_link_middle: 中学
   homepage_slot_text_link_high: 高中
@@ -434,7 +434,7 @@ zh-CN:
   mc_gradelevel: 6岁以上
   mc_platformtext: 最新的浏览器，智能手机，平板电脑
   mc_specs: 多语言 | 最新浏览器和平板电脑 | 适用年龄6岁以上
-  minecraft_agent: "《我的世界》: 英雄之旅"
+  minecraft_agent: "《我的世界：英雄之旅》"
   minecraft_designer: "《我的世界》造物主"
   minecraft_adventurer: "《我的世界》大冒险"
   minecraft_tutorials: 编程一小时《我的世界》教程
@@ -442,7 +442,7 @@ zh-CN:
   minecraft_start_tutorial: 开始教程
   minecraft_agent_description: "《我的世界》编程一小时的全新的活动回来了！与《我的世界》和代码一起旅行吧。"
   minecraft_agent_button: 开始
-  minecraft_designer_description: 建立一个 我的世界 游戏。创造您自己版本的鸡、羊、爬行者、僵尸等等。
+  minecraft_designer_description: 在你自建的《我的世界》中对各种动物和其他生物进行编程。
   minecraft_designer_button: 开始
   minecraft_adventurer_description: 编写代码来带领Alex或Steve开启一段冒险之旅。
   minecraft_adventurer_button: 开始
@@ -562,7 +562,7 @@ zh-CN:
   volunteer_engineer_submission_field_email_desc: 您的电子邮件地址决不公开，但我们会把教师们的请求转发给你。
   volunteer_engineer_submission_field_email_placeholder: 电子邮件地址
   volunteer_engineer_submission_field_email_preference: 我们能否向您发送有关课程更新、本地机会或其他计算机科学新闻的电子邮件？
-  volunteer_engineer_submission_field_email_preference_privacy: "(请参阅我们的隐私政策)"
+  volunteer_engineer_submission_field_email_preference_privacy: "（请参阅我们的隐私政策）"
   volunteer_engineer_submission_field_email_preference_yes: 对
   volunteer_engineer_submission_field_email_preference_no: 不
   volunteer_engineer_submission_final_paragraph: 作为志愿者，你将被在地图中标示出来，以便当地教师与你联系，讨论编程一小时活动或其他志愿者服务的机会。我们决不泄漏您的电子邮件和确切地址。但是其他信息（包括大概位置）将在当地教师中共享。
@@ -985,41 +985,6 @@ zh-CN:
   express-2018_name: 快速课程
   pre-express-2018_name: 学前儿童的速学课程（2018）
   express-2019_name: 速学课程 (2019)
-  cspunit2_name: "（旧）单元 2︰ 互联网"
-  cspunit3_name: "（旧版）第3单元︰ 编程"
-  cspunit4_name: "（旧版）第4单元︰ 数据"
-  cspunit5_name: "（旧版）第5单元︰ 探索和创建 PT"
-  cspunit6_name: Post-AP：应用程序中的数据库
-  csd5_name: 单元 5︰ 数据和社会
-  csd6_name: 单元 6︰ 物理计算
-  csd5-2017_name: 单元 5︰ 数据和社会
-  csd6-2017_name: 单元 6︰ 物理计算
-  csd5-2018_name: 单元 5︰ 数据和社会
-  csd6-2018_name: 单元 6︰ 物理计算
-  csp1-2017_name: 第1单元：互联网
-  csp2-2017_name: 第2单元︰ 数字信息
-  csp-explore-2017_name: AP：探索表演任务的准备工作
-  csp-create-2017_name: AP：创建表演任务
-  csppostap-2017_name: 'Post AP: App中的数据库'
-  csp1-2018_name: 第1单元：互联网
-  csp2-2018_name: 第2单元︰ 数字信息
-  csp-explore-2018_name: AP：探索表演任务的准备工作
-  csp-create-2018_name: AP：创建表演任务
-  csppostap-2018_name: 'Post AP: App中的数据库'
-  csp1_name: 第1单元：互联网
-  csp2_name: 第2单元︰ 数字信息
-  csp3-a_name: '单元 3: 编程介绍 (版本 A)'
-  csp3-research-mxghyt_name: '单元 3: 编程介绍 (子目标)'
-  csp-ap_name: AP 性能任务
-  csppostap_name: 'Post AP: App中的数据库'
-  csp-post-survey_name: 学生课程后调查
-  cspassessment_name: 完整测试 - 共50题
-  csp-explore_name: AP：探索表演任务的准备工作
-  csp-create_name: AP：创建表演任务
-  cspexam1-mWU7ilDYM9_name: 测试部分 1 - 25 个问题
-  cspexam2-AKwgAh1ac5_name: 测试部分 2 - 25 个问题
-  cspunit3_gradelevel: 9-12年级
-  cspunit3_shortdescription_congrats: 这个单元介绍了计算机编程的基本概念，开启了制作丰富、有交互的应用程序的能力。这个课程使用JavaScript作为编程语言，应用实验室作为编程环境来创建应用，但这个课程中学到的概念能够扩展到所有的语言和工具中。
   accelerated_name: 加速课程
   express_name: 快速课程
   20-hour_name: 加速课程
@@ -1033,18 +998,6 @@ zh-CN:
   starwarsblocks_name: 星球大战(块)
   hoc-encryption_name: 简单加密
   text-compression_name: 文本压缩
-  math_category_name: 数学
-  hoc_category_name: 编程一小时
-  csf_category_name: 计算机科学基本原理
-  csf_2017_category_name: 计算机科学基础课程（2017）
-  csf_2018_category_name: 计算机科学基础课程（2018）
-  csf_international_category_name: 计算机基础国际版
-  csf2_draft_category_name: 开发中：课程A - F
-  csd_2018_category_name: 计算机科学发现 (' 18-' 19)
-  csp_category_name: 15-16 计算机原理
-  csp17_category_name: 计算机原理('17-'18)
-  csp_2018_category_name: 计算机科学原理 ('18-'19)
-  cspexams_category_name: 计算机原理练习测试
   applab_name: 应用实验室
   gamelab_name: 游戏实验室
   basketball_name: 进行一场篮球赛
@@ -1517,7 +1470,7 @@ zh-CN:
   header_educate_high: 高中
   header_educate_hoc: 编程一小时
   header_educate_partner: 与我们合作
-  header_educate_beyond: 超越Code.org的内容
+  header_educate_beyond: Code.org 意外的内容
   header_educate_inspire: 鼓舞学生
   header_educate_community: 在线社区
   header_educate_tools: 工具和视频
@@ -1545,10 +1498,6 @@ zh-CN:
   game_lab_documentation: 游戏实验室文档
   game_lab_tutorials: 游戏实验室说明
   header_documentation: 使用文档
-  csp_name: 计算机科学原理
-  csd_name: 计算机科学发现
-  csd_2018_name: 计算机科学发现
-  full_course_category_name: 完整课程
   user_header_label: 你好%{username}
   user_header_team: 团队
   user_header_my_projects: 我的项目
@@ -1637,10 +1586,10 @@ zh-CN:
   hoc2018_mc_aquatic_announcement: 注册您的班级以尝试编程一小时中的150多项新活动（12月3-9日推出）！请尝试2018年全新《我的世界》活动，《我的世界》水上航行！现在就注册班级。
   hoc2018_mc_aquatic_title: "《我的世界》：水上航行"
   hoc2018_mc_aquatic_description: "《我的世界》编程一小时的全新的活动回来了！与《我的世界》和代码一起旅行吧。"
-  hoc2018_mc_hero_title: "《我的世界》: 英雄之旅"
+  hoc2018_mc_hero_title: "《我的世界：英雄之旅》"
   hoc2018_mc_hero_description: "《我的世界》编程一小时的全新的活动回来了！与《我的世界》和代码一起旅行吧。"
   hoc2018_mc_designer_title: "《我的世界》造物主"
-  hoc2018_mc_designer_description: 建立一个 我的世界 游戏。创造您自己版本的鸡、羊、爬行者、僵尸等等。
+  hoc2018_mc_designer_description: 在你自建的《我的世界》中对各种动物和其他生物进行编程。
   hoc2018_mc_adventurer_title: "《我的世界》大冒险"
   hoc2018_mc_adventurer_description: 编写代码来带领Alex或Steve开启一段冒险之旅。
   hoc2018_mc_start: 开始
@@ -1687,7 +1636,7 @@ zh-CN:
   hoc2018_mc_teacher_guide: 查看教师指南
   hoc2018_mc_minecraft_education: "《我的世界》 教育"
   hoc2018_mc_continue_learning: 继续在《我的世界》 学习。
-  hoc2018_mc_go_to_mc_education: 去 《我的世界》 教育
+  hoc2018_mc_go_to_mc_education: 前往《我的世界》 教育
   hoc2018_mc_short_description: 用你的创造力和解决问题的技能来找到财宝，并用代码来探索水下世界。
   hoc2018_mc_short_description_shorter: 用你的创造力和解决问题的技能来用代码探索并构建水下世界。
   hoc2018_mc_journey: 用代码在《我的世界》中旅行。

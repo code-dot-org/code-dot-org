@@ -1155,6 +1155,8 @@ en:
               name: Pluralsight Test
             Externals Optionally Displayed as Unplugged:
               name: Externals Optionally Displayed as Unplugged
+            Bubble Choice:
+              name: Bubble Choice
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: 'Phase 2 Online: Blended Summer Study'
@@ -10525,6 +10527,12 @@ en:
               name: Deeper Learning Overview
             andrea-test-stage4:
               name: andrea-test-stage4
+            Part 1:
+              name: Part 1
+            Part 2:
+              name: Part 2
+            part 3:
+              name: part 3
           title: andrea-test
           description_audience: 6-12 Facilitators-in-Training
           description_short: this is to test my skills in making a course
@@ -11798,6 +11806,50 @@ en:
               name: new stage
             Number Systems:
               name: Number Systems
+            Bit Sending Device:
+              name: Bit Sending Device
+            Flippy Do Pt 1:
+              name: Flippy Do Pt 1
+            Flippy Do Pt 2:
+              name: Flippy Do Pt 2
+            Sending Text:
+              name: Sending Text
+            Black and White Images:
+              name: Black and White Images
+            Color Images:
+              name: Color Images
+            Lossless Compression:
+              name: Lossless Compression
+            Welcome to CSP:
+              name: Welcome to CSP
+            Sending Binary Messages:
+              name: Sending Binary Messages
+            Sending Binary Messages with the Internet Simulator:
+              name: Sending Binary Messages with the Internet Simulator
+            AB Patterns:
+              name: AB Patterns
+            Flippy Do, pt. 1:
+              name: Flippy Do, pt. 1
+            Flippy Do, pt. 2:
+              name: Flippy Do, pt. 2
+            Lossy Compression:
+              name: Lossy Compression
+            Intellectual Property:
+              name: Intellectual Property
+            'Project: Digital Information Dilemmas, pt. 1':
+              name: 'Project: Digital Information Dilemmas, pt. 1'
+            'Project: Digital Information Dilemmas, pt. 2':
+              name: 'Project: Digital Information Dilemmas, pt. 2'
+            Unit Assessment:
+              name: Unit Assessment
+            Flippy Do, pt 1:
+              name: Flippy Do, pt 1
+            Flippy Do, pt 2:
+              name: Flippy Do, pt 2
+            'Project: Digital Information Dilemmas, pt 1':
+              name: 'Project: Digital Information Dilemmas, pt 1'
+            'Project: Digital Information Dilemmas, pt 2':
+              name: 'Project: Digital Information Dilemmas, pt 2'
           title: CSP Unit 1 Pilot
           description_audience: ''
           description_short: ''
@@ -12904,6 +12956,40 @@ en:
             The Need for Programming Languages:
               name: The Need for Programming Languages
           title: 'Unit 3: Intro to App Design'
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csl-vn:
+          stages:
+            Sequencing with Scrat:
+              name: Sequencing with Scrat
+            Programming in Maze:
+              name: Programming in Maze
+            Programming with Rey and BB-8:
+              name: Programming with Rey and BB-8
+            Loops in Ice Age:
+              name: Loops in Ice Age
+            Ocean Scene with Loops:
+              name: Ocean Scene with Loops
+            Tell a Story in Play Lab:
+              name: Tell a Story in Play Lab
+          title: Computer Science Literacy for Vietnam
+          description_audience: Tuổi 5-10
+          description_short: Khoa học máy tính cơ bản cho học sinh Việt Nam
+          description: 'Khoa Học Máy Tính (Computer Science) là môn học cơ bản của thời đại kinh tế số và đã được đưa vào dạy đại trà từ tiểu học ở Mỹ, Canada, Anh, Nhật và các nước phát triển khác. Khoá học này nhằm giới thiệu Khoa Học Máy Tính cơ bản đến với học sinh Việt Nam. Chương trình được xây dựng trực tiếp từ chương trình hiện hành cho học sinh tiểu học ở Mỹ và cô đọng cho phù hợp với học sinh Việt Nam. '
+        dlp19-csd-mod-fit:
+          stages:
+            Deeper Learning Overview:
+              name: Deeper Learning Overview
+          title: CS Discoveries Deeper Learning 2019 Overview
+          description_audience: CS Discoveries Facilitators in Training 2019
+          description_short: ''
+          description: ''
+        dlp19-csp-mod-fit:
+          stages:
+            Deeper Learning Overview:
+              name: Deeper Learning Overview
+          title: CS Principles Deeper Learning 2019 FiT Workshop
           description_audience: ''
           description_short: ''
           description: ''
