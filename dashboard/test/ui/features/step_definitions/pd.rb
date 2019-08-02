@@ -91,21 +91,6 @@ Given(/^I am an organizer with started and completed courses$/) do
   }
 end
 
-Given(/^I am a teacher who has just followed a survey link$/) do
-  random_teacher_name = "TestTeacher" + SecureRandom.hex[0..9]
-  require_rails_env
-
-  steps %Q{
-    And I create a teacher named "#{random_teacher_name}"
-    And I create a workshop for course "CS Fundamentals" attended by "#{random_teacher_name}" with 3 facilitators and end it
-  }
-
-  enrollment = Pd::Enrollment.find_by(first_name: random_teacher_name)
-  steps %Q{
-    And I am on "http://code.org/pd-workshop-survey/#{enrollment.code}"
-  }
-end
-
 Given(/^I am a teacher who has just followed a workshop certificate link$/) do
   test_teacher_name = "TestTeacher - Certificate Test"
   require_rails_env
