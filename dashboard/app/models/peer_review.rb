@@ -8,7 +8,7 @@
 #  from_instructor :boolean          default(FALSE), not null
 #  script_id       :integer          not null
 #  level_id        :integer          not null
-#  level_source_id :integer          not null
+#  level_source_id :integer          unsigned, not null
 #  data            :text(65535)
 #  status          :integer
 #  created_at      :datetime         not null
@@ -287,6 +287,19 @@ class PeerReview < ActiveRecord::Base
       level_source_id: level_source_id,
       status: 2
     )
+  end
+
+  # Whether this peer review is a review of the latest version of the submitter's answer
+  def current?
+    level_source == submitter.last_attempt(level, script).level_source
+  end
+
+  # Classes applied to the .peer-review-content div whenever this review is rendered
+  def css_classes
+    classes = []
+    classes << 'outdated' unless current?
+    classes << 'from-instructor' if from_instructor
+    classes.join(' ')
   end
 
   private
