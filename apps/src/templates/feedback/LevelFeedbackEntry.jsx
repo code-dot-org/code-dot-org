@@ -154,8 +154,11 @@ export default class LevelFeedbackEntry extends Component {
           </div>
         </div>
         <TimeAgo style={styles.time} dateString={created_at} />
-        <div style={performanceStyle}>{rubricPerformance[performance]}</div>
-        <div>{performance_details}</div>
+        {performance && (
+          <div style={performanceStyle}>
+            {i18n.feedbackRubricEvaluation()}: {rubricPerformance[performance]} - {performance_details}
+          </div>
+        )}
         {showRightCaret ? (
           <span style={styles.iconBox}>
             <FontAwesome style={styles.icon} icon="caret-right" />
