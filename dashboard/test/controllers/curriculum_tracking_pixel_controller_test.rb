@@ -12,7 +12,6 @@ class CurriculumTrackingPixelControllerTest < ActionController::TestCase
     assert @firehose_record[:study], CurriculumTrackingPixelController::STUDY_NAME
     assert @firehose_record[:event], CurriculumTrackingPixelController::EVENT_NAME
     assert @firehose_record[:data_json]["curriculumBuilderUrl"], curriculum_url
-    assert @firehose_record[:data_json]["userId"], user_id
   end
 
   def refute_curriculum_page_view_logged
