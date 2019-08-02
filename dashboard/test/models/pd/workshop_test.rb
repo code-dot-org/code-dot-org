@@ -9,10 +9,10 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   self.use_transactional_test_case = true
   setup_all do
     @organizer = create(:program_manager)
-    @workshop = create(:pd_workshop, organizer: @organizer)
+    @workshop = create(:workshop, organizer: @organizer)
 
     @workshop_organizer = create(:workshop_organizer)
-    @organizer_workshop = create(:pd_workshop, organizer: @workshop_organizer)
+    @organizer_workshop = create(:workshop, organizer: @workshop_organizer)
   end
   setup do
     @workshop.reload
@@ -23,7 +23,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   # TODO: remove this test when workshop_organizer is deprecated
   test 'query by workshop organizer' do
     # create a workshop with a different organizer, which should not be returned below
-    create(:pd_workshop)
+    create(:workshop)
 
     workshops = Pd::Workshop.organized_by @workshop_organizer
     assert_equal 1, workshops.length
@@ -32,7 +32,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
 
   test 'query by organizer' do
     # create a workshop with a different organizer, which should not be returned below
-    create(:pd_workshop)
+    create(:workshop)
 
     workshops = Pd::Workshop.organized_by @organizer
     assert_equal 1, workshops.length
@@ -45,7 +45,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     @workshop.save!
 
     # create a workshop with a different facilitator, which should not be returned below
-    create(:pd_workshop, facilitators: [create(:facilitator)])
+    create(:workshop, facilitators: [create(:facilitator)])
 
     workshops = Pd::Workshop.facilitated_by facilitator
     assert_equal 1, workshops.length
@@ -58,7 +58,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     create :pd_enrollment, workshop: @workshop, full_name: teacher.name, email: teacher.email
 
     # create a workshop with a different teacher enrollment, which should not be returned below
-    other_workshop = create(:pd_workshop)
+    other_workshop = create(:workshop)
     create :pd_enrollment, workshop: other_workshop
 
     workshops = Pd::Workshop.enrolled_in_by teacher
@@ -85,8 +85,8 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   end
 
   test 'exclude_summer scope' do
-    summer_workshop = create :pd_workshop, :local_summer_workshop
-    teachercon = create :pd_workshop, :teachercon
+    summer_workshop = create :workshop, :local_summer_workshop
+    teachercon = create :workshop, :teachercon
 
     assert Pd::Workshop.exclude_summer.exclude? summer_workshop
     assert Pd::Workshop.exclude_summer.exclude? teachercon
@@ -99,18 +99,18 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     regional_partner = create(:regional_partner_program_manager, program_manager: user).regional_partner
 
     expected_workshops = [
-      create(:pd_workshop, facilitators: [user]),
-      create(:pd_workshop, organizer: user),
-      create(:pd_workshop, regional_partner: regional_partner),
+      create(:workshop, facilitators: [user]),
+      create(:workshop, organizer: user),
+      create(:workshop, regional_partner: regional_partner),
 
       # combos
-      create(:pd_workshop, num_facilitators: 1, organizer: user),
-      create(:pd_workshop, facilitators: [user], organizer: user),
-      create(:pd_workshop, regional_partner: regional_partner, facilitators: [user], organizer: user)
+      create(:workshop, num_facilitators: 1, organizer: user),
+      create(:workshop, facilitators: [user], organizer: user),
+      create(:workshop, regional_partner: regional_partner, facilitators: [user], organizer: user)
     ]
 
     # extra (not included)
-    create :pd_workshop, num_facilitators: 1, regional_partner: create(:regional_partner)
+    create :workshop, num_facilitators: 1, regional_partner: create(:regional_partner)
 
     filtered = Pd::Workshop.managed_by(user)
     assert_equal 6, filtered.count
@@ -128,7 +128,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     create :pd_attendance, session: session, teacher: teacher
 
     # create a workshop attended by a different teacher, which should not be returned below
-    other_workshop = create(:pd_workshop)
+    other_workshop = create(:workshop)
     other_session = create(:pd_session)
     other_workshop.sessions << other_session
     create :pd_attendance, session: other_session
@@ -140,7 +140,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
 
   test 'query by state' do
     workshops_not_started = [@workshop, @organizer_workshop]
-    workshop_in_progress = create :pd_workshop, started_at: Time.now
+    workshop_in_progress = create :workshop, started_at: Time.now
     workshop_ended = create :pd_ended_workshop
 
     not_started = Pd::Workshop.in_state(Pd::Workshop::STATE_NOT_STARTED)
@@ -234,17 +234,17 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
 
   # Email queries
   test 'single session scheduled_start_in_days and scheduled_end_in_days' do
-    workshop_in_10_days_early = create :pd_workshop, sessions: [session_on_day_early(10)]
-    workshop_in_10_days = create :pd_workshop, sessions: [session_on_day(10)]
-    workshop_in_10_days_late = create :pd_workshop, sessions: [session_on_day_late(10)]
+    workshop_in_10_days_early = create :workshop, sessions: [session_on_day_early(10)]
+    workshop_in_10_days = create :workshop, sessions: [session_on_day(10)]
+    workshop_in_10_days_late = create :workshop, sessions: [session_on_day_late(10)]
 
     # Noise
-    create :pd_workshop, sessions: [session_on_day_early(9)]
-    create :pd_workshop, sessions: [session_on_day(9)]
-    create :pd_workshop, sessions: [session_on_day_late(9)]
-    create :pd_workshop, sessions: [session_on_day_early(11)]
-    create :pd_workshop, sessions: [session_on_day(11)]
-    create :pd_workshop, sessions: [session_on_day_late(11)]
+    create :workshop, sessions: [session_on_day_early(9)]
+    create :workshop, sessions: [session_on_day(9)]
+    create :workshop, sessions: [session_on_day_late(9)]
+    create :workshop, sessions: [session_on_day_early(11)]
+    create :workshop, sessions: [session_on_day(11)]
+    create :workshop, sessions: [session_on_day_late(11)]
 
     start_expected = [workshop_in_10_days_early, workshop_in_10_days, workshop_in_10_days_late].pluck(:id)
     assert_equal start_expected, Pd::Workshop.scheduled_start_in_days(10).pluck(:id)
@@ -254,13 +254,13 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   end
 
   test 'multiple session scheduled_start_in_days and scheduled_end_in_days' do
-    workshop_starting_on_day_10 = create :pd_workshop, sessions: [session_on_day(10), session_on_day(11), session_on_day(12)]
-    workshop_ending_on_day_10 = create :pd_workshop, sessions: [session_on_day(8), session_on_day(9), session_on_day(10)]
+    workshop_starting_on_day_10 = create :workshop, sessions: [session_on_day(10), session_on_day(11), session_on_day(12)]
+    workshop_ending_on_day_10 = create :workshop, sessions: [session_on_day(8), session_on_day(9), session_on_day(10)]
 
     # Noise
-    create :pd_workshop, sessions: [session_on_day(8), session_on_day(9)]
-    create :pd_workshop, sessions: [session_on_day(5), session_on_day(10), session_on_day(15)]
-    create :pd_workshop, sessions: [session_on_day(11), session_on_day(12)]
+    create :workshop, sessions: [session_on_day(8), session_on_day(9)]
+    create :workshop, sessions: [session_on_day(5), session_on_day(10), session_on_day(15)]
+    create :workshop, sessions: [session_on_day(11), session_on_day(12)]
 
     start_expected = [workshop_starting_on_day_10].pluck(:id)
     assert_equal start_expected, Pd::Workshop.scheduled_start_in_days(10).pluck(:id)
@@ -270,17 +270,17 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   end
 
   test 'should have ended' do
-    workshop_recently_started = create :pd_workshop
+    workshop_recently_started = create :workshop
     workshop_recently_started.started_at = Time.now
     workshop_recently_started.sessions << (build :pd_session, start: Time.zone.now - 13.hours, end: Time.zone.now - 12.hours)
     workshop_recently_started.save!
 
-    workshop_should_have_ended = create :pd_workshop
+    workshop_should_have_ended = create :workshop
     workshop_should_have_ended.started_at = Time.now
     workshop_should_have_ended.sessions << (build :pd_session, start: Time.zone.now - 51.hours, end: Time.zone.now - 50.hours)
     workshop_should_have_ended.save!
 
-    workshop_already_ended = create :pd_workshop
+    workshop_already_ended = create :workshop
     workshop_already_ended.started_at = Time.now
     workshop_already_ended.ended_at = Time.now - 1.hour
     workshop_already_ended.sessions << (build :pd_session, start: Time.zone.now - 51.hours, end: Time.zone.now - 50.hours)
@@ -468,7 +468,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
 
   test 'friendly name' do
     Geocoder.expects(:search).returns([])
-    workshop = create :pd_workshop, course: Pd::Workshop::COURSE_ADMIN, location_name: 'Code.org',
+    workshop = create :workshop, course: Pd::Workshop::COURSE_ADMIN, location_name: 'Code.org',
       location_address: 'Seattle, WA', sessions: [create(:pd_session, start: Date.new(2016, 9, 1))]
 
     # no subject
@@ -486,10 +486,10 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
 
   test 'start date filters' do
     pivot_date = Date.today
-    workshop_before = create :pd_workshop, sessions: [create(:pd_session, start: pivot_date - 1.week)]
+    workshop_before = create :workshop, sessions: [create(:pd_session, start: pivot_date - 1.week)]
     # Start in the middle of the day. Since the filter is by date, this should be included in all the queries.
-    workshop_pivot = create :pd_workshop, sessions: [create(:pd_session, start: pivot_date + 8.hours)]
-    workshop_after = create :pd_workshop, sessions: [create(:pd_session, start: pivot_date + 1.week)]
+    workshop_pivot = create :workshop, sessions: [create(:pd_session, start: pivot_date + 8.hours)]
+    workshop_after = create :workshop, sessions: [create(:pd_session, start: pivot_date + 1.week)]
 
     # on or before
     assert_equal [workshop_before, workshop_pivot].pluck(:id).sort,
@@ -506,15 +506,15 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
 
   test 'in_year' do
     # before
-    create :pd_workshop, num_sessions: 1, sessions_from: Date.new(2016, 12, 31)
+    create :workshop, num_sessions: 1, sessions_from: Date.new(2016, 12, 31)
 
     workshops_this_year = [
-      create(:pd_workshop, num_sessions: 1, sessions_from: Date.new(2017, 1, 1)),
-      create(:pd_workshop, num_sessions: 1, sessions_from: Date.new(2017, 12, 31))
+      create(:workshop, num_sessions: 1, sessions_from: Date.new(2017, 1, 1)),
+      create(:workshop, num_sessions: 1, sessions_from: Date.new(2017, 12, 31))
     ]
 
     # after
-    create :pd_workshop, num_sessions: 1, sessions_from: Date.new(2018, 12, 31)
+    create :workshop, num_sessions: 1, sessions_from: Date.new(2018, 12, 31)
 
     assert_equal workshops_this_year.map(&:id), Pd::Workshop.in_year(2017).pluck(:id)
   end
@@ -522,15 +522,15 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   test 'future scope' do
     future_workshops = [
       # Today
-      create(:pd_workshop, num_sessions: 1, sessions_from: Date.today),
+      create(:workshop, num_sessions: 1, sessions_from: Date.today),
 
       # Next week
-      create(:pd_workshop, num_sessions: 1, sessions_from: Date.today + 1.week)
+      create(:workshop, num_sessions: 1, sessions_from: Date.today + 1.week)
     ]
 
     # Excluded (not future) workshops:
     # Last week
-    create :pd_workshop, num_sessions: 1, sessions_from: Date.today - 1.week
+    create :workshop, num_sessions: 1, sessions_from: Date.today - 1.week
     # Today, but ended
     create :pd_ended_workshop, num_sessions: 1, sessions_from: Date.today
     # Next week, but ended
@@ -541,10 +541,10 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
 
   test 'end date filters' do
     pivot_date = Date.today
-    workshop_before = create :pd_workshop, ended_at: pivot_date - 1.week
+    workshop_before = create :workshop, ended_at: pivot_date - 1.week
     # End in the middle of the day. Since the filter is by date, this should be included in all the queries.
-    workshop_pivot = create :pd_workshop, ended_at: pivot_date + 8.hours
-    workshop_after = create :pd_workshop, ended_at: pivot_date + 1.week
+    workshop_pivot = create :workshop, ended_at: pivot_date + 8.hours
+    workshop_after = create :workshop, ended_at: pivot_date + 1.week
 
     # on or before
     assert_equal [workshop_before, workshop_pivot].pluck(:id).sort,
@@ -683,13 +683,13 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   end
 
   test 'teacherCon workshops are capped at 33.5 hours' do
-    workshop_csd_teachercon = create :pd_workshop,
+    workshop_csd_teachercon = create :workshop,
       course: Pd::Workshop::COURSE_CSD,
       subject: Pd::Workshop::SUBJECT_CSD_TEACHER_CON,
       num_sessions: 5,
       each_session_hours: 8
 
-    workshop_csp_teachercon = create :pd_workshop,
+    workshop_csp_teachercon = create :workshop,
       course: Pd::Workshop::COURSE_CSD,
       subject: Pd::Workshop::SUBJECT_CSP_TEACHER_CON,
       num_sessions: 5,
@@ -700,7 +700,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   end
 
   test 'csp summer workshops are capped at 33.5 hours' do
-    workshop_csp_summer = create :pd_workshop,
+    workshop_csp_summer = create :workshop,
       course: Pd::Workshop::COURSE_CSP,
       subject: Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP,
       num_sessions: 5,
@@ -710,7 +710,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   end
 
   test 'CSF 101 workshops are capped at 7 hours' do
-    workshop_csf_101 = create :pd_workshop,
+    workshop_csf_101 = create :workshop,
       course: Pd::Workshop::COURSE_CSF,
       subject: Pd::Workshop::SUBJECT_CSF_101,
       num_sessions: 1,
@@ -720,7 +720,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   end
 
   test 'CSF 201 workshops are capped at 6 hours' do
-    workshop_csf_201 = create :pd_workshop,
+    workshop_csf_201 = create :workshop,
       course: Pd::Workshop::COURSE_CSF,
       subject: Pd::Workshop::SUBJECT_CSF_201,
       num_sessions: 1,
@@ -736,7 +736,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     Pd::WorkshopMailer.expects(:facilitator_enrollment_reminder).returns(mock_mail).times(2)
     Pd::WorkshopMailer.expects(:organizer_enrollment_reminder).returns(mock_mail)
 
-    workshop = create :pd_workshop, facilitators: [create(:facilitator), create(:facilitator)]
+    workshop = create :workshop, facilitators: [create(:facilitator), create(:facilitator)]
     create_list :pd_enrollment, 3, workshop: workshop
     Pd::Workshop.expects(:scheduled_start_in_days).returns([workshop])
 
@@ -756,7 +756,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
 
     Pd::WorkshopMailer.expects(:organizer_enrollment_reminder).returns(mock_mail)
 
-    workshop = create :pd_workshop, facilitators: [create(:facilitator), create(:facilitator)]
+    workshop = create :workshop, facilitators: [create(:facilitator), create(:facilitator)]
     create_list :pd_enrollment, 3, workshop: workshop
     Pd::Workshop.expects(:scheduled_start_in_days).returns([workshop])
 
@@ -775,7 +775,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     Pd::WorkshopMailer.expects(:facilitator_enrollment_reminder).returns(mock_mail).times(2)
     Pd::WorkshopMailer.expects(:organizer_enrollment_reminder).returns(mock_mail)
 
-    workshop = create :pd_workshop, facilitators: [create(:facilitator), create(:facilitator)]
+    workshop = create :workshop, facilitators: [create(:facilitator), create(:facilitator)]
     create_list :pd_enrollment, 3, workshop: workshop
     Pd::Workshop.expects(:scheduled_start_in_days).returns([workshop])
 
@@ -795,7 +795,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     organizer = create :workshop_organizer
 
     # The organizer is also a facilitator, and should not receive a facilitator reminder email.
-    workshop = create :pd_workshop, organizer: organizer, facilitators: [organizer, facilitator]
+    workshop = create :workshop, organizer: organizer, facilitators: [organizer, facilitator]
     Pd::Workshop.expects(:scheduled_start_in_days).returns([workshop])
 
     Pd::WorkshopMailer.expects(:facilitator_enrollment_reminder).with(facilitator, workshop).returns(mock_mail)
@@ -814,12 +814,12 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   end
 
   test 'workshop date range string for single session workshop' do
-    workshop = create :pd_workshop, num_sessions: 1
+    workshop = create :workshop, num_sessions: 1
     assert_equal Date.today.strftime('%B %e, %Y'), workshop.workshop_date_range_string
   end
 
   test 'workshop date range string for multi session workshop' do
-    workshop = create :pd_workshop, num_sessions: 2
+    workshop = create :workshop, num_sessions: 2
     assert_equal "#{Date.today.strftime('%B %e, %Y')} - #{Date.tomorrow.strftime('%B %e, %Y')}", workshop.workshop_date_range_string
   end
 
@@ -933,11 +933,11 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
 
   test 'suppress_reminders?' do
     suppressed = [
-      create(:pd_workshop, course: Pd::Workshop::COURSE_CSF, subject: Pd::Workshop::SUBJECT_CSF_FIT),
-      create(:pd_workshop, course: Pd::Workshop::COURSE_CSD, subject: Pd::Workshop::SUBJECT_CSD_TEACHER_CON),
-      create(:pd_workshop, course: Pd::Workshop::COURSE_CSD, subject: Pd::Workshop::SUBJECT_CSD_FIT),
-      create(:pd_workshop, course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_TEACHER_CON),
-      create(:pd_workshop, course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_FIT)
+      create(:workshop, course: Pd::Workshop::COURSE_CSF, subject: Pd::Workshop::SUBJECT_CSF_FIT),
+      create(:workshop, course: Pd::Workshop::COURSE_CSD, subject: Pd::Workshop::SUBJECT_CSD_TEACHER_CON),
+      create(:workshop, course: Pd::Workshop::COURSE_CSD, subject: Pd::Workshop::SUBJECT_CSD_FIT),
+      create(:workshop, course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_TEACHER_CON),
+      create(:workshop, course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_FIT)
     ]
 
     refute @workshop.suppress_reminders?
@@ -951,7 +951,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     refute @workshop.ready_to_close?
 
     # 3 sessions, no attendance: not ready
-    workshop = create :pd_workshop, num_sessions: 3
+    workshop = create :workshop, num_sessions: 3
     refute workshop.ready_to_close?
 
     # attendance in the first session only: not ready
@@ -964,9 +964,9 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   end
 
   test 'pre_survey?' do
-    csd_workshop = create :pd_workshop, course: Pd::Workshop::COURSE_CSD
-    csp_workshop = create :pd_workshop, course: Pd::Workshop::COURSE_CSP
-    other_workshop = create :pd_workshop, course: Pd::Workshop::COURSE_CSF
+    csd_workshop = create :workshop, course: Pd::Workshop::COURSE_CSD
+    csp_workshop = create :workshop, course: Pd::Workshop::COURSE_CSP
+    other_workshop = create :workshop, course: Pd::Workshop::COURSE_CSF
 
     assert csd_workshop.pre_survey?
     assert csp_workshop.pre_survey?
@@ -1054,7 +1054,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   end
 
   test 'date_and_location_name with no location nor sessions' do
-    workshop = create :pd_workshop, processed_location: nil
+    workshop = create :workshop, processed_location: nil
 
     assert_equal 'Dates TBA, Location TBA', workshop.date_and_location_name
   end
@@ -1088,14 +1088,14 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   end
 
   test 'workshops organized by a non program manager are not assigned regional partner' do
-    workshop = create :pd_workshop
+    workshop = create :workshop
     assert_nil workshop.regional_partner
   end
 
   test 'workshops organized by a program manager are assigned the regional partner' do
     regional_partner = create :regional_partner
     program_manager = create :program_manager, regional_partner: regional_partner
-    workshop = create :pd_workshop, organizer: program_manager
+    workshop = create :workshop, organizer: program_manager
 
     assert_equal regional_partner, workshop.regional_partner
   end
@@ -1163,18 +1163,18 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   end
 
   test 'nearest' do
-    target = create :pd_workshop, num_sessions: 1, sessions_from: Date.today + 1.week
+    target = create :workshop, num_sessions: 1, sessions_from: Date.today + 1.week
 
-    create :pd_workshop, num_sessions: 1, sessions_from: Date.today + 2.weeks
-    create :pd_workshop, num_sessions: 1, sessions_from: Date.today - 2.weeks
+    create :workshop, num_sessions: 1, sessions_from: Date.today + 2.weeks
+    create :workshop, num_sessions: 1, sessions_from: Date.today - 2.weeks
 
     assert_equal target, Pd::Workshop.nearest
   end
 
   test 'nearest is independent of creation order' do
-    create :pd_workshop, num_sessions: 1, sessions_from: Date.today - 2.weeks
-    target = create :pd_workshop, num_sessions: 1, sessions_from: Date.today + 1.week
-    create :pd_workshop, num_sessions: 1, sessions_from: Date.today + 2.weeks
+    create :workshop, num_sessions: 1, sessions_from: Date.today - 2.weeks
+    target = create :workshop, num_sessions: 1, sessions_from: Date.today + 1.week
+    create :workshop, num_sessions: 1, sessions_from: Date.today + 2.weeks
 
     nearest_workshop = Pd::Workshop.nearest
     assert_equal target, nearest_workshop
@@ -1190,21 +1190,21 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
 
   test 'nearest combined with subject and enrollment' do
     user = create :teacher
-    target = create :pd_workshop, num_sessions: 1, sessions_from: Date.today + 1.day,
+    target = create :workshop, num_sessions: 1, sessions_from: Date.today + 1.day,
       course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_SUMMER_WORKSHOP
 
     create :pd_enrollment, :from_user, user: user, workshop: target
 
-    same_subject_farther = create :pd_workshop, num_sessions: 1, sessions_from: Date.today + 1.week,
+    same_subject_farther = create :workshop, num_sessions: 1, sessions_from: Date.today + 1.week,
       course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_SUMMER_WORKSHOP
     create :pd_enrollment, :from_user, user: user, workshop: same_subject_farther
 
-    different_subject_closer = create :pd_workshop, num_sessions: 1, sessions_from: Date.today,
+    different_subject_closer = create :workshop, num_sessions: 1, sessions_from: Date.today,
       course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_TEACHER_CON
     create :pd_enrollment, :from_user, user: user, workshop: different_subject_closer
 
     # closer, not enrolled
-    create :pd_workshop, num_sessions: 1, sessions_from: Date.today,
+    create :workshop, num_sessions: 1, sessions_from: Date.today,
       course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_SUMMER_WORKSHOP
 
     found = Pd::Workshop.where(subject: Pd::Workshop::SUBJECT_SUMMER_WORKSHOP).enrolled_in_by(user).nearest
@@ -1266,7 +1266,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     csd_facilitator = create :facilitator, course: COURSE_CSD
 
     # csf workshop has workshop admins, program managers, and other csf facilitators in list
-    csf_workshop = create :pd_workshop, course: COURSE_CSF
+    csf_workshop = create :workshop, course: COURSE_CSF
     potential_organizer_ids = csf_workshop.potential_organizers.map {|org| org[:value]}
 
     assert potential_organizer_ids.include? workshop_admin.id
@@ -1276,7 +1276,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     refute potential_organizer_ids.include? csd_facilitator.id
 
     # non-csf workshop without regional partner has workshop admins and all program managers in list
-    csd_workshop = create :pd_workshop, course: COURSE_CSD
+    csd_workshop = create :workshop, course: COURSE_CSD
     potential_organizer_ids = csd_workshop.potential_organizers.map {|org| org[:value]}
     assert potential_organizer_ids.include? workshop_admin.id
     assert potential_organizer_ids.include? program_manager.id
