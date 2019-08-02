@@ -322,8 +322,6 @@ vi-VN:
       course4_artist_fwp_challenge1: Thử chạy chương trình này, và tạo vài thay đổi
         để xem điều gì sẽ xảy ra. Bạn có thể tìm ra cách mà nó hoạt động? (Hoặc xóa
         nó và thay thế nó bằng một cái gì đó hoàn toàn khác)
-      courseAB_video_collector_2019: Hãy giúp Scrat băng qua tảng băng trơn trượt
-        để có thể lấy được hạt sồi nhé!
       courseA_artist_loops10: |-
         ## Đã đến lúc quay lại đất liền rồi, hãy giúp tôi đặt những tảng đá xuống để tôi không ngã nhé!
 
@@ -335,7 +333,7 @@ vi-VN:
       courseA_artist_loops10_2019: |-
         ## Đã đến lúc quay lại đất liền rồi, hãy giúp tôi đặt những tảng đá xuống để tôi không ngã nhé!
 
-        ![expandable](https://images.code.org/d3213d375d0271e114aa4313cdeb34be-image-1498064942606.gif)
+        ![expandable](https://images.code.org/b329e035f02cf0273987a530d4ff93b3-image-1497998147979.gif)
       courseA_artist_loops11: |-
         ## Hãy giúp tôi xây bậc cầu thang để tôi ngắm con tàu ra khơi.
 
@@ -386,6 +384,10 @@ vi-VN:
 
         ![](https://images.code.org/04501f26a36673460f5c8fe04e3e7686-image-1498002095108.gif)
       courseA_artist_loops2_2018: |-
+        Hãy giúp hoạ sĩ vẽ đường này hai lần về phía trước
+
+        ![](https://images.code.org/04501f26a36673460f5c8fe04e3e7686-image-1498002095108.gif)
+      courseA_artist_loops2_2019: |-
         Hãy giúp hoạ sĩ vẽ đường này hai lần về phía trước
 
         ![](https://images.code.org/04501f26a36673460f5c8fe04e3e7686-image-1498002095108.gif)
@@ -538,9 +540,9 @@ vi-VN:
       courseA_playLab_events7_2018: _Chơi tự do:_ Thêm bất cứ thứ gì bạn thích vào
         trò chơi. Bạn có thể làm chú khủng long biến mất khi chú chó Jorge va vào
         nó không?
-      courseA_video_Loops_2019: Bạn có thể đến được chỗ hạt Sồi chỉ với một khối <xml><block
-        type="maze_moveWest" block-text="Đi về phía Tây"/></xml> không? Hãy thử dùng
-        một vòng lặp!
+      courseA_playLab_events7_2019: _Chơi tự do:_ Thêm bất cứ thứ gì bạn thích vào
+        trò chơi. Bạn có thể làm chú khủng long biến mất khi chú chó Jorge va vào
+        nó không?
       courseB_Scrat_ramp1_2019: Để giúp Scrat đến hạt thông, gắn khối <xml><block
         type="maze_moveEast" block-text="move East"/></xml> vào dưới khối <xml><block
         type="when_run" block-text="when run"/></xml> rồi ấn "▶ Chạy"!
@@ -558,54 +560,6 @@ vi-VN:
         bạn!
       courseB_Scrat_ramp5a_2019: Hãy thử tạo một chương trình hoàn toàn theo ý của
         bạn!
-      courseB_artist_loops10_2019: |-
-        ## Đã đến lúc quay lại đất liền rồi, hãy giúp tôi đặt những tảng đá xuống để tôi không ngã nhé!
-
-        ![expandable](https://images.code.org/b329e035f02cf0273987a530d4ff93b3-image-1497998147979.gif)
-      courseB_artist_loops2_2019: |-
-        Hoạ sĩ của chúng ta đang muốn vẽ thêm 5 đoạn thẳng nữa. Bạn có thể giúp anh ấy không?
-
-        [expandable][0]
-      courseB_artist_loops4_2019: |-
-        Hãy dùng vòng lặp <xml><block type="controls_repeat_simplified_dropdown" block-text="repeat"><title name="TIMES" config="2-6">5</title></block></xml> để vẽ đoạn thằng này năm lần nữa!
-
-        [][0]
-      courseB_artist_loops5_2019: |-
-        ## Hãy vẽ đường thẳng dài bảy bước, đây sẽ là đường chân trời của chúng ta.
-
-        [expandable][0]
-      courseB_artist_loops6_2019: |-
-        ## Hãy vẽ một ngọn đồi nhỏ ở phía sau.
-
-        [expandable][0]
-      courseB_artist_loops7_2019: |-
-        Hãy dùng vòng lặp <xml><block type="controls_repeat_simplified_dropdown" block-text="repeat"><title name="TIMES" config="3-10">???</title></block></xml> để tạo sóng.
-
-        [expandable][0]
-      courseB_artist_loops8_2019: |-
-        ## Chúng ta cần vẽ một cái thang lên tàu.
-
-        [expandable][0]
-      courseB_artist_loops9_2019: |-
-        ## **Thử thách:** Cầu thang dẫn xuống cảng đã bị hỏng. Hãy giúp sửa chữa lại nó nhé.
-
-        [expandable][0]
-      courseB_collector_loops10_2019: Hãy đến chỗ hạt Sồi đó bằng bất cứ cách nào
-        mà bạn có thể!
-      courseB_collector_loops1_2019: Dùng cả hai khối <xml><block type="maze_moveWest"
-        block_text="Đi về phía Tây"/></xml> và <xml><block type="maze_moveSouth" block_text="Đi
-        về phía Nam"/></xml> để đến được chỗ hạt Sồi!
-      courseB_collector_loops3_2019: Hãy thêm một khối nữa để đưa Scrat đi đến tới
-        tận chỗ hạt Sồi!
-      courseB_collector_loops4_2019: Bạn có thể thêm một vòng lặp để đến được chỗ
-        hạt Sồi không?
-      courseB_collector_loops5_2019: 'Scrat thật sự rất muốn hạt Sồi đó! '
-      courseB_collector_loops6_2019: 'Bạn có thể sửa phần mã lệnh này không? '
-      courseB_collector_loops7_2019: Hạt Sồi thật là xa quá đi! Bạn có thể dùng vòng
-        lặp để giúp Scrat đến đó không?
-      courseB_collector_loops8_2019: Hãy giúp Scrat đi hết đường đến tận chỗ hạt Sồi
-        nhé!
-      courseB_collector_loops9_2019: Hãy giúp Scrat đến chỗ hạt Sồi nhé!
       courseB_iceage_loops1: Hãy giúp Scrat băng qua tảng băng trơn trượt để có thể
         lấy được hạt sồi nhé!
       courseB_iceage_loops10: Hãy giúp Scrat đi hết đường đến tận chỗ hạt Sồi nhé!
@@ -643,22 +597,6 @@ vi-VN:
         giúp Scrat đến đó không?
       courseB_iceage_loops9_2019: Hạt Sồi thật là xa quá đi! Bạn có thể dùng vòng
         lặp để giúp Scrat đến đó không?
-      courseB_playlab_events4_2019: |-
-        Giúp chú chó Jorge di chuyển bằng cách nối khối <xml><block type="studio_move" block-text="move dog west">
-            <title name="SPRITE">1</title>
-            <title name="DIR">8</title>
-          </block></xml> vào sau khối sự kiện <xml><block type="studio_whenArrow" block-text="when left arrow">
-            <title name="VALUE">left</title>
-          </block></xml>.
-
-        Đưa chú chó Jorge đến cây cờ để hoàn thành câu đố này!
-      courseB_playlab_eventsFP_2019: _Chơi tự do:_ Thêm bất cứ thứ gì bạn thích vào
-        trò chơi. Bạn có thể làm chú khủng long biến mất khi chú chó Jorge va vào
-        nó không?
-      courseB_video_artistLoops_2019: |-
-        Hãy giúp hoạ sĩ vẽ đường này hai lần về phía trước
-
-        [][0]
       courseD_iceage_loops1: Hãy giúp Scrat băng qua tảng băng trơn trượt để có thể
         lấy được hạt sồi nhé!
       courseD_iceage_loops10: Hãy giúp Scrat đi hết đường đến tận chỗ hạt Sồi nhé!
