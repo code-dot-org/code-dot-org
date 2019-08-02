@@ -57,6 +57,7 @@ level 'CSD U2L07 TFMD_pilot', named: true
 stage 'Images', flex_category: 'csd2_1'
 level 'CSD U2L07 TFMD_pilot', named: true
 level 'CSD U2 Image Tag 1_pilot', progression: 'Adding Images'
+level 'CSD U2 Image Credit_pilot', progression: 'Adding Images'
 level 'CSD U2 Image Tag Debug_pilot', progression: 'Adding Images'
 level 'CSD U2 image debug match_pilot', progression: 'Adding Images'
 level 'CSD U2 Image Tag 2_pilot', progression: 'Adding Images'
