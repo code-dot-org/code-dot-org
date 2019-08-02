@@ -37,6 +37,8 @@ class PeerReview < ActiveRecord::Base
   belongs_to :level
   belongs_to :level_source
 
+  validates :status, inclusion: {in: %w{accepted rejected}}, if: -> {from_instructor}
+
   after_update :mark_user_level, if: -> {status_changed? || data_changed?}
 
   SYSTEM_DELETED_DATA = ''.freeze
@@ -287,6 +289,19 @@ class PeerReview < ActiveRecord::Base
       level_source_id: level_source_id,
       status: 2
     )
+  end
+
+  # Whether this peer review is a review of the latest version of the submitter's answer
+  def current?
+    level_source == submitter.last_attempt(level, script).level_source
+  end
+
+  # Classes applied to the .peer-review-content div whenever this review is rendered
+  def css_classes
+    classes = []
+    classes << 'outdated' unless current?
+    classes << 'from-instructor' if from_instructor
+    classes.join(' ')
   end
 
   private
