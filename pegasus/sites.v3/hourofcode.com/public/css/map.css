@@ -14,6 +14,11 @@
   width: 100%;
 }
 
+#mapbox-map {
+  width: 100%;
+  padding-bottom: 56.25%;
+}
+
 @media only screen and (max-width: 760px) {
   #inmaplegend {
     display: none;
@@ -40,6 +45,19 @@
   color: #008b9a;
   font-weight: bold;
   margin-bottom: 5px;
+}
+
+.mapbox-legend {
+  background-color: #fff;
+  padding: 10px;
+  margin: 5px;
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+  width: 160px;
+  bottom: 30px;
+  position: absolute;
+  right: 10px;
+  z-index: 1;
 }
 
 .color {
