@@ -1,0 +1,36 @@
+{
+  "name": "@bcjordan/ml-activities",
+  "version": "0.0.1",
+  "description": "",
+  "main": "dist/main.js",
+  "scripts": {
+    "build": "webpack -p",
+    "dev": "webpack-dev-server --mode development --content-base public",
+    "lint": "eslint --ext .js src",
+    "test": "npm run lint",
+    "preversion": "npm install && npm run test",
+    "version": "npm run build",
+    "postversion": "git push && git push --tags && npm publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/code-dot-org/dance-party.git"
+  },
+  "author": "",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babelify": "^6.3.0",
+    "eslint": "^2.8.0",
+    "webpack": "4.19.1",
+    "webpack-cli": "^2.1.5",
+    "webpack-dev-server": "^3.1.4"
+  },
+  "bugs": {
+    "url": "https://github.com/code-dot-org/dance-party/issues"
+  },
+  "homepage": "https://github.com/code-dot-org/dance-party#readme"
+}

@@ -1,0 +1,30 @@
+language: node_js
+dist: xenial
+
+node_js:
+- 8.12.0
+
+cache:
+  directories:
+    - node_modules
+
+before_install:
+  - sudo apt-get -qq update
+  - sudo apt-get install build-essential g++
+
+script:
+  - npm test
+
+notifications:
+  email: false
+
+before_deploy:
+  - npm run build && cp -r public/* dist
+
+deploy:
+  local_dir: dist
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  on:
+    branch: master
