@@ -422,10 +422,16 @@ pt-BR:
         a mesma coisa com a variável "contador" agora. Esse padrão começa com um triângulo
         e adiciona um lado de cada vez até que seja desenhado um decágono (10 lados).
         Cada lado deve ter 100 pixels de comprimento. '
+      Course 4 Artist For Loops 11a: |-
+        Vamos juntar tudo! Usando seu conhecimento sobre laços `for` e a variável `contador`, crie este desenho em que cada forma possui dois lados a mais do que a última. Tenha certeza que cada lado seja 10 vezes do que o número de lados do polígono.
+
+        Apenas uma pequena parte do código foi fornecida para você.
       Course 4 Artist For Loops 14: Se você girar um pouco a mais ou a menos do que
         você normalmente faria com uma forma, isto cria um efeito legal. Tente usar
         um pouco do código do último nível, mas girando 89 graus para criar esta espiral
         quadrada retorcida.
+      Course 4 Artist For Loops 15: 'Tempo Livre: Tente criar alguns desenhos próprios
+        usando "laços for". Foram adicionadas algumas variáveis úteis para você.'
       Course 4 Artist For Loops 2: 'Eu coloquei o código para desenhar um triângulo
         dentro de um laço de repetição para que conte de 50 até 100, de 10 em 10.
         NOTA: Não deixe de ver o código antes de clicar em "Executar".'
@@ -442,6 +448,15 @@ pt-BR:
         Somente uma pequena alteração de código da última imagem é capaz de criar este desenho. Você consegue descobrir qual é esta alteração?
 
         Dica: Você precisa remover algo!
+      Course 4 Artist For Loops Challenge: "**Desafio:** Você consegue descobrir como
+        usar todas as coisas que você aprendeu para criar esta imagem de polígonos,
+        todos com lados de 40 pixels?"
+      Course 4 Artist For Loops inspire: |-
+        Inspiração para Tempo Livre: Agora você já aprendeu tudo o que você precisa para criar um padrão como este! Se esta imagem inspira você, tente fazer algo semelhante. Caso contrário, crie algo você mesmo.
+
+        Precisa de uma dica? Clique aqui.
+      Course 4 Artist Functions Inspiration: Clique aqui para ver as dicas novamente.
+      Course 4 Artist Functions challenge: Clique aqui para ver as dicas novamente.
       Course 4 Artist Inspire: |-
         Quer ver o design de inspiração ou as dicas? Clique aqui!
         Caso contrário, crie um design você mesmo!
@@ -454,6 +469,10 @@ pt-BR:
         Vamos definir a variável "lados" como 5. Quanto mais lados adicionarmos a esse algoritmo, maior será o
         padrão! Observe que existe uma nova variável chamada "comprimento". Agora podemos usá-la onde há
         um bloco "avance". Para essa forma, defina a variável "comprimento" como 75.
+      Course 4 Artist Vars 13: |-
+        Quando uma forma tem muitos lados, cada lado precisa ser menor se você quiser que todo o padrão caiba na tela.
+        Vamos recriar o algorítmo para este padrão incrível, mas ao invés de definir manualmente a variável `comprimento` vamos usar um bloco de matemática com a variável `lados` dentro, para ter certeza que cada forma se encaixe corretamente. O perímetro de cada polígono é 300 pixels.
+        Precisa de ajuda? Clique aqui.
       Course 4 Artist Vars 14: |-
         Atividade Livre: Veja isto! Agora seu algoritmo está aninhado em um laço de repetição adicional. Experimente alterar os valores de suas 2 variáveis para desenhar padrões legais.
 
@@ -552,6 +571,24 @@ pt-BR:
         você tiver terminado a investigação, crie um jogo ou história usando repetições,
         variáveis, e eventos.\n\nDica: role a tela para baixo para ver todos os comandos
         no espaço de trabalho."
+      Course 4 Play Labs For Loops 1: Vamos fazer o cão falar todos os números de
+        1 a 100. Use um laço `for` e o bloco de contagem para que ele fale a variável
+        `contador` a cada vez que o laço for executado.
+      Course 4 Play Labs For Loops 2: Desta vez, ajude Olívia a Gata a contar somente
+        os números ímpares de 1 a 101.
+      Course 4 Play Labs For Loops 3: Se contarmos números maiores, podemos contar
+        até números ainda maiores no mesmo intervalo de tempo. Tente fazer o Pirata
+        Perna de Pau contar de 10 até 1000, contando de 10 e 10.
+      Course 4 Playlab For Loop Freeplay: 'Tempo Livre: Use tudo o que você aprendeu
+        até agora para criar um jogo que inclua um laço `for`!'
+      Course 4 Playlab For Loops 4b: Você consegue alterar o **incremento** em um
+        dos laços para que a corrida empate?
+      Course 4 Playlab For Loops 5b: Ajuste o intervalo nestes laços `for` para que
+        os dois personagens terminem exatamente no mesmo lugar.
+      Course 4 Playlab For Loops 6b: "Altere este laço `for` para criar um jogo que
+        seja divertido para você jogar!\nPressione \"Executar\" e clique na Madame
+        Unicórnio o maior número de vezes que você conseguir. Você consegue superar
+        nossa pontuação de 24? "
       Course 4 SCFL 1: |-
         Resolva este desafio usando o menor número
         possível de blocos.
@@ -942,17 +979,61 @@ pt-BR:
       NEW Course 4 Artist Functions 1: |-
         Você consegue desenhar um quadrado com
         100 pixels de comprimento usando um laço?
+      NEW Course 4 Artist Functions 11: Agora nós queremos criar uma nova função chamada
+        `desenhe uma fileira de quadrados` que desenha seis quadrados em sequência.
+        Você consegue criar esta função usando esta função `desenhe um quadrado 20`
+        que criamos para você?
+      NEW Course 4 Artist Functions 12: Use a função `desenhe uma fileira de quadrados`
+        do último desafio para desenhar este padrão.
+      NEW Course 4 Artist Functions 13: 'Você consegue desenhar uma forma de estrela
+        usando a função `desenhe uma fileira de quadrados`?  '
       NEW Course 4 Artist Functions 14: 'Atividade livre! '
+      NEW Course 4 Artist Functions 2: Você consegue desenhar 3 quadrados com 20 pixels
+        de distância um do outro? Cada quadrado tem 100 pixels de tamanho.
+      NEW Course 4 Artist Functions 3: |-
+        Temos aqui um novo tipo de Bloco. Ele é chamado de `função`. Clique "editar" e preencha-o com o código para desenhar um quadrado com lados de 100 pixels.
+
+        Quando você terminar de editar a função, clique "Fechar" para voltar ao seu programa.
+      NEW Course 4 Artist Functions 4: Use a função `desenhe um quadrado` para desenhar
+        este padrão.
+      NEW Course 4 Artist Functions 7: 'Você está pegando o jeito de como usar blocos
+        `função`? Vamos modificar este quadrado para que fique com tamanho de 200
+        pixels. Clique em "editar" para entrar no editor da função `desenhe um quadrado`.
+        Lembre-se de clicar em "Fechar" para sair do editor de função. '
+      NEW Course 4 Artist Functions 8: Foi criada uma função para você chamada "desenhe
+        um triângulo". Você consegue editar a definição da função para que seja desenhado
+        um triângulo com lados de 100 pixels?
+      NEW Course 4 Artist Functions 9: Você consegue resolver isto adicionando apenas
+        um bloco?
       NEW Course 4 Artist Params 1: Vamos definir uma função para desenhar um quadrado
         com lados de 50 pixels. Clique em "editar" para começar.
+      NEW Course 4 Artist Params 10: 'Crie um bloco de função `desenhe um hexágono`
+        com um parâmetro de comprimento. Este hexágono tem lados com 100 pixels de
+        comprimento. '
       NEW Course 4 Artist Params 11: Você pode descobrir como desenhar essa forma?
         Edite a função para usar o parâmetro "lados".
       NEW Course 4 Artist Params 12: Você pode completar este desenho? Os lados de
         todas as formas têm 100 pixels de comprimento.
+      NEW Course 4 Artist Params 12a: Este imagem é parecida com a última. Você pode
+        usar um laço `for` com sua função para criar este desenho?
       NEW Course 4 Artist Params 2: Crie uma função `desenhar um triângulo` desde
         o início, para fazer um triângulo com lados de 50 pixels.
+      NEW Course 4 Artist Params 3: Agora vamos usar a função para desenhar uma fileira
+        de 5 triângulos. Cada triângulo está separado por 30 pixels.
       NEW Course 4 Artist Params 4: Você percebeu alguma coisa diferente nesses blocos
         de função? Clique em "Executar" para ver o que acontece.
+      NEW Course 4 Artist Params 5: 'Substitua o `???` no parâmetro `comprimento`
+        do bloco de entrada. O pentágono tem lados de 100 pixels. '
+      NEW Course 4 Artist Params 6: Preencha o parâmetro `comprimento` para desenhar
+        estas formas substituindo o "???" pelos valores corretos. O quadrado e o triângulo
+        têm lados de 100 pixels enquanto cada lado do hexágono tem comprimento de
+        75 pixels.
+      NEW Course 4 Artist Params 7: Você consegue completar este desenho? Os lados
+        de cada triângulo são 25 pixels maiores do que o anterior. O primeiro triângulo
+        tem lados de 25 pixels.
+      NEW Course 4 Artist Params 8: O código desta função de triângulo não funciona.
+        Você consegue editar a função para corrigi-la, e em seguida criar triângulos
+        de comprimentos 25, 50 e 75?
       NEW Course 4 Artist Params 9: 'Clique em "editar" para preencher a definição
         da função de "desenhe um quadrado" e adicione um parâmetro. Ela deve receber
         um parâmetro comprimento, como no triângulo. Desta vez, desenhe 3 quadrados
@@ -982,6 +1063,9 @@ pt-BR:
         feito e então clique em "Executar" para ver como ele funciona. '
       NEW Course 4 Bee For Loops 4: 'Substitua o ??? no "laço de repetição" pela maior
         quantidade de néctar que a abelha tem que coletar. '
+      NEW Course 4 Bee For Loops 4 4: Agora precisamos nos mover à frente `contador`
+        vezes, e depois obter o néctar `contador` vezes. Você consegue usar dois laços
+        `repita` para resolver este desafio?
       NEW Course 4 Bee For Loops 5: Você também pode usar um "laço de repetição" para
         fazer contagem regressiva. Tente coletar esse néctar contando de 5 até 1,
         de 1 em 1.
@@ -2944,6 +3028,18 @@ pt-BR:
       courseD_bee_nestedLoops1a: Ajude a abelha a coletar todo o nectar.
       courseD_bee_nestedLoops1a_2018: Ajude a abelha a coletar todo o nectar.
       courseD_bee_nestedLoops1a_2019: Ajude a abelha a coletar todo o nectar.
+      courseD_bee_nestedLoops2: Dessa vez, ajude a abelha a coletar todo o nectar
+        utilizando o menor número possível de blocos.
+      courseD_bee_nestedLoops2_2018: Dessa vez, ajude a abelha a coletar todo o nectar
+        utilizando o menor número possível de blocos.
+      courseD_bee_nestedLoops2_2019: Dessa vez, ajude a abelha a coletar todo o nectar
+        utilizando o menor número possível de blocos.
+      courseD_bee_nestedLoops2_predict1: Dessa vez, ajude a abelha a coletar todo
+        o nectar utilizando o menor número possível de blocos.
+      courseD_bee_nestedLoops2_predict1_2018: Dessa vez, ajude a abelha a coletar
+        todo o nectar utilizando o menor número possível de blocos.
+      courseD_bee_nestedLoops2_predict1_2019: Dessa vez, ajude a abelha a coletar
+        todo o nectar utilizando o menor número possível de blocos.
       courseD_bee_nestedLoops7: 'Desafio: Descubra como pegar todo o nectar usando
         apenas os blocos disponíveis.'
       courseD_bee_nestedLoops7_2018: 'Desafio: Descubra como pegar todo o nectar usando
@@ -3336,6 +3432,7 @@ pt-BR:
         Jogue-o para fora arrastando-o de volta para a caixa de ferramentas.
       courseD_scrat_ramp4: Evite a(s) TNT(s) ou penas irão voar!
       courseD_scrat_ramp5: Desvie da TNT.
+      courseD_scrat_ramp6: Ajude Scrat a chegar na nós utilizando uma repetição!
       courseD_scrat_ramp7: Ajude Scrat a chegar até a noz!
       courseD_scrat_ramp8: Utilize o que você aprendeu para levar Scrat até a nós!
       courseE_aboutme_6: Continue! Adicione mais elementos no seu cartaz para torna-lo
@@ -4046,8 +4143,41 @@ pt-BR:
       iceage_warn_ice_age: Mude a cena para um fundo nevado e ajuste a velocidade
         de Sid (ator 1) para rápido.
       k-1 maze 1: Você pode me mover para o oeste para chegar até o porco?
+      ramp_artist_loops1: Siga 60 pixels a frente para completar esse quebra-cabeça.
+      ramp_artist_loops1_2018: Siga 60 pixels a frente para completar esse quebra-cabeça.
+      ramp_artist_loops1_2019: Siga 60 pixels a frente para completar esse quebra-cabeça.
+      ramp_artist_loops2: Ande para frente cinco vezes e faça essa linha colorida.
+      ramp_artist_loops2_2018: Ande para frente cinco vezes e faça essa linha colorida.
+      ramp_artist_loops2_2019: Ande para frente cinco vezes e faça essa linha colorida.
+      ramp_artist_loops3: Utilize um laço `repetir` para desenhar cinco linhas coloridas.
+      ramp_artist_loops3_2018: Utilize um laço `repetir` para desenhar cinco linhas
+        coloridas.
+      ramp_artist_loops3_2019: Utilize um laço `repetir` para desenhar cinco linhas
+        coloridas.
+      ramp_artist_loops4: O que acontece quando você adiciona uma virada de 72 graus
+        a direita depois de tudo dentro do seu laço?
+      ramp_artist_loops4_2018: O que acontece quando você adiciona uma virada de 72
+        graus a direita depois de tudo dentro do seu laço?
       ramp_artist_loops4_2019: Crie esse padrão de estrela repetindo a sequencia de
         blocos "avance" e "vire à direita em 144 graus".
+      ramp_artist_loops5: Utilize laços para desenhar escadas.
+      ramp_artist_loops5_2018: Utilize laços para desenhar escadas.
+      ramp_artist_loops5_2019: Utilize laços para desenhar escadas.
+      ramp_artist_loops6: Altere seu laço para desenhar essa escadaria.
+      ramp_artist_loops6_2018: Altere seu laço para desenhar essa escadaria.
+      ramp_artist_loops6_2019: Altere seu laço para desenhar essa escadaria.
+      ramp_artist_loops7: Procure por um padrão e deixe esse código menor utilizando
+        laços!
+      ramp_artist_loops7_2018: Procure por um padrão e deixe esse código menor utilizando
+        laços!
+      ramp_artist_loops7_2019: Procure por um padrão e deixe esse código menor utilizando
+        laços!
+      ramp_artist_loops8: Procure por um padrão e deixe esse código menos utilizando
+        laços.
+      ramp_artist_loops8_2018: Procure por um padrão e deixe esse código menos utilizando
+        laços.
+      ramp_artist_loops8_2019: Procure por um padrão e deixe esse código menos utilizando
+        laços.
       ramp_artist_loops9: Resolva este enigma desenhando um quadrado.
       ramp_artist_loops9_2018: Resolva este enigma desenhando um quadrado.
       ramp_artist_loops9_2019: Resolva este enigma desenhando um quadrado.

@@ -1314,3 +1314,7 @@ ky:
               name: Шартуулар
             Functions:
               name: Функциялар
+        csl-vn:
+          stages:
+            Ocean Scene with Loops:
+              name: Океан көрүнүшү циклдар менен

@@ -528,6 +528,72 @@ pt-BR:
           e adicione um `vire à direita` extra de três graus dentro do laço de repetição.
         Course_4_Artist_Functions_Inspiration_b: Tente virar mais de 90 graus fora
           do `laço repetir`, mas dentro do `laço para`.
+        Course_4_Artist_Functions_Inspiration_c: |-
+          **Solução:**
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="controls_for_counter" inline="true">
+                <mutation counter="contador"></mutation>
+                  <value name="FROM">
+                    <block type="math_number">
+                      <title name="NUM">1</title>
+                    </block>
+                  </value>
+                  <value name="TO">
+                    <block type="math_number">
+                      <title name="NUM">14</title>
+                    </block>
+                  </value>
+                  <value name="BY">
+                    <block type="math_number">
+                      <title name="NUM">1</title>
+                    </block>
+                  </value>
+                  <statement name="DO">
+                    <block type="draw_colour" inline="true" id="draw-color">
+                      <value name="COLOUR">
+                        <block type="colour_random"/>
+                      </value>
+                      <next>
+                        <block type="controls_repeat_ext" inline="true">
+                          <value name="TIMES">
+                            <block type="variables_get">
+                              <title name="VAR">counter</title>
+                            </block>
+                          </value>
+                          <statement name="DO">
+                            <block type="procedures_callnoreturn">
+                            <mutation name="desenhe um quadrado 20"></mutation>
+                              <next>
+                                <block type="jump_by_constant">
+                                  <title name="DIR">jumpForward</title>
+                                  <title name="VALUE">20</title>
+                                  <next>
+                                    <block type="draw_turn_by_constant">
+                                      <title name="DIR">turnRight</title>
+                                      <title name="VALUE">3</title>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </statement>
+                          <next>
+                            <block type="draw_turn_by_constant">
+                              <title name="DIR">turnLeft</title>
+                              <title name="VALUE">100</title>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                </block>
+              </next>
+            </block>
+            </xml>
       Course 4 Artist Functions challenge:
         Course_4_Artist_Functions_challenge_a: Parte da compreensão de como usar funções
           é descobrir quais você precisa, e quais você não precisa.
@@ -6438,18 +6504,6 @@ pt-BR:
 
           **Pinball** - Faça um personagem se mover usando as teclas de seta (use blocos 'seta para cima' e seta para baixo'), e toque sons aleatórios quando ele colidir com outros personagens na tela.
       courseC_PlayLab_eventsFP_2019:
-        idea1: |-
-          _Precisa de uma idéia?_
-
-          **Quem está aí?** Faça os personagens aparecerem com imagens aleatórias, assim ninguém vai saber quem será o próximo a aparecer.
-
-          ![](https://images.code.org/a56e03479801995d93ad5a4e4384a79e-image-1475340154498.gif)
-        idea2: |-
-          _Precisa de uma idéia?_
-
-          **Indo em uma aventura** - Mude a cor de fundo, então faça os personagens falaram sobre onde eles estão agora.
-
-          ![](https://images.code.org/010c4d919f841d6049caf9211ab65ccc-image-1475340583052.gif)
         idea3: |-
           _Precisa de uma ideia?_
 
@@ -10508,12 +10562,21 @@ pt-BR:
           blocos e executar o código para ver o que vai acontecer, mesmo se você achar
           que ainda não resolveu o quebra-cabeça.
       courseD_maze_ramp2:
+        courseC_maze_programming2_a: Para usar um bloco `seguir em frente`, arraste-o
+          para fora da caixa de ferramentas para a tela, e ligue ele ao bloco `quando
+          rodar`.
         courseC_maze_programming2_b: Certifique-se de que todos os 3 blocos sejam
           clicados juntos e anexados ao bloco `quando rodar`.
       courseD_maze_ramp2_2018:
+        courseC_maze_programming2_a: Para usar um bloco `seguir em frente`, arraste-o
+          para fora da caixa de ferramentas para a tela, e ligue ele ao bloco `quando
+          rodar`.
         courseC_maze_programming2_b: Certifique-se de que todos os 3 blocos sejam
           clicados juntos e anexados ao bloco `quando rodar`.
       courseD_maze_ramp2_2019:
+        courseC_maze_programming2_a: Para usar um bloco `seguir em frente`, arraste-o
+          para fora da caixa de ferramentas para a tela, e ligue ele ao bloco `quando
+          rodar`.
         courseC_maze_programming2_b: Certifique-se de que todos os 3 blocos sejam
           clicados juntos e anexados ao bloco `quando rodar`.
       courseD_maze_ramp3:
@@ -10874,10 +10937,16 @@ pt-BR:
           laço `repetir para sempre` que verifica a posição do pirata (mas não dentro
           da instrução `se`) para evitar que os pontos sejam removidos muito rapidamente.
       courseD_scrat_ramp1:
+        courseC_maze_programming1_a: Se Scrat não estiver chegando na nós, certifique-se
+          de que todos os três blocos tenham sido juntados, e então clique "Rodar"
+          novamente.
         courseC_maze_programming1_b: Não tenha medo de cometer um erro! Tente adicionar
           blocos e executar o código para ver o que vai acontecer, mesmo se você achar
           que ainda não resolveu o quebra-cabeça.
       courseD_scrat_ramp2:
+        courseC_maze_programming2_a: Para usar um bloco `seguir em frente`, arraste-o
+          para fora da caixa de ferramentas para a tela, e ligue ele ao bloco `quando
+          rodar`.
         courseC_maze_programming2_b: Certifique-se de que todos os três blocos `avançar`
           estejam ligados ao bloco `quando rodar`.
       courseD_scrat_ramp3:
@@ -10906,8 +10975,13 @@ pt-BR:
           ao canto?
         courseC_maze_programming5_c: Você precisará virar à esquerda na esquina para
           chegar ao porco.
+      courseD_scrat_ramp6:
+        courseC_maze_programming6a_a: Utilize uma repetição `repetir` para fazer com
+          que Scrat se mova!
       courseD_scrat_ramp7:
         courseD_scrat_programming6_a: Existem duas maneiras de resolver este quebra-cabeças!
+        courseD_scrat_programming6_b: Lembre-se de virar antes de se mover, já que
+          Scrat está virado para o lado errado.
         courseD_scrat_programming6_c: Não tenha medo de cometer um erro! Tente adicionar
           blocos e executar o código para ver o que vai acontecer, mesmo se você achar
           que ainda não resolveu o quebra-cabeça.

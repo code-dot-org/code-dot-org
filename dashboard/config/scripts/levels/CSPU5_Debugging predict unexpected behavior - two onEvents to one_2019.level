@@ -39,7 +39,7 @@
     "never_autoplay_video": "false",
     "slider_speed": "1",
     "examples_required": "false",
-    "show_turtle_before_run": "false",
+    "show_turtle_before_run": "true",
     "autocomplete_palette_apis_only": "true",
     "text_mode_at_start": "false",
     "design_mode_at_start": "false",
@@ -65,11 +65,18 @@
     "name_suffix": "_2019",
     "short_instructions": "Predict what will happen. Once you've made a prediction, run the code to see what happens. (Click to see full instructions)",
     "long_instructions": "# Debugging Unexpected Behavior\r\n\r\n## Predict - Observe - Reflect\r\n\r\nTo understand a new piece of code good programmers often try to **first make a prediction about what will happen before running the program**. \r\n\r\nBy forcing yourself to make a prediction (it doesn't matter if you're right or not) you are immediately alerted to any **unusual or unexpected behavior** and you can ask yourself, *\"Huh? why did it do that?  Was that supposed to happen?\"*  It might not be an error, but you gain invaluable insight and actually **learn faster**.\r\n\r\n**Predict:** For the code that is here, what will happen when the \"Forward!\" button is clicked? \r\n\r\n  * **Study the code** - This program has **two event handlers** listening for events on the same button?\r\n  * **Force yourself to make a prediction!** - \"I don't know\" is not a prediction!. \r\n\r\nHere are some options to think about:\r\n\r\n* There will be an error in the console immediately after hitting run\r\n* There will be an error in the console but not until you hit the button\r\n* Program does nothing\r\n* turtle only moves forward\r\n* turtle only turns left\r\n* turtle move forward *then* turn left \r\n* turtle turn left *then* move forward?\r\n* something else? \r\n\r\n**Observe:** Once you've made a prediction, close these instructions and **run the program** to observe what happens.\r\n\r\n**Reflect:** Was your prediction correct? If not what about your mental model might need to change? Talk about it with a classmate and experiment with the code to make sure you understand what is happening.",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted": "false",
+    "encrypted_examples": [
+
+    ],
+    "mini_rubric": "false"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2018-01-02 18:01:54 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2019-01-07 18:40:27 +0000\",\"changed\":[\"code_functions\",\"instructions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2018-01-02 18:01:54 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2019-01-07 18:40:27 +0000\",\"changed\":[\"code_functions\",\"instructions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-07-30 17:37:42 +0000\",\"changed\":[\"code_functions\",\"show_turtle_before_run\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":958,\"changed_by_email\":\"stephanie.wong@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Applab>
