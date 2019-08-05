@@ -24,6 +24,12 @@ module Pd
         '91372090131144'  # 2019 K-12 Facilitator {facilitatorPosition} of {numFacilitators}
       ]
 
+      # Return true if the given form id is eligible for the JotForm redirect experiment
+      # @param [String|Integer] form_id
+      def form_in_experiment?(form_id)
+        JOTFORM_EXPERIMENTAL_REDIRECT_FORMS.map(&:to_i).include? form_id.to_i
+      end
+
       # If the DCDO setting 'jotform_redirect' is enabled,
       # and other experimental conditions are met,
       # this method causes the server to respond with a 302,
@@ -35,7 +41,7 @@ module Pd
         return false unless DCDO.get('jotform_redirect', false)
 
         # Restrict the experiment to certain forms
-        return false unless JOTFORM_EXPERIMENTAL_REDIRECT_FORMS.include? form_id
+        return false unless form_in_experiment? form_id
 
         # A/B test by restricting the experiment to signed-in users with an even-numbered user id
         return false unless current_user

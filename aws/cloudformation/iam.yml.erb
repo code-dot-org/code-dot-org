@@ -3,6 +3,10 @@ AWSTemplateFormatVersion: 2010-09-09
 Description: >-
   IAM layer including global/shared roles and access permissions for Code.org infrastructure.
   Note: Admin permissions are required to manage some admin-only resources in this stack.
+Parameters:
+  GoogleDeveloperIDs:
+    Type: AWS::SSM::Parameter::Value<List<String>>
+    Default: /IAM/GoogleDeveloperIDs
 Resources:
   # Admin Service Role for managing all resources in CloudFormation stacks.
   # Only admins can update stacks using this service role.
@@ -105,206 +109,49 @@ Resources:
             Condition:
               StringNotEquals:
                 cloudformation:RoleARN: !Sub "arn:aws:iam::${AWS::AccountId}:role/admin/CloudFormationService"
-
-  # Deprecated: use FrontendRole in application stack
-  FrontendRole:
+  Developer:
     Type: AWS::IAM::Role
     Properties:
+      RoleName: Developer
+      Path: /admin/
       AssumeRolePolicyDocument:
+        Version: 2012-10-17
         Statement:
         - Effect: Allow
-          Principal:
-            Service: [ec2.amazonaws.com]
-          Action: ['sts:AssumeRole']
-      Path: /
-      Policies:
-      - PolicyName: instance
-        PolicyDocument:
-          Statement:
-          - Effect: Allow
-            Action: ['s3:GetObject']
-            Resource: 'arn:aws:s3:::cdo-dist/*'
-          - Effect: Allow
-            Action:
-            - 'cloudformation:SignalResource'
-            - 'cloudformation:DescribeStackResources'
-            - 'autoscaling:CompleteLifecycleAction'
-            - 'ec2:DescribeImages'
-            - 'ec2:DescribeTags'
-            - 'logs:Create*'
-            - 'logs:PutLogEvents'
-            - 'logs:PutRetentionPolicy'
-            - 'cloudwatch:PutMetricData'
-            Resource: '*'
-      - PolicyName: ServiceAccess
-        PolicyDocument:
-          Statement:
-          - Effect: Allow
-            Action:
-            - 's3:*'
-            - 'dynamodb:*'
-            - 'sqs:*'
-            Resource: '*'
-  # Deprecated: use FrontendRole in application stack
-  StandaloneFrontendRole:
-    Type: AWS::IAM::Role
-    Properties:
-      AssumeRolePolicyDocument:
-        Statement:
+          Principal: {Federated: !Sub "arn:aws:iam::${AWS::AccountId}:saml-provider/Google"}
+          Action: sts:AssumeRoleWithSAML
+          Condition:
+            StringEquals:
+              SAML:aud: https://signin.aws.amazon.com/saml
         - Effect: Allow
-          Principal:
-            Service: [ec2.amazonaws.com]
-          Action: ['sts:AssumeRole']
-      Path: '/'
-      Policies:
-      - PolicyName: instance
-        PolicyDocument:
-          Statement:
-          - Effect: Allow
-            Action: ['s3:GetObject']
-            Resource: 'arn:aws:s3:::*'
-          - Effect: Allow
-            Action:
-            - "s3:PutObject"
-            - "s3:PutObjectAcl"
-            Resource:
-            - "arn:aws:s3:::cdo-dist/adhoc/*"
-            - "arn:aws:s3:::cdo-build-logs/adhoc-*"
-          - Effect: Allow
-            Action:
-            - 'cloudformation:SignalResource'
-            - 'cloudformation:DescribeStackResources'
-            - 'autoscaling:CompleteLifecycleAction'
-            - 'ec2:DescribeImages'
-            - 'logs:Create*'
-            - 'logs:PutLogEvents'
-            - 'logs:PutRetentionPolicy'
-            - 'cloudwatch:PutMetricData'
-            Resource: '*'
-          - Effect: Allow
-            Action:
-            - 'dynamodb:*'
-            Resource:
-            - !Sub "arn:aws:dynamodb:${AWS::Region}:${AWS::AccountId}:table/adhoc_tables"
-            - !Sub "arn:aws:dynamodb:${AWS::Region}:${AWS::AccountId}:table/adhoc_properties"
-  # Deprecated: use DaemonRole in application stack
-  StandaloneRole:
-    Type: AWS::IAM::Role
-    Properties:
-      AssumeRolePolicyDocument:
-        Statement:
+          Principal: {Federated: accounts.google.com}
+          Action: sts:AssumeRoleWithWebIdentity
+          Condition:
+            StringEquals:
+              accounts.google.com:aud: '{{resolve:secretsmanager:admin/google_client_id}}'
+            ForAnyValue:StringEquals:
+              accounts.google.com:sub: !Ref GoogleDeveloperIDs
         - Effect: Allow
-          Principal: {Service: [ec2.amazonaws.com]}
-          Action: ['sts:AssumeRole']
-      Path: /
+          Principal: {Service: ec2.amazonaws.com}
+          Action: sts:AssumeRole
       Policies:
-      - PolicyName: instance
+      # Only allow developers to create/update stacks in specific environments.
+      - PolicyName: ProtectedStacks
         PolicyDocument:
           Statement:
-          - Effect: Allow
+          - Effect: Deny
             Action:
-            - 's3:GetObject'
-            - 's3:ListBucket'
-            Resource: 'arn:aws:s3:::*'
-          - Effect: Allow
-            Action:
-            - "cloudformation:*"
-            Resource: !Sub "arn:aws:cloudformation:${AWS::Region}:${AWS::AccountId}:stack/adhoc-*"
-          - Effect: Allow
-            Action:
-            - "cloudformation:ValidateTemplate"
-            - "autoscaling:CompleteLifecycleAction"
-            - "ec2:DescribeImages"
-            - "logs:Create*"
-            - "logs:PutLogEvents"
-            - "logs:PutRetentionPolicy"
-            - "cloudwatch:PutMetricData"
-            - "acm:ListCertificates"
-            Resource: "*"
-          - Effect: Allow
-            Action: ["dynamodb:*"]
-            Resource:
-            - !Sub "arn:aws:dynamodb:${AWS::Region}:${AWS::AccountId}:table/adhoc_tables"
-            - !Sub "arn:aws:dynamodb:${AWS::Region}:${AWS::AccountId}:table/adhoc_properties"
-          - Effect: Allow
-            Action:
-            - "s3:PutObject"
-            - "s3:PutObjectAcl"
-            - "s3:PutObjectVersionAcl"
-            Resource:
-            - "arn:aws:s3:::cdo-dist/adhoc/*"
-            - "arn:aws:s3:::cdo-build-logs/*"
-            - "arn:aws:s3:::<%=TEMP_BUCKET%>/*"
-  # Deprecated: use DaemonRole in application stack
-  DaemonRole:
-    Type: AWS::IAM::Role
-    Properties:
-      AssumeRolePolicyDocument:
-        Statement:
-        - Effect: Allow
-          Principal:
-            Service: [ec2.amazonaws.com]
-          Action: ['sts:AssumeRole']
-      Path: /
-      Policies:
-      - PolicyName: Daemon
-        PolicyDocument:
-          Statement:
-          - Effect: Allow
-            NotAction: ['iam:*', 'organizations:*']
+            - cloudformation:CreateStack
+            - cloudformation:UpdateStack
+            - cloudformation:DeleteStack
+            - cloudformation:ExecuteChangeSet
             Resource: '*'
-          - Effect: Allow
-            Action:
-            - 'iam:GetServerCertificate'
-            Resource: '*'
-  # Deprecated: use FrontendInstanceProfile in application stack
-  FrontendInstanceProfile:
-    Type: AWS::IAM::InstanceProfile
-    Properties:
-      Path: '/'
-      Roles: [!Ref FrontendRole]
-  # Deprecated: use DaemonInstanceProfile in application stack
-  StandaloneInstanceProfile:
-    Type: AWS::IAM::InstanceProfile
-    Properties:
-      Path: /
-      Roles: [!Ref StandaloneRole]
-  # Deprecated: use FrontendInstanceProfile in application stack
-  StandaloneFrontendInstanceProfile:
-    Type: AWS::IAM::InstanceProfile
-    Properties:
-      Path: '/'
-      Roles: [!Ref StandaloneFrontendRole]
-  # Deprecated: use DaemonInstanceProfile in application stack
-  ProductionInstanceProfile:
-    Type: AWS::IAM::InstanceProfile
-    Properties:
-      Path: '/'
-      Roles: [!Ref DaemonRole]
-  # Deprecated: use DaemonInstanceProfile in application stack
-  StagingInstanceProfile:
-    Type: AWS::IAM::InstanceProfile
-    Properties:
-      Path: '/'
-      Roles: [!Ref DaemonRole]
-  # Deprecated: use WebServerHookRole in application stack
-  LifecycleHookRole:
-    Type: AWS::IAM::Role
-    Properties:
-      AssumeRolePolicyDocument:
-        Statement:
-        - Effect: Allow
-          Principal:
-            Service: [autoscaling.amazonaws.com]
-          Action: ['sts:AssumeRole']
-      Path: '/'
-      Policies:
-      - PolicyName: root
-        PolicyDocument:
-          Statement:
-          - Effect: Allow
-            Action: ['sns:Publish']
-            Resource: '*'
+            Condition:
+              ForAnyValue:StringNotEquals:
+                aws:ResourceTag/environment: [adhoc, development]
+              ForAnyValue:StringEquals:
+                aws:TagKeys: environment
+      ManagedPolicyArns: [!Ref DevPermissions]
   # Used by FirehoseMicroservice Lambda function.
   # TODO move to Data stack
   FirehoseLambdaRole:
@@ -330,27 +177,6 @@ Resources:
             - !Sub "arn:aws:firehose:${AWS::Region}:${AWS::AccountId}:deliverystream/analysis-events"
       ManagedPolicyArns:
       - "arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
-  # Deprecated: use CloudFormationService for all stack updates
-  CloudFormationRole:
-    Type: AWS::IAM::Role
-    Properties:
-      RoleName: CloudFormationRole
-      AssumeRolePolicyDocument:
-        Statement:
-          - Action: ['sts:AssumeRole']
-            Effect: Allow
-            Principal: {Service: [cloudformation.amazonaws.com]}
-      Path: /
-      Policies:
-      - PolicyName: passRole
-        PolicyDocument:
-          Statement:
-          - Effect: Allow
-            Action:
-            - 'iam:PassRole'
-            Resource: '*'
-      ManagedPolicyArns:
-        - "arn:aws:iam::aws:policy/PowerUserAccess"
   # TODO: Move to Data stack
   GlueRole:
     Type: AWS::IAM::Role
@@ -431,26 +257,6 @@ Outputs:
     Description: Developer Permissions
     Value: !Ref DevPermissions
     Export: {Name: !Sub "${AWS::StackName}-DevPermissions"}
-  FrontendInstanceProfile:
-    Description: Frontend Instance Profile
-    Value: !Ref FrontendInstanceProfile
-    Export: {Name: !Sub "${AWS::StackName}-FrontendInstanceProfile"}
-  StandaloneFrontendInstanceProfile:
-    Description: Standalone Frontend Instance Profile
-    Value: !Ref StandaloneFrontendInstanceProfile
-    Export: {Name: !Sub "${AWS::StackName}-StandaloneFrontendInstanceProfile"}
-  StandaloneInstanceProfile:
-    Description: Standalone Instance Profile
-    Value: !Ref StandaloneInstanceProfile
-    Export: {Name: !Sub "${AWS::StackName}-StandaloneInstanceProfile"}
-  StagingInstanceProfile:
-    Description: Staging Instance Profile
-    Value: !Ref StagingInstanceProfile
-    Export: {Name: !Sub "${AWS::StackName}-StagingInstanceProfile"}
-  LifecycleHookRoleARN:
-    Description: Auto Scaling Lifecycle Hook Role
-    Value: !GetAtt LifecycleHookRole.Arn
-    Export: {Name: !Sub "${AWS::StackName}-LifecycleHookRoleARN"}
   FirehoseLambdaRoleARN:
     Description: Firehose Lambda Role ARN
     Value: !GetAtt FirehoseLambdaRole.Arn

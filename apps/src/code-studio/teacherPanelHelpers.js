@@ -1,4 +1,3 @@
-import clientState from './clientState';
 import queryString from 'query-string';
 import {setSectionLockStatus} from './stageLockRedux';
 import {
@@ -11,6 +10,7 @@ import ReactDOM from 'react-dom';
 import {reload} from '@cdo/apps/utils';
 import {updateQueryParam} from '@cdo/apps/code-studio/utils';
 import {setStudentsForCurrentSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {queryUserProgress} from '@cdo/apps/code-studio/progressRedux';
 import TeacherPanel from './components/progress/TeacherPanel';
 
 /**
@@ -22,7 +22,8 @@ export function renderTeacherPanel(
   section,
   scriptName,
   sectionData = null,
-  pageType = null
+  pageType = null,
+  isAsync = false
 ) {
   const div = document.createElement('div');
   div.setAttribute('id', 'teacher-panel-container');
@@ -33,7 +34,7 @@ export function renderTeacherPanel(
 
   const onSelectUser = id => {
     updateQueryParam('user_id', id);
-    reload();
+    isAsync ? store.dispatch(queryUserProgress(id)) : reload();
   };
 
   const getSelectedUserId = () => {
@@ -64,10 +65,7 @@ export function renderTeacherPanel(
 export function queryLockStatus(store, scriptId) {
   return new Promise((resolve, reject) => {
     $.ajax('/api/lock_status', {
-      data: {
-        user_id: clientState.queryParams('user_id'),
-        script_id: scriptId
-      }
+      data: {script_id: scriptId}
     }).done(data => {
       // Extract the state that teacherSectionsRedux cares about
       const teacherSections = Object.values(data).map(section => ({
