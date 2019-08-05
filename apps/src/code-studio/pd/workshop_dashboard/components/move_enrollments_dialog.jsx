@@ -69,9 +69,11 @@ const EnrollmentList = ({enrollments}) => {
   return (
     <ul>
       {enrollments.map((enrollment, i) => {
-        <li key={i}>
-          {enrollment.first_name} {enrollment.last_name} ({enrollment.email})
-        </li>;
+        return (
+          <li key={i}>
+            {enrollment.first_name} {enrollment.last_name} ({enrollment.email})
+          </li>
+        );
       })}
     </ul>
   );
