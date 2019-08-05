@@ -1,4 +1,4 @@
-let mapboxgl;
+/*global mapboxgl*/
 
 $(document).ready(function() {
   var map = new mapboxgl.Map({
@@ -38,7 +38,7 @@ $(document).ready(function() {
 
     map.on('click', 'hoc-points', function(e) {
       var coordinates = e.features[0].geometry.coordinates.slice();
-      var description = e.features[0].properties.description;
+      var organization_name = e.features[0].properties.organization_name;
 
       // Ensure that if the map is zoomed out such that multiple
       // copies of the feature are visible, the popup appears
@@ -48,7 +48,7 @@ $(document).ready(function() {
       }
       new mapboxgl.Popup()
         .setLngLat(coordinates)
-        .setText(description)
+        .setText(organization_name)
         .addTo(map);
     });
 
