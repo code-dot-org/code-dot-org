@@ -137,7 +137,7 @@ class Api::V1::Pd::WorkshopSummaryReportControllerTest < ::ActionController::Tes
 
   test 'returns only workshops that have ended' do
     # New workshop, not ended, should not be returned.
-    create :pd_workshop
+    create :workshop
 
     sign_in @workshop_admin
     get :index
