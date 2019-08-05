@@ -236,7 +236,7 @@ eu:
       Dancelab_setDanceSpeed:
         options:
           SPEED:
-            '1': normal
+            '1': arrunta
             '2': fast
             '4': very fast
             '0.5': slow
@@ -255,7 +255,7 @@ eu:
             '"ROBOT"': robot guztiak
             '"SHARK"': marrazo guztiak
           SPEED:
-            '1': normal
+            '1': arrunta
             '2': fast
             '4': very fast
             '0.5': slow
@@ -399,7 +399,7 @@ eu:
       gamelab_checkTouching:
         options:
           CONDITION:
-            '"when"': "\\-enean"
+            '"when"': "-enean"
             '"while"': bitartean
       gamelab_clickedOn:
         text: "{SPRITE} klik egitean"
@@ -425,7 +425,7 @@ eu:
       gamelab_keyPressed:
         options:
           CONDITION:
-            '"when"': "\\-enean"
+            '"when"': "-enean"
             '"while"': bitartean
           KEY:
             '"up"': gora
@@ -474,7 +474,7 @@ eu:
       gamelab_spriteClicked:
         options:
           CONDITION:
-            '"when"': "\\-enean"
+            '"when"': "-enean"
             '"while"': bitartean
       gamelab_turn:
         options:
@@ -657,17 +657,17 @@ eu:
       aalab_checkTouching:
         options:
           CONDITION:
-            '"when"': "\\-enean"
+            '"when"': "-enean"
             '"while"': bitartean
       aalab_clickedOn:
         options:
           CONDITION:
-            '"when"': "\\-enean"
+            '"when"': "-enean"
             '"while"': bitartean
       aalab_keyPressed:
         options:
           CONDITION:
-            '"when"': "\\-enean"
+            '"when"': "-enean"
             '"while"': bitartean
           KEY:
             '"up"': gora

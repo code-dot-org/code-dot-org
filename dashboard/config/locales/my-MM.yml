@@ -42,8 +42,6 @@ my:
   teacher:
     panel:
       answer_viewer: ဆရာအဖွဲ့
-  home:
-    announcement_learn_more_button: ဆက်သင်ယူရန်
   compatibility:
     upgrade:
       link: ဆက်သင်ယူရန်
@@ -60,6 +58,7 @@ my:
     print: ပုံနှိပ်သည်
   race_interstitial:
     submit: ပေးပို့ပါ
+    decline: ပိတ်မည်
   project:
     name: အမည္
     saved: သိမ်းထားပြီးပါပြီ

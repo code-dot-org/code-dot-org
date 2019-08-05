@@ -3,8 +3,13 @@ de:
   data:
     course:
       name:
+        csp-2017:
+          assignment_family_title: Informatik Prinzipien
+          title: Informatik Prinzipien ('17-'18)
+          version_title: "'17-'18"
         csd-2017:
-          assignment_family_title: Computer-Wissenschaften-Entdeckungen
+          assignment_family_title: Informatik Entdeckungen
+          version_title: "'17-'18"
         allthethingscourse:
           title: allthethingskurs
           description_short: Dies ist ein Kurs für allthethings
@@ -13,4 +18,11 @@ de:
           description_teacher: Dies ist ein Kurs für Allthethings und er hat eine
             längere Beschreibung für Lehrer
         csd-2018:
-          assignment_family_title: Computer-Wissenschaften-Entdeckungen
+          assignment_family_title: Informatik Entdeckungen
+        csp-2018:
+          assignment_family_title: Informatik Prinzipien
+          title: Informatik Prinzipien ('18-'19)
+        csp-2019:
+          version_title: "'19-'20"
+        csd-2019:
+          version_title: "'19-'20"

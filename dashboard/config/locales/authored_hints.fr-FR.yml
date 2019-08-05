@@ -5851,18 +5851,6 @@ fr-FR:
 
           **Pinball** - Déplace un personnage en utilisant les touches directionnelles (utilise des blocs ˋquand flèche vers le haut`, ˋquand flèche vers le bas`), puis joue des sons aléatoires quand il entre en collision avec d’autres personnages sur l’écran.
       courseC_PlayLab_eventsFP_2019:
-        idea1: |-
-          _Besoin d’une idée ?_
-
-          **Qui est là ?** Fait apparaître des personnages avec des images aléatoires, comme ça personne ne sait qui apparaîtra ensuite.
-
-          ![](https://images.code.org/a56e03479801995d93ad5a4e4384a79e-image-1475340154498.gif)
-        idea2: |-
-          _Besoin d’une idée ?_
-
-          **Partis pour l’aventure** - Modifie le fond, puis fait parler les personnages de l’endroit où ils sont à présent.
-
-          ![](https://images.code.org/010c4d919f841d6049caf9211ab65ccc-image-1475340583052.gif)
         idea3: |-
           _Besoin d’une idée ?_
 

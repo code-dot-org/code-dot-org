@@ -1463,6 +1463,52 @@ pt-BR:
         # Imagens
 
         Uma página da web Cachorro X Gato foi iniciada para você. A imagem do cachorro já foi adicionada à página abaixo. Use uma tag de imagem para adicionar a imagem `cat.jpeg` à página abaixo do cabeçalho do gato.
+      CSD U2 Image Tag 1_2019: |-
+        <div class="no-pullthrough" style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px">
+        <details>
+
+        <summary>
+        <strong>Como eu adiciono imagens?</strong>
+        </summary>
+
+        A tag `<img>` permite que você exiba imagens em sua página web. <br><br>
+
+        Exemplo:
+
+        <pre>&lt;img src="dog.png" alt="cão saltando"&gt;</pre><br><br>
+
+        Para informar ao browser qual imagem deve ser exibida, uma informação adicional, chamada **atributo**, é acrescentada à tag \<img> dentro dos colchetes. O atributo `src` representa **s**ou**rc**e ("origem") e contém o nome da imagem. Arquivos de imagens incluem extensões que dizem ao computador qual o tipo da imagem com que eles estão trabalhando. Extensões comuns são .jpg, .jpeg, .png. <br><br>
+
+        Além do atributo src, elementos de imagem também possuem o atributo `alt` que descreve a imagem. Isto é importante caso a imagem não carregue, ou para pessoas que têm problemas visuais. <br><br>
+
+        Uma tag `<img>`  é um exemplo de uma tag com **auto fechamento**, porque ela inicia e termina na mesma tag.
+
+        </details>
+        <details>
+        <summary>
+        <strong>Por que uma imagem não tem uma tag de fechamento?</strong>
+        </summary>
+        Uma tag de imagem não precisa de uma tag de fechamento porque não há conteúdo de texto que precisa ser envolvido entre tags. O conteúdo que é exibido na tela é especificado através dos atributos.
+        </details>
+        <details>
+        <summary>
+        <strong>O que é um atributo?</strong>
+        </summary>
+
+        Atributos são informações adicionais que são incluídas em uma tag. Atributos têm nomes e valores. O nome indica qual o tipo de informação está sendo fornecido, e então o valor fornece a informação específica para esta tag.
+
+        Por exemplo as tags \<img> têm dois atributos, src and alt. src especifica o nome do arquivo da imagem e alt diz ao browser, em texto legível, o que a imagem contém.
+
+        </details>
+        </div>
+
+        # Imagens
+
+        Uma página web Cão vs Gato foi iniciada para você. A imagem do cão já foi adicionada à página abaixo. Observe o código que fez a imagem do cão aparecer, e então use uma tag image para acrescentar a imagem `cat.jpeg` na página abaixo do título do gato.
+
+        Esta imagem foi encontrada no Pixabay e foi fornecida pelo usuário "Alexas\_Fotos", que usou uma licença "livre para uso comercial" e "atribuição de autoria não requerida".
+
+        <https://studio.code.org/s/csd2-2019/stage/7/puzzle/2> -> long\_instructions.
       CSD U2 Image Tag 2: |-
         <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
         <details>
@@ -1509,6 +1555,56 @@ pt-BR:
         -   Envie pelo menos uma imagem para esta página da web
         -   Use a tag `<img>` para exibir a (s) imagem (ns) em seu site.
         -   Certifique-se de adicionar um atributo `alt`.
+      CSD U2 Image Tag 2_2019: |-
+        <div class="no-pullthrough" style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+        <details>
+
+        <summary>
+        <strong>Como eu adiciono imagens?</strong>
+        </summary>
+
+        A tag `<img>` permite que você exiba imagens em sua página web. <br><br>
+
+        Exemplo:
+
+        <pre>&lt;img src="dog.png" alt="cão saltando"&gt;</pre><br><br>
+
+        Para informar ao browser qual imagem deve ser exibida, uma informação adicional, chamada **atributo**, é acrescentada à tag \<img> dentro dos colchetes. O atributo `src` representa **s**ou**rc**e ("origem") e contém o nome da imagem. Arquivos de imagens incluem extensões que dizem ao computador qual o tipo da imagem com que eles estão trabalhando. Extensões comuns são .jpg, .jpeg, .png. <br><br>
+
+        Além do atributo src, elementos de imagem também possuem o atributo `alt` que descreve a imagem. Isto é importante caso a imagem não carregue, ou para pessoas que têm problemas visuais. <br><br>
+
+        Uma tag `<img>`  é um exemplo de uma tag com **auto fechamento**, porque ela inicia e termina na mesma tag.
+
+        </details>
+        <details>
+        <summary>
+        <strong>Por que uma imagem não tem uma tag de fechamento?</strong>
+        </summary>
+        Uma tag de imagem não precisa de uma tag de fechamento porque não há conteúdo de texto que precisa ser envolvido entre tags. O conteúdo que é exibido na tela é especificado através dos atributos.
+        </details>
+        <details>
+        <summary>
+        <strong>O que é um atributo?</strong>
+        </summary>
+
+        Atributos são informações adicionais que são incluídas em uma tag. Atributos têm nomes e valores. O nome indica qual o tipo de informação está sendo fornecido, e então o valor fornece a informação específica para esta tag.
+
+        Por exemplo as tags \<img> têm dois atributos, src and alt. src especifica o nome do arquivo da imagem e alt diz ao browser, em texto legível, o que a imagem contém.
+
+        </details>
+        </div>
+
+        # Carregando Imagens
+
+        Você pode carregar imagens que você encontrou em outros lugares usando o botão **Adicionar Imagem**. Procure uma imagem de um tipo diferente de pet que você goste e baixe no seu computador (usando clique direito "Salvar Como").
+
+        Quanto você tiver suas imagens, clique ![](<https://images.code.org/c35789d00e59b0dbe42879390dabf925-image-1493240590385.01.49 PM.png>) e carregue a imagem do seu computador para o seu projeto, onde você pode então usá-la em sua página.
+
+        # Faça Isto
+
+        -   Carregue ao menos uma image nesta página web
+        -   Use a tag `<img>` para exibir a(s) imagens(s) no seu website.
+        -   Tenha certeza de adicionar um atributo `alt`.
       CSD U2 Image Tag Attribution: |-
         <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
         <details>
@@ -1555,6 +1651,56 @@ pt-BR:
         -   O nome do criador (se disponível)
         -   O site em que foi encontrado (por exemplo, commons.wikimedia.org)
         -   A licença em que foi publicada (por exemplo, CC-BY)
+      CSD U2 Image Tag Attribution_2019: |-
+        <div class="no-pullthrough" style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+        <details>
+
+        <summary>
+        <strong>Como eu adiciono imagens?</strong>
+        </summary>
+
+        A tag `<img>` permite que você exiba imagens em sua página web. <br><br>
+
+        Exemplo:
+
+        <pre>&lt;img src="dog.png" alt="cão saltando"&gt;</pre><br><br>
+
+        Para informar ao browser qual imagem deve ser exibida, uma informação adicional, chamada **atributo**, é acrescentada à tag \<img> dentro dos colchetes. O atributo `src` representa **s**ou**rc**e ("origem") e contém o nome da imagem. Arquivos de imagens incluem extensões que dizem ao computador qual o tipo da imagem com que eles estão trabalhando. Extensões comuns são .jpg, .jpeg, .png. <br><br>
+
+        Além do atributo src, elementos de imagem também possuem o atributo `alt` que descreve a imagem. Isto é importante caso a imagem não carregue, ou para pessoas que têm problemas visuais. <br><br>
+
+        Uma tag `<img>`  é um exemplo de uma tag com **auto fechamento**, porque ela inicia e termina na mesma tag.
+
+        </details>
+        <details>
+        <summary>
+        <strong>Por que uma imagem não tem uma tag de fechamento?</strong>
+        </summary>
+        Uma tag de imagem não precisa de uma tag de fechamento porque não há conteúdo de texto que precisa ser envolvido entre tags. O conteúdo que é exibido na tela é especificado através dos atributos.
+        </details>
+        <details>
+        <summary>
+        <strong>O que é um atributo?</strong>
+        </summary>
+
+        Atributos são informações adicionais que são incluídas em uma tag. Atributos têm nomes e valores. O nome indica qual o tipo de informação está sendo fornecido, e então o valor fornece a informação específica para esta tag.
+
+        Por exemplo as tags \<img> têm dois atributos, src and alt. src especifica o nome do arquivo da imagem e alt diz ao browser, em texto legível, o que a imagem contém.
+
+        </details>
+        </div>
+
+        # Atribuindo Créditos
+
+        Ao utilizar uma imagem com licença Creative Commons, você precisar dar o crédito para o criador original (isto é também chamado _atribuição_). Existem várias maneiras de prover atribuição, mas a forma mais simples é acrescentar texto abaixo da imagem que identifica o autor e website de onde ela foi obtida.
+
+        # Faça Isto
+
+        Nesta página nós já adicionamos e atribuimos uma imagem de um sapo. Use o mecanismo de busca da Creative Commons para encontrar uma outra imagem de um anfíbio. Acrescente sua imagem a esta página, juntamente com a devida atribuição, incluindo:
+
+        -   O nome do autor (se disponível)
+        -   O website em que foi encontrada (ex: commons.wikimedia.org)
+        -   A licença utilizada para publicação (ex: CC-BY)
       CSD U2 Image Tag Debug: |-
         <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
         <details>
@@ -1598,6 +1744,50 @@ pt-BR:
         O atributo `src` precisa apontar para o _exato_nome do arquivo da imagem que você deseja usar. Isso significa que você precisa prestar atenção à ortografia, ao uso de letras maiúsculas e à extensão do arquivo. Cada uma das três imagens nesta página está quebrada devido a um atributo `src` inadequado. Usando o menu de arquivos para referência, corrija cada uma das tags de imagem.
 
         _Nota: mesmo que as imagens não estejam sendo carregadas corretamente, nosso site ainda está mostrando um texto descritivo do que deveria estar lá porque usamos os atributos `alt`. Legal!_
+      CSD U2 Image Tag Debug_2019: |-
+        <div class="no-pullthrough" style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+        <details>
+
+        <summary>
+        <strong>Como eu adiciono imagens?</strong>
+        </summary>
+
+        A tag `<img>` permite que você exiba imagens em sua página web. <br><br>
+
+        Exemplo:
+
+        <pre>&lt;img src="dog.png" alt="cão saltando"&gt;</pre><br><br>
+
+        Para informar ao browser qual imagem deve ser exibida, uma informação adicional, chamada **atributo**, é acrescentada à tag \<img> dentro dos colchetes. O atributo `src` representa **s**ou**rc**e ("origem") e contém o nome da imagem. Arquivos de imagens incluem extensões que dizem ao computador qual o tipo da imagem com que eles estão trabalhando. Extensões comuns são .jpg, .jpeg, .png. <br><br>
+
+        Além do atributo src, elementos de imagem também possuem o atributo `alt` que descreve a imagem. Isto é importante caso a imagem não carregue, ou para pessoas que têm problemas visuais. <br><br>
+
+        Uma tag `<img>`  é um exemplo de uma tag com **auto fechamento**, porque ela inicia e termina na mesma tag.
+
+        </details>
+        <details>
+        <summary>
+        <strong>Por que uma imagem não tem uma tag de fechamento?</strong>
+        </summary>
+        Uma tag de imagem não precisa de uma tag de fechamento porque não há conteúdo de texto que precisa ser envolvido entre tags. O conteúdo que é exibido na tela é especificado através dos atributos.
+        </details>
+        <details>
+        <summary>
+        <strong>O que é um atributo?</strong>
+        </summary>
+
+        Atributos são informações adicionais que são incluídas em uma tag. Atributos têm nomes e valores. O nome indica qual o tipo de informação está sendo fornecido, e então o valor fornece a informação específica para esta tag.
+
+        Por exemplo as tags \<img> têm dois atributos, src and alt. src especifica o nome do arquivo da imagem e alt diz ao browser, em texto legível, o que a imagem contém.
+
+        </details>
+        </div>
+
+        # Os Detalhes Fazem a Diferença
+
+        O atributo `src` deve apontar para o nome do arquivo _exato_ da imagem que você quer usar. Isso significa que você deve prestar atenção para a ortografia, letras maiúsculas e minúsculas, e a extensão do arquivo. Cada uma das três imagens desta página estão com defeito por causa do atributo `src` inadequado. Usando o menu de arquivos como referência, conserte cada uma das tags de imagem.
+
+        _Nota: Apesar de as imagens não estarem sendo carregadas, nosso website está mostrando os textos descritivos do que deveria estar lá porque usamos os atributos `alt`. Muito legal!_
       CSD U2 Info Page Final Touches: |-
         <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px">
 
@@ -3991,6 +4181,26 @@ pt-BR:
         -   Encontre a propriedade `margin` no conjunto de regras`img`.
         -   Altere a margem para maior e discuta o efeito com um parceiro.
         -   Escolha outro tipo de elemento e dê uma margem também.
+      CSD U2 layout style margin_2019: "<div class=\"no-pullthrough\" style=\"float:
+        right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"
+        markdown=\"1\">\n<details>\n\n<summary>\n<strong>Como o código funciona?</strong>\n</summary>\n\nAqui
+        está o código que está colocando um espaço extra ao redor das imagens:\n\n<pre>img
+        {\n\tmargin: 10px;\n}</pre>\n\n-   `img` é o _seletor_.  Ele especifica quais
+        elementos deverão seguir as regras que estiverem entre as chaves, no caso,
+        as imagens.\n-   `margin: 10px` é a regra que coloca 10 pixels de espaço ao
+        redor da imagem.\n    </details>\n    <details>\n    <summary>\n    <strong>O
+        que faz a propriedade `margin`?</strong>\n    </summary>\n\nA propriedade
+        `margin` determina quanto espaço será colocado ao redor da imagem. Na maior
+        parte do tempo, você irá definir a margem em pixels. Você pode ser mais sobre
+        esta propriedade em <a href=\"http://www.w3schools.com/cssref/pr_margin.asp\"
+        target=\"_new\">W3Schools - CSS margin Property</a>\n\n</details>\n<details>\n<summary>\n<strong>O
+        que significa `px` / O que é um pixel?</strong>\n</summary>\n\nPixel, que
+        é abreviado por `px`, é como os elementos são mensurados em CSS. É o tamanho
+        em um ponto único de luz na tela.\n\n</details>\n</div>\n\n# Margem\n\nMargens
+        definem quanto espaço deve haver ao redor de um elemento.\n\n-   Encontre
+        a propriedade `margin` no conjunto de regras `img`.\n-   Altere a margem para
+        que fique maior, e discuta o efeito com um colega.\n-   Escolha um outro tipo
+        de elemento, e dê a ele uma margem, também."
       CSD U2 layout style sample: |-
         <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
         <details>
@@ -4169,6 +4379,44 @@ pt-BR:
         -   Altere a largura das imagens para maior ou menor.
         -   Crie uma nova regra com uma propriedade `height` para controlar a altura das imagens.
         -   Use a propriedade `width` no conjunto de regras`p` para alterar a largura dos seus parágrafos.
+      CSD U2 layout style width_2019: "<div class=\"no-pullthrough\" style=\"float:
+        right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\n<details>\n\n<summary>\n<strong>Como
+        o código funciona?</strong>\n</summary>\n\nAqui está o código que está fazendo
+        a imagem ter seu tamanho atual:\n\n    img {\n    \twidth: 250px;\n    }\n\n-
+        \  `img` é o _seletor_.  Ele especifica quais elementos deverão seguir as
+        regras que estiverem entre as chaves, no caso, as imagens.\n-   `width: 250px`
+        é a regra que faz a imagem ter 250 pixels de largura.  Ela também altera a
+        altura para que a imagem não fique esticada.\n\n</details>\n<details>\n<summary>\n<strong>O
+        que faz a propriedade <code>width</code>?</strong>\n</summary>\n\nA propriedade
+        `width` define o quão largo o elemento será. Na maior parte do tempo, você
+        irá definir a largura em pixels, que faz o elemento ocupar uma quantidade
+        exata de espaço na tela. A definição da largura também altera a altura para
+        que a imagem não estique, a não ser que você tenha definido também a altura.
+        Você pode ler mais sobre esta propriedade em <a href=\"http://www.w3schools.com/cssref/pr_dim_width.asp\"
+        target=\"_new\">W3Schools - CSS width Property</a>\n\n</details>\n<details>\n<summary>\n<strong>O
+        que faz a propriedade <code>height</code>?</strong>\n</summary>\n\nA propriedade
+        `height` define o quão alto um elemento será. Na maior parte do tempo, você
+        irá definir a altura em pixels, o que faz com que o elemento ocupe uma quantidade
+        de espaço exata na tela. Definindo a altura também irá alterar a largura para
+        que a imagem não estique, a não ser que você também tenha definido a largura.
+        Você pode ler mais sobre esta propriedade em <a href=\"http://www.w3schools.com/cssref/pr_dim_height.asp\"
+        target=\"_new\">W3Schools - CSS height Property</a>\n\n</details>\n<details>\n<summary>\n<strong>O
+        que significa <code>px</code> / O que é um pixel?</strong>\n</summary>\n\nPixel,
+        que é abreviado por `px`, é como os elementos são mensurados em CSS. É o tamanho
+        em um ponto único de luz na tela.\n\n</details>\n<details>\n<summary>\n<strong>Por
+        que às vezes a imagem fica distorcida, ao se usar regras width e height ao
+        mesmo tempo?</strong>\n</summary>\n\nQuando a largura de uma imagem é alterada,
+        a altura deve mudar na mesma porcentagem, caso contrário a imagem será distorcida.
+        Por exemplo, de você duplicar a largura de uma imagem, você também deverá
+        duplicar a altura, ou a imagem será esticada horizontalmente. Quando você
+        somente define a largura ou a altura, o computador irá mudar automaticamente
+        a outra propriedade para que a imagem se pareça a mesma.\n\n</details>\n</div>\n\n#
+        Largura e Altura\n\n-   Encontre a propriedade na folha de estilos que controla
+        a largura das imagens.\n-   Altere a largura das imagens para que fiquem maiores
+        ou menores.\n-   Crie uma nova regra com uma propriedade `height` para controlar
+        a altura das imagens.\n-   Use a propriedade `width` no conjunto de regras
+        `p` para alterar a largura de seus parágrafos.\n\n<https://studio.code.org/s/csd2-2019/stage/11/puzzle/9>
+        -> long\\_instructions."
       CSD U2 link demo: |-
         # Criando um site de várias páginas
 
@@ -6962,6 +7210,30 @@ pt-BR:
         para a Aba de Animação. Ao invés de cada animação, você deve ver um slide.\n-
         \  Use esses slides para desacelerar suas animações para que elas pareçam
         mais realistas."
+      CSD U3 Boolean Modify: |-
+        # Expressões Booleanas
+
+        As expressões booleanas mais simples são questões que o computador pode responder com verdadeiro ou falso. Essas expressões são feitas usando \*\* operadores de comparação \*\*, como mostrado abaixo.
+
+        |                                               Operador de Comparação                                              | Expressão booleana |      Significado     |
+        | :---------------------------------------------------------------------------------------------------------------: | :----------------: | :------------------: |
+        | <img src="https://images.code.org/1a0798d75d4242715e7608d825f95101-image-1447271431312.png" style="width: 100px"> |       `1 < 9`      |  1 é menor do que 9? |
+        | <img src="https://images.code.org/5ff460ac121f0ac51b569e96a4404c57-image-1447271431310.png" style="width: 100px"> |       `1 > 9`      | 1 é maior do que 9 ? |
+        | <img src="https://images.code.org/a4daa9efccea2278e165592efe343c1a-image-1447271431308.png" style="width: 100px"> |      `1 == 9`      |     1 igual a 9?     |
+
+        <br>
+
+        \*\* Nota: \*\* Se você viu a declaração 3 \\ \<2 na aula de matemática, você pensaria que algo estava terrivelmente errado, mas isso não é aula de matemática. Na ciência da computação, os operadores de comparação \*\* fazem uma pergunta \*\* que o computador responderá com 'true' ou 'false'. Então você pode ler 3 \\ \<2 como \*\* "É 3 menor que 2?" \*\* A resposta neste caso é não, ou 'false'.
+
+        Outra maneira de dizer isso é que a expressão booleana `3 <2` \*\* avalia \*\* para`false`.
+
+        # Faça isso
+
+        Você pode modificar os valores das propriedades do sprite de modo que cada uma das expressões booleanas seja avaliada como 'true'?
+
+        -   Leia todo o programa para ver como o `sprite1` e o`sprite2` estão sendo criados e quais propriedades são comparadas.
+        -   Para cada uma das expressões booleanas, identifique as propriedades do sprite sendo comparadas.
+        -   Altere o código \_na primeira linha \*\* 11 \*\* \*\* para que cada uma das instruções `console.log ()` imprima `true`.
       CSD U3 Boolean Modify_2019: |-
         # Expressões booleanas
 
@@ -6975,6 +7247,30 @@ pt-BR:
         -   Leia todo o programa para ver como o `sprite1` e o`sprite2` estão sendo criados e quais propriedades são comparadas.
         -   Para cada uma das expressões booleanas, identifique as propriedades do sprite sendo comparadas.
         -   Altere o código \_na primeira linha \*\* 11 \*\* \*\* para que cada uma das instruções `console.log ()` imprima `verdadeiro`.
+      CSD U3 Complex Movement counter prediction: |-
+        # Velocity e o padrão de contador
+
+        Usar o padrão de contador com a propriedade x e y de um sprite faz ela se mover suavemente pela tela. Neste programa **o padrão de contador está sendo usado com a propriedade `sprite.velocidadeX`**.
+
+        # Prever
+
+        O que você acha que acontecerá quando o código for executado? Por quê? Quando estiver pronto, você pode executar o código para descobrir.
+      CSD U3 Complex Movement counter prediction_2018: |-
+        # Velocity e o padrão de contador
+
+        Usar o padrão de contador com a propriedade x e y de um sprite faz ela se mover suavemente pela tela. Neste programa **o padrão de contador está sendo usado com a propriedade `sprite.velocidadeX`**.
+
+        # Prever
+
+        O que você acha que acontecerá quando o código for executado? Por quê? Quando estiver pronto, você pode executar o código para descobrir.
+      CSD U3 Complex Movement counter prediction_2019: |-
+        # Velocity e o padrão de contador
+
+        Usar o padrão de contador com a propriedade x e y de um sprite faz ela se mover suavemente pela tela. Neste programa **o padrão de contador está sendo usado com a propriedade `sprite.velocidadeX`**.
+
+        # Prever
+
+        O que você acha que acontecerá quando o código for executado? Por quê? Quando estiver pronto, você pode executar o código para descobrir.
       CSD U3 Compound Nested Challenge: |-
         # Desafio: Verificação de várias condições
 
@@ -8305,6 +8601,42 @@ pt-BR:
         -   Execute o programa
         -   Enquanto o programa é executado, pressione a tecla "seta para cima" no seu teclado.
         -   Você conseguiu adivinhar? Ou você se surpreendeu? Discuta sobre o código com um colega.
+      CSD U3 Keypress Watchers Predict: |-
+        # Tente Adivinhar: Entrada do Usuário
+
+        Até agora, você usou `teclaPressionada` para os usuários poderem controlar seus programas, mas essa é só uma das formas de receber uma entrada. Na verdade, uma das várias formas de _detectar o pressionamento de teclas_! Dependendo de como você quer reagir a pressionamento de teclas, há outros blocos que talvez você queira usar.
+
+        Leia o programa e tente adivinhar, abaixo, o que vai acontecer quando você pressionar cada uma das setas do teclado (para cima, para baixo, para a esquerda e para a direita).
+
+        Depois de escrever o que você acha que vai acontecer, execute o código e anote ou compartilhe com a turma as suas observações.
+
+        -   Qual a diferença entre `teclaPressionada()`, `teclaFoiPressionada()` e `teclaFoiSolta()`?
+        -   O que você acha que o ponto de exclamação (`!`) na linha 10 faz?
+        -   Como você poderia usar os diferentes blocos de pressionamento de teclas em um jogo?
+      CSD U3 Keypress Watchers Predict_2018: |-
+        # Tente Adivinhar: Entrada do Usuário
+
+        Até agora, você usou `teclaPressionada` para os usuários poderem controlar seus programas, mas essa é só uma das formas de receber uma entrada. Na verdade, uma das várias formas de _detectar o pressionamento de teclas_! Dependendo de como você quer reagir a pressionamento de teclas, há outros blocos que talvez você queira usar.
+
+        Leia o programa e tente adivinhar, abaixo, o que vai acontecer quando você pressionar cada uma das setas do teclado (para cima, para baixo, para a esquerda e para a direita).
+
+        Depois de escrever o que você acha que vai acontecer, execute o código e anote ou compartilhe com a turma as suas observações.
+
+        -   Qual a diferença entre `teclaPressionada()`, `teclaFoiPressionada()` e `teclaFoiSolta()`?
+        -   O que você acha que o ponto de exclamação (`!`) na linha 10 faz?
+        -   Como você poderia usar os diferentes blocos de pressionamento de teclas em um jogo?
+      CSD U3 Keypress Watchers Predict_2019: |-
+        # Tente Adivinhar: Entrada do Usuário
+
+        Até agora, você usou `teclaPressionada` para os usuários poderem controlar seus programas, mas essa é só uma das formas de receber uma entrada. Na verdade, uma das várias formas de _detectar o pressionamento de teclas_! Dependendo de como você quer reagir a pressionamento de teclas, há outros blocos que talvez você queira usar.
+
+        Leia o programa e tente adivinhar, abaixo, o que vai acontecer quando você pressionar cada uma das setas do teclado (para cima, para baixo, para a esquerda e para a direita).
+
+        Depois de escrever o que você acha que vai acontecer, execute o código e anote ou compartilhe com a turma as suas observações.
+
+        -   Qual a diferença entre `teclaPressionada()`, `teclaFoiPressionada()` e `teclaFoiSolta()`?
+        -   O que você acha que o ponto de exclamação (`!`) na linha 10 faz?
+        -   Como você poderia usar os diferentes blocos de pressionamento de teclas em um jogo?
       CSD U3 Keypress Watchers_2018: |-
         # Tente Adivinhar: Entrada do Usuário
 
@@ -8503,6 +8835,57 @@ pt-BR:
         # Atividade Livre
 
         Use o que você aprendeu para criar o que quiser. Quando terminar, você pode clicar em ![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43 PM.png>) para enviar sua criação a alguém, ou ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50 PM.png>) para guardar na sua Galeria de Projetos.
+      CSD U3 Mouse Input Bee 1: |-
+        <img src="https://images.code.org/d2092b4f2debc336f963d48bd6cf4973-image-1477681020928.gif" style="float:right">
+
+        # Mouse X e Y
+
+        Uma das maneiras mais simples de inserir dados é simplesmente fazer um sprite seguir a posição do mouse do usuário. \*\*Você pode obter a localização x e y do mouse usando `World.mouseX` e`World.mouseY`. \* Isso segue o padrão que você aprendeu com as propriedades do sprite. `World` é o nome do objeto. `mouseX` e `mouseY` são os nomes das propriedades.
+
+        # Faça isso
+
+        Você vai fazer um sprite de abelha seguir o mouse ao redor da área de jogo.
+
+        -   A imagem da abelha já está carregada na guia de animação para você.
+        -   Crie um sprite de abelha que desenha no centro da janela.
+        -   Dentro do laço de desenho atualize a posição do sprite para a posição do mouse:
+                 \- Defina a posição x do sprite para o valor de `World.mouseX`.
+                 \- Defina a posição y do sprite para o valor de `World.mouseY`.
+        -   Execute o programa para testar se funciona.
+      CSD U3 Mouse Input Bee 1_2018: |-
+        <img src="https://images.code.org/d2092b4f2debc336f963d48bd6cf4973-image-1477681020928.gif" style="float:right">
+
+        # Mouse X e Y
+
+        Uma das maneiras mais simples de inserir dados é simplesmente fazer um sprite seguir a posição do mouse do usuário. \*\*Você pode obter a localização x e y do mouse usando `World.mouseX` e`World.mouseY`. \* Isso segue o padrão que você aprendeu com as propriedades do sprite. `World` é o nome do objeto. `mouseX` e `mouseY` são os nomes das propriedades.
+
+        # Faça isso
+
+        Você vai fazer um sprite de abelha seguir o mouse ao redor da área de jogo.
+
+        -   A imagem da abelha já está carregada na guia de animação para você.
+        -   Crie um sprite de abelha que desenha no centro da janela.
+        -   Dentro do laço de desenho atualize a posição do sprite para a posição do mouse:
+                 \- Defina a posição x do sprite para o valor de `World.mouseX`.
+                 \- Defina a posição y do sprite para o valor de `World.mouseY`.
+        -   Execute o programa para testar se funciona.
+      CSD U3 Mouse Input Bee 1_2019: |-
+        <img src="https://images.code.org/d2092b4f2debc336f963d48bd6cf4973-image-1477681020928.gif" style="float:right">
+
+        # Mouse X e Y
+
+        Uma das maneiras mais simples de inserir dados é simplesmente fazer um sprite seguir a posição do mouse do usuário. \*\*Você pode obter a localização x e y do mouse usando `World.mouseX` e`World.mouseY`. \* Isso segue o padrão que você aprendeu com as propriedades do sprite. `World` é o nome do objeto. `mouseX` e `mouseY` são os nomes das propriedades.
+
+        # Faça isso
+
+        Você vai fazer um sprite de abelha seguir o mouse ao redor da área de jogo.
+
+        -   A imagem da abelha já está carregada na guia de animação para você.
+        -   Crie um sprite de abelha que desenha no centro da janela.
+        -   Dentro do laço de desenho atualize a posição do sprite para a posição do mouse:
+                 \- Defina a posição x do sprite para o valor de `World.mouseX`.
+                 \- Defina a posição y do sprite para o valor de `World.mouseY`.
+        -   Execute o programa para testar se funciona.
       CSD U3 Movement Fish: |-
         <img src="https://images.code.org/7852ab38a8222ee827edeff2767e8efd-image-1492037897236.gif" style="float: right; margin-left: 20px;">
 
@@ -9575,6 +9958,339 @@ pt-BR:
         -   **Leia o programa** e preveja o que o programa fará.
         -   **Execute o programa** para verificar sua previsão.
         -   **Olhe para os observadores** e explique a um vizinho o que você está vendo.
+      CSD U3 abstraction accelerateX: |-
+        # Velocity e o padrão de contador
+
+        Como você acabou de ver, usar uma propriedade `sprite.velocidadeX` com o padrão de contador irá alterar a velocidade de um sprite durante o programa. Isso faz com que o sprite acelere. Faça um pouco de prática usando esse padrão.
+
+        # Faça isso
+
+        Este programa faz um carro se mover pela tela, mas está indo muito devagar.
+
+        -   Use o padrão de contador com a propriedade velocidadeX do sprite para acelerar o carro. ([Mostre-me onde](#triggercallout=code_triggered))
+      CSD U3 abstraction accelerateX_2018: |-
+        # Velocity e o padrão de contador
+
+        Como você acabou de ver, usar uma propriedade `sprite.velocidadeX` com o padrão de contador irá alterar a velocidade de um sprite durante o programa. Isso faz com que o sprite acelere. Faça um pouco de prática usando esse padrão.
+
+        # Faça isso
+
+        Este programa faz um carro se mover pela tela, mas está indo muito devagar.
+
+        -   Use o padrão de contador com a propriedade velocidadeX do sprite para acelerar o carro. ([Mostre-me onde](#triggercallout=code_triggered))
+      CSD U3 abstraction accelerateX_2019: |-
+        # Velocity e o padrão de contador
+
+        Como você acabou de ver, usar uma propriedade `sprite.velocidadeX` com o padrão de contador irá alterar a velocidade de um sprite durante o programa. Isso faz com que o sprite acelere. Faça um pouco de prática usando esse padrão.
+
+        # Faça isso
+
+        Este programa faz um carro se mover pela tela, mas está indo muito devagar.
+
+        -   Use o padrão de contador com a propriedade velocidadeX do sprite para acelerar o carro. ([Mostre-me onde](#triggercallout=code_triggered))
+      CSD U3 abstraction accelerateY: |-
+        # Rocha caindo
+
+        A rocha deve acelerar enquanto cai na tela. Você pode usar o mesmo padrão de contador com `velocidadeY` dentro do laço de desenho para fazer a pedra ir mais rápido e mais rápido à medida que ela cai?
+
+        # Faça isso
+
+        -   Use o padrão do contador com a velocidade do sprite para fazer a rocha acelerar enquanto cai. ([Mostre-me onde](#triggercallout=code_triggered))
+
+        \_Desafio: Você consegue fazer a pedra girar enquanto cai? \_
+      CSD U3 abstraction accelerateY up: |-
+        # Bolha subindo
+
+        Este programa faz uma bolha subir na água. Você pode fazê-la ficar mais rápida à medida que sobe?
+
+        # Faça isso
+
+        -   Use o padrão do contador e a velocidade do sprite para fazer a bolha subir mais rapidamente.
+      CSD U3 abstraction accelerateY up_2018: |-
+        # Bolha subindo
+
+        Este programa faz uma bolha subir na água. Você pode fazê-la ficar mais rápida à medida que sobe?
+
+        # Faça isso
+
+        -   Use o padrão do contador e a velocidade do sprite para fazer a bolha subir mais rapidamente.
+      CSD U3 abstraction accelerateY up_2019: |-
+        # Bolha subindo
+
+        Este programa faz uma bolha subir na água. Você pode fazê-la ficar mais rápida à medida que sobe?
+
+        # Faça isso
+
+        -   Use o padrão do contador e a velocidade do sprite para fazer a bolha subir mais rapidamente.
+      CSD U3 abstraction accelerateY_2018: |-
+        # Rocha caindo
+
+        A rocha deve acelerar enquanto cai na tela. Você pode usar o mesmo padrão de contador com `velocidadeY` dentro do laço de desenho para fazer a pedra ir mais rápido e mais rápido à medida que ela cai?
+
+        # Faça isso
+
+        -   Use o padrão do contador com a velocidade do sprite para fazer a rocha acelerar enquanto cai. ([Mostre-me onde](#triggercallout=code_triggered))
+
+        \_Desafio: Você consegue fazer a pedra girar enquanto cai? \_
+      CSD U3 abstraction accelerateY_2019: |-
+        # Rocha caindo
+
+        A rocha deve acelerar enquanto cai na tela. Você pode usar o mesmo padrão de contador com `velocidadeY` dentro do laço de desenho para fazer a pedra ir mais rápido e mais rápido à medida que ela cai?
+
+        # Faça isso
+
+        -   Use o padrão do contador com a velocidade do sprite para fazer a rocha acelerar enquanto cai. ([Mostre-me onde](#triggercallout=code_triggered))
+
+        \_Desafio: Você consegue fazer a pedra girar enquanto cai? \_
+      CSD U3 abstraction add coin: |-
+        # Adicione uma moeda
+
+        Nos próximos níveis, você adicionará ao seu programa para criar um jogo simples. Neste jogo o jogador irá acumular pontos para aumentar a pontuação. Esta é uma boa chance de ver como diferentes tipos de movimento podem afetar a forma como um jogo se sente, e também apenas o ajudará a praticar habilidades de programação.
+
+        # Faça isso
+
+        Neste nível, você estará adicionando um novo sprite de moeda ao jogo. Você deve estar trabalhando no topo do seu programa, fora do laço de desenho.
+
+        -   Use o bloco `criarSprite()` para criar um novo sprite. Certifique-se de dar um nome descritivo como  **moeda =**.
+        -   Use as propriedades `sprite.x` e`sprite.y` do sprite para obter uma posição X e Y aleatória entre 0 e 400.
+        -   Na aba Animação já existe uma animação de moeda. Use o bloco `sprite.setarAnimacao()` para dar ao seu sprite esta animação.
+
+        Teste seu código antes de prosseguir. Quando você executa o jogo, você deve ver um duende de moeda aparecer em algum lugar aleatoriamente na tela.
+      CSD U3 abstraction add coin_2018: |-
+        # Adicione uma moeda
+
+        Nos próximos níveis, você adicionará ao seu programa para criar um jogo simples. Neste jogo o jogador irá acumular pontos para aumentar a pontuação. Esta é uma boa chance de ver como diferentes tipos de movimento podem afetar a forma como um jogo se sente, e também apenas o ajudará a praticar habilidades de programação.
+
+        # Faça isso
+
+        Neste nível, você estará adicionando um novo sprite de moeda ao jogo. Você deve estar trabalhando no topo do seu programa, fora do laço de desenho.
+
+        -   Use o bloco `criarSprite()` para criar um novo sprite. Certifique-se de dar um nome descritivo como  **moeda =**.
+        -   Use as propriedades `sprite.x` e`sprite.y` do sprite para obter uma posição X e Y aleatória entre 0 e 400.
+        -   Na aba Animação já existe uma animação de moeda. Use o bloco `sprite.setarAnimacao()` para dar ao seu sprite esta animação.
+
+        Teste seu código antes de prosseguir. Quando você executa o jogo, você deve ver um duende de moeda aparecer em algum lugar aleatoriamente na tela.
+      CSD U3 abstraction add coin_2019: |-
+        # Adicione uma moeda
+
+        Nos próximos níveis, você adicionará ao seu programa para criar um jogo simples. Neste jogo o jogador irá acumular pontos para aumentar a pontuação. Esta é uma boa chance de ver como diferentes tipos de movimento podem afetar a forma como um jogo se sente, e também apenas o ajudará a praticar habilidades de programação.
+
+        # Faça isso
+
+        Neste nível, você estará adicionando um novo sprite de moeda ao jogo. Você deve estar trabalhando no topo do seu programa, fora do laço de desenho.
+
+        -   Use o bloco `criarSprite()` para criar um novo sprite. Certifique-se de dar um nome descritivo como  **moeda =**.
+        -   Use as propriedades `sprite.x` e`sprite.y` do sprite para obter uma posição X e Y aleatória entre 0 e 400.
+        -   Na aba Animação já existe uma animação de moeda. Use o bloco `sprite.setarAnimacao()` para dar ao seu sprite esta animação.
+
+        Teste seu código antes de prosseguir. Quando você executa o jogo, você deve ver um duende de moeda aparecer em algum lugar aleatoriamente na tela.
+      CSD U3 abstraction decelerateX: |-
+        # Retardando as coisas
+
+        Agora que você já teve alguma prática acelerando as coisas, você pode usar o padrão de contador para diminuir os sprites?
+
+        # Faça isso
+
+        O carro vai correr para a água! Você precisará usar o padrão de contador para diminuir a velocidade.
+
+        -   Use o bloco `sprite.velocidadeX` com um padrão de contador para diminuir a velocidade do carro em 0.25 conforme se move pela tela.
+        -   Discuta com seu parceiro: o que você acha que acontecerá quando o carro finalmente parar?
+
+        _Desafio: Adicionar código que reduza o ritmo do carro somente se a velocidade X for maior que 0._
+      CSD U3 abstraction decelerateY: |-
+        # Simulando a gravidade
+
+        No último nível você desacelerou o carro com o bloco `sprite.velocityX` e o padrão de contador. Quase parecia que o carro estava sendo puxado para a esquerda.
+
+        Se você usar esse mesmo padrão com o bloco `sprite.velocityY`, parecerá que seu sprite está sempre sendo puxado para baixo, o que é exatamente o que a gravidade faz!
+
+        # Faça isso
+
+        A rocha é lançada no ar, mas nunca cai de volta.
+
+        -   Use o bloco `sprite.velocityY` com o padrão de contador para fazer a pedra diminuir a velocidade e depois cair na outra direção.
+        -   Experimente com valores diferentes no seu padrão de contador. Você quer que a rocha diminua a velocidade rapidamente ou gradualmente? O que parece mais realista para você?
+        -   Discuta com seu parceiro: Por que você está definindo a velocidade inicial da rocha fora do loop de desenho? Por que você está mudando a velocidade do sprite dentro do loop de draw?
+      CSD U3 abstraction decelerateY_2018: |-
+        # Simulando a gravidade
+
+        No último nível você desacelerou o carro com o bloco `sprite.velocityX` e o padrão de contador. Quase parecia que o carro estava sendo puxado para a esquerda.
+
+        Se você usar esse mesmo padrão com o bloco `sprite.velocityY`, parecerá que seu sprite está sempre sendo puxado para baixo, o que é exatamente o que a gravidade faz!
+
+        # Faça isso
+
+        A rocha é lançada no ar, mas nunca cai de volta.
+
+        -   Use o bloco `sprite.velocityY` com o padrão de contador para fazer a pedra diminuir a velocidade e depois cair na outra direção.
+        -   Experimente com valores diferentes no seu padrão de contador. Você quer que a rocha diminua a velocidade rapidamente ou gradualmente? O que parece mais realista para você?
+        -   Discuta com seu parceiro: Por que você está definindo a velocidade inicial da rocha fora do loop de desenho? Por que você está mudando a velocidade do sprite dentro do loop de draw?
+      CSD U3 abstraction decelerateY_2019: |-
+        # Simulando a gravidade
+
+        No último nível você desacelerou o carro com o bloco `sprite.velocityX` e o padrão de contador. Quase parecia que o carro estava sendo puxado para a esquerda.
+
+        Se você usar esse mesmo padrão com o bloco `sprite.velocityY`, parecerá que seu sprite está sempre sendo puxado para baixo, o que é exatamente o que a gravidade faz!
+
+        # Faça isso
+
+        A rocha é lançada no ar, mas nunca cai de volta.
+
+        -   Use o bloco `sprite.velocityY` com o padrão de contador para fazer a pedra diminuir a velocidade e depois cair na outra direção.
+        -   Experimente com valores diferentes no seu padrão de contador. Você quer que a rocha diminua a velocidade rapidamente ou gradualmente? O que parece mais realista para você?
+        -   Discuta com seu parceiro: Por que você está definindo a velocidade inicial da rocha fora do loop de desenho? Por que você está mudando a velocidade do sprite dentro do loop de draw?
+      CSD U3 abstraction jump: |-
+        # Salto
+
+        Agora você tem todos os blocos que você precisa para fazer seu sprite pular!
+
+        Assim como você verificou se o seu peixe estava na borda esquerda, você precisa verificar se o sapo está no chão. Se estiver, ele pode pular ou ficar parado, então você precisará de mais um bloco `if` para verificar se o usuário pressionou a seta para cima ([Mostre-me onde] [0]).
+
+        Você também precisará verificar se o sapo atingiu seu ponto mais alto e enviá-lo de volta se tiver.
+
+        # Faça isso
+
+        -   Encontre a declaração `if` que verifica se o sprite está no chão e observe a instrução`if` dentro dela que verifica se o usuário pressionou a tecla de seta "para cima". ([Mostre-me onde] [1])
+                \- Use o bloco `velocityY` para fazer o sapo saltar quando o usuário apertar a tecla de seta.
+                \- Use o bloco `velocityY` para fazer o sapo parar de se movimentar.
+        -   Adicione uma declaração if que faça o seguinte ([Mostre-me onde] [2])
+                \- Verifica se o sprite atingiu o ponto mais alto.
+                \- Se sim, use o bloco `velocityY` para fazer o sprite cair novamente.
+      CSD U3 abstraction jumping: |-
+        # Salto
+
+        Aumentar a velocidade de um sprite dentro do padrão do contador pode simular a gravidade. Ao adicionar interações do usuário, você pode fazer com que seu sprite pareça saltar também. Para começar, você fará um simples salto e, em seguida, fará com que seja mais realista, procurando o próximo nível.
+
+        # Faça isso
+
+        Um sprite já foi criado para você que cai porque sua velocidade é aumentada dentro do loop de desenho. Você precisará fazer este sprite parecer saltar.
+
+        -   Dentro do bloco `if` que verifica se a seta para cima foi pressionada, defina a velocidade y do sprite para -5. ([Mostre-me onde] [0])
+        -   Discuta com um vizinho: por que esse código é executado da maneira como funciona? Como usar um número além de -5 afeta a maneira como o código funciona? Como você poderia pular mais alto ou mais baixo?
+      CSD U3 abstraction jumping_2018: |-
+        # Salto
+
+        Aumentar a velocidade de um sprite dentro do padrão do contador pode simular a gravidade. Ao adicionar interações do usuário, você pode fazer com que seu sprite pareça saltar também. Para começar, você fará um simples salto e, em seguida, fará com que seja mais realista, procurando o próximo nível.
+
+        # Faça isso
+
+        Um sprite já foi criado para você que cai porque sua velocidade é aumentada dentro do loop de desenho. Você precisará fazer este sprite parecer saltar.
+
+        -   Dentro do bloco `if` que verifica se a seta para cima foi pressionada, defina a velocidade y do sprite para -5. ([Mostre-me onde] [0])
+        -   Discuta com um vizinho: por que esse código é executado da maneira como funciona? Como usar um número além de -5 afeta a maneira como o código funciona? Como você poderia pular mais alto ou mais baixo?
+      CSD U3 abstraction jumping_2019: |-
+        # Salto
+
+        Aumentar a velocidade de um sprite dentro do padrão do contador pode simular a gravidade. Ao adicionar interações do usuário, você pode fazer com que seu sprite pareça saltar também. Para começar, você fará um simples salto e, em seguida, fará com que seja mais realista, procurando o próximo nível.
+
+        # Faça isso
+
+        Um sprite já foi criado para você que cai porque sua velocidade é aumentada dentro do loop de desenho. Você precisará fazer este sprite parecer saltar.
+
+        -   Dentro do bloco `if` que verifica se a seta para cima foi pressionada, defina a velocidade y do sprite para -5. ([Mostre-me onde] [0])
+        -   Discuta com um vizinho: por que esse código é executado da maneira como funciona? Como usar um número além de -5 afeta a maneira como o código funciona? Como você poderia pular mais alto ou mais baixo?
+      CSD U3 abstraction left right counter: |-
+        # Flutuando à direita
+
+        Agora você está usando o padrão contador com a velocidade Y do sprite para simular gravidade e salto. Se você usar a velocidade X do sprite no padrão do contador, então você pode fazer seu sprite flutuar de lado a lado também.
+
+        # Faça isso
+
+        Neste nível você fará seu sprite começar a flutuar para a direita quando a seta direita for pressionada.
+
+        -   Adicione uma instrução `if` dentro do seu loop de desenho abaixo da que você criou para a seta "para cima".
+        -   Use o bloco `keyDown` para fazer com que a instrução`if` responda quando a seta "right" é pressionada.
+        -   Dentro do bloco `if` use o padrão contador com o bloco`sprite.velocityX` para adicionar 0.1 à velocidade X do sprite.
+
+        Execute seu código para ver como funciona. O sprite deve começar a flutuar para a direita quando você pressiona a seta para a direita e pula quando você pressiona "para cima". Você fará a seta da esquerda funcionar no próximo nível.
+      CSD U3 abstraction left right counter 2: |-
+        # Flutuante à esquerda
+
+        No último nível você obteve instruções detalhadas sobre como fazer seu sprite começar a flutuar para a direita. Desta vez, você precisará fazer seu sprite flutuar para a esquerda sozinho. Você deve estar bastante confortável com o uso da velocidade e do padrão de contagem juntos neste ponto. Se você está tendo problemas, converse com um vizinho ou revise alguns dos níveis anteriores.
+
+        # Faça isso
+
+        -   Adicione código ao seu loop de desenho que fará com que o sprite comece a se mover para a esquerda quando a seta "esquerda" estiver abaixada.
+        -   Certifique-se de usar a velocidade e o padrão do contador juntos.
+
+        Quando seu código estiver funcionando, compartilhe o que você escreveu com um colega. Seu sprite é fácil de controlar? Mudar a quantidade que você adiciona ou subtrai nos padrões de contador que você escreveu afetam a maneira como o jogo se sente? Que tipo de jogo pode ser divertido de fazer com um jogador que se move assim?
+      CSD U3 abstraction left right counter 2_2018: |-
+        # Flutuante à esquerda
+
+        No último nível você obteve instruções detalhadas sobre como fazer seu sprite começar a flutuar para a direita. Desta vez, você precisará fazer seu sprite flutuar para a esquerda sozinho. Você deve estar bastante confortável com o uso da velocidade e do padrão de contagem juntos neste ponto. Se você está tendo problemas, converse com um vizinho ou revise alguns dos níveis anteriores.
+
+        # Faça isso
+
+        -   Adicione código ao seu loop de desenho que fará com que o sprite comece a se mover para a esquerda quando a seta "esquerda" estiver abaixada.
+        -   Certifique-se de usar a velocidade e o padrão do contador juntos.
+
+        Quando seu código estiver funcionando, compartilhe o que você escreveu com um colega. Seu sprite é fácil de controlar? Mudar a quantidade que você adiciona ou subtrai nos padrões de contador que você escreveu afetam a maneira como o jogo se sente? Que tipo de jogo pode ser divertido de fazer com um jogador que se move assim?
+      CSD U3 abstraction left right counter 2_2019: |-
+        # Flutuante à esquerda
+
+        No último nível você obteve instruções detalhadas sobre como fazer seu sprite começar a flutuar para a direita. Desta vez, você precisará fazer seu sprite flutuar para a esquerda sozinho. Você deve estar bastante confortável com o uso da velocidade e do padrão de contagem juntos neste ponto. Se você está tendo problemas, converse com um vizinho ou revise alguns dos níveis anteriores.
+
+        # Faça isso
+
+        -   Adicione código ao seu loop de desenho que fará com que o sprite comece a se mover para a esquerda quando a seta "esquerda" estiver abaixada.
+        -   Certifique-se de usar a velocidade e o padrão do contador juntos.
+
+        Quando seu código estiver funcionando, compartilhe o que você escreveu com um colega. Seu sprite é fácil de controlar? Mudar a quantidade que você adiciona ou subtrai nos padrões de contador que você escreveu afetam a maneira como o jogo se sente? Que tipo de jogo pode ser divertido de fazer com um jogador que se move assim?
+      CSD U3 abstraction left right counter_2018: |-
+        # Flutuando à direita
+
+        Agora você está usando o padrão contador com a velocidade Y do sprite para simular gravidade e salto. Se você usar a velocidade X do sprite no padrão do contador, então você pode fazer seu sprite flutuar de lado a lado também.
+
+        # Faça isso
+
+        Neste nível você fará seu sprite começar a flutuar para a direita quando a seta direita for pressionada.
+
+        -   Adicione uma instrução `if` dentro do seu loop de desenho abaixo da que você criou para a seta "para cima".
+        -   Use o bloco `keyDown` para fazer com que a instrução`if` responda quando a seta "right" é pressionada.
+        -   Dentro do bloco `if` use o padrão contador com o bloco`sprite.velocityX` para adicionar 0.1 à velocidade X do sprite.
+
+        Execute seu código para ver como funciona. O sprite deve começar a flutuar para a direita quando você pressiona a seta para a direita e pula quando você pressiona "para cima". Você fará a seta da esquerda funcionar no próximo nível.
+      CSD U3 abstraction left right counter_2019: |-
+        # Flutuando à direita
+
+        Agora você está usando o padrão contador com a velocidade Y do sprite para simular gravidade e salto. Se você usar a velocidade X do sprite no padrão do contador, então você pode fazer seu sprite flutuar de lado a lado também.
+
+        # Faça isso
+
+        Neste nível você fará seu sprite começar a flutuar para a direita quando a seta direita for pressionada.
+
+        -   Adicione uma instrução `if` dentro do seu loop de desenho abaixo da que você criou para a seta "para cima".
+        -   Use o bloco `keyDown` para fazer com que a instrução`if` responda quando a seta "right" é pressionada.
+        -   Dentro do bloco `if` use o padrão contador com o bloco`sprite.velocityX` para adicionar 0.1 à velocidade X do sprite.
+
+        Execute seu código para ver como funciona. O sprite deve começar a flutuar para a direita quando você pressiona a seta para a direita e pula quando você pressiona "para cima". Você fará a seta da esquerda funcionar no próximo nível.
+      CSD U3 abstraction looping: |-
+        # Fazendo laços
+
+        O jogo será mais divertido se o sapo puder pular mais de uma vez. Você pode fazer o "laço" do cogumelo, verificando se ele foi movido para a borda esquerda e movê-lo de volta para a borda direita.
+
+        # Faça isso
+
+        -   Encontre a declaração `se` que verifica se o cogumelo passou pela borda esquerda. ([Mostre-me onde](#triggercallout=code_triggered1))
+        -   Use o bloco `sprite.x` para definir a posição do cogumelo de volta à borda direita, se houver.
+      CSD U3 abstraction looping_2018: |-
+        # Fazendo laços
+
+        O jogo será mais divertido se o sapo puder pular mais de uma vez. Você pode fazer o "laço" do cogumelo, verificando se ele foi movido para a borda esquerda e movê-lo de volta para a borda direita.
+
+        # Faça isso
+
+        -   Encontre a declaração `se` que verifica se o cogumelo passou pela borda esquerda. ([Mostre-me onde](#triggercallout=code_triggered1))
+        -   Use o bloco `sprite.x` para definir a posição do cogumelo de volta à borda direita, se houver.
+      CSD U3 abstraction looping_2019: |-
+        # Fazendo laços
+
+        O jogo será mais divertido se o sapo puder pular mais de uma vez. Você pode fazer o "laço" do cogumelo, verificando se ele foi movido para a borda esquerda e movê-lo de volta para a borda direita.
+
+        # Faça isso
+
+        -   Encontre a declaração `se` que verifica se o cogumelo passou pela borda esquerda. ([Mostre-me onde](#triggercallout=code_triggered1))
+        -   Use o bloco `sprite.x` para definir a posição do cogumelo de volta à borda direita, se houver.
       CSD U3 abstraction make it your own: |-
         # Faça o seu próprio
 
@@ -9599,6 +10315,213 @@ pt-BR:
         # Faça isso
 
         Faça pelo menos uma melhoria no jogo que o torne seu. Esteja preparado para compartilhar suas alterações e melhorias com seu colega de classe.
+      CSD U3 abstraction reset coin: |-
+        # Resetar Moeda
+
+        Quando seu personagem tocar a moeda, você deve redefini-la em algum lugar da tela.
+
+        # Faça isso
+
+        -   Coloque um bloco `if` dentro do seu loop de desenho.
+        -   Use o bloco `sprite.estaTocando()` como condição para detectar quando o personagem toca a moeda.
+        -   Dentro do bloco `if` escreva o código que define a posição X e Y da moeda para números aleatórios entre 0 e 400.
+                 \- _Dica: você já escreveu esse código em outro lugar do seu programa._
+
+        Teste seu código antes de prosseguir. Quando seu jogador toca a moeda, ele deve se mover para outro lugar da tela.
+      CSD U3 abstraction reset coin_2018: |-
+        # Resetar Moeda
+
+        Quando seu personagem tocar a moeda, você deve redefini-la em algum lugar da tela.
+
+        # Faça isso
+
+        -   Coloque um bloco `if` dentro do seu loop de desenho.
+        -   Use o bloco `sprite.estaTocando()` como condição para detectar quando o personagem toca a moeda.
+        -   Dentro do bloco `if` escreva o código que define a posição X e Y da moeda para números aleatórios entre 0 e 400.
+                 \- _Dica: você já escreveu esse código em outro lugar do seu programa._
+
+        Teste seu código antes de prosseguir. Quando seu jogador toca a moeda, ele deve se mover para outro lugar da tela.
+      CSD U3 abstraction reset coin_2019: |-
+        # Resetar Moeda
+
+        Quando seu personagem tocar a moeda, você deve redefini-la em algum lugar da tela.
+
+        # Faça isso
+
+        -   Coloque um bloco `if` dentro do seu loop de desenho.
+        -   Use o bloco `sprite.estaTocando()` como condição para detectar quando o personagem toca a moeda.
+        -   Dentro do bloco `if` escreva o código que define a posição X e Y da moeda para números aleatórios entre 0 e 400.
+                 \- _Dica: você já escreveu esse código em outro lugar do seu programa._
+
+        Teste seu código antes de prosseguir. Quando seu jogador toca a moeda, ele deve se mover para outro lugar da tela.
+      CSD U3 abstraction tumbleweed: |-
+        # Cogumelo
+
+        Agora você só precisa de algo para o seu sprite pular. Este programa já tem um cogumelo logo após a borda direita da tela, mas ele precisa se mover em direção ao seu sapo.
+
+        # Faça isso
+
+        -   Use o bloco `velocidadeX` para fazer o cogumelo se mover para a esquerda na tela.
+
+        _Dica: O cogumelo deve começar a se mover no início do jogo, e nunca mudar, então deve estar dentro ou fora do laço de desenho?_
+      CSD U3 abstraction tumbleweed_2018: |-
+        # Cogumelo
+
+        Agora você só precisa de algo para o seu sprite pular. Este programa já tem um cogumelo logo após a borda direita da tela, mas ele precisa se mover em direção ao seu sapo.
+
+        # Faça isso
+
+        -   Use o bloco `velocidadeX` para fazer o cogumelo se mover para a esquerda na tela.
+
+        _Dica: O cogumelo deve começar a se mover no início do jogo, e nunca mudar, então deve estar dentro ou fora do laço de desenho?_
+      CSD U3 abstraction tumbleweed_2019: |-
+        # Cogumelo
+
+        Agora você só precisa de algo para o seu sprite pular. Este programa já tem um cogumelo logo após a borda direita da tela, mas ele precisa se mover em direção ao seu sapo.
+
+        # Faça isso
+
+        -   Use o bloco `velocidadeX` para fazer o cogumelo se mover para a esquerda na tela.
+
+        _Dica: O cogumelo deve começar a se mover no início do jogo, e nunca mudar, então deve estar dentro ou fora do laço de desenho?_
+      CSD U3 abstraction velocityX: |-
+        # velocityX
+
+        Uma maneira de mover sprites no Game Lab é com o padrão de contador. Por exemplo, sprite1.x = sprite1.x + 1`move um sprite em 1 pixel a cada quadro do loop de desenho. Esse padrão é tão comum que os sprites têm uma propriedade`velocityX\` que faz isso para você.
+
+        # Faça isso
+
+        -   Arraste um bloco `sprite.velocityX` diretamente abaixo de onde seu sprite foi criado.       ([Mostre-me onde] [0])
+        -   Escreva o nome do seu sprite no bloco.
+        -   Atribua à propriedade `velocityX` um valor de 1.
+        -   Execute o código. O que acontece?
+        -   Volte a executar o código, dando à propriedade `velocityX` um valor diferente. O que está mudando?
+      CSD U3 abstraction velocityX control: |-
+        # Controles Múltiplos
+
+        Como você viu no último nível, você pode mudar a velocidade do sprite com múltiplas declarações `if`. Neste programa, o peixe tem três tipos diferentes de movimento, cada um dos quais deve ser controlado pela sua própria declaração if.
+
+        # Faça isso
+
+        -   Veja as três declarações `if` dentro do loop de desenho.
+
+        -   Use um bloco `sprite.velocityX` dentro de cada instrução`if` para fazer os três seguintes movimentos:
+                 \- Se o usuário pressionar a tecla de seta para a direita, mova o peixe para a direita.
+                 \- Se o peixe chegar ao lado direito da tela, mova o peixe para a esquerda.
+                 \- Se o peixe chegar ao lado esquerdo da tela, pare o peixe.
+      CSD U3 abstraction velocityX control_2018: |-
+        # Controles Múltiplos
+
+        Como você viu no último nível, você pode mudar a velocidade do sprite com múltiplas declarações `if`. Neste programa, o peixe tem três tipos diferentes de movimento, cada um dos quais deve ser controlado pela sua própria declaração if.
+
+        # Faça isso
+
+        -   Veja as três declarações `if` dentro do loop de desenho.
+
+        -   Use um bloco `sprite.velocityX` dentro de cada instrução`if` para fazer os três seguintes movimentos:
+                 \- Se o usuário pressionar a tecla de seta para a direita, mova o peixe para a direita.
+                 \- Se o peixe chegar ao lado direito da tela, mova o peixe para a esquerda.
+                 \- Se o peixe chegar ao lado esquerdo da tela, pare o peixe.
+      CSD U3 abstraction velocityX control_2019: |-
+        # Controles Múltiplos
+
+        Como você viu no último nível, você pode mudar a velocidade do sprite com múltiplas declarações `if`. Neste programa, o peixe tem três tipos diferentes de movimento, cada um dos quais deve ser controlado pela sua própria declaração if.
+
+        # Faça isso
+
+        -   Veja as três declarações `if` dentro do loop de desenho.
+
+        -   Use um bloco `sprite.velocityX` dentro de cada instrução`if` para fazer os três seguintes movimentos:
+                 \- Se o usuário pressionar a tecla de seta para a direita, mova o peixe para a direita.
+                 \- Se o peixe chegar ao lado direito da tela, mova o peixe para a esquerda.
+                 \- Se o peixe chegar ao lado esquerdo da tela, pare o peixe.
+      CSD U3 abstraction velocityX if-statements: |-
+        # Mudança de velocidade com posição
+
+        Uma vantagem de usar os blocos de velocidade dentro de condicionais (blocos `if`) é que seu sprite continua se movendo, mesmo depois que a condição deixar de ser verdadeira. Por exemplo, você só tinha que pressionar uma tecla uma vez para lançar seu robô voador, e ele continuava voando para sempre.
+
+        No código abaixo, o sprite do peixe se move para a esquerda quando atinge a borda direita e para a direita quando atinge a borda esquerda. O sprite continua se movendo, mesmo quando não está mais tocando a borda.
+
+        # Faça isso
+
+        -   Veja as declarações `if` que verificam a posição do sprite e definem sua velocidade.
+        -   Com o seu parceiro, discuta como o sprite sabe o caminho a seguir quando nenhuma das declarações `if` for verdadeira (o sprite está no meio da tela).
+      CSD U3 abstraction velocityX if-statements predict: |-
+        # Mudança de velocidade com posição
+
+        Uma vantagem de usar os blocos de velocidade dentro de condicionais (blocos `if`) é que seu sprite continua se movendo, mesmo depois que a condição deixar de ser verdadeira. Por exemplo, você só tinha que pressionar uma tecla uma vez para lançar seu robô voador, e ele continuava voando para sempre. O código abaixo usa instruções if para fazer um sprite de peixe se mover em direções diferentes.
+
+        # Faça isso
+
+        -   Veja as declarações `if` que verificam a posição do sprite e definem sua velocidade.
+        -   Com o seu parceiro, discuta o que você acha que o código fará e escreva sua resposta abaixo.
+        -   Depois de enviar sua resposta, execute o código.
+      CSD U3 abstraction velocityX if-statements predict_2018: |-
+        # Mudança de velocidade com posição
+
+        Uma vantagem de usar os blocos de velocidade dentro de condicionais (blocos `if`) é que seu sprite continua se movendo, mesmo depois que a condição deixar de ser verdadeira. Por exemplo, você só tinha que pressionar uma tecla uma vez para lançar seu robô voador, e ele continuava voando para sempre. O código abaixo usa instruções if para fazer um sprite de peixe se mover em direções diferentes.
+
+        # Faça isso
+
+        -   Veja as declarações `if` que verificam a posição do sprite e definem sua velocidade.
+        -   Com o seu parceiro, discuta o que você acha que o código fará e escreva sua resposta abaixo.
+        -   Depois de enviar sua resposta, execute o código.
+      CSD U3 abstraction velocityX if-statements predict_2019: |-
+        # Mudança de velocidade com posição
+
+        Uma vantagem de usar os blocos de velocidade dentro de condicionais (blocos `if`) é que seu sprite continua se movendo, mesmo depois que a condição deixar de ser verdadeira. Por exemplo, você só tinha que pressionar uma tecla uma vez para lançar seu robô voador, e ele continuava voando para sempre. O código abaixo usa instruções if para fazer um sprite de peixe se mover em direções diferentes.
+
+        # Faça isso
+
+        -   Veja as declarações `if` que verificam a posição do sprite e definem sua velocidade.
+        -   Com o seu parceiro, discuta o que você acha que o código fará e escreva sua resposta abaixo.
+        -   Depois de enviar sua resposta, execute o código.
+      CSD U3 abstraction velocityX if-statements_2018: |-
+        # Mudança de velocidade com posição
+
+        Uma vantagem de usar os blocos de velocidade dentro de condicionais (blocos `if`) é que seu sprite continua se movendo, mesmo depois que a condição deixar de ser verdadeira. Por exemplo, você só tinha que pressionar uma tecla uma vez para lançar seu robô voador, e ele continuava voando para sempre.
+
+        No código abaixo, o sprite do peixe se move para a esquerda quando atinge a borda direita e para a direita quando atinge a borda esquerda. O sprite continua se movendo, mesmo quando não está mais tocando a borda.
+
+        # Faça isso
+
+        -   Veja as declarações `if` que verificam a posição do sprite e definem sua velocidade.
+        -   Com o seu parceiro, discuta como o sprite sabe o caminho a seguir quando nenhuma das declarações `if` for verdadeira (o sprite está no meio da tela).
+      CSD U3 abstraction velocityX if-statements_2019: |-
+        # Mudança de velocidade com posição
+
+        Uma vantagem de usar os blocos de velocidade dentro de condicionais (blocos `if`) é que seu sprite continua se movendo, mesmo depois que a condição deixar de ser verdadeira. Por exemplo, você só tinha que pressionar uma tecla uma vez para lançar seu robô voador, e ele continuava voando para sempre.
+
+        No código abaixo, o sprite do peixe se move para a esquerda quando atinge a borda direita e para a direita quando atinge a borda esquerda. O sprite continua se movendo, mesmo quando não está mais tocando a borda.
+
+        # Faça isso
+
+        -   Veja as declarações `if` que verificam a posição do sprite e definem sua velocidade.
+        -   Com o seu parceiro, discuta como o sprite sabe o caminho a seguir quando nenhuma das declarações `if` for verdadeira (o sprite está no meio da tela).
+      CSD U3 abstraction velocityX_2018: |-
+        # velocityX
+
+        Uma maneira de mover sprites no Game Lab é com o padrão de contador. Por exemplo, sprite1.x = sprite1.x + 1`move um sprite em 1 pixel a cada quadro do loop de desenho. Esse padrão é tão comum que os sprites têm uma propriedade`velocityX\` que faz isso para você.
+
+        # Faça isso
+
+        -   Arraste um bloco `sprite.velocityX` diretamente abaixo de onde seu sprite foi criado.       ([Mostre-me onde] [0])
+        -   Escreva o nome do seu sprite no bloco.
+        -   Atribua à propriedade `velocityX` um valor de 1.
+        -   Execute o código. O que acontece?
+        -   Volte a executar o código, dando à propriedade `velocityX` um valor diferente. O que está mudando?
+      CSD U3 abstraction velocityX_2019: |-
+        # velocityX
+
+        Uma maneira de mover sprites no Game Lab é com o padrão de contador. Por exemplo, sprite1.x = sprite1.x + 1`move um sprite em 1 pixel a cada quadro do loop de desenho. Esse padrão é tão comum que os sprites têm uma propriedade`velocityX\` que faz isso para você.
+
+        # Faça isso
+
+        -   Arraste um bloco `sprite.velocityX` diretamente abaixo de onde seu sprite foi criado.       ([Mostre-me onde] [0])
+        -   Escreva o nome do seu sprite no bloco.
+        -   Atribua à propriedade `velocityX` um valor de 1.
+        -   Execute o código. O que acontece?
+        -   Volte a executar o código, dando à propriedade `velocityX` um valor diferente. O que está mudando?
       CSD U3 abstraction velocityY: |-
         # Movendo para baixo
 
@@ -9695,6 +10618,84 @@ pt-BR:
         _Verifique com seu professor antes de iniciar qualquer um dos desafios._
 
         Usando apenas os comandos `reta` e`elipse`, você pode desenhar uma nova forma, como este triângulo feito de círculos?
+      CSD U3 collisions build isTouching: |-
+        # Balão
+
+        O código abaixo usa as posições x e y dos sprites para verificar se estão se tocando. Ele mudará a animação do sprite do balão quando a tacada tocar nele. Use as setas do teclado para mover a tacha até que ela toque no balão.
+
+        # Faça isso
+
+        -   Você não precisa alterar nenhum código neste nível.
+        -   Leia as instruções if dentro do loop de desenho e encontre as diferentes propriedades de sprite e como elas são comparadas.
+        -   Discuta o código com seu parceiro. Você gostaria de escrever esse código toda vez que verificasse se os sprites estavam se tocando?
+
+        [//]: # "https://images.code.org/7afe11fccea99cd7f31497710cce5ac3-image-1471190004988.png"
+
+        [//]: # "https://images.code.org/0b6e98b829379d88b9952ee013cf70bd-image-1471190009596.png"
+
+        [//]: # "https://images.code.org/49c7a3b6fe2eff7e51d3f40581b1dcbb-image-1471190256258.png"
+      CSD U3 collisions build isTouching_2018: |-
+        # Balão
+
+        O código abaixo usa as posições x e y dos sprites para verificar se estão se tocando. Ele mudará a animação do sprite do balão quando a tacada tocar nele. Use as setas do teclado para mover a tacha até que ela toque no balão.
+
+        # Faça isso
+
+        -   Você não precisa alterar nenhum código neste nível.
+        -   Leia as instruções if dentro do loop de desenho e encontre as diferentes propriedades de sprite e como elas são comparadas.
+        -   Discuta o código com seu parceiro. Você gostaria de escrever esse código toda vez que verificasse se os sprites estavam se tocando?
+
+        [//]: # "https://images.code.org/7afe11fccea99cd7f31497710cce5ac3-image-1471190004988.png"
+
+        [//]: # "https://images.code.org/0b6e98b829379d88b9952ee013cf70bd-image-1471190009596.png"
+
+        [//]: # "https://images.code.org/49c7a3b6fe2eff7e51d3f40581b1dcbb-image-1471190256258.png"
+      CSD U3 collisions build isTouching_2019: |-
+        # Balão
+
+        O código abaixo usa as posições x e y dos sprites para verificar se estão se tocando. Ele mudará a animação do sprite do balão quando a tacada tocar nele. Use as setas do teclado para mover a tacha até que ela toque no balão.
+
+        # Faça isso
+
+        -   Você não precisa alterar nenhum código neste nível.
+        -   Leia as instruções if dentro do loop de desenho e encontre as diferentes propriedades de sprite e como elas são comparadas.
+        -   Discuta o código com seu parceiro. Você gostaria de escrever esse código toda vez que verificasse se os sprites estavam se tocando?
+
+        [//]: # "https://images.code.org/7afe11fccea99cd7f31497710cce5ac3-image-1471190004988.png"
+
+        [//]: # "https://images.code.org/0b6e98b829379d88b9952ee013cf70bd-image-1471190009596.png"
+
+        [//]: # "https://images.code.org/49c7a3b6fe2eff7e51d3f40581b1dcbb-image-1471190256258.png"
+      CSD U3 collisions car intro: |-
+        # Salto do Sapo
+
+        Olhe para o sapo pulando para a esquerda. Parece o jogo da última lição, mas o sapo move o cogumelo se ele o atingir. Qual código você acha que ajudaria o computador a saber se dois sprites estão tocando?
+
+        [//]: # "https://images.code.org/ee9b677e93213846fe12abb3b34f563c-image-1469742494237.png"
+
+        [//]: # "https://images.code.org/5f738da1a2b1ef8af124e4470e2babe7-image-1469742830481.png"
+
+        [//]: # "https://images.code.org/f22e6b1a636337820e53fb37a137b3d1-image-1469742992179.png"
+      CSD U3 collisions car intro_2018: |-
+        # Salto do Sapo
+
+        Olhe para o sapo pulando para a esquerda. Parece o jogo da última lição, mas o sapo move o cogumelo se ele o atingir. Qual código você acha que ajudaria o computador a saber se dois sprites estão tocando?
+
+        [//]: # "https://images.code.org/ee9b677e93213846fe12abb3b34f563c-image-1469742494237.png"
+
+        [//]: # "https://images.code.org/5f738da1a2b1ef8af124e4470e2babe7-image-1469742830481.png"
+
+        [//]: # "https://images.code.org/f22e6b1a636337820e53fb37a137b3d1-image-1469742992179.png"
+      CSD U3 collisions car intro_2019: |-
+        # Salto do Sapo
+
+        Olhe para o sapo pulando para a esquerda. Parece o jogo da última lição, mas o sapo move o cogumelo se ele o atingir. Qual código você acha que ajudaria o computador a saber se dois sprites estão tocando?
+
+        [//]: # "https://images.code.org/ee9b677e93213846fe12abb3b34f563c-image-1469742494237.png"
+
+        [//]: # "https://images.code.org/5f738da1a2b1ef8af124e4470e2babe7-image-1469742830481.png"
+
+        [//]: # "https://images.code.org/f22e6b1a636337820e53fb37a137b3d1-image-1469742992179.png"
       CSD U3 collisions displace intro: |-
         # Deslocar
 
@@ -9725,6 +10726,342 @@ pt-BR:
         Alguém tentou usar o bloco `sprite.deslocar()` para fazer o **elefante empurra o hipopótamo**, mas existe um bug. Você pode mudar o código para que o elefante empurre o hipopótamo para fora da tela?
 
         -   Encontre a linha de código onde o bloco `sprite.deslocar()` é usado e corrija o erro.
+      CSD U3 collisions displace x: |-
+        # Programar uma interação Sprite
+
+        Você deveria ter discutido com seus colegas de classe como você poderia criar a interação de sprite que você viu no último nível. Agora é a sua vez de programar você mesmo. Como você pode fazer a girafa tirar o macaco da tela?
+
+        # Faça isso
+
+        A girafa já está se movendo pela tela em direção ao macaco, mas a interação do sprite em si não foi programada.
+
+        -   Use o plano que você desenvolveu com seus colegas de classe no último nível para programar você mesmo a interação do sprite.
+
+        [//]: # "https://images.code.org/2e6b993747a39cd5076dce219037903d-image-1470319674401.png"
+
+        [//]: # "https://images.code.org/d44d7c1aa87ea7eeceea9e9b023408f9-image-1470319674396.png"
+      CSD U3 collisions displace x_2018: |-
+        # Programar uma interação Sprite
+
+        Você deveria ter discutido com seus colegas de classe como você poderia criar a interação de sprite que você viu no último nível. Agora é a sua vez de programar você mesmo. Como você pode fazer a girafa tirar o macaco da tela?
+
+        # Faça isso
+
+        A girafa já está se movendo pela tela em direção ao macaco, mas a interação do sprite em si não foi programada.
+
+        -   Use o plano que você desenvolveu com seus colegas de classe no último nível para programar você mesmo a interação do sprite.
+
+        [//]: # "https://images.code.org/2e6b993747a39cd5076dce219037903d-image-1470319674401.png"
+
+        [//]: # "https://images.code.org/d44d7c1aa87ea7eeceea9e9b023408f9-image-1470319674396.png"
+      CSD U3 collisions displace x_2019: |-
+        # Programar uma interação Sprite
+
+        Você deveria ter discutido com seus colegas de classe como você poderia criar a interação de sprite que você viu no último nível. Agora é a sua vez de programar você mesmo. Como você pode fazer a girafa tirar o macaco da tela?
+
+        # Faça isso
+
+        A girafa já está se movendo pela tela em direção ao macaco, mas a interação do sprite em si não foi programada.
+
+        -   Use o plano que você desenvolveu com seus colegas de classe no último nível para programar você mesmo a interação do sprite.
+
+        [//]: # "https://images.code.org/2e6b993747a39cd5076dce219037903d-image-1470319674401.png"
+
+        [//]: # "https://images.code.org/d44d7c1aa87ea7eeceea9e9b023408f9-image-1470319674396.png"
+      CSD U3 collisions displace y: |-
+        # Escreva sua própria interação de Sprite
+
+        No último nível você deve ter escrito código para uma interação de sprite que você desenvolveu com seus colegas. Desta vez, tente escrever o programa sozinho, mas você pode usar os padrões que viu no último nível.
+
+        # Faça isso
+
+        O elefante deve \*\* empurrar o hipopótamo para fora da tela \*\*. Observe que o elefante se move a uma velocidade Y aleatória cada vez que o programa é executado.
+
+        -   Usando os padrões do último nível, escreva um código que faça o elefante empurrar o hipopótamo para fora da tela.
+      CSD U3 collisions displace y_2018: |-
+        # Escreva sua própria interação de Sprite
+
+        No último nível você deve ter escrito código para uma interação de sprite que você desenvolveu com seus colegas. Desta vez, tente escrever o programa sozinho, mas você pode usar os padrões que viu no último nível.
+
+        # Faça isso
+
+        O elefante deve \*\* empurrar o hipopótamo para fora da tela \*\*. Observe que o elefante se move a uma velocidade Y aleatória cada vez que o programa é executado.
+
+        -   Usando os padrões do último nível, escreva um código que faça o elefante empurrar o hipopótamo para fora da tela.
+      CSD U3 collisions displace y_2019: |-
+        # Escreva sua própria interação de Sprite
+
+        No último nível você deve ter escrito código para uma interação de sprite que você desenvolveu com seus colegas. Desta vez, tente escrever o programa sozinho, mas você pode usar os padrões que viu no último nível.
+
+        # Faça isso
+
+        O elefante deve \*\* empurrar o hipopótamo para fora da tela \*\*. Observe que o elefante se move a uma velocidade Y aleatória cada vez que o programa é executado.
+
+        -   Usando os padrões do último nível, escreva um código que faça o elefante empurrar o hipopótamo para fora da tela.
+      CSD U3 collisions egg: |-
+        # Compota de maçã
+
+        Quando a maçã atinge o liquidificador, o liquidificador deve ligar.
+
+        # Faça isso
+
+        Use o bloco `estaTocando` para fazer o liquidificador balançar para frente e para trás quando o sprite da maçã tocar o sprite do liquidificador. O movimento de agitação já está codificado usando o bloco aleatório, então você só precisa verificar quando os dois sprites estão se tocando.
+
+        \_Desafio: Consegue fazer a maçã desaparecer quando toca no liquidificador?
+
+        [//]: # "https://images.code.org/82436176c744caa106cfc4971cd1db6c-image-1470247395711.png"
+
+        [//]: # "https://images.code.org/ea5def7998ed88d016ac7d8223aabb75-image-1470247399852.png"
+
+        [//]: # "https://images.code.org/b3a38abe5aeb799e61b7368ceb210873-image-1470247402163.png"
+
+        [//]: # "https://images.code.org/57c724cf77b338f3c13dc8271a76dd77-image-1470247525113.png"
+
+        [//]: # "https://images.code.org/68b31e0fe8b8b454225d87b0f4a0a5f8-image-1470317549553.png"
+
+        [//]: # "https://images.code.org/00e4ee128c4beb11c0c7a6bba6024494-image-1470317549555.png"
+      CSD U3 collisions egg2: |-
+        # Fazendo sons
+
+        Você também pode usar o código para reproduzir um som do liquidificador.
+
+        # Faça isso
+
+        Use o bloco `tocarSom` da gaveta "Mundo" para reproduzir o som "<https://docs.code.org/sounds/blender.mp3>" quando a maçã tocar no liquidificador. Você precisará colar o endereço do som no bloco, assim: ![](<https://images.code.org/8376df7a92ff8e6ba0a2d6e51c24547e-image-1484091385498.34.57 PM.png>)
+
+        [//]: # "https://images.code.org/82436176c744caa106cfc4971cd1db6c-image-1470247395711.png"
+
+        [//]: # "https://images.code.org/ea5def7998ed88d016ac7d8223aabb75-image-1470247399852.png"
+
+        [//]: # "https://images.code.org/b3a38abe5aeb799e61b7368ceb210873-image-1470247402163.png"
+
+        [//]: # "https://images.code.org/57c724cf77b338f3c13dc8271a76dd77-image-1470247525113.png"
+
+        [//]: # "https://images.code.org/68b31e0fe8b8b454225d87b0f4a0a5f8-image-1470317549553.png"
+
+        [//]: # "https://images.code.org/00e4ee128c4beb11c0c7a6bba6024494-image-1470317549555.png"
+
+        [//]: # "https://images.code.org/8376df7a92ff8e6ba0a2d6e51c24547e-image-1484091385498.34.57 PM.png"
+      CSD U3 collisions egg2_2018: |-
+        # Fazendo sons
+
+        Você também pode usar o código para reproduzir um som do liquidificador.
+
+        # Faça isso
+
+        Use o bloco `tocarSom` da gaveta "Mundo" para reproduzir o som "<https://docs.code.org/sounds/blender.mp3>" quando a maçã tocar no liquidificador. Você precisará colar o endereço do som no bloco, assim: ![](<https://images.code.org/8376df7a92ff8e6ba0a2d6e51c24547e-image-1484091385498.34.57 PM.png>)
+
+        [//]: # "https://images.code.org/82436176c744caa106cfc4971cd1db6c-image-1470247395711.png"
+
+        [//]: # "https://images.code.org/ea5def7998ed88d016ac7d8223aabb75-image-1470247399852.png"
+
+        [//]: # "https://images.code.org/b3a38abe5aeb799e61b7368ceb210873-image-1470247402163.png"
+
+        [//]: # "https://images.code.org/57c724cf77b338f3c13dc8271a76dd77-image-1470247525113.png"
+
+        [//]: # "https://images.code.org/68b31e0fe8b8b454225d87b0f4a0a5f8-image-1470317549553.png"
+
+        [//]: # "https://images.code.org/00e4ee128c4beb11c0c7a6bba6024494-image-1470317549555.png"
+
+        [//]: # "https://images.code.org/8376df7a92ff8e6ba0a2d6e51c24547e-image-1484091385498.34.57 PM.png"
+      CSD U3 collisions egg2_2019: |-
+        # Fazendo sons
+
+        Você também pode usar o código para reproduzir um som do liquidificador.
+
+        # Faça isso
+
+        Use o bloco `tocarSom` da gaveta "Mundo" para reproduzir o som "<https://docs.code.org/sounds/blender.mp3>" quando a maçã tocar no liquidificador. Você precisará colar o endereço do som no bloco, assim: ![](<https://images.code.org/8376df7a92ff8e6ba0a2d6e51c24547e-image-1484091385498.34.57 PM.png>)
+
+        [//]: # "https://images.code.org/82436176c744caa106cfc4971cd1db6c-image-1470247395711.png"
+
+        [//]: # "https://images.code.org/ea5def7998ed88d016ac7d8223aabb75-image-1470247399852.png"
+
+        [//]: # "https://images.code.org/b3a38abe5aeb799e61b7368ceb210873-image-1470247402163.png"
+
+        [//]: # "https://images.code.org/57c724cf77b338f3c13dc8271a76dd77-image-1470247525113.png"
+
+        [//]: # "https://images.code.org/68b31e0fe8b8b454225d87b0f4a0a5f8-image-1470317549553.png"
+
+        [//]: # "https://images.code.org/00e4ee128c4beb11c0c7a6bba6024494-image-1470317549555.png"
+
+        [//]: # "https://images.code.org/8376df7a92ff8e6ba0a2d6e51c24547e-image-1484091385498.34.57 PM.png"
+      CSD U3 collisions egg_2018: |-
+        # Compota de maçã
+
+        Quando a maçã atinge o liquidificador, o liquidificador deve ligar.
+
+        # Faça isso
+
+        Use o bloco `estaTocando` para fazer o liquidificador balançar para frente e para trás quando o sprite da maçã tocar o sprite do liquidificador. O movimento de agitação já está codificado usando o bloco aleatório, então você só precisa verificar quando os dois sprites estão se tocando.
+
+        \_Desafio: Consegue fazer a maçã desaparecer quando toca no liquidificador?
+
+        [//]: # "https://images.code.org/82436176c744caa106cfc4971cd1db6c-image-1470247395711.png"
+
+        [//]: # "https://images.code.org/ea5def7998ed88d016ac7d8223aabb75-image-1470247399852.png"
+
+        [//]: # "https://images.code.org/b3a38abe5aeb799e61b7368ceb210873-image-1470247402163.png"
+
+        [//]: # "https://images.code.org/57c724cf77b338f3c13dc8271a76dd77-image-1470247525113.png"
+
+        [//]: # "https://images.code.org/68b31e0fe8b8b454225d87b0f4a0a5f8-image-1470317549553.png"
+
+        [//]: # "https://images.code.org/00e4ee128c4beb11c0c7a6bba6024494-image-1470317549555.png"
+      CSD U3 collisions egg_2019: |-
+        # Compota de maçã
+
+        Quando a maçã atinge o liquidificador, o liquidificador deve ligar.
+
+        # Faça isso
+
+        Use o bloco `estaTocando` para fazer o liquidificador balançar para frente e para trás quando o sprite da maçã tocar o sprite do liquidificador. O movimento de agitação já está codificado usando o bloco aleatório, então você só precisa verificar quando os dois sprites estão se tocando.
+
+        \_Desafio: Consegue fazer a maçã desaparecer quando toca no liquidificador?
+
+        [//]: # "https://images.code.org/82436176c744caa106cfc4971cd1db6c-image-1470247395711.png"
+
+        [//]: # "https://images.code.org/ea5def7998ed88d016ac7d8223aabb75-image-1470247399852.png"
+
+        [//]: # "https://images.code.org/b3a38abe5aeb799e61b7368ceb210873-image-1470247402163.png"
+
+        [//]: # "https://images.code.org/57c724cf77b338f3c13dc8271a76dd77-image-1470247525113.png"
+
+        [//]: # "https://images.code.org/68b31e0fe8b8b454225d87b0f4a0a5f8-image-1470317549553.png"
+
+        [//]: # "https://images.code.org/00e4ee128c4beb11c0c7a6bba6024494-image-1470317549555.png"
+      CSD U3 collisions horse: |-
+        # Cavalo arco-íris
+
+        Quando o arco-íris toca o cavalo, ele deve se transformar em um unicórnio.
+
+        # Faça isso
+
+        Use os blocos `se`,`estaTocando` e `setarAnimacao` para alterar a imagem do sprite do cavalo quando o arco-íris o tocar. A imagem do unicórnio já está carregada na aba de animações para você.
+
+        [//]: # "https://images.code.org/4d1d0e36e574117140ecc377d406c1de-image-1470256869920.png"
+
+        [//]: # "https://images.code.org/b913bc2ee2231b908892472240a70105-image-1470256869922.png"
+
+        [//]: # "https://images.code.org/558b42903bf40cc26410e651a85de922-image-1470256869923.png"
+
+        [//]: # "https://images.code.org/1d41d2e5b3b55037911b8f73bdc2ff48-image-1470257277875.png"
+      CSD U3 collisions horse_2018: |-
+        # Cavalo arco-íris
+
+        Quando o arco-íris toca o cavalo, ele deve se transformar em um unicórnio.
+
+        # Faça isso
+
+        Use os blocos `se`,`estaTocando` e `setarAnimacao` para alterar a imagem do sprite do cavalo quando o arco-íris o tocar. A imagem do unicórnio já está carregada na aba de animações para você.
+
+        [//]: # "https://images.code.org/4d1d0e36e574117140ecc377d406c1de-image-1470256869920.png"
+
+        [//]: # "https://images.code.org/b913bc2ee2231b908892472240a70105-image-1470256869922.png"
+
+        [//]: # "https://images.code.org/558b42903bf40cc26410e651a85de922-image-1470256869923.png"
+
+        [//]: # "https://images.code.org/1d41d2e5b3b55037911b8f73bdc2ff48-image-1470257277875.png"
+      CSD U3 collisions horse_2019: |-
+        # Cavalo arco-íris
+
+        Quando o arco-íris toca o cavalo, ele deve se transformar em um unicórnio.
+
+        # Faça isso
+
+        Use os blocos `se`,`estaTocando` e `setarAnimacao` para alterar a imagem do sprite do cavalo quando o arco-íris o tocar. A imagem do unicórnio já está carregada na aba de animações para você.
+
+        [//]: # "https://images.code.org/4d1d0e36e574117140ecc377d406c1de-image-1470256869920.png"
+
+        [//]: # "https://images.code.org/b913bc2ee2231b908892472240a70105-image-1470256869922.png"
+
+        [//]: # "https://images.code.org/558b42903bf40cc26410e651a85de922-image-1470256869923.png"
+
+        [//]: # "https://images.code.org/1d41d2e5b3b55037911b8f73bdc2ff48-image-1470257277875.png"
+      CSD U3 collisions predict set velocity code: |-
+        # Interações Sprite
+
+        Até agora você foi capaz de criar interações de sprites simples usando o bloco `sprite.isTouching ()`. Por exemplo, você redefiniu uma moeda para um local diferente na tela quando um personagem a toca. Agora é hora de começar a fazer sprites terem interações mais complexas.
+
+        # Faça isso
+
+        -   Execute o programa e observe a interação entre os dois sprites.
+        -   Discuta com um vizinho: Usando apenas os comandos que você já sabe como você pode criar esse tipo de interação? Existem várias maneiras de fazer isso, mas aqui estão alguns blocos a serem considerados:
+                 \- `sprite.estaTocando()`
+                 \- `sprite.velocidadeX`
+                 \- `sprite.velocidadeY`
+                 \- `sprite.x`
+                 \- `sprite.y`
+
+        Prepare-se para compartilhar suas ideias com seus colegas de classe.
+      CSD U3 collisions predict set velocity code_2018: |-
+        # Interações Sprite
+
+        Até agora você foi capaz de criar interações de sprites simples usando o bloco `sprite.isTouching ()`. Por exemplo, você redefiniu uma moeda para um local diferente na tela quando um personagem a toca. Agora é hora de começar a fazer sprites terem interações mais complexas.
+
+        # Faça isso
+
+        -   Execute o programa e observe a interação entre os dois sprites.
+        -   Discuta com um vizinho: Usando apenas os comandos que você já sabe como você pode criar esse tipo de interação? Existem várias maneiras de fazer isso, mas aqui estão alguns blocos a serem considerados:
+                 \- `sprite.estaTocando()`
+                 \- `sprite.velocidadeX`
+                 \- `sprite.velocidadeY`
+                 \- `sprite.x`
+                 \- `sprite.y`
+
+        Prepare-se para compartilhar suas ideias com seus colegas de classe.
+      CSD U3 collisions predict set velocity code_2019: |-
+        # Interações Sprite
+
+        Até agora você foi capaz de criar interações de sprites simples usando o bloco `sprite.isTouching ()`. Por exemplo, você redefiniu uma moeda para um local diferente na tela quando um personagem a toca. Agora é hora de começar a fazer sprites terem interações mais complexas.
+
+        # Faça isso
+
+        -   Execute o programa e observe a interação entre os dois sprites.
+        -   Discuta com um vizinho: Usando apenas os comandos que você já sabe como você pode criar esse tipo de interação? Existem várias maneiras de fazer isso, mas aqui estão alguns blocos a serem considerados:
+                 \- `sprite.estaTocando()`
+                 \- `sprite.velocidadeX`
+                 \- `sprite.velocidadeY`
+                 \- `sprite.x`
+                 \- `sprite.y`
+
+        Prepare-se para compartilhar suas ideias com seus colegas de classe.
+      CSD U3 collisions sidescroll2: |-
+        # Melhore seu jogo
+
+        Agora que você sabe usar `estaTocando` e`tocarMusica`, você pode fazer algumas coisas divertidas acontecerem quando seus sprites se encontrarem.
+
+        _Nota: O bloco `tocarMusica` agora tem um parâmetro extra chamado "laço" que pode ser definido como verdadeiro ou falso. Se este parâmetro for verdadeiro, o som continuará a tocar em um loop._
+
+        # Faça isso
+
+        -   Adicione pelo menos dois efeitos quando seus sprites colidirem.
+
+        _Desafio: adicione um placar na parte superior da tela._
+      CSD U3 collisions sidescroll2_2018: |-
+        # Melhore seu jogo
+
+        Agora que você sabe usar `estaTocando` e`tocarMusica`, você pode fazer algumas coisas divertidas acontecerem quando seus sprites se encontrarem.
+
+        _Nota: O bloco `tocarMusica` agora tem um parâmetro extra chamado "laço" que pode ser definido como verdadeiro ou falso. Se este parâmetro for verdadeiro, o som continuará a tocar em um loop._
+
+        # Faça isso
+
+        -   Adicione pelo menos dois efeitos quando seus sprites colidirem.
+
+        _Desafio: adicione um placar na parte superior da tela._
+      CSD U3 collisions sidescroll2_2019: |-
+        # Melhore seu jogo
+
+        Agora que você sabe usar `estaTocando` e`tocarMusica`, você pode fazer algumas coisas divertidas acontecerem quando seus sprites se encontrarem.
+
+        _Nota: O bloco `tocarMusica` agora tem um parâmetro extra chamado "laço" que pode ser definido como verdadeiro ou falso. Se este parâmetro for verdadeiro, o som continuará a tocar em um loop._
+
+        # Faça isso
+
+        -   Adicione pelo menos dois efeitos quando seus sprites colidirem.
+
+        _Desafio: adicione um placar na parte superior da tela._
       CSD U3 collisions types_2019: |-
         # Tipos de Colisão
 
@@ -9928,6 +11265,96 @@ pt-BR:
         -   Teste seu código, alterando a pontuação inicial para 100, e depois rodando o programa para ver se o fundo muda.
 
         _Desafio: Se você tiver um terceiro fundo, você pode clicar o sinal de mais na parte inferior do bloco `if`. Um outro espaço irá surgir para a função de seu terceiro fundo de tela, assim como um local para verificar novamente a pontuação._
+      CSD U3 platform items3: |-
+        # Faça seu segundo item
+
+        <img src="https://images.code.org/dfd53f2ea4b4380c126dde8035bcdc45-image-1476212495388.gif" style="float: right">
+
+        Em seguida, você irá copiar e colar o código do primeiro item para criar um segundo item. Lembre-se de que isso é muito mais fácil no \*\* modo de texto \*\*, por isso não deixe de experimentá-lo, se ainda não o fez.
+
+        Você precisará copiar duas partes do seu código: a parte no começo em que você fez o item, e a parte em sua função `loopItem`, onde você retornou o item para o topo da tela.
+
+        # Faça isso
+
+        -   Copie o código que você usou para criar o primeiro item do sprite (`criarSprite`,`definirAnimacao` e `velocidadeY`), e cole-o diretamente abaixo do código original.
+        -   Mude os nomes do sprite nas novas linhas. Por exemplo, se você nomeou o sprite original "estrela", você poderia nomear este "estrela2".
+        -   Dentro da função `loopItens`, copie a instrução if e cole-a diretamente abaixo do código original, dentro da função.
+        -   Altere o nome do sprite nas novas linhas de código.
+        -   Execute o seu código para testá-lo.
+      CSD U3 platform items3_2018: |-
+        # Faça seu segundo item
+
+        <img src="https://images.code.org/dfd53f2ea4b4380c126dde8035bcdc45-image-1476212495388.gif" style="float: right">
+
+        Em seguida, você irá copiar e colar o código do primeiro item para criar um segundo item. Lembre-se de que isso é muito mais fácil no \*\* modo de texto \*\*, por isso não deixe de experimentá-lo, se ainda não o fez.
+
+        Você precisará copiar duas partes do seu código: a parte no começo em que você fez o item, e a parte em sua função `loopItem`, onde você retornou o item para o topo da tela.
+
+        # Faça isso
+
+        -   Copie o código que você usou para criar o primeiro item do sprite (`criarSprite`,`definirAnimacao` e `velocidadeY`), e cole-o diretamente abaixo do código original.
+        -   Mude os nomes do sprite nas novas linhas. Por exemplo, se você nomeou o sprite original "estrela", você poderia nomear este "estrela2".
+        -   Dentro da função `loopItens`, copie a instrução if e cole-a diretamente abaixo do código original, dentro da função.
+        -   Altere o nome do sprite nas novas linhas de código.
+        -   Execute o seu código para testá-lo.
+      CSD U3 platform items3_2019: |-
+        # Faça seu segundo item
+
+        <img src="https://images.code.org/dfd53f2ea4b4380c126dde8035bcdc45-image-1476212495388.gif" style="float: right">
+
+        Em seguida, você irá copiar e colar o código do primeiro item para criar um segundo item. Lembre-se de que isso é muito mais fácil no \*\* modo de texto \*\*, por isso não deixe de experimentá-lo, se ainda não o fez.
+
+        Você precisará copiar duas partes do seu código: a parte no começo em que você fez o item, e a parte em sua função `loopItem`, onde você retornou o item para o topo da tela.
+
+        # Faça isso
+
+        -   Copie o código que você usou para criar o primeiro item do sprite (`criarSprite`,`definirAnimacao` e `velocidadeY`), e cole-o diretamente abaixo do código original.
+        -   Mude os nomes do sprite nas novas linhas. Por exemplo, se você nomeou o sprite original "estrela", você poderia nomear este "estrela2".
+        -   Dentro da função `loopItens`, copie a instrução if e cole-a diretamente abaixo do código original, dentro da função.
+        -   Altere o nome do sprite nas novas linhas de código.
+        -   Execute o seu código para testá-lo.
+      CSD U3 platform player1: |-
+        # Crie seu Jogador
+
+        <img src="https://images.code.org/8358b8d2eef2461e113e0b3093da7403-image-1476212944204.gif" style="float:right">
+
+        Agora você pode criar seu sprite de jogador. Assim como os sprites do item, o sprite do jogador cairá da parte superior da tela. Ao contrário dos itens, o sprite do seu jogador fica mais rápido à medida que cai, assim como os objetos em queda real. Isso é o que permite que ele pule e caia.
+
+        # Faça isso
+
+        -   Use o bloco `criarSprite` para fazer um sprite jogador com o rótulo e posição inicial que você colocou na sua planilha.
+        -   Use `definirAnimacao` para dar a imagem correta.
+        -   Crie uma função `quedaDoJogador` que faz o sprite cair do topo da tela. O código dentro da função deve usar `velocidadeY` em um padrão de contador, assim como quando você fez a queda rock em [Lesson 17 Level 4] [0].
+        -   Chame a função `quedaDoJogador` dentro do loop de desenho.
+        -   Execute o código para testar seu sprite.
+      CSD U3 platform player1_2018: |-
+        # Crie seu Jogador
+
+        <img src="https://images.code.org/8358b8d2eef2461e113e0b3093da7403-image-1476212944204.gif" style="float:right">
+
+        Agora você pode criar seu sprite de jogador. Assim como os sprites do item, o sprite do jogador cairá da parte superior da tela. Ao contrário dos itens, o sprite do seu jogador fica mais rápido à medida que cai, assim como os objetos em queda real. Isso é o que permite que ele pule e caia.
+
+        # Faça isso
+
+        -   Use o bloco `criarSprite` para fazer um sprite jogador com o rótulo e posição inicial que você colocou na sua planilha.
+        -   Use `definirAnimacao` para dar a imagem correta.
+        -   Crie uma função `quedaDoJogador` que faz o sprite cair do topo da tela. O código dentro da função deve usar `velocidadeY` em um padrão de contador, assim como quando você fez a queda rock em [Lesson 17 Level 4] [0].
+        -   Chame a função `quedaDoJogador` dentro do loop de desenho.
+        -   Execute o código para testar seu sprite.
+      CSD U3 platform player1_2019: |-
+        # Crie seu Jogador
+
+        <img src="https://images.code.org/8358b8d2eef2461e113e0b3093da7403-image-1476212944204.gif" style="float:right">
+
+        Agora você pode criar seu sprite de jogador. Assim como os sprites do item, o sprite do jogador cairá da parte superior da tela. Ao contrário dos itens, o sprite do seu jogador fica mais rápido à medida que cai, assim como os objetos em queda real. Isso é o que permite que ele pule e caia.
+
+        # Faça isso
+
+        -   Use o bloco `criarSprite` para fazer um sprite jogador com o rótulo e posição inicial que você colocou na sua planilha.
+        -   Use `definirAnimacao` para dar a imagem correta.
+        -   Crie uma função `quedaDoJogador` que faz o sprite cair do topo da tela. O código dentro da função deve usar `velocidadeY` em um padrão de contador, assim como quando você fez a queda rock em [Lesson 17 Level 4] [0].
+        -   Chame a função `quedaDoJogador` dentro do loop de desenho.
+        -   Execute o código para testar seu sprite.
       CSD U3 platform player2_2019: "# Controles de Usuário\n\nA seguir, você deverá
         adicionar controles de usuário para que você possa movimentar seu jogador.
         Seu jogador precisa se mover à esquerda quando a seta à esquerda for pressionada,
@@ -10493,6 +11920,81 @@ pt-BR:
         -   Quando uma matriz pode ser mais útil do que uma variável?
         -   Por que você sempre deve atribuir uma matriz a uma variável?
         -   Como você pode acessar os elementos em sua matriz?
+      CSD U6 create LED app: |-
+        # Faça seu aplicativo - a tela
+
+        Agora, você e seu parceiro podem criar seu próprio aplicativo usando o LED. Discuta com seu parceiro que tipo de aplicativo você deseja criar.
+
+        # Faça isso
+
+        -   Discuta com seu parceiro quais elementos de tela serão necessários em seu aplicativo. Você quer...
+                 Botões?
+                 Imagens?
+                 \- texto?
+        -   No Modo de Design, adicione os elementos, certificando-se de atribuir a cada um ID significativo.
+      CSD U6 create LED app 2: |-
+        # Faça seu aplicativo - o código
+
+        Em seguida, você precisará adicionar o código que faz seu aplicativo funcionar.
+
+        # Faça isso
+
+        -   Discuta com seu parceiro qual código você precisará no seu aplicativo. Você precisa...
+                 \- Eventos?
+                 \- Variáveis?
+                 \- Setters?
+                 \-   Números aleatórios?
+        -   No modo de código, adicione o código que fará seu aplicativo funcionar.
+      CSD U6 create LED app 2_2018: |-
+        # Faça seu aplicativo - o código
+
+        Em seguida, você precisará adicionar o código que faz seu aplicativo funcionar.
+
+        # Faça isso
+
+        -   Discuta com seu parceiro qual código você precisará no seu aplicativo. Você precisa...
+                 \- Eventos?
+                 \- Variáveis?
+                 \- Setters?
+                 \-   Números aleatórios?
+        -   No modo de código, adicione o código que fará seu aplicativo funcionar.
+      CSD U6 create LED app 2_2019: |-
+        # Faça seu aplicativo - o código
+
+        Em seguida, você precisará adicionar o código que faz seu aplicativo funcionar.
+
+        # Faça isso
+
+        -   Discuta com seu parceiro qual código você precisará no seu aplicativo. Você precisa...
+                 \- Eventos?
+                 \- Variáveis?
+                 \- Setters?
+                 \-   Números aleatórios?
+        -   No modo de código, adicione o código que fará seu aplicativo funcionar.
+      CSD U6 create LED app_2018: |-
+        # Faça seu aplicativo - a tela
+
+        Agora, você e seu parceiro podem criar seu próprio aplicativo usando o LED. Discuta com seu parceiro que tipo de aplicativo você deseja criar.
+
+        # Faça isso
+
+        -   Discuta com seu parceiro quais elementos de tela serão necessários em seu aplicativo. Você quer...
+                 Botões?
+                 Imagens?
+                 \- texto?
+        -   No Modo de Design, adicione os elementos, certificando-se de atribuir a cada um ID significativo.
+      CSD U6 create LED app_2019: |-
+        # Faça seu aplicativo - a tela
+
+        Agora, você e seu parceiro podem criar seu próprio aplicativo usando o LED. Discuta com seu parceiro que tipo de aplicativo você deseja criar.
+
+        # Faça isso
+
+        -   Discuta com seu parceiro quais elementos de tela serão necessários em seu aplicativo. Você quer...
+                 Botões?
+                 Imagens?
+                 \- texto?
+        -   No Modo de Design, adicione os elementos, certificando-se de atribuir a cada um ID significativo.
       CSD U6 for loop led color_2019: |-
         # Acrescente Cor
 
@@ -10668,6 +12170,42 @@ pt-BR:
 
         -   O que fez os computadores serem maquinas diferentes das que vieram antes deles?
         -   Pense em algo que você faz no computador. Que tipo de entrada, saída, armazenamento e processamento estão acontecendo?
+      CSD-Arrays: |-
+        Hoje você aprenderá a usar e criar \*\* funções \*\*.
+
+        Criar uma função permite que você crie seus próprios blocos! Existem duas partes para uma função:
+
+        Fazendo um bloco recém-nomeado que tem todo o código que você quer rodar dentro dele.
+        \-xml de definição de função-
+
+        O único bloco verde que você usa, ou chama, para executar a função que você criou.
+        \-xml de chamada de função-
+
+        Prepare-se para se familiarizar com as funções, aprenda a editá-las e crie as suas próprias!
+      CSD-Arrays_2018: |-
+        Hoje você aprenderá a usar e criar \*\* funções \*\*.
+
+        Criar uma função permite que você crie seus próprios blocos! Existem duas partes para uma função:
+
+        Fazendo um bloco recém-nomeado que tem todo o código que você quer rodar dentro dele.
+        \-xml de definição de função-
+
+        O único bloco verde que você usa, ou chama, para executar a função que você criou.
+        \-xml de chamada de função-
+
+        Prepare-se para se familiarizar com as funções, aprenda a editá-las e crie as suas próprias!
+      CSD-Arrays_2019: |-
+        Hoje você aprenderá a usar e criar \*\* funções \*\*.
+
+        Criar uma função permite que você crie seus próprios blocos! Existem duas partes para uma função:
+
+        Fazendo um bloco recém-nomeado que tem todo o código que você quer rodar dentro dele.
+        \-xml de definição de função-
+
+        O único bloco verde que você usa, ou chama, para executar a função que você criou.
+        \-xml de chamada de função-
+
+        Prepare-se para se familiarizar com as funções, aprenda a editá-las e crie as suas próprias!
       'CSD: Animating Sprite Movement_2019': |-
         ## Perguntas a considerar
 
@@ -11036,6 +12574,105 @@ pt-BR:
         # Funcionalidade ausente nesse protótipo
 
         -   As perguntas não são realmente verificadas quanto à exatidão
+      CSDU6 - LED toggle buttonL up: |-
+        # Outros eventos de teclado com os botões
+
+        Em vez de usar o botão direito, você pode fazer o LED desligar quando o botão esquerdo voltar.
+
+        # Faça isso
+
+        -   Crie um evento 'up' para o botão esquerdo.
+        -   Adicione o código para desligar o LED quando o botão aparecer novamente.
+      CSDU6 - LED toggle buttonL up_2018: |-
+        # Outros eventos de teclado com os botões
+
+        Em vez de usar o botão direito, você pode fazer o LED desligar quando o botão esquerdo voltar.
+
+        # Faça isso
+
+        -   Crie um evento 'up' para o botão esquerdo.
+        -   Adicione o código para desligar o LED quando o botão aparecer novamente.
+      CSDU6 - LED toggle buttonL up_2019: |-
+        # Outros eventos de teclado com os botões
+
+        Em vez de usar o botão direito, você pode fazer o LED desligar quando o botão esquerdo voltar.
+
+        # Faça isso
+
+        -   Crie um evento 'up' para o botão esquerdo.
+        -   Adicione o código para desligar o LED quando o botão aparecer novamente.
+      CSDU6 - button LED prediction: Veja o nível contido para o markdown
+      CSDU6 - button LED prediction_2018: Veja o nível contido para o markdown
+      CSDU6 - button LED prediction_2019: Veja o nível contido para o markdown
+      CSDU6 - toggle state LED prediction: Veja o nível contido para o markdown
+      CSDU6 - toggle state LED prediction_2018: Veja o nível contido para o markdown
+      CSDU6 - toggle state LED prediction_2019: Veja o nível contido para o markdown
+      CSDU6 AppLab Input 1: |-
+        # Entrada no Laboratório de App
+
+        _Você não precisa fazer alterações no código aqui_
+
+        Reserve um minuto para ler o código e executar o programa. Discutir com um parceiro:
+
+        1.  Qual é a fonte de entrada?
+        2.  Onde e como o programa verifica a entrada?
+        3.  O que o programa faz quando obtém a entrada correta?
+        4.  O que o programa está fazendo quando não há entrada?
+      CSDU6 AppLab Input 1_2018: |-
+        # Entrada no Laboratório de App
+
+        _Você não precisa fazer alterações no código aqui_
+
+        Reserve um minuto para ler o código e executar o programa. Discutir com um parceiro:
+
+        1.  Qual é a fonte de entrada?
+        2.  Onde e como o programa verifica a entrada?
+        3.  O que o programa faz quando obtém a entrada correta?
+        4.  O que o programa está fazendo quando não há entrada?
+      CSDU6 AppLab Input 1_2019: |-
+        # Entrada no Laboratório de App
+
+        _Você não precisa fazer alterações no código aqui_
+
+        Reserve um minuto para ler o código e executar o programa. Discutir com um parceiro:
+
+        1.  Qual é a fonte de entrada?
+        2.  Onde e como o programa verifica a entrada?
+        3.  O que o programa faz quando obtém a entrada correta?
+        4.  O que o programa está fazendo quando não há entrada?
+      CSDU6 GameLab Input 1: |-
+        # Entrada no Laboratório de Jogo
+
+        _Você não precisa fazer alterações no código aqui_
+
+        Reserve um minuto para ler o código e executar o programa. Discutir com um parceiro:
+
+        1.  Qual é a fonte de entrada?
+        2.  Onde e como o programa verifica a entrada?
+        3.  O que o programa faz quando obtém a entrada correta?
+        4.  O que o programa está fazendo quando não há entrada?
+      CSDU6 GameLab Input 1_2018: |-
+        # Entrada no Laboratório de Jogo
+
+        _Você não precisa fazer alterações no código aqui_
+
+        Reserve um minuto para ler o código e executar o programa. Discutir com um parceiro:
+
+        1.  Qual é a fonte de entrada?
+        2.  Onde e como o programa verifica a entrada?
+        3.  O que o programa faz quando obtém a entrada correta?
+        4.  O que o programa está fazendo quando não há entrada?
+      CSDU6 GameLab Input 1_2019: |-
+        # Entrada no Laboratório de Jogo
+
+        _Você não precisa fazer alterações no código aqui_
+
+        Reserve um minuto para ler o código e executar o programa. Discutir com um parceiro:
+
+        1.  Qual é a fonte de entrada?
+        2.  Onde e como o programa verifica a entrada?
+        3.  O que o programa faz quando obtém a entrada correta?
+        4.  O que o programa está fazendo quando não há entrada?
       CSDU6 making new arrays_2019: |-
         # Criando Novas Matrizes
 
@@ -11143,10 +12780,23 @@ pt-BR:
         forma desenhada.
       Course 4 Artist For Loops 1: Use um bloco de repetição para desenhar esse triângulo
         que tem 50 pixels de largura.
+      Course 4 Artist For Loops 11: "Você se lembra de quando usamos uma variável
+        para controlar o número de lados de uma forma, em uma fase anterior? Faremos
+        a mesma coisa agora com a variável `contador`. \n\nEsse padrão começa com
+        um triângulo e adiciona um lado de cada vez até que seja desenhado um decágono
+        (10 lados). Cada lado deve ter 100 pixels de comprimento. \n\nComo você irá
+        usar a variável `contador` do laço `for` para recriar este desenho?"
+      Course 4 Artist For Loops 11a: "Vamos juntar tudo! \n\nUsando seu conhecimento
+        sobre laços `for` e a variável `contador`, crie este desenho em que cada forma
+        possui dois lados a mais do que a anterior. Tenha certeza que cada lado seja
+        10 vezes maior do que o número de lados do polígono.\n\nApenas uma pequena
+        parte do código foi fornecida para você."
       Course 4 Artist For Loops 14: "Se você girar um pouco a mais ou a menos do que
         você normalmente faria com uma forma, isto cria um efeito legal. \n\nTente
         usar um pouco do código do último nível, mas girando 89 graus para criar esta
         espiral quadrada retorcida."
+      Course 4 Artist For Loops 15: "**Tempo Livre:** Tente criar alguns desenhos
+        próprios usando `laços for`. Foram criadas algumas variáveis úteis para você."
       Course 4 Artist For Loops 2: |-
         Eu coloquei o código para desenhar um triângulo dentro de um laço `for` que conta de 50 a 100, de 10 em 10.
 
@@ -11163,6 +12813,22 @@ pt-BR:
       Course 4 Artist For Loops 8: "Somente uma pequena alteração de código da última
         imagem é capaz de criar este desenho. Você consegue descobrir qual é esta
         alteração?\n\nDica: Você precisa remover algo!  "
+      Course 4 Artist For Loops Challenge: |-
+        **Desafio:** Você consegue descobrir como usar todas as coisas que você aprendeu para criar esta imagem de polígonos, todos com lados de 40 pixels?
+
+        Lembre-se que para criar uma espiral, você não pode fechar o polígono. Isto significa que cada forma deverá ter um número menor de lados do que o usual.
+      Course 4 Artist For Loops inspire: |-
+        <br/><br/>
+        <img src="https://images.code.org/9b5897e059bb29bd2faf8504659a3cfc-image-1440719685627.49.33.png" width="250px"/>\
+        <br/><br/>
+        **Inspiração para Tempo Livre:** Agora você aprendeu tudo o que precisa para criar um padrão como este! Se esta imagem te inspira, tente criar algo parecido. Caso contrário, crie algo você mesmo.
+      Course 4 Artist Functions Inspiration: "<img src=\"https://images.code.org/cf373e03bede480ae54aec72ce823454-image-1442951867535.54.11.png\"
+        width=\"250px\"/>\n\n**Inspiração para Tempo Livre:** Agora você aprendeu
+        tudo o que precisa saber para criar um padrão como este!\n\nSe esta imagem
+        te inspira, tente criar algo parecido. Caso contrário, crie algo próprio. "
+      Course 4 Artist Functions challenge: "<img src=\"https://images.code.org/69f1c2b415f907c86aaa6ed2534c3682-image-1442870371171.13.38.png\"
+        width=\"250px\"/>\n\n**Nível Desafiador:** Use o que você aprendeu nesta e
+        em outras fases para descobrir como criar o desenho acima.  "
       Course 4 Artist Inspire: "<img src=\"https://images.code.org/b5e28b084cb331ee030ea3853ed921bd-image-1440060815818.51.21.png\"
         width=\"250px\"/>\n\n**Inspiração para Atividade Livre:** Você já aprendeu
         tudo o que precisa saber para criar um padrão como esse! Se esta figura te
@@ -11271,6 +12937,25 @@ pt-BR:
         você tiver terminado a investigação, crie um jogo ou história usando repetições,
         variáveis, e eventos.\n\n_Dica: role a tela para baixo para ver todos os comandos
         no espaço de trabalho._"
+      Course 4 Play Labs For Loops 1: Vamos fazer o cão falar todos os números de
+        1 a 100. Use um laço `for` e o bloco de contagem para que ele fale a variável
+        `contador` a cada vez que o laço for executado.
+      Course 4 Playlab For Loop Freeplay: "**Tempo Livre:** Use tudo o que você aprendeu
+        até agora para criar um jogo que inclua um laço `for`!"
+      Course 4 Playlab For Loops 4b: |-
+        Agora, estes dois personagens irão apostar uma corrida!
+
+        Cada um deles irá dar `contador` passos de cada vez, mas seus contadores irão ter valores diferentes devido aos laços `for`.
+
+        Você pode alterar o **incremento** em um dos laços para que a corrida empate?
+      Course 4 Playlab For Loops 5b: Ajuste o intervalo nestes laços `for` para que
+        os dois personagens terminem exatamente no mesmo lugar.
+      Course 4 Playlab For Loops 6b: "Agora iremos usar os ciclos `for` de uma maneira
+        totalmente diferente!\n\nEste jogo fica difícil rapidamente porque o tempo
+        entre as desaparições diminui rápido!\n\n<hr/>\n\n**Edite este ciclo `for`
+        para criar um jogo que seja divertido para você jogar!**\n\n<hr/>\n\nPressione
+        \"Executar\" e clique na Madame Unicórnio o maior número de vezes que puder.
+        Você consegue superar os 24 pontos que fizemos? "
       Course 4 SCF 1b: "\\*\\* Super Desafio das Funções: \\*\\* Você consegue descobrir
         como coletar todo esse mel com o menor número possível de blocos?"
       Course 4 SCF 2: "\\*\\* Super Desafio das Funções: \\*\\* Use o que você aprendeu
@@ -11827,6 +13512,42 @@ pt-BR:
         para ajudá-lo a explorar este mundo."
       MC_HOC_2017_FP20x20_2019: "**Jogo Livre:** Agora é com você! Use o código do
         Agent para ajudá-lo a explorar este mundo."
+      Making Music: |-
+        Hoje você aprenderá a usar e criar \*\* funções \*\*.
+
+        Criar uma função permite que você crie seus próprios blocos! Existem duas partes para uma função:
+
+        Fazendo um bloco recém-nomeado que tem todo o código que você quer rodar dentro dele.
+        \-xml de definição de função-
+
+        O único bloco verde que você usa, ou chama, para executar a função que você criou.
+        \-xml de chamada de função-
+
+        Prepare-se para se familiarizar com as funções, aprenda a editá-las e crie as suas próprias!
+      Making Music_2018: |-
+        Hoje você aprenderá a usar e criar \*\* funções \*\*.
+
+        Criar uma função permite que você crie seus próprios blocos! Existem duas partes para uma função:
+
+        Fazendo um bloco recém-nomeado que tem todo o código que você quer rodar dentro dele.
+        \-xml de definição de função-
+
+        O único bloco verde que você usa, ou chama, para executar a função que você criou.
+        \-xml de chamada de função-
+
+        Prepare-se para se familiarizar com as funções, aprenda a editá-las e crie as suas próprias!
+      Making Music_2019: |-
+        Hoje você aprenderá a usar e criar \*\* funções \*\*.
+
+        Criar uma função permite que você crie seus próprios blocos! Existem duas partes para uma função:
+
+        Fazendo um bloco recém-nomeado que tem todo o código que você quer rodar dentro dele.
+        \-xml de definição de função-
+
+        O único bloco verde que você usa, ou chama, para executar a função que você criou.
+        \-xml de chamada de função-
+
+        Prepare-se para se familiarizar com as funções, aprenda a editá-las e crie as suas próprias!
       NEW Course 4 Artist Functions 1: |-
         Você consegue desenhar um quadrado com
         100 pixels de comprimento usando um laço?
@@ -11837,6 +13558,8 @@ pt-BR:
         <br/><br/>
 
         _Nota: Veja que mudamos a caneta para ser bem mais fina. Clique em "editar" na função `desenhar um quadrado 20` para ver como!_
+      NEW Course 4 Artist Functions 12: Use a função `desenhe uma fileira de quadrados`
+        do último desafio para desenhar este padrão.
       NEW Course 4 Artist Functions 13: |-
         Você pode desenhar a forma de uma estrela usando a função 'desenhar uma linha de quadrados'?
 
@@ -11846,6 +13569,10 @@ pt-BR:
         Você consegue desenhar 3 quadrados com 20 pixels de distância entre cada um?
 
         Cada quadrado tem 100 pixels de tamanho.
+      NEW Course 4 Artist Functions 3: |-
+        Temos aqui um novo tipo de Bloco. Ele é chamado de `função`. Clique "editar" e preencha-o com o código para desenhar um quadrado com lados de 100 pixels.
+
+        Quando você terminar de editar a função, clique "Fechar" para voltar ao seu programa.
       NEW Course 4 Artist Functions 4: 'Use a função `desenhar um quadrado` para desenhar
         este padrão. '
       NEW Course 4 Artist Functions 7: |-
@@ -11857,12 +13584,48 @@ pt-BR:
       NEW Course 4 Artist Functions 8: 'Nós criamos uma nova função para você chamada:
         ''desenhar um triângulo''. Você pode editar a definição da função para desenhar
         um triângulo com 100 lados de pixels?'
+      NEW Course 4 Artist Functions 9: Você consegue resolver isto adicionando apenas
+        um bloco?
       NEW Course 4 Artist Params 1: Vamos definir uma função para desenhar um quadrado
         com lados de 50 pixels. Clique em "editar" para começar.
+      NEW Course 4 Artist Params 10: "Crie um bloco de função `desenhe um hexágono`
+        com um parâmetro de comprimento. \n\nEste hexágono tem lados com 100 pixels
+        de comprimento."
+      NEW Course 4 Artist Params 11: |-
+        Você consegue descobrir como desenhar esta forma?
+
+        Edite a função para usar o parâmetro `lados`.
+      NEW Course 4 Artist Params 12: |-
+        Você consegue completar este desenho?
+
+        Os lados de todas as formas têm 100 pixels de comprimento.
       NEW Course 4 Artist Params 2: Crie uma função `desenhar um triângulo` desde
         o início, para fazer um triângulo com lados de 50 pixels.
+      NEW Course 4 Artist Params 3: |-
+        Agora vamos usar o triângulo para desenhar uma fileira de 5 triângulos.
+
+        Cada triângulo está separado por 30 pixels do anterior.
       NEW Course 4 Artist Params 4: Você percebeu alguma coisa diferente nesses blocos
         de função? Clique em "Executar" para ver o que acontece.
+      NEW Course 4 Artist Params 5: |-
+        Substituia o `???` no parâmetro `comprimento` do bloco de entrada.
+
+        O pentágono tem lados de 100 pixels.
+      NEW Course 4 Artist Params 6: "Preencha o parâmetro `comprimento` para desenhar
+        estas formas, substituindo o \"???\" pelos valores corretos. \n\nO quadrado
+        e o triângulo têm lados de 100 pixels,\\\nOs lados do hexágono têm comprimento
+        de 75 pixels. "
+      NEW Course 4 Artist Params 7: "Você consegue completar este desenho? \n\nOs
+        lados de cada triângulo são 25 pixels maiores do que o anterior. \\\nO primeiro
+        triângulo tem lados de 25 pixels."
+      NEW Course 4 Artist Params 8: "O código desta função de triângulo não funciona.
+        \n\nVocê consegue editar a função para corrigi-la, e em seguida criar triângulos
+        de comprimentos 25, 50 e 75?"
+      NEW Course 4 Artist Params 9: |-
+        Clique em "editar" para preencher a definição da função de `desenhe um quadrado` e adicione um parâmetro.\
+        Ela deve receber um parâmetro comprimento, como no triângulo.
+
+        **Desta vez, desenhe 3 quadrados:** com comprimentos de 25, 50 e 75 pixels. Os cantos à esquerda devem ficar a 100 pixels de distância do quadrado anterior.
       NEW Course 4 Artist Params inspire: "<img src=\"https://images.code.org/1df195df9d808f0dd539bef0f5c2958b-image-1443049871563.02.54.png\"
         width=\"250px\"/>\n\n**Atividade Livre - Inspiração**: Agora você aprendeu
         tudo o que precisa saber para criar um padrão como esse! \n\nSe essa imagem
@@ -11955,6 +13718,42 @@ pt-BR:
         # Exemplo de mais bits por pixel
 
         Aqui está uma imagem maior em 9 bits por pixel. Com 9 bits por pixel você expressar 512 cores diferentes. Clique para ver a próxima imagem que é ainda mais sofisticada, mas mais fácil de entender.
+      Revisiting the Counter Pattern: |-
+        Hoje você aprenderá a usar e criar \*\* funções \*\*.
+
+        Criar uma função permite que você crie seus próprios blocos! Existem duas partes para uma função:
+
+        Fazendo um bloco recém-nomeado que tem todo o código que você quer rodar dentro dele.
+        \-xml de definição de função-
+
+        O único bloco verde que você usa, ou chama, para executar a função que você criou.
+        \-xml de chamada de função-
+
+        Prepare-se para se familiarizar com as funções, aprenda a editá-las e crie as suas próprias!
+      Revisiting the Counter Pattern_2018: |-
+        Hoje você aprenderá a usar e criar \*\* funções \*\*.
+
+        Criar uma função permite que você crie seus próprios blocos! Existem duas partes para uma função:
+
+        Fazendo um bloco recém-nomeado que tem todo o código que você quer rodar dentro dele.
+        \-xml de definição de função-
+
+        O único bloco verde que você usa, ou chama, para executar a função que você criou.
+        \-xml de chamada de função-
+
+        Prepare-se para se familiarizar com as funções, aprenda a editá-las e crie as suas próprias!
+      Revisiting the Counter Pattern_2019: |-
+        Hoje você aprenderá a usar e criar \*\* funções \*\*.
+
+        Criar uma função permite que você crie seus próprios blocos! Existem duas partes para uma função:
+
+        Fazendo um bloco recém-nomeado que tem todo o código que você quer rodar dentro dele.
+        \-xml de definição de função-
+
+        O único bloco verde que você usa, ou chama, para executar a função que você criou.
+        \-xml de chamada de função-
+
+        Prepare-se para se familiarizar com as funções, aprenda a editá-las e crie as suas próprias!
       Robot Doodle: "**Ideia de projeto:** Crie uma imagem de algo comum no mundo
         real. Isso requer persistência e planejamento!"
       Robot Doodle_2018: "**Ideia de projeto:** Crie uma imagem de algo comum no mundo
@@ -11986,6 +13785,42 @@ pt-BR:
         que ela desenhe um padrão de quadrados, triângulos ou octógonos?
       Standalone_Artist_9: Agora vá em frente e faça a imagem que mais gostar! Você
         tem até uma função vazia para usar para fazer o que quiser!
+      The Accelerometer: |-
+        Hoje você aprenderá a usar e criar \*\* funções \*\*.
+
+        Criar uma função permite que você crie seus próprios blocos! Existem duas partes para uma função:
+
+        Fazendo um bloco recém-nomeado que tem todo o código que você quer rodar dentro dele.
+        \-xml de definição de função-
+
+        O único bloco verde que você usa, ou chama, para executar a função que você criou.
+        \-xml de chamada de função-
+
+        Prepare-se para se familiarizar com as funções, aprenda a editá-las e crie as suas próprias!
+      The Accelerometer_2018: |-
+        Hoje você aprenderá a usar e criar \*\* funções \*\*.
+
+        Criar uma função permite que você crie seus próprios blocos! Existem duas partes para uma função:
+
+        Fazendo um bloco recém-nomeado que tem todo o código que você quer rodar dentro dele.
+        \-xml de definição de função-
+
+        O único bloco verde que você usa, ou chama, para executar a função que você criou.
+        \-xml de chamada de função-
+
+        Prepare-se para se familiarizar com as funções, aprenda a editá-las e crie as suas próprias!
+      The Accelerometer_2019: |-
+        Hoje você aprenderá a usar e criar \*\* funções \*\*.
+
+        Criar uma função permite que você crie seus próprios blocos! Existem duas partes para uma função:
+
+        Fazendo um bloco recém-nomeado que tem todo o código que você quer rodar dentro dele.
+        \-xml de definição de função-
+
+        O único bloco verde que você usa, ou chama, para executar a função que você criou.
+        \-xml de chamada de função-
+
+        Prepare-se para se familiarizar com as funções, aprenda a editá-las e crie as suas próprias!
       U4 Model Program 1: |-
         # Adicionando uma nova tela
 
@@ -12085,6 +13920,42 @@ pt-BR:
 
         -   Para cada botâo, crie um evento que faz a ligação com a tela apropriada quando o botão é pressionado.
         -   Rode sua aplicação e teste o funcionamento de todos os botões.
+      Using Accelerometer Events: |-
+        Hoje você aprenderá a usar e criar \*\* funções \*\*.
+
+        Criar uma função permite que você crie seus próprios blocos! Existem duas partes para uma função:
+
+        Fazendo um bloco recém-nomeado que tem todo o código que você quer rodar dentro dele.
+        \-xml de definição de função-
+
+        O único bloco verde que você usa, ou chama, para executar a função que você criou.
+        \-xml de chamada de função-
+
+        Prepare-se para se familiarizar com as funções, aprenda a editá-las e crie as suas próprias!
+      Using Accelerometer Events_2018: |-
+        Hoje você aprenderá a usar e criar \*\* funções \*\*.
+
+        Criar uma função permite que você crie seus próprios blocos! Existem duas partes para uma função:
+
+        Fazendo um bloco recém-nomeado que tem todo o código que você quer rodar dentro dele.
+        \-xml de definição de função-
+
+        O único bloco verde que você usa, ou chama, para executar a função que você criou.
+        \-xml de chamada de função-
+
+        Prepare-se para se familiarizar com as funções, aprenda a editá-las e crie as suas próprias!
+      Using Accelerometer Events_2019: |-
+        Hoje você aprenderá a usar e criar \*\* funções \*\*.
+
+        Criar uma função permite que você crie seus próprios blocos! Existem duas partes para uma função:
+
+        Fazendo um bloco recém-nomeado que tem todo o código que você quer rodar dentro dele.
+        \-xml de definição de função-
+
+        O único bloco verde que você usa, ou chama, para executar a função que você criou.
+        \-xml de chamada de função-
+
+        Prepare-se para se familiarizar com as funções, aprenda a editá-las e crie as suas próprias!
       'Video: Intro to CSS Part 2_2019': |-
         ## Pergunta para Consideração
 
@@ -12286,6 +14157,10 @@ pt-BR:
         e usá-la para criar este padrão?
       course4_bee_for_challenge1: Use este laço for para coletar todo o néctar. Existem
         algumas ações que você vai `repetir 'contador' vezes`.
+      course4_collector_nested_loops_challenge2: "_\"Vamos caçar tesouros - utilizando
+        laços!\"_ \n\nAjude o colecionador a chegar em pelo menos duas pilhas de tesouro
+        utilizando apenas os blocos da sua caixa de ferramentas. É possível coletar
+        todos os 4."
       course4_harvester_nested_loops_challenge1: _"Eu preciso de ajuda na fazenda!
         Me ajuda a colher esse milho usando apenas blocos na sua caixa de ferramentas."_
       courseA_artist_loops10: |-
@@ -12795,10 +14670,17 @@ pt-BR:
         Nesse desafio, certifique-se de clicar nas dicas. As dicas irão te dar coisas legais para tentar!
 
         ![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19 PM.png>)
+      courseB_Scrat_ramp1_2018: Para levar Scrat até a noz, encaixe o bloco <xml><block
+        type="maze_moveEast"/></xml> embaixo do bloco <xml><block type="when_run"/></xml>
+        e aperte "▶ Executar"!
       courseB_Scrat_ramp1_2019: Para fazer Scrat ir até a avelã, encaixe o bloco <xml><block
         type="maze_moveEast" block-text="move East"/></xml> na parte inferior do bloco
         <xml><block type="when_run" block-text="when run"/></xml>, então pressione
         "▶ Executar"!
+      courseB_Scrat_ramp2_2018: Encaixe os dois blocos <xml><block type="maze_moveEast"
+        block-text="move east"/></xml> na parte inferior do bloco <xml><block type="when_run"
+        block-text="when run"/></xml> para terminar o seu código, e então clique em
+        "▶ Executar".
       courseB_Scrat_ramp2_2019: Encaixe os dois blocos <xml><block type="maze_moveEast"
         block-text="move east"/></xml> na parte inferior do <xml><block type="when_run"
         block-text="when run"/></xml> para concluir o seu código, então clique em
@@ -12884,6 +14766,14 @@ pt-BR:
         -   -   Jogo gratuito: \* \* Esta é a Laurel, a Aventureira! Mova-a e o maior número de tesouros que conseguir.
 
         Arraste os blocos para área de trabalho e tente descobrir como obter o tesouro.  Obtenha pelo menos um ítem para passar este nível.
+      courseB_collector_loops1_2018: "**Atividade Livre:** Mova Laurel e pegue o máximo
+        de tesouros possível. Pegue pelo menos um item sem cometer erros para passar
+        de nível.\n\n* * *\n\nArraste os blocos para a sua área de trabalho e tente
+        descobrir como pegar os tesouros.  "
+      courseB_collector_loops1_2019: "**Atividade Livre:** Mova Laurel e pegue o máximo
+        de tesouros possível. Pegue pelo menos um item sem cometer erros para passar
+        de nível.\n\n* * *\n\nArraste os blocos para a sua área de trabalho e tente
+        descobrir como pegar os tesouros.  "
       courseB_collector_loops2: |-
         Mova Laurel para o tesouro, então use o bloco <xml><block type="collector_collect"/></xml> para coletá-lo.
 
@@ -12925,6 +14815,8 @@ pt-BR:
       courseB_iceage_loops12_2019: Pegue a noz da maneira que você conseguir!
       courseB_iceage_loops1_2019: Ajude Scrat a atravessar o gelo escorregadio e chegar
         na noz!
+      courseB_iceage_loops2: Use ambos os blocos <xml><block type="maze_moveWest"/></xml>
+        e <xml><block type="maze_moveSouth"/></xml> para chegar até a noz!
       courseB_iceage_loops2_2019: Use os dois blocos <xml><block type="maze_moveWest"
         block_text="move west"/></xml> e <xml><block type="maze_moveSouth" block_text="move
         south"/></xml> para chegar na avelã!
@@ -12979,6 +14871,14 @@ pt-BR:
         Hora do Cavaleiro!
 
         Adicione um evento para fazer o cavaleiro se mover em direção ao dragão quando a seta esquerda é pressionada.
+      courseB_playlab_events4_2018: |-
+        Hora do guerreiro! Pegue o dragão para terminar este nível.
+
+        Adicione um evento para que o guerreiro se mova em direção ao dragão quando a seta para a esquerda for pressionada.
+      courseB_playlab_events4_2019: |-
+        Hora do guerreiro! Pegue o dragão para terminar este nível.
+
+        Adicione um evento para que o guerreiro se mova em direção ao dragão quando a seta para a esquerda for pressionada.
       courseB_playlab_events6: |-
         Ajude o seu cavaleiro a pegar todas as bandeiras!
 
@@ -13146,12 +15046,38 @@ pt-BR:
         Utilize um novo bloco para fazer Waddles automaticamente voltar para o começo quando ele encostar no dinossauro e também quando ele marcar um ponto. Isso fará o seu jogo mais desafiados e divertido!
 
         Jogue o jogo e mova Waddles com as setas até você conseguir pontos o suficiente. Waddles precisa ser movido para a posição `centro à esquerda` da tela para completar o desafio.
+      courseC_PlayLab_events_challenge1_2018: |-
+        Utilize um novo bloco para fazer Waddles automaticamente voltar para o começo quando ele encostar no dinossauro e também quando ele marcar um ponto. Isso fará o seu jogo mais desafiador e divertido!
+
+        Jogue  e mova Waddles com as setas até você conseguir 5 pontos ou mais. Waddles precisa ser movido para a posição `centro à esquerda` da tela para completar o desafio.
+      courseC_PlayLab_events_challenge1_2019: |-
+        Utilize um novo bloco para fazer Waddles automaticamente voltar para o começo quando ele encostar no dinossauro e também quando ele marcar um ponto. Isso fará o seu jogo mais desafiador e divertido!
+
+        Jogue  e mova Waddles com as setas até você conseguir 5 pontos ou mais. Waddles precisa ser movido para a posição `centro à esquerda` da tela para completar o desafio.
       courseC_artist_loop1: "Fantástico!  \n\nVamos adicionar um pouco de estilo mudando
         o pincel usando o bloco `definir padrão` antes do início da repetição."
+      courseC_artist_loop1_2018: "_\"Fantástico!\"_ \n\nVamos adicionar um pouco de
+        estilo, mudando o pincel utilizando o bloco <xml><block type=\"draw_line_style_pattern\"
+        block-text=\"set pattern\"> <title name=\"VALUE\">DEFAULT</title></block></xml>
+        antes do laço começar."
       courseC_artist_loop1_2019: "_\"Fantástico!\"_ \n\nVamos adicionar um pouco de
         estilo, mudando o pincel utilizando o bloco <xml><block type=\"draw_line_style_pattern\"
         block-text=\"set pattern\"> <title name=\"VALUE\">DEFAULT</title></block></xml>
         antes do laço começar."
+      courseC_artist_loops1a: "**Atividade livre:** Vamos construir algo maior, passo
+        a passo! Você pode fazer qualquer coisa que quiser, mas nós vamos te mostrar
+        como fazer algo tipo isso!\n\n![expandable](https://images.code.org/5b67ed8d878d6c2a5009eee054427fd5-image-1496711253365.05.35.png)\n\nUtilize
+        o `pule de 200 em 200 abaixo` para levar o artista ao centro da área da atividade,
+        então utilize o bloco `desenhar adesivo` para fazer o pássaro aparecer. \n\n*
+        * *\n\nAperte `Terminar` quando estiver satisfeito com o que você fez."
+      courseC_artist_loops1a_2018: |-
+        **Jogada Livre:** Vamos construir algo maior, um passo de cada vez!
+
+        Use o 'pular para 200 sobre 200 abaixo' para levar o artista até a área central, então use o bloco 'desenhe um adesivo' para fazer o pássaro aparecer.
+
+        * * *
+
+        Aperte "Terminar" quando você estiver satisfeito com o que estiver feito.
       courseC_artist_loops1a_2019: |-
         **Jogo Livre:** Vamos construir algo maior, um passo de cada vez!
 
@@ -13188,9 +15114,26 @@ pt-BR:
         ![expandable](https://images.code.org/8b4352a1abe72419043d278752261b57-image-1553097917337.png)
         ![expandable](https://images.code.org/5211e2fe2852e25a884a790155ba47d5-image-1553097923167.png)
         ![expandable](https://images.code.org/0e3fbe8bbd20526cc735dfd26d2473ee-image-1553097925789.png)
+      courseC_artist_loops3a: "Tão divertido! \n\nAgora, adicione um adesivo de morcego
+        logo após o pássaro para fazer uma imagem como essa abaixo.\n\n* * *\n\n![expandable](https://images.code.org/3aa37f679eabc7a5a337291db614dd98-image-1496711069351.03.49.png)"
+      courseC_artist_loops3a_2018: "Tão divertido! \n\nAgora, adicione um adesivo
+        de morcego logo após o pássaro para fazer uma imagem como essa abaixo.\n\n*
+        * *\n\n![expandable](https://images.code.org/3aa37f679eabc7a5a337291db614dd98-image-1496711069351.03.49.png)"
       courseC_artist_loops3a_2019: "Muita diversão!  \n\nAgora adicione um segundo
         adesivo bem em cima do primeiro para criar uma imagem como as mostradas abaixo.\n\n*
         * *\n\nPressione \"Finalizar\" quando estiver satisfeito com o que você fez.\n\n![expandable](https://images.code.org/3aa37f679eabc7a5a337291db614dd98-image-1496711069351.03.49.png)\n![expandable](https://images.code.org/dd0e0eee69d37493c5ba584164316a9f-image-1553098351969.png)\n![expandable](https://images.code.org/880908899d8e6ceac8a8ce1bd0bf47eb-image-1553098355311.png)"
+      courseC_artist_loops4a: |-
+        Adicione um bloco ao seu código para que o artista pule 75 pixels a frente entre marcando o pássaro e o morcego. Nesse quebra-cabeça, certifique-se que você tem `pule de 200 em 200 abaixo` dentro do seu laço, para você ficar no meio!
+
+        * * *
+
+        ![expandable](https://images.code.org/5b67ed8d878d6c2a5009eee054427fd5-image-1496711253365.05.35.png)
+      courseC_artist_loops4a_2018: |-
+        Edite seu código então pule para frente 75 pixels entre o pássaro e o morcego. Neste quebra-cabeça, tenha certeza que você tem o 'pular para 200 sobre 200 abaixo' dentro do seu laço de repetição, para que você fique no centro
+
+        * * *
+
+        ![expandable](https://images.code.org/5b67ed8d878d6c2a5009eee054427fd5-image-1496711253365.05.35.png)
       courseC_artist_loops4a_2019: |-
         Edite seu código para que você pule para frente entre os desenhos dos dois adesivos. Neste desafio, certifique-se de ter "pular para a posição central" dentro do seu laço de repetição, para que você fique no centro!
 
@@ -13220,6 +15163,14 @@ pt-BR:
         * * *
 
         ![expandable](https://images.code.org/cadb5e244db64a781bc02b55f2e7ccca-image-1496711397989.08.28.png)
+      courseC_artist_loops5b: "O que acontece quando você `vai em frente` e então
+        `volta para trás` 100, 200 ou 400 pixels em algum lugar dentro do laço? \n\n-
+        \  Tente utilizar o bloco `fazer padrão` antes de iniciar o laço para fazer
+        uma obra de arte!\n\n* * *\n\n ![expandable](https://images.code.org/d523de02389fd23db3029327c03b727d-image-1497039953252.24.18.png)"
+      courseC_artist_loops5b_2018: "O que acontece quando você `vai em frente` e então
+        `volta para trás` 100, 200 ou 400 pixels em algum lugar dentro do laço? \n\n-
+        \  Tente utilizar o bloco `fazer padrão` antes de iniciar o laço para fazer
+        uma obra de arte!\n\n* * *\n\n ![expandable](https://images.code.org/d523de02389fd23db3029327c03b727d-image-1497039953252.24.18.png)"
       courseC_artist_loops5b_2019: |-
         O que acontece quando você `avança` e então `volta` 100, 200 ou 400 pixels em algum ponto dentro da repetição?
 
@@ -13295,6 +15246,30 @@ pt-BR:
         ![expandable](https://images.code.org/9f28cb9b434b914846c3846bc6652f66-image-1560982666379.png)
         ![expandable](https://images.code.org/e9128684956504b0172708d63b65f93a-image-1560982686482.png)
         ![expandable](https://images.code.org/8e9cf52ecaf72678c65558f18f3e0d3e-image-1560982695632.png)
+      courseC_artist_loops8a: |-
+        Agora faça algo você mesmo. O que acontece quando você faz dois círculos separados de adesivos diferentes?
+
+        * * *
+
+        Precisa de uma ideia? Tente fazer um desenho como esse.
+
+        ![expandable](https://images.code.org/d8e0ad6294aa5e04e4aab56631a6b50b-image-1496714582863.02.14.png)
+      courseC_artist_loops8a_2018: |-
+        Agora faça algo você mesmo. O que acontece quando você faz dois círculos separados de adesivos diferentes?
+
+        * * *
+
+        Precisa de uma ideia? Tente fazer um desenho como esse.
+
+        ![expandable](https://images.code.org/d8e0ad6294aa5e04e4aab56631a6b50b-image-1496714582863.02.14.png)
+      courseC_artist_loops8a_2019: |-
+        Agora faça algo você mesmo. O que acontece quando você faz dois círculos separados de adesivos diferentes?
+
+        * * *
+
+        Precisa de uma ideia? Tente fazer um desenho como esse.
+
+        ![expandable](https://images.code.org/d8e0ad6294aa5e04e4aab56631a6b50b-image-1496714582863.02.14.png)
       courseC_artist_loopsPre1a: |-
         Agora, coloque este código em um bloco `repetir` e faça a repetição **6** vezes.
 
@@ -13310,6 +15285,11 @@ pt-BR:
       courseC_artist_loopsPrePre1a: |-
         Use o bloco <xml><block type="jump_to_xy" id="callMe"><title name="XPOS">200</title><title name="YPOS">200</title></block></xml> para levar o artista ao centro da área de jogo.\
         Em seguida, desenhe uma linha de 50 pixels de comprimento com o bloco <xml><block type="draw_move_by_constant"><title name="DIR">moveForward</title><title name="VALUE">50</title></block></xml>.
+      courseC_artist_loopsPrePre1a_2018: |-
+        ### O artista está no lugar errado
+
+        Use o bloco <xml><block type="jump_to_xy" id="callMe"><title name="XPOS">200</title><title name="YPOS">200</title></block></xml> para levar o artista ao centro da área.\
+        Em seguida, desenhe uma linha de 50 pixels com o bloco <xml><block type="draw_move_by_constant"><title name="DIR">moveForward</title><title name="VALUE">50</title></block></xml>.
       courseC_artist_loopsPrePre1a_2019: |-
         O artista está no lugar errado!
 
@@ -13388,6 +15368,14 @@ pt-BR:
         \_ "Agora uma plaquinha para Belle!" \_
 
         Desenhe este diamante com 200 pixels de lado.
+      courseC_artist_prog6_2018: |-
+        \_ "Agora uma plaquinha para Belle!" \_
+
+        Desenhe este quadrado com 200 pixels.
+      courseC_artist_prog6_2019: |-
+        \_ "Agora uma plaquinha para Belle!" \_
+
+        Desenhe este quadrado com 200 pixels.
       courseC_artist_prog7: |-
         \*\* Desafio: \*\* Esta plaquinha é especial!
 
@@ -13716,6 +15704,12 @@ pt-BR:
         Scrat até a nós!"
       courseC_maze_debugging3_2019: "Algo não está certo. \n\nRemova blocos para levar
         Scrat até a nós!"
+      courseC_maze_debugging_challenge2: Se Scrat ficar virando constantemente, ele
+        pode ficar tonto! Ajude-o a chegar na nós com apenas quatro comandos `virar`.
+      courseC_maze_debugging_challenge2_2018: Se Scrat ficar virando constantemente,
+        ele pode ficar tonto! Ajude-o a chegar na nós com apenas quatro comandos `virar`.
+      courseC_maze_debugging_challenge2_2019: Se Scrat ficar virando constantemente,
+        ele pode ficar tonto! Ajude-o a chegar na nós com apenas quatro comandos `virar`.
       courseC_maze_programming1: Neste quebra-cabeça, arraste todos os blocos juntos
         e clique em "Executar" para ver o que acontece!
       courseC_maze_programming1_2018: Neste quebra-cabeça, arraste todos os blocos
@@ -13744,6 +15738,24 @@ pt-BR:
 
         Há um bloco extra que fará o pássaro cair.
         Jogue-o fora desencaixando-o dos blocos cinzentos e arrastando-o de volta para a caixa de ferramentas.
+      courseC_maze_programming4: "_\"Faça o caminho e me guie até o porco bobo\"_
+        \n\nEvite as TNTs ou penas irão voar!"
+      courseC_maze_programming4_2018: "_\"Faça o caminho e me guie até o porco bobo\"_
+        \n\nEvite as TNTs ou penas irão voar!"
+      courseC_maze_programming4_2019: "_\"Faça o caminho e me guie até o porco bobo\"_
+        \n\nEvite as TNTs ou penas irão voar!"
+      courseC_maze_programming5: |-
+        _"Siga esse caminho para me levar ao porco!"_
+
+        Evite a TNT.
+      courseC_maze_programming5_2018: |-
+        _"Siga esse caminho para me levar ao porco!"_
+
+        Evite a TNT.
+      courseC_maze_programming5_2019: |-
+        _"Siga esse caminho para me levar ao porco!"_
+
+        Evite a TNT.
       courseC_maze_programming6: |-
         \_ "Mantenha a calma e me ajude a encontrar o porco ruim. Caso contrário, eu posso ficar com raiva!"
 
@@ -14130,6 +16142,42 @@ pt-BR:
         -   O primeiro laço interno deve fazer um octágono.
         -   O segundo laço interno deve fazer um hexágono.
         -   O terceiro laço interno deve fazer um quadrado.
+      courseD_artist_project1: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
+        _“Oi, eu sou a Elsa de Arendelle, me ajude a desenhar esse desenho.”_\n\nDesenhe
+        um desenho, entre 20 e 50 pixels de largura. Pode ser de qualquer formato
+        que quiser. \n\n<hr/>\n\nVocê pode tentar fazer um polígono, como um desses:\\\n![](https://images.code.org/14e58b3901ca7c13319cc64f18ae5d82-image-1495765942356.21.06.png)\n![](https://images.code.org/8f79d689ea4936a3725a37025f8fda40-image-1495765942357.25.49.png)\n![](https://images.code.org/e5d222ae7356af4811aa153640af135e-image-1495765942357.26.09.png)
+        \ \n\nOu até fazer uma forma abstrata, como um desses:\\\n![](https://images.code.org/8471c095219da3044b3830bebeedefb3-image-1496436883704.32.19.png)\n![](https://images.code.org/2fe6ed2db5308f4b34f7632fc6b8a64d-image-1496436883705.40.32.png)\n![](https://images.code.org/abb0947f634bc4b712d47516587a6cb8-image-1496436883705.47.21.png)"
+      courseD_artist_project1_2018: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
+        _“Oi, eu sou a Elsa de Arendelle, me ajude a desenhar esse desenho.”_\n\nDesenhe
+        um desenho, entre 20 e 50 pixels de largura. Pode ser de qualquer formato
+        que quiser. \n\n<hr/>\n\nVocê pode tentar fazer um polígono, como um desses:\\\n![](https://images.code.org/14e58b3901ca7c13319cc64f18ae5d82-image-1495765942356.21.06.png)\n![](https://images.code.org/8f79d689ea4936a3725a37025f8fda40-image-1495765942357.25.49.png)\n![](https://images.code.org/e5d222ae7356af4811aa153640af135e-image-1495765942357.26.09.png)
+        \ \n\nOu até fazer uma forma abstrata, como um desses:\\\n![](https://images.code.org/8471c095219da3044b3830bebeedefb3-image-1496436883704.32.19.png)\n![](https://images.code.org/2fe6ed2db5308f4b34f7632fc6b8a64d-image-1496436883705.40.32.png)\n![](https://images.code.org/abb0947f634bc4b712d47516587a6cb8-image-1496436883705.47.21.png)"
+      courseD_artist_project1_2019: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
+        _“Oi, eu sou a Elsa de Arendelle, me ajude a desenhar esse desenho.”_\n\nDesenhe
+        um desenho, entre 20 e 50 pixels de largura. Pode ser de qualquer formato
+        que quiser. \n\n<hr/>\n\nVocê pode tentar fazer um polígono, como um desses:\\\n![](https://images.code.org/14e58b3901ca7c13319cc64f18ae5d82-image-1495765942356.21.06.png)\n![](https://images.code.org/8f79d689ea4936a3725a37025f8fda40-image-1495765942357.25.49.png)\n![](https://images.code.org/e5d222ae7356af4811aa153640af135e-image-1495765942357.26.09.png)
+        \ \n\nOu até fazer uma forma abstrata, como um desses:\\\n![](https://images.code.org/8471c095219da3044b3830bebeedefb3-image-1496436883704.32.19.png)\n![](https://images.code.org/2fe6ed2db5308f4b34f7632fc6b8a64d-image-1496436883705.40.32.png)\n![](https://images.code.org/abb0947f634bc4b712d47516587a6cb8-image-1496436883705.47.21.png)"
+      courseD_artist_project1a: |-
+        ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)_"Vamos tentar fazer algo novo. Dessa vez patine em zig-zag, "_
+
+        <img src="https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png" width="200px" style="float: left; margin: 0 15px 15px 0;" />
+
+        Desenhe um padrão de degrau que utiliza ângulos entre 75 e 105 graus. -- mas certifique-se que suas viradas para a esquerda e direita utilizem os mesmos ângulos.\
+        (Você entenderá o por que depois.)
+      courseD_artist_project1a_2018: |-
+        ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)_"Vamos tentar fazer algo novo. Dessa vez patine em zig-zag, "_
+
+        <img src="https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png" width="200px" style="float: left; margin: 0 15px 15px 0;" />
+
+        Desenhe um padrão de degrau que utiliza ângulos entre 75 e 105 graus. -- mas certifique-se que suas viradas para a esquerda e direita utilizem os mesmos ângulos.\
+        (Você entenderá o por que depois.)
+      courseD_artist_project1a_2019: |-
+        ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)_"Vamos tentar fazer algo novo. Dessa vez patine em zig-zag, "_
+
+        <img src="https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png" width="200px" style="float: left; margin: 0 15px 15px 0;" />
+
+        Desenhe um padrão de degrau que utiliza ângulos entre 75 e 105 graus. -- mas certifique-se que suas viradas para a esquerda e direita utilizem os mesmos ângulos.\
+        (Você entenderá o por que depois.)
       courseD_artist_project2: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
         _\"Agora, deixe-me desenhar mais uma.\"_\n\nAgora selecione sua forma e desenhe
         duas ou três em sequência aumentando o número de pixels. \n\n-   Se você aumentar
@@ -14151,6 +16199,90 @@ pt-BR:
         **mais** que a largura da sua forma, você terá uma lacuna\n\n<hr/>\n\nSua
         sequência irá parecer algo assim:\n\n![](https://images.code.org/cefc818d8636c7ce185738311870ff1d-image-1495820778762.39.25.png)\n![](https://images.code.org/80dc77914de15685dc696825dff61723-image-1495820778762.39.43.png)\n![](https://images.code.org/00cda078f119b1ddb0af27ae4a44b089-image-1495820778761.39.08.png)\n<br/>
         <br/>\n\nOu, suas formas irão se mover assim:\n\n![](https://images.code.org/0c4066fe7547bc1f4495aacbeecdea6d-image-1496437220447.47.04.png)\n![](https://images.code.org/4069376b784c147a8d443d49e22f783f-image-1496437220446.40.15.png)\n![](https://images.code.org/02704ab3fb3356f76c544bb64c1a7cce-image-1496437220446.32.04.png)"
+      courseD_artist_project2a: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)_\"Agora
+        vamos voltar de onde viemos\"_\n\nVire 180 graus e desenhe o exato padrão
+        de degrau novamente! \n\n-   O restante desse passo será mais fácil se você
+        colocar todo seu código dentro de um laço para fazer com que Elza desenhe,
+        vire 180 graus, desenhe, vire 180 graus novamente.\n\n<hr/>\n\nAqui está um
+        exemplo de escadarias que utilizam ângulos de 76 graus.\n\n![](https://images.code.org/ceea66fad37e79cc45a850911f90440c-image-1496696286635.16.27.png)"
+      courseD_artist_project2a_2018: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)_\"Agora
+        vamos voltar de onde viemos\"_\n\nVire 180 graus e desenhe o exato padrão
+        de degrau novamente! \n\n-   O restante desse passo será mais fácil se você
+        colocar todo seu código dentro de um laço para fazer com que Elza desenhe,
+        vire 180 graus, desenhe, vire 180 graus novamente.\n\n<hr/>\n\nAqui está um
+        exemplo de escadarias que utilizam ângulos de 76 graus.\n\n![](https://images.code.org/ceea66fad37e79cc45a850911f90440c-image-1496696286635.16.27.png)"
+      courseD_artist_project2a_2019: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)_\"Agora
+        vamos voltar de onde viemos\"_\n\nVire 180 graus e desenhe o exato padrão
+        de degrau novamente! \n\n-   O restante desse passo será mais fácil se você
+        colocar todo seu código dentro de um laço para fazer com que Elza desenhe,
+        vire 180 graus, desenhe, vire 180 graus novamente.\n\n<hr/>\n\nAqui está um
+        exemplo de escadarias que utilizam ângulos de 76 graus.\n\n![](https://images.code.org/ceea66fad37e79cc45a850911f90440c-image-1496696286635.16.27.png)"
+      courseD_artist_project3: |-
+        ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _"Vamos transforma-lo em um floco de neve!"_
+
+        Agora, leve Elsa de volta ao centro utilizando o bloco `pule de 200 pra cima e 200 pra baixo` e gire-a para desenhar a linha de formas várias vezes em várias direções.
+
+        Que flocos de neve maravilhosos você consegue fazer!
+
+        * * *
+
+        De uma olhada nesses exemplos com polígonos:\
+        ![](https://images.code.org/b32ebfb3be559bf8a6d017a854e0b97e-image-1495821528995.42.08.png)
+        ![](https://images.code.org/08d7155f6829f82d878dfa57ad5dcaf3-image-1495821528996.42.26.png)
+        ![](https://images.code.org/7d461ee9046871e6993406e558f28176-image-1495821528996.42.58.png)
+
+        Formas abstratas podem fazer um floco de neve mais parecido com um desses:\
+        ![](https://images.code.org/376d7ba20b6bb86e08b1675370e87b92-image-1496695869798.44.00.png)
+        ![](https://images.code.org/4f649cc779920632674afac5acce5c95-image-1496695869798.47.51.png)
+        ![](https://images.code.org/a68f925ffd87241ebc09183acc908b4b-image-1496695869796.31.49.png)
+      courseD_artist_project3_2018: |-
+        ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _"Vamos transforma-lo em um floco de neve!"_
+
+        Agora, leve Elsa de volta ao centro utilizando o bloco `pule de 200 pra cima e 200 pra baixo` e gire-a para desenhar a linha de formas várias vezes em várias direções.
+
+        Que flocos de neve maravilhosos você consegue fazer!
+
+        * * *
+
+        De uma olhada nesses exemplos com polígonos:\
+        ![](https://images.code.org/b32ebfb3be559bf8a6d017a854e0b97e-image-1495821528995.42.08.png)
+        ![](https://images.code.org/08d7155f6829f82d878dfa57ad5dcaf3-image-1495821528996.42.26.png)
+        ![](https://images.code.org/7d461ee9046871e6993406e558f28176-image-1495821528996.42.58.png)
+
+        Formas abstratas podem fazer um floco de neve mais parecido com um desses:\
+        ![](https://images.code.org/376d7ba20b6bb86e08b1675370e87b92-image-1496695869798.44.00.png)
+        ![](https://images.code.org/4f649cc779920632674afac5acce5c95-image-1496695869798.47.51.png)
+        ![](https://images.code.org/a68f925ffd87241ebc09183acc908b4b-image-1496695869796.31.49.png)
+      courseD_artist_project3_2019: |-
+        ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _"Vamos transforma-lo em um floco de neve!"_
+
+        Agora, leve Elsa de volta ao centro utilizando o bloco `pule de 200 pra cima e 200 pra baixo` e gire-a para desenhar a linha de formas várias vezes em várias direções.
+
+        Que flocos de neve maravilhosos você consegue fazer!
+
+        * * *
+
+        De uma olhada nesses exemplos com polígonos:\
+        ![](https://images.code.org/b32ebfb3be559bf8a6d017a854e0b97e-image-1495821528995.42.08.png)
+        ![](https://images.code.org/08d7155f6829f82d878dfa57ad5dcaf3-image-1495821528996.42.26.png)
+        ![](https://images.code.org/7d461ee9046871e6993406e558f28176-image-1495821528996.42.58.png)
+
+        Formas abstratas podem fazer um floco de neve mais parecido com um desses:\
+        ![](https://images.code.org/376d7ba20b6bb86e08b1675370e87b92-image-1496695869798.44.00.png)
+        ![](https://images.code.org/4f649cc779920632674afac5acce5c95-image-1496695869798.47.51.png)
+        ![](https://images.code.org/a68f925ffd87241ebc09183acc908b4b-image-1496695869796.31.49.png)
+      courseD_artist_project4: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)_\"O
+        que acontece de desenharmos flocos de neve um em cima do outro?\"_\n\nTente
+        nivelar duas formas diferentes de flocos de neve um em cima do outro com uma
+        pequena virada entre eles - veja o que consegue fazer! "
+      courseD_artist_project4_2018: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)_\"O
+        que acontece de desenharmos flocos de neve um em cima do outro?\"_\n\nTente
+        nivelar duas formas diferentes de flocos de neve um em cima do outro com uma
+        pequena virada entre eles - veja o que consegue fazer! "
+      courseD_artist_project4_2019: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)_\"O
+        que acontece de desenharmos flocos de neve um em cima do outro?\"_\n\nTente
+        nivelar duas formas diferentes de flocos de neve um em cima do outro com uma
+        pequena virada entre eles - veja o que consegue fazer! "
       courseD_artist_project4a: |-
         \[[0] _"Agora, o que devemos fazer? Vamos explorar e criar nossa terra do nunca invernal!"_
 
@@ -14175,6 +16307,15 @@ pt-BR:
         -   O que acontece se você utilizar dois ângulos diferentes no seu padrão escada?
         -   O que acontece se você fizer um padrão diamante mais longo ou mais curto?
         -   O que acontece se você desenhar dois flocos de neve, um sobre o outro?
+      courseD_artist_project5: '![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)_"Seja
+        criativo com as formas e ângulos para ver que tipo novo de floco de neve podemos
+        desenhar!"_'
+      courseD_artist_project5_2018: '![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)_"Seja
+        criativo com as formas e ângulos para ver que tipo novo de floco de neve podemos
+        desenhar!"_'
+      courseD_artist_project5_2019: '![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)_"Seja
+        criativo com as formas e ângulos para ver que tipo novo de floco de neve podemos
+        desenhar!"_'
       courseD_artist_ramp11: |-
         Ótimo! Agora vamos fazer um quadrado utilizando Artist! Os blocos são um pouco diferentes, mas a ideia é a mesma.
 
@@ -14302,6 +16443,48 @@ pt-BR:
         _"Buzz buzz! U sei como pegar nectar, agora me ajude a fazer mel!"_
 
         Observe como a abelha consegue o nectar. Você consegue utilizar o mesmo padrão para ajudar a abelha a fazer todo o mel?
+      courseD_bee_nestedLoops1: |-
+        _"Isso será incrível!"_
+
+        Ajude a abelha a coletar todo o nectar.
+      courseD_bee_nestedLoops1_2018: |-
+        _"Isso será incrível!"_
+
+        Ajude a abelha a coletar todo o nectar.
+      courseD_bee_nestedLoops1_2019: |-
+        _"Isso será incrível!"_
+
+        Ajude a abelha a coletar todo o nectar.
+      courseD_bee_nestedLoops1a: |-
+        _"Isso será incrível!"_
+
+        Ajude a abelha a coletar todo o nectar.
+      courseD_bee_nestedLoops1a_2018: |-
+        _"Isso será incrível!"_
+
+        Ajude a abelha a coletar todo o nectar.
+      courseD_bee_nestedLoops1a_2019: |-
+        _"Isso será incrível!"_
+
+        Ajude a abelha a coletar todo o nectar.
+      courseD_bee_nestedLoops2: Dessa vez, ajude a abelha a coletar todo o nectar
+        utilizando o menor número possível de blocos.
+      courseD_bee_nestedLoops2_2018: Dessa vez, ajude a abelha a coletar todo o nectar
+        utilizando o menor número possível de blocos.
+      courseD_bee_nestedLoops2_2019: Dessa vez, ajude a abelha a coletar todo o nectar
+        utilizando o menor número possível de blocos.
+      courseD_bee_nestedLoops2_predict1: Dessa vez, ajude a abelha a coletar todo
+        o nectar utilizando o menor número possível de blocos.
+      courseD_bee_nestedLoops2_predict1_2018: Dessa vez, ajude a abelha a coletar
+        todo o nectar utilizando o menor número possível de blocos.
+      courseD_bee_nestedLoops2_predict1_2019: Dessa vez, ajude a abelha a coletar
+        todo o nectar utilizando o menor número possível de blocos.
+      courseD_bee_nestedLoops7: "**Desafio:** Descubra como pegar todo o nectar utilizando
+        apenas os blocos disponíveis."
+      courseD_bee_nestedLoops7_2018: "**Desafio:** Descubra como pegar todo o nectar
+        utilizando apenas os blocos disponíveis."
+      courseD_bee_nestedLoops7_2019: "**Desafio:** Descubra como pegar todo o nectar
+        utilizando apenas os blocos disponíveis."
       courseD_bee_nestedLoops8: "Colete todo o néctar de cada flor\ne produza mel
         na colmeia. \\\r\n\\\r\nUse um laço aninhado. "
       courseD_bee_nestedLoops8_2018: "Colete todo o néctar de cada flor\ne produza
@@ -14314,6 +16497,103 @@ pt-BR:
       courseD_bee_nestedLoops9_predict2: Faça todo o mel.
       courseD_bee_nestedLoops9_predict2_2018: Faça todo o mel.
       courseD_bee_nestedLoops9_predict2_2019: Faça todo o mel.
+      courseD_collector_debugging1: |-
+        _"O não! Eu vejo um problema."_
+
+        Conserte o(s) erro(s) para coletar todo o tesouro.
+      courseD_collector_debugging10_predict1: |-
+        _"É uma ilha do tesouro"_
+
+        Ajude Laura a consertar o código para pegar todo o tesouro.
+      courseD_collector_debugging1a_2018: |-
+        _"O não! Eu vejo um problema."_
+
+        Conserte o(s) erro(s) para coletar todo o tesouro.
+      courseD_collector_debugging1a_2019: |-
+        _"O não! Eu vejo um problema."_
+
+        Conserte o(s) erro(s) para coletar todo o tesouro.
+      courseD_collector_debugging2: |-
+        _"Você consegue fazer isso!"_
+        Conserte o(s) erro(s) para coletar todo o tesouro.
+      courseD_collector_debugging2a_2018: |-
+        _"Você consegue fazer isso!"_
+        Conserte o(s) erro(s) para coletar todo o tesouro.
+      courseD_collector_debugging2a_2019: |-
+        _"Você consegue fazer isso!"_
+        Conserte o(s) erro(s) para coletar todo o tesouro.
+      courseD_collector_debugging3: |-
+        _"Seja persistente e você conseguirá descobrir como resolver isso."_
+        Conserte o(s) erro(s) para coletar todo o tesouro.
+      courseD_collector_debugging3a_2018: |-
+        _"Seja persistente e você conseguirá descobrir como resolver isso."_
+        Conserte o(s) erro(s) para coletar todo o tesouro.
+      courseD_collector_debugging3a_2019: |-
+        _"Seja persistente e você conseguirá descobrir como resolver isso."_
+        Conserte o(s) erro(s) para coletar todo o tesouro.
+      courseD_collector_debugging4: |-
+        _"Não fique chateado. Você consegue fazer isto!"_
+
+        Conserte o(s) erro(s) para coletar todo o tesouro.
+      courseD_collector_debugging4a_2018: |-
+        _"Não fique chateado. Você consegue fazer isto!"_
+
+        Conserte o(s) erro(s) para coletar todo o tesouro.
+      courseD_collector_debugging4a_2019: |-
+        _"Não fique chateado. Você consegue fazer isto!"_
+
+        Conserte o(s) erro(s) para coletar todo o tesouro.
+      courseD_collector_debugging5: |-
+        _"Este quebra-cabeça está de deixando louco!"_
+
+        Todos os comandos que você precisa já estão aí... agora use sua habilidade de investigação para descobrir como resolver este quebra-cabeça.
+      courseD_collector_debugging5a_2018: |-
+        _"Este quebra-cabeça está de deixando louco!"_
+
+        Todos os comandos que você precisa já estão aí... agora use sua habilidade de investigação para descobrir como resolver este quebra-cabeça.
+      courseD_collector_debugging5a_2019: |-
+        _"Este quebra-cabeça está de deixando louco!"_
+
+        Todos os comandos que você precisa já estão aí... agora use sua habilidade de investigação para descobrir como resolver este quebra-cabeça.
+      courseD_collector_debugging6: "**Desafio.** Todos os blocos que você precisa
+        já estão aí... Agora use suas habilidades de investigação para consertar os
+        erros e coletar todo o tesouro."
+      courseD_collector_debugging8: |-
+        _"São tantos tesouros!"_
+
+        Ajude Laura a consertar o código para pegar todo o tesouro.
+      courseD_collector_debugging8a_2018: |-
+        _"São tantos tesouros!"_
+
+        Ajude Laura a consertar o código para pegar todo o tesouro.
+      courseD_collector_debugging8a_2019: |-
+        _"São tantos tesouros!"_
+
+        Ajude Laura a consertar o código para pegar todo o tesouro.
+      courseD_collector_debugging9: |-
+        _"É uma ilha do tesouro"_
+
+        Ajude Laura a consertar o código para pegar todo o tesouro.
+      courseD_collector_debugging9a_2018: |-
+        _"É uma ilha do tesouro"_
+
+        Ajude Laura a consertar o código para pegar todo o tesouro.
+      courseD_collector_debugging9a_2019: |-
+        _"É uma ilha do tesouro"_
+
+        Ajude Laura a consertar o código para pegar todo o tesouro.
+      courseD_collector_nested_loops_challenge2: "_\"Vamos caçar tesouros - utilizando
+        laços!\"_ \n\nAjude o colecionador a chegar em pelo menos duas pilhas de tesouro
+        utilizando apenas os blocos da sua caixa de ferramentas. É possível coletar
+        todos os 4."
+      courseD_collector_nested_loops_challenge2_2018: "_\"Vamos caçar tesouros - utilizando
+        laços!\"_ \n\nAjude o colecionador a chegar em pelo menos duas pilhas de tesouro
+        utilizando apenas os blocos da sua caixa de ferramentas. É possível coletar
+        todos os 4."
+      courseD_collector_nested_loops_challenge2_2019: "_\"Vamos caçar tesouros - utilizando
+        laços!\"_ \n\nAjude o colecionador a chegar em pelo menos duas pilhas de tesouro
+        utilizando apenas os blocos da sua caixa de ferramentas. É possível coletar
+        todos os 4."
       courseD_collector_nested_loops_challenge2a: |-
         _"Vamos caçar tesouros - utilizando laços!"_
 
@@ -14378,6 +16658,18 @@ pt-BR:
       courseD_maze_intro5a_2019: Conte os espaços na grade com cuidado!
       courseD_maze_intro5c_2019: Cuidado com os explosivos! Ajude Red a chegar até
         o porco.
+      courseD_maze_nestedLoops3: |-
+        _"Zumbi com fome!"_
+
+        Leve o zumbi até o girassol utilizando o menor número possível de blocos.
+      courseD_maze_nestedLoops3_2018: |-
+        _"Zumbi com fome!"_
+
+        Leve o zumbi até o girassol utilizando o menor número possível de blocos.
+      courseD_maze_nestedLoops3_2019: |-
+        _"Zumbi com fome!"_
+
+        Leve o zumbi até o girassol utilizando o menor número possível de blocos.
       courseD_maze_nestedLoops4: "Leve-me até o girassol usando o menor número de
         blocos\npossível! \\\r\n\\\r\nUse um laço \"repita\" dentro de outro para
         diminuir\na quantidade de códigos que você precisa."
@@ -14387,6 +16679,18 @@ pt-BR:
       courseD_maze_nestedLoops4_2019: "Leve-me até o girassol usando o menor número
         de blocos\npossível! \\\r\n\\\r\nUse um laço \"repita\" dentro de outro para
         diminuir\na quantidade de códigos que você precisa."
+      courseD_maze_nestedLoops6: |-
+        _"Preciso comer girassol!"_
+
+        Leve o zumbi até o girassol utilizando o menor número possível de blocos.
+      courseD_maze_nestedLoops6_2018: |-
+        _"Preciso comer girassol!"_
+
+        Leve o zumbi até o girassol utilizando o menor número possível de blocos.
+      courseD_maze_nestedLoops6_2019: |-
+        _"Preciso comer girassol!"_
+
+        Leve o zumbi até o girassol utilizando o menor número possível de blocos.
       courseD_maze_ramp1: Para este quebra-cabeça, junte todos os blocos e clique
         em "Executar" para assistir!
       courseD_maze_ramp1_2018: Para este quebra-cabeça, junte todos os blocos e clique
@@ -14416,7 +16720,23 @@ pt-BR:
         Ajude o pássaro a chegar no porco. Há um bloco azul extra de "avance".
 
         Jogue fora o bloco que está sobrando desconectando-o dos outros blocos e arrastando-o de volta para a caixa de ferramentas.
+      courseD_maze_ramp4: "_\"Faça o caminho e me guie até o porco bobo\"_ \n\nEvite
+        as TNTs ou penas irão voar!"
+      courseD_maze_ramp4_2018: "_\"Faça o caminho e me guie até o porco bobo\"_ \n\nEvite
+        as TNTs ou penas irão voar!"
       courseD_maze_ramp4_2019: _"Encontre o caminho que me leva até a noz."_
+      courseD_maze_ramp5: |-
+        _"Siga esse caminho para me levar ao porco!"_
+
+        Evite a TNT.
+      courseD_maze_ramp5_2018: |-
+        _"Siga esse caminho para me levar ao porco!"_
+
+        Evite a TNT.
+      courseD_maze_ramp5_2019: |-
+        _"Siga esse caminho para me levar ao porco!"_
+
+        Evite a TNT.
       courseD_maze_ramp5a: Preste atenção na sequência e veja se consegue descobrir
         como chegar a esse porco!
       courseD_maze_ramp5a_2018: Preste atenção na sequência e veja se consegue descobrir
@@ -14437,7 +16757,7 @@ pt-BR:
       courseD_maze_ramp6: |-
         _"Se mantenha calmo e me ajude a encontrar o porco malvado. Se não eu posso ficar bravo!"_
 
-        Quando você possui vários de um mesmo bloco seguidos, tente utilizar um laço de repetição ao invés disso. Isso fará a mesma coisa só que com menos código!
+        Quando você possui vários bloco iguais seguidos, tente utilizar um laço de repetição no lugar. Isso fará a mesma coisa só que com menos código!
       courseD_maze_ramp7: |-
         _"É hora de ficar bravo!"_
 
@@ -14513,7 +16833,12 @@ pt-BR:
       courseD_scrat_ramp2: Arraste um bloco extra `avançar` para fora da caixa de
         ferramentas e, em seguida, anexe todos os blocos ao `quando executar` para
         concluir seu código.
+      courseD_scrat_ramp3: |-
+        Existe um bloco extra que fará com que Scrat bata.\
+        Jogue esse bloco fora desconectando ele dos outros blocos e arraste-os de volta para a caixa de ferramentas.
       courseD_scrat_ramp4: Evite a(s) TNT(s) ou penas irão voar!
+      courseD_scrat_ramp5: Evite o gelo rachado!
+      courseD_scrat_ramp6: Ajude Scrat a chegar na nós utilizando uma repetição!
       courseD_scrat_ramp7: Ajude Scrat a chegar até a noz!
       courseD_scrat_ramp8: "**Desafio:** Utilize o que você aprendeu para levar Scrat
         até a nós!"
@@ -14694,6 +17019,22 @@ pt-BR:
         uma função que nós definimos. '
       courseE_artist_functions_predict1_2019: 'Aqui está um quebra-cabeça que usa
         uma função que nós definimos. '
+      courseE_artist_ramp8: |-
+        Ótimo! Agora vamos usar o laço de repetição `repita` para fazer um quadrado usando o Artista! Os blocos para artista são um pouco diferentes dos outros desafios, mas a ideia é a mesma.
+
+        * * *
+
+        ##### Cada lado do quadrado tem comprimento de 200 pixels, e você precisará virar 90 graus para fazer cada ângulo.
+      courseE_artist_ramp8_2: |-
+        Ótimo! Agora vamos usar o laço de repetição `repita` para fazer um quadrado usando o Artista! Os blocos para artista são um pouco diferentes dos outros desafios, mas a ideia é a mesma.
+
+        * * *
+
+        ##### Cada lado do quadrado tem comprimento de 200 pixels, e você precisará virar 90 graus para fazer cada ângulo.
+      courseE_artist_ramp9: Cada lado tem 100 pixels. Você precisa girar 120 graus
+        em cada canto.
+      courseE_artist_ramp9_2: Cada lado tem 100 pixels. Você precisa girar 120 graus
+        em cada canto.
       courseE_bee_concept1: "_\"Você consegue acreditar nessa quantidade de flores?\"_\n\nColete
         todo o nectar de cada flor. "
       courseE_bee_concept1_2018: "_\"Você consegue acreditar nessa quantidade de flores?\"_\n\nColete
@@ -15008,8 +17349,114 @@ pt-BR:
         \n\nEle deve ter exatamente 50 pixels de comprimento em cada lado."
       grade5_artist_variables_triangles1_2019: "Vamos desenhar um triângulo equilátero.
         \n\nEle deve ter exatamente 50 pixels de comprimento em cada lado."
+      iceage_click_hello: "Você consegue ajudar Sid a chamar seus amigos quando você
+        clicar nele? \nQuando acabar, aperte \"Rodar\" para continuar. Clique no Sid
+        para ver seu código funcionar!"
+      iceage_free_play: |-
+        Hora de criar sua própria história ou jogo!
+
+        Quando finalizar, clique em "Finalizar" para permitir que seus amigos testem seu jogo em seus respectivos, telefones, tablets ou computadores!
+        Não sabe o que fazer? Clique em dicas para detalhes.
+      iceage_hello1: |-
+        Sid (ator 1) quer juntar todo mundo para uma nova aventura. Você consegue ajuda-lo a dizer "Olá!" buscando bloco `falar` e ligando ele abaixo do evento `quando rodar`?
+
+        Não se esqueça de digitar "Olá!" dentro!
+      iceage_hello2: Manny (ator 2) achou Sid (ator 1) e quer convida-lo para uma
+        aventura. Ajude-os a se cumprimentar utilizando duas vezes o bloco `ator ___
+        diz`.
+      iceage_move_events: "Scrat está procurando por noses! \nAjude-o a correr por
+        aí ligando um bloco `morrer ator 1` a cada evento alterando a direção para
+        funcionar para cada seta do teclado. \nQuando acabar, clique \"Rodar\" e tente
+        coletar todas as noses."
+      iceage_move_to_actor: Diego (ator 1) está procurando pelo Manny (ator 2). Você
+        consegue levar um ao outro? Ligue um bloco ao evento `quando ator tocar` para
+        tocar um som quando eles se encontrarem.
+      iceage_move_to_flag: Scrat está procurando pela nós dele! Você consegue ajuda-lo
+        a andar os últimos 200 pixels?
+      iceage_repeat: O bloco `repetir para sempre` te permite rodar um código sem
+        parar. Você consegue colocar blocos dentro dele para ajudar Granny a se exercitar
+        andando para esquerda e para direita repetidamente?
+      iceage_sound_and_points: "Aqui está seu código do último quebra-cabeça, assim
+        como o código para mover Granny para esquerda e para direita. \nVocê consegue
+        finalizar o programa para que você **toque um som** e **marque um ponto**
+        quando Sid e Granny se encontrarem? \nAperte \"Rodar\" para jogar o jogo."
+      iceage_throw_hearts: "Sid quer mostrar a sua avó, Granny, que ele a ama. \n\nUtilize
+        o comando `ator __ joga` para fazer com que Sid (ator 1) jogue um coração
+        para Granny (ator 2)!\nAltere o humor de Granny para feliz quando ela for
+        atingida pelos corações."
+      iceage_warn_ice_age: "Todo mundo precisa andar rápido pois uma nevasca está
+        chegando! \nAltere o cenário para um fundo de gelo e altere a velocidade se
+        Sid (ator 1) para mais rápido.\nAperte \"Rodar\" e mova Sid até Diego para
+        alerta-lo."
+      ramp_artist_loops1: "Que dia adorável! \n\nAjude o Artista a cobrir suas flores
+        antes do inverno, andando 60 pixels para frente."
+      ramp_artist_loops1_2018: "Que dia adorável! \n\nAjude o Artista a cobrir suas
+        flores antes do inverno, andando 60 pixels para frente."
+      ramp_artist_loops1_2019: "Que dia adorável! \n\nAjude o Artista a cobrir suas
+        flores antes do inverno, andando 60 pixels para frente."
+      ramp_artist_loops2: Adicione algo bonito repetindo esse passo cinco vezes, alterando
+        entre cores diferentes entre cada passo.
+      ramp_artist_loops2_2018: Adicione algo bonito repetindo esse passo cinco vezes,
+        alterando entre cores diferentes entre cada passo.
+      ramp_artist_loops2_2019: Adicione algo bonito repetindo esse passo cinco vezes,
+        alterando entre cores diferentes entre cada passo.
+      ramp_artist_loops3: Desenhe a linha colorida mais 5 vezes, dessa vez utilizando
+        um laço `repetir`.
+      ramp_artist_loops3_2018: Desenhe a linha colorida mais 5 vezes, dessa vez utilizando
+        um laço `repetir`.
+      ramp_artist_loops3_2019: Desenhe a linha colorida mais 5 vezes, dessa vez utilizando
+        um laço `repetir`.
+      ramp_artist_loops4: O que acontece quando você adiciona uma virada de 72 graus
+        a direita depois de tudo dentro do seu laço?
+      ramp_artist_loops4_2018: O que acontece quando você adiciona uma virada de 72
+        graus a direita depois de tudo dentro do seu laço?
       ramp_artist_loops4_2019: Você pode criar essa estrela repetindo a sequencia
         de blocos `avance` e `vire à direita em 144 graus`.
+      ramp_artist_loops5: |-
+        Laços realmente tornam mais fácil escrever código!
+
+        Utilize laços para desenhar essa escada.
+
+        -   Cada degrau possui 50 pixels de largura e 50 pixels de comprimento
+        -   Você precisará virar 90 graus pra cada direção
+      ramp_artist_loops5_2018: |-
+        Laços realmente tornam mais fácil escrever código!
+
+        Utilize laços para desenhar essa escada.
+
+        -   Cada degrau possui 50 pixels de largura e 50 pixels de comprimento
+        -   Você precisará virar 90 graus pra cada direção
+      ramp_artist_loops5_2019: |-
+        Laços realmente tornam mais fácil escrever código!
+
+        Utilize laços para desenhar essa escada.
+
+        -   Cada degrau possui 50 pixels de largura e 50 pixels de comprimento
+        -   Você precisará virar 90 graus pra cada direção
+      ramp_artist_loops6: |-
+        Essa escadaria é muito maior, mas utiliza a mesma quantidade de código que o último quebra-cabeça!
+
+        Ajuste o laço para completar o quebra-cabeça.
+      ramp_artist_loops6_2018: |-
+        Essa escadaria é muito maior, mas utiliza a mesma quantidade de código que o último quebra-cabeça!
+
+        Ajuste o laço para completar o quebra-cabeça.
+      ramp_artist_loops6_2019: |-
+        Essa escadaria é muito maior, mas utiliza a mesma quantidade de código que o último quebra-cabeça!
+
+        Ajuste o laço para completar o quebra-cabeça.
+      ramp_artist_loops7: Procure por um padrão e deixe esse código menor utilizando
+        laços!
+      ramp_artist_loops7_2018: Procure por um padrão e deixe esse código menor utilizando
+        laços!
+      ramp_artist_loops7_2019: Procure por um padrão e deixe esse código menor utilizando
+        laços!
+      ramp_artist_loops8: "**Desafio:** Procure por um padrão e deixe esse código
+        menos utilizando laços."
+      ramp_artist_loops8_2018: "**Desafio:** Procure por um padrão e deixe esse código
+        menos utilizando laços."
+      ramp_artist_loops8_2019: "**Desafio:** Procure por um padrão e deixe esse código
+        menos utilizando laços."
       ramp_artist_loops9: Resolva este enigma desenhando um quadrado com lados de
         200 pixels.
       ramp_artist_loops9_2018: Resolva este enigma desenhando um quadrado com lados

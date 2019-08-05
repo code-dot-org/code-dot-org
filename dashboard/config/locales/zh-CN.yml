@@ -2,7 +2,7 @@
 zh-CN:
   errors:
     messages:
-      not_saved: '请更正以下错误:'
+      not_saved: 请更正以下错误：
       too_young: 此内容有年龄限制，不适合低龄的学生。
       teacher_must_accept_terms: 此内容有年龄限制，对于低年级的学生不可用。询问你的老师是否能接受更新的服务条款来让你访问此内容。你的老师能通过登录到代码工作室并单击代码工作室主页顶部的"查看更新的条款"按钮来接受条款。
       pair_programmer: 你正在与另一个不能访问此内容的学生结伴编程。要访问此内容，请停止结伴编程后再尝试。
@@ -16,10 +16,10 @@ zh-CN:
     attributes:
       user:
         name: 显示名称
-        name_example: 显示的名字<br/>（例如酷码、晓明）
+        name_example: 显示的名字<br/>（如炫酷码农或小明）
         email: 电子邮件
         parent_email: 父母/监护人电子邮箱
-        personal_email: 个人电子邮箱地址 <a href="%{url}">(如果没有电子邮箱请点击这里)</a>
+        personal_email: 个人电子邮箱地址 <a href="%{url}">（如果没有电子邮箱请点击这里）</a>
         username: 用户名
         password: '密码:'
         password_confirmation: 密码确认：
@@ -30,8 +30,8 @@ zh-CN:
         edit_header: 编辑用户信息
         finish_sign_up_header: 完成创建帐户
         finish_sign_up_subheader: 填写以下信息为 <strong>%{email}</strong> 创建 Code.org 帐户。
-        finish_sign_up_subheader_provider: 填写信息，来使用<strong>%{provider}</strong> 的
-          <strong>%{email}</strong> 创建Code.org 账户。
+        finish_sign_up_subheader_provider: 填写信息，来使用 <strong>%{provider}</strong> 的
+          <strong>%{email}</strong> 创建 Code.org 账户。
         error:
           future: 不能选择将来的时间
   hello: 世界你好
@@ -49,8 +49,8 @@ zh-CN:
   heading_x_of_y: "%{heading} (第%{x} 页 共%{y} 页)"
   add_teacher_form:
     code:
-      label: '添加一个老师:'
-      placeholder: 小组代码(ABCDEF)
+      label: 添加一个老师：
+      placeholder: 小组代码（ABCDEF）
       instructions: 请输入与你的老师共享的代码。这是一个像“ABCDEF”的6位字母代码。
       instructions_short: 输入你的6位小组代码
     submit: 添加老师
@@ -74,12 +74,12 @@ zh-CN:
   try_k8intro: 尝试我们的K-8计算机科学入门课程（15-25小时）
   k8intro: K-8计算机科学入门课程（15-25小时）
   already_started: '已经开始了吗？从这里继续 >> '
-  demos: 管理员： 所有演示
+  demos: 管理员：所有演示
   continue: 继续
   prize: 奖品
   more_info: 更多信息
   auth:
-    continue_with: 用%{provider} 继续
+    continue_with: 用%{provider}继续
     sign_in_with: 用%{provider}登录
     signed_in: 登录成功！
     signed_out: 您已注销 <a href="%{url}"> Code.org</a>。
@@ -87,7 +87,7 @@ zh-CN:
     already_signedup: 已经注册了吗？
     notyet_signedup: 还未注册吗？
     google_oauth2: 谷歌
-    twitter: 推特
+    twitter: Twitter
     facebook: Facebook
     windowslive: 微软
     microsoft_v2_auth: 微软
@@ -99,7 +99,7 @@ zh-CN:
     need_confirmation: 没有收到确认的说明吗？
     need_unlock: 未收到解锁指令吗？
     not_linked: 对不起，你的编程一小时账户没有连接到 %{provider}。需要通过输入密码来登录。
-    use_clever: 对不起，你的 Code.org 帐号无法连接到%{provider}。请尝试通过Clever登录。
+    use_clever: 对不起，你的 Code.org 帐号无法连接到%{provider}。请尝试通过 Clever 登录。
     unable_to_connect_provider: 无法将您的 Code.org 帐户连接到 %{provider}。请重试。
     already_in_use: 你的 %{provider} 已连接到另一个 Code.org 帐户。
     already_linked: 你的 %{provider} 已连接到了 Code.org 帐户。
@@ -116,11 +116,11 @@ zh-CN:
       href="%{studio_url}"> 你还可以继续浏览各个阶段和谜题</a> 而无需创建一个帐户。
     teacher_educator_guide: 请参阅教师指南
     title: 注册 Code.org
-    school_name: 学校名称 （可选）
-    school_address: 学校地址 （可选）
-    address_placeholder: 地址、 省市、 邮编
-    gender: 性别 （可选）
-    birthday: 生日 （可选）
+    school_name: 学校名称（可选）
+    school_address: 学校地址（可选）
+    address_placeholder: 地址、省市、邮编
+    gender: 性别（可选）
+    birthday: 生日（可选）
     age: 年龄
     user_type: 你是学生还是老师？
     submit: 注册
@@ -137,7 +137,8 @@ zh-CN:
     student_consent: 我确认我的父母或法定监护人同意我使用 Code.org 的服务。
     agree_us_website: 我同意使用美国的网站。
     my_data_to_us: 我使用本网站产生的数据可能会被传输至美国并在美国存储或处理。
-    student_terms: 电子邮箱不会用来与学生进行联系。除了密码恢复的邮件，学生永远不会收到从Code.org寄来的任何邮件。更多信息请查看<a href='http://code.org/privacy'>隐私政策</a>。
+    student_terms: 电子邮箱不会用来与学生进行联系。除了密码恢复的邮件，学生永远不会收到从 Code.org 寄来的任何邮件。更多信息请查看<a
+      href='http://code.org/privacy'>隐私政策</a>。
     teacher_terms: 我同意 Code.org 的服务条款。有关隐私的详细信息，请参阅我们的 <a href='http://code.org/privacy'>
       隐私政策</a>。
     additional_information: 我们需要一些额外的信息来继续为你注册.
@@ -149,7 +150,7 @@ zh-CN:
     accept_terms: 必须同意创建一个帐户。
     error: 发生错误。
     email_preference_question: 我们可以通过电子邮件向您发送有关课程、本地的机会以及其他计算机科学新闻吗？（大约每月一次）
-    email_preference_privacy: "(请参阅我们的隐私政策)"
+    email_preference_privacy: "（请参阅我们的隐私政策）"
     email_preference_yes: 对
     email_preference_no: 不
     email_preference_required: 你必须指定一个电子邮件地址。
@@ -211,15 +212,18 @@ zh-CN:
   welcome_email:
     subject: 加入我 (在code.org上) 的班级
     body: |
-      请单击下面的链接来报名参加计算机科学教程（我将成为你的"老师"）：
+      请点击下面的链接来报名参加计算机科学教程（我将成为你的"老师"）：
+
       %{link}
+
       本教程轻松有趣吸引眼球，它将教导您如何使用一个简单的、 指导性的、 类似游戏经验的计算机科学的基本概念。快来学习从比尔 · 盖茨、 马克 · 扎克伯格到愤怒的小鸟、 植物大战僵尸的代码吧 ！:-)
+
       %{name}
   parent_mailer:
-    student_associated_subject: Code.org的登录信息
+    student_associated_subject: Code.org 的登录信息
   teacher_mailer:
     new_teacher_subject: 欢迎来到 Code.org ！
-    delete_teacher_subject: 'Code.org 通知: 你的帐户已被删除'
+    delete_teacher_subject: Code.org 通知：你的帐户已被删除
   section:
     your_section:
       one: 你的小组：
@@ -247,10 +251,10 @@ zh-CN:
       section_not_found: 找不到代码 '%{section_code}' 节.
       blank_code: 请输入一节代码
       cant_join_own_section: 对不起，你不能加入你自己的部分.
-      provider_managed_section: 这个小组是通过其它网站进行管理的，而且不能加入。请询问你的老师通过%{provider} 将你加入，并重新同步该小组。
+      provider_managed_section: 这个小组是通过其它网站进行管理的，而且不能加入。请询问你的老师通过 %{provider} 将你加入，并重新同步该小组。
     mail:
       student_disassociated:
-        subject: 'Code.org 提醒: %{student_name} 已不再是您的学生。'
+        subject: Code.org 提醒：%{student_name} 已不再是您的学生。
   reports:
     error:
       access_denied: 您没有权限访问此人的信息。
@@ -298,7 +302,7 @@ zh-CN:
       educate_high: 高中
       educate_hoc: 编程一小时
       educate_partner: 与我们合作
-      educate_beyond: 超越Code.org的内容
+      educate_beyond: Code.org 意外的内容
       educate_inspire: 鼓舞学生
       educate_community: 在线社区
       educate_tools: 工具和视频
@@ -336,7 +340,7 @@ zh-CN:
       algebra_game: 代数
       applab: 应用实验室
       artist: 小艺术家
-      artist_k1: 艺术家 (学龄前学生)
+      artist_k1: 小艺术家（学龄前学生）
       basketball: 篮球
       bounce: 跳
       calc: 计算
@@ -345,18 +349,18 @@ zh-CN:
       flappy: Flappy Bird
       frozen: 冰雪奇缘
       gamelab: 游戏实验室
-      gamelab_jr: 游戏实验室 （测试版）
+      gamelab_jr: 游戏实验室（测试版）
       gumball: 阿甘妙世界
       iceage: 冰河世纪
       infinity: 无限
       makerlab: Maker 工具包
       minecraft_adventurer: "《我的世界》大冒险"
-      minecraft_aquatic: 水上我的世界
-      minecraft_codebuilder: '我的世界: 连接代码'
+      minecraft_aquatic: "《我的世界》水域世界"
+      minecraft_codebuilder: 我的世界：连接代码
       minecraft_designer: 我的世界
-      minecraft_hero: "《我的世界》 英雄"
+      minecraft_hero: "《我的世界》英雄"
       playlab: 游戏实验室
-      playlab_k1: 剧本实验室 (学龄前的学生)
+      playlab_k1: 剧本实验室（学龄前）
       scratch: Scratch
       sports: 运动
       spritelab: 精灵实验室
@@ -368,7 +372,7 @@ zh-CN:
     popup:
       progress_for_user: "%{name}的进度"
       progress: 您的进度
-      lines: 代码总行数： %{lines}
+      lines: 代码总行数：%{lines}
       close: 关闭
       mastery: 概念
       puzzle_map: 阶段
@@ -388,7 +392,7 @@ zh-CN:
     students:
       dashboard: 去教师管理面板
     user_not_found: 不能找到老师
-    student_teacher_disassociated: 你已经从%{section_code} 中移除了老师：%{teacher_name}。
+    student_teacher_disassociated: 你已经从 %{section_code} 中移除了老师：%{teacher_name}。
     panel:
       answer_viewer: 导师面板
       student: 学生
@@ -408,12 +412,12 @@ zh-CN:
     email_confirm_needed_required: 你的电子邮件地址%{email} 尚未被确认：
     email_confirm_wrong_email: "（错误的电子邮件地址？）"
     email_resend_confirm: 重新发送确认指令
-    new_email_hint: "(确保此地址可以接收电子邮件)"
+    new_email_hint: "（确保此地址可以接收电子邮件）"
     new_password_hint: "（如果你不想改变它，就留空白）"
     current_password_hint: "（我们需要您的当前密码以确认您的更改）"
     delete: 删除帐号
     delete_text: 删除账号会擦除连接到这个账号的所有信息和进度。
-    delete_text_teacher_managed_note: 因为这个账号是由你的老师管理的，所以你没有权限删除此账号。你的老师(们) 需要先将你移出他们的管理区，才能自己的删除账号。
+    delete_text_teacher_managed_note: 因为这个账号是由你的老师管理的，所以你没有权限删除此账号。你的老师（们）需要先将你移出他们的管理区，才能自己的删除账号。
     delete_text_teacher_note: 请注意：删除你的帐号并不会同时删除你学生的帐号。
     delete_confirm: 你确定删除这个帐号吗？
     deleted_user: 已删除的用户
@@ -421,18 +425,18 @@ zh-CN:
     no_password_because_sponsored: 告诉你的老师来管理你的密码。
     create_personal_login: 创建个人的密码登录
     create_personal_login_under_13_info: 如果您想在学年结束后依然保留您的账号，请您的父母/监护人帮您在下面创建您自己的账号。
-    create_personal_login_under_13_username: 用户名(请不要使用您的真名！)
+    create_personal_login_under_13_username: 用户名（请不要使用您的真名！）
     create_personal_login_under_13_parent_email: 父母/监护人电子邮箱地址
-    create_personal_login_info: 如果想将你的Code.org账户在学年完成后也还保留，你需要在下面创建自己的账户。
+    create_personal_login_info: 如果想将你的 Code.org 账户在学年完成后也还保留，你需要在下面创建自己的账户。
     create_personal_login_link_account: 也可以在"管理连接的账号"部分下连接到个人账户。
-    create_personal_login_terms: 通过创建个人账户，我同意接受Code.org的<a href='%{terms_of_service_url}',
-      target='_blank'>服务条款</a>。我确认我的父母或法定监护人已经允许我在没有老师的情况下使用Code.org的服务。
-    create_personal_login_email_note: 注意：电子邮箱不会用来与学生进行联系。除了密码恢复的邮件，学生永远不会收到从Code.org寄来的任何邮件。更多信息请查看<a
-      href='%{privacy_policy_url}', target='_blank'>隐私政策</a>。
+    create_personal_login_terms: 通过创建个人账户，我同意接受 Code.org 的<a href='%{terms_of_service_url}',
+      target='_blank'>服务条款</a>。我确认我的父母或法定监护人已经允许我在没有老师的情况下使用 Code.org 的服务。
+    create_personal_login_email_note: 注意：电子邮箱不会用来与学生进行联系。除了密码恢复的邮件，学生永远不会收到从 Code.org
+      寄来的任何邮件。更多信息请查看<a href='%{privacy_policy_url}', target='_blank'>隐私政策</a>。
     enter_new_login_info: 输入新的登录信息
     confirm_secret_words: 输入你当前的秘密单词来确认你的身份
     parent_email_label: 家长/监护人电子邮件 (可选)
-    parent_email_hint: "(这可用于密码的恢复)"
+    parent_email_hint: "（这可用于密码的恢复）"
     enter_parent_email: 输入你的父母或监护人的电子邮件地址（用于恢复密码）
     update: 更新帐户
     account_successfully_updated: 账号已成功更新。
@@ -441,8 +445,8 @@ zh-CN:
     tried: 试过了
   home:
     title: 代码工作室
-    description: 代码工作室是Code.org创办的在线课程的家园
-    lines_of_code: "%{lines_count} 行代码由学生编写"
+    description: 代码工作室是 Code.org 创办的在线课程的家园
+    lines_of_code: 由学生编写了 %{lines_count} 行代码
     lines_of_code_linebreak: 有 %{students_count} 百万学生编写了<br/>%{lines_count} 行程序代码。
     all_courses: 课程1、 2 和 3 的概要
     lesson_plans: 课程计划
@@ -471,58 +475,17 @@ zh-CN:
     add_hint_help: 请帮助我们将智能提示添加到 Code.org 教程
     20hour_overview: 这个20 小时课程介绍核心计算机科学和编程的概念。课程为 K-8 年级设计，用于室内教学，但是所有年龄段学习起来都很有趣。
     test_videos_help: 在你的学校测试我们新的视频。
-    try_beta_courses: 新增功能！尝试我们为K-5 学生准备的 beta 版课程
+    try_beta_courses: 新增功能！尝试我们为 K-5 学生准备的 beta 版课程
     use_as_teacher: 做为教师来使用本网站
     heading_hoc2014: "<h2>编程一小时</h2>适合<h1>所有年龄</h1>"
     heading_elementary: "<h2>20 小时课程</h2><h1>初学者 （所有年龄）</h1>"
     heading_apps: "<h1>为每个人</h1><h2>的乐趣</h2>"
-    heading_tools: "<h2>准备好进行下一步了吗？</h2><h1>高中的JavaScript工具</h1>"
+    heading_tools: "<h2>准备好进行下一步了吗？</h2><h1>高中的 JavaScript 工具</h1>"
     heading_legacy: "<h1>为所有年龄</h1><h2>的加速课程</h2>"
     your_gallery: 作品
     no_primary_course: 试试代码工作室的课程
     choose_next_course: 从下面代码工作室的课程中选一个体验
     print_certificate: 打印证书
-    announcement_title: 公告
-    announcement_message_fall2016_features: 我们利用夏天的时间将您的反馈意见变成新的功能。现在，即使学生们结对编程在一台设备，您也可以
-      <a href="%{pp_url}" target="_blank">跟踪多个学生的进展</a> 。你可以在<i>任何</i>课堂中，使用计算机科学课程的<a
-      href="%{csp_widgets_url}" target="_blank">最佳互动的工具</a>。并且你的学生可以在他们的空间里<a href="%{unused_code_url}"
-      target="_blank">保留未使用的代码</a>，从而鼓励他们多尝试！试试所有的新功能，让我们知道你的想法。
-    announcement_csp_widgets_message: 您在寻找一些有趣的方法来教您的班级一些计算机科学的概念吗？比如互联网如何工作，密码学如何为数学保密？我们已经从计算机科学原理课程中找到了最好的互动工具，并且你可以在任何时候，使用这些独立的小工具！
-    announcement_learn_more_button: 了解详情
-    announcement_try_now_button: 现在就试试
-    announcement_host_an_hour_button: 主办一小时
-    announcement_watch_video_button: 观看视频
-    announcement_petition: 作为一名教师，你在这项活动中以领先的方式给在每一个学校的每一位学生机会，学习计算机科学。现在，是时候让你的代表们听到你的消息了。本周，教育领导人、
-      28位州长和美国一些最大的公司的首席执行官们一起在一封公开信里要求美国国会资助 K-12 计算机科学教育。
-    announcement_petition_button: 添加您的姓名
-    announcement_go_beyond_button: 超越
-    announcement_apply_now: 立即申请
-    announcement_all: 关注我们老师的博客以追踪最新的新功能和更新。<a href='%{teacher_blog_url}' target='_blank'>
-      看以前的公告。</a>
-    announcement_hoc_launch: 在12月5日至11日的《编程一小时》活动中，来自180多个国家数以千计的教育工作者会开始教授计算机科学。我们期待你来帮助比以往更多的学生。<a
-      href='%{signup_url}' target='_blank'>注册你的《编程一小时》活动</a>，并且让其他老师知道，任何人都可以教授计算机科学课程。
-    announcement_mc_launch: 现在，一个我们最受欢迎的教程有了续集！全新的《我的世界》“编程一小时”设计师让学生们为《我的世界》里的世界设置规则。他们可以获得一个完全独一无二的《我的世界》体验，并可以将它分享给朋友或在他们的手机上玩。立即与你的班级参与到“编程一小时”。
-    announcement_how_code_studio: 你不需要任何经验来在你的课堂中教授计算机科学。Code.org 为所有年级提供教案、 课程计划、
-      高质量专业学习程序和很多的好工具&mdash; 一切你所需要的，都是免费的。想知道如何开始？下载 <a href='%{video_download_url}'>
-      这个视频</a> ！
-    announcement_go_beyond: 每周抽出一个小时的时间，与你的学生共同探索计算机科学概念。Code.org 为所有年级学生提供课程教案、 课程计划以及高质量的专业学习程序，还有很多有用的工具。&mdash;而且全部免费。:)你不需要任何计算机教学经验，<b>为你的课堂找到合适的内容。</b>
-    announcement_teacher_recruitment: 和您一样的教师在领导计算机科学教育的潮流。你可以参加高质量的12年级的专业学习课程，<strong>这对您和您的学校都是完全免费的</strong>。成为您的学校的计算机科学领头羊，并申请专业学习。
-    announcement_teacher_recruitment2: 和您一样的教师在领导计算机科学教育的潮流。你可以参加高质量的12年级的专业学习课程，<strong>这对您和您的学校都是完全免费的</strong>。成为您的学校的计算机科学领头羊，并申请专业学习。中学老师请于3月17日前申请。
-    announcement_csf_pilot: "<strong>小学教师们：</strong>加入我们来更新计算机基础教育课程！我们在寻找教师于2017年冬季春季，来试用计算机科学基础教程。我们希望能在2017年8月更新前听到您的反馈。"
-    announcement_student_privacy: Code.org对于保护学生的隐私有着非常认真的态度。为了保护您的学生的隐私，我们已经对您的小组的登录页面做了修改，不显示全名。尽管这个修改应能减低登录页面所带来的隐私风险，我们仍鼓励用户<i>不使用学生的全名</i>。
-    announcement_apcsp_recruitment: "<strong>计算机科学原理教师们：</strong> 您的学生有可能被下一个病毒式视频所选中，这个视频用来鼓励学生们获得计算机科学原理课程考试的绩点。我们正在邀请所有的计算机科学原理的学生来提交一个10到20秒的短片到各种社交网站上：“我正在学习
-      #APCSP 课程，因为...”。 最佳视频会被我们选到视频中，获胜的学生也会受到Code.org的礼物！"
-    announcement_apcsp_recruitment2: 今年的计算机科学原理考试有望打破纪录。参与学生的多样性的到了很大的提升，但我们仍然需要你的帮助。鼓励每个学习计算机科学原理的学生来参加考试，我们会<a
-      href='%{gift_url}' target='_blank'>送出礼物</a>。学生们也可以在我们的 <a href='%{challenge_url}'
-      target='_blank'>#APCSP 视频挑战</a>中相互激励。
-    announcement_apcsp_recruitment3: 今年的计算机科学原理考试有望打破纪录。参与学生的多样性的到了很大的提升，但我们仍然需要你的帮助。鼓励每个学习计算机科学原理的学生来参加考试，您有可能会得到<a
-      href='%{gift_url}' target='_blank'>礼品卡、笔记本电脑或其它很酷的奖品</a>！分享<a href='%{video_url}'
-      target='_blank'>这个视频</a>，这样学生们能够从参加考试的同伴那里知道它。
-    announcement_csp_deadline: 给高中老师的最后召唤！率先在您的学校里教授计算机科学，并申请我们的高质量的<strong>完全免费的</strong>专业学习课程。申请将在4月14日关闭。
-    announcement_applab_export: 应用实验室是我们的网络编程环境，现在支持导出代码了！你可以通过拖放Javascript代码块来创建应用，然后将代码导出到任何专业的开发环境中继续编辑。
-    announcement_csp_survey: "<b>祝贺计算机科学原理的教师们！</b><br/>您的正在参加AP计算机科学测验的学生们，会和超过50000名学生一起参加历史上最大的AP考试。现在，让您学生的声音被大家听到吧
-      ——记住完成课后调查！你能看到学生们的回答，我们也会将合计后全国的报告分享给您。"
-    announcement_navigation_redesign: "<b>即将到来的站点导航的变化</b><br/>夏天即将来临，我们正在改进整个Code.org站点的导航，以便你能从任何位置都访问自己的最常用的资源。一旦您登录了自己的教师账号，每一页都会有一个新的导航栏，里面的链接包括你的主页、课程、项目集、小组和专业课程。"
   move_students:
     new_section_dne: 抱歉，章节 %{new_section_code} 不存在。请输入不同的章节代码。
     section_code_cant_be_current_section: 当前章节不能与新建单元相同。
@@ -546,37 +509,36 @@ zh-CN:
     student: 学生
     teacher: 老师
   footer:
-    thank_you: 我们感谢 <a href="https://code.org/about/donors"> 捐助者</a>、 <a href="https://code.org/about/partners">
-      合作伙伴</a>、 <a href="https://code.org/about/team"> 扩展团队</a>、视频演员、<a href="https://code.org/about/advisors">
-      教育顾问</a>在创建代码工作室中给予的支持。
+    thank_you: 我们感谢<a href="https://code.org/about/donors">捐助者</a>、<a href="https://code.org/about/partners">合作伙伴</a>、<a
+      href="https://code.org/about/team">扩展团队</a>、视频演员、<a href="https://code.org/about/advisors">教育顾问</a>在创建代码工作室中给予的支持。
     help_from_html: 我们要特别感谢来自亚马逊、谷歌和微软的工程师帮助创建本教程。
     help_from_html_old: 来自亚马逊、谷歌和微软的工程师们帮助创建了本教程。
-    art_from_html: "《我的世界》&#8482; &copy; %{current_year} 微软. 保留所有权利.<br />星球大战&#8482;
-      &copy; %{current_year} 迪斯尼和卢卡斯影业. 保留所有权利.<br />冰雪奇缘&#8482; &copy; %{current_year}
-      迪斯尼. 保留所有权利.<br />冰河世纪&#8482; &copy; %{current_year} 20世纪福克斯. 保留所有权利.<br />愤怒的小鸟&#8482;
-      &copy; 2009-%{current_year} 维奥公司. 保留所有权利.<br />植物大战僵尸&#8482; &copy; %{current_year}
-      电子艺界. 保留所有权利.<br />阿甘妙世界是商标 &copy; %{current_year} 卡通网络."
-    art_from_html_old: "《我的世界》&#8482; &copy; %{current_year} 微软. 保留所有权利. 星球大战&#8482;
-      &copy; %{current_year} 迪斯尼和卢卡斯影业. 保留所有权利. 冰雪奇缘&#8482; &copy; %{current_year}
-      迪斯尼. 保留所有权利. 冰河世纪&#8482; &copy; %{current_year} 20世纪福克斯. 保留所有权利. 愤怒的小鸟&#8482;
-      &copy; 2009-%{current_year} 维奥公司. 保留所有权利. 植物大战僵尸&#8482; &copy; %{current_year}
-      电子艺界. 保留所有权利. 阿甘妙世界是商标 &copy; %{current_year} 卡通网络."
-    code_from_html: Code.org使用p5.play游戏资源库，根据<a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">GNU
-      LGPL 2.1</a>之许可。
+    art_from_html: 我的世界&#8482; &copy; %{current_year} 微软，保留所有权利。<br />星球大战&#8482;
+      &copy; %{current_year} 迪斯尼和卢卡斯影业，保留所有权利。<br />冰雪奇缘&#8482; &copy; %{current_year}
+      迪斯尼，保留所有权利。<br />冰河世纪&#8482; &copy; %{current_year} 20世纪福克斯，保留所有权利。<br />愤怒的小鸟&#8482;
+      &copy; 2009-%{current_year} 维奥公司，保留所有权利。<br />植物大战僵尸&#8482; &copy; %{current_year}
+      电子艺界，保留所有权利。<br />阿甘妙世界是TM，&copy; %{current_year} 卡通网络。
+    art_from_html_old: 我的世界&#8482; &copy; %{current_year} 微软，保留所有权利。星球大战&#8482; &copy;
+      %{current_year} 迪斯尼和卢卡斯影业，保留所有权利。冰雪奇缘&#8482; &copy; %{current_year} 迪斯尼，保留所有权利。冰河世纪&#8482;
+      &copy; %{current_year} 20世纪福克斯，保留所有权利。愤怒的小鸟&#8482; &copy; 2009-%{current_year}
+      维奥公司，保留所有权利。植物大战僵尸&#8482; &copy; %{current_year} 电子艺界，保留所有权利。阿甘妙世界是TM，&copy;
+      %{current_year} 卡通网络。
+    code_from_html: Code.org 使用 p5.play 游戏资源库，根据 <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">GNU
+      LGPL 2.1</a> 之许可。
     powered_by_aws: 由亚马逊网络服务
-    trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, CODE标识和Hour of Code标识&reg;
-      是Code.org的注册商标。"
+    trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, CODE Logo 和 Hour
+      of Code&reg; 是 Code.org 的注册商标。"
     copyright: 版权
     more: 更多
     feedback: 提供反馈
-    translate: 志愿报名翻译内容
+    translate: 愿意参与内容翻译
     support: 支持
     support_url: http://support.code.org/
     tos_short: 条款
-    tos: 条目
+    tos: 使用条款
     privacy: 隐私政策
     secure: 安全版本
-    report_abuse: 报告滥用
+    report_abuse: 举报滥用
     built_on_code_studio: 在代码工作室中建立
     make_my_own_app: 制作我自己的应用程序
     how_it_works: 它是如何工作的（查看代码）
@@ -585,10 +547,10 @@ zh-CN:
     title: 需要帮助吗？
     subtitle: 看看这些视频和提示
     teacher: 参阅解决方案
-    teacher_no_solution: 停止展现解决方案
+    teacher_no_solution: 停止查看解决方案
     auth_error: 您无权查看该解决方案。
-    submit: 更新小艺术家的位置
-    direction: 开始方向 （以度为单位）
+    submit: 更新艺术家的位置
+    direction: 开始方向（以度为单位）
   video:
     tab: 视频。
     notes: 看不到视频吗？请看文字说明。
@@ -605,7 +567,7 @@ zh-CN:
       applab_unsupported_tablet: 应用实验室的最佳体验是在有键盘、鼠标的桌面或笔记本电脑。您可能会在当前设备上遇到一些问题。
       gamelab_unsupported_tablet: 游戏实验室的最佳体验是在有键盘、鼠标的桌面或笔记本电脑。您可能会在当前设备上遇到一些问题。
       weblab_unsupported_browser: 很遗憾，在当前浏览器中加载网络实验室时遇到一些问题。您也许可以先试试另一个浏览器，直到我们解决了这个问题。很抱歉造成您的不便。
-      weblab_unsupported_locale_storage: 在私密浏览模式下使用 Web Lab可能会遇到问题。请在正常模式下重新加载您的项目。很抱歉给您带来的不便。
+      weblab_unsupported_locale_storage: 在私密浏览模式下使用 Web Lab 可能会遇到问题。请在正常模式下重新加载您的项目。很抱歉给您带来的不便。
   slow_loading: 请再多等一会儿...
   try_reloading: 请重新刷新页面
   next_stage: 完成 ！继续下一个阶段
@@ -613,15 +575,15 @@ zh-CN:
   lesson_plan: 课程计划
   view_lesson_plan: 查看课程计划
   pdf_download: 下载 PDF
-  download_coming_soon: 可下载的活动即将推出.
+  download_coming_soon: 可下载的活动即将推出。
   video_coming_soon: 视频即将推出！
   share_code:
     title: 点击“运行”来看程序如何运行
     bounce_og_title: 看看我的弹球游戏
-    flappy_og_title: 看看我的Flappy游戏
+    flappy_og_title: 看看我的 Flappy 游戏
     studio_og_title: 看看我的游戏实验室的应用程序
     check_out_what_i_made: 看看我做的
-    og_description: 我用 Code.org自己写的代码
+    og_description: 我用 Code.org 自己写的代码
     phone_number_not_allowed: 这好像有一个电话号码，试试改变文本去掉它。
     address_not_allowed: 这好像有一个地址，试试改变文本去掉它。
     email_not_allowed: 这好像有一个电子邮件，试试改变文本去掉它。
@@ -632,7 +594,7 @@ zh-CN:
     manage: 建立关卡
     view: 查看
     back: 回到脚本
-    success: 您已成功编辑这些块.
+    success: 您已成功编辑这些块。
     level:
       create: 创建新的关卡
       current: 目前的关卡
@@ -641,7 +603,7 @@ zh-CN:
     applab:
       title: 应用实验室
       body: 应用实验室是一个可以让你使用简单的应用程序的编程环境。设计应用程序，代码块或 JavaScript 使它工作，然后马上分享您的应用程序。
-      body_short: 设计一个应用，用代码模块或者JavaScript 来写出这个程序，然后马上分享你的应用吧。
+      body_short: 设计一个应用，用代码模块或者 JavaScript 来写出这个程序，然后马上分享你的应用吧。
       audience: 13岁以上
       cta: 了解操作方法
     dance:
@@ -658,7 +620,7 @@ zh-CN:
       body_short: 在速成版课程2-4中学习入门的计算机科学。
     hoc2014:
       try_new_tutorial: 试试我们新的测试版的编程一小时教程
-      try_frozen: 來自冰雪奇缘的艺术家安娜及爱莎。
+      try_frozen: 来自冰雪奇缘的艺术家安娜及爱莎。
     gallery:
       title: 作品
       body: 查看由我们用户创建的应用程序和艺术家图片的作品
@@ -671,7 +633,7 @@ zh-CN:
       title: 简单加密
       body: 学生将学习技术来创建和破解加密的信息。
     weblab:
-      title: 网站实验室 （测试版）
+      title: 网站实验室（测试版）
       body: 网站实验室是一个你能够通过html和css制作简单网页的编程环境。在几秒钟内，你就能设计并分享自己的网页。
       audience: 13岁以上
       cta: 了解操作方法
@@ -687,7 +649,7 @@ zh-CN:
       body: 用代码来探索《我的世界》。
     minecraft2016:
       title: 我的世界
-      body: 建立一个 我的世界 游戏。创造您自己版本的鸡、羊、爬行者、僵尸等等。
+      body: 在你自建的《我的世界》中对各种动物和其他生物进行编程。
     aquatic:
       title: 我的世界
     hero:
@@ -714,7 +676,7 @@ zh-CN:
       cta: 了解操作方法
   gallery:
     students_drew_these_with_code: 学生使用代码画了这些图案!
-    students_made_these_with_code: 学生使用代码做了这些内容!
+    students_made_these_with_code: 学生使用代码做了这些内容！
     picture_count: 在过去的 <b>%{days}</b> 天，学生们用程序画了 <b>%{count}</b> 幅图片。点击图片来查看每个程序如何运行。
     activity_count: 在过去的 <b>%{days}</b> 天中，学生用程序完成了 <b>%{count}</b> 个应用程序和图片。单击图片和屏幕截图来查看每个程序如何运行。
     want_to_make_your_own: 想要做你自己的作品？
@@ -725,10 +687,10 @@ zh-CN:
     header: 作品
     header_playlab: 游戏实验室
     header_artist: 艺术家
-    report_abuse: 报告滥用
+    report_abuse: 举报滥用
   landing:
-    prerelease: 本课程是在 <span class='betatext'> beta 版</span> 中. 这表示它不是最终版本. 它会根据反馈而被修订和改善.
-    prerelease_hoc2014: 本教程是在 <span class='betatext'> beta 版</span> 中. 它会根据反馈而被修订和改善.
+    prerelease: 本课程是 <span class='betatext'>beta 版</span>中。这表示它不是最终版本。它会根据反馈而被修订和改善
+    prerelease_hoc2014: 本教程是<span class='betatext'> beta 版</span>。它会根据反馈而被修订和改善。
     report_bug: 报告错误
     support: 获取帮助
     support_url: "//support.code.org"
@@ -752,7 +714,7 @@ zh-CN:
     correct_title: 谢谢你
     correct_body: 感谢您提交答案。
     hide_survey_last_answer: |-
-      这个调查是匿名的。请访问教导面板以查询结果汇总。
+      这个调查是匿名的。请访问教师面板以查询结果汇总。
       注意，只有至少五个学生提交了调查报告结果才会可见。
     survey_submission_thankyou: 感谢你提交调查！调查结果已经被清空，以便保持你的回复是匿名的。注意，你的老师仍然能看到整个班级的答案，但是不会有名字出现。
   level_group-submittable:
@@ -798,14 +760,14 @@ zh-CN:
   age_interstitial:
     age: 你的年龄
     header: 帐户信息更新
-    message: 我们正在更新我们的经验，为您提供更强的隐私保护。要做到这一点，我们需要现有用户在这里输入自己的年龄.<br/>一如往常，code.org
+    message: 我们正在更新我们的经验，为您提供更强的隐私保护。要做到这一点，我们需要现有用户在这里输入自己的年龄。<br/>一如往常，code.org
       将永远不会出租、 出售或与任何第三方共享此信息。
     sign_out: 如果你不想提供你的年龄你可以 <a href="%{url}">注销</a>。
   terms_interstitial:
     title: 更新的服务条款和隐私政策
     intro_desc: 我们更新了我们的服务条款和隐私政策，如下所示。这些变化自 2016 年 8 月 24 日起生效。 最大的变化是︰ 我们将 <i>不再将学生帐户的电子邮件地址存储在代码工作室。</i>这是对我们来说，一个大改变，我们希望它在教育技术中设置学生隐私的新标准。我们已经通过电子邮件给你发送了其它更改的摘要。
     intro_instructions: 你需要为你教室里的 13 岁以下的学生接受这些新的条款来完全拥有代码工作室访问权限中的所有最新功能。 当你为13岁以下的学生注册帐户，你要确认你的学校有父母的同意来收集学生的个人信息来为学校的所使用，包括代码工作室这样的教育程序。
-    tos: 条目
+    tos: 使用条款
     privacy: 隐私政策
     privacy_notice: 隐私声明
     accept_label: 我同意更新的 <a href="%{tos_url}"target="_blank"> 服务条款</a> 和 <a href="%{privacy_url}"target="_blank">
@@ -831,7 +793,7 @@ zh-CN:
       hawaiian: 夏威夷土著或其他太平洋岛民
       american_indian: 美国印第安/阿拉斯加原住民
       other: 其他
-      opt_out: 不想说
+      opt_out: 不愿回答
     submit: 提交
     decline: 关闭
   zendesk_too_young_message: 对不起，年轻的用户不能登录到支持站点。你可以不登录来浏览 <a href="http://support.code.org">
@@ -839,7 +801,7 @@ zh-CN:
   progress:
     not_started: 未开始
     in_progress: 正在进行
-    completed_too_many_blocks: 完成，使用太多块
+    completed_too_many_blocks: 完成，使用太多模块
     completed_perfect: 完美完成
     furthest_level_attempted: 尝试过最远的关卡
     assessment: 评估
@@ -876,12 +838,12 @@ zh-CN:
     edit_project: 编辑工程
     sharing_disabled: 抱歉，这个项目不能分享。如果这是你或者你学生的项目，请<a href='https://studio.code.org/users/sign_in'>登录</a>到你的账号查看这个项目。
     abuse:
-      tos: 此工程因违反了Code.org的<a href='http://code.org/tos'>服务条款</a> ，不能被共享。
+      tos: 此工程因违反了 Code.org 的<a href='http://code.org/tos'>服务条款</a> ，不能被共享。
       policy_violation: 这个项目包含了不能和他人分享的数据。请联系应用程序的主人以修复他们的应用内容。
-      contact_us: 如果你认为有错误，请 <a href='https://code.org/contact'>联系我们</a>
+      contact_us: 如果你认为有错误，请<a href='https://code.org/contact'>联系我们</a>。
       go_to_code_studio: 转到代码工作室
       report_abuse_form:
-        intro: 如果你遇到了冒犯性的内容、 威胁、 网络欺凌、 骚扰或通过代码工作室编写的应用程序实例侵犯了你的版权，请填写下面的表格。我们将非常认真对待你的报告，据此调查并采取适当的行动。
+        intro: 如果你遇到了冒犯性的内容、威胁、网络欺凌、骚扰或通过代码工作室编写的应用程序实例侵犯了你的版权，请填写下面的表格。我们将非常认真对待你的报告，据此调查并采取适当的行动。
         validation:
           email: 请提供一个电子邮件地址
           age: 请指定年龄
@@ -889,20 +851,20 @@ zh-CN:
           abuse_detail: 请提供有关您所报告的内容的详细信息
         abusive_url: 内容的地址将被提交
         abuse_type:
-          question: 此内容是如何违反%{link_start} 服务条款%{link_end} 的?
+          question: 此内容是如何违反%{link_start}服务条款%{link_end}的?
           harassment: 威胁，网络欺凌不法之徒
           offensive: 冒犯性的内容
           infringement: 著作权侵权
           other: 其他
         detail: 请提供尽可能详细的信息，尽可能关于您所报告的内容。
-        acknowledge: 通过提交此信息，你承认它将会被根据%{link_start_privacy}隐藏策略%{link_end} 和 %{link_start_tos}服务条款%{link_end}的规定进行处理。
+        acknowledge: 通过提交此信息，你承认它将会被根据%{link_start_privacy}隐藏策略%{link_end}和%{link_start_tos}服务条款%{link_end}的规定进行处理。
   peer_review:
     accepted:
       name: 已接受
-      description: "<strong>是的</strong> 这个提交 <strong>符合</strong> 的要求"
+      description: "<strong>是的</strong>，这个提交<strong>符合</strong>要求"
     rejected:
       name: 已拒绝
-      description: "<strong>否决</strong>这个提交<strong>不能满足</strong> 的要求"
+      description: "<strong>不</strong>，这个提交<strong>不能满足</strong> 要求"
     escalated:
       name: 升级
       description: 我想让老师来审查此提交
@@ -968,6 +930,7 @@ zh-CN:
     csp_postap_2: 第二章：应用程序和数据库
     csp2_1_2018: 第2单元︰ 数字信息
     csp3_1_2018: 单元3：编程入门
+    csp4_1_2018: 单元4 - 大数据和隐私
     csp_variables: 变量
     csp_conditionals: 条件语句
     csp_functions: 函数
@@ -985,20 +948,20 @@ zh-CN:
     time4cs_c5: 市民对湿地变化的影响
   external_links:
     disclaimer: 免责声明
-    leaving_domain: 你现在正在离开code.org，访问一个不由我们创建的站点。
-    disclaimer_text: 这个站点可能包含与Code.org不同的隐私策略。我们选择了这些第三方资源，因为我们认为他们对你有帮助。我们并不直接对该网站的内容负责，如果你发现了让你感到反感的内容，或这个链接指向的站点已不再可用，请<a
+    leaving_domain: 你现在正在离开 Code.org，访问一个不由我们创建的站点。
+    disclaimer_text: 这个站点可能包含与 Code.org 不同的隐私策略。我们选择了这些第三方资源，因为我们认为他们对你有帮助。我们并不直接对该网站的内容负责，如果你发现了让你感到反感的内容，或这个链接指向的站点已不再可用，请<a
       href='%{support_url}'>联系支持部门</a>。
   hoc_download:
-    title: 编程一小时下载
+    title: "《编程一小时》下载"
     capsule_title: 你有网络吗？
     capsule_desc: 使用在线的，基于网页的 <a href="%{url}">%{app_name}</a>。
     instructions_headline: 没有网络？
-    instructions: 给教师的指导︰ 如果你的网络条件不好，这些《编程一小时》教程都是可用于下载和安装供脱机使用。选择您的语言和平台、 下载和安装在你的教室里所有的计算机上。你可能想要使用
-      USB 驱动器一次下载并安装在所有计算机上。注︰ 学生将不能登录到代码工作室、 保存进度，或打印证书。教师可提前 <a href="%{url}">打印证书</a>。
-    minecraft_name: 我的世界 编程一小时
-    starwars_blocks_name: '星球大战: 用代码构建一个星系（块）'
-    starwars_javascript_name: '星球大战: 用代码构建一个星系-JavaScript'
-    download_message: 下载 %{app_name}，供离线使用 (136MB)
+    instructions: 给教师的提示︰ 如果你的网络条件不好，这些《编程一小时》教程都是可用于下载和安装供离线使用。选择您的语言和平台、下载和安装在你的教室里所有的计算机上。你可能想要使用
+      USB 驱动器一次下载并安装在所有计算机上。注︰ 学生将不能登录到代码工作室、保存进度或打印证书。教师可提前<a href="%{url}">打印证书</a>。
+    minecraft_name: "《我的世界》编程一小时"
+    starwars_blocks_name: 星球大战：用代码构建一个星系（块）
+    starwars_javascript_name: 星球大战：用代码构建一个星系-JavaScript
+    download_message: 下载 %{app_name}，供离线使用（136MB）
     download_in_Albanian: 下载阿尔巴尼亚语版本︰
     download_in_Arabic: 下载阿拉伯语版本︰
     download_in_Azerbaijani: 下载阿塞拜疆语版本︰
@@ -1007,7 +970,7 @@ zh-CN:
     download_in_Bulgarian: 下载保加利亚语版本︰
     download_in_Catalan: 下载加泰罗尼亚语版本︰
     download_in_Chinese-Taiwan: 下载繁体中文版本︰
-    download_in_Chinese: 下载汉语版本：
+    download_in_Chinese: 下载中文版本：
     download_in_Croatian: 下载克罗地亚语版本︰
     download_in_Czech: 下载捷克语版本︰
     download_in_Danish: 下载丹麦语版本︰
@@ -1041,15 +1004,14 @@ zh-CN:
     download_in_Turkish: 下载土耳其语版本︰
     download_in_Ukrainian: 下载乌克兰语版本︰
     download_in_Vietnamese: 下载越南语版本︰
-    windows: Windows （64位）
+    windows: Windows（64位）
     mac: Mac OS X
-  stage_extras_teacher_message: 您已经关闭了一些小组的课程附加内容。除非重新打开, 否则您的学生将看不到此页。可以通过访问 <a href='http://code.org/teacher-dashboard'>教师仪表板</a>
-    来打开课程附加内容。
-  locked_stage: 这一阶段的内容不可见是因为这一阶段当前已锁定。在你需要工作或审查你的答案的时候， 你的老师可以解锁这一阶段。
-  hidden_stage: 你的老师没有预料到你来到这里。 请询问你的老师你应该上什么课。
+  stage_extras_teacher_message: 您已经关闭了一些小组的课程附加内容。除非重新打开，否则您的学生将看不到此页。可以通过访问<a href='http://code.org/teacher-dashboard'>教师控制台</a>来打开课程附加内容。
+  locked_stage: 这一阶段的内容不可见是因为这一阶段当前已锁定。在你需要工作或审查你的答案的时候，你的老师可以解锁这一阶段。
+  hidden_stage: 你的老师没有预料到你来到这里。请询问你的老师你应该上什么课。
   hidden_script: 你的老师不期待你来这里。请询问你的老师应该上哪个单元。
   no_script_access_student: 无权访问此单元。请询问教师，应该访问什么单元。
-  no_script_access_teacher: 你不能进入这个单元。如果你确认要访问这个单元, 请写信给 support@code.org, 以便我们可以解决这种情况。
+  no_script_access_teacher: 你不能进入这个单元。如果你认为可以访问这个单元，请写信给 support@code.org，以便我们可以解决这种情况。
   return_unit_overview: 转到单元概述
   return_course_overview: 转到课程概述
   view_all_units: 查看所有单元
@@ -1073,10 +1035,9 @@ zh-CN:
       workshop_facilitator: 工作室引导员
       workshop_course: 工作室课程
       email_opt_in: 我们是否能发给你关于 Code.org 国际项目，课程更新或其它计算机科学新闻的邮件？
-      legal_opt_in: '提交此表单即表示您同意允许 Code.org 与您的所在国家、所在学区和调解人的 Code.org 国际合作伙伴共享有关您如何使用
-        Code.org 和专业学习资源的信息。我们将分享您的联系信息， 您正在使用哪些课程/组件, 以及如何与这些合作伙伴聚合有关您的数据。这包括你的班级的学生数量,
-        你的教室的人口细分 以及您的学校和地区的名称。我们不会与我们的合作伙伴分享关于个别学生的任何信息: 所有学生的信息将不会被识别和聚合。我们的国际合作伙伴和调解人在合同上有义务以
-        和Code.org 相同的保密级别对待这一信息。'
+      legal_opt_in: 提交此表单即表示您同意允许 Code.org 与您的所在国家、所在学区和引导员的 Code.org 国际合作伙伴共享有关您如何使用
+        Code.org 和专业学习资源的信息。我们将分享您的联系信息， 您正在使用哪些课程/组件以及如何与这些合作伙伴聚合有关您的数据。这包括你的班级的学生数量、你的教室的人员数据以及您的学校和地区的名称。我们不会与我们的合作伙伴分享关于个别学生的任何信息：所有学生的信息将不会被识别和聚合。我们的国际合作伙伴和引导员在合同上有义务以和
+        Code.org 相同的保密级别对待这一信息。
     form_entries:
       gender:
         male: 男性
@@ -1140,9 +1101,9 @@ zh-CN:
         opt_in_no: 不
     international_opt_in:
       title: 工作坊参与者
-      intro: 非常感谢您抽出时间接受Code.org的培训课程。没有像您这样的人的帮助，我们让世界各地所有学校的孩子们都能有机会学习计算机科学知识的使命或许永远也不会成功。
+      intro: 非常感谢您抽出时间接受 Code.org 的培训课程。没有像您这样的人的帮助，我们让世界各地所有学校的孩子们都能有机会学习计算机科学知识的使命或许永远也不会成功。
       instructions: 请填写下方的表格，表明 1) 你参加了一个由 Code.org 的国际合作伙伴运作的培训研讨班，并且 2) 你同意我们将你的情况告知我们在你所在国家的国际合作伙伴，以便他们支持你作为计算机科学教师的工作。
-      thanks: 感谢您的提交！我们期待着能帮助您熟悉Code.org的课程及教学工具。请与我们分享你的问题和反馈，可发邮件至<a href='%{support_email_url}'>support@code.org</a>，或在<a
+      thanks: 感谢您的提交！我们期待着能帮助您熟悉 Code.org 的课程及教学工具。请与我们分享你的问题和反馈，可发邮件至<a href='%{support_email_url}'>support@code.org</a>，或在<a
         href='%{teacher_forum_url}' target='_blank'>教师论坛</a>上发帖！
     logged_out:
       heading: 感谢您对专业学习计划的兴趣！
@@ -1151,16 +1112,16 @@ zh-CN:
       body: 感谢对 Code.org 专业学习项目的兴趣。现在已经注册了一个学生账户，请创建教师账户或<a href="%{user_settings}">转到用户设置</a>将账户升级为教师账户。
       more: 如果在开始申请前希望看到更多信息，点击 <a href="%{pl_overview}">专业学习计划概述</a>。
     no_teacher_email:
-      body: 账号还没有填写电子邮件地址。请 <a href="%{user_registration}">访问帐户设置</a> 以在完成表单前添加电子邮件地址。
+      body: 账号还没有填写电子邮件地址。请<a href="%{user_registration}">访问帐户设置</a>以在完成表单前添加电子邮件地址。
   courses_category: 完整课程
   cookie_banner:
-    message: 通过继续浏览我们的网站或单击 "我同意", 您同意在你的计算机或设备上存储 cookie。
+    message: 通过继续浏览我们的网站或单击"我同意"，您同意在你的计算机或设备上存储 cookies。
     more_information: 查看 Code.org 的隐私政策。
     accept: 我同意
   gdpr_dialog:
     heading: 你同意使用一个美国的网站吗？
     message: 您使用本网站产生的数据可能会被传输至美国并在美国存储或处理。
-    link_intro: 有关详细信息, 请参阅我们
+    link_intro: 有关详细信息，请参阅我们
     privacy_policy: 隐私条款
     logout: 注销
     true: 对

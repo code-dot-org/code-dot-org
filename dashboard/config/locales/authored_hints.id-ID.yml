@@ -664,6 +664,14 @@ id-ID:
           = 100, 50, 150).
         Course_4_SCV_6_d: 'Zig, belok kiri oleh `360` /`sisi`. Untuk zag, belok kanan
           oleh `360` /`sisi`. '
+      CourseE_HOC 2018 Level_10:
+        voyage_aquatic_10a: Lihat\*\* mercusuar\*\*![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)?
+          Bagaimana caranya kamu bisa menggunakannya untuk melewati Ocean Monument?
+      CourseE_HOC 2018 Level_7a:
+        aquatic7: Anda bisa menggunakan blok jalan if untuk membantu berbelok.
+      CourseE_HOC 2018 Level_9b:
+        voyage_aquatic_9a: Lihat blok karang merah dan biru? Gunakan mereka sebagai
+          tongkat penunjuk jalan untuk belok kiri atau kanan melalui batu karang.
       Function intro Ryan:
         Function_intro_Ryan_b: Jika anda menyebut fungsi dengan benar, ini adalah
           jalan yang akan anda tempuh...
@@ -674,6 +682,14 @@ id-ID:
           jalan yang akan anda tempuh...
         Function_intro_Ryan_a: Kamu bisa memanggil fungsi berulang kali di dalam program!  Coba
           panggil dua kali untuk memecahkan teka-teki ini.
+      HOC 2018 Level_10:
+        voyage_aquatic_10a: Lihat\*\* mercusuar\*\*![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)?
+          Bagaimana caranya kamu bisa menggunakannya untuk melewati Ocean Monument?
+      HOC 2018 Level_7a:
+        aquatic7: Anda bisa menggunakan blok jalan if untuk membantu berbelok.
+      HOC 2018 Level_9b:
+        voyage_aquatic_9a: Lihat blok karang merah dan biru? Gunakan mereka sebagai
+          tongkat penunjuk jalan untuk belok kiri atau kanan melalui batu karang.
       MC_HOC_2017_01_RETRY:
         MC_HOC_2017_01_RETRY_a: Tarik satu blok `pindah maju` dari kotak alat ke ruang
           kerja dan posisikan di bawah blok `ketika dijalankan`.
@@ -4986,7 +5002,7 @@ id-ID:
         courseC_maze_programming5_a: Coba gunakan tombol "step" untuk menjalankan
           kode baris demi baris. Bisakah anda mencari tahu apa yang perlu anda lakukan
           selanjutnya?
-        courseC_maze_programming5_b: Ingat bahwa ternyata dari sudut pandang burung.
+        courseC_maze_programming5_b: Ingat putaran itu dari perspektif Scrat.
         courseC_maze_programming5_c: Jangan takut membuat kesalahan! Cobalah menambahkan
           blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika
           anda berpikir bahwa anda belum menyelesaikan teka-teki itu.

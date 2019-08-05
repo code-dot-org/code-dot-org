@@ -10942,6 +10942,69 @@ es-MX:
         Escribe tu respuesta en el cuadro a continuación, luego ejecuta el código y mira lo que sucede.
       CSD U6 Catch the Mouse_2018: Predicción incrustada
       CSD U6 Catch the Mouse_2019: Predicción incrustada
+      CSD U6 Driver pt 2: |-
+        # Limitar el giro
+
+        Puede que hayas notado que es realmente difícil maniobrar el automóvil, a menos que tus manos se muevan lenta y cuidadosamente. Esto se debe a que el número que devuelve `rodar` puede ser realmente grande, dependiendo de cuánto gira el acelerómetro. Recuerda que `rodar` tiene un rango que va de -90 a 90.
+
+        # Haz esto
+
+        Encuentra una forma de hacer que `rodar` sea un número más pequeño mientras que aún se lo utiliza para conducir el automóvil. Tienes todos los operadores matemáticos a tu disposición.
+
+        _Desafío_: ¿puedes hacer que el automóvil no se vaya fuera de los bordes de la pantalla?
+      CSD U6 Driver pt 2_2018: |-
+        # Limitar el giro
+
+        Puede que hayas notado que es realmente difícil maniobrar el automóvil, a menos que tus manos se muevan lenta y cuidadosamente. Esto se debe a que el número que devuelve `rodar` puede ser realmente grande, dependiendo de cuánto gira el acelerómetro. Recuerda que `rodar` tiene un rango que va de -90 a 90.
+
+        # Haz esto
+
+        Encuentra una forma de hacer que `rodar` sea un número más pequeño mientras que aún se lo utiliza para conducir el automóvil. Tienes todos los operadores matemáticos a tu disposición.
+
+        _Desafío_: ¿puedes hacer que el automóvil no se vaya fuera de los bordes de la pantalla?
+      CSD U6 Driver pt 2_2019: |-
+        # Limitar el giro
+
+        Puede que hayas notado que es realmente difícil maniobrar el automóvil, a menos que tus manos se muevan lenta y cuidadosamente. Esto se debe a que el número que devuelve `rodar` puede ser realmente grande, dependiendo de cuánto gira el acelerómetro. Recuerda que `rodar` tiene un rango que va de -90 a 90.
+
+        # Haz esto
+
+        Encuentra una forma de hacer que `rodar` sea un número más pequeño mientras que aún se lo utiliza para conducir el automóvil. Tienes todos los operadores matemáticos a tu disposición.
+
+        _Desafío_: ¿puedes hacer que el automóvil no se vaya fuera de los bordes de la pantalla?
+      CSD U6 Driver pt1: |-
+        # Volante
+
+        El juego es similar al juego del portero que acabas de jugar, solo que un poco diferente. Usa tu tablero como el volante de un automóvil (moviéndote de lado a lado). Tienes que llegar a la bandera a cuadros mientras esquivas las banderas rojas por el camino.
+
+        # Haz esto
+
+        -   Haz que el automóvil se mueva hacia abajo de la pantalla mientras el programa se ejecuta.
+        -   Dale al automóvil la habilidad de girar de un lado a otro.
+
+        Piensa de nuevo en los programas que has creado hasta este punto, ¿cómo puedes actualizar estos valores?
+      CSD U6 Driver pt1_2018: |-
+        # Volante
+
+        El juego es similar al juego del portero que acabas de jugar, solo que un poco diferente. Usa tu tablero como el volante de un automóvil (moviéndote de lado a lado). Tienes que llegar a la bandera a cuadros mientras esquivas las banderas rojas por el camino.
+
+        # Haz esto
+
+        -   Haz que el automóvil se mueva hacia abajo de la pantalla mientras el programa se ejecuta.
+        -   Dale al automóvil la habilidad de girar de un lado a otro.
+
+        Piensa de nuevo en los programas que has creado hasta este punto, ¿cómo puedes actualizar estos valores?
+      CSD U6 Driver pt1_2019: |-
+        # Volante
+
+        El juego es similar al juego del portero que acabas de jugar, solo que un poco diferente. Usa tu tablero como el volante de un automóvil (moviéndote de lado a lado). Tienes que llegar a la bandera a cuadros mientras esquivas las banderas rojas por el camino.
+
+        # Haz esto
+
+        -   Haz que el automóvil se mueva hacia abajo de la pantalla mientras el programa se ejecuta.
+        -   Dale al automóvil la habilidad de girar de un lado a otro.
+
+        Piensa de nuevo en los programas que has creado hasta este punto, ¿cómo puedes actualizar estos valores?
       CSD U6 LED all: |-
         # Luz multifunción
 
@@ -11023,6 +11086,57 @@ es-MX:
         Este programa usa eventos. Mira el código con un compañero y charla sobre lo que crees que hace. Una vez que hayas respondido a las preguntas, haz clic en "Ejecutar" para verificar tus respuestas.
 
         -   ¿La luz se encenderá cuando el programa sea "Ejecutar"?  ¿Por qué? ¿Por qué no?
+      CSD U6 LEDs color: |-
+        # Agregar más color
+
+        Al usar `Ledsdecolores[0].encendidos()` en el último nivel, probablemente notaste que los LEDs se encendían en color blanco. Si no especificas un color, `encendido()` encenderá las tres partes del LED (rojo, verde y azul) para producir blanco. En la caja de herramientas, verás un nuevo comando llamado `Ledsdecolores[0].color()`, el cual te permite especificar un color, como una cadena como "azul" o un valor RGB usando un comando `color()` de colores.
+
+        # Haz esto
+
+        Usa el comando `.color()` para configurar cada uno de los LEDs de colores en un color diferente.
+      CSD U6 LEDs color_2018: |-
+        # Agregar más color
+
+        Al usar `Ledsdecolores[0].encendidos()` en el último nivel, probablemente notaste que los LEDs se encendían en color blanco. Si no especificas un color, `encendido()` encenderá las tres partes del LED (rojo, verde y azul) para producir blanco. En la caja de herramientas, verás un nuevo comando llamado `Ledsdecolores[0].color()`, el cual te permite especificar un color, como una cadena como "azul" o un valor RGB usando un comando `color()` de colores.
+
+        # Haz esto
+
+        Usa el comando `.color()` para configurar cada uno de los LEDs de colores en un color diferente.
+      CSD U6 LEDs color_2019: |-
+        # Agregar más color
+
+        Al usar `Ledsdecolores[0].encendidos()` en el último nivel, probablemente notaste que los LEDs se encendían en color blanco. Si no especificas un color, `encendido()` encenderá las tres partes del LED (rojo, verde y azul) para producir blanco. En la caja de herramientas, verás un nuevo comando llamado `Ledsdecolores[0].color()`, el cual te permite especificar un color, como una cadena como "azul" o un valor RGB usando un comando `color()` de colores.
+
+        # Haz esto
+
+        Usa el comando `.color()` para configurar cada uno de los LEDs de colores en un color diferente.
+      CSD U6 Pedometer: |-
+        # Corredor
+
+        Este programa debería usar el evento `sacudir`, que se activa cuando el tablero se sacude. Debería agregar un paso al total del corredor cada vez que el usuario sacude el tablero.
+
+        # Haz esto
+
+        -   Cambia el evento para que se active cada vez que el tablero se sacuda.
+        -   Agrega código dentro del evento para que los `pasos` se incrementen cada vez que el tablero se sacuda.
+      CSD U6 Pedometer_2018: |-
+        # Corredor
+
+        Este programa debería usar el evento `sacudir`, que se activa cuando el tablero se sacude. Debería agregar un paso al total del corredor cada vez que el usuario sacude el tablero.
+
+        # Haz esto
+
+        -   Cambia el evento para que se active cada vez que el tablero se sacuda.
+        -   Agrega código dentro del evento para que los `pasos` se incrementen cada vez que el tablero se sacuda.
+      CSD U6 Pedometer_2019: |-
+        # Corredor
+
+        Este programa debería usar el evento `sacudir`, que se activa cuando el tablero se sacude. Debería agregar un paso al total del corredor cada vez que el usuario sacude el tablero.
+
+        # Haz esto
+
+        -   Cambia el evento para que se active cada vez que el tablero se sacuda.
+        -   Agrega código dentro del evento para que los `pasos` se incrementen cada vez que el tablero se sacuda.
       CSD U6 add LED button: |-
         # Usar eventos
 
@@ -11047,6 +11161,18 @@ es-MX:
         # Haz esto
 
         -   Agrega código para que el segundo botón apague el LED.
+      CSD U6 airplane predict markdown: |-
+        # Acelerómetro
+
+        Mira el código a continuación. ¿Qué crees que hará? Haz una conjetura y ejecuta el código para descubrirlo.
+      CSD U6 airplane predict markdown_2018: |-
+        # Acelerómetro
+
+        Mira el código a continuación. ¿Qué crees que hará? Haz una conjetura y ejecuta el código para descubrirlo.
+      CSD U6 airplane predict markdown_2019: |-
+        # Acelerómetro
+
+        Mira el código a continuación. ¿Qué crees que hará? Haz una conjetura y ejecuta el código para descubrirlo.
       CSD U6 analog challenge: |-
         # Desafío
 
@@ -11324,6 +11450,48 @@ es-MX:
         -   Elige el valor de umbral que hace que el fondo de la pantalla cambie solamente cuando se detecte un sonido alto.
 
         _Sugerencia: tu umbral depende de cuánto ruido ambiente haya en la habitación y cuánto cambia. Puede que un umbral que funciona en una habitación silenciosa no funcione en un aula más ruidosa._
+      CSD U6 array piano: |-
+        # Terror al piano
+
+        Hasta ahora, has estado usando los elementos de un arreglo. Ahora, vas a cambiar lo que hay dentro del arreglo.
+
+        Nuestro querido amigo, el piano, ha vuelto, excepto que ahora toca notas de dos arreglos: `notas`, que tiene notas naturales (C, D, E, F, G, A, B), y `notasSostenidas`, que tiene notas sostenidas (C#, D#, F#, G#, A#).
+
+        # Haz esto
+
+        El arreglo de `notasSostenidas` solo tiene un item dentro de él en este momento.
+
+        -   Corrige el arreglo para que las teclas sostenidas del piano puedan tocar la nota correcta.
+
+        _Sugerencia: Modificar arreglos es mucho más simple en el modo texto. Siempre puedes alternar entre bloque y modo texto haciendo clic en el botón en la parte superior derecha de tu espacio de trabajo de código._
+      CSD U6 array piano_2018: |-
+        # Terror al piano
+
+        Hasta ahora, has estado usando los elementos de un arreglo. Ahora, vas a cambiar lo que hay dentro del arreglo.
+
+        Nuestro querido amigo, el piano, ha vuelto, excepto que ahora toca notas de dos arreglos: `notas`, que tiene notas naturales (C, D, E, F, G, A, B), y `notasSostenidas`, que tiene notas sostenidas (C#, D#, F#, G#, A#).
+
+        # Haz esto
+
+        El arreglo de `notasSostenidas` solo tiene un item dentro de él en este momento.
+
+        -   Corrige el arreglo para que las teclas sostenidas del piano puedan tocar la nota correcta.
+
+        _Sugerencia: Modificar arreglos es mucho más simple en el modo texto. Siempre puedes alternar entre bloque y modo texto haciendo clic en el botón en la parte superior derecha de tu espacio de trabajo de código._
+      CSD U6 array piano_2019: |-
+        # Terror al piano
+
+        Hasta ahora, has estado usando los elementos de un arreglo. Ahora, vas a cambiar lo que hay dentro del arreglo.
+
+        Nuestro querido amigo, el piano, ha vuelto, excepto que ahora toca notas de dos arreglos: `notas`, que tiene notas naturales (C, D, E, F, G, A, B), y `notasSostenidas`, que tiene notas sostenidas (C#, D#, F#, G#, A#).
+
+        # Haz esto
+
+        El arreglo de `notasSostenidas` solo tiene un item dentro de él en este momento.
+
+        -   Corrige el arreglo para que las teclas sostenidas del piano puedan tocar la nota correcta.
+
+        _Sugerencia: Modificar arreglos es mucho más simple en el modo texto. Siempre puedes alternar entre bloque y modo texto haciendo clic en el botón en la parte superior derecha de tu espacio de trabajo de código._
       CSD U6 board getters: |-
         # Usar el Circuit Playground
 
@@ -11372,6 +11540,120 @@ es-MX:
         -   Mira el primer bloque de evento en el programa y encuentra la parte donde dice "change".
         -   Dentro del bloque del evento, obtén el valor del intervalo del deslizador y úsalo para hacer que el LED parpadee al nuevo ritmo.
         -   Ejecuta el programa, y mueve el deslizador para ver si la velocidad del LED cambia automáticamente.
+      CSD U6 colorLED on: |-
+        <img src="//curriculum.code.org/images/circuitplayground/colorLedonoff.gif" style="float: right; margin: 10px;">
+
+        # LEDs de colores
+
+        Los LEDs de colores pueden usar los mismos comandos básicos que utilizaste con el LED rojo, como `encendido()` y `apagado()`. Este programa debería encender y apagar los LEDs de la parte inferior como se muestra en la imagen, pero solo un LED está funcionando.
+
+        # Haz esto
+
+        -   Lee y ejecuta el código para ver cómo el programa enciende y apaga el LED de la parte inferior izquierda.
+        -   Agrega más código para hacer que se enciendan y se apaguen los dos LEDs de la parte inferior.
+      CSD U6 colorLED on_2018: |-
+        <img src="//curriculum.code.org/images/circuitplayground/colorLedonoff.gif" style="float: right; margin: 10px;">
+
+        # LEDs de colores
+
+        Los LEDs de colores pueden usar los mismos comandos básicos que utilizaste con el LED rojo, como `encendido()` y `apagado()`. Este programa debería encender y apagar los LEDs de la parte inferior como se muestra en la imagen, pero solo un LED está funcionando.
+
+        # Haz esto
+
+        -   Lee y ejecuta el código para ver cómo el programa enciende y apaga el LED de la parte inferior izquierda.
+        -   Agrega más código para hacer que se enciendan y se apaguen los dos LEDs de la parte inferior.
+      CSD U6 colorLED on_2019: |-
+        <img src="//curriculum.code.org/images/circuitplayground/colorLedonoff.gif" style="float: right; margin: 10px;">
+
+        # LEDs de colores
+
+        Los LEDs de colores pueden usar los mismos comandos básicos que utilizaste con el LED rojo, como `encendido()` y `apagado()`. Este programa debería encender y apagar los LEDs de la parte inferior como se muestra en la imagen, pero solo un LED está funcionando.
+
+        # Haz esto
+
+        -   Lee y ejecuta el código para ver cómo el programa enciende y apaga el LED de la parte inferior izquierda.
+        -   Agrega más código para hacer que se enciendan y se apaguen los dos LEDs de la parte inferior.
+      CSD U6 colorLeds debug: |-
+        <img src="https://images.code.org/e055be621221385d3503962bee5aa616-image-1491493475417.44.28.png" style="width:250px; float:right">
+
+        # Depurar: # Ledsdecolores
+
+        ¿Puedes depurar los valores de índice para que el arco iris aparezca en el tablero igual que en la foto?
+      CSD U6 colorLeds intensity: |-
+        # Cambiar el brillo
+
+        El comando `intensidad()` te permite configurar el brillo de un LED (o _intensidad_) de 0 - 100. Este programa te permite elegir tres niveles de brillo para tu arco iris, pero el nivel medio aún no funciona.
+
+        # Haz esto
+
+        -   Lee el programa y mira cómo funcionan los botones "Brillante" y "Tenue".
+        -   Agrega código para hacer que el botón "Medio" haga que el arco iris tenga un nivel medio de brillo (entre "Brillante" y "Tenue"). ([Muéstrame dónde.](#triggercallout=code_triggered))
+      CSD U6 colorLeds intensity_2018: |-
+        # Cambiar el brillo
+
+        El comando `intensidad()` te permite configurar el brillo de un LED (o _intensidad_) de 0 - 100. Este programa te permite elegir tres niveles de brillo para tu arco iris, pero el nivel medio aún no funciona.
+
+        # Haz esto
+
+        -   Lee el programa y mira cómo funcionan los botones "Brillante" y "Tenue".
+        -   Agrega código para hacer que el botón "Medio" haga que el arco iris tenga un nivel medio de brillo (entre "Brillante" y "Tenue"). ([Muéstrame dónde.](#triggercallout=code_triggered))
+      CSD U6 colorLeds intensity_2019: |-
+        # Cambiar el brillo
+
+        El comando `intensidad()` te permite configurar el brillo de un LED (o _intensidad_) de 0 - 100. Este programa te permite elegir tres niveles de brillo para tu arco iris, pero el nivel medio aún no funciona.
+
+        # Haz esto
+
+        -   Lee el programa y mira cómo funcionan los botones "Brillante" y "Tenue".
+        -   Agrega código para hacer que el botón "Medio" haga que el arco iris tenga un nivel medio de brillo (entre "Brillante" y "Tenue"). ([Muéstrame dónde.](#triggercallout=code_triggered))
+      CSD U6 colorLeds light pattern: |-
+        # Patrones de luz
+
+        Esta aplicación ya tiene un programa de patrón de luz, que se puede activar haciendo clic en un botón. Hemos puesto este patrón en una función para hacer que el código sea cada vez más limpio.
+
+        # Haz esto
+
+        Crea una función de patrón de luz propia; tal vez, los colores de tus vacaciones favoritas, colegio, equipo deportivo, o intenta crear una imagen con las luces.
+
+        Luego de haber creado tu propia función, agrega un botón y controlador de evento para que puedas alternar entre los dos patrones de luces.
+      CSD U6 colorLeds light pattern_2018: |-
+        # Patrones de luz
+
+        Esta aplicación ya tiene un programa de patrón de luz, que se puede activar haciendo clic en un botón. Hemos puesto este patrón en una función para hacer que el código sea cada vez más limpio.
+
+        # Haz esto
+
+        Crea una función de patrón de luz propia; tal vez, los colores de tus vacaciones favoritas, colegio, equipo deportivo, o intenta crear una imagen con las luces.
+
+        Luego de haber creado tu propia función, agrega un botón y controlador de evento para que puedas alternar entre los dos patrones de luces.
+      CSD U6 colorLeds light pattern_2019: |-
+        # Patrones de luz
+
+        Esta aplicación ya tiene un programa de patrón de luz, que se puede activar haciendo clic en un botón. Hemos puesto este patrón en una función para hacer que el código sea cada vez más limpio.
+
+        # Haz esto
+
+        Crea una función de patrón de luz propia; tal vez, los colores de tus vacaciones favoritas, colegio, equipo deportivo, o intenta crear una imagen con las luces.
+
+        Luego de haber creado tu propia función, agrega un botón y controlador de evento para que puedas alternar entre los dos patrones de luces.
+      CSD U6 colorLeds predict embed: |-
+        # LEDs de colores
+
+        Este programa usa el arreglo LEDs de colores, el cual te permite controlar los LEDs de colores en el Circuit Playground.
+
+        ¿Qué crees que hará este código? Escribe tu predicción en el cuadro a continuación, luego ejecuta el código y mira lo que sucede.
+      CSD U6 colorLeds predict embed_2018: |-
+        # LEDs de colores
+
+        Este programa usa el arreglo LEDs de colores, el cual te permite controlar los LEDs de colores en el Circuit Playground.
+
+        ¿Qué crees que hará este código? Escribe tu predicción en el cuadro a continuación, luego ejecuta el código y mira lo que sucede.
+      CSD U6 colorLeds predict embed_2019: |-
+        # LEDs de colores
+
+        Este programa usa el arreglo LEDs de colores, el cual te permite controlar los LEDs de colores en el Circuit Playground.
+
+        ¿Qué crees que hará este código? Escribe tu predicción en el cuadro a continuación, luego ejecuta el código y mira lo que sucede.
       CSD U6 create LED app: |-
         # Crear tu aplicación -  La Pantalla
 
@@ -11471,6 +11753,60 @@ es-MX:
         en el Modo Diseño.\n-   Crea un evento que se disparará cuando se cambie el
         valor del deslizador.\n-   Agrega código para obtener el valor del deslizador
         y almacenarlo en la variable `speed` cuando se active el evento. "
+      CSD U6 directional LEDs roll: |-
+        # Rodar
+
+        Este programa debería mostrar "Izquierda" o "Derecha" en la pantalla, dependiendo de la forma en la que el tablero se incline.
+
+        # Haz esto
+
+        -   Usa la propiedad "rodar" del acelerómetro para determinar si el tablero está inclinado hacia la izquierda o la derecha.
+        -   Usa un condicional para cambiar el texto para el elemento "dirección", para que sea "Izquierda" o "Derecha", dependiendo de la orientación del tablero.
+      CSD U6 directional LEDs roll_2018: |-
+        # Rodar
+
+        Este programa debería mostrar "Izquierda" o "Derecha" en la pantalla, dependiendo de la forma en la que el tablero se incline.
+
+        # Haz esto
+
+        -   Usa la propiedad "rodar" del acelerómetro para determinar si el tablero está inclinado hacia la izquierda o la derecha.
+        -   Usa un condicional para cambiar el texto para el elemento "dirección", para que sea "Izquierda" o "Derecha", dependiendo de la orientación del tablero.
+      CSD U6 directional LEDs roll_2019: |-
+        # Rodar
+
+        Este programa debería mostrar "Izquierda" o "Derecha" en la pantalla, dependiendo de la forma en la que el tablero se incline.
+
+        # Haz esto
+
+        -   Usa la propiedad "rodar" del acelerómetro para determinar si el tablero está inclinado hacia la izquierda o la derecha.
+        -   Usa un condicional para cambiar el texto para el elemento "dirección", para que sea "Izquierda" o "Derecha", dependiendo de la orientación del tablero.
+      CSD U6 directional leds pitch: |-
+        # Cabeceo
+
+        Este programa enciende los LEDs superiores (0 y 9) cuando inclinas el tablero hacia adelante. Si inclinas el tablero hacia atrás, los LEDs inferiores (4 y 5) deberían encenderse.
+
+        # Haz esto
+
+        -   Usa el cabeceo del tablero para hacer que los LEDs 4 y 5 se enciendan cuando inclinas hacia atrás el tablero.
+        -   Ejecuta el código y pruébalo algunas veces.
+      CSD U6 directional leds pitch_2018: |-
+        # Cabeceo
+
+        Este programa enciende los LEDs superiores (0 y 9) cuando inclinas el tablero hacia adelante. Si inclinas el tablero hacia atrás, los LEDs inferiores (4 y 5) deberían encenderse.
+
+        # Haz esto
+
+        -   Usa el cabeceo del tablero para hacer que los LEDs 4 y 5 se enciendan cuando inclinas hacia atrás el tablero.
+        -   Ejecuta el código y pruébalo algunas veces.
+      CSD U6 directional leds pitch_2019: |-
+        # Cabeceo
+
+        Este programa enciende los LEDs superiores (0 y 9) cuando inclinas el tablero hacia adelante. Si inclinas el tablero hacia atrás, los LEDs inferiores (4 y 5) deberían encenderse.
+
+        # Haz esto
+
+        -   Usa el cabeceo del tablero para hacer que los LEDs 4 y 5 se enciendan cuando inclinas hacia atrás el tablero.
+        -   Ejecuta el código y pruébalo algunas veces.
       CSD U6 emoji race demo: |-
         # ¡Carrera de emojis!
 
@@ -11669,39 +12005,122 @@ es-MX:
         -   ¿Qué controladores de eventos usa esta aplicación?
         -   ¿Qué elementos se cambian con código?
         -   ¿Qué propiedades se cambian cuando haces clic en un botón?
-      CSD U6 for loop click exit: "# Saber cuándo detenerse\\\r\n\n\\\r\nProbablemente
-        has notado en el último nivel que recibió un error si hizo clic en el botón
-        muchas veces. Cada vez que está escribiendo código que se repite (incluso
-        cuando se repite de forma manual, como este), es importante considerar cómo
-        sabrá que es hora de detener la repetición.\\\r\n\\\r\n\n# Hacer esto\\\r\n\n\\\r\nEste
-        programa es similar al anterior, excepto que hemos reemplazado el nombre de
-        la variable con uno más descriptivo, y agregamos un condicional dentro del
-        controlador de eventos. Tendrá que completar el condicional para que no intentemos
-        alternar un LED que no existe.\\\r\n\\\r\n\\_ ¿Su código funcionaría sin cambios
-        para una placa con más o menos LED? Si no, ¿podrías modificarlo para que así
-        sea? \\_"
-      CSD U6 for loop click exit_2018: "# Saber cuándo detenerse\\\r\n\n\\\r\nProbablemente
-        has notado en el último nivel que recibió un error si hizo clic en el botón
-        muchas veces. Cada vez que está escribiendo código que se repite (incluso
-        cuando se repite de forma manual, como este), es importante considerar cómo
-        sabrá que es hora de detener la repetición.\\\r\n\\\r\n\n# Hacer esto\\\r\n\n\\\r\nEste
-        programa es similar al anterior, excepto que hemos reemplazado el nombre de
-        la variable con uno más descriptivo, y agregamos un condicional dentro del
-        controlador de eventos. Tendrá que completar el condicional para que no intentemos
-        alternar un LED que no existe.\\\r\n\\\r\n\\_ ¿Su código funcionaría sin cambios
-        para una placa con más o menos LED? Si no, ¿podrías modificarlo para que así
-        sea? \\_"
-      CSD U6 for loop click exit_2019: "# Saber cuándo detenerse\\\r\n\n\\\r\nProbablemente
-        has notado en el último nivel que recibió un error si hizo clic en el botón
-        muchas veces. Cada vez que está escribiendo código que se repite (incluso
-        cuando se repite de forma manual, como este), es importante considerar cómo
-        sabrá que es hora de detener la repetición.\\\r\n\\\r\n\n# Hacer esto\\\r\n\n\\\r\nEste
-        programa es similar al anterior, excepto que hemos reemplazado el nombre de
-        la variable con uno más descriptivo, y agregamos un condicional dentro del
-        controlador de eventos. Tendrá que completar el condicional para que no intentemos
-        alternar un LED que no existe.\\\r\n\\\r\n\\_ ¿Su código funcionaría sin cambios
-        para una placa con más o menos LED? Si no, ¿podrías modificarlo para que así
-        sea? \\_"
+      CSD U6 for loop button array: |-
+        # Hacer bucles sobre arreglos
+
+        Una de las formas más potentes para usar un bucle para es hacer un bucle sobre un arreglo, y ejecutar código sobre cada item del arreglo. Podemos hacer esto usando la variable de contador de bucles (generalmente `i`) como el índice de tu arreglo.
+
+        # Haz esto
+
+        Este programa debería hacer bucles sobre el arreglo `botones` y hacer dos cosas a cada botón; cambiar el color de fondo a rojo, y cambiar la altura a 50 pixeles.
+
+        -   Agrega un segundo bloque `configurarPropiedad` dentro del bucle
+        -   Cambia el objetivo a `botones[i]`
+        -   Configura la propiedad "altura" en 50
+
+        ![expandable](https://images.code.org/df3d514bae5c23de9e0fbdf1d7798432-image-1512431649584.png)
+      CSD U6 for loop button array_2018: |-
+        # Hacer bucles sobre arreglos
+
+        Una de las formas más potentes para usar un bucle para es hacer un bucle sobre un arreglo, y ejecutar código sobre cada item del arreglo. Podemos hacer esto usando la variable de contador de bucles (generalmente `i`) como el índice de tu arreglo.
+
+        # Haz esto
+
+        Este programa debería hacer bucles sobre el arreglo `botones` y hacer dos cosas a cada botón; cambiar el color de fondo a rojo, y cambiar la altura a 50 pixeles.
+
+        -   Agrega un segundo bloque `configurarPropiedad` dentro del bucle
+        -   Cambia el objetivo a `botones[i]`
+        -   Configura la propiedad "altura" en 50
+
+        ![expandable](https://images.code.org/df3d514bae5c23de9e0fbdf1d7798432-image-1512431649584.png)
+      CSD U6 for loop button array_2019: |-
+        # Hacer bucles sobre arreglos
+
+        Una de las formas más potentes para usar un bucle para es hacer un bucle sobre un arreglo, y ejecutar código sobre cada item del arreglo. Podemos hacer esto usando la variable de contador de bucles (generalmente `i`) como el índice de tu arreglo.
+
+        # Haz esto
+
+        Este programa debería hacer bucles sobre el arreglo `botones` y hacer dos cosas a cada botón; cambiar el color de fondo a rojo, y cambiar la altura a 50 pixeles.
+
+        -   Agrega un segundo bloque `configurarPropiedad` dentro del bucle
+        -   Cambia el objetivo a `botones[i]`
+        -   Configura la propiedad "altura" en 50
+
+        ![expandable](https://images.code.org/df3d514bae5c23de9e0fbdf1d7798432-image-1512431649584.png)
+      CSD U6 for loop click exit: |-
+        # Saber cuándo detenerse
+
+        Si hacías clic en el botón muchas veces, recibías un error. Cada vez que estás escribiendo código que se repite, es importante considerar cómo sabrás que es momento de _detener_ la repetición.
+
+        # Haz esto
+
+        Este programa es similar al anterior, pero hay un condicional dentro del controlador de eventos. Tendrás que completar el condicional para que no intentemos alternar un LED que no existe.
+
+        \_ ¿Tu código funcionaría sin cambios para un tablero con más o menos LED? Si no, ¿podrías modificarlo para que así sea? \_
+      CSD U6 for loop click exit_2018: |-
+        # Saber cuándo detenerse
+
+        Si hacías clic en el botón muchas veces, recibías un error. Cada vez que estás escribiendo código que se repite, es importante considerar cómo sabrás que es momento de _detener_ la repetición.
+
+        # Haz esto
+
+        Este programa es similar al anterior, pero hay un condicional dentro del controlador de eventos. Tendrás que completar el condicional para que no intentemos alternar un LED que no existe.
+
+        \_ ¿Tu código funcionaría sin cambios para un tablero con más o menos LED? Si no, ¿podrías modificarlo para que así sea? \_
+      CSD U6 for loop click exit_2019: |-
+        # Saber cuándo detenerse
+
+        Si hacías clic en el botón muchas veces, recibías un error. Cada vez que estás escribiendo código que se repite, es importante considerar cómo sabrás que es momento de _detener_ la repetición.
+
+        # Haz esto
+
+        Este programa es similar al anterior, pero hay un condicional dentro del controlador de eventos. Tendrás que completar el condicional para que no intentemos alternar un LED que no existe.
+
+        \_ ¿Tu código funcionaría sin cambios para un tablero con más o menos LED? Si no, ¿podrías modificarlo para que así sea? \_
+      CSD U6 for loop click predict question: |-
+        # Hacer una predicción
+
+        Lea el código de este programa y haz una predicción sobre qué sucederá cada vez que se haga clic en el botón.
+      CSD U6 for loop click predict question_2018: |-
+        # Hacer una predicción
+
+        Lea el código de este programa y haz una predicción sobre qué sucederá cada vez que se haga clic en el botón.
+      CSD U6 for loop click predict question_2019: |-
+        # Hacer una predicción
+
+        Lea el código de este programa y haz una predicción sobre qué sucederá cada vez que se haga clic en el botón.
+      CSD U6 for loop images: "# Crear un bucle ´para´ desde cero\n\nAhora que has
+        practicado un poco modificando los bucles ´para´ con el fin de procesar arreglos,
+        veamos si lo puedes hacer tú solo.\n\n# Haz esto\n\nInicialmente, hemos brindado
+        los elementos de diseño y un arreglo, pero el resto depende de ti.\n\n-   Agrega
+        un controlar de eventos para responder a cuando se le hace clic a \"thumbsup\\_button\"
+        \n-   Coloca un _bucle para_ dentro del controlar de eventos\n-   Modifica
+        la condición de salida del _bucle para_ de manera que se ejecute hasta que
+        llegue al fin del arreglo `imágenes`\n-   Dentro de tu _bucle para_, cambia
+        la imagen actual a \"icono://fa-pulgares-o-arriba\"\n\n_Desafío: ¿puedes agregar
+        un segundo botón que gire todas las imágenes de nuevo a pulgares para abajo?_"
+      CSD U6 for loop images_2018: "# Crear un bucle ´para´ desde cero\n\nAhora que
+        has practicado un poco modificando los bucles ´para´ con el fin de procesar
+        arreglos, veamos si lo puedes hacer tú solo.\n\n# Haz esto\n\nInicialmente,
+        hemos brindado los elementos de diseño y un arreglo, pero el resto depende
+        de ti.\n\n-   Agrega un controlar de eventos para responder a cuando se le
+        hace clic a \"thumbsup\\_button\" \n-   Coloca un _bucle para_ dentro del
+        controlar de eventos\n-   Modifica la condición de salida del _bucle para_
+        de manera que se ejecute hasta que llegue al fin del arreglo `imágenes`\n-
+        \  Dentro de tu _bucle para_, cambia la imagen actual a \"icono://fa-pulgares-o-arriba\"\n\n_Desafío:
+        ¿puedes agregar un segundo botón que gire todas las imágenes de nuevo a pulgares
+        para abajo?_"
+      CSD U6 for loop images_2019: "# Crear un bucle ´para´ desde cero\n\nAhora que
+        has practicado un poco modificando los bucles ´para´ con el fin de procesar
+        arreglos, veamos si lo puedes hacer tú solo.\n\n# Haz esto\n\nInicialmente,
+        hemos brindado los elementos de diseño y un arreglo, pero el resto depende
+        de ti.\n\n-   Agrega un controlar de eventos para responder a cuando se le
+        hace clic a \"thumbsup\\_button\" \n-   Coloca un _bucle para_ dentro del
+        controlar de eventos\n-   Modifica la condición de salida del _bucle para_
+        de manera que se ejecute hasta que llegue al fin del arreglo `imágenes`\n-
+        \  Dentro de tu _bucle para_, cambia la imagen actual a \"icono://fa-pulgares-o-arriba\"\n\n_Desafío:
+        ¿puedes agregar un segundo botón que gire todas las imágenes de nuevo a pulgares
+        para abajo?_"
       CSD U6 for loop led function: |-
         # Cambiar colores con una función
 
@@ -11718,6 +12137,64 @@ es-MX:
         -   Dentro de tu _bucle desde_, establece el color del LED actual con el parámetro `color` (por ej. `colorLeds[i].color(color)`
 
         Agregaremos controladores de eventos que usen esta función en el próximo nivel, pero por ahora, puedes probar tu función en tu programa y escribir esto en la consola de depuración: `setLedsColor("blue")`
+      CSD U6 for loop led function call: |-
+        # Llamar a tus funciones
+
+        Ahora que has creado una función que se comporta de manera diferente en base al parámetro que pasó, lo podemos usar en múltiples controladores de eventos diferentes para cambiar las luces a colores diferentes.
+
+        # Haz esto
+
+        Simplemente comenzaremos creando un controlador de eventos para "botón\_rojo"
+
+        -   Crea un controlador de eventos nuevo para responder a "botón\_rojo"
+        -   Dentro del controlador de eventos, agrega un bloque "llamar función con parámetro"
+            ![expandable](https://images.code.org/ee8e026b59682066eccfc4795b5c5036-image-1512771755527.png)
+        -   Cambia el nombre de `miFunción` por `configurarColorLeds`
+        -   Cambia el parámetro de `n` a "rojo" (¡ten en cuenta las comillas!)
+        -   Prueba tu programa, el botón "Rojo" debería encender todos los LEDs rojos
+      CSD U6 for loop led function call_2018: |-
+        # Llamar a tus funciones
+
+        Ahora que has creado una función que se comporta de manera diferente en base al parámetro que pasó, lo podemos usar en múltiples controladores de eventos diferentes para cambiar las luces a colores diferentes.
+
+        # Haz esto
+
+        Simplemente comenzaremos creando un controlador de eventos para "botón\_rojo"
+
+        -   Crea un controlador de eventos nuevo para responder a "botón\_rojo"
+        -   Dentro del controlador de eventos, agrega un bloque "llamar función con parámetro"
+            ![expandable](https://images.code.org/ee8e026b59682066eccfc4795b5c5036-image-1512771755527.png)
+        -   Cambia el nombre de `miFunción` por `configurarColorLeds`
+        -   Cambia el parámetro de `n` a "rojo" (¡ten en cuenta las comillas!)
+        -   Prueba tu programa, el botón "Rojo" debería encender todos los LEDs rojos
+      CSD U6 for loop led function finish: |-
+        # Terminar la aplicación
+
+        Si el botón rojo funcionó, lo único que falta es llamar a la nueva función cuando se le hace clic a los demás botones.
+
+        # Haz esto
+
+        Para cada uno de los botones restantes (verde, azul y blanco):
+
+        -   Crea un nuevo controlador de eventos
+        -   Llama a la función `configurarColorLeds` con el color apropiado ("verde", "azul" o "blanco")
+        -   Prueba tu programa para asegurarte de que todos los botones funcionan
+
+        Cuando hayas logrado que todos los botones funcionen adecuadamente, haz clic en "Enviar" para entregar tu programa.
+      CSD U6 for loop led function finish_2018: |-
+        # Terminar la aplicación
+
+        Si el botón rojo funcionó, lo único que falta es llamar a la nueva función cuando se le hace clic a los demás botones.
+
+        # Haz esto
+
+        Para cada uno de los botones restantes (verde, azul y blanco):
+
+        -   Crea un nuevo controlador de eventos
+        -   Llama a la función `configurarColorLeds` con el color apropiado ("verde", "azul" o "blanco")
+        -   Prueba tu programa para asegurarte de que todos los botones funcionan
+
+        Cuando hayas logrado que todos los botones funcionen adecuadamente, haz clic en "Enviar" para entregar tu programa.
       CSD U6 for loop led function_2018: |-
         # Cambiar colores con una función
 
@@ -11734,6 +12211,63 @@ es-MX:
         -   Dentro de tu _bucle desde_, establece el color del LED actual con el parámetro `color` (por ej. `colorLeds[i].color(color)`
 
         Agregaremos controladores de eventos que usen esta función en el próximo nivel, pero por ahora, puedes probar tu función en tu programa y escribir esto en la consola de depuración: `setLedsColor("blue")`
+      CSD U6 for loop led off: |-
+        # Encender todos los LEDs de colores
+
+        Ahora que has logrado que un botón encienda los LEDs de colores, puedes hacer que otro los apague.
+
+        # Haz esto
+
+        Agrega un controlador de eventos a "botón\_apagado" con un bucle para que apaga cada LED de colores.
+      CSD U6 for loop led off_2018: |-
+        # Encender todos los LEDs de colores
+
+        Ahora que has logrado que un botón encienda los LEDs de colores, puedes hacer que otro los apague.
+
+        # Haz esto
+
+        Agrega un controlador de eventos a "botón\_apagado" con un bucle para que apaga cada LED de colores.
+      CSD U6 for loop led off_2019: |-
+        # Encender todos los LEDs de colores
+
+        Ahora que has logrado que un botón encienda los LEDs de colores, puedes hacer que otro los apague.
+
+        # Haz esto
+
+        Agrega un controlador de eventos a "botón\_apagado" con un bucle para que apaga cada LED de colores.
+      CSD U6 for loop led on: "# Encender todos los LEDs de colores\n\nAhora que sabes
+        cómo usar un _bucle para_ para procesar todos los elementos en un arreglo,
+        puedes encender todos los LEDs de colores mucho más fácilmente que antes.\n\n#
+        Haz esto\n\nVamos a empezar una aplicación que controlará todos los LEDs de
+        colores de tu tablero. El primer paso es cablear el botón que enciende todos
+        los LEDs.\n\n-   Agrega un controlador de eventos para \"botón\\_encendido\"\n-
+        \  Coloca un _bucle para_ en tu controlador de eventos que se repita hasta
+        que alcance el final del arreglo `LedsDeColores` \n-   Dentro del bucle ´para´,
+        llama a `LedsDeColores[i].encendido()` para encender el LED de color actual"
+      CSD U6 for loop list.length: |-
+        # Largo del arreglo
+
+        En el último programa, le dijimos al bucle que se ejecute tres veces con el código `for (var i = 0; i < 3; i++)`. Esto funciona, pero podríamos escribir programas más inteligentes usando el largo del arreglo para que decida cuántas veces hacer el bucle.
+
+        # Haz esto
+
+        Cambia la condición de salida de este bucle para, de manera que se ejecute mientras `i < largo.botones`
+      CSD U6 for loop list.length_2018: |-
+        # Largo del arreglo
+
+        En el último programa, le dijimos al bucle que se ejecute tres veces con el código `for (var i = 0; i < 3; i++)`. Esto funciona, pero podríamos escribir programas más inteligentes usando el largo del arreglo para que decida cuántas veces hacer el bucle.
+
+        # Haz esto
+
+        Cambia la condición de salida de este bucle para, de manera que se ejecute mientras `i < largo.botones`
+      CSD U6 for loop list.length_2019: |-
+        # Largo del arreglo
+
+        En el último programa, le dijimos al bucle que se ejecute tres veces con el código `for (var i = 0; i < 3; i++)`. Esto funciona, pero podríamos escribir programas más inteligentes usando el largo del arreglo para que decida cuántas veces hacer el bucle.
+
+        # Haz esto
+
+        Cambia la condición de salida de este bucle para, de manera que se ejecute mientras `i < largo.botones`
       CSD U6 frequency: "# Frecuencia\n\nEste controlador de timbre se ha expandido
         para controlar también la frecuencia, pero el código aún no está finalizado.\n\n#
         Haz esto\n\n-   Usando la variable `duration` como modelo, crea una variable
@@ -11758,6 +12292,105 @@ es-MX:
         `frequency` en lugar de la frecuencia predeterminada de `500`. \n-   Ejecuta
         el código, luego cambia la frecuencia y la duración para oír la diferencia
         en el timbre.  (No olvides presionar el botón luego de hacer un cambio)"
+      CSD U6 game project board events: |-
+        # Eventos de tablero
+
+        Regresa a la sección Eventos de tu guía de actividades y encuentra cualquier evento que responda a tu tablero (los que usarían `EventoEnTablero()`). Ahora crea un controlador de eventos para cada uno de ellos. Si estos eventos se basan en funciones que aún no has escrito, déjate a tu comentario para ti mismo en el código.
+      CSD U6 game project board events_2018: |-
+        # Eventos de tablero
+
+        Regresa a la sección Eventos de tu guía de actividades y encuentra cualquier evento que responda a tu tablero (los que usarían `EventoEnTablero()`). Ahora crea un controlador de eventos para cada uno de ellos. Si estos eventos se basan en funciones que aún no has escrito, déjate a tu comentario para ti mismo en el código.
+      CSD U6 game project board events_2019: |-
+        # Eventos de tablero
+
+        Regresa a la sección Eventos de tu guía de actividades y encuentra cualquier evento que responda a tu tablero (los que usarían `EventoEnTablero()`). Ahora crea un controlador de eventos para cada uno de ellos. Si estos eventos se basan en funciones que aún no has escrito, déjate a tu comentario para ti mismo en el código.
+      CSD U6 game project finish: |-
+        # Retoques finales y prueba
+
+        En este punto, deberías tener la mayor parte de tu programa preparado. Ahora necesitas agregar cualquier retoque final que sea necesario y realizar una pequeña prueba. Cuando tu aplicación esté lista, haz que un compañero de clase la pruebe. Fíjate si puedes encontrar algún error, elecciones de diseño confusas o funcionalidades faltantes sobre las que te gustaría trabajar.
+
+        Cuando hayas terminado por completo con esta versión de tu programa, haz clic en Enviar para entregarlo.
+      CSD U6 game project finish_2018: |-
+        # Retoques finales y prueba
+
+        En este punto, deberías tener la mayor parte de tu programa preparado. Ahora necesitas agregar cualquier retoque final que sea necesario y realizar una pequeña prueba. Cuando tu aplicación esté lista, haz que un compañero de clase la pruebe. Fíjate si puedes encontrar algún error, elecciones de diseño confusas o funcionalidades faltantes sobre las que te gustaría trabajar.
+
+        Cuando hayas terminado por completo con esta versión de tu programa, haz clic en Enviar para entregarlo.
+      CSD U6 game project finish_2019: |-
+        # Retoques finales y prueba
+
+        En este punto, deberías tener la mayor parte de tu programa preparado. Ahora necesitas agregar cualquier retoque final que sea necesario y realizar una pequeña prueba. Cuando tu aplicación esté lista, haz que un compañero de clase la pruebe. Fíjate si puedes encontrar algún error, elecciones de diseño confusas o funcionalidades faltantes sobre las que te gustaría trabajar.
+
+        Cuando hayas terminado por completo con esta versión de tu programa, haz clic en Enviar para entregarlo.
+      CSD U6 game project functions call: |-
+        # Llamar a tus funciones
+
+        Con tus funciones definidas, las puedes llamar cuando lo necesites. Revisa tus controladores de eventos, o en cualquier otra parte de tu programa en donde se deba usar tu función, y agrega llamadas a las funciones que creaste.
+      CSD U6 game project functions call_2018: |-
+        # Llamar a tus funciones
+
+        Con tus funciones definidas, las puedes llamar cuando lo necesites. Revisa tus controladores de eventos, o en cualquier otra parte de tu programa en donde se deba usar tu función, y agrega llamadas a las funciones que creaste.
+      CSD U6 game project functions call_2019: |-
+        # Llamar a tus funciones
+
+        Con tus funciones definidas, las puedes llamar cuando lo necesites. Revisa tus controladores de eventos, o en cualquier otra parte de tu programa en donde se deba usar tu función, y agrega llamadas a las funciones que creaste.
+      CSD U6 game project functions define: "# Define tus funciones\n\nDefine todas
+        tus funciones en la parte inferior del programa, en el comentario `//Crea
+        tus funciones aquí`.\n\nEn este momento, solo nos preocupa escribir la función
+        _definiciones_, la parte que se parece a:\n\n    función miFunción() {\n    \t//Cosas
+        que hace mi función \n    }"
+      CSD U6 game project functions define_2018: "# Define tus funciones\n\nDefine
+        todas tus funciones en la parte inferior del programa, en el comentario `//Crea
+        tus funciones aquí`.\n\nEn este momento, solo nos preocupa escribir la función
+        _definiciones_, la parte que se parece a:\n\n    función miFunción() {\n    \t//Cosas
+        que hace mi función \n    }"
+      CSD U6 game project functions define_2019: "# Define tus funciones\n\nDefine
+        todas tus funciones en la parte inferior del programa, en el comentario `//Crea
+        tus funciones aquí`.\n\nEn este momento, solo nos preocupa escribir la función
+        _definiciones_, la parte que se parece a:\n\n    función miFunción() {\n    \t//Cosas
+        que hace mi función \n    }"
+      CSD U6 game project screen links: |-
+        # Eventos de elementos de IU
+
+        Ahora que tus pantallas están diseñadas, puedes agregar cualquier controlador de evento que responderá a _interacción de pantalla_. Estos deberían enumerarse en la sección "Eventos" de tu guía de actividad. Si encuentras nuevos eventos en los que no habías pensado en la etapa de planificación, asegúrate de agregarlos a tu guía de proyecto.
+
+        No te preocupes todavía por hacer que sean completamente funcionales. Si tus eventos se basan en elementos o tus propias funciones, nos ocuparemos de eso en niveles posteriores.
+      CSD U6 game project screen links_2018: |-
+        # Eventos de elementos de IU
+
+        Ahora que tus pantallas están diseñadas, puedes agregar cualquier controlador de evento que responderá a _interacción de pantalla_. Estos deberían enumerarse en la sección "Eventos" de tu guía de actividad. Si encuentras nuevos eventos en los que no habías pensado en la etapa de planificación, asegúrate de agregarlos a tu guía de proyecto.
+
+        No te preocupes todavía por hacer que sean completamente funcionales. Si tus eventos se basan en elementos o tus propias funciones, nos ocuparemos de eso en niveles posteriores.
+      CSD U6 game project screen links_2019: |-
+        # Eventos de elementos de IU
+
+        Ahora que tus pantallas están diseñadas, puedes agregar cualquier controlador de evento que responderá a _interacción de pantalla_. Estos deberían enumerarse en la sección "Eventos" de tu guía de actividad. Si encuentras nuevos eventos en los que no habías pensado en la etapa de planificación, asegúrate de agregarlos a tu guía de proyecto.
+
+        No te preocupes todavía por hacer que sean completamente funcionales. Si tus eventos se basan en elementos o tus propias funciones, nos ocuparemos de eso en niveles posteriores.
+      CSD U6 game project screens: |-
+        # Crear tus pantallas
+
+        Lo primero que deberás hacer es crear todas las pantallas que has bocetado en tu guía de planificación.
+
+        # Haz esto
+
+        Usa el Modo Diseño para crear todas las pantallas que tu programa necesitará. No olvides **elegir IDs coherentes** para todos tus elementos de diseño.
+      CSD U6 game project screens_2018: |-
+        # Crear tus pantallas
+
+        Lo primero que deberás hacer es crear todas las pantallas que has bocetado en tu guía de planificación.
+
+        # Haz esto
+
+        Usa el Modo Diseño para crear todas las pantallas que tu programa necesitará. No olvides **elegir IDs coherentes** para todos tus elementos de diseño.
+      CSD U6 game project screens_2019: |-
+        # Crear tus pantallas
+
+        Lo primero que deberás hacer es crear todas las pantallas que has bocetado en tu guía de planificación.
+
+        # Haz esto
+
+        Usa el Modo Diseño para crear todas las pantallas que tu programa necesitará. No olvides **elegir IDs coherentes** para todos tus elementos de diseño.
       CSD U6 get toggle: |-
         # cambio
 
@@ -11917,6 +12550,18 @@ es-MX:
 
         -   Lee el programa para comprender cómo se supone que debe trabajar.
         -   Encuentra y corrige los errores para que el programa funcione apropiadamente.
+      CSD U6 goalie: "# Actualizar valores con datos\n\nEn este programa, el portero
+        está tratando de bloquear la pelota de fútbol, pero de momento, la pelota
+        no se está moviendo.\n\n# Haz esto\n\n-   Usa el patrón del contador para
+        actualizar el valor `x` de la pelota, para que se mueva en la pantalla. "
+      CSD U6 goalie_2018: "# Actualizar valores con datos\n\nEn este programa, el
+        portero está tratando de bloquear la pelota de fútbol, pero de momento, la
+        pelota no se está moviendo.\n\n# Haz esto\n\n-   Usa el patrón del contador
+        para actualizar el valor `x` de la pelota, para que se mueva en la pantalla. "
+      CSD U6 goalie_2019: "# Actualizar valores con datos\n\nEn este programa, el
+        portero está tratando de bloquear la pelota de fútbol, pero de momento, la
+        pelota no se está moviendo.\n\n# Haz esto\n\n-   Usa el patrón del contador
+        para actualizar el valor `x` de la pelota, para que se mueva en la pantalla. "
       CSD U6 interval: Predecir el nivel
       CSD U6 interval predict: |-
         # Intervalo
@@ -11944,9 +12589,132 @@ es-MX:
         -   Lee el código y haz una predicción de lo que hará el programa, luego presiona "Run" para probar tu predicción.
       CSD U6 interval_2018: Predecir el nivel
       CSD U6 interval_2019: Predecir el nivel
+      CSD U6 investigate orientation: "# Cabeceo y balanceo\n\nEste programa muestra
+        el cabeceo y balanceo del tablero, y también cambiará colores dependiendo
+        de sus valores.  \n\n# Haz esto\n\nHaz que el programa cambie los siguientes
+        colores inclinando el tablero al cabeceo y balanceo correcto.\n\n<div style=\"display:inline-block;
+        background-color: skyblue; height: 30px; width:30px\">&nbsp;</div> Cabeceo:
+        0 | Balanceo: -20\n\n<p/>\n\n<div style=\"display:inline-block; background-color:
+        burlywood; height: 30px; width:30px\">&nbsp;</div> Cabeceo: 30 | Balanceo:
+        0\n\n<p/>\n\n<div style=\"display:inline-block; background-color: mistyrose;
+        height: 30px; width:30px\">&nbsp;</div> Cabeceo: -15 | Balanceo: 10\n\n<p/>\n\n<div
+        style=\"display:inline-block; background-color: yellowgreen; height: 30px;
+        width:30px\">&nbsp;</div> Cabeceo: 5 | Balanceo: -25\n\n<p/>\n\n<div style=\"display:inline-block;
+        background-color: thistle; height: 30px; width:30px\">&nbsp;</div> Cabeceo:
+        10 | Balanceo: 30\n\n<p/>\n\n¿En qué dirección deberías inclinarte para obtener
+        un cabeceo positivo?\n\n¿En qué dirección deberías inclinarte para obtener
+        un cabeceo negativo?"
+      CSD U6 investigate orientation_2018: "# Cabeceo y balanceo\n\nEste programa
+        muestra el cabeceo y balanceo del tablero, y también cambiará colores dependiendo
+        de sus valores.  \n\n# Haz esto\n\nHaz que el programa cambie los siguientes
+        colores inclinando el tablero al cabeceo y balanceo correcto.\n\n<div style=\"display:inline-block;
+        background-color: skyblue; height: 30px; width:30px\">&nbsp;</div> Cabeceo:
+        0 | Balanceo: -20\n\n<p/>\n\n<div style=\"display:inline-block; background-color:
+        burlywood; height: 30px; width:30px\">&nbsp;</div> Cabeceo: 30 | Balanceo:
+        0\n\n<p/>\n\n<div style=\"display:inline-block; background-color: mistyrose;
+        height: 30px; width:30px\">&nbsp;</div> Cabeceo: -15 | Balanceo: 10\n\n<p/>\n\n<div
+        style=\"display:inline-block; background-color: yellowgreen; height: 30px;
+        width:30px\">&nbsp;</div> Cabeceo: 5 | Balanceo: -25\n\n<p/>\n\n<div style=\"display:inline-block;
+        background-color: thistle; height: 30px; width:30px\">&nbsp;</div> Cabeceo:
+        10 | Balanceo: 30\n\n<p/>\n\n¿En qué dirección deberías inclinarte para obtener
+        un cabeceo positivo?\n\n¿En qué dirección deberías inclinarte para obtener
+        un cabeceo negativo?"
+      CSD U6 investigate orientation_2019: "# Cabeceo y balanceo\n\nEste programa
+        muestra el cabeceo y balanceo del tablero, y también cambiará colores dependiendo
+        de sus valores.  \n\n# Haz esto\n\nHaz que el programa cambie los siguientes
+        colores inclinando el tablero al cabeceo y balanceo correcto.\n\n<div style=\"display:inline-block;
+        background-color: skyblue; height: 30px; width:30px\">&nbsp;</div> Cabeceo:
+        0 | Balanceo: -20\n\n<p/>\n\n<div style=\"display:inline-block; background-color:
+        burlywood; height: 30px; width:30px\">&nbsp;</div> Cabeceo: 30 | Balanceo:
+        0\n\n<p/>\n\n<div style=\"display:inline-block; background-color: mistyrose;
+        height: 30px; width:30px\">&nbsp;</div> Cabeceo: -15 | Balanceo: 10\n\n<p/>\n\n<div
+        style=\"display:inline-block; background-color: yellowgreen; height: 30px;
+        width:30px\">&nbsp;</div> Cabeceo: 5 | Balanceo: -25\n\n<p/>\n\n<div style=\"display:inline-block;
+        background-color: thistle; height: 30px; width:30px\">&nbsp;</div> Cabeceo:
+        10 | Balanceo: 30\n\n<p/>\n\n¿En qué dirección deberías inclinarte para obtener
+        un cabeceo positivo?\n\n¿En qué dirección deberías inclinarte para obtener
+        un cabeceo negativo?"
+      CSD U6 iter create notes: |-
+        # Reproductor de música
+
+        Este programa te permite reproducir música moviendo una varita sobre las diferentes notas, pero le falta una definición de función.
+
+        # Haz esto
+
+        -   Crea una función `mirarNotas()` que llamará a `mirarNota(nota)` sobre todo lo que hay dentro del arreglo "notas".
+      CSD U6 iter create notes_2018: |-
+        # Reproductor de música
+
+        Este programa te permite reproducir música moviendo una varita sobre las diferentes notas, pero le falta una definición de función.
+
+        # Haz esto
+
+        -   Crea una función `mirarNotas()` que llamará a `mirarNota(nota)` sobre todo lo que hay dentro del arreglo "notas".
+      CSD U6 iter create notes_2019: |-
+        # Reproductor de música
+
+        Este programa te permite reproducir música moviendo una varita sobre las diferentes notas, pero le falta una definición de función.
+
+        # Haz esto
+
+        -   Crea una función `mirarNotas()` que llamará a `mirarNota(nota)` sobre todo lo que hay dentro del arreglo "notas".
+      CSD U6 iter modify bugs: |-
+        # Mezcladora de errores
+
+        Este programa mezcla errores cuando se sacude el tablero, pero solo funciona para un error.
+
+        # Haz esto
+
+        -   Cambia la función `moverErrores()` para que llame a `moverError(color)` en cada color de error.
+        -   (Sugerencia: mira la función `detectarConsultas()` para encontrar pistas sobre cómo hacer esto).
+      CSD U6 iter modify bugs_2018: |-
+        # Mezcladora de errores
+
+        Este programa mezcla errores cuando se sacude el tablero, pero solo funciona para un error.
+
+        # Haz esto
+
+        -   Cambia la función `moverErrores()` para que llame a `moverError(color)` en cada color de error.
+        -   (Sugerencia: mira la función `detectarConsultas()` para encontrar pistas sobre cómo hacer esto).
+      CSD U6 iter modify bugs_2019: |-
+        # Mezcladora de errores
+
+        Este programa mezcla errores cuando se sacude el tablero, pero solo funciona para un error.
+
+        # Haz esto
+
+        -   Cambia la función `moverErrores()` para que llame a `moverError(color)` en cada color de error.
+        -   (Sugerencia: mira la función `detectarConsultas()` para encontrar pistas sobre cómo hacer esto).
       CSD U6 iter predict bubbles: "![](https://images.code.org/52f474adbbc3bdd87aaae407c9ebf588-image-1515690462464.png)"
+      CSD U6 iter predict bubbles contained: |-
+        # Burbujas de peces
+
+        Este programa usa el sensor de sonido de la misma forma que el programa de nubes. ¿Cuántas burbujas de moverán cuando soples en el tablero?
+      CSD U6 iter predict bubbles contained_2018: |-
+        # Burbujas de peces
+
+        Este programa usa el sensor de sonido de la misma forma que el programa de nubes. ¿Cuántas burbujas de moverán cuando soples en el tablero?
+      CSD U6 iter predict bubbles contained_2019: |-
+        # Burbujas de peces
+
+        Este programa usa el sensor de sonido de la misma forma que el programa de nubes. ¿Cuántas burbujas de moverán cuando soples en el tablero?
       CSD U6 iter predict bubbles_2018: "![](https://images.code.org/52f474adbbc3bdd87aaae407c9ebf588-image-1515690462464.png)"
       CSD U6 iter predict bubbles_2019: "![](https://images.code.org/52f474adbbc3bdd87aaae407c9ebf588-image-1515690462464.png)"
+      CSD U6 light pattern off: "# Apagado\n\nCuando inicias tu aplicación, las luces
+        están apagadas, pero cuando eliges un patrón, no hay forma de volver a apagar
+        las luces.\n\n# Haz esto\n\nCrea una función que apague todos los LEDs, y
+        luego agrega un botón \"Apagado\" a tu aplicación y haz que apague todos los
+        LEDs de colores. "
+      CSD U6 light pattern off_2018: "# Apagado\n\nCuando inicias tu aplicación, las
+        luces están apagadas, pero cuando eliges un patrón, no hay forma de volver
+        a apagar las luces.\n\n# Haz esto\n\nCrea una función que apague todos los
+        LEDs, y luego agrega un botón \"Apagado\" a tu aplicación y haz que apague
+        todos los LEDs de colores. "
+      CSD U6 light pattern off_2019: "# Apagado\n\nCuando inicias tu aplicación, las
+        luces están apagadas, pero cuando eliges un patrón, no hay forma de volver
+        a apagar las luces.\n\n# Haz esto\n\nCrea una función que apague todos los
+        LEDs, y luego agrega un botón \"Apagado\" a tu aplicación y haz que apague
+        todos los LEDs de colores. "
       CSD U6 light show predict: |-
         # Crear un espectáculo de luces
 
@@ -12004,9 +12772,225 @@ es-MX:
 
         -   Lee el programa y charla con un compañero sobre cómo el botón izquierdo hace que la motocicleta vaya hacia arriba.
         -   Usando el botón izquierdo en funcionamiento como ejemplo, programa el botón derecho para hacer que la motocicleta vaya hacia abajo.
+      CSD U6 params create colors: |-
+        # Selector de colores
+
+        En este programa, presiona los botones del fondo de la pantalla cambia el color de las imágenes y los LEDs de colores.
+
+        # Haz esto
+
+        -   Crea una función `seleccionarColor(color)` que cambia cada una de las imágenes y los LEDs de colores al color dado.
+        -   Llama a tu función en los bloques de eventos para que todos los botones funcionen.
+      CSD U6 params create colors_2018: |-
+        # Selector de colores
+
+        En este programa, presiona los botones del fondo de la pantalla cambia el color de las imágenes y los LEDs de colores.
+
+        # Haz esto
+
+        -   Crea una función `seleccionarColor(color)` que cambia cada una de las imágenes y los LEDs de colores al color dado.
+        -   Llama a tu función en los bloques de eventos para que todos los botones funcionen.
+      CSD U6 params create colors_2019: |-
+        # Selector de colores
+
+        En este programa, presiona los botones del fondo de la pantalla cambia el color de las imágenes y los LEDs de colores.
+
+        # Haz esto
+
+        -   Crea una función `seleccionarColor(color)` que cambia cada una de las imágenes y los LEDs de colores al color dado.
+        -   Llama a tu función en los bloques de eventos para que todos los botones funcionen.
+      CSD U6 params predict contained: |-
+        # Rastreo de errores
+
+        Mira el programa a continuación y presta especial atención a la función `rastrear(error)`. ¿Qué sucede si presionas el botón izquierdo o derecho?
+      CSD U6 params predict contained_2018: |-
+        # Rastreo de errores
+
+        Mira el programa a continuación y presta especial atención a la función `rastrear(error)`. ¿Qué sucede si presionas el botón izquierdo o derecho?
+      CSD U6 params predict contained_2019: |-
+        # Rastreo de errores
+
+        Mira el programa a continuación y presta especial atención a la función `rastrear(error)`. ¿Qué sucede si presionas el botón izquierdo o derecho?
+      CSD U6 params starchaser 1: |-
+        # Crea tu función `bucleEstrella(color)`
+
+        En este momento, solo la estrella roja funciona, de modo que tendremos que cambiar este código.
+
+        # Haz esto
+
+        -   Usa el código de la función `bucleEstrellaRoja()` para crear una función `bucleEstrella(color)` que funcionará con cualquier estrella.
+        -   Prueba tu función llamando a `bucleEstrella("roja")` y `bucleEstrella("azul")` dentro de la función `bucleEstrellas()`.
+      CSD U6 params starchaser 1_2018: |-
+        # Crea tu función `bucleEstrella(color)`
+
+        En este momento, solo la estrella roja funciona, de modo que tendremos que cambiar este código.
+
+        # Haz esto
+
+        -   Usa el código de la función `bucleEstrellaRoja()` para crear una función `bucleEstrella(color)` que funcionará con cualquier estrella.
+        -   Prueba tu función llamando a `bucleEstrella("roja")` y `bucleEstrella("azul")` dentro de la función `bucleEstrellas()`.
+      CSD U6 params starchaser 1_2019: |-
+        # Crea tu función `bucleEstrella(color)`
+
+        En este momento, solo la estrella roja funciona, de modo que tendremos que cambiar este código.
+
+        # Haz esto
+
+        -   Usa el código de la función `bucleEstrellaRoja()` para crear una función `bucleEstrella(color)` que funcionará con cualquier estrella.
+        -   Prueba tu función llamando a `bucleEstrella("roja")` y `bucleEstrella("azul")` dentro de la función `bucleEstrellas()`.
+      CSD U6 params starchaser 2: |-
+        # Cazador de estrellas
+
+        Todas las estrellas están en bucle, pero sigues atrapando solamente la estrella roja.
+
+        # Haz esto
+
+        -   Usa el bucle ´para´ dentro de tu función ´bucleEstrella()´para hacer que cada estrella en "arregloEstrella´ estén en bucle alrededor de la pantalla.
+      CSD U6 params starchaser 2_2018: |-
+        # Cazador de estrellas
+
+        Todas las estrellas están en bucle, pero sigues atrapando solamente la estrella roja.
+
+        # Haz esto
+
+        -   Usa el bucle ´para´ dentro de tu función ´bucleEstrella()´para hacer que cada estrella en "arregloEstrella´ estén en bucle alrededor de la pantalla.
+      CSD U6 params starchaser 2_2019: |-
+        # Cazador de estrellas
+
+        Todas las estrellas están en bucle, pero sigues atrapando solamente la estrella roja.
+
+        # Haz esto
+
+        -   Usa el bucle ´para´ dentro de tu función ´bucleEstrella()´para hacer que cada estrella en "arregloEstrella´ estén en bucle alrededor de la pantalla.
+      CSD U6 params starchaser 3: |-
+        # Cazador de estrellas
+
+        Todas las estrellas están en bucle, pero sigues atrapando solamente la estrella roja.
+
+        # Haz esto
+
+        -   Usa el código de la función `moverEstrellaRoja()` para crear una función `moverEstrella(color)` que pueda mover cualquier estrella.
+        -   Usa el código de la función `mirarEstrellaRoja()` para crear una función `mirarEstrella(color)` que funcione con cualquier estrella.
+        -   Prueba tu código llamando a `mirarEstrella("roja")` y `mirarEstrella("azul")` dentro de tu bloque de eventos.
+      CSD U6 params starchaser 3_2018: |-
+        # Cazador de estrellas
+
+        Todas las estrellas están en bucle, pero sigues atrapando solamente la estrella roja.
+
+        # Haz esto
+
+        -   Usa el código de la función `moverEstrellaRoja()` para crear una función `moverEstrella(color)` que pueda mover cualquier estrella.
+        -   Usa el código de la función `mirarEstrellaRoja()` para crear una función `mirarEstrella(color)` que funcione con cualquier estrella.
+        -   Prueba tu código llamando a `mirarEstrella("roja")` y `mirarEstrella("azul")` dentro de tu bloque de eventos.
+      CSD U6 params starchaser 3_2019: |-
+        # Cazador de estrellas
+
+        Todas las estrellas están en bucle, pero sigues atrapando solamente la estrella roja.
+
+        # Haz esto
+
+        -   Usa el código de la función `moverEstrellaRoja()` para crear una función `moverEstrella(color)` que pueda mover cualquier estrella.
+        -   Usa el código de la función `mirarEstrellaRoja()` para crear una función `mirarEstrella(color)` que funcione con cualquier estrella.
+        -   Prueba tu código llamando a `mirarEstrella("roja")` y `mirarEstrella("azul")` dentro de tu bloque de eventos.
+      CSD U6 params starchaser 4: |-
+        # Cazador de estrellas
+
+        Ahora hazlo funcionar para todas las estrellas
+
+        # Haz esto
+
+        -   Crea una función `mirarEstrellas()` que usa un bucle `para` para mirar cada estrella en el arreglo de estrellas.
+        -   Prueba tu código llamando a la función `mirarEstrellas()` dentro del bloque de eventos.
+      CSD U6 params starchaser 4_2018: |-
+        # Cazador de estrellas
+
+        Ahora hazlo funcionar para todas las estrellas
+
+        # Haz esto
+
+        -   Crea una función `mirarEstrellas()` que usa un bucle `para` para mirar cada estrella en el arreglo de estrellas.
+        -   Prueba tu código llamando a la función `mirarEstrellas()` dentro del bloque de eventos.
+      CSD U6 params starchaser 4_2019: |-
+        # Cazador de estrellas
+
+        Ahora hazlo funcionar para todas las estrellas
+
+        # Haz esto
+
+        -   Crea una función `mirarEstrellas()` que usa un bucle `para` para mirar cada estrella en el arreglo de estrellas.
+        -   Prueba tu código llamando a la función `mirarEstrellas()` dentro del bloque de eventos.
+      CSD U6 params starchaser 5: |-
+        # Cazador de estrellas
+
+        Ahora puedes agregar estrellas adicionales, y tus funciones trabajarán con ellas, también.
+
+        # Haz esto
+
+        -   En modo diseño, copia una de las estrellas, y cambia el nombre y color a "amarillo".
+        -   Agrega un nuevo elemento, "amarillo", a tu arreglo de estrellas.
+        -   Prueba el juego con tu nueva estrella.
+      CSD U6 params starchaser 5_2018: |-
+        # Cazador de estrellas
+
+        Ahora puedes agregar estrellas adicionales, y tus funciones trabajarán con ellas, también.
+
+        # Haz esto
+
+        -   En modo diseño, copia una de las estrellas, y cambia el nombre y color a "amarillo".
+        -   Agrega un nuevo elemento, "amarillo", a tu arreglo de estrellas.
+        -   Prueba el juego con tu nueva estrella.
+      CSD U6 params starchaser 5_2019: |-
+        # Cazador de estrellas
+
+        Ahora puedes agregar estrellas adicionales, y tus funciones trabajarán con ellas, también.
+
+        # Haz esto
+
+        -   En modo diseño, copia una de las estrellas, y cambia el nombre y color a "amarillo".
+        -   Agrega un nuevo elemento, "amarillo", a tu arreglo de estrellas.
+        -   Prueba el juego con tu nueva estrella.
+      CSD U6 params starchaser intro: "# Cazador de estrellas\n\nEn este juego, el
+        usuario intenta atrapar las estrellas de acuerdo al color de los LEDs.\n\n#
+        Haz esto\n\n-   Juega el juego, y debate sobre lo siguiente con un compañero:
+        \ \n-   ¿Qué funciones podría necesitar este programa?\n-   ¿Qué parámetros
+        deberían tener estas funciones?"
+      CSD U6 params starchaser intro_2018: "# Cazador de estrellas\n\nEn este juego,
+        el usuario intenta atrapar las estrellas de acuerdo al color de los LEDs.\n\n#
+        Haz esto\n\n-   Juega el juego, y debate sobre lo siguiente con un compañero:
+        \ \n-   ¿Qué funciones podría necesitar este programa?\n-   ¿Qué parámetros
+        deberían tener estas funciones?"
+      CSD U6 params starchaser intro_2019: "# Cazador de estrellas\n\nEn este juego,
+        el usuario intenta atrapar las estrellas de acuerdo al color de los LEDs.\n\n#
+        Haz esto\n\n-   Juega el juego, y debate sobre lo siguiente con un compañero:
+        \ \n-   ¿Qué funciones podría necesitar este programa?\n-   ¿Qué parámetros
+        deberían tener estas funciones?"
       CSD U6 predict LED button: Predicción incrustada
       CSD U6 predict LED button_2018: Predicción incrustada
       CSD U6 predict LED button_2019: Predicción incrustada
+      CSD U6 random array notes: "# Generador de canciones aleatorias\n\nCrearás un
+        generador de canciones aleatorias. Cuando presiones un botón, se debería reproducir
+        una nota aleatoria. Presiónala suficientes veces y obtendrás un hermoso arreglo
+        de sonidos. \n\nUsaste `randomNumber()` para seleccionar un elemento de un
+        arreglo en la lección anterior, de modo que esto debería resultarte familiar.\n\n#
+        Haz esto\n\n-   Agrega código para seleccionar aleatoriamente una nota del
+        arreglo `notas` y reprodúcela. \n-   Ejecuta el programa y presiona el botón
+        izquierdo para oír el hermoso tono que el timbre reproduce."
+      CSD U6 random array notes_2018: "# Generador de canciones aleatorias\n\nCrearás
+        un generador de canciones aleatorias. Cuando presiones un botón, se debería
+        reproducir una nota aleatoria. Presiónala suficientes veces y obtendrás un
+        hermoso arreglo de sonidos. \n\nUsaste `randomNumber()` para seleccionar un
+        elemento de un arreglo en la lección anterior, de modo que esto debería resultarte
+        familiar.\n\n# Haz esto\n\n-   Agrega código para seleccionar aleatoriamente
+        una nota del arreglo `notas` y reprodúcela. \n-   Ejecuta el programa y presiona
+        el botón izquierdo para oír el hermoso tono que el timbre reproduce."
+      CSD U6 random array notes_2019: "# Generador de canciones aleatorias\n\nCrearás
+        un generador de canciones aleatorias. Cuando presiones un botón, se debería
+        reproducir una nota aleatoria. Presiónala suficientes veces y obtendrás un
+        hermoso arreglo de sonidos. \n\nUsaste `randomNumber()` para seleccionar un
+        elemento de un arreglo en la lección anterior, de modo que esto debería resultarte
+        familiar.\n\n# Haz esto\n\n-   Agrega código para seleccionar aleatoriamente
+        una nota del arreglo `notas` y reprodúcela. \n-   Ejecuta el programa y presiona
+        el botón izquierdo para oír el hermoso tono que el timbre reproduce."
       CSD U6 sensor experiment embedded: |-
         # Experimento de sensor
 
@@ -12285,6 +13269,45 @@ es-MX:
 
         -   Mira el código y encuentra el error que impide que la duración se configure correctamente.
             -   (Sugerencia: desplaza el cursor sobre los triángulos amarillos para obtener pistas sobre qué podría estar mal con el código).
+      CSD U6 stillness game predict code: |-
+        # Cambiar con el acelerómetro
+
+        Este programa usa el evento de cambios para incrementar un medidor de movimiento cada vez que el tablero se mueve. Cuando el medidor de movimiento alcance 100, sonará la alarma.
+
+        # Haz esto
+
+        Este programa tiene dos errores que debes arreglar:
+
+        -   El medidor de movimiento se activa presionando un botón, en lugar del evento `cambio` del acelerómetro.
+        -   El programador olvidó cómo usar el patrón del contador para incrementar la variable de movimiento.
+
+        Una vez que hayas encontrado los errores, ejecuta el programa e intenta pasarle el tablero a tu compañero sin activar la alarma.
+      CSD U6 stillness game predict code_2018: |-
+        # Cambiar con el acelerómetro
+
+        Este programa usa el evento de cambios para incrementar un medidor de movimiento cada vez que el tablero se mueve. Cuando el medidor de movimiento alcance 100, sonará la alarma.
+
+        # Haz esto
+
+        Este programa tiene dos errores que debes arreglar:
+
+        -   El medidor de movimiento se activa presionando un botón, en lugar del evento `cambio` del acelerómetro.
+        -   El programador olvidó cómo usar el patrón del contador para incrementar la variable de movimiento.
+
+        Una vez que hayas encontrado los errores, ejecuta el programa e intenta pasarle el tablero a tu compañero sin activar la alarma.
+      CSD U6 stillness game predict code_2019: |-
+        # Cambiar con el acelerómetro
+
+        Este programa usa el evento de cambios para incrementar un medidor de movimiento cada vez que el tablero se mueve. Cuando el medidor de movimiento alcance 100, sonará la alarma.
+
+        # Haz esto
+
+        Este programa tiene dos errores que debes arreglar:
+
+        -   El medidor de movimiento se activa presionando un botón, en lugar del evento `cambio` del acelerómetro.
+        -   El programador olvidó cómo usar el patrón del contador para incrementar la variable de movimiento.
+
+        Una vez que hayas encontrado los errores, ejecuta el programa e intenta pasarle el tablero a tu compañero sin activar la alarma.
       CSD U6 test LED: |-
         # Controla el LED
 
@@ -12315,6 +13338,84 @@ es-MX:
         -   Haz clic en "Reiniciar" y debate con tu compañero sobre cómo funciona el código.
         -   Prueba los diferentes bloques LED para ver lo que hacen.
             -   Sugerencia: no olvides presionar "Reiniciar" y ejecutar tu código de nuevo luego de cambiarlo
+      CSD U6 tugowar buzzer: "# Timbre del triunfo\n\nLa última cosa que falta en
+        la descripción de tu guía de proyecto en este proyecto es el timbre. Debería
+        sonar un tono alto si el jugador 1 gana y un tono bajo si el jugador 2 gana.
+        \n\n# Haz esto\n\nHasta ahora, hemos podido solamente usar el parámetro `jugador`
+        directamente para informar qué jugador ganó, pero eso no funcionará para hacer
+        sonar sonidos diferentes. Dentro del condicional que verifica si un jugador
+        ganó, deberás agregar _otro_ condicional que verifique qué jugador ganó. Si
+        `jugador == \"rojo\"`, el timbre debería reproducir una nota alta; de lo contrario
+        (si no), el timbre debería reproducir una nota baja."
+      CSD U6 tugowar buzzer_2018: "# Timbre del triunfo\n\nLa última cosa que falta
+        en la descripción de tu guía de proyecto en este proyecto es el timbre. Debería
+        sonar un tono alto si el jugador 1 gana y un tono bajo si el jugador 2 gana.
+        \n\n# Haz esto\n\nHasta ahora, hemos podido solamente usar el parámetro `jugador`
+        directamente para informar qué jugador ganó, pero eso no funcionará para hacer
+        sonar sonidos diferentes. Dentro del condicional que verifica si un jugador
+        ganó, deberás agregar _otro_ condicional que verifique qué jugador ganó. Si
+        `jugador == \"rojo\"`, el timbre debería reproducir una nota alta; de lo contrario
+        (si no), el timbre debería reproducir una nota baja."
+      CSD U6 tugowar buzzer_2019: "# Timbre del triunfo\n\nLa última cosa que falta
+        en la descripción de tu guía de proyecto en este proyecto es el timbre. Debería
+        sonar un tono alto si el jugador 1 gana y un tono bajo si el jugador 2 gana.
+        \n\n# Haz esto\n\nHasta ahora, hemos podido solamente usar el parámetro `jugador`
+        directamente para informar qué jugador ganó, pero eso no funcionará para hacer
+        sonar sonidos diferentes. Dentro del condicional que verifica si un jugador
+        ganó, deberás agregar _otro_ condicional que verifique qué jugador ganó. Si
+        `jugador == \"rojo\"`, el timbre debería reproducir una nota alta; de lo contrario
+        (si no), el timbre debería reproducir una nota baja."
+      CSD U6 tugowar conditional: |-
+        # Buscar un ganador
+
+        Tu juego debería ser bastante sencillo de jugar a esta altura. Dos jugadores pueden hacer clic en sus respectivos botones, y sus emojis correrán hacia abajo por la pantalla. Sin embargo, aún necesitamos una forma mediante la cual un jugador pueda ganar.
+
+        # Haz esto
+
+        Usando un condicional dentro de la función `verificarTriunfo()`, debes verificar si un jugador ha ganado cada vez que hacen clic. Por ahora, puedes usar solo `registro.consola` para informar el ganador.
+
+        -   Agrega una sentencia si al botón de `verificarTriunfo()`
+        -   Para la condición de tu sentencia si, verifica si `jugador_y` es mayor a 350 (o usa la parte inferior del valor de pantalla que has elegido en el último nivel)
+        -   En tu condicional, agrega un `registro.consola` que informar qué jugador ganó
+        -   Prueba tu programa para asegurarte de que informa un ganador cuando uno de los emojis llega a la parte inferior de la pantalla
+      CSD U6 tugowar conditional_2018: |-
+        # Buscar un ganador
+
+        Tu juego debería ser bastante sencillo de jugar a esta altura. Dos jugadores pueden hacer clic en sus respectivos botones, y sus emojis correrán hacia abajo por la pantalla. Sin embargo, aún necesitamos una forma mediante la cual un jugador pueda ganar.
+
+        # Haz esto
+
+        Usando un condicional dentro de la función `verificarTriunfo()`, debes verificar si un jugador ha ganado cada vez que hacen clic. Por ahora, puedes usar solo `registro.consola` para informar el ganador.
+
+        -   Agrega una sentencia si al botón de `verificarTriunfo()`
+        -   Para la condición de tu sentencia si, verifica si `jugador_y` es mayor a 350 (o usa la parte inferior del valor de pantalla que has elegido en el último nivel)
+        -   En tu condicional, agrega un `registro.consola` que informar qué jugador ganó
+        -   Prueba tu programa para asegurarte de que informa un ganador cuando uno de los emojis llega a la parte inferior de la pantalla
+      CSD U6 tugowar conditional_2019: |-
+        # Buscar un ganador
+
+        Tu juego debería ser bastante sencillo de jugar a esta altura. Dos jugadores pueden hacer clic en sus respectivos botones, y sus emojis correrán hacia abajo por la pantalla. Sin embargo, aún necesitamos una forma mediante la cual un jugador pueda ganar.
+
+        # Haz esto
+
+        Usando un condicional dentro de la función `verificarTriunfo()`, debes verificar si un jugador ha ganado cada vez que hacen clic. Por ahora, puedes usar solo `registro.consola` para informar el ganador.
+
+        -   Agrega una sentencia si al botón de `verificarTriunfo()`
+        -   Para la condición de tu sentencia si, verifica si `jugador_y` es mayor a 350 (o usa la parte inferior del valor de pantalla que has elegido en el último nivel)
+        -   En tu condicional, agrega un `registro.consola` que informar qué jugador ganó
+        -   Prueba tu programa para asegurarte de que informa un ganador cuando uno de los emojis llega a la parte inferior de la pantalla
+      CSD U6 tugowar demo: |-
+        # ¡Atrapa el error!
+
+        Este es un ejemplo de un juego de la cuerda que se podría crear en esta lección. Para jugar, forma una pareja con otro estudiante. El estudiante de la izquierda hará clic en el botón izquierdo del Circuit Playground lo más rápido que pueda, mientras que el estudiante de la derecha hará clic en el botón derecho. Quien primero pueda obtener el error de su lado será el ganador.
+      CSD U6 tugowar demo_2018: |-
+        # ¡Atrapa el error!
+
+        Este es un ejemplo de un juego de la cuerda que se podría crear en esta lección. Para jugar, forma una pareja con otro estudiante. El estudiante de la izquierda hará clic en el botón izquierdo del Circuit Playground lo más rápido que pueda, mientras que el estudiante de la derecha hará clic en el botón derecho. Quien primero pueda obtener el error de su lado será el ganador.
+      CSD U6 tugowar demo_2019: |-
+        # ¡Atrapa el error!
+
+        Este es un ejemplo de un juego de la cuerda que se podría crear en esta lección. Para jugar, forma una pareja con otro estudiante. El estudiante de la izquierda hará clic en el botón izquierdo del Circuit Playground lo más rápido que pueda, mientras que el estudiante de la derecha hará clic en el botón derecho. Quien primero pueda obtener el error de su lado será el ganador.
       CSD U6 tugowar design 1: |-
         # Primeros pasos: diseño de pantalla
 
@@ -12408,6 +13509,80 @@ es-MX:
         # Haz esto
 
         Cambia a "win" y diséñala en base a tu guía de proyectos. Asegúrate de prestar especial atención al ID de cada elemento. Una vez que hayas agregado los elementos requeridos, si quieres, agrega cualquier otro arreglo de diseño que desees.
+      CSD U6 tugowar final: |-
+        # Aprópiatelo
+
+        Acabas de revisar el plan de otra persona para crear un programa; ahora es el momento para hacer el tuyo. ¿Qué funcionalidades o desafíos adicionales quieres crear?
+
+        # Haz esto
+
+        Selecciona uno de los desafíos a continuación para agregar al juego o crea un desafío propio.
+
+        -   Cambia la apariencia y el diseño de las pantallas
+        -   Usa el timbre o el LED para mostrar cuándo se le ha hecho clic a uno de los botones
+        -   Configura la propiedad "icono-color" de "ganador\_imagen" al color ganador
+        -   Haz que los emojis comiencen tristes; a la mitad, cambia a neutral, y termina feliz
+        -   Usa una variable y condicionales para asegurarte de que los jugadores solo pueden mover sus emojis cuando se muestra la pantalla "juego"
+      CSD U6 tugowar final_2018: |-
+        # Aprópiatelo
+
+        Acabas de revisar el plan de otra persona para crear un programa; ahora es el momento para hacer el tuyo. ¿Qué funcionalidades o desafíos adicionales quieres crear?
+
+        # Haz esto
+
+        Selecciona uno de los desafíos a continuación para agregar al juego o crea un desafío propio.
+
+        -   Cambia la apariencia y el diseño de las pantallas
+        -   Usa el timbre o el LED para mostrar cuándo se le ha hecho clic a uno de los botones
+        -   Configura la propiedad "icono-color" de "ganador\_imagen" al color ganador
+        -   Haz que los emojis comiencen tristes; a la mitad, cambia a neutral, y termina feliz
+        -   Usa una variable y condicionales para asegurarte de que los jugadores solo pueden mover sus emojis cuando se muestra la pantalla "juego"
+      CSD U6 tugowar final_2019: |-
+        # Aprópiatelo
+
+        Acabas de revisar el plan de otra persona para crear un programa; ahora es el momento para hacer el tuyo. ¿Qué funcionalidades o desafíos adicionales quieres crear?
+
+        # Haz esto
+
+        Selecciona uno de los desafíos a continuación para agregar al juego o crea un desafío propio.
+
+        -   Cambia la apariencia y el diseño de las pantallas
+        -   Usa el timbre o el LED para mostrar cuándo se le ha hecho clic a uno de los botones
+        -   Configura la propiedad "icono-color" de "ganador\_imagen" al color ganador
+        -   Haz que los emojis comiencen tristes; a la mitad, cambia a neutral, y termina feliz
+        -   Usa una variable y condicionales para asegurarte de que los jugadores solo pueden mover sus emojis cuando se muestra la pantalla "juego"
+      CSD U6 tugowar setProperty: |-
+        # Mostrar el ganador
+
+        La pantalla ganadora de hecho no sabe _quién_ ganó el juego. Arreglemos eso ahora.
+
+        # Haz esto
+
+        Antes de llamar a `configurarPantalla`, agrega un bloque `configurarPropiedad` para cambiar la propiedad "texto" de "ganador" para mostrar el ganador real.
+      CSD U6 tugowar setScreen: |-
+        # Cambiar a la pantalla de triunfo
+
+        Ahora que tenemos condicionales para verificar qué jugador ganó, cambiemos a la pantalla "triunfo" cuando un jugador gana.
+
+        # Haz esto
+
+        Dentro del condicional que has creado para verificar si un jugador ha alcanzado el fondo, agrega un bloque `configurarPantalla` para cambiar a la pantalla "triunfo". Asegúrate de probar que tu nuevo código funciona antes de avanzar.
+      CSD U6 tugowar setScreen_2018: |-
+        # Cambiar a la pantalla de triunfo
+
+        Ahora que tenemos condicionales para verificar qué jugador ganó, cambiemos a la pantalla "triunfo" cuando un jugador gana.
+
+        # Haz esto
+
+        Dentro del condicional que has creado para verificar si un jugador ha alcanzado el fondo, agrega un bloque `configurarPantalla` para cambiar a la pantalla "triunfo". Asegúrate de probar que tu nuevo código funciona antes de avanzar.
+      CSD U6 tugowar setScreen_2019: |-
+        # Cambiar a la pantalla de triunfo
+
+        Ahora que tenemos condicionales para verificar qué jugador ganó, cambiemos a la pantalla "triunfo" cuando un jugador gana.
+
+        # Haz esto
+
+        Dentro del condicional que has creado para verificar si un jugador ha alcanzado el fondo, agrega un bloque `configurarPantalla` para cambiar a la pantalla "triunfo". Asegúrate de probar que tu nuevo código funciona antes de avanzar.
       CSD U6 tugowar variables 1: "# La función startGame()\n\nSi miras los eventos
         que planificamos en la guía de planificación, tal vez, notes que los dos eventos
         esencialmente hacen lo mismo. Los eventos que responden a los botones \"play\"
@@ -12573,6 +13748,27 @@ es-MX:
         -   Usa un comando `console.log()` o un observador para informar el valor de `player_y`
         -   Juega el juego con solo un botón, y presta atención al valor de `player_y`
         -   Decide qué valor de `player_y` debería ser considerado la parte inferior de la pantalla
+      CSD-Arrays: "Hoy vas a aprender cómo usar y crear **funciones**.\n\nCrear una
+        función te permite hacer tus propios bloques. Hay dos partes de una función:
+        \n\nHacer un bloque con un nombre nuevo que tenga todo el código que quieras
+        dentro de él. \n\\-xml de definición de función- \n\nEl único bloque verde
+        que usas, o llamas, para ejecutar la función que creaste.\n\\-xml de llamada
+        de función-\n\nPrepárate para familiarizarte con las funciones, aprender cómo
+        editarlas y crear las tuyas."
+      CSD-Arrays_2018: "Hoy vas a aprender cómo usar y crear **funciones**.\n\nCrear
+        una función te permite hacer tus propios bloques. Hay dos partes de una función:
+        \n\nHacer un bloque con un nombre nuevo que tenga todo el código que quieras
+        dentro de él. \n\\-xml de definición de función- \n\nEl único bloque verde
+        que usas, o llamas, para ejecutar la función que creaste.\n\\-xml de llamada
+        de función-\n\nPrepárate para familiarizarte con las funciones, aprender cómo
+        editarlas y crear las tuyas."
+      CSD-Arrays_2019: "Hoy vas a aprender cómo usar y crear **funciones**.\n\nCrear
+        una función te permite hacer tus propios bloques. Hay dos partes de una función:
+        \n\nHacer un bloque con un nombre nuevo que tenga todo el código que quieras
+        dentro de él. \n\\-xml de definición de función- \n\nEl único bloque verde
+        que usas, o llamas, para ejecutar la función que creaste.\n\\-xml de llamada
+        de función-\n\nPrepárate para familiarizarte con las funciones, aprender cómo
+        editarlas y crear las tuyas."
       CSDU2 - PW - Class Style Personal Site: |-
         # Estilo de juego libre
 
@@ -13282,6 +14478,309 @@ es-MX:
         2.  ¿Dónde y cómo el programa comprueba la información?
         3.  ¿Qué hace el programa cuando obtiene la información correcta?
         4.  ¿Qué está haciendo el programa cuando no hay información?
+      CSDU6 array index predict contained: |-
+        # Predicción
+
+        El código a continuación mostrará cuatro cosas en la pantalla. ¿Cuáles crees que serán?
+      CSDU6 array index predict contained_2018: |-
+        # Predicción
+
+        El código a continuación mostrará cuatro cosas en la pantalla. ¿Cuáles crees que serán?
+      CSDU6 array index predict contained_2019: |-
+        # Predicción
+
+        El código a continuación mostrará cuatro cosas en la pantalla. ¿Cuáles crees que serán?
+      CSDU6 array select days: |-
+        # Acceder a items en un arreglo
+
+        Este programa usa el Circuit Playground.  Crea un arreglo de los días de la semana.  Cuando se presiona el botón izquierdo, muestra el día como "Martes".
+
+        # Haz esto
+
+        -   Agrega código que mostrará el día como "Jueves" cuando se presiona el botón derecho.
+      CSDU6 array select days_2018: |-
+        # Acceder a items en un arreglo
+
+        Este programa usa el Circuit Playground.  Crea un arreglo de los días de la semana.  Cuando se presiona el botón izquierdo, muestra el día como "Martes".
+
+        # Haz esto
+
+        -   Agrega código que mostrará el día como "Jueves" cuando se presiona el botón derecho.
+      CSDU6 array select days_2019: |-
+        # Acceder a items en un arreglo
+
+        Este programa usa el Circuit Playground.  Crea un arreglo de los días de la semana.  Cuando se presiona el botón izquierdo, muestra el día como "Martes".
+
+        # Haz esto
+
+        -   Agrega código que mostrará el día como "Jueves" cuando se presiona el botón derecho.
+      CSDU6 arrays select rainbow: |-
+        # Práctica de índice
+
+        <img src="https://images.code.org/d3b8a9275703944808bc832c02f19fda-image-1486501806089.09.45 PM.png" style="width: 150px; float: right">
+
+        Se ha brindado un **Código de arranque** que crea una lista llamada `colores` y lo usa para establecer los colores de los rectángulos en la pantalla. Desafortunadamente, los colores están desordenados.
+
+        # Haz esto
+
+        -   Cambia los números de índice dentro de cada bloque de selección para hacer que el arco iris aparezca igual que la imagen de la derecha.
+      CSDU6 arrays select rainbow_2018: |-
+        # Práctica de índice
+
+        <img src="https://images.code.org/d3b8a9275703944808bc832c02f19fda-image-1486501806089.09.45 PM.png" style="width: 150px; float: right">
+
+        Se ha brindado un **Código de arranque** que crea una lista llamada `colores` y lo usa para establecer los colores de los rectángulos en la pantalla. Desafortunadamente, los colores están desordenados.
+
+        # Haz esto
+
+        -   Cambia los números de índice dentro de cada bloque de selección para hacer que el arco iris aparezca igual que la imagen de la derecha.
+      CSDU6 arrays select rainbow_2019: |-
+        # Práctica de índice
+
+        <img src="https://images.code.org/d3b8a9275703944808bc832c02f19fda-image-1486501806089.09.45 PM.png" style="width: 150px; float: right">
+
+        Se ha brindado un **Código de arranque** que crea una lista llamada `colores` y lo usa para establecer los colores de los rectángulos en la pantalla. Desafortunadamente, los colores están desordenados.
+
+        # Haz esto
+
+        -   Cambia los números de índice dentro de cada bloque de selección para hacer que el arco iris aparezca igual que la imagen de la derecha.
+      CSDU6 arrays select random: |-
+        # Selección aleatoria
+
+        También puedes seleccionar un elemento aleatorio en la lista usando el bloque `númeroAleatorio` en lugar de un índice. Este programa selecciona un icono aleatorio de la lista y lo muestra en la pantalla cuando se presiona el botón izquierdo. En este momento, los iconos son siempre azules.
+
+        # Haz esto
+
+        -   Agrega código que seleccionará un color aleatorio de la lista y úsalo como el color del icono.
+      CSDU6 arrays select random_2018: |-
+        # Selección aleatoria
+
+        También puedes seleccionar un elemento aleatorio en la lista usando el bloque `númeroAleatorio` en lugar de un índice. Este programa selecciona un icono aleatorio de la lista y lo muestra en la pantalla cuando se presiona el botón izquierdo. En este momento, los iconos son siempre azules.
+
+        # Haz esto
+
+        -   Agrega código que seleccionará un color aleatorio de la lista y úsalo como el color del icono.
+      CSDU6 arrays select random_2019: |-
+        # Selección aleatoria
+
+        También puedes seleccionar un elemento aleatorio en la lista usando el bloque `númeroAleatorio` en lugar de un índice. Este programa selecciona un icono aleatorio de la lista y lo muestra en la pantalla cuando se presiona el botón izquierdo. En este momento, los iconos son siempre azules.
+
+        # Haz esto
+
+        -   Agrega código que seleccionará un color aleatorio de la lista y úsalo como el color del icono.
+      CSDU6 arrays select variable: |-
+        # Usar variables
+
+        Este programa es como el último, pero los iconos siempre deberían coincidir con los colores (rojo corazón, amarillo estrella, verde hoja y azul agua).  También puedes hacer esto usando la variable "miÍndice", que almacenará el valor de un número aleatorio, para que se pueda usar para obtener el icono y el color del mismo lugar en cada lista.
+
+        # Haz esto
+
+        -   Cambia el código para que ambos iconos y sus colores sean seleccionados usando la variable "miÍndice".
+      CSDU6 arrays select variable_2018: |-
+        # Usar variables
+
+        Este programa es como el último, pero los iconos siempre deberían coincidir con los colores (rojo corazón, amarillo estrella, verde hoja y azul agua).  También puedes hacer esto usando la variable "miÍndice", que almacenará el valor de un número aleatorio, para que se pueda usar para obtener el icono y el color del mismo lugar en cada lista.
+
+        # Haz esto
+
+        -   Cambia el código para que ambos iconos y sus colores sean seleccionados usando la variable "miÍndice".
+      CSDU6 arrays select variable_2019: |-
+        # Usar variables
+
+        Este programa es como el último, pero los iconos siempre deberían coincidir con los colores (rojo corazón, amarillo estrella, verde hoja y azul agua).  También puedes hacer esto usando la variable "miÍndice", que almacenará el valor de un número aleatorio, para que se pueda usar para obtener el icono y el color del mismo lugar en cada lista.
+
+        # Haz esto
+
+        -   Cambia el código para que ambos iconos y sus colores sean seleccionados usando la variable "miÍndice".
+      CSDU6 circuit playground piano: "# Piano de circuito\n\nMira el código a continuación.
+        No lo vas a cambiar, pero intentar ver lo que hace. \n\n# Haz esto\n\n-   Ejecuta
+        el programa y juega con el piano en la pantalla."
+      CSDU6 circuit playground piano_2018: "# Piano de circuito\n\nMira el código
+        a continuación. No lo vas a cambiar, pero intentar ver lo que hace. \n\n#
+        Haz esto\n\n-   Ejecuta el programa y juega con el piano en la pantalla."
+      CSDU6 circuit playground piano_2019: "# Piano de circuito\n\nMira el código
+        a continuación. No lo vas a cambiar, pero intentar ver lo que hace. \n\n#
+        Haz esto\n\n-   Ejecuta el programa y juega con el piano en la pantalla."
+      CSDU6 frequency creation: |-
+        # Hacer que el timbre suene
+
+        Ahora que puedes usar la frecuencia del timbre, intenta hacer que el timbre reproduzca un sonido alto cuando el mismo botón vuelva a aparecer.
+
+        # Haz esto
+
+        -   Agrega otro bloque eventoEnTablero para que el timbre reproduzca un sonido alto cuando el botón izquierdo vuelva a **aparecer**
+      CSDU6 frequency creation_2018: |-
+        # Hacer que el timbre suene
+
+        Ahora que puedes usar la frecuencia del timbre, intenta hacer que el timbre reproduzca un sonido alto cuando el mismo botón vuelva a aparecer.
+
+        # Haz esto
+
+        -   Agrega otro bloque eventoEnTablero para que el timbre reproduzca un sonido alto cuando el botón izquierdo vuelva a **aparecer**
+      CSDU6 frequency creation_2019: |-
+        # Hacer que el timbre suene
+
+        Ahora que puedes usar la frecuencia del timbre, intenta hacer que el timbre reproduzca un sonido alto cuando el mismo botón vuelva a aparecer.
+
+        # Haz esto
+
+        -   Agrega otro bloque eventoEnTablero para que el timbre reproduzca un sonido alto cuando el botón izquierdo vuelva a **aparecer**
+      CSDU6 frequency modification: |-
+        # Hacer que el timbre suene
+
+        La frecuencia del timbre determina cuán alto o bajo el timbre sonará cuando se reproduzca. Mientras más alto sea el número que le das a la frecuencia, más alto sonará el timbre.
+
+        # Haz esto
+
+        -   Ahora el timbre reproduce una nota alta cuando se presione el botón izquierdo. Haz que el timbre reproduzca una nota baja, en lugar de una alta.
+      CSDU6 frequency modification_2018: |-
+        # Hacer que el timbre suene
+
+        La frecuencia del timbre determina cuán alto o bajo el timbre sonará cuando se reproduzca. Mientras más alto sea el número que le das a la frecuencia, más alto sonará el timbre.
+
+        # Haz esto
+
+        -   Ahora el timbre reproduce una nota alta cuando se presione el botón izquierdo. Haz que el timbre reproduzca una nota baja, en lugar de una alta.
+      CSDU6 frequency modification_2019: |-
+        # Hacer que el timbre suene
+
+        La frecuencia del timbre determina cuán alto o bajo el timbre sonará cuando se reproduzca. Mientras más alto sea el número que le das a la frecuencia, más alto sonará el timbre.
+
+        # Haz esto
+
+        -   Ahora el timbre reproduce una nota alta cuando se presione el botón izquierdo. Haz que el timbre reproduzca una nota baja, en lugar de una alta.
+      CSDU6 making new arrays: |-
+        # Hacer nuevos arreglos
+
+        Sabes cómo cambiar arreglos; ahora llegó el momento de hacer los tuyos.
+
+        # Haz esto
+
+        -   Crea un nuevo arreglo con las notas que quieras. Pueden estar en diferentes octavas, dispuestas en cierta clave, etc. ¡Lo que quieras!
+        -   Haz que el timbre reproduzca una nota aleatoria de tu arreglo cuando se presione el botón **derecho**.
+      CSDU6 making new arrays_2018: |-
+        # Hacer nuevos arreglos
+
+        Sabes cómo cambiar arreglos; ahora llegó el momento de hacer los tuyos.
+
+        # Haz esto
+
+        -   Crea un nuevo arreglo con las notas que quieras. Pueden estar en diferentes octavas, dispuestas en cierta clave, etc. ¡Lo que quieras!
+        -   Haz que el timbre reproduzca una nota aleatoria de tu arreglo cuando se presione el botón **derecho**.
+      CSDU6 piano with notes: "# Notas de piano\n\nEste es el mismo piano que viste
+        en el comienzo de la lección, pero hay algunos errores.\n\n# Haz esto\n\n-
+        \  Edita el código para que todas las teclas usen un bloque `nota.timbre()`
+        para reproducir la nota correspondiente.\n-   Asegúrate de que todos los valores
+        pasados a `nota.timbre()` sean notas, y no frecuencias. \n\n_Sugerencia: ¡Recuerda
+        colocar comillas entre las notas! P. ej., `nota.timbre(\"A4\", 100);`_"
+      CSDU6 piano with notes_2018: "# Notas de piano\n\nEste es el mismo piano que
+        viste en el comienzo de la lección, pero hay algunos errores.\n\n# Haz esto\n\n-
+        \  Edita el código para que todas las teclas usen un bloque `nota.timbre()`
+        para reproducir la nota correspondiente.\n-   Asegúrate de que todos los valores
+        pasados a `nota.timbre()` sean notas, y no frecuencias. \n\n_Sugerencia: ¡Recuerda
+        colocar comillas entre las notas! P. ej., `nota.timbre(\"A4\", 100);`_"
+      CSDU6 piano with notes_2019: "# Notas de piano\n\nEste es el mismo piano que
+        viste en el comienzo de la lección, pero hay algunos errores.\n\n# Haz esto\n\n-
+        \  Edita el código para que todas las teclas usen un bloque `nota.timbre()`
+        para reproducir la nota correspondiente.\n-   Asegúrate de que todos los valores
+        pasados a `nota.timbre()` sean notas, y no frecuencias. \n\n_Sugerencia: ¡Recuerda
+        colocar comillas entre las notas! P. ej., `nota.timbre(\"A4\", 100);`_"
+      CSDU6 play null notes: |-
+        # Notas nulas
+
+        Puede que hayas notado que si pones la misma nota una al lado de la otra en el arreglo, el timbre solamente reproduce esa nota como un sonido largo en lugar de notas individuales. En música, a menudo queremos un descanso (o_pausa_) entre las notas. Puedes hacer que tu timbre reproduzca una pausa enviándole el valor `nulo`.
+
+        `nulo` es un valor especial que representa vacío en la ciencia de la computación. `reproducirNotas` reproduce cada nota por la misma duración, de modo que un elemento `nulo` en un arreglo simplemente le está diciendo `reproducirNotas` para no reproducir nada por la misma duración que todo lo demás.
+
+        # Haz esto
+
+        -   Ejecuta el código para oír primero cómo suena.
+        -   Examina el arreglo dentro de `timbre.ReproducirNotas()`.
+        -   Coloca una pausa entre notas que son iguales y una al lado de la otra, y en cualquier otro lugar que consideres apropiado.
+
+        _Sugerencia: `nulo` hace referencia a un valor, igual que un nombre variable. ¡Asegúrate de no colocarlo entre comillas!_
+      CSDU6 play null notes_2018: |-
+        # Notas nulas
+
+        Puede que hayas notado que si pones la misma nota una al lado de la otra en el arreglo, el timbre solamente reproduce esa nota como un sonido largo en lugar de notas individuales. En música, a menudo queremos un descanso (o_pausa_) entre las notas. Puedes hacer que tu timbre reproduzca una pausa enviándole el valor `nulo`.
+
+        `nulo` es un valor especial que representa vacío en la ciencia de la computación. `reproducirNotas` reproduce cada nota por la misma duración, de modo que un elemento `nulo` en un arreglo simplemente le está diciendo `reproducirNotas` para no reproducir nada por la misma duración que todo lo demás.
+
+        # Haz esto
+
+        -   Ejecuta el código para oír primero cómo suena.
+        -   Examina el arreglo dentro de `timbre.ReproducirNotas()`.
+        -   Coloca una pausa entre notas que son iguales y una al lado de la otra, y en cualquier otro lugar que consideres apropiado.
+
+        _Sugerencia: `nulo` hace referencia a un valor, igual que un nombre variable. ¡Asegúrate de no colocarlo entre comillas!_
+      CSDU6 play null notes_2019: |-
+        # Notas nulas
+
+        Puede que hayas notado que si pones la misma nota una al lado de la otra en el arreglo, el timbre solamente reproduce esa nota como un sonido largo en lugar de notas individuales. En música, a menudo queremos un descanso (o_pausa_) entre las notas. Puedes hacer que tu timbre reproduzca una pausa enviándole el valor `nulo`.
+
+        `nulo` es un valor especial que representa vacío en la ciencia de la computación. `reproducirNotas` reproduce cada nota por la misma duración, de modo que un elemento `nulo` en un arreglo simplemente le está diciendo `reproducirNotas` para no reproducir nada por la misma duración que todo lo demás.
+
+        # Haz esto
+
+        -   Ejecuta el código para oír primero cómo suena.
+        -   Examina el arreglo dentro de `timbre.ReproducirNotas()`.
+        -   Coloca una pausa entre notas que son iguales y una al lado de la otra, y en cualquier otro lugar que consideres apropiado.
+
+        _Sugerencia: `nulo` hace referencia a un valor, igual que un nombre variable. ¡Asegúrate de no colocarlo entre comillas!_
+      CSDU6 play predict code: La reducción está en un nivel contenido
+      CSDU6 play predict code_2018: La reducción está en un nivel contenido
+      CSDU6 play predict code_2019: La reducción está en un nivel contenido
+      CSDU6 play predict markdown: |-
+        # Haz una predicción
+
+        Mira el código a continuación. ¿Qué crees que hará?
+
+        Haz una conjetura y ejecuta el código para descubrirlo.
+      CSDU6 play predict markdown_2018: |-
+        # Haz una predicción
+
+        Mira el código a continuación. ¿Qué crees que hará?
+
+        Haz una conjetura y ejecuta el código para descubrirlo.
+      CSDU6 play predict markdown_2019: |-
+        # Haz una predicción
+
+        Mira el código a continuación. ¿Qué crees que hará?
+
+        Haz una conjetura y ejecuta el código para descubrirlo.
+      CSDU6 play songs: |-
+        # Crear canciones
+
+        Puedes crear y reproducir canciones completas con `timbre.reproduceNotas()`. Se necesitan dos parámetros: un arreglo de notas para reproducir, y un ritmo en el cual reproducir las notas. En las burbujas previas, creaste arreglos de notas y las reprodujiste al azar, pero, en en lugar de eso, `timbre.reproduceNotas()` reproduce cada nota consecutivamente.
+
+        # Haz esto
+
+        -   Retira un bloque `timbre.reproduceNotas` y cambia el arreglo de arranque que hay dentro.
+        -   Asegúrate de que el nuevo arreglo que le das tiene, al menos, dos pares de notas que están una al lado de la otra en la lista (Ejemplo: `["A5", "A5", "G4", "G4"]`)
+
+        _Sugerencia: no olvides que siempre puedes alternar entre bloque y modo texto._
+      CSDU6 play songs_2018: |-
+        # Crear canciones
+
+        Puedes crear y reproducir canciones completas con `timbre.reproduceNotas()`. Se necesitan dos parámetros: un arreglo de notas para reproducir, y un ritmo en el cual reproducir las notas. En las burbujas previas, creaste arreglos de notas y las reprodujiste al azar, pero, en en lugar de eso, `timbre.reproduceNotas()` reproduce cada nota consecutivamente.
+
+        # Haz esto
+
+        -   Retira un bloque `timbre.reproduceNotas` y cambia el arreglo de arranque que hay dentro.
+        -   Asegúrate de que el nuevo arreglo que le das tiene, al menos, dos pares de notas que están una al lado de la otra en la lista (Ejemplo: `["A5", "A5", "G4", "G4"]`)
+
+        _Sugerencia: no olvides que siempre puedes alternar entre bloque y modo texto._
+      CSDU6 play songs_2019: |-
+        # Crear canciones
+
+        Puedes crear y reproducir canciones completas con `timbre.reproduceNotas()`. Se necesitan dos parámetros: un arreglo de notas para reproducir, y un ritmo en el cual reproducir las notas. En las burbujas previas, creaste arreglos de notas y las reprodujiste al azar, pero, en en lugar de eso, `timbre.reproduceNotas()` reproduce cada nota consecutivamente.
+
+        # Haz esto
+
+        -   Retira un bloque `timbre.reproduceNotas` y cambia el arreglo de arranque que hay dentro.
+        -   Asegúrate de que el nuevo arreglo que le das tiene, al menos, dos pares de notas que están una al lado de la otra en la lista (Ejemplo: `["A5", "A5", "G4", "G4"]`)
+
+        _Sugerencia: no olvides que siempre puedes alternar entre bloque y modo texto._
       CSDU6 toggle state prediction: "# Más sobre el interruptor de alternar\n\nTambién
         puedes verificar si el interruptor de alternar está en la posición `open`
         o `close` en otra parte de tu programa. \n\n¿Qué cosas diferentes hace el
@@ -13713,6 +15212,27 @@ es-MX:
         del Agent para ayudarte a explorar este mundo."
       MC_HOC_2017_FP20x20_2019: "**Improvisación:** ¡Ahora es cosa tuya! Usa el código
         del Agent para ayudarte a explorar este mundo."
+      Making Music: "Hoy vas a aprender cómo usar y crear **funciones**.\n\nCrear
+        una función te permite hacer tus propios bloques. Hay dos partes de una función:
+        \n\nHacer un bloque con un nombre nuevo que tenga todo el código que quieras
+        dentro de él. \n\\-xml de definición de función- \n\nEl único bloque verde
+        que usas, o llamas, para ejecutar la función que creaste.\n\\-xml de llamada
+        de función-\n\nPrepárate para familiarizarte con las funciones, aprender cómo
+        editarlas y crear las tuyas."
+      Making Music_2018: "Hoy vas a aprender cómo usar y crear **funciones**.\n\nCrear
+        una función te permite hacer tus propios bloques. Hay dos partes de una función:
+        \n\nHacer un bloque con un nombre nuevo que tenga todo el código que quieras
+        dentro de él. \n\\-xml de definición de función- \n\nEl único bloque verde
+        que usas, o llamas, para ejecutar la función que creaste.\n\\-xml de llamada
+        de función-\n\nPrepárate para familiarizarte con las funciones, aprender cómo
+        editarlas y crear las tuyas."
+      Making Music_2019: "Hoy vas a aprender cómo usar y crear **funciones**.\n\nCrear
+        una función te permite hacer tus propios bloques. Hay dos partes de una función:
+        \n\nHacer un bloque con un nombre nuevo que tenga todo el código que quieras
+        dentro de él. \n\\-xml de definición de función- \n\nEl único bloque verde
+        que usas, o llamas, para ejecutar la función que creaste.\n\\-xml de llamada
+        de función-\n\nPrepárate para familiarizarte con las funciones, aprender cómo
+        editarlas y crear las tuyas."
       NEW Course 4 Artist Params 2: Crea una función `dibujar triángulo` desde cero
         para crear un triángulo con lados de 50 pixeles.
       NEW Course 4 Artist Params inspire: "<img src=\"https://images.code.org/1df195df9d808f0dd539bef0f5c2958b-image-1443049871563.02.54.png\"
@@ -13748,6 +15268,39 @@ es-MX:
         obtener lana de ambas ovejas."
       Overworld Shear Sheep_2019: "¡Es hora de esquilar! Usa el comando `esquilar`
         para obtener lana de ambas ovejas."
+      Predict Loop I: |-
+        # Predicción
+
+        ¿Qué se imprimirá como resultado de este bucle?
+      Predict Loop I_2018: |-
+        # Predicción
+
+        ¿Qué se imprimirá como resultado de este bucle?
+      Predict Loop I_2019: |-
+        # Predicción
+
+        ¿Qué se imprimirá como resultado de este bucle?
+      Revisiting the Counter Pattern: "Hoy vas a aprender cómo usar y crear **funciones**.\n\nCrear
+        una función te permite hacer tus propios bloques. Hay dos partes de una función:
+        \n\nHacer un bloque con un nombre nuevo que tenga todo el código que quieras
+        dentro de él. \n\\-xml de definición de función- \n\nEl único bloque verde
+        que usas, o llamas, para ejecutar la función que creaste.\n\\-xml de llamada
+        de función-\n\nPrepárate para familiarizarte con las funciones, aprender cómo
+        editarlas y crear las tuyas."
+      Revisiting the Counter Pattern_2018: "Hoy vas a aprender cómo usar y crear **funciones**.\n\nCrear
+        una función te permite hacer tus propios bloques. Hay dos partes de una función:
+        \n\nHacer un bloque con un nombre nuevo que tenga todo el código que quieras
+        dentro de él. \n\\-xml de definición de función- \n\nEl único bloque verde
+        que usas, o llamas, para ejecutar la función que creaste.\n\\-xml de llamada
+        de función-\n\nPrepárate para familiarizarte con las funciones, aprender cómo
+        editarlas y crear las tuyas."
+      Revisiting the Counter Pattern_2019: "Hoy vas a aprender cómo usar y crear **funciones**.\n\nCrear
+        una función te permite hacer tus propios bloques. Hay dos partes de una función:
+        \n\nHacer un bloque con un nombre nuevo que tenga todo el código que quieras
+        dentro de él. \n\\-xml de definición de función- \n\nEl único bloque verde
+        que usas, o llamas, para ejecutar la función que creaste.\n\\-xml de llamada
+        de función-\n\nPrepárate para familiarizarte con las funciones, aprender cómo
+        editarlas y crear las tuyas."
       Robot Doodle: "**Idea para un proyecto:** crear una imagen de algo conocido
         del mundo real. ¡Esto requiere persistencia y planificación!"
       Robot Doodle_2018: "**Idea para un proyecto:** crear una imagen de algo conocido
@@ -13779,6 +15332,27 @@ es-MX:
         dibuje un patrón de cuadrados, triángulos u octágonos?
       Standalone_Artist_9: "¡Ahora haz cualquier imagen que te guste! ¡Incluso tienes
         una función vacía que puedes usar para hacer lo que quieras!"
+      The Accelerometer: "Hoy vas a aprender cómo usar y crear **funciones**.\n\nCrear
+        una función te permite hacer tus propios bloques. Hay dos partes de una función:
+        \n\nHacer un bloque con un nombre nuevo que tenga todo el código que quieras
+        dentro de él. \n\\-xml de definición de función- \n\nEl único bloque verde
+        que usas, o llamas, para ejecutar la función que creaste.\n\\-xml de llamada
+        de función-\n\nPrepárate para familiarizarte con las funciones, aprender cómo
+        editarlas y crear las tuyas."
+      The Accelerometer_2018: "Hoy vas a aprender cómo usar y crear **funciones**.\n\nCrear
+        una función te permite hacer tus propios bloques. Hay dos partes de una función:
+        \n\nHacer un bloque con un nombre nuevo que tenga todo el código que quieras
+        dentro de él. \n\\-xml de definición de función- \n\nEl único bloque verde
+        que usas, o llamas, para ejecutar la función que creaste.\n\\-xml de llamada
+        de función-\n\nPrepárate para familiarizarte con las funciones, aprender cómo
+        editarlas y crear las tuyas."
+      The Accelerometer_2019: "Hoy vas a aprender cómo usar y crear **funciones**.\n\nCrear
+        una función te permite hacer tus propios bloques. Hay dos partes de una función:
+        \n\nHacer un bloque con un nombre nuevo que tenga todo el código que quieras
+        dentro de él. \n\\-xml de definición de función- \n\nEl único bloque verde
+        que usas, o llamas, para ejecutar la función que creaste.\n\\-xml de llamada
+        de función-\n\nPrepárate para familiarizarte con las funciones, aprender cómo
+        editarlas y crear las tuyas."
       U4 Model Design 1: |-
         <div markdown="1" style="float: right; margin: 20px;">
 
@@ -14488,6 +16062,27 @@ es-MX:
       Underground If Statements_2019: Ahora las cosas se complican. Recoge tres bloques
         de piedra rojiza pero no te caigas en la lava. Usa un comando `si` para colocar
         roca sobre la lava que descubras.
+      Using Accelerometer Events: "Hoy vas a aprender cómo usar y crear **funciones**.\n\nCrear
+        una función te permite hacer tus propios bloques. Hay dos partes de una función:
+        \n\nHacer un bloque con un nombre nuevo que tenga todo el código que quieras
+        dentro de él. \n\\-xml de definición de función- \n\nEl único bloque verde
+        que usas, o llamas, para ejecutar la función que creaste.\n\\-xml de llamada
+        de función-\n\nPrepárate para familiarizarte con las funciones, aprender cómo
+        editarlas y crear las tuyas."
+      Using Accelerometer Events_2018: "Hoy vas a aprender cómo usar y crear **funciones**.\n\nCrear
+        una función te permite hacer tus propios bloques. Hay dos partes de una función:
+        \n\nHacer un bloque con un nombre nuevo que tenga todo el código que quieras
+        dentro de él. \n\\-xml de definición de función- \n\nEl único bloque verde
+        que usas, o llamas, para ejecutar la función que creaste.\n\\-xml de llamada
+        de función-\n\nPrepárate para familiarizarte con las funciones, aprender cómo
+        editarlas y crear las tuyas."
+      Using Accelerometer Events_2019: "Hoy vas a aprender cómo usar y crear **funciones**.\n\nCrear
+        una función te permite hacer tus propios bloques. Hay dos partes de una función:
+        \n\nHacer un bloque con un nombre nuevo que tenga todo el código que quieras
+        dentro de él. \n\\-xml de definición de función- \n\nEl único bloque verde
+        que usas, o llamas, para ejecutar la función que creaste.\n\\-xml de llamada
+        de función-\n\nPrepárate para familiarizarte con las funciones, aprender cómo
+        editarlas y crear las tuyas."
       'Widget: Text Compression': Busca patrones (palabras o frases repetidas) en
         el texto. Ingresa los patrones que ves en el diccionario de la derecha. A
         medida que escribes entradas en el diccionario, el símbolo de la entrada reemplaza
@@ -17590,19 +19185,11 @@ es-MX:
       courseD_scrat_ramp2: Arrastra un bloque 'avanzar' extra desde la caja de herramientas,
         luego adjunta todos los bloques al 'cuando ejecute' para finalizar el código.
       courseD_scrat_ramp3: |-
-        _"Este cerdo está colmando mi paciencia."_
-
-        Hay un bloque de más que hace que el pájaro se estrelle.\
-        Vuelve a arrastrarlo a la caja de herramientas para eliminarlo.
-      courseD_scrat_ramp4: "¡Evita el TNT o volarán plumas!"
-      courseD_scrat_ramp5: |-
-        _"¡Sigue este camino para llevarme hasta el cerdo!"_
-
-        Evita el TNT.
-      courseD_scrat_ramp6: |-
-        _"Mantén la calma y ayúdame a encontrar al cerdo malo. Si no, ¡puedo enfadarme!"_
-
-        Cuando tienes varios bloques seguidos, prueba moverlos dentro de un bucle `repetir`. ¡Esto hará lo mismo con menos código!
+        Hay un bloque de más que hace que Scrat se estrelle.\
+        Para eliminarlo, desconéctalo de los otros bloques y vuelve a arrastrarlo a la caja de herramientas.
+      courseD_scrat_ramp4: "¡Evita el hielo roto para mantener a Scrat a salvo!"
+      courseD_scrat_ramp5: Evita el hielo roto.
+      courseD_scrat_ramp6: 'Usa un bucle para ayudar a Scrat a llegar hasta la bellota. '
       courseD_scrat_ramp7: "¡Ayuda a Scrat a llegar hasta la bellota!"
       courseD_scrat_ramp8: "**Desafío:** ¡Usa lo que has aprendido para llevar a Scrat
         a la bellota!"

@@ -416,6 +416,16 @@ sk-SK:
           aby si mohol objavovať svet!
       NEW Course 4 Artist Params inspire:
         double_loop: Skús vložiť cyklus "for" dovnútra cyklu "opakuj".
+      NEW Course 4 Bee For Loops 10a:
+        NEW_Course_4_Bee_For_Loops_10a_a: Dokážeš nájsť vzťah medzi počtom krokov,
+          ktoré potrebuješ prejsť, a počtom nektárov, ktoré musíš pozbierať?
+        NEW_Course_4_Bee_For_Loops_10a_b: Potrebuješ použiť 2 opakovania, jedno použije
+          matematický blok.
+      NEW Course 4 Bee For Loops 7:
+        NEW_Course_4_Bee_For_Loops_7_a: |-
+          Skús spraviť nejaké výpočty s premennou počítadlo.
+
+          Čo musíš spraviť s počítadlom na každom kvete, aby sa to rovnalo množstvu nektáru, ktoré potrebuješ pozbierať?
       NEW Course 4 Bee For Loops 8:
         NEW_Course_4_Bee_For_Loops_8_a: |-
           Pri každom prechode tvojho cyklu sa prírastok pridáva k tvojej premennej počítadlo.
@@ -2727,18 +2737,6 @@ sk-SK:
 
           **Pinball** - Jedna z postáv sa pohybuje pomocou šípok (použi bloky`keď šípka nahor`, `keď šípka nadol`), potom vždy prehraj náhodný zvuk, keď narazí do iných postáv.
       courseC_PlayLab_eventsFP_2019:
-        idea1: |-
-          _Potrebuješ inšpiráciu?_
-
-          **Kto je tam?** Nechaj postavy ukazovať savs náhodnými obrázkami, takto nikto nebude tušiť, ktorá bude nasledovať.
-
-          ![](https://images.code.org/a56e03479801995d93ad5a4e4384a79e-image-1475340154498.gif)
-        idea2: |-
-          _potrebuješ inšpiráciu?_
-
-          **Ideme za dobrodružstvom** - Zmeň pozadie a potom nechaj postavy rozprávať o tom, kde sa zrazu nachádzajú.
-
-          ![](https://images.code.org/010c4d919f841d6049caf9211ab65ccc-image-1475340583052.gif)
         idea3: |-
           _Potrebuješ inšpiráciu?_
 
@@ -6136,6 +6134,48 @@ sk-SK:
           `opakuj`, aby si povedal, koľko krát sa má opakovať.
         courseF_bee_for1_b: Potrebuješ dva bloky v tvojom cykle ’opkauj’, aby si pozbieral
           všetok nektár.
+      courseF_bee_for10:
+        courseF_bee_for10_a: Dokážeš nájsť vzťah medzi počtom krokov, ktoré potrebuješ
+          prejsť, a počtom nektárov, ktoré musíš pozbierať?
+        courseF_bee_for10_b: Prvá skupina kvetov ma dokopy **14 kvetov**. Aby sa včela
+          dostala k tejto prvej skupine, tak musí preletieť nadol **7 políčok** (alebo
+          14 delené 2). Koľko kvetov je v ďalších skupinách a koľko políčok musí včela
+          prejsť, aby sa k nim dostala?
+        courseF_bee_for10_c: "V úlohe má prvá skupina kvetov **14** kvetov, druhá
+          skupina má **10** kvetov, tretia skupina má **6** kvetov a štvrtá skupina
+          má **2** kvety.\n\nVšimni si, že na tomto obrázku je **7** červených štvorcov,
+          **5** oranžových štvorcov, **3** zelené štvorce a **1** modrý štvorec. \n\n![](<https://images.code.org/602ce14659299af6a59a79ebd0bdb9d4-image-1493221855089.6.11
+          Hint Drawing.png>)\n\nAko súvisia tieto čísla?"
+        courseF_bee_for10_d: Potrebuješ použiť 2 opakovania, jedno použije matematický
+          blok.
+      courseF_bee_for10_2018:
+        courseF_bee_for10_a: Dokážeš nájsť vzťah medzi počtom krokov, ktoré potrebuješ
+          prejsť, a počtom nektárov, ktoré musíš pozbierať?
+        courseF_bee_for10_b: Prvá skupina kvetov ma dokopy **14 kvetov**. Aby sa včela
+          dostala k tejto prvej skupine, tak musí preletieť nadol **7 políčok** (alebo
+          14 delené 2). Koľko kvetov je v ďalších skupinách a koľko políčok musí včela
+          prejsť, aby sa k nim dostala?
+        courseF_bee_for10_c: "V úlohe má prvá skupina kvetov **14** kvetov, druhá
+          skupina má **10** kvetov, tretia skupina má **6** kvetov a štvrtá skupina
+          má **2** kvety.\n\nVšimni si, že na tomto obrázku je **7** červených štvorcov,
+          **5** oranžových štvorcov, **3** zelené štvorce a **1** modrý štvorec. \n\n![](<https://images.code.org/602ce14659299af6a59a79ebd0bdb9d4-image-1493221855089.6.11
+          Hint Drawing.png>)\n\nAko súvisia tieto čísla?"
+        courseF_bee_for10_d: Potrebuješ použiť 2 opakovania, jedno použije matematický
+          blok.
+      courseF_bee_for10_2019:
+        courseF_bee_for10_a: Dokážeš nájsť vzťah medzi počtom krokov, ktoré potrebuješ
+          prejsť, a počtom nektárov, ktoré musíš pozbierať?
+        courseF_bee_for10_b: Prvá skupina kvetov ma dokopy **14 kvetov**. Aby sa včela
+          dostala k tejto prvej skupine, tak musí preletieť nadol **7 políčok** (alebo
+          14 delené 2). Koľko kvetov je v ďalších skupinách a koľko políčok musí včela
+          prejsť, aby sa k nim dostala?
+        courseF_bee_for10_c: "V úlohe má prvá skupina kvetov **14** kvetov, druhá
+          skupina má **10** kvetov, tretia skupina má **6** kvetov a štvrtá skupina
+          má **2** kvety.\n\nVšimni si, že na tomto obrázku je **7** červených štvorcov,
+          **5** oranžových štvorcov, **3** zelené štvorce a **1** modrý štvorec. \n\n![](<https://images.code.org/602ce14659299af6a59a79ebd0bdb9d4-image-1493221855089.6.11
+          Hint Drawing.png>)\n\nAko súvisia tieto čísla?"
+        courseF_bee_for10_d: Potrebuješ použiť 2 opakovania, jedno použije matematický
+          blok.
       courseF_bee_for1_2018:
         courseF_bee_for1_a: Potiahni fialový čiselný blok do prázdneho miesta v cykle
           `opakuj`, aby si povedal, koľko krát sa má opakovať.
@@ -6269,6 +6309,33 @@ sk-SK:
           aby si sa dostal ku kvetom.
         courseF_bee_for8_c: Tvoj cyklus bude počítať _od 3 do 15_ s nejakým prírastkom.
           Aký to bude?
+      courseF_bee_for9:
+        courseF_bee_for9_a: |-
+          Skús spraviť nejaké výpočty s premennou počítadlo.
+
+          Čo musíš spraviť s počítadlom na každom kvete, aby sa to rovnalo množstvu nektáru, ktoré potrebuješ pozbierať?
+        courseF_bee_for9_c: Vyzerá to tak, že potrebuješ včelu otočit na začiatku
+          každej iterácie cyklu, ak chceš vyriešiť túto úlohu.
+        courseF_bee_for9_b: "**Nezabudni.** Ak tvoj cyklus pripočítava, tak prírastok
+          sa pridá k tvojej premennej `počítadlo` po každom prechode cez cyklus."
+      courseF_bee_for9_2018:
+        courseF_bee_for9_a: |-
+          Skús spraviť nejaké výpočty s premennou počítadlo.
+
+          Čo musíš spraviť s počítadlom na každom kvete, aby sa to rovnalo množstvu nektáru, ktoré potrebuješ pozbierať?
+        courseF_bee_for9_c: Vyzerá to tak, že potrebuješ včelu otočit na začiatku
+          každej iterácie cyklu, ak chceš vyriešiť túto úlohu.
+        courseF_bee_for9_b: "**Nezabudni.** Ak tvoj cyklus pripočítava, tak prírastok
+          sa pridá k tvojej premennej `počítadlo` po každom prechode cez cyklus."
+      courseF_bee_for9_2019:
+        courseF_bee_for9_a: |-
+          Skús spraviť nejaké výpočty s premennou počítadlo.
+
+          Čo musíš spraviť s počítadlom na každom kvete, aby sa to rovnalo množstvu nektáru, ktoré potrebuješ pozbierať?
+        courseF_bee_for9_c: Vyzerá to tak, že potrebuješ včelu otočit na začiatku
+          každej iterácie cyklu, ak chceš vyriešiť túto úlohu.
+        courseF_bee_for9_b: "**Nezabudni.** Ak tvoj cyklus pripočítava, tak prírastok
+          sa pridá k tvojej premennej `počítadlo` po každom prechode cez cyklus."
       courseF_bee_variables_3_2018:
         courseF_beevariables_3a: |-
           Môźeš použiť tento kód v tvojom programe, aby si odčítal jedna z premennej:

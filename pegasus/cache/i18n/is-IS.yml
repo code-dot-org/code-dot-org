@@ -33,7 +33,7 @@ is-IS:
   name: Nafn
   email: Netfang
   zipcode: Póstnúmer eða land
-  submit: Senda inn
+  submit: Staðfesta
   twentyhours_heading: Prófaðu námskeiðið okkar Inngangur að tölvunarfræði
   twentyhours_text: Búin(n) að ljúka fyrstu Klukkustund kóðunar? Fylgdu eftir með
     því að læra fleiri mikilvæg hugtök í tölvunarfræði og forritun á þessu námskeiði.
@@ -963,6 +963,7 @@ is-IS:
   dashboard_coursed: 'Námskeið D: '
   dashboard_coursee: 'Námskeið E: '
   dashboard_coursef: 'Námskeið F: '
+  dashboard_express: 'Hraðnámskeið: '
   dashboard_unplugged: Ef þú hefur engar tölvur, <a href='%{unplugged_url}'>ættir
     þú að prófa þessar kennslustundir án tengingar</a> í bekknum þínum.
   dashboard_curriculum: Námskrá
@@ -982,6 +983,7 @@ is-IS:
   dashboard_curriculum_csins: 'Tölvunarfræði í vísindum:'
   dashboard_curriculum_csp: 'AP® Undirstöðuatriði tölvunarfræði:'
   dashboard_curriculum_ecs: 'Tölvunarfræði könnuð:'
+  dashboard_curriculum_csd: 'Uppgötvanir í Tölvunarfræði: '
   dashboard_grade_k: K
   dashboard_grade_other: Annað
   dashboard_login_word: Orð
@@ -1174,10 +1176,22 @@ is-IS:
   coursee-2017_name: Námskeið E (2017)
   coursef-2017_name: Námskeið F (2017)
   coursea-2018_name: Námskeið A (2018)
+  coursec-2018_name: Námskeið C (2018)
+  coursed-2018_name: Námskeið D (2018)
+  coursee-2018_name: Námskeið E (2018)
+  coursef-2018_name: Námskeið F (2018)
   coursea-2019_name: Námskeið A (2019)
+  courseb-2019_name: Námskeið B (2019)
+  coursec-2019_name: Námskeið C (2019)
+  coursed-2019_name: Námskeið D (2019)
+  coursee-2019_name: Námskeið E (2019)
+  coursef-2019_name: Námskeið F (2019)
+  express-2018_name: Hraðnámskeið (2018)
   pre-express-2018_name: Hraðnámskeið fyrir forlæsa (2018)
+  express-2019_name: Hraðnámskeið (2019)
   accelerated_name: Hraðnámskeiðið
   express_name: Hraðnámskeið
+  pre-express_name: Hraðnámskeið fyrir forlæsa
   20-hour_name: Hraðnámskeiðið
   algebra_name: TF í algebru
   AlgebraA_name: TF í algebru Námskeið A
@@ -2125,7 +2139,11 @@ is-IS:
   hoc2018_mc_video_title_hoc_is_here: Klukkustund kóðunar er hér - Allir geta lært
   hoc2018_mc_video_title_anybody_can_learn: Allir geta lært
   hoc2018_mc_video_title_my_name_is_aracely: Ég heiti Aracely
+  hoc2018_mc_homepage_hoc_coming: Klukkustund kóðunar er á næsta leiti...
   hoc2018_mc_homepage_what_create: Hvað ætlar þú að búa til?
+  hoc2018_mc_homepage_give_flight: Gefðu ímyndunaraflinu lausan tauminn og leyfðu
+    hugmyndum að fæðast. Byrjaðu með Klukkustund kóðunar og þína eigin sköpunargáfu.
+  hoc2018_mc_homepage_watch_video: Horfðu á myndbandið okkar
   hoc2018_mc_homepage_join_us: Vertu með
   hoc2018_mc_homepage_try_it: Prófið hana
   hoc2018_mc_back_journey: |-
@@ -2136,13 +2154,17 @@ is-IS:
     leysa þrautir til að kanna og byggja neðansjávarheima með kóða.
   hoc2018_mc_journey: Ferðastu um Minecraft með kóða.
   hoc2018_dance_party_main_heading: Danspartý
+  hoc2018_dance_party_landing_title: Dans
   hoc2018_dance_party_subheading: Hjálpaðu að þýða Danspartý
+  hoc2018_dance_create_your_own_dance_title: Búðu til þitt eigið Danspartý
   hoc2018_dance_party_box_title: Danspartý
   hoc2018_dance_party_box_description: Kóðaðu Danspartý og deildu því með vinum!
+  hoc2018_dance_party_specs: Tungumál | Snið | Aldur 6-106
   hoc2018_dance_party_button: Byrja
   hoc2018_dance_keep_on_dancing_box_title: Halda áfram að dansa
   hoc2018_dance_keep_on_dancing_description: Halda áfram eftir fyrstu klukkustundina
     með fleiri hugmyndir að verkefnum.
+  hoc2018_dance_keep_on_dancing_specs: Tungumál | Snið | Aldur 13+
   hoc2018_dance_keep_on_dancing_button: Byrja 2. hluta
   hoc2018_dance_teacher_resources_title: Fyrir kennara
   hoc2018_dance_teacher_resources_tile1_description: Kennsluáætlanir, skírteini og
@@ -2163,7 +2185,11 @@ is-IS:
     að markmiði að hvetja, mennta og þjálfa fátæk og önnur börn og ungmenni sem standa
     höllum fæti til að finna sér starfsvettvang innan tölvunarfræði. <a href='%{amazon_future_engineer_link}'
     target='_blank'>Nánar</a>
+  hoc2018_dance_amazon_learn_more_future_engineer_subheading_title: Lærðu meira um
+    Amazon Future Engineer
+  hoc2018_dance_amazon_about_future_engineer_title: Um Amazon Future Engineer
   hoc2018_dance_amazon_about_future_engineer_button: Nánar
+  hoc2018_dance_amazon_try_coding_this_summer_title: Prófaðu að kóða í sumar
   hoc2018_dance_amazon_scholarship_programs_button: Sækja um nú
   hoc2018_dance_amazon_future_engineer_footer: "* Listamennirnir sem eiga tónlistina
     sem er notuð í þessu kennsluefni eru ekki að styðja við eða mæla með Amazon með

@@ -10,6 +10,6 @@
   "danceFeedbackNeedDifferentDance": "È necessario utilizzare uno stile di ballo differente.",
   "danceFeedbackNeedEveryTwoMeasures": "Assicurati di stare utilizzando il blocco `ogni 2 battute` ",
   "danceFeedbackNeedMakeANewDancer": "Usa il blocco `crea un nuovo` per creare un nuovo ballerino.",
-  "danceFeedbackKeyEvent": "",
+  "danceFeedbackKeyEvent": "Assicurati di allegare del codice al blocco `quando chiave` e premi la chiave mentre il tuo ballo è in esecuzione.",
   "measure": "Battuta:"
 }
