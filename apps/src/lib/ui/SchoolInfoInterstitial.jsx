@@ -309,7 +309,7 @@ export default class SchoolInfoInterstitial extends React.Component {
 
   onSchoolTypeChange = event => {
     const newType = event ? event.target.value : '';
-    this.setState({schoolType: newType, errors: {}});
+    this.setState({schoolType: newType, ncesSchoolId: '', errors: {}});
   };
 
   onSchoolChange = (_, event) => {

@@ -1,5 +1,5 @@
 {
-  "startButton": "Inici",
+  "startButton": "Comença",
   "filterOrgNames": "",
   "filterOrgNamesAll": "",
   "filterSortBy": "",
@@ -7,7 +7,7 @@
   "filterSortByPopularityRank": "",
   "filterGrades": "",
   "filterGradesAll": "",
-  "filterGradesPre": "",
+  "filterGradesPre": "Prelectors",
   "filterGrades25": "",
   "filterGrades68": "",
   "filterGrades9": "",

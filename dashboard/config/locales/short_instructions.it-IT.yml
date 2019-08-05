@@ -607,9 +607,9 @@ it-IT:
         questo esercizio! (Impareremo un modo più semplice nel prossimo esercizio).
       NEW Course 4 Bee For Loops 8: E ora andiamo oltre! Quale deve essere il _passo_
         in questo ciclo con contatore per raccogliere 3, 6, 9, 12, 15 dosi di nettare?
-      Overworld Avoid Monsters: Incontrare un Creeper non è una buona idea. Muoviti
-        con attenzione tra i Creeper e mettiti al sicuro a casa tua.
-      Overworld Avoid Monsters_2019: Incontrare un Creeper non è una buona idea. Muoviti
+      Overworld Avoid Monsters: Incontrare un Creeper non è salutare. Muoviti con
+        attenzione tra i Creeper e mettiti al sicuro a casa tua.
+      Overworld Avoid Monsters_2019: Incontrare un Creeper non è salutare. Muoviti
         con attenzione tra i Creeper e mettiti al sicuro a casa tua.
       Overworld Chop Tree: 'Il legno è una risorsa molto importante: serve per costruire
         molte cose. Raggiungi l''albero e usa l''istruzione `distruggi` per abbatterlo.'
@@ -713,10 +713,10 @@ it-IT:
       Underground If Statements_2019: Ora la situazione si fa un po' più difficile.
         Estrai tre blocchi di pietrarossa, ma non cadere nella lava. Usa un'istruzione
         `se` per posizionare dei ciottoli se scopri la lava.
-      Underground Iron: Camminare sulla lava non è una buona idea. Posiziona dei ciottoli
+      Underground Iron: Camminare sulla lava non è salutare. Posiziona dei ciottoli
         per creare un ponte, poi estrai almeno due blocchi di ferro.
-      Underground Iron_2019: Camminare sulla lava non è una buona idea. Posiziona
-        dei ciottoli per creare un ponte, poi estrai almeno due blocchi di ferro.
+      Underground Iron_2019: Camminare sulla lava non è salutare. Posiziona dei ciottoli
+        per creare un ponte, poi estrai almeno due blocchi di ferro.
       Underground Mining Coal: Nel sottosuolo trovi le risorse più preziose, ma è
         buio. Posiziona almeno due torce ed estrai almeno due blocchi di carbone.
       Underground Mining Coal_2019: Nel sottosuolo trovi le risorse più preziose,
@@ -737,6 +737,10 @@ it-IT:
         originale quando si toccano.
       Virtual Pet 8_2019: 'Tempo di giocare: Cos''altro puoi far fare alla tua giraffa? '
       Virtual Pet Freeplay: 'Tempo di giocare: Cos''altro puoi far fare alla tua giraffa? '
+      'Widget: Text Compression': Cerca modelli (parole o frasi ripetute) nel testo.
+        Inserisci i modelli che vedi nel dizionario in alto a destra. Come inserisci
+        le voci nel dizionario, il simbolo per la voce è inserito nel testo al posto
+        del modello.
       behaviors 1: Fai una previsione!
       behaviors 4: Fai una previsione!
       bounce_1: Attacca un blocco al blocco verde `quando si preme la freccia verso
@@ -871,7 +875,7 @@ it-IT:
         cancellalo e sostituiscilo con qualcosa di totalmente diverso)
       course4_collector_nested_loops_challenge2: Aiuta la collezionista a raggiungere
         almeno due diamanti usando solo i blocchi che trovi nella cassetta degli attrezzi.
-        È possibile raccoglierli tutti e 4.
+        Se vuoi puoi anche raccoglierli tutti e 4.
       course4_harvester_nested_loops_challenge1: '"Ho bisogno di aiuto nella fattoria!
         Aiutami a raccogliere queste pannocchie usando solo i blocchi presenti nella
         cassetta degli attrezzi."'
@@ -2663,13 +2667,13 @@ it-IT:
         nell''area di lavoro per raccogliere almeno **6** diamanti!'
       courseD_collector_nested_loops_challenge2: Aiuta la collezionista a raggiungere
         almeno due diamanti usando solo i blocchi che trovi nella cassetta degli attrezzi.
-        È possibile raccoglierli tutti e 4.
+        Se vuoi puoi anche raccoglierli tutti e 4.
       courseD_collector_nested_loops_challenge2_2018: Aiuta la collezionista a raggiungere
         almeno due diamanti usando solo i blocchi che trovi nella cassetta degli attrezzi.
-        È possibile raccoglierli tutti e 4.
+        Se vuoi puoi anche raccoglierli tutti e 4.
       courseD_collector_nested_loops_challenge2_2019: Aiuta la collezionista a raggiungere
         almeno due diamanti usando solo i blocchi che trovi nella cassetta degli attrezzi.
-        È possibile raccoglierli tutti e 4.
+        Se vuoi puoi anche raccoglierli tutti e 4.
       courseD_collector_ramp10: Aiuta Laura a raccogliere tutti i diamanti.
       courseD_collector_ramp8: Aiuta Laura a raccogliere tutti i diamanti.
       courseD_collector_ramp9: Aiuta Laura a raccogliere tutti i diamanti.
@@ -2865,24 +2869,24 @@ it-IT:
         il minor numero possibile di blocchi.
       courseD_maze_nestedLoops3_2019: Fai arrivare lo zombie fino al girasole usando
         il minor numero possibile di blocchi.
-      courseD_maze_nestedLoops4: 'Fammi arrivare al girasole usando il minor numero
-        possibile di blocchi!  '
-      courseD_maze_nestedLoops4_2018: 'Fammi arrivare al girasole usando il minor
-        numero possibile di blocchi!  '
-      courseD_maze_nestedLoops4_2019: 'Fammi arrivare al girasole usando il minor
-        numero possibile di blocchi!  '
+      courseD_maze_nestedLoops4: '_"Fammi arrivare al girasole usando il minor numero
+        possibile di blocchi!"_  '
+      courseD_maze_nestedLoops4_2018: '_"Fammi arrivare al girasole usando il minor
+        numero possibile di blocchi!"_  '
+      courseD_maze_nestedLoops4_2019: '_"Fammi arrivare al girasole usando il minor
+        numero possibile di blocchi!"_  '
       courseD_maze_nestedLoops5: Fai arrivare lo zombie fino al girasole usando il
         minor numero possibile di blocchi!
       courseD_maze_nestedLoops5_2018: Fai arrivare lo zombie fino al girasole usando
         il minor numero possibile di blocchi!
       courseD_maze_nestedLoops5_2019: Fai arrivare lo zombie fino al girasole usando
         il minor numero possibile di blocchi!
-      courseD_maze_nestedLoops6: Usa i cicli per farmi arrivare al girasole col minor
-        numero possibile di blocchi!
-      courseD_maze_nestedLoops6_2018: Usa i cicli per farmi arrivare al girasole col
-        minor numero possibile di blocchi!
-      courseD_maze_nestedLoops6_2019: Usa i cicli per farmi arrivare al girasole col
-        minor numero possibile di blocchi!
+      courseD_maze_nestedLoops6: Fai arrivare lo zombie fino al girasole usando solo
+        i blocchi disponibili.
+      courseD_maze_nestedLoops6_2018: Fai arrivare lo zombie fino al girasole usando
+        solo i blocchi disponibili.
+      courseD_maze_nestedLoops6_2019: Fai arrivare lo zombie fino al girasole usando
+        solo i blocchi disponibili.
       courseD_maze_ramp1: Per risolvere questo esercizio, collega tutti i blocchi
         e clicca su "Esegui" per vederlo in funzione!
       courseD_maze_ramp1_2018: Per risolvere questo esercizio, collega tutti i blocchi
@@ -2966,12 +2970,12 @@ it-IT:
       courseD_maze_until7_2018: Aiuta lo zombie ad arrivare fino al girasole.
       courseD_maze_until7_2019: Aiuta lo zombie ad arrivare fino al girasole.
       courseD_maze_until8: Aiuta lo zombie ad arrivare fino al girasole.
-      courseD_maze_until9: "**Sfida:** Evita le piante carnivore e aiuta gli zombie
+      courseD_maze_until9: "**Sfida:** Evita le piante carnivore e aiuta lo zombie
         ad arrivare fino al girasole."
-      courseD_maze_until9_2018: "**Sfida:** Evita le piante carnivore e aiuta gli
-        zombie ad arrivare fino al girasole."
-      courseD_maze_until9_2019: "**Sfida:** Evita le piante carnivore e aiuta gli
-        zombie ad arrivare fino al girasole."
+      courseD_maze_until9_2018: "**Sfida:** Evita le piante carnivore e aiuta lo zombie
+        ad arrivare fino al girasole."
+      courseD_maze_until9_2019: "**Sfida:** Evita le piante carnivore e aiuta lo zombie
+        ad arrivare fino al girasole."
       courseD_playLab_cond1: Fai arrivare il pirata fino alle bandierine per risolvere
         questo esercizio.
       courseD_playLab_cond1_2018: Fai arrivare il pirata fino alle bandierine per

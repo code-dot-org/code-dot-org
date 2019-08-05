@@ -12993,3 +12993,11 @@ en:
           description_audience: ''
           description_short: ''
           description: ''
+        pl-csd-bugs:
+          stages:
+            CSD Workshop 1 Bugs:
+              name: CSD Workshop 1 Bugs
+          title: CSD Workshop 1 Bugs
+          description_audience: ''
+          description_short: Debugging in Game Lab - Academic Year Workshop 1
+          description: ''

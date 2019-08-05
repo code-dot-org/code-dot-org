@@ -398,6 +398,8 @@ zh-CN:
         csd_external_netflix_data: Netflix（网飞）是如何生成电视和电影建议的？
         csd_external_waze_data: 为什么如此多的用户都着迷于Waze？
         csd_gamelab_animation_tab: 动画标签页
+        csd_gamelab_sprites_1: 精灵简介
+        csd_gamelab_sprites_2: 精灵的动画
         csd_gamelab_velocity: 矢量
         csd_weblab_intro_1: 网络实验室介绍-第 1 部分
         csd_weblab_intro_2: 网络实验室介绍-第 2 部分
@@ -514,6 +516,7 @@ zh-CN:
         csd_applab_loops: 应用实验室的循环
         csd_problem_solving_process: 解决问题的过程
         CSF_Going_Places_Safely: 我的在线邻居
+        CSF_SpriteLab_Intro_v2: 向你介绍精灵实验室
         CSF_Spritelab_MakeSprite_v2: 如何制作精灵
         CSF_SpriteLab_SpritesInAction_v2: 动作精灵
     callout:
@@ -525,7 +528,7 @@ zh-CN:
         show_code_explanation: 单击此处查看你的程序的代码
         instructions_repeat_explanation: 每个关卡的说明在这里都会再写一次
         category_explanation: 你有所有一样的块，但它们现在按类别放置着。
-        set_sprite_image: 把一个 “设置图像为演员”模块拼合到 "当故事开始"块下，来为这个故事添加一个演员。
+        set_sprite_image: 把一个“设置图像为演员”模块拼合到"当故事开始"块下，来为这个故事添加一个演员。
         studio_say_text: 你希望你的演员说些什么话呢，在引号中键入吧。
         jigsaw_click: 单击此块 ！
         move_elsa_forward: 拖动“向前移动”积木块，并把它拼在“当运行时”块下面，来让爱莎向前移动。
