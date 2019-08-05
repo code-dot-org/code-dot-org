@@ -102,15 +102,11 @@ module.exports = class Main {
   }
 
   start() {
-    if (this.timer) {
-      this.stop();
-    }
     this.video.play();
   }
 
   stop() {
     this.video.pause();
-    cancelAnimationFrame(this.timer);
   }
 
   async trainExample() {
