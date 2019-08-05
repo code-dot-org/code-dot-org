@@ -57,7 +57,8 @@ var levelDefinition = {
   lastAttempt: '',
   levelHtml:
     '<div xmlns="http://www.w3.org/1999/xhtml" id="divApplab" class="appModern" tabindex="1" style="width: 200px; height: 200px;"><div class="screen" tabindex="1" id="screen1" style="display: block; height: 200px; width: 200px; left: 0px; top: 0px; position: absolute; z-index: 0;"></div></div>',
-  id: 'custom'
+  id: 'custom',
+  widgetMode: false
 };
 
 // Extract a list of those pixels that are actually filled
