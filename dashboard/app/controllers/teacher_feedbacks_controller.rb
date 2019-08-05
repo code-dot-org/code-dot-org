@@ -17,10 +17,11 @@ class TeacherFeedbacksController < ApplicationController
       "performanceLevel4" => "rubric_performance_level_4"
     }
 
-    @feedbacks_as_student_with_level_info = @feedbacks_as_student.map {|feedback|
+    @feedbacks_as_student_with_level_info = @feedbacks_as_student.
+      map do |feedback|
       feedback.attributes.merge(feedback&.script_level&.summary_for_feedback).
-      merge({performance_details: feedback.level.properties[performance_to_details[feedback.performance]]})
-    }
+        merge({performance_details: feedback.level.properties[performance_to_details[feedback.performance]]})
+    end
   end
 
   def set_seen_on_feedback_page_at
