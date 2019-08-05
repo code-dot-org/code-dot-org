@@ -29,7 +29,7 @@ Use [this email]({{ promote/sample_emails }}) or [this blurb]({{ promote/stats_u
 ### 3. Host an Hour of Code event
 See our [event how-to guide]({{ urls/how_to_events }}) for a sample run of show, [media outreach kit]({{ promote/press_kit_url }}), and other event-planning resources. Hosting an event is a great way to promote the Hour of Code and increase participation.
 
-### 4. Attend an event during Computer Science Education Week ({{ campaign_date/short_date }})
+### 4. Attend an event during Computer Science Education Week ({{ campaign_date/short }})
 [Find classrooms and schools]({{ urls/events }}) participating in your district, city, or state.
 
 ### 5. Issue a proclamation or resolution
