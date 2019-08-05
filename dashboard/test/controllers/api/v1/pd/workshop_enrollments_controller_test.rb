@@ -6,13 +6,13 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ::ActionController::TestC
     @program_manager = create :program_manager
     @facilitator = create :facilitator
 
-    @organizer_workshop = create :pd_workshop, organizer: @organizer, facilitators: [@facilitator]
+    @organizer_workshop = create :workshop, organizer: @organizer, facilitators: [@facilitator]
     @organizer_workshop_enrollment = create :pd_enrollment, workshop: @organizer_workshop
 
-    @workshop = create :pd_workshop, :with_codes_assigned, organizer: @program_manager, facilitators: [@facilitator], num_sessions: 1
+    @workshop = create :workshop, :with_codes_assigned, organizer: @program_manager, facilitators: [@facilitator], num_sessions: 1
     @enrollment = create :pd_enrollment, workshop: @workshop
 
-    @unrelated_workshop = create :pd_workshop
+    @unrelated_workshop = create :workshop
     @unrelated_enrollment = create :pd_enrollment, workshop: @unrelated_workshop
   end
 
@@ -306,7 +306,7 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ::ActionController::TestC
   end
 
   test 'admin can update scholarship info' do
-    workshop = create :pd_workshop, :local_summer_workshop_upcoming, organizer: @program_manager, facilitators: [@facilitator]
+    workshop = create :workshop, :local_summer_workshop_upcoming, organizer: @program_manager, facilitators: [@facilitator]
     enrollment = create :pd_enrollment, :from_user, workshop: workshop
     sign_in create(:admin)
 
@@ -318,7 +318,7 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ::ActionController::TestC
   end
 
   test 'program managers can update scholarship info' do
-    workshop = create :pd_workshop, :local_summer_workshop_upcoming, organizer: @program_manager, facilitators: [@facilitator]
+    workshop = create :workshop, :local_summer_workshop_upcoming, organizer: @program_manager, facilitators: [@facilitator]
     enrollment = create :pd_enrollment, :from_user, workshop: workshop
     sign_in @program_manager
 
@@ -330,7 +330,7 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ::ActionController::TestC
   end
 
   test 'facilitators cannot update scholarship info' do
-    workshop = create :pd_workshop, :local_summer_workshop_upcoming, facilitators: [@facilitator]
+    workshop = create :workshop, :local_summer_workshop_upcoming, facilitators: [@facilitator]
     enrollment = create :pd_enrollment, :from_user, workshop: workshop
     sign_in @facilitator
 
