@@ -4,6 +4,7 @@ import Radium from 'radium';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 import {TeacherPanelProgressBubble} from '@cdo/apps/code-studio/components/progress/TeacherPanelProgressBubble';
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
 
 const styles = {
   table: {
@@ -40,6 +41,9 @@ const styles = {
   },
   nameWithBubble: {
     paddingLeft: 5
+  },
+  linkIcon: {
+    marginLeft: 10
   }
 };
 
@@ -102,24 +106,25 @@ class StudentTable extends React.Component {
               onClick={() => onSelectUser(student.id)}
             >
               <td key={`td-${student.id}`} style={styles.td}>
-                <a href={this.getRowLink(student.id)} style={{width: '100%'}}>
-                  <div style={styles.studentTableRow}>
-                    {levels && (
-                      <TeacherPanelProgressBubble
-                        level={levels.find(
-                          level => student.id === level.user_id
-                        )}
-                      />
-                    )}
-                    <span
-                      style={
-                        levels ? styles.nameWithBubble : styles.nameInScript
-                      }
-                    >
-                      {student.name}
-                    </span>
-                  </div>
-                </a>
+                <div style={styles.studentTableRow}>
+                  {levels && (
+                    <TeacherPanelProgressBubble
+                      level={levels.find(level => student.id === level.user_id)}
+                    />
+                  )}
+                  <span
+                    style={levels ? styles.nameWithBubble : styles.nameInScript}
+                  >
+                    {student.name}
+                  </span>
+                  <a
+                    href={this.getRowLink(student.id)}
+                    target="_blank"
+                    style={styles.linkIcon}
+                  >
+                    <FontAwesome icon="external-link" />
+                  </a>
+                </div>
               </td>
             </tr>
           ))}

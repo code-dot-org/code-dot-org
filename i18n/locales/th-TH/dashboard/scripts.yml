@@ -1781,3 +1781,11 @@ th:
               name: เงื่อนไข 
             Functions:
               name: ฟังก์ชัน
+        csl-vn:
+          stages:
+            Programming with Rey and BB-8:
+              name: การเขียนโปรแกรมกับเรย์และบีบี-8
+            Loops in Ice Age:
+              name: ใช้ลูปกับยุคน้ำแข็ง(Ice Age)
+            Ocean Scene with Loops:
+              name: ฉากมหาสมุทรกับลูป

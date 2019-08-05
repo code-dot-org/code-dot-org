@@ -223,9 +223,6 @@ hi:
     tried: 'कोशिश की'
   home:
     trynow: 'अधिक जानें'
-    announcement_title: "घोषणाएँ"
-    announcement_learn_more_button: "अधिक जानें"
-    announcement_try_now_button: "अधिक जानें"
   gender:
     male: 'पुरूष'
     female: 'महिला'

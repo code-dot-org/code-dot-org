@@ -804,8 +804,6 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
   # Actions: Start, End
 
   test 'admins can start and end workshops' do
-    Pd::AsyncWorkshopHandler.expects(:process_ended_workshop).with(@workshop.id)
-
     sign_in @admin
     @workshop.sessions << create(:pd_session)
     assert_equal 'Not Started', @workshop.state
@@ -823,8 +821,6 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
 
   # TODO: remove this test when workshop_organizer is deprecated
   test 'organizers can start and stop their workshops' do
-    Pd::AsyncWorkshopHandler.expects(:process_ended_workshop).with(@organizer_workshop.id)
-
     sign_in @workshop_organizer
     @organizer_workshop.sessions << create(:pd_session)
     assert_equal 'Not Started', @organizer_workshop.state
@@ -841,8 +837,6 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
   end
 
   test 'program manager organizers can start and stop their workshops' do
-    Pd::AsyncWorkshopHandler.expects(:process_ended_workshop).with(@workshop.id)
-
     sign_in @organizer
     @workshop.sessions << create(:pd_session)
     assert_equal 'Not Started', @workshop.state
