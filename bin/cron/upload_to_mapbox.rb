@@ -10,20 +10,20 @@ require 'aws-sdk-s3'
 require 'rest-client'
 
 def create_upload_credentials
-  CDO.log "Creating credentials"
+  CDO.log.info "Creating credentials"
   response = RestClient.post("https://api.mapbox.com/uploads/v1/codeorg/credentials?access_token=#{CDO.mapbox_upload_token}", {})
   JSON.parse(response.body)
 end
 
 # Returns response code
 def create_upload(config)
-  CDO.log "Creating upload"
+  CDO.log.info "Creating upload"
   RestClient.post("https://api.mapbox.com/uploads/v1/codeorg?access_token=#{CDO.mapbox_upload_token}", config.to_json, {content_type: :json, accept: :json}).code
 end
 
 # Return true if upload was successful
 def put_file_on_s3(tileset_path, credentials)
-  CDO.log "Putting file on s3"
+  CDO.log.info "Putting file on s3"
   s3_client = Aws::S3::Resource.new(
     access_key_id: credentials['accessKeyId'],
     secret_access_key: credentials['secretAccessKey'],

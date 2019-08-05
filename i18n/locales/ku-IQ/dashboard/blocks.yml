@@ -1030,6 +1030,8 @@ ku:
         options:
           PROPERTY:
             "'shapeColor'": ڕەنگ
+      aalab_addBehaviorForDuration:
+        text: سپڕایتی aalab {SPRITE} {BEHAVIOR} دەستپێدەکات بۆ {SECONDS} چرکە
       aalab_allSpritesWithAnimation:
         text: "{ANIMATION}"
       aalab_changePropByFlexible:

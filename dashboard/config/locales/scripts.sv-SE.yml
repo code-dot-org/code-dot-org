@@ -2024,6 +2024,8 @@ sv:
           stages:
             Number Systems:
               name: Talsystem
+            Sending Binary Messages:
+              name: Skicka binära meddelanden
         time4csdemo:
           stages:
             Crowdsourcing:

@@ -300,7 +300,7 @@
       "courseD_bee_conditionals4_hintVid1": "Need help getting started?  Watch the video!",
       "courseD_bee_conditionals4_a": "You can still treat every space as if there is a cloud over it, even though you can see the whole path.",
       "courseD_bee_conditionals4_b": "Use an `if` statement inside your loop to check each space for nectar. ",
-      "courseD_bee_conditionals4_c": "Using <xml><block type=\"maze_untilBlocked\"/></xml> block, you should move forward and check for a flower. If there is a flower, what should the bee do?",
+      "courseD_bee_conditionals4_c": "Using [blockly block][0] block, you should move forward and check for a flower. If there is a flower, what should the bee do?",
       "courseD_bee_conditionals4_hintVid2": "Watch this video for help solving this puzzle."
     }
   },
@@ -389,7 +389,7 @@
     "long_instructions": "Functions let you define new blocks! \n\nWe've moved the blocks needed for drawing a square into a function called `draw a square`. This time, use the `draw a square` function to create the glasses. \n\n* * *\n\nThe squares are 75 pixels apart.",
     "authored_hints": {
       "courseD_artist_functions2_b": "The function you write should not contain your whole program, just the part that draws a square with 100 pixel sides.",
-      "courseD_artist_functions2_c": "Use the green `draw a square` block to \"call\" your function under the `when run` block. Otherwise, the code in your function will not run.\n\n<xml><block type=\"procedures_callnoreturn\" limit=\"2\"><mutation name=\"draw a square\"/></block></xml>",
+      "courseD_artist_functions2_c": "Use the green `draw a square` block to \"call\" your function under the `when run` block. Otherwise, the code in your function will not run.\n\n[blockly block][0]",
       "courseD_artist_functions2_a": "Your program should:\n\n-   Use function\n-   Move forward 100 + 75 pixels\n-   Use function"
     },
     "callouts": {
@@ -512,7 +512,7 @@
   },
   "https://studio.code.org/s/K5-OnlinePD/stage/9/puzzle/5": {
     "dsls": {
-      "markdown": "# Best Practices > Meta-Cognitive Problem Solving\n\nExplicitly teaching meta-cognitive problem solving strategies before, during and after coding is extremely important in helping students process their learning. Mega-cognitive problem solving involves thinking about your thought process itself, and reflecting on _how_ you solve problems. Watch the video below to learn about Code.org's \"Puzzle Solving Recipe\" that can help students have success with difficult problems:\n\n<iframe width=\"640\" height=\"390\" src=\"https://www.youtube.com/embed/XN0G6bSbQ2M\" frameborder=\"0\" allowfullscreen></iframe>\n[Can't see the video? Click here](https://videos.code.org/levelbuilder/05teachingproblemsolving_small-mp4.mp4)\n\n<br/><br/>\n[This worksheet](http://code.org/curriculum/docs/k-5/PuzzleSolvingStudent.png) details the different steps of the Puzzle Solving Recipe.\n\n<img src=\"https://images.code.org/18ec61f8b911b83ca1cdea404a34c40e-image-1434399798952.png\" width=\"650px\" style=\"margin-right:45px; border-radius:10px;\">\n\n> ## Reflect: \n> How might you explicitly teach problem solving in your CS classroom?\n\n> [Tweet your thoughts](https://twitter.com/teachcode) and be sure to tag @teachcode in your tweet so we can respond.\n\n> <a href=\"http://ctt.ec/ic2bx\" target=\"blank\"><h4><i class=\"fa fa-external-link-square\" /> Share on Twitter</h4></a>\n\n\n"
+      "markdown": "# Best Practices > Meta-Cognitive Problem Solving\n\nExplicitly teaching meta-cognitive problem solving strategies before, during and after coding is extremely important in helping students process their learning. Mega-cognitive problem solving involves thinking about your thought process itself, and reflecting on _how_ you solve problems. Watch the video below to learn about Code.org's \"Puzzle Solving Recipe\" that can help students have success with difficult problems:\n\n<iframe width=\"640\" height=\"390\" src=\"https://www.youtube.com/embed/XN0G6bSbQ2M\" frameborder=\"0\" allowfullscreen></iframe>\n[Can't see the video? Click here](https://videos.code.org/levelbuilder/05teachingproblemsolving_small-mp4.mp4)\n\n<br/><br/>\n[This worksheet](http://code.org/curriculum/docs/k-5/PuzzleSolvingStudent.png) details the different steps of the Puzzle Solving Recipe.\n\n<img src=\"https://images.code.org/18ec61f8b911b83ca1cdea404a34c40e-image-1434399798952.png\" width=\"650px\" style=\"margin-right:45px; border-radius:10px;\">\n\n> ## Reflect: \n> How might you explicitly teach problem solving in your CS classroom?\n\n> [Tweet your thoughts](https://twitter.com/teachcode) and be sure to tag @teachcode in your tweet so we can respond.\n\n> <a href=\"http://ctt.ec/ic2bx\" target=\"blank\"><h4><i class=\"fa fa-external-link-square\" ></i> Share on Twitter</h4></a>\n\n\n"
     }
   },
   "https://studio.code.org/s/K5-OnlinePD/stage/9/puzzle/6": {
@@ -557,7 +557,7 @@
   },
   "https://studio.code.org/s/K5-OnlinePD/stage/11/puzzle/2": {
     "dsls": {
-      "markdown": "# Getting started > Take the post-survey\n\nThanks for using the Teaching Computer Science Fundamentals online professional development course! \n\nWhether or not you finished the whole course, we want to hear your feedback. Please submit this short survey to help us improve the course going forward!\n\n<a class=\"btn btn-large btn-primary\" href=\"https://form.jotform.com/90557778075168?user_id=<user_id/>\"> Take the post-survey</a>\n"
+      "markdown": "# Getting started - Take the post-survey\n\nThanks for using the Teaching Computer Science Fundamentals online professional development course! \n\nWhether or not you finished the whole course, we want to hear your feedback. Please submit this short survey to help us improve the course going forward!\n\n[Here is a test of link using markdown](https://form.jotform.com/90557778075168?user_id=<user_id/>) <-- remove this after testing (attempt by Baker).\n\n<a class=\"btn btn-large btn-primary submitButton\" href=\"https://form.jotform.com/90557778075168?user_id=<user_id/>\"> Take the post-survey</a>\n\n"
     }
   },
   "https://studio.code.org/s/K5-OnlinePD/stage/11/puzzle/3": {

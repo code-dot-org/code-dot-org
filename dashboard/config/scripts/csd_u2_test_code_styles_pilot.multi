@@ -12,7 +12,7 @@ wrong 'Put the code `style=“larger”` inside the h3 tag.'
 markdown <<MARKDOWN
 Questions 5 and 6 deal with the following web page:
 
-![expandable](https://images.code.org/6a8e713405756aec4992cb5c406dcc2d-image-1552346175963.15.59 PM.png)
+![](https://images.code.org/6a8e713405756aec4992cb5c406dcc2d-image-1552346175963.15.59 PM.png)
 
-![expandable](https://images.code.org/d3ba5db1bffc7deb0f22a74836b338c9-image-1552346189165.16.05 PM.png)
+![](https://images.code.org/d3ba5db1bffc7deb0f22a74836b338c9-image-1552346189165.16.05 PM.png)
 MARKDOWN

@@ -17,6 +17,7 @@ Scenario: Solving puzzle 1, proceeding to puzzle 2, verifying that puzzle 1 appe
   And I verify progress in the header of the current page is "perfect" for level 1
   # Course overview should also show progress
   Then I navigate to the course page for "hourofcode"
+  And I wait for 2 seconds
   And I verify progress for stage 1 level 1 is "perfect"
   # Course overview in a different script shouldn't show progress
   Then I am on "http://studio.code.org/s/20-hour/stage/2/puzzle/2?noautoplay=true"
@@ -45,6 +46,7 @@ Scenario: Failing at puzzle 1, refreshing puzzle 1, bubble should show up as att
   When element "#runButton" is visible
   And I verify progress in the header of the current page is "attempted" for level 1
   And I navigate to the course page for "hourofcode"
+  And I wait for 2 seconds
   And I verify progress for stage 1 level 1 is "attempted"
 
 @no_mobile

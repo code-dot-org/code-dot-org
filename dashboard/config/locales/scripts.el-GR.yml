@@ -1788,3 +1788,7 @@ el:
               name: Ταχύτητα
             Functions:
               name: Συναρτήσεις
+        csl-vn:
+          stages:
+            Loops in Ice Age:
+              name: Βρόχοι στην Εποχή των Παγετώνων
