@@ -1,3 +1,10 @@
 {
-  "presets": ["env"]
+  "presets": ["env", "react" ],
+  "plugins": [
+    "syntax-async-functions",
+    "transform-object-rest-spread",
+    "transform-class-properties",
+    ["transform-regenerator", {"async": true, "asyncGenerators": true}],
+    ["transform-es2015-classes", {"loose": true}]
+  ]
 }
