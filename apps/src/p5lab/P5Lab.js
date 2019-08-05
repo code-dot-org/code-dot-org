@@ -1150,7 +1150,7 @@ P5Lab.prototype.preloadAnimations_ = async function(pauseAnimationsByDefault) {
   );
 };
 
-GameLab.prototype.preloadSpriteImages_ = async function() {
+P5Lab.prototype.preloadSpriteImages_ = async function() {
   await this.whenAnimationsAreReady();
   return this.gameLabP5.preloadSpriteImages(
     getStore().getState().animationList
