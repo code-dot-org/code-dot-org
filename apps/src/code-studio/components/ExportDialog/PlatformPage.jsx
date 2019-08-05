@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import color from '../../../util/color';
+import {PLATFORM_ANDROID, PLATFORM_IOS} from '../../../util/exporter';
 import experiments from '../../../util/experiments';
 import commonStyles from './styles';
 
@@ -25,14 +26,14 @@ const styles = {
  */
 export default class PlatformPage extends React.Component {
   static propTypes = {
-    platform: PropTypes.oneOf(['ios', 'android']).isRequired,
+    platform: PropTypes.oneOf([PLATFORM_IOS, PLATFORM_ANDROID]).isRequired,
     onPlatformChanged: PropTypes.func.isRequired
   };
 
   onRadioChange = ({target}) => {
     const {id} = target;
     const {onPlatformChanged} = this.props;
-    const platform = id === 'radioAndroid' ? 'android' : 'ios';
+    const platform = id === 'radioAndroid' ? PLATFORM_ANDROID : PLATFORM_IOS;
     onPlatformChanged(platform);
   };
 
@@ -56,7 +57,7 @@ export default class PlatformPage extends React.Component {
               style={styles.radioInput}
               type="radio"
               id="radioAndroid"
-              checked={platform === 'android'}
+              checked={platform === PLATFORM_ANDROID}
               onChange={this.onRadioChange}
             />
             <label htmlFor="radioAndroid" style={styles.radioLabel}>
@@ -68,7 +69,7 @@ export default class PlatformPage extends React.Component {
               style={styles.radioInput}
               type="radio"
               id="radioIOS"
-              checked={platform === 'ios'}
+              checked={platform === PLATFORM_IOS}
               disabled={!allowIOS}
               onChange={this.onRadioChange}
             />
