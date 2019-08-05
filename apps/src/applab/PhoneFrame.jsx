@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import {connect} from 'react-redux';
 import Radium from 'radium';
 import color from '../util/color';
-import * as applabConstants from './constants';
 import ScreenSelector, {styles as ScreenSelectorStyles} from './ScreenSelector';
 import {RunButton, ResetButton} from '../templates/GameButtons';
 import {styles as CompletionButtonStyles} from '../templates/CompletionButton';
@@ -27,9 +27,6 @@ const styles = {
   phoneFrameBottom: {
     borderBottomLeftRadius: RADIUS,
     borderBottomRightRadius: RADIUS
-  },
-  nonResponsive: {
-    maxWidth: applabConstants.APP_WIDTH
   },
   screenSelector: {
     marginLeft: 'auto',
@@ -56,6 +53,14 @@ const styles = {
   },
   buttonMinWidth: {
     minWidth: CompletionButtonStyles.phoneFrameButton.minWidth
+  },
+  widgetModeTop: {
+    visibility: 'hidden',
+    height: '0'
+  },
+  widgetModeBottom: {
+    display: 'block',
+    height: FRAME_HEIGHT
   }
 };
 
@@ -66,7 +71,8 @@ class PhoneFrame extends React.Component {
     showSelector: PropTypes.bool.isRequired,
     isPaused: PropTypes.bool.isRequired,
     onScreenCreate: PropTypes.func.isRequired,
-    children: PropTypes.node
+    children: PropTypes.node,
+    widgetMode: PropTypes.bool
   };
 
   render() {
@@ -75,17 +81,22 @@ class PhoneFrame extends React.Component {
       screenIds,
       showSelector,
       isPaused,
-      onScreenCreate
+      onScreenCreate,
+      widgetMode
     } = this.props;
     return (
       <span id="phoneFrame">
         <div id="phoneFrameWrapper">
           <div
-            style={[
-              styles.phoneFrame,
-              styles.phoneFrameTop,
-              isDark && styles.phoneFrameDark
-            ]}
+            style={
+              widgetMode
+                ? styles.widgetModeTop
+                : [
+                    styles.phoneFrame,
+                    styles.phoneFrameTop,
+                    isDark && styles.phoneFrameDark
+                  ]
+            }
           >
             {showSelector && (
               <div style={styles.screenSelector}>
@@ -104,11 +115,15 @@ class PhoneFrame extends React.Component {
           </div>
           {this.props.children}
           <div
-            style={[
-              styles.phoneFrame,
-              styles.phoneFrameBottom,
-              isDark && styles.phoneFrameDark
-            ]}
+            style={
+              widgetMode
+                ? styles.widgetModeBottom
+                : [
+                    styles.phoneFrame,
+                    styles.phoneFrameBottom,
+                    isDark && styles.phoneFrameDark
+                  ]
+            }
           >
             <div style={styles.centeredInFrame}>
               <RunButton hidden={false} style={styles.buttonMinWidth} />
@@ -121,4 +136,6 @@ class PhoneFrame extends React.Component {
   }
 }
 
-export default Radium(PhoneFrame);
+export default connect(state => ({
+  widgetMode: state.pageConstants.widgetMode
+}))(Radium(PhoneFrame));
