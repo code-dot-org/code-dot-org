@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/bcjordan/ml-activities.svg?branch=master)](https://travis-ci.org/bcjordan/ml-activities)
+
 Steps to get up and running:
 
 ```
