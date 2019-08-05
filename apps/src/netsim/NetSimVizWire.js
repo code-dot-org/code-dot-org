@@ -8,6 +8,7 @@ var NetSimVizElement = require('./NetSimVizElement');
 var tweens = require('./tweens');
 var DataConverters = require('./DataConverters');
 var NetSimConstants = require('./NetSimConstants');
+var NetSimGlobals = require('./NetSimGlobals');
 
 var EncodingType = NetSimConstants.EncodingType;
 
@@ -28,6 +29,8 @@ var TEXT_FINAL_VERTICAL_OFFSET = -10;
  */
 var NetSimVizWire = (module.exports = function(localNode, remoteNode) {
   NetSimVizElement.call(this);
+
+  this.alwaysShowWireState = NetSimGlobals.getLevelConfig().automaticReceive;
 
   var root = this.getRoot();
   root.addClass('viz-wire');
@@ -198,7 +201,6 @@ NetSimVizWire.prototype.animateSetState = function(newState) {
   }
 
   var flyOutMs = 300;
-  var holdPositionMs = 300;
 
   this.stopAllAnimation();
   this.setWireClasses_(newState);
@@ -209,12 +211,24 @@ NetSimVizWire.prototype.animateSetState = function(newState) {
     flyOutMs,
     tweens.easeOutQuad
   );
-  this.doAfterDelay(
-    flyOutMs + holdPositionMs,
-    function() {
-      this.setWireClasses_('unknown');
-    }.bind(this)
-  );
+  if (!this.alwaysShowWireState) {
+    var holdPositionMs = 300;
+    this.doAfterDelay(
+      flyOutMs + holdPositionMs,
+      function() {
+        this.setWireClasses_('unknown');
+      }.bind(this)
+    );
+  }
+};
+
+NetSimVizWire.prototype.setWireState = function(newState) {
+  if (!(this.localVizNode && this.remoteVizNode)) {
+    return;
+  }
+  this.text_.text(this.getDisplayBit_(newState));
+  this.snapTextToPosition(this.getWireCenterPosition());
+  this.setWireClasses_(newState);
 };
 
 /**
@@ -241,7 +255,16 @@ NetSimVizWire.prototype.animateReadState = function(newState) {
         flyToNodeMs,
         tweens.easeOutQuad
       );
-      this.setWireClasses_('unknown');
+      if (this.alwaysShowWireState) {
+        this.doAfterDelay(
+          holdPositionMs,
+          function() {
+            this.snapTextToPosition(this.getWireCenterPosition());
+          }.bind(this)
+        );
+      } else {
+        this.setWireClasses_('unknown');
+      }
     }.bind(this)
   );
 };
