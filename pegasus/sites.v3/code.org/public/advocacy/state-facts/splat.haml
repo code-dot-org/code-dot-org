@@ -335,6 +335,9 @@ theme: pdf
             = state_info[:ecep_name_2_s]
             at
             = state_info[:ecep_email_2_s]
+          - if state_info[:ecep_url_s] != "NA"
+            and see your state ECEP project at
+            %a{href: state_info[:ecep_url_s]}= state_info[:ecep_url_s]
 
   %div.clear-both
     %h2.no-margin-bottom.together
