@@ -4634,18 +4634,6 @@ es-ES:
 
           **Pinball** - Haz que un personaje se mueva usando las teclas de las flechas (usa los bloques `cuando flecha hacia arriba` y `cuando flecha hacia abajo`) y haz que suene un sonido aleatorio cuando choque con otros personajes en la pantalla.
       courseC_PlayLab_eventsFP_2019:
-        idea1: |-
-          _¿Necesitas una idea?_
-
-          **¿Quién está ahí?** Haz que los personajes aparezcan con imagenes al azar, para que nadie sepa quién va a aparecer después.
-
-          ![](https://images.code.org/a56e03479801995d93ad5a4e4384a79e-image-1475340154498.gif)
-        idea2: |-
-          _¿Necesitas una idea?_
-
-          **Yendo de aventura** - Cambia el fondo, después haz que los personajes habled de donde están en ese momento (puedes escribir tus diálogos donde pone "type here").
-
-          ![](https://images.code.org/010c4d919f841d6049caf9211ab65ccc-image-1475340583052.gif)
         idea3: |-
           _¿Necesitas una idea?_
 

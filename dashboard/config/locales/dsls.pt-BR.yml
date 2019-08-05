@@ -953,6 +953,44 @@ pt-BR:
       CSD U3 Card Examples_2018_2019:
         title: Criando um Cartão Interativo
         content1: descrição aqui
+      CSD U3 Collision Detection:
+        markdown: |
+          # Visão global
+
+          A turma aprende sobre a detecção de colisão no computador. Os pares exploram como um computador pode usar propriedades de localização e tamanho de sprites e matemática para detectar se dois sprites estão se tocando. Em seguida, a classe usa o bloco isTouching () para criar efeitos diferentes quando os sprites colidem, incluindo a reprodução de sons. Por último, eles usam suas novas habilidades para melhorar o jogo de sidescroller que eles começaram na última lição.
+
+          ## Vocabulário
+
+          * ** Abstração ** - Retirar diferenças específicas para fazer com que uma solução funcione para vários problemas.
+          * ** Depuração ** - Localizando e corrigindo problemas em seu algoritmo ou programa.
+          * ** Declaração If  ** - A estrutura de programação comum que implementa "instruções condicionais".
+
+          ## Código introduzido
+
+          * [sprite.debug] (// docs.code.org/gamelab/debug/)
+          * [sprite.isTouching ()] (// docs.code.org/gamelab/isTouching/)
+
+          ## Recursos
+
+          * [Detecção de colisão - Guia de atividades] (https://docs.google.com/document/d/16uOeOnjKEIQfWgHFjMyVkmurSVM1oDXjQPooSL7UlHs/export?format=pdf)
+      CSD U3 Collisions SFLP:
+        markdown: |+
+          # Visão global
+
+          A classe programa seus sprites para interagir de novas maneiras. Após uma breve revisão de como eles usaram o bloco estaTocando, a classe faz um debate de idéias de outras maneiras que dois sprites podem interagir. Eles então usam o estaTocando para fazer um sprite empurrar outro através da tela antes de praticar com os quatro blocos de colisão (colidir, deslocar, saltar e saltar para fora).
+          ## Vocabulário
+
+          * ** Abstração ** - Retirar diferenças específicas para fazer com que uma solução funcione para vários problemas.
+
+          ## Código introduzido
+
+          * [sprite.bounceOff()](//docs.code.org/gamelab/bounceOff/)
+          * [sprite.collide()](//docs.code.org/gamelab/collide/)
+          * [sprite.displace()](//docs.code.org/gamelab/displace/)
+          * [sprite.setCollider()](//docs.code.org/gamelab/setCollider/)
+          * [sprite.bounce()](//docs.code.org/gamelab/bounce/)
+          * [sprite.bounciness](//docs.code.org/gamelab/bounciness/)
+
       CSD U3 Functions Prediction define first:
         answers:
         - text: O quadrado vermelho será desenhado, mas o verde não. Você não pode
@@ -1072,6 +1110,18 @@ pt-BR:
           [Operador Maior que] (//docs.code.org/gamelab/greaterThanOperator/)\n* [Operador
           de igualdade] (//docs.code.org/gamelab/equalityOperator/)\n* [Operador maior
           que ou igual] (//docs.code.org/gamelab/greaterThanOrEqualOperator/)\n"
+      CSD U3 Lesson Overview 14:
+        markdown: |
+          # Visão global
+
+          Neste projeto cumulativo do Capítulo 1, a turma planeja e desenvolve um cartão interativo usando todas as técnicas de programação aprendidas até o momento.
+
+
+          ## Recursos
+
+          * [Cartão interativo - Guia do projeto] (https://docs.google.com/document/d/1PtGpvAAyCYa_glecPhytGPrZau9ElJfJRhnVogFEqv4/export?format=pdf)
+          * [Cartão interativo - Rubrica] (https://docs.google.com/document/d/1EdEpsowofT8WGQSFvzYVF53HEKipLYdWULtjLgpOEBw/export?format=pdf)
+          * [Cartão Interativo - Revisão por Pares] (https://docs.google.com/document/d/1aVP_8YU-JWkxVvRiituCOf66w7refwDaecNBLMZkKgs/export?format=pdf)
       CSD U3 Lesson Overview 2:
         markdown: "# CS Descobertas Inquérito pós-curso \n\n** A sua entrada e feedback
           é importante para nós! **Usamos para:\n\n* fazer melhorias no curso\n* entender
@@ -1149,6 +1199,26 @@ pt-BR:
           ## Recursos
 
           * [Planejamento de cenas de Sprite - Guia de atividades] (https://docs.google.com/document/d/1I5w4VKBu4qPmoSSve_AwyaVQ47FWkJ-fSq4zfmQCsG8/export?format=pdf)
+      CSD U3 Lesson Overview 7:
+        markdown: |+
+          # Visão global
+
+          Esta lição apresenta o laço de desenho, um dos principais paradigmas de programação do Laboratório de Jogos. A classe combina o laço de desenho com números aleatórios para manipular algumas animações simples com pontos e depois com sprites. Depois, todos usam o que aprenderam para atualizar a cena do sprite da lição anterior.
+          ## Vocabulário
+
+          * **Animação** - uma série de imagens que criam a ilusão de movimento ao serem exibidas rapidamente uma após a outra
+          * **Quadro** - uma única imagem dentro de uma animação
+          * **Taxa de quadros** - a taxa na qual os quadros de uma animação são exibidos, normalmente medidos em quadros por segundo
+
+          ## Código introduzido
+
+          * [World.frameRate] (//docs.code.org/gamelab/World.frameRate/)
+          * [função desenhar() {}] (//docs.code.org/gamelab/draw/)
+
+
+           
+
+
       CSD U3 Lesson Overview 9:
         markdown: |+
           # Visão global
@@ -1156,6 +1226,27 @@ pt-BR:
           Combinando o desenhar laço e o contador de pad, a classe escreve programas que movem sprites pela tela, além de animar outras propriedades de sprite.
 
 
+      CSD U3 Movement Challenges:
+        markdown: |
+          # Desafios
+
+          _Peça seu professor antes de buscar qualquer um desses desafios._
+
+          * Volte a [nível 15](15) para continuar trabalhando na sua própria animação. Você precisará desenviar seu projeto primeiro e enviar novamente quando terminar de trabalhar.
+          * Volte ao [nível 12](12) para continuar trabalhando na animação dos peixes. Tente alterar aleatoriamente a rotação dos peixes para fazer parecer que eles estão nadando.
+          * Volte ao [nível 13](13) para continuar trabalhando na animação das engrenagens. Tente adicionar mais engrenagens de tamanhos diferentes e aprimore a velocidade de cada rotação para garantir que as engrenagens se encaixem corretamente
+          * Vá para [Laboratório Completos de Jogos] (/projects/gamelab/new) para criar uma nova animação do zero.
+      CSD U3 SFLP Velocity:
+        markdown: |
+          # Visão global
+
+          Após uma breve revisão de como o padrão de contador é usado para mover sprites, a classe é apresentada às propriedades que definem a velocidade e a velocidade de rotação diretamente. À medida que usam essas novas propriedades de maneiras diferentes, elas desenvolvem as habilidades necessárias para criar um jogo básico de scroller lateral.
+
+          ## Código introduzido
+
+          * [sprite.velocityY](//docs.code.org/gamelab/velocityY/)
+          * [sprite.velocityX](//docs.code.org/gamelab/velocityX/)
+          * [sprite.rotationSpeed](//docs.code.org/gamelab/rotationSpeed/)
       CSD U3 Sprite Movement Predict Multi:
         questions:
         - {}
@@ -1243,6 +1334,13 @@ pt-BR:
       CSD U3 combining rep_2018_2019:
         title: título
         content1: descrição aqui
+      CSD U3 complex sprite movement SFLP:
+        markdown: |+
+          # Visão global
+
+          A classe aprende a combinar as propriedades de velocidade dos sprites com o padrão de contador para criar movimentos de sprites mais complexos, como simular gravidade, fazer um sprite saltar e permitir que um sprite flutue para a esquerda ou para a direita. Nos níveis finais, a classe combina esses movimentos para animar e controlar um único sprite e construir um jogo simples no qual um personagem voa e coleta moedas.
+
+
       CSD U3 drawSprites placement match:
         questions:
         - text: <img src="https://images.code.org/cd11d762b2cb3e36c3d45157b965c968-image-1523901253224.59.08

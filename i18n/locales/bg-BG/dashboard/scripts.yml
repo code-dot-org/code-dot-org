@@ -2328,6 +2328,8 @@ bg:
           stages:
             Number Systems:
               name: Бройни системи
+            Sending Binary Messages:
+              name: Изпращане на бинарни съобщения
         time4csdemo:
           stages:
             Crowdsourcing:
