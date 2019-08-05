@@ -11,9 +11,9 @@
   },
   "https://studio.code.org/s/express-2018/stage/2/puzzle/3": {
     "short_instructions": "Drag an extra `move forward` block out of the toolbox to finish your code.",
-    "long_instructions": "Drag an extra <xml><block type=\"maze_moveForward\"/></xml> block out of the toolbox to finish your code.",
+    "long_instructions": "Drag an extra [blockly block][0] block out of the toolbox to finish your code.",
     "authored_hints": {
-      "courseC_maze_programming2_a": "To use a <xml><block type=\"maze_moveForward\"/></xml> block, drag it out of the toolbox and snap it to the <xml><block type=\"when_run\"/></xml> block.",
+      "courseC_maze_programming2_a": "To use a [blockly block][0] block, drag it out of the toolbox and snap it to the [blockly block][1] block.",
       "courseC_maze_programming2_b": "Make sure all of the blocks have been fully snapped together, then click \"Run\" again."
     },
     "callouts": {
@@ -138,7 +138,7 @@
     "long_instructions": "Sometimes there is more than one way to solve the same problem. Sometimes it's faster to go backwards than it is to go forwards!",
     "authored_hints": {
       "courseC_maze_programming_challenge2_a": "_\"If you send me backwards, be extra careful that I turn the correct way!\"_",
-      "courseC_maze_programming_challenge2_b": "The shortest solution uses only 5 blocks, but it uses this block:\n\n<xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>"
+      "courseC_maze_programming_challenge2_b": "The shortest solution uses only 5 blocks, but it uses this block:\n\n[blockly block][0]"
     }
   },
   "https://studio.code.org/s/express-2018/stage/4/puzzle/2": {
@@ -256,7 +256,7 @@
     "short_instructions": "Play around with the blocks to see if you can help Laurel collect some treasure.",
     "long_instructions": "**Free Play:** This is Laurel the Adventurer! Move her around and get as much treasure as you can. Use the `collect` block to pick up the treasure!\n\nDrag blocks into the workspace and try to figure out how to get treasure.  Get at least one item to pass this level.",
     "authored_hints": {
-      "courseC_collector_prog1_a": "When you are standing on a space with treasure, use the <xml><block type=\"collector_collect\"/></xml> block to pick it up.",
+      "courseC_collector_prog1_a": "When you are standing on a space with treasure, use the [blockly block][0] block to pick it up.",
       "courseC_collector_prog1_b": "The most simple solution would be to move forward once, then collect treasure."
     },
     "callouts": {
@@ -265,9 +265,9 @@
   },
   "https://studio.code.org/s/express-2018/stage/5/puzzle/3": {
     "short_instructions": "Move Laurel to the treasure, then use `collect` to pick it up.",
-    "long_instructions": "Move Laurel to the treasure, then use <xml><block type=\"collector_collect\"/></xml> to pick it up.",
+    "long_instructions": "Move Laurel to the treasure, then use [blockly block][0] to pick it up.",
     "authored_hints": {
-      "courseC_collector_prog2_a": "You can use four <xml><block type=\"maze_move\"><title name=\"DIR\">moveForward</title></block></xml> blocks or use the <xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> block to make your program shorter.",
+      "courseC_collector_prog2_a": "You can use four [blockly block][0] blocks or use the [blockly block][1] block to make your program shorter.",
       "courseC_collector_prog2_b": "Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you don't think you've solved the puzzle yet."
     }
   },
@@ -275,7 +275,7 @@
     "short_instructions": "Order these blocks to collect the treasure and solve the puzzle.",
     "long_instructions": "_\"Sequence matters!\"_ \n\nThe blocks you need are already in the workspace, but not connected.\\\nOrder these blocks to collect the treasure and solve the puzzle.",
     "authored_hints": {
-      "courseC_collector_prog3_a": "The program will only run the blocks that are connected to the <xml><block type=\"when_run\"/></xml> block.",
+      "courseC_collector_prog3_a": "The program will only run the blocks that are connected to the [blockly block][0] block.",
       "courseC_collector_prog3_b": "Try using the \"Step\" button to run your code one line at a time.  Do you see where the code goes wrong?",
       "courseC_collector_prog3_c": "If you are having trouble figuring this puzzle out, try writing the moves down on a piece of paper."
     }
@@ -392,8 +392,8 @@
     "short_instructions": "Drag blocks onto the screen to have the artist draw over the grey lines in the picture. (Each line is 100 pixels long)",
     "long_instructions": "_\"Let's make a cage for my pet monster!\"_\n\nDrag blocks onto the screen to have the artist draw over the grey lines in the picture.\\\n(Each line is 100 pixels long)",
     "authored_hints": {
-      "courseC_artist_prog2_a": "*\"If you use the <xml><block type=\"draw_move_by_constant\"><title name=\"DIR\">moveForward</title><title name=\"VALUE\">100</title></block></xml> block, I will draw a line.\"*",
-      "courseC_artist_prog2_b": "Having trouble turning the corner? Use the <xml><block type=\"draw_turn_by_constant_dropdown\"><title name=\"DIR\">turnRight</title><title name=\"VALUE\" config=\"45,60,90,120,180\">90</title></block></xml> block."
+      "courseC_artist_prog2_a": "_\"If you use the [blockly block][0] block, I will draw a line.\"_",
+      "courseC_artist_prog2_b": "Having trouble turning the corner? Use the [blockly block][0] block."
     }
   },
   "https://studio.code.org/s/express-2018/stage/6/puzzle/4": {
@@ -674,10 +674,10 @@
   },
   "https://studio.code.org/s/express-2018/stage/9/puzzle/1": {
     "short_instructions": "Get the artist to the center of the play area, then draw a line. ",
-    "long_instructions": "### The artist is in the wrong spot!\n\nUse the <xml><block type=\"jump_to_xy\" id=\"callMe\"><title name=\"XPOS\">200</title><title name=\"YPOS\">200</title></block></xml> block to get the artist to the center of the play area.\\\nThen draw a line 50 pixels long with the <xml><block type=\"draw_move_by_constant\"><title name=\"DIR\">moveForward</title><title name=\"VALUE\">50</title></block></xml> block.",
+    "long_instructions": "### The artist is in the wrong spot!\n\nUse the [blockly block][0] block to get the artist to the center of the play area.\\\nThen draw a line 50 pixels long with the [blockly block][1] block.",
     "authored_hints": {
-      "courseC_artist_loopsPrePre1a_a": "The first block you will need is:\n\n<xml>  <block type=\"jump_to_xy\" id=\"callMe\">\n    <title name=\"XPOS\">200</title>\n    <title name=\"YPOS\">200</title>\n  </block></xml>",
-      "courseC_artist_loopsPrePre1a_b": "To move forward 50 pixels, use this block:\n\n<xml><block type=\"draw_move_by_constant\">\n    <title name=\"DIR\">moveForward</title>\n    <title name=\"VALUE\">50</title>\n  </block></xml>"
+      "courseC_artist_loopsPrePre1a_a": "The first block you will need is:\n\n[blockly block][0]",
+      "courseC_artist_loopsPrePre1a_b": "To move forward 50 pixels, use this block:\n\n[blockly block][0]"
     },
     "callouts": {
       "courseC_artist_loopsPrePre1a_1": "Start by using this block to get the artist to the center of the screen."
@@ -693,18 +693,18 @@
   },
   "https://studio.code.org/s/express-2018/stage/9/puzzle/3": {
     "short_instructions": "Let's add some pizazz with a `set pattern` block.",
-    "long_instructions": "_\"Fantastic!\"_ \n\nLet's add some style by changing the brush using the <xml><block type=\"draw_line_style_pattern\"> <title name=\"VALUE\">DEFAULT</title></block></xml> block before our loop starts.",
+    "long_instructions": "_\"Fantastic!\"_ \n\nLet's add some style by changing the brush using the [blockly block][0] block before our loop starts.",
     "authored_hints": {
       "courseC_artist_loop1_a": "You don't need to make any changes to the loop, just put one block above it.",
-      "courseC_artist_loop1_b": "This is the block you will need to set a pattern:\n\n<xml>\n<block type=\"draw_line_style_pattern\">\n    <title name=\"VALUE\">DEFAULT</title>\n  </block>\n</xml>\n\nChoose any pattern you like!"
+      "courseC_artist_loop1_b": "This is the block you will need to set a pattern:\n\n[blockly block][0]\n\nChoose any pattern you like!"
     }
   },
   "https://studio.code.org/s/express-2018/stage/9/puzzle/4": {
     "short_instructions": "Get the artist to the center of the play area, then draw a bird using a sticker. ",
     "long_instructions": "**Free Play:** Let's build something bigger, one step at a time!  \n\nUse the `jump to 200 over 200 down` to get the artist to the center of the play area, then use the `draw a sticker` block to make a bird appear.  \n\n* * *\n\nPress \"Finish\" when you are happy with what you've made.",
     "authored_hints": {
-      "courseC_artist_loops1a_a": "This is the first block you will need:\n\n<xml>\n<block type=\"jump_to_xy\">\n    <title name=\"XPOS\">200</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n</xml>",
-      "courseC_artist_loops1a_b": "Use this block to draw the sticker!\n\n<xml>\n<block type=\"sticker\">\n    <title name=\"VALUE\">Bird</title>\n  </block>\n</xml>"
+      "courseC_artist_loops1a_a": "This is the first block you will need:\n\n[blockly block][0]",
+      "courseC_artist_loops1a_b": "Use this block to draw the sticker!\n\n[blockly block][0]"
     }
   },
   "https://studio.code.org/s/express-2018/stage/9/puzzle/5": {
@@ -727,7 +727,7 @@
     "short_instructions": "Try jumping forward by 75 pixels.",
     "long_instructions": "Edit your code so that you jump forward by 75 pixels between stamping the bird and the bat. In this puzzle, make sure you have `jump to 200 over 200 down` inside of your loop, so you stay in the center!\n\n* * *\n\n[expandable][0]",
     "authored_hints": {
-      "courseC_artist_loops4a_a": "Use this block to jump forward:\n\n<xml>\n<block type=\"jump_by_constant\">\n    <title name=\"DIR\">jumpForward</title>\n    <title name=\"VALUE\">100</title>\n  </block>\n</xml>\n\nDon't forget to change how far!"
+      "courseC_artist_loops4a_a": "Use this block to jump forward:\n\n[blockly block][0]\n\nDon't forget to change how far!"
     }
   },
   "https://studio.code.org/s/express-2018/stage/9/puzzle/8": {
@@ -741,7 +741,7 @@
     "short_instructions": "Try adding lines!",
     "long_instructions": "What happens when you `move forward` then `move backward` by 100, 200, or 400 pixels somewhere inside the loop?  \n\n-   Try using the `set pattern` block before you start your loop to make a work of art!\n    * * *\n    [expandable][0]",
     "authored_hints": {
-      "courseC_artist_loops5b_a": "Use this block to set the pattern of your lines:\n\n<xml>\n<block type=\"draw_line_style_pattern\">\n    <title name=\"VALUE\">DEFAULT</title>\n  </block>\n</xml>",
+      "courseC_artist_loops5b_a": "Use this block to set the pattern of your lines:\n\n[blockly block][0]",
       "courseC_artist_loops5b_b": "To make a design like the one above, you will want to move backward the same amount that you move forward."
     }
   },
@@ -1058,7 +1058,7 @@
       "courseD_bee_nested_loops_challenge2_a": "Don't forget that you can `repeat` a single command or a longer pattern. You can even `repeat` a `repeat` block!",
       "courseD_bee_nested_loops_challenge2_b": "To get all 4 gems, first use a loop to move away from the center. Turn left or right, then use a nested loop to move from the first pile of treasure to the second. If you repeat the nested loop enough times, the collector will move around the _entire_ cave!",
       "courseD_bee_nested_loops_challenge2_c": "The shortest program that reaches all the treasure uses only one `collect` block and two turns.",
-      "courseD_bee_nested_loops_challenge2_d": "**Solution:**\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_dropdown\">\n        <title name=\"TIMES\" config=\"3-10\">3</title>\n        <statement name=\"DO\">\n          <block type=\"maze_move\">\n            <title name=\"DIR\">moveForward</title>\n          </block>\n        </statement>\n        <next>\n          <block type=\"maze_turn\">\n            <title name=\"DIR\">turnLeft</title>\n            <next>\n              <block type=\"controls_repeat_dropdown\">\n                <title name=\"TIMES\" config=\"3-10\">3</title>\n                <statement name=\"DO\">\n                  <block type=\"collector_collect\">\n                    <next>\n                      <block type=\"controls_repeat_dropdown\">\n                        <title name=\"TIMES\" config=\"3-10\">3</title>\n                        <statement name=\"DO\">\n                          <block type=\"maze_move\">\n                            <title name=\"DIR\">moveForward</title>\n                          </block>\n                        </statement>\n                        <next>\n                          <block type=\"maze_turn\">\n                            <title name=\"DIR\">turnLeft</title>\n                            <next>\n                              <block type=\"controls_repeat_dropdown\">\n                                <title name=\"TIMES\" config=\"3-10\">3</title>\n                                <statement name=\"DO\">\n                                  <block type=\"maze_move\">\n                                    <title name=\"DIR\">moveForward</title>\n                                  </block>\n                                </statement>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+      "courseD_bee_nested_loops_challenge2_d": "**Solution:**\n\n[blockly block][0]"
     }
   },
   "https://studio.code.org/s/express-2018/stage/13/puzzle/1": {
@@ -1071,7 +1071,7 @@
   },
   "https://studio.code.org/s/express-2018/stage/13/puzzle/2": {
     "short_instructions": "Now, turn right by **60** degrees, then draw a straight line **150** pixels long and jump back to the center of the play area.",
-    "long_instructions": "[][0] _“Good job!”_\n\nAfter your hexagon, turn right by **60** degrees, then draw a line that is **150** pixels long.   \n\nFinish by putting Elsa back to the center of the play area, using the <xml><block type=\"jump_to\"><title name=\"VALUE\">middle center</title></block></xml> block.",
+    "long_instructions": "[][0] _“Good job!”_\n\nAfter your hexagon, turn right by **60** degrees, then draw a line that is **150** pixels long.   \n\nFinish by putting Elsa back to the center of the play area, using the [blockly block][1] block.",
     "authored_hints": {
       "courseD_artist_project1_b": "Remember that `move` draws a line, while `jump` does not.",
       "courseD_artist_project1_a": "Use the drop down menu on the `turn` blocks to choose the angle you need!"
@@ -1454,7 +1454,7 @@
       "courseD_bee_conditionals4_hintVid1": "Need help getting started?  Watch the video!",
       "courseD_bee_conditionals4_a": "You can still treat every space as if there is a cloud over it, even though you can see the whole path.",
       "courseD_bee_conditionals4_b": "Use an `if` statement inside your loop to check each space for nectar. ",
-      "courseD_bee_conditionals4_c": "Using <xml><block type=\"maze_untilBlocked\"/></xml> block, you should move forward and check for a flower. If there is a flower, what should the bee do?",
+      "courseD_bee_conditionals4_c": "Using [blockly block][0] block, you should move forward and check for a flower. If there is a flower, what should the bee do?",
       "courseD_bee_conditionals4_hintVid2": "Watch this video for help solving this puzzle."
     }
   },
@@ -1561,7 +1561,7 @@
     "short_instructions": "Collect all of the nectar and make all the honey.",
     "long_instructions": "Collect all of the nectar and make all the honey. You can collect all of the nectar in one flower by using the `while nectar > 0` loop.",
     "authored_hints": {
-      "courseD_bee_conditionals_challenge1_b": "Just like the `if at flower` blocks, the code inside a `while nectar > 0` will only run if the bee is at a flower. The difference is that the code inside will run over and over until there is no nectar left.  Try this pattern:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+      "courseD_bee_conditionals_challenge1_b": "Just like the `if at flower` blocks, the code inside a `while nectar > 0` will only run if the bee is at a flower. The difference is that the code inside will run over and over until there is no nectar left.  Try this pattern:\n\n[blockly block][0]"
     },
     "callouts": {
       "courseD_bee_conditionals_challenge2_1": "Use this loop to collect all of the nectar (or honey) from one flower (or honeycomb)."
@@ -1743,7 +1743,7 @@
   "https://studio.code.org/s/express-2018/stage/20/puzzle/6": {
     "display_name": "The River",
     "short_instructions": "Get the player to the shovel.",
-    "long_instructions": "Oh no, the bridge is out! \n\nCode the Agent to rebuild the bridge using the <xml>  <block type=\"craft_placeBlock\">\n    <title name=\"TYPE\">       </title>\n  </block></xml> block so that {currentPlayerName} can get to the **shovel** [diamond_shovel].",
+    "long_instructions": "Oh no, the bridge is out! \n\nCode the Agent to rebuild the bridge using the [blockly block][0] block so that {currentPlayerName} can get to the **shovel** [diamond_shovel].",
     "authored_hints": {
       "MC_HOC_2017_05_Cole_a": "Did you know that you can put more than one piece of code inside of a loop?  Try moving forward **and** placing a plank inside of a `repeat` to complete this puzzle.",
       "MC_HOC_2017_05_Cole_b": "Get the Agent across the river, building a bridge as you go."
@@ -1763,7 +1763,7 @@
   },
   "https://studio.code.org/s/express-2018/stage/20/puzzle/8": {
     "short_instructions": "Use the `build bridge` function twice to make a path to the Redstone Torch.",
-    "long_instructions": "A **function** named `build bridge` is in your workspace.  All of the code you need to cross the river is built right in! \n\nSnap the small, green <xml> <block type=\"procedures_callnoreturn\" id=\"callMe\"><mutation name=\"build bridge\"/></block></xml> block into your workspace twice to fix the path and get {currentPlayerName} to the Redstone Torch [redstone_torch].",
+    "long_instructions": "A **function** named `build bridge` is in your workspace.  All of the code you need to cross the river is built right in! \n\nSnap the small, green [blockly block][0] block into your workspace twice to fix the path and get {currentPlayerName} to the Redstone Torch [redstone_torch].",
     "authored_hints": {
       "Function_intro_Ryan_b": "If you call the functions correctly, this is the path you will travel...",
       "Function_intro_Ryan_a": "You can call a function many times inside of your program!  Try calling it twice to solve this puzzle."
@@ -2050,7 +2050,7 @@
     "long_instructions": "Here is a function called `draw a square`. Use it to complete this drawing. \n\n* * *\n\nThe squares are 75 pixels apart.",
     "authored_hints": {
       "courseD_artist_functions2_b": "The function should not contain your whole program, just the part that draws a square with 100 pixel sides.",
-      "courseD_artist_functions2_c": "Make sure that you use the green `draw a square` block to \"call\" your function. Otherwise, the code in your function will not run.\n\n<xml><block type=\"procedures_callnoreturn\" limit=\"2\"><mutation name=\"draw a square\"/></block></xml>",
+      "courseD_artist_functions2_c": "Make sure that you use the green `draw a square` block to \"call\" your function. Otherwise, the code in your function will not run.\n\n[blockly block][0]",
       "courseD_artist_functions2_a": "Your program should:\n\n-   Use your function\n-   Move forward 100 + 75 pixels\n-   Use your function again"
     },
     "callouts": {
@@ -2248,9 +2248,9 @@
   },
   "https://studio.code.org/s/express-2018/stage/22/extras?level_name=courseE_artist_functions_challenge2_2018": {
     "short_instructions": "Try this code to see how it works, then make the program your own!",
-    "long_instructions": "Not only can you jump to some pre-set locations, like the corners of the canvas, you can also use a `jump to` command to get to absolutely any spot you like! Try this code to see how it works, then make the program your own!\n\n<xml>\n  <block type=\"jump_to_xy\">\n    <title name=\"XPOS\">???</title>\n    <title name=\"YPOS\">???</title>\n    </block></xml>",
+    "long_instructions": "Not only can you jump to some pre-set locations, like the corners of the canvas, you can also use a `jump to` command to get to absolutely any spot you like! Try this code to see how it works, then make the program your own!\n\n[blockly block][0]",
     "authored_hints": {
-      "courseE_artist_functions_challenge1_a": "<xml>\n  <block type=\"jump_to_xy\">\n    <title name=\"XPOS\">350</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n  </xml>\n\nThis `jump to` block lets you move the zombie artist to any pixel on the grid, whenever you want. It works by moving him a number of pixels over to the right and a number of pixels down. This is always counted from the top left corner, which it means it doesn't matter where the zombie artist is _before_ the command is run!\n\n[][0]"
+      "courseE_artist_functions_challenge1_a": "[blockly block][0]\n\nThis `jump to` block lets you move the zombie artist to any pixel on the grid, whenever you want. It works by moving him a number of pixels over to the right and a number of pixels down. This is always counted from the top left corner, which it means it doesn't matter where the zombie artist is _before_ the command is run!\n\n[][1]"
     },
     "callouts": {
       "courseE_artist_functions_challenge2_callout1": "Keep this program going by adding more code to the bottom.",
@@ -2373,7 +2373,7 @@
     "long_instructions": "Create five pinwheel designs using the code below.",
     "authored_hints": {
       "courseE_artist_concept_challenge2_a": "Once you define a function, you can call it over and over again - whenever and wherever you want!",
-      "courseE_artist_concept_challenge2_b": "You can jump to different positions on the canvas using this command:\n\n<xml>  <block type=\"jump_to\">\n    <title name=\"VALUE\">???</title>\n  </block></xml>"
+      "courseE_artist_concept_challenge2_b": "You can jump to different positions on the canvas using this command:\n\n[blockly block][0]"
     },
     "function_names": {
       "draw pinwheel": "draw pinwheel"
@@ -2585,7 +2585,7 @@
     "short_instructions": "Subtract one from the variable each time through the loop if you want to use the same function to solve this level.",
     "long_instructions": "_\"Such an a-MAZE-ing garden!\"_\n\nIn this puzzle, each patch needs the variable to be one less than the patch before. Subtract one from the variable each time through the loop if you want to use the same function to solve this level.",
     "authored_hints": {
-      "courseF_beevariables_3a": "To subtract one from the variable, you can use this code in your program:\n<xml><block type=\"variables_set\" inline=\"false\">\n                    <title name=\"VAR\">gather</title>\n                    <value name=\"VALUE\">\n                      <block type=\"math_arithmetic\" inline=\"true\">\n                        <title name=\"OP\">MINUS</title>\n                        <value name=\"A\">\n                          <block type=\"variables_get\">\n                            <title name=\"VAR\">gather</title>\n                          </block>\n                        </value>\n                        <value name=\"B\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">1</title>\n                          </block>\n                        </value>\n                      </block>\n                    </value>\n                  </block></xml>"
+      "courseF_beevariables_3a": "To subtract one from the variable, you can use this code in your program:\n[blockly block][0]"
     },
     "function_names": {
       "collect row": "collect row"
@@ -2668,11 +2668,11 @@
   },
   "https://studio.code.org/s/express-2018/stage/31/puzzle/2": {
     "short_instructions": "Rebuild the triangle code from the last puzzle, but this time use the `set length to` block to reset the `length` variable to `length`+10 at the end of each loop iteration.",
-    "long_instructions": "Rebuild the triangle code from the last puzzle, but this time use the `set length to` block to reset the `length` variable to `length`+10 at the end of each loop iteration.\n\n<xml>\n<block type=\"variables_set\" inline=\"false\">\n                        <title name=\"VAR\">length</title>\n                        <value name=\"VALUE\">\n                          <block type=\"math_arithmetic\" inline=\"true\">\n                            <title name=\"OP\">ADD</title>\n                            <value name=\"A\">\n                              <block type=\"variables_get\">\n                                <title name=\"VAR\">length</title>\n                              </block>\n                            </value>\n                            <value name=\"B\">\n                              <block type=\"math_number\">\n                                <title name=\"NUM\">10</title>\n                              </block>\n                            </value>\n                          </block>\n                        </value>\n                      </block>\n</xml>\n\nThe length of the first side of the triangle is 150 pixels.",
+    "long_instructions": "Rebuild the triangle code from the last puzzle, but this time use the `set length to` block to reset the `length` variable to `length`+10 at the end of each loop iteration.\n\n[blockly block][0]\n\nThe length of the first side of the triangle is 150 pixels.",
     "authored_hints": {
       "courseF_artist_variables8_b": "Remember to start your code for the triangle with the `set length` block, and start it at 150 pixels.",
       "courseF_artist_variables8_c": "Make sure to use the `repeat` loop to draw your triangle.",
-      "courseF_artist_variables8_a": "Try putting the set of \n\n<xml>\n<block type=\"variables_set\" inline=\"false\">\n                        <title name=\"VAR\">length</title>\n                        <value name=\"VALUE\">\n                          <block type=\"math_arithmetic\" inline=\"true\">\n                            <title name=\"OP\">ADD</title>\n                            <value name=\"A\">\n                              <block type=\"variables_get\">\n                                <title name=\"VAR\">length</title>\n                              </block>\n                            </value>\n                            <value name=\"B\">\n                              <block type=\"math_number\">\n                                <title name=\"NUM\">10</title>\n                              </block>\n                            </value>\n                          </block>\n                        </value>\n                      </block>\n</xml>\n\nblocks inside your loop at the end."
+      "courseF_artist_variables8_a": "Try putting the set of \n\n[blockly block][0]\n\nblocks inside your loop at the end."
     }
   },
   "https://studio.code.org/s/express-2018/stage/31/puzzle/3": {
@@ -2713,7 +2713,7 @@
       "courseF_artist_variables_challenge1_b": "You will want to increase the value of `length` by 10 **twice** inside the loop.",
       "courseF_artist_variables_challenge1_c": "To complete the pattern you will need to turn left twice, turn right twice, and move forward a total of four times.",
       "courseF_artist_variables_challenge1_d": "This puzzle just uses one loop. Without any variables, a similar path might just be a zig-zag.\n\n[][0]\n\nIf you are having trouble, start by creating this image, then try to see where you can use variables to change the length of the horizontal lines.",
-      "courseF_artist_variables_challenge1_e": "Here is the solution.\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"variables_set\" inline=\"false\">\n        <title name=\"VAR\">length</title>\n        <value name=\"VALUE\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">10</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"controls_repeat_ext\" inline=\"true\">\n            <value name=\"TIMES\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">18</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"draw_move\" inline=\"true\">\n                <title name=\"DIR\">moveForward</title>\n                <value name=\"VALUE\">\n                  <block type=\"math_number\">\n                    <title name=\"NUM\">10</title>\n                  </block>\n                </value>\n                <next>\n                  <block type=\"draw_turn\" inline=\"true\">\n                    <title name=\"DIR\">turnRight</title>\n                    <value name=\"VALUE\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">90</title>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"draw_move\" inline=\"true\">\n                        <title name=\"DIR\">moveForward</title>\n                        <value name=\"VALUE\">\n                          <block type=\"variables_get\">\n                            <title name=\"VAR\">length</title>\n                          </block>\n                        </value>\n                        <next>\n                          <block type=\"variables_set\" inline=\"false\">\n                            <title name=\"VAR\">length</title>\n                            <value name=\"VALUE\">\n                              <block type=\"math_arithmetic\" inline=\"true\">\n                                <title name=\"OP\">ADD</title>\n                                <value name=\"A\">\n                                  <block type=\"variables_get\">\n                                    <title name=\"VAR\">length</title>\n                                  </block>\n                                </value>\n                                <value name=\"B\">\n                                  <block type=\"math_number\">\n                                    <title name=\"NUM\">10</title>\n                                  </block>\n                                </value>\n                              </block>\n                            </value>\n                            <next>\n                              <block type=\"draw_turn\" inline=\"true\">\n                                <title name=\"DIR\">turnLeft</title>\n                                <value name=\"VALUE\">\n                                  <block type=\"math_number\">\n                                    <title name=\"NUM\">90</title>\n                                  </block>\n                                </value>\n                                <next>\n                                  <block type=\"draw_move\" inline=\"true\">\n                                    <title name=\"DIR\">moveForward</title>\n                                    <value name=\"VALUE\">\n                                      <block type=\"math_number\">\n                                        <title name=\"NUM\">10</title>\n                                      </block>\n                                    </value>\n                                    <next>\n                                      <block type=\"draw_turn\" inline=\"true\">\n                                        <title name=\"DIR\">turnLeft</title>\n                                        <value name=\"VALUE\">\n                                          <block type=\"math_number\">\n                                            <title name=\"NUM\">90</title>\n                                          </block>\n                                        </value>\n                                        <next>\n                                          <block type=\"draw_move\" inline=\"true\">\n                                            <title name=\"DIR\">moveForward</title>\n                                            <value name=\"VALUE\">\n                                              <block type=\"variables_get\">\n                                                <title name=\"VAR\">length</title>\n                                              </block>\n                                            </value>\n                                            <next>\n                                              <block type=\"variables_set\" inline=\"false\">\n                                                <title name=\"VAR\">length</title>\n                                                <value name=\"VALUE\">\n                                                  <block type=\"math_arithmetic\" inline=\"true\">\n                                                    <title name=\"OP\">ADD</title>\n                                                    <value name=\"A\">\n                                                      <block type=\"variables_get\">\n                                                        <title name=\"VAR\">length</title>\n                                                      </block>\n                                                    </value>\n                                                    <value name=\"B\">\n                                                      <block type=\"math_number\">\n                                                        <title name=\"NUM\">10</title>\n                                                      </block>\n                                                    </value>\n                                                  </block>\n                                                </value>\n                                                <next>\n                                                  <block type=\"draw_turn\" inline=\"true\">\n                                                    <title name=\"DIR\">turnRight</title>\n                                                    <value name=\"VALUE\">\n                                                      <block type=\"math_number\">\n                                                        <title name=\"NUM\">90</title>\n                                                      </block>\n                                                    </value>\n                                                  </block>\n                                                </next>\n                                              </block>\n                                            </next>\n                                          </block>\n                                        </next>\n                                      </block>\n                                    </next>\n                                  </block>\n                                </next>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+      "courseF_artist_variables_challenge1_e": "Here is the solution.\n\n[blockly block][0]"
     }
   },
   "https://studio.code.org/s/express-2018/stage/31/extras?level_name=courseF_artist_variables_challenge2_2018": {
@@ -2878,7 +2878,7 @@
       "courseF_bee_for_challenge2_a": "Take a look at this option for movement:  \n\n[][0]",
       "courseF_bee_for_challenge2_b": "Try using two `for` loops: One for climbing up and grabbing nectar, and the other for climbing down and making honey.",
       "courseF_bee_for_challenge2_c": "Notice that one `for` loop needs several regular loops inside that repeat `counter` times to make the increasing stair pattern. \n\nThe other `for` loop only needs one regular loop to make `counter` amount of honey.",
-      "courseF_bee_for_challenge2_d": "**Solution:**\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_for\" inline=\"true\">\n        <title name=\"VAR\">counter</title>\n        <value name=\"FROM\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">1</title>\n          </block>\n        </value>\n        <value name=\"TO\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">3</title>\n          </block>\n        </value>\n        <value name=\"BY\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">1</title>\n          </block>\n        </value>\n        <statement name=\"DO\">\n          <block type=\"controls_repeat_ext\" inline=\"true\">\n            <value name=\"TIMES\">\n              <block type=\"variables_get\">\n                <title name=\"VAR\">counter</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"maze_moveForward\"/>\n            </statement>\n            <next>\n              <block type=\"controls_repeat_ext\" inline=\"true\">\n                <value name=\"TIMES\">\n                  <block type=\"variables_get\">\n                    <title name=\"VAR\">counter</title>\n                  </block>\n                </value>\n                <statement name=\"DO\">\n                  <block type=\"maze_nectar\"/>\n                </statement>\n                <next>\n                  <block type=\"maze_turn\">\n                    <title name=\"DIR\">turnLeft</title>\n                    <next>\n                      <block type=\"controls_repeat_ext\" inline=\"true\">\n                        <value name=\"TIMES\">\n                          <block type=\"variables_get\">\n                            <title name=\"VAR\">counter</title>\n                          </block>\n                        </value>\n                        <statement name=\"DO\">\n                          <block type=\"maze_moveForward\"/>\n                        </statement>\n                        <next>\n                          <block type=\"maze_turn\">\n                            <title name=\"DIR\">turnRight</title>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n        <next>\n          <block type=\"maze_turn\">\n            <title name=\"DIR\">turnRight</title>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n                <next>\n                  <block type=\"controls_for\" inline=\"true\">\n                    <title name=\"VAR\">counter</title>\n                    <value name=\"FROM\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">2</title>\n                      </block>\n                    </value>\n                    <value name=\"TO\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">10</title>\n                      </block>\n                    </value>\n                    <value name=\"BY\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">2</title>\n                      </block>\n                    </value>\n                    <statement name=\"DO\">\n                      <block type=\"maze_moveForward\">\n                        <next>\n                          <block type=\"maze_turn\">\n                            <title name=\"DIR\">turnLeft</title>\n                            <next>\n                              <block type=\"maze_moveForward\">\n                                <next>\n                                  <block type=\"maze_turn\">\n                                    <title name=\"DIR\">turnRight</title>\n                                    <next>\n                                      <block type=\"controls_repeat_ext\" inline=\"true\">\n                                        <value name=\"TIMES\">\n                                          <block type=\"variables_get\">\n                                            <title name=\"VAR\">counter</title>\n                                          </block>\n                                        </value>\n                                        <statement name=\"DO\">\n                                          <block type=\"maze_honey\"/>\n                                        </statement>\n                                      </block>\n                                    </next>\n                                  </block>\n                                </next>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </statement>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+      "courseF_bee_for_challenge2_d": "**Solution:**\n\n[blockly block][0]"
     }
   },
   "https://studio.code.org/s/express-2018/stage/34/puzzle/2": {
@@ -2896,7 +2896,7 @@
     "short_instructions": "Create this stack of triangles that goes from 50 pixel to 100 pixel sides.",
     "long_instructions": "Use a `repeat` loop inside of a `for` loop to create this stack of triangles that goes from 50 pixel to 100 pixel sides.",
     "authored_hints": {
-      "courseF_artist_for2_a": "Use `counter` for the length of your triangles inside your `repeat` loop.\n\n<xml><block type=\"draw_move\" inline=\"true\">\n      <title name=\"DIR\">moveForward</title>\n      <value name=\"VALUE\">\n        <block type=\"variables_get\">\n          <title name=\"VAR\">counter</title>\n        </block>\n      </value>\n    </block>\n    </xml>",
+      "courseF_artist_for2_a": "Use `counter` for the length of your triangles inside your `repeat` loop.\n\n[blockly block][0]",
       "courseF_artist_for2_b": "Remember to count by 10 within your for loop.",
       "courseF_artist_for2_c": "This is the pattern that the Artist will follow:\n\n[][0]"
     }
@@ -2905,7 +2905,7 @@
     "short_instructions": "These triangles go from 20 pixel sides to 200 pixel sides, and each triangle is 20 pixels larger than the last. ",
     "long_instructions": "Create these triangles that go from 20 pixel sides to 200 pixel sides, where each triangle is 20 pixels larger than the last.",
     "authored_hints": {
-      "courseF_artist_for3_a": "To have the `for` loop drive your movement, make sure that you're using `counter` as your distance in the `move forward` block.\n\n<xml>\n<block type=\"draw_move\" inline=\"true\">\n      <title name=\"DIR\">moveForward</title>\n      <value name=\"VALUE\">\n        <block type=\"variables_get\">\n          <title name=\"VAR\">counter</title>\n        </block>\n      </value>\n    </block>\n</xml>",
+      "courseF_artist_for3_a": "To have the `for` loop drive your movement, make sure that you're using `counter` as your distance in the `move forward` block.\n\n[blockly block][0]",
       "courseF_artist_for3_b": "Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you haven't solved the puzzle yet."
     }
   },
@@ -3000,7 +3000,7 @@
     "authored_hints": {
       "courseF_artist_for10_a": "The image in the drawing was made using a counter for the `set alpha` and `counter` / 10 as a brush size.",
       "courseF_artist_for10_b": "The image in the drawing uses a turn of 61 degrees.",
-      "courseF_artist_for10_c": "Want to know how the sample image was done?\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"draw_colour\" inline=\"true\" id=\"draw-color\">\n        <value name=\"COLOUR\">\n          <block type=\"colour_picker\">\n            <title name=\"COLOUR\">#ff0000</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"controls_for_counter\" inline=\"true\">\n          <mutation counter=\"counter\"></mutation>\n            <value name=\"FROM\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">15</title>\n              </block>\n            </value>\n            <value name=\"TO\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">175</title>\n              </block>\n            </value>\n            <value name=\"BY\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">2</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"draw_width\" inline=\"false\">\n                <value name=\"WIDTH\">\n                  <block type=\"math_arithmetic\" inline=\"true\">\n                    <title name=\"OP\">DIVIDE</title>\n                    <value name=\"A\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">counter</title>\n                      </block>\n                    </value>\n                    <value name=\"B\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">10</title>\n                      </block>\n                    </value>\n                  </block>\n                </value>\n                <next>\n                  <block type=\"alpha\" inline=\"true\" id=\"alpha\">\n                    <value name=\"VALUE\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">counter</title>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"draw_move\" inline=\"true\">\n                        <title name=\"DIR\">moveForward</title>\n                        <value name=\"VALUE\">\n                          <block type=\"variables_get\">\n                            <title name=\"VAR\">counter</title>\n                          </block>\n                        </value>\n                        <next>\n                          <block type=\"draw_turn\" inline=\"true\">\n                            <title name=\"DIR\">turnRight</title>\n                            <value name=\"VALUE\">\n                              <block type=\"math_number\">\n                                <title name=\"NUM\">61</title>\n                              </block>\n                            </value>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+      "courseF_artist_for10_c": "Want to know how the sample image was done?\n\n[blockly block][0]"
     }
   },
   "https://studio.code.org/s/express-2018/stage/34/extras?level_name=courseF_artist_for_challenge1_2018": {
@@ -3010,7 +3010,7 @@
       "courseF_artist_for_challenge1_a": "The `pen width` is 1. The first square has 50 pixel sides, and each square is 50 pixels wider than the last.",
       "courseF_artist_for_challenge1_b": "The opacity on the brush is always `counter`/2.",
       "courseF_artist_for_challenge1_c": "After you make each square, don't forget to jump backward, turn, jump again, then turn back!",
-      "courseF_artist_for_challenge1_d": "**Solution:**\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"draw_width\" inline=\"false\">\n        <value name=\"WIDTH\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">1</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"draw_colour\" inline=\"true\" id=\"draw-color\">\n            <value name=\"COLOUR\">\n              <block type=\"colour_picker\">\n                <title name=\"COLOUR\">#0000cd</title>\n              </block>\n            </value>\n            <next>\n              <block type=\"controls_for_counter\" inline=\"true\">\n              <mutation counter=\"counter\"></mutation>\n                <value name=\"FROM\">\n                  <block type=\"math_number\">\n                    <title name=\"NUM\">50</title>\n                  </block>\n                </value>\n                <value name=\"TO\">\n                  <block type=\"math_number\">\n                    <title name=\"NUM\">350</title>\n                  </block>\n                </value>\n                <value name=\"BY\">\n                  <block type=\"math_number\">\n                    <title name=\"NUM\">50</title>\n                  </block>\n                </value>\n                <statement name=\"DO\">\n                  <block type=\"alpha\" inline=\"true\" id=\"alpha\">\n                    <value name=\"VALUE\">\n                      <block type=\"math_arithmetic\" inline=\"true\">\n                        <title name=\"OP\">DIVIDE</title>\n                        <value name=\"A\">\n                          <block type=\"variables_get\">\n                            <title name=\"VAR\">counter</title>\n                          </block>\n                        </value>\n                        <value name=\"B\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">2</title>\n                          </block>\n                        </value>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"controls_repeat_ext\" inline=\"true\">\n                        <value name=\"TIMES\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">4</title>\n                          </block>\n                        </value>\n                        <statement name=\"DO\">\n                          <block type=\"draw_move\" inline=\"true\">\n                            <title name=\"DIR\">moveForward</title>\n                            <value name=\"VALUE\">\n                              <block type=\"variables_get\">\n                                <title name=\"VAR\">counter</title>\n                              </block>\n                            </value>\n                            <next>\n                              <block type=\"draw_turn\" inline=\"true\">\n                                <title name=\"DIR\">turnRight</title>\n                                <value name=\"VALUE\">\n                                  <block type=\"math_number\">\n                                    <title name=\"NUM\">90</title>\n                                  </block>\n                                </value>\n                              </block>\n                            </next>\n                          </block>\n                        </statement>\n                        <next>\n                          <block type=\"jump\" inline=\"true\">\n                            <title name=\"DIR\">jumpBackward</title>\n                            <value name=\"VALUE\">\n                              <block type=\"math_number\">\n                                <title name=\"NUM\">25</title>\n                              </block>\n                            </value>\n                            <next>\n                              <block type=\"draw_turn\" inline=\"true\">\n                                <title name=\"DIR\">turnRight</title>\n                                <value name=\"VALUE\">\n                                  <block type=\"math_number\">\n                                    <title name=\"NUM\">90</title>\n                                  </block>\n                                </value>\n                                <next>\n                                  <block type=\"jump\" inline=\"true\">\n                                    <title name=\"DIR\">jumpBackward</title>\n                                    <value name=\"VALUE\">\n                                      <block type=\"math_number\">\n                                        <title name=\"NUM\">25</title>\n                                      </block>\n                                    </value>\n                                    <next>\n                                      <block type=\"draw_turn\" inline=\"true\">\n                                        <title name=\"DIR\">turnLeft</title>\n                                        <value name=\"VALUE\">\n                                          <block type=\"math_number\">\n                                            <title name=\"NUM\">90</title>\n                                          </block>\n                                        </value>\n                                      </block>\n                                    </next>\n                                  </block>\n                                </next>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+      "courseF_artist_for_challenge1_d": "**Solution:**\n\n[blockly block][0]"
     }
   },
   "https://studio.code.org/s/express-2018/stage/34/extras?level_name=courseF_artist_for_challenge2_2018": {
@@ -3020,7 +3020,7 @@
       "courseF_artist_for_challenge2_c": "The `for loop` goes from 5 to 250 by 2. ",
       "courseF_artist_for_challenge2_a": "The color change happens using the `set color with red, green, blue` block.  Red is set constant at 255, green is always the value of `counter`, and blue is always `255 - counter`.",
       "courseF_artist_for_challenge2_b": "The code for this is simpler than you might think.  Just set the color inside the for loop, move forward, then turn.",
-      "courseF_artist_for_challenge2_d": "**Solution:**\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"draw_width\" inline=\"false\">\n        <value name=\"WIDTH\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">1</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"controls_for_counter\" inline=\"true\">\n          <mutation counter=\"counter\"></mutation>\n            <value name=\"FROM\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">5</title>\n              </block>\n            </value>\n            <value name=\"TO\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">250</title>\n              </block>\n            </value>\n            <value name=\"BY\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">2</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"draw_colour\" inline=\"true\" id=\"draw-color\">\n                <value name=\"COLOUR\">\n                  <block type=\"colour_rgb\" inline=\"false\">\n                    <value name=\"RED\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">255</title>\n                      </block>\n                    </value>\n                    <value name=\"GREEN\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">counter</title>\n                      </block>\n                    </value>\n                    <value name=\"BLUE\">\n                      <block type=\"math_arithmetic\" inline=\"true\">\n                        <title name=\"OP\">MINUS</title>\n                        <value name=\"A\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">255</title>\n                          </block>\n                        </value>\n                        <value name=\"B\">\n                          <block type=\"variables_get\">\n                            <title name=\"VAR\">counter</title>\n                          </block>\n                        </value>\n                      </block>\n                    </value>\n                  </block>\n                </value>\n                <next>\n                  <block type=\"draw_move\" inline=\"true\">\n                    <title name=\"DIR\">moveForward</title>\n                    <value name=\"VALUE\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">counter</title>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"draw_turn\" inline=\"true\">\n                        <title name=\"DIR\">turnRight</title>\n                        <value name=\"VALUE\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">80</title>\n                          </block>\n                        </value>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+      "courseF_artist_for_challenge2_d": "**Solution:**\n\n[blockly block][0]"
     }
   },
   "https://studio.code.org/s/express-2018/stage/35/puzzle/1": {
@@ -3044,7 +3044,7 @@
   },
   "https://studio.code.org/s/express-2018/stage/35/puzzle/5": {
     "short_instructions": "Use the `set background color` block to make the background blue.",
-    "long_instructions": "Our fish tank needs some water! \n\nUse <xml><block type=\"gamelab_setBackground\" inline=\"true\">\n    <value name=\"COLOR\">\n      <block type=\"colour_picker\">\n        <title name=\"COLOUR\">#0000ff</title>\n      </block>\n    </value>\n  </block></xml> to make the background blue."
+    "long_instructions": "Our fish tank needs some water! \n\nUse [blockly block][0] to make the background blue."
   },
   "https://studio.code.org/s/express-2018/stage/35/puzzle/6": {
     "display_name": "How to Make a Sprite"
@@ -3073,7 +3073,7 @@
   },
   "https://studio.code.org/s/express-2018/stage/36/puzzle/2": {
     "short_instructions": "Change the behavior inside the `___ begins ___` block to make the alien start spinning around.",
-    "long_instructions": "The alien was proud of its dancing skills on Mars, but now it can only move side-to-side.  \n\nCan you change the behavior inside the <xml> <block type=\"gamelab_addBehaviorSimple\" inline=\"true\">\n      <value name=\"SPRITE\">\n        <block type=\"sprite_variables_get\">\n          <title name=\"VAR\">alien1</title>\n        </block>\n      </value>\n    </block></xml> block to make it start spinning around?  "
+    "long_instructions": "The alien was proud of its dancing skills on Mars, but now it can only move side-to-side.  \n\nCan you change the behavior inside the [blockly block][0] block to make it start spinning around?  "
   },
   "https://studio.code.org/s/express-2018/stage/36/puzzle/3": {
     "short_instructions": "Create a new sprite called `alien2`, then make it do a different dance move when it's clicked.  ",
@@ -3089,7 +3089,7 @@
   },
   "https://studio.code.org/s/express-2018/stage/36/puzzle/6": {
     "short_instructions": "Use the `stops everything` block to make each alien stop moving when it is clicked.",
-    "long_instructions": "These aliens are running wild!  \n\nUse the <xml><block type=\"gamelab_removeAllBehaviors\" inline=\"true\">\n      <value name=\"SPRITE\"/>\n    </block></xml> block to make each alien stop moving when it is clicked."
+    "long_instructions": "These aliens are running wild!  \n\nUse the [blockly block][0] block to make each alien stop moving when it is clicked."
   },
   "https://studio.code.org/s/express-2018/stage/36/puzzle/7": {
     "short_instructions": "Add a new bell sprite called `myBell` that makes all the aliens start doing the same dance move when it's clicked.",
@@ -3115,7 +3115,7 @@
   },
   "https://studio.code.org/s/express-2018/stage/37/puzzle/3": {
     "short_instructions": "Add a new soap sprite to the screen.  Can you make it so that when the giraffe and the soap touch, the giraffe goes back to its normal color?",
-    "long_instructions": "We can’t have a dirty giraffe wandering around!  \n\n1.  Add a new soap sprite to the screen.\n2.  Can you make it so that when the giraffe and the soap touch, the giraffe goes back to its normal color?\n\n* * *\n\nTo reset the color, use this block:\n<xml><block type=\"gamelab_removeTint\" inline=\"true\">\n      <value name=\"THIS\">\n        <block type=\"sprite_variables_get\">\n          <title name=\"VAR\">mySprite</title>\n        </block>\n      </value>\n    </block></xml>"
+    "long_instructions": "We can’t have a dirty giraffe wandering around!  \n\n1.  Add a new soap sprite to the screen.\n2.  Can you make it so that when the giraffe and the soap touch, the giraffe goes back to its normal color?\n\n* * *\n\nTo reset the color, use this block:\n[blockly block][0]"
   },
   "https://studio.code.org/s/express-2018/stage/37/puzzle/4": {
     "short_instructions": "Add a behavior to your soap to make it draggable, then drag it over to clean the giraffe!",
