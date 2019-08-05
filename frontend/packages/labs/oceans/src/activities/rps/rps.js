@@ -122,6 +122,18 @@ module.exports = class Main {
       // 'conv_preds' is the logits activation of MobileNet.
       const infer = () => this.mobilenet.infer(image, 'conv_preds');
 
+      const canvas = document.createElement('canvas');
+      canvas.width = IMAGE_SIZE / 4;
+      canvas.height = IMAGE_SIZE / 4;
+      const ctx = canvas.getContext('2d');
+      ctx.drawImage(this.video, 0, 0, canvas.width, canvas.height);
+      const dataURI = canvas.toDataURL('image/jpeg');
+      const img = document.createElement('img');
+      img.src = dataURI;
+      img.width = IMAGE_SIZE / 4;
+      img.height = IMAGE_SIZE / 4;
+      document.body.appendChild(img);
+
       // Train class if one of the buttons is held down
       if (this.training !== -1) {
         logits = infer();
