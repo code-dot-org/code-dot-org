@@ -20,7 +20,7 @@ const styles = {
   },
   lessonDetails: {
     width: '75%',
-    marginLeft: 15,
+    marginLeft: 25,
     marginTop: 15,
     marginBottom: 5
   },
@@ -30,12 +30,7 @@ const styles = {
     color: color.teal
   },
   unit: {
-    color: color.teal
-  },
-  label: {
-    fontFamily: '"Gotham 5r", sans-serif',
-    marginRight: 5,
-    marginLeft: 10
+    color: color.charcoal
   },
   time: {
     marginTop: 15,
@@ -101,13 +96,14 @@ export default class LevelFeedbackEntry extends Component {
       seen_on_feedback_page_at,
       student_first_visited_at,
       lessonName,
+      lessonNum,
       levelNum,
       linkToLevel,
       unitName,
-      linkToUnit,
       created_at,
       comment,
-      performance
+      performance,
+      performance_details
     } = this.props.feedback;
 
     const seenByStudent = seen_on_feedback_page_at || student_first_visited_at;
@@ -135,51 +131,41 @@ export default class LevelFeedbackEntry extends Component {
       performanceLevel4: i18n.rubricLevelFourHeader()
     };
 
+    let rubricText = `${i18n.feedbackRubricEvaluation()}:
+    ${rubricPerformance[performance]} - ${performance_details}`;
+
     const showRightCaret = this.longComment() && !this.state.expanded;
     const showDownCaret = this.longComment() && this.state.expanded;
 
     return (
-      <div style={style}>
+      <div
+        style={style}
+        onClick={this.state.expanded ? this.collapse : this.expand}
+      >
         <div style={styles.lessonDetails}>
           <a href={linkToLevel}>
             <div style={styles.lessonLevel}>
-              <span style={styles.label}>
-                {i18n.feedbackNotificationLesson()}
-              </span>
-              <span>{lessonName}</span>
-              <span style={styles.label}>
-                {i18n.feedbackNotificationLevel()}
-              </span>
-              <span>{levelNum}</span>
+              {i18n.feedbackNotificationLesson({
+                lessonNum,
+                lessonName,
+                levelNum
+              })}
             </div>
           </a>
-          <a href={linkToUnit}>
-            <div style={styles.unit}>
-              <span style={styles.label}>
-                {i18n.feedbackNotificationUnit()}
-              </span>
-              <span>{unitName}</span>
-            </div>
-          </a>
+          <div style={styles.unit}>
+            {i18n.feedbackNotificationUnit({unitName})}
+          </div>
         </div>
         <TimeAgo style={styles.time} dateString={created_at} />
-        <div style={performanceStyle}>{rubricPerformance[performance]}</div>
+        {performance && <div style={performanceStyle}>{rubricText}</div>}
         {showRightCaret ? (
           <span style={styles.iconBox}>
-            <FontAwesome
-              style={styles.icon}
-              icon="caret-right"
-              onClick={this.expand}
-            />
+            <FontAwesome style={styles.icon} icon="caret-right" />
           </span>
         ) : null}
         {showDownCaret ? (
           <span style={styles.iconBox}>
-            <FontAwesome
-              style={styles.icon}
-              icon="caret-down"
-              onClick={this.collapse}
-            />
+            <FontAwesome style={styles.icon} icon="caret-down" />
           </span>
         ) : null}
         <span style={styles.commentBox}>
