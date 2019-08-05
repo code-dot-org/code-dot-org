@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import i18n from '@cdo/locale';
 import color from '../../../util/color';
+import {PLATFORM_ANDROID, PLATFORM_IOS} from '../../../util/exporter';
 import SendToPhone from '../SendToPhone';
 import commonStyles from './styles';
 
@@ -43,7 +44,7 @@ const styles = {
 export default class GeneratingPage extends React.Component {
   static propTypes = {
     appType: PropTypes.string.isRequired,
-    platform: PropTypes.oneOf(['ios', 'android']).isRequired,
+    platform: PropTypes.oneOf([PLATFORM_IOS, PLATFORM_ANDROID]).isRequired,
     isGenerating: PropTypes.bool.isRequired,
     exportError: PropTypes.string,
     apkError: PropTypes.string,
@@ -75,7 +76,7 @@ export default class GeneratingPage extends React.Component {
       isGenerating
     } = this.props;
     const error = exportError || apkError;
-    const isAndroid = platform === 'android';
+    const isAndroid = platform === PLATFORM_ANDROID;
     const packageType = isAndroid ? 'Android' : 'iOS App Store';
     const successTitle = isAndroid
       ? 'The Android Package was created successfully'

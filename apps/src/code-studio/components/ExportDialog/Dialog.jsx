@@ -4,6 +4,7 @@ import {connect} from 'react-redux';
 import BaseDialog from '../../../templates/BaseDialog';
 import AbuseError from '../AbuseError';
 import color from '../../../util/color';
+import {PLATFORM_ANDROID, DEFAULT_PLATFORM} from '../../../util/exporter';
 import {hideExportDialog} from '../exportDialogRedux';
 import i18n from '@cdo/locale';
 import {SignInState} from '../../progressRedux';
@@ -18,7 +19,6 @@ import PublishIOSPage from './PublishIOSPage';
 import GeneratingPage from './GeneratingPage';
 
 const APK_BUILD_STATUS_CHECK_PERIOD = 60000;
-const DEFAULT_PLATFORM = 'android';
 
 function recordExport(type) {
   firehoseClient.putRecord(
@@ -467,7 +467,8 @@ class ExportDialog extends React.Component {
         break;
       case 'icon':
         this.setState({
-          screen: platform === 'android' ? 'publishAndroid' : 'publishIOS'
+          screen:
+            platform === PLATFORM_ANDROID ? 'publishAndroid' : 'publishIOS'
         });
         break;
       case 'publishAndroid':
@@ -507,7 +508,8 @@ class ExportDialog extends React.Component {
         break;
       case 'generating':
         this.setState({
-          screen: platform === 'android' ? 'publishAndroid' : 'publishIOS'
+          screen:
+            platform === PLATFORM_ANDROID ? 'publishAndroid' : 'publishIOS'
         });
         break;
       default:
