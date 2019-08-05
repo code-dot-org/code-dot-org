@@ -206,7 +206,7 @@ def redact_level_file(source_path)
     file.write(JSON.pretty_generate(redactable_data))
   end
 
-  redacted_data = RedactRestoreUtils.redact_data(redactable_data)
+  redacted_data = RedactRestoreUtils.redact_data(redactable_data, ['blockly'])
 
   File.open(source_path, 'w') do |source_file|
     source_file.write(JSON.pretty_generate(source_data.deep_merge(redacted_data)))
