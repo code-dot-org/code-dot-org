@@ -755,6 +755,10 @@ Applab.init = function(config) {
           );
         }
       }
+
+      if (getStore().getState().pageConstants.widgetMode) {
+        Applab.runButtonClick();
+      }
     });
 
   if (IN_UNIT_TEST) {
