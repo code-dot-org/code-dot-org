@@ -507,6 +507,15 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
     assert_response :success
   end
 
+  test 'CSF facilitator can delete their own workshop' do
+    sign_in @csf_facilitator
+    workshop = create :pd_workshop, facilitators: [@csf_facilitator]
+    assert_destroys(Pd::Workshop) do
+      delete :destroy, params: {id: workshop.id}
+    end
+    assert_response :success
+  end
+
   # TODO: remove this test when workshop_organizer is deprecated
   test_user_gets_response_for(
     :destroy,

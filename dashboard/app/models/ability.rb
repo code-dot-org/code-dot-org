@@ -103,7 +103,7 @@ class Ability
 
         if Pd::CourseFacilitator.exists?(facilitator: user, course: Pd::Workshop::COURSE_CSF)
           can :create, Pd::Workshop
-          can :update, Pd::Workshop, facilitators: {id: user.id}
+          can [:update, :destroy], Pd::Workshop, facilitators: {id: user.id}
         end
       end
 
