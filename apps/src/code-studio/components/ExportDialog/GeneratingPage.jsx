@@ -43,6 +43,7 @@ const styles = {
 export default class GeneratingPage extends React.Component {
   static propTypes = {
     appType: PropTypes.string.isRequired,
+    platform: PropTypes.oneOf(['ios', 'android']).isRequired,
     isGenerating: PropTypes.bool.isRequired,
     exportError: PropTypes.string,
     apkError: PropTypes.string,
@@ -67,20 +68,31 @@ export default class GeneratingPage extends React.Component {
     const {showSendToPhone} = this.state;
     const {
       appType,
+      platform,
       exportError,
       apkError,
       apkUri = '',
       isGenerating
     } = this.props;
     const error = exportError || apkError;
+    const isAndroid = platform === 'android';
+    const packageType = isAndroid ? 'Android' : 'iOS App Store';
+    const successTitle = isAndroid
+      ? 'The Android Package was created successfully'
+      : 'Your app is ready to be exported';
     const titleText = isGenerating
-      ? 'Creating Android Package...'
+      ? `Creating ${packageType} Package...`
       : error
-      ? 'Error creating Android Package'
-      : 'The Android Package was created successfully';
-    const headerText = isGenerating
-      ? 'Please wait for about <b>15 minutes</b>.'
-      : error || 'Send this link to your device to install the app.';
+      ? `Error creating ${packageType} Package`
+      : successTitle;
+    let headerText;
+    if (isAndroid) {
+      headerText = isGenerating
+        ? 'Please wait for about <b>15 minutes</b>.'
+        : error || 'Send this link to your device to install the app.';
+    } else {
+      headerText = isGenerating ? 'Please wait.' : error || '';
+    }
     return (
       <div>
         <div style={commonStyles.section}>
@@ -96,7 +108,7 @@ export default class GeneratingPage extends React.Component {
           {isGenerating && (
             <i style={styles.spinner} className="fa fa-spinner fa-spin" />
           )}
-          {!isGenerating && !error && (
+          {!isGenerating && !error && isAndroid && (
             <div>
               <div style={styles.apkUriContainer}>
                 <input

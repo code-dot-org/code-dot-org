@@ -1,11 +1,18 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import color from '../../../util/color';
+import experiments from '../../../util/experiments';
 import commonStyles from './styles';
 
 const styles = {
   radioLabel: {
     ...commonStyles.text,
     display: 'inline-block'
+  },
+  radioLabelDisabled: {
+    ...commonStyles.text,
+    display: 'inline-block',
+    color: color.light_gray
   },
   radioInput: {
     height: 18,
@@ -31,6 +38,13 @@ export default class PlatformPage extends React.Component {
 
   render() {
     const {platform} = this.props;
+    const allowIOS = experiments.isEnabled('exportIOS');
+    const iOSLabelStyle = allowIOS
+      ? styles.radioLabel
+      : styles.radioLabelDisabled;
+    const iOSLabelText = `I have an iOS device${
+      allowIOS ? '' : ' (currently not supported)'
+    }`;
     return (
       <div>
         <div style={commonStyles.section}>
@@ -55,10 +69,11 @@ export default class PlatformPage extends React.Component {
               type="radio"
               id="radioIOS"
               checked={platform === 'ios'}
+              disabled={!allowIOS}
               onChange={this.onRadioChange}
             />
-            <label htmlFor="radioIOS" style={styles.radioLabel}>
-              I have an iOS device
+            <label htmlFor="radioIOS" style={iOSLabelStyle}>
+              {iOSLabelText}
             </label>
           </div>
         </div>

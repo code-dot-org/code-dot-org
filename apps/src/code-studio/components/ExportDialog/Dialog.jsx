@@ -347,6 +347,16 @@ class ExportDialog extends React.Component {
     }
   }
 
+  visitExpoSite() {
+    const {expoSnackId} = this.state;
+    if (!expoSnackId) {
+      return;
+    }
+    // TODO: use new URL format once snack-web has been updated for this flow
+    // TODO: pass iconUri and splashImageUri to expo.io
+    window.open(`https://snack.expo.io/${expoSnackId}`, '_blank');
+  }
+
   checkForApkBuild(apkBuildId, expoSnackId) {
     const {expoCheckApkBuild, md5SavedSources} = this.props;
 
@@ -465,10 +475,13 @@ class ExportDialog extends React.Component {
         this.setState({screen: 'generating'});
         break;
       case 'publishIOS':
-        // TODO: publish and navigate to Expo.io
-        this.close();
+        this.publishExpoExport();
+        this.setState({screen: 'generating'});
         break;
       case 'generating':
+        if (this.isPublishingForIOSWithoutError()) {
+          this.visitExpoSite();
+        }
         this.close();
         break;
       default:
@@ -477,7 +490,7 @@ class ExportDialog extends React.Component {
   };
 
   onBackButton = () => {
-    const {screen} = this.state;
+    const {platform, screen} = this.state;
 
     switch (screen) {
       case 'intro':
@@ -493,7 +506,9 @@ class ExportDialog extends React.Component {
         this.setState({screen: 'icon'});
         break;
       case 'generating':
-        this.setState({screen: 'publishAndroid'});
+        this.setState({
+          screen: platform === 'android' ? 'publishAndroid' : 'publishIOS'
+        });
         break;
       default:
         throw new Error(`ExportDialog: Unexpected screen: ${screen}`);
@@ -541,6 +556,7 @@ class ExportDialog extends React.Component {
         return (
           <GeneratingPage
             appType={appType}
+            platform={platform}
             isGenerating={this.isGenerating()}
             exportError={exportError}
             apkError={apkError}
@@ -558,22 +574,26 @@ class ExportDialog extends React.Component {
     return screen === 'generating' && !!(exporting || generatingApk);
   }
 
+  isPublishingForIOSWithoutError() {
+    const {platform, exportError} = this.state;
+    return platform === 'ios' && !exportError;
+  }
+
   getActionButtonInfo() {
-    const {screen, exporting, generatingApk} = this.state;
+    const {screen} = this.state;
     const info = {
       text: 'Next',
       enabled: true
     };
     switch (screen) {
       case 'generating':
-        info.text = 'Finish';
-        info.enabled = !exporting && !generatingApk;
+        info.text = this.isPublishingForIOSWithoutError()
+          ? 'Continue with Expo.io'
+          : 'Finish';
+        info.enabled = !this.isGenerating();
         break;
       case 'publishAndroid':
         info.text = 'Create';
-        break;
-      case 'publishIOS':
-        info.text = 'Continue with Expo.io';
         break;
     }
     return info;
