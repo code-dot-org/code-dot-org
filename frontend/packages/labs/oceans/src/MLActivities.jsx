@@ -14,13 +14,19 @@ module.exports = class MLActivities extends React.Component {
   render() {
     return <div>
       <h1>
-        ML Activity Playground
+        ML Activities Playground
       </h1>
-      <button onClick={() => this.setState({
-        currentActivity: Activity.RPS
-      })}>
-        RPS Activity
-      </button>
+      {
+        this.state.currentActivity === Activity.None &&
+        <button
+          style={{height: 40}}
+          onClick={() => this.setState({
+            currentActivity: Activity.RPS
+          })}
+        >
+          Pick RPS Activity
+        </button>
+      }
       {
         this.state.currentActivity === Activity.RPS &&
         <RPS/>
