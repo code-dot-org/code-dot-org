@@ -31,6 +31,9 @@ module.exports = class Main extends React.Component {
     infoText0: "",
     infoText1: "",
     infoText2: "",
+    trainingImages0: [],
+    trainingImages1: [],
+    trainingImages2: [],
   };
 
   componentDidMount() {
@@ -58,8 +61,8 @@ module.exports = class Main extends React.Component {
   render() {
     return <div>
       <video ref={(el) => this.video = el} autoPlay="" playsInline="" width="227" height="227"/>
-      <div>
-        <i>click each &lsquo;train&rsquo; button to train the computer on one frame from your camera</i><br/>
+      <div style={{marginBottom: 10}}>
+        <i>Click each &lsquo;train&rsquo; button to train the computer on one frame from your camera</i><br/>
       </div>
       <button
         style={{position: 'absolute', left: '300px', top: '180px', width: '80px', height: '40px',}}
@@ -80,6 +83,11 @@ module.exports = class Main extends React.Component {
               Train {CLASS_NAMES[index]}
             </button>
             <span style={{fontWeight: this.state.predictedClass === index ? "bold" : "normal"}}>{this.state[`infoText${index}`]}</span>
+            {
+              this.state['trainingImages' + index].map((image, i) => {
+                return <img key={i} src={image} width={40} height={40}/>;
+              })
+            }
           </div>);
         })
       }
@@ -116,11 +124,9 @@ module.exports = class Main extends React.Component {
       const ctx = canvas.getContext('2d');
       ctx.drawImage(this.video, 0, 0, canvas.width, canvas.height);
       const dataURI = canvas.toDataURL('image/jpeg');
-      const img = document.createElement('img');
-      img.src = dataURI;
-      img.width = IMAGE_SIZE / 4;
-      img.height = IMAGE_SIZE / 4;
-      document.body.appendChild(img);
+      this.setState({
+        ['trainingImages' + this.training]: this.state['trainingImages' + this.training].concat(dataURI)
+      });
 
       // Train class if one of the buttons is held down
       if (this.training !== -1) {
