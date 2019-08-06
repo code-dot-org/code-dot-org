@@ -1,7 +1,11 @@
 /* eslint-disable react/no-is-mounted */
 import PropTypes from 'prop-types';
 import React from 'react';
-import {assets as assetsApi, files as filesApi} from '@cdo/apps/clientApi';
+import {
+  assets as assetsApi,
+  starterAssets as starterAssetsApi,
+  files as filesApi
+} from '@cdo/apps/clientApi';
 
 import AssetRow from './AssetRow';
 import assetListStore from '../assets/assetListStore';
@@ -63,6 +67,7 @@ export default class AssetManager extends React.Component {
     super(props);
     this.state = {
       assets: null,
+      starterAssets: null,
       statusMessage: props.uploadsEnabled ? '' : errorUploadDisabled,
       recordingAudio: false,
       audioErrorType: AudioErrorType.NONE
@@ -70,6 +75,11 @@ export default class AssetManager extends React.Component {
   }
 
   componentWillMount() {
+    starterAssetsApi.getStarterAssets(
+      1, // TODO: GET VALUE FROM REDUX
+      this.onStarterAssetsReceived,
+      this.onStarterAssetsFailure
+    );
     let api = this.props.useFilesApi ? filesApi : assetsApi;
     api.getFiles(this.onAssetListReceived, this.onAssetListFailure);
   }
@@ -81,6 +91,20 @@ export default class AssetManager extends React.Component {
   componentWillUnmount() {
     this._isMounted = false;
   }
+
+  onStarterAssetsReceived = result => {
+    const response = JSON.parse(result.response);
+    this.setState({starterAssets: response.starter_asset_urls});
+  };
+
+  onStarterAssetsFailure = xhr => {
+    if (this._isMounted) {
+      this.setState({
+        statusMessage:
+          'Error loading starter assets: ' + getErrorMessage(xhr.status)
+      });
+    }
+  };
 
   /**
    * Called after the component mounts, when the server responds with the

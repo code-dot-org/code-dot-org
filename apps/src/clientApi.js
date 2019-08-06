@@ -442,9 +442,22 @@ class FilesApi extends CollectionsApi {
     );
   }
 }
+
+class StarterAssetsApi {
+  getStarterAssets(channelId, onSuccess, onFailure) {
+    return ajaxInternal(
+      'GET',
+      `/level_starter_assets/${channelId}`,
+      onSuccess,
+      onFailure
+    );
+  }
+}
+
 module.exports = {
   animations: new CollectionsApi('animations'),
   assets: new AssetsApi('assets'),
+  starterAssets: new StarterAssetsApi(),
   files: new FilesApi('files'),
   sources: new CollectionsApi('sources'),
   channels: new CollectionsApi('channels')
