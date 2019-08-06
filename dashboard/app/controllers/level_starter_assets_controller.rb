@@ -10,6 +10,7 @@ class LevelStarterAssetsController < ApplicationController
 
   private
 
+  # Returns S3_BUCKET objects in the S3_PREFIX/id directory.
   def get_object_summaries(id)
     bucket.objects(prefix: S3_PREFIX + id)
   end
