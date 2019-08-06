@@ -935,10 +935,12 @@ StudioApp.prototype.toggleRunReset = function(button) {
 
   var run = document.getElementById('runButton');
   var reset = document.getElementById('resetButton');
-  run.style.display = showRun ? 'inline-block' : 'none';
-  run.disabled = !showRun;
-  reset.style.display = !showRun ? 'inline-block' : 'none';
-  reset.disabled = showRun;
+  if (run || reset) {
+    run.style.display = showRun ? 'inline-block' : 'none';
+    run.disabled = !showRun;
+    reset.style.display = !showRun ? 'inline-block' : 'none';
+    reset.disabled = showRun;
+  }
 
   // Toggle soft-buttons (all have the 'arrow' class set):
   $('.arrow').prop('disabled', showRun);
