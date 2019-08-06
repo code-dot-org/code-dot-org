@@ -4,9 +4,9 @@
 #
 #  id                       :integer          not null, primary key
 #  comment                  :text(65535)
-#  student_id               :integer
-#  level_id                 :integer
-#  teacher_id               :integer
+#  student_id               :integer          not null
+#  level_id                 :integer          not null
+#  teacher_id               :integer          not null
 #  created_at               :datetime         not null
 #  updated_at               :datetime         not null
 #  deleted_at               :datetime
@@ -25,7 +25,7 @@
 
 class TeacherFeedback < ApplicationRecord
   acts_as_paranoid # use deleted_at column instead of deleting rows
-  validates_presence_of :student_id, :level_id, :teacher_id, unless: :deleted?
+  validates_presence_of :student_id, :level_id, :teacher_id, :script_level_id, unless: :deleted?
   belongs_to :student, class_name: 'User'
   has_many :student_sections, class_name: 'Section', through: :student, source: 'sections_as_student'
   belongs_to :level

@@ -462,7 +462,7 @@ ActiveRecord::Schema.define(version: 20190805220125) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "level_num"
-    t.integer  "ideal_level_source_id"
+    t.bigint   "ideal_level_source_id",                                            unsigned: true
     t.integer  "user_id"
     t.text     "properties",            limit: 65535
     t.string   "type"
@@ -1370,9 +1370,9 @@ ActiveRecord::Schema.define(version: 20190805220125) do
 
   create_table "teacher_feedbacks", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.text     "comment",                  limit: 65535
-    t.integer  "student_id"
-    t.integer  "level_id"
-    t.integer  "teacher_id"
+    t.integer  "student_id",                             null: false
+    t.integer  "level_id",                               null: false
+    t.integer  "teacher_id",                             null: false
     t.datetime "created_at",                             null: false
     t.datetime "updated_at",                             null: false
     t.datetime "deleted_at"
