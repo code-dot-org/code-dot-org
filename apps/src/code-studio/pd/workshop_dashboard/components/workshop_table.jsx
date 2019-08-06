@@ -281,7 +281,7 @@ export default class WorkshopTable extends React.Component {
   };
 
   formatManagement = manageData => {
-    const {id, course, subject, state, date} = manageData;
+    const {id, course, subject, state, date, canDelete} = manageData;
 
     return (
       <WorkshopManagement
@@ -291,7 +291,7 @@ export default class WorkshopTable extends React.Component {
         viewUrl={`/workshops/${id}`}
         date={date}
         editUrl={state === 'Not Started' ? `/workshops/${id}/edit` : null}
-        onDelete={state !== 'Ended' ? this.props.onDelete : null}
+        onDelete={canDelete ? this.props.onDelete : null}
         showSurveyUrl={
           state === 'Ended' ||
           ([CSD, CSP].includes(course) &&
@@ -317,7 +317,8 @@ export default class WorkshopTable extends React.Component {
           course: row.course,
           subject: row.subject,
           state: row.state,
-          date: row.sessions[0].start
+          date: row.sessions[0].start,
+          canDelete: row.can_delete
         }
       })
     );
