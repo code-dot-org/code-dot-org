@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+body { 
+    font-family: 'Lato', sans-serif;
+    font-size:13px;
+    background: #D5DBDB;
+}
+
+a {color: #000;}
+
+a:hover {text-decoration: none;}
+
+.icon-bar {color:#ccc;}
+
+#custom-bootstrap-menu.navbar-default {
+    border:none;
+    margin-bottom:5px;
+}
+
+#custom-bootstrap-menu.navbar-default .navbar-brand {
+    color: rgba(119, 119, 119, 1);
+    
+}
+#custom-bootstrap-menu.navbar-default {
+    font-size: 14px;
+    background-color: rgba(255, 255, 255, 1);
+    border-bottom-width: 1px;
+}
+#custom-bootstrap-menu.navbar-default .navbar-nav>li>a {
+    color: rgba(49, 49, 49, 1);
+    background-color: rgba(255, 255, 255, 1);
+    padding-top: 85px;
+    border-bottom: 2px solid #fff;
+}
+#custom-bootstrap-menu.navbar-default .navbar-nav>li>a:hover,
+#custom-bootstrap-menu.navbar-default .navbar-nav>li>a:focus {
+    color: rgba(122, 122, 122, 1);
+    background-color: rgba(255, 255, 255, 1);
+}
+#custom-bootstrap-menu.navbar-default .navbar-nav>.active>a,
+#custom-bootstrap-menu.navbar-default .navbar-nav>.active>a:hover,
+#custom-bootstrap-menu.navbar-default .navbar-nav>.active>a:focus {
+    color: rgba(85, 85, 85, 1);
+    background-color: rgba(255, 255, 255, 1);
+}
+#custom-bootstrap-menu.navbar-default .navbar-toggle {
+    border-color: #ccc;
+}
+#custom-bootstrap-menu.navbar-default .navbar-toggle:hover,
+#custom-bootstrap-menu.navbar-default .navbar-toggle:focus {
+    background-color: #0956a9;
+}
+#custom-bootstrap-menu.navbar-default .navbar-toggle .icon-bar {
+    background-color: #ccc;
+}
+#custom-bootstrap-menu.navbar-default .navbar-toggle:hover .icon-bar,
+#custom-bootstrap-menu.navbar-default .navbar-toggle:focus .icon-bar {
+    background-color: #ffffff;
+}
+
+#custom-bootstrap-menu.navbar-default .navbar-nav>li:active {
+    border-bottom: 2px solid #000;
+}
+
+#custom-bootstrap-menu.navbar-default .navbar-nav>li>a:hover {
+    border-bottom: 2px solid #000;
+    transition: 0.7s;
+}
+
+
+img.logoNav {
+    width:95px;
+    padding: 10px 0;
+}
+
+
+@media (min-width: 768px) {
+    .navbar .navbar-nav {
+        display: inline-block;
+        float: none;
+        vertical-align: top;
+    }
+    
+    .navbar .navbar-collapse {
+        text-align: center;
+    }
+}
+
+.top {
+    background: url(../img/showcase.jpg) no-repeat center center scroll; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;  
+    height:300px;
+}
+
+
+.main-content .col-sm-6 {
+    padding: 0;
+}
+
+.boxes {
+    position: relative;
+    min-height: 500px;
+}
+
+.main-content .title h2 {
+    text-align: center;
+    position: absolute;
+    bottom: -12px;
+    background: rgba(255,255,255,0.8);
+    padding:20px;
+    font-weight: bold;
+    width: 100%;
+}
+
+.main-content h3 {
+    padding: 50px 60px;
+    text-align: center;
+    font-weight: bold;
+    line-height: 32px;
+    color:#43737B;
+}
+
+.main-content .greyBkg {background: #ECEEEF;}
+
+.share {
+    text-align: center;
+    margin-top: 140px;
+}
+
+.share h2 {
+    color:#54b4c0;
+    font-weight: bold;
+    padding: 10px;
+        
+}
+
+.share h2.social a {
+    color:#000;
+}
+
+.share h2.social a:hover {color:#54b4c0;}
+
+@media (max-width:767px) {
+    #custom-bootstrap-menu.navbar-default .navbar-nav>li>a {padding:10px!important;}
+}
+
+@media (min-width:768px) and (max-width:1199px) {
+    #custom-bootstrap-menu.navbar-default .navbar-nav>li>a {padding:10px!important;}
+}
+
+@media (max-width: 1200px) {
+    .navbar-header {
+        float: none;
+    }
+    .navbar-left,.navbar-right {
+        float: none !important;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+    .navbar-fixed-top {
+        top: 0;
+        border-width: 0 0 1px;
+    }
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    .navbar-nav {
+        float: none!important;
+        margin-top: 7.5px;
+    }
+    .navbar-nav>li {
+        float: none;
+    }
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .collapse.in{
+        display:block !important;
+    }
+    .logoNav {display: none;}
+    
+    .logoNavMob {height:50px;margin-top:-15px;}
+
+}
+
+@media (min-width:1200px) {
+    .navbar-brand {display: none;}
+}
