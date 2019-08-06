@@ -12,7 +12,7 @@ class LevelStarterAssetsController < ApplicationController
         filename = filename(level_channel_id, file_obj)
         {
           filename: filename,
-          category: File.extname(filename),
+          category: file_mime_type(File.extname(filename)),
           size: file_obj.size,
           timestamp: file_obj.last_modified
         }
@@ -26,6 +26,10 @@ class LevelStarterAssetsController < ApplicationController
 
   def filename(id, file_obj)
     file_obj.key.sub(prefix(id) + '/', '')
+  end
+
+  def file_mime_type(extension)
+    MIME::Types.type_for(extension)&.first&.raw_media_type
   end
 
   def prefix(id)
