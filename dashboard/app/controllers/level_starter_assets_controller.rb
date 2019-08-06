@@ -4,15 +4,37 @@ class LevelStarterAssetsController < ApplicationController
 
   # GET /level_starter_assets/:id
   def show
-    starter_asset_urls = get_object_summaries(params[:id]).map {|obj| obj.size.zero? ? nil : obj.public_url}.compact
-    render json: {starter_asset_urls: starter_asset_urls}
+    level_channel_id = params[:id]
+    starter_assets = get_file_objects(level_channel_id).map do |file_obj|
+      if file_obj.size.zero?
+        nil
+      else
+        filename = filename(level_channel_id, file_obj)
+        {
+          filename: filename,
+          category: File.extname(filename),
+          size: file_obj.size,
+          timestamp: file_obj.last_modified
+        }
+      end
+    end.compact
+
+    render json: {starter_assets: starter_assets}
   end
 
   private
 
+  def filename(id, file_obj)
+    file_obj.key.sub(prefix(id) + '/', '')
+  end
+
+  def prefix(id)
+    S3_PREFIX + id
+  end
+
   # Returns S3_BUCKET objects in the S3_PREFIX/id directory.
-  def get_object_summaries(id)
-    bucket.objects(prefix: S3_PREFIX + id)
+  def get_file_objects(id)
+    bucket.objects(prefix: prefix(id))
   end
 
   def bucket

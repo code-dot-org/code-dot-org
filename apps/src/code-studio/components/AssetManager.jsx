@@ -101,7 +101,7 @@ export default class AssetManager extends React.Component {
 
   onStarterAssetsReceived = result => {
     const response = JSON.parse(result.response);
-    this.setState({starterAssets: response.starter_asset_urls});
+    this.setState({starterAssets: response.starter_assets});
   };
 
   onStarterAssetsFailure = xhr => {
