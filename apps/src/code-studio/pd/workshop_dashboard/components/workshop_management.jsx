@@ -165,6 +165,10 @@ export class WorkshopManagement extends React.Component {
   }
 
   render() {
+    const confirmationBodyText =
+      "Are you sure you want to delete this workshop? Once deleted it can't be recovered. " +
+      'Participants will not be notified. Please reach out to them directly before deleting.';
+
     return (
       <div>
         {this.renderViewButton()}
@@ -176,7 +180,7 @@ export class WorkshopManagement extends React.Component {
           onOk={this.handleDeleteConfirmed}
           onCancel={this.handleDeleteCanceled}
           headerText="Delete Workshop"
-          bodyText="Are you sure you want to delete this workshop? Once deleted it can't be recovered."
+          bodyText={confirmationBodyText}
         />
       </div>
     );
