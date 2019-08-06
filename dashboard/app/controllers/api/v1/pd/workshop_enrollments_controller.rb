@@ -104,6 +104,7 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
 
   # POST /api/v1/pd/enrollments/move
   def move
+    return head :forbidden unless current_user.workshop_admin?
     Pd::Enrollment.transaction do
       enrollments = Pd::Enrollment.where(id: params[:enrollment_ids])
       Pd::Attendance.where(pd_enrollment_id: enrollments).delete_all

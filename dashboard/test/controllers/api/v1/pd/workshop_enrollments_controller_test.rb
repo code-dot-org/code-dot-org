@@ -48,7 +48,9 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ::ActionController::TestC
 
     assert_routing(
       {method: :post, path: "/api/v1/pd/enrollments/move"},
-      {controller: CONTROLLER_PATH, action: 'move', enrollment_ids: [@enrollment.id], destination_workshop_id: @unrelated_workshop.id}
+      {controller: CONTROLLER_PATH, action: 'move', enrollment_ids: [@enrollment.id], destination_workshop_id: @unrelated_workshop.id},
+      {},
+      {enrollment_ids: [@enrollment.id], destination_workshop_id: @unrelated_workshop.id}
     )
   end
 
@@ -348,23 +350,28 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ::ActionController::TestC
   test 'move' do
     origin_workshop = create :pd_workshop, num_sessions: 1, enrolled_and_attending_users: 1,
       enrolled_unattending_users: 1
+    attendance = Pd::Attendance.for_workshop(origin_workshop).first
+    attendance.update(pd_enrollment_id: origin_workshop.enrollments.first.id)
     destination_workshop = create :pd_workshop
 
     admin = create :workshop_admin
     sign_in admin
 
     assert_equal 2, origin_workshop.enrollments.length
-    assert_equal 1, origin_workshop.sessions.first.attendances.length
+    assert_equal 1, Pd::Attendance.for_workshop(origin_workshop).count
 
     assert_equal 0, destination_workshop.enrollments.length
 
     post :move, params: {
       destination_workshop_id: destination_workshop.id,
-      enrollment_ids: [origin_workshop.enrollments]
+      enrollment_ids: origin_workshop.enrollments.pluck(:id)
     }
 
+    origin_workshop.reload
+    destination_workshop.reload
+
     assert_equal 0, origin_workshop.enrollments.length
-    assert_equal 0, origin_workshop.sessions.first.attendances.length
+    assert_equal 0, Pd::Attendance.for_workshop(origin_workshop).count
 
     assert_equal 2, destination_workshop.enrollments.length
   end
