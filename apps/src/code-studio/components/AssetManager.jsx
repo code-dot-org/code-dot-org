@@ -203,8 +203,8 @@ export default class AssetManager extends React.Component {
     this.setState({recordingAudio: false, audioErrorType: err});
   };
 
-  getAssetRows = () => {
-    return this.state.assets.map(asset => {
+  getStarterAssetRows = () => {
+    return this.state.starterAssets.map(asset => {
       return (
         <AssetRow
           key={asset.filename}
@@ -217,6 +217,27 @@ export default class AssetManager extends React.Component {
             this.props.assetChosen(asset.filename, asset.timestamp)
           }
           onDelete={() => this.deleteAssetRow(asset.filename)}
+          soundPlayer={this.props.soundPlayer}
+          imagePicker={this.props.imagePicker}
+          projectId={this.props.projectId}
+          elementId={this.props.elementId}
+        />
+      );
+    });
+  };
+
+  getAssetRows = () => {
+    return this.state.assets.map(asset => {
+      return (
+        <AssetRow
+          key={asset.filename}
+          name={asset.filename}
+          timestamp={asset.timestamp}
+          type={asset.category}
+          size={asset.size}
+          useFilesApi={this.props.useFilesApi}
+          onChoose={() => console.log('choose!')}
+          onDelete={() => console.log('delete!')}
           soundPlayer={this.props.soundPlayer}
           imagePicker={this.props.imagePicker}
           projectId={this.props.projectId}
@@ -295,7 +316,7 @@ export default class AssetManager extends React.Component {
         </div>
       );
     } else {
-      const rows = this.getAssetRows();
+      const rows = [...this.getStarterAssetRows(), ...this.getAssetRows()];
       assetList = (
         <div>
           <div
