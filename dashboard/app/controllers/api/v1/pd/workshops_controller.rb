@@ -58,7 +58,7 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
           limit: limit,
           total_count: workshops.length,
           filters: filter_params,
-          workshops: limited_workshops.map {|w| Api::V1::Pd::WorkshopSerializer.new(w).attributes}
+          workshops: limited_workshops.map {|w| Api::V1::Pd::WorkshopSerializer.new(w, scope: {current_user: current_user}).attributes}
         }
       end
       format.csv do
