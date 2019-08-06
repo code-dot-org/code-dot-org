@@ -1,10 +1,12 @@
 [![Build Status](https://travis-ci.org/bcjordan/ml-activities.svg?branch=master)](https://travis-ci.org/bcjordan/ml-activities)
 
+*Note: this repository will be relocated to [https://github.com/code-dot-org/ml-activities](https://github.com/code-dot-org/ml-activities)*
+
 Steps to get up and running:
 
 ```
 git clone git@github.com:bcjordan/ml-activities.git
-cd dance-party
+cd ml-activities
 nvm install
 nvm use
 npm install
