@@ -92,8 +92,8 @@
     "short_instructions": "Drag blocks onto the screen to have the artist draw over the grey lines in the picture. (Each line is 100 pixels long)",
     "long_instructions": "_\"Let's make a cage for my pet monster!\"_\n\nDrag blocks onto the screen to have the artist draw over the grey lines in the picture.\\\n(Each line is 100 pixels long)",
     "authored_hints": {
-      "courseC_artist_prog2_a": "*\"If you use the <xml><block type=\"draw_move_by_constant\"><title name=\"DIR\">moveForward</title><title name=\"VALUE\">100</title></block></xml> block, I will draw a line.\"*",
-      "courseC_artist_prog2_b": "Having trouble turning the corner? Use the <xml><block type=\"draw_turn_by_constant_dropdown\"><title name=\"DIR\">turnRight</title><title name=\"VALUE\" config=\"45,60,90,120,180\">90</title></block></xml> block."
+      "courseC_artist_prog2_a": "_\"If you use the [blockly block][0] block, I will draw a line.\"_",
+      "courseC_artist_prog2_b": "Having trouble turning the corner? Use the [blockly block][0] block."
     }
   },
   "https://studio.code.org/s/coursee-2019/stage/2/puzzle/5": {
@@ -329,7 +329,7 @@
   },
   "https://studio.code.org/s/coursee-2019/stage/6/puzzle/3": {
     "short_instructions": "Change the tumbleweed into any kind of fish!",
-    "long_instructions": "Let's make a fish tank!  \n\nChange the tumbleweed sprite into any kind of fish by clicking <xml><block type=\"gamelab_allSpritesWithAnimation\" block-text=\"the sprite picker block\"><title name=\"ANIMATION\">\"tumbleweed\"</title></block></xml>.\n\nBe sure to also update this sprite's costume in <xml><block type=\"gamelab_addBehaviorSimple\" block-text=\"the add behavior block\"></block></xml>."
+    "long_instructions": "Let's make a fish tank!  \n\nChange the tumbleweed sprite into any kind of fish by clicking [blockly block][0].\n\nBe sure to also update this sprite's costume in [blockly block][1]."
   },
   "https://studio.code.org/s/coursee-2019/stage/6/puzzle/4": {
     "short_instructions": "Change the fish's behavior so that it swims left and right.",
@@ -340,7 +340,7 @@
   },
   "https://studio.code.org/s/coursee-2019/stage/6/puzzle/5": {
     "short_instructions": "Use the `set background color` block to make the background any color.",
-    "long_instructions": "Our fish tank needs some water! \n\nUse <xml><block type=\"gamelab_setBackground\" inline=\"true\" block-text=\"the set background color block\">\n    <value name=\"COLOR\">\n      <block type=\"colour_picker\">\n        <title name=\"COLOUR\">#0000ff</title>\n      </block>\n    </value>\n  </block></xml> to make the background any color. We recommend blue!"
+    "long_instructions": "Our fish tank needs some water! \n\nUse [blockly block][0] to make the background any color. We recommend blue!"
   },
   "https://studio.code.org/s/coursee-2019/stage/6/puzzle/6": {
     "display_name": "How to Make a Sprite"
@@ -370,7 +370,7 @@
   },
   "https://studio.code.org/s/coursee-2019/stage/7/puzzle/3": {
     "short_instructions": "Replace the behavior block in the `sprite begins` block to a different one that will make the alien start spinning!",
-    "long_instructions": "The alien was proud of its dancing skills on Mars, but now it can only move side-to-side.\n\nReplace the behavior block in <xml>\n<block type=\"gamelab_addBehaviorSimple\" block-text=\"the sprite begins block\">\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"blue alien\"</title>\n          </block>\n        </value>\n      </block></xml> to a different one that will make the alien start spinning!"
+    "long_instructions": "The alien was proud of its dancing skills on Mars, but now it can only move side-to-side.\n\nReplace the behavior block in [blockly block][0] to a different one that will make the alien start spinning!"
   },
   "https://studio.code.org/s/coursee-2019/stage/7/puzzle/4": {
     "short_instructions": "Create a new sprite that looks like a pink alien, then make it do a any move when it's clicked.  ",
@@ -382,15 +382,15 @@
   },
   "https://studio.code.org/s/coursee-2019/stage/7/puzzle/6": {
     "short_instructions": "Create a single keypress event using the keypress event block. For this event, make it so that when a key is pressed, each of your aliens changes color!",
-    "long_instructions": "<!-- We can change all kinds of things in this program when you click on the sprites. Add code to change the color of each alien when it gets clicked. -->\n\nLet's try using a different kind of event. \n\nCreate a single keypress event using <xml><block type=\"gamelab_keyPressed\" block-text=\"the keypress event block\"></block></xml>. \n\nFor this event, make it so that when a key is pressed, each of your aliens changes color! Choose any key you like, but if you are using a touch screen we recommend _up_, _down_, _left_, or _right_."
+    "long_instructions": "<!-- We can change all kinds of things in this program when you click on the sprites. Add code to change the color of each alien when it gets clicked. -->\n\nLet's try using a different kind of event. \n\nCreate a single keypress event using [blockly block][0]. \n\nFor this event, make it so that when a key is pressed, each of your aliens changes color! Choose any key you like, but if you are using a touch screen we recommend _up_, _down_, _left_, or _right_."
   },
   "https://studio.code.org/s/coursee-2019/stage/7/puzzle/7": {
     "short_instructions": "Add a sprite that looks like a bell, then add an event that makes each alien stop dancing when it is clicked.",
-    "long_instructions": "These aliens are running wild! Let's calm them down by ringing a bell.\n\nFirst add a new sprite that looks like a bell.\n\nThen add an event that makes each alien stop dancing when the bell is clicked, using <xml><block type=\"gamelab_removeAllBehaviors\" block-text=\"the stops everything block\"><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"blue alien\"</title></block></value></block></xml>!"
+    "long_instructions": "These aliens are running wild! Let's calm them down by ringing a bell.\n\nFirst add a new sprite that looks like a bell.\n\nThen add an event that makes each alien stop dancing when the bell is clicked, using [blockly block][0]!"
   },
   "https://studio.code.org/s/coursee-2019/stage/7/puzzle/8": {
     "short_instructions": "Make the blue alien begin a new dance when the pink alien touches it. Use the `when touches` event.",
-    "long_instructions": "For the pink alien, fun is contagious! Touching it makes anyone want to dance! \n\nUse <xml><block type=\"gamelab_checkTouching\" block-text=\"the when touching event block\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE1\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"blue alien\"</title></block></value><value name=\"SPRITE2\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"pink alien\"</title></block></value></block></xml> to make the blue alien begin a new dance move when the pink alien touches it."
+    "long_instructions": "For the pink alien, fun is contagious! Touching it makes anyone want to dance! \n\nUse [blockly block][0] to make the blue alien begin a new dance move when the pink alien touches it."
   },
   "https://studio.code.org/s/coursee-2019/stage/7/puzzle/9": {
     "short_instructions": "Now create your own alien disco!",
@@ -411,7 +411,7 @@
     }
   },
   "https://studio.code.org/s/coursee-2019/stage/9/puzzle/3": {
-    "long_instructions": "[][0] _\"Say something about yourself, and make sure it's SAFE!\"_\n\nUse <xml><block type=\"gamelab_spriteClicked\" block-text=\"the when sprite clicked event block\"></block></xml> and <xml><block type=\"gamelab_printText\" block-text=\"the print text block\"></block></xml> (in the `World` blocks category) to share information about yourself when your sprite is clicked! \n\n**Just be sure the information you share is SAFE.**\n\n* * *\n\n#### Examples of SAFE vs UNSAFE Information\n\n| SAFE                | UNSAFE                |\n| ------------------- | --------------------- |\n| first name          | full name             |\n| favorite things     | home address          |\n| respectful opinions | phone number or email |"
+    "long_instructions": "[][0] _\"Say something about yourself, and make sure it's SAFE!\"_\n\nUse [blockly block][1] and [blockly block][2] (in the `World` blocks category) to share information about yourself when your sprite is clicked! \n\n**Just be sure the information you share is SAFE.**\n\n* * *\n\n#### Examples of SAFE vs UNSAFE Information\n\n| SAFE                | UNSAFE                |\n| ------------------- | --------------------- |\n| first name          | full name             |\n| favorite things     | home address          |\n| respectful opinions | phone number or email |"
   },
   "https://studio.code.org/s/coursee-2019/stage/9/puzzle/4": {
     "long_instructions": "[][0] _\"Add more sprites to your poster! Don't forget to give them costumes!\"_\n\nAdd **at least two** other sprites to your poster. Give each sprite a unique costume!"
@@ -595,7 +595,7 @@
       "courseD_bee_nested_loops_challenge2_a": "Don't forget that you can `repeat` a single command or a longer pattern. You can even `repeat` a `repeat` block!",
       "courseD_bee_nested_loops_challenge2_b": "To get all 4 gems, first use a loop to move away from the center. Turn left or right, then use a nested loop to move from the first pile of treasure to the second. If you repeat the nested loop enough times, the collector will move around the _entire_ cave!",
       "courseD_bee_nested_loops_challenge2_c": "The shortest program that reaches all the treasure uses only one `collect` block and two turns.",
-      "courseD_bee_nested_loops_challenge2_d": "**Solution:**\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_dropdown\">\n        <title name=\"TIMES\" config=\"3-10\">3</title>\n        <statement name=\"DO\">\n          <block type=\"maze_move\">\n            <title name=\"DIR\">moveForward</title>\n          </block>\n        </statement>\n        <next>\n          <block type=\"maze_turn\">\n            <title name=\"DIR\">turnLeft</title>\n            <next>\n              <block type=\"controls_repeat_dropdown\">\n                <title name=\"TIMES\" config=\"3-10\">3</title>\n                <statement name=\"DO\">\n                  <block type=\"collector_collect\">\n                    <next>\n                      <block type=\"controls_repeat_dropdown\">\n                        <title name=\"TIMES\" config=\"3-10\">3</title>\n                        <statement name=\"DO\">\n                          <block type=\"maze_move\">\n                            <title name=\"DIR\">moveForward</title>\n                          </block>\n                        </statement>\n                        <next>\n                          <block type=\"maze_turn\">\n                            <title name=\"DIR\">turnLeft</title>\n                            <next>\n                              <block type=\"controls_repeat_dropdown\">\n                                <title name=\"TIMES\" config=\"3-10\">3</title>\n                                <statement name=\"DO\">\n                                  <block type=\"maze_move\">\n                                    <title name=\"DIR\">moveForward</title>\n                                  </block>\n                                </statement>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+      "courseD_bee_nested_loops_challenge2_d": "**Solution:**\n\n[blockly block][0]"
     }
   },
   "https://studio.code.org/s/coursee-2019/stage/12/puzzle/1": {
@@ -876,7 +876,7 @@
   "https://studio.code.org/s/coursee-2019/stage/15/puzzle/6": {
     "display_name": "The River",
     "short_instructions": "Get the player to the shovel.",
-    "long_instructions": "Oh no, the bridge is out! \n\nCode the Agent to rebuild the bridge using the <xml>  <block type=\"craft_placeBlock\" block-text=\"place\">\n    <title name=\"TYPE\">       </title>\n  </block></xml> block so that {currentPlayerName} can get to the **shovel** [diamond_shovel].",
+    "long_instructions": "Oh no, the bridge is out! \n\nCode the Agent to rebuild the bridge using the [blockly block][0] block so that {currentPlayerName} can get to the **shovel** [diamond_shovel].",
     "authored_hints": {
       "MC_HOC_2017_05_Cole_a": "Did you know that you can put more than one piece of code inside of a loop?  Try moving forward **and** placing a plank inside of a `repeat` to complete this puzzle.",
       "MC_HOC_2017_05_Cole_b": "Get the Agent across the river, building a bridge as you go."
@@ -896,7 +896,7 @@
   },
   "https://studio.code.org/s/coursee-2019/stage/15/puzzle/8": {
     "short_instructions": "Use the `build bridge` function twice to make a path to the Redstone Torch.",
-    "long_instructions": "A **function** named `build bridge` is in your workspace.  All of the code you need to cross the river is built right in! \n\nSnap the small, green <xml> <block type=\"procedures_callnoreturn\" id=\"callMe\" block-text=\"build bridge\"><mutation name=\"build bridge\"/></block></xml> function block into your workspace twice to fix the path and get {currentPlayerName} to the Redstone Torch [redstone_torch].",
+    "long_instructions": "A **function** named `build bridge` is in your workspace.  All of the code you need to cross the river is built right in! \n\nSnap the small, green [blockly block][0] function block into your workspace twice to fix the path and get {currentPlayerName} to the Redstone Torch [redstone_torch].",
     "authored_hints": {
       "Function_intro_Ryan_b": "If you call the functions correctly, this is the path you will travel...",
       "Function_intro_Ryan_a": "You can call a function many times inside of your program!  Try calling it twice to solve this puzzle."
@@ -1183,7 +1183,7 @@
     "long_instructions": "Here is a function called `draw a square`. Use it to complete this drawing. \n\n* * *\n\nThe squares are 75 pixels apart.",
     "authored_hints": {
       "courseD_artist_functions2_b": "The function should not contain your whole program, just the part that draws a square with 100 pixel sides.",
-      "courseD_artist_functions2_c": "Make sure that you use the green `draw a square` block to \"call\" your function. Otherwise, the code in your function will not run.\n\n<xml><block type=\"procedures_callnoreturn\" limit=\"2\"><mutation name=\"draw a square\"/></block></xml>",
+      "courseD_artist_functions2_c": "Make sure that you use the green `draw a square` block to \"call\" your function. Otherwise, the code in your function will not run.\n\n[blockly block][0]",
       "courseD_artist_functions2_a": "Your program should:\n\n-   Use your function\n-   Move forward 100 + 75 pixels\n-   Use your function again"
     },
     "callouts": {
@@ -1381,9 +1381,9 @@
   },
   "https://studio.code.org/s/coursee-2019/stage/17/extras?level_name=courseE_artist_functions_challenge2_2019": {
     "short_instructions": "Try this code to see how it works, then make the program your own!",
-    "long_instructions": "Not only can you jump to some pre-set locations, like the corners of the canvas, you can also use a `jump to` command to get to absolutely any spot you like! Try this code to see how it works, then make the program your own!\n\n<xml>\n  <block type=\"jump_to_xy\">\n    <title name=\"XPOS\">???</title>\n    <title name=\"YPOS\">???</title>\n    </block></xml>",
+    "long_instructions": "Not only can you jump to some pre-set locations, like the corners of the canvas, you can also use a `jump to` command to get to absolutely any spot you like! Try this code to see how it works, then make the program your own!\n\n[blockly block][0]",
     "authored_hints": {
-      "courseE_artist_functions_challenge1_a": "<xml>\n  <block type=\"jump_to_xy\">\n    <title name=\"XPOS\">350</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n  </xml>\n\nThis `jump to` block lets you move the zombie artist to any pixel on the grid, whenever you want. It works by moving him a number of pixels over to the right and a number of pixels down. This is always counted from the top left corner, which it means it doesn't matter where the zombie artist is _before_ the command is run!\n\n[][0]"
+      "courseE_artist_functions_challenge1_a": "[blockly block][0]\n\nThis `jump to` block lets you move the zombie artist to any pixel on the grid, whenever you want. It works by moving him a number of pixels over to the right and a number of pixels down. This is always counted from the top left corner, which it means it doesn't matter where the zombie artist is _before_ the command is run!\n\n[][1]"
     },
     "callouts": {
       "courseE_artist_functions_challenge2_callout1": "Keep this program going by adding more code to the bottom.",
