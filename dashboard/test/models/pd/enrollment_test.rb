@@ -14,8 +14,8 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
 
   test 'enrollment.for_user' do
     user = create :teacher
-    enrollment1 = create :pd_enrollment, user_id: nil, email: user.email, workshop: (create :pd_workshop, course: COURSE_CSD)
-    enrollment2 = create :pd_enrollment, user_id: user.id, email: 'someoneelse@example.com', workshop: (create :pd_workshop, course: COURSE_CSF)
+    enrollment1 = create :pd_enrollment, user_id: nil, email: user.email, workshop: (create :workshop, course: COURSE_CSD)
+    enrollment2 = create :pd_enrollment, user_id: user.id, email: 'someoneelse@example.com', workshop: (create :workshop, course: COURSE_CSF)
 
     enrollments = Pd::Enrollment.for_user(user).to_a
     assert_equal Set.new([enrollment1, enrollment2]), Set.new(enrollments)
@@ -257,7 +257,7 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
   end
 
   test 'filter_for_survey_completion' do
-    teachercon1 = create :pd_workshop, :teachercon, num_enrollments: 1, num_sessions: 1
+    teachercon1 = create :workshop, :teachercon, num_enrollments: 1, num_sessions: 1
     teachercon2 = create :pd_ended_workshop, :teachercon, enrolled_and_attending_users: 1, num_sessions: 1
     teachercon3 = create :pd_ended_workshop, :teachercon, enrolled_and_attending_users: 1, num_sessions: 1
 
@@ -288,7 +288,7 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
   end
 
   test 'local summer survey filter' do
-    workshop = create :pd_workshop, :local_summer_workshop, num_sessions: 5
+    workshop = create :workshop, :local_summer_workshop, num_sessions: 5
     teacher = create :teacher
     enrollment = create :pd_enrollment, :from_user, user: teacher, workshop: workshop
 
@@ -300,7 +300,7 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
   end
 
   test 'academic year survey filter' do
-    workshop = create :pd_workshop, course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_WORKSHOP_1, num_sessions: 1
+    workshop = create :workshop, course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_WORKSHOP_1, num_sessions: 1
     teacher = create :teacher
     enrollment = create :pd_enrollment, :from_user, user: teacher, workshop: workshop
 
@@ -313,7 +313,7 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
 
   test 'enrolling in class automatically enrolls in online learning' do
     Pd::Workshop::WORKSHOP_COURSE_ONLINE_LEARNING_MAPPING.each do |course, plc_course_name|
-      workshop = create :pd_workshop, course: course, subject: Pd::Workshop::SUBJECTS[course].first
+      workshop = create :workshop, course: course, subject: Pd::Workshop::SUBJECTS[course].first
       plc_course = create :plc_course, name: plc_course_name
       teacher = create :teacher
       create :pd_enrollment, user: teacher, workshop: workshop
@@ -321,7 +321,7 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
       assert_equal 1, Plc::UserCourseEnrollment.where(user: teacher, plc_course: plc_course).size
     end
 
-    workshop = create :pd_workshop, course: 'Counselor'
+    workshop = create :workshop, course: 'Counselor'
     teacher = create :teacher
     assert_no_difference('Plc::UserCourseEnrollment.count') do
       create :pd_enrollment, user: teacher, workshop: workshop
@@ -331,7 +331,7 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
   test 'enrolling in class, and then later having the user field updated enrolls in online learning' do
     teacher = create :teacher
     create :plc_course, name: 'ECS Support'
-    workshop = create :pd_workshop, course: Pd::Workshop::COURSE_ECS
+    workshop = create :workshop, course: Pd::Workshop::COURSE_ECS
     enrollment = create :pd_enrollment, user: nil, workshop: workshop
 
     assert_creates Plc::UserCourseEnrollment do
@@ -343,7 +343,7 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
   test 'enrolling in class while not logged in still associates the user' do
     teacher = create :teacher
     create :plc_course, name: 'ECS Support'
-    workshop = create :pd_workshop, course: Pd::Workshop::COURSE_ECS
+    workshop = create :workshop, course: Pd::Workshop::COURSE_ECS
 
     assert_creates Plc::UserCourseEnrollment do
       create :pd_enrollment, user: nil, workshop: workshop, email: teacher.email
@@ -354,7 +354,7 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
 
   test 'enrolling in class without an account creates enrollment when the user is created' do
     create :plc_course, name: 'ECS Support'
-    workshop = create :pd_workshop, course: Pd::Workshop::COURSE_ECS
+    workshop = create :workshop, course: Pd::Workshop::COURSE_ECS
     user_email = "#{SecureRandom.hex}@code.org"
     create :pd_enrollment, user: nil, email: user_email, workshop: workshop
 
@@ -366,7 +366,7 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
   end
 
   test 'attendance scopes' do
-    workshop = create :pd_workshop, num_sessions: 2
+    workshop = create :workshop, num_sessions: 2
     teacher = create :teacher
     enrollment_not_attended = create :pd_enrollment
     enrollment_attended = create :pd_enrollment, workshop: workshop
@@ -408,7 +408,7 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
 
     # Non-ended workshop, no attendance
     # (No surveys because not ended)
-    non_ended_workshop = create :pd_workshop, num_sessions: 1
+    non_ended_workshop = create :workshop, num_sessions: 1
     create :pd_enrollment, workshop: non_ended_workshop
 
     # Non-ended workshop, with attendance
@@ -538,7 +538,7 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     teacher = create :teacher
     assert_empty teacher.permissions
 
-    workshop = create :pd_workshop, course: Pd::SharedWorkshopConstants::COURSE_CSD
+    workshop = create :workshop, course: Pd::SharedWorkshopConstants::COURSE_CSD
     create :pd_enrollment, workshop: workshop, user: teacher
 
     assert teacher.permission? UserPermission::AUTHORIZED_TEACHER
@@ -548,14 +548,14 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     teacher = create :teacher
     assert_empty teacher.permissions
 
-    workshop = create :pd_workshop, course: Pd::SharedWorkshopConstants::COURSE_CSF
+    workshop = create :workshop, course: Pd::SharedWorkshopConstants::COURSE_CSF
     create :pd_enrollment, workshop: workshop, user: teacher
 
     refute teacher.permission? UserPermission::AUTHORIZED_TEACHER
   end
 
   test 'Updating existing enrollment sets permission' do
-    workshop = create :pd_workshop, course: Pd::SharedWorkshopConstants::COURSE_CSD, num_sessions: 1
+    workshop = create :workshop, course: Pd::SharedWorkshopConstants::COURSE_CSD, num_sessions: 1
     enrollment = create :pd_enrollment, workshop: workshop, user: nil
 
     teacher = create :teacher
@@ -568,7 +568,7 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
   end
 
   test 'update scholarship status for local summer workshop' do
-    workshop = create :pd_workshop, :local_summer_workshop_upcoming
+    workshop = create :workshop, :local_summer_workshop_upcoming
     enrollment = create :pd_enrollment, :from_user, workshop: workshop
     # no scholarship info initially
     assert_nil enrollment.scholarship_status
@@ -587,7 +587,7 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
   end
 
   test 'update scholarship status for csf workshop' do
-    workshop = create :pd_workshop, num_sessions: 1, sessions_from: Date.current + 3.months, course: Pd::SharedWorkshopConstants::COURSE_CSF
+    workshop = create :workshop, num_sessions: 1, sessions_from: Date.current + 3.months, course: Pd::SharedWorkshopConstants::COURSE_CSF
     enrollment = create :pd_enrollment, :from_user, workshop: workshop
     # initially creates scholarship info with YES_CDO status
     assert_equal enrollment.scholarship_status, Pd::ScholarshipInfoConstants::YES_CDO
@@ -602,7 +602,7 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
   end
 
   test 'scholarship info automatically created when enrolling in csf workshop' do
-    workshop = create :pd_workshop, num_sessions: 1, sessions_from: Date.current + 3.months, course: Pd::SharedWorkshopConstants::COURSE_CSF
+    workshop = create :workshop, num_sessions: 1, sessions_from: Date.current + 3.months, course: Pd::SharedWorkshopConstants::COURSE_CSF
     enrollment = create :pd_enrollment, :from_user, workshop: workshop
 
     # initially creates scholarship info with YES_CDO status

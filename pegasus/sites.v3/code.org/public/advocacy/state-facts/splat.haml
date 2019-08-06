@@ -326,17 +326,18 @@ theme: pdf
           = succeed ")," do
             %a{href: "https://www.ecepalliance.org"} www.ecepalliance.org
         an NSF funded Broadening Participation in Computing Alliance, seeks to increase the number and diversity of students in computing and computing-intensive degrees by promoting state-level computer science education reform. ECEP supports 22 states and the territory of Puerto Rico to develop effective and replicable interventions to broaden participation in computing and to create state-level infrastructure to foster equitable computing education policies. You can reach your ECEP point of contact
-        = state_info[:ecep_name_s]
-        at
-        = state_info[:ecep_email_s]
-        - if state_info[:ecep_name_2_s] != "NA"
-          or
-          = state_info[:ecep_name_2_s]
-          at
-          = state_info[:ecep_email_2_s]
-        and see your state ECEP project at
         = succeed "." do
-          %a{href: state_info[:ecep_url_s]}= state_info[:ecep_url_s]
+          = state_info[:ecep_name_s]
+          at
+          = state_info[:ecep_email_s]
+          - if state_info[:ecep_name_2_s] != "NA"
+            or
+            = state_info[:ecep_name_2_s]
+            at
+            = state_info[:ecep_email_2_s]
+          - if state_info[:ecep_url_s] != "NA"
+            and see your state ECEP project at
+            %a{href: state_info[:ecep_url_s]}= state_info[:ecep_url_s]
 
   %div.clear-both
     %h2.no-margin-bottom.together
