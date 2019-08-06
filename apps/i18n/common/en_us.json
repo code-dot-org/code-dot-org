@@ -651,6 +651,7 @@
   "feedbackNotificationLesson": "Lesson {lessonNum}: {lessonName} - Level {levelNum}",
   "feedbackNotificationUnit": "Unit: {unitName}",
   "feedbackPlaceholder": "Please enter feedback for your student here. This will become visible to the student when you click 'Save and share'.",
+  "feedbackPlaceholderNonVerified": "You must be a verified teacher to leave feedback.",
   "feedbackRubricEvaluation": "Rubric Evaluation",
   "feedbackSaveError": "There's been an error saving your feedback. Please try to save again.",
   "fewerNumberOfBlocks": "Fewer than {numBlocks, plural, one {1 block} other {# blocks}} used!",
