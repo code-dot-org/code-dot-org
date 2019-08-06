@@ -463,12 +463,25 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
     params: -> {{pd_workshop: workshop_params}}
   )
 
-  test 'csf facilitators can create workshops' do
+  test 'csf facilitators can create csf workshops' do
     sign_in(@csf_facilitator)
 
     assert_creates(Pd::Workshop) do
       post :create, params: {pd_workshop: workshop_params}
       assert_response :success
+    end
+  end
+
+  test 'csf facilitators can not create non-csf workshops' do
+    sign_in(@csf_facilitator)
+
+    params = workshop_params.merge(
+      {course: Pd::Workshop::COURSE_CSD}
+    )
+
+    assert_does_not_create(Pd::Workshop) do
+      post :create, params: {pd_workshop: params}
+      assert_response :forbidden
     end
   end
 
