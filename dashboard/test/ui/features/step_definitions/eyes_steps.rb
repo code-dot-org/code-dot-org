@@ -38,7 +38,9 @@ When(/^I open my eyes to test "([^"]*)"$/) do |test_name|
   end
   @browser.capabilities[:takes_screenshot] = true
   @eyes.force_full_page_screenshot = true
+  # Default stitch mode can be customized for each checkpoint in the I See No Difference step.
   @eyes.stitch_mode = :css
+
   @eyes.open(config)
 end
 
@@ -54,10 +56,14 @@ And(/^I close my eyes$/) do
   end
 end
 
-And(/^I see no difference for "([^"]*)"$/) do |identifier|
+# A Feature can optionally specify the stitch mode ('css' or 'scroll') for Eyes to create the full screenshot.
+And(/^I see no difference for "([^"]*)"(?: using stitch mode "([^"]*)")?$/) do |identifier, stitch_mode|
   next if CDO.disable_all_eyes_running
 
+  @eyes.stitch_mode = (stitch_mode&.to_sym || :css)
   @eyes.check_window(identifier, MATCH_TIMEOUT)
+  # Return to default stitch mode for remaining checkpoints in this Scenario.
+  @eyes.stitch_mode = :css
 end
 
 def ensure_eyes_available

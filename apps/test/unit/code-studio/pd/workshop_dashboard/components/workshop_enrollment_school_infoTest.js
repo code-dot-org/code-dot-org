@@ -20,6 +20,7 @@ describe('Workshop Enrollment School Info', () => {
         accountRequiredForAttendance={true}
         scholarshipWorkshop={true}
         onDelete={() => {}}
+        onClickSelect={() => {}}
         workshopCourse="CS Principles"
         workshopSubject="5-day Summer"
         numSessions={5}
@@ -42,6 +43,7 @@ describe('Workshop Enrollment School Info', () => {
         accountRequiredForAttendance={true}
         scholarshipWorkshop={false}
         onDelete={() => {}}
+        onClickSelect={() => {}}
         workshopCourse="CS Discoveries"
         workshopSubject="1-day Academic Year, Units 1 and 2"
         numSessions={5}
@@ -64,6 +66,7 @@ describe('Workshop Enrollment School Info', () => {
         accountRequiredForAttendance={true}
         scholarshipWorkshop={true}
         onDelete={() => {}}
+        onClickSelect={() => {}}
         workshopCourse="CS Principles"
         workshopSubject="5-day Summer"
         numSessions={5}
@@ -86,6 +89,7 @@ describe('Workshop Enrollment School Info', () => {
         accountRequiredForAttendance={true}
         scholarshipWorkshop={false}
         onDelete={() => {}}
+        onClickSelect={() => {}}
         workshopCourse="CS Discoveries"
         workshopSubject="1-day Academic Year, Units 1 and 2"
         numSessions={5}
