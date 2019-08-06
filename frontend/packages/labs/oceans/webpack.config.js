@@ -18,11 +18,13 @@ module.exports = {
     },
     {
       test: /\.jsx$/,
+      enforce: 'pre',
       exclude: /(node_modules)/,
       use: [{
         loader: 'babel-loader',
         options: {
-          presets: ['react', 'env']
+          presets: ['react', 'env'],
+          plugins: ["transform-class-properties"]
         }
       }]
     }],

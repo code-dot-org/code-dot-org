@@ -7,6 +7,7 @@
 import * as mobilenetModule from '@tensorflow-models/mobilenet';
 import * as tf from '@tensorflow/tfjs';
 import * as knnClassifier from '@tensorflow-models/knn-classifier';
+import React from 'react';
 
 // Number of classes to classify
 const NUM_CLASSES = 3;
@@ -18,11 +19,22 @@ const CLASS_NAMES = ['rock', 'paper', 'scissors'];
 let predicted = null;
 let example_counts = [0, 0, 0];
 const MIN_EXAMPLES = 20;
-module.exports = class Main {
-  constructor() {
+
+module.exports = class Main extends React.Component {
+  constructor(props) {
+    super(props);
+    this.video = null;
+  }
+
+  state = {
+    predictedClass: -1,
+    infoText0: "",
+    infoText1: "",
+    infoText2: "",
+  };
+
+  componentDidMount() {
     // Initiate variables
-    this.infoTexts = [];
-    this.classPredictor = null;
     this.training = -1; // -1 when no class is being trained
     this.videoPlaying = false;
 
@@ -30,60 +42,9 @@ module.exports = class Main {
     this.bindPage();
 
     // Create video element that will contain the webcam image
-    this.video = document.createElement('video');
     this.video.setAttribute('autoplay', '');
     this.video.setAttribute('playsinline', '');
 
-    // Add video element to DOM
-    document.body.appendChild(this.video);
-    let instructions = document.createElement('div');
-    instructions.innerHTML = '<i>click each \'train\' button to train the computer on one frame from your camera</i><br />';
-    document.body.appendChild(instructions);
-
-    // Create training buttons and info texts
-    for (let i = 0; i < NUM_CLASSES; i++) {
-      const div = document.createElement('div');
-      document.body.appendChild(div);
-      div.style.marginBottom = '10px';
-
-      // Create training button
-      const button = document.createElement('button');
-      button.innerText = 'Train ' + CLASS_NAMES[i];
-      button.style.height = '40px';
-      div.appendChild(button);
-
-      // Listen for mouse events when clicking the button
-      button.addEventListener('mousedown', () => {
-        this.training = i;
-        this.trainExample();
-      });
-      button.addEventListener('mouseup', () => this.training = -1);
-
-      // Create info text
-      const infoText = document.createElement('span');
-      infoText.innerText = ' No examples added';
-      div.appendChild(infoText);
-      this.infoTexts.push(infoText);
-
-    }
-    //Create class prediction headline
-    this.classPredictor = document.createElement('span');
-    this.classPredictor.style.position = 'absolute';
-    this.classPredictor.style.left = '300px';
-    this.classPredictor.style.top = '80px';
-    document.body.appendChild(this.classPredictor);
-    //Create PLAY button
-    this.playBtn = document.createElement('button');
-    this.playBtn.style.position = 'absolute';
-    this.playBtn.style.left = '300px';
-    this.playBtn.style.top = '180px';
-    this.playBtn.style.width = '80px';
-    this.playBtn.style.height = '40px';
-    this.playBtn.innerText = 'PLAY ROUND';
-    this.playBtn.addEventListener('click', () => this.playRound());
-    document.body.appendChild(this.playBtn);
-
-    // Setup webcam
     navigator.mediaDevices.getUserMedia({video: true, audio: false}).then((stream) => {
       this.video.srcObject = stream;
       this.video.width = IMAGE_SIZE;
@@ -92,6 +53,37 @@ module.exports = class Main {
       this.video.addEventListener('playing', () => this.videoPlaying = true);
       this.video.addEventListener('paused', () => this.videoPlaying = false);
     });
+  }
+
+  render() {
+    return <div>
+      <video ref={(el) => this.video = el} autoPlay="" playsInline="" width="227" height="227"/>
+      <div>
+        <i>click each &lsquo;train&rsquo; button to train the computer on one frame from your camera</i><br/>
+      </div>
+      <button
+        style={{position: 'absolute', left: '300px', top: '180px', width: '80px', height: '40px',}}
+        onClick={() => this.playRound()}
+      >
+        PLAY ROUND
+      </button>
+      {
+        [...Array(NUM_CLASSES).keys()].map((index) => {
+          return (<div key={index.toString()} style={{marginBottom: "10px"}}>
+            <button
+              style={{height: '40px'}}
+              onClick={() => {
+                this.training = index;
+                this.trainExample();
+              }}
+            >
+              Train {CLASS_NAMES[index]}
+            </button>
+            <span style={{fontWeight: this.state.predictedClass === index ? "bold" : "normal"}}>{this.state[`infoText${index}`]}</span>
+          </div>);
+        })
+      }
+    </div>;
   }
 
   async bindPage() {
@@ -138,8 +130,10 @@ module.exports = class Main {
       }
       example_counts[this.training]++;
       if (example_counts[this.training] > 0) {
-        this.infoTexts[this.training].innerText = ` ${example_counts[this.training]} examples ${(example_counts[this.training] >=
-        MIN_EXAMPLES ? '✅' : '')}`;
+        this.setState({
+          [`infoText${this.training}`]: ` ${example_counts[this.training]} examples ${(example_counts[this.training] >=
+          MIN_EXAMPLES ? '✅' : '')}`
+        });
       }
 
       // Dispose image when done
@@ -173,15 +167,14 @@ module.exports = class Main {
 
           // Make the predicted class bold
           if (res.classIndex === i) {
-            this.infoTexts[i].style.fontWeight = 'bold';
-          } else {
-            this.infoTexts[i].style.fontWeight = 'normal';
+            this.setState({predictedClass: i});
           }
 
           // Update info text
           if (exampleCount[i] > 0) {
-            this.infoTexts[i].innerText = ` ${exampleCount[i]} examples - ${res.confidences[i] *
-            100}%`;
+            this.setState({
+              [`infoText${i}`]: ` ${exampleCount[i]} examples - ${res.confidences[i] * 100}%`
+            });
           }
         }
         predicted = CLASS_NAMES[res.classIndex];
