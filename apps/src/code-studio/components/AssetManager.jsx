@@ -203,6 +203,31 @@ export default class AssetManager extends React.Component {
     this.setState({recordingAudio: false, audioErrorType: err});
   };
 
+  getAssetRows = () => {
+    return this.state.assets.map(asset => {
+      const choose =
+        this.props.assetChosen &&
+        this.props.assetChosen.bind(this, asset.filename, asset.timestamp);
+
+      return (
+        <AssetRow
+          key={asset.filename}
+          name={asset.filename}
+          timestamp={asset.timestamp}
+          type={asset.category}
+          size={asset.size}
+          useFilesApi={this.props.useFilesApi}
+          onChoose={choose}
+          onDelete={this.deleteAssetRow.bind(this, asset.filename)}
+          soundPlayer={this.props.soundPlayer}
+          imagePicker={this.props.imagePicker}
+          projectId={this.props.projectId}
+          elementId={this.props.elementId}
+        />
+      );
+    });
+  };
+
   render() {
     const displayAudioRecorder =
       this.state.audioErrorType !== AudioErrorType.INITIALIZE &&
@@ -272,31 +297,7 @@ export default class AssetManager extends React.Component {
         </div>
       );
     } else {
-      const rows = this.state.assets.map(
-        function(asset) {
-          const choose =
-            this.props.assetChosen &&
-            this.props.assetChosen.bind(this, asset.filename, asset.timestamp);
-
-          return (
-            <AssetRow
-              key={asset.filename}
-              name={asset.filename}
-              timestamp={asset.timestamp}
-              type={asset.category}
-              size={asset.size}
-              useFilesApi={this.props.useFilesApi}
-              onChoose={choose}
-              onDelete={this.deleteAssetRow.bind(this, asset.filename)}
-              soundPlayer={this.props.soundPlayer}
-              imagePicker={this.props.imagePicker}
-              projectId={this.props.projectId}
-              elementId={this.props.elementId}
-            />
-          );
-        }.bind(this)
-      );
-
+      const rows = this.getAssetRows();
       assetList = (
         <div>
           <div
