@@ -629,6 +629,9 @@ Resources:
 <%  unless load_balancer -%>
           - !ImportValue VPC-ELBSecurityGroup # Accept HTTP traffic on daemon
 <%  end -%>
+<% if database %>
+    DependsOn: AuroraMaster
+<% end -%>
 <%end-%>
 <% if alarms %>
   DaemonStorageUtilizationAlarm:
