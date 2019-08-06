@@ -720,4 +720,8 @@ class Pd::Workshop < ActiveRecord::Base
 
     potential_organizers
   end
+
+  def can_user_delete?(user)
+    state != STATE_ENDED && Ability.new(user).can?(:destroy, self)
+  end
 end
