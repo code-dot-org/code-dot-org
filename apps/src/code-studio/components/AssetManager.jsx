@@ -56,10 +56,10 @@ export default class AssetManager extends React.Component {
     useFilesApi: PropTypes.bool,
     soundPlayer: PropTypes.object,
     disableAudioRecording: PropTypes.bool,
+    projectId: PropTypes.string,
 
     // For logging purposes
     imagePicker: PropTypes.bool, // identifies if displayed by 'Manage Assets' flow
-    projectId: PropTypes.string,
     elementId: PropTypes.string
   };
 
@@ -80,8 +80,15 @@ export default class AssetManager extends React.Component {
       this.onStarterAssetsReceived,
       this.onStarterAssetsFailure
     );
-    let api = this.props.useFilesApi ? filesApi : assetsApi;
-    api.getFiles(this.onAssetListReceived, this.onAssetListFailure);
+
+    // Request to files/assets API if no projectId is present, so only
+    // request files if we have a projectId.
+    if (this.props.projectId) {
+      let api = this.props.useFilesApi ? filesApi : assetsApi;
+      api.getFiles(this.onAssetListReceived, this.onAssetListFailure);
+    } else {
+      this.setState({assets: []});
+    }
   }
 
   componentDidMount() {
