@@ -205,10 +205,6 @@ export default class AssetManager extends React.Component {
 
   getAssetRows = () => {
     return this.state.assets.map(asset => {
-      const choose =
-        this.props.assetChosen &&
-        this.props.assetChosen.bind(this, asset.filename, asset.timestamp);
-
       return (
         <AssetRow
           key={asset.filename}
@@ -217,8 +213,10 @@ export default class AssetManager extends React.Component {
           type={asset.category}
           size={asset.size}
           useFilesApi={this.props.useFilesApi}
-          onChoose={choose}
-          onDelete={this.deleteAssetRow.bind(this, asset.filename)}
+          onChoose={() =>
+            this.props.assetChosen(asset.filename, asset.timestamp)
+          }
+          onDelete={() => this.deleteAssetRow(asset.filename)}
           soundPlayer={this.props.soundPlayer}
           imagePicker={this.props.imagePicker}
           projectId={this.props.projectId}
