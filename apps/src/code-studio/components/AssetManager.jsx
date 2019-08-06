@@ -213,10 +213,8 @@ export default class AssetManager extends React.Component {
           type={asset.category}
           size={asset.size}
           useFilesApi={this.props.useFilesApi}
-          onChoose={() =>
-            this.props.assetChosen(asset.filename, asset.timestamp)
-          }
-          onDelete={() => this.deleteAssetRow(asset.filename)}
+          onChoose={() => console.log('choose!')}
+          onDelete={() => console.log('delete!')}
           soundPlayer={this.props.soundPlayer}
           imagePicker={this.props.imagePicker}
           projectId={this.props.projectId}
@@ -236,8 +234,10 @@ export default class AssetManager extends React.Component {
           type={asset.category}
           size={asset.size}
           useFilesApi={this.props.useFilesApi}
-          onChoose={() => console.log('choose!')}
-          onDelete={() => console.log('delete!')}
+          onChoose={() =>
+            this.props.assetChosen(asset.filename, asset.timestamp)
+          }
+          onDelete={() => this.deleteAssetRow(asset.filename)}
           soundPlayer={this.props.soundPlayer}
           imagePicker={this.props.imagePicker}
           projectId={this.props.projectId}
