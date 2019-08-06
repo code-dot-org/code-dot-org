@@ -238,16 +238,19 @@ export default class AssetManager extends React.Component {
     );
 
     let assetList;
-    // If `this.state.assets` is null, the asset list is still loading. If it's
-    // empty, the asset list has loaded and there are no assets in the current
+    // If this.state.assets or this.state.starterAssets are null, assets are still loading.
+    // If empty, the asset list has loaded and there are no assets in the current
     // channel (matching the `allowedExtensions`, if any were provided).
-    if (this.state.assets === null) {
+    if (this.state.assets === null || this.state.starterAssets === null) {
       assetList = (
         <div style={{margin: '1em 0', textAlign: 'center'}}>
           <i className="fa fa-spinner fa-spin" style={{fontSize: '32px'}} />
         </div>
       );
-    } else if (this.state.assets.length === 0) {
+    } else if (
+      this.state.assets.length === 0 &&
+      this.state.starterAssets.length === 0
+    ) {
       const emptyText =
         this.props.allowedExtensions === '.mp3' ? (
           <div>
