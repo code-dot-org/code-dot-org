@@ -202,7 +202,21 @@ namespace :test do
     end
   end
 
-  task ci: [:pegasus, :shared, :dashboard_ci, :ui_live]
+  task :shared_ci do
+    # isolate unit tests from the pegasus_test DB
+    ENV['UNIT_TEST'] = '1'
+    TestRunUtils.run_shared_tests
+    ENV.delete 'UNIT_TEST'
+  end
+
+  task :pegasus_ci do
+    # isolate unit tests from the pegasus_test DB
+    ENV['UNIT_TEST'] = '1'
+    TestRunUtils.run_shared_tests
+    ENV.delete 'UNIT_TEST'
+  end
+
+  task ci: [:pegasus_ci, :shared_ci, :dashboard_ci, :ui_live]
 
   desc 'Runs dashboard tests.'
   task :dashboard do
