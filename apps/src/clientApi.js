@@ -452,6 +452,10 @@ class StarterAssetsApi {
       onFailure
     );
   }
+
+  basePath(path) {
+    throw new Error('not yet implemented');
+  }
 }
 
 module.exports = {

@@ -212,7 +212,7 @@ export default class AssetManager extends React.Component {
           timestamp={asset.timestamp}
           type={asset.category}
           size={asset.size}
-          useFilesApi={this.props.useFilesApi}
+          api={starterAssetsApi}
           onChoose={() => console.log('choose!')}
           onDelete={() => console.log('delete!')}
           soundPlayer={this.props.soundPlayer}
