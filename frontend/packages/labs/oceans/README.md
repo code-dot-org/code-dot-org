@@ -13,4 +13,6 @@ npm install
 npm run dev
 ```
 
-At this point the app will be running at [http://localhost:8080](http://localhost:8080).
+At this point the app will be running at [http://localhost:8080](http://localhost:8080) with live-reloading on file changes.
+
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/bcjordan/ml-activities)
