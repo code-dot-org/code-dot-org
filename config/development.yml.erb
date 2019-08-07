@@ -1,7 +1,5 @@
 # Configuration defaults for development environment.
-<%= clear_secrets %>
-
-census_map_table_id:
+census_map_table_id: null
 dashboard_enable_pegasus: true
 pegasus_skip_asset_map: true
 
@@ -19,15 +17,3 @@ daemon: true
 disable_s3_image_uploads: true
 
 chef_local_mode: true
-
-devinternal_db_writer: !Secret
-dashboard_honeybadger_api_key: '00000000'
-pegasus_honeybadger_api_key:   '00000000'
-google_safe_browsing_key: fake_api_key
-pusher_app_id:             fake_app_id
-pusher_application_key:    fake_application_key
-pusher_application_secret: fake_application_secret
-poste_secret: not a real secret
-dashboard_devise_pepper: not a pepper!
-dashboard_secret_key_base: not a secret
-db_writer: 'mysql://root@localhost/'
