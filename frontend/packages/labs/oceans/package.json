@@ -6,7 +6,7 @@
   "scripts": {
     "build": "webpack -p",
     "start": "npm run dev",
-    "dev": "webpack-dev-server --mode development --content-base public",
+    "dev": "webpack-dev-server --mode development --content-base public --host 0.0.0.0 --disable-host-check",
     "lint": "eslint --ext .js,.jsx src",
     "test": "npm run lint",
     "preversion": "npm install && npm run test",
