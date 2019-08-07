@@ -2,8 +2,8 @@ ports:
 - port: 8080
 tasks:
 - init: >
-    nvm install
-    nvm use
+    nvm install &&
+    nvm use &&
     npm install
 - command: >
     npm run dev
