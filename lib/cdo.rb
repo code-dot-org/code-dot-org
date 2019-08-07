@@ -1,5 +1,4 @@
 require 'cdo/config'
-require 'cdo/secrets_config'
 
 ####################################################################################################
 ##
@@ -8,7 +7,6 @@ require 'cdo/secrets_config'
 ##########
 module Cdo
   class Impl < Config
-    prepend SecretsConfig
     include Singleton
     @slog = nil
 
@@ -35,9 +33,9 @@ module Cdo
         "#{root}/config.yml.erb"
       )
 
-      defaults = render("#{root}/config.yml.erb").first
+      defaults = YAML.load_erb_file("#{root}/config.yml.erb", binding)
       to_h.keys.each do |key|
-        raise "Unknown property not in defaults: #{key}" unless defaults.key?(key.to_sym)
+        raise "Unknown property not in defaults: #{key}" unless defaults.key?(key.to_s)
       end
       raise "'#{rack_env}' is not known environment." unless rack_envs.include?(rack_env)
       freeze
@@ -131,7 +129,7 @@ module Cdo
     end
 
     def rack_env?(env)
-      rack_env&.to_sym == env.to_sym
+      rack_env.to_sym == env.to_sym
     end
 
     # Sets the slogger to use in a test.
