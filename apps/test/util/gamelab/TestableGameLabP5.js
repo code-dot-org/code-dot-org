@@ -2,9 +2,9 @@
 import 'script-loader!@code-dot-org/p5.play/examples/lib/p5';
 import 'script-loader!@code-dot-org/p5.play/lib/p5.play';
 import {expect} from '../configuredChai';
-import GameLabP5 from '@cdo/apps/p5lab/gamelab/GameLabP5';
-import {injectJSInterpreter as injectJSInterpreterToSprite} from '@cdo/apps/p5lab/gamelab/GameLabSprite';
-import {injectJSInterpreter as injectJSInterpreterToGroup} from '@cdo/apps/p5lab/gamelab/GameLabGroup';
+import GameLabP5 from '@cdo/apps/p5lab/GameLabP5';
+import {injectJSInterpreter as injectJSInterpreterToSprite} from '@cdo/apps/p5lab/GameLabSprite';
+import {injectJSInterpreter as injectJSInterpreterToGroup} from '@cdo/apps/p5lab/GameLabGroup';
 
 /**
  * Builds a GameLabP5 object ready to use in a test and then be thrown away.
