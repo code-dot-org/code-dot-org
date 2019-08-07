@@ -1370,7 +1370,7 @@ ActiveRecord::Schema.define(version: 20190805220126) do
 
   create_table "teacher_feedbacks", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.text     "comment",                  limit: 65535
-    t.integer  "student_id",
+    t.integer  "student_id"
     t.integer  "level_id",                               null: false
     t.integer  "teacher_id",                             null: false
     t.datetime "created_at",                             null: false
