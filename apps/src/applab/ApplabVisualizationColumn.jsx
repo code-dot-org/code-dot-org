@@ -65,7 +65,6 @@ class ApplabVisualizationColumn extends React.Component {
     pinWorkspaceToBottom: PropTypes.bool.isRequired,
     isPaused: PropTypes.bool,
     awaitingContainedResponse: PropTypes.bool.isRequired,
-    widgetMode: PropTypes.bool,
 
     // non redux backed
     isEditingProject: PropTypes.bool.isRequired,
@@ -74,15 +73,12 @@ class ApplabVisualizationColumn extends React.Component {
   };
 
   render() {
-    let appWidth = this.props.widgetMode
-      ? applabConstants.WIDGET_WIDTH
-      : applabConstants.APP_WIDTH;
     let visualization = [
       <Visualization key="1" />,
       this.props.isIframeEmbed && !this.props.isRunning && (
         <IFrameEmbedOverlay
           key="2"
-          appWidth={appWidth}
+          appWidth={applabConstants.APP_WIDTH}
           appHeight={applabConstants.APP_HEIGHT}
         />
       )
@@ -105,20 +101,18 @@ class ApplabVisualizationColumn extends React.Component {
       );
     }
     const chromelessShare = dom.isMobile() && !dom.isIPad();
-    const visualizationColumnClassNames = this.props.widgetMode
-      ? 'widgetWidth'
-      : classNames({
-          with_padding: this.props.visualizationHasPadding,
-          responsive: this.props.isResponsive,
-          pin_bottom: !this.props.hideSource && this.props.pinWorkspaceToBottom,
+    const visualizationColumnClassNames = classNames({
+      with_padding: this.props.visualizationHasPadding,
+      responsive: this.props.isResponsive,
+      pin_bottom: !this.props.hideSource && this.props.pinWorkspaceToBottom,
 
-          // the below replicates some logic in StudioApp.handleHideSource_ which
-          // imperatively changes the css classes depending on various share
-          // parameters. This logic really shouldn't live in StudioApp, so I don't
-          // feel too bad about copying it here, where it should really live...
-          chromelessShare: chromelessShare && this.props.isShareView,
-          wireframeShare: !chromelessShare && this.props.isShareView
-        });
+      // the below replicates some logic in StudioApp.handleHideSource_ which
+      // imperatively changes the css classes depending on various share
+      // parameters. This logic really shouldn't live in StudioApp, so I don't
+      // feel too bad about copying it here, where it should really live...
+      chromelessShare: chromelessShare && this.props.isShareView,
+      wireframeShare: !chromelessShare && this.props.isShareView
+    });
 
     return (
       <div
@@ -177,7 +171,6 @@ export default connect(function propsFromStore(state) {
     awaitingContainedResponse: state.runState.awaitingContainedResponse,
     isPaused: state.runState.isDebuggerPaused,
     playspacePhoneFrame: state.pageConstants.playspacePhoneFrame,
-    pinWorkspaceToBottom: state.pageConstants.pinWorkspaceToBottom,
-    widgetMode: state.pageConstants.widgetMode
+    pinWorkspaceToBottom: state.pageConstants.pinWorkspaceToBottom
   };
 })(Radium(ApplabVisualizationColumn));

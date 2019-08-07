@@ -50,7 +50,6 @@ class Applab < Blockly
     debugger_disabled
     makerlab_enabled
     helper_libraries
-    widget_mode
   )
 
   # List of possible skins, the first is used as a default.

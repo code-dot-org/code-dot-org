@@ -170,8 +170,7 @@ describe('Applab Exporter,', function() {
         stage_total: 1,
         iframeEmbed: false,
         lastAttempt: null,
-        submittable: false,
-        widgetMode: false
+        submittable: false
       },
       showUnusedBlocks: true,
       fullWidth: true,

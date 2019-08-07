@@ -34,8 +34,7 @@ export default function(storybook) {
     isProjectLevel: false,
     isResponsive: false,
     isSubmittable: false,
-    isSubmitted: false,
-    widgetMode: false
+    isSubmitted: false
   };
   const runState = {
     isRunning: false,

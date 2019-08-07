@@ -28,7 +28,6 @@ import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import queryString from 'query-string';
 import InstructionsCSF from './InstructionsCSF';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
-import {WIDGET_WIDTH} from '@cdo/apps/applab/constants';
 
 const HEADER_HEIGHT = styleConstants['workspace-headers-height'];
 const RESIZER_HEIGHT = styleConstants['resize-bar-width'];
@@ -178,8 +177,7 @@ class TopInstructions extends Component {
     hidden: PropTypes.bool.isRequired,
     shortInstructions: PropTypes.string,
     isMinecraft: PropTypes.bool.isRequired,
-    isRtl: PropTypes.bool.isRequired,
-    widgetMode: PropTypes.bool
+    isRtl: PropTypes.bool.isRequired
   };
 
   constructor(props) {
@@ -499,7 +497,6 @@ class TopInstructions extends Component {
 
     const isCSF = !this.props.noInstructionsWhenCollapsed;
     const isCSDorCSP = this.props.noInstructionsWhenCollapsed;
-    const widgetWidth = WIDGET_WIDTH + 'px';
 
     const mainStyle = [
       this.props.isRtl ? styles.mainRtl : styles.main,
@@ -507,9 +504,7 @@ class TopInstructions extends Component {
         height: this.props.height - RESIZER_HEIGHT
       },
       this.props.noVisualization && styles.noViz,
-      this.props.isEmbedView && styles.embedView,
-      this.props.widgetMode &&
-        (this.props.isRtl ? {right: widgetWidth} : {left: widgetWidth})
+      this.props.isEmbedView && styles.embedView
     ];
     const ttsUrl = this.props.ttsLongInstructionsUrl;
     const videoData = this.props.levelVideos ? this.props.levelVideos[0] : [];
@@ -769,8 +764,7 @@ export default connect(
     teacherMarkdown: state.instructions.teacherMarkdown,
     hidden: state.pageConstants.isShareView,
     shortInstructions: state.instructions.shortInstructions,
-    isRtl: state.isRtl,
-    widgetMode: state.pageConstants.widgetMode
+    isRtl: state.isRtl
   }),
   dispatch => ({
     toggleInstructionsCollapsed() {
