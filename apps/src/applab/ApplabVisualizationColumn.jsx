@@ -95,6 +95,12 @@ class ApplabVisualizationColumn extends React.Component {
     });
   }
 
+  getCompletionButtonSyle() {
+    return this.props.playspacePhoneFrame || this.props.widgetMode
+      ? styles.phoneFrameCompletion
+      : styles.completion;
+  }
+
   render() {
     let visualization = [
       <Visualization key="1" />,
@@ -147,13 +153,7 @@ class ApplabVisualizationColumn extends React.Component {
         )}
         <GameButtons>
           {/* This div is used to control whether or not our finish button is centered*/}
-          <div
-            style={[
-              styles.completion,
-              (this.props.playspacePhoneFrame || this.props.widgetMode) &&
-                styles.phoneFrameCompletion
-            ]}
-          >
+          <div style={this.getCompletionButtonSyle()}>
             <CompletionButton />
           </div>
         </GameButtons>
