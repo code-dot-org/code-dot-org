@@ -3,7 +3,7 @@ import {commands} from './commands';
 import * as spriteUtils from './spriteUtils';
 import Sounds from '@cdo/apps/Sounds';
 import {getStore} from '@cdo/apps/redux';
-import {clearConsole} from '../gamelab/textConsoleModule';
+import {clearConsole} from './textConsoleModule';
 
 var SpriteLab = function() {
   P5Lab.call(this);
