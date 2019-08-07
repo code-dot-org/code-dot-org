@@ -1,0 +1,11 @@
+ports:
+- port: 8080
+tasks:
+- init: >
+    nvm install
+    nvm use
+    npm install
+- command: >
+    npm run dev
+- command: >
+    gp await-port 8080 && gp preview $(gp url 8080)
