@@ -3,8 +3,8 @@ import {
   CANCEL_LOCATION_SELECTION,
   SELECT_LOCATION,
   UPDATE_LOCATION
-} from './actions';
-import {LocationPickerMode} from './constants';
+} from '../actions';
+import {LocationPickerMode} from '../constants';
 import {getStore} from '@cdo/apps/redux';
 
 export default function locationPicker(state, action) {

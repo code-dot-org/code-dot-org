@@ -14,9 +14,9 @@ import reducer, {
   appendLibraryFrames,
   appendCustomFrames,
   saveAnimation
-} from '@cdo/apps/p5lab/gamelab/animationListModule';
-import animationTab from '@cdo/apps/p5lab/gamelab/AnimationTab/animationTabModule';
-import {EMPTY_IMAGE} from '@cdo/apps/p5lab/gamelab/constants';
+} from '@cdo/apps/p5lab/animationListModule';
+import animationTab from '@cdo/apps/p5lab/AnimationTab/animationTabModule';
+import {EMPTY_IMAGE} from '@cdo/apps/p5lab/constants';
 import {createStore} from '../../util/redux';
 import {expect} from '../../util/configuredChai';
 import {setExternalGlobals} from '../../util/testUtils';

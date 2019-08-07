@@ -1,6 +1,6 @@
 import * as spriteUtils from './spriteUtils';
 import {getStore} from '@cdo/apps/redux';
-import {addConsoleMessage} from '../gamelab/textConsoleModule';
+import {addConsoleMessage} from './textConsoleModule';
 
 export const commands = {
   comment(text) {

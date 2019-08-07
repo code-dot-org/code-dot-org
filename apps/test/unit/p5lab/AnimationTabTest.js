@@ -1,4 +1,4 @@
-var animationTabModule = require('@cdo/apps/p5lab/gamelab/AnimationTab/animationTabModule');
+var animationTabModule = require('@cdo/apps/p5lab/AnimationTab/animationTabModule');
 import {expect} from '../../util/configuredChai';
 
 describe('AnimationTab', function() {
