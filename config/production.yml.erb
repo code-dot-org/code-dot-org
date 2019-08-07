@@ -18,8 +18,8 @@ slog_token: !Secret
 reporting_db_admin: !Secret
 
 <% unless name&.include?('console') %>
-  db_admin:
-  reporting_db_admin:
+db_admin:
+reporting_db_admin:
 <% end %>
 
 newrelic_logging: true
