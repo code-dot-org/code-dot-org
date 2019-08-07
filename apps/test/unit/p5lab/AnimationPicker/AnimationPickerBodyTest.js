@@ -1,7 +1,7 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 import {expect} from '../../../util/configuredChai';
-const gamelabMsg = require('@cdo/gamelab/locale');
+const msg = require('@cdo/locale');
 import {
   WarningLabel,
   UnconnectedAnimationPickerBody as AnimationPickerBody
@@ -25,7 +25,7 @@ describe('AnimationPickerBody', function() {
       const warnings = body.find(WarningLabel);
       expect(warnings).to.have.length(1);
       expect(warnings.children().text()).to.equal(
-        gamelabMsg.animationPicker_warning()
+        msg.animationPicker_warning()
       );
     });
 
@@ -36,7 +36,7 @@ describe('AnimationPickerBody', function() {
       const warnings = body.find(WarningLabel);
       expect(warnings).to.have.length(1);
       expect(warnings.children().text()).to.equal(
-        gamelabMsg.animationPicker_warning()
+        msg.animationPicker_warning()
       );
     });
 
