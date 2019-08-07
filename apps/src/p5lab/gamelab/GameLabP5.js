@@ -600,6 +600,41 @@ GameLabP5.prototype.preloadBackgrounds = function() {
   );
 };
 
+GameLabP5.prototype.preloadSpriteImages = function(animationList) {
+  if (!this.preloadedSprites) {
+    this.preloadedSprites = {};
+  }
+  this.preloadSpriteImages_ = Promise.all(
+    animationList.orderedKeys.map(key => {
+      const props = animationList.propsByKey[key];
+      if (
+        this.preloadedSprites[props.name] &&
+        this.preloadedSprites[props.name].dataURI === props.dataURI
+      ) {
+        return Promise.resolve();
+      }
+      return new Promise(resolve => {
+        this.p5.loadImage(
+          props.dataURI,
+          image => {
+            this.preloadedSprites[props.name] = image;
+            this.preloadedSprites[props.name].dataURI = props.dataURI;
+            resolve();
+          },
+          err => {
+            console.log(err);
+            resolve();
+          }
+        );
+      });
+    })
+  );
+
+  return this.preloadSpriteImages_.then(
+    () => (this.p5._predefinedSpriteAnimations = this.preloadedSprites)
+  );
+};
+
 /**
  * Given a collection of animation metadata for the project, preload each
  * animation, loading it onto the p5 object for use by the setAnimation method
