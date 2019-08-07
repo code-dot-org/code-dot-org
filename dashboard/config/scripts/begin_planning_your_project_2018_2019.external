@@ -3,47 +3,13 @@ title 'Begin planning your project'
 description 'description here'
 href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
-# The Design Process
-Designing software means solving lots of little problems, all the time. The main problem in software design is what to create in the first place.
+# Project Examples
 
-This process is useful for all kinds of things, but we are going to focus on using it for app design.
+You are about to start your final project. Before you begin, spend some time looking at the example projects.
 
-<!-- Translate the terms "Define", "Prepare", "Try", "Reflect" and change font size and positioning as needed-->
-<div style="position: relative; text-align: center; font-size: 1em">
-  <img src="https://images.code.org/a157e5f67444573e19e980a507db16fb-image-1563319667694.png" alt="Design Process" style="width: 50%;">
-  <div style="position: absolute; top: 24%; left: 49.8%; transform: translateX(-49.8%); font-weight: bold;">Define</div> 
-  <div style="position: absolute; top: 52%; left: 61%; transform: translateX(-61%); font-weight: bold;">Prepare</div>
-  <div style="position: absolute; top: 79%; left: 49.8%; transform: translateX(-49.8%); font-weight: bold;">Try</div>
-  <div style="position: absolute; top: 52%; left: 39%; transform: translateX(-39%); font-weight: bold;">Reflect</div>
-</div>
+| Hungry Squirrel | Alien Story |
+|---|---|
+| [![Hungry Squirrel (Play Lab)](https://images.code.org/3fda61d18026d6661dccf4b09baea111-image-1565115158327.PNG "Hungry Squirrel (Play Lab")](https://studio.code.org/projects/playlab/HN1zAX4Om6zdsxVsBBug9Y8mlzKSWUAXhjzRl-64YRs/view) | [![Alien Story (Play Lab)](https://images.code.org/0bd5ed3674ac9fe3304e27e68974c35f-image-1565115240833.PNG "Alien Story (Play Lab")](https://studio.code.org/projects/playlab/I_8rcKtpLFRAn8flROC15Oc-KnDu-bkKBnSORoIDs0o/view) |
+| Try adding sounds to this game! | Try adding another scene to this story! |
 
-* **Define**
-  * What kind of app would you like to create?
-  * What are your constraints?
-  * What does success look like?
-* **Prepare**
-  * Brainstorm / research possible elements
-  * Compare pros and cons
-  * Make a plan
-* **Try**
-  * Put your plan into action
-* **Reflect**
-  * How do your results compare to the goals you set while defining the app?
-  * What can you learn from this or do better next time?
-  * What new problems have you discovered?
-
-# What it Looks Like
-Over the course of the next several weeks, you will have the opportunity to experiment with some existing games and design your own game based off of what you have learned.  After creating your game, you will get the chance to present it to others and receive feedback.  These steps are all critically important in the software industry, and getting practice with the elements of the design process will help you create better products more efficiently.  
-
-Here is what the coming weeks will hold as we learn more about the design process:
-
-1. **Define & Prepare**
-   * Play existing games to get ideas and understand limitations
-   * Brainstorm and plan your new or modified app
-1. **Try**
-   * Follow your plan to build an app
-1. **Reflect & Edit**
-   * Swap apps with another group to help make your projects better
-1. **Present**
-   * Show off your final product!
 MARKDOWN
