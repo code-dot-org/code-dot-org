@@ -25,6 +25,7 @@ module.exports.SpritelabReservedWords = [
   'createGroup',
   'createSprite',
   'drawSprites',
+  'edges',
   'fill',
   'keyDown',
   'keyWentDown',
