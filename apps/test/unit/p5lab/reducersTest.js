@@ -7,8 +7,8 @@ var createStore = require('../../util/redux').createStore;
 var combineReducers = require('redux').combineReducers;
 import {expect} from '../../util/configuredChai';
 var _ = require('lodash');
-var GameLabInterfaceMode = require('@cdo/apps/p5lab/constants')
-  .GameLabInterfaceMode;
+var P5LabInterfaceMode = require('@cdo/apps/p5lab/constants')
+  .P5LabInterfaceMode;
 var gamelabReducers = require('@cdo/apps/p5lab/reducers');
 var commonReducers = require('@cdo/apps/redux/commonReducers');
 var pageConstants = require('@cdo/apps/redux/pageConstants');
@@ -18,8 +18,8 @@ var testUtils = require('../../util/testUtils');
 describe('gamelabReducer', function() {
   var store;
   var initialState;
-  var CODE = GameLabInterfaceMode.CODE;
-  var ANIMATION = GameLabInterfaceMode.ANIMATION;
+  var CODE = P5LabInterfaceMode.CODE;
+  var ANIMATION = P5LabInterfaceMode.ANIMATION;
 
   testUtils.setExternalGlobals();
 
