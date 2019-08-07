@@ -94,7 +94,6 @@ group :development, :test do
   gem 'webmock', require: false
 
   gem 'codecov', require: false
-  gem 'fake_sqs'
   gem 'fakeredis', require: false
   gem 'mocha', require: false
   gem 'simplecov', '~> 0.9', require: false
@@ -246,7 +245,7 @@ gem 'aws-sdk-firehose', '~> 1.6'
 gem 'aws-sdk-rds', '>= 1.38.1'
 gem 'aws-sdk-route53', '~> 1'
 gem 'aws-sdk-s3', '~> 1'
-gem 'aws-sdk-sqs', '~> 1'
+gem 'aws-sdk-secretsmanager', '~> 1'
 
 # Lint tools
 group :development, :staging do
