@@ -4,7 +4,7 @@
 #
 #  id                       :integer          not null, primary key
 #  comment                  :text(65535)
-#  student_id               :integer          not null
+#  student_id               :integer
 #  level_id                 :integer          not null
 #  teacher_id               :integer          not null
 #  created_at               :datetime         not null
