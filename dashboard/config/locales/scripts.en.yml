@@ -12981,6 +12981,10 @@ en:
           stages:
             Deeper Learning Overview:
               name: Deeper Learning Overview
+            Understanding the Curriculum:
+              name: Understanding the Curriculum
+            Demonstrating Understanding:
+              name: Demonstrating Understanding
           title: CS Discoveries Deeper Learning 2019 Overview
           description_audience: CS Discoveries Facilitators in Training 2019
           description_short: ''
@@ -12989,6 +12993,10 @@ en:
           stages:
             Deeper Learning Overview:
               name: Deeper Learning Overview
+            Understanding the Curriculum:
+              name: Understanding the Curriculum
+            Demonstrating Understanding:
+              name: Demonstrating Understanding
           title: CS Principles Deeper Learning 2019 FiT Workshop
           description_audience: ''
           description_short: ''
