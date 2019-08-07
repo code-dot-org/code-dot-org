@@ -2,7 +2,7 @@
 @as_student
 Feature: App Lab Eyes -  Part 1
 
-Scenario: Button shows up on top of canvas
+Scenario: Design elements are visible in local and shared projects
   When I open my eyes to test "applab eyes"
   Given I start a new Applab project
   And I wait for the page to fully load
