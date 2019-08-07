@@ -203,22 +203,28 @@ export default class AssetManager extends React.Component {
     this.setState({recordingAudio: false, audioErrorType: err});
   };
 
+  defaultAssetProps = asset => {
+    return {
+      key: asset.filename,
+      name: asset.filename,
+      timestamp: asset.timestamp,
+      type: asset.category,
+      size: asset.size,
+      soundPlayer: this.props.soundPlayer,
+      imagePicker: this.props.imagePicker,
+      projectId: this.props.projectId,
+      elementId: this.props.elementId
+    };
+  };
+
   getStarterAssetRows = () => {
     return this.state.starterAssets.map(asset => {
       return (
         <AssetRow
-          key={asset.filename}
-          name={asset.filename}
-          timestamp={asset.timestamp}
-          type={asset.category}
-          size={asset.size}
+          {...this.defaultAssetProps(asset)}
           api={starterAssetsApi}
           onChoose={() => console.log('choose!')}
           onDelete={() => console.log('delete!')}
-          soundPlayer={this.props.soundPlayer}
-          imagePicker={this.props.imagePicker}
-          projectId={this.props.projectId}
-          elementId={this.props.elementId}
         />
       );
     });
@@ -228,20 +234,12 @@ export default class AssetManager extends React.Component {
     return this.state.assets.map(asset => {
       return (
         <AssetRow
-          key={asset.filename}
-          name={asset.filename}
-          timestamp={asset.timestamp}
-          type={asset.category}
-          size={asset.size}
+          {...this.defaultAssetProps(asset)}
           useFilesApi={this.props.useFilesApi}
           onChoose={() =>
             this.props.assetChosen(asset.filename, asset.timestamp)
           }
           onDelete={() => this.deleteAssetRow(asset.filename)}
-          soundPlayer={this.props.soundPlayer}
-          imagePicker={this.props.imagePicker}
-          projectId={this.props.projectId}
-          elementId={this.props.elementId}
         />
       );
     });
