@@ -353,7 +353,10 @@ P5Lab.prototype.init = function(config) {
     this.setCrosshairCursorForPlaySpace();
 
     if (this.isSpritelab) {
-      this.studioApp_.addChangeHandler(this.preview.bind(this));
+      this.studioApp_.addChangeHandler(() => {
+        this.reset();
+        this.preview.apply(this);
+      });
     }
   };
 
@@ -1100,7 +1103,9 @@ P5Lab.prototype.onP5ExecutionStarting = function() {
  */
 P5Lab.prototype.onP5Preload = function() {
   Promise.all([
-    this.preloadAnimations_(this.level.pauseAnimationsByDefault),
+    this.isSpritelab
+      ? this.preloadSpriteImages_()
+      : this.preloadAnimations_(this.level.pauseAnimationsByDefault),
     this.maybePreloadBackgrounds_(),
     this.runPreloadEventHandler_()
   ]).then(() => {
@@ -1145,6 +1150,12 @@ P5Lab.prototype.preloadAnimations_ = async function(pauseAnimationsByDefault) {
   );
 };
 
+P5Lab.prototype.preloadSpriteImages_ = async function() {
+  await this.whenAnimationsAreReady();
+  return this.gameLabP5.preloadSpriteImages(
+    getStore().getState().animationList
+  );
+};
 /**
  * Check whether all animations in the project animation list have been loaded
  * into memory and are ready to use.
