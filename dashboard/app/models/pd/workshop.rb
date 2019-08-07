@@ -326,12 +326,6 @@ class Pd::Workshop < ActiveRecord::Base
         workshop.update!(processed_at: Time.zone.now)
       end
     end
-
-    if CDO.newrelic_logging
-      NewRelic::Agent.record_metric "Custom/Workshops/InProgress", self.class.in_state(STATE_IN_PROGRESS).count
-    end
-
-    nil
   end
 
   def state
@@ -725,5 +719,9 @@ class Pd::Workshop < ActiveRecord::Base
     end
 
     potential_organizers
+  end
+
+  def can_user_delete?(user)
+    state != STATE_ENDED && Ability.new(user).can?(:destroy, self)
   end
 end

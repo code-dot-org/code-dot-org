@@ -316,8 +316,8 @@ GEM
       aws-sdk-core (~> 3, >= 3.21.2)
       aws-sdk-kms (~> 1)
       aws-sigv4 (~> 1.0)
-    aws-sdk-sqs (1.4.0)
-      aws-sdk-core (~> 3)
+    aws-sdk-secretsmanager (1.20.0)
+      aws-sdk-core (~> 3, >= 3.39.0)
       aws-sigv4 (~> 1.0)
     aws-sigv4 (1.1.0)
       aws-eventstream (~> 1.0, >= 1.0.2)
@@ -414,9 +414,6 @@ GEM
     factory_girl_rails (4.7.0)
       factory_girl (~> 4.7.0)
       railties (>= 3.0.0)
-    fake_sqs (0.3.1)
-      builder
-      sinatra
     fakeredis (0.6.0)
       redis (~> 3.2)
     faraday (0.15.4)
@@ -897,7 +894,7 @@ DEPENDENCIES
   aws-sdk-rds (>= 1.38.1)
   aws-sdk-route53 (~> 1)
   aws-sdk-s3 (~> 1)
-  aws-sdk-sqs (~> 1)
+  aws-sdk-secretsmanager (~> 1)
   bcrypt
   better_errors
   binding_of_caller
@@ -918,7 +915,6 @@ DEPENDENCIES
   execjs
   eyes_selenium
   factory_girl_rails
-  fake_sqs
   fakeredis
   firebase
   firebase_token_generator
@@ -1052,4 +1048,4 @@ RUBY VERSION
    ruby 2.5.0p0
 
 BUNDLED WITH
-   1.17.0
+   1.17.1

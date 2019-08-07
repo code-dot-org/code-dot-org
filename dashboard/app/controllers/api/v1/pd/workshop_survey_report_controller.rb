@@ -152,7 +152,7 @@ module Api::V1::Pd
 
     def notify_error(exception, error_status_code = :bad_request)
       Honeybadger.notify(
-        error_message: exception.message,
+        exception,
         context: {
           workshop_id: @workshop.id,
           course: @workshop.course,

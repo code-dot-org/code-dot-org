@@ -1,4 +1,5 @@
 student_detail_progress_view true
+family_name ''
 
 stage 'Intro to AppLab - Choose Your Own Adventure'
 level 'AppLab Intro 1 - Welcome', progression: 'Welcome to App Lab!'
@@ -13,8 +14,8 @@ level 'AppLab Intro 1 - Go Further', progression: 'Go Further!'
 level 'AppLab Intro 2 - Try App', progression: 'Skill Building - Screens and Buttons'
 
 stage 'Intro to AppLab - Choose Your Own Adventure 2'
-level 'AppLab Intro 2 - Welcome', progression: 'Welcome to App Lab!'
-level 'AppLab Intro 2 - Building a Choose Your Own Adventure', progression: 'Welcome to App Lab!'
+level 'HOC Intro to App Lab Example', progression: 'Welcome to App Lab!'
+level 'HOC Intro to App Lab Brainstorm', progression: 'Welcome to App Lab!'
 level 'AppLab Intro 2 - Try Cat Commander', progression: 'Welcome to App Lab!'
 level 'AppLab Intro 2 - Edit startScreen', progression: 'Design your Start Screen'
 level 'AppLab Intro 2 - Edit startScreen2', progression: 'Design your Start Screen'
