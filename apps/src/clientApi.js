@@ -444,10 +444,10 @@ class FilesApi extends CollectionsApi {
 }
 
 class StarterAssetsApi {
-  getStarterAssets(channelId, onSuccess, onFailure) {
+  getStarterAssets(levelChannelId, onSuccess, onFailure) {
     return ajaxInternal(
       'GET',
-      `/level_starter_assets/${channelId}`,
+      `/level_starter_assets/${levelChannelId}`,
       onSuccess,
       onFailure
     );
