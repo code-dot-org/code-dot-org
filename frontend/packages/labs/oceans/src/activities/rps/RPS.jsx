@@ -204,33 +204,18 @@ module.exports = class Main extends React.Component {
   }
 
   pickWinner(computer_choice) {
-    if (predicted === 'paper' && computer_choice === 'scissors') {
-      return -1;
-    }
-    if (predicted === 'paper' && computer_choice === 'rock') {
-      return 1;
-    }
-    if (predicted === 'paper' && computer_choice === 'paper') {
-      return 0;
-    }
-    if (predicted === 'rock' && computer_choice === 'scissors') {
-      return 1;
-    }
-    if (predicted === 'rock' && computer_choice === 'paper') {
-      return -1;
-    }
-    if (predicted === 'rock' && computer_choice === 'rock') {
-      return 0;
-    }
-    if (predicted === 'scissors' && computer_choice === 'rock') {
-      return -1;
-    }
-    if (predicted === 'scissors' && computer_choice === 'paper') {
-      return 1;
-    }
-    if (predicted === 'scissors' && computer_choice === 'scissors') {
-      return 0;
-    }
-    return 0;
+    return this.beats(predicted, computer_choice);
+  }
+
+  beats(x, y) {
+    const keyBeatsValue = {
+      rock: 'scissors',
+      paper: 'rock',
+      scissors: 'paper'
+    };
+
+    return keyBeatsValue[x] === y ? 1 :
+      keyBeatsValue[y] === x ? -1 :
+      0;
   }
 };
