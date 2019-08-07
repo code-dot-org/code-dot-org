@@ -17,14 +17,16 @@ describe('AppLabVisualizationColumn', () => {
           nonResponsiveWidth={0}
           isRunning={false}
           hideSource={false}
-          playspacePhoneFrame={false}
           isIframeEmbed={false}
           pinWorkspaceToBottom={false}
           awaitingContainedResponse={false}
           isEditingProject={false}
           screenIds={[]}
           onScreenCreate={() => {}}
+          isPaused={false}
+          // relevant to widget mode tests
           widgetMode={true}
+          playspacePhoneFrame={true}
         />
       );
     });
@@ -38,9 +40,19 @@ describe('AppLabVisualizationColumn', () => {
     });
 
     it('class name is widgetWidth', () => {
-      expect(visualizationColumn.instance().getClassNames()).to.equal(
+      expect(visualizationColumn.instance().getClassNames()).to.include(
         'widgetWidth'
       );
+    });
+
+    it('does not render a ResetButton', () => {
+      expect(visualizationColumn.find('ResetButton')).to.be.empty;
+    });
+
+    it('displays a centered finish button', () => {
+      expect(
+        visualizationColumn.instance().getCompletionButtonSyle()
+      ).to.include({display: 'block'});
     });
   });
 });
