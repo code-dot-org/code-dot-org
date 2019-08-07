@@ -20,6 +20,8 @@ let predicted = null;
 let example_counts = [0, 0, 0];
 const MIN_EXAMPLES = 20;
 
+const NO_CLASS = -1;
+
 module.exports = class Main extends React.Component {
   constructor(props) {
     super(props);
@@ -27,7 +29,7 @@ module.exports = class Main extends React.Component {
   }
 
   state = {
-    predictedClass: -1,
+    predictedClass: NO_CLASS,
     infoText0: "",
     infoText1: "",
     infoText2: "",
@@ -37,22 +39,20 @@ module.exports = class Main extends React.Component {
   };
 
   componentDidMount() {
-    // Initiate variables
-    this.training = -1; // -1 when no class is being trained
+    this.training = NO_CLASS;
     this.videoPlaying = false;
 
-    // Initiate deeplearn.js math and knn classifier objects
-    this.bindPage();
+    this.initializeClassifiers();
+    this.initializeWebcamVideo();
+  }
 
-    // Create video element that will contain the webcam image
+  initializeWebcamVideo() {
     this.video.setAttribute('autoplay', '');
     this.video.setAttribute('playsinline', '');
-
-    navigator.mediaDevices.getUserMedia({video: true, audio: false}).then((stream) => {
+    navigator.mediaDevices.getUserMedia({ video: true, audio: false }).then((stream) => {
       this.video.srcObject = stream;
       this.video.width = IMAGE_SIZE;
       this.video.height = IMAGE_SIZE;
-
       this.video.addEventListener('playing', () => this.videoPlaying = true);
       this.video.addEventListener('paused', () => this.videoPlaying = false);
     });
@@ -94,18 +94,17 @@ module.exports = class Main extends React.Component {
     </div>;
   }
 
-  async bindPage() {
+  async initializeClassifiers() {
     this.knn = knnClassifier.create();
     this.mobilenet = await mobilenetModule.load();
-
-    this.start();
+    this.startVideo();
   }
 
-  start() {
+  startVideo() {
     this.video.play();
   }
 
-  stop() {
+  stopVideo() {
     this.video.pause();
   }
 
@@ -216,6 +215,6 @@ module.exports = class Main extends React.Component {
 
     return keyBeatsValue[x] === y ? 1 :
       keyBeatsValue[y] === x ? -1 :
-      0;
+        0;
   }
 };
