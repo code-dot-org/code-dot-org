@@ -2109,6 +2109,8 @@ bs:
           stages:
             Number Systems:
               name: Brojčani Sistemi
+            Sending Binary Messages:
+              name: Slanje Binarnih Poruka
         time4csdemo:
           stages:
             Crowdsourcing:

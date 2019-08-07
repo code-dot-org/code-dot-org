@@ -23,7 +23,7 @@ class WorkshopMailerTest < ActionMailer::TestCase
 
   test 'reminder emails are sent for workshops without suppress_reminders?' do
     facilitator = create :facilitator
-    workshop = create :pd_workshop, facilitators: [facilitator]
+    workshop = create :workshop, facilitators: [facilitator]
     enrollment = create :pd_enrollment, workshop: workshop
     Pd::Workshop.any_instance.expects(:suppress_reminders?).returns(false).times(3)
 
@@ -36,7 +36,7 @@ class WorkshopMailerTest < ActionMailer::TestCase
 
   test 'reminder emails are skipped for workshops with suppress_reminders?' do
     facilitator = create :facilitator
-    workshop = create :pd_workshop, facilitators: [facilitator]
+    workshop = create :workshop, facilitators: [facilitator]
     enrollment = create :pd_enrollment, workshop: workshop
     Pd::Workshop.any_instance.expects(:suppress_reminders?).returns(true).times(3)
 
@@ -74,7 +74,7 @@ class WorkshopMailerTest < ActionMailer::TestCase
     ]
 
     courses.each do |course|
-      workshop = create :pd_workshop, num_sessions: 1, course: course
+      workshop = create :workshop, num_sessions: 1, course: course
       enrollment = create :pd_enrollment, workshop: workshop
       mail = Pd::WorkshopMailer.detail_change_notification(enrollment)
 
@@ -102,7 +102,7 @@ class WorkshopMailerTest < ActionMailer::TestCase
 
   test 'facilitator and organizer email links are complete urls' do
     facilitator = create :facilitator
-    csf_workshop = create :pd_workshop, num_sessions: 1, facilitators: [facilitator], course: Pd::Workshop::COURSE_CSF, subject: Pd::Workshop::SUBJECT_CSF_101
+    csf_workshop = create :workshop, num_sessions: 1, facilitators: [facilitator], course: Pd::Workshop::COURSE_CSF, subject: Pd::Workshop::SUBJECT_CSF_101
     csf_enrollment = create :pd_enrollment, workshop: csf_workshop
     ecs_workshop = create :pd_ended_workshop, facilitators: [facilitator], course: Pd::Workshop::COURSE_ECS, subject: Pd::Workshop::SUBJECT_ECS_PHASE_2
     ecs_enrollment = create :pd_enrollment, workshop: ecs_workshop
@@ -128,7 +128,7 @@ class WorkshopMailerTest < ActionMailer::TestCase
     ]
 
     test_cases.each do |test_case|
-      workshop = create :pd_workshop, num_sessions: 1, course: test_case[:course], subject: test_case[:subject]
+      workshop = create :workshop, num_sessions: 1, course: test_case[:course], subject: test_case[:subject]
       enrollment = create :pd_enrollment, workshop: workshop
       mail = Pd::WorkshopMailer.teacher_cancel_receipt(enrollment)
 
@@ -155,7 +155,7 @@ class WorkshopMailerTest < ActionMailer::TestCase
     ]
 
     test_cases.each do |test_case|
-      workshop = create :pd_workshop, num_sessions: 1, course: test_case[:course], subject: test_case[:subject]
+      workshop = create :workshop, num_sessions: 1, course: test_case[:course], subject: test_case[:subject]
       enrollment = create :pd_enrollment, workshop: workshop
       mail = Pd::WorkshopMailer.teacher_enrollment_receipt(enrollment)
 
@@ -176,7 +176,7 @@ class WorkshopMailerTest < ActionMailer::TestCase
     ]
 
     test_cases.each do |test_case|
-      workshop = create :pd_workshop, num_sessions: 1, course: test_case[:course], subject: test_case[:subject]
+      workshop = create :workshop, num_sessions: 1, course: test_case[:course], subject: test_case[:subject]
       enrollment = create :pd_enrollment, workshop: workshop
       mail = Pd::WorkshopMailer.teacher_enrollment_reminder(enrollment, days_before: test_case[:days_before])
 

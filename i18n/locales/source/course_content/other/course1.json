@@ -845,19 +845,19 @@
   "https://studio.code.org/s/course1/stage/14/extras?level_name=course1_collector_loops_challenge3": {
     "short_instructions": "This time you can only use one of each arrow block. Get all of the treasure! ",
     "authored_hints": {
-      "courseB_collector_loops_challenge1_b": "Start by looping the commands `move south` and `get treasure`.\n\n<xml>\n  <block type=\"maze_moveSouth\"/><next>\n  <block type=\"collector_collect\"/></next>\n  </xml>",
-      "courseB_collector_loops_challenge1_a": "The north pattern is a little different than the south pattern.\n\n<xml>\n  <block type=\"collector_collect\"/><next>\n  <block type=\"maze_moveNorth\"/></next>next>\n  </xml>",
-      "courseB_collector_loops_challenge1_c": "Move East twice between each path.\n\n<xml>\n  <block type=\"maze_moveEast\"/><next>\n  <block type=\"maze_moveEast\"/></next>next>\n  </xml>\n\nYou can do this with only 14 blocks. Click for one more hint to see a solution. ",
-      "courseB_collector_loops_challenge1_d": "Try this!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_simplified\">\n        <title name=\"TIMES\">5</title>\n        <statement name=\"DO\">\n          <block type=\"maze_moveSouth\">\n            <next>\n              <block type=\"collector_collect\"/>\n            </next>\n          </block>\n        </statement>\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveEast\">\n                <next>\n                  <block type=\"controls_repeat_simplified\">\n                    <title name=\"TIMES\">5</title>\n                    <statement name=\"DO\">\n                      <block type=\"collector_collect\">\n                        <next>\n                          <block type=\"maze_moveNorth\"/>\n                        </next>\n                      </block>\n                    </statement>\n                    <next>\n                      <block type=\"maze_moveEast\">\n                        <next>\n                          <block type=\"maze_moveEast\">\n                            <next>\n                              <block type=\"controls_repeat_simplified\">\n                                <title name=\"TIMES\">5</title>\n                                <statement name=\"DO\">\n                                  <block type=\"maze_moveSouth\">\n                                    <next>\n                                      <block type=\"collector_collect\"/>\n                                    </next>\n                                  </block>\n                                </statement>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+      "courseB_collector_loops_challenge1_b": "Start by looping the commands `move south` and `get treasure`.\n\n[blockly block][0]",
+      "courseB_collector_loops_challenge1_a": "The north pattern is a little different than the south pattern.\n\n[blockly block][0]",
+      "courseB_collector_loops_challenge1_c": "Move East twice between each path.\n\n[blockly block][0]\n\nYou can do this with only 14 blocks. Click for one more hint to see a solution. ",
+      "courseB_collector_loops_challenge1_d": "Try this!\n\n[blockly block][0]"
     }
   },
   "https://studio.code.org/s/course1/stage/14/extras?level_name=course1_collector_loops_challenge4": {
     "short_instructions": "Let's get the treasure! Help me across each row then come back to start the next row. Can you find a pattern?",
     "authored_hints": {
       "courseB_collector_loops_challenge2_a": "If something goes wrong, don't be afraid to start over. Don't give up!",
-      "courseB_collector_loops_challenge2_b": "If you repeat this pattern, Laurel won't hit the wall at the bottom of the cave!\n\n<xml><block type=\"maze_moveEast\">\n            <next>\n              <block type=\"collector_collect\">\n                <next>\n                  <block type=\"maze_moveWest\">\n                    <next>\n                      <block type=\"maze_moveWest\">\n                        <next>\n                          <block type=\"maze_moveSouth\"/>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block></xml>",
+      "courseB_collector_loops_challenge2_b": "If you repeat this pattern, Laurel won't hit the wall at the bottom of the cave!\n\n[blockly block][0]",
       "courseB_collector_loops_challenge2_c": "Try using a `repeat` block to collect the final pile of treasure!",
-      "courseB_collector_loops_challenge2_d": "Try this solution:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_simplified_dropdown\">\n        <title name=\"TIMES\" config=\"3-10\">4</title>\n        <statement name=\"DO\">\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"collector_collect\">\n                <next>\n                  <block type=\"maze_moveWest\">\n                    <next>\n                      <block type=\"maze_moveWest\">\n                        <next>\n                          <block type=\"maze_moveSouth\"/>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n        <next>\n          <block type=\"controls_repeat_simplified_dropdown\">\n            <title name=\"TIMES\" config=\"3-10\">6</title>\n            <statement name=\"DO\">\n              <block type=\"collector_collect\"/>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+      "courseB_collector_loops_challenge2_d": "Try this solution:\n\n[blockly block][0]"
     }
   },
   "https://studio.code.org/s/course1/stage/15/puzzle/2": {
@@ -893,20 +893,20 @@
     "short_instructions": "\"Where are my friends hiding? Can you write code to show the rest of my friends?\"",
     "long_instructions": "_\"Where are my friends hiding? In this game, clicking on me will show my friend Olive the cat!\"_\n\nClicking Olive will make Robin appear! Can you write code to show the rest of the characters too?\n\nIn this puzzle, make sure to click for hints! The hints will help you do this project step-by-step!\n\n[][0]",
     "authored_hints": {
-      "courseA_playlab_events_challenge1_a": "Make Waddles the Penguin show when you click Robin!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n      </block>\n    </next>\n  </block></xml>",
-      "courseA_playlab_events_challenge1_b": "Make Boo the Ghost show when you click Waddles!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">3</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">4</title>\n      </block>\n    </next>\n  </block></xml>",
-      "courseA_playlab_events_challenge1_c": "Make Jayden the Fuzzy Monster show when you click Boo!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">4</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">5</title>\n      </block>\n    </next>\n  </block></xml>",
-      "courseA_playlab_events_challenge1_d": "Make Spiff the Robot show when you click the monster!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">6</title>\n      </block>\n    </next>\n  </block></xml>",
-      "courseA_playlab_events_challenge1_e": "Finally, make Wendel the Wizard show when you click on Spiff!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">7</title>\n      </block>\n    </next>\n  </block></xml>"
+      "courseA_playlab_events_challenge1_a": "Make Waddles the Penguin show when you click Robin!\n\n[blockly block][0]",
+      "courseA_playlab_events_challenge1_b": "Make Boo the Ghost show when you click Waddles!\n\n[blockly block][0]",
+      "courseA_playlab_events_challenge1_c": "Make Jayden the Fuzzy Monster show when you click Boo!\n\n[blockly block][0]",
+      "courseA_playlab_events_challenge1_d": "Make Spiff the Robot show when you click the monster!\n\n[blockly block][0]",
+      "courseA_playlab_events_challenge1_e": "Finally, make Wendel the Wizard show when you click on Spiff!\n\n[blockly block][0]"
     }
   },
   "https://studio.code.org/s/course1/stage/16/extras?level_name=course1_playlab_events_challenge2": {
     "short_instructions": "\"Let's have a party! Give my friends something to do when you click or tap them.\"",
     "long_instructions": "_\"Let's have a party! Give my friends something to do when you click or tap them.\"_\n\nWhat will the animals say? What else will happen?\n\nIn this puzzle, make sure to click for hints! The hints will give you fun things to try!\n\n[][0]",
     "authored_hints": {
-      "courseA_playlab_events_challenge2_a": "You can make a bird sing.\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n          </block>\n    </next>\n  </block></xml>",
-      "courseA_playlab_events_challenge2_b": "You can make a robot beep.\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      \n          <block type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n  </block></xml>",
-      "courseA_playlab_events_challenge2_c": "You can make an angry monster growl.\n\n<xml>  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSpriteEmotion\">\n        <title name=\"SPRITE\">5</title>\n        <title name=\"VALUE\">2</title>\n        <next>\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">5</title>\n            <title name=\"TEXT\">Roar!</title>\n            <next>\n              <block type=\"studio_setSpriteEmotion\">\n                <title name=\"SPRITE\">5</title>\n                <title name=\"VALUE\">0</title>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block></xml>"
+      "courseA_playlab_events_challenge2_a": "You can make a bird sing.\n\n[blockly block][0]",
+      "courseA_playlab_events_challenge2_b": "You can make a robot beep.\n\n[blockly block][0]",
+      "courseA_playlab_events_challenge2_c": "You can make an angry monster growl.\n\n[blockly block][0]"
     }
   },
   "https://studio.code.org/s/course1/stage/17/puzzle/2": {
@@ -967,7 +967,7 @@
     "short_instructions": "\"Can you help me make two bird houses?\"",
     "long_instructions": "**Tweet!**\n\n_\"Can you help me make two bird houses?\"_",
     "authored_hints": {
-      "courseA_artist_loops_challenge2_a": "Blocks like this: <xml>  <block type=\"simple_move_up_left\"/></xml> will let your artist move at a slant!",
+      "courseA_artist_loops_challenge2_a": "Blocks like this: [blockly block][0] will let your artist move at a slant!",
       "courseA_artist_loops_challenge2_b": "When you finish one bird house, `jump` to the next!",
       "courseA_artist_loops_challenge2_c": "You will need a LOT of blocks inside the loop for this challenge."
     }
@@ -976,7 +976,7 @@
     "short_instructions": "\"It's time to toss the dice! Can you help me draw these?\"",
     "long_instructions": "_\"It's time to toss the dice! Can you help me draw these?\"_",
     "authored_hints": {
-      "courseB_artist_loops_challenge1_a": "Blocks like this: <xml>  <block type=\"simple_move_up_right\"/></xml> will let your artist move at a slant!",
+      "courseB_artist_loops_challenge1_a": "Blocks like this: [blockly block][0] will let your artist move at a slant!",
       "courseB_artist_loops_challenge1_b": "When you finish one of the dice, `jump` to the next!",
       "courseB_artist_loops_challenge1_c": "You will need to `move` or `jump` over some of the same lines twice. "
     }

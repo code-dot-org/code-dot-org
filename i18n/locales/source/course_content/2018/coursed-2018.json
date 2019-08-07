@@ -149,7 +149,7 @@
     "short_instructions": "Now, attach a block to the `when right event` so that the hand can get to both baskets.",
     "long_instructions": "Now, attach a block to the `when right event` so that the hand can get to both baskets.",
     "authored_hints": {
-      "courseD_bounce_events2s_a": "You will need to have two sets of `move` events coded for this to work:\n\n<xml>\n  <block type=\"bounce_whenLeft\" deletable=\"false\" x=\"20\" y=\"20\">\n    <next>\n      <block type=\"bounce_moveLeft\"/>\n    </next>\n  </block>\n  <block type=\"bounce_whenRight\" deletable=\"false\" x=\"180\" y=\"20\">\n    <next>\n      <block type=\"bounce_moveRight\"/>\n    </next>\n  </block>\n</xml>"
+      "courseD_bounce_events2s_a": "You will need to have two sets of `move` events coded for this to work:\n\n[blockly block][0]"
     }
   },
   "https://studio.code.org/s/coursed-2018/stage/5/puzzle/3": {
@@ -157,14 +157,14 @@
     "long_instructions": "We're going to send a basketball flying down towards the hand.  Attach a block to the `when ball hits hand` event to ensure the ball reaches the basket.",
     "authored_hints": {
       "courseD_bounce_events5s_a": "You do not need to move the hand to solve this puzzle.",
-      "courseD_bounce_events5s_b": "Make sure you have added this code to your workspace:\n\n<xml>  <block type=\"bounce_whenPaddleCollided\" deletable=\"false\"> <next> <block type=\"bounce_bounceBall\"/></next></block></xml>"
+      "courseD_bounce_events5s_b": "Make sure you have added this code to your workspace:\n\n[blockly block][0]"
     }
   },
   "https://studio.code.org/s/coursed-2018/stage/5/puzzle/4": {
     "short_instructions": "Attach code to make the ball bounce when it hits the wall so you can solve this puzzle.",
     "long_instructions": "Now the basket is at the top.  \n\nAttach code to make the ball bounce when it hits the wall so you can solve this puzzle.",
     "authored_hints": {
-      "courseD_bounce_events6s_a": "Do you have an event that looks like this?\n\n<xml><block type=\"bounce_whenWallCollided\" deletable=\"false\"><next><block type=\"bounce_bounceBall\"></block></next></block></block></xml>",
+      "courseD_bounce_events6s_a": "Do you have an event that looks like this?\n\n[blockly block][0]",
       "courseD_bounce_events6s_b": "If you've written the code correctly, you don't have to move the hand to win."
     }
   },
@@ -179,7 +179,7 @@
     "short_instructions": "Attach the `score point` block to the `when ball in goal` event and the `score opponent point` block to the `when ball misses hand` event to make a game. ",
     "long_instructions": "There is now a hoop at the top.  \n\nAttach the `score point` block to the `when ball in goal` event and the `score opponent point` block to the `when ball misses hand` event to make a game. \n\n* * *\n\nSee how many points you can score before your opponent scores twice.",
     "authored_hints": {
-      "courseD_bounce_events10s_a": "You should have both of these events in your code:\n\n<xml><block type=\"bounce_whenBallInGoal\" deletable=\"false\"><next><block type=\"bounce_playSound\"><title name=\"SOUND\">swish</title><next><block type=\"bounce_incrementPlayerScore\"></block></next></block></next></block><block type=\"bounce_whenBallMissesPaddle\" deletable=\"false\"><next><block type=\"bounce_playSound\"><title name=\"SOUND\">whistle</title><next><block type=\"bounce_incrementOpponentScore\"></block></next></block></next></block></xml>"
+      "courseD_bounce_events10s_a": "You should have both of these events in your code:\n\n[blockly block][0]"
     }
   },
   "https://studio.code.org/s/coursed-2018/stage/5/puzzle/7": {
@@ -201,12 +201,12 @@
     "long_instructions": "Help Scrat across the slippery ice to get to the acorn!",
     "authored_hints": {
       "courseD_iceage_loops1_a": "Watch out for broken ice! Scrat will fall right through!",
-      "courseD_iceage_loops1_b": "You will have to use this block:\n\n<xml><block type=\"maze_moveForward\"/></xml>"
+      "courseD_iceage_loops1_b": "You will have to use this block:\n\n[blockly block][0]"
     }
   },
   "https://studio.code.org/s/coursed-2018/stage/6/puzzle/2": {
     "short_instructions": "Use a `turn left` block to get to the acorn!",
-    "long_instructions": "Use a <xml><block type=\"maze_turn\">\n    <title name=\"DIR\">turnLeft</title>\n  </block></xml> block to get to the acorn!",
+    "long_instructions": "Use a [blockly block][0] block to get to the acorn!",
     "authored_hints": {
       "courseD_iceage_loops2_a": "Break this puzzle into two pieces, one before the corner, and one after the corner.",
       "courseD_iceage_loops2_b": "If you get stuck, try saying the steps out loud.",
@@ -218,9 +218,9 @@
   },
   "https://studio.code.org/s/coursed-2018/stage/6/puzzle/4": {
     "short_instructions": "Can you get to the acorn with just one `move forward` block?",
-    "long_instructions": "Can you get to the acorn with just one <xml><block type=\"maze_moveForward\"/></xml> block? Try using a loop!",
+    "long_instructions": "Can you get to the acorn with just one [blockly block][0] block? Try using a loop!",
     "authored_hints": {
-      "courseB_iceage_loops3_a": "Use this new block! <xml><block type=\"controls_repeat_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">5</title>\n  </block></xml>",
+      "courseB_iceage_loops3_a": "Use this new block! [blockly block][0]",
       "courseB_iceage_loops3_b": "To repeat code, drag out a `repeat` loop, then put the block you want repeated inside."
     }
   },
@@ -488,7 +488,7 @@
       "courseD_bee_nested_loops_challenge2_a": "Don't forget that you can `repeat` a single command or a longer pattern. You can even `repeat` a `repeat` block!",
       "courseD_bee_nested_loops_challenge2_b": "To get all 4 gems, first use a loop to move away from the center. Turn left or right, then use a nested loop to move from the first pile of treasure to the second. If you repeat the nested loop enough times, the collector will move around the _entire_ cave!",
       "courseD_bee_nested_loops_challenge2_c": "The shortest program that reaches all the treasure uses only one `collect` block and two turns.",
-      "courseD_bee_nested_loops_challenge2_d": "**Solution:**\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_dropdown\">\n        <title name=\"TIMES\" config=\"3-10\">3</title>\n        <statement name=\"DO\">\n          <block type=\"maze_move\">\n            <title name=\"DIR\">moveForward</title>\n          </block>\n        </statement>\n        <next>\n          <block type=\"maze_turn\">\n            <title name=\"DIR\">turnLeft</title>\n            <next>\n              <block type=\"controls_repeat_dropdown\">\n                <title name=\"TIMES\" config=\"3-10\">3</title>\n                <statement name=\"DO\">\n                  <block type=\"collector_collect\">\n                    <next>\n                      <block type=\"controls_repeat_dropdown\">\n                        <title name=\"TIMES\" config=\"3-10\">3</title>\n                        <statement name=\"DO\">\n                          <block type=\"maze_move\">\n                            <title name=\"DIR\">moveForward</title>\n                          </block>\n                        </statement>\n                        <next>\n                          <block type=\"maze_turn\">\n                            <title name=\"DIR\">turnLeft</title>\n                            <next>\n                              <block type=\"controls_repeat_dropdown\">\n                                <title name=\"TIMES\" config=\"3-10\">3</title>\n                                <statement name=\"DO\">\n                                  <block type=\"maze_move\">\n                                    <title name=\"DIR\">moveForward</title>\n                                  </block>\n                                </statement>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+      "courseD_bee_nested_loops_challenge2_d": "**Solution:**\n\n[blockly block][0]"
     }
   },
   "https://studio.code.org/s/coursed-2018/stage/9/puzzle/1": {
@@ -648,7 +648,7 @@
   },
   "https://studio.code.org/s/coursed-2018/stage/10/puzzle/2": {
     "short_instructions": "Now, turn right by **60** degrees, then draw a straight line **150** pixels long and jump back to the center of the play area.",
-    "long_instructions": "[][0] _“Good job!”_\n\nAfter your hexagon, turn right by **60** degrees, then draw a line that is **150** pixels long.   \n\nFinish by putting Elsa back to the center of the play area, using the <xml><block type=\"jump_to\"><title name=\"VALUE\">middle center</title></block></xml> block.",
+    "long_instructions": "[][0] _“Good job!”_\n\nAfter your hexagon, turn right by **60** degrees, then draw a line that is **150** pixels long.   \n\nFinish by putting Elsa back to the center of the play area, using the [blockly block][1] block.",
     "authored_hints": {
       "courseD_artist_project1_b": "Remember that `move` draws a line, while `jump` does not.",
       "courseD_artist_project1_a": "Use the drop down menu on the `turn` blocks to choose the angle you need!"
@@ -1031,7 +1031,7 @@
       "courseD_bee_conditionals4_hintVid1": "Need help getting started?  Watch the video!",
       "courseD_bee_conditionals4_a": "You can still treat every space as if there is a cloud over it, even though you can see the whole path.",
       "courseD_bee_conditionals4_b": "Use an `if` statement inside your loop to check each space for nectar. ",
-      "courseD_bee_conditionals4_c": "Using <xml><block type=\"maze_untilBlocked\"/></xml> block, you should move forward and check for a flower. If there is a flower, what should the bee do?",
+      "courseD_bee_conditionals4_c": "Using [blockly block][0] block, you should move forward and check for a flower. If there is a flower, what should the bee do?",
       "courseD_bee_conditionals4_hintVid2": "Watch this video for help solving this puzzle."
     }
   },
@@ -1138,7 +1138,7 @@
     "short_instructions": "Collect all of the nectar and make all the honey.",
     "long_instructions": "Collect all of the nectar and make all the honey. You can collect all of the nectar in one flower by using the `while nectar > 0` loop.",
     "authored_hints": {
-      "courseD_bee_conditionals_challenge1_b": "Just like the `if at flower` blocks, the code inside a `while nectar > 0` will only run if the bee is at a flower. The difference is that the code inside will run over and over until there is no nectar left.  Try this pattern:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+      "courseD_bee_conditionals_challenge1_b": "Just like the `if at flower` blocks, the code inside a `while nectar > 0` will only run if the bee is at a flower. The difference is that the code inside will run over and over until there is no nectar left.  Try this pattern:\n\n[blockly block][0]"
     },
     "callouts": {
       "courseD_bee_conditionals_challenge2_1": "Use this loop to collect all of the nectar (or honey) from one flower (or honeycomb)."
