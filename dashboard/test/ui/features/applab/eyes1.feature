@@ -13,6 +13,7 @@ Scenario: Button shows up on top of canvas
   Then I see no difference for "button should be visible"
   And I click selector ".project_share"
   And I wait to see a dialog titled "Share your project"
+  Then I see no difference for "project share dialog"
   And I navigate to the share URL
   And I wait until element "#divApplab" is visible
   Then I see no difference for "app lab share"
