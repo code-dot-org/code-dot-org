@@ -1,3 +1,4 @@
+@dashboard_db_access
 @no_mobile
 Feature: Feedback Tab Visibility
 
