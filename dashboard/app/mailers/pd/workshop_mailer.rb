@@ -230,7 +230,7 @@ class Pd::WorkshopMailer < ActionMailer::Base
 
   # Virtual workshops should not have any mail sent.
   def check_should_send
-    if @workshop&.subject&.include? "Virtual"
+    if @workshop.subject&.include? "Virtual"
       mail.perform_deliveries = false
     end
   end
