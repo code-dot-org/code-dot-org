@@ -262,7 +262,7 @@ FirebaseStorage.readRecords = function(
 
   const countersRef = getDatabase().child('counters/tables/');
   countersRef.once('value', countersSnapshot => {
-    if (!countersSnapshot.val()[tableName]) {
+    if (!countersSnapshot.val() || !countersSnapshot.val()[tableName]) {
       onSuccess(null);
       return;
     }
