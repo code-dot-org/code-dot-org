@@ -102,8 +102,7 @@ export default class LevelFeedbackEntry extends Component {
       unitName,
       created_at,
       comment,
-      performance,
-      performance_details
+      performance
     } = this.props.feedback;
 
     const seenByStudent = seen_on_feedback_page_at || student_first_visited_at;
@@ -132,7 +131,7 @@ export default class LevelFeedbackEntry extends Component {
     };
 
     let rubricText = `${i18n.feedbackRubricEvaluation()}:
-    ${rubricPerformance[performance]} - ${performance_details}`;
+    ${rubricPerformance[performance]}`;
 
     const showRightCaret = this.longComment() && !this.state.expanded;
     const showDownCaret = this.longComment() && this.state.expanded;
