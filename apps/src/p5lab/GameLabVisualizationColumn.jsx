@@ -6,7 +6,7 @@ import classNames from 'classnames';
 import GameButtons from '@cdo/apps/templates/GameButtons';
 import ArrowButtons from '@cdo/apps/templates/ArrowButtons';
 import BelowVisualization from '@cdo/apps/templates/BelowVisualization';
-import {GAME_HEIGHT, GAME_WIDTH} from './constants';
+import {APP_HEIGHT, APP_WIDTH} from './constants';
 import {GAMELAB_DPAD_CONTAINER_ID} from './gamelab/constants';
 import CompletionButton from '@cdo/apps/templates/CompletionButton';
 import ProtectedStatefulDiv from '@cdo/apps/templates/ProtectedStatefulDiv';
@@ -35,7 +35,7 @@ const styles = {
     marginTop: 10
   },
   selectStyle: {
-    width: GAME_WIDTH
+    width: APP_WIDTH
   }
 };
 
@@ -109,8 +109,8 @@ class GameLabVisualizationColumn extends React.Component {
     } else if (
       mouseX < 0 ||
       mouseY < 0 ||
-      mouseX > GAME_WIDTH ||
-      mouseY > GAME_HEIGHT
+      mouseX > APP_WIDTH ||
+      mouseY > APP_HEIGHT
     ) {
       // Render placeholder space so layout is stable.
       return <div>&nbsp;</div>;
@@ -141,8 +141,8 @@ class GameLabVisualizationColumn extends React.Component {
     const {isResponsive, isShareView} = this.props;
     const divGameLabStyle = {
       touchAction: 'none',
-      width: GAME_WIDTH,
-      height: GAME_HEIGHT
+      width: APP_WIDTH,
+      height: APP_HEIGHT
     };
     if (this.props.pickingLocation) {
       divGameLabStyle.zIndex = MODAL_Z_INDEX;
@@ -161,8 +161,8 @@ class GameLabVisualizationColumn extends React.Component {
             elementRef={el => (this.divGameLab = el)}
           />
           <VisualizationOverlay
-            width={GAME_WIDTH}
-            height={GAME_HEIGHT}
+            width={APP_WIDTH}
+            height={APP_HEIGHT}
             onMouseMove={this.onMouseMove}
           >
             <GridOverlay show={this.props.showGrid} showWhileRunning={true} />
