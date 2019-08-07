@@ -2,13 +2,13 @@
 var utils = require('@cdo/apps/utils');
 
 /** @enum {string} */
-module.exports.GameLabInterfaceMode = utils.makeEnum('CODE', 'ANIMATION');
+module.exports.P5LabInterfaceMode = utils.makeEnum('CODE', 'ANIMATION');
 
 /** @const {number} */
-module.exports.GAME_WIDTH = 400;
+module.exports.APP_WIDTH = 400;
 
 /** @const {number} */
-module.exports.GAME_HEIGHT = 400;
+module.exports.APP_HEIGHT = 400;
 
 /**
  * DataURL for a 1x1 transparent gif image.
