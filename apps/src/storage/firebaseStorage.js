@@ -261,8 +261,10 @@ FirebaseStorage.readRecords = function(
   tableName = fixTableName(tableName, onError);
 
   const countersRef = getDatabase().child('counters/tables/');
+  // First, check if table exists using counters/tables/ as source of truth
   countersRef.once('value', countersSnapshot => {
     if (!countersSnapshot.val() || !countersSnapshot.val()[tableName]) {
+      // Table doesn't exist. Return null instead of [] so we can show an error
       onSuccess(null);
       return;
     }
