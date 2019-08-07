@@ -4,7 +4,7 @@ import {forEveryBooleanPermutation} from '../../util/testUtils';
 import {
   allowAnimationMode,
   showVisualizationHeader
-} from '@cdo/apps/p5lab/gamelab/stateQueries';
+} from '@cdo/apps/p5lab/stateQueries';
 
 describe('stateQueries', function() {
   describe('allowAnimationMode', function() {

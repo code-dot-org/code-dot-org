@@ -1,15 +1,15 @@
-var actions = require('@cdo/apps/p5lab/gamelab/actions');
+var actions = require('@cdo/apps/p5lab/actions');
 var {
   clearConsole,
   addConsoleMessage
-} = require('@cdo/apps/p5lab/gamelab/textConsoleModule');
+} = require('@cdo/apps/p5lab/spritelab/textConsoleModule');
 var createStore = require('../../util/redux').createStore;
 var combineReducers = require('redux').combineReducers;
 import {expect} from '../../util/configuredChai';
 var _ = require('lodash');
-var GameLabInterfaceMode = require('@cdo/apps/p5lab/gamelab/constants')
+var GameLabInterfaceMode = require('@cdo/apps/p5lab/constants')
   .GameLabInterfaceMode;
-var gamelabReducers = require('@cdo/apps/p5lab/gamelab/reducers');
+var gamelabReducers = require('@cdo/apps/p5lab/reducers');
 var commonReducers = require('@cdo/apps/redux/commonReducers');
 var pageConstants = require('@cdo/apps/redux/pageConstants');
 
