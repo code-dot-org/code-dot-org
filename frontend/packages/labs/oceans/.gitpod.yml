@@ -1,11 +1,10 @@
 ports:
 - port: 8080
+  onOpen: open-preview
 tasks:
 - init: >
     nvm install &&
     nvm use &&
     npm install
-- command: >
+  command: >
     npm run dev
-- command: >
-    gp await-port 8080 && gp preview $(gp url 8080)
