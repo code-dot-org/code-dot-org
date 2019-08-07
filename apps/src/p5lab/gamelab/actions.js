@@ -6,6 +6,7 @@ import {
   show,
   Goal
 } from './AnimationPicker/animationPickerModule';
+import {setAllowInstructionsResize} from '../../redux/instructions';
 import {GameLabInterfaceMode} from './constants';
 
 /** @enum {string} */
@@ -41,6 +42,9 @@ export function changeInterfaceMode(interfaceMode, spritelabDraw) {
       dispatch(show(Goal.NEW_ANIMATION));
       dispatch(pickNewAnimation());
     }
+    dispatch(
+      setAllowInstructionsResize(interfaceMode === GameLabInterfaceMode.CODE)
+    );
   };
 }
 
