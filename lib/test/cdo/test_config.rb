@@ -18,7 +18,7 @@ YAML
     config.load_configuration(file)
     assert_equal 'value', config.key
     assert_equal 'b', config.a
-    assert_equal 'new', config.nil_key
+    assert_nil config.nil_key
   end
 
   def test_erb
