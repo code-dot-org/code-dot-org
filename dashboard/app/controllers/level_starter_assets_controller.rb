@@ -22,6 +22,16 @@ class LevelStarterAssetsController < ApplicationController
     render json: {starter_assets: starter_assets}
   end
 
+  # GET /level_starter_assets/:id/:filename
+  # Returns requested file body as an IO stream.
+  def file
+    path = prefix("#{params[:id]}/#{params[:filename]}.#{params[:format]}")
+    file_obj = bucket.object(path)
+    filename = filename(params[:id], file_obj)
+    content_type = file_content_type(File.extname(filename))
+    send_data file_obj.get.body.read, type: content_type, disposition: 'inline'
+  end
+
   private
 
   def filename(id, file_obj)
@@ -30,6 +40,10 @@ class LevelStarterAssetsController < ApplicationController
 
   def file_mime_type(extension)
     MIME::Types.type_for(extension)&.first&.raw_media_type
+  end
+
+  def file_content_type(extension)
+    MIME::Types.type_for(extension)&.first&.content_type
   end
 
   def prefix(id)
