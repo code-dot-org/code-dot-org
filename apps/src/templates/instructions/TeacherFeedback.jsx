@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import Button from '@cdo/apps/templates/Button';
-import moment from 'moment/moment';
+import {UnlocalizedTimeAgo as TimeAgo} from '@cdo/apps/templates/TimeAgo';
 import PropTypes from 'prop-types';
 import queryString from 'query-string';
 import color from '@cdo/apps/util/color';
@@ -329,13 +329,11 @@ export class TeacherFeedback extends Component {
                 </div>
               )}
               {this.state.latestFeedback.length > 0 && (
-                <div style={timeStyle} id="ui-test-feedback-time">
-                  {i18n.lastUpdated({
-                    time: moment
-                      .min(moment(), moment(latestFeedback.created_at))
-                      .fromNow()
-                  })}
-                </div>
+                <TimeAgo
+                  style={timeStyle}
+                  dateString={latestFeedback.created_at}
+                  id="ui-test-feedback-time"
+                />
               )}
             </div>
           </div>
