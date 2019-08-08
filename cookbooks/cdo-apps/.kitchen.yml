@@ -19,6 +19,15 @@ platforms:
         branch: <%= `git rev-parse --abbrev-ref HEAD` %>
     run_list:
       - recipe[cdo-apps]
+  - name: ubuntu-18.04
+    driver:
+      image: dokken/ubuntu-18.04
+      pid_one_command: /sbin/init
+    attributes:
+      cdo-repository:
+        branch: <%= `git rev-parse --abbrev-ref HEAD` %>
+    run_list:
+      - recipe[cdo-apps]
 suites:
   - name: default
   - name: daemon
