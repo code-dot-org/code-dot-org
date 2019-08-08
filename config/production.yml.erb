@@ -6,7 +6,6 @@ hoc_map_api_secret: !Secret
 hoc_map_service_account_email: !Secret
 hoc_map_table_id: !Secret
 level_sources_redis_url: !Secret
-mimeo_api: !Secret
 pardot_password: !Secret
 pardot_user_key: !Secret
 pardot_username: !Secret
@@ -19,8 +18,8 @@ slog_token: !Secret
 reporting_db_admin: !Secret
 
 <% unless name&.include?('console') %>
-  db_admin:
-  reporting_db_admin:
+db_admin:
+reporting_db_admin:
 <% end %>
 
 newrelic_logging: true
