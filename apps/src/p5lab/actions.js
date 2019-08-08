@@ -7,7 +7,7 @@ import {
   show,
   Goal
 } from './AnimationPicker/animationPickerModule';
-import {setAllowInstructionsResize} from '../../redux/instructions';
+import {setAllowInstructionsResize} from '../redux/instructions';
 import {GameLabInterfaceMode} from './constants';
 
 /** @enum {string} */
