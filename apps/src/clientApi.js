@@ -447,7 +447,7 @@ class StarterAssetsApi {
   getStarterAssets(levelChannelId, onSuccess, onFailure) {
     return ajaxInternal(
       'GET',
-      `/level_starter_assets/${levelChannelId}`,
+      this.withLevelChannelId(levelChannelId).basePath(''),
       onSuccess,
       onFailure
     );
@@ -461,6 +461,11 @@ class StarterAssetsApi {
 
   basePath(path) {
     return `/level_starter_assets/${this.channelId}/${path}`;
+  }
+
+  deleteFile(filename, success, error) {
+    throw new Error('not yet implemented');
+    // return ajaxInternal('DELETE', this.basePath(filename), success, error);
   }
 }
 
