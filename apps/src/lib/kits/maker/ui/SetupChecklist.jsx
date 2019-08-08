@@ -15,21 +15,25 @@ import {
   isLinux
 } from '../util/browserChecks';
 import ValidationStep, {Status} from '../../../ui/ValidationStep';
+import {BOARD_TYPE} from '../CircuitPlaygroundBoard';
 
 const STATUS_SUPPORTED_BROWSER = 'statusSupportedBrowser';
 const STATUS_APP_INSTALLED = 'statusAppInstalled';
 const STATUS_BOARD_PLUG = 'statusBoardPlug';
 const STATUS_BOARD_CONNECT = 'statusBoardConnect';
 const STATUS_BOARD_COMPONENTS = 'statusBoardComponents';
+const STATUS_BOARD_FIRMWARE = 'statusBoardFirmware';
 
 const initialState = {
   isDetecting: false,
   caughtError: null,
+  boardTypeDetected: BOARD_TYPE.OTHER,
   [STATUS_SUPPORTED_BROWSER]: Status.WAITING,
   [STATUS_APP_INSTALLED]: Status.WAITING,
   [STATUS_BOARD_PLUG]: Status.WAITING,
   [STATUS_BOARD_CONNECT]: Status.WAITING,
-  [STATUS_BOARD_COMPONENTS]: Status.WAITING
+  [STATUS_BOARD_COMPONENTS]: Status.WAITING,
+  [STATUS_BOARD_FIRMWARE]: Status.FAILED
 };
 
 export default class SetupChecklist extends Component {
@@ -99,6 +103,11 @@ export default class SetupChecklist extends Component {
         )
       )
 
+      // Detect the type of board to see whether firmware can be programmatically flashed
+      .then(() =>
+        this.setState({boardTypeDetected: setupChecker.detectBoardType()})
+      )
+
       // Everything looks good, let's par-tay!
       .then(() => this.thumb(STATUS_BOARD_COMPONENTS))
       .then(() => setupChecker.celebrate())
@@ -138,6 +147,19 @@ export default class SetupChecklist extends Component {
         this.fail(stepKey);
         return Promise.reject(error);
       });
+  }
+
+  /**
+   * Update the firmware on the attached board. Currently, only the CPClassic can be flashed.
+   * @return {Promise}
+   */
+  updateBoardFirmware() {
+    return window.MakerBridge.flashBoardFirmware({
+      boardName: 'circuit-playground-classic',
+      hexPath:
+        'https://s3.amazonaws.com/downloads.code.org/maker/CircuitPlaygroundFirmata.ino.circuitplay32u4.hex',
+      checksum: '766c4fad9088037ab4839b18292be8b1'
+    }).then(() => this.setState({[STATUS_BOARD_FIRMWARE]: Status.SUCCEEDED}));
   }
 
   /**
@@ -314,6 +336,17 @@ export default class SetupChecklist extends Component {
             </a>
             .{this.contactSupport()}
           </ValidationStep>
+          {this.state.boardTypeDetected === BOARD_TYPE.CLASSIC && (
+            <ValidationStep
+              stepStatus={this.state[STATUS_BOARD_FIRMWARE]}
+              stepName="Board firmware up to date"
+            >
+              Update the board
+              <button type="button" onClick={() => this.updateBoardFirmware()}>
+                Click here to update the firmware
+              </button>
+            </ValidationStep>
+          )}
         </div>
         <div>
           <h2>{i18n.support()}</h2>
