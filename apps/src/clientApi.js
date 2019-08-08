@@ -453,8 +453,14 @@ class StarterAssetsApi {
     );
   }
 
+  withLevelChannelId(channelId) {
+    var boundApi = new this.constructor();
+    boundApi.channelId = channelId;
+    return boundApi;
+  }
+
   basePath(path) {
-    throw new Error('not yet implemented');
+    return `/level_starter_assets/${this.channelId}/${path}`;
   }
 }
 
