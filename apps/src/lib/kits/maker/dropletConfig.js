@@ -47,21 +47,20 @@ export function getBoardEventDropdownForParam(firstParam) {
   const wrapInQuotes = e => `"${e}"`;
   const idealOptions = COMPONENT_EVENTS[firstParam];
   if (Array.isArray(idealOptions)) {
-    return _.chain(idealOptions)
-      .sort()
-      .sortedUniq()
-      .map(wrapInQuotes)
-      .value();
+    return _.flow(
+      _.sortBy,
+      _.sortedUniq,
+      _.map(wrapInQuotes)
+    )(idealOptions);
   }
 
   // If we can't find an ideal subset, use all possible
-  return _.chain(COMPONENT_EVENTS)
-    .values()
-    .flatten()
-    .sort()
-    .sortedUniq()
-    .map(wrapInQuotes)
-    .value();
+  return _.flow(
+    _.flatten,
+    _.sortBy,
+    _.sortedUniq,
+    _.map(wrapInQuotes)
+  )(COMPONENT_EVENTS);
 }
 
 // We don't want these to show up as blocks (because that interferes with

@@ -39,11 +39,13 @@ class SectionProjectsList extends Component {
   }
 
   static getStudentNames(projectsData) {
-    return _(projectsData)
-      .map(p => p.studentName)
-      .uniq()
-      .sortBy()
-      .value();
+    const result = _.flow(
+      _.map(p => p.studentName),
+      _.uniq,
+      _.sortBy
+    )(projectsData);
+
+    return result;
   }
 
   onChangeStudent(selectedStudent) {
