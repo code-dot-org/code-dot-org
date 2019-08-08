@@ -41,6 +41,10 @@ class CollectionsApi {
     return boundApi;
   }
 
+  getProjectId() {
+    return this.projectId || project().getCurrentId();
+  }
+
   // NOTE: path parameter as supplied should not be URI encoded, as it will be
   // URI encoded in this function...
   basePath(path) {
@@ -49,11 +53,7 @@ class CollectionsApi {
       // encode all characters except forward slashes
       encodedPath = encodeURIComponent(path).replace(/%2F/g, '/');
     }
-    return apiPath(
-      this.collectionType,
-      this.projectId || project().getCurrentId(),
-      encodedPath
-    );
+    return apiPath(this.collectionType, this.getProjectId(), encodedPath);
   }
 
   ajax(method, file, success, error, data) {
@@ -120,10 +120,7 @@ class CollectionsApi {
 
 class AssetsApi extends CollectionsApi {
   copyAssets(sourceProjectId, assetFilenames, success, error) {
-    var path = apiPath(
-      'copy-assets',
-      this.projectId || project().getCurrentId()
-    );
+    var path = apiPath('copy-assets', this.getProjectId());
     path +=
       '?' +
       queryString.stringify({
@@ -222,10 +219,7 @@ class FilesApi extends CollectionsApi {
    * @param error {Function} callback when failed (includes xhr parameter)
    */
   getVersionHistory(success, error) {
-    var path = apiPath(
-      'files-version',
-      this.projectId || project().getCurrentId()
-    );
+    var path = apiPath('files-version', this.getProjectId());
     return ajaxInternal('GET', path, success, error);
   }
 
@@ -236,10 +230,7 @@ class FilesApi extends CollectionsApi {
    * @param error {Function} callback when failed (includes xhr parameter)
    */
   restorePreviousVersion(versionId, success, error) {
-    var path = apiPath(
-      'files-version',
-      this.projectId || project().getCurrentId()
-    );
+    var path = apiPath('files-version', this.getProjectId());
     path +=
       '?' +
       queryString.stringify({
