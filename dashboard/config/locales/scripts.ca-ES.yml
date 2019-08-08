@@ -365,10 +365,10 @@ ca:
             Jigsaw:
               name: Puzzle
         step:
-          title: pas
+          title: Un pas
           stages:
             Step:
-              name: pas
+              name: Un pas
         Hour of Code:
           title: Hora de codi 2013
           description_short: Prova els conceptes bàsics de la informàtica amb personatges
