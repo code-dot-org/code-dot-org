@@ -402,10 +402,6 @@ zh-TW:
           注意一個`計數`迴圈裡頭需要數個規律的重複積木，以重複 `counter` 次來製作出樓梯的模式。
 
           其它的`計數`迴圈只需要一個普通的重複積木以收集到 `counter` 個蜂蜜。
-        Course_4_SCFL_1_d: |-
-          **解決方案：**
-
-          ![Solution Blocks](https://images.code.org/1a61eae7e12742c8d850f2bf7e939f72-image-1469726415313.png)
       Course 4 SCFL 1a:
         Course_4_SCFL_1a_a: 盡可以減少積木的使用量，路還長得很呢！
         Course_4_SCFL_1a_b: |-
@@ -432,10 +428,6 @@ zh-TW:
           像素。"
         Course_4_SCFL_3_b: 筆刷的透明度固定都是 `counter`/2。
         Course_4_SCFL_3_c: 在你畫出一個正方形後，別忘了跳回去，轉向，再跳一次，再轉回去！
-        Course_4_SCFL_3_d: |-
-          **解決方案：**
-
-          ![Solution Blocks](https://images.code.org/7f14ddfa5cdcbfdfacd8b1e45511d583-image-1469726581880.png)
       Course 4 SCFL 4:
         Course_4_SCFL_4_a: 使用`設定顏色`積木，可以讓顏色改變，使用的是 RGB 顏色代碼。R（Red，紅）的值為 `counter`、G（Green，綠）的值為
           `255 - counter`、B（Blue，藍）的值則固定為 255。
@@ -446,10 +438,6 @@ zh-TW:
           `counter`、B（Blue，藍）的值為 `255 - counter`。
         Course_4_SCFL_6_b: 這個程式並沒有你想的這麼複雜，只需要設定好`計數迴圈`裡頭的顏色部分，然後向前移動，最後轉向。
         Course_4_SCFL_6_c: '這個`計數迴圈`是從 5 算到 250，間隔數是 2。 '
-        Course_4_SCFL_6_d: |-
-          **解決方案：**
-
-          ![Solution Blocks](https://images.code.org/a61c16d76d876d9c26ebcaebef3f97a2-image-1469726730055.png)
       Course 4 SCFL 7:
         Course_4_SCFL_7_a: 使用`設定顏色`積木，可以讓顏色改變，使用的是 Rgb 顏色代碼。R（Red，紅）的值為 `counter`、G（Green，綠）的值為
           `255 - counter`、B（Blue，藍）的值則固定為 255。
@@ -905,6 +893,20 @@ zh-TW:
         courseA_collector_loops_challenge1_b: 如果你只要執行某段指令一次，就不需要用到迴圈。
         courseA_collector_loops_challenge1_c: 右邊的洞穴有 6 個寶石，而你只需移動並收集 5 次，你知道怎麼做嗎？
       course1_collector_loops_challenge3:
+        courseB_collector_loops_challenge1_c: |-
+          只要 8 個積木就可以搞定！你必須把`重複`積木放到另一個`積木`裡。點擊以取得更多提示。
+          <xml>
+          <block type="controls_repeat_simplified">
+                  <title name="TIMES">?</title>
+                  <statement name="DO">
+
+                        <block type="controls_repeat_simplified">
+                          <title name="TIMES">?</title>
+                          <statement name="DO">
+                          </statement></block><next><block type="controls_repeat_simplified">
+                          <title name="TIMES">?</title>
+                          <statement name="DO">
+                          </statement></block></next></statement></block></xml>
         courseB_collector_loops_challenge1_d: |-
           試試這個！
           <xml>
@@ -2707,19 +2709,11 @@ zh-TW:
           50 像素。"
         courseF_artist_for_challenge1_b: 筆刷的透明度固定都是 `counter`/2。
         courseF_artist_for_challenge1_c: 在你畫出一個正方形後，別忘了跳回去，轉向，再跳一次，再轉回去！
-        courseF_artist_for_challenge1_d: |-
-          **解決方案：**
-
-          ![Solution Blocks](https://images.code.org/7f14ddfa5cdcbfdfacd8b1e45511d583-image-1469726581880.png)
       courseF_artist_for_challenge1_2019:
         courseF_artist_for_challenge1_a: "`pen width`（筆跡寬度）是 1。而第一個正方形的邊長是 50 像素，每個正方形之間的邊長差了
           50 像素。"
         courseF_artist_for_challenge1_b: 筆刷的透明度固定都是 `counter`/2。
         courseF_artist_for_challenge1_c: 在你畫出一個正方形後，別忘了跳回去，轉向，再跳一次，再轉回去！
-        courseF_artist_for_challenge1_d: |-
-          **解決方案：**
-
-          ![Solution Blocks](https://images.code.org/7f14ddfa5cdcbfdfacd8b1e45511d583-image-1469726581880.png)
       courseF_artist_for_challenge2:
         courseF_artist_for_challenge2_c: '這個`計數迴圈`是從 5 算到 250，間隔數是 2。 '
         courseF_artist_for_challenge2_a: 使用`設定顏色`積木，可以讓顏色改變，使用的是 Rgb 顏色代碼。R（Red，紅）的值固定為
@@ -2854,10 +2848,6 @@ zh-TW:
           注意一個`計數`迴圈裡頭需要數個規律的重複積木，以重複 `counter` 次來製作出樓梯的模式。
 
           其它的`計數`迴圈只需要一個普通的重複積木以收集到 `counter` 個蜂蜜。
-        courseF_bee_for_challenge2_d: |-
-          **解決方案：**
-
-          ![Solution Blocks](https://images.code.org/1a61eae7e12742c8d850f2bf7e939f72-image-1469726415313.png)
       courseF_bee_for_challenge2_2019:
         courseF_bee_for_challenge2_a: |-
           看看可用的移動方式：
@@ -2868,10 +2858,6 @@ zh-TW:
           注意一個`計數`迴圈裡頭需要數個規律的重複積木，以重複 `counter` 次來製作出樓梯的模式。
 
           其它的`計數`迴圈只需要一個普通的重複積木以收集到 `counter` 個蜂蜜。
-        courseF_bee_for_challenge2_d: |-
-          **解決方案：**
-
-          ![Solution Blocks](https://images.code.org/1a61eae7e12742c8d850f2bf7e939f72-image-1469726415313.png)
       courseF_bee_functions3:
         courseF_bee_functions3_d: 探查這條道路。
       courseF_bee_functions6:

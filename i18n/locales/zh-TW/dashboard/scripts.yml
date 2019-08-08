@@ -5369,3 +5369,11 @@ zh-TW:
               name: 和 BB-8 與 Rey 一起寫程式
             Loops in Ice Age:
               name: 冰河歷險紀中的迴圈
+        dlp19-csd-mod-fit:
+          stages:
+            Deeper Learning Overview:
+              name: 深度學習概覽
+        dlp19-csp-mod-fit:
+          stages:
+            Deeper Learning Overview:
+              name: 深度學習概覽
