@@ -250,6 +250,7 @@ module LevelsHelper
 
     if @script_level && @level.can_have_feedback?
       @app_options[:serverScriptLevelId] = @script_level.id
+      @app_options[:verifiedTeacher] = current_user && current_user.authorized_teacher?
     end
 
     # Blockly caches level properties, whereas this field depends on the user

@@ -59,10 +59,11 @@ level 'CSD U2L07 TFMD_pilot', named: true
 level 'CSD U2 Image Tag 1_pilot', progression: 'Adding Images'
 level 'CSD U2 Image Credit_pilot', progression: 'Adding Images'
 level 'CSD U2 Image Tag Debug_pilot', progression: 'Adding Images'
-level 'CSD U2 image debug match_pilot', progression: 'Adding Images'
+level 'CSD U2 Image choose name', progression: 'Adding Images'
 level 'CSD U2 Image Tag 2_pilot', progression: 'Adding Images'
 level 'CSD U2 Image practice_pilot', progression: 'Adding Images'
-level 'CSD U2 Image challenge_pilot', progression: 'Adding Images'
+level 'CSD U2 Image assessment', progression: 'Adding Images', assessment: true
+level 'CSD U2 Image challenge_pilot', progression: 'Adding Images Challenges', named: true
 
 stage 'Websites for Expression ', flex_category: 'csd2_1'
 level 'CSD U2L02 TFMD_pilot', named: true
