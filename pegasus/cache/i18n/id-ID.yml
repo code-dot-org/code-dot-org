@@ -2057,6 +2057,10 @@ id-ID:
     Peramban kamu ke <a href='%{supported_browsers_url}', target='_blank'> salah satu
     peramban yang didukung</a> kami. kamu bisa mencoba melihat halaman, akan tetapi
     beberapa fungsi tidak dapat bekerja.
+  compatibility_unsupported_browser_markdown: Peramban kamu tidak didukung. Harap
+    tingkatkan Peramban kamu ke <a href='%{supported_browsers_url}', target='_blank'>
+    salah satu peramban yang didukung</a> kami. kamu bisa mencoba melihat halaman,
+    akan tetapi beberapa fungsi tidak dapat bekerja.
   flappy_shortcode: kepakkan
   header_home: Beranda
   header_my_dashboard: Dasbor saya
