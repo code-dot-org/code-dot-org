@@ -13,7 +13,7 @@ class FindRelatedWorkshopTests < ActiveSupport::TestCase
 
     default_props = {
       course: Pd::Workshop::COURSE_CSD,
-      subject: Pd::Workshop::SUBJECT_CSD_UNITS_2_3,
+      subject: Pd::Workshop::SUBJECT_CSD_WORKSHOP_1,
       num_sessions: 1,
       sessions_from: Date.new(2018, 7, 1),
       started_at: Date.today
