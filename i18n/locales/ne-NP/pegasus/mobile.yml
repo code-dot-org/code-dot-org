@@ -1217,6 +1217,7 @@
   sphero_beyond_longdescription: "Whether you're an educator or a parent, SPRK lessons give kids a fun crash course in programming robots while sharpening their skills in math and science."
   compatibility_hide_this_warning: "Hide this warning"
   compatibility_unsupported_browser: "Your browser is not supported. Please upgrade your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken."
+  compatibility_unsupported_browser_markdown: "Your browser is not supported. Please upgrade your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken."
   flappy_shortcode: "flap"
   header_courses: "पाठ्यक्रम"
   header_project_gallery: "Projects"
