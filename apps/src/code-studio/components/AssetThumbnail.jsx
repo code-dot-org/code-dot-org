@@ -59,13 +59,16 @@ class AssetThumbnail extends React.Component {
     iconStyle: PropTypes.object,
     api: PropTypes.object,
     projectId: PropTypes.string,
+    levelChannelId: PropTypes.string,
     soundPlayer: PropTypes.object
   };
 
   constructor(props) {
     super(props);
     let api = this.props.api;
-    if (this.props.projectId) {
+    if (this.props.levelChannelId) {
+      api = api.withLevelChannelId(this.props.levelChannelId);
+    } else if (this.props.projectId) {
       api = api.withProjectId(this.props.projectId);
     }
     const basePath = api.basePath(this.props.name);
