@@ -7,6 +7,7 @@ import {
   show,
   Goal
 } from './AnimationPicker/animationPickerModule';
+import {setAllowInstructionsResize} from '../redux/instructions';
 import {P5LabInterfaceMode} from './constants';
 
 /** @enum {string} */
@@ -45,6 +46,9 @@ export function changeInterfaceMode(interfaceMode, spritelabDraw) {
       dispatch(show(Goal.NEW_ANIMATION));
       dispatch(pickNewAnimation());
     }
+    dispatch(
+      setAllowInstructionsResize(interfaceMode === P5LabInterfaceMode.CODE)
+    );
   };
 }
 
