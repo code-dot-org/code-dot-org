@@ -33,7 +33,7 @@ const initialState = {
   [STATUS_BOARD_PLUG]: Status.WAITING,
   [STATUS_BOARD_CONNECT]: Status.WAITING,
   [STATUS_BOARD_COMPONENTS]: Status.WAITING,
-  [STATUS_BOARD_FIRMWARE]: Status.FAILED
+  [STATUS_BOARD_FIRMWARE]: Status.ALERT
 };
 
 export default class SetupChecklist extends Component {
