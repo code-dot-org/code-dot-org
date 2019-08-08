@@ -5,9 +5,11 @@ import CourseCard from './CourseCard';
 import SetUpCourses from './SetUpCourses';
 import SeeMoreCourses from './SeeMoreCourses';
 import TopCourse from './TopCourse';
+import ViewFeedback from './ViewFeedback';
 import styleConstants from '../../styleConstants';
 import i18n from '@cdo/locale';
 import shapes from './shapes';
+import experiments from '@cdo/apps/util/experiments';
 
 const contentWidth = styleConstants['content-width'];
 
@@ -24,11 +26,12 @@ export default class RecentCourses extends Component {
   static propTypes = {
     courses: shapes.courses,
     topCourse: shapes.topCourse,
-    isTeacher: PropTypes.bool.isRequired
+    isTeacher: PropTypes.bool.isRequired,
+    hasFeedback: PropTypes.bool
   };
 
   render() {
-    const {courses, topCourse, isTeacher} = this.props;
+    const {courses, topCourse, isTeacher, hasFeedback} = this.props;
     const topFourCourses = courses.slice(0, 4);
     const moreCourses = courses.slice(4);
     const hasCourse = courses.length > 0 || topCourse !== null;
@@ -58,6 +61,9 @@ export default class RecentCourses extends Component {
             </div>
           )}
           {moreCourses.length > 0 && <SeeMoreCourses courses={moreCourses} />}
+          {experiments.isEnabled(experiments.FEEDBACK_NOTIFICATION) &&
+            !isTeacher &&
+            hasFeedback && <ViewFeedback />}
           <SetUpCourses isTeacher={isTeacher} hasCourse={hasCourse} />
         </ContentContainer>
       </div>
