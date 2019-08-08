@@ -44,9 +44,6 @@ const styles = {
   }
 };
 
-// TODO: move to redux
-const LEVEL_CHANNEL_ID = 1;
-
 /**
  * A component for managing hosted assets.
  */
@@ -60,6 +57,7 @@ export default class AssetManager extends React.Component {
     soundPlayer: PropTypes.object,
     disableAudioRecording: PropTypes.bool,
     projectId: PropTypes.string,
+    levelChannelId: PropTypes.number,
 
     // For logging purposes
     imagePicker: PropTypes.bool, // identifies if displayed by 'Manage Assets' flow
@@ -78,13 +76,15 @@ export default class AssetManager extends React.Component {
   }
 
   componentWillMount() {
-    // TODO: replace with this.props.levelChannelId
-    // TODO: set starterAssets to [] if no levelChannelId
-    starterAssetsApi.getStarterAssets(
-      LEVEL_CHANNEL_ID,
-      this.onStarterAssetsReceived,
-      this.onStarterAssetsFailure
-    );
+    if (this.props.levelChannelId) {
+      starterAssetsApi.getStarterAssets(
+        this.props.levelChannelId,
+        this.onStarterAssetsReceived,
+        this.onStarterAssetsFailure
+      );
+    } else {
+      this.setState({starterAssets: []});
+    }
 
     // Request to files/assets API will fail if no projectId is present, so only
     // request files if we have a projectId.
@@ -223,7 +223,13 @@ export default class AssetManager extends React.Component {
   };
 
   getStarterAssetRows = () => {
-    const boundApi = starterAssetsApi.withLevelChannelId(LEVEL_CHANNEL_ID);
+    if (!this.props.levelChannelId) {
+      return null;
+    }
+
+    const boundApi = starterAssetsApi.withLevelChannelId(
+      this.props.levelChannelId
+    );
     return this.state.starterAssets.map(asset => {
       return (
         <AssetRow
@@ -231,7 +237,7 @@ export default class AssetManager extends React.Component {
           api={boundApi}
           onChoose={() => console.log('choose!')}
           onDelete={() => console.log('delete!')}
-          levelChannelId={LEVEL_CHANNEL_ID}
+          levelChannelId={this.props.levelChannelId}
         />
       );
     });
