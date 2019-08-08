@@ -1397,6 +1397,7 @@
   sphero_beyond_longdescription: "Se você é educador ou pai, as lições do SPRK dão às crianças um curso divertido sobre programação de robôs, e, ao mesmo tempo, melhoram habilidades de matemática e ciências."
   compatibility_hide_this_warning: "Ocultar este aviso"
   compatibility_unsupported_browser: "Seu navegador não é compatível. Atualize seu navegador para <a href='%{supported_browsers_url}', target='_blank'> um dos nossos navegadores compatíveis</a>. Você pode tentar visualizar a página, mas é possível que algumas funcionalidades não funcionem."
+  compatibility_unsupported_browser_markdown: "Seu navegador não é compatível. Atualize seu navegador para <a href='%{supported_browsers_url}', target='_blank'> um dos nossos navegadores compatíveis</a>. Você pode tentar visualizar a página, mas é possível que algumas funcionalidades não funcionem."
   flappy_shortcode: "bata asas"
   header_home: "Início"
   header_my_dashboard: "Meu painel de Controle"

@@ -648,7 +648,6 @@
   "feedbackNotificationButton": "Melihat feedback",
   "feedbackNotificationDetails": "Anda memiliki {numFeedbackLevels} level dengan feedback tidak terbaca.",
   "feedbackNotificationLesson": "",
-  "feedbackNotificationLevel": "",
   "feedbackNotificationUnit": "",
   "feedbackPlaceholder": "Silakan masukkan umpan balik untuk mahasiswa Anda di sini. Ini akan menjadi terlihat oleh mahasiswa saat mengeklik 'Simpan dan berbagi'.",
   "feedbackSaveError": "Telah terjadi kesalahan menyimpan umpan balik Anda. Silakan coba untuk menyimpan lagi.",

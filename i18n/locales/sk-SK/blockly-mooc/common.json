@@ -648,7 +648,6 @@
   "feedbackNotificationButton": "",
   "feedbackNotificationDetails": "",
   "feedbackNotificationLesson": "",
-  "feedbackNotificationLevel": "",
   "feedbackNotificationUnit": "",
   "feedbackPlaceholder": "Sem zadajte prosím spätnú väzbu pre študenta. Tá sa študentovi zobrazí po kliknutí na \"Uložiť a zdielať\".",
   "feedbackSaveError": "Pri ukladaní spätnej väzby nastala chyba. Skúste ju, prosím, uložiť znova.",

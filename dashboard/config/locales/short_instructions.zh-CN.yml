@@ -453,6 +453,7 @@ zh-CN:
       Virtual Pet 6: 添加一个苹果，这个苹果可以在与长颈鹿相碰时使长颈鹿回到原来的尺寸。
       Virtual Pet 8_2019: '自由发挥：你的长颈鹿还能做些什么呢？ '
       Virtual Pet Freeplay: '自由发挥：你的长颈鹿还能做些什么呢？ '
+      'Widget: Text Compression': 在文本中找到规律（如重复的单词或词组）。在右侧的词典中输入你所发现的规律。当你将其输入到字典中时，以文本形式表现的规律就会用符号替代。
       bounce_1: 在“当按左方向键时”模块下面添加模块，然后按“运行”。使用左方向键来移动挡板来到达终点目标。
       bounce_10: 顶部有一个目标。添加 "得分点" 和 "得分对手点" 方块到"当球在球门" 和 "当球错过桨" 方块，来做一个游戏。看看你能在对手得分两次之前得分多少分。
       bounce_10_basketball: 现在，目标在顶部！将"得分"和"对手得分"模块附加到到“当进球得分”和"当球未命中手"块来制作游戏。看看在对手获得两分前，你可以获得多少分。
@@ -591,6 +592,7 @@ zh-CN:
       courseA_collector_loops_challenge1: _"你能帮我找出一些错误吗？"_
       courseA_collector_loops_challenge1_2018: _"你能帮我找出一些错误吗？"_
       courseA_collector_loops_challenge1_2019: _"你能帮我找出一些错误吗？"_
+      courseA_collector_loops_challenge2: '得到所有的宝藏！ '
       courseA_collector_loops_challenge2kp: 收集至少 **3** 件的宝藏通过这个关。
       courseA_collector_loops_challenge2kp_2018: 收集至少 **3** 件的宝藏通过这个关。
       courseA_collector_loops_challenge2kp_2019: 收集至少 **3** 件的宝藏通过这个关。

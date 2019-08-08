@@ -648,7 +648,6 @@
   "feedbackNotificationButton": "",
   "feedbackNotificationDetails": "",
   "feedbackNotificationLesson": "",
-  "feedbackNotificationLevel": "",
   "feedbackNotificationUnit": "",
   "feedbackPlaceholder": "Пожалуйста, введите отзыв для вашего студента. Это станет видимым для студента, когда вы нажимаете на кнопку «Сохранить и поделиться».",
   "feedbackSaveError": "Произошла ошибка при сохранении вашего отзыва. Пожалуйста, попробуйте сохранить еще раз.",

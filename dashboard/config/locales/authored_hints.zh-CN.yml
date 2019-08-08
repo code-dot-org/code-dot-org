@@ -270,6 +270,62 @@ zh-CN:
       Course 4 Artist 12:
         Course_4_Artist_12_a: '每个重复的形状都是**半个六边形**的组合，跟着**2/3个三角形**。 '
         Course_4_Artist_12_b: '这个单元的形状几乎和上一关是一样的，只是半个六边形有点大。 '
+        Course_4_Artist_12_d: |-
+          \*\* 解决方案: \*
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="collector_collect">
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       Course 4 Artist 6:
         Course_4_Artist_6_a: 旋转360度会有3个三角形... 360除以3等于多少呢？
       Course 4 Artist 8a:
@@ -289,6 +345,62 @@ zh-CN:
         Course_4_Artist_Binary_Free_Play_2b_b: 每个“计数循环”都重复3次。第一个绘制最左边的1，第二个绘制中间的0，第三个绘制右边的1。
         Course_4_Artist_Binary_Free_Play_2b_c: 在每个循环中，你要对'counter(计数器)'画1，对 `16-(2
           x counter)`画0
+        Course_4_Artist_Binary_Free_Play_2b_d: |-
+          \*\* 解决方案: \*
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="collector_collect">
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       Course 4 Artist For Loops 11:
         Course_4_Artist_For_Loops_11_a: "每个图型之后转角角度都会改变！ \n\n通过数学模块输入360度除以图形的边数而得到正确的转角角度。 "
       Course 4 Artist For Loops 11a:
@@ -337,6 +449,62 @@ zh-CN:
       Course 4 Artist Functions Inspiration:
         Course_4_Artist_Functions_Inspiration_a: 接着上一个关卡的程式继续编程，在重复循环里新增一个“向右转”三度的指令。
         Course_4_Artist_Functions_Inspiration_b: 尝试将转角度数大于90度，跳出重复循环，但仍在计数循环之内。
+        Course_4_Artist_Functions_Inspiration_c: |-
+          \*\* 解决方案: \*
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="collector_collect">
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       Course 4 Artist Functions challenge:
         Course_4_Artist_Functions_challenge_a: 理解如何使用函数的其中一点是弄清楚哪些函数是自己需要的，哪些是不需要的。
         Course_4_Artist_Functions_challenge_b: 使用一个计数循环，用其计数器所为内部嵌套的重复循环的变量。
@@ -346,6 +514,62 @@ zh-CN:
         Course_4_Artist_Inspire_a: 当绘制完成一个正方形后，在转向和绘制另一个正方形之前，尝试先向前跳半个边长的距离。
         Course_4_Artist_Inspire_b: 绘制方形后跳转，以上动作重复循环四次(每次循环中间需左转)，可以得到一个完整的类似风车图案。
         Course_4_Artist_Inspire_c: 每个风车也重复四次，每次右转度数为:**360度/边数**。
+        Course_4_Artist_Inspire_d: |-
+          \*\* 解决方案: \*
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="collector_collect">
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       Course 4 Artist Vars 13:
         Course_4_Artist_Vars_13_a: 你需要两个重复循环(一个循环嵌套在另外一个循环里)，两个循环重复的次数均为“边数”。
         Course_4_Artist_Vars_13_b: "内部嵌套重复循环绘制一个八边型(左转)。 \n\n然后，你需要在外部循环前行并右转。"
@@ -377,26 +601,306 @@ zh-CN:
         Course_4_SCF_1_b: 每个六边形之间需平行跳转120像素。
         Course_4_SCF_1_c: "在你绘制第二排的六边形之前，你需要右转60度，然后向前跳转40像素。 \n\n一旦你到达正确的垂直位置，你需要再次转动小艺术家，向后跳转320像素。"
         Course_4_SCF_1_d: "在你绘制第三排的六边形之前，你需要右转60度，然后向前跳转40像素。 \n\n一旦你到达正确的垂直位置，你需要再次转动小艺术家，向后跳转440像素（比“向下/向前”函数多120像素）。 "
+        Course_4_SCF_1_e: |-
+          \*\* 解决方案: \*
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="collector_collect">
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       Course 4 SCF 1a:
         Course_4_SCF_1a_a: 记得从第16阶段开始使用过的函数。
         Course_4_SCF_1a_c: 您应该考虑使用计数循环。不是循环这些步骤，而是循环不同参数来调用函数。
+        Course_4_SCF_1a_d: |-
+          \*\* 解决方案: \*
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="collector_collect">
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       Course 4 SCF 1b:
         Course_4_SCF_1b_a: |-
           注意，所有蜂蜜位置的形状都是相似的。
 
           是个使用函数的好地方！
         Course_4_SCF_1b_c: 你应该考虑使用计数循环来计算蜜蜂旅行的距离。
+        Course_4_SCF_1b_d: |-
+          \*\* 解决方案: \*
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="collector_collect">
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       Course 4 SCF 2:
         Course_4_SCF_2_a: 每个八边形的边长都是40像素。
         Course_4_SCF_2_b: 每个八边形之间需水平跳转136像素
         Course_4_SCF_2_c: "当你画第二行八边形的之前，你需要向右转45度并且向前跳转96像素。 \n\n一旦你达到正确的垂直位置，你需要再次向后转小艺术家并且跳408像素。 "
         Course_4_SCF_2_d: "请注意，由于偶数行中的八角形较少，因此不必再跳到后面，就可以到达奇数行的起始位置。   \n\n这意味着您可以对所有行使用相同的函数。"
+        Course_4_SCF_2_e: |-
+          \*\* 解决方案: \*
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="collector_collect">
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       Course 4 SCF 3:
         Course_4_SCF_3_a: "![](https://images.code.org/52f474adbbc3bdd87aaae407c9ebf588-image-1515690462464.png)"
         Course_4_SCF_3_b: '这是一系列的八角形, 两侧是`counter`（计数器）像素长。 '
         Course_4_SCF_3_c: '每个八角形是从里面的一个`计数循环`, 从200到2，每次递减 2。 '
         Course_4_SCF_3_d: '在每次迭代结束时, 不要忘记转22.5 度的角度。 '
         Course_4_SCF_3_e: 每个八角形的颜色和钢笔的宽度都由 "计数器" 变量控制。
+        Course_4_SCF_3_f: |-
+          \*\* 解决方案: \*
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="collector_collect">
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       Course 4 SCFL 1:
         Course_4_SCFL_1_a: |-
           看看这个移动选项:
@@ -408,117 +912,44 @@ zh-CN:
 
           另一个`计数循环`循环只需要一个普通的循环来酿造`counter`（计数器）个蜂蜜。
         Course_4_SCFL_1_d: |-
-          **解决方案：**
+          \*\* 解决方案: \*
 
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
-          <block type="controls_for" inline="true">
-          <title name="VAR">counter</title>
-          <value name="FROM">
-          <block type="math_number">
-          <title name="NUM">1</title>
-          </block>
-          </value>
-          <value name="TO">
-          <block type="math_number">
-          <title name="NUM">3</title>
-          </block>
-          </value>
-          <value name="BY">
-          <block type="math_number">
-          <title name="NUM">1</title>
-          </block>
-          </value>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
           <statement name="DO">
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="variables_get">
-          <title name="VAR">counter</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="maze_moveForward"/>
-          </statement>
-          <next>
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="variables_get">
-          <title name="VAR">counter</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="maze_nectar"/>
-          </statement>
-          <next>
-          <block type="maze_turn">
-          <title name="DIR">向左转</title>
-          <next>
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="variables_get">
-          <title name="VAR">counter</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="maze_moveForward"/>
-          </statement>
-          <next>
-          <block type="maze_turn">
-          <title name="DIR">向右转</title>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
           </block>
           </statement>
           <next>
           <block type="maze_turn">
-          <title name="DIR">向右转</title>
+          <title name="DIR">turnLeft</title>
           <next>
-          <block type="maze_turn">
-          <title name="DIR">向右转</title>
-          <next>
-          <block type="controls_for" inline="true">
-          <title name="VAR">counter</title>
-          <value name="FROM">
-          <block type="math_number">
-          <title name="NUM">2</title>
-          </block>
-          </value>
-          <value name="TO">
-          <block type="math_number">
-          <title name="NUM">10</title>
-          </block>
-          </value>
-          <value name="BY">
-          <block type="math_number">
-          <title name="NUM">2</title>
-          </block>
-          </value>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
           <statement name="DO">
-          <block type="maze_moveForward">
+          <block type="collector_collect">
           <next>
-          <block type="maze_turn">
-          <title name="DIR">向左转</title>
-          <next>
-          <block type="maze_moveForward">
-          <next>
-          <block type="maze_turn">
-          <title name="DIR">向右转</title>
-          <next>
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="variables_get">
-          <title name="VAR">counter</title>
-          </block>
-          </value>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
           <statement name="DO">
-          <block type="maze_honey"/>
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
           </statement>
           </block>
           </next>
@@ -527,11 +958,7 @@ zh-CN:
           </block>
           </next>
           </block>
-          </next>
-          </block>
           </statement>
-          </block>
-          </next>
           </block>
           </next>
           </block>
@@ -547,12 +974,124 @@ zh-CN:
 
           \!\[] (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)
         Course_4_SCFL_1a_c: "`计数循环` 将帮助您执行相同的模式，但步骤数不断变化。请注意，所需步骤的数量从7开始，每次减1，直到 5。"
+        Course_4_SCFL_1a_d: |-
+          \*\* 解决方案: \*
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="collector_collect">
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       Course 4 SCFL 1b:
         Course_4_SCFL_1b_a: 试试使用“计数循环”
         Course_4_SCFL_1b_b: |-
           看看这个移动选项:
 
           \!\[] (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)
+        Course_4_SCFL_1b_c: |-
+          \*\* 解决方案: \*
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="collector_collect">
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       Course 4 SCFL 2:
         Course_4_SCFL_2_a: |-
           看看这个移动选项:
@@ -560,127 +1099,106 @@ zh-CN:
           \!\[] (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)
         Course_4_SCFL_2_b: 请注意，在`计数循环` 的每次迭代中，在你停止与目标互动后，都有3个点。
         Course_4_SCFL_2_c: 在`计数循环`的每次迭代中，每个对象的数字都与 `counter`（计数器）变量有某种关联。
+        Course_4_SCFL_2_d: |-
+          \*\* 解决方案: \*
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="collector_collect">
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       Course 4 SCFL 3:
         Course_4_SCFL_3_a: "·笔宽度·是1。第一个正方形有50像素边, 每个正方形比前一个宽50像素。"
         Course_4_SCFL_3_b: 画笔上的不透明度始终是 `counter`/2 （计数器/2）。
         Course_4_SCFL_3_c: 在你画了每个正方形后, 别忘了向后跳, 转身, 再跳, 然后回头!
         Course_4_SCFL_3_d: |-
-          \*\* 解决方案: \*\*
+          \*\* 解决方案: \*
 
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
-          <block type="draw_width" inline="false">
-          <value name="WIDTH">
-          <block type="math_number">
-          <title name="NUM">1</title>
-          </block>
-          </value>
-          <next>
-          <block type="draw_colour" inline="true" id="draw-color">
-          <value name="COLOUR">
-          <block type="colour_picker">
-          <title name="COLOUR">#0000cd</title>
-          </block>
-          </value>
-          <next>
-          <block type="controls_for_counter" inline="true">
-          <mutation counter="counter"></mutation>
-          <value name="FROM">
-          <block type="math_number">
-          <title name="NUM">50</title>
-          </block>
-          </value>
-          <value name="TO">
-          <block type="math_number">
-          <title name="NUM">350</title>
-          </block>
-          </value>
-          <value name="BY">
-          <block type="math_number">
-          <title name="NUM">50</title>
-          </block>
-          </value>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
           <statement name="DO">
-          <block type="alpha" inline="true" id="alpha">
-          <value name="VALUE">
-          <block type="math_arithmetic" inline="true">
-          <title name="OP">DIVIDE</title>
-          <value name="A">
-          <block type="variables_get">
-          <title name="VAR">counter</title>
-          </block>
-          </value>
-          <value name="B">
-          <block type="math_number">
-          <title name="NUM">2</title>
-          </block>
-          </value>
-          </block>
-          </value>
-          <next>
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="math_number">
-          <title name="NUM">4</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="draw_move" inline="true">
+          <block type="maze_move">
           <title name="DIR">moveForward</title>
-          <value name="VALUE">
-          <block type="variables_get">
-          <title name="VAR">counter</title>
-          </block>
-          </value>
-          <next>
-          <block type="draw_turn" inline="true">
-          <title name="DIR">turnRight</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">90</title>
-          </block>
-          </value>
-          </block>
-          </next>
           </block>
           </statement>
           <next>
-          <block type="jump" inline="true">
-          <title name="DIR">jumpBackward</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">25</title>
-          </block>
-          </value>
-          <next>
-          <block type="draw_turn" inline="true">
-          <title name="DIR">turnRight</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">90</title>
-          </block>
-          </value>
-          <next>
-          <block type="jump" inline="true">
-          <title name="DIR">jumpBackward</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">25</title>
-          </block>
-          </value>
-          <next>
-          <block type="draw_turn" inline="true">
+          <block type="maze_turn">
           <title name="DIR">turnLeft</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">90</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="collector_collect">
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
           </block>
-          </value>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
           </block>
-          </next>
-          </block>
-          </next>
+          </statement>
           </block>
           </next>
           </block>
@@ -701,87 +1219,48 @@ zh-CN:
         Course_4_SCFL_4_a: 颜色的变化使用`用红色，绿色，蓝色设置颜色`模块。 红色一直设置为`counter`（计数器）的值。绿色一直为`255-counter`，蓝色设置为常量255。
         Course_4_SCFL_4_b: 每一个形状是一个正方形，边长是`counter`（计数器）像素长，从5px 开始，每次增加5像素，一直到200像素。
         Course_4_SCFL_4_c: 小艺术家在每个正方形之间旋转15度。
-      Course 4 SCFL 6:
-        Course_4_SCFL_6_a: 使用`用红色，绿色和蓝色设置颜色`的模块。红色设为常量255，绿色一直是`counter`（计数器）的值，蓝色一直是`255-counter`。
-        Course_4_SCFL_6_b: 这个代码比你想象的要简单得多。 只需在 `计数循环`中设置颜色，向前移动，然后转向。
-        Course_4_SCFL_6_c: "`计数循环` 从5增加到250，每次增加2。 "
-        Course_4_SCFL_6_d: |-
-          \*\* 解决方案: \*\*
+        Course_4_SCFL_4_d: |-
+          \*\* 解决方案: \*
 
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
-          <block type="draw_width" inline="false">
-          <value name="WIDTH">
-          <block type="math_number">
-          <title name="NUM">1</title>
-          </block>
-          </value>
-          <next>
-          <block type="controls_for_counter" inline="true">
-          <mutation counter="counter"></mutation>
-          <value name="FROM">
-          <block type="math_number">
-          <title name="NUM">5</title>
-          </block>
-          </value>
-          <value name="TO">
-          <block type="math_number">
-          <title name="NUM">250</title>
-          </block>
-          </value>
-          <value name="BY">
-          <block type="math_number">
-          <title name="NUM">2</title>
-          </block>
-          </value>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
           <statement name="DO">
-          <block type="draw_colour" inline="true" id="draw-color">
-          <value name="COLOUR">
-          <block type="colour_rgb" inline="false">
-          <value name="RED">
-          <block type="math_number">
-          <title name="NUM">255</title>
-          </block>
-          </value>
-          <value name="GREEN">
-          <block type="variables_get">
-          <title name="VAR">counter</title>
-          </block>
-          </value>
-          <value name="BLUE">
-          <block type="math_arithmetic" inline="true">
-          <title name="OP">MINUS</title>
-          <value name="A">
-          <block type="math_number">
-          <title name="NUM">255</title>
-          </block>
-          </value>
-          <value name="B">
-          <block type="variables_get">
-          <title name="VAR">counter</title>
-          </block>
-          </value>
-          </block>
-          </value>
-          </block>
-          </value>
-          <next>
-          <block type="draw_move" inline="true">
+          <block type="maze_move">
           <title name="DIR">moveForward</title>
-          <value name="VALUE">
-          <block type="variables_get">
-          <title name="VAR">counter</title>
           </block>
-          </value>
+          </statement>
           <next>
-          <block type="draw_turn" inline="true">
-          <title name="DIR">turnRight</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">80</title>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="collector_collect">
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
           </block>
-          </value>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          </block>
+          </next>
           </block>
           </next>
           </block>
@@ -793,23 +1272,309 @@ zh-CN:
           </block>
           </next>
           </block>
+          </next>
+          </block>
+          </xml>
+      Course 4 SCFL 6:
+        Course_4_SCFL_6_a: 使用`用红色，绿色和蓝色设置颜色`的模块。红色设为常量255，绿色一直是`counter`（计数器）的值，蓝色一直是`255-counter`。
+        Course_4_SCFL_6_b: 这个代码比你想象的要简单得多。 只需在 `计数循环`中设置颜色，向前移动，然后转向。
+        Course_4_SCFL_6_c: "`计数循环` 从5增加到250，每次增加2。 "
+        Course_4_SCFL_6_d: |-
+          \*\* 解决方案: \*
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="collector_collect">
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
           </xml>
       Course 4 SCFL 7:
         Course_4_SCFL_7_a: 颜色的变化使用`用红色，绿色，蓝色设置颜色`模块。 红色设置为`counter`（计数器）的值。绿色为`255-counter`，蓝色设置为常量255。
         Course_4_SCFL_7_b: '此绘图使用了两个类似的`计数循环`。 一个以2为增量从5到200，另一个以2为减量从200到5。 '
         Course_4_SCFL_7_c: 在每个`计数循环`中，在转向`360 / counter`之前，向前移动5像素。别忘了在你做之前，设置画笔宽度为`counter`！
         Course_4_SCFL_7_d: 你需要在两个`计数循环`之间左转225度。
+        Course_4_SCFL_7_e: |-
+          \*\* 解决方案: \*
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="collector_collect">
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       Course 4 SCV 1:
         Course_4_SCV_1_a: '变量是有帮助的，因为您可以通过循环每次增加它们。 '
         Course_4_SCV_1_b: 这个谜题有一个循环来创建多边形，一个循环来重复多边形`sides`（边）的次数，然后另一个循环在把5加到到`sides`（边）后重新计算。
         Course_4_SCV_1_c: 使用`sides`和`length`的变量使代码更干净，因为您可以多次循环相同的代码，而不是为每组数字创建一个新的副本。
+        Course_4_SCV_1_d: |-
+          \*\* 解决方案: \*
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="collector_collect">
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       Course 4 SCV 2:
         Course_4_SCV_2_b: '此设计使用嵌套循环（有三层深）。所有循环运行`sides`（边数）次。 '
         Course_4_SCV_2_c: 艺术家在创建每个对角线时向左拐，但在其他两个循环中向右转。
         Course_4_SCV_2_d: 为了防止你的10朵"花"画在同一个地方，确保在最外层的循环中，在转向`360/sides`度前，向前跳`length`/`sides`。
+        Course_4_SCV_2_e: |-
+          \*\* 解决方案: \*
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="collector_collect">
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       Course 4 SCV 3:
         Course_4_SCV_3_a: '当精灵碰到一起时，用数学模块来给`points` （分数）变量加上或减去分数。 '
         Course_4_SCV_3_b: 你可以用这个参数来改变每次按下方向键时，精灵移动得距离。
+        Course_4_SCV_3_c: |-
+          \*\* 解决方案: \*
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="collector_collect">
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       Course 4 SCV 4:
         Course_4_SCV_4_a: 这里的三个变量能帮你。 一个是花蜜的单位，一个是蜂蜜的单位，一个是蜜蜂每次迭代移动的距离。
         Course_4_SCV_4_b: '在你的主循环里使用三个循环会非常有帮助。 一个用于前进，一个用于收集花蜜，一个用于制作蜂蜜。 '
@@ -817,13 +1582,181 @@ zh-CN:
           看看这个移动选项:
 
           \!\[] (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)
+        Course_4_SCV_4_d: |-
+          \*\* 解决方案: \*
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="collector_collect">
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       Course 4 SCV 5:
         Course_4_SCV_5_b: 每次循环后，会少两个花蜜，蜜蜂需要多制作一个蜂蜜。
         Course_4_SCV_5_c: 请注意，在外层循环开始的地方，蜜蜂需要尽可能多的移动，直到下一朵花里有花蜜。
+        Course_4_SCV_5_d: |-
+          \*\* 解决方案: \*
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="collector_collect">
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       Course 4 SCV 6:
         Course_4_SCV_6_b: 你会从创建8个变量中获益： red1，green1， blue1，red2，green2，blue2，length，和sides。（变量分别表示红色1，绿色1，蓝色1，红色2，绿色2，蓝色2，长度和边数）
         Course_4_SCV_6_c: 当锯齿是青色 (rgb = 0,175,200) 和紫色的 (rgb = 100，50，150) 时候，将每个形状的5边分成`length`/`sides`部分。
         Course_4_SCV_6_d: '先左转`360`/`sides`，再右转`360`/`sides`。 '
+        Course_4_SCV_6_f: |-
+          \*\* 解决方案: \*
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="collector_collect">
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       CourseD_Dance_Party_01:
         validation: |-
           **我如何通过此关？**
@@ -1272,6 +2205,15 @@ zh-CN:
         courseA_collector_loops_challenge1_b: 如果有什么事情只做一次，就不需要使用循环, 。
         courseA_collector_loops_challenge1_c: 有6块宝石在右侧的洞穴，但你只需要移动和收集5次。你知道为什么吗？
       course1_collector_loops_challenge3:
+        courseB_collector_loops_challenge1_c: |-
+          在每条路径之间向东移动两次。
+
+          <xml>
+          <block type="maze_moveEast"><next>
+          <block type="maze_moveEast"></block></next></block>
+          </xml>
+
+          只能使用14个模块来实现。单击查看更多解决方案来得到更多提示。
         courseB_collector_loops_challenge1_d: |-
           试试这个！
 
@@ -1553,6 +2495,62 @@ zh-CN:
         courseF_bee_functions_challenge2_a: "如果右侧有路径, 则应执行以下操作:\n\n-   得到花蜜或酿蜂蜜。\n-
           \  向右拐, 往侧面走。\n-   移动到侧边路径的末尾。\n-   向右拐。 \n\n如果重复上述操作两次, 您将准备好往下回到主路。 \n\n\\*\\*
           只有当你想看到完整的解决方案时才点击另一个提示!"
+        courseF_bee_functions_challenge2_b: |-
+          \*\* 解决方案: \*
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="collector_collect">
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       course3_collector_debugging_challenge2:
         courseD_collector_debugging_challenge2_b: "接下来, 在此行中收集剩余的宝石。 \n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04
           AM.png>)\nAdd these blocks to your program.\n\n<xml><block type=\"maze_move\">\n\n<title
@@ -2539,6 +3537,9 @@ zh-CN:
       courseA_collector_loops_challenge2kp_2019:
         courseA_collector_loops_challenge2kp_b: 请尝试此路径以获得解决方案。
         courseA_collector_loops_challenge2kp_a: 你能用循环来解决这个关卡吗？
+      courseA_collector_preLoops6:
+        courseA_collector_preLoops6_a: 您将需要使用两个 ![](https://images.code.org/563c0deb5c51d43cdfa72d62dec3419d-image-1508904559201.05.30.png)
+          模块来解决这个关卡。
       courseA_collector_preLoops7:
         courseA_collector_loops2_b: |-
           在你到了一个有宝藏的正方形后, 用这个模块来把它捡起来。
@@ -5160,26 +6161,24 @@ zh-CN:
         courseC_PlayLab_events3_a: 您只需将乔治向右移动大约25像素即可通过这个关卡。
         courseC_PlayLab_events3_b: 工具箱中是否有一个模块看起来像是可以移动一个演员？
         courseC_PlayLab_events3_c: |-
-          将此模块附加到`当运行时`模块:
+          将此块附加到 "当运行时" 模块：
 
           <xml>
-          <block type="studio_moveDistance">
+          <block type="studio_saySpriteChoices">
           <title name="SPRITE">0</title>
-          <title name="DIR">2</title>
-          <title name="DISTANCE">25</title>
+          <title name="VALUE">你好。</title>
           </block>
           </xml>
       courseC_PlayLab_events3_2019:
         courseC_PlayLab_events3_a: 您只需将乔治向右移动大约25像素即可通过这个关卡。
         courseC_PlayLab_events3_b: 工具箱中是否有一个模块看起来像是可以移动一个演员？
         courseC_PlayLab_events3_c: |-
-          将此模块附加到`当运行时`模块:
+          将此块附加到 "当运行时" 模块：
 
           <xml>
-          <block type="studio_moveDistance">
+          <block type="studio_saySpriteChoices">
           <title name="SPRITE">0</title>
-          <title name="DIR">2</title>
-          <title name="DISTANCE">25</title>
+          <title name="VALUE">你好。</title>
           </block>
           </xml>
       courseC_PlayLab_events4:
@@ -9956,122 +10955,45 @@ zh-CN:
         courseF_artist_for_challenge1_b: 画笔上的不透明度始终是 `counter`/2 （计数器/2）。
         courseF_artist_for_challenge1_c: 在你画了每个正方形后, 别忘了向后跳, 转身, 再跳, 然后回头!
         courseF_artist_for_challenge1_d: |-
-          \*\* 解决方案: \*\*
+          \*\* 解决方案: \*
 
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
-          <block type="draw_width" inline="false">
-          <value name="WIDTH">
-          <block type="math_number">
-          <title name="NUM">1</title>
-          </block>
-          </value>
-          <next>
-          <block type="draw_colour" inline="true" id="draw-color">
-          <value name="COLOUR">
-          <block type="colour_picker">
-          <title name="COLOUR">#0000cd</title>
-          </block>
-          </value>
-          <next>
-          <block type="controls_for_counter" inline="true">
-          <mutation counter="counter"></mutation>
-          <value name="FROM">
-          <block type="math_number">
-          <title name="NUM">50</title>
-          </block>
-          </value>
-          <value name="TO">
-          <block type="math_number">
-          <title name="NUM">350</title>
-          </block>
-          </value>
-          <value name="BY">
-          <block type="math_number">
-          <title name="NUM">50</title>
-          </block>
-          </value>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
           <statement name="DO">
-          <block type="alpha" inline="true" id="alpha">
-          <value name="VALUE">
-          <block type="math_arithmetic" inline="true">
-          <title name="OP">DIVIDE</title>
-          <value name="A">
-          <block type="variables_get">
-          <title name="VAR">counter</title>
-          </block>
-          </value>
-          <value name="B">
-          <block type="math_number">
-          <title name="NUM">2</title>
-          </block>
-          </value>
-          </block>
-          </value>
-          <next>
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="math_number">
-          <title name="NUM">4</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="draw_move" inline="true">
+          <block type="maze_move">
           <title name="DIR">moveForward</title>
-          <value name="VALUE">
-          <block type="variables_get">
-          <title name="VAR">counter</title>
-          </block>
-          </value>
-          <next>
-          <block type="draw_turn" inline="true">
-          <title name="DIR">turnRight</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">90</title>
-          </block>
-          </value>
-          </block>
-          </next>
           </block>
           </statement>
           <next>
-          <block type="jump" inline="true">
-          <title name="DIR">jumpBackward</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">25</title>
-          </block>
-          </value>
-          <next>
-          <block type="draw_turn" inline="true">
-          <title name="DIR">turnRight</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">90</title>
-          </block>
-          </value>
-          <next>
-          <block type="jump" inline="true">
-          <title name="DIR">jumpBackward</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">25</title>
-          </block>
-          </value>
-          <next>
-          <block type="draw_turn" inline="true">
+          <block type="maze_turn">
           <title name="DIR">turnLeft</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">90</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="collector_collect">
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
           </block>
-          </value>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
           </block>
-          </next>
-          </block>
-          </next>
+          </statement>
           </block>
           </next>
           </block>
@@ -10093,122 +11015,45 @@ zh-CN:
         courseF_artist_for_challenge1_b: 画笔上的不透明度始终是 `counter`/2 （计数器/2）。
         courseF_artist_for_challenge1_c: 在你画了每个正方形后, 别忘了向后跳, 转身, 再跳, 然后回头!
         courseF_artist_for_challenge1_d: |-
-          \*\* 解决方案: \*\*
+          \*\* 解决方案: \*
 
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
-          <block type="draw_width" inline="false">
-          <value name="WIDTH">
-          <block type="math_number">
-          <title name="NUM">1</title>
-          </block>
-          </value>
-          <next>
-          <block type="draw_colour" inline="true" id="draw-color">
-          <value name="COLOUR">
-          <block type="colour_picker">
-          <title name="COLOUR">#0000cd</title>
-          </block>
-          </value>
-          <next>
-          <block type="controls_for_counter" inline="true">
-          <mutation counter="counter"></mutation>
-          <value name="FROM">
-          <block type="math_number">
-          <title name="NUM">50</title>
-          </block>
-          </value>
-          <value name="TO">
-          <block type="math_number">
-          <title name="NUM">350</title>
-          </block>
-          </value>
-          <value name="BY">
-          <block type="math_number">
-          <title name="NUM">50</title>
-          </block>
-          </value>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
           <statement name="DO">
-          <block type="alpha" inline="true" id="alpha">
-          <value name="VALUE">
-          <block type="math_arithmetic" inline="true">
-          <title name="OP">DIVIDE</title>
-          <value name="A">
-          <block type="variables_get">
-          <title name="VAR">counter</title>
-          </block>
-          </value>
-          <value name="B">
-          <block type="math_number">
-          <title name="NUM">2</title>
-          </block>
-          </value>
-          </block>
-          </value>
-          <next>
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="math_number">
-          <title name="NUM">4</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="draw_move" inline="true">
+          <block type="maze_move">
           <title name="DIR">moveForward</title>
-          <value name="VALUE">
-          <block type="variables_get">
-          <title name="VAR">counter</title>
-          </block>
-          </value>
-          <next>
-          <block type="draw_turn" inline="true">
-          <title name="DIR">turnRight</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">90</title>
-          </block>
-          </value>
-          </block>
-          </next>
           </block>
           </statement>
           <next>
-          <block type="jump" inline="true">
-          <title name="DIR">jumpBackward</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">25</title>
-          </block>
-          </value>
-          <next>
-          <block type="draw_turn" inline="true">
-          <title name="DIR">turnRight</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">90</title>
-          </block>
-          </value>
-          <next>
-          <block type="jump" inline="true">
-          <title name="DIR">jumpBackward</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">25</title>
-          </block>
-          </value>
-          <next>
-          <block type="draw_turn" inline="true">
+          <block type="maze_turn">
           <title name="DIR">turnLeft</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">90</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="collector_collect">
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
           </block>
-          </value>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
           </block>
-          </next>
-          </block>
-          </next>
+          </statement>
           </block>
           </next>
           </block>
@@ -11588,117 +12433,44 @@ zh-CN:
 
           另一个`计数循环`循环只需要一个普通的循环来酿造`counter`（计数器）个蜂蜜。
         courseF_bee_for_challenge2_d: |-
-          **解决方案：**
+          \*\* 解决方案: \*
 
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
-          <block type="controls_for" inline="true">
-          <title name="VAR">counter</title>
-          <value name="FROM">
-          <block type="math_number">
-          <title name="NUM">1</title>
-          </block>
-          </value>
-          <value name="TO">
-          <block type="math_number">
-          <title name="NUM">3</title>
-          </block>
-          </value>
-          <value name="BY">
-          <block type="math_number">
-          <title name="NUM">1</title>
-          </block>
-          </value>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
           <statement name="DO">
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="variables_get">
-          <title name="VAR">counter</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="maze_moveForward"/>
-          </statement>
-          <next>
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="variables_get">
-          <title name="VAR">counter</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="maze_nectar"/>
-          </statement>
-          <next>
-          <block type="maze_turn">
-          <title name="DIR">向左转</title>
-          <next>
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="variables_get">
-          <title name="VAR">counter</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="maze_moveForward"/>
-          </statement>
-          <next>
-          <block type="maze_turn">
-          <title name="DIR">向右转</title>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
           </block>
           </statement>
           <next>
           <block type="maze_turn">
-          <title name="DIR">向右转</title>
+          <title name="DIR">turnLeft</title>
           <next>
-          <block type="maze_turn">
-          <title name="DIR">向右转</title>
-          <next>
-          <block type="controls_for" inline="true">
-          <title name="VAR">counter</title>
-          <value name="FROM">
-          <block type="math_number">
-          <title name="NUM">2</title>
-          </block>
-          </value>
-          <value name="TO">
-          <block type="math_number">
-          <title name="NUM">10</title>
-          </block>
-          </value>
-          <value name="BY">
-          <block type="math_number">
-          <title name="NUM">2</title>
-          </block>
-          </value>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
           <statement name="DO">
-          <block type="maze_moveForward">
+          <block type="collector_collect">
           <next>
-          <block type="maze_turn">
-          <title name="DIR">向左转</title>
-          <next>
-          <block type="maze_moveForward">
-          <next>
-          <block type="maze_turn">
-          <title name="DIR">向右转</title>
-          <next>
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="variables_get">
-          <title name="VAR">counter</title>
-          </block>
-          </value>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
           <statement name="DO">
-          <block type="maze_honey"/>
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
           </statement>
           </block>
           </next>
@@ -11707,11 +12479,7 @@ zh-CN:
           </block>
           </next>
           </block>
-          </next>
-          </block>
           </statement>
-          </block>
-          </next>
           </block>
           </next>
           </block>
@@ -11731,117 +12499,44 @@ zh-CN:
 
           另一个`计数循环`循环只需要一个普通的循环来酿造`counter`（计数器）个蜂蜜。
         courseF_bee_for_challenge2_d: |-
-          **解决方案：**
+          \*\* 解决方案: \*
 
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
-          <block type="controls_for" inline="true">
-          <title name="VAR">counter</title>
-          <value name="FROM">
-          <block type="math_number">
-          <title name="NUM">1</title>
-          </block>
-          </value>
-          <value name="TO">
-          <block type="math_number">
-          <title name="NUM">3</title>
-          </block>
-          </value>
-          <value name="BY">
-          <block type="math_number">
-          <title name="NUM">1</title>
-          </block>
-          </value>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
           <statement name="DO">
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="variables_get">
-          <title name="VAR">counter</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="maze_moveForward"/>
-          </statement>
-          <next>
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="variables_get">
-          <title name="VAR">counter</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="maze_nectar"/>
-          </statement>
-          <next>
-          <block type="maze_turn">
-          <title name="DIR">向左转</title>
-          <next>
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="variables_get">
-          <title name="VAR">counter</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="maze_moveForward"/>
-          </statement>
-          <next>
-          <block type="maze_turn">
-          <title name="DIR">向右转</title>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
           </block>
           </statement>
           <next>
           <block type="maze_turn">
-          <title name="DIR">向右转</title>
+          <title name="DIR">turnLeft</title>
           <next>
-          <block type="maze_turn">
-          <title name="DIR">向右转</title>
-          <next>
-          <block type="controls_for" inline="true">
-          <title name="VAR">counter</title>
-          <value name="FROM">
-          <block type="math_number">
-          <title name="NUM">2</title>
-          </block>
-          </value>
-          <value name="TO">
-          <block type="math_number">
-          <title name="NUM">10</title>
-          </block>
-          </value>
-          <value name="BY">
-          <block type="math_number">
-          <title name="NUM">2</title>
-          </block>
-          </value>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
           <statement name="DO">
-          <block type="maze_moveForward">
+          <block type="collector_collect">
           <next>
-          <block type="maze_turn">
-          <title name="DIR">向左转</title>
-          <next>
-          <block type="maze_moveForward">
-          <next>
-          <block type="maze_turn">
-          <title name="DIR">向右转</title>
-          <next>
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="variables_get">
-          <title name="VAR">counter</title>
-          </block>
-          </value>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
           <statement name="DO">
-          <block type="maze_honey"/>
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
           </statement>
           </block>
           </next>
@@ -11850,11 +12545,7 @@ zh-CN:
           </block>
           </next>
           </block>
-          </next>
-          </block>
           </statement>
-          </block>
-          </next>
           </block>
           </next>
           </block>
