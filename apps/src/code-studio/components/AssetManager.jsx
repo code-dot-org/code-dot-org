@@ -221,11 +221,12 @@ export default class AssetManager extends React.Component {
   };
 
   getStarterAssetRows = () => {
+    const boundApi = starterAssetsApi.withLevelChannelId(LEVEL_CHANNEL_ID);
     return this.state.starterAssets.map(asset => {
       return (
         <AssetRow
           {...this.defaultAssetProps(asset)}
-          api={starterAssetsApi}
+          api={boundApi}
           onChoose={() => console.log('choose!')}
           onDelete={() => console.log('delete!')}
           levelChannelId={LEVEL_CHANNEL_ID}
