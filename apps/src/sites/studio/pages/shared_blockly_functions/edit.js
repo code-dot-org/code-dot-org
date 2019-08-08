@@ -2,7 +2,7 @@ import zip from 'lodash/zip';
 import unzip from 'lodash/unzip';
 import assetUrl from '@cdo/apps/code-studio/assetUrl';
 
-import {install, customInputTypes} from '@cdo/apps/p5lab/gamelab/blocks';
+import {install, customInputTypes} from '@cdo/apps/p5lab/spritelab/blocks';
 import {valueTypeTabShapeMap} from '@cdo/apps/p5lab/P5Lab';
 import {installCustomBlocks} from '@cdo/apps/block_utils';
 
