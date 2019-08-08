@@ -10,7 +10,7 @@ import {
   restoreRedux
 } from '@cdo/apps/redux';
 import commonReducers from '@cdo/apps/redux/commonReducers';
-import reducers from '@cdo/apps/p5lab/gamelab/reducers';
+import reducers from '@cdo/apps/p5lab/reducers';
 import {isOpen as isDebuggerOpen} from '@cdo/apps/lib/tools/jsdebugger/redux';
 import {setExternalGlobals} from '../../util/testUtils';
 import 'script-loader!@code-dot-org/p5.play/examples/lib/p5';
