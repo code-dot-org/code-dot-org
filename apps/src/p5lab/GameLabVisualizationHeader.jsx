@@ -8,7 +8,7 @@ import msg from '@cdo/locale';
 import ToggleGroup from '@cdo/apps/templates/ToggleGroup';
 import styleConstants from '@cdo/apps/styleConstants';
 import {allowAnimationMode} from './stateQueries';
-import * as utils from '../../utils';
+import * as utils from '../utils';
 
 const styles = {
   main: {
