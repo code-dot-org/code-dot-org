@@ -88,8 +88,8 @@ export default class AssetManager extends React.Component {
 
     // Request to files/assets API will fail if no projectId is present, so only
     // request files if we have a projectId.
-    if (this.props.projectId) {
-      let api = this.props.useFilesApi ? filesApi : assetsApi;
+    let api = this.props.useFilesApi ? filesApi : assetsApi;
+    if (api.getProjectId()) {
       api.getFiles(this.onAssetListReceived, this.onAssetListFailure);
     } else {
       this.setState({assets: []});
