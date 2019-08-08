@@ -8,7 +8,7 @@ cd ml-activities
 nvm install
 nvm use
 yarn
-yarn run dev
+yarn start
 ```
 
 At this point the app will be running at [http://localhost:8080](http://localhost:8080) with live-reloading on file changes.
