@@ -451,6 +451,12 @@ class StarterAssetsApi {
   }
 
   basePath(path) {
+    if (!this || !this.channelId) {
+      const error =
+        'You must bind the API and set channelId before creating a base path.';
+      throw new Error(error);
+    }
+
     return `/level_starter_assets/${this.channelId}/${path}`;
   }
 
