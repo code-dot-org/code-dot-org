@@ -154,6 +154,7 @@ export default class SetupChecklist extends Component {
    * @return {Promise}
    */
   updateBoardFirmware() {
+    this.setState({[STATUS_BOARD_FIRMWARE]: Status.ATTEMPTING});
     return window.MakerBridge.flashBoardFirmware({
       boardName: 'circuit-playground-classic',
       hexPath:
@@ -339,11 +340,15 @@ export default class SetupChecklist extends Component {
           {this.state.boardTypeDetected === BOARD_TYPE.CLASSIC && (
             <ValidationStep
               stepStatus={this.state[STATUS_BOARD_FIRMWARE]}
-              stepName="Board firmware up to date"
+              stepName="Board firmware up-to-date"
             >
-              Update the board
+              <div>
+                This board is not using the most up-to-date version of the
+                firmware. For best results, please update the firmware by
+                clicking on the button below.
+              </div>
               <button type="button" onClick={() => this.updateBoardFirmware()}>
-                Click here to update the firmware
+                Update Firmware
               </button>
             </ValidationStep>
           )}
