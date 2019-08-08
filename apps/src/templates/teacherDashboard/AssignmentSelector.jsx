@@ -39,16 +39,15 @@ const hasAssignmentFamily = (assignmentFamilies, assignment) =>
  * Group our assignment families by category for our dropdown
  */
 const categorizeAssignmentFamilies = assignmentFamilies =>
-  _(assignmentFamilies)
-    .values()
-    .orderBy([
+  _.flow(
+    _.orderBy([
       'category_priority',
       'category',
       'position',
       'assignment_family_title'
-    ])
-    .groupBy('category')
-    .value();
+    ]),
+    _.groupBy('category')
+  )(assignmentFamilies);
 
 const getVersion = assignment => ({
   year: assignment.version_year,
@@ -88,15 +87,14 @@ export default class AssignmentSelector extends Component {
     if (!assignmentFamilyName) {
       return [];
     }
-    const versions = _(this.props.assignments)
-      .values()
-      .filter(
-        assignment => assignment.assignment_family_name === assignmentFamilyName
-      )
-      .map(getVersion)
-      .sortBy('year')
-      .reverse()
-      .value();
+
+    const assignments = _.filter(
+      this.props.assignments,
+      assignment => assignment.assignment_family_name === assignmentFamilyName
+    );
+    let versions = _.map(assignments, getVersion);
+    versions = _.sortBy(versions, 'year');
+    versions = _.reverse(versions);
 
     return setRecommendedAndSelectedVersions(
       versions,
@@ -266,9 +264,12 @@ export default class AssignmentSelector extends Component {
       }
     }
 
+    console.log('assignmentFamilies', assignmentFamilies);
     const assignmentFamiliesByCategory = categorizeAssignmentFamilies(
       assignmentFamilies
     );
+
+    console.log('assignmentFamiliesByCategory', assignmentFamiliesByCategory);
 
     return (
       <div>

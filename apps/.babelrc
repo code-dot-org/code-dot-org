@@ -2,6 +2,7 @@
   "presets": ["env", "react" ],
   "plugins": [
     "add-module-exports",
+    "lodash",
     "syntax-async-functions",
     "transform-object-rest-spread",
     "transform-class-properties",

@@ -9,9 +9,8 @@ import AssignmentVersionMenuItem, {
 import AssignmentVersionMenuHeader from './AssignmentVersionMenuHeader';
 import _ from 'lodash';
 
-const menuItemWidth = _(columnWidths)
-  .values()
-  .reduce(_.add);
+const menuItemWidth = _.reduce(_.values(columnWidths), _.add);
+
 const menuWidth = menuItemWidth + 2 * STANDARD_PADDING;
 
 const styles = {
