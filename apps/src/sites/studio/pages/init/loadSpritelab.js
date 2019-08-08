@@ -1,9 +1,9 @@
 import appMain from '@cdo/apps/appMain';
 import {singleton as studioApp} from '@cdo/apps/StudioApp';
 import SpriteLab from '@cdo/apps/p5lab/spritelab/SpriteLab';
-import blocks from '@cdo/apps/p5lab/gamelab/blocks';
-import skins from '@cdo/apps/p5lab/gamelab/skins';
-import levels from '@cdo/apps/p5lab/gamelab/levels';
+import blocks from '@cdo/apps/p5lab/spritelab/blocks';
+import skins from '@cdo/apps/p5lab/skins';
+import levels from '@cdo/apps/p5lab/levels';
 
 export default function loadSpritelab(options) {
   options.skinsModule = skins;
