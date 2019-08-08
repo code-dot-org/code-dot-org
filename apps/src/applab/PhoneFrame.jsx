@@ -114,22 +114,20 @@ class PhoneFrame extends React.Component {
             )}
           </div>
           {this.props.children}
-          <div
-            style={
-              widgetMode
-                ? styles.widgetModeBottom
-                : [
-                    styles.phoneFrame,
-                    styles.phoneFrameBottom,
-                    isDark && styles.phoneFrameDark
-                  ]
-            }
-          >
-            <div style={styles.centeredInFrame}>
-              <RunButton hidden={false} style={styles.buttonMinWidth} />
-              <ResetButton style={styles.buttonMinWidth} />
+          {!widgetMode && (
+            <div
+              style={[
+                styles.phoneFrame,
+                styles.phoneFrameBottom,
+                isDark && styles.phoneFrameDark
+              ]}
+            >
+              <div style={styles.centeredInFrame}>
+                <RunButton hidden={false} style={styles.buttonMinWidth} />
+                <ResetButton style={styles.buttonMinWidth} />
+              </div>
             </div>
-          </div>
+          )}
         </div>
       </span>
     );
