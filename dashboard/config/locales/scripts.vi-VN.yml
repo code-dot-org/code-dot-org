@@ -5668,3 +5668,11 @@ vi:
           stages:
             Sequencing with Scrat:
               name: Học về chuỗi cùng sóc Scrat
+        dlp19-csd-mod-fit:
+          stages:
+            Deeper Learning Overview:
+              name: Tổng quan học tập sâu
+        dlp19-csp-mod-fit:
+          stages:
+            Deeper Learning Overview:
+              name: Tổng quan học tập sâu

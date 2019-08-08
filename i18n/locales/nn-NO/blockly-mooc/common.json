@@ -648,7 +648,6 @@
   "feedbackNotificationButton": "",
   "feedbackNotificationDetails": "",
   "feedbackNotificationLesson": "",
-  "feedbackNotificationLevel": "",
   "feedbackNotificationUnit": "",
   "feedbackPlaceholder": "Skriv tilbakemelding til eleven din her. Dette vil bli synleg for eleven når du klikkar på 'Lagre og del'.",
   "feedbackSaveError": "Det oppstod ein feil ved lagring av tilbakemeldinga di. Prøv å lagre på nytt.",

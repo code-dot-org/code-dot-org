@@ -488,10 +488,32 @@ nl-NL:
       Standalone_Artist_1: Welkom bij de kunstenaar! Probeer eerst eens om een eenvoudig
         vierkant te tekenen door gebruik te maken van het draai rechts blok en het
         ga vooruit blok. Elke zijde moet 100 pixels lang zijn.
+      Standalone_Artist_2: Teken deze diamant met hoeken van 120 en 60 graden en zijden
+        van 150 pixels.
+      Standalone_Artist_3: Kan je deze zeshoek tekenen met zijden van 100 pixels lang
+        en hoeken van 60 graden?
+      Standalone_Artist_4: Je hebt nu een nieuw blok om mee te spelen, een herhaal
+        lus. Dit zal een aantal opdrachten herhalen. Wat gebeurt er als je deze opdrachten
+        6 keer herhaalt?
+      Standalone_Artist_5: Hoeveel keer moet de diamant in een lus gestopt worden
+        om de bloem te tekenen?
+      Standalone_Artist_5.5: 'Kijk hoe we de diamant code vereenvoudigd hebben door
+        de code te veranderen in een lus. Je kan de ganse reeks 12 keer herhalen om
+        een bloem te tekenen. Tip: Je moet 30 graden draaien na je diamant lus zodat
+        je niet over dezelfde diamant blijft tekenen.'
+      Standalone_Artist_6: 'Gebruik de zeshoek code 6 maal in een lus om dit ontwerp
+        te tekenen. Hoeveel graden moet je iedere keer draaien. Tip: deel het aantal
+        graden in een cirkel door het aantal maal dat je een lus gebruikt.'
+      Standalone_Artist_7: 'Een functie is een ander programmeer-hulpmiddel wat vermijdt
+        dat je jezelf herhaalt. Deze functie tekent een bloem, je kan deze gelijk
+        waneer gebruiken wanneer je een bloem wil tekenen. Gebruik deze en de nieuwe
+        spring blok om bloemen te tekenen. Tip: De bloemen staan 150 pixels van mekaar'
       Standalone_Artist_8: Hier is een functie "Draw a shape" die zeshoeken tekent.
         Voer de code uit om te zien wat ze doet en experimenteer dan maar met de functie
         om te zien wat er gebeurt. Kan je zelf een functie maken die vierhoeken, driehoeken
         of achthoeken tekent?
+      Standalone_Artist_9: Nu mag je maken wat je wil! Je hebt zelfs een lege functie
+        die je kan laten doen wat je maar wilt!
       U4 Model Design 1: Voeg een grote rode knop toe aan je scherm met behulp van
         Design Mode. (Klik voor volledige instructies)
       U4 Model Design 1_2018: Voeg een grote rode knop toe aan je scherm met behulp

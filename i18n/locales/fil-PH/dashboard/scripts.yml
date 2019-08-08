@@ -8627,3 +8627,11 @@ fil:
               name: Pag-Program sa Maze
             Programming with Rey and BB-8:
               name: Pag-Program kasama sina Rey at BB-8
+        dlp19-csd-mod-fit:
+          stages:
+            Deeper Learning Overview:
+              name: Buod ng Mas Malalim na Pag-aaral
+        dlp19-csp-mod-fit:
+          stages:
+            Deeper Learning Overview:
+              name: Buod ng Mas Malalim na Pag-aaral
