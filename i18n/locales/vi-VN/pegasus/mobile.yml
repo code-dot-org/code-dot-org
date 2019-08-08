@@ -746,6 +746,7 @@
   kodu_beyond_shortdescription: "Thiết kế một thế giới game 3D"
   codea_beyond_shortdescription: "Tạo những phần mềm trên Ipad của bạn"
   compatibility_unsupported_browser: "Trình duyệt của bạn không được hỗ trợ. Hãy nâng cấp trình duyệt của bạn lên <a href='%{supported_browsers_url}', target='_blank'>một trong những trình duyệt được hỗ trợ của chúng tôi</a>. Bạn có thể thử xem trang nhưng mong đợi chức năng bị hỏng."
+  compatibility_unsupported_browser_markdown: "Trình duyệt của bạn không được hỗ trợ. Hãy nâng cấp trình duyệt của bạn lên <a href='%{supported_browsers_url}', target='_blank'>một trong những trình duyệt được hỗ trợ của chúng tôi</a>. Bạn có thể thử xem trang nhưng mong đợi chức năng bị hỏng."
   flappy_shortcode: "đập cánh"
   header_home: "Trang chủ"
   header_my_dashboard: "Bảng điều khiển của tôi"

@@ -2,10 +2,14 @@
 hi-IN:
   data:
     function_names:
+      2-3 Artist 11:
+        x: x
       2-3 Artist 3.4:
         draw a circle: एक चक्र बनाएं
       2-3 Artist Debugging 10:
         draw a circle: एक चक्र बनाएं
+      2-3 Artist Functions 1:
+        draw ear stems: ईयर स्टेम चित्रित करें
       2-3 Artist Functions 11:
         draw a hexagon: एक हेक्सागोन खींचे
       2-3 Artist Functions 11.5:
@@ -14,8 +18,10 @@ hi-IN:
         draw a flower: एक फूल खींचे
       2-3 Artist Functions 2:
         draw a square: एक वर्ग खींचें
+        draw ear stems: ईयर स्टेम चित्रित करें
       2-3 Artist Functions 3:
         draw a square: एक वर्ग खींचें
+        draw ear stems: ईयर स्टेम चित्रित करें
       2-3 Artist Functions 4:
         draw a square: एक वर्ग खींचें
       2-3 Artist Functions 9:
@@ -26,8 +32,18 @@ hi-IN:
         draw a tree: एक पेड़ खींचें
       4-5 Artist 7:
         draw a circle: एक चक्र बनाएं
+      Course 4 Play Lab Params 1:
+        jump: कूदें
+      Course 4 Play Lab Params 2:
+        jump: कूदें
+      Course 4 Play Lab Params 3:
+        jump: कूदें
       Course 4 Play Lab Params 4:
         do something: कुछ कीजिए
+      Course 4 Play Lab Vars 1:
+        set score: स्कोर सेट करें
+      Course 4 Play Lab Vars 2:
+        set score: स्कोर सेट करें
       Course 4 SCF 1:
         draw a hexagon: एक हेक्सागोन खींचे
       Course 4 SCF 1a:
@@ -82,6 +98,8 @@ hi-IN:
       NEW Course 4 Artist Params 9:
         draw a square: एक वर्ग खींचें
         do something: कुछ कीजिए
+      NEW Course 4 Play Lab Params 11:
+        jump: कूदें
       Standalone_Artist_7:
         draw a flower: एक फूल खींचे
       course3_artist_functions_challenge1:
@@ -111,6 +129,8 @@ hi-IN:
         do something: कुछ कीजिए
       courseE_artist_concept_challenge1_2018:
         do something: कुछ कीजिए
+      courseE_artist_functions1:
+        draw ear stems: ईयर स्टेम चित्रित करें
       courseE_artist_functions10:
         do something: कुछ कीजिए
       courseE_artist_functions10_2018:
@@ -119,10 +139,13 @@ hi-IN:
         do something: कुछ कीजिए
       courseE_artist_functions2:
         draw a square: एक वर्ग खींचें
+        draw ear stems: ईयर स्टेम चित्रित करें
       courseE_artist_functions2_2018:
         draw a square: एक वर्ग खींचें
+        draw ear stems: ईयर स्टेम चित्रित करें
       courseE_artist_functions2_2019:
         draw a square: एक वर्ग खींचें
+        draw ear stems: ईयर स्टेम चित्रित करें
       courseE_artist_functions3_2018:
         draw a star: एक सितारा खींचे
       courseE_artist_functions3_2019:
@@ -181,10 +204,13 @@ hi-IN:
         do something: कुछ कीजिए
       courseE_artist_functions_predict1:
         draw a square: एक वर्ग खींचें
+        draw ear stems: ईयर स्टेम चित्रित करें
       courseE_artist_functions_predict1_2018:
         draw a square: एक वर्ग खींचें
+        draw ear stems: ईयर स्टेम चित्रित करें
       courseE_artist_functions_predict1_2019:
         draw a square: एक वर्ग खींचें
+        draw ear stems: ईयर स्टेम चित्रित करें
       courseE_artist_functions_predict2:
         do something: कुछ कीजिए
       courseE_artist_functions_predict2_2018:

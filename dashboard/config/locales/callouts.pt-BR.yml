@@ -233,18 +233,27 @@ pt-BR:
       CSD U3 platform background1:
         CSD_U3_L16_S3_C1: a função que desenha o plano de fundo
         CSD_U3_L16_S3_C2: o código que chama a função
+        CSD_U3_L16_S3_C3: Mude esta função.
       CSD U3 platform background1_2018:
         CSD_U3_L16_S3_C1: a função que desenha o plano de fundo
         CSD_U3_L16_S3_C2: o código que chama a função
+        CSD_U3_L16_S3_C3: Mude esta função.
       CSD U3 platform background1_2019:
         CSD_U3_L16_S3_C1: a função que desenha o plano de fundo
         CSD_U3_L16_S3_C2: o código que chama a função
+        CSD_U3_L16_S3_C3: Mude esta função.
       CSD U3 platform platform1:
         CSD_U3_S17_L8_C1: Este bloco cria um novo sprite.
       CSD U3 platform platform1_2018:
         CSD_U3_S17_L8_C1: Este bloco cria um novo sprite.
       CSD U3 platform platform1_2019:
         CSD_U3_S17_L8_C1: Este bloco cria um novo sprite.
+      CSD U3 platform scoreboard:
+        CSD_U3_L17_S7_C1: A pontuação é impressa aqui.
+      CSD U3 platform scoreboard_2018:
+        CSD_U3_L17_S7_C1: A pontuação é impressa aqui.
+      CSD U3 platform scoreboard_2019:
+        CSD_U3_L17_S7_C1: A pontuação é impressa aqui.
       CSD U3 rect:
         CSD_U3_rect_c1: Aqui está o código
         CSD_U3_rect_c2: Aqui está o botão "Executar".

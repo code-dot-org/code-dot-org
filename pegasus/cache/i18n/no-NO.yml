@@ -1874,6 +1874,10 @@ no-NO:
     til <a href='%{supported_browsers_url}', target='_blank'>en nettleser vi støtter</a>.
     Du må gjerne forsøke å se siden, men det kan være at noe ikke vil virke slik det
     er ment.
+  compatibility_unsupported_browser_markdown: Nettleseren din støttes ikke. Vennligst
+    oppdater til <a href='%{supported_browsers_url}', target='_blank'>en nettleser
+    vi støtter</a>. Du må gjerne forsøke å se siden, men det kan være at noe ikke
+    vil virke slik det er ment.
   flappy_shortcode: flaks
   header_home: Hjem
   header_my_dashboard: Mitt Kontrollpanel

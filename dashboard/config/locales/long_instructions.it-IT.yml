@@ -1307,7 +1307,7 @@ it-IT:
         cancellalo e sostituiscilo con qualcosa di totalmente diverso)
       course4_collector_nested_loops_challenge2: "_\"A caccia di diamanti - usando
         i cicli!\"_ \n\nAiuta la collezionista a raggiungere almeno due diamanti usando
-        solo i blocchi che trovi nella cassetta degli attrezzi. Se vuoi puoi anche
+        solo i blocchi che trovi nella cassetta degli attrezzi. Se vuoi, puoi anche
         raccoglierli tutti e 4."
       course4_harvester_nested_loops_challenge1: _"Ho bisogno di aiuto nella fattoria!
         Aiutami a raccogliere queste pannocchie usando solo i blocchi presenti nella
@@ -1396,15 +1396,15 @@ it-IT:
       courseA_artist_loops4: |-
         Ora usa un ciclo <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="2-6">5</title></block></xml> per disegnare questa linea cinque volte!
 
-        ![](https://images.code.org/b2bc7f52ffdac2ad0d8e7c2d798c24df-image-1501875818062.gif)
+        <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="2-6">5</title></block></xml>
       courseA_artist_loops4_2018: |-
         Ora usa un ciclo <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="2-6">5</title></block></xml> per disegnare questa linea cinque volte!
 
-        ![](https://images.code.org/b2bc7f52ffdac2ad0d8e7c2d798c24df-image-1501875818062.gif)
+        <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="2-6">5</title></block></xml>
       courseA_artist_loops4_2019: |-
         Ora usa un ciclo <xml><block type="controls_repeat_simplified_dropdown" block-text="repeat"><title name="TIMES" config="2-6">5</title></block></xml> per disegnare questa linea cinque volte!
 
-        ![](https://images.code.org/b2bc7f52ffdac2ad0d8e7c2d798c24df-image-1501875818062.gif)
+        <xml><block type="controls_repeat_simplified_dropdown" block-text="repeat"><title name="TIMES" config="2-6">5</title></block></xml>
       courseA_artist_loops5: |-
         ## Disegna una linea composta da sette segmenti. Questo diventerà il nostro orizzonte.
 
@@ -1432,15 +1432,15 @@ it-IT:
       courseA_artist_loops7: |-
         ## Usa il ciclo <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> per aggiungere le onde all'acqua.
 
-        ![expandable](https://images.code.org/01c5f6772a8b608a2fca5f6de7e25c67-image-1498062629139.gif)
+        <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>
       courseA_artist_loops7_2018: |-
         ## Usa il ciclo <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> per aggiungere le onde all'acqua.
 
-        ![expandable](https://images.code.org/01c5f6772a8b608a2fca5f6de7e25c67-image-1498062629139.gif)
+        <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>
       courseA_artist_loops7_2019: |-
         ## Usa il ciclo <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> per aggiungere le onde all'acqua.
 
-        ![expandable](https://images.code.org/01c5f6772a8b608a2fca5f6de7e25c67-image-1498062629139.gif)
+        <xml><block type="controls_repeat_simplified_dropdown" block-text="repeat"><title name="TIMES" config="3-10">???</title></block></xml>
       courseA_artist_loops8: |-
         ## Ci serve una scala per salire sulla barca.
 
@@ -1531,9 +1531,8 @@ it-IT:
       courseA_collector_loops2: |-
         Raccogli tutti e tre i diamanti! Muovi Laura su ogni diamante e poi usa questo blocco:
           <xml><block type="collector_collect"/></xml>
-      courseA_collector_loops2_2018: |-
-        Raccogli tutti e tre i diamanti! Muovi Laura su ogni diamante e poi usa questo blocco:
-         <xml><block type="collector_collect"/></xml>
+      courseA_collector_loops2_2018: "Raccogli tutte e tre le perle! Muovi Laurel
+        su ogni pezzo del tesoro e poi usa questo blocco:\\\r\n <xml><block type=\"collector_collect\"/></xml>"
       courseA_collector_loops3: Come può Laura raccogliere tutti e cinque i diamanti
         usando un solo blocco <xml><block type="maze_moveEast"/></xml>?
       courseA_collector_loops3_2018: Come può Laura raccogliere tutti e cinque i diamanti
@@ -4021,15 +4020,15 @@ it-IT:
         Aiuta Laura a correggere il codice per raccogliere tutti i diamanti.
       courseD_collector_nested_loops_challenge2: "_\"A caccia di diamanti - usando
         i cicli!\"_ \n\nAiuta la collezionista a raggiungere almeno due diamanti usando
-        solo i blocchi che trovi nella cassetta degli attrezzi. Se vuoi puoi anche
+        solo i blocchi che trovi nella cassetta degli attrezzi. Se vuoi, puoi anche
         raccoglierli tutti e 4."
       courseD_collector_nested_loops_challenge2_2018: "_\"A caccia di diamanti - usando
         i cicli!\"_ \n\nAiuta la collezionista a raggiungere almeno due diamanti usando
-        solo i blocchi che trovi nella cassetta degli attrezzi. Se vuoi puoi anche
+        solo i blocchi che trovi nella cassetta degli attrezzi. Se vuoi, puoi anche
         raccoglierli tutti e 4."
       courseD_collector_nested_loops_challenge2_2019: "_\"A caccia di diamanti - usando
         i cicli!\"_ \n\nAiuta la collezionista a raggiungere almeno due diamanti usando
-        solo i blocchi che trovi nella cassetta degli attrezzi. Se vuoi puoi anche
+        solo i blocchi che trovi nella cassetta degli attrezzi. Se vuoi, puoi anche
         raccoglierli tutti e 4."
       courseD_collector_ramp10: Fai camminare Laura intorno a questo quadrato per
         raccogliere i diamanti che trova.
@@ -4268,8 +4267,14 @@ it-IT:
         Usa un blocco <xml><block type="maze_turn">
             <title name="DIR">turnLeft</title>
           </block></xml> per raggiungere la ghianda!
+      courseD_iceage_loops2_2019: |-
+        Usa un blocco <xml><block type="maze_turn">
+            <title name="DIR">turnLeft</title>
+          </block></xml> per raggiungere la ghianda!
       courseD_iceage_loops3: Riesci a raggiungere la ghianda con un solo blocco <xml><block
         type="maze_moveForward"/></xml>? Prova con un ciclo!
+      courseD_iceage_loops3_2019: Riesci a raggiungere la ghianda con un solo blocco
+        `O ←` <xml><block type="maze_moveWest"/></xml>? Prova con un ciclo!
       courseD_iceage_loops4: Aggiungi un blocco per far percorrere a Scrat tutto il
         tragitto per raggiungere la ghianda!
       courseD_iceage_loops4_2019: Aggiungi un blocco per far percorrere a Scrat tutto
@@ -4838,13 +4843,13 @@ it-IT:
       courseE_farmer_functions10b: Se metti il codice dell'esercizio precedente in
         una funzione, poi potrai usarla due volte per risolvere questo esercizio.
       courseE_farmer_functions13_2018: |-
-        Risolvi questo puzzle in 23 blocchi o meno.
+        Risolvi questo esercizio in 23 blocchi o meno.
 
         * * *
 
         ##### Ogni germoglio farà crescere _una_ pannocchia o niente. Per programmare la soluzione migliore, è necessario modificare le funzioni.
       courseE_farmer_functions13_2019: |-
-        Risolvi questo puzzle in 23 blocchi o meno.
+        Risolvi questo esercizio in 23 blocchi o meno.
 
         * * *
 

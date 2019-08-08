@@ -648,7 +648,6 @@
   "feedbackNotificationButton": "",
   "feedbackNotificationDetails": "",
   "feedbackNotificationLesson": "",
-  "feedbackNotificationLevel": "",
   "feedbackNotificationUnit": "",
   "feedbackPlaceholder": "Podaj tutaj informacje zwrotne dla swoich uczniów. Będą widoczne dla uczniów po kliknięciu przycisku 'Zapisz i Podziel się'.",
   "feedbackSaveError": "Wystąpił błąd podczas zapisywania Twojej opinii. Spróbuj ponownie zapisać.",
