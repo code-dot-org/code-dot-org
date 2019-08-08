@@ -6,6 +6,7 @@ teacher_resources [["lessonPlans", "https://curriculum.code.org/csd-19/unit1"], 
 has_verified_resources true
 has_lesson_plan true
 curriculum_path 'https://curriculum.code.org/csd-19/unit1/{LESSON}'
+family_name ''
 project_sharing true
 curriculum_umbrella 'CSD'
 
@@ -21,6 +22,8 @@ level 'CSD Problem Solving Process Video_pilot', named: true
 
 stage 'Exploring Problem Solving', flex_category: 'csd1_1'
 level 'CSD U1L03 TFMD_pilot', named: true
+level 'csd digital unplugged PSP word search big', named: true
+level 'csd digital unplugged PSP seating big', named: true
 
 stage 'What is a Computer?', flex_category: 'csd1_2'
 level 'CSD U1L04 TFMD_pilot', named: true

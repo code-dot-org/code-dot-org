@@ -1195,5 +1195,6 @@ FactoryGirl.define do
     association :student
     association :teacher
     association :level
+    association :script_level
   end
 end

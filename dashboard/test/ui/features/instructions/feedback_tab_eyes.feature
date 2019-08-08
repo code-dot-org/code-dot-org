@@ -1,3 +1,4 @@
+@dashboard_db_access
 @eyes
 Feature: Feedback Tab Visibility
 
@@ -26,6 +27,7 @@ Feature: Feedback Tab Visibility
   Otherwise don't show feedback tab
     When I open my eyes to test "teacher giving student feedback"
     And I sign in as "Teacher_Lillian"
+    And I give user "Teacher_Lillian" authorized teacher permission
 
     And I am on "http://studio.code.org/s/allthethings/stage/38/puzzle/1"
     And I wait for the page to fully load
