@@ -94,4 +94,63 @@ describe('clientApi module', () => {
       );
     });
   });
+
+  describe('starter assets api', () => {
+    const levelChannelId = 1;
+
+    describe('getStarterAssets', () => {
+      it('makes an ajax request to the correct url', () => {
+        clientApi.starterAssets.getStarterAssets(
+          levelChannelId,
+          () => {},
+          () => {}
+        );
+
+        expect(requests).to.have.length(1);
+        expect(requests[0].method).to.equal('GET');
+        expect(requests[0].url).to.equal(
+          `/level_starter_assets/${levelChannelId}/`
+        );
+      });
+    });
+
+    describe('withLevelChannelId', () => {
+      it('binds channelId to the api and returns the bound api', () => {
+        const boundApi = clientApi.starterAssets.withLevelChannelId(
+          levelChannelId
+        );
+
+        assert.equal(levelChannelId, boundApi.channelId);
+      });
+    });
+
+    describe('basePath', () => {
+      it('returns the correct base path', () => {
+        const path = 'some-path';
+        const boundApi = clientApi.starterAssets.withLevelChannelId(
+          levelChannelId
+        );
+
+        assert.equal(
+          `/level_starter_assets/${levelChannelId}/${path}`,
+          boundApi.basePath(path)
+        );
+      });
+
+      it('throws an error if StarterAssetsApi is not bound', () => {
+        assert.throws(
+          clientApi.starterAssets.basePath,
+          'You must bind the API and set channelId before creating a base path.'
+        );
+      });
+
+      it('throws an error if channelId is not set', () => {
+        const boundApi = clientApi.starterAssets.withLevelChannelId(undefined);
+        assert.throws(
+          boundApi.basePath,
+          'You must bind the API and set channelId before creating a base path.'
+        );
+      });
+    });
+  });
 });
