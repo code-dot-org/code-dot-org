@@ -1,3 +1,4 @@
+@dashboard_db_access
 @no_mobile
 Feature: Feedback Tab Visibility
 
@@ -32,6 +33,7 @@ feedback can be submitted and displayed. If there is a mini rubric, teacher can 
 If a teacher on a level with mini rubric can see the rubric without viewing student work.
 Otherwise don't show feedback tab
   Then I sign in as "Teacher_Lillian"
+  And I give user "Teacher_Lillian" authorized teacher permission
 
   #Not automatically visible on contained levels with no mini rubric
   Then I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/15"
@@ -84,7 +86,7 @@ Otherwise don't show feedback tab
   And element "#rubric-input-performanceLevel1" is checked
   And element ".editor-column" contains text matching "Last updated .* ago"
   And element "#ui-test-submit-feedback" contains text "Update"
-  
+
   #As student, latest feedback from teacher is displayed
   Then I sign out
   And I sign in as "Lillian"

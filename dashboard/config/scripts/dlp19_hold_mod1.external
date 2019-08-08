@@ -1,0 +1,8 @@
+name 'dlp19-hold-mod1'
+title ''
+description 'Used for modules before they are released'
+markdown <<MARKDOWN
+##Deeper Learning modules are released according to the following schedule.  Please check back!
+
+![](https://images.code.org/29081b1a5e7fcaca569824ff173f278f-image-1565286826611.PNG)
+MARKDOWN

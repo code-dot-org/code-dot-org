@@ -6,7 +6,7 @@ has_lesson_plan true
 curriculum_path 'https://curriculum.code.org/{LOCALE}/csf-19/coursec/{LESSON}'
 project_widget_visible true
 project_widget_types ["playlab", "artist"]
-script_announcements [{"notice"=>"Our 2019 CS Fundamentals Lessons are Live!", "details"=>"Click \"Learn More\" to view all of the lesson plans for the 2019 version of Course C!", "link"=>"https://curriculum.code.org/csf-19/coursec", "type"=>"information", "visibility"=>"Teacher-only"}]
+script_announcements [{"notice"=>"Our 2019 CS Fundamentals Lessons are Live!", "details"=>"Click \"Learn More\" to view all of the lesson plans for the 2019 version of Course C!", "link"=>"https://curriculum.code.org/csf-19/coursec", "type"=>"information", "visibility"=>"Teacher-only"}, {"notice"=>"Join our CSF Teacher Insights Group! (US teachers only)", "details"=>"We're looking for teachers to meet virtually six times over the course of the fall. You'll connect with other teachers, provide feedback about tools and curriculum, receive direct support from Code.org staff, and receive Code.org swag! Apply by August 20th.", "link"=>"https://form.jotform.com/91415869246163", "type"=>"bullhorn", "visibility"=>"Teacher-only"}]
 family_name 'coursec'
 version_year '2019'
 is_stable true

@@ -655,102 +655,6 @@ vi-VN:
               </next>
             </block>
           </xml>
-      courseA_maze_ramp3b_2018:
-        '1': |-
-          Chương trình của bạn sẽ như sau:
-
-          <xml>
-            <block type="when_run" deletable="false" movable="false">
-              <next>
-                <block type="maze_moveEast">
-                  <next>
-                    <block type="maze_moveEast">
-                    </block>
-                  </next>
-                </block>
-              </next>
-            </block>
-          </xml>
-      courseA_maze_ramp3b_2019:
-        '1': |-
-          Chương trình của bạn sẽ như sau:
-
-          <xml>
-            <block type="when_run" deletable="false" movable="false">
-              <next>
-                <block type="maze_moveEast">
-                  <next>
-                    <block type="maze_moveEast">
-                    </block>
-                  </next>
-                </block>
-              </next>
-            </block>
-          </xml>
-      courseA_maze_ramp4a_2018:
-        '1': |-
-          Chương trình của bạn sẽ như sau:
-
-          <xml>
-            <block type="when_run" deletable="false" movable="false">
-              <next>
-                <block type="maze_moveEast">
-                  <next>
-                    <block type="maze_moveEast">
-                    </block>
-                  </next>
-                </block>
-              </next>
-            </block>
-          </xml>
-      courseA_maze_ramp4a_2019:
-        '1': |-
-          Chương trình của bạn sẽ như sau:
-
-          <xml>
-            <block type="when_run" deletable="false" movable="false">
-              <next>
-                <block type="maze_moveEast">
-                  <next>
-                    <block type="maze_moveEast">
-                    </block>
-                  </next>
-                </block>
-              </next>
-            </block>
-          </xml>
-      courseA_maze_ramp5a_2018:
-        '1': |-
-          Chương trình của bạn sẽ như sau:
-
-          <xml>
-            <block type="when_run" deletable="false" movable="false">
-              <next>
-                <block type="maze_moveEast">
-                  <next>
-                    <block type="maze_moveEast">
-                    </block>
-                  </next>
-                </block>
-              </next>
-            </block>
-          </xml>
-      courseA_maze_ramp5a_2019:
-        '1': |-
-          Chương trình của bạn sẽ như sau:
-
-          <xml>
-            <block type="when_run" deletable="false" movable="false">
-              <next>
-                <block type="maze_moveEast">
-                  <next>
-                    <block type="maze_moveEast">
-                    </block>
-                  </next>
-                </block>
-              </next>
-            </block>
-          </xml>
       courseA_maze_seq1:
         courseA_maze_seq1_a: |-
           Nếu bạn đang gặp vấn đề trong việc làm chú chim di chuyển, hãy chắc rằng những khối lệnh được gắn vào bên dưới <xml>
@@ -925,8 +829,8 @@ vi-VN:
           khi chạy chương trình. Khi cây cờ chuyển sang màu xanh nghĩa là bạn đã hoàn
           thành!
       courseB_Scrat_ramp1_2018:
-        '1': Nếu Scrat không làm đúng những gì bạn muốn, hãy chắc chắn rằng cả hai
-          khối đã được ghép vào với nhau rồi ấn "Chạy" lần nữa.
+        '1': Nếu Scrat không làm đúng những gì bạn muốn, chắc chắn rằng cả hai khối
+          đã được ghép vào với nhau rồi ấn "Chạy" lần nữa.
         '2': Đừng sợ phạm sai lầm! Hãy thử một cái gì đó, và nếu nó không hoạt động,
           hãy thử một cái khác!
       courseB_Scrat_ramp1_2019:
@@ -1036,70 +940,6 @@ vi-VN:
                       <next>
                         <block type="maze_moveEast"/>
                       </next>
-                    </block>
-                  </next>
-                </block>
-              </next>
-            </block>
-          </xml>
-      courseB_Scrat_ramp4a_2018:
-        '1': |-
-          Chương trình của bạn sẽ như sau:
-
-          <xml>
-            <block type="when_run" deletable="false" movable="false">
-              <next>
-                <block type="maze_moveEast">
-                  <next>
-                    <block type="maze_moveEast">
-                    </block>
-                  </next>
-                </block>
-              </next>
-            </block>
-          </xml>
-      courseB_Scrat_ramp4a_2019:
-        '1': |-
-          Chương trình của bạn sẽ như sau:
-
-          <xml>
-            <block type="when_run" deletable="false" movable="false">
-              <next>
-                <block type="maze_moveEast">
-                  <next>
-                    <block type="maze_moveEast">
-                    </block>
-                  </next>
-                </block>
-              </next>
-            </block>
-          </xml>
-      courseB_Scrat_ramp5a_2018:
-        '1': |-
-          Chương trình của bạn sẽ như sau:
-
-          <xml>
-            <block type="when_run" deletable="false" movable="false">
-              <next>
-                <block type="maze_moveEast">
-                  <next>
-                    <block type="maze_moveEast">
-                    </block>
-                  </next>
-                </block>
-              </next>
-            </block>
-          </xml>
-      courseB_Scrat_ramp5a_2019:
-        '1': |-
-          Chương trình của bạn sẽ như sau:
-
-          <xml>
-            <block type="when_run" deletable="false" movable="false">
-              <next>
-                <block type="maze_moveEast">
-                  <next>
-                    <block type="maze_moveEast">
                     </block>
                   </next>
                 </block>
