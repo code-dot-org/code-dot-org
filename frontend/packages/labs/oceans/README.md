@@ -7,6 +7,7 @@ git clone git@github.com:code-dot-org/ml-activities.git
 cd ml-activities
 nvm install
 nvm use
+npm install -g yarn
 yarn
 yarn start
 ```

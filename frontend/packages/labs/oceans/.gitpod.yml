@@ -5,6 +5,7 @@ tasks:
 - init: >
     nvm install &&
     nvm use &&
+    npm install -g yarn &&
     yarn
   command: >
     yarn start
