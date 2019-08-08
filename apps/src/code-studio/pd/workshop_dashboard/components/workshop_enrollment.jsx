@@ -20,9 +20,11 @@ export default class WorkshopEnrollment extends React.Component {
     accountRequiredForAttendance: PropTypes.bool.isRequired,
     scholarshipWorkshop: PropTypes.bool.isRequired,
     onDelete: PropTypes.func.isRequired,
+    onClickSelect: PropTypes.func.isRequired,
     location: PropTypes.object,
     activeTab: PropTypes.number,
-    onTabSelect: PropTypes.func
+    onTabSelect: PropTypes.func,
+    selectedEnrollments: PropTypes.array
   };
 
   static defaultProps = {activeTab: 0};
@@ -60,9 +62,11 @@ export default class WorkshopEnrollment extends React.Component {
         accountRequiredForAttendance={this.props.accountRequiredForAttendance}
         scholarshipWorkshop={this.props.scholarshipWorkshop}
         onDelete={this.props.onDelete}
+        onClickSelect={this.props.onClickSelect}
         workshopCourse={this.props.workshopCourse}
         workshopSubject={this.props.workshopSubject}
         numSessions={this.props.numSessions}
+        selectedEnrollments={this.props.selectedEnrollments}
       />
     );
 

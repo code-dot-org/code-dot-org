@@ -5,7 +5,7 @@ student_detail_progress_view true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csd-19/unit2/"], ["teacherForum", "https://forum.code.org/c/csd2"], ["vocabulary", "https://curriculum.code.org/csd-19/unit2/vocab/"], ["standardMappings", "https://curriculum.code.org/csd-19/unit2/standards/"], ["codeIntroduced", "https://curriculum.code.org/csd-19/unit2/code/"]]
 has_verified_resources true
 has_lesson_plan true
-curriculum_path 'https://curriculum.code.org/csd-19/unit2/{LESSON}'
+curriculum_path 'https://curriculum.code.org/csd-20/unit2/{LESSON}'
 family_name ''
 project_sharing true
 curriculum_umbrella 'CSD'
@@ -59,10 +59,11 @@ level 'CSD U2L07 TFMD_pilot', named: true
 level 'CSD U2 Image Tag 1_pilot', progression: 'Adding Images'
 level 'CSD U2 Image Credit_pilot', progression: 'Adding Images'
 level 'CSD U2 Image Tag Debug_pilot', progression: 'Adding Images'
-level 'CSD U2 image debug match_pilot', progression: 'Adding Images'
+level 'CSD U2 Image choose name', progression: 'Adding Images'
 level 'CSD U2 Image Tag 2_pilot', progression: 'Adding Images'
 level 'CSD U2 Image practice_pilot', progression: 'Adding Images'
-level 'CSD U2 Image challenge_pilot', progression: 'Adding Images'
+level 'CSD U2 Image assessment', progression: 'Adding Images', assessment: true
+level 'CSD U2 Image challenge_pilot', progression: 'Adding Images Challenges', named: true
 
 stage 'Websites for Expression ', flex_category: 'csd2_1'
 level 'CSD U2L02 TFMD_pilot', named: true
@@ -84,12 +85,7 @@ level 'CSD U2L09 TFMD_pilot', named: true
 level 'CSD U2L09 TFMD_pilot', named: true
 
 stage 'Project - Building a Webpage', flex_category: 'csd2_1'
-level 'CSD U2L09 TFMD_pilot', named: true
-level 'CSD U2 link demo_pilot', progression: 'Linking Pages'
-level 'CSD U2 navigation_pilot', progression: 'Linking Pages'
-level 'CSD U2 a tag map_pilot', named: true
 level 'CSD U2 project guide_2018_2019_pilot', named: true
-level 'CSD U2 create page_pilot', progression: 'Website Project'
 level 'CSD U2 upload images_pilot', progression: 'Website Project'
 level 'CSD U2 add content_pilot', progression: 'Website Project'
 level 'CSD U2 header footer_pilot', progression: 'Website Project'

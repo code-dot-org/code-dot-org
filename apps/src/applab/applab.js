@@ -668,8 +668,8 @@ Applab.init = function(config) {
     ),
     nonResponsiveVisualizationColumnWidth: applabConstants.APP_WIDTH,
     visualizationHasPadding: !config.noPadding,
-    hasDataMode: !config.level.hideViewDataButton,
-    hasDesignMode: !config.level.hideDesignMode,
+    hasDataMode: !(config.level.hideViewDataButton || config.level.widgetMode),
+    hasDesignMode: !(config.level.hideDesignMode || config.level.widgetMode),
     isIframeEmbed: !!config.level.iframeEmbed,
     isProjectLevel: !!config.level.isProjectLevel,
     isSubmittable: !!config.level.submittable,
@@ -754,6 +754,10 @@ Applab.init = function(config) {
             'scale(' + ratio + ', ' + ratio + ')'
           );
         }
+      }
+
+      if (getStore().getState().pageConstants.widgetMode) {
+        Applab.runButtonClick();
       }
     });
 
