@@ -7,8 +7,8 @@ git clone git@github.com:code-dot-org/ml-activities.git
 cd ml-activities
 nvm install
 nvm use
-npm install
-npm run dev
+yarn
+yarn run dev
 ```
 
 At this point the app will be running at [http://localhost:8080](http://localhost:8080) with live-reloading on file changes.
