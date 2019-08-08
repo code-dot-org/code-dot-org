@@ -34,8 +34,9 @@ class LevelStarterAssetsController < ApplicationController
 
   private
 
-  def filename(id, file_obj)
-    file_obj.key.sub(prefix(id) + '/', '')
+  def filename(key, file_obj)
+    prefix = prefix("#{key}/")
+    file_obj.key.sub(prefix, '')
   end
 
   def file_mime_type(extension)
@@ -46,13 +47,12 @@ class LevelStarterAssetsController < ApplicationController
     MIME::Types.type_for(extension)&.first&.content_type
   end
 
-  def prefix(id)
-    S3_PREFIX + id
+  def prefix(key)
+    S3_PREFIX + key
   end
 
-  # Returns S3_BUCKET objects in the S3_PREFIX/id directory.
-  def get_file_objects(id)
-    bucket.objects(prefix: prefix(id))
+  def get_file_objects(key)
+    bucket.objects(prefix: prefix(key))
   end
 
   def bucket
