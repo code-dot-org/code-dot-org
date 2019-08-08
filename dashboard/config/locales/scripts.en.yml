@@ -10452,7 +10452,7 @@ en:
             Concept Practice with Minecraft:
               name: Concept Practice with Minecraft
         csd1-2019:
-          title: CSD Unit 1 - Problem Solving and Computing('19-'20)
+          title: CSD Unit 1 - Problem Solving and Computing ('19-'20)
           description: "Problem Solving and Computing is a highly interactive and collaborative introduction to the field of computer science, as framed within the broader pursuit of solving problems. You’ll practice using a problem solving process to address a series of puzzles, challenges, and real world scenarios. Next, you’ll learn how computers input, output, store, and process information to help humans solve problems.  The unit concludes with a project in which you design an application that helps solve a problem of your choosing.\r\n"
           description_short: "  Learn how humans work with computers to solve problems."
           description_audience: ''
@@ -12981,6 +12981,10 @@ en:
           stages:
             Deeper Learning Overview:
               name: Deeper Learning Overview
+            Understanding the Curriculum:
+              name: Understanding the Curriculum
+            Demonstrating Understanding:
+              name: Demonstrating Understanding
           title: CS Discoveries Deeper Learning 2019 Overview
           description_audience: CS Discoveries Facilitators in Training 2019
           description_short: ''
@@ -12989,6 +12993,10 @@ en:
           stages:
             Deeper Learning Overview:
               name: Deeper Learning Overview
+            Understanding the Curriculum:
+              name: Understanding the Curriculum
+            Demonstrating Understanding:
+              name: Demonstrating Understanding
           title: CS Principles Deeper Learning 2019 FiT Workshop
           description_audience: ''
           description_short: ''
