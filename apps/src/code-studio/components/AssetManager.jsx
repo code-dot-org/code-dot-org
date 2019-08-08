@@ -78,6 +78,8 @@ export default class AssetManager extends React.Component {
   }
 
   componentWillMount() {
+    // TODO: replace with this.props.levelChannelId
+    // TODO: set starterAssets to [] if no levelChannelId
     starterAssetsApi.getStarterAssets(
       LEVEL_CHANNEL_ID,
       this.onStarterAssetsReceived,
