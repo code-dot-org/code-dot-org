@@ -25,7 +25,7 @@ describe('AssetManager', () => {
 
   describe('componentWillMount', () => {
     it('gets starter assets if levelChannelId is present', () => {
-      shallow(<AssetManager {...DEFAULT_PROPS} levelChannelId={1} />);
+      shallow(<AssetManager {...DEFAULT_PROPS} levelChannelId={'1'} />);
 
       expect(requests).to.have.length(1);
       expect(requests[0].method).to.equal('GET');

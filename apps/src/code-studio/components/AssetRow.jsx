@@ -32,7 +32,7 @@ export default class AssetRow extends React.Component {
     onDelete: PropTypes.func.isRequired,
     soundPlayer: PropTypes.object,
     projectId: PropTypes.string,
-    levelChannelId: PropTypes.number,
+    levelChannelId: PropTypes.string,
 
     // For logging purposes
     imagePicker: PropTypes.bool, // identifies if displayed by 'Manage Assets' flow

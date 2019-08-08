@@ -57,7 +57,7 @@ export default class AssetManager extends React.Component {
     soundPlayer: PropTypes.object,
     disableAudioRecording: PropTypes.bool,
     projectId: PropTypes.string,
-    levelChannelId: PropTypes.number,
+    levelChannelId: PropTypes.string,
 
     // For logging purposes
     imagePicker: PropTypes.bool, // identifies if displayed by 'Manage Assets' flow
