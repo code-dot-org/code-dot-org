@@ -32,7 +32,7 @@
   "and": "和",
   "animationMode": "动画",
   "animationPicker_drawYourOwn": "自画",
-  "animationPicker_error": "错误：{信息}",
+  "animationPicker_error": "错误：{message}",
   "animationPicker_failedToParseImage": "无法分析图像",
   "animationPicker_title": "动画库",
   "animationPicker_unsupportedType": "对不起，不支持这种文件类型",
