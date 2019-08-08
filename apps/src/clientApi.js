@@ -58,7 +58,7 @@ class CollectionsApi {
 
   ajax(method, file, success, error, data) {
     error = error || function() {};
-    if (!window.dashboard && !this.projectId) {
+    if (!window.dashboard && !this.getProjectId()) {
       error({status: 'No dashboard'});
       return;
     }
@@ -67,7 +67,7 @@ class CollectionsApi {
 
   getFile(file, version, success, error, data) {
     error = error || function() {};
-    if (!window.dashboard && !this.projectId) {
+    if (!window.dashboard && !this.getProjectId()) {
       error({status: 'No dashboard'});
       return;
     }
