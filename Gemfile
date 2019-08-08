@@ -197,7 +197,7 @@ gem 'redcarpet', '~> 3.3.4'
 # Ref: https://github.com/alexreisner/geocoder/pull/1085 (pending new RubyGems release)
 gem 'geocoder', github: 'wjordan/geocoder', ref: 'rack-request-fix'
 
-gem 'mini_magick'
+gem 'mini_magick', ">=4.9.4"
 gem 'rmagick'
 
 gem 'acts_as_list'
@@ -245,6 +245,7 @@ gem 'aws-sdk-firehose', '~> 1.6'
 gem 'aws-sdk-rds', '>= 1.38.1'
 gem 'aws-sdk-route53', '~> 1'
 gem 'aws-sdk-s3', '~> 1'
+gem 'aws-sdk-secretsmanager', '~> 1'
 
 # Lint tools
 group :development, :staging do
