@@ -16,6 +16,7 @@ import {
 } from '../util/browserChecks';
 import ValidationStep, {Status} from '../../../ui/ValidationStep';
 import {BOARD_TYPE} from '../CircuitPlaygroundBoard';
+import experiments from '../../../../util/experiments';
 
 const STATUS_SUPPORTED_BROWSER = 'statusSupportedBrowser';
 const STATUS_APP_INSTALLED = 'statusAppInstalled';
@@ -337,21 +338,25 @@ export default class SetupChecklist extends Component {
             </a>
             .{this.contactSupport()}
           </ValidationStep>
-          {this.state.boardTypeDetected === BOARD_TYPE.CLASSIC && (
-            <ValidationStep
-              stepStatus={this.state[STATUS_BOARD_FIRMWARE]}
-              stepName="Board firmware up-to-date"
-            >
-              <div>
-                This board is not using the most up-to-date version of the
-                firmware. For best results, please update the firmware by
-                clicking on the button below.
-              </div>
-              <button type="button" onClick={() => this.updateBoardFirmware()}>
-                Update Firmware
-              </button>
-            </ValidationStep>
-          )}
+          {experiments.isEnabled('flash-classic') &&
+            this.state.boardTypeDetected === BOARD_TYPE.CLASSIC && (
+              <ValidationStep
+                stepStatus={this.state[STATUS_BOARD_FIRMWARE]}
+                stepName="Board firmware up-to-date"
+              >
+                <div>
+                  This board is not using the most up-to-date version of the
+                  firmware. For best results, please update the firmware by
+                  clicking on the button below.
+                </div>
+                <button
+                  type="button"
+                  onClick={() => this.updateBoardFirmware()}
+                >
+                  Update Firmware
+                </button>
+              </ValidationStep>
+            )}
         </div>
         <div>
           <h2>{i18n.support()}</h2>
