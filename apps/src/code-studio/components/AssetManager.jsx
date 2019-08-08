@@ -223,8 +223,8 @@ export default class AssetManager extends React.Component {
   };
 
   getStarterAssetRows = () => {
-    if (!this.props.levelChannelId) {
-      return null;
+    if (!this.props.levelChannelId || this.state.starterAssets.length === 0) {
+      return [];
     }
 
     const boundApi = starterAssetsApi.withLevelChannelId(
