@@ -11,7 +11,7 @@ import {
 } from '@cdo/apps/redux';
 import commonReducers from '@cdo/apps/redux/commonReducers';
 import {setIsRunning} from '@cdo/apps/redux/runState';
-import reducers from '@cdo/apps/p5lab/gamelab/reducers';
+import reducers from '@cdo/apps/p5lab/reducers';
 import {setExternalGlobals} from '../../util/testUtils';
 import 'script-loader!@code-dot-org/p5.play/examples/lib/p5';
 import 'script-loader!@code-dot-org/p5.play/lib/p5.play';
