@@ -59,7 +59,7 @@ class AssetThumbnail extends React.Component {
     iconStyle: PropTypes.object,
     api: PropTypes.object,
     projectId: PropTypes.string,
-    levelChannelId: PropTypes.string,
+    levelChannelId: PropTypes.number,
     soundPlayer: PropTypes.object
   };
 
