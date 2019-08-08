@@ -44,6 +44,9 @@ const styles = {
   }
 };
 
+// TODO: move to redux
+const LEVEL_CHANNEL_ID = 1;
+
 /**
  * A component for managing hosted assets.
  */
@@ -76,7 +79,7 @@ export default class AssetManager extends React.Component {
 
   componentWillMount() {
     starterAssetsApi.getStarterAssets(
-      1, // TODO: GET VALUE FROM REDUX
+      LEVEL_CHANNEL_ID,
       this.onStarterAssetsReceived,
       this.onStarterAssetsFailure
     );
@@ -225,6 +228,7 @@ export default class AssetManager extends React.Component {
           api={starterAssetsApi}
           onChoose={() => console.log('choose!')}
           onDelete={() => console.log('delete!')}
+          levelChannelId={LEVEL_CHANNEL_ID}
         />
       );
     });
