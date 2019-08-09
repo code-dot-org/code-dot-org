@@ -648,7 +648,6 @@
   "feedbackNotificationButton": "",
   "feedbackNotificationDetails": "",
   "feedbackNotificationLesson": "",
-  "feedbackNotificationLevel": "",
   "feedbackNotificationUnit": "",
   "feedbackPlaceholder": "אנא הכנס משוב עבור התלמיד שלך כאן. התלמיד יוכל לצפות בזה כאשר תלחץ על \"שמור ושתף\".",
   "feedbackSaveError": "אירעה שגיאה בעת שמירת המשוב. אנא נסה לשמור שוב.",

@@ -619,6 +619,8 @@ hi:
             '"u"': u
             '"v"': v
             '"w"': w
+            '"x"': x
+            '"y"': y
             '"z"': z
       Dancelab_whenPeak:
         text: जब {RANGE} सबसे अधिक
@@ -684,6 +686,8 @@ hi:
             '"u"': u
             '"v"': v
             '"w"': w
+            '"x"': x
+            '"y"': y
             '"z"': z
       gamelab_mirrorSprite:
         options:
@@ -872,10 +876,11 @@ hi:
             '"left"': बायाँ तीर
             '"right"': दायाँ तीर
             '"w"': W
-            '"a"': अ
+            '"a"': A
             '"s"': |-
               S
               S
+            '"d"': D
       Mikelab_whenKeyReleased:
         options:
           KEY:
@@ -884,10 +889,11 @@ hi:
             '"left"': बायाँ तीर
             '"right"': दायाँ तीर
             '"w"': W
-            '"a"': अ
+            '"a"': A
             '"s"': |-
               S
               S
+            '"d"': D
       Mikelab_whileKeyPressed:
         options:
           KEY:

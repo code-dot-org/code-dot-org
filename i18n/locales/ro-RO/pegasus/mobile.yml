@@ -1343,6 +1343,7 @@
   sphero_beyond_longdescription: "Fie că sunteţi un educator sau un părinte, lecțiile SPRK oferă copiilor un curs intensiv și distractiv de programare a roboților, îmbunătățindu-și, în același timp, abilităţile în matematică şi ştiinţă."
   compatibility_hide_this_warning: "Ascunde această avertizare"
   compatibility_unsupported_browser: "Browser-ul nu este acceptat. Vă rugăm să faceţi upgrade browser-ului la <a href='%{supported_browsers_url}', target='_blank'> unul din browserele noastre acceptate</a>. Puteţi încerca vizualizarea paginii, dar aşteptati-va ca functionalitatea sa fie nesatisfacatoare."
+  compatibility_unsupported_browser_markdown: "Browser-ul nu este acceptat. Vă rugăm să faceţi upgrade browser-ului la <a href='%{supported_browsers_url}', target='_blank'> unul din browserele noastre acceptate</a>. Puteţi încerca vizualizarea paginii, dar aşteptati-va ca functionalitatea sa fie nesatisfacatoare."
   flappy_shortcode: "zboară"
   header_home: "Acasă"
   header_my_dashboard: "Panoul meu principal"

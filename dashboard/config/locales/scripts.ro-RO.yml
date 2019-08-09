@@ -4707,3 +4707,13 @@ ro:
           stages:
             Loops in Ice Age:
               name: Bucle în Ice Age
+        dlp19-csd-mod-fit:
+          description_short: "[șir gol]"
+          description: "[șir gol]"
+        dlp19-csp-mod-fit:
+          description_audience: "[șir gol]"
+          description_short: "[șir gol]"
+          description: "[șir gol]"
+        pl-csd-bugs:
+          description_audience: "[șir gol]"
+          description: "[șir gol]"

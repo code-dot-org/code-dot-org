@@ -11540,6 +11540,372 @@ es-MX:
         -   Mira el primer bloque de evento en el programa y encuentra la parte donde dice "change".
         -   Dentro del bloque del evento, obtén el valor del intervalo del deslizador y úsalo para hacer que el LED parpadee al nuevo ritmo.
         -   Ejecuta el programa, y mueve el deslizador para ver si la velocidad del LED cambia automáticamente.
+      CSD U6 circuit createButton: |-
+        <div style="float: right" markdown="1">
+
+        ![expandable](https://cdo-curriculum.s3.amazonaws.com/media/uploads/button_alligator.png)
+
+        </div>
+
+        # Crea tus propios botones
+
+        Parecido a los LEDs, los botones son un circuito realmente simple que puedes agregar a tu tablero de manera sencilla. Como los LEDs, los botones deberían estar conectados a un pin numerado, pero a diferencia de los LEDs, un circuito de botones debería estar desconectado en el medio. Cuando conectar el circuito, producirá un evento de presionado de botón.
+
+        # Haz esto
+
+        -   Agarra dos cables.
+        -   Conecta un cable a un pin numerado abierto.
+        -   Conecta el segundo cable a un pin de tierra.
+        -   Actualiza la línea 2 para que haga referencia al pin que elegiste.
+        -   Ejecuta el código proporcionado.
+        -   Con el programa en ejecución, toca los extremos desconectados de ambos cables juntos para "presionar" el botón.
+            _Sugerencia: puedes crear un circuito de botones con muchos tipos diferentes de materiales, siempre que conduzcan la electricidad. Intenta hacer botones con papel de aluminio, cubiertos o clips._
+      CSD U6 circuit createButton_2018: |-
+        <div style="float: right" markdown="1">
+
+        ![expandable](https://cdo-curriculum.s3.amazonaws.com/media/uploads/button_alligator.png)
+
+        </div>
+
+        # Crea tus propios botones
+
+        Parecido a los LEDs, los botones son un circuito realmente simple que puedes agregar a tu tablero de manera sencilla. Como los LEDs, los botones deberían estar conectados a un pin numerado, pero a diferencia de los LEDs, un circuito de botones debería estar desconectado en el medio. Cuando conectar el circuito, producirá un evento de presionado de botón.
+
+        # Haz esto
+
+        -   Agarra dos cables.
+        -   Conecta un cable a un pin numerado abierto.
+        -   Conecta el segundo cable a un pin de tierra.
+        -   Actualiza la línea 2 para que haga referencia al pin que elegiste.
+        -   Ejecuta el código proporcionado.
+        -   Con el programa en ejecución, toca los extremos desconectados de ambos cables juntos para "presionar" el botón.
+            _Sugerencia: puedes crear un circuito de botones con muchos tipos diferentes de materiales, siempre que conduzcan la electricidad. Intenta hacer botones con papel de aluminio, cubiertos o clips._
+      CSD U6 circuit createButton_2019: |-
+        <div style="float: right" markdown="1">
+
+        ![expandable](https://cdo-curriculum.s3.amazonaws.com/media/uploads/button_alligator.png)
+
+        </div>
+
+        # Crea tus propios botones
+
+        Parecido a los LEDs, los botones son un circuito realmente simple que puedes agregar a tu tablero de manera sencilla. Como los LEDs, los botones deberían estar conectados a un pin numerado, pero a diferencia de los LEDs, un circuito de botones debería estar desconectado en el medio. Cuando conectar el circuito, producirá un evento de presionado de botón.
+
+        # Haz esto
+
+        -   Agarra dos cables.
+        -   Conecta un cable a un pin numerado abierto.
+        -   Conecta el segundo cable a un pin de tierra.
+        -   Actualiza la línea 2 para que haga referencia al pin que elegiste.
+        -   Ejecuta el código proporcionado.
+        -   Con el programa en ejecución, toca los extremos desconectados de ambos cables juntos para "presionar" el botón.
+            _Sugerencia: puedes crear un circuito de botones con muchos tipos diferentes de materiales, siempre que conduzcan la electricidad. Intenta hacer botones con papel de aluminio, cubiertos o clips._
+      CSD U6 circuit createLed: |-
+        # Crear objetos de tablero
+
+        Puede que hayas notado que los nuevos bloques que estamos usando están en un cajón de herramientas diferente. El cajón **Circuito** contiene todos los objetos de tablero que están integrados al Circuit Playground, pero cuando comienzas a cablear tus propios circuitos, el Maker Toolkit ya no sabe dónde está todo.
+
+        El nuevo cajón **Maker** contiene comandos de propósito generales en lugar de comandos que están personalizados para el Circuit Playground. Además de los comandos `modoPin()` y `escrituraDigital()` que has visto, incluye comandos para crear nuevos objetos en el tablero que se pueden programar de la misma manera que los bloques en el cajón **Circuito**. El comando `var myLed = createLed()`, por ejemplo, crea un nuevo objeto LED que se comporta igual que los bloques `led` que has estado usando.
+
+        # Haz esto
+
+        Ahora que está creando nuevos objetos de tablero para los que no tenemos bloques, deberás trabajar en modo texto. Puedes seguir sacando bloques que ya conoces del cajón **Circuito**, solo tendrás que cambiar el nombre  del objeto.
+
+        -   Mantén tu LED conectado igual que como estaba antes (conectado al pin 2)
+        -   Asegúrate de estar en modo texto, no en modo bloque.
+        -   Arrastra un bloque `parpadeo.led()` debajo del comentario `// Parpadear miLed`.
+        -   Reemplaza el texto `led` con `miLed`.
+        -   Prueba tu código.
+      CSD U6 circuit createLed_2018: |-
+        # Crear objetos de tablero
+
+        Puede que hayas notado que los nuevos bloques que estamos usando están en un cajón de herramientas diferente. El cajón **Circuito** contiene todos los objetos de tablero que están integrados al Circuit Playground, pero cuando comienzas a cablear tus propios circuitos, el Maker Toolkit ya no sabe dónde está todo.
+
+        El nuevo cajón **Maker** contiene comandos de propósito generales en lugar de comandos que están personalizados para el Circuit Playground. Además de los comandos `modoPin()` y `escrituraDigital()` que has visto, incluye comandos para crear nuevos objetos en el tablero que se pueden programar de la misma manera que los bloques en el cajón **Circuito**. El comando `var myLed = createLed()`, por ejemplo, crea un nuevo objeto LED que se comporta igual que los bloques `led` que has estado usando.
+
+        # Haz esto
+
+        Ahora que está creando nuevos objetos de tablero para los que no tenemos bloques, deberás trabajar en modo texto. Puedes seguir sacando bloques que ya conoces del cajón **Circuito**, solo tendrás que cambiar el nombre  del objeto.
+
+        -   Mantén tu LED conectado igual que como estaba antes (conectado al pin 2)
+        -   Asegúrate de estar en modo texto, no en modo bloque.
+        -   Arrastra un bloque `parpadeo.led()` debajo del comentario `// Parpadear miLed`.
+        -   Reemplaza el texto `led` con `miLed`.
+        -   Prueba tu código.
+      CSD U6 circuit createLed_2019: |-
+        # Crear objetos de tablero
+
+        Puede que hayas notado que los nuevos bloques que estamos usando están en un cajón de herramientas diferente. El cajón **Circuito** contiene todos los objetos de tablero que están integrados al Circuit Playground, pero cuando comienzas a cablear tus propios circuitos, el Maker Toolkit ya no sabe dónde está todo.
+
+        El nuevo cajón **Maker** contiene comandos de propósito generales en lugar de comandos que están personalizados para el Circuit Playground. Además de los comandos `modoPin()` y `escrituraDigital()` que has visto, incluye comandos para crear nuevos objetos en el tablero que se pueden programar de la misma manera que los bloques en el cajón **Circuito**. El comando `var myLed = createLed()`, por ejemplo, crea un nuevo objeto LED que se comporta igual que los bloques `led` que has estado usando.
+
+        # Haz esto
+
+        Ahora que está creando nuevos objetos de tablero para los que no tenemos bloques, deberás trabajar en modo texto. Puedes seguir sacando bloques que ya conoces del cajón **Circuito**, solo tendrás que cambiar el nombre  del objeto.
+
+        -   Mantén tu LED conectado igual que como estaba antes (conectado al pin 2)
+        -   Asegúrate de estar en modo texto, no en modo bloque.
+        -   Arrastra un bloque `parpadeo.led()` debajo del comentario `// Parpadear miLed`.
+        -   Reemplaza el texto `led` con `miLed`.
+        -   Prueba tu código.
+      CSD U6 circuit multi led: |-
+        # Cablear múltiples LEDs
+
+        Usando el bloque `crearLed()`, puedes crear y controlar la cantidad de LEDs que tu tablero pueda alojar. Cada LED debe estar conectado a un pin numerado separado, pero todos pueden compartir el mismo pin a tierra.
+
+        # Haz esto
+
+        Deja el LED actual conectado al pin 2, pero agrega otro a un pin numerado que elijas. Para tu nuevo LED:
+
+        -   Agrega un bloque `var miLed = crearLed()`.
+        -   Reemplaza la etiqueta de variable `miLed` con una etiqueta única.
+        -   Asegúrate de que estás en modo texto, no en modo bloque.
+        -   Agrega un comando `parpadear.led()`
+        -   Reemplaza el texto `led` con tu nueva variable LED.
+        -   Prueba tu código.
+
+        _Desafío: Intenta agregar un tercer LED y haz que los tres LED parpadeen a intervalos diferentes._
+      CSD U6 circuit multi led_2018: |-
+        # Cablear múltiples LEDs
+
+        Usando el bloque `crearLed()`, puedes crear y controlar la cantidad de LEDs que tu tablero pueda alojar. Cada LED debe estar conectado a un pin numerado separado, pero todos pueden compartir el mismo pin a tierra.
+
+        # Haz esto
+
+        Deja el LED actual conectado al pin 2, pero agrega otro a un pin numerado que elijas. Para tu nuevo LED:
+
+        -   Agrega un bloque `var miLed = crearLed()`.
+        -   Reemplaza la etiqueta de variable `miLed` con una etiqueta única.
+        -   Asegúrate de que estás en modo texto, no en modo bloque.
+        -   Agrega un comando `parpadear.led()`
+        -   Reemplaza el texto `led` con tu nueva variable LED.
+        -   Prueba tu código.
+
+        _Desafío: Intenta agregar un tercer LED y haz que los tres LED parpadeen a intervalos diferentes._
+      CSD U6 circuit multi led_2019: |-
+        # Cablear múltiples LEDs
+
+        Usando el bloque `crearLed()`, puedes crear y controlar la cantidad de LEDs que tu tablero pueda alojar. Cada LED debe estar conectado a un pin numerado separado, pero todos pueden compartir el mismo pin a tierra.
+
+        # Haz esto
+
+        Deja el LED actual conectado al pin 2, pero agrega otro a un pin numerado que elijas. Para tu nuevo LED:
+
+        -   Agrega un bloque `var miLed = crearLed()`.
+        -   Reemplaza la etiqueta de variable `miLed` con una etiqueta única.
+        -   Asegúrate de que estás en modo texto, no en modo bloque.
+        -   Agrega un comando `parpadear.led()`
+        -   Reemplaza el texto `led` con tu nueva variable LED.
+        -   Prueba tu código.
+
+        _Desafío: Intenta agregar un tercer LED y haz que los tres LED parpadeen a intervalos diferentes._
+      CSD U6 circuit pinMode: |-
+        # Conecta un circuito
+
+        Puedes usar uno de los pads numerados para agregar circuitos adicionales a tu tablero. Usemos el punto 2 para agregar otro LED.
+
+        # Haz esto
+
+        -   Usando un cable, conecta el punto 2 al lado positivo (+) de un LED
+        -   Usando otro cable, conecta el lado positivo (-) del LED al punto de tierra (GND) (no importa cuál)
+        -   Ejecuta este programa para probar tu circuito Si ha funcionado, el LED debería encenderse.
+
+        _Sugerencia de depuración: Los LEDs solo funcionan si la electricidad está fluyendo de positivo a negativo. Si el LED no se enciende, asegúrate de que está orientado en la dirección correcta._
+      CSD U6 circuit pinMode_2018: |-
+        # Conecta un circuito
+
+        Puedes usar uno de los pads numerados para agregar circuitos adicionales a tu tablero. Usemos el punto 2 para agregar otro LED.
+
+        # Haz esto
+
+        -   Usando un cable, conecta el punto 2 al lado positivo (+) de un LED
+        -   Usando otro cable, conecta el lado positivo (-) del LED al punto de tierra (GND) (no importa cuál)
+        -   Ejecuta este programa para probar tu circuito Si ha funcionado, el LED debería encenderse.
+
+        _Sugerencia de depuración: Los LEDs solo funcionan si la electricidad está fluyendo de positivo a negativo. Si el LED no se enciende, asegúrate de que está orientado en la dirección correcta._
+      CSD U6 circuit pinMode_2019: |-
+        # Conecta un circuito
+
+        Puedes usar uno de los pads numerados para agregar circuitos adicionales a tu tablero. Usemos el punto 2 para agregar otro LED.
+
+        # Haz esto
+
+        -   Usando un cable, conecta el punto 2 al lado positivo (+) de un LED
+        -   Usando otro cable, conecta el lado positivo (-) del LED al punto de tierra (GND) (no importa cuál)
+        -   Ejecuta este programa para probar tu circuito Si ha funcionado, el LED debería encenderse.
+
+        _Sugerencia de depuración: Los LEDs solo funcionan si la electricidad está fluyendo de positivo a negativo. Si el LED no se enciende, asegúrate de que está orientado en la dirección correcta._
+      CSD U6 circuit predict multi: |-
+        # Hacer una predicción
+
+        Todos los dispositivos que has usado hasta ahora, de hecho, son circuitos conectados a puntos conectados. Busca el **#13** en tu tablero para ver qué circuito está conectado al punto 13, luego lee en este código y haz una predicción de lo que sucederá cuando el programa se ejecute.
+      CSD U6 circuit predict multi_2018: |-
+        # Hacer una predicción
+
+        Todos los dispositivos que has usado hasta ahora, de hecho, son circuitos conectados a puntos conectados. Busca el **#13** en tu tablero para ver qué circuito está conectado al punto 13, luego lee en este código y haz una predicción de lo que sucederá cuando el programa se ejecute.
+      CSD U6 circuit predict multi_2019: |-
+        # Hacer una predicción
+
+        Todos los dispositivos que has usado hasta ahora, de hecho, son circuitos conectados a puntos conectados. Busca el **#13** en tu tablero para ver qué circuito está conectado al punto 13, luego lee en este código y haz una predicción de lo que sucederá cuando el programa se ejecute.
+      CSD U6 circuit smart bike blinker buttons: |-
+        # Bicicleta inteligente - Controles de intermitentes
+
+        Con los LEDs de señal de giro conectados, solo necesitas programar algunos botones para controlarlos. Puede que quieras colocar los botones en otras partes de la bicicleta para facilitar el control de las señales de giro, pero por el momento, solamente usaremos los botones integrados izquierdo y derecho.
+
+        # Haz esto
+
+        -   Agrega controladores de eventos para hacer parpadear la señal de giro izquierda cuando el botón izquierdo esté presionado.
+        -   Agrega controladores de eventos para hacer parpadear la señal de giro izquierda cuando el botón izquierdo esté presionado.
+        -   Prueba tu código.
+
+        _Sugerencia: deberás estar en modo texto para hacer que los intermitentes funcionen, dado que no hay bloques integrados para los elementos que agregas en el tablero._
+      CSD U6 circuit smart bike blinker buttons_2018: |-
+        # Bicicleta inteligente - Controles de intermitentes
+
+        Con los LEDs de señal de giro conectados, solo necesitas programar algunos botones para controlarlos. Puede que quieras colocar los botones en otras partes de la bicicleta para facilitar el control de las señales de giro, pero por el momento, solamente usaremos los botones integrados izquierdo y derecho.
+
+        # Haz esto
+
+        -   Agrega controladores de eventos para hacer parpadear la señal de giro izquierda cuando el botón izquierdo esté presionado.
+        -   Agrega controladores de eventos para hacer parpadear la señal de giro izquierda cuando el botón izquierdo esté presionado.
+        -   Prueba tu código.
+
+        _Sugerencia: deberás estar en modo texto para hacer que los intermitentes funcionen, dado que no hay bloques integrados para los elementos que agregas en el tablero._
+      CSD U6 circuit smart bike blinker buttons_2019: |-
+        # Bicicleta inteligente - Controles de intermitentes
+
+        Con los LEDs de señal de giro conectados, solo necesitas programar algunos botones para controlarlos. Puede que quieras colocar los botones en otras partes de la bicicleta para facilitar el control de las señales de giro, pero por el momento, solamente usaremos los botones integrados izquierdo y derecho.
+
+        # Haz esto
+
+        -   Agrega controladores de eventos para hacer parpadear la señal de giro izquierda cuando el botón izquierdo esté presionado.
+        -   Agrega controladores de eventos para hacer parpadear la señal de giro izquierda cuando el botón izquierdo esté presionado.
+        -   Prueba tu código.
+
+        _Sugerencia: deberás estar en modo texto para hacer que los intermitentes funcionen, dado que no hay bloques integrados para los elementos que agregas en el tablero._
+      CSD U6 circuit smart bike blinkers: "# Bicicleta inteligente - Intermitentes\n\nUsando
+        tu guía de planificación, conecta con un cable los dos LEDs que servirán como
+        intermitentes. Para asegurarse de que los intermitentes se pueden montar al
+        final del manubrio, asegúrate de conectarlos de modo tal que se puedan estirar
+        en direcciones opuestas.\n\n# Haz esto\n\nUsando pinzas de contacto, cable
+        y otro material conductor, conecta dos LED a tu tablero, uno para cada intermitente
+        de señal de giro.\n\n-   Conecta cada LED a un pin numerado diferente en el
+        tablero.\n-   Usa el bloque `crearLed()` para crear un objeto LED para cada
+        intermitente.\n\n_Sugerencia: facilita el cableado aún más considerando cómo
+        se montarán los intermitentes cuando se seleccione un pin para usar._ "
+      CSD U6 circuit smart bike blinkers_2018: "# Bicicleta inteligente - Intermitentes\n\nUsando
+        tu guía de planificación, conecta con un cable los dos LEDs que servirán como
+        intermitentes. Para asegurarse de que los intermitentes se pueden montar al
+        final del manubrio, asegúrate de conectarlos de modo tal que se puedan estirar
+        en direcciones opuestas.\n\n# Haz esto\n\nUsando pinzas de contacto, cable
+        y otro material conductor, conecta dos LED a tu tablero, uno para cada intermitente
+        de señal de giro.\n\n-   Conecta cada LED a un pin numerado diferente en el
+        tablero.\n-   Usa el bloque `crearLed()` para crear un objeto LED para cada
+        intermitente.\n\n_Sugerencia: facilita el cableado aún más considerando cómo
+        se montarán los intermitentes cuando se seleccione un pin para usar._ "
+      CSD U6 circuit smart bike blinkers_2019: "# Bicicleta inteligente - Intermitentes\n\nUsando
+        tu guía de planificación, conecta con un cable los dos LEDs que servirán como
+        intermitentes. Para asegurarse de que los intermitentes se pueden montar al
+        final del manubrio, asegúrate de conectarlos de modo tal que se puedan estirar
+        en direcciones opuestas.\n\n# Haz esto\n\nUsando pinzas de contacto, cable
+        y otro material conductor, conecta dos LED a tu tablero, uno para cada intermitente
+        de señal de giro.\n\n-   Conecta cada LED a un pin numerado diferente en el
+        tablero.\n-   Usa el bloque `crearLed()` para crear un objeto LED para cada
+        intermitente.\n\n_Sugerencia: facilita el cableado aún más considerando cómo
+        se montarán los intermitentes cuando se seleccione un pin para usar._ "
+      CSD U6 circuit smart bike buzzer: |-
+        # Bicicleta inteligente - Timbre
+
+        Ahora que sabemos cómo agregar más botones, puedes agregar un botón para controlar la bocina de la bicicleta inteligente.
+
+        # Haz esto
+
+        Usando el botón que ya has conectado al tablero, encuentra un buen lugar para colocar el botón de la bocina. Luego:
+
+        -   Crea un objeto botón para tu botón bocina
+        -   Agrega un controlador de eventos para que suene el timbre cuando el botón está presionado
+
+        _Sugerencia: el objeto botón que creaste no estará en el menú desplegable `eventoEnTablero()`, de modo que tendrás que escribir el nombre que has elegido. ¡Asegúrate de usar comillas!_
+      CSD U6 circuit smart bike buzzer_2018: |-
+        # Bicicleta inteligente - Timbre
+
+        Ahora que sabemos cómo agregar más botones, puedes agregar un botón para controlar la bocina de la bicicleta inteligente.
+
+        # Haz esto
+
+        Usando el botón que ya has conectado al tablero, encuentra un buen lugar para colocar el botón de la bocina. Luego:
+
+        -   Crea un objeto botón para tu botón bocina
+        -   Agrega un controlador de eventos para que suene el timbre cuando el botón está presionado
+
+        _Sugerencia: el objeto botón que creaste no estará en el menú desplegable `eventoEnTablero()`, de modo que tendrás que escribir el nombre que has elegido. ¡Asegúrate de usar comillas!_
+      CSD U6 circuit smart bike buzzer_2019: |-
+        # Bicicleta inteligente - Timbre
+
+        Ahora que sabemos cómo agregar más botones, puedes agregar un botón para controlar la bocina de la bicicleta inteligente.
+
+        # Haz esto
+
+        Usando el botón que ya has conectado al tablero, encuentra un buen lugar para colocar el botón de la bocina. Luego:
+
+        -   Crea un objeto botón para tu botón bocina
+        -   Agrega un controlador de eventos para que suene el timbre cuando el botón está presionado
+
+        _Sugerencia: el objeto botón que creaste no estará en el menú desplegable `eventoEnTablero()`, de modo que tendrás que escribir el nombre que has elegido. ¡Asegúrate de usar comillas!_
+      CSD U6 circuit smart bike final: |-
+        # Bicicleta inteligente - Toques finales
+
+        En este punto, tu bicicleta inteligente debería tener toda su funcionalidad básica en funcionamiento. Esta es tu oportunidad de agregar cualquier toque final.
+
+        # Haz esto
+
+        Puede que quieras dividir y conquistar en este punto, y permitir que algunos miembros de tu grupo se concentren en los aspectos físicos del prototipo mientras que otros trabajan en mejorar el código. Dado que este es un estereotipo, no te preocupes por hacer que todo salga perfecto, pero sí intenta garantizar que el prototipo comunique tu diseño lo suficientemente bien como para probar y obtener resultados.
+      CSD U6 circuit smart bike final_2018: |-
+        # Bicicleta inteligente - Toques finales
+
+        En este punto, tu bicicleta inteligente debería tener toda su funcionalidad básica en funcionamiento. Esta es tu oportunidad de agregar cualquier toque final.
+
+        # Haz esto
+
+        Puede que quieras dividir y conquistar en este punto, y permitir que algunos miembros de tu grupo se concentren en los aspectos físicos del prototipo mientras que otros trabajan en mejorar el código. Dado que este es un estereotipo, no te preocupes por hacer que todo salga perfecto, pero sí intenta garantizar que el prototipo comunique tu diseño lo suficientemente bien como para probar y obtener resultados.
+      CSD U6 circuit smart bike final_2019: |-
+        # Bicicleta inteligente - Toques finales
+
+        En este punto, tu bicicleta inteligente debería tener toda su funcionalidad básica en funcionamiento. Esta es tu oportunidad de agregar cualquier toque final.
+
+        # Haz esto
+
+        Puede que quieras dividir y conquistar en este punto, y permitir que algunos miembros de tu grupo se concentren en los aspectos físicos del prototipo mientras que otros trabajan en mejorar el código. Dado que este es un estereotipo, no te preocupes por hacer que todo salga perfecto, pero sí intenta garantizar que el prototipo comunique tu diseño lo suficientemente bien como para probar y obtener resultados.
+      CSD U6 circuit smart bike light: |-
+        # Bicicleta inteligente - Luz delantera
+
+        La última parte del plan de bicicleta inteligente que necesitamos resolver es la luz delantera automática.
+
+        # Haz esto
+
+        Primero deberás decidir qué usar para la luz delantera. Podrías agregar otro circuito de LED, o tal vez, puedes encontrar una manera de montar el tablero que permite usar los LEDs de colores como una luz delantera. Una vez que has resuelto el diseño físico de tus luces, agrega código a tu programa que enciende y apaga la luz delantera en base a cuán iluminado u oscuro esté.
+
+        _Sugerencia: si estás usando los LEDs de colores integrados, puede que necesites proteger el sensor de luz para asegurarte de que está respondiendo al nivel de luz del ambiente y no a la luz de los LEDs._
+      CSD U6 circuit smart bike light_2018: |-
+        # Bicicleta inteligente - Luz delantera
+
+        La última parte del plan de bicicleta inteligente que necesitamos resolver es la luz delantera automática.
+
+        # Haz esto
+
+        Primero deberás decidir qué usar para la luz delantera. Podrías agregar otro circuito de LED, o tal vez, puedes encontrar una manera de montar el tablero que permite usar los LEDs de colores como una luz delantera. Una vez que has resuelto el diseño físico de tus luces, agrega código a tu programa que enciende y apaga la luz delantera en base a cuán iluminado u oscuro esté.
+
+        _Sugerencia: si estás usando los LEDs de colores integrados, puede que necesites proteger el sensor de luz para asegurarte de que está respondiendo al nivel de luz del ambiente y no a la luz de los LEDs._
+      CSD U6 circuit smart bike light_2019: |-
+        # Bicicleta inteligente - Luz delantera
+
+        La última parte del plan de bicicleta inteligente que necesitamos resolver es la luz delantera automática.
+
+        # Haz esto
+
+        Primero deberás decidir qué usar para la luz delantera. Podrías agregar otro circuito de LED, o tal vez, puedes encontrar una manera de montar el tablero que permite usar los LEDs de colores como una luz delantera. Una vez que has resuelto el diseño físico de tus luces, agrega código a tu programa que enciende y apaga la luz delantera en base a cuán iluminado u oscuro esté.
+
+        _Sugerencia: si estás usando los LEDs de colores integrados, puede que necesites proteger el sensor de luz para asegurarte de que está respondiendo al nivel de luz del ambiente y no a la luz de los LEDs._
       CSD U6 colorLED on: |-
         <img src="//curriculum.code.org/images/circuitplayground/colorLedonoff.gif" style="float: right; margin: 10px;">
 
@@ -14286,6 +14652,78 @@ es-MX:
 
         -   Saca el bloque `buzzer.frequency()` de la caja de herramientas y juega con él. Notarás que tiene dos parámetros, ¿qué sucede cuando cambias alguno de los dos o ambos?
         -   Ejecuta el programa y disfruta de la música de tu Circuit Playground.
+      CSDU6 - final project 1: |-
+        # Diseñar la interfaz de usuario
+
+        Antes de preocuparte por el código para tu programa, comienza por diseñar la interfaz de usuario. A medida que agregas elementos en el Modo Diseño, asegúrate de darle a todo un ID comprensible. Incluso si no planificas acceder a un elemento con código, asegurarte de que todos los ID son comprensibles ayudará a hacer que tu programa sea más legible y fácil de programar.
+      CSDU6 - final project 1_2018: |-
+        # Diseñar la interfaz de usuario
+
+        Antes de preocuparte por el código para tu programa, comienza por diseñar la interfaz de usuario. A medida que agregas elementos en el Modo Diseño, asegúrate de darle a todo un ID comprensible. Incluso si no planificas acceder a un elemento con código, asegurarte de que todos los ID son comprensibles ayudará a hacer que tu programa sea más legible y fácil de programar.
+      CSDU6 - final project 1_2019: |-
+        # Diseñar la interfaz de usuario
+
+        Antes de preocuparte por el código para tu programa, comienza por diseñar la interfaz de usuario. A medida que agregas elementos en el Modo Diseño, asegúrate de darle a todo un ID comprensible. Incluso si no planificas acceder a un elemento con código, asegurarte de que todos los ID son comprensibles ayudará a hacer que tu programa sea más legible y fácil de programar.
+      CSDU6 - final project 2: |-
+        # Conectar la IU
+
+        Con la interfaz de usuario en funcionamiento, ahora puedes agregar controladores de eventos para tus elementos de interfaz. En este momento, puede que quieras incluir solamente comandos de `registro.consola()` para asegurarte de que tus eventos están funcionando como se espera; puedes agregar el código funcional más tarde.
+      CSDU6 - final project 2_2018: |-
+        # Conectar la IU
+
+        Con la interfaz de usuario en funcionamiento, ahora puedes agregar controladores de eventos para tus elementos de interfaz. En este momento, puede que quieras incluir solamente comandos de `registro.consola()` para asegurarte de que tus eventos están funcionando como se espera; puedes agregar el código funcional más tarde.
+      CSDU6 - final project 2_2019: |-
+        # Conectar la IU
+
+        Con la interfaz de usuario en funcionamiento, ahora puedes agregar controladores de eventos para tus elementos de interfaz. En este momento, puede que quieras incluir solamente comandos de `registro.consola()` para asegurarte de que tus eventos están funcionando como se espera; puedes agregar el código funcional más tarde.
+      CSDU6 - final project 3: |-
+        # Eventos de entrada de tablero
+
+        Ahora puedes agregar los eventos que tomarán entrada del tablero. De nuevo, en este punto, puedes usar solamente las sentencias de `registro.consola()` para garantizar que tus eventos estén funcionando.
+      CSDU6 - final project 3_2018: |-
+        # Eventos de entrada de tablero
+
+        Ahora puedes agregar los eventos que tomarán entrada del tablero. De nuevo, en este punto, puedes usar solamente las sentencias de `registro.consola()` para garantizar que tus eventos estén funcionando.
+      CSDU6 - final project 3_2019: |-
+        # Eventos de entrada de tablero
+
+        Ahora puedes agregar los eventos que tomarán entrada del tablero. De nuevo, en este punto, puedes usar solamente las sentencias de `registro.consola()` para garantizar que tus eventos estén funcionando.
+      CSDU6 - final project 4: |-
+        # Funciones
+
+        A medida que continúas trabajando con tu programa, busca patrones que pueden ser abstraídos en funciones. ¿Puedes encontrar código que esté repetido en múltiples lugares, o porciones de código que se podrían entender mejor en un nombre dado? No olvides que puedes usar parámetros para escribir funciones para código repetido que es _mayoritariamente_ el mismo, pero que varía un poco (como establecer el color en múltiples LEDs).
+      CSDU6 - final project 4_2018: |-
+        # Funciones
+
+        A medida que continúas trabajando con tu programa, busca patrones que pueden ser abstraídos en funciones. ¿Puedes encontrar código que esté repetido en múltiples lugares, o porciones de código que se podrían entender mejor en un nombre dado? No olvides que puedes usar parámetros para escribir funciones para código repetido que es _mayoritariamente_ el mismo, pero que varía un poco (como establecer el color en múltiples LEDs).
+      CSDU6 - final project 4_2019: |-
+        # Funciones
+
+        A medida que continúas trabajando con tu programa, busca patrones que pueden ser abstraídos en funciones. ¿Puedes encontrar código que esté repetido en múltiples lugares, o porciones de código que se podrían entender mejor en un nombre dado? No olvides que puedes usar parámetros para escribir funciones para código repetido que es _mayoritariamente_ el mismo, pero que varía un poco (como establecer el color en múltiples LEDs).
+      CSDU6 - final project 5: |-
+        # Salida de tablero
+
+        Si no lo has hecho aún, usa algunos de los elementos de salida en el tablero para comunicar información útil al usuario.
+      CSDU6 - final project 5_2018: |-
+        # Salida de tablero
+
+        Si no lo has hecho aún, usa algunos de los elementos de salida en el tablero para comunicar información útil al usuario.
+      CSDU6 - final project 5_2019: |-
+        # Salida de tablero
+
+        Si no lo has hecho aún, usa algunos de los elementos de salida en el tablero para comunicar información útil al usuario.
+      CSDU6 - final project 6: |-
+        # Retoque finales
+
+        Agrega cualquier retoque final que todavía sea necesario para hacer que tu innovación sea increíble. Si tienes tiempo, prueba tu innovación con algunos usuarios potenciales para reunir información y encontrar oportunidades para mejorar. Cuando hayas finalizado totalmente, haz clic en el botón "Enviar" para entregarlo.
+      CSDU6 - final project 6_2018: |-
+        # Retoque finales
+
+        Agrega cualquier retoque final que todavía sea necesario para hacer que tu innovación sea increíble. Si tienes tiempo, prueba tu innovación con algunos usuarios potenciales para reunir información y encontrar oportunidades para mejorar. Cuando hayas finalizado totalmente, haz clic en el botón "Enviar" para entregarlo.
+      CSDU6 - final project 6_2019: |-
+        # Retoque finales
+
+        Agrega cualquier retoque final que todavía sea necesario para hacer que tu innovación sea increíble. Si tienes tiempo, prueba tu innovación con algunos usuarios potenciales para reunir información y encontrar oportunidades para mejorar. Cuando hayas finalizado totalmente, haz clic en el botón "Enviar" para entregarlo.
       CSDU6 - lightswitch toggleswitch: |-
         # Usar el interruptor de alternar
 
@@ -16265,11 +16703,11 @@ es-MX:
       courseA_artist_loops4: |-
         ¡Ahora utiliza un bucle <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="2-6">5</title></block></xml> para dibujar esta línea cinco veces!
 
-        ![](https://images.code.org/b2bc7f52ffdac2ad0d8e7c2d798c24df-image-1501875818062.gif)
+        <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="2-6">5</title></block></xml>
       courseA_artist_loops4_2018: |-
         ¡Ahora utiliza un bucle <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="2-6">5</title></block></xml> para dibujar esta línea cinco veces!
 
-        ![](https://images.code.org/b2bc7f52ffdac2ad0d8e7c2d798c24df-image-1501875818062.gif)
+        <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="2-6">5</title></block></xml>
       courseA_artist_loops4_2019: "Ahora, ¡utiliza un bucle <xml><block type=\"controls_repeat_simplified_dropdown\"><title\nname=\"TIMES\"
         config=\"2-6\">5</title></block></xml> para dibujar esta línea cinco veces!\\\r\n\\\r\n![](https://images.code.org/b2bc7f52ffdac2ad0d8e7c2d798c24df-image-1501875818062.gif)"
       courseA_artist_loops5: |-
@@ -16313,7 +16751,7 @@ es-MX:
 
         type="controls_repeat_simplified\_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> para agregar olas al agua.
 
-        ![expandable](https://images.code.org/01c5f6772a8b608a2fca5f6de7e25c67-image-1498062629139.gif)
+        <xml><block type="controls_repeat_simplified_dropdown" block-text="repeat"><title name="TIMES" config="3-10">???</title></block></xml>
       courseA_artist_loops8: |-
         ## Necesitamos una escalera hasta el bote.
 
@@ -17121,7 +17559,9 @@ es-MX:
         del área de juego, y luego usa el bloque <xml><block type=\"sticker\" block-text=\"draw
         sticker\"><title name=\"VALUE\">Beaver</title></block></xml> para que aparezca
         algo.\n\n* * *\n\nPresiona \"Finalizar\" cuando estés contento con lo que
-        has hecho.\n\n![expandable](https://images.code.org/1435d3650553df44eba973572d409a50-image-1553096405891.png)\n![expandable](https://images.code.org/6912d2144b90aa7087fe854742d1e8b9-image-1553096425394.png)\n![expandable](https://images.code.org/8de9e1aa15fdfe30ffed763e0e1d6e04-image-1553096428531.png)"
+        has hecho.\n\n<xml> <block type=\"jump_to\" block-text=\"jump to the middle
+        center position\"><title name=\"VALUE\">13</title></block></xml>\n<xml><block
+        type=\"sticker\" block-text=\"draw sticker\"><title name=\"VALUE\">Beaver</title></block></xml>\n![expandable](https://images.code.org/1435d3650553df44eba973572d409a50-image-1553096405891.png)"
       courseC_artist_loops1b_2019: |-
         Agrega un comando `girar` a tu código para cambiar la orientación de tu sticker.
 
@@ -18948,8 +19388,13 @@ es-MX:
       courseD_iceage_loops2: "¡Usa un bloque <xml><block type=\"maze_turn\">\\\r\n
         \   <title name=\"DIR\">turnLeft</title>\\\r\n  </block></xml> para llegar
         a la bellota!"
+      courseD_iceage_loops2_2019: "¡Usa un bloque <xml><block type=\"maze_turn\">\\\r\n
+        \   <title name=\"DIR\">turnLeft</title>\\\r\n  </block></xml> para llegar
+        a la bellota!"
       courseD_iceage_loops3: ¿Puedes llegar a la bellota con sólo un bloque <xml><block
         type="maze_moveForward"/></xml>? ¡Inténtalo usando un bucle!
+      courseD_iceage_loops3_2019: ¿Puedes llegar a la bellota con un solo bloque <xml><block
+        type="maze_moveWest"/></xml>? ¡Inténtalo usando un bucle!
       courseD_iceage_loops4: "¡Añade un bloque más para que Scrat llegue hasta la
         bellota!"
       courseD_iceage_loops4_2019: "¡Añade un bloque más para que Scrat llegue hasta
@@ -19614,36 +20059,33 @@ es-MX:
       courseE_farmer_ramp12b_2019: Ahora, la cosechadora necesita recoger todas las
         lechugas. Usa el 'mientras hay lechugas' dentro del loop 'repetir' para recogerlas
         todas!
-      courseE_farmer_ramp12c: "¡Cielos! Mira todos estos brotes. Algunos se volverán
-        maíz y otros, lechuga. \n\nLlega hasta el final del camino para recoger la
-        lechuga, mientras haya, y recoger el maíz, mientras haya. "
+      courseE_farmer_ramp12c: "Las lechugas ahora están solo al final del camino.\\\nSigue
+        el camino **hasta** que alcances la lechuga, y luego continúa para recogerla
+        **mientras** queden más por recoger.  "
       courseE_farmer_ramp12c_2018: "Las lechugas están ahora al final del camino.
         \ \\\r\nSigue el camino **hasta** que alcances la lechuga luego continúa para
         recoger **mientras** queden más por recoger.  "
-      courseE_farmer_ramp12c_2019: "¡Cielos! Mira todos estos brotes. Algunos se volverán
-        maíz y otros, lechuga. \n\nLlega hasta el final del camino para recoger la
-        lechuga, mientras haya, y recoger el maíz, mientras haya. "
-      courseE_farmer_ramp12d: "¡La misma técnica funciona con el néctar y la miel!
-        \n\nMira todas estas nubes. Algunas de ellas se transformarán en miel y otras,
-        en néctar.\\\nAyuda a la abeja a seguir el camino y resolver este desafío."
+      courseE_farmer_ramp12c_2019: "Las lechugas ahora están solo al final del camino.\\\nSigue
+        el camino **hasta** que alcances la lechuga, y luego continúa para recogerla
+        **mientras** queden más por recoger.  "
+      courseE_farmer_ramp12d: "Las lechugas están esparcidas en el jardín.\\\nSigue
+        por cada camino **hasta** que alcances una lechuga, y luego continúa para
+        recogerla **mientras** queden más por recoger.  "
       courseE_farmer_ramp12d_2018: "Las lechugas están esparcidas en el jardín  \\\r\nSigue
         por cada camino **hasta** que alcances una lechuga, luego continúa para recogerla
         **mientras** queden más por recoger.  "
-      courseE_farmer_ramp12d_2019: "¡La misma técnica funciona con el néctar y la
-        miel! \n\nMira todas estas nubes. Algunas de ellas se transformarán en miel
-        y otras, en néctar.\\\nAyuda a la abeja a seguir el camino y resolver este
-        desafío."
-      courseE_farmer_ramp12e: "¡La misma técnica funciona con el néctar y la miel!
-        \n\nMira todas estas nubes. Algunas de ellas se transformarán en miel y otras,
-        en néctar.\\\nAyuda a la abeja a seguir el camino y resolver este desafío."
-      courseE_farmer_ramp12e_2018: "¡La misma técnica funciona con el néctar y la
-        miel! \n\nMira todas estas nubes. Algunas de ellas se transformarán en miel
-        y otras, en néctar.\\\nAyuda a la abeja a seguir el camino y resolver este
-        desafío."
-      courseE_farmer_ramp12e_2019: "¡La misma técnica funciona con el néctar y la
-        miel! \n\nMira todas estas nubes. Algunas de ellas se transformarán en miel
-        y otras, en néctar.\\\nAyuda a la abeja a seguir el camino y resolver este
-        desafío."
+      courseE_farmer_ramp12d_2019: "Las lechugas están esparcidas en el jardín.\\\nSigue
+        por cada camino **hasta** que alcances una lechuga, y luego continúa para
+        recogerla **mientras** queden más por recoger.  "
+      courseE_farmer_ramp12e: "Las lechugas están esparcidas en el jardín.\\\nSigue
+        por cada camino **hasta** que alcances una lechuga, y luego continúa para
+        recogerla **mientras** queden más por recoger.  "
+      courseE_farmer_ramp12e_2018: "Las lechugas están esparcidas en el jardín.\\\nSigue
+        por cada camino **hasta** que alcances una lechuga, y luego continúa para
+        recogerla **mientras** queden más por recoger.  "
+      courseE_farmer_ramp12e_2019: "Las lechugas están esparcidas en el jardín.\\\nSigue
+        por cada camino **hasta** que alcances una lechuga, y luego continúa para
+        recogerla **mientras** queden más por recoger.  "
       courseE_farmer_ramp12f: "**Desafío**: La única manera de recoger todos los cultivos
         es avanzar hasta llegar a la lechuga, luego girar a la izquierda **si** hay
         un camino a la izquierda. De lo contrario, gira a la derecha."

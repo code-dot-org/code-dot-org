@@ -51,7 +51,7 @@
     "CONTROLS_IF_MSG_ELSE": "kung hindi",
     "CONTROLS_IF_MSG_ELSEIF": "else if",
     "CONTROLS_IF_MSG_IF": "kung",
-    "CONTROLS_IF_TOOLTIP_1": "kung ang value ay true, gumawa ng iba pang statements.",
+    "CONTROLS_IF_TOOLTIP_1": "Kung ang value ay tama, gumawa ng iba pang pahayag.",
     "CONTROLS_IF_TOOLTIP_2": "Kung ang value ay true, gumawa ng unang block ng statements. Kung hindi naman, gumawa ng pangalawang block ng statements.",
     "CONTROLS_IF_TOOLTIP_3": "Kapag true ang value, gumawa ng unang bloke ng statements. Kung hindi, kung ang pangalawang value ay true, gawin ang pangalawang bloke ng statements.",
     "CONTROLS_IF_TOOLTIP_4": "Kung ang unang value ay true, gawin ang unang bloke ng statements. Kung hindi naman, kung true ang pangalawang value, gawin ang pangalawang bloke ng statements. Kung walang true sa mga values, gawin ang huling bloke ng statements.",
