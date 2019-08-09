@@ -32,6 +32,10 @@ class LevelStarterAssetsController < ApplicationController
     send_data file_obj.get.body.read, type: content_type, disposition: 'inline'
   end
 
+  def get_file_objects(key)
+    bucket.objects(prefix: prefix(key))
+  end
+
   private
 
   def filename(key, file_obj)
@@ -49,10 +53,6 @@ class LevelStarterAssetsController < ApplicationController
 
   def prefix(key)
     S3_PREFIX + key
-  end
-
-  def get_file_objects(key)
-    bucket.objects(prefix: prefix(key))
   end
 
   def bucket
