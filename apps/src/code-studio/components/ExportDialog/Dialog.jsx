@@ -4,6 +4,7 @@ import {connect} from 'react-redux';
 import BaseDialog from '../../../templates/BaseDialog';
 import AbuseError from '../AbuseError';
 import color from '../../../util/color';
+import {PLATFORM_ANDROID, DEFAULT_PLATFORM} from '../../../util/exporter';
 import {hideExportDialog} from '../exportDialogRedux';
 import i18n from '@cdo/locale';
 import {SignInState} from '../../progressRedux';
@@ -13,7 +14,8 @@ import commonStyles from './styles';
 import IntroPage from './IntroPage';
 import PlatformPage from './PlatformPage';
 import IconPage from './IconPage';
-import PublishPage from './PublishPage';
+import PublishAndroidPage from './PublishAndroidPage';
+import PublishIOSPage from './PublishIOSPage';
 import GeneratingPage from './GeneratingPage';
 
 const APK_BUILD_STATUS_CHECK_PERIOD = 60000;
@@ -124,7 +126,8 @@ class ExportDialog extends React.Component {
   };
 
   state = {
-    screen: 'intro'
+    screen: 'intro',
+    platform: DEFAULT_PLATFORM
   };
 
   componentDidUpdate(prevProps) {
@@ -217,6 +220,7 @@ class ExportDialog extends React.Component {
       iconFileUrl: undefined,
       iconUri: undefined,
       md5PublishSavedSources: undefined,
+      platform: DEFAULT_PLATFORM,
       splashImageUri: undefined,
       apkUri: undefined,
       generatingApk: false,
@@ -229,9 +233,15 @@ class ExportDialog extends React.Component {
     this.props.onClose();
   };
 
-  onIconSelected = url => {
+  onIconSelected = iconFileUrl => {
     this.setState({
-      iconFileUrl: url
+      iconFileUrl
+    });
+  };
+
+  onPlatformChanged = platform => {
+    this.setState({
+      platform
     });
   };
 
@@ -337,6 +347,16 @@ class ExportDialog extends React.Component {
     }
   }
 
+  visitExpoSite() {
+    const {expoSnackId} = this.state;
+    if (!expoSnackId) {
+      return;
+    }
+    // TODO: use new URL format once snack-web has been updated for this flow
+    // TODO: pass iconUri and splashImageUri to expo.io
+    window.open(`https://snack.expo.io/${expoSnackId}`, '_blank');
+  }
+
   checkForApkBuild(apkBuildId, expoSnackId) {
     const {expoCheckApkBuild, md5SavedSources} = this.props;
 
@@ -436,7 +456,7 @@ class ExportDialog extends React.Component {
   }
 
   onActionButton = () => {
-    const {screen} = this.state;
+    const {screen, platform} = this.state;
 
     switch (screen) {
       case 'intro':
@@ -446,13 +466,23 @@ class ExportDialog extends React.Component {
         this.setState({screen: 'icon'});
         break;
       case 'icon':
-        this.setState({screen: 'publish'});
+        this.setState({
+          screen:
+            platform === PLATFORM_ANDROID ? 'publishAndroid' : 'publishIOS'
+        });
         break;
-      case 'publish':
+      case 'publishAndroid':
         this.generateApkAsNeeded();
         this.setState({screen: 'generating'});
         break;
+      case 'publishIOS':
+        this.publishExpoExport();
+        this.setState({screen: 'generating'});
+        break;
       case 'generating':
+        if (this.isPublishingForIOSWithoutError()) {
+          this.visitExpoSite();
+        }
         this.close();
         break;
       default:
@@ -461,7 +491,7 @@ class ExportDialog extends React.Component {
   };
 
   onBackButton = () => {
-    const {screen} = this.state;
+    const {platform, screen} = this.state;
 
     switch (screen) {
       case 'intro':
@@ -472,11 +502,15 @@ class ExportDialog extends React.Component {
       case 'icon':
         this.setState({screen: 'platform'});
         break;
-      case 'publish':
+      case 'publishAndroid':
+      case 'publishIOS':
         this.setState({screen: 'icon'});
         break;
       case 'generating':
-        this.setState({screen: 'publish'});
+        this.setState({
+          screen:
+            platform === PLATFORM_ANDROID ? 'publishAndroid' : 'publishIOS'
+        });
         break;
       default:
         throw new Error(`ExportDialog: Unexpected screen: ${screen}`);
@@ -495,13 +529,18 @@ class ExportDialog extends React.Component {
   };
 
   renderMainContent() {
-    const {screen, iconFileUrl} = this.state;
+    const {screen, iconFileUrl, platform} = this.state;
 
     switch (screen) {
       case 'intro':
         return <IntroPage />;
       case 'platform':
-        return <PlatformPage />;
+        return (
+          <PlatformPage
+            platform={platform}
+            onPlatformChanged={this.onPlatformChanged}
+          />
+        );
       case 'icon':
         return (
           <IconPage
@@ -509,14 +548,17 @@ class ExportDialog extends React.Component {
             onIconSelected={this.onIconSelected}
           />
         );
-      case 'publish':
-        return <PublishPage />;
+      case 'publishAndroid':
+        return <PublishAndroidPage />;
+      case 'publishIOS':
+        return <PublishIOSPage />;
       case 'generating': {
         const {appType} = this.props;
         const {exportError, apkError, apkUri} = this.state;
         return (
           <GeneratingPage
             appType={appType}
+            platform={platform}
             isGenerating={this.isGenerating()}
             exportError={exportError}
             apkError={apkError}
@@ -534,18 +576,25 @@ class ExportDialog extends React.Component {
     return screen === 'generating' && !!(exporting || generatingApk);
   }
 
+  isPublishingForIOSWithoutError() {
+    const {platform, exportError} = this.state;
+    return platform === 'ios' && !exportError;
+  }
+
   getActionButtonInfo() {
-    const {screen, exporting, generatingApk} = this.state;
+    const {screen} = this.state;
     const info = {
       text: 'Next',
       enabled: true
     };
     switch (screen) {
       case 'generating':
-        info.text = 'Finish';
-        info.enabled = !exporting && !generatingApk;
+        info.text = this.isPublishingForIOSWithoutError()
+          ? 'Continue with Expo.io'
+          : 'Finish';
+        info.enabled = !this.isGenerating();
         break;
-      case 'publish':
+      case 'publishAndroid':
         info.text = 'Create';
         break;
     }
