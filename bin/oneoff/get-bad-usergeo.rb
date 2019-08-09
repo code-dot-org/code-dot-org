@@ -15,13 +15,13 @@ proxy_ip_ranges = JSON.parse(File.read('lib/cdo/trusted_proxies.json'))['ranges'
 end
 
 puts %(
-SELECT id, INET_ATON(ip_address) AS ip_num FROM user_geos
+SELECT id FROM user_geos
   WHERE (
     id >= #{first_id} AND
     id <= #{last_id}
   ) AND (
     #{proxy_ip_ranges.map do |range|
-      "(ip_num BETWEEN #{range.first.to_i} AND #{range.last.to_i})"
+      "(INET_ATON(ip_address) BETWEEN #{range.first.to_i} AND #{range.last.to_i})"
     end.join(" OR \n    ")}
   );
 )
