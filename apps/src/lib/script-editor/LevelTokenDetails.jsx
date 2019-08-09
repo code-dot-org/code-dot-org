@@ -282,6 +282,7 @@ export class UnconnectedLevelTokenDetails extends Component {
                 onChange={this.handleFieldChange.bind(this, 'progression')}
                 value={this.props.level.progression}
                 style={styles.textInput}
+                data-field-name="progression"
               />
             </span>
           </div>

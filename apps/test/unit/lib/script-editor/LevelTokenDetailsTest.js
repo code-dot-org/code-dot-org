@@ -34,6 +34,17 @@ const assertButtonVisible = (wrapper, name, visible) => {
   expect(wrapper.containsMatchingElement(button)).to.equal(visible);
 };
 
+const assertInputVisible = (wrapper, name, visible) => {
+  expect(wrapper.find(`input[data-field-name="${name}"]`)).to.have.length(
+    visible ? 1 : 0
+  );
+};
+
+const assertInputValue = (wrapper, name, value) => {
+  const input = wrapper.find(`input[data-field-name="${name}"]`);
+  expect(input.props().value).to.equal(value);
+};
+
 describe('LevelTokenDetails', () => {
   let chooseLevel, addVariant, removeVariant, setActiveVariant, setField;
   let defaultProps;
@@ -65,5 +76,29 @@ describe('LevelTokenDetails', () => {
 
     assertButtonVisible(wrapper, 'Add Variant', true);
     assertButtonVisible(wrapper, 'Add Progression', true);
+
+    assertInputVisible(wrapper, 'progression', false);
+  });
+
+  it('renders with progression', () => {
+    const wrapper = shallow(
+      <LevelTokenDetails
+        {...defaultProps}
+        level={{...defaultLevel, progression: 'intro'}}
+      />
+    );
+    assertButtonVisible(wrapper, 'Add Progression', false);
+    assertInputVisible(wrapper, 'progression', true);
+    assertInputValue(wrapper, 'progression', 'intro');
+  });
+
+  it('shows progression when clicked', () => {
+    const wrapper = shallow(<LevelTokenDetails {...defaultProps} />);
+    assertInputVisible(wrapper, 'progression', false);
+    const button = wrapper.findWhere(
+      n => n.name() === 'button' && n.text().includes('Add Progression')
+    );
+    button.simulate('mousedown');
+    assertInputVisible(wrapper, 'progression', true);
   });
 });
