@@ -6,7 +6,6 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
 
   self.use_transactional_test_case = true
   setup_all do
-    @admin = create(:admin)
     @workshop_admin = create(:workshop_admin)
 
     @regional_partner = create(:regional_partner)
@@ -46,7 +45,7 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
   test_user_gets_response_for :index, user: nil, response: :forbidden
 
   test 'admins can list all workshops' do
-    sign_in @admin
+    sign_in create :admin
     assert_equal 3, Pd::Workshop.count
 
     get :index
@@ -259,7 +258,7 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
   end
 
   test 'filter by state' do
-    sign_in @admin
+    sign_in create :admin
     workshop_in_progress = create :workshop
     workshop_in_progress.start!
     assert_equal Pd::Workshop::STATE_IN_PROGRESS, workshop_in_progress.state
@@ -273,7 +272,7 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
 
   # Action: filter
   test 'admins can filter' do
-    sign_in @admin
+    sign_in create :admin
     get :filter
     assert_response :success
   end
@@ -298,7 +297,7 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
   end
 
   test 'filter defaults' do
-    sign_in @admin
+    sign_in create :admin
     get :filter
     response = JSON.parse(@response.body)
     assert_nil response['limit']
@@ -313,7 +312,7 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
       create :workshop
     end
 
-    sign_in @admin
+    sign_in create :admin
     get :filter, params: {limit: 5}
     response = JSON.parse(@response.body)
     assert_equal 5, response['limit']
@@ -346,7 +345,7 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
   # Action: Show
 
   test 'admins can view workshops' do
-    [@admin, @workshop_admin].each do |admin|
+    [create(:admin), @workshop_admin].each do |admin|
       sign_in admin
       get :show, params: {id: @workshop.id}
       assert_response :success
@@ -423,7 +422,7 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
   # Action: Create
 
   test 'admins can create workshops' do
-    sign_in @admin
+    sign_in create :admin
 
     assert_creates(Pd::Workshop) do
       post :create, params: {pd_workshop: workshop_params}
@@ -513,7 +512,7 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
   end
 
   test 'admins can delete any workshop' do
-    sign_in @admin
+    sign_in create :admin
     assert_destroys(Pd::Workshop) do
       delete :destroy, params: {id: @workshop.id}
     end
@@ -572,7 +571,7 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
   # Action: Update
 
   test 'admins can update any workshop' do
-    sign_in @admin
+    sign_in create :admin
     put :update, params: {id: @workshop.id, pd_workshop: workshop_params}
     assert_response :success
   end
@@ -655,7 +654,7 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
   )
 
   test 'updating with notify true sends detail change notification emails' do
-    sign_in @admin
+    sign_in create :admin
 
     # create some enrollments
     5.times do
@@ -674,7 +673,7 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
   end
 
   test 'updating with notify false does not send detail change notification emails' do
-    sign_in @admin
+    sign_in create :admin
 
     # create some enrollments
     5.times do
@@ -979,7 +978,7 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
   )
 
   test 'summary' do
-    sign_in @admin
+    sign_in create :admin
     workshop = create :workshop, num_sessions: 3
     workshop.start!
 
@@ -1045,7 +1044,7 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
       location_address: "Atlanta"
     )
 
-    sign_in @admin
+    sign_in create :admin
 
     get :upcoming_teachercons
     assert_response :success
@@ -1068,7 +1067,7 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
       subject: Pd::Workshop::SUBJECT_TEACHER_CON,
     )
 
-    sign_in @admin
+    sign_in create :admin
 
     get :upcoming_teachercons, params: {course: Pd::Workshop::COURSE_CSD}
     assert_response :success
