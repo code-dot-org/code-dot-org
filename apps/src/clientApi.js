@@ -462,6 +462,7 @@ class StarterAssetsApi {
 
   deleteFile(filename, success, error) {
     throw new Error('not yet implemented');
+    // TODO (madelynkasula): implement this endpoint and method
     // return ajaxInternal('DELETE', this.basePath(filename), success, error);
   }
 }
