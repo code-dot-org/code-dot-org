@@ -29,7 +29,8 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
       :funded,
       organizer: @workshop_organizer,
       facilitators: [@facilitator],
-      on_map: true
+      on_map: true,
+      num_sessions: 0
     )
 
     @standalone_workshop = create(:workshop)
