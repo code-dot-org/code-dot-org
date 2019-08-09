@@ -6,8 +6,6 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
 
   self.use_transactional_test_case = true
   setup_all do
-    @workshop_admin = create(:workshop_admin)
-
     @regional_partner = create(:regional_partner)
     @program_manager = create(:program_manager, regional_partner: @regional_partner)
     @organizer = @program_manager
@@ -332,7 +330,7 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
     earlier_workshop = create :workshop, organizer: organizer, sessions_from: Time.now
     later_workshop = create :workshop, organizer: organizer, sessions_from: Time.now + 1.week
 
-    sign_in @workshop_admin
+    sign_in create :workshop_admin
     filters = {organizer_id: organizer.id.to_s, order_by: 'date desc'}
     get :filter, params: filters
     response = JSON.parse(@response.body)
@@ -345,7 +343,7 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
   # Action: Show
 
   test 'admins can view workshops' do
-    [create(:admin), @workshop_admin].each do |admin|
+    [create(:admin), create(:workshop_admin)].each do |admin|
       sign_in admin
       get :show, params: {id: @workshop.id}
       assert_response :success
