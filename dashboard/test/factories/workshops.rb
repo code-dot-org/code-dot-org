@@ -67,15 +67,17 @@ FactoryGirl.define do
     #
 
     after(:build) do |workshop, evaluator|
-      # Sessions, one per day starting today
-      evaluator.num_sessions.times do |i|
-        params = [{
-          workshop: workshop,
-          start: evaluator.sessions_from + i.days,
-          duration_hours: evaluator.each_session_hours
-        }]
-        params.prepend :with_assigned_code if evaluator.assign_session_code
-        workshop.sessions << build(:pd_session, *params)
+      # Sessions, one per day starting today (unless they were manually provided)
+      if evaluator.sessions.empty?
+        evaluator.num_sessions.times do |i|
+          params = [{
+            workshop: workshop,
+            start: evaluator.sessions_from + i.days,
+            duration_hours: evaluator.each_session_hours
+          }]
+          params.prepend :with_assigned_code if evaluator.assign_session_code
+          workshop.sessions << build(:pd_session, *params)
+        end
       end
       evaluator.num_enrollments.times do
         workshop.enrollments << build(:pd_enrollment, workshop: workshop)
