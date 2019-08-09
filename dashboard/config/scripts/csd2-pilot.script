@@ -12,6 +12,7 @@ curriculum_umbrella 'CSD'
 
 stage 'Exploring Web Pages', flex_category: 'csd2_1'
 level 'CSD U2L01 TFMD_pilot', named: true
+level 'CSD Web Sample Pages', named: true
 
 stage 'Intro to HTML', flex_category: 'csd2_1'
 level 'CSD U2L03 TFMD_pilot', named: true
