@@ -222,7 +222,7 @@ module Pd::Payment
     end
 
     test 'teacher summaries with deleted teacher account' do
-      workshop = create :workshop, :ended, num_sessions: 1
+      workshop = create :workshop, :ended
 
       pd_workshop_participant = create :pd_workshop_participant,
         workshop: workshop,
@@ -263,7 +263,7 @@ module Pd::Payment
     end
 
     test 'late-deleted enrollments with attendance still show up' do
-      workshop = create :workshop, :ended, num_sessions: 1
+      workshop = create :workshop, :ended
 
       pd_workshop_participant = create :pd_workshop_participant,
         workshop: workshop,
