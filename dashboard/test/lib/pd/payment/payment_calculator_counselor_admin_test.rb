@@ -94,8 +94,7 @@ module Pd::Payment
     test 'no user account' do
       workshop = create :workshop, :ended,
         on_map: true, funded: true,
-        course: Pd::Workshop::COURSE_COUNSELOR,
-        num_sessions: 1
+        course: Pd::Workshop::COURSE_COUNSELOR
 
       5.times do
         enrollment = create :pd_enrollment, workshop: workshop
