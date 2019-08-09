@@ -135,13 +135,10 @@ export class UnconnectedLevelTokenDetails extends Component {
     );
   };
 
-  handleFieldChange = field => {
-    const ref = this[`${field}Input`];
-    if (ref) {
-      this.props.setField(this.props.stagePosition, this.props.level.position, {
-        [field]: ref.value
-      });
-    }
+  handleFieldChange = (field, event) => {
+    this.props.setField(this.props.stagePosition, this.props.level.position, {
+      [field]: event.target.value
+    });
   };
 
   handleProgressionChange = e => {
@@ -182,7 +179,6 @@ export class UnconnectedLevelTokenDetails extends Component {
               defaultValue={this.props.level.skin}
               type="text"
               style={styles.textInput}
-              ref={skinInput => (this.skinInput = skinInput)}
               onChange={this.handleFieldChange.bind(this, 'skin')}
             />
             <div style={{float: 'right'}}>
@@ -191,7 +187,6 @@ export class UnconnectedLevelTokenDetails extends Component {
                 defaultValue={this.props.level.videoKey}
                 type="text"
                 style={styles.textInput}
-                ref={videoKeyInput => (this.videoKeyInput = videoKeyInput)}
                 onChange={this.handleFieldChange.bind(this, 'videoKey')}
               />
             </div>
@@ -201,9 +196,6 @@ export class UnconnectedLevelTokenDetails extends Component {
               defaultValue={this.props.level.conceptDifficulty}
               type="text"
               style={styles.textInput}
-              ref={conceptDifficultyInput =>
-                (this.conceptDifficultyInput = conceptDifficultyInput)
-              }
               onChange={this.handleFieldChange.bind(this, 'conceptDifficulty')}
             />
             <div style={{float: 'right'}}>
@@ -212,7 +204,6 @@ export class UnconnectedLevelTokenDetails extends Component {
                 defaultValue={this.props.level.concepts}
                 type="text"
                 style={Object.assign({}, styles.textInput, {width: 320})}
-                ref={conceptsInput => (this.conceptsInput = conceptsInput)}
                 onChange={this.handleFieldChange.bind(this, 'concepts')}
               />
             </div>
@@ -256,7 +247,7 @@ export class UnconnectedLevelTokenDetails extends Component {
             <span style={styles.levelSelect}>
               <input
                 type="text"
-                onChange={this.handleProgressionChange}
+                onChange={this.handleFieldChange.bind(this, 'progression')}
                 value={this.props.level.progression}
                 style={styles.textInput}
               />
