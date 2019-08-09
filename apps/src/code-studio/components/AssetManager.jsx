@@ -58,10 +58,17 @@ export default class AssetManager extends React.Component {
     disableAudioRecording: PropTypes.bool,
     projectId: PropTypes.string,
     levelChannelId: PropTypes.string,
+    isStartMode: PropTypes.bool,
 
     // For logging purposes
     imagePicker: PropTypes.bool, // identifies if displayed by 'Manage Assets' flow
     elementId: PropTypes.string
+  };
+
+  // TODO: REMOVE DEFAULT PROPS
+  static defaultProps = {
+    levelChannelId: '1',
+    isStartMode: true
   };
 
   constructor(props) {
