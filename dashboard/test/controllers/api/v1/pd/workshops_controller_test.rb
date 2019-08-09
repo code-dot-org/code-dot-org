@@ -1087,26 +1087,26 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
   end
 
   test 'workshop admins can unstart' do
-    @workshop.sessions << create(:pd_session)
-    @workshop.start!
+    workshop = create :workshop
+    workshop.start!
 
-    sign_in @workshop_admin
-    post :unstart, params: {id: @workshop.id}
+    sign_in create :workshop_admin
+    post :unstart, params: {id: workshop.id}
     assert_response :success
-    @workshop.reload
-    assert_equal 'Not Started', @workshop.state
+    workshop.reload
+    assert_equal 'Not Started', workshop.state
   end
 
   test 'workshop admins can reopen' do
-    @workshop.sessions << create(:pd_session)
-    @workshop.start!
-    @workshop.end!
+    workshop = create :workshop
+    workshop.start!
+    workshop.end!
 
-    sign_in @workshop_admin
-    post :reopen, params: {id: @workshop.id}
+    sign_in create :workshop_admin
+    post :reopen, params: {id: workshop.id}
     assert_response :success
-    @workshop.reload
-    assert_equal 'In Progress', @workshop.state
+    workshop.reload
+    assert_equal 'In Progress', workshop.state
   end
 
   test 'program managers cannot unstart' do
