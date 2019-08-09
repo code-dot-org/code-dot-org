@@ -53,6 +53,11 @@ FactoryGirl.define do
       subject Pd::Workshop::SUBJECT_CSP_FIT
     end
 
+    trait :ended do
+      started_at {Time.zone.now}
+      ended_at {Time.zone.now}
+    end
+
     trait :with_codes_assigned do
       assign_session_code true
     end
@@ -120,8 +125,7 @@ FactoryGirl.define do
 
     # TODO: Change into a trait
     factory :pd_ended_workshop do
-      started_at {Time.zone.now}
-      ended_at {Time.zone.now}
+      ended
     end
   end
 end
