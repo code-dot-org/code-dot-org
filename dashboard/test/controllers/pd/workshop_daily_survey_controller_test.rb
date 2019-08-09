@@ -250,7 +250,7 @@ module Pd
     test 'enrollment code override is used when fetching the workshop for a user' do
       setup_academic_year_workshop
       other_academic_workshop = create :workshop, course: COURSE_CSP, subject: SUBJECT_CSP_WORKSHOP_1,
-        num_sessions: 1, regional_partner: @regional_partner, facilitators: @facilitators, sessions_from: Date.today + 1.month
+        regional_partner: @regional_partner, facilitators: @facilitators, sessions_from: Date.today + 1.month
       other_enrollment = create :pd_enrollment, :from_user, workshop: other_academic_workshop, user: @enrolled_academic_year_teacher
       create :pd_attendance, session: other_academic_workshop.sessions[0], teacher: @enrolled_academic_year_teacher, enrollment: other_enrollment
 
@@ -1074,7 +1074,7 @@ module Pd
     def setup_academic_year_workshop
       @regional_partner = create :regional_partner
       @academic_year_workshop = create :workshop, course: COURSE_CSP, subject: SUBJECT_CSP_WORKSHOP_1,
-        num_sessions: 1, num_facilitators: 2, regional_partner: @regional_partner
+        num_facilitators: 2, regional_partner: @regional_partner
       @academic_year_enrollment = create :pd_enrollment, :from_user, workshop: @academic_year_workshop
       @enrolled_academic_year_teacher = @academic_year_enrollment.user
       @facilitators = @academic_year_workshop.facilitators
@@ -1094,14 +1094,14 @@ module Pd
       @regional_partner = create :regional_partner
       @csf201_not_started_workshop = create :workshop,
         course: COURSE_CSF, subject: SUBJECT_CSF_201, regional_partner: @regional_partner,
-        num_sessions: 1, num_facilitators: 2
+        num_facilitators: 2
     end
 
     def setup_csf201_in_progress_workshop
       @regional_partner = create :regional_partner
       @csf201_in_progress_workshop = create :workshop,
         course: COURSE_CSF, subject: SUBJECT_CSF_201, regional_partner: @regional_partner,
-        num_sessions: 1, num_facilitators: 2, started_at: DateTime.now
+        num_facilitators: 2, started_at: DateTime.now
     end
 
     def setup_csf201_ended_workshop
@@ -1111,7 +1111,6 @@ module Pd
         course: COURSE_CSF,
         subject: SUBJECT_CSF_201,
         regional_partner: @regional_partner,
-        num_sessions: 1,
         num_facilitators: 2
     end
 
