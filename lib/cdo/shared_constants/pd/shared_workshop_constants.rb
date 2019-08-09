@@ -70,6 +70,25 @@ module Pd
       ]
     }.freeze
 
+    LEGACY_SUBJECTS = {
+      COURSE_CSP => [
+        LEGACY_SUBJECT_CSP_WORKSHOP_1 = '1-day Academic Year, Units 1 and 2'.freeze,
+        LEGACY_SUBJECT_CSP_WORKSHOP_2 = '1-day Academic Year, Unit 3'.freeze,
+        LEGACY_SUBJECT_CSP_WORKSHOP_3 = '1-day Academic Year, Unit 4 + Explore Prep'.freeze,
+        LEGACY_SUBJECT_CSP_WORKSHOP_4 = '1-day Academic Year, Unit 5 + Create Prep'.freeze,
+        LEGACY_SUBJECT_CSP_WORKSHOP_5 = '2-day Academic Year, Units 1 to 3'.freeze,
+        LEGACY_SUBJECT_CSP_WORKSHOP_6 = '2-day Academic Year, Units 4 and 5 + AP Prep'.freeze,
+      ],
+      COURSE_CSD => [
+        LEGACY_SUBJECT_CSD_UNITS_2_3 = '1-day Academic Year, Units 1 and 2'.freeze,
+        LEGACY_SUBJECT_CSD_UNIT_3_4 = '1-day Academic Year, Unit 3'.freeze,
+        LEGACY_SUBJECT_CSD_UNITS_4_5 = '1-day Academic Year, Units 4 and 5'.freeze,
+        LEGACY_SUBJECT_CSD_UNIT_6 = '1-day Academic Year, Unit 6'.freeze,
+        LEGACY_SUBJECT_CSD_UNITS_1_3 = '2-day Academic Year, Units 1 to 3'.freeze,
+        LEGACY_SUBJECT_CSD_UNITS_4_6 = '2-day Academic Year, Units 4 to 6'.freeze,
+      ]
+    }.freeze
+
     WORKSHOP_APPLICATION_STATES = {
       now_closed: "now_closed",
       currently_open: "currently_open",

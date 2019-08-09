@@ -22,24 +22,28 @@ class RenameAcademicYearWorkshopNames < ActiveRecord::Migration[5.0]
   def up
     CSD_SUBJECTS.each do |subject_name|
       Pd::Workshop.where(course: CSD_COURSE, subject: subject_name[:from]).
-          update_all(subject: subject_name[:to])
+        where(started_at: nil).
+        update_all(subject: subject_name[:to])
     end
 
     CSP_SUBJECTS.each do |subject_name|
       Pd::Workshop.where(course: CSP_COURSE, subject: subject_name[:from]).
-          update_all(subject: subject_name[:to])
+        where(started_at: nil).
+        update_all(subject: subject_name[:to])
     end
   end
 
   def down
     CSD_SUBJECTS.each do |subject_name|
       Pd::Workshop.where(course: CSD_COURSE, subject: subject_name[:to]).
-          update_all(subject: subject_name[:from])
+        where(started_at: nil).
+        update_all(subject: subject_name[:from])
     end
 
     CSP_SUBJECTS.each do |subject_name|
       Pd::Workshop.where(course: CSP_COURSE, subject: subject_name[:to]).
-          update_all(subject: subject_name[:from])
+        where(started_at: nil).
+        update_all(subject: subject_name[:from])
     end
   end
 end
