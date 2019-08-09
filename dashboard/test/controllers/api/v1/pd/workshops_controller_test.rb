@@ -189,7 +189,8 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
     sign_in(teacher)
 
     teachercon = create(
-      :pd_ended_workshop,
+      :workshop,
+      :ended,
       :teachercon,
       :funded,
       organizer: @organizer,
@@ -198,7 +199,8 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
     )
 
     fit_weekend = create(
-      :pd_ended_workshop,
+      :workshop,
+      :ended,
       :funded,
       subject: Pd::Workshop::SUBJECT_CSD_FIT,
       course: Pd::Workshop::COURSE_CSD,
