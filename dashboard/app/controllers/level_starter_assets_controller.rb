@@ -26,10 +26,18 @@ class LevelStarterAssetsController < ApplicationController
   # Returns requested file body as an IO stream.
   def file
     path = prefix("#{params[:id]}/#{params[:filename]}.#{params[:format]}")
-    file_obj = bucket.object(path)
+    file_obj = get_file_object(path)
     filename = filename(params[:id], file_obj)
     content_type = file_content_type(File.extname(filename))
-    send_data file_obj.get.body.read, type: content_type, disposition: 'inline'
+    send_data read_file(file_obj), type: content_type, disposition: 'inline'
+  end
+
+  def read_file(file_obj)
+    file_obj.get.body.read
+  end
+
+  def get_file_object(path)
+    bucket.object(path)
   end
 
   def get_file_objects(key)
