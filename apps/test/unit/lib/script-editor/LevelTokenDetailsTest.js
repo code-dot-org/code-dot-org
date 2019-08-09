@@ -75,6 +75,7 @@ describe('LevelTokenDetails', () => {
     assertChecked(wrapper, 'challenge', false);
 
     assertButtonVisible(wrapper, 'Add Variant', true);
+    assertButtonVisible(wrapper, 'Remove Variant', false);
     assertButtonVisible(wrapper, 'Add Progression', true);
 
     assertInputVisible(wrapper, 'progression', false);
@@ -100,5 +101,27 @@ describe('LevelTokenDetails', () => {
     );
     button.simulate('mousedown');
     assertInputVisible(wrapper, 'progression', true);
+  });
+
+  it('shows new blank variant', () => {
+    const wrapper = shallow(
+      <LevelTokenDetails
+        {...defaultProps}
+        level={{...defaultLevel, ids: [2, -1]}}
+      />
+    );
+    assertButtonVisible(wrapper, 'Add Variant', false);
+    assertButtonVisible(wrapper, 'Remove Variant', true);
+  });
+
+  it('shows multiple non-blank variants', () => {
+    const wrapper = shallow(
+      <LevelTokenDetails
+        {...defaultProps}
+        level={{...defaultLevel, ids: [2, 3]}}
+      />
+    );
+    assertButtonVisible(wrapper, 'Add Variant', true);
+    assertButtonVisible(wrapper, 'Remove Variant', true);
   });
 });
