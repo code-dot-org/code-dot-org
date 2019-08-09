@@ -12,6 +12,15 @@ class SecretsConfigTest < Minitest::Test
     prepend Cdo::SecretsConfig
   end
 
+  def load_configuration(yml_erb, config = CdoSecrets.new)
+    file = Tempfile.new(%w(config .yml.erb))
+    file.write yml_erb
+    file.close
+    config.load_configuration(file.path)
+    config.freeze
+    config
+  end
+
   def test_secret_tag
     config = CdoSecrets.new
     client = Aws::SecretsManager::Client.new(
@@ -22,17 +31,28 @@ class SecretsConfigTest < Minitest::Test
       }
     )
     config.cdo_secrets = Cdo::Secrets.new(client: client)
-
-    file = Tempfile.new(%w(config .yml))
-    file.write <<YAML
+    load_configuration(<<YAML, config)
 foo: foo!
 bar: !Secret
 YAML
-    file.close
-    config.load_configuration(file)
-    config.freeze
-
     assert_equal 'foo!', config.foo
     assert_equal 'bar!', config.bar
+  end
+
+  def test_clear_secrets
+    config = load_configuration <<YAML
+foo: !Secret
+<%=clear_secrets%>
+YAML
+    assert_nil config.foo
+  end
+
+  def test_clear_secrets_empty
+    config = load_configuration <<YAML
+foo: false
+<%=clear_secrets%>
+foo: true
+YAML
+    assert_equal true, config.foo
   end
 end

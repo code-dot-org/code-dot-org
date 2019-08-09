@@ -648,7 +648,6 @@
   "feedbackNotificationButton": "Rückmeldung ansehen",
   "feedbackNotificationDetails": "Du hast {numFeedbackLevels} Level mit ungelesenen Rückmeldungen.",
   "feedbackNotificationLesson": "",
-  "feedbackNotificationLevel": "",
   "feedbackNotificationUnit": "",
   "feedbackPlaceholder": "",
   "feedbackSaveError": "",

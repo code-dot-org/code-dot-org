@@ -20,7 +20,7 @@ import exportExpoIconPng from '@cdo/apps/templates/export/expo/icon.png';
 import exportExpoSplashPng from '@cdo/apps/templates/export/expo/splash.png';
 import logToCloud from '@cdo/apps/logToCloud';
 import project from '@cdo/apps/code-studio/initApp/project';
-import {GAME_WIDTH, GAME_HEIGHT} from '../constants';
+import {APP_WIDTH, APP_HEIGHT} from '../constants';
 import {EXPO_SESSION_SECRET} from '@cdo/apps/constants';
 import {
   EXPO_SDK_VERSION,
@@ -36,8 +36,8 @@ const CONTROLS_HEIGHT = 165;
 
 export default {
   async exportAppToZip(appName, code, animationOpts, expoMode) {
-    const appHeight = GAME_HEIGHT + CONTROLS_HEIGHT;
-    const appWidth = GAME_WIDTH;
+    const appHeight = APP_HEIGHT + CONTROLS_HEIGHT;
+    const appWidth = APP_WIDTH;
     const jQueryBaseName = 'jquery-1.12.1.min';
     const html = exportGamelabIndexEjs({
       appName,
@@ -306,8 +306,8 @@ export default {
     const gamelabCssPath = `${origin}/blockly/css/gamelab.css`;
     const p5Path = `${origin}/blockly/js/p5play/p5.js`;
     const p5playPath = `${origin}/blockly/js/p5play/p5.play.js`;
-    const appHeight = GAME_HEIGHT + CONTROLS_HEIGHT;
-    const appWidth = GAME_WIDTH;
+    const appHeight = APP_HEIGHT + CONTROLS_HEIGHT;
+    const appWidth = APP_WIDTH;
     const html = exportGamelabIndexEjs({
       appName,
       appHeight,

@@ -7,8 +7,8 @@ var createStore = require('../../util/redux').createStore;
 var combineReducers = require('redux').combineReducers;
 import {expect} from '../../util/configuredChai';
 var _ = require('lodash');
-var GameLabInterfaceMode = require('@cdo/apps/p5lab/constants')
-  .GameLabInterfaceMode;
+var P5LabInterfaceMode = require('@cdo/apps/p5lab/constants')
+  .P5LabInterfaceMode;
 var gamelabReducers = require('@cdo/apps/p5lab/reducers');
 var commonReducers = require('@cdo/apps/redux/commonReducers');
 var pageConstants = require('@cdo/apps/redux/pageConstants');
@@ -18,8 +18,8 @@ var testUtils = require('../../util/testUtils');
 describe('gamelabReducer', function() {
   var store;
   var initialState;
-  var CODE = GameLabInterfaceMode.CODE;
-  var ANIMATION = GameLabInterfaceMode.ANIMATION;
+  var CODE = P5LabInterfaceMode.CODE;
+  var ANIMATION = P5LabInterfaceMode.ANIMATION;
 
   testUtils.setExternalGlobals();
 
@@ -67,20 +67,21 @@ describe('gamelabReducer', function() {
   describe('action: changeInterfaceMode', function() {
     var changeInterfaceMode = actions.changeInterfaceMode;
 
-    it('returns original object when already in given mode', function() {
+    it('returns object with same values when already in given mode', function() {
       expect(initialState.interfaceMode).to.equal(CODE);
       store.dispatch(changeInterfaceMode(CODE));
       var newState = store.getState();
-      expect(newState).to.equal(initialState);
+      expect(newState).to.deep.equal(initialState);
       expect(newState.interfaceMode).to.equal(CODE);
     });
 
-    it('returns a new object when in a new mode', function() {
+    it('returns object with updated values when in a new mode', function() {
       expect(initialState.interfaceMode).to.equal(CODE);
+      expect(initialState.instructions.allowResize).to.equal(true);
       store.dispatch(changeInterfaceMode(ANIMATION));
       var newState = store.getState();
       expect(newState.interfaceMode).to.equal(ANIMATION);
-      expect(newState).to.not.equal(initialState);
+      expect(newState.instructions.allowResize).to.equal(false);
     });
   });
 

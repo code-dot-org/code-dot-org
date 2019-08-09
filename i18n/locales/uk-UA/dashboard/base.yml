@@ -10,6 +10,7 @@ uk:
       messages:
         blank: "необхідне"
         blank_plural: "необхідні"
+        invalid: "недійсний"
         invalid_plural: "недійсні"
     attributes:
       user:
@@ -510,6 +511,7 @@ uk:
     unplugged_conditionals:
       title: "Умови"
     widgets:
+      audience: "Вік 14+"
       cta: "Почати навчання"
   gallery:
     students_drew_these_with_code: "Ці малюнки запрограмували учні!"
