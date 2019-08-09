@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Radium from 'radium';
 import color from '@cdo/apps/util/color';
+import {assets as assetsApi} from '@cdo/apps/clientApi';
 
 const defaultIcons = {
   image: 'fa fa-picture-o',
@@ -65,7 +66,7 @@ class AssetThumbnail extends React.Component {
 
   constructor(props) {
     super(props);
-    let api = this.props.api;
+    let api = this.props.api || assetsApi; // Fallback to assetsApi.
     if (this.props.levelChannelId) {
       api = api.withLevelChannelId(this.props.levelChannelId);
     } else if (this.props.projectId) {
