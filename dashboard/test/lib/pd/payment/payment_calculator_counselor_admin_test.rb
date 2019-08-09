@@ -3,7 +3,7 @@ require 'test_helper'
 module Pd::Payment
   class PaymentCalculatorCounselorAdminTest < ActiveSupport::TestCase
     setup do
-      @workshop = create :pd_ended_workshop,
+      @workshop = create :workshop, :ended,
         on_map: true, funded: true,
         course: Pd::Workshop::COURSE_COUNSELOR,
         num_sessions: 3
@@ -92,7 +92,7 @@ module Pd::Payment
     end
 
     test 'no user account' do
-      workshop = create :pd_ended_workshop,
+      workshop = create :workshop, :ended,
         on_map: true, funded: true,
         course: Pd::Workshop::COURSE_COUNSELOR,
         num_sessions: 1
