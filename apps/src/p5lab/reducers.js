@@ -13,10 +13,10 @@ import animationTab from './AnimationTab/animationTabModule';
 import locationPicker from './spritelab/locationPickerModule';
 import textConsole from './spritelab/textConsoleModule';
 var errorDialogStack = require('./errorDialogStackModule').default;
-var GameLabInterfaceMode = require('./constants').GameLabInterfaceMode;
+var P5LabInterfaceMode = require('./constants').P5LabInterfaceMode;
 
 function interfaceMode(state, action) {
-  state = state || GameLabInterfaceMode.CODE;
+  state = state || P5LabInterfaceMode.CODE;
 
   switch (action.type) {
     case CHANGE_INTERFACE_MODE:
