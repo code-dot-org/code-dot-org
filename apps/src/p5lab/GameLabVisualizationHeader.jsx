@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {changeInterfaceMode} from './actions';
 import {connect} from 'react-redux';
-import {GameLabInterfaceMode} from './constants';
+import {P5LabInterfaceMode} from './constants';
 import msg from '@cdo/locale';
 import ToggleGroup from '@cdo/apps/templates/ToggleGroup';
 import styleConstants from '@cdo/apps/styleConstants';
@@ -21,8 +21,8 @@ const styles = {
 class GameLabVisualizationHeader extends React.Component {
   static propTypes = {
     interfaceMode: PropTypes.oneOf([
-      GameLabInterfaceMode.CODE,
-      GameLabInterfaceMode.ANIMATION
+      P5LabInterfaceMode.CODE,
+      P5LabInterfaceMode.ANIMATION
     ]).isRequired,
     allowAnimationMode: PropTypes.bool.isRequired,
     onInterfaceModeChange: PropTypes.func.isRequired,
@@ -38,13 +38,13 @@ class GameLabVisualizationHeader extends React.Component {
     return (
       <div style={styles.main} id="playSpaceHeader">
         <ToggleGroup selected={interfaceMode} onChange={onInterfaceModeChange}>
-          <button type="button" value={GameLabInterfaceMode.CODE} id="codeMode">
+          <button type="button" value={P5LabInterfaceMode.CODE} id="codeMode">
             {msg.codeMode()}
           </button>
           {allowAnimationMode && (
             <button
               type="button"
-              value={GameLabInterfaceMode.ANIMATION}
+              value={P5LabInterfaceMode.ANIMATION}
               id="animationMode"
             >
               {this.props.spriteLab ? msg.costumeMode() : msg.animationMode()}

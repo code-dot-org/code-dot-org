@@ -12,7 +12,7 @@ import {makeEnum} from '@cdo/apps/utils';
 import {animations as animationsApi} from '@cdo/apps/clientApi';
 var msg = require('@cdo/locale');
 import {changeInterfaceMode} from '../actions';
-import {GameLabInterfaceMode} from '../constants';
+import {P5LabInterfaceMode} from '../constants';
 
 /**
  * @enum {string} Export possible targets for animation picker for consumers
@@ -180,8 +180,8 @@ export function pickNewAnimation() {
     const state = getState();
     const goal = state.animationPicker.goal;
     if (goal === Goal.NEW_ANIMATION) {
-      if (state.interfaceMode !== GameLabInterfaceMode.ANIMATION) {
-        dispatch(changeInterfaceMode(GameLabInterfaceMode.ANIMATION));
+      if (state.interfaceMode !== P5LabInterfaceMode.ANIMATION) {
+        dispatch(changeInterfaceMode(P5LabInterfaceMode.ANIMATION));
       }
       dispatch(addBlankAnimation());
     } else if (goal === Goal.NEW_FRAME) {
