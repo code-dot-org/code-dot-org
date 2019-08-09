@@ -55,4 +55,21 @@ foo: true
 YAML
     assert_equal true, config.foo
   end
+
+  def test_json_secret
+    config = CdoSecrets.new
+    client = Aws::SecretsManager::Client.new(
+      stub_responses: {
+        get_secret_value: ->(_) do
+          {secret_string: {bar: 'baz'}.to_json}
+        end
+      }
+    )
+    config.cdo_secrets = Cdo::Secrets.new(client: client)
+    load_configuration(<<YAML, config)
+foo: !Secret
+YAML
+    assert_equal({bar: 'baz'}, config.foo)
+    assert_equal 'baz', config.foo.bar
+  end
 end
