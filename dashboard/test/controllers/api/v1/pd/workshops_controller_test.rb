@@ -710,19 +710,20 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
   end
 
   test 'program manager organizers can add workshop sessions' do
-    sign_in @organizer
-    assert_equal 0, @workshop.sessions.count
+    program_manager = create :program_manager
+    workshop = create :workshop, organizer: program_manager, num_sessions: 0
+    sign_in program_manager
 
     session_start = tomorrow_at 9
     session_end = tomorrow_at 17
     params = {sessions_attributes: [{start: session_start, end: session_end}]}
 
-    put :update, params: {id: @workshop.id, pd_workshop: params}
+    put :update, params: {id: workshop.id, pd_workshop: params}
     assert_response :success
-    @workshop.reload
-    assert_equal 1, @workshop.sessions.count
-    assert_equal session_start, @workshop.sessions.first[:start]
-    assert_equal session_end, @workshop.sessions.first[:end]
+    workshop.reload
+    assert_equal 1, workshop.sessions.count
+    assert_equal session_start, workshop.sessions.first[:start]
+    assert_equal session_end, workshop.sessions.first[:end]
   end
 
   # TODO: remove this test when workshop_organizer is deprecated
