@@ -345,7 +345,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   end
 
   test 'send_exit_surveys with attendance but no account gets email for counselor admin' do
-    workshop = create :pd_ended_workshop, course: Pd::Workshop::COURSE_COUNSELOR, num_sessions: 1
+    workshop = create :pd_ended_workshop, course: Pd::Workshop::COURSE_COUNSELOR
 
     enrollment = create :pd_enrollment, workshop: workshop
     create :pd_attendance_no_account, session: workshop.sessions.first, enrollment: enrollment
@@ -390,7 +390,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
 
   test 'send_follow_up only teachers attended workshop get follow up emails' do
     workshop = create :pd_ended_workshop, course: Pd::Workshop::COURSE_CSF,
-      subject: Pd::Workshop::SUBJECT_CSF_101, num_sessions: 1, sessions_from: Date.today - 30.days
+      subject: Pd::Workshop::SUBJECT_CSF_101, sessions_from: Date.today - 30.days
 
     teacher_attended = create(:pd_workshop_participant, workshop: workshop, enrolled: true, attended: true)
     create(:pd_workshop_participant, workshop: workshop, enrolled: true)
@@ -403,7 +403,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
 
   test 'send_follow_up all teachers attended workshop get follow up emails' do
     workshop = create :pd_ended_workshop, course: Pd::Workshop::COURSE_CSF,
-      subject: Pd::Workshop::SUBJECT_CSF_101, num_sessions: 1, sessions_from: Date.today - 30.days
+      subject: Pd::Workshop::SUBJECT_CSF_101, sessions_from: Date.today - 30.days
 
     teacher_count = 3
     create_list :pd_workshop_participant, teacher_count, workshop: workshop, enrolled: true, attended: true
@@ -415,7 +415,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
 
   test 'send_follow_up exception in email delivery raises honeybadger but does not stop batch' do
     workshop = create :pd_ended_workshop, course: Pd::Workshop::COURSE_CSF,
-      subject: Pd::Workshop::SUBJECT_CSF_101, num_sessions: 1, sessions_from: Date.today - 30.days
+      subject: Pd::Workshop::SUBJECT_CSF_101, sessions_from: Date.today - 30.days
 
     teacher_count = 3
     create_list :pd_workshop_participant, teacher_count, workshop: workshop, enrolled: true, attended: true
@@ -435,11 +435,11 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
 
   test 'send_follow_up only workshop ended exactly 30 days ago get follow up emails' do
     workshop_31d = create :pd_ended_workshop, course: Pd::Workshop::COURSE_CSF,
-      subject: Pd::Workshop::SUBJECT_CSF_101, num_sessions: 1, sessions_from: Date.today - 31.days
+      subject: Pd::Workshop::SUBJECT_CSF_101, sessions_from: Date.today - 31.days
     workshop_30d = create :pd_ended_workshop, course: Pd::Workshop::COURSE_CSF,
-      subject: Pd::Workshop::SUBJECT_CSF_101, num_sessions: 1, sessions_from: Date.today - 30.days
+      subject: Pd::Workshop::SUBJECT_CSF_101, sessions_from: Date.today - 30.days
     workshop_29d = create :pd_ended_workshop, course: Pd::Workshop::COURSE_CSF,
-      subject: Pd::Workshop::SUBJECT_CSF_101, num_sessions: 1, sessions_from: Date.today - 29.days
+      subject: Pd::Workshop::SUBJECT_CSF_101, sessions_from: Date.today - 29.days
 
     create(:pd_workshop_participant, workshop: workshop_31d, enrolled: true, attended: true)
     teacher_30d = create(:pd_workshop_participant, workshop: workshop_30d, enrolled: true, attended: true)
@@ -517,15 +517,15 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
 
   test 'in_year' do
     # before
-    create :workshop, num_sessions: 1, sessions_from: Date.new(2016, 12, 31)
+    create :workshop, sessions_from: Date.new(2016, 12, 31)
 
     workshops_this_year = [
-      create(:workshop, num_sessions: 1, sessions_from: Date.new(2017, 1, 1)),
-      create(:workshop, num_sessions: 1, sessions_from: Date.new(2017, 12, 31))
+      create(:workshop, sessions_from: Date.new(2017, 1, 1)),
+      create(:workshop, sessions_from: Date.new(2017, 12, 31))
     ]
 
     # after
-    create :workshop, num_sessions: 1, sessions_from: Date.new(2018, 12, 31)
+    create :workshop, sessions_from: Date.new(2018, 12, 31)
 
     assert_equal workshops_this_year.map(&:id), Pd::Workshop.in_year(2017).pluck(:id)
   end
@@ -533,19 +533,19 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   test 'future scope' do
     future_workshops = [
       # Today
-      a = create(:workshop, num_sessions: 1, sessions_from: Date.today),
+      a = create(:workshop, sessions_from: Date.today),
 
       # Next week
-      b = create(:workshop, num_sessions: 1, sessions_from: Date.today + 1.week)
+      b = create(:workshop, sessions_from: Date.today + 1.week)
     ]
 
     # Excluded (not future) workshops:
     # Last week
-    c = create :workshop, num_sessions: 1, sessions_from: Date.today - 1.week
+    c = create :workshop, sessions_from: Date.today - 1.week
     # Today, but ended
-    d = create :pd_ended_workshop, num_sessions: 1, sessions_from: Date.today
+    d = create :pd_ended_workshop, sessions_from: Date.today
     # Next week, but ended
-    e = create :pd_ended_workshop, num_sessions: 1, sessions_from: Date.today + 1.week
+    e = create :pd_ended_workshop, sessions_from: Date.today + 1.week
 
     workshop_ids = [a, b, c, d, e].map(&:id)
     assert_equal future_workshops, Pd::Workshop.where(id: workshop_ids).future
@@ -727,7 +727,6 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     workshop_csf_101 = create :workshop,
       course: Pd::Workshop::COURSE_CSF,
       subject: Pd::Workshop::SUBJECT_CSF_101,
-      num_sessions: 1,
       each_session_hours: 8
 
     assert_equal 7, workshop_csf_101.effective_num_hours
@@ -737,7 +736,6 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     workshop_csf_201 = create :workshop,
       course: Pd::Workshop::COURSE_CSF,
       subject: Pd::Workshop::SUBJECT_CSF_201,
-      num_sessions: 1,
       each_session_hours: 7
 
     assert_equal 6, workshop_csf_201.effective_num_hours
@@ -1179,10 +1177,10 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   end
 
   test 'nearest' do
-    target = create :workshop, num_sessions: 1, sessions_from: Date.today + 1.week
+    target = create :workshop, sessions_from: Date.today + 1.week
 
-    x = create :workshop, num_sessions: 1, sessions_from: Date.today + 2.weeks
-    y = create :workshop, num_sessions: 1, sessions_from: Date.today - 2.weeks
+    x = create :workshop, sessions_from: Date.today + 2.weeks
+    y = create :workshop, sessions_from: Date.today - 2.weeks
 
     ids = [target, x, y].map(&:id)
 
@@ -1190,9 +1188,9 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   end
 
   test 'nearest is independent of creation order' do
-    x = create :workshop, num_sessions: 1, sessions_from: Date.today - 2.weeks
-    target = create :workshop, num_sessions: 1, sessions_from: Date.today + 1.week
-    y = create :workshop, num_sessions: 1, sessions_from: Date.today + 2.weeks
+    x = create :workshop, sessions_from: Date.today - 2.weeks
+    target = create :workshop, sessions_from: Date.today + 1.week
+    y = create :workshop, sessions_from: Date.today + 2.weeks
 
     ids = [x, target, y].map(&:id)
 
@@ -1210,21 +1208,21 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
 
   test 'nearest combined with subject and enrollment' do
     user = create :teacher
-    target = create :workshop, num_sessions: 1, sessions_from: Date.today + 1.day,
+    target = create :workshop, sessions_from: Date.today + 1.day,
       course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_SUMMER_WORKSHOP
 
     create :pd_enrollment, :from_user, user: user, workshop: target
 
-    same_subject_farther = create :workshop, num_sessions: 1, sessions_from: Date.today + 1.week,
+    same_subject_farther = create :workshop, sessions_from: Date.today + 1.week,
       course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_SUMMER_WORKSHOP
     create :pd_enrollment, :from_user, user: user, workshop: same_subject_farther
 
-    different_subject_closer = create :workshop, num_sessions: 1, sessions_from: Date.today,
+    different_subject_closer = create :workshop, sessions_from: Date.today,
       course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_TEACHER_CON
     create :pd_enrollment, :from_user, user: user, workshop: different_subject_closer
 
     # closer, not enrolled
-    create :workshop, num_sessions: 1, sessions_from: Date.today,
+    create :workshop, sessions_from: Date.today,
       course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_SUMMER_WORKSHOP
 
     found = Pd::Workshop.where(subject: Pd::Workshop::SUBJECT_SUMMER_WORKSHOP).enrolled_in_by(user).nearest
