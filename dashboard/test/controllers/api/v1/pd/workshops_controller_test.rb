@@ -873,19 +873,20 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
   end
 
   test 'program manager organizers can start and stop their workshops' do
-    sign_in @organizer
-    @workshop.sessions << create(:pd_session)
-    assert_equal 'Not Started', @workshop.state
+    program_manager = create :program_manager
+    workshop = create :workshop, organizer: program_manager
+    assert_equal 'Not Started', workshop.state
 
-    post :start, params: {id: @workshop.id}
+    sign_in program_manager
+    post :start, params: {id: workshop.id}
     assert_response :success
-    @workshop.reload
-    assert_equal 'In Progress', @workshop.state
+    workshop.reload
+    assert_equal 'In Progress', workshop.state
 
-    post :end, params: {id: @workshop.id}
+    post :end, params: {id: workshop.id}
     assert_response :success
-    @workshop.reload
-    assert_equal 'Ended', @workshop.state
+    workshop.reload
+    assert_equal 'Ended', workshop.state
   end
 
   # TODO: remove this test when workshop_organizer is deprecated
@@ -905,16 +906,16 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
 
   test 'program manager organizers cannot start and stop workshops they are not organizing' do
     sign_in create(:workshop_organizer)
-    @workshop.sessions << create(:pd_session)
-    assert_equal 'Not Started', @workshop.state
+    workshop = create :workshop
+    assert_equal 'Not Started', workshop.state
 
-    post :start, params: {id: @workshop.id}
+    post :start, params: {id: workshop.id}
     assert_response :forbidden
 
-    post :end, params: {id: @workshop.id}
+    post :end, params: {id: workshop.id}
     assert_response :forbidden
-    @workshop.reload
-    assert_equal 'Not Started', @workshop.state
+    workshop.reload
+    assert_equal 'Not Started', workshop.state
   end
 
   # No access
