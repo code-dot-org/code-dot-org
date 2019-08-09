@@ -271,6 +271,21 @@ export default class AssetManager extends React.Component {
     });
   };
 
+  uploadApi = () => {
+    if (this.props.isStartMode) {
+      return starterAssetsApi.withLevelChannelId(this.props.levelChannelId);
+    } else {
+      let api = this.props.useFilesApi ? filesApi : assetsApi;
+
+      // Bind API if it isn't already bound
+      if (!api.getProjectId()) {
+        api = api.withProjectId(this.props.projectId);
+      }
+
+      return api;
+    }
+  };
+
   render() {
     const displayAudioRecorder =
       this.state.audioErrorType !== AudioErrorType.INITIALIZE &&
@@ -293,7 +308,7 @@ export default class AssetManager extends React.Component {
         <AddAssetButtonRow
           uploadsEnabled={this.props.uploadsEnabled}
           allowedExtensions={this.props.allowedExtensions}
-          useFilesApi={this.props.useFilesApi}
+          api={this.uploadApi()}
           onUploadStart={this.onUploadStart}
           onUploadDone={this.onUploadDone}
           onUploadError={this.onUploadError}
