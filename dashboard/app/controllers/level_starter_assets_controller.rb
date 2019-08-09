@@ -1,6 +1,4 @@
 class LevelStarterAssetsController < ApplicationController
-  # TODO: ONLY ALLOW LEVELBUILDERS TO UPLOAD ASSETS
-
   S3_BUCKET = 'cdo-v3-assets'.freeze
   S3_PREFIX = 'starter_assets/'.freeze
 
@@ -27,6 +25,8 @@ class LevelStarterAssetsController < ApplicationController
 
   # POST /level_starter_assets/:id
   def upload
+    return head :forbidden unless current_user&.levelbuilder? && Rails.application.config.levelbuilder_mode
+
     # Client expects a single file upload, so raise an error if params[:files] contains more than one file.
     if params[:files].length > 1
       raise "One file upload expected. Actual: #{params[:files].length}"
