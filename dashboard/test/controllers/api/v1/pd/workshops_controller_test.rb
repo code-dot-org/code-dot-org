@@ -159,8 +159,7 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
       :funded,
       organizer: @organizer,
       facilitators: [@facilitator],
-      regional_partner: @regional_partner,
-      num_sessions: 1
+      regional_partner: @regional_partner
     )
 
     fit_weekend = create(
@@ -261,7 +260,7 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
 
   test 'filter by state' do
     sign_in @admin
-    workshop_in_progress = create :workshop, num_sessions: 1
+    workshop_in_progress = create :workshop
     workshop_in_progress.start!
     assert_equal Pd::Workshop::STATE_IN_PROGRESS, workshop_in_progress.state
 
@@ -326,13 +325,13 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
   test 'filters' do
     # 10 workshops from different organizers that will be filtered out
     10.times do
-      create :workshop, num_sessions: 1
+      create :workshop
     end
 
     # Same organizer
     organizer = create :workshop_organizer
-    earlier_workshop = create :workshop, organizer: organizer, num_sessions: 1, sessions_from: Time.now
-    later_workshop = create :workshop, organizer: organizer, num_sessions: 1, sessions_from: Time.now + 1.week
+    earlier_workshop = create :workshop, organizer: organizer, sessions_from: Time.now
+    later_workshop = create :workshop, organizer: organizer, sessions_from: Time.now + 1.week
 
     sign_in @workshop_admin
     filters = {organizer_id: organizer.id.to_s, order_by: 'date desc'}
@@ -1034,7 +1033,6 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
     phoenix = create(
       :workshop,
       course: Pd::Workshop::COURSE_CSD,
-      num_sessions: 1,
       organizer: @organizer,
       subject: Pd::Workshop::SUBJECT_TEACHER_CON,
       location_address: "Phoenix"
@@ -1042,7 +1040,6 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
     atlanta = create(
       :workshop,
       course: Pd::Workshop::COURSE_CSD,
-      num_sessions: 1,
       organizer: @organizer,
       subject: Pd::Workshop::SUBJECT_TEACHER_CON,
       location_address: "Atlanta"
@@ -1061,14 +1058,12 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
     csd = create(
       :workshop,
       course: Pd::Workshop::COURSE_CSD,
-      num_sessions: 1,
       organizer: @organizer,
       subject: Pd::Workshop::SUBJECT_TEACHER_CON,
     )
     csp = create(
       :workshop,
       course: Pd::Workshop::COURSE_CSP,
-      num_sessions: 1,
       organizer: @organizer,
       subject: Pd::Workshop::SUBJECT_TEACHER_CON,
     )
