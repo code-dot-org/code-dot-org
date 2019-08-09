@@ -165,14 +165,21 @@ export default class AssetManager extends React.Component {
   };
 
   onUploadDone = result => {
-    assetListStore.add(result);
-    if (this.props.assetsChanged) {
-      this.props.assetsChanged();
-    }
-    this.setState({
-      assets: assetListStore.list(this.props.allowedExtensions),
+    let newState = {
       statusMessage: 'File "' + result.filename + '" successfully uploaded!'
-    });
+    };
+
+    if (this.props.isStartMode) {
+      newState.starterAssets = [...this.state.starterAssets, result];
+    } else {
+      assetListStore.add(result);
+      if (this.props.assetsChanged) {
+        this.props.assetsChanged();
+      }
+      newState.assets = assetListStore.list(this.props.allowedExtensions);
+    }
+
+    this.setState(newState);
   };
 
   onUploadError = status => {
