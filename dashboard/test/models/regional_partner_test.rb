@@ -176,7 +176,7 @@ class RegionalPartnerTest < ActiveSupport::TestCase
 
     # excluded (past or ended) partner workshops
     create :workshop, organizer: partner_organizer, num_sessions: 1, sessions_from: Date.yesterday
-    create :pd_ended_workshop, organizer: partner_organizer, num_sessions: 1, sessions_from: Date.today
+    create :workshop, :ended, organizer: partner_organizer, num_sessions: 1, sessions_from: Date.today
 
     assert_equal future_partner_workshops, regional_partner.future_pd_workshops_organized
   end
@@ -193,7 +193,7 @@ class RegionalPartnerTest < ActiveSupport::TestCase
 
     # excluded (past or ended) partner workshops
     create :workshop, organizer: partner_organizer, num_sessions: 1, sessions_from: Date.yesterday
-    create :pd_ended_workshop, organizer: partner_organizer, num_sessions: 1, sessions_from: Date.today
+    create :workshop, :ended, organizer: partner_organizer, num_sessions: 1, sessions_from: Date.today
 
     assert_equal future_partner_workshops, regional_partner.future_pd_workshops_organized
   end
