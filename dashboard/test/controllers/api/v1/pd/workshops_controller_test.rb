@@ -838,19 +838,20 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
   # Actions: Start, End
 
   test 'admins can start and end workshops' do
-    sign_in @admin
-    @workshop.sessions << create(:pd_session)
-    assert_equal 'Not Started', @workshop.state
+    workshop = create :workshop
 
-    post :start, params: {id: @workshop.id}
-    assert_response :success
-    @workshop.reload
-    assert_equal 'In Progress', @workshop.state
+    sign_in create :admin
+    assert_equal 'Not Started', workshop.state
 
-    post :end, params: {id: @workshop.id}
+    post :start, params: {id: workshop.id}
     assert_response :success
-    @workshop.reload
-    assert_equal 'Ended', @workshop.state
+    workshop.reload
+    assert_equal 'In Progress', workshop.state
+
+    post :end, params: {id: workshop.id}
+    assert_response :success
+    workshop.reload
+    assert_equal 'Ended', workshop.state
   end
 
   # TODO: remove this test when workshop_organizer is deprecated
