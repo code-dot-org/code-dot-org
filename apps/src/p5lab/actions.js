@@ -8,7 +8,7 @@ import {
   Goal
 } from './AnimationPicker/animationPickerModule';
 import {setAllowInstructionsResize} from '../redux/instructions';
-import {GameLabInterfaceMode} from './constants';
+import {P5LabInterfaceMode} from './constants';
 
 /** @enum {string} */
 export const CHANGE_INTERFACE_MODE = 'CHANGE_INTERFACE_MODE';
@@ -28,7 +28,7 @@ export const ADD_MESSAGE = 'spritelab/ADD_MESSAGE';
 
 /**
  * Change the interface mode between Code Mode and the Animation Tab
- * @param {!GameLabInterfaceMode} interfaceMode
+ * @param {!P5LabInterfaceMode} interfaceMode
  * @param {boolean} spritelabDraw - If true, opens the animation tab to a new animation
  * @returns {function}
  */
@@ -42,12 +42,12 @@ export function changeInterfaceMode(interfaceMode, spritelabDraw) {
       type: CHANGE_INTERFACE_MODE,
       interfaceMode: interfaceMode
     });
-    if (interfaceMode === GameLabInterfaceMode.ANIMATION && spritelabDraw) {
+    if (interfaceMode === P5LabInterfaceMode.ANIMATION && spritelabDraw) {
       dispatch(show(Goal.NEW_ANIMATION));
       dispatch(pickNewAnimation());
     }
     dispatch(
-      setAllowInstructionsResize(interfaceMode === GameLabInterfaceMode.CODE)
+      setAllowInstructionsResize(interfaceMode === P5LabInterfaceMode.CODE)
     );
   };
 }
