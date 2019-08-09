@@ -1106,9 +1106,13 @@ module Pd
 
     def setup_csf201_ended_workshop
       @regional_partner = create :regional_partner
-      @csf201_ended_workshop = create :pd_ended_workshop,
-        course: COURSE_CSF, subject: SUBJECT_CSF_201, regional_partner: @regional_partner,
-        num_sessions: 1, num_facilitators: 2
+      @csf201_ended_workshop = create :workshop,
+        :ended,
+        course: COURSE_CSF,
+        subject: SUBJECT_CSF_201,
+        regional_partner: @regional_partner,
+        num_sessions: 1,
+        num_facilitators: 2
     end
 
     def unenrolled_teacher
