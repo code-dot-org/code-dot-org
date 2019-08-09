@@ -5,13 +5,14 @@ student_detail_progress_view true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csd-19/unit2/"], ["teacherForum", "https://forum.code.org/c/csd2"], ["vocabulary", "https://curriculum.code.org/csd-19/unit2/vocab/"], ["standardMappings", "https://curriculum.code.org/csd-19/unit2/standards/"], ["codeIntroduced", "https://curriculum.code.org/csd-19/unit2/code/"]]
 has_verified_resources true
 has_lesson_plan true
-curriculum_path 'https://curriculum.code.org/csd-19/unit2/{LESSON}'
+curriculum_path 'https://curriculum.code.org/csd-20/unit2/{LESSON}'
 family_name ''
 project_sharing true
 curriculum_umbrella 'CSD'
 
-stage 'Exploring Websites', flex_category: 'csd2_1'
+stage 'Exploring Web Pages', flex_category: 'csd2_1'
 level 'CSD U2L01 TFMD_pilot', named: true
+level 'CSD Web Sample Pages', named: true
 
 stage 'Intro to HTML', flex_category: 'csd2_1'
 level 'CSD U2L03 TFMD_pilot', named: true
@@ -59,10 +60,11 @@ level 'CSD U2L07 TFMD_pilot', named: true
 level 'CSD U2 Image Tag 1_pilot', progression: 'Adding Images'
 level 'CSD U2 Image Credit_pilot', progression: 'Adding Images'
 level 'CSD U2 Image Tag Debug_pilot', progression: 'Adding Images'
-level 'CSD U2 image debug match_pilot', progression: 'Adding Images'
+level 'CSD U2 Image choose name', progression: 'Adding Images'
 level 'CSD U2 Image Tag 2_pilot', progression: 'Adding Images'
 level 'CSD U2 Image practice_pilot', progression: 'Adding Images'
-level 'CSD U2 Image challenge_pilot', progression: 'Adding Images'
+level 'CSD U2 Image assessment', progression: 'Adding Images', assessment: true
+level 'CSD U2 Image challenge_pilot', progression: 'Adding Images Challenges', named: true
 
 stage 'Websites for Expression ', flex_category: 'csd2_1'
 level 'CSD U2L02 TFMD_pilot', named: true
@@ -84,15 +86,10 @@ level 'CSD U2L09 TFMD_pilot', named: true
 level 'CSD U2L09 TFMD_pilot', named: true
 
 stage 'Project - Building a Webpage', flex_category: 'csd2_1'
-level 'CSD U2L09 TFMD_pilot', named: true
-level 'CSD U2 link demo_pilot', progression: 'Linking Pages'
-level 'CSD U2 navigation_pilot', progression: 'Linking Pages'
-level 'CSD U2 a tag map_pilot', named: true
 level 'CSD U2 project guide_2018_2019_pilot', named: true
-level 'CSD U2 create page_pilot', progression: 'Website Project'
 level 'CSD U2 upload images_pilot', progression: 'Website Project'
 level 'CSD U2 add content_pilot', progression: 'Website Project'
-level 'CSD U2 header footer_pilot', progression: 'Website Project'
+level 'CSD U2 CSS_pilot', progression: 'Website Project'
 level 'CSD U2 project review_pilot', progression: 'Website Project'
 level 'CSD U2 publish video_pilot', named: true
 level 'CSD U2 project share_pilot', progression: 'Publishing Your Website', named: true
@@ -101,6 +98,22 @@ level 'csd-pulse-check-survey-1-levelgroup U2Ch1_2018_2019_pilot', progression: 
 stage 'Purpose of a  Websites', flex_category: 'csd2_2'
 level 'CSD U2L01 TFMD_pilot', named: true
 level 'CSD U2 Top Websites_2018_2019_pilot', named: true
+
+stage 'Sources and Search Engines', flex_category: 'csd2_2'
+level 'CSD U2L12 TFMD_pilot', named: true
+
+stage 'RGB Colors and Classes', flex_category: 'csd2_2'
+level 'CSD U2L13 TFMD_pilot', named: true
+level 'CSD U2 RGB intro_pilot', named: true
+level 'CSD U2 RGB winter_pilot', progression: 'RGB Exploration'
+level 'CSD U2 RGB summer_pilot', progression: 'RGB Exploration'
+level 'CSD U2 RGB others_pilot', progression: 'RGB Exploration'
+level 'CSD U2 classes sample_pilot', progression: 'RGB Exploration'
+level 'CSD U2 CSS Classes Map_pilot', named: true
+level 'CSD U2 classes modify_pilot', progression: 'Styling with Classes'
+level 'CSD U2 classes spring_pilot', progression: 'Styling with Classes'
+level 'CSD U2 classes summer_pilot', progression: 'Styling with Classes', assessment: true
+level 'CSDU2 - PW - Class Style Personal Site_pilot', progression: 'Styling with Classes'
 
 stage 'Lists', flex_category: 'csd2_2'
 level 'CSD U2L06 TFMD_pilot', named: true
@@ -122,22 +135,6 @@ level 'CSD U2 Debugging 4_pilot', progression: 'Debugging'
 level 'CSD U2 commenting_pilot', progression: 'Debugging'
 level 'CSD U2 formatting map_pilot', named: true
 level 'CSD U2 challenge_pilot', progression: 'Challenge'
-
-stage 'Sources and Search Engines', flex_category: 'csd2_2'
-level 'CSD U2L12 TFMD_pilot', named: true
-
-stage 'RGB Colors and Classes', flex_category: 'csd2_2'
-level 'CSD U2L13 TFMD_pilot', named: true
-level 'CSD U2 RGB intro_pilot', named: true
-level 'CSD U2 RGB winter_pilot', progression: 'RGB Exploration'
-level 'CSD U2 RGB summer_pilot', progression: 'RGB Exploration'
-level 'CSD U2 RGB others_pilot', progression: 'RGB Exploration'
-level 'CSD U2 classes sample_pilot', progression: 'RGB Exploration'
-level 'CSD U2 CSS Classes Map_pilot', named: true
-level 'CSD U2 classes modify_pilot', progression: 'Styling with Classes'
-level 'CSD U2 classes spring_pilot', progression: 'Styling with Classes'
-level 'CSD U2 classes summer_pilot', progression: 'Styling with Classes', assessment: true
-level 'CSDU2 - PW - Class Style Personal Site_pilot', progression: 'Styling with Classes'
 
 stage 'Project - Personal Portfolio Website', flex_category: 'csd2_2'
 level 'CSD U2L14 TFMD_pilot', named: true

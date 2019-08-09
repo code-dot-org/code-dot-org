@@ -1,0 +1,10 @@
+name 'CSD Web Sample Pages'
+title 'Sample Web Pages'
+display_name 'Sample Personal Web Pages'
+description 'Look through these sample web pages and decide what purpose they serve their creators and visitors.'
+markdown <<MARKDOWN
+# Sample Personal Web Pages
+
+### The Cutest Dog
+[![](https://images.code.org/be0c20dba6319b34dc07a9f87ae615fa-image-1565304900473.png)](https://codeprojects.org/vfqqBSl9WL5EmWlRTaCuyGL523thd_RLmA6fZjoahHo/)
+MARKDOWN

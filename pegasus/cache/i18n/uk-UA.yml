@@ -1232,14 +1232,30 @@ uk-UA:
   course2_gradelevel: Вік 6-18
   course3_gradelevel: Вік 8-18
   course4_gradelevel: Вік 10-18
+  coursea_gradelevel: Вік 4-7
+  courseb_gradelevel: Вік 5-8
+  coursec_gradelevel: Вік 6-10
   coursed_gradelevel: 8+ класи
   coursee_gradelevel: Вік 8-12
+  coursef_gradelevel: Вік 9-13
+  coursea-2017_gradelevel: Вік 4-7
+  courseb-2017_gradelevel: Вік 5-8
+  coursec-2017_gradelevel: Вік 6-10
   coursed-2017_gradelevel: 8+ класи
   coursee-2017_gradelevel: Вік 8-12
+  coursef-2017_gradelevel: Вік 9-13
+  coursea-2018_gradelevel: Вік 4-7
+  courseb-2018_gradelevel: Вік 5-8
+  coursec-2018_gradelevel: Вік 6-10
   coursed-2018_gradelevel: 8+ класи
   coursee-2018_gradelevel: Вік 8-12
+  coursef-2018_gradelevel: Вік 9-13
+  coursea-2019_gradelevel: Вік 4-7
+  courseb-2019_gradelevel: Вік 5-8
+  coursec-2019_gradelevel: Вік 6-10
   coursed-2019_gradelevel: 8+ класи
   coursee-2019_gradelevel: Вік 8-12
+  coursef-2019_gradelevel: Вік 9-13
   accelerated_gradelevel: Вік 10-18
   codeorg_platformtext: Сучасні браузери, смартфони, планшети
   codeintl_platformtext: Сучасні браузери, смартфони, планшети
@@ -1843,6 +1859,10 @@ uk-UA:
   compatibility_unsupported_browser: Ваш браузер не підтримується. Оновіть свій браузер
     до <a href='%{supported_browsers_url}', target='_blank'>одного із підтримуваних</a>.
     Можете продовжити перегляд, але деякі функції, ймовірно, не працюватимуть.
+  compatibility_unsupported_browser_markdown: Ваш браузер не підтримується. Оновіть
+    свій браузер до <a href='%{supported_browsers_url}', target='_blank'>одного із
+    підтримуваних</a>. Можете продовжити перегляд, але деякі функції, ймовірно, не
+    працюватимуть.
   flappy_shortcode: махати
   header_home: Головна
   header_courses: курси

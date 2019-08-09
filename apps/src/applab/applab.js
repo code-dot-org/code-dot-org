@@ -647,7 +647,7 @@ Applab.init = function(config) {
 
   // Push initial level properties into the Redux store
   studioApp().setPageConstants(config, {
-    playspacePhoneFrame: !config.share,
+    playspacePhoneFrame: !(config.share || config.level.widgetMode),
     channelId: config.channel,
     allowExportExpo: experiments.isEnabled('exportExpo'),
     exportApp: Applab.exportApp,
@@ -668,8 +668,8 @@ Applab.init = function(config) {
     ),
     nonResponsiveVisualizationColumnWidth: applabConstants.APP_WIDTH,
     visualizationHasPadding: !config.noPadding,
-    hasDataMode: !config.level.hideViewDataButton,
-    hasDesignMode: !config.level.hideDesignMode,
+    hasDataMode: !(config.level.hideViewDataButton || config.level.widgetMode),
+    hasDesignMode: !(config.level.hideDesignMode || config.level.widgetMode),
     isIframeEmbed: !!config.level.iframeEmbed,
     isProjectLevel: !!config.level.isProjectLevel,
     isSubmittable: !!config.level.submittable,
@@ -754,6 +754,10 @@ Applab.init = function(config) {
             'scale(' + ratio + ', ' + ratio + ')'
           );
         }
+      }
+
+      if (getStore().getState().pageConstants.widgetMode) {
+        Applab.runButtonClick();
       }
     });
 
