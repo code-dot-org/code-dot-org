@@ -3,7 +3,7 @@
 import {SVG_NS} from '@cdo/apps/constants';
 import {getStore} from '@cdo/apps/redux';
 import {getLocation} from './locationPickerModule';
-import {GAME_HEIGHT, GameLabInterfaceMode} from '../constants';
+import {APP_HEIGHT, P5LabInterfaceMode} from '../constants';
 import {animationSourceUrl} from '../animationListModule';
 import {changeInterfaceMode} from '../actions';
 import {Goal, show} from '../AnimationPicker/animationPickerModule';
@@ -77,7 +77,7 @@ const customInputTypes = {
             try {
               const loc = JSON.parse(value);
               label.setText(
-                `${inputConfig.label}(${loc.x}, ${GAME_HEIGHT - loc.y})`
+                `${inputConfig.label}(${loc.x}, ${APP_HEIGHT - loc.y})`
               );
             } catch (e) {
               // Just ignore bad values
@@ -165,7 +165,7 @@ const customInputTypes = {
             action: () => {
               getStore().dispatch(
                 changeInterfaceMode(
-                  GameLabInterfaceMode.ANIMATION,
+                  P5LabInterfaceMode.ANIMATION,
                   true /* spritelabDraw */
                 )
               );

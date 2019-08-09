@@ -67,6 +67,15 @@ class WorkshopMailerTest < ActionMailer::TestCase
     end
   end
 
+  test 'emails are not sent for virtual workshops' do
+    workshop = create :pd_workshop, course: Pd::Workshop::COURSE_CSD, subject: Pd::Workshop::SUBJECT_VIRTUAL_1, num_sessions: 1
+    enrollment = create :pd_enrollment, workshop: workshop
+
+    assert_no_emails do
+      Pd::WorkshopMailer.organizer_cancel_receipt(enrollment).deliver_now
+    end
+  end
+
   test 'detail change notification links are complete urls' do
     courses = [
       Pd::Workshop::COURSE_ADMIN,
