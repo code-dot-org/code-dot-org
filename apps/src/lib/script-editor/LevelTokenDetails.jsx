@@ -42,6 +42,9 @@ const styles = {
     verticalAlign: 'baseline',
     margin: '7px 0 10px 0'
   },
+  progressionTextInput: {
+    marginBottom: 0
+  },
   checkboxLabel: {
     display: 'inline-block',
     marginRight: 10,
@@ -86,6 +89,14 @@ export class UnconnectedLevelTokenDetails extends Component {
     stagePosition: PropTypes.number.isRequired
   };
 
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      showBlankProgression: false
+    };
+  }
+
   componentWillMount() {
     this.levelKeyOptions = _.map(this.props.levelKeyList, (label, value) => ({
       label,
@@ -112,6 +123,10 @@ export class UnconnectedLevelTokenDetails extends Component {
     this.props.addVariant(this.props.stagePosition, this.props.level.position);
   };
 
+  handleAddProgression = () => {
+    this.setState({showBlankProgression: true});
+  };
+
   handleActiveVariantChanged = id => {
     this.props.setActiveVariant(
       this.props.stagePosition,
@@ -127,6 +142,12 @@ export class UnconnectedLevelTokenDetails extends Component {
         [field]: ref.value
       });
     }
+  };
+
+  handleProgressionChange = e => {
+    this.props.setField(this.props.stagePosition, this.props.level.position, {
+      progression: e.target.value
+    });
   };
 
   handleCheckboxChange = field => {
@@ -228,9 +249,18 @@ export class UnconnectedLevelTokenDetails extends Component {
         ))}
         {/* We don't currently support editing progression names here, but do
          * show the current progression if we have one. */}
-        {this.props.level.progression && (
+        {(this.props.level.progression || this.state.showBlankProgression) && (
           <div style={styles.progression}>
-            Progression Name: {this.props.level.progression}
+            <hr style={styles.divider} />
+            <span style={{...styles.levelFieldLabel}}>Progression name:</span>
+            <span style={styles.levelSelect}>
+              <input
+                type="text"
+                onChange={this.handleProgressionChange}
+                value={this.props.level.progression}
+                style={styles.textInput}
+              />
+            </span>
           </div>
         )}
         <hr style={styles.divider} />
@@ -243,6 +273,17 @@ export class UnconnectedLevelTokenDetails extends Component {
           <i style={{marginRight: 7}} className="fa fa-plus-circle" />
           Add Variant
         </button>
+        {!this.props.level.progression && !this.state.showBlankProgression && (
+          <button
+            onMouseDown={this.handleAddProgression}
+            className="btn"
+            style={styles.addVariant}
+            type="button"
+          >
+            <i style={{marginRight: 7}} className="fa fa-plus-circle" />
+            Add Progression
+          </button>
+        )}
       </div>
     );
   }
