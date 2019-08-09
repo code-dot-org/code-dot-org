@@ -257,9 +257,9 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
   end
 
   test 'filter_for_survey_completion' do
-    teachercon1 = create :workshop, :teachercon, num_enrollments: 1, num_sessions: 1
-    teachercon2 = create :workshop, :ended, :teachercon, enrolled_and_attending_users: 1, num_sessions: 1
-    teachercon3 = create :workshop, :ended, :teachercon, enrolled_and_attending_users: 1, num_sessions: 1
+    teachercon1 = create :workshop, :teachercon, num_enrollments: 1
+    teachercon2 = create :workshop, :ended, :teachercon, enrolled_and_attending_users: 1
+    teachercon3 = create :workshop, :ended, :teachercon, enrolled_and_attending_users: 1
 
     create :pd_teachercon_survey, pd_enrollment: teachercon3.enrollments.first
 
@@ -300,7 +300,7 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
   end
 
   test 'academic year survey filter' do
-    workshop = create :workshop, course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_WORKSHOP_1, num_sessions: 1
+    workshop = create :workshop, course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_WORKSHOP_1
     teacher = create :teacher
     enrollment = create :pd_enrollment, :from_user, user: teacher, workshop: workshop
 
@@ -390,25 +390,25 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
   test 'with_surveys scope' do
     # Ended workshop with attendance
     # (ONLY this one should show up in the scope at the end of the test)
-    ended_workshop = create :workshop, :ended, num_sessions: 1
+    ended_workshop = create :workshop, :ended
     expected_enrollment = create :pd_enrollment, workshop: ended_workshop
     create :pd_attendance, session: ended_workshop.sessions.first, enrollment: expected_enrollment
 
     # Ended FiT workshop, with attendance
     # (Checks a special case: FiT workshops don't have exit surveys)
-    fit_workshop = create :workshop, :ended, num_sessions: 1, subject: SUBJECT_FIT
+    fit_workshop = create :workshop, :ended, subject: SUBJECT_FIT
     fit_enrollment = create :pd_enrollment, workshop: fit_workshop
     create :pd_attendance, session: fit_workshop.sessions.first, enrollment: fit_enrollment
 
     # Ended Facilitator workshop, with attendance
     # (Checks a special case: Facilitator workshops don't have exit surveys)
-    facilitator_workshop = create :workshop, :ended, num_sessions: 1, course: COURSE_FACILITATOR
+    facilitator_workshop = create :workshop, :ended, course: COURSE_FACILITATOR
     facilitator_enrollment = create :pd_enrollment, workshop: facilitator_workshop
     create :pd_attendance, session: facilitator_workshop.sessions.first, enrollment: facilitator_enrollment
 
     # Non-ended workshop, no attendance
     # (No surveys because not ended)
-    non_ended_workshop = create :workshop, num_sessions: 1
+    non_ended_workshop = create :workshop
     create :pd_enrollment, workshop: non_ended_workshop
 
     # Non-ended workshop, with attendance
@@ -430,7 +430,7 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     # Root cause: WHERE subject != 'xyz' implicitly excludes rows where subject IS NULL too.
 
     # Ended Admin workshop with attendance; Admin workshops have no subject.
-    admin_workshop = create :workshop, :ended, num_sessions: 1, course: COURSE_ADMIN, subject: nil
+    admin_workshop = create :workshop, :ended, course: COURSE_ADMIN, subject: nil
     expected_enrollment = create :pd_enrollment, workshop: admin_workshop
     create :pd_attendance, session: admin_workshop.sessions.first, enrollment: expected_enrollment
 
@@ -555,7 +555,7 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
   end
 
   test 'Updating existing enrollment sets permission' do
-    workshop = create :workshop, course: Pd::SharedWorkshopConstants::COURSE_CSD, num_sessions: 1
+    workshop = create :workshop, course: Pd::SharedWorkshopConstants::COURSE_CSD
     enrollment = create :pd_enrollment, workshop: workshop, user: nil
 
     teacher = create :teacher
@@ -587,7 +587,7 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
   end
 
   test 'update scholarship status for csf workshop' do
-    workshop = create :workshop, num_sessions: 1, sessions_from: Date.current + 3.months, course: Pd::SharedWorkshopConstants::COURSE_CSF
+    workshop = create :workshop, sessions_from: Date.current + 3.months, course: Pd::SharedWorkshopConstants::COURSE_CSF
     enrollment = create :pd_enrollment, :from_user, workshop: workshop
     # initially creates scholarship info with YES_CDO status
     assert_equal enrollment.scholarship_status, Pd::ScholarshipInfoConstants::YES_CDO
@@ -602,7 +602,7 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
   end
 
   test 'scholarship info automatically created when enrolling in csf workshop' do
-    workshop = create :workshop, num_sessions: 1, sessions_from: Date.current + 3.months, course: Pd::SharedWorkshopConstants::COURSE_CSF
+    workshop = create :workshop, sessions_from: Date.current + 3.months, course: Pd::SharedWorkshopConstants::COURSE_CSF
     enrollment = create :pd_enrollment, :from_user, workshop: workshop
 
     # initially creates scholarship info with YES_CDO status
