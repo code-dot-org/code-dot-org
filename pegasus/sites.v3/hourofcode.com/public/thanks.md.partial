@@ -4,21 +4,20 @@ layout: wide
 nav: how_to_nav
 
 social:
-  "og:title": "<%= hoc_s(:meta_tag_og_title) %>"
-  "og:description": "<%= hoc_s(:meta_tag_og_description) %>"
-  "og:image": "http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png"
+  "og:title": 'Hour of Code: Join the Movement'
+  "og:description": 'The Hour of Code is a global movement reaching tens of millions of students of all ages in 180+ countries and over 45 languages.'
+  "og:image": "http://{{ urls/request_host }}/images/hourofcode-2015-video-thumbnail.png"
   "og:image:width": 1440
   "og:image:height": 900
-  "og:url": "http://<%=request.host%>"
+  "og:url": "http://{{ urls/request_host }}"
 
   "twitter:card": player
   "twitter:site": "@codeorg"
-  "twitter:url": "http://<%=request.host%>"
-  "twitter:title": "<%= hoc_s(:meta_tag_twitter_title) %>"
-  "twitter:description": "<%= hoc_s(:meta_tag_twitter_description) %>"
-  "twitter:image:src": "http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png"
+  "twitter:url": "http://{{ urls/request_host }}"
+  "twitter:title": 'Hour of Code: Join the Movement'
+  "twitter:description": 'The Hour of Code is a global movement reaching tens of millions of students of all ages in 180+ countries and over 45 languages.'
+  "twitter:image:src": "http://{{ urls/request_host }}/images/hourofcode-2015-video-thumbnail.png"
 ---
-{{ thanks_page_heading }}
 
 # Thanks for signing up to host an Hour of Code!
 
@@ -30,7 +29,7 @@ As a special thank you to Hour of Code organizers, we have a new poster set feat
 ## 1. Spread the word in your school and community
 You just joined the Hour of Code movement. Tell your friends with **#HourOfCode**!
 
-{{ share_buttons }}
+{{ social_media_hoc }}
 <br>
 Encourage others to participate [with our sample emails.]({{ promote/sample_emails }}) Contact your principal and challenge every classroom at your school to sign up. Recruit a local group — boy/girl scouts club, church, university, veterans group, labor union, or even some friends. You don't have to be in school to learn new skills. Invite a local politician or policy maker to visit your school for the Hour of Code. It can help build support for computer science in your area beyond one hour.
 
@@ -46,6 +45,6 @@ Choose an [Hour of Code activity](https://hourofcode.com/learn) for your classro
 Order materials to help get students excited about your event by heading to the Code.org [Amazon store](https://www.amazon.com/stores/page/8557B2A6-EBF2-4C9F-95C5-C3256FBA0220). [Order posters](https://www.amazon.com/promocode/A3QAYNZUZTSSNQ) (and get an extra 50% off), Hour of Code kits, stickers, and more! But hurry, supplies are limited.
 
 # Go beyond an Hour of Code
-{{ beyond_hoc }}
+{{ go_beyond_hoc }}
 
-{{ popup_window }}
+{{ popup_window.js }}
