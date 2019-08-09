@@ -647,7 +647,7 @@ Applab.init = function(config) {
 
   // Push initial level properties into the Redux store
   studioApp().setPageConstants(config, {
-    playspacePhoneFrame: !config.share,
+    playspacePhoneFrame: !(config.share || config.level.widgetMode),
     channelId: config.channel,
     allowExportExpo: experiments.isEnabled('exportExpo'),
     exportApp: Applab.exportApp,
