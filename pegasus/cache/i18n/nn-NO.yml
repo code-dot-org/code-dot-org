@@ -1944,6 +1944,10 @@ nn-NO:
     å oppdatere til <a href='%{supported_browsers_url}', target='_blank'>ein nettlesar
     vi støttar</a>. Du må gjerne forsøke å sjå sida, men det kan vere at noko ikkje
     vil virke slik det er meint.
+  compatibility_unsupported_browser_markdown: Nettleseran din blir ikkje støtta. Ver
+    vennleg å oppdatere til <a href='%{supported_browsers_url}', target='_blank'>ein
+    nettlesar vi støttar</a>. Du må gjerne forsøke å sjå sida, men det kan vere at
+    noko ikkje vil virke slik det er meint.
   starwars_shortcode: stjerne
   flappy_shortcode: flaks
   header_home: Heim
