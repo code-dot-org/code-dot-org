@@ -21,7 +21,7 @@ ActiveRecord::Base.connection.execute(%(DELETE FROM user_geos
     id <= #{last_id}
   ) AND (
     #{proxy_ip_ranges.map do |range|
-      "(INET_ATON(ip_address) BETWEEN INET_ATON(#{range.first}) AND INET_ATON(#{range.last}))"
+      "(INET_ATON(ip_address) BETWEEN INET_ATON('#{range.first}') AND INET_ATON('#{range.last}'))"
     end.join(" OR \n    ")}
   )
   ORDER BY id
