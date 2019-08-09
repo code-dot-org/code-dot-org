@@ -207,30 +207,33 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   end
 
   test 'sessions must start on separate days' do
-    @workshop.sessions << create(:pd_session)
-    @workshop.sessions << create(:pd_session)
+    workshop = create :pd_workshop, num_sessions: 0
+    workshop.sessions << create(:pd_session)
+    workshop.sessions << create(:pd_session)
 
-    refute @workshop.valid?
-    assert_equal 1, @workshop.errors.count
-    assert_equal 'Sessions must start on separate days.', @workshop.errors.full_messages.first
+    refute workshop.valid?
+    assert_equal 1, workshop.errors.count
+    assert_equal 'Sessions must start on separate days.', workshop.errors.full_messages.first
   end
 
   test 'sessions must start and end on the same day' do
+    workshop = create :workshop, num_sessions: 0
     session = build :pd_session, start: Time.zone.now, end: Time.zone.now + 1.day
-    @workshop.sessions << session
+    workshop.sessions << session
 
-    refute @workshop.valid?
-    assert_equal 1, @workshop.errors.count
-    assert_equal 'Sessions end must occur on the same day as the start.', @workshop.errors.full_messages.first
+    refute workshop.valid?
+    assert_equal 1, workshop.errors.count
+    assert_equal 'Sessions end must occur on the same day as the start.', workshop.errors.full_messages.first
   end
 
   test 'sessions must start before they end' do
+    workshop = create :workshop, num_sessions: 0
     session = build :pd_session, start: Time.zone.now, end: Time.zone.now - 2.hours
-    @workshop.sessions << session
+    workshop.sessions << session
 
-    refute @workshop.valid?
-    assert_equal 1, @workshop.errors.count
-    assert_equal 'Sessions end must occur after the start.', @workshop.errors.full_messages.first
+    refute workshop.valid?
+    assert_equal 1, workshop.errors.count
+    assert_equal 'Sessions end must occur after the start.', workshop.errors.full_messages.first
   end
 
   # Email queries
@@ -271,17 +274,17 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   end
 
   test 'should have ended' do
-    workshop_recently_started = create :workshop
+    workshop_recently_started = create :workshop, num_sessions: 0
     workshop_recently_started.started_at = Time.now
     workshop_recently_started.sessions << (build :pd_session, start: Time.zone.now - 13.hours, end: Time.zone.now - 12.hours)
     workshop_recently_started.save!
 
-    workshop_should_have_ended = create :workshop
+    workshop_should_have_ended = create :workshop, num_sessions: 0
     workshop_should_have_ended.started_at = Time.now
     workshop_should_have_ended.sessions << (build :pd_session, start: Time.zone.now - 51.hours, end: Time.zone.now - 50.hours)
     workshop_should_have_ended.save!
 
-    workshop_already_ended = create :workshop
+    workshop_already_ended = create :workshop, num_sessions: 0
     workshop_already_ended.started_at = Time.now
     workshop_already_ended.ended_at = Time.now - 1.hour
     workshop_already_ended.sessions << (build :pd_session, start: Time.zone.now - 51.hours, end: Time.zone.now - 50.hours)
@@ -449,13 +452,14 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   end
 
   test 'soft delete' do
-    session = create :pd_session, workshop: @workshop
-    enrollment = create :pd_enrollment, workshop: @workshop
-    @workshop.reload.destroy!
+    workshop = create :pd_workshop, num_sessions: 0
+    session = create :pd_session, workshop: workshop
+    enrollment = create :pd_enrollment, workshop: workshop
+    workshop.reload.destroy!
 
-    assert @workshop.reload.deleted?
-    refute Pd::Workshop.exists? @workshop.attributes
-    assert Pd::Workshop.with_deleted.exists? @workshop.attributes
+    assert workshop.reload.deleted?
+    refute Pd::Workshop.exists? workshop.attributes
+    assert Pd::Workshop.with_deleted.exists? workshop.attributes
 
     # Make sure dependent sessions and enrollments are also soft-deleted.
     assert session.reload.deleted?
@@ -569,9 +573,11 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     # save out of order
     workshops.shuffle.each(&:save!)
 
-    assert_equal workshops.pluck(:id), Pd::Workshop.order_by_scheduled_start.pluck(:id)
-    assert_equal workshops.pluck(:id), Pd::Workshop.order_by_scheduled_start(desc: false).pluck(:id)
-    assert_equal workshops.reverse.pluck(:id), Pd::Workshop.order_by_scheduled_start(desc: true).pluck(:id)
+    ids = workshops.pluck(:id)
+
+    assert_equal workshops.pluck(:id), Pd::Workshop.where(id: ids).order_by_scheduled_start.pluck(:id)
+    assert_equal workshops.pluck(:id), Pd::Workshop.where(id: ids).order_by_scheduled_start(desc: false).pluck(:id)
+    assert_equal workshops.reverse.pluck(:id), Pd::Workshop.where(id: ids).order_by_scheduled_start(desc: true).pluck(:id)
   end
 
   test 'order_by_enrollment_count' do
