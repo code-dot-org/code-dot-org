@@ -171,7 +171,7 @@ export class UnconnectedLevelTokenDetails extends Component {
     const scriptLevelOptions = ['assessment', 'named', 'challenge'];
     return (
       <div style={styles.levelTokenActive}>
-        <span>
+        <span className="level-token-checkboxes">
           {scriptLevelOptions.map(option => (
             <label key={option} style={styles.checkboxLabel}>
               <input
