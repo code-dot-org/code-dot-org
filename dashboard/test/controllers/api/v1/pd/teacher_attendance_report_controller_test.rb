@@ -133,7 +133,7 @@ class Api::V1::Pd::TeacherAttendanceReportControllerTest < ::ActionController::T
   test 'Returns only workshops that have ended and have teachers' do
     # Workshop, not ended, with teachers
     # This workshop should not be returned
-    workshop_in_progress = create :workshop, num_sessions: 1
+    workshop_in_progress = create :workshop
     workshop_in_progress.start!
     5.times do
       create :pd_workshop_participant, workshop: workshop_in_progress, enrolled: true, attended: true
