@@ -76,7 +76,7 @@ class Pd::SessionTest < ActiveSupport::TestCase
   test 'open for attendance' do
     workshop_started = create :workshop, started_at: Time.now - 1.hour
     workshop_not_started = create :workshop
-    workshop_ended = create :pd_ended_workshop
+    workshop_ended = create :workshop, :ended
 
     session_open = create :pd_session, :with_assigned_code, workshop: workshop_started
     assert session_open.open_for_attendance?
