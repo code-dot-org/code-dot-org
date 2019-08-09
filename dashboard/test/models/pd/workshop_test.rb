@@ -496,17 +496,23 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     workshop_pivot = create :workshop, sessions: [create(:pd_session, start: pivot_date + 8.hours)]
     workshop_after = create :workshop, sessions: [create(:pd_session, start: pivot_date + 1.week)]
 
+    ids = [workshop_before, workshop_pivot, workshop_after].pluck(:id)
+
     # on or before
     assert_equal [workshop_before, workshop_pivot].pluck(:id).sort,
-      Pd::Workshop.scheduled_start_on_or_before(pivot_date).pluck(:id).sort
+      Pd::Workshop.where(id: ids).scheduled_start_on_or_before(pivot_date).pluck(:id).sort
 
     # on or after
     assert_equal [workshop_pivot, workshop_after].pluck(:id).sort,
-      Pd::Workshop.scheduled_start_on_or_after(pivot_date).pluck(:id).sort
+      Pd::Workshop.where(id: ids).scheduled_start_on_or_after(pivot_date).pluck(:id).sort
 
     # combined
     assert_equal [workshop_pivot.id],
-      Pd::Workshop.scheduled_start_on_or_after(pivot_date).scheduled_start_on_or_before(pivot_date).pluck(:id)
+      Pd::Workshop.
+        where(id: ids).
+        scheduled_start_on_or_after(pivot_date).
+        scheduled_start_on_or_before(pivot_date).
+        pluck(:id)
   end
 
   test 'in_year' do
@@ -813,12 +819,12 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   end
 
   test 'workshop starting date picks the day of the first session' do
-    session = create :pd_session, start: Date.today + 15.days
-    session2 = create :pd_session, start: Date.today + 20.days
-    @workshop.sessions << session
-    @workshop.sessions << session2
-    assert_equal session.start, @workshop.workshop_starting_date
-    assert_equal session2.start, @workshop.workshop_ending_date
+    workshop = create :workshop, sessions: [
+      session1 = create(:pd_session, start: Date.today + 15.days),
+      session2 = create(:pd_session, start: Date.today + 20.days)
+    ]
+    assert_equal session1.start, workshop.workshop_starting_date
+    assert_equal session2.start, workshop.workshop_ending_date
   end
 
   test 'workshop date range string for single session workshop' do
