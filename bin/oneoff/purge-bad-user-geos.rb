@@ -1,4 +1,5 @@
 #!/usr/bin/env ruby
+require_relative '../../../dashboard/config/environment'
 require 'ipaddr'
 require 'json'
 
@@ -14,7 +15,7 @@ proxy_ip_ranges = JSON.parse(File.read('lib/cdo/trusted_proxies.json'))['ranges'
   IPAddr.new(ip).to_range
 end
 
-puts %(DELETE FROM user_geos
+ActiveRecord::Base.connection.execute(%(DELETE FROM user_geos
   WHERE (
     id >= #{first_id} AND
     id <= #{last_id}
@@ -25,3 +26,4 @@ puts %(DELETE FROM user_geos
   )
   ORDER BY id
   LIMIT 1000;)
+)
