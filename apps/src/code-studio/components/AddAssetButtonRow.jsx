@@ -47,7 +47,7 @@ export default class AddAssetButtonRow extends React.Component {
   static propTypes = {
     uploadsEnabled: PropTypes.bool.isRequired,
     allowedExtensions: PropTypes.string,
-    useFilesApi: PropTypes.bool,
+    api: PropTypes.object,
     onUploadStart: PropTypes.func.isRequired,
     onUploadDone: PropTypes.func.isRequired,
     onUploadError: PropTypes.func.isRequired,
@@ -70,7 +70,7 @@ export default class AddAssetButtonRow extends React.Component {
         <AssetUploader
           uploadsEnabled={this.props.uploadsEnabled}
           allowedExtensions={this.props.allowedExtensions}
-          useFilesApi={this.props.useFilesApi}
+          api={this.props.api}
           onUploadStart={this.props.onUploadStart}
           onUploadDone={this.props.onUploadDone}
           onUploadError={this.props.onUploadError}
