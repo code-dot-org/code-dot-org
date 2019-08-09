@@ -4,7 +4,7 @@
 FactoryGirl.define do
   factory :workshop, class: 'Pd::Workshop', aliases: [:pd_workshop] do
     transient do
-      num_sessions 0
+      num_sessions 1
       num_facilitators 0
       sessions_from {Date.current + 9.hours} # Start time of the first session, then one per day after that.
       each_session_hours 6
@@ -118,7 +118,6 @@ FactoryGirl.define do
 
     # TODO: Change into a trait
     factory :pd_ended_workshop do
-      num_sessions 1
       started_at {Time.zone.now}
       ended_at {Time.zone.now}
     end
