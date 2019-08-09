@@ -141,7 +141,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   test 'query by state' do
     workshops_not_started = [@workshop, @organizer_workshop]
     workshop_in_progress = create :workshop, started_at: Time.now
-    workshop_ended = create :pd_ended_workshop
+    workshop_ended = create :workshop, :ended
 
     not_started = Pd::Workshop.in_state(Pd::Workshop::STATE_NOT_STARTED)
     assert_equal workshops_not_started.length, not_started.count
@@ -326,9 +326,9 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   end
 
   test 'account_required_for_attendance?' do
-    normal_workshop = create :pd_ended_workshop
-    counselor_workshop = create :pd_ended_workshop, course: Pd::Workshop::COURSE_COUNSELOR
-    admin_workshop = create :pd_ended_workshop, course: Pd::Workshop::COURSE_ADMIN
+    normal_workshop = create :workshop, :ended
+    counselor_workshop = create :workshop, :ended, course: Pd::Workshop::COURSE_COUNSELOR
+    admin_workshop = create :workshop, :ended, course: Pd::Workshop::COURSE_ADMIN
 
     assert normal_workshop.account_required_for_attendance?
     refute counselor_workshop.account_required_for_attendance?
@@ -336,7 +336,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   end
 
   test 'send_exit_surveys enrolled-only teacher does not get mail' do
-    workshop = create :pd_ended_workshop
+    workshop = create :workshop, :ended
 
     create :pd_workshop_participant, workshop: workshop, enrolled: true
     Pd::Enrollment.any_instance.expects(:send_exit_survey).never
@@ -345,7 +345,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   end
 
   test 'send_exit_surveys with attendance but no account gets email for counselor admin' do
-    workshop = create :pd_ended_workshop, course: Pd::Workshop::COURSE_COUNSELOR
+    workshop = create :workshop, :ended, course: Pd::Workshop::COURSE_COUNSELOR
 
     enrollment = create :pd_enrollment, workshop: workshop
     create :pd_attendance_no_account, session: workshop.sessions.first, enrollment: enrollment
@@ -356,7 +356,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   end
 
   test 'send_exit_surveys teachers with attendance get emails' do
-    workshop = create :pd_ended_workshop
+    workshop = create :workshop, :ended
     create(:pd_workshop_participant, workshop: workshop, enrolled: true)
     create(:pd_workshop_participant, workshop: workshop, enrolled: true, attended: true)
 
@@ -369,7 +369,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   test 'send_exit_surveys sends no surveys for FiT workshops' do
     # Make a FiT workshop that's ended and has attendance;
     # these are the conditions under which we'd normally send a survey.
-    workshop = create :pd_ended_workshop, subject: SUBJECT_FIT
+    workshop = create :workshop, :ended, subject: SUBJECT_FIT
     create(:pd_workshop_participant, workshop: workshop, enrolled: true, attended: true)
 
     # Ensure no exit surveys are sent
@@ -380,7 +380,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   test 'send_exit_surveys sends no surveys for Facilitator workshops' do
     # Make a Facilitator workshop that's ended and has attendance;
     # these are the conditions under which we'd normally send a survey.
-    workshop = create :pd_ended_workshop, course: COURSE_FACILITATOR
+    workshop = create :workshop, :ended, course: COURSE_FACILITATOR
     create(:pd_workshop_participant, workshop: workshop, enrolled: true, attended: true)
 
     # Ensure no exit surveys are sent
@@ -389,7 +389,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   end
 
   test 'send_follow_up only teachers attended workshop get follow up emails' do
-    workshop = create :pd_ended_workshop, course: Pd::Workshop::COURSE_CSF,
+    workshop = create :workshop, :ended, course: Pd::Workshop::COURSE_CSF,
       subject: Pd::Workshop::SUBJECT_CSF_101, sessions_from: Date.today - 30.days
 
     teacher_attended = create(:pd_workshop_participant, workshop: workshop, enrolled: true, attended: true)
@@ -402,7 +402,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   end
 
   test 'send_follow_up all teachers attended workshop get follow up emails' do
-    workshop = create :pd_ended_workshop, course: Pd::Workshop::COURSE_CSF,
+    workshop = create :workshop, :ended, course: Pd::Workshop::COURSE_CSF,
       subject: Pd::Workshop::SUBJECT_CSF_101, sessions_from: Date.today - 30.days
 
     teacher_count = 3
@@ -414,7 +414,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   end
 
   test 'send_follow_up exception in email delivery raises honeybadger but does not stop batch' do
-    workshop = create :pd_ended_workshop, course: Pd::Workshop::COURSE_CSF,
+    workshop = create :workshop, :ended, course: Pd::Workshop::COURSE_CSF,
       subject: Pd::Workshop::SUBJECT_CSF_101, sessions_from: Date.today - 30.days
 
     teacher_count = 3
@@ -434,11 +434,11 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   end
 
   test 'send_follow_up only workshop ended exactly 30 days ago get follow up emails' do
-    workshop_31d = create :pd_ended_workshop, course: Pd::Workshop::COURSE_CSF,
+    workshop_31d = create :workshop, :ended, course: Pd::Workshop::COURSE_CSF,
       subject: Pd::Workshop::SUBJECT_CSF_101, sessions_from: Date.today - 31.days
-    workshop_30d = create :pd_ended_workshop, course: Pd::Workshop::COURSE_CSF,
+    workshop_30d = create :workshop, :ended, course: Pd::Workshop::COURSE_CSF,
       subject: Pd::Workshop::SUBJECT_CSF_101, sessions_from: Date.today - 30.days
-    workshop_29d = create :pd_ended_workshop, course: Pd::Workshop::COURSE_CSF,
+    workshop_29d = create :workshop, :ended, course: Pd::Workshop::COURSE_CSF,
       subject: Pd::Workshop::SUBJECT_CSF_101, sessions_from: Date.today - 29.days
 
     create(:pd_workshop_participant, workshop: workshop_31d, enrolled: true, attended: true)
@@ -543,9 +543,9 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     # Last week
     c = create :workshop, sessions_from: Date.today - 1.week
     # Today, but ended
-    d = create :pd_ended_workshop, sessions_from: Date.today
+    d = create :workshop, :ended, sessions_from: Date.today
     # Next week, but ended
-    e = create :pd_ended_workshop, sessions_from: Date.today + 1.week
+    e = create :workshop, :ended, sessions_from: Date.today + 1.week
 
     workshop_ids = [a, b, c, d, e].map(&:id)
     assert_equal future_workshops, Pd::Workshop.where(id: workshop_ids).future
@@ -623,7 +623,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   test 'order_by_state' do
     @workshop.started_at = Time.now
     workshops = [
-      build(:pd_ended_workshop), # Ended
+      build(:workshop, :ended), # Ended
       # build(:workshop, started_at: Time.now), # In Progress
       @workshop, # Not Started
       @organizer_workshop # Not Started
