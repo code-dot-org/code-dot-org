@@ -788,18 +788,17 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
   end
 
   test 'program manager organizers can destroy workshop sessions' do
-    sign_in @organizer
-    session = create(:pd_session)
-    @workshop.sessions << session
-    @workshop.save!
-    assert_equal 1, @workshop.sessions.count
+    program_manager = create :program_manager
+    workshop = create :workshop, organizer: program_manager
+    session = workshop.sessions.first
 
+    sign_in program_manager
     params = {sessions_attributes: [{id: session.id, _destroy: true}]}
-
-    put :update, params: {id: @workshop.id, pd_workshop: params}
+    put :update, params: {id: workshop.id, pd_workshop: params}
     assert_response :success
-    @workshop.reload
-    assert_equal 0, @workshop.sessions.count
+
+    workshop.reload
+    assert_equal 0, workshop.sessions.count
   end
 
   # TODO: remove this test when workshop_organizer is deprecated
