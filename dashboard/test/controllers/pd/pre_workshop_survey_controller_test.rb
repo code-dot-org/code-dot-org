@@ -4,7 +4,7 @@ class Pd::PreWorkshopSurveyControllerTest < ::ActionController::TestCase
   self.use_transactional_test_case = true
   setup_all do
     @teacher = create :teacher
-    @workshop = create :pd_workshop, course: Pd::Workshop::COURSE_CSD, num_sessions: 1
+    @workshop = create :workshop, course: Pd::Workshop::COURSE_CSD, num_sessions: 1
     @enrollment = create :pd_enrollment, workshop: @workshop, user: @teacher
   end
 

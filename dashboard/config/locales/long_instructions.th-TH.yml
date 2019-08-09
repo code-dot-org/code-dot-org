@@ -2247,8 +2247,15 @@ th-TH:
 
         <title name="DIR">หันซ้าย</title>
         </block></xml>เพื่อไปให้ถึงลูกโอ็ค!
+      courseD_iceage_loops2_2019: |-
+        ใช้บล็อก <xml><block type="maze_turn">
+
+        <title name="DIR">หันซ้าย</title>
+        </block></xml>เพื่อไปให้ถึงลูกโอ็ค!
       courseD_iceage_loops3: คุณสามารถไปให้ถึงลูกโอ็ค โดยใช้บล็อก <xml><block type="maze_moveForward"/></xml>
         เพียงบล็อกเดียว ได้หรือไม่? ลองใช้ลูปดู!
+      courseD_iceage_loops3_2019: คุณสามารถไปให้ถึงลูกโอ็ค โดยใช้บล็อก <xml><block
+        type="maze_moveWest"/></xml> เพียงบล็อกเดียว ได้หรือไม่? ลองใช้ลูปดู!
       courseD_iceage_loops4: ให้เพิ่มบล็อกอีกหนึ่งบล็อก เพื่อพาเจ้ากระรอกเขี้ยวดาบสแครทไปให้ถึงลูกโอ๊ค!
       courseD_iceage_loops4_2019: ให้เพิ่มบล็อกอีกหนึ่งบล็อก เพื่อพาเจ้ากระรอกเขี้ยวดาบสแครทไปให้ถึงลูกโอ๊ค!
       courseD_iceage_loops6: คุณสามารถเพิ่มลูปเข้าไป เพื่อไปให้ถึงลูกโอ็คได้ไหม?

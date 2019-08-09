@@ -6525,10 +6525,10 @@ zh-CN:
         抵达门后面的**桶**[bucket_empty]。 "
       MC_HOC_2017_04_Cole_2019: "代理人可以在移动时越过水！ \\\r\n\n \\\r\n使用一个\"重复\"循环解决该难题，并帮助{currentPlayerName}
         抵达门后面的**桶**[bucket_empty]。 "
-      MC_HOC_2017_05_Cole: "哦不，桥没了！ \n\n为 代理人编写代码，使用<xml> <block type=\"craft_placeBlock\">\n\n<title
-        name=\"TYPE\"> </title>\n</block></xml> 模块重新建造桥梁，以便让{currentPlayerName} 抵达**铲子**[diamond_shovel]。"
-      MC_HOC_2017_05_Cole_2019: "哦不，桥没了！ \n\n为 代理人编写代码，使用<xml> <block type=\"craft_placeBlock\">\n\n<title
-        name=\"TYPE\"> </title>\n</block></xml> 模块重新建造桥梁，以便让{currentPlayerName} 抵达**铲子**[diamond_shovel]。"
+      MC_HOC_2017_05_Cole: "哦不，桥没了！ \\\r\n\\\r\n为 代理人编写代码，使用\"放置\"模块重新建造桥梁，以便让{currentPlayerName}
+        抵达**铲子**[diamond_shovel]。"
+      MC_HOC_2017_05_Cole_2019: "哦不，桥没了！ \\\r\n\\\r\n为 代理人编写代码，使用\"放置\"模块重新建造桥梁，以便让{currentPlayerName}
+        抵达**铲子**[diamond_shovel]。"
       MC_HOC_2017_06_Cole: "又一条河流，但是这条却宽多了！\\\r\n \\\r\n修复该代码，帮助代理人建造一座桥梁，以便让{currentPlayerName}
         抵达**镐**[diamond_pickaxe]。 "
       MC_HOC_2017_06_Cole_2019: "又一条河流，但是这条却宽多了！\\\r\n \\\r\n修复该代码，帮助代理人建造一座桥梁，以便让{currentPlayerName}
@@ -6564,6 +6564,18 @@ zh-CN:
       Overworld Shear Sheep_2019: 剪羊毛的时间到了! 用`修剪`的命令从两只羊身上收集羊毛。
       Robot Doodle: "**项目想法：** 创建一个真实世界中熟悉的事物的图片。这需要坚持和规划！"
       Robot Doodle_2018: "**项目想法：** 创建一个真实世界中熟悉的事物的图片。这需要坚持和规划！"
+      Room Escape Workshop - 10: |-
+        # 开门
+
+        <img src="https://images.code.org/3651f7d5306bdcfd2d9a3d9bb842626e-image-1491066778787.12.36 PM.png" style="width:200px;float:right">
+
+        快完成了！让我们把门准备好，让它可以被打开。
+
+        # 这么做
+
+        -   添加一张门外的图片
+        -   设置 ID （比如 _outside_）
+        -   隐藏这张图片（门开始它会自动显示）
       Standalone_Artist_2: "用 120 度和 60 度的角度，再加上长达150像素的边来画个钻石型。\\\r\n\\\r"
       Standalone_Artist_3: "能够用100 像素的边和 60度的转度来绘制一个六边形吗？\\\r\n\\\r"
       Standalone_Artist_4: "现在你已获得一个新的块—循环，该块可以重复执行一连串的指令。如果你循环这些指令6次，看看会发生什么？\\\r\n\\\r"
@@ -6740,6 +6752,7 @@ zh-CN:
       Virtual Pet 8_2019: "自由发挥：还能让长颈鹿做些什么？ \n\n-   能添加更多特殊组件吗？  \n-   能为她找到朋友吗？  "
       Virtual Pet Freeplay: "自由发挥：还能让长颈鹿做些什么？ \n\n-   能添加更多特殊组件吗？  \n-   能为她找到朋友吗？
         \ "
+      'Widget: Text Compression': 在文本中找到规律（如重复的单词或词组）。在右侧的词典中输入你所发现的规律。当你将其输入到字典中时，以文本形式表现的规律就会用符号替代。
       comment_intro_maze_2018: |-
         _"我糊涂了。帮助我记住如何通过这个迷宫。"_
 
@@ -7976,7 +7989,10 @@ zh-CN:
       courseD_iceage_loops1_2019: 帮助斯奎特穿过溜滑的冰去拿到橡子！
       courseD_iceage_loops2: "用一个<xml><block type=\"maze_turn\">\\\r\n    <title\nname=\"DIR\">turnLeft</title>\\\r\n
         \ </block></xml>模块来到达橡子！"
+      courseD_iceage_loops2_2019: "用一个<xml><block type=\"maze_turn\">\\\r\n    <title\nname=\"DIR\">turnLeft</title>\\\r\n
+        \ </block></xml>模块来到达橡子！"
       courseD_iceage_loops3: 你能只用一个 <xml><block type="maze_moveForward"/></xml>模块来获得橡子吗？试试用循环！
+      courseD_iceage_loops3_2019: 你能只用一个 <xml><block type="maze_moveWest"/></xml>模块来获得橡子吗？试试用循环！
       courseD_iceage_loops4: 再添加一个模块来让斯奎特用各种方法到达橡子！
       courseD_iceage_loops4_2019: 再添加一个模块来让斯奎特用各种方法到达橡子！
       courseD_iceage_loops6: 你能增加一个循环到达橡子吗？

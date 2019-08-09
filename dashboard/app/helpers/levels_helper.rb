@@ -250,6 +250,7 @@ module LevelsHelper
 
     if @script_level && @level.can_have_feedback?
       @app_options[:serverScriptLevelId] = @script_level.id
+      @app_options[:verifiedTeacher] = current_user && current_user.authorized_teacher?
     end
 
     # Blockly caches level properties, whereas this field depends on the user
@@ -512,6 +513,7 @@ module LevelsHelper
 
     # Process level view options
     level_overrides = level_view_options(@level.id).dup
+    level_options['embed'] = level_options['embed'] || level_options['widgetMode']
     if level_options['embed'] || level_overrides[:embed]
       level_overrides[:hide_source] = true
       level_overrides[:show_finish] = true
