@@ -30,7 +30,6 @@ export default storybook => {
         <div style={{width: 800}}>
           <LevelTokenDetails
             levelKeyList={levelKeyList}
-            chooseLevelType={action('chooseLevelType')}
             chooseLevel={action('chooseLevel')}
             addVariant={action('addVariant')}
             setActiveVariant={action('setActiveVariant')}
@@ -47,7 +46,6 @@ export default storybook => {
         <div style={{width: 800}}>
           <LevelTokenDetails
             levelKeyList={levelKeyList}
-            chooseLevelType={action('chooseLevelType')}
             chooseLevel={action('chooseLevel')}
             addVariant={action('addVariant')}
             setActiveVariant={action('setActiveVariant')}
