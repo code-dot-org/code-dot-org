@@ -166,25 +166,26 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   end
 
   test 'wont start without a session' do
-    assert_equal 0, @workshop.sessions.length
+    workshop = create :workshop, num_sessions: 0
+    assert_equal 0, workshop.sessions.length
     e = assert_raises Exception do
-      @workshop.start!
+      workshop.start!
     end
     assert_equal 'Workshop must have at least one session to start.', e.message
   end
 
   test 'start end' do
-    @workshop.sessions << create(:pd_session)
-    assert_equal 'Not Started', @workshop.state
+    workshop = create :workshop
+    assert_equal 'Not Started', workshop.state
 
-    @workshop.start!
-    assert_equal 'In Progress', @workshop.state
-    assert @workshop.sessions.first.code.present?
+    workshop.start!
+    assert_equal 'In Progress', workshop.state
+    assert workshop.sessions.first.code.present?
 
-    @workshop.end!
-    assert_equal 'Ended', @workshop.state
-    assert_equal 'Ended', @workshop.state
-    assert_not_nil @workshop.sessions.first.code
+    workshop.end!
+    assert_equal 'Ended', workshop.state
+    assert_equal 'Ended', workshop.state
+    assert_not_nil workshop.sessions.first.code
   end
 
   test 'start is idempotent' do
@@ -522,21 +523,22 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   test 'future scope' do
     future_workshops = [
       # Today
-      create(:workshop, num_sessions: 1, sessions_from: Date.today),
+      a = create(:workshop, num_sessions: 1, sessions_from: Date.today),
 
       # Next week
-      create(:workshop, num_sessions: 1, sessions_from: Date.today + 1.week)
+      b = create(:workshop, num_sessions: 1, sessions_from: Date.today + 1.week)
     ]
 
     # Excluded (not future) workshops:
     # Last week
-    create :workshop, num_sessions: 1, sessions_from: Date.today - 1.week
+    c = create :workshop, num_sessions: 1, sessions_from: Date.today - 1.week
     # Today, but ended
-    create :pd_ended_workshop, num_sessions: 1, sessions_from: Date.today
+    d = create :pd_ended_workshop, num_sessions: 1, sessions_from: Date.today
     # Next week, but ended
-    create :pd_ended_workshop, num_sessions: 1, sessions_from: Date.today + 1.week
+    e = create :pd_ended_workshop, num_sessions: 1, sessions_from: Date.today + 1.week
 
-    assert_equal future_workshops, Pd::Workshop.future
+    workshop_ids = [a, b, c, d, e].map(&:id)
+    assert_equal future_workshops, Pd::Workshop.where(id: workshop_ids).future
   end
 
   test 'end date filters' do
@@ -1167,18 +1169,22 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   test 'nearest' do
     target = create :workshop, num_sessions: 1, sessions_from: Date.today + 1.week
 
-    create :workshop, num_sessions: 1, sessions_from: Date.today + 2.weeks
-    create :workshop, num_sessions: 1, sessions_from: Date.today - 2.weeks
+    x = create :workshop, num_sessions: 1, sessions_from: Date.today + 2.weeks
+    y = create :workshop, num_sessions: 1, sessions_from: Date.today - 2.weeks
 
-    assert_equal target, Pd::Workshop.nearest
+    ids = [target, x, y].map(&:id)
+
+    assert_equal target, Pd::Workshop.where(id: ids).nearest
   end
 
   test 'nearest is independent of creation order' do
-    create :workshop, num_sessions: 1, sessions_from: Date.today - 2.weeks
+    x = create :workshop, num_sessions: 1, sessions_from: Date.today - 2.weeks
     target = create :workshop, num_sessions: 1, sessions_from: Date.today + 1.week
-    create :workshop, num_sessions: 1, sessions_from: Date.today + 2.weeks
+    y = create :workshop, num_sessions: 1, sessions_from: Date.today + 2.weeks
 
-    nearest_workshop = Pd::Workshop.nearest
+    ids = [x, target, y].map(&:id)
+
+    nearest_workshop = Pd::Workshop.where(id: ids).nearest
     assert_equal target, nearest_workshop
 
     # Also make sure attributes are included
