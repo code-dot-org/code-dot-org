@@ -124,4 +124,21 @@ describe('LevelTokenDetails', () => {
     assertButtonVisible(wrapper, 'Add Variant', true);
     assertButtonVisible(wrapper, 'Remove Variant', true);
   });
+
+  it('shows checked checkboxes', () => {
+    const wrapper = shallow(
+      <LevelTokenDetails
+        {...defaultProps}
+        level={{
+          ...defaultLevel,
+          named: true,
+          assessment: true,
+          challenge: true
+        }}
+      />
+    );
+    assertChecked(wrapper, 'named', true);
+    assertChecked(wrapper, 'assessment', true);
+    assertChecked(wrapper, 'challenge', true);
+  });
 });
