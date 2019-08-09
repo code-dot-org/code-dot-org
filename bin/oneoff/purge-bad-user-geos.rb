@@ -14,14 +14,14 @@ proxy_ip_ranges = JSON.parse(File.read('lib/cdo/trusted_proxies.json'))['ranges'
   IPAddr.new(ip).to_range
 end
 
-puts %(
-SELECT id FROM user_geos
+puts %(DELETE FROM user_geos
   WHERE (
     id >= #{first_id} AND
     id <= #{last_id}
   ) AND (
     #{proxy_ip_ranges.map do |range|
-      "(INET_ATON(ip_address) BETWEEN #{range.first.to_i} AND #{range.last.to_i})"
+      "(INET_ATON(ip_address) BETWEEN INET_ATON(#{range.first}) AND INET_ATON(#{range.last}))"
     end.join(" OR \n    ")}
-  );
-)
+  )
+  ORDER BY id
+  LIMIT 1000;)
