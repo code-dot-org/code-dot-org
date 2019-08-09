@@ -188,21 +188,21 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   end
 
   test 'start is idempotent' do
-    @workshop.sessions << create(:pd_session)
-    @workshop.start!
-    started_at = @workshop.reload.started_at
+    workshop = create :workshop
+    workshop.start!
+    started_at = workshop.reload.started_at
 
-    @workshop.start!
-    assert_equal started_at, @workshop.reload.started_at
+    workshop.start!
+    assert_equal started_at, workshop.reload.started_at
   end
 
   test 'end is idempotent' do
-    @workshop.sessions << create(:pd_session)
-    @workshop.start!
-    @workshop.end!
-    ended_at = @workshop.reload.ended_at
-    @workshop.end!
-    assert_equal ended_at, @workshop.reload.ended_at
+    workshop = create :workshop
+    workshop.start!
+    workshop.end!
+    ended_at = workshop.reload.ended_at
+    workshop.end!
+    assert_equal ended_at, workshop.reload.ended_at
   end
 
   test 'sessions must start on separate days' do
@@ -290,12 +290,12 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   end
 
   test 'end workshop sends exit surveys' do
-    @workshop.sessions << create(:pd_session)
-    @workshop.start!
+    workshop = create :workshop
+    workshop.start!
 
     Pd::Workshop.any_instance.expects(:send_exit_surveys)
 
-    @workshop.end!
+    workshop.end!
 
     # This is normally called by a cron job on production-daemon, but in this test
     # we call it synchronously.
@@ -303,15 +303,15 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   end
 
   test 'end workshop second time attempts sending exit surveys but they do not send again' do
-    @workshop.sessions << create(:pd_session)
-    @workshop.start!
+    workshop = create :workshop
+    workshop.start!
 
-    @workshop.end!
-    @workshop.update!(ended_at: nil)
+    workshop.end!
+    workshop.update!(ended_at: nil)
 
-    @workshop.start!
+    workshop.start!
 
-    @workshop.end!
+    workshop.end!
 
     Pd::Workshop.any_instance.expects(:send_exit_surveys)
     Pd::Enrollment.any_instance.expects(:send_exit_survey).never
@@ -1041,7 +1041,9 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   end
 
   test 'date_and_location_name with processed location but no sessions' do
-    workshop = build :workshop, processed_location: {city: 'Seattle', state: 'WA'}.to_json
+    workshop = build :workshop,
+      processed_location: {city: 'Seattle', state: 'WA'}.to_json,
+      num_sessions: 0
 
     assert_equal 'Dates TBA, Seattle WA', workshop.date_and_location_name
   end
@@ -1054,7 +1056,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   end
 
   test 'date_and_location_name with no location nor sessions' do
-    workshop = create :workshop, processed_location: nil
+    workshop = create :workshop, processed_location: nil, num_sessions: 0
 
     assert_equal 'Dates TBA, Location TBA', workshop.date_and_location_name
   end
