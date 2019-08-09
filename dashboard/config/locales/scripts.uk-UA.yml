@@ -1301,24 +1301,28 @@ uk:
               name: 'Життєві алгоритми: посадити насіння'
           title: Курс А
           assignment_family_title: Курс А
+          description_audience: 'Вік: 4-7'
         courseb-2017:
           stages:
             'Real-life Algorithms: Plant a Seed':
               name: 'Життєві алгоритми: посадити насіння'
           title: Курс Б
           assignment_family_title: Курс Б
+          description_audience: 'Вік: 5-8'
         coursec-2017:
           stages:
             'Real-life Algorithms: Paper Planes':
               name: 'Життєві алгоритми: Паперові літачки'
           title: Курс В
           assignment_family_title: Курс В
+          description_audience: 'Вік: 6-10'
         coursed-2017:
           stages:
             Nested Loops:
               name: Вкладені цикли
           title: Курс Г
           assignment_family_title: Курс Г
+          description_audience: 'Вік: 7-11'
         coursee-2017:
           stages:
             Ice Age Play Lab:
@@ -1335,12 +1339,14 @@ uk:
               name: Вкладені цикли
           title: Курс Ґ
           assignment_family_title: Курс Ґ
+          description_audience: 'Вік: 8-12'
         coursef-2017:
           stages:
             Building a Foundation:
               name: Закладання основ
           title: Курс Д
           assignment_family_title: Курс Д
+          description_audience: 'Вік: 9-13'
         express-2017:
           stages:
             Introduction:
@@ -1361,12 +1367,14 @@ uk:
               name: Закладання основ
             Nested Loops:
               name: Вкладені цикли
+          description_audience: 'Вік: 9-18'
         pre-express-2017:
           stages:
             'Real-life Algorithms: Plant a Seed':
               name: 'Життєві алгоритми: посадити насіння'
             Spelling Bee:
               name: Грамотна Бджілка
+          description_audience: 'Вік: 4-8'
         subgoal-labels-opt-in:
           stages:
             Thanks:
@@ -1512,6 +1520,7 @@ uk:
               name: Списки
         coursea-2018:
           assignment_family_title: Курс А
+          description_audience: 'Вік: 4-7'
           stages:
             'Debugging: Unspotted Bugs':
               name: Баги
@@ -1524,6 +1533,7 @@ uk:
             'Persistence & Frustration: Stevie and the Big Project':
               name: Стів і Великий проект
         express-2018:
+          description_audience: 'Вік: 9-18'
           stages:
             'Algorithms: Graph Paper Programming':
               name: Програмування по клітинках
@@ -1561,6 +1571,7 @@ uk:
               name: Програмування по клітинках
         courseb-2018:
           assignment_family_title: Курс Б
+          description_audience: 'Вік: 5-8'
           stages:
             'Real-life Algorithms: Plant a Seed':
               name: 'Життєві алгоритми: посадити насіння'
@@ -1570,6 +1581,7 @@ uk:
               name: Рухайся, рухайся
         coursed-2018:
           assignment_family_title: Курс Г
+          description_audience: 'Вік: 7-11'
           stages:
             'Algorithms: Graph Paper Programming':
               name: Програмування по клітинках
@@ -1593,6 +1605,7 @@ uk:
               name: Естафетне програмування
         coursec-2018:
           assignment_family_title: Курс В
+          description_audience: 'Вік: 6-10'
           stages:
             Building a Foundation:
               name: Закладання основ
@@ -1608,6 +1621,7 @@ uk:
               name: Функції з параметрами
         coursee-2018:
           assignment_family_title: Курс Ґ
+          description_audience: 'Вік: 8-12'
           stages:
             'Programming: My Robotic Friends':
               name: Мої друзі-роботи
@@ -1627,6 +1641,7 @@ uk:
               name: Година коду від Майнкрафт
         coursef-2018:
           assignment_family_title: Курс Д
+          description_audience: 'Вік: 9-13'
           stages:
             'Programming: My Robotic Friends':
               name: Мої друзі-роботи
@@ -1666,6 +1681,7 @@ uk:
             While Loops:
               name: Цикли "поки"
         pre-express-2018:
+          description_audience: 'Вік: 4-8'
           stages:
             'Debugging: Unspotted Bugs':
               name: Баги
@@ -1712,6 +1728,7 @@ uk:
           title: Продовжуємо танцювати
           description: Рухайся далі однієї години з розширеними проектними ідеями.
         coursef-2019:
+          description_audience: 'Вік: 9-13'
           stages:
             Building a Foundation:
               name: Закладання основ
@@ -1732,6 +1749,7 @@ uk:
             Dance Party:
               name: Танцювальна вечірка
         coursed-2019:
+          description_audience: 'Вік: 7-11'
           stages:
             'Algorithms: Graph Paper Programming':
               name: Програмування по клітинках
@@ -1750,6 +1768,7 @@ uk:
             Dance Party:
               name: Танцювальна вечірка
         coursee-2019:
+          description_audience: 'Вік: 8-12'
           stages:
             Building a Foundation:
               name: Закладання основ
@@ -1766,6 +1785,7 @@ uk:
             Songwriting:
               name: Написання пісень
         express-2019:
+          description_audience: 'Вік: 9-18'
           stages:
             Relay Programming:
               name: Естафетне програмування
@@ -1789,12 +1809,23 @@ uk:
               name: Танцювальна вечірка
         andrea-test:
           stages:
+            andrea-g1:
+              name: andrea-g1
+            andrea-g2:
+              name: andrea-g2
+            andrea-g3:
+              name: andrea-g3
+            andrea-s1:
+              name: andrea-s1
+            andrea-s3:
+              name: andrea-s3
             'null':
               name: нічого
         dance-extras-gallery:
           title: Продовжуємо танцювати
           description: Рухайся далі однієї години з розширеними проектними ідеями.
         coursec-2019:
+          description_audience: 'Вік: 6-10'
           stages:
             'Real-life Algorithms: Paper Planes':
               name: 'Життєві алгоритми: Паперові літачки'
@@ -1805,12 +1836,14 @@ uk:
         gamelab:
           title: Ігрова лабораторія
         coursea-2019:
+          description_audience: 'Вік: 4-7'
           stages:
             'Programming: Happy Maps':
               name: Щасливі карти
             Going Places Safely:
               name: Безпечне добирання
         courseb-2019:
+          description_audience: 'Вік: 5-8'
           stages:
             Move It, Move It:
               name: Рухайся, рухайся
@@ -1821,6 +1854,7 @@ uk:
             'Loops: Getting Loopy':
               name: Економія на повторах
         pre-express-2019:
+          description_audience: 'Вік: 4-8'
           stages:
             Move It, Move It:
               name: Рухайся, рухайся

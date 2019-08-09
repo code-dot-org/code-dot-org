@@ -136,7 +136,7 @@ class ApplabVisualizationColumn extends React.Component {
           />
         )}
         {visualization}
-        {this.props.isIframeEmbed && (
+        {this.props.isIframeEmbed && !this.props.widgetMode && (
           <div style={styles.resetButtonWrapper}>
             <ResetButton hideText style={styles.resetButton} />
           </div>
@@ -146,7 +146,8 @@ class ApplabVisualizationColumn extends React.Component {
           <div
             style={[
               styles.completion,
-              this.props.playspacePhoneFrame && styles.phoneFrameCompletion
+              (this.props.playspacePhoneFrame || this.props.widgetMode) &&
+                styles.phoneFrameCompletion
             ]}
           >
             <CompletionButton />

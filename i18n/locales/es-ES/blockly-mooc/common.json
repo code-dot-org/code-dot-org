@@ -648,7 +648,6 @@
   "feedbackNotificationButton": "",
   "feedbackNotificationDetails": "",
   "feedbackNotificationLesson": "",
-  "feedbackNotificationLevel": "",
   "feedbackNotificationUnit": "",
   "feedbackPlaceholder": "Introduza las sugerencias para su alumno aquí. Se harán visibles para su alumno al hacer clic en \"Guardar y compartir\".",
   "feedbackSaveError": "Hubo un error en salvar su retroalimentación. Por favor intenta salvarlo de nuevo.",
