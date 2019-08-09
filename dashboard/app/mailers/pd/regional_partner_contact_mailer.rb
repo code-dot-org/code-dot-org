@@ -1,6 +1,6 @@
 class Pd::RegionalPartnerContactMailer < ActionMailer::Base
   NO_REPLY = 'Code.org <noreply@code.org>'
-  default from: 'Anthonette Peña <partner@code.org>'
+  default from: 'Liz Gauthier <partner@code.org>'
   default bcc: MailerConstants::PLC_EMAIL_LOG
 
   def matched(form, rp_pm)

@@ -1,5 +1,8 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import color from '../../../util/color';
+import {PLATFORM_ANDROID, PLATFORM_IOS} from '../../../util/exporter';
+import experiments from '../../../util/experiments';
 import commonStyles from './styles';
 
 const styles = {
@@ -22,7 +25,27 @@ const styles = {
  * Platform Page in Export Dialog
  */
 export default class PlatformPage extends React.Component {
+  static propTypes = {
+    platform: PropTypes.oneOf([PLATFORM_IOS, PLATFORM_ANDROID]).isRequired,
+    onPlatformChanged: PropTypes.func.isRequired
+  };
+
+  onRadioChange = ({target}) => {
+    const {id} = target;
+    const {onPlatformChanged} = this.props;
+    const platform = id === 'radioAndroid' ? PLATFORM_ANDROID : PLATFORM_IOS;
+    onPlatformChanged(platform);
+  };
+
   render() {
+    const {platform} = this.props;
+    const allowIOS = experiments.isEnabled('exportIOS');
+    const iOSLabelStyle = allowIOS
+      ? styles.radioLabel
+      : styles.radioLabelDisabled;
+    const iOSLabelText = `I have an iOS device${
+      allowIOS ? '' : ' (currently not supported)'
+    }`;
     return (
       <div>
         <div style={commonStyles.section}>
@@ -34,8 +57,8 @@ export default class PlatformPage extends React.Component {
               style={styles.radioInput}
               type="radio"
               id="radioAndroid"
-              readOnly
-              checked
+              checked={platform === PLATFORM_ANDROID}
+              onChange={this.onRadioChange}
             />
             <label htmlFor="radioAndroid" style={styles.radioLabel}>
               I have an Android device
@@ -46,10 +69,12 @@ export default class PlatformPage extends React.Component {
               style={styles.radioInput}
               type="radio"
               id="radioIOS"
-              disabled
+              checked={platform === PLATFORM_IOS}
+              disabled={!allowIOS}
+              onChange={this.onRadioChange}
             />
-            <label htmlFor="radioIOS" style={styles.radioLabelDisabled}>
-              I have an iOS device (currently not supported)
+            <label htmlFor="radioIOS" style={iOSLabelStyle}>
+              {iOSLabelText}
             </label>
           </div>
         </div>

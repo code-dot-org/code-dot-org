@@ -16,6 +16,8 @@ const SET_INSTRUCTIONS_MAX_HEIGHT_NEEDED =
   'instructions/SET_INSTRUCTIONS_MAX_HEIGHT_NEEDED';
 const SET_INSTRUCTIONS_MAX_HEIGHT_AVAILABLE =
   'instructions/SET_INSTRUCTIONS_MAX_HEIGHT_AVAILABLE';
+const SET_ALLOW_INSTRUCTIONS_RESIZE =
+  'instructions/SET_ALLOW_INSTRUCTIONS_RESIZE';
 const SET_HAS_AUTHORED_HINTS = 'instructions/SET_HAS_AUTHORED_HINTS';
 const SET_FEEDBACK = 'instructions/SET_FEEDBACK';
 const HIDE_OVERLAY = 'instructions/HIDE_OVERLAY';
@@ -50,6 +52,7 @@ const instructionsInitialState = {
   // The maximum height we'll allow the resizer to drag to. This is based in
   // part off of the size of the code workspace.
   maxAvailableHeight: Infinity,
+  allowResize: true,
   hasAuthoredHints: false,
   overlayVisible: false,
   levelVideos: [],
@@ -100,7 +103,7 @@ export default function reducer(state = {...instructionsInitialState}, action) {
     });
   }
 
-  if (action.type === SET_INSTRUCTIONS_RENDERED_HEIGHT) {
+  if (action.type === SET_INSTRUCTIONS_RENDERED_HEIGHT && state.allowResize) {
     return Object.assign({}, state, {
       renderedHeight: action.height,
       expandedHeight: !state.collapsed ? action.height : state.expandedHeight
@@ -109,7 +112,8 @@ export default function reducer(state = {...instructionsInitialState}, action) {
 
   if (
     action.type === SET_INSTRUCTIONS_MAX_HEIGHT_NEEDED &&
-    action.maxNeededHeight !== state.maxNeededHeight
+    action.maxNeededHeight !== state.maxNeededHeight &&
+    state.allowResize
   ) {
     return Object.assign({}, state, {
       maxNeededHeight: action.maxNeededHeight
@@ -118,13 +122,21 @@ export default function reducer(state = {...instructionsInitialState}, action) {
 
   if (
     action.type === SET_INSTRUCTIONS_MAX_HEIGHT_AVAILABLE &&
-    action.maxAvailableHeight !== state.maxAvailableHeight
+    action.maxAvailableHeight !== state.maxAvailableHeight &&
+    state.allowResize
   ) {
     return Object.assign({}, state, {
       maxAvailableHeight: action.maxAvailableHeight,
       renderedHeight: Math.min(action.maxAvailableHeight, state.renderedHeight),
       expandedHeight: Math.min(action.maxAvailableHeight, state.expandedHeight)
     });
+  }
+
+  if (action.type === SET_ALLOW_INSTRUCTIONS_RESIZE) {
+    return {
+      ...state,
+      allowResize: action.allowResize
+    };
   }
 
   if (action.type === SET_HAS_AUTHORED_HINTS) {
@@ -202,6 +214,11 @@ export const setInstructionsMaxHeightNeeded = height => ({
 export const setInstructionsMaxHeightAvailable = height => ({
   type: SET_INSTRUCTIONS_MAX_HEIGHT_AVAILABLE,
   maxAvailableHeight: height
+});
+
+export const setAllowInstructionsResize = allowResize => ({
+  type: SET_ALLOW_INSTRUCTIONS_RESIZE,
+  allowResize
 });
 
 export const setHasAuthoredHints = hasAuthoredHints => ({

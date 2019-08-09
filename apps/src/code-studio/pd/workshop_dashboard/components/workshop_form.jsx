@@ -541,13 +541,21 @@ export class WorkshopForm extends React.Component {
 
   renderSubjectSelect(validation) {
     if (this.shouldRenderSubject()) {
-      const options = Subjects[this.state.course].map((subject, i) => {
-        return (
-          <option key={i} value={subject}>
-            {subject}
-          </option>
-        );
-      });
+      const options = Subjects[this.state.course]
+        .filter(subject => {
+          // Only a WorkshopAdmin should be shown a Virtual workshop.
+          return (
+            subject.indexOf('Virtual') === -1 ||
+            this.props.permission.has(WorkshopAdmin)
+          );
+        })
+        .map((subject, i) => {
+          return (
+            <option key={i} value={subject}>
+              {subject}
+            </option>
+          );
+        });
       const placeHolder = this.state.subject ? null : <option />;
       return (
         <FormGroup validationState={validation.style.subject}>
