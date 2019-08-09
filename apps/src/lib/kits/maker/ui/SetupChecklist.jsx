@@ -344,16 +344,12 @@ export default class SetupChecklist extends Component {
                 stepStatus={this.state[STATUS_BOARD_FIRMWARE]}
                 stepName="Board firmware up-to-date"
               >
-                <div>
-                  This board is not using the most up-to-date version of the
-                  firmware. For best results, please update the firmware by
-                  clicking on the button below.
-                </div>
+                <div>{i18n.updateFirmwareExplanation()}</div>
                 <button
                   type="button"
                   onClick={() => this.updateBoardFirmware()}
                 >
-                  Update Firmware
+                  {i18n.updateFirmware()}
                 </button>
               </ValidationStep>
             )}
