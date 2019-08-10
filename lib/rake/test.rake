@@ -216,7 +216,7 @@ namespace :test do
     ENV.delete 'PEGASUS_UNIT_TEST'
   end
 
-  task ci: [:pegasus_ci, :shared_ci, :dashboard_ci, :ui_live]
+  task ci: [:shared_ci, :pegasus_ci, :dashboard_ci, :ui_live]
 
   desc 'Runs dashboard tests.'
   task :dashboard do
