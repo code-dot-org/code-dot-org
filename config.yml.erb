@@ -443,7 +443,7 @@ db_writer: !Secret
 reporting_db_writer: <%=db_writer%>
 
 dashboard_db_name: dashboard_<%=env%>
-pegasus_db_name: <%= ENV['PEGASUS_UNIT_TEST'] ? 'pegasus_unittest' : "pegasus#{_env}" %>
+pegasus_db_name: pegasus<%=_env%>
 
 # Default reader endpoints to writer endpoint.
 db_reader: <%=db_writer%>
