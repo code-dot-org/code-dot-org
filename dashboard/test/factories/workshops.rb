@@ -122,10 +122,5 @@ FactoryGirl.define do
     #
     # Sub-factories
     #
-
-    # TODO: Change into a trait
-    factory :pd_ended_workshop do
-      ended
-    end
   end
 end
