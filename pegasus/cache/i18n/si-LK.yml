@@ -1732,6 +1732,10 @@ si-LK:
     ඔබේ වෙබ් ගවේශකය <a href='%{supported_browsers_url}', target='_blank'>අනුග්‍රාහක
     වෙබ් ගවේශකයක් වෙත</a> යාවත්කාලීන් කරන්න. ඔබට පිටුව නැරබීමට උත්සාහ කල හැක, නමුත්
     ක්‍රියාකාරීත්වය බිඳ වැටීම අපේක්ෂා කළ හැක.
+  compatibility_unsupported_browser_markdown: ඔබේ වෙබ් ගවේශකය මේසඳහා අනුග්‍රහකරන්නේ
+    නැත. මේසඳහා ඔබේ වෙබ් ගවේශකය <a href='%{supported_browsers_url}', target='_blank'>අනුග්‍රාහක
+    වෙබ් ගවේශකයක් වෙත</a> යාවත්කාලීන් කරන්න. ඔබට පිටුව නැරබීමට උත්සාහ කල හැක, නමුත්
+    ක්‍රියාකාරීත්වය බිඳ වැටීම අපේක්ෂා කළ හැක.
   starwars_shortcode: තරු
   mc_shortcode: mc
   frozen_shortcode: frzn

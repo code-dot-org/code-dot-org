@@ -1941,6 +1941,10 @@ is-IS:
     í <a href='%{supported_browsers_url}', target='_blank'>einhvern af vöfrunum sem
     við styðjum</a>. Þú getur prófað að skoða síðuna en mátt búast við því að eitthvað
     virki ekki.
+  compatibility_unsupported_browser_markdown: Vafrinn þinn er ekki studdur. Vinsamlegast
+    uppfærðu í <a href='%{supported_browsers_url}', target='_blank'>einhvern af vöfrunum
+    sem við styðjum</a>. Þú getur prófað að skoða síðuna en mátt búast við því að
+    eitthvað virki ekki.
   starwars_shortcode: stjarna
   flappy_shortcode: blaka
   header_home: Forsíða

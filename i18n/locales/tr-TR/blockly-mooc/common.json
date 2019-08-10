@@ -648,7 +648,6 @@
   "feedbackNotificationButton": "Geribildirimi görüntüle",
   "feedbackNotificationDetails": "",
   "feedbackNotificationLesson": "",
-  "feedbackNotificationLevel": "",
   "feedbackNotificationUnit": "",
   "feedbackPlaceholder": "Lutfen burada ogrencileriniz icin donut giriniz. 'kaydet ve paylas' a tikladiginiz zaman, ogrenciler donutleri gorebilecekler.",
   "feedbackSaveError": "Donutunuzu kaydederken bir hata olustu. Lutfen tekrar kaydetmeyi deneyiniz.",

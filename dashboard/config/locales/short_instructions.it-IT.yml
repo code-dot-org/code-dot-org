@@ -837,9 +837,9 @@ it-IT:
         come questa?
       course2_artist_nestedLoops_challenge2: Riesci a scoprire come realizzare un'immagine
         come questa?
-      course2_bee_conditionals_challenge1: Raccogli tutto il nettare o fai tutto il
+      course2_bee_conditionals_challenge1: Raccogli tutto il nettare e fai tutto il
         miele.
-      course2_bee_conditionals_challenge2: Raccogli tutto il nettare o fai tutto il
+      course2_bee_conditionals_challenge2: Raccogli tutto il nettare e fai tutto il
         miele.
       course2_harvester_loops_challenge1: Raccogli tutte le pannocchie.
       course2_harvester_loops_challenge2: Raccogli tutte le lattughe evitando gli
@@ -875,7 +875,7 @@ it-IT:
         cancellalo e sostituiscilo con qualcosa di totalmente diverso)
       course4_collector_nested_loops_challenge2: Aiuta la collezionista a raggiungere
         almeno due diamanti usando solo i blocchi che trovi nella cassetta degli attrezzi.
-        Se vuoi puoi anche raccoglierli tutti e 4.
+        Se vuoi, puoi anche raccoglierli tutti e 4.
       course4_harvester_nested_loops_challenge1: '"Ho bisogno di aiuto nella fattoria!
         Aiutami a raccogliere queste pannocchie usando solo i blocchi presenti nella
         cassetta degli attrezzi."'
@@ -2535,9 +2535,9 @@ it-IT:
         contrario, fai il miele perché c'è sicuramente un favo.
       courseD_bee_conditionals8_2019: Se c'è un fiore, raccogli il nettare. In caso
         contrario, fai il miele perché c'è sicuramente un favo.
-      courseD_bee_conditionals9: Raccogli tutto il nettare o fai tutto il miele.
-      courseD_bee_conditionals9_2018: Raccogli tutto il nettare o fai tutto il miele.
-      courseD_bee_conditionals9_2019: Raccogli tutto il nettare o fai tutto il miele.
+      courseD_bee_conditionals9: Raccogli tutto il nettare e fai tutto il miele.
+      courseD_bee_conditionals9_2018: Raccogli tutto il nettare e fai tutto il miele.
+      courseD_bee_conditionals9_2019: Raccogli tutto il nettare e fai tutto il miele.
       courseD_bee_conditionals_challenge1: Raccogli tutto il nettare e fai tutto il
         miele.
       courseD_bee_conditionals_challenge1_2018: Raccogli tutto il nettare e fai tutto
@@ -2667,13 +2667,13 @@ it-IT:
         nell''area di lavoro per raccogliere almeno **6** diamanti!'
       courseD_collector_nested_loops_challenge2: Aiuta la collezionista a raggiungere
         almeno due diamanti usando solo i blocchi che trovi nella cassetta degli attrezzi.
-        Se vuoi puoi anche raccoglierli tutti e 4.
+        Se vuoi, puoi anche raccoglierli tutti e 4.
       courseD_collector_nested_loops_challenge2_2018: Aiuta la collezionista a raggiungere
         almeno due diamanti usando solo i blocchi che trovi nella cassetta degli attrezzi.
-        Se vuoi puoi anche raccoglierli tutti e 4.
+        Se vuoi, puoi anche raccoglierli tutti e 4.
       courseD_collector_nested_loops_challenge2_2019: Aiuta la collezionista a raggiungere
         almeno due diamanti usando solo i blocchi che trovi nella cassetta degli attrezzi.
-        Se vuoi puoi anche raccoglierli tutti e 4.
+        Se vuoi, puoi anche raccoglierli tutti e 4.
       courseD_collector_ramp10: Aiuta Laura a raccogliere tutti i diamanti.
       courseD_collector_ramp8: Aiuta Laura a raccogliere tutti i diamanti.
       courseD_collector_ramp9: Aiuta Laura a raccogliere tutti i diamanti.

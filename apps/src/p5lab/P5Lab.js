@@ -4,11 +4,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {changeInterfaceMode, viewAnimationJson} from './actions';
 import {startInAnimationTab} from './stateQueries';
-import {
-  GameLabInterfaceMode,
-  GAME_WIDTH,
-  SpritelabReservedWords
-} from './constants';
+import {P5LabInterfaceMode, APP_WIDTH} from './constants';
+import {SpritelabReservedWords} from './spritelab/constants';
 import experiments from '@cdo/apps/util/experiments';
 import {
   outputError,
@@ -402,7 +399,7 @@ P5Lab.prototype.init = function(config) {
       setAndroidExportProps
     ),
     channelId: config.channel,
-    nonResponsiveVisualizationColumnWidth: GAME_WIDTH,
+    nonResponsiveVisualizationColumnWidth: APP_WIDTH,
     showDebugButtons: showDebugButtons,
     showDebugConsole: showDebugConsole,
     showDebugWatch:
@@ -419,7 +416,7 @@ P5Lab.prototype.init = function(config) {
   });
 
   if (startInAnimationTab(getStore().getState())) {
-    getStore().dispatch(changeInterfaceMode(GameLabInterfaceMode.ANIMATION));
+    getStore().dispatch(changeInterfaceMode(P5LabInterfaceMode.ANIMATION));
   }
 
   // Push project-sourced animation metadata into store. Always use the
@@ -537,7 +534,7 @@ P5Lab.prototype.setupReduxSubscribers = function(store) {
 
     if (state.interfaceMode !== lastState.interfaceMode) {
       if (
-        state.interfaceMode === GameLabInterfaceMode.ANIMATION &&
+        state.interfaceMode === P5LabInterfaceMode.ANIMATION &&
         !awaitingContainedLevel
       ) {
         this.studioApp_.resetButtonClick();

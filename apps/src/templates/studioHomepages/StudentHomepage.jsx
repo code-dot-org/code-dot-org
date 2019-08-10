@@ -16,6 +16,7 @@ export default class StudentHomepage extends Component {
   static propTypes = {
     courses: shapes.courses,
     topCourse: shapes.topCourse,
+    hasFeedback: PropTypes.bool,
     sections: shapes.sections,
     canViewAdvancedTools: PropTypes.bool,
     studentId: PropTypes.number.isRequired
@@ -29,20 +30,20 @@ export default class StudentHomepage extends Component {
   }
 
   render() {
-    const {courses, sections, topCourse} = this.props;
+    const {courses, sections, topCourse, hasFeedback} = this.props;
     const {canViewAdvancedTools, studentId} = this.props;
 
     return (
       <div>
         <HeaderBanner headingText={i18n.homepageHeading()} short={true} />
         <ProtectedStatefulDiv ref="flashes" />
-        {experiments.isEnabled(experiments.FEEDBACK_NOTIFICATION) && (
-          <StudentFeedbackNotification studentId={studentId} />
-        )}
+        {experiments.isEnabled(experiments.FEEDBACK_NOTIFICATION) &&
+          hasFeedback && <StudentFeedbackNotification studentId={studentId} />}
         <RecentCourses
           courses={courses}
           topCourse={topCourse}
           isTeacher={false}
+          hasFeedback={hasFeedback}
         />
         <ProjectWidgetWithData
           canViewFullList={true}

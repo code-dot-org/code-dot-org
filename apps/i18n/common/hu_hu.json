@@ -559,7 +559,6 @@
   "feedbackNotificationButton": "Visszajelzés megtekintése",
   "feedbackNotificationDetails": "{numFeedbackLevels} szinteken vannak olvasatlan visszajelzéseid.",
   "feedbackNotificationLesson": "Lecke:",
-  "feedbackNotificationLevel": "Szint:",
   "feedbackNotificationUnit": "Egység:",
   "feedbackPlaceholder": "Kérjük, itt írja be a hallgatói visszajelzést. Ez a hallgató számára láthatóvá válik, ha a „Mentés és megosztás” gombra kattint.",
   "feedbackSaveError": "Hiba történt a visszajelzés mentésekor. Kérjük, próbálja meg újra menteni.",

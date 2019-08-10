@@ -14,6 +14,10 @@ import exportExpoPackagedFilesEntryEjs from '../templates/export/expo/packagedFi
 
 export const EXPO_SDK_VERSION = '33.0.0';
 
+export const PLATFORM_ANDROID = 'android';
+export const PLATFORM_IOS = 'ios';
+export const DEFAULT_PLATFORM = PLATFORM_ANDROID;
+
 export function createPackageFilesFromZip(zip, appName) {
   const moduleList = [];
   zip.folder(appName + '/assets').forEach((fileName, file) => {
@@ -87,7 +91,7 @@ async function expoBuildOrCheckApk(options, mode, sessionSecret) {
 
 async function buildApk(sessionSecret, manifest) {
   const result = await buildAsync(manifest, {
-    platform: 'android',
+    platform: PLATFORM_ANDROID,
     mode: 'create',
     isSnack: true,
     sdkVersion: EXPO_SDK_VERSION,
@@ -99,7 +103,7 @@ async function buildApk(sessionSecret, manifest) {
 
 async function checkApk(sessionSecret, manifest, apkBuildId) {
   const result = await buildAsync(manifest, {
-    platform: 'android',
+    platform: PLATFORM_ANDROID,
     mode: 'status',
     current: false,
     sessionSecret: sessionSecret || EXPO_SESSION_SECRET
