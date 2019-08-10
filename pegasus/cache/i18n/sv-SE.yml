@@ -1499,6 +1499,10 @@ sv-SE:
     till <a href='%{supported_browsers_url}', target='_blank'> någon av webbläsarna
     som stöds</a>. Du kan prova att visa sidan, men räkna med att den inte fungerar
     fullt ut.
+  compatibility_unsupported_browser_markdown: Din webbläsare stöds inte. Uppgradera
+    din webbläsare till <a href='%{supported_browsers_url}', target='_blank'> någon
+    av webbläsarna som stöds</a>. Du kan prova att visa sidan, men räkna med att den
+    inte fungerar fullt ut.
   flappy_shortcode: flaxa
   header_home: Hem
   header_courses: kurser

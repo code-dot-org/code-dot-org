@@ -2,9 +2,9 @@ import React from 'react';
 import commonStyles from './styles';
 
 /**
- * Publish Page in Export Dialog
+ * Publish Android Page in Export Dialog
  */
-export default class PublishPage extends React.Component {
+export default class PublishAndroidPage extends React.Component {
   render() {
     return (
       <div>
