@@ -53,6 +53,10 @@ FactoryGirl.define do
       subject Pd::Workshop::SUBJECT_CSP_FIT
     end
 
+    trait :in_progress do
+      started_at {Time.zone.now}
+    end
+
     trait :ended do
       started_at {Time.zone.now}
       ended_at {Time.zone.now}

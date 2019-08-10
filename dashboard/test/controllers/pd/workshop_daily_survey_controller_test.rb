@@ -1100,8 +1100,11 @@ module Pd
     def setup_csf201_in_progress_workshop
       @regional_partner = create :regional_partner
       @csf201_in_progress_workshop = create :workshop,
-        course: COURSE_CSF, subject: SUBJECT_CSF_201, regional_partner: @regional_partner,
-        num_facilitators: 2, started_at: DateTime.now
+        :in_progress,
+        course: COURSE_CSF,
+        subject: SUBJECT_CSF_201,
+        regional_partner: @regional_partner,
+        num_facilitators: 2
     end
 
     def setup_csf201_ended_workshop
