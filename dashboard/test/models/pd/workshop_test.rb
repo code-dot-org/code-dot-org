@@ -140,7 +140,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
 
   test 'query by state' do
     workshops_not_started = [@workshop, @organizer_workshop]
-    workshop_in_progress = create :workshop, started_at: Time.now
+    workshop_in_progress = create :workshop, :in_progress
     workshop_ended = create :workshop, :ended
 
     not_started = Pd::Workshop.in_state(Pd::Workshop::STATE_NOT_STARTED)
@@ -621,19 +621,18 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   end
 
   test 'order_by_state' do
-    @workshop.started_at = Time.now
     workshops = [
       build(:workshop, :ended), # Ended
-      # build(:workshop, started_at: Time.now), # In Progress
-      @workshop, # Not Started
-      @organizer_workshop # Not Started
+      build(:workshop, :in_progress), # In Progress
+      build(:workshop) # Not Started
     ]
     # save out of order
     workshops.shuffle.each(&:save!)
 
-    assert_equal workshops.pluck(:id), Pd::Workshop.order_by_state.pluck(:id)
-    assert_equal workshops.pluck(:id), Pd::Workshop.order_by_state(desc: false).pluck(:id)
-    assert_equal workshops.reverse.pluck(:id), Pd::Workshop.order_by_state(desc: true).pluck(:id)
+    ids = workshops.pluck(:id)
+    assert_equal ids, Pd::Workshop.where(id: ids).order_by_state.pluck(:id)
+    assert_equal ids, Pd::Workshop.where(id: ids).order_by_state(desc: false).pluck(:id)
+    assert_equal ids.reverse, Pd::Workshop.where(id: ids).order_by_state(desc: true).pluck(:id)
   end
 
   test 'min_attendance_days with no min_days constraint returns 1' do
