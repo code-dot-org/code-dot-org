@@ -3,7 +3,8 @@ require 'test_helper'
 module Pd::Payment
   class PaymentCalculatorUnpaidTest < ActiveSupport::TestCase
     setup do
-      @workshop = create :pd_ended_workshop,
+      @workshop = create :workshop,
+        :ended,
         funded: true,
         on_map: true,
         course: Pd::Workshop::COURSE_CSD,
