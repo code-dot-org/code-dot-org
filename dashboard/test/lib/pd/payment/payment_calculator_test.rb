@@ -9,11 +9,14 @@ module Pd::Payment
       @program_manager = create :workshop_organizer
       @regional_partner = create :regional_partner, program_managers: [@program_manager]
 
-      @csp_workshop = create(:workshop, :ended, organizer: @program_manager, course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_WORKSHOP_1, enrolled_and_attending_users: 20, num_sessions: 2)
-
-      2.times do
-        @csp_workshop.facilitators << create(:facilitator)
-      end
+      @csp_workshop = create :workshop,
+        :ended,
+        organizer: @program_manager,
+        course: Pd::Workshop::COURSE_CSP,
+        subject: Pd::Workshop::SUBJECT_CSP_WORKSHOP_1,
+        enrolled_and_attending_users: 20,
+        num_sessions: 2,
+        num_facilitators: 2
     end
 
     test 'Raise error if workshop is not ended' do
