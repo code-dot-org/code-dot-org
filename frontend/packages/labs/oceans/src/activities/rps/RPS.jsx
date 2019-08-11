@@ -4,66 +4,62 @@
  * - https://github.com/googlecreativelab/teachable-machine-boilerplate
  */
 
-import * as mobilenetModule from '@tensorflow-models/mobilenet';
-import * as tf from '@tensorflow/tfjs';
-import * as knnClassifier from '@tensorflow-models/knn-classifier';
 import React from 'react';
 
-// Number of classes to classify
-const NUM_CLASSES = 3;
-// Webcam Image size. Must be 227.
-const IMAGE_SIZE = 227;
-// K value for KNN
-const TOPK = 10;
-const CLASS_NAMES = ['rock', 'paper', 'scissors'];
-let predicted = null;
-let example_counts = [0, 0, 0];
-const MIN_EXAMPLES = 20;
+import SimpleTrainer from '../../utils/SimpleTrainer';
+import Video from '../../utils/Video.js';
 
+const IMAGE_SIZE = 227;
+const NUM_CLASSES = 3;
+const CLASS_NAMES = ['rock', 'paper', 'scissors'];
+
+const MIN_EXAMPLES = 20;
 const NO_CLASS = -1;
 
 module.exports = class Main extends React.Component {
   constructor(props) {
     super(props);
-    this.video = null;
+    this.videoElementRef = null;
+    this.video = new Video(IMAGE_SIZE);
+    this.simpleTrainer = new SimpleTrainer();
   }
 
   state = {
     predictedClass: NO_CLASS,
-    infoText0: "",
-    infoText1: "",
-    infoText2: "",
+    confidencesByClassId: [],
     trainingImages0: [],
     trainingImages1: [],
     trainingImages2: [],
+    roundResult: null
   };
 
   componentDidMount() {
-    this.training = NO_CLASS;
-    this.videoPlaying = false;
-
-    this.initializeClassifiers();
-    this.initializeWebcamVideo();
+    this.simpleTrainer.initializeClassifiers();
+    this.video.loadVideo(this.videoElementRef);
   }
 
-  initializeWebcamVideo() {
-    this.video.setAttribute('autoplay', '');
-    this.video.setAttribute('playsinline', '');
-    navigator.mediaDevices.getUserMedia({ video: true, audio: false }).then((stream) => {
-      this.video.srcObject = stream;
-      this.video.width = IMAGE_SIZE;
-      this.video.height = IMAGE_SIZE;
-      this.video.addEventListener('playing', () => this.videoPlaying = true);
-      this.video.addEventListener('paused', () => this.videoPlaying = false);
-    });
+  rpsToEmoji(rps) {
+    switch (rps) {
+      case 'rock':
+        return '✊';
+      case 'scissors':
+        return '✌';
+      default:
+        return '✋';
+    }
   }
 
   render() {
     return <div>
-      <video ref={(el) => this.video = el} autoPlay="" playsInline="" width="227" height="227"/>
+      <video ref={(el) => this.videoElementRef = el} autoPlay="" playsInline="" width={IMAGE_SIZE} height={IMAGE_SIZE}/>
       <div style={{marginBottom: 10}}>
         <i>Click each &lsquo;train&rsquo; button to train the computer on one frame from your camera</i><br/>
       </div>
+      {!!this.state.roundResult && <div style={{marginBottom: 10}}>
+        {`You played...${this.rpsToEmoji(this.state.roundResult.playerPlayed)}`}<br/>
+        {`Computer played ${this.rpsToEmoji(this.state.roundResult.computerPlayed)}`}<br/>
+        {this.state.roundResult.winner > 0 ? 'YOU WIN' : this.state.roundResult.winner === 0 ? 'DRAW' : 'YOU LOSE'}
+      </div>}
       <button
         style={{position: 'absolute', left: '300px', top: '180px', width: '80px', height: '40px',}}
         onClick={() => this.playRound()}
@@ -72,17 +68,27 @@ module.exports = class Main extends React.Component {
       </button>
       {
         [...Array(NUM_CLASSES).keys()].map((index) => {
+          let exampleCount = this.simpleTrainer.getExampleCount(index);
+          let confidence = this.state.confidencesByClassId[index] * 100;
           return (<div key={index.toString()} style={{marginBottom: "10px"}}>
             <button
               style={{height: '40px'}}
               onClick={() => {
-                this.training = index;
-                this.trainExample();
+                this.trainExample(index);
               }}
             >
               Train {CLASS_NAMES[index]}
             </button>
-            <span style={{fontWeight: this.state.predictedClass === index ? "bold" : "normal"}}>{this.state[`infoText${index}`]}</span>
+            {!confidence && !!exampleCount && <span style={{fontWeight: this.state.predictedClass === index ? "bold" : "normal"}}>
+              {
+                `${exampleCount} example${ exampleCount !== 1 ? 's' : '' } ${(exampleCount >= MIN_EXAMPLES ? '✅' : '')}`
+              }
+            </span>}
+            {!!confidence && <span style={{fontWeight: this.state.predictedClass === index ? "bold" : "normal"}}>
+              {
+                ` ${exampleCount} example${ exampleCount !== 1 ? 's' : '' } - ${confidence}%`
+              }
+            </span>}
             {
               this.state['trainingImages' + index].map((image, i) => {
                 return <img key={i} src={image} width={40} height={40}/>;
@@ -94,116 +100,46 @@ module.exports = class Main extends React.Component {
     </div>;
   }
 
-  async initializeClassifiers() {
-    this.knn = knnClassifier.create();
-    this.mobilenet = await mobilenetModule.load();
-    this.startVideo();
-  }
-
-  startVideo() {
-    this.video.play();
-  }
-
-  stopVideo() {
-    this.video.pause();
-  }
-
-  async trainExample() {
-    if (this.videoPlaying) {
-      // Get image data from video element
-      const image = tf.fromPixels(this.video);
-
-      let logits;
-      // 'conv_preds' is the logits activation of MobileNet.
-      const infer = () => this.mobilenet.infer(image, 'conv_preds');
-
-      const canvas = document.createElement('canvas');
-      canvas.width = IMAGE_SIZE / 4;
-      canvas.height = IMAGE_SIZE / 4;
-      const ctx = canvas.getContext('2d');
-      ctx.drawImage(this.video, 0, 0, canvas.width, canvas.height);
-      const dataURI = canvas.toDataURL('image/jpeg');
+  /**
+   * @param {number} index
+   * @returns {Promise<void>}
+   */
+  async trainExample(index) {
+    if (this.video.isPlaying()) {
+      this.simpleTrainer.addExample(this.video.getVideoElement(), index);
       this.setState({
-        ['trainingImages' + this.training]: this.state['trainingImages' + this.training].concat(dataURI)
+        ['trainingImages' + index]: this.state['trainingImages' + index].concat(
+          this.video.getFrameDataURI()
+        )
       });
-
-      // Train class if one of the buttons is held down
-      if (this.training !== -1) {
-        logits = infer();
-        // Add current image to classifier
-        this.knn.addExample(logits, this.training);
-      }
-      example_counts[this.training]++;
-      if (example_counts[this.training] > 0) {
-        this.setState({
-          [`infoText${this.training}`]: ` ${example_counts[this.training]} examples ${(example_counts[this.training] >=
-          MIN_EXAMPLES ? '✅' : '')}`
-        });
-      }
-
-      // Dispose image when done
-      image.dispose();
-      if (logits) {
-        logits.dispose();
-      }
     }
   }
 
   async playRound() {
-    if (this.videoPlaying) {
-      // Get image data from video element
-      const image = tf.fromPixels(this.video);
-
-      let logits;
-      // 'conv_preds' is the logits activation of MobileNet.
-      const infer = () => this.mobilenet.infer(image, 'conv_preds');
-
-      const numClasses = this.knn.getNumClasses();
-      if (numClasses > 0) {
-
-        // If classes have been added run predict
-        logits = infer();
-        const res = await this.knn.predictClass(logits, TOPK);
-
-        for (let i = 0; i < NUM_CLASSES; i++) {
-
-          // The number of examples for each class
-          const exampleCount = this.knn.getClassExampleCount();
-
-          // Make the predicted class bold
-          if (res.classIndex === i) {
-            this.setState({predictedClass: i});
-          }
-
-          // Update info text
-          if (exampleCount[i] > 0) {
-            this.setState({
-              [`infoText${i}`]: ` ${exampleCount[i]} examples - ${res.confidences[i] * 100}%`
-            });
-          }
-        }
-        predicted = CLASS_NAMES[res.classIndex];
-      }
-      this.roundResult();
-      // Dispose image when done
-      image.dispose();
-      if (logits) {
-        logits.dispose();
+    if (this.video.isPlaying()) {
+      if (this.simpleTrainer.getNumClasses() > 0) {
+        let predictionResult = await this.simpleTrainer.predict(this.video.getVideoElement());
+        this.setState({
+          predictedClass: predictionResult.predictedClassId,
+          confidencesByClassId: predictionResult.confidencesByClassId
+        }, () => {
+          let computerChoice = CLASS_NAMES[Math.floor(Math.random() * 3)];
+          let playerChoice = CLASS_NAMES[this.state.predictedClass];
+          const winner = this.pickWinner(playerChoice, computerChoice);
+          this.setState({
+            roundResult: {
+              winner: winner,
+              playerPlayed: playerChoice,
+              computerPlayed: computerChoice
+            }
+          }, null);
+        });
       }
     }
   }
 
-  roundResult() {
-    let computer_choice = CLASS_NAMES[Math.floor(Math.random() * 3)];
-    const winner = this.pickWinner(computer_choice);
-    console.log(winner);
-    alert(
-      `You played...${predicted}\n Computer played ${computer_choice}\n${winner > 0 ? 'YOU WIN' : winner === 0 ? 'DRAW' : 'YOU LOSE'}`);
-
-  }
-
-  pickWinner(computer_choice) {
-    return this.beats(predicted, computer_choice);
+  pickWinner(playerChoice, computerChoice) {
+    return this.beats(playerChoice, computerChoice);
   }
 
   beats(x, y) {
