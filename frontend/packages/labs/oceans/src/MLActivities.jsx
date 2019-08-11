@@ -8,7 +8,7 @@ const Activity = Object.freeze({
 
 module.exports = class MLActivities extends React.Component {
   state = {
-    currentActivity: Activity.None,
+    currentActivity: Activity.RPS,
   };
 
   render() {
@@ -16,6 +16,17 @@ module.exports = class MLActivities extends React.Component {
       <h1>
         ML Activities Playground
       </h1>
+      {
+        this.state.currentActivity !== Activity.None &&
+        <button
+          style={{height: 40}}
+          onClick={() => this.setState({
+            currentActivity: Activity.None
+          })}
+        >
+          Pick Another Activity
+        </button>
+      }
       {
         this.state.currentActivity === Activity.None &&
         <button
