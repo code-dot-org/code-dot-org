@@ -112,6 +112,7 @@ namespace :test do
       ChatClient.wrap('dashboard ruby unit tests') do
         ENV['DISABLE_SPRING'] = '1'
         ENV['UNIT_TEST'] = '1'
+        ENV['PEGASUS_UNIT_TEST'] = 1
         ENV['CODECOV_FLAGS'] = 'dashboard'
         ENV['PARALLEL_TEST_FIRST_IS_1'] = '1'
         # Parallel tests don't seem to run more quickly over 16 processes.
@@ -197,6 +198,7 @@ namespace :test do
         TestRunUtils.run_dashboard_tests(parallel: true)
 
         ENV.delete 'UNIT_TEST'
+        ENV.delete 'PEGASUS_UNIT_TEST'
         ENV.delete 'CODECOV_FLAGS'
       end
     end
