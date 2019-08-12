@@ -69,7 +69,7 @@ class PeerReviewSubmissions extends React.Component {
     }
   };
 
-  handleEmailFilterChange = event => {
+  handleUserFilterChange = event => {
     this.setState({userFilter: event.target.value});
     this.getFilteredResults(
       event.target.value,
@@ -133,7 +133,7 @@ class PeerReviewSubmissions extends React.Component {
           id="EmailFilter"
           type="text"
           placeholder="Filter by submitter email"
-          onChange={this.handleEmailFilterChange}
+          onChange={this.handleUserFilterChange}
           value={this.state.userFilter}
         />
         <FormControl
