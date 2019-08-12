@@ -69,6 +69,36 @@ class Api::V1::PeerReviewSubmissionsControllerTest < ActionController::TestCase
     )
   end
 
+  test 'Peer reviews email filter can also fuzzy-search for name' do
+    daneel = create :teacher, name: 'R. Daneel Olivaw'
+    danielle = create :teacher, name: 'Danielle B'
+    gerbil = create :teacher, name: 'Toothy the Gerbil'
+
+    create_peer_reviews_for_user_and_level daneel, @level_3
+    create_peer_reviews_for_user_and_level danielle, @level_3
+    create_peer_reviews_for_user_and_level gerbil, @level_3
+
+    # Try to find "Daneel" and "Danielle" but not "Toothy"
+    get :index, params: {email: 'Dan'}
+    assert_response :success
+    response = JSON.parse(@response.body)
+
+    # R. Daneel's submissions are found
+    PeerReview.where(submitter: daneel).each do |pr|
+      assert response['submissions'].any? {|submission| submission['review_ids'].any? {|r| r[0] == pr.id}}
+    end
+
+    # Danielle's submissions are found
+    PeerReview.where(submitter: danielle).each do |pr|
+      assert response['submissions'].any? {|submission| submission['review_ids'].any? {|r| r[0] == pr.id}}
+    end
+
+    # Toothy the Gerbil's submissions are not found
+    PeerReview.where(submitter: gerbil).each do |pr|
+      refute response['submissions'].any? {|submission| submission['review_ids'].any? {|r| r[0] == pr.id}}
+    end
+  end
+
   test 'All peer reviews gets the first page of peer reviews submissions' do
     get :index
     assert_response :success
