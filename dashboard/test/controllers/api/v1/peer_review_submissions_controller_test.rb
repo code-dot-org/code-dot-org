@@ -49,7 +49,7 @@ class Api::V1::PeerReviewSubmissionsControllerTest < ActionController::TestCase
     create_peer_reviews_for_user_and_level(other_submitter, @level_3)
     submissions = PeerReview.where(level: @level_3, submitter: other_submitter)
 
-    get :index, params: {email: other_submitter.email}
+    get :index, params: {user_q: other_submitter.email}
     assert_response :success
     response = JSON.parse(@response.body)
     assert_equal [
@@ -79,7 +79,7 @@ class Api::V1::PeerReviewSubmissionsControllerTest < ActionController::TestCase
     create_peer_reviews_for_user_and_level gerbil, @level_3
 
     # Try to find "Daneel" and "Danielle" but not "Toothy"
-    get :index, params: {email: 'Dan'}
+    get :index, params: {user_q: 'Dan'}
     assert_response :success
     response = JSON.parse(@response.body)
 
