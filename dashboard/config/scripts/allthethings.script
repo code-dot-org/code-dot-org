@@ -131,6 +131,7 @@ level 'Applab AllTheThings ResourcesTab MapReference'
 level 'Applab AllTheThings ResourcesTab ReferenceLinks'
 level 'Applab AllTheThings ResourcesTab AllResources'
 level 'AllTheThings Applab DesignModeDefault'
+level 'Applab allthethings Widget Mode'
 
 stage 'Gamelab'
 level 'Gamelab AllTheThings With No Animation Tab'
