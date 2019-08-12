@@ -918,7 +918,7 @@ module Pd
       session = @csf201_in_progress_workshop.sessions.first
       create :pd_attendance, session: session, teacher: teacher
 
-      first_facilitator = @csf201_in_progress_workshop.facilitators.first
+      first_facilitator = @csf201_in_progress_workshop.facilitators.order(:name, :id).first
       first_facilitator_index = 0
 
       actual_form_id = nil
@@ -951,7 +951,7 @@ module Pd
       session = @csf201_in_progress_workshop.sessions.first
       create :pd_attendance, session: session, teacher: teacher
 
-      first_facilitator = @csf201_in_progress_workshop.facilitators.first
+      first_facilitator = @csf201_in_progress_workshop.facilitators.order(:name, :id).first
       first_facilitator_index = 0
 
       search_params = {
@@ -995,7 +995,7 @@ module Pd
       session = @csf201_in_progress_workshop.sessions.first
       create :pd_attendance, session: session, teacher: teacher
 
-      first_facilitator = @csf201_in_progress_workshop.facilitators.first
+      first_facilitator = @csf201_in_progress_workshop.facilitators.order(:name, :id).first
       first_facilitator_index = 0
 
       WorkshopFacilitatorDailySurvey.create_placeholder!(
@@ -1024,7 +1024,7 @@ module Pd
       create :pd_attendance, session: session, teacher: teacher
 
       first_facilitator_index = 0
-      @csf201_in_progress_workshop.facilitators.each_with_index do |facilitator, index|
+      @csf201_in_progress_workshop.facilitators.order(:name, :id).each_with_index do |facilitator, index|
         WorkshopFacilitatorDailySurvey.create_placeholder!(
           user_id: teacher.id,
           day: csf_post201_params[:day],
@@ -1060,7 +1060,7 @@ module Pd
         num_sessions: 5, num_facilitators: 2, regional_partner: @regional_partner
       @summer_enrollment = create :pd_enrollment, :from_user, workshop: @summer_workshop
       @enrolled_summer_teacher = @summer_enrollment.user
-      @facilitators = @summer_workshop.facilitators
+      @facilitators = @summer_workshop.facilitators.order(:name, :id)
     end
 
     def setup_academic_year_workshop
@@ -1069,7 +1069,7 @@ module Pd
         num_sessions: 1, num_facilitators: 2, regional_partner: @regional_partner
       @academic_year_enrollment = create :pd_enrollment, :from_user, workshop: @academic_year_workshop
       @enrolled_academic_year_teacher = @academic_year_enrollment.user
-      @facilitators = @academic_year_workshop.facilitators
+      @facilitators = @academic_year_workshop.facilitators.order(:name, :id)
     end
 
     def setup_two_day_academic_year_workshop
@@ -1079,7 +1079,7 @@ module Pd
       @two_day_academic_year_enrollment = create :pd_enrollment, :from_user,
         workshop: @two_day_academic_year_workshop
       @enrolled_two_day_academic_year_teacher = @two_day_academic_year_enrollment.user
-      @facilitators = @two_day_academic_year_workshop.facilitators
+      @facilitators = @two_day_academic_year_workshop.facilitators.order(:name, :id)
     end
 
     def setup_csf201_not_started_workshop
@@ -1163,7 +1163,7 @@ module Pd
           userId: user.id,
           sessionId: workshop.sessions[day - 1].id,
           day: day,
-          facilitatorId: workshop.facilitators[facilitator_index].id,
+          facilitatorId: workshop.facilitators.order(:name, :id)[facilitator_index].id,
           facilitatorIndex: facilitator_index,
           formId: FAKE_FACILITATOR_FORM_ID,
         }
