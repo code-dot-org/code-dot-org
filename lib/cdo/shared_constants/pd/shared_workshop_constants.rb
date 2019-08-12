@@ -51,12 +51,12 @@ module Pd
       ],
       COURSE_CSP => [
         SUBJECT_CSP_SUMMER_WORKSHOP = SUBJECT_SUMMER_WORKSHOP,
-        SUBJECT_CSP_WORKSHOP_1 = '1-day Academic Year, Units 1 and 2'.freeze,
-        SUBJECT_CSP_WORKSHOP_2 = '1-day Academic Year, Unit 3'.freeze,
-        SUBJECT_CSP_WORKSHOP_3 = '1-day Academic Year, Unit 4 + Explore Prep'.freeze,
-        SUBJECT_CSP_WORKSHOP_4 = '1-day Academic Year, Unit 5 + Create Prep'.freeze,
-        SUBJECT_CSP_WORKSHOP_5 = '2-day Academic Year, Units 1 to 3'.freeze,
-        SUBJECT_CSP_WORKSHOP_6 = '2-day Academic Year, Units 4 and 5 + AP Prep'.freeze,
+        SUBJECT_CSP_WORKSHOP_1 = 'Workshop 1: Unit 3'.freeze,
+        SUBJECT_CSP_WORKSHOP_2 = 'Workshop 2: Unit 4 and Explore Task'.freeze,
+        SUBJECT_CSP_WORKSHOP_3 = 'Workshop 3: Unit 5 and Create Task'.freeze,
+        SUBJECT_CSP_WORKSHOP_4 = 'Workshop 4: Unit 5 and Multiple Choice Exam'.freeze,
+        SUBJECT_CSP_WORKSHOP_5 = '2-day, Workshops 1+2: Units 3-4 and Explore Task'.freeze,
+        SUBJECT_CSP_WORKSHOP_6 = '2-day, Workshops 3+4: Unit 5, Create Task, and Multiple Choice Exam'.freeze,
         SUBJECT_CSP_TEACHER_CON = SUBJECT_TEACHER_CON,
         SUBJECT_CSP_FIT = SUBJECT_FIT,
         SUBJECT_CSP_VIRTUAL_1 = SUBJECT_VIRTUAL_1,
@@ -70,12 +70,12 @@ module Pd
       ],
       COURSE_CSD => [
         SUBJECT_CSD_SUMMER_WORKSHOP = SUBJECT_SUMMER_WORKSHOP,
-        SUBJECT_CSD_UNITS_2_3 = '1-day Academic Year, Units 1 and 2'.freeze,
-        SUBJECT_CSD_UNIT_3_4 = '1-day Academic Year, Unit 3'.freeze,
-        SUBJECT_CSD_UNITS_4_5 = '1-day Academic Year, Units 4 and 5'.freeze,
-        SUBJECT_CSD_UNIT_6 = '1-day Academic Year, Unit 6'.freeze,
-        SUBJECT_CSD_UNITS_1_3 = '2-day Academic Year, Units 1 to 3'.freeze,
-        SUBJECT_CSD_UNITS_4_6 = '2-day Academic Year, Units 4 to 6'.freeze,
+        SUBJECT_CSD_WORKSHOP_1 = 'Workshop 1: Unit 3'.freeze,
+        SUBJECT_CSD_WORKSHOP_2 = 'Workshop 2: Unit 4'.freeze,
+        SUBJECT_CSD_WORKSHOP_3 = 'Workshop 3: Unit 5'.freeze,
+        SUBJECT_CSD_WORKSHOP_4 = 'Workshop 4: Unit 6'.freeze,
+        SUBJECT_CSD_WORKSHOP_5 = '2-day, Workshops 1+2: Units 3 and 4'.freeze,
+        SUBJECT_CSD_WORKSHOP_6 = '2-day, Workshops 3+4: Units 5 and 6'.freeze,
         SUBJECT_CSD_TEACHER_CON = SUBJECT_TEACHER_CON,
         SUBJECT_CSD_FIT = SUBJECT_FIT,
         SUBJECT_CSD_VIRTUAL_1 = SUBJECT_VIRTUAL_1,
@@ -91,6 +91,25 @@ module Pd
         SUBJECT_CSF_101 = 'Intro'.freeze,
         SUBJECT_CSF_201 = 'Deep Dive'.freeze,
         SUBJECT_CSF_FIT = SUBJECT_FIT
+      ]
+    }.freeze
+
+    LEGACY_SUBJECTS = {
+      COURSE_CSP => [
+        LEGACY_SUBJECT_CSP_WORKSHOP_1 = '1-day Academic Year, Units 1 and 2'.freeze,
+        LEGACY_SUBJECT_CSP_WORKSHOP_2 = '1-day Academic Year, Unit 3'.freeze,
+        LEGACY_SUBJECT_CSP_WORKSHOP_3 = '1-day Academic Year, Unit 4 + Explore Prep'.freeze,
+        LEGACY_SUBJECT_CSP_WORKSHOP_4 = '1-day Academic Year, Unit 5 + Create Prep'.freeze,
+        LEGACY_SUBJECT_CSP_WORKSHOP_5 = '2-day Academic Year, Units 1 to 3'.freeze,
+        LEGACY_SUBJECT_CSP_WORKSHOP_6 = '2-day Academic Year, Units 4 and 5 + AP Prep'.freeze,
+      ],
+      COURSE_CSD => [
+        LEGACY_SUBJECT_CSD_UNITS_2_3 = '1-day Academic Year, Units 1 and 2'.freeze,
+        LEGACY_SUBJECT_CSD_UNIT_3_4 = '1-day Academic Year, Unit 3'.freeze,
+        LEGACY_SUBJECT_CSD_UNITS_4_5 = '1-day Academic Year, Units 4 and 5'.freeze,
+        LEGACY_SUBJECT_CSD_UNIT_6 = '1-day Academic Year, Unit 6'.freeze,
+        LEGACY_SUBJECT_CSD_UNITS_1_3 = '2-day Academic Year, Units 1 to 3'.freeze,
+        LEGACY_SUBJECT_CSD_UNITS_4_6 = '2-day Academic Year, Units 4 to 6'.freeze,
       ]
     }.freeze
 
