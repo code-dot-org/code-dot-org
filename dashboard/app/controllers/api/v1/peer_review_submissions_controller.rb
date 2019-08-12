@@ -53,6 +53,8 @@ class Api::V1::PeerReviewSubmissionsController < ApplicationController
     }
   end
 
+  # Generate CSV of peer review data for a particular course unit
+  # /api/v1/peer_review_submissions/report_csv?plc_course_unit_id=:id
   def report_csv
     course_unit = Plc::CourseUnit.find(params[:plc_course_unit_id])
     enrollments = Plc::EnrollmentUnitAssignment.where(plc_course_unit: course_unit)
@@ -61,13 +63,26 @@ class Api::V1::PeerReviewSubmissionsController < ApplicationController
     script = Plc::CourseUnit.find(params[:plc_course_unit_id]).script
     peer_reviewable_levels = ScriptLevel.where(script: script).select {|sl| sl.level.try(:peer_reviewable?)}.map(&:level).uniq
 
+    # We create peer reviews whenever an eligible submission occurs, so their creation timestamps
+    # are our best source of truth for submission dates.
+    # Here, gather all the submission dates we need in one query and organize them for easy
+    # access while generating the report.
+    submission_times_by_user_script_level = PeerReview.
+      where(submitter_id: enrollments.map(&:user_id)).
+      pluck(:submitter_id, :script_id, :level_id, :created_at).
+      group_by {|pr| pr[0..2]}. # group by [submitter_id, script_id, level_id]
+      map {|k, prs| [k, prs.map {|pr| pr[3]}]}. # only keep :created_at in values
+      to_h
+
     enrollments.each do |enrollment|
       peer_review_submissions = Hash.new
 
       UserLevel.where(user: enrollment.user, level: peer_reviewable_levels).each do |user_level|
+        submission_times = submission_times_by_user_script_level[[user_level.user_id, user_level.script_id, user_level.level_id]]
         peer_review_submissions[user_level.level.name] = {
           status: result_to_status(user_level.best_result),
-          date: user_level.created_at.strftime("%-m/%-d/%Y")
+          first_submission_date: submission_times.min&.strftime("%-m/%-d/%Y"),
+          last_submission_date: submission_times.max&.strftime("%-m/%-d/%Y")
         }
       end
 
@@ -88,10 +103,12 @@ class Api::V1::PeerReviewSubmissionsController < ApplicationController
           if enrollment_submission[:submissions].key? level.name
             submission = enrollment_submission[:submissions][level.name]
             row[level.name] = submission[:status]
-            row["#{level.name} submit date"] = submission[:date]
+            row["#{level.name} First Submit Date"] = submission[:first_submission_date] || ''
+            row["#{level.name} Latest Submit Date"] = submission[:last_submission_date] || ''
           else
             row[level.name] = 'Unsubmitted'
-            row["#{level.name} submit date"] = ''
+            row["#{level.name} First Submit Date"] = ''
+            row["#{level.name} Latest Submit Date"] = ''
           end
         end
 

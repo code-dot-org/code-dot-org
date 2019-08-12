@@ -54,6 +54,7 @@ var ALLOWED_KEYS = new Set([
   'is13Plus',
   'isSignedIn',
   'userId',
+  'verifiedTeacher',
   'isK1',
   'textToSpeechEnabled',
   'documentationUrl',
@@ -66,7 +67,8 @@ var ALLOWED_KEYS = new Set([
   'expoGenerateApk',
   'expoCheckApkBuild',
   'expoCancelApkBuild',
-  'allowExportExpo'
+  'allowExportExpo',
+  'widgetMode'
 ]);
 
 const initialState = {

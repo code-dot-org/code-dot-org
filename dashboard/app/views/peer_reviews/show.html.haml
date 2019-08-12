@@ -57,4 +57,4 @@
       = f.text_area :data, rows: 7, placeholder: 'Type your peer review here', style: 'width: 100%; box-sizing: border-box;', disabled: reviewed
     - unless reviewed
       .actions
-        = f.submit 'Submit', class: 'btn btn-large btn-primary'
+        = f.submit 'Submit', class: 'btn btn-large btn-primary', disabled: current_user.plc_reviewer?

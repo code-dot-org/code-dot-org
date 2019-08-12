@@ -37,6 +37,8 @@ class PeerReview < ActiveRecord::Base
   belongs_to :level
   belongs_to :level_source
 
+  validates :status, inclusion: {in: %w{accepted rejected}}, if: -> {from_instructor}
+
   after_update :mark_user_level, if: -> {status_changed? || data_changed?}
 
   SYSTEM_DELETED_DATA = ''.freeze
