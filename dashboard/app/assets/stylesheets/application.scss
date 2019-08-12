@@ -2098,13 +2098,9 @@ a.download-video {
     }
   }
   &.outdated {
-    color: $light_gray;
+    color: $charcoal;
     &.from-instructor {
       border: 2px solid $lighter_cyan;
-
-      .peer-review-title {
-        color: $lighter_cyan;
-      }
     }
   }
 }

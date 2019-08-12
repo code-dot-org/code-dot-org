@@ -44,6 +44,7 @@
  * @property {?boolean} is13Plus - Will be true if the user is 13 or older,
  *           false if they are 12 or younger, and undefined if we don't know
  *           (such as when they are not signed in).
+ * @property {boolean} verifiedTeacher
  * @property {boolean} hasContainedLevels
  * @property {boolean} hideSource
  * @property {string} share

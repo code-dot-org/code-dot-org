@@ -2,13 +2,10 @@ import $ from 'jquery';
 import _ from 'lodash';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {changeInterfaceMode, viewAnimationJson} from './gamelab/actions';
-import {startInAnimationTab} from './gamelab/stateQueries';
-import {
-  GameLabInterfaceMode,
-  GAME_WIDTH,
-  SpritelabReservedWords
-} from './gamelab/constants';
+import {changeInterfaceMode, viewAnimationJson} from './actions';
+import {startInAnimationTab} from './stateQueries';
+import {P5LabInterfaceMode, APP_WIDTH} from './constants';
+import {SpritelabReservedWords} from './spritelab/constants';
 import experiments from '@cdo/apps/util/experiments';
 import {
   outputError,
@@ -26,9 +23,9 @@ var dropletConfig = require('./gamelab/dropletConfig');
 var JSInterpreter = require('@cdo/apps/lib/tools/jsinterpreter/JSInterpreter');
 import * as apiTimeoutList from '@cdo/apps/lib/util/timeoutList';
 var JsInterpreterLogger = require('@cdo/apps/JsInterpreterLogger');
-var GameLabP5 = require('./gamelab/GameLabP5');
-var gameLabSprite = require('./gamelab/GameLabSprite');
-var gameLabGroup = require('./gamelab/GameLabGroup');
+var GameLabP5 = require('./GameLabP5');
+var gameLabSprite = require('./GameLabSprite');
+var gameLabGroup = require('./GameLabGroup');
 var gamelabCommands = require('./gamelab/commands');
 import {initializeSubmitHelper, onSubmitComplete} from '@cdo/apps/submitHelper';
 var dom = require('@cdo/apps/dom');
@@ -39,11 +36,11 @@ import {
   setInitialAnimationList,
   saveAnimations,
   withAbsoluteSourceUrls
-} from './gamelab/animationListModule';
-import {getSerializedAnimationList} from './gamelab/shapes';
+} from './animationListModule';
+import {getSerializedAnimationList} from './shapes';
 import {add as addWatcher} from '@cdo/apps/redux/watchedExpressions';
-var reducers = require('./gamelab/reducers');
-var GameLabView = require('./gamelab/GameLabView');
+var reducers = require('./reducers');
+var GameLabView = require('./GameLabView');
 var Provider = require('react-redux').Provider;
 import {shouldOverlaysBeVisible} from '@cdo/apps/templates/VisualizationOverlay';
 import {
@@ -53,12 +50,12 @@ import {
 } from '@cdo/apps/containedLevels';
 import {hasValidContainedLevelResult} from '@cdo/apps/code-studio/levels/codeStudioLevels';
 import {actions as jsDebugger} from '@cdo/apps/lib/tools/jsdebugger/redux';
-import {addConsoleMessage, clearConsole} from './gamelab/textConsoleModule';
+import {addConsoleMessage, clearConsole} from './spritelab/textConsoleModule';
 import {captureThumbnailFromCanvas} from '@cdo/apps/util/thumbnail';
 import Sounds from '@cdo/apps/Sounds';
 import {TestResults, ResultType} from '@cdo/apps/constants';
 import {showHideWorkspaceCallouts} from '@cdo/apps/code-studio/callouts';
-import defaultSprites from './gamelab/defaultSprites.json';
+import defaultSprites from './spritelab/defaultSprites.json';
 import wrap from './gamelab/debugger/replay';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {
@@ -353,7 +350,10 @@ P5Lab.prototype.init = function(config) {
     this.setCrosshairCursorForPlaySpace();
 
     if (this.isSpritelab) {
-      this.studioApp_.addChangeHandler(this.preview.bind(this));
+      this.studioApp_.addChangeHandler(() => {
+        this.reset();
+        this.preview.apply(this);
+      });
     }
   };
 
@@ -399,7 +399,7 @@ P5Lab.prototype.init = function(config) {
       setAndroidExportProps
     ),
     channelId: config.channel,
-    nonResponsiveVisualizationColumnWidth: GAME_WIDTH,
+    nonResponsiveVisualizationColumnWidth: APP_WIDTH,
     showDebugButtons: showDebugButtons,
     showDebugConsole: showDebugConsole,
     showDebugWatch:
@@ -416,7 +416,7 @@ P5Lab.prototype.init = function(config) {
   });
 
   if (startInAnimationTab(getStore().getState())) {
-    getStore().dispatch(changeInterfaceMode(GameLabInterfaceMode.ANIMATION));
+    getStore().dispatch(changeInterfaceMode(P5LabInterfaceMode.ANIMATION));
   }
 
   // Push project-sourced animation metadata into store. Always use the
@@ -534,7 +534,7 @@ P5Lab.prototype.setupReduxSubscribers = function(store) {
 
     if (state.interfaceMode !== lastState.interfaceMode) {
       if (
-        state.interfaceMode === GameLabInterfaceMode.ANIMATION &&
+        state.interfaceMode === P5LabInterfaceMode.ANIMATION &&
         !awaitingContainedLevel
       ) {
         this.studioApp_.resetButtonClick();
@@ -1100,7 +1100,9 @@ P5Lab.prototype.onP5ExecutionStarting = function() {
  */
 P5Lab.prototype.onP5Preload = function() {
   Promise.all([
-    this.preloadAnimations_(this.level.pauseAnimationsByDefault),
+    this.isSpritelab
+      ? this.preloadSpriteImages_()
+      : this.preloadAnimations_(this.level.pauseAnimationsByDefault),
     this.maybePreloadBackgrounds_(),
     this.runPreloadEventHandler_()
   ]).then(() => {
@@ -1145,6 +1147,12 @@ P5Lab.prototype.preloadAnimations_ = async function(pauseAnimationsByDefault) {
   );
 };
 
+P5Lab.prototype.preloadSpriteImages_ = async function() {
+  await this.whenAnimationsAreReady();
+  return this.gameLabP5.preloadSpriteImages(
+    getStore().getState().animationList
+  );
+};
 /**
  * Check whether all animations in the project animation list have been loaded
  * into memory and are ready to use.

@@ -24,25 +24,6 @@ end
 def main
   return unless only_one_running?(__FILE__)
 
-  # Update summaries before updating the fusion table
-  # If any single teaches_cs category in a given year changes by more than
-  # 10% of the total number of schools then issue a Honeybadger notification.
-  threshold = School.count * 0.1
-  old_summary_counts = Census::CensusSummary.group(:school_year, :teaches_cs).count
-  Census::CensusSummary.summarize_census_data
-  new_summary_counts = Census::CensusSummary.group(:school_year, :teaches_cs).count
-
-  unless old_summary_counts.select {|k, c| (c - new_summary_counts[k]).abs > threshold}.empty?
-    Honeybadger.notify(
-      error_message: "High rate of change in census_summaries. This may be expected if summary logic was recently changed or if a new data source was just added.",
-      error_class: "Census Summary High Rate of Change",
-      context: {
-        old_counts: old_summary_counts,
-        new_counts: new_summary_counts
-      }
-    )
-  end
-
   # The map should show the data from the school year that began
   # in the previous calendar year. So, Aug-Dec we show the previous school
   # year's data and then switch over to the current school year in Jan.
@@ -84,8 +65,8 @@ def main
   end
   unless tippecanoe_status.success? && upload_successful
     Honeybadger.notify(
-      error_message: "Updating HOC map on Mapbox failed",
-      error_class: "HOC Map Update Failure",
+      error_message: "Updating Census map on Mapbox failed",
+      error_class: "Census Map Update Failure",
       context: {
         tippecanoe_status: stderr,
         upload_status: upload_successful

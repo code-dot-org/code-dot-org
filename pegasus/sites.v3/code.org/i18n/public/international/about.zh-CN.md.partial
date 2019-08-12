@@ -1,10 +1,10 @@
 ---
-title: About
+title: 关于我们
 theme: responsive
 video_player: true
 ---
 
-# About Us
+# 关于我们
 
 <div class="col-60", style="padding-right:20px;">
 
@@ -24,13 +24,13 @@ Code.org® 是一个非营利组织。它致力于为学校, 妇女和少数族�
 
 <div style="clear:both"></div>
 
-## History 
+## 历史 
 
 In 2013, Code.org was launched by twin brothers Hadi and Ali Partovi with a [video promoting computer science](https://www.youtube.com/watch?v=nKIu9yen5nc). 这段视频在 YouTube 上保持了观看量第一一整天, 并且1. 5万所学校向我们求助。 此后, 我们从一个自食其力的志愿者队伍扩大到支持一个全球运动的完整组织。 我们认为, 每个孩子都应该接受高质量的计算机科学教育, 而不仅仅是少数幸运的孩子。
 <br>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/nKIu9yen5nc" frameborder="0" allowfullscreen></iframe>
 
-## What We Do
+## 我们做什么
 
 We do work across the education spectrum: designing [our own courses](https://studio.code.org/courses) or partnering with others, training teachers, partnering with large school districts, helping change government policies, expanding internationally via partnerships, and marketing to break stereotypes. 我们的工作建立在那些建立、资助和传播了计算机科学教育的组织和个人几十年间无法计数的努力的基础上。 我们感谢计算机科学教育界所做的不懈努力, 我们感谢多年来所有帮助扩大我们影响力的伙伴们。
 
@@ -40,7 +40,7 @@ We do work across the education spectrum: designing [our own courses](https://st
 
 <img alt="Code.org International Partners" src="/images/international/international_partners.jpg" width="100%">
 
-## Translation 
+## 翻译 
 
 想要对你所在国家里的学生产生直接的影响吗? 帮助我们把 Code.org 的内容变为他们的母语！ 如果您自愿帮助翻译我们的教程和课程, 您将加入一个由 7, 000多名翻译人员组成的社区, 致力于将计算机科学教育带给世界各地的学生。 Take a look at our [translation guide](/translate) for more information. 
 
@@ -50,7 +50,7 @@ All curriculum resources and tutorials we create will forever be free to use and
 
 <img alt="Students with a laptop" src="/images/international/group_computer.jpg" width="100%">
 
-## Follow us
+## 关注我们
 
 [Sign up to receive status updates](/about/hear-from-us) about progress in the K-12 computer science movement and about the work of Code.org. Or follow Code.org on social media:
 

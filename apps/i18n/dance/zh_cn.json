@@ -10,6 +10,6 @@
   "danceFeedbackNeedDifferentDance": "需要采用不同的舞蹈。",
   "danceFeedbackNeedEveryTwoMeasures": "确保使用了`每两个节拍`模块",
   "danceFeedbackNeedMakeANewDancer": "使用`创建一个新的`模块来创建第二个舞者。",
-  "danceFeedbackKeyEvent": "确保在\"当按键\" 块中加入一些代码, 并在舞蹈运行时按下这些键。",
+  "danceFeedbackKeyEvent": "确保在\"当按键\"模块中加入一些代码，并在舞蹈运行时按下这些键。",
   "measure": "小节："
 }

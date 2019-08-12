@@ -487,6 +487,15 @@ sk-SK:
         courseB_artist_loops_challenge1_c: 'Budeš sa potrebovať `pohnúť` alebo `skočíť`
           cez niektoré čiary dva krát. '
       course1_collector_loops_challenge3:
+        courseB_collector_loops_challenge1_c: |-
+          Posuň sa na Východ medzi každými cestami.
+
+          <xml>
+            <block type="maze_moveEast"><next>
+            <block type="maze_moveEast"></block></next></block>
+            </xml>
+
+          Dá sa to spraviť s iba 14 blokmi. Klikni na jednu ďalšiu nápovedu, aby si uvidel riešenie.
         courseB_collector_loops_challenge1_d: |-
           Vyskúšaj toto!
 
@@ -2556,10 +2565,9 @@ sk-SK:
           Pripoj tento blok k bloku `pri spustení`:
 
           <xml>
-          <block type="studio_moveDistance">
+          <block type="studio_saySpriteChoices">
           <title name="SPRITE">0</title>
-          <title name="DIR">2</title>
-          <title name="DISTANCE">25</title>
+          <title name="VALUE">Hi there.</title>
           </block>
           </xml>
       courseC_PlayLab_events3_2019:
@@ -2571,10 +2579,9 @@ sk-SK:
           Pripoj tento blok k bloku `pri spustení`:
 
           <xml>
-          <block type="studio_moveDistance">
+          <block type="studio_saySpriteChoices">
           <title name="SPRITE">0</title>
-          <title name="DIR">2</title>
-          <title name="DISTANCE">25</title>
+          <title name="VALUE">Hi there.</title>
           </block>
           </xml>
       courseC_PlayLab_events4:
@@ -2737,18 +2744,6 @@ sk-SK:
 
           **Pinball** - Jedna z postáv sa pohybuje pomocou šípok (použi bloky`keď šípka nahor`, `keď šípka nadol`), potom vždy prehraj náhodný zvuk, keď narazí do iných postáv.
       courseC_PlayLab_eventsFP_2019:
-        idea1: |-
-          _Potrebuješ inšpiráciu?_
-
-          **Kto je tam?** Nechaj postavy ukazovať savs náhodnými obrázkami, takto nikto nebude tušiť, ktorá bude nasledovať.
-
-          ![](https://images.code.org/a56e03479801995d93ad5a4e4384a79e-image-1475340154498.gif)
-        idea2: |-
-          _potrebuješ inšpiráciu?_
-
-          **Ideme za dobrodružstvom** - Zmeň pozadie a potom nechaj postavy rozprávať o tom, kde sa zrazu nachádzajú.
-
-          ![](https://images.code.org/010c4d919f841d6049caf9211ab65ccc-image-1475340583052.gif)
         idea3: |-
           _Potrebuješ inšpiráciu?_
 

@@ -523,6 +523,9 @@ th-TH:
         courseA_collector_loops_challenge1_b: คุณไม่จำเป็นต้องใช้ ลูป ถ้าคุณแค่ทำบางอย่างแค่เพียงครั้งเดียวเท่านั้น
         courseA_collector_loops_challenge1_c: มีอัญมณีอยู่ 6 อย่างบริเวณด้านขวาของถ้ำ
           แต่คุณต้องเดินไปและเก็บขึ้นมาเพียง 5 ครั้งเท่านั้น คุณรู้ไหมว่าทำไม?
+      course1_collector_loops_challenge2:
+        courseA_collector_loops_challenge2_b: คุณต้องใช้บล็อค ![](<https://images.code.org/803e9ee8b5bc9311a26edf955cd3c03f-image-1491001702274.07.34
+          PM.png>) บล็อคเดียวเท่านั้นเพื่อแก้โจทย์นี้
       course1_collector_loops_challenge3:
         courseB_collector_loops_challenge1_b: |-
           เริ่มต้นโดยการวนลูปคำสั่ง `เคลื่อนไปทางใต้` และ `เก็บสมบัติ`
@@ -2106,29 +2109,9 @@ th-TH:
       courseC_PlayLab_events3_2018:
         courseC_PlayLab_events3_a: คุณจะต้องย้าย จอร์จไปทางขวาประมาณ 25 พิกเซล เพื่อแก้ปริศนานี้.
         courseC_PlayLab_events3_b: มีบล็อกในกล่องเครื่องมือไหม ที่ดูเหมือนว่ามันจะสามารถย้ายนักแสดงได้?
-        courseC_PlayLab_events3_c: |-
-          ต่อบล็อกนี้กับบล็อก `เมื่อเรียกใช้งาน`:
-          <xml>
-          <block type="studio_moveDistance">
-
-          <title name="SPRITE">0</title>
-          <title name="DIR">2</title>
-          <title name="DISTANCE">25</title>
-          </block>
-          </xml>
       courseC_PlayLab_events3_2019:
         courseC_PlayLab_events3_a: คุณจะต้องย้าย จอร์จไปทางขวาประมาณ 25 พิกเซล เพื่อแก้ปริศนานี้.
         courseC_PlayLab_events3_b: มีบล็อกในกล่องเครื่องมือไหม ที่ดูเหมือนว่ามันจะสามารถย้ายนักแสดงได้?
-        courseC_PlayLab_events3_c: |-
-          ต่อบล็อกนี้กับบล็อก `เมื่อเรียกใช้งาน`:
-          <xml>
-          <block type="studio_moveDistance">
-
-          <title name="SPRITE">0</title>
-          <title name="DIR">2</title>
-          <title name="DISTANCE">25</title>
-          </block>
-          </xml>
       courseC_PlayLab_events4:
         courseC_PlayLab_events4_b: จอร์จต้องขยับไปทางขวา 100 พิกเซลเพื่อไปให้ถึงแมว
         courseC_PlayLab_events4_a: เพื่อแก้ปริศนานี้ คุณจะต้องต่อบล็อก `นักแสดง__พูด`
@@ -2243,15 +2226,6 @@ th-TH:
 
           \*\* ไปผจญภัยกัน \*\*-เปลี่ยนพื้นหลังแล้วมีผู้เล่นพูดเกี่ยวกับว่าตอนนี้พวกเขาอยู่ที่ไหน
       courseC_PlayLab_eventsFP_2018:
-        idea1: |-
-          -   ต้องการไอเดียหรือไม่? \*
-
-          \*\* ใครน่ะ? \*\* ทำให้ผู้แสดงปรากฏขึ้นด้วยภาพแบบสุ่ม ดังนั้นไม่มีใครรู้ว่าผู้ที่แสดงคนต่อไปจะเป็นใคร
-        idea2: |-
-          -   ต้องการไอเดียหรือไม่? \*
-
-          \*\* ไปผจญภัยกัน \*\*-เปลี่ยนพื้นหลังแล้วมีผู้เล่นพูดเกี่ยวกับว่าตอนนี้พวกเขาอยู่ที่ไหน
-      courseC_PlayLab_eventsFP_2019:
         idea1: |-
           -   ต้องการไอเดียหรือไม่? \*
 

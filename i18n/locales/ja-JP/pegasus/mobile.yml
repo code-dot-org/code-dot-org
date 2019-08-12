@@ -1355,6 +1355,7 @@
   sphero_beyond_longdescription: "SPRK のレッスンなら、ご自身の立場が先生であろうと保護者であろうと、子どもたちに楽しくロボットのプログラミングについて学ぶ機会を提供できます。その過程で、算数と科学のスキルも身につきます。"
   compatibility_hide_this_warning: "警告を消す"
   compatibility_unsupported_browser: "お使いのブラウザーはサポートされていません。お使いのブラウザーを<a href='%{supported_browsers_url}', target='_blank'> サポートされているブラウザーのいずれか</a> にアップグレードしてください。ページを表示してみてもよいですが、うまく動かないかもしれません。"
+  compatibility_unsupported_browser_markdown: "お使いのブラウザーはサポートされていません。お使いのブラウザーを<a href='%{supported_browsers_url}', target='_blank'> サポートされているブラウザーのいずれか</a> にアップグレードしてください。ページを表示してみてもよいですが、うまく動かないかもしれません。"
   flappy_shortcode: "パタパタ"
   header_home: "ホーム"
   header_my_dashboard: "マイ ダッシュボード"

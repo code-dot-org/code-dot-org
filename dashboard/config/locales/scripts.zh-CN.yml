@@ -3,13 +3,16 @@ zh-CN:
   data:
     script:
       category:
+        csd_category_name: 计算机科学发现 (' 17-' 18)
         csd_2018_category_name: 计算机科学发现 (' 18-' 19)
+        csd_2019_category_name: 计算机科学发现 (' 19-' 20)
         csf_category_name: 计算机科学基本原理
         csf_2018_category_name: 计算机科学基础课程（2018）
         csf_international_category_name: 计算机基础国际版
-        csf2_draft_category_name: 开发中：课程A - F
+        csf2_draft_category_name: 开发中：课程 A - F
         csp_category_name: 15-16 计算机原理
         csp_2018_category_name: 计算机科学原理 ('18-'19)
+        csp_2019_category_name: 计算机科学原理 ('19-'20)
         cspexams_category_name: 计算机原理练习测试
         csp17_category_name: 计算机原理('17-'18)
         full_course_category_name: 完整课程
@@ -10377,6 +10380,14 @@ zh-CN:
               name: 新的阶段
             Number Systems:
               name: 数字系统
+            Sending Text:
+              name: 发送文本
+            Sending Binary Messages:
+              name: 发送二进制消息
+            Sending Binary Messages with the Internet Simulator:
+              name: 在互联网模拟器上发送二进制消息
+            Intellectual Property:
+              name: 知识产权
           title: 计算机科学原理 单元1 试验
         csd-tests:
           stages:
@@ -11206,3 +11217,23 @@ zh-CN:
               name: 第一阶段
             new stage:
               name: 新的阶段
+        csl-vn:
+          stages:
+            Sequencing with Scrat:
+              name: 斯奎特和序列
+            Programming in Maze:
+              name: 迷宫编程
+            Programming with Rey and BB-8:
+              name: 与雷伊，BB-8一起编程
+            Loops in Ice Age:
+              name: 冰河时代里的循环
+            Ocean Scene with Loops:
+              name: 艺术家里的循环
+        dlp19-csd-mod-fit:
+          stages:
+            Deeper Learning Overview:
+              name: 更深的学习概览
+        dlp19-csp-mod-fit:
+          stages:
+            Deeper Learning Overview:
+              name: 更深的学习概览

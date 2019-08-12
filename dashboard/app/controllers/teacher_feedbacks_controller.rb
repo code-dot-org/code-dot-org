@@ -7,7 +7,10 @@ class TeacherFeedbacksController < ApplicationController
   # student on any level
   def index
     @feedbacks_as_student = @teacher_feedbacks.select do |feedback|
-      feedback.student_id == current_user.id && User.find(feedback.teacher_id).authorized_teacher?
+      feedback.student_id == current_user.id && UserPermission.where(
+        user_id: feedback.teacher_id,
+        permission: 'authorized_teacher'
+      )
     end
 
     @feedbacks_as_student_with_level_info = @feedbacks_as_student.map {|feedback| feedback.attributes.merge(feedback&.script_level&.summary_for_feedback)}

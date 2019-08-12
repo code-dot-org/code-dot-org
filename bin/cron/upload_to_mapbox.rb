@@ -45,5 +45,5 @@ def upload_maptiles(tileset_path, tileset_name)
       name: "codeorg.#{tileset_name}"
     }
   )
-  return response_code == 200
+  return response_code == 200 || response_code == 201
 end
