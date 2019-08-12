@@ -1860,6 +1860,12 @@ applabCommands.readRecords = function(opts) {
 };
 
 applabCommands.handleReadRecords = function(opts, records) {
+  if (records === null) {
+    outputError(
+      opts.table +
+        ' is not a data set in this project. Check the Data tab to see the names of your tables.'
+    );
+  }
   if (opts.onSuccess) {
     opts.onSuccess.call(null, records);
   }
