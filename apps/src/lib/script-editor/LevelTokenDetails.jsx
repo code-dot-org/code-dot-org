@@ -95,13 +95,9 @@ export class UnconnectedLevelTokenDetails extends Component {
     stagePosition: PropTypes.number.isRequired
   };
 
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      showBlankProgression: false
-    };
-  }
+  state = {
+    showBlankProgression: false
+  };
 
   componentWillMount() {
     this.levelKeyOptions = _.map(this.props.levelKeyList, (label, value) => ({
@@ -193,7 +189,7 @@ export class UnconnectedLevelTokenDetails extends Component {
               defaultValue={this.props.level.skin}
               type="text"
               style={styles.textInput}
-              onChange={this.handleFieldChange.bind(this, 'skin')}
+              onChange={event => this.handleFieldChange('skin', event)}
             />
             <div style={{float: 'right'}}>
               <span style={styles.levelFieldLabel}>Video key</span>
@@ -201,7 +197,7 @@ export class UnconnectedLevelTokenDetails extends Component {
                 defaultValue={this.props.level.videoKey}
                 type="text"
                 style={styles.textInput}
-                onChange={this.handleFieldChange.bind(this, 'videoKey')}
+                onChange={event => this.handleFieldChange('videoKey', event)}
               />
             </div>
             <div style={{clear: 'both'}} />
@@ -210,7 +206,9 @@ export class UnconnectedLevelTokenDetails extends Component {
               defaultValue={this.props.level.conceptDifficulty}
               type="text"
               style={styles.textInput}
-              onChange={this.handleFieldChange.bind(this, 'conceptDifficulty')}
+              onChange={event =>
+                this.handleFieldChange('conceptDifficulty', event)
+              }
             />
             <div style={{float: 'right'}}>
               <span style={styles.levelFieldLabel}>Concepts</span>
@@ -243,7 +241,7 @@ export class UnconnectedLevelTokenDetails extends Component {
                 {id !== this.props.level.activeId && (
                   <span style={styles.removeVariant}>
                     <button
-                      onMouseDown={this.handleRemoveVariant.bind(this, id)}
+                      onMouseDown={() => this.handleRemoveVariant(id)}
                       className="btn"
                       style={styles.button}
                       type="button"
@@ -275,11 +273,11 @@ export class UnconnectedLevelTokenDetails extends Component {
         {(this.props.level.progression || this.state.showBlankProgression) && (
           <div style={styles.progression}>
             <hr style={styles.divider} />
-            <span style={{...styles.levelFieldLabel}}>Progression name:</span>
+            <span style={styles.levelFieldLabel}>Progression name:</span>
             <span style={styles.levelSelect}>
               <input
                 type="text"
-                onChange={this.handleFieldChange.bind(this, 'progression')}
+                onChange={event => this.handleFieldChange('progression', event)}
                 value={this.props.level.progression}
                 style={styles.textInput}
                 data-field-name="progression"
