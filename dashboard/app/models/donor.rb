@@ -20,7 +20,7 @@ class Donor < ActiveRecord::Base
   include Seeded
 
   def self.setup
-    donors = CSV.read('../pegasus/data/cdo-donors.csv', headers: true).map.with_index(1) do |row, id|
+    donors = CSV.read(pegasus_dir('data/cdo-donors.csv'), headers: true).map.with_index(1) do |row, id|
       {
         id: id,
         name: row['name_s'],
