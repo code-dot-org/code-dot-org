@@ -1748,130 +1748,53 @@ is-IS:
           tröppumynstrið. \n\nHin `frá` lykkjan þarf aðeins eina venjulega lykkju
           til að búa til `teljari` mikið af hunangi."
         Course_4_SCFL_1_d: |-
-          **Lausn:**
-
+          \*Lausn:\*\*
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
-          <block type="controls_for" inline="true">
-          <title name="VAR">counter</title>
-          <value name="FROM">
-          <block type="math_number">
-          <title name="NUM">1</title>
-          </block>
-          </value>
-          <value name="TO">
-          <block type="math_number">
-          <title name="NUM">3</title>
-          </block>
-          </value>
-          <value name="BY">
-          <block type="math_number">
-          <title name="NUM">1</title>
-          </block>
-          </value>
+          <block type="controls_repeat_dropdown">
+
+          <title name="TIMES" config="3-10">3</title>
           <statement name="DO">
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="variables_get">
-          <title name="VAR">counter</title>
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
           </block>
-          </value>
-          <statement name="DO">
-          <block type="maze_moveForward"/>
-          </statement>
-          <next>
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="variables_get">
-          <title name="VAR">counter</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="maze_nectar"/>
           </statement>
           <next>
           <block type="maze_turn">
           <title name="DIR">turnLeft</title>
           <next>
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="variables_get">
-          <title name="VAR">counter</title>
-          </block>
-          </value>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
           <statement name="DO">
-          <block type="maze_moveForward"/>
-          </statement>
+          <block type="collector_collect">
           <next>
-          <block type="maze_turn">
-          <title name="DIR">turnRight</title>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
           </block>
           </statement>
-          <next>
-          <block type="maze_turn">
-          <title name="DIR">turnRight</title>
-          <next>
-          <block type="maze_turn">
-          <title name="DIR">turnRight</title>
-          <next>
-          <block type="controls_for" inline="true">
-          <title name="VAR">counter</title>
-          <value name="FROM">
-          <block type="math_number">
-          <title name="NUM">2</title>
-          </block>
-          </value>
-          <value name="TO">
-          <block type="math_number">
-          <title name="NUM">10</title>
-          </block>
-          </value>
-          <value name="BY">
-          <block type="math_number">
-          <title name="NUM">2</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="maze_moveForward">
           <next>
           <block type="maze_turn">
           <title name="DIR">turnLeft</title>
           <next>
-          <block type="maze_moveForward">
-          <next>
-          <block type="maze_turn">
-          <title name="DIR">turnRight</title>
-          <next>
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="variables_get">
-          <title name="VAR">counter</title>
-          </block>
-          </value>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
           <statement name="DO">
-          <block type="maze_honey"/>
-          </statement>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
           </block>
           </statement>
           </block>
           </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
           </block>
           </next>
           </block>
@@ -2160,122 +2083,45 @@ is-IS:
         Course_4_SCFL_3_c: Eftir hvern ferning máttu ekki gleyma að hoppa aftur á
           bak, snúa, hoppa aftur og snúa svo til baka!
         Course_4_SCFL_3_d: |-
-          **Lausn:**
-
+          \*Lausn:\*\*
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
-          <block type="draw_width" inline="false">
-          <value name="WIDTH">
-          <block type="math_number">
-          <title name="NUM">1</title>
-          </block>
-          </value>
-          <next>
-          <block type="draw_colour" inline="true" id="draw-color">
-          <value name="COLOUR">
-          <block type="colour_picker">
-          <title name="COLOUR">#0000cd</title>
-          </block>
-          </value>
-          <next>
-          <block type="controls_for_counter" inline="true">
-          <mutation counter="counter"/>
-          <value name="FROM">
-          <block type="math_number">
-          <title name="NUM">50</title>
-          </block>
-          </value>
-          <value name="TO">
-          <block type="math_number">
-          <title name="NUM">350</title>
-          </block>
-          </value>
-          <value name="BY">
-          <block type="math_number">
-          <title name="NUM">50</title>
-          </block>
-          </value>
+          <block type="controls_repeat_dropdown">
+
+          <title name="TIMES" config="3-10">3</title>
           <statement name="DO">
-          <block type="alpha" inline="true" id="alpha">
-          <value name="VALUE">
-          <block type="math_arithmetic" inline="true">
-          <title name="OP">DIVIDE</title>
-          <value name="A">
-          <block type="variables_get">
-          <title name="VAR">teljari</title>
-          </block>
-          </value>
-          <value name="B">
-          <block type="math_number">
-          <title name="NUM">2</title>
-          </block>
-          </value>
-          </block>
-          </value>
-          <next>
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="math_number">
-          <title name="NUM">4</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="draw_move" inline="true">
+          <block type="maze_move">
           <title name="DIR">moveForward</title>
-          <value name="VALUE">
-          <block type="variables_get">
-          <title name="VAR">teljari</title>
-          </block>
-          </value>
-          <next>
-          <block type="draw_turn" inline="true">
-          <title name="DIR">turnRight</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">90</title>
-          </block>
-          </value>
-          </block>
-          </next>
           </block>
           </statement>
           <next>
-          <block type="jump" inline="true">
-          <title name="DIR">jumpBackward</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">25</title>
-          </block>
-          </value>
-          <next>
-          <block type="draw_turn" inline="true">
-          <title name="DIR">turnRight</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">90</title>
-          </block>
-          </value>
-          <next>
-          <block type="jump" inline="true">
-          <title name="DIR">jumpBackward</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">25</title>
-          </block>
-          </value>
-          <next>
-          <block type="draw_turn" inline="true">
+          <block type="maze_turn">
           <title name="DIR">turnLeft</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">90</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="collector_collect">
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
           </block>
-          </value>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
           </block>
-          </next>
-          </block>
-          </next>
+          </statement>
           </block>
           </next>
           </block>
@@ -2411,9 +2257,61 @@ is-IS:
           Stilltu litinn innan í `frá` lykkjunni, farðu áfram og snúðu svo.
         Course_4_SCFL_6_c: "`Frá` lykkjan fer frá 5 til 250 hlaupandi á 2. "
         Course_4_SCFL_6_d: |-
-          **Lausn:**
+          \*Lausn:\*\*
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="controls_repeat_dropdown">
 
-          ![Solution Blocks](https://images.code.org/a61c16d76d876d9c26ebcaebef3f97a2-image-1469726730055.png)
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="collector_collect">
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       Course 4 SCFL 7:
         Course_4_SCFL_7_a: Litabreytingunni er stjórnað með `stilla lit með rauðu,
           grænu, bláu` kubbnum. Rautt hefur alltaf gildið `teljari`, grænt er alltaf
@@ -8976,13 +8874,12 @@ is-IS:
         courseC_PlayLab_events3_b: Er til kubbur í verkfærakassanum sem lítur út fyrir
           að geta fært leikmann?
         courseC_PlayLab_events3_c: |-
-          Festu þennan kubb við `þegar keyrt` kubbinn:
+          Tengdu þennan kubb við `þegar keyrt` kubbinn:
 
           <xml>
-          <block type="studio_moveDistance">
+          <block type="studio_saySpriteChoices">
           <title name="SPRITE">0</title>
-          <title name="DIR">2</title>
-          <title name="DISTANCE">25</title>
+          <title name="VALUE">Hæ þú</title>
           </block>
           </xml>
       courseC_PlayLab_events3_2019:
@@ -8991,13 +8888,12 @@ is-IS:
         courseC_PlayLab_events3_b: Er til kubbur í verkfærakassanum sem lítur út fyrir
           að geta fært leikmann?
         courseC_PlayLab_events3_c: |-
-          Festu þennan kubb við `þegar keyrt` kubbinn:
+          Tengdu þennan kubb við `þegar keyrt` kubbinn:
 
           <xml>
-          <block type="studio_moveDistance">
+          <block type="studio_saySpriteChoices">
           <title name="SPRITE">0</title>
-          <title name="DIR">2</title>
-          <title name="DISTANCE">25</title>
+          <title name="VALUE">Hæ þú</title>
           </block>
           </xml>
       courseC_PlayLab_events4:
@@ -15399,122 +15295,45 @@ is-IS:
         courseF_artist_for_challenge1_c: Eftir hvern ferning máttu ekki gleyma að
           hoppa aftur á bak, snúa, hoppa aftur og snúa svo til baka!
         courseF_artist_for_challenge1_d: |-
-          **Lausn:**
-
+          \*Lausn:\*\*
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
-          <block type="draw_width" inline="false">
-          <value name="WIDTH">
-          <block type="math_number">
-          <title name="NUM">1</title>
-          </block>
-          </value>
-          <next>
-          <block type="draw_colour" inline="true" id="draw-color">
-          <value name="COLOUR">
-          <block type="colour_picker">
-          <title name="COLOUR">#0000cd</title>
-          </block>
-          </value>
-          <next>
-          <block type="controls_for_counter" inline="true">
-          <mutation counter="counter"/>
-          <value name="FROM">
-          <block type="math_number">
-          <title name="NUM">50</title>
-          </block>
-          </value>
-          <value name="TO">
-          <block type="math_number">
-          <title name="NUM">350</title>
-          </block>
-          </value>
-          <value name="BY">
-          <block type="math_number">
-          <title name="NUM">50</title>
-          </block>
-          </value>
+          <block type="controls_repeat_dropdown">
+
+          <title name="TIMES" config="3-10">3</title>
           <statement name="DO">
-          <block type="alpha" inline="true" id="alpha">
-          <value name="VALUE">
-          <block type="math_arithmetic" inline="true">
-          <title name="OP">DIVIDE</title>
-          <value name="A">
-          <block type="variables_get">
-          <title name="VAR">teljari</title>
-          </block>
-          </value>
-          <value name="B">
-          <block type="math_number">
-          <title name="NUM">2</title>
-          </block>
-          </value>
-          </block>
-          </value>
-          <next>
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="math_number">
-          <title name="NUM">4</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="draw_move" inline="true">
+          <block type="maze_move">
           <title name="DIR">moveForward</title>
-          <value name="VALUE">
-          <block type="variables_get">
-          <title name="VAR">teljari</title>
-          </block>
-          </value>
-          <next>
-          <block type="draw_turn" inline="true">
-          <title name="DIR">turnRight</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">90</title>
-          </block>
-          </value>
-          </block>
-          </next>
           </block>
           </statement>
           <next>
-          <block type="jump" inline="true">
-          <title name="DIR">jumpBackward</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">25</title>
-          </block>
-          </value>
-          <next>
-          <block type="draw_turn" inline="true">
-          <title name="DIR">turnRight</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">90</title>
-          </block>
-          </value>
-          <next>
-          <block type="jump" inline="true">
-          <title name="DIR">jumpBackward</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">25</title>
-          </block>
-          </value>
-          <next>
-          <block type="draw_turn" inline="true">
+          <block type="maze_turn">
           <title name="DIR">turnLeft</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">90</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="collector_collect">
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
           </block>
-          </value>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
           </block>
-          </next>
-          </block>
-          </next>
+          </statement>
           </block>
           </next>
           </block>
@@ -15539,122 +15358,45 @@ is-IS:
         courseF_artist_for_challenge1_c: Eftir hvern ferning máttu ekki gleyma að
           hoppa aftur á bak, snúa, hoppa aftur og snúa svo til baka!
         courseF_artist_for_challenge1_d: |-
-          **Lausn:**
-
+          \*Lausn:\*\*
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
-          <block type="draw_width" inline="false">
-          <value name="WIDTH">
-          <block type="math_number">
-          <title name="NUM">1</title>
-          </block>
-          </value>
-          <next>
-          <block type="draw_colour" inline="true" id="draw-color">
-          <value name="COLOUR">
-          <block type="colour_picker">
-          <title name="COLOUR">#0000cd</title>
-          </block>
-          </value>
-          <next>
-          <block type="controls_for_counter" inline="true">
-          <mutation counter="counter"/>
-          <value name="FROM">
-          <block type="math_number">
-          <title name="NUM">50</title>
-          </block>
-          </value>
-          <value name="TO">
-          <block type="math_number">
-          <title name="NUM">350</title>
-          </block>
-          </value>
-          <value name="BY">
-          <block type="math_number">
-          <title name="NUM">50</title>
-          </block>
-          </value>
+          <block type="controls_repeat_dropdown">
+
+          <title name="TIMES" config="3-10">3</title>
           <statement name="DO">
-          <block type="alpha" inline="true" id="alpha">
-          <value name="VALUE">
-          <block type="math_arithmetic" inline="true">
-          <title name="OP">DIVIDE</title>
-          <value name="A">
-          <block type="variables_get">
-          <title name="VAR">teljari</title>
-          </block>
-          </value>
-          <value name="B">
-          <block type="math_number">
-          <title name="NUM">2</title>
-          </block>
-          </value>
-          </block>
-          </value>
-          <next>
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="math_number">
-          <title name="NUM">4</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="draw_move" inline="true">
+          <block type="maze_move">
           <title name="DIR">moveForward</title>
-          <value name="VALUE">
-          <block type="variables_get">
-          <title name="VAR">teljari</title>
-          </block>
-          </value>
-          <next>
-          <block type="draw_turn" inline="true">
-          <title name="DIR">turnRight</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">90</title>
-          </block>
-          </value>
-          </block>
-          </next>
           </block>
           </statement>
           <next>
-          <block type="jump" inline="true">
-          <title name="DIR">jumpBackward</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">25</title>
-          </block>
-          </value>
-          <next>
-          <block type="draw_turn" inline="true">
-          <title name="DIR">turnRight</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">90</title>
-          </block>
-          </value>
-          <next>
-          <block type="jump" inline="true">
-          <title name="DIR">jumpBackward</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">25</title>
-          </block>
-          </value>
-          <next>
-          <block type="draw_turn" inline="true">
+          <block type="maze_turn">
           <title name="DIR">turnLeft</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">90</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="collector_collect">
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
           </block>
-          </value>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
           </block>
-          </next>
-          </block>
-          </next>
+          </statement>
           </block>
           </next>
           </block>
@@ -17145,130 +16887,53 @@ is-IS:
           til að búa til stækkandi tröppumynstrið. \n\nHin `frá` lykkjan þarf aðeins
           eina venjulega lykkju til að búa til `teljari` mikið af hunangi."
         courseF_bee_for_challenge2_d: |-
-          **Lausn:**
-
+          \*Lausn:\*\*
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
-          <block type="controls_for" inline="true">
-          <title name="VAR">counter</title>
-          <value name="FROM">
-          <block type="math_number">
-          <title name="NUM">1</title>
-          </block>
-          </value>
-          <value name="TO">
-          <block type="math_number">
-          <title name="NUM">3</title>
-          </block>
-          </value>
-          <value name="BY">
-          <block type="math_number">
-          <title name="NUM">1</title>
-          </block>
-          </value>
+          <block type="controls_repeat_dropdown">
+
+          <title name="TIMES" config="3-10">3</title>
           <statement name="DO">
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="variables_get">
-          <title name="VAR">counter</title>
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
           </block>
-          </value>
-          <statement name="DO">
-          <block type="maze_moveForward"/>
-          </statement>
-          <next>
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="variables_get">
-          <title name="VAR">counter</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="maze_nectar"/>
           </statement>
           <next>
           <block type="maze_turn">
           <title name="DIR">turnLeft</title>
           <next>
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="variables_get">
-          <title name="VAR">counter</title>
-          </block>
-          </value>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
           <statement name="DO">
-          <block type="maze_moveForward"/>
-          </statement>
+          <block type="collector_collect">
           <next>
-          <block type="maze_turn">
-          <title name="DIR">turnRight</title>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
           </block>
           </statement>
-          <next>
-          <block type="maze_turn">
-          <title name="DIR">turnRight</title>
-          <next>
-          <block type="maze_turn">
-          <title name="DIR">turnRight</title>
-          <next>
-          <block type="controls_for" inline="true">
-          <title name="VAR">counter</title>
-          <value name="FROM">
-          <block type="math_number">
-          <title name="NUM">2</title>
-          </block>
-          </value>
-          <value name="TO">
-          <block type="math_number">
-          <title name="NUM">10</title>
-          </block>
-          </value>
-          <value name="BY">
-          <block type="math_number">
-          <title name="NUM">2</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="maze_moveForward">
           <next>
           <block type="maze_turn">
           <title name="DIR">turnLeft</title>
           <next>
-          <block type="maze_moveForward">
-          <next>
-          <block type="maze_turn">
-          <title name="DIR">turnRight</title>
-          <next>
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="variables_get">
-          <title name="VAR">counter</title>
-          </block>
-          </value>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
           <statement name="DO">
-          <block type="maze_honey"/>
-          </statement>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
           </block>
           </statement>
           </block>
           </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
           </block>
           </next>
           </block>
@@ -17287,130 +16952,53 @@ is-IS:
           til að búa til stækkandi tröppumynstrið. \n\nHin `frá` lykkjan þarf aðeins
           eina venjulega lykkju til að búa til `teljari` mikið af hunangi."
         courseF_bee_for_challenge2_d: |-
-          **Lausn:**
-
+          \*Lausn:\*\*
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
-          <block type="controls_for" inline="true">
-          <title name="VAR">counter</title>
-          <value name="FROM">
-          <block type="math_number">
-          <title name="NUM">1</title>
-          </block>
-          </value>
-          <value name="TO">
-          <block type="math_number">
-          <title name="NUM">3</title>
-          </block>
-          </value>
-          <value name="BY">
-          <block type="math_number">
-          <title name="NUM">1</title>
-          </block>
-          </value>
+          <block type="controls_repeat_dropdown">
+
+          <title name="TIMES" config="3-10">3</title>
           <statement name="DO">
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="variables_get">
-          <title name="VAR">counter</title>
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
           </block>
-          </value>
-          <statement name="DO">
-          <block type="maze_moveForward"/>
-          </statement>
-          <next>
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="variables_get">
-          <title name="VAR">counter</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="maze_nectar"/>
           </statement>
           <next>
           <block type="maze_turn">
           <title name="DIR">turnLeft</title>
           <next>
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="variables_get">
-          <title name="VAR">counter</title>
-          </block>
-          </value>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
           <statement name="DO">
-          <block type="maze_moveForward"/>
-          </statement>
+          <block type="collector_collect">
           <next>
-          <block type="maze_turn">
-          <title name="DIR">turnRight</title>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
           </block>
           </statement>
-          <next>
-          <block type="maze_turn">
-          <title name="DIR">turnRight</title>
-          <next>
-          <block type="maze_turn">
-          <title name="DIR">turnRight</title>
-          <next>
-          <block type="controls_for" inline="true">
-          <title name="VAR">counter</title>
-          <value name="FROM">
-          <block type="math_number">
-          <title name="NUM">2</title>
-          </block>
-          </value>
-          <value name="TO">
-          <block type="math_number">
-          <title name="NUM">10</title>
-          </block>
-          </value>
-          <value name="BY">
-          <block type="math_number">
-          <title name="NUM">2</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="maze_moveForward">
           <next>
           <block type="maze_turn">
           <title name="DIR">turnLeft</title>
           <next>
-          <block type="maze_moveForward">
-          <next>
-          <block type="maze_turn">
-          <title name="DIR">turnRight</title>
-          <next>
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="variables_get">
-          <title name="VAR">counter</title>
-          </block>
-          </value>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
           <statement name="DO">
-          <block type="maze_honey"/>
-          </statement>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
           </block>
           </statement>
           </block>
           </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
           </block>
           </next>
           </block>

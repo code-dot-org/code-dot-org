@@ -357,6 +357,32 @@ nl-NL:
         schapen te bereiken.
       Overworld Move to Sheep_2019: Voeg een tweede "beweeg vooruit"-commando toe
         om de schapen te bereiken.
+      Standalone_Artist_2: Teken deze diamant met hoeken van 120 en 60 graden en zijden
+        van 150 pixels.
+      Standalone_Artist_3: Kan je deze zeshoek tekenen met zijden van 100 pixels lang
+        en hoeken van 60 graden?
+      Standalone_Artist_4: Je hebt nu een nieuw blok om mee te spelen, een herhaal
+        lus. Dit zal een aantal opdrachten herhalen. Wat gebeurt er als je deze opdrachten
+        6 keer herhaalt?
+      Standalone_Artist_5: Hoeveel keer moet de diamant in een lus gestopt worden
+        om de bloem te tekenen?
+      Standalone_Artist_5.5: 'Kijk hoe we de diamant code vereenvoudigd hebben door
+        de code te veranderen in een lus. Je kan de ganse reeks 12 keer herhalen om
+        een bloem te tekenen. Tip: Je moet 30 graden draaien na je diamant lus zodat
+        je niet over dezelfde diamant blijft tekenen.'
+      Standalone_Artist_6: 'Gebruik de zeshoek code 6 maal in een lus om dit ontwerp
+        te tekenen. Hoeveel graden moet je iedere keer draaien. Tip: deel het aantal
+        graden in een cirkel door het aantal maal dat je een lus gebruikt.'
+      Standalone_Artist_7: 'Een functie is een ander programmeer-hulpmiddel wat vermijdt
+        dat je jezelf herhaalt. Deze functie tekent een bloem, je kan deze gelijk
+        waneer gebruiken wanneer je een bloem wil tekenen. Gebruik deze en de nieuwe
+        spring blok om bloemen te tekenen. Tip: De bloemen staan 150 pixels van mekaar'
+      Standalone_Artist_8: Hier is de functie "teken een vorm" die we geprogrammeerd
+        hebben om zeshoeken te tekenen. voer de code uit om te zien wat deze doet
+        en experimenteer vervolgens met de functie om te zien wat er gebeurt. Kan
+        je er patronen met vierkanten, driehoeken of achthoeken mee tekenen?
+      Standalone_Artist_9: Nu mag je maken wat je wil! Je hebt zelfs een lege functie
+        die je kan laten doen wat je maar wilt!
       course1_maze_debugging_challenge2: Debug dit level. Dit zijn de correct blokken,
         maar ze staan in de verkeerde volgorde!
       course2_collector_prog_challenge1: Kijk aandachtig! Kan jij alle _10_ stukken

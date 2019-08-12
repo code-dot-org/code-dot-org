@@ -810,6 +810,14 @@ ro-RO:
       course1_artist_loops_challenge3:
         courseA_artist_loops_challenge2_c: Veţi avea nevoie de o MULȚIME de blocuri
           în interiorul buclei pentru această provocare.
+      course1_collector_loops_challenge3:
+        courseB_collector_loops_challenge1_c: |-
+          Mutați Est de două ori între fiecare traseu.
+          <xml>
+          <block type="maze_moveEast"><next>
+          <block type="maze_moveEast"></block></next></block>
+          </xml>
+          Puteți face acest lucru cu doar 14 blocuri. Faceți clic pentru încă un indiciu pentru a vedea o soluție.
       course2_artist_nestedLoops_challenge1:
         courseD_artist_nestedLoops_challenge1_b: Adăugați codul pentru a desena un
           triunghi în bucla dvs. imbricată. Utilizați întoarceri de 120 grade pentru

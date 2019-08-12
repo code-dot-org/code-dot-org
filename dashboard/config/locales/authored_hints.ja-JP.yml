@@ -298,6 +298,7 @@ ja-JP:
       4-5 Artist Patterns 5:
         4-5_Artist_Patterns_5_a: ひとつのひし形を書き終えたとき、アーティストは進むべき方向と、180度反対を向いています。
       4-5 Bee Conditionals 6:
+        4-5 Bee Conditionals 6_a: ワークスペース上のブロックだけを使ってこのパズルが解けるかな？ どんな順番で並べればいいかな？
         4-5 Bee Conditionals 6_b: このパズルをとくためには、花のミツが**0**つ以上あることを、**3**回以上調べていることをチェックしてください。
       4-5 Maze 10:
         4-5_Maze_10_a: |-
@@ -343,7 +344,6 @@ ja-JP:
           変数を上手く使って、ハチをうごかして、花のミツを集めよう。
         Course_4_SCFL_1_c: ハチミツを作るには、「カウントする」ブロックを使って、2から10まで2ずつカウントしてね。 `counter`
           変数を上手く使って、ハチミツを作ろう。
-        Course_4_SCFL_1_d: 答えは先生に聞いてくださいね。
       Course 4 SCFL 1a:
         Course_4_SCFL_1a_b: まず、花のミツを全部あつめて、そのあと、ハチミツを作りながら帰って来ます。
       Course 4 SCFL 1b:
@@ -360,7 +360,6 @@ ja-JP:
           一番小さい四角形は、一辺 50 ピクセルの長さで、50 ピクセルずつ大きくなっていきます。
         Course_4_SCFL_3_b: ペンのアルファ値（とうめいさ）は `counter` ÷ 2 です。
         Course_4_SCFL_3_c: 四角形を一つ書いたら、後ろにジャンプします。
-        Course_4_SCFL_3_d: 答えは先生に聞いてくださいね。
       Course 4 SCFL 4:
         Course_4_SCFL_4_a: ペンの太さは１です。色は、赤が `counter`、みどりが 255 - `counter`、青が 255 、これらをまぜた色にします。
         Course_4_SCFL_4_b: 図形は四角形の組み合わせです。一番小さい四角形の一辺は、5ピクセル、一番大きい四角形は200ピクセル、5ピクセルずつ大きくしていきます。
@@ -369,7 +368,6 @@ ja-JP:
         Course_4_SCFL_6_a: 色は、赤は 255、みどりは `counter` 、青は 255 -  `counter` で、これらをまぜた色にしてください。
         Course_4_SCFL_6_b: 色を かえたら、 `counter`ピクセルの線を引き、右に80度まがります。
         Course_4_SCFL_6_c: "「カウントする」ブロック使って、 5から250まで 2ずつカウントします。 "
-        Course_4_SCFL_6_d: 答えは先生に聞いてくださいね。
       Course 4 SCFL 7:
         Course_4_SCFL_7_a: |-
           「アルファ値は20」ブロックを、はじめに一度だけ実行するようにして下さい。
@@ -933,14 +931,12 @@ ja-JP:
           一番小さい四角形は、一辺 50 ピクセルの長さで、50 ピクセルずつ大きくなっていきます。
         courseF_artist_for_challenge1_b: ペンのアルファ値（とうめいさ）は `counter` ÷ 2 です。
         courseF_artist_for_challenge1_c: 四角形を一つ書いたら、後ろにジャンプします。
-        courseF_artist_for_challenge1_d: 答えは先生に聞いてくださいね。
       courseF_artist_for_challenge1_2019:
         courseF_artist_for_challenge1_a: |-
           ペンの太さは 1 です。
           一番小さい四角形は、一辺 50 ピクセルの長さで、50 ピクセルずつ大きくなっていきます。
         courseF_artist_for_challenge1_b: ペンのアルファ値（とうめいさ）は `counter` ÷ 2 です。
         courseF_artist_for_challenge1_c: 四角形を一つ書いたら、後ろにジャンプします。
-        courseF_artist_for_challenge1_d: 答えは先生に聞いてくださいね。
       courseF_artist_for_challenge2:
         courseF_artist_for_challenge2_c: "「カウントする」ブロック使って、 5から250まで 2ずつカウントします。 "
         courseF_artist_for_challenge2_a: 色は、赤は 255、みどりは `counter` 、青は 255 -  `counter`
@@ -990,14 +986,12 @@ ja-JP:
           `counter` 変数を上手く使って、ハチをうごかして、花のミツを集めよう。
         courseF_bee_for_challenge2_c: ハチミツを作るには、「カウントする」ブロックを使って、2から10まで2ずつカウントしてね。
           `counter` 変数を上手く使って、ハチミツを作ろう。
-        courseF_bee_for_challenge2_d: 答えは先生に聞いてくださいね。
       courseF_bee_for_challenge2_2019:
         courseF_bee_for_challenge2_a: まず、花のミツを全部あつめて、そのあと、ハチミツを作りながら帰って来ます。
         courseF_bee_for_challenge2_b: 花のミツをとるには、「カウントする」ブロックを使って、１から３まで１ずつカウントしてね。
           `counter` 変数を上手く使って、ハチをうごかして、花のミツを集めよう。
         courseF_bee_for_challenge2_c: ハチミツを作るには、「カウントする」ブロックを使って、2から10まで2ずつカウントしてね。
           `counter` 変数を上手く使って、ハチミツを作ろう。
-        courseF_bee_for_challenge2_d: 答えは先生に聞いてくださいね。
       courseF_bee_functions8a:
         courseF_bee_functions8a_a: |-
           パズルが難しいと感じたら関数を一度に少しずつ作ってみてください。

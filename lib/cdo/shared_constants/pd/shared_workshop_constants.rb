@@ -21,7 +21,15 @@ module Pd
     SUBJECT_TEACHER_CON = 'Code.org TeacherCon'.freeze
     SUBJECT_NAMES = {
       SUBJECT_FIT: SUBJECT_FIT = 'Code.org Facilitator Weekend'.freeze,
-      SUBJECT_SUMMER_WORKSHOP: SUBJECT_SUMMER_WORKSHOP = '5-day Summer'.freeze
+      SUBJECT_SUMMER_WORKSHOP: SUBJECT_SUMMER_WORKSHOP = '5-day Summer'.freeze,
+      SUBJECT_VIRTUAL_1: SUBJECT_VIRTUAL_1 = 'Virtual Workshop 1'.freeze,
+      SUBJECT_VIRTUAL_2: SUBJECT_VIRTUAL_2 = 'Virtual Workshop 2'.freeze,
+      SUBJECT_VIRTUAL_3: SUBJECT_VIRTUAL_3 = 'Virtual Workshop 3'.freeze,
+      SUBJECT_VIRTUAL_4: SUBJECT_VIRTUAL_4 = 'Virtual Workshop 4'.freeze,
+      SUBJECT_VIRTUAL_5: SUBJECT_VIRTUAL_5 = 'Virtual Workshop 5'.freeze,
+      SUBJECT_VIRTUAL_6: SUBJECT_VIRTUAL_6 = 'Virtual Workshop 6'.freeze,
+      SUBJECT_VIRTUAL_7: SUBJECT_VIRTUAL_7 = 'Virtual Workshop 7'.freeze,
+      SUBJECT_VIRTUAL_8: SUBJECT_VIRTUAL_8 = 'Virtual Workshop 8'.freeze
     }
     SUBJECTS = {
       COURSE_ECS => [
@@ -50,7 +58,15 @@ module Pd
         SUBJECT_CSP_WORKSHOP_5 = '2-day, Workshops 1+2: Units 3-4 and Explore Task'.freeze,
         SUBJECT_CSP_WORKSHOP_6 = '2-day, Workshops 3+4: Unit 5, Create Task, and Multiple Choice Exam'.freeze,
         SUBJECT_CSP_TEACHER_CON = SUBJECT_TEACHER_CON,
-        SUBJECT_CSP_FIT = SUBJECT_FIT
+        SUBJECT_CSP_FIT = SUBJECT_FIT,
+        SUBJECT_CSP_VIRTUAL_1 = SUBJECT_VIRTUAL_1,
+        SUBJECT_CSP_VIRTUAL_2 = SUBJECT_VIRTUAL_2,
+        SUBJECT_CSP_VIRTUAL_3 = SUBJECT_VIRTUAL_3,
+        SUBJECT_CSP_VIRTUAL_4 = SUBJECT_VIRTUAL_4,
+        SUBJECT_CSP_VIRTUAL_5 = SUBJECT_VIRTUAL_5,
+        SUBJECT_CSP_VIRTUAL_6 = SUBJECT_VIRTUAL_6,
+        SUBJECT_CSP_VIRTUAL_7 = SUBJECT_VIRTUAL_7,
+        SUBJECT_CSP_VIRTUAL_8 = SUBJECT_VIRTUAL_8
       ],
       COURSE_CSD => [
         SUBJECT_CSD_SUMMER_WORKSHOP = SUBJECT_SUMMER_WORKSHOP,
@@ -61,7 +77,15 @@ module Pd
         SUBJECT_CSD_WORKSHOP_5 = '2-day, Workshops 1+2: Units 3 and 4'.freeze,
         SUBJECT_CSD_WORKSHOP_6 = '2-day, Workshops 3+4: Units 5 and 6'.freeze,
         SUBJECT_CSD_TEACHER_CON = SUBJECT_TEACHER_CON,
-        SUBJECT_CSD_FIT = SUBJECT_FIT
+        SUBJECT_CSD_FIT = SUBJECT_FIT,
+        SUBJECT_CSD_VIRTUAL_1 = SUBJECT_VIRTUAL_1,
+        SUBJECT_CSD_VIRTUAL_2 = SUBJECT_VIRTUAL_2,
+        SUBJECT_CSD_VIRTUAL_3 = SUBJECT_VIRTUAL_3,
+        SUBJECT_CSD_VIRTUAL_4 = SUBJECT_VIRTUAL_4,
+        SUBJECT_CSD_VIRTUAL_5 = SUBJECT_VIRTUAL_5,
+        SUBJECT_CSD_VIRTUAL_6 = SUBJECT_VIRTUAL_6,
+        SUBJECT_CSD_VIRTUAL_7 = SUBJECT_VIRTUAL_7,
+        SUBJECT_CSD_VIRTUAL_8 = SUBJECT_VIRTUAL_8
       ],
       COURSE_CSF => [
         SUBJECT_CSF_101 = 'Intro'.freeze,

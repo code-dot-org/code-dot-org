@@ -144,7 +144,7 @@ Free curriculum from Google that uses online, project-based tutorials for elemen
 Build the next generation of creators using free, open-source Java courseware.
 
 ## Other lists of resources for curriculum or PD
-- AskATeacher's [Hour of Code suggestions by grade level](http://askatechteacher.com/2015/11/09/hour-of-code-3/)
+- AskATeacher's [Hour of Code suggestions by grade level](https://askatechteacher.com/hour-of-code-websites-by-grade/)
 - [LeadCS.org](http://www.leadcs.org) - a list of many resources for schools to embrace CS
 
 ## Frequently Asked Questions

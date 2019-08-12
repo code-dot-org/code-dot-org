@@ -531,8 +531,9 @@ zh-TW:
       courseA_collector_loops2: |-
         請收集 3 塊寶石！讓 Laurel 移動到寶石那兒，然後用下面的積木來收集：
         <block type="collector_collect"/>
-      courseA_collector_loops2_2018: "移動 Laurel 到寶石那兒，然後使用`收集`積來把它撿起來。\\\r\n\\\r\n收集
-        3 堆寶石以完成這個關卡。"
+      courseA_collector_loops2_2018: |-
+        請收集 3 塊寶石！讓 Laurel 移動到寶石那兒，然後用下面的積木來收集：
+        <block type="collector_collect"/>
       courseA_collector_loops3: Laurel 要怎麼只使用一個`東 -->`積木收集所有的 5 個寶藏？
       courseA_collector_loops3_2018: Laurel 要怎麼只使用一個`東 -->`積木收集所有的 5 個寶藏？
       courseA_collector_loops3_2019: Laurel 要怎麼只使用一個`東 -->`積木收集所有的 5 個寶藏？

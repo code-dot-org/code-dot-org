@@ -527,6 +527,10 @@ pt-BR:
       Begin planning your project_2018_2019:
         title: Comece planejando seu projeto
         content1: descrição aqui
+        markdown: |
+          # O Processo de Design
+
+          <iframe src="https://docs.google.com/document/d/e/2PACX-1vS2GtTZLCnFf4QYXEswvBv_XHQBoYbyBDrqABx9FCRpHBndTD0VbpC34HuN56dBgQ6I3tMgKstI3r6G/pub?embedded=true" style="width: 800px; height: 600px"></iframe>
       BigEvent-Unplugged:
         markdown: |
           # O Grande Evento
@@ -652,6 +656,24 @@ pt-BR:
       CSD U2 Design Project_2018_2019:
         title: título
         content1: descrição aqui
+      CSD U2 Expression Exemplars:
+        markdown: |
+          # Exemplos de sites pessoais
+
+          Clique nos sites abaixo para olhar sites pessoais que outros estudantes fizeram.
+
+          <a href="https://codeprojects.org/SYRw7CQJzSmAErCEF-mMXQ" target="_blank"><img src="https://images.code.org/25b7284a4cd3d26f9b989a5c3bba6485-image-1493760609250.29.54 PM.png" style="width:200px;float:left"></a>
+
+          <a href="https://codeprojects.org/y6u1W372PZh2MfzxwHQBKA" target="_blank"><img src="https://images.code.org/5929f61d14370a72e2e3b77c1948d5ed-image-1493943243592.13.32 PM.png" style="width:200px;float:left"></a>
+      CSD U2 Expression Exemplars_2018:
+        markdown: |
+          # Exemplos de sites pessoais
+
+          Clique nos sites abaixo para olhar sites pessoais que outros estudantes fizeram.
+
+          <a href="https://codeprojects.org/SYRw7CQJzSmAErCEF-mMXQ" target="_blank"><img src="https://images.code.org/25b7284a4cd3d26f9b989a5c3bba6485-image-1493760609250.29.54 PM.png" style="width:200px;float:left"></a>
+
+          <a href="https://codeprojects.org/y6u1W372PZh2MfzxwHQBKA" target="_blank"><img src="https://images.code.org/5929f61d14370a72e2e3b77c1948d5ed-image-1493943243592.13.32 PM.png" style="width:200px;float:left"></a>
       CSD U2 L1 Overview:
         markdown: "# CS Descobertas Inquérito pós-curso \n\n** A sua entrada e feedback
           é importante para nós! **Usamos para:\n\n* fazer melhorias no curso\n* entender
@@ -1110,6 +1132,25 @@ pt-BR:
           [Operador Maior que] (//docs.code.org/gamelab/greaterThanOperator/)\n* [Operador
           de igualdade] (//docs.code.org/gamelab/equalityOperator/)\n* [Operador maior
           que ou igual] (//docs.code.org/gamelab/greaterThanOrEqualOperator/)\n"
+      CSD U3 Lesson Overview 13:
+        markdown: |-
+          # Visão global
+
+          A classe continua a explorar maneiras de usar instruções condicionais para obter informações do usuário. Além do simples comando keyDown() aprendido ontem, a classe aprende sobre vários outros comandos de entrada do teclado, bem como maneiras de fazer a entrada do mouse.
+          ## Vocabulário
+
+          * ** Condicionais ** - Declarações que só são executadas sob certas condições.
+
+          ## Código introduzido
+
+          * [keyWentUp ()] (// docs.code.org/gamelab/keyWentUp/)
+          * [mouseWentDown ()] (// docs.code.org/gamelab/mouseWentDown/)
+          * [mouseWentUp ()] (// docs.code.org/gamelab/mouseWentUp/)
+          * [keyWentDown ()] (// docs.code.org/gamelab/keyWentDown/)
+          * [mouseDown ()] (// docs.code.org/gamelab/mouseDown/)
+          * [mouseDidMove ()] (// docs.code.org/gamelab/mouseDidMove/)
+          * [sprite.visible] (// docs.code.org/gamelab/visible/)
+          * [Declaração If / else] (// docs.code.org/gamelab/ifElseBlock/)
       CSD U3 Lesson Overview 14:
         markdown: |
           # Visão global
@@ -1219,6 +1260,21 @@ pt-BR:
            
 
 
+      CSD U3 Lesson Overview 8:
+        markdown: |-
+          # Visão global
+
+          Esta lição desconectada explora o comportamento subjacente das variáveis. Usando notecards e string para simular variáveis dentro de um programa, a classe implementa alguns programas curtos. Uma vez confortável com essa sintaxe, a classe usa o mesmo processo com propriedades de sprite, rastreando o progresso de um sprite pela tela.
+          ## Vocabulário
+
+          * ** Expressão ** - Qualquer unidade de código válida que seja resolvida para um valor.
+          * ** Variável ** - Um espaço reservado para uma informação que pode mudar.
+
+
+          ## Recursos
+
+          * [Variáveis Desconectadas- Guia de Atividade] (https://docs.google.com/document/d/12-tfreuhFfNnxzBSl4dsLavDptTIruVcRiC3AzGKq1Y/export?format=pdf)
+          * [Quadro de Variáveis Desconectadas - Manipulativo] (https://docs.google.com/document/d/1hxwkz9ed4Qd3KvKJ7MLQdgKGOtItXQ_qaYRQfZcfRn8/export?format=pdf)
       CSD U3 Lesson Overview 9:
         markdown: |+
           # Visão global
@@ -1464,6 +1520,27 @@ pt-BR:
           * [Telas da interface do usuário] (https://docs.google.com/document/d/1JOVsR0T5P7zQ6LdxfDjRSsX1EC8xk0TYZKe7X_GjYlk/export?format=pdf) - Guia de atividades
           * [Feedback do protótipo] (https://docs.google.com/document/d/1DzoLUATK8k1lyr_TLhR4mJ5UHLhrZN6-sLRay0tLX4Q/export?format=pdf) - Guia de atividades
           * [Melhorar uma tela] (https://docs.google.com/document/d/1y0YfE6qZKKlRRpeVGU2d-SuctJP9P5fI2062yo85nZg/export?format=pdf) - Guia de atividades
+      CSD U4L06 SFLP:
+        markdown: |
+          # Visão global
+
+          Até este ponto, nos concentramos em projetar para usuários que, em algum grau, estão distanciados de nós. Seja através de debates, perfis ou feedback de texto, a conexão com um usuário final nunca foi direta. Nesta lição, você entrevistará diretamente um de seus colegas de classe para criar um aplicativo que atenda às necessidades deles.
+
+          ## Recursos
+
+          * [Entrevista Usuário] (https://docs.google.com/document/d/1u3mOVcBHWJpsMJwrvjb4_B8532xg774hkiWPEH7fbqQ/export?format=pdf) - Guia de atividades
+          * [Projeto - Protótipo de papel] (https://docs.google.com/document/d/12dSfN9z_sEbo41hx4reMUQxl399RjbE5cgCKl0rCHz4/export?format=pdf) - Guia de atividades
+      CSD U4L07 SFLP:
+        markdown: |
+          # Visão global
+
+          Com base na entrevista que você realizou na última lição, crie um aplicativo que possa ajudar seu colega a superar algum obstáculo para aprender algo novo.
+
+
+          ## Recursos
+
+          * [Avaliação Protótipo Rubrica] (https://docs.google.com/document/d/16llO0PF7rJhz_ImtNDAxG3MAt9vU6QVGpDSPGoi_-04/export?format=pdf) - Rubrica
+          * [Projeto - Protótipo de papel] (https://docs.google.com/document/d/12dSfN9z_sEbo41hx4reMUQxl399RjbE5cgCKl0rCHz4/export?format=pdf) - Guia de atividades
       CSD U4L08 SFLP:
         markdown: |+
           # Visão global
@@ -1485,6 +1562,43 @@ pt-BR:
           ## Recursos
 
           * [Pesquisa de mercado] (https://docs.google.com/document/d/1zDS5HCQ3nTwWHh4Dr4Ix17Db9fMRVJA8lNefwdcjiA0/export?format=pdf) - Guia de atividades
+      CSD U4L10 SFLP:
+        markdown: |
+          # Visão global
+
+          Os protótipos de papel permitem que os desenvolvedores testem ideias rapidamente antes de investir muito tempo escrevendo código. Nesta lição, as equipes exploram alguns aplicativos de exemplo criados no Laboratório de aplicativos, usando-os para ajudar a informar os primeiros protótipos de papel de seus aplicativos.
+          ## Vocabulário
+
+          * **Protótipo** - Um modelo inicial ou inicial de um produto que permite testar as premissas antes de desenvolver uma versão final.
+
+
+          ## Recursos
+
+          * [Protótipo de Papel Telefone] (https://drive.google.com/open?id=0B2UNlnU_5Vg4c1VJZ1Zrd0NXUkE) - Modelo
+          * [O que tem para almoço] (https://docs.google.com/drawings/d/12qoCyr8ApVLVT9OlnHpDX7qM5mVopbw7w-0TcxlQd2k) - Protótipo
+          * [Protótipo Debate] (https://docs.google.com/document/d/1t6pRCn-oSUsuQ2rog24KzbbZ7iORothH_Gp1i3Hm8A4/export?format=pdf) - Guia de atividades
+      CSD U4L11 SFLP:
+        markdown: |
+          # Visão global
+
+          Nesta lição as equipes testam seus protótipos de papel com outros membros da classe. Com um estudante jogando no computador, um narrando e o restante observando, as equipes receberão feedback imediato sobre os projetos de seus aplicativos, que informarão a próxima versão de seus protótipos de aplicativos.
+
+
+          ## Recursos
+
+          * [Teste de usuário de protótipo de papel] (https://docs.google.com/document/d/1cPIdaayUutKdsq1RFT-keF4X-o4XBrF2BnMaVutc-_4/export?format=pdf) - Guia de atividades
+          * [Teste do almoço] (https://drive.google.com/open?id=0BxKeX2-Lg_EYUTBNbnMyUENFcGs) - Vídeo
+      CSD U4L12 SFLP:
+        markdown: |
+          # Visão global
+
+          Tendo desenvolvido, testado e reunido feedback em um protótipo de papel, as equipes agora mudam para o Laboratório de Aplicativos para criar a próxima iteração de seus aplicativos. Usando o modo de design arrastar e soltar, cada membro da equipe cria pelo menos uma página do aplicativo, respondendo ao feedback recebido na rodada anterior de testes.
+
+
+          ## Recursos
+
+          * [Propriedade de tela] (https://docs.google.com/document/d/1eAl3Gpi1iLLOMjaO44-w2dUuJvHEzGVPrIDxpP4rkW4/export?format=pdf) - Guia de atividades
+          * [Design da tela] (https://docs.google.com/document/d/1dtMInlgLRk_DUZwpqF6KF8TvGUJNp-vWFYYU4wG-ZLc/export?format=pdf) - Guia de atividades
       CSD U5 Encryption 1:
         title: título
         content1: descrição aqui
@@ -1627,6 +1741,20 @@ pt-BR:
           em uma nova aba)\n\n<br>\n\n\n\n\n\n"
       CSD U6L02 TFMD_2019:
         markdown: "# Esta pesquisa ainda está em desenvolvimento\n"
+      CSD-U5-SFLP Patterns and Representation:
+        markdown: |
+          # Visão global
+
+          Esta lição examina mais de perto o que é necessário para criar um sistema de representação. Os grupos criam sistemas que podem representar qualquer letra no alfabeto usando apenas uma única pilha de cartões, depois criam mensagens com seus sistemas e trocam com outros grupos para garantir que o sistema funcione como pretendido. A turma discute pontos comuns entre sistemas de trabalho enquanto reconhece que existem muitas soluções de trabalho possíveis.
+          ## Vocabulário
+
+          * ** Decifre ** - para alterar como as informações são representadas para que possam ser lidas por uma pessoa
+          * ** Codifique ** - para alterar como as informações são representadas para que possam ser lidas por um computador
+
+
+          ## Recursos
+
+          * [Representando informações] (https://docs.google.com/document/d/1emQKHuyzXvzg3cShX88CH8r8kMXInjItRIu9PdrfRpI/export?format=pdf) - Guia de atividades (copie como [MS Word] (https://docs.google.com/document/d/1emQKHuyzXvzg3cShX88CH8r8kMXInjItRIu9PdrfRpI/export?format=doc), [Documento Google] (https://docs.google.com/document/d/1emQKHuyzXvzg3cShX88CH8r8kMXInjItRIu9PdrfRpI/copy))
       CSD-U5-SFLP Representation Matters:
         markdown: "# CS Descobertas Inquérito pós-curso \n\n** A sua entrada e feedback
           é importante para nós! **Usamos para:\n\n* fazer melhorias no curso\n* entender
@@ -1979,6 +2107,40 @@ pt-BR:
       New Challenge Introduction:
         title: título
         content1: descrição aqui
+        markdown: |+
+          ### Novo Desafio: Decifre um algoritmo de substituição aleatório... de uma nova maneira
+
+          O que acha de no lugar de trocar o alfabeto inteiro, a gente mapear cada letra do alfabeto para uma letra qualquer do alfabeto?
+          Isso é chamado de **Algoritmo de substituição aleatório.**
+
+          ![](https://images.code.org/7837e7fef2f38659f4bf51a29b6dc4d3-image-1473863470440.gif)
+
+          Agora, ao invés da mensagem secreta ser criptografada com uma troca simples no alfabeto, você verá mensagens criptografadas com uma **substituição aleatória**.
+
+
+
+          Isso é muito mais difícil de decifrar e exige uma ferramenta mais sofistiticada, então...
+
+          Quando você clicar em continuar, você verá uma **nova, mais sofisticada versão da ferramenta de criptografia** que mostra várias formas diferentes de criptografar.
+
+          Mas, o que ela faz é um mistério!
+
+          ### Sua tarefa:
+
+          * Descubra o que está acontecendo com esta nova versão da ferramenta
+          * Qual informação está sendo apresentada a você?
+          * Descubra o que a ferramenta te permite fazer
+          * Como sempre: você não sabe decifrá-la. Então clique nas coisas, investigue.
+          * Se você descobrir como funciona, talvez você consiga decifrá-la com um algoritmo de substituição aleatória.
+
+          ### Dica
+
+          * Você sabia que a letra **A** é a letra mais usada em português?
+
+          ### Reagrupar e discutir
+          Depois de um tempo brincando com isso, você deve juntar com alguém - dupla, um grupo ou a classe inteira - para discutir o que você encontrou e mostrar que você sabe o que está acontecendo e as várias maneiras de usar a ferramenta.
+
+
       OPD-K5 Stage3aGo:
         title: título
         content1: descrição aqui
@@ -2036,9 +2198,54 @@ pt-BR:
       'Technique: Frequency Analysis':
         title: Como desvendar uma cifra de substituição
         content1: descrição aqui
+        markdown: "# Decifrando o algoritmo de criptografia por substuição\n\nA melhor
+          técnica para decifrar a criptografia de substuição aleatória é conhecida
+          como **análise de frequência**\n\nArtigo pode ser visualizado em: [wikipedia](https://pt.wikipedia.org/wiki/An%C3%A1lise_de_frequ%C3%AAncia)\n\n*
+          **Análise de frequência** é uma técnica baseada por meio da análise, no
+          texto criptografado, de padrões que se repetem constantemente, que podem
+          indicar a ocorrência de letras ou de palavras de uso comum.\n* Por exemplo,
+          dado um texto em inglês, as letras *E*, *T*, *A* e *O* são as mais comuns,
+          enquanto que *Z*, *Q* e *X* são raras. Além disso, *TH*, *ER*, *ON*, e *AN*
+          são os pares de letras mais comuns de estarem juntos em um texto.\n* De
+          fato, a distribuição de letras é quase sempre a mesma para *todos* os exemplos
+          de textos escritos em inglês.\n\n\nA versão da ferramenta na página anterior
+          te ajuda a **decifrar a criptografia de substituição por meio da análise
+          de frequência**.\n\nAnalisando a frequência das letras na mensagem criptografada,
+          comparada à frequência de letras numa típica frase em português, você  pode
+          começar a entender o que alguns dos mapeamentos de letras podem ser.\n\nA
+          ferramenta mostra como a frequência de letras no texto criptografado (laranja)
+          se compara à frequência do típico português (azul).\n\n###Dica: Por onde
+          começar?\n\n1. Encontre as palavras curtas e decifrem elas primeiro. Quantas
+          palavras com apenas duas letras você conhece (um)? Uma palavra com 3 letras
+          muito comum é \"sua\".\n2. Quando você terminar, você terá algumas substituições
+          para a maioria das letras mais comuns. Você deve ser capaz de user a intuição
+          para olhar para as palavras com essas substituições parciais e adivinhar.\n3.
+          Depois de encontrar um punhado de letras, o resto vai ser decifrado rapidamente.\n4.
+          Comparando as frequências de letras vai dar uma boa visão para fazer boas
+          adivinhações.  \n\n## Tente isso:\nA animação abaixo mostra alguém começando.
+          Segue o que eles tentaram:\n* Primeiro ordene os caracteres por frequência.\n*
+          Identifique um grupo de caracteres que pode ser convertido para a palavra
+          'sua'.\nIsso é um bom começo!\n\n![](https://images.code.org/4c188dfb0b284810845285b83ce5bcd4-image-1473787694329.gif)\n\n##
+          Substituição aleatória vale a pena?\n* Depois de um pouco de prática, quanto
+          tempo leva para você decifrar uma criptografia de substituição aleatória?\n*
+          Isso é bom ou não?\n\n\n"
       Terminology Recap:
         title: Isso foi fácil, o que vem a seguir?
         content1: descrição aqui
+        markdown: "# Pausar e Recapitular\nMensagens criptografadas com o algoritmo
+          de Caesar são muito fáceis de decifrar, principalmente com um programa de
+          computador. Já que você já praticou um pouco decifrando com letras do alfabeto
+          (bem fácil, hein?), vamos tentar algo mais difícil. \n\n**Significado de
+          palavras:**\n**Criptografia** - processo de modifica mensagens a fim de
+          torná-la secreta, para que apenas pessoas autorizadas possam lê-las.\n**Descriptografia**
+          - processo que decifra a mensagem criptografada, convertendo a mensagem
+          secreta em texto de leitura comum.\n**Cifra** - termo genérico para a técnica
+          (ou algoritmo) que executa a criptografia.\n**Cifra de Caesar** - técnica
+          para criptografia que troca letras do alfabeto por outros caracteres\n**Decifrar
+          criptografia por meio de quebra** - ocorre quando você tenta decifrar uma
+          mensagem sem conhecer o algoritmo de criptografia. Quando realizado, você
+          está **quebrando** a criptografia.\n\nClique em Continuar para ver o **Próximo
+          Desafio**...\n"
       TheRightAppMarkdownLevel_2019:
         markdown: |
           # O App Certo
@@ -3519,3 +3726,7 @@ pt-BR:
             um erro.
       gradek1_activity_beNice:
         title: O computador é seu amigo
+        markdown: "# Se comportando no laboratório de computação\n  \n<br/><br/>    \n
+          \   \n<a href=\"https://docs.google.com/document/d/18KHX5NNlmXX1Eqt8u6LFRzto7PK4dIFNv-tr1F1joUQ/edit?usp=sharing\"
+          target=\"_new\">\n<button>\nIr para o plano de aulas\n</button> \n</a>\n\n<br/><br/>\n<a
+          class=\"btn btn-large btn-primary next-stage submitButton\">Continuar</a>\n"
