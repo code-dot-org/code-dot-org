@@ -27,7 +27,21 @@ class Api::V1::PeerReviewSubmissionsController < ApplicationController
     reviews = PeerReview.all
 
     if params[:email].presence
-      reviews = reviews.where(submitter: User.find_by_email(params[:email]))
+      reviews =
+        if params[:email].include? '@'
+          reviews.
+            joins(submitter: [:primary_contact_info]).
+            where(authentication_options: {email: params[:email]})
+        else
+          # I feel safe-ish using fuzzy search against user display names because we are already
+          # constrained by our join to the set of users submitting for peer review, which is below
+          # 500 as of August 2019, and the total number of peer_reviews rows being examined post-join
+          # does not exceed 20,000 at this time.
+          # sanitize_sql_like will be public in Rails 5.2+
+          reviews.
+            joins(:submitter).
+            where("users.name LIKE ?", "%#{PeerReview.send(:sanitize_sql_like, params[:email])}%")
+        end
     end
 
     if params[:plc_course_unit_id].presence
