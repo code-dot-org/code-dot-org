@@ -140,8 +140,8 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
 
   test 'query by state' do
     workshops_not_started = [@workshop, @organizer_workshop]
-    workshop_in_progress = create :workshop, started_at: Time.now
-    workshop_ended = create :pd_ended_workshop
+    workshop_in_progress = create :workshop, :in_progress
+    workshop_ended = create :workshop, :ended
 
     not_started = Pd::Workshop.in_state(Pd::Workshop::STATE_NOT_STARTED)
     assert_equal workshops_not_started.length, not_started.count
@@ -166,70 +166,74 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   end
 
   test 'wont start without a session' do
-    assert_equal 0, @workshop.sessions.length
+    workshop = create :workshop, num_sessions: 0
+    assert_equal 0, workshop.sessions.length
     e = assert_raises Exception do
-      @workshop.start!
+      workshop.start!
     end
     assert_equal 'Workshop must have at least one session to start.', e.message
   end
 
   test 'start end' do
-    @workshop.sessions << create(:pd_session)
-    assert_equal 'Not Started', @workshop.state
+    workshop = create :workshop
+    assert_equal 'Not Started', workshop.state
 
-    @workshop.start!
-    assert_equal 'In Progress', @workshop.state
-    assert @workshop.sessions.first.code.present?
+    workshop.start!
+    assert_equal 'In Progress', workshop.state
+    assert workshop.sessions.first.code.present?
 
-    @workshop.end!
-    assert_equal 'Ended', @workshop.state
-    assert_equal 'Ended', @workshop.state
-    assert_not_nil @workshop.sessions.first.code
+    workshop.end!
+    assert_equal 'Ended', workshop.state
+    assert_equal 'Ended', workshop.state
+    assert_not_nil workshop.sessions.first.code
   end
 
   test 'start is idempotent' do
-    @workshop.sessions << create(:pd_session)
-    @workshop.start!
-    started_at = @workshop.reload.started_at
+    workshop = create :workshop
+    workshop.start!
+    started_at = workshop.reload.started_at
 
-    @workshop.start!
-    assert_equal started_at, @workshop.reload.started_at
+    workshop.start!
+    assert_equal started_at, workshop.reload.started_at
   end
 
   test 'end is idempotent' do
-    @workshop.sessions << create(:pd_session)
-    @workshop.start!
-    @workshop.end!
-    ended_at = @workshop.reload.ended_at
-    @workshop.end!
-    assert_equal ended_at, @workshop.reload.ended_at
+    workshop = create :workshop
+    workshop.start!
+    workshop.end!
+    ended_at = workshop.reload.ended_at
+    workshop.end!
+    assert_equal ended_at, workshop.reload.ended_at
   end
 
   test 'sessions must start on separate days' do
-    @workshop.sessions << create(:pd_session)
-    @workshop.sessions << create(:pd_session)
+    workshop = create :pd_workshop, num_sessions: 0
+    workshop.sessions << create(:pd_session)
+    workshop.sessions << create(:pd_session)
 
-    refute @workshop.valid?
-    assert_equal 1, @workshop.errors.count
-    assert_equal 'Sessions must start on separate days.', @workshop.errors.full_messages.first
+    refute workshop.valid?
+    assert_equal 1, workshop.errors.count
+    assert_equal 'Sessions must start on separate days.', workshop.errors.full_messages.first
   end
 
   test 'sessions must start and end on the same day' do
+    workshop = create :workshop, num_sessions: 0
     session = build :pd_session, start: Time.zone.now, end: Time.zone.now + 1.day
-    @workshop.sessions << session
+    workshop.sessions << session
 
-    refute @workshop.valid?
-    assert_equal 1, @workshop.errors.count
-    assert_equal 'Sessions end must occur on the same day as the start.', @workshop.errors.full_messages.first
+    refute workshop.valid?
+    assert_equal 1, workshop.errors.count
+    assert_equal 'Sessions end must occur on the same day as the start.', workshop.errors.full_messages.first
   end
 
   test 'sessions must start before they end' do
+    workshop = create :workshop, num_sessions: 0
     session = build :pd_session, start: Time.zone.now, end: Time.zone.now - 2.hours
-    @workshop.sessions << session
+    workshop.sessions << session
 
-    refute @workshop.valid?
-    assert_equal 1, @workshop.errors.count
-    assert_equal 'Sessions end must occur after the start.', @workshop.errors.full_messages.first
+    refute workshop.valid?
+    assert_equal 1, workshop.errors.count
+    assert_equal 'Sessions end must occur after the start.', workshop.errors.full_messages.first
   end
 
   # Email queries
@@ -270,17 +274,17 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   end
 
   test 'should have ended' do
-    workshop_recently_started = create :workshop
+    workshop_recently_started = create :workshop, num_sessions: 0
     workshop_recently_started.started_at = Time.now
     workshop_recently_started.sessions << (build :pd_session, start: Time.zone.now - 13.hours, end: Time.zone.now - 12.hours)
     workshop_recently_started.save!
 
-    workshop_should_have_ended = create :workshop
+    workshop_should_have_ended = create :workshop, num_sessions: 0
     workshop_should_have_ended.started_at = Time.now
     workshop_should_have_ended.sessions << (build :pd_session, start: Time.zone.now - 51.hours, end: Time.zone.now - 50.hours)
     workshop_should_have_ended.save!
 
-    workshop_already_ended = create :workshop
+    workshop_already_ended = create :workshop, num_sessions: 0
     workshop_already_ended.started_at = Time.now
     workshop_already_ended.ended_at = Time.now - 1.hour
     workshop_already_ended.sessions << (build :pd_session, start: Time.zone.now - 51.hours, end: Time.zone.now - 50.hours)
@@ -290,12 +294,12 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   end
 
   test 'end workshop sends exit surveys' do
-    @workshop.sessions << create(:pd_session)
-    @workshop.start!
+    workshop = create :workshop
+    workshop.start!
 
     Pd::Workshop.any_instance.expects(:send_exit_surveys)
 
-    @workshop.end!
+    workshop.end!
 
     # This is normally called by a cron job on production-daemon, but in this test
     # we call it synchronously.
@@ -303,15 +307,15 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   end
 
   test 'end workshop second time attempts sending exit surveys but they do not send again' do
-    @workshop.sessions << create(:pd_session)
-    @workshop.start!
+    workshop = create :workshop
+    workshop.start!
 
-    @workshop.end!
-    @workshop.update!(ended_at: nil)
+    workshop.end!
+    workshop.update!(ended_at: nil)
 
-    @workshop.start!
+    workshop.start!
 
-    @workshop.end!
+    workshop.end!
 
     Pd::Workshop.any_instance.expects(:send_exit_surveys)
     Pd::Enrollment.any_instance.expects(:send_exit_survey).never
@@ -322,9 +326,9 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   end
 
   test 'account_required_for_attendance?' do
-    normal_workshop = create :pd_ended_workshop
-    counselor_workshop = create :pd_ended_workshop, course: Pd::Workshop::COURSE_COUNSELOR
-    admin_workshop = create :pd_ended_workshop, course: Pd::Workshop::COURSE_ADMIN
+    normal_workshop = create :workshop, :ended
+    counselor_workshop = create :workshop, :ended, course: Pd::Workshop::COURSE_COUNSELOR
+    admin_workshop = create :workshop, :ended, course: Pd::Workshop::COURSE_ADMIN
 
     assert normal_workshop.account_required_for_attendance?
     refute counselor_workshop.account_required_for_attendance?
@@ -332,7 +336,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   end
 
   test 'send_exit_surveys enrolled-only teacher does not get mail' do
-    workshop = create :pd_ended_workshop
+    workshop = create :workshop, :ended
 
     create :pd_workshop_participant, workshop: workshop, enrolled: true
     Pd::Enrollment.any_instance.expects(:send_exit_survey).never
@@ -341,7 +345,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   end
 
   test 'send_exit_surveys with attendance but no account gets email for counselor admin' do
-    workshop = create :pd_ended_workshop, course: Pd::Workshop::COURSE_COUNSELOR, num_sessions: 1
+    workshop = create :workshop, :ended, course: Pd::Workshop::COURSE_COUNSELOR
 
     enrollment = create :pd_enrollment, workshop: workshop
     create :pd_attendance_no_account, session: workshop.sessions.first, enrollment: enrollment
@@ -352,7 +356,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   end
 
   test 'send_exit_surveys teachers with attendance get emails' do
-    workshop = create :pd_ended_workshop
+    workshop = create :workshop, :ended
     create(:pd_workshop_participant, workshop: workshop, enrolled: true)
     create(:pd_workshop_participant, workshop: workshop, enrolled: true, attended: true)
 
@@ -365,7 +369,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   test 'send_exit_surveys sends no surveys for FiT workshops' do
     # Make a FiT workshop that's ended and has attendance;
     # these are the conditions under which we'd normally send a survey.
-    workshop = create :pd_ended_workshop, subject: SUBJECT_FIT
+    workshop = create :workshop, :ended, subject: SUBJECT_FIT
     create(:pd_workshop_participant, workshop: workshop, enrolled: true, attended: true)
 
     # Ensure no exit surveys are sent
@@ -376,7 +380,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   test 'send_exit_surveys sends no surveys for Facilitator workshops' do
     # Make a Facilitator workshop that's ended and has attendance;
     # these are the conditions under which we'd normally send a survey.
-    workshop = create :pd_ended_workshop, course: COURSE_FACILITATOR
+    workshop = create :workshop, :ended, course: COURSE_FACILITATOR
     create(:pd_workshop_participant, workshop: workshop, enrolled: true, attended: true)
 
     # Ensure no exit surveys are sent
@@ -385,8 +389,8 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   end
 
   test 'send_follow_up only teachers attended workshop get follow up emails' do
-    workshop = create :pd_ended_workshop, course: Pd::Workshop::COURSE_CSF,
-      subject: Pd::Workshop::SUBJECT_CSF_101, num_sessions: 1, sessions_from: Date.today - 30.days
+    workshop = create :workshop, :ended, course: Pd::Workshop::COURSE_CSF,
+      subject: Pd::Workshop::SUBJECT_CSF_101, sessions_from: Date.today - 30.days
 
     teacher_attended = create(:pd_workshop_participant, workshop: workshop, enrolled: true, attended: true)
     create(:pd_workshop_participant, workshop: workshop, enrolled: true)
@@ -399,8 +403,8 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   end
 
   test 'send_follow_up all teachers attended workshop get follow up emails' do
-    workshop = create :pd_ended_workshop, course: Pd::Workshop::COURSE_CSF,
-      subject: Pd::Workshop::SUBJECT_CSF_101, num_sessions: 1, sessions_from: Date.today - 30.days
+    workshop = create :workshop, :ended, course: Pd::Workshop::COURSE_CSF,
+      subject: Pd::Workshop::SUBJECT_CSF_101, sessions_from: Date.today - 30.days
 
     teacher_count = 3
     create_list :pd_workshop_participant, teacher_count, workshop: workshop, enrolled: true, attended: true
@@ -411,8 +415,8 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   end
 
   test 'send_follow_up exception in email delivery raises honeybadger but does not stop batch' do
-    workshop = create :pd_ended_workshop, course: Pd::Workshop::COURSE_CSF,
-      subject: Pd::Workshop::SUBJECT_CSF_101, num_sessions: 1, sessions_from: Date.today - 30.days
+    workshop = create :workshop, :ended, course: Pd::Workshop::COURSE_CSF,
+      subject: Pd::Workshop::SUBJECT_CSF_101, sessions_from: Date.today - 30.days
 
     teacher_count = 3
     create_list :pd_workshop_participant, teacher_count, workshop: workshop, enrolled: true, attended: true
@@ -431,12 +435,12 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   end
 
   test 'send_follow_up only workshop ended exactly 30 days ago get follow up emails' do
-    workshop_31d = create :pd_ended_workshop, course: Pd::Workshop::COURSE_CSF,
-      subject: Pd::Workshop::SUBJECT_CSF_101, num_sessions: 1, sessions_from: Date.today - 31.days
-    workshop_30d = create :pd_ended_workshop, course: Pd::Workshop::COURSE_CSF,
-      subject: Pd::Workshop::SUBJECT_CSF_101, num_sessions: 1, sessions_from: Date.today - 30.days
-    workshop_29d = create :pd_ended_workshop, course: Pd::Workshop::COURSE_CSF,
-      subject: Pd::Workshop::SUBJECT_CSF_101, num_sessions: 1, sessions_from: Date.today - 29.days
+    workshop_31d = create :workshop, :ended, course: Pd::Workshop::COURSE_CSF,
+      subject: Pd::Workshop::SUBJECT_CSF_101, sessions_from: Date.today - 31.days
+    workshop_30d = create :workshop, :ended, course: Pd::Workshop::COURSE_CSF,
+      subject: Pd::Workshop::SUBJECT_CSF_101, sessions_from: Date.today - 30.days
+    workshop_29d = create :workshop, :ended, course: Pd::Workshop::COURSE_CSF,
+      subject: Pd::Workshop::SUBJECT_CSF_101, sessions_from: Date.today - 29.days
 
     create(:pd_workshop_participant, workshop: workshop_31d, enrolled: true, attended: true)
     teacher_30d = create(:pd_workshop_participant, workshop: workshop_30d, enrolled: true, attended: true)
@@ -450,13 +454,14 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   end
 
   test 'soft delete' do
-    session = create :pd_session, workshop: @workshop
-    enrollment = create :pd_enrollment, workshop: @workshop
-    @workshop.reload.destroy!
+    workshop = create :pd_workshop, num_sessions: 0
+    session = create :pd_session, workshop: workshop
+    enrollment = create :pd_enrollment, workshop: workshop
+    workshop.reload.destroy!
 
-    assert @workshop.reload.deleted?
-    refute Pd::Workshop.exists? @workshop.attributes
-    assert Pd::Workshop.with_deleted.exists? @workshop.attributes
+    assert workshop.reload.deleted?
+    refute Pd::Workshop.exists? workshop.attributes
+    assert Pd::Workshop.with_deleted.exists? workshop.attributes
 
     # Make sure dependent sessions and enrollments are also soft-deleted.
     assert session.reload.deleted?
@@ -493,30 +498,36 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     workshop_pivot = create :workshop, sessions: [create(:pd_session, start: pivot_date + 8.hours)]
     workshop_after = create :workshop, sessions: [create(:pd_session, start: pivot_date + 1.week)]
 
+    ids = [workshop_before, workshop_pivot, workshop_after].pluck(:id)
+
     # on or before
     assert_equal [workshop_before, workshop_pivot].pluck(:id).sort,
-      Pd::Workshop.scheduled_start_on_or_before(pivot_date).pluck(:id).sort
+      Pd::Workshop.where(id: ids).scheduled_start_on_or_before(pivot_date).pluck(:id).sort
 
     # on or after
     assert_equal [workshop_pivot, workshop_after].pluck(:id).sort,
-      Pd::Workshop.scheduled_start_on_or_after(pivot_date).pluck(:id).sort
+      Pd::Workshop.where(id: ids).scheduled_start_on_or_after(pivot_date).pluck(:id).sort
 
     # combined
     assert_equal [workshop_pivot.id],
-      Pd::Workshop.scheduled_start_on_or_after(pivot_date).scheduled_start_on_or_before(pivot_date).pluck(:id)
+      Pd::Workshop.
+        where(id: ids).
+        scheduled_start_on_or_after(pivot_date).
+        scheduled_start_on_or_before(pivot_date).
+        pluck(:id)
   end
 
   test 'in_year' do
     # before
-    create :workshop, num_sessions: 1, sessions_from: Date.new(2016, 12, 31)
+    create :workshop, sessions_from: Date.new(2016, 12, 31)
 
     workshops_this_year = [
-      create(:workshop, num_sessions: 1, sessions_from: Date.new(2017, 1, 1)),
-      create(:workshop, num_sessions: 1, sessions_from: Date.new(2017, 12, 31))
+      create(:workshop, sessions_from: Date.new(2017, 1, 1)),
+      create(:workshop, sessions_from: Date.new(2017, 12, 31))
     ]
 
     # after
-    create :workshop, num_sessions: 1, sessions_from: Date.new(2018, 12, 31)
+    create :workshop, sessions_from: Date.new(2018, 12, 31)
 
     assert_equal workshops_this_year.map(&:id), Pd::Workshop.in_year(2017).pluck(:id)
   end
@@ -524,21 +535,22 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   test 'future scope' do
     future_workshops = [
       # Today
-      create(:workshop, num_sessions: 1, sessions_from: Date.today),
+      a = create(:workshop, sessions_from: Date.today),
 
       # Next week
-      create(:workshop, num_sessions: 1, sessions_from: Date.today + 1.week)
+      b = create(:workshop, sessions_from: Date.today + 1.week)
     ]
 
     # Excluded (not future) workshops:
     # Last week
-    create :workshop, num_sessions: 1, sessions_from: Date.today - 1.week
+    c = create :workshop, sessions_from: Date.today - 1.week
     # Today, but ended
-    create :pd_ended_workshop, num_sessions: 1, sessions_from: Date.today
+    d = create :workshop, :ended, sessions_from: Date.today
     # Next week, but ended
-    create :pd_ended_workshop, num_sessions: 1, sessions_from: Date.today + 1.week
+    e = create :workshop, :ended, sessions_from: Date.today + 1.week
 
-    assert_equal future_workshops, Pd::Workshop.future
+    workshop_ids = [a, b, c, d, e].map(&:id)
+    assert_equal future_workshops, Pd::Workshop.where(id: workshop_ids).future
   end
 
   test 'end date filters' do
@@ -569,9 +581,11 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     # save out of order
     workshops.shuffle.each(&:save!)
 
-    assert_equal workshops.pluck(:id), Pd::Workshop.order_by_scheduled_start.pluck(:id)
-    assert_equal workshops.pluck(:id), Pd::Workshop.order_by_scheduled_start(desc: false).pluck(:id)
-    assert_equal workshops.reverse.pluck(:id), Pd::Workshop.order_by_scheduled_start(desc: true).pluck(:id)
+    ids = workshops.pluck(:id)
+
+    assert_equal workshops.pluck(:id), Pd::Workshop.where(id: ids).order_by_scheduled_start.pluck(:id)
+    assert_equal workshops.pluck(:id), Pd::Workshop.where(id: ids).order_by_scheduled_start(desc: false).pluck(:id)
+    assert_equal workshops.reverse.pluck(:id), Pd::Workshop.where(id: ids).order_by_scheduled_start(desc: true).pluck(:id)
   end
 
   test 'order_by_enrollment_count' do
@@ -609,19 +623,18 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   end
 
   test 'order_by_state' do
-    @workshop.started_at = Time.now
     workshops = [
-      build(:pd_ended_workshop), # Ended
-      # build(:workshop, started_at: Time.now), # In Progress
-      @workshop, # Not Started
-      @organizer_workshop # Not Started
+      build(:workshop, :ended), # Ended
+      build(:workshop, :in_progress), # In Progress
+      build(:workshop) # Not Started
     ]
     # save out of order
     workshops.shuffle.each(&:save!)
 
-    assert_equal workshops.pluck(:id), Pd::Workshop.order_by_state.pluck(:id)
-    assert_equal workshops.pluck(:id), Pd::Workshop.order_by_state(desc: false).pluck(:id)
-    assert_equal workshops.reverse.pluck(:id), Pd::Workshop.order_by_state(desc: true).pluck(:id)
+    ids = workshops.pluck(:id)
+    assert_equal ids, Pd::Workshop.where(id: ids).order_by_state.pluck(:id)
+    assert_equal ids, Pd::Workshop.where(id: ids).order_by_state(desc: false).pluck(:id)
+    assert_equal ids.reverse, Pd::Workshop.where(id: ids).order_by_state(desc: true).pluck(:id)
   end
 
   test 'min_attendance_days with no min_days constraint returns 1' do
@@ -715,7 +728,6 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     workshop_csf_101 = create :workshop,
       course: Pd::Workshop::COURSE_CSF,
       subject: Pd::Workshop::SUBJECT_CSF_101,
-      num_sessions: 1,
       each_session_hours: 8
 
     assert_equal 7, workshop_csf_101.effective_num_hours
@@ -725,7 +737,6 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     workshop_csf_201 = create :workshop,
       course: Pd::Workshop::COURSE_CSF,
       subject: Pd::Workshop::SUBJECT_CSF_201,
-      num_sessions: 1,
       each_session_hours: 7
 
     assert_equal 6, workshop_csf_201.effective_num_hours
@@ -807,12 +818,12 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   end
 
   test 'workshop starting date picks the day of the first session' do
-    session = create :pd_session, start: Date.today + 15.days
-    session2 = create :pd_session, start: Date.today + 20.days
-    @workshop.sessions << session
-    @workshop.sessions << session2
-    assert_equal session.start, @workshop.workshop_starting_date
-    assert_equal session2.start, @workshop.workshop_ending_date
+    workshop = create :workshop, sessions: [
+      session1 = create(:pd_session, start: Date.today + 15.days),
+      session2 = create(:pd_session, start: Date.today + 20.days)
+    ]
+    assert_equal session1.start, workshop.workshop_starting_date
+    assert_equal session2.start, workshop.workshop_ending_date
   end
 
   test 'workshop date range string for single session workshop' do
@@ -1043,7 +1054,9 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   end
 
   test 'date_and_location_name with processed location but no sessions' do
-    workshop = build :workshop, processed_location: {city: 'Seattle', state: 'WA'}.to_json
+    workshop = build :workshop,
+      processed_location: {city: 'Seattle', state: 'WA'}.to_json,
+      num_sessions: 0
 
     assert_equal 'Dates TBA, Seattle WA', workshop.date_and_location_name
   end
@@ -1056,7 +1069,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   end
 
   test 'date_and_location_name with no location nor sessions' do
-    workshop = create :workshop, processed_location: nil
+    workshop = create :workshop, processed_location: nil, num_sessions: 0
 
     assert_equal 'Dates TBA, Location TBA', workshop.date_and_location_name
   end
@@ -1165,20 +1178,24 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   end
 
   test 'nearest' do
-    target = create :workshop, num_sessions: 1, sessions_from: Date.today + 1.week
+    target = create :workshop, sessions_from: Date.today + 1.week
 
-    create :workshop, num_sessions: 1, sessions_from: Date.today + 2.weeks
-    create :workshop, num_sessions: 1, sessions_from: Date.today - 2.weeks
+    x = create :workshop, sessions_from: Date.today + 2.weeks
+    y = create :workshop, sessions_from: Date.today - 2.weeks
 
-    assert_equal target, Pd::Workshop.nearest
+    ids = [target, x, y].map(&:id)
+
+    assert_equal target, Pd::Workshop.where(id: ids).nearest
   end
 
   test 'nearest is independent of creation order' do
-    create :workshop, num_sessions: 1, sessions_from: Date.today - 2.weeks
-    target = create :workshop, num_sessions: 1, sessions_from: Date.today + 1.week
-    create :workshop, num_sessions: 1, sessions_from: Date.today + 2.weeks
+    x = create :workshop, sessions_from: Date.today - 2.weeks
+    target = create :workshop, sessions_from: Date.today + 1.week
+    y = create :workshop, sessions_from: Date.today + 2.weeks
 
-    nearest_workshop = Pd::Workshop.nearest
+    ids = [x, target, y].map(&:id)
+
+    nearest_workshop = Pd::Workshop.where(id: ids).nearest
     assert_equal target, nearest_workshop
 
     # Also make sure attributes are included
@@ -1192,21 +1209,21 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
 
   test 'nearest combined with subject and enrollment' do
     user = create :teacher
-    target = create :workshop, num_sessions: 1, sessions_from: Date.today + 1.day,
+    target = create :workshop, sessions_from: Date.today + 1.day,
       course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_SUMMER_WORKSHOP
 
     create :pd_enrollment, :from_user, user: user, workshop: target
 
-    same_subject_farther = create :workshop, num_sessions: 1, sessions_from: Date.today + 1.week,
+    same_subject_farther = create :workshop, sessions_from: Date.today + 1.week,
       course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_SUMMER_WORKSHOP
     create :pd_enrollment, :from_user, user: user, workshop: same_subject_farther
 
-    different_subject_closer = create :workshop, num_sessions: 1, sessions_from: Date.today,
+    different_subject_closer = create :workshop, sessions_from: Date.today,
       course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_TEACHER_CON
     create :pd_enrollment, :from_user, user: user, workshop: different_subject_closer
 
     # closer, not enrolled
-    create :workshop, num_sessions: 1, sessions_from: Date.today,
+    create :workshop, sessions_from: Date.today,
       course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_SUMMER_WORKSHOP
 
     found = Pd::Workshop.where(subject: Pd::Workshop::SUBJECT_SUMMER_WORKSHOP).enrolled_in_by(user).nearest

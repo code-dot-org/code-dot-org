@@ -4,7 +4,7 @@
 FactoryGirl.define do
   factory :workshop, class: 'Pd::Workshop', aliases: [:pd_workshop] do
     transient do
-      num_sessions 0
+      num_sessions 1
       num_facilitators 0
       sessions_from {Date.current + 9.hours} # Start time of the first session, then one per day after that.
       each_session_hours 6
@@ -53,6 +53,15 @@ FactoryGirl.define do
       subject Pd::Workshop::SUBJECT_CSP_FIT
     end
 
+    trait :in_progress do
+      started_at {Time.zone.now}
+    end
+
+    trait :ended do
+      started_at {Time.zone.now}
+      ended_at {Time.zone.now}
+    end
+
     trait :with_codes_assigned do
       assign_session_code true
     end
@@ -67,15 +76,17 @@ FactoryGirl.define do
     #
 
     after(:build) do |workshop, evaluator|
-      # Sessions, one per day starting today
-      evaluator.num_sessions.times do |i|
-        params = [{
-          workshop: workshop,
-          start: evaluator.sessions_from + i.days,
-          duration_hours: evaluator.each_session_hours
-        }]
-        params.prepend :with_assigned_code if evaluator.assign_session_code
-        workshop.sessions << build(:pd_session, *params)
+      # Sessions, one per day starting today (unless they were manually provided)
+      if evaluator.sessions.empty?
+        evaluator.num_sessions.times do |i|
+          params = [{
+            workshop: workshop,
+            start: evaluator.sessions_from + i.days,
+            duration_hours: evaluator.each_session_hours
+          }]
+          params.prepend :with_assigned_code if evaluator.assign_session_code
+          workshop.sessions << build(:pd_session, *params)
+        end
       end
       evaluator.num_enrollments.times do
         workshop.enrollments << build(:pd_enrollment, workshop: workshop)
@@ -115,12 +126,5 @@ FactoryGirl.define do
     #
     # Sub-factories
     #
-
-    # TODO: Change into a trait
-    factory :pd_ended_workshop do
-      num_sessions 1
-      started_at {Time.zone.now}
-      ended_at {Time.zone.now}
-    end
   end
 end
