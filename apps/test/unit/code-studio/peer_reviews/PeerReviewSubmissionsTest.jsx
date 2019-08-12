@@ -165,7 +165,7 @@ describe('PeerReviewSubmissions', () => {
     server = sinon.fakeServer.create();
 
     peerReviewSubmissions
-      .find('input#EmailFilter')
+      .find('input#UserFilter')
       .simulate('change', {target: {value: 'someone@example.com'}});
     expect(server.requests[0].url).to.equal(
       '/api/v1/peer_review_submissions/index?user_q=someone@example.com&plc_course_id=&plc_course_unit_id=&page=1&per=30'
