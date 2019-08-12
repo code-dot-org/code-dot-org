@@ -130,9 +130,9 @@ class PeerReviewSubmissions extends React.Component {
       <div>
         <FormControl
           style={{margin: '0px', verticalAlign: 'middle'}}
-          id="UserFilter"
+          id="NameEmailFilter"
           type="text"
-          placeholder="Filter by submitter email"
+          placeholder="Submitter name/email filter"
           onChange={this.handleUserFilterChange}
           value={this.state.userFilter}
         />
