@@ -79,7 +79,7 @@ describe('PeerReviewSubmissions', () => {
 
     expect(peerReviewSubmissions.state()).to.deep.equal({
       loading: false,
-      emailFilter: '',
+      userFilter: '',
       plcCourseId: '',
       plcCourseUnitId: '',
       submissions: fakePeerReviewData.submissions,
