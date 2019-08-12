@@ -18,9 +18,9 @@ module.exports = class MLActivities extends React.Component {
   render() {
     return <Grid fluid>
       <Row className="show-grid">
-        <Col sm={2}>
+        <Col xs={2}>
         </Col>
-        <Col sm={8}>
+        <Col xs={8}>
           <h1>
             ML Activities Playground
           </h1>
@@ -51,7 +51,7 @@ module.exports = class MLActivities extends React.Component {
             <RPS/>
           }
         </Col>
-        <Col sm={2}>
+        <Col xs={2}>
         </Col>
       </Row>
     </Grid>;
