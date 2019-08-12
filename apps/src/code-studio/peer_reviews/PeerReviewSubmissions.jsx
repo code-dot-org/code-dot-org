@@ -18,7 +18,7 @@ class PeerReviewSubmissions extends React.Component {
 
     this.state = {
       loading: true,
-      emailFilter: '',
+      userFilter: '',
       plcCourseId: '',
       plcCourseUnitId: '',
       pagination: {
@@ -42,7 +42,7 @@ class PeerReviewSubmissions extends React.Component {
   handleCourseUnitFilterChange = event => {
     this.setState({plcCourseUnitId: event.target.value});
     this.getFilteredResults(
-      this.state.emailFilter,
+      this.state.userFilter,
       this.state.plcCourseId,
       event.target.value,
       this.state.pagination.current_page
@@ -53,7 +53,7 @@ class PeerReviewSubmissions extends React.Component {
     if (event.target.value === '') {
       this.setState({plcCourseId: '', plcCourseUnitId: ''});
       this.getFilteredResults(
-        this.state.emailFilter,
+        this.state.userFilter,
         '',
         '',
         this.state.pagination.current_page
@@ -61,7 +61,7 @@ class PeerReviewSubmissions extends React.Component {
     } else {
       this.setState({plcCourseId: event.target.value});
       this.getFilteredResults(
-        this.state.emailFilter,
+        this.state.userFilter,
         event.target.value,
         this.state.plcCourseUnitId,
         this.state.pagination.current_page
@@ -70,7 +70,7 @@ class PeerReviewSubmissions extends React.Component {
   };
 
   handleEmailFilterChange = event => {
-    this.setState({emailFilter: event.target.value});
+    this.setState({userFilter: event.target.value});
     this.getFilteredResults(
       event.target.value,
       this.state.plcCourseId,
@@ -81,7 +81,7 @@ class PeerReviewSubmissions extends React.Component {
 
   handlePageChange = newPageNumber => {
     this.getFilteredResults(
-      this.state.emailFilter,
+      this.state.userFilter,
       this.state.plcCourseId,
       this.state.plcCourseUnitId,
       newPageNumber
@@ -96,12 +96,12 @@ class PeerReviewSubmissions extends React.Component {
     );
   };
 
-  getFilteredResults(emailFilter, plcCourseId, plcCourseUnitId, pageNumber) {
+  getFilteredResults(userFilter, plcCourseId, plcCourseUnitId, pageNumber) {
     this.setState({loading: true});
 
     this.loadRequest = $.ajax({
       method: 'GET',
-      url: `/api/v1/peer_review_submissions/index?user_q=${emailFilter ||
+      url: `/api/v1/peer_review_submissions/index?user_q=${userFilter ||
         ''}&plc_course_id=${plcCourseId ||
         ''}&plc_course_unit_id=${plcCourseUnitId || ''}&page=${pageNumber ||
         1}&per=30`,
@@ -134,7 +134,7 @@ class PeerReviewSubmissions extends React.Component {
           type="text"
           placeholder="Filter by submitter email"
           onChange={this.handleEmailFilterChange}
-          value={this.state.emailFilter}
+          value={this.state.userFilter}
         />
         <FormControl
           id="PlcCourseSelect"
