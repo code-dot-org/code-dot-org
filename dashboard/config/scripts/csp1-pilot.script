@@ -2,8 +2,12 @@ login_required true
 family_name ''
 pilot_experiment 'csp-piloters'
 
+stage 'CS Principles Pre-survey', lockable: true, flex_category: 'cspSurvey'
+level 'csp-pre-survey-2017-levelgroup_2020 pilot', assessment: true
+
 stage 'Welcome to CSP'
 level 'CSP U1L1 SFLP 20-21', progression: 'Lesson Overview'
+level 'Computer Science is Changing Everything_2020', progression: 'Computer Science is Changing Everything'
 level 'csp_socialBelonging_control_2018', progression: 'Check For Understanding'
 
 stage 'Sending Binary Messages'
@@ -20,13 +24,13 @@ level 'CSP U1L4 SFLP 20-21', progression: 'Lesson Overview'
 level 'CSP U1L4 CYU2', progression: 'Check For Understanding'
 level 'CSP U1L4 CYU3', progression: 'Check For Understanding'
 
-stage 'Flippy Do, pt 1'
+stage 'Binary Numbers'
 level 'CSP U1L5 SFLP 20-21', progression: 'Lesson Overview'
 level 'U1L5 CFU how many bits', progression: 'Check For Understanding'
 level 'U1L5 CFU adding bits', progression: 'Check For Understanding'
 level 'U1L5 CFU bin dec similarities', progression: 'Check For Understanding'
 
-stage 'Flippy Do, pt 2'
+stage 'Overflow and Rounding'
 level 'Widget: Binary Odometer_2020', progression: 'Widget: Binary Odometer'
 level 'CSP U1L6 SFLP 20-21', progression: 'Lesson Overview'
 level 'U1L6 CFU beyond odometer', progression: 'Check For Understanding'
