@@ -13,20 +13,29 @@ class PeerReviewSubmissions extends React.Component {
     courseUnitMap: PropTypes.object.isRequired
   };
 
-  state = {
-    loading: true,
-    emailFilter: '',
-    plcCourseId: '',
-    plcCourseUnitId: '',
-    pagination: {
-      current_page: 1,
-      total_pages: 1
-    }
-  };
+  constructor(props) {
+    super(props);
 
-  componentWillMount() {
-    this.getFilteredResults = _.debounce(this.getFilteredResults, 1000);
+    this.state = {
+      loading: true,
+      emailFilter: '',
+      plcCourseId: '',
+      plcCourseUnitId: '',
+      pagination: {
+        current_page: 1,
+        total_pages: 1
+      }
+    };
 
+    // Autobind and debounce getFilteredResults
+    this.getFilteredResults = _.debounce(
+      this.getFilteredResults.bind(this),
+      1000
+    );
+  }
+
+  componentDidMount() {
+    // Fetch initial results immediately
     this.getFilteredResults();
   }
 
@@ -87,12 +96,7 @@ class PeerReviewSubmissions extends React.Component {
     );
   };
 
-  getFilteredResults = (
-    emailFilter,
-    plcCourseId,
-    plcCourseUnitId,
-    pageNumber
-  ) => {
+  getFilteredResults(emailFilter, plcCourseId, plcCourseUnitId, pageNumber) {
     this.setState({loading: true});
 
     this.loadRequest = $.ajax({
@@ -119,7 +123,7 @@ class PeerReviewSubmissions extends React.Component {
         ref.forcePage(data.pagination.current_page)
       );
     });
-  };
+  }
 
   renderFilterOptions() {
     return (
