@@ -30,7 +30,7 @@ class PeerReviewSubmissions extends React.Component {
     // Autobind and debounce getFilteredResults
     this.getFilteredResults = _.debounce(
       this.getFilteredResults.bind(this),
-      1000
+      500
     );
   }
 
