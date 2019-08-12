@@ -9,7 +9,6 @@ class Api::V1::Census::CensusControllerTest < ActionController::TestCase
   end
 
   test 'census submission with bad school fails' do
-    skip 'workaround for Aug 8 DB issue'
     post :create,
       params: {
         form_version: 'anything',
