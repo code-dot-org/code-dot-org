@@ -1,4 +1,6 @@
 class RenameAcademicYearWorkshopNames < ActiveRecord::Migration[5.0]
+  CUTOFF_DATE = '2019-08-13'
+
   CSD_COURSE = 'CS Discoveries'.freeze
   CSD_SUBJECTS = [
     {form: '1-day Academic Year, Units 1 and 2', to: 'Workshop 1: Unit 3'},
@@ -22,13 +24,13 @@ class RenameAcademicYearWorkshopNames < ActiveRecord::Migration[5.0]
   def up
     CSD_SUBJECTS.each do |subject_name|
       Pd::Workshop.where(course: CSD_COURSE, subject: subject_name[:from]).
-        where(started_at: nil).
+        scheduled_start_on_or_after(CUTOFF_DATE).
         update_all(subject: subject_name[:to])
     end
 
     CSP_SUBJECTS.each do |subject_name|
       Pd::Workshop.where(course: CSP_COURSE, subject: subject_name[:from]).
-        where(started_at: nil).
+        scheduled_start_on_or_after(CUTOFF_DATE).
         update_all(subject: subject_name[:to])
     end
   end
@@ -36,13 +38,13 @@ class RenameAcademicYearWorkshopNames < ActiveRecord::Migration[5.0]
   def down
     CSD_SUBJECTS.each do |subject_name|
       Pd::Workshop.where(course: CSD_COURSE, subject: subject_name[:to]).
-        where(started_at: nil).
+        scheduled_start_on_or_after(CUTOFF_DATE).
         update_all(subject: subject_name[:from])
     end
 
     CSP_SUBJECTS.each do |subject_name|
       Pd::Workshop.where(course: CSP_COURSE, subject: subject_name[:to]).
-        where(started_at: nil).
+        scheduled_start_on_or_after(CUTOFF_DATE).
         update_all(subject: subject_name[:from])
     end
   end
