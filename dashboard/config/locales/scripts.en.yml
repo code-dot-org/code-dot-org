@@ -11850,6 +11850,12 @@ en:
               name: 'Project: Digital Information Dilemmas, pt 1'
             'Project: Digital Information Dilemmas, pt 2':
               name: 'Project: Digital Information Dilemmas, pt 2'
+            CS Principles Pre-survey:
+              name: CS Principles Pre-survey
+            Binary Numbers:
+              name: Binary Numbers
+            Overflow and Rounding:
+              name: Overflow and Rounding
           title: CSP Unit 1 Pilot
           description_audience: ''
           description_short: ''
