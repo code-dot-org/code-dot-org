@@ -12814,6 +12814,12 @@ en:
               name: Images
             Exploring Web Pages:
               name: Exploring Web Pages
+            CSS Classes:
+              name: CSS Classes
+            Searching and Research:
+              name: Searching and Research
+            Sources and Research:
+              name: Sources and Research
         csd3-pilot:
           title: CSD Unit 3 - Animations and Games ('19-'20)
           description: " In Unit 3, you’ll build on your coding experience as you program animations, interactive art, and games in Game Lab. The unit starts off with simple shapes and builds up to more sophisticated sprite-based games, using the same programming concepts and the design process computer scientists use daily. In the final project, you’ll develop a personalized, interactive program."
