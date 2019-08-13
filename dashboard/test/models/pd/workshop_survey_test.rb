@@ -182,7 +182,7 @@ class Pd::WorkshopSurveyTest < ActiveSupport::TestCase
 
   test 'empty implementation required fields cause errors when present' do
     user = create :user
-    workshop = create :workshop, course: Pd::Workshop::COURSE_CSD, subject: Pd::Workshop::SUBJECT_CSD_UNITS_2_3
+    workshop = create :workshop, course: Pd::Workshop::COURSE_CSD, subject: Pd::Workshop::SUBJECT_CSD_WORKSHOP_1
 
     survey = Pd::WorkshopSurvey.new
     survey.pd_enrollment = create :pd_enrollment, user: user, workshop: workshop

@@ -1,7 +1,6 @@
 /** @file Redux action-creators for Game Lab.
  *  @see http://redux.js.org/docs/basics/Actions.html */
 import $ from 'jquery';
-import * as utils from '@cdo/apps/utils';
 import {
   pickNewAnimation,
   show,
@@ -33,9 +32,6 @@ export const ADD_MESSAGE = 'spritelab/ADD_MESSAGE';
  * @returns {function}
  */
 export function changeInterfaceMode(interfaceMode, spritelabDraw) {
-  //Add a resize event on each call to changeInterfaceMode to ensure
-  //proper rendering of droplet and code mode. Similar solution in applab.
-  setTimeout(() => utils.fireResizeEvent(), 0);
   return function(dispatch) {
     $(window).trigger('appModeChanged');
     dispatch({
