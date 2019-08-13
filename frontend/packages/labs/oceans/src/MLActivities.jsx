@@ -28,7 +28,6 @@ module.exports = class MLActivities extends React.Component {
           {
             this.state.currentActivity !== Activity.None &&
             <Button
-              // bsSize="large"
               onClick={() => this.setState({
                 currentActivity: Activity.None
               })}
@@ -40,7 +39,6 @@ module.exports = class MLActivities extends React.Component {
           {
             this.state.currentActivity === Activity.None &&
             <Button
-              // bsSize="large"
               onClick={() => this.setState({
                 currentActivity: Activity.RPS
               })}
