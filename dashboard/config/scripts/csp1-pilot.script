@@ -1,4 +1,6 @@
 login_required true
+hideable_stages true
+has_verified_resources true
 family_name ''
 pilot_experiment 'csp-piloters'
 
@@ -17,7 +19,7 @@ level 'U1L3 CFU Sending Complex Messages', progression: 'Check For Understanding
 stage 'Sending Binary Messages with the Internet Simulator'
 level 'CSP U1L3 SFLP 20-21', progression: 'Lesson Overview'
 level 'CSP U1L03 NetSim', progression: 'Widget: Internet Simulator'
-level 'csp_socialBelonging_control_2018'
+level 'U1L4 Multiple Choice_2020', progression: 'Check For Understanding'
 
 stage 'AB Patterns'
 level 'CSP U1L4 SFLP 20-21', progression: 'Lesson Overview'
