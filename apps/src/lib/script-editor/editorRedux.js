@@ -7,6 +7,7 @@ const TOGGLE_EXPAND = 'scriptEditor/TOGGLE_EXPAND';
 const REMOVE_LEVEL = 'scriptEditor/REMOVE_LEVEL';
 const CHOOSE_LEVEL = 'scriptEditor/CHOOSE_LEVEL';
 const ADD_VARIANT = 'scriptEditor/ADD_VARIANT';
+const REMOVE_VARIANT = 'scriptEditor/REMOVE_VARIANT';
 const SET_ACTIVE_VARIANT = 'scriptEditor/SET_ACTIVE_VARIANT';
 const SET_FIELD = 'scriptEditor/SET_FIELD';
 const REORDER_LEVEL = 'scriptEditor/REORDER_LEVEL';
@@ -59,6 +60,13 @@ export const addVariant = (stage, level) => ({
   type: ADD_VARIANT,
   stage,
   level
+});
+
+export const removeVariant = (stage, level, levelId) => ({
+  type: REMOVE_VARIANT,
+  stage,
+  level,
+  levelId
 });
 
 export const setActiveVariant = (stage, level, id) => ({
@@ -170,6 +178,12 @@ function stages(state = [], action) {
       newState[action.stage - 1].levels[action.level - 1].ids.push(
         NEW_LEVEL_ID
       );
+      break;
+    }
+    case REMOVE_VARIANT: {
+      const levelIds = newState[action.stage - 1].levels[action.level - 1].ids;
+      const i = levelIds.indexOf(action.levelId);
+      levelIds.splice(i, 1);
       break;
     }
     case SET_ACTIVE_VARIANT: {
