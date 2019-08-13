@@ -60,6 +60,7 @@
   },
   "https://studio.code.org/s/coursea-2019/stage/5/puzzle/2": {
     "short_instructions": "Play with these blocks to see what they make Scrat do! \n\nGet Scrat to the acorn to complete the level.",
+    "long_instructions": "Play with these blocks to see what they make Scrat do! \n\nGet Scrat to the acorn to complete the level.",
     "authored_hints": {
       "courseB_maze_seq1_a": "Connect blocks to the [blockly block][0] block to make Scrat move!",
       "courseB_maze_seq1_b": "Drag three of these [blockly block][0] arrows out and connect them to the [blockly block][1] block to get Scrat to the acorn."
@@ -70,6 +71,7 @@
   },
   "https://studio.code.org/s/coursea-2019/stage/5/puzzle/3": {
     "short_instructions": "Use **2** movement blocks to get the Scrat to the acorn.",
+    "long_instructions": "Use **2** movement blocks to get the Scrat to the acorn.",
     "authored_hints": {
       "courseB_maze_seq4_a": "Try adding one instruction at a time until you get to the acorn.",
       "courseB_maze_seq4_b": "You will want to use the [blockly block][0] block to solve this puzzle."
@@ -77,6 +79,7 @@
   },
   "https://studio.code.org/s/coursea-2019/stage/5/puzzle/4": {
     "short_instructions": "This puzzle is a little tricky!",
+    "long_instructions": "This puzzle is a little tricky!",
     "authored_hints": {
       "courseB_maze_seq5_a": "If you get stuck, try drawing out the path on paper.",
       "courseB_maze_seq5_b": "There are 2 ways to solve this puzzle!",
@@ -85,6 +88,7 @@
   },
   "https://studio.code.org/s/coursea-2019/stage/5/puzzle/5": {
     "short_instructions": "Move one way, then another to get Scrat to the acorn!",
+    "long_instructions": "Move one way, then another to get Scrat to the acorn!",
     "authored_hints": {
       "courseB_maze_seq6_a": "Your final code should have three movement blocks.",
       "courseB_maze_seq6_b": "If you get stuck, try solving the puzzle in two parts, one sideways and one up-and-down.",
@@ -94,6 +98,7 @@
   },
   "https://studio.code.org/s/coursea-2019/stage/5/puzzle/7": {
     "short_instructions": "Figure out what is missing and then add blocks to get Scrat to the acorn!",
+    "long_instructions": "Figure out what is missing and then add blocks to get Scrat to the acorn!",
     "authored_hints": {
       "courseB_maze_seq7_a": "Add 1 block to move Scrat to the acorn.",
       "courseB_maze_seq7_b": "Try running the code that's given to you and see where you end up.",
@@ -102,6 +107,7 @@
   },
   "https://studio.code.org/s/coursea-2019/stage/5/puzzle/8": {
     "short_instructions": "Your turn!  What do you need to do to get Scrat to the acorn?",
+    "long_instructions": "Your turn!  What do you need to do to get Scrat to the acorn?",
     "authored_hints": {
       "courseB_maze_seq8_a": "Try adding one block at a time until you solve the puzzle.",
       "courseB_maze_seq8_b": "There is more than one way to solve this puzzle!",
@@ -119,13 +125,16 @@
     }
   },
   "https://studio.code.org/s/coursea-2019/stage/5/puzzle/10": {
-    "short_instructions": "Fix the bugs to get Scrat to the acorn."
+    "short_instructions": "Fix the bugs to get Scrat to the acorn.",
+    "long_instructions": "Fix the bugs to get Scrat to the acorn."
   },
   "https://studio.code.org/s/coursea-2019/stage/5/puzzle/11": {
-    "short_instructions": "It's all you!  Get Scrat to the acorn."
+    "short_instructions": "It's all you!  Get Scrat to the acorn.",
+    "long_instructions": "It's all you!  Get Scrat to the acorn."
   },
   "https://studio.code.org/s/coursea-2019/stage/5/puzzle/12": {
-    "short_instructions": "Now get that acorn any way you can!"
+    "short_instructions": "Now get that acorn any way you can!",
+    "long_instructions": "Now get that acorn any way you can!"
   },
   "https://studio.code.org/s/coursea-2019/stage/5/extras?level_name=courseB_maze_seq_challenge1_2019": {
     "short_instructions": "Can you find a path before you run out of blocks?",
@@ -137,6 +146,7 @@
   },
   "https://studio.code.org/s/coursea-2019/stage/5/extras?level_name=courseB_maze_seq_challenge2_2019": {
     "short_instructions": "Debug this level. These are the right blocks, but they're in the wrong order!",
+    "long_instructions": "Debug this level. These are the right blocks, but they're in the wrong order!",
     "authored_hints": {
       "courseB_maze_seq_challenge2_a": "You do not need to add or remove blocks to solve this puzzle.",
       "courseB_maze_seq_challenge2_b": "Rearrange the blocks and take the staircase pattern path."
