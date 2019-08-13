@@ -15,7 +15,7 @@ class Api::V1::PeerReviewSubmissionsController < ApplicationController
   # Optional queryparams:
   #   page:               Which page of results to return.  Default: 1 (first page)
   #   per -or- limit:     How many results to return. Default: 50. Maximum: 500
-  #   emailFilter:        Filters results by submitter email
+  #   user_q:             Filters results by submitter email or fuzzy name lookup
   #   plc_course_id:      Filters results by course id
   #   plc_course_unit_id: Filters results by unit id
   def index
@@ -23,11 +23,26 @@ class Api::V1::PeerReviewSubmissionsController < ApplicationController
     submissions = Hash.new
     page = params[:page] || 1
     per = params[:per] || params[:limit] || 50
+    user_query = params[:user_q]
 
     reviews = PeerReview.all
 
-    if params[:email].presence
-      reviews = reviews.where(submitter: User.find_by_email(params[:email]))
+    if user_query.presence
+      reviews =
+        if user_query.include? '@'
+          reviews.
+            joins(submitter: [:primary_contact_info]).
+            where(authentication_options: {email: user_query})
+        else
+          # I feel safe-ish using fuzzy search against user display names because we are already
+          # constrained by our join to the set of users submitting for peer review, which is below
+          # 500 as of August 2019, and the total number of peer_reviews rows being examined post-join
+          # does not exceed 20,000 at this time.
+          # sanitize_sql_like will be public in Rails 5.2+
+          reviews.
+            joins(:submitter).
+            where("users.name LIKE ?", "%#{PeerReview.send(:sanitize_sql_like, user_query)}%")
+        end
     end
 
     if params[:plc_course_unit_id].presence
