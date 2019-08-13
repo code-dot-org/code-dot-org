@@ -99,21 +99,17 @@ stage 'Purpose of a  Websites', flex_category: 'csd2_2'
 level 'CSD U2L01 TFMD_pilot', named: true
 level 'CSD U2 Top Websites_2018_2019_pilot', named: true
 
-stage 'Sources and Search Engines', flex_category: 'csd2_2'
+stage 'Sources and Research', flex_category: 'csd2_2'
 level 'CSD U2L12 TFMD_pilot', named: true
 
-stage 'RGB Colors and Classes', flex_category: 'csd2_2'
+stage 'CSS Classes', flex_category: 'csd2_2'
 level 'CSD U2L13 TFMD_pilot', named: true
-level 'CSD U2 RGB intro_pilot', named: true
-level 'CSD U2 RGB winter_pilot', progression: 'RGB Exploration'
-level 'CSD U2 RGB summer_pilot', progression: 'RGB Exploration'
-level 'CSD U2 RGB others_pilot', progression: 'RGB Exploration'
-level 'CSD U2 classes sample_pilot', progression: 'RGB Exploration'
-level 'CSD U2 CSS Classes Map_pilot', named: true
+level 'CSD U2 classes sample_pilot', progression: 'Styling with Classes'
 level 'CSD U2 classes modify_pilot', progression: 'Styling with Classes'
 level 'CSD U2 classes spring_pilot', progression: 'Styling with Classes'
 level 'CSD U2 classes summer_pilot', progression: 'Styling with Classes', assessment: true
 level 'CSDU2 - PW - Class Style Personal Site_pilot', progression: 'Styling with Classes'
+level 'CSD U2 RGB intro_pilot', named: true
 
 stage 'Lists', flex_category: 'csd2_2'
 level 'CSD U2L06 TFMD_pilot', named: true
