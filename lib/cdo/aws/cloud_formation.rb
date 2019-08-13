@@ -106,13 +106,14 @@ module AWS
         CDO.log.info template if ENV['VERBOSE']
         template_info = string_or_url(template)
         CDO.log.info cfn.validate_template(template_info).description
-        params = parameters(template).reject {|x| x[:parameter_value].nil?}
+        options = stack_options(template)
+        params = options[:parameters].reject {|x| x[:parameter_value].nil?}
         CDO.log.info "Parameters:\n#{params.map {|p| "#{p[:parameter_key]}: #{p[:parameter_value]}"}.join("\n")}" unless params.empty?
 
         if stack_exists?
           CDO.log.info "Listing changes to existing stack `#{stack_name}`:"
           change_set_id = cfn.create_change_set(
-            stack_options(template).merge(
+            options.merge(
               change_set_name: "#{stack_name}-#{Digest::MD5.hexdigest(template)}"
             )
           ).id
@@ -162,21 +163,22 @@ module AWS
       def parameters(template)
         params = YAML.load(template)['Parameters']
         return [] unless params
-        params.keys.map do |key|
+        params.map do |key, properties|
           value = CDO[key.underscore] || ENV[key.underscore.upcase]
+          param = {parameter_key: key}
           if value
-            {
-              parameter_key: key,
-              parameter_value: value
-            }
-          elsif stack_exists?
-            {
-              parameter_key: key,
-              use_previous_value: true
-            }
+            param[:parameter_value] = value
+          elsif stack_exists? && @@stack.parameters.any? {|p| p.parameter_key == key}
+            param[:use_previous_value] = true
+          elsif properties['Default']
+            next # use default param
           else
-            nil
+            # Required parameter value not found in environment, existing stack or default.
+            # Ask for input directly.
+            require 'highline'
+            param[:parameter_value] = HighLine.new.ask("Enter value for Parameter #{key}:", String)
           end
+          param
         end.compact
       end
 
@@ -377,12 +379,12 @@ module AWS
 
       # Only way to determine whether a given stack exists using the Ruby API.
       def stack_exists?
-        @@stack_exists ||= begin
-            !!cfn.describe_stacks(stack_name: stack_name)
-          rescue Aws::CloudFormation::Errors::ValidationError => e
-            raise e unless e.message == "Stack with id #{stack_name} does not exist"
-            false
-          end
+        !!@@stack ||= begin
+          cfn.describe_stacks(stack_name: stack_name).stacks.first
+        rescue Aws::CloudFormation::Errors::ValidationError => e
+          raise e unless e.message == "Stack with id #{stack_name} does not exist"
+          false
+        end
       end
 
       def update_certs

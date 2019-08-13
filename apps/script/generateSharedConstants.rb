@@ -84,7 +84,7 @@ def main
   generate_shared_js_file(shared_content, "#{REPO_DIR}/apps/src/util/sharedConstants.js")
   generate_shared_js_file(generate_constants('APPLAB_BLOCKS'), "#{REPO_DIR}/apps/src/applab/sharedApplabBlocks.js")
   generate_shared_js_file(generate_constants('APPLAB_GOAL_BLOCKS'), "#{REPO_DIR}/apps/src/applab/sharedApplabGoalBlocks.js")
-  generate_shared_js_file(generate_constants('GAMELAB_BLOCKS'), "#{REPO_DIR}/apps/src/gamelab/sharedGamelabBlocks.js")
+  generate_shared_js_file(generate_constants('GAMELAB_BLOCKS'), "#{REPO_DIR}/apps/src/p5lab/gamelab/sharedGamelabBlocks.js")
 
   generate_shared_js_file(
     generate_multiple_constants(
@@ -92,6 +92,7 @@ def main
         COURSES
         SUBJECT_NAMES
         SUBJECTS
+        LEGACY_SUBJECTS
         STATES
         WORKSHOP_APPLICATION_STATES
         WORKSHOP_SEARCH_ERRORS

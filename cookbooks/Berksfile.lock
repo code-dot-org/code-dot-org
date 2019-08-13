@@ -46,6 +46,8 @@ DEPENDENCIES
     path: cdo-ruby
   cdo-secrets
     path: cdo-secrets
+  cdo-tippecanoe
+    path: cdo-tippecanoe
   cdo-users
     path: cdo-users
   cdo-varnish
@@ -74,7 +76,7 @@ GRAPH
   cdo-analytics (0.0.0)
     apt (~> 2.6.0)
     ark (>= 0.0.0)
-  cdo-apps (0.2.349)
+  cdo-apps (0.2.364)
     apt (>= 0.0.0)
     build-essential (>= 0.0.0)
     cdo-analytics (>= 0.0.0)
@@ -92,6 +94,7 @@ GRAPH
     cdo-repository (>= 0.0.0)
     cdo-ruby (>= 0.0.0)
     cdo-secrets (>= 0.0.0)
+    cdo-tippecanoe (>= 0.0.0)
     cdo-varnish (>= 0.0.0)
     chef_client_updater (>= 0.0.0)
     chef_hostname (>= 0.0.0)
@@ -142,6 +145,8 @@ GRAPH
     apt (~> 2.6.0)
     sudo-user (>= 0.0.0)
   cdo-secrets (0.1.7)
+  cdo-tippecanoe (0.1.2)
+    ark (>= 0.0.0)
   cdo-users (0.1.25)
     apt (~> 2.6.0)
   cdo-varnish (0.3.218)

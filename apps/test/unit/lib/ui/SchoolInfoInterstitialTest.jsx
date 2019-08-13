@@ -98,6 +98,27 @@ describe('SchoolInfoInterstitial', () => {
     expect(wrapper.state('isOpen')).to.be.false;
   });
 
+  it('closes the school info confirmation dialog when the dismiss button is clicked', () => {
+    const onClose = sinon.spy();
+    const wrapper = mount(
+      <SchoolInfoInterstitial
+        {...MINIMUM_PROPS}
+        scriptData={{
+          ...MINIMUM_PROPS.scriptData,
+          existingSchoolInfo: {}
+        }}
+        onClose={onClose}
+      />
+    );
+    const wrapperInstance = wrapper.instance();
+    sinon.spy(wrapperInstance, 'dismissSchoolInfoForm');
+    wrapper.instance().forceUpdate();
+    wrapper.find('Button[id="dismiss-button"]').simulate('click');
+    expect(wrapperInstance.dismissSchoolInfoForm).to.have.been.called;
+    expect(wrapper.state('isOpen')).to.be.false;
+    expect(onClose).to.have.been.calledOnce;
+  });
+
   it('passes empty school info if created with no existing school info', () => {
     const wrapper = shallow(
       <SchoolInfoInterstitial
@@ -154,6 +175,52 @@ describe('SchoolInfoInterstitial', () => {
         onSchoolNotFoundChange={wrapper.instance().onSchoolNotFoundChange}
       />
     );
+  });
+
+  it('clears the school ID when country is changed', () => {
+    const wrapper = shallow(
+      <SchoolInfoInterstitial
+        {...MINIMUM_PROPS}
+        scriptData={{
+          ...MINIMUM_PROPS.scriptData,
+          existingSchoolInfo: {
+            school_id: '123',
+            country: 'United States',
+            school_type: 'public',
+            school_name: 'Test School',
+            full_address: 'Seattle'
+          }
+        }}
+      />
+    );
+    expect(wrapper.state('country')).to.equal('United States');
+    expect(wrapper.state('ncesSchoolId')).to.equal('123');
+    wrapper.instance().onCountryChange(undefined, {value: 'Sweden'});
+    expect(wrapper.state('country')).to.equal('Sweden');
+    expect(wrapper.state('ncesSchoolId')).to.equal('');
+  });
+
+  it('clears the school ID when school_type is changed', () => {
+    const wrapper = shallow(
+      <SchoolInfoInterstitial
+        {...MINIMUM_PROPS}
+        scriptData={{
+          ...MINIMUM_PROPS.scriptData,
+          existingSchoolInfo: {
+            school_id: '123',
+            country: 'United States',
+            school_type: 'public',
+            school_name: 'Test School',
+            full_address: 'Seattle'
+          }
+        }}
+      />
+    );
+    expect(wrapper.state('schoolType')).to.equal('public');
+    expect(wrapper.state('ncesSchoolId')).to.equal('123');
+    wrapper.instance().onSchoolTypeChange({target: {value: 'after school'}});
+    expect(wrapper.state('schoolType')).to.equal('after school');
+    expect(wrapper.state('ncesSchoolId')).to.equal('');
   });
 
   it('interprets initial country "US" as "United States"', () => {
@@ -552,6 +619,30 @@ describe('SchoolInfoInterstitial', () => {
           'user%5Bschool_info_attributes%5D%5Bschool_type%5D=organization',
           'user%5Bschool_info_attributes%5D%5Bschool_name%5D=Test+School',
           'user%5Bschool_info_attributes%5D%5Bfull_address%5D=Boring%2C+OR'
+        ].join('&')
+      );
+    });
+
+    it('submits with only non-US', () => {
+      const wrapper = shallow(
+        <SchoolInfoInterstitial
+          {...MINIMUM_PROPS}
+          scriptData={{
+            ...MINIMUM_PROPS.scriptData,
+            existingSchoolInfo: {
+              country: 'Algeria',
+              school_type: ''
+            }
+          }}
+        />
+      );
+      wrapper.find('Button[id="save-button"]').simulate('click');
+      expect(server.requests[0].requestBody).to.equal(
+        [
+          '_method=patch',
+          'auth_token=fake_auth_token',
+          'user%5Bschool_info_attributes%5D%5Bcountry%5D=Algeria',
+          'user%5Bschool_info_attributes%5D%5Bschool_type%5D='
         ].join('&')
       );
     });

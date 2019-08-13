@@ -1,0 +1,17 @@
+name 'dlp19_overview2'
+title 'Deeper Learning Description'
+description 'description here'
+markdown <<MARKDOWN
+# Deeper Learning Program
+
+## What is the Process? 
+At a high level, the Deeper Learning Plan for facilitators can be broken into three stages: 
+
+![](https://images.code.org/00267b94ca7a906032906104ce6be791-image-1564446246722.PNG)
+
+## What is reflection prompt?
+Each module consists of three reflection prompts based on a typical facilitator-teacher interaction at a workshop, when a new-to-CS teacher approaches you and asks a question.  Prompts may provide additional context or more specific background.  For each prompt, your task is to construct a response as direct guidance to this teacher during a one-on-one interaction.  Although the scenario is presented as an in-person interaction, you will be submitting a written response to the prompt.  We acknowledge that answers would usually develop as part of a conversation where there would be  multiple opportunities for clarification.  Your submission should be based on a reasonable interpretation of the teacher’s intent and needs. 
+
+## What is a peer review?
+In addition to submitting your own reflections in each module, you will have the opportunity to review your fellow facilitators’ reflections for that module. We believe that peer feedback is an important component of building a strong, supportive community and we encourage you to contribute to our community practice.   Facilitators in the past have enjoyed reading other facilitators’ answers as they felt it gave them more insights than just submitting their own work.   While submitting peer feedback is not required, we believe that thoughtful responses to peers will strengthen facilitator effectiveness.  These submissions will appear at the bottom of your Deeper Learning page for each module in the 'peer review' section and your reviews should be completed before your workshop for that module. 
+MARKDOWN

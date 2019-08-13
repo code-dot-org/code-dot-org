@@ -123,11 +123,15 @@ social:
 
   -# Map
   - unless @country == 'ma' # Hide map for Morocco because of sensitive border disputes misrepresented in map
+    - use_mapbox = DCDO.get("use_mapbox", false)
     #maparea.full-width
       -# During pre-Hour of Code season, show the embedded gmap.
       -# All other times show a picture of the map.
       -if hoc_mode == "pre-hoc"
-        = view :hoc_events_map, max_height_percentage: 1
+        - if use_mapbox
+          = view :hoc_events_map_replacement
+        -else
+          = view :hoc_events_map, max_height_percentage: 1
         .footnote=hoc_s(:map_warning).gsub(/%{events_url}/, resolve_url('/events'))
       -else
         %a{href: resolve_url('/map')}

@@ -24,8 +24,10 @@ commit = ENV['COMMIT'] || `git ls-remote origin #{branch}`.split.first
 ami = commit[0..4]
 
 frontends = @frontends = rack_env?(:production) || ENV['FRONTENDS']
-database = @database = [:staging, :test, :levelbuilder].include?(rack_env) || ENV['DATABASE']
+# TODO: Remove adhoc from this list when we have upgraded to the latest Ubuntu to fix Chef installation of MySQL.
+database = @database = [:staging, :test, :levelbuilder, :adhoc].include?(rack_env) || ENV['DATABASE']
 load_balancer = @load_balancer = !rack_env?(:adhoc) || ENV['FRONTENDS']
+alarms = @alarms = !rack_env?(:adhoc) || ENV['ALARMS']
 
 unless dry_run
   update_certs.call unless load_balancer
@@ -79,16 +81,17 @@ Resources:
       PolicyDocument:
         Version: 2012-10-17
         Statement:
-<% if database -%>
           # Read-only access to current secrets.
           - Effect: Allow
             Action: 'secretsmanager:GetSecretValue'
             Resource:
+              - !Sub "arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:<%=environment%>/cdo/*"
+<% if database -%>
               - !Ref DatabaseSecret
+<% end -%>
             Condition:
               StringEquals:
                 secretsmanager:VersionStage: AWSCURRENT
-<% end -%>
           # Read-only access to bootstrap scripts.
           - Effect: Allow
             Action: 's3:GetObject'
@@ -132,15 +135,6 @@ Resources:
           - Effect: Allow
             Action: 'firehose:PutRecord'
             Resource: !Sub "arn:aws:firehose:${AWS::Region}:${AWS::AccountId}:deliverystream/analysis-events"
-          # Send messages to SQS queues for asynchronous processing.
-          - Effect: Allow
-            Action: 'sqs:SendMessage'
-            Resource:
-<% unless daemon -%>
-              - !GetAtt ActivitiesQueue.Arn
-<% end -%>
-              # TODO: Import pd_workshop resources into stack.
-              - !Sub "arn:aws:sqs:${AWS::Region}:${AWS::AccountId}:pd_workshop-<%=environment%>"
           # General s3 access.
           # TODO: Further restrict permissions to grant least privilege.
           - Effect: Allow
@@ -503,23 +497,6 @@ Resources:
       PreferredAvailabilityZones: <%= availability_zones.first(2).to_json %>
       VpcSecurityGroupIds: [!ImportValue VPC-MemcachedSecurityGroup]
 <% end -%>
-<% unless daemon -%>
-  ActivitiesQueue:
-    Type: AWS::SQS::Queue
-    Properties:
-      ReceiveMessageWaitTimeSeconds: 20
-      VisibilityTimeout: 15
-      QueueName: !Sub "activities-${AWS::StackName}"
-      RedrivePolicy:
-        maxReceiveCount: 3
-        deadLetterTargetArn: !GetAtt [ActivitiesDeadQueue, Arn]
-  ActivitiesDeadQueue:
-    Type: AWS::SQS::Queue
-    Properties:
-      ReceiveMessageWaitTimeSeconds: 20
-      VisibilityTimeout: 15
-      QueueName: !Sub "activities_dead-${AWS::StackName}"
-<% end -%>
   DaemonRole:
     Type: AWS::IAM::Role
     Properties:
@@ -528,20 +505,6 @@ Resources:
         - PolicyName: Daemon
           PolicyDocument:
             Statement:
-              # SQS queues for Asynchronous batch processing by the `process_queues` service.
-              - Effect: Allow
-                Action:
-                  - 'sqs:ReceiveMessage'
-                  - 'sqs:DeleteMessageBatch'
-                  - 'sqs:DeleteMessage'
-                Resource:
-<% unless daemon -%>
-                  - !GetAtt ActivitiesQueue.Arn
-                  - !GetAtt ActivitiesDeadQueue.Arn
-<% end -%>
-                  # TODO: Import pd_workshop resources into stack.
-                  - !Sub "arn:aws:sqs:${AWS::Region}:${AWS::AccountId}:pd_workshop-<%=environment%>"
-                  - !Sub "arn:aws:sqs:${AWS::Region}:${AWS::AccountId}:pd_workshop_dead-<%=environment%>"
               # APIs used by ci:flush_cache task.
               - Effect: Allow
                 Action:
@@ -668,7 +631,11 @@ Resources:
 <%  unless load_balancer -%>
           - !ImportValue VPC-ELBSecurityGroup # Accept HTTP traffic on daemon
 <%  end -%>
+<% if database %>
+    DependsOn: AuroraMaster
+<% end -%>
 <%end-%>
+<% if alarms %>
   DaemonStorageUtilizationAlarm:
     Type: "AWS::CloudWatch::Alarm"
     Properties:
@@ -709,6 +676,7 @@ Resources:
       Statistic: Maximum
       Threshold: 87
       TreatMissingData: missing
+<% end -%>
 <% if database -%>
   AuroraCluster:
     Type: AWS::RDS::DBCluster

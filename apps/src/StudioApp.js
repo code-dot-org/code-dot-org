@@ -935,10 +935,12 @@ StudioApp.prototype.toggleRunReset = function(button) {
 
   var run = document.getElementById('runButton');
   var reset = document.getElementById('resetButton');
-  run.style.display = showRun ? 'inline-block' : 'none';
-  run.disabled = !showRun;
-  reset.style.display = !showRun ? 'inline-block' : 'none';
-  reset.disabled = showRun;
+  if (run || reset) {
+    run.style.display = showRun ? 'inline-block' : 'none';
+    run.disabled = !showRun;
+    reset.style.display = !showRun ? 'inline-block' : 'none';
+    reset.disabled = showRun;
+  }
 
   // Toggle soft-buttons (all have the 'arrow' class set):
   $('.arrow').prop('disabled', showRun);
@@ -3213,6 +3215,7 @@ StudioApp.prototype.setPageConstants = function(config, appSpecificConstants) {
       is13Plus: config.is13Plus,
       isSignedIn: config.isSignedIn,
       userId: config.userId,
+      verifiedTeacher: config.verifiedTeacher,
       textToSpeechEnabled: config.textToSpeechEnabled,
       isK1: config.level.isK1,
       appType: config.app,
