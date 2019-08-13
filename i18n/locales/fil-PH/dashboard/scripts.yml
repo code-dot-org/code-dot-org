@@ -8350,6 +8350,12 @@ fil:
               name: bagong yugto
             Number Systems:
               name: Mga Sistema ng Pagbilang
+            Sending Binary Messages:
+              name: Pagpapadala ng Binary na mga Mensahe
+            Sending Binary Messages with the Internet Simulator:
+              name: Pagpapadala ng mga Binary na Mensahe sa mga Simulator ng Internet
+            Intellectual Property:
+              name: Intelektwal na Pag-aari
         csd-videos:
           stages:
             new stage:
@@ -8615,3 +8621,17 @@ fil:
           stages:
             new stage:
               name: bagong yugto
+        csl-vn:
+          stages:
+            Programming in Maze:
+              name: Pag-Program sa Maze
+            Programming with Rey and BB-8:
+              name: Pag-Program kasama sina Rey at BB-8
+        dlp19-csd-mod-fit:
+          stages:
+            Deeper Learning Overview:
+              name: Buod ng Mas Malalim na Pag-aaral
+        dlp19-csp-mod-fit:
+          stages:
+            Deeper Learning Overview:
+              name: Buod ng Mas Malalim na Pag-aaral

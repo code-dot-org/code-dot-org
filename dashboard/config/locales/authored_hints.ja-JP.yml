@@ -4,16 +4,16 @@ ja-JP:
     authored_hints:
       2-3 Artist 1 new:
         2-3_Artist_1_new_a: ブロックをつかって「100ピクセル前にすすむ」ことを教えて。そうすればぼくが線を引いてあげるよ。
-        2-3_Artist_1_new_b: カドをまがるのが、むずかしい？「90度まがる」ブロックを使ってみて。
+        2-3_Artist_1_new_b: カドをまがるのが、むずかしい？「90度まがる」ブロックを使（つか）ってみて。
       2-3 Artist 11:
         2-3_Artist_11_a: '角度が、むずかしい？8回まがって360度ですね。360 ÷ 8 は、いくつでしょうか？ '
       2-3 Artist 12:
         2-3_Artist_12_a: 円は 360 度で、アーティストはループごとに1度まがるから、360 回くりかえして みてください。
       2-3 Artist 2 new:
-        2-3_Artist_2_new_a: アーティストは、正しい方を向いていないです。せんを かく前に、かれの向きを かえてください。
+        2-3_Artist_2_new_a: アーティストは、正しい方を向いていないです。せんを かく前に、アーティストの向きを かえてください。
       2-3 Artist 3new:
         2-3_Artist_3new_a: 100 - 70 は、いくつですか？それがぼうしの高さです！
-        2-3_Artist_3new_b: アーティストは、正しい方を向いていないです。せんを かく前に、かれの向きを かえてください。
+        2-3_Artist_3new_b: アーティストは、正しい方を向いていないです。せんを かく前に、アーティストの向きを かえてください。
       2-3 Artist 4:
         2-3_Artist_4_a: 家を完成（かんせい）させるには、四角形をかいてください！
       2-3 Artist 6:
@@ -158,7 +158,7 @@ ja-JP:
         2-3_Artist_Nested_Loops_9_a: |-
           正しい角度を知る手助（てだす）けが必要（ひつよう）ですか？
 
-          \*\* 12 x 30 = 360 \*\*
+          **360 / 12 = 30**
       2-3 Bee Conditionals 14:
         2-3_Bee_Conditionals_14_a: ブロックのへらし方がむずかしいかな？赤い花をムラサキの花とまったく同じものとして考えてみよう！
         2-3_Bee_Conditionals_14_b: 赤い花がムラサキ色だったら、「くりかえし」ループを使（つか）ってコードをへらす方法（ほうほう）がわかったでしょうか？
@@ -189,7 +189,7 @@ ja-JP:
       2-3 Bee Debugging 2:
         2-3_Bee_Debugging_2_a: まちがいのブロックを見つけて直した後、「くりかえし」ループを使ってもっとシンプルにできるパターンがわかりますか？
       2-3 Bee Debugging 4:
-        2-3_Bee_Debugging_4_a: ハチが意味のない何かをするところがありますか？そのブロックを変更すると何が起こりますか？
+        2-3_Bee_Debugging_4_a: ハチが おかしなことを しているところが ありますか？そのブロックをかえると、どうなりますか？
       2-3 Bee Functions 4:
         2-3_Bee_Functions_4_a: ループを関数と一緒に使う必要はありません。すすんで、関数を使って、そしてすすんで、もう一度関数を使ってみてください。
       2-3 Bee Functions 6:
@@ -220,7 +220,7 @@ ja-JP:
         2-3_Bee_Loops_4_a: ループの中には5つのブロックが必要（ひつよう）です。
       2-3 Bee Loops 4A:
         2-3_Bee_Loops_4A_a: 最初（さいしょ）にハチの向（む）きをかえよう。
-        2-3_Bee_Loops_4A_b: プログラムの最後の部分は、ループ外のプログラムの最後にコードを書くことで終わりにできます。
+        2-3_Bee_Loops_4A_b: プログラムを終わらせるために、ループの外に プログラムを たしてください。
         2-3_Bee_Loops_4A_c: まだループを見つけられない場合は、さいしょループをつかわずコーディングしてから、さいごに何を組み合わせると「くりかえし」のループにできるかをチェックしてみよう。
       2-3 Bee Loops 5:
         2-3_Bee_Loops_5_a: すぐに 「くりかえし」の中にブロックを入れられなかった場合は、それぞれの動きをコーディングしてパターンをさがすことからはじめましょう。
@@ -252,6 +252,44 @@ ja-JP:
         2-3_Maze_Loops_20_a: ループをつかえる場所（ばしょ）を見つけるために、この迷路（めいろ）の階段（かいだん）パターンをさがしてください。
       2-3 Maze Loops 21:
         2-3_Maze_Loops_21_a: 階段（かいだん）パターンが見つからなかった場合は、通り道をゆびでなぞってみてください。
+      4-5 Artist 11:
+        4-5_Artist_11_a: ループ内で、各線を引いた後にアーティストが前後にジャンプすることをたしかめてください。
+      4-5 Artist 3:
+        4-5_Artist_3_a: |-
+          花だんの周囲の長さは600ピクセルで、辺の2つが200ピクセルの長さの場合、短辺の長さの合計は以下になります。
+
+          \*\* 600 - 200 - 200 = 200\*\*
+
+          つまり、短辺の合計は200ピクセルになります。
+
+          **200/2は何ですか？**
+        4-5_Artist_3_b: "「くりかえし」ループをどこへ置けばいいかすぐにわからない場合は、ループを使わずに作り上げてからパターンをさがしてください。"
+      4-5 Artist 4:
+        4-5_Artist_4_a: |-
+          円は360度です！
+
+          これが円を作り上げるためにこのコードをくりかえす必要がある回数です (1回につき1度回転させる)。
+      4-5 Artist 5:
+        4-5_Artist_5_a: |-
+          トライアンドエラーはすばらしい方法ですが、90度の角度を1/3に等分して問題をとくこともできます。
+
+          **90 / 3 = \_\_\_\_\_**
+      4-5 Artist 7:
+        4-5_Artist_7_a: 'どの角度が一番小さい？アーティストはどちらの方向を向いて立っている？ '
+      4-5 Artist 8:
+        4-5_Artist_8_a: "長編はそれぞれ240ピクセルです。つまり、2つの短辺は合計する必要があります。\n\n**800 - 240 -
+          240 = 320**\n\n**320/2**は何ですか？ "
+        4-5_Artist_8_b: |-
+          この絵は2つの方法で作れます！
+
+          -   長さ**120**、高さ**160**の2つの長方形を、重なり合う辺でかきます。
+
+          -   長さ**240**、高さ**160**の長方形を1つかいてから、真ん中に線を追加します。
+      4-5 Artist 9:
+        4-5_Artist_9_a: '三角形が正三角形の場合、すべての辺とすべての角度は同じです。  '
+        4-5_Artist_9_b: 同じサイズの3つの三角形をかく必要があるでしょう。それぞれの三角形をかいた後、新しい位置にジャンプすることをわすれないでください。
+      4-5 Artist Assessment 1:
+        4-5_Artist_Assessment_1_a: このパズルを完成させるには、外側の三角形をかくだけです。
       4-5 Artist Patterns 2:
         4-5_Artist_Patterns_2_a: 正方形の一辺は 20 ピクセルの長さですから、次の正方形を書く前に 20 ピクセル ジャンプします。
       4-5 Artist Patterns 3:
@@ -259,6 +297,26 @@ ja-JP:
         4-5_Artist_Patterns_3_b: ぐちゃぐちゃになったら、「最初からやりなおす」で、最初からやりなおして下さい。
       4-5 Artist Patterns 5:
         4-5_Artist_Patterns_5_a: ひとつのひし形を書き終えたとき、アーティストは進むべき方向と、180度反対を向いています。
+      4-5 Bee Conditionals 6:
+        4-5 Bee Conditionals 6_a: ワークスペース上のブロックだけを使ってこのパズルが解けるかな？ どんな順番で並べればいいかな？
+        4-5 Bee Conditionals 6_b: このパズルをとくためには、花のミツが**0**つ以上あることを、**3**回以上調べていることをチェックしてください。
+      4-5 Maze 10:
+        4-5_Maze_10_a: |-
+          ループを使ってパズルをすぐにとく方法がわからない場合は、最初にどのようにループを使えばいいかを考えてから、パターンをさがしてください。
+
+          コードを短くするために、何を「くりかえし」する必要がありますか？
+      4-5 Maze 4:
+        4-5_Maze_4_a: どこに「くりかえし」をおけばいいかを苦労している場合は、ループを使わずにすべてをコーディングしてパターンをさがしてみてください。
+      4-5 Maze 5:
+        4-5_Maze_5_a: 2ステップ以上「すすむ」必要があるときはいつでも、「くりかえし」ループを使ってみてください。
+        4-5_Maze_5_b: あなたはパズルの中で1つ以上の「くりかえし」ループを使うことができます。
+      4-5 Maze 6:
+        4-5_Maze_6_a: 指で道をたどってみてください。それが最短の道でいいかな？
+      4-5 Maze 7:
+        4-5_Maze_7_a: |-
+          **コードをできるだけ小さくしたい？**
+
+          ブロックのパターンをさがしてください。くりかえしできるものがあれば、かわりにループをつけてみてください。
       4-5 Nested Loops 12:
         4-5_Nested_Loops_12_a: 360÷36＝？
       Course 4 Artist 11:
@@ -286,7 +344,6 @@ ja-JP:
           変数を上手く使って、ハチをうごかして、花のミツを集めよう。
         Course_4_SCFL_1_c: ハチミツを作るには、「カウントする」ブロックを使って、2から10まで2ずつカウントしてね。 `counter`
           変数を上手く使って、ハチミツを作ろう。
-        Course_4_SCFL_1_d: 答えは先生に聞いてくださいね。
       Course 4 SCFL 1a:
         Course_4_SCFL_1a_b: まず、花のミツを全部あつめて、そのあと、ハチミツを作りながら帰って来ます。
       Course 4 SCFL 1b:
@@ -303,7 +360,6 @@ ja-JP:
           一番小さい四角形は、一辺 50 ピクセルの長さで、50 ピクセルずつ大きくなっていきます。
         Course_4_SCFL_3_b: ペンのアルファ値（とうめいさ）は `counter` ÷ 2 です。
         Course_4_SCFL_3_c: 四角形を一つ書いたら、後ろにジャンプします。
-        Course_4_SCFL_3_d: 答えは先生に聞いてくださいね。
       Course 4 SCFL 4:
         Course_4_SCFL_4_a: ペンの太さは１です。色は、赤が `counter`、みどりが 255 - `counter`、青が 255 、これらをまぜた色にします。
         Course_4_SCFL_4_b: 図形は四角形の組み合わせです。一番小さい四角形の一辺は、5ピクセル、一番大きい四角形は200ピクセル、5ピクセルずつ大きくしていきます。
@@ -312,7 +368,6 @@ ja-JP:
         Course_4_SCFL_6_a: 色は、赤は 255、みどりは `counter` 、青は 255 -  `counter` で、これらをまぜた色にしてください。
         Course_4_SCFL_6_b: 色を かえたら、 `counter`ピクセルの線を引き、右に80度まがります。
         Course_4_SCFL_6_c: "「カウントする」ブロック使って、 5から250まで 2ずつカウントします。 "
-        Course_4_SCFL_6_d: 答えは先生に聞いてくださいね。
       Course 4 SCFL 7:
         Course_4_SCFL_7_a: |-
           「アルファ値は20」ブロックを、はじめに一度だけ実行するようにして下さい。
@@ -634,7 +689,7 @@ ja-JP:
 
           じぶんの家を作ってみよう。![](https://images.code.org/53090194cea5dbf35ce9e35205156f5d-image-1491864793265.png) をおすと、いくつかのアイディアをあげます！
       course1_artist_loops_challenge2:
-        harvey_tictactoe: "「ジャンプ」ブロックをつかうと、線をかかずにうごけるよ。"
+        harvey_tictactoe: "「ジャンプ」ブロックをつかうと、線をかかずに うごけるよ。"
       course1_artist_loops_challenge3:
         courseA_artist_loops_challenge2_a: <xml>  <block type="simple_move_up_left"/></xml>
           をつかうと、北西に線が引けるよ！
@@ -660,7 +715,7 @@ ja-JP:
             <block type="collector_collect"/></next>
             </xml>
         courseB_collector_loops_challenge1_a: |-
-          北ブロックのパターンは、南ブロックのパターンと少し違うよ。
+          北ブロックのパターンは、南ブロックのパターンと 少しちがうよ。
 
           <xml>
             <block type="collector_collect"/><next>
@@ -670,7 +725,7 @@ ja-JP:
           \ <block type=\"maze_moveEast\"/><next>\n  <block type=\"maze_moveEast\"/></next>next>\n
           \ </xml>\n\nたった14ブロックでこれができます。 ヒントをクリックすると答えが見れます。 "
       course1_maze_debugging_challenge1:
-        courseA_maze_seq_challenge1_a: 遠くまで歩きすぎるとバクダンにぶつかっちゃうよ。
+        courseA_maze_seq_challenge1_a: 遠くまで歩きすぎると バクダンに ぶつかっちゃうよ。
       course1_maze_debugging_challenge2:
         courseB_maze_seq_challenge2_b: ブロックをならべかえて、まん中の道をすすんでください。
       course1_maze_seq_challenge2:
@@ -753,7 +808,7 @@ ja-JP:
 
           ![](<https://images.code.org/7696c5c16b8ddf1d53436cdc7fb6346d-image-1494101728016.14.34 PM.png>)
       course2_maze_programming_challenge2:
-        courseC_maze_programming_challenge2_a: 後ろに行く場合は、まがる方向（ほうこう）に気をつけよう。
+        courseC_maze_programming_challenge2_a: 後ろに行くときは、まがる方向（ほうこう）に気をつけよう。
         courseC_maze_programming_challenge2_b: 最短（さいたん）ルートは5ブロックでクリアできます。「くりかえし」ブロックを使います！
       course3_bee_functions_challenge1:
         courseE_bee_functions_challenge1_a: |-
@@ -876,14 +931,12 @@ ja-JP:
           一番小さい四角形は、一辺 50 ピクセルの長さで、50 ピクセルずつ大きくなっていきます。
         courseF_artist_for_challenge1_b: ペンのアルファ値（とうめいさ）は `counter` ÷ 2 です。
         courseF_artist_for_challenge1_c: 四角形を一つ書いたら、後ろにジャンプします。
-        courseF_artist_for_challenge1_d: 答えは先生に聞いてくださいね。
       courseF_artist_for_challenge1_2019:
         courseF_artist_for_challenge1_a: |-
           ペンの太さは 1 です。
           一番小さい四角形は、一辺 50 ピクセルの長さで、50 ピクセルずつ大きくなっていきます。
         courseF_artist_for_challenge1_b: ペンのアルファ値（とうめいさ）は `counter` ÷ 2 です。
         courseF_artist_for_challenge1_c: 四角形を一つ書いたら、後ろにジャンプします。
-        courseF_artist_for_challenge1_d: 答えは先生に聞いてくださいね。
       courseF_artist_for_challenge2:
         courseF_artist_for_challenge2_c: "「カウントする」ブロック使って、 5から250まで 2ずつカウントします。 "
         courseF_artist_for_challenge2_a: 色は、赤は 255、みどりは `counter` 、青は 255 -  `counter`
@@ -933,14 +986,12 @@ ja-JP:
           `counter` 変数を上手く使って、ハチをうごかして、花のミツを集めよう。
         courseF_bee_for_challenge2_c: ハチミツを作るには、「カウントする」ブロックを使って、2から10まで2ずつカウントしてね。
           `counter` 変数を上手く使って、ハチミツを作ろう。
-        courseF_bee_for_challenge2_d: 答えは先生に聞いてくださいね。
       courseF_bee_for_challenge2_2019:
         courseF_bee_for_challenge2_a: まず、花のミツを全部あつめて、そのあと、ハチミツを作りながら帰って来ます。
         courseF_bee_for_challenge2_b: 花のミツをとるには、「カウントする」ブロックを使って、１から３まで１ずつカウントしてね。
           `counter` 変数を上手く使って、ハチをうごかして、花のミツを集めよう。
         courseF_bee_for_challenge2_c: ハチミツを作るには、「カウントする」ブロックを使って、2から10まで2ずつカウントしてね。
           `counter` 変数を上手く使って、ハチミツを作ろう。
-        courseF_bee_for_challenge2_d: 答えは先生に聞いてくださいね。
       courseF_bee_functions8a:
         courseF_bee_functions8a_a: |-
           パズルが難しいと感じたら関数を一度に少しずつ作ってみてください。

@@ -3,7 +3,7 @@ require 'test_helper'
 module Pd::Payment
   class WorkshopSummaryTest < ActiveSupport::TestCase
     setup do
-      @ended_workshop = create :pd_ended_workshop, num_sessions: 1
+      @ended_workshop = create :workshop, :ended
       @workshop_summary = WorkshopSummary.new(
         workshop: @ended_workshop,
         pay_period: 'a pay period',

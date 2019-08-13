@@ -4190,6 +4190,8 @@ vi:
               name: 'Thuật toán đời sống: Trồng một hạt giống'
             Your Digital Footprint:
               name: Dấu chân kỹ thuật số 
+            Sequencing with Scrat:
+              name: Học về chuỗi cùng sóc Scrat
             Move It, Move It:
               name: Di chuyển nó, di chuyển nó
         coursed-2018:
@@ -4669,6 +4671,8 @@ vi:
               name: Ong tìm chữ
             Move It, Move It:
               name: Di chuyển nó, di chuyển nó
+            Sequencing with Scrat:
+              name: Học về chuỗi cùng sóc Scrat
             Your Digital Footprint:
               name: Dấu chân kỹ thuật số 
         fit-test:
@@ -4838,10 +4842,14 @@ vi:
               name: Bản đồ thú vị
             Going Places Safely:
               name: Đến nơi an toàn
+            Sequencing with Scrat:
+              name: Học về chuỗi cùng sóc Scrat
         courseb-2019:
           stages:
             Move It, Move It:
               name: Di chuyển nó, di chuyển nó
+            Sequencing with Scrat:
+              name: Học về chuỗi cùng sóc Scrat
             Your Digital Footprint:
               name: Dấu chân kỹ thuật số 
             'Loops: Getting Loopy':
@@ -4852,6 +4860,8 @@ vi:
               name: 'Gỡ lội: Những chú bọ không đốm'
             Move It, Move It:
               name: Di chuyển nó, di chuyển nó
+            Sequencing with Scrat:
+              name: Học về chuỗi cùng sóc Scrat
             Your Digital Footprint:
               name: Dấu chân kỹ thuật số 
             Spelling Bee:
@@ -5134,6 +5144,12 @@ vi:
               name: giai đoạn mới
             Number Systems:
               name: Hệ thống các con số
+            Sending Binary Messages:
+              name: Gửi tin nhắn nhị phân
+            Sending Binary Messages with the Internet Simulator:
+              name: Gửi tin nhắn nhị phân với mô phỏng Internet
+            Intellectual Property:
+              name: Sở hữu trí tuệ
         csd-videos:
           stages:
             new stage:
@@ -5248,3 +5264,15 @@ vi:
           stages:
             new stage:
               name: giai đoạn mới
+        csl-vn:
+          stages:
+            Sequencing with Scrat:
+              name: Học về chuỗi cùng sóc Scrat
+        dlp19-csd-mod-fit:
+          stages:
+            Deeper Learning Overview:
+              name: Tổng quan học tập sâu
+        dlp19-csp-mod-fit:
+          stages:
+            Deeper Learning Overview:
+              name: Tổng quan học tập sâu

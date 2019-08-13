@@ -11,9 +11,9 @@
   },
   "https://studio.code.org/s/coursec-2017/stage/2/puzzle/3": {
     "short_instructions": "Drag an extra `move forward` block out of the toolbox to finish your code.",
-    "long_instructions": "Drag an extra <xml><block type=\"maze_moveForward\"/></xml> block out of the toolbox to finish your code.",
+    "long_instructions": "Drag an extra [blockly block][0] block out of the toolbox to finish your code.",
     "authored_hints": {
-      "courseC_maze_programming2_a": "To use a <xml><block type=\"maze_moveForward\"/></xml> block, drag it out of the toolbox and snap it to the <xml><block type=\"when_run\"/></xml> block.",
+      "courseC_maze_programming2_a": "To use a [blockly block][0] block, drag it out of the toolbox and snap it to the [blockly block][1] block.",
       "courseC_maze_programming2_b": "Make sure all of the blocks have been fully snapped together, then click \"Run\" again."
     },
     "callouts": {
@@ -138,7 +138,7 @@
     "long_instructions": "Sometimes there is more than one way to solve the same problem. Sometimes it's faster to go backwards than it is to go forwards!",
     "authored_hints": {
       "courseC_maze_programming_challenge2_a": "_\"If you send me backwards, be extra careful that I turn the correct way!\"_",
-      "courseC_maze_programming_challenge2_b": "The shortest solution uses only 5 blocks, but it uses this block:\n\n<xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>"
+      "courseC_maze_programming_challenge2_b": "The shortest solution uses only 5 blocks, but it uses this block:\n\n[blockly block][0]"
     }
   },
   "https://studio.code.org/s/coursec-2017/stage/3/puzzle/2": {
@@ -255,7 +255,7 @@
     "short_instructions": "Play around with the blocks to see if you can help Laurel collect some treasure.",
     "long_instructions": "**Free Play:** This is Laurel the Adventurer! Move her around and get as much treasure as you can. Use the `collect` block to pick up the treasure!\n\nDrag blocks into the workspace and try to figure out how to get treasure.  Get at least one item to pass this level.",
     "authored_hints": {
-      "courseC_collector_prog1_a": "When you are standing on a space with treasure, use the <xml><block type=\"collector_collect\"/></xml> block to pick it up.",
+      "courseC_collector_prog1_a": "When you are standing on a space with treasure, use the [blockly block][0] block to pick it up.",
       "courseC_collector_prog1_b": "The most simple solution would be to move forward once, then collect treasure."
     },
     "callouts": {
@@ -264,9 +264,9 @@
   },
   "https://studio.code.org/s/coursec-2017/stage/5/puzzle/3": {
     "short_instructions": "Move Laurel to the treasure, then use `collect` to pick it up.",
-    "long_instructions": "Move Laurel to the treasure, then use <xml><block type=\"collector_collect\"/></xml> to pick it up.",
+    "long_instructions": "Move Laurel to the treasure, then use [blockly block][0] to pick it up.",
     "authored_hints": {
-      "courseC_collector_prog2_a": "You can use four <xml><block type=\"maze_move\"><title name=\"DIR\">moveForward</title></block></xml> blocks or use the <xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> block to make your program shorter.",
+      "courseC_collector_prog2_a": "You can use four [blockly block][0] blocks or use the [blockly block][1] block to make your program shorter.",
       "courseC_collector_prog2_b": "Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you don't think you've solved the puzzle yet."
     }
   },
@@ -274,7 +274,7 @@
     "short_instructions": "Order these blocks to collect the treasure and solve the puzzle.",
     "long_instructions": "_\"Sequence matters!\"_ \n\nThe blocks you need are already in the workspace, but not connected.\\\nOrder these blocks to collect the treasure and solve the puzzle.",
     "authored_hints": {
-      "courseC_collector_prog3_a": "The program will only run the blocks that are connected to the <xml><block type=\"when_run\"/></xml> block.",
+      "courseC_collector_prog3_a": "The program will only run the blocks that are connected to the [blockly block][0] block.",
       "courseC_collector_prog3_b": "Try using the \"Step\" button to run your code one line at a time.  Do you see where the code goes wrong?",
       "courseC_collector_prog3_c": "If you are having trouble figuring this puzzle out, try writing the moves down on a piece of paper."
     }
@@ -391,8 +391,8 @@
     "short_instructions": "Drag blocks onto the screen to have the artist draw over the grey lines in the picture. (Each line is 100 pixels long)",
     "long_instructions": "_\"Let's make a cage for my pet monster!\"_\n\nDrag blocks onto the screen to have the artist draw over the grey lines in the picture.\\\n(Each line is 100 pixels long)",
     "authored_hints": {
-      "courseC_artist_prog2_a": "*\"If you use the <xml><block type=\"draw_move_by_constant\"><title name=\"DIR\">moveForward</title><title name=\"VALUE\">100</title></block></xml> block, I will draw a line.\"*",
-      "courseC_artist_prog2_b": "Having trouble turning the corner? Use the <xml><block type=\"draw_turn_by_constant_dropdown\"><title name=\"DIR\">turnRight</title><title name=\"VALUE\" config=\"45,60,90,120,180\">90</title></block></xml> block."
+      "courseC_artist_prog2_a": "_\"If you use the [blockly block][0] block, I will draw a line.\"_",
+      "courseC_artist_prog2_b": "Having trouble turning the corner? Use the [blockly block][0] block."
     }
   },
   "https://studio.code.org/s/coursec-2017/stage/6/puzzle/4": {
@@ -673,7 +673,7 @@
   },
   "https://studio.code.org/s/coursec-2017/stage/9/puzzle/1": {
     "short_instructions": "Get the artist to the center of the play area, then draw a line. ",
-    "long_instructions": "Use the <xml><block type=\"jump_to_xy\" id=\"callMe\"><title name=\"XPOS\">200</title><title name=\"YPOS\">200</title></block></xml> block to get the artist to the center of the play area.\\\nThen draw a line 50 pixels long with the <xml><block type=\"draw_move_by_constant\"><title name=\"DIR\">moveForward</title><title name=\"VALUE\">50</title></block></xml> block.",
+    "long_instructions": "Use the [blockly block][0] block to get the artist to the center of the play area.\\\nThen draw a line 50 pixels long with the [blockly block][1] block.",
     "authored_hints": {
       "courseC_artist_loopsPrePre1a_a": "The first block you will need is:\n\n[][0]",
       "courseC_artist_loopsPrePre1a_b": "To move forward 50 pixels, use this block:\n\n[][0]"
@@ -695,15 +695,15 @@
     "long_instructions": "Fantastic!  \n\nLet's add some style by changing the brush using the `set pattern` block before our loop starts.",
     "authored_hints": {
       "courseC_artist_loop1_a": "You don't need to make any changes to the loop, just put one block above it.",
-      "courseC_artist_loop1_b": "This is the block you will need to set a pattern:\n\n<xml>\n<block type=\"draw_line_style_pattern\">\n    <title name=\"VALUE\">DEFAULT</title>\n  </block>\n</xml>\n\nChoose any pattern you like!"
+      "courseC_artist_loop1_b": "This is the block you will need to set a pattern:\n\n[blockly block][0]\n\nChoose any pattern you like!"
     }
   },
   "https://studio.code.org/s/coursec-2017/stage/9/puzzle/4": {
     "short_instructions": "Get the artist to the center of the play area, then draw a bird using a sticker. ",
     "long_instructions": "**Free Play:** Let's build something bigger, one step at a time!  You can make anything you want, but we're going to show you how to make something like this!\n\n[expandable][0]\n\nUse the `jump to 200 over 200 down` to get the artist to the center of the play area, then use the `draw a sticker` block to make a bird appear.  \n\n* * *\n\nPress \"Finish\" when you are happy with what you've made.",
     "authored_hints": {
-      "courseC_artist_loops1a_a": "This is the first block you will need:\n\n<xml>\n<block type=\"jump_to_xy\">\n    <title name=\"XPOS\">200</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n</xml>",
-      "courseC_artist_loops1a_b": "Use this block to draw the sticker!\n\n<xml>\n<block type=\"sticker\">\n    <title name=\"VALUE\">Bird</title>\n  </block>\n</xml>"
+      "courseC_artist_loops1a_a": "This is the first block you will need:\n\n[blockly block][0]",
+      "courseC_artist_loops1a_b": "Use this block to draw the sticker!\n\n[blockly block][0]"
     }
   },
   "https://studio.code.org/s/coursec-2017/stage/9/puzzle/5": {
@@ -726,7 +726,7 @@
     "short_instructions": "Try jumping forward by 75 pixels.",
     "long_instructions": "Add a block to your code so that the artist jumps forward by 75 pixels between stamping the bird and the bat. In this puzzle, make sure you have `jump to 200 over 200 down` inside of your loop, so you stay in the center!\n\n* * *\n\n[expandable][0]",
     "authored_hints": {
-      "courseC_artist_loops4a_a": "Use this block to jump forward:\n\n<xml>\n<block type=\"jump_by_constant\">\n    <title name=\"DIR\">jumpForward</title>\n    <title name=\"VALUE\">100</title>\n  </block>\n</xml>\n\nDon't forget to change how far!"
+      "courseC_artist_loops4a_a": "Use this block to jump forward:\n\n[blockly block][0]\n\nDon't forget to change how far!"
     }
   },
   "https://studio.code.org/s/coursec-2017/stage/9/puzzle/8": {
@@ -740,7 +740,7 @@
     "short_instructions": "Try adding lines!",
     "long_instructions": "What happens when you `move forward` then `move backward` by 100, 200, or 400 pixels somewhere inside the loop?  \n\n-   Try using the `set pattern` block before you start your loop to make a work of art!\n    * * *\n    [expandable][0]",
     "authored_hints": {
-      "courseC_artist_loops5b_a": "Use this block to set the pattern of your lines:\n\n<xml>\n<block type=\"draw_line_style_pattern\">\n    <title name=\"VALUE\">DEFAULT</title>\n  </block>\n</xml>",
+      "courseC_artist_loops5b_a": "Use this block to set the pattern of your lines:\n\n[blockly block][0]",
       "courseC_artist_loops5b_b": "To make a design like the one above, you will want to move backward the same amount that you move forward."
     }
   },
@@ -766,8 +766,8 @@
     "short_instructions": "Use loops to pick all of the pumpkins.",
     "long_instructions": "Loops can be used to repeat more than moves.  \n\nUse loops to collect all four of the pumpkins.",
     "authored_hints": {
-      "courseC_harvester_loops1_a": "Once you have moved to a pumpkin, use <xml><block type=\"harvester_pumpkin\"/></xml> to collect it.",
-      "courseC_harvester_loops1_b": "You can use a loop with the <xml><block type=\"harvester_pumpkin\"/></xml> block to pick more than one pumpkin from a square."
+      "courseC_harvester_loops1_a": "Once you have moved to a pumpkin, use [blockly block][0] to collect it.",
+      "courseC_harvester_loops1_b": "You can use a loop with the [blockly block][0] block to pick more than one pumpkin from a square."
     },
     "callouts": {
       "courseC_harvester_loops1_callout1": "The number four on the pumpkin tells you that there are four pumpkins available to pick."
@@ -884,7 +884,7 @@
     "authored_hints": {
       "courseC_harvester_loops_challenge1_a": "This is too hard without loops!",
       "courseC_harvester_loops_challenge1_b": "You can repeat `move forward` and `pick corn` as many times as you need, then `turn right` at each corner.",
-      "courseC_harvester_loops_challenge1_c": "The best way to collect the corn in the middle uses a `repeat` block inside of another `repeat` block.\n\n<xml><block type=\"controls_repeat\">\n        <title name=\"TIMES\">2</title>\n        <statement name=\"DO\">\n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">4</title>\n            <statement name=\"DO\">\n              <block type=\"maze_move\">\n                <title name=\"DIR\">moveForward</title>\n                <next>\n                  <block type=\"harvester_corn\"/>\n                </next>\n              </block>\n            </statement>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n              </block>\n            </next>\n          </block>\n        </statement>\n        </block></xml>"
+      "courseC_harvester_loops_challenge1_c": "The best way to collect the corn in the middle uses a `repeat` block inside of another `repeat` block.\n\n[blockly block][0]"
     }
   },
   "https://studio.code.org/s/coursec-2017/stage/10/extras?level_name=courseC_harvester_loops_challenge2": {
@@ -968,13 +968,13 @@
   "https://studio.code.org/s/coursec-2017/stage/13/puzzle/1": {
     "short_instructions": "Make Jorge the Dog (actor 1) say \"Hi there.\"",
     "authored_hints": {
-      "courseC_PlayLab_events1_a": "Attach this block to the `when run` block:\n\n<xml>\n  <block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n</xml>"
+      "courseC_PlayLab_events1_a": "Attach this block to the `when run` block:\n\n[blockly block][0]"
     }
   },
   "https://studio.code.org/s/coursec-2017/stage/13/puzzle/2": {
     "short_instructions": "Can you make Jorge the Dog (actor 1) say something, then have Olive the Cat (actor 2) say something afterward?",
     "authored_hints": {
-      "courseC_PlayLab_events2_a": "Attach two of these blocks to the `when run` block:\n\n<xml>\n  <block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n</xml>",
+      "courseC_PlayLab_events2_a": "Attach two of these blocks to the `when run` block:\n\n[blockly block][0]",
       "courseC_PlayLab_events2_b": "Use the dropdown menu on the second `actor __ say` block to change which actor speaks."
     }
   },
@@ -983,7 +983,7 @@
     "authored_hints": {
       "courseC_PlayLab_events3_a": "You only need to move Jorge to the right by about 25 pixels to solve this puzzle.",
       "courseC_PlayLab_events3_b": "Is there a block in the toolbox that looks like it would move an actor?",
-      "courseC_PlayLab_events3_c": "Attach this block to the `when run` block:\n\n<xml>\n<block type=\"studio_moveDistance\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"DIR\">2</title>\n    <title name=\"DISTANCE\">25</title>\n  </block>\n</xml>"
+      "courseC_PlayLab_events3_c": "Attach this block to the `when run` block:\n\n[blockly block][0]"
     }
   },
   "https://studio.code.org/s/coursec-2017/stage/13/puzzle/4": {
@@ -1054,9 +1054,9 @@
     "short_instructions": "Use a new block to make Waddles automatically move back to the start when he runs into the Dinosaur and when he scores a point. \nPlay the game and move Waddles with the arrows until you score enough points.",
     "long_instructions": "Use a new block to make Waddles automatically move back to the start when he runs into the Dinosaur and when he scores a point. This will make your game more challenging and fun!\n\nPlay the game and move Waddles with the arrows until you score enough points. Waddles must be moved to the `middle left` position of the screen to complete this challenge.",
     "authored_hints": {
-      "courseC_PlayLab_events_challenge_a": "You can use this block to move actors to different places on the game space.\n\n<xml> <block type=\"studio_setSpritePosition\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">12</title>\n  </block></xml>",
+      "courseC_PlayLab_events_challenge_a": "You can use this block to move actors to different places on the game space.\n\n[blockly block][0]",
       "courseC_PlayLab_events_challenge_b": "Try using `set actor 1 to the middle left position` when it touches either of the other actors. This will reset the game so the player can keep trying!",
-      "courseC_PlayLab_events_challenge_c": "You might also want to try changing the speed of the different actors to make the game easier or more challenging!\n\n<xml>  <block type=\"studio_setSpriteSpeed\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Studio.SpriteSpeed.FAST</title>\n  </block></xml>"
+      "courseC_PlayLab_events_challenge_c": "You might also want to try changing the speed of the different actors to make the game easier or more challenging!\n\n[blockly block][0]"
     },
     "callouts": {
       "courseC_PlayLab_events_challenge1_1": "This block lets you move actors to different parts of the game space."

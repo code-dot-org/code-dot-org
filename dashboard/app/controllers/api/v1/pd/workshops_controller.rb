@@ -58,7 +58,7 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
           limit: limit,
           total_count: workshops.length,
           filters: filter_params,
-          workshops: limited_workshops.map {|w| Api::V1::Pd::WorkshopSerializer.new(w).attributes}
+          workshops: limited_workshops.map {|w| Api::V1::Pd::WorkshopSerializer.new(w, scope: {current_user: current_user}).attributes}
         }
       end
       format.csv do
@@ -180,7 +180,6 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
   # POST /api/v1/pd/workshops/1/end
   def end
     @workshop.end!
-    Pd::AsyncWorkshopHandler.process_ended_workshop @workshop.id
     head :no_content
   end
 

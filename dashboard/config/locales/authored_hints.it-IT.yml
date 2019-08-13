@@ -362,6 +362,62 @@ it-IT:
           di **mezzo esagono** con **due terzi di un triangolo**. '
         Course_4_Artist_12_b: 'Ogni singola figura è quasi uguale a quella dell''ultimo
           esercizio, tranne per il fatto che il mezzo esagono è un po'' più grande. '
+        Course_4_Artist_12_d: |-
+          **Soluzione:**
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">4</title>
+          <statement name="DO">
+          <block type="collector_collect">
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       Course 4 Artist 6:
         Course_4_Artist_6_a: Devi disegnare 3 triangoli in una rotazione complessiva
           di 360 gradi ... quante volte ci sta il 3 in 360?
@@ -485,6 +541,62 @@ it-IT:
         Course_4_Artist_Functions_Inspiration_b: Devi girare di più di 90 gradi dopo
           ogni ciclo `ripeti ... volte`, ma sempre all'interno del ciclo `ripeti con
           counter`.
+        Course_4_Artist_Functions_Inspiration_c: |-
+          **Soluzione:**
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">4</title>
+          <statement name="DO">
+          <block type="collector_collect">
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       Course 4 Artist Functions challenge:
         Course_4_Artist_Functions_challenge_a: Un parte importante nel realizzare
           le funzioni è capire quali blocchi ti servono e quali no.
@@ -509,6 +621,62 @@ it-IT:
           ripetuta per 4 volte, inserendo un salto in avanti pari alla lunghezza del
           quadrato ed una svolta a destra di `360/sides` (cioè 360/<i>lati</i>) gradi
           tra l'una e l'altra.
+        Course_4_Artist_Inspire_d: |-
+          **Soluzione:**
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">4</title>
+          <statement name="DO">
+          <block type="collector_collect">
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       Course 4 Artist Vars 13:
         Course_4_Artist_Vars_13_a: Hai bisogno di due cicli (uno dentro l'altro),
           entrambi che ripetono `sides` (<i>lati</i>) volte.
@@ -571,17 +739,185 @@ it-IT:
           a destra di 60 gradi e saltare avanti di 40 pixel. Poi devi girare l'artista
           in senso inverso e saltare indietro di 440 pixel (120 pixel in più della
           volta precedente).
+        Course_4_SCF_1_e: |-
+          **Soluzione:**
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">4</title>
+          <statement name="DO">
+          <block type="collector_collect">
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       Course 4 SCF 1a:
         Course_4_SCF_1a_a: Riprendi la funzione definita nella <a href="https://studio.code.org/s/course4/stage/16/puzzle/6"
           target="_blank">lezione 16</a> per raccogliere un quantità specificata di
           nettare in una direzione specificata.
         Course_4_SCF_1a_c: Rifletti su come usare un "ciclo con contatore" (`for loop`)
           per chiamare la funzione con il valore corretto del parametro.
+        Course_4_SCF_1a_d: |-
+          **Soluzione:**
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">4</title>
+          <statement name="DO">
+          <block type="collector_collect">
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       Course 4 SCF 1b:
         Course_4_SCF_1b_a: 'Osserva che le dosi di miele da produrre sono sempre le
           stesse: puoi usare una funzione.'
         Course_4_SCF_1b_c: Puoi usare un "ciclo con contatore" (`for loop`) per far
           fare all'ape il percorso opportuno.
+        Course_4_SCF_1b_d: |-
+          **Soluzione:**
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">4</title>
+          <statement name="DO">
+          <block type="collector_collect">
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       Course 4 SCF 2:
         Course_4_SCF_2_a: Ogni ottagono ha i lati lunghi 40 pixel.
         Course_4_SCF_2_b: C'è un salto di 136 pixel tra un ottagono e il successivo
@@ -595,6 +931,62 @@ it-IT:
           di iniziare a disegnare le successive file dispari. Puoi quindi usare la
           stessa funzione per riposizionare l'artista prima di disegnare ogni fila
           successiva.
+        Course_4_SCF_2_e: |-
+          **Soluzione:**
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">4</title>
+          <statement name="DO">
+          <block type="collector_collect">
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       Course 4 SCF 3:
         Course_4_SCF_3_a: "![](https://images.code.org/9310e6352e85a8265b424c9d57ca28d1-image-1446239776339.gif)"
         Course_4_SCF_3_b: Il disegno è formato da una serie di ottagoni ognuno con
@@ -607,6 +999,62 @@ it-IT:
         Course_4_SCF_3_e: Il valore di `counter` controlla sia la larghezza del pennello
           che il colore (diminuendo il "rosso" e aumentando sia il "verde" che il
           "blu").
+        Course_4_SCF_3_f: |-
+          **Soluzione:**
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">4</title>
+          <statement name="DO">
+          <block type="collector_collect">
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       Course 4 SCFL 1:
         Course_4_SCFL_1_a: "L'ape dovrebbe seguire un percorso in cui raccoglie prima
           tutto il nettare (andando a zig-zag verso destra e verso l'alto) e poi tutto
@@ -623,125 +1071,48 @@ it-IT:
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
-          <block type="controls_for" inline="true">
-          <title name="VAR">counter</title>
-          <value name="FROM">
-          <block type="math_number">
-          <title name="NUM">1</title>
-          </block>
-          </value>
-          <value name="TO">
-          <block type="math_number">
-          <title name="NUM">3</title>
-          </block>
-          </value>
-          <value name="BY">
-          <block type="math_number">
-          <title name="NUM">1</title>
-          </block>
-          </value>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
           <statement name="DO">
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="variables_get">
-          <title name="VAR">counter</title>
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
           </block>
-          </value>
-          <statement name="DO">
-          <block type="maze_moveForward"/>
-          </statement>
-          <next>
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="variables_get">
-          <title name="VAR">counter</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="maze_nectar"/>
           </statement>
           <next>
           <block type="maze_turn">
           <title name="DIR">turnLeft</title>
           <next>
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="variables_get">
-          <title name="VAR">counter</title>
-          </block>
-          </value>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">4</title>
           <statement name="DO">
-          <block type="maze_moveForward"/>
-          </statement>
+          <block type="collector_collect">
           <next>
-          <block type="maze_turn">
-          <title name="DIR">turnRight</title>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
           </block>
           </statement>
-          <next>
-          <block type="maze_turn">
-          <title name="DIR">turnRight</title>
-          <next>
-          <block type="maze_turn">
-          <title name="DIR">turnRight</title>
-          <next>
-          <block type="controls_for" inline="true">
-          <title name="VAR">counter</title>
-          <value name="FROM">
-          <block type="math_number">
-          <title name="NUM">2</title>
-          </block>
-          </value>
-          <value name="TO">
-          <block type="math_number">
-          <title name="NUM">10</title>
-          </block>
-          </value>
-          <value name="BY">
-          <block type="math_number">
-          <title name="NUM">2</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="maze_moveForward">
           <next>
           <block type="maze_turn">
           <title name="DIR">turnLeft</title>
           <next>
-          <block type="maze_moveForward">
-          <next>
-          <block type="maze_turn">
-          <title name="DIR">turnRight</title>
-          <next>
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="variables_get">
-          <title name="VAR">counter</title>
-          </block>
-          </value>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
           <statement name="DO">
-          <block type="maze_honey"/>
-          </statement>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
           </block>
           </statement>
           </block>
           </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
           </block>
           </next>
           </block>
@@ -759,6 +1130,62 @@ it-IT:
         Course_4_SCFL_1a_c: Puoi usare un ciclo `ripeti con counter` per eseguire
           un blocco `ripeti` con un numero di ripetizioni che cambia ad ogni esecuzione.
           In questo caso il numero di ripetizioni diminuisce da 7 a 5, con passo 1.
+        Course_4_SCFL_1a_d: |-
+          **Soluzione:**
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">4</title>
+          <statement name="DO">
+          <block type="collector_collect">
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       Course 4 SCFL 1b:
         Course_4_SCFL_1b_a: |-
           Scrat dovrebbe seguire questo percorso a zig-zag:
@@ -766,6 +1193,62 @@ it-IT:
         Course_4_SCFL_1b_b: "L'ape dovrebbe seguire un percorso in cui raccoglie prima
           tutto il nettare (andando a zig-zag verso destra e verso l'alto) e poi tutto
           il miele (andando a zig-zag verso il basso e verso sinistra):  \n\n![](https://images.code.org/1957633c453f4025a3fd6ce0e201398b-image-1469642319721.png)"
+        Course_4_SCFL_1b_c: |-
+          **Soluzione:**
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">4</title>
+          <statement name="DO">
+          <block type="collector_collect">
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       Course 4 SCFL 2:
         Course_4_SCFL_2_a: "L'ape dovrebbe seguire un percorso in cui raccoglie prima
           tutto il nettare (andando a zig-zag verso destra e verso l'alto) e poi tutto
@@ -779,6 +1262,62 @@ it-IT:
           Nella seconda iterazione la sequenza di ripetizioni e: 3, 6, 9, 12.<br>
           <br>
           Nella terza iterazione la sequenza di ripetizioni è: 2, 4, 8, quando il contatore vale: 1, 2, 3. Riesci a capire qual è la regola?
+        Course_4_SCFL_2_d: |-
+          **Soluzione:**
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">4</title>
+          <statement name="DO">
+          <block type="collector_collect">
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       Course 4 SCFL 3:
         Course_4_SCFL_3_a: La larghezza del pennello è 1. Il primo quadrato ha il
           lato di 50 pixel ed ogni quadrato successivo ha il lato più lungo di 50
@@ -794,117 +1333,40 @@ it-IT:
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
-          <block type="draw_width" inline="false">
-          <value name="WIDTH">
-          <block type="math_number">
-          <title name="NUM">1</title>
-          </block>
-          </value>
-          <next>
-          <block type="draw_colour" inline="true" id="draw-color">
-          <value name="COLOUR">
-          <block type="colour_picker">
-          <title name="COLOUR">#0000cd</title>
-          </block>
-          </value>
-          <next>
-          <block type="controls_for_counter" inline="true">
-          <mutation counter="counter"></mutation>
-          <value name="FROM">
-          <block type="math_number">
-          <title name="NUM">50</title>
-          </block>
-          </value>
-          <value name="TO">
-          <block type="math_number">
-          <title name="NUM">350</title>
-          </block>
-          </value>
-          <value name="BY">
-          <block type="math_number">
-          <title name="NUM">50</title>
-          </block>
-          </value>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
           <statement name="DO">
-          <block type="alpha" inline="true" id="alpha">
-          <value name="VALUE">
-          <block type="math_arithmetic" inline="true">
-          <title name="OP">DIVIDE</title>
-          <value name="A">
-          <block type="variables_get">
-          <title name="VAR">counter</title>
-          </block>
-          </value>
-          <value name="B">
-          <block type="math_number">
-          <title name="NUM">2</title>
-          </block>
-          </value>
-          </block>
-          </value>
-          <next>
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="math_number">
-          <title name="NUM">4</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="draw_move" inline="true">
+          <block type="maze_move">
           <title name="DIR">moveForward</title>
-          <value name="VALUE">
-          <block type="variables_get">
-          <title name="VAR">counter</title>
-          </block>
-          </value>
-          <next>
-          <block type="draw_turn" inline="true">
-          <title name="DIR">turnRight</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">90</title>
-          </block>
-          </value>
-          </block>
-          </next>
           </block>
           </statement>
           <next>
-          <block type="jump" inline="true">
-          <title name="DIR">jumpBackward</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">25</title>
-          </block>
-          </value>
-          <next>
-          <block type="draw_turn" inline="true">
-          <title name="DIR">turnRight</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">90</title>
-          </block>
-          </value>
-          <next>
-          <block type="jump" inline="true">
-          <title name="DIR">jumpBackward</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">25</title>
-          </block>
-          </value>
-          <next>
-          <block type="draw_turn" inline="true">
+          <block type="maze_turn">
           <title name="DIR">turnLeft</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">90</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">4</title>
+          <statement name="DO">
+          <block type="collector_collect">
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
           </block>
-          </value>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
           </block>
-          </next>
-          </block>
-          </next>
+          </statement>
           </block>
           </next>
           </block>
@@ -932,6 +1394,62 @@ it-IT:
           ed il blu rimane sempre fisso a `255`.
         Course_4_SCFL_4_c: L'artista gira di 15 gradi prima di disegnare il successivo
           quadrato.
+        Course_4_SCFL_4_d: |-
+          **Soluzione:**
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">4</title>
+          <statement name="DO">
+          <block type="collector_collect">
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       Course 4 SCFL 6:
         Course_4_SCFL_6_a: La figura è una spirale di colore mutevole e tratti rettilinei
           progressivamente più lunghi.
@@ -947,90 +1465,57 @@ it-IT:
           **Soluzione:**
 
           <xml>
-            <block type="when_run" deletable="false" movable="false">
-              <next>
-                <block type="draw_width" inline="false">
-                  <value name="WIDTH">
-                    <block type="math_number">
-                      <title name="NUM">1</title>
-                    </block>
-                  </value>
-                  <next>
-                    <block type="controls_for_counter" inline="true">
-                    <mutation counter="counter"></mutation>
-                      <value name="FROM">
-                        <block type="math_number">
-                          <title name="NUM">5</title>
-                        </block>
-                      </value>
-                      <value name="TO">
-                        <block type="math_number">
-                          <title name="NUM">250</title>
-                        </block>
-                      </value>
-                      <value name="BY">
-                        <block type="math_number">
-                          <title name="NUM">2</title>
-                        </block>
-                      </value>
-                      <statement name="DO">
-                        <block type="draw_colour" inline="true" id="draw-color">
-                          <value name="COLOUR">
-                            <block type="colour_rgb" inline="false">
-                              <value name="RED">
-                                <block type="math_number">
-                                  <title name="NUM">255</title>
-                                </block>
-                              </value>
-                              <value name="GREEN">
-                                <block type="variables_get">
-                                  <title name="VAR">counter</title>
-                                </block>
-                              </value>
-                              <value name="BLUE">
-                                <block type="math_arithmetic" inline="true">
-                                  <title name="OP">MINUS</title>
-                                  <value name="A">
-                                    <block type="math_number">
-                                      <title name="NUM">255</title>
-                                    </block>
-                                  </value>
-                                  <value name="B">
-                                    <block type="variables_get">
-                                      <title name="VAR">counter</title>
-                                    </block>
-                                  </value>
-                                </block>
-                              </value>
-                            </block>
-                          </value>
-                          <next>
-                            <block type="draw_move" inline="true">
-                              <title name="DIR">moveForward</title>
-                              <value name="VALUE">
-                                <block type="variables_get">
-                                  <title name="VAR">counter</title>
-                                </block>
-                              </value>
-                              <next>
-                                <block type="draw_turn" inline="true">
-                                  <title name="DIR">turnRight</title>
-                                  <value name="VALUE">
-                                    <block type="math_number">
-                                      <title name="NUM">80</title>
-                                    </block>
-                                  </value>
-                                </block>
-                              </next>
-                            </block>
-                          </next>
-                        </block>
-                      </statement>
-                    </block>
-                  </next>
-                </block>
-              </next>
-            </block>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">4</title>
+          <statement name="DO">
+          <block type="collector_collect">
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
           </xml>
       Course 4 SCFL 7:
         Course_4_SCFL_7_a: |-
@@ -1044,6 +1529,62 @@ it-IT:
           -   Il cambiamento del colore si attua col blocco "imposta il colore con rosso, verde, blu" (`set color with red, green, blue`). Il valore del rosso è sempre uguale a quello del contatore `counter` mentre quello del verde a `255`–`counter`, ed il blu rimane sempre fisso a `255`.
         Course_4_SCFL_7_d: Al termine del primo ciclo l'artista deve girare di 225
           gradi a sinistra prima di iniziare il secondo.
+        Course_4_SCFL_7_e: |-
+          **Soluzione:**
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">4</title>
+          <statement name="DO">
+          <block type="collector_collect">
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       Course 4 SCV 1:
         Course_4_SCV_1_a: |-
           -   La figura è composta dalla ripetizione del disegno di un pentagono e di un decagono.<br>
@@ -1054,6 +1595,62 @@ it-IT:
         Course_4_SCV_1_c: |-
           -   Entrambi i poligoni sono disegnati dallo stesso ciclo, basato sulla variabile `sides` - il cui valore viene opportunamente cambiato.<br>
           -   Vengono disegnate prima tutte le ripetizioni del pentagono e poi tutte quelle del decagono.
+        Course_4_SCV_1_d: |-
+          **Soluzione:**
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">4</title>
+          <statement name="DO">
+          <block type="collector_collect">
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       Course 4 SCV 2:
         Course_4_SCV_2_b: Sono quindi necessari 3 "cicli annidati" ognuno dei quali
           esegue 10 ripetizioni, pari al numero dei lati (`sides`) del decagono.
@@ -1063,11 +1660,123 @@ it-IT:
         Course_4_SCV_2_d: |-
           Come nel disegno del decagono, anche qui, sia per disegnare un fiore, che tutta la figura, l'artista svolge un giro completo di 360 gradi.<br>
           Dopo aver disegnato un fiore è necessario spostarsi un po' in avanti prima di girare a destra, per evitare di disegnare le varie ripetizioni del fiore tutte nello stesso punto.
+        Course_4_SCV_2_e: |-
+          **Soluzione:**
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">4</title>
+          <statement name="DO">
+          <block type="collector_collect">
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       Course 4 SCV 3:
         Course_4_SCV_3_a: Usa il blocco con le operazioni per aggiungere e sottrarre
           punti alla variabile <i>points</i> (punteggio) quando i personaggi si toccano.
         Course_4_SCV_3_b: Se vuoi, puoi modificare il parametro che cambia la velocità
           alla quale si muove il cane ogni volta che premi le frecce.
+        Course_4_SCV_3_c: |-
+          **Soluzione:**
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">4</title>
+          <statement name="DO">
+          <block type="collector_collect">
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       Course 4 SCV 4:
         Course_4_SCV_4_a: 'Per questo esercizio servono 3 variabili: una per le dosi
           di nettare, una per quelle di miele ed una per la distanza da percorrere
@@ -1077,6 +1786,62 @@ it-IT:
         Course_4_SCV_4_c: "L'ape dovrebbe seguire un percorso in cui raccoglie prima
           tutto il nettare (andando a zig-zag verso destra e verso l'alto) e poi tutto
           il miele (andando a zig-zag verso il basso e verso sinistra):  \n\n![](https://images.code.org/78f8fb83da67c5b80126555a362b8b20-image-1469641782259.png)"
+        Course_4_SCV_4_d: |-
+          **Soluzione:**
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">4</title>
+          <statement name="DO">
+          <block type="collector_collect">
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       Course 4 SCV 5:
         Course_4_SCV_5_b: Ad ogni ripetizione del ciclo che fa percorrere all'ape
           questo tracciato, sui fiori ci sono due dosi di nettare in meno e l'ape
@@ -1084,6 +1849,62 @@ it-IT:
         Course_4_SCV_5_c: Ad ogni ripetizione di questo ciclo il numero di passi che
           l'ape deve fare per arrivare al fiore è uguale al numero di dosi di nettare
           sul fiore stesso.
+        Course_4_SCV_5_d: |-
+          **Soluzione:**
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">4</title>
+          <statement name="DO">
+          <block type="collector_collect">
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       Course 4 SCV 6:
         Course_4_SCV_6_b: 'Ogni ripetizione del pentagono è per metà sovrapposta alla
           precedente: pertanto al termine del disegno di ogni pentagono si gira di
@@ -1096,6 +1917,62 @@ it-IT:
         Course_4_SCV_6_d: |-
           -   Sono necessari 3 "cicli annidati", il più esterno per ripetere i pentagoni, quello intermedio per disegnare il singolo pentagono, quello più interno per disegnare il singolo lato. <br>
           -   Il colore dei segmenti "zig" ha le seguenti componenti: rosso=0, verde=175, blu=200; quello degli "zag" ha: rosso=100, verde=50, blu=150.
+        Course_4_SCV_6_f: |-
+          **Soluzione:**
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">4</title>
+          <statement name="DO">
+          <block type="collector_collect">
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       CourseD_Dance_Party_01:
         validation: |-
           **Come faccio a completare questo esercizio?**
@@ -1132,7 +2009,7 @@ it-IT:
         challenges: |-
           **Sfida supplementare**
 
-          Modifica l’effetto di sfondo in punti diversi della canzone unendo il nuovo blocco sotto gli eventi <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml>.
+          Cambia effetto allo sfondo in momenti diversi della canzone agganciando il nuovo blocco a diversi eventi <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml>.
       CourseD_Dance_Party_06:
         validation: |-
           **Come faccio a completare questo esercizio?**
@@ -1236,7 +2113,7 @@ it-IT:
         challenges: |-
           **Sfida supplementare**
 
-          Modifica l’effetto di sfondo in punti diversi della canzone unendo il nuovo blocco sotto gli eventi <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml>.
+          Cambia effetto allo sfondo in momenti diversi della canzone agganciando il nuovo blocco a diversi eventi <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml>.
       Dance_Party_06:
         validation: |-
           **Come faccio a completare questo esercizio?**
@@ -1563,13 +2440,13 @@ it-IT:
         mc_1_b: Controlla che entrambi i blocchi `vai avanti` siano agganciati al
           blocco `quando si clicca su "Esegui"`.
       Overworld Place Wall:
-        mc_5_a: Usa prima il blocco `metti` e poi `vai avanti`
+        mc_5_a: Usa prima il blocco `metti` e poi `vai avanti`.
         mc_5_b: Controlla che entrambi i blocchi siano all'interno del blocco `ripeti
           ... volte` per far eseguire il codice più di una volta.
         mc_5_c: Non aver paura di sbagliare! Esegui il codice per vedere cosa succede,
           anche se non hai ancora risolto l'esercizio.
       Overworld Place Wall_2019:
-        mc_5_a: Usa prima il blocco `metti` e poi `vai avanti`
+        mc_5_a: Usa prima il blocco `metti` e poi `vai avanti`.
         mc_5_b: Controlla che entrambi i blocchi siano all'interno del blocco `ripeti
           ... volte` per far eseguire il codice più di una volta.
         mc_5_c: Non aver paura di sbagliare! Esegui il codice per vedere cosa succede,
@@ -1585,21 +2462,23 @@ it-IT:
           scuro a fianco dell'acqua.
         mc_7_c: Puoi mettere più di un blocco all'interno del blocco `ripeti ... volte`.
       Overworld Powered Minecart:
-        mc_13_a: Usa il blocco `metti binario` per posare un tratto di binari nel
-          punto in cui ti trovi.
+        mc_13_a: Usa il blocco `metti binario` (_rail_) per posare un tratto di binari
+          nel punto in cui ti trovi.
         mc_13_b: Usa il blocco `ripeti ... volte` per accorciare il tuo programma.
       Overworld Powered Minecart_2019:
-        mc_13_a: Usa il blocco `metti binario` per posare un tratto di binari nel
-          punto in cui ti trovi.
+        mc_13_a: Usa il blocco `metti binario` (_rail_) per posare un tratto di binari
+          nel punto in cui ti trovi.
         mc_13_b: Usa il blocco `ripeti ... volte` per accorciare il tuo programma.
       Overworld Shear Sheep:
-        mc_3_a: 'Per usare il blocco `tosa` la pecora deve trovarsi di fronte a te.  '
+        mc_3_a: Per usare il blocco `tosa`, la pecora deve trovarsi di fronte a te.
+          Sei di fronte alla pecora?
         mc_3_b: Se hai bisogno di cambiare la direzione verso cui sei rivolto, usa
           il blocco `gira a ...`.
         mc_3_c: Non aver paura di sbagliare! Esegui il codice per vedere cosa succede,
           anche se non hai ancora risolto l'esercizio.
       Overworld Shear Sheep_2019:
-        mc_3_a: 'Per usare il blocco `tosa` la pecora deve trovarsi di fronte a te.  '
+        mc_3_a: Per usare il blocco `tosa`, la pecora deve trovarsi di fronte a te.
+          Sei di fronte alla pecora?
         mc_3_b: Se hai bisogno di cambiare la direzione verso cui sei rivolto, usa
           il blocco `gira a ...`.
         mc_3_c: Non aver paura di sbagliare! Esegui il codice per vedere cosa succede,
@@ -1685,6 +2564,11 @@ it-IT:
           grotta, ma è necessario spostarle e raccoglierle solo 5 volte. Lo sai il
           perché?
       course1_collector_loops_challenge3:
+        courseB_collector_loops_challenge1_c: "Muoviti due volte verso Est tra un
+          percorso e l'altro:\n\n<xml>\n  <block type=\"maze_moveEast\"><next>\n  <block
+          type=\"maze_moveEast\"></block></next></block>\n  </xml>\n\nPuoi riuscirci
+          usando solo 14 blocchi. Clicca un altro suggerimento per vedere una possibile
+          soluzione. "
         courseB_collector_loops_challenge1_d: |-
           Prova questa soluzione!
 
@@ -1875,7 +2759,12 @@ it-IT:
 
           Il blocco `salta a` ti permette di muovere l'artista zombie su qualsiasi pixel della tela, in qualunque momento. Funziona così: _indipendentemente_ dal punto in cui si trova l'artista in quel momento, egli salterà un certo numero di pixel in avanti ed un altro numero di pixel in basso, contando a partire dallo spigolo in alto a sinistra.
 
-          ![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)
+          <xml>
+            <block type="jump_to_xy">
+              <title name="XPOS">350</title>
+              <title name="YPOS">200</title>
+            </block>
+            </xml>
       course3_bee_functions_challenge1:
         courseE_bee_functions_challenge1_a: |-
           Se ti sembra troppo difficile, prova a creare la funzione poco per volta.<br>
@@ -1888,6 +2777,63 @@ it-IT:
           Aggiungi qualche blocco e prova a vedere cosa fa. Poi aggiungine altri e controlla di nuovo. Velocemente arriverai alla soluzione!
         courseE_bee_functions_challenge1_b: Ricordati di inserire il codice all'interno
           del blocco verde aperto che definisce cosa deve fare la funzione.
+      course3_bee_functions_challenge4:
+        courseF_bee_functions_challenge2_b: |-
+          **Soluzione:**
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">4</title>
+          <statement name="DO">
+          <block type="collector_collect">
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       course3_farmer_condLoops_challenge1:
         courseD_farmer_condLoops_challenge1_b: Di solito, quando ci si trova su una
           zucca, si esegue solamente il blocco `prendi zucca`. Cos'altro devi fare
@@ -1932,7 +2878,12 @@ it-IT:
 
           Il blocco `salta a` ti permette di muovere l'artista zombie su qualsiasi pixel della tela, in qualunque momento. Funziona così: _indipendentemente_ dal punto in cui si trova l'artista in quel momento, egli salterà un certo numero di pixel in avanti ed un altro numero di pixel in basso, contando a partire dallo spigolo in alto a sinistra.
 
-          ![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)
+          <xml>
+            <block type="jump_to_xy">
+              <title name="XPOS">350</title>
+              <title name="YPOS">200</title>
+            </block>
+            </xml>
       course4_artist_variables_challenge1:
         courseF_artist_variables_challenge1_a: Tutte le linee verticali hanno lunghezza
           fissa pari a `10`. Mentre ogni linea orizzontale ha una lunghezza pari alla
@@ -2098,7 +3049,7 @@ it-IT:
         courseD_bee_nested_loops_challenge2_a: Non dimenticare che puoi inserire nel
           blocco `ripeti ... volte` un singolo comando o uno schema più lungo. E si
           può anche ripetere un blocco `ripeti ... volte`!
-        courseD_bee_nested_loops_challenge2_b: Per raccogliere tutte e 4 le gemme,
+        courseD_bee_nested_loops_challenge2_b: Per raccogliere tutti e 4 i diamanti,
           prima di tutto usa un ciclo per allontanarti dal centro. Gira a sinistra
           o a destra, quindi usa un ciclo annidato per passare dal primo diamante
           al secondo. Se ripeti questo ciclo annidato abbastanza volte, la collezionista
@@ -2123,7 +3074,7 @@ it-IT:
           <title name="DIR">turnLeft</title>
           <next>
           <block type="controls_repeat_dropdown">
-          <title name="TIMES" config="3-10">3</title>
+          <title name="TIMES" config="3-10">4</title>
           <statement name="DO">
           <block type="collector_collect">
           <next>
@@ -5507,7 +6458,7 @@ it-IT:
           vedere cosa succede, anche se non hai ancora risolto l'esercizio.
         courseB_starWars_prog9_b: Ci sono molti modi per risolvere questo esercizio.
         courseB_starWars_prog9_c: |-
-          Un ciclo `ripeti` <xml><block type="controls_repeat_simplified">
+          Un ciclo <xml><block type="controls_repeat_simplified">
               <title name="TIMES">3</title>
             </block></xml> potrebbe aiutarti qui?
       courseB_starWars_prog9_2019:
@@ -5515,7 +6466,7 @@ it-IT:
           vedere cosa succede, anche se non hai ancora risolto l'esercizio.
         courseB_starWars_prog9_b: Ci sono molti modi per risolvere questo esercizio.
         courseB_starWars_prog9_c: |-
-          Un ciclo `ripeti` <xml><block type="controls_repeat_simplified">
+          Un ciclo <xml><block type="controls_repeat_simplified">
               <title name="TIMES">3</title>
             </block></xml> potrebbe aiutarti qui?
       courseC19_playLab_EOC1:
@@ -5627,10 +6578,9 @@ it-IT:
           Collega questo blocco al blocco `quando si clicca su "Esegui"`:
 
           <xml>
-          <block type="studio_moveDistance">
+            <block type="studio_saySpriteChoices">
               <title name="SPRITE">0</title>
-              <title name="DIR">2</title>
-              <title name="DISTANCE">25</title>
+              <title name="VALUE">Hi there.</title>
             </block>
           </xml>
       courseC_PlayLab_events3_2019:
@@ -5642,10 +6592,9 @@ it-IT:
           Collega questo blocco al blocco `quando si clicca su "Esegui"`:
 
           <xml>
-          <block type="studio_moveDistance">
+            <block type="studio_saySpriteChoices">
               <title name="SPRITE">0</title>
-              <title name="DIR">2</title>
-              <title name="DISTANCE">25</title>
+              <title name="VALUE">Hi there.</title>
             </block>
           </xml>
       courseC_PlayLab_events4:
@@ -5820,18 +6769,6 @@ it-IT:
 
           **Flipper** - Fai in modo di muovere un personaggio con le frecce (usa gli eventi `quando si preme sulla freccia verso l'alto` e `quando si preme sulla freccia verso il basso`), quindi riproduci un suono casuale quando il personaggio sbatte contro gli altri.
       courseC_PlayLab_eventsFP_2019:
-        idea1: |-
-          _Serve un idea?_
-
-          **Chi c'è?** Fai comparire dei personaggi casuali, così nessuno potrà sapere quale sarà il successivo.
-
-          ![](https://images.code.org/a56e03479801995d93ad5a4e4384a79e-image-1475340154498.gif)
-        idea2: |-
-          _Serve un idea?_
-
-          **All'avventura!** - Cambia lo sfondo e fai raccontare ai personaggi dove si trovano.
-
-          ![](https://images.code.org/010c4d919f841d6049caf9211ab65ccc-image-1475340583052.gif)
         idea3: |-
           _Serve un idea?_
 
@@ -8455,8 +9392,8 @@ it-IT:
         courseD_bee_conditionals4_b: Usa un blocco `se` all'interno del ciclo per
           controllare la presenza di un fiore in ogni casella.
         courseD_bee_conditionals4_c: Grazie ad un blocco <xml><block type="maze_untilBlocked"/></xml>
-          riesci ad andare avanti e controllare se c'è un fiore. Cosa dovrebbe fare
-          l'ape se c'è un fiore?
+          riesci ad andare avanti e controllare se c'è un fiore. Cosa deve fare l'ape
+          se c'è un fiore?
         courseD_bee_conditionals4_hintVid2: Guarda il video per risolvere questo esercizio.
       courseD_bee_conditionals4_2018:
         courseD_bee_conditionals4_hintVid1: Hai bisogno di aiuto per iniziare? Guarda
@@ -8466,8 +9403,8 @@ it-IT:
         courseD_bee_conditionals4_b: Usa un blocco `se` all'interno del ciclo per
           controllare la presenza di un fiore in ogni casella.
         courseD_bee_conditionals4_c: Grazie ad un blocco <xml><block type="maze_untilBlocked"/></xml>
-          riesci ad andare avanti e controllare se c'è un fiore. Cosa dovrebbe fare
-          l'ape se c'è un fiore?
+          riesci ad andare avanti e controllare se c'è un fiore. Cosa deve fare l'ape
+          se c'è un fiore?
         courseD_bee_conditionals4_hintVid2: Guarda il video per risolvere questo esercizio.
       courseD_bee_conditionals4_2019:
         courseD_bee_conditionals4_a: Puoi sempre trattare ogni casella come se avesse
@@ -8579,7 +9516,7 @@ it-IT:
           ciò che è nascosto può cambiare: per risolvere l'esercizio, devi quindi
           usare il blocco condizionale `se/altrimenti`."
         courseD_bee_conditionals8_b: |-
-          Questo esercizio è un po' complicato, perché non puoi controllare le caselle vuote, i fiori _e_ i favi con un unica istruzione condizionale.
+          Questo esercizio è un po' complicato, perché non puoi controllare le caselle vuote, i fiori _e_ i favi con un'unica istruzione condizionale.
 
           Controlla solo se c'è un fiore o un favo alla fine di ogni tratto del percorso (dove vedi le nuvole).
         courseD_bee_conditionals8_c: Come puoi fare in modo di andare avanti fino
@@ -8596,7 +9533,7 @@ it-IT:
           ciò che è nascosto può cambiare: per risolvere l'esercizio, devi quindi
           usare il blocco condizionale `se/altrimenti`."
         courseD_bee_conditionals8_b: |-
-          Questo esercizio è un po' complicato, perché non puoi controllare le caselle vuote, i fiori _e_ i favi con un unica istruzione condizionale.
+          Questo esercizio è un po' complicato, perché non puoi controllare le caselle vuote, i fiori _e_ i favi con un'unica istruzione condizionale.
 
           Controlla solo se c'è un fiore o un favo alla fine di ogni tratto del percorso (dove vedi le nuvole).
         courseD_bee_conditionals8_c: Come puoi fare in modo di andare avanti fino
@@ -8611,7 +9548,7 @@ it-IT:
           ciò che è nascosto può cambiare: per risolvere l'esercizio, devi quindi
           usare il blocco condizionale `se/altrimenti`."
         courseD_bee_conditionals8_b: |-
-          Questo esercizio è un po' complicato, perché non puoi controllare le caselle vuote, i fiori _e_ i favi con un unica istruzione condizionale.
+          Questo esercizio è un po' complicato, perché non puoi controllare le caselle vuote, i fiori _e_ i favi con un'unica istruzione condizionale.
 
           Controlla solo se c'è un fiore o un favo alla fine di ogni tratto del percorso (dove vedi le nuvole).
       courseD_bee_conditionals_challenge1:
@@ -8637,7 +9574,7 @@ it-IT:
           ripetere l'istruzione condizionale `se/altrimenti` ad ogni passo.
       courseD_bee_conditionals_challenge2:
         courseD_bee_conditionals_challenge1_b: |-
-          Proprio come il blocco `se c'è un fiore`, il codice all'interno del blocco `mentre nettare > 0` verrà eseguito solo se l'ape si trova su un fiore. La differenza è che questo è un ciclo, quindi il codice contenuto all'interno verrà eseguito più e più volte fino a quando non rimarrà più nessuna dose di nettare.  Provare questa struttura:
+          Proprio come il blocco `se c'è un fiore`, il codice all'interno del blocco `mentre nettare > 0` verrà eseguito solo se l'ape si trova su un fiore. La differenza è che questo è un ciclo, quindi il codice contenuto all'interno verrà eseguito più e più volte fino a quando non rimarrà più nessuna dose di nettare.  Prova questa struttura:
 
           <xml>  <block type="bee_whileNectarAmount">
               <title name="ARG1">nectarRemaining</title>
@@ -8648,7 +9585,7 @@ it-IT:
             </block></xml>
       courseD_bee_conditionals_challenge2_2018:
         courseD_bee_conditionals_challenge1_b: |-
-          Proprio come il blocco `se c'è un fiore`, il codice all'interno del blocco `mentre nettare > 0` verrà eseguito solo se l'ape si trova su un fiore. La differenza è che questo è un ciclo, quindi il codice contenuto all'interno verrà eseguito più e più volte fino a quando non rimarrà più nessuna dose di nettare.  Provare questa struttura:
+          Proprio come il blocco `se c'è un fiore`, il codice all'interno del blocco `mentre nettare > 0` verrà eseguito solo se l'ape si trova su un fiore. La differenza è che questo è un ciclo, quindi il codice contenuto all'interno verrà eseguito più e più volte fino a quando non rimarrà più nessuna dose di nettare.  Prova questa struttura:
 
           <xml>  <block type="bee_whileNectarAmount">
               <title name="ARG1">nectarRemaining</title>
@@ -8659,7 +9596,7 @@ it-IT:
             </block></xml>
       courseD_bee_conditionals_challenge2_2019:
         courseD_bee_conditionals_challenge1_b: |-
-          Proprio come il blocco `se c'è un fiore`, il codice all'interno del blocco `mentre nettare > 0` verrà eseguito solo se l'ape si trova su un fiore. La differenza è che questo è un ciclo, quindi il codice contenuto all'interno verrà eseguito più e più volte fino a quando non rimarrà più nessuna dose di nettare.  Provare questa struttura:
+          Proprio come il blocco `se c'è un fiore`, il codice all'interno del blocco `mentre nettare > 0` verrà eseguito solo se l'ape si trova su un fiore. La differenza è che questo è un ciclo, quindi il codice contenuto all'interno verrà eseguito più e più volte fino a quando non rimarrà più nessuna dose di nettare.  Prova questa struttura:
 
           <xml>  <block type="bee_whileNectarAmount">
               <title name="ARG1">nectarRemaining</title>
@@ -8738,11 +9675,11 @@ it-IT:
           Annida i blocchi su tre livelli, in questo modo:
 
           -   ripeti 4
-          -   ripeti 3
-          -   ripeti 12
-          -   prendi il nettare
-          -   vai avanti
-          -   gira a destra
+              -   ripeti 3
+                  -   ripeti 12
+                      -   prendi il nettare
+                  -   vai avanti
+              -   gira a destra
       courseD_bee_nestedLoops7_2018:
         courseD_bee_nestedLoops7_a: Devi ripetere il blocco `prendi il nettare` all'interno
           di un altro blocco `ripeti ... volte` che ha al suo interno anche il blocco
@@ -8753,11 +9690,11 @@ it-IT:
           Annida i blocchi su tre livelli, in questo modo:
 
           -   ripeti 4
-          -   ripeti 3
-          -   ripeti 12
-          -   prendi il nettare
-          -   vai avanti
-          -   gira a destra
+              -   ripeti 3
+                  -   ripeti 12
+                      -   prendi il nettare
+                  -   vai avanti
+              -   gira a destra
       courseD_bee_nestedLoops7_2019:
         courseD_bee_nestedLoops7_a: Devi ripetere il blocco `prendi il nettare` all'interno
           di un altro blocco `ripeti ... volte` che ha al suo interno anche il blocco
@@ -8768,11 +9705,11 @@ it-IT:
           Annida i blocchi su tre livelli, in questo modo:
 
           -   ripeti 4
-          -   ripeti 3
-          -   ripeti 12
-          -   prendi il nettare
-          -   vai avanti
-          -   gira a destra
+              -   ripeti 3
+                  -   ripeti 12
+                      -   prendi il nettare
+                  -   vai avanti
+              -   gira a destra
       courseD_bounce_events10s_2018:
         courseD_bounce_events10s_a: |-
           Dovresti avere entrambi questi eventi nel tuo codice:
@@ -9068,7 +10005,7 @@ it-IT:
         courseD_bee_nested_loops_challenge2_a: Non dimenticare che puoi inserire nel
           blocco `ripeti ... volte` un singolo comando o uno schema più lungo. E si
           può anche ripetere un blocco `ripeti ... volte`!
-        courseD_bee_nested_loops_challenge2_b: Per raccogliere tutte e 4 le gemme,
+        courseD_bee_nested_loops_challenge2_b: Per raccogliere tutti e 4 i diamanti,
           prima di tutto usa un ciclo per allontanarti dal centro. Gira a sinistra
           o a destra, quindi usa un ciclo annidato per passare dal primo diamante
           al secondo. Se ripeti questo ciclo annidato abbastanza volte, la collezionista
@@ -9093,7 +10030,7 @@ it-IT:
           <title name="DIR">turnLeft</title>
           <next>
           <block type="controls_repeat_dropdown">
-          <title name="TIMES" config="3-10">3</title>
+          <title name="TIMES" config="3-10">4</title>
           <statement name="DO">
           <block type="collector_collect">
           <next>
@@ -9135,7 +10072,7 @@ it-IT:
         courseD_bee_nested_loops_challenge2_a: Non dimenticare che puoi inserire nel
           blocco `ripeti ... volte` un singolo comando o uno schema più lungo. E si
           può anche ripetere un blocco `ripeti ... volte`!
-        courseD_bee_nested_loops_challenge2_b: Per raccogliere tutte e 4 le gemme,
+        courseD_bee_nested_loops_challenge2_b: Per raccogliere tutti e 4 i diamanti,
           prima di tutto usa un ciclo per allontanarti dal centro. Gira a sinistra
           o a destra, quindi usa un ciclo annidato per passare dal primo diamante
           al secondo. Se ripeti questo ciclo annidato abbastanza volte, la collezionista
@@ -9160,7 +10097,7 @@ it-IT:
           <title name="DIR">turnLeft</title>
           <next>
           <block type="controls_repeat_dropdown">
-          <title name="TIMES" config="3-10">3</title>
+          <title name="TIMES" config="3-10">4</title>
           <statement name="DO">
           <block type="collector_collect">
           <next>
@@ -9202,7 +10139,7 @@ it-IT:
         courseD_bee_nested_loops_challenge2_a: Non dimenticare che puoi inserire nel
           blocco `ripeti ... volte` un singolo comando o uno schema più lungo. E si
           può anche ripetere un blocco `ripeti ... volte`!
-        courseD_bee_nested_loops_challenge2_b: Per raccogliere tutte e 4 le gemme,
+        courseD_bee_nested_loops_challenge2_b: Per raccogliere tutti e 4 i diamanti,
           prima di tutto usa un ciclo per allontanarti dal centro. Gira a sinistra
           o a destra, quindi usa un ciclo annidato per passare dal primo diamante
           al secondo. Se ripeti questo ciclo annidato abbastanza volte, la collezionista
@@ -9227,7 +10164,7 @@ it-IT:
           <title name="DIR">turnLeft</title>
           <next>
           <block type="controls_repeat_dropdown">
-          <title name="TIMES" config="3-10">3</title>
+          <title name="TIMES" config="3-10">4</title>
           <statement name="DO">
           <block type="collector_collect">
           <next>
@@ -9319,10 +10256,10 @@ it-IT:
           L'insieme di istruzioni condizionali dovrebbe funzionare così:
 
           -   se sei su una pannocchia
-          -   prendi la pannocchia
+              -   prendi la pannocchia
           -   altrimenti
-          -   se sei su una lattuga
-          -   prendi la lattuga
+              -   se sei su una lattuga
+                  -   prendi la lattuga
 
           Quindi, se una casella è vuota, la contadina non cerca di raccogliere nulla!
       courseD_farmer_condLoops2_2018:
@@ -9334,10 +10271,10 @@ it-IT:
           L'insieme di istruzioni condizionali dovrebbe funzionare così:
 
           -   se sei su una pannocchia
-          -   prendi la pannocchia
+              -   prendi la pannocchia
           -   altrimenti
-          -   se sei su una lattuga
-          -   prendi la lattuga
+              -   se sei su una lattuga
+                  -   prendi la lattuga
 
           Quindi, se una casella è vuota, la contadina non cerca di raccogliere nulla!
       courseD_farmer_condLoops2_2019:
@@ -9349,10 +10286,10 @@ it-IT:
           L'insieme di istruzioni condizionali dovrebbe funzionare così:
 
           -   se sei su una pannocchia
-          -   prendi la pannocchia
+              -   prendi la pannocchia
           -   altrimenti
-          -   se sei su una lattuga
-          -   prendi la lattuga
+              -   se sei su una lattuga
+                  -   prendi la lattuga
 
           Quindi, se una casella è vuota, la contadina non cerca di raccogliere nulla!
       courseD_farmer_condLoops3:
@@ -9652,21 +10589,21 @@ it-IT:
           quindi usa il blocco `mentre c'è strada in avanti` prima di usare il ciclo
           `mentre c'è una buca`.
         courseD_farmer_conditionals8_c: Nota che devi ripetere sei volte la sequenza
-          `mentre c'è strada in avanti` + `quando c'è una buca`.
+          `mentre c'è strada in avanti` + `mentre c'è una buca`.
       courseD_farmer_while8_2018:
         courseD_farmer_conditionals8_a: Avrai bisogno di usare più di un ciclo `mentre`.
         courseD_farmer_conditionals8_b: Ogni buca è alla fine di un tratto di percorso,
           quindi usa il blocco `mentre c'è strada in avanti` prima di usare il ciclo
           `mentre c'è una buca`.
         courseD_farmer_conditionals8_c: Nota che devi ripetere sei volte la sequenza
-          `mentre c'è strada in avanti` + `quando c'è una buca`.
+          `mentre c'è strada in avanti` + `mentre c'è una buca`.
       courseD_farmer_while8_2019:
         courseD_farmer_conditionals8_a: Avrai bisogno di usare più di un ciclo `mentre`.
         courseD_farmer_conditionals8_b: Ogni buca è alla fine di un tratto di percorso,
           quindi usa il blocco `mentre c'è strada in avanti` prima di usare il ciclo
           `mentre c'è una buca`.
         courseD_farmer_conditionals8_c: Nota che devi ripetere sei volte la sequenza
-          `mentre c'è strada in avanti` + `quando c'è una buca`.
+          `mentre c'è strada in avanti` + `mentre c'è una buca`.
       courseD_farmer_while_challenge1:
         courseD_farmer_while_challenge1_a: Le buche e i mucchi si trovano sempre una
           casella **prima** della fine del percorso.
@@ -10866,7 +11803,12 @@ it-IT:
 
           Il blocco `salta a` ti permette di muovere l'artista zombie su qualsiasi pixel della tela, in qualunque momento. Funziona così: _indipendentemente_ dal punto in cui si trova l'artista in quel momento, egli salterà un certo numero di pixel in avanti ed un altro numero di pixel in basso, contando a partire dallo spigolo in alto a sinistra.
 
-          ![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)
+          <xml>
+            <block type="jump_to_xy">
+              <title name="XPOS">350</title>
+              <title name="YPOS">200</title>
+            </block>
+            </xml>
       courseE_artist_functions_challenge2_2018:
         courseE_artist_functions_challenge1_a: |-
           <xml>
@@ -10878,7 +11820,12 @@ it-IT:
 
           Il blocco `salta a` ti permette di muovere l'artista zombie su qualsiasi pixel della tela, in qualunque momento. Funziona così: _indipendentemente_ dal punto in cui si trova l'artista in quel momento, egli salterà un certo numero di pixel in avanti ed un altro numero di pixel in basso, contando a partire dallo spigolo in alto a sinistra.
 
-          ![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)
+          <xml>
+            <block type="jump_to_xy">
+              <title name="XPOS">350</title>
+              <title name="YPOS">200</title>
+            </block>
+            </xml>
       courseE_artist_functions_challenge2_2019:
         courseE_artist_functions_challenge1_a: |-
           <xml>
@@ -10890,7 +11837,12 @@ it-IT:
 
           Il blocco `salta a` ti permette di muovere l'artista zombie su qualsiasi pixel della tela, in qualunque momento. Funziona così: _indipendentemente_ dal punto in cui si trova l'artista in quel momento, egli salterà un certo numero di pixel in avanti ed un altro numero di pixel in basso, contando a partire dallo spigolo in alto a sinistra.
 
-          ![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)
+          <xml>
+            <block type="jump_to_xy">
+              <title name="XPOS">350</title>
+              <title name="YPOS">200</title>
+            </block>
+            </xml>
       courseE_artist_ramp8:
         courseE_artist_ramp8_a: Per disegnare un lato, usa il blocco `vai avanti di
           100 pixel` e cambia il 100 in 200.
@@ -10953,15 +11905,15 @@ it-IT:
         courseE_bee_concept3a_b: Se non riesci a capire dove mettere i cicli, prova
           a scrivere il codice con tutti i blocchi azzurri e cerca poi di riconoscere
           la sequenza che si ripete.
-        courseE_bee_concept3a_c: Ci sono tre gruppi di fiori, quindi il ciclo `ripeti
-          ... volte` più esterno deve essere ripetuto tre volte.
+        courseE_bee_concept3a_c: Ci sono quattro tratti rettilinei di percorso, quindi
+          il ciclo `ripeti ... volte` più esterno deve essere ripetuto quattro volte.
       courseE_bee_concept3_2018:
         courseE_bee_concept3a_a: Prova a risolvere l'esercizio usando dei cicli annidati.
         courseE_bee_concept3a_b: Se non riesci a capire dove mettere i cicli, prova
           a scrivere il codice con tutti i blocchi azzurri e cerca poi di riconoscere
           la sequenza che si ripete.
-        courseE_bee_concept3a_c: Ci sono tre gruppi di fiori, quindi il ciclo `ripeti
-          ... volte` più esterno deve essere ripetuto tre volte.
+        courseE_bee_concept3a_c: Ci sono quattro tratti rettilinei di percorso, quindi
+          il ciclo `ripeti ... volte` più esterno deve essere ripetuto quattro volte.
       courseE_bee_concept4:
         courseE_bee_concept4_a: Un'istruzione condizionale `se/altrimenti` potrebbe
           davvero risolvere il dilemma.
@@ -12090,117 +13042,40 @@ it-IT:
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
-          <block type="draw_width" inline="false">
-          <value name="WIDTH">
-          <block type="math_number">
-          <title name="NUM">1</title>
-          </block>
-          </value>
-          <next>
-          <block type="draw_colour" inline="true" id="draw-color">
-          <value name="COLOUR">
-          <block type="colour_picker">
-          <title name="COLOUR">#0000cd</title>
-          </block>
-          </value>
-          <next>
-          <block type="controls_for_counter" inline="true">
-          <mutation counter="counter"></mutation>
-          <value name="FROM">
-          <block type="math_number">
-          <title name="NUM">50</title>
-          </block>
-          </value>
-          <value name="TO">
-          <block type="math_number">
-          <title name="NUM">350</title>
-          </block>
-          </value>
-          <value name="BY">
-          <block type="math_number">
-          <title name="NUM">50</title>
-          </block>
-          </value>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
           <statement name="DO">
-          <block type="alpha" inline="true" id="alpha">
-          <value name="VALUE">
-          <block type="math_arithmetic" inline="true">
-          <title name="OP">DIVIDE</title>
-          <value name="A">
-          <block type="variables_get">
-          <title name="VAR">counter</title>
-          </block>
-          </value>
-          <value name="B">
-          <block type="math_number">
-          <title name="NUM">2</title>
-          </block>
-          </value>
-          </block>
-          </value>
-          <next>
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="math_number">
-          <title name="NUM">4</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="draw_move" inline="true">
+          <block type="maze_move">
           <title name="DIR">moveForward</title>
-          <value name="VALUE">
-          <block type="variables_get">
-          <title name="VAR">counter</title>
-          </block>
-          </value>
-          <next>
-          <block type="draw_turn" inline="true">
-          <title name="DIR">turnRight</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">90</title>
-          </block>
-          </value>
-          </block>
-          </next>
           </block>
           </statement>
           <next>
-          <block type="jump" inline="true">
-          <title name="DIR">jumpBackward</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">25</title>
-          </block>
-          </value>
-          <next>
-          <block type="draw_turn" inline="true">
-          <title name="DIR">turnRight</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">90</title>
-          </block>
-          </value>
-          <next>
-          <block type="jump" inline="true">
-          <title name="DIR">jumpBackward</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">25</title>
-          </block>
-          </value>
-          <next>
-          <block type="draw_turn" inline="true">
+          <block type="maze_turn">
           <title name="DIR">turnLeft</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">90</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">4</title>
+          <statement name="DO">
+          <block type="collector_collect">
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
           </block>
-          </value>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
           </block>
-          </next>
-          </block>
-          </next>
+          </statement>
           </block>
           </next>
           </block>
@@ -12232,117 +13107,40 @@ it-IT:
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
-          <block type="draw_width" inline="false">
-          <value name="WIDTH">
-          <block type="math_number">
-          <title name="NUM">1</title>
-          </block>
-          </value>
-          <next>
-          <block type="draw_colour" inline="true" id="draw-color">
-          <value name="COLOUR">
-          <block type="colour_picker">
-          <title name="COLOUR">#0000cd</title>
-          </block>
-          </value>
-          <next>
-          <block type="controls_for_counter" inline="true">
-          <mutation counter="counter"></mutation>
-          <value name="FROM">
-          <block type="math_number">
-          <title name="NUM">50</title>
-          </block>
-          </value>
-          <value name="TO">
-          <block type="math_number">
-          <title name="NUM">350</title>
-          </block>
-          </value>
-          <value name="BY">
-          <block type="math_number">
-          <title name="NUM">50</title>
-          </block>
-          </value>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
           <statement name="DO">
-          <block type="alpha" inline="true" id="alpha">
-          <value name="VALUE">
-          <block type="math_arithmetic" inline="true">
-          <title name="OP">DIVIDE</title>
-          <value name="A">
-          <block type="variables_get">
-          <title name="VAR">counter</title>
-          </block>
-          </value>
-          <value name="B">
-          <block type="math_number">
-          <title name="NUM">2</title>
-          </block>
-          </value>
-          </block>
-          </value>
-          <next>
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="math_number">
-          <title name="NUM">4</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="draw_move" inline="true">
+          <block type="maze_move">
           <title name="DIR">moveForward</title>
-          <value name="VALUE">
-          <block type="variables_get">
-          <title name="VAR">counter</title>
-          </block>
-          </value>
-          <next>
-          <block type="draw_turn" inline="true">
-          <title name="DIR">turnRight</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">90</title>
-          </block>
-          </value>
-          </block>
-          </next>
           </block>
           </statement>
           <next>
-          <block type="jump" inline="true">
-          <title name="DIR">jumpBackward</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">25</title>
-          </block>
-          </value>
-          <next>
-          <block type="draw_turn" inline="true">
-          <title name="DIR">turnRight</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">90</title>
-          </block>
-          </value>
-          <next>
-          <block type="jump" inline="true">
-          <title name="DIR">jumpBackward</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">25</title>
-          </block>
-          </value>
-          <next>
-          <block type="draw_turn" inline="true">
+          <block type="maze_turn">
           <title name="DIR">turnLeft</title>
-          <value name="VALUE">
-          <block type="math_number">
-          <title name="NUM">90</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">4</title>
+          <statement name="DO">
+          <block type="collector_collect">
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
           </block>
-          </value>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
           </block>
-          </next>
-          </block>
-          </next>
+          </statement>
           </block>
           </next>
           </block>
@@ -13493,7 +14291,7 @@ it-IT:
           ciò che è nascosto può cambiare: per risolvere l'esercizio, devi quindi
           usare il blocco condizionale `se/altrimenti`."
         courseF_bee_conditionals8_b: |-
-          Questo esercizio è un po' complicato, perché non puoi controllare le caselle vuote, i fiori _e_ i favi con un unica istruzione condizionale.
+          Questo esercizio è un po' complicato, perché non puoi controllare le caselle vuote, i fiori _e_ i favi con un'unica istruzione condizionale.
 
           Controlla solo se c'è un fiore o un favo alla fine di ogni tratto del percorso (dove vedi le nuvole).
       courseF_bee_for1:
@@ -13905,125 +14703,48 @@ it-IT:
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
-          <block type="controls_for" inline="true">
-          <title name="VAR">counter</title>
-          <value name="FROM">
-          <block type="math_number">
-          <title name="NUM">1</title>
-          </block>
-          </value>
-          <value name="TO">
-          <block type="math_number">
-          <title name="NUM">3</title>
-          </block>
-          </value>
-          <value name="BY">
-          <block type="math_number">
-          <title name="NUM">1</title>
-          </block>
-          </value>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
           <statement name="DO">
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="variables_get">
-          <title name="VAR">counter</title>
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
           </block>
-          </value>
-          <statement name="DO">
-          <block type="maze_moveForward"/>
-          </statement>
-          <next>
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="variables_get">
-          <title name="VAR">counter</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="maze_nectar"/>
           </statement>
           <next>
           <block type="maze_turn">
           <title name="DIR">turnLeft</title>
           <next>
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="variables_get">
-          <title name="VAR">counter</title>
-          </block>
-          </value>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">4</title>
           <statement name="DO">
-          <block type="maze_moveForward"/>
-          </statement>
+          <block type="collector_collect">
           <next>
-          <block type="maze_turn">
-          <title name="DIR">turnRight</title>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
           </block>
           </statement>
-          <next>
-          <block type="maze_turn">
-          <title name="DIR">turnRight</title>
-          <next>
-          <block type="maze_turn">
-          <title name="DIR">turnRight</title>
-          <next>
-          <block type="controls_for" inline="true">
-          <title name="VAR">counter</title>
-          <value name="FROM">
-          <block type="math_number">
-          <title name="NUM">2</title>
-          </block>
-          </value>
-          <value name="TO">
-          <block type="math_number">
-          <title name="NUM">10</title>
-          </block>
-          </value>
-          <value name="BY">
-          <block type="math_number">
-          <title name="NUM">2</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="maze_moveForward">
           <next>
           <block type="maze_turn">
           <title name="DIR">turnLeft</title>
           <next>
-          <block type="maze_moveForward">
-          <next>
-          <block type="maze_turn">
-          <title name="DIR">turnRight</title>
-          <next>
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="variables_get">
-          <title name="VAR">counter</title>
-          </block>
-          </value>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
           <statement name="DO">
-          <block type="maze_honey"/>
-          </statement>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
           </block>
           </statement>
           </block>
           </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
           </block>
           </next>
           </block>
@@ -14050,125 +14771,48 @@ it-IT:
           <xml>
           <block type="when_run" deletable="false" movable="false">
           <next>
-          <block type="controls_for" inline="true">
-          <title name="VAR">counter</title>
-          <value name="FROM">
-          <block type="math_number">
-          <title name="NUM">1</title>
-          </block>
-          </value>
-          <value name="TO">
-          <block type="math_number">
-          <title name="NUM">3</title>
-          </block>
-          </value>
-          <value name="BY">
-          <block type="math_number">
-          <title name="NUM">1</title>
-          </block>
-          </value>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
           <statement name="DO">
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="variables_get">
-          <title name="VAR">counter</title>
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
           </block>
-          </value>
-          <statement name="DO">
-          <block type="maze_moveForward"/>
-          </statement>
-          <next>
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="variables_get">
-          <title name="VAR">counter</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="maze_nectar"/>
           </statement>
           <next>
           <block type="maze_turn">
           <title name="DIR">turnLeft</title>
           <next>
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="variables_get">
-          <title name="VAR">counter</title>
-          </block>
-          </value>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">4</title>
           <statement name="DO">
-          <block type="maze_moveForward"/>
-          </statement>
+          <block type="collector_collect">
           <next>
-          <block type="maze_turn">
-          <title name="DIR">turnRight</title>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
           </block>
           </statement>
-          <next>
-          <block type="maze_turn">
-          <title name="DIR">turnRight</title>
-          <next>
-          <block type="maze_turn">
-          <title name="DIR">turnRight</title>
-          <next>
-          <block type="controls_for" inline="true">
-          <title name="VAR">counter</title>
-          <value name="FROM">
-          <block type="math_number">
-          <title name="NUM">2</title>
-          </block>
-          </value>
-          <value name="TO">
-          <block type="math_number">
-          <title name="NUM">10</title>
-          </block>
-          </value>
-          <value name="BY">
-          <block type="math_number">
-          <title name="NUM">2</title>
-          </block>
-          </value>
-          <statement name="DO">
-          <block type="maze_moveForward">
           <next>
           <block type="maze_turn">
           <title name="DIR">turnLeft</title>
           <next>
-          <block type="maze_moveForward">
-          <next>
-          <block type="maze_turn">
-          <title name="DIR">turnRight</title>
-          <next>
-          <block type="controls_repeat_ext" inline="true">
-          <value name="TIMES">
-          <block type="variables_get">
-          <title name="VAR">counter</title>
-          </block>
-          </value>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
           <statement name="DO">
-          <block type="maze_honey"/>
-          </statement>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
           </block>
           </statement>
           </block>
           </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
           </block>
           </next>
           </block>

@@ -1003,6 +1003,66 @@ describe('FirebaseStorage', () => {
     });
   });
 
+  describe('readRecords', () => {
+    it('can read a table with rows', done => {
+      const csvData =
+        'id,name,age,male\n' +
+        '4,alice,7,false\n' +
+        '5,bob,8,true\n' +
+        '6,charlie,9,true\n';
+      const expectedRecords = [
+        {id: 1, name: 'alice', age: 7, male: false},
+        {id: 2, name: 'bob', age: 8, male: true},
+        {id: 3, name: 'charlie', age: 9, male: true}
+      ];
+
+      FirebaseStorage.importCsv(
+        'mytable',
+        csvData,
+        () => {
+          FirebaseStorage.readRecords('mytable', {}, onSuccess, error => {
+            throw error;
+          });
+        },
+        error => {
+          throw error;
+        }
+      );
+      function onSuccess(records) {
+        expect(records).to.deep.equal(expectedRecords);
+        done();
+      }
+    });
+
+    it('returns [] for a table with no rows', done => {
+      FirebaseStorage.createTable(
+        'emptytable',
+        () => {
+          FirebaseStorage.readRecords('emptytable', {}, onSuccess, error => {
+            throw error;
+          });
+        },
+        error => {
+          throw error;
+        }
+      );
+      function onSuccess(records) {
+        expect(records).to.deep.equal([]);
+        done();
+      }
+    });
+
+    it('returns null for a non-existent table', done => {
+      FirebaseStorage.readRecords('notATable', {}, onSuccess, error => {
+        throw error;
+      });
+      function onSuccess(records) {
+        expect(records).to.equal(null);
+        done();
+      }
+    });
+  });
+
   describe('importCsv', () => {
     const csvData =
       'id,name,age,male\n' +

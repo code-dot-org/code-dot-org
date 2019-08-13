@@ -1718,3 +1718,9 @@ ja:
               name: 速度
             Functions:
               name: 関数(かんすう)
+        csl-vn:
+          stages:
+            Programming in Maze:
+              name: めいろ のプログラミング
+            Ocean Scene with Loops:
+              name: アーティストくりかえし

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190718184223) do
+ActiveRecord::Schema.define(version: 20190812195807) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -51,7 +51,7 @@ ActiveRecord::Schema.define(version: 20190718184223) do
     t.integer  "user_id",         null: false
     t.integer  "level_id",        null: false
     t.integer  "script_id",       null: false
-    t.integer  "level_source_id"
+    t.bigint   "level_source_id",              unsigned: true
     t.integer  "attempt"
     t.integer  "test_result"
     t.datetime "created_at",      null: false
@@ -310,6 +310,18 @@ ActiveRecord::Schema.define(version: 20190718184223) do
     t.index ["name"], name: "index_courses_on_name", using: :btree
   end
 
+  create_table "donors", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.string   "name"
+    t.string   "url"
+    t.string   "show"
+    t.string   "twitter"
+    t.string   "level"
+    t.float    "weight",         limit: 24
+    t.float    "twitter_weight", limit: 24
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
+  end
+
   create_table "email_preferences", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.string   "email",      null: false
     t.boolean  "opt_in",     null: false
@@ -462,7 +474,7 @@ ActiveRecord::Schema.define(version: 20190718184223) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "level_num"
-    t.integer  "ideal_level_source_id"
+    t.bigint   "ideal_level_source_id",                                            unsigned: true
     t.integer  "user_id"
     t.text     "properties",            limit: 65535
     t.string   "type"
@@ -911,32 +923,6 @@ ActiveRecord::Schema.define(version: 20190718184223) do
     t.index ["user_id"], name: "index_pd_workshop_facilitator_daily_surveys_on_user_id", using: :btree
   end
 
-  create_table "pd_workshop_material_orders", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.datetime "created_at",                                 null: false
-    t.datetime "updated_at",                                 null: false
-    t.integer  "pd_enrollment_id",                           null: false
-    t.integer  "user_id",                                    null: false
-    t.string   "school_or_company"
-    t.string   "street",                                     null: false
-    t.string   "apartment_or_suite"
-    t.string   "city",                                       null: false
-    t.string   "state",                                      null: false
-    t.string   "zip_code",                                   null: false
-    t.string   "phone_number",                               null: false
-    t.datetime "order_attempted_at"
-    t.datetime "ordered_at"
-    t.text     "order_response",               limit: 65535
-    t.text     "order_error",                  limit: 65535
-    t.string   "order_id"
-    t.string   "order_status"
-    t.datetime "order_status_last_checked_at"
-    t.datetime "order_status_changed_at"
-    t.string   "tracking_id"
-    t.string   "tracking_url"
-    t.index ["pd_enrollment_id"], name: "index_pd_workshop_material_orders_on_pd_enrollment_id", unique: true, using: :btree
-    t.index ["user_id"], name: "index_pd_workshop_material_orders_on_user_id", unique: true, using: :btree
-  end
-
   create_table "pd_workshop_surveys", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "pd_enrollment_id",               null: false
     t.text     "form_data",        limit: 65535, null: false
@@ -983,7 +969,7 @@ ActiveRecord::Schema.define(version: 20190718184223) do
     t.boolean  "from_instructor",               default: false, null: false
     t.integer  "script_id",                                     null: false
     t.integer  "level_id",                                      null: false
-    t.integer  "level_source_id",                               null: false
+    t.bigint   "level_source_id",                               null: false,                                                                                                                                                  unsigned: true
     t.text     "data",            limit: 65535
     t.integer  "status"
     t.datetime "created_at",                                    null: false
@@ -1397,8 +1383,8 @@ ActiveRecord::Schema.define(version: 20190718184223) do
   create_table "teacher_feedbacks", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.text     "comment",                  limit: 65535
     t.integer  "student_id"
-    t.integer  "level_id"
-    t.integer  "teacher_id"
+    t.integer  "level_id",                               null: false
+    t.integer  "teacher_id",                             null: false
     t.datetime "created_at",                             null: false
     t.datetime "updated_at",                             null: false
     t.datetime "deleted_at"
@@ -1406,7 +1392,7 @@ ActiveRecord::Schema.define(version: 20190718184223) do
     t.integer  "student_visit_count"
     t.datetime "student_first_visited_at"
     t.datetime "student_last_visited_at"
-    t.integer  "script_level_id"
+    t.integer  "script_level_id",                        null: false
     t.datetime "seen_on_feedback_page_at"
     t.index ["student_id", "level_id", "teacher_id"], name: "index_feedback_on_student_and_level_and_teacher_id", using: :btree
     t.index ["student_id", "level_id"], name: "index_feedback_on_student_and_level", using: :btree

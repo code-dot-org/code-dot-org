@@ -106,15 +106,15 @@ nl-NL:
       CourseE_HOC 2018 Level_2: Boten zijn veel gemakkelijker dan zwemmen in open
         water! Ga naar het einde van de steiger en klim aan boord.
       CourseE_HOC 2018 Level_3: Pak de roeispanen en stuur je boot over de open zee
-        om de \*\* kabeljauw \*\* !\[] (<https://images.code.org/9b636884eefb1efe18f9f844e1e916a9-image-1538698597353.png>)
+        om de \*\* kabeljauw \*\* \!\[] (<https://images.code.org/9b636884eefb1efe18f9f844e1e916a9-image-1538698597353.png>)
         te vangen.
-      CourseE_HOC 2018 Level_4: Laten we de kabeljauw aan de \*\* dolfijn \*\* !\[]
+      CourseE_HOC 2018 Level_4: Laten we de kabeljauw aan de \*\* dolfijn \*\* \!\[]
         (<https://images.code.org/8c240fd4df4da2795ba7ca942b77a057-image-1538947890991.png>)
         voeren. Gebruik een herhalingsblok om de oceaan sneller te doorkruisen.
       CourseE_HOC 2018 Level_5: Er is ergens een **nautilusschelp** ![](https://images.code.org/2eb084fa0c718dee6ca4b6379381f735-image-1538698936660.png)
         verborgen! Verken het scheepswrak om de **kist** ![](https://images.code.org/16cdd5779b38909d4bf47b29535c92b0-image-1538698950602.png)
         te vinden.
-      CourseE_HOC 2018 Level_6: Dat ziet er ijskoud uit! Vang een **zalm** !\[] (<https://images.code.org/c66eadf25b3cdfe20bbfdc91e2c28c94-image-1538699000102.png>)
+      CourseE_HOC 2018 Level_6: Dat ziet er ijskoud uit! Vang een **zalm** \!\[] (<https://images.code.org/c66eadf25b3cdfe20bbfdc91e2c28c94-image-1538699000102.png>)
         op weg naar de onderwaterruïnes.
       CourseE_HOC 2018 Level_7a: Je hebt de onderwaterruïnes gevonden. Doorzoek het
         zandsteen voor een **kist** ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png)
@@ -259,14 +259,14 @@ nl-NL:
       HOC 2018 Level_2: Boten zijn veel gemakkelijker dan zwemmen in open water! Ga
         naar het einde van de steiger en klim aan boord.
       HOC 2018 Level_3: Pak de roeispanen en stuur je boot over de open zee om de
-        \*\* kabeljauw \*\* !\[] (<https://images.code.org/9b636884eefb1efe18f9f844e1e916a9-image-1538698597353.png>)
+        \*\* kabeljauw \*\* \!\[] (<https://images.code.org/9b636884eefb1efe18f9f844e1e916a9-image-1538698597353.png>)
         te vangen.
-      HOC 2018 Level_4: Laten we de kabeljauw aan de \*\* dolfijn \*\* !\[] (<https://images.code.org/8c240fd4df4da2795ba7ca942b77a057-image-1538947890991.png>)
+      HOC 2018 Level_4: Laten we de kabeljauw aan de \*\* dolfijn \*\* \!\[] (<https://images.code.org/8c240fd4df4da2795ba7ca942b77a057-image-1538947890991.png>)
         voeren. Gebruik een herhalingsblok om de oceaan sneller te doorkruisen.
       HOC 2018 Level_5: Er is ergens een **nautilusschelp** ![](https://images.code.org/2eb084fa0c718dee6ca4b6379381f735-image-1538698936660.png)
         verborgen! Verken het scheepswrak om de **kist** ![](https://images.code.org/16cdd5779b38909d4bf47b29535c92b0-image-1538698950602.png)
         te vinden.
-      HOC 2018 Level_6: Dat ziet er ijskoud uit! Vang een **zalm** !\[] (<https://images.code.org/c66eadf25b3cdfe20bbfdc91e2c28c94-image-1538699000102.png>)
+      HOC 2018 Level_6: Dat ziet er ijskoud uit! Vang een **zalm** \!\[] (<https://images.code.org/c66eadf25b3cdfe20bbfdc91e2c28c94-image-1538699000102.png>)
         op weg naar de onderwaterruïnes.
       HOC 2018 Level_7a: Je hebt de onderwaterruïnes gevonden. Doorzoek het zandsteen
         voor een **kist** ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png)
@@ -357,6 +357,32 @@ nl-NL:
         schapen te bereiken.
       Overworld Move to Sheep_2019: Voeg een tweede "beweeg vooruit"-commando toe
         om de schapen te bereiken.
+      Standalone_Artist_2: Teken deze diamant met hoeken van 120 en 60 graden en zijden
+        van 150 pixels.
+      Standalone_Artist_3: Kan je deze zeshoek tekenen met zijden van 100 pixels lang
+        en hoeken van 60 graden?
+      Standalone_Artist_4: Je hebt nu een nieuw blok om mee te spelen, een herhaal
+        lus. Dit zal een aantal opdrachten herhalen. Wat gebeurt er als je deze opdrachten
+        6 keer herhaalt?
+      Standalone_Artist_5: Hoeveel keer moet de diamant in een lus gestopt worden
+        om de bloem te tekenen?
+      Standalone_Artist_5.5: 'Kijk hoe we de diamant code vereenvoudigd hebben door
+        de code te veranderen in een lus. Je kan de ganse reeks 12 keer herhalen om
+        een bloem te tekenen. Tip: Je moet 30 graden draaien na je diamant lus zodat
+        je niet over dezelfde diamant blijft tekenen.'
+      Standalone_Artist_6: 'Gebruik de zeshoek code 6 maal in een lus om dit ontwerp
+        te tekenen. Hoeveel graden moet je iedere keer draaien. Tip: deel het aantal
+        graden in een cirkel door het aantal maal dat je een lus gebruikt.'
+      Standalone_Artist_7: 'Een functie is een ander programmeer-hulpmiddel wat vermijdt
+        dat je jezelf herhaalt. Deze functie tekent een bloem, je kan deze gelijk
+        waneer gebruiken wanneer je een bloem wil tekenen. Gebruik deze en de nieuwe
+        spring blok om bloemen te tekenen. Tip: De bloemen staan 150 pixels van mekaar'
+      Standalone_Artist_8: Hier is de functie "teken een vorm" die we geprogrammeerd
+        hebben om zeshoeken te tekenen. voer de code uit om te zien wat deze doet
+        en experimenteer vervolgens met de functie om te zien wat er gebeurt. Kan
+        je er patronen met vierkanten, driehoeken of achthoeken mee tekenen?
+      Standalone_Artist_9: Nu mag je maken wat je wil! Je hebt zelfs een lege functie
+        die je kan laten doen wat je maar wilt!
       course1_maze_debugging_challenge2: Debug dit level. Dit zijn de correct blokken,
         maar ze staan in de verkeerde volgorde!
       course2_collector_prog_challenge1: Kijk aandachtig! Kan jij alle _10_ stukken

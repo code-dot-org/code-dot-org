@@ -1,0 +1,78 @@
+#!/usr/bin/env ruby
+
+# The map on code.org/yourschool is run off of Mapbox.
+# This script updates the data on Mapbox by querying all rows from
+# census_summaries table for the appropriate school year,
+# creating maptiles with Mapbox's command line tool, Tippecanoe,
+# and uploading them to Mapbox's server.
+
+# After setting up authentication, provide the following CDO.* attributes:
+#   CDO.mapbox_upload_token: (the auth token for uploading tiles to Mapbox's servers)
+
+require_relative '../../dashboard/config/environment'
+require 'cdo/only_one'
+require 'cdo/properties'
+
+require_relative 'upload_to_mapbox'
+
+def make_location(lat, long)
+  return nil if lat.nil? || long.nil?
+
+  "#{format('%.6f', lat)}, #{format('%.6f', long)}"
+end
+
+def main
+  return unless only_one_running?(__FILE__)
+
+  # The map should show the data from the school year that began
+  # in the previous calendar year. So, Aug-Dec we show the previous school
+  # year's data and then switch over to the current school year in Jan.
+  year = Date.today.year - 1
+  geojson = JSON.parse('{ "type": "FeatureCollection", "features": [] }')
+  Census::CensusSummary.where(school_year: year).find_each do |summary|
+    school = summary.school
+    geojson["features"] <<
+      {
+        geometry: {
+          coordinates: [school.longitude.to_f, school.latitude.to_f],
+          type: "Point"
+        },
+        properties: {
+          school_id: school.id,
+          year: year,
+          school_name: school.name.titleize,
+          school_city: school.city.titleize,
+          school_state: school.state,
+          teaches_cs: summary.teaches_cs
+        },
+        type: "Feature"
+      }
+  end
+
+  file = Tempfile.new(['census', 'geojson'])
+  tiles = Tempfile.new(['censustiles', 'mbtiles'])
+  file.write(JSON.pretty_generate(geojson))
+  _stdout, stderr, tippecanoe_status = Open3.capture3(
+    # Tippecanoe will generate a map that has a min zoom of 1 (approx the whole world),
+    # clusters points that are approximately 2 pixels apart, and drops points to make them fit if they can't.
+    # The layer is called "census". DO NOT change the layer name without changing the map
+    # in the Mapbox UI.
+    "tippecanoe -Z 1 -rg --cluster-distance=2 -o #{tiles.path} -l \"census\" --force #{file.path}"
+  )
+  upload_successful = false
+  if tippecanoe_status.success?
+    upload_successful = upload_maptiles(tiles.path, 'censustiles')
+  end
+  unless tippecanoe_status.success? && upload_successful
+    Honeybadger.notify(
+      error_message: "Updating Census map on Mapbox failed",
+      error_class: "Census Map Update Failure",
+      context: {
+        tippecanoe_status: stderr,
+        upload_status: upload_successful
+      }
+    )
+  end
+end
+
+main

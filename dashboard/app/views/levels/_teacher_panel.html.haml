@@ -25,7 +25,8 @@
       - elsif @level.is_a?(GamelabJr)
         - send("#{"spritelab"}_project_view_projects_url".to_sym, channel_id: example, host: 'studio.code.org', port: 443, protocol: :https)
       - elsif @level.is_a?(Artist)
-        - send("#{"artist"}_project_view_projects_url".to_sym, channel_id: example, host: 'studio.code.org', port: 443, protocol: :https)
+        - artist_type = ['elsa', 'anna'].include?(@level.skin) ? 'frozen' : 'artist'
+        - send("#{artist_type}_project_view_projects_url".to_sym, channel_id: example, host: 'studio.code.org', port: 443, protocol: :https)
       - elsif @level.is_a?(Studio) # playlab
         - send("#{"playlab"}_project_view_projects_url".to_sym, channel_id: example, host: 'studio.code.org', port: 443, protocol: :https)
       - else

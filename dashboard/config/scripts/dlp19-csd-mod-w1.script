@@ -1,0 +1,12 @@
+professional_learning_course 'CS Discoveries Deeper Learning 2019 - 2020'
+login_required true
+student_detail_progress_view true
+family_name ''
+
+stage 'Step 1'
+level 'dlp19-csd-prework-mod1'
+
+stage 'Step 2'
+level 'dlp19-csd-mod1-q1'
+level 'dlp19-csd-mod1-q2'
+level 'dlp19-csd-mod1-q3'

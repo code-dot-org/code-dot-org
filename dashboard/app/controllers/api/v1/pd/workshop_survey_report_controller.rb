@@ -110,20 +110,15 @@ module Api::V1::Pd
 
     # GET /api/v1/pd/workshops/:id/generic_survey_report
     def generic_survey_report
-      # Default HTTP status code to return to client if
-      # we encouter an exception processing this request.
-      error_status_code = :internal_server_error
-
       return local_workshop_daily_survey_report if @workshop.summer? ||
         ([COURSE_CSP, COURSE_CSD].include?(@workshop.course) &&
         @workshop.workshop_starting_date > Date.new(2018, 8, 1))
 
       return create_csf_survey_report if @workshop.csf? && @workshop.subject == SUBJECT_CSF_201
 
-      error_status_code = :bad_request
       raise 'Action generic_survey_report should not be used for this workshop'
     rescue => e
-      notify_error e, error_status_code
+      notify_error e
     end
 
     # GET /api/v1/pd/workshops/experiment_survey_report/:id/
@@ -155,9 +150,9 @@ module Api::V1::Pd
       render json: report_single_workshop(@workshop, current_user)
     end
 
-    def notify_error(exception, error_status_code = :internal_server_error)
+    def notify_error(exception, error_status_code = :bad_request)
       Honeybadger.notify(
-        error_message: exception.message,
+        exception,
         context: {
           workshop_id: @workshop.id,
           course: @workshop.course,
@@ -169,8 +164,8 @@ module Api::V1::Pd
         errors: [
           {
             severity: Logger::Severity::ERROR,
-            message: "#{exception.message}. Workshop id: #{@workshop.id},"\
-              " course: #{@workshop.course}, subject: #{@workshop.subject}."
+            message: "#{exception.message}. First backtrace: #{exception.backtrace.first}."\
+              " Workshop id: #{@workshop.id}, course: #{@workshop.course}, subject: #{@workshop.subject}."
           }
         ]
       }
