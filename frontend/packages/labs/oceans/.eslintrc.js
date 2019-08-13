@@ -16,6 +16,11 @@ module.exports = {
     "node": true,
     "es6": true
   },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
   "parser": "babel-eslint",
   "parserOptions": {
     "sourceType": "module",
