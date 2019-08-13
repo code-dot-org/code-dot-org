@@ -121,14 +121,14 @@ class StudentTable extends React.Component {
                     style={levels ? styles.nameWithBubble : styles.nameInScript}
                   >
                     {student.name}
+                    <a
+                      href={this.getRowLink(student.id)}
+                      target="_blank"
+                      style={styles.linkIcon}
+                    >
+                      <FontAwesome icon="external-link" />
+                    </a>
                   </div>
-                  <a
-                    href={this.getRowLink(student.id)}
-                    target="_blank"
-                    style={styles.linkIcon}
-                  >
-                    <FontAwesome icon="external-link" />
-                  </a>
                 </div>
               </td>
             </tr>
