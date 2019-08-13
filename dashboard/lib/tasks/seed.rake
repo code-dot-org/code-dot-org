@@ -18,6 +18,10 @@ namespace :seed do
     Game.setup
   end
 
+  task donors: :environment do
+    Donor.setup
+  end
+
   SCRIPTS_GLOB = Dir.glob('config/scripts/**/*.script').sort.flatten.freeze
   UI_TEST_SCRIPTS = [
     '20-hour',
