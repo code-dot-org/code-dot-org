@@ -4,6 +4,7 @@ import Button from 'react-bootstrap/lib/Button';
 import Row from 'react-bootstrap/lib/Row';
 import Col from 'react-bootstrap/lib/Col';
 import Grid from 'react-bootstrap/lib/Grid';
+import Panel from 'react-bootstrap/lib/Panel';
 
 const Activity = Object.freeze({
   None: 0,
@@ -27,10 +28,11 @@ module.exports = class MLActivities extends React.Component {
           {
             this.state.currentActivity !== Activity.None &&
             <Button
-              bsSize="large"
+              // bsSize="large"
               onClick={() => this.setState({
                 currentActivity: Activity.None
               })}
+              style={{marginBottom: 10}}
             >
               Pick Another Activity
             </Button>
@@ -38,7 +40,7 @@ module.exports = class MLActivities extends React.Component {
           {
             this.state.currentActivity === Activity.None &&
             <Button
-              bsSize="large"
+              // bsSize="large"
               onClick={() => this.setState({
                 currentActivity: Activity.RPS
               })}
@@ -48,7 +50,9 @@ module.exports = class MLActivities extends React.Component {
           }
           {
             this.state.currentActivity === Activity.RPS &&
-            <RPS/>
+              <Panel>
+                <RPS/>
+              </Panel>
           }
         </Col>
         <Col xs={2}>

@@ -12,7 +12,15 @@ module.exports = class Video {
     return this.videoElement;
   }
 
+  /**
+   * @param {HTMLVideoElement} video
+   * @returns {Promise<void>}
+   */
   async loadVideo(video) {
+    if (!video) {
+      // This case seems to occur on re-playing.
+      return;
+    }
     this.videoElement = video;
     video.setAttribute('autoplay', '');
     video.setAttribute('playsinline', '');
@@ -25,10 +33,11 @@ module.exports = class Video {
     });
   }
 
-  getFrameDataURI() {
+  getFrameDataURI(size) {
+    size = size || this.imageSize / 4;
     const canvas = document.createElement('canvas');
-    canvas.width = this.imageSize / 4;
-    canvas.height = this.imageSize / 4;
+    canvas.width = size;
+    canvas.height = size;
     const ctx = canvas.getContext('2d');
     ctx.drawImage(this.videoElement, 0, 0, canvas.width, canvas.height);
     return canvas.toDataURL('image/jpeg');

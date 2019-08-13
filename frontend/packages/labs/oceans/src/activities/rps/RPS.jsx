@@ -5,20 +5,41 @@
  */
 
 import React from 'react';
-import Button from 'react-bootstrap/lib/Button';
-import Row from 'react-bootstrap/lib/Row';
-import Col from 'react-bootstrap/lib/Col';
 
 import SimpleTrainer from '../../utils/SimpleTrainer';
 import Video from '../../utils/Video.js';
 
+import IntroScreen from './IntroScreen';
+import TrainingScreen from './TrainingScreen';
+import PlayRound from './PlayRound';
+import PlayRoundInstructions from './PlayRoundInstructions';
+import PlayRoundResult from './PlayRoundResult';
+
 const IMAGE_SIZE = 227;
-const NUM_CLASSES = 3;
 const CLASS_NAMES = ['rock', 'paper', 'scissors'];
 
-const MIN_EXAMPLES = 20;
 const NO_CLASS = -1;
 
+const ActivityScreen = Object.freeze({
+  IntroInstructions: 0,
+  TrainClass1: 1,
+  TrainClass2: 2,
+  TrainClass3: 3,
+  PlayRoundInstructions: 4,
+  PlayRound: 5,
+  PlayRoundResult: 6,
+});
+
+const defaultState = {
+  currentScreen: ActivityScreen.IntroInstructions,
+  predictedClass: NO_CLASS,
+  confidencesByClassId: [],
+  trainingImages0: [],
+  trainingImages1: [],
+  trainingImages2: [],
+  roundResult: null,
+  roundPrediction: null
+};
 module.exports = class Main extends React.Component {
   constructor(props) {
     super(props);
@@ -27,18 +48,10 @@ module.exports = class Main extends React.Component {
     this.simpleTrainer = new SimpleTrainer();
   }
 
-  state = {
-    predictedClass: NO_CLASS,
-    confidencesByClassId: [],
-    trainingImages0: [],
-    trainingImages1: [],
-    trainingImages2: [],
-    roundResult: null
-  };
+  state = defaultState;
 
   componentDidMount() {
     this.simpleTrainer.initializeClassifiers();
-    this.video.loadVideo(this.videoElementRef);
   }
 
   rpsToEmoji(rps) {
@@ -54,65 +67,85 @@ module.exports = class Main extends React.Component {
 
   render() {
     return <div>
-      <Row style={{
-        display: 'flex',
-        alignItems: 'center',
-      }}>
-        <Col sm={6}>
-          <video ref={(el) => this.videoElementRef = el} autoPlay="" playsInline="" width={IMAGE_SIZE} height={IMAGE_SIZE}/>
-        </Col>
-        <Col sm={6}>
-          <Button bsSize="large"
-            onClick={() => this.playRound()}
-          >
-            Play Round
-          </Button>
-        </Col>
-      </Row>
-      <Row>
-        <Col>
-          <div style={{marginBottom: 10}}>
-            <i>Click each &lsquo;train&rsquo; button to train the computer on one frame from your camera</i><br/>
-          </div>
-          {!!this.state.roundResult && <div style={{marginBottom: 10}}>
-            {`You played...${this.rpsToEmoji(this.state.roundResult.playerPlayed)}`}<br/>
-            {`Computer played ${this.rpsToEmoji(this.state.roundResult.computerPlayed)}`}<br/>
-            {this.state.roundResult.winner > 0 ? 'YOU WIN' : this.state.roundResult.winner === 0 ? 'DRAW' : 'YOU LOSE'}
-          </div>}
-
-          {
-            [...Array(NUM_CLASSES).keys()].map((index) => {
-              let exampleCount = this.simpleTrainer.getExampleCount(index);
-              let confidence = this.state.confidencesByClassId[index] * 100;
-              return (<div key={index.toString()} style={{marginBottom: "10px"}}>
-                <Button
-                  onClick={() => {
-                    this.trainExample(index);
-                  }}
-                >
-                  Train {CLASS_NAMES[index]}
-                </Button>
-                {!confidence && !!exampleCount && <span style={{fontWeight: this.state.predictedClass === index ? "bold" : "normal"}}>
-                  {
-                    `${exampleCount} example${ exampleCount !== 1 ? 's' : '' } ${(exampleCount >= MIN_EXAMPLES ? '✅' : '')}`
-                  }
-                </span>}
-                {!!confidence && <span style={{fontWeight: this.state.predictedClass === index ? "bold" : "normal"}}>
-                  {
-                    ` ${exampleCount} example${ exampleCount !== 1 ? 's' : '' } - ${confidence}%`
-                  }
-                </span>}
-                {
-                  this.state['trainingImages' + index].map((image, i) => {
-                    return <img key={i} src={image} width={40} height={40}/>;
-                  })
-                }
-              </div>);
-            })
-          }
-        </Col>
-      </Row>
+      {this.state.currentScreen === ActivityScreen.IntroInstructions &&
+      <IntroScreen
+        onClickContinue={() => {
+          this.setState({
+            currentScreen: ActivityScreen.TrainClass1
+          }, null);
+        }}
+      />}
+      {this.trainingScreen(0)}
+      {this.trainingScreen(1)}
+      {this.trainingScreen(2)}
+      {this.state.currentScreen === ActivityScreen.PlayRoundInstructions &&
+      <PlayRoundInstructions
+        onClickContinue={() => {
+          this.setState({
+            currentScreen: ActivityScreen.PlayRound
+          }, null);
+        }}
+      />}
+      {this.state.currentScreen === ActivityScreen.PlayRound &&
+      <PlayRound
+        imageSize={IMAGE_SIZE}
+        onMountVideo={(videoElement) => {
+          this.video.loadVideo(videoElement);
+        }}
+        onPlayRound={() => {
+          this.playRound().then(() => {
+            return this.setState({
+              currentScreen: ActivityScreen.PlayRoundResult
+            }, null);
+          });
+        }}
+      />}
+      {this.state.currentScreen === ActivityScreen.PlayRoundResult &&
+      <PlayRoundResult
+        winner={this.state.roundResult.winner}
+        confidence={this.state.roundPrediction.confidence}
+        playerPlayed={this.state.roundPrediction.playerPlayed}
+        playerPlayedImage={this.state.roundPrediction.playerPlayedImage}
+        computerPlayed={this.state.roundPrediction.computerPlayed}
+        computerPlayedEmoji={this.state.roundPrediction.computerPlayedEmoji}
+        onPlayAgain={() => {
+          this.setState({
+            currentScreen: ActivityScreen.PlayRound
+          }, null);
+        }}
+        onTrainMore={() => {
+          this.setState({
+            currentScreen: ActivityScreen.TrainClass1
+          }, null);
+        }}
+        onContinue={() => {
+          this.setState(defaultState, null);
+        }}
+      />}
     </div>;
+  }
+
+  trainingScreen(index) {
+    const thisScreen = ActivityScreen[`TrainClass${index + 1}`];
+    const nextScreen = index + 1 >= CLASS_NAMES.length ? ActivityScreen.PlayRoundInstructions : ActivityScreen[`TrainClass${index + 2}`];
+    return this.state.currentScreen === thisScreen &&
+      <TrainingScreen
+        onTrainClicked={() => {
+          this.trainExample(index);
+        }}
+        onContinueClicked={() => {
+          this.setState({
+            currentScreen: nextScreen
+          }, null);
+        }}
+        onMountVideo={(videoElement) => {
+          this.video.loadVideo(videoElement);
+        }}
+        imageSize={IMAGE_SIZE}
+        trainingClass={CLASS_NAMES[index]}
+        exampleCount={this.simpleTrainer.getExampleCount(index)}
+        trainingImages={this.state[`trainingImages${index}`]}
+      />;
   }
 
   /**
@@ -133,22 +166,29 @@ module.exports = class Main extends React.Component {
   async playRound() {
     if (this.video.isPlaying()) {
       if (this.simpleTrainer.getNumClasses() > 0) {
+        let frameDataURI = this.video.getFrameDataURI(400);
+
         let predictionResult = await this.simpleTrainer.predict(this.video.getVideoElement());
+        let computerChoice = CLASS_NAMES[Math.floor(Math.random() * 3)];
+        let playerChoice = CLASS_NAMES[predictionResult.predictedClassId];
+        const winner = this.pickWinner(playerChoice, computerChoice);
+
         this.setState({
-          predictedClass: predictionResult.predictedClassId,
-          confidencesByClassId: predictionResult.confidencesByClassId
-        }, () => {
-          let computerChoice = CLASS_NAMES[Math.floor(Math.random() * 3)];
-          let playerChoice = CLASS_NAMES[this.state.predictedClass];
-          const winner = this.pickWinner(playerChoice, computerChoice);
-          this.setState({
-            roundResult: {
-              winner: winner,
-              playerPlayed: playerChoice,
-              computerPlayed: computerChoice
-            }
-          }, null);
-        });
+          roundPrediction: {
+            predictedClass: predictionResult.predictedClassId,
+            confidence: predictionResult.confidencesByClassId[predictionResult.predictedClassId],
+            playerPlayedImage: frameDataURI,
+
+            playerPlayed: playerChoice,
+            computerPlayed: computerChoice,
+            computerPlayedEmoji: this.rpsToEmoji(computerChoice),
+
+            confidencesByClassId: predictionResult.confidencesByClassId,
+          },
+          roundResult: {
+            winner: winner,
+          }
+        }, null);
       }
     }
   }
