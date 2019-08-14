@@ -179,7 +179,7 @@ zh-CN:
     title: 已经有账号了？登录
     login: 电子邮件
     login_username: 邮箱/用户名
-    password: '密码:'
+    password: 密码：
     remember: 记住我
     submit: 登录
   signin:
@@ -956,9 +956,8 @@ zh-CN:
     capsule_title: 你有网络吗？
     capsule_desc: 使用在线、 基于 web 的 <a href="%{url}">%{app_name}</a>。
     instructions_headline: 没有网络？
-    instructions: 指导教师︰ 如果你有互联网服务差，这些代码小时教程都是可用于下载和安装供脱机使用。选择您的语言和平台、 下载和安装在你的教室里所有的计算机上。你可能想要使用
-      USB 驱动器一次下载并安装在所有计算机上。注︰ 学生将不能登录到代码工作室、 保存进度，或打印证书。教师可打印证书提前 <a href="%{url}">
-      在这里</a>。
+    instructions: 给教师的提示︰ 如果你的网络条件不好，这些《编程一小时》教程都是可用于下载和安装供离线使用。选择您的语言和平台、下载和安装在你的教室里所有的计算机上。你可能想要使用
+      USB 驱动器一次下载并安装在所有计算机上。注︰ 学生将不能登录到代码工作室、保存进度或打印证书。教师可提前<a href="%{url}">打印证书</a>。
     minecraft_name: "《我的世界》编程一小时"
     starwars_blocks_name: 星球大战：用代码构建一个星系（块）
     starwars_javascript_name: 星球大战：用代码构建一个星系-JavaScript
