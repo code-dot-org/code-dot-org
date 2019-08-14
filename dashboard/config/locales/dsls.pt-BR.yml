@@ -767,6 +767,24 @@ pt-BR:
 
       CSD U2 Lesson 6 Overview:
         content1: descrição aqui
+      CSD U2 Lesson 9 Overview:
+        markdown: |
+          # Visão global
+
+          Esta lição abrange hiperlinks, que permitem que os desenvolvedores da Web conectem as páginas em um único site. A classe unirá todas as páginas anteriores em um projeto e criará barras de navegação para cada página antes de publicar o site inteiro na Web.
+          ## Vocabulário
+
+          * **Hiperlink** - Um link de um arquivo HTML para outro local ou arquivo, normalmente ativado clicando em uma palavra ou imagem destacada na tela.
+
+          ## Código introduzido
+
+          * ** [Hyperlink] (//docs.code.org/weblab/A/)** - `<a></a>
+
+          ## Recursos
+
+          * [Site pessoal - Guia do projeto] (https://docs.google.com/document/d/1sPdFBq1nrwG9742tu3sXQ93xWbCWmNdCgo0dv3eYfXY/export?format=pdf)
+          * [Site pessoal - Revisão por pares] (https://docs.google.com/document/d/1B5QXF0ASAy3vHcFQilQo3Q3J3GiiuQxBxnZFg8WDYaw/export?format=pdf)
+          * [Site Pessoal - Rubrica] (https://docs.google.com/document/d/16ddR5r96qvv_Ti5gWN-AcjvCx0-SP6B7shSp-caKuDI/export?format=pdf)
       CSD U2 Top Websites:
         markdown: |
           # Melhores sites nos EUA
@@ -1013,6 +1031,16 @@ pt-BR:
           * [sprite.bounce()](//docs.code.org/gamelab/bounce/)
           * [sprite.bounciness](//docs.code.org/gamelab/bounciness/)
 
+      CSD U3 Defender SFLP:
+        markdown: |
+          # Visão global
+
+          Esta lição apresenta o processo que a turma usará para projetar jogos para o restante da unidade. A aula percorre este processo em uma série de níveis. Como parte desta lição, a turma também aprenderá brevemente a usar animações com várias molduras no Laboratórios de Jogos. No final da lição, eles têm a oportunidade de fazer melhorias no jogo para torná-lo seu.
+
+
+          ## Recursos
+
+          * [Guia do Projeto - Jogo Defensor - Guia do Projeto] (https://docs.google.com/document/d/10tgS4d9feduPveRZSMzWV0TdyL6AL5VHHGFy_-m2XNQ/export?format=pdf)
       CSD U3 Functions Prediction define first:
         answers:
         - text: O quadrado vermelho será desenhado, mas o verde não. Você não pode
@@ -1070,6 +1098,20 @@ pt-BR:
         - feedback: Funções poderão ser criadas em qualquer lugar no seu código. Ainda
             é uma boa ideia mantê-las agrupadas na parte inferior para que fiquem
             organizadas!
+      CSD U3 Functions SFLP:
+        markdown: |+
+          # Visão global
+
+          Esta lição aborda funções como uma maneira de organizar seu código, torná-lo mais legível e remover blocos repetidos de código. A turma aprende que etapas de nível mais alto ou mais abstratas facilitam a compreensão e o raciocínio sobre as etapas e, em seguida, começa a criar funções no Laboratório de Jogos. No final da lição, a turma usa essas habilidades para organizar e adicionar funcionalidade à versão final do seu jogo de rolagem lateral.
+          ## Vocabulário
+
+          * **Função** - Um pedaço de código que você pode facilmente chamar uma e outra vez.
+
+          ## Código introduzido
+
+          * [Definir uma função] (// docs.code.org/gamelab/functionParams_none/)
+          * [Chame uma função] (// docs.code.org/gamelab/callMyFunction/)
+
       CSD U3 Keypress Matching:
         title: 'Combinando: Respondendo a teclas pressionadas'
         questions:
@@ -1132,6 +1174,19 @@ pt-BR:
           [Operador Maior que] (//docs.code.org/gamelab/greaterThanOperator/)\n* [Operador
           de igualdade] (//docs.code.org/gamelab/equalityOperator/)\n* [Operador maior
           que ou igual] (//docs.code.org/gamelab/greaterThanOrEqualOperator/)\n"
+      CSD U3 Lesson Overview 12:
+        markdown: |-
+          # Visão global
+
+          Após a introdução aos booleanos e se as instruções da lição anterior, os alunos são introduzidos a um novo bloco chamado keyDown(), que retorna um booleano e pode ser usado em instruções condicionais para mover sprites ao redor da tela. No final desta lição, os alunos terão programas escritos que receberão a entrada do teclado do usuário para controlar sprites na tela.
+
+          ## Código introduzido
+
+          * [keyDown()] (// docs.code.org/gamelab/keyDown/)
+
+          ## Recursos
+
+          * [Expressões Booleanas] (https://youtu.be/y3rCKJNOwpA) - Vídeo ([download] (https://videos.code.org/2015/csp/applab/conditionals_1.mp4))
       CSD U3 Lesson Overview 13:
         markdown: |-
           # Visão global
@@ -1381,6 +1436,16 @@ pt-BR:
             style="width: 150px; border: 1px solid">'
         - text: '<img src="https://images.code.org/7804e61306e15e3b5a2e0e9cc5906442-image-1491255443696.png"
             style="width: 150px; border: 1px solid">'
+      CSD U3 Using the Game Design Process SLFP:
+        markdown: |
+          # Visão global
+
+          Nesta aula de vários dias, a turma usa o processo de resolução de problemas da Unidade 1 para criar um jogo de salto de plataforma. Depois de olhar para um jogo de exemplo, a classe define como seus jogos serão e usa um processo estruturado para construí-los. Finalmente, a turma reflete sobre como os jogos poderiam ser melhorados e implementa essas mudanças.
+
+
+          ## Recursos
+
+          * [Planejando seu jogo de plataforma - Guia do projeto] (https://docs.google.com/document/d/1-h8vfW6PfppsDKKqVeVDMU6FxbPP8tA1Up_oc5_p9Dk/export?format=pdf)
       CSD U3 combining rep:
         title: título
         content1: descrição aqui
@@ -1599,6 +1664,53 @@ pt-BR:
 
           * [Propriedade de tela] (https://docs.google.com/document/d/1eAl3Gpi1iLLOMjaO44-w2dUuJvHEzGVPrIDxpP4rkW4/export?format=pdf) - Guia de atividades
           * [Design da tela] (https://docs.google.com/document/d/1dtMInlgLRk_DUZwpqF6KF8TvGUJNp-vWFYYU4wG-ZLc/export?format=pdf) - Guia de atividades
+      CSD U4L13 SFLP:
+        markdown: |+
+          # Visão global
+
+          Com base nas telas que a turma projetou na lição anterior, as equipes combinam as telas em um único aplicativo. Código simples pode então ser adicionado para que os cliques dos botões sejam alterados para a tela apropriada.
+
+          ## Código introduzido
+
+          * [onEvent] (//docs.code.org/applab/onEvent/)
+          * [setScreen] (//docs.code.org/applab/setScreen/)
+
+      CSD U4L15 SFLP:
+        markdown: |
+          # Visão global
+
+          As equipes realizam outra rodada de testes com usuários, desta vez com seu protótipo interativo. O feedback obtido desta rodada de testes informará a iteração final dos protótipos do aplicativo.
+
+
+          ## Recursos
+
+          * [Teste de usuário do aplicativo] (https://docs.google.com/document/d/1-ZgkOaZ1Y_jCG1c9Hzkz_SMEZXrJAzVFLgoCVIQiIts/export?format=pdf) - Guia de atividades
+      CSD U4L16 SFLP:
+        markdown: |
+          # Visão global
+
+          Usando o feedback da última rodada de testes, as equipes implementam mudanças que atendem às necessidades de seus usuários. Cada equipe rastreia e prioriza os recursos que deseja adicionar e os erros que precisam corrigir.
+          ## Vocabulário
+
+          * **Bug** - Parte de um programa que não funciona corretamente.
+          * **Recurso** - Um elemento funcional individual de um item de software. Essa pode ser a capacidade de fazer algo novo, trabalhar em várias plataformas ou executar de maneira mais eficiente.
+
+
+          ## Recursos
+
+          * [Análise de teste de usuário do aplicativo] (https://docs.google.com/document/d/1Y7cri91LU_70n6CrIGnUSedPwA_TMfYCkyhCjfpfTns/export?format=pdf) - Guia de atividades
+      CSD U4L17 SFLP:
+        markdown: |
+          # Visão global
+
+          Cada equipe prepara uma apresentação para "lançar" o aplicativo que eles desenvolveram. Este é o momento de compartilhar lutas, triunfos e planos para o futuro.
+
+
+          ## Recursos
+
+          * [Modelo de apresentação de aplicativos] (https://docs.google.com/presentation/d/19KVEybGqu6pdFB3QwjvJNA_VTM5W5Kxy3fUlxf1xnc4/edit) - Conjunto de apresentações
+          * [Apresentação do aplicativo] (https://docs.google.com/presentation/d/1qRbnSABMrfeZHUiQ_mGdhzW7UIGuiGiWyMcQK_pH-tY/edit) - Exemplo
+          * [Apresentação do aplicativo] (https://docs.google.com/document/d/1RVmBL9jCfG2QJXyEiya4w9dSBluRxinEOKBZLicv4lg/export?format=pdf) - Rubrica
       CSD U5 Encryption 1:
         title: título
         content1: descrição aqui
@@ -2166,8 +2278,16 @@ pt-BR:
       Prepare for your presentation:
         title: título
         content1: descrição aqui
+        markdown: 'É hora de apresentar seus projetos! Seu professor dará mais detalhes
+          sobre como você apresentará seu trabalho para seus colegas.
+
+'
       Prepare for your presentation_2018:
         title: Prepare-se para sua apresentação
+        markdown: 'É hora de apresentar seus projetos! Seu professor dará mais detalhes
+          sobre como você apresentará seu trabalho para seus colegas.
+
+'
       PrivatePersonalInformation-Unplugged:
         markdown: |
           # Informação Privada e Pessoal
@@ -3306,21 +3426,70 @@ pt-BR:
       courseF_markdown_algorithms_end:
         title: Teste a Página da Apostila de Markdown
         content1: Teste a Página da Apostila de Markdown
+        markdown: "# **Você acabou de aprender \"algoritmos\"!**  \n\n\n\n### **Um
+          algoritmo é apenas uma lista de passos para completar uma tarefa**. O legal
+          dos algoritmos é que você decide o que acontece, passo a passo.  \n\n###
+          Quando você escreve um algoritmo para uma máquina, isso se chama um **programa**.
+          \ \n\n---\n\n## **Vocabulário para Aprender**\n\n* ### **Algoritmo** - Uma
+          lista de passos para completar uma tarefa\n\n* ### **Programa** - Um algoritmo
+          que foi codificado em algo que pode ser executado por uma máquina\n"
       courseF_markdown_algorithms_intro:
         title: Teste a Página da Apostila de Markdown
         content1: Teste a Página da Apostila de Markdown
+        markdown: |
+          # **Nesta lição...**
+
+          ### Você já quis dizer a alguém exatamente o que fazer? Costumam te obedecer sempre?
+
+          ### Hoje, você vai dizer a uma máquina o que fazer, passo a passo - e ela vai te obedecer!
+
+          ---
+
+          ## **Blocos a conhecer**
+
+          ![](https://images.code.org/b2376dc67948e29247931dec5e9fef8f-image-1524678585868.png)
+
+          ![](https://images.code.org/bd2de01f2c3b86109329b10eb544a6e6-image-1524678600994.png)
+
+          ![](https://images.code.org/db76d28bb3dbabdb78edb2cf54c6cb11-image-1524678618646.png)
       courseF_markdown_conditionals_end:
         title: Teste a Página da Apostila de Markdown
         content1: Teste a Página da Apostila de Markdown
       courseF_markdown_conditionals_intro:
         title: Teste a Página da Apostila de Markdown
         content1: Teste a Página da Apostila de Markdown
+        markdown: "# **Nesta lição...**\n\n### **Condicionais** são coisas que podem
+          ser verdadeiras ou falsas. \n\n### Você aprenderá como usar condicionais
+          em um programa para fazer coisas acontecerem `enquanto`, `até`, ou `se`
+          alguma coisa é verdadeira!\n---\n\n## **Blocos a conhecer**\n\n![](https://images.code.org/8c6cc9ffa31c916fc970c67382d83b8d-image-1524770260439.png)\n\n![](https://images.code.org/c2fbbaf80b348d47ba2dac4497ae2624-image-1524770272898.png)\n\n![](https://images.code.org/6b90e2dfb025609f8762014ff0ba51dc-image-1524770241058.png)\n\n\n"
       courseF_markdown_debugging_end:
         title: Teste a Página da Apostila de Markdown
         content1: Teste a Página da Apostila de Markdown
+        markdown: |
+          # **Você acaba de aprender a "depurar"!**
+
+          ### **Um bug é algo que dá errado.** É um erro em um programa. Quando você encontra e arruma esses erros, você está **depurando** um problema.
+
+          ### Você tem que praticar **persistência**, outra palavra para "não desistir", se deseja encontrar e arrumar todos os bugs.
+
+          ---
+
+          ## **Vocabulário para conhecer**
+
+          * ### **Bug** - Parte de um programa que não funciona corretamente
+
+          * ### **Depurar** - Encontrar e arrumar problemas em um algoritmo ou programa
+
+          * ### **Persistência** - Não desistir
       courseF_markdown_debugging_intro:
         title: Teste a Página da Apostila de Markdown
         content1: Teste a Página da Apostila de Markdown
+        markdown: "# Nesta fase...\n\n### O que você imagina quando pensa em bugs?
+          \n\n### Quando as pessoas pensam em bugs, elas pensam naqueles bichinhos
+          rastejantes e assustadores. Em ciência da computação, bugs não estão vivos,
+          mas ainda assim podem ser complicados.\n\n### Os desafios desta fase já
+          foram resolvidos para você! Mas calma - eles não parecem estar funcionando.
+          Será que tem algum bug por trás disso?\n\n---\n\n## Blocos para conhecer\n\n![](https://images.code.org/b2376dc67948e29247931dec5e9fef8f-image-1524678585868.png)\n\n![](https://images.code.org/bd2de01f2c3b86109329b10eb544a6e6-image-1524678600994.png)\n\n![](https://images.code.org/db76d28bb3dbabdb78edb2cf54c6cb11-image-1524678618646.png)\n"
       courseF_markdown_forloops_end:
         title: Teste a Página da Apostila de Markdown
         content1: Teste a Página da Apostila de Markdown
@@ -3336,9 +3505,31 @@ pt-BR:
       courseF_markdown_loops_end:
         title: Teste a Página da Apostila de Markdown
         content1: Teste a Página da Apostila de Markdown
+        markdown: "# **Você acabou de aprender sobre \"laços de repetição\"!**  \n\n###
+          **Um laço é a ação de fazer algo de novo e de novo.** Outra palavra para
+          fazer algo novamente é \"repetir\".\n\n### Repetições são muito úteis para
+          repetir padrões. Pode ser útil escrever seu programa sem laços de repetição
+          primeiro, e depois tentar encontrar um padrão.\n\n### Quando você ver um,
+          coloque o padrão em um bloco de `repita`!\n\n---\n\n## **Vocabulário para
+          conhecer**\n\n* ### **Laço** - A ação de fazer algo várias vezes\n\n* ###
+          **Repetir** - Fazer algo de novo\n"
       courseF_markdown_loops_intro:
         title: Teste a Página da Apostila de Markdown
         content1: Teste a Página da Apostila de Markdown
+        markdown: |
+          # Nesta fase...
+
+          ### Imagine que você quer que seu personagem ande para a frente **5** vezes. Isso seria muito fácil de fazer - apenas arraste **5** blocos de mova para a frente. Agora, imagine que você quer que seu personagem ande para a frente *5.000* vezes!
+
+          ### Quanto tempo demoraria para arrastar **5.000** blocos?
+
+          ### Gostaria que existisse um jeito mais fácil de fazer isso? Existe!
+
+          ---
+
+          ## Blocos para conhecer
+
+          ![](https://images.code.org/2d949be303e653f4ea203cc00f0b06c3-image-1524697677509.png)
       courseF_markdown_nestedloops_end:
         title: Teste a Página da Apostila de Markdown
         content1: Teste a Página da Apostila de Markdown
