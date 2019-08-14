@@ -1868,6 +1868,10 @@ et:
           stages:
             While Loops:
               name: "„Kui“ tsüklid"
+        csp1-pilot:
+          stages:
+            Binary Numbers:
+              name: Binaararvud
         time4csdemo:
           stages:
             Crowdsourcing:
