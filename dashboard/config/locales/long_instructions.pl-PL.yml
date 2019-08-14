@@ -465,6 +465,8 @@ pl-PL:
         Zagrajmy w grę!
         Narysuj tak dużo X jak możesz! Czy zmieścisz 3 w jednym rzędzie?
       courseB_maze_seq3: _"Napraw kod, aby doprowadzić mnie do świnki!"_
+      courseB_maze_seq_challenge2_2019: Debuguj ten poziom. Te bloki są poprawne,
+        ale w złej kolejności!
       courseB_playlab_events_challenge1: "Czas na Wielki Wyścig Zwierząt! Zrób aby
         zwierzęta po naciśnięciu `▼` poruszały się na dół.\\\r\n\\\r\nKto będzie biegł
         szybciej?\\\r"
@@ -614,6 +616,7 @@ pl-PL:
         stosy.
       courseD_farmer_while_challenge2: Wypełnij wszystkie dziury i usuń wszystkie
         stosy.
+      courseD_maze_intro5c_2019: Uważaj na TNT! Pomóż Redowi dotrzeć do świnki.
       courseD_maze_nestedLoops4: "Doprowadź mnie do słonecznika używając możliwie
         najmniejszej liczby bloków! \\\r \\\r Spróbuj użyć pętli \"powtórz\" wewnątrz
         innej pętli, aby zmniejszyć liczbę potrzebnych bloków."

@@ -1055,6 +1055,8 @@ pl-PL:
         stosy.
       courseD_farmer_while_challenge2: Wypełnij wszystkie dziury i usuń wszystkie
         stosy.
+      courseD_maze_intro4_2019: Pomóż Redowi dotrzeć do świnki.
+      courseD_maze_intro5c_2019: Uważaj na TNT! Pomóż Redowi dotrzeć do świnki.
       courseD_maze_nestedLoops4: "Doprowadź mnie do słonecznika używając możliwie
         najmniejszej liczby bloków! \\\r \\\r Spróbuj użyć pętli \"powtórz\" wewnątrz
         innej pętli, aby zmniejszyć liczbę potrzebnych bloków."
@@ -1072,6 +1074,7 @@ pl-PL:
       courseD_maze_nestedLoops6_2019: "Sprowadźmy to na inny poziom! \\\r Użyj pętli,
         aby doprowadzić mnie do słonecznika za pomocą możliwie najmniejszej liczby
         bloków."
+      courseD_maze_ramp3_2019: Usuń nadmiarowy blok "przesuń do przodu".
       courseD_maze_ramp7: Doprowadź ptaka do świnki!
       courseD_maze_until_challenge1: Bez podpowiedzi, po prostu wyzwanie. Doprowadź
         zombie do słonecznika.
