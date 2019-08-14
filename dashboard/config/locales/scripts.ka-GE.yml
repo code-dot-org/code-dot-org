@@ -5892,6 +5892,10 @@ ka:
               name: ორობითი წერილების გაგზავნა
             Intellectual Property:
               name: ინტელექტუალური ქონება
+            CS Principles Pre-survey:
+              name: კომპიუტერული მეცნიერების საფუძვლების წინარეგამოკითხვა
+            Binary Numbers:
+              name: ორობითი რიცხვები
         csd-videos:
           stages:
             new stage:
@@ -6120,3 +6124,7 @@ ka:
               name: ციკლები გამყინვარების პერიოდში
             Ocean Scene with Loops:
               name: ციკლები მხატვარში
+        dlp19-csd-mod-w2:
+          stages:
+            new stage:
+              name: ახალი დონე
