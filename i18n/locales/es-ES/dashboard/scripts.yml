@@ -3456,6 +3456,8 @@ es:
               name: Envío de mensajes binarios
             Sending Binary Messages with the Internet Simulator:
               name: Envío de los mensajes que son binarios con el simulador de internet
+            Binary Numbers:
+              name: Números binarios
         time4csdemo:
           stages:
             Crowdsourcing:

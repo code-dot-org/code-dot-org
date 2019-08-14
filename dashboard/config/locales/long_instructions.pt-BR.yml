@@ -48,18 +48,27 @@ pt-BR:
         Vamos desenhar a cabeça desse robô! Você pode fazer um quadrado com lados de 100 pixels?
 
         <br/>
+      2-3 Artist Loops New 10: Agora vamos conectar um monte de Vs juntos em um laço.
       2-3 Artist Loops New 11: |-
         Hora de fazer algo atrativo!
 
         Reconstrua o código do último desafio, mas dessa vez, adicione uma ação de virar à esquerda em 30 graus dentro do laço. Agora repita
         a ação 24 vezes, em vez de 8.
       2-3 Artist Loops New 12: 'Desenhe um diamante com lados de 100 pixels. '
+      2-3 Artist Loops New 13: "Vamos ajudá-lo com algum código (em cinza) para criar
+        um diamante. \n\nRepita o código em cinza para criar um padrão divertido!"
       2-3 Artist Loops New 14: "Brinque um pouco com o código do diamante e veja que
         outros padrões você consegue fazer. \n\nTente mudar quantos graus você vira
         e o número de repetições."
       2-3 Artist Loops New 15: |-
         Agora, desenhe qualquer coisa que tiver vontade!
         <br/><br/>
+      2-3 Artist Loops New 2: |-
+        Aqui está o mesmo quebra-cabeças que acabamos de resolver, mas desta vez nós podemos usar somente um bloco `avance para frente` um bloco `vire`.
+
+        Você consegue usar um `repita` para resolver este desafio?
+      2-3 Artist Loops New 9: Desenhe um V simples (onde ambos os lados têm 50 pixels)
+        para completar a seta.
       2-3 Artist Nested Loops 1: |-
         Você usou laços para desenhar formas antes, mas agora nós vamos colocar laços dentro de outros laços!
 
@@ -106,6 +115,10 @@ pt-BR:
       2-3 Bee Functions Assessment 2: "**Avaliação:** Crie uma função para virar,
         avançar e produzir 3 unidades de mel, então retorne a abelha para o local
         onde ela começou e vire-a de volta."
+      2-3 Bee Loops 1: |-
+        Estas flores parecem deliciosas!
+
+        Colete o néctar de cada uma destas flores usando o menor número possível de blocos.
       2-3 Bee Loops 13: "**Avaliação:** Colete todo o néctar usando o menor número
         possível de blocos."
       2-3 Bee Loops 3A: Use um laço `repita` para coletar todo o néctar.
@@ -115,6 +128,10 @@ pt-BR:
         Que abelha trabalhadora!
 
         Ajude a abelha a coletar todo o néctar e produzir todo o mel com o menor número de blocos possível.
+      2-3 Bee Loops 4A: |-
+        Quantas vezes os laços podem ajudá-lo neste desafio?
+
+        Laços são seus amigos! Use alguns deles para completar este desafio com o menor número de blocos possível.
       2-3 Bee Loops 5: |-
         O formato deste caminho é diferente dos demais.
 
@@ -133,6 +150,9 @@ pt-BR:
         desta vez
       2-3 Maze 15: Neste desafio, dois laços `repita` ajudarão você a pegar o porco
         com o menor número possível de blocos!
+      2-3 Maze Loops 18: "Leve-me até o girassol usando o menor número de blocos\npossível!
+        \n\nUse um laço \"repita\" dentro de outro para diminuir a quantidade de código
+        que você precisa."
       2-3 Maze Loops 19: "Vamos subir o nível! \n\nUse laços para me levar até o girassol
         com o menor número de laços possível."
       2-3 Maze Loops Assessment 1: "**Avaliação:** leve-me até o girassol usando apenas
@@ -11311,6 +11331,48 @@ pt-BR:
                  \- Use o padrão de contador na variável score para aumentar a pontuação.
                  \- Redefinir a posição x da cenoura no lado direito da tela.
                  \- Defina a posição y da cenoura para um número aleatório entre 10 e 390.
+      CSD U3 collisions setCollider: |-
+        # setCollider
+
+        Os sprites interagem com base no tamanho e na forma do seu colisor, não nas imagens atribuídas a eles. Você só pode ver o colisor quando o modo de depuração está ativado. Você pode alterar a forma do colisor usando o bloco `sprite.setCollider ()`, que permite escolher entre um "retângulo" ou um "círculo". Por padrão, todos os colisores são "retangulares".
+
+        # Faça isso
+
+        -   Encontre o bloco `sprite.setCollider ()` para a moeda de ouro, e mude de "retângulo" para "círculo".
+        -   Adicione um novo bloco `sprite.setCollider ()` para a moeda de prata, e escolha "circle" para a forma do colisor.
+        -   Execute o código novamente para ver como os sprites saltam.
+
+        [//]: # "https://images.code.org/8b7730146eaa9d439e6af34c0a21e802-image-1470321391887.png"
+
+        [//]: # "https://images.code.org/eca470a686b01c19981152fdab808804-image-1470321391888.png"
+      CSD U3 collisions setCollider_2018: |-
+        # setCollider
+
+        Os sprites interagem com base no tamanho e na forma do seu colisor, não nas imagens atribuídas a eles. Você só pode ver o colisor quando o modo de depuração está ativado. Você pode alterar a forma do colisor usando o bloco `sprite.setCollider ()`, que permite escolher entre um "retângulo" ou um "círculo". Por padrão, todos os colisores são "retangulares".
+
+        # Faça isso
+
+        -   Encontre o bloco `sprite.setCollider ()` para a moeda de ouro, e mude de "retângulo" para "círculo".
+        -   Adicione um novo bloco `sprite.setCollider ()` para a moeda de prata, e escolha "circle" para a forma do colisor.
+        -   Execute o código novamente para ver como os sprites saltam.
+
+        [//]: # "https://images.code.org/8b7730146eaa9d439e6af34c0a21e802-image-1470321391887.png"
+
+        [//]: # "https://images.code.org/eca470a686b01c19981152fdab808804-image-1470321391888.png"
+      CSD U3 collisions setCollider_2019: |-
+        # setCollider
+
+        Os sprites interagem com base no tamanho e na forma do seu colisor, não nas imagens atribuídas a eles. Você só pode ver o colisor quando o modo de depuração está ativado. Você pode alterar a forma do colisor usando o bloco `sprite.setCollider ()`, que permite escolher entre um "retângulo" ou um "círculo". Por padrão, todos os colisores são "retangulares".
+
+        # Faça isso
+
+        -   Encontre o bloco `sprite.setCollider ()` para a moeda de ouro, e mude de "retângulo" para "círculo".
+        -   Adicione um novo bloco `sprite.setCollider ()` para a moeda de prata, e escolha "circle" para a forma do colisor.
+        -   Execute o código novamente para ver como os sprites saltam.
+
+        [//]: # "https://images.code.org/8b7730146eaa9d439e6af34c0a21e802-image-1470321391887.png"
+
+        [//]: # "https://images.code.org/eca470a686b01c19981152fdab808804-image-1470321391888.png"
       CSD U3 collisions sidescroll2: |-
         # Melhore seu jogo
 
@@ -11425,6 +11487,62 @@ pt-BR:
         -   Execute o código e tente fazer a tartaruga colidir com a árvore.
         -   Examine o código e discuta com seu parceiro qual é o problema.
         -   Corrija o código e execute-o novamente para garantir que ele funcione.
+      CSD U3 collisions types: |-
+        # Tipos de colisão
+
+        Existem quatro tipos de colisões que usamos no Game Lab. Esses blocos causarão um certo tipo de interação entre o _sprite_ e seu _target_.
+
+        ## deslocar
+
+        O bloco `displace` faz com que o sprite empurre o alvo enquanto ele estiver tocando um no outro. O sprite continua se movendo normalmente.
+
+        ## colidir
+
+        O bloco `collide` faz o sprite parar quando é executado no alvo. Se o alvo estiver se movendo, ele empurrará o sprite com ele. O alvo continua se movendo normalmente.
+
+        ## pulo
+
+        O bloco `bounce` faz com que o sprite e o alvo saltem quando se tocam. Tanto o sprite quanto o alvo mudam como estão se movendo.
+
+        ## bounceOff
+
+        O bloco `bounceOff` faz o sprite saltar do alvo. O alvo continua se movendo normalmente.
+
+        # Faça isso
+
+        Escolha o melhor bloco para modelar o basquete quicando no chão. ([Mostre-me onde] [0])
+
+        [//]: # "https://images.code.org/24355fc6377cfafdce3ce2b3568a33c3-image-1470343728940.png"
+
+        [//]: # "https://images.code.org/87e4306e0371c7975b8fb2583657ee4a-image-1470343728942.png"
+      CSD U3 collisions types_2018: |-
+        # Tipos de colisão
+
+        Existem quatro tipos de colisões que usamos no Game Lab. Esses blocos causarão um certo tipo de interação entre o _sprite_ e seu _target_.
+
+        ## deslocar
+
+        O bloco `displace` faz com que o sprite empurre o alvo enquanto ele estiver tocando um no outro. O sprite continua se movendo normalmente.
+
+        ## colidir
+
+        O bloco `collide` faz o sprite parar quando é executado no alvo. Se o alvo estiver se movendo, ele empurrará o sprite com ele. O alvo continua se movendo normalmente.
+
+        ## pulo
+
+        O bloco `bounce` faz com que o sprite e o alvo saltem quando se tocam. Tanto o sprite quanto o alvo mudam como estão se movendo.
+
+        ## bounceOff
+
+        O bloco `bounceOff` faz o sprite saltar do alvo. O alvo continua se movendo normalmente.
+
+        # Faça isso
+
+        Escolha o melhor bloco para modelar o basquete quicando no chão. ([Mostre-me onde] [0])
+
+        [//]: # "https://images.code.org/24355fc6377cfafdce3ce2b3568a33c3-image-1470343728940.png"
+
+        [//]: # "https://images.code.org/87e4306e0371c7975b8fb2583657ee4a-image-1470343728942.png"
       CSD U3 collisions types_2019: |-
         # Tipos de Colisão
 
@@ -11584,6 +11702,36 @@ pt-BR:
             -   Que código teria feito parte da **definição** da função?
             -   Quando você teria **chamado** a função?
             -   Que nome você teria dado a ela?
+      CSD U3 game choose background: |-
+        # Escolha seus Fundos
+
+        Agora que você tem os fundos necessários, você escreverá o código para escolher o plano de fundo correto. Você viu isso em [Lição 19 Nível 11](/s/csd3-2017/stage/19/puzzle/11).
+
+        Depois de escrever o código, teste-o alterando o valor inicial de suas variáveis e certificando-se de que o plano de fundo correto apareça.
+      CSD U3 game choose background_2018: |-
+        # Escolha seus Fundos
+
+        Agora que você tem os fundos necessários, você escreverá o código para escolher o plano de fundo correto. Você viu isso em [Lição 19 Nível 11](../../19/puzzle/11).
+
+        Depois de escrever o código, teste-o alterando o valor inicial de suas variáveis e certificando-se de que o plano de fundo correto apareça.
+      CSD U3 game choose background_2019: |-
+        # Escolha seus Fundos
+
+        Agora que você tem os fundos necessários, você escreverá o código para escolher o plano de fundo correto. Você viu isso em [Lição 19 Nível 11](../../19/puzzle/11).
+
+        Depois de escrever o código, teste-o alterando o valor inicial de suas variáveis e certificando-se de que o plano de fundo correto apareça.
+      CSD U3 game user controls: |-
+        # Controles do usuário
+
+        Em seguida, você vai querer certificar-se de que seus controles de usuário estão funcionando. Crie uma função que faça seus sprites responderem aos controles do usuário, conforme definido em seu guia de projeto. Você pode usar a função em [Lição 20 Quebra-cabeça 13](/s/csd3-2017/stage/20/puzzle/13) como exemplo.
+      CSD U3 game user controls_2018: |-
+        # Controles do usuário
+
+        Em seguida, você vai querer certificar-se de que seus controles de usuário estão funcionando. Crie uma função que faça seus sprites responderem aos controles do usuário, conforme definido em seu guia de projeto. Você pode usar a função em [Lição 20 Quebra-cabeça 13](../../20/puzzle/13) como exemplo.
+      CSD U3 game user controls_2019: |-
+        # Controles do usuário
+
+        Em seguida, você vai querer certificar-se de que seus controles de usuário estão funcionando. Crie uma função que faça seus sprites responderem aos controles do usuário, conforme definido em seu guia de projeto. Você pode usar a função em [Lição 20 Quebra-cabeça 13](../../20/puzzle/13) como exemplo.
       CSD U3 if else predict: Nível de Predição, veja o nível incluso para instruções.
       CSD U3 keydown conditional: |-
         # Mudando Sprites
@@ -11617,6 +11765,76 @@ pt-BR:
         _Verifique com seu professor antes de iniciar qualquer um dos desafios._
 
         Na lição anterior, você e seu colega criaram várias imagens interessantes. Veja se você pode recriar uma delas usando o código.
+      CSD U3 platform background1: |-
+        # Fundo
+
+        A primeira coisa que você irá criar para o seu jogo é o fundo. O jogo de amostra tinha dois fundos diferentes que foram escolhidos de acordo com a pontuação do usuário. O primeiro plano de fundo já foi criado para você. Veja a função `background1` no código abaixo para ver como funciona. ([Mostre-me onde] [0])
+
+        Para que a função de segundo plano faça alguma coisa, você precisa chamá-la dentro do loop de desenho. ([Mostre-me onde] [1])
+
+        Existe também uma função vazia chamada `background2`. ([Show me where] [2]) Você precisará preencher essa função com um novo código para criar um segundo plano diferente e, em seguida, testar o código chamando a função dentro do loop de desenho.
+
+        # Faça isso
+
+        -   Leia o código para `background1`.
+        -   Preencha a função `background2` com o novo código para um segundo plano de fundo.
+        -   Teste sua função `background2` chamando-a dentro do loop de desenho.
+
+        _Site: é muito mais fácil copiar, colar e fazer pequenas alterações no seu código no modo de texto._
+      CSD U3 platform background1_2018: |-
+        # Fundo
+
+        A primeira coisa que você irá criar para o seu jogo é o fundo. O jogo de amostra tinha dois fundos diferentes que foram escolhidos de acordo com a pontuação do usuário. O primeiro plano de fundo já foi criado para você. Veja a função `background1` no código abaixo para ver como funciona. ([Mostre-me onde] [0])
+
+        Para que a função de segundo plano faça alguma coisa, você precisa chamá-la dentro do loop de desenho. ([Mostre-me onde] [1])
+
+        Existe também uma função vazia chamada `background2`. ([Show me where] [2]) Você precisará preencher essa função com um novo código para criar um segundo plano diferente e, em seguida, testar o código chamando a função dentro do loop de desenho.
+
+        # Faça isso
+
+        -   Leia o código para `background1`.
+        -   Preencha a função `background2` com o novo código para um segundo plano de fundo.
+        -   Teste sua função `background2` chamando-a dentro do loop de desenho.
+
+        _Site: é muito mais fácil copiar, colar e fazer pequenas alterações no seu código no modo de texto._
+      CSD U3 platform background1_2019: |-
+        # Fundo
+
+        A primeira coisa que você irá criar para o seu jogo é o fundo. O jogo de amostra tinha dois fundos diferentes que foram escolhidos de acordo com a pontuação do usuário. O primeiro plano de fundo já foi criado para você. Veja a função `background1` no código abaixo para ver como funciona. ([Mostre-me onde] [0])
+
+        Para que a função de segundo plano faça alguma coisa, você precisa chamá-la dentro do loop de desenho. ([Mostre-me onde] [1])
+
+        Existe também uma função vazia chamada `background2`. ([Show me where] [2]) Você precisará preencher essa função com um novo código para criar um segundo plano diferente e, em seguida, testar o código chamando a função dentro do loop de desenho.
+
+        # Faça isso
+
+        -   Leia o código para `background1`.
+        -   Preencha a função `background2` com o novo código para um segundo plano de fundo.
+        -   Teste sua função `background2` chamando-a dentro do loop de desenho.
+
+        _Site: é muito mais fácil copiar, colar e fazer pequenas alterações no seu código no modo de texto._
+      CSD U3 platform background2: |-
+        # Escolhendo seu plano de fundo
+
+        Agora que você tem sua variável de pontuação, você pode usá-la para escolher o plano de fundo certo para o seu jogo. Você pode ver um exemplo de como alterar seu plano de fundo de acordo com sua pontuação em [Lição 19 Nível 11] [0]
+
+        # Faça isso
+
+        -   Dentro do loop de draw, use uma instrução `if` e suas duas funções de segundo plano para desenhar o seu segundo plano de acordo com o seu nível de pontuação.
+        -   Teste seu código alterando a pontuação inicial para 100 e, em seguida, executando para codificar para ver se o plano de fundo é alterado.
+
+        _Desafio: Se você tiver um terceiro plano de fundo, você pode clicar no sinal de mais na parte inferior do bloco `if`. Outro espaço aparecerá para sua terceira função de segundo plano, bem como um local para verificar a pontuação novamente._
+      CSD U3 platform background2_2018: |-
+        # Escolhendo seu plano de fundo
+
+        Agora que você tem sua variável de pontuação, você pode usá-la para escolher o plano de fundo certo para o seu jogo. Você pode ver um exemplo de como alterar seu plano de fundo de acordo com sua pontuação em [Lição 19 Nível 11] [0]
+
+        # Faça isso
+
+        -   Dentro do loop de draw, use uma instrução `if` e suas duas funções de segundo plano para desenhar o seu segundo plano de acordo com o seu nível de pontuação.
+        -   Teste seu código alterando a pontuação inicial para 100 e, em seguida, executando para codificar para ver se o plano de fundo é alterado.
+
+        _Desafio: Se você tiver um terceiro plano de fundo, você pode clicar no sinal de mais na parte inferior do bloco `if`. Outro espaço aparecerá para sua terceira função de segundo plano, bem como um local para verificar a pontuação novamente._
       CSD U3 platform background2_2019: |-
         # Escolhendo seu Fundo de Tela
 
@@ -11676,6 +11894,105 @@ pt-BR:
         -   Dentro da função `loopItens`, copie a instrução if e cole-a diretamente abaixo do código original, dentro da função.
         -   Altere o nome do sprite nas novas linhas de código.
         -   Execute o seu código para testá-lo.
+      CSD U3 platform platform1: "# Crie um Sprite de plataforma\n\n<img src=\"https://images.code.org/6e5aa80eb72809d761a695fae1b42b81-image-1476210749306.gif\"
+        style=\"float: right;\"> \n\nAgora que você tem seu histórico e suas variáveis,
+        é hora de criar seus sprites. Normalmente, será mais fácil começar com os
+        sprites que fazem parte do ambiente, como suas plataformas. O jogo de exemplo
+        tinha dois sprites de plataforma, mas você fará apenas um primeiro, depois
+        testará antes de copiar e colar o código para fazer o segundo.\n\n# Faça isso\n\n-
+        \  Olhe para sua planilha e escolha um sprite de plataforma para criar.\n-
+        \  Na área \"Criar sprites\" no topo do seu código, crie o seu novo sprite
+        com o bloco `createSprite`, dando a posição correta e label (nome). ([Mostre-me
+        o bloco] [0])\n-   Use os blocos `setAnimation` e`velocityY` para dar ao seu
+        sprite a imagem correta e velocidade descendente.\n-   Teste o sprite para
+        se certificar de que ele está se movendo da maneira correta. Você pode precisar
+        ajustar sua velocidade.\n\n\\_Dica: O sprite sairá da tela e não voltará.
+        Você vai fazer o loop de volta no próximo nível."
+      CSD U3 platform platform1_2018: "# Crie um Sprite de plataforma\n\n<img src=\"https://images.code.org/6e5aa80eb72809d761a695fae1b42b81-image-1476210749306.gif\"
+        style=\"float: right;\"> \n\nAgora que você tem seu histórico e suas variáveis,
+        é hora de criar seus sprites. Normalmente, será mais fácil começar com os
+        sprites que fazem parte do ambiente, como suas plataformas. O jogo de exemplo
+        tinha dois sprites de plataforma, mas você fará apenas um primeiro, depois
+        testará antes de copiar e colar o código para fazer o segundo.\n\n# Faça isso\n\n-
+        \  Olhe para sua planilha e escolha um sprite de plataforma para criar.\n-
+        \  Na área \"Criar sprites\" no topo do seu código, crie o seu novo sprite
+        com o bloco `createSprite`, dando a posição correta e label (nome). ([Mostre-me
+        o bloco] [0])\n-   Use os blocos `setAnimation` e`velocityY` para dar ao seu
+        sprite a imagem correta e velocidade descendente.\n-   Teste o sprite para
+        se certificar de que ele está se movendo da maneira correta. Você pode precisar
+        ajustar sua velocidade.\n\n\\_Dica: O sprite sairá da tela e não voltará.
+        Você vai fazer o loop de volta no próximo nível."
+      CSD U3 platform platform1_2019: "# Crie um Sprite de plataforma\n\n<img src=\"https://images.code.org/6e5aa80eb72809d761a695fae1b42b81-image-1476210749306.gif\"
+        style=\"float: right;\"> \n\nAgora que você tem seu histórico e suas variáveis,
+        é hora de criar seus sprites. Normalmente, será mais fácil começar com os
+        sprites que fazem parte do ambiente, como suas plataformas. O jogo de exemplo
+        tinha dois sprites de plataforma, mas você fará apenas um primeiro, depois
+        testará antes de copiar e colar o código para fazer o segundo.\n\n# Faça isso\n\n-
+        \  Olhe para sua planilha e escolha um sprite de plataforma para criar.\n-
+        \  Na área \"Criar sprites\" no topo do seu código, crie o seu novo sprite
+        com o bloco `createSprite`, dando a posição correta e label (nome). ([Mostre-me
+        o bloco] [0])\n-   Use os blocos `setAnimation` e`velocityY` para dar ao seu
+        sprite a imagem correta e velocidade descendente.\n-   Teste o sprite para
+        se certificar de que ele está se movendo da maneira correta. Você pode precisar
+        ajustar sua velocidade.\n\n\\_Dica: O sprite sairá da tela e não voltará.
+        Você vai fazer o loop de volta no próximo nível."
+      CSD U3 platform platform3: |-
+        # Faça sua segunda plataforma
+
+        <img src="https://images.code.org/94abf92949a82f6ba18a8cfafb9231b1-image-1476211447371.gif" style="float:right;">
+
+        Criar uma segunda plataforma será mais fácil do que fazer a primeira, porque você pode copiar e colar muito do código e fazer algumas pequenas alterações. Isso é muito mais fácil no _text mode_, então não deixe de experimentá-lo se ainda não o fez.
+
+        Você precisará copiar duas partes do seu código: a parte no começo onde você fez a plataforma, e a parte na função `loopPlatforms`, onde você retornou a plataforma para o topo da tela.
+
+        # Faça isso
+
+        -   Copie o código usado para criar o primeiro sprite de plataforma (`createSprite`,`setAnimation` e `velocityY`) e cole-o diretamente abaixo do código original.
+        -   Mude os nomes do sprite nas novas linhas. Por exemplo, se você nomear sua "plataforma" de sprite original, você poderia nomear essa "plataforma2".
+        -   Altere a posição inicial de seu novo sprite de plataforma.
+        -   Dentro da função `loopPlatforms`, copie a instrução if e cole-a diretamente abaixo do código original, dentro da função.
+        -   Altere o nome do sprite nas novas linhas de código.
+        -   Execute o seu código para testá-lo.
+
+        _Desafio: Você pode fazer suas plataformas aparecerem aleatoriamente x posições quando elas voltarem ao topo da tela._
+      CSD U3 platform platform3_2018: |-
+        # Faça sua segunda plataforma
+
+        <img src="https://images.code.org/94abf92949a82f6ba18a8cfafb9231b1-image-1476211447371.gif" style="float:right;">
+
+        Criar uma segunda plataforma será mais fácil do que fazer a primeira, porque você pode copiar e colar muito do código e fazer algumas pequenas alterações. Isso é muito mais fácil no _text mode_, então não deixe de experimentá-lo se ainda não o fez.
+
+        Você precisará copiar duas partes do seu código: a parte no começo onde você fez a plataforma, e a parte na função `loopPlatforms`, onde você retornou a plataforma para o topo da tela.
+
+        # Faça isso
+
+        -   Copie o código usado para criar o primeiro sprite de plataforma (`createSprite`,`setAnimation` e `velocityY`) e cole-o diretamente abaixo do código original.
+        -   Mude os nomes do sprite nas novas linhas. Por exemplo, se você nomear sua "plataforma" de sprite original, você poderia nomear essa "plataforma2".
+        -   Altere a posição inicial de seu novo sprite de plataforma.
+        -   Dentro da função `loopPlatforms`, copie a instrução if e cole-a diretamente abaixo do código original, dentro da função.
+        -   Altere o nome do sprite nas novas linhas de código.
+        -   Execute o seu código para testá-lo.
+
+        _Desafio: Você pode fazer suas plataformas aparecerem aleatoriamente x posições quando elas voltarem ao topo da tela._
+      CSD U3 platform platform3_2019: |-
+        # Faça sua segunda plataforma
+
+        <img src="https://images.code.org/94abf92949a82f6ba18a8cfafb9231b1-image-1476211447371.gif" style="float:right;">
+
+        Criar uma segunda plataforma será mais fácil do que fazer a primeira, porque você pode copiar e colar muito do código e fazer algumas pequenas alterações. Isso é muito mais fácil no _text mode_, então não deixe de experimentá-lo se ainda não o fez.
+
+        Você precisará copiar duas partes do seu código: a parte no começo onde você fez a plataforma, e a parte na função `loopPlatforms`, onde você retornou a plataforma para o topo da tela.
+
+        # Faça isso
+
+        -   Copie o código usado para criar o primeiro sprite de plataforma (`createSprite`,`setAnimation` e `velocityY`) e cole-o diretamente abaixo do código original.
+        -   Mude os nomes do sprite nas novas linhas. Por exemplo, se você nomear sua "plataforma" de sprite original, você poderia nomear essa "plataforma2".
+        -   Altere a posição inicial de seu novo sprite de plataforma.
+        -   Dentro da função `loopPlatforms`, copie a instrução if e cole-a diretamente abaixo do código original, dentro da função.
+        -   Altere o nome do sprite nas novas linhas de código.
+        -   Execute o seu código para testá-lo.
+
+        _Desafio: Você pode fazer suas plataformas aparecerem aleatoriamente x posições quando elas voltarem ao topo da tela._
       CSD U3 platform player1: |-
         # Crie seu Jogador
 
@@ -11732,6 +12049,93 @@ pt-BR:
         um exemplo em <a href=\"../../15/puzzle/11\" target=\"_blank\">Lição 15 Quebra-cabeça</a>.\n-
         \  Chame a função `controlPlayer` dentro do laço de desenho.\n-   Rode o jogo
         e teste seu código."
+      CSD U3 platform sample1: |-
+        # Jumper de plataforma
+
+        O jogo da esquerda é um exemplo de um jumper de plataforma. Pressione "Executar" para jogar. Você pode fazer o alienígena saltar com a seta para cima e movê-lo para a esquerda e para a direita com as teclas de seta. Você pontua coletando estrelas, e se você marcar alto o suficiente, o fundo mudará.
+
+        Você já sabe como usar todos os blocos que você precisa para fazer um jogo como este, e você estará fazendo o seu próprio salto na plataforma nesta lição.
+      CSD U3 platform sample1_2018: |-
+        # Jumper de plataforma
+
+        O jogo da esquerda é um exemplo de um jumper de plataforma. Pressione "Executar" para jogar. Você pode fazer o alienígena saltar com a seta para cima e movê-lo para a esquerda e para a direita com as teclas de seta. Você pontua coletando estrelas, e se você marcar alto o suficiente, o fundo mudará.
+
+        Você já sabe como usar todos os blocos que você precisa para fazer um jogo como este, e você estará fazendo o seu próprio salto na plataforma nesta lição.
+      CSD U3 platform sample1_2019: |-
+        # Jumper de plataforma
+
+        O jogo da esquerda é um exemplo de um jumper de plataforma. Pressione "Executar" para jogar. Você pode fazer o alienígena saltar com a seta para cima e movê-lo para a esquerda e para a direita com as teclas de seta. Você pontua coletando estrelas, e se você marcar alto o suficiente, o fundo mudará.
+
+        Você já sabe como usar todos os blocos que você precisa para fazer um jogo como este, e você estará fazendo o seu próprio salto na plataforma nesta lição.
+      CSD U3 platform scoreboard: |-
+        # Faça o placar
+
+        <img src="https://images.code.org/ea490a1915a70676fd3a783adce93cdd-image-1476142534609.png" style="float:right;">
+
+        Você também precisará de um placar para que o jogador possa acompanhar a pontuação. Já existe uma função `showScore` escrita, mas mostra apenas o texto" Score "e não a pontuação real. ([Mostre-me onde] [0]) Você pode ver um exemplo de um placar de trabalho em [Lição16 Nível 9] [1].
+
+        # Faça isso
+
+        -   Leia o código na função `showScore`.
+        -   Chame a função dentro do loop de desenho, logo depois de desenhar os fundos.
+        -   Use o bloco `text` para exibir a partitura no topo da tela.
+      CSD U3 platform scoreboard_2018: |-
+        # Faça o placar
+
+        <img src="https://images.code.org/ea490a1915a70676fd3a783adce93cdd-image-1476142534609.png" style="float:right;">
+
+        Você também precisará de um placar para que o jogador possa acompanhar a pontuação. Já existe uma função `showScore` escrita, mas mostra apenas o texto" Score "e não a pontuação real. ([Mostre-me onde] [0]) Você pode ver um exemplo de um placar de trabalho em [Lição16 Nível 9] [1].
+
+        # Faça isso
+
+        -   Leia o código na função `showScore`.
+        -   Chame a função dentro do loop de desenho, logo depois de desenhar os fundos.
+        -   Use o bloco `text` para exibir a partitura no topo da tela.
+      CSD U3 platform scoreboard_2019: |-
+        # Faça o placar
+
+        <img src="https://images.code.org/ea490a1915a70676fd3a783adce93cdd-image-1476142534609.png" style="float:right;">
+
+        Você também precisará de um placar para que o jogador possa acompanhar a pontuação. Já existe uma função `showScore` escrita, mas mostra apenas o texto" Score "e não a pontuação real. ([Mostre-me onde] [0]) Você pode ver um exemplo de um placar de trabalho em [Lição16 Nível 9] [1].
+
+        # Faça isso
+
+        -   Leia o código na função `showScore`.
+        -   Chame a função dentro do loop de desenho, logo depois de desenhar os fundos.
+        -   Use o bloco `text` para exibir a partitura no topo da tela.
+      CSD U3 platform variable1: |-
+        # Pontuação Variável
+
+        Agora que você criou seus planos de fundo, precisará escolher quando cada plano de fundo é desenhado. Para isso, você precisará de uma variável de pontuação para armazenar informações sobre a pontuação do seu jogador.
+
+        Você deve sempre dar a suas variáveis um valor inicial no início do programa. Dessa forma, eles estão disponíveis para qualquer código que vier depois.
+
+        # Faça isso
+
+        -   Crie uma variável de pontuação no início do seu programa de jogo. ([Mostre-me o bloco] [0])
+        -   Defina a pontuação igual a 0.
+      CSD U3 platform variable1_2018: |-
+        # Pontuação Variável
+
+        Agora que você criou seus planos de fundo, precisará escolher quando cada plano de fundo é desenhado. Para isso, você precisará de uma variável de pontuação para armazenar informações sobre a pontuação do seu jogador.
+
+        Você deve sempre dar a suas variáveis um valor inicial no início do programa. Dessa forma, eles estão disponíveis para qualquer código que vier depois.
+
+        # Faça isso
+
+        -   Crie uma variável de pontuação no início do seu programa de jogo. ([Mostre-me o bloco] [0])
+        -   Defina a pontuação igual a 0.
+      CSD U3 platform variable1_2019: |-
+        # Pontuação Variável
+
+        Agora que você criou seus planos de fundo, precisará escolher quando cada plano de fundo é desenhado. Para isso, você precisará de uma variável de pontuação para armazenar informações sobre a pontuação do seu jogador.
+
+        Você deve sempre dar a suas variáveis um valor inicial no início do programa. Dessa forma, eles estão disponíveis para qualquer código que vier depois.
+
+        # Faça isso
+
+        -   Crie uma variável de pontuação no início do seu programa de jogo. ([Mostre-me o bloco] [0])
+        -   Defina a pontuação igual a 0.
       CSD U3 rect: |-
         # Explore o Laboratório de Jogos
 
@@ -12253,6 +12657,54 @@ pt-BR:
       CSD U6 Catch the Mouse: Previsão Integrada
       CSD U6 Catch the Mouse_2018: Previsão Integrada
       CSD U6 Catch the Mouse_2019: Previsão Integrada
+      CSD U6 LED all: |-
+        # Luz multifuncional
+
+        Este aplicativo deve permitir que você escolha entre três tipos de luzes: ligado, piscar e pulsar. Também deve ter um botão que desligue a luz completamente. Neste momento, apenas o botão "ligado" funciona e o botão "desligado" está completamente ausente.
+
+        # Faça isso
+
+        -   Adicione um código para fazer os botões "piscar" e "pulsar" funcionarem.
+        -   No modo de design, adicione um novo botão "desligado".
+        -   Adicione código para fazer o botão "desligado" funcionar.
+      CSD U6 LED all_2018: |-
+        # Luz multifuncional
+
+        Este aplicativo deve permitir que você escolha entre três tipos de luzes: ligado, piscar e pulsar. Também deve ter um botão que desligue a luz completamente. Neste momento, apenas o botão "ligado" funciona e o botão "desligado" está completamente ausente.
+
+        # Faça isso
+
+        -   Adicione um código para fazer os botões "piscar" e "pulsar" funcionarem.
+        -   No modo de design, adicione um novo botão "desligado".
+        -   Adicione código para fazer o botão "desligado" funcionar.
+      CSD U6 LED all_2019: |-
+        # Luz multifuncional
+
+        Este aplicativo deve permitir que você escolha entre três tipos de luzes: ligado, piscar e pulsar. Também deve ter um botão que desligue a luz completamente. Neste momento, apenas o botão "ligado" funciona e o botão "desligado" está completamente ausente.
+
+        # Faça isso
+
+        -   Adicione um código para fazer os botões "piscar" e "pulsar" funcionarem.
+        -   No modo de design, adicione um novo botão "desligado".
+        -   Adicione código para fazer o botão "desligado" funcionar.
+      CSD U6 LEDbutton predict embed: |-
+        # Usando eventos
+
+        Este programa usa eventos. Veja o código com um parceiro e discuta o que você acha que ele fará. Depois de ter respondido às perguntas, clique em "Executar" para verificar sua resposta.
+
+        -   A luz acenderá quando o programa for "Executado"? Por que ou por que não?
+      CSD U6 LEDbutton predict embed_2018: |-
+        # Usando eventos
+
+        Este programa usa eventos. Veja o código com um parceiro e discuta o que você acha que ele fará. Depois de ter respondido às perguntas, clique em "Executar" para verificar sua resposta.
+
+        -   A luz acenderá quando o programa for "Executado"? Por que ou por que não?
+      CSD U6 LEDbutton predict embed_2019: |-
+        # Usando eventos
+
+        Este programa usa eventos. Veja o código com um parceiro e discuta o que você acha que ele fará. Depois de ter respondido às perguntas, clique em "Executar" para verificar sua resposta.
+
+        -   A luz acenderá quando o programa for "Executado"? Por que ou por que não?
       CSD U6 LEDs color: |-
         # Adicionando alguma cor
 
@@ -12277,6 +12729,66 @@ pt-BR:
         # Faça isso
 
         Use o comando `.color()` para configurar cada um dos LEDs de cor para uma cor diferente.
+      CSD U6 add LED button: |-
+        Usando eventos
+
+        Este programa tem dois botões. O botão "ligado" funciona, mas o botão "desligado" ainda precisa ser programado.
+
+        # Faça isso
+
+        -   Adicione o código para que o segundo botão desligue o LED.
+      CSD U6 add LED button_2018: |-
+        Usando eventos
+
+        Este programa tem dois botões. O botão "ligado" funciona, mas o botão "desligado" ainda precisa ser programado.
+
+        # Faça isso
+
+        -   Adicione o código para que o segundo botão desligue o LED.
+      CSD U6 add LED button_2019: |-
+        Usando eventos
+
+        Este programa tem dois botões. O botão "ligado" funciona, mas o botão "desligado" ainda precisa ser programado.
+
+        # Faça isso
+
+        -   Adicione o código para que o segundo botão desligue o LED.
+      CSD U6 analog challenge: |-
+        # Desafio
+
+        _Consulte seu professor antes de prosseguir com este desafio_
+
+        Agora que você praticou a entrada dos vários sensores analógicos e alterou a escala deles para atender às suas necessidades, você pode obter um uso interessante para os dados do sensor? É fácil exibir os números brutos que saem de um sensor, mas é muito mais interessante apresentar esses dados de maneiras diferentes.
+
+        Considere as seguintes maneiras de comunicar os dados do sensor:
+
+        -   Use as saídas da placa
+        -   Alterar a largura, altura ou posição de um elemento da interface do usuário
+        -   Use condicionais para exibir imagens diferentes com base nos valores do sensor
+      CSD U6 analog challenge_2018: |-
+        # Desafio
+
+        _Consulte seu professor antes de prosseguir com este desafio_
+
+        Agora que você praticou a entrada dos vários sensores analógicos e alterou a escala deles para atender às suas necessidades, você pode obter um uso interessante para os dados do sensor? É fácil exibir os números brutos que saem de um sensor, mas é muito mais interessante apresentar esses dados de maneiras diferentes.
+
+        Considere as seguintes maneiras de comunicar os dados do sensor:
+
+        -   Use as saídas da placa
+        -   Alterar a largura, altura ou posição de um elemento da interface do usuário
+        -   Use condicionais para exibir imagens diferentes com base nos valores do sensor
+      CSD U6 analog challenge_2019: |-
+        # Desafio
+
+        _Consulte seu professor antes de prosseguir com este desafio_
+
+        Agora que você praticou a entrada dos vários sensores analógicos e alterou a escala deles para atender às suas necessidades, você pode obter um uso interessante para os dados do sensor? É fácil exibir os números brutos que saem de um sensor, mas é muito mais interessante apresentar esses dados de maneiras diferentes.
+
+        Considere as seguintes maneiras de comunicar os dados do sensor:
+
+        -   Use as saídas da placa
+        -   Alterar a largura, altura ou posição de um elemento da interface do usuário
+        -   Use condicionais para exibir imagens diferentes com base nos valores do sensor
       CSD U6 arrays video: |-
         ## Perguntas a Considerar
 
@@ -12358,6 +12870,120 @@ pt-BR:
                  Imagens?
                  \- texto?
         -   No Modo de Design, adicione os elementos, certificando-se de atribuir a cada um ID significativo.
+      CSD U6 emotion machine 2: |-
+        # Alterando a cor
+
+        Se você olhar para o exemplo deste aplicativo, observe que os emojis não só mudam quando você clica em um botão, mas também muda a cor deles.
+
+        # Faça isso
+
+        Em cada um dos manipuladores de eventos, defina a propriedade "icon-color" de "face". Escolha uma cor quente para feliz e uma cor fria para triste.
+      CSD U6 emotion machine 2_2018: |-
+        # Alterando a cor
+
+        Se você olhar para o exemplo deste aplicativo, observe que os emojis não só mudam quando você clica em um botão, mas também muda a cor deles.
+
+        # Faça isso
+
+        Em cada um dos manipuladores de eventos, defina a propriedade "icon-color" de "face". Escolha uma cor quente para feliz e uma cor fria para triste.
+      CSD U6 emotion machine 2_2019: |-
+        # Alterando a cor
+
+        Se você olhar para o exemplo deste aplicativo, observe que os emojis não só mudam quando você clica em um botão, mas também muda a cor deles.
+
+        # Faça isso
+
+        Em cada um dos manipuladores de eventos, defina a propriedade "icon-color" de "face". Escolha uma cor quente para feliz e uma cor fria para triste.
+      CSD U6 emotion machine 3: |-
+        # Definir texto
+
+        Seus botões felizes e tristes devem estar quase completamente funcionais agora. A única coisa que eles ainda precisam fazer é alterar o texto na parte inferior da tela.
+
+        # Faça isso
+
+        Faça com que cada um dos manipuladores de eventos mude o texto de "sentimento" para a emoção apropriada (seja "feliz" ou "triste")
+      CSD U6 emotion machine 3_2018: |-
+        # Definir texto
+
+        Seus botões felizes e tristes devem estar quase completamente funcionais agora. A única coisa que eles ainda precisam fazer é alterar o texto na parte inferior da tela.
+
+        # Faça isso
+
+        Faça com que cada um dos manipuladores de eventos mude o texto de "sentimento" para a emoção apropriada (seja "feliz" ou "triste")
+      CSD U6 emotion machine 3_2019: |-
+        # Definir texto
+
+        Seus botões felizes e tristes devem estar quase completamente funcionais agora. A única coisa que eles ainda precisam fazer é alterar o texto na parte inferior da tela.
+
+        # Faça isso
+
+        Faça com que cada um dos manipuladores de eventos mude o texto de "sentimento" para a emoção apropriada (seja "feliz" ou "triste")
+      CSD U6 emotion machine 4: |-
+        # Adicione outra emoção
+
+        No aplicativo de exemplo que você viu anteriormente, você pode definir a emoção como feliz, triste ou meh. Seu aplicativo só fica feliz e triste, você consegue adicionar uma terceira emoção?
+
+        # Faça isso
+
+        Usando todas as mesmas técnicas que você usou para os botões felizes e tristes, crie um terceiro botão de emoção. Você pode ficar com o meh, ou você pode escolher uma emoção sua.
+
+        Quando estiver pronto, sinta-se à vontade para adicionar mais emoções ou recursos antes de enviar sua versão final.
+      CSD U6 emotion machine 4_2018: |-
+        # Adicione outra emoção
+
+        No aplicativo de exemplo que você viu anteriormente, você pode definir a emoção como feliz, triste ou meh. Seu aplicativo só fica feliz e triste, você consegue adicionar uma terceira emoção?
+
+        # Faça isso
+
+        Usando todas as mesmas técnicas que você usou para os botões felizes e tristes, crie um terceiro botão de emoção. Você pode ficar com o meh, ou você pode escolher uma emoção sua.
+
+        Quando estiver pronto, sinta-se à vontade para adicionar mais emoções ou recursos antes de enviar sua versão final.
+      CSD U6 emotion machine 4_2019: |-
+        # Adicione outra emoção
+
+        No aplicativo de exemplo que você viu anteriormente, você pode definir a emoção como feliz, triste ou meh. Seu aplicativo só fica feliz e triste, você consegue adicionar uma terceira emoção?
+
+        # Faça isso
+
+        Usando todas as mesmas técnicas que você usou para os botões felizes e tristes, crie um terceiro botão de emoção. Você pode ficar com o meh, ou você pode escolher uma emoção sua.
+
+        Quando estiver pronto, sinta-se à vontade para adicionar mais emoções ou recursos antes de enviar sua versão final.
+      CSD U6 emotion machine example: |-
+        # A máquina da emoção
+
+        Confira este aplicativo máquina da emoção que você estará construindo em seguida. Tente clicar nos botões para ver como funciona.
+
+        # Faça isso
+
+        Experimente o aplicativo e, em seguida, com um vizinho, discuta:
+
+        -   Quais manipuladores de eventos esse aplicativo usa?
+        -   Quais elementos estão sendo alterados com código?
+        -   Quais propriedades estão sendo alteradas quando você clica em um botão?
+      CSD U6 emotion machine example_2018: |-
+        # A máquina da emoção
+
+        Confira este aplicativo máquina da emoção que você estará construindo em seguida. Tente clicar nos botões para ver como funciona.
+
+        # Faça isso
+
+        Experimente o aplicativo e, em seguida, com um vizinho, discuta:
+
+        -   Quais manipuladores de eventos esse aplicativo usa?
+        -   Quais elementos estão sendo alterados com código?
+        -   Quais propriedades estão sendo alteradas quando você clica em um botão?
+      CSD U6 emotion machine example_2019: |-
+        # A máquina da emoção
+
+        Confira este aplicativo máquina da emoção que você estará construindo em seguida. Tente clicar nos botões para ver como funciona.
+
+        # Faça isso
+
+        Experimente o aplicativo e, em seguida, com um vizinho, discuta:
+
+        -   Quais manipuladores de eventos esse aplicativo usa?
+        -   Quais elementos estão sendo alterados com código?
+        -   Quais propriedades estão sendo alteradas quando você clica em um botão?
       CSD U6 for loop led color_2019: |-
         # Acrescente Cor
 
@@ -12379,12 +13005,69 @@ pt-BR:
 
         -   Como os parâmetros tornam as funções mais úteis?
         -   Como você sabe a hora em que você pode combinar várias funções em uma só?
+      CSD U6 getProperty board predict: Nível de Predição (veja o nível incluso para
+        instruções)
+      CSD U6 getProperty board predict_2018: Nível de Predição (veja o nível incluso
+        para instruções)
+      CSD U6 getProperty board predict_2019: Nível de Predição (veja o nível incluso
+        para instruções)
+      CSD U6 getters debug: |-
+        # LED e controlador de buzina
+
+        Este programa opera o LED e a buzina, mas tem alguns problemas.
+
+        # Faça isso
+
+        -   Leia o programa para entender como ele deve funcionar.
+        -   Encontre e corrija os erros para que o programa funcione corretamente.
+      CSD U6 getters debug_2018: |-
+        # LED e controlador de buzina
+
+        Este programa opera o LED e a buzina, mas tem alguns problemas.
+
+        # Faça isso
+
+        -   Leia o programa para entender como ele deve funcionar.
+        -   Encontre e corrija os erros para que o programa funcione corretamente.
+      CSD U6 getters debug_2019: |-
+        # LED e controlador de buzina
+
+        Este programa opera o LED e a buzina, mas tem alguns problemas.
+
+        # Faça isso
+
+        -   Leia o programa para entender como ele deve funcionar.
+        -   Encontre e corrija os erros para que o programa funcione corretamente.
       CSD U6 hardware software video_2019: |-
         ## Perguntas a Considerar
 
         -   Qual é a diferença entre hardware e software?
         -   O que o sistema operacional de um computador faz?
       CSD U6 interval: Prever nível
+      CSD U6 interval predict: |-
+        # Intervalo
+
+        Agora estamos usando o controle deslizante para afetar o comportamento do LED. Assim como poderíamos alterar os valores para a frequência e duração da campainha, podemos alterar o valor para o piscar ou intervalo de pulso do LED.
+
+        # Faça isso
+
+        -   Leia o código e preveja o que o programa fará, depois clique em "Executar" para testar sua previsão.
+      CSD U6 interval predict_2018: |-
+        # Intervalo
+
+        Agora estamos usando o controle deslizante para afetar o comportamento do LED. Assim como poderíamos alterar os valores para a frequência e duração da campainha, podemos alterar o valor para o piscar ou intervalo de pulso do LED.
+
+        # Faça isso
+
+        -   Leia o código e preveja o que o programa fará, depois clique em "Executar" para testar sua previsão.
+      CSD U6 interval predict_2019: |-
+        # Intervalo
+
+        Agora estamos usando o controle deslizante para afetar o comportamento do LED. Assim como poderíamos alterar os valores para a frequência e duração da campainha, podemos alterar o valor para o piscar ou intervalo de pulso do LED.
+
+        # Faça isso
+
+        -   Leia o código e preveja o que o programa fará, depois clique em "Executar" para testar sua previsão.
       CSD U6 interval_2018: Prever nível
       CSD U6 interval_2019: Prever nível
       CSD U6 iter predict bubbles: "![](https://images.code.org/52f474adbbc3bdd87aaae407c9ebf588-image-1515690462464.png)"
@@ -12404,6 +13087,30 @@ pt-BR:
       CSD U6 predict LED button: Previsão Integrada
       CSD U6 predict LED button_2018: Previsão Integrada
       CSD U6 predict LED button_2019: Previsão Integrada
+      CSD U6 sensor experiment embedded: |-
+        # Experiência de sensor
+
+        Execute o programa à direita e experimente sua prancha. Tente interagir com sua placa de várias maneiras diferentes para descobrir o que cada sensor pode ser. Ao experimentar cada sensor, discuta com um vizinho:
+
+        -   O que esse sensor mede?
+        -   Qual é o seu valor máximo?
+        -   Qual é o seu valor mínimo?
+      CSD U6 sensor experiment embedded_2018: |-
+        # Experiência de sensor
+
+        Execute o programa à direita e experimente sua prancha. Tente interagir com sua placa de várias maneiras diferentes para descobrir o que cada sensor pode ser. Ao experimentar cada sensor, discuta com um vizinho:
+
+        -   O que esse sensor mede?
+        -   Qual é o seu valor máximo?
+        -   Qual é o seu valor mínimo?
+      CSD U6 sensor experiment embedded_2019: |-
+        # Experiência de sensor
+
+        Execute o programa à direita e experimente sua prancha. Tente interagir com sua placa de várias maneiras diferentes para descobrir o que cada sensor pode ser. Ao experimentar cada sensor, discuta com um vizinho:
+
+        -   O que esse sensor mede?
+        -   Qual é o seu valor máximo?
+        -   Qual é o seu valor mínimo?
       CSD U6 setProperty Text: |-
         # Alterando o texto
 
@@ -12528,6 +13235,66 @@ pt-BR:
         Usando o bloco `definirPropriedade`, mova "vermelho\\ \_botao"para que corresponda à imagem à direita. (Clique na imagem para ver o tamanho total)
 
         _Nota: removemos a guia "Modo de design" por enquanto para que você possa praticar o trabalho com setProperty, mas ela voltará mais tarde assim que criar aplicativos próprios._
+      CSD U6 test LED: |-
+        # Controlar o LED
+
+        Agora que você sabe que sua placa está funcionando, você pode experimentar os diferentes blocos de LED.
+
+        # Faça isso
+
+        -   Clique em "Executar" e discuta com seu parceiro como o código funciona.
+        -   Experimente os diferentes blocos de LED para ver o que eles fazem.
+                 \- Dica: não se esqueça de clicar em "Reset" e executar seu código novamente depois de alterá-lo
+      CSD U6 test LED_2018: |-
+        # Controlar o LED
+
+        Agora que você sabe que sua placa está funcionando, você pode experimentar os diferentes blocos de LED.
+
+        # Faça isso
+
+        -   Clique em "Executar" e discuta com seu parceiro como o código funciona.
+        -   Experimente os diferentes blocos de LED para ver o que eles fazem.
+                 \- Dica: não se esqueça de clicar em "Reset" e executar seu código novamente depois de alterá-lo
+      CSD U6 test LED_2019: |-
+        # Controlar o LED
+
+        Agora que você sabe que sua placa está funcionando, você pode experimentar os diferentes blocos de LED.
+
+        # Faça isso
+
+        -   Clique em "Executar" e discuta com seu parceiro como o código funciona.
+        -   Experimente os diferentes blocos de LED para ver o que eles fazem.
+                 \- Dica: não se esqueça de clicar em "Reset" e executar seu código novamente depois de alterá-lo
+      CSD U6 tugowar design 1.5: |-
+        # Jogo Design de tela
+
+        Nós também adicionamos uma tela de "jogo" onde o jogo será jogado. Só precisa de alguns ajustes.
+
+        # Faça isso
+
+        Mude para a tela "jogo" e, usando o seu guia de planeamento, corrija essa tela alterando a cor das duas imagens emoji.
+
+        Sinta-se à vontade para adicionar outros ajustes de design que desejar.
+      CSD U6 tugowar design 1.5_2018: |-
+        # Jogo Design de tela
+
+        Nós também adicionamos uma tela de "jogo" onde o jogo será jogado. Só precisa de alguns ajustes.
+
+        # Faça isso
+
+        Mude para a tela "jogo" e, usando o seu guia de planeamento, corrija essa tela alterando a cor das duas imagens emoji.
+
+        Sinta-se à vontade para adicionar outros ajustes de design que desejar.
+      CSD U6 tugowar design 1.5_2019: |-
+        # Jogo Design de tela
+
+        Nós também adicionamos uma tela de "jogo" onde o jogo será jogado. Só precisa de alguns ajustes.
+
+        # Faça isso
+
+        Mude para a tela "jogo" e, usando o seu guia de planeamento, corrija essa tela alterando a cor das duas imagens emoji.
+
+        Sinta-se à vontade para adicionar outros ajustes de design que desejar.
       CSD What Makes a Computer a Computer Video_2019: |-
         ## Questões para pensar
 
@@ -12967,6 +13734,57 @@ pt-BR:
       CSDU6 - button LED prediction: Veja o nível contido para o markdown
       CSDU6 - button LED prediction_2018: Veja o nível contido para o markdown
       CSDU6 - button LED prediction_2019: Veja o nível contido para o markdown
+      CSDU6 - buzzer duration buttons: |-
+        # Buzina e os botões
+
+        Este programa deve usar os botões para tocar zumbidos longos e curtos.
+
+        # Faça isso
+
+        -   Altere o parâmetro de duração de `buzzer.frequency` para fazer o botão esquerdo tocar um longo zumbido, e o botão direito tocar um burburinho curto.
+      CSDU6 - buzzer duration buttons_2018: |-
+        # Buzina e os botões
+
+        Este programa deve usar os botões para tocar zumbidos longos e curtos.
+
+        # Faça isso
+
+        -   Altere o parâmetro de duração de `buzzer.frequency` para fazer o botão esquerdo tocar um longo zumbido, e o botão direito tocar um burburinho curto.
+      CSDU6 - buzzer duration buttons_2019: |-
+        # Buzina e os botões
+
+        Este programa deve usar os botões para tocar zumbidos longos e curtos.
+
+        # Faça isso
+
+        -   Altere o parâmetro de duração de `buzzer.frequency` para fazer o botão esquerdo tocar um longo zumbido, e o botão direito tocar um burburinho curto.
+      CSDU6 - lightswitch toggleswitch: |-
+        # Usando o interruptor de alternância
+
+        O interruptor de alternância pode virar em uma das duas posições: `aberto` e`fechado`. Este programa o usa para fazer um interruptor de luz, mas até agora só pode acender a luz.
+
+        # Faça isso
+
+        -   Criar um novo evento de alternância que é acionado quando o interruptor é virado para `fechado`.
+        -   Adicione código para que quando a chave de alternância seja virada para `fechado` a luz se apague.
+      CSDU6 - lightswitch toggleswitch_2018: |-
+        # Usando o interruptor de alternância
+
+        O interruptor de alternância pode virar em uma das duas posições: `aberto` e`fechado`. Este programa o usa para fazer um interruptor de luz, mas até agora só pode acender a luz.
+
+        # Faça isso
+
+        -   Criar um novo evento de alternância que é acionado quando o interruptor é virado para `fechado`.
+        -   Adicione código para que quando a chave de alternância seja virada para `fechado` a luz se apague.
+      CSDU6 - lightswitch toggleswitch_2019: |-
+        # Usando o interruptor de alternância
+
+        O interruptor de alternância pode virar em uma das duas posições: `aberto` e`fechado`. Este programa o usa para fazer um interruptor de luz, mas até agora só pode acender a luz.
+
+        # Faça isso
+
+        -   Criar um novo evento de alternância que é acionado quando o interruptor é virado para `fechado`.
+        -   Adicione código para que quando a chave de alternância seja virada para `fechado` a luz se apague.
       CSDU6 - toggle state LED prediction: Veja o nível contido para o markdown
       CSDU6 - toggle state LED prediction_2018: Veja o nível contido para o markdown
       CSDU6 - toggle state LED prediction_2019: Veja o nível contido para o markdown
@@ -13304,6 +14122,11 @@ pt-BR:
         \n\nReescreva sua função para receber tanto o número de unidades de mel quanto
         o número de unidades de néctar. Como você usaria estes números para decidir
         o que fazer?"
+      Course 4 EC 1a: "**Desafio Extremo:** Sem regras. Sem pistas. Só o desafio!"
+      Course 4 EC 1b: "**Desafio Extremo:** Sem regras. Sem pistas. Só o desafio!"
+      Course 4 EC 2a: "**Desafio Extremo:** Sem regras. Sem pistas. Só o desafio!"
+      Course 4 EC 2b: "**Desafio Extremo:** Sem regras. Sem pistas. Só o desafio!"
+      Course 4 EC 2c: "**Desafio Extremo:** Sem regras. Sem pistas. Só o desafio!"
       Course 4 Maze 4: Experimente usar o bloco de repetição para resolver este desafio
         com menos blocos...
       Course 4 Play Lab Params 1: |-
@@ -13423,15 +14246,66 @@ pt-BR:
         para criar um jogo que seja divertido para você jogar!**\n\n<hr/>\n\nPressione
         \"Executar\" e clique na Madame Unicórnio o maior número de vezes que puder.
         Você consegue superar os 24 pontos que fizemos? "
+      Course 4 SCF 1: "**Super Desafio de Funções:** Use as funções sugeridas para
+        desenhar quatro linhas de hexágonos. Você percebeu como as linhas pares são
+        deslocadas à direita?"
+      Course 4 SCF 1a: "**Super Desafio de Funções:** Você consegue descobrir como
+        coletar todo este néctar usando o menor número de blocos possível?"
       Course 4 SCF 1b: "\\*\\* Super Desafio das Funções: \\*\\* Você consegue descobrir
         como coletar todo esse mel com o menor número possível de blocos?"
       Course 4 SCF 2: "\\*\\* Super Desafio das Funções: \\*\\* Use o que você aprendeu
         no nível anterior para desenhar uma imagem como essa.\n\n_Nota: O código se
         torna mais simples se você incorporar parâmetros._  "
+      Course 4 SCF 3: "**Super Desafio de Funções:** Use o que você aprendeu no nível
+        anterior para desenhar uma imagem como esta. \n\n_Nota: O código fica mais
+        simples se você usar parâmetros._\n\n<br/>\n<img src=\"https://images.code.org/d3d6a51fafdcc0a09a5c6b0e0f3c2b92-image-1446239805818.08.59.png\"
+        width=\"300px\"/>\n<br/>  "
+      Course 4 SCFL 1: "**Super Desafio de Laços For:** Resolva este quebra-cabeças
+        usando o menor número possível de blocos."
+      Course 4 SCFL 1a: "**Super Desafio de Laços For:** Você consegue levar Scrat
+        até a sua bolota, usando o mínimo possível de blocos?"
+      Course 4 SCFL 1b: "**Super Desafio de Laços For:** Você consegue levar Scrat
+        até a sua bolota, usando o mínimo possível de blocos?"
+      Course 4 SCFL 2: |-
+        **Super Desafio de Laços For:** Resolva este desafio usando o menor número de blocos possível.\
+        <br/>
+      Course 4 SCFL 3: |-
+        **Super Desafio de Laços For:** Você consegue descobrir como recriar este desenho?
+
+        <img src="https://images.code.org/724b2efa8aefe863bd0d6491a3f1590f-image-1445563707400.26.50.png" width="350px"/>
+      Course 4 SCFL 4: |-
+        **Super Desafio de Laços For:** Você consegue descobrir como recriar este desenho?
+
+        <img src="https://images.code.org/407f502735beec686187451bdf67aada-image-1446002848700.59.34.png" width="350px"/>
+      Course 4 SCFL 6: |-
+        **Super Desafio de Laços For:** Você consegue descobrir como recriar este desenho com um único laço?
+
+        <img src="https://images.code.org/b0d15d06465d645c5ca533e5da6387b3-image-1446075597132.36.04.png" width="350px"/>
+      Course 4 SCFL 7: |-
+        **Super Desafio de Laços For:** O artista quer pegar algumas ondas! Você consegue descobrir como recriar este desenho?
+
+        <img src="https://images.code.org/fba3423f2e9a405d4d3859de32cdb0f3-image-1446102880655.13.36.png" width="350px"/>
+      Course 4 SCV 1: |-
+        <img src="https://images.code.org/7469d6b9aaaae532d864caecb65bd2cc-image-1444706295435.54.39.png" width="250px"/>
+
+        **Super Desafio de Variáveis:** Agora você já aprendeu tudo o que você precisa saber para criar um padrão como este! Este desafio foi feito para ser difícil. Você consegue se concentrar nele até encontrar a solução?
+      Course 4 SCV 2: |-
+        <img src="https://images.code.org/85f0b27009edd86eff78692004b9ed52-image-1444712655590.02.32.png" width="250px"/>
+
+        **Super Desafio de Variáveis:** Agora você aprendeu tudo o que precisa saber para criar um padrão como este! Este desafio foi feito para ser difícil. Você consegue se concentrar nele até encontrar a solução?
       Course 4 SCV 3: "**Super Desafio de Variáveis:** Agora você aprendeu tudo o
         que precisa saber para resolver este desafio! Este jogo foi feito para ser
         difícil. Você consegue se concentrar nele até encontrar a solução?\n\n* *
         *\n\nAgora "
+      Course 4 SCV 4: "**Super Desafio de Variáveis?** Resolva este quebra-cabeças
+        usando o menor número possível de blocos."
+      Course 4 SCV 5: "**Super Desafio de Variáveis?** Resolva este quebra-cabeças
+        usando o menor número possível de blocos."
+      Course 4 SCV 6: "<img src=\"https://images.code.org/499fc71a0a06bacb68a9789ad57f8148-image-1445574373673.16.44.png\"
+        width=\"250px\"/>\n\n**Super Desafio de Variáveis:** Agora você aprendeu tudo
+        o que precisa saber para criar um padrão como este! Este desafio foi feito
+        para ser difícil. Você consegue se concentrar nele até encontrar a solução?
+        \ "
       CourseD_Dance_Party_01: |-
         “Vamos fazer uma festa dançante!”
 
@@ -13646,6 +14520,9 @@ pt-BR:
 
         -   Crie dois sprites de sino e faça os alienígenas realizarem um movimento de dança diferente para cada um deles.
         -   Faça os alienígenas realizarem um novo movimento de dança sempre que se tocarem.
+      Dance Party Predict: "\\*\\* Faça uma previsão: \\*\\* Aqui está um boneco chamado
+        \"alienigena1\"!\n\nO que você acha que vai acontecer quando você clicar nele?
+        \ "
       Dance Party Predict_2019: "\\*\\* Faça uma previsão: \\*\\* Aqui está uma figura
         que se parece com um alien azul!\n\nO que você acha que vai acontecer quando
         você clicar nele?  "
@@ -13817,16 +14694,27 @@ pt-BR:
         -   Adicione mais quartos
       Fish Tank 1-validated: "\\*\\* Faça uma previsão \\*\\*: O que você acha que
         acontecerá quando você executar este código?"
+      Fish Tank 2-validated: |-
+        Vamos fazer um aquário!
+        Troque o item apresentado (marrom) por um peixe.
       Fish Tank 2-validated_2019: |-
         Vamos fazer um aquário!
 
         Mude o sprite da bola de feno por qualquer peixe clicando no <xml><block type="gamelab_allSpritesWithAnimation" block-text="the sprite picker block"><title name="ANIMATION">"bola de feno"</title></block></xml>.
 
         Lembre-se de atualizar a fantasia do sprite em <xml><block type="gamelab_addBehaviorSimple" block-text="the add behavior block"></block></xml>.
+      Fish Tank 3-validated: |-
+        O peixe está ficando tonto!
+
+        Mude o comportamento do peixe para que ele nade ao redor do tanque.
       Fish Tank 3-validated_2019: |-
         O peixe está ficando tonto!
 
         Mude o comportamento do peixe para que ele nade para a esquerda e para a direita.
+      Fish Tank 4-validated: |-
+        Nosso aquário precisa de um pouco de água!
+
+        Use [blockly block] [0] para tornar o fundo azul.
       Fish Tank 4-validated_2019: |-
         Nosso aquário precisa de água!
 
@@ -13837,13 +14725,27 @@ pt-BR:
               </block>
             </value>
           </block></xml> para mudar a  cor do fundo. Nós recomendamos a cor azul!
+      Fish Tank 5-validated: Nosso peixe está ficando um pouco solitário. Adicione
+        outro peixe ao aquário.
       Fish Tank 5-validated_2019: O peixe é aventureiro e quer conhecer novas criaturas
         do mar. Adicione outro sprite no aquário. Esse sprite pode ter qualquer fantasia,
         desde que seja diferente da que você usou para o peixe!
+      Fish Tank 6-validated: |-
+        O que você quer que o novo amigo do seu peixe faça?
+
+        Adicione um comportamento e veja-os partir!
       Fish Tank 6-validated_2019: |-
         O que você quer que o novo amigo do seu peixe faça?
 
         Adicione um comportamento e veja o que ele faz!
+      Fish Tank 7-validated: |-
+        Adicionamos muitos novos blocos à caixa de ferramentas.
+
+        Brinque com eles para tornar seu aquário especial!
+      Fish Tank 7-validated_2019: |-
+        Adicionamos muitos novos blocos à caixa de ferramentas.
+
+        Brinque com eles para tornar seu aquário especial!
       Fish Tank Predict: "\\*\\* Faça uma previsão \\*\\*: O que você acha que acontecerá
         quando você executar este código?"
       Fish Tank Predict_2019: "\\*\\* Faça uma previsão \\*\\*: O que você acha que
@@ -13907,9 +14809,37 @@ pt-BR:
         -   O que as variáveis costumam fazer?
         -   Como você cria uma variável e atribui um valor a ela?
         -   O que pode ser armazenado em uma variável?
+      K-1 Bee Loops 2: Use um laço `repita` para mover e depois pegue o néctar e faça
+        mel!
+      K-1 Bee Loops 3: Use três laços `repita` para pegar o néctar e fazer mel!
+      K-1 Bee Loops 4: Use laços `repita` para pegar o néctar, fazer mel, e se mover!
       K-1 Bee Loops 5: Use laços "repita" para obter néctar e mel!
+      K-1 Bee Loops 6: Use um laço `repita` para pegar o néctar, fazer mel, e se mover!
+      K-1 Maze Loops 10: Leve-me até o porco! Usar o laço `repita` vai facilitar as
+        coisas.
+      K-1 Maze Loops 11: |-
+        Leve-me até o porco!\
+        O laço `repita` vai facilitar as coisas.
+      K-1 Maze Loops 12: |-
+        Leve-me até o porco!\
+        O laço `repita` vai facilitar as coisas.
       K-1 Maze Loops 2: Use o bloco "repita" para me levar até o porco!
+      K-1 Maze Loops 3: |-
+        Leve-me até o porco!\
+        Use laços `repita`.
+      K-1 Maze Loops 5: |-
+        Leve-me até o porco!\
+        Use laços `repita`.
+      K-1 Maze Loops 6: |-
+        Leve-me até o porco!\
+        Use laços `repita`.
+      K-1 Maze Loops 7: |-
+        Leve-me até o porco!\
+        Use laços `repita`.
       K-1 Maze Loops 8: Use o laço "repita" para me levar até o porco.
+      K-1 Maze Loops Assessment 1: |-
+        Veja tudo o que aprendemos!\
+        Use um laço `repita` para me levar até o porco!
       MC HOC 2016 SCORE LEVEL: "Alguns jogos permitem que você mantenha sua pontuação.
         Jogue pega-pega com esses gigantes de metal e use <xml> <block type=\"craft_addScore\">
         \   <title name=\"SCORE\">1</title>  </block></xml> bloco para te dar um ponto
@@ -14354,6 +15284,84 @@ pt-BR:
         \-xml de chamada de função-
 
         Prepare-se para se familiarizar com as funções, aprenda a editá-las e crie as suas próprias!
+      U4 Model Design 1: |-
+        <div markdown="1" style="float: right; margin: 20px;">
+
+        ![expandable](https://curriculum.code.org/media/screen_model.png)
+
+        <br/>
+
+        Clique para expandir
+
+        </div>
+
+        # Criando um protótipo digital
+
+        Usando o protótipo à direita (clique na imagem para ampliá-la) você vai criar um protótipo digital do aplicativo de exemplo "Localizador de Reciclagem". Nós já adicionamos alguns elementos para você, incluindo o título, mas ainda não parece certo. Vamos ver cada elemento, mas por enquanto vamos apenas focar no título \*\*.
+
+        \<! -- <img src="https://images.code.org/66633526e03550bedb8503fefdc2ece3-image-1502921575904.png" style="width: 300px; float: right; clear: both;"> -->
+
+        # Faça isso
+
+        -   **Verifique se você está no modo de design,** o botão aparece acima da janela do aplicativo, à esquerda.
+        -   **Clique no texto do título** para ver suas propriedades.
+        -   **Mude a propriedade "texto"** para "Localizador de Reciclagem".
+        -   **Altere o "tamanho da fonte"** para aumentar o título.
+        -   **Altere o "alinhamento do texto"** para que o título seja centralizado na tela.
+
+        _Nota: certifique-se de clicar em **"Executar"** antes de prosseguir para salvar seu progresso._
+      U4 Model Design 1_2018: |-
+        <div markdown="1" style="float: right; margin: 20px;">
+
+        ![expandable](https://curriculum.code.org/media/screen_model.png)
+
+        <br/>
+
+        Clique para expandir
+
+        </div>
+
+        # Criando um protótipo digital
+
+        Usando o protótipo à direita (clique na imagem para ampliá-la) você vai criar um protótipo digital do aplicativo de exemplo "Localizador de Reciclagem". Nós já adicionamos alguns elementos para você, incluindo o título, mas ainda não parece certo. Vamos ver cada elemento, mas por enquanto vamos apenas focar no título \*\*.
+
+        \<! -- <img src="https://images.code.org/66633526e03550bedb8503fefdc2ece3-image-1502921575904.png" style="width: 300px; float: right; clear: both;"> -->
+
+        # Faça isso
+
+        -   **Verifique se você está no modo de design,** o botão aparece acima da janela do aplicativo, à esquerda.
+        -   **Clique no texto do título** para ver suas propriedades.
+        -   **Mude a propriedade "texto"** para "Localizador de Reciclagem".
+        -   **Altere o "tamanho da fonte"** para aumentar o título.
+        -   **Altere o "alinhamento do texto"** para que o título seja centralizado na tela.
+
+        _Nota: certifique-se de clicar em **"Executar"** antes de prosseguir para salvar seu progresso._
+      U4 Model Design 1_2019: |-
+        <div markdown="1" style="float: right; margin: 20px;">
+
+        ![expandable](https://curriculum.code.org/media/screen_model.png)
+
+        <br/>
+
+        Clique para expandir
+
+        </div>
+
+        # Criando um protótipo digital
+
+        Usando o protótipo à direita (clique na imagem para ampliá-la) você vai criar um protótipo digital do aplicativo de exemplo "Localizador de Reciclagem". Nós já adicionamos alguns elementos para você, incluindo o título, mas ainda não parece certo. Vamos ver cada elemento, mas por enquanto vamos apenas focar no título \*\*.
+
+        \<! -- <img src="https://images.code.org/66633526e03550bedb8503fefdc2ece3-image-1502921575904.png" style="width: 300px; float: right; clear: both;"> -->
+
+        # Faça isso
+
+        -   **Verifique se você está no modo de design,** o botão aparece acima da janela do aplicativo, à esquerda.
+        -   **Clique no texto do título** para ver suas propriedades.
+        -   **Mude a propriedade "texto"** para "Localizador de Reciclagem".
+        -   **Altere o "tamanho da fonte"** para aumentar o título.
+        -   **Altere o "alinhamento do texto"** para que o título seja centralizado na tela.
+
+        _Nota: certifique-se de clicar em **"Executar"** antes de prosseguir para salvar seu progresso._
       U4 Model Design 3: |-
         <div markdown="1" style="float: right; margin: 20px;">
 
@@ -14420,6 +15428,126 @@ pt-BR:
         -   \*\* Clique no link "Escolher..." \*\* ao lado do campo "imagem".
         -   \*\* Selecione a guia "Ícones" \*\* e escolha um ícone para o seu logotipo.
         -   \*\* Mude a cor \*\* do ícone usando o campo "ícone de cor".
+      U4 Model Design 5: |-
+        <div markdown="1" style="float: right; margin: 20px;">
+
+        ![expandable](https://images.code.org/d257d0b06a24195a40adc60e4c96c0e1-image-1505759167176.png)
+
+        <br/>
+
+        Clique para expandir
+
+        </div>
+
+        # Criando uma caixa de pesquisa
+
+        A caixa de pesquisa em nosso protótipo pode ser criada usando um elemento "Entrada de texto". Esta é uma caixa na qual o usuário pode digitar e posteriormente, o software pode ler o que foi digitado e fazer algo com ele.
+
+        # Faça isso
+
+        -   **Adicionar um elemento de entrada de texto**.
+        -   **Altere o id** para corresponder ao protótipo.
+        -   **Adicione um rótulo** com o texto "Local" ao lado da sua entrada de texto.
+      U4 Model Design 5_2018: |-
+        <div markdown="1" style="float: right; margin: 20px;">
+
+        ![expandable](https://images.code.org/d257d0b06a24195a40adc60e4c96c0e1-image-1505759167176.png)
+
+        <br/>
+
+        Clique para expandir
+
+        </div>
+
+        # Criando uma caixa de pesquisa
+
+        A caixa de pesquisa em nosso protótipo pode ser criada usando um elemento "Entrada de texto". Esta é uma caixa na qual o usuário pode digitar e posteriormente, o software pode ler o que foi digitado e fazer algo com ele.
+
+        # Faça isso
+
+        -   **Adicionar um elemento de entrada de texto**.
+        -   **Altere o id** para corresponder ao protótipo.
+        -   **Adicione um rótulo** com o texto "Local" ao lado da sua entrada de texto.
+      U4 Model Design 5_2019: |-
+        <div markdown="1" style="float: right; margin: 20px;">
+
+        ![expandable](https://images.code.org/d257d0b06a24195a40adc60e4c96c0e1-image-1505759167176.png)
+
+        <br/>
+
+        Clique para expandir
+
+        </div>
+
+        # Criando uma caixa de pesquisa
+
+        A caixa de pesquisa em nosso protótipo pode ser criada usando um elemento "Entrada de texto". Esta é uma caixa na qual o usuário pode digitar e posteriormente, o software pode ler o que foi digitado e fazer algo com ele.
+
+        # Faça isso
+
+        -   **Adicionar um elemento de entrada de texto**.
+        -   **Altere o id** para corresponder ao protótipo.
+        -   **Adicione um rótulo** com o texto "Local" ao lado da sua entrada de texto.
+      U4 Model Design 6: |-
+        <div markdown="1" style="float: right; margin: 20px;">
+
+        ![expandable](https://images.code.org/7c8f4893c0b1f4bcd2280c950e389c95-image-1505759396699.png)
+
+        <br/>
+
+        Clique para expandir
+
+        </div>
+
+        # Caixas de seleção
+
+        O tipo de materiais recicláveis que você está procurando pode ser definido usando os elementos "Caixa de seleção". Já adicionamos uma caixa de seleção e um rótulo para o vidro, portanto, basta adicionar itens para papel e plástico.
+
+        # Faça isso
+
+        -   **Adicione uma caixa de seleção** para cada uma das opções.
+        -   **Altere os ids** para corresponder ao protótipo.
+        -   **Adicionar marcadores** para descrever cada caixa de seleção.
+      U4 Model Design 6_2018: |-
+        <div markdown="1" style="float: right; margin: 20px;">
+
+        ![expandable](https://images.code.org/7c8f4893c0b1f4bcd2280c950e389c95-image-1505759396699.png)
+
+        <br/>
+
+        Clique para expandir
+
+        </div>
+
+        # Caixas de seleção
+
+        O tipo de materiais recicláveis que você está procurando pode ser definido usando os elementos "Caixa de seleção". Já adicionamos uma caixa de seleção e um rótulo para o vidro, portanto, basta adicionar itens para papel e plástico.
+
+        # Faça isso
+
+        -   **Adicione uma caixa de seleção** para cada uma das opções.
+        -   **Altere os ids** para corresponder ao protótipo.
+        -   **Adicionar marcadores** para descrever cada caixa de seleção.
+      U4 Model Design 6_2019: |-
+        <div markdown="1" style="float: right; margin: 20px;">
+
+        ![expandable](https://images.code.org/7c8f4893c0b1f4bcd2280c950e389c95-image-1505759396699.png)
+
+        <br/>
+
+        Clique para expandir
+
+        </div>
+
+        # Caixas de seleção
+
+        O tipo de materiais recicláveis que você está procurando pode ser definido usando os elementos "Caixa de seleção". Já adicionamos uma caixa de seleção e um rótulo para o vidro, portanto, basta adicionar itens para papel e plástico.
+
+        # Faça isso
+
+        -   **Adicione uma caixa de seleção** para cada uma das opções.
+        -   **Altere os ids** para corresponder ao protótipo.
+        -   **Adicionar marcadores** para descrever cada caixa de seleção.
       U4 Model Program 1: |-
         # Adicionando uma nova tela
 
@@ -14430,6 +15558,63 @@ pt-BR:
         # Faça isso
 
         -   \*\* Crie uma nova tela \*\* e forneça o Identificador "sobre".
+      U4 Model Program 1.5: |-
+        <div markdown="1" style="float: right; margin: 20px;">
+
+        ![expandable](https://curriculum.code.org/media/screen_model_about.png)
+
+        <br/>
+
+        Clique para expandir
+
+        </div>
+
+        # Projetar a tela Sobre
+
+        Para adicionar elementos à sua nova tela Sobre, você precisará primeiro selecioná-lo no menu suspenso de telas.
+
+        # Faça isso
+
+        -   **Preencha a tela Sobre** usando o protótipo à direita.
+        -   -   Use as telas do menu suspenso\*\* para alternar entre as telas Início e Sobre.
+      U4 Model Program 1.5_2018: |-
+        <div markdown="1" style="float: right; margin: 20px;">
+
+        ![expandable](https://curriculum.code.org/media/screen_model_about.png)
+
+        <br/>
+
+        Clique para expandir
+
+        </div>
+
+        # Projetar a tela Sobre
+
+        Para adicionar elementos à sua nova tela Sobre, você precisará primeiro selecioná-lo no menu suspenso de telas.
+
+        # Faça isso
+
+        -   **Preencha a tela Sobre** usando o protótipo à direita.
+        -   -   Use as telas do menu suspenso\*\* para alternar entre as telas Início e Sobre.
+      U4 Model Program 1.5_2019: |-
+        <div markdown="1" style="float: right; margin: 20px;">
+
+        ![expandable](https://curriculum.code.org/media/screen_model_about.png)
+
+        <br/>
+
+        Clique para expandir
+
+        </div>
+
+        # Projetar a tela Sobre
+
+        Para adicionar elementos à sua nova tela Sobre, você precisará primeiro selecioná-lo no menu suspenso de telas.
+
+        # Faça isso
+
+        -   **Preencha a tela Sobre** usando o protótipo à direita.
+        -   -   Use as telas do menu suspenso\*\* para alternar entre as telas Início e Sobre.
       U4 Model Program 1_2018: |-
         # Adicionando uma nova tela
 
@@ -14578,6 +15763,14 @@ pt-BR:
 
         -   Como o estilo de uma página web é diferente de sua estrutura?
         -   Por que você poderá querer que sua página web tenha um determinado estilo?
+      Virtual Pet 1: |-
+        Esta é Geraldine, sua nova girafa de estimação.
+
+        O que você acha que vai acontecer se você pressionar "▶ Executar" e depois clicar nela?
+      Virtual Pet 1 Predict: |-
+        \*\* Faça uma previsão: \*\* Esta é Geraldine, sua nova girafa de estimação.
+
+        O que você acha que vai acontecer se você pressionar "▶ Executar" e depois clicar nela?
       Virtual Pet 1_2019: |-
         **Livre**: Uau! Olha esse animal da hora!
 
@@ -14588,6 +15781,10 @@ pt-BR:
         -   Como a variável `energia` é usada? Como você pode verificar a o valor da `energia` atual do animal?
 
         Execute o código e brinque com o animalzinho! Quando tiver acabado, clique em **Finalizar**.
+      Virtual Pet 2: |-
+        Há uma poça de lama no canto.
+
+        Crie um \*\* evento \*\* para que, quando Geraldine tocar na poça, sua cor mude para marrom.
       Virtual Pet 2_2019: |-
         Agora é a sua vez de criar seu próprio bichinho virtual! Comece mudando a aparência dele para algo que você goste.
 
@@ -14595,23 +15792,43 @@ pt-BR:
         2.  Edite a fantasia inicial, ou adicione uma nova que você ache legal.
         3.  Mude a fantasia do sprite para a sua fantasia no código abaixo.
         4.  Clique em **Executar** para ver o novo visual do seu bichinho!
+      Virtual Pet 3: |-
+        Nós não podemos ter uma girafa suja vagando por aí!
+
+        1.  Adicione um novo sabão à tela.
+        2.  Você consegue fazer com que, quando o sabonete tocar na girafa, a girafa volte a sua cor normal?
+
+        * * *
+
+        Para redefinir a cor, use este bloco:
+        [bloco de bloco] [0]
       Virtual Pet 3_2019: |-
         Crie eventos para fazer seu pet se mover com comandos!
 
         Comece usando <xml><block type="gamelab_keyPressed" block-text="bloco de eventos enquanto a seta para cima estiver pressionada"><title name="CONDITION">"enquanto"</title><title name="KEY">"sobe"</title></block></xml> juntamente com <xml><block type="gamelab_moveInDirection" block-text="bloco de ação do movimento"><title name="DIRECTION">"Norte"</title></block></xml> para fazer seu pet se mover ao Norte **enquanto** a seta para cima estiver pressionada.
 
         Repita a descrição acima para as outras três direções (Sul, Oeste, Leste) e teclas de setas (para baixo, para a esquerda, para a direita)!
+      Virtual Pet 4: |-
+        Nós não queremos esperar que a girafa se limpe toda vez.
+
+        Adicione um comportamento ao seu sabonete para torná-lo arrastável e arraste-o para limpar a girafa!
       Virtual Pet 4_2019: |-
         Vamos fazer alguns alimentos que se movem!
 
         1.  Adicione **duas** figuras ao seu mundo.
         2.  Faça uma figura parecer algo que seu pet **goste** de comer, e um a outra parecer algo que ele **não goste** de comer.
         3.  Faça cada figura de alimento iniciar o comportamento de **movimentação** assim que ele aparecer.
+      Virtual Pet 5: "Todo esse jogo leva energia!\n\nAdicione ações a cada evento
+        para que a girafa fique um pouco menor (diminua de tamanho por 5) toda vez
+        que colida com outra coisa.  "
       Virtual Pet 5_2019: |-
         Use <xml><block type="gamelab_checkTouching" block-text="bloco quando estiver em contato"></block></xml> com <xml><block type="gamelab_jumpTo" block-text="bloco para saltar de lugar"></block></xml> para **simular** "comer" no seu mundo virtual!
 
         1.  Crie um evento que faz uma de suas figuras de alimento pular para um lugar aleatório quando seu pet encosta nele.
         2.  Repita o procedimento acima para a outra figura de alimento.
+      Virtual Pet 6: "Uma dieta balanceada é importante! Temos que alimentar as girafas
+        para que elas recuperem sua força.\n\nAdicione uma maçã na cena e faça a girafa
+        voltar ao tamanho normal quanto encostar nela.  "
       Virtual Pet 6_2019: |-
         Use <xml><block type="variables_set" block-text="bloco de definição de variável"><title name="VAR">energia</title></block></xml> junto com <xml><block type="math_change" block-text="bloco para alteração de variável"><title name="VAR">energia</title></block></xml> para fazer com que comer alimentos afete a energia do teu pet! Quanto mais energia ele tiver, mais rápido ele se move!
 
@@ -14633,6 +15850,9 @@ pt-BR:
         -   Adicione uma outra figura que interaja com seu pet de uma outra forma. Que tal a figura de um **brinquedo**?
         -   Adicione uma outra variável que pode afetar seu pet ou o mundo. O que poderiam `felicidade` ou `idade` fazer?
         -   Experimente com comportamentos! Tente editar o comportamento de **movimentação** para atrasar ou apressar a velocidade das figuras de alimentos (dica: a "velocidade" atual é 5...).
+      Virtual Pet Freeplay: "Tema livre: O que mais você sua girafa pode fazer?\n\n-
+        \  Você pode adicionar mais itens especiais para o seu animal de estimação
+        virtual?\n-   Você pode dar a ela alguns amigos?  "
       'Widget: Text Compression': Procure por padrões (palavras ou frases repetidas)
         no texto. Insira os padrões que você vê no dicionário à direta. A medida que
         você insere mais coisas no dicionário, o símbolo da entrada é inserido no
@@ -14691,6 +15911,22 @@ pt-BR:
         mas eles estão colocados na ordem errada!
       course1_maze_seq_challenge2: Você pode se mover somente até quatro vezes em
         cada direção. Você consegue encontrar um caminho antes de ficar sem blocos?
+      course1_playlab_events_challenge1: |-
+        _"Onde meus amigos estão se escondendo? Neste jogo, ao clicar em mim você irá exibir minha amiga Olívia, a gata!"_
+
+        Clicando em Olívia irá fazer Robin aparecer! Você consegue escrever código para mostrar o restante dos personagens também?
+
+        Neste quebra-cabeças, lembre-se de clicar para obter dicas! As dicas irão ajudar você a concluir este projeto um passo de cada vez!
+
+        ![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19 PM.png>)
+      course1_playlab_events_challenge2: |-
+        _"Vamos dar uma festa! Dê aos meus amigos algo para fazer quando você clicar neles."_
+
+        O que os animais vão dizer? O que mais vai acontecer?
+
+        Neste quebra-cabeças, tenha certeza de clicar para obter dicas! As dicas irão te dar coisas interessantes para tentar"
+
+        ![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19 PM.png>)
       course2_artist_nestedLoops_challenge1: |-
         Você consegue descobrir como fazer uma figura como essa?
 
@@ -14710,6 +15946,10 @@ pt-BR:
       course2_bee_conditionals_challenge2: Colete todo o nectar e fala todo o mel.
         Você pode coletar todo o nectar em uma flor utilizando o laço `enquanto nectar
         > 0`.
+      course2_collector_loops_challenge2: |-
+        _"Vamos caçar o tesouro - usando laços!"_
+
+        Ajude o coletador, depurando o código. Pegue todo o tesouro!
       course2_collector_prog_challenge1: Preste atenção! Você consegue coletar todas
         as **10** peças do tesouro?
       course2_harvester_loops_challenge1: Colete todo o milho.
@@ -14800,6 +16040,9 @@ pt-BR:
         todos os 4."
       course4_harvester_nested_loops_challenge1: _"Eu preciso de ajuda na fazenda!
         Me ajuda a colher esse milho usando apenas blocos na sua caixa de ferramentas."_
+      course4_playlab_variables_challenge1: Utilize esses blocos para fazer com que
+        os actores compartilhem uma piada de toc-toc. Altere a conclusão e arrume
+        para contar a sua própria piada!
       courseA_artist_loops10: |-
         ## Hora de voltar à terra. Me ajude a colocar pedras para que eu não caia na água!
 
@@ -15168,6 +16411,7 @@ pt-BR:
         ![expandable](https://images.code.org/c6ae5024441e2305db82d06679e5a281-image-1497997160569.gif)
       courseA_maze_seq12_2018: 'Pegue aquele porco! '
       courseA_maze_seq12_2019: 'Pegue aquele porco! '
+      courseA_maze_seq13_2019: Pegue aquele porco da maneira que você conseguir!
       courseA_maze_seq1_2018: _"Brinque com esses blocos e tente me levar até o porco
         malvado!"_
       courseA_maze_seq1_2019: _"Brinque com esses blocos e tente me levar até o porco
@@ -15223,6 +16467,8 @@ pt-BR:
         adicione blocos que estão faltando. Leve o pássaro até o porco!
       courseA_maze_seq_challenge1_2019: Depure esse nível. Remova blocos extras, e
         adicione blocos que estão faltando. Leve o pássaro até o porco!
+      courseA_maze_seq_challenge2_2019: Trace o caminho para levar o pássaro até o
+        porco. Evite a TNT, ou penas vão voar!
       courseA_playLab_events3: |-
         Ajude Jorge, o cachorro, a mover-se conectando o <xml><block type="studio_move">
 
@@ -15375,6 +16621,14 @@ pt-BR:
         ![](https://images.code.org/126edbb030b78586c620fea11bd9c867-image-1497998152966.gif)
         ![](https://images.code.org/a4fc9deba0ecdae5f434a828708d997b-image-1497998171788.gif)
         ![](https://images.code.org/55271714dcfc01bf49441cdf3bf17649-image-1497998176661.gif)
+      courseB_artist_loops1_2019: Este é um novo tipo de quebra-cabeça chamado "Artista".
+        Brinque com o nível e desenhe algo divertido.
+      courseB_artist_loops2_2019: O Artista está tentando desenhar uma linha **6**
+        vezes, mas não conseguiu fazer direito. Você pode ajudá-lo?
+      courseB_artist_loops3_2019: Ajude o artista a desenhar uma linha 7 vezes para
+        fazer uma parede de jardim.
+      courseB_artist_loops5_2019: Hora de consertar as escadas! Repita este padrão
+        **5** vezes para o artista conseguir atingir o topo dos arbustos.
       courseB_artist_loops6: Atrás dos arbustos há uma bela videira cheia de flores.
         Você consegue escalar a videira e ver até aonde vai?
       courseB_artist_loops6_2018: Atrás dos arbustos há uma bela videira cheia de
@@ -15387,6 +16641,10 @@ pt-BR:
         por aí."
       courseB_artist_loops7_2019: "**Desafio:** É um jardim escondido! Vamos andar
         por aí."
+      courseB_artist_loops8_2019: Hora de voltar para casa. Você pode consertar esta
+        escada usando apenas um bloco para ajudar a artista a descer?
+      courseB_artist_loops9_2019: Vamos pegar o caminho mais curto para casa, pela
+        lagoa. Você pode ajudar o artista a ficar nas pedras?
       courseB_artist_loops_challenge1: _"É hora de jogar os dados! Você pode me ajudar
         a desenhar esses?"_
       courseB_artist_loops_challenge1_2018: _"É hora de jogar os dados! Você pode
@@ -15403,6 +16661,9 @@ pt-BR:
         -   -   Jogo gratuito: \* \* Esta é a Laurel, a Aventureira! Mova-a e o maior número de tesouros que conseguir.
 
         Arraste os blocos para área de trabalho e tente descobrir como obter o tesouro.  Obtenha pelo menos um ítem para passar este nível.
+      courseB_collector_loops10_2019: Ajude Laurel a pegar todos os tesouros dessa
+        caverna.
+      courseB_collector_loops11_2019: Eureka! Pegue quanto tesouro você puder!
       courseB_collector_loops1_2018: "**Atividade Livre:** Mova Laurel e pegue o máximo
         de tesouros possível. Pegue pelo menos um item sem cometer erros para passar
         de nível.\n\n* * *\n\nArraste os blocos para a sua área de trabalho e tente
@@ -15430,6 +16691,18 @@ pt-BR:
       courseB_collector_loops3_2019: Como Laurel pode pegar todas as cinco pilhas
         de tesouro usando apenas um bloco <xml><block type="maze_moveEast" block-text="move
         east"/></xml>?
+      courseB_collector_loops4_2019: Corrija o caminho de Laurel para pegar todos
+        estes tesouros!
+      courseB_collector_loops5_2019: 'Incremente o código do último desafio para pegar
+        todo o tesouro. '
+      courseB_collector_loops6_2019: Descubra uma maneira de codificar para ajudar
+        Laurel a pegar todo o tesouro!
+      courseB_collector_loops7_2019: Escreva o código para pegar todo este tesouro.
+      courseB_collector_loops8_2019: "**Desafio:** O tesouro vai até o final das escadas!
+        \ Escreva o código para ajudar a Laurel a pegar tudo."
+      courseB_collector_loops9_2019: _"Me ajude a pegar o tesouro deste vale profundo."_
+      courseB_collector_loops_challenge1_2019: 'Desta vez você tem blocos limitados.
+        Pegue todos os tesouros! '
       courseB_collector_loops_challenge2a: |-
         _"Vamos pegar o tesouro!"_
 
@@ -15476,7 +16749,21 @@ pt-BR:
         o Scrat a chegar lá?
       courseB_iceage_loops9_2019: A noz está tão longe! Você pode usar laços para
         ajudar o Scrat a chegar lá?
+      courseB_maze_seq10_2019: Corrija os erros para levar Scrat até a noz.
+      courseB_maze_seq11_2019: É com você!  Leve o Scrat até a noz.
+      courseB_maze_seq12_2019: Agora, pegue a noz da maneira que você conseguir!
+      courseB_maze_seq1_2019: "Brinque com estes blocos para ver o que eles fazem
+        Scrat fazer! \n\nLeve Scrat até a noz para completar este nível."
       courseB_maze_seq3: _"Conserte o código para me levar até o porco!"_
+      courseB_maze_seq4_2019: Use **2** blocos de movimento para levar Scrat até a
+        noz.
+      courseB_maze_seq5_2019: Este enigma é um pouco complicado!
+      courseB_maze_seq6_2019: Mova-me por um caminho, e então por outro para levar
+        Scrat até a noz!
+      courseB_maze_seq7_2019: Descubra o que está faltando e então adicione blocos
+        para levar Scrat até a noz!
+      courseB_maze_seq8_2019: Sua vez! O que você precisa fazer para levar Scrat até
+        a noz?
       courseB_maze_seq9: "**Desafio**: Dê a volta na TNT para levar o pássaro até
         o porco."
       courseB_maze_seq9_2018: "**Desafio**: Mova-se ao redor do gelo quebrado para
@@ -15489,12 +16776,16 @@ pt-BR:
         Você consegue encontrar um caminho antes de ficar sem blocos?
       courseB_maze_seq_challenge1_2019: Você só tem quatro de cada bloco de movimento.
         Você consegue encontrar um caminho antes de ficar sem blocos?
+      courseB_maze_seq_challenge2_2019: Analise este nível. Estes são os blocos corretos,
+        mas eles estão colocados na ordem errada!
       courseB_playLab_events1: "Esse jogo se chama \"Brincando de Laboratório\". \n\nVeja
         se consegue descobrir o que cada bloco faz."
       courseB_playLab_events1_2018: "Esse jogo se chama \"Brincando de Laboratório\".
         \n\nVeja se consegue descobrir o que cada bloco faz."
       courseB_playLab_events1_2019: "Esse jogo se chama \"Brincando de Laboratório\".
         \n\nVeja se consegue descobrir o que cada bloco faz."
+      courseB_playlab_events2_2019: Ajude Daisy o Dragão a dizer alguma coisa quando
+        você clicar em "Executar".
       courseB_playlab_events3: Use um evento para fazer Daisy o Dragão mudar para
         um humor aleatório ![](https://images.code.org/c365e065614fea592612264f33624c09-image-1475698889081.17.53.png)
         quando você clicar nela.
@@ -15548,6 +16839,8 @@ pt-BR:
         \ Coloque o cavaleiro para desaparecer quando ele correr para o dragão.   \n2.
         \ Toque um som quando eles colidirem para que pareça mais real.   \n\n* *
         *\n\nVisite todos os objetivos e corra para o dragão para passar de nível."
+      courseB_playlab_eventsFP_2019: "**Jogo Livre:** Use sua imaginação. O que você
+        pode fazer para deixar este jogo mais divertido?"
       courseB_playlab_events_challenge1: "É hora da Grande Corrida Animal! Faça os
         animais se moverem para baixo quando você pressionar `▼`. \n\nQuem irá se
         mover mais rápido?"
@@ -16575,12 +17868,69 @@ pt-BR:
         ![0]\_"Continue!"
 
         Utilize o que você aprendeu para coletar todos os pedaços de metal!
+      courseD_artist_1_2018: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
+        _“Oi, eu sou Elsa de Arendelle, me ajude a desenhar uma forma.”_\n\nDesenhe
+        um hexágono com lados de 50 pixels.  \n\n* * *\n\nPara desenhar um hexágono,
+        você vai precisar: \n\n-   andar para a frente **50** pixels\n-   virar para
+        a direita em **60** graus\n-   repetir isso **6** vezes"
+      courseD_artist_1_2018_2019: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
+        _“Oi, eu sou Elsa de Arendelle, me ajude a desenhar uma forma.”_\n\nDesenhe
+        um hexágono com lados de 50 pixels.  \n\n* * *\n\nPara desenhar um hexágono,
+        você vai precisar: \n\n-   andar para a frente **50** pixels\n-   virar para
+        a direita em **60** graus\n-   repetir isso **6** vezes"
+      courseD_artist_2_2018: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
+        _“Bom trabalho!”_\n\nDepois do hexágono, vire para a direita em **60** graus,
+        e então desenhe uma linha de **150** pixels de comprimento.   \n\nTermine
+        o desenho colocando Elsa de volta ao centro, usando o bloco <xml><block type=\"jump_to\"><title
+        name=\"VALUE\">middle center</title></block></xml>."
       courseD_artist_2_2018_2019: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
         _“Bom trabalho!”_\n\nDepois do seu exágono, vire **60** graus á direita, e
         depois desenhe uma linha com **150** pixels de comprimento.   \n\nFinalize
         movendo a Elsa para o centro da área, utilizando o bloco <xml><block type=\"jump_to\"
         block-text=\"jump to the middle center position\"><title name=\"VALUE\">middle
         center</title></block></xml>."
+      courseD_artist_3_2018: |-
+        ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _“Vamos fazer um floco de neve.”_
+
+        Para transformar esse código em um floco de neve, agrupe todo o código dentro de outro bloco de `repita` para executar o algoritmo **6** vezes. Você só precisa adicionar um bloco.
+      courseD_artist_3_2018_2019: |-
+        ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _“Vamos fazer um floco de neve.”_
+
+        Para transformar esse código em um floco de neve, agrupe todo o código dentro de outro bloco de `repita` para executar o algoritmo **6** vezes. Você só precisa adicionar um bloco.
+      courseD_artist_4_2018: |-
+        ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _"Vamos tornar nossos flocos de neve especiais!"_
+
+        **Inspiração:** Onde você precisa adicionar blocos se você quiser desenhar um pequeno quadrado na ponta de cada linha comprida?
+
+        * * *
+
+        Você pode tentar fazer o quê quiser neste desafio, mas aqui vai uma ideia:
+
+        Tente desenhar um quadrado no final de cada linha
+
+        -   Cada lado deve ter 15 pixels de comprimento
+        -   Você deve virar 90 graus
+        -   Repita esses passos 4 vezes
+      courseD_artist_4_2018_2019: |-
+        ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _"Vamos tornar nossos flocos de neve especiais!"_
+
+        **Inspiração:** Onde você precisa adicionar blocos se você quiser desenhar um pequeno quadrado na ponta de cada linha comprida?
+
+        * * *
+
+        Você pode tentar fazer o quê quiser neste desafio, mas aqui vai uma ideia:
+
+        Tente desenhar um quadrado no final de cada linha
+
+        -   Cada lado deve ter 15 pixels de comprimento
+        -   Você deve virar 90 graus
+        -   Repita esses passos 4 vezes
+      courseD_artist_5_2018: |-
+        ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _"Tente mudar as formas e o tamanho das linhas para dar a sua cara ao floco de neve!"_
+
+        **Inspiração:** Você pode mudar o desenho do jeito que quiser, mas aqui vai uma ideia:
+
+        -   Tente trocar as formas do meio do seu floco de neve com as formas que estão na ponta das linhas!
       courseD_artist_5_2018_2019: |-
         ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _"Tente mudar as formas ou comprimentos das linhas para fazer o seu próprio!"_
 
@@ -16589,6 +17939,20 @@ pt-BR:
         **Inspiração:** Você pode mudar seu desenho como quiser, mas aqui está uma ideia:
 
         -   Tente alterar os tipos de formas do centro do floco de neve com o do fim de cada linha!
+      courseD_artist_6_2018: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
+        _\"Vamos tentar algo novo. Desta vez, patine em zigue-zague.\"_\n\n<br/>  \n\n**Inspiração:**
+        Tente trocar sua linha de 150 pixels por 6 linhas curtas de **25** pixels.\n\n-
+        \  Vire **45** graus em direções opostas após cada linha curta para fazer
+        o zigue-zague\n-   Onde você precisa colocar um novo bloco de `repita` para
+        isso acontecer?\n-   Quantas vezes você precisa repetir o padrão de 2 linhas
+        curtas para conseguir 6 linhas no total?"
+      courseD_artist_6_2018_2019: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
+        _\"Vamos tentar algo novo. Desta vez, patine em zigue-zague.\"_\n\n<br/>  \n\n**Inspiração:**
+        Tente trocar sua linha de 150 pixels por 6 linhas curtas de **25** pixels.\n\n-
+        \  Vire **45** graus em direções opostas após cada linha curta para fazer
+        o zigue-zague\n-   Onde você precisa colocar um novo bloco de `repita` para
+        isso acontecer?\n-   Quantas vezes você precisa repetir o padrão de 2 linhas
+        curtas para conseguir 6 linhas no total?"
       courseD_artist_binary1: |-
         Nós te fornecemos com uma grade de "pixels" para que você possa olhar e criar desenhos virando apenas alguns quadrados.
 
@@ -17416,6 +18780,18 @@ pt-BR:
         planta terá agora mais de um favo de alface, então a agricultora precisará
         continuar colhendo enquanto existir alface crescendo. \n\n##### (Lembre-se:
         Esse jardim possui apenas alface!)"
+      courseD_farmer_condLoops4_2018: |-
+        _"Nossa! Agora o alface está crescendo aos montes!"_
+
+        A colhedora quer colher tudo da sua horta de alfaces. Cada planta terá mais de um pé de alface, então a colhedora deverá continuar colhendo enquanto tiver alfaces crescendo.
+
+        ##### (Lembre-se: essa horta só tem alfaces!)
+      courseD_farmer_condLoops4_2019: |-
+        _"Nossa! Agora o alface está crescendo aos montes!"_
+
+        A colhedora quer colher tudo da sua horta de alfaces. Cada planta terá mais de um pé de alface, então a colhedora deverá continuar colhendo enquanto tiver alfaces crescendo.
+
+        ##### (Lembre-se: essa horta só tem alfaces!)
       courseD_farmer_condLoops5: |-
         _"Que muda linda!"_
 
@@ -17785,6 +19161,13 @@ pt-BR:
 
         1.  Diminua a velocidade do ninja (ator 3) antes de você coloca-lo para seguir o pirata (ator 1).
         2.  Utilize um laço `repita para sempre` para verificar se o pirata está na "zona segura" abaixo da linha de polvos  (225 pixels abaixo). Se ele estiver, coloque o ninja para **fugir** do pirata. Se não estiver, coloque o ninja para **seguir** o pirata.
+      courseD_playLab_cond6_2018: "Uau, esse jogo é difícil de vencer!\n\nVamos customizar
+        o jogo para deixá-lo mais divertido. Esse desafio tem dois passos:\n\n* *
+        *\n\n1.  Diminua a velocidade do ninja (ator 3)  antes de fazê-lo seguir o
+        pirata (ator 1). \n\n2.  Use um laço de repetição `repita para sempre` para
+        verificar se o pirata está numa \"zona segura\" abaixo da linha de polvos
+        (mais de 225 pixels para baixo). Se sim, faça o ninja **fugir** do pirata.
+        Senão, faça o nunja **perseguir** o pirata.  "
       courseD_playLab_cond6a: "Nós não queremos que o pirate fique na \"zona segura\"
         por muito tempo! \n\nAdicione um código ao \"se\" abaixo para que se o pirata
         (ator 1) estiver na zona segura, o programa espere um segundo, então reduza
@@ -18410,6 +19793,30 @@ pt-BR:
         jogo, então jogue até que você chegue a todas essas condições.
       courseE_playLab_scaffold6: Você acabou! Agora você pode jogar o seu jogo ou
         compartilha-lo com seus amigos e colegas de classe!
+      courseF_artist_for1: "**Atividade livre:** Teste o laço `para` e a variável
+        `contar`. \n\nPegue alguns blocos e veja o que acontece.  "
+      courseF_artist_for1_2018: "**Atividade livre:** Teste o laço `para` e a variável
+        `contar`. \n\nPegue alguns blocos e veja o que acontece.  "
+      courseF_artist_for1_2019: "**Atividade livre:** Teste o laço `para` e a variável
+        `contar`. \n\nPegue alguns blocos e veja o que acontece.  "
+      courseF_artist_for2: Utilize um laço `repetir` dentro de um laço `para` para
+        criar um grupo de triângulos que vão de 50 pixels até 100 pixels laterais.
+      courseF_artist_for2_2018: Utilize um laço `repetir` dentro de um laço `para`
+        para criar um grupo de triângulos que vão de 50 pixels até 100 pixels laterais.
+      courseF_artist_for2_2019: Utilize um laço `repetir` dentro de um laço `para`
+        para criar um grupo de triângulos que vão de 50 pixels até 100 pixels laterais.
+      courseF_artist_variables10: "Aqui está seu código do último quebra-cabeça. Tente
+        editar a variável de outras formas. \n\n-   O que acontece se você iniciar
+        com `tamanho` menos que 150? \n-   O que acontece se você multiplicar sua
+        variável por 1.25 cada vez?\n-   O que seu código fará se você virar 119 graus?"
+      courseF_artist_variables10_2018: "Aqui está seu código do último quebra-cabeça.
+        Tente editar a variável de outras formas. \n\n-   O que acontece se você iniciar
+        com `tamanho` menos que 150? \n-   O que acontece se você multiplicar sua
+        variável por 1.25 cada vez?\n-   O que seu código fará se você virar 119 graus?"
+      courseF_artist_variables10_2019: "Aqui está seu código do último quebra-cabeça.
+        Tente editar a variável de outras formas. \n\n-   O que acontece se você iniciar
+        com `tamanho` menos que 150? \n-   O que acontece se você multiplicar sua
+        variável por 1.25 cada vez?\n-   O que seu código fará se você virar 119 graus?"
       courseF_artist_variables2: "Agora utilize outro laço de repetição para desenhar
         três desses triângulos um ao lado do outro. \n\nVocê pode reutilizar o código
         do último quebra-cabeça aqui."
@@ -18547,6 +19954,111 @@ pt-BR:
         quando você repete o código do último desafio **30** vezes no lugar de apenas
         3!\n\nSinta-se livre para criar suas linhas em qualquer ou padrão para diversão
         extra."
+      courseF_artist_variablesFP: "**Atividade livre:** Utilize o que aprendeu e fala
+        seu próprio desenho. \n\nComo você consegue utilizar variáveis com quadrados,
+        pentágonos e hexágonos?"
+      courseF_artist_variablesFP_2018: "**Atividade livre:** Utilize o que aprendeu
+        e fala seu próprio desenho. \n\nComo você consegue utilizar variáveis com
+        quadrados, pentágonos e hexágonos?"
+      courseF_artist_variablesFP_2019: "**Atividade livre:** Utilize o que aprendeu
+        e fala seu próprio desenho. \n\nComo você consegue utilizar variáveis com
+        quadrados, pentágonos e hexágonos?"
+      courseF_artist_variables_challenge1: Alerta de desafio! Você consegue cria variável
+        `tamanho` e usa-la para criar esse padrão interessante?
+      courseF_artist_variables_challenge1_2018: Alerta de desafio! Você consegue cria
+        variável `tamanho` e usa-la para criar esse padrão interessante?
+      courseF_artist_variables_challenge1_2019: Alerta de desafio! Você consegue cria
+        variável `tamanho` e usa-la para criar esse padrão interessante?
+      courseF_artist_variables_challenge2: |-
+        <img src="https://images.code.org/7469d6b9aaaae532d864caecb65bd2cc-image-1444706295435.54.39.png" width="250px"/>
+
+        Agora você já aprendeu tudo que precisa para fazer um padrão como esse! Esse quebra-cabeça foi feito para ser difícil. Você consegue trabalhar nele até descobrir uma solução?
+      courseF_artist_variables_challenge2_2018: |-
+        <img src="https://images.code.org/7469d6b9aaaae532d864caecb65bd2cc-image-1444706295435.54.39.png" width="250px"/>
+
+        Agora você já aprendeu tudo que precisa para fazer um padrão como esse! Esse quebra-cabeça foi feito para ser difícil. Você consegue trabalhar nele até descobrir uma solução?
+      courseF_artist_variables_challenge2_2019: |-
+        <img src="https://images.code.org/7469d6b9aaaae532d864caecb65bd2cc-image-1444706295435.54.39.png" width="250px"/>
+
+        Agora você já aprendeu tudo que precisa para fazer um padrão como esse! Esse quebra-cabeça foi feito para ser difícil. Você consegue trabalhar nele até descobrir uma solução?
+      courseF_bee_for10: "**Desafio:** Utilize o que você aprendeu sobre laços `para`
+        e tente resolver esse problema. \n\nLembre-se: Você talvez tenha que passar
+        pelas soluções múltiplas vezes antes de entender todos os passos."
+      courseF_bee_for10_2018: "**Desafio:** Utilize o que você aprendeu sobre laços
+        `para` e tente resolver esse problema. \n\nLembre-se: Você talvez tenha que
+        passar pelas soluções múltiplas vezes antes de entender todos os passos."
+      courseF_bee_for10_2019: "**Desafio:** Utilize o que você aprendeu sobre laços
+        `para` e tente resolver esse problema. \n\nLembre-se: Você talvez tenha que
+        passar pelas soluções múltiplas vezes antes de entender todos os passos."
+      courseF_bee_for11: "Se o seu laço está contando para baixo, o incremento é **subtraído**
+        da variável contadora cada vez que passa por ela. \n\nO que o seu incrementar
+        deveria ser para coletar 15, então 12, então 9, 6, 3 nectars?"
+      courseF_bee_for11_2018: "Se o seu laço está contando para baixo, o incremento
+        é **subtraído** da variável contadora cada vez que passa por ela. \n\nO que
+        o seu incrementar deveria ser para coletar 15, então 12, então 9, 6, 3 nectars?"
+      courseF_bee_for11_2019: "Se o seu laço está contando para baixo, o incremento
+        é **subtraído** da variável contadora cada vez que passa por ela. \n\nO que
+        o seu incrementar deveria ser para coletar 15, então 12, então 9, 6, 3 nectars?"
+      courseF_bee_for2: |-
+        Escreve o código para ajudar a abelha a coletar todo o nectar.
+
+        Você vai precisar de muitos blocos para esse desafio, mas aprenderemos uma maneira mais fácil de fazer isso no próximo quebra cabeça.
+      courseF_bee_for2_2018: |-
+        Escreve o código para ajudar a abelha a coletar todo o nectar.
+
+        Você vai precisar de muitos blocos para esse desafio, mas aprenderemos uma maneira mais fácil de fazer isso no próximo quebra cabeça.
+      courseF_bee_for2_2019: |-
+        Escreve o código para ajudar a abelha a coletar todo o nectar.
+
+        Você vai precisar de muitos blocos para esse desafio, mas aprenderemos uma maneira mais fácil de fazer isso no próximo quebra cabeça.
+      courseF_bee_for6: "Você pode sempre utilizar um laço `para` para contar para
+        baixo. \n\nTente coletar todo o nectar contando de **5** até **1** de **1
+        em 1**."
+      courseF_bee_for6_2018: "Você pode sempre utilizar um laço `para` para contar
+        para baixo. \n\nTente coletar todo o nectar contando de **5** até **1** de
+        **1 em 1**."
+      courseF_bee_for6_2019: "Você pode sempre utilizar um laço `para` para contar
+        para baixo. \n\nTente coletar todo o nectar contando de **5** até **1** de
+        **1 em 1**."
+      courseF_bee_for7: |-
+        O último número do seu laço `para` é chamado de **incrementar**. Cada vez que o laço roda, a variável contadora altera o valor para **incrementar**.
+
+        Tente coletar essas flores utilizando um **incrementar** de 2.
+      courseF_bee_for7_2018: |-
+        O último número do seu laço `para` é chamado de **incrementar**. Cada vez que o laço roda, a variável contadora altera o valor para **incrementar**.
+
+        Tente coletar essas flores utilizando um **incrementar** de 2.
+      courseF_bee_for7_2019: |-
+        O último número do seu laço `para` é chamado de **incrementar**. Cada vez que o laço roda, a variável contadora altera o valor para **incrementar**.
+
+        Tente coletar essas flores utilizando um **incrementar** de 2.
+      courseF_bee_for8: "Você consegue! \n\nO que o seu **incrementar** deveria ser
+        para coletar 3, 6, 9, 12, 15 nectars?"
+      courseF_bee_for8_2018: "Você consegue! \n\nO que o seu **incrementar** deveria
+        ser para coletar 3, 6, 9, 12, 15 nectars?"
+      courseF_bee_for8_2019: "Você consegue! \n\nO que o seu **incrementar** deveria
+        ser para coletar 3, 6, 9, 12, 15 nectars?"
+      courseF_bee_for9: "Agora, vamos combinar a variável `incrementar` com o bloco
+        `matemática`! \n\nComo você pode utilizar a variável `incrementar` para passar
+        por esse jardim com o menor número de blocos possíveis?"
+      courseF_bee_for9_2018: "Agora, vamos combinar a variável `incrementar` com o
+        bloco `matemática`! \n\nComo você pode utilizar a variável `incrementar` para
+        passar por esse jardim com o menor número de blocos possíveis?"
+      courseF_bee_for9_2019: "Agora, vamos combinar a variável `incrementar` com o
+        bloco `matemática`! \n\nComo você pode utilizar a variável `incrementar` para
+        passar por esse jardim com o menor número de blocos possíveis?"
+      courseF_bee_for_challenge1: |-
+        Você pode utilizar esse `laço para` para coletar todo o nectar. Inacreditável!
+
+        Haverão algumas ações das quais você irá querer `repetir 'contar' vezes`.
+      courseF_bee_for_challenge1_2018: |-
+        Você pode utilizar esse `laço para` para coletar todo o nectar. Inacreditável!
+
+        Haverão algumas ações das quais você irá querer `repetir 'contar' vezes`.
+      courseF_bee_for_challenge1_2019: |-
+        Você pode utilizar esse `laço para` para coletar todo o nectar. Inacreditável!
+
+        Haverão algumas ações das quais você irá querer `repetir 'contar' vezes`.
       courseF_bee_for_challenge2: |-
         Resolva este desafio com o menor número de blocos
         possível.
@@ -18560,6 +20072,49 @@ pt-BR:
         "Vamos em frente!"
 
         Edite o código para que ele funcione neste desafio.
+      courseF_playlab_variables1a: "Variáveis podem ser usadas para guardar textos
+        que você quer utilizar mais tarde. \n\nFaça com que Kiki, o jogador de futebol,
+        grite \"Gol!\" colocando esse texto na variável `gritar`."
+      courseF_playlab_variables2b: |-
+        Nós conseguimos deixar as sentenças mais interessantes misturando pedaços de textos com variáveis.
+
+        Insira a variável `cor` no meio de uma sentença colocando-a no lugar vazio no bloco `juntar`.
+      courseF_playlab_variables3b_josh: 'Ajude Kiki a ter uma conversa com Brian utilizando
+        a variável `idade` em todos os lugares onde a idade `12` deveria ser usada. '
+      courseF_playlab_variables4b: "Agora, o pirata PegLeg possui algumas perguntas
+        para o Brian.\n\nEsse código utiliza um bloco `perguntar`, para que você digite
+        a resposta de Brian depois de clicar em \"Rodar\". \n\nColoque as variáveis
+        nos locais corretos para criar uma conversa."
+      courseF_playlab_variables5c: |-
+        Vamos combinar o bloco `perguntar` com um `se/se não` para nos divertimos!
+
+        O pirata PegLeg irá te fazer uma pergunta. Mova uma cópia da variável `responder` para a condicional do comando `se` para verificar se você escolheu a cor correta.
+      courseF_playlab_variables6c: |-
+        No resto dessa parte, utilizaremos múltiplos blocos `perguntar` e múltiplos comandos `se/se não` para criar um jogo que **você** controla!
+
+        Comece colocando a variável "codenome" para uma palavra que você se lembre. Então, utilize um bloco `perguntar` para buscar o codenome dos usuários. Você precisará de um bloco `se/se não` para verificar se o codenome digitado é o mesmo que o codenome que você digitou.
+      courseF_playlab_variables7b: "Hora de fazer o seu próprio projeto! \n\nCrie
+        algumas questões e junte com as respostas na sua próprio história.\n\nSe você
+        precisar de ideias, clique no ícone dicas."
+      courseF_playlab_variables7c: "Adicione outro bloco `perguntar` para pedir ao
+        usuário para adivinhar a cor. \n\nMantenha seu comando `se/se não` para que
+        o seu codenome sempre faça ganhar o jogo, mas todos outros codenomes façam
+        perder o jogo."
+      courseF_playlab_variables8c: Utilizer o bloco `juntar` (na caixa de ferramentas
+        abaixo de "Texto") para fazer mensagem de vitória/derrota mais pessoais incorporando
+        tanto a variável `codenome` quanto a variável `cor` nas respostas.
+      courseF_playlab_variables_challenge1: Utilize esses blocos para fazer com que
+        os actores compartilhem uma piada de toc-toc. Altere a conclusão e arrume
+        para contar a sua própria piada!
+      courseF_playlab_variables_challenge2: "Agora para um jogo de pique-pega! pegue
+        o Gato (ator 2) para ganhar 2 pontos. Pegue o Pinguim (ator 3) para ganhar
+        3 pontos. Consiga exatamente 10 pontos para ganhar! \n\nMas tenha cuidado,
+        quando um Gato pega o Pinguim, ou vise-versa, eles tiram pontos.\n\n* * *\n\nAdicione
+        os blocos necessários para fazer esse jogo funcionar da forma como foi explicado.\n\n-
+        \  Como você fará para mover o Cachorro em todas as direções utilizando as
+        teclas de setas?\n-   Como você adicionará pontos quando o Cachorro pegar
+        o Gato ou o Pinguim?\n-   Como você irá deduzir pontos quando o Gato e o Pinguim
+        se encostarem?"
       coursea_maze_ramp1_2018: Para levar o pássaro até o porco, encaixe o <xml><block
         type="maze_moveEast"/></xml> bloco no final do <xml><block type="when_run"/></xml>
         bloco e aperte "▶ Executar"!

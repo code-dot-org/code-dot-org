@@ -1,153 +1,153 @@
 * * *
 
-title: Computer Science Fundamentals Transition Guide theme: responsive style_min: true
+title: Посібник з перекладу з основ інформатики theme: responsive style_min: true
 
 * * *
 
-# Teaching Courses A-F
+# Навчальні курси A-F
 
-## Table of Contents
+## Зміст
 
 * [Огляд](#overview)
-* [Teaching the new courses](#newcourses)
-* [Circle-Time Stories (Courses A and B)](#circletime)
-* [Lesson Scaffolding & Challenge Puzzles (All Ages)](#scaffolding)
-* [Bridging Activities For Unplugged Lessons (All Ages)](#unplugged)
-* [End of Course Projects (Courses E & F)](#endofcourse)
-* [Conclusion](#conclusion)
-* [FAQs](#faq)
+* [Навчання за новими курсами](#newcourses)
+* [Розповіді для роботи в групі (Курси A і B)](#circletime)
+* [Послідовність уроків і складні завдання (Усі віки)](#scaffolding)
+* [Єднальна діяльність для уроків без комп'ютера (Усі віки)](#unplugged)
+* [Завершаючий курсовий проект (Курси E і F)](#endofcourse)
+* [Висновок](#conclusion)
+* [Питання і відповіді](#faq)
 
 <a id="overview"></a>
 
 ## Огляд
 
-The landscape of computer science education has changed immensely since the creation of the original Computer Science Fundamentals courses. Originally, Courses 1-4 were designed as a starting point to acquire the basics, no matter what the age of the student who was coming to the discipline. Now that far more districts, cities, and states have implemented computer science courses beginning at Kindergarten, teachers are asking for more content to see students through until middle school/junior high.
+Підхід до навчання інформатиці сильно змінився з моменту створення первинних курсів з основ інформатики. Спочатку, Курси 1-4 були розроблені, як відправна точка для занурення в основи, незалежно від віку учня. Тепер, коли набагато більше районів, міст і штатів запровадили курси інформатики, починаючи з дитячого садка, вчителі просять більше контенту, щоб довести учнів до рівня середньої школи.
 
-Computer Science Fundamentals Courses A-F, are our answer to that issue. The creation of a grade-by-grade curriculum allowed us to step back and rethink the way we were presenting material. It also allowed us the chance to wholeheartedly incorporate feedback from the dedicated teacher community that has supported us on this mission. Designed with the help of some of the best elementary school CS education specialists across the country, Courses A-F should feel familiar enough to run with no extra professional development, but fresh enough to present to students who have done our lessons in the past.
+Курси з основ інформатики A-F - наша відповідь на цю потребу. Створення навчальних планів для кожного класу дозволяє нам зробити крок назад і переосмислити спосіб подачі матеріалу. Також це дозволило отримати щирий зворотний зв'язок від відданої спільноти вчителів, яка підтримала нас в цій місії. Для розробки Курсів A-F були залучені одних з кращих фахівців з інформатики в початковій школі з усієї країни. Курси A-F повинні бути досить знайомими, щоб вчителі могли працювати по ним без додаткового професійного навчання, але бути досить свіжими для учнів, які виконували наші уроки в минулому.
 
-* Course A: Kindergarten
-* Course B: 1st Grade
-* Course C: 2nd Grade
-* Course D: 3rd Grade
-* Course E: 4th Grade
-* Course F: 5th Grade
-* Pre-reader Express Course: Kindergarten - 1st Grade
-* Express Course: 2nd Grade - 5th Grade
+* Курс А: дошкільнята
+* Курс B: перший клас
+* Курс С: другий клас
+* Курс D: третій клас
+* Курс E: четвертий клас
+* Курс F: п'ятий клас
+* Підготовчий експрес-курс: дошкільнята - 1 клас
+* Експрес-курс: 2 - 5 класи
 
-The biggest update to CS Fundamentals is that content will move from four courses (Courses 1-4) to six courses aligned to each K-5 grade level (Courses A-F). In doing so, the lessons have become more tailored to the appropriate levels for reading, math, and overall cognitive development. Note the addition of two different “Express” courses, one for pre-readers and one for all other grades. These are similar to the previous suite’s “accelerated” version.
+Найбільше оновлення в курсі з Основ інформатики полягає в тому, що вміст чотирьох курсів (Курси 1-4) було розбито на 6 курсів відповідно до щорічного навчання з 1 по 5 клас (Курси A-F). Таким чином, уроки стали більш адаптовані до відповідних рівнів читання, математики і загального пізнавального розвитку. Зверніть увагу на додавання двох різних «Експрес» курсів, один для тих, хто не вміє читати (дошкільнята і перший клас), і один для решти класів (2-5 класи). Вони схожі на «прискорену» версію попереднього комплекту.
 
 <a id="newcourses"></a>
 
-## Teaching the new courses
+## Навчання за новими курсами
 
-As mentioned earlier, the courses should feel familiar, but different. If you’ve been to a Code.org professional development workshop, then you’re ready to teach the new courses. There are a small number of changes, but the overall platform, curriculum and pedagogical philosophy is unchanged. If you haven’t yet been, Code.org offers 1 day workshops at no cost to help you learn how to understand the curricula, navigate the Code.org platform, and teach the unplugged lessons.
+Як згадувалося раніше, курси дуже схожі на попередні, але все ж інші. Якщо ви були на професійному розвиваючому семінарі Code.org, то ви вже готові викладати за новими курсами. Є невелика кількість змін, але загальна платформа, навчальні плани і педагогічна філософія залишилися без змін. Якщо ви ще не брали участь, Code.org пропонує одноденний безкоштовний семінар, який допоможе вам навчитися розуміти навчальний план, орієнтуватися в платформі Code.org і проводити уроки без комп'ютера.
 
-The main updates to the courses are:
+Основні оновлення в курсах:
 
-* Circle-time stories for the younger learners
-* A new approach to scaffolding and practicing/applying concepts
-* Bridging activities to enhance the transition from unplugged lessons to plugged lessons
-* End of course projects for older students
+* Розповіді для роботи в групі для молодших учнів
+* Новий підхід до послідовності і опрацювання/прийнятті понять
+* Єднальна діяльність для вдосконалення переходу від уроків без комп'ютера до уроків за комп'ютером
+* Завершальний курсовий проект для старших учнів
 
-The rest of this guide will present each idea in more detail, offering tips and tricks for implementing the changes in your classroom.
+Інша частина цього керівництва представить кожну ідею більш докладно, пропонуючи поради і прийоми для реалізації змін в вашому класі.
 
 <a id="circletime"></a>
 
-## Circle-Time Stories (Courses A and B)
+## Розповіді для роботи в групі (Курси A і B)
 
-Some concepts are difficult to teach through activities and puzzles alone, especially for young students. This is why we’ve introduced a small number of circle-time stories in the Kindergarten and First Grade curricula. These stories are intended to be read by the teacher to the entire class, with stops along the way to discuss critical ideas like debugging, persistence, and frustration. Our hope is that allowing students to experience these tough concepts via story characters will help them to recognize the same notions when they arise in future lessons.
+Деяким поняттями важко навчити, використовуючи тільки види діяльності та завдання, це особливо важко для молодших учнів. Саме тому ми додали трохи оповідань для роботи в групі в навчальний план дошкільнят і учнів 1 класу. Ці розповіді призначені для читання вчителем всьому класу з зупинками для обговорення таких важливих тем, як налагодження, наполегливість і розчарування. Ми сподіваємося, що можливість відчути ці складні поняття за допомогою персонажів оповідань допоможе учням розпізнавати ті ж поняття, коли вони виникнуть у майбутніх уроках.
 
-Here is how the circle-time stories are intended to be used:
+Кілька прикладів, як розповіді для роботи в групі можуть бути використані:
 
-### Read the appropriate story to your class
+### Прочитайте відповідну розповідь вашому класу
 
-* Make sure to check for understanding along the way with questions and comments at useful moments during the action.
-* Discuss the stories afterward. What did your students hear? Are there any ideas that stuck with them?
-* Try to get students to identify with the characters. Is there anything that they do in their lives that remind them of one of the characters in the story?
+* Водночас не забудьте перевірити розуміння за допомогою питань і коментарів в підходящі моменти протягом усієї дії.
+* Пізніше обговоріть розповідь. Що ваші учні почули? Є якісь теми, на яких вони застрягли?
+* Постарайтеся, щоб учні асоціювали себе з персонажами. Чи є щось, що вони роблять в повсякденному житті, що нагадує їм про одного з персонажів оповідання?
 
-### Remind students about the story before they begin the next activity.
+### Нагадайте учням про розповіді перед тим, як вони почнуть наступну діяльність.
 
-* Do you remember the main ideas we discussed?
-* How will you know if you see that idea today?
-* What did the character do to handle that idea? What would you do?
+* Ви пам'ятаєте основну ідею, яку ми обговорювали?
+* Як ви зрозумієте, що ця ідея зустрілася вам сьогодні?
+* Що зробив герой, щоб впоратися з цією проблемою? Що ви зробите?
 
-### Point out similarities between the story and the student’s situations when they intersect during an activity.
+### Під час вправ вкажіть на подібності між розповіддю і ситуаціями в учнів, коли вони перетинаються.
 
-* Describe for a student how the position that they are in resembles a situation from the book. 
-* Ask a student to think about the characters and figure out what they might do. Does that help the student figure out a next step?
+* Поясніть учням, як правило, в якому вони знаходяться, нагадує ситуацію з книги. 
+* Попросіть одного з учнів подумати про героїв і з'ясувати, що вони можуть зробити. Чи допоможе це учневі зробити наступний крок?
 
-If you are unable to gather your entire class together, Code.org has provided a video option at the beginning of the appropriate lesson that presents the stories with limited animations. While these videos don’t offer quite the same experience, they will allow students to get exposure to the concepts and characters before continuing on with the rest of the course.
+Якщо ви не можете зібрати весь свій клас разом, Code.org надав відео варіант на початку відповідного уроку, який показує розповіді з обмеженою кількістю анімацій. Хоча ці відео не передають такі ж відчуття, вони дозволять учням познайомитися з поняттями і персонажами, перш ніж продовжити з іншим курсом.
 
 <a id="scaffolding"></a>
 
-## Lesson Scaffolding & Challenge Puzzles (All Ages)
+## Послідовність уроків і складні завдання (Усі віки)
 
-Courses A-F are less scaffolded overall than our previous courses. That means that we try to have students create their code from the beginning as often as possible, unless they are specifically learning to debug. As part of this design, most of our online lessons follow a trend where we present a simple puzzle to begin the lesson, then slowly drill forward with a new concept until the point where students have had a chance to understand the idea underneath. Next, we present them with a challenge puzzle, which is intended to get students thinking about the concept in a new and complicated way.
+Курси A-F менш обмежені, ніж всі наші попередні курси. Це означає, що ми намагаємося, щоб студенти створювали свій код з самого початку як можна частіше, якщо тільки вони спеціально не вчаться налагоджувати. Як частина цієї розробки, більшість наших онлайн уроків йдуть напрямом - ми показуємо просту задачу на початку уроку, потім повільно просуваємося до нових понять до тих пір, поки учні не зрозуміють основну тему уроку. Далі ми даємо їм змінене завдання, яке призначена для того, щоб учні задумалися над темою в новому і більш складному вигляді.
 
-Challenge puzzles are new in Courses A-F. The intention of challenge puzzles is to expose students to a high bar where they can practice persistence and independent thought. Challenge puzzles are intentionally hard and designed so that only students who truly understand the concept will pass within a reasonable timeframe. This means that a good number of students will not be successful on challenges their first time through. This requires a particular attitude from both student and teacher to pull off.
+Складні і цікаві завдання - новинки в Курсі A-F. Завдання складних головоломок полягає в тому, щоб підняти учнів на більш високу планку, де вони зможуть практикувати наполегливість і незалежне мислення. Складні головоломки навмисно важкі і розроблені таким чином, щоб тільки учні, які дійсно розуміють тему, могли вирішити їх в розумні терміни. Це означає, що багато учнів не впораються з комплексом завдань, з яким вони зіткнулися вперше. Щоб домогтися успіху, потрібно особливе ставлення як учня, так і вчителя.
 
-1. Students should give these challenges a hearty try, then put them aside and carry on. That practice allows for two very important things to happen:
-2. Students gain a better understanding of when and why to use the concept being studied. The following puzzles feel easier after the challenge, even though they are serious puzzles in their own right.
+1. Учні повинні багато намагатися, потім відкласти завдання і знову повернутися до них. Ця практика дозволяє зробити дві дуже важливі речі:
+2. Учні краще розуміють, коли і чому використовувати концепцію, яку вони вивчають. Наступні завдання здаються більш легкими після проходження, хоча вони самі по собі є складними.
 
-Keep in mind that students can go through lessons and reattempt incomplete puzzles at any time. Sometimes it can be quite helpful to get a good night’s sleep before revisiting a tough problem.
+Пам'ятайте, що учні можуть перескакувати уроки і повертатися до невиконаним завданням в будь-який час. Іноді дуже допомагає добре виспатися перед тим, як повернутися до вирішення проблеми.
 
-Once students make it past the challenge, they will find a handful of exercises waiting for them that are similar to what they may have experienced in the first half of the stage. These puzzles were placed intentionally to test a student’s clarity on the subject being studied. They might seem far too easy, given the puzzles that were experienced beforehand, but they were created to demonstrate the exact level of competence desired from the corresponding stage.
+Після того, як учні подолають випробування, вони знайдуть кілька вправ, які схожі на те, що вони могли зустрічати в першій половині комплексу. Завдання спеціально були розташовані таким чином, щоб перевірити на скільки чітко учень зрозумів тему уроку. Вони можуть здатися занадто простими, враховуючи, що завдання були вирішені раніше, але вони були створені для того, щоб продемонструвати точний рівень компетентності, який вимагається від відповідної стадії.
 
-In some instances, we end our lessons with free-play style levels. These levels might either have no “wrong” answer, or they might allow several different ways to solve their core problem. Please encourage students to give them their best shot and not just click “Continue” even though they can.
+У деяких випадках ми закінчуємо наші уроки рівнями з вільними іграми. Ці рівні можуть або не мати «неправильної» відповіді, або вони можуть мати кілька різних способів вирішення. Будь ласка, залучіть учнів, щоб вони показали свій найкращий результат, а не просто натискали "Далі", навіть якщо у них є можливість пройти далі.
 
-Some final notes for this area:
+Кілька заключних тез для цього розділу:
 
-* Remind students to be persistent and use their debugging skills on problems that feel tough.
-* Videos are often helpful. When students get stuck, have them rewatch the video a second, third, or even fourth time.
-* Require students to read the instructions. If they are having a hard time, let them read the instructions out loud to a classmate.
-* It’s okay to use hints! Students should use as many hints as they need, but be sure to attempt re-solving the puzzle at least one between each new offering.
+* Нагадуйте учням, що потрібно бути наполегливими і використовувати навички налагодження при вирішенні завдань.
+* Відео часто допомагають. Якщо учень застопорився, нехай він перегляне відео другий, третій і навіть четвертий раз.
+* Змушуйте учнів читати інструкції. Якщо виникли труднощі, запропонуйте учневі прочитати інструкції вголос своєму однокласнику.
+* Використовувати підказки - це нормально! Учням слід використовувати ту кількість підказок, яка їм потрібна. Але обов'язково намагайтеся вирішити задачу після кожної нової підказки.
 
 <a id="unplugged"></a>
 
-## Bridging Activities For Unplugged Lessons (All Ages)
+## Єднальна діяльність для уроків без комп'ютера (Усі віки)
 
-Unplugged activities meet students where they are in terms of pointing out how they already use important CS concepts in their everyday life. Once students can identify fundamental ideas like loops and conditionals, they get over the mental blocks that can happen when trying to use them for the first time programming online.
+Діяльність без комп'ютера проводиться там, де знаходяться учні, в контексті того, як вони вже використовують важливі поняття інформатики в своєму повсякденному житті. Як тільки учні зможуть визначити фундаментальні ідеї, такі як цикли і умовні вирази, вони зможуть подолати ментальні перешкоди, які можуть виникнути при першій спробі використовувати їх в онлайн програмуванні.
 
-Unplugged experiences are so important that we chose to take them one step further and bake in activities that bridge the unplugged lessons to their online counterparts. In Courses A-F, you will now find that lesson plans provide examples of how to take the offline exercises and translate the lessons to the following set of online puzzles. Appropriately, we call these "Bridging Activities."
+Досвід без комп'ютера настільки важливий, що ми вирішили зробити ще один крок вперед і створити діяльність, яка з'єднає уроки без комп'ютера з їх онлайн аналогами. У Курсах A-F ви побачите, що плани уроків містять приклади, як виконувати вправи офлайн і переводити уроки у відповідний набір онлайн завдань. Відповідно, ми називаємо це "Єднальна діяльність."
 
-For the most part, bridging activities can be created either by taking the subject of the unplugged exercise and executing it with paper Blockly blocks, or by taking an online puzzle and solving it using the language from the unplugged exercise. In some cases, a different relationship is introduced, but all of the examples are meant to keep the offline experiences from feeling too abstract or unrelated.
+Здебільшого, єднальна діяльність може бути створена або шляхом взяття теми з вправи без комп'ютера і виконання її з паперовими блоками, або шляхом взяття онлайн завдання і рішення його з використанням опису з вправи без комп'ютера. У деяких випадках бувають інші співвідношення, але усі приклади призначені для того, щоб офлайн досвід не був занадто абстрактним або непов'язаним.
 
 <a id="endofcourse"></a>
 
-## End of Course Projects (Courses E & F)
+## Завершаючий курсовий проект (Курси E і F)
 
-For older students, we have introduced substantial end of course projects in Courses E & F. Though Code.org has provided the ability to build “projects” for quite a while, we felt that it would add some much needed perspective for students to be able to plan and execute their projects in a formal context.
+Для старших школярів по закінченню курсу ми додали проекти в Курсах E і F. Хоча Code.org надає можливість створювати «проекти» протягом досить довгого часу, ми відчували, що слід додати потрібний напрямок для учнів, щоб вони мали можливість планувати і виконувати свої проекти в формальному контексті.
 
-The end of course projects are relatively straightforward. Over the period of four to five weeks students will review project ideas, plan their application, code their program, revise based on feedback (5th grade), then present their completed work. Each of these steps is guided by a helpful handout, as well as a teacher lesson plan that highlights the big picture.
+Закінчуються курсові проекти відносно просто. Протягом 4 - 5 тижнів учні будуть шукати ідеї для проектів, планувати свої додатки, програмувати, переглядати їх на основі зворотного зв'язку (5-й клас), а потім презентувати свої завершені роботи. Кожен з цих кроків супроводжується корисним роздатковим матеріалом, а також планом уроку для вчителя, який підкреслює загальну картину.
 
-**Review:** Students will take a look at a handful of aspirational projects, built to showcase the amazing things that can be done with the skills that they have learned up to this point. These projects have been built either in Play Lab or Artist, but students are free to review projects from Tynker, Scratch, or even text-based languages if the teacher sees fit.
+**Пошук ідеї:** Учнів знайомлять з кількома надихаючими проектами, створеними для демонстрації дивовижних речей, які можна зробити за допомогою навичок, які вони придбали до цього часу. Ці проекти були побудовані або в Лабораторії Ігор, або в Artist, але учні можуть шукати проекти і в Tynker, Scratch або навіть написані на текстових мовах програмування, якщо вчитель вважає це за необхідне.
 
-**Plan:** The intention here is for students to sit back and think about what is really possible. They will need to think about the games that they saw, and the limitations that they faced when editing them. Afterward, they will sketch out a plan to create something unique. Students might need to be reminded to stay realistic, as they will have limited time and resources when bringing their visions to life. The materials here assume the use of Artist or Play Lab, but projects can be moved to whatever platform works for each particular classroom.
+**Планування:** Мета полягає в тому, щоб учні сиділи і думали про те, що дійсно можливо. Їм потрібно замислитися про ігри, які вони бачили, і про обмеження, з якими вони зіткнутися при редагуванні їх. Після цього вони накидають план по створенню чогось унікального. Можливо, учням доведеться нагадувати, щоб вони залишалися реалістичними, оскільки у них буде обмежений час і ресурси для втілення своїх ідей в життя. Матеріали тут припускають використання Artist або Лабораторії Ігор, але проекти можуть бути переміщені на будь-яку платформу, яка підходить для кожного конкретного класу.
 
-**Build:** One day is not a whole lot of time to execute a plan that has been laid out on paper. Students will face tough choices when it comes to trying to make things work as they run into one barrier after another. They will learn to edit and adapt as bugs and program limitations change their perceptions of what can comfortably be accomplished in a restricted timeframe.
+**Створення:** Один день - це не так багато часу, щоб виконати план, який був записаний на папері. Учні зіткнутися з важким вибором, коли вони спробують змусити код працювати, зустрічаючи одну перешкоду за іншою. Вони навчаться редагувати і пристосовуватися в міру того, як помилки і обмеження програми змінять їхні уявлення про те, що може бути реально виконано в обмежені терміни.
 
-**Revise:** For older students, a day of revising their programs based on the feedback of classmates can help them improve their final product, and lets them inspire others with the things that they have achieved. Students will practice constructive critique, as well as group brainstorming and persistence.
+**Перегляд ідеї:** Для старших учнів день перегляду їхніх програм, грунтуючись на зворотному зв'язку від однокласників, може допомогти їм поліпшити їх кінцевий продукт і надихнути інших на те, чого вони змогли досягти. Учні практикуватимуть конструктивну критику, а також груповий мозковий штурм і наполегливість.
 
-**Present:** Nearly a month in the making, this is the chance for students to stand-up and be proud of how far they have come. Our lesson plan assumes an oral presentation, but teachers have the option of suggesting written or multimedia presentations instead.
+**Презентація:** Майже місяць праць, це шанс для учнів вийти на сцену і бути гордими за те, як далеко вони пройшли. Наш план уроку має на увазі усну презентацію, але вчитель натомість може запропонувати написати або зробити мультимедійну презентацію.
 
-No matter how thoroughly students embed themselves in their projects, they are sure to learn something useful about the processes of creativity and problem solving in computer science.
+Незалежно від того, наскільки ретельно учні занурюються в свої проекти, вони обов'язково дізнаються щось корисне про процес творчості і рішення проблем в інформатиці.
 
 <a id="conclusion"></a>
 
-## Conclusion
+## Висновок
 
-As you can see, Courses A-F in Computer Science Fundamentals contain exciting enhancements, influenced by feedback from the massive CS Fundamentals teacher & facilitator communities.
+Як ви можете бачити, Курси A-F з основ інформатики містять суттєві поліпшення, створені під впливом відгуків від учителів, які навчають основам інформатики, і організаторів спільнот.
 
-We hope this overview has been insightful. If you have any questions or comments about this change, please visit http://forum.code.org/c/csf and post them on our forum. We will be sure to get your questions answered as quickly as possible. Until then, here are some of frequently asked questions about Courses A-F.
+Сподіваємося, що огляд був інформативним. Якщо у вас є які-небудь питання або коментарі, що стосуються цих змін, будь ласка, перейдіть за посиланням http://forum.code.org/c/csf і напишіть на нашому форумі. Ми обов'язково відповімо на них якомога швидше. А поки кілька відповідей на найбільш поширені запитання про Курсах A-F.
 
 <a id="faq"></a>
 
-## FAQs
+## Питання і відповіді
 
-| Question                                                                                                                                                   | Answer                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **You are launching a new set of courses-- does that mean that Courses 1-4 are going away?**                                                               | No. Just as our original 20-Hour course is still available and in-use on our website, we plan to keep Courses 1-4 around for those who feel that it better represents the experience that their students/children need.                                                                                                                                                                                                                                                      |
-| **When can we start using Courses A-F?**                                                                                                                   | Courses A-F are available now!                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| **Some of my favorite lessons/puzzles are missing from Courses A-F!**                                                                                      | Have no fear! They still exist where you left them in Courses 1-4 or the Accelerated 20-Hour course.                                                                                                                                                                                                                                                                                                                                                                         |
-| **These puzzles seem much harder. I’m worried that they’re too difficult for my little ones.**                                                             | The backbone of these new courses is the desire to get students to think, problem solve, and practice persistence. None of these things are required when puzzles are too easy to complete. For this reason, we’ve had to make puzzles more difficult. Please refer to the teacher guide for help with leading your class in building these skills. As always, don’t underestimate the importance of using unplugged lessons before jumping in with the online puzzles.      |
-| **Some puzzles only allow a certain number of specific blocks. What if my students want to code something out the long way before they figure out loops?** | There are a few puzzles that restrict specific blocks. This is one of our new manners of scaffolding. It is a way of giving direction, without over scaffolding the pieces in the workspace itself. For students who like to code puzzles the long way before they pare down (and, in fact for all students, all the time) it is useful to have a journal or scratch paper beside the keyboard where they can figure out the algorithm in whatever way comes most naturally. |
+| Питання                                                                                                                                                                                        | Відповідь                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Ви запускаєте новий набір курсів. Чи означає це, що Курси 1-4 більше не будуть використовуватися?**                                                                                          | Ні. Також як наш оригінальний 20-годинний курс як і раніше доступний і використовується на сайті, ми плануємо залишити Курси 1-4 для тих, хто вважає, що вони більше підходять для їхніх учнів/дітей.                                                                                                                                                                                                                                                   |
+| **Коли ми можемо почати користуватися Курсами A-F?**                                                                                                                                           | Курси A-F вже доступні!                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| **Деякі мої улюблені уроки/завдання зникли з Курсів A-F!**                                                                                                                                     | Не хвилюйтесь! Вони все ще існують там, де і були, - Курси 1-4 або прискореному 20-годинному курсі.                                                                                                                                                                                                                                                                                                                                                     |
+| **Ці завдання виглядають набагато складніше. Я хвилююся, що вони занадто складні для моїх дітей.**                                                                                             | Основа цих нових курсів - бажання змусити учнів думати, вирішувати проблеми і розвивати старанність. Нічого з цього не потрібно, якщо завдання дуже легкі. З цієї причини ми зробили завдання більш складними. Будь ласка, зверніть увагу на керівництво для вчителя, яке допоможе провести ваш клас при розвитку цих навичок. Як завжди, не варто недооцінювати важливість використання уроків без комп'ютера, перш ніж приступати до онлайн завдань.  |
+| **Для вирішення деяких завдань можна використовувати певну кількість заданих блоків. Що, якщо мої учні хочуть програмувати довгими конструкціями перед тим, як почнуть розбиратися в циклах?** | Є кілька завдань, які обмежені певними блоками. Це один з наших нових способів покрокового навчання. Це спосіб дати напрямок учневі, не перевантажуючи його в робочому процесі. Для учнів, які люблять вирішувати завдання довгим шляхом перед тим, як вони оптимізують (і за фактом для всіх учнів, весь час), корисно мати блокнот або лист для нотаток поруч із клавіатурою, де вони зможуть намалювати алгоритм будь-яким зручним для них способом. |

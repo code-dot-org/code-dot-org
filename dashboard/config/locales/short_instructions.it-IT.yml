@@ -3307,15 +3307,15 @@ it-IT:
         o condividerlo con i tuoi amici e compagni di classe!
       courseF_artist_for1: Fai esperimenti con il _ciclo con contatore_ e gioca con
         la variabile `counter` (_contatore_).
-      courseF_artist_for10: 'Tempo di giocare: Prova ad usare la variabile `counter`
+      courseF_artist_for10: "**Tempo di giocare**: Prova ad usare la variabile `counter`
         (_contatore_) con altri elementi grafici per creare immagini magiche come
-        questa.'
-      courseF_artist_for10_2018: 'Tempo di giocare: Prova ad usare la variabile `counter`
-        (_contatore_) con altri elementi grafici per creare immagini magiche come
-        questa.'
-      courseF_artist_for10_2019: 'Tempo di giocare: Prova ad usare la variabile `counter`
-        (_contatore_) con altri elementi grafici per creare immagini magiche come
-        questa.'
+        questa."
+      courseF_artist_for10_2018: "**Tempo di giocare**: Prova ad usare la variabile
+        `counter` (_contatore_) con altri elementi grafici per creare immagini magiche
+        come questa."
+      courseF_artist_for10_2019: "**Tempo di giocare**: Prova ad usare la variabile
+        `counter` (_contatore_) con altri elementi grafici per creare immagini magiche
+        come questa."
       courseF_artist_for1_2018: Fai esperimenti con il _ciclo con contatore_ e gioca
         con la variabile `counter` (_contatore_).
       courseF_artist_for1_2019: Fai esperimenti con il _ciclo con contatore_ e gioca
@@ -3413,11 +3413,13 @@ it-IT:
         per fare in modo che l'artista disegni i vari triangoli spostati ognuno in
         avanti di `length` pixel e verso il basso di `length` pixel.
       courseF_artist_variables5: Aggiungi un'altra serie di cicli alla fine del programma
-        per aggiungere tre triangoli. Questa volta, vai avanti e verso l'alto!
+        per aggiungere tre triangoli. Questa volta, salta in avanti e verso l'alto!
       courseF_artist_variables5_2018: Aggiungi un'altra serie di cicli alla fine del
-        programma per aggiungere tre triangoli. Questa volta, vai avanti e verso l'alto!
+        programma per aggiungere tre triangoli. Questa volta, salta in avanti e verso
+        l'alto!
       courseF_artist_variables5_2019: Aggiungi un'altra serie di cicli alla fine del
-        programma per aggiungere tre triangoli. Questa volta, vai avanti e verso l'alto!
+        programma per aggiungere tre triangoli. Questa volta, salta in avanti e verso
+        l'alto!
       courseF_artist_variables6: 'Ora crea triangoli che siano larghi 60 pixel con
         salti di 60 pixel.  '
       courseF_artist_variables6_2018: 'Ora crea triangoli che siano larghi 60 pixel

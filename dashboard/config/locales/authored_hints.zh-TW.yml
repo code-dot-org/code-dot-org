@@ -1192,6 +1192,8 @@ zh-TW:
         courseA_collector_loops3_b: 記得在一個 <xml><block type="controls_repeat_simplified_dropdown"><title
           name="TIMES" config="3-10">???</title></block></xml>迴圈裡你可以用多於一塊程式積木。
       courseA_collector_loops3_2019:
+        courseA_collector_loops3_a: "試著使用一個 \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title
+          name=\"TIMES\" config=\"3-10\">???</title></block></xml>\n\n 迴圈!"
         courseA_collector_loops3_b: 記得在一個 <xml><block type="controls_repeat_simplified_dropdown"><title
           name="TIMES" config="3-10">???</title></block></xml>迴圈裡你可以用多於一塊程式積木。
       courseA_collector_loops_challenge1:
@@ -1217,6 +1219,9 @@ zh-TW:
         courseA_collector_loops_challenge2kp_a: 你能用迴圈過關嗎？
       courseA_collector_preLoops7:
         courseA_collector_loops2_b: 當你已經到達寶物的地點，記得用「取得寶物」程式積木來取得它。
+      courseA_harvester_loops2_2019:
+        courseA_harvester_loops2_a: "你的程式碼將會有 **四個** `往西移動`\n\n<xml><block type=\"maze_moveWest\"/></xml>\n\n程式積木和
+          **四個** <xml>\n`pick corn`\n  <block type=\"harvester_corn\"/>\n</xml> 程式積木. "
       courseA_harvester_loops5:
         courseA_harvester_loops5_c: 從這條路來摘取所有玉米！
       courseA_harvester_loops5_2019:
@@ -1249,6 +1254,13 @@ zh-TW:
         courseA_harvester_seq9_c: 你應該按照這個路徑才能拿到所有玉米。
       courseA_harvester_seq9_2019:
         courseA_harvester_seq9_c: 你應該按照這個路徑才能拿到所有玉米。
+      courseA_maze_seq13_2019:
+        courseA_maze_seq13_c: |-
+          這些 <xml><block type="maze_moveNorth"/></xml>
+
+          <xml><block type="maze_moveEast"/></xml>
+
+           程式積木將會幫助移動更靠近豬，
       courseA_maze_seq6:
         courseA_maze_seq6_a: 最後的程式應該要有 3 個移動積木。
       courseA_maze_seq6_2018:
@@ -1742,6 +1754,16 @@ zh-TW:
       courseB_iceage_loops2_2019:
         courseB_iceage_loops2_b: 如果你卡關了，試試邊觀察邊念出每個步驟。
         courseB_iceage_loops2_c: 按著這個路徑讓鼠奎特拿到橡樹果實。
+      courseB_iceage_loops3_2019:
+        courseB_iceage_loops3_a: |-
+          使用這個新的程式積木！
+           <xml><block type="controls_repeat_simplified_dropdown">
+              <title name="TIMES" config="3-10">5</title>
+              </block></xml>
+        courseB_iceage_loops3_b: |-
+          要讓程式碼重複, 把一個`repeat` <xml><block type="controls_repeat_simplified">
+              <title name="TIMES">???</title>
+            </block></xml>迴圈拖拉出來, 然後將你想要的程式積木放進去.
       courseB_iceage_loops4:
         courseB_iceage_loops4_c: 這是鼠奎特應該走的路徑。
       courseB_iceage_loops4_2019:
