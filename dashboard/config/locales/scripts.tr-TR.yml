@@ -11941,6 +11941,10 @@ tr:
               name: Internet simülatörü ile ikili ileti gönderme
             Intellectual Property:
               name: Fikri Mülkiyet
+            CS Principles Pre-survey:
+              name: Bilgisayar Bilimi ilkeleri ön anket
+            Binary Numbers:
+              name: İkili Sayılar
         csd-videos:
           stages:
             new stage:
@@ -12734,3 +12738,7 @@ tr:
           stages:
             Deeper Learning Overview:
               name: Derin Öğrenime Genel Bakış
+        dlp19-csd-mod-w2:
+          stages:
+            new stage:
+              name: yeni kademe
