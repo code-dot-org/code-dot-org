@@ -46,6 +46,7 @@ const limitOptions = [
 ];
 
 const QUERY_API_URL = '/api/v1/pd/workshops/filter';
+const LEGACY_SUBJECT_PREFIX = '[Legacy]';
 
 export class WorkshopFilter extends React.Component {
   static propTypes = {
@@ -172,7 +173,13 @@ export class WorkshopFilter extends React.Component {
   };
 
   handleSubjectChange = selected => {
-    const subject = selected ? selected.value : null;
+    let subject = selected ? selected.value : null;
+
+    // Remove legacy prefix
+    if (subject.startsWith(LEGACY_SUBJECT_PREFIX)) {
+      subject = subject.substring(LEGACY_SUBJECT_PREFIX.length).trim();
+    }
+
     this.updateLocationAndSetFilters({subject});
   };
 
@@ -315,7 +322,9 @@ export class WorkshopFilter extends React.Component {
 
   mergeSubjectArrays(objValue, srcValue) {
     if (_.isArray(objValue)) {
-      const legacySubjects = srcValue.map(subject => '[Legacy] ' + subject);
+      const legacySubjects = srcValue.map(
+        subject => LEGACY_SUBJECT_PREFIX + ' ' + subject
+      );
       return objValue.concat(legacySubjects);
     }
   }
