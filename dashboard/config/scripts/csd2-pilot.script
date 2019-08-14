@@ -108,7 +108,6 @@ level 'CSD U2 classes sample_pilot', progression: 'Styling with Classes'
 level 'CSD U2 classes modify_pilot', progression: 'Styling with Classes'
 level 'CSD U2 classes spring_pilot', progression: 'Styling with Classes'
 level 'CSD U2 classes summer_pilot', progression: 'Styling with Classes', assessment: true
-level 'CSDU2 - PW - Class Style Personal Site_pilot', progression: 'Styling with Classes'
 level 'CSD U2 RGB intro_pilot', named: true
 
 stage 'Lists', flex_category: 'csd2_2'
