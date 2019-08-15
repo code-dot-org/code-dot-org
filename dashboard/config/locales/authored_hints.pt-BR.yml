@@ -83,6 +83,49 @@ pt-BR:
         2-3_Artist_Functions_4_a: A artista precisa girar 120 graus entre cada quadrado
           para concluir este projeto.
       2-3 Artist Loops New 11:
+        2-3_Artist_Loops_New_11_a: |-
+          Lembre-se que o código do último desafio foi:
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="controls_repeat">
+                  <title name="TIMES">8</title>
+                  <statement name="DO">
+                    <block type="draw_colour" inline="true">
+                      <value name="COLOUR">
+                        <block type="colour_random"/>
+                      </value>
+                      <next>
+                        <block type="draw_turn_by_constant_dropdown">
+                          <title name="DIR">turnRight</title>
+                          <title name="VALUE" config="45,60,90,120,180">45</title>
+                          <next>
+                            <block type="draw_move_by_constant">
+                              <title name="DIR">moveForward</title>
+                              <title name="VALUE">50</title>
+                              <next>
+                                <block type="draw_turn_by_constant_dropdown">
+                                  <title name="DIR">turnLeft</title>
+                                  <title name="VALUE" config="45,60,90,120,180">90</title>
+                                  <next>
+                                    <block type="draw_move_by_constant">
+                                      <title name="DIR">moveForward</title>
+                                      <title name="VALUE">50</title>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                </block>
+              </next>
+            </block>
+          </xml>
         2-3_Artist_Loops_New_11_b: Sua próxima vez deve ir no \* \* fim \* \* do código,
           dentro do loop.
       2-3 Artist Loops New 12:
@@ -96,6 +139,9 @@ pt-BR:
         2-3_Artist_Loops_New_13_a: "Ao final de cada diamante, a artista já estará
           na direção certa para iniciar o novo. \nPor causa disso, não precisamos
           adicionar  mais um bloco 'vire à esquerda' antes de começar o próximo diamante."
+        2-3_Artist_Loops_New_13_b: "Para criar cada diamante, o artista precisa: \n\n-
+          \  mover\n-   virar à direita 120 graus\n-   mover\n-   virar à direita
+          60 graus\n\nDepois fazer tudo de novo!"
       2-3 Artist Loops New 9:
         2-3_Artist_Loops_New_9_a: O artista precisa girar 45 graus para a direita
           antes de começar o desenho.
@@ -902,6 +948,7 @@ pt-BR:
           </xml>
       Course 4 SCF 1a:
         Course_4_SCF_1a_a: Lembre-se de suas funções da fase 16.
+        Course_4_SCF_1a_b: "Veja este caminho como sua rota principal: \n\n![](https://images.code.org/1c3feab70af706409b3a05af4dc83c2e-image-1469726967858.png)"
         Course_4_SCF_1a_c: Você deve considerar usar um laço `para`. Não para as etapas,
           mas para o parâmetro da função.
         Course_4_SCF_1a_d: |-
@@ -965,6 +1012,7 @@ pt-BR:
           Observe que a forma de todos os pontos de mel é semelhante.
 
           Bom lugar para uma função!
+        Course_4_SCF_1b_b: "Veja esta ideia e como a abelha poderia viajar: \n\n![](https://images.code.org/996ab4a2de6048cbb99b84c56cc4ad61-image-1469726859769.png)"
         Course_4_SCF_1b_c: Você deve considerar o uso de um laço 'para' na distância
           percorrida pela abelha.
         Course_4_SCF_1b_d: |-
@@ -1726,6 +1774,12 @@ pt-BR:
           </block>
           </xml>
       Course 4 SCV 2:
+        Course_4_SCV_2_a: |-
+          A imagem completa é composta por 10 destas "flores":\
+          ![](https://images.code.org/bac2a606dfa59c00409294499540267d-image-1469641972385.png)
+
+          ...que por sua vez são compostos por 10 destes decágonos:\
+          ![](https://images.code.org/1e15f278c9c1606f90a2490ec3a94eb4-image-1469642051512.png)
         Course_4_SCV_2_b: 'Este projeto usa laços aninhados (três profundos). Todos
           os laços percorrem ''sides'' vezes. '
         Course_4_SCV_2_c: O artista vira à esquerda quando cria cada decágono, mas
@@ -1915,6 +1969,10 @@ pt-BR:
           </block>
           </xml>
       Course 4 SCV 5:
+        Course_4_SCV_5_a: |-
+          Dê uma olhada nesta possibilidade para movimentação:
+
+          ![](https://images.code.org/7f6f09c55cf9552a91fc1d33f44a7315-image-1469641639330.png)
         Course_4_SCV_5_b: Toda vez dentro do laço, as flores terão duas vezes menos
           néctar e a abelha precisará fazer mais um mel.
         Course_4_SCV_5_c: Veja que no começo do laço externo a abelha se move tantas
@@ -1976,6 +2034,10 @@ pt-BR:
           </block>
           </xml>
       Course 4 SCV 6:
+        Course_4_SCV_6_a: |-
+          Dê uma olhada como fica uma única forma completa
+
+          ![](https://images.code.org/9e30d3a87186cefe730984feee195806-image-1469642178866.png)
         Course_4_SCV_6_b: 'Você se beneficiará criando 8 variáveis: red1, green1,
           blue1, red2, green2, blue2, length e sides.'
         Course_4_SCV_6_c: Cada uma das formas de 5 lados está dividida em peças de
@@ -1983,6 +2045,10 @@ pt-BR:
           é roxo (rgb = 100,50,150).
         Course_4_SCV_6_d: 'Para o zigue, vire a esquerda por ''360'' / ''sides''.
           Para o zague, vire a direita por  ''360'' / ''sides''. '
+        Course_4_SCV_6_e: 'O restante do programa é bem padrão para fazer rotações
+          de 360 graus de uma forma, porém estamos sobrepondo as formas pela metade,
+          então temos que girar à `180`/`lados`, o que significa que precisamos usar
+          o dobro de formas que seriam usadas normalmente (`sides`\*`2` repetições). '
         Course_4_SCV_6_f: |-
           **Solução:**
           <xml>
@@ -2540,6 +2606,8 @@ pt-BR:
       NEW Course 4 Bee For Loops 10a:
         NEW_Course_4_Bee_For_Loops_10a_a: Você consegue encontrar um padrão entre
           o número de passos que você precisa dar e o número de néctares para coletar?
+        NEW_Course_4_Bee_For_Loops_10a_b: Você precisará de 2 laços de repetição,
+          um deles utilizará um bloco matemática.
       NEW Course 4 Bee For Loops 7:
         NEW_Course_4_Bee_For_Loops_7_a: |-
           Tente fazer alguma matemática com a variável contadora.
@@ -2749,7 +2817,28 @@ pt-BR:
           você está fazendo algo apenas uma vez.
         courseA_collector_loops_challenge1_c: Existem 6 gemas no lado direito da caverna,
           porém você precisa apenas se mover e coletar 5 vezes. Você sabe porquê?
+      course1_collector_loops_challenge2:
+        courseA_collector_loops_challenge2_b: Você precisa usar apenas 1 bloco ![](<https://images.code.org/803e9ee8b5bc9311a26edf955cd3c03f-image-1491001702274.07.34
+          PM.png>) para resolver isso.
+        courseA_collector_loops_challenge2_a: |-
+          Você pode se movimentar para trás sobre o caminho por uma segunda vez, antes de se mover para o sul.
+
+          ![](<https://images.code.org/88c28c76dbea70e20253083d22b5f5fd-image-1491001404225.01.21 PM.png>)
       course1_collector_loops_challenge3:
+        courseB_collector_loops_challenge1_b: |-
+          Comece incorporando laços nos comandos `mover para o sul` e `pegar tesouro`.
+
+          <xml>
+            <block type="maze_moveSouth"/><next>
+            <block type="collector_collect"/></next>
+            </xml>
+        courseB_collector_loops_challenge1_a: |-
+          O padrão ao norte é um pouco diferente do padrão do sul.
+
+          <xml>
+            <block type="collector_collect"/><next>
+            <block type="maze_moveNorth"/></next>next>
+            </xml>
         courseB_collector_loops_challenge1_c: |-
           Mova para o leste duas vezes entre cada caminho.
 
@@ -2949,6 +3038,11 @@ pt-BR:
               </block>
             </next>
           </block></xml>
+        courseA_playlab_events_challenge1_e: "Finalmente, faça Wendel o Mago aparecer
+          quando você clicar no Spiff!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">6</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
+          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">7</title>\n
+          \     </block>\n    </next>\n  </block></xml>"
       course1_playlab_events_challenge2:
         courseA_playlab_events_challenge2_a: |-
           Você pode fazer um pássaro cantar.
@@ -3068,6 +3162,10 @@ pt-BR:
         courseC_maze_loops_challenge1_b: Entre cada bloco `repetir`, você precisará
           `virar à esquerda` ou `virar à direita` para preparar Scrat para o próximo
           padrão.
+        courseC_maze_loops_challenge1_c: |-
+          Se você chegou até aqui, você somente precisa `virar à esquerda` e depois `mover para frente` algumas vezes. Não desista!
+
+          ![](<https://images.code.org/7696c5c16b8ddf1d53436cdc7fb6346d-image-1494101728016.14.34 PM.png>)
       course2_maze_programming_challenge2:
         courseC_maze_programming_challenge2_a: _Se você me mandar para trás, tenha
           muito cuidado para que eu vire do jeito certo!_
@@ -14845,6 +14943,8 @@ pt-BR:
           \n\nNesse desenho, note que existem **7** quadrados vermelhos, **5** quadrados
           laranja, **3** quadrados verdes, e **1** bloco azul.\n\n![](<https://images.code.org/602ce14659299af6a59a79ebd0bdb9d4-image-1493221855089.6.11
           Hint Drawing.png>) \n\nComo os números se relacionam?"
+        courseF_bee_for10_d: Você precisará de 2 laços de repetição, um deles utilizará
+          um bloco matemática.
       courseF_bee_for10_2018:
         courseF_bee_for10_a: Você consegue encontrar um padrão entre o número de passos
           que você precisa dar e o número de néctares para coletar?
@@ -14858,6 +14958,8 @@ pt-BR:
           \n\nNesse desenho, note que existem **7** quadrados vermelhos, **5** quadrados
           laranja, **3** quadrados verdes, e **1** bloco azul.\n\n![](<https://images.code.org/602ce14659299af6a59a79ebd0bdb9d4-image-1493221855089.6.11
           Hint Drawing.png>) \n\nComo os números se relacionam?"
+        courseF_bee_for10_d: Você precisará de 2 laços de repetição, um deles utilizará
+          um bloco matemática.
       courseF_bee_for10_2019:
         courseF_bee_for10_a: Você consegue encontrar um padrão entre o número de passos
           que você precisa dar e o número de néctares para coletar?
@@ -14871,6 +14973,8 @@ pt-BR:
           \n\nNesse desenho, note que existem **7** quadrados vermelhos, **5** quadrados
           laranja, **3** quadrados verdes, e **1** bloco azul.\n\n![](<https://images.code.org/602ce14659299af6a59a79ebd0bdb9d4-image-1493221855089.6.11
           Hint Drawing.png>) \n\nComo os números se relacionam?"
+        courseF_bee_for10_d: Você precisará de 2 laços de repetição, um deles utilizará
+          um bloco matemática.
       courseF_bee_for11:
         courseF_bee_for11_a: |-
           Quanto menos 12 é do que 15?\
@@ -14919,16 +15023,22 @@ pt-BR:
           de 1 para resolver este desafio.
         courseF_bee_for4_b: Dentro do seu laço `para`, você vai querer ter um comando
           `avançar`, e um laço para coletar néctar.
+        courseF_bee_for4_c: Certifique-se de utilizar a variável `contar` dentro do
+          seu laço de `repetir` para conseguir nectar o suficiente!
       courseF_bee_for4_2018:
         courseF_bee_for4_a: Use um laço `para` que vai de 1 para 7 com um incremento
           de 1 para resolver este desafio.
         courseF_bee_for4_b: Dentro do seu laço `para`, você vai querer ter um comando
           `avançar`, e um laço para coletar néctar.
+        courseF_bee_for4_c: Certifique-se de utilizar a variável `contar` dentro do
+          seu laço de `repetir` para conseguir nectar o suficiente!
       courseF_bee_for4_2019:
         courseF_bee_for4_a: Use um laço `para` que vai de 1 para 7 com um incremento
           de 1 para resolver este desafio.
         courseF_bee_for4_b: Dentro do seu laço `para`, você vai querer ter um comando
           `avançar`, e um laço para coletar néctar.
+        courseF_bee_for4_c: Certifique-se de utilizar a variável `contar` dentro do
+          seu laço de `repetir` para conseguir nectar o suficiente!
       courseF_bee_for5:
         courseF_bee_for5_a: Desta vez, seu bloco `avance` e seu bloco `obtenha néctar`
           precisará estar em laços `repita` separados, ambos dentro do mesmo laço

@@ -19,7 +19,7 @@ zh-TW:
         name: 顯示名稱
         name_example: 顯示名稱<br/>（例如 Cool Coder 或是 Jane S）
         email: 電子信箱
-        parent_email: 家長或監護人的電子郵件
+        parent_email: 家長/監護人的電子郵件
         personal_email: 個人電子郵件位址 <a href="%{url}"> (如果您沒有電子郵件位址請按這裡)</a>
         username: 用戶名稱
         password: 密碼
@@ -284,7 +284,7 @@ zh-TW:
       project_gallery: 所有專案
       sections: 學習小組
       help_support: 幫助與支援
-      report_bug: 回報 Bug
+      report_bug: 回報問題
       teacher_community: 教師社群
       professional_learning: 專業學習
       documentation: 說明文件
@@ -497,8 +497,8 @@ zh-TW:
     thank_you: 我們感謝所有的<a href="https://code.org/about/donors">贊助者</a>、<a href="https://code.org/about/partners">合作夥伴</a>、我們的<a
       href="https://code.org/about/team">擴展團隊</a>、我們的影片演員陣容，還有我們的<a href="https://code.org/about/advisors">教育顧問</a>，因為他們的支援才有今天的
       Code Studio。
-    help_from_html: 我們特別想認識來自 Google、Microsoft、Facebook、Twitter 以及其他幫助我們完成這些材料的工程師。
-    help_from_html_old: 來自 Google、Microsoft、Facebook、Twitter 的工程師的協助創造了這些材料。
+    help_from_html: 我們特別想認識來自 Amazon、Google、Microsoft 幫助我們完成這些材料的工程師。
+    help_from_html_old: 來自 Amazon、Google、Microsoft 的工程師的協助創造了這些材料。
     art_from_html: 當個創世神 Minecraft &#8482; &copy; %{current_year} Microsoft 著作權所有，並保留一切權利。<br
       />星際大戰 Star Wars &#8482; &copy; %{current_year} 迪士尼和盧卡斯影業著作權所有，並保留一切權利。<br />冰雪奇緣
       Frozen &#8482; &copy; %{current_year} 迪士尼著作權所有，並保留一切權利。<br />冰原歷險記 Ice Age &#8482;
@@ -551,8 +551,7 @@ zh-TW:
     show_video: 顯示影片
   compatibility:
     upgrade:
-      unsupported_message: 您的瀏覽器不支援。請升級您的瀏覽器到<a href='%{supported_browsers_url}',
-        target='_blank'>支援的瀏覽器版本之一</a>。您還是可以瀏覽此頁面，但有些有功能是會無法正常運作。
+      unsupported_message: 您的瀏覽器不支援。請升級您的瀏覽器到 [one of our supported browsers](%{supported_browsers_url})。您還是可以瀏覽此頁面，但有些有功能是會無法正常運作。
       link: 進一步了解
       applab_unsupported_tablet: 在桌上電腦使用 App Lab 是比較建議的方式，有滑鼠、鍵盤的平板上也可以。在你目前的裝置上使用，可能會遇到一些操作上的問題。
       gamelab_unsupported_tablet: 在桌上電腦使用 Game Lab 是比較建議的方式，有滑鼠、鍵盤的平板上也可以。在你目前的裝置上使用，可能會遇到一些操作上的問題。
@@ -892,7 +891,7 @@ zh-TW:
     csd5_1: 第 1 章：表達信息
     csd5_2: 第 2 章：解決數據問題
     csd6_1: 第 1 章：硬體輸出
-    csd6_2: 第 2 章：硬體輸入
+    csd6_2: 第 2 章：建立物理原型
     csp5_2: 第 2 章：資料結構程式設計
     cspSurvey: 問卷
     cspAssessment: 章節測驗
@@ -911,7 +910,7 @@ zh-TW:
   hoc_download:
     title: 一小時玩程式相關下載
     capsule_title: 你有網路嗎？
-    capsule_desc: 使用在線 Web 式的 <a href="%{url}">%{app_name}</a>。
+    capsule_desc: 使用在線 Web 式的 [%{app_name}](%{url}).。
     instructions_headline: 沒有網路？
     instructions: 給教師的指南： 如果你的網路很慢，這些課程都可以下載並離線安裝。選擇你的語言和平台，然後下載和安裝在教室的所有電腦上。你可以使用
       USB 隨身碟一次安裝所有電腦上。註：學生將不能登錄並在 Code Studio 上保存進度，也無法列印證書。你可以提前<a href="%{url}">在這裡列印證書</a>。

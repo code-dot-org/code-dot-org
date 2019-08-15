@@ -537,7 +537,7 @@ pl-PL:
       courseD_maze_ramp3_2018:
         stone_block_2: Szare bloki są zrobione z kamienia i nie mogą być wyrzucane.
       courseD_maze_ramp3_2019:
-        stone_block_2: Szare bloki są zrobione z kamienia i nie mogą być wyrzucane.
+        stone_block_2: Szare bloki nie mogą być wyrzucane.
       courseD_maze_ramp6:
         courseD_maze_ramp6_1: Jakikolwiek kod tu wrzucisz, zostanie on powtórzony
           tyle razy, ile poprosisz, a potem zostanie wykonana reszta programu.

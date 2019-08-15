@@ -1160,7 +1160,7 @@ es-MX:
   hoc_download:
     title: Descargas de la Hora del Código
     capsule_title: "¿Tienes Internet?"
-    capsule_desc: Usa la aplicación web <a href="%{url}">%{app_name}</a> en línea.
+    capsule_desc: Usa la aplicación web [%{app_name}](%{url}) en línea.
     instructions_headline: "¿No tienes Internet?"
     instructions: 'Instrucciones para docentes: si tu conexión a Internet no es buena,
       puedes descargar estos tutoriales de la Hora del Código y consultarlos sin conexión.
@@ -1168,7 +1168,7 @@ es-MX:
       computadoras de tu aula. También puedes utilizar una unidad USB para descargarlo
       una sola vez e instalarlo en todos los equipos. Ten en cuenta que los estudiantes
       no podrán iniciar sesión en Code Studio, guardar su progreso o imprimir certificados.
-      Los docentes pueden imprimir los certificados por adelantado <a href="%{url}">aquí</a>.'
+      Los docentes pueden imprimir los certificados por adelantado [here](%{url}).'
     minecraft_name: Hora del Código de Minecraft
     starwars_blocks_name: 'Star Wars: cómo crear una galaxia con el código (bloques)'
     starwars_javascript_name: 'Star Wars: cómo crear una galaxia con el código (JavaScript)'

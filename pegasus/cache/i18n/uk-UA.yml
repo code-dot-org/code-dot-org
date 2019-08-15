@@ -1868,6 +1868,7 @@ uk-UA:
   header_courses: курси
   header_course_catalog: Каталог курсів
   header_project_gallery: Проекти
+  header_sections: Секції
   header_educate_overview: Огляд для педагога
   header_educate_elementary: Початкова школа
   header_educate_middle: Середня школа
@@ -1893,6 +1894,10 @@ uk-UA:
   header_stats: Статистика
   header_help_us: Допомога нам
   header_about: Про
+  header_teacher_community: Спільнота вчителів
+  header_report_bug: Повідомити про помилку
+  header_tutorials: Навчальні матеріали
+  header_documentation: Документація
   user_header_label: Привіт %{username}
   user_header_team: Команда
   user_header_settings: Мій профіль
@@ -1906,6 +1911,10 @@ uk-UA:
   user_header_flappy: Пурх
   applab_tile_start_tutorial: Початок
   aquatic_name: 'Minecraft: Водна подорож'
+  account_sign_up_email_opt_in: Чи можемо ми сповіщати вас про оновлення курсів, локальних
+    можливості та інші новини з області інформатики за допомогою електронної пошти?
+  account_sign_up_child_accept_terms: Я підтверджую що у мене є згода моїх батьків
+    і законних опікунів на дозвіл використання Code.org.
   hoc_overview_dance_title: Танцювальна вечірка
   hoc_overview_start_tutorial: Початок
   hoc2018_creativity: творчість

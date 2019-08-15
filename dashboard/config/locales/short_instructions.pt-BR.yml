@@ -34,8 +34,23 @@ pt-BR:
       2-3 Artist Free Play: Atividade livre! Desenhe qualquer coisa que você quiser.
       2-3 Artist Loops New 1: Vamos desenhar a cabeça desse robô! Você pode fazer
         um quadrado com lados de 100 pixels?
+      2-3 Artist Loops New 10: Agora vamos conectar um monte de Vs juntos em um laço.
+      2-3 Artist Loops New 11: Reconstrua o código do último desafio mas, desta vez,
+        adicione uma ação dentro do laço para virar 30 graus à esquerda. Agora, repita
+        a ação 24 vezes ao invés de 8.
       2-3 Artist Loops New 12: 'Desenhe um diamante com lados de 100 pixels. '
+      2-3 Artist Loops New 13: "Vamos ajudá-lo com algum código (em cinza) para criar
+        um diamante. \n\nRepita o código em cinza para criar um padrão divertido!"
+      2-3 Artist Loops New 14: Brinque com o código do diamante e veja que outros
+        padrões você consegue criar. Tente alterar o número de graus que você vira
+        e o número de vezes que você executa o laço.
       2-3 Artist Loops New 15: Agora desenhe o que você quiser!
+      2-3 Artist Loops New 2: |-
+        Aqui está o mesmo quebra-cabeças que acabamos de resolver, mas desta vez nós podemos usar somente um bloco `avance para frente` um bloco `vire`.
+
+        Você consegue usar um `repita` para resolver este desafio?
+      2-3 Artist Loops New 9: Desenhe um V simples (onde ambos os lados têm 50 pixels)
+        para completar a seta.
       2-3 Artist Nested Loops 10: Repita este código 12 vezes para completar o padrão.
       2-3 Artist Nested Loops 11: Repita este código 4 vezes para completar o padrão,
         vire 90 graus depois de cada círculo.
@@ -61,14 +76,30 @@ pt-BR:
         em cada colmeia.
       2-3 Bee Functions 9: Crie sua própria função que vai por um caminho, obtém néctar,
         faz mel, e então retorna a abelha para o início do caminho.
+      2-3 Bee Loops 1: |-
+        Estas flores parecem deliciosas!
+
+        Colete o néctar de cada uma destas flores usando o menor número possível de blocos.
       2-3 Bee Loops 10: Você pode usar um laço enquanto dentro de dois outros laços
         para coletar todo o néctar?
       2-3 Bee Loops 1A: 'Olá, eu sou uma abelha. Você pode me ajudar a coletar o néctar
         dessas flores? '
+      2-3 Bee Loops 2: Colete todo o néctar e produza todo o mel usando o menor número
+        possível de blocos.
       2-3 Bee Loops 2A: Desta vez, use um laço para juntar todo o néctar.
+      2-3 Bee Loops 3: Colete o néctar de cada flor e produza todo o mel em cada colmeia
+        usando o menor número possível de blocos.
       2-3 Bee Loops 3A: Use um laço `repita` para coletar todo o néctar.
       2-3 Bee Loops 3B: Agora, use o bloco `repita` para coletar todo o néctar e produzir
         todo o mel.
+      2-3 Bee Loops 4: |-
+        Que abelha trabalhadora!
+
+        Ajude a abelha a coletar todo o néctar e produzir todo o mel com o menor número de blocos possível.
+      2-3 Bee Loops 4A: |-
+        Quantas vezes os laços podem ajudá-lo neste desafio?
+
+        Laços são seus amigos! Use alguns deles para completar este desafio com o menor número de blocos possível.
       2-3 Bee Loops 7: Que lindo campo florido!  Ajude a abelha a visitar cada flor.
         Você consegue achar uma maneira de fazer isso com menos de 7 blocos?
       2-3 Maze 1: 'Você pode me ajudar a pegar o porco malvado? Junte alguns blocos
@@ -80,6 +111,8 @@ pt-BR:
         frente` desta vez
       2-3 Maze 15: Neste desafio, dois laços `repita` ajudarão você a pegar o porco
         com o menor número possível de blocos!
+      2-3 Maze 16: Os laços funcionam inclusive com mais de um bloco dentro! Você
+        consegue repetir essa sequência para levar o zumbi até o girassol?
       2-3 Maze 16 before: Você consegue descobrir a maneira mais rápida de me levar
         até o porco?
       2-3 Maze 2: Esse porco está me irritando. Ajude-me a chegar até ele!
@@ -93,9 +126,16 @@ pt-BR:
       2-3 Maze 9: Leve-me até a maldade verde! (Cuidado com a dinamite)
       2-3 Maze Loops 1: Você consegue me levar ao porco usando 5 blocos do mesmo tipo?
       2-3 Maze Loops 17: Use o que você aprendeu para me levar até o girassol!
+      2-3 Maze Loops 18: "Leve-me até o girassol usando o menor número de blocos\npossível!
+        \n\nUse um laço \"repita\" dentro de outro para diminuir a quantidade de código
+        que você precisa."
+      2-3 Maze Loops 19: "Vamos subir o nível! \nUse laços para me levar até o girassol
+        com o menor número de laços possível."
       2-3 Maze Loops 20: |-
         Você pode resolver esse desafio usando o menor número
         possível de blocos?
+      2-3 Maze Loops 21: Leve-me até o girassol usando o menor número possível de
+        blocos!
       2-3 Maze Loops Assessment 1: 'Avaliação: leve-me até o girassol usando apenas
         5 blocos! '
       4-5 Artist 1: 'Ajude-me a terminar de desenhar minha caixa. (Cada linha tem
@@ -653,9 +693,23 @@ pt-BR:
         seja divertido para você jogar!\nPressione \"Executar\" e clique na Madame
         Unicórnio o maior número de vezes que você conseguir. Você consegue superar
         nossa pontuação de 24? "
+      Course 4 SCF 1: Use as funções sugeridas para desenhar quatro linhas de hexágonos.
+        Você percebeu como as linhas pares são deslocadas à direita?
+      Course 4 SCF 1a: Você consegue descobrir como coletar todo este néctar usando
+        o menor número de blocos possível?
+      Course 4 SCF 1b: Você consegue descobrir como coletar todo este mel com o menor
+        número de blocos possível?
+      Course 4 SCF 2: 'Use o que você aprendeu no nível anterior para desenhar uma
+        imagem como esta. Nota: O código fica mais simples se você usar parâmetros. '
+      Course 4 SCF 3: 'Use o que você aprendeu no nível anterior para desenhar uma
+        imagem como esta. Nota: O código fica mais simples se você usar parâmetros. '
       Course 4 SCFL 1: |-
         Resolva este desafio usando o menor número
         possível de blocos.
+      Course 4 SCFL 1a: Você consegue levar Skrat até a sua bolota usando o mínimo
+        possível de blocos?
+      Course 4 SCFL 1b: Você consegue levar Skrat até a sua bolota usando o mínimo
+        possível de blocos?
       Course 4 SCFL 2: |-
         Resolva este desafio usando o menor número
         possível de blocos.
@@ -664,6 +718,8 @@ pt-BR:
       Course 4 SCFL 6: |-
         Você consegue descobrir como recriar esse desenho
         com um único laço?
+      Course 4 SCFL 7: O artista quer pegar algumas ondas! Você consegue descobrir
+        como recriar este desenho?
       Course 4 SCV 1: Clique aqui para ver as instruções novamente.
       Course 4 SCV 2: Clique aqui para ver as instruções novamente.
       Course 4 SCV 3: |-
@@ -797,6 +853,8 @@ pt-BR:
         de fundo azul.
       Fish Tank 4-validated_2019: Use o bloco `definir cor de fundo` para definir
         o plano de fundo azul.
+      Fish Tank 5-validated: Nosso peixe está ficando um pouco solitário. Adicione
+        outro peixe ao aquário.
       Fish Tank 5-validated_2019: O peixe é aventureiro e quer conhecer novas criaturas
         do mar. Adicione outro sprite no aquário. Esse sprite pode ter qualquer fantasia,
         desde que seja diferente da que você usou para o peixe!
@@ -914,7 +972,12 @@ pt-BR:
         mel.
       K-1 Bee Loops 11: Colete todo o néctar e o mel!
       K-1 Bee Loops 12: Colete todo o néctar e todo o mel.
+      K-1 Bee Loops 2: Use um laço `repita` para mover e depois pegue o néctar e faça
+        mel!
+      K-1 Bee Loops 3: Use três laços `repita` para pegar o néctar e fazer mel!
+      K-1 Bee Loops 4: Use laços `repita` para pegar o néctar, fazer mel, e se mover!
       K-1 Bee Loops 5: Use laços "repita" para obter néctar e mel!
+      K-1 Bee Loops 6: Use um laço `repita` para pegar o néctar, fazer mel, e se mover!
       K-1 Bee Loops 7: Colete o néctar e produza mel!
       K-1 Bee Loops 8: Colete o néctar e produza mel!
       K-1 Bee Loops 9: Colete todo o néctar e produza todo o mel.
@@ -933,12 +996,21 @@ pt-BR:
       K-1 Maze 8: Mova-me por um caminho, e então por outro para me levar até o porco!
       K-1 Maze 9: Mova-me por um caminho, e então por outro para me levar até o porco!
       K-1 Maze Loops 1: Leve-me até o porco!
+      K-1 Maze Loops 10: Leve-me até o porco! Usar o laço `repita` vai facilitar as
+        coisas.
+      K-1 Maze Loops 11: |-
+        Leve-me até o porco!\
+        O laço `repita` vai facilitar as coisas.
+      K-1 Maze Loops 12: Leve-me até o porco! O laço `repita` vai facilitar as coisas.
       K-1 Maze Loops 2: Use o bloco "repita" para me levar até o porco!
       K-1 Maze Loops 3: Leve-me até o porco! Use laços "repita".
       K-1 Maze Loops 5: Leve-me até o porco! Use laços "repita".
       K-1 Maze Loops 6: Leve-me até o porco! Use laços "repita".
       K-1 Maze Loops 7: Leve-me até o porco! Use laços "repita".
       K-1 Maze Loops 8: Use o laço "repita" para me levar até o porco.
+      K-1 Maze Loops Assessment 1: Veja tudo o que aprendemos! Use um laço `repita`
+        para me levar até o porco!
+      K-1 Maze Loops Assessment 2: Use laços `repita` para me levar até o porco!
       K-1 Maze Sequence Assessment 1: |-
         Vamos ver o que você aprendeu!
         Mova-me por um caminho, e depois por outro para levar até o porco.
@@ -1306,9 +1378,19 @@ pt-BR:
         mas pode ficar escuro lá dentro. Coloque pelo menos 2 tochas e minere pelo
         menos 2 carvões.
       Vigenere: Teste
+      Virtual Pet 1: O que você acha que vai acontecer se você pressionar "Executar"
+        e depois clicar nela?
       Virtual Pet 1 Predict: 'O que acha que vai acontecer quando você clicar no alienígena?  '
+      Virtual Pet 2: Crie um \*\* evento \*\* para que, quando Geraldine tocar na
+        poça, sua cor mude para marrom.
+      Virtual Pet 3: Adicione um novo sabão à tela. Você consegue fazer com que, quando
+        o sabonete tocar na girafa, a girafa volte a sua cor normal?
       Virtual Pet 4: Adicione um comportamento ao seu sabonete para torná-lo arrastável
         e, em seguida, arraste-o para limpar a girafa!
+      Virtual Pet 5: Adicione ações a cada evento para que quando a girafa colidir
+        com cada sprite, ela diminua de tamanho por 5.
+      Virtual Pet 6: Adicione uma maçã que faça a girafa voltar ao tamanho normal
+        quando encostar nela.
       Virtual Pet 8_2019: "**Jogo Livre:** O que mais você pode fazer seu animal de
         estimação fazer? Experimente o que quiser!"
       Virtual Pet Freeplay: 'Jogo livre: O que mais você pode fazer sua girafa fazer? '
@@ -4202,6 +4284,8 @@ pt-BR:
         atribuindo esse texto à variável `grito`.
       courseF_playlab_variables2b: Insira a variável `cor` no meio de uma sentença
         colocando-a no espaço vazio no bloco`junte`.
+      courseF_playlab_variables3b_josh: 'Ajude Kiki a ter uma conversa com Brian utilizando
+        a variável `idade` em todos os lugares onde a idade `12` deveria ser usada. '
       courseF_playlab_variables4b: Coloque as variáveis nos lugares corretos para
         criar essa conversa.
       courseF_playlab_variables5c: Vamos combinar o bloco `pergunta` com uma declaração
