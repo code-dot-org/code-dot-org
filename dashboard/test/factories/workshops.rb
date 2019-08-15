@@ -126,5 +126,20 @@ FactoryGirl.define do
     #
     # Sub-factories
     #
+
+    # CSF Intro, also known as CSF 101
+    # Our most common workshop type as of August 2019.
+    #
+    factory :csf_intro_workshop do
+      subject Pd::Workshop::SUBJECT_CSF_101
+      course Pd::Workshop::COURSE_CSF
+      location_name 'Walkerville Elementary School'
+      capacity 30          # Average capacity
+      on_map true          # About 60% are on the map
+      funded               # About 90% are funded
+      num_sessions 1       # Most have 1 session
+      num_facilitators 1   # Most have 1 facilitator
+      each_session_hours 7 # The most common session length
+    end
   end
 end
