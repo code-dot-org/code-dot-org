@@ -2,9 +2,9 @@ class LevelStarterAssetsController < ApplicationController
   S3_BUCKET = 'cdo-v3-assets'.freeze
   S3_PREFIX = 'starter_assets/'.freeze
 
-  # GET /level_starter_assets/:id
+  # GET /level_starter_assets/:level_name
   def show
-    level_channel_id = params[:id]
+    level_channel_id = params[:level_name]
     starter_assets = get_file_objects(level_channel_id).map do |file_obj|
       if file_obj.size.zero?
         nil
@@ -22,12 +22,13 @@ class LevelStarterAssetsController < ApplicationController
     render json: {starter_assets: starter_assets}
   end
 
-  # GET /level_starter_assets/:id/:filename
+  # GET /level_starter_assets/:level_name/:filename
   # Returns requested file body as an IO stream.
   def file
-    path = prefix("#{params[:id]}/#{params[:filename]}.#{params[:format]}")
+    level_channel_id = params[:level_name]
+    path = prefix("#{level_channel_id}/#{params[:filename]}.#{params[:format]}")
     file_obj = get_file_object(path)
-    filename = filename(params[:id], file_obj)
+    filename = filename(level_channel_id, file_obj)
     content_type = file_content_type(File.extname(filename))
     send_data read_file(file_obj), type: content_type, disposition: 'inline'
   end
