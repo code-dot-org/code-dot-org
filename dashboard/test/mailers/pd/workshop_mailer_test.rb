@@ -111,7 +111,7 @@ class WorkshopMailerTest < ActionMailer::TestCase
 
   test 'facilitator and organizer email links are complete urls' do
     facilitator = create :facilitator
-    csf_workshop = create :workshop, facilitators: [facilitator], course: Pd::Workshop::COURSE_CSF, subject: Pd::Workshop::SUBJECT_CSF_101
+    csf_workshop = create :csf_intro_workshop, facilitators: [facilitator]
     csf_enrollment = create :pd_enrollment, workshop: csf_workshop
     ecs_workshop = create :workshop, :ended, facilitators: [facilitator], course: Pd::Workshop::COURSE_ECS, subject: Pd::Workshop::SUBJECT_ECS_PHASE_2
     ecs_enrollment = create :pd_enrollment, workshop: ecs_workshop

@@ -208,8 +208,7 @@ module Api::V1::Pd
     end
 
     test 'facilitators cannot see results for other types of workshops' do
-      workshop = create :workshop, course: COURSE_CSF, subject: SUBJECT_CSF_101,
-        facilitators: [@facilitator]
+      workshop = create :csf_intro_workshop, facilitators: [@facilitator]
       sign_in @facilitator
 
       get :generic_survey_report, params: {workshop_id: workshop.id}
@@ -305,7 +304,7 @@ module Api::V1::Pd
     end
 
     test 'generic_survey_report: CSF101 workshop cannot invoke this action' do
-      csf_101_ws = create :workshop, course: COURSE_CSF, subject: SUBJECT_CSF_101
+      csf_101_ws = create :csf_intro_workshop
 
       WorkshopSurveyReportController.any_instance.expects(:create_csf_survey_report).never
       WorkshopSurveyReportController.any_instance.expects(:local_workshop_daily_survey_report).never
