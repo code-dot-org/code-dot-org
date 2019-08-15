@@ -1,8 +1,8 @@
-import {getDatabase} from './firebaseUtils';
+import {getProjectDatabase} from './firebaseUtils';
 import _ from 'lodash';
 
 export function getColumnsRef(tableName) {
-  return getDatabase().child(`metadata/tables/${tableName}/columns`);
+  return getProjectDatabase().child(`metadata/tables/${tableName}/columns`);
 }
 
 /**
@@ -100,7 +100,7 @@ export function onColumnNames(tableName, callback) {
  */
 export function addMissingColumns(tableName) {
   return getColumnNames(tableName).then(existingColumnNames => {
-    const recordsRef = getDatabase().child(
+    const recordsRef = getProjectDatabase().child(
       `storage/tables/${tableName}/records`
     );
     return recordsRef.once('value').then(snapshot => {

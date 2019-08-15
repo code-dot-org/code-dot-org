@@ -23,7 +23,7 @@ import {
   onColumnNames,
   addMissingColumns
 } from '../storage/firebaseMetadata';
-import {getDatabase} from '../storage/firebaseUtils';
+import {getProjectDatabase} from '../storage/firebaseUtils';
 import * as apiTimeoutList from '../lib/util/timeoutList';
 import designMode from './designMode';
 import applabTurtle from './applabTurtle';
@@ -816,7 +816,7 @@ function setupReduxSubscribers(store) {
   if (store.getState().pageConstants.hasDataMode) {
     // Initialize redux's list of tables from firebase, and keep it up to date as
     // new tables are added and removed.
-    const tablesRef = getDatabase().child('counters/tables');
+    const tablesRef = getProjectDatabase().child('counters/tables');
     tablesRef.on('child_added', snapshot => {
       store.dispatch(
         addTableName(
@@ -1274,7 +1274,7 @@ function onDataViewChange(view, oldTableName, newTableName) {
   if (!getStore().getState().pageConstants.hasDataMode) {
     throw new Error('onDataViewChange triggered without data mode enabled');
   }
-  const storageRef = getDatabase().child('storage');
+  const storageRef = getProjectDatabase().child('storage');
 
   // Unlisten from previous data view. This should not interfere with events listened to
   // by onRecordEvent, which listens for added/updated/deleted events, whereas we are
