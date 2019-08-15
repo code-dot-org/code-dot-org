@@ -250,7 +250,7 @@ module Api::V1::Pd
     end
 
     test 'experiment_survey_report: return empty result for workshop without responds' do
-      csf_201_ws = create :workshop, course: COURSE_CSF, subject: SUBJECT_CSF_201, num_sessions: 1
+      csf_201_ws = create :csf_deep_dive_workshop
 
       expected_result = {
         "course_name" => nil,
@@ -272,7 +272,7 @@ module Api::V1::Pd
     end
 
     test 'generic_survey_report: CSF201 workshop uses new pipeline' do
-      csf_201_ws = create :workshop, course: COURSE_CSF, subject: SUBJECT_CSF_201
+      csf_201_ws = create :csf_deep_dive_workshop
 
       WorkshopSurveyReportController.any_instance.expects(:create_csf_survey_report)
 
@@ -283,7 +283,7 @@ module Api::V1::Pd
     end
 
     test 'generic_survey_report: return empty result for CSF201 workshop without responds' do
-      csf_201_ws = create :workshop, course: COURSE_CSF, subject: SUBJECT_CSF_201, num_sessions: 2
+      csf_201_ws = create :csf_deep_dive_workshop, num_sessions: 2
 
       expected_result = {
         "course_name" => nil,
