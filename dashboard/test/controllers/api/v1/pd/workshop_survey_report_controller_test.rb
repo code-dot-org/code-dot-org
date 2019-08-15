@@ -252,14 +252,50 @@ module Api::V1::Pd
     test 'experiment_survey_report: return empty result for workshop without responds' do
       csf_201_ws = create :csf_deep_dive_workshop
 
+      # This test assumes there's one facilitator in the workshop
+      assert_equal 1, csf_201_ws.facilitators.count
+      f_id = csf_201_ws.facilitators.first.id.to_s
+      f_name = csf_201_ws.facilitators.first.name
+
       expected_result = {
         "course_name" => nil,
         "questions" => {},
         "this_workshop" => {},
         "all_my_workshops" => {},
-        "facilitators" => {},
-        "facilitator_averages" => {},
-        "facilitator_response_counts" => {},
+        "facilitators" => {
+          f_id => f_name
+        },
+        "facilitator_averages" => {
+          f_name => {
+            "facilitator_effectiveness" => {
+              "this_workshop" => nil,
+              "all_my_workshops" => nil
+            },
+            "overall_success" => {
+              "this_workshop" => nil,
+              "all_my_workshops" => nil
+            },
+            "teacher_engagement" => {
+              "this_workshop" => nil,
+              "all_my_workshops" => nil
+            }
+          },
+          "questions" => {}
+        },
+        "facilitator_response_counts" => {
+          "this_workshop" => {
+            f_id => {
+              "Facilitator" => 0,
+              "Workshop" => 0
+            }
+          },
+          "all_my_workshops" => {
+            f_id => {
+              "Facilitator" => 0,
+              "Workshop" => 0
+            }
+          }
+        },
         "experiment" => true
       }
 

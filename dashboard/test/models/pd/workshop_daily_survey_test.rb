@@ -11,7 +11,7 @@ module Pd
     setup_all do
       @user = create :user
       @pd_summer_workshop = create :workshop, num_sessions: 5, course: COURSE_CSP, subject: SUBJECT_CSP_TEACHER_CON
-      @pd_academic_year_workshop = create :workshop, num_sessions: 5, course: COURSE_CSP, subject: SUBJECT_CSP_WORKSHOP_1
+      @pd_academic_year_workshop = create :csp_academic_year_workshop
     end
 
     test 'response_exists? and create_placeholder!' do
