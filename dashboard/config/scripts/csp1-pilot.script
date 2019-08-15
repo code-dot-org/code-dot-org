@@ -82,7 +82,8 @@ level 'U1L11 CFU Compression for Email', progression: 'Check For Understanding'
 
 stage 'Intellectual Property'
 level 'CSP U1L12 SFLP 20-21', progression: 'Lesson Overview'
-level 'U1L11 CFU Compression for Email', progression: 'Check For Understanding'
+level 'U1L12 CFU Creative Commons', progression: 'Check For Understanding'
+level 'U1L12 CFU Copyright', progression: 'Check For Understanding'
 
 stage 'Project: Digital Information Dilemmas, pt 1'
 level 'CSP U1L13 SFLP 20-21', progression: 'Lesson Overview'
@@ -90,8 +91,7 @@ level 'U1L11 CFU Compression for Email', progression: 'Check For Understanding'
 
 stage 'Project: Digital Information Dilemmas, pt 2'
 level 'CSP U1L14 SFLP 20-21', progression: 'Lesson Overview'
-level 'U1L11 CFU Compression for Email', progression: 'Check For Understanding'
+level 'U1L13 CFU Digital Representation', progression: 'Check For Understanding'
 
 stage 'Unit Assessment'
 level 'CSP U1L15 SFLP 20-21', progression: 'Lesson Overview'
-level 'U1L11 CFU Compression for Email', progression: 'Check For Understanding'
