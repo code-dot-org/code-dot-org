@@ -2848,6 +2848,8 @@ ru:
               name: Отправка двоичных сообщений
             Sending Binary Messages with the Internet Simulator:
               name: Отправка двоичных сообщений с интернет симулятором
+            Binary Numbers:
+              name: Двоичные числа
         time4csdemo:
           stages:
             Crowdsourcing:

@@ -828,6 +828,15 @@ it-IT:
       courseF_artist_for1_2019:
         courseF_artist_for1_1: La cassetta degli attrezzi è organizzata in categorie,
           in modo da lasciare più spazio per il codice.  I cicli li trovi qui.
+      courseF_artist_variables3:
+        courseF_artist_variables3_a: Usa questo blocco per impostare il valore della
+          variabile `length` (_lunghezza_)
+      courseF_artist_variables3_2018:
+        courseF_artist_variables3_a: Usa questo blocco per impostare il valore della
+          variabile `length` (_lunghezza_)
+      courseF_artist_variables3_2019:
+        courseF_artist_variables3_a: Usa questo blocco per impostare il valore della
+          variabile `length` (_lunghezza_)
       courseF_bee_conditionals2:
         courseF_bee_conditionals2_2: La sezione degli strumenti è ora in modalità
           categorie. Tutti i blocchi di cui hai bisogno sono al di sotto di queste

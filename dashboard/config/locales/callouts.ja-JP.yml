@@ -134,10 +134,56 @@ ja-JP:
         craft_what_is_iron: 鉄を掘りましょう！
       Underground Iron_2019:
         craft_what_is_iron: 鉄を掘りましょう！
+      courseA_artist_loops4:
+        courseA_artist_loops4_1: いくつのブロックが つかえるか、この すうじを みてください。
+      courseA_artist_loops4_2018:
+        courseA_artist_loops4_1: いくつのブロックが つかえるか、この すうじを みてください。
+      courseA_artist_loops4_2019:
+        courseA_artist_loops4_1: いくつのブロックが つかえるか、この すうじを みてください。
+      courseA_collector_loops1:
+        courseA_collector_loops1_1: ツールボックスに あたらしい ブロックが ありますよ。あとで せつめいを するので、まっててね。
+      courseA_collector_loops3:
+        gradek_adventurer_loops2_1: いくつのブロックが つかえるか、この すうじを みてください。
+      courseA_collector_loops3_2018:
+        gradek_adventurer_loops2_1: いくつのブロックが つかえるか、この すうじを みてください。
+      courseA_collector_loops3_2019:
+        gradek_adventurer_loops2_1: いくつのブロックが つかえるか、この すうじを みてください。
+      courseA_collector_preLoops2:
+        courseA_collector_loops1_1: ツールボックスに あたらしい ブロックが ありますよ。あとで せつめいを するので、まっててね。
+      courseA_collector_preLoops3:
+        courseA_collector_loops1_1: ツールボックスに あたらしい ブロックが ありますよ。あとで せつめいを するので、まっててね。
+      courseA_collector_preLoops4:
+        courseA_collector_loops1_1: ツールボックスに あたらしい ブロックが ありますよ。あとで せつめいを するので、まっててね。
+      courseA_collector_preLoops5:
+        courseA_collector_loops1_1: ツールボックスに あたらしい ブロックが ありますよ。あとで せつめいを するので、まっててね。
+      courseA_collector_preLoops6:
+        courseA_collector_loops1_1: ツールボックスに あたらしい ブロックが ありますよ。あとで せつめいを するので、まっててね。
+      courseA_maze_seq1:
+        courseA_maze_seq1_1: ヒントが ほしいときは、でんきゅうを クリック！
+      courseA_maze_seq1_2018:
+        courseA_maze_seq1_1: ヒントが ほしいときは、でんきゅうを クリック！
+      courseA_maze_seq1_2019:
+        courseA_maze_seq1_1: ヒントが ほしいときは、でんきゅうを クリック！
+      courseA_maze_seq2:
+        courseA_maze_seqA_callout1: ステップ ボタンを つかうと プログラムが ひとつずつ うごきます。これで バグを みつけよう！
+      courseA_maze_seq4:
+        made_of_stone: このブロックは いしで できてます。うごかす ことは できるけど、けす ことは できません！
       courseB_Scrat_ramp1_2018:
         grade2_CaringForNewPet_0_1: すべてのブロックをつなげたら「実行」を押してプログラムを開始してください。
       courseB_Scrat_ramp1_2019:
         grade2_CaringForNewPet_0_1: すべてのブロックをつなげたら「実行」を押してプログラムを開始してください。
+      courseB_collector_loops1:
+        courseB_collector_loops1_1: ツールボックスに あたらしい ブロックが ありますよ。あとで せつめいを するので、まっててね。
+      courseB_maze_seq1:
+        courseB_maze_seq1: ヒントが ほしいときは、でんきゅうを クリック！
+      courseB_maze_seq1_2018:
+        courseB_maze_seq1: ヒントが ほしいときは、でんきゅうを クリック！
+      courseB_maze_seq1_2019:
+        courseB_maze_seq1: ヒントが ほしいときは、でんきゅうを クリック！
+      courseB_maze_seq2:
+        courseB_maze_seq2_callout1: ステップ ボタンを つかうと プログラムが ひとつずつ うごきます。これで バグを みつけよう！
+      courseC_collector_prog1:
+        courseC_collector_prog1_1: ツールボックスに あたらしい ブロックが ありますよ。あとで せつめいを するので、まっててね。
       courseC_maze_programming1:
         grade2_CaringForNewPet_0_1: すべてのブロックをつなげたら「実行」を押してプログラムを開始してください。
       courseC_maze_programming1_2018:

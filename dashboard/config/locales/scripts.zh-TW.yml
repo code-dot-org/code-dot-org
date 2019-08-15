@@ -5161,6 +5161,10 @@ zh-TW:
               name: 二進位訊息的發送
             Sending Binary Messages with the Internet Simulator:
               name: 用網路模擬器發送二進位訊息
+            CS Principles Pre-survey:
+              name: 計算機科學原理課前問卷調查
+            Binary Numbers:
+              name: 二進位數
         csd-tests:
           stages:
             Computers and Problem Solving:
@@ -5379,3 +5383,7 @@ zh-TW:
           stages:
             Deeper Learning Overview:
               name: 深度學習概覽
+        dlp19-csd-mod-w2:
+          stages:
+            new stage:
+              name: 新的階段
