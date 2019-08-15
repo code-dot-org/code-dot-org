@@ -231,7 +231,7 @@ Dashboard::Application.routes.draw do
 
   post 'level_assets/upload', to: 'level_assets#upload'
 
-  resources :level_starter_assets, only: [:show] do
+  resources :level_starter_assets, only: [:show], param: 'level_name' do
     member do
       get '/:filename', to: 'level_starter_assets#file'
     end
