@@ -260,9 +260,8 @@ module Pd::SurveyPipeline
     end
 
     test 'get context of academic year workshop survey submissions' do
-      facilitator = create :facilitator
-      workshop = create :workshop, course: COURSE_CSP, subject: SUBJECT_CSP_WORKSHOP_1,
-        num_sessions: 1, facilitators: [facilitator]
+      workshop = create :csp_academic_year_workshop
+      facilitator = workshop.facilitators.first
       daily_form_id = '1122334455'.to_i
       post_ws_form_id = '82115646319154'.to_i
 

@@ -176,5 +176,36 @@ FactoryGirl.define do
       num_facilitators 2   # Most have 2 facilitators
       each_session_hours 8 # The most common session length
     end
+
+    # CSP Academic Year Workshops
+    factory :csp_academic_year_workshop do
+      subject do
+        [
+          Pd::Workshop::SUBJECT_CSP_WORKSHOP_1,
+          Pd::Workshop::SUBJECT_CSP_WORKSHOP_2,
+          Pd::Workshop::SUBJECT_CSP_WORKSHOP_3,
+          Pd::Workshop::SUBJECT_CSP_WORKSHOP_4
+        ].sample
+      end
+      course Pd::Workshop::COURSE_CSP
+      location_name 'Bayside High School'
+
+      capacity 29          # Average capacity
+      on_map false         # Never on the map
+      funded               # About 57% are funded
+      num_sessions 1       # Most have 1 session
+      num_facilitators 2   # Most have 2 facilitators
+      each_session_hours 8 # The most common session length
+    end
+
+    # TODO
+    # - CSD 2-day Workshops
+    # - CSP 2-day Workshops
+    # - CSD 5-day Summer
+    # - CSP 5-day Summer
+    # - Admin workshop
+    # - Facilitator workshop
+    # - Counselor workshop
+    # - Facilitator Weekend
   end
 end
