@@ -1084,27 +1084,23 @@ module Pd
 
     def setup_csf201_not_started_workshop
       @regional_partner = create :regional_partner
-      @csf201_not_started_workshop = create :workshop,
-        course: COURSE_CSF, subject: SUBJECT_CSF_201, regional_partner: @regional_partner,
+      @csf201_not_started_workshop = create :csf_deep_dive_workshop,
+        regional_partner: @regional_partner,
         num_facilitators: 2
     end
 
     def setup_csf201_in_progress_workshop
       @regional_partner = create :regional_partner
-      @csf201_in_progress_workshop = create :workshop,
+      @csf201_in_progress_workshop = create :csf_deep_dive_workshop,
         :in_progress,
-        course: COURSE_CSF,
-        subject: SUBJECT_CSF_201,
         regional_partner: @regional_partner,
         num_facilitators: 2
     end
 
     def setup_csf201_ended_workshop
       @regional_partner = create :regional_partner
-      @csf201_ended_workshop = create :workshop,
+      @csf201_ended_workshop = create :csf_deep_dive_workshop,
         :ended,
-        course: COURSE_CSF,
-        subject: SUBJECT_CSF_201,
         regional_partner: @regional_partner,
         num_facilitators: 2
     end

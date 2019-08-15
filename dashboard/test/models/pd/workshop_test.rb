@@ -724,11 +724,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   end
 
   test 'CSF 201 workshops are capped at 6 hours' do
-    workshop_csf_201 = create :workshop,
-      course: Pd::Workshop::COURSE_CSF,
-      subject: Pd::Workshop::SUBJECT_CSF_201,
-      each_session_hours: 7
-
+    workshop_csf_201 = create :csf_deep_dive_workshop, each_session_hours: 7
     assert_equal 6, workshop_csf_201.effective_num_hours
   end
 
