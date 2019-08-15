@@ -32,7 +32,7 @@ export default class AssetRow extends React.Component {
     onDelete: PropTypes.func.isRequired,
     soundPlayer: PropTypes.object,
     projectId: PropTypes.string,
-    levelChannelId: PropTypes.string,
+    levelName: PropTypes.string,
 
     // For logging purposes
     imagePicker: PropTypes.bool, // identifies if displayed by 'Manage Assets' flow
@@ -198,7 +198,7 @@ export default class AssetRow extends React.Component {
             timestamp={this.props.timestamp}
             api={this.api()}
             soundPlayer={this.props.soundPlayer}
-            levelChannelId={this.props.levelChannelId}
+            levelName={this.props.levelName}
           />
         </td>
         <td>{this.props.name}</td>
