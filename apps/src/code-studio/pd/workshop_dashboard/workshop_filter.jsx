@@ -46,7 +46,6 @@ const limitOptions = [
 ];
 
 const QUERY_API_URL = '/api/v1/pd/workshops/filter';
-const LEGACY_SUBJECT_PREFIX = '[Legacy]';
 
 export class WorkshopFilter extends React.Component {
   static propTypes = {
@@ -174,12 +173,6 @@ export class WorkshopFilter extends React.Component {
 
   handleSubjectChange = selected => {
     let subject = selected ? selected.value : null;
-
-    // Remove legacy prefix
-    if (subject.startsWith(LEGACY_SUBJECT_PREFIX)) {
-      subject = subject.substring(LEGACY_SUBJECT_PREFIX.length).trim();
-    }
-
     this.updateLocationAndSetFilters({subject});
   };
 
@@ -320,25 +313,34 @@ export class WorkshopFilter extends React.Component {
     }));
   }
 
-  mergeSubjectArrays(objValue, srcValue) {
+  getSubjectOptions(subjects, prefix = '') {
+    let result = {};
+
+    Object.keys(subjects).map(
+      course =>
+        (result[course] = subjects[course].map(subject => ({
+          value: subject,
+          label: prefix + subject
+        })))
+    );
+
+    return result;
+  }
+
+  concatSubjetArrays(objValue, srcValue) {
     if (_.isArray(objValue)) {
-      const legacySubjects = srcValue.map(
-        subject => LEGACY_SUBJECT_PREFIX + ' ' + subject
-      );
-      return objValue.concat(legacySubjects);
+      return objValue.concat(srcValue);
     }
   }
 
-  getSubjects() {
-    if (!this._subjects) {
-      this._subjects = _.mergeWith(
-        Subjects,
-        LegacySubjects,
-        this.mergeSubjectArrays
-      );
-    }
+  combineSubjectOptions(currentSubjects, legacySubjects) {
+    const legacyPrefix = '[Legacy] ';
 
-    return this._subjects;
+    return _.mergeWith(
+      this.getSubjectOptions(currentSubjects),
+      this.getSubjectOptions(legacySubjects, legacyPrefix),
+      this.concatSubjetArrays
+    );
   }
 
   render() {
@@ -350,6 +352,13 @@ export class WorkshopFilter extends React.Component {
 
     const startDate = this.parseDate(filters.start);
     const endDate = this.parseDate(filters.end);
+
+    if (!this.subjectOptions) {
+      this.subjectOptions = this.combineSubjectOptions(
+        Subjects,
+        LegacySubjects
+      );
+    }
 
     return (
       <Grid fluid>
@@ -405,7 +414,7 @@ export class WorkshopFilter extends React.Component {
             </FormGroup>
           </Col>
           <Clearfix visibleLgBlock />
-          {filters.course && this.getSubjects()[filters.course] && (
+          {filters.course && this.subjectOptions[filters.course] && (
             <Col md={5} sm={6}>
               <FormGroup>
                 <ControlLabel>Subject</ControlLabel>
@@ -413,10 +422,7 @@ export class WorkshopFilter extends React.Component {
                   value={filters.subject}
                   onChange={this.handleSubjectChange}
                   placeholder={null}
-                  options={this.getSubjects()[filters.course].map(v => ({
-                    value: v,
-                    label: v
-                  }))}
+                  options={this.subjectOptions[filters.course]}
                   {...SelectStyleProps}
                 />
               </FormGroup>
