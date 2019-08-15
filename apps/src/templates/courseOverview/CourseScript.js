@@ -70,8 +70,10 @@ class CourseScript extends Component {
         study_group: 'v0',
         event: value,
         script_id: id,
-        data_int: selectedSectionId,
-        data_string: name
+        data_json: JSON.stringify({
+          script_name: name,
+          section_id: selectedSectionId
+        })
       },
       {useProgressScriptId: false}
     );

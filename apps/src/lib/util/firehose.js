@@ -156,7 +156,8 @@ class FirehoseClient {
    * project gallery, we can also directly pass user_id as a field on the data * object. In this case, includeUserId should be false to avoid overriding
    * the manually set user_id.
    * NOTE: In scenarios where the script_id we want to log is different than
-   * that inferred by progress (such as in tracking which scripts a teacher has * hidden), we can directly pass script_id as a field on the data object by
+   * that inferred by progress (such as in tracking which scripts a teacher has
+   * hidden), we can directly pass script_id as a field on the data object by
    * setting useProgressScriptId to false to avoid overriding the manually set
    * script_id.
    */
