@@ -155,5 +155,26 @@ FactoryGirl.define do
       num_facilitators 1   # Most have 1 facilitator
       each_session_hours 7 # The most common session length
     end
+
+    # CSD Academic Year Workshops
+    factory :csd_academic_year_workshop do
+      subject do
+        [
+          Pd::Workshop::SUBJECT_CSD_WORKSHOP_1,
+          Pd::Workshop::SUBJECT_CSD_WORKSHOP_2,
+          Pd::Workshop::SUBJECT_CSD_WORKSHOP_3,
+          Pd::Workshop::SUBJECT_CSD_WORKSHOP_4
+        ].sample
+      end
+      course Pd::Workshop::COURSE_CSD
+      location_name 'Sunrise Middle School'
+
+      capacity 30          # Average capacity
+      on_map false         # Never on the map
+      funded               # About 58% are funded
+      num_sessions 1       # Most have 1 session
+      num_facilitators 2   # Most have 2 facilitators
+      each_session_hours 8 # The most common session length
+    end
   end
 end
