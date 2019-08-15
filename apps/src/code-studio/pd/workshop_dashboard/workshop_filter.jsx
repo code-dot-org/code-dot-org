@@ -172,7 +172,7 @@ export class WorkshopFilter extends React.Component {
   };
 
   handleSubjectChange = selected => {
-    let subject = selected ? selected.value : null;
+    const subject = selected ? selected.value : null;
     this.updateLocationAndSetFilters({subject});
   };
 
