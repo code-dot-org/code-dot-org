@@ -435,29 +435,29 @@ class FilesApi extends CollectionsApi {
 }
 
 class StarterAssetsApi {
-  getStarterAssets(levelChannelId, onSuccess, onFailure) {
+  getStarterAssets(levelName, onSuccess, onFailure) {
     return ajaxInternal(
       'GET',
-      this.withLevelChannelId(levelChannelId).basePath(''),
+      this.withLevelName(levelName).basePath(''),
       onSuccess,
       onFailure
     );
   }
 
-  withLevelChannelId(channelId) {
+  withLevelName(levelName) {
     var boundApi = new this.constructor();
-    boundApi.channelId = channelId;
+    boundApi.levelName = levelName;
     return boundApi;
   }
 
   basePath(path) {
-    if (!this || !this.channelId) {
+    if (!this || !this.levelName) {
       const error =
-        'You must bind the API and set channelId before creating a base path.';
+        'You must bind the API and set levelName before creating a base path.';
       throw new Error(error);
     }
 
-    return `/level_starter_assets/${this.channelId}/${path}`;
+    return `/level_starter_assets/${this.levelName}/${path}`;
   }
 
   deleteFile(filename, success, error) {
