@@ -6,7 +6,11 @@ import {
   getColumnNames,
   onColumnNames
 } from '@cdo/apps/storage/firebaseMetadata';
-import {init, getDatabase, getConfigRef} from '@cdo/apps/storage/firebaseUtils';
+import {
+  init,
+  getProjectDatabase,
+  getConfigRef
+} from '@cdo/apps/storage/firebaseUtils';
 
 describe('firebaseMetadata', () => {
   beforeEach(() => {
@@ -16,7 +20,7 @@ describe('firebaseMetadata', () => {
       firebaseAuthToken: 'test-firebase-auth-token',
       showRateLimitAlert: () => {}
     });
-    getDatabase().autoFlush();
+    getProjectDatabase().autoFlush();
     return getConfigRef()
       .set({
         limits: {
@@ -29,7 +33,7 @@ describe('firebaseMetadata', () => {
         maxTableCount: 3
       })
       .then(() => {
-        getDatabase().set(null);
+        getProjectDatabase().set(null);
       });
   });
 
