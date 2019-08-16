@@ -1,18 +1,20 @@
 class LevelStarterAssetsController < ApplicationController
+  before_action :set_level
+
   S3_BUCKET = 'cdo-v3-assets'.freeze
   S3_PREFIX = 'starter_assets/'.freeze
 
   # GET /level_starter_assets/:level_name
   def show
-    level_channel_id = params[:level_name]
-    starter_assets = get_file_objects(level_channel_id).map do |file_obj|
+    starter_assets = @level.starter_assets.map do |friendly_name, guid_name|
+      file_obj = get_file_object(prefix(guid_name))
+
       if file_obj.size.zero?
         nil
       else
-        filename = filename(level_channel_id, file_obj)
         {
-          filename: filename,
-          category: file_mime_type(File.extname(filename)),
+          filename: friendly_name,
+          category: file_mime_type(File.extname(guid_name)),
           size: file_obj.size,
           timestamp: file_obj.last_modified
         }
@@ -25,11 +27,10 @@ class LevelStarterAssetsController < ApplicationController
   # GET /level_starter_assets/:level_name/:filename
   # Returns requested file body as an IO stream.
   def file
-    level_channel_id = params[:level_name]
-    path = prefix("#{level_channel_id}/#{params[:filename]}.#{params[:format]}")
-    file_obj = get_file_object(path)
-    filename = filename(level_channel_id, file_obj)
-    content_type = file_content_type(File.extname(filename))
+    friendly_name = "#{params[:filename]}.#{params[:format]}"
+    guid_name = @level.starter_assets[friendly_name]
+    file_obj = get_file_object(prefix(guid_name))
+    content_type = file_content_type(File.extname(guid_name))
     send_data read_file(file_obj), type: content_type, disposition: 'inline'
   end
 
@@ -46,6 +47,10 @@ class LevelStarterAssetsController < ApplicationController
   end
 
   private
+
+  def set_level
+    @level = Level.cache_find(params[:level_name])
+  end
 
   def filename(key, file_obj)
     prefix = prefix("#{key}/")
