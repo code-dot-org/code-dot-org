@@ -279,7 +279,7 @@ module Pd
 
       sign_in @enrolled_academic_year_teacher
       get "/pd/workshop_survey/day/1?enrollmentCode=#{other_enrollment.code}"
-      assert_response :success, response.body
+      assert_response :success
     end
 
     test 'daily workshop submit redirect creates placeholder and redirects to first facilitator form' do
