@@ -26,8 +26,7 @@ module Pd::Payment
       workshop_ecs = create :workshop, :ended, on_map: false, funded: true,
         course: Pd::Workshop::COURSE_ECS, subject: Pd::Workshop::SUBJECT_ECS_PHASE_2
 
-      workshop_csp = create :workshop, :ended, on_map: true, funded: true,
-        course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_WORKSHOP_1
+      workshop_csp = create :csp_academic_year_workshop, :ended, on_map: true, funded: true
 
       workshop_cs_in_a = create :workshop, :ended, on_map: false, funded: true,
         course: Pd::Workshop::COURSE_CS_IN_A, subject: Pd::Workshop::SUBJECT_CS_IN_A_PHASE_2
@@ -73,8 +72,7 @@ module Pd::Payment
 
     test 'calculate payment' do
       # Use a standard payment for example:
-      workshop_standard = create :workshop, :ended, on_map: true, funded: true,
-        course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_WORKSHOP_1
+      workshop_standard = create :csp_academic_year_workshop, :ended, on_map: true, funded: true
 
       standard_summary = PaymentFactory.get_payment(workshop_standard)
       assert_not_nil standard_summary
