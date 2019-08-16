@@ -42,19 +42,10 @@ class LevelStarterAssetsController < ApplicationController
     bucket.object(path)
   end
 
-  def get_file_objects(key)
-    bucket.objects(prefix: prefix(key))
-  end
-
   private
 
   def set_level
     @level = Level.cache_find(params[:level_name])
-  end
-
-  def filename(key, file_obj)
-    prefix = prefix("#{key}/")
-    file_obj.key.sub(prefix, '')
   end
 
   def file_mime_type(extension)
