@@ -7,7 +7,7 @@ class LevelStarterAssetsController < ApplicationController
   # GET /level_starter_assets/:level_name
   def show
     starter_assets = @level.starter_assets.map do |friendly_name, guid_name|
-      file_obj = get_file_object(prefix(guid_name))
+      file_obj = get_object(prefix(guid_name))
 
       if file_obj.size.zero?
         nil
@@ -29,7 +29,7 @@ class LevelStarterAssetsController < ApplicationController
   def file
     friendly_name = "#{params[:filename]}.#{params[:format]}"
     guid_name = @level.starter_assets[friendly_name]
-    file_obj = get_file_object(prefix(guid_name))
+    file_obj = get_object(prefix(guid_name))
     content_type = file_content_type(File.extname(guid_name))
     send_data read_file(file_obj), type: content_type, disposition: 'inline'
   end
