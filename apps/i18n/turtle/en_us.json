@@ -43,7 +43,7 @@
   "hideTurtle": "hide artist",
   "jump": "jump",
   "jumpTo": "jump to",
-  "jumpToLeftPosition": "jump to the left position",
+  "jumpToLeftPosition": "jump to the top left position",
   "jumpToOverDown": "jump to {x} over {x} down",
   "jumpBackward": "jump backward by",
   "jumpForward": "jump forward by",
