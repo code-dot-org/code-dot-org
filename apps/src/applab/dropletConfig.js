@@ -575,6 +575,14 @@ export var blocks = [
     noAutocomplete: true
   },
   {
+    func: 'getColumn',
+    parent: api,
+    category: 'Data',
+    paletteParams: ['table', 'column'],
+    params: ['"mytable"', '"mycolumn"'],
+    nativeIsAsync: true
+  },
+  {
     func: 'createRecord',
     parent: api,
     category: 'Data',
