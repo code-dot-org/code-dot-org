@@ -6,20 +6,7 @@ class LevelStarterAssetsController < ApplicationController
 
   # GET /level_starter_assets/:level_name
   def show
-    starter_assets = @level.starter_assets.map do |friendly_name, guid_name|
-      file_obj = get_object(prefix(guid_name))
-
-      if file_obj.size.zero?
-        nil
-      else
-        {
-          filename: friendly_name,
-          category: file_mime_type(File.extname(guid_name)),
-          size: file_obj.size,
-          timestamp: file_obj.last_modified
-        }
-      end
-    end.compact
+    starter_assets = @level.starter_assets.map {|name, _| summarize(@level, name)}.compact
 
     render json: {starter_assets: starter_assets}
   end
@@ -59,14 +46,19 @@ class LevelStarterAssetsController < ApplicationController
   # HELPERS
   #
 
-  def summarize(level_channel_id, file_obj)
-    filename = filename(level_channel_id, file_obj)
-    {
-      filename: filename,
-      category: file_mime_type(File.extname(filename)),
-      size: file_obj.size,
-      timestamp: file_obj.last_modified
-    }
+  def summarize(level, friendly_name)
+    guid_name = level.starter_assets[friendly_name]
+    file_obj = get_object(prefix(guid_name))
+    if file_obj.size.zero?
+      nil
+    else
+      {
+        filename: friendly_name,
+        category: file_mime_type(File.extname(guid_name)),
+        size: file_obj.size,
+        timestamp: file_obj.last_modified
+      }
+    end
   end
 
   def read_file(file_obj)
