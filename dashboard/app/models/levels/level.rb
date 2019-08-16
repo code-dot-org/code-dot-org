@@ -72,6 +72,7 @@ class Level < ActiveRecord::Base
     encrypted
     teacher_markdown
     bubble_choice_description
+    starter_assets
   )
 
   # Fix STI routing http://stackoverflow.com/a/9463495

@@ -96,43 +96,33 @@ describe('clientApi module', () => {
   });
 
   describe('starter assets api', () => {
-    const levelChannelId = 1;
+    const levelName = 1;
 
     describe('getStarterAssets', () => {
       it('makes an ajax request to the correct url', () => {
-        clientApi.starterAssets.getStarterAssets(
-          levelChannelId,
-          () => {},
-          () => {}
-        );
+        clientApi.starterAssets.getStarterAssets(levelName, () => {}, () => {});
 
         expect(requests).to.have.length(1);
         expect(requests[0].method).to.equal('GET');
-        expect(requests[0].url).to.equal(
-          `/level_starter_assets/${levelChannelId}/`
-        );
+        expect(requests[0].url).to.equal(`/level_starter_assets/${levelName}/`);
       });
     });
 
-    describe('withLevelChannelId', () => {
-      it('binds channelId to the api and returns the bound api', () => {
-        const boundApi = clientApi.starterAssets.withLevelChannelId(
-          levelChannelId
-        );
+    describe('withLevelName', () => {
+      it('binds levelName to the api and returns the bound api', () => {
+        const boundApi = clientApi.starterAssets.withLevelName(levelName);
 
-        assert.equal(levelChannelId, boundApi.channelId);
+        assert.equal(levelName, boundApi.levelName);
       });
     });
 
     describe('basePath', () => {
       it('returns the correct base path', () => {
         const path = 'some-path';
-        const boundApi = clientApi.starterAssets.withLevelChannelId(
-          levelChannelId
-        );
+        const boundApi = clientApi.starterAssets.withLevelName(levelName);
 
         assert.equal(
-          `/level_starter_assets/${levelChannelId}/${path}`,
+          `/level_starter_assets/${levelName}/${path}`,
           boundApi.basePath(path)
         );
       });
@@ -140,15 +130,15 @@ describe('clientApi module', () => {
       it('throws an error if StarterAssetsApi is not bound', () => {
         assert.throws(
           clientApi.starterAssets.basePath,
-          'You must bind the API and set channelId before creating a base path.'
+          'You must bind the API and set levelName before creating a base path.'
         );
       });
 
-      it('throws an error if channelId is not set', () => {
-        const boundApi = clientApi.starterAssets.withLevelChannelId(undefined);
+      it('throws an error if levelName is not set', () => {
+        const boundApi = clientApi.starterAssets.withLevelName(undefined);
         assert.throws(
           boundApi.basePath,
-          'You must bind the API and set channelId before creating a base path.'
+          'You must bind the API and set levelName before creating a base path.'
         );
       });
     });

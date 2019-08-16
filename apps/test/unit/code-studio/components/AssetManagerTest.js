@@ -24,16 +24,17 @@ describe('AssetManager', () => {
   });
 
   describe('componentWillMount', () => {
-    it('gets starter assets if levelChannelId is present', () => {
-      shallow(<AssetManager {...DEFAULT_PROPS} levelChannelId={'1'} />);
+    it('gets starter assets if levelName is present', () => {
+      const levelName = 'my level name';
+      shallow(<AssetManager {...DEFAULT_PROPS} levelName={levelName} />);
 
       expect(requests).to.have.length(1);
       expect(requests[0].method).to.equal('GET');
-      expect(requests[0].url).to.equal('/level_starter_assets/1/');
+      expect(requests[0].url).to.equal(`/level_starter_assets/${levelName}/`);
     });
 
-    it('does not get starter assets if no levelChannelId', () => {
-      shallow(<AssetManager {...DEFAULT_PROPS} levelChannelId={undefined} />);
+    it('does not get starter assets if no levelName', () => {
+      shallow(<AssetManager {...DEFAULT_PROPS} levelName={undefined} />);
 
       expect(requests).to.have.length(0);
     });

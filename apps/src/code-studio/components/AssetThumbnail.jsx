@@ -60,15 +60,15 @@ class AssetThumbnail extends React.Component {
     iconStyle: PropTypes.object,
     api: PropTypes.object,
     projectId: PropTypes.string,
-    levelChannelId: PropTypes.string,
+    levelName: PropTypes.string,
     soundPlayer: PropTypes.object
   };
 
   constructor(props) {
     super(props);
     let api = this.props.api || assetsApi; // Fallback to assetsApi.
-    if (this.props.levelChannelId) {
-      api = api.withLevelChannelId(this.props.levelChannelId);
+    if (this.props.levelName) {
+      api = api.withLevelName(this.props.levelName);
     } else if (this.props.projectId) {
       api = api.withProjectId(this.props.projectId);
     }
