@@ -57,7 +57,7 @@ export default class AssetManager extends React.Component {
     soundPlayer: PropTypes.object,
     disableAudioRecording: PropTypes.bool,
     projectId: PropTypes.string,
-    levelChannelId: PropTypes.string,
+    levelName: PropTypes.string,
     isStartMode: PropTypes.bool,
 
     // For logging purposes
@@ -67,7 +67,7 @@ export default class AssetManager extends React.Component {
 
   // TODO: REMOVE DEFAULT PROPS
   static defaultProps = {
-    levelChannelId: '1',
+    levelName: 'U5 Lists Investigate Outfitly Code',
     isStartMode: true
   };
 
@@ -83,9 +83,9 @@ export default class AssetManager extends React.Component {
   }
 
   componentWillMount() {
-    if (this.props.levelChannelId) {
+    if (this.props.levelName) {
       starterAssetsApi.getStarterAssets(
-        this.props.levelChannelId,
+        this.props.levelName,
         this.onStarterAssetsReceived,
         this.onStarterAssetsFailure
       );
@@ -243,13 +243,11 @@ export default class AssetManager extends React.Component {
   };
 
   getStarterAssetRows = () => {
-    if (!this.props.levelChannelId || this.state.starterAssets.length === 0) {
+    if (!this.props.levelName || this.state.starterAssets.length === 0) {
       return [];
     }
 
-    const boundApi = starterAssetsApi.withLevelChannelId(
-      this.props.levelChannelId
-    );
+    const boundApi = starterAssetsApi.withLevelName(this.props.levelName);
     return this.state.starterAssets.map(asset => {
       return (
         <AssetRow
@@ -257,7 +255,7 @@ export default class AssetManager extends React.Component {
           api={boundApi}
           onChoose={() => console.log('choose!')}
           onDelete={() => console.log('delete!')}
-          levelChannelId={this.props.levelChannelId}
+          levelName={this.props.levelName}
         />
       );
     });
@@ -280,7 +278,7 @@ export default class AssetManager extends React.Component {
 
   uploadApi = () => {
     if (this.props.isStartMode) {
-      return starterAssetsApi.withLevelChannelId(this.props.levelChannelId);
+      return starterAssetsApi.withLevelName(this.props.levelName);
     } else {
       let api = this.props.useFilesApi ? filesApi : assetsApi;
 
