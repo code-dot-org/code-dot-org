@@ -1065,9 +1065,7 @@ module Pd
 
     def setup_academic_year_workshop
       @regional_partner = create :regional_partner
-      @academic_year_workshop = create :csp_academic_year_workshop,
-        num_facilitators: 2,
-        regional_partner: @regional_partner
+      @academic_year_workshop = create :csp_academic_year_workshop, regional_partner: @regional_partner
       @academic_year_enrollment = create :pd_enrollment, :from_user, workshop: @academic_year_workshop
       @enrolled_academic_year_teacher = @academic_year_enrollment.user
       @facilitators = @academic_year_workshop.facilitators.order(:name, :id)
