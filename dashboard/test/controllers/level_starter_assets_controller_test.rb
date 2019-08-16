@@ -11,7 +11,7 @@ class LevelStarterAssetsControllerTest < ActionController::TestCase
       MockS3ObjectSummary.new(key_2, 321, 2.days.ago)
     ]
     LevelStarterAssetsController.any_instance.
-      expects(:get_file_object).twice.
+      expects(:get_object).twice.
       returns(file_objs[0], file_objs[1])
     level_starter_assets = {
       'ty.png' => guid_name_1,
@@ -36,7 +36,7 @@ class LevelStarterAssetsControllerTest < ActionController::TestCase
     key = "starter_assets/#{guid_name}"
     file_obj = MockS3ObjectSummary.new(key, 123, 1.day.ago)
     LevelStarterAssetsController.any_instance.
-      expects(:get_file_object).
+      expects(:get_object).
       with(key).
       returns(file_obj)
     LevelStarterAssetsController.any_instance.
