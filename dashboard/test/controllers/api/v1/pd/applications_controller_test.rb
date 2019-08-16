@@ -354,7 +354,9 @@ module Api::V1::Pd
     end
 
     test 'update appends to the timestamp log if summer workshop is changed' do
-      summer_workshop = create :workshop, :local_summer_workshop, num_sessions: 5, sessions_from: Date.new(2019, 6, 1), processed_location: {city: 'Orchard Park', state: 'NY'}.to_json
+      summer_workshop = create :summer_workshop,
+        sessions_from: Date.new(2019, 6, 1),
+        processed_location: {city: 'Orchard Park', state: 'NY'}.to_json
 
       sign_in @program_manager
       @csp_facilitator_application.update(status_timestamp_change_log: '[]')
@@ -376,8 +378,13 @@ module Api::V1::Pd
     end
 
     test 'update does not append to the timestamp log if fit and summer workshop are not changed' do
-      summer_workshop = create :workshop, :local_summer_workshop, num_sessions: 5, sessions_from: Date.new(2019, 6, 1), processed_location: {city: 'Orchard Park', state: 'NY'}.to_json
-      fit_workshop = create :workshop, :fit, num_sessions: 3, sessions_from: Date.new(2019, 6, 1), processed_location: {city: 'Orchard Park', state: 'NY'}.to_json
+      summer_workshop = create :summer_workshop,
+        sessions_from: Date.new(2019, 6, 1),
+        processed_location: {city: 'Orchard Park', state: 'NY'}.to_json
+      fit_workshop = create :workshop, :fit,
+        num_sessions: 3,
+        sessions_from: Date.new(2019, 6, 1),
+        processed_location: {city: 'Orchard Park', state: 'NY'}.to_json
 
       sign_in @program_manager
       @csp_facilitator_application.update(status_timestamp_change_log: '[]')
@@ -648,7 +655,10 @@ module Api::V1::Pd
       time = Date.new(2017, 3, 15)
 
       Timecop.freeze(time) do
-        workshop = create :workshop, :local_summer_workshop, num_sessions: 3, sessions_from: Date.new(2017, 1, 1), processed_location: {city: 'Orchard Park', state: 'NY'}.to_json
+        workshop = create :summer_workshop,
+          num_sessions: 3,
+          sessions_from: Date.new(2017, 1, 1),
+          processed_location: {city: 'Orchard Park', state: 'NY'}.to_json
         create :pd_enrollment, workshop: workshop, user: @serializing_teacher
 
         application = create(
@@ -780,7 +790,10 @@ module Api::V1::Pd
       time = Date.new(2017, 3, 15)
 
       Timecop.freeze(time) do
-        workshop = create :workshop, :local_summer_workshop, num_sessions: 3, sessions_from: Date.new(2017, 1, 1), processed_location: {city: 'Orchard Park', state: 'NY'}.to_json
+        workshop = create :summer_workshop,
+          num_sessions: 3,
+          sessions_from: Date.new(2017, 1, 1),
+          processed_location: {city: 'Orchard Park', state: 'NY'}.to_json
         create :pd_enrollment, workshop: workshop, user: @serializing_teacher
 
         application = create(
