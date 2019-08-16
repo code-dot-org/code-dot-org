@@ -1,3 +1,12 @@
+# Most academic year workshops are one day workshops.
+# These specific workshop types are two day workshops.
+TWO_DAY_AYW_SUBJECTS = [
+  Pd::Workshop::SUBJECT_CSD_WORKSHOP_5,
+  Pd::Workshop::SUBJECT_CSD_WORKSHOP_6,
+  Pd::Workshop::SUBJECT_CSP_WORKSHOP_5,
+  Pd::Workshop::SUBJECT_CSP_WORKSHOP_6
+]
+
 #
 # Factories for different types of PD workshops
 #
@@ -158,45 +167,57 @@ FactoryGirl.define do
 
     # CSD Academic Year Workshops
     factory :csd_academic_year_workshop do
+      course Pd::Workshop::COURSE_CSD
+      location_name 'Sunrise Middle School'
+
       # Possible subjects:
       # Pd::Workshop::SUBJECT_CSD_WORKSHOP_1
       # Pd::Workshop::SUBJECT_CSD_WORKSHOP_2
       # Pd::Workshop::SUBJECT_CSD_WORKSHOP_3
       # Pd::Workshop::SUBJECT_CSD_WORKSHOP_4
+      # Pd::Workshop::SUBJECT_CSD_WORKSHOP_5 (2-day)
+      # Pd::Workshop::SUBJECT_CSD_WORKSHOP_6 (2-day)
       subject Pd::Workshop::SUBJECT_CSD_WORKSHOP_1
-      course Pd::Workshop::COURSE_CSD
-      location_name 'Sunrise Middle School'
 
-      capacity 30          # Average capacity
+      capacity 30          # Typical capacity
       on_map false         # Never on the map
-      funded               # About 58% are funded
-      num_sessions 1       # Most have 1 session
+      funded               # More than half are funded
       num_facilitators 2   # Most have 2 facilitators
-      each_session_hours 8 # The most common session length
+
+      # Workshops 5 and 6 are two-day workshops, others are one-day.
+      num_sessions {TWO_DAY_AYW_SUBJECTS.include?(subject) ? 2 : 1}
+
+      # The most common session length
+      each_session_hours {TWO_DAY_AYW_SUBJECTS.include?(subject) ? 7 : 8}
     end
 
     # CSP Academic Year Workshops
     factory :csp_academic_year_workshop do
+      course Pd::Workshop::COURSE_CSP
+      location_name 'Bayside High School'
+
       # Possible subjects:
       # Pd::Workshop::SUBJECT_CSP_WORKSHOP_1
       # Pd::Workshop::SUBJECT_CSP_WORKSHOP_2
       # Pd::Workshop::SUBJECT_CSP_WORKSHOP_3
       # Pd::Workshop::SUBJECT_CSP_WORKSHOP_4
+      # Pd::Workshop::SUBJECT_CSP_WORKSHOP_5 (2-day)
+      # Pd::Workshop::SUBJECT_CSP_WORKSHOP_6 (2-day)
       subject Pd::Workshop::SUBJECT_CSP_WORKSHOP_1
-      course Pd::Workshop::COURSE_CSP
-      location_name 'Bayside High School'
 
       capacity 29          # Average capacity
       on_map false         # Never on the map
-      funded               # About 57% are funded
-      num_sessions 1       # Most have 1 session
+      funded               # More than half are funded
       num_facilitators 2   # Most have 2 facilitators
-      each_session_hours 8 # The most common session length
+
+      # Workshops 5 and 6 are two-day workshops, others are one-day.
+      num_sessions {TWO_DAY_AYW_SUBJECTS.include?(subject) ? 2 : 1}
+
+      # The most common session length
+      each_session_hours {TWO_DAY_AYW_SUBJECTS.include?(subject) ? 7 : 8}
     end
 
     # TODO
-    # - CSD 2-day Workshops
-    # - CSP 2-day Workshops
     # - CSD 5-day Summer
     # - CSP 5-day Summer
     # - Admin workshop
