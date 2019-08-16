@@ -44,19 +44,6 @@ FactoryGirl.define do
     end
 
     # TODO: Change into a sub-factory
-    trait :local_summer_workshop do
-      course Pd::Workshop::COURSE_CSP
-      subject Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP
-    end
-
-    # TODO: Change into a sub-factory + trait
-    trait :local_summer_workshop_upcoming do
-      local_summer_workshop
-      num_sessions 5
-      sessions_from {Date.current + 3.months}
-    end
-
-    # TODO: Change into a sub-factory
     trait :fit do
       course Pd::Workshop::COURSE_CSP
       subject Pd::Workshop::SUBJECT_CSP_FIT
