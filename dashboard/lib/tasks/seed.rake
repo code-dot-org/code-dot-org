@@ -124,6 +124,16 @@ namespace :seed do
     :libraries,
   ].freeze
 
+  # Do the minimum amount of work to seed a single script, without seeding
+  # levels or other dependencies. For use in development. Example:
+  # rake seed:single_script SCRIPT_NAME=express-2019
+  task single_script: :environment do
+    script_name = ENV['SCRIPT_NAME']
+    raise "must specify SCRIPT_NAME=" unless script_name
+    script_files = ["config/scripts/#{script_name}.script"]
+    update_scripts(script_files: script_files)
+  end
+
   task scripts: SCRIPTS_DEPENDENCIES do
     update_scripts(incremental: false)
   end
