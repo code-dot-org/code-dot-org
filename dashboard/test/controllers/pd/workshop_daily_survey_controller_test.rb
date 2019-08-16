@@ -1073,8 +1073,7 @@ module Pd
 
     def setup_two_day_academic_year_workshop
       @regional_partner = create :regional_partner
-      @two_day_academic_year_workshop = create :csp_academic_year_workshop,
-        subject: SUBJECT_CSP_WORKSHOP_5,
+      @two_day_academic_year_workshop = create :csp_academic_year_workshop, :two_day,
         regional_partner: @regional_partner
       @two_day_academic_year_enrollment = create :pd_enrollment, :from_user,
         workshop: @two_day_academic_year_workshop
