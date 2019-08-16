@@ -178,7 +178,17 @@ FactoryGirl.define do
       funded               # More than half are funded
       num_facilitators 2   # Most have 2 facilitators
 
-      # Course can be derived from the chosen subject
+      # Some specific academic year workshops are usually two days instead of one.
+      # Add a trait making it easy to specify that we're testing a two-day workshop.
+      trait :two_day do
+        subject do
+          if course == Pd::Workshop::COURSE_CSP
+            Pd::Workshop::SUBJECT_CSP_WORKSHOP_5
+          else
+            Pd::Workshop::SUBJECT_CSD_WORKSHOP_5
+          end
+        end
+      end
 
       # Workshops 5 and 6 are two-day workshops, others are one-day.
       num_sessions {TWO_DAY_AYW_SUBJECTS.include?(subject) ? 2 : 1}
