@@ -134,12 +134,15 @@ def main
       end
     end
   end
-  existing_lines_of_code = Properties.get(:metrics) ? Properties.get(:metrics)['lines_of_code'] : 0
+
+  metrics = Properties.get(:metrics) || Hash.new(0)
+
+  existing_lines_of_code = metrics['lines_of_code']
   lines_of_code = [lines_of_code, existing_lines_of_code].max
 
   petition_signatures = PEGASUS_REPORTING_DB_READONLY[:forms].where(kind: 'Petition').group_by(:hashed_email).count
 
-  existing_project_count = Properties.get(:metrics) ? Properties.get(:metrics)['project_count'] : 0
+  existing_project_count = metrics['project_count']
 
   time = DateTime.now
   # Pull current project_count to keep that current value. Note that project_count will be set to nil
