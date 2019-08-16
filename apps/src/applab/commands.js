@@ -1829,6 +1829,45 @@ var handleSetKeyValueSyncError = function(opts, message) {
   outputWarning(message);
 };
 
+applabCommands.getColumn = function(opts) {
+  apiValidateType(opts, 'getColumn', 'table', opts.table, 'string');
+  apiValidateType(opts, 'getColumn', 'column', opts.column, 'string');
+
+  Applab.storage.readRecords(
+    opts.table,
+    {},
+    handleGetColumn.bind(this, opts),
+    handleGetColumnError.bind(this, opts)
+  );
+};
+
+var handleGetColumn = function(opts, records) {
+  let columnList = [];
+  if (records === null) {
+    outputError(
+      'You tried to read records from a table called ' +
+        opts.table +
+        ", but that table doesn't exist in this app."
+    );
+  }
+  records.forEach(row => columnList.push(row[opts.column]));
+  if (columnList.every(element => element === undefined)) {
+    outputError(
+      'You tried to get a column called ' +
+        opts.column +
+        '  from a table called ' +
+        opts.table +
+        ", but that column doesn't exist."
+    );
+  }
+  opts.callback(columnList);
+};
+
+var handleGetColumnError = function(opts, message) {
+  opts.callback([]);
+  outputWarning(message);
+};
+
 applabCommands.readRecords = function(opts) {
   // PARAMNAME: readRecords: table vs. tableName
   // PARAMNAME: readRecords: callback vs. callbackFunction
@@ -1862,8 +1901,9 @@ applabCommands.readRecords = function(opts) {
 applabCommands.handleReadRecords = function(opts, records) {
   if (records === null) {
     outputError(
-      opts.table +
-        ' is not a data set in this project. Check the Data tab to see the names of your tables.'
+      'You tried to read records from a table called ' +
+        opts.table +
+        ", but that table doesn't exist in this app."
     );
   }
   if (opts.onSuccess) {
