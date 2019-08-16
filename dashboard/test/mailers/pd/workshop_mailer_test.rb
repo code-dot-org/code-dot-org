@@ -110,21 +110,20 @@ class WorkshopMailerTest < ActionMailer::TestCase
   end
 
   test 'facilitator and organizer email links are complete urls' do
-    facilitator = create :facilitator
-    csf_workshop = create :csf_intro_workshop, facilitators: [facilitator]
+    csf_workshop = create :csf_intro_workshop
     csf_enrollment = create :pd_enrollment, workshop: csf_workshop
-    ecs_workshop = create :workshop, :ended, facilitators: [facilitator], course: Pd::Workshop::COURSE_ECS, subject: Pd::Workshop::SUBJECT_ECS_PHASE_2
+    ecs_workshop = create :workshop, :ended, num_facilitators: 1, course: Pd::Workshop::COURSE_ECS, subject: Pd::Workshop::SUBJECT_ECS_PHASE_2
     ecs_enrollment = create :pd_enrollment, workshop: ecs_workshop
     mails = []
 
-    mails << Pd::WorkshopMailer.facilitator_enrollment_reminder(facilitator, ecs_workshop)
+    mails << Pd::WorkshopMailer.facilitator_enrollment_reminder(ecs_workshop.facilitators.first, ecs_workshop)
     mails << Pd::WorkshopMailer.organizer_enrollment_reminder(ecs_workshop)
     mails << Pd::WorkshopMailer.organizer_cancel_receipt(ecs_enrollment)
     mails << Pd::WorkshopMailer.organizer_cancel_receipt(csf_enrollment)
     mails << Pd::WorkshopMailer.organizer_enrollment_receipt(ecs_enrollment)
     mails << Pd::WorkshopMailer.organizer_should_close_reminder(ecs_workshop)
     mails << Pd::WorkshopMailer.organizer_should_close_reminder(csf_workshop)
-    mails << Pd::WorkshopMailer.facilitator_detail_change_notification(facilitator, csf_workshop)
+    mails << Pd::WorkshopMailer.facilitator_detail_change_notification(csf_workshop.facilitators.first, csf_workshop)
     mails << Pd::WorkshopMailer.organizer_detail_change_notification(csf_workshop)
 
     mails.each {|mail| assert links_are_complete_urls?(mail, allowed_urls: ['#'])}
