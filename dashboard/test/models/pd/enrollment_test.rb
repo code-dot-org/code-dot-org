@@ -300,14 +300,18 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
   end
 
   test 'academic year survey filter' do
-    workshop = create :workshop, course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_WORKSHOP_1
+    workshop = create :csp_academic_year_workshop
     teacher = create :teacher
     enrollment = create :pd_enrollment, :from_user, user: teacher, workshop: workshop
 
     assert_equal [enrollment], Pd::Enrollment.filter_for_survey_completion([enrollment], false)
 
     # complete survey
-    create :pd_workshop_daily_survey, pd_workshop: workshop, user: enrollment.user, form_id: Pd::WorkshopDailySurvey.get_form_id_for_subject_and_day(workshop.subject, 'post_workshop'), day: 1
+    create :pd_workshop_daily_survey,
+      pd_workshop: workshop,
+      user: enrollment.user,
+      form_id: Pd::WorkshopDailySurvey.get_form_id_for_subject_and_day(workshop.subject, 'post_workshop'),
+      day: 1
     assert_equal [], Pd::Enrollment.filter_for_survey_completion([enrollment], false)
   end
 

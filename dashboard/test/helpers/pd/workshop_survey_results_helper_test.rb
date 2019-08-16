@@ -28,7 +28,7 @@ class Pd::WorkshopSurveyResultsHelperTest < ActionView::TestCase
     facilitator_1 = create :facilitator, name: 'Facilitator Person 1'
     facilitator_2 = create :facilitator, name: 'Facilitator Person 2'
     @workshop = create :workshop, :local_summer_workshop, course: COURSE_CSP, facilitators: [facilitator_1, facilitator_2], num_sessions: 5
-    @academic_year_workshop = create :workshop, course: COURSE_CSP, subject: SUBJECT_CSP_WORKSHOP_5, num_facilitators: 2, num_sessions: 2
+    @academic_year_workshop = create :csp_academic_year_workshop, :two_day
 
     @pre_workshop_questions = [
       Pd::JotForm::MatrixQuestion.new(

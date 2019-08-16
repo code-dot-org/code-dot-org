@@ -9,14 +9,11 @@ module Pd::Payment
       @program_manager = create :workshop_organizer
       @regional_partner = create :regional_partner, program_managers: [@program_manager]
 
-      @csp_workshop = create :workshop,
+      @csp_workshop = create :csp_academic_year_workshop,
         :ended,
         organizer: @program_manager,
-        course: Pd::Workshop::COURSE_CSP,
-        subject: Pd::Workshop::SUBJECT_CSP_WORKSHOP_1,
         enrolled_and_attending_users: 20,
-        num_sessions: 2,
-        num_facilitators: 2
+        num_sessions: 2
     end
 
     test 'Raise error if workshop is not ended' do
@@ -50,7 +47,7 @@ module Pd::Payment
     end
 
     test 'Error raised if workshop has no regional partner' do
-      unpartnered_workshop = create(:workshop, :ended, course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_WORKSHOP_1)
+      unpartnered_workshop = create :csp_academic_year_workshop, :ended, regional_partner: nil
       error = assert_raises(RuntimeError) do
         PaymentCalculator.instance.calculate(unpartnered_workshop)
       end

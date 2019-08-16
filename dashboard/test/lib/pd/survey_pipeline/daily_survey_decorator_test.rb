@@ -8,8 +8,7 @@ module Pd::SurveyPipeline
     self.use_transactional_test_case = true
     setup_all do
       @facilitators = create_list :facilitator, 2
-      @workshop = create :workshop, course: COURSE_CSF, subject: SUBJECT_CSF_201,
-        num_sessions: 1, facilitators: @facilitators
+      @workshop = create :csf_deep_dive_workshop, facilitators: @facilitators
 
       @program_manager = create :program_manager
       @workshop_admin = create :workshop_admin
@@ -225,8 +224,7 @@ module Pd::SurveyPipeline
 
     test 'get context of CSF survey submissions' do
       facilitator = create :facilitator
-      workshop = create :workshop, course: COURSE_CSF, subject: SUBJECT_CSF_201,
-        num_sessions: 1, facilitators: [facilitator]
+      workshop = create :csf_deep_dive_workshop, facilitators: [facilitator]
       form_id = '1122334455'.to_i
 
       survey_metadata_to_context = {
@@ -262,9 +260,8 @@ module Pd::SurveyPipeline
     end
 
     test 'get context of academic year workshop survey submissions' do
-      facilitator = create :facilitator
-      workshop = create :workshop, course: COURSE_CSP, subject: SUBJECT_CSP_WORKSHOP_1,
-        num_sessions: 1, facilitators: [facilitator]
+      workshop = create :csp_academic_year_workshop
+      facilitator = workshop.facilitators.first
       daily_form_id = '1122334455'.to_i
       post_ws_form_id = '82115646319154'.to_i
 
