@@ -13,8 +13,7 @@ module Pd::Payment
         :ended,
         organizer: @program_manager,
         enrolled_and_attending_users: 20,
-        num_sessions: 2,
-        num_facilitators: 2
+        num_sessions: 2
     end
 
     test 'Raise error if workshop is not ended' do
