@@ -13101,3 +13101,11 @@ en:
           description_audience: CS Principles Facilitators in Training 2019
           description_short: ''
           description: ''
+        csd-pilot:
+          stages:
+            Pilot Information:
+              name: Pilot Information
+          title: CSD Pilot Course
+          description_audience: ''
+          description_short: ''
+          description: ''
