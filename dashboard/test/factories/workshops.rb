@@ -229,9 +229,34 @@ FactoryGirl.define do
       factory(:csd_academic_year_workshop) {csd}
     end
 
+    # 5-day local summer workshops
+    factory :summer_workshop do
+      # CSP local summer workshop by default
+      csp
+
+      location_name 'Greedale Community College'
+      on_map false         # Never on the map
+      funded false         # Less than half are funded
+      num_facilitators 2   # Most have 2 facilitators
+      num_sessions 5       # Most have 5 sessions
+      each_session_hours 8 # The most common session length
+
+      trait :csp do
+        course Pd::Workshop::COURSE_CSP
+        subject Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP
+        capacity 40          # Average capacity
+      end
+      factory(:csp_summer_workshop) {csp}
+
+      trait :csd do
+        course Pd::Workshop::COURSE_CSD
+        subject Pd::Workshop::SUBJECT_CSD_SUMMER_WORKSHOP
+        capacity 35          # Average capacity
+      end
+      factory(:csd_summer_workshop) {csd}
+    end
+
     # TODO
-    # - CSD 5-day Summer
-    # - CSP 5-day Summer
     # - Admin workshop
     # - Facilitator workshop
     # - Counselor workshop
