@@ -92,9 +92,11 @@ export default class SetupChecklist extends Component {
 
       // Can we talk to the firmware?
       .then(() =>
-        this.detectStep(STATUS_BOARD_CONNECT, () =>
-          setupChecker.detectCorrectFirmware()
-        )
+        this.detectStep(STATUS_BOARD_CONNECT, () => {
+          setupChecker.detectCorrectFirmware().then(() => {
+            this.setState({boardTypeDetected: setupChecker.detectBoardType()});
+          });
+        })
       )
 
       // Can we initialize components successfully?
@@ -102,11 +104,6 @@ export default class SetupChecklist extends Component {
         this.detectStep(STATUS_BOARD_COMPONENTS, () =>
           setupChecker.detectComponentsInitialize()
         )
-      )
-
-      // Detect the type of board to see whether firmware can be programmatically flashed
-      .then(() =>
-        this.setState({boardTypeDetected: setupChecker.detectBoardType()})
       )
 
       // Everything looks good, let's par-tay!
