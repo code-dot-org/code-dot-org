@@ -4730,6 +4730,8 @@ pl:
               name: Wysyłanie wiadomości binarnych z wykorzystaniem symulatora internetu
             Intellectual Property:
               name: Własność intelektualna
+            Binary Numbers:
+              name: Liczby binarne
         csd-videos:
           stages:
             new stage:
@@ -4853,3 +4855,7 @@ pl:
               name: Programowanie w labiryncie
             Loops in Ice Age:
               name: Pętle w Epoce Lodowcowej
+        dlp19-csd-mod-w2:
+          stages:
+            new stage:
+              name: nowy etap

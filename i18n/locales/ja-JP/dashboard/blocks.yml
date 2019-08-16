@@ -870,9 +870,9 @@ ja:
       RyanLab_moveForward:
         text: 前に すすむ
       RyanLab_turnLeft:
-        text: 左に回転
+        text: ひだりに まがる
       RyanLab_turnRight:
-        text: 右に回転
+        text: みぎに まがる
       Vector_positionCenter:
         text: 中央
       aalab_changePropByFlexible:

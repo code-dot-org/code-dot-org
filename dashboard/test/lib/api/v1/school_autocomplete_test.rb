@@ -24,7 +24,6 @@ class Api::V1::SchoolAutocompleteTest < ActiveSupport::TestCase
   end
 
   test 'search by unique name matches only 1 school' do
-    skip 'workaround for Aug 8 DB issue'
     search_results = Api::V1::SchoolAutocomplete.get_matches('Chalkville', MAXIMUM_RESULTS, false)
     assert_equal 1, search_results.count
     assert search_results.detect {|school| school[:nces_id] == '10000200277'}
@@ -50,21 +49,18 @@ class Api::V1::SchoolAutocompleteTest < ActiveSupport::TestCase
   end
 
   test 'search by partial name matches school' do
-    skip 'workaround for Aug 8 DB issue'
     search_results = Api::V1::SchoolAutocomplete.get_matches('Albert', MAXIMUM_RESULTS, false)
     # ALBERT EINSTEIN ACADEMY ELEMENTARY
     assert search_results.detect {|school| school[:nces_id] == '60000113717'}
   end
 
   test 'search by partial word matches school' do
-    skip 'workaround for Aug 8 DB issue'
     search_results = Api::V1::SchoolAutocomplete.get_matches('Alb', MAXIMUM_RESULTS, false)
     # ALBERT EINSTEIN ACADEMY ELEMENTARY
     assert search_results.detect {|school| school[:nces_id] == '60000113717'}
   end
 
   test 'search by common abbreviation returns multiple matches' do
-    skip 'workaround for Aug 8 DB issue'
     search_results = Api::V1::SchoolAutocomplete.get_matches('Sch', MAXIMUM_RESULTS, false)
     assert_equal 8, search_results.count
     # Alakanuk School
@@ -84,7 +80,6 @@ class Api::V1::SchoolAutocompleteTest < ActiveSupport::TestCase
   end
 
   test 'new search by unique name matches only 1 school' do
-    skip 'workaround for Aug 8 DB issue'
     search_results = Api::V1::SchoolAutocomplete.get_matches('Chalkville', MAXIMUM_RESULTS, true)
     assert_equal 1, search_results.count
     assert search_results.detect {|school| school[:nces_id] == '10000200277'}
@@ -119,7 +114,6 @@ class Api::V1::SchoolAutocompleteTest < ActiveSupport::TestCase
 
   # New search intentionally has fewer low relevance matches with common abbreviations.
   test 'new search by common abbreviation returns multiple matches' do
-    skip 'workaround for Aug 8 DB issue'
     search_results = Api::V1::SchoolAutocomplete.get_matches('Sch', MAXIMUM_RESULTS, true)
     assert_equal 4, search_results.count
     # Ala Avenue Middle Sch

@@ -254,6 +254,12 @@ pt-BR:
         CSD_U3_L17_S7_C1: A pontuação é impressa aqui.
       CSD U3 platform scoreboard_2019:
         CSD_U3_L17_S7_C1: A pontuação é impressa aqui.
+      CSD U3 platform variable1:
+        callout: Este bloco cria uma variável.
+      CSD U3 platform variable1_2018:
+        callout: Este bloco cria uma variável.
+      CSD U3 platform variable1_2019:
+        callout: Este bloco cria uma variável.
       CSD U3 rect:
         CSD_U3_rect_c1: Aqui está o código
         CSD_U3_rect_c2: Aqui está o botão "Executar".

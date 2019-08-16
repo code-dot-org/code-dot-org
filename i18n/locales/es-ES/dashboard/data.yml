@@ -524,6 +524,8 @@ es:
         csd_gamelab_functions: Llamar y definir funciones
         csd_applab_parameters: Funciones con parámetros
         csd_applab_loops: Bucles en el App Lab
+        CSF_Going_Places_Safely: Mi vecino en línea
+        CSF_SpriteLab_Intro_v2: Introduciendo laboratorio de codificadores
         CSF_Spritelab_MakeSprite_v2: Como hacer un sprite
         CSF_SpriteLab_SpritesInAction_v2: Sprites en accion
     callout:

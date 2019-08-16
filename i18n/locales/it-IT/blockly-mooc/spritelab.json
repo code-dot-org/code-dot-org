@@ -1,13 +1,4 @@
 {
-  "animationPicker_drawYourOwn": "",
-  "animationPicker_error": "",
-  "animationPicker_failedToParseImage": "",
-  "animationPicker_title": "",
-  "animationPicker_unsupportedType": "",
-  "animationPicker_unsupportedSize": "",
-  "animationPicker_uploadImage": "",
-  "animationPicker_uploading": "",
-  "animationPicker_warning": "",
   "errorLoadingAnimation": "Sembra ci siano dei problemi a caricare l'animazione \"{animationName}\". Assicurati di avere una buona connessione ad Internet e prova a ricaricare la pagina. Se il problema persiste, è possibile che questa animazione sia guasta. In questo caso, dovresti rimuovere l'animazione.",
   "reinfFeedbackMsg": "Hai finito! Clicca su \"Continua\" per passare all'esercizio successivo.",
   "shareGame": "Condividi il tuo gioco:",

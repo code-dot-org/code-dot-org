@@ -2126,6 +2126,8 @@ nl:
               name: Systemen voor getalnotatie
             Sending Binary Messages:
               name: Binaire berichten verzenden
+            Binary Numbers:
+              name: Binaire getallen
         time4csdemo:
           stages:
             Crowdsourcing:

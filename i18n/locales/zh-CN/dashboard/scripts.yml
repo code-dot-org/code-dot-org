@@ -731,6 +731,7 @@ zh-CN:
             The Design Recipe:
               name: 设计食谱
         ECSPD-NexTech:
+          logo_image: nextech_logo.png
           stages:
             Growth Mindset:
               name: 增长思维
@@ -745,6 +746,7 @@ zh-CN:
             What is ECS?:
               name: 什么是ECS？
         ECSPD-iZone:
+          logo_image: izone_logo.png
           stages:
             Growth Mindset:
               name: 增长思维
@@ -759,6 +761,7 @@ zh-CN:
             What is ECS?:
               name: 什么是ECS？
         algebraPD-NexTech:
+          logo_image: nextech_logo.png
           stages:
             Course Overview:
               name: 课程概述
@@ -773,6 +776,7 @@ zh-CN:
             Why Computer Science belongs in Algebra:
               name: 为什么计算机科学属于代数
         algebraPD-iZone:
+          logo_image: izone_logo.png
           stages:
             Course Overview:
               name: 课程概述
@@ -787,6 +791,7 @@ zh-CN:
             Why Computer Science belongs in Algebra:
               name: 为什么计算机科学属于代数
         sciencePD-NexTech:
+          logo_image: nextech_logo.png
           stages:
             Agent Based Modeling of Complex Adaptive Systems:
               name: 复杂自适应系统的基于代理人的建模
@@ -813,6 +818,7 @@ zh-CN:
             What to Expect:
               name: 期待着什么
         sciencePD-iZone:
+          logo_image: izone_logo.png
           stages:
             Agent Based Modeling of Complex Adaptive Systems:
               name: 复杂自适应系统的基于代理人的建模
@@ -9785,6 +9791,10 @@ zh-CN:
               name: 在互联网模拟器上发送二进制消息
             Intellectual Property:
               name: 知识产权
+            CS Principles Pre-survey:
+              name: 计算机科学原理预调查
+            Binary Numbers:
+              name: 二进制数
           title: 计算机科学原理 单元1 试验
         csd-tests:
           stages:
@@ -10538,3 +10548,7 @@ zh-CN:
           stages:
             Deeper Learning Overview:
               name: 更深的学习概览
+        dlp19-csd-mod-w2:
+          stages:
+            new stage:
+              name: 新的阶段

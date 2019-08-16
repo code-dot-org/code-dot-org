@@ -835,19 +835,31 @@ uk:
               name: Особисті інновації
             The Internet:
               name: Інтернет
+            Post-Course Survey:
+              name: Опитування після закінчення курсу
+        csp2-2017:
+          stages:
+            Post-Course Survey:
+              name: Опитування після закінчення курсу
         csp3-2017:
           description_short: Програмування
           stages:
             Creating Functions:
               name: Створення функцій
+            Post-Course Survey:
+              name: Опитування після закінчення курсу
         csp4-2017:
           stages:
             Simple Encryption:
               name: Просте шифрування
+            Post-Course Survey:
+              name: Опитування після закінчення курсу
         csp5-2017:
           stages:
             While Loops:
               name: Цикли "поки"
+            Post-Course Survey:
+              name: Опитування після закінчення курсу
         CSDU3-Draft:
           description_short: Програмування
           stages:
@@ -1168,6 +1180,10 @@ uk:
               name: Ласкаво просимо!
             Wrap-Up:
               name: Підведення підсумків
+        csppostap-2017:
+          stages:
+            Post-Course Survey:
+              name: Опитування після закінчення курсу
         csd6-draft:
           stages:
             Lists:
@@ -1413,6 +1429,14 @@ uk:
           stages:
             Minecraft Hour of Code:
               name: Година коду від Майнкрафт
+        csp-explore-2017:
+          stages:
+            Post-Course Survey:
+              name: Опитування після закінчення курсу
+        csp-create-2017:
+          stages:
+            Post-Course Survey:
+              name: Опитування після закінчення курсу
         course-e-2018:
           stages:
             Building a Foundation:
@@ -1865,6 +1889,10 @@ uk:
           stages:
             While Loops:
               name: Цикли "поки"
+        csp1-pilot:
+          stages:
+            Binary Numbers:
+              name: Двійкові Числа
         time4csdemo:
           stages:
             Crowdsourcing:
@@ -1873,6 +1901,10 @@ uk:
               name: Листівки та умови
             Building a Foundation:
               name: Закладання основ
+        csp7-pilot-staging:
+          stages:
+            Libraries:
+              name: Бібліотеки
         express-2018-vn:
           stages:
             Graph Paper Programming:

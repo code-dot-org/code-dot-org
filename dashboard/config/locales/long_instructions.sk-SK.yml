@@ -1256,6 +1256,9 @@ sk-SK:
         na spodok ostatných blokov, aby si dokončíl tento kód?
       courseA_maze_ramp5a_2018: Skús túto úlohu vyriešiť bez pomoci!
       courseA_maze_ramp5a_2019: Skús túto úlohu vyriešiť bez pomoci!
+      courseA_maze_seq13_2019: Dostaň sa ku prasiatku akoukoľvek cestou!
+      courseA_maze_seq_challenge2_2019: Nájdi cestu a priveď vtáka ku prasiatku. Vyhni
+        sa TNT, lebo bude lietať perie!
       courseB_Scrat_ramp1_2018: Aby si dostal Scrata k žaluďu, pripoj blok <xml><block
         type="maze_moveEast"/></xml> na spodok bloku <xml><block type="when_run"/></xml>,
         potom stlač "▶ Spustiť"!
@@ -1321,6 +1324,14 @@ sk-SK:
         ![](https://images.code.org/126edbb030b78586c620fea11bd9c867-image-1497998152966.gif)
         ![](https://images.code.org/a4fc9deba0ecdae5f434a828708d997b-image-1497998171788.gif)
         ![](https://images.code.org/55271714dcfc01bf49441cdf3bf17649-image-1497998176661.gif)
+      courseB_artist_loops1_2019: Toto je nový typ úlohy nazývaný "Umelec". V tomto
+        leveli sa trochu pohraj a nakresli niečo zábavné.
+      courseB_artist_loops2_2019: Umelec sa pokúša nakresliť čiaru **6** krát, ale
+        nedarí sa mu. Vieš mu pomôcť?
+      courseB_artist_loops3_2019: Pomôž umelcovi nakresliť čiaru 7 krát, aby vytvoril
+        záhradný múr.
+      courseB_artist_loops5_2019: Je čas opraviť schody! Opakuj tento vzor **5** krát,
+        aby umelec dosiahol na vrchol kríkov.
       courseB_artist_loops6: Za kríkmi je nádherný vinič plný kvetov. Dokáźeš sa vyštverať
         po viniči, aby si uvidel kam smeruje?
       courseB_artist_loops6_2018: Za kríkmi je nádherný vinič plný kvetov. Dokáźeš
@@ -1332,6 +1343,10 @@ sk-SK:
         okolo."
       courseB_artist_loops7_2019: "**Výzva:** Toto je skrytá záhrada! Prejdime sa
         okolo."
+      courseB_artist_loops8_2019: Je čas ísť domov. Môžeš opraviť tento rebrík s použitím
+        iba jedného bloku, aby sa umelec dostal dolu?
+      courseB_artist_loops9_2019: Poďme domov skratkou cez rybník. Pomôžeš umelcovi
+        ostať na kameňoch?
       courseB_artist_loops_challenge1: _"Poďme hádzať kockami! Pomôžeš mi ich nakresliť?"_
       courseB_artist_loops_challenge1_2018: _"Poďme hádzať kockami! Pomôžeš mi ich
         nakresliť?"_
@@ -1343,6 +1358,9 @@ sk-SK:
         dostať 3 do jedného riadku?
       courseB_artist_loops_challenge2_2019: Nakresli toľko X, koľko len dokážes. Dokážeš
         dostať 3 do jedného riadku?
+      courseB_collector_loops10_2019: Pomôž Laurel pozbierať všetky drahokamy z tejto
+        jaskyne.
+      courseB_collector_loops11_2019: Heuréka! Pozbieraj toľko drahokamov, koľko dokážeš!
       courseB_collector_loops1_2018: "**Voľná hra:** Pohybuj Laurel po hracej ploche
         a pozbieraj toľko drahokamov, koľko zvládneš. Na splnenie úlohy musíš zobrať
         aspoň jeden.  \n\n* * *\n\nPresuň bloky na pracovú plochu a skús prísť na
@@ -1369,6 +1387,19 @@ sk-SK:
         s použitím iba jedného bloku <xml><block type="maze_moveEast"/></xml>?
       courseB_collector_loops3_2019: Ako môze Laurel pozbierať všetkých päť kôp drahokamov
         s použitím iba jedného bloku <xml><block type="maze_moveEast"/></xml>?
+      courseB_collector_loops4_2019: Oprav Laurelinu cestu, aby pozbierala všetky
+        drahokamy!
+      courseB_collector_loops5_2019: 'Pridaj ďalšie príkazy ku kódu z predošlej úlohy
+        a pozbieraj všetky poklady. '
+      courseB_collector_loops6_2019: Vymysli kód, ktorý pomôže Laurel pozbierať všetky
+        drahokamy!
+      courseB_collector_loops7_2019: Napíš kód na pozbieranie všetkých týchto drahokamov.
+      courseB_collector_loops8_2019: "**Výzva:** Drahokamy sú na týchto schodoch!
+        Napíš kód, ktorý pomôže Laurel všetky pozbierať."
+      courseB_collector_loops9_2019: _"Pomôž mi pozbierať drahokamy z tohto hlbokého
+        údolia."_
+      courseB_collector_loops_challenge1_2019: 'Tentokrát máš obmedzený počet blokov.
+        Pozbieraj všetky drahokamy! '
       courseB_collector_loops_challenge2a: |-
         _"Poďme zbierať drahokamy!"_
 
@@ -1411,6 +1442,19 @@ sk-SK:
         sa poň dostať?
       courseB_iceage_loops9_2019: Žaluď je tak ďaleko! Dokážeš použiť cykly a pomôcť
         Scratovi sa poň dostať?
+      courseB_maze_seq10_2019: Oprav chyby, aby sa Scrat dostal k žaluďu.
+      courseB_maze_seq11_2019: To si celý ty! Dostaň Scrata k žaluďu.
+      courseB_maze_seq12_2019: A teraz získaj ten žaluď hocijakým spôsobom!
+      courseB_maze_seq1_2019: |-
+        Pohraj sa s týmito príkázmi, aby si zistil, čo robia so Scratom.
+        Na dokončenie levelu dostaň Scrata k žaluďu.
+      courseB_maze_seq4_2019: Použi **2** pohybové bloky, aby sa Scrat dostal k žaluďu.
+      courseB_maze_seq5_2019: Táto úloha je trochu náročná!
+      courseB_maze_seq6_2019: Pohni sa jedným smerom, potom iným, aby sa Scrat dostal
+        k žaluďu!
+      courseB_maze_seq7_2019: Zisti, čo tu chýba a potom pridaj bloky, aby sa Scrat
+        dostal k žaluďu!
+      courseB_maze_seq8_2019: Si na ťahu! Čo potrebuješ, aby sa Scrat dostal k žaluďu?
       courseB_maze_seq9_2018: "**Výzva:** Prejdi okolo rozbitého ľadu, aby sa Scrat
         dostal k žaluďu."
       courseB_maze_seq9_2019: "**Výzva:** Prejdi okolo rozbitého ľadu, aby sa Scrat
@@ -1421,12 +1465,16 @@ sk-SK:
         nájsť cestu skôr, ako minieš všetky bloky?
       courseB_maze_seq_challenge1_2019: Máš iba štyri kusy z každého bloku. Dokážes
         nájsť cestu skôr, ako minieš všetky bloky?
+      courseB_maze_seq_challenge2_2019: Analyzuj tento level. Toto sú tie správne
+        bloky, ale sú v nesprávnom poradí!
       courseB_playLab_events1: "Táto hra sa volá \"Play Lab\". \n\nPozrime sa, či
         prídeš na to, čo každý blok robí."
       courseB_playLab_events1_2018: "Táto hra sa volá \"Play Lab\". \n\nPozrime sa,
         či prídeš na to, čo každý blok robí."
       courseB_playLab_events1_2019: "Táto hra sa volá \"Play Lab\". \n\nPozrime sa,
         či prídeš na to, čo každý blok robí."
+      courseB_playlab_events2_2019: Prikáž dračici Daisy, aby povedala niečo, keď
+        stlačíš "Spustiť".
       courseB_playlab_events3: Použi udalosť, aby Dračica Daisy zmenila náhodne ![](https://images.code.org/c365e065614fea592612264f33624c09-image-1475698889081.17.53.png)
         náladu , ked na ňu klikneš.
       courseB_playlab_events3_2018: Použi udalosť, aby Dračica Daisy zmenila náhodne
@@ -1481,6 +1529,8 @@ sk-SK:
         * * *
 
         Na dokončenie úlohy prejdi cez všetky ciele a potom naraz do draka.
+      courseB_playlab_eventsFP_2019: "**Voľná zábava:** Použi svoju predstavivosť.
+        Ako možěs spraviť túto hru viac zábavnou?"
       courseB_playlab_events_challenge1: "Je čas na Veľké Zvieracie Preteky! Prikáž
         zviaratám hýbať sa dole vždy, keď stlačíš `▼`. \n\nKto bude najrýchlejší?"
       courseB_playlab_events_challenge1_2018: "Je čas na Veľké Zvieracie Preteky!

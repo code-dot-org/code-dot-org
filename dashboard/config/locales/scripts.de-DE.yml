@@ -2440,6 +2440,8 @@ de:
               name: Binäre Nachrichten senden
             Sending Binary Messages with the Internet Simulator:
               name: Binäre Nachrichten mit dem Internet-Simulator senden
+            Binary Numbers:
+              name: Binärzahlen
         time4csdemo:
           stages:
             Crowdsourcing:

@@ -9056,6 +9056,18 @@ is-IS:
 
           **Kúluspil** - Láttu eina veruna hreyfast með örvarlyklum (notaðu `þegar upp ör` og `þegar niður ör` kubba) og spilaðu svo hljóð af handahófi þegar hún rekst á aðrar verur á skjánum.
       courseC_PlayLab_eventsFP_2019:
+        idea1: |-
+          _Vantar þig hugmyndir?_
+
+          **Hver er þar?** Láttu persónurnar birtast í mismunandi myndum völdum af handahófi svo enginn veit hver birtist næst.
+
+          <img src= "https://images.code.org/dbd6ece9d0fb213039ea5dccb91fc425-image-1563577859889.gif" style="width: 200px">
+        idea2: |-
+          _Vantar þig hugmyndir?_
+
+          **Á leið í ævintýri** - Breyttu bakgrunninum og láttu svo persónurnar segja hvar þær eru hverju sinni.
+
+          <img src= "https://images.code.org/a7f740d73074deb128cdc2826abda9e6-image-1563576781779.gif" style="width: 200px">
         idea3: |-
           _Vantar hugmyndir?_
 
@@ -13659,6 +13671,9 @@ is-IS:
           lykkjuna sem athugar stað sjóræningjans (en ekki inn í `ef` setninguna)
           til að fyrirbyggja að stig séu dregin frá of hratt.
       courseD_scrat_ramp1:
+        courseC_maze_programming1_a: Ef Skrat er ekki að komast til akornsins, þarftu
+          að gæta þess að allir þrír kubbarnir hafi verið tengdir saman og smella
+          svo aftur á "Keyra".
         courseC_maze_programming1_b: Ekki hræðast að gera mistök! Prófaðu að bæta
           við kubbum og keyra svo kóðann til að sjá hvað gerist jafnvel þó þér finnist
           þú ekki hafa klárað lausnina.
@@ -13691,8 +13706,12 @@ is-IS:
           að horninu?
         courseC_maze_programming5_c: Þú þarft að snúa til vinstri við hornið til að
           ná svíninu.
+      courseD_scrat_ramp6:
+        courseC_maze_programming6a_a: Notaðu `endurtaka` lykkju til láta Skrat hreyfast!
       courseD_scrat_ramp7:
         courseD_scrat_programming6_a: Það eru tvær leiðir til að leysa þessa þraut!
+        courseD_scrat_programming6_b: Mundu að snúa Skrat áður þú hreyfir hann vegna
+          þess að hann snýr í ranga átt.
         courseD_scrat_programming6_c: Ekki hræðast að gera mistök! Prófaðu að bæta
           við kubbum og keyra svo kóðann til að sjá hvað gerist jafnvel þó þér finnist
           þú ekki hafa klárað lausnina.
