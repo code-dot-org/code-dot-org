@@ -249,7 +249,7 @@ module Pd
 
     test 'enrollment code override is used when fetching the workshop for a user' do
       setup_academic_year_workshop
-      other_academic_workshop = create :csp_academic_year_workshop, subject: Pd::Workshop::SUBJECT_CSP_WORKSHOP_1,
+      other_academic_workshop = create :csp_academic_year_workshop,
         regional_partner: @regional_partner, facilitators: @facilitators, sessions_from: Date.today + 1.month
       other_enrollment = create :pd_enrollment, :from_user, workshop: other_academic_workshop, user: @enrolled_academic_year_teacher
       create :pd_attendance, session: other_academic_workshop.sessions[0], teacher: @enrolled_academic_year_teacher, enrollment: other_enrollment
@@ -1066,7 +1066,6 @@ module Pd
     def setup_academic_year_workshop
       @regional_partner = create :regional_partner
       @academic_year_workshop = create :csp_academic_year_workshop,
-        subject: SUBJECT_CSP_WORKSHOP_1,
         num_facilitators: 2,
         regional_partner: @regional_partner
       @academic_year_enrollment = create :pd_enrollment, :from_user, workshop: @academic_year_workshop

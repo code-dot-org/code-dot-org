@@ -158,14 +158,12 @@ FactoryGirl.define do
 
     # CSD Academic Year Workshops
     factory :csd_academic_year_workshop do
-      subject do
-        [
-          Pd::Workshop::SUBJECT_CSD_WORKSHOP_1,
-          Pd::Workshop::SUBJECT_CSD_WORKSHOP_2,
-          Pd::Workshop::SUBJECT_CSD_WORKSHOP_3,
-          Pd::Workshop::SUBJECT_CSD_WORKSHOP_4
-        ].sample
-      end
+      # Possible subjects:
+      # Pd::Workshop::SUBJECT_CSD_WORKSHOP_1
+      # Pd::Workshop::SUBJECT_CSD_WORKSHOP_2
+      # Pd::Workshop::SUBJECT_CSD_WORKSHOP_3
+      # Pd::Workshop::SUBJECT_CSD_WORKSHOP_4
+      subject Pd::Workshop::SUBJECT_CSD_WORKSHOP_1
       course Pd::Workshop::COURSE_CSD
       location_name 'Sunrise Middle School'
 
@@ -179,14 +177,12 @@ FactoryGirl.define do
 
     # CSP Academic Year Workshops
     factory :csp_academic_year_workshop do
-      subject do
-        [
-          Pd::Workshop::SUBJECT_CSP_WORKSHOP_1,
-          Pd::Workshop::SUBJECT_CSP_WORKSHOP_2,
-          Pd::Workshop::SUBJECT_CSP_WORKSHOP_3,
-          Pd::Workshop::SUBJECT_CSP_WORKSHOP_4
-        ].sample
-      end
+      # Possible subjects:
+      # Pd::Workshop::SUBJECT_CSP_WORKSHOP_1
+      # Pd::Workshop::SUBJECT_CSP_WORKSHOP_2
+      # Pd::Workshop::SUBJECT_CSP_WORKSHOP_3
+      # Pd::Workshop::SUBJECT_CSP_WORKSHOP_4
+      subject Pd::Workshop::SUBJECT_CSP_WORKSHOP_1
       course Pd::Workshop::COURSE_CSP
       location_name 'Bayside High School'
 
