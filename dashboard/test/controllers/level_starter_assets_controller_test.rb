@@ -13,12 +13,11 @@ class LevelStarterAssetsControllerTest < ActionController::TestCase
     LevelStarterAssetsController.any_instance.
       expects(:get_file_object).twice.
       returns(file_objs[0], file_objs[1])
-    level = create(:level)
     level_starter_assets = {
       'ty.png' => guid_name_1,
       'welcome.jpg' => guid_name_2
     }
-    level.update!(starter_assets: level_starter_assets)
+    level = create(:level, starter_assets: level_starter_assets)
 
     get :show, params: {level_name: level.name}
     starter_assets = JSON.parse(response.body)['starter_assets']
@@ -44,11 +43,10 @@ class LevelStarterAssetsControllerTest < ActionController::TestCase
       expects(:read_file).
       with(file_obj).
       returns('hello, world!')
-    level = create(:level)
     level_starter_assets = {
       'ty.png' => guid_name
     }
-    level.update!(starter_assets: level_starter_assets)
+    level = create(:level, starter_assets: level_starter_assets)
 
     get :file, params: {level_name: level.name, filename: 'ty', format: 'png'}
 
