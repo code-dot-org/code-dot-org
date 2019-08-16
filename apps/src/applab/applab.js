@@ -23,7 +23,7 @@ import {
   onColumnNames,
   addMissingColumns
 } from '../storage/firebaseMetadata';
-import {getProjectDatabase} from '../storage/firebaseUtils';
+import {getProjectDatabase, getSharedDatabase} from '../storage/firebaseUtils';
 import * as apiTimeoutList from '../lib/util/timeoutList';
 import designMode from './designMode';
 import applabTurtle from './applabTurtle';
@@ -47,6 +47,7 @@ const {ApplabInterfaceMode} = applabConstants;
 import {DataView} from '../storage/constants';
 import consoleApi from '../consoleApi';
 import {
+  tableType,
   addTableName,
   deleteTableName,
   updateTableColumns,
@@ -814,13 +815,26 @@ function setupReduxSubscribers(store) {
   });
 
   if (store.getState().pageConstants.hasDataMode) {
+    if (experiments.isEnabled(experiments.APPLAB_DATASETS)) {
+      const sharedTablesRef = getSharedDatabase().child('counters/tables');
+      sharedTablesRef.on('child_added', snapshot => {
+        store.dispatch(
+          addTableName(
+            typeof snapshot.key === 'function' ? snapshot.key() : snapshot.key,
+            tableType.SHARED
+          )
+        );
+      });
+    }
+
     // Initialize redux's list of tables from firebase, and keep it up to date as
     // new tables are added and removed.
     const tablesRef = getProjectDatabase().child('counters/tables');
     tablesRef.on('child_added', snapshot => {
       store.dispatch(
         addTableName(
-          typeof snapshot.key === 'function' ? snapshot.key() : snapshot.key
+          typeof snapshot.key === 'function' ? snapshot.key() : snapshot.key,
+          tableType.PROJECT
         )
       );
     });
@@ -1274,37 +1288,57 @@ function onDataViewChange(view, oldTableName, newTableName) {
   if (!getStore().getState().pageConstants.hasDataMode) {
     throw new Error('onDataViewChange triggered without data mode enabled');
   }
-  const storageRef = getProjectDatabase().child('storage');
+
+  const projectStorageRef = getProjectDatabase().child('storage');
+  const sharedStorageRef = getSharedDatabase().child('storage');
 
   // Unlisten from previous data view. This should not interfere with events listened to
   // by onRecordEvent, which listens for added/updated/deleted events, whereas we are
   // only unlistening from 'value' events here.
-  storageRef.child('keys').off('value');
-  storageRef.child(`tables/${oldTableName}/records`).off('value');
+  projectStorageRef.child('keys').off('value');
+  projectStorageRef.child(`tables/${oldTableName}/records`).off('value');
+  sharedStorageRef.child(`tables/${oldTableName}/records`).off('value');
   getColumnsRef(oldTableName).off();
 
   switch (view) {
     case DataView.PROPERTIES:
-      storageRef.child('keys').on('value', snapshot => {
+      projectStorageRef.child('keys').on('value', snapshot => {
         getStore().dispatch(updateKeyValueData(snapshot.val()));
       });
       return;
-    case DataView.TABLE:
-      // Add any columns which appear in records in Firebase to the list of columns in
-      // Firebase. Do NOT do this every time the records change, to avoid adding back
-      // a column shortly after it was explicitly renamed or deleted.
-      addMissingColumns(newTableName);
+    case DataView.TABLE: {
+      if (
+        experiments.isEnabled(experiments.APPLAB_DATASETS) &&
+        getStore().getState().data.tableListMap[newTableName] ===
+          tableType.SHARED
+      ) {
+        sharedStorageRef
+          .child(`tables/${newTableName}/records`)
+          .on('value', snapshot => {
+            getStore().dispatch(
+              updateTableRecords(newTableName, snapshot.val())
+            );
+          });
+      } else {
+        // Add any columns which appear in records in Firebase to the list of columns in
+        // Firebase. Do NOT do this every time the records change, to avoid adding back
+        // a column shortly after it was explicitly renamed or deleted.
+        addMissingColumns(newTableName);
 
-      onColumnNames(newTableName, columnNames => {
-        getStore().dispatch(updateTableColumns(newTableName, columnNames));
-      });
-
-      storageRef
-        .child(`tables/${newTableName}/records`)
-        .on('value', snapshot => {
-          getStore().dispatch(updateTableRecords(newTableName, snapshot.val()));
+        onColumnNames(newTableName, columnNames => {
+          getStore().dispatch(updateTableColumns(newTableName, columnNames));
         });
+
+        projectStorageRef
+          .child(`tables/${newTableName}/records`)
+          .on('value', snapshot => {
+            getStore().dispatch(
+              updateTableRecords(newTableName, snapshot.val())
+            );
+          });
+      }
       return;
+    }
     default:
       return;
   }
