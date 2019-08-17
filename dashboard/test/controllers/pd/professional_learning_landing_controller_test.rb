@@ -51,10 +51,7 @@ class Pd::ProfessionalLearningLandingControllerTest < ::ActionController::TestCa
 
   test 'FiT workshops do not show up as pending exit surveys' do
     # Fake FiT workshop, which should not produce an exit survey
-    fit_workshop = create :workshop,
-      :ended,
-      course: Pd::Workshop::COURSE_CSF,
-      subject: Pd::Workshop::SUBJECT_CSF_FIT
+    fit_workshop = create :fit_workshop, :ended
 
     # Given a teacher that attended the workshop, such that they would get
     # a survey for any other workshop subject.
@@ -74,16 +71,10 @@ class Pd::ProfessionalLearningLandingControllerTest < ::ActionController::TestCa
   test 'FiT workshops do not interfere with other pending exit surveys' do
     # Fake CSF workshop (older than the FiT workshop) which should
     # produce a pending exit survey
-    csf_workshop = create :workshop,
-      :ended,
-      course: Pd::Workshop::COURSE_CSF,
-      ended_at: Date.today - 1.day
+    csf_workshop = create :csf_workshop, :ended, ended_at: Date.today - 1.day
 
     # Fake FiT workshop, which should not produce an exit survey
-    fit_workshop = create :workshop,
-      :ended,
-      course: Pd::Workshop::COURSE_CSD,
-      subject: Pd::Workshop::SUBJECT_CSD_FIT
+    fit_workshop = create :fit_workshop, :ended
 
     # Given a teacher that attended both workshops
     teacher = create :teacher
