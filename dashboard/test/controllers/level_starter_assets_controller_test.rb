@@ -2,10 +2,10 @@ require 'test_helper'
 
 class LevelStarterAssetsControllerTest < ActionController::TestCase
   test 'show: returns summary of assets' do
-    guid_name_1 = "#{SecureRandom.uuid}.png"
-    key_1 = "starter_assets/#{guid_name_1}"
-    guid_name_2 = "#{SecureRandom.uuid}.jpg"
-    key_2 = "starter_assets/#{guid_name_2}"
+    uuid_name_1 = "#{SecureRandom.uuid}.png"
+    key_1 = "starter_assets/#{uuid_name_1}"
+    uuid_name_2 = "#{SecureRandom.uuid}.jpg"
+    key_2 = "starter_assets/#{uuid_name_2}"
     file_objs = [
       MockS3ObjectSummary.new(key_1, 123, 1.day.ago),
       MockS3ObjectSummary.new(key_2, 321, 2.days.ago)
@@ -14,8 +14,8 @@ class LevelStarterAssetsControllerTest < ActionController::TestCase
       expects(:get_object).twice.
       returns(file_objs[0], file_objs[1])
     level_starter_assets = {
-      'ty.png' => guid_name_1,
-      'welcome.jpg' => guid_name_2
+      'ty.png' => uuid_name_1,
+      'welcome.jpg' => uuid_name_2
     }
     level = create(:level, starter_assets: level_starter_assets)
 
@@ -32,8 +32,8 @@ class LevelStarterAssetsControllerTest < ActionController::TestCase
   end
 
   test 'file: returns requested file' do
-    guid_name = "#{SecureRandom.uuid}.png"
-    key = "starter_assets/#{guid_name}"
+    uuid_name = "#{SecureRandom.uuid}.png"
+    key = "starter_assets/#{uuid_name}"
     file_obj = MockS3ObjectSummary.new(key, 123, 1.day.ago)
     LevelStarterAssetsController.any_instance.
       expects(:get_object).
@@ -44,7 +44,7 @@ class LevelStarterAssetsControllerTest < ActionController::TestCase
       with(file_obj).
       returns('hello, world!')
     level_starter_assets = {
-      'ty.png' => guid_name
+      'ty.png' => uuid_name
     }
     level = create(:level, starter_assets: level_starter_assets)
 
