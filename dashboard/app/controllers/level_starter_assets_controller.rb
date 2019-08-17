@@ -35,7 +35,7 @@ class LevelStarterAssetsController < ApplicationController
     # Replace the friendly file name with a UUID for storage in S3 to avoid naming conflicts.
     uuid_name = SecureRandom.uuid + File.extname(friendly_name)
     file_obj = get_object(prefix(uuid_name))
-    success = file_obj.upload_file(upload.tempfile.path)
+    success = file_obj&.upload_file(upload.tempfile.path)
 
     if success && @level.add_starter_asset(friendly_name, uuid_name)
       render json: summarize(@level, friendly_name)
@@ -51,8 +51,7 @@ class LevelStarterAssetsController < ApplicationController
   def summarize(level, friendly_name)
     uuid_name = level.starter_assets[friendly_name]
     file_obj = get_object(prefix(uuid_name))
-    # TODO: catch gracefully if file not found
-    if file_obj.size.zero?
+    if file_obj.nil? || file_obj.size.zero?
       nil
     else
       {
@@ -69,7 +68,18 @@ class LevelStarterAssetsController < ApplicationController
   end
 
   def get_object(path)
-    bucket.object(path)
+    file_obj = bucket.object(path)
+    # S3 won't throw an error if file_obj isn't found *until* you try to access
+    # the object. Calling .size allows us to make sure the object is present
+    # before returning it or logging an error to HB.
+    file_obj.size
+    file_obj
+  rescue Aws::S3::Errors::NotFound => e
+    Honeybadger.notify(
+      error_class: e,
+      error_message: "Unable to find starter asset with path #{path} for level '#{@level.name}'"
+    )
+    nil
   end
 
   private
