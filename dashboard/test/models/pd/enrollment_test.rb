@@ -406,7 +406,7 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
 
     # Ended Facilitator workshop, with attendance
     # (Checks a special case: Facilitator workshops don't have exit surveys)
-    facilitator_workshop = create :workshop, :ended, course: COURSE_FACILITATOR
+    facilitator_workshop = create :facilitator_workshop, :ended
     facilitator_enrollment = create :pd_enrollment, workshop: facilitator_workshop
     create :pd_attendance, session: facilitator_workshop.sessions.first, enrollment: facilitator_enrollment
 

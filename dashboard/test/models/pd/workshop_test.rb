@@ -380,7 +380,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   test 'send_exit_surveys sends no surveys for Facilitator workshops' do
     # Make a Facilitator workshop that's ended and has attendance;
     # these are the conditions under which we'd normally send a survey.
-    workshop = create :workshop, :ended, course: COURSE_FACILITATOR
+    workshop = create :facilitator_workshop, :ended
     create(:pd_workshop_participant, workshop: workshop, enrolled: true, attended: true)
 
     # Ensure no exit surveys are sent
