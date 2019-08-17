@@ -21,7 +21,7 @@ class LevelStarterAssetsController < ApplicationController
     send_data read_file(file_obj), type: content_type, disposition: 'inline'
   end
 
-  # POST /level_starter_assets/:id
+  # POST /level_starter_assets/:level_name
   def upload
     return head :forbidden unless current_user&.levelbuilder? && Rails.application.config.levelbuilder_mode
 
@@ -31,12 +31,14 @@ class LevelStarterAssetsController < ApplicationController
     end
 
     upload = params[:files]&.first
-    prefix = prefix("#{params[:id]}/#{upload.original_filename}")
-    file_obj = get_object(prefix)
+    friendly_name = upload.original_filename
+    # Replace the friendly file name with a UUID for storage in S3 to avoid naming conflicts.
+    uuid_name = SecureRandom.uuid + File.extname(friendly_name)
+    file_obj = get_object(prefix(uuid_name))
     success = file_obj.upload_file(upload.tempfile.path)
 
-    if success
-      render json: summarize(params[:id], file_obj)
+    if success && @level.add_starter_asset(friendly_name, uuid_name)
+      render json: summarize(@level, friendly_name)
     else
       return head :unprocessable_entity
     end
@@ -46,9 +48,11 @@ class LevelStarterAssetsController < ApplicationController
   # HELPERS
   #
 
+  # TODO: /s/guid/uuid
   def summarize(level, friendly_name)
     guid_name = level.starter_assets[friendly_name]
     file_obj = get_object(prefix(guid_name))
+    # TODO: catch gracefully if file not found
     if file_obj.size.zero?
       nil
     else
