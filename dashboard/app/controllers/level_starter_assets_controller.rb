@@ -16,7 +16,7 @@ class LevelStarterAssetsController < ApplicationController
   def file
     friendly_name = "#{params[:filename]}.#{params[:format]}"
     guid_name = @level.starter_assets[friendly_name]
-    file_obj = get_object(prefix(guid_name))
+    file_obj = get_object(guid_name)
     content_type = file_content_type(File.extname(guid_name))
     send_data read_file(file_obj), type: content_type, disposition: 'inline'
   end
@@ -34,7 +34,7 @@ class LevelStarterAssetsController < ApplicationController
     friendly_name = upload.original_filename
     # Replace the friendly file name with a UUID for storage in S3 to avoid naming conflicts.
     uuid_name = SecureRandom.uuid + File.extname(friendly_name)
-    file_obj = get_object(prefix(uuid_name))
+    file_obj = get_object(uuid_name)
     success = file_obj&.upload_file(upload.tempfile.path)
 
     if success && @level.add_starter_asset(friendly_name, uuid_name)
@@ -50,7 +50,7 @@ class LevelStarterAssetsController < ApplicationController
 
   def summarize(level, friendly_name)
     uuid_name = level.starter_assets[friendly_name]
-    file_obj = get_object(prefix(uuid_name))
+    file_obj = get_object(uuid_name)
     if file_obj.nil? || file_obj.size.zero?
       nil
     else
@@ -67,7 +67,8 @@ class LevelStarterAssetsController < ApplicationController
     file_obj.get.body.read
   end
 
-  def get_object(path)
+  def get_object(s3_filename)
+    path = prefix(s3_filename)
     file_obj = bucket.object(path)
     # S3 won't throw an error if file_obj isn't found *until* you try to access
     # the object. Calling .size allows us to make sure the object is present
