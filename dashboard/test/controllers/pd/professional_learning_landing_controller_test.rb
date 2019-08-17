@@ -33,10 +33,7 @@ class Pd::ProfessionalLearningLandingControllerTest < ::ActionController::TestCa
 
   test 'Admin workshops may show up as pending exit surveys' do
     # Fake Admin workshop, which should produce an exit survey
-    admin_workshop = create :workshop,
-      :ended,
-      course: Pd::Workshop::COURSE_ADMIN,
-      subject: nil
+    admin_workshop = create :admin_workshop, :ended
 
     # Given a teacher that attended the workshop
     teacher = create :teacher

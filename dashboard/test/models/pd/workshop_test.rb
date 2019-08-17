@@ -327,8 +327,8 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
 
   test 'account_required_for_attendance?' do
     normal_workshop = create :workshop, :ended
-    counselor_workshop = create :workshop, :ended, course: Pd::Workshop::COURSE_COUNSELOR
-    admin_workshop = create :workshop, :ended, course: Pd::Workshop::COURSE_ADMIN
+    counselor_workshop = create :counselor_workshop, :ended
+    admin_workshop = create :admin_workshop, :ended
 
     assert normal_workshop.account_required_for_attendance?
     refute counselor_workshop.account_required_for_attendance?
@@ -345,7 +345,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   end
 
   test 'send_exit_surveys with attendance but no account gets email for counselor admin' do
-    workshop = create :workshop, :ended, course: Pd::Workshop::COURSE_COUNSELOR
+    workshop = create :counselor_workshop, :ended
 
     enrollment = create :pd_enrollment, workshop: workshop
     create :pd_attendance_no_account, session: workshop.sessions.first, enrollment: enrollment
@@ -469,8 +469,10 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
 
   test 'friendly name' do
     Geocoder.expects(:search).returns([])
-    workshop = create :workshop, course: Pd::Workshop::COURSE_ADMIN, location_name: 'Code.org',
-      location_address: 'Seattle, WA', sessions: [create(:pd_session, start: Date.new(2016, 9, 1))]
+    workshop = create :admin_workshop,
+      location_name: 'Code.org',
+      location_address: 'Seattle, WA',
+      sessions: [create(:pd_session, start: Date.new(2016, 9, 1))]
 
     # no subject
     assert_equal 'Admin workshop on 09/01/16 at Code.org in Seattle, WA', workshop.friendly_name
