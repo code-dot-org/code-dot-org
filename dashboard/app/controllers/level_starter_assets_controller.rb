@@ -15,9 +15,9 @@ class LevelStarterAssetsController < ApplicationController
   # Returns requested file body as an IO stream.
   def file
     friendly_name = "#{params[:filename]}.#{params[:format]}"
-    guid_name = @level.starter_assets[friendly_name]
-    file_obj = get_object(guid_name)
-    content_type = file_content_type(File.extname(guid_name))
+    uuid_name = @level.starter_assets[friendly_name]
+    file_obj = get_object(uuid_name)
+    content_type = file_content_type(File.extname(uuid_name))
     send_data read_file(file_obj), type: content_type, disposition: 'inline'
   end
 
