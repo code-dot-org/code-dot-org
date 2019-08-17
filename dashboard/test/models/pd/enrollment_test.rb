@@ -400,7 +400,7 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
 
     # Ended FiT workshop, with attendance
     # (Checks a special case: FiT workshops don't have exit surveys)
-    fit_workshop = create :workshop, :ended, subject: SUBJECT_FIT
+    fit_workshop = create :fit_workshop, :ended
     fit_enrollment = create :pd_enrollment, workshop: fit_workshop
     create :pd_attendance, session: fit_workshop.sessions.first, enrollment: fit_enrollment
 
