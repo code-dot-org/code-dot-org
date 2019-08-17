@@ -10,6 +10,9 @@ if [ -n "$DRONE" ]; then
   curl -s https://codecov.io/bash > ${CODECOV}
   chmod +x ${CODECOV}
   CODECOV="$CODECOV -C $DRONE_COMMIT_SHA"
+
+  # Limit parallelism on Drone to reduce chances of PhantomJS crashes.
+  NPROC=2
 else
   # For non-Drone runs, stub-out codecov.
   CODECOV=: # stub
