@@ -42,11 +42,8 @@ module Pd::Payment
 
     test 'counselor admin calculator' do
       # Mix of public and private types
-      workshop_counselor = create :workshop, :ended, on_map: false, funded: true,
-        course: Pd::Workshop::COURSE_COUNSELOR
-
-      workshop_admin = create :workshop, :ended, on_map: true, funded: true,
-        course: Pd::Workshop::COURSE_ADMIN
+      workshop_counselor = create :counselor_workshop, :ended, :funded
+      workshop_admin = create :admin_workshop, :ended, :funded
 
       assert_equal PaymentCalculatorCounselorAdmin, PaymentFactory.get_calculator_class(workshop_counselor)
       assert_equal PaymentCalculatorCounselorAdmin, PaymentFactory.get_calculator_class(workshop_admin)

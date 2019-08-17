@@ -96,10 +96,10 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     csp_workshop = create :workshop, :ended, course: Pd::Workshop::COURSE_CSP
     csp_enrollment = create :pd_enrollment, workshop: csp_workshop
 
-    counselor_workshop = create :workshop, :ended, course: Pd::Workshop::COURSE_COUNSELOR
+    counselor_workshop = create :counselor_workshop, :ended
     counselor_enrollment = create :pd_enrollment, workshop: counselor_workshop
 
-    admin_workshop = create :workshop, :ended, course: Pd::Workshop::COURSE_ADMIN
+    admin_workshop = create :admin_workshop, :ended
     admin_enrollment = create :pd_enrollment, workshop: admin_workshop
 
     local_summer_workshop = create :csp_summer_workshop, :ended
@@ -434,7 +434,7 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     # Root cause: WHERE subject != 'xyz' implicitly excludes rows where subject IS NULL too.
 
     # Ended Admin workshop with attendance; Admin workshops have no subject.
-    admin_workshop = create :workshop, :ended, course: COURSE_ADMIN, subject: nil
+    admin_workshop = create :admin_workshop, :ended
     expected_enrollment = create :pd_enrollment, workshop: admin_workshop
     create :pd_attendance, session: admin_workshop.sessions.first, enrollment: expected_enrollment
 
