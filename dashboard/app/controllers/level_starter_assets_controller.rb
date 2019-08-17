@@ -70,9 +70,8 @@ class LevelStarterAssetsController < ApplicationController
   def get_object(s3_filename)
     path = prefix(s3_filename)
     file_obj = bucket.object(path)
-    # S3 won't throw an error if file_obj isn't found *until* you try to access
-    # the object. Calling .size allows us to make sure the object is present
-    # before returning it or logging an error to HB.
+    # S3 won't throw a NotFound error *until* you try to access the file object.
+    # Calling .size makes sure the object is present before returning it or logging to HB.
     file_obj.size
     file_obj
   rescue Aws::S3::Errors::NotFound => e
