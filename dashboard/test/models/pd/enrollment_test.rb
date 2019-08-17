@@ -125,7 +125,7 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
 
     assert normal_enrollment.should_send_exit_survey?
 
-    fit_workshop = create :workshop, :ended, course: Pd::Workshop::COURSE_CSD, subject: Pd::Workshop::SUBJECT_CSD_FIT
+    fit_workshop = create :fit_workshop, :ended
     fit_enrollment = create :pd_enrollment, user: create(:teacher), workshop: fit_workshop
 
     refute fit_enrollment.should_send_exit_survey?
@@ -139,7 +139,7 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
   end
 
   test 'send_exit_survey does not send mail for FIT Weekend workshops' do
-    workshop = create :workshop, :ended, course: Pd::Workshop::COURSE_CSD, subject: Pd::Workshop::SUBJECT_CSD_FIT
+    workshop = create :fit_workshop, :ended
     enrollment = create :pd_enrollment, user: create(:teacher), workshop: workshop
     Pd::WorkshopMailer.expects(:exit_survey).never
 
