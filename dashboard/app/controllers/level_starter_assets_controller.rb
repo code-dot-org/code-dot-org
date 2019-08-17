@@ -48,17 +48,16 @@ class LevelStarterAssetsController < ApplicationController
   # HELPERS
   #
 
-  # TODO: /s/guid/uuid
   def summarize(level, friendly_name)
-    guid_name = level.starter_assets[friendly_name]
-    file_obj = get_object(prefix(guid_name))
+    uuid_name = level.starter_assets[friendly_name]
+    file_obj = get_object(prefix(uuid_name))
     # TODO: catch gracefully if file not found
     if file_obj.size.zero?
       nil
     else
       {
         filename: friendly_name,
-        category: file_mime_type(File.extname(guid_name)),
+        category: file_mime_type(File.extname(uuid_name)),
         size: file_obj.size,
         timestamp: file_obj.last_modified
       }
