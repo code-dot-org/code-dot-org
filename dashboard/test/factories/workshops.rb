@@ -43,12 +43,6 @@ FactoryGirl.define do
       subject Pd::Workshop::SUBJECT_CSP_TEACHER_CON
     end
 
-    # TODO: Change into a sub-factory
-    trait :fit do
-      course Pd::Workshop::COURSE_CSP
-      subject Pd::Workshop::SUBJECT_CSP_FIT
-    end
-
     trait :in_progress do
       started_at {Time.zone.now}
     end
