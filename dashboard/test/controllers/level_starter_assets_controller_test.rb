@@ -1,6 +1,21 @@
 require 'test_helper'
 
 class LevelStarterAssetsControllerTest < ActionController::TestCase
+  setup do
+    Rails.application.config.stubs(:levelbuilder_mode).returns(true)
+
+    # File must exist in order to use fixture_file_upload below.
+    @filename = 'welcome.jpg'
+    FileUtils.touch(@filename)
+
+    @file = fixture_file_upload(@filename, 'image/jpg')
+  end
+
+  teardown do
+    # Clean up file created in setup.
+    File.delete(@filename)
+  end
+
   test 'show: returns summary of assets' do
     uuid_name_1 = "#{SecureRandom.uuid}.png"
     key_1 = "starter_assets/#{uuid_name_1}"
@@ -33,11 +48,10 @@ class LevelStarterAssetsControllerTest < ActionController::TestCase
 
   test 'file: returns requested file' do
     uuid_name = "#{SecureRandom.uuid}.png"
-    key = "starter_assets/#{uuid_name}"
-    file_obj = MockS3ObjectSummary.new(key, 123, 1.day.ago)
+    file_obj = MockS3ObjectSummary.new(uuid_name, 123, 1.day.ago)
     LevelStarterAssetsController.any_instance.
       expects(:get_object).
-      with(key).
+      with(uuid_name).
       returns(file_obj)
     LevelStarterAssetsController.any_instance.
       expects(:read_file).
@@ -53,6 +67,76 @@ class LevelStarterAssetsControllerTest < ActionController::TestCase
     assert_equal 'hello, world!', response.body
     assert_equal 'image/png', response.headers['Content-Type']
     assert_equal 'inline', response.headers['Content-Disposition']
+  end
+
+  test 'upload: forbidden for non-levelbuilders' do
+    sign_in create(:student)
+    post :upload, params: {level_name: create(:level).name, files: []}
+    assert_response :forbidden
+  end
+
+  test 'upload: forbidden if not in levelbuilder_mode' do
+    Rails.application.config.stubs(:levelbuilder_mode).returns(false)
+    sign_in create(:levelbuilder)
+    post :upload, params: {level_name: create(:level).name, files: []}
+    assert_response :forbidden
+  end
+
+  test 'upload: raises an error if 2+ files are uploaded' do
+    sign_in create(:levelbuilder)
+
+    e = assert_raises do
+      post :upload, params: {level_name: create(:level).name, files: ['file-1', 'file-2']}
+    end
+    assert_equal 'One file upload expected. Actual: 2', e.message
+  end
+
+  test 'upload: returns unprocessable_entity if file fails to upload' do
+    file_obj = MockS3ObjectSummary.new('123-abc.jpg', 123, 1.day.ago)
+    LevelStarterAssetsController.any_instance.
+      expects(:get_object).
+      returns(file_obj)
+    file_obj.expects(:upload_file).returns(false)
+
+    sign_in create(:levelbuilder)
+    post :upload, params: {level_name: create(:level).name, files: [@file]}
+
+    assert_response :unprocessable_entity
+  end
+
+  test 'upload: returns unprocessable_entity if file uploads but starter asset is not added' do
+    file_obj = MockS3ObjectSummary.new('123-abc.jpg', 123, 1.day.ago)
+    LevelStarterAssetsController.any_instance.
+      expects(:get_object).
+      returns(file_obj)
+    file_obj.expects(:upload_file).returns(true)
+    Level.any_instance.expects(:save).returns(false)
+
+    sign_in create(:levelbuilder)
+    post :upload, params: {level_name: create(:level).name, files: [@file]}
+
+    assert_response :unprocessable_entity
+  end
+
+  test 'upload: returns summary if file uploads and starter asset is added' do
+    file_obj = MockS3ObjectSummary.new('123-abc.jpg', 123, 1.day.ago)
+    LevelStarterAssetsController.any_instance.
+      expects(:get_object).
+      twice. # FIX THIS - ONLY CALL ONCE
+      returns(file_obj)
+    file_obj.expects(:upload_file).returns(true)
+
+    sign_in create(:levelbuilder)
+    level = create :level
+    post :upload, params: {level_name: level.name, files: [@file]}
+
+    level.reload
+    assert_equal 1, level.starter_assets.length
+    assert_response :success
+    summary = JSON.parse(response.body)
+    assert_equal @filename, summary['filename']
+    assert_equal 'image', summary['category']
+    assert_equal 123, summary['size']
   end
 end
 
