@@ -121,7 +121,6 @@ class LevelStarterAssetsControllerTest < ActionController::TestCase
   test 'upload: returns summary if file uploads and starter asset is added' do
     LevelStarterAssetsController.any_instance.
       expects(:get_object).
-      twice. # FIX THIS - ONLY CALL ONCE
       returns(@file_obj)
     @file_obj.expects(:upload_file).returns(true)
 

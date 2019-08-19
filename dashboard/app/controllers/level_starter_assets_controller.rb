@@ -6,7 +6,10 @@ class LevelStarterAssetsController < ApplicationController
 
   # GET /level_starter_assets/:level_name
   def show
-    starter_assets = @level.starter_assets.map {|name, _| summarize(@level, name)}.compact
+    starter_assets = @level.starter_assets.map do |friendly_name, uuid_name|
+      file_obj = get_object(uuid_name)
+      summarize(file_obj, friendly_name, uuid_name)
+    end.compact
 
     render json: {starter_assets: starter_assets}
   end
@@ -38,7 +41,7 @@ class LevelStarterAssetsController < ApplicationController
     success = file_obj&.upload_file(upload.tempfile.path)
 
     if success && @level.add_starter_asset(friendly_name, uuid_name)
-      render json: summarize(@level, friendly_name)
+      render json: summarize(file_obj, friendly_name, uuid_name)
     else
       return head :unprocessable_entity
     end
@@ -48,9 +51,7 @@ class LevelStarterAssetsController < ApplicationController
   # HELPERS
   #
 
-  def summarize(level, friendly_name)
-    uuid_name = level.starter_assets[friendly_name]
-    file_obj = get_object(uuid_name)
+  def summarize(file_obj, friendly_name, uuid_name)
     if file_obj.nil? || file_obj.size.zero?
       nil
     else
