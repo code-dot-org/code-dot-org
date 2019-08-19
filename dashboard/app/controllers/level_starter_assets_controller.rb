@@ -31,6 +31,8 @@ class LevelStarterAssetsController < ApplicationController
     guid_name = @level.starter_assets[friendly_name]
     file_obj = get_file_object(prefix(guid_name))
     content_type = file_content_type(File.extname(guid_name))
+
+    expires_in 1.hour, public: true
     send_data read_file(file_obj), type: content_type, disposition: 'inline'
   end
 
