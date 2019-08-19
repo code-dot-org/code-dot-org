@@ -97,3 +97,6 @@ level 'U1L13 CFU Digital Representation', progression: 'Check For Understanding'
 
 stage 'Unit Assessment'
 level 'CSP U1L15 SFLP 20-21', progression: 'Lesson Overview'
+
+stage 'Unit 1 Survey'
+level 'CSP U1 20-21 Student Pilot Survey', progression: 'Unit 1 Survey', assessment: true
