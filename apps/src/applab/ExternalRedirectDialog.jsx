@@ -15,6 +15,8 @@ const styles = {
   }
 };
 
+const DIALOG_WIDTH = 700;
+
 class ExternalRedirectDialog extends React.Component {
   static propTypes = {
     handleClose: PropTypes.func,
@@ -83,7 +85,12 @@ class ExternalRedirectDialog extends React.Component {
     }
 
     return (
-      <Dialog title={title} isOpen handleClose={this.props.handleClose}>
+      <Dialog
+        title={title}
+        fullWidth={window.innerWidth < DIALOG_WIDTH}
+        isOpen
+        handleClose={this.props.handleClose}
+      >
         <Body>
           {body}
           {footer}
