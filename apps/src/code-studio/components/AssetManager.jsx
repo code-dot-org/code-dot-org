@@ -250,6 +250,7 @@ export default class AssetManager extends React.Component {
           onChoose={() => console.log('choose!')}
           onDelete={() => console.log('delete!')}
           levelName={this.props.levelName}
+          hideDelete={!this.props.isStartMode}
         />
       );
     });
