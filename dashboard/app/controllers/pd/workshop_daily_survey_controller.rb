@@ -10,6 +10,8 @@ module Pd
     # Require login
     authorize_resource class: 'Pd::Enrollment'
 
+    SurveyItem = Struct.new(:title, :submitted, :form_id, :form_params)
+
     # General workshop daily survey.
     # GET '/pd/workshop_survey/day/:day'
     # Where day 0 is the pre-workshop survey, and days 1-5 are the 1st through 5th sessions (index 0-4)
@@ -232,7 +234,7 @@ module Pd
     end
 
     # Display CSF201 (Deep Dive) pre-workshop survey.
-    # GET workshop_survey/csf/pre201
+    # GET /pd/workshop_survey/csf/pre201
     def new_csf_pre201
       # Find the closest CSF 201 workshop the current user enrolled in.
       workshop = Pd::Workshop.
@@ -248,7 +250,7 @@ module Pd
     # Display CSF201 (Deep Dive) post-workshop survey.
     # The JotForm survey, on submit, will redirect to the new_facilitator route for user
     # to submit facilitator surveys.
-    # GET workshop_survey/csf/post201(/:enrollment_code)
+    # GET /pd/workshop_survey/csf/post201(/:enrollment_code)
     def new_csf_post201
       # Use enrollment_code to find a specific workshop
       # or search all CSF201 workshops the current user enrolled in.
@@ -270,6 +272,129 @@ module Pd
       return render :no_attendance unless attended_workshop
 
       render_csf_survey(POST_DEEPDIVE_SURVEY, attended_workshop)
+    end
+
+    # GET /pd/workshop_survey/ayw/day/:day
+    # Optional params
+    # workshopId. http://localhost-studio.code.org:3000/pd/workshop_survey/ayw/day/1?workshopId=1234
+    # enrollmentCode. http://localhost-studio.code.org:3000/pd/workshop_survey/awy/day/1?enrollmentCode=ZVWJHMTPZW
+    def new_daily_surveys
+      # 1. Determine workshop user is in. (Add optional workshop_id param good for testing purpose and also real troubleshooting)
+      day = params[:day].to_i
+      workshop =
+        if params[:workshop_id]
+          Workshop.find_by(id: params[:workshop_id])
+        elsif params[:enrollmentCode]
+          Pd::Enrollment.find_by(code: params[:enrollmentCode]).workshop
+        else
+          Workshop.
+            where(course: [COURSE_CSD, COURSE_CSP]).
+            where.not(subject: SUBJECT_FIT).
+            nearest_attended_or_enrolled_in_by(current_user)
+        end
+
+      # 1.b. Validate info
+      # Must have valid workshop, session, and attendance.
+      # No time constraint yet. (Is that constraint necessary?)
+      return render :not_enrolled unless workshop  # better error message: cannot find workshop
+      return render_404 if day <= 0
+
+      session = workshop.sessions[day - 1]
+      return render_404 unless session
+      return render :no_attendance unless session.attendances.exists?(teacher: current_user)
+
+      # 2. Get all surveys an user need to fill out for this context (workshop + day)
+      # Not last day: daily survey, facilitator survey (x number of facilitator)
+      # Last day of a workshop: post survey
+      # 3. Check what surveys have already submitted
+      @survey_list = []
+      @survey_list << SurveyItem.new('Daily').tap do |item|
+        item.form_id = WorkshopDailySurvey.get_form_id_for_subject_and_day workshop.subject, day
+
+        key_params = {
+          environment: Rails.env,
+          userId: current_user.id,
+          workshopId: workshop.id,
+          sessionId: session.id,
+          day: day,
+          formId: item.form_id,
+        }
+
+        item.submitted = response_exists_general?(key_params)
+
+        unless item.submitted
+          item.form_params = key_params.merge(
+            userName: current_user.name,
+            userEmail: current_user.email,
+            workshopCourse: workshop.course,
+            workshopSubject: workshop.subject,
+            regionalPartnerName: workshop.regional_partner&.name
+          )
+        end
+      end
+
+      workshop.facilitators.order(:name, :id).each_with_index do |facilitator, index|
+        @survey_list << SurveyItem.new("Facilitator #{facilitator.name}").tap do |item|
+          item.form_id = WorkshopFacilitatorDailySurvey.form_id workshop.subject
+
+          key_params = {
+            environment: Rails.env,
+            userId: current_user.id,
+            workshopId: workshop.id,
+            sessionId: session.id,
+            day: day,
+            facilitatorId: facilitator.id,
+            facilitatorIndex: index,
+            formId: item.form_id,
+          }
+
+          item.submitted = response_exists_facilitator?(key_params)
+          unless item.submitted
+            item.form_params = key_params.merge(
+              userName: current_user.name,
+              userEmail: current_user.email,
+              workshopCourse: workshop.course,
+              workshopSubject: workshop.subject,
+              regionalPartnerName: workshop.regional_partner&.name,
+              facilitatorName: facilitator.name,
+              facilitatorPosition: index + 1,
+              numFacilitators: workshop.facilitators.size
+            )
+          end
+        end
+      end
+
+      if day == workshop.sessions.length
+        @survey_list << SurveyItem.new('Post workshop').tap do |item|
+          item.form_id = WorkshopDailySurvey.get_form_id_for_subject_and_day workshop.subject, POST_WORKSHOP_FORM_KEY
+
+          key_params = {
+            environment: Rails.env,
+            userId: current_user.id,
+            workshopId: workshop.id,
+            sessionId: session.id,
+            day: workshop.sessions.size,
+            formId: item.form_id
+          }
+
+          item.submitted = response_exists_general?(key_params)
+          unless item.submitted
+            item.form_params = key_params.merge(
+              userName: current_user.name,
+              userEmail: current_user.email,
+              workshopCourse: workshop.course,
+              workshopSubject: workshop.subject,
+              regionalPartnerName: workshop.regional_partner&.name
+            )
+          end
+        end
+      end
+
+      # 4. Generate view with iframe(s) for un-submitted surveys. render: new_ayw. params = [title (str), completed (boolean), form_id (number), form_params (hash)]
+      # Mock view
+      render :new_daily_surveys
+
+      # 5. Migrate new_general to new_daily_surveys (change name to something more generic)
     end
 
     # GET /pd/workshop_survey/thanks

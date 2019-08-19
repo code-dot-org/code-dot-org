@@ -1,0 +1,9 @@
+%ol
+  - @survey_list.each do |survey|
+    %li
+      = survey.title
+      %ul
+        %li= "submitted: #{survey.submitted}"
+        %li= "form_id: #{survey.form_id}"
+        %li= "form_params: #{survey.form_params}"
+
