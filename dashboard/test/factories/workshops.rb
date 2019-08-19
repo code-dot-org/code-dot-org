@@ -1,10 +1,19 @@
+# Most academic year workshops are one day workshops.
+# These specific workshop types are two day workshops.
+TWO_DAY_AYW_SUBJECTS = [
+  Pd::Workshop::SUBJECT_CSD_WORKSHOP_5,
+  Pd::Workshop::SUBJECT_CSD_WORKSHOP_6,
+  Pd::Workshop::SUBJECT_CSP_WORKSHOP_5,
+  Pd::Workshop::SUBJECT_CSP_WORKSHOP_6
+]
+
 #
 # Factories for different types of PD workshops
 #
 FactoryGirl.define do
   factory :workshop, class: 'Pd::Workshop', aliases: [:pd_workshop] do
     transient do
-      num_sessions 0
+      num_sessions 1
       num_facilitators 0
       sessions_from {Date.current + 9.hours} # Start time of the first session, then one per day after that.
       each_session_hours 6
@@ -53,6 +62,15 @@ FactoryGirl.define do
       subject Pd::Workshop::SUBJECT_CSP_FIT
     end
 
+    trait :in_progress do
+      started_at {Time.zone.now}
+    end
+
+    trait :ended do
+      started_at {Time.zone.now}
+      ended_at {Time.zone.now}
+    end
+
     trait :with_codes_assigned do
       assign_session_code true
     end
@@ -67,15 +85,17 @@ FactoryGirl.define do
     #
 
     after(:build) do |workshop, evaluator|
-      # Sessions, one per day starting today
-      evaluator.num_sessions.times do |i|
-        params = [{
-          workshop: workshop,
-          start: evaluator.sessions_from + i.days,
-          duration_hours: evaluator.each_session_hours
-        }]
-        params.prepend :with_assigned_code if evaluator.assign_session_code
-        workshop.sessions << build(:pd_session, *params)
+      # Sessions, one per day starting today (unless they were manually provided)
+      if evaluator.sessions.empty?
+        evaluator.num_sessions.times do |i|
+          params = [{
+            workshop: workshop,
+            start: evaluator.sessions_from + i.days,
+            duration_hours: evaluator.each_session_hours
+          }]
+          params.prepend :with_assigned_code if evaluator.assign_session_code
+          workshop.sessions << build(:pd_session, *params)
+        end
       end
       evaluator.num_enrollments.times do
         workshop.enrollments << build(:pd_enrollment, workshop: workshop)
@@ -116,11 +136,105 @@ FactoryGirl.define do
     # Sub-factories
     #
 
-    # TODO: Change into a trait
-    factory :pd_ended_workshop do
-      num_sessions 1
-      started_at {Time.zone.now}
-      ended_at {Time.zone.now}
+    # CSF Workshops, which are usually one-day workshops
+    # that happen year-round.
+    factory :csf_workshop do
+      # Make a CSF 101 "Intro" workshop by default
+      intro
+
+      course Pd::Workshop::COURSE_CSF
+      capacity 30          # Average capacity
+      on_map true          # About 60% are on the map
+      funded               # About 90% are funded
+      num_sessions 1       # Most have 1 session
+      num_facilitators 1   # Most have 1 facilitator
+      each_session_hours 7 # The most common session length
+
+      # CSF Intro, also known as CSF 101
+      # Our most common workshop type as of August 2019.
+      trait :intro do
+        subject Pd::Workshop::SUBJECT_CSF_101
+        location_name 'Walkerville Elementary School'
+      end
+      factory(:csf_intro_workshop, aliases: [:csf_101_workshop]) {intro}
+
+      # CSF Deep Dive, also known as CSF 201
+      trait :deep_dive do
+        subject Pd::Workshop::SUBJECT_CSF_201
+        location_name 'Third Street Elementary School'
+      end
+      factory(:csf_deep_dive_workshop, aliases: [:csf_201_workshop]) {deep_dive}
     end
+
+    # CSD and CSP Academic Year Workshops
+    # These are one- or two-day workshops on specific parts of our curriculum that happen
+    # throughout the school year.  They have a lot in common.
+    factory :academic_year_workshop do
+      # Make a CSP workshop by default
+      csp
+
+      capacity 30          # Average capacity
+      on_map false         # Never on the map
+      funded               # More than half are funded
+      num_facilitators 2   # Most have 2 facilitators
+
+      # Some specific academic year workshops are usually two days instead of one.
+      # Add a trait making it easy to specify that we're testing a two-day workshop.
+      trait :two_day do
+        subject do
+          if course == Pd::Workshop::COURSE_CSP
+            Pd::Workshop::SUBJECT_CSP_WORKSHOP_5
+          else
+            Pd::Workshop::SUBJECT_CSD_WORKSHOP_5
+          end
+        end
+      end
+
+      # Workshops 5 and 6 are two-day workshops, others are one-day.
+      num_sessions {TWO_DAY_AYW_SUBJECTS.include?(subject) ? 2 : 1}
+
+      # The most common session length
+      each_session_hours {TWO_DAY_AYW_SUBJECTS.include?(subject) ? 7 : 8}
+
+      # CSP Academic Year Workshops
+      trait :csp do
+        course Pd::Workshop::COURSE_CSP
+        location_name 'Bayside High School'
+
+        # Possible subjects:
+        # Pd::Workshop::SUBJECT_CSP_WORKSHOP_1
+        # Pd::Workshop::SUBJECT_CSP_WORKSHOP_2
+        # Pd::Workshop::SUBJECT_CSP_WORKSHOP_3
+        # Pd::Workshop::SUBJECT_CSP_WORKSHOP_4
+        # Pd::Workshop::SUBJECT_CSP_WORKSHOP_5 (2-day)
+        # Pd::Workshop::SUBJECT_CSP_WORKSHOP_6 (2-day)
+        subject Pd::Workshop::SUBJECT_CSP_WORKSHOP_1
+      end
+      factory(:csp_academic_year_workshop) {csp}
+
+      # CSD Academic Year Workshops
+      trait :csd do
+        course Pd::Workshop::COURSE_CSD
+        location_name 'Sunrise Middle School'
+
+        # Possible subjects:
+        # Pd::Workshop::SUBJECT_CSD_WORKSHOP_1
+        # Pd::Workshop::SUBJECT_CSD_WORKSHOP_2
+        # Pd::Workshop::SUBJECT_CSD_WORKSHOP_3
+        # Pd::Workshop::SUBJECT_CSD_WORKSHOP_4
+        # Pd::Workshop::SUBJECT_CSD_WORKSHOP_5 (2-day)
+        # Pd::Workshop::SUBJECT_CSD_WORKSHOP_6 (2-day)
+        subject Pd::Workshop::SUBJECT_CSD_WORKSHOP_1
+      end
+      factory(:csd_academic_year_workshop) {csd}
+    end
+
+    # TODO
+    # - CSD 5-day Summer
+    # - CSP 5-day Summer
+    # - Admin workshop
+    # - Facilitator workshop
+    # - Counselor workshop
+    # - Facilitator Weekend
   end
 end

@@ -10,6 +10,7 @@ import {
   isScriptHiddenForSection,
   toggleHiddenScript
 } from '@cdo/apps/code-studio/hiddenStageRedux';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 const styles = {
   main: {
@@ -63,6 +64,19 @@ class CourseScript extends Component {
   onClickHiddenToggle = value => {
     const {name, selectedSectionId, id, toggleHiddenScript} = this.props;
     toggleHiddenScript(name, selectedSectionId, id, value === 'hidden');
+    firehoseClient.putRecord(
+      {
+        study: 'hidden-units',
+        study_group: 'v0',
+        event: value,
+        script_id: id,
+        data_json: JSON.stringify({
+          script_name: name,
+          section_id: selectedSectionId
+        })
+      },
+      {useProgressScriptId: false}
+    );
   };
 
   render() {

@@ -1516,7 +1516,7 @@ ja-JP:
   user_header_settings: アカウント
   user_header_logout: サインアウト
   user_header_signin: サインイン
-  user_header_create: '作成 '
+  user_header_create: 'つくる '
   user_header_applab: 'アプリ ラボ '
   user_header_artist: 'アーティスト '
   user_header_gamelab: ゲーム ラボ
@@ -1572,7 +1572,7 @@ ja-JP:
   hoc_overview_view_teacher_guide: 教師用ガイドを表示
   hoc2018_creativity_create: つくる
   hoc2018_creativity_hoc_coming: もうすぐHour of Codeです...
-  hoc2018_creativity_what_will_you_create: 何を作りますか。
+  hoc2018_creativity_what_will_you_create: 何を作りますか？
   hoc2018_creativity_courses: Code.orgコースに進む
   hoc2018_creativity_courses_link: <a href="https://studio.code.org/courses">Code.orgコース</a>に進む
   hoc2018_mc_page_title: MinecraftのHour of Codeチュートリアル
@@ -1612,7 +1612,7 @@ ja-JP:
   hoc2018_mc_video_title_anybody_can_learn: 誰もが学ぶことができます
   hoc2018_mc_video_title_my_name_is_aracely: 私はAracelyといいます
   hoc2018_mc_homepage_hoc_coming: Hour of Code(1時間プログラミング)は間もなく利用可能です。
-  hoc2018_mc_homepage_what_create: 何を作りますか。
+  hoc2018_mc_homepage_what_create: 何を作りますか？
   hoc2018_mc_homepage_join_us: 参加しませんか
   hoc2018_mc_homepage_try_it: 挑戦してみる
   hoc2018_mc_back_journey: Hour of Code（1時間プログラミング）に向けて、マインクラフトの最新アクティビティが出来上がりました。プログラミングを使ってマインクラフトの旅へ

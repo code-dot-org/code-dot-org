@@ -5,10 +5,11 @@
   "level_num": "custom",
   "user_id": 155,
   "properties": {
-    "long_instructions": "# Adding Styles\r\n\r\nNow you can style the text on your personal web site!\r\n\r\n* Open your style sheet and add styling of your choice to your project. Be sure to use at least 3 different CSS properties.\r\n\r\n# Checklist\r\n\r\n* At least 3 of the following CSS Properties are used:\r\n  * `font-size`\r\n  * `font-family`\r\n  * `color`\r\n  * `text-decoration`\r\n  * `text-align`\r\n\r\nIf you’ve used at least 3 of the properties from the checklist, you can explore some additional text properties to add to your project.",
-    "project_template_level_name": "CSD U2 Project Template_pilot",
+    "long_instructions": "# Free Play\r\n\r\nUse your new knowledge to create a new page with as many styles as possible.",
     "instructions_important": "false",
-    "encrypted_examples": "YkBxVdXGqb0xKzg/3nxZWRU3I6h56IOjMRRfXYzlQw2CkDQyHri67mB/9vj7\nm1V2e6IO/p0/vcFmuK3kmMem5A==\n",
+    "encrypted_examples": [
+
+    ],
     "hide_share_and_remix": "false",
     "parent_level_id": 15927,
     "name_suffix": "_pilot",
@@ -22,10 +23,18 @@
     ],
     "map_reference": "/docs/csd-1718/style_sheets/index.html",
     "video_key": "csd_weblab_css_2",
-    "submittable": "false"
+    "submittable": "false",
+    "encrypted": "false",
+    "display_name": "Free Play",
+    "mini_rubric": "false",
+    "bubble_choice_description": "Make a web page using the new code.",
+    "start_sources": "{\r\n  \"files\": [\r\n    {\"name\": \"style.css\",\r\n     \"data\": \"\\r\\n\"\r\n     },\r\n    {\r\n      \"name\": \"index.html\",\r\n      \"data\": \"<!DOCTYPE html>\\r\\n<html>\\r\\n  <head>\\r\\n  <\\/head>\\r\\n  <body>\\r\\n    \\r\\n  <\\/body>\\r\\n<\\/html>\"\r\n    }\r\n  ]\r\n}",
+    "thumbnail_url": "https://images.code.org/43720c5e1c8367e30b7f1a2f8ef06af7-image-1562867963667.JPG"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2018-05-09 18:11:23 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2018-05-09 18:11:23 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-08-12 22:00:07 +0000\",\"changed\":[\"project_template_level_name\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-08-12 22:01:25 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"display_name\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
 </Weblab>

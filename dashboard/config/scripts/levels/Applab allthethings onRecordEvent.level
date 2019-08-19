@@ -1,7 +1,7 @@
 <Applab>
   <config><![CDATA[{
   "game_id": 41,
-  "created_at": "2016-02-22T22:52:19.000Z",
+  "created_at": "2019-06-23T19:34:38.000Z",
   "level_num": "custom",
   "user_id": 6,
   "properties": {
@@ -171,10 +171,26 @@
     "start_blocks": "var lastRecordId = 0;\r\nvar recordId;\r\nvar sawCreate = false;\r\nvar sawUpdate = false;\r\n\r\n// Find the highest record id already in the table\r\nreadRecords(\"mytable\", {}, function(records) {\r\n  for (var i =0; i < records.length; i++) {\r\n    lastRecordId = Math.max(lastRecordId, records[i].id);\r\n  }\r\n  listenForRecords();\r\n});\r\n\r\n\r\nfunction listenForRecords() {\r\n  onRecordEvent(\"mytable\", function(record, eventType) {\r\n    if (eventType === 'create') {\r\n      if (record.id > lastRecordId) {\r\n        // ignore records created before this test started\r\n        handleCreateEvent(record);  \r\n      }\r\n    } else if (eventType === 'update') {\r\n      handleUpdateEvent(record);\r\n    } else if ((eventType === 'delete')) {\r\n      handleDeleteEvent(record);\r\n    } else {\r\n      console.log('unexpected event type: ' + eventType);\r\n      throw 'Unexpected event type: ' + eventType;\r\n    }\r\n  });\r\n  createRecord(\"mytable\", {name:'Alice'}, function() {});\r\n}\r\n\r\nfunction handleCreateEvent(record) {\r\n  if (sawCreate) {\r\n    console.log('error in handleCreateEvent: saw too many create events')\r\n    return;\r\n  }\r\n  sawCreate = true;\r\n\r\n  if (record.name !== 'Alice') {\r\n    console.log('error in handleCreateEvent: invalid record contents: ' + JSON.stringify(record));\r\n    return;\r\n  }\r\n  recordId = record.id;\r\n  testUpdate();\r\n}\r\n\r\nfunction testUpdate() {\r\n  updateRecord(\"mytable\", {id:recordId, name:'Bob'}, function() {});\r\n}\r\n\r\nfunction handleUpdateEvent(record) {\r\n  if (!sawCreate) {\r\n    console.log('error in handleUpdateEvent: saw update before create')\r\n    return;\r\n  }\r\n  if (sawUpdate) {\r\n    console.log('error in handleUpdateEvent: saw too many update events')\r\n    return;\r\n  }\r\n  sawUpdate = true;\r\n\r\n  if (record.name !== 'Bob' || record.id !== recordId) {\r\n    console.log('error in handleUpdateEvent: invalid record contents: ' + JSON.stringify(record));\r\n    return;\r\n  }\r\n  testDelete();  \r\n}\r\n\r\nfunction testDelete() {\r\n  deleteRecord(\"mytable\", {id:recordId}, function() {});\r\n\r\n}\r\n\r\nfunction handleDeleteEvent(record) {\r\n  if (!sawCreate) {\r\n    console.log('error in handleDeleteEvent: saw delete before create')\r\n    return;\r\n  }\r\n  if (!sawUpdate) {\r\n    console.log('error in handleDeleteEvent: saw delete before update')\r\n    return;\r\n  }\r\n  if (record.name !== undefined || record.id !== recordId) {\r\n    console.log('error in handleDeleteEvent: invalid record contents: ' + JSON.stringify(record));\r\n    return;\r\n  }\r\n\r\n  textLabel('successLabel', ' onRecordEvent success!');\r\n}\r\n",
     "short_instructions": "Please sign in to test applab levels (By design, applab levels only work if signed in. Normally, we make people sign in, but this is only enforceable for a whole script and would be annoying to do for the allthethings script).",
     "long_instructions": "Please sign in to test applab levels (By design, applab levels only work if signed in. Normally, we make people sign in, but this is only enforceable for a whole script and would be annoying to do for the allthethings script).",
-    "contained_level_names": null
+    "preload_asset_list": null,
+    "encrypted": "false",
+    "encrypted_examples": [
+
+    ],
+    "instructions_important": "false",
+    "mini_rubric": "false",
+    "hide_share_and_remix": "false",
+    "data_tables": "{\r\n  \"mytable\": []\r\n}",
+    "show_debug_watch": "false",
+    "expand_debugger": "false",
+    "fail_on_lint_errors": "false",
+    "makerlab_enabled": "false",
+    "widget_mode": "false"
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2019-08-12 10:57:11 -0700\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"anjali@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Applab>

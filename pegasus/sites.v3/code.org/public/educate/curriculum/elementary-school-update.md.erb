@@ -6,33 +6,41 @@ style_min: true
 ---
 
 <link href="/shared/css/course-blocks.css", type="text/css", rel="stylesheet"></link>
+<style>
+  .backgroundimage {
+    background-image: url(<%= CDO.code_org_url('/shared/images/banners/small-teal-icons.png') %>);
+    background-size: cover;
+    padding:10px;
+  }
 
-[solid-block-header]
+  ul li:before {
+    color: black;
+  }
+</style>
 
+<h1 class="backgroundimage" style="color:white;">
 Elementary School
+</h1>
 
-[/solid-block-header]
+<div class="col-50" style="padding-right: 20px; float: left; margin-top: 10px">
 
-<div class="col-45" style="padding-right: 10px;">
-
-<img src="/images/fit-400/marketing/student-tatiana.jpg">
-
+<% facebook = {:u=>'https://youtu.be/rNIM1fzJ8u0'} %>
+<% twitter = {:url=>'https://youtu.be/rNIM1fzJ8u0', :related=>'codeorg', :text=>"Introduction to CS Fundamentals. (Thanks #{get_random_donor_twitter} for supporting @codeorg)"} %>
+<%=view :display_video_thumbnail, id: "introK5", video_code: "rNIM1fzJ8u0", play_button: 'center', facebook: facebook, twitter: twitter, letterbox: 'false' %>
 </div>
 
 <div class="col-55">
 <br>
 
-Our six Computer Science Fundamentals courses are flexibly designed for teachers new to CS who want to offer accessible and equitable introductory CS courses to their students. How it’s implemented is up to you - teach CS Fundamentals during a science unit, use it to support math and language arts standards, add technology time once a week, or go deeper with extension activities and projects!
+Our six <a href="https://curriculum.code.org/csf" target="_blank">Computer Science Fundamentals courses</a> are flexibly designed for teachers new to CS who want to offer accessible and equitable introductory CS courses to their students. How it’s implemented is up to you - teach CS Fundamentals during a science unit, use it to support math and language arts standards, add technology time once a week, or go deeper with extension activities and projects!
 
 </div>
 
 <div style="clear: both;"></div>
 
-[solid-block-header]
-
+<h1 class="backgroundimage" style="color:white;">
 Support for teachers
-
-[/solid-block-header]
+</h1>
 
 <div class="col-60" style="padding-right: 25px;">
 <br>
@@ -49,21 +57,19 @@ Our Regional Partners offer high-quality, one-day Code.org workshops for individ
 
 <div class="col-40">
 
-<img src="/images/fit-390/teacherconatl.jpg">
+<img src="/images/fit-390/teacherconatl.jpg" style="padding:10px;">
 
 </div>
 
 <div style="clear: both;"></div>
 
-[solid-block-header]
-
+<h1 class="backgroundimage" style="color:white;">
 Why CS Fundamentals?
-
-[/solid-block-header]
+</h1>
 
 ## It's relevant.
 
-Our curriculum was created with the 2017 Computer Science Teachers Association (CSTA) standards</a> in mind, but also includes opportunities to support national Math, English Language Arts, and Science standards. In fact, <a href="https://medium.com/@codeorg/code-org-resourceful-teachers-higher-student-achievement-8be1efdec06e", target=_"blank">a recent research study</a> found that classrooms with resourceful teachers see higher scores on English, math, and science standardized tests after teaching these lessons. Click <a href="https://curriculum.code.org/csf-19/standards/", target=_"blank">here</a> to see how CS Fundamentals lessons support standards.
+Our [curriculum](https://curriculum.code.org/csf) was created with the 2017 Computer Science Teachers Association (CSTA) in mind. Lesson plans call out where there are numerous opportunities to connect to national math, english language arts, and science standards. In fact, a [recent research study](https://medium.com/@codeorg/code-org-resourceful-teachers-higher-student-achievement-8be1efdec06e) found that classrooms with resourceful teachers see higher scores on English, math, and science standardized tests after teaching these lessons. Click [here](https://curriculum.code.org/csf/standards/) to see how CS Fundamentals lessons support standards.
 
 ### Supported Standards
 
@@ -72,51 +78,215 @@ Our curriculum was created with the 2017 Computer Science Teachers Association (
 * <a href="http://www.corestandards.org/Math/",  target=_"blank">Common Core Math</a>
 * <a href="http://www.nextgenscience.org/next-generation-science-standards" target=_"blank">Next Generation Science</a>
 
-Administrators can learn more about how CS Fundamentals is a complete solution to bring CS to their elementary school at code.org/administrators.
+Administrators can learn more about how CS Fundamentals is a complete solution to bring CS to their elementary school at [code.org/administrators](code.org/administrators).
 
 ## It's easy to get started.
 
-The courses include daily lesson plans, student activities, and answer keys for teachers. You don't even need a user account to try it out. Once you get a feel for the courses, <a href="https://studio.code.org/users/sign_up", target=_"blank">sign up as a teacher</a> to see the lesson plans, join the teacher forums, and get access to all the resources you need. Next, quickly set up a classroom section from your roster or sync with tools like Clever or Google Classroom to view your students' progress and manage their accounts. Then celebrate your students' learning by printing certificates they can bring home when they finish the course.
-
+Each course includes comprehensive lesson plans, plugged and unplugged activities, and support resources for teachers. You don't even need a user account to [try it out](https://curriculum.code.org/csf). Once you get a feel for the courses and lesson plans, [sign up as a teacher](https://studio.code.org/users/sign_up) to join the teacher community forums and engage with all the resources at your fingertips. Next, quickly set up a classroom section from your roster or sync with tools like Clever or Google Classroom to view student progress and manage accounts. Then celebrate your students' learning by printing certificates they can bring home.
 
 ## And, did we mention that it's fun!?
 
-Your students will create their own games, art, and digital stories that they can share - all while developing problem-solving, collaboration, persistence, and computational thinking skills. Do your students love to get up and move around? Half of the lessons are "unplugged" activities that teach computational thinking and digital citizenship skills without computers. See some awesome student creations below!
+Your students will create their own games, art, and digital stories that they can share - all while developing problem-solving, collaboration, persistence, and computational thinking skills. Every course includes  "unplugged" activities that teach computational thinking and digital citizenship skills without computers. See some awesome student creations below!
 
 [col-33]
 
-<center><img src="/images/animated-examples/artist-game-space.gif" width="90%"></center>
+<center><img src="/images/animated-examples/watercycleproject.gif" width="90%"></center>
 
-<div style="margin-top: 5px;">In this puzzle, the student created a honeycomb pattern.</div>
+<div style="margin-top: 5px; text-align:center;">Interactively explore the water cycle!</div>
 
 [/col-33]
 
 [col-33]
 
-<center><img src="/images/animated-examples/play-lab-game-space.gif" width="90%"></center>
+<center><img src="/images/animated-examples/dinosaursproject.gif" width="90%"></center>
 
-<div style="margin-left: 15px; margin-top: 5px;">This student created a game with multiple levels in which you play against different characters. Game on!</div>
+<div style="margin-left: 15px; margin-top: 5px; text-align:center;">Animate dinosaurs to talk about pre-history!</div>
 
 [/col-33]
 
 [col-33]
 
-<center><img src="/images/animated-examples/flappy-game-space.gif" width="90%"></center>
+<center><img src="/images/animated-examples/anglesproject.gif" width="90%"></center>
 
-<div style="margin-left: 15px; margin-top: 5px;">This student created a Flappy Bird game.</div>
+<div style="margin-left: 15px; margin-top: 5px; text-align:center;">Create beautiful art while exploring angles!</div>
 
 [/col-33]
 
-<p>style="clear:both">&nbsp;</p>
+<p style="clear:both"></p>
 
 # Selecting the right course for your class
 
-(add new image)
-<img src="/images/fit-970/CSFimages/Course_Map.png" style="max-width: 100%"/>
+<table style="width:100%; border-style:none;">
+  <tr>
+    <th style="background-color:#ff9900; text-align:center; border-style:none; font-weight:bold;""">
+      <b>Course A</b><br/>
+      <i>Kindergarten</i>
+    </th>
+    <th style="background-color:#f1c232; text-align:center; border-style:none;""">
+        Course B<br/>
+        <i>1st Grade</i>
+    </th>
+    <th style="background-color:#b8bf0d; text-align:center; border-style:none;""">
+        Course C<br/>
+        <i>2nd Grade</i>
+    </th>
+    <th style="background-color:#53bac2; text-align:center; border-style:none;""">
+        Course D<br/>
+        <i>3rd Grade</i>
+    </th>
+    <th style="background-color:#0094ca; text-align:center; border-style:none;""">
+        Course E<br/>
+        <i>4th Grade</i>
+    </th>
+    <th style="background-color:#7664a0; text-align:center; border-style:none;""">
+        Course F<br/>
+        <i>5th Grade</i>
+    </th>
+  </tr>
+  <tr>
+    <td style="background-color:#f9cb9c; color:black; border-style:none; vertical-align: text-top;"">12 lessons, ~12 hours to complete</td>
+    <td style="background-color:#ffe599; color:black; border-style:none; vertical-align: text-top;"">12 lessons, ~12 hours to complete</td>
+    <td style="background-color:#d2da0e; color:black; border-style:none; vertical-align: text-top;"">18 lessons, ~18 hours to complete</td>
+    <td style="background-color:#68ebf5; color:black; border-style:none; vertical-align: text-top;"">18 lessons, ~18 hours to complete</td>
+    <td style="background-color:#9ed7ed; color:black; border-style:none; vertical-align: text-top;"">18 lessons, ~18-20 hours to complete</td>
+    <td style="background-color:#c9c1e9; color:black; border-style:none; vertical-align: text-top;"">18 lessons, ~20-22 hours to complete</td>
+  </tr>
+  <tr>
+    <td colspan="6" style="text-align:center;width:96%;background-color:#d9d9d9;color:black; border-style:none;">Concepts</td>
+  </tr>
+  <tr>
+    <td style="background-color:#f9cb9c; color:black; border-style:none; vertical-align: text-top;"">
+      <ul style="margin:0px; font-style:italic;">
+        <li>Digital Citizenship</li>
+        <li>Sequencing</li>
+        <li>Loops</li>
+        <li>Events</li>
+      </ul>
+      <a href="https://studio.code.org/s/coursea" target="_blank" style='text-decoration:none'>
+        <button>View course</button><br/>
+      </a>
+      <a href="https://curriculum.code.org/csf/coursea" target="_blank" style='text-decoration:none'>
+          <button>Lesson plans</button>
+      </a>
+    </td>
+    <td style="background-color:#ffe599; color:black; border-style:none; vertical-align: text-top;"">
+      <ul style="margin:0px; font-style:italic;">
+        <li>Digital Citizenship</li>
+        <li>Sequencing</li>
+        <li>Loops</li>
+        <li>Impacts of Computing</li>
+        <li>Events</li>
+      </ul>
+      <a href="https://studio.code.org/s/courseb" target="_blank" style='text-decoration:none'>
+        <button>View course</button><br/>
+      </a>
+      <a href="https://curriculum.code.org/csf/courseb" target="_blank" style='text-decoration:none'>
+        <button>Lesson plans</button>
+      </a>
+    </td>
+    <td style="background-color:#d2da0e; color:black; border-style:none; vertical-align: text-top;"">
+      <ul style="margin:0px; font-style:italic;">
+        <li>Digital Citizenship</li>
+        <li>Sequencing</li>
+        <li>Binary</li>
+        <li>Loops</li>
+        <li>Events</li>
+        <li>Data</li>
+      </ul>
+      <a href="https://studio.code.org/s/coursed" target="_blank" style='text-decoration:none'>
+        <button>View course</button><br/>
+      </a>
+      <a href="https://curriculum.code.org/csf/coursed" target="_blank" style='text-decoration:none'>
+        <button>Lesson plans</button>
+      </a>
+    </td>
+    <td style="background-color:#68ebf5; color:black; border-style:none; vertical-align: text-top;"">
+      <ul style="margin:0px; font-style:italic;">
+        <li>Sequencing</li>
+        <li>Events</li>
+        <li>Loops</li>
+        <li>Conditionals</li>
+        <li>Binary</li>
+        <li>Digital Citizenship</li>
+      </ul>
+      <a href="https://studio.code.org/s/coursec" target="_blank" style='text-decoration:none; vertical-align:bottom;'>
+          <button>View course</button><br/>
+        </a>
+        <a href="https://curriculum.code.org/csf/coursec" target="_blank" style='text-decoration:none; vertical-align:bottom;'>
+          <button>Lesson plans</button>
+        </a>
+    </td>
+    <td style="background-color:#9ed7ed; color:black; border-style:none; vertical-align: text-top;"">
+      <ul style="margin:0px; font-style:italic;">
+        <li>Sprites</li>
+        <li>Digital Citizenship</li>
+        <li>Impacts of Computing</li>
+        <li>Nested Loops</li>
+        <li>Functions</li>
+      </ul>
+      <a href="https://studio.code.org/s/coursee" target="_blank" style='text-decoration:none; vertical-align:bottom;'>
+        <button>View course</button><br/>
+      </a>
+      <a href="https://curriculum.code.org/csf/coursee" target="_blank" style='text-decoration:none; vertical-align:bottom;'>
+        <button>Lesson plans</button>
+      </a>
+    </td>
+    <td style="background-color:#c9c1e9; color:black; border-style:none; vertical-align: text-top;"">
+      <ul style="margin:0px; font-style:italic;">
+        <li>Variables</li>
+        <li>Data</li>
+        <li>For Loops</li>
+        <li>Internet</li>
+        <li>Sprites</li>
+        <li>Digital Citizenship</li>
+      </ul>
+      <a href="https://studio.code.org/s/coursef" target="_blank" style='text-decoration:none'>
+        <button>View course</button><br/>
+      </a>
+      <a href="https://curriculum.code.org/csf/coursef" target="_blank" style='text-decoration:none'>
+        <button>Lesson plans</button>
+      </a>
+    </td>
+  <tr>
+    <td colspan="2" style="text-align:center; background-color:#FFE0A5; color:black; border-right-style:none; border-left-style:none; border-bottom-style:none; border-top-width:10px; border-top-color:white;"">
+      Pre-Reader Express Course
+      <a href="https://staging-studio.code.org/s/pre-express" target="_blank" style='text-decoration:none'>
+        <button>View course</button><br/>
+      </a>
+    </td>
+    <td colspan="4" style="text-align:center; background-color:#A6E3E8; color:black; border-right-style:none; border-left-style:none; border-bottom-style:none; border-top-width:10px; border-top-color:white;"">
+      Express Course
+      <a href="https://staging-studio.code.org/s/express" target="_blank" style='text-decoration:none'>
+        <button>View course</button><br/>
+      </a>
+    </td>
+  </tr>
+</table>
 
-The progression of Courses A-F build upon each other to ensure continuing students stay interested and learn new things. This allows you to use the same course at any grade level for all students, regardless of their experience. Explore the lesson plans and download [the curriculum guide for Courses A-F here](https://curriculum.code.org/csf). All courses make suitable entry points for students. Later courses feature “ramp up” lessons which are intended to introduce or review important concepts from previous courses at an accelerated pace.
+<br/>
+The progression of [Courses A-F](https://curriculum.code.org/csf) build upon each other to ensure continuing students stay interested and learn new things. This allows you to use the same course at any grade level for all students, regardless of their experience. Explore the lesson plans and download [the curriculum guide for Courses A-F here](https://curriculum.code.org/csf). All courses make suitable entry points for students. Later courses feature “ramp up” lessons which are intended to introduce or review important concepts from previous courses at an accelerated pace.
+<br/>
+<br/>
+<table style="border-style:hidden;">
+  <tr>
+    <td colspan="2" style="background-color:#0094ca; color:white; text-align:center; font-style:bold; border-style:hidden;"">
+      A complete solution for elementary schools and teachers new to CS education
+      </td>
+    </tr>
+  <tr>
+    <td style="background-color:#f3f3f3; border-style:hidden;"><img style="padding:0px;" src="/images/fit-250/facilitatorsummitpic.jpg">
+      </td>
+    <td style="background-color:#f3f3f3; border-style:hidden;">
+      "<font color="#b8bf0d"><b>Code.org is a one-stop shop for coding in schools.</b></font> Most importantly, teachers don't need computer science degrees to facilitate that coursework." - Common Sense Education
+      </td>
+    </tr>
+  </table>
 
-(add testimonial)
+# Looking to bring CS Fundamentals to your entire school? 
+
+Something whitty here to grab admin attention. Look at the admin brouchure and point to /administrators
+<a href="https://code.org/administrators"><button>View administrator information</button></a>
+
 
 # Looking for unplugged activities?
 
@@ -127,10 +297,10 @@ Go ahead, cut the cord (for awhile)! CS education does not always need to be in 
 # No time? No problem!
 
 <div class="col-50" style="padding-right: 10px;">
-  <a href="<%= CDO.studio_url('/s/pre-express-2019') %>"><img src="/images/curriculum/course-tile-pre-reader-express.png" style="max-width:100%"></a>
+  <a href="<%= CDO.studio_url('/s/pre-express-2019') %>" target=_"blank"><img src="/images/curriculum/course-tile-pre-reader-express.png" style="max-width:100%"></a>
   <br>
   <br>
-  <a href="<%= CDO.studio_url('/s/express-2019') %>"><img src="/images/curriculum/course-tile-express.png" style="max-width:100%"></a>
+  <a href="<%= CDO.studio_url('/s/express-2019') %>" target=_"blank"><img src="/images/curriculum/course-tile-express.png" style="max-width:100%" target=_"blank"></a>
 </div>
 
 [col-50]
@@ -148,5 +318,3 @@ Thanks to a global community of volunteer translators, Courses A-F and the Expre
 <a href="/educate/curriculum/cs-fundamentals-international"><button>View Courses 1-4</button></a>
 &nbsp;&nbsp;
 <a href="/educate/curriculum/cs-fundamentals-international"><button>View Accelerated Course</button></a>
-
-If you've been teaching Courses 1-4 and want to know how to transition to teaching Courses A-F, check out our [Transition Guide](https://docs.google.com/document/d/1dFgrHiW-ERpNGey7yrNcoxU0LEfH9kFbdeLJn2QyJTA/edit?usp=sharing).

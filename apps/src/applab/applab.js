@@ -647,7 +647,7 @@ Applab.init = function(config) {
 
   // Push initial level properties into the Redux store
   studioApp().setPageConstants(config, {
-    playspacePhoneFrame: !config.share,
+    playspacePhoneFrame: !(config.share || config.level.widgetMode),
     channelId: config.channel,
     allowExportExpo: experiments.isEnabled('exportExpo'),
     exportApp: Applab.exportApp,
@@ -816,7 +816,7 @@ function setupReduxSubscribers(store) {
   if (store.getState().pageConstants.hasDataMode) {
     // Initialize redux's list of tables from firebase, and keep it up to date as
     // new tables are added and removed.
-    const tablesRef = getDatabase(Applab.channelId).child('counters/tables');
+    const tablesRef = getDatabase().child('counters/tables');
     tablesRef.on('child_added', snapshot => {
       store.dispatch(
         addTableName(
@@ -1274,7 +1274,7 @@ function onDataViewChange(view, oldTableName, newTableName) {
   if (!getStore().getState().pageConstants.hasDataMode) {
     throw new Error('onDataViewChange triggered without data mode enabled');
   }
-  const storageRef = getDatabase(Applab.channelId).child('storage');
+  const storageRef = getDatabase().child('storage');
 
   // Unlisten from previous data view. This should not interfere with events listened to
   // by onRecordEvent, which listens for added/updated/deleted events, whereas we are

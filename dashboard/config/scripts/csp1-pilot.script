@@ -1,9 +1,17 @@
 login_required true
+hideable_stages true
+has_verified_resources true
+has_lesson_plan true
+curriculum_path 'https://curriculum.code.org/{LOCALE}/cspilot/unit1/{LESSON}'
 family_name ''
 pilot_experiment 'csp-piloters'
 
+stage 'CS Principles Pre-survey', lockable: true, flex_category: 'cspSurvey'
+level 'csp-pre-survey-2017-levelgroup_2020 pilot', assessment: true
+
 stage 'Welcome to CSP'
 level 'CSP U1L1 SFLP 20-21', progression: 'Lesson Overview'
+level 'Computer Science is Changing Everything_2020', progression: 'Computer Science is Changing Everything'
 level 'csp_socialBelonging_control_2018', progression: 'Check For Understanding'
 
 stage 'Sending Binary Messages'
@@ -13,20 +21,20 @@ level 'U1L3 CFU Sending Complex Messages', progression: 'Check For Understanding
 stage 'Sending Binary Messages with the Internet Simulator'
 level 'CSP U1L3 SFLP 20-21', progression: 'Lesson Overview'
 level 'CSP U1L03 NetSim', progression: 'Widget: Internet Simulator'
-level 'csp_socialBelonging_control_2018'
+level 'U1L4 Multiple Choice_2020', progression: 'Check For Understanding'
 
 stage 'AB Patterns'
 level 'CSP U1L4 SFLP 20-21', progression: 'Lesson Overview'
 level 'CSP U1L4 CYU2', progression: 'Check For Understanding'
 level 'CSP U1L4 CYU3', progression: 'Check For Understanding'
 
-stage 'Flippy Do, pt 1'
+stage 'Binary Numbers'
 level 'CSP U1L5 SFLP 20-21', progression: 'Lesson Overview'
 level 'U1L5 CFU how many bits', progression: 'Check For Understanding'
 level 'U1L5 CFU adding bits', progression: 'Check For Understanding'
 level 'U1L5 CFU bin dec similarities', progression: 'Check For Understanding'
 
-stage 'Flippy Do, pt 2'
+stage 'Overflow and Rounding'
 level 'Widget: Binary Odometer_2020', progression: 'Widget: Binary Odometer'
 level 'CSP U1L6 SFLP 20-21', progression: 'Lesson Overview'
 level 'U1L6 CFU beyond odometer', progression: 'Check For Understanding'
@@ -76,7 +84,8 @@ level 'U1L11 CFU Compression for Email', progression: 'Check For Understanding'
 
 stage 'Intellectual Property'
 level 'CSP U1L12 SFLP 20-21', progression: 'Lesson Overview'
-level 'U1L11 CFU Compression for Email', progression: 'Check For Understanding'
+level 'U1L12 CFU Creative Commons', progression: 'Check For Understanding'
+level 'U1L12 CFU Copyright', progression: 'Check For Understanding'
 
 stage 'Project: Digital Information Dilemmas, pt 1'
 level 'CSP U1L13 SFLP 20-21', progression: 'Lesson Overview'
@@ -84,8 +93,7 @@ level 'U1L11 CFU Compression for Email', progression: 'Check For Understanding'
 
 stage 'Project: Digital Information Dilemmas, pt 2'
 level 'CSP U1L14 SFLP 20-21', progression: 'Lesson Overview'
-level 'U1L11 CFU Compression for Email', progression: 'Check For Understanding'
+level 'U1L13 CFU Digital Representation', progression: 'Check For Understanding'
 
 stage 'Unit Assessment'
 level 'CSP U1L15 SFLP 20-21', progression: 'Lesson Overview'
-level 'U1L11 CFU Compression for Email', progression: 'Check For Understanding'
