@@ -13,7 +13,7 @@ module Pd
       @pd_workshop = create :workshop, num_sessions: 5
       @facilitator = create :facilitator
       @pd_summer_workshop = create :workshop, num_sessions: 5, course: COURSE_CSP, subject: SUBJECT_CSP_TEACHER_CON
-      @pd_academic_year_workshop = create :workshop, num_sessions: 5, course: COURSE_CSP, subject: SUBJECT_CSP_WORKSHOP_1
+      @pd_academic_year_workshop = create :csp_academic_year_workshop
       @pd_summer_workshop.facilitators << @facilitator
       @pd_academic_year_workshop.facilitators << @facilitator
     end
