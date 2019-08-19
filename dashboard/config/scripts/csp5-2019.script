@@ -133,7 +133,7 @@ level 'CSPU5_U3L16 Mad Lib setText_2019', progression: 'Mad Lib Game'
 level 'CSPU5_U3L16 Mad Lib getText_2019', progression: 'Mad Lib Game'
 level 'CSPU5_U3L16 Mad Lib toUpper_2019', progression: 'Mad Lib Game'
 level 'CSPU5_U3L16 Mad Lib Clear Input_2019', progression: 'Mad Lib Game'
-level 'CSPU5_U3L25 Free Response 3_2019', progression: 'String and Substring Free Response'
+level 'CSPU5_U3L25 Free Response 3_2019', progression: 'String and Substring Free Response', assessment: true
 
 stage '"If" Statements Unplugged', flex_category: 'csp5_1'
 level 'CSP U5L07 SFLP_2019', named: true
