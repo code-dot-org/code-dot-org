@@ -656,7 +656,6 @@ module Api::V1::Pd
 
       Timecop.freeze(time) do
         workshop = create :summer_workshop,
-          num_sessions: 3,
           sessions_from: Date.new(2017, 1, 1),
           processed_location: {city: 'Orchard Park', state: 'NY'}.to_json
         create :pd_enrollment, workshop: workshop, user: @serializing_teacher
@@ -685,7 +684,7 @@ module Api::V1::Pd
             district_name: 'A School District',
             school_name: 'A Seattle Public School',
             email: 'minerva@hogwarts.edu',
-            assigned_workshop: 'January 1-3, 2017, Orchard Park NY',
+            assigned_workshop: 'January 1-5, 2017, Orchard Park NY',
             registered_workshop: 'Yes',
             status: 'accepted_not_notified',
             notes: nil,
@@ -791,7 +790,6 @@ module Api::V1::Pd
 
       Timecop.freeze(time) do
         workshop = create :summer_workshop,
-          num_sessions: 3,
           sessions_from: Date.new(2017, 1, 1),
           processed_location: {city: 'Orchard Park', state: 'NY'}.to_json
         create :pd_enrollment, workshop: workshop, user: @serializing_teacher
@@ -822,7 +820,7 @@ module Api::V1::Pd
             district_name: 'A School District',
             school_name: 'A Seattle Public School',
             email: 'minerva@hogwarts.edu',
-            assigned_workshop: 'January 1-3, 2017, Orchard Park NY',
+            assigned_workshop: 'January 1-5, 2017, Orchard Park NY',
             registered_workshop: 'Yes',
             status: 'accepted_not_notified',
             notes: nil,
