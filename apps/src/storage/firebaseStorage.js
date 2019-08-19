@@ -260,25 +260,34 @@ FirebaseStorage.readRecords = function(
 ) {
   tableName = fixTableName(tableName, onError);
 
-  let recordsRef = getRecordsRef(tableName);
+  const countersRef = getDatabase().child('counters/tables/');
+  // First, check if table exists using counters/tables/ as source of truth
+  countersRef.once('value', countersSnapshot => {
+    if (!countersSnapshot.val() || !countersSnapshot.val()[tableName]) {
+      // Table doesn't exist. Return null instead of [] so we can show an error
+      onSuccess(null);
+      return;
+    }
+    let recordsRef = getRecordsRef(tableName);
 
-  // Get all records in the table and filter them on the client.
-  recordsRef.once(
-    'value',
-    recordsSnapshot => {
-      let recordMap = recordsSnapshot.val() || {};
-      let records = [];
-      // Collect all of the records matching the searchParams.
-      Object.keys(recordMap).forEach(id => {
-        let record = JSON.parse(recordMap[id]);
-        if (matchesSearch(record, searchParams)) {
-          records.push(record);
-        }
-      });
-      onSuccess(records);
-    },
-    onError
-  );
+    // Get all records in the table and filter them on the client.
+    recordsRef.once(
+      'value',
+      recordsSnapshot => {
+        let recordMap = recordsSnapshot.val() || {};
+        let records = [];
+        // Collect all of the records matching the searchParams.
+        Object.keys(recordMap).forEach(id => {
+          let record = JSON.parse(recordMap[id]);
+          if (matchesSearch(record, searchParams)) {
+            records.push(record);
+          }
+        });
+        onSuccess(records);
+      },
+      onError
+    );
+  });
 };
 
 /**

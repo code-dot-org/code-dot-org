@@ -5,8 +5,9 @@ azure_content_moderation_key: !Secret
 saucelabs_authkey: !Secret
 saucelabs_username: !Secret
 
-# Disable Secrets in CI-test environments.
-<% if ci_test -%>
+# Disable Secrets for CI, unit-test runs,
+# and other non-chef_managed environments (e.g., preloading Spring for Rails tests).
+<% if ci_test || !chef_managed -%>
 <%= clear_secrets %>
 
 dashboard_honeybadger_api_key: '00000000'

@@ -2037,6 +2037,10 @@ ga-IE:
     <a href='%{supported_browsers_url}', target='_blank'>ceann de na brabhsálaithe
     tacaithe</a> a shuiteáil. Nó is féidir leat dul ar aghaidh ar aon nós, ach seans
     go mbeidh roinnt gnéithe ar an leathanach briste.
+  compatibility_unsupported_browser_markdown: Ní thacaímid le do bhrabhsálaí. Ba chóir
+    duit <a href='%{supported_browsers_url}', target='_blank'>ceann de na brabhsálaithe
+    tacaithe</a> a shuiteáil. Nó is féidir leat dul ar aghaidh ar aon nós, ach seans
+    go mbeidh roinnt gnéithe ar an leathanach briste.
   flappy_shortcode: gread
   header_home: Baile
   header_my_dashboard: Mo Phainéal

@@ -1,6 +1,6 @@
 import dom from '@cdo/apps/dom';
 import gameLabDPadHtmlEjs from '@cdo/apps/templates/gameLabDPad.html.ejs';
-import {GAMELAB_DPAD_CONTAINER_ID} from '../constants';
+import {GAMELAB_DPAD_CONTAINER_ID} from './constants';
 
 const DPAD_DEAD_ZONE = 3;
 // Allows diagonal to kick in after 22.5 degrees off primary axis, giving each

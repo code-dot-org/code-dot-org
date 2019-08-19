@@ -6,9 +6,9 @@ title: Computer Science Fundamentals Transition Guide theme: responsive style_mi
 
 # Teaching Courses A-F
 
-## Table of Contents
+## Spis Treści
 
-* [Overview](#overview)
+* [Przegląd](#overview)
 * [Teaching the new courses](#newcourses)
 * [Circle-Time Stories (Courses A and B)](#circletime)
 * [Lesson Scaffolding & Challenge Puzzles (All Ages)](#scaffolding)
@@ -19,7 +19,7 @@ title: Computer Science Fundamentals Transition Guide theme: responsive style_mi
 
 <a id="overview"></a>
 
-## Overview
+## Przegląd
 
 The landscape of computer science education has changed immensely since the creation of the original Computer Science Fundamentals courses. Originally, Courses 1-4 were designed as a starting point to acquire the basics, no matter what the age of the student who was coming to the discipline. Now that far more districts, cities, and states have implemented computer science courses beginning at Kindergarten, teachers are asking for more content to see students through until middle school/junior high.
 

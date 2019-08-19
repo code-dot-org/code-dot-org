@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190808182429) do
+ActiveRecord::Schema.define(version: 20190812195807) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -308,6 +308,18 @@ ActiveRecord::Schema.define(version: 20190808182429) do
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
     t.index ["name"], name: "index_courses_on_name", using: :btree
+  end
+
+  create_table "donors", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.string   "name"
+    t.string   "url"
+    t.string   "show"
+    t.string   "twitter"
+    t.string   "level"
+    t.float    "weight",         limit: 24
+    t.float    "twitter_weight", limit: 24
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
   end
 
   create_table "email_preferences", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
