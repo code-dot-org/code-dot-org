@@ -249,7 +249,7 @@ module Pd
 
     test 'enrollment code override is used when fetching the workshop for a user' do
       setup_academic_year_workshop
-      other_academic_workshop = create :workshop, course: COURSE_CSP, subject: SUBJECT_CSP_WORKSHOP_1,
+      other_academic_workshop = create :csp_academic_year_workshop,
         regional_partner: @regional_partner, facilitators: @facilitators, sessions_from: Date.today + 1.month
       other_enrollment = create :pd_enrollment, :from_user, workshop: other_academic_workshop, user: @enrolled_academic_year_teacher
       create :pd_attendance, session: other_academic_workshop.sessions[0], teacher: @enrolled_academic_year_teacher, enrollment: other_enrollment
@@ -1065,8 +1065,7 @@ module Pd
 
     def setup_academic_year_workshop
       @regional_partner = create :regional_partner
-      @academic_year_workshop = create :workshop, course: COURSE_CSP, subject: SUBJECT_CSP_WORKSHOP_1,
-        num_facilitators: 2, regional_partner: @regional_partner
+      @academic_year_workshop = create :csp_academic_year_workshop, regional_partner: @regional_partner
       @academic_year_enrollment = create :pd_enrollment, :from_user, workshop: @academic_year_workshop
       @enrolled_academic_year_teacher = @academic_year_enrollment.user
       @facilitators = @academic_year_workshop.facilitators.order(:name, :id)
@@ -1074,8 +1073,8 @@ module Pd
 
     def setup_two_day_academic_year_workshop
       @regional_partner = create :regional_partner
-      @two_day_academic_year_workshop = create :workshop, course: COURSE_CSP, subject: SUBJECT_CSP_WORKSHOP_5,
-        num_sessions: 2, num_facilitators: 2, regional_partner: @regional_partner
+      @two_day_academic_year_workshop = create :csp_academic_year_workshop, :two_day,
+        regional_partner: @regional_partner
       @two_day_academic_year_enrollment = create :pd_enrollment, :from_user,
         workshop: @two_day_academic_year_workshop
       @enrolled_two_day_academic_year_teacher = @two_day_academic_year_enrollment.user
@@ -1084,27 +1083,23 @@ module Pd
 
     def setup_csf201_not_started_workshop
       @regional_partner = create :regional_partner
-      @csf201_not_started_workshop = create :workshop,
-        course: COURSE_CSF, subject: SUBJECT_CSF_201, regional_partner: @regional_partner,
+      @csf201_not_started_workshop = create :csf_deep_dive_workshop,
+        regional_partner: @regional_partner,
         num_facilitators: 2
     end
 
     def setup_csf201_in_progress_workshop
       @regional_partner = create :regional_partner
-      @csf201_in_progress_workshop = create :workshop,
+      @csf201_in_progress_workshop = create :csf_deep_dive_workshop,
         :in_progress,
-        course: COURSE_CSF,
-        subject: SUBJECT_CSF_201,
         regional_partner: @regional_partner,
         num_facilitators: 2
     end
 
     def setup_csf201_ended_workshop
       @regional_partner = create :regional_partner
-      @csf201_ended_workshop = create :workshop,
+      @csf201_ended_workshop = create :csf_deep_dive_workshop,
         :ended,
-        course: COURSE_CSF,
-        subject: SUBJECT_CSF_201,
         regional_partner: @regional_partner,
         num_facilitators: 2
     end

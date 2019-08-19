@@ -99,13 +99,14 @@ namespace :seed do
   #
   # @param [Hash] opts the options to update the scripts with.
   # @option opts [Boolean] :incremental Whether to only process modified scripts.
-  # @option opts [Boolean] :ui_test Whether to only update ui test scripts.
+  # @option opts [Boolean] :script_files Which script files to update. Default:
+  #   all script files.
   def update_scripts(opts = {})
     # optionally, only process modified scripts to speed up seed time
     scripts_seeded_mtime = (opts[:incremental] && File.exist?(SEEDED)) ?
       File.mtime(SEEDED) : Time.at(0)
     touch SEEDED # touch seeded "early" to reduce race conditions
-    script_files = opts[:ui_test] ? UI_TEST_SCRIPTS : SCRIPTS_GLOB
+    script_files = opts[:script_files] || SCRIPTS_GLOB
     begin
       custom_scripts = script_files.select {|script| File.mtime(script) > scripts_seeded_mtime}
       LevelLoader.update_unplugged if File.mtime('config/locales/unplugged.en.yml') > scripts_seeded_mtime
@@ -127,6 +128,16 @@ namespace :seed do
     :libraries,
   ].freeze
 
+  # Do the minimum amount of work to seed a single script, without seeding
+  # levels or other dependencies. For use in development. Example:
+  # rake seed:single_script SCRIPT_NAME=express-2019
+  task single_script: :environment do
+    script_name = ENV['SCRIPT_NAME']
+    raise "must specify SCRIPT_NAME=" unless script_name
+    script_files = ["config/scripts/#{script_name}.script"]
+    update_scripts(script_files: script_files)
+  end
+
   task scripts: SCRIPTS_DEPENDENCIES do
     update_scripts(incremental: false)
   end
@@ -136,7 +147,7 @@ namespace :seed do
   end
 
   task scripts_ui_tests: SCRIPTS_DEPENDENCIES do
-    update_scripts(ui_test: true)
+    update_scripts(script_files: UI_TEST_SCRIPTS)
   end
 
   task courses: :environment do
