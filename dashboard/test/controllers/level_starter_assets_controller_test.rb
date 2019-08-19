@@ -136,6 +136,40 @@ class LevelStarterAssetsControllerTest < ActionController::TestCase
     assert_equal 'image', summary['category']
     assert_equal 123, summary['size']
   end
+
+  test 'destroy: forbidden for non-levelbuilders' do
+    sign_in create(:student)
+    delete :destroy, params: {level_name: create(:level).name, filename: 'my-file.png'}
+
+    assert_response :forbidden
+  end
+
+  test 'destroy: forbidden if not in levelbuilder_mode' do
+    Rails.application.config.stubs(:levelbuilder_mode).returns(false)
+
+    sign_in create(:levelbuilder)
+    delete :destroy, params: {level_name: create(:level).name, filename: 'my-file.png'}
+
+    assert_response :forbidden
+  end
+
+  test 'destroy: returns no_content if starter asset successfully deleted' do
+    Level.any_instance.expects(:remove_starter_asset).returns(true)
+
+    sign_in create(:levelbuilder)
+    delete :destroy, params: {level_name: create(:level).name, filename: 'my-file.png'}
+
+    assert_response :no_content
+  end
+
+  test 'destroy: returns unprocessable_entity if starter asset fails to be deleted' do
+    Level.any_instance.expects(:remove_starter_asset).returns(false)
+
+    sign_in create(:levelbuilder)
+    delete :destroy, params: {level_name: create(:level).name, filename: 'my-file.png'}
+
+    assert_response :unprocessable_entity
+  end
 end
 
 # Mock Aws::S3::ObjectSummary class since we can't request the objects from S3 in tests:
