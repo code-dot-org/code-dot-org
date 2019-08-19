@@ -65,12 +65,6 @@ export default class AssetManager extends React.Component {
     elementId: PropTypes.string
   };
 
-  // TODO: REMOVE DEFAULT PROPS
-  static defaultProps = {
-    levelName: 'U5 Lists Investigate Outfitly Code',
-    isStartMode: true
-  };
-
   constructor(props) {
     super(props);
     this.state = {
