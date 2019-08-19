@@ -1,5 +1,6 @@
 class LevelStarterAssetsController < ApplicationController
   before_action :set_level
+  skip_before_action :verify_authenticity_token, only: [:destroy]
 
   S3_BUCKET = 'cdo-v3-assets'.freeze
   S3_PREFIX = 'starter_assets/'.freeze
@@ -42,6 +43,20 @@ class LevelStarterAssetsController < ApplicationController
 
     if success && @level.add_starter_asset(friendly_name, uuid_name)
       render json: summarize(file_obj, friendly_name, uuid_name)
+    else
+      return head :unprocessable_entity
+    end
+  end
+
+  # DELETE /level_starter_assets/:level_name/:filename
+  # *NOTE:* This deletes the image asset from the .level definition,
+  # but does not delete the asset from S3 as other levels may still be
+  # using it.
+  def destroy
+    return head :forbidden unless current_user&.levelbuilder? && Rails.application.config.levelbuilder_mode
+
+    if @level.remove_starter_asset("#{params[:filename]}.#{params[:format]}")
+      return head :no_content
     else
       return head :unprocessable_entity
     end
