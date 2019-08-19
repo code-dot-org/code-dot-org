@@ -103,7 +103,7 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
   test 'exclude local summer workshops if exclude_summer present' do
     sign_in @organizer
 
-    create :workshop, :local_summer_workshop, organizer: @organizer
+    create :summer_workshop, organizer: @organizer
 
     get :index, params: {exclude_summer: 1}
     assert_response :success
@@ -115,7 +115,7 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
   test 'includes local summer workshop if exclude_summer not present' do
     sign_in @organizer
 
-    summer_workshop = create :workshop, :local_summer_workshop, organizer: @organizer
+    summer_workshop = create :summer_workshop, organizer: @organizer
 
     get :index, params: {}
     response = JSON.parse(@response.body)
