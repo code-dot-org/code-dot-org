@@ -144,7 +144,7 @@ module Pd::Payment
     end
 
     test 'teacher summaries' do
-      workshop = create :workshop, :ended, :local_summer_workshop, num_sessions: 2
+      workshop = create :summer_workshop, :ended, num_sessions: 2, each_session_hours: 6
 
       teacher_unqualified = create :pd_workshop_participant,
         workshop: workshop, enrolled: true, attended: true
