@@ -17,6 +17,7 @@ import {
 } from './setPropertyDropdown';
 import {getStore} from '../redux';
 import * as applabConstants from './constants';
+import experiments from '../util/experiments';
 
 var DEFAULT_WIDTH = applabConstants.APP_WIDTH.toString();
 var DEFAULT_HEIGHT = (
@@ -575,14 +576,6 @@ export var blocks = [
     noAutocomplete: true
   },
   {
-    func: 'getColumn',
-    parent: api,
-    category: 'Data',
-    paletteParams: ['table', 'column'],
-    params: ['"mytable"', '"mycolumn"'],
-    nativeIsAsync: true
-  },
-  {
     func: 'createRecord',
     parent: api,
     category: 'Data',
@@ -1106,6 +1099,17 @@ export var blocks = [
     noAutocomplete: true
   }
 ];
+
+if (experiments.isEnabled(experiments.APPLAB_DATASETS)) {
+  blocks.push({
+    func: 'getColumn',
+    parent: api,
+    category: 'Data',
+    paletteParams: ['table', 'column'],
+    params: ['"mytable"', '"mycolumn"'],
+    nativeIsAsync: true
+  });
+}
 
 export const categories = {
   'UI controls': {
