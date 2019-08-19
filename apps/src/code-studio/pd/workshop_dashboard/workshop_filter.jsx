@@ -313,7 +313,7 @@ export class WorkshopFilter extends React.Component {
     }));
   }
 
-  getSubjectOptions(subjects, prefix = '') {
+  static getSubjectOptions(subjects, prefix = '') {
     let result = {};
 
     Object.keys(subjects).map(
@@ -327,13 +327,13 @@ export class WorkshopFilter extends React.Component {
     return result;
   }
 
-  concatSubjetArrays(objValue, srcValue) {
+  static concatSubjetArrays(objValue, srcValue) {
     if (_.isArray(objValue)) {
       return objValue.concat(srcValue);
     }
   }
 
-  combineSubjectOptions(currentSubjects, legacySubjects) {
+  static combineSubjectOptions(currentSubjects, legacySubjects) {
     const legacyPrefix = '[Legacy] ';
 
     return _.mergeWith(
