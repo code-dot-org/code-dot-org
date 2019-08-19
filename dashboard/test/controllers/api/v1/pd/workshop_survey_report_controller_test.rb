@@ -190,8 +190,8 @@ module Api::V1::Pd
     )
 
     test 'facilitators can see results for local summer workshops' do
-      workshop = create :workshop, :local_summer_workshop, facilitators: [@facilitator]
-      sign_in @facilitator
+      workshop = create :summer_workshop
+      sign_in workshop.facilitators.first
 
       @controller.expects(:generate_workshop_daily_session_summary)
       get :generic_survey_report, params: {workshop_id: workshop.id}
@@ -353,7 +353,7 @@ module Api::V1::Pd
     end
 
     test 'generic_survey_report: summer workshop uses old pipeline' do
-      local_summer_ws = create :workshop, course: COURSE_CSD, subject: SUBJECT_SUMMER_WORKSHOP
+      local_summer_ws = create :summer_workshop
 
       WorkshopSurveyReportController.any_instance.expects(:create_csf_survey_report).never
       WorkshopSurveyReportController.any_instance.expects(:local_workshop_daily_survey_report)
@@ -365,8 +365,7 @@ module Api::V1::Pd
     end
 
     test 'generic_survey_report: academic-year workshop uses old pipeline' do
-      new_academic_ws = create :workshop, course: COURSE_CSP, num_sessions: 1,
-        started_at: Date.new(2019, 8, 1)
+      new_academic_ws = create :academic_year_workshop, started_at: Date.new(2019, 8, 1)
 
       WorkshopSurveyReportController.any_instance.expects(:create_csf_survey_report).never
       WorkshopSurveyReportController.any_instance.expects(:local_workshop_daily_survey_report)
@@ -395,9 +394,9 @@ module Api::V1::Pd
       facilitators = [facilitator_1, facilitator_2]
       organizer = create :program_manager
       create :workshop_admin
-      workshop_1 = create(:workshop, :local_summer_workshop, num_sessions: 5, num_enrollments: 3, organizer: organizer, facilitators: facilitators)
-      workshop_2 = create(:workshop, :local_summer_workshop, num_sessions: 5, num_enrollments: 3, organizer: organizer, facilitators: facilitators)
-      create(:workshop, :local_summer_workshop, num_sessions: 5, num_enrollments: 3, organizer: organizer, facilitators: facilitators)
+      workshop_1 = create :summer_workshop, num_enrollments: 3, organizer: organizer, facilitators: facilitators
+      workshop_2 = create :summer_workshop, num_enrollments: 3, organizer: organizer, facilitators: facilitators
+      create :summer_workshop, num_enrollments: 3, organizer: organizer, facilitators: facilitators
 
       workshop_1.enrollments.each do |enrollment|
         hash = build :pd_local_summer_workshop_survey_hash
