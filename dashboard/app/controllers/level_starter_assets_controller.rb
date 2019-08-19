@@ -87,17 +87,7 @@ class LevelStarterAssetsController < ApplicationController
 
   def get_object(s3_filename)
     path = prefix(s3_filename)
-    file_obj = bucket.object(path)
-    # S3 won't throw a NotFound error *until* you try to access the file object.
-    # Calling .size makes sure the object is present before returning it or logging to HB.
-    file_obj.size
-    file_obj
-  rescue Aws::S3::Errors::NotFound => e
-    Honeybadger.notify(
-      error_class: e,
-      error_message: "Unable to find starter asset with path #{path} for level '#{@level.name}'"
-    )
-    nil
+    bucket.object(path)
   end
 
   private
