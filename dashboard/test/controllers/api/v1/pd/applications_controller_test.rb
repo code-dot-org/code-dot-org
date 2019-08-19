@@ -333,7 +333,6 @@ module Api::V1::Pd
 
     test 'update appends to the timestamp log if fit workshop is changed' do
       fit_workshop = create :fit_workshop,
-        num_sessions: 3,
         sessions_from: Date.new(2019, 6, 1),
         processed_location: {city: 'Orchard Park', state: 'NY'}.to_json
 
@@ -385,7 +384,6 @@ module Api::V1::Pd
         sessions_from: Date.new(2019, 6, 1),
         processed_location: {city: 'Orchard Park', state: 'NY'}.to_json
       fit_workshop = create :fit_workshop,
-        num_sessions: 3,
         sessions_from: Date.new(2019, 6, 1),
         processed_location: {city: 'Orchard Park', state: 'NY'}.to_json
 
