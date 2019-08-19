@@ -151,7 +151,13 @@ module AWS
               ErrorCode: error,
               ResponseCode: error,
               ResponsePagePath: '/assets/error-pages/site-down.html'
-            }
+            }.tap do |error_response_hash|
+              if rack_env?(:levelbuilder)
+                error_response_hash[:ErrorCachingMinTTL] = 0
+                error_response_hash.delete(:ResponseCode)
+                error_response_hash.delete(:ResponsePagePath)
+              end
+            end
           end,
         DefaultCacheBehavior: cache_behavior(config[:default]),
         DefaultRootObject: '',
