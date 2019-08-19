@@ -1131,6 +1131,11 @@ zh-CN:
           CORNER:
             '"right"': 向右
             '"left"': 向左
+      Mikelab_showText:
+        options:
+          PREPOSITION:
+            '"above"': above
+            '"below"': below
       Mikelab_sprite:
         text: 在 {LOCATION} 创建一个新 {COSTUME} 精灵
         options:
@@ -1347,6 +1352,10 @@ zh-CN:
             '"0"': 永远
       aalab_showSpriteLabel:
         text: 显示精灵 {SPRITE} 的标签 {TEXT} {LOCATION}
+        options:
+          LOCATION:
+            '"above"': above
+            '"below"': below
       aalab_speakerSaysConsole:
         text: "{SPRITE} 说 {MESSAGE}"
       aalab_spriteSay:

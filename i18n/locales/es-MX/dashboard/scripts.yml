@@ -10134,6 +10134,10 @@ es-MX:
               name: 'Proyecto: dilemas de la información digital, parte 1'
             'Project: Digital Information Dilemmas, pt 2':
               name: 'Proyecto: dilemas de la información digital, parte 2'
+            CS Principles Pre-survey:
+              name: Encuesta previa de Principios de Ciencias de la Computación
+            Binary Numbers:
+              name: Números binarios
           title: Piloto de la Unidad 1 de CSP
         csd-tests:
           stages:
@@ -11193,3 +11197,14 @@ es-MX:
               name: Errores del taller 1 de CSD
           title: Errores del taller 1 de CSD
           description_short: Depuración en el Laboratorio de juegos - Taller 1 del año académico
+        dlp19-csd-mod-w1:
+          description_audience: Facilitadores de Descubrimientos de las Ciencias de la Computación en período de formación 2019
+        dlp19-csd-mod-w2:
+          stages:
+            new stage:
+              name: nueva etapa
+          description_audience: Facilitadores de Descubrimientos de las Ciencias de la Computación en período de formación 2019
+        dlp19-csd-mod-w3:
+          description_audience: Facilitadores de Descubrimientos de las Ciencias de la Computación en período de formación 2019
+        dlp19-csd-mod-w4:
+          description_audience: Facilitadores de Descubrimientos de las Ciencias de la Computación en período de formación 2019

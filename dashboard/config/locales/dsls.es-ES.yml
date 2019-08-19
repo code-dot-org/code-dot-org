@@ -449,18 +449,21 @@ es-ES:
       Begin planning your project_2018_2019:
         content1: descripción aquí
       CSD Header Size MC:
+        title: Verificación rápida de encabezados
         answers:
         - {}
         - {}
         - {}
         - {}
       CSD Header Size MC_2018:
+        title: Verificación rápida de encabezados
         answers:
         - {}
         - {}
         - {}
         - {}
       CSD Header Size MC_2018_2019:
+        title: Verificación rápida de encabezados
         answers:
         - {}
         - {}
@@ -601,52 +604,97 @@ es-ES:
       CSD U3 Boolean MC:
         title: Título
         questions:
-        - {}
+        - text: "¿Qué resultado imprimirá en la consola por este programa?"
         answers:
+        - text: cierto<br>falso<br>cierto
         - {}
-        - {}
-        - {}
-        - {}
+        - text: "  cierto<br>error<br>cierto"
+        - text: "  falso<br>cierto<br>falso"
       CSD U3 Boolean MC_2018:
         title: Título
         questions:
-        - {}
+        - text: "¿Qué resultado imprimirá en la consola por este programa?"
         answers:
+        - text: cierto<br>falso<br>cierto
         - {}
-        - {}
-        - {}
-        - {}
+        - text: "  cierto<br>error<br>cierto"
+        - text: "  falso<br>cierto<br>falso"
       CSD U3 Boolean MC_2018_2019:
         title: Título
         questions:
-        - {}
+        - text: "¿Qué resultado imprimirá en la consola por este programa?"
         answers:
+        - text: cierto<br>falso<br>cierto
         - {}
-        - {}
-        - {}
-        - {}
+        - text: "  cierto<br>error<br>cierto"
+        - text: "  falso<br>cierto<br>falso"
       CSD U3 Card Examples_2018:
         content1: descripción aquí
       CSD U3 Card Examples_2018_2019:
         content1: descripción aquí
       CSD U3 Functions Prediction define first:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Se dibujará el cuadrado rojo pero no el verde. No puedes llamar funciones
+            después de que se crean.
+          feedback: Las funciones pueden crearse en cualquier lugar que desee en su
+            código. ¡Sin embargo, es una buena idea mantenerlos a todos en el fondo
+            para la organización!
+        - text: Se dibujará el cuadrado verde pero no el rojo. No puedes llamar a
+            las funciones antes de que hayan sido creadas.
+          feedback: Las funciones pueden crearse en cualquier lugar que desee en su
+            código. ¡Sin embargo, es una buena idea mantenerlos a todos en el fondo
+            para la organización!
+        - text: Se dibujarán ambos cuadrados. Puede crear funciones en cualquier lugar
+            que desee en su código.
+          feedback: Las funciones pueden crearse en cualquier lugar que desee en su
+            código. ¡Sin embargo, es una buena idea mantenerlos a todos en el fondo
+            para la organización!
+        - text: No se dibujará ningún cuadrado. Hay un error en el código.
+          feedback: Las funciones pueden crearse en cualquier lugar que desee en su
+            código. ¡Sin embargo, es una buena idea mantenerlos a todos en el fondo
+            para la organización!
       CSD U3 Functions Prediction define first_2018:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Se dibujará el cuadrado rojo pero no el verde. No puedes llamar funciones
+            después de que se crean.
+          feedback: Las funciones pueden crearse en cualquier lugar que desee en su
+            código. ¡Sin embargo, es una buena idea mantenerlos a todos en el fondo
+            para la organización!
+        - text: Se dibujará el cuadrado verde pero no el rojo. No puedes llamar a
+            las funciones antes de que hayan sido creadas.
+          feedback: Las funciones pueden crearse en cualquier lugar que desee en su
+            código. ¡Sin embargo, es una buena idea mantenerlos a todos en el fondo
+            para la organización!
+        - text: Se dibujarán ambos cuadrados. Puede crear funciones en cualquier lugar
+            que desee en su código.
+          feedback: Las funciones pueden crearse en cualquier lugar que desee en su
+            código. ¡Sin embargo, es una buena idea mantenerlos a todos en el fondo
+            para la organización!
+        - text: No se dibujará ningún cuadrado. Hay un error en el código.
+          feedback: Las funciones pueden crearse en cualquier lugar que desee en su
+            código. ¡Sin embargo, es una buena idea mantenerlos a todos en el fondo
+            para la organización!
       CSD U3 Functions Prediction define first_2018_2019:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Se dibujará el cuadrado rojo pero no el verde. No puedes llamar funciones
+            después de que se crean.
+          feedback: Las funciones pueden crearse en cualquier lugar que desee en su
+            código. ¡Sin embargo, es una buena idea mantenerlos a todos en el fondo
+            para la organización!
+        - text: Se dibujará el cuadrado verde pero no el rojo. No puedes llamar a
+            las funciones antes de que hayan sido creadas.
+          feedback: Las funciones pueden crearse en cualquier lugar que desee en su
+            código. ¡Sin embargo, es una buena idea mantenerlos a todos en el fondo
+            para la organización!
+        - text: Se dibujarán ambos cuadrados. Puede crear funciones en cualquier lugar
+            que desee en su código.
+          feedback: Las funciones pueden crearse en cualquier lugar que desee en su
+            código. ¡Sin embargo, es una buena idea mantenerlos a todos en el fondo
+            para la organización!
+        - text: No se dibujará ningún cuadrado. Hay un error en el código.
+          feedback: Las funciones pueden crearse en cualquier lugar que desee en su
+            código. ¡Sin embargo, es una buena idea mantenerlos a todos en el fondo
+            para la organización!
       CSD U3 Keypress Matching:
         questions:
         - {}
@@ -676,7 +724,8 @@ es-ES:
         - {}
       CSD U3 Sprite Movement Predict Multi:
         questions:
-        - {}
+        - text: Lee este programa y predice cuál de las siguientes animaciones será
+            producida.
         answers:
         - {}
         - {}
@@ -684,7 +733,8 @@ es-ES:
         - {}
       CSD U3 Sprite Movement Predict Multi_2018:
         questions:
-        - {}
+        - text: Lee este programa y predice cuál de las siguientes animaciones será
+            producida.
         answers:
         - {}
         - {}
@@ -692,7 +742,8 @@ es-ES:
         - {}
       CSD U3 Sprite Movement Predict Multi_2018_2019:
         questions:
-        - {}
+        - text: Lee este programa y predice cuál de las siguientes animaciones será
+            producida.
         answers:
         - {}
         - {}
@@ -1084,42 +1135,52 @@ es-ES:
         content1: descripción aquí
       behaviors 1 predict:
         questions:
-        - {}
+        - text: Haga clic en el botón "editar" para ver cómo funciona el "comportamiento
+            misterioso". Estudie el interior del código, luego haga una predicción.
         answers:
-        - {}
-        - {}
-        - {}
-        - feedback: Incorrecto
+        - text: El sprite girará
+        - text: El sprite se encogerá.
+        - text: El sprite se moverá.
+        - text: El sprite cambiará de colores.
+          feedback: Incorrecto
       behaviors 4 predict:
         questions:
-        - {}
+        - text: Haz una predicción. ¿De qué manera se moverá el satélite hacia la
+            galaxia?
         answers:
-        - {}
-        - {}
-        - {}
-        - feedback: Incorrecto
+        - text: Izquierda luego abajo
+        - text: Diagonalmente
+        - text: Zig Zag
+        - text: Abajo, luego izquierda
+          feedback: Incorrecto
       courseC_multi_artist_prog6_predict1:
         questions:
         - {}
         answers:
-        - {}
-        - {}
+        - text: El artista dibujará un triángulo con tres lados iguales.
+          feedback: Incorrecto. El artista dibuja un cuadrado.
+        - text: El artista dibujará una sola línea.
+          feedback: Incorrecto. El artista dibuja un cuadrado.
         - {}
         - text: No lo se.
       courseC_multi_artist_prog6_predict1_2018:
         questions:
         - {}
         answers:
-        - {}
-        - {}
+        - text: El artista dibujará un triángulo con tres lados iguales.
+          feedback: Incorrecto. El artista dibuja un cuadrado.
+        - text: El artista dibujará una sola línea.
+          feedback: Incorrecto. El artista dibuja un cuadrado.
         - {}
         - text: No lo se.
       courseC_multi_artist_prog6_predict1_2018_2019:
         questions:
         - {}
         answers:
-        - {}
-        - {}
+        - text: El artista dibujará un triángulo con tres lados iguales.
+          feedback: Incorrecto. El artista dibuja un cuadrado.
+        - text: El artista dibujará una sola línea.
+          feedback: Incorrecto. El artista dibuja un cuadrado.
         - {}
         - text: No lo se.
       courseC_multi_harvester_loops11_predict1:

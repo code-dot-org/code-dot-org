@@ -496,7 +496,7 @@ it-IT:
           absolute; top: 24%; left: 49.4%; transform: translateX(-49.4%); font-weight:
           bold;\">Definisci</div> \n  <div style=\"position: absolute; top: 52%; left:
           60.5%; transform: translateX(-60.5%); font-weight: bold;\">Prepara</div>\n
-          \ <div style=\"position: absolute; top: 79%; left: 48.9%; transform: translateX(-48.9%);
+          \ <div style=\"position: absolute; top: 79%; left: 49.7%; transform: translateX(-49.7%);
           font-weight: bold;\">Prova</div>\n  <div style=\"position: absolute; top:
           52%; left: 39%; transform: translateX(-39%); font-weight: bold;\">Rifletti</div>\n</div>\n\n*
           **Definisci**\n  * Che tipo di app vorresti creare?\n  * Quali sono i tuoi
@@ -533,7 +533,7 @@ it-IT:
           absolute; top: 24%; left: 49.4%; transform: translateX(-49.4%); font-weight:
           bold;\">Definisci</div> \n  <div style=\"position: absolute; top: 52%; left:
           60.5%; transform: translateX(-60.5%); font-weight: bold;\">Prepara</div>\n
-          \ <div style=\"position: absolute; top: 79%; left: 48.9%; transform: translateX(-48.9%);
+          \ <div style=\"position: absolute; top: 79%; left: 49.7%; transform: translateX(-49.7%);
           font-weight: bold;\">Prova</div>\n  <div style=\"position: absolute; top:
           52%; left: 39%; transform: translateX(-39%); font-weight: bold;\">Rifletti</div>\n</div>\n\n*
           **Definisci**\n  * Che tipo di app vorresti creare?\n  * Quali sono i tuoi
@@ -2917,7 +2917,7 @@ it-IT:
 
           ### per `counter` da `4` a `10` a passi di `2`
 
-          ### **Contatore** → Da questa variabile dipende il numero di ripetizioni del ciclo
+          ### **Contatore** (_counter_) → Da questa variabile dipende il numero di ripetizioni del ciclo
 
           ### _4_ → **Valore iniziale** → Questo è il valore attribuito alla variabile `counter` all'inizio del ciclo
 
@@ -2939,7 +2939,7 @@ it-IT:
 
           ### per `counter` da `4` a `10` a passi di `2`
 
-          ### **Contatore** → Da questa variabile dipende il numero di ripetizioni del ciclo
+          ### **Contatore** (_counter_) → Da questa variabile dipende il numero di ripetizioni del ciclo
 
           ### _4_ → **Valore iniziale** → Questo è il valore attribuito alla variabile `counter` all'inizio del ciclo
 

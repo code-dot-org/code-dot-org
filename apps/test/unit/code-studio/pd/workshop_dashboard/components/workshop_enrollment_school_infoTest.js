@@ -45,7 +45,7 @@ describe('Workshop Enrollment School Info', () => {
         onDelete={() => {}}
         onClickSelect={() => {}}
         workshopCourse="CS Discoveries"
-        workshopSubject="1-day Academic Year, Units 1 and 2"
+        workshopSubject="Workshop 1: Unit 3"
         numSessions={5}
         permissionList={new Permission(['ProgramManager'])}
       />,
@@ -91,7 +91,7 @@ describe('Workshop Enrollment School Info', () => {
         onDelete={() => {}}
         onClickSelect={() => {}}
         workshopCourse="CS Discoveries"
-        workshopSubject="1-day Academic Year, Units 1 and 2"
+        workshopSubject="Workshop 1: Unit 3"
         numSessions={5}
         permissionList={new Permission(['ProgramManager'])}
       />,
