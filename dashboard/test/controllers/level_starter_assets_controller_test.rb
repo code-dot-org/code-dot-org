@@ -8,6 +8,10 @@ class LevelStarterAssetsControllerTest < ActionController::TestCase
     @filename = 'welcome.jpg'
     FileUtils.touch(@filename)
 
+    # Mocks file object received from S3.
+    @uuid_name = "#{SecureRandom.uuid}.png"
+    @file_obj = MockS3ObjectSummary.new(@uuid_name, 123, 1.day.ago)
+    # Mocks file sent to server for upload.
     @file = fixture_file_upload(@filename, 'image/jpg')
   end
 
@@ -47,18 +51,16 @@ class LevelStarterAssetsControllerTest < ActionController::TestCase
   end
 
   test 'file: returns requested file' do
-    uuid_name = "#{SecureRandom.uuid}.png"
-    file_obj = MockS3ObjectSummary.new(uuid_name, 123, 1.day.ago)
     LevelStarterAssetsController.any_instance.
       expects(:get_object).
-      with(uuid_name).
-      returns(file_obj)
+      with(@uuid_name).
+      returns(@file_obj)
     LevelStarterAssetsController.any_instance.
       expects(:read_file).
-      with(file_obj).
+      with(@file_obj).
       returns('hello, world!')
     level_starter_assets = {
-      'ty.png' => uuid_name
+      'ty.png' => @uuid_name
     }
     level = create(:level, starter_assets: level_starter_assets)
 
@@ -92,11 +94,10 @@ class LevelStarterAssetsControllerTest < ActionController::TestCase
   end
 
   test 'upload: returns unprocessable_entity if file fails to upload' do
-    file_obj = MockS3ObjectSummary.new('123-abc.jpg', 123, 1.day.ago)
     LevelStarterAssetsController.any_instance.
       expects(:get_object).
-      returns(file_obj)
-    file_obj.expects(:upload_file).returns(false)
+      returns(@file_obj)
+    @file_obj.expects(:upload_file).returns(false)
 
     sign_in create(:levelbuilder)
     post :upload, params: {level_name: create(:level).name, files: [@file]}
@@ -105,11 +106,10 @@ class LevelStarterAssetsControllerTest < ActionController::TestCase
   end
 
   test 'upload: returns unprocessable_entity if file uploads but starter asset is not added' do
-    file_obj = MockS3ObjectSummary.new('123-abc.jpg', 123, 1.day.ago)
     LevelStarterAssetsController.any_instance.
       expects(:get_object).
-      returns(file_obj)
-    file_obj.expects(:upload_file).returns(true)
+      returns(@file_obj)
+    @file_obj.expects(:upload_file).returns(true)
     Level.any_instance.expects(:save).returns(false)
 
     sign_in create(:levelbuilder)
@@ -119,12 +119,11 @@ class LevelStarterAssetsControllerTest < ActionController::TestCase
   end
 
   test 'upload: returns summary if file uploads and starter asset is added' do
-    file_obj = MockS3ObjectSummary.new('123-abc.jpg', 123, 1.day.ago)
     LevelStarterAssetsController.any_instance.
       expects(:get_object).
       twice. # FIX THIS - ONLY CALL ONCE
-      returns(file_obj)
-    file_obj.expects(:upload_file).returns(true)
+      returns(@file_obj)
+    @file_obj.expects(:upload_file).returns(true)
 
     sign_in create(:levelbuilder)
     level = create :level
