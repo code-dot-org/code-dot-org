@@ -21,6 +21,8 @@ class LevelStarterAssetsController < ApplicationController
     uuid_name = @level.starter_assets[friendly_name]
     file_obj = get_object(uuid_name)
     content_type = file_content_type(File.extname(uuid_name))
+
+    expires_in 1.hour, public: true
     send_data read_file(file_obj), type: content_type, disposition: 'inline'
   end
 
