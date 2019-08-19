@@ -602,7 +602,6 @@
   "feedbackNotificationButton": "Voir les commentaires",
   "feedbackNotificationDetails": "Vous avez {numFeedbackLevels} niveaux avec des commentaires non lus.",
   "feedbackNotificationLesson": "Leçon:",
-  "feedbackNotificationLevel": "Niveau:",
   "feedbackNotificationUnit": "Unité:",
   "feedbackPlaceholder": "S'Il vous plaît, entrez des commentaires pour votre élèves ici. Ils seront visibles par votre élève après avoir cliqué sur \"Sauvegarder et partager\".",
   "feedbackSaveError": "Une erreur s'est produite lors de l'enregistrement de vos commentaires. Veuillez essayer de sauvegarder à nouveau.",

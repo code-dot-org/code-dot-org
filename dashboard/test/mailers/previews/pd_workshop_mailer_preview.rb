@@ -35,7 +35,7 @@ class Pd::WorkshopMailerPreview < ActionMailer::Preview
   end
 
   def teacher_enrollment_receipt_csd_1
-    mail :teacher_enrollment_receipt, Pd::Workshop::COURSE_CSD, Pd::Workshop::SUBJECT_CSD_UNITS_2_3
+    mail :teacher_enrollment_receipt, Pd::Workshop::COURSE_CSD, Pd::Workshop::SUBJECT_CSD_WORKSHOP_1
   end
 
   def teacher_enrollment_receipt__admin
@@ -105,17 +105,17 @@ class Pd::WorkshopMailerPreview < ActionMailer::Preview
   end
 
   def teacher_enrollment_reminder_csd_1_10_day
-    mail :teacher_enrollment_reminder, Pd::Workshop::COURSE_CSD, Pd::Workshop::SUBJECT_CSD_UNITS_2_3,
+    mail :teacher_enrollment_reminder, Pd::Workshop::COURSE_CSD, Pd::Workshop::SUBJECT_CSD_WORKSHOP_1,
       options: {days_before: 10}
   end
 
   def teacher_enrollment_reminder_csd_1_3_day
-    mail :teacher_enrollment_reminder, Pd::Workshop::COURSE_CSD, Pd::Workshop::SUBJECT_CSD_UNITS_2_3,
+    mail :teacher_enrollment_reminder, Pd::Workshop::COURSE_CSD, Pd::Workshop::SUBJECT_CSD_WORKSHOP_1,
       options: {days_before: 3}
   end
 
   def teacher_enrollment_reminder_csd_unit_6_3_day
-    mail :teacher_enrollment_reminder, Pd::Workshop::COURSE_CSD, Pd::Workshop::SUBJECT_CSD_UNIT_6,
+    mail :teacher_enrollment_reminder, Pd::Workshop::COURSE_CSD, Pd::Workshop::SUBJECT_CSD_WORKSHOP_4,
       options: {days_before: 3}
   end
 
@@ -210,7 +210,7 @@ class Pd::WorkshopMailerPreview < ActionMailer::Preview
   end
 
   def exit_survey__csd_1
-    mail :exit_survey, Pd::Workshop::COURSE_CSD, Pd::Workshop::SUBJECT_CSD_UNITS_2_3
+    mail :exit_survey, Pd::Workshop::COURSE_CSD, Pd::Workshop::SUBJECT_CSD_WORKSHOP_1
   end
 
   private

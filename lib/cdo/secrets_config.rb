@@ -81,7 +81,7 @@ module Cdo
     def clear_secrets
       @secrets ||= []
       @secrets |= table.select {|_, v| v.is_a?(Secret)}.keys.map(&:to_s)
-      @secrets.product([nil]).to_h.to_yaml.gsub("---\n", '')
+      @secrets.product([nil]).to_h.to_yaml.sub(/^---.*\n/, '')
     end
   end
 end

@@ -357,6 +357,32 @@ nl-NL:
         schapen te bereiken.
       Overworld Move to Sheep_2019: Voeg een tweede "beweeg vooruit"-commando toe
         om de schapen te bereiken.
+      Standalone_Artist_2: Teken deze diamant met hoeken van 120 en 60 graden en zijden
+        van 150 pixels.
+      Standalone_Artist_3: Kan je deze zeshoek tekenen met zijden van 100 pixels lang
+        en hoeken van 60 graden?
+      Standalone_Artist_4: Je hebt nu een nieuw blok om mee te spelen, een herhaal
+        lus. Dit zal een aantal opdrachten herhalen. Wat gebeurt er als je deze opdrachten
+        6 keer herhaalt?
+      Standalone_Artist_5: Hoeveel keer moet de diamant in een lus gestopt worden
+        om de bloem te tekenen?
+      Standalone_Artist_5.5: 'Kijk hoe we de diamant code vereenvoudigd hebben door
+        de code te veranderen in een lus. Je kan de ganse reeks 12 keer herhalen om
+        een bloem te tekenen. Tip: Je moet 30 graden draaien na je diamant lus zodat
+        je niet over dezelfde diamant blijft tekenen.'
+      Standalone_Artist_6: 'Gebruik de zeshoek code 6 maal in een lus om dit ontwerp
+        te tekenen. Hoeveel graden moet je iedere keer draaien. Tip: deel het aantal
+        graden in een cirkel door het aantal maal dat je een lus gebruikt.'
+      Standalone_Artist_7: 'Een functie is een ander programmeer-hulpmiddel wat vermijdt
+        dat je jezelf herhaalt. Deze functie tekent een bloem, je kan deze gelijk
+        waneer gebruiken wanneer je een bloem wil tekenen. Gebruik deze en de nieuwe
+        spring blok om bloemen te tekenen. Tip: De bloemen staan 150 pixels van mekaar'
+      Standalone_Artist_8: Hier is de functie "teken een vorm" die we geprogrammeerd
+        hebben om zeshoeken te tekenen. voer de code uit om te zien wat deze doet
+        en experimenteer vervolgens met de functie om te zien wat er gebeurt. Kan
+        je er patronen met vierkanten, driehoeken of achthoeken mee tekenen?
+      Standalone_Artist_9: Nu mag je maken wat je wil! Je hebt zelfs een lege functie
+        die je kan laten doen wat je maar wilt!
       course1_maze_debugging_challenge2: Debug dit level. Dit zijn de correct blokken,
         maar ze staan in de verkeerde volgorde!
       course2_collector_prog_challenge1: Kijk aandachtig! Kan jij alle _10_ stukken
@@ -373,8 +399,18 @@ nl-NL:
       course4_artist_fwp_challenge1: Probeer dit programma uit te voeren, en verander
         het om te zien wat er gebeurt. Kun je erachter te komen hoe het werkt? (Of
         het verwijder het en vervang het door iets totaal anders)
+      courseA_maze_seq13_2019: Grijp het varken zoals je maar wil!
       courseA_maze_seq8_2018: Los dit niveau op en krijg de vogel naar het varken!
       courseA_maze_seq8_2019: Los dit niveau op en krijg de vogel naar het varken!
+      courseA_maze_seq_challenge2_2019: Volg het pad, en leid me naar het varken.
+        Vermeid TNT of de veren zullen eraf vliegen!
+      courseB_artist_loops2_2019: |-
+        De Artiest is aan het proberen om een lijn **6** keer te tekenen, maar het lukt hem niet zo goed.
+        Kan jij hem helpen?
+      courseB_artist_loops3_2019: Help de artiest 7 keer een lijn te tekenen om een
+        tuinmuur te maken.
+      courseB_artist_loops5_2019: Tijd om de tredes te repareren! Herhaal dit patroon
+        **5** keer zodat de artiest de top van de struiken kan bereiken.
       courseB_artist_loops7: |-
         **Uitdaging:** Dit is een verborgen tuin!
         Laten we rondwandelen.
@@ -384,12 +420,33 @@ nl-NL:
       courseB_artist_loops7_2019: |-
         **Uitdaging:** Dit is een verborgen tuin!
         Laten we rondwandelen.
+      courseB_artist_loops8_2019: Tijd om naar huis te gaan. Can je de ladder repareren
+        gebruik makende van slechts één blok om de artiest naar beneden te krijgen?
       courseB_artist_loops_challenge2: Laten we een spel spelen! Teken zoveel mogelijk
         X'en als je maar kan! Kan er 3 in een rij tekenen?
       courseB_artist_loops_challenge2_2018: Laten we een spel spelen! Teken zoveel
         mogelijk X'en als je maar kan! Kan er 3 in een rij tekenen?
       courseB_artist_loops_challenge2_2019: Laten we een spel spelen! Teken zoveel
         mogelijk X'en als je maar kan! Kan er 3 in een rij tekenen?
+      courseB_collector_loops10_2019: Help Laurel om alle schatten uit deze grot te
+        verzamelen.
+      courseB_collector_loops11_2019: Eureka! Verzamel zoveel schatten als je maar
+        kan!
+      courseB_collector_loops4_2019: Herstel Laurel's pad om alle schatten te verzamelen!
+      courseB_collector_loops5_2019: 'Voeg de code van de vorige puzzel toe om alle
+        schatten te verzamelen. '
+      courseB_collector_loops6_2019: Verzin wat code om Laurel alle schatten te laten
+        verzamelen!
+      courseB_collector_loops7_2019: Schrijf de code om alle schatten te verzamelen.
+      courseB_collector_loops8_2019: "**Uitdaging:** De schat bevindt zich over de
+        afstand van de hele trap! Schrijf code om Laurel alles te laten grijpen."
+      courseB_collector_loops9_2019: _"Help me om de schat te krijgen uit deze diepe
+        vallei."_
+      courseB_collector_loops_challenge1_2019: 'Je krijgt deze keer een beperkt aantal
+        blokken. Verzamel alle schatten! '
+      courseB_maze_seq12_2019: Grijp het varken zoals je maar wil!
+      courseB_maze_seq_challenge2_2019: Debug dit level. Dit zijn de correct blokken,
+        maar ze staan in de verkeerde volgorde!
       courseC_artist_loops2a: Gebruik nu een lus om je vogel 12 keer te laten draaien
         in een hoek van 30 graden.
       courseC_artist_loops2a_2018: Gebruik nu een lus om je vogel 12 keer te laten

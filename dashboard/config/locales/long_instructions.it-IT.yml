@@ -1307,7 +1307,7 @@ it-IT:
         cancellalo e sostituiscilo con qualcosa di totalmente diverso)
       course4_collector_nested_loops_challenge2: "_\"A caccia di diamanti - usando
         i cicli!\"_ \n\nAiuta la collezionista a raggiungere almeno due diamanti usando
-        solo i blocchi che trovi nella cassetta degli attrezzi. Se vuoi puoi anche
+        solo i blocchi che trovi nella cassetta degli attrezzi. Se vuoi, puoi anche
         raccoglierli tutti e 4."
       course4_harvester_nested_loops_challenge1: _"Ho bisogno di aiuto nella fattoria!
         Aiutami a raccogliere queste pannocchie usando solo i blocchi presenti nella
@@ -1396,15 +1396,15 @@ it-IT:
       courseA_artist_loops4: |-
         Ora usa un ciclo <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="2-6">5</title></block></xml> per disegnare questa linea cinque volte!
 
-        ![](https://images.code.org/b2bc7f52ffdac2ad0d8e7c2d798c24df-image-1501875818062.gif)
+        <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="2-6">5</title></block></xml>
       courseA_artist_loops4_2018: |-
         Ora usa un ciclo <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="2-6">5</title></block></xml> per disegnare questa linea cinque volte!
 
-        ![](https://images.code.org/b2bc7f52ffdac2ad0d8e7c2d798c24df-image-1501875818062.gif)
+        <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="2-6">5</title></block></xml>
       courseA_artist_loops4_2019: |-
         Ora usa un ciclo <xml><block type="controls_repeat_simplified_dropdown" block-text="repeat"><title name="TIMES" config="2-6">5</title></block></xml> per disegnare questa linea cinque volte!
 
-        ![](https://images.code.org/b2bc7f52ffdac2ad0d8e7c2d798c24df-image-1501875818062.gif)
+        <xml><block type="controls_repeat_simplified_dropdown" block-text="repeat"><title name="TIMES" config="2-6">5</title></block></xml>
       courseA_artist_loops5: |-
         ## Disegna una linea composta da sette segmenti. Questo diventerà il nostro orizzonte.
 
@@ -1432,15 +1432,15 @@ it-IT:
       courseA_artist_loops7: |-
         ## Usa il ciclo <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> per aggiungere le onde all'acqua.
 
-        ![expandable](https://images.code.org/01c5f6772a8b608a2fca5f6de7e25c67-image-1498062629139.gif)
+        <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>
       courseA_artist_loops7_2018: |-
         ## Usa il ciclo <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> per aggiungere le onde all'acqua.
 
-        ![expandable](https://images.code.org/01c5f6772a8b608a2fca5f6de7e25c67-image-1498062629139.gif)
+        <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>
       courseA_artist_loops7_2019: |-
         ## Usa il ciclo <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> per aggiungere le onde all'acqua.
 
-        ![expandable](https://images.code.org/01c5f6772a8b608a2fca5f6de7e25c67-image-1498062629139.gif)
+        <xml><block type="controls_repeat_simplified_dropdown" block-text="repeat"><title name="TIMES" config="3-10">???</title></block></xml>
       courseA_artist_loops8: |-
         ## Ci serve una scala per salire sulla barca.
 
@@ -1531,9 +1531,8 @@ it-IT:
       courseA_collector_loops2: |-
         Raccogli tutti e tre i diamanti! Muovi Laura su ogni diamante e poi usa questo blocco:
           <xml><block type="collector_collect"/></xml>
-      courseA_collector_loops2_2018: |-
-        Raccogli tutti e tre i diamanti! Muovi Laura su ogni diamante e poi usa questo blocco:
-         <xml><block type="collector_collect"/></xml>
+      courseA_collector_loops2_2018: "Raccogli tutte e tre le perle! Muovi Laurel
+        su ogni pezzo del tesoro e poi usa questo blocco:\\\r\n <xml><block type=\"collector_collect\"/></xml>"
       courseA_collector_loops3: Come può Laura raccogliere tutti e cinque i diamanti
         usando un solo blocco <xml><block type="maze_moveEast"/></xml>?
       courseA_collector_loops3_2018: Come può Laura raccogliere tutti e cinque i diamanti
@@ -1688,6 +1687,7 @@ it-IT:
         ![expandable](https://images.code.org/c6ae5024441e2305db82d06679e5a281-image-1497997160569.gif)
       courseA_maze_seq12_2018: "Prendi quel maialino! \\\r\n\\\r\n![expandable](https://images.code.org/c6ae5024441e2305db82d06679e5a281-image-1497997160569.gif)"
       courseA_maze_seq12_2019: "Prendi quel maialino! \\\r\n\\\r\n![expandable](https://images.code.org/c6ae5024441e2305db82d06679e5a281-image-1497997160569.gif)"
+      courseA_maze_seq13_2019: Prendi quel maialino in qualsiasi modo!
       courseA_maze_seq1_2018: _"Gioca con questi blocchi e cerca di farmi arrivare
         fino a quel cattivone di un maialino!"_
       courseA_maze_seq1_2019: _"Gioca con questi blocchi e cerca di farmi arrivare
@@ -1753,6 +1753,8 @@ it-IT:
       courseA_maze_seq_challenge1_2019: Correggi gli errori in questo programma. Togli
         i blocchi di troppo e aggiungi quelli che mancano. Fai arrivare l'uccellino
         fino al maialino!
+      courseA_maze_seq_challenge2_2019: Individua il percorso per far arrivare l'uccellino
+        fino al maialino. Evita la dinamite (TNT) o l'uccellino ci lascerà le penne!
       courseA_playLab_events3: |-
         Aiuta il cane a muoversi unendo il blocco <xml><block type="studio_move">
             <title name="SPRITE">1</title>
@@ -1909,6 +1911,17 @@ it-IT:
         ![](https://images.code.org/126edbb030b78586c620fea11bd9c867-image-1497998152966.gif)
         ![](https://images.code.org/a4fc9deba0ecdae5f434a828708d997b-image-1497998171788.gif)
         ![](https://images.code.org/55271714dcfc01bf49441cdf3bf17649-image-1497998176661.gif)
+      courseB_artist_loops1_2019: Questo è un nuovo tipo di esercizio chiamato "Artista".
+        Prova a disegnare qualcosa di divertente. Quando sei soddisfatto, premi "Termina"
+        per passare all'esercizio successivo.
+      courseB_artist_loops2_2019: L'artista sta cercando di disegnare **6** volte
+        una linea, ma qualcosa non funziona. Puoi aiutarlo?
+      courseB_artist_loops3_2019: Aiuta l'artista a disegnare 7 volte una linea per
+        costruire un muro nel giardino.
+      courseB_artist_loops4_2019: Ora dobbiamo preparare il terreno per la coltivazione.
+        Trova gli errori nel codice e aiuta l'artista a sistemare il campo.
+      courseB_artist_loops5_2019: È ora di posizionare la scala! Ripeti questo schema
+        per **5** volte in modo che l'artista riesca a raggiungere la cima dei cespugli.
       courseB_artist_loops6: Dietro i cespugli c'è una bellissima pianta rampicante
         fiorita. Riesci a salire e capire dove va a finire?
       courseB_artist_loops6_2018: Dietro i cespugli c'è una bellissima pianta rampicante
@@ -1920,6 +1933,10 @@ it-IT:
         intorno."
       courseB_artist_loops7_2019: "**Sfida:** C'è un giardino segreto! Facci un giro
         intorno."
+      courseB_artist_loops8_2019: È tempo di tornare a casa. Aggiungendo un solo blocco,
+        riesci a sistemare questa scala per far scendere l'artista?
+      courseB_artist_loops9_2019: Scegli la strada più breve per tornare a casa attraversando
+        l'acqua. Puoi aiutare l'artista a stare sulle pietre?
       courseB_artist_loops_challenge1: _"È il momento di lanciare i dadi! Mi aiuti
         a disegnarli?"_
       courseB_artist_loops_challenge1_2018: _"È il momento di lanciare i dadi! Mi
@@ -1938,6 +1955,11 @@ it-IT:
         Trascina i blocchi nell'area di lavoro e cerca di capire come prendere i diamanti. Raccogli almeno un diamante per completare questo esercizio.
 
         (Se non sei riuscito a raccogliere tutti i diamanti, ma sei soddisfatto, premi il pulsante "Termina".)
+      courseB_collector_loops10_2019: Aiuta Laura a raccogliere tutti i diamanti da
+        questa grotta.
+      courseB_collector_loops11_2019: "Evviva! Raccogli più diamanti che puoi! \n(Se
+        non sei riuscito a raccogliere tutti i diamanti, ma sei comunque soddisfatto,
+        premi il pulsante \"Termina\")"
       courseB_collector_loops1_2018: "**Tempo di giocare:** questa è Laura l'avventuriera!
         Muovila per farle raccogliere più diamanti che puoi. Raccogli almeno un diamante
         per completare questo esercizio.\n\n* * *\n\nTrascina i blocchi nell'area
@@ -1968,6 +1990,20 @@ it-IT:
         usando un solo blocco <xml><block type="maze_moveEast"/></xml>?
       courseB_collector_loops3_2019: Come può Laura raccogliere tutti e cinque i diamanti
         usando un solo blocco <xml><block type="maze_moveEast"/></xml>?
+      courseB_collector_loops4_2019: Correggi il percorso di Laura per raccogliere
+        tutti i diamanti!
+      courseB_collector_loops5_2019: Questo è il programma che risolve il precedente
+        esercizio, modificalo per farmi prendere tutti i diamanti.
+      courseB_collector_loops6_2019: Scopri il codice necessario per aiutare Laura
+        a prendere tutti i diamanti!
+      courseB_collector_loops7_2019: Scrivi il codice per raccogliere tutti questi
+        diamanti.
+      courseB_collector_loops8_2019: "**Sfida:** I diamanti si sono sparpagliati giù
+        per le scale! Scrivi il codice per aiutare Laura a recuperarli."
+      courseB_collector_loops9_2019: _"Aiutami a raccogliere i diamanti in questa
+        ripida discesa."_
+      courseB_collector_loops_challenge1_2019: Questa volta hai i blocchi contati.
+        Raccogli tutti i diamanti!
       courseB_collector_loops_challenge2a: |-
         _"Prendiamo i diamanti!"_
 
@@ -2014,7 +2050,24 @@ it-IT:
         arrivarci usando i cicli?
       courseB_iceage_loops9_2019: La ghianda è così lontana! Riesci ad aiutare Scrat
         ad arrivarci usando i cicli?
+      courseB_maze_seq10_2019: Correggi gli errori per aiutare Scrat a raggiungere
+        la ghianda.
+      courseB_maze_seq11_2019: Tocca a te! Porta Scrat fino alla ghianda.
+      courseB_maze_seq12_2019: Ora prendi quella ghianda in qualsiasi modo!
+      courseB_maze_seq1_2019: |-
+        Gioca con questi blocchi per vedere cosa fanno fare a Scrat!
+
+        Porta Scrat fino alla ghianda per completare l'esercizio.
       courseB_maze_seq3: _"Correggi il programma per farmi arrivare fino al maialino!"_
+      courseB_maze_seq4_2019: Usa **2** blocchi di movimento per far arrivare Scrat
+        fino alla ghianda.
+      courseB_maze_seq5_2019: Questo esercizio è un po' complicato!
+      courseB_maze_seq6_2019: Muovi in una direzione, poi in un'altra, per far arrivare
+        Scrat fino alla ghianda!
+      courseB_maze_seq7_2019: Scopri che cosa manca e aggiungi i blocchi per far arrivare
+        Scrat fino alla ghianda!
+      courseB_maze_seq8_2019: Ora tocca a te! Cosa ti serve per far arrivare Scrat
+        fino alla ghianda?
       courseB_maze_seq9: "**Sfida**: Evita la dinamite (TNT) per far arrivare l'uccellino
         fino al maialino."
       courseB_maze_seq9_2018: "**Sfida:** aggira il ghiaccio rotto per far arrivare
@@ -2030,6 +2083,8 @@ it-IT:
       courseB_maze_seq_challenge1_2019: Hai solo quattro esemplari per ogni tipo di
         blocco. Riesci a trovare un percorso che ti faccia arrivare fino al maialino
         prima di terminare tutti i blocchi a disposizione?
+      courseB_maze_seq_challenge2_2019: Correggi questo esercizio. Ci sono già tutti
+        i blocchi giusti, ma sono nell'ordine sbagliato!
       courseB_playLab_events1: |-
         Questo ambiente si chiama Laboratorio.
 
@@ -2042,6 +2097,8 @@ it-IT:
         Questo ambiente si chiama Laboratorio.
 
         Cerca di capire cosa fa ogni blocco.
+      courseB_playlab_events2_2019: Fai dire qualcosa al drago quando clicchi sul
+        pulsante "Esegui".
       courseB_playlab_events3: Usa un evento per fare in modo che il drago cambi umore
         in modo casuale ![](https://images.code.org/c365e065614fea592612264f33624c09-image-1475698889081.17.53.png)
         quando clicchi su di lui.
@@ -2097,6 +2154,8 @@ it-IT:
         \ Fai svanire il cavaliere quando si scontra con il drago.   \n2.  Riproduci
         anche un suono quando si colpiscono, così sembra più reale.   \n\n* * *\n\nTocca
         tutte le bandierine, quindi vai contro il drago per completare l'esercizio."
+      courseB_playlab_eventsFP_2019: Usa la tua immaginazione. Come puoi rendere questo
+        gioco ancora più divertente?
       courseB_playlab_events_challenge1: |-
         È il momento della Grande Gara degli Animali! Fai in modo che gli animali si muovano verso il basso quando premi la freccia verso il basso (▼).
 
@@ -4021,15 +4080,15 @@ it-IT:
         Aiuta Laura a correggere il codice per raccogliere tutti i diamanti.
       courseD_collector_nested_loops_challenge2: "_\"A caccia di diamanti - usando
         i cicli!\"_ \n\nAiuta la collezionista a raggiungere almeno due diamanti usando
-        solo i blocchi che trovi nella cassetta degli attrezzi. Se vuoi puoi anche
+        solo i blocchi che trovi nella cassetta degli attrezzi. Se vuoi, puoi anche
         raccoglierli tutti e 4."
       courseD_collector_nested_loops_challenge2_2018: "_\"A caccia di diamanti - usando
         i cicli!\"_ \n\nAiuta la collezionista a raggiungere almeno due diamanti usando
-        solo i blocchi che trovi nella cassetta degli attrezzi. Se vuoi puoi anche
+        solo i blocchi che trovi nella cassetta degli attrezzi. Se vuoi, puoi anche
         raccoglierli tutti e 4."
       courseD_collector_nested_loops_challenge2_2019: "_\"A caccia di diamanti - usando
         i cicli!\"_ \n\nAiuta la collezionista a raggiungere almeno due diamanti usando
-        solo i blocchi che trovi nella cassetta degli attrezzi. Se vuoi puoi anche
+        solo i blocchi che trovi nella cassetta degli attrezzi. Se vuoi, puoi anche
         raccoglierli tutti e 4."
       courseD_collector_ramp10: Fai camminare Laura intorno a questo quadrato per
         raccogliere i diamanti che trova.
@@ -4268,8 +4327,14 @@ it-IT:
         Usa un blocco <xml><block type="maze_turn">
             <title name="DIR">turnLeft</title>
           </block></xml> per raggiungere la ghianda!
+      courseD_iceage_loops2_2019: |-
+        Usa un blocco <xml><block type="maze_turn">
+            <title name="DIR">turnLeft</title>
+          </block></xml> per raggiungere la ghianda!
       courseD_iceage_loops3: Riesci a raggiungere la ghianda con un solo blocco <xml><block
         type="maze_moveForward"/></xml>? Prova con un ciclo!
+      courseD_iceage_loops3_2019: Riesci a raggiungere la ghianda con un solo blocco
+        `O ←` <xml><block type="maze_moveWest"/></xml>? Prova con un ciclo!
       courseD_iceage_loops4: Aggiungi un blocco per far percorrere a Scrat tutto il
         tragitto per raggiungere la ghianda!
       courseD_iceage_loops4_2019: Aggiungi un blocco per far percorrere a Scrat tutto
@@ -4838,13 +4903,13 @@ it-IT:
       courseE_farmer_functions10b: Se metti il codice dell'esercizio precedente in
         una funzione, poi potrai usarla due volte per risolvere questo esercizio.
       courseE_farmer_functions13_2018: |-
-        Risolvi questo puzzle in 23 blocchi o meno.
+        Risolvi questo esercizio in 23 blocchi o meno.
 
         * * *
 
         ##### Ogni germoglio farà crescere _una_ pannocchia o niente. Per programmare la soluzione migliore, è necessario modificare le funzioni.
       courseE_farmer_functions13_2019: |-
-        Risolvi questo puzzle in 23 blocchi o meno.
+        Risolvi questo esercizio in 23 blocchi o meno.
 
         * * *
 
@@ -5133,15 +5198,18 @@ it-IT:
         modifiche al codice del precedente esercizio!
       courseF_artist_for7_2019: Per ottenere questo disegno bastano solo tre piccole
         modifiche al codice del precedente esercizio!
-      courseF_artist_for9: |-
-        **Ispirazione:** Usa il contatore all'interno del blocco `imposta l'opacità` in modo da ottenere l'effetto del centro gradualmente sbiadito.\
-        (Questo schema con esagono è stato creato usando un angolo di 60 gradi.)
-      courseF_artist_for9_2018: |-
-        **Ispirazione:** Usa il contatore all'interno del blocco `imposta l'opacità` in modo da ottenere l'effetto del centro gradualmente sbiadito.\
-        (Questo schema con esagono è stato creato usando un angolo di 60 gradi.)
-      courseF_artist_for9_2019: |-
-        **Ispirazione:** Usa il contatore all'interno del blocco `imposta l'opacità` in modo da ottenere l'effetto del centro gradualmente sbiadito.\
-        (Questo schema con esagono è stato creato usando un angolo di 60 gradi.)
+      courseF_artist_for9: "**Ispirazione:** Usa la variabile `counter` (_contatore_)
+        all'interno del blocco `imposta l'opacità` per ottenere un tratto più leggero
+        al centro del disegno. \\\\ \n(Questo schema con esagono è stato creato usando
+        un angolo di 60 gradi.)"
+      courseF_artist_for9_2018: "**Ispirazione:** Usa la variabile `counter` (_contatore_)
+        all'interno del blocco `imposta l'opacità` per ottenere un tratto più leggero
+        al centro del disegno. \\\\ \n(Questo schema con esagono è stato creato usando
+        un angolo di 60 gradi.)"
+      courseF_artist_for9_2019: "**Ispirazione:** Usa la variabile `counter` (_contatore_)
+        all'interno del blocco `imposta l'opacità` per ottenere un tratto più leggero
+        al centro del disegno. \\\\ \n(Questo schema con esagono è stato creato usando
+        un angolo di 60 gradi.)"
       courseF_artist_for_challenge1: |-
         Riesci a ricreare questo disegno?
 
@@ -5436,27 +5504,30 @@ it-IT:
         E ora andiamo oltre!
 
         Quale deve essere il **passo** in questo ciclo con contatore per raccogliere 3, 6, 9, 12, 15 dosi di nettare?
-      courseF_bee_for9: "Ora combina l'uso della variabile `counter` (contatore) un
-        blocco matematico! \n\nCome puoi utilizzare la variabile `counter` (contatore)
-        per muoverti in questo giardino usando il minor numero possibile di blocchi?"
-      courseF_bee_for9_2018: "Ora combina l'uso della variabile `counter` (contatore)
-        un blocco matematico! \n\nCome puoi utilizzare la variabile `counter` (contatore)
-        per muoverti in questo giardino usando il minor numero possibile di blocchi?"
-      courseF_bee_for9_2019: "Ora combina l'uso della variabile `counter` (contatore)
-        un blocco matematico! \n\nCome puoi utilizzare la variabile `counter` (contatore)
-        per muoverti in questo giardino usando il minor numero possibile di blocchi?"
+      courseF_bee_for9: "Ora combina l'uso della variabile `counter` (_contatore_)
+        con un blocco matematico! \n\nCome puoi utilizzare la variabile `counter`
+        (_contatore_) per muoverti in questo giardino usando il minor numero possibile
+        di blocchi?"
+      courseF_bee_for9_2018: "Ora combina l'uso della variabile `counter` (_contatore_)
+        con un blocco matematico! \n\nCome puoi utilizzare la variabile `counter`
+        (_contatore_) per muoverti in questo giardino usando il minor numero possibile
+        di blocchi?"
+      courseF_bee_for9_2019: "Ora combina l'uso della variabile `counter` (_contatore_)
+        con un blocco matematico! \n\nCome puoi utilizzare la variabile `counter`
+        (_contatore_) per muoverti in questo giardino usando il minor numero possibile
+        di blocchi?"
       courseF_bee_for_challenge1: |-
         Usa questo _ciclo con contatore_ per raccogliere tutto il nettare.
 
-        Ci sono alcune azioni che avrai bisogno di ripetere "counter" volte.
+        Ci sono alcune azioni che avrai bisogno di ripetere _counter_ volte.
       courseF_bee_for_challenge1_2018: |-
         Usa questo _ciclo con contatore_ per raccogliere tutto il nettare.
 
-        Ci sono alcune azioni che avrai bisogno di ripetere "counter" volte.
+        Ci sono alcune azioni che avrai bisogno di ripetere _counter_ volte.
       courseF_bee_for_challenge1_2019: |-
         Usa questo _ciclo con contatore_ per raccogliere tutto il nettare.
 
-        Ci sono alcune azioni che avrai bisogno di ripetere "counter" volte.
+        Ci sono alcune azioni che avrai bisogno di ripetere _counter_ volte.
       courseF_bee_for_challenge2: Risolvi questo esercizio con il minore numero possibile
         di blocchi.
       courseF_bee_for_challenge2_2018: Risolvi questo esercizio con il minore numero
@@ -5472,11 +5543,11 @@ it-IT:
 
         In questo esercizio, ogni zona necessita che la variabile sia 1 in meno rispetto alla zona precedente. Per poter usare la stessa funzione per risolvere questo esercizio, sottrai 1 dalla variabile `gather` (_che rappresenta la quantità di nettare e di miele da gestire_) ogni volta che si esegue il ciclo.
       courseF_bee_variables_4_2018: |-
-        "Incredibile!"
+        _"Incredibile!"_
 
         Modifica il codice in modo che funzioni per questo esercizio.
       courseF_bee_variables_4_2019: |-
-        "Incredibile!"
+        _"Incredibile!"_
 
         Modifica il codice in modo che funzioni per questo esercizio.
       coursea_maze_ramp1_2018: "Per far arrivare l'uccellino fino al maialino, trascina

@@ -575,7 +575,7 @@ vi:
       gamelab_checkTouching:
         options:
           CONDITION:
-            '"when"': Khi nào
+            '"when"': khi nào
             '"while"': Lặp khi
       gamelab_debugSprite:
         options:
@@ -597,7 +597,7 @@ vi:
       gamelab_keyPressed:
         options:
           CONDITION:
-            '"when"': Khi nào
+            '"when"': khi nào
             '"while"': Lặp khi
           KEY:
             '"up"': trên
@@ -646,7 +646,7 @@ vi:
       gamelab_spriteClicked:
         options:
           CONDITION:
-            '"when"': Khi nào
+            '"when"': khi nào
             '"while"': Lặp khi
       gamelab_turn:
         options:
@@ -864,19 +864,19 @@ vi:
       aalab_checkTouching:
         options:
           CONDITION:
-            '"when"': Khi nào
+            '"when"': khi nào
             '"while"': Lặp khi
       aalab_clickedOn:
         options:
           CONDITION:
-            '"when"': Khi nào
+            '"when"': khi nào
             '"while"': Lặp khi
       aalab_jumpTo:
         text: "{SPRITE} nhảy đến {LOCATION}"
       aalab_keyPressed:
         options:
           CONDITION:
-            '"when"': Khi nào
+            '"when"': khi nào
             '"while"': Lặp khi
           KEY:
             '"up"': trên

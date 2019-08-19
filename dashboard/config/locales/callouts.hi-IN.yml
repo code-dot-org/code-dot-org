@@ -89,6 +89,45 @@ hi-IN:
         craft_what_is_iron: इस लौह का खनन करें!
       Underground Iron_2019:
         craft_what_is_iron: इस लौह का खनन करें!
+      course3_artist_functions_challenge1:
+        courseE_artist_functions_challenge1_callout1: नीचे और कोड जोड़कर इस प्रोग्राम
+          को चलता रखें।
+        courseE_artist_functions_challenge1_callout2: यदि आपको यह डिज़ाइन पसंद नहीं
+          है, तो इसे अपनी पसंद की किसी भी चीज़ में बदलें!
+      course3_artist_functions_challenge2:
+        courseE_artist_functions_challenge2_callout1: नीचे और कोड जोड़कर इस प्रोग्राम
+          को चलता रखें।
+        courseE_artist_functions_challenge2_callout2: यदि आपको यह डिज़ाइन पसंद नहीं
+          है, तो इसे अपनी पसंद की किसी भी चीज़ में बदलें!
+      course4_artist_functions_challenge2:
+        courseE_artist_functions_challenge2_callout1: नीचे और कोड जोड़कर इस प्रोग्राम
+          को चलता रखें।
+        courseE_artist_functions_challenge2_callout2: यदि आपको यह डिज़ाइन पसंद नहीं
+          है, तो इसे अपनी पसंद की किसी भी चीज़ में बदलें!
+      courseA_maze_seq1:
+        courseA_maze_seq1_1: जब आपको संकेत चाहिए हो तो लाइटबल्ब पर क्लिक करें!
+      courseA_maze_seq1_2018:
+        courseA_maze_seq1_1: जब आपको संकेत चाहिए हो तो लाइटबल्ब पर क्लिक करें!
+      courseA_maze_seq1_2019:
+        courseA_maze_seq1_1: जब आपको संकेत चाहिए हो तो लाइटबल्ब पर क्लिक करें!
+      courseA_maze_seq2:
+        courseA_maze_seqA_callout1: पूरे प्रोग्राम में कदम-दर-कदम जाने के लिए स्टेप
+          बटन का उपयोग करें। यह बग ढूंढने में आपकी मदद करेगा!
+      courseA_maze_seq4:
+        made_of_stone: ये ब्लॉक पत्थर से बनें हैं।  आप उन्हें मूव तो कर सकते हैं,
+          लेकिन आप उन्हें मिटा नहीं सकते!
+      courseB_maze_seq1:
+        courseB_maze_seq1: जब आपको संकेत चाहिए हो तो लाइटबल्ब पर क्लिक करें!
+      courseB_maze_seq1_2018:
+        courseB_maze_seq1: जब आपको संकेत चाहिए हो तो लाइटबल्ब पर क्लिक करें!
+      courseB_maze_seq1_2019:
+        courseB_maze_seq1: जब आपको संकेत चाहिए हो तो लाइटबल्ब पर क्लिक करें!
+      courseB_maze_seq2:
+        courseB_maze_seq2_callout1: पूरे प्रोग्राम में कदम-दर-कदम जाने के लिए स्टेप
+          बटन का उपयोग करें। यह बग ढूंढने में आपकी मदद करेगा!
+      courseC19_playLab_EOC3:
+        courseE_playLab_scaffold3_1: अगले स्तर तक मूव करने के लिए इस झंडे को अभिनेता
+          के पास ले जाएं।
       courseD_bee_conditionals2:
         4_5_Bee_Conditionals_2_1: याद रखें, यह देखने के लिए जांचें कि क्या प्रत्येक
           बादल में फ्लोअर है या नहीं। आपको हनीकॉम की जांच करने की ज़रूरत नहीं है।
@@ -98,3 +137,93 @@ hi-IN:
       courseD_bee_conditionals2_2019:
         4_5_Bee_Conditionals_2_1: याद रखें, यह देखने के लिए जांचें कि क्या प्रत्येक
           बादल में फ्लोअर है या नहीं। आपको हनीकॉम की जांच करने की ज़रूरत नहीं है।
+      courseE_artist_functions1:
+        courseD_artist_functions1_1: आइए पहले वर्ग बनाने में मदद के लिए इस ब्लॉक का
+          उपयोग करके शुरुआत करें।
+      courseE_artist_functions2:
+        courseD_artist_functions2_1: जब यह हरा ब्लॉक चलता है, तो फंक्शन में पूरा कोड
+          चलेगा। पहला वर्ग खींचने के बाद कलाकार को क्या करना चाहिए?
+      courseE_artist_functions2_2018:
+        courseD_artist_functions2_1: जब यह हरा ब्लॉक चलता है, तो फंक्शन में पूरा कोड
+          चलेगा। पहला वर्ग खींचने के बाद कलाकार को क्या करना चाहिए?
+      courseE_artist_functions2_2019:
+        courseD_artist_functions2_1: जब यह हरा ब्लॉक चलता है, तो फंक्शन में पूरा कोड
+          चलेगा। पहला वर्ग खींचने के बाद कलाकार को क्या करना चाहिए?
+      courseE_artist_functions8:
+        courseD_artist_functions8_1: फंक्शन बनाने के लिए आपके ब्लॉक्स, टूलबॉक्स में
+          इस लेबल के अंतर्गत मूव किए गए हैं।
+      courseE_artist_functions8a_2018:
+        courseD_artist_functions8_1: फंक्शन बनाने के लिए आपके ब्लॉक्स, टूलबॉक्स में
+          इस लेबल के अंतर्गत मूव किए गए हैं।
+      courseE_artist_functions8a_2019:
+        courseD_artist_functions8_1: फंक्शन बनाने के लिए आपके ब्लॉक्स, टूलबॉक्स में
+          इस लेबल के अंतर्गत मूव किए गए हैं।
+      courseE_artist_functions_challenge1:
+        courseE_artist_functions_challenge1_callout1: नीचे और कोड जोड़कर इस प्रोग्राम
+          को चलता रखें।
+        courseE_artist_functions_challenge1_callout2: यदि आपको यह डिज़ाइन पसंद नहीं
+          है, तो इसे अपनी पसंद की किसी भी चीज़ में बदलें!
+      courseE_artist_functions_challenge1_2018:
+        courseE_artist_functions_challenge1_callout1: नीचे और कोड जोड़कर इस प्रोग्राम
+          को चलता रखें।
+        courseE_artist_functions_challenge1_callout2: यदि आपको यह डिज़ाइन पसंद नहीं
+          है, तो इसे अपनी पसंद की किसी भी चीज़ में बदलें!
+      courseE_artist_functions_challenge1_2019:
+        courseE_artist_functions_challenge1_callout1: नीचे और कोड जोड़कर इस प्रोग्राम
+          को चलता रखें।
+        courseE_artist_functions_challenge1_callout2: यदि आपको यह डिज़ाइन पसंद नहीं
+          है, तो इसे अपनी पसंद की किसी भी चीज़ में बदलें!
+      courseE_artist_functions_challenge2:
+        courseE_artist_functions_challenge2_callout1: नीचे और कोड जोड़कर इस प्रोग्राम
+          को चलता रखें।
+        courseE_artist_functions_challenge2_callout2: यदि आपको यह डिज़ाइन पसंद नहीं
+          है, तो इसे अपनी पसंद की किसी भी चीज़ में बदलें!
+      courseE_artist_functions_challenge2_2018:
+        courseE_artist_functions_challenge2_callout1: नीचे और कोड जोड़कर इस प्रोग्राम
+          को चलता रखें।
+        courseE_artist_functions_challenge2_callout2: यदि आपको यह डिज़ाइन पसंद नहीं
+          है, तो इसे अपनी पसंद की किसी भी चीज़ में बदलें!
+      courseE_artist_functions_challenge2_2019:
+        courseE_artist_functions_challenge2_callout1: नीचे और कोड जोड़कर इस प्रोग्राम
+          को चलता रखें।
+        courseE_artist_functions_challenge2_callout2: यदि आपको यह डिज़ाइन पसंद नहीं
+          है, तो इसे अपनी पसंद की किसी भी चीज़ में बदलें!
+      courseE_farmer_functions1:
+        courseE_farmer_functions1_2: इस समय टूलबॉक्स थोड़ा अलग तरह से व्यवस्थित किया
+          गया है! यह देखने के लिए विभिन्न श्रेणियों पर क्लिक करें कि आपके पास कौन-से
+          ब्लॉक्स हैं।
+      courseE_farmer_functions13_2018:
+        courseE_farmer_functions1a_1: यह सब्जी अज्ञात है।  जब भी आप प्रोग्राम चलाते
+          हैं, यह हर बार बदल जाती है।
+      courseE_farmer_functions13_2019:
+        courseE_farmer_functions1a_1: यह सब्जी अज्ञात है।  जब भी आप प्रोग्राम चलाते
+          हैं, यह हर बार बदल जाती है।
+      courseE_farmer_functions1_2018:
+        courseE_farmer_functions1_2: इस समय टूलबॉक्स थोड़ा अलग तरह से व्यवस्थित किया
+          गया है! यह देखने के लिए विभिन्न श्रेणियों पर क्लिक करें कि आपके पास कौन-से
+          ब्लॉक्स हैं।
+      courseE_farmer_functions1_2019:
+        courseE_farmer_functions1_2: इस समय टूलबॉक्स थोड़ा अलग तरह से व्यवस्थित किया
+          गया है! यह देखने के लिए विभिन्न श्रेणियों पर क्लिक करें कि आपके पास कौन-से
+          ब्लॉक्स हैं।
+      courseE_farmer_functions1a:
+        courseE_farmer_functions1a_1: यह सब्जी अज्ञात है।  जब भी आप प्रोग्राम चलाते
+          हैं, यह हर बार बदल जाती है।
+      courseE_farmer_functions1a_2018:
+        courseE_farmer_functions1a_1: यह सब्जी अज्ञात है।  जब भी आप प्रोग्राम चलाते
+          हैं, यह हर बार बदल जाती है।
+      courseE_farmer_functions1a_2019:
+        courseE_farmer_functions1a_1: यह सब्जी अज्ञात है।  जब भी आप प्रोग्राम चलाते
+          हैं, यह हर बार बदल जाती है।
+      courseE_farmer_functions2b:
+        courseE_farmer_functions1a_1: यह सब्जी अज्ञात है।  जब भी आप प्रोग्राम चलाते
+          हैं, यह हर बार बदल जाती है।
+      courseE_farmer_functions2b_2018:
+        courseE_farmer_functions1a_1: यह सब्जी अज्ञात है।  जब भी आप प्रोग्राम चलाते
+          हैं, यह हर बार बदल जाती है।
+      courseE_farmer_functions2b_2019:
+        courseE_farmer_functions1a_1: यह सब्जी अज्ञात है।  जब भी आप प्रोग्राम चलाते
+          हैं, यह हर बार बदल जाती है।
+      courseE_playLab_scaffold3:
+        courseE_playLab_scaffold3_1: अगले स्तर तक मूव करने के लिए इस झंडे को अभिनेता
+          के पास ले जाएं।

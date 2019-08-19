@@ -1748,6 +1748,10 @@
           stages:
             While Loops:
               name: Gjenta-løkker
+        csp1-pilot:
+          stages:
+            Binary Numbers:
+              name: Binære Tall
         time4csdemo:
           stages:
             Crowdsourcing:

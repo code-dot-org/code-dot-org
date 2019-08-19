@@ -7,7 +7,7 @@
   "properties": {
     "skin": "netsim",
     "skip_instructions_popup": "false",
-    "short_instructions": "Develop, document, and test a protocol that allows you to use Internet Simulator to relay a message. See the worksheet for more detailed instructions.  ",
+    "short_instructions": "Develop, document, and test rules that allows you to use Internet Simulator to send a message. ",
     "show_clients_in_lobby": "true",
     "show_routers_in_lobby": "false",
     "show_add_router_button": "false",
@@ -48,10 +48,9 @@
     "show_chunk_size_control": "false",
     "lock_chunk_size_control": "false",
     "default_bit_rate_bits_per_second": "0.5",
-    "video_key": "csp_internetsimulator_1",
     "show_log_browser_button": "false",
     "connected_routers": "false",
-    "long_instructions": "## Coordination and Binary Messages Activity\r\n\r\n**Develop your Protocol**\r\nDevelop a protocol that allows you to use Internet Simulator to relay a message, i.e. one member sends a message and the other member sends the same message back. You or a teacher will say “Go” to begin the exchange but otherwise all communication must be through the widget. As you’re working, consider:\r\n\r\n- How will you know when the exchange is supposed to begin?\r\n- How will you know whose turn it is to send or receive the message?\r\n- How will you coordinate your actions?\r\n\r\nDocument your protocol on the worksheet provided, and test your protocol using the Internet Simulator",
+    "long_instructions": "## Coordination and Binary Messages Activity\r\n\r\nDevelop a set of rules that allows you to use Internet Simulator to send a message, i.e. one member sends a message and the other member sends the same message back. You or a teacher will say “Go” to begin the exchange but otherwise all communication must be through the widget. As you’re working, consider:\r\n\r\n- How will you know when the exchange is supposed to begin?\r\n- How will you know whose turn it is to send or receive the message?\r\n- How will you coordinate your actions?",
     "never_autoplay_video": "true",
     "examples_required": "false",
     "parent_level_id": 16725,
@@ -69,7 +68,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2018-05-10 16:07:09 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-08-07 04:10:05 +0000\",\"changed\":[\"automatic_receive\",\"preload_asset_list\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2018-05-10 16:07:09 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-08-07 04:10:05 +0000\",\"changed\":[\"automatic_receive\",\"preload_asset_list\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-08-15 18:51:09 +0000\",\"changed\":[\"short_instructions\",\"video_key\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
