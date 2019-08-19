@@ -11,8 +11,8 @@ if [ -n "$DRONE" ]; then
   chmod +x ${CODECOV}
   CODECOV="$CODECOV -C $DRONE_COMMIT_SHA"
 
-  # As of 8/2/2019, PhantomJS seems to frequently crash on drone instances when using > 1 processes.
-  NPROC=1
+  # Limit parallelism on Drone to reduce chances of PhantomJS crashes.
+  NPROC=2
 else
   # For non-Drone runs, stub-out codecov.
   CODECOV=: # stub
