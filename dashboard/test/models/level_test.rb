@@ -916,4 +916,24 @@ EOS
     expected_assets["my-file.png"] = "6789.png"
     assert_equal expected_assets, level.starter_assets
   end
+
+  test 'remove_starter_asset does not save or error if starter_assets are nil' do
+    level = create :level
+    level.expects(:save).never
+    assert_nil level.starter_assets
+
+    level.remove_starter_asset('non-existent-asset.png')
+  end
+
+  test 'remove_starter_asset deletes key-value pair from starter_assets' do
+    key = 'my-key.png'
+    level = create :level, starter_assets: {key => '123-abc.png'}
+    assert_equal 1, level.starter_assets.length
+
+    successful_save = level.remove_starter_asset(key)
+    level.reload
+
+    assert successful_save
+    assert_nil level.starter_assets
+  end
 end
