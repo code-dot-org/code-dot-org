@@ -19,7 +19,7 @@ const styles = {
     bottom: 0,
     left: 0,
     right: 0,
-    padding: 10,
+    padding: experiments.isEnabled(experiments.APPLAB_DATASETS) ? 0 : 10,
     backgroundColor: color.white,
     boxSizing: 'border-box',
     borderLeft: '1px solid gray',
