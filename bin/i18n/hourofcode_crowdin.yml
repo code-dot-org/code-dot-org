@@ -15,19 +15,16 @@
 #
 files: [
   {
-    "source": "/how-to/*",
-    "translation": "/%language%/hourofcode/how-to/%original_file_name%",
-    "update_option": "update_as_unapproved",
-    "ignore": ["*.md.erb"]
-  }, {
-    "source": "/promote/*",
-    "translation": "/%language%/hourofcode/promote/%original_file_name%",
-    "update_option": "update_as_unapproved",
-    "ignore": ["*.md.erb"]
-  }, {
-    "source": "*",
+    "source": "/en.yml",
     "translation": "/%language%/hourofcode/%original_file_name%",
-    "update_option": "update_as_unapproved",
-    "ignore": ["/*.md.erb"]
+    "update_option": "update_as_unapproved"
+  }, {
+    "source": "/**/*.md",
+    "translation": "/%language%/hourofcode/**/%original_file_name%",
+    "update_option": "update_as_unapproved"
+  }, {
+    "source": "**/*.md.partial",
+    "translation": "/%language%/hourofcode/**/%original_file_name%",
+    "update_option": "update_as_unapproved"
   }
 ]
