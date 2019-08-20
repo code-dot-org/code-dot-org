@@ -10,9 +10,8 @@
 #  level          :string(255)
 #  weight         :float(24)
 #  twitter_weight :float(24)
-#  created_at     :datetime
-#  updated_at     :datetime
-#  download       :string(255)
+#  created_at     :datetime         not null
+#  updated_at     :datetime         not null
 #
 
 # A donor record sourced from the Pegasus CSV.

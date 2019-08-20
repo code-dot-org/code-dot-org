@@ -8,7 +8,7 @@ module Pd::Application
     self.use_transactional_test_case = true
     setup_all do
       @regional_partner = create :regional_partner
-      @fit_workshop = create :workshop, :fit
+      @fit_workshop = create :fit_workshop
       @workshop = create :workshop
       @application = create :pd_facilitator1920_application
       @application_with_fit_workshop = create :pd_facilitator1920_application,
@@ -260,7 +260,7 @@ module Pd::Application
     end
 
     test 'fit_cohort' do
-      fit_workshop = create :workshop, :fit
+      fit_workshop = create :fit_workshop
       expected_application_ids = []
 
       # create some applications to be included in fit_cohort
@@ -456,7 +456,7 @@ module Pd::Application
 
     test 'associated models cache prefetch' do
       workshop = create :workshop
-      fit_workshop = create :workshop, :fit
+      fit_workshop = create :fit_workshop
       application = create :pd_facilitator1920_application, pd_workshop_id: workshop.id, fit_workshop_id: fit_workshop.id
       # Workshops, Sessions, Enrollments
       assert_queries 3 do
@@ -469,7 +469,7 @@ module Pd::Application
     end
 
     test 'enroll_user creates enrollment' do
-      fit_workshop = create :workshop, :fit
+      fit_workshop = create :fit_workshop
       application = create :pd_facilitator1920_application, fit_workshop_id: fit_workshop.id
 
       assert_nil application.auto_assigned_fit_enrollment_id
@@ -481,8 +481,8 @@ module Pd::Application
     end
 
     test 'enroll_user for a different workshop deletes previous enrollment' do
-      original_fit_workshop = create :workshop, :fit
-      new_fit_workshop = create :workshop, :fit
+      original_fit_workshop = create :fit_workshop
+      new_fit_workshop = create :fit_workshop
       application = create :pd_facilitator1920_application, fit_workshop_id: original_fit_workshop.id
 
       application.enroll_user
