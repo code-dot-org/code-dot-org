@@ -1,7 +1,8 @@
 #
 # Your crowdin's credentials
 #
-"project_identifier" : "hour-of-code"
+#"project_identifier" : "hour-of-code"
+"project_identifier" : "cdo-temp"
 "base_path" : "../../i18n/locales/source/hourofcode"
 
 # API Credentials must be loaded from a separate identity file. See
@@ -15,28 +16,27 @@
 #
 files: [
   {
-    "source": "/en.yml",
-    "translation": "/%language%/hourofcode/%original_file_name%",
-    "update_option": "update_as_unapproved"
-  }, {
-    "source": "/how-to/*.md",
+    "source": "/how-to/*",
     "translation": "/%language%/hourofcode/how-to/%original_file_name%",
-    "update_option": "update_as_unapproved"
+    "update_option": "update_as_unapproved",
+    "ignore": ["*.md.erb"]
   }, {
-    "source": "/promote/*.md",
+    "source": "/promote/*",
     "translation": "/%language%/hourofcode/promote/%original_file_name%",
-    "update_option": "update_as_unapproved"
+    "update_option": "update_as_unapproved",
+    "ignore": ["*.md.erb"]
   }, {
-    "source": "/*.md",
+    "source": "*",
     "translation": "/%language%/hourofcode/%original_file_name%",
     "update_option": "update_as_unapproved",
     "ignore": [
-      "/whole-school.md",
-      "/activity-guidelines.md",
-      "/advisory-committee.md",
-      "/review-committee.md",
-      "/international-partners.md",
-      "/supporting-special-needs-students.md"
+      "/*.md.erb",
+      "/whole-school.md.partial",
+      "/activity-guidelines.md.partial",
+      "/advisory-committee.md.partial",
+     "/review-committee.md.partial",
+      "/international-partners.md.partial",
+      "/supporting-special-needs-students.md.partial"
     ]
   }
 ]
