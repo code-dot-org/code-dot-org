@@ -1,4 +1,5 @@
 class LevelStarterAssetsController < ApplicationController
+  authorize_resource class: false, except: [:show, :file]
   before_action :set_level
 
   S3_BUCKET = 'cdo-v3-assets'.freeze
