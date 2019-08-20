@@ -5,7 +5,7 @@ module Pd::Application
     self.use_transactional_test_case = true
     setup_all do
       @regional_partner = create :regional_partner
-      @fit_workshop = create :workshop, :fit
+      @fit_workshop = create :fit_workshop
       @workshop = create :workshop
       @application = create :pd_facilitator1819_application
       @application_with_fit_workshop = create :pd_facilitator1819_application,
