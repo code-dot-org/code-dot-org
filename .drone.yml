@@ -258,7 +258,8 @@ steps:
   - cp -rn "$(pwd)/home/circleci/.rbenv" /home/circleci || true
   - rm -rf "$(pwd)/home/circleci/.rbenv"
   # Depended on by CircleUtils: https://github.com/code-dot-org/code-dot-org/blob/56c4061afb55432ba8ccecc72b5b960ebd9480aa/lib/cdo/circle_utils.rb#L19
-  - export CIRCLE_SHA1=$DRONE_COMMIT
+  # Set this to current commit, which is the empty commit we created during the clone step with the "test all" tag
+  - export CIRCLE_SHA1=$(git rev-parse HEAD)
   - /entrypoint.sh docker/unit_tests.sh
 
 - name: update-cache
@@ -287,6 +288,6 @@ trigger:
 
 ---
 kind: signature
-hmac: 18462dce643157e4fbc8d0f8f5b78b5775c07818713eb64ab32a8bddeeab4cea
+hmac: 6dfc29c91fbca03b97a0335e0ef0b3d19a2cc12e034cd34ea9e93408d44ad763
 
 ...
