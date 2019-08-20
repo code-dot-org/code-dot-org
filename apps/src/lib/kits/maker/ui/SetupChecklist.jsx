@@ -93,7 +93,7 @@ export default class SetupChecklist extends Component {
       // Can we talk to the firmware?
       .then(() =>
         this.detectStep(STATUS_BOARD_CONNECT, () => {
-          setupChecker.detectCorrectFirmware().then(() => {
+          return setupChecker.detectCorrectFirmware().then(() => {
             this.setState({boardTypeDetected: setupChecker.detectBoardType()});
           });
         })
