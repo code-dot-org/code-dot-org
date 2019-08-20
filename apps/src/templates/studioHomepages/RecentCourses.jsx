@@ -9,7 +9,6 @@ import ViewFeedback from './ViewFeedback';
 import styleConstants from '../../styleConstants';
 import i18n from '@cdo/locale';
 import shapes from './shapes';
-import experiments from '@cdo/apps/util/experiments';
 
 const contentWidth = styleConstants['content-width'];
 
@@ -61,9 +60,7 @@ export default class RecentCourses extends Component {
             </div>
           )}
           {moreCourses.length > 0 && <SeeMoreCourses courses={moreCourses} />}
-          {experiments.isEnabled(experiments.FEEDBACK_NOTIFICATION) &&
-            !isTeacher &&
-            hasFeedback && <ViewFeedback />}
+          {!isTeacher && hasFeedback && <ViewFeedback />}
           <SetUpCourses isTeacher={isTeacher} hasCourse={hasCourse} />
         </ContentContainer>
       </div>
