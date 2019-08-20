@@ -2,9 +2,9 @@ require 'test_helper'
 
 class Pd::ProfessionalLearningLandingControllerTest < ::ActionController::TestCase
   def prepare_scenario
-    @csf_workshop = create :pd_ended_workshop, num_sessions: 3, course: Pd::Workshop::COURSE_CSF, ended_at: Date.today - 1.day
-    @csd_workshop = create :pd_ended_workshop, num_sessions: 3, course: Pd::Workshop::COURSE_CSD, ended_at: Date.today - 2.days
-    @csp_workshop = create :pd_workshop, num_sessions: 3, course: Pd::Workshop::COURSE_CSP
+    @csf_workshop = create :workshop, :ended, num_sessions: 3, course: Pd::Workshop::COURSE_CSF, ended_at: Date.today - 1.day
+    @csd_workshop = create :workshop, :ended, num_sessions: 3, course: Pd::Workshop::COURSE_CSD, ended_at: Date.today - 2.days
+    @csp_workshop = create :workshop, num_sessions: 3, course: Pd::Workshop::COURSE_CSP
 
     @teacher = create(:teacher, email: 'test_email@foo.com', user_type: 'teacher')
     other_teacher = create :teacher
@@ -32,12 +32,8 @@ class Pd::ProfessionalLearningLandingControllerTest < ::ActionController::TestCa
   end
 
   test 'Admin workshops may show up as pending exit surveys' do
-    skip 'Investigate flaky test failures'
-
     # Fake Admin workshop, which should produce an exit survey
-    admin_workshop = create :pd_ended_workshop,
-      course: Pd::Workshop::COURSE_ADMIN,
-      subject: nil
+    admin_workshop = create :admin_workshop, :ended
 
     # Given a teacher that attended the workshop
     teacher = create :teacher
@@ -55,9 +51,7 @@ class Pd::ProfessionalLearningLandingControllerTest < ::ActionController::TestCa
 
   test 'FiT workshops do not show up as pending exit surveys' do
     # Fake FiT workshop, which should not produce an exit survey
-    fit_workshop = create :pd_ended_workshop,
-      course: Pd::Workshop::COURSE_CSF,
-      subject: Pd::Workshop::SUBJECT_CSF_FIT
+    fit_workshop = create :fit_workshop, :ended
 
     # Given a teacher that attended the workshop, such that they would get
     # a survey for any other workshop subject.
@@ -75,18 +69,12 @@ class Pd::ProfessionalLearningLandingControllerTest < ::ActionController::TestCa
   end
 
   test 'FiT workshops do not interfere with other pending exit surveys' do
-    skip 'Investigate flaky test failures'
-
     # Fake CSF workshop (older than the FiT workshop) which should
     # produce a pending exit survey
-    csf_workshop = create :pd_ended_workshop,
-      course: Pd::Workshop::COURSE_CSF,
-      ended_at: Date.today - 1.day
+    csf_workshop = create :csf_workshop, :ended, ended_at: Date.today - 1.day
 
     # Fake FiT workshop, which should not produce an exit survey
-    fit_workshop = create :pd_ended_workshop,
-      course: Pd::Workshop::COURSE_CSD,
-      subject: Pd::Workshop::SUBJECT_CSD_FIT
+    fit_workshop = create :fit_workshop, :ended
 
     # Given a teacher that attended both workshops
     teacher = create :teacher
@@ -105,8 +93,7 @@ class Pd::ProfessionalLearningLandingControllerTest < ::ActionController::TestCa
 
   test 'Facilitator workshops do not show up as pending exit surveys' do
     # Fake FiT workshop, which should not produce an exit survey
-    facilitator_workshop = create :pd_ended_workshop,
-      course: Pd::Workshop::COURSE_FACILITATOR
+    facilitator_workshop = create :facilitator_workshop, :ended
 
     # Given a teacher that attended the workshop, such that they would get
     # a survey for any other workshop subject.
@@ -124,17 +111,12 @@ class Pd::ProfessionalLearningLandingControllerTest < ::ActionController::TestCa
   end
 
   test 'Facilitator workshops do not interfere with other pending exit surveys' do
-    skip 'Investigate flaky test failures'
-
     # Fake CSF workshop (older than the Facilitator workshop) which should
     # produce a pending exit survey
-    csf_workshop = create :pd_ended_workshop,
-      course: Pd::Workshop::COURSE_CSF,
-      ended_at: Date.today - 1.day
+    csf_workshop = create :csf_workshop, :ended, ended_at: Date.today - 1.day
 
     # Fake Facilitator workshop, which should not produce an exit survey
-    facilitator_workshop = create :pd_ended_workshop,
-      course: Pd::Workshop::COURSE_FACILITATOR
+    facilitator_workshop = create :facilitator_workshop, :ended
 
     # Given a teacher that attended both workshops
     teacher = create :teacher

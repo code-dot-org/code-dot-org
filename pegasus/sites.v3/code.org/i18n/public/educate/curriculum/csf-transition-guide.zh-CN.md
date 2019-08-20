@@ -1,10 +1,10 @@
 * * *
 
-title: Computer Science Fundamentals Transition Guide theme: responsive style_min: true
+title: 计算机科学基础过渡指南 theme: responsive style_min: true
 
 * * *
 
-# 教学课程A-F
+# 教学课程 A-F
 
 ## 目录
 
@@ -12,7 +12,7 @@ title: Computer Science Fundamentals Transition Guide theme: responsive style_mi
 * [教学新课程](#newcourses)
 * [圆桌事件故事（A与B课程）](#circletime)
 * [课程架构与挑战谜题（所有年龄段）](#scaffolding)
-* [不需要计算机的过度活动（所有年龄段）](#unplugged)
+* [不需要计算机的过渡活动（所有年龄段）](#unplugged)
 * [课程结束 (课程 E & F)](#endofcourse)
 * [结语](#conclusion)
 * [常见问题](#faq)
@@ -21,62 +21,62 @@ title: Computer Science Fundamentals Transition Guide theme: responsive style_mi
 
 ## 概述
 
-随着计算机科学基础课程的出现，计算机教育的方式被极大的改变。 最初, 课程1-4 被设计为一个起点, 帮助向往计算机科学的各个年龄段的学生，获取基本知识。 现在，更多的地区、城市和各州开设了从幼儿园开始的计算机科学课程。教师们要求提供更多内容，让学生在中学/初中毕业前看好。
+随着计算机科学基础课程的出现，计算机教育的方式被极大的改变。 最初，课程 1-4 被设计为一个起点，帮助向往计算机科学的各个年龄段的学生，获取基本知识。 现在，更多的地区、城市和各州开设了从幼儿园开始的计算机科学课程。教师们寻求更多内容，帮助学生共度难关，直到初中/高中毕业。
 
-计算机科学基础课程 A - F, 是我们对这个问题的答案。 通过把课程按年级编辑安排, 使得我们可以退后一步, 重新思考我们呈现课程内容的方式。 It also allowed us the chance to wholeheartedly incorporate feedback from the dedicated teacher community that has supported us on this mission. Designed with the help of some of the best elementary school CS education specialists across the country, Courses A-F should feel familiar enough to run with no extra professional development, but fresh enough to present to students who have done our lessons in the past.
+计算机科学基础课程 A-F 是我们对这个问题的答案。 通过把课程按年级编辑安排，使得我们可以退后一步，重新思考我们呈现课程内容的方式。 还有给予了我们一次全心全意地接受来自支持我们这一使命的敬业教师社区的反馈。 在全国最好的小学 CS 教育专家的帮助下设计，学生们应能够熟悉 A-F 课程，无需额外的专业发展，但课程特色能够在过去完成我们课程的学生之中呈现。
 
 * 课程 A: 幼儿园
-* 课程 B: 第一年级
-* 课程 C: 第二年级
-* 课程 D: 第三年级
-* 课程 E: 第四年级
-* 课程 F: 第五年级
-* 学龄前速成课程: 幼儿园-第一年级
-* 速成班: 第二年级-第五年级
+* 课程 B: 一年级
+* 课程 C: 二年级
+* 课程 D: 三年级
+* 课程 E: 四年级
+* 课程 F: 五年级
+* 学龄前速成课程: 幼儿园 至 一年级
+* 速成班: 二年级 至 五年级
 
-The biggest update to CS Fundamentals is that content will move from four courses (Courses 1-4) to six courses aligned to each K-5 grade level (Courses A-F). In doing so, the lessons have become more tailored to the appropriate levels for reading, math, and overall cognitive development. Note the addition of two different “Express” courses, one for pre-readers and one for all other grades. These are similar to the previous suite’s “accelerated” version.
+对 CS 基础的最大更新将从四门课程（课程 1-4）转到与每个 K-5 年级（课程 A-F）对齐的六门课程。 这样一来，这些课程就更加适合达到阅读、数学和整体认知发展的水平。 请注意，增加了两个不同的“速成”课程，一个适用于学龄前儿童，另一个适用于其他所有年级。 这些类似于上一个套件的“速成”版。
 
 <a id="newcourses"></a>
 
-## 教学新课程
+## 教授新课程
 
-As mentioned earlier, the courses should feel familiar, but different. If you’ve been to a Code.org professional development workshop, then you’re ready to teach the new courses. There are a small number of changes, but the overall platform, curriculum and pedagogical philosophy is unchanged. If you haven’t yet been, Code.org offers 1 day workshops at no cost to help you learn how to understand the curricula, navigate the Code.org platform, and teach the unplugged lessons.
+如上所述，教师应该对这些课程有似曾相识的感觉，但又有些不同之处。 如果您去过 Code.org 专业发展研讨会，那么您就可以教授新课程了。 虽有少许变化，但整体平台、课程和教学理念不变。 如果您尚未参加，Code.org 提供为期 1 天的研讨会，帮助您了解如何理解课程、浏览 Code.org 平台以及教授线下课程。
 
 课程的主要更新有:
 
-* Circle-time stories for the younger learners
-* A new approach to scaffolding and practicing/applying concepts
-* Bridging activities to enhance the transition from unplugged lessons to plugged lessons
-* End of course projects for older students
+* 为年轻学习者准备的圆桌事件故事
+* 架构与练习，或应用概念的新方法
+* 过渡活动，加强从线下课程过渡到线上课程
+* 年龄较大的学生课程结束项目
 
-The rest of this guide will present each idea in more detail, offering tips and tricks for implementing the changes in your classroom.
+本指南的其余部分将更详细地介绍每个想法，并在您的课堂中提供实现更改的提示和技巧。
 
 <a id="circletime"></a>
 
 ## 圆桌事件故事（A与B课程）
 
-Some concepts are difficult to teach through activities and puzzles alone, especially for young students. This is why we’ve introduced a small number of circle-time stories in the Kindergarten and First Grade curricula. These stories are intended to be read by the teacher to the entire class, with stops along the way to discuss critical ideas like debugging, persistence, and frustration. Our hope is that allowing students to experience these tough concepts via story characters will help them to recognize the same notions when they arise in future lessons.
+有些概念仅仅通过活动和测试题教授是相当困难的，尤其是对低龄学生而言。 这就是为什么我们在幼儿园和一年级的课程中引入了少量的圆桌事件故事。 教师在班上朗读这些故事，并在中途停下来和学生一起进行诸如除错、坚持和挫败等关键想法的讨论。 我们希望通过故事人物接触复杂概念的方法可以帮助学生们在未来课程中更好地认识同样的概念。
 
-Here is how the circle-time stories are intended to be used:
+以下为如何使用圆桌事件故事的情景：
 
-### Read the appropriate story to your class
+### 在课堂阅读适当的故事：
 
-* Make sure to check for understanding along the way with questions and comments at useful moments during the action.
-* Discuss the stories afterward. What did your students hear? Are there any ideas that stuck with them?
-* Try to get students to identify with the characters. Is there anything that they do in their lives that remind them of one of the characters in the story?
+* 请务必在行动过程中的有效时刻，通过询问和评语检验学生是否理解。
+* 之后讨论故事。 您的学生学到了什么？ 他们有什么想法吗？
+* 试着让学生认同角色。 他们在生活中做了什么会让他们想起故事中的一个角色？
 
 ### 在学生开始下阶段活动前重提这个故事
 
 * 你还记得我们讨论过的主要想法吗？
-* How will you know if you see that idea today?
-* What did the character do to handle that idea? What would you do?
+* 如果你今天看到这个想法，你怎么知道呢？
+* 这个角色是怎么处理这个想法的？ 你会做什么？
 
-### Point out similarities between the story and the student’s situations when they intersect during an activity.
+### 指出故事与学生的情况在活动中发生交集时的相似之处。
 
-* Describe for a student how the position that they are in resembles a situation from the book. 
-* Ask a student to think about the characters and figure out what they might do. Does that help the student figure out a next step?
+* 为学生描述他们所处的位置与书中描述的情况有何相似之处。 
+* 让学生思考这些角色，并找出他们可能会做什么。 能够帮助学生找到下一步该怎么做吗？
 
-If you are unable to gather your entire class together, Code.org has provided a video option at the beginning of the appropriate lesson that presents the stories with limited animations. While these videos don’t offer quite the same experience, they will allow students to get exposure to the concepts and characters before continuing on with the rest of the course.
+如果您无法将整个分类结合在一起，Code.org 在适当的课程之开始时提供了一个视频选项，以有限的动画展示故事。 虽然这些视频不能提供完全相同的体验，但是这些视频会让学生在继续学习其余课程之前先接触到概念和角色。
 
 <a id="scaffolding"></a>
 
@@ -100,11 +100,11 @@ In some instances, we end our lessons with free-play style levels. These levels 
 * Remind students to be persistent and use their debugging skills on problems that feel tough.
 * Videos are often helpful. When students get stuck, have them rewatch the video a second, third, or even fourth time.
 * Require students to read the instructions. If they are having a hard time, let them read the instructions out loud to a classmate.
-* It’s okay to use hints! Students should use as many hints as they need, but be sure to attempt re-solving the puzzle at least one between each new offering.
+* 想用提示？不要紧！ Students should use as many hints as they need, but be sure to attempt re-solving the puzzle at least one between each new offering.
 
 <a id="unplugged"></a>
 
-## 不需要计算机的过度活动（所有年龄段）
+## 不需要计算机的过渡活动（所有年龄段）
 
 Unplugged activities meet students where they are in terms of pointing out how they already use important CS concepts in their everyday life. Once students can identify fundamental ideas like loops and conditionals, they get over the mental blocks that can happen when trying to use them for the first time programming online.
 

@@ -32,6 +32,7 @@ import {
 import {
   Courses,
   Subjects,
+  LegacySubjects,
   States
 } from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 import RegionalPartnerDropdown, {
@@ -312,6 +313,25 @@ export class WorkshopFilter extends React.Component {
     }));
   }
 
+  mergeSubjectArrays(objValue, srcValue) {
+    if (_.isArray(objValue)) {
+      const legacySubjects = srcValue.map(subject => '[Legacy] ' + subject);
+      return objValue.concat(legacySubjects);
+    }
+  }
+
+  getSubjects() {
+    if (!this._subjects) {
+      this._subjects = _.mergeWith(
+        Subjects,
+        LegacySubjects,
+        this.mergeSubjectArrays
+      );
+    }
+
+    return this._subjects;
+  }
+
   render() {
     // limit is intentionally stored in state and not reflected in the URL
     const filters = {
@@ -376,7 +396,7 @@ export class WorkshopFilter extends React.Component {
             </FormGroup>
           </Col>
           <Clearfix visibleLgBlock />
-          {filters.course && Subjects[filters.course] && (
+          {filters.course && this.getSubjects()[filters.course] && (
             <Col md={5} sm={6}>
               <FormGroup>
                 <ControlLabel>Subject</ControlLabel>
@@ -384,7 +404,7 @@ export class WorkshopFilter extends React.Component {
                   value={filters.subject}
                   onChange={this.handleSubjectChange}
                   placeholder={null}
-                  options={Subjects[filters.course].map(v => ({
+                  options={this.getSubjects()[filters.course].map(v => ({
                     value: v,
                     label: v
                   }))}
