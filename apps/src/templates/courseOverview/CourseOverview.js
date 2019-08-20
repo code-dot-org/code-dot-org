@@ -25,7 +25,6 @@ import AssignmentVersionSelector, {
   setRecommendedAndSelectedVersions
 } from '@cdo/apps/templates/teacherDashboard/AssignmentVersionSelector';
 import StudentFeedbackNotification from '@cdo/apps/templates/feedback/StudentFeedbackNotification';
-import experiments from '@cdo/apps/util/experiments';
 
 const styles = {
   main: {
@@ -187,9 +186,7 @@ export default class CourseOverview extends Component {
             redirectButtonText={i18n.goToAssignedVersion()}
           />
         )}
-        {experiments.isEnabled(experiments.FEEDBACK_NOTIFICATION) && userId && (
-          <StudentFeedbackNotification studentId={userId} />
-        )}
+        {userId && <StudentFeedbackNotification studentId={userId} />}
         {showRedirectWarning && !dismissedRedirectWarning(name) && (
           <Notification
             type={NotificationType.warning}
