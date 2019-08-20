@@ -1,8 +1,7 @@
 #
 # Your crowdin's credentials
 #
-#"project_identifier" : "hour-of-code"
-"project_identifier" : "cdo-temp"
+"project_identifier" : "hour-of-code"
 "base_path" : "../../i18n/locales/source/hourofcode"
 
 # API Credentials must be loaded from a separate identity file. See
@@ -29,14 +28,6 @@ files: [
     "source": "*",
     "translation": "/%language%/hourofcode/%original_file_name%",
     "update_option": "update_as_unapproved",
-    "ignore": [
-      "/*.md.erb",
-      "/whole-school.md.partial",
-      "/activity-guidelines.md.partial",
-      "/advisory-committee.md.partial",
-     "/review-committee.md.partial",
-      "/international-partners.md.partial",
-      "/supporting-special-needs-students.md.partial"
-    ]
+    "ignore": ["/*.md.erb"]
   }
 ]
