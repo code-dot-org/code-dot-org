@@ -81,10 +81,7 @@
     "show_type_hints": "false",
     "encrypted": "false",
     "mini_rubric": "false",
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ]
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",
