@@ -242,9 +242,8 @@ module Pd::SurveyPipeline
     end
 
     test 'get context of summer workshop survey submissions' do
-      facilitator = create :facilitator
-      workshop = create :workshop, course: COURSE_CSD, subject: SUBJECT_SUMMER_WORKSHOP,
-        num_sessions: 1, facilitators: [facilitator]
+      workshop = create :csd_summer_workshop, num_sessions: 1
+      facilitator = workshop.facilitators.first
       form_id = '1122334455'.to_i
 
       survey_metadata_to_context = {

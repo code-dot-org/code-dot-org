@@ -2480,7 +2480,7 @@ pt-BR:
           correct: true
         - text: "/script_assets/k_1_images/artist_images/E-S-W-N.png"
         - text: "/script_assets/k_1_images/artist_images/N-E-S-W.png"
-        - text: "/script_assets/k_1_images/artist_images/N|E|S|W.png"
+        - text: "/script_assets/k_1_images/artist_images/N-E-S-W.png"
       K-1 Artist 2 Match 2:
         title: Associação
         content2: Associe as formas com base no tipo.

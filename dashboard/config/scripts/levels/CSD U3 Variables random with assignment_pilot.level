@@ -20,8 +20,8 @@
     "edit_code": true,
     "embed": "false",
     "short_instructions": "Change the value of petalSize multiple times. How does it change your drawing?",
-    "long_instructions": "<img src=\"https://images.code.org/ba9592e887f52c1a538a0517560cdacf-image-1493913633878.gif\" style=\"float:right;height:150px\">\r\n\r\n# Debug: Variables and Random Numbers\r\n\r\nVariables can be assigned a random number too. This lets you save a single random value so that you can use it as many times as you want in your program.\r\n\r\n# Do This\r\n\r\n`eyeSize` is assigned a random number. Unfortunately only one of the eyes is currently using it.\r\n\r\n* **Run the program** to see how it works.\r\n* **Change the program** so that both eyes are always the same random size. Hint: you'll only need to make changes to one line of code.",
-    "start_blocks": "var eyeSize = randomNumber(10,60);\r\n\r\nnoStroke();\r\nbackground(\"green\");\r\n\r\n// Face\r\nfill(\"yellow\");\r\nellipse(200,200,200,200);\r\n\r\n// Eyes\r\nfill(\"black\");\r\nellipse(160,170,eyeSize,eyeSize);\r\nellipse(240,170,10,10);\r\n\r\n// Mouth\r\nfill(\"white\");\r\nrect(160,240,80,20);",
+    "long_instructions": "<img src=\"https://images.code.org/ba9592e887f52c1a538a0517560cdacf-image-1493913633878.gif\" style=\"float:right;height:150px\">\r\n\r\n# Variables and Random Numbers\r\n\r\nVariables can be assigned a random number too. This lets you save a single random value so that you can use it as many times as you want in your program.\r\n\r\n# Do This\r\n\r\n* Assign a random number to the variable `eyeSize` so the the eyes automatically change size every time you run the program.  Remember, the left and right eyes should always match each other!",
+    "start_blocks": "var eyeSize = 30;\r\n\r\nnoStroke();\r\nbackground(\"green\");\r\n\r\n// Face\r\nfill(\"yellow\");\r\nellipse(200,200,200,200);\r\n\r\n// Eyes\r\nfill(\"black\");\r\nellipse(160,170,eyeSize,eyeSize);\r\nellipse(240,170,eyeSize,eyeSize);\r\n\r\n// Mouth\r\nfill(\"white\");\r\nrect(160,240,80,20);",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "true",
@@ -60,16 +60,16 @@
     "name_suffix": "_pilot",
     "reference_links": [
       "/docs/csd-1718/variables_intro_csd/index.html",
+      "/docs/csd-1718/naming_variables/index.html",
       "/docs/csd-1718/drawing_shapes_map/index.html",
-      "/docs/csd-1718/shape_size_map/index.html",
-      "/docs/csd-1718/random_numbers_csd/index.html"
+      "/docs/csd-1718/shape_size_map/index.html"
     ],
-    "map_reference": "/docs/csd-1718/naming_variables/index.html",
+    "map_reference": "/docs/csd-1718/random_numbers_csd/index.html",
     "video_key": "csd_gamelab_variables_1",
     "show_type_hints": "false",
     "encrypted": "false",
     "rubric_key_concept": "Use variables to store and update information",
-    "mini_rubric": "true",
+    "mini_rubric": "false",
     "rubric_performance_level_1": "The eyeSize variable is used such that the two eyes have the same random size as instructed, with no other unexpected changes.",
     "rubric_performance_level_2": "The eyeSize variable is used such that the two eyes have the same random size, but other changes to the code may have introduced other unexpected behaviors.",
     "rubric_performance_level_3": "The eyeSize variable has been used somewhere in the program, but not such that it runs as instructed.",
@@ -78,7 +78,9 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-08 19:21:03 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-06-13 20:32:53 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"show_debug_watch\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-03-07 06:59:28 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-05-11 18:09:35 +0000\",\"changed\":[\"code_functions\",\"never_autoplay_video\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-02-07 21:51:25 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-02-07 21:52:27 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-03-29 06:47:57 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-06-08 19:21:03 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-06-13 20:32:53 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"show_debug_watch\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-03-07 06:59:28 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-05-11 18:09:35 +0000\",\"changed\":[\"code_functions\",\"never_autoplay_video\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-02-07 21:51:25 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-02-07 21:52:27 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-03-29 06:47:57 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-08-18 04:12:23 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"start_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-08-18 04:12:40 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"mini_rubric\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-08-18 04:47:46 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-08-18 04:48:41 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"reference_links\",\"map_reference\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Gamelab>

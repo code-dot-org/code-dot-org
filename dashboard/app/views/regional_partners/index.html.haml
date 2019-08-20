@@ -31,6 +31,6 @@
           %td= regional_partner.name
           %td= regional_partner.group
           %td= regional_partner.urban ? 'Yes' : 'No'
-          %td= regional_partner.contact.try(:email)
+          %td= regional_partner.contact_email_with_backup
           - if can? :update, regional_partner
             %td= link_to t('crud.edit'), edit_regional_partner_path(regional_partner)

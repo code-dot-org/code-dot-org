@@ -43,25 +43,6 @@ FactoryGirl.define do
       subject Pd::Workshop::SUBJECT_CSP_TEACHER_CON
     end
 
-    # TODO: Change into a sub-factory
-    trait :local_summer_workshop do
-      course Pd::Workshop::COURSE_CSP
-      subject Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP
-    end
-
-    # TODO: Change into a sub-factory + trait
-    trait :local_summer_workshop_upcoming do
-      local_summer_workshop
-      num_sessions 5
-      sessions_from {Date.current + 3.months}
-    end
-
-    # TODO: Change into a sub-factory
-    trait :fit do
-      course Pd::Workshop::COURSE_CSP
-      subject Pd::Workshop::SUBJECT_CSP_FIT
-    end
-
     trait :in_progress do
       started_at {Time.zone.now}
     end
@@ -229,12 +210,76 @@ FactoryGirl.define do
       factory(:csd_academic_year_workshop) {csd}
     end
 
-    # TODO
-    # - CSD 5-day Summer
-    # - CSP 5-day Summer
-    # - Admin workshop
-    # - Facilitator workshop
-    # - Counselor workshop
-    # - Facilitator Weekend
+    # 5-day local summer workshops
+    factory :summer_workshop do
+      # CSP local summer workshop by default
+      csp
+
+      location_name 'Greedale Community College'
+      on_map false         # Never on the map
+      funded false         # Less than half are funded
+      num_facilitators 2   # Most have 2 facilitators
+      num_sessions 5       # Most have 5 sessions
+      each_session_hours 8 # The most common session length
+
+      trait :csp do
+        course Pd::Workshop::COURSE_CSP
+        subject Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP
+        capacity 40          # Average capacity
+      end
+      factory(:csp_summer_workshop) {csp}
+
+      trait :csd do
+        course Pd::Workshop::COURSE_CSD
+        subject Pd::Workshop::SUBJECT_CSD_SUMMER_WORKSHOP
+        capacity 35          # Average capacity
+      end
+      factory(:csd_summer_workshop) {csd}
+    end
+
+    factory :facilitator_workshop do
+      course Pd::Workshop::COURSE_FACILITATOR
+      subject nil
+      capacity 100         # Typical capacity
+      on_map false         # Never on map
+      funded false         # Never funded
+      num_sessions 2       # Most have 2 sessions
+      num_facilitators 0   # Most have no facilitators
+      each_session_hours 8 # The most common session length
+    end
+
+    # Facilitator-in-training weekend workshop
+    factory :fit_workshop do
+      subject Pd::Workshop::SUBJECT_FIT
+      course Pd::Workshop::COURSE_CSP # CSD is also valid
+      capacity 100         # Typical capacity
+      on_map false         # Never on map
+      funded               # Sometimes funded (50%)
+      num_sessions 2       # Most have 2 sessions
+      num_facilitators 2   # Most have 2 facilitators
+      each_session_hours 8 # The most common session length
+    end
+
+    factory :admin_workshop do
+      course Pd::Workshop::COURSE_ADMIN
+      subject nil
+      capacity 35          # Average capacity
+      on_map false         # Never on map
+      funded               # More than half are funded
+      num_sessions 1       # Most have 1 session
+      num_facilitators 0   # Most have no facilitators
+      each_session_hours 2 # The most common session length
+    end
+
+    factory :counselor_workshop do
+      course Pd::Workshop::COURSE_COUNSELOR
+      subject nil
+      capacity 40          # Average capacity
+      on_map false         # Never on map
+      funded               # All funded
+      num_sessions 1       # Most have 1 session
+      num_facilitators 0   # Most have no facilitators
+      each_session_hours 6 # The most common session length
+    end
   end
 end
