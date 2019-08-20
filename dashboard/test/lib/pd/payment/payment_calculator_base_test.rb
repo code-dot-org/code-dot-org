@@ -5,10 +5,7 @@ require 'test_helper'
 module Pd::Payment
   class PaymentCalculatorBaseTest < ActiveSupport::TestCase
     test 'public unqualified' do
-      empty_workshop = create :workshop, :ended,
-        on_map: true, funded: true,
-        course: Pd::Workshop::COURSE_CSP,
-        subject: Pd::Workshop::SUBJECT_CSP_WORKSHOP_1
+      empty_workshop = create :csp_academic_year_workshop, :ended, on_map: true, funded: true
 
       workshop_summary = PaymentCalculatorBase.instance.calculate empty_workshop
       assert_equal 0, workshop_summary.num_teachers
@@ -147,7 +144,7 @@ module Pd::Payment
     end
 
     test 'teacher summaries' do
-      workshop = create :workshop, :ended, :local_summer_workshop, num_sessions: 2
+      workshop = create :summer_workshop, :ended, num_sessions: 2, each_session_hours: 6
 
       teacher_unqualified = create :pd_workshop_participant,
         workshop: workshop, enrolled: true, attended: true

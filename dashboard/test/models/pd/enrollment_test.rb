@@ -90,7 +90,7 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
   end
 
   test 'exit_survey_url' do
-    csf_workshop = create :workshop, :ended, course: Pd::Workshop::COURSE_CSF
+    csf_workshop = create :csf_workshop, :ended
     csf_enrollment = create :pd_enrollment, workshop: csf_workshop
 
     csp_workshop = create :workshop, :ended, course: Pd::Workshop::COURSE_CSP
@@ -102,7 +102,7 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     admin_workshop = create :workshop, :ended, course: Pd::Workshop::COURSE_ADMIN
     admin_enrollment = create :pd_enrollment, workshop: admin_workshop
 
-    local_summer_workshop = create :workshop, :ended, course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_SUMMER_WORKSHOP
+    local_summer_workshop = create :csp_summer_workshop, :ended
     local_summer_enrollment = create :pd_enrollment, workshop: local_summer_workshop
 
     teachercon_workshop = create :workshop, :ended, course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_TEACHER_CON
@@ -288,7 +288,7 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
   end
 
   test 'local summer survey filter' do
-    workshop = create :workshop, :local_summer_workshop, num_sessions: 5
+    workshop = create :summer_workshop
     teacher = create :teacher
     enrollment = create :pd_enrollment, :from_user, user: teacher, workshop: workshop
 
@@ -300,14 +300,18 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
   end
 
   test 'academic year survey filter' do
-    workshop = create :workshop, course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_WORKSHOP_1
+    workshop = create :csp_academic_year_workshop
     teacher = create :teacher
     enrollment = create :pd_enrollment, :from_user, user: teacher, workshop: workshop
 
     assert_equal [enrollment], Pd::Enrollment.filter_for_survey_completion([enrollment], false)
 
     # complete survey
-    create :pd_workshop_daily_survey, pd_workshop: workshop, user: enrollment.user, form_id: Pd::WorkshopDailySurvey.get_form_id_for_subject_and_day(workshop.subject, 'post_workshop'), day: 1
+    create :pd_workshop_daily_survey,
+      pd_workshop: workshop,
+      user: enrollment.user,
+      form_id: Pd::WorkshopDailySurvey.get_form_id_for_subject_and_day(workshop.subject, 'post_workshop'),
+      day: 1
     assert_equal [], Pd::Enrollment.filter_for_survey_completion([enrollment], false)
   end
 
@@ -568,7 +572,7 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
   end
 
   test 'update scholarship status for local summer workshop' do
-    workshop = create :workshop, :local_summer_workshop_upcoming
+    workshop = create :summer_workshop
     enrollment = create :pd_enrollment, :from_user, workshop: workshop
     # no scholarship info initially
     assert_nil enrollment.scholarship_status

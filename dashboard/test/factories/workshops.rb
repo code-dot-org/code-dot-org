@@ -1,3 +1,12 @@
+# Most academic year workshops are one day workshops.
+# These specific workshop types are two day workshops.
+TWO_DAY_AYW_SUBJECTS = [
+  Pd::Workshop::SUBJECT_CSD_WORKSHOP_5,
+  Pd::Workshop::SUBJECT_CSD_WORKSHOP_6,
+  Pd::Workshop::SUBJECT_CSP_WORKSHOP_5,
+  Pd::Workshop::SUBJECT_CSP_WORKSHOP_6
+]
+
 #
 # Factories for different types of PD workshops
 #
@@ -32,19 +41,6 @@ FactoryGirl.define do
     trait :teachercon do
       course Pd::Workshop::COURSE_CSP
       subject Pd::Workshop::SUBJECT_CSP_TEACHER_CON
-    end
-
-    # TODO: Change into a sub-factory
-    trait :local_summer_workshop do
-      course Pd::Workshop::COURSE_CSP
-      subject Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP
-    end
-
-    # TODO: Change into a sub-factory + trait
-    trait :local_summer_workshop_upcoming do
-      local_summer_workshop
-      num_sessions 5
-      sessions_from {Date.current + 3.months}
     end
 
     # TODO: Change into a sub-factory
@@ -126,5 +122,131 @@ FactoryGirl.define do
     #
     # Sub-factories
     #
+
+    # CSF Workshops, which are usually one-day workshops
+    # that happen year-round.
+    factory :csf_workshop do
+      # Make a CSF 101 "Intro" workshop by default
+      intro
+
+      course Pd::Workshop::COURSE_CSF
+      capacity 30          # Average capacity
+      on_map true          # About 60% are on the map
+      funded               # About 90% are funded
+      num_sessions 1       # Most have 1 session
+      num_facilitators 1   # Most have 1 facilitator
+      each_session_hours 7 # The most common session length
+
+      # CSF Intro, also known as CSF 101
+      # Our most common workshop type as of August 2019.
+      trait :intro do
+        subject Pd::Workshop::SUBJECT_CSF_101
+        location_name 'Walkerville Elementary School'
+      end
+      factory(:csf_intro_workshop, aliases: [:csf_101_workshop]) {intro}
+
+      # CSF Deep Dive, also known as CSF 201
+      trait :deep_dive do
+        subject Pd::Workshop::SUBJECT_CSF_201
+        location_name 'Third Street Elementary School'
+      end
+      factory(:csf_deep_dive_workshop, aliases: [:csf_201_workshop]) {deep_dive}
+    end
+
+    # CSD and CSP Academic Year Workshops
+    # These are one- or two-day workshops on specific parts of our curriculum that happen
+    # throughout the school year.  They have a lot in common.
+    factory :academic_year_workshop do
+      # Make a CSP workshop by default
+      csp
+
+      capacity 30          # Average capacity
+      on_map false         # Never on the map
+      funded               # More than half are funded
+      num_facilitators 2   # Most have 2 facilitators
+
+      # Some specific academic year workshops are usually two days instead of one.
+      # Add a trait making it easy to specify that we're testing a two-day workshop.
+      trait :two_day do
+        subject do
+          if course == Pd::Workshop::COURSE_CSP
+            Pd::Workshop::SUBJECT_CSP_WORKSHOP_5
+          else
+            Pd::Workshop::SUBJECT_CSD_WORKSHOP_5
+          end
+        end
+      end
+
+      # Workshops 5 and 6 are two-day workshops, others are one-day.
+      num_sessions {TWO_DAY_AYW_SUBJECTS.include?(subject) ? 2 : 1}
+
+      # The most common session length
+      each_session_hours {TWO_DAY_AYW_SUBJECTS.include?(subject) ? 7 : 8}
+
+      # CSP Academic Year Workshops
+      trait :csp do
+        course Pd::Workshop::COURSE_CSP
+        location_name 'Bayside High School'
+
+        # Possible subjects:
+        # Pd::Workshop::SUBJECT_CSP_WORKSHOP_1
+        # Pd::Workshop::SUBJECT_CSP_WORKSHOP_2
+        # Pd::Workshop::SUBJECT_CSP_WORKSHOP_3
+        # Pd::Workshop::SUBJECT_CSP_WORKSHOP_4
+        # Pd::Workshop::SUBJECT_CSP_WORKSHOP_5 (2-day)
+        # Pd::Workshop::SUBJECT_CSP_WORKSHOP_6 (2-day)
+        subject Pd::Workshop::SUBJECT_CSP_WORKSHOP_1
+      end
+      factory(:csp_academic_year_workshop) {csp}
+
+      # CSD Academic Year Workshops
+      trait :csd do
+        course Pd::Workshop::COURSE_CSD
+        location_name 'Sunrise Middle School'
+
+        # Possible subjects:
+        # Pd::Workshop::SUBJECT_CSD_WORKSHOP_1
+        # Pd::Workshop::SUBJECT_CSD_WORKSHOP_2
+        # Pd::Workshop::SUBJECT_CSD_WORKSHOP_3
+        # Pd::Workshop::SUBJECT_CSD_WORKSHOP_4
+        # Pd::Workshop::SUBJECT_CSD_WORKSHOP_5 (2-day)
+        # Pd::Workshop::SUBJECT_CSD_WORKSHOP_6 (2-day)
+        subject Pd::Workshop::SUBJECT_CSD_WORKSHOP_1
+      end
+      factory(:csd_academic_year_workshop) {csd}
+    end
+
+    # 5-day local summer workshops
+    factory :summer_workshop do
+      # CSP local summer workshop by default
+      csp
+
+      location_name 'Greedale Community College'
+      on_map false         # Never on the map
+      funded false         # Less than half are funded
+      num_facilitators 2   # Most have 2 facilitators
+      num_sessions 5       # Most have 5 sessions
+      each_session_hours 8 # The most common session length
+
+      trait :csp do
+        course Pd::Workshop::COURSE_CSP
+        subject Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP
+        capacity 40          # Average capacity
+      end
+      factory(:csp_summer_workshop) {csp}
+
+      trait :csd do
+        course Pd::Workshop::COURSE_CSD
+        subject Pd::Workshop::SUBJECT_CSD_SUMMER_WORKSHOP
+        capacity 35          # Average capacity
+      end
+      factory(:csd_summer_workshop) {csd}
+    end
+
+    # TODO
+    # - Admin workshop
+    # - Facilitator workshop
+    # - Counselor workshop
+    # - Facilitator Weekend
   end
 end

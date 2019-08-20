@@ -85,7 +85,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   end
 
   test 'exclude_summer scope' do
-    summer_workshop = create :workshop, :local_summer_workshop
+    summer_workshop = create :summer_workshop
     teachercon = create :workshop, :teachercon
 
     assert Pd::Workshop.exclude_summer.exclude? summer_workshop
@@ -389,8 +389,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   end
 
   test 'send_follow_up only teachers attended workshop get follow up emails' do
-    workshop = create :workshop, :ended, course: Pd::Workshop::COURSE_CSF,
-      subject: Pd::Workshop::SUBJECT_CSF_101, sessions_from: Date.today - 30.days
+    workshop = create :csf_intro_workshop, :ended, sessions_from: Date.today - 30.days
 
     teacher_attended = create(:pd_workshop_participant, workshop: workshop, enrolled: true, attended: true)
     create(:pd_workshop_participant, workshop: workshop, enrolled: true)
@@ -403,8 +402,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   end
 
   test 'send_follow_up all teachers attended workshop get follow up emails' do
-    workshop = create :workshop, :ended, course: Pd::Workshop::COURSE_CSF,
-      subject: Pd::Workshop::SUBJECT_CSF_101, sessions_from: Date.today - 30.days
+    workshop = create :csf_intro_workshop, :ended, sessions_from: Date.today - 30.days
 
     teacher_count = 3
     create_list :pd_workshop_participant, teacher_count, workshop: workshop, enrolled: true, attended: true
@@ -415,8 +413,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   end
 
   test 'send_follow_up exception in email delivery raises honeybadger but does not stop batch' do
-    workshop = create :workshop, :ended, course: Pd::Workshop::COURSE_CSF,
-      subject: Pd::Workshop::SUBJECT_CSF_101, sessions_from: Date.today - 30.days
+    workshop = create :csf_intro_workshop, :ended, sessions_from: Date.today - 30.days
 
     teacher_count = 3
     create_list :pd_workshop_participant, teacher_count, workshop: workshop, enrolled: true, attended: true
@@ -435,12 +432,9 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   end
 
   test 'send_follow_up only workshop ended exactly 30 days ago get follow up emails' do
-    workshop_31d = create :workshop, :ended, course: Pd::Workshop::COURSE_CSF,
-      subject: Pd::Workshop::SUBJECT_CSF_101, sessions_from: Date.today - 31.days
-    workshop_30d = create :workshop, :ended, course: Pd::Workshop::COURSE_CSF,
-      subject: Pd::Workshop::SUBJECT_CSF_101, sessions_from: Date.today - 30.days
-    workshop_29d = create :workshop, :ended, course: Pd::Workshop::COURSE_CSF,
-      subject: Pd::Workshop::SUBJECT_CSF_101, sessions_from: Date.today - 29.days
+    workshop_31d = create :csf_intro_workshop, :ended, sessions_from: Date.today - 31.days
+    workshop_30d = create :csf_intro_workshop, :ended, sessions_from: Date.today - 30.days
+    workshop_29d = create :csf_intro_workshop, :ended, sessions_from: Date.today - 29.days
 
     create(:pd_workshop_participant, workshop: workshop_31d, enrolled: true, attended: true)
     teacher_30d = create(:pd_workshop_participant, workshop: workshop_30d, enrolled: true, attended: true)
@@ -715,30 +709,17 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   end
 
   test 'csp summer workshops are capped at 33.5 hours' do
-    workshop_csp_summer = create :workshop,
-      course: Pd::Workshop::COURSE_CSP,
-      subject: Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP,
-      num_sessions: 5,
-      each_session_hours: 8
-
-    assert_equal 33.5, workshop_csp_summer.effective_num_hours
+    workshop = create :csp_summer_workshop, num_sessions: 5, each_session_hours: 8
+    assert_equal 33.5, workshop.effective_num_hours
   end
 
   test 'CSF 101 workshops are capped at 7 hours' do
-    workshop_csf_101 = create :workshop,
-      course: Pd::Workshop::COURSE_CSF,
-      subject: Pd::Workshop::SUBJECT_CSF_101,
-      each_session_hours: 8
-
-    assert_equal 7, workshop_csf_101.effective_num_hours
+    workshop = create :csf_intro_workshop, each_session_hours: 8
+    assert_equal 7, workshop.effective_num_hours
   end
 
   test 'CSF 201 workshops are capped at 6 hours' do
-    workshop_csf_201 = create :workshop,
-      course: Pd::Workshop::COURSE_CSF,
-      subject: Pd::Workshop::SUBJECT_CSF_201,
-      each_session_hours: 7
-
+    workshop_csf_201 = create :csf_deep_dive_workshop, each_session_hours: 7
     assert_equal 6, workshop_csf_201.effective_num_hours
   end
 
@@ -1209,13 +1190,10 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
 
   test 'nearest combined with subject and enrollment' do
     user = create :teacher
-    target = create :workshop, sessions_from: Date.today + 1.day,
-      course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_SUMMER_WORKSHOP
-
+    target = create :csp_summer_workshop, sessions_from: Date.today + 1.day
     create :pd_enrollment, :from_user, user: user, workshop: target
 
-    same_subject_farther = create :workshop, sessions_from: Date.today + 1.week,
-      course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_SUMMER_WORKSHOP
+    same_subject_farther = create :csp_summer_workshop, sessions_from: Date.today + 1.week
     create :pd_enrollment, :from_user, user: user, workshop: same_subject_farther
 
     different_subject_closer = create :workshop, sessions_from: Date.today,
@@ -1223,8 +1201,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     create :pd_enrollment, :from_user, user: user, workshop: different_subject_closer
 
     # closer, not enrolled
-    create :workshop, sessions_from: Date.today,
-      course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_SUMMER_WORKSHOP
+    create :csp_summer_workshop, sessions_from: Date.today
 
     found = Pd::Workshop.where(subject: Pd::Workshop::SUBJECT_SUMMER_WORKSHOP).enrolled_in_by(user).nearest
     assert_equal target, found
