@@ -2080,9 +2080,7 @@ a.download-video {
   border-radius: 5px;
   padding: 10px;
   margin-bottom: 1em;
-  &.outdated {
-    color: $light_gray;
-  }
+
   &:last-child {
     margin-bottom: 0;
   }
@@ -2091,8 +2089,18 @@ a.download-video {
   }
   .peer-review-status {
     font-size: 1em;
-    & > strong {
-      font-family: inherit;
+  }
+  &.from-instructor {
+    border: 2px solid $cyan;
+
+    .peer-review-title {
+      color: $cyan;
+    }
+  }
+  &.outdated {
+    color: $charcoal;
+    &.from-instructor {
+      border: 2px solid $lighter_cyan;
     }
   }
 }

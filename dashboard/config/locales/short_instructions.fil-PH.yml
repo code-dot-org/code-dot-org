@@ -505,6 +505,11 @@ fil-PH:
       Standalone_Artist_1: Maligayang pagdating sa Artist! Una, subukan nating gumawa
         ng isang simpleng parisukat gamit ang turn right na bloke at move forward
         na bloke. Bawat gilid ay dapat 100 pixels ang haba.
+      Standalone_Artist_4: Ngayon ay mayroon ka nang bagong bloke para paglaruan,
+        ang loop. Ito ay mag-uulit sa isang hanay ng mga utos. Ano ang mangyayari
+        kung i-loop mo ang mga utos na ito nang 6 na beses?
+      Standalone_Artist_5: Ilang beses mo kailangan ulitin ang pagguhit ng dyamanteng
+        ito upang makaguhit ng bulaklak?
       Standalone_Artist_8: Narito ang isang function na tinatawag na "Draw a shape"
         na ating ginawa para gumuhit ng mga hexagon. Patakbuhin ang code para makita
         kung ano ang ginagawa nito at pagkatapos ay mag-eksperimento sa function para

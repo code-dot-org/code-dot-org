@@ -2,17 +2,22 @@ it:
   data:
     script:
       category:
+        csd_category_name: Scoperte CS ('17-'18)
+        csd_2018_category_name: Scoperte CS ('18-'19)
+        csd_2019_category_name: Scoperte CS ('19-'20)
         csf_category_name: Corsi base
         csf_2018_category_name: Fondamenti di Informatica (2018)
         csf_international_category_name: Fondamenti di Informatica (in Italiano)
         csf2_draft_category_name: 'Corsi A - F: In fase di sviluppo'
         csp_category_name: "Princìpi dell'Informatica (versione 2015-16)"
         csp_2018_category_name: Principi di informatica ('18-'19)
+        csp_2019_category_name: Principi CS ('19-'20)
         cspexams_category_name: Prova pratica di principi d'informatica
         csp17_category_name: CS Principles ('17-'18)
         full_course_category_name: Corsi Avanzati
         hoc_category_name: L'Ora del Codice
         math_category_name: Matematica
+        research_studies_category_name: Studi di Ricerca
       name:
         course1:
           title: Corso 1
@@ -268,14 +273,42 @@ it:
           description: Impara la Programmazione Funzionale mediante l'Algebra
           description_short: Impara la Programmazione Funzionale mediante l'Algebra
           stages:
+            'Calc: Defining Variables':
+              name: Definire Variabili e Sostituzione
+            'Calc: Evaluation Blocks':
+              name: Blocchi di Valutazione ed Espressioni Aritmetiche
             'Eval: Boolean Operators':
               name: Operatori Booleani
             'Eval: Conditionals':
               name: Istruzioni condizionali
+            'Eval: Defining Functions':
+              name: Funzioni Composite
+            'Eval: Functions':
+              name: Risolvere Problemi delle Parole con il Design Recipe
             'Eval: Strings and Images':
               name: Stringhe e Immagini
+            'Eval: Writing Contracts':
+              name: Contratti di Scrittura
+            'Play Lab: Animation (Big Game)':
+              name: Il Grande Gioco - Animazione
+            'Play Lab: Boolean (Big Game)':
+              name: Il Grande Gioco - Booleani
+            'Play Lab: Booleans':
+              name: Sam il Pipistrello
+            'Play Lab: Collision Detection (Big Game)':
+              name: Il Grande Gioco - Rilevamento Collisioni
+            'Play Lab: Defining Functions':
+              name: Altezza Razzo
+            'Play Lab: Defining Variables (Big Game)':
+              name: Il Grande Gioco - Variabili
+            'Unplugged: Booleans':
+              name: 'Scollegato: Booleani e Logica'
+            'Unplugged: Collision Detection and the Distance Formula':
+              name: 'Scollegato: Rilevamento Collisioni e Teorema di Pitagora'
             'Unplugged: Conditionals and Piecewise Functions':
               name: 'Tradizionale &ndash; Istruzioni Condizionali e Funzioni a Tratti'
+            'Unplugged: Contracts':
+              name: 'Scollegato: Contratti, Dominio e Portata'
             'Unplugged: The Design Recipe':
               name: 'Tradizionale &ndash; La Ricetta della Progettazione'
             'Unplugged: Video Games and Coordinate Planes':
@@ -333,12 +366,41 @@ it:
           description: Impariamo come funziona Internet
           description_short: Impariamo come funziona Internet
           stages:
+            Automatic DNS node:
+              name: Nodo DNS Automatico
             Broadcasting messages:
               name: Broadcasting dei messaggi
+            Internet Simulator Freeplay:
+              name: Simulatore Internet Freeplay
+            Manual DNS:
+              name: DNS Manuale
+            Overview and Setup Instructions:
+              name: Panoramica ed Istruzioni Installazione
+            Packets and Reliability:
+              name: Pacchetti ed Affidabilità
+            Peer to Peer - Sending Ascii:
+              name: Peer to Peer - Inviare Ascii
+            Peer to Peer - Sending Bits on a Shared Wire:
+              name: Peer to Peer - Inviare Bit su un Cavo Condiviso
+            Peer to Peer - Sending Numbers:
+              name: Peer to Peer - Inviare Numeri
+            Routers and addresses:
+              name: Router ed indirizzi
         pixelation:
           title: Conversione di pixel
           description: Crea immagini utilizzando bit e byte.
           description_short: Crea immagini utilizzando bit e byte.
+          stages:
+            Black & White Pixelation Freeplay:
+              name: Pixellazione Bianco e Nero Freeplay
+            Black & White Pixelation Tutorial:
+              name: Pixellazione Bianco e Nero Tutorial
+            Color Pixelation Examples:
+              name: Esempi Colore Pixellazione
+            Color Pixelation Freeplay:
+              name: Colore Pixellazione Freeplay
+            Color Pixelation Tutorial:
+              name: Tutorial Colore Pixellazione
         20-hour:
           title: Corso rapido in 20 ore
           description: Questo corso rapido in 20 lezioni introduce in modo sintetico i concetti fondamentali dell'informatica e della programmazione. Il corso è pensato per l'uso nelle scuole a partire dai 10 anni, ma è divertente per imparare un po' di informatica a qualunque età. Fai i corsi 2, 3, 4 se vuoi imparare in modo più graduale ed approfondito.
@@ -450,14 +512,42 @@ it:
         cspunit1:
           description_short: Programmazione
           stages:
+            Binary Numbers:
+              name: Numeri Binari
+            Bytes and File Sizes:
+              name: Byte e Dimensioni File
+            Encode a Complex Thing:
+              name: Codifica un'Esperienza
+            Encoding B&W Images:
+              name: Codifica Immagini B&N
+            Encoding Color Images:
+              name: Codifica Immagini Colori
+            Encoding Numbers in the Real World:
+              name: Codifica Numeri nel Mondo Reale
+            Encoding and Sending Text:
+              name: Codifica ed Invio Testo
             Number Systems:
               name: Sistema di numerazione
             Personal Innovations:
               name: Innovazione personale
+            Sending Binary Messages:
+              name: Inviare Messaggi Binari
+            Sending Binary Messages with the Internet Simulator:
+              name: Inviare Messaggi Binari con il Simulatore di Internet
+            Sending Bits in the Real World:
+              name: Inviare Bit nel Mondo Reale
+            Sending Complex Messages:
+              name: Inviare Messaggi Complessi
+            Sending Formatted Text:
+              name: Inviare Testo Formattato
+            Sending Numbers:
+              name: Inviare Numeri
             Text Compression:
               name: Compressione del testo
         algebraPD:
           stages:
+            Course Overview:
+              name: Panoramica Corso
             Evaluation Blocks:
               name: Blocchi di Valutazione
             Introduction to PD:
@@ -470,6 +560,8 @@ it:
               name: Valori Booleani
             Evaluation Blocks:
               name: Blocchi di Valutazione
+            Sam the Bat:
+              name: Sam il Pipistrello
             Strings and Images:
               name: Stringhe e Immagini
             Your Game - Animation:
@@ -528,6 +620,8 @@ it:
           stages:
             Computer Science Pedagogy:
               name: Pedagogia dell'informatica
+            Course Overview:
+              name: Panoramica Corso
             Evaluation Blocks:
               name: Blocchi di Valutazione
             Next Steps:
@@ -554,6 +648,8 @@ it:
               name: Cos'è l'ECS?
         algebraPD-NexTech:
           stages:
+            Course Overview:
+              name: Panoramica Corso
             Evaluation Blocks:
               name: Blocchi di Valutazione
             Introduction to PD:
@@ -562,6 +658,8 @@ it:
               name: Cruscotto dell'Insegnante
         algebraPD-iZone:
           stages:
+            Course Overview:
+              name: Panoramica Corso
             Evaluation Blocks:
               name: Blocchi di Valutazione
             Introduction to PD:
@@ -609,6 +707,8 @@ it:
               name: Blocchi di Valutazione
             Free Play:
               name: Tempo di giocare
+            Sam the Bat:
+              name: Sam il Pipistrello
             Strings and Images:
               name: Stringhe e Immagini
             The Design Recipe:
@@ -660,6 +760,8 @@ it:
           stages:
             Booleans:
               name: Valori Booleani
+            Course Overview:
+              name: Panoramica Corso
             Defining Functions:
               name: Definizione di Funzioni
             Defining Variables:
@@ -674,6 +776,8 @@ it:
               name: Stringhe e Immagini
             Teacher Dashboard:
               name: Cruscotto dell'Insegnante
+            Writing Contracts:
+              name: Contratti di Scrittura
         cspfacilitator:
           stages:
             App Lab:
@@ -687,13 +791,30 @@ it:
             Welcome!:
               name: Benvenuto!
         K5-OnlinePD:
+          title: Fondamenti di Informatica - Corso per insegnanti
+          description: Guida online gratuita per imparare autonomamente come insegnare l'informatica usando il corso di Code.org "Fondamenti di informatica".
+          description_short: Guida online gratuita per imparare autonomamente come insegnare l'informatica usando il corso di Code.org "Fondamenti di informatica".
           stages:
             Computer Science Fundamentals:
-              name: Fondamenti di Informatica
+              name: Fondamenti di informatica
+            Getting Started:
+              name: Per cominciare
             Looking Ahead:
-              name: Uno Sguardo Avanti
+              name: Uno sguardo avanti
+            'Mastering the Basics: Conditionals':
+              name: 'I concetti fondamentali: istruzioni condizionali'
+            'Mastering the Basics: Events':
+              name: 'I concetti fondamentali: eventi'
+            'Mastering the Basics: Functions':
+              name: 'I concetti fondamentali: funzioni'
+            'Mastering the Basics: Loops':
+              name: 'I concetti fondamentali: cicli'
+            'Mastering the Basics: Sequencing':
+              name: 'I concetti fondamentali: sequenze di istruzioni'
             Next Steps:
               name: I prossimi passi
+            Planning:
+              name: Gestione della classe
         ECSPD2:
           description: 'Fase 2 Online: Studio estivo in modalità ibrida (blended learning)'
           description_short: 'Fase 2 Online: Studio estivo in modalità ibrida (blended learning)'
@@ -736,6 +857,8 @@ it:
               name: Conclusione
         Equity-OnlinePD:
           stages:
+            Getting Started:
+              name: Per cominciare
             Next Steps:
               name: I prossimi passi
         sciencePD2b-iZone:
@@ -774,6 +897,10 @@ it:
               name: Benvenuto!
             Wrap-up:
               name: Conclusione
+        CSPPD2:
+          stages:
+            Getting Started:
+              name: Per cominciare
         asUnplugged:
           stages:
             Binary Bracelets:
@@ -798,12 +925,40 @@ it:
           stages:
             Welcome Back!:
               name: Bentornato!
+        ECSPD3-Unit2:
+          stages:
+            Getting Started:
+              name: Per cominciare
+        ECSPD3-Unit3:
+          stages:
+            Getting Started:
+              name: Per cominciare
+        ECSPD3-Unit4:
+          stages:
+            Getting Started:
+              name: Per cominciare
+        ECSPD3-Unit5:
+          stages:
+            Getting Started:
+              name: Per cominciare
+        ECSPD3-Unit6:
+          stages:
+            Getting Started:
+              name: Per cominciare
         ScienceP3OLPT2:
           stages:
             Welcome!:
               name: Benvenuto!
             Wrap-Up:
               name: Conclusione
+        algebraPD3b:
+          stages:
+            Getting Started:
+              name: Per cominciare
+        CSPPD3-Unit2:
+          stages:
+            Getting Started:
+              name: Per cominciare
         Special Fun:
           description_short: Qualcosa di speciale per coloro che ne conoscono l'esistenza. Questi esercizi potrebbero non essere disponibili a lungo, così divertiti finché ci sono!
           description_audience: Da 10 anni in su (dopo il Corso 3)
@@ -819,6 +974,10 @@ it:
           stages:
             Ice Age Play Lab:
               name: Laboratorio con L'Era Glaciale
+        CSPPD3-Unit3:
+          stages:
+            Getting Started:
+              name: Per cominciare
         cspunit3temp:
           description_short: Programmazione
           stages:
@@ -864,6 +1023,14 @@ it:
           description_short: Programmazione
         cspunit4:
           description_short: Programmazione
+        CSPPD3-Unit4:
+          stages:
+            Getting Started:
+              name: Per cominciare
+        CSPPD3-Unit5:
+          stages:
+            Getting Started:
+              name: Per cominciare
         AlgebraA:
           description: Impara la Programmazione Funzionale mediante l'Algebra
           description_short: Impara la Programmazione Funzionale mediante l'Algebra
@@ -912,24 +1079,44 @@ it:
         algebraPD1:
           title: Informatica nell'algebra Parte 1
           stages:
+            Course Overview:
+              name: Panoramica Corso
             Evaluation Blocks:
               name: Blocchi di Valutazione
             Introduction to PD:
               name: Introduzione a PD
             Teacher Dashboard:
               name: Cruscotto dell'Insegnante
+        algebraPD3c:
+          stages:
+            Getting Started:
+              name: Per cominciare
         csp1-2017:
           stages:
+            Binary Numbers:
+              name: Numeri Binari
             Number Systems:
               name: Sistema di numerazione
             Personal Innovations:
               name: Innovazione personale
+            Sending Binary Messages:
+              name: Inviare Messaggi Binari
+            Sending Binary Messages with the Internet Simulator:
+              name: Inviare Messaggi Binari con il Simulatore di Internet
+            Sending Numbers:
+              name: Inviare Numeri
             The Internet:
               name: Internet
             Post-Course Survey:
               name: Sondaggio Post-corso
         csp2-2017:
           stages:
+            Bytes and File Sizes:
+              name: Byte e Dimensioni File
+            Encoding B&W Images:
+              name: Codifica Immagini B&N
+            Encoding Color Images:
+              name: Codifica Immagini Colori
             Text Compression:
               name: Compressione del testo
             Post-Course Survey:
@@ -995,6 +1182,10 @@ it:
               name: Introduzione a PD
             The Tutorial:
               name: Tutorial
+        cspunit1-support:
+          stages:
+            Sending Binary Messages:
+              name: Inviare Messaggi Binari
         allthehiddenthings:
           stages:
             Game Lab:
@@ -1103,6 +1294,26 @@ it:
               name: Benvenuto!
             Wrap-up:
               name: Conclusione
+        ecs-unit2:
+          stages:
+            Getting Started:
+              name: Per cominciare
+        ecs-unit3:
+          stages:
+            Getting Started:
+              name: Per cominciare
+        ecs-unit4:
+          stages:
+            Getting Started:
+              name: Per cominciare
+        ecs-unit5:
+          stages:
+            Getting Started:
+              name: Per cominciare
+        ecs-unit6:
+          stages:
+            Getting Started:
+              name: Per cominciare
         grade3:
           stages:
             'Artist: Nested Loops':
@@ -3009,8 +3220,16 @@ it:
           stages:
             Personal Innovations:
               name: Innovazione personale
+            Sending Binary Messages:
+              name: Inviare Messaggi Binari
+            Sending Binary Messages with the Internet Simulator:
+              name: Inviare Messaggi Binari con il Simulatore di Internet
             Number Systems:
               name: Sistema di numerazione
+            Binary Numbers:
+              name: Numeri Binari
+            Sending Numbers:
+              name: Inviare Numeri
             The Internet:
               name: Internet
         csd1-2018:
@@ -3019,8 +3238,14 @@ it:
               description_student: 'La classe lavora in gruppi per progettare barche di "carta stagnola" che dovranno reggere il maggior numero possibile di monetine. Alla fine della lezione i gruppi rifletteranno sull''esperienza fatta, con particolare riferimento alle strategie di problem solving che utilizzeranno nel resto del corso. '
         csp2-2018:
           stages:
+            Bytes and File Sizes:
+              name: Byte e Dimensioni File
             Text Compression:
               name: Compressione del testo
+            Encoding B&W Images:
+              name: Codifica Immagini B&N
+            Encoding Color Images:
+              name: Codifica Immagini Colori
         csp3-2018:
           description_short: Programmazione
           stages:
@@ -3523,7 +3748,7 @@ it:
             'Conditionals in Minecraft: Voyage Aquatic':
               name: 'Istruzioni condizionali in Minecraft - Viaggio acquatico'
             Concept Practice with Minecraft:
-              name: Uno sguardo avanti con Minecraft
+              name: Teoria e pratica con Minecraft
         csd1-2019:
           stages:
             Intro to Problem Solving:
@@ -3763,14 +3988,28 @@ it:
           stages:
             Personal Innovations:
               name: Innovazione personale
+            Sending Binary Messages:
+              name: Inviare Messaggi Binari
+            Sending Binary Messages with the Internet Simulator:
+              name: Inviare Messaggi Binari con il Simulatore di Internet
             Number Systems:
               name: Sistema di numerazione
+            Binary Numbers:
+              name: Numeri Binari
+            Sending Numbers:
+              name: Inviare Numeri
             The Internet:
               name: Internet
         csp2-2019:
           stages:
+            Bytes and File Sizes:
+              name: Byte e Dimensioni File
             Text Compression:
               name: Compressione del testo
+            Encoding B&W Images:
+              name: Codifica Immagini B&N
+            Encoding Color Images:
+              name: Codifica Immagini Colori
         csp3-2019:
           description_short: Programmazione
           stages:
@@ -3800,6 +4039,12 @@ it:
           stages:
             Number Systems:
               name: Sistema di numerazione
+            Sending Binary Messages:
+              name: Inviare Messaggi Binari
+            Sending Binary Messages with the Internet Simulator:
+              name: Inviare Messaggi Binari con il Simulatore di Internet
+            Binary Numbers:
+              name: Numeri Binari
         time4csdemo:
           stages:
             Crowdsourcing:
@@ -3912,6 +4157,8 @@ it:
               name: Sondaggio studente (istruzioni condizionali)
             Teacher Surveys (Conditionals):
               name: Sondaggio insegnante (istruzioni condizionali)
+            Libraries:
+              name: Librerie
         csp8-pilot-staging:
           stages:
             Student Survey (Variables):
@@ -3974,3 +4221,15 @@ it:
               name: Velocità
             Functions:
               name: Funzioni
+        csl-vn:
+          stages:
+            Sequencing with Scrat:
+              name: Sequenze di istruzioni con Scrat
+            Programming in Maze:
+              name: Programmazione nel labirinto
+            Programming with Rey and BB-8:
+              name: Programmare con Rey e BB-8
+            Loops in Ice Age:
+              name: Cicli con l'Era glaciale
+            Ocean Scene with Loops:
+              name: Al mare con i cicli

@@ -4154,6 +4154,12 @@ sk:
           stages:
             Number Systems:
               name: Číselné systémy
+            Sending Binary Messages:
+              name: Posielanie binárnych správ
+            Sending Binary Messages with the Internet Simulator:
+              name: Posielanie binárnych správ s internetovým simulátorom
+            Binary Numbers:
+              name: Binárne čísla
         time4csdemo:
           stages:
             Crowdsourcing:
@@ -4234,3 +4240,15 @@ sk:
               name: Rýchlosť
             Functions:
               name: Funkcie
+        csl-vn:
+          stages:
+            Sequencing with Scrat:
+              name: Postupnosť krokov so Scratom
+            Programming in Maze:
+              name: Programovanie v bludisku
+            Programming with Rey and BB-8:
+              name: Programovanie s Rey a BB-8
+            Loops in Ice Age:
+              name: Cykly v Dobe ľadovej
+            Ocean Scene with Loops:
+              name: Na mori s cyklami

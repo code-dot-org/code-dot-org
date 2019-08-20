@@ -39,10 +39,14 @@ vi-VN:
       2-3 Artist 9 NEW:
         2-3_Artist_9_a: Kim cương này thật ra chỉ là một hình vuông nằm ở góc 45 độ
       2-3 Artist Debugging 10:
-        2-3_Artist_Debugging_10_b: "**Thử và phạm lỗi là hoàn toàn bình thường ở đây!**
-          \n\nHãy bắt đầu bằng việc thay đổi một con số mỗi lần.\n\nNhững con số nào
-          làm điều đó?\n\nNếu bạn không thể, chỉ cần click \"Bắt đầu lại\" và code
-          của bạn sẽ được reset."
+        2-3_Artist_Debugging_10_b: |-
+          **Thử và sai là hoàn toàn bình thường!**
+
+          Hãy bắt đầu bằng việc thay đổi một con số mỗi lần.
+
+          Những con số đó làm điều gì?
+
+          Nếu bạn bị rối, chỉ cần click "Bắt đầu lại" và code của bạn sẽ được xoá để làm lại.
       2-3 Artist Debugging 2:
         2-3_Artist_Debugging_2_a: 'Gợi ý: Các thác từng là 75 điểm ảnh lâu dài.'
       2-3 Artist Debugging 3:
@@ -559,6 +563,30 @@ vi-VN:
       MC_HOC_2017_FP20x20_2019:
         MC_HOC_2017_13_Cole_a: Hãy thử để Đặc vụ xây dựng vài đường ray cho xe chở
           quặng để bạn có thể khám phá thế giới!
+      Overworld House Frame Chosen:
+        mc_6_b: Đừng sợ phạm sai lầm! Chạy mã để xem điều gì xảy ra, ngay cả khi bạn
+          chưa giải được câu đố.
+      Overworld House Frame Chosen_2019:
+        mc_6_b: Đừng sợ phạm sai lầm! Chạy mã để xem điều gì xảy ra, ngay cả khi bạn
+          chưa giải được câu đố.
+      Overworld Place Wall:
+        mc_5_c: Đừng sợ phạm sai lầm! Chạy mã để xem điều gì xảy ra, ngay cả khi bạn
+          chưa giải được câu đố.
+      Overworld Place Wall_2019:
+        mc_5_c: Đừng sợ phạm sai lầm! Chạy mã để xem điều gì xảy ra, ngay cả khi bạn
+          chưa giải được câu đố.
+      Overworld Shear Sheep:
+        mc_3_c: Đừng sợ phạm sai lầm! Chạy mã để xem điều gì xảy ra, ngay cả khi bạn
+          chưa giải được câu đố.
+      Overworld Shear Sheep_2019:
+        mc_3_c: Đừng sợ phạm sai lầm! Chạy mã để xem điều gì xảy ra, ngay cả khi bạn
+          chưa giải được câu đố.
+      Underground Iron:
+        mc_10_c: Đừng sợ phạm sai lầm! Chạy mã để xem điều gì xảy ra, ngay cả khi
+          bạn chưa giải được câu đố.
+      Underground Iron_2019:
+        mc_10_c: Đừng sợ phạm sai lầm! Chạy mã để xem điều gì xảy ra, ngay cả khi
+          bạn chưa giải được câu đố.
       course3_bee_functions_challenge1:
         courseE_bee_functions_challenge1_a: "Nếu câu đố có vẻ khó khăn, thử xây dựng
           hàm của bạn từng chút một. \n\nThêm vài khối, rồi thử chúng. Thêm nhiều
@@ -567,17 +595,1290 @@ vi-VN:
         courseE_bee_functions_challenge1_a: "Nếu câu đố có vẻ khó khăn, thử xây dựng
           hàm của bạn từng chút một. \n\nThêm vài khối, rồi thử chúng. Thêm nhiều
           hơn, rồi thử lại.  Sẽ có lúc bạn hoàn thành nó!"
+      courseA_artist_loops2:
+        courseA_artist_loops2_a: Bạn chưa biết cách để vẽ 1 đường?  Bắt đầu gắn các
+          khối vào khối <xml><block type="when_run"/></xml> để xem điều gì sẽ xảy
+          ra.
+        courseA_artist_loops2_b: Sử dụng khối <xml><block type="simple_move_right"/></xml>
+          để giải câu đố này.
+      courseA_artist_loops2_2018:
+        courseA_artist_loops2_a: Bạn chưa biết cách để vẽ 1 đường?  Bắt đầu gắn các
+          khối vào khối <xml><block type="when_run"/></xml> để xem điều gì sẽ xảy
+          ra.
+        courseA_artist_loops2_b: Sử dụng khối <xml><block type="simple_move_right"/></xml>
+          để giải câu đố này.
+      courseA_artist_loops2_2019:
+        courseA_artist_loops2_a: Bạn chưa biết cách để vẽ 1 đường?  Bắt đầu gắn các
+          khối vào khối <xml><block type="when_run"/></xml> để xem điều gì sẽ xảy
+          ra.
+        courseA_artist_loops2_b: Sử dụng khối <xml><block type="simple_move_right"/></xml>
+          để giải câu đố này.
+      courseA_artist_loops3:
+        courseA_artist_loops3_a: Dùng ngón tay để dò theo từng dòng trong chương trình
+          của bạn để xem nó sai ở đâu.
+        courseA_artist_loops3_b: |-
+          Bạn sẽ sử dụng một khối như thế này để giải câu đố này.
+
+          ![](<https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49 AM.png>)
+      courseA_artist_loops3_2018:
+        courseA_artist_loops3_a: Dùng ngón tay để dò theo từng dòng trong chương trình
+          của bạn để xem nó sai ở đâu.
+        courseA_artist_loops3_b: |-
+          Bạn sẽ sử dụng một khối như thế này để giải câu đố này.
+
+          ![](<https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49 AM.png>)
+      courseA_artist_loops3_2019:
+        courseA_artist_loops3_a: Dùng ngón tay để dò theo từng dòng trong chương trình
+          của bạn để xem nó sai ở đâu.
+        courseA_artist_loops3_b: |-
+          Bạn sẽ sử dụng một khối như thế này để giải câu đố này.
+
+          ![](<https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49 AM.png>)
+      courseA_artist_loops4:
+        courseA_artist_loops4_a: Nếu bạn muốn vòng lặp lặp lại nhiều hơn 4 lần, bạn
+          có thể thay đổi số ở đầu khối lệnh.
+        courseA_artist_loops4_b: "Vì bạn chỉ có thể sử dụng một khối <xml><block type=\"simple_move_right\"/></xml>,
+          \n\nthử đặt nó bên trong vòng lặp <xml><block type=\"controls_repeat_simplified_dropdown\"><title
+          name=\"TIMES\" config=\"2-6\">5</title></block></xml>."
+      courseA_artist_loops4_2018:
+        courseA_artist_loops4_a: Nếu bạn muốn vòng lặp lặp lại nhiều hơn 4 lần, bạn
+          có thể thay đổi số ở đầu khối lệnh.
+        courseA_artist_loops4_b: "Vì bạn chỉ có thể sử dụng một khối <xml><block type=\"simple_move_right\"/></xml>,
+          \n\nthử đặt nó bên trong vòng lặp <xml><block type=\"controls_repeat_simplified_dropdown\"><title
+          name=\"TIMES\" config=\"2-6\">5</title></block></xml>."
+      courseA_artist_loops4_2019:
+        courseA_artist_loops4_a: Nếu bạn muốn vòng lặp lặp lại nhiều hơn 4 lần, bạn
+          có thể thay đổi số ở đầu khối lệnh.
+        courseA_artist_loops4_b: "Vì bạn chỉ có thể sử dụng một khối <xml><block type=\"simple_move_right\"/></xml>,
+          \n\nthử đặt nó bên trong vòng lặp <xml><block type=\"controls_repeat_simplified_dropdown\"><title
+          name=\"TIMES\" config=\"2-6\">5</title></block></xml>."
+      courseA_artist_loops5:
+        courseA_artist_loops5_a: Hãy thử sử dụng những gì bạn từng học về khối <xml><block
+          type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>
+          để hoàn thành câu đố này!
+        courseA_artist_loops5_b: Nếu bạn muốn vòng lặp lặp lại nhiều hơn 4 lần, bạn
+          có thể thay đổi số ở đầu khối lệnh.
+        courseA_artist_loops5_c: Vì bạn chỉ có thể sử dụng một khối <xml><block type="simple_move_right"/></xml>,
+          thử đặt nó bên trong vòng lặp <xml><block type="controls_repeat_simplified_dropdown"><title
+          name="TIMES" config="3-10">???</title></block></xml>.
+      courseA_artist_loops5_2018:
+        courseA_artist_loops5_a: Hãy thử sử dụng những gì bạn từng học về khối <xml><block
+          type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>
+          để hoàn thành câu đố này!
+        courseA_artist_loops5_b: Nếu bạn muốn vòng lặp lặp lại nhiều hơn 4 lần, bạn
+          có thể thay đổi số ở đầu khối lệnh.
+        courseA_artist_loops5_c: Vì bạn chỉ có thể sử dụng một khối <xml><block type="simple_move_right"/></xml>,
+          thử đặt nó bên trong vòng lặp <xml><block type="controls_repeat_simplified_dropdown"><title
+          name="TIMES" config="3-10">???</title></block></xml>.
+      courseA_artist_loops5_2019:
+        courseA_artist_loops5_a: Hãy thử sử dụng những gì bạn từng học về khối <xml><block
+          type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>
+          để hoàn thành câu đố này!
+        courseA_artist_loops5_b: Nếu bạn muốn vòng lặp lặp lại nhiều hơn 4 lần, bạn
+          có thể thay đổi số ở đầu khối lệnh.
+        courseA_artist_loops5_c: Vì bạn chỉ có thể sử dụng một khối <xml><block type="simple_move_right"/></xml>,
+          thử đặt nó bên trong vòng lặp <xml><block type="controls_repeat_simplified_dropdown"><title
+          name="TIMES" config="3-10">???</title></block></xml>.
+      courseA_artist_loops6:
+        courseA_artist_loops6_a: Bạn chưa biết cách vẽ ngọn đồi? Hãy thử với từng
+          khối để xem chúng sẽ vẽ gì.
+        courseA_artist_loops6_b: Bạn sẽ cần 2 khối lệnh theo 2 hướng để giải câu đố
+          này.
+      courseA_artist_loops6_2018:
+        courseA_artist_loops6_a: Bạn chưa biết cách vẽ ngọn đồi? Hãy thử với từng
+          khối để xem chúng sẽ vẽ gì.
+        courseA_artist_loops6_b: Bạn sẽ cần 2 khối lệnh theo 2 hướng để giải câu đố
+          này.
+      courseA_artist_loops6_2019:
+        courseA_artist_loops6_a: Bạn chưa biết cách vẽ ngọn đồi? Hãy thử với từng
+          khối để xem chúng sẽ vẽ gì.
+        courseA_artist_loops6_b: Bạn sẽ cần 2 khối lệnh theo 2 hướng để giải câu đố
+          này.
+      courseA_artist_loops7:
+        courseA_artist_loops7_a: Chưa thể tìm ra nơi để đặt vòng lặp? Hãy thử viết
+          mã từng bước một và tìm sự lặp lại trong đó.
+        courseA_artist_loops7_b: Viết mã cho 1 con sóng trước, và lặp lại để vẽ 2
+          con sóng còn lại.
+        courseA_artist_loops7_c: Hãy nhớ rằng bạn có thể đặt nhiều hơn một khối trong
+          vòng lặp <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES"
+          config="3-10">???</title></block></xml>.
+      courseA_artist_loops7_2018:
+        courseA_artist_loops7_a: Chưa thể tìm ra nơi để đặt vòng lặp? Hãy thử viết
+          mã từng bước một và tìm sự lặp lại trong đó.
+        courseA_artist_loops7_b: Viết mã cho 1 con sóng trước, và lặp lại để vẽ 2
+          con sóng còn lại.
+        courseA_artist_loops7_c: |-
+          Hãy nhớ rằng bạn có thể đặt nhiều hơn một khối trong vòng lặp <xml><block type="controls_repeat_simplified_dropdown">
+              <title name="TIMES" config="3-10">???</title>
+            </block></xml>.
+      courseA_artist_loops7_2019:
+        courseA_artist_loops7_a: Chưa thể tìm ra nơi để đặt vòng lặp? Hãy thử viết
+          mã từng bước một và tìm sự lặp lại trong đó.
+        courseA_artist_loops7_b: Viết mã cho 1 con sóng trước, và lặp lại để vẽ 2
+          con sóng còn lại.
+        courseA_artist_loops7_c: |-
+          Hãy nhớ rằng bạn có thể đặt nhiều hơn một khối trong vòng lặp <xml><block type="controls_repeat_simplified_dropdown">
+              <title name="TIMES" config="3-10">???</title>
+            </block></xml>.
+      courseA_artist_loops8:
+        courseA_artist_loops8_a: Hãy thử chạy mã để xem những gì đã được viết cho
+          bạn.
+        courseA_artist_loops8_b: Bạn sẽ sử dụng vòng lặp thế nào ở đây?
+        courseA_artist_loops8_c: |-
+          Đoạn mã này để làm gì?\
+          Nó cần thực hiện điều gì đây?\
+          Điều đó nói gì với bạn?
+      courseA_artist_loops8_2018:
+        courseA_artist_loops8_a: Hãy thử chạy mã để xem những gì đã được viết cho
+          bạn.
+        courseA_artist_loops8_b: Bạn sẽ sử dụng vòng lặp thế nào ở đây?
+        courseA_artist_loops8_c: |-
+          Đoạn mã này để làm gì?\
+          Nó cần thực hiện điều gì đây?\
+          Điều đó nói gì với bạn?
+      courseA_artist_loops8_2019:
+        courseA_artist_loops8_a: Hãy thử chạy mã để xem những gì đã được viết cho
+          bạn.
+        courseA_artist_loops8_b: Bạn sẽ sử dụng vòng lặp thế nào ở đây?
+        courseA_artist_loops8_c: |-
+          Đoạn mã này để làm gì?\
+          Nó cần thực hiện điều gì đây?\
+          Điều đó nói gì với bạn?
+      courseA_artist_loops9:
+        courseA_artist_loops9_a: Thêm một khối khác vào mã bạn được cung cấp để vẽ
+          phần còn lại của cầu thang.
+        courseA_artist_loops9_c: Nếu bạn chưa tìm ra nơi để đặt vòng lặp, hãy thử
+          viết mã của bạn từng bước một và tìm ra sự lặp lại trong đó.
+      courseA_artist_loops9_2018:
+        courseA_artist_loops9_a: Thêm một khối khác vào mã bạn được cung cấp để vẽ
+          phần còn lại của cầu thang.
+        courseA_artist_loops9_b: |-
+          Khối bạn thêm vào cần ở bên trong vòng lặp <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">5</title></block>
+          </xml>.
+        courseA_artist_loops9_c: Nếu bạn chưa tìm ra nơi để đặt vòng lặp, hãy thử
+          viết mã của bạn từng bước một và tìm ra sự lặp lại trong đó.
+      courseA_artist_loops9_2019:
+        courseA_artist_loops9_a: Thêm một khối khác vào mã bạn được cung cấp để vẽ
+          phần còn lại của cầu thang.
+        courseA_artist_loops9_c: Nếu bạn chưa tìm ra nơi để đặt vòng lặp, hãy thử
+          viết mã của bạn từng bước một và tìm ra sự lặp lại trong đó.
+      courseA_harvester_loops5:
+        courseA_harvester_loops5_a: Nếu bạn gặp rắc rối, hãy thử giải quyết câu đố
+          sau khi chia nó làm hai phần, phần trước góc và phần sau góc.
+      courseA_harvester_loops5_2019:
+        courseA_harvester_loops5_a: Nếu bạn gặp rắc rối, hãy thử giải quyết câu đố
+          sau khi chia nó làm hai phần, phần trước góc và phần sau góc.
+      courseA_harvester_seq2:
+        courseA_harvester_seq2_b: Thử viết các bước xuống một tờ giấy để tìm ra giải
+          pháp!
+      courseA_harvester_seq2_2019:
+        courseA_harvester_seq2_b: Thử viết các bước xuống một tờ giấy để tìm ra giải
+          pháp!
+      courseA_harvester_seq3:
+        courseA_harvester_seq3_b: Hãy nói to từng bước và xem việc này có thể giúp
+          bạn tìm ra giải pháp không.
+      courseA_harvester_seq3_2019:
+        courseA_harvester_seq3_b: Hãy nói to từng bước và xem việc này có thể giúp
+          bạn tìm ra giải pháp không.
+      courseA_maze_ramp2_2018:
+        '1': |-
+          Chương trình của bạn sẽ như sau:
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="maze_moveEast">
+                  <next>
+                    <block type="maze_moveEast">
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </xml>
+      courseA_maze_ramp2_2019:
+        '1': |-
+          Chương trình của bạn sẽ như sau:
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="maze_moveEast">
+                  <next>
+                    <block type="maze_moveEast">
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </xml>
+      courseA_maze_ramp3a_2018:
+        '1': |-
+          Chương trình của bạn sẽ như sau:
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="maze_moveEast">
+                  <next>
+                    <block type="maze_moveEast">
+                      <next>
+                        <block type="maze_moveNorth"/>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </xml>
+      courseA_maze_ramp3a_2019:
+        '1': |-
+          Chương trình của bạn sẽ như sau:
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="maze_moveEast">
+                  <next>
+                    <block type="maze_moveEast">
+                      <next>
+                        <block type="maze_moveNorth"/>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </xml>
+      courseA_maze_ramp3b_2018:
+        '1': |-
+          Chương trình của bạn sẽ như sau:
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="maze_moveSouth">
+                  <next>
+                    <block type="maze_moveWest">
+                      <next>
+                        <block type="maze_moveWest"/>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </xml>
+      courseA_maze_ramp3b_2019:
+        '1': |-
+          Chương trình của bạn sẽ như sau:
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="maze_moveSouth">
+                  <next>
+                    <block type="maze_moveWest">
+                      <next>
+                        <block type="maze_moveWest"/>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </xml>
+      courseA_maze_ramp4a_2018:
+        '1': |-
+          Chương trình của bạn sẽ như sau:
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="maze_moveEast">
+                  <next>
+                    <block type="maze_moveEast">
+                      <next>
+                        <block type="maze_moveSouth"/>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </xml>
+      courseA_maze_ramp4a_2019:
+        '1': |-
+          Chương trình của bạn sẽ như sau:
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="maze_moveEast">
+                  <next>
+                    <block type="maze_moveEast">
+                      <next>
+                        <block type="maze_moveSouth"/>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </xml>
+      courseA_maze_ramp5a_2018:
+        '1': |-
+          Chương trình của bạn sẽ như sau:
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="maze_moveWest">
+                  <next>
+                    <block type="maze_moveWest">
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </xml>
+      courseA_maze_ramp5a_2019:
+        '1': |-
+          Chương trình của bạn sẽ như sau:
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="maze_moveWest">
+                  <next>
+                    <block type="maze_moveWest">
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </xml>
+      courseA_maze_seq1:
+        courseA_maze_seq1_a: |-
+          Nếu bạn đang gặp vấn đề trong việc làm chú chim di chuyển, hãy chắc rằng những khối lệnh được gắn vào bên dưới <xml>
+            <block type="when_run"/>
+          </xml>
+        courseA_maze_seq1_b: |-
+          Chú chim cần di chuyển sang phía tây 3 lần để đến chỗ chú lợn. Hãy thử dùng khối này:
+          <xml><block type="maze_moveWest"/></xml>
+      courseA_maze_seq10:
+        courseA_maze_seq10_a: Nếu bạn gặp khó khăn, hãy thử viết các bước xuống một
+          tờ giấy trước.
+      courseA_maze_seq10_2018:
+        courseA_maze_seq10_a: Nếu bạn gặp khó khăn, hãy thử viết các bước xuống một
+          tờ giấy trước.
+        courseA_maze_seq10_b: Bạn cần đi 3 hướng khác nhau để giải câu đố này.
+      courseA_maze_seq10_2019:
+        courseA_maze_seq10_a: Nếu bạn gặp khó khăn, hãy thử viết các bước xuống một
+          tờ giấy trước.
+        courseA_maze_seq10_b: Bạn cần đi 3 hướng khác nhau để giải câu đố này.
+      courseA_maze_seq13:
+        courseA_maze_seq13_a: Nếu con đường bạn cần không rõ ràng, dùng ngón tay để
+          vẽ đường từ chú chim đến chú lợn.
+        courseA_maze_seq13_b: Đừng lo lắng về việc mắc lỗi! Thử thêm các khối lệnh
+          và chạy chương trình xem điều gì sẽ xảy ra.
+      courseA_maze_seq13_2018:
+        courseA_maze_seq13_a: Nếu con đường bạn cần không rõ ràng, dùng ngón tay để
+          vẽ đường từ chú chim đến chú lợn.
+        courseA_maze_seq13_b: Đừng lo lắng về việc mắc lỗi! Thử thêm các khối lệnh
+          và chạy chương trình xem điều gì sẽ xảy ra.
+      courseA_maze_seq13_2019:
+        courseA_maze_seq13_a: Nếu con đường bạn cần không rõ ràng, dùng ngón tay để
+          vẽ đường từ chú chim đến chú lợn.
+        courseA_maze_seq13_b: Đừng lo lắng về việc mắc lỗi! Thử thêm các khối lệnh
+          và chạy chương trình xem điều gì sẽ xảy ra.
+        courseA_maze_seq13_c: |-
+          Những khối <xml><block type="maze_moveNorth"/></xml>
+
+          <xml><block type="maze_moveEast"/></xml> sẽ giúp bạn đến gần hơn với chú lợn.
+      courseA_maze_seq1_2018:
+        courseA_maze_seq1_a: |-
+          Nếu bạn đang gặp vấn đề trong việc làm chú chim di chuyển, hãy chắc rằng những khối lệnh được gắn vào bên dưới <xml>
+            <block type="when_run"/>
+          </xml>
+        courseA_maze_seq1_b: |-
+          Chú chim cần di chuyển sang phía tây 3 lần để đến chỗ chú lợn. Hãy thử dùng khối này:
+          <xml><block type="maze_moveWest"/></xml>
+      courseA_maze_seq1_2019:
+        courseA_maze_seq1_a: |-
+          Nếu bạn đang gặp vấn đề trong việc làm chú chim di chuyển, hãy chắc rằng những khối lệnh được gắn vào bên dưới <xml>
+            <block type="when_run"/>
+          </xml>
+        courseA_maze_seq1_b: |-
+          Chú chim cần di chuyển sang phía tây 3 lần để đến chỗ chú lợn. Hãy thử dùng khối này:
+          <xml><block type="maze_moveWest"/></xml>
+      courseA_maze_seq5:
+        courseA_maze_seq5_a: Thử viết các bước xuống một tờ giấy để tìm ra giải pháp!
+      courseA_maze_seq5_2018:
+        '1': Thử viết các bước xuống một tờ giấy để tìm ra giải pháp!
+        '2': |-
+          Bạn cần phải sử dụng khối lệnh này:
+
+          <xml><block type="maze_moveSouth"/></xml>
+      courseA_maze_seq5_2019:
+        '1': Thử viết các bước xuống một tờ giấy để tìm ra giải pháp!
+        '2': |-
+          Bạn cần phải sử dụng khối lệnh này:
+
+          <xml><block type="maze_moveSouth"/></xml>
+      courseA_maze_seq5a_2018:
+        '1': Hãy nói to từng bước và xem việc này có thể giúp bạn tìm ra giải pháp
+          không.
+      courseA_maze_seq5a_2019:
+        '1': Hãy nói to từng bước và xem việc này có thể giúp bạn tìm ra giải pháp
+          không.
+      courseA_maze_seq6:
+        courseA_maze_seq6_a: Chương trình của bạn cần có 3 khối lệnh.
+        courseA_maze_seq6_b: Nếu bạn gặp rắc rối, hãy thử giải quyết câu đố sau khi
+          chia nó làm hai phần, phần trước góc và phần sau góc.
+      courseA_maze_seq6_2018:
+        courseA_maze_seq6_a: Chương trình của bạn cần có 3 khối lệnh.
+        courseA_maze_seq6_b: Nếu bạn gặp rắc rối, hãy thử giải quyết câu đố sau khi
+          chia nó làm hai phần, phần trước góc và phần sau góc.
+      courseA_maze_seq6_2019:
+        courseA_maze_seq6_a: Chương trình của bạn cần có 3 khối lệnh.
+        courseA_maze_seq6_b: Nếu bạn gặp rắc rối, hãy thử giải quyết câu đố sau khi
+          chia nó làm hai phần, phần trước góc và phần sau góc.
+      courseA_maze_seq8:
+        courseA_maze_seq8_a: Nếu bạn mắc kẹt, hãy thử vẽ hình ảnh ra giấy để xem chú
+          chim nên di chuyển như thế nào.
+      courseA_maze_seq8_2018:
+        courseA_maze_seq8_a: Nếu bạn mắc kẹt, hãy thử vẽ hình ảnh ra giấy để xem chú
+          chim nên di chuyển như thế nào.
+      courseA_maze_seq8_2019:
+        courseA_maze_seq8_a: Nếu bạn mắc kẹt, hãy thử vẽ hình ảnh ra giấy để xem chú
+          chim nên di chuyển như thế nào.
+      courseA_playLab_events2:
+        courseA_playLab_events2_a: Tìm khối có thể khiến chú chó nói được.
+        courseA_playLab_events2_b: |-
+          Đây là đoạn code bạn cần dùng để hoàn thành câu hỏi này:
+
+          <xml>
+          <block type="when_run" movable="false" deletable="false">
+          <next>
+          <block type="studio_saySpriteChoices">
+              <title name="SPRITE">1</title>
+              <title name="VALUE">Hi there.</title>
+            </block>
+          </next>
+          </block>
+          </xml>
+      courseA_playLab_events2_2018:
+        courseA_playLab_events2_a: Tìm khối có thể khiến chú chó nói được.
+        courseA_playLab_events2_b: |-
+          Đây là đoạn code bạn cần dùng để hoàn thành câu hỏi này:
+
+          <xml>
+          <block type="when_run" movable="false" deletable="false">
+          <next>
+          <block type="studio_saySpriteChoices">
+              <title name="SPRITE">1</title>
+              <title name="VALUE">Hi there.</title>
+            </block>
+          </next>
+          </block>
+          </xml>
+      courseA_playLab_events2_2019:
+        courseA_playLab_events2_a: Tìm khối có thể khiến chú chó nói được.
+        courseA_playLab_events2_b: |-
+          Đây là đoạn code bạn cần dùng để hoàn thành câu hỏi này:
+
+          <xml>
+          <block type="when_run" movable="false" deletable="false">
+          <next>
+          <block type="studio_saySpriteChoices">
+              <title name="SPRITE">1</title>
+              <title name="VALUE">Hi there.</title>
+            </block>
+          </next>
+          </block>
+          </xml>
+      courseA_playLab_events3:
+        courseA_playLab_events3_a: |-
+          Kéo khối <xml><block type="studio_move">
+              <title name="SPRITE">1</title>
+              <title name="DIR">8</title>
+            </block></xml> ra và gắn vào dưới khối <xml><block type="studio_whenArrow">
+              <title name="VALUE">left</title>
+            </block></xml>
+        courseA_playLab_events3_b: Dùng mũi tên trái để di chuyển Jorge tới cây cờ
+          khi chạy chương trình. Khi cây cờ chuyển sang màu xanh nghĩa là bạn đã hoàn
+          thành!
+      courseA_playLab_events3_2018:
+        courseA_playLab_events3_a: |-
+          Kéo khối <xml><block type="studio_move">
+              <title name="SPRITE">1</title>
+              <title name="DIR">8</title>
+            </block></xml> ra và gắn vào dưới khối <xml><block type="studio_whenArrow">
+              <title name="VALUE">left</title>
+            </block></xml>
+        courseA_playLab_events3_b: Dùng mũi tên trái để di chuyển Jorge tới cây cờ
+          khi chạy chương trình. Khi cây cờ chuyển sang màu xanh nghĩa là bạn đã hoàn
+          thành!
+      courseA_playLab_events3_2019:
+        courseA_playLab_events3_a: |-
+          Kéo khối <xml><block type="studio_move">
+              <title name="SPRITE">1</title>
+              <title name="DIR">8</title>
+            </block></xml> ra và gắn vào dưới khối <xml><block type="studio_whenArrow">
+              <title name="VALUE">left</title>
+            </block></xml>
+        courseA_playLab_events3_b: Dùng mũi tên trái để di chuyển Jorge tới cây cờ
+          khi chạy chương trình. Khi cây cờ chuyển sang màu xanh nghĩa là bạn đã hoàn
+          thành!
+      courseA_playLab_events4:
+        courseA_playLab_events4_a: |-
+          Đây là khối bạn cần để giúp Jorge di chuyển sang phải:
+
+          <xml><block type="studio_move">
+              <title name="SPRITE">1</title>
+              <title name="DIR">2</title>
+            </block></xml>
+        courseA_playLab_events4_b: |-
+          Đây là đoạn code bạn cần để hoàn thành câu đố này:
+
+          <xml><block type="studio_whenArrow">
+              <title name="VALUE">right</title>
+              <next>
+            <block type="studio_move">
+              <title name="SPRITE">1</title>
+              <title name="DIR">2</title>
+            </block></next></block></xml>
+      courseA_playLab_events4_2018:
+        courseA_playLab_events4_a: |-
+          Đây là khối bạn cần để giúp Jorge di chuyển sang phải:
+
+          <xml><block type="studio_move">
+              <title name="SPRITE">1</title>
+              <title name="DIR">2</title>
+            </block></xml>
+        courseA_playLab_events4_b: |-
+          Đây là đoạn code bạn cần để hoàn thành câu đố này:
+
+          <xml><block type="studio_whenArrow">
+              <title name="VALUE">right</title>
+              <next>
+            <block type="studio_move">
+              <title name="SPRITE">1</title>
+              <title name="DIR">2</title>
+            </block></next></block></xml>
+      courseA_playLab_events4_2019:
+        courseA_playLab_events4_a: |-
+          Đây là khối bạn cần để giúp Jorge di chuyển sang phải:
+
+          <xml><block type="studio_move">
+              <title name="SPRITE">1</title>
+              <title name="DIR">2</title>
+            </block></xml>
+        courseA_playLab_events4_b: |-
+          Đây là đoạn code bạn cần để hoàn thành câu đố này:
+
+          <xml><block type="studio_whenArrow">
+              <title name="VALUE">right</title>
+              <next>
+            <block type="studio_move">
+              <title name="SPRITE">1</title>
+              <title name="DIR">2</title>
+            </block></next></block></xml>
+      courseA_playLab_events5:
+        courseA_playLab_events5_a: |-
+          Here are the event blocks that you will need to use to move Jorge up and down:
+          Đây là các khối bạn cần để giúp Jorge di chuyển lên xuống:
+
+          <xml><block type="studio_whenArrow">
+              <title name="VALUE">up</title>
+            </block></xml>
+
+          và
+
+          <xml><block type="studio_whenArrow">
+              <title name="VALUE">down</title>
+            </block></xml>
+        courseA_playLab_events5_b: |-
+          Bạn có thể thay đổi chiều mũi tên trong khối sự kiện.
+
+          ![](https://images.code.org/b010b6a8131689af53b33148753c15b4-image-1492639642316.gif)
+      courseA_playLab_events5_2018:
+        courseA_playLab_events5_a: |-
+          Here are the event blocks that you will need to use to move Jorge up and down:
+          Đây là các khối bạn cần để giúp Jorge di chuyển lên xuống:
+
+          <xml><block type="studio_whenArrow">
+              <title name="VALUE">up</title>
+            </block></xml>
+
+          và
+
+          <xml><block type="studio_whenArrow">
+              <title name="VALUE">down</title>
+            </block></xml>
+        courseA_playLab_events5_b: |-
+          Bạn có thể thay đổi chiều mũi tên trong khối sự kiện.
+
+          ![](https://images.code.org/b010b6a8131689af53b33148753c15b4-image-1492639642316.gif)
+      courseA_playLab_events5_2019:
+        courseA_playLab_events5_a: |-
+          Here are the event blocks that you will need to use to move Jorge up and down:
+          Đây là các khối bạn cần để giúp Jorge di chuyển lên xuống:
+
+          <xml><block type="studio_whenArrow">
+              <title name="VALUE">up</title>
+            </block></xml>
+
+          và
+
+          <xml><block type="studio_whenArrow">
+              <title name="VALUE">down</title>
+            </block></xml>
+        courseA_playLab_events5_b: |-
+          Bạn có thể thay đổi chiều mũi tên trong khối sự kiện.
+
+          ![](https://images.code.org/b010b6a8131689af53b33148753c15b4-image-1492639642316.gif)
+      courseA_playLab_events6:
+        courseA_playLab_events6_a: |-
+          Here is the event block that you would use to have Jorge do something when clicked:
+          Đây là khối sẽ giúp Jorge làm gì đó khi được click vào.
+
+          <xml><block type="studio_whenSpriteClicked">
+              <title name="SPRITE">1</title>
+            </block></xml>
+        courseA_playLab_events6_b: |-
+          Đây là khối bạn cần dùng để thay đổi hình nền:
+
+          <xml><block type="studio_setBackground">
+              <title name="VALUE">random</title>
+            </block></xml>
+      courseA_playLab_events6_2018:
+        courseA_playLab_events6_a: |-
+          Đây là khối sẽ giúp Jorge làm gì đó khi được click vào.
+
+          <xml><block type="studio_whenSpriteClicked">
+              <title name="SPRITE">1</title>
+            </block></xml>
+        courseA_playLab_events6_b: |-
+          Đây là khối bạn cần dùng để thay đổi hình nền:
+
+          <xml><block type="studio_setBackground">
+              <title name="VALUE">random</title>
+            </block></xml>
+      courseA_playLab_events6_2019:
+        courseA_playLab_events6_a: |-
+          Đây là khối sẽ giúp Jorge làm gì đó khi được click vào.
+
+          <xml><block type="studio_whenSpriteClicked">
+              <title name="SPRITE">1</title>
+            </block></xml>
+        courseA_playLab_events6_b: |-
+          Đây là khối bạn cần dùng để thay đổi hình nền:
+
+          <xml><block type="studio_setBackground">
+              <title name="VALUE">random</title>
+            </block></xml>
+      courseA_playLab_events7:
+        courseA_playLab_events7_a: |-
+          Dùng khối này khi các nhân vật va vào nhau.
+
+          <xml><block type="studio_whenSpriteCollided">
+              <title name="SPRITE1">1</title>
+              <title name="SPRITE2">0</title>
+            </block></xml>
+      courseA_playLab_events7_2018:
+        courseA_playLab_events7_a: |-
+          Dùng khối này khi các nhân vật va vào nhau.
+
+          <xml><block type="studio_whenSpriteCollided">
+              <title name="SPRITE1">1</title>
+              <title name="SPRITE2">0</title>
+            </block></xml>
+      courseA_playLab_events7_2019:
+        courseA_playLab_events7_a: |-
+          Dùng khối này khi các nhân vật va vào nhau.
+
+          <xml><block type="studio_whenSpriteCollided">
+              <title name="SPRITE1">1</title>
+              <title name="SPRITE2">0</title>
+            </block></xml>
+      courseB_Scrat_ramp1_2018:
+        '1': Nếu Scrat không làm đúng những gì bạn muốn, hãy chắc chắn rằng cả hai
+          khối đã được ghép vào với nhau rồi ấn "Chạy" lần nữa.
+        '2': Đừng sợ mắc lỗi! Hãy thử một cái gì đó, và nếu nó chưa đúng, hãy thử
+          một cái khác!
+      courseB_Scrat_ramp1_2019:
+        '1': Nếu Scrat không làm đúng những gì bạn muốn, hãy chắc chắn rằng cả hai
+          khối đã được ghép vào với nhau rồi ấn "Chạy" lần nữa.
+        '2': Đừng sợ mắc lỗi! Hãy thử một cái gì đó, và nếu nó chưa đúng, hãy thử
+          một cái khác!
+      courseB_Scrat_ramp2_2018:
+        '1': |-
+          Chương trình của bạn sẽ như sau:
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="maze_moveEast">
+                  <next>
+                    <block type="maze_moveEast">
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </xml>
+      courseB_Scrat_ramp2_2019:
+        '1': |-
+          Chương trình của bạn sẽ như sau:
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="maze_moveEast">
+                  <next>
+                    <block type="maze_moveEast">
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </xml>
+      courseB_Scrat_ramp3a_2018:
+        '1': |-
+          Chương trình của bạn sẽ như sau:
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="maze_moveEast">
+                  <next>
+                    <block type="maze_moveEast">
+                      <next>
+                        <block type="maze_moveNorth"/>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </xml>
+      courseB_Scrat_ramp3a_2019:
+        '1': |-
+          Chương trình của bạn sẽ như sau:
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="maze_moveEast">
+                  <next>
+                    <block type="maze_moveEast">
+                      <next>
+                        <block type="maze_moveNorth"/>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </xml>
+      courseB_Scrat_ramp3b_2018:
+        '1': |-
+          Chương trình của bạn sẽ như sau:
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="maze_moveSouth">
+                  <next>
+                    <block type="maze_moveEast">
+                      <next>
+                        <block type="maze_moveEast"/>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </xml>
+      courseB_Scrat_ramp3b_2019:
+        '1': |-
+          Chương trình của bạn sẽ như sau:
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="maze_moveSouth">
+                  <next>
+                    <block type="maze_moveEast">
+                      <next>
+                        <block type="maze_moveEast"/>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </xml>
+      courseB_Scrat_ramp4a_2018:
+        '1': |-
+          Chương trình của bạn sẽ như sau:
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="maze_moveEast">
+                  <next>
+                    <block type="maze_moveEast">
+                      <next>
+                        <block type="maze_moveSouth"/>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </xml>
+      courseB_Scrat_ramp4a_2019:
+        '1': |-
+          Chương trình của bạn sẽ như sau:
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="maze_moveEast">
+                  <next>
+                    <block type="maze_moveEast">
+                      <next>
+                        <block type="maze_moveSouth"/>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </xml>
+      courseB_Scrat_ramp5a_2018:
+        '1': |-
+          Chương trình của bạn sẽ như sau:
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="maze_moveWest">
+                  <next>
+                    <block type="maze_moveWest">
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </xml>
+      courseB_Scrat_ramp5a_2019:
+        '1': |-
+          Chương trình của bạn sẽ như sau:
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="maze_moveWest">
+                  <next>
+                    <block type="maze_moveWest">
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </xml>
+      courseB_artist_loops2:
+        courseB_artist_loops2_a: Nếu bạn muốn vòng lặp lặp lại nhiều hơn 4 lần, bạn
+          có thể thay đổi số ở đầu khối lệnh.
+      courseB_artist_loops2_2018:
+        courseB_artist_loops2_a: Nếu bạn muốn vòng lặp lặp lại nhiều hơn 4 lần, bạn
+          có thể thay đổi số ở đầu khối lệnh.
+      courseB_artist_loops2_2019:
+        courseB_artist_loops2_a: Nếu bạn muốn vòng lặp lặp lại nhiều hơn 4 lần, bạn
+          có thể thay đổi số ở đầu khối lệnh.
+      courseB_artist_loops9:
+        courseB_artist_loops9_c: Chưa thể tìm ra nơi để đặt vòng lặp? Hãy thử viết
+          mã từng bước một và tìm sự lặp lại trong đó.
+      courseB_artist_loops9_2018:
+        courseB_artist_loops9_c: Chưa thể tìm ra nơi để đặt vòng lặp? Hãy thử viết
+          mã từng bước một và tìm sự lặp lại trong đó.
+      courseB_artist_loops9_2019:
+        courseB_artist_loops9_c: Chưa thể tìm ra nơi để đặt vòng lặp? Hãy thử viết
+          mã từng bước một và tìm sự lặp lại trong đó.
+      courseB_iceage_loops1:
+        courseB_iceage_loops1_a: Hãy coi chừng tảng băng vỡ! Scrat sẽ rơi xuống đấy!
+        courseB_iceage_loops1_b: |-
+          Bạn sẽ phải dùng khối lệnh này:
+
+          <xml><block type="maze_moveEast"/></xml>
+      courseB_iceage_loops10:
+        courseB_iceage_loops10_a: Hãy coi chừng băng vỡ! Scrat sẽ rơi xuống nước đấy!
+        courseB_iceage_loops10_b: Hãy thử nói các bước thành lời hoặc viết chúng xuống
+          một tờ giấy. Bạn có thấy sự lặp lại nào không?
+        courseB_iceage_loops10_c: Đây là một câu đố dài! Hãy đi theo con đường này.
+      courseB_iceage_loops10_2019:
+        courseB_iceage_loops10_a: Hãy coi chừng băng vỡ! Scrat sẽ rơi xuống nước đấy!
+        courseB_iceage_loops10_b: Hãy thử nói các bước thành lời hoặc viết chúng xuống
+          một tờ giấy. Bạn có thấy sự lặp lại nào không?
+        courseB_iceage_loops10_c: Đây là một câu đố dài! Hãy đi theo con đường này.
+      courseB_iceage_loops1_2019:
+        courseB_iceage_loops1_a: Hãy coi chừng tảng băng vỡ! Scrat sẽ rơi xuống đấy!
+        courseB_iceage_loops1_b: |-
+          Bạn sẽ phải dùng khối lệnh này:
+
+          <xml><block type="maze_moveEast"/></xml>
+      courseB_iceage_loops2:
+        courseB_iceage_loops2_a: Chia câu đố này thành 2 đoạn, 1 đoạn ở trước góc,
+          và 1 đoạn ở sau góc.
+        courseB_iceage_loops2_b: Nếu bạn gặp khó khăn, hãy thử nói to các bước lên.
+        courseB_iceage_loops2_c: Đi theo con đường này để đưa Scrat đến với hạt sồi.
+      courseB_iceage_loops2_2019:
+        courseB_iceage_loops2_a: Chia câu đố này thành 2 đoạn, 1 đoạn ở trước góc,
+          và 1 đoạn ở sau góc.
+        courseB_iceage_loops2_b: Nếu bạn gặp khó khăn, hãy thử nói to các bước lên.
+        courseB_iceage_loops2_c: Đi theo con đường này để đưa Scrat đến với hạt sồi.
+      courseB_iceage_loops3_2019:
+        courseB_iceage_loops3_b: |-
+          Để lặp lại đoạn mã, hãy kéo khối `lặp lại` ra <xml><block type="controls_repeat_simplified">
+              <title name="TIMES">???</title>
+            </block></xml>, sau đó đặt khối bạn muốn vào bên trong nó.
+      courseB_iceage_loops4:
+        courseB_iceage_loops4_a: Hãy thử viết ra các bước mà Scrat sẽ thực hiện để
+          đến với hạt sồi. Bạn có thấy một sự lặp lại nào không?
+        courseB_iceage_loops4_b: Đừng lo lắng khi chạy mã của bạn và hãy xem điều
+          gì sẽ xảy ra!
+        courseB_iceage_loops4_c: Đây là con đường mà Scrat nên đi.
+      courseB_iceage_loops4_2019:
+        courseB_iceage_loops4_a: Hãy thử viết ra các bước mà Scrat sẽ thực hiện để
+          đến với hạt sồi. Bạn có thấy một sự lặp lại nào không?
+        courseB_iceage_loops4_b: Đừng lo lắng khi chạy mã của bạn và hãy xem điều
+          gì sẽ xảy ra!
+        courseB_iceage_loops4_c: Đây là con đường mà Scrat nên đi.
+      courseB_iceage_loops6:
+        courseB_iceage_loops6_a: Đoạn mã cuối cùng của bạn sẽ có **ba** khối lệnh
+          di chuyển.
+        courseB_iceage_loops6_b: Bạn chỉ cần thêm \*\* một \*\* vòng lặp nữa!
+        courseB_iceage_loops6_c: Con đường cuối cùng của bạn sẽ trông như thế này.
+      courseB_iceage_loops6_2019:
+        courseB_iceage_loops6_a: Đoạn mã cuối cùng của bạn sẽ có **ba** khối lệnh
+          di chuyển.
+        courseB_iceage_loops6_b: Bạn chỉ cần thêm \*\* một \*\* vòng lặp nữa!
+        courseB_iceage_loops6_c: Con đường cuối cùng của bạn sẽ trông như thế này.
+      courseB_iceage_loops7:
+        courseB_iceage_loops7_a: Nếu bạn gặp khó khăn, hãy thử viết các bước xuống
+          một tờ giấy. Bạn có thấy sự lặp lại nào không?
+        courseB_iceage_loops7_b: Đây là con đường Scrat nên đi để đến được hạt sồi.
+      courseB_iceage_loops7_2019:
+        courseB_iceage_loops7_a: Nếu bạn gặp khó khăn, hãy thử viết các bước xuống
+          một tờ giấy. Bạn có thấy sự lặp lại nào không?
+        courseB_iceage_loops7_b: Đây là con đường Scrat nên đi để đến được hạt sồi.
+      courseB_iceage_loops8:
+        courseB_iceage_loops8_a: Bạn hãy xem các khối lệnh di chuyển đã đúng chưa?
+          Bạn có thể thay đổi điều gì?
+        courseB_iceage_loops8_b: Vòng lặp thứ nhất sẽ lặp lại **3** lần, vòng thứ
+          hai sẽ lặp lại **5** lần, vòng lặp thứ ba sẽ lặp lại **4** lần và vòng lặp
+          cuối cùng sẽ lặp lại **4** lần.
+        courseB_iceage_loops8_c: Sử dụng các vòng lặp để giúp Scrat đi theo con đường
+          này.
+      courseB_iceage_loops8_2019:
+        courseB_iceage_loops8_a: Bạn hãy xem các khối lệnh di chuyển đã đúng chưa?
+          Bạn có thể thay đổi điều gì?
+        courseB_iceage_loops8_b: Vòng lặp thứ nhất sẽ lặp lại **3** lần, vòng thứ
+          hai sẽ lặp lại **5** lần, vòng lặp thứ ba sẽ lặp lại **4** lần và vòng lặp
+          cuối cùng sẽ lặp lại **4** lần.
+        courseB_iceage_loops8_c: Sử dụng các vòng lặp để giúp Scrat đi theo con đường
+          này.
+      courseB_iceage_loops9:
+        courseB_iceage_loops9_a: Bạn đang gặp rắc rối? Thử chia câu đố này thành các
+          phần nhỏ hơn. Bạn có thể chạy thử chương trình khi đang viết mã.
+        courseB_iceage_loops9_b: Chương trình cuối cùng của bạn nên có **4** vòng
+          lặp.
+        courseB_iceage_loops9_c: Scrat nên đi theo con đường này để có được hạt sồi.
+      courseB_iceage_loops9_2019:
+        courseB_iceage_loops9_a: Bạn đang gặp rắc rối? Thử chia câu đố này thành các
+          phần nhỏ hơn. Bạn có thể chạy thử chương trình khi đang viết mã.
+        courseB_iceage_loops9_b: Chương trình cuối cùng của bạn nên có **4** vòng
+          lặp.
+        courseB_iceage_loops9_c: Scrat nên đi theo con đường này để có được hạt sồi.
       courseB_maze_seq8:
         courseB_maze_seq8_b: Có hai cách để giải câu đố này!
+      courseB_playlab_events5:
+        courseB_playlab_events5_a: "Đây là khối dành cho phím mũi tên phải: \n\n<xml>\n
+          \ <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">right</title>\n
+          \ </block>\n  </xml>"
+        courseB_playlab_events5_b: |-
+          Đây là khối giúp chàng kỵ sĩ di chuyển.
+
+          <xml>
+          <block type="studio_move">
+              <title name="SPRITE">1</title>
+              <title name="DIR">2</title>
+            </block>
+          </xml>
+      courseB_playlab_events5_2018:
+        courseB_playlab_events5_a: "Đây là khối dành cho phím mũi tên phải: \n\n<xml>\n
+          \ <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">right</title>\n
+          \ </block>\n  </xml>"
+        courseB_playlab_events5_b: |-
+          Đây là khối giúp chàng kỵ sĩ di chuyển.
+
+          <xml>
+          <block type="studio_move">
+              <title name="SPRITE">1</title>
+              <title name="DIR">2</title>
+            </block>
+          </xml>
+      courseB_playlab_events5_2019:
+        courseB_playlab_events5_a: "Đây là khối dành cho phím mũi tên phải: \n\n<xml>\n
+          \ <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">right</title>\n
+          \ </block>\n  </xml>"
+        courseB_playlab_events5_b: |-
+          Đây là khối giúp chàng kỵ sĩ di chuyển.
+
+          <xml>
+          <block type="studio_move">
+              <title name="SPRITE">1</title>
+              <title name="DIR">2</title>
+            </block>
+          </xml>
+      courseB_starWars_prog1:
+        courseB_starWars_prog1_a: Thử lần lượt thêm từng khối một vào chương trình,
+          rồi nhấn nút "Chạy" để xem điều gì sẽ xảy ra.
+        courseB_starWars_prog1_b: |-
+          Bạn sẽ phải di chuyển theo hướng Đông để giải câu đố này. Bạn sẽ cần phải đi bao xa?
+
+          <xml><block type="studio_moveEast"/></xml>
+      courseB_starWars_prog1_2018:
+        courseB_starWars_prog1_a: Thử lần lượt thêm từng khối một vào chương trình,
+          rồi nhấn nút "Chạy" để xem điều gì sẽ xảy ra.
+        courseB_starWars_prog1_b: |-
+          Bạn sẽ phải di chuyển theo hướng Đông để giải câu đố này. Bạn sẽ cần phải đi bao xa?
+
+          <xml><block type="studio_moveEast"/></xml>
+      courseB_starWars_prog1_2019:
+        courseB_starWars_prog1_a: Thử lần lượt thêm từng khối một vào chương trình,
+          rồi nhấn nút "Chạy" để xem điều gì sẽ xảy ra.
+        courseB_starWars_prog1_b: |-
+          Bạn sẽ phải di chuyển theo hướng Đông để giải câu đố này. Bạn sẽ cần phải đi bao xa?
+
+          <xml><block type="studio_moveEast"/></xml>
+      courseB_starWars_prog2:
+        courseB_starWars_prog2_a: Chia vấn đề này thành 2 phần. Lấy một mảnh kim loại,
+          sau đó tìm cách để lấy nốt mảnh kim loại còn lại.
+      courseB_starWars_prog2_2019:
+        courseB_starWars_prog2_a: Chia vấn đề này thành 2 phần. Lấy một mảnh kim loại,
+          sau đó tìm cách để lấy nốt mảnh kim loại còn lại.
+      courseB_starWars_prog3:
+        courseB_starWars_prog3_a: Bạn cần di chuyển theo 3 hướng để giải câu đố này.
+        courseB_starWars_prog3_b: Bạn hãy xây dựng từng bước một rồi chạy thử chương
+          trình xem nên làm gì tiếp theo.
+      courseB_starWars_prog3_2018:
+        courseB_starWars_prog3_a: Bạn cần di chuyển theo 3 hướng để giải câu đố này.
+        courseB_starWars_prog3_b: Bạn hãy xây dựng từng bước một rồi chạy thử chương
+          trình xem nên làm gì tiếp theo.
+      courseB_starWars_prog3_2019:
+        courseB_starWars_prog3_a: Bạn cần di chuyển theo 3 hướng để giải câu đố này.
+        courseB_starWars_prog3_b: Bạn hãy xây dựng từng bước một rồi chạy thử chương
+          trình xem nên làm gì tiếp theo.
+      courseB_starWars_prog4:
+        courseB_starWars_prog4_a: Bạn hãy xây dựng từng bước một rồi chạy thử chương
+          trình xem nên làm gì tiếp theo.
+        courseB_starWars_prog4_b: |-
+          Thử sử dụng khối `lặp lại` để viết 1 đoạn mã ngắn hơn.
+
+          <xml>  <block type="controls_repeat_simplified">
+              <title name="TIMES">3</title>
+            </block>
+          </xml>
+      courseB_starWars_prog4_2018:
+        courseB_starWars_prog4_a: Bạn hãy xây dựng từng bước một rồi chạy thử chương
+          trình xem nên làm gì tiếp theo.
+        courseB_starWars_prog4_b: |-
+          Thử sử dụng khối `lặp lại` để viết 1 đoạn mã ngắn hơn.
+
+          <xml>  <block type="controls_repeat_simplified">
+              <title name="TIMES">3</title>
+            </block>
+          </xml>
+      courseB_starWars_prog4_2019:
+        courseB_starWars_prog4_a: Bạn hãy xây dựng từng bước một rồi chạy thử chương
+          trình xem nên làm gì tiếp theo.
+        courseB_starWars_prog4_b: |-
+          Thử sử dụng khối `lặp lại` để viết 1 đoạn mã ngắn hơn.
+
+          <xml>  <block type="controls_repeat_simplified">
+              <title name="TIMES">3</title>
+            </block>
+          </xml>
+      courseB_starWars_prog5:
+        courseB_starWars_prog5_a: Có phải mô hình này giống với mô hình trong câu
+          đố trước không?
+        courseB_starWars_prog5_b: Robot BB-8 sẽ nhặt miếng kim loại khi nó đi qua.
+        courseB_starWars_prog5_c: Dùng ngón tay để lần theo hình mẫu này. Đếm các
+          mảnh kim loại bạn đi qua.
+        courseB_starWars_prog5_da: |-
+          Hãy xem điều gì sẽ xảy ra nếu như bạn sử dụng cùng một phương pháp như giải câu đố theo hình bậc thang:
+
+          ![](https://images.code.org/866b4121069423bf03d92dcb8f2276af-image-1503709785988.09.24.png)
+      courseB_starWars_prog5_2018:
+        courseB_starWars_prog5_a: Có phải mô hình này giống với mô hình trong câu
+          đố trước không?
+        courseB_starWars_prog5_b: Robot BB-8 sẽ nhặt miếng kim loại khi nó đi qua.
+        courseB_starWars_prog5_c: Dùng ngón tay để lần theo hình mẫu này. Đếm các
+          mảnh kim loại bạn đi qua.
+        courseB_starWars_prog5_da: |-
+          Hãy xem điều gì sẽ xảy ra nếu như bạn sử dụng cùng một phương pháp như giải câu đố theo hình bậc thang:
+
+          ![](https://images.code.org/866b4121069423bf03d92dcb8f2276af-image-1503709785988.09.24.png)
+      courseB_starWars_prog5_2019:
+        courseB_starWars_prog5_a: Có phải mô hình này giống với mô hình trong câu
+          đố trước không?
+        courseB_starWars_prog5_b: Robot BB-8 sẽ nhặt miếng kim loại khi nó đi qua.
+        courseB_starWars_prog5_c: Dùng ngón tay để lần theo hình mẫu này. Đếm các
+          mảnh kim loại bạn đi qua.
+        courseB_starWars_prog5_da: |-
+          Hãy xem điều gì sẽ xảy ra nếu như bạn sử dụng cùng một phương pháp như giải câu đố theo hình bậc thang:
+
+          ![](https://images.code.org/866b4121069423bf03d92dcb8f2276af-image-1503709785988.09.24.png)
+      courseB_starWars_prog6:
+        courseB_starWars_prog6_a: Mô hình này chỉ như 1 bậc cầu thang với 2 bước di
+          chuyển mỗi hướng!
+        courseB_starWars_prog6_b: |-
+          Thử sử dụng khối `lặp lại` để viết 1 đoạn mã ngắn hơn.
+
+          <xml>  <block type="controls_repeat_simplified">
+              <title name="TIMES">3</title>
+            </block>
+          </xml>
+      courseB_starWars_prog6_2018:
+        courseB_starWars_prog6_a: Mô hình này chỉ như 1 bậc cầu thang với 2 bước di
+          chuyển mỗi hướng!
+        courseB_starWars_prog6_b: |-
+          Thử sử dụng khối `lặp lại` để viết 1 đoạn mã ngắn hơn.
+
+          <xml>  <block type="controls_repeat_simplified">
+              <title name="TIMES">3</title>
+            </block>
+          </xml>
+      courseB_starWars_prog6_2019:
+        courseB_starWars_prog6_a: Mô hình này chỉ như 1 bậc cầu thang với 2 bước di
+          chuyển mỗi hướng!
+        courseB_starWars_prog6_b: |-
+          Thử sử dụng khối `lặp lại` để viết 1 đoạn mã ngắn hơn.
+
+          <xml>  <block type="controls_repeat_simplified">
+              <title name="TIMES">3</title>
+            </block>
+          </xml>
+      courseB_starWars_prog7:
+        courseB_starWars_prog7_a: Có phải mô hình này giống với mô hình trong câu
+          đố trước không?
+        courseB_starWars_prog7_b: Robot BB-8 sẽ nhặt miếng kim loại khi nó đi qua.
+        courseB_starWars_prog7_c: Thử vẽ mô hình bậc cầu thang lớn. Có phải nó sẽ
+          đi qua tất cả các mảnh kim loại?
+      courseB_starWars_prog7_2018:
+        courseB_starWars_prog7_a: Có phải mô hình này giống với mô hình trong câu
+          đố trước không?
+        courseB_starWars_prog7_b: Robot BB-8 sẽ nhặt miếng kim loại khi nó đi qua.
+        courseB_starWars_prog7_c: Thử vẽ mô hình bậc cầu thang lớn. Có phải nó sẽ
+          đi qua tất cả các mảnh kim loại?
+      courseB_starWars_prog7_2019:
+        courseB_starWars_prog7_a: Có phải mô hình này giống với mô hình trong câu
+          đố trước không?
+        courseB_starWars_prog7_b: Robot BB-8 sẽ nhặt miếng kim loại khi nó đi qua.
+        courseB_starWars_prog7_c: Thử vẽ mô hình bậc cầu thang lớn. Có phải nó sẽ
+          đi qua tất cả các mảnh kim loại?
+      courseB_starWars_prog8:
+        courseB_starWars_prog8_a: Bạn có thể đi lại những chỗ bạn đã đi qua.
+        courseB_starWars_prog8_b: |-
+          Thử sử dụng khối `repeat` để xem điều gì sẽ xảy ra với đoạn mã mà bạn đã thêm vào.
+
+          <xml>
+            <block type="controls_repeat_simplified">
+              <title name="TIMES">3</title>
+            </block>
+          </xml>
+      courseB_starWars_prog8_2018:
+        courseB_starWars_prog8_a: Bạn có thể đi lại những chỗ bạn đã đi qua.
+        courseB_starWars_prog8_b: |-
+          Thử sử dụng khối `repeat` để xem điều gì sẽ xảy ra với đoạn mã mà bạn đã thêm vào.
+
+          <xml>
+            <block type="controls_repeat_simplified">
+              <title name="TIMES">3</title>
+            </block>
+          </xml>
+      courseB_starWars_prog8_2019:
+        courseB_starWars_prog8_a: Bạn có thể đi lại những chỗ bạn đã đi qua.
+        courseB_starWars_prog8_b: |-
+          Thử sử dụng khối `repeat` để xem điều gì sẽ xảy ra với đoạn mã mà bạn đã thêm vào.
+
+          <xml>
+            <block type="controls_repeat_simplified">
+              <title name="TIMES">3</title>
+            </block>
+          </xml>
+      courseB_starWars_prog9:
+        courseB_starWars_prog9_a: Đừng sợ phạm sai lầm! Chạy mã để xem điều gì xảy
+          ra, ngay cả khi bạn chưa giải được câu đố.
+        courseB_starWars_prog9_b: Có rất nhiều cách để giải câu đố này.
+        courseB_starWars_prog9_c: Có thể khối `lặp lại` sẽ giúp bạn trong câu đố này?
+      courseB_starWars_prog9_2018:
+        courseB_starWars_prog9_a: Đừng sợ phạm sai lầm! Chạy mã để xem điều gì xảy
+          ra, ngay cả khi bạn chưa giải được câu đố.
+        courseB_starWars_prog9_b: Có rất nhiều cách để giải câu đố này.
+      courseB_starWars_prog9_2019:
+        courseB_starWars_prog9_a: Đừng sợ phạm sai lầm! Chạy mã để xem điều gì xảy
+          ra, ngay cả khi bạn chưa giải được câu đố.
+        courseB_starWars_prog9_b: Có rất nhiều cách để giải câu đố này.
       courseC19_playLab_EOC2:
         courseE_playLab_scaffold1_c: Khi bạn hoàn thành, bạn có thể di chuyển nhân
           vật anh hùng của bạn bằng các phím mũi tên!
+      courseC_data wizard:
+        courseA_playLab_events7_a: |-
+          Dùng khối này khi các nhân vật va vào nhau.
+
+          <xml><block type="studio_whenSpriteCollided">
+              <title name="SPRITE1">1</title>
+              <title name="SPRITE2">0</title>
+            </block></xml>
       courseC_maze_programming6:
         courseC_maze_programming6_a: Có hai cách để giải câu đố này!
       courseC_maze_programming6_2018:
         courseC_maze_programming6_a: Có hai cách để giải câu đố này!
       courseC_maze_programming6_2019:
         courseC_maze_programming6_a: Có hai cách để giải câu đố này!
+      courseC_starWars_loops1:
+        courseC_starWars_loops1_b: Đừng sợ phạm sai lầm! Chạy mã để xem điều gì xảy
+          ra, ngay cả khi bạn chưa giải được câu đố.
+      courseC_starWars_loops10:
+        courseC_starWars_loops10_c: Đừng sợ phạm sai lầm! Chạy mã để xem điều gì xảy
+          ra, ngay cả khi bạn chưa giải được câu đố.
+      courseC_starWars_loops10_2018:
+        courseC_starWars_loops10_c: Đừng sợ phạm sai lầm! Chạy mã để xem điều gì xảy
+          ra, ngay cả khi bạn chưa giải được câu đố.
+      courseC_starWars_loops10_2019:
+        courseC_starWars_loops10_c: Đừng sợ phạm sai lầm! Chạy mã để xem điều gì xảy
+          ra, ngay cả khi bạn chưa giải được câu đố.
+      courseC_starWars_loops1_2018:
+        courseC_starWars_loops1_b: Đừng sợ phạm sai lầm! Chạy mã để xem điều gì xảy
+          ra, ngay cả khi bạn chưa giải được câu đố.
+      courseC_starWars_loops1_2019:
+        courseC_starWars_loops1_b: Đừng sợ phạm sai lầm! Chạy mã để xem điều gì xảy
+          ra, ngay cả khi bạn chưa giải được câu đố.
+      courseC_starWars_loops7:
+        courseC_starWars_loops7_c: Đừng sợ phạm sai lầm! Chạy mã để xem điều gì xảy
+          ra, ngay cả khi bạn chưa giải được câu đố.
+      courseC_starWars_loops7_2018:
+        courseC_starWars_loops7_c: Đừng sợ phạm sai lầm! Chạy mã để xem điều gì xảy
+          ra, ngay cả khi bạn chưa giải được câu đố.
+      courseC_starWars_loops7_2019:
+        courseC_starWars_loops7_c: Đừng sợ phạm sai lầm! Chạy mã để xem điều gì xảy
+          ra, ngay cả khi bạn chưa giải được câu đố.
       courseD_artist_nestedLoops3:
         courseD_artist_nestedLoops3_a: "Thử dùng khối `nhảy về phía trước` để đi từ
           hình vuông này đến điểm bạn bắt đầu hình vuông tiếp theo. \n\nNếu các hình
@@ -593,6 +1894,91 @@ vi-VN:
           hình vuông này đến điểm bạn bắt đầu hình vuông tiếp theo. \n\nNếu các hình
           vuông cao 20 điểm ảnh và chúng cách nhau 20 điểm ảnh, bạn sẽ cần nhảy bao
           xa?"
+      courseD_iceage_loops1:
+        courseD_iceage_loops1_a: Hãy coi chừng tảng băng vỡ! Scrat sẽ rơi xuống đấy!
+        courseD_iceage_loops1_b: |-
+          Bạn sẽ phải dùng khối lệnh này:
+
+          <xml><block type="maze_moveForward"/></xml>
+      courseD_iceage_loops10:
+        courseB_iceage_loops10_a: Hãy coi chừng băng vỡ! Scrat sẽ rơi xuống nước đấy!
+        courseB_iceage_loops10_b: Hãy thử nói các bước thành lời hoặc viết chúng xuống
+          một tờ giấy. Bạn có thấy sự lặp lại nào không?
+        courseB_iceage_loops10_c: Đây là một câu đố dài! Hãy đi theo con đường này.
+      courseD_iceage_loops10_2019:
+        courseB_iceage_loops10_a: Hãy coi chừng băng vỡ! Scrat sẽ rơi xuống nước đấy!
+        courseB_iceage_loops10_b: Hãy thử nói các bước thành lời hoặc viết chúng xuống
+          một tờ giấy. Bạn có thấy sự lặp lại nào không?
+        courseB_iceage_loops10_c: Đây là một câu đố dài! Hãy đi theo con đường này.
+      courseD_iceage_loops1_2019:
+        courseD_iceage_loops1_a: Hãy coi chừng tảng băng vỡ! Scrat sẽ rơi xuống đấy!
+        courseD_iceage_loops1_b: |-
+          Bạn sẽ phải dùng khối lệnh này:
+
+          <xml><block type="maze_moveForward"/></xml>
+      courseD_iceage_loops2:
+        courseD_iceage_loops2_a: Chia câu đố này thành 2 đoạn, 1 đoạn ở trước góc,
+          và 1 đoạn ở sau góc.
+        courseD_iceage_loops2_b: Nếu bạn gặp khó khăn, hãy thử nói to các bước lên.
+        courseD_iceage_loops2_c: Đi theo con đường này để đưa Scrat đến với hạt sồi.
+      courseD_iceage_loops2_2019:
+        courseD_iceage_loops2_a: Chia câu đố này thành 2 đoạn, 1 đoạn ở trước góc,
+          và 1 đoạn ở sau góc.
+        courseD_iceage_loops2_b: Nếu bạn gặp khó khăn, hãy thử nói to các bước lên.
+        courseD_iceage_loops2_c: Đi theo con đường này để đưa Scrat đến với hạt sồi.
+      courseD_iceage_loops3_2019:
+        courseB_iceage_loops3_a: |-
+          Hãy sử dụng khối lệnh mới này!
+
+           <xml><block type="controls_repeat_dropdown">
+              <title name="TIMES" config="2-10">5</title>
+            </block></xml>
+      courseD_iceage_loops4:
+        courseD_iceage_loops4_a: Đừng lo lắng khi chạy mã của bạn và hãy xem điều
+          gì sẽ xảy ra!
+        courseD_iceage_loops4_c: Đây là con đường mà Scrat nên đi.
+      courseD_iceage_loops4_2019:
+        courseD_iceage_loops4_a: Đừng lo lắng khi chạy mã của bạn và hãy xem điều
+          gì sẽ xảy ra!
+        courseD_iceage_loops4_c: Đây là con đường mà Scrat nên đi.
+      courseD_iceage_loops6:
+        courseD_iceage_loops6_b: Bạn chỉ cần thêm \*\* một \*\* vòng lặp nữa!
+        courseD_iceage_loops6_c: Con đường cuối cùng của bạn sẽ trông như thế này.
+      courseD_iceage_loops6_2019:
+        courseD_iceage_loops6_b: Bạn chỉ cần thêm \*\* một \*\* vòng lặp nữa!
+        courseD_iceage_loops6_c: Con đường cuối cùng của bạn sẽ trông như thế này.
+      courseD_iceage_loops7:
+        courseB_iceage_loops7_a: Nếu bạn gặp khó khăn, hãy thử viết các bước xuống
+          một tờ giấy. Bạn có thấy sự lặp lại nào không?
+        courseB_iceage_loops7_b: Đây là con đường Scrat nên đi để đến được hạt sồi.
+      courseD_iceage_loops7_2019:
+        courseB_iceage_loops7_a: Nếu bạn gặp khó khăn, hãy thử viết các bước xuống
+          một tờ giấy. Bạn có thấy sự lặp lại nào không?
+        courseB_iceage_loops7_b: Đây là con đường Scrat nên đi để đến được hạt sồi.
+      courseD_iceage_loops8:
+        courseD_iceage_loops8_b: Vòng lặp thứ nhất sẽ lặp lại **3** lần, vòng thứ
+          hai sẽ lặp lại **5** lần, vòng lặp thứ ba sẽ lặp lại **4** lần và vòng lặp
+          cuối cùng sẽ lặp lại **4** lần.
+        courseD_iceage_loops8_c: Sử dụng các vòng lặp để giúp Scrat đi theo con đường
+          này.
+      courseD_iceage_loops8_2019:
+        courseD_iceage_loops8_b: Vòng lặp thứ nhất sẽ lặp lại **3** lần, vòng thứ
+          hai sẽ lặp lại **5** lần, vòng lặp thứ ba sẽ lặp lại **4** lần và vòng lặp
+          cuối cùng sẽ lặp lại **4** lần.
+        courseD_iceage_loops8_c: Sử dụng các vòng lặp để giúp Scrat đi theo con đường
+          này.
+      courseD_iceage_loops9:
+        courseD_iceage_loops9_a: Bạn đang gặp rắc rối? Thử chia câu đố này thành các
+          phần nhỏ hơn. Bạn có thể chạy thử chương trình khi đang viết mã.
+        courseD_iceage_loops9_b: Chương trình cuối cùng của bạn nên có **4** vòng
+          lặp.
+        courseD_iceage_loops9_c: Scrat nên đi theo con đường này để có được hạt sồi.
+      courseD_iceage_loops9_2019:
+        courseD_iceage_loops9_a: Bạn đang gặp rắc rối? Thử chia câu đố này thành các
+          phần nhỏ hơn. Bạn có thể chạy thử chương trình khi đang viết mã.
+        courseD_iceage_loops9_b: Chương trình cuối cùng của bạn nên có **4** vòng
+          lặp.
+        courseD_iceage_loops9_c: Scrat nên đi theo con đường này để có được hạt sồi.
       courseD_maze_ramp6:
         courseC_maze_programming6_a: Có hai cách để giải câu đố này!
       courseD_scrat_ramp7:
@@ -641,3 +2027,9 @@ vi-VN:
         courseF_bee_functions7_a: "Nếu câu đố có vẻ khó khăn, thử xây dựng hàm của
           bạn từng chút một. \n\nThêm vài khối, rồi thử chúng. Thêm nhiều hơn, rồi
           thử lại.  Sẽ có lúc bạn hoàn thành nó!"
+      coursea_maze_ramp1_2018:
+        courseC_maze_programming1_b: Đừng sợ mắc lỗi! Hãy thử một cái gì đó, và nếu
+          nó chưa đúng, hãy thử một cái khác!
+      coursea_maze_ramp1_2019:
+        courseC_maze_programming1_b: Đừng sợ mắc lỗi! Hãy thử một cái gì đó, và nếu
+          nó chưa đúng, hãy thử một cái khác!

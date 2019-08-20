@@ -180,7 +180,7 @@ module Pd::Application
     test 'get_first_selected_workshop single local workshop' do
       Pd::Workshop.any_instance.stubs(:process_location)
 
-      workshop = create :pd_workshop, location_address: 'Address', sessions_from: Date.today, num_sessions: 1
+      workshop = create :workshop, location_address: 'Address', sessions_from: Date.today, num_sessions: 1
       application = create :pd_teacher1920_application, form_data_hash: (
       build :pd_teacher1920_application_hash,
         regional_partner_workshop_ids: [workshop.id],
@@ -191,7 +191,7 @@ module Pd::Application
     end
 
     test 'get_first_selected_workshop multiple local workshops' do
-      workshops = (1..3).map {|i| create :pd_workshop, num_sessions: 2, sessions_from: Date.today + i, location_address: %w(tba TBA tba)[i - 1]}
+      workshops = (1..3).map {|i| create :workshop, num_sessions: 2, sessions_from: Date.today + i, location_address: %w(tba TBA tba)[i - 1]}
 
       application = create :pd_teacher1920_application, form_data_hash: (
         build(:pd_teacher1920_application_hash, :with_multiple_workshops,
@@ -208,7 +208,7 @@ module Pd::Application
     end
 
     test 'get_first_selected_workshop multiple local workshops no selection returns first' do
-      workshops = (1..2).map {|i| create :pd_workshop, num_sessions: 2, sessions_from: Date.today + i}
+      workshops = (1..2).map {|i| create :workshop, num_sessions: 2, sessions_from: Date.today + i}
 
       application = create :pd_teacher1920_application, form_data_hash: (
         build(:pd_teacher1920_application_hash, :with_multiple_workshops,
@@ -231,7 +231,7 @@ module Pd::Application
     test 'get_first_selected_workshop ignores single deleted workshops' do
       Pd::Workshop.any_instance.stubs(:process_location)
 
-      workshop = create :pd_workshop, :local_summer_workshop, num_sessions: 5, location_address: 'Buffalo, NY', sessions_from: Date.new(2019, 1, 1)
+      workshop = create :summer_workshop, location_address: 'Buffalo, NY', sessions_from: Date.new(2019, 1, 1)
       application = create :pd_teacher1920_application, form_data_hash: (
         build(:pd_teacher1920_application_hash,
           regional_partner_workshop_ids: [workshop.id],
@@ -244,7 +244,7 @@ module Pd::Application
     end
 
     test 'get_first_selected_workshop ignores deleted workshop from multiple list' do
-      workshops = (1..2).map {|i| create :pd_workshop, num_sessions: 2, sessions_from: Date.today + i}
+      workshops = (1..2).map {|i| create :workshop, num_sessions: 2, sessions_from: Date.today + i}
 
       application = create :pd_teacher1920_application, form_data_hash: (
         build(:pd_teacher1920_application_hash, :with_multiple_workshops,
@@ -261,8 +261,8 @@ module Pd::Application
     end
 
     test 'get_first_selected_workshop picks correct workshop even when multiple are on the same day' do
-      workshop_1 = create :pd_workshop, num_sessions: 2, sessions_from: Date.today + 2
-      workshop_2 = create :pd_workshop, num_sessions: 2, sessions_from: Date.today + 2
+      workshop_1 = create :workshop, num_sessions: 2, sessions_from: Date.today + 2
+      workshop_2 = create :workshop, num_sessions: 2, sessions_from: Date.today + 2
       workshop_1.update_column(:location_address, 'Location 1')
       workshop_2.update_column(:location_address, 'Location 2')
 
@@ -347,7 +347,7 @@ module Pd::Application
 
     test 'cache prefetch' do
       school = create :school
-      workshop = create :pd_workshop
+      workshop = create :workshop
       form_data_hash = build :pd_teacher1920_application_hash, school: school
       application = create :pd_teacher1920_application, form_data_hash: form_data_hash, pd_workshop_id: workshop.id
 
@@ -900,7 +900,7 @@ module Pd::Application
     test 'require assigned workshop for registration-related statuses when emails sent by system' do
       statuses = Teacher1920Application::WORKSHOP_REQUIRED_STATUSES
       partner = build :regional_partner, applications_decision_emails: RegionalPartner::SENT_BY_SYSTEM
-      workshop = create :pd_workshop
+      workshop = create :workshop
       application = create :pd_teacher1920_application, {
         regional_partner: partner
       }
@@ -959,7 +959,7 @@ module Pd::Application
     end
 
     test 'associated models cache prefetch' do
-      workshop = create :pd_workshop
+      workshop = create :workshop
       application = create :pd_teacher1920_application, pd_workshop_id: workshop.id
       # Workshops, Sessions, Enrollments, Schools, School districts
       assert_queries 5 do

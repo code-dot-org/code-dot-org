@@ -11935,6 +11935,16 @@ tr:
               name: yeni kademe
             Number Systems:
               name: Sayı Sistemleri
+            Sending Binary Messages:
+              name: İkili Mesajları Gönderiyor
+            Sending Binary Messages with the Internet Simulator:
+              name: Internet simülatörü ile ikili ileti gönderme
+            Intellectual Property:
+              name: Fikri Mülkiyet
+            CS Principles Pre-survey:
+              name: Bilgisayar Bilimi ilkeleri ön anket
+            Binary Numbers:
+              name: İkili Sayılar
         csd-videos:
           stages:
             new stage:
@@ -12709,6 +12719,26 @@ tr:
                 arkadaşlarıyla paylaşacaklardır. Bu proje birden fazla sınıfı kapsayacak
                 ve 3-5 sınıf döneminden herhangi bir yeri kolayca alabilecektir.
         maddie-test:
+          stages:
+            new stage:
+              name: yeni kademe
+        csl-vn:
+          stages:
+            Programming in Maze:
+              name: Labirentte Programlama
+            Programming with Rey and BB-8:
+              name: Rey ve BB-8 ile programlama
+            Ocean Scene with Loops:
+              name: Sanatçıların Döngüleri
+        dlp19-csd-mod-fit:
+          stages:
+            Deeper Learning Overview:
+              name: Derin Öğrenime Genel Bakış
+        dlp19-csp-mod-fit:
+          stages:
+            Deeper Learning Overview:
+              name: Derin Öğrenime Genel Bakış
+        dlp19-csd-mod-w2:
           stages:
             new stage:
               name: yeni kademe

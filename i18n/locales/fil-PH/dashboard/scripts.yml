@@ -8350,6 +8350,16 @@ fil:
               name: bagong yugto
             Number Systems:
               name: Mga Sistema ng Pagbilang
+            Sending Binary Messages:
+              name: Pagpapadala ng Binary na mga Mensahe
+            Sending Binary Messages with the Internet Simulator:
+              name: Pagpapadala ng mga Binary na Mensahe sa mga Simulator ng Internet
+            Intellectual Property:
+              name: Intelektwal na Pag-aari
+            CS Principles Pre-survey:
+              name: Bago ang Surbey sa mga Prinsipyo sa CS
+            Binary Numbers:
+              name: Binary na mga Numero
         csd-videos:
           stages:
             new stage:
@@ -8612,6 +8622,24 @@ fil:
               description_student: Ang klase ay gagawa ng plano at bubuo ng mga orihinal na laro gamit ang gabay ng proyekto mula sa nakaraang dalawang aralin. Habang nagtatrabaho ng isa o may kasama, ang klase ay magpaplano, magde-develop, at magbigay ng puna sa mga laro. Pagkatapos ilakip ang puna ng mga kasamahan, ang klase ay magbabahagi sa nakompletong mga laro.
               description_teacher: Ang mga estudyante ay magpaplano at bubuo ng kanilang sariling laro gamit ang gabay ng proyekto mula sa nakaraang dalawang aralin para gabayan sila sa kanilang proyekto. Habang nagtatrabaho nang mag-isa o may kasama, ang mga estudyante ay unang magdesisyon kung anong uri ng laro ang gusto nilang gawin, habang kumukuha ng inspirasyon sa isang grupo ng mga halimbawang mga laro. Sila ay kukumpleto sa isang blankong gabay sa proyekto kung saan ilalarawan nila ang paggalaw ng laro at ihanda ang mga variables, mga sprites, at mga functions na kailangan nilang gawin. Sa Code Studio, isang serye ng mga antas ay nag-prompt sa kanila sa isang pangkalahatang pagkasunod-sunod na maaari nilang gamitin para ipatupad ang planong ito. Sa kalagitnaan ng proseso, ang mga estudyante ay magbabahagi sa kanilang mga proyekto para repasuhin ng mga kasamahan at kanilang isama ang mga puna habang tinatapos nila ang kanilang laro. Sa bandang huli ng aralin, ang mga estudyante ay magbabahagi ng kanilang nakumpletong mga laro sa kanilang mga kamag-aral. Ang proyektong ito ay tatagal ng ilang klase at maaring aabot kahit saan hanggang sa 3-5 na oras ng klase.
         maddie-test:
+          stages:
+            new stage:
+              name: bagong yugto
+        csl-vn:
+          stages:
+            Programming in Maze:
+              name: Pag-Program sa Maze
+            Programming with Rey and BB-8:
+              name: Pag-Program kasama sina Rey at BB-8
+        dlp19-csd-mod-fit:
+          stages:
+            Deeper Learning Overview:
+              name: Buod ng Mas Malalim na Pag-aaral
+        dlp19-csp-mod-fit:
+          stages:
+            Deeper Learning Overview:
+              name: Buod ng Mas Malalim na Pag-aaral
+        dlp19-csd-mod-w2:
           stages:
             new stage:
               name: bagong yugto

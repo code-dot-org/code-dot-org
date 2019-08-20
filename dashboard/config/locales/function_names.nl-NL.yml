@@ -98,6 +98,8 @@ nl-NL:
         jump: spring
       Standalone_Artist_7:
         draw a flower: teken een bloem
+      Standalone_Artist_9:
+        my function: mijn functie
       course3_artist_functions_challenge1:
         do something: do iets
       course3_artist_functions_challenge2:

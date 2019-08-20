@@ -4,7 +4,7 @@ class Pd::WorkshopCertificateControllerTest < ::ActionController::TestCase
   setup do
     @user = create :teacher
     sign_in(@user)
-    @workshop = create :pd_workshop, num_sessions: 1, course: Pd::Workshop::COURSE_CSD
+    @workshop = create :workshop, num_sessions: 1, course: Pd::Workshop::COURSE_CSD
     @enrollment = create :pd_enrollment, workshop: @workshop
 
     facilitator_1 = create :facilitator, name: 'Facilitator 1'
@@ -34,10 +34,7 @@ class Pd::WorkshopCertificateControllerTest < ::ActionController::TestCase
   # rubocop:disable Lint/UnderscorePrefixedVariableName
 
   test 'Generates certificate for CSF 101 workshop' do
-    workshop = create :pd_workshop,
-      num_sessions: 1,
-      course: Pd::Workshop::COURSE_CSF,
-      subject: Pd::Workshop::SUBJECT_CSF_101
+    workshop = create :csf_intro_workshop
     enrollment = create :pd_enrollment, workshop: workshop
 
     _ = anything
@@ -68,7 +65,7 @@ class Pd::WorkshopCertificateControllerTest < ::ActionController::TestCase
   end
 
   test 'Generates certificate for CSD teachercon' do
-    workshop = create :pd_workshop,
+    workshop = create :workshop,
       num_sessions: 1,
       course: Pd::Workshop::COURSE_CSD,
       subject: Pd::Workshop::SUBJECT_CSD_TEACHER_CON
@@ -86,7 +83,7 @@ class Pd::WorkshopCertificateControllerTest < ::ActionController::TestCase
   end
 
   test 'Generates certificate for CSP teachercon' do
-    workshop = create :pd_workshop,
+    workshop = create :workshop,
       num_sessions: 1,
       course: Pd::Workshop::COURSE_CSP,
       subject: Pd::Workshop::SUBJECT_CSP_TEACHER_CON

@@ -5155,6 +5155,14 @@ zh-TW:
               name: 新的階段
             Number Systems:
               name: 數字系統
+            Sending Binary Messages:
+              name: 二進位訊息的發送
+            Sending Binary Messages with the Internet Simulator:
+              name: 用網路模擬器發送二進位訊息
+            CS Principles Pre-survey:
+              name: 計算機科學原理課前問卷調查
+            Binary Numbers:
+              name: 二進位數
         csd-tests:
           stages:
             Computers and Problem Solving:
@@ -5352,6 +5360,28 @@ zh-TW:
             Project - Design a Game:
               name: 專案 - 設計一個遊戲
         maddie-test:
+          stages:
+            new stage:
+              name: 新的階段
+        csl-vn:
+          stages:
+            Sequencing with Scrat:
+              name: 和鼠奎特一起學循序（Sequence）
+            Programming in Maze:
+              name: 在迷宮中編程（Programming ）
+            Programming with Rey and BB-8:
+              name: 和 BB-8 與 Rey 一起寫程式
+            Loops in Ice Age:
+              name: 冰河歷險紀中的迴圈
+        dlp19-csd-mod-fit:
+          stages:
+            Deeper Learning Overview:
+              name: 深度學習概覽
+        dlp19-csp-mod-fit:
+          stages:
+            Deeper Learning Overview:
+              name: 深度學習概覽
+        dlp19-csd-mod-w2:
           stages:
             new stage:
               name: 新的階段

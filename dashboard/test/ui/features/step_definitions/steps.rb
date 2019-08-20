@@ -1055,6 +1055,13 @@ And /^I dismiss the language selector$/ do
   }
 end
 
+And(/^I give user "([^"]*)" authorized teacher permission$/) do |name|
+  require_rails_env
+  user = User.find_by_email_or_hashed_email(@users[name][:email])
+  user.permission = UserPermission::AUTHORIZED_TEACHER
+  user.save!
+end
+
 And(/^I create a(n authorized)? teacher-associated( under-13)? student named "([^"]*)"$/) do |authorized, under_13, name|
   steps "Given I create a teacher named \"Teacher_#{name}\""
   # enroll in a plc course as a way of becoming an authorized teacher
