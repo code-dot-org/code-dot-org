@@ -1,5 +1,6 @@
 class LevelStarterAssetsController < ApplicationController
   authorize_resource class: false, except: [:show, :file]
+  before_action :require_levelbuilder_mode, except: [:show, :file]
   before_action :set_level
 
   S3_BUCKET = 'cdo-v3-assets'.freeze
@@ -29,8 +30,6 @@ class LevelStarterAssetsController < ApplicationController
 
   # POST /level_starter_assets/:level_name
   def upload
-    return head :forbidden unless current_user&.levelbuilder? && Rails.application.config.levelbuilder_mode
-
     # Client expects a single file upload, so raise an error if params[:files] contains more than one file.
     if params[:files].length > 1
       raise "One file upload expected. Actual: #{params[:files].length}"
