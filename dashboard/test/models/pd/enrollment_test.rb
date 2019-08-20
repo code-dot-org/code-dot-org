@@ -90,19 +90,19 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
   end
 
   test 'exit_survey_url' do
-    csf_workshop = create :workshop, :ended, course: Pd::Workshop::COURSE_CSF
+    csf_workshop = create :csf_workshop, :ended
     csf_enrollment = create :pd_enrollment, workshop: csf_workshop
 
     csp_workshop = create :workshop, :ended, course: Pd::Workshop::COURSE_CSP
     csp_enrollment = create :pd_enrollment, workshop: csp_workshop
 
-    counselor_workshop = create :workshop, :ended, course: Pd::Workshop::COURSE_COUNSELOR
+    counselor_workshop = create :counselor_workshop, :ended
     counselor_enrollment = create :pd_enrollment, workshop: counselor_workshop
 
-    admin_workshop = create :workshop, :ended, course: Pd::Workshop::COURSE_ADMIN
+    admin_workshop = create :admin_workshop, :ended
     admin_enrollment = create :pd_enrollment, workshop: admin_workshop
 
-    local_summer_workshop = create :workshop, :ended, course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_SUMMER_WORKSHOP
+    local_summer_workshop = create :csp_summer_workshop, :ended
     local_summer_enrollment = create :pd_enrollment, workshop: local_summer_workshop
 
     teachercon_workshop = create :workshop, :ended, course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_TEACHER_CON
@@ -125,7 +125,7 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
 
     assert normal_enrollment.should_send_exit_survey?
 
-    fit_workshop = create :workshop, :ended, course: Pd::Workshop::COURSE_CSD, subject: Pd::Workshop::SUBJECT_CSD_FIT
+    fit_workshop = create :fit_workshop, :ended
     fit_enrollment = create :pd_enrollment, user: create(:teacher), workshop: fit_workshop
 
     refute fit_enrollment.should_send_exit_survey?
@@ -139,7 +139,7 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
   end
 
   test 'send_exit_survey does not send mail for FIT Weekend workshops' do
-    workshop = create :workshop, :ended, course: Pd::Workshop::COURSE_CSD, subject: Pd::Workshop::SUBJECT_CSD_FIT
+    workshop = create :fit_workshop, :ended
     enrollment = create :pd_enrollment, user: create(:teacher), workshop: workshop
     Pd::WorkshopMailer.expects(:exit_survey).never
 
@@ -288,7 +288,7 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
   end
 
   test 'local summer survey filter' do
-    workshop = create :workshop, :local_summer_workshop, num_sessions: 5
+    workshop = create :summer_workshop
     teacher = create :teacher
     enrollment = create :pd_enrollment, :from_user, user: teacher, workshop: workshop
 
@@ -400,13 +400,13 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
 
     # Ended FiT workshop, with attendance
     # (Checks a special case: FiT workshops don't have exit surveys)
-    fit_workshop = create :workshop, :ended, subject: SUBJECT_FIT
+    fit_workshop = create :fit_workshop, :ended
     fit_enrollment = create :pd_enrollment, workshop: fit_workshop
     create :pd_attendance, session: fit_workshop.sessions.first, enrollment: fit_enrollment
 
     # Ended Facilitator workshop, with attendance
     # (Checks a special case: Facilitator workshops don't have exit surveys)
-    facilitator_workshop = create :workshop, :ended, course: COURSE_FACILITATOR
+    facilitator_workshop = create :facilitator_workshop, :ended
     facilitator_enrollment = create :pd_enrollment, workshop: facilitator_workshop
     create :pd_attendance, session: facilitator_workshop.sessions.first, enrollment: facilitator_enrollment
 
@@ -434,7 +434,7 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     # Root cause: WHERE subject != 'xyz' implicitly excludes rows where subject IS NULL too.
 
     # Ended Admin workshop with attendance; Admin workshops have no subject.
-    admin_workshop = create :workshop, :ended, course: COURSE_ADMIN, subject: nil
+    admin_workshop = create :admin_workshop, :ended
     expected_enrollment = create :pd_enrollment, workshop: admin_workshop
     create :pd_attendance, session: admin_workshop.sessions.first, enrollment: expected_enrollment
 
@@ -572,7 +572,7 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
   end
 
   test 'update scholarship status for local summer workshop' do
-    workshop = create :workshop, :local_summer_workshop_upcoming
+    workshop = create :summer_workshop
     enrollment = create :pd_enrollment, :from_user, workshop: workshop
     # no scholarship info initially
     assert_nil enrollment.scholarship_status

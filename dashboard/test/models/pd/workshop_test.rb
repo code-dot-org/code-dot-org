@@ -85,7 +85,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   end
 
   test 'exclude_summer scope' do
-    summer_workshop = create :workshop, :local_summer_workshop
+    summer_workshop = create :summer_workshop
     teachercon = create :workshop, :teachercon
 
     assert Pd::Workshop.exclude_summer.exclude? summer_workshop
@@ -327,8 +327,8 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
 
   test 'account_required_for_attendance?' do
     normal_workshop = create :workshop, :ended
-    counselor_workshop = create :workshop, :ended, course: Pd::Workshop::COURSE_COUNSELOR
-    admin_workshop = create :workshop, :ended, course: Pd::Workshop::COURSE_ADMIN
+    counselor_workshop = create :counselor_workshop, :ended
+    admin_workshop = create :admin_workshop, :ended
 
     assert normal_workshop.account_required_for_attendance?
     refute counselor_workshop.account_required_for_attendance?
@@ -345,7 +345,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   end
 
   test 'send_exit_surveys with attendance but no account gets email for counselor admin' do
-    workshop = create :workshop, :ended, course: Pd::Workshop::COURSE_COUNSELOR
+    workshop = create :counselor_workshop, :ended
 
     enrollment = create :pd_enrollment, workshop: workshop
     create :pd_attendance_no_account, session: workshop.sessions.first, enrollment: enrollment
@@ -369,7 +369,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   test 'send_exit_surveys sends no surveys for FiT workshops' do
     # Make a FiT workshop that's ended and has attendance;
     # these are the conditions under which we'd normally send a survey.
-    workshop = create :workshop, :ended, subject: SUBJECT_FIT
+    workshop = create :fit_workshop, :ended
     create(:pd_workshop_participant, workshop: workshop, enrolled: true, attended: true)
 
     # Ensure no exit surveys are sent
@@ -380,7 +380,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   test 'send_exit_surveys sends no surveys for Facilitator workshops' do
     # Make a Facilitator workshop that's ended and has attendance;
     # these are the conditions under which we'd normally send a survey.
-    workshop = create :workshop, :ended, course: COURSE_FACILITATOR
+    workshop = create :facilitator_workshop, :ended
     create(:pd_workshop_participant, workshop: workshop, enrolled: true, attended: true)
 
     # Ensure no exit surveys are sent
@@ -469,8 +469,10 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
 
   test 'friendly name' do
     Geocoder.expects(:search).returns([])
-    workshop = create :workshop, course: Pd::Workshop::COURSE_ADMIN, location_name: 'Code.org',
-      location_address: 'Seattle, WA', sessions: [create(:pd_session, start: Date.new(2016, 9, 1))]
+    workshop = create :admin_workshop,
+      location_name: 'Code.org',
+      location_address: 'Seattle, WA',
+      sessions: [create(:pd_session, start: Date.new(2016, 9, 1))]
 
     # no subject
     assert_equal 'Admin workshop on 09/01/16 at Code.org in Seattle, WA', workshop.friendly_name
@@ -709,13 +711,8 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   end
 
   test 'csp summer workshops are capped at 33.5 hours' do
-    workshop_csp_summer = create :workshop,
-      course: Pd::Workshop::COURSE_CSP,
-      subject: Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP,
-      num_sessions: 5,
-      each_session_hours: 8
-
-    assert_equal 33.5, workshop_csp_summer.effective_num_hours
+    workshop = create :csp_summer_workshop, num_sessions: 5, each_session_hours: 8
+    assert_equal 33.5, workshop.effective_num_hours
   end
 
   test 'CSF 101 workshops are capped at 7 hours' do
@@ -932,11 +929,11 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
 
   test 'suppress_reminders?' do
     suppressed = [
-      create(:workshop, course: Pd::Workshop::COURSE_CSF, subject: Pd::Workshop::SUBJECT_CSF_FIT),
+      create(:fit_workshop, course: Pd::Workshop::COURSE_CSF),
       create(:workshop, course: Pd::Workshop::COURSE_CSD, subject: Pd::Workshop::SUBJECT_CSD_TEACHER_CON),
-      create(:workshop, course: Pd::Workshop::COURSE_CSD, subject: Pd::Workshop::SUBJECT_CSD_FIT),
+      create(:fit_workshop, course: Pd::Workshop::COURSE_CSD),
       create(:workshop, course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_TEACHER_CON),
-      create(:workshop, course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_FIT)
+      create(:fit_workshop, course: Pd::Workshop::COURSE_CSP)
     ]
 
     refute @workshop.suppress_reminders?
@@ -1195,13 +1192,10 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
 
   test 'nearest combined with subject and enrollment' do
     user = create :teacher
-    target = create :workshop, sessions_from: Date.today + 1.day,
-      course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_SUMMER_WORKSHOP
-
+    target = create :csp_summer_workshop, sessions_from: Date.today + 1.day
     create :pd_enrollment, :from_user, user: user, workshop: target
 
-    same_subject_farther = create :workshop, sessions_from: Date.today + 1.week,
-      course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_SUMMER_WORKSHOP
+    same_subject_farther = create :csp_summer_workshop, sessions_from: Date.today + 1.week
     create :pd_enrollment, :from_user, user: user, workshop: same_subject_farther
 
     different_subject_closer = create :workshop, sessions_from: Date.today,
@@ -1209,8 +1203,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     create :pd_enrollment, :from_user, user: user, workshop: different_subject_closer
 
     # closer, not enrolled
-    create :workshop, sessions_from: Date.today,
-      course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_SUMMER_WORKSHOP
+    create :csp_summer_workshop, sessions_from: Date.today
 
     found = Pd::Workshop.where(subject: Pd::Workshop::SUBJECT_SUMMER_WORKSHOP).enrolled_in_by(user).nearest
     assert_equal target, found
