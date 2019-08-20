@@ -73,14 +73,14 @@ class LevelStarterAssetsControllerTest < ActionController::TestCase
 
   test 'upload: forbidden for non-levelbuilders' do
     sign_in create(:student)
-    post :upload, params: {level_name: create(:level).name, files: []}
+    post :create, params: {level_name: create(:level).name, files: []}
     assert_response :forbidden
   end
 
   test 'upload: forbidden if not in levelbuilder_mode' do
     Rails.application.config.stubs(:levelbuilder_mode).returns(false)
     sign_in create(:levelbuilder)
-    post :upload, params: {level_name: create(:level).name, files: []}
+    post :create, params: {level_name: create(:level).name, files: []}
     assert_response :forbidden
   end
 
@@ -88,7 +88,7 @@ class LevelStarterAssetsControllerTest < ActionController::TestCase
     sign_in create(:levelbuilder)
 
     e = assert_raises do
-      post :upload, params: {level_name: create(:level).name, files: ['file-1', 'file-2']}
+      post :create, params: {level_name: create(:level).name, files: ['file-1', 'file-2']}
     end
     assert_equal 'One file upload expected. Actual: 2', e.message
   end
@@ -100,7 +100,7 @@ class LevelStarterAssetsControllerTest < ActionController::TestCase
     @file_obj.expects(:upload_file).returns(false)
 
     sign_in create(:levelbuilder)
-    post :upload, params: {level_name: create(:level).name, files: [@file]}
+    post :create, params: {level_name: create(:level).name, files: [@file]}
 
     assert_response :unprocessable_entity
   end
@@ -113,7 +113,7 @@ class LevelStarterAssetsControllerTest < ActionController::TestCase
     Level.any_instance.expects(:save).returns(false)
 
     sign_in create(:levelbuilder)
-    post :upload, params: {level_name: create(:level).name, files: [@file]}
+    post :create, params: {level_name: create(:level).name, files: [@file]}
 
     assert_response :unprocessable_entity
   end
@@ -126,7 +126,7 @@ class LevelStarterAssetsControllerTest < ActionController::TestCase
 
     sign_in create(:levelbuilder)
     level = create :level
-    post :upload, params: {level_name: level.name, files: [@file]}
+    post :create, params: {level_name: level.name, files: [@file]}
 
     level.reload
     assert_equal 1, level.starter_assets.length

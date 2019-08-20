@@ -27,7 +27,7 @@ class LevelStarterAssetsController < ApplicationController
   end
 
   # POST /level_starter_assets/:level_name
-  def upload
+  def create
     return head :forbidden unless current_user&.levelbuilder? && Rails.application.config.levelbuilder_mode
 
     # Client expects a single file upload, so raise an error if params[:files] contains more than one file.
