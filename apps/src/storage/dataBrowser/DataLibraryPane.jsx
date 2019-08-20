@@ -11,8 +11,7 @@ const styles = {
     boxSizing: 'border-box',
     borderRight: '1px solid gray',
     overflowY: 'auto',
-    padding: 10,
-    paddingRight: 0 // setting this to 0 allows 2 columns with the potential scrollbar on Windows
+    padding: 10
   }
 };
 class DataLibraryPane extends React.Component {
