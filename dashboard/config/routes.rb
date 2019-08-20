@@ -231,6 +231,12 @@ Dashboard::Application.routes.draw do
 
   post 'level_assets/upload', to: 'level_assets#upload'
 
+  resources :level_starter_assets, only: [:show], param: 'level_name' do
+    member do
+      get '/:filename', to: 'level_starter_assets#file'
+    end
+  end
+
   resources :scripts, path: '/s/' do
     # /s/xxx/reset
     get 'reset', to: 'script_levels#reset'

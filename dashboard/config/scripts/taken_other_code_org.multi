@@ -1,9 +1,5 @@
 name 'taken-other-code-org'
-question 'Have you taken any other computer science classes at school?'
-right 'Strongly agree'
-right 'Agree'
-right 'Slightly agree'
-right 'Neither'
-right 'Slightly disagree'
-right 'Disagree'
-right 'Strongly disagree'
+question 'Have you completed coding lessons on Code.org (not including the Hour of Code)?'
+right 'Yes'
+right 'No'
+right "I don't know"
