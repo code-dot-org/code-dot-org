@@ -74,6 +74,8 @@ class GameLabVisualizationColumn extends React.Component {
 
   pickerPointerUp = e => {
     if (this.props.pickingLocation) {
+      // Workaround to make sure location picker works for iOS tablets. These devices are not triggering onPointerMove
+      // events, so the location was never getting updated.
       if (isMobileDevice()) {
         this.props.updatePicker(
           calculateOffsetCoordinates(this.divGameLab, e.clientX, e.clientY)
