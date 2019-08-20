@@ -4,7 +4,10 @@ driver:
   chef_version: 12.7.2
   cap_add:
   # needed for setting hostname
-  - SYS_ADMIN
+    - SYS_ADMIN
+  privileged: true # because Docker and SystemD/Upstart
+
+
 transport:
   name: dokken
 provisioner:
@@ -22,7 +25,7 @@ platforms:
   - name: ubuntu-18.04
     driver:
       image: dokken/ubuntu-18.04
-      pid_one_command: /sbin/init
+      pid_one_command: /bin/systemd
     attributes:
       cdo-repository:
         branch: <%= `git rev-parse --abbrev-ref HEAD` %>
