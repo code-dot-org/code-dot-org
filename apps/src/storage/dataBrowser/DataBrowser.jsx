@@ -1,13 +1,26 @@
+import PropTypes from 'prop-types';
 import Radium from 'radium';
 import React from 'react';
 import color from '../../util/color';
+import msg from '@cdo/locale';
+import AddTableListRow from './AddTableListRow';
+import EditTableListRow from './EditTableListRow';
+import * as dataStyles from './dataStyles';
 
 class DataBrowser extends React.Component {
+  static propTypes = {
+    tableListMap: PropTypes.object.isRequired
+  };
+
   state = {selectedTab: TabType.DATA_TABLES};
 
   handleTabClick = newTab => this.setState({selectedTab: newTab});
 
+  emptyHandler = () => {};
+
   render() {
+    const tableWidth = 400;
+    const buttonColumnWidth = 124;
     const tabHeight = 35;
     const borderColor = color.lighter_gray;
     const bgColor = color.lightest_gray;
@@ -79,7 +92,9 @@ class DataBrowser extends React.Component {
       },
       activeBody: {
         height: '100%',
-        overflowY: 'auto'
+        overflowY: 'auto',
+        padding: '10px',
+        width: '100%'
       },
       inactiveBody: {
         display: 'none',
@@ -123,7 +138,38 @@ class DataBrowser extends React.Component {
                 : styles.inactiveBody
             }
           >
-            <span> DATA TABLES PLACEHOLDER </span>
+            <span> {msg.createTableHeader()} </span>
+            <table>
+              <colgroup>
+                <col width={tableWidth - buttonColumnWidth} />
+                <col width={buttonColumnWidth} />
+              </colgroup>
+              <tbody>
+                <AddTableListRow onTableAdd={this.emptyHandler} />
+              </tbody>
+            </table>
+            <br />
+            <table>
+              <colgroup>
+                <col width={tableWidth - buttonColumnWidth} />
+                <col width={buttonColumnWidth} />
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th style={dataStyles.headerCell}>
+                    {msg.dataTableNamePlaceholder()}
+                  </th>
+                  <th style={dataStyles.headerCell}>{msg.actions()}</th>
+                </tr>
+                {Object.keys(this.props.tableListMap).map(tableName => (
+                  <EditTableListRow
+                    key={tableName}
+                    tableName={tableName}
+                    onViewChange={this.emptyHandler}
+                  />
+                ))}
+              </tbody>
+            </table>
           </div>
           <div
             id="keyValuePairsBody"
