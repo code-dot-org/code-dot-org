@@ -16,7 +16,7 @@ import {
 } from '../util/browserChecks';
 import ValidationStep, {Status} from '../../../ui/ValidationStep';
 import {BOARD_TYPE} from '../CircuitPlaygroundBoard';
-import experiments from '../../../../util/experiments';
+import experiments from '@cdo/apps/util/experiments';
 
 const STATUS_SUPPORTED_BROWSER = 'statusSupportedBrowser';
 const STATUS_APP_INSTALLED = 'statusAppInstalled';
@@ -91,13 +91,13 @@ export default class SetupChecklist extends Component {
       )
 
       // Can we talk to the firmware?
-      .then(() =>
-        this.detectStep(STATUS_BOARD_CONNECT, () => {
-          return setupChecker.detectCorrectFirmware().then(() => {
+      .then(() => {
+        return this.detectStep(STATUS_BOARD_CONNECT, () => {
+          setupChecker.detectCorrectFirmware().then(() => {
             this.setState({boardTypeDetected: setupChecker.detectBoardType()});
           });
-        })
-      )
+        });
+      })
 
       // Can we initialize components successfully?
       .then(() =>
@@ -258,7 +258,7 @@ export default class SetupChecklist extends Component {
           {this.renderPlatformSpecificSteps()}
           <ValidationStep
             stepStatus={this.state[STATUS_BOARD_PLUG]}
-            stepName="Board plugged in"
+            stepName={i18n.validationStepBoardPluggedIn()}
           >
             {this.state.caughtError && this.state.caughtError.reason && (
               <pre>{this.state.caughtError.reason}</pre>
@@ -284,7 +284,7 @@ export default class SetupChecklist extends Component {
           </ValidationStep>
           <ValidationStep
             stepStatus={this.state[STATUS_BOARD_CONNECT]}
-            stepName="Board connectable"
+            stepName={i18n.validationStepBoardConnectable()}
           >
             We found a board but it didn't respond properly when we tried to
             connect to it.
@@ -322,7 +322,7 @@ export default class SetupChecklist extends Component {
           </ValidationStep>
           <ValidationStep
             stepStatus={this.state[STATUS_BOARD_COMPONENTS]}
-            stepName="Board components usable"
+            stepName={i18n.validationStepBoardComponentsUsable()}
           >
             Oh no! Something unexpected went wrong while verifying the board
             components.
@@ -339,7 +339,7 @@ export default class SetupChecklist extends Component {
             this.state.boardTypeDetected === BOARD_TYPE.CLASSIC && (
               <ValidationStep
                 stepStatus={this.state[STATUS_BOARD_FIRMWARE]}
-                stepName="Board firmware up-to-date"
+                stepName={i18n.validationStepBoardFirmware()}
               >
                 <div>{i18n.updateFirmwareExplanation()}</div>
                 <button
