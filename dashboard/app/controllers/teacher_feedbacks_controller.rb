@@ -6,7 +6,7 @@ class TeacherFeedbacksController < ApplicationController
   # Feedback from any verified teacher who has provided feedback to the current
   # student on any level
   def index
-    @feedbacks_as_student = @teacher_feedbacks.select do |feedback|
+    @feedbacks_as_student = @teacher_feedbacks.includes(:script_level).select do |feedback|
       feedback.student_id == current_user.id && UserPermission.where(
         user_id: feedback.teacher_id,
         permission: 'authorized_teacher'
