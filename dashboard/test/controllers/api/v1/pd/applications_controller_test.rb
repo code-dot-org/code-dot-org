@@ -332,7 +332,9 @@ module Api::V1::Pd
     end
 
     test 'update appends to the timestamp log if fit workshop is changed' do
-      fit_workshop = create :workshop, :fit, num_sessions: 3, sessions_from: Date.new(2019, 6, 1), processed_location: {city: 'Orchard Park', state: 'NY'}.to_json
+      fit_workshop = create :fit_workshop,
+        sessions_from: Date.new(2019, 6, 1),
+        processed_location: {city: 'Orchard Park', state: 'NY'}.to_json
 
       sign_in @program_manager
       @csp_facilitator_application.update(status_timestamp_change_log: '[]')
@@ -381,8 +383,7 @@ module Api::V1::Pd
       summer_workshop = create :summer_workshop,
         sessions_from: Date.new(2019, 6, 1),
         processed_location: {city: 'Orchard Park', state: 'NY'}.to_json
-      fit_workshop = create :workshop, :fit,
-        num_sessions: 3,
+      fit_workshop = create :fit_workshop,
         sessions_from: Date.new(2019, 6, 1),
         processed_location: {city: 'Orchard Park', state: 'NY'}.to_json
 
@@ -1131,7 +1132,7 @@ module Api::V1::Pd
     end
 
     test 'fit_cohort' do
-      fit_workshop = create :workshop, :fit
+      fit_workshop = create :fit_workshop
 
       # create some applications to be included in fit_cohort
       create FACILITATOR_APPLICATION_FACTORY, :locked, fit_workshop_id: fit_workshop.id, status: :accepted

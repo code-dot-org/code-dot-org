@@ -43,12 +43,6 @@ FactoryGirl.define do
       subject Pd::Workshop::SUBJECT_CSP_TEACHER_CON
     end
 
-    # TODO: Change into a sub-factory
-    trait :fit do
-      course Pd::Workshop::COURSE_CSP
-      subject Pd::Workshop::SUBJECT_CSP_FIT
-    end
-
     trait :in_progress do
       started_at {Time.zone.now}
     end
@@ -243,10 +237,49 @@ FactoryGirl.define do
       factory(:csd_summer_workshop) {csd}
     end
 
-    # TODO
-    # - Admin workshop
-    # - Facilitator workshop
-    # - Counselor workshop
-    # - Facilitator Weekend
+    factory :facilitator_workshop do
+      course Pd::Workshop::COURSE_FACILITATOR
+      subject nil
+      capacity 100         # Typical capacity
+      on_map false         # Never on map
+      funded false         # Never funded
+      num_sessions 2       # Most have 2 sessions
+      num_facilitators 0   # Most have no facilitators
+      each_session_hours 8 # The most common session length
+    end
+
+    # Facilitator-in-training weekend workshop
+    factory :fit_workshop do
+      subject Pd::Workshop::SUBJECT_FIT
+      course Pd::Workshop::COURSE_CSP # CSD is also valid
+      capacity 100         # Typical capacity
+      on_map false         # Never on map
+      funded               # Sometimes funded (50%)
+      num_sessions 2       # Most have 2 sessions
+      num_facilitators 2   # Most have 2 facilitators
+      each_session_hours 8 # The most common session length
+    end
+
+    factory :admin_workshop do
+      course Pd::Workshop::COURSE_ADMIN
+      subject nil
+      capacity 35          # Average capacity
+      on_map false         # Never on map
+      funded               # More than half are funded
+      num_sessions 1       # Most have 1 session
+      num_facilitators 0   # Most have no facilitators
+      each_session_hours 2 # The most common session length
+    end
+
+    factory :counselor_workshop do
+      course Pd::Workshop::COURSE_COUNSELOR
+      subject nil
+      capacity 40          # Average capacity
+      on_map false         # Never on map
+      funded               # All funded
+      num_sessions 1       # Most have 1 session
+      num_facilitators 0   # Most have no facilitators
+      each_session_hours 6 # The most common session length
+    end
   end
 end

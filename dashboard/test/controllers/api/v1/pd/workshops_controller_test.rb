@@ -150,24 +150,17 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
     teacher = create :teacher
     sign_in(teacher)
 
-    teachercon = create(
-      :workshop,
+    teachercon = create :workshop,
       :teachercon,
       :funded,
       organizer: @organizer,
       facilitators: [@facilitator],
       regional_partner: @regional_partner
-    )
 
-    fit_weekend = create(
-      :workshop,
-      :funded,
-      subject: Pd::Workshop::SUBJECT_CSD_FIT,
-      course: Pd::Workshop::COURSE_CSD,
+    fit_weekend = create :fit_workshop,
       organizer: @organizer,
       facilitators: [@facilitator],
       regional_partner: @regional_partner
-    )
 
     create(:pd_enrollment, workshop: teachercon, email: teacher.email, user_id: teacher.id)
     create(:pd_enrollment, workshop: fit_weekend, email: teacher.email, user_id: teacher.id)
@@ -188,26 +181,19 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
     teacher = create :teacher
     sign_in(teacher)
 
-    teachercon = create(
-      :workshop,
+    teachercon = create :workshop,
       :ended,
       :teachercon,
       :funded,
       organizer: @organizer,
       facilitators: [@facilitator],
       regional_partner: @regional_partner
-    )
 
-    fit_weekend = create(
-      :workshop,
+    fit_weekend = create :fit_workshop,
       :ended,
-      :funded,
-      subject: Pd::Workshop::SUBJECT_CSD_FIT,
-      course: Pd::Workshop::COURSE_CSD,
       organizer: @organizer,
       facilitators: [@facilitator],
       regional_partner: @regional_partner
-    )
 
     teachercon_enrollment = create(:pd_enrollment, workshop: teachercon, email: teacher.email, user_id: teacher.id)
     fit_weekend_enrollment = create(:pd_enrollment, workshop: fit_weekend, email: teacher.email, user_id: teacher.id)
