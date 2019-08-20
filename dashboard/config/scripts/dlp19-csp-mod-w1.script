@@ -4,6 +4,13 @@ login_required true
 student_detail_progress_view true
 family_name ''
 
+stage 'Deeper Learning Overview', flex_category: 'required'
+level 'dlp19_overview1', progression: 'Background'
+level 'dlp19_overview2', progression: 'Process'
+level 'dlp19_overview3', progression: 'Preparation'
+level 'dlp19_overview4', progression: 'Evaluation'
+level 'dlp19_overview5', progression: 'Due Dates'
+
 stage 'Step 1: Develop Understanding'
 level 'dlp19-csp-prework-mod1'
 
