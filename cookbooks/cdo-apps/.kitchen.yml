@@ -1,7 +1,8 @@
 ---
 driver:
   name: dokken
-  chef_version: 12.7.2
+#  chef_version: 12.7.2
+  chef_version: latest
   cap_add:
   # needed for setting hostname
     - SYS_ADMIN
@@ -12,6 +13,7 @@ transport:
   name: dokken
 provisioner:
   name: dokken
+  chef_license: accept
 platforms:
   - name: ubuntu-14.04
     driver:
