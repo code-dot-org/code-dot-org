@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Radium from 'radium';
-import {assets as assetsApi, files as filesApi} from '@cdo/apps/clientApi';
 import color from '@cdo/apps/util/color';
+import {assets as assetsApi} from '@cdo/apps/clientApi';
 
 const defaultIcons = {
   image: 'fa fa-picture-o',
@@ -58,15 +58,18 @@ class AssetThumbnail extends React.Component {
     type: PropTypes.oneOf(['image', 'audio', 'video', 'pdf', 'doc']).isRequired,
     style: PropTypes.object,
     iconStyle: PropTypes.object,
-    useFilesApi: PropTypes.bool,
+    api: PropTypes.object,
     projectId: PropTypes.string,
+    levelName: PropTypes.string,
     soundPlayer: PropTypes.object
   };
 
   constructor(props) {
     super(props);
-    let api = this.props.useFilesApi ? filesApi : assetsApi;
-    if (this.props.projectId) {
+    let api = this.props.api || assetsApi; // Fallback to assetsApi.
+    if (this.props.levelName) {
+      api = api.withLevelName(this.props.levelName);
+    } else if (this.props.projectId) {
       api = api.withProjectId(this.props.projectId);
     }
     const basePath = api.basePath(this.props.name);
