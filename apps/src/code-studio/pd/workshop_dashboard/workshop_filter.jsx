@@ -327,7 +327,7 @@ export class WorkshopFilter extends React.Component {
     return result;
   }
 
-  static concatSubjetArrays(objValue, srcValue) {
+  static concatSubjectArrays(objValue, srcValue) {
     if (_.isArray(objValue)) {
       return objValue.concat(srcValue);
     }
@@ -339,7 +339,7 @@ export class WorkshopFilter extends React.Component {
     return _.mergeWith(
       this.getSubjectOptions(currentSubjects),
       this.getSubjectOptions(legacySubjects, legacyPrefix),
-      this.concatSubjetArrays
+      this.concatSubjectArrays
     );
   }
 
@@ -354,7 +354,7 @@ export class WorkshopFilter extends React.Component {
     const endDate = this.parseDate(filters.end);
 
     if (!this.subjectOptions) {
-      this.subjectOptions = this.combineSubjectOptions(
+      this.subjectOptions = WorkshopFilter.combineSubjectOptions(
         Subjects,
         LegacySubjects
       );
