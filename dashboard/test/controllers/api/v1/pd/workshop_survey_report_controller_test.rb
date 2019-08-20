@@ -190,8 +190,8 @@ module Api::V1::Pd
     )
 
     test 'facilitators can see results for local summer workshops' do
-      workshop = create :workshop, :local_summer_workshop, facilitators: [@facilitator]
-      sign_in @facilitator
+      workshop = create :summer_workshop
+      sign_in workshop.facilitators.first
 
       @controller.expects(:generate_workshop_daily_session_summary)
       get :generic_survey_report, params: {workshop_id: workshop.id}
@@ -208,8 +208,7 @@ module Api::V1::Pd
     end
 
     test 'facilitators cannot see results for other types of workshops' do
-      workshop = create :workshop, course: COURSE_CSF, subject: SUBJECT_CSF_101,
-        facilitators: [@facilitator]
+      workshop = create :csf_intro_workshop, facilitators: [@facilitator]
       sign_in @facilitator
 
       get :generic_survey_report, params: {workshop_id: workshop.id}
@@ -251,16 +250,52 @@ module Api::V1::Pd
     end
 
     test 'experiment_survey_report: return empty result for workshop without responds' do
-      csf_201_ws = create :workshop, course: COURSE_CSF, subject: SUBJECT_CSF_201, num_sessions: 1
+      csf_201_ws = create :csf_deep_dive_workshop
+
+      # This test assumes there's one facilitator in the workshop
+      assert_equal 1, csf_201_ws.facilitators.count
+      f_id = csf_201_ws.facilitators.first.id.to_s
+      f_name = csf_201_ws.facilitators.first.name
 
       expected_result = {
         "course_name" => nil,
         "questions" => {},
         "this_workshop" => {},
         "all_my_workshops" => {},
-        "facilitators" => {},
-        "facilitator_averages" => {},
-        "facilitator_response_counts" => {},
+        "facilitators" => {
+          f_id => f_name
+        },
+        "facilitator_averages" => {
+          f_name => {
+            "facilitator_effectiveness" => {
+              "this_workshop" => nil,
+              "all_my_workshops" => nil
+            },
+            "overall_success" => {
+              "this_workshop" => nil,
+              "all_my_workshops" => nil
+            },
+            "teacher_engagement" => {
+              "this_workshop" => nil,
+              "all_my_workshops" => nil
+            }
+          },
+          "questions" => {}
+        },
+        "facilitator_response_counts" => {
+          "this_workshop" => {
+            f_id => {
+              "Facilitator" => 0,
+              "Workshop" => 0
+            }
+          },
+          "all_my_workshops" => {
+            f_id => {
+              "Facilitator" => 0,
+              "Workshop" => 0
+            }
+          }
+        },
         "experiment" => true
       }
 
@@ -273,7 +308,7 @@ module Api::V1::Pd
     end
 
     test 'generic_survey_report: CSF201 workshop uses new pipeline' do
-      csf_201_ws = create :workshop, course: COURSE_CSF, subject: SUBJECT_CSF_201
+      csf_201_ws = create :csf_deep_dive_workshop
 
       WorkshopSurveyReportController.any_instance.expects(:create_csf_survey_report)
 
@@ -284,7 +319,7 @@ module Api::V1::Pd
     end
 
     test 'generic_survey_report: return empty result for CSF201 workshop without responds' do
-      csf_201_ws = create :workshop, course: COURSE_CSF, subject: SUBJECT_CSF_201, num_sessions: 2
+      csf_201_ws = create :csf_deep_dive_workshop, num_sessions: 2
 
       expected_result = {
         "course_name" => nil,
@@ -305,7 +340,7 @@ module Api::V1::Pd
     end
 
     test 'generic_survey_report: CSF101 workshop cannot invoke this action' do
-      csf_101_ws = create :workshop, course: COURSE_CSF, subject: SUBJECT_CSF_101
+      csf_101_ws = create :csf_intro_workshop
 
       WorkshopSurveyReportController.any_instance.expects(:create_csf_survey_report).never
       WorkshopSurveyReportController.any_instance.expects(:local_workshop_daily_survey_report).never
@@ -318,7 +353,7 @@ module Api::V1::Pd
     end
 
     test 'generic_survey_report: summer workshop uses old pipeline' do
-      local_summer_ws = create :workshop, course: COURSE_CSD, subject: SUBJECT_SUMMER_WORKSHOP
+      local_summer_ws = create :summer_workshop
 
       WorkshopSurveyReportController.any_instance.expects(:create_csf_survey_report).never
       WorkshopSurveyReportController.any_instance.expects(:local_workshop_daily_survey_report)
@@ -330,8 +365,7 @@ module Api::V1::Pd
     end
 
     test 'generic_survey_report: academic-year workshop uses old pipeline' do
-      new_academic_ws = create :workshop, course: COURSE_CSP, num_sessions: 1,
-        started_at: Date.new(2019, 8, 1)
+      new_academic_ws = create :academic_year_workshop, started_at: Date.new(2019, 8, 1)
 
       WorkshopSurveyReportController.any_instance.expects(:create_csf_survey_report).never
       WorkshopSurveyReportController.any_instance.expects(:local_workshop_daily_survey_report)
@@ -360,9 +394,9 @@ module Api::V1::Pd
       facilitators = [facilitator_1, facilitator_2]
       organizer = create :program_manager
       create :workshop_admin
-      workshop_1 = create(:workshop, :local_summer_workshop, num_sessions: 5, num_enrollments: 3, organizer: organizer, facilitators: facilitators)
-      workshop_2 = create(:workshop, :local_summer_workshop, num_sessions: 5, num_enrollments: 3, organizer: organizer, facilitators: facilitators)
-      create(:workshop, :local_summer_workshop, num_sessions: 5, num_enrollments: 3, organizer: organizer, facilitators: facilitators)
+      workshop_1 = create :summer_workshop, num_enrollments: 3, organizer: organizer, facilitators: facilitators
+      workshop_2 = create :summer_workshop, num_enrollments: 3, organizer: organizer, facilitators: facilitators
+      create :summer_workshop, num_enrollments: 3, organizer: organizer, facilitators: facilitators
 
       workshop_1.enrollments.each do |enrollment|
         hash = build :pd_local_summer_workshop_survey_hash

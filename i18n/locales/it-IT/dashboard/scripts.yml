@@ -4043,6 +4043,8 @@ it:
               name: Inviare Messaggi Binari
             Sending Binary Messages with the Internet Simulator:
               name: Inviare Messaggi Binari con il Simulatore di Internet
+            Binary Numbers:
+              name: Numeri Binari
         time4csdemo:
           stages:
             Crowdsourcing:

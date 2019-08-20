@@ -57,7 +57,7 @@ vi:
     submit: 'Thêm gợi ý'
   appname: "Code.org"
   stage: "giai đoạn"
-  stage_number: "Giai đoạn %{number}"
+  stage_number: "Bài %{number}"
   puzzle: "Câu đố"
   trophies: "những danh hiệu"
   courses: 'Các khóa học'
@@ -138,7 +138,7 @@ vi:
     user_type_button: "Cập nhật tài khoản"
     user_type_label: "Loại tài khoản"
     user_type_teacher: "Giáo viên"
-    user_type_student: "học sinh"
+    user_type_student: "Học sinh"
     field_is_required: "là bắt buộc"
     accept_terms: "Bạn phải đồng ý để tạo một tài khoản"
     error: "Có lỗi xảy ra."
@@ -314,6 +314,7 @@ vi:
       district_dashboard: 'khu vực điều khiển'
       label: 'Chào %{username}'
       stats: 'TIến trình của bạn'
+      my_projects: 'Chương trình của tôi'
       settings: 'Tài khoản của bạn'
       logout: 'Đăng xuất'
       signin: 'Đăng nhập'
@@ -372,7 +373,7 @@ vi:
     student_teacher_disassociated: 'Bạn đã gỡ bỏ %{teacher_name} là giáo viên của bạn.'
     panel:
       answer_viewer: 'Kênh Giáo viên'
-      student: 'học sinh'
+      student: 'Học sinh'
       viewing_solution: 'Xem đáp án'
       try_it_yourself: 'Hãy thử làm bài tập này'
       section: 'Học phần'
@@ -466,7 +467,7 @@ vi:
     female: 'Nữ'
     none: 'Tùy chọn không muốn trả lời'
   user_type:
-    student: 'học sinh'
+    student: 'Học sinh'
     teacher: 'Giáo viên'
   footer:
     thank_you: 'Chúng tôi cảm ơn<a href="https://code.org/about/donors"> các nhà tài trợ</a>, <a href="https://code.org/about/partners">các đối tác</a>, <a href="https://code.org/about/team">các thành viên trong nhóm mở rộng của chúng tôi</a>, các <a href="https://code.org/about/advisors">chuyên gia video và giáo dục</a> của chúng tôi vì sự hỗ trợ của các bạn trong việc tạo nên Xưởng Mã.'
@@ -517,7 +518,7 @@ vi:
   slow_loading: 'Điều này mất nhiều thời gian hơn bình thường...'
   try_reloading: 'Hãy thử tải lại trang'
   next_stage: 'Hoàn thành! Tiếp tục màn tiếp theo'
-  download_pdf: 'Mở bài học'
+  download_pdf: 'Mở giáo án'
   lesson_plan: 'Giáo Án'
   view_lesson_plan: 'Xem Giáo Án'
   pdf_download: 'Tải phiên bản PDF'
@@ -734,7 +735,7 @@ vi:
   zendesk_too_young_message: 'Rất tiếc, người dùng trẻ em không thể đăng nhập vào trang web hỗ trợ của chúng tôi, ban có thể duyệt<a href="http://support.code.org">support.code.org</a> mà không cần đăng nhập cùng hay yêu cầu phụ huynh hoặc giáo viên của ban liên hệ với chúng tôi .'
   progress:
     not_started: chưa bắt đầu
-    in_progress: trong tiến trình
+    in_progress: đang thực hiện
     completed_too_many_blocks: hoàn thành, quá nhiều mảnh gép
     completed_perfect: hoàn thành, hoàn hảo
     furthest_level_attempted: đã cố gắng ở mức độ cao nhất

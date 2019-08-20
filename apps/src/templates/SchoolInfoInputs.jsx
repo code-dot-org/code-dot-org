@@ -132,6 +132,7 @@ export default class SchoolInfoInputs extends Component {
           showErrorMsg={this.props.showErrors}
           showRequiredIndicator={this.props.showRequiredIndicator}
           singleLineLayout
+          maxHeight={160}
         />
         <SchoolTypeDropdown
           value={this.props.schoolType}

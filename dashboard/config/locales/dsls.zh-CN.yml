@@ -174,22 +174,28 @@ zh-CN:
         - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a4.png"
       2-3 artist loops multi 1:
         title: 小艺术家循环：选择题
+        content1: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_a3.png,
+          500"
         questions:
         - text: 哪个形状是由这个循环做的呢？
         answers:
         - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q1.png"
         - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png"
-        - correct: true
-        - {}
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png"
+          correct: true
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png"
       2-3 artist loops multi 2:
         title: 小艺术家循环：选择题
+        content1: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_a4.png,
+          500"
         questions:
         - text: 哪个形状是这个程序所做的？
         answers:
         - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q1.png"
         - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png"
-        - {}
-        - correct: true
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png"
+          correct: true
       2-3 artist match 1:
         title: 小艺术家的匹配
         content1: 找到和形状相对应的代码块完成匹配.
@@ -208,28 +214,34 @@ zh-CN:
         questions:
         - text: 比较一下哪个是正确的？
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a1.png"
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a2.png"
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a3.png"
+          correct: true
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a4.png"
       2-3 bee conditionals multi 3:
         title: 蜜蜂条件语句：选择题 2
+        content1: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_q.png,
+          500"
         questions:
         - text: 选择最好的模块。
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a1.png"
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a2.png"
+          correct: true
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a3.png"
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a4.png"
       2-3 bee loops multi 1:
         title: 蜜蜂循环语句：选择题一
+        content1: "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_q.png, 500"
         questions:
         - text: 哪一个代码块收集了所有的花蜜？
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a1.png"
+          correct: true
+        - text: "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a2.png"
+        - text: "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a3.png"
+        - text: "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a4.png"
       2-3 maze match 1:
         title: 迷宫比赛一
         content1: 将谜题与模块相匹配
@@ -243,13 +255,15 @@ zh-CN:
         - text: "/script_assets/2-3_images/maze/2-3_maze_match_1_a3.png"
       2-3 maze multi 1:
         title: 迷宫选择题一
+        content1: "/script_assets/2-3_images/maze/2-3_maze_multi_1_q.png, 500"
         questions:
         - text: 哪一个程序块是正确答案？
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/maze/2-3_maze_multi_1_a1.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_multi_1_a2.png"
+          correct: true
+        - text: "/script_assets/2-3_images/maze/2-3_maze_multi_1_a3.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_multi_1_a4.png"
       4-5 Algorithms Match 1:
         title: 匹配
         content1: 匹配骰子游戏比赛的步骤及他们在算法中应该出现的顺序.
@@ -302,8 +316,9 @@ zh-CN:
         questions:
         - text: 哪一张图片最恰当的描述了众包策略？
         answers:
-        - {}
-        - correct: true
+        - text: "/script_assets/4-5_images/unplugged/crowdsourcing_2_a1.png"
+        - text: "/script_assets/4-5_images/unplugged/crowdsourcing_2_a2.png"
+          correct: true
       4-5 Crowdsourcing Multi 2:
         title: 选择题
         questions:
@@ -326,6 +341,7 @@ zh-CN:
         - text: 父母的信用卡卡号
       4-5 Internet Multi 1:
         title: 选择题
+        content1: "/script_assets/4-5_images/unplugged/internet_1_q.png"
         questions:
         - text: 当尝试登录到 code.org，哪个 IP 地址是 DNS 最有可能到达的？
         answers:
@@ -336,6 +352,7 @@ zh-CN:
           correct: true
       4-5 Internet Multi 2:
         title: 选择题
+        content1: "/script_assets/4-5_images/unplugged/internet_1_q.png"
         questions:
         - text: 如果 DNS 发送给你100.42.50.110这个IP地址上的网页，你登录的是哪个网站？
         answers:
@@ -1101,6 +1118,7 @@ zh-CN:
         content1: 描述
       K-1 Artist 1 Multi 1:
         title: 选择题
+        content1: "/script_assets/k_1_images/artist_images/rshort_dlong.png, 500"
         questions:
         - text: 哪些模块解决了这一问题？
         answers:
@@ -1111,13 +1129,15 @@ zh-CN:
         - text: "/script_assets/k_1_images/artist_images/E-S.png"
       K-1 Artist 1 Multi 2:
         title: 选择题
+        content1: "/script_assets/k_1_images/artist_images/square.png, 500"
         questions:
         - text: 哪些模块可以绘制正方形？
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/artist_images/N-E-S-W.png"
+          correct: true
+        - text: "/script_assets/k_1_images/artist_images/E-S-W-N.png"
+        - text: "/script_assets/k_1_images/artist_images/N-S-E-W.png"
+        - text: "/script_assets/k_1_images/artist_images/N-W-S-E.png"
       K-1 Artist 2 Match 2:
         title: 匹配
         content2: 基于类型来匹配形状。
@@ -1133,22 +1153,26 @@ zh-CN:
         - text: "/script_assets/k_1_images/artist_images/large_triangle.png"
       K-1 Bee 1 Multi 1:
         title: 选择题
+        content1: "/script_assets/k_1_images/bee_images/1nectar+2nectar.png"
         questions:
         - text: 这是多少个蜂蜜？
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/bee_images/nectar.png"
+        - text: "/script_assets/k_1_images/bee_images/2nectar.png"
+          correct: true
+        - text: "/script_assets/k_1_images/bee_images/3nectar.png"
+        - text: "/script_assets/k_1_images/bee_images/4nectar.png"
       K-1 Bee 1 Multi 2:
         title: 选择题
+        content1: "/script_assets/k_1_images/bee_images/2nectar+2nectar.png"
         questions:
         - text: 这是多少个蜂蜜？
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: "/script_assets/k_1_images/bee_images/nectar.png"
+        - text: "/script_assets/k_1_images/bee_images/2nectar.png"
+        - text: "/script_assets/k_1_images/bee_images/3nectar.png"
+        - text: "/script_assets/k_1_images/bee_images/4nectar.png"
+          correct: true
       K-1 Bee Loops Match 1:
         title: 匹配
         content2: 匹配这些模块
@@ -1176,29 +1200,34 @@ zh-CN:
         - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a3.pngac"
       K-1 Digital Footprint Multi 1:
         title: 选择题
+        content1: "/script_assets/k_1_images/unplugged_images/digital_footprint_1_q.png"
         questions:
         - text: 哪一个动物留下的数字足迹<strong>最不安全</strong>？
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a1.png"
+        - text: "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a2.png"
+        - text: "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a3.png"
+          correct: true
       K-1 Getting Loopy Multi 1:
         title: 选择题
+        content1: "/script_assets/k_1_images/unplugged_images/getting_loopy_1_q.png"
         questions:
         - text: 你将如何用循环来简化这个序列？
         answers:
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/getting_loopy_1_a1.png"
+          correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/getting_loopy_1_a2.png"
+        - text: "/script_assets/k_1_images/unplugged_images/getting_loopy_1_a3.png"
       K-1 Happy Maps Multi 1:
         title: 选择题
         content1: "/script_assets/k_1_images/unplugged_images/happy_maps_1q.png"
         questions:
         - text: 哪个箭头让会让福乐波得到宝藏？
         answers:
-        - {}
-        - correct: true
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/up.png"
+        - text: "/script_assets/k_1_images/unplugged_images/down.png"
+          correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/left.png"
         - text: "/script_assets/k_1_images/unplugged_images/right.png"
       K-1 Keep it Private Multi 1:
         title: 选择题

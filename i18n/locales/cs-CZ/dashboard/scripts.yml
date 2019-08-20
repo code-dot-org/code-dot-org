@@ -1684,6 +1684,10 @@ cs:
           stages:
             While Loops:
               name: While (zatímco) cykly
+        csp1-pilot:
+          stages:
+            Binary Numbers:
+              name: Binární čísla
         time4csdemo:
           stages:
             Crowdsourcing:

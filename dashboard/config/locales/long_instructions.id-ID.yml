@@ -875,6 +875,18 @@ id-ID:
         domba
       Overworld Move to Sheep_2019: Tambahkan perintah "bergerak maju" kedua untuk
         mencapai domba
+      Room Escape Workshop - 1: |-
+        # Mengatur ruangan
+
+        <img src="https://images.code.org/9d103d74f7c2da05aeccd5fc317e6ab6-image-1490368234432.08.44 AM.png" style="width:200px; float:right">
+
+        Untuk membuat ruang pelarian anda perlu  mengatur ruangan user yang bisa untuk menjelajah sekitarnya.Sebagian sudah dikerjakan untuk anda.Anda hanya perlu memutuskan apa bagian yang berbeda dari ruangan itu yang akan nampak dengan mengambil salah satu gambar!
+
+        # Lakukan ini
+
+        \-level mulai dalam desain mode
+        \-untuk setiap elemen gambar yang blank (persegi panjang abu) tambah gambar yang sesuai.Sebagai contoh  anda perlu gambar pintu untuk label elemen gambar pintu.
+        \-Sebuah contoh dari bagaimana sebuah ruangan mungkin nampak ada disebelah kanan.
       Room Escape Workshop - 10: |-
         <img src="https://images.code.org/3651f7d5306bdcfd2d9a3d9bb842626e-image-1491066778787.12.36 PM.png" style="width:200px;float:right">
 
@@ -901,6 +913,18 @@ id-ID:
         \-Pada satu sisi '=='letakkan posisi x pindahkan kunci pada saat anda meng-klik
         \-Pada sisi lain tambahkan blok 'getXPosition()'-ID untuk itu seharusnya adalah ID kuncimu!
         \-Di dalam statement'if'gunakan 'showelement'untuk menampilkan gambar outdoor tersembunyi jika mereka memiliki kunci
+      Room Escape Workshop - 9-2: |-
+        # klik tombol
+
+        <img src="https://images.code.org/1a736d2774860bebc5072b8ae8b38f34-image-1491066638078.10.00 PM.png" style="width:170px;float:right">
+
+        Sekali pengguna meng-klik tombol anda akan ingin menunjukkan pada mereka saat menahannya.Anda bisa melakukan hal ini dengan memindahkan tombol  ke pojok bawah dari ruangan.
+
+        # Lakukan ini
+
+        \-Tambahkan  blok 'onEvent' saat user meng-klik tombol.
+        \-Di dalam blok 'onEvent':
+         \-gunakan setposition untuk memindahkan tombol ke sudut bawah layar
       Standalone_Artist_2: Gambarlah berlian dengan sudut120 dan 60 derajat dan sisi
         sepanjang 150 pixel.
       Standalone_Artist_3: Bisakah anda menggambar hexagon ini dengan 100 pixel dan

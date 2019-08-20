@@ -313,7 +313,7 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ::ActionController::TestC
   end
 
   test 'admin can update scholarship info' do
-    workshop = create :workshop, :local_summer_workshop_upcoming, organizer: @program_manager, facilitators: [@facilitator]
+    workshop = create :summer_workshop
     enrollment = create :pd_enrollment, :from_user, workshop: workshop
     sign_in create(:admin)
 
@@ -325,7 +325,7 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ::ActionController::TestC
   end
 
   test 'program managers can update scholarship info' do
-    workshop = create :workshop, :local_summer_workshop_upcoming, organizer: @program_manager, facilitators: [@facilitator]
+    workshop = create :summer_workshop, organizer: @program_manager
     enrollment = create :pd_enrollment, :from_user, workshop: workshop
     sign_in @program_manager
 
@@ -337,9 +337,9 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ::ActionController::TestC
   end
 
   test 'facilitators cannot update scholarship info' do
-    workshop = create :workshop, :local_summer_workshop_upcoming, facilitators: [@facilitator]
+    workshop = create :summer_workshop
     enrollment = create :pd_enrollment, :from_user, workshop: workshop
-    sign_in @facilitator
+    sign_in workshop.facilitators.first
 
     assert_nil enrollment.scholarship_status
     post :update_scholarship_info, params: {enrollment_id: enrollment.id, scholarship_status: Pd::ScholarshipInfoConstants::YES_OTHER}

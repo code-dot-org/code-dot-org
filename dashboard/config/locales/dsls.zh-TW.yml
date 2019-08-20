@@ -438,6 +438,11 @@ zh-TW:
         content1: 在此描述
       Begin planning your project_2018_2019:
         content1: 在此描述
+      BigEvent-Unplugged:
+        markdown: |
+          # 大事件（Evnets）
+
+          在計算機科學（Computer Science）、事件（Evnets）是一個由電腦監控的動作。在本課中，依據按下的按鈕，反應會有所不同。
       CSD Header Size MC:
         answers:
         - {}
@@ -849,6 +854,33 @@ zh-TW:
         - {}
         - correct: true
         - {}
+      DigitalFootprint-Unplugged:
+        markdown: |
+          # 你的數位足跡
+
+          將關於你自己的訊息放到網路上，建立你的數位足跡。
+      GettingLoopy-Unplugged:
+        markdown: |
+          # 學習迴圈
+
+          本課透過跳舞活動來介紹迴圈（Loop）的程式設計概念。
+      GoingPlacesSafely-unplugged:
+        markdown: |
+          # 安全地去到地方
+
+          網際網路是一個很強大，但有時很危險的地方。當你瀏覽網際網路時要保持安全。
+      HappyLoops-Unplugged:
+        markdown: |
+          # 開心迴圈（Loop）
+
+          在這個課程裡，你將會學到迴圈（Loop）！
+
+          ![](https://images.code.org/6aac7f675f0c69033f42ccac6a733f68-image-1557769673400.png)
+      HappyMaps-Unplugged:
+        markdown: |
+          # 開心地圖
+
+          建立一個演算法去移動字符穿過迷宮。
       Internet Simulator Setup:
         content1: 在此描述
       Internet Simulator Setup 2:
@@ -1057,6 +1089,11 @@ zh-TW:
         - text: SET
         - correct: true
         - text: 南
+      MoveItMoveIt-Unplugged:
+        markdown: |
+          # 移動它, 移動它
+
+          使用地圖和給予指令而抵達目標。
       Multi-Screen Apps:
         title: 標題
         content1: 在此描述
@@ -1073,6 +1110,9 @@ zh-TW:
         content1: 在此描述
       Terminology Recap:
         content1: 在此描述
+      TheRightAppMarkdownLevel_2019:
+        markdown: "# 正確的應用程式\n\n* 現在所有人都使用電腦，特別是智慧型手機。 \n* 智慧型手機的應用程式幫助人們做一些事情，像是與們有說話，聽音樂，買東西，或只是瀏覽網頁。\n*
+          對於程序員來說，了解他人的需求並設計應用程式對他們來說非常重要！\n\n![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)\n"
       behaviors 1 predict:
         questions:
         - {}
