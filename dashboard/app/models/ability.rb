@@ -102,8 +102,9 @@ class Ability
         can :read, Pd::CourseFacilitator, facilitator_id: user.id
 
         if Pd::CourseFacilitator.exists?(facilitator: user, course: Pd::Workshop::COURSE_CSF)
-          can :create, Pd::Workshop
+          can :create, Pd::Workshop, course: Pd::Workshop::COURSE_CSF
           can :update, Pd::Workshop, facilitators: {id: user.id}
+          can :destroy, Pd::Workshop, organizer_id: user.id
         end
       end
 
@@ -155,6 +156,7 @@ class Ability
         can :manage, Pd::Application::ApplicationBase
         can :manage, Pd::Application::Facilitator1920Application
         can :manage, Pd::Application::Teacher1920Application
+        can :move, :workshop_enrollments
         can :update_scholarship_info, Pd::Enrollment
       end
 
@@ -221,6 +223,10 @@ class Ability
       cannot [:update, :destroy], Level do |level|
         !level.custom?
       end
+
+      # Ability for LevelStarterAssetsController. Since the controller does not have
+      # a corresponding model, use lower/snake-case symbol instead of class name.
+      can [:upload], :level_starter_asset
     end
 
     if user.persisted? && user.permission?(UserPermission::PROJECT_VALIDATOR)

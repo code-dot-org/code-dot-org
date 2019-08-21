@@ -10,7 +10,8 @@ import DanceVisualizationColumn from './DanceVisualizationColumn';
 import Sounds from '../Sounds';
 import {TestResults} from '../constants';
 import {DancelabReservedWords} from './constants';
-import {DanceParty, ResourceLoader} from '@code-dot-org/dance-party';
+import DanceParty from '@code-dot-org/dance-party/src/p5.dance';
+import ResourceLoader from '@code-dot-org/dance-party/src/ResourceLoader';
 import danceMsg from './locale';
 import {
   reducers,

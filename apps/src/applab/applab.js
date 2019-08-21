@@ -147,7 +147,10 @@ function loadLevel() {
   // This led to lots of hackery in the code to properly scale the visualization
   // area. Width/height are now constant, but much of the hackery still remains
   // since I don't understand it well enough.
-  Applab.appWidth = applabConstants.APP_WIDTH;
+  Applab.appWidth = level.widgetMode
+    ? applabConstants.WIDGET_WIDTH
+    : applabConstants.APP_WIDTH;
+
   Applab.appHeight = applabConstants.APP_HEIGHT;
 
   // In share mode we need to reserve some number of pixels for our in-app
@@ -644,7 +647,7 @@ Applab.init = function(config) {
 
   // Push initial level properties into the Redux store
   studioApp().setPageConstants(config, {
-    playspacePhoneFrame: !config.share,
+    playspacePhoneFrame: !(config.share || config.level.widgetMode),
     channelId: config.channel,
     allowExportExpo: experiments.isEnabled('exportExpo'),
     exportApp: Applab.exportApp,
@@ -665,8 +668,8 @@ Applab.init = function(config) {
     ),
     nonResponsiveVisualizationColumnWidth: applabConstants.APP_WIDTH,
     visualizationHasPadding: !config.noPadding,
-    hasDataMode: !config.level.hideViewDataButton,
-    hasDesignMode: !config.level.hideDesignMode,
+    hasDataMode: !(config.level.hideViewDataButton || config.level.widgetMode),
+    hasDesignMode: !(config.level.hideDesignMode || config.level.widgetMode),
     isIframeEmbed: !!config.level.iframeEmbed,
     isProjectLevel: !!config.level.isProjectLevel,
     isSubmittable: !!config.level.submittable,
@@ -677,7 +680,8 @@ Applab.init = function(config) {
     showDebugWatch:
       !!config.level.isProjectLevel || config.level.showDebugWatch,
     showMakerToggle:
-      !!config.level.isProjectLevel || config.level.makerlabEnabled
+      !!config.level.isProjectLevel || config.level.makerlabEnabled,
+    widgetMode: config.level.widgetMode
   });
 
   config.dropletConfig = dropletConfig;
@@ -751,6 +755,10 @@ Applab.init = function(config) {
           );
         }
       }
+
+      if (getStore().getState().pageConstants.widgetMode) {
+        Applab.runButtonClick();
+      }
     });
 
   if (IN_UNIT_TEST) {
@@ -808,7 +816,7 @@ function setupReduxSubscribers(store) {
   if (store.getState().pageConstants.hasDataMode) {
     // Initialize redux's list of tables from firebase, and keep it up to date as
     // new tables are added and removed.
-    const tablesRef = getDatabase(Applab.channelId).child('counters/tables');
+    const tablesRef = getDatabase().child('counters/tables');
     tablesRef.on('child_added', snapshot => {
       store.dispatch(
         addTableName(
@@ -1266,7 +1274,7 @@ function onDataViewChange(view, oldTableName, newTableName) {
   if (!getStore().getState().pageConstants.hasDataMode) {
     throw new Error('onDataViewChange triggered without data mode enabled');
   }
-  const storageRef = getDatabase(Applab.channelId).child('storage');
+  const storageRef = getDatabase().child('storage');
 
   // Unlisten from previous data view. This should not interfere with events listened to
   // by onRecordEvent, which listens for added/updated/deleted events, whereas we are

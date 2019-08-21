@@ -93,6 +93,23 @@ class LevelStarterAssetsControllerTest < ActionController::TestCase
     assert_equal 'One file upload expected. Actual: 2', e.message
   end
 
+  test 'upload: returns unprocessable_entity if file extension is invalid' do
+    LevelStarterAssetsController.any_instance.expects(:get_object).never
+
+    # File must exist in order to use fixture_file_upload.
+    invalid_filename = 'invalid.exe'
+    FileUtils.touch(invalid_filename)
+    invalid_file = fixture_file_upload(invalid_filename, 'image/jpg')
+
+    sign_in create(:levelbuilder)
+    post :upload, params: {level_name: create(:level).name, files: [invalid_file]}
+
+    assert_response :unprocessable_entity
+
+    # Clean up file.
+    File.delete(invalid_filename)
+  end
+
   test 'upload: returns unprocessable_entity if file fails to upload' do
     LevelStarterAssetsController.any_instance.
       expects(:get_object).
@@ -105,17 +122,17 @@ class LevelStarterAssetsControllerTest < ActionController::TestCase
     assert_response :unprocessable_entity
   end
 
-  test 'upload: returns unprocessable_entity if file uploads but starter asset is not added' do
+  test 'upload: raises if file uploads but starter asset is not added' do
     LevelStarterAssetsController.any_instance.
       expects(:get_object).
       returns(@file_obj)
     @file_obj.expects(:upload_file).returns(true)
-    Level.any_instance.expects(:save).returns(false)
+    Level.any_instance.expects(:valid?).twice.returns(true, false)
 
     sign_in create(:levelbuilder)
-    post :upload, params: {level_name: create(:level).name, files: [@file]}
-
-    assert_response :unprocessable_entity
+    assert_raises ActiveRecord::RecordInvalid do
+      post :upload, params: {level_name: create(:level).name, files: [@file]}
+    end
   end
 
   test 'upload: returns summary if file uploads and starter asset is added' do
@@ -135,6 +152,33 @@ class LevelStarterAssetsControllerTest < ActionController::TestCase
     assert_equal @filename, summary['filename']
     assert_equal 'image', summary['category']
     assert_equal 123, summary['size']
+  end
+
+  test 'upload: can successfully upload files with single- and double- quotes in filenames' do
+    LevelStarterAssetsController.any_instance.
+      expects(:get_object).twice.
+      returns(@file_obj)
+    @file_obj.expects(:upload_file).twice.returns(true)
+    sign_in create(:levelbuilder)
+    level = create :level
+
+    single_quote_filename = "my-'file'.jpg"
+    FileUtils.touch(single_quote_filename)
+    single_quote_file = fixture_file_upload(single_quote_filename, 'image/jpg')
+    post :upload, params: {level_name: level.name, files: [single_quote_file]}
+    assert_response :success
+    summary = JSON.parse(response.body)
+    assert_equal single_quote_filename, summary['filename']
+    File.delete(single_quote_filename)
+
+    double_quote_filename = "\"my\"-file.png"
+    FileUtils.touch(double_quote_filename)
+    double_quote_file = fixture_file_upload(double_quote_filename, 'image/png')
+    post :upload, params: {level_name: level.name, files: [double_quote_file]}
+    assert_response :success
+    summary = JSON.parse(response.body)
+    assert_equal double_quote_filename, summary['filename']
+    File.delete(double_quote_filename)
   end
 
   test 'destroy: forbidden for non-levelbuilders' do

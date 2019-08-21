@@ -4,6 +4,7 @@
 #   hourofcode.com/
 #   code.org/challenge
 #   code.org/dance
+#   hourofcode.com/thanks
 
 def get_social_metadata_for_page(request)
   videos = {
@@ -22,7 +23,8 @@ def get_social_metadata_for_page(request)
     hoc_student_challenge: {path: "/images/fit-1920/social-media/hoc-student-challenge.png", width: 1920, height: 1080},
     mc_social_2017: {path: "/images/mc/mc_social_2017.png", width: 1200, height: 630},
     mc_social_2018: {path: "/images/social-media/mc-social-2018.png", width: 1200, height: 630},
-    dance_2018: {path: "/images/social-media/dance-social-2018.png", width: 1200, height: 630}
+    dance_2018: {path: "/images/social-media/dance-social-2018.png", width: 1200, height: 630},
+    hoc_thanks: {path: "/images/hourofcode-2015-video-thumbnail.png", width: 1440, height: 900}
   }
 
   # Important:
@@ -102,7 +104,7 @@ def get_social_metadata_for_page(request)
       },
       "default" => {
         title: hoc_s(:social_hoc2018_join),
-        description: hoc_s(:social_hoc2018_creativity_in_are_you),
+        description: hoc_s(:meta_tag_og_description),
         image: images[:hoc_2018_creativity],
         video: videos[:hour_of_code_worldwide]
       }
@@ -152,6 +154,13 @@ def get_social_metadata_for_page(request)
         description: hoc_s(:social_hoc2018_dance_what_create),
         image: images[:dance_2018]
       }
+    },
+    "thanks" => {
+      "default" => {
+        title: hoc_s(:meta_tag_og_title),
+        description: hoc_s(:meta_tag_og_description),
+        image: images[:hoc_thanks]
+      },
     }
   }
 
@@ -163,6 +172,8 @@ def get_social_metadata_for_page(request)
     page = "dance"
   elsif request.path == "/" && ["code.org", "csedweek.org", "hourofcode.com"].include?(request.site)
     page = request.site
+  elsif request.path == "/thanks" && request.site == "hourofcode.com"
+    page = "thanks"
   else
     return {}
   end

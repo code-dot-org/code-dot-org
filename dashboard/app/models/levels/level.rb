@@ -8,7 +8,7 @@
 #  created_at            :datetime
 #  updated_at            :datetime
 #  level_num             :string(255)
-#  ideal_level_source_id :integer
+#  ideal_level_source_id :integer          unsigned
 #  user_id               :integer
 #  properties            :text(65535)
 #  type                  :string(255)
@@ -609,10 +609,10 @@ class Level < ActiveRecord::Base
   #   # friendly_name => uuid_name
   #   "welcome.png" => "123-abc-456.png"
   # }
-  def add_starter_asset(friendly_name, uuid_name)
+  def add_starter_asset!(friendly_name, uuid_name)
     self.starter_assets ||= {}
     self.starter_assets[friendly_name] = uuid_name
-    save
+    save!
   end
 
   # Remove a starter asset by its key (friendly_name) from the level's properties.

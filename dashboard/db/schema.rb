@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190729203515) do
+ActiveRecord::Schema.define(version: 20190812195807) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -310,6 +310,18 @@ ActiveRecord::Schema.define(version: 20190729203515) do
     t.index ["name"], name: "index_courses_on_name", using: :btree
   end
 
+  create_table "donors", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.string   "name"
+    t.string   "url"
+    t.string   "show"
+    t.string   "twitter"
+    t.string   "level"
+    t.float    "weight",         limit: 24
+    t.float    "twitter_weight", limit: 24
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
+  end
+
   create_table "email_preferences", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.string   "email",      null: false
     t.boolean  "opt_in",     null: false
@@ -462,7 +474,7 @@ ActiveRecord::Schema.define(version: 20190729203515) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "level_num"
-    t.integer  "ideal_level_source_id"
+    t.bigint   "ideal_level_source_id",                                            unsigned: true
     t.integer  "user_id"
     t.text     "properties",            limit: 65535
     t.string   "type"
@@ -957,7 +969,7 @@ ActiveRecord::Schema.define(version: 20190729203515) do
     t.boolean  "from_instructor",               default: false, null: false
     t.integer  "script_id",                                     null: false
     t.integer  "level_id",                                      null: false
-    t.integer  "level_source_id",                               null: false
+    t.bigint   "level_source_id",                               null: false,                                                                                                                                                  unsigned: true
     t.text     "data",            limit: 65535
     t.integer  "status"
     t.datetime "created_at",                                    null: false
@@ -1371,8 +1383,8 @@ ActiveRecord::Schema.define(version: 20190729203515) do
   create_table "teacher_feedbacks", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.text     "comment",                  limit: 65535
     t.integer  "student_id"
-    t.integer  "level_id"
-    t.integer  "teacher_id"
+    t.integer  "level_id",                               null: false
+    t.integer  "teacher_id",                             null: false
     t.datetime "created_at",                             null: false
     t.datetime "updated_at",                             null: false
     t.datetime "deleted_at"
@@ -1380,7 +1392,7 @@ ActiveRecord::Schema.define(version: 20190729203515) do
     t.integer  "student_visit_count"
     t.datetime "student_first_visited_at"
     t.datetime "student_last_visited_at"
-    t.integer  "script_level_id"
+    t.integer  "script_level_id",                        null: false
     t.datetime "seen_on_feedback_page_at"
     t.index ["student_id", "level_id", "teacher_id"], name: "index_feedback_on_student_and_level_and_teacher_id", using: :btree
     t.index ["student_id", "level_id"], name: "index_feedback_on_student_and_level", using: :btree
@@ -1605,9 +1617,6 @@ ActiveRecord::Schema.define(version: 20190729203515) do
   end
 
   add_foreign_key "ap_school_codes", "schools"
-  add_foreign_key "authored_hint_view_requests", "levels"
-  add_foreign_key "authored_hint_view_requests", "scripts"
-  add_foreign_key "authored_hint_view_requests", "users"
   add_foreign_key "census_inaccuracy_investigations", "census_overrides"
   add_foreign_key "census_inaccuracy_investigations", "census_submissions"
   add_foreign_key "census_inaccuracy_investigations", "users"

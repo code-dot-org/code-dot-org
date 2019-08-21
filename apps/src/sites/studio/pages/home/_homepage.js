@@ -77,6 +77,7 @@ function showHomepage() {
           <StudentHomepage
             courses={homepageData.courses}
             topCourse={homepageData.topCourse}
+            hasFeedback={homepageData.hasFeedback}
             sections={homepageData.sections}
             canViewAdvancedTools={homepageData.canViewAdvancedTools}
             studentId={homepageData.studentId}
