@@ -41,7 +41,7 @@ In your email to <%= name_s %>, please be sure to share the following informatio
 - Ask if there is any paperwork you need to fill out before volunteering
 
 Best,
-Alice Steinglass
+Alice Steinglass<br/>
 President, Code.org
 
 
