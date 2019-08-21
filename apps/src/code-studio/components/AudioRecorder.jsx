@@ -1,3 +1,4 @@
+/* global navigator */
 import PropTypes from 'prop-types';
 import React from 'react';
 import Button from '../../templates/Button';
@@ -55,10 +56,14 @@ export default class AudioRecorder extends React.Component {
   }
 
   componentDidMount = () => {
-    this.recorder = new vmsg.Recorder({wasmURL: '/shared/wasm/vmsg.wasm'});
-    this.initializeMp3Recorder().catch(() =>
-      this.props.afterAudioSaved(AudioErrorType.INITIALIZE)
-    );
+    if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+      this.recorder = new vmsg.Recorder({wasmURL: '/shared/wasm/vmsg.wasm'});
+      this.initializeMp3Recorder().catch(() =>
+        this.props.afterAudioSaved(AudioErrorType.INITIALIZE)
+      );
+    } else {
+      this.props.afterAudioSaved(AudioErrorType.INITIALIZE);
+    }
   };
 
   initializeMp3Recorder = async () => {
