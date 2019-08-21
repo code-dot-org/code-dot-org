@@ -93,6 +93,23 @@ class LevelStarterAssetsControllerTest < ActionController::TestCase
     assert_equal 'One file upload expected. Actual: 2', e.message
   end
 
+  test 'upload: returns unprocessable_entity if file extension is invalid' do
+    LevelStarterAssetsController.any_instance.expects(:get_object).never
+
+    # File must exist in order to use fixture_file_upload.
+    invalid_filename = 'invalid.exe'
+    FileUtils.touch(invalid_filename)
+    invalid_file = fixture_file_upload(invalid_filename, 'image/jpg')
+
+    sign_in create(:levelbuilder)
+    post :upload, params: {level_name: create(:level).name, files: [invalid_file]}
+
+    assert_response :unprocessable_entity
+
+    # Clean up file.
+    File.delete(invalid_filename)
+  end
+
   test 'upload: returns unprocessable_entity if file fails to upload' do
     LevelStarterAssetsController.any_instance.
       expects(:get_object).
