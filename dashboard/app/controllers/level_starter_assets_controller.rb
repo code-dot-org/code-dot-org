@@ -62,8 +62,6 @@ class LevelStarterAssetsController < ApplicationController
   # but does not delete the asset from S3 as other levels may still be
   # using it.
   def destroy
-    return head :forbidden unless current_user&.levelbuilder? && Rails.application.config.levelbuilder_mode
-
     if @level.remove_starter_asset!("#{params[:filename]}.#{params[:format]}")
       return head :no_content
     else
