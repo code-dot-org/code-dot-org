@@ -429,6 +429,9 @@ module Pd
     end
 
     # TODO: Write tests for 4 helper functions
+    # TODO: Add comments for functions
+    # TODO: Make helper functions even more functional and easier to test all input combinations by
+    # removing the dependency between current date and session date in each function.
     def get_academic_year_surveys(user, workshop, day)
       # Get all surveys user need to fill out for this workshop session,
       # including daily workshop survey, daily facilitator survey and post workshop survey.
@@ -476,7 +479,6 @@ module Pd
     def get_daily_facilitator_survey(user, workshop, day, facilitator, facilitator_index)
       SurveyItem.new("Facilitator #{facilitator.name}").tap do |item|
         item.ineligible_reason = 'No attendance' unless session.attendances.exists?(teacher: user)
-        # TODO: is the too soon/too late check necessary?
         item.ineligible_reason = 'Session is closed' if session.too_late_for_attendance? || day == workshop.sessions.size
 
         next if item.ineligible_reason
@@ -511,13 +513,15 @@ module Pd
 
     def get_post_workshop_survey(user, workshop)
       SurveyItem.new('Post workshop').tap do |item|
+        session = workshop.sessions.last
+        item.ineligible_reason = 'Session is not open' if session.too_soon_for_attendance?
         item.form_id = WorkshopDailySurvey.get_form_id_for_subject_and_day workshop.subject, POST_WORKSHOP_FORM_KEY
 
         key_params = {
           environment: Rails.env,
           userId: user.id,
           workshopId: workshop.id,
-          sessionId: workshop.sessions.last.id,
+          sessionId: session.id,
           day: workshop.sessions.size,
           formId: item.form_id
         }
