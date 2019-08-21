@@ -5,6 +5,7 @@ class LevelStarterAssetsController < ApplicationController
 
   S3_BUCKET = 'cdo-v3-assets'.freeze
   S3_PREFIX = 'starter_assets/'.freeze
+  VALID_FILE_EXTENSIONS = %w(.jpg .jpeg .gif .png)
 
   # GET /level_starter_assets/:level_name
   def show
@@ -37,8 +38,14 @@ class LevelStarterAssetsController < ApplicationController
 
     upload = params[:files]&.first
     friendly_name = upload.original_filename
+    file_ext = File.extname(friendly_name)
+
+    unless VALID_FILE_EXTENSIONS.include?(file_ext)
+      return head :unprocessable_entity
+    end
+
     # Replace the friendly file name with a UUID for storage in S3 to avoid naming conflicts.
-    uuid_name = SecureRandom.uuid + File.extname(friendly_name)
+    uuid_name = SecureRandom.uuid + file_ext
     file_obj = get_object(uuid_name)
     success = file_obj&.upload_file(upload.tempfile.path)
 
