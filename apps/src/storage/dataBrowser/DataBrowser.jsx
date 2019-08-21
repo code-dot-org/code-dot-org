@@ -5,16 +5,37 @@ import color from '../../util/color';
 import msg from '@cdo/locale';
 import AddTableListRow from './AddTableListRow';
 import EditTableListRow from './EditTableListRow';
+import EditKeyRow from './EditKeyRow';
+import AddKeyRow from './AddKeyRow';
 import * as dataStyles from './dataStyles';
+import {connect} from 'react-redux';
+import {changeView, showWarning} from '../redux/data';
+import {DataView} from '../constants';
 
 class DataBrowser extends React.Component {
   static propTypes = {
-    tableListMap: PropTypes.object.isRequired
+    // from redux state
+    tableListMap: PropTypes.object.isRequired,
+    view: PropTypes.oneOf(Object.keys(DataView)),
+    keyValueData: PropTypes.oneOfType([PropTypes.object, PropTypes.array])
+      .isRequired,
+
+    // from redux dispatch
+    onShowWarning: PropTypes.func.isRequired,
+    onViewChange: PropTypes.func.isRequired
   };
 
   state = {selectedTab: TabType.DATA_TABLES};
 
-  handleTabClick = newTab => this.setState({selectedTab: newTab});
+  handleTabClick = newTab => {
+    this.setState({selectedTab: newTab});
+    if (newTab === TabType.DATA_TABLES) {
+      this.props.onViewChange(DataView.TABLE);
+    }
+    if (newTab === TabType.KEY_VALUE_PAIRS) {
+      this.props.onViewChange(DataView.PROPERTIES);
+    }
+  };
 
   emptyHandler = () => {};
 
@@ -179,7 +200,25 @@ class DataBrowser extends React.Component {
                 : styles.inactiveBody
             }
           >
-            <span> KEY VALUE PAIRS PLACEHOLDER </span>
+            <table>
+              <tbody>
+                <tr>
+                  <th style={dataStyles.headerCell}>Key</th>
+                  <th style={dataStyles.headerCell}>Value</th>
+                  <th style={dataStyles.headerCell}>Actions</th>
+                </tr>
+
+                <AddKeyRow onShowWarning={this.props.onShowWarning} />
+
+                {Object.keys(this.props.keyValueData).map(key => (
+                  <EditKeyRow
+                    key={key}
+                    keyName={key}
+                    value={JSON.parse(this.props.keyValueData[key])}
+                  />
+                ))}
+              </tbody>
+            </table>
           </div>
         </div>
       </div>
@@ -197,4 +236,18 @@ const TabType = {
 };
 DataBrowser.TabType = TabType;
 
-export default Radium(DataBrowser);
+export default connect(
+  state => ({
+    view: state.data.view,
+    tableListMap: state.data.tableListMap || {},
+    keyValueData: state.data.keyValueData || {}
+  }),
+  dispatch => ({
+    onShowWarning(warningMsg, warningTitle) {
+      dispatch(showWarning(warningMsg, warningTitle));
+    },
+    onViewChange(view) {
+      dispatch(changeView(view));
+    }
+  })
+)(Radium(DataBrowser));
