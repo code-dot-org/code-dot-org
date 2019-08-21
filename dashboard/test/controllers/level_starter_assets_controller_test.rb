@@ -198,21 +198,30 @@ class LevelStarterAssetsControllerTest < ActionController::TestCase
   end
 
   test 'destroy: returns no_content if starter asset successfully deleted' do
-    Level.any_instance.expects(:remove_starter_asset).returns(true)
+    level = create :level, starter_assets: {'my-file.png' => '123-abc.png'}
 
     sign_in create(:levelbuilder)
-    delete :destroy, params: {level_name: create(:level).name, filename: 'my-file.png'}
+    delete :destroy, params: {level_name: level.name, filename: 'my-file.png'}
 
     assert_response :no_content
   end
 
-  test 'destroy: returns unprocessable_entity if starter asset fails to be deleted' do
-    Level.any_instance.expects(:remove_starter_asset).returns(false)
+  test 'destroy: returns no_content if starter asset does not exist' do
+    level = create :level, starter_assets: {'my-file.png' => '123-abc.png'}
 
     sign_in create(:levelbuilder)
-    delete :destroy, params: {level_name: create(:level).name, filename: 'my-file.png'}
+    delete :destroy, params: {level_name: level.name, filename: 'my-other-file.png'}
 
-    assert_response :unprocessable_entity
+    assert_response :no_content
+  end
+
+  test 'destroy: raises if starter asset fails to be deleted' do
+    Level.any_instance.expects(:valid?).returns(false)
+
+    sign_in create(:levelbuilder)
+    assert_raises ActiveRecord::RecordInvalid do
+      delete :destroy, params: {level_name: create(:level).name, filename: 'my-file.png'}
+    end
   end
 end
 
