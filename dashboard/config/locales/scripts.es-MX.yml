@@ -15960,6 +15960,8 @@ es-MX:
               name: Encuesta previa de Principios de Ciencias de la Computación
             Binary Numbers:
               name: Números binarios
+            Overflow and Rounding:
+              name: Desbordamiento y redondeo
           title: Piloto de la Unidad 1 de CSP
         csd-tests:
           stages:
@@ -17214,6 +17216,14 @@ es-MX:
               name: Propósito de un sitio web
             Images:
               name: Imágenes
+            Exploring Web Pages:
+              name: Exploración de páginas web
+            CSS Classes:
+              name: Clases CSS
+            Searching and Research:
+              name: Búsqueda e investigación
+            Sources and Research:
+              name: Fuentes e investigación
         csd3-pilot:
           title: CSD Unidad 3 - Animaciones y juegos ('19-'20)
           description: " En la Unidad 3, desarrollarás tu experiencia de programación
@@ -17638,6 +17648,10 @@ es-MX:
           stages:
             Deeper Learning Overview:
               name: Resumen del aprendizaje profundo
+            Understanding the Curriculum:
+              name: Comprender el plan de estudio
+            Demonstrating Understanding:
+              name: Demostrar conocimiento
           title: Descripción del aprendizaje profundo en Descubrimientos de Ciencias
             de la Computación 2019
           description_audience: Facilitadores de Descubrimientos de las Ciencias de
@@ -17646,6 +17660,10 @@ es-MX:
           stages:
             Deeper Learning Overview:
               name: Resumen del aprendizaje profundo
+            Understanding the Curriculum:
+              name: Comprender el plan de estudio
+            Demonstrating Understanding:
+              name: Demostrar conocimiento
           title: Taller FiT de aprendizaje profundo en Principios de Ciencias de la
             Computación 2019
         pl-csd-bugs:
@@ -17656,17 +17674,85 @@ es-MX:
           description_short: Depuración en el Laboratorio de juegos - Taller 1 del
             año académico
         dlp19-csd-mod-w1:
+          stages:
+            Module 1:
+              name: Módulo 1
+            Step 1:
+              name: Paso 1
+            Step 2:
+              name: Paso 2
+            'Step 1: Develop Understanding':
+              name: 'Paso 1: desarrollar la comprensión'
+            'Step 2: Demonstrate Understanding':
+              name: 'Paso 2: demostrar la comprensión'
+          title: Módulo 1 de Aprendizaje Profundo de Descubrimientos de Ciencias de
+            la Computación - Muy pronto
           description_audience: Facilitadores de Descubrimientos de las Ciencias de
             la Computación en período de formación 2019
+          description_short: Taller 1 del año académico
         dlp19-csd-mod-w2:
           stages:
             new stage:
               name: nueva etapa
+            CS Discoveries Deeper Learning Module 2:
+              name: Módulo 2 de Aprendizaje Profundo de Descubrimientos de Ciencias
+                de la Computación
+          title: Módulo 2 de Aprendizaje Profundo de Descubrimientos de Ciencias de
+            la Computación
           description_audience: Facilitadores de Descubrimientos de las Ciencias de
             la Computación en período de formación 2019
         dlp19-csd-mod-w3:
+          stages:
+            CS Discoveries Deeper Learning Module 3:
+              name: Módulo 3 de Aprendizaje Profundo de Descubrimientos de Ciencias
+                de la Computación
+          title: Módulo 3 de Aprendizaje Profundo de Descubrimientos de Ciencias de
+            la Computación
           description_audience: Facilitadores de Descubrimientos de las Ciencias de
             la Computación en período de formación 2019
         dlp19-csd-mod-w4:
+          stages:
+            CS Discoveries Deeper Learning Module 4:
+              name: Módulo 4 de Aprendizaje Profundo de Descubrimientos de Ciencias
+                de la Computación
+          title: Módulo 4 de Aprendizaje Profundo de Descubrimientos de Ciencias de
+            la Computación
           description_audience: Facilitadores de Descubrimientos de las Ciencias de
             la Computación en período de formación 2019
+        dlp19-csp-mod-w1:
+          stages:
+            CS Principles Deeper Learning Module 1:
+              name: Módulo 1 de Aprendizaje Profundo de Principios de Ciencias de
+                la Computación
+            'Step 1: Develop Understanding':
+              name: 'Paso 1: desarrollar la comprensión'
+            'Step 2: Demonstrate Understanding':
+              name: 'Paso 2: demostrar la comprensión'
+          title: Módulo 1 de Aprendizaje Profundo de Principios de Ciencias de la
+            Computación
+        dlp19-csp-mod-w2:
+          stages:
+            CS Principles Deeper Learning Module 2:
+              name: Módulo 2 de Aprendizaje Profundo de Principios de Ciencias de
+                la Computación
+          title: Módulo 2 de Aprendizaje Profundo de Principios de Ciencias de la
+            Computación
+        dlp19-csp-mod-w3:
+          stages:
+            CS Principles Deeper Learning Module 3:
+              name: Módulo 3 de Aprendizaje Profundo de Principios de Ciencias de
+                la Computación
+          title: Módulo 3 de Aprendizaje Profundo de Principios de Ciencias de la
+            Computación
+        dlp19-csp-mod-w4:
+          stages:
+            CS Principles Deeper Learning Module 4:
+              name: Módulo 4 de Aprendizaje Profundo de Principios de Ciencias de
+                la Computación
+          title: Módulo 4 de Aprendizaje Profundo de Principios de Ciencias de la
+            Computación
+        csd-pilot:
+          stages:
+            Pilot Information:
+              name: Información del curso piloto
+          title: Curso piloto de CSD

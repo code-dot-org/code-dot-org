@@ -2,13 +2,31 @@
 da-DK:
   data:
     authored_hints:
+      2-3 Artist 1 new:
+        2-3_Artist_1_new_a: Hvis du bruger en "flyt fremad"- blok med 100 pixels,
+          tegner jeg linjen automatisk.
+        2-3_Artist_1_new_b: Har du svært ved at dreje om hjørnet? Brug en "Drej til
+          højre med 90 grader"-blok.
       2-3 Artist 11:
         2-3_Artist_11_a: 'Driller vinklerne? Du skal nå 360 grader rundt, ved at dreje
           8 gange. Hvad er 360/8? '
+      2-3 Artist 3new:
+        2-3_Artist_3new_a: Hvad er 100-70? Baseret på problemet er det, hvor høj hatten
+          skal være!
       2-3 Artist 4:
         2-3_Artist_4_a: For at færdiggøre huset, skal vi bare tegne en firkant!
+      2-3 Artist 6:
+        2-3_Artist_6_a: 'For at lave disse små vinkler, skal du vende dig mere end
+          du gjorde med firkanten.   '
+        2-3_Artist_6_c: Hver side af trekanten er samme længde, som hver side af firkanten...100
+          pixle!
+      2-3 Artist 9 NEW:
+        2-3_Artist_9_a: Diamanten er blot en firkant sat på spissen.
       2-3 Artist Functions 3:
         2-3_Artist_Functions_3_a: "**115 + 45 = 160**"
+      2-3 Maze 1:
+        2-3_Maze_1_a: Benyt en "flyt fremad"- blok ved at trække den fra Blokke området
+          til Arbejdsområde og forbind den til "når programmet kører".
       CourseE_HOC 2018 Level_10:
         voyage_aquatic_10a: Se **lanternerne** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)?
           Hvordan kan du bruge en betingelse med dem til at komme igennem havmonumentet?
@@ -137,3 +155,8 @@ da-DK:
       MC_HOC_2017_FP20x20_2019:
         MC_HOC_2017_13_Cole_a: Prøv at få agenten til at bygge nogle broer, så Alex
           eller Steve kan gå omkring uden for kortets kanter.
+      course2_maze_programming_challenge2:
+        courseC_maze_programming_challenge2_a: Hvis du sender mig baglæns, så være
+          ekstra opmærksom på, jeg vender den rigtige vej!
+        courseC_maze_programming_challenge2_b: Den korteste løsning er på kun 5 blokke,
+          og der bruges en "gentag"-blok!

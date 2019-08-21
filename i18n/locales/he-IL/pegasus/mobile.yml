@@ -991,6 +991,7 @@
   header_documentation: "מסמכים"
   user_header_label: "היי %{username}"
   user_header_team: "צוות"
+  user_header_my_projects: "הפרויקטים שלי"
   user_header_settings: "החשבון שלי"
   user_header_logout: "התנתק"
   user_header_signin: "התחבר"
