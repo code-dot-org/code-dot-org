@@ -25,6 +25,7 @@ import {AllowedWebRequestHeaders} from '@cdo/apps/util/sharedConstants';
 import {actions, REDIRECT_RESPONSE} from './redux/applab';
 import {getStore} from '../redux';
 import $ from 'jquery';
+import i18n from '@cdo/applab/locale';
 
 // For proxying non-https xhr requests
 var XHR_PROXY_PATH = '//' + location.host + '/xhr';
@@ -1843,22 +1844,15 @@ applabCommands.getColumn = function(opts) {
 
 var handleGetColumn = function(opts, records) {
   let columnList = [];
+  let columnName = opts.column;
+  let tableName = opts.table;
   if (records === null) {
-    outputError(
-      'You tried to read records from a table called ' +
-        opts.table +
-        ", but that table doesn't exist in this app."
-    );
-  }
-  records.forEach(row => columnList.push(row[opts.column]));
-  if (columnList.every(element => element === undefined)) {
-    outputError(
-      'You tried to get a column called ' +
-        opts.column +
-        '  from a table called ' +
-        opts.table +
-        ", but that column doesn't exist."
-    );
+    outputError(i18n.tableDoesNotExistError({tableName}));
+  } else {
+    records.forEach(row => columnList.push(row[opts.column]));
+    if (columnList.every(element => element === undefined)) {
+      outputError(i18n.columnDoesNotExistError({columnName, tableName}));
+    }
   }
   opts.callback(columnList);
 };
@@ -1900,11 +1894,8 @@ applabCommands.readRecords = function(opts) {
 
 applabCommands.handleReadRecords = function(opts, records) {
   if (records === null) {
-    outputError(
-      'You tried to read records from a table called ' +
-        opts.table +
-        ", but that table doesn't exist in this app."
-    );
+    let tableName = opts.table;
+    outputError(i18n.tableDoesNotExistError({tableName}));
   }
   if (opts.onSuccess) {
     opts.onSuccess.call(null, records);

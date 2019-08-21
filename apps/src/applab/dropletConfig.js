@@ -1107,7 +1107,8 @@ if (experiments.isEnabled(experiments.APPLAB_DATASETS)) {
     category: 'Data',
     paletteParams: ['table', 'column'],
     params: ['"mytable"', '"mycolumn"'],
-    nativeIsAsync: true
+    nativeIsAsync: true,
+    type: 'value'
   });
 }
 
