@@ -36,11 +36,14 @@ class ExternalRedirectDialog extends React.Component {
 
     let response = this.props.redirects[0].response;
     let url = this.props.redirects[0].url;
+    let trimmedUrl = url.length > 100 ? url.substring(0, 100) + '...' : url;
     if (response === REDIRECT_RESPONSE.APPROVED) {
       title = i18n.redirectTitle();
       body = (
         <div>
-          <h2 style={styles.title}>{i18n.redirectConfirm({url: url})}</h2>
+          <h2 style={styles.title}>
+            {i18n.redirectConfirm({url: trimmedUrl})}
+          </h2>
           <p>
             {i18n.redirectExplanation()}
             <span>
