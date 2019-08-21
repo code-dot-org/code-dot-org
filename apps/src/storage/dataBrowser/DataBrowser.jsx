@@ -7,6 +7,90 @@ import AddTableListRow from './AddTableListRow';
 import EditTableListRow from './EditTableListRow';
 import * as dataStyles from './dataStyles';
 
+const tableWidth = 400;
+const buttonColumnWidth = 124;
+const tabHeight = 35;
+const borderColor = color.lighter_gray;
+const bgColor = color.lightest_gray;
+const baseTabStyle = {
+  borderColor: borderColor,
+  borderStyle: 'solid',
+  boxSizing: 'border-box',
+  height: tabHeight,
+  padding: '0 10px'
+};
+const styles = {
+  activeTab: Object.assign({}, baseTabStyle, {
+    backgroundColor: bgColor,
+    borderTopWidth: 1,
+    borderRightWidth: 1,
+    borderBottomWidth: 0,
+    borderLeftWidth: 0,
+    float: 'left'
+  }),
+  inactiveTab: Object.assign({}, baseTabStyle, {
+    borderTopWidth: 1,
+    borderRightWidth: 1,
+    borderBottomWidth: 1,
+    borderLeftWidth: 0,
+    float: 'left'
+  }),
+  // This tab should fill the remaining horizontal space.
+  emptyTab: Object.assign({}, baseTabStyle, {
+    borderTopWidth: 0,
+    borderRightWidth: 0,
+    borderBottomWidth: 1,
+    borderLeftWidth: 0,
+    width: '100%'
+  }),
+  workspaceDescription: {
+    height: 28,
+    overflow: 'hidden'
+  },
+  workspaceDescriptionText: {
+    overflow: 'hidden',
+    textOverflow: 'ellipsis',
+    whiteSpace: 'nowrap'
+  },
+  workspaceTabs: {
+    borderColor: borderColor,
+    borderStyle: 'solid',
+    borderTopWidth: 0,
+    borderRightWidth: 0,
+    borderBottomWidth: 0,
+    borderLeftWidth: 1
+  },
+  tabLabel: {
+    lineHeight: tabHeight + 'px',
+    WebkitUserSelect: 'none',
+    MozUserSelect: 'none',
+    msUserSelect: 'none',
+    userSelect: 'none'
+  },
+  workspaceBody: {
+    height: 'calc(100% - 83px)',
+    padding: '10px 10px 10px 0',
+    borderColor: borderColor,
+    borderStyle: 'solid',
+    borderTopWidth: 0,
+    borderRightWidth: 1,
+    borderBottomWidth: 1,
+    borderLeftWidth: 1,
+    backgroundColor: bgColor
+  },
+  activeBody: {
+    height: '100%',
+    overflowY: 'auto',
+    padding: '10px',
+    width: '100%'
+  },
+  inactiveBody: {
+    display: 'none',
+    height: '100%',
+    overflowY: 'auto'
+  }
+};
+
 class DataBrowser extends React.Component {
   static propTypes = {
     tableListMap: PropTypes.object.isRequired
@@ -16,92 +100,10 @@ class DataBrowser extends React.Component {
 
   handleTabClick = newTab => this.setState({selectedTab: newTab});
 
+  // TODO: implement the functionality of this tab
   emptyHandler = () => {};
 
   render() {
-    const tableWidth = 400;
-    const buttonColumnWidth = 124;
-    const tabHeight = 35;
-    const borderColor = color.lighter_gray;
-    const bgColor = color.lightest_gray;
-    const baseTabStyle = {
-      borderColor: borderColor,
-      borderStyle: 'solid',
-      boxSizing: 'border-box',
-      height: tabHeight,
-      padding: '0 10px'
-    };
-    const styles = {
-      activeTab: Object.assign({}, baseTabStyle, {
-        backgroundColor: bgColor,
-        borderTopWidth: 1,
-        borderRightWidth: 1,
-        borderBottomWidth: 0,
-        borderLeftWidth: 0,
-        float: 'left'
-      }),
-      inactiveTab: Object.assign({}, baseTabStyle, {
-        borderTopWidth: 1,
-        borderRightWidth: 1,
-        borderBottomWidth: 1,
-        borderLeftWidth: 0,
-        float: 'left'
-      }),
-      // This tab should fill the remaining horizontal space.
-      emptyTab: Object.assign({}, baseTabStyle, {
-        borderTopWidth: 0,
-        borderRightWidth: 0,
-        borderBottomWidth: 1,
-        borderLeftWidth: 0,
-        width: '100%'
-      }),
-      workspaceDescription: {
-        height: 28,
-        overflow: 'hidden'
-      },
-      workspaceDescriptionText: {
-        overflow: 'hidden',
-        textOverflow: 'ellipsis',
-        whiteSpace: 'nowrap'
-      },
-      workspaceTabs: {
-        borderColor: borderColor,
-        borderStyle: 'solid',
-        borderTopWidth: 0,
-        borderRightWidth: 0,
-        borderBottomWidth: 0,
-        borderLeftWidth: 1
-      },
-      tabLabel: {
-        lineHeight: tabHeight + 'px',
-        WebkitUserSelect: 'none',
-        MozUserSelect: 'none',
-        msUserSelect: 'none',
-        userSelect: 'none'
-      },
-      workspaceBody: {
-        height: 'calc(100% - 83px)',
-        padding: '10px 10px 10px 0',
-        borderColor: borderColor,
-        borderStyle: 'solid',
-        borderTopWidth: 0,
-        borderRightWidth: 1,
-        borderBottomWidth: 1,
-        borderLeftWidth: 1,
-        backgroundColor: bgColor
-      },
-      activeBody: {
-        height: '100%',
-        overflowY: 'auto',
-        padding: '10px',
-        width: '100%'
-      },
-      inactiveBody: {
-        display: 'none',
-        height: '100%',
-        overflowY: 'auto'
-      }
-    };
     return (
       <div style={{height: '100%'}}>
         <div id="dataBrowserTabs" style={styles.workspaceTabs}>
@@ -114,7 +116,7 @@ class DataBrowser extends React.Component {
             }
             onClick={this.handleTabClick.bind(this, TabType.DATA_TABLES)}
           >
-            <span style={styles.tabLabel}>DATA TABLES</span>
+            <span style={styles.tabLabel}>{msg.dataTableHeader()}</span>
           </div>
           <div
             id="keyValuePairsTab"
@@ -125,7 +127,7 @@ class DataBrowser extends React.Component {
             }
             onClick={this.handleTabClick.bind(this, TabType.KEY_VALUE_PAIRS)}
           >
-            <span style={styles.tabLabel}>KEY/VALUE PAIRS</span>
+            <span style={styles.tabLabel}>{msg.keyValuePairsHeader()}</span>
           </div>
           <div id="emptyTab" style={styles.emptyTab} />
         </div>
