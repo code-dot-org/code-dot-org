@@ -86,7 +86,7 @@ describe('firebaseMetadata', () => {
       ['foo', 'baz'],
       ['baz']
     ];
-    onColumnNames('mytable', columnNames => {
+    onColumnNames(getProjectDatabase(), 'mytable', columnNames => {
       expect(columnNames).to.deep.equal(expectedNames[count]);
       count++;
       if (count === expectedNames.length) {
