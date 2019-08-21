@@ -507,7 +507,7 @@ FirebaseStorage.deleteTable = function(tableName, onSuccess, onError) {
   tableRef
     .set(null)
     .then(() => countersRef.set(null))
-    .then(() => getColumnsRef(tableName).set(null))
+    .then(() => getColumnsRef(getProjectDatabase(), tableName).set(null))
     .then(onSuccess, onError);
 };
 
@@ -895,7 +895,7 @@ function overwriteTableData(tableName, recordsData) {
   const countersRef = getProjectDatabase().child(
     `counters/tables/${tableName}`
   );
-  return getColumnsRef(tableName)
+  return getColumnsRef(getProjectDatabase(), tableName)
     .set(null)
     .then(() => recordsRef.set(recordsData))
     .then(() => {

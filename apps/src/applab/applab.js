@@ -814,37 +814,38 @@ function setupReduxSubscribers(store) {
     }
   });
 
-  if (store.getState().pageConstants.hasDataMode) {
-    if (experiments.isEnabled(experiments.APPLAB_DATASETS)) {
-      const sharedTablesRef = getSharedDatabase().child('counters/tables');
-      sharedTablesRef.on('child_added', snapshot => {
-        store.dispatch(
-          addTableName(
-            typeof snapshot.key === 'function' ? snapshot.key() : snapshot.key,
-            tableType.SHARED
-          )
-        );
-      });
-    }
-
-    // Initialize redux's list of tables from firebase, and keep it up to date as
-    // new tables are added and removed.
-    const tablesRef = getProjectDatabase().child('counters/tables');
-    tablesRef.on('child_added', snapshot => {
+  // Initialize redux's list of tables from firebase, and keep it up to date as
+  // new tables are added and removed.
+  let subscribeToTable = function(tableRef, tableType) {
+    tableRef.on('child_added', snapshot => {
       store.dispatch(
         addTableName(
           typeof snapshot.key === 'function' ? snapshot.key() : snapshot.key,
-          tableType.PROJECT
+          tableType
         )
       );
     });
-    tablesRef.on('child_removed', snapshot => {
+    tableRef.on('child_removed', snapshot => {
       store.dispatch(
         deleteTableName(
           typeof snapshot.key === 'function' ? snapshot.key() : snapshot.key
         )
       );
     });
+  };
+
+  if (store.getState().pageConstants.hasDataMode) {
+    if (experiments.isEnabled(experiments.APPLAB_DATASETS)) {
+      subscribeToTable(
+        getSharedDatabase().child('counters/tables'),
+        tableType.SHARED
+      );
+    }
+
+    subscribeToTable(
+      getProjectDatabase().child('counters/tables'),
+      tableType.PROJECT
+    );
   }
 }
 
@@ -1298,7 +1299,7 @@ function onDataViewChange(view, oldTableName, newTableName) {
   projectStorageRef.child('keys').off('value');
   projectStorageRef.child(`tables/${oldTableName}/records`).off('value');
   sharedStorageRef.child(`tables/${oldTableName}/records`).off('value');
-  getColumnsRef(oldTableName).off();
+  getColumnsRef(getProjectDatabase(), oldTableName).off();
 
   switch (view) {
     case DataView.PROPERTIES:
@@ -1307,36 +1308,32 @@ function onDataViewChange(view, oldTableName, newTableName) {
       });
       return;
     case DataView.TABLE: {
+      let newTableType = getStore().getState().data.tableListMap[newTableName];
+      let storageRef;
       if (
         experiments.isEnabled(experiments.APPLAB_DATASETS) &&
-        getStore().getState().data.tableListMap[newTableName] ===
-          tableType.SHARED
+        newTableType === tableType.SHARED
       ) {
-        sharedStorageRef
-          .child(`tables/${newTableName}/records`)
-          .on('value', snapshot => {
-            getStore().dispatch(
-              updateTableRecords(newTableName, snapshot.val())
-            );
-          });
+        storageRef = sharedStorageRef.child(`tables/${newTableName}/records`);
       } else {
-        // Add any columns which appear in records in Firebase to the list of columns in
-        // Firebase. Do NOT do this every time the records change, to avoid adding back
-        // a column shortly after it was explicitly renamed or deleted.
-        addMissingColumns(newTableName);
-
-        onColumnNames(newTableName, columnNames => {
-          getStore().dispatch(updateTableColumns(newTableName, columnNames));
-        });
-
-        projectStorageRef
-          .child(`tables/${newTableName}/records`)
-          .on('value', snapshot => {
-            getStore().dispatch(
-              updateTableRecords(newTableName, snapshot.val())
-            );
-          });
+        storageRef = projectStorageRef.child(`tables/${newTableName}/records`);
       }
+      if (newTableType === tableType.PROJECT) {
+        addMissingColumns(newTableName);
+      }
+      onColumnNames(
+        newTableType === tableType.PROJECT
+          ? getProjectDatabase()
+          : getSharedDatabase(),
+        newTableName,
+        columnNames => {
+          getStore().dispatch(updateTableColumns(newTableName, columnNames));
+        }
+      );
+
+      storageRef.on('value', snapshot => {
+        getStore().dispatch(updateTableRecords(newTableName, snapshot.val()));
+      });
       return;
     }
     default:
