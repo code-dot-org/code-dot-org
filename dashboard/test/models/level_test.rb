@@ -925,12 +925,12 @@ EOS
     end
   end
 
-  test 'remove_starter_asset! does not save or error if starter_assets are nil' do
+  test 'remove_starter_asset! returns true if starter_assets are nil' do
     level = create :level
     level.expects(:save).never
     assert_nil level.starter_assets
 
-    level.remove_starter_asset!('non-existent-asset.png')
+    assert level.remove_starter_asset!('non-existent-asset.png')
   end
 
   test 'remove_starter_asset! deletes key-value pair from starter_assets' do
