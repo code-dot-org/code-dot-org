@@ -122,17 +122,17 @@ class LevelStarterAssetsControllerTest < ActionController::TestCase
     assert_response :unprocessable_entity
   end
 
-  test 'upload: returns unprocessable_entity if file uploads but starter asset is not added' do
+  test 'upload: raises if file uploads but starter asset is not added' do
     LevelStarterAssetsController.any_instance.
       expects(:get_object).
       returns(@file_obj)
     @file_obj.expects(:upload_file).returns(true)
-    Level.any_instance.expects(:save).returns(false)
+    Level.any_instance.expects(:valid?).twice.returns(true, false)
 
     sign_in create(:levelbuilder)
-    post :upload, params: {level_name: create(:level).name, files: [@file]}
-
-    assert_response :unprocessable_entity
+    assert_raises ActiveRecord::RecordInvalid do
+      post :upload, params: {level_name: create(:level).name, files: [@file]}
+    end
   end
 
   test 'upload: returns summary if file uploads and starter asset is added' do
