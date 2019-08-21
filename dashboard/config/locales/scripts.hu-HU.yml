@@ -2075,6 +2075,8 @@ hu:
           stages:
             Lists:
               name: Listák
+            CSS Classes:
+              name: CSS osztályok
         csd3-pilot:
           description_short: Programozás
           stages:

@@ -1061,62 +1061,67 @@ ko-KR:
         Course_4_SCFL_1b_b: |-
           이동을 위해 이 옵션을 보세요.
 
-          ![](https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png)
+          ![](https://images.code.org/1957633c453f4025a3fd6ce0e201398b-image-1469642319721.png)
         Course_4_SCFL_1b_c: |-
           **예제 답안:**
-          <xml>
-          <block type="when_run" deletable="false" movable="false">
-          <next>
-          <block type="controls_repeat_dropdown">
 
-          <title name="TIMES" config="3-10">3</title>
-          <statement name="DO">
-          <block type="maze_move">
-          <title name="DIR">moveForward</title>
-          </block>
-          </statement>
-          <next>
-          <block type="maze_turn">
-          <title name="DIR">turnLeft</title>
-          <next>
-          <block type="controls_repeat_dropdown">
-          <title name="TIMES" config="3-10">3</title>
-          <statement name="DO">
-          <block type="collector_collect">
-          <next>
-          <block type="controls_repeat_dropdown">
-          <title name="TIMES" config="3-10">3</title>
-          <statement name="DO">
-          <block type="maze_move">
-          <title name="DIR">moveForward</title>
-          </block>
-          </statement>
-          <next>
-          <block type="maze_turn">
-          <title name="DIR">turnLeft</title>
-          <next>
-          <block type="controls_repeat_dropdown">
-          <title name="TIMES" config="3-10">3</title>
-          <statement name="DO">
-          <block type="maze_move">
-          <title name="DIR">moveForward</title>
-          </block>
-          </statement>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </statement>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="controls_for" inline="true">
+                  <title name="VAR">counter</title>
+                  <value name="FROM">
+                    <block type="math_number">
+                      <title name="NUM">3</title>
+                    </block>
+                  </value>
+                  <value name="TO">
+                    <block type="math_number">
+                      <title name="NUM">1</title>
+                    </block>
+                  </value>
+                  <value name="BY">
+                    <block type="math_number">
+                      <title name="NUM">1</title>
+                    </block>
+                  </value>
+                  <statement name="DO">
+                    <block type="controls_repeat_ext" inline="true">
+                      <value name="TIMES">
+                        <block type="variables_get">
+                          <title name="VAR">counter</title>
+                        </block>
+                      </value>
+                      <statement name="DO">
+                        <block type="maze_moveForward"/>
+                      </statement>
+                      <next>
+                        <block type="maze_turn">
+                          <title name="DIR">turnLeft</title>
+                          <next>
+                            <block type="controls_repeat_ext" inline="true">
+                              <value name="TIMES">
+                                <block type="variables_get">
+                                  <title name="VAR">counter</title>
+                                </block>
+                              </value>
+                              <statement name="DO">
+                                <block type="maze_moveForward"/>
+                              </statement>
+                              <next>
+                                <block type="maze_turn">
+                                  <title name="DIR">turnRight</title>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                </block>
+              </next>
+            </block>
           </xml>
       Course 4 SCFL 2:
         Course_4_SCFL_2_a: |-

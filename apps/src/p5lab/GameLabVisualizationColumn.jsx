@@ -27,6 +27,7 @@ import {
   isPickingLocation
 } from './spritelab/locationPickerModule';
 import {calculateOffsetCoordinates} from '@cdo/apps/utils';
+import {isMobileDevice} from '@cdo/apps/util/browser-detector';
 
 const MODAL_Z_INDEX = 1050;
 
@@ -73,6 +74,13 @@ class GameLabVisualizationColumn extends React.Component {
 
   pickerPointerUp = e => {
     if (this.props.pickingLocation) {
+      // Workaround to make sure location picker works for iOS tablets. These devices are not triggering onPointerMove
+      // events, so the location was never getting updated.
+      if (isMobileDevice()) {
+        this.props.updatePicker(
+          calculateOffsetCoordinates(this.divGameLab, e.clientX, e.clientY)
+        );
+      }
       this.props.selectPicker(
         calculateOffsetCoordinates(this.divGameLab, e.clientX, e.clientY)
       );

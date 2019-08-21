@@ -2980,6 +2980,8 @@ fr:
               description_teacher: "Students have spent a lot of time throughout the unit working on their Personal Website. In the final couple of days students finalize their websites.  They work with peers to get feedback, put the finishing touches on the websites, review the rubric and reflect on their process. To cap off the unit, they will share their projects and also a overview of the process they took to get to that final design.\\r\n"
             Intellectual Property:
               name: Propriété intellectuelle
+            CSS Classes:
+              name: Classes CSS
         csd3-pilot:
           description_short: "Programmation"
           stages:

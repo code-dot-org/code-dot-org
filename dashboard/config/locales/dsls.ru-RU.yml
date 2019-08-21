@@ -551,10 +551,13 @@ ru-RU:
         - {}
         - {}
       CSD U2 project guide:
+        title: Ваш личный веб-сайт
         content1: Описание здесь
       CSD U2 project guide_2018:
+        title: Ваш личный веб-сайт
         content1: Описание здесь
       CSD U2 project guide_2018_2019:
+        title: Ваш личный веб-сайт
         content1: Описание здесь
       CSD U3 - conditionals - Matching:
         questions:
@@ -623,8 +626,10 @@ ru-RU:
         - {}
         - {}
       CSD U3 Card Examples_2018:
+        title: Создание интерактивной карты
         content1: Описание здесь
       CSD U3 Card Examples_2018_2019:
+        title: Создание интерактивной карты
         content1: Описание здесь
       CSD U3 Functions Prediction define first:
         answers:
@@ -751,10 +756,13 @@ ru-RU:
         - {}
         - {}
       CSD U3 game intro:
+        title: Создать свою игру
         content1: Описание здесь
       CSD U3 game intro_2018:
+        title: Создать свою игру
         content1: Описание здесь
       CSD U3 game intro_2018_2019:
+        title: Создать свою игру
         content1: Описание здесь
       CSD U3 platform intro:
         content1: Описание здесь
