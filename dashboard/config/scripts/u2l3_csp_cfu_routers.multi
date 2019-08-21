@@ -1,7 +1,7 @@
 name 'U2L3 CSP CFU Routers'
 title 'Routers'
 type 'multi2'
-question 'Pick Two: If the post office delivered mail exactly like the routers deliver messages on the internet, which of the following statements would be true?'
+question 'Pick Two: If the post office delivered mail exactly like the routers deliver messages on the Internet, which of the following statements would be true?'
 
 wrong 'One mailman would be responsible for delivering a letter from sender to receiver'
 right 'The mailman would sometimes take a different path to deliver each letter to your home'
