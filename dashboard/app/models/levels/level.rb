@@ -609,10 +609,10 @@ class Level < ActiveRecord::Base
   #   # friendly_name => uuid_name
   #   "welcome.png" => "123-abc-456.png"
   # }
-  def add_starter_asset(friendly_name, uuid_name)
+  def add_starter_asset!(friendly_name, uuid_name)
     self.starter_assets ||= {}
     self.starter_assets[friendly_name] = uuid_name
-    save
+    save!
   end
 
   private

@@ -49,7 +49,7 @@ class LevelStarterAssetsController < ApplicationController
     file_obj = get_object(uuid_name)
     success = file_obj&.upload_file(upload.tempfile.path)
 
-    if success && @level.add_starter_asset(friendly_name, uuid_name)
+    if success && @level.add_starter_asset!(friendly_name, uuid_name)
       render json: summarize(file_obj, friendly_name, uuid_name)
     else
       return head :unprocessable_entity
