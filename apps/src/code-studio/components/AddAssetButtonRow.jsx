@@ -1,3 +1,4 @@
+/* global navigator */
 import PropTypes from 'prop-types';
 import React from 'react';
 import AssetUploader from './AssetUploader';
@@ -59,10 +60,7 @@ export default class AddAssetButtonRow extends React.Component {
 
   render() {
     let shouldShowRecordButton = !this.props.hideAudioRecording;
-    if (
-      navigator.userAgent.indexOf('Firefox') === -1 &&
-      navigator.userAgent.indexOf('Chrome') === -1
-    ) {
+    if (!(navigator.mediaDevices && navigator.mediaDevices.getUserMedia)) {
       shouldShowRecordButton = false;
     }
     return (
