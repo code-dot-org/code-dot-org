@@ -530,6 +530,7 @@ is:
         CSF_SpriteLab_Intro_v2: Kynning á Kvikasmiðjunni
         CSF_Spritelab_MakeSprite_v2: Hvernig á að búa til kvika
         CSF_SpriteLab_SpritesInAction_v2: Kvikar í verki
+        csd_debugging: Villuleit
     callout:
       text:
         drag_blocks: Dragðu "færa" kubb og festu hann neðan í hinn kubbinn

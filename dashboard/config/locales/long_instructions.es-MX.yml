@@ -13685,7 +13685,7 @@ es-MX:
 
         # Haz esto
 
-        -   Haz clic en "Reiniciar" y debate con tu compañero sobre cómo funciona el código.
+        -   Haz clic en "Ejecutar" y debate con tu compañero sobre cómo funciona el código.
         -   Prueba los diferentes bloques LED para ver lo que hacen.
             -   Sugerencia: no olvides presionar "Reiniciar" y ejecutar tu código de nuevo luego de cambiarlo
       CSD U6 test LED_2018: |-
@@ -13695,7 +13695,7 @@ es-MX:
 
         # Haz esto
 
-        -   Haz clic en "Reiniciar" y debate con tu compañero sobre cómo funciona el código.
+        -   Haz clic en "Ejecutar" y debate con tu compañero sobre cómo funciona el código.
         -   Prueba los diferentes bloques LED para ver lo que hacen.
             -   Sugerencia: no olvides presionar "Reiniciar" y ejecutar tu código de nuevo luego de cambiarlo
       CSD U6 test LED_2019: |-
@@ -13705,7 +13705,7 @@ es-MX:
 
         # Haz esto
 
-        -   Haz clic en "Reiniciar" y debate con tu compañero sobre cómo funciona el código.
+        -   Haz clic en "Ejecutar" y debate con tu compañero sobre cómo funciona el código.
         -   Prueba los diferentes bloques LED para ver lo que hacen.
             -   Sugerencia: no olvides presionar "Reiniciar" y ejecutar tu código de nuevo luego de cambiarlo
       CSD U6 tugowar buzzer: "# Timbre del triunfo\n\nLa última cosa que falta en
@@ -17167,6 +17167,8 @@ es-MX:
         y hacia abajo si se presionan los botones de flecha arriba y flecha abajo.
       courseA_playLab_events5_2019: Agrega eventos para que Jorge se mueva hacia arriba
         y hacia abajo si se presionan los botones de flecha arriba y flecha abajo.
+      courseA_playLab_events6_2019: "¡Hazlo aún más interesante! Cambia el fondo y
+        reproduce un sonido aleatorio cuando se hace clic en Jorge."
       courseA_playLab_events7_2018: _Juego libre:_ Agrega todo lo que quieras a este
         juego. ¿Puedes hacer que el dinosaurio desaparezca cuando Jorge se encuentra
         con él?
