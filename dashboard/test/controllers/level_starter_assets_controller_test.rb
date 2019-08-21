@@ -153,6 +153,33 @@ class LevelStarterAssetsControllerTest < ActionController::TestCase
     assert_equal 'image', summary['category']
     assert_equal 123, summary['size']
   end
+
+  test 'upload: can successfully upload files with single- and double- quotes in filenames' do
+    LevelStarterAssetsController.any_instance.
+      expects(:get_object).twice.
+      returns(@file_obj)
+    @file_obj.expects(:upload_file).twice.returns(true)
+    sign_in create(:levelbuilder)
+    level = create :level
+
+    single_quote_filename = "my-'file'.jpg"
+    FileUtils.touch(single_quote_filename)
+    single_quote_file = fixture_file_upload(single_quote_filename, 'image/jpg')
+    post :upload, params: {level_name: level.name, files: [single_quote_file]}
+    assert_response :success
+    summary = JSON.parse(response.body)
+    assert_equal single_quote_filename, summary['filename']
+    File.delete(single_quote_filename)
+
+    double_quote_filename = "\"my\"-file.png"
+    FileUtils.touch(double_quote_filename)
+    double_quote_file = fixture_file_upload(double_quote_filename, 'image/png')
+    post :upload, params: {level_name: level.name, files: [double_quote_file]}
+    assert_response :success
+    summary = JSON.parse(response.body)
+    assert_equal double_quote_filename, summary['filename']
+    File.delete(double_quote_filename)
+  end
 end
 
 # Mock Aws::S3::ObjectSummary class since we can't request the objects from S3 in tests:
