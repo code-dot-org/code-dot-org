@@ -221,7 +221,7 @@ class RegionalPartnerTest < ActiveSupport::TestCase
     assert_equal partner_organizer, regional_partner.contact
   end
 
-  test 'contact_email_with_backup falls back to first pm then contact' do
+  test 'contact_email_with_backup falls back to first pm' do
     # contact_email
     regional_partner = create :regional_partner, contact_email: 'contact_email@partner.net'
     assert_equal 'contact_email@partner.net', regional_partner.contact_email_with_backup
@@ -230,12 +230,8 @@ class RegionalPartnerTest < ActiveSupport::TestCase
     regional_partner.update!(contact_email: nil, program_managers: [create(:teacher, email: 'first_pm@partner.net')])
     assert_equal 'first_pm@partner.net', regional_partner.contact_email_with_backup
 
-    # no contact_email or PMs, use contact's email
-    regional_partner.update!(program_managers: [], contact: create(:teacher, email: 'contact@partner.net'))
-    assert_equal 'contact@partner.net', regional_partner.contact_email_with_backup
-
     # nothing :(
-    regional_partner.update!(contact: nil)
+    regional_partner.update!(program_managers: [])
     assert_nil regional_partner.contact_email_with_backup
   end
 
