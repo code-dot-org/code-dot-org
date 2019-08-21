@@ -193,10 +193,15 @@ class Pd::Enrollment < ActiveRecord::Base
   def exit_survey_url
     if [Pd::Workshop::COURSE_ADMIN, Pd::Workshop::COURSE_COUNSELOR].include? workshop.course
       CDO.code_org_url "/pd-workshop-survey/counselor-admin/#{code}", CDO.default_scheme
+    # Summer workshop
     elsif workshop.summer?
       pd_new_workshop_survey_url(code, protocol: CDO.default_scheme)
-    elsif [Pd::Workshop::COURSE_CSP, Pd::Workshop::COURSE_CSD].include?(workshop.course) && workshop.workshop_starting_date > Date.new(2018, 8, 1)
-      CDO.studio_url "/pd/workshop_survey/day/#{workshop.sessions.size}?enrollmentCode=#{code}", CDO.default_scheme
+    # Academic year workshop after 2018-08-01
+    elsif [Pd::Workshop::COURSE_CSP, Pd::Workshop::COURSE_CSD].include?(workshop.course) &&
+      workshop.workshop_starting_date > Date.new(2018, 8, 1)
+      CDO.studio_url "/pd/workshop_survey/ayw/day/#{workshop.sessions.size}?enrollmentCode=#{code}",
+        CDO.default_scheme
+    # CSF deep dive (201) workshop
     elsif workshop.csf? && workshop.subject == Pd::Workshop::SUBJECT_CSF_201
       CDO.studio_url "/pd/workshop_survey/csf/post201/#{code}", CDO.default_scheme
     else

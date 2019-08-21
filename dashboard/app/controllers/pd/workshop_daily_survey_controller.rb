@@ -305,7 +305,9 @@ module Pd
 
       @survey_list = get_academic_year_surveys current_user, workshop, day
 
-      forms_to_render = @survey_list.pluck(:form_id).compact
+      forms_to_render = @survey_list.where(submitted: false, ineligible_reason: nil).
+        pluck(:form_id).compact
+
       if forms_to_render.present? && CDO.newrelic_logging
         NewRelic::Agent.record_custom_event(
           "RenderJotFormView",
