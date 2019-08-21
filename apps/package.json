@@ -91,7 +91,6 @@
     "ejs-webpack-loader": "^2.2.2",
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-15.4": "^1.3.1",
-    "es6-promise": "3.0.2",
     "eslint": "^4.19.1",
     "eslint-config-prettier": "^3.6.0",
     "eslint-plugin-babel": "^4.1.2",
@@ -183,7 +182,6 @@
     "react-virtualized-select": "^3.0.1",
     "react-with-context": "^2.0.0",
     "reactabular": "^2.0.5",
-    "reactabular-table": "^8.14",
     "redux": "^3.3.1",
     "redux-logger": "^2.6.1",
     "redux-mock-store": "^1.2.3",
@@ -222,7 +220,8 @@
   },
   "dependencies": {
     "@code-dot-org/js-interpreter": "^1.3.9",
-    "@code-dot-org/snack-sdk": "2.2.1-apkurl-v4",
+    "snack-build": "0.0.1",
+    "snack-sdk": "2.3.1",
     "crypto-js": "^3.1.9-1",
     "details-element-polyfill": "https://github.com/javan/details-element-polyfill",
     "filesaver.js": "0.2.0",
@@ -238,6 +237,7 @@
     "react-portal": "^3.2.0",
     "react-router-dom": "^4.3.1",
     "react-transition-group": "2.9.0",
+    "rosie": "^2.0.1",
     "selectize": "^0.12.4",
     "wgxpath": "^1.2.0",
     "whatwg-fetch": "^2.0.3"

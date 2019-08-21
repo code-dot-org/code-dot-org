@@ -2842,6 +2842,14 @@ ru:
               name: Визуализация данных
             Final Project:
               name: Финальный проект
+        csp1-pilot:
+          stages:
+            Sending Binary Messages:
+              name: Отправка двоичных сообщений
+            Sending Binary Messages with the Internet Simulator:
+              name: Отправка двоичных сообщений с интернет симулятором
+            Binary Numbers:
+              name: Двоичные числа
         time4csdemo:
           stages:
             Crowdsourcing:
@@ -2877,3 +2885,9 @@ ru:
               name: Скорость
             Functions:
               name: функции
+        csl-vn:
+          stages:
+            Loops in Ice Age:
+              name: Циклы в ледниковом периоде
+            Ocean Scene with Loops:
+              name: Циклы в исполнителе Художник

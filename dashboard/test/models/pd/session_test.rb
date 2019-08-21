@@ -74,9 +74,9 @@ class Pd::SessionTest < ActiveSupport::TestCase
   end
 
   test 'open for attendance' do
-    workshop_started = create :pd_workshop, started_at: Time.now - 1.hour
-    workshop_not_started = create :pd_workshop
-    workshop_ended = create :pd_ended_workshop
+    workshop_started = create :workshop, :in_progress
+    workshop_not_started = create :workshop
+    workshop_ended = create :workshop, :ended
 
     session_open = create :pd_session, :with_assigned_code, workshop: workshop_started
     assert session_open.open_for_attendance?
@@ -107,7 +107,7 @@ class Pd::SessionTest < ActiveSupport::TestCase
   end
 
   test 'workshop with first session in three days does not show links and is not open for attendance' do
-    workshop = create :pd_workshop, :with_codes_assigned, started_at: Time.now, num_sessions: 1, sessions_from: Time.now + 3.days
+    workshop = create :workshop, :in_progress, :with_codes_assigned, sessions_from: Time.now + 3.days
 
     refute workshop.sessions[0].open_for_attendance?
     refute workshop.sessions[0].show_link?
@@ -116,7 +116,7 @@ class Pd::SessionTest < ActiveSupport::TestCase
   end
 
   test 'three day workshop with first session tomorrow shows two links but is not open for attendance' do
-    workshop = create :pd_workshop, :with_codes_assigned, started_at: Time.now, num_sessions: 3, sessions_from: Time.now + 1.day - 1.minute
+    workshop = create :workshop, :in_progress, :with_codes_assigned, num_sessions: 3, sessions_from: Time.now + 1.day - 1.minute
 
     refute workshop.sessions[0].open_for_attendance?
     assert workshop.sessions[0].show_link?
@@ -127,7 +127,7 @@ class Pd::SessionTest < ActiveSupport::TestCase
   end
 
   test 'three day workshop started on second day shows two links and has one session open for attendance' do
-    workshop = create :pd_workshop, :with_codes_assigned, started_at: Time.now, num_sessions: 3, sessions_from: Time.now - 1.day - 1.minute
+    workshop = create :workshop, :in_progress, :with_codes_assigned, num_sessions: 3, sessions_from: Time.now - 1.day - 1.minute
 
     refute workshop.sessions[0].open_for_attendance?
     refute workshop.sessions[0].show_link?

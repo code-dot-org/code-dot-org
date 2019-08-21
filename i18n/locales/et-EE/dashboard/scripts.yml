@@ -1823,6 +1823,10 @@ et:
           stages:
             While Loops:
               name: '„Kui“ tsüklid'
+        csp1-pilot:
+          stages:
+            Binary Numbers:
+              name: Binaararvud
         time4csdemo:
           stages:
             Crowdsourcing:
@@ -1849,3 +1853,7 @@ et:
               name: Velocity
             Functions:
               name: Funktsioonid
+        csl-vn:
+          stages:
+            Loops in Ice Age:
+              name: Tsüklik - Jääaeg

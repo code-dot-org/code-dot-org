@@ -394,7 +394,7 @@ zh-CN:
       MC_HOC_2017_FP20x20: "**自由游戏时间：** 是时候自行探索了！"
       MC_HOC_2017_FP20x20_2019: "**自由游戏时间：** 是时候自行探索了！"
       NEW Course 4 Artist Functions 14: '自由游戏时间！ '
-      NEW Course 4 Artist Params 2: 从头开始创建一个 "绘制三角形" 函数, 使三角形具有50像素边。
+      NEW Course 4 Artist Params 2: 从头开始创建一个 "绘制三角形" 函数，使三角形具有50像素边。
       NEW Course 4 Artist Params 9: 点击“编辑”来填写这个“画一个正方形”函数的定义，并且加一个参数。它应该像三角形一样有一个长度参数。这次，画三个正方形，边长分别为25，50，75像素，每个相隔100像素。
       NEW Course 4 Bee For Loops 1: 用循环从每朵花里采集花蜜。
       NEW Course 4 Bee For Loops 8: 你已经明白了！应该递增多少来收集3，6，9，12，15个花蜜？
@@ -453,6 +453,7 @@ zh-CN:
       Virtual Pet 6: 添加一个苹果，这个苹果可以在与长颈鹿相碰时使长颈鹿回到原来的尺寸。
       Virtual Pet 8_2019: '自由发挥：你的长颈鹿还能做些什么呢？ '
       Virtual Pet Freeplay: '自由发挥：你的长颈鹿还能做些什么呢？ '
+      'Widget: Text Compression': 在文本中找到规律（如重复的单词或词组）。在右侧的词典中输入你所发现的规律。当你将其输入到字典中时，以文本形式表现的规律就会用符号替代。
       bounce_1: 在“当按左方向键时”模块下面添加模块，然后按“运行”。使用左方向键来移动挡板来到达终点目标。
       bounce_10: 顶部有一个目标。添加 "得分点" 和 "得分对手点" 方块到"当球在球门" 和 "当球错过桨" 方块，来做一个游戏。看看你能在对手得分两次之前得分多少分。
       bounce_10_basketball: 现在，目标在顶部！将"得分"和"对手得分"模块附加到到“当进球得分”和"当球未命中手"块来制作游戏。看看在对手获得两分前，你可以获得多少分。
@@ -591,6 +592,7 @@ zh-CN:
       courseA_collector_loops_challenge1: _"你能帮我找出一些错误吗？"_
       courseA_collector_loops_challenge1_2018: _"你能帮我找出一些错误吗？"_
       courseA_collector_loops_challenge1_2019: _"你能帮我找出一些错误吗？"_
+      courseA_collector_loops_challenge2: '得到所有的宝藏！ '
       courseA_collector_loops_challenge2kp: 收集至少 **3** 件的宝藏通过这个关。
       courseA_collector_loops_challenge2kp_2018: 收集至少 **3** 件的宝藏通过这个关。
       courseA_collector_loops_challenge2kp_2019: 收集至少 **3** 件的宝藏通过这个关。
@@ -1186,9 +1188,9 @@ zh-CN:
       courseC_maze_loops_challenge1a: '现在, 斯奎特想尝试使用循环来找到他的橡子! '
       courseC_maze_loops_challenge1a_2018: '现在, 斯奎特想尝试使用循环来找到他的橡子! '
       courseC_maze_loops_challenge1a_2019: '现在, 斯奎特想尝试使用循环来找到他的橡子! '
-      courseC_maze_programming1: 对于这个关卡, 把所有的方块拖在一起, 并点击 "运行" 开始!
-      courseC_maze_programming1_2018: 对于这个关卡, 把所有的方块拖在一起, 并点击 "运行" 开始!
-      courseC_maze_programming1_2019: 对于这个关卡, 把所有的方块拖在一起, 并点击 "运行" 开始!
+      courseC_maze_programming1: 对于这个关卡，把所有的方块拖在一起，并点击 "运行" 开始!
+      courseC_maze_programming1_2018: 对于这个关卡，把所有的方块拖在一起，并点击 "运行" 开始!
+      courseC_maze_programming1_2019: 对于这个关卡，把所有的方块拖在一起，并点击 "运行" 开始!
       courseC_maze_programming2: 从工具箱中拖出另一个`向前移动`模块来完成代码。
       courseC_maze_programming2_2018: 从工具箱中拖出另一个`向前移动`模块来完成代码。
       courseC_maze_programming2_2019: 从工具箱中拖出另一个`向前移动`模块来完成代码。
@@ -1201,9 +1203,9 @@ zh-CN:
       courseC_maze_programming5: 躲开TNT炸药！
       courseC_maze_programming5_2018: 躲开TNT炸药！
       courseC_maze_programming5_2019: 躲开TNT炸药！
-      courseC_maze_programming6: "\"保持冷静, 帮助我找到那只坏猪。否则我会生气的!“"
-      courseC_maze_programming6_2018: "\"保持冷静, 帮助我找到那只坏猪。否则我会生气的!“"
-      courseC_maze_programming6_2019: "\"保持冷静, 帮助我找到那只坏猪。否则我会生气的!“"
+      courseC_maze_programming6: "\"保持冷静，帮助我找到那只坏猪。否则我会生气的!“"
+      courseC_maze_programming6_2018: "\"保持冷静，帮助我找到那只坏猪。否则我会生气的!“"
+      courseC_maze_programming6_2019: "\"保持冷静，帮助我找到那只坏猪。否则我会生气的!“"
       courseC_maze_programming7: "**挑战：**这个代码有很多雪线。你需要移除一些模块，然后再加上另一些。"
       courseC_maze_programming7_2018: "**挑战：**这个代码有很多雪线。你需要移除一些模块，然后再加上另一些。"
       courseC_maze_programming7_2019: "**挑战：**这个代码有很多雪线。你需要移除一些模块，然后再加上另一些。"
@@ -1485,9 +1487,9 @@ zh-CN:
       courseD_collector_debugging4: 修复错误来收集所有的宝藏。
       courseD_collector_debugging4a_2018: 修复错误来收集所有的宝藏。
       courseD_collector_debugging4a_2019: 修复错误来收集所有的宝藏。
-      courseD_collector_debugging5: 所有你需要的指令已经在这里了... 现在, 运用你的调试技巧来找出如何过关。
-      courseD_collector_debugging5a_2018: 所有你需要的指令已经在这里了... 现在, 运用你的调试技巧来找出如何过关。
-      courseD_collector_debugging5a_2019: 所有你需要的指令已经在这里了... 现在, 运用你的调试技巧来找出如何过关。
+      courseD_collector_debugging5: 所有你需要的指令已经在这里了... 现在，运用你的调试技巧来找出如何过关。
+      courseD_collector_debugging5a_2018: 所有你需要的指令已经在这里了... 现在，运用你的调试技巧来找出如何过关。
+      courseD_collector_debugging5a_2019: 所有你需要的指令已经在这里了... 现在，运用你的调试技巧来找出如何过关。
       courseD_collector_debugging6: '挑战: 使用调试技巧来修复错误并收集所有的宝藏。'
       courseD_collector_debugging6a_2018: '挑战: 使用工作区的代码得到至少 \*\* 6 \*\* 块宝藏!'
       courseD_collector_debugging6a_2019: '挑战: 使用工作区的代码得到至少 \*\* 6 \*\* 块宝藏!'
@@ -1640,7 +1642,7 @@ zh-CN:
       courseD_maze_ramp5d: 帮小鸟到达那只猪。
       courseD_maze_ramp5d_2018: 帮小鸟到达那只猪。
       courseD_maze_ramp5d_2019: 帮小鸟到达那只猪。
-      courseD_maze_ramp6: "\"保持冷静, 帮助我找到那只坏猪。否则我会生气的!“"
+      courseD_maze_ramp6: "\"保持冷静，帮助我找到那只坏猪。否则我会生气的!“"
       courseD_maze_ramp7: 帮小鸟到达那只猪！
       courseD_maze_until1: 帮愤怒的小鸟到达那只猪。
       courseD_maze_until10: 帮助僵尸到达向日葵。

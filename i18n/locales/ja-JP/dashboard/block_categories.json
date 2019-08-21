@@ -1,5 +1,5 @@
 {
-  "Actions": "操作",
+  "Actions": "うごき",
   "Advanced": "詳細設定",
   "Behaviors": "行動",
   "Brushes": "ブラシ",
@@ -17,13 +17,13 @@
   "Groups": "グループ",
   "Input": "",
   "Locations": "場所",
-  "Logic": "ロジック（論理）",
+  "Logic": "ロジック",
   "Loops": "くりかえし",
   "Math": "計算(けいさん)",
   "Numbers": "数（かず）",
   "Sprites": "",
   "Text": "テキスト",
-  "Variables": "変数",
+  "Variables": "変数（へんすう）",
   "Variables ": "変数(へんすう) ",
   "World": "世界"
 }

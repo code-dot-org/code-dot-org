@@ -31,16 +31,21 @@ const styles = {
   },
   studentTableRow: {
     display: 'flex',
-    alignItems: 'center'
+    alignItems: 'center',
+    width: '100%'
   },
   meRow: {
     padding: '1px 1px 1px 5px'
   },
   nameInScript: {
-    paddingLeft: 5
+    paddingLeft: 5,
+    margin: '1px 1px 1px 0',
+    flexGrow: 1
   },
   nameWithBubble: {
-    paddingLeft: 5
+    paddingLeft: 5,
+    margin: '1px 1px 1px 0',
+    flexGrow: 1
   },
   linkIcon: {
     marginLeft: 10
@@ -112,18 +117,18 @@ class StudentTable extends React.Component {
                       level={levels.find(level => student.id === level.user_id)}
                     />
                   )}
-                  <span
+                  <div
                     style={levels ? styles.nameWithBubble : styles.nameInScript}
                   >
                     {student.name}
-                  </span>
-                  <a
-                    href={this.getRowLink(student.id)}
-                    target="_blank"
-                    style={styles.linkIcon}
-                  >
-                    <FontAwesome icon="external-link" />
-                  </a>
+                    <a
+                      href={this.getRowLink(student.id)}
+                      target="_blank"
+                      style={styles.linkIcon}
+                    >
+                      <FontAwesome icon="external-link" />
+                    </a>
+                  </div>
                 </div>
               </td>
             </tr>

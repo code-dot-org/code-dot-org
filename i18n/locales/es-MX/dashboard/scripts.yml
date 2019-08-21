@@ -1089,6 +1089,8 @@ es-MX:
               name: Prueba de Pluralsight
             Externals Optionally Displayed as Unplugged:
               name: Externos opcionalmente mostrados como sin conexión
+            Bubble Choice:
+              name: Bubble Choice
         algebraPD2b:
           title: Ciencias de la computación en álgebra PD
           description: 'Enseñar programación funcional a través de álgebra'
@@ -9119,6 +9121,12 @@ es-MX:
               name: Resumen del aprendizaje profundo
             andrea-test-stage4:
               name: andrea-prueba-etapa4
+            Part 1:
+              name: Parte 1
+            Part 2:
+              name: Parte 2
+            part 3:
+              name: parte 3
           title: andrea-prueba
           description_audience: Facilitadores 6-12 en período de formación
           description_short: esto es para poner a prueba mis habilidades para hacer un curso
@@ -10082,6 +10090,54 @@ es-MX:
               name: nueva etapa
             Number Systems:
               name: Sistemas numéricos
+            Bit Sending Device:
+              name: Dispositivo de envío de bit
+            Flippy Do Pt 1:
+              name: Flippy Do Parte 1
+            Flippy Do Pt 2:
+              name: Flippy Do Parte 2
+            Sending Text:
+              name: Envío de texto
+            Black and White Images:
+              name: Imágenes en blanco y negro
+            Color Images:
+              name: Imágenes a color
+            Lossless Compression:
+              name: Compresión sin pérdidas
+            Welcome to CSP:
+              name: Bienvenido a CSP
+            Sending Binary Messages:
+              name: Envío de mensajes binarios
+            Sending Binary Messages with the Internet Simulator:
+              name: Envío de mensajes binarios con el simulador de Internet
+            AB Patterns:
+              name: Patrones AB
+            Flippy Do, pt. 1:
+              name: Flippy Do, parte 1
+            Flippy Do, pt. 2:
+              name: Flippy Do, parte 2
+            Lossy Compression:
+              name: Compresión perdida
+            Intellectual Property:
+              name: Propiedad intelectual
+            'Project: Digital Information Dilemmas, pt. 1':
+              name: 'Proyecto: dilemas de la información digital, parte 1'
+            'Project: Digital Information Dilemmas, pt. 2':
+              name: 'Proyecto: dilemas de la información digital, parte 2'
+            Unit Assessment:
+              name: Evaluación de la unidad
+            Flippy Do, pt 1:
+              name: Flippy Do, parte 1
+            Flippy Do, pt 2:
+              name: Flippy Do, parte 2
+            'Project: Digital Information Dilemmas, pt 1':
+              name: 'Proyecto: dilemas de la información digital, parte 1'
+            'Project: Digital Information Dilemmas, pt 2':
+              name: 'Proyecto: dilemas de la información digital, parte 2'
+            CS Principles Pre-survey:
+              name: Encuesta previa de Principios de Ciencias de la Computación
+            Binary Numbers:
+              name: Números binarios
           title: Piloto de la Unidad 1 de CSP
         csd-tests:
           stages:
@@ -11105,3 +11161,50 @@ es-MX:
               name: 'Proyecto: comparte tu aplicación'
             The Need for Programming Languages:
               name: La necesidad de lenguajes de programación
+          title: 'Unidad 3: Introducción al diseño de aplicaciones'
+        csl-vn:
+          stages:
+            Sequencing with Scrat:
+              name: Secuencias con Scrat
+            Programming in Maze:
+              name: Programación en Laberinto
+            Programming with Rey and BB-8:
+              name: Programación con Rey y BB-8
+            Loops in Ice Age:
+              name: Bucles de la Era de Hielo
+            Ocean Scene with Loops:
+              name: Escena del océano con bucles
+            Tell a Story in Play Lab:
+              name: Contar una historia en el Laboratorio de juegos
+          title: Enseñanza de ciencias de la computación para Vietnam
+          description_audience: Tuổi 5-10
+          description_short: Khoa học máy tính cơ bản cho học sinh Việt Nam
+          description: 'Khoa Học Máy Tính (ciencias de la computación) là môn học cơ bản của thời đại kinh tế số và đã được đưa vào dạy đại trà từ tiểu học ở Mỹ, Canada, Anh, Nhật và các nước phát triển khác. Khoá học này nhằm giới thiệu Khoa Học Máy Tính cơ bản đến với học sinh Việt Nam. Chương trình được xây dựng trực tiếp từ chương trình hiện hành cho học sinh tiểu học ở Mỹ và cô đọng cho phù hợp với học sinh Việt Nam. '
+        dlp19-csd-mod-fit:
+          stages:
+            Deeper Learning Overview:
+              name: Resumen del aprendizaje profundo
+          title: Descripción del aprendizaje profundo en Descubrimientos de Ciencias de la Computación 2019
+          description_audience: Facilitadores de Descubrimientos de las Ciencias de la Computación en período de formación 2019
+        dlp19-csp-mod-fit:
+          stages:
+            Deeper Learning Overview:
+              name: Resumen del aprendizaje profundo
+          title: Taller FiT de aprendizaje profundo en Principios de Ciencias de la Computación 2019
+        pl-csd-bugs:
+          stages:
+            CSD Workshop 1 Bugs:
+              name: Errores del taller 1 de CSD
+          title: Errores del taller 1 de CSD
+          description_short: Depuración en el Laboratorio de juegos - Taller 1 del año académico
+        dlp19-csd-mod-w1:
+          description_audience: Facilitadores de Descubrimientos de las Ciencias de la Computación en período de formación 2019
+        dlp19-csd-mod-w2:
+          stages:
+            new stage:
+              name: nueva etapa
+          description_audience: Facilitadores de Descubrimientos de las Ciencias de la Computación en período de formación 2019
+        dlp19-csd-mod-w3:
+          description_audience: Facilitadores de Descubrimientos de las Ciencias de la Computación en período de formación 2019
+        dlp19-csd-mod-w4:
+          description_audience: Facilitadores de Descubrimientos de las Ciencias de la Computación en período de formación 2019

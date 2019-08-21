@@ -91,21 +91,6 @@ Given(/^I am an organizer with started and completed courses$/) do
   }
 end
 
-Given(/^I am a teacher who has just followed a survey link$/) do
-  random_teacher_name = "TestTeacher" + SecureRandom.hex[0..9]
-  require_rails_env
-
-  steps %Q{
-    And I create a teacher named "#{random_teacher_name}"
-    And I create a workshop for course "CS Fundamentals" attended by "#{random_teacher_name}" with 3 facilitators and end it
-  }
-
-  enrollment = Pd::Enrollment.find_by(first_name: random_teacher_name)
-  steps %Q{
-    And I am on "http://code.org/pd-workshop-survey/#{enrollment.code}"
-  }
-end
-
 Given(/^I am a teacher who has just followed a workshop certificate link$/) do
   test_teacher_name = "TestTeacher - Certificate Test"
   require_rails_env
@@ -150,23 +135,6 @@ Given(/^I am an organizer with completed courses$/) do
     And I create a teacher named "#{random_name}"
     And I make the teacher named "#{random_name}" a workshop organizer
     And I create a workshop for course "CS Fundamentals" organized by "#{random_name}" with 5 people and end it and answer surveys
-  }
-end
-
-Given(/^I am a teacher named "([^"]*)" going to TeacherCon and am on the TeacherCon registration page$/) do |name|
-  require_rails_env
-
-  teacher_email, teacher_password = generate_user(name)
-
-  teacher = FactoryGirl.create :teacher, name: name, password: teacher_password, email: teacher_email, school_info: SchoolInfo.first
-  teachercon = FactoryGirl.create :pd_workshop, :teachercon, num_sessions: 5, organizer: (FactoryGirl.create :workshop_organizer, email: "organizer_#{SecureRandom.hex}@code.org"), processed_location: {city: 'Seattle'}.to_json
-  application_hash = FactoryGirl.build :pd_teacher1920_application_hash, school: School.first, preferred_first_name: 'Minerva', last_name: 'McGonagall'
-  application = FactoryGirl.create :pd_teacher1920_application, :locked, user: teacher, form_data: application_hash.to_json
-  application.update(pd_workshop_id: teachercon.id)
-
-  steps %Q{
-    And I sign in as "#{name}"
-    And I am on "http://studio.code.org/pd/teachercon_registration/#{application.application_guid}"
   }
 end
 
@@ -228,7 +196,7 @@ end
 And(/^I am viewing a workshop with fake survey results$/) do
   require_rails_env
 
-  workshop = FactoryGirl.create :pd_ended_workshop, :local_summer_workshop,
+  workshop = FactoryGirl.create :summer_workshop, :ended,
     organizer: FactoryGirl.create(:workshop_organizer, email: "test_organizer#{SecureRandom.hex}@code.org"),
     num_sessions: 5, enrolled_and_attending_users: 10,
     facilitators: [
@@ -505,7 +473,7 @@ And(/^I create a workshop for course "([^"]*)" ([a-z]+) by "([^"]*)" with (\d+) 
     end
 
   workshop = Retryable.retryable(on: [ActiveRecord::RecordNotUnique, ActiveRecord::RecordInvalid], tries: 5) do
-    FactoryGirl.create(:pd_workshop, :funded,
+    FactoryGirl.create(:workshop, :funded,
       on_map: true,
       course: course,
       organizer_id: organizer.id,

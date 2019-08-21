@@ -12,6 +12,10 @@ vi-VN:
         4-5_Artist_Patterns_Free_Play_1: Tất cả các khối yêu thích của bạn bây giờ
           được sắp xếp vào các mục.  Nhấp chuột vào những từ này để xem tất cả mọi
           thứ đã đi đâu!
+      AppLab Intro 7 - Change Screen Color:
+        applab_hoc_finish: Màn hình chuyển sang màu xanh không? Nếu vậy, nhấn 'Hoàn
+          thành'. Còn không, bấm vào 'Thiết lập lại', Thay đổi khối lệnh, rồi sau
+          đó nhấn 'Chạy' lần nữa.
       CSD U3 Variables Predict Where X:
         CSD_U3_variables: Thay đổi số ở đây
       CSD U3 Variables Predict Where X_2018:
@@ -205,6 +209,87 @@ vi-VN:
         craft_what_is_iron: Hãy đào khối sắt này!
       Underground Iron_2019:
         craft_what_is_iron: Hãy đào khối sắt này!
+      courseA_artist_loops4:
+        courseA_artist_loops4_1: Con số này cho bạn biết có bao nhiêu khối bạn có
+          thể sử dụng trong câu đố này.
+      courseA_artist_loops4_2018:
+        courseA_artist_loops4_1: Con số này cho bạn biết có bao nhiêu khối bạn có
+          thể sử dụng trong câu đố này.
+      courseA_artist_loops4_2019:
+        courseA_artist_loops4_1: Con số này cho bạn biết có bao nhiêu khối bạn có
+          thể sử dụng trong câu đố này.
+      courseA_collector_loops3:
+        gradek_adventurer_loops2_1: Con số này cho bạn biết có bao nhiêu khối bạn
+          có thể sử dụng trong câu đố này.
+      courseA_collector_loops3_2018:
+        gradek_adventurer_loops2_1: Con số này cho bạn biết có bao nhiêu khối bạn
+          có thể sử dụng trong câu đố này.
+      courseA_collector_loops3_2019:
+        gradek_adventurer_loops2_1: Con số này cho bạn biết có bao nhiêu khối bạn
+          có thể sử dụng trong câu đố này.
+      courseA_maze_ramp2_2019:
+        courseC_maze_programming2_1: Đây là hộp công cụ chứa các khối dùng để viết
+          chương trình.
+      courseA_maze_ramp3a_2018:
+        courseC_maze_programming2_1: Đây là hộp công cụ chứa các khối dùng để viết
+          chương trình.
+      courseA_playLab_events6:
+        courseA_playLab_events6_1: Cho phép bạn chọn một âm thanh ngẫu nhiên.
+      courseA_playLab_events6_2018:
+        courseA_playLab_events6_1: Cho phép bạn chọn một âm thanh ngẫu nhiên.
+      courseA_playLab_events6_2019:
+        courseA_playLab_events6_1: Cho phép bạn chọn một âm thanh ngẫu nhiên.
+      courseB_Scrat_ramp1_2018:
+        grade2_CaringForNewPet_0_1: Sau khi đã ghép các khối vào với nhau, ấn "Chạy"
+          để bắt đầu chương trình.
+      courseB_Scrat_ramp1_2019:
+        grade2_CaringForNewPet_0_1: Sau khi đã ghép các khối vào với nhau, ấn "Chạy"
+          để bắt đầu chương trình.
+      courseB_Scrat_ramp3a_2019:
+        courseC_maze_programming2_1: Đây là hộp công cụ chứa các khối dùng để viết
+          chương trình.
+      courseC_maze_programming1:
+        grade2_CaringForNewPet_0_1: Sau khi đã ghép các khối vào với nhau, ấn "Chạy"
+          để bắt đầu chương trình.
+      courseC_maze_programming1_2018:
+        grade2_CaringForNewPet_0_1: Sau khi đã ghép các khối vào với nhau, ấn "Chạy"
+          để bắt đầu chương trình.
+      courseC_maze_programming1_2019:
+        grade2_CaringForNewPet_0_1: Sau khi đã ghép các khối vào với nhau, ấn "Chạy"
+          để bắt đầu chương trình.
+      courseC_maze_programming2:
+        courseC_maze_programming2_1: Đây là hộp công cụ chứa các khối dùng để viết
+          chương trình.
+      courseC_maze_programming2_2018:
+        courseC_maze_programming2_1: Đây là hộp công cụ chứa các khối dùng để viết
+          chương trình.
+      courseC_maze_programming2_2019:
+        courseC_maze_programming2_1: Đây là hộp công cụ chứa các khối dùng để viết
+          chương trình.
+      courseD_maze_ramp1:
+        grade2_CaringForNewPet_0_1: Sau khi đã ghép các khối vào với nhau, ấn "Chạy"
+          để bắt đầu chương trình.
+      courseD_maze_ramp1_2018:
+        grade2_CaringForNewPet_0_1: Sau khi đã ghép các khối vào với nhau, ấn "Chạy"
+          để bắt đầu chương trình.
+      courseD_maze_ramp1_2019:
+        grade2_CaringForNewPet_0_1: Sau khi đã ghép các khối vào với nhau, ấn "Chạy"
+          để bắt đầu chương trình.
+      courseD_maze_ramp2:
+        courseC_maze_programming2_1: Đây là hộp công cụ chứa các khối dùng để viết
+          chương trình.
+      courseD_maze_ramp2_2018:
+        courseC_maze_programming2_1: Đây là hộp công cụ chứa các khối dùng để viết
+          chương trình.
+      courseD_maze_ramp2_2019:
+        courseC_maze_programming2_1: Đây là hộp công cụ chứa các khối dùng để viết
+          chương trình.
+      courseD_scrat_ramp1:
+        grade2_CaringForNewPet_0_1: Sau khi đã ghép các khối vào với nhau, ấn "Chạy"
+          để bắt đầu chương trình.
+      courseD_scrat_ramp2:
+        courseC_maze_programming2_1: Đây là hộp công cụ chứa các khối dùng để viết
+          chương trình.
       frozen circle function with parameter:
         frozen_circle_function_with_parameter_circle: Sử dụng khối "tạo ra một vòng
           tròn" và thay đổi kích thước.

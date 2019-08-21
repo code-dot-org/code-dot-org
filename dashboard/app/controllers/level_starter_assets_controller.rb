@@ -1,9 +1,12 @@
 class LevelStarterAssetsController < ApplicationController
+  authorize_resource class: false, except: [:show, :file]
+  before_action :require_levelbuilder_mode, except: [:show, :file]
   before_action :set_level
   skip_before_action :verify_authenticity_token, only: [:destroy]
 
   S3_BUCKET = 'cdo-v3-assets'.freeze
   S3_PREFIX = 'starter_assets/'.freeze
+  VALID_FILE_EXTENSIONS = %w(.jpg .jpeg .gif .png .mp3)
 
   # GET /level_starter_assets/:level_name
   def show
@@ -29,8 +32,6 @@ class LevelStarterAssetsController < ApplicationController
 
   # POST /level_starter_assets/:level_name
   def upload
-    return head :forbidden unless current_user&.levelbuilder? && Rails.application.config.levelbuilder_mode
-
     # Client expects a single file upload, so raise an error if params[:files] contains more than one file.
     if params[:files].length > 1
       raise "One file upload expected. Actual: #{params[:files].length}"
@@ -38,12 +39,18 @@ class LevelStarterAssetsController < ApplicationController
 
     upload = params[:files]&.first
     friendly_name = upload.original_filename
+    file_ext = File.extname(friendly_name)
+
+    unless VALID_FILE_EXTENSIONS.include?(file_ext)
+      return head :unprocessable_entity
+    end
+
     # Replace the friendly file name with a UUID for storage in S3 to avoid naming conflicts.
-    uuid_name = SecureRandom.uuid + File.extname(friendly_name)
+    uuid_name = SecureRandom.uuid + file_ext
     file_obj = get_object(uuid_name)
     success = file_obj&.upload_file(upload.tempfile.path)
 
-    if success && @level.add_starter_asset(friendly_name, uuid_name)
+    if success && @level.add_starter_asset!(friendly_name, uuid_name)
       render json: summarize(file_obj, friendly_name, uuid_name)
     else
       return head :unprocessable_entity

@@ -56,12 +56,20 @@
     "top_level_procedure_autopopulate": "false",
     "show_type_hints": "false",
     "remove_items_when_actor_collides": "false",
-    "contained_level_names": null,
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted": "false",
+    "encrypted_examples": [
+
+    ],
+    "long_instructions": "Make this more interesting by changing the background and playing a random sound when Jorge is clicked.",
+    "mini_rubric": "false",
+    "default_num_example_blocks": "false"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-08-03 17:59:10 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2018-05-17 19:27:25 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-08-03 17:59:10 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2018-05-17 19:27:25 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2019-08-16 18:46:45 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks>
     <toolbox_blocks>

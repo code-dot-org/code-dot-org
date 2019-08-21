@@ -91,8 +91,8 @@ module Pd::SurveyPipeline
         qnames_in_cateogry = qname_replacements.values.select {|val| val.start_with? category_name}
 
         category_scores = avg_scores[facilitator_name].values_at(*qnames_in_cateogry).compact
-        this_workshop_scores = category_scores.pluck(:this_workshop)
-        all_workshop_scores = category_scores.pluck(:all_my_workshops)
+        this_workshop_scores = category_scores.pluck(:this_workshop).compact
+        all_workshop_scores = category_scores.pluck(:all_my_workshops).compact
 
         avg_scores[facilitator_name][category_name] ||= {}
         avg_scores[facilitator_name][category_name][:this_workshop] =
