@@ -108,6 +108,7 @@ eos
         href = link['href']
         next if href == params[:unsubscribe_link]
         next if href =~ /users\/password\/edit/
+        next if href =~ /users\/confirmation/
         next unless href =~ /^http:\/\// || href =~ /^https:\/\//
 
         url_id = Poste2.find_or_create_url(href)
