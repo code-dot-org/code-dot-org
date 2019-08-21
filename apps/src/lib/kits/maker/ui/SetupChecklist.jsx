@@ -17,6 +17,8 @@ import {
 import ValidationStep, {Status} from '../../../ui/ValidationStep';
 import {BOARD_TYPE} from '../CircuitPlaygroundBoard';
 import experiments from '@cdo/apps/util/experiments';
+import _ from 'lodash';
+import yaml from 'js-yaml';
 
 const STATUS_SUPPORTED_BROWSER = 'statusSupportedBrowser';
 const STATUS_APP_INSTALLED = 'statusAppInstalled';
@@ -157,12 +159,15 @@ export default class SetupChecklist extends Component {
    */
   updateBoardFirmware() {
     this.setState({[STATUS_BOARD_FIRMWARE]: Status.ATTEMPTING});
-    return window.MakerBridge.flashBoardFirmware({
-      boardName: 'circuit-playground-classic',
-      hexPath:
-        'https://s3.amazonaws.com/downloads.code.org/maker/CircuitPlaygroundFirmata.ino.circuitplay32u4.hex',
-      checksum: '766c4fad9088037ab4839b18292be8b1'
-    }).then(() => this.setState({[STATUS_BOARD_FIRMWARE]: Status.SUCCEEDED}));
+    latestFirmware(
+      'https://s3.amazonaws.com/downloads.code.org/maker/latest-firmware.yml'
+    ).then(firmware => {
+      return window.MakerBridge.flashBoardFirmware({
+        boardName: 'circuit-playground-classic',
+        hexPath: firmware.url,
+        checksum: firmware.checksum
+      }).then(() => this.setState({[STATUS_BOARD_FIRMWARE]: Status.SUCCEEDED}));
+    });
   }
 
   /**
@@ -364,6 +369,16 @@ export default class SetupChecklist extends Component {
     );
   }
 }
+
+const latestFirmware = _.memoize(latestYamlUrl => {
+  return fetch(latestYamlUrl, {mode: 'cors'})
+    .then(response => response.text())
+    .then(text => yaml.safeLoad(text))
+    .then(data => ({
+      url: data.url,
+      checksum: data.checksum
+    }));
+});
 
 function promiseWaitFor(ms) {
   return new Promise(resolve => {
