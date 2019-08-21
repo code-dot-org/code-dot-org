@@ -64,7 +64,7 @@ class LevelStarterAssetsController < ApplicationController
   def destroy
     return head :forbidden unless current_user&.levelbuilder? && Rails.application.config.levelbuilder_mode
 
-    if @level.remove_starter_asset("#{params[:filename]}.#{params[:format]}")
+    if @level.remove_starter_asset!("#{params[:filename]}.#{params[:format]}")
       return head :no_content
     else
       return head :unprocessable_entity
