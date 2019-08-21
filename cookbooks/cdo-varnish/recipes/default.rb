@@ -6,6 +6,8 @@
 # Varnish 4.0 vmods from PPA.
 apt_repository 'varnish-4.0-vmods' do
   uri          'ppa:wjordan/varnish-vmods'
+  key          '71C80CF1F31D0E9BD494DBA3133AD1543642895A'
+  keyserver    'keyserver.ubuntu.com'
   distribution 'trusty'
   retries 3
 end
