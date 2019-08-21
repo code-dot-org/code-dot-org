@@ -7,6 +7,7 @@ import i18n from '@cdo/locale';
 import {connect} from 'react-redux';
 import {actions, REDIRECT_RESPONSE} from './redux/applab';
 import {studio} from '@cdo/apps/lib/util/urlHelpers';
+import {BASE_DIALOG_WIDTH} from '@cdo/apps/constants';
 
 const styles = {
   title: {
@@ -14,8 +15,6 @@ const styles = {
     wordWrap: 'break-word'
   }
 };
-
-const DIALOG_WIDTH = 700;
 
 class ExternalRedirectDialog extends React.Component {
   static propTypes = {
@@ -90,7 +89,7 @@ class ExternalRedirectDialog extends React.Component {
     return (
       <Dialog
         title={title}
-        fullWidth={window.innerWidth < DIALOG_WIDTH}
+        fullWidth={window.innerWidth < BASE_DIALOG_WIDTH}
         isOpen
         handleClose={this.props.handleClose}
       >
