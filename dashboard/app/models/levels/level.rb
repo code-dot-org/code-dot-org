@@ -616,10 +616,10 @@ class Level < ActiveRecord::Base
   end
 
   # Remove a starter asset by its key (friendly_name) from the level's properties.
-  def remove_starter_asset(friendly_name)
+  def remove_starter_asset!(friendly_name)
     return unless starter_assets
     starter_assets.delete(friendly_name)
-    save
+    save!
   end
 
   private
