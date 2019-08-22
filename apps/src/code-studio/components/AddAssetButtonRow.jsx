@@ -3,7 +3,6 @@ import React from 'react';
 import AssetUploader from './AssetUploader';
 import Button from '../../templates/Button';
 import i18n from '@cdo/locale';
-import {isIE11} from '@cdo/apps/util/browser-detector';
 
 export const assetButtonStyles = {
   button: {
@@ -60,7 +59,10 @@ export default class AddAssetButtonRow extends React.Component {
 
   render() {
     let shouldShowRecordButton = !this.props.hideAudioRecording;
-    if (isIE11()) {
+    if (
+      navigator.userAgent.indexOf('Firefox') === -1 &&
+      navigator.userAgent.indexOf('Chrome') === -1
+    ) {
       shouldShowRecordButton = false;
     }
     return (
