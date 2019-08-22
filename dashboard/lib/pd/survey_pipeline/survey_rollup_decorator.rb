@@ -1,20 +1,9 @@
 module Pd::SurveyPipeline
-  class SurveyRollupDecorator < SurveyPipelineWorker
-    def self.process_data(context)
-      check_required_input_keys self::INPUT_KEYS, context
-
-      results = decorate(*context.values_at(*self::INPUT_KEYS))
-
-      self::OUTPUT_KEYS.each do |key|
-        context[key] ||= {}
-        context[key].deep_merge! results[key]
-      end
-
-      context
-    end
-
-    def self.decorate(summaries, facilitator_id, current_workshop_id, related_workshop_ids,
-      submissions, submission_type, parsed_questions, question_categories, errors = [])
+  module SurveyRollupDecorator
+    def decorate_rollup_results(
+      summaries, facilitator_id, current_workshop_id, related_workshop_ids,
+      submissions, submission_type, parsed_questions, question_categories, errors = []
+    )
       result = {
         facilitators: {},
         current_workshop: current_workshop_id,
