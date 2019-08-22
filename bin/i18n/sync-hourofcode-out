@@ -49,19 +49,22 @@ def copy_from_i18n_source_to_hoc
       FileUtils.mkdir_p(language_folder + "/promote")
     end
 
-    i18n_dir = Dir["i18n/locales/#{prop[:locale_s]}/hourofcode/*.{md,md.partial}"]
+    # Crowdin didn't place nicely with changing the file extensions from md to md.partial
+    # As a hopefully temporary solution, on the sync in we remove the .partial ending and
+    # here we add it back.
+    i18n_dir = Dir["i18n/locales/#{prop[:locale_s]}/hourofcode/*.md"]
     i18n_dir.each do |file|
-      FileUtils.cp(file, hoc_path + "/public/#{prop[:unique_language_s]}/#{File.basename(file)}")
+      FileUtils.cp(file, hoc_path + "/public/#{prop[:unique_language_s]}/#{File.basename(file)}.partial")
     end
 
-    i18n_dir = Dir["i18n/locales/#{prop[:locale_s]}/hourofcode/how-to/*.{md,md.partial}"]
+    i18n_dir = Dir["i18n/locales/#{prop[:locale_s]}/hourofcode/how-to/*.md"]
     i18n_dir.each do |file|
-      FileUtils.cp(file, hoc_path + "/public/#{prop[:unique_language_s]}/how-to/#{File.basename(file)}")
+      FileUtils.cp(file, hoc_path + "/public/#{prop[:unique_language_s]}/how-to/#{File.basename(file)}.partial")
     end
 
-    i18n_dir = Dir["i18n/locales/#{prop[:locale_s]}/hourofcode/promote/*.{md,md.partial}"]
+    i18n_dir = Dir["i18n/locales/#{prop[:locale_s]}/hourofcode/promote/*.md"]
     i18n_dir.each do |file|
-      FileUtils.cp(file, hoc_path + "/public/#{prop[:unique_language_s]}/promote/#{File.basename(file)}")
+      FileUtils.cp(file, hoc_path + "/public/#{prop[:unique_language_s]}/promote/#{File.basename(file)}.partial")
     end
 
     puts "Copied locale #{prop[:unique_language_s]}"
