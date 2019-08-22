@@ -10,6 +10,7 @@ import {connect} from 'react-redux';
 import {clearWarning} from '../redux/data';
 import msg from '@cdo/locale';
 import color from '../../util/color';
+import experiments from '../../util/experiments';
 
 const styles = {
   container: {
@@ -18,13 +19,19 @@ const styles = {
     bottom: 0,
     left: 0,
     right: 0,
-    padding: 10,
+    padding: experiments.isEnabled(experiments.APPLAB_DATASETS) ? 0 : 10,
     backgroundColor: color.white,
     boxSizing: 'border-box',
     borderLeft: '1px solid gray',
     borderRight: '1px solid gray',
     borderBottom: '1px solid gray',
     overflowY: 'auto'
+  },
+  libraryHeader: {
+    display: 'block',
+    width: 270,
+    borderRight: '1px solid gray',
+    float: 'left'
   }
 };
 
@@ -55,6 +62,11 @@ class DataWorkspace extends React.Component {
           hasFocus={!this.props.isRunning}
           className={this.props.isRunning ? 'is-running' : ''}
         >
+          {experiments.isEnabled(experiments.APPLAB_DATASETS) && (
+            <PaneSection id="library-header" style={styles.libraryHeader}>
+              <span id="library-header-span">{msg.dataLibraryHeader()}</span>
+            </PaneSection>
+          )}
           <div id="dataModeHeaders">
             <PaneButton
               id="data-mode-versions-header"
