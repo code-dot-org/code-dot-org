@@ -1,4 +1,4 @@
-name 'csp-u1-exam1-represent-numbers_2020'
+name 'csp-u1-exam1-convert-binary_2020'
 height 'auto'
 
 question 'Convert the binary (base-2) number 1001 to decimal (base-10).’
