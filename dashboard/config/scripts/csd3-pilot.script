@@ -64,6 +64,7 @@ stage 'Random Numbers', flex_category: 'csd3_1'
 level 'CSD U3 Random random ellipse_2018_pilot', progression: 'Exploring Random Numbers'
 level 'CSD U3 Random random ellipse2_2018_pilot', progression: 'Using Random Numbers'
 level 'CSD U3 Variables random with assignment_pilot', progression: 'Using Random Numbers'
+level 'CSD U3 Variables random reassign', progression: 'Using Random Numbers'
 level 'CSD games random practice', progression: 'Using Random Numbers'
 level 'CSD U3 Random rainbow snake_2018_pilot', progression: 'Using Random Numbers', assessment: true
 level 'CSD games random challenge', named: true

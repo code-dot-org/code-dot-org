@@ -103,7 +103,7 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
   test 'exclude local summer workshops if exclude_summer present' do
     sign_in @organizer
 
-    create :workshop, :local_summer_workshop, organizer: @organizer
+    create :summer_workshop, organizer: @organizer
 
     get :index, params: {exclude_summer: 1}
     assert_response :success
@@ -115,7 +115,7 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
   test 'includes local summer workshop if exclude_summer not present' do
     sign_in @organizer
 
-    summer_workshop = create :workshop, :local_summer_workshop, organizer: @organizer
+    summer_workshop = create :summer_workshop, organizer: @organizer
 
     get :index, params: {}
     response = JSON.parse(@response.body)
@@ -150,24 +150,17 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
     teacher = create :teacher
     sign_in(teacher)
 
-    teachercon = create(
-      :workshop,
+    teachercon = create :workshop,
       :teachercon,
       :funded,
       organizer: @organizer,
       facilitators: [@facilitator],
       regional_partner: @regional_partner
-    )
 
-    fit_weekend = create(
-      :workshop,
-      :funded,
-      subject: Pd::Workshop::SUBJECT_CSD_FIT,
-      course: Pd::Workshop::COURSE_CSD,
+    fit_weekend = create :fit_workshop,
       organizer: @organizer,
       facilitators: [@facilitator],
       regional_partner: @regional_partner
-    )
 
     create(:pd_enrollment, workshop: teachercon, email: teacher.email, user_id: teacher.id)
     create(:pd_enrollment, workshop: fit_weekend, email: teacher.email, user_id: teacher.id)
@@ -188,26 +181,19 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
     teacher = create :teacher
     sign_in(teacher)
 
-    teachercon = create(
-      :workshop,
+    teachercon = create :workshop,
       :ended,
       :teachercon,
       :funded,
       organizer: @organizer,
       facilitators: [@facilitator],
       regional_partner: @regional_partner
-    )
 
-    fit_weekend = create(
-      :workshop,
+    fit_weekend = create :fit_workshop,
       :ended,
-      :funded,
-      subject: Pd::Workshop::SUBJECT_CSD_FIT,
-      course: Pd::Workshop::COURSE_CSD,
       organizer: @organizer,
       facilitators: [@facilitator],
       regional_partner: @regional_partner
-    )
 
     teachercon_enrollment = create(:pd_enrollment, workshop: teachercon, email: teacher.email, user_id: teacher.id)
     fit_weekend_enrollment = create(:pd_enrollment, workshop: fit_weekend, email: teacher.email, user_id: teacher.id)
