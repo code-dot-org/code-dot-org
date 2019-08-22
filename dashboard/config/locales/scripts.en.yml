@@ -13241,3 +13241,29 @@ en:
           description_audience: ''
           description_short: ''
           description: ''
+        peru-2019:
+          stages:
+            new stage:
+              name: new stage
+            Introduction:
+              name: Introduction
+            Debugging in Collector:
+              name: Debugging in Collector
+            'Loops: My Loopy Robotic Friends':
+              name: 'Loops: My Loopy Robotic Friends'
+            Loops in Artist:
+              name: Loops in Artist
+            Nested Loops:
+              name: Nested Loops
+            Nested Loops Project in Frozen:
+              name: Nested Loops Project in Frozen
+            Events in Star Wars:
+              name: Events in Star Wars
+            Introduction to Debugging:
+              name: Introduction to Debugging
+            Nested Loops in Frozen:
+              name: Nested Loops in Frozen
+          title: Hora del Código Peru 2019
+          description_audience: ''
+          description_short: ''
+          description: ''

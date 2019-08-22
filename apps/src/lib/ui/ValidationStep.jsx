@@ -9,7 +9,8 @@ export const Status = {
   SUCCEEDED: 'SUCCEEDED',
   FAILED: 'FAILED',
   CELEBRATING: 'CELEBRATING',
-  UNKNOWN: 'UNKNOWN'
+  UNKNOWN: 'UNKNOWN',
+  ALERT: 'ALERT'
 };
 
 const style = {
@@ -48,9 +49,12 @@ export default class ValidationStep extends Component {
 
   render() {
     const {stepName, stepStatus, alwaysShowChildren, children} = this.props;
-    // By default, we only show the children if the step failed. If alwaysShowChildren
-    // is set, show them regardless
-    let showChildren = alwaysShowChildren || stepStatus === Status.FAILED;
+    // By default, we only show the children if the step failed or alerted.
+    // If alwaysShowChildren is set, show them regardless
+    let showChildren =
+      alwaysShowChildren ||
+      stepStatus === Status.FAILED ||
+      stepStatus === Status.ALERT;
 
     return (
       <div style={style.root}>
@@ -78,6 +82,8 @@ function styleFor(stepStatus) {
       return {color: color.realgreen};
     case Status.UNKNOWN:
       return {color: color.light_gray};
+    case Status.ALERT:
+      return {color: color.charcoal};
     default:
       return {
         color: color.red,
@@ -121,6 +127,14 @@ function iconFor(stepStatus) {
       return (
         <FontAwesome
           icon="question-circle"
+          className="fa-fw"
+          style={iconStyle}
+        />
+      );
+    case Status.ALERT:
+      return (
+        <FontAwesome
+          icon={'exclamation-triangle'}
           className="fa-fw"
           style={iconStyle}
         />

@@ -76,10 +76,14 @@ export function getConfigRef() {
 }
 
 export function getRecordsRef(tableName) {
-  return getDatabase().child(`storage/tables/${tableName}/records`);
+  return getProjectDatabase().child(`storage/tables/${tableName}/records`);
 }
 
-export function getDatabase() {
+export function getSharedDatabase() {
+  return getFirebase().child('v3/channels/shared');
+}
+
+export function getProjectDatabase() {
   const path = `v3/channels/${config.channelId}${
     config.firebaseChannelIdSuffix
   }`;
