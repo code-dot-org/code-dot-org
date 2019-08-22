@@ -87,6 +87,13 @@ export function isNodeSerialAvailable() {
 }
 
 /**
+ * @returns {boolean} Whether WebUSB is available
+ */
+export function isWebUsbAvailable() {
+  return navigator.usb !== undefined;
+}
+
+/**
  * Given a collection of serial port configurations, pick the one that is
  * most likely to be compatible with maker toolkit.
  * @param {Array.<SerialPortInfo>} portList
