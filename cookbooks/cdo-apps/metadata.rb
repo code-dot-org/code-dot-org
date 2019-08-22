@@ -8,6 +8,7 @@ version          '0.2.361'
 
 depends 'apt'
 depends 'build-essential'
+depends 'packagecloud'
 
 depends 'cdo-cloudwatch-extra-metrics'
 depends 'cdo-repository'

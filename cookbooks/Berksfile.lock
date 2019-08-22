@@ -62,6 +62,7 @@ DEPENDENCIES
     revision: fb14d4f0e4caf21dd835739e58d372c66dca8a6e
     branch: cdo
   ntp (~> 1.8.6)
+  packagecloud
   seven_zip (< 3.0.0)
   sudo-user
     path: sudo-user
@@ -150,6 +151,7 @@ GRAPH
     apt (~> 2.6.0)
   cdo-varnish (0.3.218)
     apt (>= 0.0.0)
+    packagecloud (>= 0.0.0)
   chef-client (11.3.0)
     cron (>= 4.2.0)
     logrotate (>= 1.9.0)
@@ -164,6 +166,8 @@ GRAPH
     ark (>= 2.0.2)
     build-essential (>= 0.0.0)
   ntp (1.8.6)
+  ohai (5.2.5)
+  packagecloud (1.0.1)
   poise (2.8.2)
   poise-archive (1.5.0)
     poise (~> 2.6)
