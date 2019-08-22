@@ -1,8 +1,8 @@
-import {getDatabase} from './firebaseUtils';
+import {getProjectDatabase} from './firebaseUtils';
 import _ from 'lodash';
 
-export function getColumnsRef(tableName) {
-  return getDatabase().child(`metadata/tables/${tableName}/columns`);
+export function getColumnsRef(database, tableName) {
+  return database.child(`metadata/tables/${tableName}/columns`);
 }
 
 /**
@@ -12,7 +12,7 @@ export function getColumnsRef(tableName) {
  * none exists.
  */
 export function getColumnRefByName(tableName, columnName) {
-  return getColumnsRef(tableName)
+  return getColumnsRef(getProjectDatabase(), tableName)
     .once('value')
     .then(columnsSnapshot => {
       const columns = columnsSnapshot.val();
@@ -21,7 +21,7 @@ export function getColumnRefByName(tableName, columnName) {
         column => column.columnName === columnName
       );
       if (key) {
-        return getColumnsRef(tableName).child(key);
+        return getColumnsRef(getProjectDatabase(), tableName).child(key);
       }
       return Promise.resolve();
     });
@@ -45,7 +45,7 @@ export function getColumnNamesFromRecords(records) {
  * @returns {Promise} Promise containing an array of column names.
  */
 export function getColumnNames(tableName) {
-  const columnsRef = getColumnsRef(tableName);
+  const columnsRef = getColumnsRef(getProjectDatabase(), tableName);
   return columnsRef.once('value').then(snapshot => {
     const columnsData = snapshot.val() || {};
     return _.values(columnsData).map(column => column.columnName);
@@ -55,7 +55,7 @@ export function getColumnNames(tableName) {
 export function addColumnName(tableName, columnName) {
   return getColumnRefByName(tableName, columnName).then(columnRef => {
     if (!columnRef) {
-      return getColumnsRef(tableName)
+      return getColumnsRef(getProjectDatabase(), tableName)
         .push()
         .set({columnName});
     }
@@ -77,15 +77,15 @@ export function renameColumnName(tableName, oldName, newName) {
     if (columnRef) {
       return columnRef.set({columnName: newName});
     } else {
-      return getColumnsRef(tableName)
+      return getColumnsRef(getProjectDatabase(), tableName)
         .push()
         .set({columnName: newName});
     }
   });
 }
 
-export function onColumnNames(tableName, callback) {
-  getColumnsRef(tableName).on('value', snapshot => {
+export function onColumnNames(database, tableName, callback) {
+  getColumnsRef(database, tableName).on('value', snapshot => {
     const columnsData = snapshot.val() || {};
     const columnNames = _.values(columnsData).map(column => column.columnName);
     callback(columnNames);
@@ -100,14 +100,14 @@ export function onColumnNames(tableName, callback) {
  */
 export function addMissingColumns(tableName) {
   return getColumnNames(tableName).then(existingColumnNames => {
-    const recordsRef = getDatabase().child(
+    const recordsRef = getProjectDatabase().child(
       `storage/tables/${tableName}/records`
     );
     return recordsRef.once('value').then(snapshot => {
       const recordsData = snapshot.val() || {};
       getColumnNamesFromRecords(recordsData).forEach(columnName => {
         if (!existingColumnNames.includes(columnName)) {
-          getColumnsRef(tableName)
+          getColumnsRef(getProjectDatabase(), tableName)
             .push()
             .set({columnName});
         }

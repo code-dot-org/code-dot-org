@@ -1,0 +1,27 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2019-08-19T17:32:18.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "long_instructions": "## Digital Divide\r\n\r\nWhat is one of the subgroups that is underrepresented online as a result of the digital divide?  What action could an organization or government take to help address this divide?",
+    "encrypted_solution": "fRB4s6Lrqzl0YtvIsKvGQ18gPZqF/Cy4Yq5iEzGx9VNZidxMxdGP+51b1wRO\n1f8Ke4eSNi7uZIxsBd8wCsww04sqCOuRsemvBZurh9bjpZG7pXeFzhDvyzx2\n8wK0C+GRTBwOIZLyuNcBr0oNaiujH0IgwJRTduVonf9++r5w8KRrB5rE01fH\nWW3nBnqCtdsFdfRD+y4V17/kIidsA6B6PvIe+ppnq9hKqVFNl/JyDOys4ODQ\njeVeXmr/+vyp07gyn9IpwAo6MI+NUm/+zGeIUylmlrwtktwtCQxhRovP2bC5\nF20wOfxWjAfysn2q8D8lSCsI1tBSz7wO7d4n3jOFZOutd5JkHWkEAlM1+VsB\nnRLw81SoLgSqrvp4LI0LycldBCiQlWkJoKrzV8bF6o330fys4bZpjb9Gn61k\naiqJMVk=\n",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 19010,
+    "name_suffix": "_2019",
+    "encrypted": "false",
+    "instructions_important": "false",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2019-08-19 16:02:07 +0000\",\"changed\":[\"notes\",\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-08-19 16:37:18 +0000\",\"changed\":[\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-08-19 16:58:58 +0000\",\"changed\":[\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-08-19 17:33:41 +0000\",\"changed\":[\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

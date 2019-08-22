@@ -1840,6 +1840,10 @@ sk-SK:
     aktualizujte si váš ineternetový prehliadač, <a href='%{supported_browsers_url}',
     target='_blank'> na jeden z našich podporovaných prehliadačov</a>. Môžete si pozrieť
     stránku, ale očakávajte poruchy niektorých funckionalít.
+  compatibility_unsupported_browser_markdown: Váš ineternetový prehliadač nepodporujeme.
+    Prosím aktualizujte si váš ineternetový prehliadač, <a href='%{supported_browsers_url}',
+    target='_blank'> na jeden z našich podporovaných prehliadačov</a>. Môžete si pozrieť
+    stránku, ale očakávajte poruchy niektorých funckionalít.
   flappy_shortcode: mávni
   infinity_shortcode: inf
   header_home: Domov

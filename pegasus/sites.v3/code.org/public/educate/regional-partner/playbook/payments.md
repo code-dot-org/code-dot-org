@@ -105,7 +105,7 @@ Code.org will provide Partners with limited travel support for CS Fundamentals f
 
 Travel support will be provided by the following reimbursement process:
 
-- Regional Partner should complete the form at [bit.ly/codeinvoices](bit.ly/codeinvoices) within 30 days of when the expenses were incurred.
+- Regional Partner should complete the form at [bit.ly/codeinvoices](http://bit.ly/codeinvoices) within 30 days of when the expenses were incurred.
 - Invoice total can be up to 500 dollars.
 - Reimbursable expenses include items like mileage, rental car, hotel, meals, etc. Refer to the 6-12 <a href="https://docs.google.com/document/d/1ichRN3P8XU71Ksr6VjejS6uYDK9yL3SMqEQjchm7xSo/edit" target=_blank>travel policy</a> for suggested guidance of reasonable expenses. Note that Egencia is not used for CS Fundamentals facilitator travel, yet. 
 - Payment will be provided independent of the regular workshop payment that is generated automatically from the workshop dashboard.

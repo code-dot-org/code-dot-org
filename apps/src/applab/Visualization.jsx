@@ -58,6 +58,12 @@ class Visualization extends React.Component {
     widgetMode: PropTypes.bool
   };
 
+  state = {
+    appWidth: this.props.widgetMode
+      ? applabConstants.WIDGET_WIDTH
+      : applabConstants.APP_WIDTH
+  };
+
   handleDisableMaker = () => project.toggleMakerEnabled();
 
   handleTryAgain = () => {
@@ -66,9 +72,7 @@ class Visualization extends React.Component {
   };
 
   render() {
-    const appWidth = this.props.widgetMode
-      ? applabConstants.WIDGET_WIDTH
-      : applabConstants.APP_WIDTH;
+    const {appWidth} = this.state;
     const appHeight =
       applabConstants.APP_HEIGHT - applabConstants.FOOTER_HEIGHT;
 
@@ -123,6 +127,8 @@ class Visualization extends React.Component {
     );
   }
 }
+
+export const UnconnectedVisualization = Visualization;
 
 export default connect(state => ({
   visualizationHasPadding: state.pageConstants.visualizationHasPadding,
