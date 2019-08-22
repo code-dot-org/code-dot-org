@@ -158,54 +158,33 @@ module Pd::SurveyPipeline::Helper
   #
   # @return [Hash]
   #
+  # TODO: break long function into smaller functions. Prefer to keep the flow natural: retrieving
+  # data, then do something...
   def report_single_workshop(workshop, current_user)
-    # Fields used to group survey answers
-    group_config = [:workshop_id, :day, :facilitator_id, :form_id, :name, :type, :answer_type]
+    questions, ws_submissions, facilitator_submissions =
+      Pd::SurveyPipeline::DailySurveyRetriever.get_surveys_by_workshop_and_form [workshop.id]
 
-    # Rules to map groups of survey answers to reducers
-    is_single_select_answer = lambda {|hash| hash.dig(:answer_type) == 'singleSelect'}
-    not_single_select_answer = lambda {|hash| hash.dig(:answer_type) != 'singleSelect'}
+    parsed_questions = Pd::SurveyPipeline::DailySurveyParser.parse_questions(questions)
+    parsed_submissions =
+      Pd::SurveyPipeline::DailySurveyParser.parse_submissions(ws_submissions + facilitator_submissions)
 
-    map_config = [
-      {
-        condition: is_single_select_answer,
-        field: :answer,
-        reducers: [Pd::SurveyPipeline::HistogramReducer]
-      },
-      {
-        condition: not_single_select_answer,
-        field: :answer,
-        reducers: [Pd::SurveyPipeline::NoOpReducer]
-      }
-    ]
+    question_answer_joined =
+      Pd::SurveyPipeline::DailySurveyJoiner.join_question_submission parsed_questions, parsed_submissions
 
-    # Centralized context object shared by all workers in the pipeline.
-    # Workers read from and write to this object.
-    context = {
-      current_user: current_user,
-      filters: {workshop_ids: workshop.id}
-    }
+    group_keys = [:workshop_id, :day, :facilitator_id, :form_id, :name, :type, :answer_type]
+    question_answer_groups =
+      Pd::SurveyPipeline::GenericMapper.group_data question_answer_joined, group_keys
 
-    # Assembly line to summarize CSF surveys
-    workers = [
-      Pd::SurveyPipeline::DailySurveyRetriever,
-      Pd::SurveyPipeline::DailySurveyParser,
-      Pd::SurveyPipeline::DailySurveyJoiner,
-      Pd::SurveyPipeline::GenericMapper.new(
-        group_config: group_config, map_config: map_config
-      ),
-      Pd::SurveyPipeline::DailySurveyDecorator
-    ]
+    map_config = Pd::SurveyPipeline::GenericMapper.get_default_map_config
+    summaries, errors =
+      Pd::SurveyPipeline::GenericMapper.map_groups_to_reducers question_answer_groups, map_config
 
-    create_generic_survey_report context, workers
-    context[:decorated_summaries]
-  end
+    single_workshop_report =
+      Pd::SurveyPipeline::DailySurveyDecorator.decorate_single_workshop_results(
+        summaries, parsed_questions, parsed_submissions, current_user, errors
+      )
 
-  # Create survey report by having a group of workers process data in the same context.
-  def create_generic_survey_report(context, workers)
-    workers&.each do |w|
-      w.process_data context
-    end
+    single_workshop_report
   end
 
   # Find all workshops of the same course and facilitated by a facilitator.
@@ -232,6 +211,7 @@ module Pd::SurveyPipeline::Helper
   # @return [Hash{:facilitator_submissions, :survey_questions => Array}]
   #
   # TODO: Move these functions into a Retriever
+  # TODO: Return an array of values (no named values) instead of a hash
   #
   def retrieve_facilitator_surveys(facilitator_ids, ws_ids)
     fac_submissions = Pd::WorkshopFacilitatorDailySurvey.where(
