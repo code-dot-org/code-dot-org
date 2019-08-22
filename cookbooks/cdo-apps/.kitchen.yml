@@ -11,9 +11,14 @@ driver:
 
 transport:
   name: dokken
+
 provisioner:
   name: dokken
   chef_license: accept
+  environments_path: test/environments
+  client_rb:
+    environment: adhoc
+
 platforms:
   - name: ubuntu-14.04
     driver:
@@ -33,6 +38,7 @@ platforms:
         branch: <%= `git rev-parse --abbrev-ref HEAD` %>
     run_list:
       - recipe[cdo-apps]
+
 suites:
   - name: default
   - name: daemon
