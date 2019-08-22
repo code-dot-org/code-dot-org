@@ -37,12 +37,21 @@
     "disable_if_else_editing": "false",
     "parent_level_id": 11818,
     "name_suffix": "_2019",
-    "contained_level_names": null,
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted": "false",
+    "encrypted_examples": [
+
+    ],
+    "long_instructions": "This is a new type of puzzle called \"Artist\". Play with the level and draw something fun.",
+    "mini_rubric": "false",
+    "top_level_procedure_autopopulate": "false",
+    "show_type_hints": "false"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-07-28 22:07:35 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"never_autoplay_video\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-07-28 22:07:35 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"never_autoplay_video\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2019-08-08 23:57:14 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks>
     <start_blocks>

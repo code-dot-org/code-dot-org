@@ -4158,6 +4158,8 @@ sk:
               name: Posielanie binárnych správ
             Sending Binary Messages with the Internet Simulator:
               name: Posielanie binárnych správ s internetovým simulátorom
+            Binary Numbers:
+              name: Binárne čísla
         time4csdemo:
           stages:
             Crowdsourcing:

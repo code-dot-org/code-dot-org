@@ -1970,6 +1970,8 @@ sv:
               name: Talsystem
             Sending Binary Messages:
               name: Skicka binära meddelanden
+            Binary Numbers:
+              name: Binära tal
         time4csdemo:
           stages:
             Crowdsourcing:

@@ -2353,6 +2353,8 @@ nn:
               name: Sende binære meldingar
             Sending Binary Messages with the Internet Simulator:
               name: Sende binære meldingar med Internett Simulator
+            Binary Numbers:
+              name: Binære tal
         time4csdemo:
           stages:
             Crowdsourcing:

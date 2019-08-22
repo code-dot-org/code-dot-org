@@ -1092,6 +1092,7 @@
   alice_beyond_longdescription: "Duke përdorur një mjedis programimi inovativ që suporton krijimet e animimeve 3D, Projetki i Alice siguron mjete dhe materiale për të mësuar dhe shpjeguar mendimin kompjuterik, zgjidhjen e problemeve, dhe programimin kompjuterik ndërmjet një spektri moshash dhe nivelesh."
   sphero_beyond_longdescription: "Nëse je edukues ose prind, mësimet SPRK i japin fëmijëve një kurs argëtues në programim robotash ndërsa mprehin njohuritë e tyre në matematikë dhe shkencë."
   compatibility_unsupported_browser: "Shfletuesi juaj nuk suportohet. Ju lutem përmirësoni versionin e shfletuesit në <a href='%{supported_browsers_url}', target='_blank'> një nga shfletuesit që suportohen</a>. Ju mund të provoni ta shikoni faqen, por mundet që të mos funksionojë."
+  compatibility_unsupported_browser_markdown: "Shfletuesi juaj nuk suportohet. Ju lutem përmirësoni versionin e shfletuesit në <a href='%{supported_browsers_url}', target='_blank'> një nga shfletuesit që suportohen</a>. Ju mund të provoni ta shikoni faqen, por mundet që të mos funksionojë."
   flappy_shortcode: "përplas flatrat"
   header_courses: "Kurset"
   header_project_gallery: "Projekte"

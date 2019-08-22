@@ -3,25 +3,28 @@ display_name 'Project Guide'
 title 'Your Personal Website'
 description 'description here'
 markdown <<MARKDOWN
-# Your Personal Website
+# Your Personal Web Page
 
-In the next few levels, you'll be completing and publishing your personal website.
+In the next few levels, you'll be completing and publishing your personal web page.  This is your chance to share your ideas with the world, and also to show all the things that you have learned.
 
-You've already done a lot of work on your website, but this is your chance to get creative and add a new page of something that you care about.
+You'll need...
 
-Here are some ideas for your new page, but you can do anything approved by your teacher.
+* Your completed project guide
+* The images you downloaded
+* The project rubric
 
-* A movie, television, or book review
-* Description of a favorite holiday tradition
-* A "cause" page that explains an issue that is important to you
+Here are the things you have learned...
 
-If you have more than one idea, you can add multiple pages to your site.
-
-Your Project Guide will help you remember everything you need to do.  Make sure you have your teacher's approval before moving to the next level.
+* How to use HTML to structure the content of your page
+* How to use CSS to style the text, colors, and layout of your page
+* How to format your code to make it easier to read
+* How to debug HTML and CSS code
+* How to use use images in a responsible way
+* How to protect your personal information online
 
 ## Examples
 
-[![](https://images.code.org/77ab5eb6cbec8541f8ec83134fbb2e2d-image-1494627985387.24.43 PM.png)](https://codeprojects.org/2KO4FIjN89QPeYnTG_NzLIjroaG8daOY3jRl5uHm1Co) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[![](https://images.code.org/2e39e80cb5227d908426184019fd6b70-image-1494631930884.23.49 PM.png)](https://codeprojects.org/OhiVQD7XXnijdjNp2yFaIB5fyNDwsp9ymYo7gvEy8qg/)
+
 MARKDOWN
 
 teacher_markdown <<MARKDOWN

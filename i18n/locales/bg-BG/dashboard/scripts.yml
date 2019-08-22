@@ -2330,6 +2330,8 @@ bg:
               name: Бройни системи
             Sending Binary Messages:
               name: Изпращане на бинарни съобщения
+            Binary Numbers:
+              name: Бинарни числа
         time4csdemo:
           stages:
             Crowdsourcing:

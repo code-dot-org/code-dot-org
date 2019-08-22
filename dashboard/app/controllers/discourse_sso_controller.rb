@@ -4,7 +4,12 @@ class DiscourseSsoController < ApplicationController
   before_action :authenticate_user! # ensures user must login
 
   VERIFIED_TEACHERS_GROUP_NAME = 'Verified-Teachers'.freeze
-  CSF_FACILITATORS_GROUP_NAME = 'CSF-Facilitators'.freeze
+
+  FACILITATOR_COURSE_NAMES_TO_GROUP_NAMES = {
+    Pd::Workshop::COURSE_CSF => 'CSF-Facilitators',
+    Pd::Workshop::COURSE_CSD => 'CSD-Facilitators',
+    Pd::Workshop::COURSE_CSP => 'CSP-Facilitators'
+  }.freeze
 
   def sso
     secret = CDO.discourse_sso_secret
@@ -15,17 +20,25 @@ class DiscourseSsoController < ApplicationController
     sso.external_id = current_user.id # from devise
     sso.sso_secret = secret
 
+    add_groups = []
+    remove_groups = []
+
     if current_user.verified_teacher?
-      sso.add_groups = DiscourseSsoController::VERIFIED_TEACHERS_GROUP_NAME
+      add_groups << VERIFIED_TEACHERS_GROUP_NAME
     else
-      sso.remove_groups = DiscourseSsoController::VERIFIED_TEACHERS_GROUP_NAME
+      remove_groups << VERIFIED_TEACHERS_GROUP_NAME
     end
 
-    if Pd::CourseFacilitator.where({facilitator: current_user, course: Pd::Workshop::COURSE_CSF}).exists?
-      sso.add_groups = DiscourseSsoController::CSF_FACILITATORS_GROUP_NAME
-    else
-      sso.remove_groups = DiscourseSsoController::CSF_FACILITATORS_GROUP_NAME
+    FACILITATOR_COURSE_NAMES_TO_GROUP_NAMES.each do |course_name, group_name|
+      if Pd::CourseFacilitator.where(facilitator: current_user, course: course_name).exists?
+        add_groups << group_name
+      else
+        remove_groups << group_name
+      end
     end
+
+    sso.add_groups = add_groups.join(',')
+    sso.remove_groups = remove_groups.join(',')
 
     redirect_to sso.to_url(sso.return_sso_url)
   end

@@ -43,6 +43,106 @@ es-ES:
       Alien Defender: |-
         \*\* La Idea del proyecto \*\*: hacer un juego protector
         en Play Lab!
+      CSD Problem Solving Process Video: |-
+        ## Preguntas a considerar
+
+        -   ¿Cómo siguió el proceso de resolución de problemas en la última lección?
+        -   ¿Cómo podría utilizar este proceso en un problema en su vida cotidiana?
+      CSD U2 HTML Adding Paragraphs pt 2_2019: |-
+        <div class="no-pullthrough" style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+        <details>
+
+        <summary>
+        <strong>¿Qué es un elemento de párrafo?</strong>
+        </summary>
+
+        Los párrafos se marcan con etiquetas de apertura (`<p>`) y de cierre (`</p>`). Los párrafos en HTML pueden tener cualquier longitud de texto desde una palabra a un montón de oraciones. Los párrafos agrupan conjuntos de oraciones y ponen algo de espacio entre ese grupo de texto y el siguiente grupo de texto.</strong>
+
+        </details>
+        <details>
+        <summary>
+        <strong>¿Cómo hago múltiples párrafos?</strong>
+        </summary>
+
+        Aquí hay un ejemplo de varias etiquetas de párrafo en una fila. Este código se colocará dentro del cuerpo de su página web.
+
+            <p> Este es un párrafo. Tiene dos oraciones. </p>
+            <p> Este es otro párrafo. </p>
+
+        </details>
+        </div>
+
+        # Usar etiquetas de párrafo
+
+        Las etiquetas `<p>` `</p>` o etiquetas de inicio y fin de "párrafo" se colocan alrededor del texto para indicar que es parte de un párrafo. Al colocar el texto entre las etiquetas de inicio y fin del párrafo, la computadora sabe que debe tratarse de manera diferente, a menudo solo separándolo de otro texto.
+
+        # Hacer esto
+
+        -   Coloque el texto que acaba de escribir dentro de al menos dos párrafos separados rodeándolo con las etiquetas `<p>` y `</p>`
+        -   Comparar los resultados con un vecino. ¿Qué ha cambiado en la forma en que se muestra su texto?
+      CSD U2 HTML Debug Paragraphs_2019: |-
+        <div class="no-pullthrough" style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px">
+        <details>
+
+        <summary>
+        <strong>¿Qué es un elemento de párrafo?</strong>
+        </summary>
+
+        Los párrafos se marcan con etiquetas de apertura (`<p>`) y de cierre (`</p>`). Los párrafos en HTML pueden tener cualquier longitud de texto desde una palabra a un montón de oraciones. Los párrafos agrupan conjuntos de oraciones y ponen algo de espacio entre ese grupo de texto y el siguiente grupo de texto.
+
+        </details>
+        <details>
+        <summary>
+        <strong>¿Por qué el HTML parece funcionar incluso cuando está roto?</strong>
+
+        </summary>
+
+        El navegador web lee el HTML para generar páginas web. Dado que las personas a menudo cometen pequeños errores al escribir sus páginas web, los navegadores están programados para adivinar lo que pretendía hacer. ¡A veces incluso se programan diferentes navegadores para hacer diferentes conjeturas! La única forma de garantizar que su código se vea como lo desea es asegurarse de que siempre esté usando las etiquetas correctamente.
+
+        </details>
+        <details>
+        <summary>
+        <strong>¿Por qué el código a veces se vuelve rosado?</strong>
+        </summary>
+
+        Web Lab está programado para detectar automáticamente algunos errores en HTML. Cuando nota un error, convierte ese código en rosa. El error podría estar en rosa, o podría estar en algún lugar antes del código rosa. Tendrá que depurar cuidadosamente para encontrar su error.
+
+        </details>
+        </div>
+
+        # Depuración: Corrija las etiquetas rotas
+
+        Esta página web simple tiene algunos problemas que impiden que el contenido se muestre correctamente. Identificar y solucionar los problemas. Esta práctica también se llama "depuración" de su código.
+
+        # Hacer esto
+
+        -   Corrija el código roto para que la página web se muestre correctamente
+        -   Compara los problemas que arreglaste con un vecino
+      CSD U2 Inspector Warm Up_2019: |-
+        <div class="no-pullthrough" style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px">
+        <details>
+
+        <summary>
+        <strong><span> ¿Cómo uso la herramienta de Inspección? </span></strong>
+        </summary>
+
+        La herramienta de Inspección es una excelente manera de aprender más sobre códigos desconocidos en Web Lab. Para activar la herramienta de Inspección, haga clic en<img src="https://images.code.org/188579d7c6e7645d0d2edd203a33bd63-image-1480361561351.31.56 PM.png" style="width:100px">Sabrá que la herramienta de Inspección está activada porque el botón se pondrá blanco y dirá "Inspección: activada". Una vez que active la herramienta de Inspección, puede pasar el cursor sobre cualquier cosa en el área de vista previa y Web Lab resaltará el código que está haciendo aparecer esa parte de la página.
+
+        </details>
+
+        # Explora HTML
+
+        Esta es una página web escrita en HTML, el lenguaje de la web. Aprenderá más sobre cómo funciona, pero primero explore usando la Herramienta de Inspección.
+
+        # Hacer esto
+
+        -   Haga clic en la sugerencia "¿Cómo uso la herramienta de Inspección?" a la derecha para aprender a usar la herramienta de Inspección.
+        -   Siga las instrucciones en la página web para explorar la página web y discutir con un socio cómo está funcionando.
+      CSD U2 Pair Programming Video_2019: |-
+        ## Preguntas a considerar
+
+        -   ¿Por qué crees que los programadores profesionales usan programación en pareja?
+        -   ¿Cómo crees que la programación en pareja te ayudará a programar mejor?
       CSD U3 Entertainment Sample 1: "# Alienígena Saltador\\\r\n\n\\\r\nPresiona\n\"Ejecutar\"
         para jugar el juego de la izquierda. Puedes hacer que el alienígena salte
         con el\nbarra espaciadora, y moverlo hacia la izquierda y hacia la derecha
@@ -451,6 +551,11 @@ es-ES:
       CSD U6 iter predict bubbles: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       CSD U6 iter predict bubbles_2018: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       CSD U6 iter predict bubbles_2019: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+      CSD What Makes a Computer a Computer Video_2019: |-
+        ## Preguntas para pensar
+
+        -   ¿Qué hizo que las computadoras fueran diferentes a las máquinas anteriores?
+        -   Piensa en algo que haces en la computadora. ¿Qué tipos de entrada, salida, almacenamiento y procesamiento están sucediendo?
       Course 4 Artist For Loops 6a: Haz 3 pequeños cambios al código desde el último
         nivel para obtener esto!
       CourseD_Dance_Party_01: |-
@@ -704,6 +809,15 @@ es-ES:
       HOC 2018 Level_9b: "¡Has llegado al arrecife, ahora busca el **corazón del mar**
         ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png)
         ! Usa el coral azul y rojo para alcanzar el **cofre** ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png)."
+      Intro to Web Lab - Part 1_2019: |-
+        ## Pregunta a considerar:
+
+        -   ¿Cuáles son las diferentes partes de Web Lab y para qué se utilizan?
+      Intro to Web Lab - Part 2_2019: |-
+        ## Preguntas a considerar
+
+        -   ¿Por qué son útiles las etiquetas HTML?
+        -   ¿Qué hace la etiqueta de párrafo?
       K-1 Bee Loops 5: "¡Utiliza enlaces para tomar nectar y miel!"
       K-1 Maze Loops 2: Usa el bloque de Repetición para llevarme al cerdo!
       MC_HOC_2017_01_RETRY: "¡{currentPlayerName} está atrapado en el interior de
@@ -801,6 +915,9 @@ es-ES:
         _"¡Cacemos el tesoro- usando bucles!_
 
         Ayuda al coleccionista a alcanzar al menos dos pilas de tesoro usando únicamente los bloques de la caja de herramientas. Es posible recoger los 4.
+      courseB_collector_loops_challenge2a: '"¡Busquemos el tesoro!"'
+      courseB_collector_loops_challenge2a_2018: '"¡Busquemos el tesoro!"'
+      courseB_collector_loops_challenge2a_2019: '"¡Busquemos el tesoro!"'
       courseB_iceage_loops11: "¡Ayuda a Scrat a conseguir la bellota!"
       courseB_iceage_loops11_2019: "¡Ayuda a Scrat a conseguir la bellota!"
       courseC_PlayLab_events6_2019: Ahora, escribe un programa que haga que Waddles

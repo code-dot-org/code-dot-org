@@ -1,0 +1,27 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2019-08-19T16:32:09.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "long_instructions": "## IP Addresses\r\n\r\nDescribe how the Internet Protocol (IP) allows devices to easily connect and communicate on the Internet.",
+    "encrypted_solution": "gt1dNu057mbtxmeEf6n2RUsypDcxrkTyBcdCBvXpE6scALgB20qrDQHiSUz4\nTdwdpkx/PVlSlDhI1nfrmdMeP/MnTQzLKaRcyltgu4xXKlUE3yhgQYn6A3eK\nWd0dd59jL61kdtteydPUL+DVEDdQD975aYY03KeYnm56ASjWp2hKrt2Bh5Zm\n2yrd/+x6rX9vdMb72KcmTixZc1cn2S5SLiwLuXYZgIr0enHgisbIbIv7wGGg\na3xCYkgD3tLO3kurOGoCgHpZPj20ZNViF2ZGBRhVbrvEuF5h5ApcqlmQAGRL\n4KQsfdJ1ReAWKbcTmDTL8F4Qb3Uoz3mfrtZGso286K4iEZhmOUvhT4HU4Sq2\nx1KvxVg2XQEUnfZnF40Q5kbWH/8vKFzhQDmuFB0NhqH20BGoTjvUGLll/Tit\n82nsKj2Ly+zV9YIXUpCA5nTD9WOsqBRkHxuhpEOT/nujrylqP3Q7OtEn/+7h\nEwCpxmsxsedus5x3MqaEWzhscTlzuQqUgiz6MHhR4mVPrddaSyUWIMfzRhzB\nhyH6xJ/CuQwLwKftkdPfT98zlYhGAtaALqBweIkxewJ1LIEA+diQkZOxzfnH\n0r5kREwmkpYWmY0R0mk=\n",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 19001,
+    "name_suffix": "_2019",
+    "encrypted": "false",
+    "instructions_important": "false",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2019-08-19 16:02:07 +0000\",\"changed\":[\"notes\",\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-08-19 16:37:18 +0000\",\"changed\":[\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-08-21 14:23:21 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

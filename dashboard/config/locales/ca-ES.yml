@@ -495,7 +495,7 @@ ca:
   download_coming_soon: Activitat descarregable properament.
   video_coming_soon: Vídeo molt aviat!
   share_code:
-    title: Feu clic a "Executa" per veure el meu programa en acció
+    title: Feu clic a «Executa» per veure el meu programa en acció
     bounce_og_title: Comprovi el meu joc de rebot
     flappy_og_title: Comprova el meu joc de Flappy
     studio_og_title: Fes una mirada a la meva aplicació Play Lab

@@ -1,0 +1,6 @@
+name 'CSD Pilot Warning Page'
+markdown <<MARKDOWN
+# CS Discoveries Pilot
+
+The CS Discoveries Pilot course is locked to prevent confusion with the standard version of the course.  Get more information [in this forum thread](https://forum.code.org/t/csd-pilot-opportunities-in-19-20/26734)
+MARKDOWN

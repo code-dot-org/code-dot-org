@@ -4,8 +4,14 @@ da-DK:
     function_names:
       2-3 Artist 11:
         x: x
+      2-3 Artist 12:
+        details: detaljer
+        draw eyebrow: tegn øjenbryn
+        draw pupil: tegn øjet
       2-3 Artist 3.4:
         draw a circle: tegn en cirkel
+      2-3 Artist 7:
+        draw_rect: tegn_firkant
       2-3 Artist Debugging 10:
         draw a circle: tegn en cirkel
       2-3 Artist Functions 11:

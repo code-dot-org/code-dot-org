@@ -1,7 +1,7 @@
 import GameButtons, {ResetButton} from '../templates/GameButtons';
 import IFrameEmbedOverlay from '../templates/IFrameEmbedOverlay';
 import * as color from '../util/color';
-import * as applabConstants from './constants';
+import {WIDGET_WIDTH, APP_WIDTH, APP_HEIGHT} from './constants';
 import React from 'react';
 import PropTypes from 'prop-types';
 import Radium from 'radium';
@@ -73,17 +73,42 @@ class ApplabVisualizationColumn extends React.Component {
     onScreenCreate: PropTypes.func.isRequired
   };
 
+  state = {renderedWidth: this.props.widgetMode ? WIDGET_WIDTH : APP_WIDTH};
+
+  getClassNames() {
+    if (this.props.widgetMode) {
+      return 'widgetWidth';
+    }
+
+    const chromelessShare = dom.isMobile() && !dom.isIPad();
+    return classNames({
+      with_padding: this.props.visualizationHasPadding,
+      responsive: this.props.isResponsive,
+      pin_bottom: !this.props.hideSource && this.props.pinWorkspaceToBottom,
+
+      // the below replicates some logic in StudioApp.handleHideSource_ which
+      // imperatively changes the css classes depending on various share
+      // parameters. This logic really shouldn't live in StudioApp, so I don't
+      // feel too bad about copying it here, where it should really live...
+      chromelessShare: chromelessShare && this.props.isShareView,
+      wireframeShare: !chromelessShare && this.props.isShareView
+    });
+  }
+
+  getCompletionButtonSyle() {
+    return this.props.playspacePhoneFrame || this.props.widgetMode
+      ? styles.phoneFrameCompletion
+      : styles.completion;
+  }
+
   render() {
-    let appWidth = this.props.widgetMode
-      ? applabConstants.WIDGET_WIDTH
-      : applabConstants.APP_WIDTH;
     let visualization = [
       <Visualization key="1" />,
       this.props.isIframeEmbed && !this.props.isRunning && (
         <IFrameEmbedOverlay
           key="2"
-          appWidth={appWidth}
-          appHeight={applabConstants.APP_HEIGHT}
+          appWidth={this.state.renderedWidth}
+          appHeight={APP_HEIGHT}
         />
       )
     ];
@@ -104,26 +129,11 @@ class ApplabVisualizationColumn extends React.Component {
         </PhoneFrame>
       );
     }
-    const chromelessShare = dom.isMobile() && !dom.isIPad();
-    const visualizationColumnClassNames = this.props.widgetMode
-      ? 'widgetWidth'
-      : classNames({
-          with_padding: this.props.visualizationHasPadding,
-          responsive: this.props.isResponsive,
-          pin_bottom: !this.props.hideSource && this.props.pinWorkspaceToBottom,
-
-          // the below replicates some logic in StudioApp.handleHideSource_ which
-          // imperatively changes the css classes depending on various share
-          // parameters. This logic really shouldn't live in StudioApp, so I don't
-          // feel too bad about copying it here, where it should really live...
-          chromelessShare: chromelessShare && this.props.isShareView,
-          wireframeShare: !chromelessShare && this.props.isShareView
-        });
 
     return (
       <div
         id="visualizationColumn"
-        className={visualizationColumnClassNames}
+        className={this.getClassNames()}
         style={[
           !this.props.isResponsive && {maxWidth: this.props.nonResponsiveWidth}
         ]}
@@ -136,19 +146,14 @@ class ApplabVisualizationColumn extends React.Component {
           />
         )}
         {visualization}
-        {this.props.isIframeEmbed && (
+        {this.props.isIframeEmbed && !this.props.widgetMode && (
           <div style={styles.resetButtonWrapper}>
             <ResetButton hideText style={styles.resetButton} />
           </div>
         )}
         <GameButtons>
           {/* This div is used to control whether or not our finish button is centered*/}
-          <div
-            style={[
-              styles.completion,
-              this.props.playspacePhoneFrame && styles.phoneFrameCompletion
-            ]}
-          >
+          <div style={this.getCompletionButtonSyle()}>
             <CompletionButton />
           </div>
         </GameButtons>
@@ -162,6 +167,8 @@ class ApplabVisualizationColumn extends React.Component {
     );
   }
 }
+
+export const UnconnectedApplabVisualizationColumn = ApplabVisualizationColumn;
 
 export default connect(function propsFromStore(state) {
   return {

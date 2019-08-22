@@ -5464,6 +5464,8 @@ id:
               name: Mengirim Pesan Biner dengan Internet Simulator
             Intellectual Property:
               name: Hak milik intelektual
+            Binary Numbers:
+              name: Bilangan Biner
         time4csdemo:
           stages:
             Crowdsourcing:
@@ -5558,6 +5560,8 @@ id:
               name: Proyek - Situs web Portfolio Pribadi
             Intellectual Property:
               name: Hak milik intelektual
+            CSS Classes:
+              name: Kelas CSS
         csd3-pilot:
           description_short: Pemrograman
           stages:

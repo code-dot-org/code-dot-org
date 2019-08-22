@@ -102,6 +102,11 @@ fil-PH:
         kung paano ito gumagana.\\\r\n-   Magdagdag ng code sa programang ito para
         mapagawa ang isa pang alien na umalog gaya ng una.\\\r\n-   Magpatuloy kapag
         ang iyong programa ay kagaya na ng larawan na sa kanan."
+      CSD U6 hardware software video_2019: |-
+        ## Mga Tanong na Maaring Isaalang-alang
+
+        -   Ano ang kaibahan ng hardware at software?
+        -   Ano ang ginagawa ng operating system ng isang kompyuter?
       CSD U6 iter predict bubbles: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       CSD U6 iter predict bubbles_2018: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       CSD U6 iter predict bubbles_2019: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
@@ -117,6 +122,11 @@ fil-PH:
         maabot ang tupa.
       Overworld Move to Sheep_2019: Magdagdag ng pangalawang `move forward` na bloke
         para maabot ang tupa.
+      Standalone_Artist_4: Ngayon ay mayroon ka nang bagong bloke para paglaruan,
+        ang loop. Ito ay mag-uulit sa isang hanay ng mga utos. Ano ang mangyayari
+        kung i-loop mo ang mga utos na ito nang 6 na beses?
+      Standalone_Artist_5: Ilang beses mo kailangan ulitin ang pagguhit ng dyamanteng
+        ito upang makaguhit ng bulaklak?
       course1_maze_debugging_challenge2: I-debug ang antas na ito. Ito ang tamang
         mga bloke, ngunit sila ay nasa maling pagkasunod-sunod!
       course2_collector_prog_challenge1: Tingnang mabuti! Maaari mo bang makolekta
@@ -154,26 +164,69 @@ fil-PH:
         kolektahin ang lahat ng mga mais. Ang parehong `for loop` ay maaaring magbilang
         sa iba't ibang pinakamataas na mga halaga sa pamamagitan ng paggamit ng `length`
         na parameter.
+      courseA_maze_seq13_2019: Kunin ang baboy sa kahit anong paraan na kaya mo!
       courseA_maze_seq6_2018: Ilipat ang isang daan, pagkatapos ay isa pa para mapapunta
         ang ibon sa baboy!
       courseA_maze_seq6_2019: Ilipat ang isang daan, pagkatapos ay isa pa para mapapunta
         ang ibon sa baboy!
       courseA_maze_seq8_2018: Lutasin ang antas na ito at dalhin ang ibon sa baboy!
       courseA_maze_seq8_2019: Lutasin ang antas na ito at dalhin ang ibon sa baboy!
+      courseA_maze_seq_challenge2_2019: Sundan ang landas para gabayan ang ibon papunta
+        sa baboy. Iwasan ang TNT para hindi lilipad ang mga balahibo!
+      courseA_playLab_events6_2019: Gawin itong mas kawili-wili sa pamamagitan nang
+        pagpalit ng background at pagpapatunog na random na tunog kapag si Jorge ay
+        na-click.
+      courseB_artist_loops1_2019: Ito ay isang bagong tipo ng palaisipan na tinatawag
+        na "Artist". Maglaro sa antas at gumuhit ng isang bagay na masaya.
+      courseB_artist_loops2_2019: Ang Artist ay sinusubukang gumuhit ng linya mga
+        **6** na beses, ngunit hindi magawa ito ng tama. Maaari ka bang tumulong?
+      courseB_artist_loops3_2019: Tulungan ang artista na gumuhit ng linya ng mga
+        7 beses para makagawa ng pader sa halamanan.
+      courseB_artist_loops5_2019: Oras na para ayusin ang hagdanan! Ulitin ang pattern
+        na ito nang **5** beses para maabot ng artista ang itaas ng mga palumpong.
       courseB_artist_loops7: "**Hamon:** Ito ay isang nakatagong halamanan! Tayo ay
         maglakad sa paligid."
       courseB_artist_loops7_2018: "**Hamon:** Ito ay isang nakatagong halamanan! Tayo
         ay maglakad sa paligid."
       courseB_artist_loops7_2019: "**Hamon:** Ito ay isang nakatagong halamanan! Tayo
         ay maglakad sa paligid."
+      courseB_artist_loops8_2019: Oras na para umuwi. Maaari mo bang ayusin ang hagdanang
+        ito gamit ang isang bloke lang para matulungan ang artista na bumaba?
+      courseB_artist_loops9_2019: Ating daanan ang maikling daan pauwi, sa itaas ng
+        lanaw. Maaari mo bang matulungan ang artista na manatili sa mga bato?
       courseB_artist_loops_challenge2: Magguhit ng maraming mga X hangga't kaya mo.
         Maaari ka bang makakuha ng 3 sa isang hanay?
       courseB_artist_loops_challenge2_2018: Magguhit ng maraming mga X hangga't kaya
         mo. Maaari ka bang makakuha ng 3 sa isang hanay?
       courseB_artist_loops_challenge2_2019: Magguhit ng maraming mga X hangga't kaya
         mo. Maaari ka bang makakuha ng 3 sa isang hanay?
+      courseB_collector_loops10_2019: Tulungan si Laurel na kunin ang lahat ng mga
+        kayamanan mula sa kuwebang ito.
+      courseB_collector_loops11_2019: Eureka! Magkuha ng maraming mga yaman hangga't
+        kaya mo!
+      courseB_collector_loops4_2019: Ayusin ang daanan ni Laurel para makuha ang lahat
+        ng mga yaman!
+      courseB_collector_loops5_2019: 'Magdagdag sa code mula sa huling palaisipan
+        para makuha ang lahat ng mga yaman. '
+      courseB_collector_loops6_2019: Alamin ang code para matulungan si Laurel na
+        makuha ang lahat ng mga yaman!
+      courseB_collector_loops7_2019: Isulat ang code para makuha ang lahat ng mga
+        yamang ito.
+      courseB_collector_loops8_2019: "**Hamon:** Ang kayamanan ay umabot hanggang
+        sa mga hagdanang ito! Magsulat ng code para matulungan si Laurel na makuha
+        ang lahat ng ito."
+      courseB_collector_loops9_2019: _"Tulungan akong makuha ang kayamanan mula sa
+        malalim na lambak na ito."_
+      courseB_collector_loops_challenge1_2019: 'Sa oras na ito, mayroon ka lang limitadong
+        mga bloke. Kunin ang lahat ng mga yaman! '
       courseB_iceage_loops11: Tulungan si Scrat na makakuha ng bunga ng oak!
       courseB_iceage_loops11_2019: Tulungan si Scrat na makakuha ng bunga ng oak!
+      courseB_maze_seq12_2019: Ngayon ay kunin ang baboy na iyan sa kahit anong paraan
+        na kaya mo!
+      courseB_maze_seq_challenge2_2019: I-debug ang antas na ito. Ito ang tamang mga
+        bloke, ngunit sila ay nasa maling pagkasunod-sunod!
+      courseB_playlab_events2_2019: Pasalitain ang Daisy na Dragon kapag na-click
+        mo ang "Run".
       courseB_playlab_events6: "Tulungan ang iyong kabalyero para makuha ang lahat
         ng mga bandila!\\\r\n\\\r\nPara magawa ito, kailangan mong magdagdag ng mga
         pangyayari para matulungan ang kabalyero na gumawa ng pataas, pababa, pakaliwa,

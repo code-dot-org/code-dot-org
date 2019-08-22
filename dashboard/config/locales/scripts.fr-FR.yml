@@ -3324,6 +3324,8 @@ fr:
               name: Envoyer des Messages Binaires avec le Simulateur d'Internet
             Intellectual Property:
               name: Propriété intellectuelle
+            Binary Numbers:
+              name: Nombres binaires
         time4csdemo:
           stages:
             Crowdsourcing:
@@ -3415,6 +3417,8 @@ fr:
                 design.\r\n"
             Intellectual Property:
               name: Propriété intellectuelle
+            CSS Classes:
+              name: Classes CSS
         csd3-pilot:
           description_short: Programmation
           stages:

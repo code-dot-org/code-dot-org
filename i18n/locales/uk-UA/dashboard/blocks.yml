@@ -479,6 +479,9 @@ uk:
             '"right"': праворуч
             '"space"': космос
             '"x"': x
+            '"0"': '0'
+            '"1"': '1'
+            '"2"': '2'
       Dancelab_whenPeak:
         text: коли досягаємо кінця {RANGE}
         options:

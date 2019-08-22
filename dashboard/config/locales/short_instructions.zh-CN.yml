@@ -453,6 +453,7 @@ zh-CN:
       Virtual Pet 6: 添加一个苹果，这个苹果可以在与长颈鹿相碰时使长颈鹿回到原来的尺寸。
       Virtual Pet 8_2019: '自由发挥：你的长颈鹿还能做些什么呢？ '
       Virtual Pet Freeplay: '自由发挥：你的长颈鹿还能做些什么呢？ '
+      'Widget: Text Compression': 在文本中找到规律（如重复的单词或词组）。在右侧的词典中输入你所发现的规律。当你将其输入到字典中时，以文本形式表现的规律就会用符号替代。
       bounce_1: 在“当按左方向键时”模块下面添加模块，然后按“运行”。使用左方向键来移动挡板来到达终点目标。
       bounce_10: 顶部有一个目标。添加 "得分点" 和 "得分对手点" 方块到"当球在球门" 和 "当球错过桨" 方块，来做一个游戏。看看你能在对手得分两次之前得分多少分。
       bounce_10_basketball: 现在，目标在顶部！将"得分"和"对手得分"模块附加到到“当进球得分”和"当球未命中手"块来制作游戏。看看在对手获得两分前，你可以获得多少分。
@@ -591,6 +592,7 @@ zh-CN:
       courseA_collector_loops_challenge1: _"你能帮我找出一些错误吗？"_
       courseA_collector_loops_challenge1_2018: _"你能帮我找出一些错误吗？"_
       courseA_collector_loops_challenge1_2019: _"你能帮我找出一些错误吗？"_
+      courseA_collector_loops_challenge2: '得到所有的宝藏！ '
       courseA_collector_loops_challenge2kp: 收集至少 **3** 件的宝藏通过这个关。
       courseA_collector_loops_challenge2kp_2018: 收集至少 **3** 件的宝藏通过这个关。
       courseA_collector_loops_challenge2kp_2019: 收集至少 **3** 件的宝藏通过这个关。
@@ -694,10 +696,8 @@ zh-CN:
       courseA_maze_seq_challenge2_2019: 沿着这条路带我去找那只笨猪。躲开 TNT 炸药，不然我的羽毛就要被炸飞了！
       courseA_playLab_events1: 这是一个游戏实验室关卡。 把模块移到工作区看会发生什么!
       courseA_playLab_events1_2018: 这是一个游戏实验室关卡。 把模块移到工作区看会发生什么!
-      courseA_playLab_events1_2019: 这是一个游戏实验室关卡。 把模块移到工作区看会发生什么!
       courseA_playLab_events2: 乔治狗想说“大家好”。你可以帮它吗？
       courseA_playLab_events2_2018: 乔治狗想说“大家好”。你可以帮它吗？
-      courseA_playLab_events2_2019: 乔治狗想说“大家好”。你可以帮它吗？
       courseA_playLab_events3: 将`向左移动`模块连接到工作区中的`当点击向左时`的事件模块下。
       courseA_playLab_events3_2018: 将`向左移动`模块连接到工作区中的`当点击向左时`的事件模块下。
       courseA_playLab_events3_2019: 将`向左移动`模块连接到工作区中的`当点击向左时`的事件模块下。
@@ -2084,6 +2084,7 @@ zh-CN:
       grade5_artist_binary5: 每个二进制字符串表达这个图形中的一行。你能重新排列他们，从而能够画出一张笑脸，而不是皱眉的脸吗？
       grade5_artist_binary8: 完成这幅画。
       grade5_artist_binary9: "这是更高分辨率的画布 - 16像素乘以16像素！\\\r\n\\\r\n看看你用二进制位能创造出什么？"
+      grade5_pixelation: 用二进制来编码任何你喜欢的图像。二进制语言将只用“0”和“1”来表示。
       iceage_click_hello: '你能帮助喜得，在点击他的时候呼叫他的朋友们吗？ '
       iceage_free_play: 是时候创造你自己的游戏或故事了！
       iceage_hello1: 通过拖拽`说`模块出来，并连接`当运行时`事件下来帮助喜得说“你好！”

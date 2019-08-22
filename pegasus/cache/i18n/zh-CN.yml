@@ -1443,6 +1443,8 @@ zh-CN:
   compatibility_hide_this_warning: 隐藏此警告
   compatibility_unsupported_browser: 您的浏览器不支持浏览本网页。请升级您的浏览器至<a href='%{supported_browsers_url}',
     target='_blank'>我们支持的浏览器</a>。您可以尝试访问此网页，但有可能会遇到功能问题。
+  compatibility_unsupported_browser_markdown: 您的浏览器不支持浏览本网页。请升级您的浏览器至<a href='%{supported_browsers_url}',
+    target='_blank'>我们支持的浏览器</a>。您可以尝试访问此网页，但有可能会遇到功能问题。
   flappy_shortcode: 拍翅膀
   header_home: 首页
   header_my_dashboard: 我的控制面板

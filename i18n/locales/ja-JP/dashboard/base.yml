@@ -60,8 +60,8 @@ ja:
   trophies: "トロフィー"
   courses: 'コース'
   courses_page:
-    title_student: "コード スタジオで学ぶ"
-    title_teacher: "コード スタジオで教えよう"
+    title_student: "コンピュータ サイエンスを学ぶ"
+    title_teacher: "コンピュータ サイエンスを教える"
   unplugged_activity: 'アンプラグド　アクティビティ'
   of: "の"
   more: "くわしく"
@@ -572,7 +572,8 @@ ja:
     hoc-encryption:
       title: "単純な暗号化"
     weblab:
-      title: "Web 研究室 (ベータ版)"
+      title: "Web ラボ (ベータ版)"
+      body: "Webラボは、HTMLとCSSを使って、シンプルなWebページを作ることができるプログラミング環境です。Webページをデザインして、すぐにあなたのサイトを共有しよう。"
       audience: "13才以上"
       cta: "もっと知る"
     frozen:
@@ -814,7 +815,7 @@ ja:
     csf_conditionals: '条件'
     csf_nested_loops: '入れ子のループ'
     csf_functions: '関数(かんすう) '
-    csf_variables: '変数'
+    csf_variables: '変数（へんすう）'
     csf_for_loops: 'ループ用'
     csf_internet: 'インターネット'
     csd1_1: '第 1章: 問題解決プロセス'
@@ -833,7 +834,7 @@ ja:
     csp3_1: '章 1: プログラミング言語とアルゴリズム'
     cspSurvey: 'アンケート'
     csp2_1_2018: '第 2 章: デジタル情報'
-    csp_variables: '変数'
+    csp_variables: '変数（へんすう）'
     csp_conditionals: '条件'
     csp_functions: '関数(かんすう) '
     csp_lists: 'リスト'

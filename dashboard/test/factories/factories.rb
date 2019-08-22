@@ -1119,7 +1119,16 @@ FactoryGirl.define do
     csp_cost 12
     cost_scholarship_information "Additional scholarship information will be here."
     additional_program_information "Additional program information will be here."
-    pd_workshops {[create(:workshop, :local_summer_workshop_upcoming, location_name: "Training building", location_address: "3 Smith Street")]}
+    pd_workshops do
+      [
+        create(
+          :summer_workshop,
+          location_name: "Training building",
+          location_address: "3 Smith Street",
+          sessions_from: (Date.current + 3.months)
+        )
+      ]
+    end
 
     trait :with_apps_priority_deadline_date do
       apps_priority_deadline_date {(Date.current + 5.days).strftime("%Y-%m-%d")}
@@ -1195,5 +1204,6 @@ FactoryGirl.define do
     association :student
     association :teacher
     association :level
+    association :script_level
   end
 end

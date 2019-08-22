@@ -1293,6 +1293,7 @@ pt-BR:
   pre-express-2018_name: Curso Expresso de Pré-Leitor (2018)
   express-2019_name: Curso Expresso (2019)
   pre-express-2019_name: Curso Pre-reader Express (2019)
+  csd3_name: 'Unidade 3: Jogos e Animação'
   accelerated_name: Curso acelerado
   express_name: Curso Expresso
   20-hour_name: Curso acelerado
@@ -2103,6 +2104,10 @@ pt-BR:
     navegador para <a href='%{supported_browsers_url}', target='_blank'> um dos nossos
     navegadores compatíveis</a>. Você pode tentar visualizar a página, mas é possível
     que algumas funcionalidades não funcionem.
+  compatibility_unsupported_browser_markdown: Seu navegador não é compatível. Atualize
+    seu navegador para <a href='%{supported_browsers_url}', target='_blank'> um dos
+    nossos navegadores compatíveis</a>. Você pode tentar visualizar a página, mas
+    é possível que algumas funcionalidades não funcionem.
   flappy_shortcode: bata asas
   header_home: Início
   header_my_dashboard: Meu painel de Controle

@@ -1,7 +1,11 @@
 /* eslint-disable react/no-is-mounted */
 import PropTypes from 'prop-types';
 import React from 'react';
-import {assets as assetsApi, files as filesApi} from '@cdo/apps/clientApi';
+import {
+  assets as assetsApi,
+  starterAssets as starterAssetsApi,
+  files as filesApi
+} from '@cdo/apps/clientApi';
 
 import AssetRow from './AssetRow';
 import assetListStore from '../assets/assetListStore';
@@ -52,10 +56,11 @@ export default class AssetManager extends React.Component {
     useFilesApi: PropTypes.bool,
     soundPlayer: PropTypes.object,
     disableAudioRecording: PropTypes.bool,
+    projectId: PropTypes.string,
+    levelName: PropTypes.string,
 
     // For logging purposes
     imagePicker: PropTypes.bool, // identifies if displayed by 'Manage Assets' flow
-    projectId: PropTypes.string,
     elementId: PropTypes.string
   };
 
@@ -63,6 +68,7 @@ export default class AssetManager extends React.Component {
     super(props);
     this.state = {
       assets: null,
+      starterAssets: null,
       statusMessage: props.uploadsEnabled ? '' : errorUploadDisabled,
       recordingAudio: false,
       audioErrorType: AudioErrorType.NONE
@@ -70,8 +76,28 @@ export default class AssetManager extends React.Component {
   }
 
   componentWillMount() {
+    if (this.props.levelName) {
+      starterAssetsApi.getStarterAssets(
+        this.props.levelName,
+        this.onStarterAssetsReceived,
+        this.onStarterAssetsFailure
+      );
+    } else {
+      this.setState({starterAssets: []});
+    }
+
     let api = this.props.useFilesApi ? filesApi : assetsApi;
-    api.getFiles(this.onAssetListReceived, this.onAssetListFailure);
+    if (!api.getProjectId()) {
+      api = api.withProjectId(this.props.projectId);
+    }
+
+    // Request to files/assets API will fail if no projectId is present, so only
+    // request files if we have a projectId.
+    if (api.getProjectId()) {
+      api.getFiles(this.onAssetListReceived, this.onAssetListFailure);
+    } else {
+      this.setState({assets: []});
+    }
   }
 
   componentDidMount() {
@@ -81,6 +107,22 @@ export default class AssetManager extends React.Component {
   componentWillUnmount() {
     this._isMounted = false;
   }
+
+  onStarterAssetsReceived = result => {
+    const response = JSON.parse(result.response);
+    if (this._isMounted) {
+      this.setState({starterAssets: response.starter_assets});
+    }
+  };
+
+  onStarterAssetsFailure = xhr => {
+    if (this._isMounted) {
+      this.setState({
+        statusMessage:
+          'Error loading starter assets: ' + getErrorMessage(xhr.status)
+      });
+    }
+  };
 
   /**
    * Called after the component mounts, when the server responds with the
@@ -172,6 +214,54 @@ export default class AssetManager extends React.Component {
     this.setState({recordingAudio: false, audioErrorType: err});
   };
 
+  defaultAssetProps = asset => {
+    return {
+      key: asset.filename,
+      name: asset.filename,
+      timestamp: asset.timestamp,
+      type: asset.category,
+      size: asset.size,
+      soundPlayer: this.props.soundPlayer,
+      imagePicker: this.props.imagePicker,
+      projectId: this.props.projectId,
+      elementId: this.props.elementId
+    };
+  };
+
+  getStarterAssetRows = () => {
+    if (!this.props.levelName || this.state.starterAssets.length === 0) {
+      return [];
+    }
+
+    const boundApi = starterAssetsApi.withLevelName(this.props.levelName);
+    return this.state.starterAssets.map(asset => {
+      return (
+        <AssetRow
+          {...this.defaultAssetProps(asset)}
+          api={boundApi}
+          onChoose={() => console.log('choose!')}
+          onDelete={() => console.log('delete!')}
+          levelName={this.props.levelName}
+        />
+      );
+    });
+  };
+
+  getAssetRows = () => {
+    return this.state.assets.map(asset => {
+      return (
+        <AssetRow
+          {...this.defaultAssetProps(asset)}
+          useFilesApi={this.props.useFilesApi}
+          onChoose={() =>
+            this.props.assetChosen(asset.filename, asset.timestamp)
+          }
+          onDelete={() => this.deleteAssetRow(asset.filename)}
+        />
+      );
+    });
+  };
+
   render() {
     const displayAudioRecorder =
       this.state.audioErrorType !== AudioErrorType.INITIALIZE &&
@@ -207,16 +297,19 @@ export default class AssetManager extends React.Component {
     );
 
     let assetList;
-    // If `this.state.assets` is null, the asset list is still loading. If it's
-    // empty, the asset list has loaded and there are no assets in the current
+    // If this.state.assets or this.state.starterAssets are null, assets are still loading.
+    // If empty, the asset list has loaded and there are no assets in the current
     // channel (matching the `allowedExtensions`, if any were provided).
-    if (this.state.assets === null) {
+    if (this.state.assets === null || this.state.starterAssets === null) {
       assetList = (
         <div style={{margin: '1em 0', textAlign: 'center'}}>
           <i className="fa fa-spinner fa-spin" style={{fontSize: '32px'}} />
         </div>
       );
-    } else if (this.state.assets.length === 0) {
+    } else if (
+      this.state.assets.length === 0 &&
+      this.state.starterAssets.length === 0
+    ) {
       const emptyText =
         this.props.allowedExtensions === '.mp3' ? (
           <div>
@@ -238,31 +331,7 @@ export default class AssetManager extends React.Component {
         </div>
       );
     } else {
-      const rows = this.state.assets.map(
-        function(asset) {
-          const choose =
-            this.props.assetChosen &&
-            this.props.assetChosen.bind(this, asset.filename, asset.timestamp);
-
-          return (
-            <AssetRow
-              key={asset.filename}
-              name={asset.filename}
-              timestamp={asset.timestamp}
-              type={asset.category}
-              size={asset.size}
-              useFilesApi={this.props.useFilesApi}
-              onChoose={choose}
-              onDelete={this.deleteAssetRow.bind(this, asset.filename)}
-              soundPlayer={this.props.soundPlayer}
-              imagePicker={this.props.imagePicker}
-              projectId={this.props.projectId}
-              elementId={this.props.elementId}
-            />
-          );
-        }.bind(this)
-      );
-
+      const rows = [...this.getStarterAssetRows(), ...this.getAssetRows()];
       assetList = (
         <div>
           <div

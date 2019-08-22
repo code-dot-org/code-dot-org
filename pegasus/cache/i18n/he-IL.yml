@@ -1156,6 +1156,9 @@ he-IL:
   compatibility_unsupported_browser: הדפדפן שלך אינו נתמך. אנא שדרג אותו <a href='%{supported_browsers_url}',
     target='_blank'> לאחד מהדפדפנים הנתמכים</a>. תוכל לנסות ולצפות בדף, אבל צפה בעיות
     בחלק מן הפונקציונליות הקיימת.
+  compatibility_unsupported_browser_markdown: הדפדפן שלך אינו נתמך. אנא שדרג אותו
+    <a href='%{supported_browsers_url}', target='_blank'> לאחד מהדפדפנים הנתמכים</a>.
+    תוכל לנסות ולצפות בדף, אבל צפה בעיות בחלק מן הפונקציונליות הקיימת.
   flappy_shortcode: נופף
   header_home: בית
   header_my_dashboard: לוח הבקרה שלי
@@ -1195,6 +1198,7 @@ he-IL:
   header_documentation: מסמכים
   user_header_label: היי %{username}
   user_header_team: צוות
+  user_header_my_projects: הפרויקטים שלי
   user_header_settings: החשבון שלי
   user_header_logout: התנתק
   user_header_signin: התחבר

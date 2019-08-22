@@ -80,8 +80,8 @@ vi-VN:
         rương.
       CourseE_HOC 2018 Level_9b: Sử dụng san hô làm các điểm trung gian đường đi để
         đến được kho báu.
-      Crack Random Substitution: lời chỉ đẫn
-      Crack a Caesar Cipher: lời chỉ đẫn
+      Crack Random Substitution: Hướng dẫn
+      Crack a Caesar Cipher: Hướng dẫn
       Dance_Party_01: Kéo khối `make a new` vào trong không gian làm việc và kết nối
         nó với bên trong khối `setup`.
       Dance_Party_02: Làm nai sừng tấm bắt đầu động tác mới sau 4 nhịp!
@@ -400,12 +400,33 @@ vi-VN:
       courseA_maze_seq13_2019: Đến chỗ chú lợn đó bằng bất cứ cách nào mà bạn có thể!
       courseA_maze_seq5_2018: Hãy thử giải câu đố này.
       courseA_maze_seq5_2019: Hãy thử giải câu đố này.
+      courseA_maze_seq6: Đi về một hướng, sau đó đổi sang hướng khác để chú chim đến
+        được chỗ chú lợn!
+      courseA_maze_seq6_2018: Đi về một hướng, sau đó đổi sang hướng khác để chú chim
+        đến được chỗ chú lợn!
+      courseA_maze_seq6_2019: Đi về một hướng, sau đó đổi sang hướng khác để chú chim
+        đến được chỗ chú lợn!
+      courseA_maze_seq8: Bạn hãy giải câu đố này và đưa chú chim đến chỗ chú lợn!
+      courseA_maze_seq8_2018: Bạn hãy giải câu đố này và đưa chú chim đến chỗ chú
+        lợn!
+      courseA_maze_seq8_2019: Bạn hãy giải câu đố này và đưa chú chim đến chỗ chú
+        lợn!
       courseA_playLab_events2: Chú chó Jorge muốn nói “Xin chào”. Bạn có thể giúp
         chú không?
       courseA_playLab_events2_2018: Chú chó Jorge muốn nói “Xin chào”. Bạn có thể
         giúp chú không?
-      courseA_playLab_events2_2019: Chú chó Jorge muốn nói “Xin chào”. Bạn có thể
-        giúp chú không?
+      courseA_playLab_events3: Ghép khối `di chuyển trái` vào dưới khối `khi nào bên
+        trái`.
+      courseA_playLab_events3_2018: Ghép khối `di chuyển trái` vào dưới khối `khi
+        nào bên trái`.
+      courseA_playLab_events3_2019: Ghép khối `di chuyển trái` vào dưới khối `khi
+        nào bên trái`.
+      courseA_playLab_events6: Hãy làm cho trò chơi thú vị hơn bằng cách thay đổi
+        hình nền và chơi một âm thanh ngẫu nhiên khi click vào Jorge.
+      courseA_playLab_events6_2018: Hãy làm cho trò chơi thú vị hơn bằng cách thay
+        đổi hình nền và chơi một âm thanh ngẫu nhiên khi click vào Jorge.
+      courseA_playLab_events6_2019: Hãy làm cho trò chơi thú vị hơn bằng cách thay
+        đổi hình nền và chơi một âm thanh ngẫu nhiên khi click vào Jorge.
       courseB_Scrat_ramp4a_2018: Bạn có thể tìm ra khối nào bạn cần thêm vào dưới
         cùng của các khối khác để hoàn thành chương trình này không?
       courseB_Scrat_ramp4a_2019: Bạn có thể tìm ra khối nào bạn cần thêm vào dưới
@@ -433,12 +454,22 @@ vi-VN:
         Sồi không?
       courseB_iceage_loops7: 'Scrat thật sự rất muốn hạt Sồi đó! '
       courseB_iceage_loops7_2019: 'Scrat thật sự rất muốn hạt Sồi đó! '
-      courseB_iceage_loops8: 'Bạn có thể sửa phần mã lệnh này không? '
-      courseB_iceage_loops8_2019: 'Bạn có thể sửa phần mã lệnh này không? '
+      courseB_iceage_loops8: 'Bạn có thể sửa phần code này không? '
+      courseB_iceage_loops8_2019: 'Bạn có thể sửa phần code này không? '
       courseB_iceage_loops9: Hạt Sồi thật là xa quá đi! Bạn có thể dùng vòng lặp để
         giúp Scrat đến đó không?
       courseB_iceage_loops9_2019: Hạt Sồi thật là xa quá đi! Bạn có thể dùng vòng
         lặp để giúp Scrat đến đó không?
+      courseB_maze_seq6: Đi về một hướng, sau đó đổi sang hướng khác để chú chim đến
+        được chỗ chú lợn!
+      courseB_playlab_events5: Thêm khối sự kiện để chàng kỵ sĩ di chuyển khi ấn phím
+        mũi tên.
+      courseB_starWars_prog1: '"Hãy đi lấy mảnh kim loại nào, BB-8!"'
+      courseB_starWars_prog1_2018: '"Hãy đi lấy mảnh kim loại nào, BB-8!"'
+      courseB_starWars_prog1_2019: '"Hãy đi lấy mảnh kim loại nào, BB-8!"'
+      courseB_starWars_prog2: Hãy lấy hết các mảnh kim loại.
+      courseB_starWars_prog2_2018: Hãy lấy hết các mảnh kim loại.
+      courseB_starWars_prog2_2019: Hãy lấy hết các mảnh kim loại.
       courseC_artist_prog5: 'Căn nhà này cần một mái nhà! Vẽ hình tam giác.  Gợi ý:
         Cả 3 cạnh đều dài như nhau.'
       courseC_artist_prog5_2018: 'Căn nhà này cần một mái nhà! Vẽ hình tam giác.  Gợi
@@ -464,8 +495,8 @@ vi-VN:
         Sồi không?
       courseD_iceage_loops7: 'Scrat thật sự rất muốn hạt Sồi đó! '
       courseD_iceage_loops7_2019: 'Scrat thật sự rất muốn hạt Sồi đó! '
-      courseD_iceage_loops8: 'Bạn có thể sửa phần mã lệnh này không? '
-      courseD_iceage_loops8_2019: 'Bạn có thể sửa phần mã lệnh này không? '
+      courseD_iceage_loops8: 'Bạn có thể sửa phần code này không? '
+      courseD_iceage_loops8_2019: 'Bạn có thể sửa phần code này không? '
       courseD_iceage_loops9: Hạt Sồi thật là xa quá đi! Bạn có thể dùng vòng lặp để
         giúp Scrat đến đó không?
       courseD_iceage_loops9_2019: Hạt Sồi thật là xa quá đi! Bạn có thể dùng vòng

@@ -1,13 +1,13 @@
 /** @file Redux action-creators for Game Lab.
  *  @see http://redux.js.org/docs/basics/Actions.html */
 import $ from 'jquery';
-import * as utils from '@cdo/apps/utils';
 import {
   pickNewAnimation,
   show,
   Goal
 } from './AnimationPicker/animationPickerModule';
-import {GameLabInterfaceMode} from './constants';
+import {setAllowInstructionsResize} from '../redux/instructions';
+import {P5LabInterfaceMode} from './constants';
 
 /** @enum {string} */
 export const CHANGE_INTERFACE_MODE = 'CHANGE_INTERFACE_MODE';
@@ -27,24 +27,24 @@ export const ADD_MESSAGE = 'spritelab/ADD_MESSAGE';
 
 /**
  * Change the interface mode between Code Mode and the Animation Tab
- * @param {!GameLabInterfaceMode} interfaceMode
+ * @param {!P5LabInterfaceMode} interfaceMode
  * @param {boolean} spritelabDraw - If true, opens the animation tab to a new animation
  * @returns {function}
  */
 export function changeInterfaceMode(interfaceMode, spritelabDraw) {
-  //Add a resize event on each call to changeInterfaceMode to ensure
-  //proper rendering of droplet and code mode. Similar solution in applab.
-  setTimeout(() => utils.fireResizeEvent(), 0);
   return function(dispatch) {
     $(window).trigger('appModeChanged');
     dispatch({
       type: CHANGE_INTERFACE_MODE,
       interfaceMode: interfaceMode
     });
-    if (interfaceMode === GameLabInterfaceMode.ANIMATION && spritelabDraw) {
+    if (interfaceMode === P5LabInterfaceMode.ANIMATION && spritelabDraw) {
       dispatch(show(Goal.NEW_ANIMATION));
       dispatch(pickNewAnimation());
     }
+    dispatch(
+      setAllowInstructionsResize(interfaceMode === P5LabInterfaceMode.CODE)
+    );
   };
 }
 

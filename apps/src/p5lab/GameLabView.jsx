@@ -8,7 +8,7 @@ import AnimationTab from './AnimationTab/AnimationTab';
 import StudioAppWrapper from '@cdo/apps/templates/StudioAppWrapper';
 import ErrorDialogStack from './ErrorDialogStack';
 import AnimationJsonViewer from './AnimationJsonViewer';
-import {GameLabInterfaceMode, GAME_WIDTH, GAME_HEIGHT} from './constants';
+import {P5LabInterfaceMode, APP_WIDTH, APP_HEIGHT} from './constants';
 import GameLabVisualizationHeader from './GameLabVisualizationHeader';
 import GameLabVisualizationColumn from './GameLabVisualizationColumn';
 import InstructionsWithWorkspace from '@cdo/apps/templates/instructions/InstructionsWithWorkspace';
@@ -29,8 +29,8 @@ class GameLabView extends React.Component {
     onMount: PropTypes.func.isRequired,
     // Provided by Redux
     interfaceMode: PropTypes.oneOf([
-      GameLabInterfaceMode.CODE,
-      GameLabInterfaceMode.ANIMATION
+      P5LabInterfaceMode.CODE,
+      P5LabInterfaceMode.ANIMATION
     ]).isRequired,
     isResponsive: PropTypes.bool.isRequired,
     hideSource: PropTypes.bool.isRequired,
@@ -65,11 +65,11 @@ class GameLabView extends React.Component {
     // Code mode contains protected (non-React) content.  We have to always
     // render it, so when we're not in code mode use CSS to hide it.
     const codeModeStyle = {
-      display: interfaceMode !== GameLabInterfaceMode.CODE ? 'none' : undefined
+      display: interfaceMode !== P5LabInterfaceMode.CODE ? 'none' : undefined
     };
 
     const visualizationColumnStyle = {
-      width: GAME_WIDTH
+      width: APP_WIDTH
     };
 
     const visualizationColumnClassNames = classNames({
@@ -95,8 +95,8 @@ class GameLabView extends React.Component {
         </div>
         {this.props.isIframeEmbed && !this.props.isRunning && (
           <IFrameEmbedOverlay
-            appWidth={GAME_WIDTH}
-            appHeight={GAME_HEIGHT}
+            appWidth={APP_WIDTH}
+            appHeight={APP_HEIGHT}
             style={{top: 79, left: 17}}
             playButtonStyle={{top: 620, left: 179}}
           />
@@ -112,7 +112,7 @@ class GameLabView extends React.Component {
   renderAnimationMode() {
     const {allowAnimationMode, interfaceMode} = this.props;
     return allowAnimationMode &&
-      interfaceMode === GameLabInterfaceMode.ANIMATION ? (
+      interfaceMode === P5LabInterfaceMode.ANIMATION ? (
       <AnimationTab channelId={this.getChannelId()} />
     ) : (
       undefined
