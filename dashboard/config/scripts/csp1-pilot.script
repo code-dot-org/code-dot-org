@@ -3,7 +3,6 @@ hideable_stages true
 has_verified_resources true
 has_lesson_plan true
 curriculum_path 'https://curriculum.code.org/{LOCALE}/cspilot/unit1/{LESSON}'
-family_name ''
 pilot_experiment 'csp-piloters'
 
 stage 'CS Principles Pre-survey', lockable: true, flex_category: 'cspSurvey'
