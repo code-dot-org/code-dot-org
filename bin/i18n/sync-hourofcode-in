@@ -14,6 +14,9 @@ def pull_in_files_for_translation
   orig_dir = Dir["pegasus/sites.v3/hourofcode.com/public/*.{md,md.partial}"]
   orig_dir.each do |file|
     loc_dir = "i18n/locales/source/hourofcode"
+    if File.extname(file) == '.partial'
+      loc_dir = "#{loc_dir}/#{File.basename(file, '.partial')}"
+    end
     FileUtils.cp(file, loc_dir)
   end
 
@@ -21,6 +24,9 @@ def pull_in_files_for_translation
   orig_dir.each do |file|
     loc_dir = "i18n/locales/source/hourofcode/how-to"
     Dir.mkdir(loc_dir) unless Dir.exist?(loc_dir)
+    if File.extname(file) == '.partial'
+      loc_dir = "#{loc_dir}/#{File.basename(file, '.partial')}"
+    end
     FileUtils.cp(file, loc_dir)
   end
 
@@ -28,6 +34,9 @@ def pull_in_files_for_translation
   orig_dir.each do |file|
     loc_dir = "i18n/locales/source/hourofcode/promote"
     Dir.mkdir(loc_dir) unless Dir.exist?(loc_dir)
+    if File.extname(file) == '.partial'
+      loc_dir = "#{loc_dir}/#{File.basename(file, '.partial')}"
+    end
     FileUtils.cp(file, loc_dir)
   end
 end
