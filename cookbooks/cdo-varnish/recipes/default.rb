@@ -4,34 +4,26 @@
 #
 
 # Varnish 4.0 vmods from PPA.
-#apt_repository 'varnish-4.0-vmods' do
-#  uri          'ppa:wjordan/varnish-vmods'
-#  key          '71C80CF1F31D0E9BD494DBA3133AD1543642895A'
-#  keyserver    'keyserver.ubuntu.com'
-#  distribution 'trusty'
-#  retries 3
-#end
-
-#apt_package 'varnish' do
-#  version '5.2.1-1'
-#  options '--force-yes'
-#  # Overwrite existing config files on upgrade (templates will be reapplied afterwards)
-#  options '-o Dpkg::Options::="--force-confnew"'
-#end
-#apt_package 'libvmod-cookie' do
-#  version '1.03+4.0.3-5~trusty'
-#  options '--force-yes'
-#end
-#apt_package 'libvmod-header' do
-#  version '0.3+4.0.3-1~trusty'
-#  options '--force-yes'
-#end
-
-packagecloud_repo 'varnishcache/varnish62' do
-  type 'deb'
+apt_repository 'varnish-4.0-vmods' do
+  uri          'ppa:wjordan/varnish-vmods'
+  key          '71C80CF1F31D0E9BD494DBA3133AD1543642895A'
+  keyserver    'keyserver.ubuntu.com'
+  distribution 'trusty'
+  retries 3
 end
 
-apt_package 'varnish-modules' do
+apt_package 'varnish' do
+  version '5.2.1-1'
+  options '--force-yes'
+  # Overwrite existing config files on upgrade (templates will be reapplied afterwards)
+  options '-o Dpkg::Options::="--force-confnew"'
+end
+apt_package 'libvmod-cookie' do
+  version '1.03+4.0.3-5~trusty'
+  options '--force-yes'
+end
+apt_package 'libvmod-header' do
+  version '0.3+4.0.3-1~trusty'
   options '--force-yes'
 end
 
