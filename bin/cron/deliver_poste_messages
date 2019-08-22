@@ -86,7 +86,7 @@ module Poste
       # TODO(andrew): Fix this so that we get a signal as to how often this is happening.
       # For more information, see https://www.pivotaltracker.com/story/show/104750788.
       tracking_id = header['litmus_tracking_id'] unless header.nil?
-      html = @html if @html
+      html = @html.result(locals) if @html
       html = inject_litmus_tracking html, tracking_id, params[:encrypted_id] if html
       text = @text.result(locals) unless @text.nil?
 
