@@ -108,30 +108,34 @@ export default class TeacherDonorBanner extends Component {
           Learn more
         </div>
         <div>
-          <label>
-            <input
-              type="radio"
-              id="participateYes"
-              name="donorTeacherBannerParticipate"
-              value="SOME"
-              style={styles.radio}
-              onChange={this.onParticipateChange}
-              checked={this.state.participate === true}
-            />
-            Yes!
-          </label>
-          <label>
-            <input
-              type="radio"
-              id="participateNo"
-              name="donorTeacherBannerParticipate"
-              value="SOME"
-              style={styles.radio}
-              onChange={this.onParticipateChange}
-              checked={this.state.participate === false}
-            />
-            No thanks, maybe later
-          </label>
+          <div>
+            <label>
+              <input
+                type="radio"
+                id="participateYes"
+                name="donorTeacherBannerParticipate"
+                value="SOME"
+                style={styles.radio}
+                onChange={this.onParticipateChange}
+                checked={this.state.participate === true}
+              />
+              Yes!
+            </label>
+          </div>
+          <div>
+            <label>
+              <input
+                type="radio"
+                id="participateNo"
+                name="donorTeacherBannerParticipate"
+                value="SOME"
+                style={styles.radio}
+                onChange={this.onParticipateChange}
+                checked={this.state.participate === false}
+              />
+              No thanks, maybe later
+            </label>
+          </div>
         </div>
         <hr />
         <div style={permissionStyle}>
