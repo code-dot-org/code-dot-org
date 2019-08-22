@@ -356,6 +356,7 @@
   "dataTabExplanation": "Your app can store data (like high scores and survey results) that gets saved even after you reset your app. Before you run your app, use this tab to plan out your key/value pairs or your data tables. You can enter, edit, and delete data directly from this tab or by using the data blocks within your app.",
   "dataTableCaption": "Create data tables to store rows of data with multiple columns for different fields.",
   "dataTableNamePlaceholder": "Table name",
+  "dataLibraryHeader": "Data Library",
   "dataWorkspaceHeader": "Data Browser",
   "dateUpdatedByTeacher": "Date Updated By Teacher",
   "debugConsoleHeader": "Debug Console",
