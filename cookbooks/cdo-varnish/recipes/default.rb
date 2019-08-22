@@ -13,7 +13,7 @@ apt_repository 'varnish-4.0-vmods' do
 end
 
 apt_package 'varnish' do
-  version '4.0.3-1~trusty'
+  version '5.2.1-1'
   options '--force-yes'
   # Overwrite existing config files on upgrade (templates will be reapplied afterwards)
   options '-o Dpkg::Options::="--force-confnew"'
