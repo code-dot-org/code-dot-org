@@ -252,7 +252,7 @@ class Pd::WorkshopEnrollmentControllerTest < ::ActionController::TestCase
 
   test 'demographic questions added (for teachers, without application, for local summer workshop)' do
     sign_in @teacher
-    workshop = create :workshop, :local_summer_workshop
+    workshop = create :summer_workshop
 
     get :new, params: {workshop_id: workshop.id}
     assert_template :new

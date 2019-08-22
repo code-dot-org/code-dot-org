@@ -59,11 +59,7 @@ class CircuitPlaygroundDiscountApplicationTest < ActiveSupport::TestCase
     teacher = create :teacher
     create :pd_attendance,
       teacher: teacher,
-      workshop: create(:workshop,
-        course: Pd::Workshop::COURSE_CSD,
-        subject: Pd::Workshop::SUBJECT_SUMMER_WORKSHOP,
-        started_at: DateTime.parse('2018-05-02')
-      )
+      workshop: create(:csd_summer_workshop, started_at: DateTime.parse('2018-05-02'))
 
     assert CircuitPlaygroundDiscountApplication.studio_person_pd_eligible? teacher
   end

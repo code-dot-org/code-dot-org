@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190812195807) do
+ActiveRecord::Schema.define(version: 20190814190546) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -441,7 +441,7 @@ ActiveRecord::Schema.define(version: 20190812195807) do
   end
 
   create_table "level_source_images", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.integer  "level_source_id"
+    t.bigint   "level_source_id",                  unsigned: true
     t.binary   "image",           limit: 16777215
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -1617,9 +1617,6 @@ ActiveRecord::Schema.define(version: 20190812195807) do
   end
 
   add_foreign_key "ap_school_codes", "schools"
-  add_foreign_key "authored_hint_view_requests", "levels"
-  add_foreign_key "authored_hint_view_requests", "scripts"
-  add_foreign_key "authored_hint_view_requests", "users"
   add_foreign_key "census_inaccuracy_investigations", "census_overrides"
   add_foreign_key "census_inaccuracy_investigations", "census_submissions"
   add_foreign_key "census_inaccuracy_investigations", "users"

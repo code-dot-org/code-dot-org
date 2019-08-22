@@ -11,7 +11,7 @@ import {
   loadConfig,
   fixFirebaseKey,
   getRecordsRef,
-  getDatabase,
+  getProjectDatabase,
   resetConfigForTesting,
   isInitialized,
   validateFirebaseKey
@@ -40,7 +40,7 @@ const FirebaseStorage = {};
 const RECORD_ID_PADDING = 16;
 
 function getKeysRef() {
-  let kv = getDatabase().child('storage/keys');
+  let kv = getProjectDatabase().child('storage/keys');
   return kv;
 }
 
@@ -155,7 +155,7 @@ FirebaseStorage.deleteKeyValue = function(key, onSuccess, onError) {
  * @returns {Promise<boolean>} whether the record exists
  */
 function getRecordExistsPromise(tableName, recordId) {
-  let recordRef = getDatabase().child(
+  let recordRef = getProjectDatabase().child(
     `storage/tables/${tableName}/records/${recordId}`
   );
   return recordRef.once('value').then(snapshot => snapshot.val() !== null);
@@ -184,7 +184,7 @@ FirebaseStorage.createRecord = function(tableName, record, onSuccess, onError) {
     .then(() => updateTableCounters(tableName, 1, updateNextId))
     .then(nextId => {
       record.id = nextId;
-      const recordRef = getDatabase().child(
+      const recordRef = getProjectDatabase().child(
         `storage/tables/${tableName}/records/${record.id}`
       );
       return recordRef.set(JSON.stringify(record));
@@ -260,7 +260,7 @@ FirebaseStorage.readRecords = function(
 ) {
   tableName = fixTableName(tableName, onError);
 
-  const countersRef = getDatabase().child('counters/tables/');
+  const countersRef = getProjectDatabase().child('counters/tables/');
   // First, check if table exists using counters/tables/ as source of truth
   countersRef.once('value', countersSnapshot => {
     if (!countersSnapshot.val() || !countersSnapshot.val()[tableName]) {
@@ -310,7 +310,7 @@ FirebaseStorage.updateRecord = function(
   tableName = fixTableName(tableName, onError);
 
   const recordJson = JSON.stringify(record);
-  const recordRef = getDatabase().child(
+  const recordRef = getProjectDatabase().child(
     `storage/tables/${tableName}/records/${record.id}`
   );
   const hasId = true;
@@ -350,7 +350,7 @@ FirebaseStorage.deleteRecord = function(
 ) {
   tableName = fixTableName(tableName, onError);
 
-  const recordRef = getDatabase().child(
+  const recordRef = getProjectDatabase().child(
     `storage/tables/${tableName}/records/${record.id}`
   );
 
@@ -450,7 +450,7 @@ FirebaseStorage.resetForTesting = function() {
   }
 
   FirebaseStorage.resetRecordListener();
-  getDatabase().set(null);
+  getProjectDatabase().set(null);
 
   resetConfigForTesting();
 };
@@ -470,7 +470,9 @@ FirebaseStorage.createTable = function(tableName, onSuccess, onError) {
       return enforceTableCount(config, tableName);
     })
     .then(() => {
-      const countersRef = getDatabase().child(`counters/tables/${tableName}`);
+      const countersRef = getProjectDatabase().child(
+        `counters/tables/${tableName}`
+      );
       countersRef
         .transaction(countersData => {
           if (countersData === null) {
@@ -498,12 +500,14 @@ FirebaseStorage.createTable = function(tableName, onSuccess, onError) {
  * @param {function (string)} onError
  */
 FirebaseStorage.deleteTable = function(tableName, onSuccess, onError) {
-  const tableRef = getDatabase().child(`storage/tables/${tableName}`);
-  const countersRef = getDatabase().child(`counters/tables/${tableName}`);
+  const tableRef = getProjectDatabase().child(`storage/tables/${tableName}`);
+  const countersRef = getProjectDatabase().child(
+    `counters/tables/${tableName}`
+  );
   tableRef
     .set(null)
     .then(() => countersRef.set(null))
-    .then(() => getColumnsRef(tableName).set(null))
+    .then(() => getColumnsRef(getProjectDatabase(), tableName).set(null))
     .then(onSuccess, onError);
 };
 
@@ -514,11 +518,11 @@ FirebaseStorage.deleteTable = function(tableName, onSuccess, onError) {
  * @param {function (string)} onError
  */
 FirebaseStorage.clearTable = function(tableName, onSuccess, onError) {
-  const tableRef = getDatabase().child(`storage/tables/${tableName}`);
+  const tableRef = getProjectDatabase().child(`storage/tables/${tableName}`);
   tableRef
     .set(null)
     .then(() => {
-      const rowCountRef = getDatabase().child(
+      const rowCountRef = getProjectDatabase().child(
         `counters/tables/${tableName}/rowCount`
       );
       return rowCountRef.set(0);
@@ -537,7 +541,7 @@ function getExistingTables(overwrite) {
   if (overwrite) {
     return Promise.resolve({});
   }
-  const tablesRef = getDatabase().child('counters/tables');
+  const tablesRef = getProjectDatabase().child('counters/tables');
   return tablesRef.once('value').then(snapshot => snapshot.val() || {});
 }
 
@@ -683,7 +687,9 @@ FirebaseStorage.deleteColumn = function(
   onSuccess,
   onError
 ) {
-  const recordsRef = getDatabase().child(`storage/tables/${tableName}/records`);
+  const recordsRef = getProjectDatabase().child(
+    `storage/tables/${tableName}/records`
+  );
   recordsRef
     .once('value')
     .then(snapshot => {
@@ -722,7 +728,9 @@ FirebaseStorage.renameColumn = function(
     );
     return;
   }
-  const recordsRef = getDatabase().child(`storage/tables/${tableName}/records`);
+  const recordsRef = getProjectDatabase().child(
+    `storage/tables/${tableName}/records`
+  );
   recordsRef
     .once('value')
     .then(snapshot => {
@@ -794,7 +802,9 @@ FirebaseStorage.coerceColumn = function(
   onSuccess,
   onError
 ) {
-  const recordsRef = getDatabase().child(`storage/tables/${tableName}/records`);
+  const recordsRef = getProjectDatabase().child(
+    `storage/tables/${tableName}/records`
+  );
   recordsRef
     .once('value')
     .then(snapshot => {
@@ -879,9 +889,13 @@ function validateRecordsData(recordsData) {
  * @returns {Promise} A promise which is successful if all writes were successful.
  */
 function overwriteTableData(tableName, recordsData) {
-  const recordsRef = getDatabase().child(`storage/tables/${tableName}/records`);
-  const countersRef = getDatabase().child(`counters/tables/${tableName}`);
-  return getColumnsRef(tableName)
+  const recordsRef = getProjectDatabase().child(
+    `storage/tables/${tableName}/records`
+  );
+  const countersRef = getProjectDatabase().child(
+    `counters/tables/${tableName}`
+  );
+  return getColumnsRef(getProjectDatabase(), tableName)
     .set(null)
     .then(() => recordsRef.set(recordsData))
     .then(() => {

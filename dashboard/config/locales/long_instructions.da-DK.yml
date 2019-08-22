@@ -2,15 +2,39 @@
 da-DK:
   data:
     long_instructions:
+      2-3 Artist 1 new: Hej, er jeg en kunstner. Du kan få mig til at tegne næsten
+        hvad som helst, hvis bare du skriver koden. Brug et par blokke til, at tegne
+        over de grå linier i billedet. (Hver linje er 100 pixels lang)
+      2-3 Artist 2 new: Dette hus har en halv-færdig væg. Hver side er 100, men den
+        halvfærdige væg er kun 50. Færdiggør væggen.
+      2-3 Artist 3.4: Hop blokken flytter kunstneren uden at tegne. Tegn de stiplede
+        linjer ved hjælp af både hoppe- og tegneblokkene. Hver linje er 50 pixels
+        lang.
+      2-3 Artist 3new: Den røde hat er 100 pixels høj. Tegn en sort hat, der er 70
+        pixels kortere. Bredden af den sorte hat er 50 pixel.
       2-3 Artist 4: Hjælp mig færdigøre huset for denne kat.
+      2-3 Artist 6: 'Dette hus har brug for et tag! Tegn trekanten. Tip: alle sider
+        er lige lange.'
+      2-3 Artist 7: 'Udfør tegningen af den højre del af det sidste vindue. Hvert
+        kvadrat i vinduet er 25 pixel. '
       2-3 Artist 9 NEW: Færdiggør dragen
+      2-3 Artist Assessment 1: 'Vurdering: Færdiggør tegningen af den sidste tand,
+        25 pixel bred og 25 pixel høj.'
       2-3 Artist Free Play: Fri leg! Tegn lige hvad du har lyst til.
+      2-3 Artist Loops New 10: Lad os forbinde en stak V'er, ved hjælp at en løkke.
+      2-3 Artist Loops New 9: "Tegn et simpelt V hvor begge sider er \n50 pixels for
+        at færdiggøre pilen."
       2-3 Artist Nested Loops 10: Gentag denne kode 12 gange for at gøre mønsteret
         færdigt.
       2-3 Artist Nested Loops 12: Gentag 12 gange for at afslutte krøllerne.
       2-3 Artist Nested Loops Free Play: Fri leg, tegn noget sejt hvor du bruger flere
         løkker indeni hinanden.
       2-3 Bee Loops 3A: Kan du bruge en løkke til at indsamle al nektaren?
+      2-3 Maze 1: 'Kan du hjælpe mig med at fange den frække gris? Sæt nogle "flyt
+        fremad"- blokke sammen og tryk "Kør". '
+      2-3 Maze 15: Bruge to løkker til at komme hen til grisen med færre blokke.
+      2-3 Maze Loops Assessment 1: 'Vurdering: Få mig til solsikken ved hjælp af kun
+        5 blokke! '
       4-5 Artist Free Draw 1: Fri tegning!  Tegn lige det du føler dig inspireret
         til at skabe.
       4-5 Artist Patterns 7: Lad os ændre koden fra den sidste puslespil for at lave
@@ -203,6 +227,8 @@ da-DK:
         til fårene.
       Overworld Move to Sheep_2019: Tilføje en "flyt fremad"-blok mere for at komme
         hen til fårene.
+      course2_maze_programming_challenge1: '"Grisen gemmer sig! Kan du hjælpe mig
+        med at finde vej?"'
       course4_artist_fwp_challenge1: Prøv at køre dette program, og foretag ændringer
         for at se hvad der sker. Kan du finde ud af hvordan det virker? (Ellers slet
         det og erstat det med noget helt andet)
