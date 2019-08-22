@@ -12824,6 +12824,20 @@ en:
               name: Searching and Research
             Sources and Research:
               name: Sources and Research
+            Team Problem Solving:
+              name: Team Problem Solving
+            Wireframes and Planning:
+              name: Wireframes and Planning
+            Linking Pages:
+              name: Linking Pages
+            Planning a Multi-page Website:
+              name: Planning a Multi-page Website
+            Linking and Navigation:
+              name: Linking and Navigation
+            Peer Review and Final Touches:
+              name: Peer Review and Final Touches
+            Project - Website for a Purpose:
+              name: Project - Website for a Purpose
         csd3-pilot:
           title: CSD Unit 3 - Animations and Games (Pilot Version)
           description: " In Unit 3, you’ll build on your coding experience as you program animations, interactive art, and games in Game Lab. The unit starts off with simple shapes and builds up to more sophisticated sprite-based games, using the same programming concepts and the design process computer scientists use daily. In the final project, you’ll develop a personalized, interactive program."

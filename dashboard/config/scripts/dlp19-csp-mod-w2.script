@@ -1,7 +1,6 @@
 professional_learning_course 'CS Principles Deeper Learning 2019 - 2020'
 login_required true
 student_detail_progress_view true
-family_name ''
 
 stage 'CS Principles Deeper Learning Module 2'
 level 'dlp19-hold-mod1'
