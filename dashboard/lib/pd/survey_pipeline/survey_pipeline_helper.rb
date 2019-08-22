@@ -64,13 +64,13 @@ module Pd::SurveyPipeline::Helper
       end
 
     # Roll up facilitator-specific results and general workshop results for each facilitator
-    results = {}
+    rollup_report = {}
     facilitator_ids.each do |facilitator_id|
-      results.deep_merge! report_facilitator_rollup(facilitator_id, workshop)
-      results.deep_merge! report_workshop_rollup(facilitator_id, workshop)
+      rollup_report.deep_merge! report_facilitator_rollup(facilitator_id, workshop)
+      rollup_report.deep_merge! report_workshop_rollup(facilitator_id, workshop)
     end
 
-    results
+    rollup_report
   end
 
   # Summarize facilitator-specific results from all related workshops
@@ -96,6 +96,16 @@ module Pd::SurveyPipeline::Helper
         [facilitator_id], related_ws_ids
       )
 
+    summaries, errors = summarize_rollup_data(
+      questions, submissions, [FACILITATOR_EFFECTIVENESS_CATEGORY], workshop.id
+    )
+
+    # TODO: decorate result
+    # Pd::SurveyPipeline::FacilitatorSurveyRollupDecorator.process_data summaries, errors
+    [summaries, errors]
+  end
+
+  def summarize_rollup_data(questions, submissions, question_categories, workshop_id)
     parsed_questions = Pd::SurveyPipeline::DailySurveyParser.parse_questions questions
     parsed_submissions =
       Pd::SurveyPipeline::DailySurveyParser.parse_submissions submissions
@@ -110,13 +120,16 @@ module Pd::SurveyPipeline::Helper
     question_answer_groups_all_ws =
       Pd::SurveyPipeline::GenericMapper.group_data question_answer_joined, group_keys_all_ws
 
-    map_config_all_ws = [{
-      condition: lambda do |hash|
-        hash[:name]&.start_with? FACILITATOR_EFFECTIVENESS_CATEGORY
-      end,
-      field: :answer_to_number,
-      reducers: [Pd::SurveyPipeline::AvgReducer]
-    }]
+    is_selected_question_all_ws = lambda do |hash|
+      question_categories.any? {|category| hash[:name]&.start_with? category}
+    end
+    map_config_all_ws = [
+      {
+        condition: is_selected_question_all_ws,
+        field: :answer_to_number,
+        reducers: [Pd::SurveyPipeline::AvgReducer]
+      }
+    ]
     summaries_all_ws, errors_all_ws =
       Pd::SurveyPipeline::GenericMapper.map_groups_to_reducers question_answer_groups_all_ws, map_config_all_ws
 
@@ -125,22 +138,22 @@ module Pd::SurveyPipeline::Helper
     question_answer_groups_this_ws =
       Pd::SurveyPipeline::GenericMapper.group_data question_answer_joined, group_keys_this_ws
 
-    map_config_this_ws = [{
-      condition: lambda do |hash|
-        (hash[:workshop_id] == workshop.id) && hash[:name]&.start_with?(FACILITATOR_EFFECTIVENESS_CATEGORY)
-      end,
-      field: :answer_to_number,
-      reducers: [Pd::SurveyPipeline::AvgReducer]
-    }]
+    is_selected_question_this_ws = lambda do |hash|
+      hash[:workshop_id] == workshop_id &&
+        question_categories.any? {|category| hash[:name]&.start_with? category}
+    end
+    map_config_this_ws = [
+      {
+        condition: is_selected_question_this_ws,
+        field: :answer_to_number,
+        reducers: [Pd::SurveyPipeline::AvgReducer]
+      }
+    ]
     summaries_this_ws, errors_this_ws =
       Pd::SurveyPipeline::GenericMapper.map_groups_to_reducers question_answer_groups_this_ws, map_config_this_ws
 
-    # TODO: remove this return
+    # Combine all results
     [summaries_all_ws + summaries_this_ws, errors_all_ws + errors_this_ws]
-
-    # TODO: decorate result
-    # summaries_all_ws + summaries_this_ws, errors_all_ws + errors_this_ws
-    # Pd::SurveyPipeline::FacilitatorSurveyRollupDecorator.process_data context
   end
 
   # def report_facilitator_rollup(facilitator_id, workshop)
@@ -224,7 +237,7 @@ module Pd::SurveyPipeline::Helper
 
     is_selected_question_this_ws = lambda do |hash|
       hash[:workshop_id] == context[:current_workshop_id] &&
-      context[:question_categories].any? {|category| hash[:name]&.start_with? category}
+        context[:question_categories].any? {|category| hash[:name]&.start_with? category}
     end
 
     map_config_this_ws = [
