@@ -15,6 +15,10 @@ import msg from '@cdo/locale';
 import {changeView, showWarning} from '../redux/data';
 import {connect} from 'react-redux';
 import * as dataStyles from './dataStyles';
+import DataBrowser from './DataBrowser';
+import DataLibraryPane from './DataLibraryPane';
+import experiments from '../../util/experiments';
+import color from '../../util/color';
 
 const tableWidth = 400;
 const buttonColumnWidth = 90;
@@ -24,6 +28,21 @@ const styles = {
     width: tableWidth,
     marginTop: 10,
     marginBottom: 10
+  },
+  container: {
+    position: 'absolute',
+    width: '100%',
+    top: 0,
+    bottom: 0,
+    backgroundColor: color.white
+  },
+  dataBrowser: {
+    position: 'absolute',
+    top: 0,
+    bottom: 0,
+    left: 270,
+    right: 0,
+    padding: 10
   }
 };
 
@@ -60,46 +79,57 @@ class DataOverview extends React.Component {
   render() {
     const visible = DataView.OVERVIEW === this.props.view;
 
-    return (
-      <div id="dataOverview" style={{display: visible ? 'block' : 'none'}}>
-        <h4>Data</h4>
+    if (experiments.isEnabled(experiments.APPLAB_DATASETS)) {
+      return (
+        <div id="data-library-container" style={styles.container}>
+          <DataLibraryPane />
+          <div id="data-browser" style={styles.dataBrowser}>
+            <DataBrowser />
+          </div>
+        </div>
+      );
+    } else {
+      return (
+        <div id="dataOverview" style={{display: visible ? 'block' : 'none'}}>
+          <h4>Data</h4>
 
-        <h5>{msg.dataTabExplanation()}</h5>
-        <br />
-        <p>{msg.keyValueCaption()}</p>
-        <table style={styles.table}>
-          <tbody>
-            <tr style={dataStyles.row}>
-              <td style={dataStyles.cell}>
-                <EditLink
-                  name={msg.keyValuePairLink()}
-                  onClick={() => this.props.onViewChange(DataView.PROPERTIES)}
+          <h5>{msg.dataTabExplanation()}</h5>
+          <br />
+          <p>{msg.keyValueCaption()}</p>
+          <table style={styles.table}>
+            <tbody>
+              <tr style={dataStyles.row}>
+                <td style={dataStyles.cell}>
+                  <EditLink
+                    name={msg.keyValuePairLink()}
+                    onClick={() => this.props.onViewChange(DataView.PROPERTIES)}
+                  />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <br />
+          <p>{msg.dataTableCaption()}</p>
+          <table style={styles.table}>
+            <colgroup>
+              <col width={tableWidth - buttonColumnWidth} />
+              <col width={buttonColumnWidth} />
+            </colgroup>
+            <tbody>
+              {Object.keys(this.props.tableListMap).map(tableName => (
+                <EditTableListRow
+                  key={tableName}
+                  tableName={tableName}
+                  onViewChange={this.props.onViewChange}
                 />
-              </td>
-            </tr>
-          </tbody>
-        </table>
-
-        <br />
-        <p>{msg.dataTableCaption()}</p>
-        <table style={styles.table}>
-          <colgroup>
-            <col width={tableWidth - buttonColumnWidth} />
-            <col width={buttonColumnWidth} />
-          </colgroup>
-          <tbody>
-            {Object.keys(this.props.tableListMap).map(tableName => (
-              <EditTableListRow
-                key={tableName}
-                tableName={tableName}
-                onViewChange={this.props.onViewChange}
-              />
-            ))}
-            <AddTableListRow onTableAdd={this.onTableAdd} />
-          </tbody>
-        </table>
-      </div>
-    );
+              ))}
+              <AddTableListRow onTableAdd={this.onTableAdd} />
+            </tbody>
+          </table>
+        </div>
+      );
+    }
   }
 }
 

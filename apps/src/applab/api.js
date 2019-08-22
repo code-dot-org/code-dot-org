@@ -364,6 +364,14 @@ export function setKeyValueSync(key, value, callback) {
   });
 }
 
+export function getColumn(table, column, callback) {
+  return Applab.executeCmd(null, 'getColumn', {
+    table: table,
+    column: column,
+    callback: callback
+  });
+}
+
 export function createRecord(table, record, onSuccess, onError) {
   return Applab.executeCmd(null, 'createRecord', {
     table: table,
