@@ -9,7 +9,6 @@ def push_out_translated_files
   rename_downloads_from_crowdin_code_to_locale
   copy_from_i18n_source_to_hoc
   clean_crowdin_markdown_errors
-  check_for_bad_translations
 end
 
 def rename_downloads_from_crowdin_code_to_locale
@@ -39,7 +38,7 @@ def copy_from_i18n_source_to_hoc
     next if prop[:locale_s] == "en-US"
     i18n_path = "i18n/locales/#{prop[:locale_s]}/hourofcode"
     hoc_path = "pegasus/sites.v3/hourofcode.com/i18n"
-    FileUtils.cp(i18n_path + "/#{prop[:unique_language_s]}.yml", hoc_path)
+    FileUtils.cp(i18n_path + "/#{prop[:unique_language_s]}.yml", hoc_path) if File.exist?(i18n_path + "/#{prop[:unique_language_s]}.yml")
 
     language_folder = hoc_path + "/public/#{prop[:unique_language_s]}"
     unless File.directory?(language_folder)
@@ -50,19 +49,22 @@ def copy_from_i18n_source_to_hoc
       FileUtils.mkdir_p(language_folder + "/promote")
     end
 
+    # Crowdin didn't place nicely with changing the file extensions from md to md.partial
+    # As a hopefully temporary solution, on the sync in we remove the .partial ending and
+    # here we add it back.
     i18n_dir = Dir["i18n/locales/#{prop[:locale_s]}/hourofcode/*.md"]
     i18n_dir.each do |file|
-      FileUtils.cp(file, hoc_path + "/public/#{prop[:unique_language_s]}/#{File.basename(file)}")
+      FileUtils.cp(file, hoc_path + "/public/#{prop[:unique_language_s]}/#{File.basename(file)}.partial")
     end
 
     i18n_dir = Dir["i18n/locales/#{prop[:locale_s]}/hourofcode/how-to/*.md"]
     i18n_dir.each do |file|
-      FileUtils.cp(file, hoc_path + "/public/#{prop[:unique_language_s]}/how-to/#{File.basename(file)}")
+      FileUtils.cp(file, hoc_path + "/public/#{prop[:unique_language_s]}/how-to/#{File.basename(file)}.partial")
     end
 
     i18n_dir = Dir["i18n/locales/#{prop[:locale_s]}/hourofcode/promote/*.md"]
     i18n_dir.each do |file|
-      FileUtils.cp(file, hoc_path + "/public/#{prop[:unique_language_s]}/promote/#{File.basename(file)}")
+      FileUtils.cp(file, hoc_path + "/public/#{prop[:unique_language_s]}/promote/#{File.basename(file)}.partial")
     end
 
     puts "Copied locale #{prop[:unique_language_s]}"
@@ -72,12 +74,12 @@ end
 def clean_crowdin_markdown_errors
   puts "Fixing crowdin markdown errors..."
   # replace * * * with ---
-  Dir.glob("pegasus/sites.v3/hourofcode.com/i18n/public/**/*.md").each do |file|
+  Dir.glob("pegasus/sites.v3/hourofcode.com/i18n/public/**/*.{md,md.partial}").each do |file|
     File.write(file, File.read(file).gsub(/^.*\*\s\*\s\*/, "---"))
   end
 
   # fix metadata to be multiline
-  Dir.glob("pegasus/sites.v3/hourofcode.com/i18n/public/**/*.md").each do |file|
+  Dir.glob("pegasus/sites.v3/hourofcode.com/i18n/public/**/*.{md,md.partial}").each do |file|
     puts file
     metadata_pattern = /(---.*?---)/m
     metadata_matches = File.read(file).match metadata_pattern
@@ -99,7 +101,7 @@ def clean_crowdin_markdown_errors
   end
 
   # fix social media buttons in public/thanks
-  Dir.glob("pegasus/sites.v3/hourofcode.com/i18n/public/**/thanks.md").each do |file|
+  Dir.glob("pegasus/sites.v3/hourofcode.com/i18n/public/**/thanks.{md,md.partial}").each do |file|
     puts file
     string_replacement = '#{request.host}'  # rubocop:disable Lint/InterpolationCheck
     social_media_buttons = "<%
@@ -110,7 +112,7 @@ def clean_crowdin_markdown_errors
   end
 
   # fix social media metadata in public/thanks
-  Dir.glob("pegasus/sites.v3/hourofcode.com/i18n/public/**/thanks.md").each do |file|
+  Dir.glob("pegasus/sites.v3/hourofcode.com/i18n/public/**/thanks.{md,md.partial}").each do |file|
     puts file
     social_media_metada = "---
 title: <%= hoc_s(:title_signup_thanks) %>
@@ -136,32 +138,6 @@ social:
       File.write(file, File.read(file).gsub(/^---.*?---/m, social_media_metada))
     end
   end
-
-  # fix embedded ruby in markdown
-  Dir.glob("pegasus/sites.v3/hourofcode.com/i18n/public/**/*.md").each do |file|
-    puts file
-    File.write(file, File.read(file).gsub(/\((%[^%]*%)\)/, "(<\\1>)"))
-  end
-end
-
-def check_for_bad_translations
-  Dir.glob("pegasus/sites.v3/hourofcode.com/i18n/public/**/*.md").each do |i18n_file|
-    pattern = /pegasus\/sites.v3\/hourofcode.com\/i18n\/public\/[a-z][a-z]/
-    source_file = i18n_file.gsub(pattern, "i18n/locales/source/hourofcode")
-
-    unless %w(privacy.md tos.md).include? i18n_file.split('/').last
-      puts "checking: " + i18n_file
-      diff_checker(i18n_file, source_file)
-    end
-  end
-end
-
-# Returns a string describing the difference in the code blocks (<% ... %>) in
-# the files at path 1 and path2
-def diff_code(path1, path2)
-  out1 = create_tempfile(strip_code(read_file(path1)))
-  out2 = create_tempfile(strip_code(read_file(path2)))
-  `diff #{out1.path} #{out2.path} -b | cat -t`
 end
 
 # Returns only the code enclosed in <% .. %> blocks in str.
@@ -184,10 +160,6 @@ def create_tempfile(str)
   out.write(str)
   out.write("\n")
   out.flush
-end
-
-def diff_checker(i18n_file, source_file)
-  print diff_code(i18n_file, source_file)
 end
 
 push_out_translated_files
