@@ -90,18 +90,34 @@ module Pd::SurveyPipeline::Helper
   #
   def report_facilitator_rollup(facilitator_id, workshop)
     related_ws_ids = find_related_workshop_ids(facilitator_id, workshop.course)
-
     questions, submissions =
       Pd::SurveyPipeline::DailySurveyRetriever.retrieve_facilitator_surveys(
         [facilitator_id], related_ws_ids
       )
+    question_categories = [FACILITATOR_EFFECTIVENESS_CATEGORY]
 
     summaries, errors = summarize_rollup_data(
-      questions, submissions, [FACILITATOR_EFFECTIVENESS_CATEGORY], workshop.id
+      questions, submissions, question_categories, workshop.id
     )
 
     # TODO: decorate result
     # Pd::SurveyPipeline::FacilitatorSurveyRollupDecorator.process_data summaries, errors
+    [summaries, errors]
+  end
+
+  def report_workshop_rollup(facilitator_id, workshop)
+    # Retrieve data
+    related_ws_ids = find_related_workshop_ids(facilitator_id, workshop.course)
+    questions, submissions = Pd::SurveyPipeline::DailySurveyRetriever.retrieve_workshop_surveys related_ws_ids
+
+    question_categories = [WORKSHOP_OVERALL_SUCCESS_CATEGORY, WORKSHOP_TEACHER_ENGAGEMENT_CATEGORY]
+
+    summaries, errors = summarize_rollup_data(
+      questions, submissions, question_categories, workshop.id
+    )
+
+    # TODO: decorate result
+    # Pd::SurveyPipeline::WorkshopSurveyRollupDecorator.process_data summaries, errors
     [summaries, errors]
   end
 
@@ -154,103 +170,6 @@ module Pd::SurveyPipeline::Helper
 
     # Combine all results
     [summaries_all_ws + summaries_this_ws, errors_all_ws + errors_this_ws]
-  end
-
-  # def report_facilitator_rollup(facilitator_id, workshop)
-  #   context = {
-  #     current_workshop_id: workshop.id,
-  #     facilitator_id: facilitator_id,
-  #     question_categories: [FACILITATOR_EFFECTIVENESS_CATEGORY],
-  #     submission_type: 'Facilitator'
-  #   }
-  #
-  #   # Retrieve data
-  #   related_ws_ids = find_related_workshop_ids(facilitator_id, workshop.course)
-  #   context[:related_workshop_ids] = related_ws_ids
-  #   context.merge! retrieve_facilitator_surveys([facilitator_id], related_ws_ids)
-  #
-  #   # Process data
-  #   process_rollup_data context
-  #
-  #   # Decorate
-  #   Pd::SurveyPipeline::FacilitatorSurveyRollupDecorator.process_data context
-  #
-  #   context[:decorated_summaries]
-  # end
-
-  def report_workshop_rollup(facilitator_id, workshop)
-    context = {
-      current_workshop_id: workshop.id,
-      facilitator_id: facilitator_id,
-      question_categories: [WORKSHOP_OVERALL_SUCCESS_CATEGORY, WORKSHOP_TEACHER_ENGAGEMENT_CATEGORY],
-      submission_type: 'Workshop'
-    }
-
-    # Retrieve data
-    related_ws_ids = find_related_workshop_ids(facilitator_id, workshop.course)
-    context[:related_workshop_ids] = related_ws_ids
-    context.merge! retrieve_workshop_surveys(related_ws_ids)
-
-    # Process data
-    process_rollup_data context
-
-    # Decorate
-    Pd::SurveyPipeline::WorkshopSurveyRollupDecorator.process_data context
-
-    context[:decorated_summaries]
-  end
-
-  def process_rollup_data(context)
-    # Transform data
-    Pd::SurveyPipeline::DailySurveyParser.process_data context
-    Pd::SurveyPipeline::DailySurveyJoiner.process_data context
-
-    # Convert string answers to numbers
-    context[:question_answer_joined].each do |qa|
-      if qa.dig(:option_map, qa[:answer])
-        qa[:answer_to_number] = qa[:option_map][qa[:answer]]
-      end
-    end
-
-    # Mapper + Reducer
-    # Summarize results for all workshops
-    group_config_all_ws = [:name, :type, :answer_type]
-
-    is_selected_question_all_ws = lambda do |hash|
-      context[:question_categories].any? {|category| hash[:name]&.start_with? category}
-    end
-
-    map_config_all_ws = [
-      {
-        condition: is_selected_question_all_ws,
-        field: :answer_to_number,
-        reducers: [Pd::SurveyPipeline::AvgReducer]
-      }
-    ]
-
-    Pd::SurveyPipeline::GenericMapper.new(
-      group_config: group_config_all_ws, map_config: map_config_all_ws
-    ).process_data context
-
-    # Summarize results for the current workshop
-    group_config_this_ws = [:workshop_id, :name, :type, :answer_type]
-
-    is_selected_question_this_ws = lambda do |hash|
-      hash[:workshop_id] == context[:current_workshop_id] &&
-        context[:question_categories].any? {|category| hash[:name]&.start_with? category}
-    end
-
-    map_config_this_ws = [
-      {
-        condition: is_selected_question_this_ws,
-        field: :answer_to_number,
-        reducers: [Pd::SurveyPipeline::AvgReducer]
-      }
-    ]
-
-    Pd::SurveyPipeline::GenericMapper.new(
-      group_config: group_config_this_ws, map_config: map_config_this_ws
-    ).process_data context
   end
 
   private
