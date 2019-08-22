@@ -65,11 +65,8 @@
     "show_type_hints": "false",
     "encrypted": "false",
     "mini_rubric": "false",
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ],
-    "palette_category_at_start": "sprites"
+    "palette_category_at_start": "sprites",
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",

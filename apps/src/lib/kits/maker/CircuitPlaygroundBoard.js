@@ -102,7 +102,7 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
         this.serialPort_ = serialPort;
         this.fiveBoard_ = board;
         this.fiveBoard_.samplingInterval(100);
-        this.detectBoardType();
+        this.boardType_ = this.detectBoardType();
         if (experiments.isEnabled('detect-board')) {
           this.detectFirmwareVersion(playground);
         }
@@ -139,19 +139,19 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
       this.port_ && this.port_.productId
         ? parseInt(this.port_.productId, 16)
         : null;
+    let boardType = BOARD_TYPE.OTHER;
     if (vendorId === ADAFRUIT_VID && productId === CIRCUIT_PLAYGROUND_PID) {
-      this.boardType_ = BOARD_TYPE.CLASSIC;
+      boardType = BOARD_TYPE.CLASSIC;
     } else if (
       vendorId === ADAFRUIT_VID &&
       productId === CIRCUIT_PLAYGROUND_EXPRESS_PID
     ) {
-      this.boardType_ = BOARD_TYPE.EXPRESS;
+      boardType = BOARD_TYPE.EXPRESS;
       if (this.fiveBoard_) {
         this.fiveBoard_.isExpressBoard = true;
       }
-    } else {
-      this.boardType_ = BOARD_TYPE.OTHER;
     }
+    return boardType;
   }
 
   /**
