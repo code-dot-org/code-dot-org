@@ -68,6 +68,14 @@ Resources:
                 Condition:
                   StringEquals:
                     iam:PermissionsBoundary: !Ref DevPermissions
+        # Permissions for managing AWS::SecretsManager::Secret resources.
+        - PolicyName: SecretPermissions
+          PolicyDocument:
+            Version: 2012-10-17
+            Statement:
+              - Effect: Allow
+                Action: secretsmanager:*
+                Resource: '*'
       ManagedPolicyArns: [!Ref DevPermissions]
   # Shared 'Developer' permissions.
   # Used as default permissions for all developer Roles,
