@@ -41,6 +41,9 @@ pt-BR:
       2-3 Artist 9 NEW:
         2-3_Artist_9_a: Na verdade este diamante é apenas um quadrado inclinado
       2-3 Artist Debugging 10:
+        2-3_Artist_Debugging_10_a: 'Lembre-se: você quer o painel de controle mais
+          _largo_ em 10 pixels... então lembre-se de **adicionar** 10 a todos os números
+          que você mudar.'
         2-3_Artist_Debugging_10_b: |-
           \*\* Tentativa e erro está perfeito aqui!\*\*
           Comece mudando um número de cada vez.
@@ -55,6 +58,13 @@ pt-BR:
       2-3 Artist Debugging 7:
         2-3_Artist_Debugging_7_a: O que acontece se você tiver o artista mover-se
           ou saltar para trás depois que ele desenha a primeira linha?
+      2-3 Artist Debugging 8:
+        2-3_Artist_Debugging_8_a: |-
+          Quantas vezes minha forma foi repetida?
+
+          Quantas vezes a forma _deveria_ ter sido repetida?
+
+          Onde você pode mudar isso no programa?
       2-3 Artist Debugging 9:
         2-3_Artist_Debugging_9_a: O artista precisa virar 60 graus para a esquerda
           mais distante antes de começar a desenhar!
@@ -180,6 +190,19 @@ pt-BR:
           os blocos?  Tente tratar a flor vermelha exatamente como uma flor roxa!
         2-3_Bee_Conditionals_14_b: Se as flores vermelhas fossem roxas, você conseguiria
           reduzir o código usando mais um ciclo 'repeat'?
+        2-3_Bee_Conditionals_14_c: |-
+          Tente quebrar isto em duas etapas distintas:
+
+          ![](https://images.code.org/895a52f3febff9edb83979f7861cf67a-image-1469640892331.png)
+
+          1.  Coletar néctar 3 vezes
+              -   Mover 5 vezes à frente
+              -   Verificar se existe néctar, se sim: coletá-lo
+              -   Virar à esquerda
+
+          2.  Produzir mel
+              -   Mover à frente uma vez
+              -   Produzir duas unidades de mel
       2-3 Bee Conditionals 15:
         2-3_Bee_Conditionals_15_a: 'Lembre-se: Flores roxas só tem 0 ou 1 néctar e
           eles podem mudar cada vez que você executar o programa.'
@@ -299,13 +322,25 @@ pt-BR:
         4-5_Artist_4_a: Há 360 graus em um círculo! Isso é o número de vezes que você
           precisa repetir esse código (virando 1 grau por vez) antes que o círculo
           esteja completo!
+      4-5 Artist 5:
+        4-5_Artist_5_a: |-
+          Tentativa e erro é um ótimo método, mas você também pode resolver o problema dividindo o ângulo de 90 graus em três.
+
+          **90 / 3 = \_\_\_\_\_**
       4-5 Artist 7:
         4-5_Artist_7_a: 'Qual ângulo é o menor?  Em qual ângulo o artista está? '
       4-5 Artist 8:
         4-5_Artist_8_a: 'Os lados mais longos possuem 240 pixels cada.  Isso significa
           que os 2 lados curtos devem totalizar: **800 - 240 - 240 = 320** Quanto
           é **320/2**? '
+        4-5_Artist_8_b: |-
+          Esta imagem pode ser feita de 2 maneiras!
+
+          -   Desenhe dois retângulos que possuem **120** de extensão e **160** de altura, com um lado sobreposto
+          -   Desenhe um retângulo com **240** de extensão e **160** de altura, e em seguida adicione uma linha no meio.
       4-5 Artist 9:
+        4-5_Artist_9_a: 'Quando um triângulo é um equilátero, todos os lados e todos
+          os ângulos são iguais.  '
         4-5_Artist_9_b: Você precisará desenhar três triângulos do mesmo tamanho.
           Não se esqueça de pular para sua nova posição depois de cada um.
       4-5 Artist Assessment 1:
@@ -3126,6 +3161,11 @@ pt-BR:
         courseD_bee_conditionals_challenge1_b: Nesse quebra-cabeça, cada espaço poderia
           ter uma flor, um pente de mel ou nada. Isso significa que você pode repetir
           sua condicional `se / se não` em cada quadrado.
+      course2_bee_conditionals_challenge2:
+        courseD_bee_conditionals_challenge1_b: |-
+          Da mesma maneira que blocos `se na flor`, o código dentro de um `enquanto néctar > 0` irá somente executar caso a abelha estiver em uma flor. A principal diferença é que o código no interior irá executar várias vezes, até que não restem mais néctares. Tente este padrão:
+
+           blockly block][0]
       course2_collector_loops_challenge2:
         courseC_maze_loops_challenge2_a: O código original funcionaria muito bem -
           se houvesse apenas um pedaço de tesouro em cada pilha!
@@ -3142,6 +3182,33 @@ pt-BR:
         courseC_harvester_loops_challenge1_b: Você pode repetir 'mover à frente' e
           'colher milho' quantas vezes for necessário e, então, 'virar à direita'
           em cada canto.
+        courseC_harvester_loops_challenge1_c: |-
+          A melhor maneira de coletar as primeiras quatro espigas usa um bloco `repita` dentro de outro bloco `repita`. Você pode usar este padrão durante todo o restante do quebra-cabeças!
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="controls_repeat">
+                  <title name="TIMES">2</title>
+                  <statement name="DO">
+                    <block type="controls_repeat">
+                      <title name="TIMES">2</title>
+                      <statement name="DO">
+                        <block type="maze_move">
+                          <title name="DIR">moveForward</title>
+                          <next>
+                            <block type="harvester_corn"/>
+                          </next>
+                        </block>
+                      </statement>
+                      <next>
+                        <block type="maze_turn">
+                          <title name="DIR">turnRight</title>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                  </block></next></block></xml>
       course2_harvester_loops_challenge2:
         courseC_harvester_loops_challenge2_a: Uma maneira de resolver isso é com um
           zig-zag. Outra maneira é espiral! Existem muitas soluções diferentes para
@@ -3375,6 +3442,10 @@ pt-BR:
           mais passos à frente entre as voltas.
         courseC_maze_debugging_challenge2_b: Se você está ficando preso, você sempre
           pode começar de novo ou remover todo o código e descobrir seu próprio caminho!
+        courseC_maze_debugging_challenge2_c: |-
+          Existem dois caminhos distintos que você pode seguir somente usando `mover à frente`, e somente quatro rodadas. Se você descobrir uma maneira de usar blocos `repita`, poderá haver ainda mais!
+
+          ![](<https://images.code.org/8a4665671cda35fea1f629a5bcc39e26-image-1493502743154.48.05 PM.png>)
       course3_playLab_challenge1:
         courseE_playLab_challenge1_a: |-
           Aqui estão algumas coisas que você pode fazer quando o jogador vencer o jogo:

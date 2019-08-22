@@ -650,12 +650,90 @@ pt-BR:
       CSD U2 Design Project:
         title: título
         content1: descrição aqui
+        markdown: |+
+          # Inicie sua página
+
+          Chegou a hora de criar sua página pessoal! Você poderá escolher o conteúdo que você compartilhará com o mundo.
+
+          ## Definir
+
+          Sua tarefa é criar uma página da Web usando o HTML que você aprendeu. A página da web deve ter pelo menos **dois títulos de tamanhos diferentes**, e deve **usar parágrafos** também.
+
+          ## Prepare
+
+          Antes de começar a codificar sua página da web, você precisa ter um plano. Use as idéias que você escreveu algumas lições atrás e decida sobre o que esta página será. Você terá a chance de fazer outras páginas depois.
+
+          Desenhe um esboço da sua página da Web, incluindo títulos e parágrafos incluídos. Mostre seu esboço para seu parceiro e explique quais tags você usará para as diferentes partes da página. Você pode olhar para os níveis anteriores se esqueceu quais são as diferentes tags ou pedir ajuda ao seu parceiro.
+
+          Se você esboçou algo que ainda não aprendeu a codificar, pode salvá-lo para mais tarde.
+
+          ## Experimentar
+
+          Use o HTML que você aprendeu para criar sua página. Você pode pedir a um parceiro para ajudá-lo se ficar preso, mas **você é o motorista** para a sua própria página da web, o que significa que você deve digitar todo o código.
+
+          ## Refletir
+
+          Depois de ter terminado a sua página web, compare-a com o seu esboço para se certificar de que não se esqueceu de nada. Peça ao seu parceiro para procurar também e pense em qualquer feedback recebido e se você deseja fazer alterações em sua página.
+
+
       CSD U2 Design Project_2018:
         title: título
         content1: descrição aqui
+        markdown: |+
+          # Inicie sua página
+
+          Chegou a hora de criar sua página pessoal! Você poderá escolher o conteúdo que você compartilhará com o mundo.
+
+          ## Definir
+
+          Sua tarefa é criar uma página da Web usando o HTML que você aprendeu. A página da web deve ter pelo menos **dois títulos de tamanhos diferentes**, e deve **usar parágrafos** também.
+
+          ## Prepare
+
+          Antes de começar a codificar sua página da web, você precisa ter um plano. Use as idéias que você escreveu algumas lições atrás e decida sobre o que esta página será. Você terá a chance de fazer outras páginas depois.
+
+          Desenhe um esboço da sua página da Web, incluindo títulos e parágrafos incluídos. Mostre seu esboço para seu parceiro e explique quais tags você usará para as diferentes partes da página. Você pode olhar para os níveis anteriores se esqueceu quais são as diferentes tags ou pedir ajuda ao seu parceiro.
+
+          Se você esboçou algo que ainda não aprendeu a codificar, pode salvá-lo para mais tarde.
+
+          ## Experimentar
+
+          Use o HTML que você aprendeu para criar sua página. Você pode pedir a um parceiro para ajudá-lo se ficar preso, mas **você é o motorista** para a sua própria página da web, o que significa que você deve digitar todo o código.
+
+          ## Refletir
+
+          Depois de ter terminado a sua página web, compare-a com o seu esboço para se certificar de que não se esqueceu de nada. Peça ao seu parceiro para procurar também e pense em qualquer feedback recebido e se você deseja fazer alterações em sua página.
+
+
       CSD U2 Design Project_2018_2019:
         title: título
         content1: descrição aqui
+        markdown: |+
+          # Inicie sua página
+
+          Chegou a hora de criar sua página pessoal! Você poderá escolher o conteúdo que você compartilhará com o mundo.
+
+          ## Definir
+
+          Sua tarefa é criar uma página da Web usando o HTML que você aprendeu. A página da web deve ter pelo menos **dois títulos de tamanhos diferentes**, e deve **usar parágrafos** também.
+
+          ## Prepare
+
+          Antes de começar a codificar sua página da web, você precisa ter um plano. Use as idéias que você escreveu algumas lições atrás e decida sobre o que esta página será. Você terá a chance de fazer outras páginas depois.
+
+          Desenhe um esboço da sua página da Web, incluindo títulos e parágrafos incluídos. Mostre seu esboço para seu parceiro e explique quais tags você usará para as diferentes partes da página. Você pode olhar para os níveis anteriores se esqueceu quais são as diferentes tags ou pedir ajuda ao seu parceiro.
+
+          Se você esboçou algo que ainda não aprendeu a codificar, pode salvá-lo para mais tarde.
+
+          ## Experimentar
+
+          Use o HTML que você aprendeu para criar sua página. Você pode pedir a um parceiro para ajudá-lo se ficar preso, mas **você é o motorista** para a sua própria página da web, o que significa que você deve digitar todo o código.
+
+          ## Refletir
+
+          Depois de ter terminado a sua página web, compare-a com o seu esboço para se certificar de que não se esqueceu de nada. Peça ao seu parceiro para procurar também e pense em qualquer feedback recebido e se você deseja fazer alterações em sua página.
+
+
       CSD U2 Expression Exemplars:
         markdown: |
           # Exemplos de sites pessoais
@@ -798,15 +876,104 @@ pt-BR:
           4. Amazon.com - Sites de compras on-line para todos os tipos de mercadorias
           4. Yahoo.com - Um mecanismo de pesquisa, provedor de e-mail e fonte de notícias
           5. Wikipedia.org - Uma enciclopédia livre com conteúdo gerado por usuários
+      CSD U2 Top Websites_2018:
+        markdown: |
+          # Melhores sites nos EUA
+
+          A seguir estão alguns dos sites mais visitados nos Estados Unidos. Cada um inclui uma breve descrição da função principal do site.
+
+
+          * Google.com - Mecanismo de pesquisa de sites, fotos, vídeos e outras mídias
+          * Youtube.com - Site de vídeo enviado pelo usuário com classificações e comentários
+          * Facebook.com - comunidade de mídia social que permite aos usuários compartilhar informações com amigos
+          * Amazon.com - Sites de compras on-line para todos os tipos de mercadorias
+          * Yahoo.com - Um mecanismo de pesquisa, provedor de e-mail e fonte de notícias
+          * Wikipedia.org - Uma enciclopédia gratuita com conteúdo gerado pelos usuários
+      CSD U2 Top Websites_2018_2019:
+        markdown: |
+          # Melhores sites nos EUA
+
+          A seguir estão alguns dos sites mais visitados nos Estados Unidos. Cada um inclui uma breve descrição da função principal do site.
+
+
+          * Google.com - Mecanismo de pesquisa de sites, fotos, vídeos e outras mídias
+          * Youtube.com - Site de vídeo enviado pelo usuário com classificações e comentários
+          * Facebook.com - comunidade de mídia social que permite aos usuários compartilhar informações com amigos
+          * Amazon.com - Sites de compras on-line para todos os tipos de mercadorias
+          * Yahoo.com - Um mecanismo de pesquisa, provedor de e-mail e fonte de notícias
+          * Wikipedia.org - Uma enciclopédia gratuita com conteúdo gerado pelos usuários
       CSD U2 expand project:
         title: título
         content1: descrição aqui
+        markdown: |
+          # Expandindo seu site
+
+          No próximo nível, você expandirá seu site adicionando uma segunda página. Você discutirá seu plano com seu parceiro, mas estará trabalhando em seu próprio site.
+
+          Você precisará fazer três coisas no próximo nível.
+
+          1. Crie uma nova página.
+          2. Nomeie a nova página.
+          3. Coloque o conteúdo na nova página.
+
+          A nova página que você adicionar deve incluir:
+
+          * pelo menos uma lista
+          * pelo menos um título
+
+          Antes de começar a codificar, você deve ter um plano para o que você quer que o site seja sobre. Aqui estão algumas idéias. Você pode clicar em cada página para ver uma versão completa.
+
+          | Receita | Lista de fatos divertidos | Tutoriais |
+          |---------|--------------|--------------|
+          | [![](https://images.code.org/fbfd4e89f4b1514845c203550c59bbd1-image-1493419989564.48.07 PM.png)](https://codeprojects.org/rAljwuo4xh2h0bSjxqVdtw/recipe.html) |[![](https://images.code.org/8780832b11e2149848bf944acaf0cd6a-image-1493419989562.47.46 PM.png)](https://codeprojects.org/rAljwuo4xh2h0bSjxqVdtw/candy.html) | [![](https://images.code.org/9cff12744e7036498821e7d59b21f2ba-image-1493419989560.29.25 PM.png)](https://codeprojects.org/rAljwuo4xh2h0bSjxqVdtw/juggle.html) |
       CSD U2 expand project_2018:
         title: título
         content1: descrição aqui
+        markdown: |
+          # Expandindo seu site
+
+          No próximo nível, você expandirá seu site adicionando uma segunda página. Você discutirá seu plano com seu parceiro, mas estará trabalhando em seu próprio site.
+
+          Você precisará fazer três coisas no próximo nível.
+
+          1. Crie uma nova página.
+          2. Nomeie a nova página.
+          3. Coloque o conteúdo na nova página.
+
+          A nova página que você adicionar deve incluir:
+
+          * pelo menos uma lista
+          * pelo menos um título
+
+          Antes de começar a codificar, você deve ter um plano para o que você quer que o site seja sobre. Aqui estão algumas idéias. Você pode clicar em cada página para ver uma versão completa.
+
+          | Receita | Lista de fatos divertidos | Tutoriais |
+          |---------|--------------|--------------|
+          | [![](https://images.code.org/fbfd4e89f4b1514845c203550c59bbd1-image-1493419989564.48.07 PM.png)](https://codeprojects.org/rAljwuo4xh2h0bSjxqVdtw/recipe.html) |[![](https://images.code.org/8780832b11e2149848bf944acaf0cd6a-image-1493419989562.47.46 PM.png)](https://codeprojects.org/rAljwuo4xh2h0bSjxqVdtw/candy.html) | [![](https://images.code.org/9cff12744e7036498821e7d59b21f2ba-image-1493419989560.29.25 PM.png)](https://codeprojects.org/rAljwuo4xh2h0bSjxqVdtw/juggle.html) |
       CSD U2 expand project_2018_2019:
         title: título
         content1: descrição aqui
+        markdown: |
+          # Expandindo seu site
+
+          No próximo nível, você expandirá seu site adicionando uma segunda página. Você discutirá seu plano com seu parceiro, mas estará trabalhando em seu próprio site.
+
+          Você precisará fazer três coisas no próximo nível.
+
+          1. Crie uma nova página.
+          2. Nomeie a nova página.
+          3. Coloque o conteúdo na nova página.
+
+          A nova página que você adicionar deve incluir:
+
+          * pelo menos uma lista
+          * pelo menos um título
+
+          Antes de começar a codificar, você deve ter um plano para o que você quer que o site seja sobre. Aqui estão algumas idéias. Você pode clicar em cada página para ver uma versão completa.
+
+          | Receita | Lista de fatos divertidos | Tutoriais |
+          |---------|--------------|--------------|
+          | [![](https://images.code.org/fbfd4e89f4b1514845c203550c59bbd1-image-1493419989564.48.07 PM.png)](https://codeprojects.org/rAljwuo4xh2h0bSjxqVdtw/recipe.html) |[![](https://images.code.org/8780832b11e2149848bf944acaf0cd6a-image-1493419989562.47.46 PM.png)](https://codeprojects.org/rAljwuo4xh2h0bSjxqVdtw/candy.html) | [![](https://images.code.org/9cff12744e7036498821e7d59b21f2ba-image-1493419989560.29.25 PM.png)](https://codeprojects.org/rAljwuo4xh2h0bSjxqVdtw/juggle.html) |
       CSD U2 image debug match:
         content1: Faça coincidir o código HTML com erros com a descrição de seu erro.
         questions:
@@ -904,12 +1071,72 @@ pt-BR:
       CSD U2 project guide:
         title: Seu Site Pessoal
         content1: descrição aqui
+        markdown: |
+          # Seu site pessoal
+
+          Nos próximos níveis, você estará completando e publicando seu site pessoal.
+
+          Você já fez muito trabalho no seu website, mas esta é sua chance de ser criativo e adicionar uma nova página de algo de seu interesse.
+
+          Aqui estão algumas ideias para sua nova página, mas você pode fazer qualquer coisa aprovada pelo seu professor.
+
+          * Um filme, televisão ou resenha de livro
+          * Descrição de uma tradição de férias favorita
+          * Uma página "causa" que explica um problema importante para você
+
+          Se você tiver mais de uma ideia, poderá adicionar várias páginas ao seu site.
+
+          Seu Guia do Projeto ajudará você a lembrar de tudo que precisa fazer. Certifique-se de ter a aprovação de seu professor antes de passar para o próximo nível.
+
+          ## Exemplos
+
+          [![](https://images.code.org/77ab5eb6cbec8541f8ec83134fbb2e2d-image-1494627985387.24.43 PM.png)](https://codeprojects.org/2KO4FIjN89QPeYnTG_NzLIjroaG8daOY3jRl5uHm1Co) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[![](https://images.code.org/2e39e80cb5227d908426184019fd6b70-image-1494631930884.23.49 PM.png)](https://codeprojects.org/OhiVQD7XXnijdjNp2yFaIB5fyNDwsp9ymYo7gvEy8qg/)
       CSD U2 project guide_2018:
         title: Seu Site Pessoal
         content1: descrição aqui
+        markdown: |
+          # Seu site pessoal
+
+          Nos próximos níveis, você estará completando e publicando seu site pessoal.
+
+          Você já fez muito trabalho no seu website, mas esta é sua chance de ser criativo e adicionar uma nova página de algo de seu interesse.
+
+          Aqui estão algumas ideias para sua nova página, mas você pode fazer qualquer coisa aprovada pelo seu professor.
+
+          * Um filme, televisão ou resenha de livro
+          * Descrição de uma tradição de férias favorita
+          * Uma página "causa" que explica um problema importante para você
+
+          Se você tiver mais de uma ideia, poderá adicionar várias páginas ao seu site.
+
+          Seu Guia do Projeto ajudará você a lembrar de tudo que precisa fazer. Certifique-se de ter a aprovação de seu professor antes de passar para o próximo nível.
+
+          ## Exemplos
+
+          [![](https://images.code.org/77ab5eb6cbec8541f8ec83134fbb2e2d-image-1494627985387.24.43 PM.png)](https://codeprojects.org/2KO4FIjN89QPeYnTG_NzLIjroaG8daOY3jRl5uHm1Co) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[![](https://images.code.org/2e39e80cb5227d908426184019fd6b70-image-1494631930884.23.49 PM.png)](https://codeprojects.org/OhiVQD7XXnijdjNp2yFaIB5fyNDwsp9ymYo7gvEy8qg/)
       CSD U2 project guide_2018_2019:
         title: Seu Site Pessoal
         content1: descrição aqui
+        markdown: |
+          # Seu site pessoal
+
+          Nos próximos níveis, você estará completando e publicando seu site pessoal.
+
+          Você já fez muito trabalho no seu website, mas esta é sua chance de ser criativo e adicionar uma nova página de algo de seu interesse.
+
+          Aqui estão algumas ideias para sua nova página, mas você pode fazer qualquer coisa aprovada pelo seu professor.
+
+          * Um filme, televisão ou resenha de livro
+          * Descrição de uma tradição de férias favorita
+          * Uma página "causa" que explica um problema importante para você
+
+          Se você tiver mais de uma ideia, poderá adicionar várias páginas ao seu site.
+
+          Seu Guia do Projeto ajudará você a lembrar de tudo que precisa fazer. Certifique-se de ter a aprovação de seu professor antes de passar para o próximo nível.
+
+          ## Exemplos
+
+          [![](https://images.code.org/77ab5eb6cbec8541f8ec83134fbb2e2d-image-1494627985387.24.43 PM.png)](https://codeprojects.org/2KO4FIjN89QPeYnTG_NzLIjroaG8daOY3jRl5uHm1Co) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[![](https://images.code.org/2e39e80cb5227d908426184019fd6b70-image-1494631930884.23.49 PM.png)](https://codeprojects.org/OhiVQD7XXnijdjNp2yFaIB5fyNDwsp9ymYo7gvEy8qg/)
       CSD U2L02 TFMD_2019:
         markdown: "# Esta pesquisa ainda está em desenvolvimento\n"
       CSD U3 - conditionals - Matching:
@@ -957,6 +1184,21 @@ pt-BR:
         - {}
         - {}
         - {}
+      CSD U3 AnimationsMulti STOP project guide:
+        markdown: |
+          # Pare
+
+          Antes de prosseguir, você precisará consultar o Guia do Projeto para este projeto. Aguarde instruções do seu professor também.
+      CSD U3 AnimationsMulti STOP project guide_2018:
+        markdown: |
+          # Pare
+
+          Antes de prosseguir, você precisará consultar o Guia do Projeto para este projeto. Aguarde instruções do seu professor também.
+      CSD U3 AnimationsMulti STOP project guide_2018_2019:
+        markdown: |
+          # Pare
+
+          Antes de prosseguir, você precisará consultar o Guia do Projeto para este projeto. Aguarde instruções do seu professor também.
       CSD U3 Boolean MC:
         title: título
         questions:
@@ -990,9 +1232,25 @@ pt-BR:
       CSD U3 Card Examples_2018:
         title: Criando um Cartão Interativo
         content1: descrição aqui
+        markdown: |
+          # Seu cartão interativo
+
+          Nos próximos níveis, você estará completando seu próprio cartão interativo. Aqui estão alguns exemplos para lhe dar algumas idéias. Não esqueça de olhar o código para ver como eles funcionam.
+
+          ## Exemplos
+
+          [![](https://images.code.org/7bbdbbb01c354a7c09bb4b9b5182a951-image-1522780803299.png)](https://studio.code.org/projects/gamelab/OzdFqrZ4oHPYsTddaRWaZxtTvdj9NzZVwCq6NkyONXM/edit)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[![](https://images.code.org/ed307e22854e4958a006d8023636cfd5-image-1522780803295.png)](https://studio.code.org/projects/gamelab/fmFrWsocELzP19CfbGI5P_hsgxN5ewVaB5f0Bw5S1_E/edit)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[![](https://images.code.org/ae0eca1dab46f13fcb21d4d0e264d637-image-1522780803298.png)](https://studio.code.org/projects/gamelab/z4XDrC0lsqoRY0xzYaXdJfChmyCl5O6YM-EOByecscc/edit)
       CSD U3 Card Examples_2018_2019:
         title: Criando um Cartão Interativo
         content1: descrição aqui
+        markdown: |
+          # Seu cartão interativo
+
+          Nos próximos níveis, você estará completando seu próprio cartão interativo. Aqui estão alguns exemplos para lhe dar algumas idéias. Não esqueça de olhar o código para ver como eles funcionam.
+
+          ## Exemplos
+
+          [![](https://images.code.org/7bbdbbb01c354a7c09bb4b9b5182a951-image-1522780803299.png)](https://studio.code.org/projects/gamelab/OzdFqrZ4oHPYsTddaRWaZxtTvdj9NzZVwCq6NkyONXM/edit)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[![](https://images.code.org/ed307e22854e4958a006d8023636cfd5-image-1522780803295.png)](https://studio.code.org/projects/gamelab/fmFrWsocELzP19CfbGI5P_hsgxN5ewVaB5f0Bw5S1_E/edit)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[![](https://images.code.org/ae0eca1dab46f13fcb21d4d0e264d637-image-1522780803298.png)](https://studio.code.org/projects/gamelab/z4XDrC0lsqoRY0xzYaXdJfChmyCl5O6YM-EOByecscc/edit)
       CSD U3 Collision Detection:
         markdown: |
           # Visão global
@@ -1449,6 +1707,17 @@ pt-BR:
       CSD U3 combining rep:
         title: título
         content1: descrição aqui
+        markdown: |+
+          ### Você pode decodificar essa string binária?
+
+
+
+          # 1000011
+
+
+
+          ### Que informações você precisa para ajudá-lo a decodificá-lo?
+
       CSD U3 combining rep_2018:
         title: título
         content1: descrição aqui
@@ -1503,21 +1772,81 @@ pt-BR:
       CSD U3 game intro:
         title: Crie o Seu Próprio Jogo
         content1: descrição aqui
+        markdown: |
+          # Crie seu próprio jogo
+
+          Agora que você tem todas as habilidades que precisa, é hora de fazer seu próprio jogo!
+
+          Com um parceiro, debata ideias diferentes para o seu jogo. Você pode pensar nos jogos que já viu ou ver mais alguns exemplos de jogos para lhe dar ideias.
+
+          [<img src="https://images.code.org/fc2d4cdba80a476b1ff476081991031e-image-1498594631779.png" style="width: 200px; float: left; margin: 10px;">](https://studio.code.org/projects/gamelab/AwDcX5nehOApfzyywI6BOLT1xbf0MIV1dUj8KjQaNtA)
+
+          [<img src="https://images.code.org/b89895bdd43be4b729ca9165fc2923cf-image-1498595512898.28.24 PM.png" style="width: 200px; float: left; margin: 10px;">](https://studio.code.org/projects/gamelab/r9OYVTSj2od8vaCA-nKikTVpx-2Co8qHhuZiBIu30JA)
+
+          [<img src="https://images.code.org/d430061caab264330da0227b53e2db90-image-1498595505047.27.59 PM.png" style="width: 200px; margin: 10px;">](https://studio.code.org/projects/gamelab/hAz7RSdqc0c_MSQVUpvz1XrLDr8QLsansWDVI0ZberQ)
+
+          [<img src="https://images.code.org/c9fb241c5684e10d9ba2b85d4d4a906b-image-1498764384615.25.58 PM.png" style="width: 200px; margin: 10px;">](https://studio.code.org/projects/gamelab/DmRPNYR3n7bMO--_KkP7r6mOoGynBVyi3BMVPWDiVeI)
+
+          Depois de escolher um tipo de jogo com seu parceiro, preencha o Guia do Projeto com os planos de fundo, variáveis, sprites e funções que você precisará para criar o jogo. Você passará os próximos níveis criando seu jogo.
       CSD U3 game intro_2018:
         title: Crie o Seu Próprio Jogo
         content1: descrição aqui
+        markdown: |
+          # Crie seu próprio jogo
+
+          Agora que você tem todas as habilidades que precisa, é hora de fazer seu próprio jogo!
+
+          Com um parceiro, debata ideias diferentes para o seu jogo. Você pode pensar nos jogos que já viu ou ver mais alguns exemplos de jogos para lhe dar ideias.
+
+          [<img src="https://images.code.org/fc2d4cdba80a476b1ff476081991031e-image-1498594631779.png" style="width: 200px; float: left; margin: 10px;">](https://studio.code.org/projects/gamelab/AwDcX5nehOApfzyywI6BOLT1xbf0MIV1dUj8KjQaNtA)
+
+          [<img src="https://images.code.org/b89895bdd43be4b729ca9165fc2923cf-image-1498595512898.28.24 PM.png" style="width: 200px; float: left; margin: 10px;">](https://studio.code.org/projects/gamelab/r9OYVTSj2od8vaCA-nKikTVpx-2Co8qHhuZiBIu30JA)
+
+          [<img src="https://images.code.org/d430061caab264330da0227b53e2db90-image-1498595505047.27.59 PM.png" style="width: 200px; margin: 10px;">](https://studio.code.org/projects/gamelab/hAz7RSdqc0c_MSQVUpvz1XrLDr8QLsansWDVI0ZberQ)
+
+          [<img src="https://images.code.org/c9fb241c5684e10d9ba2b85d4d4a906b-image-1498764384615.25.58 PM.png" style="width: 200px; margin: 10px;">](https://studio.code.org/projects/gamelab/DmRPNYR3n7bMO--_KkP7r6mOoGynBVyi3BMVPWDiVeI)
+
+          Depois de escolher um tipo de jogo com seu parceiro, preencha o Guia do Projeto com os planos de fundo, variáveis, sprites e funções que você precisará para criar o jogo. Você passará os próximos níveis criando seu jogo.
       CSD U3 game intro_2018_2019:
         title: Crie o Seu Próprio Jogo
         content1: descrição aqui
+        markdown: |
+          # Crie seu próprio jogo
+
+          Agora que você tem todas as habilidades que precisa, é hora de fazer seu próprio jogo!
+
+          Com um parceiro, debata ideias diferentes para o seu jogo. Você pode pensar nos jogos que já viu ou ver mais alguns exemplos de jogos para lhe dar ideias.
+
+          [<img src="https://images.code.org/fc2d4cdba80a476b1ff476081991031e-image-1498594631779.png" style="width: 200px; float: left; margin: 10px;">](https://studio.code.org/projects/gamelab/AwDcX5nehOApfzyywI6BOLT1xbf0MIV1dUj8KjQaNtA)
+
+          [<img src="https://images.code.org/b89895bdd43be4b729ca9165fc2923cf-image-1498595512898.28.24 PM.png" style="width: 200px; float: left; margin: 10px;">](https://studio.code.org/projects/gamelab/r9OYVTSj2od8vaCA-nKikTVpx-2Co8qHhuZiBIu30JA)
+
+          [<img src="https://images.code.org/d430061caab264330da0227b53e2db90-image-1498595505047.27.59 PM.png" style="width: 200px; margin: 10px;">](https://studio.code.org/projects/gamelab/hAz7RSdqc0c_MSQVUpvz1XrLDr8QLsansWDVI0ZberQ)
+
+          [<img src="https://images.code.org/c9fb241c5684e10d9ba2b85d4d4a906b-image-1498764384615.25.58 PM.png" style="width: 200px; margin: 10px;">](https://studio.code.org/projects/gamelab/DmRPNYR3n7bMO--_KkP7r6mOoGynBVyi3BMVPWDiVeI)
+
+          Depois de escolher um tipo de jogo com seu parceiro, preencha o Guia do Projeto com os planos de fundo, variáveis, sprites e funções que você precisará para criar o jogo. Você passará os próximos níveis criando seu jogo.
       CSD U3 platform intro:
         title: Crie um salto de plataformas
         content1: descrição aqui
+        markdown: |
+          # Construa uma plataforma de salto
+
+          Nos próximos vários níveis, você estará construindo um jogo de plataformas. Antes de prosseguir, você precisará consultar o Guia do Projeto para este projeto. Aguarde as instruções do seu professor antes de clicar para o próximo nível.
       CSD U3 platform intro_2018:
         title: Crie um salto de plataformas
         content1: descrição aqui
+        markdown: |
+          # Construa uma plataforma de salto
+
+          Nos próximos vários níveis, você estará construindo um jogo de plataformas. Antes de prosseguir, você precisará consultar o Guia do Projeto para este projeto. Aguarde as instruções do seu professor antes de clicar para o próximo nível.
       CSD U3 platform intro_2018_2019:
         title: Crie um salto de plataformas
         content1: descrição aqui
+        markdown: |
+          # Construa uma plataforma de salto
+
+          Nos próximos vários níveis, você estará construindo um jogo de plataformas. Antes de prosseguir, você precisará consultar o Guia do Projeto para este projeto. Aguarde as instruções do seu professor antes de clicar para o próximo nível.
       CSD U3L02 TFMD_2019:
         markdown: "# Esta pesquisa ainda está em desenvolvimento\n"
       CSD U4L01 SFLP:
@@ -1732,6 +2061,15 @@ pt-BR:
       CSD U5 L13 SFLP Interpreting Data:
         title: título
         content1: descrição aqui
+        markdown: |
+          # Visão global
+
+          Vá mais longe na interpretação de dados encontrando as relações entre dois tipos diferentes de dados. Veja como encontrar relacionamentos pode ajudá-lo a resolver problemas.
+
+          ## Recursos
+
+          * [Interpretando dados] (https://docs.google.com/document/d/1JZJ5-kZoHb6xI7B4Ua5EHwaS1UiLoeM8i6YUNAAbaEM/export?format=pdf) - Guia de atividades
+          * [Interpretando dados] (https://docs.google.com/document/d/1YCqOxw4u8m142zaIVdUk4eBn8VnJBpkMzr4uEaDq2pM/export?format=pdf) - Recurso
       CSD U5 crosstab warmup:
         title: Questionário sobre pizza
         content1: descrição aqui
@@ -1815,6 +2153,21 @@ pt-BR:
         content1: descrição aqui
       CSD U6 final intro_2018_2019:
         content1: descrição aqui
+      CSD U6 game project stop:
+        markdown: |
+          # Pare
+
+          Antes de prosseguir, você precisará consultar o Guia do Projeto para este projeto. Aguarde instruções do seu professor também.
+      CSD U6 game project stop_2018:
+        markdown: |
+          # Pare
+
+          Antes de prosseguir, você precisará consultar o Guia do Projeto para este projeto. Aguarde instruções do seu professor também.
+      CSD U6 game project stop_2018_2019:
+        markdown: |
+          # Pare
+
+          Antes de prosseguir, você precisará consultar o Guia do Projeto para este projeto. Aguarde instruções do seu professor também.
       CSD U6 setProperty predict multi:
         title: Faça uma Predição
         questions:
@@ -1843,6 +2196,21 @@ pt-BR:
           correct: true
         - text: '<img src="https://images.code.org/cea9a118066ffc296f1023f395e61058-image-1507311692360.png"
             style="max-width: 100px;">'
+      CSD U6 tugowar stop:
+        markdown: |
+          # Pare
+
+          Antes de prosseguir, você precisará consultar o Guia do Projeto para este projeto. Aguarde instruções do seu professor também.
+      CSD U6 tugowar stop_2018:
+        markdown: |
+          # Pare
+
+          Antes de prosseguir, você precisará consultar o Guia do Projeto para este projeto. Aguarde instruções do seu professor também.
+      CSD U6 tugowar stop_2018_2019:
+        markdown: |
+          # Pare
+
+          Antes de prosseguir, você precisará consultar o Guia do Projeto para este projeto. Aguarde instruções do seu professor também.
       CSD U6L01 TFMD:
         markdown: "# CS Descobertas Inquérito pós-curso \n\n** A sua entrada e feedback
           é importante para nós! **Usamos para:\n\n* fazer melhorias no curso\n* entender
@@ -1853,6 +2221,70 @@ pt-BR:
           em uma nova aba)\n\n<br>\n\n\n\n\n\n"
       CSD U6L02 TFMD_2019:
         markdown: "# Esta pesquisa ainda está em desenvolvimento\n"
+      CSD-U5-SFLP ASCII and Binary Representation:
+        markdown: |
+          # Visão global
+
+          Aprenda como o sistema ASCII usa padrões de On-Off para representar o alfabeto, e então use-o para criar seu próprio sistema binário para representar o alfabeto.
+
+          ## Vocabulário
+
+          * ** ASCII ** - ASCII - Código Padrão Americano para Intercâmbio de Informações. ASCII é o formato de texto bruto universalmente reconhecido que qualquer computador pode entender.
+          * ** Binário ** - Uma maneira de representar informações usando apenas duas opções.
+          * ** Bit ** - Uma contração de "Binary Digit". Um pouco é a única unidade de informação em um computador, normalmente representada como 0 ou 1.
+
+
+          ## Recursos
+
+          * [ASCII - Guia de atividades] (https://docs.google.com/document/d/1zg1hNebVEGMbIepFS1pGqS-QqAyzENjP9F59UqXwDzI/export?format=pdf)
+      CSD-U5-SFLP Automating Data Decisions:
+        markdown: |
+          # Visão global
+
+          Você verá um exemplo de como um computador pode ser usado para concluir essencialmente todas as etapas do processo de solução de problemas de dados. Você criará regras ou um algoritmo que um computador poderia usar para tomar uma decisão automaticamente.
+
+          ## Recursos
+
+          * [Automatizando Decisões de Dados] (https://docs.google.com/document/d/1BaqqDWT1Y0cA80ytaXOfB8RbnVpMsqQ4K7KU_kX__gs/export?format=pdf) - Recurso (copie como [MS Word] (https://docs.google.com/document/d/1BaqqDWT1Y0cA80ytaXOfB8RbnVpMsqQ4K7KU_kX__gs/export?format=doc), [Documento Google] (https://docs.google.com/document/d/1BaqqDWT1Y0cA80ytaXOfB8RbnVpMsqQ4K7KU_kX__gs/copy))
+          * [Automatizando decisões de dados] (https://docs.google.com/document/d/1ww7OiPAWu03K2C3c5LKbUm_Opkz9x0lZfizA_uJ7JsI/export?format=pdf) - Guia de atividades (copie como [MS Word] (https://docs.google.com/document/d/1ww7OiPAWu03K2C3c5LKbUm_Opkz9x0lZfizA_uJ7JsI/export?format=doc), [Documento Google] (https://docs.google.com/document/d/1ww7OiPAWu03K2C3c5LKbUm_Opkz9x0lZfizA_uJ7JsI/copy))
+      CSD-U5-SFLP Combining Representations:
+        markdown: |
+          # Visão global
+
+          Esta lição combina todos os três tipos de sistemas de representação binária (caracteres ASCII, número binário e imagens) para permitir a codificação de informações de tipos mais complexos em um registro. Depois de ver uma série de bits e ser solicitado a decodificá-los, a classe é apresentada à ideia de que a compreensão da informação binária requer a compreensão tanto do sistema que está sendo usado quanto do significado da informação codificada.
+
+
+          ## Recursos
+
+          * [Registros de animais de estimação - Guia de atividades] (https://docs.google.com/document/d/14-oji3xpZfTXyU6eXLETyc9r9MAZAxlDuxQAi4L3G9g/export?format=pdf)
+          * [ASCII para tabela binária - referência] (https://docs.google.com/document/d/1RgqkSXE8NGRfJe2Slw5DSIaP_YbpMhRE5u1zrutoyMk/export?format=pdf)
+      CSD-U5-SFLP Create a Representation:
+        markdown: |
+          # Visão global
+
+          Projete uma estrutura para representar seu dia perfeito usando os sistemas de representação binária que eles aprenderam neste capítulo. Você precisará usar números ASCII, binários e imagens ao projetar um formato de cartão perfurado.
+
+          ## Recursos
+
+          * [Criar uma Representação - Guia do Projeto] (https://docs.google.com/document/d/1JAjFoPRfZF1V5WZqrdusZ_qjGWblaqTL-_l5jmaPhf0/export?format=pdf)
+      CSD-U5-SFLP Interpreting Data:
+        markdown: |
+          # Visão global
+
+          Vá mais longe na estruturação de dados limpando e visualizando conjuntos de dados brutos. Veja como as visualizações mudam a maneira como você entende os dados e toma decisões sobre eles.
+
+          ## Recursos
+
+          * [Estruturando Dados] (https://docs.google.com/document/d/1z2ocdwgBgWLeAG3IHhKvNHEVtyGrLePsmDg2liFkJ9Y/export?format=pdf) - Guia de atividades
+      CSD-U5-SFLP Making Decisions with Data:
+        markdown: |
+          # Visão global
+
+          Nesta lição, você terá algumas decisões práticas com dados com alguns problemas que podem parecer familiares.
+
+          ## Recursos
+
+          * [Fazendo Decisões com Dados] (https://docs.google.com/document/d/1ByeV-Q0e0VsgphCoVUZOxol0Fp2ArrsyV3rH8djnllg/export?format=pdf) - Guia de atividades
       CSD-U5-SFLP Patterns and Representation:
         markdown: |
           # Visão global
@@ -1867,6 +2299,25 @@ pt-BR:
           ## Recursos
 
           * [Representando informações] (https://docs.google.com/document/d/1emQKHuyzXvzg3cShX88CH8r8kMXInjItRIu9PdrfRpI/export?format=pdf) - Guia de atividades (copie como [MS Word] (https://docs.google.com/document/d/1emQKHuyzXvzg3cShX88CH8r8kMXInjItRIu9PdrfRpI/export?format=doc), [Documento Google] (https://docs.google.com/document/d/1emQKHuyzXvzg3cShX88CH8r8kMXInjItRIu9PdrfRpI/copy))
+      CSD-U5-SFLP Problem Solving and Data:
+        markdown: |
+          # Visão global
+
+          Você usará o processo de solução de problemas para ajudar a resolver um problema de dados.
+
+          ## Recursos
+
+          * [Solução de problemas com dados] (https://docs.google.com/document/d/1_5JzwIIl8u72QJq_dFpFPnVcNREBc3UHtQtObkwgckw/export?format=pdf) - Guia de atividades
+      CSD-U5-SFLP Problem Solving with Big Data:
+        markdown: |
+          # Visão global
+
+          Esta lição aborda como os dados são coletados e usados por uma organização para resolver problemas no mundo real. A turma analisa três cenários que poderiam ser resolvidos usando dados e faz um brainstorm dos tipos de dados que eles gostariam de resolvê-los e como poderiam coletar os dados. Cada cenário também inclui um vídeo sobre um serviço real que resolveu um problema semelhante com os dados.
+
+
+          ## Recursos
+
+          * [Dados no mundo real] (https://docs.google.com/document/d/10MwyEV-wgpE6tHZxi-d9SQKrTPoz8J-QwmND8rn-m2I/export?format=pdf) - Guia de atividades
       CSD-U5-SFLP Representation Matters:
         markdown: "# CS Descobertas Inquérito pós-curso \n\n** A sua entrada e feedback
           é importante para nós! **Usamos para:\n\n* fazer melhorias no curso\n* entender
@@ -1875,6 +2326,46 @@ pt-BR:
           class=\"btn btn-large btn-success\" href=\"/s/csd-post-survey/stage/1/puzzle/1/page/1\"
           target=\"top\"> Clique aqui para completar as CS Descobertas Pesquisa pós-curso!!!</a>\n\n(abre
           em uma nova aba)\n\n<br>\n\n\n\n\n\n"
+      CSD-U5-SFLP Representing Images:
+        markdown: |+
+          # Visão global
+
+          Aprenda como os padrões on-off que você aprendeu na última lição podem ser usados para representar imagens. Ao longo do caminho, você explorará como algumas das propriedades dos sistemas de representação que você já viu se aplicam às imagens também.
+
+          ## Vocabulário
+
+          * ** pixel ** - abreviação de "picture element" é a unidade fundamental de uma imagem digital, normalmente um pequeno quadrado ou ponto que contém um único ponto de cor de uma imagem maior.
+
+
+      CSD-U5-SFLP Representing Numbers Part 1:
+        markdown: |
+          # Visão global
+
+          Esta lição apresenta o sistema numérico binário. Com um conjunto de cartões que representam os valores de lugar em um sistema numérico binário (base-2), a classe transforma os bits "on" ou "off" girando as cartas para cima e para baixo, depois observa os números que resultam desses diferentes Padrões. Eventualmente, o padrão é estendido para um sistema genérico de 4 bits.
+
+          ## Recursos
+          * [Representando números - Guia de atividades] (https://docs.google.com/document/d/1Bv2q50lF0wxx9D9n5JzsKFKXXmP8-p6LInO29Lm3Plk/export?format=pdf)
+          * [Cartões numéricos - Manipulativos] (https://docs.google.com/document/d/1UWJdBo0C7wE3jmSCDVTOSdDtRkxtIBqe4ttN0v5GFXM/export?format=pdf)
+      CSD-U5-SFLP Representing Numbers Part 2:
+        markdown: |
+          # Visão global
+
+          Esta lição aborda como as pessoas podem manter os dados em segredo, mesmo quando outras pessoas podem vê-los. A turma analisará um método de codificação para emojis e aprenderá uma maneira de criptografar as mensagens emoji usando uma palavra-chave.
+
+
+          ## Recursos
+
+          * [Mantendo dados secretos - Guia de atividades] (https://docs.google.com/document/d/1i_s3XXcwG8QpE7dk7GfYkfcekGKTqpD0AOs1ZLvcnco/export?format=pdf)
+      CSD-U5-SFLP Solve a Data Problem:
+        markdown: |
+          # Visão global
+
+          Para concluir esta unidade, você criará uma maneira de usar dados para fazer uma recomendação ou previsão para ajudar a resolver um problema de sua escolha.
+
+          ## Recursos
+
+          * [Fazer uma recomendação] (https://docs.google.com/document/d/1pKeFH1OkWzfg3MFTPCezhK_r4p8xu7QUkPKSf5vV41c/export?format=pdf) - Guia do projeto
+          * [Faça uma recomendação] (https://docs.google.com/document/d/1ZdA-VIdyPZLONBFr7ojFeNfHCHYmacbrrphiR31k6Bk/export?format=pdf) - Revisão por pares
       ConditionalsWithCards-Unplugged:
         markdown: |
           # Condicionais com Cartas
@@ -1974,11 +2465,11 @@ pt-BR:
         questions:
         - text: Quais blocos resolvem o desafio?
         answers:
-        - text: "/script_assets/k_1_images/artist_images/W|S|S.png"
-        - text: "/script_assets/k_1_images/artist_images/W|S|S.png"
+        - text: "/script_assets/k_1_images/artist_images/W-S-S.png"
+        - text: "/script_assets/k_1_images/artist_images/E-S-S.png"
           correct: true
-        - text: "/script_assets/k_1_images/artist_images/S|E|E.png"
-        - text: "/script_assets/k_1_images/artist_images/E|S.png"
+        - text: "/script_assets/k_1_images/artist_images/S-E-E.png"
+        - text: "/script_assets/k_1_images/artist_images/E-S.png"
       K-1 Artist 1 Multi 2:
         title: Múltipla Escolha
         content1: "/script_assets/k_1_images/artist_images/square.png, 500"
@@ -3536,6 +4027,20 @@ pt-BR:
       courseF_markdown_nestedloops_intro:
         title: Teste a Página da Apostila de Markdown
         content1: Teste a Página da Apostila de Markdown
+        markdown: |
+          # **Nesta lição...**
+
+          ### Você já se perguntou o que aconteceria se você colocasse uma repetição *dentro de outra repetição*?
+
+          ###Isso pode te enlouquecer!
+
+          ### Se uma repetição normal é boa repetindo padrões, você acha que uma repetição dentro de outra seria boa em quê? Vamos descobrir!
+
+          ---
+
+          ## **Blocos para conhecer**
+
+          ![](https://images.code.org/cecea12a6973648b56512ff0990da6fb-image-1524759116715.gif)
       courseF_markdown_variables_end:
         title: Teste a Página da Apostila de Markdown
         content1: Teste a Página da Apostila de Markdown
@@ -3853,6 +4358,14 @@ pt-BR:
         - text: O artista desenhará quatro quadrados um em cima do outro.
           feedback: Incorreta. O loop gira 90 graus entre as chamadas para "desenhar
             polígono".
+      csd-post-survey-2018-markdown-with-link-to-survey_v2:
+        markdown: "# CS Descobertas Pesquisa pós-curso \n\n** A sua entrada e feedback
+          é importante para nós! ** Usamos para:\n\n* entenda sua experiência\n* fazer
+          melhorias no curso\n\nObrigado por dedicar um tempo para ajudar a tornar
+          os CS Descobertas ainda melhores!\n\n<a class=\"btn btn-large btn-success\"
+          href=\"/s/csd-post-survey-2018/stage/1/puzzle/1/page/1\" target=\"top\">
+          Clique aqui para completar o CS descobertas Pesquisa pós-curso</a>\n\n(abre
+          em uma nova aba)\n\n<br>\n\n\n\n\n\n"
       csd-pre-survey-2017-levelgroup:
         markdown: |
           # Visão Geral

@@ -501,20 +501,17 @@ describe('CircuitPlaygroundBoard', () => {
   describe(`detectBoardType()`, () => {
     it('sets the type of board detected for Classic boards', () => {
       board = new CircuitPlaygroundBoard(CIRCUIT_PLAYGROUND_PORTS[0]);
-      board.detectBoardType();
-      expect(board.boardType_).to.equal(BOARD_TYPE.CLASSIC);
+      expect(board.detectBoardType()).to.equal(BOARD_TYPE.CLASSIC);
     });
 
     it('sets the type of board detected for Express boards', () => {
       board = new CircuitPlaygroundBoard(CIRCUIT_PLAYGROUND_EXPRESS_PORTS[0]);
-      board.detectBoardType();
-      expect(board.boardType_).to.equal(BOARD_TYPE.EXPRESS);
+      expect(board.detectBoardType()).to.equal(BOARD_TYPE.EXPRESS);
     });
 
     it('sets the type of board detected for other boards', () => {
       board = new CircuitPlaygroundBoard(FLORA_PORTS[0]);
-      board.detectBoardType();
-      expect(board.boardType_).to.equal(BOARD_TYPE.OTHER);
+      expect(board.detectBoardType()).to.equal(BOARD_TYPE.OTHER);
     });
   });
 });
