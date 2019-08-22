@@ -15970,6 +15970,11 @@ vm-browserify@0.0.4:
   dependencies:
     indexof "0.0.1"
 
+vmsg@^0.3.6:
+  version "0.3.6"
+  resolved "https://registry.yarnpkg.com/vmsg/-/vmsg-0.3.6.tgz#a1bf0e0de3179918cd7e8a0cc41c6da813860878"
+  integrity sha512-nDv5WMk+Z3srbrGWwXuMiGo4GugOarsxcKgIjLJu6uRAUrmvSkRG9RxRphDtK+xUk11LqdKFeSjhozTbuqRyXw==
+
 void-elements@^2.0.0:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/void-elements/-/void-elements-2.0.1.tgz#c066afb582bb1cb4128d60ea92392e94d5e9dbec"
