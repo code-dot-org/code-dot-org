@@ -20,7 +20,8 @@ const styles = {
     WebkitBoxOrient: 'vertical',
     overflow: 'hidden',
     maxWidth: '100%',
-    wordWrap: 'break-word'
+    wordWrap: 'break-word',
+    maxHeight: '140px'
   }
 };
 
