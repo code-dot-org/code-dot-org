@@ -783,7 +783,7 @@ describe('entry tests', () => {
               name: 'code-studio-common',
               minChunks: 2,
               chunks: chunk => {
-                const chunkNames = _.keys(codeStudioEntries);
+                const chunkNames = Object.keys(codeStudioEntries);
                 return chunkNames.includes(chunk.name);
               },
               priority: 10
@@ -812,10 +812,10 @@ describe('entry tests', () => {
             // For more information see: https://webpack.js.org/guides/code-splitting/
             'code-studio-multi': {
               name: 'code-studio-common',
-              minChunks: _.keys(appsEntries).length + 1,
+              minChunks: Object.keys(appsEntries).length + 1,
               chunks: chunk => {
-                const chunkNames = _.keys(codeStudioEntries).concat(
-                  _.keys(appsEntries)
+                const chunkNames = Object.keys(codeStudioEntries).concat(
+                  Object.keys(appsEntries)
                 );
                 return chunkNames.includes(chunk.name);
               },
@@ -827,11 +827,11 @@ describe('entry tests', () => {
               chunks: chunk => {
                 // all 'initial' chunks except otherEntries
                 const chunkNames = _.concat(
-                  _.keys(codeStudioEntries),
-                  _.keys(appsEntries),
-                  _.keys(pegasusEntries),
-                  _.keys(professionalDevelopmentEntries),
-                  _.keys(internalEntries)
+                  Object.keys(codeStudioEntries),
+                  Object.keys(appsEntries),
+                  Object.keys(pegasusEntries),
+                  Object.keys(professionalDevelopmentEntries),
+                  Object.keys(internalEntries)
                 );
                 return chunkNames.includes(chunk.name);
               },
