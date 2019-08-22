@@ -74,6 +74,15 @@ export default storybook => {
           stepStatus={Status.UNKNOWN}
         />
       )
+    },
+    {
+      name: 'Alert Step',
+      description: 'Step in alert state',
+      story: () => (
+        <ValidationStep stepName="This is an alert" stepStatus={Status.ALERT}>
+          Alerts have explanations!
+        </ValidationStep>
+      )
     }
   ]);
 };
