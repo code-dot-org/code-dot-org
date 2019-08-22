@@ -688,6 +688,8 @@ describe('entry tests', () => {
     regionalPartnerMiniContact:
       './src/regionalPartnerMiniContact/regionalPartnerMiniContact',
 
+    teacherDonorBanner: './src/teacherDonorBanner/teacherDonorBanner',
+
     cookieBanner: './src/cookieBanner/cookieBanner.js'
   };
 
@@ -976,7 +978,8 @@ describe('entry tests', () => {
         'common',
         'tutorialExplorer',
         'regionalPartnerSearch',
-        'regionalPartnerMiniContact'
+        'regionalPartnerMiniContact',
+        'donorTeacherBanner'
       )
       .map(function(item) {
         var localeType = item === 'common' ? 'locale' : 'appLocale';
