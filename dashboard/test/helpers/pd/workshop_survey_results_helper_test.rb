@@ -25,9 +25,8 @@ class Pd::WorkshopSurveyResultsHelperTest < ActionView::TestCase
 
   self.use_transactional_test_case = true
   setup_all do
-    facilitator_1 = create :facilitator, name: 'Facilitator Person 1'
-    facilitator_2 = create :facilitator, name: 'Facilitator Person 2'
-    @workshop = create :workshop, :local_summer_workshop, course: COURSE_CSP, facilitators: [facilitator_1, facilitator_2], num_sessions: 5
+    @workshop = create :csp_summer_workshop
+    @workshop.facilitators.each_with_index {|f, i| f.update(name: "Facilitator Person #{i + 1}")}
     @academic_year_workshop = create :csp_academic_year_workshop, :two_day
 
     @pre_workshop_questions = [
@@ -352,8 +351,8 @@ class Pd::WorkshopSurveyResultsHelperTest < ActionView::TestCase
   end
 
   test 'averaging across multiple surveys' do
-    workshop_1 = create(:workshop, :local_summer_workshop, num_sessions: 1, num_facilitators: 2, num_completed_surveys: 5)
-    workshop_2 = create(:workshop, :local_summer_workshop, num_sessions: 1, num_facilitators: 3, num_completed_surveys: 10)
+    workshop_1 = create :summer_workshop, num_sessions: 1, num_facilitators: 2, num_completed_surveys: 5
+    workshop_2 = create :summer_workshop, num_sessions: 1, num_facilitators: 3, num_completed_surveys: 10
 
     workshop_2.survey_responses.each do |response|
       response.update_form_data_hash(

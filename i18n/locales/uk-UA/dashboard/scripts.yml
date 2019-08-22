@@ -1913,6 +1913,8 @@ uk:
           stages:
             Lists:
               name: Списки
+            CSS Classes:
+              name: Класи CSS
         csd3-pilot:
           description_short: "Програмування"
           stages:

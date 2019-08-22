@@ -3498,6 +3498,8 @@ es:
               name: Listas
             Sources and Search Engines:
               description_teacher: Esta lección alienta a los estudiantes a pensar más críticamente sobre cómo funcionan las búsquedas web y cómo encontrar información relevante y confiable en línea. Después de ver y debatir un video sobre cómo funcionan los motores de búsqueda, los estudiantes buscarán información sobre varios animales poco comunes. Tendrán que analizar los sitios que encuentran confiables para identificar cuál de los animales son realmente un engaño.
+            CSS Classes:
+              name: Clases CSS
         csd3-pilot:
           description_short: "Programación"
           stages:

@@ -61,7 +61,7 @@ ja:
   courses: 'コース'
   courses_page:
     title_student: "コンピュータ サイエンスを学ぶ"
-    title_teacher: "コード スタジオで教えよう"
+    title_teacher: "コンピュータ サイエンスを教える"
   unplugged_activity: 'アンプラグド　アクティビティ'
   of: "の"
   more: "くわしく"
@@ -572,7 +572,8 @@ ja:
     hoc-encryption:
       title: "単純な暗号化"
     weblab:
-      title: "Web 研究室 (ベータ版)"
+      title: "Web ラボ (ベータ版)"
+      body: "Webラボは、HTMLとCSSを使って、シンプルなWebページを作ることができるプログラミング環境です。Webページをデザインして、すぐにあなたのサイトを共有しよう。"
       audience: "13才以上"
       cta: "もっと知る"
     frozen:

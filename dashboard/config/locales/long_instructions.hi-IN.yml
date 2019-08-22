@@ -186,6 +186,8 @@ hi-IN:
         तस्वीर बनाएं। इसके लिए दृढ़ता और योजना बनाने की जरूरत है!"
       Robot Doodle_2018: "**प्रोजेक्ट सुझाव:** वास्तविक दुनिया में किसी परिचित चीज़
         की तस्वीर बनाएं। इसके लिए दृढ़ता और योजना बनाने की जरूरत है!"
+      course1_maze_debugging_challenge1: इस स्तर को डीबग करें। अतिरिक्त ब्लॉक्स हटाएं,
+        और गायब ब्लॉक्स को जोड़ें। पक्षी को सूअर के पास ले जाएं!
       course3_artist_functions_challenge1: जब आप फंक्शन को परिभाषित कर लें, तो आप
         इसे बार-बार बोल सकते हैं - जब भी और जहां भी आप चाहें! यह देखने के लिए कि यह
         किस प्रकार काम करता है, इस कोड को आजमाएं, फिर अपना खुद का प्रभावशाली डिज़ाइन
@@ -216,6 +218,231 @@ hi-IN:
             <title name="XPOS">???</title>
             <title name="YPOS">???</title>
             </block></xml>
+      courseA_artist_loops10: |-
+        ## वापस ज़मीन पर जाने का समय। पत्थर डालने में मेरी मदद करें ताकि मैं गिरने से बच पाऊं!
+
+        ![expandable](https://images.code.org/d3213d375d0271e114aa4313cdeb34be-image-1498064942606.gif)
+      courseA_artist_loops10_2018: |-
+        ## वापस ज़मीन पर जाने का समय। पत्थर डालने में मेरी मदद करें ताकि मैं गिरने से बच पाऊं!
+
+        ![expandable](https://images.code.org/d3213d375d0271e114aa4313cdeb34be-image-1498064942606.gif)
+      courseA_artist_loops10_2019: |-
+        ## वापस ज़मीन पर जाने का समय। पत्थर डालने में मेरी मदद करें ताकि मैं गिरने से बच पाऊं!
+
+        ![expandable](https://images.code.org/d3213d375d0271e114aa4313cdeb34be-image-1498064942606.gif)
+      courseA_artist_loops11: |-
+        ## जलयान देखने के लिए स्टेप्स बनाने में मेरी मदद करें।
+
+        ![expandable](https://images.code.org/ed19f00a2350b186fbe86ea805e17925-image-1498065450651.gif)
+      courseA_artist_loops11_2018: |-
+        ## जलयान देखने के लिए स्टेप्स बनाने में मेरी मदद करें।
+
+        ![expandable](https://images.code.org/ed19f00a2350b186fbe86ea805e17925-image-1498065450651.gif)
+      courseA_artist_loops11_2019: |-
+        ## जलयान देखने के लिए स्टेप्स बनाने में मेरी मदद करें।
+
+        ![expandable](https://images.code.org/ed19f00a2350b186fbe86ea805e17925-image-1498065450651.gif)
+      courseA_artist_loops12: |-
+        कलाकार ने दूर कुछ मज़ेदार देखा। आपके विचार में उसने जो देखा, उसे चित्रित करें।
+
+        * * *
+
+        ### सुझाव
+
+        ![](https://images.code.org/b329e035f02cf0273987a530d4ff93b3-image-1497998147979.gif)
+        ![](https://images.code.org/126edbb030b78586c620fea11bd9c867-image-1497998152966.gif)
+        ![](https://images.code.org/a4fc9deba0ecdae5f434a828708d997b-image-1497998171788.gif)
+        ![](https://images.code.org/55271714dcfc01bf49441cdf3bf17649-image-1497998176661.gif)
+      courseA_artist_loops12_2018: |-
+        कलाकार ने दूर कुछ मज़ेदार देखा। आपके विचार में उसने जो देखा, उसे चित्रित करें।
+
+        * * *
+
+        ### सुझाव
+
+        ![](https://images.code.org/b329e035f02cf0273987a530d4ff93b3-image-1497998147979.gif)
+        ![](https://images.code.org/126edbb030b78586c620fea11bd9c867-image-1497998152966.gif)
+        ![](https://images.code.org/a4fc9deba0ecdae5f434a828708d997b-image-1497998171788.gif)
+        ![](https://images.code.org/55271714dcfc01bf49441cdf3bf17649-image-1497998176661.gif)
+      courseA_artist_loops12_2019: |-
+        कलाकार ने दूर कुछ मज़ेदार देखा। आपके विचार में उसने जो देखा, उसे चित्रित करें।
+
+        * * *
+
+        ### सुझाव
+
+        ![](https://images.code.org/b329e035f02cf0273987a530d4ff93b3-image-1497998147979.gif)
+        ![](https://images.code.org/126edbb030b78586c620fea11bd9c867-image-1497998152966.gif)
+        ![](https://images.code.org/a4fc9deba0ecdae5f434a828708d997b-image-1497998171788.gif)
+        ![](https://images.code.org/55271714dcfc01bf49441cdf3bf17649-image-1497998176661.gif)
+      courseA_artist_loops2: |-
+        इस लाइन को दो बार आगे की ओर खींचने में कलाकार की मदद करें।
+
+        ![](https://images.code.org/04501f26a36673460f5c8fe04e3e7686-image-1498002095108.gif)
+      courseA_artist_loops2_2018: |-
+        इस लाइन को दो बार आगे की ओर खींचने में कलाकार की मदद करें।
+
+        ![](https://images.code.org/04501f26a36673460f5c8fe04e3e7686-image-1498002095108.gif)
+      courseA_artist_loops2_2019: |-
+        इस लाइन को दो बार आगे की ओर खींचने में कलाकार की मदद करें।
+
+        ![](https://images.code.org/04501f26a36673460f5c8fe04e3e7686-image-1498002095108.gif)
+      courseA_artist_loops3: |-
+        हमारा कलाकार पांच बार लाइन खींचने की कोशिश कर रहा है, लेकिन उससे यह सही नहीं खिंच रही। क्या आप मदद कर सकते हैं?
+
+        ![expandable](https://images.code.org/6d79b5f8291bd8e11c427bff25f423c2-image-1467935497388.gif)
+      courseA_artist_loops3_2018: |-
+        हमारा कलाकार पांच बार लाइन खींचने की कोशिश कर रहा है, लेकिन उससे यह सही नहीं खिंच रही। क्या आप मदद कर सकते हैं?
+
+        ![expandable](https://images.code.org/6d79b5f8291bd8e11c427bff25f423c2-image-1467935497388.gif)
+      courseA_artist_loops3_2019: |-
+        हमारा कलाकार पांच बार लाइन खींचने की कोशिश कर रहा है, लेकिन उससे यह सही नहीं खिंच रही। क्या आप मदद कर सकते हैं?
+
+        ![expandable](https://images.code.org/6d79b5f8291bd8e11c427bff25f423c2-image-1467935497388.gif)
+      courseA_artist_loops4: |-
+        अब, इस लाइन को पांच बार खींचने के लिए <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="2-6">5</title></block></xml> लूप का उपयोग करें!
+
+        ![](https://images.code.org/b2bc7f52ffdac2ad0d8e7c2d798c24df-image-1501875818062.gif)
+      courseA_artist_loops4_2018: |-
+        अब, इस लाइन को पांच बार खींचने के लिए <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="2-6">5</title></block></xml> लूप का उपयोग करें!
+
+        ![](https://images.code.org/b2bc7f52ffdac2ad0d8e7c2d798c24df-image-1501875818062.gif)
+      courseA_artist_loops4_2019: |-
+        अब, इस लाइन को पांच बार खींचने के लिए <xml><block type="controls_repeat_simplified_dropdown" block-text="repeat"><title name="TIMES" config="2-6">5</title></block></xml> लूप का उपयोग करें!
+
+        ![](https://images.code.org/b2bc7f52ffdac2ad0d8e7c2d798c24df-image-1501875818062.gif)
+      courseA_artist_loops5: |-
+        ## सात स्टेप लंबी लाइन खींचें। यह हमारा क्षितिज बन जाएगा।
+
+        ![expandable](https://images.code.org/dc7c4317177f2b94421c5aa589c31ac7-image-1498002771889.gif)
+      courseA_artist_loops5_2018: |-
+        ## सात स्टेप लंबी लाइन खींचें। यह हमारा क्षितिज बन जाएगा।
+
+        ![expandable](https://images.code.org/dc7c4317177f2b94421c5aa589c31ac7-image-1498002771889.gif)
+      courseA_artist_loops5_2019: |-
+        ## सात स्टेप लंबी लाइन खींचें। यह हमारा क्षितिज बन जाएगा।
+
+        ![expandable](https://images.code.org/dc7c4317177f2b94421c5aa589c31ac7-image-1498002771889.gif)
+      courseA_artist_loops6: |-
+        ## आइए पीछे एक अच्छी सी पहाड़ी रखें।
+
+        ![expandable](https://images.code.org/f64d93b6d9a7d9c3edfce3c227c0dd49-image-1498062074031.gif)
+      courseA_artist_loops6_2018: |-
+        ## आइए पीछे एक अच्छी सी पहाड़ी रखें।
+
+        ![expandable](https://images.code.org/f64d93b6d9a7d9c3edfce3c227c0dd49-image-1498062074031.gif)
+      courseA_artist_loops6_2019: |-
+        ## आइए पीछे एक अच्छी सी पहाड़ी रखें।
+
+        ![expandable](https://images.code.org/f64d93b6d9a7d9c3edfce3c227c0dd49-image-1498062074031.gif)
+      courseA_artist_loops7: |-
+        ## पानी में लहरें जोड़ने के लिए <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> लूप का उपयोग करें।
+
+        ![expandable](https://images.code.org/01c5f6772a8b608a2fca5f6de7e25c67-image-1498062629139.gif)
+      courseA_artist_loops7_2018: |-
+        ## पानी में लहरें जोड़ने के लिए <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> लूप का उपयोग करें।
+
+        ![expandable](https://images.code.org/01c5f6772a8b608a2fca5f6de7e25c67-image-1498062629139.gif)
+      courseA_artist_loops8: |-
+        ## हमें नाव तक की सीढ़ी चाहिए।
+
+        ![expandable](https://images.code.org/ee90228fae25ecca1fba589b721f9120-image-1498063066878.gif)
+      courseA_artist_loops8_2018: |-
+        ## हमें नाव तक की सीढ़ी चाहिए।
+
+        ![expandable](https://images.code.org/ee90228fae25ecca1fba589b721f9120-image-1498063066878.gif)
+      courseA_artist_loops8_2019: |-
+        ## हमें नाव तक की सीढ़ी चाहिए।
+
+        ![expandable](https://images.code.org/ee90228fae25ecca1fba589b721f9120-image-1498063066878.gif)
+      courseA_artist_loops9: |-
+        ## **चुनौती:** नीचे घाट की ओर जाने की सीढ़ियां टूटी हुई हैं।   उन्हें ठीक करने में मेरी मदद करें।
+
+        ![expandable](https://images.code.org/9d36df1afb6a738ba7bcff8734403ff3-image-1498063282074.gif)
+      courseA_artist_loops9_2018: |-
+        ## **चुनौती:** नीचे घाट की ओर जाने की सीढ़ियां टूटी हुई हैं।   उन्हें ठीक करने में मेरी मदद करें।
+
+        ![expandable](https://images.code.org/9d36df1afb6a738ba7bcff8734403ff3-image-1498063282074.gif)
+      courseA_artist_loops9_2019: |-
+        ## **चुनौती:** नीचे घाट की ओर जाने की सीढ़ियां टूटी हुई हैं।   उन्हें ठीक करने में मेरी मदद करें।
+
+        ![expandable](https://images.code.org/9d36df1afb6a738ba7bcff8734403ff3-image-1498063282074.gif)
+      courseA_artist_loops_challenge1: |-
+        आप एक पंक्ति में कई लाइनें खींचने के लिए लूप का उपयोग कर सकते हैं।
+
+        क्या आप एक घर चित्रित कर सकते हैं? इसे जैसा चाहें, वैसा बनाएं!  ऐसे पैटर्न खोजने की कोशिश करें, जो दोहराए जाते हैं!
+
+        यहां कुछ सुझाव दिए गए हैं:
+
+        ![](https://images.code.org/6e59e881e0aa1d31186e81a203655a0b-image-1501785654664.png)
+      courseA_artist_loops_challenge1_2018: |-
+        आप एक पंक्ति में कई लाइनें खींचने के लिए लूप का उपयोग कर सकते हैं।
+
+        क्या आप एक घर चित्रित कर सकते हैं? इसे जैसा चाहें, वैसा बनाएं!  ऐसे पैटर्न खोजने की कोशिश करें, जो दोहराए जाते हैं!
+
+        यहां कुछ सुझाव दिए गए हैं:
+
+        ![](https://images.code.org/6e59e881e0aa1d31186e81a203655a0b-image-1501785654664.png)
+      courseA_artist_loops_challenge1_2019: |-
+        आप एक पंक्ति में कई लाइनें खींचने के लिए लूप का उपयोग कर सकते हैं।
+
+        क्या आप एक घर चित्रित कर सकते हैं? इसे जैसा चाहें, वैसा बनाएं!  ऐसे पैटर्न खोजने की कोशिश करें, जो दोहराए जाते हैं!
+
+        यहां कुछ सुझाव दिए गए हैं:
+
+        ![](https://images.code.org/6e59e881e0aa1d31186e81a203655a0b-image-1501785654664.png)
+      courseA_artist_loops_challenge2a: |-
+        _"कैंप स्थल तैयार करने में मेरी मदद करें!"_
+
+        इन तीनों टेंटों को चित्रित करने के लिए टूलबॉक्स में से ब्लॉक्स का उपयोग करें।
+      courseA_artist_loops_challenge2a_2018: |-
+        _"कैंप स्थल तैयार करने में मेरी मदद करें!"_
+
+        इन तीनों टेंटों को चित्रित करने के लिए टूलबॉक्स में से ब्लॉक्स का उपयोग करें।
+      courseA_artist_loops_challenge2a_2019: |-
+        _"कैंप स्थल तैयार करने में मेरी मदद करें!"_
+
+        इन तीनों टेंटों को चित्रित करने के लिए टूलबॉक्स में से ब्लॉक्स का उपयोग करें।
+      courseA_collector_loops1: "**निशुल्क प्ले:** यह लॉरेल द एडवेंचर्र है! उसे आसपास
+        मूव करें और अधिक से अधिक खजाना पाएं। \n\nब्लॉक्स को वर्कस्पेस में खींचें और
+        यह जानने की कोशिश करें कि खजाना कैसे पाना है। इस स्तर को पास करने के लिए कम
+        से कम एक आइटम पाएं।"
+      courseA_collector_loops12: _"युरेका!  अधिक से अधिक खजाना प्राप्त करें!"_  (आपके
+        लिए इसे पूरा प्राप्त करना आवश्यक नहीं है।)
+      courseA_collector_loops12_2018: _"युरेका!  अधिक से अधिक खजाना प्राप्त करें!"_  (आपके
+        लिए इसे पूरा प्राप्त करना आवश्यक नहीं है।)
+      courseA_collector_loops12_2019: _"युरेका!  अधिक से अधिक खजाना प्राप्त करें!"_  (आपके
+        लिए इसे पूरा प्राप्त करना आवश्यक नहीं है।)
+      courseA_collector_loops1_2018: "**निशुल्क प्ले:** यह लॉरेल द एडवेंचर्र है! उसे
+        आसपास मूव करें और अधिक से अधिक खजाना पाएं। \n\nब्लॉक्स को वर्कस्पेस में खींचें
+        और यह जानने की कोशिश करें कि खजाना कैसे पाना है। इस स्तर को पास करने के लिए
+        कम से कम एक आइटम पाएं।"
+      courseA_collector_loops1_2019: "**निशुल्क प्ले:** यह लॉरेल द एडवेंचर्र है! उसे
+        आसपास मूव करें और अधिक से अधिक खजाना पाएं। \n\nब्लॉक्स को वर्कस्पेस में खींचें
+        और यह जानने की कोशिश करें कि खजाना कैसे पाना है। इस स्तर को पास करने के लिए
+        कम से कम एक आइटम पाएं।"
+      courseA_collector_loops2: |-
+        ये सारे ढेर लें! लॉरेल को खजाने के प्रत्येक पीस के पास मूव करें, फिर इस ब्लॉक का उपयोग करें:\
+          <xml><block type="collector_collect"/></xml>
+      courseA_collector_loops3: लॉरेल केवल एक <xml><block type="maze_moveEast"/></xml>
+        ब्लॉक का उपयोग करते हुए खजाने के सभी पांच ढेर कैसे प्राप्त कर सकती है?
+      courseA_collector_loops3_2018: लॉरेल केवल एक <xml><block type="maze_moveEast"/></xml>
+        ब्लॉक का उपयोग करते हुए खजाने के सभी पांच ढेर कैसे प्राप्त कर सकती है?
+      courseA_collector_loops3_2019: लॉरेल केवल एक <xml><block type="maze_moveEast"
+        block-text="move east"/></xml> ब्लॉक का उपयोग करते हुए खजाने के सभी पांच ढेर
+        कैसे प्राप्त कर सकती है?
+      courseA_collector_loops_challenge1: _"क्या आप कुछ बग ढूंढने में मेरी मदद कर
+        सकते हैं? मुझे पता है मैं किस रास्ते से जाना चाहता हूं, लेकिन मैं निश्चित
+        नहीं हूं कि कितने स्टेप्स लेने हैं।"_
+      courseA_collector_loops_challenge1_2018: _"क्या आप कुछ बग ढूंढने में मेरी मदद
+        कर सकते हैं? मुझे पता है मैं किस रास्ते से जाना चाहता हूं, लेकिन मैं निश्चित
+        नहीं हूं कि कितने स्टेप्स लेने हैं।"_
+      courseA_collector_loops_challenge1_2019: _"क्या आप कुछ बग ढूंढने में मेरी मदद
+        कर सकते हैं? मुझे पता है मैं किस रास्ते से जाना चाहता हूं, लेकिन मैं निश्चित
+        नहीं हूं कि कितने स्टेप्स लेने हैं।"_
+      courseA_collector_preLoops7: |-
+        ये सारे ढेर लें! लॉरेल को खजाने के प्रत्येक पीस के पास मूव करें, फिर इस ब्लॉक का उपयोग करें:\
+          <xml><block type="collector_collect"/></xml>
       courseA_maze_seq1: _"इन ब्लॉक्स के साथ खेलें और बुरे सूअर को मेरे पास लाने की
         कोशिश करें!"_
       courseA_maze_seq10: |-
@@ -273,6 +500,107 @@ hi-IN:
         **चुनौती:** पक्षी को सूअर के पास ले जाने के लिए ब्लॉक्स जोड़कर इस स्तर को डीबग करें!
 
         ![expandable](https://images.code.org/3f35068dd3cf51c420a536fa078f854d-image-1497996843105.gif)
+      courseA_maze_seq_challenge1: इस स्तर को डीबग करें। अतिरिक्त ब्लॉक्स हटाएं, और
+        गायब ब्लॉक्स को जोड़ें। पक्षी को सूअर के पास ले जाएं!
+      courseA_maze_seq_challenge1_2018: इस स्तर को डीबग करें। अतिरिक्त ब्लॉक्स हटाएं,
+        और गायब ब्लॉक्स को जोड़ें। पक्षी को सूअर के पास ले जाएं!
+      courseA_maze_seq_challenge1_2019: इस स्तर को डीबग करें। अतिरिक्त ब्लॉक्स हटाएं,
+        और गायब ब्लॉक्स को जोड़ें। पक्षी को सूअर के पास ले जाएं!
+      courseA_maze_seq_challenge2_2019: पक्षी को सूअर के पास ले जाने के लिए रास्ता
+        खोजें। TNT से बचें, नहीं तो पंख उड़ जाएंगे!
+      courseA_playLab_events3: |-
+        <xml><block type="studio_move">
+            <title name="SPRITE">1</title>
+            <title name="DIR">8</title>
+          </block></xml> block to the <xml><block type="studio_whenArrow">
+            <title name="VALUE">left</title>
+          </block></xml> इवेंट ब्लॉक को जोड़कर जॉर्ज द डॉग को मूव होने में मदद करें, जो पहले ही वर्कस्पेस में है।
+
+        इस स्तर को खत्म करने के लिए जॉर्ज को झंडे के पास ले जाएं!
+      courseA_playLab_events3_2018: |-
+        <xml><block type="studio_move">
+            <title name="SPRITE">1</title>
+            <title name="DIR">8</title>
+          </block></xml> block to the <xml><block type="studio_whenArrow">
+            <title name="VALUE">left</title>
+          </block></xml> इवेंट ब्लॉक को जोड़कर जॉर्ज द डॉग को मूव होने में मदद करें, जो पहले ही वर्कस्पेस में है।
+
+        इस स्तर को खत्म करने के लिए जॉर्ज को झंडे के पास ले जाएं!
+      courseA_playLab_events3_2019: |-
+        <xml><block type="studio_move" block-text="move dog west">
+            <title name="SPRITE">1</title>
+            <title name="DIR">8</title>
+          </block></xml> block to the <xml><block type="studio_whenArrow" block-text="when left arrow">
+            <title name="VALUE">left</title>
+          </block></xml> इवेंट ब्लॉक को जोड़कर जॉर्ज द डॉग को मूव होने में मदद करें, जो पहले ही वर्कस्पेस में है।
+
+        इस स्तर को खत्म करने के लिए जॉर्ज को झंडे के पास ले जाएं!
+      courseA_playLab_events4: अब, जॉर्ज को दाएं मूव करने के लिए और ब्लॉक जोड़ें,
+        जब दाएं तीर वाले बटन पर क्लिक किया जाता है।
+      courseA_playLab_events5: जब ऊपर के तीर वाले और नीचे के तीर वाले बटन दबाए जाएं
+        तो जॉर्ज को ऊपर और नीचे मूव कराने के लिए इवेंट्स जोड़ें।
+      courseA_playLab_events5_2018: जब ऊपर के तीर वाले और नीचे के तीर वाले बटन दबाए
+        जाएं तो जॉर्ज को ऊपर और नीचे मूव कराने के लिए इवेंट्स जोड़ें।
+      courseA_playLab_events5_2019: जब ऊपर के तीर वाले और नीचे के तीर वाले बटन दबाए
+        जाएं तो जॉर्ज को ऊपर और नीचे मूव कराने के लिए इवेंट्स जोड़ें।
+      courseA_playLab_events6_2019: जब जॉर्ज पर क्लिक किया जाए तो पृष्ठभूमि को बदलकर
+        और बेतरतीब ध्वनि प्ले करके इसे और दिलचस्प बनाएं।
+      courseA_playlab_events_challenge1: |-
+        ऑलिव पर क्लिक करने से रॉबिन प्रकट होगा! क्या आप बाकी के चरित्रों को दिखाने के लिए भी कोड लिख सकते हैं?
+
+        इस पहेली में, संकेतों के लिए क्लिक करना सुनिश्चित करें! संकेत आपको कदम-दर-कदम यह प्रोजेक्ट करने में मदद करेंगे!
+
+        ![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19 PM.png>)
+      courseA_playlab_events_challenge1_2018: |-
+        ऑलिव पर क्लिक करने से रॉबिन प्रकट होगा! क्या आप बाकी के चरित्रों को दिखाने के लिए भी कोड लिख सकते हैं?
+
+        इस पहेली में, संकेतों के लिए क्लिक करना सुनिश्चित करें! संकेत आपको कदम-दर-कदम यह प्रोजेक्ट करने में मदद करेंगे!
+
+        ![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19 PM.png>)
+      courseA_playlab_events_challenge1_2019: |-
+        ऑलिव पर क्लिक करने से रॉबिन प्रकट होगा! क्या आप बाकी के चरित्रों को दिखाने के लिए भी कोड लिख सकते हैं?
+
+        इस पहेली में, संकेतों के लिए क्लिक करना सुनिश्चित करें! संकेत आपको कदम-दर-कदम यह प्रोजेक्ट करने में मदद करेंगे!
+
+        ![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19 PM.png>)
+      courseA_playlab_events_challenge2: "हर किसी को कुछ करने के लिए दें, जब आप उन
+        पर क्लिक करें। जानवर क्या कहेंगे? \n\nऔर क्या घटित होगा? इस पहेली में, संकेतों
+        के लिए क्लिक करना सुनिश्चित करें। संकेतों से आप मज़ेदार चीज़ें आजमा सकेंगे!\n\n![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19
+        PM.png>)"
+      courseA_playlab_events_challenge2_2018: "हर किसी को कुछ करने के लिए दें, जब
+        आप उन पर क्लिक करें। जानवर क्या कहेंगे? \n\nऔर क्या घटित होगा? इस पहेली में,
+        संकेतों के लिए क्लिक करना सुनिश्चित करें। संकेतों से आप मज़ेदार चीज़ें आजमा
+        सकेंगे!\n\n![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19
+        PM.png>)"
+      courseA_playlab_events_challenge2_2019: "हर किसी को कुछ करने के लिए दें, जब
+        आप उन पर क्लिक करें। जानवर क्या कहेंगे? \n\nऔर क्या घटित होगा? इस पहेली में,
+        संकेतों के लिए क्लिक करना सुनिश्चित करें। संकेतों से आप मज़ेदार चीज़ें आजमा
+        सकेंगे!\n\n![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19
+        PM.png>)"
+      courseB_artist_loops1_2019: यह "कलाकार” नामक नए प्रकार की पहेली है। स्तर के
+        साथ खेलें और कुछ मज़ेदार चित्रित करें।
+      courseB_collector_loops1: "**निशुल्क प्ले:** यह लॉरेल द एडवेंचर्र है! उसे आसपास
+        मूव करें और अधिक से अधिक खजाना पाएं। \n\nब्लॉक्स को वर्कस्पेस में खींचें और
+        यह जानने की कोशिश करें कि खजाना कैसे पाना है। इस स्तर को पास करने के लिए कम
+        से कम एक आइटम पाएं।"
+      courseB_collector_loops10_2019: इस गुफा से सारा खजाना प्राप्त करने में लॉरेल
+        की मदद करें।
+      courseB_collector_loops3: लॉरेल केवल एक <xml><block type="maze_moveEast"/></xml>
+        ब्लॉक का उपयोग करते हुए खजाने के सभी पांच ढेर कैसे प्राप्त कर सकती है?
+      courseB_collector_loops3_2018: लॉरेल केवल एक <xml><block type="maze_moveEast"/></xml>
+        ब्लॉक का उपयोग करते हुए खजाने के सभी पांच ढेर कैसे प्राप्त कर सकती है?
+      courseB_collector_loops3_2019: लॉरेल केवल एक <xml><block type="maze_moveEast"
+        block-text="move east"/></xml> ब्लॉक का उपयोग करते हुए खजाने के सभी पांच ढेर
+        कैसे प्राप्त कर सकती है?
+      courseB_collector_loops_challenge2a: |-
+        _"आइए खजाना प्राप्त करें!"_
+        इस पहेली को खत्म करने के लिए खजाने के कम से कम **5** पीस पाने में लॉरेल की मदद करें।
+      courseB_collector_loops_challenge2a_2018: |-
+        _"आइए खजाना प्राप्त करें!"_
+        इस पहेली को खत्म करने के लिए खजाने के कम से कम **5** पीस पाने में लॉरेल की मदद करें।
+      courseB_collector_loops_challenge2a_2019: |-
+        _"आइए खजाना प्राप्त करें!"_
+        इस पहेली को खत्म करने के लिए खजाने के कम से कम **5** पीस पाने में लॉरेल की मदद करें।
       courseC19_playLab_EOC6: आपने पूरा कर लिया है! अब आप अपनी गेम खेल सकते हैं या
         इसे अपने दोस्तों और सहपाठियों के साथ साझा कर सकते हैं!
       courseD_artist_project3a: |-

@@ -34,8 +34,7 @@ const styles = {
     width: '100%',
     top: 0,
     bottom: 0,
-    backgroundColor: color.white,
-    boxSizing: 'border-box'
+    backgroundColor: color.white
   },
   dataBrowser: {
     position: 'absolute',
@@ -43,7 +42,6 @@ const styles = {
     bottom: 0,
     left: 270,
     right: 0,
-    boxSizing: 'border-box',
     padding: 10
   }
 };
