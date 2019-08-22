@@ -13,6 +13,7 @@ import ProjectWidgetWithData from '@cdo/apps/templates/projects/ProjectWidgetWit
 import shapes from './shapes';
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
 import i18n from '@cdo/locale';
+import DonorTeacherBanner from '@cdo/apps/templates/DonorTeacherBanner';
 import CensusTeacherBanner from '../census2017/CensusTeacherBanner';
 
 const styles = {
@@ -34,6 +35,7 @@ export default class TeacherHomepage extends Component {
     isEnglish: PropTypes.bool.isRequired,
     locale: PropTypes.string,
     showCensusBanner: PropTypes.bool.isRequired,
+    showDonorBanner: PropTypes.bool.isRequired,
     ncesSchoolId: PropTypes.string,
     censusQuestion: PropTypes.oneOf(['how_many_10_hours', 'how_many_20_hours']),
     teacherName: PropTypes.string,
@@ -43,7 +45,8 @@ export default class TeacherHomepage extends Component {
   };
 
   state = {
-    showCensusBanner: this.props.showCensusBanner
+    showCensusBanner: this.props.showCensusBanner,
+    showDonorBanner: this.props.showDonorBanner
   };
 
   bindCensusBanner = banner => {
@@ -105,7 +108,8 @@ export default class TeacherHomepage extends Component {
 
   hideCensusBanner = () => {
     this.setState({
-      showCensusBanner: false
+      showCensusBanner: false,
+      showDonorBanner: false
     });
   };
 
@@ -224,6 +228,11 @@ export default class TeacherHomepage extends Component {
               }
             />
             <br />
+          </div>
+        )}
+        {this.state.showDonorBanner && (
+          <div>
+            <DonorTeacherBanner />
           </div>
         )}
         <TeacherSections queryStringOpen={queryStringOpen} locale={locale} />
