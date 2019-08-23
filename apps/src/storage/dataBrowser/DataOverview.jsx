@@ -84,7 +84,7 @@ class DataOverview extends React.Component {
         <div id="data-library-container" style={styles.container}>
           <DataLibraryPane />
           <div id="data-browser" style={styles.dataBrowser}>
-            <DataBrowser />
+            <DataBrowser tableListMap={this.props.tableListMap} />
           </div>
         </div>
       );
