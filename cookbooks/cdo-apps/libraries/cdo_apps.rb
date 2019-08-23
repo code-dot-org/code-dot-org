@@ -11,7 +11,8 @@ module CdoApps
       'LC_ALL' => utf8,
       'LANGUAGE' => utf8,
       'LANG' => utf8,
-      'RAILS_ENV' => node.chef_environment
+      'RAILS_ENV' => node.chef_environment,
+      'TZ' => 'UTC', # Workaround for lack of zoneinfo directory in docker: https://forums.docker.com/t/synchronize-timezone-from-host-to-container/39116/3
     }
     execute "setup-#{app_name}" do
       command "bundle exec rake #{app_name}:setup_db --trace"
