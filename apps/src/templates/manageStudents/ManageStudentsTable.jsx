@@ -203,6 +203,7 @@ class ManageStudentsTable extends Component {
                 initialIsResetting={false}
                 sectionId={sectionId}
                 studentId={rowData.id}
+                resetDisabled={resetDisabled}
               />
             )}
             {(rowData.loginType === SectionLoginType.word ||
