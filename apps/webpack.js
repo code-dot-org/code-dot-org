@@ -19,7 +19,8 @@ var toTranspileWithinNodeModules = [
   path.resolve(__dirname, 'node_modules', '@code-dot-org', 'dance-party'),
   path.resolve(__dirname, 'node_modules', '@code-dot-org', 'snack-sdk'),
   // parse5 ships in ES6: https://github.com/inikulin/parse5/issues/263#issuecomment-410745073
-  path.resolve(__dirname, 'node_modules', 'parse5')
+  path.resolve(__dirname, 'node_modules', 'parse5'),
+  path.resolve(__dirname, 'node_modules', 'vmsg')
 ];
 
 const scssIncludePath = path.resolve(__dirname, '..', 'shared', 'css');
