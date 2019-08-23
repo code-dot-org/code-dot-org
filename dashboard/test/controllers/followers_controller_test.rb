@@ -216,6 +216,8 @@ class FollowersControllerTest < ActionController::TestCase
   end
 
   test "student_register adds existing student to section if already signed in" do
+    refute @chris_section.students.include? @student
+
     sign_in @student
     assert_does_not_create(User) do
       post :student_register, params: {section_code: @chris_section.code}
