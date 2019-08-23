@@ -38,5 +38,5 @@ level 'CSP U2L6 SFLP 20-21', progression: 'Lesson Overview'
 stage 'Internet Dilemmas, pt 2'
 level 'CSP U2L7 SFLP 20-21', progression: 'Lesson Overview'
 
-stage 'Unit 2 Assessment'
-level 'CSP U2L8 SFLP 20-21', progression: 'Lesson Overview'
+stage 'Unit Assessment', lockable: true
+level 'CSP Unit 2 MC Assessment _2020', assessment: true
