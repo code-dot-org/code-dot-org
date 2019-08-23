@@ -50,7 +50,6 @@ class FollowersController < ApplicationController
   end
 
   # GET /join/XXXXXX
-  # if logged in, join the section, if not logged in, present a form to create a new user and log in
   def student_user_new
     # Though downstream validations would raise an exception, we redirect to the admin directory to
     # improve user experience.
@@ -77,7 +76,7 @@ class FollowersController < ApplicationController
   end
 
   # POST /join/XXXXXX
-  # join a section as a new student
+  # join a section
   def student_register
     if current_user
       @user = current_user
