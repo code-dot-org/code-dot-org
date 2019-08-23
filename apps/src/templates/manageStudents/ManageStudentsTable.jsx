@@ -185,7 +185,9 @@ class ManageStudentsTable extends Component {
     );
   };
 
-  isPasswordResetDisabled = userType => {
+  // Editing is disabled if the "student" in the section is a teacher
+  // (e.g., their userType is 'teacher').
+  isEditingDisabled = userType => {
     return userType === 'teacher';
   };
 
@@ -193,7 +195,7 @@ class ManageStudentsTable extends Component {
 
   passwordFormatter = (loginType, {rowData}) => {
     const {sectionId} = this.props;
-    const resetDisabled = this.isPasswordResetDisabled(rowData.userType);
+    const resetDisabled = this.isEditingDisabled(rowData.userType);
     return (
       <div>
         {!rowData.isEditing && (
@@ -286,6 +288,7 @@ class ManageStudentsTable extends Component {
         studentName={rowData.name}
         hasEverSignedIn={rowData.hasEverSignedIn}
         dependsOnThisSectionForLogin={rowData.dependsOnThisSectionForLogin}
+        canEdit={!this.isEditingDisabled(rowData.userType)}
       />
     );
   };
