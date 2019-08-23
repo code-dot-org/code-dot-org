@@ -30,13 +30,13 @@ module Pd::SurveyPipeline::Helper
       end
 
     # Roll up facilitator-specific results and general workshop results for each facilitator
-    results = {}
+    reports = {}
     facilitator_ids.each do |facilitator_id|
-      results.deep_merge! report_facilitator_rollup(facilitator_id, workshop)
-      results.deep_merge! report_workshop_rollup(facilitator_id, workshop)
+      reports.deep_merge! report_facilitator_rollup(facilitator_id, workshop)
+      reports.deep_merge! report_workshop_rollup(facilitator_id, workshop)
     end
 
-    results
+    reports
   end
 
   # Summarize facilitator-specific results from all related workshops
@@ -58,8 +58,7 @@ module Pd::SurveyPipeline::Helper
     context = {
       current_workshop_id: workshop.id,
       facilitator_id: facilitator_id,
-      question_categories: [FACILITATOR_EFFECTIVENESS_CATEGORY],
-      submission_type: 'Facilitator'
+      question_categories: [FACILITATOR_EFFECTIVENESS_CATEGORY]
     }
 
     # Retrieve data
@@ -69,19 +68,13 @@ module Pd::SurveyPipeline::Helper
 
     # Process data
     process_rollup_data context
-
-    # Decorate
-    Pd::SurveyPipeline::FacilitatorSurveyRollupDecorator.process_data context
-
-    context[:decorated_summaries]
   end
 
   def report_workshop_rollup(facilitator_id, workshop)
     context = {
       current_workshop_id: workshop.id,
       facilitator_id: facilitator_id,
-      question_categories: [WORKSHOP_OVERALL_SUCCESS_CATEGORY, WORKSHOP_TEACHER_ENGAGEMENT_CATEGORY],
-      submission_type: 'Workshop'
+      question_categories: [WORKSHOP_OVERALL_SUCCESS_CATEGORY, WORKSHOP_TEACHER_ENGAGEMENT_CATEGORY]
     }
 
     # Retrieve data
@@ -91,11 +84,6 @@ module Pd::SurveyPipeline::Helper
 
     # Process data
     process_rollup_data context
-
-    # Decorate
-    Pd::SurveyPipeline::WorkshopSurveyRollupDecorator.process_data context
-
-    context[:decorated_summaries]
   end
 
   def process_rollup_data(context)
@@ -134,8 +122,8 @@ module Pd::SurveyPipeline::Helper
     group_config_this_ws = [:workshop_id, :name, :type, :answer_type]
 
     is_selected_question_this_ws = lambda do |hash|
-      hash[:workshop_id] == context[:current_workshop_id] &&
-      context[:question_categories].any? {|category| hash[:name]&.start_with? category}
+      (hash[:workshop_id] == context[:current_workshop_id]) &&
+        context[:question_categories].any? {|category| hash[:name]&.start_with? category}
     end
 
     map_config_this_ws = [
@@ -149,6 +137,9 @@ module Pd::SurveyPipeline::Helper
     Pd::SurveyPipeline::GenericMapper.new(
       group_config: group_config_this_ws, map_config: map_config_this_ws
     ).process_data context
+
+    # Decorate
+    Pd::SurveyPipeline::SurveyRollupDecorator.decorate_facilitator_rollup context
   end
 
   # Summarize all survey results for a workshop.

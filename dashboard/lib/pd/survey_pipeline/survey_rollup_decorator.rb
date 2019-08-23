@@ -1,5 +1,5 @@
 module Pd::SurveyPipeline
-  module Decorator
+  module SurveyRollupDecorator
     def decorate_facilitator_rollup(data)
       report = {
         facilitators: {},
