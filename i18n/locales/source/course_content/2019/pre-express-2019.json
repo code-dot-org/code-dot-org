@@ -704,10 +704,12 @@
     "short_instructions": "Need a better playlab/events combo"
   },
   "https://studio.code.org/s/pre-express-2019/stage/11/puzzle/2": {
-    "short_instructions": "This is a Play Lab level.  Move blocks to the workspace and see what happens!"
+    "short_instructions": "This is a Play Lab level. Move blocks to the workspace and see what happens!",
+    "long_instructions": "This is a Play Lab level. Move blocks to the workspace and see what happens!"
   },
   "https://studio.code.org/s/pre-express-2019/stage/11/puzzle/3": {
-    "short_instructions": "Jorge the Dog wants to say \"Hi there.\"  Can you help him?",
+    "short_instructions": "Jorge the Dog wants to say \"Hi there.\" Can you help him?",
+    "long_instructions": "Jorge the Dog wants to say \"Hi there.\" Can you help him?",
     "authored_hints": {
       "courseA_playLab_events2_a": "Look for a block that makes the dog say something.",
       "courseA_playLab_events2_b": "This is the code you need to complete this puzzle:\n\n[blockly block][0]"
@@ -745,6 +747,7 @@
   },
   "https://studio.code.org/s/pre-express-2019/stage/11/puzzle/7": {
     "short_instructions": "Make this more interesting by changing the background and playing a random sound when Jorge is clicked.",
+    "long_instructions": "Make this more interesting by changing the background and playing a random sound when Jorge is clicked.",
     "authored_hints": {
       "courseA_playLab_events6_a": "Here is the event block that you would use to have Jorge do something when clicked:\n\n[blockly block][0]",
       "courseA_playLab_events6_b": "Here is the block you would use to change the background:\n\n[blockly block][0]",

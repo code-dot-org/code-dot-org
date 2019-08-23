@@ -12383,6 +12383,8 @@ tr:
               name: Fikri Mülkiyet
             Images:
               name: Görüntüler
+            CSS Classes:
+              name: CSS Sınıfları
         csd3-pilot:
           description_short: Programlama
           stages:
