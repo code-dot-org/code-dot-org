@@ -21,6 +21,7 @@ The primary data type students have used so far is **Numbers**. If we want to in
 `"11"` | Strings might **contain only digits**. This looks like a number but it is really 2 ASCII characters.
 `""` | Strings might **contain no characters**.
 <br>
+
 You can **store strings in a variable just like a number**. In this example the variable name is `str` but you should choose a name that is **descriptive and meaningful**.
 
 ![](https://images.code.org/56e6b30a51556aa3b516e0a49b51cbeb-image-1445894334432.18.40 PM.png)
@@ -36,8 +37,8 @@ As you start writing programs with strings **it is common to generate errors fro
 ![](https://images.code.org/89235457b9b9bf76ac4f8221cae5a62e-image-1445987270682.07.24 PM.png)
 
 
-**Check out the following for additional information about strings** 
+**Check out the following for additional information about strings**
 
-- <a href = “http://www.w3schools.com/js/js_strings.asp” target=_blank> Strings - w3schools <i class="fa fa-external-link-square"></i></a>
+- <a href = "http://www.w3schools.com/js/js_strings.asp" target=_blank> Strings - w3schools <i class="fa fa-external-link-square"></i></a>
 
 MARKDOWN
