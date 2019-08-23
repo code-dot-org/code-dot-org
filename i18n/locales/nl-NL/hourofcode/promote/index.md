@@ -1,36 +1,33 @@
 ---
-title: <%= hoc_s(:title_how_to_promote).inspect %>
+title: Vertel het verder
 layout: wide
 nav: promote_nav
 ---
-<%= view :signup_button %>
 
-<% facebook = {:u=>"http://#{request.host}/us"}
-
-twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_donor_text).gsub(/%{random_donor}/, get_random_donor_twitter)} twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_donor_text).include? '#HourOfCode' %>
+{{ signup_button }}
 
 # Get your community involved in the Hour of Code
 
 ## 1. Spreid het woord
 
-Vertel uw vrienden over **#HourOfCode**!
+Tell your friends about the **#HourOfCode**!
 
-<%= view :share_buttons, facebook:facebook, twitter:twitter %>
+{{ promote/share_buttons }}
 
 ## 2. Vraag je hele school om een CodeUur aan te bieden
 
-[Stuur deze e-mail](%= resolve_url('/promote/resources#sample-emails') %) naar uw opdrachtgever en daag elk klaslokaal op uw school uit om aan te melden.
+[Send this email]({{ promote/sample_emails }}) to your principal and challenge every classroom at your school to sign up.
 
 ## 3. Vraag uw werkgever betrokken te raken
 
-[Stuur deze e-mail](%= resolve_url('/promote/resources#sample-emails') %) naar uw manager of bedrijf CEO.
+[Send this email]({{ promote/sample_emails }}) to your manager or company's CEO.
 
 ## 5. Promoot het CodeUur in uw gemeenschap
 
-[Werf een lokale groep](%= resolve_url('/promote/resources#sample-emails') %) — jongen/meisje scout clubs, kerk, universiteit, veteranen groep, vakbond of zelfs sommige vrienden. U hoeft niet op school te zitten om nieuwe skills te leren. Gebruik deze [posters, banners, stickers, video's en meer](%= resolve_url('/promote/resources') %) voor uw eigen evenement.
+[Recruit a local group]({{ promote/sample_emails }})— boy/girl scouts club, church, university, veterans group, labor union, or even some friends. U hoeft niet op school te zitten om nieuwe skills te leren. Use these [posters, banners, stickers, videos and more](/promote/resources) for your own event.
 
 ## 5. Vraag een politicus het CodeUur te ondersteunen
 
-[Stuur deze e-mail](%= resolve_url('/promote/resources#sample-emails') %) naar uw lokale vertegenwoordigers, gemeenteraad of schoolbestuur, om hen uit te nodigen voor het CodeUur op uw school. Het kan steun bieden aan programmering binnen uw gemeente in maar één uur.
+[Send this email]({{ promote/sample_emails }}) to your local representatives, city council, or school board and invite them to visit your school for the Hour of Code. Het kan steun bieden aan programmering binnen uw gemeente in maar één uur.
 
-<%= view :signup_button %>
+{{ signup_button }}
