@@ -1,7 +1,7 @@
 name 'U2L2 CSP CFU IP Addresses'
 title 'Internet Protocol'
 type 'multi2'
-question 'Pick the two statements that are true about Internet Protocol (IP):'
+question 'Pick the two statements that are true about the Internet Protocol (IP):'
 
 right 'Each device or computer on the Internet is assigned a unique IP address. '
 wrong 'IP is a secret protocol shared between the sender and receiver.'

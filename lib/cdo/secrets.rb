@@ -34,10 +34,10 @@ module Cdo
     end
 
     # Add keys to list of required secrets, and begin pre-fetching them.
-    def required(*keys)
+    def required(*keys, fetch: false)
       keys = keys.map(&:to_s)
       @required += keys
-      keys.map(&method(:get))
+      keys.map(&method(:get)) if fetch
     end
 
     # Ensure all required secrets are fully loaded.
@@ -94,8 +94,7 @@ module Cdo
     # @param raise_not_found[Boolean] Raise exception if secret is not found.
     def lazy(key, fetch: false, fallback: nil, raise_not_found: false)
       key = key.to_s
-      @required.add(key)
-      get(key) if fetch
+      required(key, fetch: fetch)
       Cdo.lazy do
         if raise_not_found
           get(key).value!
