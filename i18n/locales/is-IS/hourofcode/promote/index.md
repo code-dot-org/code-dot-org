@@ -1,13 +1,10 @@
 ---
-title: <%= hoc_s(:title_how_to_promote).inspect %>
+title: Láta þetta berast
 layout: wide
 nav: promote_nav
 ---
-<%= view :signup_button %>
 
-<% facebook = {:u=>"http://#{request.host}/us"}
-
-twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_donor_text).gsub(/%{random_donor}/, get_random_donor_twitter)} twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_donor_text).include? '#HourOfCode' %>
+{{ signup_button }}
 
 # Get your community involved in the Hour of Code
 
@@ -15,22 +12,22 @@ twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :t
 
 Tell your friends about the **#HourOfCode**!
 
-<%= view :share_buttons, facebook:facebook, twitter:twitter %>
+{{ promote/share_buttons }}
 
 ## 2. Ask your whole school to offer an Hour of Code
 
-[Sendu þennan tölvupóst](%= resolve_url('/promote/resources#sample-emails') %) til skólastjórans og skoraðu á hvern bekk í skólanum að skrá sig.
+[Send this email]({{ promote/sample_emails }}) to your principal and challenge every classroom at your school to sign up.
 
 ## 3. Ask your employer to get involved
 
-[Sendu þennan tölvupóst](%= resolve_url('/promote/resources#sample-emails') %) til yfirmanns þíns eða forstjóra.
+[Send this email]({{ promote/sample_emails }}) to your manager or company's CEO.
 
 ## 4. Promote Hour of Code in your community
 
-[Skráðu hóp í nágrenninu](%= resolve_url('/promote/resources#sample-emails') %)— skátaflokk, kirkjuhóp, háskóla, eldri borgara, stéttarfélag eða bara vinahóp. You don't have to be in school to learn new skills. Notaðu þessi [veggspjöld, borða, límmiða, myndbönd og fleira](%= resolve_url('/promote/resources') %) fyrir þinn eigin viðburð.
+[Recruit a local group]({{ promote/sample_emails }})— boy/girl scouts club, church, university, veterans group, labor union, or even some friends. You don't have to be in school to learn new skills. Use these [posters, banners, stickers, videos and more](/promote/resources) for your own event.
 
 ## 5. Ask a local elected official to support the Hour of Code
 
-[Sendu þennan tölvupóst](%= resolve_url('/promote/resources#sample-emails') %) til þingmanna, bæjarfulltrúa eða menntamálanefndar og bjóddu þeim að heimsækja skólann þinn á Klukkustund kóðunar. It can help build support for computer science in your area beyond one hour.
+[Send this email]({{ promote/sample_emails }}) to your local representatives, city council, or school board and invite them to visit your school for the Hour of Code. It can help build support for computer science in your area beyond one hour.
 
-<%= view :signup_button %>
+{{ signup_button }}
