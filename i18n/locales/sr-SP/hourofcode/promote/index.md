@@ -1,13 +1,10 @@
 ---
-title: <%= hoc_s(:title_how_to_promote).inspect %>
+title: Разгласи
 layout: wide
 nav: promote_nav
 ---
-<%= view :signup_button %>
 
-<% facebook = {:u=>"http://#{request.host}/us"}
-
-twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_donor_text).gsub(/%{random_donor}/, get_random_donor_twitter)} twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_donor_text).include? '#HourOfCode' %>
+{{ signup_button }}
 
 # Get your community involved in the Hour of Code
 
@@ -15,22 +12,22 @@ twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :t
 
 Tell your friends about the **#HourOfCode**!
 
-<%= view :share_buttons, facebook:facebook, twitter:twitter %>
+{{ promote/share_buttons }}
 
 ## 2. Ask your whole school to offer an Hour of Code
 
-[Пошаљите овај имејл](%= resolve_url('/promote/resources#sample-emails') %) вашем директору и позовите сваки разред у вашој школи да се придружи.
+[Send this email]({{ promote/sample_emails }}) to your principal and challenge every classroom at your school to sign up.
 
 ## 3. Ask your employer to get involved
 
-[Пошаљите овај имејл](%= resolve_url('/promote/resources#sample-emails') %) вашем директору или менаџеру.
+[Send this email]({{ promote/sample_emails }}) to your manager or company's CEO.
 
 ## 4. Промовишите Hour of Code у својој заједници
 
-[Регрутујте локалну групу](%= resolve_url('/promote/resources#sample-emails') %)— извиђаче, цркву, универзитет, ветеране, радничка удружења или можда неке пријатеље. Не морате похађати школу да бисте стекли неке нове вештине. Употребите ове [постере, банере, налепнице, видео филмове и друго](%= resolve_url('/promote/resources') %) за свој догађај.
+[Recruit a local group]({{ promote/sample_emails }})— boy/girl scouts club, church, university, veterans group, labor union, or even some friends. Не морате похађати школу да бисте стекли неке нове вештине. Use these [posters, banners, stickers, videos and more](/promote/resources) for your own event.
 
 ## 5. Ask a local elected official to support the Hour of Code
 
-[Пошаљите овај имјел](%= resolve_url('/promote/resources#sample-emails') %) вашем локалном представнику, градском-општинском одбору или школском савету и позовите их да посете вашу школу и присуствују Часу кода. То може помоћи ширењу подршке за рачунарске науке у вашој околини и ван једног часа.
+[Send this email]({{ promote/sample_emails }}) to your local representatives, city council, or school board and invite them to visit your school for the Hour of Code. То може помоћи ширењу подршке за рачунарске науке у вашој околини и ван једног часа.
 
-<%= view :signup_button %>
+{{ signup_button }}
