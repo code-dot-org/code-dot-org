@@ -1,9 +1,10 @@
 ---
-title: <%= hoc_s(:title_how_to_events).inspect %>
+title: دليل حدث ساعة البرمجة
 layout: wide
 nav: how_to_nav
 ---
-<%= view :signup_button %>
+
+{{ signup_button }}
 
 # How to organize an Hour of Code assembly or event
 
@@ -14,13 +15,13 @@ nav: how_to_nav
 ## 1. التحضير للحدث الخاص بك
 
 - بدلا من ذلك ، تقرر اليوم والوقت.
-- Send [a letter](https://hourofcode.com/promote/resources#sample-emails) to your local mayor, member of Congress, governor, or influential business person and invite them to speak. لمزيد من التعليمات اطلع على [أداوات كيف تفعل](%=localized_file('/files/elected-official.pdf')%) خاصتنا عندما تستضيف شخصية رسمية خلال ساعة برمجة.
-- دعوة وسائل الإعلام والصحفيين. أي محطة أخبار محلية، صحيفة، مدونين التعليم/التكنولوجيا. انظر الى مجموعة صحافتنا للحصول على مساعدة.
+- Send [a letter](https://hourofcode.com/promote/resources#sample-emails) to your local mayor, member of Congress, governor, or influential business person and invite them to speak. Check out our [how-to toolkit]({{ localized_files/elected_official }}) when hosting an elected official during an Hour of Code for more info.
+- Invite media/press. i.e. local news station, newspaper, education/tech bloggers. See our [press kit]({{ promote/press_kit_url }}) for help.
 
 ## 2-وخلال الحدث
 
-- ابدأ حدثك بأحد [الفيديوهات المشجعة](%= resolve_url('/promote/resources#videos') %) الخاصة بنا.
-- هذا[الإحصاءات والرسوم البيانية](%= resolve_url('/promote/stats') %)تقديم خطاب استهلالي يشير إلى اهميه علوم الحاسب الألى باستخدام.   
+- Kick off your event with one of our [inspirational videos]({{ promote/videos }}).
+- Give an intro overviewing the importance of computer science, using these [stats and infographics]({{ promote/stats_url }}).   
       
     
 - **Other event ideas**: 
@@ -46,7 +47,7 @@ Consider hosting a K-5 evening event and invite parents to join their students f
 
 **Event:** School-wide Computer Science Education Week kick-off assembly
 
-**Date:** <%= campaign_date('start-short') %> (start of Computer Science Education Week)
+**Date:** {{ campaign_date/start_short }} (start of Computer Science Education Week)
 
 **Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
 
@@ -54,13 +55,13 @@ Consider hosting a K-5 evening event and invite parents to join their students f
 
 ## بدء العرض
 
-| Time                | نشاط                                                                                                                                      |
-| ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| 10:00 - 10:05 صباحا | Open with one of our [inspirational videos](%= resolve_url('/promote/resources#videos') %).                                               |
-| 10:05 - 10:15 صباحا | ويلقي مدير المدرسة خطابا افتتاحيا يشير إلى اهميه علم الحاسوب. هذا[الإحصاءات والرسوم البيانية](%= resolve_url('/promote/stats') %)استخدام. |
-| 10:15 - 10:30 صباحا | المتكلم الضيف يجعل الحديث عن نفسه ، قليلا من التكنولوجيا وكيف علم الحاسوب ياخذ دورا هاما في حياتنا اليومية.                               |
-| 10:30 - 10:40 صباحا | يقوم الطلاب بساعة برمجة استعراضية للمدرسة. لمسة اضافية: دعهم يشرحوا للمدير، للسياسي، او الطلاب الاخرين!                                   |
-| 10:40 - 11:00 صباحا | يستعرض الطلاب نشاط بدون اتصال وكيف ان علوم الكمبيوتر يمكن ان تدرس بدون استخدام الكمبيوترات.                                               |
-| 11:00 - 11:05 صباحا | يعطي المعلم الذي ساعد في وجود هذا الحدث العام للمدرسة ملاحظاته الختامية.                                                                  |
+| Time                | نشاط                                                                                                                                  |
+| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| 10:00 - 10:05 صباحا | Open with one of our [inspirational videos]({{ promote/videos }}).                                                                    |
+| 10:05 - 10:15 صباحا | Principal gives an intro overviewing the importance of computer science. Use these [stats and infographics]({{ promote/stats_url }}). |
+| 10:15 - 10:30 صباحا | المتكلم الضيف يجعل الحديث عن نفسه ، قليلا من التكنولوجيا وكيف علم الحاسوب ياخذ دورا هاما في حياتنا اليومية.                           |
+| 10:30 - 10:40 صباحا | يقوم الطلاب بساعة برمجة استعراضية للمدرسة. لمسة اضافية: دعهم يشرحوا للمدير، للسياسي، او الطلاب الاخرين!                               |
+| 10:40 - 11:00 صباحا | يستعرض الطلاب نشاط بدون اتصال وكيف ان علوم الكمبيوتر يمكن ان تدرس بدون استخدام الكمبيوترات.                                           |
+| 11:00 - 11:05 صباحا | يعطي المعلم الذي ساعد في وجود هذا الحدث العام للمدرسة ملاحظاته الختامية.                                                              |
 
-<%= view :signup_button %>
+{{ signup_button }}

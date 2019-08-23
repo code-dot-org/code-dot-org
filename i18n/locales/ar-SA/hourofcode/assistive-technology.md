@@ -1,20 +1,21 @@
 ---
-title: Completing an Hour of Code with Assistive Technology
+title: إتمام ساعة البرمجة بواسطة تكنولوجيا مساعدة
 ---
-# Completing an Hour of Code with Assistive Technology
 
-Anyone can try an Hour of Code during Computer Science Education Week.
+# إتمام ساعة البرمجة بواسطة تكنولوجيا مساعدة
 
-## Using Screen Readers
+الجميع يمكن أن يجرب ساعة البرمجة خلال أسبوع تدريس علوم الكمبيوتر.
 
-If you use a screen reader, the [Quorum tutorial for beginners](https://quorumlanguage.com/hourofcode/astro1.html) or the [Quorum tutorial for comfortable students](https://quorumlanguage.com/hourofcode/part1.html) are great places to start an Hour of Code. Quorum started as an interpreted language originally designed to be accessible through screen readers. It has become a general purpose programming language designed for any user. And, if you want to go beyond an Hour of Code, the team at Quorum has additional tools and curriculum.
+## استعمال برنامج قارئ الشاشات
 
-[![Tutorial for beginners](https://code.org/images/fill-480x360/tutorials/hoc2017/quorum_astronomy.jpg)](https://quorumlanguage.com/hourofcode/astro1.html) [![Tutorial for comfortable students](https://code.org/images/fill-480x360/quorum.jpg)](https://quorumlanguage.com/hourofcode/part1.html)
+إذا كنت تستعمل قارئ الشاشة، فالرابطان [دورات Quorum للمبتدئين](https://quorumlanguage.com/hourofcode/astro1.html) أو [ دورة Quorum متقدمة للطلبة](https://quorumlanguage.com/hourofcode/part1.html) هما مكان جيد لبدء ساعة البرمجة. Quorum، لغة صممت في الأصل للولوج إليها عبر برنامج قارئ الشاشات. أصبحت لغة برمجة مصممة لجميع المستخدمين. وإذا كنت تريد تجاوز ساعة البرمجة، فالفريق لديه أدوات إضافية ومنهاج.
 
-## Code.org Tutorials Without Audio
+[![درس للمبتدئين](https://code.org/images/fill-480x360/tutorials/hoc2017/quorum_astronomy.jpg)](https://quorumlanguage.com/hourofcode/astro1.html) [![درس للطلبة المرتاحين](https://code.org/images/fill-480x360/quorum.jpg)](https://quorumlanguage.com/hourofcode/part1.html)
 
-The [Code.org tutorials](https://studio.code.org/courses) can all be used with or without sound. All the videos have captions.
+## دورات Code.org بدون صوت
 
-## Pair Programming
+يمكن استعمال [دروس Code.org](https://studio.code.org/courses)بالصوت أو بدونه. كل الفيديوهات لها توضيحات.
 
-Pair programming is a tool computer scientists use to solve problems as a pair or team. Try working on Hour of Code challenges with a friend or classmate. Don’t forget to [check out this video](https://www.youtube.com/watch?v=vgkahOzFH2Q) to learn the best techniques for pair programming.
+## البرمجة الزوجية
+
+البرمجة الزوجية هي أداة حاسوب يستخدمها العلماء لحل المشكلات كزوج أو كفريق. حاول التدرب على تحديات ساعة البرمجة مع صديق أو زميل. لا تنس أن تشاهد [هذا الفيديو](https://www.youtube.com/watch?v=vgkahOzFH2Q) لتتعلم أفضل التقنيات للبرمجة الزوجية.
