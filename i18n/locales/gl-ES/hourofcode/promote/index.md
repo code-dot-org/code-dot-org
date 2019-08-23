@@ -1,13 +1,10 @@
 ---
-title: <%= hoc_s(:title_how_to_promote).inspect %>
+title: Difunde a mensaxe
 layout: wide
 nav: promote_nav
 ---
-<%= view :signup_button %>
 
-<% facebook = {:u=>"http://#{request.host}/us"}
-
-twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_donor_text).gsub(/%{random_donor}/, get_random_donor_twitter)} twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_donor_text).include? '#HourOfCode' %>
+{{ signup_button }}
 
 # Get your community involved in the Hour of Code
 
@@ -15,22 +12,22 @@ twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :t
 
 Tell your friends about the **#HourOfCode**!
 
-<%= view :share_buttons, facebook:facebook, twitter:twitter %>
+{{ promote/share_buttons }}
 
 ## 2. Pídelle a todo o teu colexio que ofreza unha Hora do Código
 
-[Envía este correo electrónico](%= resolve_url('/promote/resources#sample-emails') %) ó teu director e desafía a cada clase da túa escola a apuntarse.
+[Send this email]({{ promote/sample_emails }}) to your principal and challenge every classroom at your school to sign up.
 
 ## 3. Preguntalle a tua empresa para que se implique
 
-[Envía este correo electrónico](%= resolve_url('/promote/resources#sample-emails') %) ó teu xerente ou CEO.
+[Send this email]({{ promote/sample_emails }}) to your manager or company's CEO.
 
 ## Promove "Unha Hora do Código" dentro da tua comunidade
 
-[Recluta un grupo local](%= resolve_url('/promote/resources#sample-emails') %)-nen@s das asociacións locais, igrexa, universidade, grupos de veteranos, sindicatos e incluso ós amigos. Non tes que estar no colexio para aprender novas habilidades. Usa estes [posters, banners, stickers, videos e máis](%= resolve_url('/promote/resources') %) para o teu propio evento.
+[Recruit a local group]({{ promote/sample_emails }})— boy/girl scouts club, church, university, veterans group, labor union, or even some friends. Non tes que estar no colexio para aprender novas habilidades. Use these [posters, banners, stickers, videos and more](/promote/resources) for your own event.
 
 ## 5. Pídelle a un cargo electo da tua zona que apoie a Hora do Código
 
-[Envía este correo electrónico](%= resolve_url('/promote/resources#sample-emails') %) ós teus representantes locais, concello ou xunta escolar e invítatos a visitar a túa escola para a Hora do Código. Pode axudar a dar apoio a que a Informática por mais dunha hora.
+[Send this email]({{ promote/sample_emails }}) to your local representatives, city council, or school board and invite them to visit your school for the Hour of Code. Pode axudar a dar apoio a que a Informática por mais dunha hora.
 
-<%= view :signup_button %>
+{{ signup_button }}
