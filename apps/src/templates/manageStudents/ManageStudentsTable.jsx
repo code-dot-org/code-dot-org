@@ -185,10 +185,15 @@ class ManageStudentsTable extends Component {
     );
   };
 
+  isPasswordResetDisabled = userType => {
+    return userType === 'teacher';
+  };
+
   // Cell formatters.
 
   passwordFormatter = (loginType, {rowData}) => {
     const {sectionId} = this.props;
+    const resetDisabled = this.isPasswordResetDisabled(rowData.userType);
     return (
       <div>
         {!rowData.isEditing && (
@@ -209,7 +214,7 @@ class ManageStudentsTable extends Component {
                 loginType={rowData.loginType}
                 id={rowData.id}
                 sectionId={sectionId}
-                userType={rowData.userType}
+                resetDisabled={resetDisabled}
               />
             )}
           </div>
