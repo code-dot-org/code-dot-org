@@ -86,7 +86,11 @@ module Poste
       # TODO(andrew): Fix this so that we get a signal as to how often this is happening.
       # For more information, see https://www.pivotaltracker.com/story/show/104750788.
       tracking_id = header['litmus_tracking_id'] unless header.nil?
+
       html = @html.result(locals) if @html
+      # Parse the html into a DOM and then re-serialize back to html text in case we were depending on that
+      # logic in the click tracking method to clean up or canonicalize the HTML.
+      html = Nokogiri::HTML(html).to_html if html
       html = inject_litmus_tracking html, tracking_id, params[:encrypted_id] if html
       text = @text.result(locals) unless @text.nil?
 
