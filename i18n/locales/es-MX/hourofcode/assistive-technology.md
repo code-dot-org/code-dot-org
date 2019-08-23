@@ -1,6 +1,7 @@
 ---
 title: Completando una Hora de Código con tecnología asistida
 ---
+
 # Completando una Hora de Código con tecnología asistida
 
 Cualquiera puede probar una Hora de Código durante la Semana de Educación de Informática.
