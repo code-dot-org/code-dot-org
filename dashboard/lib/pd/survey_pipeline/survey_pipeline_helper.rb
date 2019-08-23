@@ -192,6 +192,8 @@ module Pd::SurveyPipeline::Helper
     context[:decorated_summaries]
   end
 
+  private
+
   # Create survey report by having a group of workers process data in the same context.
   def create_generic_survey_report(context, workers)
     workers&.each do |w|

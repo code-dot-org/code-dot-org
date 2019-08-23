@@ -126,10 +126,7 @@ module Api::V1::Pd
       this_ws_report = report_single_workshop(@workshop, current_user)
       rollup_report = report_rollups(@workshop, current_user)
 
-      results = this_ws_report.merge(rollup_report)
-      results[:experiment] = true
-
-      render json: results
+      render json: this_ws_report.merge(rollup_report).merge(experiment: true)
     rescue => e
       notify_error e
     end
