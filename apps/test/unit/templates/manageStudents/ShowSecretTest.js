@@ -8,18 +8,17 @@ const DEFAULT_PROPS = {
   id: 1,
   loginType: 'picture',
   sectionId: 2,
-  userType: 'student',
   setSecretImage: () => {},
   setSecretWords: () => {}
 };
 
 describe('ShowSecret', () => {
-  it('disables reset password button if userType is teacher', () => {
+  it('disables reset password button if resetDisabled prop is true', () => {
     let wrapper = mount(<ShowSecret {...DEFAULT_PROPS} />);
     let resetPasswordButton = wrapper.find('Button.uitest-reset-password');
-    expect(resetPasswordButton.prop('disabled')).to.be.false;
+    expect(resetPasswordButton.prop('disabled')).to.equal(undefined);
 
-    wrapper = mount(<ShowSecret {...DEFAULT_PROPS} userType="teacher" />);
+    wrapper = mount(<ShowSecret {...DEFAULT_PROPS} resetDisabled={true} />);
     resetPasswordButton = wrapper.find('Button.uitest-reset-password');
     expect(resetPasswordButton.prop('disabled')).to.be.true;
   });

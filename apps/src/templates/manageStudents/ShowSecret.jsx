@@ -26,7 +26,7 @@ class ShowSecret extends Component {
     loginType: PropTypes.string.isRequired,
     id: PropTypes.number.isRequired,
     sectionId: PropTypes.number.isRequired,
-    userType: PropTypes.string,
+    resetDisabled: PropTypes.bool,
 
     // Provided in redux
     setSecretImage: PropTypes.func.isRequired,
@@ -79,7 +79,7 @@ class ShowSecret extends Component {
   };
 
   render() {
-    const resetDisabled = this.props.userType === 'teacher';
+    const {resetDisabled} = this.props;
     const tooltipId = resetDisabled && _.uniqueId();
 
     return (
