@@ -24,6 +24,8 @@ class ShowSecret extends Component {
     loginType: PropTypes.string.isRequired,
     id: PropTypes.number.isRequired,
     sectionId: PropTypes.number.isRequired,
+    userType: PropTypes.string,
+
     // Provided in redux
     setSecretImage: PropTypes.func.isRequired,
     setSecretWords: PropTypes.func.isRequired
@@ -100,6 +102,7 @@ class ShowSecret extends Component {
               color={Button.ButtonColor.blue}
               text={i18n.reset()}
               style={styles.reset}
+              disabled={this.props.userType === 'teacher'}
             />
             <Button
               onClick={this.hide}

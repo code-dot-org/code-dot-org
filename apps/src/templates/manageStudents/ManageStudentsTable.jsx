@@ -81,7 +81,8 @@ export const studentSectionDataPropType = PropTypes.shape({
   loginType: PropTypes.string,
   hasEverSignedIn: PropTypes.bool,
   dependsOnThisSectionForLogin: PropTypes.bool,
-  rowType: PropTypes.oneOf(Object.values(RowType))
+  rowType: PropTypes.oneOf(Object.values(RowType)),
+  userType: PropTypes.string
 });
 
 /** @enum {number} */
@@ -208,6 +209,7 @@ class ManageStudentsTable extends Component {
                 loginType={rowData.loginType}
                 id={rowData.id}
                 sectionId={sectionId}
+                userType={rowData.userType}
               />
             )}
           </div>
