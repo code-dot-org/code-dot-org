@@ -1191,6 +1191,7 @@
   "reset": "Reset",
   "resetProgram": "Reset",
   "resetPassword": "Reset password",
+  "resetTeacherPasswordTooltip": "You cannot reset passwords for teacher accounts in your section.",
   "resources": "Resources",
   "response": "Response",
   "restoreSection": "Restore Section",
