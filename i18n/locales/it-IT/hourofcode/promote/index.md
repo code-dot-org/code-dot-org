@@ -1,36 +1,33 @@
 ---
-title: <%= hoc_s(:title_how_to_promote).inspect %>
+title: Spargi la voce
 layout: wide
 nav: promote_nav
 ---
-<%= view :signup_button %>
 
-<% facebook = {:u=>"http://#{request.host}/us"}
-
-twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_donor_text).gsub(/%{random_donor}/, get_random_donor_twitter)} twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_donor_text).include? '#OradelCodice' %>
+{{ signup_button }}
 
 # Coinvolgi la tua comunità nell'Ora del Codice
 
 ## 1. Diffondi la notizia
 
-Parla ai tuoi amici dell'**#OradelCodice**!
+Tell your friends about the **#HourOfCode**!
 
-<%= view :share_buttons, facebook:facebook, twitter:twitter %>
+{{ promote/share_buttons }}
 
 ## 2. Chiedi a tutta la tua scuola di organizzare un'Ora del Codice
 
-[Invia questo messaggio di posta elettronica](%= resolve_url('/promote/resources#sample-emails') %) al Dirigente Scolastico della tua scuola e invita ogni classe ad iscriversi.
+[Send this email]({{ promote/sample_emails }}) to your principal and challenge every classroom at your school to sign up.
 
 ## 3. Proponi al tuo datore di lavoro di coinvolgere la tua organizzazione
 
-[Invia questo messaggio di posta elettronica](%= resolve_url('/promote/resources#sample-emails') %) al tuo responsabile, o all'Amministratore Delegato della tua azienda.
+[Send this email]({{ promote/sample_emails }}) to your manager or company's CEO.
 
 ## 4. Promuovi l'Ora del Codice fra i tuoi conoscenti
 
-[ Recluta un po' di persone](%= resolve_url('/promote/resources#sample-emails') %) — tra gli scout, in parrocchia, all'università, tra gli esperti, al sindacato o tra i tuoi amici. Non c'è bisogno di stare a scuola per acquisire nuove competenze. Adatta questi [poster, banner, adesivi, video e altro](%= resolve_url('/promote/resources') %) per il tuo evento.
+[Recruit a local group]({{ promote/sample_emails }})— boy/girl scouts club, church, university, veterans group, labor union, or even some friends. Non c'è bisogno di stare a scuola per acquisire nuove competenze. Use these [posters, banners, stickers, videos and more](/promote/resources) for your own event.
 
 ## 5. Proponi ad un amministratore locale di sostenere L'Ora del Codice
 
-[Invia questo messaggio di posta elettronica](%= resolve_url('/promote/resources#sample-emails') %) agli Amministratori Locali, al Consiglio Comunale o al Consiglio Scolastico per invitarli a visitare la tua scuola per l'Ora di Codice. Può aiutare a costruire un supporto per l'informatica nella tua zona che va oltre un ora.
+[Send this email]({{ promote/sample_emails }}) to your local representatives, city council, or school board and invite them to visit your school for the Hour of Code. Può aiutare a costruire un supporto per l'informatica nella tua zona che va oltre un ora.
 
-<%= view :signup_button %>
+{{ signup_button }}
