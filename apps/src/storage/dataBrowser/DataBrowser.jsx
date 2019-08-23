@@ -98,6 +98,7 @@ const styles = {
 
 class DataBrowser extends React.Component {
   static propTypes = {
+    onTableAdd: PropTypes.func.isRequired,
     // from redux state
     tableListMap: PropTypes.object.isRequired,
     view: PropTypes.oneOf(Object.keys(DataView)),
@@ -120,9 +121,6 @@ class DataBrowser extends React.Component {
       this.props.onViewChange(DataView.PROPERTIES);
     }
   };
-
-  // TODO: implement the functionality of this tab
-  emptyHandler = () => {};
 
   render() {
     return (
@@ -168,7 +166,7 @@ class DataBrowser extends React.Component {
                 <col width={buttonColumnWidth} />
               </colgroup>
               <tbody>
-                <AddTableListRow onTableAdd={this.emptyHandler} />
+                <AddTableListRow onTableAdd={this.props.onTableAdd} />
               </tbody>
             </table>
             <br />
