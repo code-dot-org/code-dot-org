@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import {BASE_DIALOG_WIDTH} from '../constants';
 
 /**
  * BaseDialog
@@ -106,7 +107,7 @@ export default class BaseDialog extends React.Component {
       };
       bodyStyle = {
         ...bodyStyle,
-        width: this.props.fixedWidth || 700,
+        width: this.props.fixedWidth || BASE_DIALOG_WIDTH,
         marginLeft: -this.props.fixedWidth / 2 || -350
       };
       xCloseStyle = {
