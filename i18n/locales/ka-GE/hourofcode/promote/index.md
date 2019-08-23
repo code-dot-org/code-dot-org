@@ -1,36 +1,33 @@
 ---
-title: <%= hoc_s(:title_how_to_promote).inspect %>
+title: გაავრცელეთ ინფორმაცია
 layout: wide
 nav: promote_nav
 ---
-<%= view :signup_button %>
 
-<% facebook = {:u=>"http://#{request.host}/us"}
-
-twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_donor_text).gsub(/%{random_donor}/, get_random_donor_twitter)} twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_donor_text).include? '#HourOfCode' %>
+{{ signup_button }}
 
 # მიაღებინეთ მონაწილეობა თქვენს გარშემო მყოფ საზოგადოებას კოდის ერთ საათში
 
 ## 1. გაავრცელეთ ხმა
 
-მოუყევით თქვენს მეგობრებს **#HourOfCode**-ის შესახებ!
+Tell your friends about the **#HourOfCode**!
 
-<%= view :share_buttons, facebook:facebook, twitter:twitter %>
+{{ promote/share_buttons }}
 
 ## 2. სთხოვეთ მთელ თქვენს სკოლას კოდის ერთი საათის ჩატარება
 
-[გაუგზავნეთ ეს წერილი](%= resolve_url('/promote/resources#sample-emails') %) თქვენს დირექტორს და შესთავაზეთ რეგისტრაციის გავლა სკოლის ყოველ კლასს.
+[Send this email]({{ promote/sample_emails }}) to your principal and challenge every classroom at your school to sign up.
 
 ## 3. მოუხმეთ თქვენს დამსაქმებელს, მიიღოს მონაწილეობა
 
-[გაუგზავნეთ ეს წერილი](%= resolve_url('/promote/resources#sample-emails') %) თქვენს მენეჯერსა ან უფროსს.
+[Send this email]({{ promote/sample_emails }}) to your manager or company's CEO.
 
 ## 4. გაავრცელეთ ინფორმაცია კოდის ერთი საათის შესახებ თქვენს ირგვლივ
 
-[აიყვანეთ ადგილობრივი ჯგუფი](%= resolve_url('/promote/resources#sample-emails') %)— ბიჭების/გოგოების სკაუტების კლუბი, ეკლესია, უნივერსიტეტი, ვეტერანების ჯგუფი ან შრომითი გაერთიანება. ახალი უნარების ასათვისებლად არ არის აუცილებელი სკოლაში იყოთ. გამოიყენეთ ეს [პოსტერები, ბანერები, სტიკერები, ვიდეობი და სხვა](%= resolve_url('/promote/resources') %) თქვენი ღონისძიებისთვის.
+[Recruit a local group]({{ promote/sample_emails }})— boy/girl scouts club, church, university, veterans group, labor union, or even some friends. ახალი უნარების ასათვისებლად არ არის აუცილებელი სკოლაში იყოთ. Use these [posters, banners, stickers, videos and more](/promote/resources) for your own event.
 
 ## 5. მიმართეთ თქვენს ადგილობრივ ოფიციალური თანამდებობის პირს, მხარი დაუჭიროს კოდის ერთ საათს
 
-[გაუგზავნეთ ეს წერილი](%= resolve_url('/promote/resources#sample-emails') %) თქვენს ადგილობრივ წარმომადგენლებს, ქალაქის მერიას ან სკოლის საბჭოს და მოიწვიეთ, ესტუმრონ სკოლას კოდის ერთი საათის ღონისძიების ფარგლებში. ასე კომპიუტერული მეცნიერების განვითარება თქვენს სივრცეში ერთი საათის მიღმაც გაგრძელდება.
+[Send this email]({{ promote/sample_emails }}) to your local representatives, city council, or school board and invite them to visit your school for the Hour of Code. ასე კომპიუტერული მეცნიერების განვითარება თქვენს სივრცეში ერთი საათის მიღმაც გაგრძელდება.
 
-<%= view :signup_button %>
+{{ signup_button }}
