@@ -11,7 +11,6 @@ end
 
 include_recipe 'apt'
 include_recipe 'sudo-user'
-include_recipe 'cdo-networking'
 
 include_recipe 'cdo-apps::hostname'
 

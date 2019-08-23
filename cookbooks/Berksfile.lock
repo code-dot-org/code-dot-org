@@ -28,8 +28,6 @@ DEPENDENCIES
     path: cdo-jemalloc
   cdo-mysql
     path: cdo-mysql
-  cdo-networking
-    path: cdo-networking
   cdo-newrelic
     path: cdo-newrelic
   cdo-nginx
@@ -57,10 +55,6 @@ DEPENDENCIES
     git: https://github.com/wjordan/chef_client_updater.git
     revision: c15baa2bc783f515912665a7b1de00df5d7f0a3e
     branch: update_rubygems_fix
-  ixgbevf
-    git: https://github.com/wjordan/chef-ixgbevf.git
-    revision: fb14d4f0e4caf21dd835739e58d372c66dca8a6e
-    branch: cdo
   ntp (~> 1.8.6)
   seven_zip (< 3.0.0)
   sudo-user
@@ -85,7 +79,6 @@ GRAPH
     cdo-java-7 (>= 0.0.0)
     cdo-jemalloc (>= 0.0.0)
     cdo-mysql (>= 0.0.0)
-    cdo-networking (>= 0.0.0)
     cdo-nginx (>= 0.0.0)
     cdo-nodejs (>= 0.0.0)
     cdo-postfix (>= 0.0.0)
@@ -124,8 +117,6 @@ GRAPH
     ark (>= 0.0.0)
   cdo-mysql (0.1.13)
     apt (~> 2.6.0)
-  cdo-networking (0.1.1)
-    ixgbevf (>= 0.0.0)
   cdo-newrelic (0.1.18)
     apt (>= 0.0.0)
   cdo-nginx (0.0.14)
@@ -156,14 +147,12 @@ GRAPH
   chef_client_updater (3.2.4)
   chef_hostname (0.6.1)
   cron (6.2.1)
-  ixgbevf (0.1.2)
-    apt (>= 0.0.0)
-    yum-epel (>= 0.0.0)
   logrotate (2.2.0)
   nodejs (5.0.0)
     ark (>= 2.0.2)
     build-essential (>= 0.0.0)
   ntp (1.8.6)
+  ohai (5.2.5)
   poise (2.8.2)
   poise-archive (1.5.0)
     poise (~> 2.6)
@@ -188,4 +177,3 @@ GRAPH
     ohai (>= 0.0.0)
   ulimit (1.0.0)
   windows (6.0.0)
-  yum-epel (3.3.0)
