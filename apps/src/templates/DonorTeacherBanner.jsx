@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import Button from './Button';
-import styleConstants from '../styleConstants';
 import color from '@cdo/apps/util/color';
 
 const styles = {
@@ -30,7 +29,6 @@ const styles = {
     borderStyle: 'solid',
     borderColor: color.teal,
     minHeight: 72,
-    width: styleConstants['content-width'],
     backgroundColor: color.white,
     overflowWrap: 'break-word'
   },
