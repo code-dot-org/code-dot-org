@@ -1,9 +1,10 @@
 ---
-title: <%= hoc_s(:title_how_to_parents).inspect %>
+title: How-to guide for parents
 layout: wide
 nav: how_to_nav
 ---
-<%= view :signup_button %>
+
+{{ signup_button }}
 
 # How to do an Hour of Code with your child
 
@@ -15,11 +16,11 @@ nav: how_to_nav
 
 ## 2) Choose a tutorial
 
-We provide a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. [Try them out!](%= resolve_url('/learn') %)
+We provide a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. [Try them out!]({{ urls/learn }})
 
 **All Hour of Code tutorials are self-guided - allowing your child to work at their own pace and skill level**
 
-[![](/images/fit-700/tutorials.png)](%= resolve_url('/learn') %)
+[![](/images/fit-700/tutorials.png)]({{ urls/learn }})
 
 ## 3) Připravte si techniku
 
@@ -36,13 +37,13 @@ Začněte vaší Hodinu kódu inspirováním dítěte a diskusí o tom, jak info
 - Původní video z Code.org, ukazující Billa Gatese, Marka Zuckerberga a basketbalovou hvězdu Chrise Boshe (Délka verzí [1 minuta](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minut](https://www.youtube.com/watch?v=nKIu9yen5nc) a [9 minut](https://www.youtube.com/watch?v=dU1xS07N-FA)).
 - The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A).
 - [Prezident Obama povzbuzující všechny studenty ke studiu informatiky](https://www.youtube.com/watch?v=6XvmhE1J9PY).
-- Najděte další inspirativní [zdroje](%= resolve_url('https://code.org/inspire') %) a [videa](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+- Find more inspirational [resources]({{ urls/inspire }}) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
 Je to v pořádku, pokud vy a vaše dítě jste noví v informatice. Zde jsou některé nápady, jak uvést aktivitu Hodinu kódu:
 
 - Explain ways technology impacts our lives, with examples both boys and girls will care about (Talk about saving lives, helping people, connecting people, etc.).
 - Dejte dohromady seznam věcí používající kód v každodenním životě.
-- Podívejte se na několik tipů, jak [zaujmout dívky informatikou](%= codeorg_url('/girls') %).
+- See tips for getting girls interested in computer science [here]({{ urls/girls }}).
 
 Chcete další nápady? Podívejte se na naše [šablony hodiny](/files/AfterschoolEducatorLessonPlanOutline.docx) pro tipy a zkušenosti.
 
@@ -62,7 +63,7 @@ Je v pořádku říci:
 
 ## 6) Oslavte úspěch
 
-[Vytiskněte certifikáty](%= codeorg_url('/certificates') %) pro své studenty (a pro sebe).
+[Print certificates]({{ urls/certificates }}) for your child (and yourself!).
 
 Sdílejte fotografie a videa události Hodiny kódu na sociálních médií. Použijte #HourOfCode a @codeorg, umíme též zvýraznit váš úspěch!
 
@@ -72,7 +73,7 @@ Review the [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/20014
 
 The Hour of Code is just the first step in a journey to learn more about how technology works and how to create software applications. To continue this journey:
 
-- Encourage your child to continue [to learn online](%= codeorg_url('/learn/beyond') %).
-- Help [promote](%= resolve_url('/promote') %) computer science education in your child’s school district.
+- Encourage your child to continue [to learn online]({{ urls/learn_beyond }}).
+- Help [promote]({{ urls/promote }}) computer science education in your child’s school district.
 
-<%= view :signup_button %>
+{{ signup_button }}
