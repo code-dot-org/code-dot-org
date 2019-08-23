@@ -1,13 +1,10 @@
 ---
-title: <%= hoc_s(:title_how_to_promote).inspect %>
+title: Sprid ordet
 layout: wide
 nav: promote_nav
 ---
-<%= view :signup_button %>
 
-<% facebook = {:u=>"http://#{request.host}/us"}
-
-twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_donor_text).gsub(/%{random_donor}/, get_random_donor_twitter)} twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_donor_text).include? '#HourOfCode' %>
+{{ signup_button }}
 
 # Get your community involved in the Hour of Code
 
@@ -15,22 +12,22 @@ twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :t
 
 Tell your friends about the **#HourOfCode**!
 
-<%= view :share_buttons, facebook:facebook, twitter:twitter %>
+{{ promote/share_buttons }}
 
 ## 2. Be din skola att arrangera Hour of Code
 
-[Skicka detta mail](%= resolve_url('/promote/resources#sample-emails') %) till din huvudman och utmana varje klassrum på din skola för att registrera dig.
+[Send this email]({{ promote/sample_emails }}) to your principal and challenge every classroom at your school to sign up.
 
 ## 3. Fråga om din arbetsgivare vill engagera sig
 
-[Skicka detta e-postmeddelande](%= resolve_url('/promote/resources#sample-emails') %) till din chef eller VD.
+[Send this email]({{ promote/sample_emails }}) to your manager or company's CEO.
 
 ## 5. Gör reklam för Hour of Code i din kommun
 
-[Rekrytera en lokal grupp](%= resolve_url('/promote/resources#sample-emails') %) — scouter, kyrkan, universitet, veteraner, fackförening eller några vänner. Du behöver inte vara i skolan för att lära sig nya färdigheter. Använda dessa [affischer, banderoller, klistermärken, videor och mycket mer](%= resolve_url('/promote/resources') %) för dina evenemang.
+[Recruit a local group]({{ promote/sample_emails }})— boy/girl scouts club, church, university, veterans group, labor union, or even some friends. Du behöver inte vara i skolan för att lära sig nya färdigheter. Use these [posters, banners, stickers, videos and more](/promote/resources) for your own event.
 
 ## 5. Be dina lokala politiker stötta Hour of Code
 
-[Skicka detta e-postmeddelande](%= resolve_url('/promote/resources#sample-emails') %) till din lokala politiker, stadsfullmäktige eller skolans ledning och bjud in dem att besöka din skola under Hour of Code. Det kan hjälpa till att bygga stöd för datavetenskap i din kommun efter Hour of Code.
+[Send this email]({{ promote/sample_emails }}) to your local representatives, city council, or school board and invite them to visit your school for the Hour of Code. Det kan hjälpa till att bygga stöd för datavetenskap i din kommun efter Hour of Code.
 
-<%= view :signup_button %>
+{{ signup_button }}
