@@ -1,36 +1,33 @@
 ---
-title: <%= hoc_s(:title_how_to_promote).inspect %>
+title: Sebarkan berita ini
 layout: wide
 nav: promote_nav
 ---
-<%= view :signup_button %>
 
-<% facebook = {:u=>"http://#{request.host}/us"}
-
-twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_donor_text).gsub(/%{random_donor}/, get_random_donor_twitter)} twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_donor_text).include? '#HourOfCode' %>
+{{ signup_button }}
 
 # Melibatkan komuniti anda dalam Hour of Code
 
 ## 1. Sebarkan berita ini
 
-Beritahu rakan anda mengenai **#HourOfCode**!
+Tell your friends about the **#HourOfCode**!
 
-<%= view :share_buttons, facebook:facebook, twitter:twitter %>
+{{ promote/share_buttons }}
 
 ## 2. Minta seluruh sekolah anda untuk menawarkan suatu sesi Hour of Code
 
-[Hantarkan e-mel ini](%= resolve_url('/promote/resources#sample-emails') %) kepada pengetua anda dan mencabar setiap kelas di sekolah anda untuk mendaftarkan diri.
+[Send this email]({{ promote/sample_emails }}) to your principal and challenge every classroom at your school to sign up.
 
 ## 3. Ajak majikan anda untuk melibatkan diri
 
-[Hantarkan e-mel ini](%= resolve_url('/promote/resources#sample-emails') %) kepada pengurus atau Ketua Pegawai Eksekutif syarikat anda.
+[Send this email]({{ promote/sample_emails }}) to your manager or company's CEO.
 
 ## 4. Mempromosikan Hour of Code dalam komuniti anda
 
-[Merekrutkan suatu kumpulan tempatan](%= resolve_url('/promote/resources#sample-emails') %)— kelab pengakap lelaki/perempuan, gereja, universiti, kumpulan veteran, kesatuan buruh, ataupun beberapa orang rakan. Anda tidak perlu untuk berada di sekolah untuk mempelajari kemahiran baru. Gunakan [poster, sepanduk, pelekat, video dan sebagainya](%= resolve_url('/promote/resources') %) ini untuk acara anda sendiri.
+[Recruit a local group]({{ promote/sample_emails }})— boy/girl scouts club, church, university, veterans group, labor union, or even some friends. Anda tidak perlu untuk berada di sekolah untuk mempelajari kemahiran baru. Use these [posters, banners, stickers, videos and more](/promote/resources) for your own event.
 
 ## 5. Minta pegawai tempatan yang dilantik untuk menyokong Hour of Code
 
-[Hantarkan e-mel ini](%= resolve_url('/promote/resources#sample-emails') %) kepada wakil-wakil tempatan anda, majlis perbandaran, atau lembaga sekolah dan menjemput mereka untuk melawati sekolah anda bagi acara Hour of Code. Ini boleh membantu membina sokongan terhadap sains komputer di kawasan anda yang melebihi masa satu jam.
+[Send this email]({{ promote/sample_emails }}) to your local representatives, city council, or school board and invite them to visit your school for the Hour of Code. Ini boleh membantu membina sokongan terhadap sains komputer di kawasan anda yang melebihi masa satu jam.
 
-<%= view :signup_button %>
+{{ signup_button }}
