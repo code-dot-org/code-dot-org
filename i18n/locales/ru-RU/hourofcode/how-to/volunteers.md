@@ -1,11 +1,12 @@
 ---
-title: <%= hoc_s(:title_how_to_volunteers).inspect %>
+title: Инструкции для волонтеров Часа Кода
 layout: wide
 nav: how_to_nav
 ---
-<%= view :signup_button %>
 
-# Руководство для учителей
+{{ signup_button }}
+
+# Руководство для Волонтеров
 
 ### Сделайте занятия в классе лучше, уже сегодня!
 
@@ -17,17 +18,17 @@ nav: how_to_nav
 
 - "Лучшей частью моего опыта стало то, что весь класс состоял из женщин и людей разного цвета кожи. Это служит хорошим предзнаменование для нашей индустрии, иметь возможность достичь и пробудить энтузиазм в этих детях."
 - "Особенно понравилось вдохновлять юных девушек заниматься технологиями. Почувствовал, что помогаю следующему поколению в моем районе."
-- "Мне понравилось видеть, что дети были увлечены. Одной удивительной вещью стало то, что учителя заметили некоторых учеников, которые не были отличниками, но выделялись мышлением как у разработчиков и помогали другим учиться - это дало им возможность поверить в себя."
+- "Мне понравилось видеть, что дети были увлечены. Удивительно, что учителя заметили некоторых учеников, которые не были отличниками, но выделялись мышлением, как у разработчиков, и помогали другим учиться - это дало им возможность поверить в себя."
 
 ## Каждый может стать волонтером
 
-### Volunteers and speakers in tech:
+### Волонтеры и выступающие в технической сфере:
 
-Do you have a connection to CS or tech? Если вы работаете в разработке программного обеспечения, в технологической компании на любой должности (не инженерной или инженерной), или если вы изучаете компьютерные науки, вы можете помочь вдохновить учеников! Многие ученики никогда не встречали никого, кто работает в технологической индустрии, и наши учителя любят иметь возможность знакомить свои классы с профессионалами или студентами университетов.
+Связаны с информатикой или технической сферой? Если вы работаете в разработке программного обеспечения, в технологической компании на любой должности (не инженерной или инженерной), или если вы изучаете курсы по информатике, вы можете помочь вдохновить учеников! Многие ученики никогда не встречали никого, кто работает в технологической индустрии, и наши учителя любят знакомить свои классы с профессионалами или студентами университетов.
 
-You can be a guest speaker in a classroom, or help a teacher run the activity. Visit a local classroom to inspire students to keep learning computer science. <br /> <br />
+Вы можете стать приглашенным докладчиком или помочь учителю провести урок. Посетите местный класс, чтобы вдохновить учеников продолжать изучать информатику. <br /> <br />
 
-<a href="https://code.org/volunteer"><button>Sign up today to be a tech volunteer!</button> <br /> <br /></p> 
+<a href="https://code.org/volunteer"><button>Зарегистрируйтесь сегодня, чтобы стать волонтером!</button> <br /> <br /></p> 
 
 <h3>
   Anyone passionate about expanding opportunity:
@@ -38,16 +39,16 @@ You can be a guest speaker in a classroom, or help a teacher run the activity. V
 </p>
 
 <h3>
-  How do you get started?
+  Как вам начать?
 </h3>
 
 <ol>
   <li>
-    <a href="%= resolve_url('/promote/resources#help-schools') %">Send this email</a> to your child’s teacher offering to help them run an Hour of Code.
+    <a href="{{ promote/help_schools }}">Send this email</a> to your child’s teacher offering to help them run an Hour of Code.
   </li>
   
   <li>
-    Offer to host an Hour of Code event after school at a local school. <a href="%= resolve_url('/how-to') %">Use this How-To Guide</a> to help you plan.
+    Offer to host an Hour of Code event after school at a local school. <a href="{{ urls/how_to_guide }}">Use this How-To Guide</a> to help you plan.
   </li>
 </ol>
 
@@ -56,7 +57,7 @@ You can be a guest speaker in a classroom, or help a teacher run the activity. V
 </h2>
 
 <p>
-  Tell your friends and co-workers about the Hour of Code. Thousands of teachers are looking for volunteers, so ask them to <a href="https://code.org/volunteer">sign up as a volunteer</a>. Ask your employer to get involved. <a href="%= resolve_url('/promote/resources#sample-email') %">Send this email</a> to your manager or the CEO to get everyone on board.
+  Tell your friends and co-workers about the Hour of Code. Thousands of teachers are looking for volunteers, so ask them to <a href="https://code.org/volunteer">sign up as a volunteer</a>. Ask your employer to get involved. <a href="{{ promote/sample_emails }}">Send this email</a> to your manager or the CEO to get everyone on board.
 </p>
 
 <h2>
@@ -65,13 +66,13 @@ You can be a guest speaker in a classroom, or help a teacher run the activity. V
 
 <ul>
   <li>
-    <a href="%= resolve_url('/promote/resources#videos') %">Выберите видео</a> для показа классу, чтобы сфокусировать внимание класса и воодушевить их на прохождение Часа Кода.
+    <a href="{{ promote/videos }}">Pick out a video</a> to show to help focus the class and get them excited to do an Hour of Code.
   </li>
   <li>
     Изучите <a href="/files/hoc-volunteer-toolkit.pdf">набор инструментов волонтера Часа Кода</a>, который содержит общие сведения, расписание, подготовительные и маркетинговые материалы. Все что вам нужно чтобы быть готовым к волонтерству!
   </li>
   <li>
-    Если вы собираетесь проходить урок во время вашего занятия, потратьте 30 минут, чтобы попробовать хотя бы один <a href="%= resolve_url('/learn') %">урок Часа Кода</a>.
+    If you're going to be doing a tutorial during your session, spend 30 minutes trying at least one <a href="{{ urls/learn }}">Hour of Code tutorial</a>.
   </li>
   <li>
     Если вы собираетесь посетить школу, соберите все нужные справки или требуемые документы.
@@ -119,7 +120,7 @@ You can be a guest speaker in a classroom, or help a teacher run the activity. V
     </td>
     
     <td>
-      <a href="%= resolve_url('promote/resources#videos') %">Покажите вдохновляющие видео</a>.
+      <a href="{{ promote/videos }}">Show an inspirational video</a>.
     </td>
   </tr>
   
@@ -189,7 +190,7 @@ You can be a guest speaker in a classroom, or help a teacher run the activity. V
         </tr></tbody> </table> 
         
         <h3>
-          After the Event:
+          После события:
         </h3>
         <ul>
           <li>
@@ -226,23 +227,23 @@ You can be a guest speaker in a classroom, or help a teacher run the activity. V
           Часто задаваемые вопросы о волонтерстве во время Часа Кода
         </h2>
         <h3>
-          I haven't been contacted by a teacher yet. How can I still volunteer?
+          Мне так и не удалось связаться с учителем. Как еще я могу стать волонтером?
         </h3>
         <p>
-          Try searching for local schools and call the principal/teacher/front office and ask how you can help.
+          Попытайтесь найти местные школы, позвоните директору/учителю/секретарю и спросите, как вы можете помочь.
         </p>
         <h3>
-          How long do classroom visits last for?
+          Сколько времени занимает посещение класса?
         </h3>
         <p>
-          An in-person classroom visit usually lasts 60-90 minutes while a virtual classroom visit usually lasts 20-30 minutes.
+          Обычно физическое посещение класса занимает 60 - 90 минут, а виртуальное занятие - 20 - 30 минут.
         </p>
         <h3>
-          What age group is the Hour of Code activity appropriate for?
+          Каким возрастным группа подходят задания Часа Программирования?
         </h3>
         <p>
-          Code.org and our partners design all the Hour of Code activities to engage students of all grade levels (K-12), boys and girls, from all backgrounds. Everyone, even adults can have fun playing!
+          Code.org и наши партнеры разрабатывают задания Часа Программирования в виде игр или головоломок, чтобы вовлечь учеников всех классов (среднего школьного образования), мальчиков и девочек, с любым уровнем знаний. Каждый, даже взрослый, может веселиться от игр!
         </p>
         <p>
-          <%= view :signup_button %>
+          {{ signup_button }}
         </p>

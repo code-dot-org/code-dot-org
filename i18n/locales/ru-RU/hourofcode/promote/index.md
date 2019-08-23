@@ -1,36 +1,33 @@
 ---
-title: <%= hoc_s(:title_how_to_promote).inspect %>
+title: Расскажите всем
 layout: wide
 nav: promote_nav
 ---
-<%= view :signup_button %>
 
-<% facebook = {:u=>"http://#{request.host}/ru"}
+{{ signup_button }}
 
-twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_donor_text).gsub(/%{random_donor}/, get_random_donor_twitter)} twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_donor_text).include? '#HourOfCode' %>
-
-# Вовлеките ваше окружение в Час Кода
+# Предложите своим друзьям и коллегам принять участие в Часе Программирования
 
 ## 1. Расскажите всем
 
-Расскажите своим друзьям о **#HourOfCode**!
+Tell your friends about the **#HourOfCode**!
 
-<%= view :share_buttons, facebook:facebook, twitter:twitter %>
+{{ promote/share_buttons }}
 
-## 2. Попросите вашу школу провести Час Кода
+## 2. Попросите провести Час Программирования в вашей школе
 
-[Отправьте это письмо](%= resolve_url('/promote/resources#sample-emails') %) вашему директору и попросите каждый класс в вашей школе записаться.
+[Send this email]({{ promote/sample_emails }}) to your principal and challenge every classroom at your school to sign up.
 
 ## 3. Попросите вашего работодателя принять участие
 
-[Отправьте это письмо](%= resolve_url('/promote/resources#sample-emails') %) вашему руководителю или директору компании.
+[Send this email]({{ promote/sample_emails }}) to your manager or company's CEO.
 
-## 4. Расскажите о Часе Кода своему окружению
+## 4. Расскажите о Часе Программирования своему окружению
 
-[Соберите местную группу](%= resolve_url('/promote/resources#sample-emails') %) из участников кружка для мальчиков или девочек, церкви, университета, совета ветеранов, профсоюза или просто из нескольких друзей. И совсем не обязательно быть школьником или студентом, чтобы получить новые знания. Используйте эти [плакаты, баннеры, наклейки, видео и многое другое](%= resolve_url('/promote/resources') %) для вашего мероприятия.
+[Recruit a local group]({{ promote/sample_emails }})— boy/girl scouts club, church, university, veterans group, labor union, or even some friends. И совсем не обязательно быть школьником или студентом, чтобы получить новые знания. Use these [posters, banners, stickers, videos and more](/promote/resources) for your own event.
 
-## 5. Попросите местную администрацию поддержать Час Кода
+## 5. Попросите местную администрацию поддержать Час Программирования
 
-[Отправьте это письмо](%= resolve_url('/promote/resources#sample-emails') %) представителям местной власти, в городскую думу и школьный совет с приглашением посетить Час Кода в Вашей школе. Это может помочь создать поддержку компьютерных наук в вашем районе, меньше чем за час.
+[Send this email]({{ promote/sample_emails }}) to your local representatives, city council, or school board and invite them to visit your school for the Hour of Code. Это может помочь создать поддержку информатики в вашем районе меньше, чем за час.
 
-<%= view :signup_button %>
+{{ signup_button }}

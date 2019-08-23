@@ -1,20 +1,21 @@
 ---
-title: Completing an Hour of Code with Assistive Technology
+title: Завершение Часа кода со вспомогательными технологиями
 ---
-# Completing an Hour of Code with Assistive Technology
 
-Anyone can try an Hour of Code during Computer Science Education Week.
+# Завершение Часа кода со вспомогательными технологиями
 
-## Using Screen Readers
+Любой может попробовать Час кода в течение недели обучения информационным технологиям.
 
-If you use a screen reader, the [Quorum tutorial for beginners](https://quorumlanguage.com/hourofcode/astro1.html) or the [Quorum tutorial for comfortable students](https://quorumlanguage.com/hourofcode/part1.html) are great places to start an Hour of Code. Quorum started as an interpreted language originally designed to be accessible through screen readers. It has become a general purpose programming language designed for any user. And, if you want to go beyond an Hour of Code, the team at Quorum has additional tools and curriculum.
+## Использование считывающих с экрана программ
 
-[![Tutorial for beginners](https://code.org/images/fill-480x360/tutorials/hoc2017/quorum_astronomy.jpg)](https://quorumlanguage.com/hourofcode/astro1.html) [![Tutorial for comfortable students](https://code.org/images/fill-480x360/quorum.jpg)](https://quorumlanguage.com/hourofcode/part1.html)
+Если вы используете считывающую с экрана программу, данное [кворум обучение для начинающих](https://quorumlanguage.com/hourofcode/astro1.html) или данное [ кворум обучение для комфортного изучения](https://quorumlanguage.com/hourofcode/part1.html)- лучший способ приступить к Часу кода. Кворум начинался как интерпретируемый язык, первоначальная цель которого- быть доступным через считывающие с экрана программы. Он стал языком программирования общего назначения, предназначенным для любого пользователя. И, если вы хотите изучить больше, чем Час кода, у команды кворума есть дополнительные методики и программы обучения.
 
-## Code.org Tutorials Without Audio
+[![Руководство для начинающих](https://code.org/images/fill-480x360/tutorials/hoc2017/quorum_astronomy.jpg)](https://quorumlanguage.com/hourofcode/astro1.html) [![Руководство для комфортного изучения](https://code.org/images/fill-480x360/quorum.jpg)](https://quorumlanguage.com/hourofcode/part1.html)
 
-The [Code.org tutorials](https://studio.code.org/courses) can all be used with or without sound. All the videos have captions.
+## Обучающие видео на сайте Code.org без аудио
 
-## Pair Programming
+Все [обучающие видео на сайте Code.org](https://studio.code.org/courses) могут использоваться как со звуком, так и без него. У всех видео есть субтитры.
 
-Pair programming is a tool computer scientists use to solve problems as a pair or team. Try working on Hour of Code challenges with a friend or classmate. Don’t forget to [check out this video](https://www.youtube.com/watch?v=vgkahOzFH2Q) to learn the best techniques for pair programming.
+## Программирование в парах
+
+Программирование в парах- это инструмент специалиста в сфере информационных технологий, который используется для группового разрешения трудностей. Попробуйте поработать с упражнениями Часа кода с другом или одноклассником. Не забудьте [посмотреть это видео](https://www.youtube.com/watch?v=vgkahOzFH2Q), чтобы узнать лучшие методики для программирования в парах.
