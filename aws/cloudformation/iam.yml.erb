@@ -68,6 +68,14 @@ Resources:
                 Condition:
                   StringEquals:
                     iam:PermissionsBoundary: !Ref DevPermissions
+        # Permissions for managing AWS::SecretsManager::Secret resources.
+        - PolicyName: SecretPermissions
+          PolicyDocument:
+            Version: 2012-10-17
+            Statement:
+              - Effect: Allow
+                Action: secretsmanager:*
+                Resource: '*'
       ManagedPolicyArns: [!Ref DevPermissions]
   # Shared 'Developer' permissions.
   # Used as default permissions for all developer Roles,
@@ -197,28 +205,6 @@ Resources:
             - !Sub "arn:aws:firehose:${AWS::Region}:${AWS::AccountId}:deliverystream/analysis-events"
       ManagedPolicyArns:
       - "arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
-  # TODO: Move to Data stack
-  GlueRole:
-    Type: AWS::IAM::Role
-    Properties:
-      AssumeRolePolicyDocument:
-        Statement:
-          - Action: ['sts:AssumeRole']
-            Effect: Allow
-            Principal: {Service: [glue.amazonaws.com]}
-      Path: /
-      Policies:
-      - PolicyName: ELBLogsRolePolicy
-        PolicyDocument:
-          Statement:
-          - Effect: Allow
-            Action:
-            - 's3:GetObject'
-            - 's3:PutObject'
-            Resource:
-            - !Sub 'arn:aws:s3:::cdo-logs/production-codeorg/AWSLogs/${AWS::AccountId}/elasticloadbalancing/${AWS::Region}/*'
-      ManagedPolicyArns:
-      - 'arn:aws:iam::aws:policy/service-role/AWSGlueServiceRole'
   # Percona Monitoring and Management RDS access role.
   # See: https://www.percona.com/doc/percona-monitoring-and-management/amazon-rds.html#creating-a-policy
   # TODO: Move to Data stack
@@ -281,7 +267,3 @@ Outputs:
     Description: Firehose Lambda Role ARN
     Value: !GetAtt FirehoseLambdaRole.Arn
     Export: {Name: !Sub "${AWS::StackName}-FirehoseLambdaRoleARN"}
-  GlueRoleARN:
-    Description: Glue Role ARN
-    Value: !GetAtt GlueRole.Arn
-    Export: {Name: !Sub "${AWS::StackName}-GlueRoleARN"}

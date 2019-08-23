@@ -1188,7 +1188,7 @@ class Script < ActiveRecord::Base
             hidden: general_params[:hidden].nil? ? true : general_params[:hidden], # default true
             login_required: general_params[:login_required].nil? ? false : general_params[:login_required], # default false
             wrapup_video: general_params[:wrapup_video],
-            family_name: general_params[:family_name],
+            family_name: general_params[:family_name].presence ? general_params[:family_name] : nil, # default nil
             properties: Script.build_property_hash(general_params)
           },
           script_data[:stages],
@@ -1362,6 +1362,13 @@ class Script < ActiveRecord::Base
     summary
   end
 
+  def summarize_for_edit
+    include_stages = false
+    summary = summarize(include_stages)
+    summary[:stages] = stages.map(&:summarize_for_edit)
+    summary
+  end
+
   # @return {Hash<string,number[]>}
   #   For teachers, this will be a hash mapping from section id to a list of hidden
   #   script ids for that section, filtered so that the only script id which appears
@@ -1484,7 +1491,6 @@ class Script < ActiveRecord::Base
       has_lesson_plan: !!script_data[:has_lesson_plan],
       curriculum_path: script_data[:curriculum_path],
       script_announcements: script_data[:script_announcements] || false,
-      family_name: script_data[:family_name],
       version_year: script_data[:version_year],
       is_stable: script_data[:is_stable],
       supported_locales: script_data[:supported_locales],
