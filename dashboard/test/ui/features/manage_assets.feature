@@ -1,14 +1,24 @@
 @no_mobile
 Feature: Manage Assets
 
-  @no_ie
-  Scenario: The manage assets dialog contains the option to record audio on Chrome, Firefox, and Safari.
+  @no_ie @no_safari
+  Scenario: The manage assets dialog contains the option to record audio on Chrome and Firefox.
     Given I am a student
     And I start a new Game Lab project
     And I wait for the page to fully load
     And I open the Manage Assets dialog
     Then I click selector "#record-asset" once I see it
     And I wait until element ".modal-content" contains text "Your computer is not set-up to record audio."
+
+  # Safari thinks it can record audio on saucelabs, so this tests the success condition.
+  @no_chrome @no_firefox @no_ie
+  Scenario: The manage assets dialog allows recording audio on Safari.
+    Given I am a student
+    And I start a new Game Lab project
+    And I wait for the page to fully load
+    And I open the Manage Assets dialog
+    Then I click selector "#record-asset" once I see it
+    And I wait until element "#start-stop-record" is visible
 
   @no_chrome @no_firefox @no_safari
   Scenario: The manage assets dialog does not contain the option to record audio on IE.
