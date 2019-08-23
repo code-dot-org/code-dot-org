@@ -1,36 +1,33 @@
 ---
-title: <%= hoc_s(:title_how_to_promote).inspect %>
+title: Informujte ostatných
 layout: wide
 nav: promote_nav
 ---
-<%= view :signup_button %>
 
-<% facebook = {:u=>"http://#{request.host}/us"}
-
-twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_donor_text).gsub(/%{random_donor}/, get_random_donor_twitter)} twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_donor_text).include? '#HourOfCode' %>
+{{ signup_button }}
 
 # Zapojte Vašich známych do projektu Hodina Kódu
 
 ## 1. Informujte ostatných
 
-Povedzte svojim priateľom o **#HourOfCode**!
+Tell your friends about the **#HourOfCode**!
 
-<%= view :share_buttons, facebook:facebook, twitter:twitter %>
+{{ promote/share_buttons }}
 
 ## 2. Požiadajte Vašu školu, aby usporiadala Hodinu Kódu
 
-[Pošlite tento e-mail](%= resolve_url('/promote/resources#sample-emails') %) riaditeľovi a povzbuďte triedy k účasti.
+[Send this email]({{ promote/sample_emails }}) to your principal and challenge every classroom at your school to sign up.
 
 ## 3. Požiadajte Vášho zamestnávateľa, aby sa zapojil
 
-[Pošlite tento e-mail](%= resolve_url('/promote/resources#sample-emails') %) Vášmu manažérovi alebo riaditeľovi spoločnosti.
+[Send this email]({{ promote/sample_emails }}) to your manager or company's CEO.
 
 ## 4. Propagujte Hodinu Kódu vo Vašom okolí
 
-[Zapojte lokálne skupiny](%= resolve_url('/promote/resources#sample-emails') %) - skautské kluby, kostoly, univerzity, kluby dôchodcov či vašich priateľov. Nemusíte byť v škole, aby ste sa naučili nové zručnosti. Na Vašej udalosti využite [plagáty, bannery, nálepky, či videá](%= resolve_url('/promote/resources') %).
+[Recruit a local group]({{ promote/sample_emails }})— boy/girl scouts club, church, university, veterans group, labor union, or even some friends. Nemusíte byť v škole, aby ste sa naučili nové zručnosti. Use these [posters, banners, stickers, videos and more](/promote/resources) for your own event.
 
 ## 5. Oslovte lokálne politické osobnosti, aby podporili Hodinu Kódu
 
-[Pošlite tento e-mail](%= resolve_url('/promote/resources#sample-emails') %) lokálnym politikom alebo školskej rade a pozvite ich na návštevu Vašej školy počas Hodiny Kódu. Môže to podporiť vyučovanie informatiky vo vašom okolí.
+[Send this email]({{ promote/sample_emails }}) to your local representatives, city council, or school board and invite them to visit your school for the Hour of Code. Môže to podporiť vyučovanie informatiky vo vašom okolí.
 
-<%= view :signup_button %>
+{{ signup_button }}
