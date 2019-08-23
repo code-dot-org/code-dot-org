@@ -3,7 +3,6 @@ hideable_stages true
 has_verified_resources true
 has_lesson_plan true
 curriculum_path 'https://curriculum.code.org/{LOCALE}/cspilot/unit1/{LESSON}'
-family_name ''
 pilot_experiment 'csp-piloters'
 
 stage 'CS Principles Pre-survey', lockable: true, flex_category: 'cspSurvey'
@@ -95,8 +94,8 @@ stage 'Project: Digital Information Dilemmas, pt 2'
 level 'CSP U1L14 SFLP 20-21', progression: 'Lesson Overview'
 level 'U1L13 CFU Digital Representation', progression: 'Check For Understanding', assessment: true
 
-stage 'Unit Assessment'
-level 'CSP U1L15 SFLP 20-21', progression: 'Lesson Overview'
+stage 'Unit Assessment', lockable: true
+level 'CSP Unit 1 AP-Style Assessment _2020', assessment: true
 
 stage 'Unit 1 Survey'
 level 'CSP U1 20-21 Student Pilot Survey', progression: 'Unit 1 Survey', assessment: true
