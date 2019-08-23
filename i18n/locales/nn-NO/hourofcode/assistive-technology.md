@@ -1,6 +1,7 @@
 ---
 title: Fullfør Kodetimen med assisterande teknologi
 ---
+
 # Fullfør Kodetimen med assisterande teknologi
 
 Alle kan prøve Kodetimen i løpet av Kodeveka.
