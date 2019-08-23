@@ -1,36 +1,33 @@
 ---
-title: <%= hoc_s(:title_how_to_promote).inspect %>
+title: Spre ordet
 layout: wide
 nav: promote_nav
 ---
-<%= view :signup_button %>
 
-<% facebook = {:u=>"http://#{request.host}/us"}
-
-twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_donor_text).gsub(/%{random_donor}/, get_random_donor_twitter)} twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_donor_text).include? '#Kodetimen' %>
+{{ signup_button }}
 
 # Selg inn Kodetimen i nærmiljøet
 
 ## 1. Spre budskapet
 
-Fortell venner og bekjente om **#Kodetimen**!
+Tell your friends about the **#HourOfCode**!
 
-<%= view :share_buttons, facebook:facebook, twitter:twitter %>
+{{ promote/share_buttons }}
 
 ## 2. Få den lokale skolen til å arrangere en Kodetime
 
-Send [denne e-posten](%= resolve_url('/promote/resources#sample-emails') %) til rektor, med en utfordring til å melde på alle klasser på alle trinn.
+[Send this email]({{ promote/sample_emails }}) to your principal and challenge every classroom at your school to sign up.
 
 ## 3. Spør arbeidsgiveren din om å bidra
 
-Send [denne e-posten](%= resolve_url('/promote/resources#sample-emails') %) til sjefen din eller ledelsen i bedriften.
+[Send this email]({{ promote/sample_emails }}) to your manager or company's CEO.
 
 ## 4. Promoter Kodetimen i ditt lokalsamfunn
 
-[Rekrutter grupper i lokalmiljøet](%= resolve_url('/promote/resources#sample-emails') %) — speidergrupper, kirken, universiteter, eldresentre, arbeidersamfunn, eller rett og slett din egen omgangskrets. Du trenger ikke gå på skolen for å lære noe nytt. Benytt våre [plakater, bannere, klistremerker, videoer og annet](%= resolve_url('/promote/resources') %) for å fremme ditt eget arrangement.
+[Recruit a local group]({{ promote/sample_emails }})— boy/girl scouts club, church, university, veterans group, labor union, or even some friends. Du trenger ikke gå på skolen for å lære noe nytt. Use these [posters, banners, stickers, videos and more](/promote/resources) for your own event.
 
 ## 5. Spør en lokalpolitiker om å støtte Kodetimen
 
-Send [denne e-posten](%= resolve_url('/promote/resources#sample-emails') %) til en lokalpolitiker, til rådhuset eller til det lokale skolestyret, og inviter dem til skolens Kodetime-arrangement. Dette kan hjelpe informatikkfaget å få fotfeste i ditt nærområde litt lenger enn én time.
+[Send this email]({{ promote/sample_emails }}) to your local representatives, city council, or school board and invite them to visit your school for the Hour of Code. Dette kan hjelpe informatikkfaget å få fotfeste i ditt nærområde litt lenger enn én time.
 
-<%= view :signup_button %>
+{{ signup_button }}
