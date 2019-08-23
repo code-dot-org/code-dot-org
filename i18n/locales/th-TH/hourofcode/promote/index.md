@@ -1,36 +1,33 @@
 ---
-title: <%= hoc_s(:title_how_to_promote).inspect %>
+title: Spread the word
 layout: wide
 nav: promote_nav
 ---
-<%= view :signup_button %>
 
-<% facebook = {:u=>"http://#{request.host}/th"}
-
-twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_donor_text).gsub(/%{random_donor}/, get_random_donor_twitter)} twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_donor_text).include? '#HourOfCode' %>
+{{ signup_button }}
 
 # ชวนชุมชน​ของคุณเข้ามามีส่วนร่วม​ใน​ Hour of Code
 
 ## 1. เผยแพร่ต่อไป
 
-บอกเพื่อนๆเกี่ยวกับ​ **#HourOfCode**!
+Tell your friends about the **#HourOfCode**!
 
-<%= view :share_buttons, facebook:facebook, twitter:twitter %>
+{{ promote/share_buttons }}
 
 ## 2. บอกทั้งโรงเรียนให้เข้าร่วม Hour of Code
 
-[ส่งเมล​](%= resolve_url('/promote/resources#sample-emails') %) หาผู้อำนวยการโรงเรียนและท้าทายทุกห้องเรียน​ให้ลงทะเบียน​
+[Send this email]({{ promote/sample_emails }}) to your principal and challenge every classroom at your school to sign up.
 
 ## 3. ชักชวนนายจ้างของคุณเข้ามามีส่วนร่วม
 
-[ส่งเมล​](%= resolve_url('/promote/resources#sample-emails') %)หาผู้จัดการ​หรือ​ CEO
+[Send this email]({{ promote/sample_emails }}) to your manager or company's CEO.
 
 ## 4. โปรโมท Hour of Code ในชุมชนของคุณ
 
-[โน้มน้าวกลุ่มต่างๆ](%= resolve_url('/promote/resources#sample-emails') %)— ลูกเสือ​ เนตร​นารี​ วัด​ มหาวิทยาลัย​ องค์กร​ทหาร​ผ่าน​ศึก​ สหภาพแรงงาน​ หรือแม้กระทั่ง​เพื่อนๆ คุณ​ไม่จำเป็นต้อง​อยู่ในโรงเรียน​เพื่อเรียน​ทักษะ​ใหม่​ ใช้ [โพสเตอร์​ ป้าย​ สติ๊กเกอร์​ วีดีโอ​ ฯลฯ​](%= resolve_url('/promote/resources') %) สำหรับ​กิจกรรม​ของ​คุณ​
+[Recruit a local group]({{ promote/sample_emails }})— boy/girl scouts club, church, university, veterans group, labor union, or even some friends. คุณ​ไม่จำเป็นต้อง​อยู่ในโรงเรียน​เพื่อเรียน​ทักษะ​ใหม่​ Use these [posters, banners, stickers, videos and more](/promote/resources) for your own event.
 
 ## 5. ขอให้ผู้แทน​ท้องถิ่นสนับสนุน​ Hour​ of Code
 
-[ส่งเมล​](%= resolve_url('/promote/resources#sample-emails') %) หาผู้แทนท้องถิ่น​ ผู้ใหญ่​บ้าน​ หรือกรรมการ​โรงเรียน​ เพื่อชวนให้มาร่วม​กิจกรรม​ Hour​ ​of​ Code​ มันสามารถช่วยสร้างการสนับสนุนสำหรับ​วิทยาศาสตร์​คอมพิวเตอร์ในพื้นที่ของคุณต่อไปได้
+[Send this email]({{ promote/sample_emails }}) to your local representatives, city council, or school board and invite them to visit your school for the Hour of Code. มันสามารถช่วยสร้างการสนับสนุนสำหรับ​วิทยาศาสตร์​คอมพิวเตอร์ในพื้นที่ของคุณต่อไปได้
 
-<%= view :signup_button %>
+{{ signup_button }}
