@@ -109,6 +109,7 @@ class ShowSecret extends Component {
                 text={i18n.reset()}
                 style={styles.reset}
                 disabled={resetDisabled}
+                className="uitest-reset-password"
               />
               {resetDisabled && (
                 <ReactTooltip id={tooltipId} role="tooltip" effect="solid">
