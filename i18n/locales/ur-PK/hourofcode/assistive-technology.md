@@ -1,20 +1,21 @@
 ---
-title: Completing an Hour of Code with Assistive Technology
+title: ایک گھنٹے بعد کوڈ ٹکنالوجی کے ساتھ مکمل کیا جارہا ہے
 ---
-# Completing an Hour of Code with Assistive Technology
 
-Anyone can try an Hour of Code during Computer Science Education Week.
+# ایک گھنٹے بعد کوڈ ٹکنالوجی کے ساتھ مکمل کیا جارہا ہے
 
-## Using Screen Readers
+کوئی بھی کمپیوٹر سائنس تعلیم ہفتے کے دوران ایک گھنٹہ کوڈ کوشش کر سکتے ہیں ۔
 
-If you use a screen reader, the [Quorum tutorial for beginners](https://quorumlanguage.com/hourofcode/astro1.html) or the [Quorum tutorial for comfortable students](https://quorumlanguage.com/hourofcode/part1.html) are great places to start an Hour of Code. Quorum started as an interpreted language originally designed to be accessible through screen readers. It has become a general purpose programming language designed for any user. And, if you want to go beyond an Hour of Code, the team at Quorum has additional tools and curriculum.
+## نابینا استعمال کرتے ہوئے
 
-[![Tutorial for beginners](https://code.org/images/fill-480x360/tutorials/hoc2017/quorum_astronomy.jpg)](https://quorumlanguage.com/hourofcode/astro1.html) [![Tutorial for comfortable students](https://code.org/images/fill-480x360/quorum.jpg)](https://quorumlanguage.com/hourofcode/part1.html)
+اگر آپ ایک اسکرین ریڈر استعمال، [کورم ٹیوٹوریل کے لئے beginners](https://quorumlanguage.com/hourofcode/astro1.html) یا [کورم ٹیوٹوریل کے لئے آرام دہ اور پرسکون طلباء](https://quorumlanguage.com/hourofcode/part1.html) ہیں ایک گھنٹے کے کوڈ کو شروع کرنے کے لئے عظیم مقامات ہیں ۔ کورم اصل سکرین کے ذریعے قارئین کی رسائی کے لئے ڈیزائن کیا گیا ایک انٹرپریٹد زبان کے طور پر شروع کر دیا ۔ یہ ایک عمومی مقاصد پروگرامنگ زبان کسی بھی صارف کے لئے ڈیزائن کیا گیا بن گیا ہے ۔ اور اگر ایک گھنٹہ کوڈ سے آگے جانا چاہتے ہیں تو ٹیم کورم پر اضافی آلات اور نصاب ہے ۔
 
-## Code.org Tutorials Without Audio
+[![Beginners کے لئے ٹیوٹوریل](https://code.org/images/fill-480x360/tutorials/hoc2017/quorum_astronomy.jpg)](https://quorumlanguage.com/hourofcode/astro1.html) [![آرام دہ اور پرسکون طالب علموں کے لئے ٹیوٹوریل](https://code.org/images/fill-480x360/quorum.jpg)](https://quorumlanguage.com/hourofcode/part1.html)
 
-The [Code.org tutorials](https://studio.code.org/courses) can all be used with or without sound. All the videos have captions.
+## آڈیو کے بغیر Code.org کے سبق
 
-## Pair Programming
+[Code.org سبق](https://studio.code.org/courses) سب کے ساتھ یا بغیر آواز استعمال کیا جا سکتا ہے ۔ تمام ویڈیوز کیپشن ہے ۔
 
-Pair programming is a tool computer scientists use to solve problems as a pair or team. Try working on Hour of Code challenges with a friend or classmate. Don’t forget to [check out this video](https://www.youtube.com/watch?v=vgkahOzFH2Q) to learn the best techniques for pair programming.
+## جوڑا پروگرامنگ
+
+پروگرامنگ کی جوڑی سائنسدانوں کا ایک جوڑا یا ٹیم کے طور پر مسائل حل کرنے کے لئے استعمال ایک آلہ کمپیوٹر ہے ۔ کسی دوست یا ہم جماعت کے ساتھ گھنٹے کے کوڈ کو درپیش چیلنجوں پر کام کرنے کی کوشش کریں ۔ کو یہ ویڈیو</a> چیک جوڑی پروگرامنگ کے لئے سب سے بہترین تراکیب کو جاننے کے لئے نہیں بھولنا.</p>
