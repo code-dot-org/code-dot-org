@@ -1362,6 +1362,13 @@ class Script < ActiveRecord::Base
     summary
   end
 
+  def summarize_for_edit
+    include_stages = false
+    summary = summarize(include_stages)
+    summary[:stages] = stages.map(&:summarize_for_edit)
+    summary
+  end
+
   # @return {Hash<string,number[]>}
   #   For teachers, this will be a hash mapping from section id to a list of hidden
   #   script ids for that section, filtered so that the only script id which appears
