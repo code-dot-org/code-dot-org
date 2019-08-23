@@ -80,6 +80,11 @@ class DataOverview extends React.Component {
     const visible = DataView.OVERVIEW === this.props.view;
 
     if (experiments.isEnabled(experiments.APPLAB_DATASETS)) {
+      styles.container.display =
+        this.props.view === DataView.OVERVIEW ||
+        this.props.view === DataView.PROPERTIES
+          ? 'block'
+          : 'none';
       return (
         <div id="data-library-container" style={styles.container}>
           <DataLibraryPane />

@@ -114,7 +114,7 @@ class DataBrowser extends React.Component {
   handleTabClick = newTab => {
     this.setState({selectedTab: newTab});
     if (newTab === TabType.DATA_TABLES) {
-      this.props.onViewChange(DataView.TABLE);
+      this.props.onViewChange(DataView.OVERVIEW);
     }
     if (newTab === TabType.KEY_VALUE_PAIRS) {
       this.props.onViewChange(DataView.PROPERTIES);
@@ -188,7 +188,9 @@ class DataBrowser extends React.Component {
                   <EditTableListRow
                     key={tableName}
                     tableName={tableName}
-                    onViewChange={this.emptyHandler}
+                    onViewChange={() =>
+                      this.props.onViewChange(DataView.TABLE, tableName)
+                    }
                   />
                 ))}
               </tbody>
@@ -248,8 +250,8 @@ export default connect(
     onShowWarning(warningMsg, warningTitle) {
       dispatch(showWarning(warningMsg, warningTitle));
     },
-    onViewChange(view) {
-      dispatch(changeView(view));
+    onViewChange(view, tableName) {
+      dispatch(changeView(view, tableName));
     }
   })
 )(Radium(DataBrowser));
