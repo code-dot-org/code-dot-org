@@ -107,6 +107,10 @@ if node['cdo-secrets']["build_apps"] ||
   include_recipe 'cdo-nodejs'
 end
 
+# Workaround for lack of zoneinfo in docker: https://forums.docker.com/t/synchronize-timezone-from-host-to-container/39116/3
+# which causes this error: https://github.com/tzinfo/tzinfo/wiki/Resolving-TZInfo::DataSourceNotFound-Errors
+apt_package 'tzdata'
+
 include_recipe 'cdo-apps::dashboard'
 include_recipe 'cdo-apps::pegasus'
 include_recipe node['cdo-apps']['nginx_enabled'] ?
