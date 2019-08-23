@@ -9,27 +9,18 @@ markdown <<MARKDOWN
 `setProperty` is the code that lets you set properties of UI elements like color, width, font size, etc.  Any property you can set in Design Mode can also be set in code using `setProperty`
 
 <br><br>
-
 <div style="column-count: 3; column-gap: 20px; column-rule: 0.5px solid #00adbc; -moz-column-count: 3; width: 100%">
-
-<p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;">
-
-	<span style="color: #00adbc; font-size: 150%">1.</span> In Code Mode you can find <code>setProperty</code> in the UI Controls toolbox.<br>
-
-	<span style="color: #00adbc; font-size: 150%">2.</span> Choose the id of the UI element you want to change a property of
-</p>
-
-<p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;">
-
-	<span style="color: #00adbc; font-size: 150%">3.</span> The pulldown menu shows a list of properties that you can set for that element. It matches the list of properties that you see for an element in <strong>Design Mode</strong>
-</p>
-
-<p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;">
-
-	<span style="color: #00adbc; font-size: 150%">4.</span> The last parameter is the value you want to set for that property. We're interested in background-color which has a variety of values you can give it.
-</p>
-
-
+    <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;">
+        <span style="color: #00adbc; font-size: 150%">1.</span> In Code Mode you can find <code>setProperty</code> in the UI Controls toolbox.
+        <br>
+        <span style="color: #00adbc; font-size: 150%">2.</span> Choose the id of the UI element you want to change a property of
+    </p>
+    <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;">
+        <span style="color: #00adbc; font-size: 150%">3.</span> The pulldown menu shows a list of properties that you can set for that element. It matches the list of properties that you see for an element in <strong>Design Mode</strong>
+    </p>
+    <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;">
+        <span style="color: #00adbc; font-size: 150%">4.</span> The last parameter is the value you want to set for that property. We're interested in background-color which has a variety of values you can give it.
+    </p>
 </div>
 
 <img src="https://images.code.org/b7736bdcbde48f7951ebdc87135dd46c-image-1480536740764.png" style="display: block; margin: auto">
