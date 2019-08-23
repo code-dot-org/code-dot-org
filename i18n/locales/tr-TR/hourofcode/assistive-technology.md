@@ -1,6 +1,7 @@
 ---
 title: Kodlama Saatini Yardımcı Teknoloji ile tamamlamak
 ---
+
 # Kodlama Saatini Yardımcı Teknoloji ile tamamlamak
 
 Bilgisayar bilimi eğitimi haftasında herkes bir saatlik kodlama saati etkinliğini deneyebilir.
