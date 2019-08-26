@@ -36,6 +36,7 @@ module.exports = class SimpleTrainer {
     let logits;
     if (classId !== -1) {
       logits = infer();
+      console.log(logits);
       this.knn.addExample(logits, classId);
     }
     image.dispose();

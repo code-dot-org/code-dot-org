@@ -1,9 +1,12 @@
 import React from "react";
 import SimpleTrainer from "../../utils/SimpleTrainer";
+import Draggable from "./Draggable";
+import Droppable from "./Droppable";
 import Row from "react-bootstrap/lib/Row";
 import Col from "react-bootstrap/lib/Col";
 import Button from 'react-bootstrap/lib/Button';
 
+const NO_PREDICTION = -1;
 const defaultState = {
   classes: [
     {
@@ -15,9 +18,19 @@ const defaultState = {
       examples: 0
     },
   ],
+  predictedClass: NO_PREDICTION
 };
 
-const IMAGE_SIZE = 277;
+const activityImages = [
+  {guid: "a", url: "images/dog1.png"},
+  {guid: "b", url: "images/dog2.png"},
+  {guid: "c", url: "images/dog3.png"},
+  {guid: "d", url: "images/cat1.jpg"},
+  {guid: "e", url: "images/cat2.jpg"},
+  {guid: "f", url: "images/cat3.jpg"},
+];
+
+const IMAGE_SIZE = 227;
 
 function loadImage(url, size) {
   return new Promise(resolve => {
@@ -48,12 +61,10 @@ module.exports = class ImageRecognition extends React.Component {
   }
 
   render() {
-    // return (<div><DndProvider backend={HTML5Backend}>
-    //   <Example />
-    // </DndProvider></div>);
-    // if (!this.state.loaded) {
-    //   return <div>Loading machine learning model data...</div>;
-    // }
+    if (!this.state.loaded) {
+      return <div>Loading machine learning model data...</div>;
+    }
+
     return <div>
       <Row>
         <Col xs={12}>
@@ -69,57 +80,83 @@ module.exports = class ImageRecognition extends React.Component {
       </Row>
       <Row>
         <Col xs={12}>
-          <img className="thumbnail" style={{display: 'inline-block'}} src="images/dog1.png" width={100} height={100}/>
-          <img className="thumbnail" style={{display: 'inline-block'}} src="images/dog2.png" width={100} height={100}/>
-          <img className="thumbnail" style={{display: 'inline-block'}} src="images/dog3.png" width={100} height={100}/>
+          {
+            activityImages.map((image, i) => {
+              return (
+                <Draggable
+                  key={i}
+                  guid={image.guid}
+                >
+                  <img
+                    // onMouseOver={() => {
+                    //   loadImage(image.url, IMAGE_SIZE).then((img) => {
+                    //     this.simpleTrainer.predict(img).then((result) => {
+                    //       console.log(result);
+                    //     });
+                    //   });
+                    // }}
+                    src={image.url}
+                    className="thumbnail"
+                    style={{
+                      display: 'inline-block'
+                    }}
+                    width={100}
+                    height={100}
+                  />
+                </Draggable>
+              );
+            })
+          }
         </Col>
       </Row>
       <Row>
         {
           this.state.classes.map((classData, i) => {
-            return <Col
-              key={i}
-              xs={12 / this.state.classes.length}
-              style={{
-                height: '100px',
-                lineHeight: '100px',
-                textAlign: 'center',
-                border: '2px dashed #f69c55',
-                cursor: 'pointer',
-                userSelect: 'none'
-                // maxWidth: 150,
-              }}
-              onClick={() => {
-                // loadImage("images/dog3.png", IMAGE_SIZE).then((image) => {
-                //   this.simpleTrainer.addExample(image, i);
-                //   const classes = this.state.classes;
-                //   classes[i].examples = this.simpleTrainer.getExampleCount(i);
-                //   this.setState({classes: classes});
-                // });
-              }}
-            >
-              <Button onClick={() => {
-                loadImage("images/dog1.png", IMAGE_SIZE).then((image) => {
-                  this.simpleTrainer.addExample(image, i);
-                  const classes = this.state.classes;
-                  classes[i].examples = this.simpleTrainer.getExampleCount(i);
-                  this.setState({classes: classes});
-                });
-              }}>Image 1</Button>
-              <Button onClick={() => {
-                loadImage("images/dog3.png", IMAGE_SIZE).then((image) => {
-                  this.simpleTrainer.addExample(image, i);
-                  const classes = this.state.classes;
-                  classes[i].examples = this.simpleTrainer.getExampleCount(i);
-                  this.setState({classes: classes});
-                });
-              }}>Image 3</Button>
-              {classData.name}
-            </Col>;
+            return (
+              <Col
+                key={i}
+                xs={12 / this.state.classes.length}
+                style={{
+                  height: '100px',
+                  lineHeight: '100px',
+                  textAlign: 'center',
+                  border: '2px dashed #f69c55',
+                  userSelect: 'none'
+                }}
+              >
+                <Droppable
+                  onDrop={(guid) => {
+                    const image = activityImages.find(e => {
+                      return e.guid === guid;
+                    });
+                    loadImage(image.url, IMAGE_SIZE).then((image) => {
+                      this.simpleTrainer.addExample(image, i);
+                      const classes = this.state.classes;
+                      classes[i].examples = this.simpleTrainer.getExampleCount(i);
+                      this.setState({classes: classes});
+                    });
+                  }}
+                >
+                  {classData.name}
+                </Droppable>
+              </Col>
+            );
           })
         }
-        <Button onClick={() => {loadImage("images/dog1.png", IMAGE_SIZE).then((image) => {this.simpleTrainer.predict(image).then((result) => {console.log(result);});});}}>Predict 1</Button>
-        <Button onClick={() => {loadImage("images/dog3.png", IMAGE_SIZE).then((image) => {this.simpleTrainer.predict(image).then((result) => {console.log(result);});});}}>Predict 3</Button>
+        <Button onClick={() => {
+          loadImage("images/dog1.png", IMAGE_SIZE).then((image) => {
+            this.simpleTrainer.predict(image).then((result) => {
+              console.log(result);
+            });
+          });
+        }}>Predict 1</Button>
+        <Button onClick={() => {
+          loadImage("images/cat1.jpg", IMAGE_SIZE).then((image) => {
+            this.simpleTrainer.predict(image).then((result) => {
+              console.log(result);
+            });
+          });
+        }}>Predict 3</Button>
       </Row>
       <Row>
         <Col xs={12}>
