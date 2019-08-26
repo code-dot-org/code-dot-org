@@ -11352,7 +11352,7 @@ en:
               name: Practice PT Part 3
             Unit 4 Assessment:
               name: Unit 4 Assessment
-          title: 'Unit 4: Variables, Conditionals, Functions'
+          title: CSP Unit 4 Pilot - Variables, Conditionals, Functions
           description_audience: ''
           description_short: ''
           description: ''
@@ -11860,7 +11860,7 @@ en:
               name: CS Principles Unit 1 Survey
             Unit 1 Survey:
               name: Unit 1 Survey
-          title: CSP Unit 1 Pilot
+          title: CSP Unit 1 Pilot - Digital Information
           description_audience: ''
           description_short: ''
           description: ''
@@ -12624,7 +12624,7 @@ en:
               name: Student Survey (Libraries)
             Teacher Survey (Libraries):
               name: Teacher Survey (Libraries)
-          title: 'Unit 5: Lists, Loops, and Traversals'
+          title: CSP Unit 5 Pilot - Lists, Loops, and Traversals
           description_audience: ''
           description_short: ''
           description: ''
@@ -12999,7 +12999,7 @@ en:
               name: 'Project: Share Your App'
             The Need for Programming Languages:
               name: The Need for Programming Languages
-          title: 'Unit 3: Intro to App Design'
+          title: CSP Unit 3 Pilot - Intro to App Design
           description_audience: ''
           description_short: ''
           description: ''
@@ -13241,7 +13241,7 @@ en:
               name: Unit 2 Assessment
             Unit Assessment:
               name: Unit Assessment
-          title: ''
+          title: CSP Unit 2 Pilot - The Internet
           description_audience: ''
           description_short: ''
           description: ''
