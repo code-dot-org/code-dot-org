@@ -6,6 +6,12 @@ import Row from "react-bootstrap/lib/Row";
 import Col from "react-bootstrap/lib/Col";
 import Button from 'react-bootstrap/lib/Button';
 
+const ActivityState = Object.freeze({
+  Loading: 0,
+  Training: 1,
+  Playing: 2,
+});
+
 const NO_PREDICTION = -1;
 const defaultState = {
   classes: [
@@ -18,6 +24,7 @@ const defaultState = {
       examples: 0
     },
   ],
+  activityState: ActivityState.Loading,
   predictedClass: NO_PREDICTION
 };
 
@@ -54,126 +61,195 @@ module.exports = class ImageRecognition extends React.Component {
 
   componentDidMount() {
     this.simpleTrainer.initializeClassifiers().then(() => {
-      this.setState({
-        loaded: true
-      });
+      this.setState({activityState: ActivityState.Training});
     });
   }
 
   render() {
-    if (!this.state.loaded) {
+    if (this.state.activityState === ActivityState.Loading) {
       return <div>Loading machine learning model data...</div>;
     }
 
     return <div>
-      <Row>
-        <Col xs={12}>
-          <input
-            placeholder="🔎 Search term (e.g. 'border collie')"
-            style={{
-              width: "100%",
-              textAlign: 'center'
-            }}
-          >
-          </input>
-        </Col>
-      </Row>
-      <Row>
-        <Col xs={12}>
-          {
-            activityImages.map((image, i) => {
-              return (
-                <Draggable
-                  key={i}
-                  guid={image.guid}
-                >
-                  <img
-                    // onMouseOver={() => {
-                    //   loadImage(image.url, IMAGE_SIZE).then((img) => {
-                    //     this.simpleTrainer.predict(img).then((result) => {
-                    //       console.log(result);
-                    //     });
-                    //   });
-                    // }}
-                    src={image.url}
-                    className="thumbnail"
-                    style={{
-                      display: 'inline-block'
-                    }}
-                    width={100}
-                    height={100}
-                  />
-                </Draggable>
-              );
-            })
-          }
-        </Col>
-      </Row>
-      <Row>
-        {
-          this.state.classes.map((classData, i) => {
-            return (
-              <Col
-                key={i}
-                xs={12 / this.state.classes.length}
+      {
+        this.state.activityState === ActivityState.Training &&
+        <div>
+          <Row>
+            <Col style={{width: "100%", textAlign: 'center'}} xs={12}>
+              <h2>Drag images to train your machine learning algorithm</h2>
+            </Col>
+          </Row>
+          <Row>
+            <Col xs={12}>
+              <input
+                placeholder="🔎 Search term (e.g. 'border collie')"
                 style={{
-                  height: '100px',
-                  lineHeight: '100px',
-                  textAlign: 'center',
-                  border: '2px dashed #f69c55',
-                  userSelect: 'none'
+                  width: "100%",
+                  textAlign: 'center'
                 }}
               >
-                <Droppable
-                  onDrop={(guid) => {
-                    const image = activityImages.find(e => {
-                      return e.guid === guid;
-                    });
-                    loadImage(image.url, IMAGE_SIZE).then((image) => {
-                      this.simpleTrainer.addExample(image, i);
-                      const classes = this.state.classes;
-                      classes[i].examples = this.simpleTrainer.getExampleCount(i);
-                      this.setState({classes: classes});
-                    });
-                  }}
-                >
-                  {classData.name}
-                </Droppable>
-              </Col>
-            );
-          })
-        }
-        <Button onClick={() => {
-          loadImage("images/dog1.png", IMAGE_SIZE).then((image) => {
-            this.simpleTrainer.predict(image).then((result) => {
-              console.log(result);
-            });
-          });
-        }}>Predict 1</Button>
-        <Button onClick={() => {
-          loadImage("images/cat1.jpg", IMAGE_SIZE).then((image) => {
-            this.simpleTrainer.predict(image).then((result) => {
-              console.log(result);
-            });
-          });
-        }}>Predict 3</Button>
-      </Row>
-      <Row>
-        <Col xs={12}>
-          <p><b>Training Data:</b></p>
-          {
-            this.state.classes.map((classData, i) => {
-              return <div
-                key={i}
-              >
-                {classData.name} - {classData.examples}
-              </div>;
-            })
-          }
-        </Col>
-      </Row>
+              </input>
+            </Col>
+          </Row>
+          <Row>
+            <Col xs={12}>
+              {
+                activityImages.map((image, i) => {
+                  return (
+                    <Draggable
+                      key={i}
+                      guid={image.guid}
+                    >
+                      <img
+                        // onMouseOver={() => {
+                        //   loadImage(image.url, IMAGE_SIZE).then((img) => {
+                        //     this.simpleTrainer.predict(img).then((result) => {
+                        //       console.log(result);
+                        //     });
+                        //   });
+                        // }}
+                        src={image.url}
+                        className="thumbnail"
+                        style={{
+                          display: 'inline-block'
+                        }}
+                        width={100}
+                        height={100}
+                      />
+                    </Draggable>
+                  );
+                })
+              }
+            </Col>
+          </Row>
+          <Row>
+            {
+              this.state.classes.map((classData, i) => {
+                return (
+                  <Col
+                    key={i}
+                    xs={12 / this.state.classes.length}
+                    style={{
+                      height: '100px',
+                      lineHeight: '100px',
+                      textAlign: 'center',
+                      border: '2px dashed #f69c55',
+                      userSelect: 'none'
+                    }}
+                  >
+                    <Droppable
+                      onDrop={(guid) => {
+                        const image = activityImages.find(e => {
+                          return e.guid === guid;
+                        });
+                        loadImage(image.url, IMAGE_SIZE).then((image) => {
+                          this.simpleTrainer.addExample(image, i);
+                          this.updateExampleCounts(i);
+                        });
+                      }}
+                    >
+                      {classData.name}
+                    </Droppable>
+                    <div
+                      style={{
+                        position: "absolute",
+                        bottom: "10px",
+                        left: "0",
+                        lineHeight: "initial",
+                        textAlign: "center",
+                        width: "100%",
+                      }}
+                    >
+                      {classData.examples.toString()}
+                    </div>
+                  </Col>
+                );
+              })
+            }
+          </Row>
+        </div>
+      }
+      {
+        this.state.activityState === ActivityState.Training &&
+        <Row>
+          <Col
+            xs={12}
+            style={{marginTop: 10, textAlign: 'center'}}
+          >
+            <Button onClick={() => {this.setState({activityState: ActivityState.Playing});}}>Try the Model!</Button>
+            <Button
+              onClick={() => {
+                this.simpleTrainer.clearAll();
+                this.resetAllExampleCounts();
+              }}
+            >
+              Reset Training
+            </Button>
+          </Col>
+        </Row>
+      }
+      {
+        this.state.activityState === ActivityState.Playing &&
+        <Row>
+          <Col style={{textAlign: 'center'}} xs={12}>
+            <h3>Tap an image to classify it</h3>
+            {
+              activityImages.map((image, i) => {
+                return (
+                  <Draggable
+                    key={i}
+                    guid={image.guid}
+                  >
+                    <img
+                      // onMouseOver={() => {
+                      //   loadImage(image.url, IMAGE_SIZE).then((img) => {
+                      //     this.simpleTrainer.predict(img).then((result) => {
+                      //       console.log(result);
+                      //     });
+                      //   });
+                      // }}
+                      src={image.url}
+                      className="thumbnail"
+                      style={{
+                        display: 'inline-block'
+                      }}
+                      width={100}
+                      height={100}
+                    />
+                  </Draggable>
+                );
+              })
+            }
+          </Col>
+        </Row>
+      }
+      {
+        this.state.activityState === ActivityState.Playing &&
+        <Row>
+          <Col
+            xs={12}
+            style={{marginTop: 10, textAlign: 'center'}}
+          >
+            <Button onClick={() => {this.setState({activityState: ActivityState.Training});}}>Train More</Button>
+          </Col>
+        </Row>
+      }
     </div>
     ;
+  }
+
+  resetAllExampleCounts() {
+    const classes = this.state.classes;
+    this.state.classes.forEach((c, i) => {
+      classes[i].examples = 0;
+    });
+    this.setState({classes: classes});
+  }
+
+  async updateExampleCounts(i) {
+    const classes = this.state.classes;
+    classes[i].examples = this.simpleTrainer.getExampleCount(i);
+    return this.setState({classes: classes});
   }
 
   async playRound() {

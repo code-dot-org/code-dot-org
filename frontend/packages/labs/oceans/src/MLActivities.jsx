@@ -35,7 +35,7 @@ module.exports = class MLActivities extends React.Component {
               })}
               style={{marginBottom: 10}}
             >
-              Pick Another Activity
+              👈 Pick Another Activity
             </Button>
           }
           {

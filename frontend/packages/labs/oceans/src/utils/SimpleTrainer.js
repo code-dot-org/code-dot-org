@@ -13,6 +13,11 @@ module.exports = class SimpleTrainer {
     this.mobilenet = await mobilenetModule.load();
   }
 
+  clearAll() {
+    this.knn.dispose();
+    this.knn = knnClassifier.create();
+  }
+
   getNumClasses() {
     return this.knn.getNumClasses();
   }
