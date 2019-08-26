@@ -1,3 +1,4 @@
+/* global navigator */
 import PropTypes from 'prop-types';
 import React from 'react';
 import Button from '../../templates/Button';
@@ -7,6 +8,7 @@ import {assets as assetsApi} from '@cdo/apps/clientApi';
 import {assetButtonStyles} from './AddAssetButtonRow';
 import {AudioErrorType} from './AssetManager';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import vmsg from 'vmsg';
 
 const styles = {
   buttonRow: {
@@ -22,6 +24,12 @@ const styles = {
   warning: {
     textAlign: 'left',
     color: color.red
+  },
+  spinner: {
+    display: 'inline-block',
+    verticalAlign: 'top',
+    marginTop: '16px',
+    marginRight: '10px'
   }
 };
 
@@ -40,39 +48,28 @@ export default class AudioRecorder extends React.Component {
     super(props);
     this.timeout = null;
     this.recorder = null;
-    this.slices = [];
     this.state = {
       audioName: '',
-      recording: false
+      recording: false,
+      loading: true
     };
   }
 
   componentDidMount = () => {
-    //Initialize the media recorder when the component loads
-    //Check if the user has mediaDevices and request permission to use the microphone
-    if (navigator.mediaDevices) {
-      navigator.mediaDevices
-        .getUserMedia({audio: true})
-        .then(this.initializeMediaRecorder)
-        .catch(() => this.props.afterAudioSaved(AudioErrorType.INITIALIZE));
+    if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+      this.recorder = new vmsg.Recorder({wasmURL: '/shared/wasm/vmsg.wasm'});
+      this.initializeMp3Recorder().catch(() =>
+        this.props.afterAudioSaved(AudioErrorType.INITIALIZE)
+      );
     } else {
       this.props.afterAudioSaved(AudioErrorType.INITIALIZE);
     }
   };
 
-  initializeMediaRecorder = stream => {
-    // Set newly initialized mediaRecorder to instance variable
-    // Media Recorder API: https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder
-    this.recorder = new MediaRecorder(stream);
-
-    // Set method to save the data when it becomes available
-    this.recorder.ondataavailable = e => {
-      this.slices.push(e.data);
-    };
-
-    this.recorder.onstart = () => {
-      this.slices = [];
-    };
+  initializeMp3Recorder = async () => {
+    await this.recorder.initAudio();
+    await this.recorder.initWorker();
+    this.setState({loading: false});
   };
 
   saveAudio = blob => {
@@ -101,9 +98,9 @@ export default class AudioRecorder extends React.Component {
     this.setState({audioName: '', recording: false}, () => {
       this.props.afterAudioSaved(AudioErrorType.NONE);
       // Only stop recording if it's been started
-      if (this.recorder.state !== 'inactive') {
+      if (this.recorder.blob) {
         clearTimeout(this.recordTimeout);
-        this.recorder.stop();
+        this.recorder.stopRecording();
       }
     });
   };
@@ -118,7 +115,7 @@ export default class AudioRecorder extends React.Component {
 
   startRecording = () => {
     const studyGroup = this.props.imagePicker ? 'manage-assets' : 'library-tab';
-    this.recorder.start();
+    this.recorder.startRecording();
     firehoseClient.putRecord(
       {
         study: 'sound-dialog-2',
@@ -138,19 +135,11 @@ export default class AudioRecorder extends React.Component {
   stopRecordingAndSave = () => {
     if (this.state.recording) {
       clearTimeout(this.recordTimeout);
-      this.setStopAndSaveBehavior();
-      this.recorder.stop();
+      this.recorder.stopRecording().then(blob => {
+        this.saveAudio(blob);
+      });
       this.setState({recording: !this.state.recording});
     }
-  };
-
-  //Set the recorder onstop behavior to save the final audio blob
-  setStopAndSaveBehavior = () => {
-    this.recorder.onstop = () => {
-      const blob = new Blob(this.slices, {type: 'audio/mpeg'});
-      this.saveAudio(blob);
-      this.recorder.onstop = () => {};
-    };
   };
 
   render() {
@@ -170,6 +159,14 @@ export default class AudioRecorder extends React.Component {
             </span>
           )}
           <span>
+            {this.state.loading && this.state.audioName.length > 0 && (
+              <div style={styles.spinner}>
+                <i
+                  className="fa fa-spinner fa-spin"
+                  style={{fontSize: '20px'}}
+                />
+              </div>
+            )}
             <Button
               onClick={this.toggleRecord}
               id="start-stop-record"
@@ -178,7 +175,7 @@ export default class AudioRecorder extends React.Component {
               icon={this.state.recording ? 'stop' : 'circle'}
               text={this.state.recording ? i18n.stop() : i18n.record()}
               size="large"
-              disabled={this.state.audioName.length === 0}
+              disabled={this.state.audioName.length === 0 || this.state.loading}
             />
             <Button
               onClick={this.onCancel}
@@ -190,7 +187,6 @@ export default class AudioRecorder extends React.Component {
             />
           </span>
         </div>
-        <div style={styles.warning}>{i18n.recordedSoundsBrowserWarning()}</div>
       </div>
     );
   }
