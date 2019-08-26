@@ -767,6 +767,9 @@ describe('entry tests', () => {
           name: 'webpack-runtime'
         },
         splitChunks: {
+          // Override the default limit of 3 concurrent downloads on page load,
+          // which only makes sense for HTTP 1.1 servers. HTTP 2 performance has
+          // been observed to degrade only with > 200 simultaneous downloads.
           maxInitialRequests: 100,
           cacheGroups: {
             // Pull any module shared by 2+ appsEntries into the "common" chunk.
