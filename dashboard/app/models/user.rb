@@ -414,15 +414,6 @@ class User < ActiveRecord::Base
     find_or_create_teacher(params, invited_by_user, UserPermission::FACILITATOR)
   end
 
-  GENDER_OPTIONS = [
-    [nil, ''],
-    ['gender.male', 'm'],
-    ['gender.female', 'f'],
-    ['gender.non_binary', 'n'],
-    ['gender.not_listed', 'o'],
-    ['gender.none', '-'],
-  ].freeze
-
   DATA_TRANSFER_AGREEMENT_SOURCE_TYPES = [
     ACCOUNT_SIGN_UP = 'ACCOUNT_SIGN_UP'.freeze,
     ACCEPT_DATA_TRANSFER_DIALOG = 'ACCEPT_DATA_TRANSFER_DIALOG'.freeze
@@ -728,22 +719,6 @@ class User < ActiveRecord::Base
     email_and_hashed_email_must_be_unique # Always check email uniqueness
   end
 
-  def self.normalize_gender(v)
-    return nil if v.blank?
-    case v.downcase
-    when 'f', 'female'
-      'f'
-    when 'm', 'male'
-      'm'
-    when 'o', 'notlisted'
-      'o'
-    when 'n', 'nonbinary', 'non-binary'
-      'n'
-    else
-      nil
-    end
-  end
-
   def self.name_from_omniauth(raw_name)
     return raw_name if raw_name.blank? || raw_name.is_a?(String) # some services just give us a string
     # clever returns a hash instead of a string for name
@@ -804,7 +779,7 @@ class User < ActiveRecord::Base
       user.birthday = nil
       user.age = user_age
     end
-    user.gender = normalize_gender auth.info.gender
+    user.gender = Gender.normalize auth.info.gender
   end
 
   def oauth?
