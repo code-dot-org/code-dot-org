@@ -6,12 +6,12 @@
   "user_id": 324,
   "properties": {
     "instructions_important": "false",
-    "project_template_level_name": "CSD U2 Project Template_pilot",
-    "hide_share_and_remix": "true",
+    "project_template_level_name": "CSD web upload images multi_pilot",
+    "hide_share_and_remix": "false",
     "submittable": "false",
     "parent_level_id": 15900,
     "name_suffix": "_pilot",
-    "long_instructions": "# Create and Name Your New Page\r\n\r\nBefore you start coding, you should make sure that you have all the pages that you need in your project.\r\n\r\n# Do This\r\n* Create a new HTML page and rename it. (Look at <a href=\"../../../stage/6/puzzle/8\" target=\"_new\">Lesson 6 Level 8</a> if you've forgotten how.)\r\n* Repeat this process for any other pages you want to add.\r\n\r\n",
+    "long_instructions": "# Create and Name Your Pages\r\n\r\nBefore you start coding, you should make sure that you have all the pages that you need in your project.\r\n\r\n# Do This\r\n* Create a new HTML page and rename it.\r\n* Repeat this process for any other pages you want to add.\r\n\r\n",
     "reference_links": [
       "/docs/concepts/html/html-tags/",
       "/docs/concepts/html/headings-and-paragraphs/",
@@ -19,10 +19,17 @@
       "/docs/concepts/html/images-in-html/",
       "/docs/concepts/html/formatting-html/"
     ],
-    "map_reference": "/docs/concepts/html/hyperlinks/"
+    "map_reference": "/docs/concepts/html/hyperlinks/",
+    "encrypted": "false",
+    "encrypted_examples": [
+
+    ],
+    "mini_rubric": "false"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-07-14 16:46:16 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-07-14 17:05:21 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-11-29 16:29:48 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-11-29 16:30:23 +0000\",\"changed\":[\"encrypted_examples\",\"long_instructions\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2019-01-30 21:04:55 +0000\",\"changed\":[],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-07-14 16:46:16 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-07-14 17:05:21 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-11-29 16:29:48 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-11-29 16:30:23 +0000\",\"changed\":[\"encrypted_examples\",\"long_instructions\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2019-01-30 21:04:55 +0000\",\"changed\":[],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-08-22 17:19:40 +0000\",\"changed\":[\"project_template_level_name\",\"hide_share_and_remix\",\"long_instructions\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
 </Weblab>

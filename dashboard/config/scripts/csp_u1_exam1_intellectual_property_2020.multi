@@ -1,0 +1,16 @@
+name 'csp-u1-exam1-intellectual-property_2020'
+height 'auto'
+
+question 'Which of the following is true of intellectual property?'
+wrong ‘Information created on a computer is not owned by anyone since only analog information is protected under copyright law.’
+wrong ‘You do not need to cite work created by someone else if both the original work and your use of it are in digital form.’
+right ‘Creative Commons enables content creators to freely distribute their otherwise copyrighted work.’
+wrong ‘Creative Commons has severely hindered broad and open access to digital information’
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN
+
+markdown <<MARKDOWN
+
+MARKDOWN

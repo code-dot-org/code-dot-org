@@ -729,9 +729,11 @@ it-IT:
               </value>
             </block></xml> per fare in modo che inizi gironzolando qua e là? (Comportamento "wandering")
       Dance Party 3: "Crea un nuovo personaggio chiamato `alien2`.  \n\nFagli fare
-        un passo di danza diverso ogni volta che ci clicchi sopra."
-      Dance Party 3_2019: "Crea un nuovo personaggio chiamato `alien2`.  \n\nFagli
-        fare un passo di danza diverso ogni volta che ci clicchi sopra."
+        un passo di danza a tua scelta ogni volta che ci clicchi sopra.  "
+      Dance Party 3_2019: |-
+        Crea un nuovo personaggio con l'aspetto di un alieno rosa. <img src="https://levelbuilder-studio.code.org/media?u=https%3A%2F%2Flevelbuilder-studio.code.org%2Fapi%2Fv1%2Fanimation-library%2FecnW7rdKTB0fUrKRKrqIHbrHVvyWh5hu%2Fcategory_characters%2FalienPink.png" width="3%"></img>
+
+        Fagli fare un passo di danza a tua scelta ogni volta che ci clicchi sopra!
       Dance Party 4: "Crea un terzo personaggio chiamato `alien3`.  \n\nRiesci a posizionare
         tutti gli alieni lungo una linea retta? È una squadra di ballo aliena!"
       Dance Party 4_2019: "Crea un terzo personaggio chiamato `alien3`.  \n\nRiesci
@@ -751,9 +753,8 @@ it-IT:
         <xml><block type=\"gamelab_removeAllBehaviors\" inline=\"true\">\n      <value
         name=\"SPRITE\"/>\n    </block></xml> per fare in modo che ogni alieno si
         fermi quando si clicca su di esso."
-      Dance Party 7: "Infine, aggiungi un nuovo personaggio a campanella chiamato
-        `myBell`.  \n\nQuando viene cliccata, fa fare a tutti gli alieni la sua stessa
-        danza!"
+      Dance Party 7: "Infine, aggiungi un nuovo personaggio a forma di campanella.
+        \ \n\nQuando viene cliccata, fa fare a tutti gli alieni la sua stessa danza!"
       Dance Party 7_2019: "Infine, aggiungi un nuovo personaggio a campanella chiamato
         `myBell`.  \n\nQuando viene cliccata, fa fare a tutti gli alieni la sua stessa
         danza!"
@@ -1224,9 +1225,9 @@ it-IT:
       Virtual Pet 8_2019: "Tempo di giocare: Cos'altro puoi far fare alla tua giraffa?
         \n\n-   Puoi aggiungere altri elementi caratteristici al tuo animaletto virtuale?\n-
         \  Puoi procurarle degli amici?  "
-      Virtual Pet Freeplay: "Tempo di giocare: Cos'altro puoi far fare alla tua giraffa?
-        \n\n-   Puoi aggiungere altri elementi caratteristici al tuo animaletto virtuale?\n-
-        \  Puoi procurarle degli amici?  "
+      Virtual Pet Freeplay: "**Tempo di giocare:** Cos'altro puoi far fare alla tua
+        giraffa? \n\n-   Puoi aggiungere altri elementi caratteristici al tuo animaletto
+        virtuale?\n-   Puoi procurarle degli amici?  "
       'Widget: Text Compression': Cerca modelli (parole o frasi ripetute) nel testo.
         Inserisci i modelli che vedi nel dizionario in alto a destra. Come inserisci
         le voci nel dizionario, il simbolo per la voce è inserito nel testo al posto
@@ -1798,6 +1799,8 @@ it-IT:
         e giù quando si premono le frecce in su e in giù.
       courseA_playLab_events5_2019: Aggiungi gli eventi per far muovere il cane su
         e giù quando si premono le frecce in su e in giù.
+      courseA_playLab_events6_2019: Rendi questa scena più interessante, cambiando
+        lo sfondo e riproducendo un suono casuale quando si clicca sul cane.
       courseA_playLab_events7_2018: _Tempo di giocare:_ aggiungi ciò che vuoi a questo
         gioco. Riesci a fare in modo che il dinosauro scompaia quando il cane sbatte
         contro di lui? (Quando sei soddisfatto, premi "Termina" per completare il
@@ -3284,14 +3287,20 @@ it-IT:
         Hai a disposizione una griglia di quadrati con cui puoi giocare e creare dei disegni semplicemente accendendo e spegnendo i vari quadrati. Ogni quadrato è quindi analogo ad un pixel dello schermo.
 
         Usa i blocchi qui sotto per far produrre all'artista nella prima riga il disegno la cui codifica binaria è "01010101".
+
+        (`draw binary` significa _disegna in binario_)
       courseD_artist_binary1_2018: |-
         Hai a disposizione una griglia di quadrati con cui puoi giocare e creare dei disegni semplicemente accendendo e spegnendo i vari quadrati. Ogni quadrato è quindi analogo ad un pixel dello schermo.
 
         Usa i blocchi qui sotto per far produrre all'artista nella prima riga il disegno la cui codifica binaria è "01010101".
+
+        (`draw binary` significa _disegna in binario_)
       courseD_artist_binary1_2019: |-
         Hai a disposizione una griglia di quadrati con cui puoi giocare e creare dei disegni semplicemente accendendo e spegnendo i vari quadrati. Ogni quadrato è quindi analogo ad un pixel dello schermo.
 
         Usa i blocchi qui sotto per far produrre all'artista nella prima riga il disegno la cui codifica binaria è "01010101".
+
+        (`draw binary` significa _disegna in binario_)
       courseD_artist_binary2: |-
         La funzione `draw binary` (_disegna in binario_) prende in ingresso una sequenza binaria, cioè fatta di caratteri "1" e "0" e fa sì che l'artista – mentre va da sinistra verso destra e dall'alto verso il basso – accenda o spenga i quadrati in base ai caratteri della stringa.
 

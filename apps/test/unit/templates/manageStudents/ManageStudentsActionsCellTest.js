@@ -10,7 +10,8 @@ const DEFAULT_PROPS = {
   studentName: 'Clark Kent',
   startEditingStudent: () => {},
   cancelEditingStudent: () => {},
-  removeStudent: () => {}
+  removeStudent: () => {},
+  canEdit: true
 };
 
 describe('ManageStudentsActionsCell', () => {
@@ -50,5 +51,12 @@ describe('ManageStudentsActionsCell', () => {
       <ManageStudentsActionsCell {...DEFAULT_PROPS} loginType={'google'} />
     );
     expect(wrapper).to.contain('Edit');
+  });
+
+  it('does not render the edit option when canEdit is false', () => {
+    const wrapper = shallow(
+      <ManageStudentsActionsCell {...DEFAULT_PROPS} canEdit={false} />
+    );
+    expect(wrapper).not.to.contain('Edit');
   });
 });
