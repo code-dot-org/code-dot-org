@@ -188,14 +188,14 @@ module Pd::SurveyPipeline::Helper
       Pd::SurveyPipeline::DailySurveyDecorator
     ]
 
-    create_generic_survey_report context, workers
+    run_pipeline context, workers
     context[:decorated_summaries]
   end
 
   private
 
   # Create survey report by having a group of workers process data in the same context.
-  def create_generic_survey_report(context, workers)
+  def run_pipeline(context, workers)
     workers&.each do |w|
       w.process_data context
     end
