@@ -19,12 +19,7 @@ export default class HiddenUploader extends React.Component {
   componentDidMount() {
     const props = this.props;
 
-    const uploader = $(this.refs.uploader).fileupload;
-    if (!uploader) {
-      return;
-    }
-
-    uploader({
+    $(this.refs.uploader).fileupload({
       dataType: 'json',
       url: this.props.toUrl,
       // prevent fileupload from replacing the input DOM element, which
@@ -60,10 +55,7 @@ export default class HiddenUploader extends React.Component {
   }
 
   componentWillUnmount() {
-    const uploader = $(this.refs.uploader).fileupload;
-    if (uploader) {
-      $(this.refs.uploader).fileupload('destroy');
-    }
+    $(this.refs.uploader).fileupload('destroy');
   }
 
   openFileChooser = () => this.refs.uploader.click();
