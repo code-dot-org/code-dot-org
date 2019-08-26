@@ -20,31 +20,31 @@ require_relative 'i18n_script_utils'
 BRANCH = "i18n-sync-hoc-#{Date.today.strftime('%m-%d')}".freeze
 
 def sync_in
-  return unless should_i "sync in"
-  run_standalone_script(File.join(__dir__, "sync-hourofcode-in"))
+  return unless I18nScriptUtils.should_i "sync in"
+  I18nScriptUtils.run_standalone_script(File.join(__dir__, "sync-hourofcode-in"))
 end
 
 def sync_up
-  return unless should_i "sync up"
-  run_standalone_script(File.join(__dir__, "sync-hourofcode-up"))
+  return unless I18nScriptUtils.should_i "sync up"
+  I18nScriptUtils.run_standalone_script(File.join(__dir__, "sync-hourofcode-up"))
 end
 
 def sync_down
-  return unless should_i "sync down"
-  run_standalone_script(File.join(__dir__, "sync-hourofcode-down"))
+  return unless I18nScriptUtils.should_i "sync down"
+  I18nScriptUtils.run_standalone_script(File.join(__dir__, "sync-hourofcode-down"))
 end
 
 def sync_out
-  return unless should_i "sync out"
-  run_standalone_script(File.join(__dir__, "sync-hourofcode-out"))
+  return unless I18nScriptUtils.should_i "sync out"
+  I18nScriptUtils.run_standalone_script(File.join(__dir__, "sync-hourofcode-out"))
 end
 
 def create_pr
-  return unless should_i "create the PR"
+  return unless I18nScriptUtils.should_i "create the PR"
   `git checkout -B #{BRANCH}`
 
   puts "Committing source changes"
-  git_add_and_commit(
+  I18nScriptUtils.git_add_and_commit(
     [
       "i18n/locales/source/hourofcode/",
     ],
@@ -53,7 +53,7 @@ def create_pr
 
   Languages.get_hoc_languages.each do |prop|
     puts "Committing #{prop[:crowdin_name_s]} changes"
-    git_add_and_commit(
+    I18nScriptUtils.git_add_and_commit(
       [
         "i18n/locales/#{prop[:locale_s]}/hourofcode/",
         "pegasus/sites.v3/hourofcode.com/i18n/#{prop[:unique_language_s]}.yml",
