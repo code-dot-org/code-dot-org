@@ -46,20 +46,19 @@ These console.log statements will <em>only</em> execute if the expression was tr
 <p><span style="font-weight: bold; color: #00adbc; font-size: 150%;">4.</span>
 Execution picks up here, on the first line after the closing curly brace of the if-statement.  This line will <em>always</em> execute, but notice that if the user entered an age less than 18, the entire if statement would be skipped, and it would just say "Thanks for verifying".
 
-
-<img src=”https://images.code.org/31c05927767cf9ec175c3fab5c658404-image-1446430205650.09.17.png”>
+<img src="https://images.code.org/31c05927767cf9ec175c3fab5c658404-image-1446430205650.09.17.png">
 
 The following links provide additional links and information about booleans.  Many of these links are also found in the curriculum, but are consolidated here for convenience.
 
 **Stage 8**
 
-- <a href = “https://levelbuilder-studio.code.org/s/csp5/stage/8/puzzle/6” target=_blank> Understanding Program Flow <i class="fa fa-external-link-square"></i></a>
-- <a href = “https://levelbuilder-studio.code.org/s/csp5/stage/8/puzzle/11” target=_blank> How If-Else Statements Work <i class="fa fa-external-link-square"></i></a>
-- <a href = “https://levelbuilder-studio.code.org/s/csp5/stage/8/puzzle/5” target=_blank> Video: Introduction to Conditionals (part a)<i class="fa fa-external-link-square"></i></a>
-- <a href = “https://levelbuilder-studio.code.org/s/csp5/stage/8/puzzle/10” target=_blank> Video: Introduction to Conditionals (part b)<i class="fa fa-external-link-square"></i></a>
+- <a href = "https://levelbuilder-studio.code.org/s/csp5/stage/8/puzzle/6" target=_blank> Understanding Program Flow <i class="fa fa-external-link-square"></i></a>
+- <a href = "https://levelbuilder-studio.code.org/s/csp5/stage/8/puzzle/11" target=_blank> How If-Else Statements Work <i class="fa fa-external-link-square"></i></a>
+- <a href = "https://levelbuilder-studio.code.org/s/csp5/stage/8/puzzle/5" target=_blank> Video: Introduction to Conditionals (part a)<i class="fa fa-external-link-square"></i></a>
+- <a href = "https://levelbuilder-studio.code.org/s/csp5/stage/8/puzzle/10" target=_blank> Video: Introduction to Conditionals (part b)<i class="fa fa-external-link-square"></i></a>
 
 **Stage 9**
 
-- <a href = “https://studio.code.org/s/csp5/stage/9/puzzle/3” target=_blank> How if-else-if Works (part b)<i class="fa fa-external-link-square"></i></a>
+- <a href = "https://studio.code.org/s/csp5/stage/9/puzzle/3" target=_blank> How if-else-if Works (part b)<i class="fa fa-external-link-square"></i></a>
 
 MARKDOWN

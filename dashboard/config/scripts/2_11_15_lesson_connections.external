@@ -9,7 +9,7 @@ Within the Big Idea of Data, the CSP Framework focuses heavily on how data and i
 
 **Lesson Type:** External Tools | Individual Skill Building | Tutorial
 
-<a href = “https://curriculum.code.org/csp/unit2/11/” target=_blank> Lesson Plan Link <i class="fa fa-external-link-square"></i></a>
+<a href = "https://curriculum.code.org/csp/unit2/11/" target=_blank> Lesson Plan Link <i class="fa fa-external-link-square"></i></a>
 
 <img src="https://images.code.org/44dae205d042ac42c4261a5ae9524d1e-image-1475961381083.png" style="float:right; margin-left:30px; width:200px">
 
@@ -21,11 +21,12 @@ This connects to the Explore Performance Task, where students will have to creat
 
 
 <img src="https://images.code.org/c98d60479909d4e37e55681439b6d9df-image-1475961381083.png" style="float:right; margin-left:30px; width:200px">
+
 ## Lesson 12: Discover a Data Story
 
 **Lesson Type:** External Tools | Collaborative Artifact Creation | Writing
 
-<a href = “https://curriculum.code.org/csp/unit2/12/” target=_blank> Lesson Plan Link <i class="fa fa-external-link-square"></i></a>
+<a href = "https://curriculum.code.org/csp/unit2/12/" target=_blank> Lesson Plan Link <i class="fa fa-external-link-square"></i></a>
 
 Being able to look at large sets of data and use visualization as a tool for discovery is a common task that many people who work with data do on a daily basis. Now that students have spent multiple days looking at data, how it is represented and how that influences its interpretation, and learned how to build visualizations they are prepared to create visualizations with the goal of discovering connections and trends. 
 <br><br><br><br>
@@ -34,9 +35,10 @@ Being able to look at large sets of data and use visualization as a tool for dis
 ## Lesson 13: Cleaning Data
 
 <img src="https://images.code.org/c75415776c8188ff147b208be7945ce8-image-1475961381082.png" style="float:right; margin-left:30px; width:200px">
+
 **Lesson Type:** External Tools | Analyzing | Group Skill Building
 
-<a href = “https://curriculum.code.org/csp/unit2/13/” target=_blank> Lesson Plan Link <i class="fa fa-external-link-square"></i></a>
+<a href = "https://curriculum.code.org/csp/unit2/13/" target=_blank> Lesson Plan Link <i class="fa fa-external-link-square"></i></a>
 
 At this point, students are ready to independently apply some of the data manipulation skills (in spreadsheets) that they’ve learned over the past few lessons, to a new dataset that is relatively uncurated. Because the tools we’re using to visualize data aren’t able to reason through any inconsistencies, cleaning data is an important step in analyzing it, and in many contexts, it may actually take the largest amount of time. This is the beginning of the process of “extracting knowledge from data”: look at the data and clean it up so that you can process it using computational tools.
 
@@ -47,7 +49,7 @@ At this point, students are ready to independently apply some of the data manipu
 
 **Lesson Type:** External Tools | Artifact Creation | Analyzing
 
-<a href = “https://curriculum.code.org/csp/unit2/14/” target=_blank> Lesson Plan Link <i class="fa fa-external-link-square"></i></a>
+<a href = "https://curriculum.code.org/csp/unit2/14/" target=_blank> Lesson Plan Link <i class="fa fa-external-link-square"></i></a>
 <img src="https://images.code.org/afae9667aa7f127783c1f18caf247ca6-image-1475960939622.png" style="float:right; margin-left:30px; width:200px">
 
 Making a summary (pivot) table is often considered an advanced technique and an extremely powerful computational tool that is available in most spreadsheet software. What’s more, summary tables have a direct tie to the CSP Framework essential knowledge statement: 3.1.3C *(Summaries of data analyzed computationally can be effective in communicating insight and knowledge gained from digitally represented information.).*
@@ -62,7 +64,7 @@ Creating a summary table is a good example of making a computational artifact fo
 
 **Lesson Type:** External Tools | Artifact Creation | Analyzing
 
-<a href = “https://curriculum.code.org/csp/unit2/14/” target=_blank> Lesson Plan Link <i class="fa fa-external-link-square"></i></a>
+<a href = "https://curriculum.code.org/csp/unit2/14/" target=_blank> Lesson Plan Link <i class="fa fa-external-link-square"></i></a>
 
 This Practice PT reflects many of the practices students will need to use on the Explore Performance Task. For Explore, students will need to create a visual or audio artifact with a computational tool and explain both how it was created and what is revealed through it.  While students will not be required to create a chart or even necessarily visualize data for the PT, creating a data visualization would make for a strong computational artifact. This activity is designed to provide practice with one way to complete that aspect of the PT. Additionally students should leave this Practice PT familiar with many of the Learning Objectives related to the challenges of manipulating and analyzing data, as they will have now gone through the lifecycle of collecting, cleaning, analyzing, and visualizing data themselves.
 
