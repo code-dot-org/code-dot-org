@@ -12,7 +12,8 @@ Feature: Manage Assets
 
   # Safari thinks it can record audio on saucelabs, so this tests the success condition.
   # Skipping for now because safari responds differently for localhost vs adhoc environments.
-  @skip #@no_chrome @no_firefox @no_ie
+  # @no_chrome @no_firefox @no_ie
+  @skip
   Scenario: The manage assets dialog allows recording audio on Safari.
     Given I am a student
     And I start a new Game Lab project
