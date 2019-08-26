@@ -50,6 +50,7 @@ class FollowersController < ApplicationController
   end
 
   # GET /join/XXXXXX
+  # if logged in, join the section, if not logged in, present a form to create a new user and log in
   def student_user_new
     # Though downstream validations would raise an exception, we redirect to the admin directory to
     # improve user experience.
@@ -64,26 +65,35 @@ class FollowersController < ApplicationController
       return
     end
 
-    @user = current_user || User.new
+    if current_user && @section
+      @section.add_student current_user
 
-    # if this is a picture or word section, redirect to the section login page so that the student
-    # does not have to type in the full URL
-    if @section && [Section::LOGIN_TYPE_PICTURE, Section::LOGIN_TYPE_WORD].include?(@section.login_type)
-      redirect_to controller: 'sections', action: 'show', id: @section.code
+      redirect_to root_path, notice: I18n.t('follower.registered', section_name: @section.name)
+    else
+      @user = User.new
+
+      # if this is a picture or word section, redirect to the section login page so that the student
+      # does not have to type in the full URL
+      if @section && [Section::LOGIN_TYPE_PICTURE, Section::LOGIN_TYPE_WORD].include?(@section.login_type)
+        redirect_to controller: 'sections', action: 'show', id: @section.code
+      end
+
+      # if there is no logged in user and no section or an e-mail section, render the default
+      # student_user_new view which includes the section code form or sign up form
     end
-
-    # render the default student_user_new view, which includes the section code form or sign up form
   end
 
   # POST /join/XXXXXX
-  # join a section
+  # join a section as a new student
   def student_register
+    user_type = params[:user][:user_type] == User::TYPE_TEACHER ? User::TYPE_TEACHER : User::TYPE_STUDENT
+    @user = User.new(followers_params(user_type))
+    @user.user_type = user_type
+
     if current_user
-      @user = current_user
-    else
-      user_type = params[:user][:user_type] == User::TYPE_TEACHER ? User::TYPE_TEACHER : User::TYPE_STUDENT
-      @user = User.new(followers_params(user_type))
-      @user.user_type = user_type
+      @user.errors.add(:username, "Please signout before proceeding")
+      render 'student_user_new', formats: [:html]
+      return
     end
 
     Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
