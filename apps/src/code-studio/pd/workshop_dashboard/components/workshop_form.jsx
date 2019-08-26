@@ -36,7 +36,6 @@ import {
   Organizer,
   Facilitator,
   ProgramManager,
-  Partner,
   CsfFacilitator
 } from '../permission';
 import {
@@ -484,8 +483,7 @@ export class WorkshopForm extends React.Component {
       (!this.props.permission.hasAny(
         WorkshopAdmin,
         Organizer,
-        ProgramManager,
-        Partner
+        ProgramManager
       ) &&
         // Enabled for CSF facilitators when they are creating a new workshop
         !(this.props.permission.has(CsfFacilitator) && !this.props.workshop));
