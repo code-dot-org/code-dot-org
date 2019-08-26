@@ -81,7 +81,8 @@ export const studentSectionDataPropType = PropTypes.shape({
   loginType: PropTypes.string,
   hasEverSignedIn: PropTypes.bool,
   dependsOnThisSectionForLogin: PropTypes.bool,
-  rowType: PropTypes.oneOf(Object.values(RowType))
+  rowType: PropTypes.oneOf(Object.values(RowType)),
+  userType: PropTypes.string
 });
 
 /** @enum {number} */
@@ -184,10 +185,17 @@ class ManageStudentsTable extends Component {
     );
   };
 
+  // Editing is disabled if the "student" in the section is a teacher
+  // (e.g., their userType is 'teacher').
+  isEditingDisabled = userType => {
+    return userType === 'teacher';
+  };
+
   // Cell formatters.
 
   passwordFormatter = (loginType, {rowData}) => {
     const {sectionId} = this.props;
+    const resetDisabled = this.isEditingDisabled(rowData.userType);
     return (
       <div>
         {!rowData.isEditing && (
@@ -197,6 +205,7 @@ class ManageStudentsTable extends Component {
                 initialIsResetting={false}
                 sectionId={sectionId}
                 studentId={rowData.id}
+                resetDisabled={resetDisabled}
               />
             )}
             {(rowData.loginType === SectionLoginType.word ||
@@ -208,6 +217,7 @@ class ManageStudentsTable extends Component {
                 loginType={rowData.loginType}
                 id={rowData.id}
                 sectionId={sectionId}
+                resetDisabled={resetDisabled}
               />
             )}
           </div>
@@ -278,6 +288,7 @@ class ManageStudentsTable extends Component {
         studentName={rowData.name}
         hasEverSignedIn={rowData.hasEverSignedIn}
         dependsOnThisSectionForLogin={rowData.dependsOnThisSectionForLogin}
+        canEdit={!this.isEditingDisabled(rowData.userType)}
       />
     );
   };
