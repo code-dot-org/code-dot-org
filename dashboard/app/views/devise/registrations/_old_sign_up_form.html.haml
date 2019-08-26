@@ -50,7 +50,7 @@
           .error_in_field
 
       #name-block.itemblock
-        #name-student.labelblock!= t('activerecord.attributes.user.name_example')
+        #name-student.labelblock= simple_format(h(t('activerecord.attributes.user.name_example')))
         #name-teacher.labelblock{style: "display: none"}= t('activerecord.attributes.user.name')
         = f.text_field :name, class: 'input-xlarge fieldblock', maxlength: 255
         .error_in_field
@@ -126,7 +126,7 @@
           -# Student text.
           %span.student-options
             = t('terms_interstitial.accept_label', tos_url: CDO.code_org_url('/tos'), privacy_url: CDO.code_org_url('/privacy')).html_safe
-            != t('signup_form.under_13_consent')
+            = t('signup_form.under_13_consent')
 
       -# If GDPR applies, show an additional checkbox.
       #data_transfer_agreement_accepted-block.itemblock
@@ -137,8 +137,8 @@
           = f.label :data_transfer_agreement_accepted, id: "gdpr_agreement" do
             = f.check_box :data_transfer_agreement_accepted, {class: 'terms-checkbox'}
             %span
-              != t('signup_form.agree_us_website')
-              != t('signup_form.my_data_to_us')
+              = t('signup_form.agree_us_website')
+              = t('signup_form.my_data_to_us')
 
       %br/
       #signup-error.error{style: 'display: none'}= t('signup_form.error')

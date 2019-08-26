@@ -34,7 +34,7 @@
         #teacher-name-label{style: "display: none;"}
           = f.label :name, t('activerecord.attributes.user.name').html_safe
         #student-name-label{style: "display: none;"}
-          = f.label :name, t('activerecord.attributes.user.name_example').html_safe
+          = f.label :name, simple_format(h(t('activerecord.attributes.user.name_example')))
         = f.text_field :name, maxlength: 255
       - if @user.errors[:name].present?
         %span.error.padded= @user.errors[:name].join(', ')
