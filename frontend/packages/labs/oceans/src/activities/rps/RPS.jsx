@@ -43,7 +43,6 @@ const defaultState = {
 module.exports = class Main extends React.Component {
   constructor(props) {
     super(props);
-    this.videoElementRef = null;
     this.video = new Video(IMAGE_SIZE);
     this.simpleTrainer = new SimpleTrainer();
   }

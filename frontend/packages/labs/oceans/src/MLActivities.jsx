@@ -1,5 +1,6 @@
 import React from 'react';
 import RPS from './activities/rps/RPS';
+import ImageRecognition from './activities/imageRecognition/ImageRecognition';
 import Button from 'react-bootstrap/lib/Button';
 import Row from 'react-bootstrap/lib/Row';
 import Col from 'react-bootstrap/lib/Col';
@@ -9,11 +10,12 @@ import Panel from 'react-bootstrap/lib/Panel';
 const Activity = Object.freeze({
   None: 0,
   RPS: 1,
+  ImageRecognition: 2,
 });
 
 module.exports = class MLActivities extends React.Component {
   state = {
-    currentActivity: Activity.RPS,
+    currentActivity: Activity.ImageRecognition,
   };
 
   render() {
@@ -38,18 +40,21 @@ module.exports = class MLActivities extends React.Component {
           }
           {
             this.state.currentActivity === Activity.None &&
-            <Button
-              onClick={() => this.setState({
-                currentActivity: Activity.RPS
-              })}
-            >
-              Pick RPS Activity
-            </Button>
+            <div>
+              <Button onClick={() => this.setState({currentActivity: Activity.RPS})}>Pick RPS Activity</Button>
+              <Button onClick={() => this.setState({currentActivity: Activity.ImageRecognition})}>Pick Image Recognition Activity</Button>
+            </div>
           }
           {
             this.state.currentActivity === Activity.RPS &&
               <Panel>
                 <RPS/>
+              </Panel>
+          }
+          {
+            this.state.currentActivity === Activity.ImageRecognition &&
+              <Panel>
+                <ImageRecognition/>
               </Panel>
           }
         </Col>

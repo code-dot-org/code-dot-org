@@ -22,15 +22,15 @@ module.exports = class SimpleTrainer {
    * @returns number
    */
   getExampleCount(classId) {
-    return this.knn ? this.knn.getClassExampleCount[classId] : 0;
+    return this.knn ? this.knn.getClassExampleCount()[classId] : 0;
   }
 
   /**
-   * @param {HTMLVideoElement} vidoeElement
+   * @param {ImageData | HTMLImageElement | HTMLCanvasElement | HTMLVideoElement} imageOrVideoElement
    * @param {number} classId
    */
-  addExample(vidoeElement, classId) {
-    const image = tf.fromPixels(vidoeElement);
+  addExample(imageOrVideoElement, classId) {
+    const image = tf.fromPixels(imageOrVideoElement);
     const infer = () => this.mobilenet.infer(image, 'conv_preds');
 
     let logits;
