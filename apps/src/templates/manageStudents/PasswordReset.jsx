@@ -86,7 +86,7 @@ class PasswordReset extends Component {
               onClick={this.reset}
               color={Button.ButtonColor.white}
               text={i18n.resetPassword()}
-              disabled={this.props.resetDisabled}
+              disabled={resetDisabled}
             />
             {resetDisabled && (
               <ReactTooltip id={tooltipId} role="tooltip" effect="solid">
