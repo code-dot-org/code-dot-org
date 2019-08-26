@@ -306,7 +306,7 @@ module Pd::Application
     test 'formatted_partner_contact_email' do
       application = create :pd_facilitator1920_application
 
-      partner = create :regional_partner, contact: nil
+      partner = create :regional_partner
 
       # no partner
       assert_nil application.formatted_partner_contact_email
