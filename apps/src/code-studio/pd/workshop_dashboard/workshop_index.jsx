@@ -13,7 +13,6 @@ import {
   Organizer,
   CsfFacilitator,
   Facilitator,
-  Partner,
   ProgramManager
 } from './permission';
 import $ from 'jquery';
@@ -110,7 +109,7 @@ export class WorkshopIndex extends React.Component {
               Attendance Reports
             </Button>
           )}
-          {this.props.permission.has(Partner) && (
+          {this.props.permission.has(ProgramManager) && (
             <Button onClick={this.handleOrganizerSurveyResultsClick}>
               Organizer Survey Results
             </Button>
