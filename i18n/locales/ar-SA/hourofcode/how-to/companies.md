@@ -1,9 +1,10 @@
 ---
-title: <%= hoc_s(:title_how_to_companies).inspect %>
+title: كيفية استضافة ساعة البرمجة من طرف الشركات
 layout: wide
 nav: how_to_nav
 ---
-<%= view :signup_button %>
+
+{{ signup_button }}
 
 # كيفية تحقيق "ساعة برمجة" ضمن شركتك
 
@@ -13,34 +14,34 @@ nav: how_to_nav
 
 ## الاتصال مع الفصول الدراسية المحلية والمتطوعين لنشاط"ساعة من البرمجة"
 
-يقدم موقع Code.org الفرصة لموظفيك [ليتصلوا](%= codeorg_url('/volunteer') %) بفصول دراسية محلية تقوم بساعة برمجة حيث يشاركونهم خبراتهم العملية ويشجعوا الطلاب لدراسة علم الكمبيوتر.
+Code.org offers the opportunity for your employees to [connect]({{ urls/volunteer }}) with local classrooms doing the Hour of Code where they can share their tech career experience and inspire students to study computer science.
 
-[<button>Sign up to volunteer!</button>](%= codeorg_url('/volunteer') %) <br /> <br />
+[<button>Sign up to volunteer!</button>]({{ urls/volunteer }}) <br /> <br />
 
-لمزيد من التعليمات حول تشجيع الموظفين وربط الموظفين بالفصول الدراسية، تفقد [دليل لتعاون الشركاء](%= localized_file('/files/hoc-corporate-toolkit.pdf') %).
+For more instructions on encouraging employees and connecting your employees with classrooms, check out our [guide for corporate partners]({{ localized_files/hoc_corporate_toolkit }}).
 
 ## طرق إضافية للشركات لدعم نشاط"ساعة من البرمجة"
 
-- اسأل المدير التنفيذي الخاص بك [ لإرسال بريد إلكتروني على مستوى الشركة](%= resolve_url('/promote/resources#sample-emails') %) مؤكدا لهم على أهمية علم الحاسوب، وتشجيع العاملين على نشر الموضوع.
-- استضف زملائك في العمل الى"ساعة ممتعة من البرمجة" لتجربة [ الأنشطة](%= resolve_url('/learn') %).
+- Ask your CEO to [send a company-wide email]({{ promote/sample_emails }}) emphasizing the importance of computer science and encouraging employees to spread the word.
+- Host an Hour of Code Happy Hour with coworkers to try the [activities]({{ urls/learn }}).
 - استضف حدث "ساعة من البرمجة" لفصول دراسية محلية للطلاب أو شركاء غير ربحيين للقيام ب"ساعة من البرمجة" في مكتب شركتك. تفقد - دليل الاستخدام أدناه.
 
 # كيف تستضيف حدث "ساعة من البرمجة" مع الطلاب
 
 ## 3) اعلن عن "ساعة من البرمجة" خاصة بك
 
-- طور [ ساعة البرمجة](%= resolve_url('/promote') %) الخاصة بك وشجع الآخرين على المشاركة.
-- شجع مهندسي البرمجيات في شركتك لزيارة أحد الفصول الدراسية المحلية للمساعدة في نشاط "ساعة من البرمجة" والهام الطلاب لدراسة علوم الحاسوب. يمكنهم [التسجيل](%= resolve_url('https://code. org/volunteer/engineer') %) ليكونوا مشاركين في فصل دراسي.
+- Promote your [Hour of Code]({{ urls/promote }}) event and encourage others to host.
+- شجع مهندسي البرمجيات في شركتك لزيارة أحد الفصول الدراسية المحلية للمساعدة في نشاط "ساعة من البرمجة" والهام الطلاب لدراسة علوم الحاسوب. They can [sign up]({{ urls/volunteer_engineer }}) to be connected with a classroom.
 
 ## 1) شاهد فيديو "كيف تفعل ذلك" هذا <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
 ## 3. إختر نشاط
 
-نحن نوفر مجموعة متنوعة من [ المقاطع التعليمة الممتعة لمدة ساعة ](%= resolve_url('/learn') %) لجميع المشاركين من جميع الأعمار, تم إنشاؤها بواسطة مجموعة متنوعة من الشركاء. <0/>جربهم!</p> 
+We host a variety of [fun, hour-long activities]({{ urls/learn }}) for participants of all ages, created by a variety of partners. [Try them out!]({{ urls/learn }})
 
 **كل انشطة "ساعة من البرمجة"** تتطلب اقل وقع ممكن من الاعداد, وهي ذاتية الاسترشاد - بحيث تسمح للطلاب بالتعلم حسب مستوى مهارة كل فرد.
 
-[![](/images/fit-700/tutorials.png)](%= resolve_url('/learn') %)
+[![](/images/fit-700/tutorials.png)]({{ urls/learn }})
 
 ## ٤. حدد احتياجاتك من التقنية - أجهزة الحاسب الآلي اختيارية
 
@@ -70,13 +71,13 @@ nav: how_to_nav
 - إذا كنت تعمل في شركة تكنولوجيا ، عرض المرح ، والمنتجات المبتكرة التي تعمل عليها شركتك.
 - إذا لم تكن شركة تكنولوجيا ، ناقش طرق إستخدام شركتك للتقنية لحل المشاكل وتحقيق الأهداف.
 - إدع مهندسي البرمجيات من شركتك ليتكلموا عن لماذا قرروا أن يدرسوا علوم الحاسوب و عن المشاريع التي يعملون عليها.
-- [هنا](%= codeorg_url('/girls')%) بعض الإرشادات لجذب انتباه الفتيات لعلم الكمبيوتر.
+- See tips for getting girls interested in computer science [here]({{ urls/girls }}).
 
 ## ٦- برمج!
 
 **المشاركون المباشرون في النشاط**
 
-- اكتب رابط البرنامج التعليمي على السبورة. اعثر على الرابط هنا [ ستجد معلومات عن البرنامج التعليمي الذي اخترته](%= resolve_url('/learn') %) تحت عدد المشاركين.
+- Write the activity link on a whiteboard. Find the link listed on the [information for your selected activity]({{ urls/learn }}) under the number of participants.
 - بالنسبة للمتعلمين الشباب ، قبل بتثبيت صفحه النشاط أو حفضها كاشاره مرجعيه.
 
 **عندما يواجه شخص ما صعوبات ، فلا بأس بالاجابة:**
@@ -91,9 +92,9 @@ nav: how_to_nav
 
 ## 7) الاحتفال
 
-- [استنسخ الشهادات](%= codeorg_url('/certificates') %) للمشاركين والطلاب.
-- [ طباعة "لقد اتممت ساعة البرمجة"!](%= resolve_url('/promote/resources#stickers') %) ملصقات.
+- [Print certificates]({{ urls/certificates }}) for participants and students.
+- [Print "I did an Hour of Code!"]({{ promote/resources_stickers }}) stickers.
 - [ اطلب تي شيرت مخصص](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) لموظّفيك.
 - شارك صور وفيديوهات حدث ساعة برمجة الذي قمت به على وسائل التواصل الاجتماعي. استخدم #HourOfCode و @codeorg حتى نسلط الضوء على نجاحك ايضا!
 
-<%= view :signup_button %>
+{{ signup_button }}

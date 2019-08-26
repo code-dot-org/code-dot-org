@@ -1,13 +1,14 @@
 ---
-title: <%= hoc_s(:title_how_to).inspect %>
+title: Təlimat
 layout: wide
 nav: how_to_nav
 ---
-<%= view :signup_button %>
+
+{{ signup_button }}
 
 # Məktəb müddəti və klublarda bir Saat Kodunu necə öyrətmək olar
 
-### Hərəkətə qoşulun və bir qrup şagirdin bu addımlarla ilk dəfə kompüter biliklərini təqdim edin. Kod saatı asan başlayır - hətta yeni başlayanlar üçün! If you'd like an extra set of hands to help out, you can find a [local volunteer](%= codeorg_url('/volunteer/local') %) to help run an Hour of Code in your after-school class or club.
+### Hərəkətə qoşulun və bir qrup şagirdin bu addımlarla ilk dəfə kompüter biliklərini təqdim edin. Kod saatı asan başlayır - hətta yeni başlayanlar üçün! If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your after-school class or club.
 
 * * *
 
@@ -15,17 +16,17 @@ nav: how_to_nav
 
 ## 2. Bir dərslik seçin
 
-We provide a variety of [fun, hour-long tutorials](%= resolve_url('/learn') %) for participants all ages, created by a variety of partners. [Try them out!](%= resolve_url('/learn') %)
+We provide a variety of [fun, hour-long tutorials]({{ urls/learn }}) for participants all ages, created by a variety of partners. [Try them out!]({{ urls/learn }})
 
 **All Hour of Code tutorials** require minimal prep-time for organizers, and are self-guided - allowing kids to work at their own pace and skill-level.
 
-[![](/images/fit-700/tutorials.png)](%= resolve_url('/learn') %)
+[![](/images/fit-700/tutorials.png)]({{ urls/learn }})
 
 **Need a lesson plan for your afterschool Hour of Code?** Check out this [template](/files/AfterschoolEducatorLessonPlanOutline.docx)!
 
 ## 3. Promote your Hour of Code
 
-Promote your Hour of Code [with these tools](%= resolve_url('/promote') %) and encourage others to host their own events.
+Promote your Hour of Code [with these tools]({{ urls/promote }}) and encourage others to host their own events.
 
 ## 4. Plan your technology needs - computers are optional
 
@@ -52,22 +53,22 @@ Sənin sinfiniz üçün qulaqlıq təmin edin və ya seçdiyiniz təlimçi səs 
 
 - Həyat yollarını izah etmək texnologiyanı həyat və həyat tərzimizə necə təsir göstərəcəyini izah edin. Uşaqlar həm qızlar, həm də qızlar haqqında düşünürlər (Yaşamları xilas etmək, insanlara kömək etmək, insanları birləşdirmək və s).
 - List things that use code in everyday life.
-- See tips for getting girls interested in computer science [here](%= resolve_url('https://code.org/girls') %).
+- See tips for getting girls interested in computer science [here]({{ urls/girls }}).
 
 **Need more guidance?** Download this [template lesson plan](/files/AfterschoolEducatorLessonPlanOutline.docx).
 
 ## 6. Code!
 
-**Direct participants to the activity** - Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](%= resolve_url('/learn') %) under the number of participants.
+**Direct participants to the activity** - Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
 
 **When someone comes across difficulties it's okay to respond:** - “I don’t know. Let’s figure this out together.” - “Technology doesn’t always work out the way we want.” - “Learning to program is like learning a new language; you won’t be fluent right away.”
 
-**What to do if someone finishes early?** - Encourage participants to try another Hour of Code activity at [hourofcode.com/learn](%= resolve_url('/learn') %) - Or, ask those who finish early to help others who are having trouble.
+**What to do if someone finishes early?** - Encourage participants to try another Hour of Code activity at [hourofcode.com/learn]({{ urls/learn }}) - Or, ask those who finish early to help others who are having trouble.
 
 ## 7. Celebrate
 
-- [Print certificates](%= codeorg_url('/certificates') %) for your students.
-- [Print "I did an Hour of Code!"](%= resolve_url('/promote/resources#stickers') %) stickers for your students.
+- [Print certificates]({{ urls/certificates }}) for your students.
+- [Print "I did an Hour of Code!"]({{ promote/resources_stickers }}) stickers for your students.
 - [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for participants.
 - Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
 
@@ -75,11 +76,11 @@ Sənin sinfiniz üçün qulaqlıq təmin edin və ya seçdiyiniz təlimçi səs 
 
 - Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from past Hour of Code organizers.
 - Watch the recording of our [Educator's Guide to the Hour of Code webinar](https://youtu.be/EJeMeSW2-Mw).
-- Visit the [Hour of Code Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other organizers. <% if @country == 'us' %>
-- Review the [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code). <% end %>
+- Visit the [Hour of Code Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other organizers.
+- Review the [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
 
 ## Kod Saatından sonra nə gəlir?
 
 Kod Saatı sadəcə texnologiyanın necə işlədiyi və proqram təminatının necə hazırlandığını haqqında daha çox öyrənmə səyahətində atılan birinci addımdır. Tələbələrə səyahətlərinə davam etməyə kömək edir və onları [daha çox onlayn öyrənməyə](%= codeorg_url('/learn/beyond') %) cəsarətləndirir!
 
-<%= view :signup_button %>
+{{ signup_button }}

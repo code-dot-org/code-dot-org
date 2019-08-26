@@ -1,9 +1,10 @@
 ---
-title: <%= hoc_s(:title_how_to_events).inspect %>
+title: კოდის ერთი საათის ორგანიზება - ინსტრუქციები
 layout: wide
 nav: how_to_nav
 ---
-<%= view :signup_button %>
+
+{{ signup_button }}
 
 # How to organize an Hour of Code assembly or event
 
@@ -14,13 +15,13 @@ nav: how_to_nav
 ## 1. მოემზადეთ ღონისძიებისთვის
 
 - განსაზღვრეთ ადგილი, თარიღი და დრო.
-- Send [a letter](https://hourofcode.com/promote/resources#sample-emails) to your local mayor, member of Congress, governor, or influential business person and invite them to speak. Check out our [how-to toolkit](%=localized_file('/files/elected-official.pdf')%) when hosting an elected official during an Hour of Code for more info.
-- დაპატიჟეთ მედია/პრესა. მაგალითად ადგილობრივი რადიო, გაზეთი, ბლოგერები. ნახეთ ჩვენი [დანართი პრესისთვის](%= resolve_url('/promote/press-kit') %).
+- Send [a letter](https://hourofcode.com/promote/resources#sample-emails) to your local mayor, member of Congress, governor, or influential business person and invite them to speak. Check out our [how-to toolkit]({{ localized_files/elected_official }}) when hosting an elected official during an Hour of Code for more info.
+- Invite media/press. i.e. local news station, newspaper, education/tech bloggers. See our [press kit]({{ promote/press_kit_url }}) for help.
 
 ## 2. ღონისძიების განმავლობაში
 
-- დაიწყეთ ღონისძიება ჩვენი [შთამაგონებელი ვიდეოებიდან](%= resolve_url('/promote/resources#videos') %) ერთ-ერთით.
-- გააცანით საზოგადოებას კომპიუტერული მეცნიერების მნიშვნელობა, ამ [სტატისტიკისა და ინფოგრაფიკის](%= resolve_url('/promote/stats') %) გამოყენებით.   
+- Kick off your event with one of our [inspirational videos]({{ promote/videos }}).
+- Give an intro overviewing the importance of computer science, using these [stats and infographics]({{ promote/stats_url }}).   
       
     
 - **Other event ideas**: 
@@ -46,7 +47,7 @@ Consider hosting a K-5 evening event and invite parents to join their students f
 
 **Event:** School-wide Computer Science Education Week kick-off assembly
 
-**Date:** <%= campaign_date('start-short') %> (start of Computer Science Education Week)
+**Date:** {{ campaign_date/start_short }} (start of Computer Science Education Week)
 
 **Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
 
@@ -54,13 +55,13 @@ Consider hosting a K-5 evening event and invite parents to join their students f
 
 ## ღონისძიების დღის წესრიგი
 
-| დრო           | მოქმედება                                                                                                                                                                         |
-| ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 10:00 - 10:05 | Open with one of our [inspirational videos](%= resolve_url('/promote/resources#videos') %).                                                                                       |
-| 10:05 - 10:15 | დირექტორი შესავალში მიმოხილვას აკეთებს, რომელიც კომპიუტერული მეცნიერების აუცილებლობას უსვამს ხაზს. გამოიყენეთ ეს [სტატისტიკა და ინფოგრაფიკა](%= resolve_url('/promote/stats') %). |
-| 10:15 - 10:30 | სპეციალურად მოწვეული სტუმარი ყვება თავის გამოცდილებაზე და იმაზე, თუ რა ადგილი უკავია ტექნოლოგიასა და ინფორმატიკას ყოველდღიურ ცხოვრებაში.                                          |
-| 10:30 - 10:40 | მოსწავლეები წარადგენენ კოდის ერთ საათს. სახალისო დეტალი: მათ შეუძლიათ, ასწავლონ პროგრამირება სკოლის დირექტორს, პოლიტიკოსს ან სხვა მოსწავლეებს!                                    |
-| 10:40 - 11:00 | მოსწავლეები ყვებიან იმაზე, როგორ შეიძლება ვასწავლოთ ინფორმატიკა კომპიუტერების გარეშე და აჩვენებენ სამაგალითო აქტივობას.                                                           |
-| 11:00 - 11:05 | მასწავლებელი-ორგანიზატორი ასრულებს საღამოს.                                                                                                                                       |
+| დრო           | მოქმედება                                                                                                                                      |
+| ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| 10:00 - 10:05 | Open with one of our [inspirational videos]({{ promote/videos }}).                                                                             |
+| 10:05 - 10:15 | Principal gives an intro overviewing the importance of computer science. Use these [stats and infographics]({{ promote/stats_url }}).          |
+| 10:15 - 10:30 | სპეციალურად მოწვეული სტუმარი ყვება თავის გამოცდილებაზე და იმაზე, თუ რა ადგილი უკავია ტექნოლოგიასა და ინფორმატიკას ყოველდღიურ ცხოვრებაში.       |
+| 10:30 - 10:40 | მოსწავლეები წარადგენენ კოდის ერთ საათს. სახალისო დეტალი: მათ შეუძლიათ, ასწავლონ პროგრამირება სკოლის დირექტორს, პოლიტიკოსს ან სხვა მოსწავლეებს! |
+| 10:40 - 11:00 | მოსწავლეები ყვებიან იმაზე, როგორ შეიძლება ვასწავლოთ ინფორმატიკა კომპიუტერების გარეშე და აჩვენებენ სამაგალითო აქტივობას.                        |
+| 11:00 - 11:05 | მასწავლებელი-ორგანიზატორი ასრულებს საღამოს.                                                                                                    |
 
-<%= view :signup_button %>
+{{ signup_button }}

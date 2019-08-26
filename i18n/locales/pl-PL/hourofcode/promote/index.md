@@ -1,36 +1,33 @@
 ---
-title: <%= hoc_s(:title_how_to_promote).inspect %>
-layout: wide
+title: Podaj dalej
+layout: szeroki
 nav: promote_nav
 ---
-<%= view :signup_button %>
 
-<% facebook = {:u=>"http://#{request.host}/us"}
-
-twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_donor_text).gsub(/%{random_donor}/, get_random_donor_twitter)} twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_donor_text).include? '#HourOfCode' %>
+{{ signup_button }}
 
 # Zaangażuj swoją społeczność do Godziny Kodowania
 
 ## 1. Rozgłaszaj
 
-Powiadom znajomych o **#HourOfCode**!
+Tell your friends about the **#HourOfCode**!
 
-<%= view :share_buttons, facebook:facebook, twitter:twitter %>
+{{ promote/share_buttons }}
 
 ## 2. Zaproponuj całej swojej szkole udział w Godzinie Kodowania
 
-[Wyślij tego e-maila](%= resolve_url('/promote/resources#sample-emails') %) swojemu dyrektorowi i poproś każdą klasę w swojej szkole, aby się zarejestrowała.
+[Send this email]({{ promote/sample_emails }}) to your principal and challenge every classroom at your school to sign up.
 
 ## 3. Poproś swojego pracodawcę o przyłączenie się
 
-[Wyślij tę wiadomość](%= resolve_url('/promote/resources#sample-emails') %) do swojego menedżera lub dyrektora firmy.
+[Send this email]({{ promote/sample_emails }}) to your manager or company's CEO.
 
 ## 4. Promuj Godzinę Kodowania w swojej społeczności
 
-[Zwerbuj grupę lokalną](%= resolve_url('/promote/resources#sample-emails') %) — klub harcerzy lub harcerek, kościół, uniwersytet, grupę weteranów, unię pracy lub nawet kilku znajomych. Nie musisz być w szkole, by poznać nowe umiejętności. Użyj te [plakaty, banery, naklejki, wideo, i wiele więcej](%= resolve_url('/promote/resources') %) dla swojego wydarzenia.
+[Recruit a local group]({{ promote/sample_emails }})— boy/girl scouts club, church, university, veterans group, labor union, or even some friends. Nie musisz być w szkole, by poznać nowe umiejętności. Use these [posters, banners, stickers, videos and more](/promote/resources) for your own event.
 
 ## 6. Poproś władze lokalne o udzielenie wsparcia Godzinie Kodowania
 
-[Wyślij tę wiadomość](%= resolve_url('/promote/resources#sample-emails') %) do przedstawicieli władz lokalnych, rady miasta lub rady szkoły i zaproś ich do swojej szkoły na Godzinę Kodowania. Może to pomóc w tworzeniu wsparcia dla informatyki w twoim obszarze poza tą jedną godziną.
+[Send this email]({{ promote/sample_emails }}) to your local representatives, city council, or school board and invite them to visit your school for the Hour of Code. Może to pomóc w tworzeniu wsparcia dla informatyki w twoim obszarze poza tą jedną godziną.
 
-<%= view :signup_button %>
+{{ signup_button }}
