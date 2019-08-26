@@ -1,6 +1,6 @@
 ---
 title: Plakaty minionej Godziny Kodowania
-layout: szeroki
+layout: wide
 nav: promote_nav
 ---
 
