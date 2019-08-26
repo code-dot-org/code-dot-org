@@ -157,14 +157,6 @@ class RegionalPartner < ActiveRecord::Base
     contact_email || program_managers&.first&.email
   end
 
-  def contact
-    User.find_by_email(contact_email) || program_managers.first
-  end
-
-  def contact=(user)
-    self.contact_id = user.try(:id)
-  end
-
   # find a Regional Partner that services a particular region
   # @param [String] zip_code
   # @param [String] state - 2-letter state code
