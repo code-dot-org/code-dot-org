@@ -210,6 +210,7 @@
     "unminified-webpack-plugin": "^2.0.0",
     "url-loader": "^0.5.7",
     "video.js": "4.5.2",
+    "vmsg": "^0.3.6",
     "webpack": "^4.29.0",
     "webpack-bundle-analyzer": "^3.3.2",
     "webpack-dev-server": "^3.2.1",
@@ -220,8 +221,6 @@
   },
   "dependencies": {
     "@code-dot-org/js-interpreter": "^1.3.9",
-    "snack-build": "0.0.1",
-    "snack-sdk": "2.3.1",
     "crypto-js": "^3.1.9-1",
     "details-element-polyfill": "https://github.com/javan/details-element-polyfill",
     "filesaver.js": "0.2.0",
@@ -239,6 +238,8 @@
     "react-transition-group": "2.9.0",
     "rosie": "^2.0.1",
     "selectize": "^0.12.4",
+    "snack-build": "0.0.1",
+    "snack-sdk": "2.3.1",
     "wgxpath": "^1.2.0",
     "whatwg-fetch": "^2.0.3"
   }
