@@ -1,9 +1,10 @@
 ---
-title: <%= hoc_s(:title_how_to_events).inspect %>
+title: Hour of Codeのイベント開催ガイド
 layout: wide
 nav: how_to_nav
 ---
-<%= view :signup_button %>
+
+{{ signup_button }}
 
 # How to organize an Hour of Code assembly or event
 
@@ -14,13 +15,13 @@ nav: how_to_nav
 ## 1. イベントの準備
 
 - 場所、日時を決めます。
-- Send [a letter](https://hourofcode.com/promote/resources#sample-emails) to your local mayor, member of Congress, governor, or influential business person and invite them to speak. Hour of Codeに議員を迎えるときの詳細については、[手引きツールキット](%=localized_file('/files/elected-official.pdf')%) をチェックします。
-- メディアやブロガーに声をかけましょう。[プレスキット](%= resolve_url('/promote/press-kit') %)がご利用いただけます。
+- 地元の市長、議員、知事や有力な実業家に[手紙](https://hourofcode.com/promote/resources#sample-emails)を送ってスピーチをお願いしましょう。 Check out our [how-to toolkit]({{ localized_files/elected_official }}) when hosting an elected official during an Hour of Code for more info.
+- Invite media/press. i.e. local news station, newspaper, education/tech bloggers. See our [press kit]({{ promote/press_kit_url }}) for help.
 
 ## 2. イベントの実施
 
-- [こちらのビデオ](%= resolve_url('/promote/resources#videos') %)からイベントを始めましょう。
-- コンピュータサイエンスがなぜ重要なのか、[こちらの統計やインフォグラフィック](%= resolve_url('/promote/stats') %)を利用して紹介してください。   
+- Kick off your event with one of our [inspirational videos]({{ promote/videos }}).
+- Give an intro overviewing the importance of computer science, using these [stats and infographics]({{ promote/stats_url }}).   
       
     
 - **Other event ideas**: 
@@ -46,7 +47,7 @@ Consider hosting a K-5 evening event and invite parents to join their students f
 
 **Event:** School-wide Computer Science Education Week kick-off assembly
 
-**Date:** <%= campaign_date('start-short') %> (start of Computer Science Education Week)
+**Date:** {{ campaign_date/start_short }} (start of Computer Science Education Week)
 
 **Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
 
@@ -54,13 +55,13 @@ Consider hosting a K-5 evening event and invite parents to join their students f
 
 ## 当日の流れ（例）
 
-| 時刻          | 内容                                                                                               |
-| ----------- | ------------------------------------------------------------------------------------------------ |
-| 10:00-10:05 | Open with one of our [inspirational videos](%= resolve_url('/promote/resources#videos') %).      |
-| 10:05-10:15 | 校長先生に、[こちらの統計やインフォグラフィック](%= resolve_url('/promote/stats') %)を利用して、コンピュータサイエンスの重要性について話して頂きましょう。 |
-| 10:15-10:30 | スペシャルゲストに、ゲストの背景や、テクノロジーやコンピューターサイエンスが日常生活にどのように重要な役割を果たしているか話をしてもらいます。                          |
-| 10:30-10:40 | 数人の生徒に、Hour of Codeのデモをお願いしましょう。学校長や政治家、もしくは他の生徒に教える様子が見せられると、とても楽しいと思います。                       |
-| 10:40-11:00 | 生徒にオフラインのアクティビティをデモしてもらいます。コンピューターサイエンスはコンピューターがなくても教えられることを見てもらいます。                             |
-| 11:00-11:05 | このイベントを主催した先生に、閉会の言葉を頂きましょう。                                                                     |
+| 時刻          | 内容                                                                                                                                    |
+| ----------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| 10:00-10:05 | Open with one of our [inspirational videos]({{ promote/videos }}).                                                                    |
+| 10:05-10:15 | Principal gives an intro overviewing the importance of computer science. Use these [stats and infographics]({{ promote/stats_url }}). |
+| 10:15-10:30 | スペシャルゲストに、ゲストの背景や、テクノロジーやコンピューターサイエンスが日常生活にどのように重要な役割を果たしているか話をしてもらいます。                                                               |
+| 10:30-10:40 | 数人の生徒に、Hour of Codeのデモをお願いしましょう。学校長や政治家、もしくは他の生徒に教える様子が見せられると、とても楽しいと思います。                                                            |
+| 10:40-11:00 | 生徒にオフラインのアクティビティをデモしてもらいます。コンピューターサイエンスはコンピューターがなくても教えられることを見てもらいます。                                                                  |
+| 11:00-11:05 | このイベントを主催した先生に、閉会の言葉を頂きましょう。                                                                                                          |
 
-<%= view :signup_button %>
+{{ signup_button }}

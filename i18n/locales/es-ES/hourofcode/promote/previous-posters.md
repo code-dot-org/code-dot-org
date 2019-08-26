@@ -1,18 +1,19 @@
 ---
-title: <%= hoc_s(:title_past_posters).inspect %>
+title: Carteles de la última Hora del Código
 layout: wide
 nav: promote_nav
 ---
-<%= view :signup_button %>
+
+{{ signup_button }}
 
 # Carteles de la última Hora del Código
 
-### ¡Encuentra nuestros carteles de años anteriores para imprimir y colgar en tu clase! ¿Buscas los pósters más nuevos? [Click aquí](<%= resolve_url('/promote/resources#posters') %>).
+### Find our posters from previous years to print and hang in your classroom! Looking for the newest posters? [Click here]({{ promote/promote_posters_url }}).
 
 * * *
 
 <br />
 
-<%= view :promote_posters %>
+{{ promote_posters }}
 
-<%= view :signup_button %>
+{{ signup_button }}

@@ -602,6 +602,19 @@ class Level < ActiveRecord::Base
     false
   end
 
+  # Add a starter asset to the level and save it in properties.
+  # Starter assets are stored as an object, where the key is the
+  # friendly filename and the value is the UUID filename stored in S3:
+  # {
+  #   # friendly_name => uuid_name
+  #   "welcome.png" => "123-abc-456.png"
+  # }
+  def add_starter_asset!(friendly_name, uuid_name)
+    self.starter_assets ||= {}
+    self.starter_assets[friendly_name] = uuid_name
+    save!
+  end
+
   private
 
   # Returns the level name, removing the name_suffix first (if present).

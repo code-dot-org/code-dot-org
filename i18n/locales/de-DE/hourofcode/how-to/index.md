@@ -1,15 +1,16 @@
 ---
-title: <%= hoc_s(:title_how_to).inspect %>
+title: How-to Anleitung
 layout: wide
 nav: how_to_nav
 ---
-<%= view :signup_button %>
 
-# How to teach one Hour of Code with your class
+{{ signup_button }}
 
-### Schließen Sie sich der Bewegung an und bringen Sie mit diesen Schritten eine Gruppe von Schülern zu ihrer ersten Informatik Stunde. Eine "Hour of Code" ist einfach zu veranstalten - selbst für Anfänger! If you'd like an extra set of hands to help out, you can find a [local volunteer](%= codeorg_url('/volunteer/local') %) to help run an Hour of Code in your class.
+# One hour of code - Wie Sie es in Ihrer Klasse unterrichten
 
-### Take a look at our [participation guide if you still have questions](%= localized_file('/files/participation-guide.pdf') %).
+### Schließen Sie sich der Bewegung an und bringen Sie mit diesen Schritten eine Gruppe von Schülern zu ihrer ersten Informatik Stunde. Eine "Hour of Code" ist einfach zu veranstalten - selbst für Anfänger! If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your class.
+
+### Take a look at our [participation guide if you still have questions]({{ localized_files/participation_guide }}).
 
 * * *
 
@@ -17,11 +18,11 @@ nav: how_to_nav
 
 ## 2. Wählen Sie ein Tutorial für Ihre Stunde aus
 
-We provide a variety of fun, [student-guided tutorials](%= resolve_url('/learn') %) for all age groups and experience levels. Students do the activities on their own, though many activities include lesson plans for teachers (you'll see the link when you click the activity) to guide discussion or extend the activity. [![](/images/fit-700/tutorials.png)](%=resolve_url('/learn') %)
+We provide a variety of fun, [student-guided tutorials]({{ urls/learn }}) for all age groups and experience levels. Studenten führen die Aktivitäten selbständig durch, obwohl viele Aktivitäten die Unterrichtsplanung für Lehrer beinhalten (Sie sehen den Link, wenn Sie auf die Aktivität klicken), das Leiten von Diskussionen oder das Ausweiten von Aktivitäten. [![](/images/fit-700/tutorials.png)]({{ urls/learn }})
 
 ## 3. Machen Sie Ihre "Hour of Code" bekannt
 
-Promote your Hour of Code [with these tools](%= resolve_url('/promote/resources') %) and encourage others to host their own events.
+Promote your Hour of Code [with these tools]({{ urls/promote_resources }}) and encourage others to host their own events.
 
 ## 4. Planen Sie ihren Bedarf an technischer Ausstattung - Computer sind nicht immer erforderlich
 
@@ -37,24 +38,24 @@ Stellen Sie Ihrer Klasse Kopfhörer zur Verfügung, oder bitten Sie ihre Schüle
 
 ## 5. Beginnen Sie Ihre "Hour of Code" mit einem inspirierenden Vortrag oder einem Video
 
-**Invite a [local volunteer](%= codeorg_url('/volunteer/local') %) to inspire your students by talking about the breadth of possibilities in computer science.** There are thousands of volunteers around the world ready to help with your Hour of Code through either a classroom visit or video chat with your students!
+**Invite a [local volunteer]({{ urls/volunteer_local }}) to inspire your students by talking about the breadth of possibilities in computer science.** There are thousands of volunteers around the world ready to help with your Hour of Code through either a classroom visit or video chat with your students!
 
 **Zeigen Sie ein inspirierendes Video:**
 
 - Das originale Code.org Einführungsvideo mit Bill Gates, Mark Zuckerberg und dem NBA Star Chris Bosh. (Es stehen mehrere Versionen zur Verfügung: [1 Minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 Minuten](https://www.youtube.com/watch?v=nKIu9yen5nc) und [9 Minuten](https://www.youtube.com/watch?v=dU1xS07N-FA))
-- Find more inspirational [resources](%= codeorg_url('/inspire') %) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+- Find more inspirational [resources]({{ urls/inspire }}) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
 **It’s okay if both you and your students are brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
 
 - Beschreiben Sie, wie Technologien unser Leben beeinflussen, mit Beispielen, die Jungen und Mädchen interessieren (Sprechen Sie über Apps und Technologien, die eingesetzt werden, um Leben zu retten, Menschen zu helfen, Menschen zu verbinden etc.).
 - Zählen Sie gemeinsam Dinge auf, die im Alltag Computerprogramme nutzen.
-- See tips for getting girls interested in computer science [here](%= codeorg_url('/girls')%).
+- See tips for getting girls interested in computer science [here]({{ urls/girls }}).
 
 ## 6. Programmieren!
 
 **Direct students to the activity**
 
-- Schreiben Sie den Link für das Tutorial an das Whiteboard. Wählen Sie den Link, der in der Information [ Ihres ausgewählten Tutorials ](%= resolve_url('/learn') %) unter der Anzahl der Teilnehmerinnen und Teilnehmer angezeigt wird.
+- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
 
 **When your students come across difficulties it's okay to respond:**
 
@@ -64,7 +65,7 @@ Stellen Sie Ihrer Klasse Kopfhörer zur Verfügung, oder bitten Sie ihre Schüle
 
 **What if a student finishes early?**
 
-- Schülerinnen und Schüler können sich alle Tutorials ansehen und sich an [andere Hour of Code Aktivitäten](%= resolve_url('/learn')%) versuchen.
+- Students can see all tutorials and [try another Hour of Code activity]({{ urls/learn }}).
 - Oder Sie bitten die Schülerinnen und Schüler, die früher fertig sind, anderen Klassenkameraden, die Schwierigkeiten mit der Aufgabe haben, zu helfen.
 
 [col-33]
@@ -83,8 +84,8 @@ Stellen Sie Ihrer Klasse Kopfhörer zur Verfügung, oder bitten Sie ihre Schüle
 
 [/col-33]
 
-- [Print certificates](%= codeorg_url('/certificates')%) for your students.
-- Drucken Sie ["I did an Hour of Code!"](%= resolve_url('/promote/resources#stickers') %) Aufkleber für Ihre Schülerinnen und Schüler aus.
+- [Print certificates]({{ urls/certificates }}) for your students.
+- [Print "I did an Hour of Code!"]({{ urls/promote_stickers }}) stickers for your students.
 - [Bestellen Sie individuelle T-Shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) für Ihre Schule.
 - Teilen Sie Fotos und Videos Ihrer Hour of Code-Veranstaltung in den sozialen Medien. Verwenden Sie #HourOfCode und @codeorg, damit wir Ihren Erfolg auch hervorheben können!
 
@@ -98,14 +99,14 @@ Stellen Sie Ihrer Klasse Kopfhörer zur Verfügung, oder bitten Sie ihre Schüle
 
 ## Weitere Hour of Code-Ressourcen für Unterrichtende:
 
-- Besuche das [Hour of Code Forum für Unterrichtende](http://forum.code.org/c/plc/hour-of-code) um Rat, Vorschläge und Unterstützung von anderen Unterrichtenden zu erhalten. <% if @country == 'us' %>
-- Sehen Sie sich die FAW zu [Hour of Code](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code) an. <% end %>
+- Besuche das [Hour of Code Forum für Unterrichtende](http://forum.code.org/c/plc/hour-of-code) um Rat, Vorschläge und Unterstützung von anderen Unterrichtenden zu erhalten.
+- Sehen Sie sich die FAW zu [Hour of Code](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code) an.
 
 ## Was kommt nach der Hour of Code?
 
 Die Hour of Code ist nur der erste Schritt einer Reise um mehr darüber zu lernen, wie Technologie funktioniert und wie Software Anwendungen geschrieben werden. Um weiter zu reisen:
 
-- Encourage students to continue to [learn online](%= codeorg_url('/learn/beyond')%).
-- [Attend](%= codeorg_url('/professional-development-workshops') %) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
+- Encourage students to continue to [learn online]({{ urls/learn_beyond }}).
+- [Attend]({{ urls/professional_development_workshops }}) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
 
-<%= view :signup_button %>
+{{ signup_button }}
