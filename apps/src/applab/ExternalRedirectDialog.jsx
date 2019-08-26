@@ -7,21 +7,11 @@ import i18n from '@cdo/locale';
 import {connect} from 'react-redux';
 import {actions, REDIRECT_RESPONSE} from './redux/applab';
 import {studio} from '@cdo/apps/lib/util/urlHelpers';
-import {BASE_DIALOG_WIDTH} from '@cdo/apps/constants';
 
 const styles = {
   title: {
     display: 'inline',
     wordWrap: 'break-word'
-  },
-  url: {
-    display: '-webkit-box',
-    WebkitLineClamp: 3,
-    WebkitBoxOrient: 'vertical',
-    overflow: 'hidden',
-    maxWidth: '100%',
-    wordWrap: 'break-word',
-    maxHeight: '140px'
   }
 };
 
@@ -48,8 +38,7 @@ class ExternalRedirectDialog extends React.Component {
       title = i18n.redirectTitle();
       body = (
         <div>
-          <h2 style={styles.title}>{i18n.redirectConfirm()}</h2>
-          <p style={styles.url}>{url}</p>
+          <h2 style={styles.title}>{i18n.redirectConfirm({url: url})}</h2>
           <p>
             {i18n.redirectExplanation()}
             <span>
@@ -94,12 +83,7 @@ class ExternalRedirectDialog extends React.Component {
     }
 
     return (
-      <Dialog
-        title={title}
-        fullWidth={window.innerWidth < BASE_DIALOG_WIDTH}
-        isOpen
-        handleClose={this.props.handleClose}
-      >
+      <Dialog title={title} isOpen handleClose={this.props.handleClose}>
         <Body>
           {body}
           {footer}
