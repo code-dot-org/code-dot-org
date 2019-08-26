@@ -3,6 +3,8 @@ import $ from 'jquery';
 import 'jquery-ui/ui/effects/effect-drop';
 import 'jquery-ui/ui/widgets/droppable';
 import * as PropTypes from "react/lib/ReactPropTypes";
+window.jQuery = $;
+require('jquery-ui-touch-punch');
 
 module.exports = class ImageRecognition extends React.Component {
   componentDidMount() {

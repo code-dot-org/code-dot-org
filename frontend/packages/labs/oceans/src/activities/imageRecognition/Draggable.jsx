@@ -2,6 +2,8 @@ import React from "react";
 import $ from 'jquery';
 import 'jquery-ui/ui/widgets/draggable';
 import * as PropTypes from "react/lib/ReactPropTypes";
+window.jQuery = $;
+require('jquery-ui-touch-punch');
 
 module.exports = class ImageRecognition extends React.Component {
   componentDidMount() {
