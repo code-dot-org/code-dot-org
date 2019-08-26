@@ -36,7 +36,7 @@ const styles = {
   }
 };
 
-class StageCard extends Component {
+export class UnconnectedStageCard extends Component {
   static propTypes = {
     reorderLevel: PropTypes.func.isRequired,
     addLevel: PropTypes.func.isRequired,
@@ -145,7 +145,7 @@ class StageCard extends Component {
             position={this.props.stage.position}
             total={this.props.stagesCount}
           />
-          <div style={styles.stageLockable}>
+          <label style={styles.stageLockable}>
             Require teachers to unlock this stage before students in their
             section can access it
             <input
@@ -154,7 +154,7 @@ class StageCard extends Component {
               type="checkbox"
               style={styles.checkbox}
             />
-          </div>
+          </label>
         </div>
         {this.props.stage.levels.map(level => (
           <LevelToken
@@ -202,4 +202,4 @@ export default connect(
       dispatch(setStageLockable(stage, lockable));
     }
   })
-)(StageCard);
+)(UnconnectedStageCard);
