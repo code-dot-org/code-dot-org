@@ -124,10 +124,10 @@ class StageCard extends Component {
     this.props.addLevel(this.props.stage.position);
   };
 
-  handleLockableChanged = () => {
+  toggleLockable = () => {
     this.props.setStageLockable(
       this.props.stage.position,
-      this.refs.lockable.checked
+      !this.props.stage.lockable
     );
   };
 
@@ -149,9 +149,8 @@ class StageCard extends Component {
             Require teachers to unlock this stage before students in their
             section can access it
             <input
-              ref="lockable"
-              defaultChecked={this.props.stage.lockable}
-              onChange={this.handleLockableChanged}
+              checked={this.props.stage.lockable}
+              onChange={this.toggleLockable}
               type="checkbox"
               style={styles.checkbox}
             />
