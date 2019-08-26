@@ -1,6 +1,6 @@
 ---
 title: Podaj dalej
-layout: szeroki
+layout: wide
 nav: promote_nav
 ---
 
