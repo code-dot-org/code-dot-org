@@ -196,32 +196,49 @@ module.exports = class ImageRecognition extends React.Component {
             {
               activityImages.map((image, i) => {
                 return (
-                  <Draggable
+                  <img
                     key={i}
-                    guid={image.guid}
-                  >
-                    <img
-                      // onMouseOver={() => {
-                      //   loadImage(image.url, IMAGE_SIZE).then((img) => {
-                      //     this.simpleTrainer.predict(img).then((result) => {
-                      //       console.log(result);
-                      //     });
-                      //   });
-                      // }}
-                      src={image.url}
-                      className="thumbnail"
-                      style={{
-                        display: 'inline-block'
-                      }}
-                      width={100}
-                      height={100}
-                    />
-                  </Draggable>
+                    src={image.url}
+                    className="thumbnail"
+                    style={{
+                      cursor: 'pointer',
+                      display: 'inline-block'
+                    }}
+                    onClick={() => {
+                      loadImage(image.url, IMAGE_SIZE).then((img) => {
+                        this.simpleTrainer.predict(img).then((result) => {
+                          this.setState({
+                            trainingResult: result
+                          });
+                        });
+                      });
+                    }}
+                    width={100}
+                    height={100}
+                  />
                 );
               })
             }
           </Col>
         </Row>
+      }
+      {
+        this.state.activityState === ActivityState.Playing &&
+          !!this.state.trainingResult &&
+          <Row>
+            <Col
+              xs={12}
+              style={{marginTop: 10, textAlign: 'center'}}
+            >
+              <p>Predicted Category:</p>
+              <p>{this.state.classes[this.state.trainingResult.predictedClassId].name}</p>
+
+              {
+                JSON.stringify(this.state.trainingResult)
+
+              }
+            </Col>
+          </Row>
       }
       {
         this.state.activityState === ActivityState.Playing &&
