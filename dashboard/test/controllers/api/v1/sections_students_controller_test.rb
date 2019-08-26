@@ -127,6 +127,16 @@ class Api::V1::SectionsStudentsControllerTest < ActionController::TestCase
     assert_equal expected_level_count, @response.body
   end
 
+  test 'teacher cannot update another teacher' do
+    other_teacher = create(:teacher)
+    @section.students << other_teacher
+
+    sign_in @teacher
+    put :update, params: {section_id: @section.id, id: other_teacher.id, student: {age: 10}}
+
+    assert_response :forbidden
+  end
+
   test 'teacher can update gender, name, age, and password info for their student' do
     sign_in @teacher
     put :update, params: {section_id: @section.id, id: @student.id, student: {gender: 'f', age: 9, name: 'testname', password: 'testpassword'}}
