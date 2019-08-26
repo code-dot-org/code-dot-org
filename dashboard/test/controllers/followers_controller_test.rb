@@ -51,22 +51,46 @@ class FollowersControllerTest < ActionController::TestCase
   test "student_user_new when signed in" do
     sign_in @student
 
-    assert_does_not_create(Follower) do
+    assert_creates(Follower) do
       get :student_user_new, params: {section_code: @chris_section.code}
     end
 
-    assert_response :success
-    assert_template 'followers/student_user_new'
+    assert_redirected_to '/'
+    assert_equal "You've registered for #{@chris_section.name}.", flash[:notice]
+
+    follower = Follower.last
+    assert_equal @student, follower.student_user
+    assert_equal @chris, follower.user
+    assert_equal @chris_section, follower.section
   end
 
   test "student_user_new when signed in without section code" do
     sign_in @student
-    assert_does_not_create(Follower) do
-      get :student_user_new
-    end
+
+    get :student_user_new
 
     assert_response :success
-    assert_template 'followers/student_user_new'
+    # form to type in section code
+    assert_select 'input#section_code'
+  end
+
+  test "student user new with existing user with messed up email" do
+    # use update_attribute to bypass validations
+    @student.update_attribute(:email, '')
+    @student.update_attribute(:hashed_email, '')
+
+    sign_in @student
+    assert_creates(Follower) do
+      get :student_user_new, params: {section_code: @chris_section.code}
+    end
+
+    assert_redirected_to '/'
+    assert_equal "You've registered for #{@chris_section.name}.", flash[:notice]
+
+    follower = Follower.last
+    assert_equal @student, follower.student_user
+    assert_equal @chris, follower.user
+    assert_equal @chris_section, follower.section
   end
 
   test 'student_user_new errors when joining a section with deleted teacher' do
@@ -215,17 +239,16 @@ class FollowersControllerTest < ActionController::TestCase
     end
   end
 
-  test "student_register adds existing student to section if already signed in" do
-    refute @chris_section.students.include? @student
-
+  test "student_register gives error if already signed in" do
     sign_in @student
-    assert_does_not_create(User) do
-      post :student_register, params: {section_code: @chris_section.code}
+    assert_does_not_create(User, Follower) do
+      post :student_register, params: {
+        section_code: @chris_section.code,
+        user: @student.attributes
+      }
     end
-
-    assert_redirected_to '/'
-    @student.reload
-    assert @chris_section.students.include? @student
+    assert_response :success
+    assert response.body.include? 'You are currently signed in.'
   end
 
   test "create with section code" do
@@ -314,6 +337,19 @@ class FollowersControllerTest < ActionController::TestCase
     end
 
     refute Follower.exists?(follower.id)
+  end
+
+  test "student_user_new when signed in in section with script" do
+    sign_in @student
+
+    assert_creates(Follower, UserScript) do
+      get :student_user_new, params: {section_code: @laurel_section_script.code}
+    end
+
+    user_script = UserScript.where(user: @student, script: @laurel_section_script.script).first
+    assert user_script
+    assert user_script.assigned_at
+    assert_equal @laurel_section_script.script, @student.primary_script
   end
 
   test "student_register in section with script" do
