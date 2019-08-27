@@ -155,6 +155,7 @@ class ScriptsController < ApplicationController
       :has_lesson_plan,
       :script_announcements,
       :pilot_experiment,
+      :editor_experiment,
       resourceTypes: [],
       resourceLinks: [],
       project_widget_types: [],
