@@ -33,6 +33,6 @@ service 'mysql' do
   # MySQL community package only provides Debian service script.
   #provider Chef::Provider::Service::Debian
   provider Chef::Provider::Service::Systemd
-  subscribes :reload, 'template[cdo.cnf]', :immediately
+  subscribes :restart, 'template[cdo.cnf]', :immediately
 end
 node.override['cdo-apps']['local_mysql'] = true if node['cdo-apps']
