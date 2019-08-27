@@ -33,10 +33,6 @@ class ContentDSL < LevelDSL
   # levels only)
   def pre_title(text) @hash[:pre_title] = text end
 
-  def parse_output
-    {name: @name, properties: @hash}
-  end
-
   def method_missing(key, *args)
     @hash[:options] ||= {}
     @hash[:options][key.to_sym] = args.first

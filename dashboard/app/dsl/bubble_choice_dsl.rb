@@ -7,10 +7,6 @@ class BubbleChoiceDSL < LevelDSL
     @i18n_strings = Hash.new({})
   end
 
-  def parse_output
-    {name: @name, properties: @hash}
-  end
-
   def display_name(text) @hash[:display_name] = text end
 
   def description(text) @hash[:description] = text end

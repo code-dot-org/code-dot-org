@@ -15,4 +15,8 @@ class LevelDSL < BaseDSL
       return
     end
   end
+
+  def parse_output
+    {name: @name, properties: @hash}
+  end
 end
