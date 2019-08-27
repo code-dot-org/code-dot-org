@@ -198,22 +198,6 @@ class RegionalPartnerTest < ActiveSupport::TestCase
     assert_equal future_partner_workshops, regional_partner.future_pd_workshops_organized
   end
 
-  # TODO: remove this test when workshop_organizer is deprecated
-  test 'contact for regional partner without contact name and email falls back to program manager workshop organizer' do
-    partner_organizer = create :workshop_organizer
-    regional_partner = create :regional_partner
-    create :regional_partner_program_manager, regional_partner: regional_partner, program_manager: partner_organizer
-
-    assert_equal partner_organizer, regional_partner.contact
-  end
-
-  test 'contact for regional partner with no contact name and email falls back to program manager' do
-    regional_partner = create :regional_partner
-    partner_organizer = create :program_manager, regional_partner: regional_partner
-
-    assert_equal partner_organizer, regional_partner.contact
-  end
-
   test 'contact_email_with_backup falls back to first pm' do
     # contact_email
     regional_partner = create :regional_partner, contact_email: 'contact_email@partner.net'
