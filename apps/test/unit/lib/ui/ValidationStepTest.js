@@ -19,20 +19,26 @@ describe('ValidationStep', () => {
     });
   });
 
-  it('renders help text when step is failed', () => {
+  it('renders help text when step is failed or alert', () => {
     const helpString = 'XYZZY help content';
-    const wrapper = mount(
+    let wrapper = mount(
       <ValidationStep stepName="Failed step" stepStatus={Status.FAILED}>
+        {helpString}
+      </ValidationStep>
+    );
+    expect(wrapper.text()).to.include(helpString);
+    wrapper = mount(
+      <ValidationStep stepName="Alert step" stepStatus={Status.ALERT}>
         {helpString}
       </ValidationStep>
     );
     expect(wrapper.text()).to.include(helpString);
   });
 
-  it('does not render help text when step is not failed', () => {
+  it('does not render help text when step is not failed or alert', () => {
     const helpString = 'XYZZY help content';
     Object.values(Status).forEach(status => {
-      if (status === Status.FAILED) {
+      if (status === Status.FAILED || status === Status.ALERT) {
         return;
       }
 

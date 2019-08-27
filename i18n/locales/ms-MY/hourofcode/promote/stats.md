@@ -1,13 +1,12 @@
 ---
-title: <%= hoc_s(:title_stats).inspect %>
+title: Blurbs and useful stats
 layout: wide
 nav: promote_nav
 ---
 
-
 <a id="blurb"></a>
 
-<%= view :signup_button %>
+{{ signup_button }}
 
 # Blurbs and useful stats
 
@@ -41,7 +40,7 @@ Teknologi sedang mentransformasikan setiap industri di planet ini. Pada tahun 20
 
 #### Mengenai Code.org
 
-Code.org merupakan suatu 501c3 pertubuhan awam yang bukan berasaskan keuntungan didedikasikan untuk mengembangkan penyertaan dalam sains komputer dan meningkatkan penyertaan wanita serta pelajar yang mempunyai warna kulit berbeza. Its vision is that every student in every school has the opportunity to learn computer programming. Selepas dilancarkan pada tahun 2013, Code.org telah menganjurkan kempen Hour of Code – yang telah memperkenalkan lebih daripada 100 juta orang pelajar kepada sains komputer sehingga masa ini – dan bekerjasama dengan 70 buah sekolah awam daerah di seluruh negara untuk mengembangkan program sains komputer. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. Untuk maklumat lanjut, sila layari: [<%= resolve_url('code.org') %>](%= resolve_url('https://code.org') %).
+Code.org merupakan suatu 501c3 pertubuhan awam yang bukan berasaskan keuntungan didedikasikan untuk mengembangkan penyertaan dalam sains komputer dan meningkatkan penyertaan wanita serta pelajar yang mempunyai warna kulit berbeza. Its vision is that every student in every school has the opportunity to learn computer programming. Selepas dilancarkan pada tahun 2013, Code.org telah menganjurkan kempen Hour of Code – yang telah memperkenalkan lebih daripada 100 juta orang pelajar kepada sains komputer sehingga masa ini – dan bekerjasama dengan 70 buah sekolah awam daerah di seluruh negara untuk mengembangkan program sains komputer. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. For more information, please visit: [code.org]({{ codeorg_link }}).
 
 ## Share these on social media and in emails
 
@@ -51,6 +50,6 @@ Code.org merupakan suatu 501c3 pertubuhan awam yang bukan berasaskan keuntungan 
 
 ## Infographics
 
-<%= view :stats_carousel %>
+{{ stats_carousel }}
 
-<%= view :signup_button %>
+{{ signup_button }}

@@ -1,13 +1,12 @@
 ---
-title: <%= hoc_s(:title_stats).inspect %>
+title: Blurbs and useful stats
 layout: wide
 nav: promote_nav
 ---
 
-
 <a id="blurb"></a>
 
-<%= view :signup_button %>
+{{ signup_button }}
 
 # Blurbs and useful stats
 
@@ -41,7 +40,7 @@ Hadi Partovi，Code.org的创始人和CEO曾说过“打造编程一小时就是
 
 #### 关于Code.org
 
-Code.org®是501c3公立非营利项目，致力于扩展计算机科学，增加女性和有色弱势学生群体的参与。 Its vision is that every student in every school has the opportunity to learn computer programming. 在2013年启动后，Code.org组织了编程一小时系列活动—向数以百万计的学生介绍计算机科学—和全国超过70所公立学区合作，拓展计算机科学课程。 Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. 更多详情, 请访问: [ <%= resolve_url('code.org')%> ](%= resolve_url('https://code.org') %)。
+Code.org®是501c3公立非营利项目，致力于扩展计算机科学，增加女性和有色弱势学生群体的参与。 Its vision is that every student in every school has the opportunity to learn computer programming. 在2013年启动后，Code.org组织了编程一小时系列活动—向数以百万计的学生介绍计算机科学—和全国超过70所公立学区合作，拓展计算机科学课程。 Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. For more information, please visit: [code.org]({{ codeorg_link }}).
 
 ## Share these on social media and in emails
 
@@ -51,6 +50,6 @@ Code.org®是501c3公立非营利项目，致力于扩展计算机科学，增�
 
 ## Infographics
 
-<%= view :stats_carousel %>
+{{ stats_carousel }}
 
-<%= view :signup_button %>
+{{ signup_button }}

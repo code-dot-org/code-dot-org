@@ -147,6 +147,7 @@ class Script < ActiveRecord::Base
     is_stable
     supported_locales
     pilot_experiment
+    editor_experiment
     project_sharing
     curriculum_umbrella
   )
@@ -1188,7 +1189,7 @@ class Script < ActiveRecord::Base
             hidden: general_params[:hidden].nil? ? true : general_params[:hidden], # default true
             login_required: general_params[:login_required].nil? ? false : general_params[:login_required], # default false
             wrapup_video: general_params[:wrapup_video],
-            family_name: general_params[:family_name],
+            family_name: general_params[:family_name].presence ? general_params[:family_name] : nil, # default nil
             properties: Script.build_property_hash(general_params)
           },
           script_data[:stages],
@@ -1348,6 +1349,7 @@ class Script < ActiveRecord::Base
       supported_locales: supported_locales,
       section_hidden_unit_info: section_hidden_unit_info(user),
       pilot_experiment: pilot_experiment,
+      editor_experiment: editor_experiment,
       show_assign_button: assignable?(user),
       project_sharing: project_sharing,
       curriculum_umbrella: curriculum_umbrella,
@@ -1359,6 +1361,13 @@ class Script < ActiveRecord::Base
     summary[:professionalLearningCourse] = professional_learning_course if professional_learning_course?
     summary[:wrapupVideo] = wrapup_video.key if wrapup_video
 
+    summary
+  end
+
+  def summarize_for_edit
+    include_stages = false
+    summary = summarize(include_stages)
+    summary[:stages] = stages.map(&:summarize_for_edit)
     summary
   end
 
@@ -1484,11 +1493,11 @@ class Script < ActiveRecord::Base
       has_lesson_plan: !!script_data[:has_lesson_plan],
       curriculum_path: script_data[:curriculum_path],
       script_announcements: script_data[:script_announcements] || false,
-      family_name: script_data[:family_name],
       version_year: script_data[:version_year],
       is_stable: script_data[:is_stable],
       supported_locales: script_data[:supported_locales],
       pilot_experiment: script_data[:pilot_experiment],
+      editor_experiment: script_data[:editor_experiment],
       project_sharing: !!script_data[:project_sharing],
       curriculum_umbrella: script_data[:curriculum_umbrella]
     }.compact

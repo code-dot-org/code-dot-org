@@ -39,6 +39,8 @@ class ManageStudentActionsCell extends Component {
     studentName: PropTypes.string.isRequired,
     hasEverSignedIn: PropTypes.bool,
     dependsOnThisSectionForLogin: PropTypes.bool,
+    canEdit: PropTypes.bool,
+
     // Provided by redux
     startEditingStudent: PropTypes.func,
     cancelEditingStudent: PropTypes.func,
@@ -109,12 +111,17 @@ class ManageStudentActionsCell extends Component {
       SectionLoginType.picture,
       SectionLoginType.email
     ].includes(loginType);
+
     return (
       <div>
         {!isEditing && (
           <QuickActionsCell>
-            <PopUpMenu.Item onClick={this.onEdit}>{i18n.edit()}</PopUpMenu.Item>
-            {canDelete && <MenuBreak />}
+            {this.props.canEdit && (
+              <PopUpMenu.Item onClick={this.onEdit}>
+                {i18n.edit()}
+              </PopUpMenu.Item>
+            )}
+            {this.props.canEdit && canDelete && <MenuBreak />}
             {canDelete && (
               <PopUpMenu.Item onClick={this.onRequestDelete} color={color.red}>
                 <FontAwesome icon="times-circle" style={styles.xIcon} />

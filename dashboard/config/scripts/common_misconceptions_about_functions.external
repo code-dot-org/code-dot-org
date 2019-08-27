@@ -16,7 +16,9 @@ Functions are blocks of code that is chunked together and given a name so it can
 
 
 ## Calling a Function
+
 <img src="https://images.code.org/4550aa5b8266da4fb51582e80f9b4819-image-1479789227708.33.27 PM.png" width=“75” style="float:left; margin-right:10px">
+
 When you call a function you are telling the computer to run (or execute) that set of actions. The function described above would be called like this: square(); 
 
 ## Placement of Function Definitions and Calls

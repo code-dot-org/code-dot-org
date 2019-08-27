@@ -1,9 +1,10 @@
 ---
-title: <%= hoc_s(:title_press_kit).inspect %>
+title: Presskit
 layout: wide
 nav: promote_nav
 ---
-<%= view :signup_button %>
+
+{{ signup_button }}
 
 # How to attract media to your Hour of Code event
 
@@ -18,17 +19,17 @@ nav: promote_nav
 - Gå ut till media två veckor innan ditt evenemang via e-post. Följ upp via e-post och telefon om du inte får ett första svar.
 - Be en anställd vid en skola eller en volontär att ta bilder att dela online eller skicka till pressen.
 - Skriv om "Hour of Code" på din webbplats startsida och i skoltidningen. Publicera detaljer om vad som kommer att hända och ta bilder av elevaktiviteter.
-- On Facebook and Twitter, share updates on your plans, announce your events, and post pictures during <%= campaign_date('year') %>. Use the hashtag **#HourOfCode** so Code.org can see and promote your events.
+- On Facebook and Twitter, share updates on your plans, announce your events, and post pictures during {{ campaign_date/year }}. Use the hashtag **#HourOfCode** so Code.org can see and promote your events.
 
 ## Step-by-step guide
 
 ### 1. Plan your event
 
 - Skapa en grupp för att inviga "Hour of Code".
-- Send [a letter](%= resolve_url('/promote/resources#sample-emails') %) to parents and ask them to spread the word.
-- Send [a letter](%= resolve_url('/promote/resources#sample-emails') %) to invite your local mayor, member of Congress, governor, or influential businessperson to attend and speak to your students.
+- Send [a letter]({{ promote/sample_emails }}) to parents and ask them to spread the word.
+- Send [a letter]({{ promote/sample_emails }}) to invite your local mayor, member of Congress, governor, or influential businessperson to attend and speak to your students.
 - Ordna gruppaktiviteter (som en demo av en 'unplugged' programmeringsaktivitet) eller visa upp vad eleverna har lyckats utveckla.
-- Show Code.org’s [Hour of Code video](%= resolve_url('/') %) or one of [these videos](%= resolve_url('/promote/resources#videos') %) to inspire students. <br />
+- Show Code.org’s [Hour of Code video]({{ urls/home }}) or one of [these videos]({{ promote/videos }}) to inspire students. <br />
 
 ### 2. Identify specific reporters that cover education or local events
 
@@ -36,7 +37,7 @@ Like local newspapers, TV station or radio stations, or blogs. <br />
 
 ### 3. Contact local media
 
-The best way to reach out is by email. It should be short and should communicate "why should other people care about this event"? Include contact information (including a cellphone number) for who will be on site at the event. **[See a sample pitch to media](%= resolve_url('/promote/press-kit#sample-emails') %)**.
+The best way to reach out is by email. It should be short and should communicate "why should other people care about this event"? Include contact information (including a cellphone number) for who will be on site at the event. **[See a sample pitch to media]({{ promote/press-kit-emails }})**.
 
 Look online to find reporter contact information. If you can't find it, call the publication to ask, or email the organization's general email address and ask for your message to be directed to the correct reporter. <br />
 
@@ -78,9 +79,9 @@ I look forward to being in touch. <br />
 
 #### Om Code.org
 
-Code.org är en offentlig, ideell organisation till förmån för ett större intresse för datavetenskap och med mål om större jämställhet inom IT-området. Its vision is that every student in every school has the opportunity to learn computer programming. Efter lanseringen år 2013, har Code.org organiserade kampanjen "Hour of Code" – som har introducerad över 100 miljoner elever till datavetenskap hittills. Man samarbetar i USA med 70 offentliga skoldistrikt för att rikstäckande expandera datorvetenskapliga program. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. For more information, please visit: [<%= resolve_url('code.org') %>](%= resolve_url('https://code.org') %).
+Code.org är en offentlig, ideell organisation till förmån för ett större intresse för datavetenskap och med mål om större jämställhet inom IT-området. Its vision is that every student in every school has the opportunity to learn computer programming. Efter lanseringen år 2013, har Code.org organiserade kampanjen "Hour of Code" – som har introducerad över 100 miljoner elever till datavetenskap hittills. Man samarbetar i USA med 70 offentliga skoldistrikt för att rikstäckande expandera datorvetenskapliga program. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. For more information, please visit: [code.org]({{ urls/codeorg }}).
 
   
-Find more resources and sample emails [here](%= resolve_url('/promote/resources#sample-emails') %).
+Find more resources and sample emails [here]({{ promote/sample_emails }}).
 
-<%= view :signup_button %>
+{{ signup_button }}

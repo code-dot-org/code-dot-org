@@ -1,47 +1,48 @@
 ---
-title: <%= hoc_s(:title_press_release).inspect %>
+title: Hour of Code Press Release for Elected Officials
 layout: wide
 nav: promote_nav
 ---
-<%= view :signup_button %>
 
-# Sample press release for elected officials
+{{ signup_button }}
 
-### Use this sample press release language to help craft your message about participating in the Hour of Code.
+# Sajtóminta a választott tisztviselőknek
+
+### Használja ennek a sajtóközleménymintának a nyelvezetét, hogy segítsen hatásosabbá tenni az üzeneteket a Kódolás Órája-ban való részvételről.
 
 * * *
 
-#### For Immediate Release  
+#### Azonnali kiadásra  
 
 
 #### [DATE]  
 
 
-#### Contact: [CONTACT INFORMATION]
+#### Kapcsolat: [CONTACT INFORMATION]
 
 <br />
 
-**GOVERNOR/SENATOR/ASSEMBLYMEMBER/REPRESENTATIVE/MAYOR/ COUNCILMEMBER [INSERT NAME] PARTICIPATED IN THE HOUR OF CODE WITH LOCAL STUDENTS** <br />
+**VEZETŐ/SZENÁTOR/ KÖVETSÉGITAG/TÁMOGATÓ/ELÖLJÁRÓ/ TANÁCS TAGJA [INSERT NAME] RÉSZT VESZ A KÓDOLÁS ÓRÁJÁBAN HELYI TANULÓKKAL** <br /></p> 
 
-Community comes together to raise awareness about importance of computer science education by participating in Computer Science Education Week <br /> <br />
+A közösség összejön, hogy felhívja a figyelmet a számítástechnika oktatás fontosságára azáltal, hogy részt vesz a Számítástechnikai Oktatási Héten <br /> <br />
 
-**DATE** - [**INSERT NAME**] joined the principal and faculty members of [**INSERT NAME OF SCHOOL**], business leaders, and local families today for [**NAME OF EVENT**] and participated in the Hour of Code as part of Computer Science Education Week . [**INSERT NAME**] and community members were among tens of millions of people around the world to take part in the largest learning event in history. <br />
+** DATE ** - [** INSERT NAME **] csatlakozott a főiskolai és oktatási tagokhoz az [**INSERT NAME OF SCHOOL ** iskolából, az üzleti vezetőknek és a helyi családok[ ** NAME OF EVENT **]-án, és részt vett a Számítógépes Oktatási Hét részeként a Kódólás Óráján. [** INSERT NAME **] és a közösség tagjai több tízmillió ember között voltak a világ minden tájáról, hogy részt vegyenek a történelem legnagyobb tanulási eseményében. <br />
 
-[**INSERT DETAILS OF EVENT, USE DESCRIPTIVE AND QUANTIFIABLE LANGUAGE. FOR EXAMPLE:**]  
-“Daniels Run Elementary school held a school-wide Hour of Code event to introduce its students to computer science. More than 700 students from all grades did at least one Hour of Code. A dozen parents and volunteers from the community helped with the day and brought the kids together for an assembly showcasing why computer science matters in the lives of these students.” <br />
+[** AZ ESEMÉNY RÉSZLETEIT ÍRD IDE, HASZNÁLJ LEÍRÓ ÉS MENNYISÉGI NYELVET. Például:**]  
+A Daniels Run Általános Iskolában egy teljes iskolára kiterjedő Kódolás Órája órát szerveztek, hogy népszerűsítsék a számítástechnikát. Több mint 700 diák vett részt a Kódolás Óráján az egész iskolából. Egy tucat szülő és önkéntes a közösségből segített, és szervezték a gyerekeket egy csoportba, amely bemutatja, miért fontos a számítástechnika ezeknek a diákoknak az életében <br />
 
-[**SAMPLE STOCK TEXT FOR CONTEXT:**]  
-Computers are everywhere, but fewer schools teach computer science than 10 years ago. Girls and students of color are severely underrepresented. The good news is we’re changing this for the better. The Hour of Code is gateway toward providing all students with access to high-quality computer science education. <br />
+[**Minta szövegkörnyezetre:**]  
+A számítógépek mindenütt megtalálhatók, de kevesebb iskola tanít számítástechnikát, mint 10 évvel ezelőtt. A színes lányok és diákok súlyosan alulreprezentáltak. A jó hír az, hogy ezt jobbra változtatjuk. A Kódolás Órája a kaput nyit a hallgatók számára a kiváló minőségű informatikai oktatáshoz való hozzáférést. <br />
 
-Over 100 million students worldwide have already tried an Hour of Code. Thanks to the Hour of Code, computer science was on homepages of Google, MSN, Yahoo!, and Disney. President Obama, Shakira, and Ashton Kutcher have all kicked off the Hour of Code with videos. Over 100 partners came together to support this movement. <br />
+Világszinten 100 milliónál is több diák tanult a Kódolás Órája keretében. A Kódolás Órájának köszönhetően a számítástechnika a Google, az MSN, a Yahoo! és a Disney honlapján is szerepelt. Obama elnök, Shakira és Ashton Kutcher saját videóikkal indították el a Hour of Code eseményt. Több mint 100 partner fogott össze, hogy támogassa ezt a mozgalmat. <br />
 
 [**INSERT QUOTE FROM SPOKESPERSON, EXAMPLE BELOW:**]  
-“We need to encourage and embrace our students’ interest in computer science,” said [**INSERT NAME**]. “Every student deserves the chance to learn computer science to access the best careers of the 21st century.” <br />
+“Bátorítanunk kell diákjainkat és fel kell keltenünk diákjaink érdeklődését a számítógép-tudomány iránt, ”mondta [**INSERT NAME**]. „Minden diák megérdemli a számítógépes tudomány megismerésének lehetőségét, hogy hozzáférjen a 21. század legjobb karrierjéhez.” <br />
 
-[**INSERT MORE INFORMATION ABOUT YOUR EVENT AND/OR YOUR ORGANIZATION**] <br />
+[**TOVÁBBI INFORMÁCIÓK AZ ESEMÉNYEDRŐL ÉS / VAGY A SZERVEZETEDRŐL**] <br />
 
-[**INSERT QUOTE FROM ANOTHER ORGANIZATION OR SOMEONE WHO ATTENDED THE EVENT**] <br />
+[**ILLESSZ BE MÁSIK SZERVEZET IDÉZETÉT VAGY VALAKIT AKI RÉSZT VETT AZ ESEMÉNYEN**] <br />
 
-For more information about [**EVENT/PROGRAM/ETC**], visit [**INSERT WEBSITE**] or contact [**INSERT CONTACT INFORMATION**]
+További információkért [**EVENT/PROGRAM/ETC**], látogasd meg[**INSERT WEBSITE**] vagy lépj kapcsolatba [**INSERT CONTACT INFORMATION**]
 
-<%= view :signup_button %>
+{{ signup_button }}

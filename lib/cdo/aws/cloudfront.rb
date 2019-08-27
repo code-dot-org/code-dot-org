@@ -152,8 +152,8 @@ module AWS
               ResponseCode: error,
               ResponsePagePath: '/assets/error-pages/site-down.html'
             }.tap do |error_response_hash|
-              # Don't use friendly error pages on LevelBuilder to ensure content editors can debug errors.
-              if CDO.pegasus_hostname == 'levelbuilder.code.org'
+              # Don't use friendly error pages on some environments (such as adhocs and LevelBuilder).
+              unless CDO.custom_error_response
                 error_response_hash[:ErrorCachingMinTTL] = 0
                 error_response_hash.delete(:ResponseCode)
                 error_response_hash.delete(:ResponsePagePath)
