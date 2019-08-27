@@ -147,6 +147,7 @@ class Script < ActiveRecord::Base
     is_stable
     supported_locales
     pilot_experiment
+    editor_experiment
     project_sharing
     curriculum_umbrella
   )
@@ -1348,6 +1349,7 @@ class Script < ActiveRecord::Base
       supported_locales: supported_locales,
       section_hidden_unit_info: section_hidden_unit_info(user),
       pilot_experiment: pilot_experiment,
+      editor_experiment: editor_experiment,
       show_assign_button: assignable?(user),
       project_sharing: project_sharing,
       curriculum_umbrella: curriculum_umbrella,
@@ -1495,6 +1497,7 @@ class Script < ActiveRecord::Base
       is_stable: script_data[:is_stable],
       supported_locales: script_data[:supported_locales],
       pilot_experiment: script_data[:pilot_experiment],
+      editor_experiment: script_data[:editor_experiment],
       project_sharing: !!script_data[:project_sharing],
       curriculum_umbrella: script_data[:curriculum_umbrella]
     }.compact
