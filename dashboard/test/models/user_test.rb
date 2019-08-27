@@ -1223,37 +1223,6 @@ class UserTest < ActiveSupport::TestCase
     assert @student.urm
   end
 
-  test 'urm_from_races with nil' do
-    @student.update!(races: nil)
-    assert_nil @student.urm_from_races
-  end
-
-  test 'urm_from_races with empty string' do
-    @student.update!(races: '')
-    assert_nil @student.urm_from_races
-  end
-
-  test 'urm_from_races with non-answer responses' do
-    %w(opt_out nonsense closed_dialog).each do |response|
-      @student.update!(races: response)
-      assert_nil @student.urm_from_races
-    end
-  end
-
-  test 'urm_from_races with urm responses' do
-    ['white,black', 'hispanic,hawaiian', 'american_indian'].each do |response|
-      @student.update!(races: response)
-      assert @student.urm_from_races
-    end
-  end
-
-  test 'urm_from_races with non-urm response' do
-    ['white', 'white,asian', 'asian'].each do |response|
-      @student.update!(races: response)
-      refute @student.urm_from_races
-    end
-  end
-
   test 'under 13' do
     user = create :user
     refute user.under_13?

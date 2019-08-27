@@ -14,7 +14,7 @@ User.with_deleted.where("properties LIKE '%races%'").find_in_batches(batch_size:
       races_comma_separated = user.races.join(',')
       # Note that this sets the ActiveRecord column rather than the SerializedProperties key.
       user.update_column :races, races_comma_separated
-      user.update_column :urm, User.urm_from_races(races_comma_separated)
+      user.update_column :urm, Race.any_urm?(races_comma_separated)
     end
   end
   puts "PROCESSED: #{batch_number}..."

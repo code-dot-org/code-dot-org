@@ -7,7 +7,7 @@
       .left.full-width
         = form_for(current_user, url: registration_url('user'), html: {id: 'edit_user'}) do |f|
           .form-group
-            - User::DISPLAY_RACES.map do |race|
+            - Race::DISPLAY_RACES.map do |race|
               = f.label "races_#{race}" do
                 = f.check_box "races", {class: 'race-checkbox', multiple: true}, race, nil
                 = t(race, scope: 'race_interstitial.races')
