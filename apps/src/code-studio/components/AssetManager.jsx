@@ -58,6 +58,7 @@ export default class AssetManager extends React.Component {
     disableAudioRecording: PropTypes.bool,
     projectId: PropTypes.string,
     levelName: PropTypes.string,
+    isStartMode: PropTypes.bool,
 
     // For logging purposes
     imagePicker: PropTypes.bool, // identifies if displayed by 'Manage Assets' flow
@@ -158,14 +159,21 @@ export default class AssetManager extends React.Component {
   };
 
   onUploadDone = result => {
-    assetListStore.add(result);
-    if (this.props.assetsChanged) {
-      this.props.assetsChanged();
-    }
-    this.setState({
-      assets: assetListStore.list(this.props.allowedExtensions),
+    let newState = {
       statusMessage: 'File "' + result.filename + '" successfully uploaded!'
-    });
+    };
+
+    if (this.props.isStartMode) {
+      newState.starterAssets = [...this.state.starterAssets, result];
+    } else {
+      assetListStore.add(result);
+      if (this.props.assetsChanged) {
+        this.props.assetsChanged();
+      }
+      newState.assets = assetListStore.list(this.props.allowedExtensions);
+    }
+
+    this.setState(newState);
   };
 
   onUploadError = status => {
@@ -262,6 +270,21 @@ export default class AssetManager extends React.Component {
     });
   };
 
+  uploadApi = () => {
+    if (this.props.isStartMode) {
+      return starterAssetsApi.withLevelName(this.props.levelName);
+    } else {
+      let api = this.props.useFilesApi ? filesApi : assetsApi;
+
+      // Bind API if it isn't already bound
+      if (!api.getProjectId()) {
+        api = api.withProjectId(this.props.projectId);
+      }
+
+      return api;
+    }
+  };
+
   render() {
     const displayAudioRecorder =
       this.state.audioErrorType !== AudioErrorType.INITIALIZE &&
@@ -284,7 +307,7 @@ export default class AssetManager extends React.Component {
         <AddAssetButtonRow
           uploadsEnabled={this.props.uploadsEnabled}
           allowedExtensions={this.props.allowedExtensions}
-          useFilesApi={this.props.useFilesApi}
+          api={this.uploadApi()}
           onUploadStart={this.onUploadStart}
           onUploadDone={this.onUploadDone}
           onUploadError={this.onUploadError}
