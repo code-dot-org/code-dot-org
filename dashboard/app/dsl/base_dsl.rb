@@ -3,6 +3,10 @@ class BaseDSL
     @hash = {}
   end
 
+  def name(text)
+    @name = text
+  end
+
   # returns 'xyz' from 'XyzDSL' subclasses
   def prefix
     self.class.to_s.tap {|s| s.slice!('DSL')}.underscore
