@@ -95,7 +95,7 @@ module Cdo
             }.to_json
           )
         end
-
+      ensure
         super(locale, key, options)
       end
     end
