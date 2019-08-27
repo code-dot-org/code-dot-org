@@ -12,6 +12,7 @@ import {
   isWindows,
   isLinux
 } from '../util/browserChecks';
+import {isWebUsbAvailable} from '../portScanning';
 import Button, {ButtonColor, ButtonSize} from '../../../../templates/Button';
 import ToggleGroup from '../../../../templates/ToggleGroup';
 import FontAwesome from '../../../../templates/FontAwesome';
@@ -29,7 +30,7 @@ export default class SetupGuide extends React.Component {
   }
 
   render() {
-    if (isCodeOrgBrowser() || isChromeOS()) {
+    if (isCodeOrgBrowser() || isChromeOS() || isWebUsbAvailable()) {
       return <SetupChecklist setupChecker={this.setupChecker} />;
     }
     return <Downloads />;

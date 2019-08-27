@@ -53,7 +53,7 @@ export function findPortWithViableDevice() {
  * @returns {Promise} Resolves if installed, rejects if not.
  */
 export function ensureAppInstalled() {
-  if (isNodeSerialAvailable()) {
+  if (isNodeSerialAvailable() || isWebUsbAvailable()) {
     return Promise.resolve();
   }
 
@@ -68,14 +68,21 @@ export function ensureAppInstalled() {
  * @returns {Promise.<Array.<SerialPortInfo>>}
  */
 function listSerialDevices() {
-  const SerialPortType = isNodeSerialAvailable()
-    ? SerialPort
-    : ChromeSerialPort;
-  return new Promise((resolve, reject) => {
-    SerialPortType.list((error, list) =>
-      error ? reject(error) : resolve(list)
-    );
-  });
+  if (isWebUsbAvailable()) {
+    console.log('List the serial device options');
+    return navigator.usb.getDevices().then(ports => {
+      return ports;
+    });
+  } else {
+    const SerialPortType = isNodeSerialAvailable()
+      ? SerialPort
+      : ChromeSerialPort;
+    return new Promise((resolve, reject) => {
+      SerialPortType.list((error, list) =>
+        error ? reject(error) : resolve(list)
+      );
+    });
+  }
 }
 
 /**
@@ -100,43 +107,81 @@ export function isWebUsbAvailable() {
  * @return {SerialPortInfo|undefined} the best option, if one is found
  */
 export function getPreferredPort(portList) {
-  // 1. Best case: Correct vid and pid
-  const adafruitCircuitPlayground = portList.find(
-    port =>
-      parseInt(port.vendorId, 16) === ADAFRUIT_VID &&
-      parseInt(port.productId, 16) === CIRCUIT_PLAYGROUND_PID
-  );
-  if (adafruitCircuitPlayground) {
-    return adafruitCircuitPlayground;
-  }
-
-  // 2. Next-best case: Circuit Playground Express
-  const adafruitExpress = portList.find(
-    port =>
-      parseInt(port.vendorId, 16) === ADAFRUIT_VID &&
-      parseInt(port.productId, 16) === CIRCUIT_PLAYGROUND_EXPRESS_PID
-  );
-  if (adafruitExpress) {
-    return adafruitExpress;
-  }
-
-  // 3. Next best case: Some other Adafruit product that might also work
-  const otherAdafruit = portList.find(
-    port => parseInt(port.vendorId, 16) === ADAFRUIT_VID
-  );
-  if (otherAdafruit) {
-    return otherAdafruit;
-  }
-
-  // 4. Last-ditch effort: Anything with a probably-usable port name and
-  //    a valid vendor id and product id
-  const comNameRegex = /usb|acm|^com/i;
-  return portList.find(port => {
-    const {comName, vendorId, productId} = port;
-    return (
-      comNameRegex.test(comName) &&
-      parseInt(vendorId, 16) > 0 &&
-      parseInt(productId, 16) > 0
+  console.log('Get preferred port');
+  //TODO: epeach - clean up this monster conditional
+  if (isWebUsbAvailable()) {
+    // 1. Best case: Correct vid and pid
+    const adafruitCircuitPlayground = portList.find(
+      port =>
+        port.vendorId === ADAFRUIT_VID &&
+        port.productId === CIRCUIT_PLAYGROUND_PID
     );
-  });
+    if (adafruitCircuitPlayground) {
+      return adafruitCircuitPlayground;
+    }
+
+    // 2. Next-best case: Circuit Playground Express
+    const adafruitExpress = portList.find(
+      port =>
+        port.vendorId === ADAFRUIT_VID &&
+        port.productId === CIRCUIT_PLAYGROUND_EXPRESS_PID
+    );
+    if (adafruitExpress) {
+      return adafruitExpress;
+    }
+
+    // 3. Next best case: Some other Adafruit product that might also work
+    const otherAdafruit = portList.find(port => port.vendorId === ADAFRUIT_VID);
+    if (otherAdafruit) {
+      return otherAdafruit;
+    }
+
+    // 4. Last-ditch effort: Anything with a probably-usable port name and
+    //    a valid vendor id and product id
+    const comNameRegex = /usb|acm|^com/i;
+    return portList.find(port => {
+      const {comName, vendorId, productId} = port;
+      return comNameRegex.test(comName) && vendorId > 0 && productId > 0;
+    });
+  } else {
+    // 1. Best case: Correct vid and pid
+    const adafruitCircuitPlayground = portList.find(
+      port =>
+        parseInt(port.vendorId, 16) === ADAFRUIT_VID &&
+        parseInt(port.productId, 16) === CIRCUIT_PLAYGROUND_PID
+    );
+    if (adafruitCircuitPlayground) {
+      return adafruitCircuitPlayground;
+    }
+
+    // 2. Next-best case: Circuit Playground Express
+    const adafruitExpress = portList.find(
+      port =>
+        parseInt(port.vendorId, 16) === ADAFRUIT_VID &&
+        parseInt(port.productId, 16) === CIRCUIT_PLAYGROUND_EXPRESS_PID
+    );
+    if (adafruitExpress) {
+      return adafruitExpress;
+    }
+
+    // 3. Next best case: Some other Adafruit product that might also work
+    const otherAdafruit = portList.find(
+      port => parseInt(port.vendorId, 16) === ADAFRUIT_VID
+    );
+    if (otherAdafruit) {
+      return otherAdafruit;
+    }
+
+    // 4. Last-ditch effort: Anything with a probably-usable port name and
+    //    a valid vendor id and product id
+    const comNameRegex = /usb|acm|^com/i;
+    return portList.find(port => {
+      const {comName, vendorId, productId} = port;
+      return (
+        comNameRegex.test(comName) &&
+        parseInt(vendorId, 16) > 0 &&
+        parseInt(productId, 16) > 0
+      );
+    });
+  }
 }
