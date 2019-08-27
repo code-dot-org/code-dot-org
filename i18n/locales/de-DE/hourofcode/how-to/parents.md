@@ -1,9 +1,10 @@
 ---
-title: <%= hoc_s(:title_how_to_parents).inspect %>
+title: Leitfaden für Eltern
 layout: wide
 nav: how_to_nav
 ---
-<%= view :signup_button %>
+
+{{ signup_button }}
 
 # How to do an Hour of Code with your child
 
@@ -15,11 +16,11 @@ nav: how_to_nav
 
 ## 2) Choose a tutorial
 
-We provide a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. [Try them out!](%= resolve_url('/learn') %)
+We provide a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. [Try them out!]({{ urls/learn }})
 
 **All Hour of Code tutorials are self-guided - allowing your child to work at their own pace and skill level**
 
-[![](/images/fit-700/tutorials.png)](%= resolve_url('/learn') %)
+[![](/images/fit-700/tutorials.png)]({{ urls/learn }})
 
 ## 3) Planen Sie Ihren Bedarf an technischer Ausstattung
 
@@ -36,13 +37,13 @@ Beginnen Sie Ihre Hour of Code, indem Sie Ihr Kind begeistern und mit ihm diskut
 - Das original "Hour of Code"-Einführungsvideo mit Bill Gates, Mark Zuckerberg und NBA-Star Chris Bosch ([1-minütige](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 -minütige](https://www.youtube.com/watch?v=nKIu9yen5nc) und [9-minütige](https://www.youtube.com/watch?v=dU1xS07N-FA) Version).
 - The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A).
 - [US-Präsident Obama fordert alle Schüler auf, Informatik zu lernen](https://www.youtube.com/watch?v=6XvmhE1J9PY).
-- Find more inspirational [resources](%= codeorg_url('/inspire') %) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+- Find more inspirational [resources]({{ urls/inspire }}) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
 Es ist in Ordnung, wenn Sie und Ihr Kind absolute Neulinge in Informatik sind. Hier finden Sie einige Ideen, wie Sie Ihr Hour of Code-Training vorstellen können:
 
 - Explain ways technology impacts our lives, with examples both boys and girls will care about (Talk about saving lives, helping people, connecting people, etc.).
 - Zählen Sie auf, wo überall im täglichen Leben Code verwendet wird.
-- See tips for getting girls interested in computer science [here](%= codeorg_url('/girls') %).
+- See tips for getting girls interested in computer science [here]({{ urls/girls }}).
 
 Brauchen Sie weitere Ideen? Schauen Sie sich unsere [Vorlage Unterrichtsplan](/files/AfterschoolEducatorLessonPlanOutline.docx) mit gelungenen Beispielen erfahrener Pädagoginnen und Pädagogen an.
 
@@ -62,7 +63,7 @@ Es ist in Ordnung, darauf so zu antworten:
 
 ## 6) Feiern Sie!
 
-[Print certificates](%= codeorg_url('/certificates') %) for your child (and yourself!).
+[Print certificates]({{ urls/certificates }}) for your child (and yourself!).
 
 Teilen Sie Fotos und Videos Ihrer Hour of Code-Veranstaltung in den sozialen Medien. Verwenden Sie #HourOfCode und @codeorg, damit wir Ihren Erfolg auch hervorheben können!
 
@@ -72,7 +73,7 @@ Review the [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/20014
 
 The Hour of Code is just the first step in a journey to learn more about how technology works and how to create software applications. To continue this journey:
 
-- Encourage your child to continue [to learn online](%= codeorg_url('/learn/beyond') %).
-- Help [promote](%= resolve_url('/promote') %) computer science education in your child’s school district.
+- Encourage your child to continue [to learn online]({{ urls/learn_beyond }}).
+- Help [promote]({{ urls/promote }}) computer science education in your child’s school district.
 
-<%= view :signup_button %>
+{{ signup_button }}

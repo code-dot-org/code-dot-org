@@ -1,9 +1,10 @@
 ---
-title: <%= hoc_s(:title_how_to_events).inspect %>
+title: Hour of Code Event How-To
 layout: wide
 nav: how_to_nav
 ---
-<%= view :signup_button %>
+
+{{ signup_button }}
 
 # How to organize an Hour of Code assembly or event
 
@@ -14,13 +15,13 @@ nav: how_to_nav
 ## 1. Chuẩn bị cho sự kiện
 
 - Xác định địa điểm, ngày và giờ tổ chức.
-- Send [a letter](https://hourofcode.com/promote/resources#sample-emails) to your local mayor, member of Congress, governor, or influential business person and invite them to speak. Check out our [how-to toolkit](%=localized_file('/files/elected-official.pdf')%) when hosting an elected official during an Hour of Code for more info.
-- Mời các đơn vị truyền thông/báo chí, bao gồm truyền hình địa phương, báo chí và các blogger về giáo dục/công nghệ. Xem [ bộ công cụ báo chí ](<%= hoc_uri('/resources/press-kit') %>) của chúng tôi để được giúp đỡ.
+- Send [a letter](https://hourofcode.com/promote/resources#sample-emails) to your local mayor, member of Congress, governor, or influential business person and invite them to speak. Check out our [how-to toolkit]({{ localized_files/elected_official }}) when hosting an elected official during an Hour of Code for more info.
+- Invite media/press. i.e. local news station, newspaper, education/tech bloggers. See our [press kit]({{ promote/press_kit_url }}) for help.
 
 ## 2. Trong suốt sự kiện
 
-- Khởi động sự kiện của bạn với một trong những [video truyền cảm hứng](%= resolve_url('/promote/resources#videos') %) của chúng tôi.
-- Đưa ra một bài giới thiệu tổng quan về tầm quan trọng của khoa học máy tính, sử dụng những [ số liệu thống kê và đồ thị](<%= hoc_uri('/resources/stats') %>) này.   
+- Kick off your event with one of our [inspirational videos]({{ promote/videos }}).
+- Give an intro overviewing the importance of computer science, using these [stats and infographics]({{ promote/stats_url }}).   
       
     
 - **Other event ideas**: 
@@ -46,7 +47,7 @@ Consider hosting a K-5 evening event and invite parents to join their students f
 
 **Event:** School-wide Computer Science Education Week kick-off assembly
 
-**Date:** <%= campaign_date('start-short') %> (start of Computer Science Education Week)
+**Date:** {{ campaign_date/start_short }} (start of Computer Science Education Week)
 
 **Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
 
@@ -56,11 +57,11 @@ Consider hosting a K-5 evening event and invite parents to join their students f
 
 | Thời gian   | Hoạt động                                                                                                                                                            |
 | ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 10:00-10:05 | Open with one of our [inspirational videos](%= resolve_url('/promote/resources#videos') %).                                                                          |
-| 10:05-10:15 | Hiệu trưởng giới thiệu tổng quan về tầm quan trọng của khoa học máy vi tính, sử dụng những [ số liệu thống kê và đồ thị](<%= hoc_uri('/resources/stats') %>) này.   |
+| 10:00-10:05 | Open with one of our [inspirational videos]({{ promote/videos }}).                                                                                                   |
+| 10:05-10:15 | Principal gives an intro overviewing the importance of computer science. Use these [stats and infographics]({{ promote/stats_url }}).                                |
 | 10:17-10:30 | Khách mời đặc biệt nói về lý lịch/công việc của họ và làm thế nào mà khoa học công nghệ và máy vi tính đóng một vai trò quan trọng trong cuộc sống hàng ngày của họ. |
 | 10:30-10:40 | Học sinh làm một bản giới thiệu về Giờ Lập trình cho trường học. Khuấy động không khí: để học sinh dạy cho hiệu trưởng, chính trị gia hoặc các học sinh khác!        |
 | 10:40-11:00 | Sinh viên làm ví dụ một hoạt động không cần máy vi tính và giới thiệu cách mà khoa học máy vi tính có thể được giảng dạy mà không sử dụng máy tính.                  |
 | 11:00-11:05 | Giáo viên, người đã giúp đỡ tổ chức sự kiện toàn trường đưa ra bài phát biểu bế mạc.                                                                                 |
 
-<%= view :signup_button %>
+{{ signup_button }}

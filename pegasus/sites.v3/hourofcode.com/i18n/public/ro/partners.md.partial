@@ -1,0 +1,41 @@
+---
+title: Parteneri
+---
+
+Hour of Code este condus de catre comitetul Hour of code si Computer Science Education Week.
+
+The [Advisory Committee]({{ urls/advisory_committee }}) is composed of representatives from K-12, academia, nonprofits, for-profits, and international organizations. Acest comitet ghideaza strategia pentru campania Hour of Code.
+
+The [Review Committee]({{ urls/review_committee }}) is composed of 15 educators across K-12 grade bands that assess and recommend activities using the Advisory Committee's rubric. Aceste cadre didactice revizuiesc activitățile conduse de elevi şi planurile de lecţie conduse de profesor transmise de sute de parteneri, evaluând valoarea educativă a activităților, capacitatea de a capta cursanţii şi atractivitatea potenţială către diverse tipuri de studenţi.
+
+Munca şi dedicarea ambelor comitete au contribuit la succesul Hour of Code şi la viziunea sa de a oferi o introducere în informatică pentru fiecare student.
+
+# Major Partners and Corporate Supporters
+
+{{ partners/major_partners_corporate_supporters }}
+
+---
+
+# International Partners
+
+{{ partners/international_partners }}
+
+---
+
+# Curriculum and Tutorial Partners
+
+{{ partners/curriculum_tutorial_partners }}
+
+---
+
+# Infrastructure Partners and Tools
+
+{{ partners/infrastructure_partners_tools }}
+
+---
+
+# Additional Partners
+
+{{ partners/additional_partners }}
+
+{{ signup_button }}

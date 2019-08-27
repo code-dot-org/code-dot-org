@@ -1,13 +1,12 @@
 ---
-title: <%= hoc_s(:title_stats).inspect %>
+title: Blurbs and useful stats
 layout: wide
 nav: promote_nav
 ---
 
-
 <a id="blurb"></a>
 
-<%= view :signup_button %>
+{{ signup_button }}
 
 # Blurbs and useful stats
 
@@ -41,7 +40,7 @@ Code.org'un kurucusu ve CEO'su Hadi Partovi, "The Hour of Code, kodun gizemini a
 
 #### Code.org hakkında
 
-Code.org bir 501c3 halka açık, kar amacı gütmeyen, bilgisayar bilimine katılımı arttırmayı; özellikle de kadınlar ve azınlık ırklardan öğrencilerin katılımını çoğaltmayı amaç edinmiş bir organizasyondur. Its vision is that every student in every school has the opportunity to learn computer programming. 2013'te başladığından itibaren Code.org, Code of the Hour kampanyasını başlattı – bugüne kadar 100 milyondan fazla öğrenciyi bilgisayar bilimleri ile tanıştırmıştır – ve bilgisayar bilimleri programlarını genişletmek için ülke çapında 70 yerel okul bölgesiyle ortaklık kurdu. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. Daha fazla bilgi için lütfen ziyaret edin: [<%= resolve_url('code.org') %>](%= resolve_url('https://code.org') %).
+Code.org bir 501c3 halka açık, kar amacı gütmeyen, bilgisayar bilimine katılımı arttırmayı; özellikle de kadınlar ve azınlık ırklardan öğrencilerin katılımını çoğaltmayı amaç edinmiş bir organizasyondur. Its vision is that every student in every school has the opportunity to learn computer programming. 2013'te başladığından itibaren Code.org, Code of the Hour kampanyasını başlattı – bugüne kadar 100 milyondan fazla öğrenciyi bilgisayar bilimleri ile tanıştırmıştır – ve bilgisayar bilimleri programlarını genişletmek için ülke çapında 70 yerel okul bölgesiyle ortaklık kurdu. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. For more information, please visit: [code.org]({{ codeorg_link }}).
 
 ## Share these on social media and in emails
 
@@ -51,6 +50,6 @@ Code.org bir 501c3 halka açık, kar amacı gütmeyen, bilgisayar bilimine katı
 
 ## Infographics
 
-<%= view :stats_carousel %>
+{{ stats_carousel }}
 
-<%= view :signup_button %>
+{{ signup_button }}

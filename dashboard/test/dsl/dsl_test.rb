@@ -32,6 +32,7 @@ class DslTest < ActiveSupport::TestCase
     is_stable: nil,
     supported_locales: [],
     pilot_experiment: nil,
+    editor_experiment: nil,
     project_sharing: nil,
     curriculum_umbrella: nil
   }
@@ -450,6 +451,28 @@ level 'Level 1'
 DSL
     output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
     assert_equal 'science-experiment', output[:pilot_experiment]
+  end
+
+  test 'can set editor_experiment' do
+    input_dsl = <<DSL
+editor_experiment 'script-editors'
+
+stage 'Stage1'
+level 'Level 1'
+DSL
+    output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
+    assert_equal 'script-editors', output[:editor_experiment]
+  end
+
+  test 'serialize editor_experiment' do
+    script = create :script, editor_experiment: 'editors'
+    script_text = ScriptDSL.serialize_to_string(script)
+    expected = <<-SCRIPT
+hidden false
+editor_experiment 'editors'
+
+    SCRIPT
+    assert_equal expected, script_text
   end
 
   test 'Script DSL with level progressions' do

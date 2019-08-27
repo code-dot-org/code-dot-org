@@ -1,9 +1,10 @@
 ---
-title: <%= hoc_s(:title_how_to_volunteers).inspect %>
+title: Ыктыярчылар үчүн Код саатын өткөзүү жетектемеси
 layout: wide
 nav: how_to_nav
 ---
-<%= view :signup_button %>
+
+{{ signup_button }}
 
 # Ыктыярчылар үчүн жетектеме
 
@@ -43,11 +44,11 @@ You can be a guest speaker in a classroom, or help a teacher run the activity. V
 
 <ol>
   <li>
-    <a href="%= resolve_url('/promote/resources#help-schools') %">Send this email</a> to your child’s teacher offering to help them run an Hour of Code.
+    <a href="{{ promote/help_schools }}">Send this email</a> to your child’s teacher offering to help them run an Hour of Code.
   </li>
   
   <li>
-    Offer to host an Hour of Code event after school at a local school. <a href="%= resolve_url('/how-to') %">Use this How-To Guide</a> to help you plan.
+    Offer to host an Hour of Code event after school at a local school. <a href="{{ urls/how_to_guide }}">Use this How-To Guide</a> to help you plan.
   </li>
 </ol>
 
@@ -56,7 +57,7 @@ You can be a guest speaker in a classroom, or help a teacher run the activity. V
 </h2>
 
 <p>
-  Tell your friends and co-workers about the Hour of Code. Thousands of teachers are looking for volunteers, so ask them to <a href="https://code.org/volunteer">sign up as a volunteer</a>. Ask your employer to get involved. <a href="%= resolve_url('/promote/resources#sample-email') %">Send this email</a> to your manager or the CEO to get everyone on board.
+  Tell your friends and co-workers about the Hour of Code. Thousands of teachers are looking for volunteers, so ask them to <a href="https://code.org/volunteer">sign up as a volunteer</a>. Ask your employer to get involved. <a href="{{ promote/sample_emails }}">Send this email</a> to your manager or the CEO to get everyone on board.
 </p>
 
 <h2>
@@ -65,13 +66,13 @@ You can be a guest speaker in a classroom, or help a teacher run the activity. V
 
 <ul>
   <li>
-    Код саатына кызыктырууга жана катышууга шыктандыруу үчүн көрсөткөнгө <a href="%= resolve_url('/promote/resources#videos') %">видео тандап алгыла</a>.
+    <a href="{{ promote/videos }}">Pick out a video</a> to show to help focus the class and get them excited to do an Hour of Code.
   </li>
   <li>
     Баяндама, иш график, даярданма жана маркетинг материалдарын камтыган <a href="/files/hoc-volunteer-toolkit.pdf">Код сааты ыктыярчысынын топтомосун</a> карап чыккыла. Ыктыярчы тажрыйбасын алууга керек нерсенин баары даяр!
   </li>
   <li>
-    Сабак учурунда тапшырма аткарууну пландаштырып жатсаңыз, бир <a href="%= resolve_url('/learn') %">Код сааты тапшырмасын</a> аткарууга кеминде 30 мүнөт бөлгүлө.
+    If you're going to be doing a tutorial during your session, spend 30 minutes trying at least one <a href="{{ urls/learn }}">Hour of Code tutorial</a>.
   </li>
   <li>
     Мектепке бара турган болсоңуз, керектүү маалыматтарды же документтерди толтургула.
@@ -119,7 +120,7 @@ You can be a guest speaker in a classroom, or help a teacher run the activity. V
     </td>
     
     <td>
-      <a href="%= resolve_url('promote/resources#videos') %">Шыктандыруучу видео көрсөткүлө</a>.
+      <a href="{{ promote/videos }}">Show an inspirational video</a>.
     </td>
   </tr>
   
@@ -244,5 +245,5 @@ You can be a guest speaker in a classroom, or help a teacher run the activity. V
           Code.org and our partners design all the Hour of Code activities to engage students of all grade levels (K-12), boys and girls, from all backgrounds. Everyone, even adults can have fun playing!
         </p>
         <p>
-          <%= view :signup_button %>
+          {{ signup_button }}
         </p>

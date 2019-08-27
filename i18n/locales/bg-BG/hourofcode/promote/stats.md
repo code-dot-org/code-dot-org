@@ -1,13 +1,12 @@
 ---
-title: <%= hoc_s(:title_stats).inspect %>
+title: Blurbs and useful stats
 layout: wide
 nav: promote_nav
 ---
 
-
 <a id="blurb"></a>
 
-<%= view :signup_button %>
+{{ signup_button }}
 
 # Blurbs and useful stats
 
@@ -41,7 +40,7 @@ With technology changing every industry on the planet, computing knowledge has b
 
 #### За Code.org
 
-Code.org® е обществено движение с нестопанска цел, посветено на разширяване изучаването на компютърните науки и увеличаване броя на заетите жени и социално слабите ученици в програмирането. Its vision is that every student in every school has the opportunity to learn computer programming. След като Code.org стартира кампанията пре 2013г.,до сега в нея са взели участие повече от 100 милиона ученици - организацията си парнира с 70 училищни района за разширяване изучаването на компютърните науки. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. For more information, please visit: [<%= resolve_url('code.org') %>](%= resolve_url('https://code.org') %).
+Code.org® е обществено движение с нестопанска цел, посветено на разширяване изучаването на компютърните науки и увеличаване броя на заетите жени и социално слабите ученици в програмирането. Its vision is that every student in every school has the opportunity to learn computer programming. След като Code.org стартира кампанията пре 2013г.,до сега в нея са взели участие повече от 100 милиона ученици - организацията си парнира с 70 училищни района за разширяване изучаването на компютърните науки. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. For more information, please visit: [code.org]({{ codeorg_link }}).
 
 ## Share these on social media and in emails
 
@@ -51,6 +50,6 @@ Code.org® е обществено движение с нестопанска ц
 
 ## Infographics
 
-<%= view :stats_carousel %>
+{{ stats_carousel }}
 
-<%= view :signup_button %>
+{{ signup_button }}

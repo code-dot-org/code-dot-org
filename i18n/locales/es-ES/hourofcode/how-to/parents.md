@@ -1,9 +1,10 @@
 ---
-title: <%= hoc_s(:title_how_to_parents).inspect %>
+title: Guía para familias
 layout: wide
 nav: how_to_nav
 ---
-<%= view :signup_button %>
+
+{{ signup_button }}
 
 # Cómo hacer una Hora de Código con tu hijo
 
@@ -15,11 +16,11 @@ nav: how_to_nav
 
 ## 2) Elije un tutorial
 
-Ofrecemos una gran variedad de tutoriales divertidos, de una hora de duración, para estudiantes de todas las edades, creados por distintos colaboradores. [¡Pruébalos!](%= resolve_url('https://code. org/learn') %)
+We provide a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. [Try them out!]({{ urls/learn }})
 
 **Todas los tutoriales de la Hora del Código son autoguiados - permitiendo que tu hijo trabaje a su propio ritmo y nivel de habilidad**
 
-[![](/images/fit-700/tutorials.png)](%= resolve_url('/learn') %)
+[![](/images/fit-700/tutorials.png)]({{ urls/learn }})
 
 ## 3) Planifica tus necesidades tecnológicas
 
@@ -36,13 +37,13 @@ Empiece su Hora de Código motivando a los niños y comentando cómo la informá
 - El vídeo original de lanzamiento de Code.org, con Bill Gates, Mark Zuckerberg y la estrella de la NBA Chris Bosh (Hay versiones de [1 minuto](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minutos](https://www.youtube.com/watch?v=nKIu9yen5nc) y [9 minutos](https://www.youtube.com/watch?v=dU1xS07N-FA)).
 - El [vídeo mundial de la Hora del Código](https://www.youtube.com/watch?v=KsOIlDT145A).
 - [El presidente Obama llama a todos los estudiantes a aprender informática](https://www.youtube.com/watch?v=6XvmhE1J9PY).
-- Encuentre más [recursos](%= codeorg_url('/inspire') %) inspiradores y [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+- Find more inspirational [resources]({{ urls/inspire }}) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
 No importe si usted y sus estudiantes son nuevos en la Informática. Aquí tiene algunas ideas para presentar su actividad de Hora de Código:
 
 - Explica algunas formas en las que la tecnología hace impacto en nuestras vidas, con ejemplos que les interesen tanto a niños como a niñas (habla acerca de las tecnologías que salvan vidas, ayudando a las personas, conectándolas, etc.).
 - Haga una lista de las cosas que utilizan código en la vida cotidiana.
-- Vea consejos para que las chicas se interesen en la informática [aquí](%= codeorg_url('/girls') %).
+- See tips for getting girls interested in computer science [here]({{ urls/girls }}).
 
 ¿Quiere más ideas? Revise nuestra [plantilla de plan de clase](/files/AfterschoolEducatorLessonPlanOutline.docx) con las mejores prácticas de experimentados educadores.
 
@@ -62,7 +63,7 @@ Está bien responder:
 
 ## 6) Celébralo
 
-[Imprime certificados](%= codeorg_url('/certificates') %) para tu hijo (¡y tu mismo!).
+[Print certificates]({{ urls/certificates }}) for your child (and yourself!).
 
 Comparta fotos y vídeos del evento de la Hora del Código en las redes sociales. ¡Utilice #HourOfCode y @codeorg para que también podamos resaltar su éxito!
 
@@ -72,7 +73,7 @@ Revisa las [FAQ de Hora de Código](https://support.code.org/hc/en-us/categories
 
 La Hora de Código es sólo el primer paso de un viaje para aprender más sobre cómo funciona la tecnología y cómo crear aplicaciones informáticas. Para continuar este viaje:
 
-- Anima a tu hijo a continuar [aprendiendo en línea](%= codeorg_url('/learn/beyond') %).
-- Ayuda a [promover](%= resolve_url('/promote') %) la enseñanza de Informática en la escuela de tu hijo.
+- Encourage your child to continue [to learn online]({{ urls/learn_beyond }}).
+- Help [promote]({{ urls/promote }}) computer science education in your child’s school district.
 
-<%= view :signup_button %>
+{{ signup_button }}

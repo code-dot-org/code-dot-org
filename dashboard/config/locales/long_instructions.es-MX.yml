@@ -329,10 +329,10 @@ es-MX:
         `\"azul\"`.\n\n**¿No puedes avanzar? Haz clic aquí:** ![expandable](https://images.code.org/2d5d46a03082af3b01847aad6602e2ea-image-1511280140482.gif)"
       AppLab Intro 7 - Full Text: "<div style=\"float:right\">\n<img src=\"https://images.code.org/1e81d5bcdd69172f4127de55d045225f-image-1507565161167.05.19
         AM.png\" style=\"height:200px\">\n</div>\n\n**Objetivo:** hacer que los botones
-        sean `\"rojo\"` y `\"azul\"`. Luego, cambiar el texto en la etiqueta naranja
+        sean `\"red\"` y `\"blue\"`. Luego, cambiar el texto en la etiqueta naranja
         grande.\n\n**Cómo:** \n\n-   Recuerda que puedes pasar sobre los elementos
-        para ver sus `\"id\"`.\n-   Establece el `\"color-de-fondo\"` de los botones
-        como `\"rojo\"` y `\"azul\"`.\n-   Cambia la propiedad `\"texto\"` de la etiqueta
+        para ver sus `\"id\"`.\n-   Establece el `\"background-color\"` de los botones
+        como `\"red\"` y `\"blue\"`.\n-   Cambia la propiedad `\"text\"` de la etiqueta
         a lo que quieras, por ejemplo, `\"¡Bienvenido a mi aplicación!\"`.\n\n**¿No
         puedes avanzar? Haz clic aquí:** ![expandable](https://images.code.org/4bf99e7352e7c17a5bf73ced80171f6a-image-1511280628092.gif)"
       AppLab Intro 7 - onEvent intro: |-
@@ -340,7 +340,7 @@ es-MX:
 
         **Objetivo:** la pantalla comienza siendo azul. Agrega código para que pase a ser verde cuando haces clic en el botón "Green-ify".
 
-        **Cómo:** agregar código dentro de `enEvento` para establecer el `"color-de-fondo"` de la pantalla como `"verde"`.
+        **Cómo:** agregar código dentro de `enEvento` para establecer el `"background-color"` de la pantalla como `"green"`.
 
         **¿No puedes avanzar? Haz clic aquí:** ![expandable](https://images.code.org/5ddf6b129bc04b79839b3661ccef788b-image-1511281012076.gif)
       AppLab Intro 7 - onEvent twoButtons: |-
@@ -348,7 +348,7 @@ es-MX:
 
         **Objetivo:** ayudar a terminar esta aplicación de linterna. El botón "Encendido" hace que la pantalla se vuelva blanca. Ejecuta la aplicación y pruébala. Luego, escribe código para que el botón "Apagado" haga que la pantalla vuelva a ser negra.
 
-        **Cómo:** agregar código dentro del bloque `enEvento()` vacío que establezca el `"color-de-fondo"` de la pantalla como `"negro"` y el `"color-de-texto"` de la etiqueta como `"blanco"`.
+        **Cómo:** agregar código dentro del bloque `enEvento()` vacío que establezca el `"background-color"` de la pantalla como `"black"` y el `"text-color"` de la etiqueta como `"white"`.
 
         **¿No puedes avanzar? Haz clic aquí:** ![expandable](https://images.code.org/020b1d9b465aaf35967a528a92961c13-image-1511281772276.gif)
       AppLab Intro 7 - playSound: "<img src=\"https://images.code.org/28176329f15dea1a863564b069e72aab-image-1511282702534.44.52
@@ -367,7 +367,7 @@ es-MX:
 
         **Objetivo:** agregar un segundo botón a la pantalla que diga "¡Derecha!" con un `"id"` de `"botónDerecho"`.
 
-        **Cómo:** arrastra un nuevo botón en el Modo Diseño. Elige una posición y cambia su tamaño. Luego, establece su `"id"`, `"texto"`, `"color de fondo"` y `"tamaño de fuente"`.
+        **Cómo:** arrastra un nuevo botón en el Modo Diseño. Elige una posición y cambia su tamaño. Luego, establece su `"id"`, `"text"`, `"background color"` y `"font size"`.
 
         **¿No puedes avanzar? Haz clic aquí:** ![expandable](https://images.code.org/7035ad0445984cf889b159cf5682e35a-image-1508383186447.gif)
       AppLab Intro 7 - thisOrThatAddScreen: |-
@@ -4418,7 +4418,7 @@ es-MX:
         Hemos cargado el programa de coches de carrera que escribiste anteriormente aquí.
 
         -   Agrega una sentencia `si` después de actualizar la posición del coche de carrera.
-        -   Mueve la expresión booleana de la sentencia registro.consola a la condición de la sentencia si.
+        -   Mueve la expresión booleana de la sentencia console.log a la condición de la sentencia si.
         -   Agrega una sentencia para dibujar texto en la pantalla que diga "Ganador" dentro de la sentencia `si`.
       CSD U3 - conditionals - first conditional 2: |-
         <img src="https://images.code.org/abd459d8d1477ac2f582417f4334cdaa-image-1466107090414.gif" style="width:200px;float:right">
@@ -4432,12 +4432,12 @@ es-MX:
         ¡Haz explotar el globo cuando toque el borde del área de juego!
 
         -   Agrega una sentencia `si` que compruebe si el globo ha tocado el borde.
-            -   Usa un observador en `escala.globo` como ayuda.
+            -   Usa un observador en `globo.escala` como ayuda.
         -   Crea un sprite que utilice el elemento visual "explotar" en la pestaña de animaciones.
         -   Establece la propiedad `visible` de explotar como `falsa` al inicio.
         -   Agrega dos sentencias dentro de `si`.
             -   Una que establezca la propiedad `visible` para ocultar el sprite del globo.
-            -   Una que establezca la propiedad `visible` para ocultar el sprite de explotar.
+            -   Una que establezca la propiedad `visible` para mostrar el sprite de explotar.
       CSD U3 - conditionals - first conditional_2018: |-
         <img src="https://images.code.org/36c5543076622c96f7dabce8bc37f995-image-1468425774455.54.03 PM.png" style="float:right;width:100px">
 
@@ -4452,7 +4452,7 @@ es-MX:
         Hemos cargado el programa de coches de carrera que escribiste anteriormente aquí.
 
         -   Agrega una sentencia `si` después de actualizar la posición del coche de carrera.
-        -   Mueve la expresión booleana de la sentencia registro.consola a la condición de la sentencia si.
+        -   Mueve la expresión booleana de la sentencia console.log a la condición de la sentencia si.
         -   Agrega una sentencia para dibujar texto en la pantalla que diga "Ganador" dentro de la sentencia `si`.
       CSD U3 - conditionals - first conditional_2019: |-
         <img src="https://images.code.org/36c5543076622c96f7dabce8bc37f995-image-1468425774455.54.03 PM.png" style="float:right;width:100px">
@@ -4468,7 +4468,7 @@ es-MX:
         Hemos cargado el programa de coches de carrera que escribiste anteriormente aquí.
 
         -   Agrega una sentencia `si` después de actualizar la posición del coche de carrera.
-        -   Mueve la expresión booleana de la sentencia registro.consola a la condición de la sentencia si.
+        -   Mueve la expresión booleana de la sentencia console.log a la condición de la sentencia si.
         -   Agrega una sentencia para dibujar texto en la pantalla que diga "Ganador" dentro de la sentencia `si`.
       CSD U3 - conditionals - transition: |-
         # Expresiones booleanas
@@ -4479,7 +4479,7 @@ es-MX:
 
         El programa dibuja un coche de carreras y una línea de meta. Vamos a descubrir cuándo el coche de carreras cruza la línea de meta. Los sprites han sido creados para ti.
 
-        -   Agrega una sentencia `registro.consola` dentro del bucle dibujar. ( [Show me where](#triggercallout=callout) )
+        -   Agrega una sentencia `console.log` dentro del bucle dibujar. ( [Muéstrame dónde](#triggercallout=callout) )
         -   Agrega una expresión booleana dentro de `registro.consola` que pregunte: "¿La posición x del coche de carreras es menor que la posición x de la línea de meta?".
         -   Observa el resultado que genera el programa a medida que el coche se mueve. ¿Cuándo cambia? ¿Por qué?
       CSD U3 - conditionals - transition_2018: |-
@@ -4491,7 +4491,7 @@ es-MX:
 
         El programa dibuja un coche de carreras y una línea de meta. Vamos a descubrir cuándo el coche de carreras cruza la línea de meta. Los sprites han sido creados para ti.
 
-        -   Agrega una sentencia `registro.consola` dentro del bucle dibujar. ( [Show me where](#triggercallout=callout) )
+        -   Agrega una sentencia `console.log` dentro del bucle dibujar. ( [Muéstrame dónde](#triggercallout=callout) )
         -   Agrega una expresión booleana dentro de `registro.consola` que pregunte: "¿La posición x del coche de carreras es menor que la posición x de la línea de meta?".
         -   Observa el resultado que genera el programa a medida que el coche se mueve. ¿Cuándo cambia? ¿Por qué?
       CSD U3 - conditionals - transition_2019: |-
@@ -4503,7 +4503,7 @@ es-MX:
 
         El programa dibuja un coche de carreras y una línea de meta. Vamos a descubrir cuándo el coche de carreras cruza la línea de meta. Los sprites han sido creados para ti.
 
-        -   Agrega una sentencia `registro.consola` dentro del bucle dibujar. ( [Show me where](#triggercallout=callout) )
+        -   Agrega una sentencia `console.log` dentro del bucle dibujar. ( [Muéstrame dónde](#triggercallout=callout) )
         -   Agrega una expresión booleana dentro de `registro.consola` que pregunte: "¿La posición x del coche de carreras es menor que la posición x de la línea de meta?".
         -   Observa el resultado que genera el programa a medida que el coche se mueve. ¿Cuándo cambia? ¿Por qué?
       CSD U3 AnimationsMulti Play Defender: |-
@@ -5107,7 +5107,7 @@ es-MX:
         \  Lee todo el programa para ver cómo se crean `sprite1` y `sprite2`, y qué
         propiedades se comparan.\n-   Identifica las propiedades del sprite que se
         comparan en cada una de las expresiones booleanas.\n-   Cambia el código _solo
-        en las primeras **11** líneas_ para que cada una de las sentencias `registro.consola()`
+        en las primeras **11** líneas_ para que cada una de las sentencias `console.log()`
         imprima `verdadero`."
       CSD U3 Complex Movement counter prediction: |-
         # La velocidad y el patrón del contador
@@ -5159,10 +5159,10 @@ es-MX:
 
         # Haz esto
 
-        Hay un sprite de manzana que crece creado para ti. Comienza siendo verde y debería volverse rojo cuando llega a una escala de 2. Aún no nos preocuparemos por hacerlo rojo; solo usamos el comando `registro.consola` para comprobar si la escala sigue siendo 2.
+        Hay un sprite de manzana que crece creado para ti. Comienza siendo verde y debería volverse rojo cuando llega a una escala de 2. Aún no nos preocuparemos por hacerlo rojo; solo usamos el comando `console.log` para comprobar si la escala sigue siendo 2.
 
-        -   Agrega una sentencia `registro.consola`.
-        -   Agrega una expresión booleana dentro de `registro.consola` que compruebe si `escala.manzana` es mayor que 2.
+        -   Agrega una sentencia `console.log`.
+        -   Agrega una expresión booleana dentro de `console.log` que compruebe si `escala.manzana` es mayor que 2.
       CSD U3 Conditionals Apple 2: |-
         # Cambiar a rojo
 
@@ -11093,7 +11093,7 @@ es-MX:
       CSD U6 LEDs color: |-
         # Agregar más color
 
-        Al usar `Ledsdecolores[0].encendidos()` en el último nivel, probablemente notaste que los LEDs se encendían en color blanco. Si no especificas un color, `encendido()` encenderá las tres partes del LED (rojo, verde y azul) para producir blanco. En la caja de herramientas, verás un nuevo comando llamado `Ledsdecolores[0].color()`, el cual te permite especificar un color, como una cadena como "azul" o un valor RGB usando un comando `color()` de colores.
+        Al usar `LedsDeColores[0].encender()` en el último nivel, probablemente notaste que los LEDs se encendían en color blanco. Si no especificas un color, `encender()` encenderá las tres partes del LED (rojo, verde y azul) para producir blanco. En la caja de herramientas, verás un nuevo comando llamado `LedsDeColores[0].color()`, el cual te permite especificar un color, como una cadena como "azul" o un valor RGB usando un comando `color()` de colores.
 
         # Haz esto
 
@@ -11101,7 +11101,7 @@ es-MX:
       CSD U6 LEDs color_2018: |-
         # Agregar más color
 
-        Al usar `Ledsdecolores[0].encendidos()` en el último nivel, probablemente notaste que los LEDs se encendían en color blanco. Si no especificas un color, `encendido()` encenderá las tres partes del LED (rojo, verde y azul) para producir blanco. En la caja de herramientas, verás un nuevo comando llamado `Ledsdecolores[0].color()`, el cual te permite especificar un color, como una cadena como "azul" o un valor RGB usando un comando `color()` de colores.
+        Al usar `LedsDeColores[0].encender()` en el último nivel, probablemente notaste que los LEDs se encendían en color blanco. Si no especificas un color, `encender()` encenderá las tres partes del LED (rojo, verde y azul) para producir blanco. En la caja de herramientas, verás un nuevo comando llamado `LedsDeColores[0].color()`, el cual te permite especificar un color, como una cadena como "azul" o un valor RGB usando un comando `color()` de colores.
 
         # Haz esto
 
@@ -11109,7 +11109,7 @@ es-MX:
       CSD U6 LEDs color_2019: |-
         # Agregar más color
 
-        Al usar `Ledsdecolores[0].encendidos()` en el último nivel, probablemente notaste que los LEDs se encendían en color blanco. Si no especificas un color, `encendido()` encenderá las tres partes del LED (rojo, verde y azul) para producir blanco. En la caja de herramientas, verás un nuevo comando llamado `Ledsdecolores[0].color()`, el cual te permite especificar un color, como una cadena como "azul" o un valor RGB usando un comando `color()` de colores.
+        Al usar `LedsDeColores[0].encender()` en el último nivel, probablemente notaste que los LEDs se encendían en color blanco. Si no especificas un color, `encender()` encenderá las tres partes del LED (rojo, verde y azul) para producir blanco. En la caja de herramientas, verás un nuevo comando llamado `LedsDeColores[0].color()`, el cual te permite especificar un color, como una cadena como "azul" o un valor RGB usando un comando `color()` de colores.
 
         # Haz esto
 
@@ -11443,7 +11443,7 @@ es-MX:
       CSD U6 analog threshold: |-
         # Umbral de cambio
 
-        En forma predetermianda, el evento "change" de un sensor se dispara cada vez que el valor del sensor cambia, incluso por uno. Los sensores de luz y sonido están constantemente fluctuando, de modo que, probablemente, quieras que el evento "change" sea un poco menos sensible. La propiedad `threshold` te permite establecer cuánto debería cambiar un sensor antes de considerarlo un evento "change", de modo que establecer `soundSensor.threshold = 100` haría que el evento "change" del sensor de sonido solo se dispare si su valor se incrementa o disminuye, al menos, en un valor de 100.
+        En forma predeterminada, el evento "change" de un sensor se dispara cada vez que el valor del sensor cambia, incluso por uno. Los sensores de luz y sonido están constantemente fluctuando, de modo que, probablemente, quieras que el evento "change" sea un poco menos sensible. La propiedad `threshold` te permite establecer cuánto debería cambiar un sensor antes de considerarlo un evento "change", de modo que establecer `soundSensor.threshold = 100` haría que el evento "change" del sensor de sonido solo se dispare si su valor se incrementa o disminuye, al menos, en un valor de 100.
 
         # Haz esto
 
@@ -11617,7 +11617,7 @@ es-MX:
 
         -   Mantén tu LED conectado igual que como estaba antes (conectado al pin 2)
         -   Asegúrate de estar en modo texto, no en modo bloque.
-        -   Arrastra un bloque `parpadeo.led()` debajo del comentario `// Parpadear miLed`.
+        -   Arrastra un bloque `led.parpadeo()` debajo del comentario `// Parpadear miLed`.
         -   Reemplaza el texto `led` con `miLed`.
         -   Prueba tu código.
       CSD U6 circuit createLed_2018: |-
@@ -11633,7 +11633,7 @@ es-MX:
 
         -   Mantén tu LED conectado igual que como estaba antes (conectado al pin 2)
         -   Asegúrate de estar en modo texto, no en modo bloque.
-        -   Arrastra un bloque `parpadeo.led()` debajo del comentario `// Parpadear miLed`.
+        -   Arrastra un bloque `led.parpadeo()` debajo del comentario `// Parpadear miLed`.
         -   Reemplaza el texto `led` con `miLed`.
         -   Prueba tu código.
       CSD U6 circuit createLed_2019: |-
@@ -11649,7 +11649,7 @@ es-MX:
 
         -   Mantén tu LED conectado igual que como estaba antes (conectado al pin 2)
         -   Asegúrate de estar en modo texto, no en modo bloque.
-        -   Arrastra un bloque `parpadeo.led()` debajo del comentario `// Parpadear miLed`.
+        -   Arrastra un bloque `led.parpadeo()` debajo del comentario `// Parpadear miLed`.
         -   Reemplaza el texto `led` con `miLed`.
         -   Prueba tu código.
       CSD U6 circuit multi led: |-
@@ -11664,7 +11664,7 @@ es-MX:
         -   Agrega un bloque `var miLed = crearLed()`.
         -   Reemplaza la etiqueta de variable `miLed` con una etiqueta única.
         -   Asegúrate de que estás en modo texto, no en modo bloque.
-        -   Agrega un comando `parpadear.led()`
+        -   Agrega un comando `led.parpadeo()`
         -   Reemplaza el texto `led` con tu nueva variable LED.
         -   Prueba tu código.
 
@@ -11681,7 +11681,7 @@ es-MX:
         -   Agrega un bloque `var miLed = crearLed()`.
         -   Reemplaza la etiqueta de variable `miLed` con una etiqueta única.
         -   Asegúrate de que estás en modo texto, no en modo bloque.
-        -   Agrega un comando `parpadear.led()`
+        -   Agrega un comando `led.parpadeo()`
         -   Reemplaza el texto `led` con tu nueva variable LED.
         -   Prueba tu código.
 
@@ -11698,7 +11698,7 @@ es-MX:
         -   Agrega un bloque `var miLed = crearLed()`.
         -   Reemplaza la etiqueta de variable `miLed` con una etiqueta única.
         -   Asegúrate de que estás en modo texto, no en modo bloque.
-        -   Agrega un comando `parpadear.led()`
+        -   Agrega un comando `led.parpadeo()`
         -   Reemplaza el texto `led` con tu nueva variable LED.
         -   Prueba tu código.
 
@@ -11759,7 +11759,7 @@ es-MX:
         # Haz esto
 
         -   Agrega controladores de eventos para hacer parpadear la señal de giro izquierda cuando el botón izquierdo esté presionado.
-        -   Agrega controladores de eventos para hacer parpadear la señal de giro izquierda cuando el botón izquierdo esté presionado.
+        -   Agrega controladores de eventos para hacer parpadear la señal de giro derecha cuando el botón derecho esté presionado.
         -   Prueba tu código.
 
         _Sugerencia: deberás estar en modo texto para hacer que los intermitentes funcionen, dado que no hay bloques integrados para los elementos que agregas en el tablero._
@@ -11771,7 +11771,7 @@ es-MX:
         # Haz esto
 
         -   Agrega controladores de eventos para hacer parpadear la señal de giro izquierda cuando el botón izquierdo esté presionado.
-        -   Agrega controladores de eventos para hacer parpadear la señal de giro izquierda cuando el botón izquierdo esté presionado.
+        -   Agrega controladores de eventos para hacer parpadear la señal de giro derecha cuando el botón derecho esté presionado.
         -   Prueba tu código.
 
         _Sugerencia: deberás estar en modo texto para hacer que los intermitentes funcionen, dado que no hay bloques integrados para los elementos que agregas en el tablero._
@@ -11783,7 +11783,7 @@ es-MX:
         # Haz esto
 
         -   Agrega controladores de eventos para hacer parpadear la señal de giro izquierda cuando el botón izquierdo esté presionado.
-        -   Agrega controladores de eventos para hacer parpadear la señal de giro izquierda cuando el botón izquierdo esté presionado.
+        -   Agrega controladores de eventos para hacer parpadear la señal de giro derecha cuando el botón derecho esté presionado.
         -   Prueba tu código.
 
         _Sugerencia: deberás estar en modo texto para hacer que los intermitentes funcionen, dado que no hay bloques integrados para los elementos que agregas en el tablero._
@@ -11946,7 +11946,7 @@ es-MX:
       CSD U6 colorLeds debug: |-
         <img src="https://images.code.org/e055be621221385d3503962bee5aa616-image-1491493475417.44.28.png" style="width:250px; float:right">
 
-        # Depurar: # Ledsdecolores
+        # Depurar: LedsDeColores
 
         ¿Puedes depurar los valores de índice para que el arco iris aparezca en el tablero igual que en la foto?
       CSD U6 colorLeds intensity: |-
@@ -12420,7 +12420,7 @@ es-MX:
       CSD U6 for loop click exit: |-
         # Saber cuándo detenerse
 
-        Si hacías clic en el botón muchas veces, recibías un error. Cada vez que estás escribiendo código que se repite, es importante considerar cómo sabrás que es momento de _detener_ la repetición.
+        Si hacías clic en el botón muchas veces en el último nivel, recibías un error. Cada vez que estás escribiendo código que se repite, es importante considerar cómo sabrás que es momento de _detener_ la repetición.
 
         # Haz esto
 
@@ -12430,7 +12430,7 @@ es-MX:
       CSD U6 for loop click exit_2018: |-
         # Saber cuándo detenerse
 
-        Si hacías clic en el botón muchas veces, recibías un error. Cada vez que estás escribiendo código que se repite, es importante considerar cómo sabrás que es momento de _detener_ la repetición.
+        Si hacías clic en el botón muchas veces en el último nivel, recibías un error. Cada vez que estás escribiendo código que se repite, es importante considerar cómo sabrás que es momento de _detener_ la repetición.
 
         # Haz esto
 
@@ -12440,7 +12440,7 @@ es-MX:
       CSD U6 for loop click exit_2019: |-
         # Saber cuándo detenerse
 
-        Si hacías clic en el botón muchas veces, recibías un error. Cada vez que estás escribiendo código que se repite, es importante considerar cómo sabrás que es momento de _detener_ la repetición.
+        Si hacías clic en el botón muchas veces en el último nivel, recibías un error. Cada vez que estás escribiendo código que se repite, es importante considerar cómo sabrás que es momento de _detener_ la repetición.
 
         # Haz esto
 
@@ -12463,32 +12463,32 @@ es-MX:
         practicado un poco modificando los bucles ´para´ con el fin de procesar arreglos,
         veamos si lo puedes hacer tú solo.\n\n# Haz esto\n\nInicialmente, hemos brindado
         los elementos de diseño y un arreglo, pero el resto depende de ti.\n\n-   Agrega
-        un controlar de eventos para responder a cuando se le hace clic a \"thumbsup\\_button\"
+        un controlador de eventos para responder a cuando se le hace clic a \"thumbsup\\_button\"
         \n-   Coloca un _bucle para_ dentro del controlar de eventos\n-   Modifica
         la condición de salida del _bucle para_ de manera que se ejecute hasta que
         llegue al fin del arreglo `imágenes`\n-   Dentro de tu _bucle para_, cambia
-        la imagen actual a \"icono://fa-pulgares-o-arriba\"\n\n_Desafío: ¿puedes agregar
+        la imagen actual a \"icon://fa-thumbs-o-up\"\n\n_Desafío: ¿puedes agregar
         un segundo botón que gire todas las imágenes de nuevo a pulgares para abajo?_"
       CSD U6 for loop images_2018: "# Crear un bucle ´para´ desde cero\n\nAhora que
         has practicado un poco modificando los bucles ´para´ con el fin de procesar
         arreglos, veamos si lo puedes hacer tú solo.\n\n# Haz esto\n\nInicialmente,
         hemos brindado los elementos de diseño y un arreglo, pero el resto depende
-        de ti.\n\n-   Agrega un controlar de eventos para responder a cuando se le
-        hace clic a \"thumbsup\\_button\" \n-   Coloca un _bucle para_ dentro del
+        de ti.\n\n-   Agrega un controlador de eventos para responder a cuando se
+        le hace clic a \"thumbsup\\_button\" \n-   Coloca un _bucle para_ dentro del
         controlar de eventos\n-   Modifica la condición de salida del _bucle para_
         de manera que se ejecute hasta que llegue al fin del arreglo `imágenes`\n-
-        \  Dentro de tu _bucle para_, cambia la imagen actual a \"icono://fa-pulgares-o-arriba\"\n\n_Desafío:
+        \  Dentro de tu _bucle para_, cambia la imagen actual a \"icon://fa-thumbs-o-up\"\n\n_Desafío:
         ¿puedes agregar un segundo botón que gire todas las imágenes de nuevo a pulgares
         para abajo?_"
       CSD U6 for loop images_2019: "# Crear un bucle ´para´ desde cero\n\nAhora que
         has practicado un poco modificando los bucles ´para´ con el fin de procesar
         arreglos, veamos si lo puedes hacer tú solo.\n\n# Haz esto\n\nInicialmente,
         hemos brindado los elementos de diseño y un arreglo, pero el resto depende
-        de ti.\n\n-   Agrega un controlar de eventos para responder a cuando se le
-        hace clic a \"thumbsup\\_button\" \n-   Coloca un _bucle para_ dentro del
+        de ti.\n\n-   Agrega un controlador de eventos para responder a cuando se
+        le hace clic a \"thumbsup\\_button\" \n-   Coloca un _bucle para_ dentro del
         controlar de eventos\n-   Modifica la condición de salida del _bucle para_
         de manera que se ejecute hasta que llegue al fin del arreglo `imágenes`\n-
-        \  Dentro de tu _bucle para_, cambia la imagen actual a \"icono://fa-pulgares-o-arriba\"\n\n_Desafío:
+        \  Dentro de tu _bucle para_, cambia la imagen actual a \"icon://fa-thumbs-o-up\"\n\n_Desafío:
         ¿puedes agregar un segundo botón que gire todas las imágenes de nuevo a pulgares
         para abajo?_"
       CSD U6 for loop led function: |-
@@ -12706,18 +12706,18 @@ es-MX:
         Con tus funciones definidas, las puedes llamar cuando lo necesites. Revisa tus controladores de eventos, o en cualquier otra parte de tu programa en donde se deba usar tu función, y agrega llamadas a las funciones que creaste.
       CSD U6 game project functions define: "# Define tus funciones\n\nDefine todas
         tus funciones en la parte inferior del programa, en el comentario `//Crea
-        tus funciones aquí`.\n\nEn este momento, solo nos preocupa escribir la función
-        _definiciones_, la parte que se parece a:\n\n    función miFunción() {\n    \t//Cosas
+        tus funciones aquí`.\n\nEn este momento, solo nos preocupa escribir las _definiciones_
+        de la función, la parte que se parece a:\n\n    función miFunción() {\n    \t//Cosas
         que hace mi función \n    }"
       CSD U6 game project functions define_2018: "# Define tus funciones\n\nDefine
         todas tus funciones en la parte inferior del programa, en el comentario `//Crea
-        tus funciones aquí`.\n\nEn este momento, solo nos preocupa escribir la función
-        _definiciones_, la parte que se parece a:\n\n    función miFunción() {\n    \t//Cosas
+        tus funciones aquí`.\n\nEn este momento, solo nos preocupa escribir las _definiciones_
+        de la función, la parte que se parece a:\n\n    función miFunción() {\n    \t//Cosas
         que hace mi función \n    }"
       CSD U6 game project functions define_2019: "# Define tus funciones\n\nDefine
         todas tus funciones en la parte inferior del programa, en el comentario `//Crea
-        tus funciones aquí`.\n\nEn este momento, solo nos preocupa escribir la función
-        _definiciones_, la parte que se parece a:\n\n    función miFunción() {\n    \t//Cosas
+        tus funciones aquí`.\n\nEn este momento, solo nos preocupa escribir las _definiciones_
+        de la función, la parte que se parece a:\n\n    función miFunción() {\n    \t//Cosas
         que hace mi función \n    }"
       CSD U6 game project screen links: |-
         # Eventos de elementos de IU
@@ -12874,7 +12874,7 @@ es-MX:
         # Haz esto
 
         -   Lee el código y los comentarios, y luego ejecuta el programa para ver cómo funciona. (Asegúrate de ingresar tu nombre y el nombre de tu amigo antes de presionar "Enviar").
-        -   Usa el bloque `getProperty` para almacenar la propiedad de texto de *friend\_input* en tu variable "friend\_name". ([Show me where.](#triggercallout=code_triggered))
+        -   Usa el bloque `getProperty` para almacenar la propiedad de texto de *friend\_input* en tu variable "friend\_name". ([Muéstrame dónde.](#triggercallout=code_triggered))
       CSD U6 getProperty input_2018: |-
         # getProperty y variables
 
@@ -12883,7 +12883,7 @@ es-MX:
         # Haz esto
 
         -   Lee el código y los comentarios, y luego ejecuta el programa para ver cómo funciona. (Asegúrate de ingresar tu nombre y el nombre de tu amigo antes de presionar "Enviar").
-        -   Usa el bloque `getProperty` para almacenar la propiedad de texto de *friend\_input* en tu variable "friend\_name". ([Show me where.](#triggercallout=code_triggered))
+        -   Usa el bloque `getProperty` para almacenar la propiedad de texto de *friend\_input* en tu variable "friend\_name". ([Muéstrame dónde.](#triggercallout=code_triggered))
       CSD U6 getProperty input_2019: |-
         # getProperty y variables
 
@@ -12892,7 +12892,7 @@ es-MX:
         # Haz esto
 
         -   Lee el código y los comentarios, y luego ejecuta el programa para ver cómo funciona. (Asegúrate de ingresar tu nombre y el nombre de tu amigo antes de presionar "Enviar").
-        -   Usa el bloque `getProperty` para almacenar la propiedad de texto de *friend\_input* en tu variable "friend\_name". ([Show me where.](#triggercallout=code_triggered))
+        -   Usa el bloque `getProperty` para almacenar la propiedad de texto de *friend\_input* en tu variable "friend\_name". ([Muéstrame dónde.](#triggercallout=code_triggered))
       CSD U6 getters debug: |-
         # Controlador de LED y timbre
 
@@ -12936,27 +12936,27 @@ es-MX:
       CSD U6 interval predict: |-
         # Intervalo
 
-        Ahora usamos el deslizador para modificar el comportamiento del LED.   Igual que como cambiaríamos los valores para la frecuencia y la duración del timbre, podemos cambiar el valor para el intervalo de parpadeo o pulso del LED.
+        Ahora usamos el deslizador para modificar el comportamiento del LED. Igual que como cambiaríamos los valores para la frecuencia y la duración del timbre, podemos cambiar el valor para el intervalo de parpadeo o pulso del LED.
 
         # Haz esto
 
-        -   Lee el código y haz una predicción de lo que hará el programa, luego presiona "Run" para probar tu predicción.
+        -   Lee el código y haz una predicción de lo que hará el programa, luego presiona "Ejecutar" para probar tu predicción.
       CSD U6 interval predict_2018: |-
         # Intervalo
 
-        Ahora usamos el deslizador para modificar el comportamiento del LED.   Igual que como cambiaríamos los valores para la frecuencia y la duración del timbre, podemos cambiar el valor para el intervalo de parpadeo o pulso del LED.
+        Ahora usamos el deslizador para modificar el comportamiento del LED. Igual que como cambiaríamos los valores para la frecuencia y la duración del timbre, podemos cambiar el valor para el intervalo de parpadeo o pulso del LED.
 
         # Haz esto
 
-        -   Lee el código y haz una predicción de lo que hará el programa, luego presiona "Run" para probar tu predicción.
+        -   Lee el código y haz una predicción de lo que hará el programa, luego presiona "Ejecutar" para probar tu predicción.
       CSD U6 interval predict_2019: |-
         # Intervalo
 
-        Ahora usamos el deslizador para modificar el comportamiento del LED.   Igual que como cambiaríamos los valores para la frecuencia y la duración del timbre, podemos cambiar el valor para el intervalo de parpadeo o pulso del LED.
+        Ahora usamos el deslizador para modificar el comportamiento del LED. Igual que como cambiaríamos los valores para la frecuencia y la duración del timbre, podemos cambiar el valor para el intervalo de parpadeo o pulso del LED.
 
         # Haz esto
 
-        -   Lee el código y haz una predicción de lo que hará el programa, luego presiona "Run" para probar tu predicción.
+        -   Lee el código y haz una predicción de lo que hará el programa, luego presiona "Ejecutar" para probar tu predicción.
       CSD U6 interval_2018: Predecir el nivel
       CSD U6 interval_2019: Predecir el nivel
       CSD U6 investigate orientation: "# Cabeceo y balanceo\n\nEste programa muestra
@@ -13742,11 +13742,11 @@ es-MX:
 
         # Haz esto
 
-        Usando un condicional dentro de la función `verificarTriunfo()`, debes verificar si un jugador ha ganado cada vez que hacen clic. Por ahora, puedes usar solo `registro.consola` para informar el ganador.
+        Usando un condicional dentro de la función `verificarTriunfo()`, debes verificar si un jugador ha ganado cada vez que hacen clic. Por ahora, puedes usar solo `console.log` para informar el ganador.
 
         -   Agrega una sentencia si al botón de `verificarTriunfo()`
         -   Para la condición de tu sentencia si, verifica si `jugador_y` es mayor a 350 (o usa la parte inferior del valor de pantalla que has elegido en el último nivel)
-        -   En tu condicional, agrega un `registro.consola` que informar qué jugador ganó
+        -   En tu condicional, agrega un `console.log` que informar qué jugador ganó
         -   Prueba tu programa para asegurarte de que informa un ganador cuando uno de los emojis llega a la parte inferior de la pantalla
       CSD U6 tugowar conditional_2018: |-
         # Buscar un ganador
@@ -13755,11 +13755,11 @@ es-MX:
 
         # Haz esto
 
-        Usando un condicional dentro de la función `verificarTriunfo()`, debes verificar si un jugador ha ganado cada vez que hacen clic. Por ahora, puedes usar solo `registro.consola` para informar el ganador.
+        Usando un condicional dentro de la función `verificarTriunfo()`, debes verificar si un jugador ha ganado cada vez que hacen clic. Por ahora, puedes usar solo `console.log` para informar el ganador.
 
         -   Agrega una sentencia si al botón de `verificarTriunfo()`
         -   Para la condición de tu sentencia si, verifica si `jugador_y` es mayor a 350 (o usa la parte inferior del valor de pantalla que has elegido en el último nivel)
-        -   En tu condicional, agrega un `registro.consola` que informar qué jugador ganó
+        -   En tu condicional, agrega un `console.log` que informar qué jugador ganó
         -   Prueba tu programa para asegurarte de que informa un ganador cuando uno de los emojis llega a la parte inferior de la pantalla
       CSD U6 tugowar conditional_2019: |-
         # Buscar un ganador
@@ -13768,11 +13768,11 @@ es-MX:
 
         # Haz esto
 
-        Usando un condicional dentro de la función `verificarTriunfo()`, debes verificar si un jugador ha ganado cada vez que hacen clic. Por ahora, puedes usar solo `registro.consola` para informar el ganador.
+        Usando un condicional dentro de la función `verificarTriunfo()`, debes verificar si un jugador ha ganado cada vez que hacen clic. Por ahora, puedes usar solo `console.log` para informar el ganador.
 
         -   Agrega una sentencia si al botón de `verificarTriunfo()`
         -   Para la condición de tu sentencia si, verifica si `jugador_y` es mayor a 350 (o usa la parte inferior del valor de pantalla que has elegido en el último nivel)
-        -   En tu condicional, agrega un `registro.consola` que informar qué jugador ganó
+        -   En tu condicional, agrega un `console.log` que informar qué jugador ganó
         -   Prueba tu programa para asegurarte de que informa un ganador cuando uno de los emojis llega a la parte inferior de la pantalla
       CSD U6 tugowar demo: |-
         # ¡Atrapa el error!
@@ -14676,27 +14676,27 @@ es-MX:
       CSDU6 - final project 2: |-
         # Conectar la IU
 
-        Con la interfaz de usuario en funcionamiento, ahora puedes agregar controladores de eventos para tus elementos de interfaz. En este momento, puede que quieras incluir solamente comandos de `registro.consola()` para asegurarte de que tus eventos están funcionando como se espera; puedes agregar el código funcional más tarde.
+        Con la interfaz de usuario en funcionamiento, ahora puedes agregar controladores de eventos para tus elementos de interfaz. En este momento, puede que quieras incluir solamente comandos de `console.log()` para asegurarte de que tus eventos están funcionando como se espera; puedes agregar el código funcional más tarde.
       CSDU6 - final project 2_2018: |-
         # Conectar la IU
 
-        Con la interfaz de usuario en funcionamiento, ahora puedes agregar controladores de eventos para tus elementos de interfaz. En este momento, puede que quieras incluir solamente comandos de `registro.consola()` para asegurarte de que tus eventos están funcionando como se espera; puedes agregar el código funcional más tarde.
+        Con la interfaz de usuario en funcionamiento, ahora puedes agregar controladores de eventos para tus elementos de interfaz. En este momento, puede que quieras incluir solamente comandos de `console.log()` para asegurarte de que tus eventos están funcionando como se espera; puedes agregar el código funcional más tarde.
       CSDU6 - final project 2_2019: |-
         # Conectar la IU
 
-        Con la interfaz de usuario en funcionamiento, ahora puedes agregar controladores de eventos para tus elementos de interfaz. En este momento, puede que quieras incluir solamente comandos de `registro.consola()` para asegurarte de que tus eventos están funcionando como se espera; puedes agregar el código funcional más tarde.
+        Con la interfaz de usuario en funcionamiento, ahora puedes agregar controladores de eventos para tus elementos de interfaz. En este momento, puede que quieras incluir solamente comandos de `console.log()` para asegurarte de que tus eventos están funcionando como se espera; puedes agregar el código funcional más tarde.
       CSDU6 - final project 3: |-
         # Eventos de entrada de tablero
 
-        Ahora puedes agregar los eventos que tomarán entrada del tablero. De nuevo, en este punto, puedes usar solamente las sentencias de `registro.consola()` para garantizar que tus eventos estén funcionando.
+        Ahora puedes agregar los eventos que tomarán entrada del tablero. De nuevo, en este punto, puedes usar solamente las sentencias de `console.log()` para garantizar que tus eventos estén funcionando.
       CSDU6 - final project 3_2018: |-
         # Eventos de entrada de tablero
 
-        Ahora puedes agregar los eventos que tomarán entrada del tablero. De nuevo, en este punto, puedes usar solamente las sentencias de `registro.consola()` para garantizar que tus eventos estén funcionando.
+        Ahora puedes agregar los eventos que tomarán entrada del tablero. De nuevo, en este punto, puedes usar solamente las sentencias de `console.log()` para garantizar que tus eventos estén funcionando.
       CSDU6 - final project 3_2019: |-
         # Eventos de entrada de tablero
 
-        Ahora puedes agregar los eventos que tomarán entrada del tablero. De nuevo, en este punto, puedes usar solamente las sentencias de `registro.consola()` para garantizar que tus eventos estén funcionando.
+        Ahora puedes agregar los eventos que tomarán entrada del tablero. De nuevo, en este punto, puedes usar solamente las sentencias de `console.log()` para garantizar que tus eventos estén funcionando.
       CSDU6 - final project 4: |-
         # Funciones
 
@@ -15040,14 +15040,14 @@ es-MX:
 
         -   Cambia el código para que ambos iconos y sus colores sean seleccionados usando la variable "miÍndice".
       CSDU6 circuit playground piano: "# Piano de circuito\n\nMira el código a continuación.
-        No lo vas a cambiar, pero intentar ver lo que hace. \n\n# Haz esto\n\n-   Ejecuta
+        No lo vas a cambiar, pero intenta ver lo que hace. \n\n# Haz esto\n\n-   Ejecuta
         el programa y juega con el piano en la pantalla."
       CSDU6 circuit playground piano_2018: "# Piano de circuito\n\nMira el código
-        a continuación. No lo vas a cambiar, pero intentar ver lo que hace. \n\n#
-        Haz esto\n\n-   Ejecuta el programa y juega con el piano en la pantalla."
+        a continuación. No lo vas a cambiar, pero intenta ver lo que hace. \n\n# Haz
+        esto\n\n-   Ejecuta el programa y juega con el piano en la pantalla."
       CSDU6 circuit playground piano_2019: "# Piano de circuito\n\nMira el código
-        a continuación. No lo vas a cambiar, pero intentar ver lo que hace. \n\n#
-        Haz esto\n\n-   Ejecuta el programa y juega con el piano en la pantalla."
+        a continuación. No lo vas a cambiar, pero intenta ver lo que hace. \n\n# Haz
+        esto\n\n-   Ejecuta el programa y juega con el piano en la pantalla."
       CSDU6 frequency creation: |-
         # Hacer que el timbre suene
 
@@ -15116,22 +15116,22 @@ es-MX:
         -   Haz que el timbre reproduzca una nota aleatoria de tu arreglo cuando se presione el botón **derecho**.
       CSDU6 piano with notes: "# Notas de piano\n\nEste es el mismo piano que viste
         en el comienzo de la lección, pero hay algunos errores.\n\n# Haz esto\n\n-
-        \  Edita el código para que todas las teclas usen un bloque `nota.timbre()`
+        \  Edita el código para que todas las teclas usen un bloque `timbre.nota()`
         para reproducir la nota correspondiente.\n-   Asegúrate de que todos los valores
-        pasados a `nota.timbre()` sean notas, y no frecuencias. \n\n_Sugerencia: ¡Recuerda
-        colocar comillas entre las notas! P. ej., `nota.timbre(\"A4\", 100);`_"
+        pasados a `timbre.nota()` sean notas, y no frecuencias. \n\n_Sugerencia: ¡Recuerda
+        colocar comillas entre las notas! P. ej., `timbre.nota(\"A4\", 100);`_"
       CSDU6 piano with notes_2018: "# Notas de piano\n\nEste es el mismo piano que
         viste en el comienzo de la lección, pero hay algunos errores.\n\n# Haz esto\n\n-
-        \  Edita el código para que todas las teclas usen un bloque `nota.timbre()`
+        \  Edita el código para que todas las teclas usen un bloque `timbre.nota()`
         para reproducir la nota correspondiente.\n-   Asegúrate de que todos los valores
-        pasados a `nota.timbre()` sean notas, y no frecuencias. \n\n_Sugerencia: ¡Recuerda
-        colocar comillas entre las notas! P. ej., `nota.timbre(\"A4\", 100);`_"
+        pasados a `timbre.nota()` sean notas, y no frecuencias. \n\n_Sugerencia: ¡Recuerda
+        colocar comillas entre las notas! P. ej., `timbre.nota(\"A4\", 100);`_"
       CSDU6 piano with notes_2019: "# Notas de piano\n\nEste es el mismo piano que
         viste en el comienzo de la lección, pero hay algunos errores.\n\n# Haz esto\n\n-
-        \  Edita el código para que todas las teclas usen un bloque `nota.timbre()`
+        \  Edita el código para que todas las teclas usen un bloque `timbre.nota()`
         para reproducir la nota correspondiente.\n-   Asegúrate de que todos los valores
-        pasados a `nota.timbre()` sean notas, y no frecuencias. \n\n_Sugerencia: ¡Recuerda
-        colocar comillas entre las notas! P. ej., `nota.timbre(\"A4\", 100);`_"
+        pasados a `timbre.nota()` sean notas, y no frecuencias. \n\n_Sugerencia: ¡Recuerda
+        colocar comillas entre las notas! P. ej., `timbre.nota(\"A4\", 100);`_"
       CSDU6 play null notes: |-
         # Notas nulas
 
@@ -15413,13 +15413,13 @@ es-MX:
       Dance_Party_02: |-
         ¡Hagamos bailar a este alce!
 
-        Arrastra el bloque <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> al espacio de trabajo. Conéctalo debajo del bloque <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"compases"</title></block></xml>. Tu bailarín debería empezar a moverse después del cuarto compás.
+        Arrastra el bloque \<<xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> al espacio de trabajo. Conéctalo debajo del bloque <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> Tu bailarín debería empezar a moverse después del cuarto compás.
 
         Los **compases** se usan para contar el tiempo en la música. En este tutorial, un compás tiene cuatro tiempos.
       Dance_Party_03: |-
         _¡Ya estamos entrando en ritmo!_
 
-        Añade un bloque <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">"compases"</title></block></xml> a tu espacio de trabajo. Haz que el bailarín empiece a moverse después de 6 compases.
+        Añade un bloque <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">"measures"</title></block></xml> a tu espacio de trabajo. Haz que el bailarín empiece a moverse después de 6 compases.
       Dance_Party_04: |-
         \*¡Este baile necesita algunas luces! \*
 
@@ -16575,7 +16575,7 @@ es-MX:
         medida que escribes entradas en el diccionario, el símbolo de la entrada reemplaza
         el patrón en el texto.
       comment_intro_maze_2018: "_\"Estoy confundido. Ayúdame a recordar cómo resolver
-        este laberinto.\"_  \n\n* * *\n\nPara pasar este desafío, resuelve el laberinto
+        este laberinto.\"_    \n\n* * *\n\nPara pasar este desafío, resuelve el laberinto
         y usa el nuevo bloque <xml><block type=\"comment\">\n    <title name=\"TEXT\">
         </title>\n  </block></xml> para dejarte recordatorios rápidos. ¡Pueden ayudarte
         a recordar qué hiciste y por qué!   \n\nSolo **tú** usas estos comentarios;
@@ -17656,7 +17656,7 @@ es-MX:
       courseC_artist_loop1_2018: |-
         _"¡Fantástico!"_
 
-        Cambiemos el pincel y usemos el bloque <xml><block type="draw_line_style_pattern"> <title name="VALUE">PREDETERMINADO</title></block></xml> para agregar algo de estilo antes de que comience nuestro bucle.
+        Cambiemos el pincel y usemos el bloque <xml><block type="draw_line_style_pattern"> <title name="VALUE">DEFAULT</title></block></xml> para agregar algo de estilo antes de que comience nuestro bucle.
       courseC_artist_loop1_2019: |-
         _"¡Fantástico!"_
 
@@ -17857,8 +17857,8 @@ es-MX:
       courseC_artist_loopsPrePre1a_2018: |-
         ### ¡El artista está en la ubicación incorrecta!
 
-        Usa el bloque <xml><block type="jump_to_xy" id="callMe"><title name="XPOS">200</title><title name="YPOS">200</title></block></xml> para llevar al artista hasta el centro del área de juego.
-        Luego dibuja una línea de 50 pixeles de largo con el bloque <xml><block type="draw_move_by_constant"><title name="DIR">ir hacia adelante</title><title name="VALUE">50</title></block></xml>.
+        Usa el bloque <xml><block type="jump_to_xy" id="callMe"><title name="XPOS">200</title><title name="YPOS">200</title></block></xml> para llevar al artista hasta el centro del área de juego.\
+        Luego dibuja una línea de 50 pixeles de largo con el bloque <xml><block type="draw_move_by_constant"><title name="DIR">moveForward</title><title name="VALUE">50</title></block></xml>.
       courseC_artist_loopsPrePre1a_2019: |-
         ### ¡El artista está en la ubicación incorrecta!
 

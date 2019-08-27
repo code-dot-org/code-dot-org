@@ -1,13 +1,12 @@
 ---
-title: <%= hoc_s(:title_stats).inspect %>
+title: Blurbs and useful stats
 layout: wide
 nav: promote_nav
 ---
 
-
 <a id="blurb"></a>
 
-<%= view :signup_button %>
+{{ signup_button }}
 
 # Blurbs and useful stats
 
@@ -41,7 +40,7 @@ Ithekhinoloji ikuqula imikhakha yonke emhlabeni. Ngo 2015, ukuvuleka okuyizigidi
 
 #### Nge Code.org
 
-Code.org iyi 501c3 engenanzuzo yomphakathi ezinikele ukukhulisa ukuzibandakanya kukhompyutha sayensi kanye nokukhulisa kokuzibandakanya kwabesimame nabafundi abangamelwanga bombala. Its vision is that every student in every school has the opportunity to learn computer programming. Emva kokusonjululwa ngo 2013, Code.org ihlele umkhankaso weHora loKufingqwa - lapho yazise abafundi abandlula kukhulu lezigidi kukhompyutha sayensi ukuze kube manje - yazibandakanya nezifunda zesikole zomphakathi ezingamashumi ayisikhombisa kuzwe lonke ukwandisa amahlelo ekhompyutha sayensi. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. For more information, please visit: [<%= resolve_url('code.org') %>](%= resolve_url('https://code.org') %).
+Code.org iyi 501c3 engenanzuzo yomphakathi ezinikele ukukhulisa ukuzibandakanya kukhompyutha sayensi kanye nokukhulisa kokuzibandakanya kwabesimame nabafundi abangamelwanga bombala. Its vision is that every student in every school has the opportunity to learn computer programming. Emva kokusonjululwa ngo 2013, Code.org ihlele umkhankaso weHora loKufingqwa - lapho yazise abafundi abandlula kukhulu lezigidi kukhompyutha sayensi ukuze kube manje - yazibandakanya nezifunda zesikole zomphakathi ezingamashumi ayisikhombisa kuzwe lonke ukwandisa amahlelo ekhompyutha sayensi. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. For more information, please visit: [code.org]({{ codeorg_link }}).
 
 ## Share these on social media and in emails
 
@@ -51,6 +50,6 @@ Code.org iyi 501c3 engenanzuzo yomphakathi ezinikele ukukhulisa ukuzibandakanya 
 
 ## Infographics
 
-<%= view :stats_carousel %>
+{{ stats_carousel }}
 
-<%= view :signup_button %>
+{{ signup_button }}

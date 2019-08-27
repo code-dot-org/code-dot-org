@@ -1,6 +1,5 @@
 hideable_stages true
 stage_extras_available true
-family_name ''
 
 stage 'Jigsaw'
 skin 'jigsaw'

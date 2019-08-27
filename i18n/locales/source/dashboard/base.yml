@@ -54,6 +54,7 @@ en:
         error:
           future: can't be in the future
 
+  beta: "beta"
   hello: "Hello world"
   welcome_back: "Welcome back, %{name}"
   your_professional_learning_plan: "Your Professional Learning Plan"

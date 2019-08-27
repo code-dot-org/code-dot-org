@@ -8,6 +8,7 @@
   "catProcedures": "Functions",
   "catText": "Text",
   "catVariables": "Variables",
+  "columnDoesNotExistError": "You tried to get a column called \"{columnName}\" from a table called \"{tableName}\", but that column doesn't exist. ",
   "confirmClearTable": "Do you really want to delete all data from this table? You cannot undo this action.",
   "confirmImportOverwrite": "Importing this file will overwrite the existing data in this table. Are you sure you want to continue?",
   "container": "create container",
@@ -352,6 +353,7 @@
   "shareApplabTwitter": "Check out the app I made. I wrote it myself with @codeorg",
   "shareApplabTwitterDonor": "Check out the app I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame": "Share your app:",
+  "tableDoesNotExistError": "You tried to read records from a table called \"{tableName}\" but that table doesn't exist in this app",
   "tryAgainText": "Keep working",
   "viewData": "View Data",
   "yes": "Yes"

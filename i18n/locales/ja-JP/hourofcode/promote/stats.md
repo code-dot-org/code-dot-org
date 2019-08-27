@@ -1,56 +1,55 @@
 ---
-title: <%= hoc_s(:title_stats).inspect %>
+title: 宣伝文句や役立つ統計情報
 layout: wide
 nav: promote_nav
 ---
 
-
 <a id="blurb"></a>
 
-<%= view :signup_button %>
+{{ signup_button }}
 
-# Blurbs and useful stats
+# 宣伝文句や役立つ統計情報
 
-### Use the following messaging if you're looking for ways to promote the Hour of Code in your newsletters and communications.
+### もしHour of Codeをニュースレターやコミュニケーションで宣伝する方法を探しているならば以下のメッセージを使用してください。
 
 * * *
 
 ## ニュースレター用に以下の宣伝文句をご利用ください
 
-#### Bring computer science to your school. Start with an Hour of Code!
+#### 学校にコンピューターサイエンスを。Hour of Codeで始めよう！
 
-With technology changing every industry on the planet, computing knowledge has become part of a well-rounded skill set. しかしながら、半分以下の学校しかコンピューターサイエンスを教えていません！ 良いお知らせは、私たちはこれを変えようとしているということです。 もしあなたが昨年Hour of Codeについて聞いたなら、それが歴史を作ったことをご存知かもしれません いまや1億人の生徒たちが、Hour of Codeを1回行うだけで、いかにコンピューターサイエンスが理解しやすくて楽しいか発見しています。
+技術が地球上のあらゆる産業を変えている状況では、コンピューターの知識は多彩なスキルセットの一部となりました。 しかしながら、半分以下の学校しかコンピューターサイエンスを教えていません！ 良いお知らせは、私たちはこれを変えようとしているということです。 もしあなたが昨年Hour of Codeについて聞いていたなら、それが歴史を作ったことをご存知かもしれません。 Hour of Codeをたった1回行うだけで、いまや1億人の生徒たちがコンピューターサイエンスがいかに理解しやすくて楽しいか発見しています。
 
-Hour of Codeは1時間のコンピューターサイエンス入門で、コードをわかりやすく説明し、誰もがその基礎を学べることが分かるよう設計されています。 Learn more at [http://HourOfCode.com](http://HourofCode.com), try an hour yourself, or host an Hour of Code event to introduce others to the world of computing!
+Hour of Codeは1時間のコンピューターサイエンス入門で、コードをわかりやすく説明し、誰もがその基礎を学べることが分かるよう設計されています。 もっと詳しく知るため[http://HourOfCode.com](http://HourofCode.com)を参照したり、自分自身で1時間試したり、あるいはコンピューティングの世界を他の人に紹介するHour of Codeイベントを開催してください！
 
-## Messaging for frequently asked questions
+## よくある質問に対するメッセージ
 
-#### Why is your school doing an Hour of Code?
+#### なぜあなたの学校はHour of Codeをやっているのですか？
 
-While all of us know that it’s important for students to learn how to navigate today’s tech-saturated world, many teachers aren’t experienced in computer science and don’t know where to start. This event is a chance for all of us to see what computer science is about.
+今日の技術に満ちあふれた世界をどう生き抜いてゆくか。私たちはみな、それを学ぶことの重要性をわかっていますが、多くの先生たちはコンピューターサイエンスの経験がなく、どこから始めればよいのか分かりません。 This event is a chance for all of us to see what computer science is about.
 
-We hope it’ll spark interest in students to keep learning. Research also shows that kids can pick up programming concepts before they know how to read and write. In fact, their brains are more receptive to computer languages at a young age, just like foreign languages. <br /> <br />
+私たちはこれをきっかけに学生たちの興味が刺激されて学び続けることを願っています。 子供たちは、読み書きを覚える前にプログラミングの概念を習得できるという研究結果もあります。 実際に、若い時に外国語の学習が容易なように、子どもたちの脳はコンピューター言語の習得も早いのです。 <br /> <br />
 
-#### Why is this important?
+#### なぜこれが重要なのですか？
 
-Technology is transforming every industry on the planet. In 2015, 7 million openings in the U.S. were in occupations—including art and design—that value coding skills. But 65 percent of schools in the U.S. don't teach computer science. It’s time for us to catch up to the 21st century. We know that regardless of what our students do when they grow up, whether they go into medicine, business, politics, or the arts, knowing how to build technology will give them confidence and a competitive edge. <br /> <br />
+技術は地球上のあらゆる産業を変えています。 2015年、米国での700万の求人は、芸術とデザインを含むプログラミングスキルを高く評価する職業でした。 しかしながら、米国の学校の65%はコンピューターサイエンスを教えていません。 今こそ私たちが21世紀に追いつくべきときです。 生徒たちが大人になって、医療や事業、政治、芸術といったどのような分野で何を行おうとも、技術を組み立てる方法を知ることは彼らに自信や競争力を与えるということを知っています。 <br /> <br />
 
-#### A quote you can use in materials
+#### 資料の中で使える引用文
 
-"The Hour of Code is designed to demystify code and show that computer science is not rocket science—anybody can learn the basics," said Hadi Partovi, founder and CEO of Code.org. "Over 100 million students worldwide have tried an Hour of Code. The demand for relevant 21st-century computer science education crosses all borders and knows no boundaries." <br /> <br />
+Code.orgの創始者兼CEOであるHadi Partovi曰く、「Hour of Codeはコードが神秘的なものではなく、わかりやすいものだということを伝えるためのものです。コンピューターサイエンスは難しいものではなく、だれでも基本を学べるものなのです」 「すでに1億人を超す世界中の生徒たちがHour of Codeを試しています。 21世紀のコンピューターサイエンス教育の需要は国境を越えとどまるところを知りません。」 <br /> <br />
 
-#### About Code.org
+#### Code.orgについて
 
-Code.org is a 501c3 public non-profit dedicated to expanding participation in computer science and increasing participation by women and underrepresented students of color. Its vision is that every student in every school has the opportunity to learn computer programming. After launching in 2013, Code.org organized the Hour of Code campaign – which has introduced over 100 million students to computer science to date – and partnered with 70 public school districts nationwide to expand computer science programs. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. For more information, please visit: [<%= resolve_url('code.org') %>](%= resolve_url('https://code.org') %).
+Code.orgは501c3非営利の公的団体です。コンピューターサイエンスの普及と、女性や肌の色で過小評価されている生徒たちの参加機会の増大に取り組んでいます。 すべての学校のすべての生徒がコンピュータープログラミングを学ぶ機会を得るというビジョンを持っています。 Code.orgは2013年に設立された後、Hour of Codeのキャンペーンを行いました。キャンペーンでは1億人以上の学生にコンピューターサイエンスを紹介することができ、全米で70もの公立の学区とコンピューターサイエンスのプログラムを広げるための提携を結ぶことができました。 Code.org は、マイクロソフト、フェイスブック、インフォシス財団、アマゾンなどを含む企業や組織、そして寛大な個人からの慈善の寄付によってサポートされています。 For more information, please visit: [code.org]({{ codeorg_link }}).
 
-## Share these on social media and in emails
+## ソーシャルメディアやメールで共有しよう
 
 [![image](/images/social-media//fit-250/social-1.png)](/images/social-media/social-1.png)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/social-media/fit-250/social-2.png)](/images/social-media/social-2.png)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/social-media/fit-250/social-3.png)](/images/social-media/social-3.png)&nbsp;&nbsp;&nbsp;&nbsp;
 
 <a id="infographics"></a>
 
-## Infographics
+## インフォグラフィック
 
-<%= view :stats_carousel %>
+{{ stats_carousel }}
 
-<%= view :signup_button %>
+{{ signup_button }}
