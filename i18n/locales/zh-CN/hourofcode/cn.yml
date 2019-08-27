@@ -4,30 +4,26 @@ cn:
   language: '英文'
   front_title: '%{campaign_date}，加入有史以来最大的学习活动'
   coming_soon: '即将推出'
-  compatibility_unsupported_browser: "您的浏览器不支持。请将您的浏览器升级到<a href='%{supported_browsers_url}', target='_blank'>支持的浏览器</a>。您可以尝试查看此页，但有些功能可能不能正常工作。"
   campaign_date_start_short: "12 月 4 日"
   campaign_date_start_long: "12 月 4 日"
-  campaign_date_short: "12 月 4-10"
-  campaign_date_full: "12 月 4-10日"
+  campaign_date_short: "12 月 4-10 日"
+  campaign_date_full: "12 月 4-10 日"
   campaign_date_year: "2017"
   campaign_date_full_year: "2017年12月4日至12月10日"
   codeorg_homepage_hoc2018_curriculum: '继续更深入的使用 <a href="%{studio_url}/courses" class="hoc2018-curriculum-link">Code.org 课程</a>'
   codeorg_homepage_hoc2018_dance_heading: 'Create your own <span class="highlight-word">Dance&nbsp;Party</span>'
   codeorg_homepage_hoc2018_header_line1: '编程一小时活动即将开始'
   codeorg_homepage_hoc2018_header_line2_desktop: '<span class="hoc2018-highlight-word">你将创建什么？</span>'
-  codeorg_homepage_hoc2018_header_line2_mobile: 'What will you create?'
+  codeorg_homepage_hoc2018_header_line2_mobile: '您会创造什么？'
   codeorg_homepage_hoc2018_header_line3: 'Give flight to imagination and birth to innovation. Start with an Hour of Code and your own brand of creativity, whatever it may be.'
-  codeorg_homepage_hoc2018_musician_before: 'Featuring'
-  codeorg_homepage_hoc2018_musician_after: 'and more!'
+  codeorg_homepage_hoc2018_musician_before: '特性'
+  codeorg_homepage_hoc2018_musician_after: '还有更多内容！'
   codeorg_homepage_hoc2018_video: '观看视频'
-  hourofcode_homepage_hoc2018_header_line1: 'Anyone, anywhere can organize an Hour of Code event. One-hour tutorials in over 45 languages. No experience needed.'
-  hourofcode_homepage_hoc2018_header_line2: 'Ages 4 to 104.'
+  hourofcode_homepage_hoc2018_header_line1: '任何人、任何地方都可以组织“编程一小时”活动。超过 45 种语言的一小时教程。无需经验。'
+  hourofcode_homepage_hoc2018_header_line2: '4 至 104 岁均可参与。'
   hoc2018_tutorial_mchoc_description: '使用代码方块，带领艾莉克斯或史蒂夫踏上《我的世界》冒险旅程。'
-  hoc2018_minecraft_aquatic_title1: "Minecraft Voyage Aquatic"
-  hoc2018_minecraft_with_microsoft: "In partnership with"
-  hoc2018_minecraft_thank_microsoft: "We thank Microsoft for supporting our vision and mission to ensure every child has the opportunity to learn computer science and the skills to succeed in the 21st century."
-  cookie_banner_message: '通过继续浏览我们的网站或单击 "我同意", 您同意在您的计算机或设备上存储 cookie。'
-  cookie_banner_more_information: "请参Code.org的隐私政策。"
+  cookie_banner_message: '通过继续浏览我们的网站或单击"我同意"，您同意在您的计算机或设备上存储 cookie。'
+  cookie_banner_more_information: "请参阅 Code.org 的隐私政策。"
   cookie_banner_accept: '我同意'
   front_header_banner: '%{campaign_date}，加入有史以来最大的学习活动'
   front_intro_default: '编程一小时活动是一个全球性的活动，在全球180多个国家有数千万学生参与了这个活动。无论你是谁，身处何方，你都可以举办一个编程一小时活动。编程一小时活动的课程已经支持超过40种语言。不需要经验。<strong>4岁以上即可参与。</strong>'
@@ -38,7 +34,7 @@ cn:
   front_start_learning: '开始学习'
   gdpr_dialog_heading: '您是否同意使用来自美国的网站？'
   gdpr_dialog_message: '您使用本网站的数据可能会在美国发送和存储或处理。'
-  gdpr_dialog_link_intro: '有关详细信息, 请参阅我们'
+  gdpr_dialog_link_intro: '有关详细信息，请参阅我们'
   gdpr_dialog_privacy_policy: '隐私政策'
   gdpr_dialog_logout: '退出登录'
   gdpr_dialog_yes: '是的'
@@ -190,19 +186,20 @@ cn:
   how_to_nav_volunteers: "给志愿者"
   whats_next_header: "下一步是什么?"
   whats_next_description: "我们会为您的活动寄出材料和有用的提示。<a href='http://code.org/learn'>试试目前的教程</a>，可以在任何浏览器，智能手机 - 甚至没有计算机也能用！"
-  whats_next_how_to: "<a href='/how-to'> 如何组织编程一小时</a>"
-  whats_next_promote: "<a href='/promote'> 推广编程一小时</a>"
-  whats_next_how_to_promote: "<a href='/promote/resources'> 如何推广编程一小时</a>"
-  whats_next_how_to_promote_link: "<a href='/promote'> 如何推广编程一小时</a>"
-  whats_next_try: "<a href='http://code.org/learn'> 试学教程</a>"
+  whats_next_how_to: "<a href='/how-to'>如何组织编程一小时</a>"
+  whats_next_promote: "<a href='/promote'>推广编程一小时</a>"
+  whats_next_how_to_promote: "<a href='/promote/resources'>如何推广编程一小时</a>"
+  whats_next_how_to_promote_link: "<a href='/promote'>如何推广编程一小时</a>"
+  whats_next_try: "<a href='<a href='%{learn_url}'>'> 试学教程</a>"
   whats_next_try_button: '试学教程'
-  n_have_learned_an_hoc: "<h1>尝试</h1><h2>编程一小时</h2><h3># 已完成</h3>"
+  n_have_learned_an_hoc: "<h1>尝试</h1><h2>编程一小时</h2><h3>已有#次参与</h3>"
   anybody_can_learn: '任何人都可以学习。'
   get_started: '开始'
   beyond_an_hour: '《编程一小时》以外的更多内容'
   register_now: '立即注册'
-  share_on_facebook: '分享到Facebook'
-  share_on_twitter: '分享到Twitter'
+  share_on_facebook: '分享到 Facebook'
+  share_on_twitter: '分享到 Twitter'
+  promote_additional_resources: '额外资源即将到来！'
   front_join_us_heading: '一次每个学生都可以参与的编程一小时活动。'
   front_join_us_announcements: '公告'
   front_join_us_anybody_can_learn: '任何人都可以学习'
@@ -243,12 +240,12 @@ cn:
   front_join_us_support: "支持"
   front_join_us_more_info: "更多信息，请访问<a href='https://code.org'>code.org</a>."
   front_join_us_code_info: "有关详细信息，请访问 code.org"
-  front_join_us_n_students_served: "#次使用"
+  front_join_us_n_students_served: "已有#次使用。"
   front_join_us_challenge: "为你的班级赢得一次与名人的视频聊天！"
   front_join_us_learn_more: "了解更多"
   signup_closed: '编程一小时的注册已停止。请在10月再来查看报名下个编程一小时。'
   signup_registration_not_required: "您无需注册，即可参加全年的编程一小时各项活动！ <a href='%{hoc_activities_url}'>尝试活动</a> 或阅读我们的 <a href='%{howto_guide_url}'>操作指南</a> 为您所在的课堂筹备一次活动。"
-  signup_registration_closed: "每年的 12月, 你的班级都可以加入世界各地数以百万计的学生, 一起庆祝计算机科学教育周。我们将在10月开始登记年度庆典活动。"
+  signup_registration_closed: "每年的12月，你的班级都可以加入世界各地数以百万计的学生，一起庆祝计算机科学教育周。我们将在10月开始登记年度庆典活动。"
   signup_header: '在%{campaign_date} 期间主持编程一小时，并在这里登记。'
   signup_name_label: '您的姓名'
   signup_name_error: '名称是必填的。'
@@ -270,8 +267,8 @@ cn:
   signup_your_event: '登记您的活动'
   signup_host_an_hour: '主办一小时'
   signup_match_volunteer: '帮我找一个本地的软件工程师来激励我的学生'
-  signup_email_preference_opt_in: '我们能向您推送Code.org课程更新，本地机会，或者其他计算机科学的新闻吗？'
-  signup_email_preference_privacy: '(请参阅我们的隐私政策)'
+  signup_email_preference_opt_in: '我们能向您推送 Code.org 课程更新、本地机遇或者其他计算机科学的新闻吗？'
+  signup_email_preference_privacy: '（请参阅我们的隐私政策）'
   signup_email_preference_yes: '是的'
   signup_email_preference_no: '不是'
   signup_email_preference_error: 'Email preference is required'
@@ -282,7 +279,7 @@ cn:
   signup_organization_name_placeholder: "例如，林肯高中"
   signup_event_country_label: "活动所在国家或地区"
   signup_event_country_error: "国家是必选的。"
-  signup_event_location_placeholder: "邮政编码和国家或完整地址.\\r （我们需要在地图上放置一个标记）"
+  signup_event_location_placeholder: "邮政编码和国家或完整地址。"
   signup_special_event_details_placeholder: '请描述这一活动的特殊之处'
   signup_send_posters_address_placeholder: '此地址不会在我们的地图上被共享'
   signup_event_type_in_school: '在一所学校'
@@ -306,11 +303,11 @@ cn:
   social_hoc2018_join: "编程一小时活动即将开始"
   social_hoc2018_mc: "Minecraft is back for the Hour of Code, and you’re the hero! Write code to journey through Minecraft biomes."
   social_hoc2018_mc_creativity: "Use your creativity and problem solving skills to explore and build underwater worlds with code."
-  social_hoc2018_what_create: "What will you create?"
+  social_hoc2018_what_create: "您会创造什么？"
   social_hoc2018_global_movement: "The Hour of Code is a global movement reaching tens of millions of students. One-hour tutorials are available in 45+ languages for all ages."
   map_title: "编程一小时地图"
   map_header: '世界各地的《编程一小时》活动'
-  map_header_count_year: '%{event_count} 已注册的编程一小时活动 %{year}'
+  map_header_count_year: '%{year}年已有%{event_count}个已登记的编程一小时活动'
   see_all_events: '查看所有事件'
   map_header_company: '#公司组织'
   map_header_country: '#次在%{country}'
@@ -326,13 +323,13 @@ cn:
   meta_tag_twitter_title: '编程一小时活动即将开始'
   meta_tag_twitter_description: '编程一小时活动是一个全球性的活动，在全球180多个国家，有使用30多种语言的数千万学生参与了这个活动。4岁以上即可参与。'
   twitter_default_text: "我正在参加今年的 #HourOfCode，你呢？@codeorg"
-  twitter_donor_text: "今年的 #HourOfCode 是关于创造力的。我已加入! 你呢？(感谢 %{random_donor} 支持 @codeorg)"
+  twitter_donor_text: "今年的 #HourOfCode 是关于创造力的。我已加入，你呢？（感谢 %{random_donor} 支持 @codeorg）"
   hoc_faq_title: '常见问题'
   hoc_faq_what_is_hoc_q: '编程一小时是什么？'
-  hoc_faq_what_is_hoc_a: "编程一小时是一个介绍计算机科学一小时的活动，旨在揭秘编程并说明它是任何人都可以学习的基础知识。<a href='http://code.org/learn'>查看教程</a>。"
+  hoc_faq_what_is_hoc_a: "编程一小时以一个小时的时间开始，介绍计算机科学，并让人们快速了解编码。让人们轻而易举学习最基本的知识，让人们更加广泛了解计算机科学。这是一个国际运动，从一小时训练营开始到社区运动。查看<a href='%{tutorials}'>教程和活动</a>。这草根活动被超过<a href='%{partners}'>400位伙伴</a>和200千全球工作者所支持。"
   hoc_faq_last_year: "尝试教程"
   hoc_faq_when_is_hoc_q: '编程一小时活动将在什么时候举行？'
-  hoc_faq_when_is_hoc_a: "编程一小时是每年在 <a href='%{csedweek_url}'> 计算机科学教育周</a> 期间举行的。%{campaign_date_year} 计算机科学教育周将在 %{campaign_date_full} 举办，但你一年四季都可以参与或者举办编程一小时活动。为了纪念 <a href='%{grace_hopper}'> 海军上将Grace Murray Hopper</a> （1906 年 12 月 9 日） ，每年计算机科学教育周的举办时间是他的生日。"
+  hoc_faq_when_is_hoc_a: "编程一小时是每年在 <a href='%{csedweek_url}'> 计算机科学教育周</a> 期间举行的。%{campaign_date_year} 计算机科学教育周将在 %{campaign_date_full} 举办，但你一年四季都可以参与或者举办编程一小时活动。为了纪念 <a href='%{grace_hopper}'> 海军上将 Grace Murray Hopper</a>  （1906 年 12 月 9 日） ，每年计算机科学教育周的举办时间是他的生日。"
   hoc_faq_why_cs_q: '为什么要学习计算机科学？'
   hoc_faq_why_cs_a: "<i>每一个</i>学生都应该获得学习计算机科学的机会。它有益于培养解决问题的能力，逻辑能力和创造性。通过早期的学习，学生们将为他们在21世纪的职业成功打下基础。在<a href='http://code.org'>Code.org</a>上查看更多数据。"
   hoc_faq_how_participate_q: '我怎样才能参加编程一小时活动？'
@@ -381,7 +378,7 @@ cn:
   stats_global: "上亿学生参与过编程一小时"
   stats_girls_more: "尝试过计算机科学的女孩比过去70年的都多"
   stats_females: "女性在计算机科学报名率只占高中课程、大学课程和劳动力的20%"
-  stats_females_more: "女性在编程一小时里只占 <b> 50% 所有参与者 </b>!。"
+  stats_females_more: "女性在编程一小时的所有参与者里占到了<b>50%</b>！"
   stats_nina: '"每一天都是一样 &mdash; 学生们100%参与."-尼娜尼科尔斯佩里，老师'
   stats_student: '"我认识到这是一个<b>千载难逢</b> 的机会。" - 马里亚纳.阿尔泽特，五年级学生'
   stats_michael: '“我<b>从不曾</b>见到我的学生们抱有如此大的学习热情。”- 迈克尔.克拉克，教师'
@@ -424,6 +421,7 @@ cn:
   videos_creativity_series: What is Creativity? View Full Series.
   title_country_resources: 不同国家的特殊资源
   title_hoc_advisory_committee: 编程一小时和 CSEdWeek 咨询委员会
+  title_hoc_review_committee: Hour of Code and CSEdWeek Review Committee
   title_how_to_promote: 传播信息
   title_how_to_districts: 地区如何主办编程一小时
   title_how_to_events: 编程一小时操作指南
@@ -441,7 +439,7 @@ cn:
   title_stats: 导语和统计
   title_partners: 合作伙伴
   title_resources: 资源
-  title_past_posters: Past Hour of Code Posters
+  title_past_posters: 往年的编程一小时海报
   title_signup_thanks: 感谢注册并组织编程一小时活动！
   title_tutorial_guidelines: 教程指南
   title_whole_school: 全校参与
@@ -463,7 +461,7 @@ cn:
   higlights_see_more: 请参阅更多的重点
   highlights_readmore: 了解更多
   highlights_watchvideo: 观看视频
-  highlights_facebook: 分享到Facebook
+  highlights_facebook: 分享到 Facebook
   highlights_constant_alba_heading: 这位女演员、维权人士、企业家在Honest公司为全体员工中主持了一场编程一小时活动。
   highlights_constant_alba_short_heading: Jessica Alba参与了编程一小时
   highlights_constant_obama_heading: 奥巴马总统是写下代码的首位总统, 为学生在白宫举办了一个历史性的编程一小时活动。
@@ -543,7 +541,6 @@ cn:
   tutorial_tynkerspin_name: "旋转画动画套件"
   tutorial_code-avengers_name: "用JavaScript创建游戏"
   tutorial_tynkercq_name: "糖果屋"
-  tutorial_makeschool_name: "在你的浏览器上创建一个iPhone游戏"
   tutorial_cmgame_name: "CodeMonkey 的游戏生成器"
   tutorial_codesters_name: "Codesters"
   tutorial_qrm_name: "无障碍编程(通过屏幕阅读器支持)"
@@ -575,7 +572,6 @@ cn:
   tutorial_codestersflappybike_name: "飞行的自行车"
   tutorial_kanopong_name: "卡诺计算-制作Pong"
   tutorial_tynkerright_name: "人权法案工具包"
-  tutorial_flatverse_name: "Flatverse"
   tutorial_touchdevelop_name: "TouchDevelop"
   tutorial_tynkercc_name: "代码指挥官"
   tutorial_bamboo_name: "Bamboo JS"
@@ -760,7 +756,6 @@ cn:
   tutorial_wolframp_name: "画一个多边形"
   tutorial_wolframn_name: "忍者名字生成器"
   tutorial_soloweb_name: "在一小时内完成你的第一个网页！"
-  tutorial_bloxmobapp_name: "创建你的手机APP"
   tutorial_khanweb_name: "Khan学院：网页"
   tutorial_khandata_name: "Khan学院：数据库"
   tutorial_robomeshiq_name: "用Blockly来创建VEX IQ 机器人"
@@ -824,7 +819,6 @@ cn:
   tutorial_kanostreet_name: "街头艺人"
   tutorial_nyblebot_name: "布吉机器人"
   tutorial_codemojijs_name: "JavaScript入门经典"
-  tutorial_bloxmobmath_name: "iOS和Android的数学应用程序"
   tutorial_techapf_name: "高级 Python 功能"
   tutorial_techfpjs_name: "JS 函数编程的实用介绍"
   tutorial_techlinq_name: "使用 c# LINQ-实用概述"
@@ -832,12 +826,9 @@ cn:
   tutorial_quorumastro_name: "天文学编码"
   tutorial_alicewonder_name: "爱丽丝梦游仙境"
   tutorial_rginter_name: "RoboGarden-中间体"
-  tutorial_bloxmobscience_name: "iOS 和 Android 科学应用"
   tutorial_cssgrid_name: "网格花园"
-  tutorial_bloxmobdesign_name: "应用程序设计过程"
   tutorial_jshero_name: "JS 英雄"
   tutorial_codemojipy_name: "Python 实验室"
-  tutorial_bloxmobcomp_name: "计算问题解决"
   tutorial_nclabdrone_name: "让我们建立一个无人机!"
   tutorial_gpbcircle_name: "制作一个交互式的彩色圆圈"
   tutorial_gpbpaint_name: "制作自己的画图编辑器"
@@ -916,10 +907,6 @@ cn:
   tutorial_idowedo_name: "iDo WeDo"
   tutorial_diggindwarf_name: "Diggin' Dwarf"
   tutorial_rmedr_name: "用 Blockly 来创建 VEX EDR 机器人"
-  tutorial_dksky_name: "DevKit: 建立天空坠落应用程序"
-  tutorial_dkcurrency_name: "DevKit: 建立货币王应用程序"
-  tutorial_dkriver_name: "DevKit: 构建河流怪兽应用程序"
-  tutorial_dkball_name: "DevKit: 建立弹跳球应用程序"
   tutorial_spheroit_name: "块 2: 如果/然后其他"
   tutorial_gameofcodes_name: "游戏代码"
   tutorial_blocklygames_name: "Blockly 游戏"
@@ -980,7 +967,7 @@ cn:
   tutorial_codesparkcreate_name: "codeSpark 学院：创建游戏"
   tutorial_hardvsoft_name: "Team Hardware vs. Team Software"
   tutorial_codestersecard_name: "制作电子贺卡"
-  tutorial_codesterslogo_name: "您的公司徽标"
+  tutorial_codesterslogo_name: "您的公司 Logo"
   tutorial_codesterstshirt_name: "T恤设计"
   tutorial_codewards_name: "Rescue the underwater city!"
   tutorial_olympics_name: "C.A.T.S. go for Robot Olympics"
@@ -1038,8 +1025,8 @@ cn:
   tutorial_spherocomm_name: "Communication"
   tutorial_spherocommunity_name: "Your Community"
   tutorial_spherofunctions_name: "有趣的功能"
-  tutorial_spheroinfrared_name: "BOLT: 红外线"
-  tutorial_spherolightsensor_name: " BOLT: 光传感器"
+  tutorial_spheroinfrared_name: "BOLT：红外线"
+  tutorial_spherolightsensor_name: "BOLT：光传感器"
   tutorial_spheromansion_name: "侏罗纪代码：Mansion Mayhem"
   tutorial_roadblocks_name: "Roadblocks"
   tutorial_spherotext2_name: "文本2：条件"
@@ -1132,7 +1119,6 @@ cn:
   tutorial_tynkerspin_shortdescription: "创建一个绘制旋转图像的有趣笔。"
   tutorial_code-avengers_shortdescription: "在Web浏览器中学习“JavaScript”编程"
   tutorial_tynkercq_shortdescription: "去寻求糖果 ！"
-  tutorial_makeschool_shortdescription: "制作一个新的iPhone游戏！学会通过编码来教会你的怪物新的动作！"
   tutorial_cmgame_shortdescription: "用CoffeeScript，一个真的编程语言，来创建你自己的在线游戏。 "
   tutorial_codesters_shortdescription: "使用Python来创建你自己的游戏，动画和美术作品。"
   tutorial_qrm_shortdescription: "跟Mary一起参加她在生物实验室第一周的编程学习，她正在那学Quorum。"
@@ -1164,7 +1150,6 @@ cn:
   tutorial_codestersflappybike_shortdescription: "使用播放器控件创建游戏，让你的自行车在空中自由地 躲避障碍物!"
   tutorial_kanopong_shortdescription: "改变游戏。打破规则。以代码取胜。"
   tutorial_tynkerright_shortdescription: "计划一个关于权利法案的问答!"
-  tutorial_flatverse_shortdescription: "帮助机器人征服 Flatverse! "
   tutorial_touchdevelop_shortdescription: "解决谜题, 创建游戏, 并在你的手机上学习编码。 "
   tutorial_tynkercc_shortdescription: "建立和训练你的军队以便进行战斗!"
   tutorial_bamboo_shortdescription: "由 Codemoji 创建的Bamboo JS 活动目的为 教导学生基本的 Javascript 概念。"
@@ -1349,7 +1334,6 @@ cn:
   tutorial_wolframp_shortdescription: "探索创建惊人的多边形形状!"
   tutorial_wolframn_shortdescription: "你的忍者名叫什么呢？"
   tutorial_soloweb_shortdescription: "使用你最喜欢的笑话来创建和共享一个网页,!"
-  tutorial_bloxmobapp_shortdescription: "学习设计和系统思考, 为您和您的朋友创建移动应用程序。"
   tutorial_khanweb_shortdescription: "学习如何用 HTML 标签和 CSS 制作网页, 通过制作自己的贺卡来完成。"
   tutorial_khandata_shortdescription: "喜欢查看数据吗？学习如何在数据库中操作数据并制作自己的自定义存储！"
   tutorial_robomeshiq_shortdescription: "计划一个虚拟的在线机器人, 或一个真正的 VEX IQ 机器人。"
@@ -1413,7 +1397,6 @@ cn:
   tutorial_kanostreet_shortdescription: "用《卡诺街头艺术》编码挑战制作美丽独特的艺术品"
   tutorial_nyblebot_shortdescription: "编码是神奇的 - 帮助孩子用代码创造出惊人的东西。"
   tutorial_codemojijs_shortdescription: "Codemoji 设计的 Javascript入门, 让学生输入真正的 javascript 命令, 将激活不同的字符。"
-  tutorial_bloxmobmath_shortdescription: "创建您自己的移动应用程序. 学习成为一个创新的设计师, 通过创建您和您的朋友可以使用的应用程序成为一个计算思考者。设计使用聊天 Blox, 测验, 抽认卡, 日历, 地图, 图片和更多的加入故事内或交互式应用程序立即在iOS或Android手机上工作。任何人和每个人都可以创建一个移动应用程序。"
   tutorial_techapf_shortdescription: "精通python的7个有用技巧！"
   tutorial_techfpjs_shortdescription: "用 Javascript 编写函数式编程变得容易!"
   tutorial_techlinq_shortdescription: "在 C# 中使用 LINQ 库的有用介绍"
@@ -1421,12 +1404,9 @@ cn:
   tutorial_quorumastro_shortdescription: "在这个可访问的在线教程里了解编码和天文学。"
   tutorial_alicewonder_shortdescription: "使用 JavaScript 引导爱丽丝梦游仙境。"
   tutorial_rginter_shortdescription: "在 RoboGarden, 我们相信给学生机会在他们的教育中发挥积极的作用。"
-  tutorial_bloxmobscience_shortdescription: "创建您自己的移动应用程序. 学习成为一个创新的设计师, 通过创建您和您的朋友可以使用的应用程序成为一个计算思考者。设计使用聊天 Blox, 测验, 抽认卡, 日历, 地图, 图片和更多的加入故事内或交互式应用程序立即在iOS或Android手机上工作。任何人和每个人都可以创建一个移动应用程序。"
   tutorial_cssgrid_shortdescription: "一个学习 CSS 网格的游戏。"
-  tutorial_bloxmobdesign_shortdescription: "创建您自己的移动应用程序. 学习排序和系统思考来创建您和您的朋友可以使用的应用程序。设计使用聊天 Blox, 测验, 卡片, 日历, 地图, 图片和更多在故事里或适用于任何 iOS或 Android手机的交互式应用程序。任何人和每个人都可以创建一个移动应用程序。您的内容, 您的自定义, 您的应用程序在您的手机里。"
   tutorial_jshero_shortdescription: "JS 英雄为您提供了一个通过 JavaScript介绍编程。它提供了一般的编程概念, 如变量, 条件, 循环, 函数和更多。这些概念构成了许多编程语言的基础。"
   tutorial_codemojipy_shortdescription: "Python 实验室是一个基于 IOS 的活动, 它教基本的 python。"
-  tutorial_bloxmobcomp_shortdescription: "创建您自己的移动应用程序. 学习排序和系统思考来创建您和您的朋友可以使用的应用程序。设计使用聊天 Blox, 测验, 卡片, 日历, 地图, 图片和更多在故事里或适用于任何 iOS或 Android手机的交互式应用程序。任何人和每个人都可以创建一个移动应用程序。您的内容, 您的自定义, 您的应用程序在您的手机里。"
   tutorial_nclabdrone_shortdescription: "用 NCLab 的3D建模应用程序建立一个无人机框架。3D 打印它，制造一个真正的飞行雄蜂！"
   tutorial_gpbcircle_shortdescription: "制作美丽的颜色。"
   tutorial_gpbpaint_shortdescription: "创建和自定义绘图应用程序。"
@@ -1505,10 +1485,6 @@ cn:
   tutorial_idowedo_shortdescription: "设计和建造一个机器人车辆, 然后程序它传送微型数字。"
   tutorial_diggindwarf_shortdescription: "Dwarfs 需要您的帮助来使用 JavaScript 导航、挖掘和收集宝石。"
   tutorial_rmedr_shortdescription: "程序一个 VEX EDR 机器人使用 Blockly 编程导航一个迷宫。"
-  tutorial_dksky_shortdescription: "你准备好构建应用程序了吗？DevKit 魔法等待着你！"
-  tutorial_dkcurrency_shortdescription: "你准备好构建应用程序了吗？DevKit 魔法等待着你！"
-  tutorial_dkriver_shortdescription: "你准备好构建应用程序了吗？DevKit 魔法等待着你！"
-  tutorial_dkball_shortdescription: "你准备好构建应用程序了吗？DevKit 魔法等待着你！"
   tutorial_spheroit_shortdescription: "了解如果/然后, 其他条件, 建立自己的动物声音游戏, 我们喜欢叫 \"动物折腾!"
   tutorial_gameofcodes_shortdescription: "建立您的真棒龙游戏, 并将其导出为一个独立的应用程序。"
   tutorial_blocklygames_shortdescription: "Blockly 游戏是一系列教编程的教育游戏。"
@@ -1602,7 +1578,7 @@ cn:
   tutorial_wizard_shortdescription: "Journey into the world of Code Magic as a Code Wizard. Learn to create and cast spells to customize your castle."
   tutorial_mbscratchcards_shortdescription: "Connect the physical world of micro:bit with the virtual world of Scratch."
   tutorial_mbswiftplaygrounds_shortdescription: "Use the micro:bit with an iPad to learn Swift."
-  tutorial_mbbuttons_shortdescription: "In this introductory project, you'll make pictures or animations appear on the micro:bit display when a buttons are pressed."
+  tutorial_mbbuttons_shortdescription: "In this introductory project, you'll make pictures or animations appear on the micro:bit display when buttons are pressed."
   tutorial_meteor_shortdescription: "In this project, you'll create a Falling Meteors game for the BBC micro:bit. Using the buttons, the player will move a shield to catch falling meteors and save the Earth."
   tutorial_ballbounce_shortdescription: "Learn to make a mobile app where the user flings a ball across the screen and it bounces off the edges."
   tutorial_mitcodi_shortdescription: "Learn to make your own interactive mobile app. Press the bee and hear it buzz!"
@@ -1627,14 +1603,14 @@ cn:
   tutorial_spherocomm_shortdescription: "Learn about miscommunication in both a community and in a computer program. Use this knowledge to resolve any miscommunication, or bugs, in a program in an effort to help BOLT find its way home."
   tutorial_spherocommunity_shortdescription: "Design a simple path that represents a common route that you travel everyday. You will create two programs, a drawn path and a block-based program path through your community route."
   tutorial_spherofunctions_shortdescription: "学习如何使用和调用函数将Sphero变成计算器"
-  tutorial_spheroinfrared_shortdescription: "\n成为流行病学家以阻止传播罕见的机器人感染困扰着一个BOLT机器人社区。"
-  tutorial_spherolightsensor_shortdescription: "了解如何创建使用环境光传感器测量勒克斯值的程序并追逐BOLT"
+  tutorial_spheroinfrared_shortdescription: "成为流行病学家以阻止传播罕见的机器人感染困扰着一个 BOLT 机器人社区。"
+  tutorial_spherolightsensor_shortdescription: "了解如何创建使用环境光传感器测量勒克斯值的程序并追逐 BOLT。"
   tutorial_spheromansion_shortdescription: "在你家保留一堆恐龙不应该是一个问题，对吗？正如您想象的那样，这并不能很好地结束。你被困在豪宅的图书馆里，必须为你的出路编程。"
   tutorial_roadblocks_shortdescription: "As a continuation of Your Community, you will modify your blocks program as you and your partner encounter different roadblocks along the route."
-  tutorial_spherotext2_shortdescription: "\n通过构建一个有趣的游戏来学习你的第一个条件，你将投掷Sphero并猜测动物的声音。完成文本后，这是一项很棒的活动1."
-  tutorial_spherotext3_shortdescription: "\n学习根据陀螺仪的旋转速率更换Sphero的主要LED。您还将了解归一化和绝对值。完成文本1和2后，这是一项很棒的活动"
+  tutorial_spherotext2_shortdescription: "\n通过构建一个有趣的游戏来学习你的第一个条件，你将投掷 Sphero 并猜测动物的声音。完成文本1后，这是一项很棒的活动。"
+  tutorial_spherotext3_shortdescription: "\n学习根据陀螺仪的旋转速率更换 Sphero 的主要 LED。您还将了解归一化和绝对值。完成文本1和2后，这是一项很棒的活动。"
   tutorial_spherotext4_shortdescription: "Use variables to build a hot potato game powered by Sphero. This is a great activity after you complete Text 2 or 3."
-  tutorial_spheroraptor_shortdescription: "\n创建一个强化笔，以保持Spheroraptors在海湾，同时也将代码写入Spheroraptors逃脱。从循环，到条件，到操作员甚至是比较器，你需要尽可能多的编码知识。"
+  tutorial_spheroraptor_shortdescription: "\n创建一个强化笔，以保持 Spheroraptors 在海湾，同时也将代码写入 Spheroraptors 逃脱。从循环，到条件，到操作员甚至是比较器，你需要尽可能多的编码知识。"
   tutorial_stempiday_shortdescription: "In this coding activity you will randomly generate points similar to a very bad player shooting darts at a dart board."
   tutorial_stemplanetoids_shortdescription: "In this activity you will fix a broken asteroids game where the ship only moves in a straight line. Then you will add gravity to the game and try to land the ship on the moon!"
   tutorial_stempong_shortdescription: "In this activity you will fix a broken version of the Pong game so that objects bounce like they should. Then you will add gravity to create a Bonk.io clone."
@@ -1656,7 +1632,7 @@ cn:
   tutorial_pets_shortdescription: "Create a fun game about pets – either real or imaginary! Beginners can use the self-guided tutorial while more advanced coders have the option to start off with a blank project."
   tutorial_petvet_shortdescription: "From guiding pets into the Examination Room to diagnosing their sniffles, boo-boos, and itches, you'll find every puzzle has a solution to make the pets feel better than ever!"
   tutorial_superhero_shortdescription: "Use HTML and CSS pixel art to create your favorite superhero masks. Publish and share your creations!"
-  tutorial_vidcodeplastic_shortdescription: "Learn to use loops, sin waves and customized emojis to make a unique project."
+  tutorial_vidcodeplastic_shortdescription: "Learn to use loops, sine waves and customized emojis to make a unique project."
   tutorial_vidcodetypeface_shortdescription: "Create your own typeface using shapes and elements of typography. Type has more elements than you may have realized!"
   tutorial_washustorm_shortdescription: "Learn how to program an incoming storm."
   tutorial_activitypackets_shortdescription: "Find hours of family-friendly fun with Wonder Workshop's printable packets of creative coding activities. Bring coding to life with Dash, Dot, and Cue robots by downloading these online and offline activities to use during Hour of Code and beyond!"
@@ -1702,14 +1678,14 @@ cn:
   tutorial_galaxy_longdescription: "使用你的安卓系统的智能手机, 探索遥远的星系! 在 #GalaxyGameJam 您可以创建您自己的安卓系统的应用程序. 并使用我们给予的设计图像进行设计与成为我们的使命计划之一。使用Pocket代码, 我们的目标是启发孩子、青少年和年轻人在他们的智能手机上直接创建自己的游戏、动画和互动故事。\n"
   tutorial_inf_longdescription: "通过游戏实验室，用《迪士尼无限世界》中的人物创作一个故事或一款游戏。"
   tutorial_tynkersol_longdescription: "编程一个我们太阳系的交互式模型。这个项目提供一步一步的指导，引导你创建一个围绕太阳运行的行星的模拟，然后添加每颗行星在点击时弹出的事实。"
-  tutorial_itchg_longdescription: "名字 - IT，你创造了一个认可的游戏！\n\n结束的项目有学生创造一个游戏来命名澳大利亚的国家！您将首先浏览并按照指示创建一个游戏来标记水循环的三个阶段。 \n\n你会做一个完整的运行游戏，包括得分！\n\n从编码方面，您将了解变量，条件，列表，串联字符串等等。 这些都是编码技术，您可以在其他项目中重复使用，随着您的进步建立新的编码技巧！\n\n您可以通过添加自己的图像和标签（以及许多其他额外的项目选项，乐趣永远不会结束）进一步采取行动。 建议使用耳机。"
-  tutorial_como_longdescription: "编程大冒险是寓教于乐的游戏环境，学生用真正的世界通用编程语言CoffeeScript学习编写代码。还能利用所学内容，开发和生成独特的、个性化的应用程序和网站。编程大冒险能促进学生实际操作技能的培养，比如解决问题，制定计划，几何和数学思维等。\n\n通过CodeMonkey编程大冒险，学生能够由易到难地学习到计算机科学基础知识，如语句和参数、对象、循环、变量、数组、函数、条件和布尔逻辑等。编程大冒险提供了一个简单的基于文本编码的方式，为学生将来学习计算机科学的高级科目，如游戏设计，算法和数据结构铺平了道路。"
+  tutorial_itchg_longdescription: "Name-IT，你创造了一个认可的游戏！\n\n结束的项目有学生创造一个游戏来命名澳大利亚的国家！您将首先浏览并按照指示创建一个游戏来标记水循环的三个阶段。 \n\n你会做一个完整的运行游戏，包括得分！\n\n从编码方面，您将了解变量，条件，列表，串联字符串等等。 这些都是编码技术，您可以在其他项目中重复使用，随着您的进步建立新的编码技巧！\n\n您可以通过添加自己的图像和标签（以及许多其他额外的项目选项，乐趣永远不会结束）进一步采取行动。 建议使用耳机。"
+  tutorial_como_longdescription: "编程大冒险是寓教于乐的游戏环境，学生用真正的世界通用编程语言 CoffeeScript 学习编写代码。还能利用所学内容，开发和生成独特的、个性化的应用程序和网站。编程大冒险能促进学生实际操作技能的培养，比如解决问题，制定计划，几何和数学思维等。\n\n通过 CodeMonkey 编程大冒险，学生能够由易到难地学习到计算机科学基础知识，如语句和参数、对象、循环、变量、数组、函数、条件和布尔逻辑等。编程大冒险提供了一个简单的基于文本编码的方式，为学生将来学习计算机科学的高级科目，如游戏设计，算法和数据结构铺平了道路。"
   tutorial_processfound_longdescription: "写软件去做你经常用手做的事情，用纸做铅笔和油漆，意味着什么？ 你可以使用计算机来创建图纸吗？ 要创建动画？ 创建图像？"
   tutorial_tynkerhomo_longdescription: "您将按照一步步的指示来制作含有大量同音字的互动故事动画！ 每当角色说出一个同音字时，就会询问玩家哪个同音字是正确的单词。 玩家讲会更了解自己的同音词，否则对话就没有任何逻辑了！"
   tutorial_art_longdescription: "与“小艺术家”一起画出炫酷的图画和设计！"
   tutorial_tynkerbrick_longdescription: "使用Tynker的物理引擎来制作这款经典街机游戏的个性化版本。 按下箭头键，开始编程拨片来移动，然后添加一个球和一些砖块。 您将通过添加球，砖和桨的自定义资源来个性化游戏。"
-  tutorial_itchbio_longdescription: "命名 -它 您创造了一个识别游戏! \n\n创建一个游戏来命名生物细胞的各个部分。在您做游戏的时候学习细胞的各个部分, 并在需要刷新内存的情况下多次播放！ \n\n您将首先要走过一条路线并按照指示创建一个游戏来标记水循环的三阶段。您会做一个功能全面的游戏，包括得分！ \n\n从编码方面, 您将了解变量、条件、列表、串联字符串等等。这些都是编码技术, 您将能够在其他项目中重复使用, 随着您的进展以建立新的编码技能! \n\n您可以通过添加自己的图像和标签 (还有许多其他的项目选项，乐趣永远不会结束) 进一步采取的活动。建议戴耳机。"
-  tutorial_itchj_longdescription: "我们的跳跃活动为您提供编码技巧, 让一个角色跳转到平台上，在许多街机游戏中使用。 \n\n使用跳跃技巧和创造你自己的游戏目标。 \n\n这将使用笛卡尔坐标系, 这样你就可以在这里学到一些屏幕坐标。 \n\n享受与 Itch学习所有关于跳跃的乐趣! 建议使用耳机。"
+  tutorial_itchbio_longdescription: "Name-IT 您创造了一个识别游戏! \n\n创建一个游戏来命名生物细胞的各个部分。在您做游戏的时候学习细胞的各个部分, 并在需要刷新内存的情况下多次播放！ \n\n您将首先要走过一条路线并按照指示创建一个游戏来标记水循环的三阶段。您会做一个功能全面的游戏，包括得分！ \n\n从编码方面, 您将了解变量、条件、列表、串联字符串等等。这些都是编码技术, 您将能够在其他项目中重复使用, 随着您的进展以建立新的编码技能! \n\n您可以通过添加自己的图像和标签 (还有许多其他的项目选项，乐趣永远不会结束) 进一步采取的活动。建议戴耳机。"
+  tutorial_itchj_longdescription: "我们的跳跃活动为您提供编码技巧，让一个角色跳转到平台上，在许多街机游戏中使用。 \n\n使用跳跃技巧和创造你自己的游戏目标。 \n\n这将使用笛卡尔坐标系，这样你就可以在这里学到一些屏幕坐标。 \n\n享受与 Itch 学习所有关于跳跃的乐趣！建议使用耳机。"
   tutorial_tickleo_longdescription: "您可以实现什么\n虎鲸是一个在 Tickle 应用程序的特色之一。它点燃您的想象力, 控制像虎鲸的虚拟人物, 进一步创建自己的独特的游戏。同时, 您可以在尝试清除练习时学习编程概念。  \n\n实践与练习\n-编程虎鲸在一个圆圈游一次然后顺着您的手指触摸屏幕。\n-编程的虎鲸永远在一个圆圈中游泳, 并在图8中移动。\n-编程虎鲸沿海洋的四边游泳。\n-编程虎鲸从左游到右横跨海洋。\n-通过摇动和倾斜您的设备使虎鲸游泳和旋转。例如, 将您的设备向右倾斜, 使虎鲸游到右侧, 并通过摇动设备使虎鲸旋转。 \n\n您能学到什么\n-熟悉可视化编程。\n-了解命令的顺序执行、重复 (永久和重复循环) ，以及条件 (if - else) 语句。\n-理解笛卡尔坐标系统的概念。\n-学习方向 (0-360 度) 和距离的坐标系统。\n-了解事件驱动编程概念。\n-在设备中使用运动传感器来感知运动事件 (倾斜和摇动) 以引导虎鲸。"
   tutorial_hopgeo_longdescription: "在跳房子的开放式编程环境里创建您自己的高吸引力的几何跳线游戏版本! 在这一过程中, 您将获得有关序列、循环、变量和调试等概念的亲身体验。不需要有经验来完成或帮助这一活动; 它包括一个有趣的应用视频教程和一个循序渐进的便利指南。"
   tutorial_tynkermult_longdescription: "编码您自己的数学游戏! 您的角色需要逃离洞穴而不被落下的巨石击中。但是角色可以向前跑的唯一途径是正确地回答数学问题！您将按照循序渐进的指示来编程这个有趣的乘法问答游戏。"
@@ -1721,7 +1697,6 @@ cn:
   tutorial_tynkerspin_longdescription: "在这个项目中, 您将创建一个令人敬畏的可自定义的绘图工具。编程你的钢笔, 选择一个图像 (或上传您自己), 您就可以画一个旋转版本的图像。"
   tutorial_code-avengers_longdescription: "在10个短任务中用 JavaScript构建一个2个播放器 2D 自上而下的游戏。然后继续学习一些基本的编程 (变量和 if 语句), 当您创建一个小测验与朋友分享。一路上赚取积分和徽章为您的竞争达到了一流的排行榜榜首。"
   tutorial_tynkercq_longdescription: "设计自己的糖果巨魔的角色, 并进行多层次的糖果探索, 以帮助您的角色找到回家的路。您将解决编码难题, 通过人类世界导航您的角色, 同时避开障碍物和收集水果糖和薄荷。"
-  tutorial_makeschool_longdescription: "通过使用一个全新的和初学者友好的编程语言 Swift 来学习代码制作 iPhone 游戏! 创建一个口袋妖怪灵感动作游戏和编写代码, 教您的怪物新的动作。您将学习如何使用变量、方法和对象来帮助您的怪物获胜!"
   tutorial_cmgame_longdescription: "用猴子创造您自己的游戏！这是一个由 CodeMonkey 的创作者新的在线课程。学习如何从开始到结束使用 CoffeeScript建立自己的在线游戏, 一个现实世界的编程语言。学习添加精灵, 使用键盘控制它们, 避免敌人, 加减分, 创造障碍和不要被老虎吃掉。不需有经验。完成后, 与朋友分享您的游戏!"
   tutorial_codesters_longdescription: "使用 Python 创建您自己的游戏、动画和艺术品。一旦您完成了, 与朋友们分享! Python 编程, 一个每天在公司使用的真正的编程语言 - 我们的拖放工具箱使学习变得容易！尝试建立一个篮球比赛，编排一个舞蹈, 或设计一个动画卡! "
   tutorial_qrm_longdescription: "加入玛丽学习法定人数编程语言作为一个轻松愉快的生物之旅的一部分。这些活动是学生指导的，有网上的例子，盲人和视障人士都可以使用。"
@@ -1753,7 +1728,6 @@ cn:
   tutorial_codestersflappybike_longdescription: "在这个活动中，学生将使用可以拖动到文本的工具栏，开始用Python进行编程！学生将通过一系列学习活动来指导他们建立一个完整的游戏！完成之后，他们将接受挑战，使用他们学习的语法、点符号、事件、变量、参数和游戏机制来创建新的游戏。"
   tutorial_kanopong_longdescription: "通过玩街机游戏一小时，就能学习建立代码!"
   tutorial_tynkerright_longdescription: "创建您自己的权利法案项目: 更改背景、添加更多问题、保留分数、添加动画。"
-  tutorial_flatverse_longdescription: "学习的基本知识编程的游戏, 它的吃或被吃掉!"
   tutorial_touchdevelop_longdescription: "友好的编辑器将引导您创建像素的艺术, 解决熊拼图, 或做您自己的跳跃鸟游戏。 "
   tutorial_tynkercc_longdescription: "准备你的军队作战！ 编写你军队每个成员的攻击逻辑去发掘敌人的弱点，并从胜利的战斗中出现。 当你学习的时候，你可以解锁你可以编程的新角色。 建立你的军队，然后与朋友作战。 谁代的码最好？"
   tutorial_bamboo_longdescription: "Bamboo JS 是 Codemoji 教学生基本的 Javascript 概念的活动设计。 Bamboo 熊猫和他那了不起的吐司朋友会通过基本命令和结构来教学生。Bamboo JS 活动是为那些想要更多的动画和更多的艺术和设计在他们的编码里的学生设计的, 。The Bamboo 活动对所有年龄段的学生都是有益的。 "
@@ -1938,7 +1912,6 @@ cn:
   tutorial_wolframp_longdescription: "在此活动中创建不同的多边形形状。"
   tutorial_wolframn_longdescription: "在这个活动中，学生开发一个名字生成器，将他们的名字转换成忍者名字。"
   tutorial_soloweb_longdescription: "访问www.sololearn.com并安装HTML和CSS应用程序或在网上打开相关的课程（Android用户可以安装统一的SoloLearn应用程序）。在HTML中完成2个模块（概述和HTML基础）和2个模块（Basics和Working w/Text）以及CSS中第三个模块（Properties）的前5个课程。获取模板https://code.sololearn.com/WKeg2CtzpRts/并按照说明进行操作。"
-  tutorial_bloxmobapp_longdescription: "创建您自己的移动应用程序。学习排序和系统思维，来创建您和您的朋友可以使用的应用程序。使用聊天Blox，测验，抽任卡，日历，地图，图片等等设计可以在任何IOS或Android手机上工作的故事或交互式应用程序。任何人都可以创建一个移动应用程序。您的内容，您的自定义以及您的应用程序都在您的手机上。"
   tutorial_khanweb_longdescription: "汗学院：网页教你如何用HTML标签和CSS来制作网页，通过制作你自己的贺卡来完成。"
   tutorial_khandata_longdescription: "Khan学院：数据库教你如何处理数据库中的数据并制作你自己的定制商店。"
   tutorial_robomeshiq_longdescription: "学生写谷歌 Blockly 代码， 以控制流行的 VEX 智商机器人。他们可以选择编写一个虚拟机器人的代码, 或者是他们自己构建的一个真正的 VEX 智商机器人, 这两种选项都在同一个基本网络的开发界面中可使用。学生学习基本的机器人运动, 以及如何使用传感器和输出设备。它既简单又有趣。"
@@ -1946,9 +1919,9 @@ cn:
   tutorial_playtune_longdescription: "通过编写代码来匹配在钢琴上演奏的乐曲，块语言被用来解决音乐的难题。需要序列，选择和重复算法来解决这些难题。达到第9级后，用户可以创建自己的曲调，并将其下载为Android设备的应用程序。学生还可以通过链接到应用程序发明者源代码来修改应用程序。"
   tutorial_computeit_longdescription: "让我们切换角色。这次你是电脑！请阅读和解读程序，找到正确的轨迹，并赢得挑战。你必须集中精力并且使用您的直觉能力来理解一些编程的核心概念。"
   tutorial_codesterssj_longdescription: "在这个活动中，学生将立即使用可以拖动到文本的工具栏，开始用Python进行编程！通过入门技能建设活动，学生将开始学习基本的语法、变量和事件！他们将使用多个精灵来设置一个讲笑话的情景，他们可以与朋友分享！ *在线分享需要学生进行注册。"
-  tutorial_cmchat_longdescription: "Python Chatbot通过15个练习向14岁以上的孩子介绍Python。练习的目标是编写一个可以与用户交互并测试他们的常识的聊天机器人。Python Chatbot教授python，服务器端编程，chatbot开发，字符串操作，数据结构，循环，条件和变量。"
+  tutorial_cmchat_longdescription: "Python 聊天机器人通过15个练习向14岁以上的孩子介绍 Python。练习的目标是编写一个可以与用户交互并测试他们的常识的聊天机器人。Python 聊天机器人教授 Python，服务器端编程，聊天机器人开发，字符串操作，数据结构，循环，条件和变量。"
   tutorial_tynkerdb_longdescription: "选择一条龙，然后出发寻找宝藏。冲破障碍，在穿越神秘丛林的旅途中获得炫酷的力量提升。在此过程中学习排序、循环、条件逻辑和调试技巧。"
-  tutorial_cmbuild_longdescription: "CodeMonkey 的Game Builder是一个游戏设计和创作的教育平台。Game Builder为学生成为真正的创作者提供了基础，因为它能为学生们提供详细的指南，指导他们如何创建线上游戏。学习编写游戏并熟悉Game Builder界面后，它提供给学生3个完整的指导课程和1个自由模式使用。学生们可以应用他们的编码技巧，使用CoffeeScript语言去创建真正的电脑游戏。\n\n就像用CodeMonkey赢得编码大冒险一样，Game Builder是用来搭建游戏的脚手架，学生可以自由地控制游戏进度，并且系统自动对所编写游戏进行评估。对教育工作者来说，Game Builder已经被证明是一种易于实施且具有极高参与度的学习方式\nGame Builder是基于项目的，符合常见的核心标准，是学习者学习完编码基本功能后的下一步。"
+  tutorial_cmbuild_longdescription: "游戏设计课程教导 14 岁以上的学生一个步骤一个步骤来学习。在这三个课程中, 学生将会学习游戏设计和创作元素。游戏课程帮助学生掌握键盘的用户界面和游戏设计的游戏技巧。\"青蛙教学将会教导学生如何创建自己的经典游戏 \n Frogger™。“雪碧动画”允许学生绘制图像, 程序动画, 并为他们自己的游戏创建原始的精灵。"
   tutorial_robotrattle_longdescription: "“机器人拨浪鼓”教导学生如何操作一个完全物理模拟的机器人（借助于视觉编码语言的帮助下）拖动和放下块编写代码指令。学生将会被被介绍到机器人及其各种移动关节, 并学习移动其关节与使用的角度。机器人可以推动和抓取对象, 以指导他们的目标, 但也打破, 如果移动的障碍。这项活动的适合13岁以上的孩子学习, 提供易于的物理行为和机器人的洞察力。最根本的是, 任何拥有智能手机和移动虚拟机耳机的人都能观看完整的机器人执行书面代码。"
   tutorial_codestersh_longdescription: "在这个为初学者编写的活动中，学生将使用可以拖动到文本的工具栏来立即开始编写Python代码！首先，学生将通过一些技能构建活动来学习为精灵分配和修改指令。然后，编写自己的指令来创建可共享的电子艺术！ *分享需要学生进行注册。"
   tutorial_codehsdigipixel_longdescription: "了解如何使用像素在计算机上存储和显示图像。 探索如何将图像编码转化成内含不同颜色的网格（像素），并使用二进制和十六进制颜色代码制作自己的数字图像"
@@ -1958,7 +1931,7 @@ cn:
   tutorial_grokem_longdescription: "此活动旨在为您提供您的第一次体验编程, 并已专门为编程一小时设计。使用编程语言 Python 来探索表情符号和文本操作。"
   tutorial_kodmaze_longdescription: "建立你自己的迷宫并分享！学生们将几何图形与编程进行配对以根据给定的题目构建可解决的迷宫。题目包括具有简单形状，小方块，对称图形和特定角度的迷宫。"
   tutorial_codestersa_longdescription: "在这个为有一定编程经验学生设计的活动中，学生将使用可以拖动到文本的工具栏来构建一个带有播放器控件的游戏！学生将学习变量、随机生成的数字、游戏设计以及多种类型的事件和事件触发器，同时躲避小行星冲撞他们的飞船！先修知识：变量、参数。"
-  tutorial_cmdodo_longdescription: "一个与CodeMonkey\"编码冒险\"一样享有同样易用界面的专为二至四年级学生学习数学所设计的基于游戏的平台。在60个互动挑战中，学生将通过令人兴奋的新角色，特征和挑战来提高他们的数学技能。学生将通过使用像素标尺和量角器来测量距离和角度来帮助Dodo得到鸡蛋。"
+  tutorial_cmdodo_longdescription: "一个与 CodeMonkey \"编码冒险\"一样享有同样易用界面的专为二至四年级学生学习数学所设计的基于游戏的平台。在60个互动挑战中，学生将通过令人兴奋的新角色，特征和挑战来提高他们的数学技能。学生将通过使用像素标尺和量角器来测量距离和角度来帮助 Dodo 得到鸡蛋。"
   tutorial_tynkerspace_longdescription: "你的宇航员的飞船紧急迫降了！幸好有你在那里帮忙。使用拖放式编程帮助你的角色收集备用零部件，同时躲开外星人和障碍物。你能找到一艘飞船把你的宇航员带回家吗？"
   tutorial_gfbloons_longdescription: "在这个课程中，你将编写一个从流行的Bloons塔防御游戏——射击猴塔。在课程结束时，您将了解当今许多最流行的塔防游戏中常用的角度查找数学和算法。你将能够在你自己的游戏中应用这些知识。Gamefroot - Hour of Code 教程使用一个允许学生只需拖放可视的代码块就可以完成编写代码的可视化编程语言。"
   tutorial_raspipong_longdescription: "使用Sense HAT和一些Python代码重新创建Pong的经典游戏。此活动可以使用Sense HAT仿真器在线完成，也可以使用Raspberry Pi和Sense HAT硬件在线完成。"
@@ -2002,7 +1975,6 @@ cn:
   tutorial_kanostreet_longdescription: "艺术与科技的结合！ 随着卡诺的街头艺术小时代码的挑战，所有能力的创造性头脑将代码与画笔，使美丽，独特的艺术品。 一路上，制造商将以直观和引人入胜的方式学习计算机科学原理，同时使用真正的编程语言。 用我们的老师资源和引导的内容，每个人都可以获得乐趣。"
   tutorial_nyblebot_longdescription: "Boogie Bot是一个有趣并且有吸引力的一个编码应用程序。随着这个3D应用程序的发展，它将使用谷歌的可视化编程语言Blockly来向孩子们介绍计算机编程的基础知识。Boogie Bot是一个可以通过编程来做跳舞动作的跳舞机器人。应用程序功能（所有功能都可以提供完整版本）可以用编码块来学习编码，通过编码来创建自己的舞蹈，同时可以从几个不同的独特舞蹈曲目中选择，将房间变成一个时尚的派对区，并且可以在舞台上添加令人惊叹的特殊效果，当你学习编程构造时还可以赚钱，用很酷的东西来装饰房间，在充满隐藏功能的交互式房间里玩耍和探索，同时可以记录和保存你的创作视频。"
   tutorial_codemojijs_longdescription: "《JavaScript入门》是为了让学生输入对角色动作有很大影响的简单命令。学生将输入命令，使人物角色从后空翻到发出声音甚至说话。这项活动将帮助您学习基本的JavaScript思想和命令。"
-  tutorial_bloxmobmath_longdescription: "创建您自己的移动应用程序. 学习成为一个创新的设计师, 通过创建您和您的朋友可以使用的应用程序成为一个计算思考者。设计使用聊天 Blox, 测验, 抽认卡, 日历, 地图, 图片和更多的加入故事内或交互式应用程序立即在iOS或Android手机上工作。任何人和每个人都可以创建一个移动应用程序。"
   tutorial_techapf_longdescription: "交互式教程目的是在您可能还不知道如何提高对”Python编程语言“掌握的时候。向您介绍如何提高”Python编程语言“的特性和技巧，"
   tutorial_techfpjs_longdescription: "函数式编程是那些实施起来太难或太理性化的事情之一。不要再等了！在这个交互式教程中，您将通过实际操作事例和JavaScript练习来找到和实施函数式编程。"
   tutorial_techlinq_longdescription: "C#编程语言非常受开发者欢迎，在很大程度上是因为他有强大而直观的语言功能。这些其中一个就是LINQ，它是用于在C#语法中，直接对多种类型的数据执行查询的库。这个交互式教程将逐步向您展示如何使用它。"
@@ -2010,12 +1982,9 @@ cn:
   tutorial_quorumastro_longdescription: "在这个可访问的在线教程中，可以通过这个主题从计算天文学中学习了解编码。在其中，当学生用Quorum编程语言的计算机图形引擎时，将找到如何控制望远镜的方法。在最后一节课上，学生将创建一个图形和可访问的星星地图，以查找宇宙中的物品。"
   tutorial_alicewonder_longdescription: "爱丽丝梦游仙境是一个为6岁以上的孩子设计的自我指导、不需事前有编程经验的益智游戏。您将引导Alice使用有参数和无参数的函数。"
   tutorial_rginter_longdescription: "RoboGargen是一个易于理解的实践教育应用程序，学生参与主动学习。RoboGarden设备齐全，可以从头开始编码读写能力，减少了对技术精通的老师的需求。"
-  tutorial_bloxmobscience_longdescription: "您可以创建一个自己的移动应用程序。学习成为一个创新设计师，通过创建应用程序变成一个计算思考者，同时您和您的朋友都可以使用这个应用程序。设计使用聊天Blox，测验，抽认卡，日历，地图，图片以及更多的故事或者在iOS 系统和Android系统中立即运行的交互式应用程序。每一个人都可以创建一个移动应用程序。 "
   tutorial_cssgrid_longdescription: "通过对你的菜园的了解，知道了关于CSS Grid的所有信息。"
-  tutorial_bloxmobdesign_longdescription: "创建您自己的移动应用程序. 学习排序和系统思考来创建您和您的朋友可以使用的应用程序。设计使用聊天 Blox, 测验, 卡片, 日历, 地图, 图片和更多在故事里或适用于任何 iOS或 Android手机的交互式应用程序。任何人和每个人都可以创建一个移动应用程序。您的内容, 您的自定义, 您的应用程序在您的手机里。"
   tutorial_jshero_longdescription: "JS Hero想带你进入JavaScript的编程世界。在每一个页面上，你都会发现一个小课程和一个小编程任务。该任务可以直接在页面上回答。如果你成功地解决了这个问题，或者出了差错，他们都会立即告诉你。"
   tutorial_codemojipy_longdescription: "Python Lab是基于IOS系统的，一个教编程语言python基础知识的活动。用户将学习循环、数组和布尔等相关知识。"
-  tutorial_bloxmobcomp_longdescription: "创建您自己的移动应用程序. 学习排序和系统思考来创建您和您的朋友可以使用的应用程序。设计使用聊天 Blox, 测验, 卡片, 日历, 地图, 图片和更多在故事里或适用于任何 iOS或 Android手机的交互式应用程序。任何人和每个人都可以创建一个移动应用程序。您的内容, 您的自定义, 您的应用程序在您的手机里。"
   tutorial_nclabdrone_longdescription: "在十步之内，用NCLab的3D建模应用程序，构建一个无人机框架。这个无人机框架可以用3D技术印制，同时这个技术可以用来构建一个真正工作的无人机！每个步骤都包括教程和说明。完成编码后可以立即查看结果。3D建模是21世纪工程、制造、艺术、科学、医药等领域的一个重要部分。这是一个很好的开始！ "
   tutorial_gpbcircle_longdescription: "当你移动鼠标时，参与者将制作一个可以改变颜色和明亮度的圆圈。在这个过程中，他们将探索色相、饱和度和亮度色彩模型。"
   tutorial_gpbpaint_longdescription: "参与者将创建一个画图编辑器来用鼠标画画，然后添加一个如“清除”的按钮和一个“色彩填充区域”的功能。"
@@ -2094,10 +2063,6 @@ cn:
   tutorial_idowedo_longdescription: "这个老师主导的课程活动，适用于“小时代码”，提供了探索物理编程（机器人）的机会。 孩子们使用建筑砖设计和建造模型，并用代码将它们带入生活！ 使用可视化的拖放式编程环境和LEGO™ WeDo部件（电机和集线器以及可选的传感器），学生将学习使用算法和代码可以对物理系统进行编程和控制。 包括一步一步的活动计划，相关的师生资源和延伸和丰富的想法进一步学习。"
   tutorial_diggindwarf_longdescription: "矮人需要你的帮助来导航，挖掘和收集宝石！ 学习如何使用JavaScript引导你的矮人通过迷宫和谜题。"
   tutorial_rmedr_longdescription: "在Robot Mesh Studio中使用Blockly，将VEX EDR机器人编程为“在线模仿”，观察它在迷宫中的运行情况。 学生学习基本的机器人运动，以及如何将三个传感器和一个输出结合到他们的编程中。"
-  tutorial_dksky_longdescription: "用IOS的DevKit应用程序创建Sky Fall游戏（一种游戏）！您将使用DevKit独特的\"块编码\"形式，学习到编程概念（如if语句，定时器，变量等等）。如果对完成这项活动没有经验；只需打开DevKit应用程序，添加Sky Fall的模板，并跟随视频教程学习！"
-  tutorial_dkcurrency_longdescription: "用iOS的DevKit应用程创建货币王游戏（Currency King game）！ 您将使用DevKit独特的“块编码”形式，学习到编程概念（如if语句，定时器，变量等等）。 如果对完成这项活动没有经验; 只需打开DevKit应用程序，添加货币王模板（Currency King game），并跟随视频教程学习！"
-  tutorial_dkriver_longdescription: "用IOS的DevKit应用程序创建River Monsters游戏（一种游戏）！您将使用DevKit独特的\"块编码\"形式，学习到编程概念（如if语句，定时器，变量等等）。如果对完成这项活动没有经验；只需打开DevKit应用程序，添加River Monsters的模板，并跟随视频教程学习！"
-  tutorial_dkball_longdescription: "用IOS的DevKit应用程序创建Bouncing Ball游戏（一种游戏）！您将使用DevKit独特的\"块编码\"形式，学习到编程概念（如if语句，定时器，变量等等）。如果对完成这项活动没有经验；只需打开DevKit应用程序，添加Bouncing Ball的模板，并跟随视频教程学习！"
   tutorial_spheroit_longdescription: "了解如果/然后, 其他条件, 建立自己的动物声音游戏, 我们喜欢叫 \"动物折腾!"
   tutorial_gameofcodes_longdescription: "构建一个真棒龙游戏来保卫墙壁，然后将其作为独立的应用程序（iOS，Android，PC和Mac）导出。"
   tutorial_blocklygames_longdescription: "Blockly Games是一系列教授编程的教育游戏。 它专为那些以前没有电脑编程经验但希望以更具挑战性的步伐学习的孩子而设计。 在这些游戏的最后，玩家已经准备好使用传统的基于文本的语言。"
@@ -2114,7 +2079,7 @@ cn:
   tutorial_blockscadbirdhouses_longdescription: "学生将经营一家禽舍建筑公司，转换单位，计算尺寸，并使用变量来扩展他们的产品。"
   tutorial_blockscadclock_longdescription: "\n学生将编程模拟时钟的3D模型，可以设置为随时显示。"
   tutorial_blockscaddinner_longdescription: "\n学生将使用变量和坐标编写程序，以帮助机器人为他们设置餐桌！"
-  tutorial_blockscadicecream_longdescription: "\n学生们将编制一台冰淇淋机来制作具有不同数量和大小的冰淇淋勺的3D冰淇淋甜筒。他们将使用变量，模块和函数来计算基于球形冰淇淋勺面积的特定冰淇淋蛋筒的成本。"
+  tutorial_blockscadicecream_longdescription: "\n学生们将编制一台冰淇淋机来制作具有不同数量和大小的冰淇淋勺的 3D 冰淇淋甜筒。他们将使用变量，模块和函数来计算基于球形冰淇淋勺面积的特定冰淇淋蛋筒的成本。"
   tutorial_blockscadpizza_longdescription: "\n学生将编写一个模块来创建一个3D披萨，计算圆周和区域，并沿途使用循环。"
   tutorial_blockscadsugar_longdescription: "\n学生将使用编程的糖立方体生成器来探索体积和变量。"
   tutorial_bsgridlight_longdescription: "Choose a Bot friend to help prepare for the Lighthouse Festival. Code your Bot to stop those pesky rogue bots and save the day!"
@@ -2153,7 +2118,7 @@ cn:
   tutorial_codehsmusic_longdescription: "Students explore how coding is used in music creation by building their own dynamic eight-count beats and patterns with JavaScript blocks!"
   tutorial_codehssports_longdescription: "Students learn about how coding is used in sports and game design by building an original sports video game that can be shared with their friends immediately!"
   tutorial_codemojipizza_longdescription: "This course is designed to teach students the fundamentals of JavaScript objects. Students will learn the basic types of data that can be stored in variables, from their first boolean all the way to creating their own objects with multiple properties. The activity makes complex concepts easy to understand by using everyone's favourite food: Pizza!"
-  tutorial_moonlander_longdescription: "Learn Physics as you Code! Moon Lander is a Game Builder course with 17 exercises that guide you on how to build your own physics-based game. In the game, you will use code and 6-9th grade Physics concepts in order to help a spaceship land safely on the moon."
+  tutorial_moonlander_longdescription: "Learn Physics as you code! Moon Lander is a Game Builder course with 17 exercises that guides you on how to build your own physics-based game. In the game, you will use code and 6-9th grade physics concepts in order to help a spaceship land safely on the moon."
   tutorial_sushicards_longdescription: "Make a game where you move a shark around to try and catch fish."
   tutorial_codesparkcreate_longdescription: "codeSpark 学院: 创造游戏"
   tutorial_hardvsoft_longdescription: "Through an illustrated children's story and worksheets, your students will learn the differences between hardware and software."
@@ -2191,7 +2156,7 @@ cn:
   tutorial_wizard_longdescription: "Journey into the world of Code Magic as a Code Wizard. Learn to create and cast spells to customize your castle."
   tutorial_mbscratchcards_longdescription: "Connect the physical world of micro:bit with the virtual world of Scratch."
   tutorial_mbswiftplaygrounds_longdescription: "Use the micro:bit with an iPad to learn Swift."
-  tutorial_mbbuttons_longdescription: "In this introductory project, you'll make pictures or animations appear on the micro:bit display when a buttons are pressed. This activity is suitable for those who have never programmed before or those seeking a simple introduction to programming the BBC micro:bit. It uses MicroBlocks, a Scratch-like programming system that lets you see your code running on the micro:bit immediately."
+  tutorial_mbbuttons_longdescription: "In this introductory project, you'll make pictures or animations appear on the micro:bit display when buttons are pressed. This activity is suitable for those who have never programmed before or those seeking a simple introduction to programming the BBC micro:bit. It uses MicroBlocks, a Scratch-like programming system that lets you see your code running on the micro:bit immediately."
   tutorial_meteor_longdescription: "In this project, you'll create a Falling Meteors game for the BBC micro:bit. Using the buttons, the player will move a shield to catch falling meteors and save the Earth. The techniques you learn in this project can be used to make many other games for the BBC micro:bit, including classics such as Pong and Space Invaders."
   tutorial_ballbounce_longdescription: "Learn to make a mobile app where the user flings a ball across the screen and it bounces off the edges."
   tutorial_mitcodi_longdescription: "Learn to make your own interactive mobile app. Press the bee and hear it buzz!"
@@ -2216,14 +2181,14 @@ cn:
   tutorial_spherocomm_longdescription: "Learn about miscommunication in both a community and in a computer program. Use this knowledge to resolve any miscommunication, or bugs, in a program in an effort to help BOLT find its way home."
   tutorial_spherocommunity_longdescription: "Design a simple path that represents a common route that you travel everyday. You will create two programs, a drawn path and a block-based program path through your community route."
   tutorial_spherofunctions_longdescription: "学习如何使用和调用函数将Sphero变成计算器"
-  tutorial_spheroinfrared_longdescription: "\n成为流行病学家以阻止传播罕见的机器人感染困扰着一个BOLT机器人社区。"
-  tutorial_spherolightsensor_longdescription: "了解如何创建使用环境光传感器测量勒克斯值的程序并追逐BOLT"
+  tutorial_spheroinfrared_longdescription: "成为流行病学家以阻止传播罕见的机器人感染困扰着一个 BOLT 机器人社区。"
+  tutorial_spherolightsensor_longdescription: "了解如何创建使用环境光传感器测量勒克斯值的程序并追逐 BOLT。"
   tutorial_spheromansion_longdescription: "在你家保留一堆恐龙不应该是一个问题，对吗？正如您想象的那样，这并不能很好地结束。你被困在豪宅的图书馆里，必须为你的出路编程。"
   tutorial_roadblocks_longdescription: "As a continuation of Your Community, you will modify your blocks program as you and your partner encounter different roadblocks along the route."
-  tutorial_spherotext2_longdescription: "\n通过构建一个有趣的游戏来学习你的第一个条件，你将投掷Sphero并猜测动物的声音。完成文本后，这是一项很棒的活动1."
-  tutorial_spherotext3_longdescription: "\n学习根据陀螺仪的旋转速率更换Sphero的主要LED。您还将了解归一化和绝对值。完成文本1和2后，这是一项很棒的活动"
+  tutorial_spherotext2_longdescription: "\n通过构建一个有趣的游戏来学习你的第一个条件，你将投掷 Sphero 并猜测动物的声音。完成文本1后，这是一项很棒的活动。"
+  tutorial_spherotext3_longdescription: "\n学习根据陀螺仪的旋转速率更换 Sphero 的主要 LED。您还将了解归一化和绝对值。完成文本1和2后，这是一项很棒的活动。"
   tutorial_spherotext4_longdescription: "Use variables to build a hot potato game powered by Sphero. You will use pseudocode and read documentation to bring this classic game to life. You will also learn about technical concepts like loop until and randomness within bounds. This is a great activity after you complete Text 2 or 3."
-  tutorial_spheroraptor_longdescription: "\n创建一个强化笔，以保持Spheroraptors在海湾，同时也将代码写入Spheroraptors逃脱。从循环，到条件，到操作员甚至是比较器，你需要尽可能多的编码知识。"
+  tutorial_spheroraptor_longdescription: "\n创建一个强化笔，以保持 Spheroraptors 在海湾，同时也将代码写入 Spheroraptors 逃脱。从循环，到条件，到操作员甚至是比较器，你需要尽可能多的编码知识。"
   tutorial_stempiday_longdescription: "We use the number Pi to calculate the circumference and area of a circle, but have you ever wondered where this number comes from or how to calculate it? In this coding activity you will randomly generate points similar to a very bad player shooting darts at a dart board. The percentage of darts that land inside the circle can help us calculate Pi Then change the colors of the points just for fun!"
   tutorial_stemplanetoids_longdescription: "Did you know that the code behind the classic Asteroids and Lunar Lander games is simpler than you might think? Did you know that both of these games have accurate physics? In this activity you will fix a broken asteroids game where the ship only moves in a straight line. Then you will add gravity to the game and try to land the ship on the moon! Works with chromebooks and other devices!"
   tutorial_stempong_longdescription: "Did you know that the code behind the popular game Bonk.io and the classic Pong game is simpler than you might think? Did you know that both of these games have accurate physics? In this activity you will fix a broken version of the Pong game so that objects bounce like they should. Then you will add gravity to create a Bonk.io clone. Works with chromebooks and other devices!"
@@ -2245,7 +2210,7 @@ cn:
   tutorial_pets_longdescription: "Create a fun game about pets – either real or imaginary! Beginners can use the self-guided tutorial while more advanced coders have the option to start off with a blank project."
   tutorial_petvet_longdescription: "A busy day at the Pet Vet leads to fun as you and Barbie help a variety of pets through their very first checkups. From guiding pets into the Examination Room to diagnosing their sniffles, boo-boos, and itches, you'll find every puzzle has a solution to make the pets feel better than ever!"
   tutorial_superhero_longdescription: "Use HTML and CSS pixel art to create your favorite superhero masks. Publish and share your creations!"
-  tutorial_vidcodeplastic_longdescription: "The problem of plastic filling our oceans continues to worsen. Luckily, you can make your voice heard with code through the Plastic Pollution PSA. After coding a PSA on plastic pollution using JavaScript, you can make a second video about any subject you care about! Learn to use loops, sin waves and customized emojis to make a unique project."
+  tutorial_vidcodeplastic_longdescription: "The problem of plastic filling our oceans continues to worsen. Luckily, you can make your voice heard with code through the Plastic Pollution PSA. After coding a PSA on plastic pollution using JavaScript, you can make a second video about any subject you care about! Learn to use loops, sine waves and customized emojis to make a unique project."
   tutorial_vidcodetypeface_longdescription: "Create your own typeface using shapes and elements of typography. Type has more elements than you may have realized! So far we have talked about fonts and how they are different styles of text. Fonts are actually just different styles of a typeface. A typeface is a family of fonts that have similar features."
   tutorial_washustorm_longdescription: "Learn how to program an incoming storm."
   tutorial_activitypackets_longdescription: "Find hours of family-friendly fun with Wonder Workshop's printable packets of creative coding activities. Bring coding to life with Dash, Dot, and Cue robots by downloading these online and offline activities to use during Hour of Code and beyond!"
@@ -2274,7 +2239,7 @@ cn:
   tutorial_textcomp_language: "仅英语"
   tutorial_encryption_language: "仅英语"
   tutorial_kanopixel_language: "仅英语"
-  tutorial_foos_language: "简体中文）"
+  tutorial_foos_language: "中文、英语、法语、德语、意大利语、日语、韩语、马累语、葡萄牙语（巴西）、西班牙语、瑞典语、泰语"
   tutorial_tynkerdd_language: "仅英语"
   tutorial_tynkerana_language: "仅英语"
   tutorial_vidcard_language: "仅英语"
@@ -2310,7 +2275,6 @@ cn:
   tutorial_tynkerspin_language: "仅英语"
   tutorial_code-avengers_language: "英语、西班牙语、荷兰语、俄语、葡萄牙语"
   tutorial_tynkercq_language: "仅英语"
-  tutorial_makeschool_language: "仅英语"
   tutorial_cmgame_language: "仅英语"
   tutorial_codesters_language: "仅英语"
   tutorial_qrm_language: "英语、德语"
@@ -2342,7 +2306,6 @@ cn:
   tutorial_codestersflappybike_language: "仅英语"
   tutorial_kanopong_language: "仅英语"
   tutorial_tynkerright_language: "仅英语"
-  tutorial_flatverse_language: "仅英语"
   tutorial_touchdevelop_language: "仅英语"
   tutorial_tynkercc_language: "仅英语"
   tutorial_bamboo_language: "仅英语"
@@ -2527,7 +2490,6 @@ cn:
   tutorial_wolframp_language: "仅英语"
   tutorial_wolframn_language: "仅英语"
   tutorial_soloweb_language: "仅英语"
-  tutorial_bloxmobapp_language: "仅英语"
   tutorial_khanweb_language: "英语, 葡萄牙语, 西班牙语"
   tutorial_khandata_language: "英语, 葡萄牙语, 西班牙语"
   tutorial_robomeshiq_language: "仅英语"
@@ -2591,7 +2553,6 @@ cn:
   tutorial_kanostreet_language: "仅英语"
   tutorial_nyblebot_language: "仅英语"
   tutorial_codemojijs_language: "仅英语"
-  tutorial_bloxmobmath_language: "仅英语"
   tutorial_techapf_language: "仅英语"
   tutorial_techfpjs_language: "仅英语"
   tutorial_techlinq_language: "仅英语"
@@ -2599,12 +2560,9 @@ cn:
   tutorial_quorumastro_language: "仅英语"
   tutorial_alicewonder_language: "仅英语"
   tutorial_rginter_language: "仅英语"
-  tutorial_bloxmobscience_language: "仅英语"
   tutorial_cssgrid_language: "多个"
-  tutorial_bloxmobdesign_language: "仅英语"
   tutorial_jshero_language: "英语、德语"
   tutorial_codemojipy_language: "仅英语"
-  tutorial_bloxmobcomp_language: "仅英语"
   tutorial_nclabdrone_language: "仅英语"
   tutorial_gpbcircle_language: "仅英语"
   tutorial_gpbpaint_language: "仅英语"
@@ -2683,10 +2641,6 @@ cn:
   tutorial_idowedo_language: "仅英语"
   tutorial_diggindwarf_language: "仅英语"
   tutorial_rmedr_language: "仅英语"
-  tutorial_dksky_language: "仅英语"
-  tutorial_dkcurrency_language: "仅英语"
-  tutorial_dkriver_language: "仅英语"
-  tutorial_dkball_language: "仅英语"
   tutorial_spheroit_language: "仅英语"
   tutorial_gameofcodes_language: "仅英语"
   tutorial_blocklygames_language: "西班牙语、 法语、 还有其他许多"
@@ -2700,12 +2654,12 @@ cn:
   tutorial_alexaskill_language: "英文"
   tutorial_bitsboxyak_language: "英文"
   tutorial_blockscadbargraphs_language: "中文"
-  tutorial_blockscadbirdhouses_language: "中文"
-  tutorial_blockscadclock_language: "中文"
-  tutorial_blockscaddinner_language: "中文"
-  tutorial_blockscadicecream_language: "中文"
-  tutorial_blockscadpizza_language: "中文"
-  tutorial_blockscadsugar_language: "中文"
+  tutorial_blockscadbirdhouses_language: "简体中文、英语、法语、德语、日语、挪威语、斯洛维尼亚语、西班牙语、瑞典语"
+  tutorial_blockscadclock_language: "简体中文、英语、法语、德语、日语、挪威语、斯洛维尼亚语、西班牙语、瑞典语"
+  tutorial_blockscaddinner_language: "简体中文、英语、法语、德语、日语、挪威语、斯洛维尼亚语、西班牙语、瑞典语"
+  tutorial_blockscadicecream_language: "简体中文、英语、法语、德语、日语、挪威语、斯洛维尼亚语、西班牙语、瑞典语"
+  tutorial_blockscadpizza_language: "中文、英语、法语、德语、日语、挪威语、斯洛维尼亚语、西班牙语、瑞典语"
+  tutorial_blockscadsugar_language: "中文、英语、法语、德语、日语、挪威语、斯洛文尼亚语、西班牙语、瑞典语"
   tutorial_bsgridlight_language: "英文"
   tutorial_bpartscratch_language: "英文"
   tutorial_bpartvid_language: "英文"
@@ -2744,11 +2698,11 @@ cn:
   tutorial_codemojipizza_language: "英文"
   tutorial_moonlander_language: "英文"
   tutorial_sushicards_language: "英文"
-  tutorial_codesparkcreate_language: "简体中文）"
+  tutorial_codesparkcreate_language: "中文、英语、法语、德语、意大利语、日语、韩语、马累语、葡萄牙语（巴西）、西班牙语、瑞典语、泰语"
   tutorial_hardvsoft_language: "英文"
-  tutorial_codestersecard_language: "中文，英文，西班牙文"
-  tutorial_codesterslogo_language: "中文，英文，西班牙文"
-  tutorial_codesterstshirt_language: "中文，英文，西班牙文"
+  tutorial_codestersecard_language: "中文、英文、西班牙文"
+  tutorial_codesterslogo_language: "中文、英文、西班牙文"
+  tutorial_codesterstshirt_language: "中文、英文、西班牙文"
   tutorial_codewards_language: "English, French, Russian, Spanish, Turkish"
   tutorial_olympics_language: "English, French, Russian, Spanish"
   tutorial_codinismhero_language: "英文"
@@ -2899,7 +2853,6 @@ cn:
   tutorial_tynkerspin_string_detail_grades: "幼儿园到初中二年级"
   tutorial_code-avengers_string_detail_grades: "六年级以上"
   tutorial_tynkercq_string_detail_grades: "幼儿园到五年级"
-  tutorial_makeschool_string_detail_grades: "六年级以上"
   tutorial_cmgame_string_detail_grades: "六年级以上"
   tutorial_codesters_string_detail_grades: "不显示"
   tutorial_qrm_string_detail_grades: "六年级以上"
@@ -2931,7 +2884,6 @@ cn:
   tutorial_codestersflappybike_string_detail_grades: "六年级以上"
   tutorial_kanopong_string_detail_grades: "小学二年级到初中二年级"
   tutorial_tynkerright_string_detail_grades: "小学二年级到初中二年级"
-  tutorial_flatverse_string_detail_grades: "初中三年级以上"
   tutorial_touchdevelop_string_detail_grades: "不显示"
   tutorial_tynkercc_string_detail_grades: "六年级以上"
   tutorial_bamboo_string_detail_grades: "幼儿园到五年级"
@@ -3116,7 +3068,6 @@ cn:
   tutorial_wolframp_string_detail_grades: "六年级以上"
   tutorial_wolframn_string_detail_grades: "六年级以上"
   tutorial_soloweb_string_detail_grades: "初中三年级以上"
-  tutorial_bloxmobapp_string_detail_grades: "六年级以上"
   tutorial_khanweb_string_detail_grades: "二年级以上"
   tutorial_khandata_string_detail_grades: "六年级以上"
   tutorial_robomeshiq_string_detail_grades: "二年级以上"
@@ -3180,7 +3131,6 @@ cn:
   tutorial_kanostreet_string_detail_grades: "幼儿园到五年级"
   tutorial_nyblebot_string_detail_grades: "幼儿园到五年级"
   tutorial_codemojijs_string_detail_grades: "幼儿园到五年级"
-  tutorial_bloxmobmath_string_detail_grades: "六年级以上"
   tutorial_techapf_string_detail_grades: "大学"
   tutorial_techfpjs_string_detail_grades: "大学"
   tutorial_techlinq_string_detail_grades: "大学"
@@ -3188,12 +3138,9 @@ cn:
   tutorial_quorumastro_string_detail_grades: "六年级以上"
   tutorial_alicewonder_string_detail_grades: "幼儿园到五年级"
   tutorial_rginter_string_detail_grades: "小学二年级到初中二年级"
-  tutorial_bloxmobscience_string_detail_grades: "六年级以上"
   tutorial_cssgrid_string_detail_grades: "六年级以上"
-  tutorial_bloxmobdesign_string_detail_grades: "六年级以上"
   tutorial_jshero_string_detail_grades: "初中三年级以上"
   tutorial_codemojipy_string_detail_grades: "幼儿园到五年级"
-  tutorial_bloxmobcomp_string_detail_grades: "六年级以上"
   tutorial_nclabdrone_string_detail_grades: "六年级以上"
   tutorial_gpbcircle_string_detail_grades: "六年级以上"
   tutorial_gpbpaint_string_detail_grades: "六年级以上"
@@ -3272,10 +3219,6 @@ cn:
   tutorial_idowedo_string_detail_grades: "小学二年级到初中二年级"
   tutorial_diggindwarf_string_detail_grades: "六年级以上"
   tutorial_rmedr_string_detail_grades: "小学二年级到初中二年级"
-  tutorial_dksky_string_detail_grades: "初中三年级以上"
-  tutorial_dkcurrency_string_detail_grades: "初中三年级以上"
-  tutorial_dkriver_string_detail_grades: "初中三年级以上"
-  tutorial_dkball_string_detail_grades: "初中三年级以上"
   tutorial_spheroit_string_detail_grades: "二年级以上"
   tutorial_gameofcodes_string_detail_grades: "二年级以上"
   tutorial_blocklygames_string_detail_grades: "六年级以上"
@@ -3448,7 +3391,7 @@ cn:
   tutorial_frzn_string_platforms: "所有高版本浏览器、安卓、iOS"
   tutorial_cocom_string_platforms: "所有高版本浏览器"
   tutorial_play-lab_string_platforms: "所有高版本浏览器、安卓、iOS"
-  tutorial_boxisland_string_platforms: "安卓平板电脑，iPad，Android 手机 iPhone"
+  tutorial_boxisland_string_platforms: "iPad 和 iPhone"
   tutorial_textcomp_string_platforms: "所有高版本浏览器"
   tutorial_encryption_string_platforms: "所有高版本浏览器"
   tutorial_kanopixel_string_platforms: "IE 11，微软Edge，Chrome，火狐， Safari，安卓平板，iPad"
@@ -3488,7 +3431,6 @@ cn:
   tutorial_tynkerspin_string_platforms: "IE 11，微软Edge，Chrome，火狐， Safari，安卓平板，iPad"
   tutorial_code-avengers_string_platforms: "IE 11，微软Edge、 Chrome、 火狐、 Safari"
   tutorial_tynkercq_string_platforms: "IE 11，微软Edge，Chrome，火狐， Safari，安卓平板，iPad"
-  tutorial_makeschool_string_platforms: "IE 11、 Chrome、 火狐、 Safari"
   tutorial_cmgame_string_platforms: "所有高版本浏览器"
   tutorial_codesters_string_platforms: "不显示"
   tutorial_qrm_string_platforms: "所有高版本浏览器"
@@ -3520,7 +3462,6 @@ cn:
   tutorial_codestersflappybike_string_platforms: "所有高版本浏览器"
   tutorial_kanopong_string_platforms: "所有高版本浏览器"
   tutorial_tynkerright_string_platforms: "IE 11，微软Edge，Chrome，火狐， Safari，安卓平板，iPad"
-  tutorial_flatverse_string_platforms: "所有较新的浏览器、 iPhone、 Android 手机"
   tutorial_touchdevelop_string_platforms: "不显示"
   tutorial_tynkercc_string_platforms: "IE 11，微软Edge、 Chrome、 火狐、 Safari"
   tutorial_bamboo_string_platforms: "Chrome"
@@ -3705,7 +3646,6 @@ cn:
   tutorial_wolframp_string_platforms: "所有高版本浏览器"
   tutorial_wolframn_string_platforms: "所有高版本浏览器"
   tutorial_soloweb_string_platforms: "所有较新的浏览器，安卓平板电脑，安卓手机，iPad，iPhone"
-  tutorial_bloxmobapp_string_platforms: "所有高版本浏览器"
   tutorial_khanweb_string_platforms: "所有较新的浏览器，安卓平板电脑"
   tutorial_khandata_string_platforms: "所有高版本浏览器"
   tutorial_robomeshiq_string_platforms: "IE 11、 Chrome、 火狐，Vex IQ 机器人"
@@ -3769,7 +3709,6 @@ cn:
   tutorial_kanostreet_string_platforms: "所有高版本浏览器"
   tutorial_nyblebot_string_platforms: "安卓平板电脑，iPad，Android 手机 iPhone"
   tutorial_codemojijs_string_platforms: "所有高版本浏览器"
-  tutorial_bloxmobmath_string_platforms: "Internet Explorer 11, Microsoft Edge, Chrome, Safari"
   tutorial_techapf_string_platforms: "所有现代的浏览器好像安卓平板电脑, iPad, Windows电话, 安卓手机 和iPhone"
   tutorial_techfpjs_string_platforms: "所有现代的浏览器好像安卓平板电脑, iPad, Windows电话, 安卓手机 和iPhone"
   tutorial_techlinq_string_platforms: "所有现代的浏览器好像安卓平板电脑, iPad, Windows电话, 安卓手机 和iPhone"
@@ -3777,12 +3716,9 @@ cn:
   tutorial_quorumastro_string_platforms: "所有现代的浏览器好像安卓平板电脑, iPad, Windows电话, 安卓手机 和iPhone"
   tutorial_alicewonder_string_platforms: "所有高版本浏览器"
   tutorial_rginter_string_platforms: "Chrome, 火狐, 安卓平板电脑"
-  tutorial_bloxmobscience_string_platforms: "所有高版本浏览器"
   tutorial_cssgrid_string_platforms: "所有高版本浏览器"
-  tutorial_bloxmobdesign_string_platforms: "Internet Explorer 11, Microsoft Edge, Chrome, Safari"
   tutorial_jshero_string_platforms: "所有现代浏览器, 安卓平板电脑, 安卓手机"
   tutorial_codemojipy_string_platforms: "iPad 和 iPhone"
-  tutorial_bloxmobcomp_string_platforms: "所有高版本浏览器"
   tutorial_nclabdrone_string_platforms: "所有高版本浏览器"
   tutorial_gpbcircle_string_platforms: "所有高版本浏览器"
   tutorial_gpbpaint_string_platforms: "所有高版本浏览器"
@@ -3861,10 +3797,6 @@ cn:
   tutorial_idowedo_string_platforms: "所有现代的浏览器，安卓平板电脑，iPad，WeDo"
   tutorial_diggindwarf_string_platforms: "Chrome、 火狐、 Safari"
   tutorial_rmedr_string_platforms: "所有高版本浏览器"
-  tutorial_dksky_string_platforms: "iPad 和 iPhone"
-  tutorial_dkcurrency_string_platforms: "iPad 和 iPhone"
-  tutorial_dkriver_string_platforms: "iPad 和 iPhone"
-  tutorial_dkball_string_platforms: "iPad 和 iPhone"
   tutorial_spheroit_string_platforms: "iPad、 iPhone、 安卓手机、安卓平板电脑、Sphero 机器人"
   tutorial_gameofcodes_string_platforms: "所有较新的浏览器，安卓平板电脑，Android 手机 iPad"
   tutorial_blocklygames_string_platforms: "所有高版本浏览器"
@@ -4077,7 +4009,6 @@ cn:
   tutorial_tynkerspin_string_detail_platforms: ""
   tutorial_code-avengers_string_detail_platforms: ""
   tutorial_tynkercq_string_detail_platforms: ""
-  tutorial_makeschool_string_detail_platforms: ""
   tutorial_cmgame_string_detail_platforms: ""
   tutorial_codesters_string_detail_platforms: "不显示"
   tutorial_qrm_string_detail_platforms: ""
@@ -4109,7 +4040,6 @@ cn:
   tutorial_codestersflappybike_string_detail_platforms: ""
   tutorial_kanopong_string_detail_platforms: ""
   tutorial_tynkerright_string_detail_platforms: ""
-  tutorial_flatverse_string_detail_platforms: ""
   tutorial_touchdevelop_string_detail_platforms: "不显示"
   tutorial_tynkercc_string_detail_platforms: ""
   tutorial_bamboo_string_detail_platforms: ""
@@ -4294,7 +4224,6 @@ cn:
   tutorial_wolframp_string_detail_platforms: ""
   tutorial_wolframn_string_detail_platforms: ""
   tutorial_soloweb_string_detail_platforms: ""
-  tutorial_bloxmobapp_string_detail_platforms: ""
   tutorial_khanweb_string_detail_platforms: ""
   tutorial_khandata_string_detail_platforms: ""
   tutorial_robomeshiq_string_detail_platforms: "Vex IQ 机器人"
@@ -4358,7 +4287,6 @@ cn:
   tutorial_kanostreet_string_detail_platforms: ""
   tutorial_nyblebot_string_detail_platforms: ""
   tutorial_codemojijs_string_detail_platforms: ""
-  tutorial_bloxmobmath_string_detail_platforms: ""
   tutorial_techapf_string_detail_platforms: ""
   tutorial_techfpjs_string_detail_platforms: ""
   tutorial_techlinq_string_detail_platforms: ""
@@ -4366,12 +4294,9 @@ cn:
   tutorial_quorumastro_string_detail_platforms: ""
   tutorial_alicewonder_string_detail_platforms: ""
   tutorial_rginter_string_detail_platforms: ""
-  tutorial_bloxmobscience_string_detail_platforms: ""
   tutorial_cssgrid_string_detail_platforms: ""
-  tutorial_bloxmobdesign_string_detail_platforms: ""
   tutorial_jshero_string_detail_platforms: ""
   tutorial_codemojipy_string_detail_platforms: ""
-  tutorial_bloxmobcomp_string_detail_platforms: ""
   tutorial_nclabdrone_string_detail_platforms: ""
   tutorial_gpbcircle_string_detail_platforms: ""
   tutorial_gpbpaint_string_detail_platforms: ""
@@ -4450,10 +4375,6 @@ cn:
   tutorial_idowedo_string_detail_platforms: "Wedo"
   tutorial_diggindwarf_string_detail_platforms: ""
   tutorial_rmedr_string_detail_platforms: "Vex EDR机器人"
-  tutorial_dksky_string_detail_platforms: ""
-  tutorial_dkcurrency_string_detail_platforms: ""
-  tutorial_dkriver_string_detail_platforms: ""
-  tutorial_dkball_string_detail_platforms: ""
   tutorial_spheroit_string_detail_platforms: "Sphero 机器人"
   tutorial_gameofcodes_string_detail_platforms: ""
   tutorial_blocklygames_string_detail_platforms: ""
@@ -4666,7 +4587,6 @@ cn:
   tutorial_tynkerspin_string_detail_programming_languages: "Blocks"
   tutorial_code-avengers_string_detail_programming_languages: "JavaScript"
   tutorial_tynkercq_string_detail_programming_languages: "Blocks"
-  tutorial_makeschool_string_detail_programming_languages: "iOS/Swift"
   tutorial_cmgame_string_detail_programming_languages: "CoffeeScript学习编写代码"
   tutorial_codesters_string_detail_programming_languages: "不显示"
   tutorial_qrm_string_detail_programming_languages: "Quorum"
@@ -4698,7 +4618,6 @@ cn:
   tutorial_codestersflappybike_string_detail_programming_languages: "Python"
   tutorial_kanopong_string_detail_programming_languages: "JavaScript"
   tutorial_tynkerright_string_detail_programming_languages: "方块"
-  tutorial_flatverse_string_detail_programming_languages: "Touch Develop"
   tutorial_touchdevelop_string_detail_programming_languages: "不显示"
   tutorial_tynkercc_string_detail_programming_languages: "Blocks"
   tutorial_bamboo_string_detail_programming_languages: "JavaScript"
@@ -4883,7 +4802,6 @@ cn:
   tutorial_wolframp_string_detail_programming_languages: "Wolfram 编程语言"
   tutorial_wolframn_string_detail_programming_languages: "Wolfram 编程语言"
   tutorial_soloweb_string_detail_programming_languages: "HTML CSS"
-  tutorial_bloxmobapp_string_detail_programming_languages: "方块"
   tutorial_khanweb_string_detail_programming_languages: "HTML & CSS"
   tutorial_khandata_string_detail_programming_languages: "SQL"
   tutorial_robomeshiq_string_detail_programming_languages: "Python"
@@ -4947,7 +4865,6 @@ cn:
   tutorial_kanostreet_string_detail_programming_languages: "Blocks, JavaScript"
   tutorial_nyblebot_string_detail_programming_languages: "方块"
   tutorial_codemojijs_string_detail_programming_languages: "JavaScript"
-  tutorial_bloxmobmath_string_detail_programming_languages: "方块"
   tutorial_techapf_string_detail_programming_languages: "Python"
   tutorial_techfpjs_string_detail_programming_languages: "JavaScript"
   tutorial_techlinq_string_detail_programming_languages: "C#"
@@ -4955,12 +4872,9 @@ cn:
   tutorial_quorumastro_string_detail_programming_languages: "Quorum"
   tutorial_alicewonder_string_detail_programming_languages: "JavaScript"
   tutorial_rginter_string_detail_programming_languages: "方块"
-  tutorial_bloxmobscience_string_detail_programming_languages: "方块"
   tutorial_cssgrid_string_detail_programming_languages: "CSS"
-  tutorial_bloxmobdesign_string_detail_programming_languages: "方块"
   tutorial_jshero_string_detail_programming_languages: "JavaScript"
   tutorial_codemojipy_string_detail_programming_languages: "iOS/Swift, Python"
-  tutorial_bloxmobcomp_string_detail_programming_languages: "方块"
   tutorial_nclabdrone_string_detail_programming_languages: "Python"
   tutorial_gpbcircle_string_detail_programming_languages: "方块"
   tutorial_gpbpaint_string_detail_programming_languages: "方块"
@@ -5039,10 +4953,6 @@ cn:
   tutorial_idowedo_string_detail_programming_languages: "Scratch"
   tutorial_diggindwarf_string_detail_programming_languages: "JavaScript"
   tutorial_rmedr_string_detail_programming_languages: "方块"
-  tutorial_dksky_string_detail_programming_languages: "方块"
-  tutorial_dkcurrency_string_detail_programming_languages: "方块"
-  tutorial_dkriver_string_detail_programming_languages: "方块"
-  tutorial_dkball_string_detail_programming_languages: "方块"
   tutorial_spheroit_string_detail_programming_languages: "Blocks, JavaScript"
   tutorial_gameofcodes_string_detail_programming_languages: "Blocks, Ready, Unity"
   tutorial_blocklygames_string_detail_programming_languages: "方块"

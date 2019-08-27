@@ -1,9 +1,10 @@
 ---
-title: <%= hoc_s(:title_how_to_companies).inspect %>
+title: How to host an Hour of Code - Companies
 layout: wide
 nav: how_to_nav
 ---
-<%= view :signup_button %>
+
+{{ signup_button }}
 
 # Hour of Code को आप के कंपनी में कैसे लाया जाय
 
@@ -13,34 +14,34 @@ nav: how_to_nav
 
 ## स्थानीय कक्षाओं और कोड के घंटे के लिए स्वयंसेवक के साथ कनेक्ट करें
 
-अवर ओफ कोड की मदद से Code.org किसी भी कंपनी के कर्मचारियोंको अपने स्थानिक पाठशाला से संलग्न रहने की संधि उपलब्ध हो जाती है और इसी तरह से कर्मचारी अपने तकनिकी अनुभव का योगदान विद्यार्थियों को दे सकते है, उनको संगणक शास्त्र अभ्यास के लिए प्रेरित कर सकते है.
+Code.org offers the opportunity for your employees to [connect]({{ urls/volunteer }}) with local classrooms doing the Hour of Code where they can share their tech career experience and inspire students to study computer science.
 
-[<button>Sign up to volunteer!</button>](%= codeorg_url('/volunteer') %) <br /> <br />
+[<button>Sign up to volunteer!</button>]({{ urls/volunteer }}) <br /> <br />
 
-कक्षाओं के साथ अपने कर्मचारियों को जोड़ने के लिए अधिक निर्देशों के लिए, कॉर्पोरेट भागीदारों के लिए हमारे [ मार्गदर्शक पुस्तिका का परामर्श करें ](%= localized_file('/files/hoc-corporate-toolkit.pdf') %)
+For more instructions on encouraging employees and connecting your employees with classrooms, check out our [guide for corporate partners]({{ localized_files/hoc_corporate_toolkit }}).
 
 ## अवर ओफ कोड के प्रोत्साहन के लिए अतिरिक्त तरीके:
 
-- अपने CEO से पूछें [ एक कंपनी-वाइड ईमेल भेजें ](%= resolve_url('/promote/resources#sample-emails') %) कंप्यूटर विज्ञान के महत्व पर जोर देना और कर्मचारियों को प्रोत्साहित शब्द का प्रसार करना ।
-- [शिक्षविधियों का](%= resolve_url('/learn') %) प्रयास करने के लिए अपने साथी कर्मचारियोंके साथ कंपनी में अवर ओफ कोड की रंजक तासिका का आयोजन करे
+- Ask your CEO to [send a company-wide email]({{ promote/sample_emails }}) emphasizing the importance of computer science and encouraging employees to spread the word.
+- Host an Hour of Code Happy Hour with coworkers to try the [activities]({{ urls/learn }}).
 - अपने स्थानिक पाठशाला के विद्यार्थियोंके लिए अवर ओफ कोड का आयोजन करे या फिर कई सामाजिक संस्था के लिए अपने कंपनी में अवर ओफ कोड का आयोजन करे. कार्यक्रम का आयोजन करने के लिए मार्गदर्शक पुस्तिका देखिए।
 
 # अवर ओफ कोड का आयोजन कैसे करे।
 
 ## 1. अवर ओफ कोड को बढ़ावा देने के बारे में
 
-- आपके [ अवर ओफ कोड ](%= resolve_url('/promote') %) को बढ़ावा देने के लिए और दूसरों को मेजबानी के लिए प्रोत्साहित करे ।
-- अपनी कंपनी के** सॉफ्टवेयर इंजीनियरों ** को, स्थानीय कक्षा में अवर ओफ कोड चलाने के लिए और छात्रों को संगणक शास्त्र विज्ञान के अध्ययन के लिए प्रेरित करने के लिए, प्रोत्साहित करे। वे किसी कक्षा से संलग्न होने के लिए [पंजीकरण](%= resolve_url('https://code. org/volunteer/engineer') %) कर सकते है.
+- Promote your [Hour of Code]({{ urls/promote }}) event and encourage others to host.
+- अपनी कंपनी के** सॉफ्टवेयर इंजीनियरों ** को, स्थानीय कक्षा में अवर ओफ कोड चलाने के लिए और छात्रों को संगणक शास्त्र विज्ञान के अध्ययन के लिए प्रेरित करने के लिए, प्रोत्साहित करे। They can [sign up]({{ urls/volunteer_engineer }}) to be connected with a classroom.
 
 ## 2. यह प्रक्रिया क्रमशः कैसे करे (How to) इसका वीडियो देखें <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
 ## 3. एक गतिविधि चुनें
 
-हम विभिन्न प्रकार के भागीदारों द्वारा बनाई गई सभी उम्र के प्रतिभागियों के लिए विभिन्न प्रकार की [मजेदार, घंटे-लंबी गतिविधियां ](%= resolve_url('/learn') %)होस्ट करते हैं। [उन्हें आज़माएं!](%= resolve_url('/learn') %)
+We host a variety of [fun, hour-long activities]({{ urls/learn }}) for participants of all ages, created by a variety of partners. [Try them out!]({{ urls/learn }})
 
 **सभी घंटे कोड गतिविधियों** के लिए न्यूनतम प्री-टाइम की आवश्यकता होती है, और स्वयं निर्देशित होते हैं - प्रतिभागियों को अपनी गति और कौशल-स्तर पर काम करने की अनुमति देते हैं।
 
-[![](/images/fit-700/tutorials.png)](%= resolve_url('/learn') %)
+[![](/images/fit-700/tutorials.png)]({{ urls/learn }})
 
 ## 4. Plan your technology needs - computers are optional
 
@@ -70,13 +71,13 @@ nav: how_to_nav
 - If you are a tech company, demo fun, innovative products your company is working on.
 - If you aren’t a tech company, discuss ways your company uses technology to solve problems and accomplish goals.
 - Invite software engineers from your company to speak about why they decided to study computer science and the projects they work on.
-- See tips for getting girls interested in computer science [here](%= codeorg_url('/girls') %).
+- See tips for getting girls interested in computer science [here]({{ urls/girls }}).
 
 ## 6. Code!
 
 **सहभागींयोंको काम शुरू करेने को बोले**
 
-- Write the activity link on a whiteboard. Find the link listed on the [information for your selected activity](%= resolve_url('/learn') %) under the number of participants.
+- Write the activity link on a whiteboard. Find the link listed on the [information for your selected activity]({{ urls/learn }}) under the number of participants.
 - For younger students, load the activity page ahead of time or save it as a bookmark.
 
 **When participants come across difficulties it's okay to respond:**
@@ -91,9 +92,9 @@ nav: how_to_nav
 
 ## ७) गतिविधि समाप्ति पर जश्न
 
-- [Print certificates](%= codeorg_url('/certificates') %) for participants and students.
-- [Print "I did an Hour of Code!"](%= resolve_url('/promote/resources#stickers') %) stickers.
+- [Print certificates]({{ urls/certificates }}) for participants and students.
+- [Print "I did an Hour of Code!"]({{ promote/resources_stickers }}) stickers.
 - [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for your employees.
 - सोशल मीडिया पर अवर ओफ कोड कार्यक्रम के फ़ोटो और वीडियो साझा करें । #HourOfCode और @codeorg का उपयोग करें तो अपनी सफलता को उजागर कर सकते हैं!
 
-<%= view :signup_button %>
+{{ signup_button }}

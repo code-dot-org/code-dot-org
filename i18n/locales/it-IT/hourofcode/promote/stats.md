@@ -1,13 +1,12 @@
 ---
-title: <%= hoc_s(:title_stats).inspect %>
+title: Blurbs and useful stats
 layout: wide
 nav: promote_nav
 ---
 
-
 <a id="blurb"></a>
 
-<%= view :signup_button %>
+{{ signup_button }}
 
 # Blurbs and useful stats
 
@@ -41,7 +40,7 @@ La tecnologia sta trasformando ogni azienda del pianeta. Nel 2015, 7 milioni di 
 
 #### Chi siamo
 
-Code.org® è un'associazione 501c3 senza scopo di lucro, dedicata alla diffusione dell'interesse nell'informatica e all'aumento della partecipazione in essa di donne e studenti delle minoranze etniche. Its vision is that every student in every school has the opportunity to learn computer programming. Dopo il lancio nel 2013, Code.org ha organizzato la campagna "L'Ora del Codice" – che ad oggi ha introdotto oltre 100 milioni di studenti all'informatica – e collaborato con 70 distretti della scuola pubblica a livello nazionale negli USA per espandere i programmi di informatica. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. Per ulteriori informazioni, si può visitare: [<%= resolve_url('code.org') %>](%= resolve_url('https://code.org') %).
+Code.org® è un'associazione 501c3 senza scopo di lucro, dedicata alla diffusione dell'interesse nell'informatica e all'aumento della partecipazione in essa di donne e studenti delle minoranze etniche. Its vision is that every student in every school has the opportunity to learn computer programming. Dopo il lancio nel 2013, Code.org ha organizzato la campagna "L'Ora del Codice" – che ad oggi ha introdotto oltre 100 milioni di studenti all'informatica – e collaborato con 70 distretti della scuola pubblica a livello nazionale negli USA per espandere i programmi di informatica. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. For more information, please visit: [code.org]({{ codeorg_link }}).
 
 ## Share these on social media and in emails
 
@@ -51,6 +50,6 @@ Code.org® è un'associazione 501c3 senza scopo di lucro, dedicata alla diffusio
 
 ## Infographics
 
-<%= view :stats_carousel %>
+{{ stats_carousel }}
 
-<%= view :signup_button %>
+{{ signup_button }}

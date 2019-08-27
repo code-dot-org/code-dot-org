@@ -1,13 +1,12 @@
 ---
-title: <%= hoc_s(:title_stats).inspect %>
+title: Blurbs and useful stats
 layout: wide
 nav: promote_nav
 ---
 
-
 <a id="blurb"></a>
 
-<%= view :signup_button %>
+{{ signup_button }}
 
 # Blurbs and useful stats
 
@@ -41,7 +40,7 @@ Technologia zmienia każdą branżę na świecie. W 2015 r. było w Usa 7 milion
 
 #### O Code.org
 
-Godzina Kodowania jest organizowana przez Code.org, publiczną organizację non-profit, poszerzającą dostęp do wiedzy informatycznej oraz zwiększającą uczestnictwo dziewcząt i uczniów niedostatecznie reprezentowanych. Its vision is that every student in every school has the opportunity to learn computer programming. Po uruchomieniu w 2013, Code.org zorganizował kampanię Godziny Kodowania, która do dzisiaj wprowadziła ponad 100 milionów uczniów do informatyki, współpracując z 70 okręgami szkół publicznych w kraju, aby rozwijać programy informatyki. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. Aby uzyskać więcej informacji, proszę odwiedzić: [ < % = resolve_url('code.org') %>](%= resolve_url('https://code.org') %).
+Godzina Kodowania jest organizowana przez Code.org, publiczną organizację non-profit, poszerzającą dostęp do wiedzy informatycznej oraz zwiększającą uczestnictwo dziewcząt i uczniów niedostatecznie reprezentowanych. Its vision is that every student in every school has the opportunity to learn computer programming. Po uruchomieniu w 2013, Code.org zorganizował kampanię Godziny Kodowania, która do dzisiaj wprowadziła ponad 100 milionów uczniów do informatyki, współpracując z 70 okręgami szkół publicznych w kraju, aby rozwijać programy informatyki. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. For more information, please visit: [code.org]({{ codeorg_link }}).
 
 ## Share these on social media and in emails
 
@@ -51,6 +50,6 @@ Godzina Kodowania jest organizowana przez Code.org, publiczną organizację non
 
 ## Infografiki
 
-<%= view :stats_carousel %>
+{{ stats_carousel }}
 
-<%= view :signup_button %>
+{{ signup_button }}

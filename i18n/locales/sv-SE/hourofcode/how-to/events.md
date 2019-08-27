@@ -1,9 +1,10 @@
 ---
-title: <%= hoc_s(:title_how_to_events).inspect %>
+title: Kodtimmen evenemang så-gör-du
 layout: wide
 nav: how_to_nav
 ---
-<%= view :signup_button %>
+
+{{ signup_button }}
 
 # How to organize an Hour of Code assembly or event
 
@@ -14,13 +15,13 @@ nav: how_to_nav
 ## 1. Prepare for your event
 
 - Determine a venue, date, and time.
-- Send [a letter](https://hourofcode.com/promote/resources#sample-emails) to your local mayor, member of Congress, governor, or influential business person and invite them to speak. Check out our [how-to toolkit](%=localized_file('/files/elected-official.pdf')%) when hosting an elected official during an Hour of Code for more info.
-- Bjud in media/press. dvs. lokala nyhetstationer, tidningen, utbildnings/tech bloggare. Se vårt [presskit](%= resolve_url('/promote/press-kit') %) för hjälp.
+- Send [a letter](https://hourofcode.com/promote/resources#sample-emails) to your local mayor, member of Congress, governor, or influential business person and invite them to speak. Check out our [how-to toolkit]({{ localized_files/elected_official }}) when hosting an elected official during an Hour of Code for more info.
+- Invite media/press. i.e. local news station, newspaper, education/tech bloggers. See our [press kit]({{ promote/press_kit_url }}) for help.
 
 ## 2. During your event
 
-- Kick off your event with one of our [inspirational videos](%= resolve_url('/promote/resources#videos') %).
-- Håll en introduktion om varför datavetenskap är viktigt, med hjälp av dessa [informationsvisualiseringar och statistik](%= resolve_url('/promote/stats') %).   
+- Kick off your event with one of our [inspirational videos]({{ promote/videos }}).
+- Give an intro overviewing the importance of computer science, using these [stats and infographics]({{ promote/stats_url }}).   
       
     
 - **Other event ideas**: 
@@ -46,7 +47,7 @@ Consider hosting a K-5 evening event and invite parents to join their students f
 
 **Event:** School-wide Computer Science Education Week kick-off assembly
 
-**Date:** <%= campaign_date('start-short') %> (start of Computer Science Education Week)
+**Date:** {{ campaign_date/start_short }} (start of Computer Science Education Week)
 
 **Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
 
@@ -54,13 +55,13 @@ Consider hosting a K-5 evening event and invite parents to join their students f
 
 ## Program
 
-| Tid           | Aktivitet                                                                                                                                        |
-| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| 10:00 - 10:05 | Open with one of our [inspirational videos](%= resolve_url('/promote/resources#videos') %).                                                      |
-| 10:05 - 10:15 | Principal gives an intro overviewing the importance of computer science. Use these [stats and infographics](%= resolve_url('/promote/stats') %). |
-| 10:15 - 10:30 | Speciell gäst berättar om sin bakgrund och hur teknik och datavetenskap spelar en viktig roll i deras liv varje dag.                             |
-| 10:30 - 10:40 | Students do an Hour of Code demo for the school. Fun twist: have them teach the principal, politician, or other students!                        |
-| 10:40 - 11:00 | Studenter gör en demo på en unplugged aktivitet och hur datavetenskap kan läras ut utan att använda datorer.                                     |
-| 11:00 - 11:05 | Lärare som hjälpte till med att få hela skolan att vara med ger avslutande kommentarer.                                                          |
+| Tid           | Aktivitet                                                                                                                             |
+| ------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| 10:00 - 10:05 | Open with one of our [inspirational videos]({{ promote/videos }}).                                                                    |
+| 10:05 - 10:15 | Principal gives an intro overviewing the importance of computer science. Use these [stats and infographics]({{ promote/stats_url }}). |
+| 10:15 - 10:30 | Speciell gäst berättar om sin bakgrund och hur teknik och datavetenskap spelar en viktig roll i deras liv varje dag.                  |
+| 10:30 - 10:40 | Students do an Hour of Code demo for the school. Fun twist: have them teach the principal, politician, or other students!             |
+| 10:40 - 11:00 | Studenter gör en demo på en unplugged aktivitet och hur datavetenskap kan läras ut utan att använda datorer.                          |
+| 11:00 - 11:05 | Lärare som hjälpte till med att få hela skolan att vara med ger avslutande kommentarer.                                               |
 
-<%= view :signup_button %>
+{{ signup_button }}
