@@ -1,6 +1,11 @@
 # Abstract base class for all level-specific DSLs, which provides some methods
 # which are available to all DSL-defined level types.
 class LevelDSL < BaseDSL
+  def initialize
+    super
+    @hash[:editor_experiment] = nil
+  end
+
   def name(text)
     @name = text
   end
@@ -14,6 +19,10 @@ class LevelDSL < BaseDSL
       puts "warning: unable to decrypt level #{@name}, skipping"
       return
     end
+  end
+
+  def editor_experiment(text)
+    @hash[:editor_experiment] = text
   end
 
   def parse_output
