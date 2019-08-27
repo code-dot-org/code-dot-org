@@ -1,0 +1,35 @@
+<Weblab>
+  <config><![CDATA[{
+  "game_id": 58,
+  "created_at": "2019-08-22T16:18:54.000Z",
+  "level_num": "custom",
+  "user_id": 324,
+  "properties": {
+    "instructions_important": "false",
+    "project_template_level_name": "CSD Web Multi-page Template",
+    "hide_share_and_remix": "true",
+    "submittable": "false",
+    "parent_level_id": 18319,
+    "name_suffix": "_pilot",
+    "long_instructions": "# Upload Images\r\n\r\nFirst, you'll need to upload all of your team's images into your project.\r\n\r\n# Do This\r\n  * Upload all of the images listed in your team's project guide into your project.\r\n  * Double check that each image file name uses good naming conventions\r\n",
+    "reference_links": [
+      "/docs/concepts/html/html-tags/",
+      "/docs/concepts/html/headings-and-paragraphs/",
+      "/docs/concepts/html/lists/",
+      "/docs/concepts/html/images-in-html/",
+      "/docs/concepts/html/formatting-html/"
+    ],
+    "map_reference": "/docs/concepts/html/hyperlinks/",
+    "encrypted": "false",
+    "mini_rubric": "false",
+    "encrypted_examples": [
+
+    ]
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-07-14 16:47:53 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-07-27 15:55:48 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-03-01 17:22:58 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-11-29 18:17:01 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-01-30 21:11:03 +0000\",\"changed\":[],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-01-30 21:11:29 +0000\",\"changed\":[\"encrypted_examples\",\"reference_links\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-08-08 18:33:12 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-08-22 16:19:38 +0000\",\"changed\":[\"project_template_level_name\",\"long_instructions\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</Weblab>
