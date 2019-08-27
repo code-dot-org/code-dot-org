@@ -1119,28 +1119,24 @@ exports.install = function(blockly, blockInstallOptions) {
       this.appendDummyInput();
       this.interpolateMsg(
         msg.jumpToOverDown(),
-        [
-          () => {
-            this.appendDummyInput().appendTitle(
-              new blockly.FieldTextInput(
-                '0',
-                blockly.FieldTextInput.numberValidator
-              ),
-              'XPOS'
-            );
-          }
-        ],
-        [
-          () => {
-            this.appendDummyInput().appendTitle(
-              new blockly.FieldTextInput(
-                '0',
-                blockly.FieldTextInput.numberValidator
-              ),
-              'YPOS'
-            );
-          }
-        ],
+        () => {
+          this.appendDummyInput().appendTitle(
+            new blockly.FieldTextInput(
+              '0',
+              blockly.FieldTextInput.numberValidator
+            ),
+            'XPOS'
+          );
+        },
+        () => {
+          this.appendDummyInput().appendTitle(
+            new blockly.FieldTextInput(
+              '0',
+              blockly.FieldTextInput.numberValidator
+            ),
+            'YPOS'
+          );
+        },
         blockly.ALIGN_RIGHT
       );
       this.setPreviousStatement(true);
