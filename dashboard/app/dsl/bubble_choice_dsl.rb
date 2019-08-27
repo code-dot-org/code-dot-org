@@ -1,4 +1,4 @@
-class BubbleChoiceDSL < BaseDSL
+class BubbleChoiceDSL < LevelDSL
   def initialize
     super
     @hash[:display_name] = nil

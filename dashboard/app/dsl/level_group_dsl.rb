@@ -1,4 +1,4 @@
-class LevelGroupDSL < BaseDSL
+class LevelGroupDSL < LevelDSL
   def initialize
     super
     @id = nil
