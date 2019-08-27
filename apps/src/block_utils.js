@@ -440,14 +440,14 @@ exports.appendNewFunctions = function(blocksXml, functionsXml) {
   const sharedFunctionsDom = xml.parseElement(functionsXml);
   const functions = [...sharedFunctionsDom.ownerDocument.firstChild.childNodes];
   for (let func of functions) {
-    const name = func.ownerDocument.evaluate(
+    const name = document.evaluate(
       'title[@name="NAME"]/text()',
       func,
       null,
       XPathResult.STRING_TYPE,
       null
     ).stringValue;
-    const type = func.ownerDocument.evaluate(
+    const type = document.evaluate(
       '@type',
       func,
       null,
@@ -455,7 +455,7 @@ exports.appendNewFunctions = function(blocksXml, functionsXml) {
       null
     ).stringValue;
     const alreadyPresent =
-      startBlocksDom.ownerDocument.evaluate(
+      document.evaluate(
         `//block[@type="${type}"]/title[@name="NAME"][text()="${name}"]`,
         startBlocksDom,
         null,
