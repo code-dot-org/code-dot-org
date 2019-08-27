@@ -48,7 +48,7 @@ class ExternalRedirectDialog extends React.Component {
       title = i18n.redirectTitle();
       body = (
         <div>
-          <h2 style={styles.title}>{i18n.redirectConfirm()}</h2>
+          <h2 style={styles.title}>{i18n.redirectConfirmation()}</h2>
           <p style={styles.url}>{url}</p>
           <p>
             {i18n.redirectExplanation()}

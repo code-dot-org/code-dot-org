@@ -1,9 +1,10 @@
 ---
-title: <%= hoc_s(:title_press_kit).inspect %>
+title: 新闻资料袋
 layout: wide
 nav: promote_nav
 ---
-<%= view :signup_button %>
+
+{{ signup_button }}
 
 # How to attract media to your Hour of Code event
 
@@ -18,17 +19,17 @@ nav: promote_nav
 - 在你的活动开始两周前通过电子邮件主动联系媒体，如果没有得到初步答复跟进邮件或电话联系。
 - 请学校工作人员或志愿者拍照在网上分享或发送给媒体。
 - 在你的个人网站主页和学校报纸上发表关于编程一小时的内容，发表你的活动细节，和学生活动的照片。
-- On Facebook and Twitter, share updates on your plans, announce your events, and post pictures during <%= campaign_date('year') %>. Use the hashtag **#HourOfCode** so Code.org can see and promote your events.
+- On Facebook and Twitter, share updates on your plans, announce your events, and post pictures during {{ campaign_date/year }}. Use the hashtag **#HourOfCode** so Code.org can see and promote your events.
 
 ## Step-by-step guide
 
 ### 1. Plan your event
 
 - 策划一系列活动揭开编程一小时的序幕
-- Send [a letter](%= resolve_url('/promote/resources#sample-emails') %) to parents and ask them to spread the word.
-- Send [a letter](%= resolve_url('/promote/resources#sample-emails') %) to invite your local mayor, member of Congress, governor, or influential businessperson to attend and speak to your students.
+- Send [a letter]({{ promote/sample_emails }}) to parents and ask them to spread the word.
+- Send [a letter]({{ promote/sample_emails }}) to invite your local mayor, member of Congress, governor, or influential businessperson to attend and speak to your students.
 - 组织集体活动（如策划“不插电”活动），或展示学生创建并领导的活动。
-- Show Code.org’s [Hour of Code video](%= resolve_url('/') %) or one of [these videos](%= resolve_url('/promote/resources#videos') %) to inspire students. <br />
+- Show Code.org’s [Hour of Code video]({{ urls/home }}) or one of [these videos]({{ promote/videos }}) to inspire students. <br />
 
 ### 2. Identify specific reporters that cover education or local events
 
@@ -36,7 +37,7 @@ Like local newspapers, TV station or radio stations, or blogs. <br />
 
 ### 3. Contact local media
 
-The best way to reach out is by email. It should be short and should communicate "why should other people care about this event"? Include contact information (including a cellphone number) for who will be on site at the event. **[See a sample pitch to media](%= resolve_url('/promote/press-kit#sample-emails') %)**.
+The best way to reach out is by email. It should be short and should communicate "why should other people care about this event"? Include contact information (including a cellphone number) for who will be on site at the event. **[See a sample pitch to media]({{ promote/press-kit-emails }})**.
 
 Look online to find reporter contact information. If you can't find it, call the publication to ask, or email the organization's general email address and ask for your message to be directed to the correct reporter. <br />
 
@@ -78,9 +79,9 @@ Hadi Partovi，Code.org的创始人和CEO曾说过“打造编程一小时就是
 
 #### 关于Code.org
 
-Code.org®是501c3公立非营利项目，致力于扩展计算机科学，增加女性和有色弱势学生群体的参与。 Its vision is that every student in every school has the opportunity to learn computer programming. 在2013年启动后，Code.org组织了编程一小时系列活动—向数以百万计的学生介绍计算机科学—和全国超过70所公立学区合作，拓展计算机科学课程。 Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. 更多详情, 请访问: [ <%= resolve_url('code.org')%> ](%= resolve_url('https://code.org') %)。
+Code.org®是501c3公立非营利项目，致力于扩展计算机科学，增加女性和有色弱势学生群体的参与。 Its vision is that every student in every school has the opportunity to learn computer programming. 在2013年启动后，Code.org组织了编程一小时系列活动—向数以百万计的学生介绍计算机科学—和全国超过70所公立学区合作，拓展计算机科学课程。 Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. For more information, please visit: [code.org]({{ urls/codeorg }}).
 
   
-Find more resources and sample emails [here](%= resolve_url('/promote/resources#sample-emails') %).
+Find more resources and sample emails [here]({{ promote/sample_emails }}).
 
-<%= view :signup_button %>
+{{ signup_button }}

@@ -1,13 +1,12 @@
 ---
-title: <%= hoc_s(:title_stats).inspect %>
+title: Blurbs and useful stats
 layout: wide
 nav: promote_nav
 ---
 
-
 <a id="blurb"></a>
 
-<%= view :signup_button %>
+{{ signup_button }}
 
 # Blurbs and useful stats
 
@@ -41,7 +40,7 @@ Informasjonsteknologi griper etterhvert inn i alle bransjer. I 2015 fantes det 7
 
 #### Om Code.org
 
-Code.org® er en 501c3 almennyttig non-profit-organisasjon med formål om å utvide deltakelsen i datavitenskap og øke deltakelse av kvinner og andre underrepresenterte grupper. Its vision is that every student in every school has the opportunity to learn computer programming. Etter lanseringen i 2013 organiserte Code.org kampanjen Kodetimen, Kodetimen har hittil introdusert over et hundre millioner elever til datavitenskapen og samarbeider med 70 offenlige skolesistrikter over hele Usa for og utvide datavitenskap programmer. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. For mer informasjon, vennligst besøk: [ < % = resolve_url('code.org') %>](%= resolve_url('https://code.org') %).
+Code.org® er en 501c3 almennyttig non-profit-organisasjon med formål om å utvide deltakelsen i datavitenskap og øke deltakelse av kvinner og andre underrepresenterte grupper. Its vision is that every student in every school has the opportunity to learn computer programming. Etter lanseringen i 2013 organiserte Code.org kampanjen Kodetimen, Kodetimen har hittil introdusert over et hundre millioner elever til datavitenskapen og samarbeider med 70 offenlige skolesistrikter over hele Usa for og utvide datavitenskap programmer. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. For more information, please visit: [code.org]({{ codeorg_link }}).
 
 ## Share these on social media and in emails
 
@@ -51,6 +50,6 @@ Code.org® er en 501c3 almennyttig non-profit-organisasjon med formål om å utv
 
 ## Infographics
 
-<%= view :stats_carousel %>
+{{ stats_carousel }}
 
-<%= view :signup_button %>
+{{ signup_button }}

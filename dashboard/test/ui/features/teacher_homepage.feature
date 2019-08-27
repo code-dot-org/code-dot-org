@@ -109,8 +109,8 @@ Feature: Using the teacher homepage sections feature
 
     # Try to assign the unit
     Given I am on "http://studio.code.org/home"
-    And I click selector ".ui-test-section-dropdown"
-    And I click selector ".edit-section-details-link"
+    And I click selector ".ui-test-section-dropdown" once I see it
+    And I click selector ".edit-section-details-link" once I see it
     And I wait until element "#uitest-secondary-assignment" is visible
     And I select the "CSP Unit 2 - Digital Information ('17-'18)" option in dropdown "uitest-secondary-assignment"
     And I press the first ".uitest-saveButton" element
