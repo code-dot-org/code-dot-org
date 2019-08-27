@@ -80,11 +80,15 @@ class FollowersController < ApplicationController
   def student_register
     if current_user
       @user = current_user
-    else
+    elsif params[:user]
       user_type = params[:user][:user_type] == User::TYPE_TEACHER ? User::TYPE_TEACHER : User::TYPE_STUDENT
-      @user = User.new(followers_params(user_type))
-      @user.user_type = user_type
+    else
+      params[:user] = {}
+      user_type = User::TYPE_STUDENT
     end
+
+    @user ||= User.new(followers_params(user_type))
+    @user.user_type = user_type if user_type
 
     Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
       if @user.save
