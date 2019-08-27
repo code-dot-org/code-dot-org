@@ -1089,8 +1089,6 @@ exports.install = function(blockly, blockInstallOptions) {
       var dropdown = new blockly.FieldDropdown(this.VALUES);
       dropdown.setValue(this.VALUES[1][1]); // default to top-left
       this.setHSV(184, 1.0, 0.74);
-      // this.appendDummyInput().appendTitle(msg.jump());
-      // this.appendDummyInput().appendTitle(dropdown, 'VALUE');
       this.appendDummyInput();
       this.interpolateMsg(
         msg.jumpToPosition(),
