@@ -1,5 +1,5 @@
 # Abstract class for DSL types which provide a standard set of content-definition methods.
-class ContentDSL < BaseDSL
+class ContentDSL < LevelDSL
   def initialize
     super
     @hash.merge! options: {}
