@@ -6,10 +6,6 @@ class LevelDSL < BaseDSL
     @hash[:editor_experiment] = nil
   end
 
-  def name(text)
-    @name = text
-  end
-
   def encrypted(text)
     @hash['encrypted'] = '1'
 
