@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190823180844) do
+ActiveRecord::Schema.define(version: 20190826184856) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -1092,7 +1092,6 @@ ActiveRecord::Schema.define(version: 20190823180844) do
   create_table "regional_partners", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.string   "name",                             null: false
     t.integer  "group"
-    t.integer  "contact_id"
     t.boolean  "urban"
     t.string   "attention"
     t.string   "street"
@@ -1106,7 +1105,6 @@ ActiveRecord::Schema.define(version: 20190823180844) do
     t.datetime "updated_at",                       null: false
     t.datetime "deleted_at"
     t.text     "properties",         limit: 65535
-    t.index ["name", "contact_id"], name: "index_regional_partners_on_name_and_contact_id", unique: true, using: :btree
   end
 
   create_table "regional_partners_school_districts", id: false, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
