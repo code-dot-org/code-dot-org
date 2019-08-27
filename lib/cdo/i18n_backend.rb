@@ -77,10 +77,14 @@ module Cdo
       def translate(locale, key, options = ::I18n::EMPTY_HASH)
         # Sample our data so we don't blow up firehose (or add a high overhead
         # to every Rails view request). Sample rate can be controlled with
-        # DCDO; defaulting to 1:1000 initially, to give us a safe starting
+        # DCDO; defaulting to disabled, both to give us a safe starting
         # place from which to configure actual desired sampling once we have
-        # some data.
-        sample_chance = DCDO.get('dashboard_translation_tracking_sample_chance', 0.001)
+        # some data and to prevent us from attempting to put records from the
+        # test environment. (The FirehoseClient internally suppresses requests
+        # when in the test environment, so we're not so much worried about data
+        # contamination here as we are about not messing up tests that try to
+        # look at firehose usage)
+        sample_chance = DCDO.get('dashboard_translation_tracking_sample_chance', 0.0)
         if rand < sample_chance
           # Generate the key sans locale, so we can track string usage across
           # locales
