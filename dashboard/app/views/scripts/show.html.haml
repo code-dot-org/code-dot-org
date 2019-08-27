@@ -8,7 +8,7 @@
   %script{ src: minifiable_asset_path('js/scripts/show.js'), data: {scriptoverview: scriptOverviewData.to_json }}
 
 
-- if (current_user && current_user.show_race_interstitial?) || @force_race_interstitial
+- if RaceInterstitialHelper.show?(current_user) || @force_race_interstitial
   = render partial: 'layouts/race_interstitial'
 
 = render partial: 'shared/check_admin'

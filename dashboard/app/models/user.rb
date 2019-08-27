@@ -2073,11 +2073,6 @@ class User < ActiveRecord::Base
     teacher? && users_school && (next_census_display.nil? || Date.today >= next_census_display.to_date)
   end
 
-  def show_race_interstitial?(ip = nil)
-    ip_to_check = ip || current_sign_in_ip
-    RaceInterstitialHelper.show_race_interstitial?(self, ip_to_check)
-  end
-
   def show_school_info_confirmation_dialog?
     SchoolInfoInterstitialHelper.show_school_info_confirmation_dialog?(self)
   end
