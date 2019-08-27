@@ -1,25 +1,26 @@
 import PropTypes from 'prop-types';
 import Radium from 'radium';
 import React from 'react';
+import color from '../../util/color';
 import FontAwesome from '../../templates/FontAwesome';
 
 const styles = {
   categoryName: {
     fontFamily: '"Gotham 7r", sans-serif',
-    color: '#4D575F'
+    color: color.dark_charcoal
   },
   tableNumber: {
     float: 'right',
     fontFamily: '"Gotham 4r", sans-serif',
-    color: '#949CA2'
+    color: color.light_gray
   },
   categoryDescription: {
     fontFamily: '"Gotham 4r", sans-serif',
-    color: '#4D575F'
+    color: color.dark_charcoal
   },
   tableName: {
     fontFamily: '"Gotham 5r", sans-serif',
-    color: '#0094CA'
+    color: color.cyan
   }
 };
 
