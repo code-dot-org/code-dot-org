@@ -31,16 +31,16 @@ import {Position} from '../constants';
 const RANDOM_VALUE = 'RAND';
 
 const POSITION_VALUES = [
-  [commonMsg.positionRandom(), RANDOM_VALUE],
-  [commonMsg.positionTopLeft(), Position.TOPLEFT.toString()],
-  [commonMsg.positionTopCenter(), Position.TOPCENTER.toString()],
-  [commonMsg.positionTopRight(), Position.TOPRIGHT.toString()],
-  [commonMsg.positionMiddleLeft(), Position.MIDDLELEFT.toString()],
-  [commonMsg.positionMiddleCenter(), Position.MIDDLECENTER.toString()],
-  [commonMsg.positionMiddleRight(), Position.MIDDLERIGHT.toString()],
-  [commonMsg.positionBottomLeft(), Position.BOTTOMLEFT.toString()],
-  [commonMsg.positionBottomCenter(), Position.BOTTOMCENTER.toString()],
-  [commonMsg.positionBottomRight(), Position.BOTTOMRIGHT.toString()]
+  [commonMsg.random(), RANDOM_VALUE],
+  [commonMsg.topLeft(), Position.TOPLEFT.toString()],
+  [commonMsg.topCenter(), Position.TOPCENTER.toString()],
+  [commonMsg.topRight(), Position.TOPRIGHT.toString()],
+  [commonMsg.middleLeft(), Position.MIDDLELEFT.toString()],
+  [commonMsg.middleCenter(), Position.MIDDLECENTER.toString()],
+  [commonMsg.middleRight(), Position.MIDDLERIGHT.toString()],
+  [commonMsg.bottomLeft(), Position.BOTTOMLEFT.toString()],
+  [commonMsg.bottomCenter(), Position.BOTTOMCENTER.toString()],
+  [commonMsg.bottomRight(), Position.BOTTOMRIGHT.toString()]
 ];
 
 // Install extensions to Blockly's language and JavaScript generator.
@@ -1089,8 +1089,16 @@ exports.install = function(blockly, blockInstallOptions) {
       var dropdown = new blockly.FieldDropdown(this.VALUES);
       dropdown.setValue(this.VALUES[1][1]); // default to top-left
       this.setHSV(184, 1.0, 0.74);
-      this.appendDummyInput().appendTitle(msg.jump());
-      this.appendDummyInput().appendTitle(dropdown, 'VALUE');
+      // this.appendDummyInput().appendTitle(msg.jump());
+      // this.appendDummyInput().appendTitle(dropdown, 'VALUE');
+      this.appendDummyInput();
+      this.interpolateMsg(
+        msg.jumpToPosition(),
+        () => {
+          this.appendDummyInput().appendTitle(dropdown, 'VALUE');
+        },
+        blockly.ALIGN_RIGHT
+      );
       this.setPreviousStatement(true);
       this.setInputsInline(true);
       this.setNextStatement(true);
