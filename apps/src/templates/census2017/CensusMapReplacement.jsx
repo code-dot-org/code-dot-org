@@ -1,4 +1,4 @@
-/* global google mapboxgl */
+/* global mapboxgl */
 import PropTypes from 'prop-types';
 import $ from 'jquery';
 import React, {Component} from 'react';
@@ -139,14 +139,11 @@ export default class CensusMapReplacement extends Component {
   draggableOption = false;
   resizeThrottleTimeoutMs = 500;
   maxHeightPercentage = 0.65;
-  infoWindow = undefined;
-
-  componentWillMount() {
-    this.infoWindow = new google.maps.InfoWindow();
-  }
 
   componentWillUnmount() {
-    this.InfoWindow.close();
+    if (this.popup) {
+      this.popup.remove();
+    }
   }
 
   componentDidMount = () => {
