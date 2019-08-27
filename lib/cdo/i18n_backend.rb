@@ -72,9 +72,38 @@ module Cdo
       end
     end
 
+    module TrackTranslations
+      # Log calls to I18n.t to firehose for analytics.
+      def translate(locale, key, options = ::I18n::EMPTY_HASH)
+        # Sample our data so we don't blow up firehose (or add a high overhead
+        # to every Rails view request). Sample rate can be controlled with
+        # DCDO; defaulting to 1:1000 initially, to give us a safe starting
+        # place from which to configure actual desired sampling once we have
+        # some data.
+        sample_chance = DCDO.get('dashboard_translation_tracking_sample_chance', 0.001)
+        if rand < sample_chance
+          # Generate the key sans locale, so we can track string usage across
+          # locales
+          keys = ::I18n.normalize_keys(nil, key, options.fetch(:scope, []), options.fetch(:separator, nil))
+          FirehoseClient.instance.put_record(
+            study: 'dashboard_translation_tracking',
+            event: 'lookup',
+            data_string: keys.join(::I18n.default_separator),
+            data_json: {
+              keys: keys,
+              locale: ::I18n.locale,
+            }.to_json
+          )
+        end
+
+        super(locale, key, options)
+      end
+    end
+
     class SimpleBackend < ::I18n::Backend::Simple
       include SmartTranslate
       include MarkdownTranslate
+      include TrackTranslations
     end
 
     # I18n backend instance used by the web application.
