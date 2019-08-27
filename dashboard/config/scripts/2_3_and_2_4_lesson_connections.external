@@ -7,7 +7,7 @@ The main purpose of these lessons is for students to exhibit creativity while ge
 ## Lesson 3: Encoding Black and White Images
 **Lesson Type:** Widget - Pixelation | Concept Invention | Individual Creation
 
-<a href = “https://curriculum.code.org/csp/unit2/3/” target=_blank> Lesson Plan Link <i class="fa fa-external-link-square"></i></a>
+<a href = "https://curriculum.code.org/csp/unit2/3/" target=_blank> Lesson Plan Link <i class="fa fa-external-link-square"></i></a>
 
 <img src="https://images.code.org/7400174cc3e6b1b93c4f79ae93333a36-image-1475947402675.png" style="float:right; margin-left:30px; width:200px">
 
@@ -18,7 +18,7 @@ Connections can be made back to file sizes and file formats here as well - e.g. 
 ## Lesson 4: Encoding Color Images
 **Lesson Type:** Widget - Pixelation | Individual Creation
 
-<a href = “https://curriculum.code.org/csp/unit2/4/” target=_blank> Lesson Plan Link <i class="fa fa-external-link-square"></i></a>
+<a href = "https://curriculum.code.org/csp/unit2/4/" target=_blank> Lesson Plan Link <i class="fa fa-external-link-square"></i></a>
 
 <img src="https://images.code.org/ec880f588a516c0d85e5eb5a2a66d5d2-image-1475947402674.png" style="float:right; margin-left:30px; width:200px">
 Similar to the B&W pixelation activity, the purpose of this lesson is for students to get hands-on  with bits. A major outcome is an understanding the relationship between hexadecmial (base-16) and binary (base-2), and how useful it is to use hex to represent groups of 4 bits. It’s important to realize that using hex is not a form of data compression, it’s simply a different view into the bits.

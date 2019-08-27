@@ -55,10 +55,6 @@ export class WorkshopIndex extends React.Component {
     this.context.router.push('/reports');
   };
 
-  handleOrganizerSurveyResultsClick = () => {
-    this.context.router.push('/organizer_survey_results');
-  };
-
   handleSurveyResultsClick = () => {
     this.context.router.push('/survey_results');
   };
@@ -107,11 +103,6 @@ export class WorkshopIndex extends React.Component {
           {canSeeAttendanceReports && (
             <Button onClick={this.handleAttendanceReportsClick}>
               Attendance Reports
-            </Button>
-          )}
-          {this.props.permission.has(ProgramManager) && (
-            <Button onClick={this.handleOrganizerSurveyResultsClick}>
-              Organizer Survey Results
             </Button>
           )}
           {this.props.permission.hasAny(Facilitator, CsfFacilitator) && (

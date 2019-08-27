@@ -85,15 +85,15 @@ ActiveRecord::Schema.define(version: 20190826184856) do
     t.integer  "prev_time"
     t.integer  "prev_attempt"
     t.integer  "prev_test_result"
-    t.integer  "prev_level_source_id"
+    t.bigint   "prev_level_source_id",               unsigned: true
     t.integer  "next_time"
     t.integer  "next_attempt"
     t.integer  "next_test_result"
-    t.integer  "next_level_source_id"
+    t.bigint   "next_level_source_id",               unsigned: true
     t.integer  "final_time"
     t.integer  "final_attempt"
     t.integer  "final_test_result"
-    t.integer  "final_level_source_id"
+    t.bigint   "final_level_source_id",              unsigned: true
     t.datetime "created_at",            null: false
     t.datetime "updated_at",            null: false
     t.index ["level_id"], name: "fk_rails_8f51960e09", using: :btree
@@ -1524,6 +1524,7 @@ ActiveRecord::Schema.define(version: 20190826184856) do
     t.datetime "last_confirmation_date", null: false
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
+    t.index ["user_id"], name: "index_user_school_infos_on_user_id", using: :btree
   end
 
   create_table "user_scripts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|

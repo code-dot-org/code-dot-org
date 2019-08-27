@@ -11352,7 +11352,7 @@ en:
               name: Practice PT Part 3
             Unit 4 Assessment:
               name: Unit 4 Assessment
-          title: 'Unit 4: Variables, Conditionals, Functions'
+          title: CSP Unit 4 Pilot - Variables, Conditionals, Functions
           description_audience: ''
           description_short: ''
           description: ''
@@ -11860,7 +11860,7 @@ en:
               name: CS Principles Unit 1 Survey
             Unit 1 Survey:
               name: Unit 1 Survey
-          title: CSP Unit 1 Pilot
+          title: CSP Unit 1 Pilot - Digital Information
           description_audience: ''
           description_short: ''
           description: ''
@@ -12624,7 +12624,7 @@ en:
               name: Student Survey (Libraries)
             Teacher Survey (Libraries):
               name: Teacher Survey (Libraries)
-          title: 'Unit 5: Lists, Loops, and Traversals'
+          title: CSP Unit 5 Pilot - Lists, Loops, and Traversals
           description_audience: ''
           description_short: ''
           description: ''
@@ -12824,6 +12824,20 @@ en:
               name: Searching and Research
             Sources and Research:
               name: Sources and Research
+            Team Problem Solving:
+              name: Team Problem Solving
+            Wireframes and Planning:
+              name: Wireframes and Planning
+            Linking Pages:
+              name: Linking Pages
+            Planning a Multi-page Website:
+              name: Planning a Multi-page Website
+            Linking and Navigation:
+              name: Linking and Navigation
+            Peer Review and Final Touches:
+              name: Peer Review and Final Touches
+            Project - Website for a Purpose:
+              name: Project - Website for a Purpose
         csd3-pilot:
           title: CSD Unit 3 - Animations and Games (Pilot Version)
           description: " In Unit 3, you’ll build on your coding experience as you program animations, interactive art, and games in Game Lab. The unit starts off with simple shapes and builds up to more sophisticated sprite-based games, using the same programming concepts and the design process computer scientists use daily. In the final project, you’ll develop a personalized, interactive program."
@@ -12985,7 +12999,7 @@ en:
               name: 'Project: Share Your App'
             The Need for Programming Languages:
               name: The Need for Programming Languages
-          title: 'Unit 3: Intro to App Design'
+          title: CSP Unit 3 Pilot - Intro to App Design
           description_audience: ''
           description_short: ''
           description: ''
@@ -13225,7 +13239,9 @@ en:
               name: Internet Dilemmas, pt 2
             Unit 2 Assessment:
               name: Unit 2 Assessment
-          title: ''
+            Unit Assessment:
+              name: Unit Assessment
+          title: CSP Unit 2 Pilot - The Internet
           description_audience: ''
           description_short: ''
           description: ''
@@ -13238,6 +13254,32 @@ en:
             'Earthquake Detector: Processing with Events':
               name: 'Earthquake Detector: Processing with Events'
           title: Denny Science
+          description_audience: ''
+          description_short: ''
+          description: ''
+        peru-2019:
+          stages:
+            new stage:
+              name: new stage
+            Introduction:
+              name: Introduction
+            Debugging in Collector:
+              name: Debugging in Collector
+            'Loops: My Loopy Robotic Friends':
+              name: 'Loops: My Loopy Robotic Friends'
+            Loops in Artist:
+              name: Loops in Artist
+            Nested Loops:
+              name: Nested Loops
+            Nested Loops Project in Frozen:
+              name: Nested Loops Project in Frozen
+            Events in Star Wars:
+              name: Events in Star Wars
+            Introduction to Debugging:
+              name: Introduction to Debugging
+            Nested Loops in Frozen:
+              name: Nested Loops in Frozen
+          title: Hora del Código Perú 2019
           description_audience: ''
           description_short: ''
           description: ''

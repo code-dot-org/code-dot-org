@@ -1,0 +1,16 @@
+name 'csp-u1-exam1-lossless-compression_2020'
+height 'auto'
+
+question 'Which of the following is true of lossy and lossless compression algorithms?'
+wrong ‘Lossy compression algorithms are used when perfect reconstruction of the original data is important.’
+right ‘Lossy compression algorithms are typically better than lossless compression algorithms at reducing the number of bits needed to represent a piece of data.’
+wrong ‘Lossless compression algorithms are only used to compress text data.’
+wrong ‘Lossless compression algorithms only allow for an approximate reconstruction of the original data.’
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN
+
+markdown <<MARKDOWN
+
+MARKDOWN
