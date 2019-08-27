@@ -453,6 +453,17 @@ DSL
     assert_equal 'science-experiment', output[:pilot_experiment]
   end
 
+  test 'can set editor_experiment' do
+    input_dsl = <<DSL
+editor_experiment 'script-editors'
+
+stage 'Stage1'
+level 'Level 1'
+DSL
+    output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
+    assert_equal 'script-editors', output[:editor_experiment]
+  end
+
   test 'Script DSL with level progressions' do
     input_dsl = <<DSL
 stage 'Stage1'
