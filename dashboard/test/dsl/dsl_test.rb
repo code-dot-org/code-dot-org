@@ -464,6 +464,17 @@ DSL
     assert_equal 'script-editors', output[:editor_experiment]
   end
 
+  test 'serialize editor_experiment' do
+    script = create :script, editor_experiment: 'editors'
+    script_text = ScriptDSL.serialize_to_string(script)
+    expected = <<-SCRIPT
+hidden false
+editor_experiment 'editors'
+
+    SCRIPT
+    assert_equal expected, script_text
+  end
+
   test 'Script DSL with level progressions' do
     input_dsl = <<DSL
 stage 'Stage1'
