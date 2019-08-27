@@ -18,10 +18,6 @@ class LevelGroupDSL < LevelDSL
   string :description_short
   string :description
 
-  def parse_output
-    {name: @name, properties: @hash}
-  end
-
   def title(text) @hash[:title] = text end
 
   def page
