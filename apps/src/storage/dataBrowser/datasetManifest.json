@@ -1,0 +1,74 @@
+{
+  "categories": [
+    {
+      "name": "Animals",
+      "description": "description",
+      "datasets": [
+        {
+          "name": "one",
+          "description": "description one"
+        },
+        {
+          "name": "two",
+          "description": "description two"
+        }
+      ]
+    },
+    {
+      "name": "Arts & Entertainment",
+      "description": "description",
+      "datasets": [
+        {
+          "name": "three",
+          "description": "description three"
+        },
+        {
+          "name": "four",
+          "description": "description four"
+        }
+      ]
+    },
+    {
+      "name": "Business & Money",
+      "description": "description",
+      "datasets": [
+        {
+          "name": "five",
+          "description": "description five"
+        },
+        {
+          "name": "six",
+          "description": "description six"
+        }
+      ]
+    },
+    {
+      "name": "Education",
+      "description": "description",
+      "datasets": [
+        {
+          "name": "seven",
+          "description": "description seven"
+        },
+        {
+          "name": "eight",
+          "description": "description eight"
+        },
+        {
+          "name": "nine",
+          "description": "description nine"
+        }
+      ]
+    },
+    {
+      "name": "Health & Medicine",
+      "description": "description",
+      "datasets": [
+        {
+          "name": "ten",
+          "description": "description ten"
+        }
+      ]
+    }
+  ]
+}

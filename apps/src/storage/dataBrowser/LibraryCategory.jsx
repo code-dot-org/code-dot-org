@@ -2,10 +2,12 @@ import PropTypes from 'prop-types';
 import Radium from 'radium';
 import React from 'react';
 import FontAwesome from '../../templates/FontAwesome';
+import LibraryTable from './LibraryTable';
 
 const styles = {
   categoryName: {
     fontFamily: '"Gotham 7r", sans-serif',
+    pointer: 'cursor',
     color: '#4D575F'
   },
   tableNumber: {
@@ -23,10 +25,10 @@ const styles = {
   }
 };
 
-class DataCategory extends React.Component {
+class LibraryCategory extends React.Component {
   static propTypes = {
     name: PropTypes.string.isRequired,
-    datasets: PropTypes.arrayOf(PropTypes.string).isRequired,
+    datasets: PropTypes.arrayOf(PropTypes.object).isRequired,
     description: PropTypes.string.isRequired
   };
 
@@ -43,26 +45,26 @@ class DataCategory extends React.Component {
     const icon = this.state.collapsed ? 'caret-right' : 'caret-down';
     return (
       <div>
-        <div onClick={this.toggleCollapsed}>
+        <a style={styles.categoryName} onClick={this.toggleCollapsed}>
           <FontAwesome icon={icon} />
-          <span style={styles.categoryName}>{this.props.name}</span>
+          <span>{this.props.name}</span>
           <span style={styles.tableNumber}>
             {this.props.datasets.length}{' '}
             {this.props.datasets.length === 1 ? 'table' : 'tables'}
           </span>
-        </div>
+        </a>
         {!this.state.collapsed && (
           <div>
             <span style={styles.categoryDescription}>
               {this.props.description}
             </span>
-            <ul>
-              {this.props.datasets.map(d => (
-                <li style={styles.tableName} key={d}>
-                  {d}
-                </li>
-              ))}
-            </ul>
+            {this.props.datasets.map(dataset => (
+              <LibraryTable
+                key={dataset.name}
+                name={dataset.name}
+                description={dataset.description}
+              />
+            ))}
           </div>
         )}
       </div>
@@ -70,4 +72,4 @@ class DataCategory extends React.Component {
   }
 }
 
-export default Radium(DataCategory);
+export default Radium(LibraryCategory);
