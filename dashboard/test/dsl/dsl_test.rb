@@ -215,6 +215,7 @@ wrong 'w3'
     output, i18n = MultiDSL.parse(input_dsl, 'test')
     expected = {
       name: 'name1', properties: {
+        editor_experiment: nil,
         options: {},
         questions: [{text: 'q1'}],
         answers: [
@@ -270,6 +271,7 @@ DSL
     expected = {
       name: 'Test question',
       properties: {
+        editor_experiment: nil,
         display_name: 'Test override question',
         options: {},
         questions: [{text: 'Question text'}],
