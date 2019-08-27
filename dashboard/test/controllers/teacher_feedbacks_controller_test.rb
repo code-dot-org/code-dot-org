@@ -17,6 +17,7 @@ class TeacherFeedbacksControllerTest < ActionController::TestCase
 
   test 'index: returns success if signed in user - feedback' do
     feedback = create :teacher_feedback
+    assert_equal TeacherFeedback.all.count, 1
     sign_in feedback.student
     get :index
     assert_response :success
