@@ -32,6 +32,7 @@ class DslTest < ActiveSupport::TestCase
     is_stable: nil,
     supported_locales: [],
     pilot_experiment: nil,
+    editor_experiment: nil,
     project_sharing: nil,
     curriculum_umbrella: nil
   }
