@@ -12922,10 +12922,10 @@ reactabular-highlight@^3.0.0:
   resolved "https://registry.yarnpkg.com/reactabular-highlight/-/reactabular-highlight-3.0.0.tgz#35c2f6c108d400cb1752d292fb651d18054c27cd"
   integrity sha1-NcL2wQjUAMsXUtKS+2UdGAVMJ80=
 
-reactabular-resizable@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/reactabular-resizable/-/reactabular-resizable-3.0.0.tgz#19cb496d626d217d2bf06a42caecd9067c47679d"
-  integrity sha1-GctJbWJtIX0r8GpCyuzZBnxHZ50=
+reactabular-resizable@^4.2.0:
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/reactabular-resizable/-/reactabular-resizable-4.2.0.tgz#44291edc1f3727438f568aefa0b0e16d9cf80450"
+  integrity sha1-RCke3B83J0OPVorvoLDhbZz4BFA=
 
 reactabular-resolve@^3.0.0:
   version "3.0.0"
@@ -12944,10 +12944,10 @@ reactabular-search-field@^3.0.0:
   resolved "https://registry.yarnpkg.com/reactabular-search-field/-/reactabular-search-field-3.0.0.tgz#aa86e65e7e6d14bc79d3fe10d62bdb832fd6ef13"
   integrity sha1-qobmXn5tFLx50/4Q1ivbgy/W7xM=
 
-reactabular-search@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/reactabular-search/-/reactabular-search-3.0.0.tgz#5ffbe172c5db70865dde08953a3f3c8118790573"
-  integrity sha1-X/vhcsXbcIZd3giVOj88gRh5BXM=
+reactabular-search@^4.2.0:
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/reactabular-search/-/reactabular-search-4.2.0.tgz#ad779ef6725ec444f3357363be40a47ab2f808d0"
+  integrity sha1-rXee9nJexETzNXNjvkCkerL4CNA=
 
 reactabular-select@^3.0.0:
   version "3.0.0"
@@ -12960,10 +12960,10 @@ reactabular-select@^3.0.0:
     stylesheet-helpers "^0.1.2"
     uuid "^2.0.2"
 
-reactabular-sort@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/reactabular-sort/-/reactabular-sort-3.0.0.tgz#384c9d41255d1059d71df743c1d477c17b1af41c"
-  integrity sha1-OEydQSVdEFnXHfdDwdR3wXsa9Bw=
+reactabular-sort@^4.2.0:
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/reactabular-sort/-/reactabular-sort-4.2.0.tgz#928c82aabda26b94f1c2dc5030fe09676b6ee370"
+  integrity sha1-koyCqr2ia5TxwtxQMP4JZ2tu43A=
   dependencies:
     reactabular-utils "^3.0.0"
 
@@ -12984,19 +12984,19 @@ reactabular-utils@^3.0.0:
   resolved "https://registry.yarnpkg.com/reactabular-utils/-/reactabular-utils-3.0.0.tgz#58b68292aa6760ae14a2a528a9b0b227ce87eaf0"
   integrity sha1-WLaCkqpnYK4UoqUoqbCyJ86H6vA=
 
-reactabular@^3.0.0:
-  version "3.0.6"
-  resolved "https://registry.yarnpkg.com/reactabular/-/reactabular-3.0.6.tgz#c4ec428c4cf0f234291184960be9281de1d10f94"
-  integrity sha1-xOxCjEzw8jQpEYSWC+koHeHRD5Q=
+reactabular@^4.0.0:
+  version "4.3.0"
+  resolved "https://registry.yarnpkg.com/reactabular/-/reactabular-4.3.0.tgz#0432b671afd4229fa7e9ecacdf7cc2f79679c6a8"
+  integrity sha1-BDK2ca/UIp+n6eys33zC95Z5xqg=
   dependencies:
     reactabular-highlight "^3.0.0"
-    reactabular-resizable "^3.0.0"
+    reactabular-resizable "^4.2.0"
     reactabular-resolve "^3.0.0"
-    reactabular-search "^3.0.0"
+    reactabular-search "^4.2.0"
     reactabular-search-columns "^3.0.0"
     reactabular-search-field "^3.0.0"
     reactabular-select "^3.0.0"
-    reactabular-sort "^3.0.0"
+    reactabular-sort "^4.2.0"
     reactabular-sticky "^3.0.6"
     reactabular-table "^3.0.6"
 
