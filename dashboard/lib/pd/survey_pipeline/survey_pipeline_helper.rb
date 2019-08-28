@@ -4,9 +4,10 @@ require 'pd/survey_pipeline/daily_survey_joiner.rb'
 require 'pd/survey_pipeline/mapper.rb'
 require 'pd/survey_pipeline/daily_survey_decorator.rb'
 require 'pd/survey_pipeline/survey_rollup_decorator.rb'
-require 'pd/jot_form/constants.rb'
 
 module Pd::SurveyPipeline::Helper
+  include Pd::JotForm::Constants
+
   QUESTION_CATEGORIES = [
     FACILITATOR_EFFECTIVENESS_CATEGORY = 'facilitator_effectiveness',
     WORKSHOP_OVERALL_SUCCESS_CATEGORY = 'overall_success',
