@@ -4,6 +4,7 @@ require 'pd/survey_pipeline/daily_survey_joiner.rb'
 require 'pd/survey_pipeline/mapper.rb'
 require 'pd/survey_pipeline/daily_survey_decorator.rb'
 require 'pd/survey_pipeline/survey_rollup_decorator.rb'
+require 'pd/jot_form/constants.rb'
 
 module Pd::SurveyPipeline::Helper
   QUESTION_CATEGORIES = [
@@ -154,8 +155,8 @@ module Pd::SurveyPipeline::Helper
     group_config = [:workshop_id, :day, :facilitator_id, :form_id, :name, :type, :answer_type]
 
     # Rules to map groups of survey answers to reducers
-    is_single_select_answer = lambda {|hash| hash.dig(:answer_type) == 'singleSelect'}
-    not_single_select_answer = lambda {|hash| hash.dig(:answer_type) != 'singleSelect'}
+    is_single_select_answer = lambda {|hash| [ANSWER_SINGLE_SELECT, ANSWER_SCALE].include? hash.dig(:answer_type)}
+    not_single_select_answer = lambda {|hash| ![ANSWER_SINGLE_SELECT, ANSWER_SCALE].include?(hash.dig(:answer_type))}
 
     map_config = [
       {

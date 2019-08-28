@@ -20,6 +20,7 @@ module Pd::SurveyPipeline
 
       # facilitator_response_counts:
       #   {:this_workshop, :all_my_workshops => {factilitator_id => {submission_type => count}}}
+      # TODO: count only submissions that contribute to average scores
       submissions = data[:facilitator_submissions] || data[:workshop_submissions]
       report[:facilitator_response_counts] =
         get_submission_counts submissions, data[:facilitator_id], data[:current_workshop_id]
