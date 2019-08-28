@@ -8,6 +8,9 @@ $(document).ready(function() {
     minZoom: 1,
     center: [-98, 39]
   });
+
+  var popup = null;
+
   map.dragRotate.disable();
 
   map.on('load', function() {
@@ -21,7 +24,10 @@ $(document).ready(function() {
       while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
         coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
       }
-      new mapboxgl.Popup()
+      if (popup) {
+        popup.remove();
+      }
+      popup = new mapboxgl.Popup()
         .setLngLat(coordinates)
         .setText(organization_name)
         .addTo(map);
@@ -38,9 +44,12 @@ $(document).ready(function() {
       while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
         coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
       }
-      new mapboxgl.Popup()
+      if (popup) {
+        popup.remove();
+      }
+      popup = new mapboxgl.Popup({closeButton: false})
         .setLngLat(coordinates)
-        .setText(organization_name + '\n' + event_description)
+        .setHTML(organization_name + '<br>' + event_description)
         .addTo(map);
     });
 
