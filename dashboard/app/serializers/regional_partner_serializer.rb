@@ -5,7 +5,6 @@
 #  id                 :integer          not null, primary key
 #  name               :string(255)      not null
 #  group              :integer
-#  contact_id         :integer
 #  urban              :boolean
 #  attention          :string(255)
 #  street             :string(255)
@@ -19,10 +18,6 @@
 #  updated_at         :datetime         not null
 #  deleted_at         :datetime
 #  properties         :text(65535)
-#
-# Indexes
-#
-#  index_regional_partners_on_name_and_contact_id  (name,contact_id) UNIQUE
 #
 
 class RegionalPartnerSerializer < ActiveModel::Serializer

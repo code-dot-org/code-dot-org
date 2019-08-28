@@ -9,6 +9,7 @@ class Ability
     # Abilities for all users, signed in or not signed in.
     can :read, :all
     cannot :read, [
+      TeacherFeedback,
       Script, # see override below
       ScriptLevel, # see override below
       :reports,
