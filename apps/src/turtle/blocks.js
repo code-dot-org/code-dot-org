@@ -717,17 +717,22 @@ exports.install = function(blockly, blockInstallOptions) {
   };
 
   blockly.Blocks.jump = {
+    // debugger;
     // Block for moving forward or backwards.
     helpUrl: '',
     init: function() {
       this.setHSV(184, 1.0, 0.74);
-      this.appendValueInput('VALUE')
-        .setCheck(blockly.BlockValueType.NUMBER)
-        .appendTitle(
-          new blockly.FieldDropdown(blockly.Blocks.jump.DIRECTIONS),
-          'DIR'
-        );
-      this.appendDummyInput().appendTitle(msg.dots());
+      this.interpolateMsg(
+        msg.jumpToDirectionByPixels(),
+        () => {
+          this.appendDummyInput().appendTitle(
+            new blockly.FieldDropdown(blockly.Blocks.jump.DIRECTIONS),
+            'DIR'
+          );
+        },
+        ['BY', 'Number', blockly.ALIGN_RIGHT],
+        blockly.ALIGN_RIGHT
+      );
       this.setInputsInline(true);
       this.setPreviousStatement(true);
       this.setNextStatement(true);
@@ -1001,8 +1006,8 @@ exports.install = function(blockly, blockInstallOptions) {
   SimpleMove.generateBlocksForAllDirections();
 
   blockly.Blocks.jump.DIRECTIONS = [
-    [msg.jumpForward(), 'jumpForward'],
-    [msg.jumpBackward(), 'jumpBackward']
+    [msg.forward(), 'jumpForward'],
+    [msg.backward(), 'jumpBackward']
   ];
 
   generator.jump = function() {
