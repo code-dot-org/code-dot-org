@@ -98,6 +98,7 @@ class LevelNameInput extends Component {
       <span style={styles.levelSelect}>
         <input
           type="text"
+          style={styles.textInput}
           onChange={e => this.handleLevelNameChange(e.target.value)}
           defaultValue={this.props.levelKeyList[this.props.levelId]}
         />
