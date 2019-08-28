@@ -21,7 +21,7 @@ title: "Professional Development Workshop Survey"
   name = teacher.nil? ? "#{enrollment[:first_name]} #{enrollment[:last_name]}" : teacher[:name]
   email = teacher.try(:[], :email).presence || enrollment[:email]
 
-  plp = DASHBOARD_DB[:regional_partners].where(contact_id: workshop[:organizer_id]).first
+  plp = DASHBOARD_DB[:regional_partners].where(id: workshop[:regional_partner_id]).first
   # Have they ever taken any pd-workshop-survey?
   is_first_survey = teacher_id.nil? || DB[:forms].where(kind: 'PdWorkshopSurvey', user_id: teacher_id).count == 0
 
