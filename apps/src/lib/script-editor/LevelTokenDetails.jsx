@@ -10,6 +10,7 @@ import {
   NEW_LEVEL_ID
 } from './editorRedux';
 import {levelShape} from './shapes';
+import FontAwesome from '../../templates/FontAwesome';
 
 const styles = {
   checkbox: {
@@ -70,6 +71,16 @@ const styles = {
   },
   progression: {
     paddingTop: 5
+  },
+  validIcon: {
+    color: 'green',
+    fontSize: 16,
+    marginLeft: 6
+  },
+  invalidIcon: {
+    color: 'red',
+    fontSize: 16,
+    marginLeft: 6
   }
 };
 
@@ -90,7 +101,7 @@ class LevelNameInput extends Component {
     super(props);
 
     this.state = {
-      isValid: true,
+      isValid: props.levelId !== -1,
       levelName: props.initialLevelName
     };
   }
@@ -107,14 +118,20 @@ class LevelNameInput extends Component {
   };
 
   render() {
+    const {isValid, levelName} = this.state;
     return (
       <span style={styles.levelSelect}>
         <input
           type="text"
           style={styles.textInput}
           onChange={e => this.handleLevelNameChange(e.target.value)}
-          value={this.state.levelName}
+          value={levelName}
         />
+        {isValid ? (
+          <FontAwesome icon={'check-circle'} style={styles.validIcon} />
+        ) : (
+          <FontAwesome icon={'times-circle'} style={styles.invalidIcon} />
+        )}
       </span>
     );
   }
