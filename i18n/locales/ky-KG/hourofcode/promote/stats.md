@@ -1,13 +1,12 @@
 ---
-title: <%= hoc_s(:title_stats).inspect %>
+title: Blurbs and useful stats
 layout: wide
 nav: promote_nav
 ---
 
-
 <a id="blurb"></a>
 
-<%= view :signup_button %>
+{{ signup_button }}
 
 # Blurbs and useful stats
 
@@ -41,7 +40,7 @@ With technology changing every industry on the planet, computing knowledge has b
 
 #### Code.org тууралуу
 
-Code.org - 501c3 лицензиясынын негизинде иштеген, компүтердик билимди аялдардын жана бул ишке аз катышкан башка раса окуучулардын санын арбытуу аркылуу жайылтууну көздөгөн бейөкмөт уюм. Its vision is that every student in every school has the opportunity to learn computer programming. 2013-ж. иштеп баштагандан бери, Code.org жыл сайын Код сааты өнөктөштүгүн уюштуруп келет. Код саатына бүгүнкү күнү 100 милилондон ашык киши катышты. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. Кенен маалыматты [<%= resolve_url('code.org') %>](%= resolve_url('https://code.org') %) бул жерден табасыз.
+Code.org - 501c3 лицензиясынын негизинде иштеген, компүтердик билимди аялдардын жана бул ишке аз катышкан башка раса окуучулардын санын арбытуу аркылуу жайылтууну көздөгөн бейөкмөт уюм. Its vision is that every student in every school has the opportunity to learn computer programming. 2013-ж. иштеп баштагандан бери, Code.org жыл сайын Код сааты өнөктөштүгүн уюштуруп келет. Код саатына бүгүнкү күнү 100 милилондон ашык киши катышты. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. For more information, please visit: [code.org]({{ codeorg_link }}).
 
 ## Share these on social media and in emails
 
@@ -51,6 +50,6 @@ Code.org - 501c3 лицензиясынын негизинде иштеген, �
 
 ## Infographics
 
-<%= view :stats_carousel %>
+{{ stats_carousel }}
 
-<%= view :signup_button %>
+{{ signup_button }}

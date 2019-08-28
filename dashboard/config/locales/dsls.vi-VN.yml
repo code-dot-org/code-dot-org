@@ -92,7 +92,7 @@ vi-VN:
       2-3 Maze Match 2:
         title: Nối Mê Cung
         content1: Nối các câu đố với các khối phù hợp
-        pre_title: lời chỉ đẫn
+        pre_title: Hướng dẫn
         questions:
         - {}
         - {}
@@ -423,7 +423,7 @@ vi-VN:
       4-5 maze match 1:
         title: Nối Mê Cung
         content1: Nối các câu đố với các khối phù hợp
-        pre_title: lời chỉ đẫn
+        pre_title: Hướng dẫn
         questions:
         - {}
         - {}
@@ -1021,7 +1021,7 @@ vi-VN:
       K-1 Maze Match 1:
         title: Phù hợp với/ khớp với / Chính xác với
         content2: Nối câu đố với khối lệnh phù hợp
-        pre_title: lời chỉ đẫn
+        pre_title: Hướng dẫn
         questions:
         - {}
         - {}

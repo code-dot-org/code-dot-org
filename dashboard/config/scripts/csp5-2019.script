@@ -3,7 +3,7 @@ login_required true
 hideable_stages true
 exclude_csf_column_in_legend true
 student_detail_progress_view true
-teacher_resources [["lessonPlans", "https://curriculum.code.org/csp-19/unit5"], ["teacherForum", "https://forum.code.org/c/csp5"], ["vocabulary", "https://curriculum.code.org/csp-19/unit5/vocab/"], ["codeIntroduced", "https://curriculum.code.org/csp-19/unit5/code/"], ["standardMappings", "https://curriculum.code.org/csp-19/unit5/standards/"], ["professionalLearning", "https://studio.code.org/s/csp5-support"]]
+teacher_resources [["lessonPlans", "https://curriculum.code.org/csp-19/unit5"], ["teacherForum", "https://forum.code.org/c/csp5"], ["vocabulary", "https://curriculum.code.org/csp-19/unit5/vocab/"], ["codeIntroduced", "https://curriculum.code.org/csp-19/unit5/code/"], ["standardMappings", "https://curriculum.code.org/csp-19/unit5/standards/"], ["professionalLearning", "https://code.org/educate/professional-learning/middle-high"]]
 has_verified_resources true
 has_lesson_plan true
 curriculum_path 'https://curriculum.code.org/{LOCALE}/csp-19/unit5/{LESSON}'
@@ -133,7 +133,7 @@ level 'CSPU5_U3L16 Mad Lib setText_2019', progression: 'Mad Lib Game'
 level 'CSPU5_U3L16 Mad Lib getText_2019', progression: 'Mad Lib Game'
 level 'CSPU5_U3L16 Mad Lib toUpper_2019', progression: 'Mad Lib Game'
 level 'CSPU5_U3L16 Mad Lib Clear Input_2019', progression: 'Mad Lib Game'
-level 'CSPU5_U3L25 Free Response 3_2019', progression: 'String and Substring Free Response'
+level 'CSPU5_U3L25 Free Response 3_2019', progression: 'String and Substring Free Response', assessment: true
 
 stage '"If" Statements Unplugged', flex_category: 'csp5_1'
 level 'CSP U5L07 SFLP_2019', named: true

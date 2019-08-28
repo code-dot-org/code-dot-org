@@ -139,6 +139,8 @@ bg-BG:
         draw head: начертайте глава
       Standalone_Artist_7:
         draw a flower: чертае цвете
+      Standalone_Artist_9:
+        my function: моята функция
       course3_artist_functions_challenge1:
         do something: изпълнява нещо
       course3_artist_functions_challenge2:

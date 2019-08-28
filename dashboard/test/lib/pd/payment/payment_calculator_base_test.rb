@@ -5,10 +5,7 @@ require 'test_helper'
 module Pd::Payment
   class PaymentCalculatorBaseTest < ActiveSupport::TestCase
     test 'public unqualified' do
-      empty_workshop = create :pd_ended_workshop,
-        on_map: true, funded: true,
-        course: Pd::Workshop::COURSE_CSP,
-        subject: Pd::Workshop::SUBJECT_CSP_WORKSHOP_1
+      empty_workshop = create :csp_academic_year_workshop, :ended, on_map: true, funded: true
 
       workshop_summary = PaymentCalculatorBase.instance.calculate empty_workshop
       assert_equal 0, workshop_summary.num_teachers
@@ -16,10 +13,10 @@ module Pd::Payment
     end
 
     test 'pay_period' do
-      workshop_1 = create :pd_ended_workshop, ended_at: Date.new(2016, 9, 1)
-      workshop_15 = create :pd_ended_workshop, ended_at: Date.new(2016, 9, 15)
-      workshop_16 = create :pd_ended_workshop, ended_at: Date.new(2016, 9, 16)
-      workshop_30 = create :pd_ended_workshop, ended_at: Date.new(2016, 9, 30)
+      workshop_1 = create :workshop, :ended, ended_at: Date.new(2016, 9, 1)
+      workshop_15 = create :workshop, :ended, ended_at: Date.new(2016, 9, 15)
+      workshop_16 = create :workshop, :ended, ended_at: Date.new(2016, 9, 16)
+      workshop_30 = create :workshop, :ended, ended_at: Date.new(2016, 9, 30)
 
       assert_equal '09/01/2016 - 09/15/2016', PaymentCalculatorBase.instance.get_pay_period(workshop_1)
       assert_equal '09/01/2016 - 09/15/2016', PaymentCalculatorBase.instance.get_pay_period(workshop_15)
@@ -28,22 +25,22 @@ module Pd::Payment
     end
 
     test 'workshop payment type and regional_partner' do
-      workshop_no_regional_partner = create :pd_ended_workshop
+      workshop_no_regional_partner = create :workshop, :ended
       create :pd_workshop_participant, workshop: workshop_no_regional_partner, enrolled: true, attended: true
 
       regional_partner_urban = create :regional_partner, urban: true
       program_manager_urban = (create :regional_partner_program_manager, regional_partner: regional_partner_urban).program_manager
-      workshop_regional_partner_urban = create :pd_ended_workshop, organizer: program_manager_urban
+      workshop_regional_partner_urban = create :workshop, :ended, organizer: program_manager_urban
       create :pd_workshop_participant, workshop: workshop_regional_partner_urban, enrolled: true, attended: true
 
       regional_partner_non_urban = create :regional_partner, urban: false
       program_manager_non_urban = (create :regional_partner_program_manager, regional_partner: regional_partner_non_urban).program_manager
-      workshop_regional_partner_non_urban = create :pd_ended_workshop, organizer: program_manager_non_urban
+      workshop_regional_partner_non_urban = create :workshop, :ended, organizer: program_manager_non_urban
       create :pd_workshop_participant, workshop: workshop_regional_partner_non_urban, enrolled: true, attended: true
 
       regional_partner_nil_urban = create :regional_partner, urban: nil
       program_manager_nil_urban = (create :regional_partner_program_manager, regional_partner: regional_partner_nil_urban).program_manager
-      workshop_regional_partner_nil_urban = create :pd_ended_workshop, organizer: program_manager_nil_urban
+      workshop_regional_partner_nil_urban = create :workshop, :ended, organizer: program_manager_nil_urban
       create :pd_workshop_participant, workshop: workshop_regional_partner_nil_urban, enrolled: true, attended: true
 
       summary_no_regional_partner = PaymentCalculatorBase.instance.calculate workshop_no_regional_partner
@@ -73,7 +70,7 @@ module Pd::Payment
     test 'attendance' do
       # Create a workshop with 4 sessions, which will be capped at 3
       # TIME_CONSTRAINTS: COURSE_ECS => {SUBJECT_ECS_PHASE_4 => {min_days: 2, max_days: 3, max_hours: 18}}
-      workshop = create :pd_ended_workshop,
+      workshop = create :workshop, :ended,
         on_map: true, funded: true,
         course: Pd::Workshop::COURSE_ECS,
         subject: Pd::Workshop::SUBJECT_ECS_PHASE_4,
@@ -147,7 +144,7 @@ module Pd::Payment
     end
 
     test 'teacher summaries' do
-      workshop = create :pd_ended_workshop, :local_summer_workshop, num_sessions: 2
+      workshop = create :summer_workshop, :ended, num_sessions: 2, each_session_hours: 6
 
       teacher_unqualified = create :pd_workshop_participant,
         workshop: workshop, enrolled: true, attended: true
@@ -222,7 +219,7 @@ module Pd::Payment
     end
 
     test 'teacher summaries with deleted teacher account' do
-      workshop = create :pd_ended_workshop, num_sessions: 1
+      workshop = create :workshop, :ended
 
       pd_workshop_participant = create :pd_workshop_participant,
         workshop: workshop,
@@ -248,7 +245,7 @@ module Pd::Payment
     end
 
     test 'unexpected payment term' do
-      workshop = create :pd_ended_workshop
+      workshop = create :workshop, :ended
       create :pd_workshop_participant,
         workshop: workshop, enrolled: true, attended: true
       Pd::Enrollment.last.school_info.school_district
@@ -263,7 +260,7 @@ module Pd::Payment
     end
 
     test 'late-deleted enrollments with attendance still show up' do
-      workshop = create :pd_ended_workshop, num_sessions: 1
+      workshop = create :workshop, :ended
 
       pd_workshop_participant = create :pd_workshop_participant,
         workshop: workshop,

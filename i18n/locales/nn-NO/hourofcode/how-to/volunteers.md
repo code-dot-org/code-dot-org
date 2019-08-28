@@ -1,9 +1,10 @@
 ---
-title: <%= hoc_s(:title_how_to_volunteers).inspect %>
+title: Korleis halde ein Kodetime - for frivillige
 layout: wide
 nav: how_to_nav
 ---
-<%= view :signup_button %>
+
+{{ signup_button }}
 
 # Rettleing for frivillige
 
@@ -43,11 +44,11 @@ Du kan bli ein gjestetalar i eit klasserom eller hjelpe læraren med å ha aktiv
 
 <ol>
   <li>
-    <a href="%= resolve_url('/promote/resources#help-schools') %">Send denne eposten</a> til læraren til bornet ditt og tilby å bli med i Kodetimen.
+    <a href="{{ promote/help_schools }}">Send this email</a> to your child’s teacher offering to help them run an Hour of Code.
   </li>
   
   <li>
-    Tilby å ha ein Kodetime etter skuletid på den lokale skulen. <a href="%= resolve_url('/how-to') %">Bruk denne oppskrifta</a> for å hjelpe deg å planlegge.
+    Offer to host an Hour of Code event after school at a local school. <a href="{{ urls/how_to_guide }}">Use this How-To Guide</a> to help you plan.
   </li>
 </ol>
 
@@ -56,7 +57,7 @@ Du kan bli ein gjestetalar i eit klasserom eller hjelpe læraren med å ha aktiv
 </h2>
 
 <p>
-  Fortell venner og kollegaer om Kodetimen. Tusenvis av lærarar ser etter frivillige, så spør dei om å <a href="https://code.org/volunteer">registrere seg som frivillig</a>. Spør arbeidsgjevar om å involvere seg. <a href="%= resolve_url('/promote/resources#sample-email') %">Send denne eposten</a> til sjefen din eller til CEO for å få alle med.
+  Fortell venner og kollegaer om Kodetimen. Tusenvis av lærarar ser etter frivillige, så spør dei om å <a href="https://code.org/volunteer">registrere seg som frivillig</a>. Spør arbeidsgjevar om å involvere seg. <a href="{{ promote/sample_emails }}">Send this email</a> to your manager or the CEO to get everyone on board.
 </p>
 
 <h2>
@@ -65,13 +66,13 @@ Du kan bli ein gjestetalar i eit klasserom eller hjelpe læraren med å ha aktiv
 
 <ul>
   <li>
-    <a href="%= resolve_url('/promote/resources#videos') %"> Velg ein video</a> du kan vise til klassen for å gi fokus og som gjer dei klare til Kodetimen.
+    <a href="{{ promote/videos }}">Pick out a video</a> to show to help focus the class and get them excited to do an Hour of Code.
   </li>
   <li>
     Sjekk ut <a href="/files/hoc-volunteer-toolkit.pdf"> verktøykassa til Kodetimen</a>. Den inneheld ei oversikt, tidslinje, førebuings- og marknadsføringsmateriale. Alt du treng for å bli klar til å bidra som frivillig!
   </li>
   <li>
-    Dersom du skal gjennomgå ei oppgåve under økta, bruk 30 minutter til å prøve minst ei <a href="%= resolve_url('/learn') %">oppgåve frå Kodetimen</a>.
+    If you're going to be doing a tutorial during your session, spend 30 minutes trying at least one <a href="{{ urls/learn }}">Hour of Code tutorial</a>.
   </li>
   <li>
     Dersom du skal vitje ein skule, gjer deg ferdig med eventuelle bakgrunnssjekkar eller naudsamt papirarbeid.
@@ -119,7 +120,7 @@ Du kan bli ein gjestetalar i eit klasserom eller hjelpe læraren med å ha aktiv
     </td>
     
     <td>
-      <a href="%= resolve_url('promote/resources#videos') %"> Vis ein inspirerande video</a>.
+      <a href="{{ promote/videos }}">Show an inspirational video</a>.
     </td>
   </tr>
   
@@ -244,5 +245,5 @@ Du kan bli ein gjestetalar i eit klasserom eller hjelpe læraren med å ha aktiv
           Code.org og våre partnarar designer alle Kodetimen-aktivitetane til å engasjere alle skuletrinn, jenter og guttar, frå alle bakgrunnar. Alle, sjølv vaksne kan ha det gøy med å leike seg!
         </p>
         <p>
-          <%= view :signup_button %>
+          {{ signup_button }}
         </p>

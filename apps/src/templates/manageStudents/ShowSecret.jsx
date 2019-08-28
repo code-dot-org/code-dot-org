@@ -1,6 +1,8 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
+import ReactTooltip from 'react-tooltip';
+import _ from 'lodash';
 import Button from '../Button';
 import i18n from '@cdo/locale';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
@@ -24,6 +26,8 @@ class ShowSecret extends Component {
     loginType: PropTypes.string.isRequired,
     id: PropTypes.number.isRequired,
     sectionId: PropTypes.number.isRequired,
+    resetDisabled: PropTypes.bool,
+
     // Provided in redux
     setSecretImage: PropTypes.func.isRequired,
     setSecretWords: PropTypes.func.isRequired
@@ -75,6 +79,9 @@ class ShowSecret extends Component {
   };
 
   render() {
+    const {resetDisabled} = this.props;
+    const tooltipId = resetDisabled && _.uniqueId();
+
     return (
       <div>
         {!this.state.isShowing && (
@@ -95,12 +102,21 @@ class ShowSecret extends Component {
                 style={styles.image}
               />
             )}
-            <Button
-              onClick={this.reset}
-              color={Button.ButtonColor.blue}
-              text={i18n.reset()}
-              style={styles.reset}
-            />
+            <span data-for={tooltipId} data-tip>
+              <Button
+                onClick={this.reset}
+                color={Button.ButtonColor.blue}
+                text={i18n.reset()}
+                style={styles.reset}
+                disabled={resetDisabled}
+                className="uitest-reset-password"
+              />
+              {resetDisabled && (
+                <ReactTooltip id={tooltipId} role="tooltip" effect="solid">
+                  <div>{i18n.resetTeacherPasswordTooltip()}</div>
+                </ReactTooltip>
+              )}
+            </span>
             <Button
               onClick={this.hide}
               color={Button.ButtonColor.white}

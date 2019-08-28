@@ -77,9 +77,7 @@ It's possible to write the program above without introducing the `msg` variable 
 
 However, the programmer realized that if she wrote it like this, the code in *both* the if and the else would effectively contain a *repeated* portion:
 
-```
-   setText("msg_label", "It's "+getText("day_dropdown")+"!...
-```
+`setText("msg_label", "It's "+getText("day_dropdown")+"!...`
 
 With experience you learn that repetitious code is bad and prone to errors.  In this case there are two different places that are changing a label on the screen.
 

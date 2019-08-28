@@ -6,4 +6,6 @@ sublevels
 level 'CSD U2 text style font family_pilot'
 level 'CSD U2 text style decoration_pilot'
 level 'CSD U2 text style text align_pilot'
+level 'CSD U2 text style letter spacing_pilot'
+level 'CSD U2 text style text shadow_pilot'
 level 'CSD U2 text style freeplay_pilot'

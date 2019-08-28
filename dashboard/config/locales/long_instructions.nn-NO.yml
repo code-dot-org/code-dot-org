@@ -698,17 +698,28 @@ nn-NO:
         Flytt på henne og få så mykje skattar du kan.\\\r \n\\\r\nDra blokker inn
         i arbeidsområdet og prøv å finne ut korleis du får tak i skatten.  Få tak
         i minst eitt element for å bli ferdig med dette nivået."
+      courseA_maze_seq13_2019: Få tak i grisen!
       courseA_maze_seq6_2018: Flytt meg først ein veg og så ein anna veg for å få
         meg bort til grisen!
       courseA_maze_seq6_2019: Flytt meg først ein veg og så ein anna veg for å få
         meg bort til grisen!
       courseA_maze_seq8_2018: Løys dette nivået og få fuglen bort til grisen!
       courseA_maze_seq8_2019: Løys dette nivået og få fuglen bort til grisen!
+      courseA_maze_seq_challenge2_2019: Følg stien og led meg til grisen. Unngå dynamitten
+        om du ikkje vil at eg skal forsvinne i ei sky av fjør!
+      courseB_artist_loops2_2019: Kunstnaren prøver å teikne ei linje **6** gongar,
+        men kan ikkje få det riktig. Kan du hjelpe?
+      courseB_artist_loops3_2019: Hjelp kunstnaren med å teike ei linje 7 gongar slik
+        at han kan lage ein vegg i hagen.
+      courseB_artist_loops5_2019: På tide å fikse trappa! Gjenta dette mønsteret **5**
+        gongar slik at kunstnaren kan nå toppen av buskane.
       courseB_artist_loops7: "**Utfordring:** Det er en skjult hage! La oss går rundt."
       courseB_artist_loops7_2018: "**Utfordring:** Det er en skjult hage! La oss går
         rundt."
       courseB_artist_loops7_2019: "**Utfordring:** Det er en skjult hage! La oss går
         rundt."
+      courseB_artist_loops8_2019: På tide å dra heim. Kan du fikse denne stigen med
+        berre ei blokk for å hjelpe kunstnaren ned?
       courseB_artist_loops_challenge2: La oss spele eit spel! Teikn så mange X'ar
         som du kan! Klarar du tre på rad?
       courseB_artist_loops_challenge2_2018: La oss spele eit spel! Teikn så mange
@@ -719,6 +730,10 @@ nn-NO:
         Flytt på henne og få så mykje skattar du kan.\\\r \n\\\r\nDra blokker inn
         i arbeidsområdet og prøv å finne ut korleis du får tak i skatten.  Få tak
         i minst eitt element for å bli ferdig med dette nivået."
+      courseB_collector_loops10_2019: Hjelp Laurel til å få tak i alle skattane i
+        grotta.
+      courseB_collector_loops11_2019: Eureka!  Få tak i så mange skattar du berre
+        kan!
       courseB_collector_loops1_2018: "\\*\\*Frileik: \\*\\* Dette er Laurel, eventyreren!
         Flytt på henne og få så mykje skattar du kan.\\\r \n\\\r\nDra blokker inn
         i arbeidsområdet og prøv å finne ut korleis du får tak i skatten.  Få tak
@@ -727,6 +742,23 @@ nn-NO:
         Flytt på henne og få så mykje skattar du kan.\\\r \n\\\r\nDra blokker inn
         i arbeidsområdet og prøv å finne ut korleis du får tak i skatten.  Få tak
         i minst eitt element for å bli ferdig med dette nivået."
+      courseB_collector_loops4_2019: Fiks Laurel si bane for å få tak i all skatten!
+      courseB_collector_loops5_2019: 'Legg til meir i koden frå forrige oppgåve for
+        å få all skatten. '
+      courseB_collector_loops6_2019: |-
+        Finn koden som hjelper Laurel
+        til å få tak i heile skatten!
+      courseB_collector_loops7_2019: Skriv koden for å få tak i heile skatten.
+      courseB_collector_loops8_2019: "**Utfordring:** Skatten går heile vegen opp
+        trappa! \nSkriv koden slik at Laurel får tak i alt."
+      courseB_collector_loops9_2019: _"Hjelp meg med å få skatten frå denne djupe
+        dalen."_
+      courseB_collector_loops_challenge1_2019: "Denne gangen har du avgrensa tal \npå
+        blokker. Få tak i heile skatten! "
+      courseB_maze_seq12_2019: Få tak i grisen!
+      courseB_maze_seq_challenge2_2019: |-
+        Feilsøk dette nivået. Dette er dei rette
+        blokkene, men dei ligg i feil rekkefølgje!
       courseC_artist_loops2a: No kan du bruke ei løkke for å spinne fuglen din rundt
         tolv gongar med ein 30 graders sving.
       courseC_artist_loops2a_2018: No kan du bruke ei løkke for å spinne fuglen din

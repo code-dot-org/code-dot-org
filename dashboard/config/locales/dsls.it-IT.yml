@@ -490,15 +490,13 @@ it-IT:
           tanti piccoli problemi, in continuazione. Il problema principale nella progettazione
           del software è la definizione della prima parte da creare.\n\nQuesto processo
           può essere utile in molti ambiti, ma qui ci concentreremo sulla progettazione
-          di app (applicazioni, programmi).\n\n<!-- Translate the terms \"Define\",
-          \"Prepare\", \"Try\", \"Reflect\" and change font size and positioning as
-          needed-->\n<div style=\"position: relative; text-align: center; font-size:
-          1em\">\n  <img src=\"https://images.code.org/a157e5f67444573e19e980a507db16fb-image-1563319667694.png\"
+          di app (applicazioni, programmi).\n\n<div style=\"position: relative; text-align:
+          center; font-size: 1em\">\n  <img src=\"https://images.code.org/a157e5f67444573e19e980a507db16fb-image-1563319667694.png\"
           alt=\"Processo di progettazione\" style=\"width: 50%;\">\n  <div style=\"position:
-          absolute; top: 24%; left: 49.8%; transform: translateX(-49.8%); font-weight:
+          absolute; top: 24%; left: 49.4%; transform: translateX(-49.4%); font-weight:
           bold;\">Definisci</div> \n  <div style=\"position: absolute; top: 52%; left:
-          61%; transform: translateX(-61%); font-weight: bold;\">Prepara</div>\n  <div
-          style=\"position: absolute; top: 79%; left: 40%; transform: translateX(-40%);
+          60.5%; transform: translateX(-60.5%); font-weight: bold;\">Prepara</div>\n
+          \ <div style=\"position: absolute; top: 79%; left: 49.7%; transform: translateX(-49.7%);
           font-weight: bold;\">Prova</div>\n  <div style=\"position: absolute; top:
           52%; left: 39%; transform: translateX(-39%); font-weight: bold;\">Rifletti</div>\n</div>\n\n*
           **Definisci**\n  * Che tipo di app vorresti creare?\n  * Quali sono i tuoi
@@ -529,15 +527,13 @@ it-IT:
           tanti piccoli problemi, in continuazione. Il problema principale nella progettazione
           del software è la definizione della prima parte da creare.\n\nQuesto processo
           può essere utile in molti ambiti, ma qui ci concentreremo sulla progettazione
-          di app (applicazioni, programmi).\n\n<!-- Translate the terms \"Define\",
-          \"Prepare\", \"Try\", \"Reflect\" and change font size and positioning as
-          needed-->\n<div style=\"position: relative; text-align: center; font-size:
-          1em\">\n  <img src=\"https://images.code.org/a157e5f67444573e19e980a507db16fb-image-1563319667694.png\"
+          di app (applicazioni, programmi).\n\n<div style=\"position: relative; text-align:
+          center; font-size: 1em\">\n  <img src=\"https://images.code.org/a157e5f67444573e19e980a507db16fb-image-1563319667694.png\"
           alt=\"Processo di progettazione\" style=\"width: 50%;\">\n  <div style=\"position:
-          absolute; top: 24%; left: 49.8%; transform: translateX(-49.8%); font-weight:
+          absolute; top: 24%; left: 49.4%; transform: translateX(-49.4%); font-weight:
           bold;\">Definisci</div> \n  <div style=\"position: absolute; top: 52%; left:
-          61%; transform: translateX(-61%); font-weight: bold;\">Prepara</div>\n  <div
-          style=\"position: absolute; top: 79%; left: 40%; transform: translateX(-40%);
+          60.5%; transform: translateX(-60.5%); font-weight: bold;\">Prepara</div>\n
+          \ <div style=\"position: absolute; top: 79%; left: 49.7%; transform: translateX(-49.7%);
           font-weight: bold;\">Prova</div>\n  <div style=\"position: absolute; top:
           52%; left: 39%; transform: translateX(-39%); font-weight: bold;\">Rifletti</div>\n</div>\n\n*
           **Definisci**\n  * Che tipo di app vorresti creare?\n  * Quali sono i tuoi
@@ -1933,7 +1929,7 @@ it-IT:
           width=\"90px\"/></td></tr>\n<tr padding=\"0px\"><td align=\"center\"><b>0</b></td><td
           align=\"center\"><b>1</b></td></tr>\n</table><img src=\"https://images.code.org/934883837aa59bca1d5c1ded0e0ac675-image-1483640120036.51.06.png\"
           float=\"left\"/><h3>In questa lezione, ti proponiamo una griglia in cui
-          muoverti per creare dei disegnai accendendo solo alcuni \"pixel\".</h3>\n\n![](https://images.code.org/c53e00cde9acbae72d02fb9cc2a20e53-image-1483639858942.png)\n\n\n"
+          muoverti per creare dei disegni accendendo solo alcuni \"pixel\".</h3>\n\n![](https://images.code.org/c53e00cde9acbae72d02fb9cc2a20e53-image-1483639858942.png)\n\n\n"
       courseD_external_binary1_2018:
         title: Disegno Binario
         markdown: "<h1>Disegna con il codice binario</h1>\n \n<h3>Il codice binario
@@ -1946,7 +1942,7 @@ it-IT:
           width=\"90px\"/></td></tr>\n<tr padding=\"0px\"><td align=\"center\"><b>0</b></td><td
           align=\"center\"><b>1</b></td></tr>\n</table><img src=\"https://images.code.org/934883837aa59bca1d5c1ded0e0ac675-image-1483640120036.51.06.png\"
           float=\"left\"/><h3>In questa lezione, ti proponiamo una griglia in cui
-          muoverti per creare dei disegnai accendendo solo alcuni \"pixel\".</h3>\n\n![](https://images.code.org/c53e00cde9acbae72d02fb9cc2a20e53-image-1483639858942.png)\n\n\n"
+          muoverti per creare dei disegni accendendo solo alcuni \"pixel\".</h3>\n\n![](https://images.code.org/c53e00cde9acbae72d02fb9cc2a20e53-image-1483639858942.png)\n\n\n"
       courseD_external_binary1_2018_2019:
         title: Disegno Binario
         markdown: "<h1>Disegna con il codice binario</h1>\n \n<h3>Il codice binario
@@ -1959,7 +1955,7 @@ it-IT:
           width=\"90px\"/></td></tr>\n<tr padding=\"0px\"><td align=\"center\"><b>0</b></td><td
           align=\"center\"><b>1</b></td></tr>\n</table><img src=\"https://images.code.org/934883837aa59bca1d5c1ded0e0ac675-image-1483640120036.51.06.png\"
           float=\"left\"/><h3>In questa lezione, ti proponiamo una griglia in cui
-          muoverti per creare dei disegnai accendendo solo alcuni \"pixel\".</h3>\n\n![](https://images.code.org/c53e00cde9acbae72d02fb9cc2a20e53-image-1483639858942.png)\n\n\n"
+          muoverti per creare dei disegni accendendo solo alcuni \"pixel\".</h3>\n\n![](https://images.code.org/c53e00cde9acbae72d02fb9cc2a20e53-image-1483639858942.png)\n\n\n"
       courseD_multi_artist_binary8_predict1:
         questions:
         - text: Dai una bella occhiata al codice presente nell'area di lavoro. Che
@@ -2919,13 +2915,15 @@ it-IT:
 
           ![](https://images.code.org/d9cb4b829fe4e688b10c19e879cf4a4b-image-1531938148965.png)
 
-          ### for `counter` from `4` to `10` count by `2` → per `counter` da `4` a `10` a passi di `2`
+          ### per `counter` da `4` a `10` a passi di `2`
 
-          ### **Counter** → _Contatore_ → Da questa variabile dipende il numero di ripetizioni del ciclo
+          ### **Contatore** (_counter_) → Da questa variabile dipende il numero di ripetizioni del ciclo
 
-          ### **Starting value** → _Valore iniziale_ → Questo è il valore attribuito alla variabile `counter` all'inizio del ciclo
-          ### **Stopping value** → _Valore finale_ → Questo è il valore che avrà la variabile `counter` al termine del ciclo
-          ### **Step value** → _Passo_ → Questa è la quantità sommata al valore della variabile ad ogni iterazione del ciclo
+          ### _4_ → **Valore iniziale** → Questo è il valore attribuito alla variabile `counter` all'inizio del ciclo
+
+          ### _10_ → **Valore finale** → Questo è il valore che avrà la variabile `counter` al termine del ciclo
+
+          ### _2_ → **Passo** → Questa è la quantità sommata al valore della variabile ad ogni iterazione del ciclo
 
           ### Grazie a questo nuovo blocco, sarà molto più semplice risolvere esercizi come questo!
 
@@ -2939,13 +2937,15 @@ it-IT:
 
           ![](https://images.code.org/d9cb4b829fe4e688b10c19e879cf4a4b-image-1531938148965.png)
 
-          ### for `counter` from `4` to `10` count by `2` → per `counter` da `4` a `10` a passi di `2`
+          ### per `counter` da `4` a `10` a passi di `2`
 
-          ### **Counter** → _Contatore_ → Da questa variabile dipende il numero di ripetizioni del ciclo
+          ### **Contatore** (_counter_) → Da questa variabile dipende il numero di ripetizioni del ciclo
 
-          ### **Starting value** → _Valore iniziale_ → Questo è il valore attribuito alla variabile `counter` all'inizio del ciclo
-          ### **Stopping value** → _Valore finale_ → Questo è il valore che avrà la variabile `counter` al termine del ciclo
-          ### **Step value** → _Passo_ → Questa è la quantità sommata al valore della variabile ad ogni iterazione del ciclo
+          ### _4_ → **Valore iniziale** → Questo è il valore attribuito alla variabile `counter` all'inizio del ciclo
+
+          ### _10_ → **Valore finale** → Questo è il valore che avrà la variabile `counter` al termine del ciclo
+
+          ### _2_ → **Passo** → Questa è la quantità sommata al valore della variabile ad ogni iterazione del ciclo
 
           ### Grazie a questo nuovo blocco, sarà molto più semplice risolvere esercizi come questo!
 
@@ -2965,9 +2965,9 @@ it-IT:
         markdown: |
           # In questa lezione...
 
-          ### Immagina di voler muovere un personaggio per **5** volte. Basterebbe semplicemente usare **5** blocchi `vai avanti`. Ora, immagina di volerlo muovere per **5.000* volte!
+          ### Immagina di voler muovere un personaggio per **5** volte. Basterebbe semplicemente usare **5** blocchi `vai avanti`. Ora, immagina di volerlo muovere per **5.000** volte!
 
-          ### Quanto tempo ci metteresti a trascinare **5.000* blocchi dalla cassetta degli attrezzi?
+          ### Quanto tempo ci metteresti a trascinare **5.000** blocchi dalla cassetta degli attrezzi?
 
           ### Ti piacerebbe avere un modo più semplice per farlo? C'è!
 

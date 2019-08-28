@@ -341,7 +341,7 @@ is:
       infinity: 'Óendanleiki'
       makerlab: 'Maker Toolkit'
       minecraft_adventurer: 'Minecraft Könnuður'
-      minecraft_aquatic: 'Minecraft Vatnaveröld'
+      minecraft_aquatic: 'Minecraft Neðansjávarheimur'
       minecraft_codebuilder: 'Minecraft: Code Connection'
       minecraft_designer: 'Minecraft'
       minecraft_hero: 'Minecraft Hetja'
@@ -837,6 +837,7 @@ is:
     instructor_feedback: 'Álit leiðbeinanda'
     peer_feedback: 'Álit samnemenda'
     outdated: 'Þessi umsögn átti við áður innsenda útgáfu'
+    review_count: 'Þú verður að ljúka %{review_count} upprifjunum fyrir þessa einingu'
   flex_category:
     required: 'Yfirlit'
     content: 'Innihald'
@@ -896,6 +897,7 @@ is:
     csp_postap_2: 'Kafli 2: Öpp og gagnagrunnar'
     csp2_1_2018: 'Kafli 2 - Stafrænar upplýsingar'
     csp3_1_2018: 'Kafli 3: Inngangur að forritun'
+    csp4_1_2018: 'Kennslueining 4: Gríðargögn og persónuvernd'
     csp_variables: 'Breytur'
     csp_conditionals: 'Skilyrði'
     csp_functions: 'Föll'
@@ -980,6 +982,8 @@ is:
   view_all_units: 'Sjá allar einingar'
   view_teacher_guide: 'Leiðbeiningar kennara'
   pd:
+    survey:
+      part_of_community_s: 'Mér finnst ég tilheyra samfélagi kennara.'
     form_labels:
       first_name: 'Fornafn'
       first_name_preferred: 'Fornafn sem þú vilt að sé notað'

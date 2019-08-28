@@ -788,6 +788,7 @@ fil:
         csd_pair_programming: Pair programming
         csd_applab_parameters: Mga function na meron mga parameter
         csd_problem_solving_process: Ang Proseso ng Pagtuklas ng Problema
+        csd_debugging: Pagdedebug
     callout:
       text:
         drag_blocks: Mag-drag ng "move" na bloke at daklutin ito sa baba ng ibang

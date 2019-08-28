@@ -107,6 +107,7 @@
   },
   "https://studio.code.org/s/pre-express-2019/stage/3/puzzle/10": {
     "short_instructions": "Get the pig any way you can!",
+    "long_instructions": "Get the pig any way you can!",
     "authored_hints": {
       "courseA_maze_seq13_a": "If the path you need is unclear, use your finger to trace your way from the bird to the pig.",
       "courseA_maze_seq13_b": "Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen.",
@@ -122,6 +123,7 @@
   },
   "https://studio.code.org/s/pre-express-2019/stage/3/extras?level_name=courseA_maze_seq_challenge2_2019": {
     "short_instructions": "Trace the path to lead the bird to the pig. Avoid TNT or feathers will fly!",
+    "long_instructions": "Trace the path to lead the bird to the pig. Avoid TNT or feathers will fly!",
     "authored_hints": {
       "courseA_maze_seq_challenge2_a": "Try counting the spaces with your finger. Remember not to count the space where you start!"
     }
@@ -419,6 +421,7 @@
   },
   "https://studio.code.org/s/pre-express-2019/stage/8/puzzle/6": {
     "short_instructions": "Fix Laurel's path to get all of this treasure!",
+    "long_instructions": "Fix Laurel's path to get all of this treasure!",
     "authored_hints": {
       "courseB_collector_loops4_a": "Try using the step button to figure out where things go wrong.",
       "courseB_collector_loops4_b": "To change how far Laurel goes, change the number of times that the loop runs.",
@@ -427,6 +430,7 @@
   },
   "https://studio.code.org/s/pre-express-2019/stage/8/puzzle/7": {
     "short_instructions": "Add to the code from the last puzzle to get all of the treasure. ",
+    "long_instructions": "Add to the code from the last puzzle to get all of the treasure. ",
     "authored_hints": {
       "courseB_collector_loops5_a": "Use more than one loop to get the job done.",
       "courseB_collector_loops5_b": "Try running the code a couple of times to see what happens."
@@ -434,6 +438,7 @@
   },
   "https://studio.code.org/s/pre-express-2019/stage/8/puzzle/8": {
     "short_instructions": "Figure out the code to help Laurel get all of the treasure!",
+    "long_instructions": "Figure out the code to help Laurel get all of the treasure!",
     "authored_hints": {
       "courseB_collector_loops6_a": "Can't figure out where things start going wrong? Use the \"Step\" button to run through your program one block at a time.",
       "courseB_collector_loops6_b": "You can change the number of times the repeat loop runs by clicking on the \"3\" and choosing a different number.",
@@ -443,6 +448,7 @@
   },
   "https://studio.code.org/s/pre-express-2019/stage/8/puzzle/9": {
     "short_instructions": "Write the code to get all of this treasure.",
+    "long_instructions": "Write the code to get all of this treasure.",
     "authored_hints": {
       "courseB_collector_loops7_a": "If you are having a hard time with the puzzle, try drawing it on paper to help you figure it out.",
       "courseB_collector_loops7_b": "You will need 3 repeat loops to solve this puzzle, and don't forget the extra treasure at the end!"
@@ -450,12 +456,14 @@
   },
   "https://studio.code.org/s/pre-express-2019/stage/8/puzzle/10": {
     "short_instructions": "**Challenge:** The treasure goes all the way down these stairs!  Write the code to help Laurel get it all.",
+    "long_instructions": "**Challenge:** The treasure goes all the way down these stairs!  Write the code to help Laurel get it all.",
     "authored_hints": {
       "courseB_collector_loops8_challenge_a": "If you can't figure out where to put the repeat loops, write out the code step-by-step and look for a pattern."
     }
   },
   "https://studio.code.org/s/pre-express-2019/stage/8/puzzle/11": {
     "short_instructions": "_\"Help me get the treasure from this deep valley.\"_",
+    "long_instructions": "_\"Help me get the treasure from this deep valley.\"_",
     "authored_hints": {
       "courseB_collector_loops9_a": "Does this seem too hard?  Break it up into 3 little problems to make it feel easier.",
       "courseB_collector_loops9_b": "You will need 3 repeat loops, one after the other, for this solution."
@@ -463,16 +471,19 @@
   },
   "https://studio.code.org/s/pre-express-2019/stage/8/puzzle/12": {
     "short_instructions": "Help Laurel get all of the treasure from this cave.",
+    "long_instructions": "Help Laurel get all of the treasure from this cave.",
     "authored_hints": {
       "courseB_collector_loops10_a": "If you can't figure out where to put the `repeat` loops, write out the code step-by-step and look for a pattern.",
       "courseB_collector_loops10_b": "Try writing the moves down on a piece of paper and looking for a pattern."
     }
   },
   "https://studio.code.org/s/pre-express-2019/stage/8/puzzle/13": {
-    "short_instructions": "Eureka!  Get as much treasure as you can!"
+    "short_instructions": "Eureka!  Get as much treasure as you can!",
+    "long_instructions": "Eureka!  Get as much treasure as you can!"
   },
   "https://studio.code.org/s/pre-express-2019/stage/8/extras?level_name=courseB_collector_loops_challenge1_2019": {
     "short_instructions": "This time you have limited blocks. Get all of the treasure! ",
+    "long_instructions": "This time you have limited blocks. Get all of the treasure! ",
     "authored_hints": {
       "courseB_collector_loops_challenge1_b": "Start by looping the following commands:\n\n[blockly block][0]",
       "courseB_collector_loops_challenge1_c": "Move East twice between each path.\n\n[blockly block][0]\n\nYou can do this with only 14 blocks. Click for one more hint to see a solution. ",
@@ -594,10 +605,12 @@
     "long_instructions": "You can use a loop to draw many lines in a row.\n\nCan you draw a house? Make it look just the way you like it!  Try looking for patterns that repeat!\n\nHere are some ideas:\n\n[][0]"
   },
   "https://studio.code.org/s/pre-express-2019/stage/10/puzzle/2": {
-    "short_instructions": "This is a new type of puzzle called \"Artist\". Play with the level and draw something fun."
+    "short_instructions": "This is a new type of puzzle called \"Artist\". Play with the level and draw something fun.",
+    "long_instructions": "This is a new type of puzzle called \"Artist\". Play with the level and draw something fun."
   },
   "https://studio.code.org/s/pre-express-2019/stage/10/puzzle/4": {
     "short_instructions": "The Artist is trying to draw a line **6** times, but can't get it right.  Can you help?",
+    "long_instructions": "The Artist is trying to draw a line **6** times, but can't get it right.  Can you help?",
     "authored_hints": {
       "courseB_artist_loops2_a": "If you want the loop to repeat more than 4 times, you can change the number at the top of the block.",
       "courseB_artist_loops2_b": "Try running the code first to see where the artist ends up."
@@ -605,6 +618,7 @@
   },
   "https://studio.code.org/s/pre-express-2019/stage/10/puzzle/5": {
     "short_instructions": "Help the artist draw a line 7 times to make a garden wall.",
+    "long_instructions": "Help the artist draw a line 7 times to make a garden wall.",
     "authored_hints": {
       "courseB_artist_loops3_a": "Remember to use a `repeat` [blockly block][0] loop for better code!",
       "courseB_artist_loops3_b": "The artist will want to move South to draw this line."
@@ -615,6 +629,7 @@
   },
   "https://studio.code.org/s/pre-express-2019/stage/10/puzzle/6": {
     "short_instructions": "Now we need to get the soil ready to plant. Find the bugs in the code and help the artist prepare the ground. ",
+    "long_instructions": "Now we need to get the soil ready to plant. Find the bugs in the code and help the artist prepare the ground.",
     "authored_hints": {
       "courseB_artist_loops4_a": "The jump block lets you move forward without drawing a line.",
       "courseB_artist_loops4_b": "You will need to add a block inside of the repeat loop to solve this puzzle.",
@@ -623,6 +638,7 @@
   },
   "https://studio.code.org/s/pre-express-2019/stage/10/puzzle/7": {
     "short_instructions": "Time to fix the stairs!  Repeat this pattern **5** times so the artist can reach the top of the bushes.",
+    "long_instructions": "Time to fix the stairs!  Repeat this pattern **5** times so the artist can reach the top of the bushes.",
     "authored_hints": {
       "courseB_artist_loops5_a": "Drag out a `repeat` [blockly block][0] loop, then put the other blocks inside of it. How many times do you need to repeat?"
     }
@@ -645,6 +661,7 @@
   },
   "https://studio.code.org/s/pre-express-2019/stage/10/puzzle/10": {
     "short_instructions": "Time to head home. Can you fix this ladder using only one block to help the artist get down?",
+    "long_instructions": "Time to head home. Can you fix this ladder using only one block to help the artist get down?",
     "authored_hints": {
       "courseB_artist_loops8_a": "How many times should you repeat the pattern to make the ladder?",
       "courseB_artist_loops8_b": "Try running the code you're given to see what it does."
@@ -652,6 +669,7 @@
   },
   "https://studio.code.org/s/pre-express-2019/stage/10/puzzle/11": {
     "short_instructions": "Let's take the short way home, over the pond. Can you help the artist stay on the stones?",
+    "long_instructions": "Let's take the short way home, over the pond. Can you help the artist stay on the stones?",
     "authored_hints": {
       "courseB_artist_loops9_a": "Remember that jump blocks can be used to move without drawing a line.",
       "courseB_artist_loops9_b": "You will want to use the W block to solve this puzzle.",
@@ -686,10 +704,12 @@
     "short_instructions": "Need a better playlab/events combo"
   },
   "https://studio.code.org/s/pre-express-2019/stage/11/puzzle/2": {
-    "short_instructions": "This is a Play Lab level.  Move blocks to the workspace and see what happens!"
+    "short_instructions": "This is a Play Lab level. Move blocks to the workspace and see what happens!",
+    "long_instructions": "This is a Play Lab level. Move blocks to the workspace and see what happens!"
   },
   "https://studio.code.org/s/pre-express-2019/stage/11/puzzle/3": {
-    "short_instructions": "Jorge the Dog wants to say \"Hi there.\"  Can you help him?",
+    "short_instructions": "Jorge the Dog wants to say \"Hi there.\" Can you help him?",
+    "long_instructions": "Jorge the Dog wants to say \"Hi there.\" Can you help him?",
     "authored_hints": {
       "courseA_playLab_events2_a": "Look for a block that makes the dog say something.",
       "courseA_playLab_events2_b": "This is the code you need to complete this puzzle:\n\n[blockly block][0]"
@@ -727,6 +747,7 @@
   },
   "https://studio.code.org/s/pre-express-2019/stage/11/puzzle/7": {
     "short_instructions": "Make this more interesting by changing the background and playing a random sound when Jorge is clicked.",
+    "long_instructions": "Make this more interesting by changing the background and playing a random sound when Jorge is clicked.",
     "authored_hints": {
       "courseA_playLab_events6_a": "Here is the event block that you would use to have Jorge do something when clicked:\n\n[blockly block][0]",
       "courseA_playLab_events6_b": "Here is the block you would use to change the background:\n\n[blockly block][0]",
@@ -769,6 +790,7 @@
   },
   "https://studio.code.org/s/pre-express-2019/stage/12/puzzle/2": {
     "short_instructions": "Have Daisy the Dragon say something when you click \"Run\".",
+    "long_instructions": "Have Daisy the Dragon say something when you click \"Run\".",
     "authored_hints": {
       "courseB_playlab_events2_a": "This is the block to have Daisy say something:\n\n[blockly block][0]"
     }
@@ -819,7 +841,8 @@
     }
   },
   "https://studio.code.org/s/pre-express-2019/stage/12/puzzle/8": {
-    "short_instructions": "**Free play:** Use your imagination. What can you do to make this game more fun?"
+    "short_instructions": "**Free play:** Use your imagination. What can you do to make this game more fun?",
+    "long_instructions": "**Free play:** Use your imagination. What can you do to make this game more fun?"
   },
   "https://studio.code.org/s/pre-express-2019/stage/12/extras?level_name=courseB_playlab_events_challenge1_2019": {
     "short_instructions": "Make the animals move down when you press ▼. ",

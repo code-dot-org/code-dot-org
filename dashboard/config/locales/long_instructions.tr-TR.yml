@@ -4844,6 +4844,7 @@ tr-TR:
         width=\"200px\"/> \\\r"
       courseA_maze_seq12_2019: "O domuzu yakala! \\\r \\\r <img src=\"https://images.code.org/f908ff77eb81ee85d405a7ba66cc2986-image-1467933103380.gif\"
         width=\"200px\"/> \\\r"
+      courseA_maze_seq13_2019: Domuza ulaşın!
       courseA_maze_seq1_2018: Bu bloklarla oynayın ve beni kötü domuza ulaştırın
       courseA_maze_seq1_2019: Bu bloklarla oynayın ve beni kötü domuza ulaştırın
       courseA_maze_seq3: "_\"Kodu düzelt ve domuza ulaştır!\"_\\\r \\\r <img\nsrc=\"https://images.code.org/629cddc754f9ad02929f06fc68462e4d-image-1467924800613.gif\"\nwidth=\"200\"/>"
@@ -4869,6 +4870,8 @@ tr-TR:
       courseA_maze_seq_challenge1_2019: |-
         Hatayı ayıkla.
         Fazla blokları çıkar ve eksik blokları ekle. Kuşu domuza ulaştır!
+      courseA_maze_seq_challenge2_2019: Yolu takip et ve beni sersem domuza götür.
+        Patlayıcılardan uzak dur yoksa bu tüylerim havaya uçacak!
       courseA_playLab_events3: "Köpek Jorge u hareket ettirmek için  ! \\[] (<https://images.code.org/b3d6215901969328333d6393f8101c5b-image-1478142333199.png>)
         bloğu ile \\[] (<https://images.code.org/4f2130b2a3053695414a02c3d39ef864-image-1478143461271.png>)
         olay bloğunu birleştir.   \\\r \\\r Bu seviyeyi bitirmek için Jorge u bayrağa
@@ -4932,6 +4935,11 @@ tr-TR:
         Big City</h4><br/><br/>\r\n</td>\r\n\r\n<td>\r\n<img\nsrc=\"https://images.code.org/37fdd6fdd761df09fd4949d5e43f0a7f-image-1466795165642.gif\"\nwidth=\"150\"/><br/>\r\n<h4>A
         Concert</h4><br/><br/>\r\n</td>\r\n\r\n<td>\r\n<img\nsrc=\"https://images.code.org/f7bf86b0f86669d82ee2c1565738b9cb-image-1466794447737.gif\"\nwidth=\"150\"/><br/>\r\n<h4>A
         Birthday Cake</h4><br/><br/>\r\n</td>\r\n\r\n</tr>\r\n</table>\r\n "
+      courseB_artist_loops2_2019: Sanatçı **6** kere bir çizgi çizmeyi deniyor ama
+        doğru yapamıyor. Yardım edebilir misin?
+      courseB_artist_loops3_2019: Bahçe duvarı yapmak için 7 kere bir çizgi çizin.
+      courseB_artist_loops5_2019: Merdivenleri düzeltme zamanı! Bu deseni **5** kere
+        tekrarlayın ki sanatçı çalıların tepesine ulaşabilsin.
       courseB_artist_loops6: Çalıların arkasına güzel asma çiçekleri tam orada.  Asmaya
         tırmanıp nereye gittiğini görebilir misin?
       courseB_artist_loops6_2018: Çalıların arkasına güzel asma çiçekleri tam orada.  Asmaya
@@ -4941,6 +4949,8 @@ tr-TR:
       courseB_artist_loops7: "\\*\\* Meydan Okuma: \\*\\* gizli bahçe! Hadi dolaşalım."
       courseB_artist_loops7_2018: "\\*\\* Meydan Okuma: \\*\\* gizli bahçe! Hadi dolaşalım."
       courseB_artist_loops7_2019: "\\*\\* Meydan Okuma: \\*\\* gizli bahçe! Hadi dolaşalım."
+      courseB_artist_loops8_2019: Eve dönme vakti. Sanatçıya yardımcı olmak için sadece
+        bir blok kullanarak bu merdiveni tamir edebilir misin?
       courseB_artist_loops_challenge1: Zar atma zamanı! Çizmek için yardımcı olabilir
         misin?
       courseB_artist_loops_challenge1_2018: Zar atma zamanı! Çizmek için yardımcı
@@ -4957,6 +4967,9 @@ tr-TR:
         ettir ve alabildiğin kadar hazine aldır.\\\r\n\\\r\nÇalışma alanına blokları
         sürükle ve hazineyi nasıl alacağını çözmeye çalış.  Bu seviyeyi geçmek için
         en az bir tane nesne al."
+      courseB_collector_loops10_2019: Laurel'in çukurdan tüm hazineyi almasına yardım
+        edin.
+      courseB_collector_loops11_2019: Haydi!  Mümkün olduğu kadar hazineyi alın!
       courseB_collector_loops1_2018: "**Ücretsiz Oyun:** Bu Maceracı Laurel! Onu hareket
         ettir ve alabildiğin kadar hazine aldır.\\\r\n\\\r\nÇalışma alanına blokları
         sürükle ve hazineyi nasıl alacağını çözmeye çalış.  Bu seviyeyi geçmek için
@@ -4980,8 +4993,20 @@ tr-TR:
         yığını nasıl toplayabilir?
       courseB_collector_loops3_2019: Laurel '[E-->]' sadece bir blok kullanarak beş
         yığını nasıl toplayabilir?
+      courseB_collector_loops4_2019: Tüm bu hazineyi almak için Laurel'ın yolunu düzeltin!
+      courseB_collector_loops5_2019: 'Tüm hazineyi almak için son bulmacaya kod ekleyin. '
+      courseB_collector_loops6_2019: Laurel tüm hazineyi almasına yardımcı olacak
+        kodu yazın!
+      courseB_collector_loops7_2019: Tüm bu hazineyi almak için kod yazın.
+      courseB_collector_loops8_2019: "\\*\\* Meydan: Okuma\\*\\* Hazine bu merdivenlerden
+        yukarı gider!  Laurel yardım için kod yazın."
+      courseB_collector_loops9_2019: '-   "Bu derin vadiden hazine çıkarmama yardım
+        et." \*'
+      courseB_collector_loops_challenge1_2019: 'Bu sefer sadece ok bloklrından birini
+        kullanabilirsiniz. Tüm hazineyi al! '
       courseB_iceage_loops11: Scrat'in meşe palamuduna ulaşmasını sağlayın!
       courseB_iceage_loops11_2019: Scrat'in meşe palamuduna ulaşmasını sağlayın!
+      courseB_maze_seq12_2019: Domuza ulaşın!
       courseB_maze_seq3: Beni domuza götürmek için kodu değiştir
       courseB_maze_seq9: 'Meydan Okuma: TNT nin etrafından dolaşıp kuşu domuza eriştirin.'
       courseB_maze_seq_challenge1: Her yönde yalnızca 4 kez ilerleyebilirsin. Blokları
@@ -4990,6 +5015,8 @@ tr-TR:
         Blokları bitirmeden bir yol bulabilir misin?
       courseB_maze_seq_challenge1_2019: Her yönde yalnızca 4 kez ilerleyebilirsin.
         Blokları bitirmeden bir yol bulabilir misin?
+      courseB_maze_seq_challenge2_2019: Bu bölümün hatalarını ayıkla. Bunlar doğru
+        bloklar, ama yanlış sıradalar!
       courseB_playLab_events1: "Bu oyuna \"Play Lab\" denir.  \\\r\n\\\r\nHer bloğun
         ne yaptığını anlamaya çalışın."
       courseB_playLab_events1_2018: "Bu oyuna \"Play Lab\" denir.  \\\r\n\\\r\nHer

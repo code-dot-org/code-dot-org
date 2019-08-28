@@ -1,0 +1,15 @@
+
+stage 'Earthquake Detector: Designing Screens'
+level 'Design Mode Map'
+level 'Science earthquake 1'
+level 'Science earthquake text'
+level 'Science earthquake images'
+level 'Science earthquake reflect'
+
+stage 'Earthquake Detector: Processing with Events'
+level 'Science change screen map'
+level 'Science board event map'
+level 'Science Circuit Playground Test'
+level 'Science event demo'
+level 'Science event accel'
+level 'Science event test'

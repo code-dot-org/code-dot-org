@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190805220126) do
+ActiveRecord::Schema.define(version: 20190826184856) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -85,15 +85,15 @@ ActiveRecord::Schema.define(version: 20190805220126) do
     t.integer  "prev_time"
     t.integer  "prev_attempt"
     t.integer  "prev_test_result"
-    t.integer  "prev_level_source_id"
+    t.bigint   "prev_level_source_id",               unsigned: true
     t.integer  "next_time"
     t.integer  "next_attempt"
     t.integer  "next_test_result"
-    t.integer  "next_level_source_id"
+    t.bigint   "next_level_source_id",               unsigned: true
     t.integer  "final_time"
     t.integer  "final_attempt"
     t.integer  "final_test_result"
-    t.integer  "final_level_source_id"
+    t.bigint   "final_level_source_id",              unsigned: true
     t.datetime "created_at",            null: false
     t.datetime "updated_at",            null: false
     t.index ["level_id"], name: "fk_rails_8f51960e09", using: :btree
@@ -310,6 +310,18 @@ ActiveRecord::Schema.define(version: 20190805220126) do
     t.index ["name"], name: "index_courses_on_name", using: :btree
   end
 
+  create_table "donors", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.string   "name"
+    t.string   "url"
+    t.string   "show"
+    t.string   "twitter"
+    t.string   "level"
+    t.float    "weight",         limit: 24
+    t.float    "twitter_weight", limit: 24
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
+  end
+
   create_table "email_preferences", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.string   "email",      null: false
     t.boolean  "opt_in",     null: false
@@ -429,7 +441,7 @@ ActiveRecord::Schema.define(version: 20190805220126) do
   end
 
   create_table "level_source_images", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.integer  "level_source_id"
+    t.bigint   "level_source_id",                  unsigned: true
     t.binary   "image",           limit: 16777215
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -1080,7 +1092,6 @@ ActiveRecord::Schema.define(version: 20190805220126) do
   create_table "regional_partners", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.string   "name",                             null: false
     t.integer  "group"
-    t.integer  "contact_id"
     t.boolean  "urban"
     t.string   "attention"
     t.string   "street"
@@ -1094,7 +1105,6 @@ ActiveRecord::Schema.define(version: 20190805220126) do
     t.datetime "updated_at",                       null: false
     t.datetime "deleted_at"
     t.text     "properties",         limit: 65535
-    t.index ["name", "contact_id"], name: "index_regional_partners_on_name_and_contact_id", unique: true, using: :btree
   end
 
   create_table "regional_partners_school_districts", id: false, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
@@ -1514,6 +1524,7 @@ ActiveRecord::Schema.define(version: 20190805220126) do
     t.datetime "last_confirmation_date", null: false
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
+    t.index ["user_id"], name: "index_user_school_infos_on_user_id", using: :btree
   end
 
   create_table "user_scripts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
@@ -1605,9 +1616,6 @@ ActiveRecord::Schema.define(version: 20190805220126) do
   end
 
   add_foreign_key "ap_school_codes", "schools"
-  add_foreign_key "authored_hint_view_requests", "levels"
-  add_foreign_key "authored_hint_view_requests", "scripts"
-  add_foreign_key "authored_hint_view_requests", "users"
   add_foreign_key "census_inaccuracy_investigations", "census_overrides"
   add_foreign_key "census_inaccuracy_investigations", "census_submissions"
   add_foreign_key "census_inaccuracy_investigations", "users"

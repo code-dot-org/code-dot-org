@@ -2848,6 +2848,8 @@ ru:
               name: Отправка двоичных сообщений
             Sending Binary Messages with the Internet Simulator:
               name: Отправка двоичных сообщений с интернет симулятором
+            Binary Numbers:
+              name: Двоичные числа
         time4csdemo:
           stages:
             Crowdsourcing:
@@ -2870,6 +2872,8 @@ ru:
           stages:
             Lists:
               name: Списки
+            CSS Classes:
+              name: CSS классы
         csd3-pilot:
           description_short: "Программирование"
           stages:

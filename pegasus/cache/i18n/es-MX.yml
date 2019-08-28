@@ -1312,6 +1312,7 @@ es-MX:
   pre-express-2018_name: Curso Express para prelectores (2018)
   express-2019_name: Curso Express (2019)
   pre-express-2019_name: Curso Express para prelectores (2019)
+  csd3_name: 'Unidad 3: Animaciones y juegos'
   accelerated_name: Curso acelerado
   express_name: Curso Express
   pre-express_name: Curso Express para prelectores
@@ -2135,6 +2136,9 @@ es-MX:
     a <a href='%{supported_browsers_url}', target='_blank'>uno de nuestros navegadores
     compatibles</a>. Puedes tratar de ver la página, pero la funcionalidad podría
     verse afectada.
+  compatibility_unsupported_browser_markdown: Tu navegador no es compatible. Actualiza
+    tu navegador a [uno de nuestros navegadores compatibles](%{supported_browsers_url})
+    Puedes tratar de ver la página, pero la funcionalidad podría verse afectada.
   mc_shortcode: mc
   flappy_shortcode: aletear
   header_home: Inicio

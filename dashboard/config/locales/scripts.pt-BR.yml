@@ -6295,6 +6295,8 @@ pt-BR:
               name: Enviando Mensagens Binárias com o Simulador de Internet
             Intellectual Property:
               name: Propriedade intelectual
+            Binary Numbers:
+              name: Números binários
         csd-videos:
           stages:
             new stage:
@@ -6642,6 +6644,8 @@ pt-BR:
               name: Propriedade intelectual
             Images:
               name: Imagens
+            CSS Classes:
+              name: Classes CSS
         csd3-pilot:
           description_short: Programação
           stages:
@@ -6693,3 +6697,7 @@ pt-BR:
               name: Laços na Era do gelo
             Ocean Scene with Loops:
               name: Cena do Oceano com Repetições
+        dlp19-csd-mod-w2:
+          stages:
+            new stage:
+              name: nova fase

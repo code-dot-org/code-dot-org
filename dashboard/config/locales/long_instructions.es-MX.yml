@@ -329,10 +329,10 @@ es-MX:
         `\"azul\"`.\n\n**¿No puedes avanzar? Haz clic aquí:** ![expandable](https://images.code.org/2d5d46a03082af3b01847aad6602e2ea-image-1511280140482.gif)"
       AppLab Intro 7 - Full Text: "<div style=\"float:right\">\n<img src=\"https://images.code.org/1e81d5bcdd69172f4127de55d045225f-image-1507565161167.05.19
         AM.png\" style=\"height:200px\">\n</div>\n\n**Objetivo:** hacer que los botones
-        sean `\"rojo\"` y `\"azul\"`. Luego, cambiar el texto en la etiqueta naranja
+        sean `\"red\"` y `\"blue\"`. Luego, cambiar el texto en la etiqueta naranja
         grande.\n\n**Cómo:** \n\n-   Recuerda que puedes pasar sobre los elementos
-        para ver sus `\"id\"`.\n-   Establece el `\"color-de-fondo\"` de los botones
-        como `\"rojo\"` y `\"azul\"`.\n-   Cambia la propiedad `\"texto\"` de la etiqueta
+        para ver sus `\"id\"`.\n-   Establece el `\"background-color\"` de los botones
+        como `\"red\"` y `\"blue\"`.\n-   Cambia la propiedad `\"text\"` de la etiqueta
         a lo que quieras, por ejemplo, `\"¡Bienvenido a mi aplicación!\"`.\n\n**¿No
         puedes avanzar? Haz clic aquí:** ![expandable](https://images.code.org/4bf99e7352e7c17a5bf73ced80171f6a-image-1511280628092.gif)"
       AppLab Intro 7 - onEvent intro: |-
@@ -340,7 +340,7 @@ es-MX:
 
         **Objetivo:** la pantalla comienza siendo azul. Agrega código para que pase a ser verde cuando haces clic en el botón "Green-ify".
 
-        **Cómo:** agregar código dentro de `enEvento` para establecer el `"color-de-fondo"` de la pantalla como `"verde"`.
+        **Cómo:** agregar código dentro de `enEvento` para establecer el `"background-color"` de la pantalla como `"green"`.
 
         **¿No puedes avanzar? Haz clic aquí:** ![expandable](https://images.code.org/5ddf6b129bc04b79839b3661ccef788b-image-1511281012076.gif)
       AppLab Intro 7 - onEvent twoButtons: |-
@@ -348,7 +348,7 @@ es-MX:
 
         **Objetivo:** ayudar a terminar esta aplicación de linterna. El botón "Encendido" hace que la pantalla se vuelva blanca. Ejecuta la aplicación y pruébala. Luego, escribe código para que el botón "Apagado" haga que la pantalla vuelva a ser negra.
 
-        **Cómo:** agregar código dentro del bloque `enEvento()` vacío que establezca el `"color-de-fondo"` de la pantalla como `"negro"` y el `"color-de-texto"` de la etiqueta como `"blanco"`.
+        **Cómo:** agregar código dentro del bloque `enEvento()` vacío que establezca el `"background-color"` de la pantalla como `"black"` y el `"text-color"` de la etiqueta como `"white"`.
 
         **¿No puedes avanzar? Haz clic aquí:** ![expandable](https://images.code.org/020b1d9b465aaf35967a528a92961c13-image-1511281772276.gif)
       AppLab Intro 7 - playSound: "<img src=\"https://images.code.org/28176329f15dea1a863564b069e72aab-image-1511282702534.44.52
@@ -367,7 +367,7 @@ es-MX:
 
         **Objetivo:** agregar un segundo botón a la pantalla que diga "¡Derecha!" con un `"id"` de `"botónDerecho"`.
 
-        **Cómo:** arrastra un nuevo botón en el Modo Diseño. Elige una posición y cambia su tamaño. Luego, establece su `"id"`, `"texto"`, `"color de fondo"` y `"tamaño de fuente"`.
+        **Cómo:** arrastra un nuevo botón en el Modo Diseño. Elige una posición y cambia su tamaño. Luego, establece su `"id"`, `"text"`, `"background color"` y `"font size"`.
 
         **¿No puedes avanzar? Haz clic aquí:** ![expandable](https://images.code.org/7035ad0445984cf889b159cf5682e35a-image-1508383186447.gif)
       AppLab Intro 7 - thisOrThatAddScreen: |-
@@ -453,6 +453,11 @@ es-MX:
 
         -   Usa todos los eventos del panel relacionados con los botones (arriba, abajo) para reproducir un sonido o canción específico con cada evento.
         -   ¿Hay algún otro evento que puedes usar para reproducir aún más sonidos/canciones?
+      CSD Problem Solving Process Video: |-
+        ## Preguntas a considerar
+
+        -   ¿Cómo siguió el proceso de resolución de problemas en la última lección?
+        -   ¿Cómo podría utilizar este proceso en un problema en su vida cotidiana?
       CSD U2 CSS explore CSS: |-
         <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
 
@@ -3139,7 +3144,7 @@ es-MX:
         -   Agrega una regla para configurar el texto en la clase "verano" según tu color RGB de verano.
         -   Agrega la clase "verano" a los elementos de esa clase en la página HTML.
         -   Haz lo mismo para la clase "otoño".
-      CSD U2 commenting: "# Comments\n\n<div style=\"float: right; height: 250px;
+      CSD U2 commenting: "# Comentarios\n\n<div style=\"float: right; height: 250px;
         width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n<details>\n\n<summary><strong>¿Qué
         es el espacio en blanco?</strong></summary>\n\nEl espacio en blanco se refiere
         a cualquier carácter que aparece como un espacio en blanco en la pantalla,
@@ -3580,7 +3585,7 @@ es-MX:
         la altura de las imágenes.\n-   Usa la propiedad `width` en el conjunto de
         reglas `p` para cambiar el ancho de tus párrafos."
       CSD U2 link demo: |-
-        # Making a Multi-page Site
+        # Crear un sitio de varias páginas
 
         <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
         <details>
@@ -3897,13 +3902,13 @@ es-MX:
         Este es el código que controla la fuente del párrafo:
 
         <pre>p {
-          familia-tipográfica: cursiva;
+          font-family: cursive;
         }</pre>
 
         -   `p` es el _selector_. Especifica qué elementos tendrán que seguir las reglas contenidas en las llaves. La `p` significa párrafo.
-        -   `familia-tipográfica: cursiva;` es la regla que hace que el texto dentro de las etiquetas `p` tengan una fuente en particular.
-            -   `familia-tipográfica` es la _propiedad_. Explica de qué se trata la regla, en este caso, el color del texto.
-            -   `cursiva` es el _valor_. Explica cómo se debería aplicar la regla, en este caso, haciendo que el texto esté en cursiva.
+        -   `font-family: cursive;` es la regla que hace que el texto dentro de las etiquetas `p` tengan una fuente en particular.
+            -   `font-family` es la _propiedad_. Explica de qué se trata la regla, en este caso, el color del texto.
+            -   `cursive` es el _valor_. Explica cómo se debería aplicar la regla, en este caso, haciendo que el texto esté en cursiva.
 
         </details>
         <details>
@@ -3932,11 +3937,11 @@ es-MX:
         Este es un ejemplo de un conjunto de reglas que hace que el texto en una etiqueta `h2` sea azul y esté en cursiva:
 
         <pre>h2 {
-           color: azul;
-           familia-tipográfica: cursiva;
+           color: blue;
+           font-family: cursive;
         </pre>
 
-        En este ejemplo, `h2` es el selector, `color` y `familia-tipográfica` son propiedades, y `azul` y `cursiva` son los valores para esas propiedades.
+        En este ejemplo, `h2` es el selector, `color` y `font-family` son propiedades, y `blue` y `cursive` son los valores para esas propiedades.
 
         </details>
         </div>
@@ -4009,13 +4014,13 @@ es-MX:
         Este es el código que hace que el título `h1` sea rojo:
 
         <pre>h1 {
-          color: rojo;
+          color: red;
         }</pre>
 
         -   `h1` es el _selector_.  Especifica qué elementos tendrán que seguir las reglas contenidas en las llaves.
-        -   `color: rojo;` es la regla que hace que el texto dentro de las etiquetas de `h1` sea rojo.
+        -   `color: red;` es la regla que hace que el texto dentro de las etiquetas de `h1` sea rojo.
             -   `color` es la _propiedad_. Explica de qué se trata la regla, en este caso, el color del texto.
-            -   `rojo` es el _valor_. Explica cómo se debería aplicar la regla, en este caso, haciendo que el texto sea rojo.
+            -   `red` es el _valor_. Explica cómo se debería aplicar la regla, en este caso, haciendo que el texto sea rojo.
                 </details>
                 <details>
                 <summary><strong>¿Por qué necesito toda la puntuación?</strong></summary>
@@ -4029,17 +4034,17 @@ es-MX:
                 <details>
                 <summary><strong>¿Qué es CSS?</strong></summary>
 
-        CSS es un lenguaje que controla la forma en que aparece el contenido en un página web. Utiliza conjuntos de reglas para cambiar la apariencia de una página. Cada conjunto de reglas tiene un selector, que especifica qué elementos en la página se verán afectados, y las reglas, que explican cómo mostrar los elementos. Cada regla consiste en una propiedad y un valor para esa propiedad.
+        CSS es un lenguaje que controla la forma en que aparece el contenido en una página web. Utiliza conjuntos de reglas para cambiar la apariencia de una página. Cada conjunto de reglas tiene un selector, que especifica qué elementos en la página se verán afectados, y las reglas, que explican cómo mostrar los elementos. Cada regla consiste en una propiedad y un valor para esa propiedad.
 
         Este es un ejemplo de un conjunto de reglas que hace que el texto en una etiqueta `h2` sea azul y esté en cursiva:
 
         <pre>h2 {
-           color: azul;
-           familia-tipográfica: cursiva;
+           color: blue;
+           font-family: cursive
         }
         </pre>
 
-        En este ejemplo, `h2` es el selector, `color` y `familia-tipográfica` son propiedades, y `azul` y `cursiva` son los valores de esas propiedades.
+        En este ejemplo, `h2` es el selector, `color` y `font-family` son propiedades, y `blue` y `cursive` son los valores de esas propiedades.
 
         </details>
         </div>
@@ -4049,7 +4054,7 @@ es-MX:
         Este archivo HTML usa una hoja de estilo ("style.css") para darle a la página un estilo en particular. La hoja de estilo contiene información sobre qué aspecto debería tener cada uno de los elementos HTML.
 
         -   Encuentra el código en la hoja de estilo (haz clic en "style.css" dentro de la lista de archivos) que hace que el título h1 sea rojo.
-        -   Cambia el código para el color del título h1 de `rojo` a un color diferente.
+        -   Cambia el código para el color del título h1 de `red` a un color diferente.
       CSD U2 text style h3: "<div style=\"float: right; height: 250px; width: 40%;
         overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n<details>\n\n<summary><strong>¿Qué
         colores puedo usar en CSS?</strong></summary>\n\nCSS incluye los nombres de
@@ -4060,11 +4065,11 @@ es-MX:
         sobre la utilización de colores en CSS en <a href=\"http://www.w3schools.com/cssref/css_colors_legal.asp\">W3Schools
         - Valores de colores legales de CSS</a>\n\n</details>\n<details>\n<summary><strong>¿Cómo
         funciona el código?</strong></summary>\nEste es el código que hace que el
-        título `h1` sea rojo:\n\n<pre>h1 {\n  color: rojo;\n}</pre>\n\n-   `h1` es
+        título `h1` sea rojo:\n\n<pre>h1 {\n  color: red;\n}</pre>\n\n-   `h1` es
         el _selector_.  Especifica qué elementos tendrán que seguir las reglas contenidas
-        en las llaves.\n-   `color: rojo;` es la regla que hace que el texto dentro
+        en las llaves.\n-   `color: red;` es la regla que hace que el texto dentro
         de las etiquetas de `h1` sea rojo.\n    -   `color` es la _propiedad_. Explica
-        de qué se trata la regla, en este caso, el color del texto.\n    -   `rojo`
+        de qué se trata la regla, en este caso, el color del texto.\n    -   `red`
         es el _valor_. Explica cómo se debería aplicar la regla, en este caso, haciendo
         que el texto sea rojo.\n        </details>\n        <details>\n        <summary><strong>¿Cómo
         creo un nuevo conjunto de reglas?</strong></summary>\n\nPara crear un nuevo
@@ -4073,19 +4078,19 @@ es-MX:
         son una lista pares de propiedades y valores. También deberás prestar especial
         atención a la puntuación en el conjunto de reglas. Mira el código a continuación
         para obtener un ejemplo de cómo debería lucir el código. Deberás cambiar las
-        especificidades para esta página.\n\n<pre>h1 {\n  color: rojo;\n}</pre>\n\n-
+        especificidades para esta página.\n\n<pre>h1 {\n  color: red;\n}</pre>\n\n-
         \  `h1` es el _selector_. Especifica qué elementos tendrán que seguir las
-        reglas contenidas en las llaves.\n-   `color: rojo;` es la regla que hace
-        que el texto dentro de las etiquetas de `h1` sea rojo.\n    -   `color` es
-        la _propiedad_. Explica de qué se trata la regla, en este caso, el color del
-        texto.\n    -   `rojo` es el _valor_. Explica cómo se debería aplicar la regla,
+        reglas contenidas en las llaves.\n-   `color: red;` es la regla que hace que
+        el texto dentro de las etiquetas de `h1` sea rojo.\n    -   `color` es la
+        _propiedad_. Explica de qué se trata la regla, en este caso, el color del
+        texto.\n    -   `red` es el _valor_. Explica cómo se debería aplicar la regla,
         en este caso, haciendo que el texto sea rojo.\n        </details>\n        <details>\n
         \       <summary><strong>¿Por qué necesito toda la puntuación?</strong></summary>\n\nLa
         puntuación, como las llaves `{}`, los dos puntos `:`, y el punto y coma `;`
         ayudan a la computadora a comprender las reglas en la hoja de estilo. Las
         llaves contienen todas las reglas para un selector particular. Cada regla
         debería finalizar en un punto y coma, y las propiedades y valores siempre
-        está separados por un punto y coma.\n\n</details>\n<details>\n<summary><strong>¿Qué
+        están separados por un punto y coma.\n\n</details>\n<details>\n<summary><strong>¿Qué
         es una hoja de estilo?</strong></summary>\n\nUna hoja de estilo es un documento
         que controla cómo aparece la página web. Las páginas de estilo externas son
         archivos separados que están vinculados a la página HTML.\n\n</details>\n<details>\n<summary><strong>¿Qué
@@ -4096,25 +4101,24 @@ es-MX:
         que explican cómo mostrar los elementos. Cada regla consiste en una propiedad
         y un valor para esa propiedad. \n\nEste es un ejemplo de un conjunto de reglas
         que hace que el texto en una etiqueta `h2` sea azul y esté en cursiva:\n\n<pre>h2
-        {\n   color: azul;\n   familia-tipográfica: cursiva;\n</pre>\n\nEn este ejemplo,
-        `h2` es el selector, `color` y `familia-tipográfica` son propiedades, y `azul`
-        y `cursiva` son los valores de esas propiedades.\n\n</details>\n</div>\n\n#
-        Hacer un nuevo conjunto de reglas CSS\n\nEl bloque de código que da reglas
-        para una etiqueta particular se llama _conjunto-reglas_.  Puedes crear un
-        nuevo conjunto de reglas copiando el patrón que ves en un conjunto-reglas
-        para la etiqueta `h1`.\n\n-   Encuentra el conjunto-reglas CSS en la hoja
-        de estilo que determina los estilos para la etiqueta h1.\n-   Usando el mismo
-        patrón, escribe un nuevo conjunto-reglas CSS que determinará el estilo para
-        la etiqueta h3.\n-   Agrega un código para establecer un color diferente para
-        las etiquetas h3."
+        {\n   color: blue;\n   font-family: cursive;\n</pre>\n\nEn este ejemplo, `h2`
+        es el selector, `color` y `font-family` son propiedades, y `blue` y `cursive`
+        son los valores de esas propiedades.\n\n</details>\n</div>\n\n# Hacer un nuevo
+        conjunto de reglas CSS\n\nEl bloque de código que da reglas para una etiqueta
+        particular se llama _conjunto-reglas_.  Puedes crear un nuevo conjunto de
+        reglas copiando el patrón que ves en un conjunto-reglas para la etiqueta `h1`.\n\n-
+        \  Encuentra el conjunto-reglas CSS en la hoja de estilo que determina los
+        estilos para la etiqueta h1.\n-   Usando el mismo patrón, escribe un nuevo
+        conjunto-reglas CSS que determinará el estilo para la etiqueta h3.\n-   Agrega
+        un código para establecer un color diferente para las etiquetas h3."
       CSD U2 text style size: "<div style=\"float: right; height: 250px; width: 40%;
         overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n<details>\n\n<summary><strong>¿Cómo
         funciona el código?</strong></summary>\nEste es el código que está controlando
-        el tamaño del texto del párrafo:\n\n<pre>p {\n  tamaño-fuente: 14px;\n}</pre>\n\n-
+        el tamaño del texto del párrafo:\n\n<pre>p {\n  font-size: 14px;\n}</pre>\n\n-
         \  `p` es el _selector_.  Especifica qué elementos tendrán que seguir las
         reglas contenidas en las llaves. La `p` significa párrafo.\n-   `tamaño-fuente:
         14px;` es la regla que hace que el texto dentro de las etiquetas `p` tenga
-        un tamaño en particular.\n    -   `tamaño-fuente` es una  _propiedad_. Explica
+        un tamaño en particular.\n    -   `font-size` es una  _propiedad_. Explica
         de qué se trata la regla, en este caso, el tamaño del texto.\n    -   `14px`
         es el _valor_.  Explica cómo se debería aplicar la regla, en este caso, haciendo
         que el texto tenga un tamaño de 14 pixeles.\n        </details>\n        <details>\n
@@ -4136,9 +4140,9 @@ es-MX:
         se verán afectados, y reglas, que explican cómo mostrar los elementos. Cada
         regla consiste de una propiedad y un valor para esa propiedad.\n\nEste es
         un ejemplo de un conjunto de reglas que hace que el texto en una etiqueta
-        `h2` sea azul y esté en cursiva:\n\n<pre>h2 {\n   color: azul;\n   familia-tipográfica:
-        cursiva;\n</pre>\n\nEn este ejemplo, `h2` es el selector, `color` y `familia-tipográfica`
-        son propiedades, y `azul` y `cursiva` son los valores para esas propiedades.
+        `h2` sea azul y esté en cursiva:\n\n<pre>h2 {\n   color: blue;\n   font-family:
+        cursive;\n</pre>\n\nEn este ejemplo, `h2` es el selector, `color` y `font-family`
+        son propiedades, y `blue` y `cursive` son los valores para esas propiedades.
         \n\n</details>\n</div>\n\n# Cambiar el tamaño del texto\n\nParte de los colores,
         puedes controlar otras cosas usando otras propiedades.\n\n-   Encuentra el
         conjunto-reglas CSS en la hoja de estilo que determina el estilo para la etiqueta
@@ -4414,7 +4418,7 @@ es-MX:
         Hemos cargado el programa de coches de carrera que escribiste anteriormente aquí.
 
         -   Agrega una sentencia `si` después de actualizar la posición del coche de carrera.
-        -   Mueve la expresión booleana de la sentencia registro.consola a la condición de la sentencia si.
+        -   Mueve la expresión booleana de la sentencia console.log a la condición de la sentencia si.
         -   Agrega una sentencia para dibujar texto en la pantalla que diga "Ganador" dentro de la sentencia `si`.
       CSD U3 - conditionals - first conditional 2: |-
         <img src="https://images.code.org/abd459d8d1477ac2f582417f4334cdaa-image-1466107090414.gif" style="width:200px;float:right">
@@ -4428,12 +4432,12 @@ es-MX:
         ¡Haz explotar el globo cuando toque el borde del área de juego!
 
         -   Agrega una sentencia `si` que compruebe si el globo ha tocado el borde.
-            -   Usa un observador en `escala.globo` como ayuda.
+            -   Usa un observador en `globo.escala` como ayuda.
         -   Crea un sprite que utilice el elemento visual "explotar" en la pestaña de animaciones.
         -   Establece la propiedad `visible` de explotar como `falsa` al inicio.
         -   Agrega dos sentencias dentro de `si`.
             -   Una que establezca la propiedad `visible` para ocultar el sprite del globo.
-            -   Una que establezca la propiedad `visible` para ocultar el sprite de explotar.
+            -   Una que establezca la propiedad `visible` para mostrar el sprite de explotar.
       CSD U3 - conditionals - first conditional_2018: |-
         <img src="https://images.code.org/36c5543076622c96f7dabce8bc37f995-image-1468425774455.54.03 PM.png" style="float:right;width:100px">
 
@@ -4448,7 +4452,7 @@ es-MX:
         Hemos cargado el programa de coches de carrera que escribiste anteriormente aquí.
 
         -   Agrega una sentencia `si` después de actualizar la posición del coche de carrera.
-        -   Mueve la expresión booleana de la sentencia registro.consola a la condición de la sentencia si.
+        -   Mueve la expresión booleana de la sentencia console.log a la condición de la sentencia si.
         -   Agrega una sentencia para dibujar texto en la pantalla que diga "Ganador" dentro de la sentencia `si`.
       CSD U3 - conditionals - first conditional_2019: |-
         <img src="https://images.code.org/36c5543076622c96f7dabce8bc37f995-image-1468425774455.54.03 PM.png" style="float:right;width:100px">
@@ -4464,7 +4468,7 @@ es-MX:
         Hemos cargado el programa de coches de carrera que escribiste anteriormente aquí.
 
         -   Agrega una sentencia `si` después de actualizar la posición del coche de carrera.
-        -   Mueve la expresión booleana de la sentencia registro.consola a la condición de la sentencia si.
+        -   Mueve la expresión booleana de la sentencia console.log a la condición de la sentencia si.
         -   Agrega una sentencia para dibujar texto en la pantalla que diga "Ganador" dentro de la sentencia `si`.
       CSD U3 - conditionals - transition: |-
         # Expresiones booleanas
@@ -4475,7 +4479,7 @@ es-MX:
 
         El programa dibuja un coche de carreras y una línea de meta. Vamos a descubrir cuándo el coche de carreras cruza la línea de meta. Los sprites han sido creados para ti.
 
-        -   Agrega una sentencia `registro.consola` dentro del bucle dibujar. ( [Show me where](#triggercallout=callout) )
+        -   Agrega una sentencia `console.log` dentro del bucle dibujar. ( [Muéstrame dónde](#triggercallout=callout) )
         -   Agrega una expresión booleana dentro de `registro.consola` que pregunte: "¿La posición x del coche de carreras es menor que la posición x de la línea de meta?".
         -   Observa el resultado que genera el programa a medida que el coche se mueve. ¿Cuándo cambia? ¿Por qué?
       CSD U3 - conditionals - transition_2018: |-
@@ -4487,7 +4491,7 @@ es-MX:
 
         El programa dibuja un coche de carreras y una línea de meta. Vamos a descubrir cuándo el coche de carreras cruza la línea de meta. Los sprites han sido creados para ti.
 
-        -   Agrega una sentencia `registro.consola` dentro del bucle dibujar. ( [Show me where](#triggercallout=callout) )
+        -   Agrega una sentencia `console.log` dentro del bucle dibujar. ( [Muéstrame dónde](#triggercallout=callout) )
         -   Agrega una expresión booleana dentro de `registro.consola` que pregunte: "¿La posición x del coche de carreras es menor que la posición x de la línea de meta?".
         -   Observa el resultado que genera el programa a medida que el coche se mueve. ¿Cuándo cambia? ¿Por qué?
       CSD U3 - conditionals - transition_2019: |-
@@ -4499,7 +4503,7 @@ es-MX:
 
         El programa dibuja un coche de carreras y una línea de meta. Vamos a descubrir cuándo el coche de carreras cruza la línea de meta. Los sprites han sido creados para ti.
 
-        -   Agrega una sentencia `registro.consola` dentro del bucle dibujar. ( [Show me where](#triggercallout=callout) )
+        -   Agrega una sentencia `console.log` dentro del bucle dibujar. ( [Muéstrame dónde](#triggercallout=callout) )
         -   Agrega una expresión booleana dentro de `registro.consola` que pregunte: "¿La posición x del coche de carreras es menor que la posición x de la línea de meta?".
         -   Observa el resultado que genera el programa a medida que el coche se mueve. ¿Cuándo cambia? ¿Por qué?
       CSD U3 AnimationsMulti Play Defender: |-
@@ -5103,7 +5107,7 @@ es-MX:
         \  Lee todo el programa para ver cómo se crean `sprite1` y `sprite2`, y qué
         propiedades se comparan.\n-   Identifica las propiedades del sprite que se
         comparan en cada una de las expresiones booleanas.\n-   Cambia el código _solo
-        en las primeras **11** líneas_ para que cada una de las sentencias `registro.consola()`
+        en las primeras **11** líneas_ para que cada una de las sentencias `console.log()`
         imprima `verdadero`."
       CSD U3 Complex Movement counter prediction: |-
         # La velocidad y el patrón del contador
@@ -5155,10 +5159,10 @@ es-MX:
 
         # Haz esto
 
-        Hay un sprite de manzana que crece creado para ti. Comienza siendo verde y debería volverse rojo cuando llega a una escala de 2. Aún no nos preocuparemos por hacerlo rojo; solo usamos el comando `registro.consola` para comprobar si la escala sigue siendo 2.
+        Hay un sprite de manzana que crece creado para ti. Comienza siendo verde y debería volverse rojo cuando llega a una escala de 2. Aún no nos preocuparemos por hacerlo rojo; solo usamos el comando `console.log` para comprobar si la escala sigue siendo 2.
 
-        -   Agrega una sentencia `registro.consola`.
-        -   Agrega una expresión booleana dentro de `registro.consola` que compruebe si `escala.manzana` es mayor que 2.
+        -   Agrega una sentencia `console.log`.
+        -   Agrega una expresión booleana dentro de `console.log` que compruebe si `escala.manzana` es mayor que 2.
       CSD U3 Conditionals Apple 2: |-
         # Cambiar a rojo
 
@@ -9439,9 +9443,9 @@ es-MX:
 
         # Haz esto
 
-        -   Observa el código que establece el color. ( [Show me where](#triggercallout=fill) )
+        -   Observa el código que establece el color. ( [Muéstrame dónde](#triggercallout=fill) )
         -   Cambia el color de azul a amarillo.
-        -   Arrastra un bloque `rect` al área del código debajo del comando rellenar ( [Show me where](#triggercallout=rect_block) ) para agregar un nuevo cuadrado. El nuevo cuadrado puede ir en cualquier lugar de la pantalla que desees.
+        -   Arrastra un bloque `rect` al área del código debajo del comando rellenar ( [Muéstrame dónde](#triggercallout=rect_block) ) para agregar un nuevo cuadrado. El nuevo cuadrado puede ir en cualquier lugar de la pantalla que desees.
       CSD U3 fill_2018: |-
         <img src="https://images.code.org/c91390d63e52a3349c48f7b6b0057258-image-1493060802897.05.19 PM.png" style="float:right;width:200px;">
 
@@ -9451,9 +9455,9 @@ es-MX:
 
         # Haz esto
 
-        -   Observa el código que establece el color. ( [Show me where](#triggercallout=fill) )
+        -   Observa el código que establece el color. ( [Muéstrame dónde](#triggercallout=fill) )
         -   Cambia el color de azul a amarillo.
-        -   Arrastra un bloque `rect` al área del código debajo del comando rellenar ( [Show me where](#triggercallout=rect_block) ) para agregar un nuevo cuadrado. El nuevo cuadrado puede ir en cualquier lugar de la pantalla que desees.
+        -   Arrastra un bloque `rect` al área del código debajo del comando rellenar ( [Muéstrame dónde](#triggercallout=rect_block) ) para agregar un nuevo cuadrado. El nuevo cuadrado puede ir en cualquier lugar de la pantalla que desees.
       CSD U3 fill_2019: |-
         <img src="https://images.code.org/c91390d63e52a3349c48f7b6b0057258-image-1493060802897.05.19 PM.png" style="float:right;width:200px;">
 
@@ -9463,9 +9467,9 @@ es-MX:
 
         # Haz esto
 
-        -   Observa el código que establece el color. ( [Show me where](#triggercallout=fill) )
+        -   Observa el código que establece el color. ( [Muéstrame dónde](#triggercallout=fill) )
         -   Cambia el color de azul a amarillo.
-        -   Arrastra un bloque `rect` al área del código debajo del comando rellenar ( [Show me where](#triggercallout=rect_block) ) para agregar un nuevo cuadrado. El nuevo cuadrado puede ir en cualquier lugar de la pantalla que desees.
+        -   Arrastra un bloque `rect` al área del código debajo del comando rellenar ( [Muéstrame dónde](#triggercallout=rect_block) ) para agregar un nuevo cuadrado. El nuevo cuadrado puede ir en cualquier lugar de la pantalla que desees.
       CSD U3 finishing touches: |-
         # Toques finales
 
@@ -10401,13 +10405,13 @@ es-MX:
         has practicado cómo poner figuras en una cuadrícula. Harás lo mismo en el
         Laboratorio de juegos con el área de visualización que se encuentra a la izquierda.\n\n#
         Haz esto\n\n-   Busca la línea de código en el espacio de trabajo debajo de
-        estas instrucciones ( [Show me where](#triggercallout=block_trigger) ) y habla
-        con tu compañero acerca de dónde crees que se dibujará la figura en esta cuadrícula.\n-
-        \  Haz clic <img src=\"https://images.code.org/9e963203e9cafd558b760730d13537ca-image-1461783998310.06.20
-        PM.png\" width=100> para ejecutar el programa y observa qué ocurre. ( [Show
-        me where](#triggercallout=run_trigger) )\n-   Cambia los números dentro del
-        bloque y, luego, intenta volver a ejecutar el programa.\n-   Prueba ubicar
-        el rectángulo cerca de la parte inferior derecha de la pantalla."
+        estas instrucciones ( [Muéstrame dónde](#triggercallout=block_trigger) ) y
+        habla con tu compañero acerca de dónde crees que se dibujará la figura en
+        esta cuadrícula.\n-   Haz clic <img src=\"https://images.code.org/9e963203e9cafd558b760730d13537ca-image-1461783998310.06.20
+        PM.png\" width=100> para ejecutar el programa y observa qué ocurre. ( [Muéstrame
+        dónde](#triggercallout=run_trigger) )\n-   Cambia los números dentro del bloque
+        y, luego, intenta volver a ejecutar el programa.\n-   Prueba ubicar el rectángulo
+        cerca de la parte inferior derecha de la pantalla."
       CSD U3 sequence: |-
         <img src="https://images.code.org/30d68fb30db5b61187f104f46292e052-image-1493060980724.08.05 PM.png" style="float:right">
 
@@ -11089,7 +11093,7 @@ es-MX:
       CSD U6 LEDs color: |-
         # Agregar más color
 
-        Al usar `Ledsdecolores[0].encendidos()` en el último nivel, probablemente notaste que los LEDs se encendían en color blanco. Si no especificas un color, `encendido()` encenderá las tres partes del LED (rojo, verde y azul) para producir blanco. En la caja de herramientas, verás un nuevo comando llamado `Ledsdecolores[0].color()`, el cual te permite especificar un color, como una cadena como "azul" o un valor RGB usando un comando `color()` de colores.
+        Al usar `LedsDeColores[0].encender()` en el último nivel, probablemente notaste que los LEDs se encendían en color blanco. Si no especificas un color, `encender()` encenderá las tres partes del LED (rojo, verde y azul) para producir blanco. En la caja de herramientas, verás un nuevo comando llamado `LedsDeColores[0].color()`, el cual te permite especificar un color, como una cadena como "azul" o un valor RGB usando un comando `color()` de colores.
 
         # Haz esto
 
@@ -11097,7 +11101,7 @@ es-MX:
       CSD U6 LEDs color_2018: |-
         # Agregar más color
 
-        Al usar `Ledsdecolores[0].encendidos()` en el último nivel, probablemente notaste que los LEDs se encendían en color blanco. Si no especificas un color, `encendido()` encenderá las tres partes del LED (rojo, verde y azul) para producir blanco. En la caja de herramientas, verás un nuevo comando llamado `Ledsdecolores[0].color()`, el cual te permite especificar un color, como una cadena como "azul" o un valor RGB usando un comando `color()` de colores.
+        Al usar `LedsDeColores[0].encender()` en el último nivel, probablemente notaste que los LEDs se encendían en color blanco. Si no especificas un color, `encender()` encenderá las tres partes del LED (rojo, verde y azul) para producir blanco. En la caja de herramientas, verás un nuevo comando llamado `LedsDeColores[0].color()`, el cual te permite especificar un color, como una cadena como "azul" o un valor RGB usando un comando `color()` de colores.
 
         # Haz esto
 
@@ -11105,7 +11109,7 @@ es-MX:
       CSD U6 LEDs color_2019: |-
         # Agregar más color
 
-        Al usar `Ledsdecolores[0].encendidos()` en el último nivel, probablemente notaste que los LEDs se encendían en color blanco. Si no especificas un color, `encendido()` encenderá las tres partes del LED (rojo, verde y azul) para producir blanco. En la caja de herramientas, verás un nuevo comando llamado `Ledsdecolores[0].color()`, el cual te permite especificar un color, como una cadena como "azul" o un valor RGB usando un comando `color()` de colores.
+        Al usar `LedsDeColores[0].encender()` en el último nivel, probablemente notaste que los LEDs se encendían en color blanco. Si no especificas un color, `encender()` encenderá las tres partes del LED (rojo, verde y azul) para producir blanco. En la caja de herramientas, verás un nuevo comando llamado `LedsDeColores[0].color()`, el cual te permite especificar un color, como una cadena como "azul" o un valor RGB usando un comando `color()` de colores.
 
         # Haz esto
 
@@ -11140,7 +11144,7 @@ es-MX:
       CSD U6 add LED button: |-
         # Usar eventos
 
-        Este programa tiene dos botones.  El botón "on" funciona, pero el botón "off" aún debe ser programado.
+        Este programa tiene dos botones. El botón "on" funciona, pero el botón "off" aún debe ser programado.
 
         # Haz esto
 
@@ -11148,7 +11152,7 @@ es-MX:
       CSD U6 add LED button_2018: |-
         # Usar eventos
 
-        Este programa tiene dos botones.  El botón "on" funciona, pero el botón "off" aún debe ser programado.
+        Este programa tiene dos botones. El botón "on" funciona, pero el botón "off" aún debe ser programado.
 
         # Haz esto
 
@@ -11156,7 +11160,7 @@ es-MX:
       CSD U6 add LED button_2019: |-
         # Usar eventos
 
-        Este programa tiene dos botones.  El botón "on" funciona, pero el botón "off" aún debe ser programado.
+        Este programa tiene dos botones. El botón "on" funciona, pero el botón "off" aún debe ser programado.
 
         # Haz esto
 
@@ -11439,7 +11443,7 @@ es-MX:
       CSD U6 analog threshold: |-
         # Umbral de cambio
 
-        En forma predetermianda, el evento "change" de un sensor se dispara cada vez que el valor del sensor cambia, incluso por uno. Los sensores de luz y sonido están constantemente fluctuando, de modo que, probablemente, quieras que el evento "change" sea un poco menos sensible. La propiedad `threshold` te permite establecer cuánto debería cambiar un sensor antes de considerarlo un evento "change", de modo que establecer `soundSensor.threshold = 100` haría que el evento "change" del sensor de sonido solo se dispare si su valor se incrementa o disminuye, al menos, en un valor de 100.
+        En forma predeterminada, el evento "change" de un sensor se dispara cada vez que el valor del sensor cambia, incluso por uno. Los sensores de luz y sonido están constantemente fluctuando, de modo que, probablemente, quieras que el evento "change" sea un poco menos sensible. La propiedad `threshold` te permite establecer cuánto debería cambiar un sensor antes de considerarlo un evento "change", de modo que establecer `soundSensor.threshold = 100` haría que el evento "change" del sensor de sonido solo se dispare si su valor se incrementa o disminuye, al menos, en un valor de 100.
 
         # Haz esto
 
@@ -11540,6 +11544,372 @@ es-MX:
         -   Mira el primer bloque de evento en el programa y encuentra la parte donde dice "change".
         -   Dentro del bloque del evento, obtén el valor del intervalo del deslizador y úsalo para hacer que el LED parpadee al nuevo ritmo.
         -   Ejecuta el programa, y mueve el deslizador para ver si la velocidad del LED cambia automáticamente.
+      CSD U6 circuit createButton: |-
+        <div style="float: right" markdown="1">
+
+        ![expandable](https://cdo-curriculum.s3.amazonaws.com/media/uploads/button_alligator.png)
+
+        </div>
+
+        # Crea tus propios botones
+
+        Parecido a los LEDs, los botones son un circuito realmente simple que puedes agregar a tu tablero de manera sencilla. Como los LEDs, los botones deberían estar conectados a un pin numerado, pero a diferencia de los LEDs, un circuito de botones debería estar desconectado en el medio. Cuando conectar el circuito, producirá un evento de presionado de botón.
+
+        # Haz esto
+
+        -   Agarra dos cables.
+        -   Conecta un cable a un pin numerado abierto.
+        -   Conecta el segundo cable a un pin de tierra.
+        -   Actualiza la línea 2 para que haga referencia al pin que elegiste.
+        -   Ejecuta el código proporcionado.
+        -   Con el programa en ejecución, toca los extremos desconectados de ambos cables juntos para "presionar" el botón.
+            _Sugerencia: puedes crear un circuito de botones con muchos tipos diferentes de materiales, siempre que conduzcan la electricidad. Intenta hacer botones con papel de aluminio, cubiertos o clips._
+      CSD U6 circuit createButton_2018: |-
+        <div style="float: right" markdown="1">
+
+        ![expandable](https://cdo-curriculum.s3.amazonaws.com/media/uploads/button_alligator.png)
+
+        </div>
+
+        # Crea tus propios botones
+
+        Parecido a los LEDs, los botones son un circuito realmente simple que puedes agregar a tu tablero de manera sencilla. Como los LEDs, los botones deberían estar conectados a un pin numerado, pero a diferencia de los LEDs, un circuito de botones debería estar desconectado en el medio. Cuando conectar el circuito, producirá un evento de presionado de botón.
+
+        # Haz esto
+
+        -   Agarra dos cables.
+        -   Conecta un cable a un pin numerado abierto.
+        -   Conecta el segundo cable a un pin de tierra.
+        -   Actualiza la línea 2 para que haga referencia al pin que elegiste.
+        -   Ejecuta el código proporcionado.
+        -   Con el programa en ejecución, toca los extremos desconectados de ambos cables juntos para "presionar" el botón.
+            _Sugerencia: puedes crear un circuito de botones con muchos tipos diferentes de materiales, siempre que conduzcan la electricidad. Intenta hacer botones con papel de aluminio, cubiertos o clips._
+      CSD U6 circuit createButton_2019: |-
+        <div style="float: right" markdown="1">
+
+        ![expandable](https://cdo-curriculum.s3.amazonaws.com/media/uploads/button_alligator.png)
+
+        </div>
+
+        # Crea tus propios botones
+
+        Parecido a los LEDs, los botones son un circuito realmente simple que puedes agregar a tu tablero de manera sencilla. Como los LEDs, los botones deberían estar conectados a un pin numerado, pero a diferencia de los LEDs, un circuito de botones debería estar desconectado en el medio. Cuando conectar el circuito, producirá un evento de presionado de botón.
+
+        # Haz esto
+
+        -   Agarra dos cables.
+        -   Conecta un cable a un pin numerado abierto.
+        -   Conecta el segundo cable a un pin de tierra.
+        -   Actualiza la línea 2 para que haga referencia al pin que elegiste.
+        -   Ejecuta el código proporcionado.
+        -   Con el programa en ejecución, toca los extremos desconectados de ambos cables juntos para "presionar" el botón.
+            _Sugerencia: puedes crear un circuito de botones con muchos tipos diferentes de materiales, siempre que conduzcan la electricidad. Intenta hacer botones con papel de aluminio, cubiertos o clips._
+      CSD U6 circuit createLed: |-
+        # Crear objetos de tablero
+
+        Puede que hayas notado que los nuevos bloques que estamos usando están en un cajón de herramientas diferente. El cajón **Circuito** contiene todos los objetos de tablero que están integrados al Circuit Playground, pero cuando comienzas a cablear tus propios circuitos, el Maker Toolkit ya no sabe dónde está todo.
+
+        El nuevo cajón **Maker** contiene comandos de propósito generales en lugar de comandos que están personalizados para el Circuit Playground. Además de los comandos `modoPin()` y `escrituraDigital()` que has visto, incluye comandos para crear nuevos objetos en el tablero que se pueden programar de la misma manera que los bloques en el cajón **Circuito**. El comando `var myLed = createLed()`, por ejemplo, crea un nuevo objeto LED que se comporta igual que los bloques `led` que has estado usando.
+
+        # Haz esto
+
+        Ahora que está creando nuevos objetos de tablero para los que no tenemos bloques, deberás trabajar en modo texto. Puedes seguir sacando bloques que ya conoces del cajón **Circuito**, solo tendrás que cambiar el nombre  del objeto.
+
+        -   Mantén tu LED conectado igual que como estaba antes (conectado al pin 2)
+        -   Asegúrate de estar en modo texto, no en modo bloque.
+        -   Arrastra un bloque `led.parpadeo()` debajo del comentario `// Parpadear miLed`.
+        -   Reemplaza el texto `led` con `miLed`.
+        -   Prueba tu código.
+      CSD U6 circuit createLed_2018: |-
+        # Crear objetos de tablero
+
+        Puede que hayas notado que los nuevos bloques que estamos usando están en un cajón de herramientas diferente. El cajón **Circuito** contiene todos los objetos de tablero que están integrados al Circuit Playground, pero cuando comienzas a cablear tus propios circuitos, el Maker Toolkit ya no sabe dónde está todo.
+
+        El nuevo cajón **Maker** contiene comandos de propósito generales en lugar de comandos que están personalizados para el Circuit Playground. Además de los comandos `modoPin()` y `escrituraDigital()` que has visto, incluye comandos para crear nuevos objetos en el tablero que se pueden programar de la misma manera que los bloques en el cajón **Circuito**. El comando `var myLed = createLed()`, por ejemplo, crea un nuevo objeto LED que se comporta igual que los bloques `led` que has estado usando.
+
+        # Haz esto
+
+        Ahora que está creando nuevos objetos de tablero para los que no tenemos bloques, deberás trabajar en modo texto. Puedes seguir sacando bloques que ya conoces del cajón **Circuito**, solo tendrás que cambiar el nombre  del objeto.
+
+        -   Mantén tu LED conectado igual que como estaba antes (conectado al pin 2)
+        -   Asegúrate de estar en modo texto, no en modo bloque.
+        -   Arrastra un bloque `led.parpadeo()` debajo del comentario `// Parpadear miLed`.
+        -   Reemplaza el texto `led` con `miLed`.
+        -   Prueba tu código.
+      CSD U6 circuit createLed_2019: |-
+        # Crear objetos de tablero
+
+        Puede que hayas notado que los nuevos bloques que estamos usando están en un cajón de herramientas diferente. El cajón **Circuito** contiene todos los objetos de tablero que están integrados al Circuit Playground, pero cuando comienzas a cablear tus propios circuitos, el Maker Toolkit ya no sabe dónde está todo.
+
+        El nuevo cajón **Maker** contiene comandos de propósito generales en lugar de comandos que están personalizados para el Circuit Playground. Además de los comandos `modoPin()` y `escrituraDigital()` que has visto, incluye comandos para crear nuevos objetos en el tablero que se pueden programar de la misma manera que los bloques en el cajón **Circuito**. El comando `var myLed = createLed()`, por ejemplo, crea un nuevo objeto LED que se comporta igual que los bloques `led` que has estado usando.
+
+        # Haz esto
+
+        Ahora que está creando nuevos objetos de tablero para los que no tenemos bloques, deberás trabajar en modo texto. Puedes seguir sacando bloques que ya conoces del cajón **Circuito**, solo tendrás que cambiar el nombre  del objeto.
+
+        -   Mantén tu LED conectado igual que como estaba antes (conectado al pin 2)
+        -   Asegúrate de estar en modo texto, no en modo bloque.
+        -   Arrastra un bloque `led.parpadeo()` debajo del comentario `// Parpadear miLed`.
+        -   Reemplaza el texto `led` con `miLed`.
+        -   Prueba tu código.
+      CSD U6 circuit multi led: |-
+        # Cablear múltiples LEDs
+
+        Usando el bloque `crearLed()`, puedes crear y controlar la cantidad de LEDs que tu tablero pueda alojar. Cada LED debe estar conectado a un pin numerado separado, pero todos pueden compartir el mismo pin a tierra.
+
+        # Haz esto
+
+        Deja el LED actual conectado al pin 2, pero agrega otro a un pin numerado que elijas. Para tu nuevo LED:
+
+        -   Agrega un bloque `var miLed = crearLed()`.
+        -   Reemplaza la etiqueta de variable `miLed` con una etiqueta única.
+        -   Asegúrate de que estás en modo texto, no en modo bloque.
+        -   Agrega un comando `led.parpadeo()`
+        -   Reemplaza el texto `led` con tu nueva variable LED.
+        -   Prueba tu código.
+
+        _Desafío: Intenta agregar un tercer LED y haz que los tres LED parpadeen a intervalos diferentes._
+      CSD U6 circuit multi led_2018: |-
+        # Cablear múltiples LEDs
+
+        Usando el bloque `crearLed()`, puedes crear y controlar la cantidad de LEDs que tu tablero pueda alojar. Cada LED debe estar conectado a un pin numerado separado, pero todos pueden compartir el mismo pin a tierra.
+
+        # Haz esto
+
+        Deja el LED actual conectado al pin 2, pero agrega otro a un pin numerado que elijas. Para tu nuevo LED:
+
+        -   Agrega un bloque `var miLed = crearLed()`.
+        -   Reemplaza la etiqueta de variable `miLed` con una etiqueta única.
+        -   Asegúrate de que estás en modo texto, no en modo bloque.
+        -   Agrega un comando `led.parpadeo()`
+        -   Reemplaza el texto `led` con tu nueva variable LED.
+        -   Prueba tu código.
+
+        _Desafío: Intenta agregar un tercer LED y haz que los tres LED parpadeen a intervalos diferentes._
+      CSD U6 circuit multi led_2019: |-
+        # Cablear múltiples LEDs
+
+        Usando el bloque `crearLed()`, puedes crear y controlar la cantidad de LEDs que tu tablero pueda alojar. Cada LED debe estar conectado a un pin numerado separado, pero todos pueden compartir el mismo pin a tierra.
+
+        # Haz esto
+
+        Deja el LED actual conectado al pin 2, pero agrega otro a un pin numerado que elijas. Para tu nuevo LED:
+
+        -   Agrega un bloque `var miLed = crearLed()`.
+        -   Reemplaza la etiqueta de variable `miLed` con una etiqueta única.
+        -   Asegúrate de que estás en modo texto, no en modo bloque.
+        -   Agrega un comando `led.parpadeo()`
+        -   Reemplaza el texto `led` con tu nueva variable LED.
+        -   Prueba tu código.
+
+        _Desafío: Intenta agregar un tercer LED y haz que los tres LED parpadeen a intervalos diferentes._
+      CSD U6 circuit pinMode: |-
+        # Conecta un circuito
+
+        Puedes usar uno de los pads numerados para agregar circuitos adicionales a tu tablero. Usemos el punto 2 para agregar otro LED.
+
+        # Haz esto
+
+        -   Usando un cable, conecta el punto 2 al lado positivo (+) de un LED
+        -   Usando otro cable, conecta el lado positivo (-) del LED al punto de tierra (GND) (no importa cuál)
+        -   Ejecuta este programa para probar tu circuito Si ha funcionado, el LED debería encenderse.
+
+        _Sugerencia de depuración: Los LEDs solo funcionan si la electricidad está fluyendo de positivo a negativo. Si el LED no se enciende, asegúrate de que está orientado en la dirección correcta._
+      CSD U6 circuit pinMode_2018: |-
+        # Conecta un circuito
+
+        Puedes usar uno de los pads numerados para agregar circuitos adicionales a tu tablero. Usemos el punto 2 para agregar otro LED.
+
+        # Haz esto
+
+        -   Usando un cable, conecta el punto 2 al lado positivo (+) de un LED
+        -   Usando otro cable, conecta el lado positivo (-) del LED al punto de tierra (GND) (no importa cuál)
+        -   Ejecuta este programa para probar tu circuito Si ha funcionado, el LED debería encenderse.
+
+        _Sugerencia de depuración: Los LEDs solo funcionan si la electricidad está fluyendo de positivo a negativo. Si el LED no se enciende, asegúrate de que está orientado en la dirección correcta._
+      CSD U6 circuit pinMode_2019: |-
+        # Conecta un circuito
+
+        Puedes usar uno de los pads numerados para agregar circuitos adicionales a tu tablero. Usemos el punto 2 para agregar otro LED.
+
+        # Haz esto
+
+        -   Usando un cable, conecta el punto 2 al lado positivo (+) de un LED
+        -   Usando otro cable, conecta el lado positivo (-) del LED al punto de tierra (GND) (no importa cuál)
+        -   Ejecuta este programa para probar tu circuito Si ha funcionado, el LED debería encenderse.
+
+        _Sugerencia de depuración: Los LEDs solo funcionan si la electricidad está fluyendo de positivo a negativo. Si el LED no se enciende, asegúrate de que está orientado en la dirección correcta._
+      CSD U6 circuit predict multi: |-
+        # Hacer una predicción
+
+        Todos los dispositivos que has usado hasta ahora, de hecho, son circuitos conectados a puntos conectados. Busca el **#13** en tu tablero para ver qué circuito está conectado al punto 13, luego lee en este código y haz una predicción de lo que sucederá cuando el programa se ejecute.
+      CSD U6 circuit predict multi_2018: |-
+        # Hacer una predicción
+
+        Todos los dispositivos que has usado hasta ahora, de hecho, son circuitos conectados a puntos conectados. Busca el **#13** en tu tablero para ver qué circuito está conectado al punto 13, luego lee en este código y haz una predicción de lo que sucederá cuando el programa se ejecute.
+      CSD U6 circuit predict multi_2019: |-
+        # Hacer una predicción
+
+        Todos los dispositivos que has usado hasta ahora, de hecho, son circuitos conectados a puntos conectados. Busca el **#13** en tu tablero para ver qué circuito está conectado al punto 13, luego lee en este código y haz una predicción de lo que sucederá cuando el programa se ejecute.
+      CSD U6 circuit smart bike blinker buttons: |-
+        # Bicicleta inteligente - Controles de intermitentes
+
+        Con los LEDs de señal de giro conectados, solo necesitas programar algunos botones para controlarlos. Puede que quieras colocar los botones en otras partes de la bicicleta para facilitar el control de las señales de giro, pero por el momento, solamente usaremos los botones integrados izquierdo y derecho.
+
+        # Haz esto
+
+        -   Agrega controladores de eventos para hacer parpadear la señal de giro izquierda cuando el botón izquierdo esté presionado.
+        -   Agrega controladores de eventos para hacer parpadear la señal de giro derecha cuando el botón derecho esté presionado.
+        -   Prueba tu código.
+
+        _Sugerencia: deberás estar en modo texto para hacer que los intermitentes funcionen, dado que no hay bloques integrados para los elementos que agregas en el tablero._
+      CSD U6 circuit smart bike blinker buttons_2018: |-
+        # Bicicleta inteligente - Controles de intermitentes
+
+        Con los LEDs de señal de giro conectados, solo necesitas programar algunos botones para controlarlos. Puede que quieras colocar los botones en otras partes de la bicicleta para facilitar el control de las señales de giro, pero por el momento, solamente usaremos los botones integrados izquierdo y derecho.
+
+        # Haz esto
+
+        -   Agrega controladores de eventos para hacer parpadear la señal de giro izquierda cuando el botón izquierdo esté presionado.
+        -   Agrega controladores de eventos para hacer parpadear la señal de giro derecha cuando el botón derecho esté presionado.
+        -   Prueba tu código.
+
+        _Sugerencia: deberás estar en modo texto para hacer que los intermitentes funcionen, dado que no hay bloques integrados para los elementos que agregas en el tablero._
+      CSD U6 circuit smart bike blinker buttons_2019: |-
+        # Bicicleta inteligente - Controles de intermitentes
+
+        Con los LEDs de señal de giro conectados, solo necesitas programar algunos botones para controlarlos. Puede que quieras colocar los botones en otras partes de la bicicleta para facilitar el control de las señales de giro, pero por el momento, solamente usaremos los botones integrados izquierdo y derecho.
+
+        # Haz esto
+
+        -   Agrega controladores de eventos para hacer parpadear la señal de giro izquierda cuando el botón izquierdo esté presionado.
+        -   Agrega controladores de eventos para hacer parpadear la señal de giro derecha cuando el botón derecho esté presionado.
+        -   Prueba tu código.
+
+        _Sugerencia: deberás estar en modo texto para hacer que los intermitentes funcionen, dado que no hay bloques integrados para los elementos que agregas en el tablero._
+      CSD U6 circuit smart bike blinkers: "# Bicicleta inteligente - Intermitentes\n\nUsando
+        tu guía de planificación, conecta con un cable los dos LEDs que servirán como
+        intermitentes. Para asegurarse de que los intermitentes se pueden montar al
+        final del manubrio, asegúrate de conectarlos de modo tal que se puedan estirar
+        en direcciones opuestas.\n\n# Haz esto\n\nUsando pinzas de contacto, cable
+        y otro material conductor, conecta dos LED a tu tablero, uno para cada intermitente
+        de señal de giro.\n\n-   Conecta cada LED a un pin numerado diferente en el
+        tablero.\n-   Usa el bloque `crearLed()` para crear un objeto LED para cada
+        intermitente.\n\n_Sugerencia: facilita el cableado aún más considerando cómo
+        se montarán los intermitentes cuando se seleccione un pin para usar._ "
+      CSD U6 circuit smart bike blinkers_2018: "# Bicicleta inteligente - Intermitentes\n\nUsando
+        tu guía de planificación, conecta con un cable los dos LEDs que servirán como
+        intermitentes. Para asegurarse de que los intermitentes se pueden montar al
+        final del manubrio, asegúrate de conectarlos de modo tal que se puedan estirar
+        en direcciones opuestas.\n\n# Haz esto\n\nUsando pinzas de contacto, cable
+        y otro material conductor, conecta dos LED a tu tablero, uno para cada intermitente
+        de señal de giro.\n\n-   Conecta cada LED a un pin numerado diferente en el
+        tablero.\n-   Usa el bloque `crearLed()` para crear un objeto LED para cada
+        intermitente.\n\n_Sugerencia: facilita el cableado aún más considerando cómo
+        se montarán los intermitentes cuando se seleccione un pin para usar._ "
+      CSD U6 circuit smart bike blinkers_2019: "# Bicicleta inteligente - Intermitentes\n\nUsando
+        tu guía de planificación, conecta con un cable los dos LEDs que servirán como
+        intermitentes. Para asegurarse de que los intermitentes se pueden montar al
+        final del manubrio, asegúrate de conectarlos de modo tal que se puedan estirar
+        en direcciones opuestas.\n\n# Haz esto\n\nUsando pinzas de contacto, cable
+        y otro material conductor, conecta dos LED a tu tablero, uno para cada intermitente
+        de señal de giro.\n\n-   Conecta cada LED a un pin numerado diferente en el
+        tablero.\n-   Usa el bloque `crearLed()` para crear un objeto LED para cada
+        intermitente.\n\n_Sugerencia: facilita el cableado aún más considerando cómo
+        se montarán los intermitentes cuando se seleccione un pin para usar._ "
+      CSD U6 circuit smart bike buzzer: |-
+        # Bicicleta inteligente - Timbre
+
+        Ahora que sabemos cómo agregar más botones, puedes agregar un botón para controlar la bocina de la bicicleta inteligente.
+
+        # Haz esto
+
+        Usando el botón que ya has conectado al tablero, encuentra un buen lugar para colocar el botón de la bocina. Luego:
+
+        -   Crea un objeto botón para tu botón bocina
+        -   Agrega un controlador de eventos para que suene el timbre cuando el botón está presionado
+
+        _Sugerencia: el objeto botón que creaste no estará en el menú desplegable `eventoEnTablero()`, de modo que tendrás que escribir el nombre que has elegido. ¡Asegúrate de usar comillas!_
+      CSD U6 circuit smart bike buzzer_2018: |-
+        # Bicicleta inteligente - Timbre
+
+        Ahora que sabemos cómo agregar más botones, puedes agregar un botón para controlar la bocina de la bicicleta inteligente.
+
+        # Haz esto
+
+        Usando el botón que ya has conectado al tablero, encuentra un buen lugar para colocar el botón de la bocina. Luego:
+
+        -   Crea un objeto botón para tu botón bocina
+        -   Agrega un controlador de eventos para que suene el timbre cuando el botón está presionado
+
+        _Sugerencia: el objeto botón que creaste no estará en el menú desplegable `eventoEnTablero()`, de modo que tendrás que escribir el nombre que has elegido. ¡Asegúrate de usar comillas!_
+      CSD U6 circuit smart bike buzzer_2019: |-
+        # Bicicleta inteligente - Timbre
+
+        Ahora que sabemos cómo agregar más botones, puedes agregar un botón para controlar la bocina de la bicicleta inteligente.
+
+        # Haz esto
+
+        Usando el botón que ya has conectado al tablero, encuentra un buen lugar para colocar el botón de la bocina. Luego:
+
+        -   Crea un objeto botón para tu botón bocina
+        -   Agrega un controlador de eventos para que suene el timbre cuando el botón está presionado
+
+        _Sugerencia: el objeto botón que creaste no estará en el menú desplegable `eventoEnTablero()`, de modo que tendrás que escribir el nombre que has elegido. ¡Asegúrate de usar comillas!_
+      CSD U6 circuit smart bike final: |-
+        # Bicicleta inteligente - Toques finales
+
+        En este punto, tu bicicleta inteligente debería tener toda su funcionalidad básica en funcionamiento. Esta es tu oportunidad de agregar cualquier toque final.
+
+        # Haz esto
+
+        Puede que quieras dividir y conquistar en este punto, y permitir que algunos miembros de tu grupo se concentren en los aspectos físicos del prototipo mientras que otros trabajan en mejorar el código. Dado que este es un estereotipo, no te preocupes por hacer que todo salga perfecto, pero sí intenta garantizar que el prototipo comunique tu diseño lo suficientemente bien como para probar y obtener resultados.
+      CSD U6 circuit smart bike final_2018: |-
+        # Bicicleta inteligente - Toques finales
+
+        En este punto, tu bicicleta inteligente debería tener toda su funcionalidad básica en funcionamiento. Esta es tu oportunidad de agregar cualquier toque final.
+
+        # Haz esto
+
+        Puede que quieras dividir y conquistar en este punto, y permitir que algunos miembros de tu grupo se concentren en los aspectos físicos del prototipo mientras que otros trabajan en mejorar el código. Dado que este es un estereotipo, no te preocupes por hacer que todo salga perfecto, pero sí intenta garantizar que el prototipo comunique tu diseño lo suficientemente bien como para probar y obtener resultados.
+      CSD U6 circuit smart bike final_2019: |-
+        # Bicicleta inteligente - Toques finales
+
+        En este punto, tu bicicleta inteligente debería tener toda su funcionalidad básica en funcionamiento. Esta es tu oportunidad de agregar cualquier toque final.
+
+        # Haz esto
+
+        Puede que quieras dividir y conquistar en este punto, y permitir que algunos miembros de tu grupo se concentren en los aspectos físicos del prototipo mientras que otros trabajan en mejorar el código. Dado que este es un estereotipo, no te preocupes por hacer que todo salga perfecto, pero sí intenta garantizar que el prototipo comunique tu diseño lo suficientemente bien como para probar y obtener resultados.
+      CSD U6 circuit smart bike light: |-
+        # Bicicleta inteligente - Luz delantera
+
+        La última parte del plan de bicicleta inteligente que necesitamos resolver es la luz delantera automática.
+
+        # Haz esto
+
+        Primero deberás decidir qué usar para la luz delantera. Podrías agregar otro circuito de LED, o tal vez, puedes encontrar una manera de montar el tablero que permite usar los LEDs de colores como una luz delantera. Una vez que has resuelto el diseño físico de tus luces, agrega código a tu programa que enciende y apaga la luz delantera en base a cuán iluminado u oscuro esté.
+
+        _Sugerencia: si estás usando los LEDs de colores integrados, puede que necesites proteger el sensor de luz para asegurarte de que está respondiendo al nivel de luz del ambiente y no a la luz de los LEDs._
+      CSD U6 circuit smart bike light_2018: |-
+        # Bicicleta inteligente - Luz delantera
+
+        La última parte del plan de bicicleta inteligente que necesitamos resolver es la luz delantera automática.
+
+        # Haz esto
+
+        Primero deberás decidir qué usar para la luz delantera. Podrías agregar otro circuito de LED, o tal vez, puedes encontrar una manera de montar el tablero que permite usar los LEDs de colores como una luz delantera. Una vez que has resuelto el diseño físico de tus luces, agrega código a tu programa que enciende y apaga la luz delantera en base a cuán iluminado u oscuro esté.
+
+        _Sugerencia: si estás usando los LEDs de colores integrados, puede que necesites proteger el sensor de luz para asegurarte de que está respondiendo al nivel de luz del ambiente y no a la luz de los LEDs._
+      CSD U6 circuit smart bike light_2019: |-
+        # Bicicleta inteligente - Luz delantera
+
+        La última parte del plan de bicicleta inteligente que necesitamos resolver es la luz delantera automática.
+
+        # Haz esto
+
+        Primero deberás decidir qué usar para la luz delantera. Podrías agregar otro circuito de LED, o tal vez, puedes encontrar una manera de montar el tablero que permite usar los LEDs de colores como una luz delantera. Una vez que has resuelto el diseño físico de tus luces, agrega código a tu programa que enciende y apaga la luz delantera en base a cuán iluminado u oscuro esté.
+
+        _Sugerencia: si estás usando los LEDs de colores integrados, puede que necesites proteger el sensor de luz para asegurarte de que está respondiendo al nivel de luz del ambiente y no a la luz de los LEDs._
       CSD U6 colorLED on: |-
         <img src="//curriculum.code.org/images/circuitplayground/colorLedonoff.gif" style="float: right; margin: 10px;">
 
@@ -11576,7 +11946,7 @@ es-MX:
       CSD U6 colorLeds debug: |-
         <img src="https://images.code.org/e055be621221385d3503962bee5aa616-image-1491493475417.44.28.png" style="width:250px; float:right">
 
-        # Depurar: # Ledsdecolores
+        # Depurar: LedsDeColores
 
         ¿Puedes depurar los valores de índice para que el arco iris aparezca en el tablero igual que en la foto?
       CSD U6 colorLeds intensity: |-
@@ -12050,7 +12420,7 @@ es-MX:
       CSD U6 for loop click exit: |-
         # Saber cuándo detenerse
 
-        Si hacías clic en el botón muchas veces, recibías un error. Cada vez que estás escribiendo código que se repite, es importante considerar cómo sabrás que es momento de _detener_ la repetición.
+        Si hacías clic en el botón muchas veces en el último nivel, recibías un error. Cada vez que estás escribiendo código que se repite, es importante considerar cómo sabrás que es momento de _detener_ la repetición.
 
         # Haz esto
 
@@ -12060,7 +12430,7 @@ es-MX:
       CSD U6 for loop click exit_2018: |-
         # Saber cuándo detenerse
 
-        Si hacías clic en el botón muchas veces, recibías un error. Cada vez que estás escribiendo código que se repite, es importante considerar cómo sabrás que es momento de _detener_ la repetición.
+        Si hacías clic en el botón muchas veces en el último nivel, recibías un error. Cada vez que estás escribiendo código que se repite, es importante considerar cómo sabrás que es momento de _detener_ la repetición.
 
         # Haz esto
 
@@ -12070,7 +12440,7 @@ es-MX:
       CSD U6 for loop click exit_2019: |-
         # Saber cuándo detenerse
 
-        Si hacías clic en el botón muchas veces, recibías un error. Cada vez que estás escribiendo código que se repite, es importante considerar cómo sabrás que es momento de _detener_ la repetición.
+        Si hacías clic en el botón muchas veces en el último nivel, recibías un error. Cada vez que estás escribiendo código que se repite, es importante considerar cómo sabrás que es momento de _detener_ la repetición.
 
         # Haz esto
 
@@ -12093,32 +12463,32 @@ es-MX:
         practicado un poco modificando los bucles ´para´ con el fin de procesar arreglos,
         veamos si lo puedes hacer tú solo.\n\n# Haz esto\n\nInicialmente, hemos brindado
         los elementos de diseño y un arreglo, pero el resto depende de ti.\n\n-   Agrega
-        un controlar de eventos para responder a cuando se le hace clic a \"thumbsup\\_button\"
+        un controlador de eventos para responder a cuando se le hace clic a \"thumbsup\\_button\"
         \n-   Coloca un _bucle para_ dentro del controlar de eventos\n-   Modifica
         la condición de salida del _bucle para_ de manera que se ejecute hasta que
         llegue al fin del arreglo `imágenes`\n-   Dentro de tu _bucle para_, cambia
-        la imagen actual a \"icono://fa-pulgares-o-arriba\"\n\n_Desafío: ¿puedes agregar
+        la imagen actual a \"icon://fa-thumbs-o-up\"\n\n_Desafío: ¿puedes agregar
         un segundo botón que gire todas las imágenes de nuevo a pulgares para abajo?_"
       CSD U6 for loop images_2018: "# Crear un bucle ´para´ desde cero\n\nAhora que
         has practicado un poco modificando los bucles ´para´ con el fin de procesar
         arreglos, veamos si lo puedes hacer tú solo.\n\n# Haz esto\n\nInicialmente,
         hemos brindado los elementos de diseño y un arreglo, pero el resto depende
-        de ti.\n\n-   Agrega un controlar de eventos para responder a cuando se le
-        hace clic a \"thumbsup\\_button\" \n-   Coloca un _bucle para_ dentro del
+        de ti.\n\n-   Agrega un controlador de eventos para responder a cuando se
+        le hace clic a \"thumbsup\\_button\" \n-   Coloca un _bucle para_ dentro del
         controlar de eventos\n-   Modifica la condición de salida del _bucle para_
         de manera que se ejecute hasta que llegue al fin del arreglo `imágenes`\n-
-        \  Dentro de tu _bucle para_, cambia la imagen actual a \"icono://fa-pulgares-o-arriba\"\n\n_Desafío:
+        \  Dentro de tu _bucle para_, cambia la imagen actual a \"icon://fa-thumbs-o-up\"\n\n_Desafío:
         ¿puedes agregar un segundo botón que gire todas las imágenes de nuevo a pulgares
         para abajo?_"
       CSD U6 for loop images_2019: "# Crear un bucle ´para´ desde cero\n\nAhora que
         has practicado un poco modificando los bucles ´para´ con el fin de procesar
         arreglos, veamos si lo puedes hacer tú solo.\n\n# Haz esto\n\nInicialmente,
         hemos brindado los elementos de diseño y un arreglo, pero el resto depende
-        de ti.\n\n-   Agrega un controlar de eventos para responder a cuando se le
-        hace clic a \"thumbsup\\_button\" \n-   Coloca un _bucle para_ dentro del
+        de ti.\n\n-   Agrega un controlador de eventos para responder a cuando se
+        le hace clic a \"thumbsup\\_button\" \n-   Coloca un _bucle para_ dentro del
         controlar de eventos\n-   Modifica la condición de salida del _bucle para_
         de manera que se ejecute hasta que llegue al fin del arreglo `imágenes`\n-
-        \  Dentro de tu _bucle para_, cambia la imagen actual a \"icono://fa-pulgares-o-arriba\"\n\n_Desafío:
+        \  Dentro de tu _bucle para_, cambia la imagen actual a \"icon://fa-thumbs-o-up\"\n\n_Desafío:
         ¿puedes agregar un segundo botón que gire todas las imágenes de nuevo a pulgares
         para abajo?_"
       CSD U6 for loop led function: |-
@@ -12336,18 +12706,18 @@ es-MX:
         Con tus funciones definidas, las puedes llamar cuando lo necesites. Revisa tus controladores de eventos, o en cualquier otra parte de tu programa en donde se deba usar tu función, y agrega llamadas a las funciones que creaste.
       CSD U6 game project functions define: "# Define tus funciones\n\nDefine todas
         tus funciones en la parte inferior del programa, en el comentario `//Crea
-        tus funciones aquí`.\n\nEn este momento, solo nos preocupa escribir la función
-        _definiciones_, la parte que se parece a:\n\n    función miFunción() {\n    \t//Cosas
+        tus funciones aquí`.\n\nEn este momento, solo nos preocupa escribir las _definiciones_
+        de la función, la parte que se parece a:\n\n    función miFunción() {\n    \t//Cosas
         que hace mi función \n    }"
       CSD U6 game project functions define_2018: "# Define tus funciones\n\nDefine
         todas tus funciones en la parte inferior del programa, en el comentario `//Crea
-        tus funciones aquí`.\n\nEn este momento, solo nos preocupa escribir la función
-        _definiciones_, la parte que se parece a:\n\n    función miFunción() {\n    \t//Cosas
+        tus funciones aquí`.\n\nEn este momento, solo nos preocupa escribir las _definiciones_
+        de la función, la parte que se parece a:\n\n    función miFunción() {\n    \t//Cosas
         que hace mi función \n    }"
       CSD U6 game project functions define_2019: "# Define tus funciones\n\nDefine
         todas tus funciones en la parte inferior del programa, en el comentario `//Crea
-        tus funciones aquí`.\n\nEn este momento, solo nos preocupa escribir la función
-        _definiciones_, la parte que se parece a:\n\n    función miFunción() {\n    \t//Cosas
+        tus funciones aquí`.\n\nEn este momento, solo nos preocupa escribir las _definiciones_
+        de la función, la parte que se parece a:\n\n    función miFunción() {\n    \t//Cosas
         que hace mi función \n    }"
       CSD U6 game project screen links: |-
         # Eventos de elementos de IU
@@ -12504,7 +12874,7 @@ es-MX:
         # Haz esto
 
         -   Lee el código y los comentarios, y luego ejecuta el programa para ver cómo funciona. (Asegúrate de ingresar tu nombre y el nombre de tu amigo antes de presionar "Enviar").
-        -   Usa el bloque `getProperty` para almacenar la propiedad de texto de *friend\_input* en tu variable "friend\_name". ([Show me where.](#triggercallout=code_triggered))
+        -   Usa el bloque `getProperty` para almacenar la propiedad de texto de *friend\_input* en tu variable "friend\_name". ([Muéstrame dónde.](#triggercallout=code_triggered))
       CSD U6 getProperty input_2018: |-
         # getProperty y variables
 
@@ -12513,7 +12883,7 @@ es-MX:
         # Haz esto
 
         -   Lee el código y los comentarios, y luego ejecuta el programa para ver cómo funciona. (Asegúrate de ingresar tu nombre y el nombre de tu amigo antes de presionar "Enviar").
-        -   Usa el bloque `getProperty` para almacenar la propiedad de texto de *friend\_input* en tu variable "friend\_name". ([Show me where.](#triggercallout=code_triggered))
+        -   Usa el bloque `getProperty` para almacenar la propiedad de texto de *friend\_input* en tu variable "friend\_name". ([Muéstrame dónde.](#triggercallout=code_triggered))
       CSD U6 getProperty input_2019: |-
         # getProperty y variables
 
@@ -12522,7 +12892,7 @@ es-MX:
         # Haz esto
 
         -   Lee el código y los comentarios, y luego ejecuta el programa para ver cómo funciona. (Asegúrate de ingresar tu nombre y el nombre de tu amigo antes de presionar "Enviar").
-        -   Usa el bloque `getProperty` para almacenar la propiedad de texto de *friend\_input* en tu variable "friend\_name". ([Show me where.](#triggercallout=code_triggered))
+        -   Usa el bloque `getProperty` para almacenar la propiedad de texto de *friend\_input* en tu variable "friend\_name". ([Muéstrame dónde.](#triggercallout=code_triggered))
       CSD U6 getters debug: |-
         # Controlador de LED y timbre
 
@@ -12566,27 +12936,27 @@ es-MX:
       CSD U6 interval predict: |-
         # Intervalo
 
-        Ahora usamos el deslizador para modificar el comportamiento del LED.   Igual que como cambiaríamos los valores para la frecuencia y la duración del timbre, podemos cambiar el valor para el intervalo de parpadeo o pulso del LED.
+        Ahora usamos el deslizador para modificar el comportamiento del LED. Igual que como cambiaríamos los valores para la frecuencia y la duración del timbre, podemos cambiar el valor para el intervalo de parpadeo o pulso del LED.
 
         # Haz esto
 
-        -   Lee el código y haz una predicción de lo que hará el programa, luego presiona "Run" para probar tu predicción.
+        -   Lee el código y haz una predicción de lo que hará el programa, luego presiona "Ejecutar" para probar tu predicción.
       CSD U6 interval predict_2018: |-
         # Intervalo
 
-        Ahora usamos el deslizador para modificar el comportamiento del LED.   Igual que como cambiaríamos los valores para la frecuencia y la duración del timbre, podemos cambiar el valor para el intervalo de parpadeo o pulso del LED.
+        Ahora usamos el deslizador para modificar el comportamiento del LED. Igual que como cambiaríamos los valores para la frecuencia y la duración del timbre, podemos cambiar el valor para el intervalo de parpadeo o pulso del LED.
 
         # Haz esto
 
-        -   Lee el código y haz una predicción de lo que hará el programa, luego presiona "Run" para probar tu predicción.
+        -   Lee el código y haz una predicción de lo que hará el programa, luego presiona "Ejecutar" para probar tu predicción.
       CSD U6 interval predict_2019: |-
         # Intervalo
 
-        Ahora usamos el deslizador para modificar el comportamiento del LED.   Igual que como cambiaríamos los valores para la frecuencia y la duración del timbre, podemos cambiar el valor para el intervalo de parpadeo o pulso del LED.
+        Ahora usamos el deslizador para modificar el comportamiento del LED. Igual que como cambiaríamos los valores para la frecuencia y la duración del timbre, podemos cambiar el valor para el intervalo de parpadeo o pulso del LED.
 
         # Haz esto
 
-        -   Lee el código y haz una predicción de lo que hará el programa, luego presiona "Run" para probar tu predicción.
+        -   Lee el código y haz una predicción de lo que hará el programa, luego presiona "Ejecutar" para probar tu predicción.
       CSD U6 interval_2018: Predecir el nivel
       CSD U6 interval_2019: Predecir el nivel
       CSD U6 investigate orientation: "# Cabeceo y balanceo\n\nEste programa muestra
@@ -13315,7 +13685,7 @@ es-MX:
 
         # Haz esto
 
-        -   Haz clic en "Reiniciar" y debate con tu compañero sobre cómo funciona el código.
+        -   Haz clic en "Ejecutar" y debate con tu compañero sobre cómo funciona el código.
         -   Prueba los diferentes bloques LED para ver lo que hacen.
             -   Sugerencia: no olvides presionar "Reiniciar" y ejecutar tu código de nuevo luego de cambiarlo
       CSD U6 test LED_2018: |-
@@ -13325,7 +13695,7 @@ es-MX:
 
         # Haz esto
 
-        -   Haz clic en "Reiniciar" y debate con tu compañero sobre cómo funciona el código.
+        -   Haz clic en "Ejecutar" y debate con tu compañero sobre cómo funciona el código.
         -   Prueba los diferentes bloques LED para ver lo que hacen.
             -   Sugerencia: no olvides presionar "Reiniciar" y ejecutar tu código de nuevo luego de cambiarlo
       CSD U6 test LED_2019: |-
@@ -13335,7 +13705,7 @@ es-MX:
 
         # Haz esto
 
-        -   Haz clic en "Reiniciar" y debate con tu compañero sobre cómo funciona el código.
+        -   Haz clic en "Ejecutar" y debate con tu compañero sobre cómo funciona el código.
         -   Prueba los diferentes bloques LED para ver lo que hacen.
             -   Sugerencia: no olvides presionar "Reiniciar" y ejecutar tu código de nuevo luego de cambiarlo
       CSD U6 tugowar buzzer: "# Timbre del triunfo\n\nLa última cosa que falta en
@@ -13372,11 +13742,11 @@ es-MX:
 
         # Haz esto
 
-        Usando un condicional dentro de la función `verificarTriunfo()`, debes verificar si un jugador ha ganado cada vez que hacen clic. Por ahora, puedes usar solo `registro.consola` para informar el ganador.
+        Usando un condicional dentro de la función `verificarTriunfo()`, debes verificar si un jugador ha ganado cada vez que hacen clic. Por ahora, puedes usar solo `console.log` para informar el ganador.
 
         -   Agrega una sentencia si al botón de `verificarTriunfo()`
         -   Para la condición de tu sentencia si, verifica si `jugador_y` es mayor a 350 (o usa la parte inferior del valor de pantalla que has elegido en el último nivel)
-        -   En tu condicional, agrega un `registro.consola` que informar qué jugador ganó
+        -   En tu condicional, agrega un `console.log` que informar qué jugador ganó
         -   Prueba tu programa para asegurarte de que informa un ganador cuando uno de los emojis llega a la parte inferior de la pantalla
       CSD U6 tugowar conditional_2018: |-
         # Buscar un ganador
@@ -13385,11 +13755,11 @@ es-MX:
 
         # Haz esto
 
-        Usando un condicional dentro de la función `verificarTriunfo()`, debes verificar si un jugador ha ganado cada vez que hacen clic. Por ahora, puedes usar solo `registro.consola` para informar el ganador.
+        Usando un condicional dentro de la función `verificarTriunfo()`, debes verificar si un jugador ha ganado cada vez que hacen clic. Por ahora, puedes usar solo `console.log` para informar el ganador.
 
         -   Agrega una sentencia si al botón de `verificarTriunfo()`
         -   Para la condición de tu sentencia si, verifica si `jugador_y` es mayor a 350 (o usa la parte inferior del valor de pantalla que has elegido en el último nivel)
-        -   En tu condicional, agrega un `registro.consola` que informar qué jugador ganó
+        -   En tu condicional, agrega un `console.log` que informar qué jugador ganó
         -   Prueba tu programa para asegurarte de que informa un ganador cuando uno de los emojis llega a la parte inferior de la pantalla
       CSD U6 tugowar conditional_2019: |-
         # Buscar un ganador
@@ -13398,11 +13768,11 @@ es-MX:
 
         # Haz esto
 
-        Usando un condicional dentro de la función `verificarTriunfo()`, debes verificar si un jugador ha ganado cada vez que hacen clic. Por ahora, puedes usar solo `registro.consola` para informar el ganador.
+        Usando un condicional dentro de la función `verificarTriunfo()`, debes verificar si un jugador ha ganado cada vez que hacen clic. Por ahora, puedes usar solo `console.log` para informar el ganador.
 
         -   Agrega una sentencia si al botón de `verificarTriunfo()`
         -   Para la condición de tu sentencia si, verifica si `jugador_y` es mayor a 350 (o usa la parte inferior del valor de pantalla que has elegido en el último nivel)
-        -   En tu condicional, agrega un `registro.consola` que informar qué jugador ganó
+        -   En tu condicional, agrega un `console.log` que informar qué jugador ganó
         -   Prueba tu programa para asegurarte de que informa un ganador cuando uno de los emojis llega a la parte inferior de la pantalla
       CSD U6 tugowar demo: |-
         # ¡Atrapa el error!
@@ -13748,6 +14118,11 @@ es-MX:
         -   Usa un comando `console.log()` o un observador para informar el valor de `player_y`
         -   Juega el juego con solo un botón, y presta atención al valor de `player_y`
         -   Decide qué valor de `player_y` debería ser considerado la parte inferior de la pantalla
+      CSD What Makes a Computer a Computer Video_2019: |-
+        ## Preguntas para pensar
+
+        -   ¿Qué hizo que las computadoras fueran diferentes a las máquinas anteriores?
+        -   Piensa en algo que haces en la computadora. ¿Qué tipos de entrada, salida, almacenamiento y procesamiento están sucediendo?
       CSD-Arrays: "Hoy vas a aprender cómo usar y crear **funciones**.\n\nCrear una
         función te permite hacer tus propios bloques. Hay dos partes de una función:
         \n\nHacer un bloque con un nombre nuevo que tenga todo el código que quieras
@@ -14286,6 +14661,78 @@ es-MX:
 
         -   Saca el bloque `buzzer.frequency()` de la caja de herramientas y juega con él. Notarás que tiene dos parámetros, ¿qué sucede cuando cambias alguno de los dos o ambos?
         -   Ejecuta el programa y disfruta de la música de tu Circuit Playground.
+      CSDU6 - final project 1: |-
+        # Diseñar la interfaz de usuario
+
+        Antes de preocuparte por el código para tu programa, comienza por diseñar la interfaz de usuario. A medida que agregas elementos en el Modo Diseño, asegúrate de darle a todo un ID comprensible. Incluso si no planificas acceder a un elemento con código, asegurarte de que todos los ID son comprensibles ayudará a hacer que tu programa sea más legible y fácil de programar.
+      CSDU6 - final project 1_2018: |-
+        # Diseñar la interfaz de usuario
+
+        Antes de preocuparte por el código para tu programa, comienza por diseñar la interfaz de usuario. A medida que agregas elementos en el Modo Diseño, asegúrate de darle a todo un ID comprensible. Incluso si no planificas acceder a un elemento con código, asegurarte de que todos los ID son comprensibles ayudará a hacer que tu programa sea más legible y fácil de programar.
+      CSDU6 - final project 1_2019: |-
+        # Diseñar la interfaz de usuario
+
+        Antes de preocuparte por el código para tu programa, comienza por diseñar la interfaz de usuario. A medida que agregas elementos en el Modo Diseño, asegúrate de darle a todo un ID comprensible. Incluso si no planificas acceder a un elemento con código, asegurarte de que todos los ID son comprensibles ayudará a hacer que tu programa sea más legible y fácil de programar.
+      CSDU6 - final project 2: |-
+        # Conectar la IU
+
+        Con la interfaz de usuario en funcionamiento, ahora puedes agregar controladores de eventos para tus elementos de interfaz. En este momento, puede que quieras incluir solamente comandos de `console.log()` para asegurarte de que tus eventos están funcionando como se espera; puedes agregar el código funcional más tarde.
+      CSDU6 - final project 2_2018: |-
+        # Conectar la IU
+
+        Con la interfaz de usuario en funcionamiento, ahora puedes agregar controladores de eventos para tus elementos de interfaz. En este momento, puede que quieras incluir solamente comandos de `console.log()` para asegurarte de que tus eventos están funcionando como se espera; puedes agregar el código funcional más tarde.
+      CSDU6 - final project 2_2019: |-
+        # Conectar la IU
+
+        Con la interfaz de usuario en funcionamiento, ahora puedes agregar controladores de eventos para tus elementos de interfaz. En este momento, puede que quieras incluir solamente comandos de `console.log()` para asegurarte de que tus eventos están funcionando como se espera; puedes agregar el código funcional más tarde.
+      CSDU6 - final project 3: |-
+        # Eventos de entrada de tablero
+
+        Ahora puedes agregar los eventos que tomarán entrada del tablero. De nuevo, en este punto, puedes usar solamente las sentencias de `console.log()` para garantizar que tus eventos estén funcionando.
+      CSDU6 - final project 3_2018: |-
+        # Eventos de entrada de tablero
+
+        Ahora puedes agregar los eventos que tomarán entrada del tablero. De nuevo, en este punto, puedes usar solamente las sentencias de `console.log()` para garantizar que tus eventos estén funcionando.
+      CSDU6 - final project 3_2019: |-
+        # Eventos de entrada de tablero
+
+        Ahora puedes agregar los eventos que tomarán entrada del tablero. De nuevo, en este punto, puedes usar solamente las sentencias de `console.log()` para garantizar que tus eventos estén funcionando.
+      CSDU6 - final project 4: |-
+        # Funciones
+
+        A medida que continúas trabajando con tu programa, busca patrones que pueden ser abstraídos en funciones. ¿Puedes encontrar código que esté repetido en múltiples lugares, o porciones de código que se podrían entender mejor en un nombre dado? No olvides que puedes usar parámetros para escribir funciones para código repetido que es _mayoritariamente_ el mismo, pero que varía un poco (como establecer el color en múltiples LEDs).
+      CSDU6 - final project 4_2018: |-
+        # Funciones
+
+        A medida que continúas trabajando con tu programa, busca patrones que pueden ser abstraídos en funciones. ¿Puedes encontrar código que esté repetido en múltiples lugares, o porciones de código que se podrían entender mejor en un nombre dado? No olvides que puedes usar parámetros para escribir funciones para código repetido que es _mayoritariamente_ el mismo, pero que varía un poco (como establecer el color en múltiples LEDs).
+      CSDU6 - final project 4_2019: |-
+        # Funciones
+
+        A medida que continúas trabajando con tu programa, busca patrones que pueden ser abstraídos en funciones. ¿Puedes encontrar código que esté repetido en múltiples lugares, o porciones de código que se podrían entender mejor en un nombre dado? No olvides que puedes usar parámetros para escribir funciones para código repetido que es _mayoritariamente_ el mismo, pero que varía un poco (como establecer el color en múltiples LEDs).
+      CSDU6 - final project 5: |-
+        # Salida de tablero
+
+        Si no lo has hecho aún, usa algunos de los elementos de salida en el tablero para comunicar información útil al usuario.
+      CSDU6 - final project 5_2018: |-
+        # Salida de tablero
+
+        Si no lo has hecho aún, usa algunos de los elementos de salida en el tablero para comunicar información útil al usuario.
+      CSDU6 - final project 5_2019: |-
+        # Salida de tablero
+
+        Si no lo has hecho aún, usa algunos de los elementos de salida en el tablero para comunicar información útil al usuario.
+      CSDU6 - final project 6: |-
+        # Retoque finales
+
+        Agrega cualquier retoque final que todavía sea necesario para hacer que tu innovación sea increíble. Si tienes tiempo, prueba tu innovación con algunos usuarios potenciales para reunir información y encontrar oportunidades para mejorar. Cuando hayas finalizado totalmente, haz clic en el botón "Enviar" para entregarlo.
+      CSDU6 - final project 6_2018: |-
+        # Retoque finales
+
+        Agrega cualquier retoque final que todavía sea necesario para hacer que tu innovación sea increíble. Si tienes tiempo, prueba tu innovación con algunos usuarios potenciales para reunir información y encontrar oportunidades para mejorar. Cuando hayas finalizado totalmente, haz clic en el botón "Enviar" para entregarlo.
+      CSDU6 - final project 6_2019: |-
+        # Retoque finales
+
+        Agrega cualquier retoque final que todavía sea necesario para hacer que tu innovación sea increíble. Si tienes tiempo, prueba tu innovación con algunos usuarios potenciales para reunir información y encontrar oportunidades para mejorar. Cuando hayas finalizado totalmente, haz clic en el botón "Enviar" para entregarlo.
       CSDU6 - lightswitch toggleswitch: |-
         # Usar el interruptor de alternar
 
@@ -14593,14 +15040,14 @@ es-MX:
 
         -   Cambia el código para que ambos iconos y sus colores sean seleccionados usando la variable "miÍndice".
       CSDU6 circuit playground piano: "# Piano de circuito\n\nMira el código a continuación.
-        No lo vas a cambiar, pero intentar ver lo que hace. \n\n# Haz esto\n\n-   Ejecuta
+        No lo vas a cambiar, pero intenta ver lo que hace. \n\n# Haz esto\n\n-   Ejecuta
         el programa y juega con el piano en la pantalla."
       CSDU6 circuit playground piano_2018: "# Piano de circuito\n\nMira el código
-        a continuación. No lo vas a cambiar, pero intentar ver lo que hace. \n\n#
-        Haz esto\n\n-   Ejecuta el programa y juega con el piano en la pantalla."
+        a continuación. No lo vas a cambiar, pero intenta ver lo que hace. \n\n# Haz
+        esto\n\n-   Ejecuta el programa y juega con el piano en la pantalla."
       CSDU6 circuit playground piano_2019: "# Piano de circuito\n\nMira el código
-        a continuación. No lo vas a cambiar, pero intentar ver lo que hace. \n\n#
-        Haz esto\n\n-   Ejecuta el programa y juega con el piano en la pantalla."
+        a continuación. No lo vas a cambiar, pero intenta ver lo que hace. \n\n# Haz
+        esto\n\n-   Ejecuta el programa y juega con el piano en la pantalla."
       CSDU6 frequency creation: |-
         # Hacer que el timbre suene
 
@@ -14669,22 +15116,22 @@ es-MX:
         -   Haz que el timbre reproduzca una nota aleatoria de tu arreglo cuando se presione el botón **derecho**.
       CSDU6 piano with notes: "# Notas de piano\n\nEste es el mismo piano que viste
         en el comienzo de la lección, pero hay algunos errores.\n\n# Haz esto\n\n-
-        \  Edita el código para que todas las teclas usen un bloque `nota.timbre()`
+        \  Edita el código para que todas las teclas usen un bloque `timbre.nota()`
         para reproducir la nota correspondiente.\n-   Asegúrate de que todos los valores
-        pasados a `nota.timbre()` sean notas, y no frecuencias. \n\n_Sugerencia: ¡Recuerda
-        colocar comillas entre las notas! P. ej., `nota.timbre(\"A4\", 100);`_"
+        pasados a `timbre.nota()` sean notas, y no frecuencias. \n\n_Sugerencia: ¡Recuerda
+        colocar comillas entre las notas! P. ej., `timbre.nota(\"A4\", 100);`_"
       CSDU6 piano with notes_2018: "# Notas de piano\n\nEste es el mismo piano que
         viste en el comienzo de la lección, pero hay algunos errores.\n\n# Haz esto\n\n-
-        \  Edita el código para que todas las teclas usen un bloque `nota.timbre()`
+        \  Edita el código para que todas las teclas usen un bloque `timbre.nota()`
         para reproducir la nota correspondiente.\n-   Asegúrate de que todos los valores
-        pasados a `nota.timbre()` sean notas, y no frecuencias. \n\n_Sugerencia: ¡Recuerda
-        colocar comillas entre las notas! P. ej., `nota.timbre(\"A4\", 100);`_"
+        pasados a `timbre.nota()` sean notas, y no frecuencias. \n\n_Sugerencia: ¡Recuerda
+        colocar comillas entre las notas! P. ej., `timbre.nota(\"A4\", 100);`_"
       CSDU6 piano with notes_2019: "# Notas de piano\n\nEste es el mismo piano que
         viste en el comienzo de la lección, pero hay algunos errores.\n\n# Haz esto\n\n-
-        \  Edita el código para que todas las teclas usen un bloque `nota.timbre()`
+        \  Edita el código para que todas las teclas usen un bloque `timbre.nota()`
         para reproducir la nota correspondiente.\n-   Asegúrate de que todos los valores
-        pasados a `nota.timbre()` sean notas, y no frecuencias. \n\n_Sugerencia: ¡Recuerda
-        colocar comillas entre las notas! P. ej., `nota.timbre(\"A4\", 100);`_"
+        pasados a `timbre.nota()` sean notas, y no frecuencias. \n\n_Sugerencia: ¡Recuerda
+        colocar comillas entre las notas! P. ej., `timbre.nota(\"A4\", 100);`_"
       CSDU6 play null notes: |-
         # Notas nulas
 
@@ -14966,13 +15413,13 @@ es-MX:
       Dance_Party_02: |-
         ¡Hagamos bailar a este alce!
 
-        Arrastra el bloque <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> al espacio de trabajo. Conéctalo debajo del bloque <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"compases"</title></block></xml>. Tu bailarín debería empezar a moverse después del cuarto compás.
+        Arrastra el bloque \<<xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> al espacio de trabajo. Conéctalo debajo del bloque <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> Tu bailarín debería empezar a moverse después del cuarto compás.
 
         Los **compases** se usan para contar el tiempo en la música. En este tutorial, un compás tiene cuatro tiempos.
       Dance_Party_03: |-
         _¡Ya estamos entrando en ritmo!_
 
-        Añade un bloque <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">"compases"</title></block></xml> a tu espacio de trabajo. Haz que el bailarín empiece a moverse después de 6 compases.
+        Añade un bloque <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">"measures"</title></block></xml> a tu espacio de trabajo. Haz que el bailarín empiece a moverse después de 6 compases.
       Dance_Party_04: |-
         \*¡Este baile necesita algunas luces! \*
 
@@ -15131,9 +15578,49 @@ es-MX:
       InspirationalArtwork_2018: "¡Has aprendido todo lo que necesitas saber para
         crear un patrón como éste! \n\nSi esta imagen te inspira, trata de hacer algo
         similar. Si no, crea algo propio."
+      Intro to Web Lab - Part 1_2019: |-
+        ## Pregunta a considerar:
+
+        -   ¿Cuáles son las diferentes partes de Web Lab y para qué se utilizan?
+      Intro to Web Lab - Part 2_2019: |-
+        ## Preguntas a considerar
+
+        -   ¿Por qué son útiles las etiquetas HTML?
+        -   ¿Qué hace la etiqueta de párrafo?
+      K-1 Bee Loops 2: "¡Utiliza un bucle 'repetir' para moverte y luego obtener el
+        néctar y hacer miel!"
+      K-1 Bee Loops 3: "¡Usa tres bucles 'repetir' para obtener el néctar y hacer
+        miel!"
+      K-1 Bee Loops 4: "¡Usa el bucle 'repetir' para obtener el néctar, hacer miel
+        y, para moverte!"
       K-1 Bee Loops 5: "¡Utiliza enlaces para tomar néctar y miel!"
+      K-1 Bee Loops 6: "¡Utiliza un bucle 'repetir' para obtener el néctar, obtener
+        miel, y para moverse!"
+      K-1 Maze Loops 10: |-
+        ¡Llevame al cerdo!
+        El uso del bucle 'repetir' lo hará mucho más fácil.
+      K-1 Maze Loops 11: |-
+        ¡Llevame al cerdo!
+        El bucle 'repetir' hará esto más fácil.
+      K-1 Maze Loops 12: |-
+        ¡Llevame al cerdo!
+        El bucle 'repetir' hará esto más fácil.
       K-1 Maze Loops 2: "¡Usa el bloque de Repetición para llevarme al cerdo!"
+      K-1 Maze Loops 3: |-
+        ¡Llevame al cerdo!
+        Asegúrate de utilizar el bucle 'repetir'.
+      K-1 Maze Loops 5: |-
+        ¡Llevame al cerdo!
+        Asegúrate de utilizar el bucle 'repetir'.
+      K-1 Maze Loops 6: |-
+        ¡Llevame al cerdo!
+        Asegúrate de utilizar el bucle 'repetir'.
+      K-1 Maze Loops 7: |-
+        ¡Llevame al cerdo!
+        Asegúrate de utilizar el bucle 'repetir'.
       K-1 Maze Loops 8: "¡Llévame al cerdo! Usa el bloque de repetición."
+      K-1 Maze Loops Assessment 1: "¡Mira todo lo que hemos aprendido! \n¡Usa un bucle
+        'repetir' para llevarme al cerdo!"
       MC HOC 2016 SCORE LEVEL: "Algunos juegos te permiten llevar el marcador. Juega
         a pillar a estos golems de hierro y usa el bloque <xml>  <block type=\"craft_addScore\">\n
         \   <title name=\"SCORE\">1</title>\n  </block></xml> para anotar un punto
@@ -16088,17 +16575,41 @@ es-MX:
         medida que escribes entradas en el diccionario, el símbolo de la entrada reemplaza
         el patrón en el texto.
       comment_intro_maze_2018: "_\"Estoy confundido. Ayúdame a recordar cómo resolver
-        este laberinto.\"_  \n\n* * *\n\nPara pasar este desafío, resuelve el laberinto
+        este laberinto.\"_    \n\n* * *\n\nPara pasar este desafío, resuelve el laberinto
         y usa el nuevo bloque <xml><block type=\"comment\">\n    <title name=\"TEXT\">
         </title>\n  </block></xml> para dejarte recordatorios rápidos. ¡Pueden ayudarte
         a recordar qué hiciste y por qué!   \n\nSolo **tú** usas estos comentarios;
         no afectarán el área de juego."
+      course1_artist_loops_challenge2: "¡Juguemos un juego! ¡Dibuja tantas X como
+        puedas! ¿Puedes obtener 3 en una fila?"
+      course1_artist_loops_challenge3: |-
+        **¡Tweet!**
+
+        \_"¿Puedes ayudarme a hacer dos casas de pájaros?" \_
       course1_artist_loops_challenge4: _"¡Es hora de lanzar los dados! ¿Puedes ayudarme
         a dibujar estos?"_
       course1_maze_debugging_challenge1: Depura este nivel. Elimina los bloques que
         sobran y agrega los que faltan. ¡Haz que el pájaro llegue hasta el cerdo!
       course1_maze_debugging_challenge2: Depura este nivel. Estos son los bloques
         correctos, ¡pero están mal ordenados!
+      course1_maze_seq_challenge2: Solo puedes moverte hasta cuatro veces en cada
+        dirección. ¿Puedes encontrar un camino antes de que te quedes sin bloques?
+      course1_playlab_events_challenge1: |-
+        \_"¿Dónde se esconden mis amigos? ¡En este juego, haciendo clic en mí se te mostrará a mi amigo Olive el gato! \_
+
+        ¡Al hacer clic en Olive hará que Robin aparezca! ¿Puede escribir código para mostrar el resto de los personajes también?
+
+        ¡En este rompecabezas, asegúrese de hacer clic para obtener pistas! ¡Las sugerencias te ayudarán a hacer este proyecto paso a paso!
+
+        ![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19 PM.png>)
+      course1_playlab_events_challenge2: |-
+        \_ ¡"Vamos a tener una fiesta! Dale a mis amigos algo que hacer cuando hagas clic o los toques". \_
+
+        ¿Qué dirán los animales? ¿Qué más pasará?
+
+        En este rompecabezas, asegúrate de hacer clic para obtener pistas! Las pistas te darán cosas divertidas para probar!
+
+        ![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19 PM.png>)
       course2_artist_nestedLoops_challenge1: |-
         ¿Puedes descubrir cómo crear una imagen como esta?
 
@@ -16297,15 +16808,11 @@ es-MX:
 
         ![expandable](https://images.code.org/f64d93b6d9a7d9c3edfce3c227c0dd49-image-1498062074031.gif)
       courseA_artist_loops7: |-
-        ## Usa el bucle <xml>\<block
-
-        type="controls_repeat_simplified\_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> para agregar olas al agua.
+        ## Usa el bucle <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> para agregar olas al agua.
 
         ![expandable](https://images.code.org/01c5f6772a8b608a2fca5f6de7e25c67-image-1498062629139.gif)
       courseA_artist_loops7_2018: |-
-        ## Usa el bucle <xml>\<block
-
-        type="controls_repeat_simplified\_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> para agregar olas al agua.
+        ## Usa el bucle <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> para agregar olas al agua.
 
         ![expandable](https://images.code.org/01c5f6772a8b608a2fca5f6de7e25c67-image-1498062629139.gif)
       courseA_artist_loops7_2019: |-
@@ -16313,7 +16820,7 @@ es-MX:
 
         type="controls_repeat_simplified\_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> para agregar olas al agua.
 
-        ![expandable](https://images.code.org/01c5f6772a8b608a2fca5f6de7e25c67-image-1498062629139.gif)
+        <xml><block type="controls_repeat_simplified_dropdown" block-text="repeat"><title name="TIMES" config="3-10">???</title></block></xml>
       courseA_artist_loops8: |-
         ## Necesitamos una escalera hasta el bote.
 
@@ -16397,7 +16904,7 @@ es-MX:
         Arrastra los bloques al espacio de trabajo y descubre cómo obtener tesoros. Obtén al menos un objeto para pasar este nivel.
       courseA_collector_loops2: |-
         ¡Consigue los tres montones! Acerca a Laurel a cada pieza del tesoro y, luego, usa este bloque:
-         <xml><block type="collector_collect"/></xml>
+          <xml><block type="collector_collect"/></xml>
       courseA_collector_loops2_2018: |-
         ¡Consigue los tres montones! Acerca a Laurel a cada pieza del tesoro y, luego, usa este bloque:
          <xml><block type="collector_collect"/></xml>
@@ -16417,7 +16924,7 @@ es-MX:
         dar"._
       courseA_collector_preLoops7: |-
         ¡Consigue los tres montones! Acerca a Laurel a cada pieza del tesoro y, luego, usa este bloque:
-         <xml><block type="collector_collect"/></xml>
+          <xml><block type="collector_collect"/></xml>
       courseA_harvester_loops1: "¡Ayuda a la cosechadora a recoger todo el maíz!"
       courseA_harvester_loops10: "¡Ayuda a la cosechadora a recoger todo el maíz!"
       courseA_harvester_loops10_2019: "¡Ayuda a la cosechadora a recoger todo el maíz!"
@@ -16555,6 +17062,7 @@ es-MX:
         ![expandable](https://images.code.org/c6ae5024441e2305db82d06679e5a281-image-1497997160569.gif)
       courseA_maze_seq12_2018: "¡Atrapa a ese cerdo!"
       courseA_maze_seq12_2019: "¡Atrapa a ese cerdo!"
+      courseA_maze_seq13_2019: "¡Atrapa al cerdo como sea!"
       courseA_maze_seq1_2018: _"¡Juega con estos bloques e intenta llevarme hasta
         el cerdo malo!"_
       courseA_maze_seq1_2019: _"¡Juega con estos bloques e intenta llevarme hasta
@@ -16617,24 +17125,24 @@ es-MX:
         sobran y agrega los que faltan. ¡Haz que el pájaro llegue hasta el cerdo!
       courseA_maze_seq_challenge1_2019: Depura este nivel. Elimina los bloques que
         sobran y agrega los que faltan. ¡Haz que el pájaro llegue hasta el cerdo!
+      courseA_maze_seq_challenge2_2019: Traza el camino para que el pájaro llegue
+        hasta el cerdo. ¡Evita el TNT o volarán plumas!
       courseA_playLab_events3: |-
         Ayuda a Jorge el Perro a moverse. Conecta el bloque <xml><block type="studio_move">
-
-        <title name="SPRITE">1</title>
-        <title name="DIR">8</title>
-        </block></xml> al bloque de evento <xml><block type="studio_whenArrow">
-        <title name="VALUE">izquierda</title>
-        </block></xml> que ya está en el espacio de trabajo.
+            <title name="SPRITE">1</title>
+            <title name="DIR">8</title>
+          </block></xml> al bloque de evento <xml><block type="studio_whenArrow">
+            <title name="VALUE">left</title>
+          </block></xml> que ya está en el espacio de trabajo.
 
         ¡Lleva a Jorge hacia la bandera para terminar este nivel!
       courseA_playLab_events3_2018: |-
         Ayuda a Jorge el Perro a moverse. Conecta el bloque <xml><block type="studio_move">
-
-        <title name="SPRITE">1</title>
-        <title name="DIR">8</title>
-        </block></xml> al bloque de evento <xml><block type="studio_whenArrow">
-        <title name="VALUE">izquierda</title>
-        </block></xml> que ya está en el espacio de trabajo.
+            <title name="SPRITE">1</title>
+            <title name="DIR">8</title>
+          </block></xml> al bloque de evento <xml><block type="studio_whenArrow">
+            <title name="VALUE">left</title>
+          </block></xml> que ya está en el espacio de trabajo.
 
         ¡Lleva a Jorge hacia la bandera para terminar este nivel!
       courseA_playLab_events3_2019: |-
@@ -16659,6 +17167,8 @@ es-MX:
         y hacia abajo si se presionan los botones de flecha arriba y flecha abajo.
       courseA_playLab_events5_2019: Agrega eventos para que Jorge se mueva hacia arriba
         y hacia abajo si se presionan los botones de flecha arriba y flecha abajo.
+      courseA_playLab_events6_2019: "¡Hazlo aún más interesante! Cambia el fondo y
+        reproduce un sonido aleatorio cuando se hace clic en Jorge."
       courseA_playLab_events7_2018: _Juego libre:_ Agrega todo lo que quieras a este
         juego. ¿Puedes hacer que el dinosaurio desaparezca cuando Jorge se encuentra
         con él?
@@ -16766,6 +17276,15 @@ es-MX:
         ![](https://images.code.org/126edbb030b78586c620fea11bd9c867-image-1497998152966.gif)
         ![](https://images.code.org/a4fc9deba0ecdae5f434a828708d997b-image-1497998171788.gif)
         ![](https://images.code.org/55271714dcfc01bf49441cdf3bf17649-image-1497998176661.gif)
+      courseB_artist_loops1_2019: Este es un nuevo tipo de desafío llamado "Artista".
+        Juega con el nivel y dibuja algo divertido.
+      courseB_artist_loops2_2019: El artista está tratando de dibujar una línea **6**
+        veces, pero no puede hacerlo bien. ¿Puedes ayudarlo?
+      courseB_artist_loops3_2019: Ayuda al artista a dibujar una línea 7 veces para
+        crear un muro en el jardín.
+      courseB_artist_loops5_2019: "¡Es hora de arreglar las escaleras! Repite este
+        patrón **5** veces para que el artista pueda alcanzar la parte superior de
+        los arbustos."
       courseB_artist_loops6: Detrás de los arbustos, hay una hermosa viña llena de
         flores. ¿Puedes subir la viña y ver hasta dónde llega?
       courseB_artist_loops6_2018: Detrás de los arbustos, hay una hermosa viña llena
@@ -16775,6 +17294,10 @@ es-MX:
       courseB_artist_loops7: "**Desafío:** ¡es un jardín escondido! Vamos a recorrerlo."
       courseB_artist_loops7_2018: "**Desafío:** ¡es un jardín escondido! Vamos a recorrerlo."
       courseB_artist_loops7_2019: "**Desafío:** ¡es un jardín escondido! Vamos a recorrerlo."
+      courseB_artist_loops8_2019: Es hora de irse a casa. ¿Puedes arreglar esta escalera
+        con un solo bloque para ayudar al artista a bajar?
+      courseB_artist_loops9_2019: Tomemos el atajo del estanque. ¿Puedes ayudar al
+        artista a permanecer en las piedras?
       courseB_artist_loops_challenge1: _"¡Es hora de lanzar los dados! ¿Puedes ayudarme
         a dibujar estos?"_
       courseB_artist_loops_challenge1_2018: _"¡Es hora de lanzar los dados! ¿Puedes
@@ -16791,6 +17314,9 @@ es-MX:
         **Juego libre:** ¡Esta es Laurel la Aventurera! Muévela y consigue todo el tesoro que puedas.
 
         Arrastra los bloques al espacio de trabajo y descubre cómo obtener tesoros. Obtén al menos un objeto para pasar este nivel.
+      courseB_collector_loops10_2019: Ayuda a Laurel a obtener todo el tesoro de esta
+        cueva.
+      courseB_collector_loops11_2019: "¡Eureka! ¡Consigue todos los tesoros que puedas!"
       courseB_collector_loops1_2018: "**Juego libre:** Mueve a Laurel y consigue todos
         los tesoros que puedas. Consigue al menos un objeto sin errores para pasar
         este nivel.\n\n* * *\n\nArrastra bloques al espacio de trabajo e intenta descubrir
@@ -16817,6 +17343,18 @@ es-MX:
         de tesoros con un solo bloque <xml><block type="maze_moveEast"/></xml>?
       courseB_collector_loops3_2019: ¿Cómo puede Laurel obtener los cinco montones
         de tesoros con un solo bloque <xml><block type="maze_moveEast"/></xml>?
+      courseB_collector_loops4_2019: "¡Arregla el camino de Laurel para conseguir
+        todo el tesoro!"
+      courseB_collector_loops5_2019: 'Agrégalo al código del último desafío para obtener
+        todo el tesoro. '
+      courseB_collector_loops6_2019: "¡Descubre el código que ayudará a Laurel a obtener
+        todo el tesoro!"
+      courseB_collector_loops7_2019: Escribe el código para obtener todo el tesoro.
+      courseB_collector_loops8_2019: "**Desafío:** ¡El tesoro baja por estas escaleras!
+        Escribe el código para ayudar a Laurel a conseguirlo."
+      courseB_collector_loops9_2019: _"Ayúdame a obtener el tesoro de este valle profundo"._
+      courseB_collector_loops_challenge1_2019: 'Esta vez tienes bloques limitados.
+        ¡Obtén todo el tesoro! '
       courseB_collector_loops_challenge2a: |-
         _"¡Vamos a buscar el tesoro!"_
 
@@ -16861,7 +17399,22 @@ es-MX:
         para ayudar a Scrat a llegar hasta allí?"
       courseB_iceage_loops9_2019: "¡La bellota está muy lejos! ¿Puedes utilizar los
         bucles para ayudar a Scrat a llegar hasta allí?"
+      courseB_maze_seq10_2019: Arregla los errores para que Scrat llegue hasta la
+        bellota.
+      courseB_maze_seq11_2019: "¡Depende de ti! Haz que Scrat llegue hasta la bellota."
+      courseB_maze_seq12_2019: "¡Ahora consigue esa bellota como sea!"
+      courseB_maze_seq1_2019: "¡Juega con estos bloques y mira lo que le hacen hacer
+        a Scrat! \n\nHaz que Scrat llegue hasta la bellota para completar el nivel."
       courseB_maze_seq3: _"¡Arregla el código para llevarme hasta el cerdo!"_
+      courseB_maze_seq4_2019: Usa **2** bloques de movimiento para que Scrat llegue
+        hasta la bellota.
+      courseB_maze_seq5_2019: "¡Este desafío es un poco complicado!"
+      courseB_maze_seq6_2019: "¡Muévete de un lado a otro para que Scrat llegue hasta
+        la bellota!"
+      courseB_maze_seq7_2019: "¡Averigua lo que falta y añade bloques para que Scrat
+        llegue hasta la bellota!"
+      courseB_maze_seq8_2019: "¡Es tu turno! ¿Qué tienes que hacer para que Scrat
+        llegue hasta la bellota?"
       courseB_maze_seq9: "**Desafío:** Rodea el TNT para que el pájaro llegue hasta
         el cerdo."
       courseB_maze_seq9_2018: "**Desafío:** Rodea el hielo roto para que Scrat llegue
@@ -16874,12 +17427,16 @@ es-MX:
         ¿Puedes encontrar una ruta antes de que se te acaben los bloques?
       courseB_maze_seq_challenge1_2019: Solo tienes cuatro de cada bloque de movimiento.
         ¿Puedes encontrar una ruta antes de que se te acaben los bloques?
+      courseB_maze_seq_challenge2_2019: Depura este nivel. Estos son los bloques correctos,
+        ¡pero están mal ordenados!
       courseB_playLab_events1: "Este juego se llama \"Laboratorio de juegos\".  \n\nDescubre
         si puedes descifrar qué hace cada bloque."
       courseB_playLab_events1_2018: "Este juego se llama \"Laboratorio de juegos\".
         \ \n\nDescubre si puedes descifrar qué hace cada bloque."
       courseB_playLab_events1_2019: "Este juego se llama \"Laboratorio de juegos\".
         \ \n\nDescubre si puedes descifrar qué hace cada bloque."
+      courseB_playlab_events2_2019: Haz que Daisy la Dragón diga algo cuando haces
+        clic en "Ejecutar".
       courseB_playlab_events3: Utiliza un evento para que Daisy la Dragón cambie a
         un estado de ánimo aleatorio ![](https://images.code.org/c365e065614fea592612264f33624c09-image-1475698889081.17.53.png)
         si haces clic en ella.
@@ -16931,6 +17488,8 @@ es-MX:
         \ Haz que el caballero se desvanezca cuando se encuentre con el dragón.   \n2.
         \ Reproduce un sonido cuando choquen para que parezca más real.  \n\n* * *\n\nConsulta
         todos los objetivos y, luego, encuéntrate con el dragón para pasar de nivel."
+      courseB_playlab_eventsFP_2019: "**Juego libre.** Usa tu imaginación. ¿Qué puedes
+        hacer para que este juego sea más divertido?"
       courseB_playlab_events_challenge1: "¡Es momento para la Gran Carrera Animal!
         Haz que los animales se muevan hacia abajo cuando presionas `▼`. \n\n¿Cuál
         será el más veloz?"
@@ -17097,7 +17656,7 @@ es-MX:
       courseC_artist_loop1_2018: |-
         _"¡Fantástico!"_
 
-        Cambiemos el pincel y usemos el bloque <xml><block type="draw_line_style_pattern"> <title name="VALUE">PREDETERMINADO</title></block></xml> para agregar algo de estilo antes de que comience nuestro bucle.
+        Cambiemos el pincel y usemos el bloque <xml><block type="draw_line_style_pattern"> <title name="VALUE">DEFAULT</title></block></xml> para agregar algo de estilo antes de que comience nuestro bucle.
       courseC_artist_loop1_2019: |-
         _"¡Fantástico!"_
 
@@ -17115,13 +17674,12 @@ es-MX:
         que aparezca el pájaro.\n\n* * *\n\nPresiona \"Finalizar\" cuando estés contento
         con lo que has hecho."
       courseC_artist_loops1a_2019: "**Juego libre:** ¡Vamos a crear algo más grande
-        paso a paso! \n\nUsa el bloque <xml> <block type=\"jump_to\" id=\"callout\"
-        name=\"callout\" block-text=\"jump to the middle center position\"><title
-        name=\"VALUE\">13</title></block></xml> para llevar al artista hasta el centro
-        del área de juego, y luego usa el bloque <xml><block type=\"sticker\" block-text=\"draw
-        sticker\"><title name=\"VALUE\">Beaver</title></block></xml> para que aparezca
-        algo.\n\n* * *\n\nPresiona \"Finalizar\" cuando estés contento con lo que
-        has hecho.\n\n![expandable](https://images.code.org/1435d3650553df44eba973572d409a50-image-1553096405891.png)\n![expandable](https://images.code.org/6912d2144b90aa7087fe854742d1e8b9-image-1553096425394.png)\n![expandable](https://images.code.org/8de9e1aa15fdfe30ffed763e0e1d6e04-image-1553096428531.png)"
+        paso a paso! \n\nUsa el bloque <xml> <block type=\"jump_to\" block-text=\"jump
+        to the middle center position\"><title name=\"VALUE\">13</title></block></xml>
+        para llevar al artista hasta el centro del área de juego, y luego usa el bloque
+        <xml><block type=\"sticker\" block-text=\"draw sticker\"><title name=\"VALUE\">Beaver</title></block></xml>
+        para que aparezca algo.\n\n* * *\n\nPresiona \"Finalizar\" cuando estés contento
+        con lo que has hecho.\n\n![expandable](https://images.code.org/1435d3650553df44eba973572d409a50-image-1553096405891.png)\n![expandable](https://images.code.org/6912d2144b90aa7087fe854742d1e8b9-image-1553096425394.png)\n![expandable](https://images.code.org/8de9e1aa15fdfe30ffed763e0e1d6e04-image-1553096428531.png)"
       courseC_artist_loops1b_2019: |-
         Agrega un comando `girar` a tu código para cambiar la orientación de tu sticker.
 
@@ -17295,17 +17853,17 @@ es-MX:
         id=\"callMe\"><title name=\"XPOS\">200</title><title name=\"YPOS\">200</title></block></xml>
         para llevar al artista hasta el centro del área de juego.\\\\ \nLuego dibuja
         una línea de 50 pixeles de largo con el bloque <xml><block type=\"draw_move_by_constant\"><title
-        name=\"DIR\">avanzar</title><title name=\"VALUE\">50</title></block></xml>."
+        name=\"DIR\">moveForward</title><title name=\"VALUE\">50</title></block></xml>."
       courseC_artist_loopsPrePre1a_2018: |-
         ### ¡El artista está en la ubicación incorrecta!
 
-        Usa el bloque <xml><block type="jump_to_xy" id="callMe"><title name="XPOS">200</title><title name="YPOS">200</title></block></xml> para llevar al artista hasta el centro del área de juego.
-        Luego dibuja una línea de 50 pixeles de largo con el bloque <xml><block type="draw_move_by_constant"><title name="DIR">ir hacia adelante</title><title name="VALUE">50</title></block></xml>.
+        Usa el bloque <xml><block type="jump_to_xy" id="callMe"><title name="XPOS">200</title><title name="YPOS">200</title></block></xml> para llevar al artista hasta el centro del área de juego.\
+        Luego dibuja una línea de 50 pixeles de largo con el bloque <xml><block type="draw_move_by_constant"><title name="DIR">moveForward</title><title name="VALUE">50</title></block></xml>.
       courseC_artist_loopsPrePre1a_2019: |-
         ### ¡El artista está en la ubicación incorrecta!
 
-        Usa el bloque <xml><block type="jump_to_xy" id="callMe"><title name="XPOS">200</title><title name="YPOS">200</title></block></xml> para llevar al artista hasta el centro del área de juego.
-        Luego dibuja una línea de 50 pixeles de largo con el bloque <xml><block type="draw_move_by_constant"><title name="DIR">ir hacia adelante</title><title name="VALUE">50</title></block></xml>.
+        Usa el bloque <xml><block type="jump_to_xy" id="callMe" block-text="jump to 200 over 200 down"><title name="XPOS">200</title><title name="YPOS">200</title></block></xml> para llevar al artista hasta el centro del área de juego.
+        Luego dibuja una línea de 50 pixeles de largo con el bloque <xml><block type="draw_move_by_constant" block-text="move forward"><title name="DIR">moveForward</title><title name="VALUE">50</title></block></xml>.
       courseC_artist_prog1: |-
         _"Hola, soy un artista. Puedes escribir un código para hacerme dibujar casi cualquier cosa"._
 
@@ -17449,7 +18007,7 @@ es-MX:
       courseC_collector_prog2_2018: Mueve a Laurel hacia el tesoro, y luego usa <xml><block
         type="collector_collect"/></xml> para recogerlo.
       courseC_collector_prog2_2019: Mueve a Laurel hacia el tesoro, y luego usa <xml><block
-        type="collector_collect"/></xml> para recogerlo.
+        type="collector_collect" block-text="collect"/></xml> para recogerlo.
       courseC_collector_prog3: "_\"¡La secuencia importa!\"_ \n\nLos bloques que necesitas
         ya están en el espacio de trabajo, pero no están conectados.\\\\ \nOrdena
         los bloques para recoger el tesoro y resolver el desafío."
@@ -18948,8 +19506,13 @@ es-MX:
       courseD_iceage_loops2: "¡Usa un bloque <xml><block type=\"maze_turn\">\\\r\n
         \   <title name=\"DIR\">turnLeft</title>\\\r\n  </block></xml> para llegar
         a la bellota!"
+      courseD_iceage_loops2_2019: "¡Usa un bloque <xml><block type=\"maze_turn\">\\\r\n
+        \   <title name=\"DIR\">turnLeft</title>\\\r\n  </block></xml> para llegar
+        a la bellota!"
       courseD_iceage_loops3: ¿Puedes llegar a la bellota con sólo un bloque <xml><block
         type="maze_moveForward"/></xml>? ¡Inténtalo usando un bucle!
+      courseD_iceage_loops3_2019: ¿Puedes llegar a la bellota con un solo bloque <xml><block
+        type="maze_moveWest"/></xml>? ¡Inténtalo usando un bucle!
       courseD_iceage_loops4: "¡Añade un bloque más para que Scrat llegue hasta la
         bellota!"
       courseD_iceage_loops4_2019: "¡Añade un bloque más para que Scrat llegue hasta
@@ -19194,13 +19757,12 @@ es-MX:
       courseD_scrat_ramp8: "**Desafío:** ¡Usa lo que has aprendido para llevar a Scrat
         a la bellota!"
       courseE_aboutme_2: |-
-        Puedes hacer un póster igual que el de Rikki. Primero debes conseguir un disfraz nuevo para el sprite a continuación. ¡Se supone que ese eres tú!
+        ![](https://images.code.org/2bae4bc7c7d59fac0cd4b1370d3c4a11-image-1557179992653.png) _"¡Soy Rikki! Te voy a ayudar a hacer un póster genial. Primero debes hacer clic en la solapa Disfraces"_
 
-        <span style="color: #f00">Rikki: "¡Yo te ayudaré! Usa la solapa Disfraces para dibujar o elegir un disfraz que te represente."</span>
-
-        1.  Haz clic en la solapa **Disfraces**.
-        2.  Dibuja un disfraz que te represente, o elige uno de la biblioteca.
-        3.  En el código a continuación, cambia el disfraz del sprite por el tuyo.
+        1.  Haz clic en la solapa **Disfraces**, en la parte superior izquierda de la pantalla (junto a **Código**).
+        2.  Edita el disfraz inicial, y agrega uno nuevo que te guste.
+        3.  Cambia el disfraz del sprite al tuyo propio en el código a continuación.
+        4.  Haz clic en "Ejecutar" para ver la nueva apariencia del sprite.
       courseE_artist_concept1: |-
         Recrea esta imagen.
 
@@ -19614,36 +20176,33 @@ es-MX:
       courseE_farmer_ramp12b_2019: Ahora, la cosechadora necesita recoger todas las
         lechugas. Usa el 'mientras hay lechugas' dentro del loop 'repetir' para recogerlas
         todas!
-      courseE_farmer_ramp12c: "¡Cielos! Mira todos estos brotes. Algunos se volverán
-        maíz y otros, lechuga. \n\nLlega hasta el final del camino para recoger la
-        lechuga, mientras haya, y recoger el maíz, mientras haya. "
+      courseE_farmer_ramp12c: "Las lechugas ahora están solo al final del camino.\\\nSigue
+        el camino **hasta** que alcances la lechuga, y luego continúa para recogerla
+        **mientras** queden más por recoger.  "
       courseE_farmer_ramp12c_2018: "Las lechugas están ahora al final del camino.
         \ \\\r\nSigue el camino **hasta** que alcances la lechuga luego continúa para
         recoger **mientras** queden más por recoger.  "
-      courseE_farmer_ramp12c_2019: "¡Cielos! Mira todos estos brotes. Algunos se volverán
-        maíz y otros, lechuga. \n\nLlega hasta el final del camino para recoger la
-        lechuga, mientras haya, y recoger el maíz, mientras haya. "
-      courseE_farmer_ramp12d: "¡La misma técnica funciona con el néctar y la miel!
-        \n\nMira todas estas nubes. Algunas de ellas se transformarán en miel y otras,
-        en néctar.\\\nAyuda a la abeja a seguir el camino y resolver este desafío."
+      courseE_farmer_ramp12c_2019: "Las lechugas ahora están solo al final del camino.\\\nSigue
+        el camino **hasta** que alcances la lechuga, y luego continúa para recogerla
+        **mientras** queden más por recoger.  "
+      courseE_farmer_ramp12d: "Las lechugas están esparcidas en el jardín.\\\nSigue
+        por cada camino **hasta** que alcances una lechuga, y luego continúa para
+        recogerla **mientras** queden más por recoger.  "
       courseE_farmer_ramp12d_2018: "Las lechugas están esparcidas en el jardín  \\\r\nSigue
         por cada camino **hasta** que alcances una lechuga, luego continúa para recogerla
         **mientras** queden más por recoger.  "
-      courseE_farmer_ramp12d_2019: "¡La misma técnica funciona con el néctar y la
-        miel! \n\nMira todas estas nubes. Algunas de ellas se transformarán en miel
-        y otras, en néctar.\\\nAyuda a la abeja a seguir el camino y resolver este
-        desafío."
-      courseE_farmer_ramp12e: "¡La misma técnica funciona con el néctar y la miel!
-        \n\nMira todas estas nubes. Algunas de ellas se transformarán en miel y otras,
-        en néctar.\\\nAyuda a la abeja a seguir el camino y resolver este desafío."
-      courseE_farmer_ramp12e_2018: "¡La misma técnica funciona con el néctar y la
-        miel! \n\nMira todas estas nubes. Algunas de ellas se transformarán en miel
-        y otras, en néctar.\\\nAyuda a la abeja a seguir el camino y resolver este
-        desafío."
-      courseE_farmer_ramp12e_2019: "¡La misma técnica funciona con el néctar y la
-        miel! \n\nMira todas estas nubes. Algunas de ellas se transformarán en miel
-        y otras, en néctar.\\\nAyuda a la abeja a seguir el camino y resolver este
-        desafío."
+      courseE_farmer_ramp12d_2019: "Las lechugas están esparcidas en el jardín.\\\nSigue
+        por cada camino **hasta** que alcances una lechuga, y luego continúa para
+        recogerla **mientras** queden más por recoger.  "
+      courseE_farmer_ramp12e: "Las lechugas están esparcidas en el jardín.\\\nSigue
+        por cada camino **hasta** que alcances una lechuga, y luego continúa para
+        recogerla **mientras** queden más por recoger.  "
+      courseE_farmer_ramp12e_2018: "Las lechugas están esparcidas en el jardín.\\\nSigue
+        por cada camino **hasta** que alcances una lechuga, y luego continúa para
+        recogerla **mientras** queden más por recoger.  "
+      courseE_farmer_ramp12e_2019: "Las lechugas están esparcidas en el jardín.\\\nSigue
+        por cada camino **hasta** que alcances una lechuga, y luego continúa para
+        recogerla **mientras** queden más por recoger.  "
       courseE_farmer_ramp12f: "**Desafío**: La única manera de recoger todos los cultivos
         es avanzar hasta llegar a la lechuga, luego girar a la izquierda **si** hay
         un camino a la izquierda. De lo contrario, gira a la derecha."
@@ -19804,7 +20363,7 @@ es-MX:
         una de las siguientes formas son 7 pixeles más largos que el anterior. \nUsa
         el bloque `multiplicación` para que todo suceda con solo llamar a una función.\n\n*
         * *\n\nEl bloque `multiplicación` luce así <xml><block type=\"math_arithmetic\"
-        inline=\"true\">\n      <title name=\"OP\">MULTIPLICAR</title>\n    </block></xml>"
+        inline=\"true\">\n      <title name=\"OP\">MULTIPLY</title>\n    </block></xml>"
       courseF_artist_fwp6: |-
         **Desafío:** edita `dibujar un borde en espiral` para usar los parámetros `longitud` y `lados`, y luego vuelve a crear estas formas.
 
@@ -19907,13 +20466,13 @@ es-MX:
 
         <xml>
         <block type="variables_set" inline="false">
-                                <title name="VAR">longitud</title>
+                                <title name="VAR">length</title>
                                 <value name="VALUE">
                                   <block type="math_arithmetic" inline="true">
-                                    <title name="OP">AGREGAR</title>
+                                    <title name="OP">ADD</title>
                                     <value name="A">
                                       <block type="variables_get">
-                                        <title name="VAR">longitud</title>
+                                        <title name="VAR">length</title>
                                       </block>
                                     </value>
                                     <value name="B">
@@ -19932,13 +20491,13 @@ es-MX:
 
         <xml>
         <block type="variables_set" inline="false">
-                                <title name="VAR">longitud</title>
+                                <title name="VAR">length</title>
                                 <value name="VALUE">
                                   <block type="math_arithmetic" inline="true">
-                                    <title name="OP">AGREGAR</title>
+                                    <title name="OP">ADD</title>
                                     <value name="A">
                                       <block type="variables_get">
-                                        <title name="VAR">longitud</title>
+                                        <title name="VAR">length</title>
                                       </block>
                                     </value>
                                     <value name="B">
@@ -19957,13 +20516,13 @@ es-MX:
 
         <xml>
         <block type="variables_set" inline="false">
-                                <title name="VAR">longitud</title>
+                                <title name="VAR">length</title>
                                 <value name="VALUE">
                                   <block type="math_arithmetic" inline="true">
-                                    <title name="OP">AGREGAR</title>
+                                    <title name="OP">ADD</title>
                                     <value name="A">
                                       <block type="variables_get">
-                                        <title name="VAR">longitud</title>
+                                        <title name="VAR">length</title>
                                       </block>
                                     </value>
                                     <value name="B">

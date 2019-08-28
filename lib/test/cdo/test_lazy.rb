@@ -18,6 +18,9 @@ class LazyTest < Minitest::Test
   def test_class
     lazy = Cdo.lazy {'test'}
     assert_instance_of String, lazy
+    assert_instance_of Cdo::Lazy, lazy
+    assert_kind_of String, lazy
+    assert_kind_of Cdo::Lazy, lazy
     assert_equal String, lazy.class
   end
 end

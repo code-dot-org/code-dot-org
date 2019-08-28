@@ -2,6 +2,32 @@
 hi-IN:
   data:
     authored_hints:
+      2-3 Artist Functions 1:
+        2-3_Artist_Functions_1_a: प्रत्येक वर्ग की 100 पिक्सल की भुजाएं हैं, जिसका
+          अर्थ है कि आपको अपना दूसरा वर्ग खींचने से पहले 175 पिक्सल आगे की ओर मूव
+          करना होगा।
+        2-3_Artist_Functions_1_b: अपने गिलास बनाने के लिए आप एक ही बार में लाइनें
+          खींच सकते हैं।
+      2-3 Artist Functions 2:
+        2-3_Artist_Functions_2_a: |-
+          आपके प्रोग्राम को यह करना चाहिए:
+
+          -   फंक्शन का उपयोग
+          -   100 + 75 पिक्सल आगे की ओर मूव करना
+          -   फंक्शन का उपयोग
+      2-3 Bee Functions 8:
+        2-3_Bee_Functions_8_a: यदि पहेली चुनौतीपूर्ण प्रतीत हो, तो थोड़े समय में अपना
+          फंक्शन बनाने का प्रयास करें। कुछ ब्लॉक्स जोड़ें, फिर इसे आजमाएं। और जोड़ें,
+          फिर दुबारा आजमाएं।  जल्दी ही, आप वहां पहुंच जाएंगे![][0]
+      2-3 Bee Functions 9:
+        2-3_Bee_Functions_8_b: |-
+          हरे फंक्शन ब्लॉक के अंदर अपना कोड बनाना याद रखें।
+          ![](https://images.code.org/8fe1fae5caf4ede3a9c9bd9f26940cde-image-1467996837459.gif)
+      Course 4 Artist 11:
+        Course_4_Artist_11_a: 'आधे षट्कोण की \*30 की लंबाई\*\* है और यह **60 डिग्री**
+          दाएं मुड़ता है।  '
+        Course_4_Artist_11_b: '2/3 त्रिकोण की \*80 की लंबाई\*\* है और यह **120 डिग्री**
+          दाएं मुड़ता है। '
       CourseD_Dance_Party_01:
         validation: |-
           "**मैं यह स्तर कैसे पास करूं?**
@@ -138,3 +164,1919 @@ hi-IN:
         validation: "**मैं यह स्तर कैसे पास करूं?** - आपके दबाने पर रोबोट को डांस
           मूव के लिए सक्रिय करने हेतु `जब दाएं तीर वाला बटन दबाया जाए` ब्लॉक का उपयोग
           करें। _यह स्तर 7 संगीत प्रविधियों के बाद समाप्त होता है।_"
+      course1_collector_loops_challenge1:
+        courseA_collector_loops_challenge1_b: यदि आप केवल एक बार कुछ कर रहे हैं तो
+          आपको लूप का उपयोग करने की जरूरत नहीं है।
+      course1_maze_seq_challenge1:
+        courseA_maze_seq_challenge2_a: अपनी उंगली से खाली स्थान गिनने की कोशिश करें।
+          याद रखें कि वह खाली स्थान न गिनें, जहां से आप शुरू करते हैं!
+      course1_playlab_events_challenge1:
+        courseA_playlab_events_challenge1_a: "जब आप रॉबिन पर क्लिक करें तो वैड्लेस
+          द पेंगुइन को आने के लिए सक्रिय करें!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
+          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n
+          \     </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_b: "जब आप वैड्डलेस पर क्लिक करें तो बू द
+          घोस्ट को आने के लिए सक्रिय करें!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">3</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
+          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">4</title>\n
+          \     </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_c: "जब आप बू पर क्लिक करें तो जेडन द फज्जी
+          मोन्स्टर को आने के लिए सक्रिय करें!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">4</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
+          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">5</title>\n
+          \     </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_d: "जब आप दैत्य पर क्लिक करें को स्पिफ द
+          रोबोट को आने के लिए सक्रिय करें!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
+          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">6</title>\n
+          \     </block>\n    </next>\n  </block></xml>"
+      course1_playlab_events_challenge2:
+        courseA_playlab_events_challenge2_a: "आप पक्षी को गाना गाने के लिए सक्रिय
+          कर सकते हैं।\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title
+          name=\"SPRITE\">2</title>\n    <next>\n          <block type=\"studio_saySprite\">\n
+          \           <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n
+          \         </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge2_b: "आप रोबोट से बीप की आवाज़ निकालने के
+          लिए सक्रिय कर सकते हैं।\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">6</title>\n    <next>\n      \n          <block
+          type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n
+          \         </block>\n        </next>\n  </block></xml>"
+        courseA_playlab_events_challenge2_c: |-
+          आप किसी भी गुस्सैल दैत्य को गुर्राने के लिए सक्रिय कर सकते हैं।
+
+          <xml>  <block type="studio_whenSpriteClicked">
+              <title name="SPRITE">5</title>
+              <next>
+                <block type="studio_setSpriteEmotion">
+                  <title name="SPRITE">5</title>
+                  <title name="VALUE">2</title>
+                  <next>
+                    <block type="studio_saySprite">
+                      <title name="SPRITE">5</title>
+                      <title name="TEXT">Roar!</title>
+                      <next>
+                        <block type="studio_setSpriteEmotion">
+                          <title name="SPRITE">5</title>
+                          <title name="VALUE">0</title>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block></xml>
+      course3_artist_functions_challenge2:
+        courseE_artist_functions_challenge1_a: |-
+          <xml>
+            <block type="jump_to_xy">
+              <title name="XPOS">350</title>
+              <title name="YPOS">200</title>
+            </block>
+            </xml>
+
+          इस `कूदें` ब्लॉक से आप जब भी चाहें, ज़ोम्बी कलाकार को ग्रिड पर किसी भी पिक्सल की ओर मूव कर सकते हैं। यह उसे कई पिक्सल दाएं और कई पिक्सल बाएं मूव करके काम करता है। इसे हमेशा ऊपर बाएं कोने से गिना जाता है, जिससे इसका अर्थ होता है कि इससे कोई फर्क नहीं पड़ता कि ज़ोम्बी कलाकार कमांड चलाने _से पहले_ कहां था![][0]
+      course3_bee_functions_challenge1:
+        courseE_bee_functions_challenge1_b: हरे फंक्शन ब्लॉक के अंदर अपना कोड बनाना
+          याद रखें।
+      course3_bee_functions_challenge2:
+        courseE_bee_functions_challenge1_b: हरे फंक्शन ब्लॉक के अंदर अपना कोड बनाना
+          याद रखें।
+      course3_playLab_challenge1:
+        courseE_playLab_challenge1_a: यहां कुछ कार्य दिए गए हैं, जो आप तब कर सकते
+          हैं, जब खिलाड़ी गेम जीतता है:-   डायनासोर को गायब करें।-   गिलहरियों को
+          रोकें।-   गिलहरियों और नाइट को खुश करें।-   नई पृष्ठभूमि सेट करें।-   मदद
+          करने के लिए खिलाड़ी का धन्यवाद करने हेतु नाइट को सक्रिय करें।-   सभी अभिनेताओं
+          को गायब करें और "आप जीते!" संदेश दिखाएं।
+        courseE_playLab_challenge1_b: यहां कुछ कार्य दिए गए हैं, जो आप तब कर सकते
+          हैं, जब खिलाड़ी गेम हारता है:-   नाइट को गायब करें।-   गिलहरियों को उदास
+          करें।-   डायनासोर को कुछ कहने के लिए सक्रिय करें।-   नई पृष्ठभूमि सेट करें।-   मदद
+          करने के लिए खिलाड़ी का धन्यवाद करने हेतु नाइट को सक्रिय करें।-   सभी अभिनेताओं
+          को गायब करें और "गेम समाप्त!" संदेश दिखाएं।
+      course4_artist_concept_challenge2:
+        courseE_artist_concept_challenge2_a: जब आप फंक्शन परिभाषित कर लें, तो आप इसे
+          बार-बार बोल सकते हैं - जब भी और जहां भी आप चाहें!
+        courseE_artist_concept_challenge2_b: |-
+          आप इस कमांड का उपयोग करते हुए कैनवास पर अलग-अलग पोजीशनों पर कूद सकते हैं:
+          <xml>  <block type="jump_to">
+              <title name="VALUE">???</title>
+            </block></xml>
+      course4_artist_functions_challenge2:
+        courseE_artist_functions_challenge1_a: |-
+          <xml>
+            <block type="jump_to_xy">
+              <title name="XPOS">350</title>
+              <title name="YPOS">200</title>
+            </block>
+            </xml>
+
+          इस `कूदें` ब्लॉक से आप जब भी चाहें, ज़ोम्बी कलाकार को ग्रिड पर किसी भी पिक्सल की ओर मूव कर सकते हैं। यह उसे कई पिक्सल दाएं और कई पिक्सल बाएं मूव करके काम करता है। इसे हमेशा ऊपर बाएं कोने से गिना जाता है, जिससे इसका अर्थ होता है कि इससे कोई फर्क नहीं पड़ता कि ज़ोम्बी कलाकार कमांड चलाने _से पहले_ कहां था![][0]
+      courseA_artist_loops2:
+        courseA_artist_loops2_a: क्या आप पता नहीं लगा पा रहे हैं कि लाइन कैसे खींचनी
+          है?  यह देखने के लिए <xml><block type="when_run"/></xml> ब्लॉक में ब्लॉक्स
+          जोड़ना शुरू करें कि क्या होता है।
+        courseA_artist_loops2_b: इस पहेली को हल करने के लिए इस ब्लॉक <xml><block type="simple_move_right"/></xml>
+          का उपयोग करें।
+      courseA_artist_loops2_2018:
+        courseA_artist_loops2_a: क्या आप पता नहीं लगा पा रहे हैं कि लाइन कैसे खींचनी
+          है?  यह देखने के लिए <xml><block type="when_run"/></xml> ब्लॉक में ब्लॉक्स
+          जोड़ना शुरू करें कि क्या होता है।
+        courseA_artist_loops2_b: इस पहेली को हल करने के लिए इस ब्लॉक <xml><block type="simple_move_right"/></xml>
+          का उपयोग करें।
+      courseA_artist_loops2_2019:
+        courseA_artist_loops2_a: क्या आप पता नहीं लगा पा रहे हैं कि लाइन कैसे खींचनी
+          है?  यह देखने के लिए <xml><block type="when_run"/></xml> ब्लॉक में ब्लॉक्स
+          जोड़ना शुरू करें कि क्या होता है।
+        courseA_artist_loops2_b: इस पहेली को हल करने के लिए इस ब्लॉक <xml><block type="simple_move_right"/></xml>
+          का उपयोग करें।
+      courseA_artist_loops3:
+        courseA_artist_loops3_a: यह देखने के लिए अपनी उंगली के साथ धीरे-धीरे प्रोग्राम
+          खोजें कि यह कहां गलत होता है।
+        courseA_artist_loops3_b: |-
+          इस पहेली को हल करने के लिए आप इस तरह के ब्लॉक का उपयोग करना चाहेंगे।
+
+          ![](<https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49 AM.png>)
+      courseA_artist_loops3_2018:
+        courseA_artist_loops3_a: यह देखने के लिए अपनी उंगली के साथ धीरे-धीरे प्रोग्राम
+          खोजें कि यह कहां गलत होता है।
+        courseA_artist_loops3_b: |-
+          इस पहेली को हल करने के लिए आप इस तरह के ब्लॉक का उपयोग करना चाहेंगे।
+
+          ![](<https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49 AM.png>)
+      courseA_artist_loops3_2019:
+        courseA_artist_loops3_a: यह देखने के लिए अपनी उंगली के साथ धीरे-धीरे प्रोग्राम
+          खोजें कि यह कहां गलत होता है।
+        courseA_artist_loops3_b: |-
+          इस पहेली को हल करने के लिए आप इस तरह के ब्लॉक का उपयोग करना चाहेंगे।
+
+          ![](<https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49 AM.png>)
+      courseA_artist_loops4:
+        courseA_artist_loops4_a: यदि आप चाहते हैं कि लूप 4 बार से अधिक दोहराया जाए,
+          तो आप ब्लॉक के सबसे ऊपर नंबर बदल सकते हैं।
+        courseA_artist_loops4_b: |-
+          चूंकि आप केवल एक <xml><block type="simple_move_right"/></xml>
+
+          ब्लॉक का उपयोग कर सकते हैं, इसे <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="2-6">5</title></block></xml> लूप के अंदर रखने की कोशिश करें।
+      courseA_artist_loops4_2018:
+        courseA_artist_loops4_a: यदि आप चाहते हैं कि लूप 4 बार से अधिक दोहराया जाए,
+          तो आप ब्लॉक के सबसे ऊपर नंबर बदल सकते हैं।
+        courseA_artist_loops4_b: |-
+          चूंकि आप केवल एक <xml><block type="simple_move_right"/></xml>
+
+          ब्लॉक का उपयोग कर सकते हैं, इसे <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="2-6">5</title></block></xml> लूप के अंदर रखने की कोशिश करें।
+      courseA_artist_loops4_2019:
+        courseA_artist_loops4_a: यदि आप चाहते हैं कि लूप 4 बार से अधिक दोहराया जाए,
+          तो आप ब्लॉक के सबसे ऊपर नंबर बदल सकते हैं।
+        courseA_artist_loops4_b: |-
+          चूंकि आप केवल एक <xml><block type="simple_move_right"/></xml>
+
+          ब्लॉक का उपयोग कर सकते हैं, इसे <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="2-6">5</title></block></xml> लूप के अंदर रखने की कोशिश करें।
+      courseA_artist_loops5:
+        courseA_artist_loops5_a: इस पहेली को पूरा करने के लिए उसका उपयोग करने की कोशिश
+          करें, जो आपने <xml><block type="controls_repeat_simplified_dropdown"><title
+          name="TIMES" config="3-10">???</title></block></xml> ब्लॉक्स के बारे में
+          सीखा है!
+        courseA_artist_loops5_b: यदि आप चाहते हैं कि लूप 4 बार से अधिक दोहराया जाए,
+          तो आप ब्लॉक के सबसे ऊपर नंबर बदल सकते हैं।
+        courseA_artist_loops5_c: "चूंकि आप केवल एक <xml><block type=\"simple_move_right\"/></xml>
+          ब्लॉक का उपयोग कर सकते हैं, इसे \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title
+          name=\"TIMES\" config=\"3-10\">???</title></block></xml>\n\nलूप के अंदर
+          रखने की कोशिश करें।"
+      courseA_artist_loops5_2018:
+        courseA_artist_loops5_a: इस पहेली को पूरा करने के लिए उसका उपयोग करने की कोशिश
+          करें, जो आपने <xml><block type="controls_repeat_simplified_dropdown"><title
+          name="TIMES" config="3-10">???</title></block></xml> ब्लॉक्स के बारे में
+          सीखा है!
+        courseA_artist_loops5_b: यदि आप चाहते हैं कि लूप 4 बार से अधिक दोहराया जाए,
+          तो आप ब्लॉक के सबसे ऊपर नंबर बदल सकते हैं।
+        courseA_artist_loops5_c: "चूंकि आप केवल एक <xml><block type=\"simple_move_right\"/></xml>
+          ब्लॉक का उपयोग कर सकते हैं, इसे \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title
+          name=\"TIMES\" config=\"3-10\">???</title></block></xml>\n\nलूप के अंदर
+          रखने की कोशिश करें।"
+      courseA_artist_loops5_2019:
+        courseA_artist_loops5_a: इस पहेली को पूरा करने के लिए उसका उपयोग करने की कोशिश
+          करें, जो आपने <xml><block type="controls_repeat_simplified_dropdown"><title
+          name="TIMES" config="3-10">???</title></block></xml> ब्लॉक्स के बारे में
+          सीखा है!
+        courseA_artist_loops5_b: यदि आप चाहते हैं कि लूप 4 बार से अधिक दोहराया जाए,
+          तो आप ब्लॉक के सबसे ऊपर नंबर बदल सकते हैं।
+        courseA_artist_loops5_c: "चूंकि आप केवल एक <xml><block type=\"simple_move_right\"/></xml>
+          ब्लॉक का उपयोग कर सकते हैं, इसे \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title
+          name=\"TIMES\" config=\"3-10\">???</title></block></xml>\n\nलूप के अंदर
+          रखने की कोशिश करें।"
+      courseA_artist_loops6:
+        courseA_artist_loops6_a: क्या आप पता नहीं लगा पा रहे हैं कि पहाड़ी कैसे बनानी
+          है?  यह देखने के लिए ब्लॉक्स के साथ थोड़ा खेलने की कोशिश करें कि इनमें से
+          प्रत्येक क्या चित्रित करता है।
+        courseA_artist_loops6_b: इस पहेली को हल करने के लिए आपको 2 दिशाओं में 2 ब्लॉक्स
+          की जरूरत होगी।
+      courseA_artist_loops6_2018:
+        courseA_artist_loops6_a: क्या आप पता नहीं लगा पा रहे हैं कि पहाड़ी कैसे बनानी
+          है?  यह देखने के लिए ब्लॉक्स के साथ थोड़ा खेलने की कोशिश करें कि इनमें से
+          प्रत्येक क्या चित्रित करता है।
+        courseA_artist_loops6_b: इस पहेली को हल करने के लिए आपको 2 दिशाओं में 2 ब्लॉक्स
+          की जरूरत होगी।
+      courseA_artist_loops6_2019:
+        courseA_artist_loops6_a: क्या आप पता नहीं लगा पा रहे हैं कि पहाड़ी कैसे बनानी
+          है?  यह देखने के लिए ब्लॉक्स के साथ थोड़ा खेलने की कोशिश करें कि इनमें से
+          प्रत्येक क्या चित्रित करता है।
+        courseA_artist_loops6_b: इस पहेली को हल करने के लिए आपको 2 दिशाओं में 2 ब्लॉक्स
+          की जरूरत होगी।
+      courseA_artist_loops7:
+        courseA_artist_loops7_a: क्या आप पता नहीं लगा पा रहे हैं कि लूप को कहां रखना
+          है, तो कदम-दर-कदम कोड लिखने की कोशिश करें और पैटर्न खोजें।
+        courseA_artist_loops7_b: पहले एक तरंग के लिए कोड लिखें, फिर अन्य दो को चित्रित
+          करने के लिए उसे दोहराएं।
+        courseA_artist_loops7_c: याद रखें कि आप <xml><block type="controls_repeat_simplified_dropdown"><title
+          name="TIMES" config="3-10">???</title></block></xml> लूप में एक से अधिक
+          ब्लॉक रख सकते हैं।
+      courseA_artist_loops7_2018:
+        courseA_artist_loops7_a: क्या आप पता नहीं लगा पा रहे हैं कि लूप को कहां रखना
+          है, तो कदम-दर-कदम कोड लिखने की कोशिश करें और पैटर्न खोजें।
+        courseA_artist_loops7_b: पहले एक तरंग के लिए कोड लिखें, फिर अन्य दो को चित्रित
+          करने के लिए उसे दोहराएं।
+        courseA_artist_loops7_c: |-
+          याद रखें कि आप <xml><block type="controls_repeat_simplified_dropdown">
+              <title name="TIMES" config="3-10">???</title>
+            </block></xml> लूप में एक से अधिक ब्लॉक रख सकते हैं।
+      courseA_artist_loops7_2019:
+        courseA_artist_loops7_a: क्या आप पता नहीं लगा पा रहे हैं कि लूप को कहां रखना
+          है, तो कदम-दर-कदम कोड लिखने की कोशिश करें और पैटर्न खोजें।
+        courseA_artist_loops7_b: पहले एक तरंग के लिए कोड लिखें, फिर अन्य दो को चित्रित
+          करने के लिए उसे दोहराएं।
+        courseA_artist_loops7_c: |-
+          याद रखें कि आप <xml><block type="controls_repeat_simplified_dropdown">
+              <title name="TIMES" config="3-10">???</title>
+            </block></xml> लूप में एक से अधिक ब्लॉक रख सकते हैं।
+      courseA_artist_loops8:
+        courseA_artist_loops8_a: यह देखने के लिए कोड चलाने की कोशिश करें कि आपके लिए
+          क्या लिखा गया है।
+        courseA_artist_loops8_b: आप उस कोड को कैसे लूप करेंगे, जो आपको दिया गया है?
+        courseA_artist_loops8_c: |-
+          कोड क्या करता है?\
+          यह क्या करने के लिए बनाया गया है?\
+          यह आपको क्या बताता है?
+      courseA_artist_loops8_2018:
+        courseA_artist_loops8_a: यह देखने के लिए कोड चलाने की कोशिश करें कि आपके लिए
+          क्या लिखा गया है।
+        courseA_artist_loops8_b: आप उस कोड को कैसे लूप करेंगे, जो आपको दिया गया है?
+        courseA_artist_loops8_c: |-
+          कोड क्या करता है?\
+          यह क्या करने के लिए बनाया गया है?\
+          यह आपको क्या बताता है?
+      courseA_artist_loops8_2019:
+        courseA_artist_loops8_a: यह देखने के लिए कोड चलाने की कोशिश करें कि आपके लिए
+          क्या लिखा गया है।
+        courseA_artist_loops8_b: आप उस कोड को कैसे लूप करेंगे, जो आपको दिया गया है?
+        courseA_artist_loops8_c: |-
+          कोड क्या करता है?\
+          यह क्या करने के लिए बनाया गया है?\
+          यह आपको क्या बताता है?
+      courseA_artist_loops9:
+        courseA_artist_loops9_a: बाकी सीढ़ियां चित्रित करने के लिए आपको दिए कोड में
+          दूसरा ब्लॉक जोड़ें।
+        courseA_artist_loops9_b: "जो ब्लॉक आप जोड़ते हैं, वह \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title
+          name=\"TIMES\" config=\"3-10\">5</title></block>\n</xml>\n\nलूप के अंदर
+          जाना चाहिए।"
+        courseA_artist_loops9_c: यदि आप पता नहीं लगा पाते हैं कि लूप को कहां रखना
+          है, तो कदम-दर-कदम कोड लिखने की कोशिश करें और पैटर्न खोजें।
+      courseA_artist_loops9_2018:
+        courseA_artist_loops9_a: बाकी सीढ़ियां चित्रित करने के लिए आपको दिए कोड में
+          दूसरा ब्लॉक जोड़ें।
+        courseA_artist_loops9_c: यदि आप पता नहीं लगा पाते हैं कि लूप को कहां रखना
+          है, तो कदम-दर-कदम कोड लिखने की कोशिश करें और पैटर्न खोजें।
+      courseA_artist_loops9_2019:
+        courseA_artist_loops9_a: बाकी सीढ़ियां चित्रित करने के लिए आपको दिए कोड में
+          दूसरा ब्लॉक जोड़ें।
+        courseA_artist_loops9_b: "जो ब्लॉक आप जोड़ते हैं, वह \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title
+          name=\"TIMES\" config=\"3-10\">5</title></block>\n</xml>\n\nलूप के अंदर
+          जाना चाहिए।"
+        courseA_artist_loops9_c: यदि आप पता नहीं लगा पाते हैं कि लूप को कहां रखना
+          है, तो कदम-दर-कदम कोड लिखने की कोशिश करें और पैटर्न खोजें।
+      courseA_artist_loops_challenge2a:
+        courseA_artist_loops_challenge2_a: इस <xml>  <block type="simple_move_up_left"/></xml>
+          तरह के ब्लॉक्स से आपका कलाकार तिरछा मूव कर पाएगा!
+        courseA_artist_loops_challenge2_b: जब आप एक टेंट पूरा कर लें, तो अगला तक जाने
+          के लिए दो बार ऊपर `कूदें`!
+        courseA_artist_loops_challenge2_c: इस पहेली को खत्म करने के लिए आपके सभी ब्लॉक्स
+          को लूप के अंदर होने की जरूरत होगी।
+      courseA_artist_loops_challenge2a_2018:
+        courseA_artist_loops_challenge2_a: इस <xml>  <block type="simple_move_up_left"/></xml>
+          तरह के ब्लॉक्स से आपका कलाकार तिरछा मूव कर पाएगा!
+        courseA_artist_loops_challenge2_b: जब आप एक टेंट पूरा कर लें, तो अगला तक जाने
+          के लिए दो बार ऊपर `कूदें`!
+        courseA_artist_loops_challenge2_c: इस पहेली को खत्म करने के लिए आपके सभी ब्लॉक्स
+          को लूप के अंदर होने की जरूरत होगी।
+      courseA_artist_loops_challenge2a_2019:
+        courseA_artist_loops_challenge2_a: इस <xml>  <block type="simple_move_up_left"/></xml>
+          तरह के ब्लॉक्स से आपका कलाकार तिरछा मूव कर पाएगा!
+        courseA_artist_loops_challenge2_b: जब आप एक टेंट पूरा कर लें, तो अगला तक जाने
+          के लिए दो बार ऊपर `कूदें`!
+        courseA_artist_loops_challenge2_c: इस पहेली को खत्म करने के लिए आपके सभी ब्लॉक्स
+          को लूप के अंदर होने की जरूरत होगी।
+      courseA_collector_loops1:
+        courseA_collector_loops1_a: |-
+          जब आप खजाने के साथ स्कवेयर तक मूव कर लें, तो इसे लेने के लिए इस ब्लॉक का उपयोग करें।
+
+          <xml>  <block type="collector_collect"/></xml>
+        courseA_collector_loops1_b: एक आसान समाधान 2 बार पूर्व की ओर मूव करना, फिर
+          खजाना प्राप्त करना होगा।
+      courseA_collector_loops1_2018:
+        courseA_collector_loops1_a: |-
+          जब आप खजाने के साथ स्कवेयर तक मूव कर लें, तो इसे लेने के लिए इस ब्लॉक का उपयोग करें।
+
+          <xml>  <block type="collector_collect"/></xml>
+        courseA_collector_loops1_b: एक आसान समाधान 2 बार पूर्व की ओर मूव करना, फिर
+          खजाना प्राप्त करना होगा।
+      courseA_collector_loops1_2019:
+        courseA_collector_loops1_a: |-
+          जब आप खजाने के साथ स्कवेयर तक मूव कर लें, तो इसे लेने के लिए इस ब्लॉक का उपयोग करें।
+
+          <xml>  <block type="collector_collect"/></xml>
+        courseA_collector_loops1_b: एक आसान समाधान 2 बार पूर्व की ओर मूव करना, फिर
+          खजाना प्राप्त करना होगा।
+      courseA_collector_loops2:
+        courseA_collector_loops2_a: इससे पहले कि आप कोई खजाना एकत्र कर पाएं, आपको
+          मूव करना होगा।
+        courseA_collector_loops2_b: |-
+          जब आप खजाने के साथ स्कवेयर तक मूव कर लें, तो इसे लेने के लिए इस ब्लॉक का उपयोग करें।
+
+          <xml>  <block type="collector_collect"/></xml>
+      courseA_collector_loops2_2018:
+        courseA_collector_loops2_a: इससे पहले कि आप कोई खजाना एकत्र कर पाएं, आपको
+          मूव करना होगा।
+        courseA_collector_loops2_b: |-
+          जब आप खजाने के साथ स्कवेयर तक मूव कर लें, तो इसे लेने के लिए इस ब्लॉक का उपयोग करें।
+
+          <xml>  <block type="collector_collect"/></xml>
+      courseA_collector_loops2_2019:
+        courseA_collector_loops2_a: इससे पहले कि आप कोई खजाना एकत्र कर पाएं, आपको
+          मूव करना होगा।
+        courseA_collector_loops2_b: |-
+          जब आप खजाने के साथ स्कवेयर तक मूव कर लें, तो इसे लेने के लिए इस ब्लॉक का उपयोग करें।
+
+          <xml>  <block type="collector_collect"/></xml>
+      courseA_collector_loops3:
+        courseA_collector_loops3_a: एक <xml><block type="controls_repeat_simplified_dropdown"><title
+          name="TIMES" config="3-10">???</title></block></xml> लूप का उपयोग करने की
+          कोशिश करें!
+        courseA_collector_loops3_b: याद रखें, आप <xml><block type="controls_repeat_simplified_dropdown"><title
+          name="TIMES" config="3-10">???</title></block></xml> लूप के अंदर 1 से अधिक
+          ब्लॉक रख सकते हैं।
+      courseA_collector_loops3_2018:
+        courseA_collector_loops3_a: एक <xml><block type="controls_repeat_simplified_dropdown"><title
+          name="TIMES" config="3-10">???</title></block></xml> लूप का उपयोग करने की
+          कोशिश करें!
+        courseA_collector_loops3_b: याद रखें, आप <xml><block type="controls_repeat_simplified_dropdown"><title
+          name="TIMES" config="3-10">???</title></block></xml> लूप के अंदर 1 से अधिक
+          ब्लॉक रख सकते हैं।
+      courseA_collector_loops3_2019:
+        courseA_collector_loops3_b: याद रखें, आप <xml><block type="controls_repeat_simplified_dropdown"><title
+          name="TIMES" config="3-10">???</title></block></xml> लूप के अंदर 1 से अधिक
+          ब्लॉक रख सकते हैं।
+      courseA_collector_loops4:
+        courseA_collector_loops4_a: लॉरेल के जाने की दूर को बदलने के लिए, लूप के चलने
+          की संख्या को बदलें।
+        courseA_collector_loops4_b: यह न भूलें कि लॉरेल को <xml><block type="controls_repeat_simplified_dropdown"><title
+          name="TIMES" config="3-10">???</title></block></xml> लूप पूरा करने के बाद
+          नीचे जाकर खजाना एकत्र करने की जरूरत है!
+      courseA_collector_loops4_2018:
+        courseA_collector_loops4_a: लॉरेल के जाने की दूर को बदलने के लिए, लूप के चलने
+          की संख्या को बदलें।
+        courseA_collector_loops4_b: यह न भूलें कि लॉरेल को <xml><block type="controls_repeat_simplified_dropdown"><title
+          name="TIMES" config="3-10">???</title></block></xml> लूप पूरा करने के बाद
+          नीचे जाकर खजाना एकत्र करने की जरूरत है!
+      courseA_collector_loops4_2019:
+        courseA_collector_loops4_a: लॉरेल के जाने की दूर को बदलने के लिए, लूप के चलने
+          की संख्या को बदलें।
+        courseA_collector_loops4_b: यह न भूलें कि लॉरेल को <xml><block type="controls_repeat_simplified_dropdown"><title
+          name="TIMES" config="3-10">???</title></block></xml> लूप पूरा करने के बाद
+          नीचे जाकर खजाना एकत्र करने की जरूरत है!
+      courseA_collector_loops5:
+        courseA_collector_loops5_a: यदि आप तुरंत जवाब का पता नहीं लगा सकते, तो यह
+          पता लगाने के लिए कागज़ का उपयोग करने की कोशिश करें कि आपको कौन-से तीरों
+          की जरूरत होगी और पैटर्न खोजें।
+        courseA_collector_loops5_b: एक तरफ़ और फिर नीचे मूव करते हुए, समस्या को 2
+          भागों में बांटने की कोशिश करें।
+        courseA_collector_loops5_c: आप <xml><block type="controls_repeat_simplified_dropdown"><title
+          name="TIMES" config="3-10">???</title></block></xml> लूप के साथ शुरू करना
+          चाहेंगे, जो लॉरेल को पश्चिम की ओर मूव करके खजाना एकत्र करता है।
+      courseA_collector_loops5_2018:
+        courseA_collector_loops5_a: यदि आप तुरंत जवाब का पता नहीं लगा सकते, तो यह
+          पता लगाने के लिए कागज़ का उपयोग करने की कोशिश करें कि आपको कौन-से तीरों
+          की जरूरत होगी और पैटर्न खोजें।
+        courseA_collector_loops5_b: एक तरफ़ और फिर नीचे मूव करते हुए, समस्या को 2
+          भागों में बांटने की कोशिश करें।
+        courseA_collector_loops5_c: आप <xml><block type="controls_repeat_simplified_dropdown"><title
+          name="TIMES" config="3-10">???</title></block></xml> लूप के साथ शुरू करना
+          चाहेंगे, जो लॉरेल को पश्चिम की ओर मूव करके खजाना एकत्र करता है।
+      courseA_collector_loops5_2019:
+        courseA_collector_loops5_a: यदि आप तुरंत जवाब का पता नहीं लगा सकते, तो यह
+          पता लगाने के लिए कागज़ का उपयोग करने की कोशिश करें कि आपको कौन-से तीरों
+          की जरूरत होगी और पैटर्न खोजें।
+        courseA_collector_loops5_b: एक तरफ़ और फिर नीचे मूव करते हुए, समस्या को 2
+          भागों में बांटने की कोशिश करें।
+        courseA_collector_loops5_c: आप <xml><block type="controls_repeat_simplified_dropdown"><title
+          name="TIMES" config="3-10">???</title></block></xml> लूप के साथ शुरू करना
+          चाहेंगे, जो लॉरेल को पश्चिम की ओर मूव करके खजाना एकत्र करता है।
+      courseA_collector_loops6:
+        courseA_collector_loops6_a: क्या आप पता नहीं लगा पा रहें कि क्या गलत है? यह
+          देखने के लिए कई बार कोड चलाने की कोशिश करें कि क्या होता है।
+        courseA_collector_loops6_b: सबसे छोटे समाधान में 2 <xml><block type="controls_repeat_simplified_dropdown"><title
+          name="TIMES" config="3-10">???</title></block></xml> लूप्स हैं, एक के बाद
+          दूसरी।
+      courseA_collector_loops6_2018:
+        courseA_collector_loops6_a: क्या आप पता नहीं लगा पा रहें कि क्या गलत है? यह
+          देखने के लिए कई बार कोड चलाने की कोशिश करें कि क्या होता है।
+        courseA_collector_loops6_b: सबसे छोटे समाधान में 2 <xml><block type="controls_repeat_simplified_dropdown"><title
+          name="TIMES" config="3-10">???</title></block></xml> लूप्स हैं, एक के बाद
+          दूसरी।
+      courseA_collector_loops6_2019:
+        courseA_collector_loops6_a: क्या आप पता नहीं लगा पा रहें कि क्या गलत है? यह
+          देखने के लिए कई बार कोड चलाने की कोशिश करें कि क्या होता है।
+        courseA_collector_loops6_b: सबसे छोटे समाधान में 2 <xml><block type="controls_repeat_simplified_dropdown"><title
+          name="TIMES" config="3-10">???</title></block></xml> लूप्स हैं, एक के बाद
+          दूसरी।
+      courseA_collector_loops7:
+        courseA_collector_loops7_a: यदि आप पता नहीं लगा पा रहे हैं कि आगे क्या होगा,
+          तो यह देखने के लिए कोड चलाने की कोशिश करें कि लॉरेल कहां पहुंचती है।
+      courseA_collector_loops7_2018:
+        courseA_collector_loops7_a: यदि आप पता नहीं लगा पा रहे हैं कि आगे क्या होगा,
+          तो यह देखने के लिए कोड चलाने की कोशिश करें कि लॉरेल कहां पहुंचती है।
+      courseA_collector_loops7_2019:
+        courseA_collector_loops7_a: यदि आप पता नहीं लगा पा रहे हैं कि आगे क्या होगा,
+          तो यह देखने के लिए कोड चलाने की कोशिश करें कि लॉरेल कहां पहुंचती है।
+      courseA_collector_loops8:
+        courseA_collector_loops8_a: यदि आपको इस पहेली का पता लगाने में मुश्किल हो
+          रही है, तो मूव्स को कागज़ पर लिखने और पैटर्न खोजने की कोशिश करें।
+        courseA_collector_loops8_b: इस पहेली को 3 अलग-अलग समस्याओं में बांटने और प्रत्येक
+          के लिए लूप्स लिखने की कोशिश करें।
+        courseA_collector_loops8_c: याद रखें कि आप उसी समय कोड को कागज़ पर लिख सकते
+          हैं, फिर यह पता लगाने के लिए "चलाएं" को दबा सकते हैं कि वहां से आपको कहां
+          जाने की जरूरत है।
+      courseA_collector_loops8_2018:
+        courseA_collector_loops8_a: यदि आपको इस पहेली का पता लगाने में मुश्किल हो
+          रही है, तो मूव्स को कागज़ पर लिखने और पैटर्न खोजने की कोशिश करें।
+        courseA_collector_loops8_b: इस पहेली को 3 अलग-अलग समस्याओं में बांटने और प्रत्येक
+          के लिए लूप्स लिखने की कोशिश करें।
+        courseA_collector_loops8_c: याद रखें कि आप उसी समय कोड को कागज़ पर लिख सकते
+          हैं, फिर यह पता लगाने के लिए "चलाएं" को दबा सकते हैं कि वहां से आपको कहां
+          जाने की जरूरत है।
+      courseA_collector_loops8_2019:
+        courseA_collector_loops8_a: यदि आपको इस पहेली का पता लगाने में मुश्किल हो
+          रही है, तो मूव्स को कागज़ पर लिखने और पैटर्न खोजने की कोशिश करें।
+        courseA_collector_loops8_b: इस पहेली को 3 अलग-अलग समस्याओं में बांटने और प्रत्येक
+          के लिए लूप्स लिखने की कोशिश करें।
+        courseA_collector_loops8_c: याद रखें कि आप उसी समय कोड को कागज़ पर लिख सकते
+          हैं, फिर यह पता लगाने के लिए "चलाएं" को दबा सकते हैं कि वहां से आपको कहां
+          जाने की जरूरत है।
+      courseA_collector_loops9:
+        courseA_collector_loops9_a: 'यदि आप लूप्स का उपयोग करने के लिए बेहतर स्थानों
+          का पता नहीं लगा पाते हैं, तो इसे कदम-दर-कदम कोड करने की कोशिश करें और पैटर्न
+          खोजें। '
+        courseA_collector_loops9_b: अपने कोड को और छोटा बनाने के लिए दूसरे लूप के
+          अंदर अपने <xml><block type="controls_repeat_simplified_dropdown"><title
+          name="TIMES" config="3-10">???</title></block></xml> लूप्स में से 2 को रखने
+          की कोशिश करें!
+      courseA_collector_loops9_2018:
+        courseA_collector_loops9_a: 'यदि आप लूप्स का उपयोग करने के लिए बेहतर स्थानों
+          का पता नहीं लगा पाते हैं, तो इसे कदम-दर-कदम कोड करने की कोशिश करें और पैटर्न
+          खोजें। '
+        courseA_collector_loops9_b: अपने कोड को और छोटा बनाने के लिए दूसरे लूप के
+          अंदर अपने <xml><block type="controls_repeat_simplified_dropdown"><title
+          name="TIMES" config="3-10">???</title></block></xml> लूप्स में से 2 को रखने
+          की कोशिश करें!
+      courseA_collector_loops9_2019:
+        courseA_collector_loops9_a: 'यदि आप लूप्स का उपयोग करने के लिए बेहतर स्थानों
+          का पता नहीं लगा पाते हैं, तो इसे कदम-दर-कदम कोड करने की कोशिश करें और पैटर्न
+          खोजें। '
+        courseA_collector_loops9_b: अपने कोड को और छोटा बनाने के लिए दूसरे लूप के
+          अंदर अपने <xml><block type="controls_repeat_simplified_dropdown"><title
+          name="TIMES" config="3-10">???</title></block></xml> लूप्स में से 2 को रखने
+          की कोशिश करें!
+      courseA_collector_loops_challenge1:
+        courseA_collector_loops_challenge1_a: यदि कुछ गलत प्रतीत होता है तो प्रत्येक
+          लूप में नंबर बदलने की कोशिश करें।
+        courseA_collector_loops_challenge1_b: यदि आप केवल एक बार कुछ कर रहे हैं तो
+          आपको लूप का उपयोग करने की जरूरत नहीं है।
+        courseA_collector_loops_challenge1_c: जब आप शुरू करते हैं तो गुफा के दाईं
+          ओर 6 रतन हैं, लेकिन आपको दक्षिण की ओर मूव करते हुए केवल 5 बार खजाना प्राप्त
+          करने की जरूरत है। क्या आपको पता है क्यों?
+        courseA_collector_loops_challenge1_d: |-
+          शुरूआती प्रोग्राम अंतिम 2 रतन एकत्र नहीं करता। बिल्कुल अंत में यह कोड जोड़ने की कोशिश करें:
+
+          <xml><block type="maze_moveEast">
+                                  <next>
+                                    <block type="collector_collect_simplified">
+                                      <next>
+                                        <block type="maze_moveSouth">
+                                          <next>
+                                            <block type="collector_collect"/>
+                                          </next>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block></xml>
+      courseA_collector_loops_challenge1_2018:
+        courseA_collector_loops_challenge1_a: यदि कुछ गलत प्रतीत होता है तो प्रत्येक
+          लूप में नंबर बदलने की कोशिश करें।
+        courseA_collector_loops_challenge1_b: यदि आप केवल एक बार कुछ कर रहे हैं तो
+          आपको लूप का उपयोग करने की जरूरत नहीं है।
+        courseA_collector_loops_challenge1_c: जब आप शुरू करते हैं तो गुफा के दाईं
+          ओर 6 रतन हैं, लेकिन आपको दक्षिण की ओर मूव करते हुए केवल 5 बार खजाना प्राप्त
+          करने की जरूरत है। क्या आपको पता है क्यों?
+        courseA_collector_loops_challenge1_d: |-
+          शुरूआती प्रोग्राम अंतिम 2 रतन एकत्र नहीं करता। बिल्कुल अंत में यह कोड जोड़ने की कोशिश करें:
+
+          <xml><block type="maze_moveEast">
+                                  <next>
+                                    <block type="collector_collect_simplified">
+                                      <next>
+                                        <block type="maze_moveSouth">
+                                          <next>
+                                            <block type="collector_collect"/>
+                                          </next>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block></xml>
+      courseA_collector_loops_challenge1_2019:
+        courseA_collector_loops_challenge1_a: यदि कुछ गलत प्रतीत होता है तो प्रत्येक
+          लूप में नंबर बदलने की कोशिश करें।
+        courseA_collector_loops_challenge1_b: यदि आप केवल एक बार कुछ कर रहे हैं तो
+          आपको लूप का उपयोग करने की जरूरत नहीं है।
+        courseA_collector_loops_challenge1_c: जब आप शुरू करते हैं तो गुफा के दाईं
+          ओर 6 रतन हैं, लेकिन आपको दक्षिण की ओर मूव करते हुए केवल 5 बार खजाना प्राप्त
+          करने की जरूरत है। क्या आपको पता है क्यों?
+        courseA_collector_loops_challenge1_d: |-
+          शुरूआती प्रोग्राम अंतिम 2 रतन एकत्र नहीं करता। बिल्कुल अंत में यह कोड जोड़ने की कोशिश करें:
+
+          <xml><block type="maze_moveEast">
+                                  <next>
+                                    <block type="collector_collect_simplified">
+                                      <next>
+                                        <block type="maze_moveSouth">
+                                          <next>
+                                            <block type="collector_collect"/>
+                                          </next>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block></xml>
+      courseA_collector_loops_challenge2kp:
+        courseA_collector_loops_challenge2kp_b: समाधान पाने के लिए इस रास्ते को आजमाएं।
+        courseA_collector_loops_challenge2kp_a: क्या आप इस पहेली को हल करने के लिए
+          लूप्स का उपयोग कर सकते हैं?
+      courseA_collector_loops_challenge2kp_2018:
+        courseA_collector_loops_challenge2kp_b: समाधान पाने के लिए इस रास्ते को आजमाएं।
+        courseA_collector_loops_challenge2kp_a: क्या आप इस पहेली को हल करने के लिए
+          लूप्स का उपयोग कर सकते हैं?
+      courseA_collector_loops_challenge2kp_2019:
+        courseA_collector_loops_challenge2kp_b: समाधान पाने के लिए इस रास्ते को आजमाएं।
+        courseA_collector_loops_challenge2kp_a: क्या आप इस पहेली को हल करने के लिए
+          लूप्स का उपयोग कर सकते हैं?
+      courseA_collector_preLoops7:
+        courseA_collector_loops2_b: |-
+          जब आप खजाने के साथ स्कवेयर तक मूव कर लें, तो इसे लेने के लिए इस ब्लॉक का उपयोग करें।
+
+          <xml>  <block type="collector_collect"/></xml>
+      courseA_harvester_loops5:
+        courseA_harvester_loops5_a: यदि आप अटक जाएं, तो पहेली को 2 भागों में हल करने
+          की कोशिश करें, एक भाग कोने से पहले और एक भाग कोने के बाद।
+      courseA_harvester_loops5_2019:
+        courseA_harvester_loops5_a: यदि आप अटक जाएं, तो पहेली को 2 भागों में हल करने
+          की कोशिश करें, एक भाग कोने से पहले और एक भाग कोने के बाद।
+      courseA_harvester_seq2:
+        courseA_harvester_seq2_b: समाधान ढूंढने के लिए कागज़ पर स्टेप्स लिखने की कोशिश
+          करें!
+      courseA_harvester_seq2_2019:
+        courseA_harvester_seq2_b: समाधान ढूंढने के लिए कागज़ पर स्टेप्स लिखने की कोशिश
+          करें!
+      courseA_maze_seq1:
+        courseA_maze_seq1_a: |-
+          यदि आपको पक्षी को मूव कराने में मुश्किल हो रही है, तो सुनिश्चित करें कि ब्लॉक्स <xml>
+            <block type="when_run"/>
+          </xml> के नीचे अनियोजित रखे हैं
+        courseA_maze_seq1_b: |-
+          पक्षी को सूअर के पास जाने के लिए उसे 3 बार पश्चिमकी ओर मूव करना होगा। इस ब्लॉक का उपयोग करें:
+
+          <xml><block type="maze_moveWest"/></xml>
+      courseA_maze_seq10:
+        courseA_maze_seq10_a: यदि आपको मुश्किल हो रही है, तो पहले स्टेप्स को कागज़
+          पर लिखने की कोशिश करें।
+        courseA_maze_seq10_b: इस पहेली को हल करने के लिए आपको 3 दिशाओं में जाने की
+          जरूरत होगी।
+      courseA_maze_seq10_2018:
+        courseA_maze_seq10_a: यदि आपको मुश्किल हो रही है, तो पहले स्टेप्स को कागज़
+          पर लिखने की कोशिश करें।
+      courseA_maze_seq10_2019:
+        courseA_maze_seq10_a: यदि आपको मुश्किल हो रही है, तो पहले स्टेप्स को कागज़
+          पर लिखने की कोशिश करें।
+      courseA_maze_seq13:
+        courseA_maze_seq13_a: जो रास्ता आपको चाहिए, यदि वह अस्पष्ट है, तो पक्षी से
+          सूअर तक अपने रास्ते को खोजने के लिए अपनी उंगली का उपयोग करें।
+        courseA_maze_seq13_b: गलती होने से न डरें! ब्लॉक्स जोड़ने और यह देखने के लिए
+          कोड चलाने की कोशिश करें कि क्या होगा।
+        courseA_maze_seq13_c: ये <xml><block type="maze_moveNorth"/></xml><xml><block
+          type="maze_moveEast"/></xml> ब्लॉक्स सूअर के अधिक पास मूव करने में आपकी
+          मदद करेंगे।
+      courseA_maze_seq13_2018:
+        courseA_maze_seq13_a: जो रास्ता आपको चाहिए, यदि वह अस्पष्ट है, तो पक्षी से
+          सूअर तक अपने रास्ते को खोजने के लिए अपनी उंगली का उपयोग करें।
+        courseA_maze_seq13_b: गलती होने से न डरें! ब्लॉक्स जोड़ने और यह देखने के लिए
+          कोड चलाने की कोशिश करें कि क्या होगा।
+        courseA_maze_seq13_c: ये <xml><block type="maze_moveNorth"/></xml><xml><block
+          type="maze_moveEast"/></xml> ब्लॉक्स सूअर के अधिक पास मूव करने में आपकी
+          मदद करेंगे।
+      courseA_maze_seq13_2019:
+        courseA_maze_seq13_a: जो रास्ता आपको चाहिए, यदि वह अस्पष्ट है, तो पक्षी से
+          सूअर तक अपने रास्ते को खोजने के लिए अपनी उंगली का उपयोग करें।
+        courseA_maze_seq13_b: गलती होने से न डरें! ब्लॉक्स जोड़ने और यह देखने के लिए
+          कोड चलाने की कोशिश करें कि क्या होगा।
+      courseA_maze_seq1_2018:
+        courseA_maze_seq1_a: |-
+          यदि आपको पक्षी को मूव कराने में मुश्किल हो रही है, तो सुनिश्चित करें कि ब्लॉक्स <xml>
+            <block type="when_run"/>
+          </xml> के नीचे अनियोजित रखे हैं
+        courseA_maze_seq1_b: |-
+          पक्षी को सूअर के पास जाने के लिए उसे 3 बार पश्चिमकी ओर मूव करना होगा। इस ब्लॉक का उपयोग करें:
+
+          <xml><block type="maze_moveWest"/></xml>
+      courseA_maze_seq1_2019:
+        courseA_maze_seq1_a: |-
+          यदि आपको पक्षी को मूव कराने में मुश्किल हो रही है, तो सुनिश्चित करें कि ब्लॉक्स <xml>
+            <block type="when_run"/>
+          </xml> के नीचे अनियोजित रखे हैं
+        courseA_maze_seq1_b: |-
+          पक्षी को सूअर के पास जाने के लिए उसे 3 बार पश्चिमकी ओर मूव करना होगा। इस ब्लॉक का उपयोग करें:
+
+          <xml><block type="maze_moveWest"/></xml>
+      courseA_maze_seq2:
+        courseA_maze_seq2_a: इस प्रोग्राम में 1 ब्लॉक गायब है। क्या आप पता लगा सकते
+          हैं कि वह कौन-सा है?
+        courseA_maze_seq2_b: यह देखने के लिए पहले कोड चलाने की कोशिश करें कि पक्षी
+          कहां पहुंचता है। वहां से आपको कहां जाने की जरूरत है?
+      courseA_maze_seq3:
+        courseA_maze_seq3_a: 1 ब्लॉक पक्षी को गलत दिशा में मूव कर रहा है। क्या आप
+          पता लगा सकते हैं कि वह कौन-सा है और इसे सही ब्लॉक से बदल सकते हैं?
+        courseA_maze_seq3_b: यह जानने के लिए स्टेप बटन का उपयोग करने की कोशिश करें
+          कि प्रोग्राम कहां गलत हुआ है। क्या यह पहला स्टेप नहीं है? दूसरा?
+        courseA_maze_seq3_c: यह <xml><block type="maze_moveNorth"/></xml> ब्लॉक पक्षी
+          को सही दिशा में मूव कर रहा प्रतीत नहीं होता। क्या आप किसी और ब्लॉक से इसकी
+          अदला-बदली कर सकते हैं?
+      courseA_maze_seq4:
+        courseA_maze_seq4_a: यदि आपको मुश्किल हो रही है, तो यह पता लगाने की कोशिश
+          करें कि सही रास्ता कौन-सा है और फिर उस ब्लॉक को हटाएं, जो अनुकूल नहीं है।
+        courseA_maze_seq4_b: कोड को उसी तरह चलाने की कोशिश करें, जैसा वह है। क्या
+          कुछ गलत हुआ? आप कौन-से ब्लॉक को हटा सकते हैं? आप इसे कैसे ठीक कर सकते हैं?
+      courseA_maze_seq5:
+        courseA_maze_seq5_a: समाधान ढूंढने के लिए कागज़ पर स्टेप्स लिखने की कोशिश
+          करें!
+        courseA_maze_seq5_b: आपको 2 दिशाओं में संकेत करते हुए, 2 ब्लॉक्स की जरूरत
+          होगी।
+      courseA_maze_seq5_2018:
+        '1': समाधान ढूंढने के लिए कागज़ पर स्टेप्स लिखने की कोशिश करें!
+      courseA_maze_seq5_2019:
+        '1': समाधान ढूंढने के लिए कागज़ पर स्टेप्स लिखने की कोशिश करें!
+      courseA_maze_seq6:
+        courseA_maze_seq6_a: आपके अंतिम कोड में 3 गतिविधि ब्लॉक होने चाहिएं।
+        courseA_maze_seq6_b: यदि आप अटक जाएं, तो पहेली को 2 भागों में हल करने की कोशिश
+          करें, एक भाग कोने से पहले और एक भाग कोने के बाद।
+      courseA_maze_seq6_2018:
+        courseA_maze_seq6_a: आपके अंतिम कोड में 3 गतिविधि ब्लॉक होने चाहिएं।
+        courseA_maze_seq6_b: यदि आप अटक जाएं, तो पहेली को 2 भागों में हल करने की कोशिश
+          करें, एक भाग कोने से पहले और एक भाग कोने के बाद।
+      courseA_maze_seq6_2019:
+        courseA_maze_seq6_a: आपके अंतिम कोड में 3 गतिविधि ब्लॉक होने चाहिएं।
+        courseA_maze_seq6_b: यदि आप अटक जाएं, तो पहेली को 2 भागों में हल करने की कोशिश
+          करें, एक भाग कोने से पहले और एक भाग कोने के बाद।
+      courseA_maze_seq7:
+        courseA_maze_seq7_a: 1 ब्लॉक है, जिसकी आपको पक्षी को सूअर तक मूव करने के लिए
+          जोड़ने की जरूरत है।
+        courseA_maze_seq7_b: यदि आप पता नहीं लगा पाते हैं कि क्या करना है, कागज़ पर
+          पहेली को चित्रित करने की कोशिश करें और यह पता लगाने के लिए किस तरफ मूव करना
+          है, अपनी उंगली का उपयोग करें।
+      courseA_maze_seq8:
+        courseA_maze_seq8_a: यदि आप अटक जाएं, तो यह देखने के लिए काग़ज पर चित्र बनाने
+          की कोशिश करें कि पक्षी को कैसे मूव करना चाहिए।
+      courseA_maze_seq8_2018:
+        courseA_maze_seq8_a: यदि आप अटक जाएं, तो यह देखने के लिए काग़ज पर चित्र बनाने
+          की कोशिश करें कि पक्षी को कैसे मूव करना चाहिए।
+      courseA_maze_seq8_2019:
+        courseA_maze_seq8_a: यदि आप अटक जाएं, तो यह देखने के लिए काग़ज पर चित्र बनाने
+          की कोशिश करें कि पक्षी को कैसे मूव करना चाहिए।
+      courseA_maze_seq9:
+        courseA_maze_seq9_a: अटक गए हैं? अपनी उंगली से पक्षी का रास्ता खोजने की कोशिश
+          करें।
+        courseA_maze_seq9_b: यदि आप निश्चित नहीं हैं कि क्या करना है, तो "फिर से शुरू
+          करें” को दबाने और यह देखने के लिए कोड चलाने की कोशिश करें कि क्या गलत हो
+          रहा है।
+        courseA_maze_seq9_c: इस पहेली को हल करने के लिए आपको 3 दिशाओं में मूव करने
+          की जरूरत होगी।
+      courseA_maze_seq_challenge1:
+        courseA_maze_seq_challenge1_a: इस पहेली के दो समाधान हैं।
+      courseA_maze_seq_challenge1_2018:
+        courseA_maze_seq_challenge1_a: इस पहेली के दो समाधान हैं।
+      courseA_maze_seq_challenge1_2019:
+        courseA_maze_seq_challenge1_a: इस पहेली के दो समाधान हैं।
+      courseA_maze_seq_challenge2:
+        courseA_maze_seq_challenge2_a: अपनी उंगली से खाली स्थान गिनने की कोशिश करें।
+          याद रखें कि वह खाली स्थान न गिनें, जहां से आप शुरू करते हैं!
+      courseA_maze_seq_challenge2_2018:
+        courseA_maze_seq_challenge2_a: अपनी उंगली से खाली स्थान गिनने की कोशिश करें।
+          याद रखें कि वह खाली स्थान न गिनें, जहां से आप शुरू करते हैं!
+      courseA_maze_seq_challenge2_2019:
+        courseA_maze_seq_challenge2_a: अपनी उंगली से खाली स्थान गिनने की कोशिश करें।
+          याद रखें कि वह खाली स्थान न गिनें, जहां से आप शुरू करते हैं!
+      courseA_playLab_events2:
+        courseA_playLab_events2_a: वह ब्लॉक खोजें, जिससे कुत्ता कुछ कह पाए।
+        courseA_playLab_events2_b: |-
+          यह वही कोड है, जिसकी जरूरत आपको यह पहेली पूरी करने के लिए है:
+
+          <xml>
+          <block type="when_run" movable="false" deletable="false">
+          <next>
+          <block type="studio_saySpriteChoices">
+              <title name="SPRITE">1</title>
+              <title name="VALUE">Hi there.</title>
+            </block>
+          </next>
+          </block>
+          </xml>
+      courseA_playLab_events2_2018:
+        courseA_playLab_events2_a: वह ब्लॉक खोजें, जिससे कुत्ता कुछ कह पाए।
+        courseA_playLab_events2_b: |-
+          यह वही कोड है, जिसकी जरूरत आपको यह पहेली पूरी करने के लिए है:
+
+          <xml>
+          <block type="when_run" movable="false" deletable="false">
+          <next>
+          <block type="studio_saySpriteChoices">
+              <title name="SPRITE">1</title>
+              <title name="VALUE">Hi there.</title>
+            </block>
+          </next>
+          </block>
+          </xml>
+      courseA_playLab_events2_2019:
+        courseA_playLab_events2_a: वह ब्लॉक खोजें, जिससे कुत्ता कुछ कह पाए।
+        courseA_playLab_events2_b: |-
+          यह वही कोड है, जिसकी जरूरत आपको यह पहेली पूरी करने के लिए है:
+
+          <xml>
+          <block type="when_run" movable="false" deletable="false">
+          <next>
+          <block type="studio_saySpriteChoices">
+              <title name="SPRITE">1</title>
+              <title name="VALUE">Hi there.</title>
+            </block>
+          </next>
+          </block>
+          </xml>
+      courseA_playLab_events3:
+        courseA_playLab_events3_a: |-
+          इस ब्लॉक <xml><block type="studio_move">
+              <title name="SPRITE">1</title>
+              <title name="DIR">8</title>
+            </block></xml> को बाहर खींचें और इसे <xml><block type="studio_whenArrow">
+              <title name="VALUE">left</title>
+            </block></xml> नीचे की ओर काटें
+        courseA_playLab_events3_b: जब आप अपना प्रोग्राम लिख चुके हों तो जॉर्ज को झंडे
+          तक मूव करने के लिए बाएं तीर वाली कुंजी का उपयोग करना याद रखें। जब झंडा हरा
+          हो जाए, आपने पूरा कर लिया!
+      courseA_playLab_events3_2018:
+        courseA_playLab_events3_a: |-
+          इस ब्लॉक <xml><block type="studio_move">
+              <title name="SPRITE">1</title>
+              <title name="DIR">8</title>
+            </block></xml> को बाहर खींचें और इसे <xml><block type="studio_whenArrow">
+              <title name="VALUE">left</title>
+            </block></xml> नीचे की ओर काटें
+        courseA_playLab_events3_b: जब आप अपना प्रोग्राम लिख चुके हों तो जॉर्ज को झंडे
+          तक मूव करने के लिए बाएं तीर वाली कुंजी का उपयोग करना याद रखें। जब झंडा हरा
+          हो जाए, आपने पूरा कर लिया!
+      courseA_playLab_events3_2019:
+        courseA_playLab_events3_a: |-
+          इस ब्लॉक <xml><block type="studio_move">
+              <title name="SPRITE">1</title>
+              <title name="DIR">8</title>
+            </block></xml> को बाहर खींचें और इसे <xml><block type="studio_whenArrow">
+              <title name="VALUE">left</title>
+            </block></xml> नीचे की ओर काटें
+        courseA_playLab_events3_b: जब आप अपना प्रोग्राम लिख चुके हों तो जॉर्ज को झंडे
+          तक मूव करने के लिए बाएं तीर वाली कुंजी का उपयोग करना याद रखें। जब झंडा हरा
+          हो जाए, आपने पूरा कर लिया!
+      courseA_playLab_events4:
+        courseA_playLab_events4_a: |-
+          यहां वह इवेंट ब्लॉक दिया गया है, जिसकी जरूरत आपको जॉर्ज को दाईं ओर मूव करने के लिए होगी:
+
+          <xml><block type="studio_move">
+              <title name="SPRITE">1</title>
+              <title name="DIR">2</title>
+            </block></xml>
+        courseA_playLab_events4_b: |-
+          यह वही कोड है, जिसकी जरूरत आपको यह पहेली पूरी करने के लिए होगी:
+
+          <xml><block type="studio_whenArrow">
+              <title name="VALUE">right</title>
+              <next>
+            <block type="studio_move">
+              <title name="SPRITE">1</title>
+              <title name="DIR">2</title>
+            </block></next></block></xml>
+      courseA_playLab_events4_2018:
+        courseA_playLab_events4_a: |-
+          यहां वह इवेंट ब्लॉक दिया गया है, जिसकी जरूरत आपको जॉर्ज को दाईं ओर मूव करने के लिए होगी:
+
+          <xml><block type="studio_move">
+              <title name="SPRITE">1</title>
+              <title name="DIR">2</title>
+            </block></xml>
+        courseA_playLab_events4_b: |-
+          यह वही कोड है, जिसकी जरूरत आपको यह पहेली पूरी करने के लिए होगी:
+
+          <xml><block type="studio_whenArrow">
+              <title name="VALUE">right</title>
+              <next>
+            <block type="studio_move">
+              <title name="SPRITE">1</title>
+              <title name="DIR">2</title>
+            </block></next></block></xml>
+      courseA_playLab_events4_2019:
+        courseA_playLab_events4_a: |-
+          यहां वह इवेंट ब्लॉक दिया गया है, जिसकी जरूरत आपको जॉर्ज को दाईं ओर मूव करने के लिए होगी:
+
+          <xml><block type="studio_move">
+              <title name="SPRITE">1</title>
+              <title name="DIR">2</title>
+            </block></xml>
+        courseA_playLab_events4_b: |-
+          यह वही कोड है, जिसकी जरूरत आपको यह पहेली पूरी करने के लिए होगी:
+
+          <xml><block type="studio_whenArrow">
+              <title name="VALUE">right</title>
+              <next>
+            <block type="studio_move">
+              <title name="SPRITE">1</title>
+              <title name="DIR">2</title>
+            </block></next></block></xml>
+      courseA_playLab_events5:
+        courseA_playLab_events5_a: |-
+          यहां वे इवेंट ब्लॉक्स दिए गए हैं, जिनका उपयोग आपको जॉर्ज को ऊपर और नीचे मूव करने के लिए करना होगा:
+
+          <xml><block type="studio_whenArrow">
+              <title name="VALUE">up</title>
+            </block></xml>
+
+          और
+
+          <xml><block type="studio_whenArrow">
+              <title name="VALUE">down</title>
+            </block></xml>
+        courseA_playLab_events5_b: |-
+          क्या आपको पता है कि आप ब्लॉक में तस्वीर पर क्लिक करके और नई कुंजी चुनकर इवेंट तीर के लिए कुंजी बदल सकते हैं?
+
+          ![](https://images.code.org/b010b6a8131689af53b33148753c15b4-image-1492639642316.gif)
+      courseA_playLab_events5_2018:
+        courseA_playLab_events5_a: |-
+          यहां वे इवेंट ब्लॉक्स दिए गए हैं, जिनका उपयोग आपको जॉर्ज को ऊपर और नीचे मूव करने के लिए करना होगा:
+
+          <xml><block type="studio_whenArrow">
+              <title name="VALUE">up</title>
+            </block></xml>
+
+          और
+
+          <xml><block type="studio_whenArrow">
+              <title name="VALUE">down</title>
+            </block></xml>
+        courseA_playLab_events5_b: |-
+          क्या आपको पता है कि आप ब्लॉक में तस्वीर पर क्लिक करके और नई कुंजी चुनकर इवेंट तीर के लिए कुंजी बदल सकते हैं?
+
+          ![](https://images.code.org/b010b6a8131689af53b33148753c15b4-image-1492639642316.gif)
+      courseA_playLab_events5_2019:
+        courseA_playLab_events5_a: |-
+          यहां वे इवेंट ब्लॉक्स दिए गए हैं, जिनका उपयोग आपको जॉर्ज को ऊपर और नीचे मूव करने के लिए करना होगा:
+
+          <xml><block type="studio_whenArrow">
+              <title name="VALUE">up</title>
+            </block></xml>
+
+          और
+
+          <xml><block type="studio_whenArrow">
+              <title name="VALUE">down</title>
+            </block></xml>
+        courseA_playLab_events5_b: |-
+          क्या आपको पता है कि आप ब्लॉक में तस्वीर पर क्लिक करके और नई कुंजी चुनकर इवेंट तीर के लिए कुंजी बदल सकते हैं?
+
+          ![](https://images.code.org/b010b6a8131689af53b33148753c15b4-image-1492639642316.gif)
+      courseA_playLab_events6:
+        courseA_playLab_events6_a: |-
+          यहां वह इवेंट ब्लॉक दिया गया है, जिसका उपयोग आप क्लिक किए जाने पर जॉर्ज से कुछ करवाने के लिए करेंगे:
+
+          <xml><block type="studio_whenSpriteClicked">
+              <title name="SPRITE">1</title>
+            </block></xml>
+        courseA_playLab_events6_b: |-
+          यहां वह ब्लॉक दिया गया है, जिसका उपयोग आप पृष्ठभूमि बदलने के लिए करेंगे:
+
+          <xml><block type="studio_setBackground">
+              <title name="VALUE">random</title>
+            </block></xml>
+        courseA_playLab_events6_c: |-
+          यहां वह ब्लॉक दिया गया है, जिसका उपयोग आप बेतरतीब ध्वनि प्ले करने के लिए करेंगे:
+
+          <xml><block type="studio_playSound">
+              <title name="SOUND">random</title>
+            </block></xml>
+      courseA_playLab_events6_2018:
+        courseA_playLab_events6_a: |-
+          यहां वह इवेंट ब्लॉक दिया गया है, जिसका उपयोग आप क्लिक किए जाने पर जॉर्ज से कुछ करवाने के लिए करेंगे:
+
+          <xml><block type="studio_whenSpriteClicked">
+              <title name="SPRITE">1</title>
+            </block></xml>
+        courseA_playLab_events6_b: |-
+          यहां वह ब्लॉक दिया गया है, जिसका उपयोग आप पृष्ठभूमि बदलने के लिए करेंगे:
+
+          <xml><block type="studio_setBackground">
+              <title name="VALUE">random</title>
+            </block></xml>
+        courseA_playLab_events6_c: |-
+          यहां वह ब्लॉक दिया गया है, जिसका उपयोग आप बेतरतीब ध्वनि प्ले करने के लिए करेंगे:
+
+          <xml><block type="studio_playSound">
+              <title name="SOUND">random</title>
+            </block></xml>
+      courseA_playLab_events6_2019:
+        courseA_playLab_events6_a: |-
+          यहां वह इवेंट ब्लॉक दिया गया है, जिसका उपयोग आप क्लिक किए जाने पर जॉर्ज से कुछ करवाने के लिए करेंगे:
+
+          <xml><block type="studio_whenSpriteClicked">
+              <title name="SPRITE">1</title>
+            </block></xml>
+        courseA_playLab_events6_b: |-
+          यहां वह ब्लॉक दिया गया है, जिसका उपयोग आप पृष्ठभूमि बदलने के लिए करेंगे:
+
+          <xml><block type="studio_setBackground">
+              <title name="VALUE">random</title>
+            </block></xml>
+        courseA_playLab_events6_c: |-
+          यहां वह ब्लॉक दिया गया है, जिसका उपयोग आप बेतरतीब ध्वनि प्ले करने के लिए करेंगे:
+
+          <xml><block type="studio_playSound">
+              <title name="SOUND">random</title>
+            </block></xml>
+      courseA_playLab_events7:
+        courseA_playLab_events7_a: |-
+          अभिनेताओं के टकराने पर जो होता है, उसे नियंत्रित करने के लिए इस ब्लॉक का उपयोग करें
+
+          <xml><block type="studio_whenSpriteCollided">
+              <title name="SPRITE1">1</title>
+              <title name="SPRITE2">0</title>
+            </block></xml>
+      courseA_playLab_events7_2018:
+        courseA_playLab_events7_a: |-
+          अभिनेताओं के टकराने पर जो होता है, उसे नियंत्रित करने के लिए इस ब्लॉक का उपयोग करें
+
+          <xml><block type="studio_whenSpriteCollided">
+              <title name="SPRITE1">1</title>
+              <title name="SPRITE2">0</title>
+            </block></xml>
+      courseA_playLab_events7_2019:
+        courseA_playLab_events7_a: |-
+          अभिनेताओं के टकराने पर जो होता है, उसे नियंत्रित करने के लिए इस ब्लॉक का उपयोग करें
+
+          <xml><block type="studio_whenSpriteCollided">
+              <title name="SPRITE1">1</title>
+              <title name="SPRITE2">0</title>
+            </block></xml>
+      courseA_playlab_events_challenge1:
+        courseA_playlab_events_challenge1_a: "जब आप रॉबिन पर क्लिक करें तो वैड्लेस
+          द पेंगुइन को आने के लिए सक्रिय करें!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
+          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n
+          \     </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_b: "जब आप वैड्डलेस पर क्लिक करें तो बू द
+          घोस्ट को आने के लिए सक्रिय करें!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">3</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
+          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">4</title>\n
+          \     </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_c: "जब आप बू पर क्लिक करें तो जेडन द फज्जी
+          मोन्स्टर को आने के लिए सक्रिय करें!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">4</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
+          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">5</title>\n
+          \     </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_d: "जब आप दैत्य पर क्लिक करें को स्पिफ द
+          रोबोट को आने के लिए सक्रिय करें!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
+          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">6</title>\n
+          \     </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_e: "अंत में, जब आप स्पिफ पर क्लिक करें तो
+          वेंडल द विज़ार्ड को आने के लिए सक्रिय करें!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">6</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
+          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">7</title>\n
+          \     </block>\n    </next>\n  </block></xml>"
+      courseA_playlab_events_challenge1_2018:
+        courseA_playlab_events_challenge1_a: "जब आप रॉबिन पर क्लिक करें तो वैड्लेस
+          द पेंगुइन को आने के लिए सक्रिय करें!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
+          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n
+          \     </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_b: "जब आप वैड्डलेस पर क्लिक करें तो बू द
+          घोस्ट को आने के लिए सक्रिय करें!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">3</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
+          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">4</title>\n
+          \     </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_c: "जब आप बू पर क्लिक करें तो जेडन द फज्जी
+          मोन्स्टर को आने के लिए सक्रिय करें!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">4</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
+          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">5</title>\n
+          \     </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_d: "जब आप दैत्य पर क्लिक करें को स्पिफ द
+          रोबोट को आने के लिए सक्रिय करें!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
+          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">6</title>\n
+          \     </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_e: "अंत में, जब आप स्पिफ पर क्लिक करें तो
+          वेंडल द विज़ार्ड को आने के लिए सक्रिय करें!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">6</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
+          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">7</title>\n
+          \     </block>\n    </next>\n  </block></xml>"
+      courseA_playlab_events_challenge1_2019:
+        courseA_playlab_events_challenge1_a: "जब आप रॉबिन पर क्लिक करें तो वैड्लेस
+          द पेंगुइन को आने के लिए सक्रिय करें!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
+          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n
+          \     </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_b: "जब आप वैड्डलेस पर क्लिक करें तो बू द
+          घोस्ट को आने के लिए सक्रिय करें!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">3</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
+          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">4</title>\n
+          \     </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_c: "जब आप बू पर क्लिक करें तो जेडन द फज्जी
+          मोन्स्टर को आने के लिए सक्रिय करें!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">4</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
+          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">5</title>\n
+          \     </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_d: "जब आप दैत्य पर क्लिक करें को स्पिफ द
+          रोबोट को आने के लिए सक्रिय करें!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
+          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">6</title>\n
+          \     </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_e: "अंत में, जब आप स्पिफ पर क्लिक करें तो
+          वेंडल द विज़ार्ड को आने के लिए सक्रिय करें!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">6</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
+          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">7</title>\n
+          \     </block>\n    </next>\n  </block></xml>"
+      courseA_playlab_events_challenge2:
+        courseA_playlab_events_challenge2_a: "आप पक्षी को गाना गाने के लिए सक्रिय
+          कर सकते हैं।\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title
+          name=\"SPRITE\">2</title>\n    <next>\n          <block type=\"studio_saySprite\">\n
+          \           <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n
+          \         </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge2_b: "आप रोबोट से बीप की आवाज़ निकालने के
+          लिए सक्रिय कर सकते हैं।\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">6</title>\n    <next>\n      \n          <block
+          type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n
+          \         </block>\n        </next>\n  </block></xml>"
+        courseA_playlab_events_challenge2_c: |-
+          आप किसी भी गुस्सैल दैत्य को गुर्राने के लिए सक्रिय कर सकते हैं।
+
+          <xml>  <block type="studio_whenSpriteClicked">
+              <title name="SPRITE">5</title>
+              <next>
+                <block type="studio_setSpriteEmotion">
+                  <title name="SPRITE">5</title>
+                  <title name="VALUE">2</title>
+                  <next>
+                    <block type="studio_saySprite">
+                      <title name="SPRITE">5</title>
+                      <title name="TEXT">Roar!</title>
+                      <next>
+                        <block type="studio_setSpriteEmotion">
+                          <title name="SPRITE">5</title>
+                          <title name="VALUE">0</title>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block></xml>
+      courseA_playlab_events_challenge2_2018:
+        courseA_playlab_events_challenge2_a: "आप पक्षी को गाना गाने के लिए सक्रिय
+          कर सकते हैं।\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title
+          name=\"SPRITE\">2</title>\n    <next>\n          <block type=\"studio_saySprite\">\n
+          \           <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n
+          \         </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge2_b: "आप रोबोट से बीप की आवाज़ निकालने के
+          लिए सक्रिय कर सकते हैं।\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">6</title>\n    <next>\n      \n          <block
+          type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n
+          \         </block>\n        </next>\n  </block></xml>"
+        courseA_playlab_events_challenge2_c: |-
+          आप किसी भी गुस्सैल दैत्य को गुर्राने के लिए सक्रिय कर सकते हैं।
+
+          <xml>  <block type="studio_whenSpriteClicked">
+              <title name="SPRITE">5</title>
+              <next>
+                <block type="studio_setSpriteEmotion">
+                  <title name="SPRITE">5</title>
+                  <title name="VALUE">2</title>
+                  <next>
+                    <block type="studio_saySprite">
+                      <title name="SPRITE">5</title>
+                      <title name="TEXT">Roar!</title>
+                      <next>
+                        <block type="studio_setSpriteEmotion">
+                          <title name="SPRITE">5</title>
+                          <title name="VALUE">0</title>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block></xml>
+      courseA_playlab_events_challenge2_2019:
+        courseA_playlab_events_challenge2_a: "आप पक्षी को गाना गाने के लिए सक्रिय
+          कर सकते हैं।\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title
+          name=\"SPRITE\">2</title>\n    <next>\n          <block type=\"studio_saySprite\">\n
+          \           <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n
+          \         </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge2_b: "आप रोबोट से बीप की आवाज़ निकालने के
+          लिए सक्रिय कर सकते हैं।\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">6</title>\n    <next>\n      \n          <block
+          type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n
+          \         </block>\n        </next>\n  </block></xml>"
+        courseA_playlab_events_challenge2_c: |-
+          आप किसी भी गुस्सैल दैत्य को गुर्राने के लिए सक्रिय कर सकते हैं।
+
+          <xml>  <block type="studio_whenSpriteClicked">
+              <title name="SPRITE">5</title>
+              <next>
+                <block type="studio_setSpriteEmotion">
+                  <title name="SPRITE">5</title>
+                  <title name="VALUE">2</title>
+                  <next>
+                    <block type="studio_saySprite">
+                      <title name="SPRITE">5</title>
+                      <title name="TEXT">Roar!</title>
+                      <next>
+                        <block type="studio_setSpriteEmotion">
+                          <title name="SPRITE">5</title>
+                          <title name="VALUE">0</title>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block></xml>
+      courseB_artist_loops2:
+        courseB_artist_loops2_a: यदि आप चाहते हैं कि लूप 4 बार से अधिक दोहराया जाए,
+          तो आप ब्लॉक के सबसे ऊपर नंबर बदल सकते हैं।
+      courseB_artist_loops2_2018:
+        courseB_artist_loops2_a: यदि आप चाहते हैं कि लूप 4 बार से अधिक दोहराया जाए,
+          तो आप ब्लॉक के सबसे ऊपर नंबर बदल सकते हैं।
+      courseB_artist_loops2_2019:
+        courseB_artist_loops2_a: यदि आप चाहते हैं कि लूप 4 बार से अधिक दोहराया जाए,
+          तो आप ब्लॉक के सबसे ऊपर नंबर बदल सकते हैं।
+      courseB_artist_loops9:
+        courseB_artist_loops9_c: क्या आप पता नहीं लगा पा रहे हैं कि लूप को कहां रखना
+          है, तो कदम-दर-कदम कोड लिखने की कोशिश करें और पैटर्न खोजें।
+      courseB_artist_loops9_2018:
+        courseB_artist_loops9_c: क्या आप पता नहीं लगा पा रहे हैं कि लूप को कहां रखना
+          है, तो कदम-दर-कदम कोड लिखने की कोशिश करें और पैटर्न खोजें।
+      courseB_artist_loops9_2019:
+        courseB_artist_loops9_c: क्या आप पता नहीं लगा पा रहे हैं कि लूप को कहां रखना
+          है, तो कदम-दर-कदम कोड लिखने की कोशिश करें और पैटर्न खोजें।
+      courseB_collector_loops2:
+        courseB_collector_loops2_a: इससे पहले कि आप कोई खजाना एकत्र कर पाएं, आपको
+          मूव करना होगा।
+      courseB_collector_loops2_2018:
+        courseB_collector_loops2_a: इससे पहले कि आप कोई खजाना एकत्र कर पाएं, आपको
+          मूव करना होगा।
+      courseB_collector_loops2_2019:
+        courseB_collector_loops2_a: इससे पहले कि आप कोई खजाना एकत्र कर पाएं, आपको
+          मूव करना होगा।
+      courseB_collector_loops4:
+        courseB_collector_loops4_b: लॉरेल के जाने की दूर को बदलने के लिए, लूप के चलने
+          की संख्या को बदलें।
+      courseB_collector_loops4_2018:
+        courseB_collector_loops4_b: लॉरेल के जाने की दूर को बदलने के लिए, लूप के चलने
+          की संख्या को बदलें।
+      courseB_collector_loops4_2019:
+        courseB_collector_loops4_b: लॉरेल के जाने की दूर को बदलने के लिए, लूप के चलने
+          की संख्या को बदलें।
+      courseB_collector_loops_challenge2a:
+        courseB_collector_loops_challenge2a_a: यदि कुछ गलत होता है, तो इसे डीबग करने
+          की कोशिश करें। हार न मानें!
+        courseB_collector_loops_challenge2a_b: भूलभुलैया को पार करने के लिए इस विकल्प
+          को देखें। क्या आपको कोई ऐसा पैटर्न दिखाई दे रहा है, जिसे आप दोहरा सकते हों?
+        courseB_collector_loops_challenge2a_c: सारा खजाना एकत्र करने के लिए, आपको
+          अपने लूप के अंदर दो  <xml> <block type="collector_collect"/></xml> ब्लॉक्स
+          जोड़ने या इसके अपने `दोहराएं` ब्लॉक के अंदर ब्लॉक रखने की जरूरत होगी।
+      courseB_collector_loops_challenge2a_2018:
+        courseB_collector_loops_challenge2a_a: यदि कुछ गलत होता है, तो इसे डीबग करने
+          की कोशिश करें। हार न मानें!
+        courseB_collector_loops_challenge2a_b: भूलभुलैया को पार करने के लिए इस विकल्प
+          को देखें। क्या आपको कोई ऐसा पैटर्न दिखाई दे रहा है, जिसे आप दोहरा सकते हों?
+        courseB_collector_loops_challenge2a_c: सारा खजाना एकत्र करने के लिए, आपको
+          अपने लूप के अंदर दो  <xml> <block type="collector_collect"/></xml> ब्लॉक्स
+          जोड़ने या इसके अपने `दोहराएं` ब्लॉक के अंदर ब्लॉक रखने की जरूरत होगी।
+      courseB_collector_loops_challenge2a_2019:
+        courseB_collector_loops_challenge2a_a: यदि कुछ गलत होता है, तो इसे डीबग करने
+          की कोशिश करें। हार न मानें!
+        courseB_collector_loops_challenge2a_b: भूलभुलैया को पार करने के लिए इस विकल्प
+          को देखें। क्या आपको कोई ऐसा पैटर्न दिखाई दे रहा है, जिसे आप दोहरा सकते हों?
+        courseB_collector_loops_challenge2a_c: सारा खजाना एकत्र करने के लिए, आपको
+          अपने लूप के अंदर दो  <xml> <block type="collector_collect"/></xml> ब्लॉक्स
+          जोड़ने या इसके अपने `दोहराएं` ब्लॉक के अंदर ब्लॉक रखने की जरूरत होगी।
+      courseC19_playLab_EOC1:
+        courseE_playLab_scaffold1_a: "`अभिनेता 1 को ??? चित्र पर सेट करें` ब्लॉक का
+          उपयोग स्टेज पर अभिनेता जोड़ने के लिए किया जा सकता है।"
+        courseE_playLab_scaffold1_b: प्रोग्राम के शुरू में अपने अभिनेता को प्रकट करने
+          के लिए `जब चलाया जाए` के अंतर्गत `अभिनेता सेट करें` ब्लॉक रखें।
+        courseE_playLab_scaffold1_c: अपने दृश्य में पृष्ठभूमि चुनने के लिए `??? पृष्ठभूमि
+          सेट करें` का उपयोग करें।
+      courseC19_playLab_EOC2:
+        courseE_playLab_scaffold1_a: ब्लॉक नियंत्रणों की दिशा को बदलने के लिए `जब
+          ____ तीर` इवेंट के ड्रॉपडाउन मेन्यु चलाएं।
+        courseE_playLab_scaffold1_b: प्रत्येक को नीचे मूव करने की दिशा के साथ, आपके
+          पास चार `जब तीर` इवेंट ब्लॉक्स होने चाहिएं।
+        courseE_playLab_scaffold1_c: जब आप पूरा कर लें, तो आप तीर वाली कुंजियों के
+          साथ अपने हीरो को इधर-उधर मूव करने में सक्षम होंगे!
+      courseC19_playLab_EOC4:
+        courseE_playLab_scaffold4_a: अंक जोड़ने के लिए `अंक स्कोर करें` और एक घटाने
+          के लिए `अंक हटाएं` का उपयोग करें।
+      courseC_data wizard:
+        courseA_playLab_events7_a: |-
+          अभिनेताओं के टकराने पर जो होता है, उसे नियंत्रित करने के लिए इस ब्लॉक का उपयोग करें
+
+          <xml><block type="studio_whenSpriteCollided">
+              <title name="SPRITE1">1</title>
+              <title name="SPRITE2">0</title>
+            </block></xml>
+      courseC_maze_debugging2:
+        courseC_maze_debugging2_c: क्या आप पता नहीं लगा पा रहें कि क्या गलत है? यह
+          देखने के लिए कई बार कोड चलाने की कोशिश करें कि क्या होता है।
+      courseC_maze_debugging2_2018:
+        courseC_maze_debugging2_c: क्या आप पता नहीं लगा पा रहें कि क्या गलत है? यह
+          देखने के लिए कई बार कोड चलाने की कोशिश करें कि क्या होता है।
+      courseC_maze_debugging2_2019:
+        courseC_maze_debugging2_c: क्या आप पता नहीं लगा पा रहें कि क्या गलत है? यह
+          देखने के लिए कई बार कोड चलाने की कोशिश करें कि क्या होता है।
+      courseC_maze_debugging3:
+        courseC_maze_debugging3_b: क्या आप पता नहीं लगा पा रहें कि क्या गलत है? यह
+          देखने के लिए कई बार कोड चलाने की कोशिश करें कि क्या होता है।
+      courseC_maze_debugging3_2018:
+        courseC_maze_debugging3_b: क्या आप पता नहीं लगा पा रहें कि क्या गलत है? यह
+          देखने के लिए कई बार कोड चलाने की कोशिश करें कि क्या होता है।
+      courseC_maze_debugging3_2019:
+        courseC_maze_debugging3_b: क्या आप पता नहीं लगा पा रहें कि क्या गलत है? यह
+          देखने के लिए कई बार कोड चलाने की कोशिश करें कि क्या होता है।
+      courseE_artist_concept1:
+        courseE_artist_concept1_a: षट्कोणों की 50 पिक्सल की भुजाएं हैं और दाईं ओर
+          60 डिग्री के मोड़ हैं।
+        courseE_artist_concept1_b: यहां एक फंक्शन का उपयोग करने का प्रयास करें ताकि
+          आपको बार-बार षट्कोण के लिए कोड न लिखना पड़े।
+        courseE_artist_concept1_c: पेन चौड़ाई बदलने के लिए प्रत्येक फंक्शन बोलने से
+          पहले `चौड़ाई सेट करें` ब्लॉक का उपयोग करें।
+      courseE_artist_concept1_2018:
+        courseE_artist_concept1_a: षट्कोणों की 50 पिक्सल की भुजाएं हैं और दाईं ओर
+          60 डिग्री के मोड़ हैं।
+        courseE_artist_concept1_b: यहां एक फंक्शन का उपयोग करने का प्रयास करें ताकि
+          आपको बार-बार षट्कोण के लिए कोड न लिखना पड़े।
+        courseE_artist_concept1_c: पेन चौड़ाई बदलने के लिए प्रत्येक फंक्शन बोलने से
+          पहले `चौड़ाई सेट करें` ब्लॉक का उपयोग करें।
+      courseE_artist_concept4:
+        courseE_artist_concept4_a: इस पहेली को हल करने के कई तरीके हैं। क्या आप योजना
+          बना सकते हैं?
+        courseE_artist_concept4_b: एक वर्ग बनाने का प्रयास करें। फिर वर्गों की लाइन
+          बनाएं।  आगे क्या करना है?
+        courseE_artist_concept4_c: वर्गों की लाइन बनाने के बाद, आप चारों तरफ मुड़
+          सकते हैं और बाएं जाते हुए वर्गों की दूसरी लाइन खींच सकते हैं, या आप दाएं
+          जाते हुए वर्गों की दूसरी लाइन खींचने के लिए आकृति की बाईं भुजा के पीछे कूद
+          सकते हैं। आप किसे प्राथमिकता देंगे?
+      courseE_artist_concept4_2018:
+        courseE_artist_concept4_a: इस पहेली को हल करने के कई तरीके हैं। क्या आप योजना
+          बना सकते हैं?
+        courseE_artist_concept4_b: एक वर्ग बनाने का प्रयास करें। फिर वर्गों की लाइन
+          बनाएं।  आगे क्या करना है?
+        courseE_artist_concept4_c: वर्गों की लाइन बनाने के बाद, आप चारों तरफ मुड़
+          सकते हैं और बाएं जाते हुए वर्गों की दूसरी लाइन खींच सकते हैं, या आप दाएं
+          जाते हुए वर्गों की दूसरी लाइन खींचने के लिए आकृति की बाईं भुजा के पीछे कूद
+          सकते हैं। आप किसे प्राथमिकता देंगे?
+      courseE_artist_concept_challenge1:
+        courseE_artist_concept_challenge1_a: 'आधे षट्कोण की \*30 की लंबाई\*\* है और
+          यह **60 डिग्री** दाएं मुड़ता है।  '
+        courseE_artist_concept_challenge1_b: '2/3 त्रिकोण की \*80 की लंबाई\*\* है
+          और यह **120 डिग्री** दाएं मुड़ता है। '
+        courseE_artist_concept_challenge1_c: |-
+          यह वही डिज़ाइन है, जिसे आप पूरी आकृति बनाने के लिए दोहराना चाहते हैं:
+
+          ![](<https://images.code.org/d6b2afd39119da33d085dcce6077ada8-image-1501705780826.28.43 PM.png>)
+      courseE_artist_concept_challenge1_2018:
+        courseE_artist_concept_challenge1_a: 'आधे षट्कोण की \*30 की लंबाई\*\* है और
+          यह **60 डिग्री** दाएं मुड़ता है।  '
+        courseE_artist_concept_challenge1_b: '2/3 त्रिकोण की \*80 की लंबाई\*\* है
+          और यह **120 डिग्री** दाएं मुड़ता है। '
+        courseE_artist_concept_challenge1_c: |-
+          यह वही डिज़ाइन है, जिसे आप पूरी आकृति बनाने के लिए दोहराना चाहते हैं:
+
+          ![](<https://images.code.org/d6b2afd39119da33d085dcce6077ada8-image-1501705780826.28.43 PM.png>)
+      courseE_artist_concept_challenge2:
+        courseE_artist_concept_challenge2_a: जब आप फंक्शन परिभाषित कर लें, तो आप इसे
+          बार-बार बोल सकते हैं - जब भी और जहां भी आप चाहें!
+        courseE_artist_concept_challenge2_b: |-
+          आप इस कमांड का उपयोग करते हुए कैनवास पर अलग-अलग पोजीशनों पर कूद सकते हैं:
+          <xml>  <block type="jump_to">
+              <title name="VALUE">???</title>
+            </block></xml>
+      courseE_artist_concept_challenge2_2018:
+        courseE_artist_concept_challenge2_a: जब आप फंक्शन परिभाषित कर लें, तो आप इसे
+          बार-बार बोल सकते हैं - जब भी और जहां भी आप चाहें!
+        courseE_artist_concept_challenge2_b: |-
+          आप इस कमांड का उपयोग करते हुए कैनवास पर अलग-अलग पोजीशनों पर कूद सकते हैं:
+          <xml>  <block type="jump_to">
+              <title name="VALUE">???</title>
+            </block></xml>
+      courseE_artist_functions1:
+        courseE_artist_functions1_a: प्रत्येक वर्ग की 100 पिक्सल की भुजाएं हैं, जिसका
+          अर्थ है कि आपको अपना दूसरा वर्ग खींचने से पहले 175 पिक्सल आगे की ओर मूव
+          करना होगा।
+        courseE_artist_functions1_b: अपने गिलास बनाने के लिए आप एक ही बार में लाइनें
+          खींच सकते हैं।
+        courseE_artist_functions1_c: अधिक छोटे कोड के लिए, गिलासों के वर्ग फ्रेम खींचने
+          हेतु `दोहराएं` लूप का उपयोग करने का प्रयास करें।
+      courseE_artist_functions10:
+        courseD_artist_functions10_b: यह ड्राइंग पिछली ड्राइंग के काफी मिलती-जुलती
+          है, लेकिन `लाइन खींचे` फंक्शन अब अलग आकृति चित्रित कर रहा है।
+        courseD_artist_functions10_a: बहुत-से `आगे की ओर मूव करें` ब्लॉक्स का उपयोग
+          करने से बचने के लिए, `षट्कोण खींचें` फंक्शन बनाएं और उसे कई बार बोलें।
+      courseE_artist_functions10_2018:
+        courseD_artist_functions10_b: यह ड्राइंग पिछली ड्राइंग के काफी मिलती-जुलती
+          है, लेकिन `लाइन खींचे` फंक्शन अब अलग आकृति चित्रित कर रहा है।
+        courseD_artist_functions10_a: बहुत-से `आगे की ओर मूव करें` ब्लॉक्स का उपयोग
+          करने से बचने के लिए, `षट्कोण खींचें` फंक्शन बनाएं और उसे कई बार बोलें।
+      courseE_artist_functions10_2019:
+        courseD_artist_functions10_b: यह ड्राइंग पिछली ड्राइंग के काफी मिलती-जुलती
+          है, लेकिन `लाइन खींचे` फंक्शन अब अलग आकृति चित्रित कर रहा है।
+        courseD_artist_functions10_a: बहुत-से `आगे की ओर मूव करें` ब्लॉक्स का उपयोग
+          करने से बचने के लिए, `षट्कोण खींचें` फंक्शन बनाएं और उसे कई बार बोलें।
+      courseE_artist_functions2:
+        courseD_artist_functions2_b: जो फंक्शन आप लिखें, उसमें आपका पूरा प्रोग्राम
+          शामिल नहीं होना चाहिए, केवल आंशिक होना चाहिए, जो 100 पिक्सल की भुजाओं वाला
+          वर्ग खींचता हो
+        courseD_artist_functions2_c: '`जब चलाएं` ब्लॉक के अंतर्गत अपने फंक्शन को "बोलने”
+          के लिए हरा `वर्ग खींचें` ब्लॉक का उपयोग करें। अन्यथा, आपके फंक्शन में कोड
+          नहीं चलेगा।<xml><block type="procedures_callnoreturn" limit="2"><mutation
+          name="draw a square"/></block></xml>'
+        courseD_artist_functions2_a: |-
+          आपके प्रोग्राम को यह करना चाहिए:
+
+          -   फंक्शन का उपयोग
+          -   100 + 75 पिक्सल आगे की ओर मूव करना
+          -   फंक्शन का उपयोग
+      courseE_artist_functions3:
+        courseD_artist_functions3_a: इस पहेली को हल करने के लिए, आपको केवल ऐसी लूप
+          जोड़ने की जरूरत है, जो 8 बार शुरुआती कोड को दोहराती हो।यदि आपको याद नहीं
+          है कि शुरुआती कोड क्या था, वर्कस्पेस के ऊपरी दाएं कोने में "शुरू करें" पर
+          क्लिक करें।
+        courseD_artist_functions3_b: आपकी लूप के अंदर सभी 3 शुरुआती कोड ब्लॉक्स होने
+          चाहिएं।
+      courseE_artist_functions4:
+        courseD_artist_functions4_a: फंक्शन का उपयोग करने का प्रयास करें!
+        courseD_artist_functions4_b: अपना फंक्शन बनाना शुरू करने के लिए टूलबॉक्स में
+          से `तारा चित्रित करें` फंक्शन ब्लॉक को खींचें। इसमें पिछली पहेली वाला कोड
+          ही होन चाहिए, क्योंकि आप वही तारा पैटर्न चित्रित कर रहे हैं।
+        courseD_artist_functions4_c: अपने मुख्य प्रोग्राम में इस फंक्शन को बोलने के
+          लिए हरा `तारा चित्रित करें` ब्लॉक उपयोग करें। प्रत्येक तारे के बीच आगे की
+          ओर कूदना न भूलें!
+      courseE_artist_functions5:
+        courseD_artist_functions5_a: हार न मानें!  जो आप सीख रहे हैं, उसे याद करें।
+        courseD_artist_functions5_b: फंक्शन सुरक्षित किए कोड को किसी भी समय बोलने
+          को आसान बनाते हैं, केवल लूप के बाहर से नहीं!
+        courseD_artist_functions5_c: "`तारा चित्रित करें` फंक्शन में तारे की आकृति
+          के लिए कोड को खींचने से शुरू करें, फिर तीन तारे चित्रित करने के लिए इस फंक्शन
+          का उपयोग करें!"
+      courseE_artist_functions5_2018:
+        courseD_artist_functions5_a: हार न मानें!  जो आप सीख रहे हैं, उसे याद करें।
+        courseD_artist_functions5_b: फंक्शन सुरक्षित किए कोड को किसी भी समय बोलने
+          को आसान बनाते हैं, केवल लूप के बाहर से नहीं!
+      courseE_artist_functions5_2019:
+        courseD_artist_functions5_a: हार न मानें!  जो आप सीख रहे हैं, उसे याद करें।
+        courseD_artist_functions5_b: फंक्शन सुरक्षित किए कोड को किसी भी समय बोलने
+          को आसान बनाते हैं, केवल लूप के बाहर से नहीं!
+      courseE_artist_functions6:
+        grade4_artist_functions_windows0_a: अभी केवल एक खिड़की बनाने पर ध्यान केंद्रित
+          करें।  हम अगली पहेली में फंक्शन बनाएंगे।
+        grade4_artist_functions_windows0_b: नेस्टड लूप्स का उपयोग करने का प्रयास करें।
+          अंदरूनी लूप वर्ग बनाएगी और बाहरी लूप वर्ग को चार बार घुमाएगी।
+      courseE_artist_functions7:
+        courseD_artist_functions7_a: पहले अपना फंक्शन बनाने और फिर एक ही बार में खिड़कियां
+          जोड़ने का प्रयास करें।
+        courseD_artist_functions7_b: आपको कोई भी अतिरिक्त दोहराएं लूप्स जोड़ने की
+          जरूरत नहीं होगी।  प्रत्येक ऊपरी खिड़की के बीच कलाकार को 100 पिक्सल, फिर
+          नीचे की खिड़कियों तक जाने के लिए 150 पिक्सल नीचे कूदने के लिए सक्रिय करें।
+      courseE_artist_functions7_2018:
+        courseD_artist_functions7_a: पहले अपना फंक्शन बनाने और फिर एक ही बार में खिड़कियां
+          जोड़ने का प्रयास करें।
+      courseE_artist_functions7_2019:
+        courseD_artist_functions7_a: पहले अपना फंक्शन बनाने और फिर एक ही बार में खिड़कियां
+          जोड़ने का प्रयास करें।
+      courseE_artist_functions8:
+        courseD_artist_functions8_f: आपको केवल एक `आगे की ओर जाएं` ब्लॉक की जरूरत
+          है, लेकिन आपको कुछ `आगे की ओर कूदें` और/या `पीछे की ओर कूदें` ब्लॉक्स की
+          जरूरत होगी!
+        courseD_artist_functions8_a: |-
+          वर्ग के लिए फंक्शन बनाकर शुरुआत करें, फिर वर्गों की लाइनों के लिए फंक्शन बनाने का प्रयास करें।
+          यह चित्र बनाने के लिए आप `वर्गों की लाइन खींचें` फंक्शन का उपयोग कैसे करेंगे?
+        courseD_artist_functions8_d: "वर्गों की लाइन बनाने के लिए,\n\n-   3 बार दोहराएं
+          \   \n-   **50 पिक्सल** भुजा की लंबाई वाला वर्ग खींचें    \n-   **100 पिक्सल**
+          आगे की ओर कूदें"
+        courseD_artist_functions8_b: |-
+          इस तस्वीर में प्रत्येक पंक्ति की कल्पना 3 वर्गों की लाइन के तौर पर करें। वहां वर्गों की कितनी लाइनें है और आप उनमें से प्रत्येक को कहां खींचना शुरू करेंगे?
+
+          ![](<https://images.code.org/22a6f5cc5551371057244eee01955f8e-image-1493135135468.4.10 Hint Drawing.png>)
+        courseD_artist_functions8_c: वर्गों की प्रत्येक लाइन के अंत में, कलाकार को
+          वर्गों की अगली लाइन खींचने से पहले नीचे और पीछे की ओर कूदने की जरूरत होगी।
+      courseE_artist_functions8_2018:
+        courseD_artist_functions8_f: आपको केवल एक `आगे की ओर जाएं` ब्लॉक की जरूरत
+          है, लेकिन आपको कुछ `आगे की ओर कूदें` और/या `पीछे की ओर कूदें` ब्लॉक्स की
+          जरूरत होगी!
+        courseD_artist_functions8_a: |-
+          वर्ग के लिए फंक्शन बनाकर शुरुआत करें, फिर वर्गों की लाइनों के लिए फंक्शन बनाने का प्रयास करें।
+          यह चित्र बनाने के लिए आप `वर्गों की लाइन खींचें` फंक्शन का उपयोग कैसे करेंगे?
+        courseD_artist_functions8_d: "वर्गों की लाइन बनाने के लिए,\n\n-   3 बार दोहराएं
+          \   \n-   **50 पिक्सल** भुजा की लंबाई वाला वर्ग खींचें    \n-   **100 पिक्सल**
+          आगे की ओर कूदें"
+        courseD_artist_functions8_b: |-
+          इस तस्वीर में प्रत्येक पंक्ति की कल्पना 3 वर्गों की लाइन के तौर पर करें। वहां वर्गों की कितनी लाइनें है और आप उनमें से प्रत्येक को कहां खींचना शुरू करेंगे?
+
+          ![](<https://images.code.org/22a6f5cc5551371057244eee01955f8e-image-1493135135468.4.10 Hint Drawing.png>)
+      courseE_artist_functions8_2019:
+        courseD_artist_functions8_f: आपको केवल एक `आगे की ओर जाएं` ब्लॉक की जरूरत
+          है, लेकिन आपको कुछ `आगे की ओर कूदें` और/या `पीछे की ओर कूदें` ब्लॉक्स की
+          जरूरत होगी!
+        courseD_artist_functions8_a: |-
+          वर्ग के लिए फंक्शन बनाकर शुरुआत करें, फिर वर्गों की लाइनों के लिए फंक्शन बनाने का प्रयास करें।
+          यह चित्र बनाने के लिए आप `वर्गों की लाइन खींचें` फंक्शन का उपयोग कैसे करेंगे?
+        courseD_artist_functions8_d: "वर्गों की लाइन बनाने के लिए,\n\n-   3 बार दोहराएं
+          \   \n-   **50 पिक्सल** भुजा की लंबाई वाला वर्ग खींचें    \n-   **100 पिक्सल**
+          आगे की ओर कूदें"
+        courseD_artist_functions8_b: |-
+          इस तस्वीर में प्रत्येक पंक्ति की कल्पना 3 वर्गों की लाइन के तौर पर करें। वहां वर्गों की कितनी लाइनें है और आप उनमें से प्रत्येक को कहां खींचना शुरू करेंगे?
+
+          ![](<https://images.code.org/22a6f5cc5551371057244eee01955f8e-image-1493135135468.4.10 Hint Drawing.png>)
+      courseE_artist_functions9:
+        courseD_artist_functions9_e: क्या आप उन सभी चार स्थानों का पता लगा सकते हैं,
+          जहां इस ड्राइंग में `त्रिकोणों की लाइन` का उपयोग किया जा सके?![](https://images.code.org/130e1040ecca7186dea87f42666f5620-image-1493140373966.gif)
+        courseD_artist_functions9_a: |-
+          इस पहेली को तीन भागों में विभाजित किया जा सकता है:
+
+          -   `त्रिकोण खींचें` फंक्शन बनाएं
+          -   `त्रिकोणों की लाइन खींचें` फंक्शन बनाएं
+          -   ड्राइंग पूरी करने के लिए अपने `त्रिकोणों की लाइन खींचें` फंक्शन का चार बार उपयोग करें
+        courseD_artist_functions9_b: यह ड्राइंग 4 बार त्रिकोणों की लाइन खींचने और
+          आपके द्वारा अगली त्रिकोण की लाइन खींचने से पहले 60 या 120 डिग्री मुड़ने
+          से बनी है।
+        courseD_artist_functions9_c: "त्रिकोणों की लाइन खींचने के लिए:\n\n-   4 बार
+          दोहराएं    \n-   त्रिकोण खींचें    \n-   50 पिक्सल आगे की ओर कूदें"
+        courseD_artist_functions9_d: "हीरा चित्रित करने के लिए:\n\n-   2 बार दोहराएं
+          \   \n-   त्रिकोणों की लाइन खींचें    \n-   60 डिग्री मुड़ें    \n-   त्रिकोणों
+          की लाइन खींचें    \n-   120 डिग्री मुड़ें"
+      courseE_artist_functions9_2018:
+        courseD_artist_functions9_e: क्या आप उन सभी चार स्थानों का पता लगा सकते हैं,
+          जहां इस ड्राइंग में `त्रिकोणों की लाइन` का उपयोग किया जा सके?![](https://images.code.org/130e1040ecca7186dea87f42666f5620-image-1493140373966.gif)
+        courseD_artist_functions9_a: |-
+          इस पहेली को तीन भागों में विभाजित किया जा सकता है:
+
+          -   `त्रिकोण खींचें` फंक्शन बनाएं
+          -   `त्रिकोणों की लाइन खींचें` फंक्शन बनाएं
+          -   ड्राइंग पूरी करने के लिए अपने `त्रिकोणों की लाइन खींचें` फंक्शन का चार बार उपयोग करें
+        courseD_artist_functions9_b: यह ड्राइंग 4 बार त्रिकोणों की लाइन खींचने और
+          आपके द्वारा अगली त्रिकोण की लाइन खींचने से पहले 60 या 120 डिग्री मुड़ने
+          से बनी है।
+        courseD_artist_functions9_c: "त्रिकोणों की लाइन खींचने के लिए:\n\n-   4 बार
+          दोहराएं    \n-   त्रिकोण खींचें    \n-   50 पिक्सल आगे की ओर कूदें"
+        courseD_artist_functions9_d: "हीरा चित्रित करने के लिए:\n\n-   2 बार दोहराएं
+          \   \n-   त्रिकोणों की लाइन खींचें    \n-   60 डिग्री मुड़ें    \n-   त्रिकोणों
+          की लाइन खींचें    \n-   120 डिग्री मुड़ें"
+      courseE_artist_functions9_2019:
+        courseD_artist_functions9_e: क्या आप उन सभी चार स्थानों का पता लगा सकते हैं,
+          जहां इस ड्राइंग में `त्रिकोणों की लाइन` का उपयोग किया जा सके?![](https://images.code.org/130e1040ecca7186dea87f42666f5620-image-1493140373966.gif)
+        courseD_artist_functions9_a: |-
+          इस पहेली को तीन भागों में विभाजित किया जा सकता है:
+
+          -   `त्रिकोण खींचें` फंक्शन बनाएं
+          -   `त्रिकोणों की लाइन खींचें` फंक्शन बनाएं
+          -   ड्राइंग पूरी करने के लिए अपने `त्रिकोणों की लाइन खींचें` फंक्शन का चार बार उपयोग करें
+        courseD_artist_functions9_b: यह ड्राइंग 4 बार त्रिकोणों की लाइन खींचने और
+          आपके द्वारा अगली त्रिकोण की लाइन खींचने से पहले 60 या 120 डिग्री मुड़ने
+          से बनी है।
+        courseD_artist_functions9_c: "त्रिकोणों की लाइन खींचने के लिए:\n\n-   4 बार
+          दोहराएं    \n-   त्रिकोण खींचें    \n-   50 पिक्सल आगे की ओर कूदें"
+        courseD_artist_functions9_d: "हीरा चित्रित करने के लिए:\n\n-   2 बार दोहराएं
+          \   \n-   त्रिकोणों की लाइन खींचें    \n-   60 डिग्री मुड़ें    \n-   त्रिकोणों
+          की लाइन खींचें    \n-   120 डिग्री मुड़ें"
+      courseE_artist_functions_challenge1:
+        courseE_artist_functions_challenge1_a: यदि आप एक बार और फंक्शन बोलते हैं,
+          तो आप अंतिम कोने में वही डिज़ाइन बना सकते हैं।
+        courseE_artist_functions_challenge1_b: आप अन्य पोजीशनों पर `कूद` भी सकते हैं
+          या अपनी पसंद से पूरा डिज़ाइन बदल भी सकते हैं!
+      courseE_artist_functions_challenge1_2018:
+        courseE_artist_functions_challenge1_a: यदि आप एक बार और फंक्शन बोलते हैं,
+          तो आप अंतिम कोने में वही डिज़ाइन बना सकते हैं।
+        courseE_artist_functions_challenge1_b: आप अन्य पोजीशनों पर `कूद` भी सकते हैं
+          या अपनी पसंद से पूरा डिज़ाइन बदल भी सकते हैं!
+      courseE_artist_functions_challenge1_2019:
+        courseE_artist_functions_challenge1_a: यदि आप एक बार और फंक्शन बोलते हैं,
+          तो आप अंतिम कोने में वही डिज़ाइन बना सकते हैं।
+        courseE_artist_functions_challenge1_b: आप अन्य पोजीशनों पर `कूद` भी सकते हैं
+          या अपनी पसंद से पूरा डिज़ाइन बदल भी सकते हैं!
+      courseE_artist_functions_challenge2:
+        courseE_artist_functions_challenge1_a: |-
+          <xml>
+            <block type="jump_to_xy">
+              <title name="XPOS">350</title>
+              <title name="YPOS">200</title>
+            </block>
+            </xml>
+
+          इस `कूदें` ब्लॉक से आप जब भी चाहें, ज़ोम्बी कलाकार को ग्रिड पर किसी भी पिक्सल की ओर मूव कर सकते हैं। यह उसे कई पिक्सल दाएं और कई पिक्सल बाएं मूव करके काम करता है। इसे हमेशा ऊपर बाएं कोने से गिना जाता है, जिससे इसका अर्थ होता है कि इससे कोई फर्क नहीं पड़ता कि ज़ोम्बी कलाकार कमांड चलाने _से पहले_ कहां था![][0]
+      courseE_artist_functions_challenge2_2018:
+        courseE_artist_functions_challenge1_a: |-
+          <xml>
+            <block type="jump_to_xy">
+              <title name="XPOS">350</title>
+              <title name="YPOS">200</title>
+            </block>
+            </xml>
+
+          इस `कूदें` ब्लॉक से आप जब भी चाहें, ज़ोम्बी कलाकार को ग्रिड पर किसी भी पिक्सल की ओर मूव कर सकते हैं। यह उसे कई पिक्सल दाएं और कई पिक्सल बाएं मूव करके काम करता है। इसे हमेशा ऊपर बाएं कोने से गिना जाता है, जिससे इसका अर्थ होता है कि इससे कोई फर्क नहीं पड़ता कि ज़ोम्बी कलाकार कमांड चलाने _से पहले_ कहां था![][0]
+      courseE_artist_functions_challenge2_2019:
+        courseE_artist_functions_challenge1_a: |-
+          <xml>
+            <block type="jump_to_xy">
+              <title name="XPOS">350</title>
+              <title name="YPOS">200</title>
+            </block>
+            </xml>
+
+          इस `कूदें` ब्लॉक से आप जब भी चाहें, ज़ोम्बी कलाकार को ग्रिड पर किसी भी पिक्सल की ओर मूव कर सकते हैं। यह उसे कई पिक्सल दाएं और कई पिक्सल बाएं मूव करके काम करता है। इसे हमेशा ऊपर बाएं कोने से गिना जाता है, जिससे इसका अर्थ होता है कि इससे कोई फर्क नहीं पड़ता कि ज़ोम्बी कलाकार कमांड चलाने _से पहले_ कहां था![][0]
+      courseE_artist_ramp9:
+        courseD_artist_ramp12_c: प्रत्येक भुजा खींचने के लिए, आपको 100 पिक्सल आगे
+          की ओर मूव करने, फिर 120 डिग्री दाएं मुड़ने की जरूरत होगी। आपको कितनी भुजाओं
+          की जरूरत है?
+      courseE_artist_ramp9_2:
+        courseD_artist_ramp12_c: प्रत्येक भुजा खींचने के लिए, आपको 100 पिक्सल आगे
+          की ओर मूव करने, फिर 120 डिग्री दाएं मुड़ने की जरूरत होगी। आपको कितनी भुजाओं
+          की जरूरत है?
+      courseE_bee_concept1:
+        courseE_bee_concept1_b: क्या कोई ऐसे पैटर्न हैं, जो _यहां_ दोहराए जाते हैं?
+        courseE_bee_concept1_a: यदि आप यह नहीं समझते कि यहां नेस्टड लूप्स का उपयोग
+          कैसे करना है, तो कागज़ पर कदम दर कदम निर्देश लिखने का प्रयास करें।  उन पैटर्नों
+          पर गोला लगाएं, जिन्हें आप देखते हैं।
+      courseE_bee_concept1_2018:
+        courseE_bee_concept1_b: क्या कोई ऐसे पैटर्न हैं, जो _यहां_ दोहराए जाते हैं?
+        courseE_bee_concept1_a: यदि आप यह नहीं समझते कि यहां नेस्टड लूप्स का उपयोग
+          कैसे करना है, तो कागज़ पर कदम दर कदम निर्देश लिखने का प्रयास करें।  उन पैटर्नों
+          पर गोला लगाएं, जिन्हें आप देखते हैं।
+      courseE_bee_concept2:
+        courseE_bee_concept2_a: क्या `व्हाइल` लूप यहां सहायक होगा?
+        courseE_bee_concept2_d: आप यह देखने के लिए कि क्या शहद > 0 है, खाली स्थानों
+          को भी देख सकते हैं।
+        courseE_bee_concept2_b: आप प्रत्येक रास्ते के अंत तक मूव करने और प्रत्येक
+          स्थान से सारा शहद एकत्र करने के लिए `व्हाइल` लूप्स का उपयोग कर सकते हैं।
+        courseE_bee_concept2_c: मधुमक्खी को प्रत्येक रास्ते के बाद किस तरफ मुड़ना
+          चाहिए?
+      courseE_bee_concept2_2018:
+        courseE_bee_concept2_a: क्या `व्हाइल` लूप यहां सहायक होगा?
+        courseE_bee_concept2_b: आप प्रत्येक रास्ते के अंत तक मूव करने और प्रत्येक
+          स्थान से सारा शहद एकत्र करने के लिए `व्हाइल` लूप्स का उपयोग कर सकते हैं।
+        courseE_bee_concept2_c: मधुमक्खी को प्रत्येक रास्ते के बाद किस तरफ मुड़ना
+          चाहिए?
+      courseE_bee_concept3:
+        courseE_bee_concept3a_a: इस पहेली को हल करने के लिए नेस्टड `दोहराएं` लूप्स
+          का उपयोग करने का प्रयास करें।
+        courseE_bee_concept3a_b: यदि आप पता नहीं लगा पाते हैं कि लूप्स को कहां रखना
+          है, तो कदम-दर-कदम कोड लिखने और पैटर्न खोजने की कोशिश करें।
+        courseE_bee_concept3a_c: फूलों के तीन समूह हैं, इसलिए आपकी बाहरी `दोहराएं`
+          लूप को तीन बार दोहराया जाना चाहिए।
+      courseE_bee_concept3_2018:
+        courseE_bee_concept3a_a: इस पहेली को हल करने के लिए नेस्टड `दोहराएं` लूप्स
+          का उपयोग करने का प्रयास करें।
+        courseE_bee_concept3a_b: यदि आप पता नहीं लगा पाते हैं कि लूप्स को कहां रखना
+          है, तो कदम-दर-कदम कोड लिखने और पैटर्न खोजने की कोशिश करें।
+        courseE_bee_concept3a_c: फूलों के तीन समूह हैं, इसलिए आपकी बाहरी `दोहराएं`
+          लूप को तीन बार दोहराया जाना चाहिए।
+      courseE_bee_concept4:
+        courseE_bee_concept4_a: यहां `इफ/एल्स` स्टेटमेंट वाकई आपकी मदद कर सकती है।
+        courseE_bee_concept4_b: सीढ़ी स्टेप पैटर्न सभी फूलों और मधु के छत्तों तक जाने
+          में आपकी मदद कर सकता है।
+        courseE_bee_concept4_c: यदि आप फूल पर हैं, तो आपको कितनी बार मधुरस प्राप्त
+          करना पड़ेगा? क्या यह सभी फूलों के लिए समान संख्या है?
+      courseE_bee_concept4_2018:
+        courseE_bee_concept4_a: यहां `इफ/एल्स` स्टेटमेंट वाकई आपकी मदद कर सकती है।
+        courseE_bee_concept4_b: सीढ़ी स्टेप पैटर्न सभी फूलों और मधु के छत्तों तक जाने
+          में आपकी मदद कर सकता है।
+        courseE_bee_concept4_c: यदि आप फूल पर हैं, तो आपको कितनी बार मधुरस प्राप्त
+          करना पड़ेगा? क्या यह सभी फूलों के लिए समान संख्या है?
+      courseE_bee_concept5:
+        courseE_bee_concept5_a: फूल आयताकार रास्ते का अनुसरण करते हैं।   आप प्रति
+          भुजा अलग-अलग संख्या में वर्गों के साथ भी `जब आगे रास्ता हो` का उपयोग करते
+          हुए उस आयत का पता लगा सकते हैं।
+        courseE_bee_concept5_c: यहां उस आयताकार रास्ते की तस्वीर दी गई है, जो मधुमक्खी
+          ले सकती है।![](https://images.code.org/39554a528b5ed168737e846c161f00ee-image-1510202150660.33.23.png)
+        courseE_bee_concept5_b: आप `इफ` ब्लॉक का उपयोग करते हुए फूल के प्रत्येक वर्ग
+          देख सकते हैं, चाहे आपको पहले ही पता हो कि वहां एक भी नहीं है।
+      courseE_bee_concept5_2018:
+        courseE_bee_concept5_a: फूल आयताकार रास्ते का अनुसरण करते हैं।   आप प्रति
+          भुजा अलग-अलग संख्या में वर्गों के साथ भी `जब आगे रास्ता हो` का उपयोग करते
+          हुए उस आयत का पता लगा सकते हैं।
+        courseE_bee_concept5_c: यहां उस आयताकार रास्ते की तस्वीर दी गई है, जो मधुमक्खी
+          ले सकती है।![](https://images.code.org/39554a528b5ed168737e846c161f00ee-image-1510202150660.33.23.png)
+        courseE_bee_concept5_b: आप `इफ` ब्लॉक का उपयोग करते हुए फूल के प्रत्येक वर्ग
+          देख सकते हैं, चाहे आपको पहले ही पता हो कि वहां एक भी नहीं है।
+      courseE_bee_functions1:
+        courseE_bee_functions1_a: याद रखें कि बाएं और दाएं मोड़ मधुमक्खी के दृष्टिकोण
+          से हैं।
+        courseE_bee_functions1_b: अपने कोड को और छोटा करने के लिए मधुरस एकत्र करते
+          समय `दोहराएं` लूप का उपयोग करें।
+        courseE_bee_functions1_c: याद रखें कि बाएं और दाएं मोड़ मधुमक्खी के दृष्टिकोण
+          से हैं।
+      courseE_bee_functions10:
+        courseE_bee_functions10_a: सारा शहद एकत्र करने के लिए आपको `व्हाइल` लूप की
+          जरूरत होगी, क्योंकि यह मधु के छत्तों के बीच अलग-अलग होता है।
+        courseE_bee_functions10_b: अपने फंक्शन में मोड़ और गतिविधि शामिल करें, ताकि
+          जब मधुमक्खी मुख्य रास्ते पर हो तो आप इसे बोल पाएं।
+        courseE_bee_functions10_c: मुख्य प्रोग्राम में अपने फंक्शन को बोलना याद रखें!
+      courseE_bee_functions2:
+        courseE_bee_functions2_c: आप इस पहेली को हल करने के लिए आगे की ओर दो बार मूव
+          करके 2 मधुरस प्राप्त करना चाहेंगे।
+      courseE_bee_functions3:
+        courseE_bee_functions3_a: 'इस पहेली के लिए आपके फंक्शन को केवल मधुरस एकत्र
+          करने की जरूरत है, इसमें कोई भी `आगे की ओर मूव करें` या `मुड़ें` ब्लॉक्स
+          नहीं होने चाहिएं। '
+        courseE_bee_functions3_b: "`जब चलाया जाए` ब्लॉक के अंतर्गत अपना `5 प्राप्त
+          करें` फंक्शन बोलें।"
+        courseE_bee_functions3_c: आपका मुख्य प्रोग्राम पूरी गतिविधि को नियंत्रित करेगा,
+          फंक्शन केवल इसलिए है कि जब मधुमक्खी फूल के पास पहुंचती है तो क्या होता है।
+        courseE_bee_functions3_d: इस रास्ते का उपयोग करने का प्रयास करें।
+      courseE_bee_functions4:
+        courseE_bee_functions4_a: आपका फंक्शन एक तरफ के रास्तों पर नीचे की और जाएगा
+          और मुख्य सड़क से वापस मधुमक्खी को लौटाएगा।  आपको उस हिस्से को अपने प्रोग्राम
+          में जोड़ने की जरूरत नहीं है।
+        courseE_bee_functions4_b: यह फंक्शन बोलने के लिए हरा `मूव करें और मधुरस प्राप्त
+          करें` ब्लॉक का उपयोग करें।
+        courseE_bee_functions4_c: आपको फंक्शन को बदलने की जरूरत नहीं है, बस इसे अपने
+          प्रोग्राम में उपयोग करें।
+      courseE_bee_functions5:
+        courseE_bee_functions5_a: फंक्शन को संपादित करें ताकि यह मुख्य प्रोग्राम को
+          बदले बिना पहेली को हल कर पाए।
+        courseE_bee_functions5_c: "`आगे की ओर मूव करें` ब्लॉक को `पीछे की ओर मूव करें`
+          ब्लॉक में बदला जा सकता है। रास्तों के अंत में हर तरफ मुड़ने की बजाय इसका
+          उपयोग करें!"
+        courseE_bee_functions5_b: "आपका फंक्शन मधुमक्खी को निम्नलिखित के लिए सक्रिय
+          करेगा: \n\n-   मुड़ें\n-   आगे की ओर मूव करें\n-   सारा मधुरस एकत्र करें\n-
+          \  पीछे की ओर मूव करें\n-   उस दिशा में वापस मुड़ें, जहां से मधुमक्खी ने
+          शुरू किया था"
+      courseE_bee_functions6:
+        courseE_bee_functions6_a: यदि पहेली चुनौतीपूर्ण प्रतीत हो, तो थोड़े समय में
+          अपना फंक्शन बनाने का प्रयास करें। कुछ ब्लॉक्स जोड़ें, फिर इसे आजमाएं। और
+          जोड़ें, फिर दुबारा आजमाएं।  जल्दी ही, आप वहां पहुंच जाएंगे![][0]
+        courseE_bee_functions6_b: यह फंक्शन को अंदर मूव करने की स्थिति में सहायक हो
+          सकता है, लेकिन आपके सभी `मूव करें` ब्लॉक्स के वहां होने की जरूरत नहीं है।
+      courseE_bee_functions7:
+        courseE_bee_functions7_b: |-
+          हरे फंक्शन ब्लॉक के अंदर अपना कोड बनाना याद रखें।
+          ![](https://images.code.org/8fe1fae5caf4ede3a9c9bd9f26940cde-image-1467996837459.gif)
+        courseE_bee_functions7_c: यह फंक्शन मधुमक्खी को रास्ते में नीचे मुड़ने, मधुरस
+          एकत्र करने, शहद बनाने, फिर मधुमक्खी को चारों ओर मुड़ने के लिए सक्रिय करेगा
+          और फिर उसे वापस लाएगा।
+      courseE_bee_functions8:
+        courseE_bee_functions8_a: आपके फंक्शन की जरूरत केवल मधुरस एकत्र करने के लिए
+          होगी। दोहराएं लूप की बजाय व्हाइल लूप का उपयोग करने का प्रयास करें।
+        courseE_bee_functions8_b: यह सुनिश्चित करने के लिए आप सारा मधुरस प्राप्त करते
+          हैं, `जब मधुरस हो > 0` का उपयोग करें।
+        courseE_bee_functions8_c: आपके मुख्य प्रोग्राम को सीढ़ी के स्टेप की गतिविधि
+          वाले पैटर्न की जरूरत होगी। याद रखें, मुख्य प्रोग्राम `जब चलाया जाए` ब्लॉक
+          के अंतर्गत कोड है।
+      courseE_bee_functions9:
+        courseE_bee_functions9_a: आप इस पहेली के लिए भी बिल्कुल उसी फंक्शन का उपयोग
+          कर सकते हैं, जैसे आपने पिछली पहेली में किया था।  आपको ऐसा फंक्शन बनाने की
+          जरूरत है, जो उस समय सारा मधुरस एकत्र करे, जब आप प्रत्येक फूल के पास पहुंचें।
+        courseE_bee_functions9_b: हाालंकि आपको पता है कि कुछ फूलों में कितना मधुरस
+          होता है, `व्हाइल` लूप उन सभी के लिए एक फंक्शन को क्रियाशील बना सकती है।
+      courseE_bee_functions_challenge1:
+        courseE_bee_functions_challenge1_b: हरे फंक्शन ब्लॉक के अंदर अपना कोड बनाना
+          याद रखें।
+      courseE_bee_functions_challenge2:
+        courseE_bee_functions_challenge1_b: हरे फंक्शन ब्लॉक के अंदर अपना कोड बनाना
+          याद रखें।
+      courseE_farmer_concept1:
+        courseE_farmer_concept1_a: "`जब वहां सुराख हो` ब्लॉक किसी भी सुराख को तब तक
+          भरने में मदद करेगा, जब तक यह समतल न हो जाए।"
+        courseE_farmer_concept1_b: आप सुराखों तक जाने के लिए सीढ़ी स्टेप पैटर्न का
+          उपयोग कर सकते हैं।
+      courseE_farmer_concept1_2018:
+        courseE_farmer_concept1_a: "`जब वहां सुराख हो` ब्लॉक किसी भी सुराख को तब तक
+          भरने में मदद करेगा, जब तक यह समतल न हो जाए।"
+        courseE_farmer_concept1_b: आप सुराखों तक जाने के लिए सीढ़ी स्टेप पैटर्न का
+          उपयोग कर सकते हैं।
+      courseE_farmer_concept2:
+        courseE_farmer_concept2_a: सभी रास्ते समान लंबाई के हैं, लेकिन वे अलग-अलग
+          संख्या में अलग वर्ग हैं।  यहां लूप ठीक नहीं रहेगी। फंक्शन आजमाएं।
+        courseE_farmer_concept2_b: ऐसा फंक्शन, जो मुड़ता है, नीचे के रास्ते की ओर
+          जाता है, कद्दू एकत्र करता है, और मुख्य क्षितिज पर लौटता है, वह यहां सहायक
+          हो सकता है।
+        courseE_farmer_concept2_c: आपका मुख्य प्रोग्राम इस फंक्शन को हरे `कुछ करें`
+          ब्लॉक के साथ बोल सकता है।
+      courseE_farmer_concept2_2018:
+        courseE_farmer_concept2_a: सभी रास्ते समान लंबाई के हैं, लेकिन वे अलग-अलग
+          संख्या में अलग वर्ग हैं।  यहां लूप ठीक नहीं रहेगी। फंक्शन आजमाएं।
+        courseE_farmer_concept2_b: ऐसा फंक्शन, जो मुड़ता है, नीचे के रास्ते की ओर
+          जाता है, कद्दू एकत्र करता है, और मुख्य क्षितिज पर लौटता है, वह यहां सहायक
+          हो सकता है।
+        courseE_farmer_concept2_c: आपका मुख्य प्रोग्राम इस फंक्शन को हरे `कुछ करें`
+          ब्लॉक के साथ बोल सकता है।
+      courseE_farmer_concept3:
+        grade3_robotFarmer_ConditionalsIntro_8_b: रास्ते के अंत तक पहुंचने पर आपको
+          क्या करना चाहिए?
+        grade3_robotFarmer_ConditionalsIntro_8_c: प्रत्येक सीधे रास्ते के लिए कई बार
+          अपना कोड चलाने के लिए `दोहराएं` लूप का उपयोग करें।
+      courseE_farmer_concept3_2018:
+        grade3_robotFarmer_ConditionalsIntro_8_b: रास्ते के अंत तक पहुंचने पर आपको
+          क्या करना चाहिए?
+        grade3_robotFarmer_ConditionalsIntro_8_c: प्रत्येक सीधे रास्ते के लिए कई बार
+          अपना कोड चलाने के लिए `दोहराएं` लूप का उपयोग करें।
+      courseE_farmer_functions1:
+        courseE_farmer_functions1_a: इस समय टूलबॉक्स थोड़ा अलग तरह से व्यवस्थित किया
+          गया है! यह देखने के लिए विभिन्न श्रेणियों पर क्लिक करें कि आपके पास कौन-से
+          ब्लॉक्स हैं।
+        courseE_farmer_functions1_b: आपको केवल एक कद्दू लेने की जरूरत है, लेकिन क्या
+          आप इस तक जाने के लिए लूप का उपयोग कर सकते हैं?
+      courseE_farmer_functions10b:
+        courseE_farmer_functions10b_a: आपको पहले अपना फंक्शन पुनः बनाना होगा।
+        courseE_farmer_functions10b_b: आपको पहले कद्दू के बाद किस तरफ मुड़ने की जरूरत
+          है?
+        courseE_farmer_functions10b_c: यदि आपको फंक्शन बनाने में मदद की जरूरत है तो
+          पिछली पहेली को वापस देखें।
+      courseE_farmer_functions1_2018:
+        courseE_farmer_functions1_a: इस समय टूलबॉक्स थोड़ा अलग तरह से व्यवस्थित किया
+          गया है! यह देखने के लिए विभिन्न श्रेणियों पर क्लिक करें कि आपके पास कौन-से
+          ब्लॉक्स हैं।
+        courseE_farmer_functions1_b: आपको केवल एक कद्दू लेने की जरूरत है, लेकिन क्या
+          आप इस तक जाने के लिए लूप का उपयोग कर सकते हैं?
+      courseE_farmer_functions1_2019:
+        courseE_farmer_functions1_a: इस समय टूलबॉक्स थोड़ा अलग तरह से व्यवस्थित किया
+          गया है! यह देखने के लिए विभिन्न श्रेणियों पर क्लिक करें कि आपके पास कौन-से
+          ब्लॉक्स हैं।
+        courseE_farmer_functions1_b: आपको केवल एक कद्दू लेने की जरूरत है, लेकिन क्या
+          आप इस तक जाने के लिए लूप का उपयोग कर सकते हैं?
+      courseE_farmer_functions1a:
+        courseE_farmer_functions1a_a: कदम दर कदम `इफ/एल्स` स्टेटमेंट्स के बारे में
+          सोचें। यदि आप कॉर्न के पौधे पर खड़े हैं तो आपको क्या करना चाहिए?
+        courseE_farmer_functions1a_b: कद्दू प्राप्त करने के लिए `तक दोहराएं` ब्लॉक
+          का उपयोग करें!
+      courseE_farmer_functions1a_2018:
+        courseE_farmer_functions1a_b: कद्दू प्राप्त करने के लिए `तक दोहराएं` ब्लॉक
+          का उपयोग करें!
+      courseE_farmer_functions1a_2019:
+        courseE_farmer_functions1a_b: कद्दू प्राप्त करने के लिए `तक दोहराएं` ब्लॉक
+          का उपयोग करें!
+      courseE_farmer_functions2b:
+        courseE_farmer_functions2b_a: आप दो रास्तों के सिरों तक जाने के लिए `कद्दू
+          तक दोहराएं` का उपयोग कर सकते हैं।
+        courseE_farmer_functions2b_b: जुड़ने वाले रास्ते पर कोई कॉर्न नहीं है, इसलिए
+          आप इसके साथ मूव करके मुड़ सकते हैं।
+        courseE_farmer_functions2b_c: सारी फसलें प्राप्त करने के लिए आपको दो अलग-अलग
+          `तक दोहराएं` ब्लॉक्स की जरूरत होगी।
+      courseE_farmer_functions2b_2018:
+        courseE_farmer_functions2b_b: जुड़ने वाले रास्ते पर कोई कॉर्न नहीं है, इसलिए
+          आप इसके साथ मूव करके मुड़ सकते हैं।
+        courseE_farmer_functions2b_c: सारी फसलें प्राप्त करने के लिए आपको दो अलग-अलग
+          `तक दोहराएं` ब्लॉक्स की जरूरत होगी।
+      courseE_farmer_functions2b_2019:
+        courseE_farmer_functions2b_b: जुड़ने वाले रास्ते पर कोई कॉर्न नहीं है, इसलिए
+          आप इसके साथ मूव करके मुड़ सकते हैं।
+        courseE_farmer_functions2b_c: सारी फसलें प्राप्त करने के लिए आपको दो अलग-अलग
+          `तक दोहराएं` ब्लॉक्स की जरूरत होगी।
+      courseE_farmer_functions2ba:
+        courseE_farmer_functions2ba_a: यह फंक्शन बोलने के लिए हरा `कॉर्न और कद्दू`
+          ब्लॉक का उपयोग करें।
+        courseE_farmer_functions2ba_b: यह देखने के लिए कि यह फंक्शन कैसे काम करता
+          है, `जब चलाया जाए` के अंतर्गत सभी ब्लॉक्स को एक साथ वर्कस्पेस में खींचें।
+      courseE_farmer_functions3c:
+        courseE_farmer_functions3c_a: इस प्रोग्राम में अकसर कौन-सा क्रम दोहराया जाता
+          है? क्या आप इन ब्लॉक्स को फंक्शन में खींच सकते हैं?
+        courseE_farmer_functions3c_b: जहां भी आपने ब्लॉक्स हटाए हों, वहां मुख्य प्रोग्राम
+          में अपना फंक्शन बोलना न भूलें।
+      courseE_farmer_functions4b:
+        courseE_farmer_functions4b_b: प्रत्येक रास्ते के बाद मुड़ना याद रखें।
+        courseE_farmer_functions4b_c: हरे `कॉर्न और कद्दू` ब्लॉक्स, टूलबॉक्स के फंक्शन्स
+          टैब में हैं।
+      courseE_farmer_functions5c:
+        courseE_farmer_functions5c_a: क्या कोई और पैटर्न हैं, इन्हें आप इस पहेली में
+          लूप कर सकते हैं?
+      courseE_farmer_functions6c:
+        courseE_farmer_functions6c_a: लेट्स को देखने के लिए भी अपना फंक्शन संपादित
+          करें।
+        courseE_farmer_functions6c_b: क्या `इफ/एल्स` ब्लॉक यह देखने में सहायक होगा
+          कि किसी स्थान पर लेट्स है या नहीं?
+        courseE_farmer_functions6c_c: कॉर्न देखते रहना न भूलें!
+      courseE_farmer_functions7b:
+        courseE_farmer_functions7b_a: आपको यहां फंक्शन की जरूरत नहीं है, लेकिन यदि
+          यह आपके लिए उपयोगी है तो आप एक बना सकते हैं!
+        courseE_farmer_functions7b_b: फसलों को देखने के लिए `इफ/एल्स` स्टेटमेंट का
+          उपयोग करें, फिर इस आधार पर मुड़ें कि आप कौन-सी फसल ढूंढते हैं।
+        courseE_farmer_functions7b_c: "`कद्दू तक दोहराएं` लूप पूरी पहेली में आपकी
+          मदद कर सकती है।"
+      courseE_farmer_functions8b:
+        courseE_farmer_functions8b_a: यह देखने के लिए दिए गए कोड को चलाने का प्रयास
+          करें कि यह क्या करता है। इसके बाद आपको क्या करने की जरूरत है?
+        courseE_farmer_functions8b_b: फंक्शन में सभी शुरुआती ब्लॉक्स खींचें ताकि आप
+          एक से अधिक बार उनका उपयोग कर सकें।
+        courseE_farmer_functions8b_c: आपको कितनी बार फंक्शन बोलने की जरूरत है?
+      courseE_farmer_functions9b:
+        courseE_farmer_functions9b_a: क्या आप रास्ते पर मूव करने के लिए नेस्टड `इफ`
+          और `इफ/एल्स` स्टेटमेंट्स का उपयोग कर सकते हैं?
+        courseE_farmer_functions9b_b: सभी रास्तों से मूव करने के लिए `कद्दू तक दोहराएं`
+          का उपयोग करें।
+        courseE_farmer_functions9b_c: आप रास्तों से इस तरह मूव करना चाहेंगे, मानो
+          वे प्रत्येक लूप के बाद बड़े होते वर्ग हों।
+      courseE_farmer_ramp11a:
+        courseE_farmer_ramp12_a: 'किसान को यह बताने के लिए कि कितनी बार बेलचे से मिट्टी
+          हटानी है, `दोहराएं` लूप का उपयोग करने की बजाय, अब आप `जब वहां ढेर हो` ब्लॉक
+          का उपयोग कर सकते हैं।  '
+        courseE_farmer_ramp12_b: आपको मिट्टी के पास जाने के लिए केवल एक बार आगे की
+          ओर मूव करने की जरूरत है।
+      courseE_farmer_ramp11a_2018:
+        courseE_farmer_ramp12_a: 'किसान को यह बताने के लिए कि कितनी बार बेलचे से मिट्टी
+          हटानी है, `दोहराएं` लूप का उपयोग करने की बजाय, अब आप `जब वहां ढेर हो` ब्लॉक
+          का उपयोग कर सकते हैं।  '
+        courseE_farmer_ramp12_b: आपको मिट्टी के पास जाने के लिए केवल एक बार आगे की
+          ओर मूव करने की जरूरत है।
+      courseE_farmer_ramp11a_2019:
+        courseE_farmer_ramp12_a: 'किसान को यह बताने के लिए कि कितनी बार बेलचे से मिट्टी
+          हटानी है, `दोहराएं` लूप का उपयोग करने की बजाय, अब आप `जब वहां ढेर हो` ब्लॉक
+          का उपयोग कर सकते हैं।  '
+        courseE_farmer_ramp12_b: आपको मिट्टी के पास जाने के लिए केवल एक बार आगे की
+          ओर मूव करने की जरूरत है।
+      courseE_farmer_ramp12f:
+        courseE_farmer_ramp12f_b: किसान को निर्णय करने में मदद के लिए `इफ/एल्स` ब्लॉक
+          का उपयोग करें कि उसे दाएं मुड़ना चाहिए या बाएं।
+      courseE_farmer_ramp12f_2018:
+        courseE_farmer_ramp12f_b: किसान को निर्णय करने में मदद के लिए `इफ/एल्स` ब्लॉक
+          का उपयोग करें कि उसे दाएं मुड़ना चाहिए या बाएं।
+      courseE_farmer_ramp12f_2019:
+        courseE_farmer_ramp12f_b: किसान को निर्णय करने में मदद के लिए `इफ/एल्स` ब्लॉक
+          का उपयोग करें कि उसे दाएं मुड़ना चाहिए या बाएं।
+      courseE_farmer_ramp12g:
+        courseE_farmer_ramp12G_b: किसान को निर्णय करने में मदद के लिए `इफ/एल्स` ब्लॉक
+          का उपयोग करें कि उसे दाएं मुड़ना चाहिए या बाएं।
+      courseE_farmer_ramp12g_2018:
+        courseE_farmer_ramp12G_b: किसान को निर्णय करने में मदद के लिए `इफ/एल्स` ब्लॉक
+          का उपयोग करें कि उसे दाएं मुड़ना चाहिए या बाएं।
+      courseE_farmer_ramp12g_2019:
+        courseE_farmer_ramp12G_b: किसान को निर्णय करने में मदद के लिए `इफ/एल्स` ब्लॉक
+          का उपयोग करें कि उसे दाएं मुड़ना चाहिए या बाएं।
+      courseE_playLab_challenge1:
+        courseE_playLab_challenge1_a: यहां कुछ कार्य दिए गए हैं, जो आप तब कर सकते
+          हैं, जब खिलाड़ी गेम जीतता है:-   डायनासोर को गायब करें।-   गिलहरियों को
+          रोकें।-   गिलहरियों और नाइट को खुश करें।-   नई पृष्ठभूमि सेट करें।-   मदद
+          करने के लिए खिलाड़ी का धन्यवाद करने हेतु नाइट को सक्रिय करें।-   सभी अभिनेताओं
+          को गायब करें और "आप जीते!" संदेश दिखाएं।
+        courseE_playLab_challenge1_b: यहां कुछ कार्य दिए गए हैं, जो आप तब कर सकते
+          हैं, जब खिलाड़ी गेम हारता है:-   नाइट को गायब करें।-   गिलहरियों को उदास
+          करें।-   डायनासोर को कुछ कहने के लिए सक्रिय करें।-   नई पृष्ठभूमि सेट करें।-   मदद
+          करने के लिए खिलाड़ी का धन्यवाद करने हेतु नाइट को सक्रिय करें।-   सभी अभिनेताओं
+          को गायब करें और "गेम समाप्त!" संदेश दिखाएं।
+      courseE_playLab_scaffold1:
+        courseE_playLab_scaffold1_a: "`अभिनेता 1 को ??? चित्र पर सेट करें` ब्लॉक का
+          उपयोग स्टेज पर अभिनेता जोड़ने के लिए किया जा सकता है।"
+        courseE_playLab_scaffold1_b: प्रोग्राम के शुरू में अपने अभिनेता को प्रकट करने
+          के लिए `जब चलाया जाए` के अंतर्गत `अभिनेता सेट करें` ब्लॉक रखें।
+        courseE_playLab_scaffold1_c: अपने दृश्य में पृष्ठभूमि चुनने के लिए `??? पृष्ठभूमि
+          सेट करें` का उपयोग करें।
+      courseE_playLab_scaffold2:
+        courseE_playLab_scaffold1_a: ब्लॉक नियंत्रणों की दिशा को बदलने के लिए `जब
+          ____ तीर` इवेंट के ड्रॉपडाउन मेन्यु चलाएं।
+        courseE_playLab_scaffold1_b: प्रत्येक को नीचे मूव करने की दिशा के साथ, आपके
+          पास चार `जब तीर` इवेंट ब्लॉक्स होने चाहिएं।
+        courseE_playLab_scaffold1_c: जब आप पूरा कर लें, तो आप तीर वाली कुंजियों के
+          साथ अपने हीरो को इधर-उधर मूव करने में सक्षम होंगे!
+      courseE_playLab_scaffold4:
+        courseE_playLab_scaffold4_a: अंक जोड़ने के लिए `अंक स्कोर करें` और एक घटाने
+          के लिए `अंक हटाएं` का उपयोग करें।
+      courseE_playLab_scaffold5:
+        courseE_playLab_scaffold5_a: इस स्तर को समाप्त करने के लिए, आपको जीतना या
+          हारना होगा। समाप्त करने के लिए `जीतने के तौर पर गेम समाप्त करें` या `हारने
+          के तौर पर गेम समाप्त करें` ब्लॉक का उपयोग करें।

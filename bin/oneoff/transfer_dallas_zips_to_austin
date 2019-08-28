@@ -1,0 +1,13 @@
+#!/usr/bin/env ruby
+
+require_relative '../../dashboard/config/environment'
+
+# UT Dallas is stepping down as a regional partner, and UT Austin
+# is taking over their regions. This script transfers all of UT
+# Dallas's zip codes to UT Austin.
+ActiveRecord::Base.transaction do
+  dallas = RegionalPartner.find(36)
+  austin = RegionalPartner.find(35)
+
+  Pd::RegionalPartnerMapping.where(regional_partner_id: dallas.id).update_all(regional_partner_id: austin.id)
+end
