@@ -70,6 +70,7 @@ class Level < ActiveRecord::Base
     rubric_performance_level_4
     mini_rubric
     encrypted
+    editor_experiment
     teacher_markdown
     bubble_choice_description
     starter_assets
