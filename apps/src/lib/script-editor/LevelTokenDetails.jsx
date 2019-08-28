@@ -78,6 +78,34 @@ const ArrowRenderer = ({onMouseDown}) => {
 };
 ArrowRenderer.propTypes = {onMouseDown: PropTypes.func.isRequried};
 
+class LevelNameInput extends Component {
+  static propTypes = {
+    onSelectLevel: PropTypes.func.isRequired,
+    levelKeyList: PropTypes.object.isRequired,
+    levelNameMap: PropTypes.objectOf(PropTypes.number).isRequired,
+    levelId: PropTypes.number.isRequired
+  };
+
+  handleLevelNameChange = levelName => {
+    const levelId = this.props.levelNameMap[levelName];
+    if (levelId) {
+      this.props.onSelectLevel(levelId);
+    }
+  };
+
+  render() {
+    return (
+      <span style={styles.levelSelect}>
+        <input
+          type="text"
+          onChange={e => this.handleLevelNameChange(e.target.value)}
+          defaultValue={this.props.levelKeyList[this.props.levelId]}
+        />
+      </span>
+    );
+  }
+}
+
 export class UnconnectedLevelTokenDetails extends Component {
   static propTypes = {
     levelKeyList: PropTypes.object.isRequired,
@@ -108,16 +136,13 @@ export class UnconnectedLevelTokenDetails extends Component {
     );
   }
 
-  handleLevelNameChange = (variant, levelName) => {
-    const levelId = this.levelNameMap[levelName];
-    if (levelId) {
-      this.props.chooseLevel(
-        this.props.stagePosition,
-        this.props.level.position,
-        variant,
-        levelId
-      );
-    }
+  handleLevelSelected = (variant, levelId) => {
+    this.props.chooseLevel(
+      this.props.stagePosition,
+      this.props.level.position,
+      variant,
+      levelId
+    );
   };
 
   handleAddVariant = () => {
@@ -256,15 +281,12 @@ export class UnconnectedLevelTokenDetails extends Component {
               </div>
             )}
             <span style={{...styles.levelFieldLabel}}>Level name:</span>
-            <span style={styles.levelSelect}>
-              <input
-                type="text"
-                onChange={e =>
-                  this.handleLevelNameChange(index, e.target.value)
-                }
-                defaultValue={this.props.levelKeyList[id]}
-              />
-            </span>
+            <LevelNameInput
+              onSelectLevel={id => this.handleLevelSelected(index, id)}
+              levelKeyList={this.props.levelKeyList}
+              levelNameMap={this.levelNameMap}
+              levelId={id}
+            />
           </div>
         ))}
         {/* We don't currently support editing progression names here, but do
