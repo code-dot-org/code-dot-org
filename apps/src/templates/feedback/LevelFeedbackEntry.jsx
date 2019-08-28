@@ -104,7 +104,7 @@ export default class LevelFeedbackEntry extends Component {
       {
         study: 'all-feedback',
         event: 'expand-feedback',
-        data_string: this.props.feedback.id
+        data_json: {feedback_id: this.props.feedback.id}.to_json
       },
       {includeUserId: true}
     );
