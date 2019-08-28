@@ -206,6 +206,7 @@ SCRIPT
 name 'name1'
 title 'title1'
 description 'desc1'
+editor_experiment 'my-editors'
 question 'q1'
 wrong 'w1'
 wrong 'w2'
@@ -215,6 +216,7 @@ wrong 'w3'
     output, i18n = MultiDSL.parse(input_dsl, 'test')
     expected = {
       name: 'name1', properties: {
+        editor_experiment: 'my-editors',
         options: {},
         questions: [{text: 'q1'}],
         answers: [
@@ -270,6 +272,7 @@ DSL
     expected = {
       name: 'Test question',
       properties: {
+        editor_experiment: nil,
         display_name: 'Test override question',
         options: {},
         questions: [{text: 'Question text'}],
