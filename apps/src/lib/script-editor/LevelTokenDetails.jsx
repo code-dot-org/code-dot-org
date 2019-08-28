@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
-import _ from 'lodash';
 import {
   chooseLevel,
   addVariant,
@@ -97,7 +96,8 @@ export class UnconnectedLevelTokenDetails extends Component {
 
   componentWillMount() {
     this.levelNameMap = {};
-    _.toPairs(this.props.levelKeyList).forEach(([levelId, levelName]) => {
+    Object.keys(this.props.levelKeyList).forEach(levelId => {
+      const levelName = this.props.levelKeyList[levelId];
       this.levelNameMap[levelName] = +levelId;
     });
   }
