@@ -115,3 +115,8 @@
 - if @level.respond_to? :coordinate_grid_background
   .field
     = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :coordinate_grid_background, description: "Coordinate grid background"}
+
+.field
+  = f.label :editor_experiment, 'Editor Experiment'
+  %p If specified, users with this experiment on the levelbuilder machine will be able to edit this level.
+  = f.text_field :editor_experiment, placeholder: 'Editor Experiment'
