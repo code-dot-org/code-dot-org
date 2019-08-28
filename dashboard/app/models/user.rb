@@ -229,7 +229,6 @@ class User < ActiveRecord::Base
 
   belongs_to :school_info
   accepts_nested_attributes_for :school_info, reject_if: :preprocess_school_info
-  validates_presence_of :school_info, unless: :school_info_optional?
 
   has_many :user_school_infos
   after_save :update_and_add_users_school_infos, if: :school_info_id_changed?
@@ -318,11 +317,6 @@ class User < ActiveRecord::Base
     if user_school_infos.count > 0 && !school_info&.complete?
       errors.add(:school_info_id, "cannot add new school id")
     end
-  end
-
-  # Not deployed to everyone, so we don't require this for anybody, yet
-  def school_info_optional?
-    true # update if/when A/B test is done and accepted
   end
 
   # Most recently created user_school_info referring to a complete school_info entry
