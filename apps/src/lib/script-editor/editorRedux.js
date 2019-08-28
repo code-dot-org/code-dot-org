@@ -214,7 +214,6 @@ function stages(state = [], action) {
       break;
     }
     case CHOOSE_LEVEL: {
-      console.log(action);
       const level = newState[action.stage - 1].levels[action.level - 1];
       if (level.ids[action.variant] === level.activeId) {
         level.activeId = action.value;
