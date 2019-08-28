@@ -38,8 +38,8 @@ ruby_block 'update_service' do
   subscribes :run, "service[varnish]", :before
 end
 
-template '/etc/default/varnish' do
-  source 'config.erb'
+template '/etc/systemd/system/varnish.service.d/cdo.conf' do
+  source 'varnish.service.erb'
   user 'root'
   group 'root'
   mode '0644'
