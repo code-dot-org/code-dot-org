@@ -932,7 +932,7 @@ class Script < ActiveRecord::Base
 
       # Stable sort by ID then add each script, ensuring scripts with no ID end up at the end
       added_scripts = scripts_to_add.sort_by.with_index {|args, idx| [args[0][:id] || Float::INFINITY, idx]}.map do |options, raw_stages|
-        add_script(options, raw_stages, new_suffix: new_suffix)
+        add_script(options, raw_stages, new_suffix: new_suffix, editor_experiment: new_properties[:editor_experiment])
       end
       [added_scripts, custom_i18n]
     end
@@ -940,7 +940,7 @@ class Script < ActiveRecord::Base
 
   # if new_suffix is specified, copy the script, hide it, and copy all its
   # levelbuilder-defined levels.
-  def self.add_script(options, raw_stages, new_suffix: nil)
+  def self.add_script(options, raw_stages, new_suffix: nil, editor_experiment: nil)
     raw_script_levels = raw_stages.map {|stage| stage[:scriptlevels]}.flatten
     script = fetch_script(options)
     script.update!(hidden: true) if new_suffix
@@ -986,7 +986,7 @@ class Script < ActiveRecord::Base
 
         level =
           if new_suffix && !key.starts_with?('blockly')
-            Level.find_by_name(key).clone_with_suffix("_#{new_suffix}")
+            Level.find_by_name(key).clone_with_suffix("_#{new_suffix}", editor_experiment: editor_experiment)
           else
             levels_by_key[key] || Level.find_by_key(key)
           end
@@ -1107,14 +1107,18 @@ class Script < ActiveRecord::Base
   # script. Also clone all the levels in the script, appending an underscore and
   # the suffix to the name of each level. Mark the new script as hidden, and
   # copy any translations and other metadata associated with the original script.
-  def clone_with_suffix(new_suffix)
+  # @param options [Hash] Optional properties to set on the new script.
+  # @param options[:editor_experiment] [String] Optional editor_experiment name.
+  #   if specified, this editor_experiment will also be applied to any newly
+  #   created levels.
+  def clone_with_suffix(new_suffix, options = {})
     new_name = "#{base_name}-#{new_suffix}"
 
     script_filename = "#{Script.script_directory}/#{name}.script"
     new_properties = {
       is_stable: false,
       script_announcements: nil
-    }
+    }.merge(options)
     if /^[0-9]{4}$/ =~ (new_suffix)
       new_properties[:version_year] = new_suffix
     end
