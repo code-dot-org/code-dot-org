@@ -51,6 +51,7 @@ level 'U3 Program Investigate Sequential 2', progression: 'Code Investigation'
 level 'U3 Program Investigate Event-Driven 1', progression: 'Code Investigation'
 level 'U3 Program Investigate Event-Driven 2', progression: 'Code Investigation'
 level 'U3 Program Investigate Event-Driven 3', progression: 'Code Investigation'
+level 'U3L6 CSP CFU Sequential vs Event Driven', progression: 'Check for Understanding', assessment: true
 
 stage 'Programs Practice'
 level 'CSP U3L7 SFLP 20-21', progression: 'Lesson Overview'
@@ -61,6 +62,7 @@ level 'U3 Program Practice Pt 4', progression: 'Debugging'
 level 'U3 Program Practice Pt 5', progression: 'Debugging'
 level 'U3 Program Practice Pt 6', progression: 'Debugging'
 level 'U3 Program Practice Pt 8', progression: 'Debugging'
+level 'U3L7 CSP CFU What was confusing', progression: 'Check for Understanding', assessment: true
 
 stage 'Project - Designing an App Part 3'
 level 'CSP U3L8 SFLP 20-21', progression: 'Lesson Overview'
