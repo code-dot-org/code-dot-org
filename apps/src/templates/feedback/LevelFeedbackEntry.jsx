@@ -100,14 +100,16 @@ export default class LevelFeedbackEntry extends Component {
 
   expand = () => {
     this.setState({expanded: true});
-    firehoseClient.putRecord(
-      {
-        study: 'all-feedback',
-        event: 'expand-feedback',
-        data_json: {feedback_id: this.props.feedback.id}.to_json
-      },
-      {includeUserId: true}
-    );
+    if (this.longComment()) {
+      firehoseClient.putRecord(
+        {
+          study: 'all-feedback',
+          event: 'expand-feedback',
+          data_json: {feedback_id: this.props.feedback.id}
+        },
+        {includeUserId: true}
+      );
+    }
   };
 
   collapse = () => {
