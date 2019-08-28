@@ -33,7 +33,7 @@ level 'U3L2 CSP CFU ID names', progression: 'Check For Understanding', assessmen
 
 stage 'Project - Designing an App Part 1'
 level 'CSP U3L3 SFLP 20-21', progression: 'Lesson Overview'
-level 'CSP U3 L3 Check Your Understanding', progression: 'Check For Understanding'
+level 'CSP U3 L3 Check Your Understanding', progression: 'Check For Understanding', assessment: true
 
 stage 'Project - Designing an App Part 2'
 level 'CSP U3L4 SFLP 20-21', progression: 'Lesson Overview'
@@ -42,6 +42,7 @@ level 'CSP U3 L4 Design Screens', progression: 'Build Your Screens'
 
 stage 'The Need for Programming Languages'
 level 'CSP U3L5 SFLP 20-21', progression: 'Lesson Overview'
+level 'U3L5 CSP CFU natural language', progression: 'Check For Understanding', assessment: true
 
 stage 'Programs Investigate'
 level 'CSP U3L6 SFLP 20-21', progression: 'Lesson Overview'
@@ -72,4 +73,4 @@ level 'CSP U3 L9 Add More Code', progression: 'Add More Code'
 
 stage 'Project: Share Your App'
 level 'CSP U3L10 SFLP 20-21', progression: 'Lesson Overview'
-level 'CSP U3 L10 Submit App', progression: 'Submit Your App'
+level 'CSP U3 L10 Submit App', progression: 'Submit Your App', assessment: true
