@@ -1,5 +1,6 @@
 module SchoolInfoInterstitialHelper
-  def self.show_school_info_interstitial?(user)
+  def self.show?(user)
+    return false if user.nil?
     return false unless user.teacher?
 
     return false if user.account_age_days < 7
@@ -25,7 +26,8 @@ module SchoolInfoInterstitialHelper
   # Show the school info confirmation dialog when a teacher has either completely
   # filled out the school info interstitial for a US public, private, or charter school
   # or confirmed current school over a year ago.
-  def self.show_school_info_confirmation_dialog?(user)
+  def self.show_confirmation_dialog?(user)
+    return false if user.nil?
     return false unless user.teacher?
 
     return false if user.user_school_infos.empty?
