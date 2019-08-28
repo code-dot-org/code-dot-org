@@ -2133,10 +2133,6 @@ arrify@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/arrify/-/arrify-1.0.1.tgz#898508da2226f380df904728456849c1501a4b0d"
 
-asap@^2.0.3:
-  version "2.0.5"
-  resolved "https://registry.yarnpkg.com/asap/-/asap-2.0.5.tgz#522765b50c3510490e52d7dcfe085ef9ba96958f"
-
 asap@~2.0.3:
   version "2.0.6"
   resolved "https://registry.yarnpkg.com/asap/-/asap-2.0.6.tgz#e50347611d7e690943208bbdafebcbc2fb866d46"
@@ -5430,19 +5426,6 @@ dir-glob@^2.0.0:
 discontinuous-range@1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/discontinuous-range/-/discontinuous-range-1.0.0.tgz#e38331f0844bba49b9a9cb71c771585aab1bc65a"
-
-disposables@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/disposables/-/disposables-1.0.1.tgz#064727a25b54f502bd82b89aa2dfb8df9f1b39e3"
-
-dnd-core@^2.0.1:
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/dnd-core/-/dnd-core-2.0.2.tgz#4528da4fbeb1abb6c308414b2d2e8389f3514646"
-  dependencies:
-    asap "^2.0.3"
-    invariant "^2.0.0"
-    lodash "^4.2.0"
-    redux "^3.2.0"
 
 dns-equal@^1.0.0:
   version "1.0.0"
@@ -12509,15 +12492,6 @@ react-dev-utils@^6.1.0:
     strip-ansi "4.0.0"
     text-table "0.2.0"
 
-react-dnd@^2.1.4:
-  version "2.1.4"
-  resolved "https://registry.yarnpkg.com/react-dnd/-/react-dnd-2.1.4.tgz#dd2afeddddd5ff4507d795a5bd44361c84374c0f"
-  dependencies:
-    disposables "^1.0.1"
-    dnd-core "^2.0.1"
-    invariant "^2.1.0"
-    lodash "^4.2.0"
-
 react-docgen@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/react-docgen/-/react-docgen-3.0.0.tgz#79c6e1b1870480c3c2bc1a65bede0577a11c38cd"
@@ -12927,12 +12901,12 @@ reactabular-resizable@^6.0.0:
   resolved "https://registry.yarnpkg.com/reactabular-resizable/-/reactabular-resizable-6.0.0.tgz#ac88db0cd549da301b2b78c933a3fc610f3ab23c"
   integrity sha1-rIjbDNVJ2jAbK3jJM6P8YQ86sjw=
 
-reactabular-resolve@^6.1.0:
-  version "6.1.0"
-  resolved "https://registry.yarnpkg.com/reactabular-resolve/-/reactabular-resolve-6.1.0.tgz#b63a634c0257b37b05b2bc948f4747b26eaee354"
-  integrity sha1-tjpjTAJXs3sFsryUj0dHsm6u41Q=
+reactabular-resolve@^7.0.0:
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/reactabular-resolve/-/reactabular-resolve-7.0.0.tgz#9b3175528bb574a523757ab5fc385fe7071f0c4c"
+  integrity sha1-mzF1Uou1dKUjdXq1/Dhf5wcfDEw=
   dependencies:
-    reactabular-utils "^6.0.0"
+    reactabular-utils "^7.0.0"
 
 reactabular-search-columns@^6.0.0:
   version "6.0.0"
@@ -12949,56 +12923,44 @@ reactabular-search@^6.1.1:
   resolved "https://registry.yarnpkg.com/reactabular-search/-/reactabular-search-6.1.1.tgz#298a8d395c37b924352cf7c54e78d4b4a63a8fbe"
   integrity sha1-KYqNOVw3uSQ1LPfFTnjUtKY6j74=
 
-reactabular-select@^6.0.0:
-  version "6.0.0"
-  resolved "https://registry.yarnpkg.com/reactabular-select/-/reactabular-select-6.0.0.tgz#389ef93a227212190aafc54f86f8f2b10810de28"
-  integrity sha1-OJ75OiJyEhkKr8VPhvjysQgQ3ig=
+reactabular-sort@^7.0.0:
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/reactabular-sort/-/reactabular-sort-7.0.0.tgz#2c5f7521e7744f7dfa681994969ddee855ead15f"
+  integrity sha1-LF91Ied0T336aBmUlp3e6FXq0V8=
   dependencies:
-    react-dnd "^2.1.4"
-    reactabular-utils "^6.0.0"
-    redux "^3.5.2"
-    stylesheet-helpers "^0.1.2"
-    uuid "^2.0.2"
+    reactabular-utils "^7.0.0"
 
-reactabular-sort@^6.0.0:
-  version "6.0.0"
-  resolved "https://registry.yarnpkg.com/reactabular-sort/-/reactabular-sort-6.0.0.tgz#045b2c0c0ea712bac4531fe607d71cdc400f6c94"
-  integrity sha1-BFssDA6nErrEUx/mB9cc3EAPbJQ=
+reactabular-sticky@^7.0.0:
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/reactabular-sticky/-/reactabular-sticky-7.0.0.tgz#06f34dfc37ef2c6084ca37f690bf78642d51a524"
+  integrity sha1-BvNN/DfvLGCEyjf2kL94ZC1RpSQ=
+
+reactabular-table@^7.0.0:
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/reactabular-table/-/reactabular-table-7.0.0.tgz#79877cd0ebae6e6d7de0bdb1adb1d8f0385c8ec0"
+  integrity sha1-eYd80Ouubm194L2xrbHY8DhcjsA=
   dependencies:
-    reactabular-utils "^6.0.0"
+    reactabular-utils "^7.0.0"
 
-reactabular-sticky@^6.0.1:
-  version "6.0.1"
-  resolved "https://registry.yarnpkg.com/reactabular-sticky/-/reactabular-sticky-6.0.1.tgz#ae353342e9203d43fc48d5eb171485e6a86716b4"
-  integrity sha1-rjUzQukgPUP8SNXrFxSF5qhnFrQ=
+reactabular-utils@^7.0.0:
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/reactabular-utils/-/reactabular-utils-7.0.0.tgz#3852beed7cfc7878f5cffc41559e28320e47d1eb"
+  integrity sha1-OFK+7Xz8eHj1z/xBVZ4oMg5H0es=
 
-reactabular-table@^6.0.0:
-  version "6.0.0"
-  resolved "https://registry.yarnpkg.com/reactabular-table/-/reactabular-table-6.0.0.tgz#3bd8e4ea6b38b752ec47ffcc8183eab75a4fa3e0"
-  integrity sha1-O9jk6ms4t1LsR//MgYPqt1pPo+A=
-  dependencies:
-    reactabular-utils "^6.0.0"
-
-reactabular-utils@^6.0.0:
-  version "6.0.0"
-  resolved "https://registry.yarnpkg.com/reactabular-utils/-/reactabular-utils-6.0.0.tgz#863bce6a166c58dd9ce1e7669f8da70afd35b089"
-  integrity sha1-hjvOahZsWN2c4edmn42nCv01sIk=
-
-reactabular@^6.0.0:
-  version "6.1.2"
-  resolved "https://registry.yarnpkg.com/reactabular/-/reactabular-6.1.2.tgz#faeee1db9fed6d356dd11f4ea5671e85c8ed60a4"
-  integrity sha1-+u7h25/tbTVt0R9OpWcehcjtYKQ=
+reactabular@^7.0.0:
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/reactabular/-/reactabular-7.0.0.tgz#abc6445471ea4f05a579ecadf29690f5ee3051ff"
+  integrity sha1-q8ZEVHHqTwWleeyt8paQ9e4wUf8=
   dependencies:
     reactabular-highlight "^6.0.0"
     reactabular-resizable "^6.0.0"
-    reactabular-resolve "^6.1.0"
+    reactabular-resolve "^7.0.0"
     reactabular-search "^6.1.1"
     reactabular-search-columns "^6.0.0"
     reactabular-search-field "^6.0.0"
-    reactabular-select "^6.0.0"
-    reactabular-sort "^6.0.0"
-    reactabular-sticky "^6.0.1"
-    reactabular-table "^6.0.0"
+    reactabular-sort "^7.0.0"
+    reactabular-sticky "^7.0.0"
+    reactabular-table "^7.0.0"
 
 reactcss@^1.2.0:
   version "1.2.2"
@@ -13211,15 +13173,6 @@ redux-mock-store@^1.2.3:
 redux-thunk@^2.0.1:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/redux-thunk/-/redux-thunk-2.1.0.tgz#c724bfee75dbe352da2e3ba9bc14302badd89a98"
-
-redux@^3.2.0, redux@^3.5.2:
-  version "3.7.2"
-  resolved "https://registry.yarnpkg.com/redux/-/redux-3.7.2.tgz#06b73123215901d25d065be342eb026bc1c8537b"
-  dependencies:
-    lodash "^4.2.1"
-    lodash-es "^4.2.1"
-    loose-envify "^1.1.0"
-    symbol-observable "^1.0.3"
 
 redux@^3.3.1:
   version "3.6.0"
@@ -14850,10 +14803,6 @@ style-to-object@^0.2.1:
   dependencies:
     css "2.2.4"
 
-stylesheet-helpers@^0.1.2:
-  version "0.1.2"
-  resolved "https://registry.yarnpkg.com/stylesheet-helpers/-/stylesheet-helpers-0.1.2.tgz#56886b3c4bab6f0e300e9e8d3496b4141453ac0b"
-
 superagent-proxy@^1.0.2:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/superagent-proxy/-/superagent-proxy-1.0.3.tgz#acfa776672f11c24a90ad575e855def8be44f741"
@@ -14963,7 +14912,7 @@ svgo@^1.1.1:
     unquote "~1.1.1"
     util.promisify "~1.0.0"
 
-symbol-observable@^1.0.2, symbol-observable@^1.0.3:
+symbol-observable@^1.0.2:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/symbol-observable/-/symbol-observable-1.0.4.tgz#29bf615d4aa7121bdd898b22d4b3f9bc4e2aa03d"
 
@@ -15761,10 +15710,6 @@ utils-merge@1.0.1:
 uuid@3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.0.0.tgz#6728fc0459c450d796a99c31837569bdf672d728"
-
-uuid@^2.0.2:
-  version "2.0.3"
-  resolved "https://registry.yarnpkg.com/uuid/-/uuid-2.0.3.tgz#67e2e863797215530dff318e5bf9dcebfd47b21a"
 
 uuid@^3.0.0, uuid@^3.0.1, uuid@^3.1.0:
   version "3.1.0"
