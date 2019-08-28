@@ -21,8 +21,6 @@ module Pd
         if facilitator_courses.include? Pd::Workshop::COURSE_CSF
           permission_list << 'CsfFacilitator'
         end
-
-        permission_list << 'Partner' if RegionalPartner.where(contact_id: current_user.id).exists?
       end
 
       if permission_list.empty?
