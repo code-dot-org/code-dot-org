@@ -181,7 +181,6 @@
     "react-virtualized": "^9.18.5",
     "react-virtualized-select": "^3.0.1",
     "react-with-context": "^2.0.0",
-    "reactabular": "^7.0.0",
     "reactabular-table": "^8.14.0",
     "redux": "^3.3.1",
     "redux-logger": "^2.6.1",
