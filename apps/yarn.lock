@@ -12922,10 +12922,10 @@ reactabular-highlight@^3.0.0:
   resolved "https://registry.yarnpkg.com/reactabular-highlight/-/reactabular-highlight-3.0.0.tgz#35c2f6c108d400cb1752d292fb651d18054c27cd"
   integrity sha1-NcL2wQjUAMsXUtKS+2UdGAVMJ80=
 
-reactabular-resizable@^4.2.0:
-  version "4.2.0"
-  resolved "https://registry.yarnpkg.com/reactabular-resizable/-/reactabular-resizable-4.2.0.tgz#44291edc1f3727438f568aefa0b0e16d9cf80450"
-  integrity sha1-RCke3B83J0OPVorvoLDhbZz4BFA=
+reactabular-resizable@^5.3.0:
+  version "5.3.0"
+  resolved "https://registry.yarnpkg.com/reactabular-resizable/-/reactabular-resizable-5.3.0.tgz#f668cc05ab1424beed88b26dfe0101f73246b8fd"
+  integrity sha1-9mjMBasUJL7tiLJt/gEB9zJGuP0=
 
 reactabular-resolve@^3.0.0:
   version "3.0.0"
@@ -12949,10 +12949,10 @@ reactabular-search@^4.2.0:
   resolved "https://registry.yarnpkg.com/reactabular-search/-/reactabular-search-4.2.0.tgz#ad779ef6725ec444f3357363be40a47ab2f808d0"
   integrity sha1-rXee9nJexETzNXNjvkCkerL4CNA=
 
-reactabular-select@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/reactabular-select/-/reactabular-select-3.0.0.tgz#dd2ab90a5599aa9a82a179330ee2ec5e816f6359"
-  integrity sha1-3Sq5ClWZqpqCoXkzDuLsXoFvY1k=
+reactabular-select@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/reactabular-select/-/reactabular-select-5.0.0.tgz#75414baf7220826c45c22625235c7413e9ec87e1"
+  integrity sha1-dUFLr3IggmxFwiYlI1x0E+nsh+E=
   dependencies:
     react-dnd "^2.1.4"
     reactabular-utils "^3.0.0"
@@ -12960,22 +12960,22 @@ reactabular-select@^3.0.0:
     stylesheet-helpers "^0.1.2"
     uuid "^2.0.2"
 
-reactabular-sort@^4.2.0:
-  version "4.2.0"
-  resolved "https://registry.yarnpkg.com/reactabular-sort/-/reactabular-sort-4.2.0.tgz#928c82aabda26b94f1c2dc5030fe09676b6ee370"
-  integrity sha1-koyCqr2ia5TxwtxQMP4JZ2tu43A=
+reactabular-sort@^5.3.0:
+  version "5.3.0"
+  resolved "https://registry.yarnpkg.com/reactabular-sort/-/reactabular-sort-5.3.0.tgz#2a34665f7a256433dc2bba886c2af4b111534a2d"
+  integrity sha1-KjRmX3olZDPcK7qIbCr0sRFTSi0=
   dependencies:
     reactabular-utils "^3.0.0"
 
-reactabular-sticky@^3.0.6:
-  version "3.0.6"
-  resolved "https://registry.yarnpkg.com/reactabular-sticky/-/reactabular-sticky-3.0.6.tgz#1349c3975f40e55973ac02669b5b7a5784715cf8"
-  integrity sha1-E0nDl19A5VlzrAJmm1t6V4RxXPg=
+reactabular-sticky@^5.1.0:
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/reactabular-sticky/-/reactabular-sticky-5.1.0.tgz#dce95718cef0d446ec1afe8dca558d51c3ad5188"
+  integrity sha1-3OlXGM7w1EbsGv6NylWNUcOtUYg=
 
-reactabular-table@^3.0.6:
-  version "3.0.6"
-  resolved "https://registry.yarnpkg.com/reactabular-table/-/reactabular-table-3.0.6.tgz#bd188bfdb08b2c91e4d452c00969b5758062c9a3"
-  integrity sha1-vRiL/bCLLJHk1FLACWm1dYBiyaM=
+reactabular-table@^5.1.0:
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/reactabular-table/-/reactabular-table-5.1.0.tgz#3a26f27496b951630206ff2923267c760e18e0b7"
+  integrity sha1-OibydJa5UWMCBv8pIyZ8dg4Y4Lc=
   dependencies:
     reactabular-utils "^3.0.0"
 
@@ -12984,21 +12984,21 @@ reactabular-utils@^3.0.0:
   resolved "https://registry.yarnpkg.com/reactabular-utils/-/reactabular-utils-3.0.0.tgz#58b68292aa6760ae14a2a528a9b0b227ce87eaf0"
   integrity sha1-WLaCkqpnYK4UoqUoqbCyJ86H6vA=
 
-reactabular@^4.0.0:
-  version "4.3.0"
-  resolved "https://registry.yarnpkg.com/reactabular/-/reactabular-4.3.0.tgz#0432b671afd4229fa7e9ecacdf7cc2f79679c6a8"
-  integrity sha1-BDK2ca/UIp+n6eys33zC95Z5xqg=
+reactabular@^5.0.0:
+  version "5.3.0"
+  resolved "https://registry.yarnpkg.com/reactabular/-/reactabular-5.3.0.tgz#8f0db6c2a0b0d6128d275d33a1953e3fa4dc063d"
+  integrity sha1-jw22wqCw1hKNJ10zoZU+P6TcBj0=
   dependencies:
     reactabular-highlight "^3.0.0"
-    reactabular-resizable "^4.2.0"
+    reactabular-resizable "^5.3.0"
     reactabular-resolve "^3.0.0"
     reactabular-search "^4.2.0"
     reactabular-search-columns "^3.0.0"
     reactabular-search-field "^3.0.0"
-    reactabular-select "^3.0.0"
-    reactabular-sort "^4.2.0"
-    reactabular-sticky "^3.0.6"
-    reactabular-table "^3.0.6"
+    reactabular-select "^5.0.0"
+    reactabular-sort "^5.3.0"
+    reactabular-sticky "^5.1.0"
+    reactabular-table "^5.1.0"
 
 reactcss@^1.2.0:
   version "1.2.2"
