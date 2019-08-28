@@ -14,6 +14,9 @@ class LevelStarterAssetsController < ApplicationController
       summarize(file_obj, friendly_name, uuid_name)
     end.compact
 
+    # Setting custom header here allows us to access the csrf-token and manually use for destroy method.
+    headers['csrf-token'] = form_authenticity_token
+
     render json: {starter_assets: starter_assets}
   end
 
