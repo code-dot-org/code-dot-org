@@ -86,10 +86,17 @@ class LevelNameInput extends Component {
     levelId: PropTypes.number.isRequired
   };
 
+  state = {
+    isValid: true
+  };
+
   handleLevelNameChange = levelName => {
     const levelId = this.props.levelNameMap[levelName];
     if (levelId) {
+      this.setState({isValid: true});
       this.props.onSelectLevel(levelId);
+    } else {
+      this.setState({isValid: false});
     }
   };
 
