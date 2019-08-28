@@ -12942,6 +12942,13 @@ reactabular-table@^7.0.0:
   dependencies:
     reactabular-utils "^7.0.0"
 
+reactabular-table@^8.14.0:
+  version "8.14.0"
+  resolved "https://registry.yarnpkg.com/reactabular-table/-/reactabular-table-8.14.0.tgz#2ce05de47d499db91678fa9518505ea509bf3d7f"
+  integrity sha512-F3qOa7yJCi1hnxsESmo2QBWVl1RQfUfZhMhpG81zOxDQKsk/nsXlq/5aBtQ17NadYI6PDdMNourNs+255GpmFQ==
+  dependencies:
+    classnames "^2.2.5"
+
 reactabular-utils@^7.0.0:
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/reactabular-utils/-/reactabular-utils-7.0.0.tgz#3852beed7cfc7878f5cffc41559e28320e47d1eb"
@@ -14387,7 +14394,7 @@ sort-keys@^1.0.0:
   dependencies:
     is-plain-obj "^1.0.0"
 
-sortabular@^1.6:
+sortabular@^1.6.0:
   version "1.6.0"
   resolved "https://registry.yarnpkg.com/sortabular/-/sortabular-1.6.0.tgz#d320198c3add5cf8e200b14e076f0a06ad08d341"
   integrity sha512-rKOAXc3Z5JXCeMR1FV6Yuh5HSQUAUyMpEBni5qgO84FBv+C9p4yZ4GnHDhFTyfyMCo7qMS+ZF8ffzXApUOzTBg==
