@@ -98,6 +98,7 @@ const styles = {
 
 class DataBrowser extends React.Component {
   static propTypes = {
+    onTableAdd: PropTypes.func.isRequired,
     // from redux state
     tableListMap: PropTypes.object.isRequired,
     view: PropTypes.oneOf(Object.keys(DataView)),
@@ -114,15 +115,12 @@ class DataBrowser extends React.Component {
   handleTabClick = newTab => {
     this.setState({selectedTab: newTab});
     if (newTab === TabType.DATA_TABLES) {
-      this.props.onViewChange(DataView.TABLE);
+      this.props.onViewChange(DataView.OVERVIEW);
     }
     if (newTab === TabType.KEY_VALUE_PAIRS) {
       this.props.onViewChange(DataView.PROPERTIES);
     }
   };
-
-  // TODO: implement the functionality of this tab
-  emptyHandler = () => {};
 
   render() {
     return (
@@ -168,7 +166,7 @@ class DataBrowser extends React.Component {
                 <col width={buttonColumnWidth} />
               </colgroup>
               <tbody>
-                <AddTableListRow onTableAdd={this.emptyHandler} />
+                <AddTableListRow onTableAdd={this.props.onTableAdd} />
               </tbody>
             </table>
             <br />
@@ -188,7 +186,9 @@ class DataBrowser extends React.Component {
                   <EditTableListRow
                     key={tableName}
                     tableName={tableName}
-                    onViewChange={this.emptyHandler}
+                    onViewChange={() =>
+                      this.props.onViewChange(DataView.TABLE, tableName)
+                    }
                   />
                 ))}
               </tbody>
@@ -248,8 +248,8 @@ export default connect(
     onShowWarning(warningMsg, warningTitle) {
       dispatch(showWarning(warningMsg, warningTitle));
     },
-    onViewChange(view) {
-      dispatch(changeView(view));
+    onViewChange(view, tableName) {
+      dispatch(changeView(view, tableName));
     }
   })
 )(Radium(DataBrowser));

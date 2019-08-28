@@ -2,3 +2,5 @@ name 'CSD Games parameters practice'
 display_name 'Practice with Parameters'
 
 sublevels
+level 'CSD U3 shapes behind_pilot'
+level 'CSD U3 shapes missing_pilot'
