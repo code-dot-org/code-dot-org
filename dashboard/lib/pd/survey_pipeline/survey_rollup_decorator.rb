@@ -145,9 +145,9 @@ module Pd::SurveyPipeline
     end
 
     def self.get_submission_counts(submissions, facilitator_id, current_workshop_id)
-      {this_workshop: {}, all_my_workshops: {}}.tap do |result|
-        next unless submissions.present?
+      result = {this_workshop: {facilitator_id => {}}, all_my_workshops: {facilitator_id => {}}}
 
+      if submissions.present?
         submission_type =
           submissions.first.is_a?(Pd::WorkshopDailySurvey) ? 'Workshop surveys' : 'Facilitator surveys'
 
@@ -155,6 +155,8 @@ module Pd::SurveyPipeline
         result[:this_workshop][facilitator_id] =
           {submission_type => submissions.where(pd_workshop_id: current_workshop_id).count}
       end
+
+      result
     end
 
     def self.get_user_name_by_id(id)
