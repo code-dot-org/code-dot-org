@@ -31,16 +31,16 @@ import {Position} from '../constants';
 const RANDOM_VALUE = 'RAND';
 
 const POSITION_VALUES = [
-  [commonMsg.random(), RANDOM_VALUE],
-  [commonMsg.topLeft(), Position.TOPLEFT.toString()],
-  [commonMsg.topCenter(), Position.TOPCENTER.toString()],
-  [commonMsg.topRight(), Position.TOPRIGHT.toString()],
-  [commonMsg.middleLeft(), Position.MIDDLELEFT.toString()],
-  [commonMsg.middleCenter(), Position.MIDDLECENTER.toString()],
-  [commonMsg.middleRight(), Position.MIDDLERIGHT.toString()],
-  [commonMsg.bottomLeft(), Position.BOTTOMLEFT.toString()],
-  [commonMsg.bottomCenter(), Position.BOTTOMCENTER.toString()],
-  [commonMsg.bottomRight(), Position.BOTTOMRIGHT.toString()]
+  [msg.random(), RANDOM_VALUE],
+  [msg.topLeft(), Position.TOPLEFT.toString()],
+  [msg.topCenter(), Position.TOPCENTER.toString()],
+  [msg.topRight(), Position.TOPRIGHT.toString()],
+  [msg.middleLeft(), Position.MIDDLELEFT.toString()],
+  [msg.middleCenter(), Position.MIDDLECENTER.toString()],
+  [msg.middleRight(), Position.MIDDLERIGHT.toString()],
+  [msg.bottomLeft(), Position.BOTTOMLEFT.toString()],
+  [msg.bottomCenter(), Position.BOTTOMCENTER.toString()],
+  [msg.bottomRight(), Position.BOTTOMRIGHT.toString()]
 ];
 
 // Install extensions to Blockly's language and JavaScript generator.
