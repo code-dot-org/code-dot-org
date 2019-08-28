@@ -19,7 +19,7 @@ const styles = {
     boxSizing: 'border-box'
   },
   lessonDetails: {
-    width: '88%',
+    width: '75%',
     marginLeft: 20,
     marginTop: 8,
     marginBottom: 4
@@ -42,7 +42,10 @@ const styles = {
     fontSize: 14,
     lineHeight: '17px',
     color: color.light_gray,
-    float: 'left'
+    float: 'right',
+    textAlign: 'right',
+    marginRight: 20,
+    width: 200
   },
   comment: {
     color: color.dark_charcoal,
