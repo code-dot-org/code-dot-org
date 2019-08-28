@@ -1,10 +1,6 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
-import VirtualizedSelect from 'react-virtualized-select';
-import 'react-virtualized/styles.css';
-import 'react-select/dist/react-select.css';
-import 'react-virtualized-select/styles.css';
 import _ from 'lodash';
 import {
   chooseLevel,
@@ -100,10 +96,10 @@ export class UnconnectedLevelTokenDetails extends Component {
   };
 
   componentWillMount() {
-    this.levelKeyOptions = _.map(this.props.levelKeyList, (label, value) => ({
-      label,
-      value: +value
-    }));
+    this.levelNameMap = {};
+    _.toPairs(this.props.levelKeyList).forEach(([levelId, levelName]) => {
+      this.levelNameMap[levelName] = +levelId;
+    });
   }
 
   containsLegacyLevel() {
@@ -112,13 +108,16 @@ export class UnconnectedLevelTokenDetails extends Component {
     );
   }
 
-  handleLevelSelected = (index, {value}) => {
-    this.props.chooseLevel(
-      this.props.stagePosition,
-      this.props.level.position,
-      index,
-      value
-    );
+  handleLevelNameChange = (variant, levelName) => {
+    const levelId = this.levelNameMap[levelName];
+    if (levelId) {
+      this.props.chooseLevel(
+        this.props.stagePosition,
+        this.props.level.position,
+        variant,
+        levelId
+      );
+    }
   };
 
   handleAddVariant = () => {
@@ -258,12 +257,12 @@ export class UnconnectedLevelTokenDetails extends Component {
             )}
             <span style={{...styles.levelFieldLabel}}>Level name:</span>
             <span style={styles.levelSelect}>
-              <VirtualizedSelect
-                options={this.levelKeyOptions}
-                value={id}
-                onChange={this.handleLevelSelected.bind(null, index)}
-                clearable={false}
-                arrowRenderer={ArrowRenderer}
+              <input
+                type="text"
+                onChange={e =>
+                  this.handleLevelNameChange(index, e.target.value)
+                }
+                defaultValue={this.props.levelKeyList[id]}
               />
             </span>
           </div>
