@@ -1,9 +1,9 @@
 -#
-  Expected locals: app, use_blockly, use_droplet, use_netsim, use_applab, hide_source, static_asset_base_path
+  Expected locals: app, use_blockly, use_droplet, use_p5, use_applab, hide_source, static_asset_base_path
   Provide default values for some of these
 - use_blockly ||= false
 - use_droplet ||= false
-- use_netsim ||= false
+- use_p5 ||= false
 - use_applab ||= false
 - use_gamelab ||= false
 - use_weblab ||= false
@@ -14,6 +14,9 @@
 -# Common style dependencies
 %link{href: asset_path('css/common.css'), rel: 'stylesheet', type: 'text/css'}
 %link{href: asset_path("css/#{app}.css"), rel: 'stylesheet', type: 'text/css'}
+
+- if use_p5
+  %script{src: minifiable_asset_path('js/p5-dependencies.js')}
 
 -# Droplet style dependencies (only when editor present)
 - if use_droplet && !hide_source
