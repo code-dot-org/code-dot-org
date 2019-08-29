@@ -14,7 +14,7 @@ apt-get -y install python3-pip curl
 test "$(pip3 show awscli)" || pip3 install awscli
 
 STACK=${AWS::StackName}
-CHEF_VERSION=12.7.2
+CHEF_VERSION=15.2.20
 REGION=${AWS::Region}
 BRANCH=${Branch}
 S3_BUCKET=<%=s3_bucket%>
