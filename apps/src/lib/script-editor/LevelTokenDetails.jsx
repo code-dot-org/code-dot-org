@@ -91,10 +91,10 @@ export class UnconnectedLevelTokenDetails extends Component {
   };
 
   componentWillMount() {
-    this.levelNameMap = {};
+    this.levelKeyToIdMap = {};
     Object.keys(this.props.levelKeyList).forEach(levelId => {
       const levelName = this.props.levelKeyList[levelId];
-      this.levelNameMap[levelName] = +levelId;
+      this.levelKeyToIdMap[levelName] = +levelId;
     });
   }
 
@@ -251,7 +251,7 @@ export class UnconnectedLevelTokenDetails extends Component {
             <span style={{...styles.levelFieldLabel}}>Level name:</span>
             <LevelNameInput
               onSelectLevel={id => this.handleLevelSelected(index, id)}
-              levelNameMap={this.levelNameMap}
+              levelKeyToIdMap={this.levelKeyToIdMap}
               levelId={id}
               initialLevelName={this.props.levelKeyList[id] || ''}
             />

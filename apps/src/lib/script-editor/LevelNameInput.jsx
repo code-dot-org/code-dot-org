@@ -23,7 +23,7 @@ const styles = {
 export default class LevelNameInput extends Component {
   static propTypes = {
     onSelectLevel: PropTypes.func.isRequired,
-    levelNameMap: PropTypes.objectOf(PropTypes.number).isRequired,
+    levelKeyToIdMap: PropTypes.objectOf(PropTypes.number).isRequired,
     levelId: PropTypes.number.isRequired,
     initialLevelName: PropTypes.string
   };
@@ -39,7 +39,7 @@ export default class LevelNameInput extends Component {
 
   handleLevelNameChange = levelName => {
     this.setState({levelName});
-    const levelId = this.props.levelNameMap[levelName];
+    const levelId = this.props.levelKeyToIdMap[levelName];
     if (levelId) {
       this.setState({isValid: true});
       this.props.onSelectLevel(levelId);
