@@ -188,7 +188,10 @@ class S3Packaging
     @logger.info "Attempting to download: #{s3_key}\nto #{package.path}"
     begin
       client.get_object({bucket: BUCKET_NAME, key: s3_key}, target: package)
-    rescue Aws::Errors::MissingCredentialsError, Aws::S3::Errors::ServiceError
+    rescue Aws::Errors::MissingCredentialsError,
+           Aws::Sigv4::Errors::MissingCredentialsError,
+           Aws::S3::Errors::ServiceError
+
       # Fallback to public-URL download over HTTP if credentials are not provided or invalid.
       # TODO use aws-sdk to leverage aws-client optimizations once unsigned requests are supported:
       # https://github.com/aws/aws-sdk-ruby/issues/1149
