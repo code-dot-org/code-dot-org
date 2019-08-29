@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import ReactTooltip from 'react-tooltip';
-import {Table, sort} from 'reactabular';
+import * as Table from 'reactabular-table';
+import * as sort from 'sortabular';
 import wrappedSortable from '../tables/wrapped_sortable';
 import orderBy from 'lodash/orderBy';
 import PasswordReset from './PasswordReset';
@@ -398,7 +399,7 @@ class ManageStudentsTable extends Component {
           transforms: [sortable]
         },
         cell: {
-          format: this.nameFormatter,
+          formatters: [this.nameFormatter],
           props: {
             style: {
               ...tableLayoutStyles.cell
@@ -419,7 +420,7 @@ class ManageStudentsTable extends Component {
           transforms: [sortable]
         },
         cell: {
-          format: this.ageFormatter,
+          formatters: [this.ageFormatter],
           props: {
             style: {
               ...tableLayoutStyles.cell,
@@ -441,7 +442,7 @@ class ManageStudentsTable extends Component {
           transforms: [sortable]
         },
         cell: {
-          format: this.genderFormatter,
+          formatters: [this.genderFormatter],
           props: {
             style: {
               ...tableLayoutStyles.cell,
@@ -465,7 +466,7 @@ class ManageStudentsTable extends Component {
           }
         },
         cell: {
-          format: this.passwordFormatter,
+          formatters: [this.passwordFormatter],
           props: {
             style: {
               ...tableLayoutStyles.cell,
@@ -480,7 +481,7 @@ class ManageStudentsTable extends Component {
         property: 'projectSharing',
         header: {
           label: i18n.projectSharingColumnHeader(),
-          format: this.projectSharingHeaderFormatter,
+          formatters: [this.projectSharingHeaderFormatter],
           props: {
             style: {
               ...tableLayoutStyles.headerCell,
@@ -490,7 +491,7 @@ class ManageStudentsTable extends Component {
           }
         },
         cell: {
-          format: this.projectSharingFormatter,
+          formatters: [this.projectSharingFormatter],
           props: {
             style: {
               ...tableLayoutStyles.cell,
@@ -505,7 +506,7 @@ class ManageStudentsTable extends Component {
         property: 'actions',
         header: {
           label: i18n.actions(),
-          format: this.actionsHeaderFormatter,
+          formatters: [this.actionsHeaderFormatter],
           props: {
             style: {
               ...tableLayoutStyles.headerCell,
@@ -514,7 +515,7 @@ class ManageStudentsTable extends Component {
           }
         },
         cell: {
-          format: this.actionsFormatter,
+          formatters: [this.actionsFormatter],
           props: {
             style: {
               ...tableLayoutStyles.cell
