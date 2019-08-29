@@ -7,7 +7,7 @@ import LibraryTable from './LibraryTable';
 const styles = {
   categoryName: {
     fontFamily: '"Gotham 7r", sans-serif',
-    pointer: 'cursor',
+    cursor: 'pointer',
     color: '#4D575F'
   },
   tableNumber: {
