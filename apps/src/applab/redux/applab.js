@@ -116,7 +116,7 @@ function redirectDisplay(state, action) {
 }
 
 function level(state, action) {
-  state = state || [];
+  state = state || {};
 
   switch (action.type) {
     case SET_LEVEL_DATA:
