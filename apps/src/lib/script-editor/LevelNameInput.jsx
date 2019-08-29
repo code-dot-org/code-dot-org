@@ -32,7 +32,6 @@ export default class LevelNameInput extends Component {
     super(props);
 
     this.state = {
-      isValid: props.levelId !== -1,
       levelName: props.initialLevelName
     };
   }
@@ -41,15 +40,13 @@ export default class LevelNameInput extends Component {
     this.setState({levelName});
     const levelId = this.props.levelKeyToIdMap[levelName];
     if (levelId) {
-      this.setState({isValid: true});
       this.props.onSelectLevel(levelId);
-    } else {
-      this.setState({isValid: false});
     }
   };
 
   render() {
-    const {isValid, levelName} = this.state;
+    const {levelName} = this.state;
+    const isValid = !!this.props.levelKeyToIdMap[levelName];
     return (
       <span style={styles.levelSelect}>
         <input
