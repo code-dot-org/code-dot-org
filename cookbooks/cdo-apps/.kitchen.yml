@@ -36,6 +36,8 @@ platforms:
     attributes:
       cdo-repository:
         branch: <%= `git rev-parse --abbrev-ref HEAD` %>
+      cdo-secrets:
+        cdn_enabled: false
     run_list:
       - recipe[cdo-apps]
 
