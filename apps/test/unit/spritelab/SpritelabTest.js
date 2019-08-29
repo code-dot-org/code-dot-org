@@ -59,11 +59,11 @@ describe('SpriteLab', () => {
         instance.injectStudioApp(studioApp);
         registerReducers({...commonReducers, ...reducers});
         instance.areAnimationsReady_ = sinon.stub().returns(true);
-        instance.gameLabP5 = sinon.spy();
-        instance.gameLabP5.p5 = sinon.spy();
-        instance.gameLabP5.p5.allSprites = sinon.spy();
-        instance.gameLabP5.p5.allSprites.removeSprites = sinon.spy();
-        instance.gameLabP5.p5.redraw = sinon.spy();
+        instance.p5Wrapper = sinon.spy();
+        instance.p5Wrapper.p5 = sinon.spy();
+        instance.p5Wrapper.p5.allSprites = sinon.spy();
+        instance.p5Wrapper.p5.allSprites.removeSprites = sinon.spy();
+        instance.p5Wrapper.p5.redraw = sinon.spy();
         instance.JSInterpreter = sinon.spy();
         instance.JSInterpreter.deinitialize = sinon.spy();
         instance.initInterpreter = sinon.spy();
