@@ -1,9 +1,9 @@
-import * as spritelabLibrary from '../spritelabLibrary';
+import * as coreLibrary from '../coreLibrary';
 
 export const commands = {
   addBehavior(spriteId, behavior) {
-    let sprites = spritelabLibrary.getSpriteArray(spriteId);
-    sprites.forEach(sprite => spritelabLibrary.addBehavior(sprite, behavior));
+    let sprites = coreLibrary.getSpriteArray(spriteId);
+    sprites.forEach(sprite => coreLibrary.addBehavior(sprite, behavior));
   },
 
   Behavior(func) {
@@ -12,7 +12,7 @@ export const commands = {
 
   draggableFunc(p5Inst) {
     return spriteId => {
-      let sprite = spritelabLibrary.getSpriteArray(spriteId)[0];
+      let sprite = coreLibrary.getSpriteArray(spriteId)[0];
       if (p5Inst.mousePressedOver(sprite) && !sprite.dragging) {
         sprite.dragging = true;
         sprite.xOffset = sprite.x - p5Inst.World.mouseX;
@@ -29,14 +29,12 @@ export const commands = {
   },
 
   removeAllBehaviors(spriteId) {
-    let sprites = spritelabLibrary.getSpriteArray(spriteId);
-    sprites.forEach(sprite => spritelabLibrary.removeAllBehaviors(sprite));
+    let sprites = coreLibrary.getSpriteArray(spriteId);
+    sprites.forEach(sprite => coreLibrary.removeAllBehaviors(sprite));
   },
 
   removeBehavior(spriteId, behavior) {
-    let sprites = spritelabLibrary.getSpriteArray(spriteId);
-    sprites.forEach(sprite =>
-      spritelabLibrary.removeBehavior(sprite, behavior)
-    );
+    let sprites = coreLibrary.getSpriteArray(spriteId);
+    sprites.forEach(sprite => coreLibrary.removeBehavior(sprite, behavior));
   }
 };

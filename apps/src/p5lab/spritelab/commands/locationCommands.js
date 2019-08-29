@@ -1,4 +1,4 @@
-import * as spritelabLibrary from '../spritelabLibrary';
+import * as coreLibrary from '../coreLibrary';
 
 export const commands = {
   locationAt(x, y) {
@@ -10,7 +10,7 @@ export const commands = {
   },
 
   locationOf(spriteId) {
-    let sprite = spritelabLibrary.getSpriteArray(spriteId)[0];
+    let sprite = coreLibrary.getSpriteArray(spriteId)[0];
     if (sprite) {
       return {x: sprite.x, y: sprite.y};
     }

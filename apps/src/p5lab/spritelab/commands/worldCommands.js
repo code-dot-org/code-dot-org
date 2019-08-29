@@ -1,4 +1,4 @@
-import * as spritelabLibrary from '../spritelabLibrary';
+import * as coreLibrary from '../coreLibrary';
 import {getStore} from '@cdo/apps/redux';
 import {addConsoleMessage} from '../textConsoleModule';
 
@@ -8,7 +8,7 @@ export const commands = {
   },
 
   hideTitleScreen() {
-    spritelabLibrary.title = spritelabLibrary.subtitle = '';
+    coreLibrary.title = coreLibrary.subtitle = '';
   },
 
   printText(text) {
@@ -16,18 +16,18 @@ export const commands = {
   },
 
   setBackground(color) {
-    spritelabLibrary.background = color;
+    coreLibrary.background = color;
   },
 
   setBackgroundImage(img) {
     if (this._preloadedBackgrounds && this._preloadedBackgrounds[img]) {
       let backgroundImage = this._preloadedBackgrounds[img];
-      spritelabLibrary.background = backgroundImage;
+      coreLibrary.background = backgroundImage;
     }
   },
 
   showTitleScreen(title, subtitle) {
-    spritelabLibrary.title = title || '';
-    spritelabLibrary.subtitle = subtitle || '';
+    coreLibrary.title = title || '';
+    coreLibrary.subtitle = subtitle || '';
   }
 };

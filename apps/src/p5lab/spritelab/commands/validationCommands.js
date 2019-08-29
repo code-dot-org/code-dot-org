@@ -1,27 +1,27 @@
-import * as spritelabLibrary from '../spritelabLibrary';
+import * as coreLibrary from '../coreLibrary';
 
 export const commands = {
   getAnimationsInUse() {
-    return spritelabLibrary.getAnimationsInUse();
+    return coreLibrary.getAnimationsInUse();
   },
 
   getBackground() {
-    if (typeof spritelabLibrary.background === 'string') {
-      return spritelabLibrary.background;
+    if (typeof coreLibrary.background === 'string') {
+      return coreLibrary.background;
     } else {
-      return spritelabLibrary.background.name;
+      return coreLibrary.background.name;
     }
   },
 
   getNumBehaviorsForAnimation(animation) {
-    return spritelabLibrary.getNumBehaviorsForAnimation(animation);
+    return coreLibrary.getNumBehaviorsForAnimation(animation);
   },
 
   getNumBehaviorsForSpriteId(spriteId) {
-    return spritelabLibrary.getNumBehaviorsForSpriteId(spriteId);
+    return coreLibrary.getNumBehaviorsForSpriteId(spriteId);
   },
 
   getSpriteIdsInUse() {
-    return spritelabLibrary.getSpriteIdsInUse();
+    return coreLibrary.getSpriteIdsInUse();
   }
 };
