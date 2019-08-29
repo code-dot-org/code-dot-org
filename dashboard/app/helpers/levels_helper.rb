@@ -560,6 +560,7 @@ module LevelsHelper
     dev_with_credentials = rack_env?(:development) && (!!CDO.aws_access_key || !!CDO.aws_role) && !!CDO.cloudfront_key_pair_id
     use_restricted_songs = CDO.cdn_enabled || dev_with_credentials || (rack_env?(:test) && ENV['CI'])
     app_options[:useRestrictedSongs] = use_restricted_songs if @game == Game.dance
+    app_options[:isStartMode] = @is_start_mode || false
 
     if params[:blocks]
       level_options[:sharedBlocks] = Block.for(*params[:blocks].split(','))
