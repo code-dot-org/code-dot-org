@@ -1,7 +1,7 @@
 import {assert, expect} from '../../../util/configuredChai';
 import React from 'react';
 import {shallow} from 'enzyme';
-import {Table} from 'reactabular';
+import * as Table from 'reactabular-table';
 import {
   UnconnectedOwnedSectionsTable as OwnedSectionsTable,
   sectionLinkFormatter,
