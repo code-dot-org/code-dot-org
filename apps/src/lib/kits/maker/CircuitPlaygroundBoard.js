@@ -7,6 +7,7 @@ import five from '@code-dot-org/johnny-five';
 import Playground from 'playground-io';
 import experiments from '@cdo/apps/util/experiments';
 import Firmata from 'firmata';
+import WebusbSerialPort from 'webusb-serial';
 import {
   createCircuitPlaygroundComponents,
   cleanupCircuitPlaygroundComponents,
@@ -24,6 +25,7 @@ import Button from './Button';
 import Led from './Led';
 import {
   isNodeSerialAvailable,
+  isWebUsbAvailable,
   ADAFRUIT_VID,
   CIRCUIT_PLAYGROUND_EXPRESS_PID,
   CIRCUIT_PLAYGROUND_PID
@@ -93,12 +95,15 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
   connectToFirmware() {
     return new Promise((resolve, reject) => {
       const name = this.port_ ? this.port_.comName : undefined;
-      const serialPort = CircuitPlaygroundBoard.openSerialPort(name);
+      console.log(this.port_);
+      console.log(this.port_.comName);
+      const serialPort = CircuitPlaygroundBoard.openSerialPort(this.port_);
       const playground = CircuitPlaygroundBoard.makePlaygroundTransport(
         serialPort
       );
       const board = new five.Board({io: playground, repl: false, debug: false});
       board.once('ready', () => {
+        console.log("Delta");
         this.serialPort_ = serialPort;
         this.fiveBoard_ = board;
         this.fiveBoard_.samplingInterval(100);
@@ -106,10 +111,17 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
         if (experiments.isEnabled('detect-board')) {
           this.detectFirmwareVersion(playground);
         }
+        console.log("Enigma");
         resolve();
       });
-      board.on('error', reject);
-      playground.on('error', reject);
+      board.on('error', () => {
+        console.log("Alpha");
+        reject();
+      });
+      playground.on('error', () => {
+        console.log("Beta");
+        reject();
+      });
     });
   }
 
@@ -362,7 +374,7 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
    * @param {string} portName
    * @return {SerialPort}
    */
-  static openSerialPort(portName) {
+  static openSerialPort(port) {
     // A gotcha here: These two types of SerialPort provide similar, but not
     // exactly equivalent, interfaces.  When making changes to construction
     // here maker sure to test both paths:
@@ -371,13 +383,20 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
     //
     // Code.org connector app case: ChromeSerialPort bridges through the Chrome
     // app, implements SerialPort 3's interface.
-    const SerialPortType = isNodeSerialAvailable()
-      ? SerialPort
-      : ChromeSerialPort.SerialPort;
+    if (isWebUsbAvailable()) {
+      return new WebusbSerialPort({
+        device: port
+      });
+    } else {
+      const SerialPortType = isNodeSerialAvailable()
+        ? SerialPort
+        : ChromeSerialPort.SerialPort;
 
-    return new SerialPortType(portName, {
-      baudRate: SERIAL_BAUD
-    });
+      let name = port ? port.comName : undefined;
+      return new SerialPortType(name, {
+        baudRate: SERIAL_BAUD
+      });
+    }
   }
 
   /**
