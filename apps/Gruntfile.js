@@ -220,19 +220,6 @@ describe('entry tests', () => {
           src: ['**/*.js'],
           dest: 'build/package/js/ace/'
         },
-        // Pull p5.js and p5.play.js into the package from our forks.
-        {
-          expand: true,
-          cwd: './node_modules/@code-dot-org/p5/lib',
-          src: ['p5.js'],
-          dest: 'build/package/js/p5play/'
-        },
-        {
-          expand: true,
-          cwd: './node_modules/@code-dot-org/p5.play/lib',
-          src: ['p5.play.js'],
-          dest: 'build/package/js/p5play/'
-        },
         {
           expand: true,
           // For some reason, if we provide piskel root as an absolute path here,
