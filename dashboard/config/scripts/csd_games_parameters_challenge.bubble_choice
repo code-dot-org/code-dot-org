@@ -5,3 +5,5 @@ description 'Check out one or more of these extra blocks that you can use to mak
 sublevels
 level 'CSD U3 shapes polygon_pilot'
 level 'CSD U3 shapes_pilot'
+level 'CSD U3 shapes line_pilot'
+level 'CSD U3 shapes arc_pilot'
