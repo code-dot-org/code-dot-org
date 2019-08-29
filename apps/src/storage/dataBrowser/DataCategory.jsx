@@ -58,9 +58,9 @@ class DataCategory extends React.Component {
               {this.props.description}
             </span>
             <ul>
-              {this.props.datasets.map(d => (
-                <li style={styles.tableName} key={d}>
-                  {d}
+              {this.props.datasets.map(dataset => (
+                <li style={styles.tableName} key={dataset}>
+                  {dataset}
                 </li>
               ))}
             </ul>
