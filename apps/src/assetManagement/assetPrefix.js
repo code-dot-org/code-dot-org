@@ -18,6 +18,11 @@ export const ICON_PREFIX_REGEX = new RegExp('^icon://');
 export const SOUND_PREFIX = 'sound://';
 export const SOUND_PREFIX_REGEX = new RegExp('^sound://');
 
+// Starter assets are currently only used for image assets, but may be extended
+// in the future, where we will want to change this prefix.
+export const STARTER_ASSET_PREFIX = 'image://';
+export const STARTER_ASSET_PREFIX_REGEX = new RegExp('^image://');
+
 const DEFAULT_ASSET_PATH_PREFIX = '/v3/assets/';
 export const DEFAULT_SOUND_PATH_PREFIX = '/api/v1/sound-library/';
 const DEFAULT_CHANNEL_ID = undefined;
@@ -71,6 +76,15 @@ export function fixPath(filename) {
     return filename.replace(SOUND_PREFIX, soundPathPrefix);
   }
 
+  if (STARTER_ASSET_PREFIX_REGEX.test(filename)) {
+    // TODO: GET LEVEL NAME FROM REDUX
+    var levelName = 'U5 Lists Investigate Outfitly Code';
+    return filename.replace(
+      STARTER_ASSET_PREFIX,
+      starterAssetPathPrefix(levelName)
+    );
+  }
+
   if (filename.indexOf('/') !== -1 || !channelId) {
     return filename;
   }
@@ -79,6 +93,10 @@ export function fixPath(filename) {
   // catch any characters which could break urls such as # or ?, without
   // modifying extended ascii or unicode characters.
   return assetPathPrefix + channelId + '/' + encodeURIComponent(filename);
+}
+
+function starterAssetPathPrefix(levelName) {
+  return `/level_starter_assets/${levelName}/`;
 }
 
 /**
