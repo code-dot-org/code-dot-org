@@ -40,7 +40,7 @@ const styles = {
   }
 };
 
-class GameLabVisualizationColumn extends React.Component {
+class P5LabVisualizationColumn extends React.Component {
   static propTypes = {
     finishButton: PropTypes.bool.isRequired,
     isResponsive: PropTypes.bool.isRequired,
@@ -225,4 +225,4 @@ export default connect(
     updatePicker: loc => dispatch(updateLocation(loc)),
     selectPicker: loc => dispatch(selectLocation(loc))
   })
-)(GameLabVisualizationColumn);
+)(P5LabVisualizationColumn);

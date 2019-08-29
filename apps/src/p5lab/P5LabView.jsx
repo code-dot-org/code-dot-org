@@ -9,8 +9,8 @@ import StudioAppWrapper from '@cdo/apps/templates/StudioAppWrapper';
 import ErrorDialogStack from './ErrorDialogStack';
 import AnimationJsonViewer from './AnimationJsonViewer';
 import {P5LabInterfaceMode, APP_WIDTH, APP_HEIGHT} from './constants';
-import GameLabVisualizationHeader from './GameLabVisualizationHeader';
-import GameLabVisualizationColumn from './GameLabVisualizationColumn';
+import P5LabVisualizationHeader from './P5LabVisualizationHeader';
+import P5LabVisualizationColumn from './P5LabVisualizationColumn';
 import InstructionsWithWorkspace from '@cdo/apps/templates/instructions/InstructionsWithWorkspace';
 import {isResponsiveFromState} from '@cdo/apps/templates/ProtectedVisualizationDiv';
 import CodeWorkspace from '@cdo/apps/templates/CodeWorkspace';
@@ -22,7 +22,7 @@ import AnimationPicker from './AnimationPicker/AnimationPicker';
 /**
  * Top-level React wrapper for GameLab
  */
-class GameLabView extends React.Component {
+class P5LabView extends React.Component {
   static propTypes = {
     // Provided manually
     showFinishButton: PropTypes.bool.isRequired,
@@ -84,8 +84,8 @@ class GameLabView extends React.Component {
           className={visualizationColumnClassNames}
           style={visualizationColumnStyle}
         >
-          {this.props.showVisualizationHeader && <GameLabVisualizationHeader />}
-          <GameLabVisualizationColumn finishButton={showFinishButton} />
+          {this.props.showVisualizationHeader && <P5LabVisualizationHeader />}
+          <P5LabVisualizationColumn finishButton={showFinishButton} />
           {this.getChannelId() && (
             <AnimationPicker
               channelId={this.getChannelId()}
@@ -140,4 +140,4 @@ export default connect(state => ({
   isRunning: state.runState.isRunning,
   isIframeEmbed: state.pageConstants.isIframeEmbed,
   spriteLab: state.pageConstants.isBlockly
-}))(GameLabView);
+}))(P5LabView);
