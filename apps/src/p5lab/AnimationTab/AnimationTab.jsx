@@ -5,7 +5,7 @@ import Radium from 'radium';
 import {connect} from 'react-redux';
 import color from '@cdo/apps/util/color';
 import AnimationPicker from '../AnimationPicker/AnimationPicker';
-import GameLabVisualizationHeader from '../GameLabVisualizationHeader';
+import P5LabVisualizationHeader from '../P5LabVisualizationHeader';
 import {setColumnSizes} from './animationTabModule';
 import AnimationList from './AnimationList';
 import ResizablePanes from '@cdo/apps/templates/ResizablePanes';
@@ -80,7 +80,7 @@ class AnimationTab extends React.Component {
           onChange={this.props.onColumnWidthsChange}
         >
           <div style={styles.animationsColumn}>
-            <GameLabVisualizationHeader />
+            <P5LabVisualizationHeader />
             <AnimationList />
           </div>
           <div style={styles.editorColumn}>
