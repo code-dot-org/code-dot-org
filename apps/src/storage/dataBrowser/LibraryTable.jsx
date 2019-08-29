@@ -4,6 +4,12 @@ import React from 'react';
 import FontAwesome from '../../templates/FontAwesome';
 import msg from '@cdo/locale';
 
+const styles = {
+  tableName: {
+    cursor: 'pointer'
+  }
+};
+
 class LibraryTable extends React.Component {
   static propTypes = {
     name: PropTypes.string.isRequired,
@@ -23,7 +29,7 @@ class LibraryTable extends React.Component {
     const icon = this.state.collapsed ? 'caret-right' : 'caret-down';
     return (
       <div>
-        <a onClick={this.toggleCollapsed}>
+        <a style={styles.tableName} onClick={this.toggleCollapsed}>
           <FontAwesome icon={icon} />
           <span>{this.props.name}</span>
         </a>
