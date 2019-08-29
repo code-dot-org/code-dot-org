@@ -13,6 +13,7 @@ import AudioRecorder from './AudioRecorder';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import AddAssetButtonRow from './AddAssetButtonRow';
 import i18n from '@cdo/locale';
+import {STARTER_ASSET_PREFIX} from '@cdo/apps/assetManagement/assetPrefix';
 
 export const AudioErrorType = {
   NONE: 'none',
@@ -247,7 +248,12 @@ export default class AssetManager extends React.Component {
         <AssetRow
           {...this.defaultAssetProps(asset)}
           api={boundApi}
-          onChoose={() => console.log('choose!')}
+          onChoose={() =>
+            this.props.assetChosen(
+              STARTER_ASSET_PREFIX + asset.filename,
+              asset.timestamp
+            )
+          }
           onDelete={() => console.log('delete!')}
           levelName={this.props.levelName}
         />
