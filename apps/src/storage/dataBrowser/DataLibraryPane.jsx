@@ -1,5 +1,6 @@
 import Radium from 'radium';
 import React from 'react';
+import DataCategory from './DataCategory';
 
 const styles = {
   container: {
@@ -13,9 +14,32 @@ const styles = {
     padding: 10
   }
 };
+
+// TODO: real data
+const categories = {
+  Animals: {description: 'description', datasets: ['one', 'two']},
+  'Arts & Entertainment': {
+    description: 'description',
+    datasets: ['three', 'four']
+  },
+  'Business & Money': {description: 'description', datasets: ['five', 'six']},
+  Education: {description: 'description', datasets: ['seven', 'eight', 'nine']},
+  'Health & Medicine': {description: 'description', datasets: ['ten']}
+};
 class DataLibraryPane extends React.Component {
   render() {
-    return <div style={styles.container} />;
+    return (
+      <div style={styles.container}>
+        {Object.keys(categories).map(category => (
+          <DataCategory
+            key={category}
+            name={category}
+            datasets={categories[category].datasets}
+            description={categories[category].description}
+          />
+        ))}
+      </div>
+    );
   }
 }
 
