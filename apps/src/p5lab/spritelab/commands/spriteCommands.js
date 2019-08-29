@@ -1,29 +1,29 @@
-import * as spritelabLibrary from '../spritelabLibrary';
+import * as coreLibrary from '../coreLibrary';
 
 export const commands = {
   countByAnimation(animation) {
-    let sprites = spritelabLibrary.getSpriteArray(animation);
+    let sprites = coreLibrary.getSpriteArray(animation);
     return sprites.length;
   },
   destroy(spriteId) {
-    let sprites = spritelabLibrary.getSpriteArray(spriteId);
+    let sprites = coreLibrary.getSpriteArray(spriteId);
     sprites.forEach(sprite => {
       sprite.destroy();
-      spritelabLibrary.removeAllBehaviors(sprite);
-      spritelabLibrary.deleteSprite(sprite.id);
+      coreLibrary.removeAllBehaviors(sprite);
+      coreLibrary.deleteSprite(sprite.id);
     });
   },
 
   displace(spriteId, targetSpriteIndex) {
-    let sprites = spritelabLibrary.getSpriteArray(spriteId);
-    let targetSprites = spritelabLibrary.getSpriteArray(targetSpriteIndex);
+    let sprites = coreLibrary.getSpriteArray(spriteId);
+    let targetSprites = coreLibrary.getSpriteArray(targetSpriteIndex);
     sprites.forEach(sprite => {
       targetSprites.forEach(target => sprite.displace(target));
     });
   },
 
   getProp(spriteId, prop) {
-    let sprite = spritelabLibrary.getSpriteArray(spriteId)[0];
+    let sprite = coreLibrary.getSpriteArray(spriteId)[0];
     if (sprite !== undefined) {
       if (prop === 'scale') {
         return sprite.getScale() * 100;
@@ -64,7 +64,7 @@ export const commands = {
     sprite.getScale = function() {
       return sprite.scale / sprite.baseScale;
     };
-    let spriteId = spritelabLibrary.addSprite(sprite);
+    let spriteId = coreLibrary.addSprite(sprite);
     if (animation) {
       sprite.setAnimation(animation);
       sprite.scale /= sprite.baseScale;
@@ -81,7 +81,7 @@ export const commands = {
   },
 
   setAnimation(spriteId, animation) {
-    let sprites = spritelabLibrary.getSpriteArray(spriteId);
+    let sprites = coreLibrary.getSpriteArray(spriteId);
     sprites.forEach(sprite => {
       sprite.setAnimation(animation);
       sprite.scale /= sprite.baseScale;

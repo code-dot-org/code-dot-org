@@ -5,17 +5,17 @@ import {commands as locationCommands} from './commands/locationCommands';
 import {commands as spriteCommands} from './commands/spriteCommands';
 import {commands as worldCommands} from './commands/worldCommands';
 import {commands as validationCommands} from './commands/validationCommands';
-import * as spritelabLibrary from './spritelabLibrary';
+import * as coreLibrary from './coreLibrary';
 
 function drawBackground() {
-  if (typeof spritelabLibrary.background === 'string') {
-    this.background(spritelabLibrary.background);
+  if (typeof coreLibrary.background === 'string') {
+    this.background(coreLibrary.background);
   } else {
     this.background('white');
   }
-  if (typeof spritelabLibrary.background === 'object') {
-    spritelabLibrary.background.resize(400, 400);
-    this.image(spritelabLibrary.background);
+  if (typeof coreLibrary.background === 'object') {
+    coreLibrary.background.resize(400, 400);
+    this.image(coreLibrary.background);
   }
 }
 
@@ -23,16 +23,16 @@ function updateTitle() {
   this.fill('black');
   this.textAlign(this.CENTER, this.CENTER);
   this.textSize(50);
-  this.text(spritelabLibrary.title, 0, 0, 400, 200);
+  this.text(coreLibrary.title, 0, 0, 400, 200);
   this.textSize(35);
-  this.text(spritelabLibrary.subtitle, 0, 200, 400, 200);
+  this.text(coreLibrary.subtitle, 0, 200, 400, 200);
 }
 
 export const commands = {
   executeDrawLoopAndCallbacks() {
     drawBackground.apply(this);
-    spritelabLibrary.runBehaviors();
-    spritelabLibrary.runEvents(this);
+    coreLibrary.runBehaviors();
+    coreLibrary.runEvents(this);
     this.drawSprites();
     updateTitle.apply(this);
   },
