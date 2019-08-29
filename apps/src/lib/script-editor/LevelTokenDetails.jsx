@@ -245,7 +245,6 @@ export class UnconnectedLevelTokenDetails extends Component {
             <LevelNameInput
               onSelectLevel={id => this.handleLevelSelected(index, id)}
               levelKeyToIdMap={this.props.levelKeyToIdMap}
-              levelId={id}
               initialLevelName={this.props.levelKeyList[id] || ''}
             />
           </div>
