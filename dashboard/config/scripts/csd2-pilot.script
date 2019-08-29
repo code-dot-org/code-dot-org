@@ -123,8 +123,8 @@ level 'CSD U2 link demo_pilot', progression: 'Exploring Links'
 level 'CSD U2 making links', progression: 'Links and Navigation'
 level 'CSD U2 naming links', progression: 'Links and Navigation'
 level 'CSD U2 nav bar', progression: 'Links and Navigation'
-level 'CSD U2 adding pages', progression: 'Adding Pages'
-level 'CSD U2 naming pages', progression: 'Adding Pages', assessment: true
+level 'CSD U2 adding pages', progression: 'Adding Pages', assessment: true
+level 'CSD U2 naming pages', progression: 'Adding Pages'
 level 'CSD U2 external links', progression: 'Challenge: External Links'
 
 stage 'Project - Website for a Purpose', flex_category: 'csd2_2'

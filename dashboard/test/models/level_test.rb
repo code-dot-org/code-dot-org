@@ -895,4 +895,34 @@ EOS
     level.valid?
     assert_equal level.contained_level_names, ['real_name']
   end
+
+  test 'add_starter_asset! saves key-value pair in level properties' do
+    level = create :level
+    assert_nil level.starter_assets
+
+    level.add_starter_asset!("my-file.png", "12345.png")
+    level.reload
+    expected_assets = {"my-file.png" => "12345.png"}
+    assert_equal expected_assets, level.starter_assets
+
+    level.add_starter_asset!("file with spaces.png", "54321.png")
+    level.reload
+    expected_assets["file with spaces.png"] = "54321.png"
+    assert_equal expected_assets, level.starter_assets
+
+    # Overwrite "my-file.png" starter asset
+    level.add_starter_asset!("my-file.png", "6789.png")
+    level.reload
+    expected_assets["my-file.png"] = "6789.png"
+    assert_equal expected_assets, level.starter_assets
+  end
+
+  test 'add_starter_asset! raises if level fails to save' do
+    level = create :level
+    level.expects(:valid?).returns(false)
+
+    assert_raises ActiveRecord::RecordInvalid do
+      level.add_starter_asset!("my-file.png", "123.png")
+    end
+  end
 end
