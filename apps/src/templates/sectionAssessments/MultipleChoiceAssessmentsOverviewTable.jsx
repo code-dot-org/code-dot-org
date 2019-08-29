@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import {Table, sort} from 'reactabular';
+import * as Table from 'reactabular-table';
+import * as sort from 'sortabular';
 import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
 import i18n from '@cdo/locale';
 import wrappedSortable from '../tables/wrapped_sortable';
@@ -142,7 +143,7 @@ class MultipleChoiceAssessmentsOverviewTable extends Component {
       }
     },
     cell: {
-      format: answerColumnsFormatter,
+      formatters: [answerColumnsFormatter],
       props: {
         style: {
           ...tableLayoutStyles.cell,
@@ -164,7 +165,7 @@ class MultipleChoiceAssessmentsOverviewTable extends Component {
       }
     },
     cell: {
-      format: answerColumnsFormatter,
+      formatters: [answerColumnsFormatter],
       props: {
         style: {
           ...tableLayoutStyles.cell,
@@ -181,7 +182,7 @@ class MultipleChoiceAssessmentsOverviewTable extends Component {
       props: {style: tableLayoutStyles.headerCell}
     },
     cell: {
-      format: this.questionFormatter,
+      formatters: [this.questionFormatter],
       props: {
         style: {
           ...tableLayoutStyles.cell,
