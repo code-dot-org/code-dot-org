@@ -94,8 +94,11 @@ stage 'Project: Digital Information Dilemmas, pt 2'
 level 'CSP U1L14 SFLP 20-21', progression: 'Lesson Overview'
 level 'U1L13 CFU Digital Representation', progression: 'Check For Understanding', assessment: true
 
-stage 'Unit Assessment', lockable: true
+stage 'Lesson 15: Unit Assessment', lockable: true
 level 'CSP Unit 1 AP-Style Assessment _2020', assessment: true
 
-stage 'Unit 1 Survey'
-level 'CSP U1 20-21 Student Pilot Survey', progression: 'Unit 1 Survey', assessment: true
+stage 'Unit 1 STUDENT Survey', lockable: true, flex_category: 'required'
+level 'CSP U1 20-21 Student Pilot Survey', progression: 'Unit 1 STUDENT Survey', assessment: true
+
+stage 'Unit 1 TEACHER Survey', lockable: true, flex_category: 'required'
+level 'CSP U1 20-21 Teacher Pilot Survey', progression: 'Unit 1 TEACHER Survey', assessment: true
