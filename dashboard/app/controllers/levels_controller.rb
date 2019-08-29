@@ -101,6 +101,8 @@ class LevelsController < ApplicationController
       )
     end
 
+    @is_start_mode = type == 'start_blocks'
+
     show
     render :show
   end
