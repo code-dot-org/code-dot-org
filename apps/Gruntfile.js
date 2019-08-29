@@ -857,7 +857,8 @@ describe('entry tests', () => {
             },
             p5lab: {
               name: 'p5-dependencies',
-              priority: 40,
+              priority: 10,
+              minChunks: 2,
               chunks: chunk =>
                 ['spritelab', 'gamelab', 'dance'].includes(chunk.name),
               test: module => /p5/.test(module.resource)
