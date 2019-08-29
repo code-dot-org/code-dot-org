@@ -75,7 +75,7 @@ Otherwise don't show feedback tab
   And I press "#ui-test-submit-feedback" using jQuery
   And element ".editor-column" contains text "Nice!"
   And element "#rubric-input-performanceLevel1" is checked
-  And I wait until "#ui-test-feedback-time" contains text "Last updated"
+  And I wait until "#ui-test-feedback-time" is visible
   And element "#ui-test-submit-feedback" contains text "Update"
 
   #As teacher, refresh page and latest feedback is visible
