@@ -1,21 +1,21 @@
-import {commands as actionCommands} from './actionCommands';
-import {commands as behaviorCommands} from './behaviorCommands';
-import {commands as eventCommands} from './eventCommands';
-import {commands as locationCommands} from './locationCommands';
-import {commands as spriteCommands} from './spriteCommands';
-import {commands as worldCommands} from './worldCommands';
-import {commands as validationCommands} from './validationCommands';
-import * as spriteUtils from './spriteUtils';
+import {commands as actionCommands} from './commands/actionCommands';
+import {commands as behaviorCommands} from './commands/behaviorCommands';
+import {commands as eventCommands} from './commands/eventCommands';
+import {commands as locationCommands} from './commands/locationCommands';
+import {commands as spriteCommands} from './commands/spriteCommands';
+import {commands as worldCommands} from './commands/worldCommands';
+import {commands as validationCommands} from './commands/validationCommands';
+import * as spritelabLibrary from './spritelabLibrary';
 
 function drawBackground() {
-  if (typeof spriteUtils.background === 'string') {
-    this.background(spriteUtils.background);
+  if (typeof spritelabLibrary.background === 'string') {
+    this.background(spritelabLibrary.background);
   } else {
     this.background('white');
   }
-  if (typeof spriteUtils.background === 'object') {
-    spriteUtils.background.resize(400, 400);
-    this.image(spriteUtils.background);
+  if (typeof spritelabLibrary.background === 'object') {
+    spritelabLibrary.background.resize(400, 400);
+    this.image(spritelabLibrary.background);
   }
 }
 
@@ -23,16 +23,16 @@ function updateTitle() {
   this.fill('black');
   this.textAlign(this.CENTER, this.CENTER);
   this.textSize(50);
-  this.text(spriteUtils.title, 0, 0, 400, 200);
+  this.text(spritelabLibrary.title, 0, 0, 400, 200);
   this.textSize(35);
-  this.text(spriteUtils.subtitle, 0, 200, 400, 200);
+  this.text(spritelabLibrary.subtitle, 0, 200, 400, 200);
 }
 
 export const commands = {
   executeDrawLoopAndCallbacks() {
     drawBackground.apply(this);
-    spriteUtils.runBehaviors();
-    spriteUtils.runEvents(this);
+    spritelabLibrary.runBehaviors();
+    spritelabLibrary.runEvents(this);
     this.drawSprites();
     updateTitle.apply(this);
   },

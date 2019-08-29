@@ -1,6 +1,6 @@
 import P5Lab from '../P5Lab';
 import {commands} from './commands';
-import * as spriteUtils from './spriteUtils';
+import * as spritelabLibrary from './spritelabLibrary';
 import Sounds from '@cdo/apps/Sounds';
 import {getStore} from '@cdo/apps/redux';
 import {clearConsole} from './textConsoleModule';
@@ -25,7 +25,7 @@ SpriteLab.prototype.preview = function() {
     // and, not knowing that preload is still in progress, would attempt to call p5.redraw(), and mess up the preview
     return;
   }
-  spriteUtils.reset();
+  spritelabLibrary.reset();
   getStore().dispatch(clearConsole());
   Sounds.getSingleton().muteURLs();
   if (this.gameLabP5.p5 && this.JSInterpreter) {
@@ -45,6 +45,6 @@ SpriteLab.prototype.preview = function() {
 
 SpriteLab.prototype.reset = function() {
   P5Lab.prototype.reset.call(this);
-  spriteUtils.reset();
+  spritelabLibrary.reset();
   this.preview();
 };
