@@ -1,9 +1,9 @@
-import * as spriteUtils from './spriteUtils';
+import * as spritelabLibrary from '../spritelabLibrary';
 
 export const commands = {
   checkTouching(condition, sprite1, sprite2, callback) {
     if (condition === 'when' || condition === 'while') {
-      spriteUtils.addEvent(
+      spritelabLibrary.addEvent(
         condition + 'touch',
         {sprite1: sprite1, sprite2: sprite2},
         callback
@@ -13,13 +13,17 @@ export const commands = {
 
   keyPressed(condition, key, callback) {
     if (condition === 'when' || condition === 'while') {
-      spriteUtils.addEvent(condition + 'press', {key: key}, callback);
+      spritelabLibrary.addEvent(condition + 'press', {key: key}, callback);
     }
   },
 
   spriteClicked(condition, spriteId, callback) {
     if (condition === 'when' || condition === 'while') {
-      spriteUtils.addEvent(condition + 'click', {sprite: spriteId}, callback);
+      spritelabLibrary.addEvent(
+        condition + 'click',
+        {sprite: spriteId},
+        callback
+      );
     }
   }
 };
