@@ -24,7 +24,7 @@ set -o errexit
 # Set script defaults
 ENVIRONMENT=adhoc
 BRANCH=staging
-CHEF_VERSION=12.7.2
+CHEF_VERSION=15.2.20
 RUN_LIST='["recipe[cdo-apps]"]'
 NODE_NAME=$(hostname)
 S3_BUCKET=cdo-dist
