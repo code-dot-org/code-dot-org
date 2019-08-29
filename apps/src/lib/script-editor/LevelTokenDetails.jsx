@@ -77,6 +77,7 @@ ArrowRenderer.propTypes = {onMouseDown: PropTypes.func.isRequried};
 export class UnconnectedLevelTokenDetails extends Component {
   static propTypes = {
     levelKeyList: PropTypes.object.isRequired,
+    levelKeyToIdMap: PropTypes.objectOf(PropTypes.number).isRequired,
     chooseLevel: PropTypes.func.isRequired,
     addVariant: PropTypes.func.isRequired,
     removeVariant: PropTypes.func.isRequired,
@@ -89,14 +90,6 @@ export class UnconnectedLevelTokenDetails extends Component {
   state = {
     showBlankProgression: false
   };
-
-  componentWillMount() {
-    this.levelKeyToIdMap = {};
-    Object.keys(this.props.levelKeyList).forEach(levelId => {
-      const levelName = this.props.levelKeyList[levelId];
-      this.levelKeyToIdMap[levelName] = +levelId;
-    });
-  }
 
   containsLegacyLevel() {
     return this.props.level.ids.some(id =>
@@ -251,7 +244,7 @@ export class UnconnectedLevelTokenDetails extends Component {
             <span style={{...styles.levelFieldLabel}}>Level name:</span>
             <LevelNameInput
               onSelectLevel={id => this.handleLevelSelected(index, id)}
-              levelKeyToIdMap={this.levelKeyToIdMap}
+              levelKeyToIdMap={this.props.levelKeyToIdMap}
               levelId={id}
               initialLevelName={this.props.levelKeyList[id] || ''}
             />
@@ -304,7 +297,8 @@ export class UnconnectedLevelTokenDetails extends Component {
 
 export default connect(
   state => ({
-    levelKeyList: state.levelKeyList
+    levelKeyList: state.levelKeyList,
+    levelKeyToIdMap: state.levelKeyToIdMap
   }),
   dispatch => ({
     chooseLevel(stage, level, variant, value) {
