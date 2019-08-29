@@ -1215,9 +1215,10 @@ And(/^I save the section url$/) do
   @section_url = "http://studio.code.org/join/#{section_code}"
 end
 
-And(/^I navigate to the section url$/) do
+And(/^I join the section$/) do
   steps %Q{
     Given I am on "#{@section_url}"
+    And I click selector ".btn.btn-primary" once I see it
   }
 end
 
