@@ -274,7 +274,22 @@ function levelKeyList(state = {}, action) {
   return state;
 }
 
+function levelKeyToIdMap(state = {}, action) {
+  switch (action.type) {
+    case INIT: {
+      const levelKeyToIdMap = {};
+      Object.keys(action.levelKeyList).forEach(levelId => {
+        const levelKey = action.levelKeyList[levelId];
+        levelKeyToIdMap[levelKey] = +levelId;
+      });
+      return levelKeyToIdMap;
+    }
+  }
+  return state;
+}
+
 export default {
   stages,
-  levelKeyList
+  levelKeyList,
+  levelKeyToIdMap
 };
