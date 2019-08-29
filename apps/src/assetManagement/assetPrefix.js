@@ -1,4 +1,5 @@
 import {unicode} from '@cdo/apps/code-studio/components/icons';
+import {getStore} from '@cdo/apps/redux';
 
 // For proxying non-https assets
 const MEDIA_PROXY = '//' + location.host + '/media?u=';
@@ -77,11 +78,10 @@ export function fixPath(filename) {
   }
 
   if (STARTER_ASSET_PREFIX_REGEX.test(filename)) {
-    // TODO: GET LEVEL NAME FROM REDUX
-    var levelName = 'U5 Lists Investigate Outfitly Code';
+    const state = getStore().getState();
     return filename.replace(
       STARTER_ASSET_PREFIX,
-      starterAssetPathPrefix(levelName)
+      starterAssetPathPrefix(state.level.name)
     );
   }
 
@@ -95,6 +95,11 @@ export function fixPath(filename) {
   return assetPathPrefix + channelId + '/' + encodeURIComponent(filename);
 }
 
+/**
+ * Get path prefix for starter assets, given a level name.
+ * @param levelName {string}
+ * @return {string}
+ */
 function starterAssetPathPrefix(levelName) {
   return `/level_starter_assets/${levelName}/`;
 }
