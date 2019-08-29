@@ -2,6 +2,7 @@ class LevelStarterAssetsController < ApplicationController
   authorize_resource class: false, except: [:show, :file]
   before_action :require_levelbuilder_mode, except: [:show, :file]
   before_action :set_level
+  skip_before_action :verify_authenticity_token, only: [:destroy]
 
   S3_BUCKET = 'cdo-v3-assets'.freeze
   S3_PREFIX = 'starter_assets/'.freeze
