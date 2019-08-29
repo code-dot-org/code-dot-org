@@ -17,7 +17,6 @@ describe('LevelNameInput', () => {
     defaultProps = {
       onSelectLevel,
       levelKeyToIdMap,
-      levelId: 1,
       initialLevelName: 'Level One'
     };
   });
@@ -47,7 +46,6 @@ describe('LevelNameInput', () => {
   it('renders a blank level', () => {
     const props = {
       ...defaultProps,
-      levelId: -1,
       initialLevelName: ''
     };
     const wrapper = shallow(<LevelNameInput {...props} />);

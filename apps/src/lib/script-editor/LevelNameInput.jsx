@@ -24,7 +24,6 @@ export default class LevelNameInput extends Component {
   static propTypes = {
     onSelectLevel: PropTypes.func.isRequired,
     levelKeyToIdMap: PropTypes.objectOf(PropTypes.number).isRequired,
-    levelId: PropTypes.number.isRequired,
     initialLevelName: PropTypes.string
   };
 
