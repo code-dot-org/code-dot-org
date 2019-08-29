@@ -5,21 +5,21 @@ import {
   forEveryBooleanPermutation,
   sandboxDocumentBody
 } from '../../util/testUtils';
-import createGameLabP5, {
-  createStatefulGameLabP5,
+import createP5Wrapper, {
+  createStatefulP5Wrapper,
   expectAnimationsAreClones
-} from '../../util/gamelab/TestableGameLabP5';
+} from '../../util/gamelab/TestableP5Wrapper';
 
-describe('GameLabSprite', function() {
-  let gameLabP5, createSprite;
+describe('P5SpriteWrapper', function() {
+  let p5Wrapper, createSprite;
 
   // Using the aggressive sandbox here because the P5 library generates
   // a default canvas when it's not attached to an existing one.
   sandboxDocumentBody();
 
   beforeEach(function() {
-    gameLabP5 = createGameLabP5();
-    createSprite = gameLabP5.p5.createSprite.bind(gameLabP5.p5);
+    p5Wrapper = createP5Wrapper();
+    createSprite = p5Wrapper.p5.createSprite.bind(p5Wrapper.p5);
   });
 
   describe('property aliases', function() {
@@ -185,10 +185,10 @@ describe('GameLabSprite', function() {
     describe('sprites with animations', function() {
       var sprite;
       beforeEach(function() {
-        var image = new p5.Image(100, 100, gameLabP5.p5);
+        var image = new p5.Image(100, 100, p5Wrapper.p5);
         var frames = [{name: 0, frame: {x: 0, y: 0, width: 50, height: 50}}];
-        var sheet = new gameLabP5.p5.SpriteSheet(image, frames);
-        var animation = new gameLabP5.p5.Animation(sheet);
+        var sheet = new p5Wrapper.p5.SpriteSheet(image, frames);
+        var animation = new p5Wrapper.p5.Animation(sheet);
         sprite = createSprite(0, 0);
         sprite.addAnimation('label', animation);
       });
@@ -317,7 +317,7 @@ describe('GameLabSprite', function() {
         [ANIMATION_LABEL]: createTestAnimation(8),
         [SECOND_ANIMATION_LABEL]: createTestAnimation(10)
       };
-      gameLabP5.p5._predefinedSpriteAnimations = projectAnimations;
+      p5Wrapper.p5._predefinedSpriteAnimations = projectAnimations;
     });
 
     it('throws if the named animation is not found in the project', function() {
@@ -437,7 +437,7 @@ describe('GameLabSprite', function() {
       sprite = createSprite(0, 0);
 
       // Manually preload animations onto p5._predefinedSpriteAnimations
-      gameLabP5.p5._predefinedSpriteAnimations = {
+      p5Wrapper.p5._predefinedSpriteAnimations = {
         [LOOPING_ANIMATION]: createTestAnimation(3, true),
         [NON_LOOPING_ANIMATION]: createTestAnimation(3, false)
       };
@@ -700,15 +700,15 @@ describe('GameLabSprite', function() {
 
   describe('collisions with groups', function() {
     let sprite, spriteTarget1, spriteTarget2, group;
-    let gameLabP5Stateful, createStatefulGroup, createStatefulSprite;
+    let p5WrapperStateful, createStatefulGroup, createStatefulSprite;
 
     beforeEach(function() {
-      gameLabP5Stateful = createStatefulGameLabP5();
-      createStatefulGroup = gameLabP5Stateful.p5.createGroup.bind(
-        gameLabP5Stateful.p5
+      p5WrapperStateful = createStatefulP5Wrapper();
+      createStatefulGroup = p5WrapperStateful.p5.createGroup.bind(
+        p5WrapperStateful.p5
       );
-      createStatefulSprite = gameLabP5Stateful.p5.createSprite.bind(
-        gameLabP5Stateful.p5
+      createStatefulSprite = p5WrapperStateful.p5.createSprite.bind(
+        p5WrapperStateful.p5
       );
       spriteTarget1 = createStatefulSprite(0, 0, 100, 100);
       spriteTarget2 = createStatefulSprite(400, 400, 100, 100);
@@ -1311,13 +1311,13 @@ describe('GameLabSprite', function() {
   });
 
   function createTestAnimation(frameCount = 1, looping = true) {
-    let image = new p5.Image(100, 100, gameLabP5.p5);
+    let image = new p5.Image(100, 100, p5Wrapper.p5);
     let frames = [];
     for (var i = 0; i < frameCount; i++) {
       frames.push({name: i, frame: {x: 0, y: 0, width: 50, height: 50}});
     }
-    let sheet = new gameLabP5.p5.SpriteSheet(image, frames);
-    let animation = new gameLabP5.p5.Animation(sheet);
+    let sheet = new p5Wrapper.p5.SpriteSheet(image, frames);
+    let animation = new p5Wrapper.p5.Animation(sheet);
     animation.looping = looping;
     animation.frameDelay = 1;
     return animation;

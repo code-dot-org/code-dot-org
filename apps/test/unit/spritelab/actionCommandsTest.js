@@ -2,13 +2,13 @@
 import {expect} from '../../util/reconfiguredChai';
 import {commands} from '@cdo/apps/p5lab/spritelab/actionCommands';
 import {commands as spriteCommands} from '@cdo/apps/p5lab/spritelab/spriteCommands';
-import createGameLabP5 from '../../util/gamelab/TestableGameLabP5';
+import createP5Wrapper from '../../util/gamelab/TestableP5Wrapper';
 
 describe('Action Commands', () => {
-  let gameLabP5, makeSprite;
+  let p5Wrapper, makeSprite;
   beforeEach(function() {
-    gameLabP5 = createGameLabP5();
-    makeSprite = spriteCommands.makeSprite.bind(gameLabP5.p5);
+    p5Wrapper = createP5Wrapper();
+    makeSprite = spriteCommands.makeSprite.bind(p5Wrapper.p5);
   });
 
   it('changePropBy', () => {
@@ -109,11 +109,11 @@ describe('Action Commands', () => {
     });
 
     it('sets scale, height, and width', () => {
-      let image = new p5.Image(100, 100, gameLabP5.p5);
+      let image = new p5.Image(100, 100, p5Wrapper.p5);
       let frames = [{name: 0, frame: {x: 0, y: 0, width: 50, height: 50}}];
-      let sheet = new gameLabP5.p5.SpriteSheet(image, frames);
-      let animation = new gameLabP5.p5.Animation(sheet);
-      gameLabP5.p5._predefinedSpriteAnimations = {costume_label: animation};
+      let sheet = new p5Wrapper.p5.SpriteSheet(image, frames);
+      let animation = new p5Wrapper.p5.Animation(sheet);
+      p5Wrapper.p5._predefinedSpriteAnimations = {costume_label: animation};
       spriteId = makeSprite('costume_label');
       expect(spriteCommands.getProp(spriteId, 'scale')).to.equal(100);
       commands.setProp(spriteId, 'scale', 50);

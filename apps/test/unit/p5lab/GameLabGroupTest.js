@@ -1,20 +1,20 @@
-/** @file Tests for GameLabGroup, our extension of p5.play Group */
+/** @file Tests for P5GroupWrapper, our extension of p5.play Group */
 import {spy} from 'sinon';
 import {expect} from '../../util/configuredChai';
-import {createStatefulGameLabP5} from '../../util/gamelab/TestableGameLabP5';
+import {createStatefulP5Wrapper} from '../../util/gamelab/TestableP5Wrapper';
 import {sandboxDocumentBody} from '../../util/testUtils';
 
-describe('GameLabGroup', function() {
-  let gameLabP5, createSprite, createGroup;
+describe('P5GroupWrapper', function() {
+  let p5Wrapper, createSprite, createGroup;
 
   // Using the aggressive sandbox here because the P5 library generates
   // a default canvas when it's not attached to an existing one.
   sandboxDocumentBody();
 
   beforeEach(function() {
-    gameLabP5 = createStatefulGameLabP5();
-    createSprite = gameLabP5.p5.createSprite.bind(gameLabP5.p5);
-    createGroup = gameLabP5.p5.createGroup.bind(gameLabP5.p5);
+    p5Wrapper = createStatefulP5Wrapper();
+    createSprite = p5Wrapper.p5.createSprite.bind(p5Wrapper.p5);
+    createGroup = p5Wrapper.p5.createGroup.bind(p5Wrapper.p5);
   });
 
   describe('methods applying to each sprite', function() {

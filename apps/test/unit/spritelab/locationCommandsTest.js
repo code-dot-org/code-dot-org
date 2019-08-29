@@ -1,13 +1,13 @@
 import {expect} from '../../util/reconfiguredChai';
 import {commands} from '@cdo/apps/p5lab/spritelab/locationCommands';
 import * as spriteUtils from '@cdo/apps/p5lab/spritelab/spriteUtils';
-import createGameLabP5 from '../../util/gamelab/TestableGameLabP5';
+import createP5Wrapper from '../../util/gamelab/TestableP5Wrapper';
 
 describe('Location Commands', () => {
-  let gameLabP5, createSprite;
+  let p5Wrapper, createSprite;
   beforeEach(function() {
-    gameLabP5 = createGameLabP5();
-    createSprite = gameLabP5.p5.createSprite.bind(gameLabP5.p5);
+    p5Wrapper = createP5Wrapper();
+    createSprite = p5Wrapper.p5.createSprite.bind(p5Wrapper.p5);
   });
   it('locationAt', () => {
     expect(commands.locationAt(200, 200)).to.deep.equal({x: 200, y: 200});
@@ -16,13 +16,13 @@ describe('Location Commands', () => {
   });
 
   it('locationMouse', () => {
-    let locationMouse = commands.locationMouse.bind(gameLabP5.p5);
-    gameLabP5.p5.mouseX = 0;
-    gameLabP5.p5.mouseY = 0;
+    let locationMouse = commands.locationMouse.bind(p5Wrapper.p5);
+    p5Wrapper.p5.mouseX = 0;
+    p5Wrapper.p5.mouseY = 0;
     expect(locationMouse()).to.deep.equal({x: 0, y: 0});
 
-    gameLabP5.p5.mouseX = 123;
-    gameLabP5.p5.mouseY = 321;
+    p5Wrapper.p5.mouseX = 123;
+    p5Wrapper.p5.mouseY = 321;
     expect(locationMouse()).to.deep.equal({x: 123, y: 321});
   });
 
