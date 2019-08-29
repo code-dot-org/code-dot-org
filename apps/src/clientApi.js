@@ -1,6 +1,5 @@
 // TODO: The client API should be instantiated with the channel ID, instead of grabbing it from the `dashboard.project` global.
 import queryString from 'query-string';
-import $ from 'jquery';
 
 function project() {
   return require('./code-studio/initApp/project');
@@ -474,15 +473,7 @@ class StarterAssetsApi {
   }
 
   deleteFile(filename, success, error) {
-    const token = $('meta[name=csrf-token]').attr('content');
-    $.ajax({
-      url: this.basePath(filename),
-      method: 'DELETE',
-      contentType: 'application/json;charset=UTF-8',
-      headers: {'X-CSRF-Token': token}
-    })
-      .done(success)
-      .fail(error);
+    return ajaxInternal('DELETE', this.basePath(filename), success, error);
   }
 }
 
