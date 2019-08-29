@@ -38,7 +38,9 @@ ruby_block 'update_service' do
   subscribes :run, "service[varnish]", :before
 end
 
-template '/etc/systemd/system/varnish.service.d/cdo.conf' do
+systemd_varnish = '/etc/systemd/system/varnish.service.d'
+directory systemd_varnish
+template "#{systemd_varnish}/cdo.conf" do
   source 'varnish.service.erb'
   user 'root'
   group 'root'
