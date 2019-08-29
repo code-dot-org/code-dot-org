@@ -1,6 +1,19 @@
 professional_learning_course 'CS Principles Deeper Learning 2019 - 2020'
+peer_reviews_to_complete 6
 login_required true
 student_detail_progress_view true
 
-stage 'CS Principles Deeper Learning Module 2'
-level 'dlp19-hold-mod1'
+stage 'Deeper Learning Overview', flex_category: 'required'
+level 'dlp19_overview1', progression: 'Background'
+level 'dlp19_overview2', progression: 'Process'
+level 'dlp19_overview3', progression: 'Preparation'
+level 'dlp19_overview4', progression: 'Evaluation'
+level 'dlp19_overview5', progression: 'Due Dates'
+
+stage 'Step 1: Develop Understanding'
+level 'dlp19-csp-prework-mod2'
+
+stage 'Step 2: Demonstrate Understanding'
+level 'dlp19-csp-mod2-q1'
+level 'dlp19-csp-mod2-q2'
+level 'dlp19-csp-mod2-q3'
