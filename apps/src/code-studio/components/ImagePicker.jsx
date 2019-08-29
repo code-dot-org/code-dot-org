@@ -97,13 +97,14 @@ export default class ImagePicker extends React.Component {
 
     const disableAudio =
       this.props.disableAudioRecording || this.props.assetChosen;
-    const reduxStore = getStore();
+
+    const reduxState = getStore().getState();
     let levelName, isStartMode;
-    if (reduxStore) {
-      const state = reduxStore.getState();
-      levelName = state && state.level.name;
-      isStartMode = state && state.level.isStartMode;
+    if (reduxState && reduxState.level) {
+      levelName = reduxState.level.name;
+      isStartMode = reduxState.level.isStartMode;
     }
+
     const body =
       !this.props.assetChosen || this.state.mode === 'files' ? (
         <AssetManager
