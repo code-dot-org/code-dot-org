@@ -180,6 +180,49 @@ class LevelStarterAssetsControllerTest < ActionController::TestCase
     assert_equal double_quote_filename, summary['filename']
     File.delete(double_quote_filename)
   end
+
+  test 'destroy: forbidden for non-levelbuilders' do
+    sign_in create(:student)
+    delete :destroy, params: {level_name: create(:level).name, filename: 'my-file.png'}
+
+    assert_response :forbidden
+  end
+
+  test 'destroy: forbidden if not in levelbuilder_mode' do
+    Rails.application.config.stubs(:levelbuilder_mode).returns(false)
+
+    sign_in create(:levelbuilder)
+    delete :destroy, params: {level_name: create(:level).name, filename: 'my-file.png'}
+
+    assert_response :forbidden
+  end
+
+  test 'destroy: returns no_content if starter asset successfully deleted' do
+    level = create :level, starter_assets: {'my-file.png' => '123-abc.png'}
+
+    sign_in create(:levelbuilder)
+    delete :destroy, params: {level_name: level.name, filename: 'my-file.png'}
+
+    assert_response :no_content
+  end
+
+  test 'destroy: returns no_content if starter asset does not exist' do
+    level = create :level, starter_assets: {'my-file.png' => '123-abc.png'}
+
+    sign_in create(:levelbuilder)
+    delete :destroy, params: {level_name: level.name, filename: 'my-other-file.png'}
+
+    assert_response :no_content
+  end
+
+  test 'destroy: raises if starter asset fails to be deleted' do
+    Level.any_instance.expects(:valid?).returns(false)
+
+    sign_in create(:levelbuilder)
+    assert_raises ActiveRecord::RecordInvalid do
+      delete :destroy, params: {level_name: create(:level).name, filename: 'my-file.png'}
+    end
+  end
 end
 
 # Mock Aws::S3::ObjectSummary class since we can't request the objects from S3 in tests:
