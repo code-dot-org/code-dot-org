@@ -10,7 +10,7 @@ class LevelsControllerTest < ActionController::TestCase
     @level = create(:level)
     @admin = create(:admin)
     @not_admin = create(:user)
-    @wizard = create :teacher, editor_experiment: 'hogwarts'
+    @platformization_partner = create :platformization_partner
     @levelbuilder = create(:levelbuilder)
     sign_in(@levelbuilder)
     @program = '<hey/>'
@@ -787,7 +787,7 @@ DSL
 
   test 'platformization partner can edit their levels' do
     sign_out @levelbuilder
-    sign_in @wizard
+    sign_in @platformization_partner
 
     get :edit, params: {id: @level.id}
     assert_response :forbidden
@@ -795,10 +795,10 @@ DSL
 
   test 'platformization partner cannot edit our levels' do
     sign_out @levelbuilder
-    sign_in @wizard
-    hogwarts_level = create :level, editor_experiment: 'hogwarts'
+    sign_in @platformization_partner
+    partner_level = create :level, editor_experiment: 'platformization-partners'
 
-    get :edit, params: {id: hogwarts_level.id}
+    get :edit, params: {id: partner_level.id}
     assert_response :success
   end
 
