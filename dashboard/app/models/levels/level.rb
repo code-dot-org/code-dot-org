@@ -554,6 +554,7 @@ class Level < ActiveRecord::Base
   # Create a copy of this level named new_name, and store the id of the original
   # level in parent_level_id.
   # @param [String] new_name
+  # @param [String] editor_experiment
   # @raise [ActiveRecord::RecordInvalid] if the new name already is taken.
   def clone_with_name(new_name, editor_experiment: nil)
     level = dup
@@ -574,6 +575,8 @@ class Level < ActiveRecord::Base
   # @param [String] new_suffix The suffix to append to the name of the original
   #   level when choosing a name for the new level, replacing any existing
   #   name_suffix if one exists.
+  # @param [String] editor_experiment Optional value to set the
+  #   editor_experiment property to on the newly-created level.
   def clone_with_suffix(new_suffix, editor_experiment: nil)
     # Make sure we don't go over the 70 character limit.
     new_name = "#{base_name[0..64]}#{new_suffix}"
