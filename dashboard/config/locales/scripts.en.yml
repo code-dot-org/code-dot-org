@@ -11860,6 +11860,12 @@ en:
               name: CS Principles Unit 1 Survey
             Unit 1 Survey:
               name: Unit 1 Survey
+            'Lesson 15: Unit Assessment':
+              name: 'Lesson 15: Unit Assessment'
+            Unit 1 STUDENT Survey:
+              name: Unit 1 STUDENT Survey
+            Unit 1 TEACHER Survey:
+              name: Unit 1 TEACHER Survey
           title: CSP Unit 1 Pilot - Digital Information
           description_audience: ''
           description_short: ''
@@ -12999,6 +13005,10 @@ en:
               name: 'Project: Share Your App'
             The Need for Programming Languages:
               name: The Need for Programming Languages
+            'Project: Finish Your App':
+              name: 'Project: Finish Your App'
+            Programs Explore:
+              name: Programs Explore
           title: CSP Unit 3 Pilot - Intro to App Design
           description_audience: ''
           description_short: ''
@@ -13029,7 +13039,7 @@ en:
               name: Understanding the Curriculum
             Demonstrating Understanding:
               name: Demonstrating Understanding
-          title: CS Discoveries Deeper Learning 2019 Overview
+          title: CS Discoveries Deeper Learning 2019 Module for FiT
           description_audience: CS Discoveries Facilitators in Training 2019
           description_short: Background information and practice prompt for FiT workshop
           description: ''
@@ -13115,6 +13125,12 @@ en:
           stages:
             CS Principles Deeper Learning Module 2:
               name: CS Principles Deeper Learning Module 2
+            Deeper Learning Overview:
+              name: Deeper Learning Overview
+            'Step 1: Develop Understanding':
+              name: 'Step 1: Develop Understanding'
+            'Step 2: Demonstrate Understanding':
+              name: 'Step 2: Demonstrate Understanding'
           title: CS Principles Deeper Learning Module 2
           description_audience: CS Principles Facilitators in Training 2019
           description_short: ''

@@ -7,7 +7,7 @@ class TeacherFeedbacksController < ApplicationController
   # student on any level
   def index
     @feedbacks_as_student = @teacher_feedbacks.includes(script_level: {stage: :script}).select do |feedback|
-      feedback.student_id == current_user.id && UserPermission.where(
+      UserPermission.where(
         user_id: feedback.teacher_id,
         permission: 'authorized_teacher'
       )
@@ -17,6 +17,6 @@ class TeacherFeedbacksController < ApplicationController
   end
 
   def set_seen_on_feedback_page_at
-    TeacherFeedback.where(student_id: current_user.id).update_all(seen_on_feedback_page_at: DateTime.now)
+    @teacher_feedbacks.where(student_id: current_user.id).update_all(seen_on_feedback_page_at: DateTime.now)
   end
 end

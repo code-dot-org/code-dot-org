@@ -215,7 +215,17 @@ export default class AssetManager extends React.Component {
 
     this.setState({
       assets: assetListStore.list(this.props.allowedExtensions),
-      statusMessage: 'File "' + name + '" successfully deleted!'
+      statusMessage: `File "${name}" successfully deleted!`
+    });
+  };
+
+  deleteStarterAssetRow = name => {
+    let starterAssets = [...this.state.starterAssets].filter(
+      asset => asset.filename !== name
+    );
+    this.setState({
+      starterAssets,
+      statusMessage: `File "${name}" successfully deleted!`
     });
   };
 
@@ -254,8 +264,9 @@ export default class AssetManager extends React.Component {
               asset.timestamp
             )
           }
-          onDelete={() => console.log('delete!')}
+          onDelete={() => this.deleteStarterAssetRow(asset.filename)}
           levelName={this.props.levelName}
+          hideDelete={!this.props.isStartMode}
         />
       );
     });
