@@ -785,6 +785,31 @@ DSL
     assert_select '#markdown', "this is the markdown for #{@not_admin.id}"
   end
 
+  # test_platformization_partner_calling_get_new_should_receive_success
+  test_user_gets_response_for(
+    :new,
+    response: :success,
+    user: :platformization_partner
+  )
+
+  test 'platformization partner creates and owns new artist level' do
+    sign_out @levelbuilder
+    sign_in @platformization_partner
+
+    game = Game.find_by_name('Custom')
+    assert_creates(Level) do
+      post :create, params: {
+        level: {name: 'partner artist level', type: 'Artist'},
+        game_id: game.id,
+        program: @program
+      }
+    end
+
+    level = Level.last
+    assert_equal 'partner artist level', level.name
+    assert_equal 'platformization-partners', level.editor_experiment
+  end
+
   test 'platformization partner can edit their levels' do
     sign_out @levelbuilder
     sign_in @platformization_partner
