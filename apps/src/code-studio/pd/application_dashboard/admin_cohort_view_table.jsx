@@ -1,8 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import ReactTooltip from 'react-tooltip';
-import * as Table from 'reactabular-table';
-import * as sort from 'sortabular';
+import {Table, sort} from 'reactabular';
 import color from '@cdo/apps/util/color';
 import {Button} from 'react-bootstrap';
 import _, {orderBy} from 'lodash';
@@ -77,7 +76,7 @@ export default class AdminCohortViewTable extends React.Component {
           label: 'View Application'
         },
         cell: {
-          formatters: [this.formatViewButton]
+          format: this.formatViewButton
         }
       },
       {
@@ -87,7 +86,7 @@ export default class AdminCohortViewTable extends React.Component {
           transforms: [sortable]
         },
         cell: {
-          formatters: [this.formatDate]
+          format: this.formatDate
         }
       },
       {
@@ -118,7 +117,7 @@ export default class AdminCohortViewTable extends React.Component {
           transforms: [sortable]
         },
         cell: {
-          formatters: [this.formatBoolean]
+          format: this.formatBoolean
         }
       },
       {
@@ -163,7 +162,7 @@ export default class AdminCohortViewTable extends React.Component {
           transforms: [sortable]
         },
         cell: {
-          formatters: [this.formatBoolean]
+          format: this.formatBoolean
         }
       },
       {
@@ -203,7 +202,7 @@ export default class AdminCohortViewTable extends React.Component {
           transforms: [sortable]
         },
         cell: {
-          formatters: [this.formatNotesTooltip],
+          format: this.formatNotesTooltip,
           transforms: [
             () => ({
               style: {...styles.notesCell}
