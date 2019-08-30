@@ -1,6 +1,6 @@
 import {expect} from '../../util/reconfiguredChai';
-import {commands} from '@cdo/apps/p5lab/spritelab/locationCommands';
-import * as spriteUtils from '@cdo/apps/p5lab/spritelab/spriteUtils';
+import {commands} from '@cdo/apps/p5lab/spritelab/commands/locationCommands';
+import * as coreLibrary from '@cdo/apps/p5lab/spritelab/coreLibrary';
 import createGameLabP5 from '../../util/gamelab/TestableGameLabP5';
 
 describe('Location Commands', () => {
@@ -30,7 +30,7 @@ describe('Location Commands', () => {
     let sprite = createSprite();
     sprite.position.x = 123;
     sprite.position.y = 321;
-    let id = spriteUtils.addSprite(sprite);
+    let id = coreLibrary.addSprite(sprite);
 
     expect(commands.locationOf(id)).to.deep.equal({x: 123, y: 321});
   });
