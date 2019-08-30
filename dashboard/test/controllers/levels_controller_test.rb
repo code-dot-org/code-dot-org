@@ -8,6 +8,7 @@ class LevelsControllerTest < ActionController::TestCase
     Level.any_instance.stubs(:write_to_file?).returns(false) # don't write to level files
 
     @level = create(:level)
+    @partner_level = create :level, editor_experiment: 'platformization-partners'
     @admin = create(:admin)
     @not_admin = create(:user)
     @platformization_partner = create :platformization_partner
@@ -810,22 +811,19 @@ DSL
     assert_equal 'platformization-partners', level.editor_experiment
   end
 
-  test 'platformization partner can edit their levels' do
-    sign_out @levelbuilder
-    sign_in @platformization_partner
+  test_user_gets_response_for(
+    :edit,
+    response: :forbidden,
+    user: :platformization_partner,
+    params: -> {{id: @level.id}}
+  )
 
-    get :edit, params: {id: @level.id}
-    assert_response :forbidden
-  end
-
-  test 'platformization partner cannot edit our levels' do
-    sign_out @levelbuilder
-    sign_in @platformization_partner
-    partner_level = create :level, editor_experiment: 'platformization-partners'
-
-    get :edit, params: {id: partner_level.id}
-    assert_response :success
-  end
+  test_user_gets_response_for(
+    :edit,
+    response: :success,
+    user: :platformization_partner,
+    params: -> {{id: @partner_level.id}}
+  )
 
   private
 
