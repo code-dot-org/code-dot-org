@@ -114,10 +114,6 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
       on_map: true
     }
 
-    # Later in 2019 we will not set 'Intro' as a condition, so that the default
-    # will be to show workshops from all subjects when deep-dive isn't specified.
-    # But until then, when deep-dive isn't specified, we only show 'Intro'
-    # workshops.
     if params['deep_dive_only']
       conditions[:subject] = Pd::Workshop::SUBJECT_CSF_201
     end
