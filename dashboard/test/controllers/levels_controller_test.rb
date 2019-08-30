@@ -825,6 +825,22 @@ DSL
     params: -> {{id: @partner_level.id}}
   )
 
+  test_user_gets_response_for(
+    :update,
+    method: :patch,
+    response: :forbidden,
+    user: :platformization_partner,
+    params: -> {{id: @level.id, level: {name: 'new partner name'}}}
+  )
+
+  test_user_gets_response_for(
+    :update,
+    method: :patch,
+    response: :success,
+    user: :platformization_partner,
+    params: -> {{id: @partner_level.id, level: {name: 'new partner name'}}}
+  )
+
   private
 
   # Assert that the url is a real S3 url, and not a placeholder.
