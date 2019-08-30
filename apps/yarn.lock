@@ -942,17 +942,17 @@
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@code-dot-org/maze/-/maze-1.1.0.tgz#7c8185adf06a9172e3bde4ccd6f6738a787b2a7c"
 
-"@code-dot-org/p5.play@1.3.11-cdo":
-  version "1.3.11-cdo"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/p5.play/-/p5.play-1.3.11-cdo.tgz#6eb5a21a6764e5ab7fc1c1589d88a1357720dddf"
-  integrity sha512-L9U1hulXn3SO8iV8iJ2uyJPFc6WKNjAVOw7gMVG2jrpbXQ1LnhbqMlOK0pXWlGM44AGdXuDycX3iAqY9K0eIww==
+"@code-dot-org/p5.play@^1.3.12-cdo":
+  version "1.3.12-cdo"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/p5.play/-/p5.play-1.3.12-cdo.tgz#4bf3e9c8045ab7a3109cae31bbe73603fb209fe5"
+  integrity sha512-3zVTCLeOMowuZICzWF3OF9qY88j2Iq7q6h+NM6xvspecISi+veQ2JrO1FxXJL9wCIj75gJC1S3IKdYD66Bsk/w==
   dependencies:
-    "@code-dot-org/p5" "0.5.4-cdo.3"
+    "@code-dot-org/p5" "0.5.4-cdo.4"
 
-"@code-dot-org/p5@0.5.4-cdo.3":
-  version "0.5.4-cdo.3"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/p5/-/p5-0.5.4-cdo.3.tgz#3f7fa1224383e52a28dac1fcd837d2ef80427278"
-  integrity sha512-/g4ZjWQ4x9vjvqHfSuaZ2gGWpjWeQydeE46DWhUX2BuZvF/N0GSh6bzCRrGrGx5Zl2JVRW+MBuPETuPGvi9chw==
+"@code-dot-org/p5@0.5.4-cdo.4":
+  version "0.5.4-cdo.4"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/p5/-/p5-0.5.4-cdo.4.tgz#81f7b3525d1a0395df50754710810d2333a82a11"
+  integrity sha512-WtAJokLTOVg2H4GsboMRnR0jgXxFBbxiHimDo2yY88xzBNI9NugV8EA474IO8U7m6guo3FfM4LzilY6O51HDnw==
   dependencies:
     opentype.js "^0.4.9"
     reqwest "^1.1.5"
