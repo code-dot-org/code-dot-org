@@ -151,4 +151,4 @@ else
 fi
 
 # Run chef-client.
-${CHEF_CLIENT} -c ${CLIENT_RB} -j ${FIRST_BOOT}
+${CHEF_CLIENT} -c ${CLIENT_RB} -j ${FIRST_BOOT} --chef-license accept-silent
