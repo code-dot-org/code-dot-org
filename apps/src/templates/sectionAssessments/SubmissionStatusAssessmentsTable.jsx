@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import * as Table from 'reactabular-table';
-import * as sort from 'sortabular';
+import {Table, sort} from 'reactabular';
 import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
 import i18n from '@cdo/locale';
 import wrappedSortable from '../tables/wrapped_sortable';
@@ -149,7 +148,7 @@ class SubmissionStatusAssessmentsTable extends Component {
           transforms: [sortable]
         },
         cell: {
-          formatters: [this.nameCellFormatter],
+          format: this.nameCellFormatter,
           props: {
             style: {
               ...tableLayoutStyles.cell,
@@ -232,7 +231,7 @@ class SubmissionStatusAssessmentsTable extends Component {
           transforms: [sortable]
         },
         cell: {
-          formatters: [this.submissionTimestampColumnFormatter],
+          format: this.submissionTimestampColumnFormatter,
           props: {style: tableLayoutStyles.cell}
         }
       }
