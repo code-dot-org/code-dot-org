@@ -284,16 +284,10 @@ module Api::V1::Pd
         },
         "facilitator_response_counts" => {
           "this_workshop" => {
-            f_id => {
-              "Facilitator" => 0,
-              "Workshop" => 0
-            }
+            f_id => {}
           },
           "all_my_workshops" => {
-            f_id => {
-              "Facilitator" => 0,
-              "Workshop" => 0
-            }
+            f_id => {}
           }
         },
         "experiment" => true
