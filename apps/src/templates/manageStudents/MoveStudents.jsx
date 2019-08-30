@@ -2,8 +2,7 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
-import * as Table from 'reactabular-table';
-import * as sort from 'sortabular';
+import {Table, sort} from 'reactabular';
 import wrappedSortable from '../tables/wrapped_sortable';
 import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
 import Immutable from 'immutable';
@@ -179,11 +178,13 @@ class MoveStudents extends Component {
   };
 
   selectedStudentFormatter = (_, {rowData}) => {
+    const isChecked = this.props.transferData.studentIds.includes(rowData.id);
+
     return (
       <input
         style={styles.checkbox}
         type="checkbox"
-        checked={rowData.isChecked}
+        checked={isChecked}
         onChange={() => this.toggleStudentSelected(rowData.id)}
       />
     );
@@ -195,7 +196,7 @@ class MoveStudents extends Component {
         property: 'selected',
         header: {
           label: '',
-          formatters: [this.selectedStudentHeaderFormatter],
+          format: this.selectedStudentHeaderFormatter,
           props: {
             style: {
               ...tableLayoutStyles.headerCell,
@@ -204,7 +205,7 @@ class MoveStudents extends Component {
           }
         },
         cell: {
-          formatters: [this.selectedStudentFormatter],
+          format: this.selectedStudentFormatter,
           props: {
             style: {
               ...tableLayoutStyles.cell,
@@ -346,8 +347,6 @@ class MoveStudents extends Component {
   };
 
   render() {
-    const {studentData, transferData, transferStatus} = this.props;
-
     // Define a sorting transform that can be applied to each column
     const sortable = wrappedSortable(
       this.getSortingColumns,
@@ -356,16 +355,14 @@ class MoveStudents extends Component {
     );
     const columns = this.getColumns(sortable);
     const sortingColumns = this.getSortingColumns();
-    const decoratedRows = studentData.map(row => ({
-      ...row,
-      isChecked: transferData.studentIds.includes(row.id)
-    }));
 
     const sortedRows = sort.sorter({
       columns,
       sortingColumns,
       sort: orderBy
-    })(decoratedRows);
+    })(this.props.studentData);
+
+    const {transferData, transferStatus} = this.props;
 
     return (
       <div>
