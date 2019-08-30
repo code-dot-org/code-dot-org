@@ -201,9 +201,11 @@ namespace :seed do
     Library.load_records
   end
 
-  # Generate the database entry from the custom levels json file
+  # Generate the database entry from the custom levels json file.
+  # Optionally limit to a single level via LEVEL_NAME= env variable.
   task custom_levels: :environment do
-    LevelLoader.load_custom_levels
+    level_name = ENV['LEVEL_NAME']
+    LevelLoader.load_custom_levels(level_name)
   end
 
   # Seeds the data in callouts

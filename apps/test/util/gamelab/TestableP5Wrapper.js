@@ -1,42 +1,42 @@
-/** @file Helper to load a configured GameLabP5 object for tests */
+/** @file Helper to load a configured P5Wrapper object for tests */
 import 'script-loader!@code-dot-org/p5.play/examples/lib/p5';
 import 'script-loader!@code-dot-org/p5.play/lib/p5.play';
 import {expect} from '../configuredChai';
-import GameLabP5 from '@cdo/apps/p5lab/GameLabP5';
-import {injectJSInterpreter as injectJSInterpreterToSprite} from '@cdo/apps/p5lab/GameLabSprite';
-import {injectJSInterpreter as injectJSInterpreterToGroup} from '@cdo/apps/p5lab/GameLabGroup';
+import P5Wrapper from '@cdo/apps/p5lab/P5Wrapper';
+import {injectJSInterpreter as injectJSInterpreterToSprite} from '@cdo/apps/p5lab/P5SpriteWrapper';
+import {injectJSInterpreter as injectJSInterpreterToGroup} from '@cdo/apps/p5lab/P5GroupWrapper';
 
 /**
- * Builds a GameLabP5 object ready to use in a test and then be thrown away.
- * @returns {GameLabP5}
+ * Builds a P5Wrapper object ready to use in a test and then be thrown away.
+ * @returns {P5Wrapper}
  */
-export default function createGameLabP5() {
-  return createGameLabP5WithInterpreter(createStatelessInterpreter());
+export default function createP5Wrapper() {
+  return createP5WrapperWithInterpreter(createStatelessInterpreter());
 }
 
-function createGameLabP5WithInterpreter(interpreter) {
-  let gameLabP5 = new GameLabP5();
-  gameLabP5.init({
+function createP5WrapperWithInterpreter(interpreter) {
+  let p5Wrapper = new P5Wrapper();
+  p5Wrapper.init({
     onExecutionStarting: function() {},
     onPreload: function() {},
     onSetup: function() {},
     onDraw: function() {}
   });
-  gameLabP5.startExecution();
+  p5Wrapper.startExecution();
 
   injectJSInterpreterToSprite(interpreter);
   injectJSInterpreterToGroup(interpreter);
-  return gameLabP5;
+  return p5Wrapper;
 }
 
 /**
- * Builds a GameLabP5 object ready to use in a test and then be thrown away.
+ * Builds a P5Wrapper object ready to use in a test and then be thrown away.
  * Uses a fake JSInterpreter with a persistent state which allows testing of
  * stateful methods (like Group.isTouching)
- * @returns {GameLabP5}
+ * @returns {P5Wrapper}
  */
-export function createStatefulGameLabP5() {
-  return createGameLabP5WithInterpreter(createStatefulInterpreter());
+export function createStatefulP5Wrapper() {
+  return createP5WrapperWithInterpreter(createStatefulInterpreter());
 }
 
 function createStatelessInterpreter() {
