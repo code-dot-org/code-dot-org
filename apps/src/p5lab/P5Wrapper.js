@@ -1,17 +1,17 @@
 import {getStore} from '@cdo/apps/redux';
 import {allAnimationsSingleFrameSelector} from './animationListModule';
-var gameLabSprite = require('./GameLabSprite');
-var gameLabGroup = require('./GameLabGroup');
+var p5SpriteWrapper = require('./P5SpriteWrapper');
+var p5GroupWrapper = require('./P5GroupWrapper');
 import {backgrounds} from './spritelab/backgrounds.json';
 import * as assetPrefix from '@cdo/apps/assetManagement/assetPrefix';
 
 const defaultFrameRate = 30;
 
 /**
- * An instantiable GameLabP5 class that wraps p5 and p5play and patches it in
+ * An instantiable P5Wrapper class that wraps p5 and p5play and patches it in
  * specific places to enable GameLab functionality
  */
-var GameLabP5 = function() {
+var P5Wrapper = function() {
   this.p5 = null;
   this.p5decrementPreload = null;
   this.p5eventNames = [
@@ -60,12 +60,12 @@ var GameLabP5 = function() {
   };
 };
 
-module.exports = GameLabP5;
+module.exports = P5Wrapper;
 
-GameLabP5.baseP5loadImage = null;
+P5Wrapper.baseP5loadImage = null;
 
 /**
- * Initialize this GameLabP5 instance.
+ * Initialize this P5Wrapper instance.
  *
  * @param {!Object} options
  * @param {!Function} options.gameLab instance of parent GameLab object
@@ -76,7 +76,7 @@ GameLabP5.baseP5loadImage = null;
  * @param {!Function} options.onDraw callback to run during each draw()
  * @param {boolean} options.spritelab Whether this is a spritelab instance
  */
-GameLabP5.prototype.init = function(options) {
+P5Wrapper.prototype.init = function(options) {
   this.onExecutionStarting = options.onExecutionStarting;
   this.onPreload = options.onPreload;
   this.onSetup = options.onSetup;
@@ -84,13 +84,13 @@ GameLabP5.prototype.init = function(options) {
   this.scale = options.scale || 1;
 
   // Override p5.loadImage so we can modify the URL path param
-  if (!GameLabP5.baseP5loadImage) {
-    GameLabP5.baseP5loadImage = window.p5.prototype.loadImage;
+  if (!P5Wrapper.baseP5loadImage) {
+    P5Wrapper.baseP5loadImage = window.p5.prototype.loadImage;
     window.p5.prototype.loadImage = function(path) {
       // Make sure to pass all arguments through to loadImage, which can get
       // wrapped and take additional arguments during preload.
       arguments[0] = assetPrefix.fixPath(path);
-      return GameLabP5.baseP5loadImage.apply(this, arguments);
+      return P5Wrapper.baseP5loadImage.apply(this, arguments);
     };
   }
 
@@ -135,9 +135,9 @@ GameLabP5.prototype.init = function(options) {
   if (!options.spritelab) {
     // Override p5.createSprite and p5.Group so we can override the methods that
     // take callback parameters
-    window.p5.prototype.createSprite = gameLabSprite.createSprite;
+    window.p5.prototype.createSprite = p5SpriteWrapper.createSprite;
     var baseGroupConstructor = window.p5.prototype.Group;
-    window.p5.prototype.Group = gameLabGroup.Group.bind(
+    window.p5.prototype.Group = p5GroupWrapper.Group.bind(
       null,
       baseGroupConstructor
     );
@@ -152,10 +152,10 @@ GameLabP5.prototype.init = function(options) {
 };
 
 /**
- * Reset GameLabP5 to its initial state. Called before each time it is used.
+ * Reset P5Wrapper to its initial state. Called before each time it is used.
  */
-GameLabP5.prototype.resetExecution = function() {
-  gameLabSprite.setCreateWithDebug(false);
+P5Wrapper.prototype.resetExecution = function() {
+  p5SpriteWrapper.setCreateWithDebug(false);
 
   if (this.p5) {
     this.p5.remove();
@@ -172,16 +172,16 @@ GameLabP5.prototype.resetExecution = function() {
  * Register a p5 event handler function. The provided function replaces the
  * method stored on our p5 instance.
  */
-GameLabP5.prototype.registerP5EventHandler = function(eventName, handler) {
+P5Wrapper.prototype.registerP5EventHandler = function(eventName, handler) {
   this.p5[eventName] = handler;
 };
 
-GameLabP5.prototype.changeStepSpeed = function(stepSpeed) {
+P5Wrapper.prototype.changeStepSpeed = function(stepSpeed) {
   this.stepSpeed = stepSpeed;
   this.setP5FrameRate();
 };
 
-GameLabP5.prototype.drawDebugSpriteColliders = function() {
+P5Wrapper.prototype.drawDebugSpriteColliders = function() {
   if (this.p5) {
     this.p5.allSprites.forEach(sprite => {
       sprite.display(true);
@@ -189,7 +189,7 @@ GameLabP5.prototype.drawDebugSpriteColliders = function() {
   }
 };
 
-GameLabP5.prototype.loadSound = function(url) {
+P5Wrapper.prototype.loadSound = function(url) {
   if (this.p5 && this.p5.loadSound) {
     return this.p5.loadSound(url);
   }
@@ -198,7 +198,7 @@ GameLabP5.prototype.loadSound = function(url) {
 /**
  * Instantiate a new p5 and start execution
  */
-GameLabP5.prototype.startExecution = function() {
+P5Wrapper.prototype.startExecution = function() {
   new window.p5(
     function(p5obj) {
       this.p5 = p5obj;
@@ -349,28 +349,28 @@ GameLabP5.prototype.startExecution = function() {
  * done. This allows us to release our "preload" count reference in p5, which
  * means that setup() can begin.
  */
-GameLabP5.prototype.notifyPreloadPhaseComplete = function() {
+P5Wrapper.prototype.notifyPreloadPhaseComplete = function() {
   if (this.p5decrementPreload) {
     this.p5decrementPreload();
     this.p5decrementPreload = null;
   }
 };
 
-GameLabP5.prototype.notifyKeyCodeDown = function(keyCode) {
+P5Wrapper.prototype.notifyKeyCodeDown = function(keyCode) {
   // Synthesize an event and send it to the internal p5 handler for keydown
   if (this.p5) {
     this.p5._onkeydown({which: keyCode});
   }
 };
 
-GameLabP5.prototype.notifyKeyCodeUp = function(keyCode) {
+P5Wrapper.prototype.notifyKeyCodeUp = function(keyCode) {
   // Synthesize an event and send it to the internal p5 handler for keyup
   if (this.p5) {
     this.p5._onkeyup({which: keyCode});
   }
 };
 
-GameLabP5.prototype.getCustomMarshalGlobalProperties = function() {
+P5Wrapper.prototype.getCustomMarshalGlobalProperties = function() {
   return {
     width: this.p5,
     height: this.p5,
@@ -421,7 +421,7 @@ GameLabP5.prototype.getCustomMarshalGlobalProperties = function() {
   };
 };
 
-GameLabP5.prototype.getCustomMarshalBlockedProperties = function() {
+P5Wrapper.prototype.getCustomMarshalBlockedProperties = function() {
   return [
     'arguments',
     'callee',
@@ -452,7 +452,7 @@ GameLabP5.prototype.getCustomMarshalBlockedProperties = function() {
   ];
 };
 
-GameLabP5.prototype.getCustomMarshalObjectList = function() {
+P5Wrapper.prototype.getCustomMarshalObjectList = function() {
   return [
     {
       instance: this.p5.Sprite,
@@ -493,7 +493,7 @@ GameLabP5.prototype.getCustomMarshalObjectList = function() {
  * lists or blacklisted properties.
  * @returns {Array.<string>}
  */
-GameLabP5.prototype.getMarshallableP5Properties = function() {
+P5Wrapper.prototype.getMarshallableP5Properties = function() {
   const blockedProps = this.getCustomMarshalBlockedProperties();
   const globalCustomMarshalProps = this.getCustomMarshalGlobalProperties();
 
@@ -510,7 +510,7 @@ GameLabP5.prototype.getMarshallableP5Properties = function() {
   return propNames;
 };
 
-GameLabP5.prototype.getGlobalPropertyList = function() {
+P5Wrapper.prototype.getGlobalPropertyList = function() {
   const propList = {};
 
   // Include every property on the p5 instance in the global property list
@@ -533,7 +533,7 @@ GameLabP5.prototype.getGlobalPropertyList = function() {
 /**
  * Return the current frame rate
  */
-GameLabP5.prototype.getFrameRate = function() {
+P5Wrapper.prototype.getFrameRate = function() {
   return this.p5 ? this.p5.frameRate() : 0;
 };
 
@@ -541,16 +541,16 @@ GameLabP5.prototype.getFrameRate = function() {
  * Mark all current and future sprites as debug=true.
  * @param {boolean} debugSprites - Enable or disable debug flag on all sprites
  */
-GameLabP5.prototype.debugSprites = function(debugSprites) {
+P5Wrapper.prototype.debugSprites = function(debugSprites) {
   if (this.p5) {
-    gameLabSprite.setCreateWithDebug(debugSprites);
+    p5SpriteWrapper.setCreateWithDebug(debugSprites);
     this.p5.allSprites.forEach(sprite => {
       sprite.debug = debugSprites;
     });
   }
 };
 
-GameLabP5.prototype.afterDrawComplete = function() {
+P5Wrapper.prototype.afterDrawComplete = function() {
   this.p5.afterUserDraw();
   this.p5.afterRedraw();
 };
@@ -560,7 +560,7 @@ GameLabP5.prototype.afterDrawComplete = function() {
  * of the epilogue so the student can see what they may be drawing in their
  * setup code while debugging.
  */
-GameLabP5.prototype.afterSetupStarted = function() {
+P5Wrapper.prototype.afterSetupStarted = function() {
   this.p5._setupEpiloguePhase1();
 };
 
@@ -569,12 +569,12 @@ GameLabP5.prototype.afterSetupStarted = function() {
  * call _setupEpiloguePhase1() multiple times in the event that it may already
  * have been called.
  */
-GameLabP5.prototype.afterSetupComplete = function() {
+P5Wrapper.prototype.afterSetupComplete = function() {
   this.p5._setupEpiloguePhase1();
   this.p5._setupEpiloguePhase2();
 };
 
-GameLabP5.prototype.preloadBackgrounds = function() {
+P5Wrapper.prototype.preloadBackgrounds = function() {
   if (!this.preloadBackgrounds_) {
     this.preloadedBackgrounds = {};
     this.preloadBackgrounds_ = Promise.all(
@@ -600,7 +600,7 @@ GameLabP5.prototype.preloadBackgrounds = function() {
   );
 };
 
-GameLabP5.prototype.preloadSpriteImages = function(animationList) {
+P5Wrapper.prototype.preloadSpriteImages = function(animationList) {
   if (!this.preloadedSprites) {
     this.preloadedSprites = {};
   }
@@ -644,7 +644,7 @@ GameLabP5.prototype.preloadSpriteImages = function(animationList) {
  *
  * @return {Promise} promise that resolves when all animations are loaded
  */
-GameLabP5.prototype.preloadAnimations = function(
+P5Wrapper.prototype.preloadAnimations = function(
   animationList,
   pauseAnimationsByDefault
 ) {

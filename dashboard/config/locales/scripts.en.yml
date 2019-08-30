@@ -13009,6 +13009,10 @@ en:
               name: 'Project: Finish Your App'
             Programs Explore:
               name: Programs Explore
+            Unit 3 STUDENT Survey:
+              name: Unit 3 STUDENT Survey
+            Unit 3 TEACHER Survey:
+              name: Unit 3 TEACHER Survey
           title: CSP Unit 3 Pilot - Intro to App Design
           description_audience: ''
           description_short: ''
@@ -13257,6 +13261,12 @@ en:
               name: Unit 2 Assessment
             Unit Assessment:
               name: Unit Assessment
+            'Lesson 8: Unit Assessment':
+              name: 'Lesson 8: Unit Assessment'
+            Unit 2 STUDENT Survey:
+              name: Unit 2 STUDENT Survey
+            Unit 2 TEACHER Survey:
+              name: Unit 2 TEACHER Survey
           title: CSP Unit 2 Pilot - The Internet
           description_audience: ''
           description_short: ''
