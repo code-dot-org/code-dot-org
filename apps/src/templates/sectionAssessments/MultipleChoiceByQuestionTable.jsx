@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import * as Table from 'reactabular-table';
-import * as sort from 'sortabular';
+import {Table, sort} from 'reactabular';
 import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
 import i18n from '@cdo/locale';
 import wrappedSortable from '../tables/wrapped_sortable';
@@ -89,7 +88,7 @@ class MultipleChoiceByQuestionTable extends Component {
           transforms: [sortable]
         },
         cell: {
-          formatters: [this.answerCellFormatter],
+          format: this.answerCellFormatter,
           props: {style: tableLayoutStyles.cell}
         }
       }
