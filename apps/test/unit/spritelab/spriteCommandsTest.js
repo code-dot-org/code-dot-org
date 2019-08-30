@@ -2,17 +2,17 @@
 import {expect} from '../../util/reconfiguredChai';
 import {commands} from '@cdo/apps/p5lab/spritelab/commands/spriteCommands';
 import * as coreLibrary from '@cdo/apps/p5lab/spritelab/coreLibrary';
-import createGameLabP5 from '../../util/gamelab/TestableGameLabP5';
+import createP5Wrapper from '../../util/gamelab/TestableP5Wrapper';
 
 describe('Sprite Commands', () => {
-  let gameLabP5, createSprite, animation;
+  let p5Wrapper, createSprite, animation;
   beforeEach(function() {
-    gameLabP5 = createGameLabP5();
-    createSprite = gameLabP5.p5.createSprite.bind(gameLabP5.p5);
-    let image = new p5.Image(100, 100, gameLabP5.p5);
+    p5Wrapper = createP5Wrapper();
+    createSprite = p5Wrapper.p5.createSprite.bind(p5Wrapper.p5);
+    let image = new p5.Image(100, 100, p5Wrapper.p5);
     let frames = [{name: 0, frame: {x: 0, y: 0, width: 50, height: 50}}];
-    let sheet = new gameLabP5.p5.SpriteSheet(image, frames);
-    animation = new gameLabP5.p5.Animation(sheet);
+    let sheet = new p5Wrapper.p5.SpriteSheet(image, frames);
+    animation = new p5Wrapper.p5.Animation(sheet);
     coreLibrary.reset();
   });
 
@@ -92,7 +92,7 @@ describe('Sprite Commands', () => {
   describe('makeSprite', () => {
     let makeSprite;
     beforeEach(function() {
-      makeSprite = commands.makeSprite.bind(gameLabP5.p5);
+      makeSprite = commands.makeSprite.bind(p5Wrapper.p5);
     });
 
     it('returns an id', () => {
@@ -121,14 +121,14 @@ describe('Sprite Commands', () => {
     });
 
     it('setting animation works', () => {
-      gameLabP5.p5._predefinedSpriteAnimations = {costume_label: animation};
+      p5Wrapper.p5._predefinedSpriteAnimations = {costume_label: animation};
       let id = makeSprite('costume_label');
       expect(commands.getProp(id, 'costume')).to.equal('costume_label');
     });
   });
 
   it('setAnimation for single sprite', () => {
-    gameLabP5.p5._predefinedSpriteAnimations = {costume_label: animation};
+    p5Wrapper.p5._predefinedSpriteAnimations = {costume_label: animation};
     let sprite = createSprite();
     let id = coreLibrary.addSprite(sprite);
     commands.setAnimation(id, 'costume_label');
@@ -136,7 +136,7 @@ describe('Sprite Commands', () => {
   });
 
   it('setAnimation for animation group', () => {
-    gameLabP5.p5._predefinedSpriteAnimations = {costume_label: animation};
+    p5Wrapper.p5._predefinedSpriteAnimations = {costume_label: animation};
     let sprite1 = createSprite();
     sprite1.addAnimation('a', animation);
     let sprite2 = createSprite();

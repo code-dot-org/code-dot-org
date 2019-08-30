@@ -19,7 +19,7 @@ const styles = {
 /**
  * Controls above the visualization header, including the code/animation toggle.
  */
-class GameLabVisualizationHeader extends React.Component {
+class P5LabVisualizationHeader extends React.Component {
   static propTypes = {
     interfaceMode: PropTypes.oneOf([
       P5LabInterfaceMode.CODE,
@@ -77,4 +77,4 @@ export default connect(
   dispatch => ({
     onInterfaceModeChange: mode => dispatch(changeInterfaceMode(mode))
   })
-)(GameLabVisualizationHeader);
+)(P5LabVisualizationHeader);
