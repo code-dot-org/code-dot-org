@@ -9,7 +9,7 @@ const levelKeyList = {
   4: 'blockly:Studio:playlab_1'
 };
 
-const levelKeyToIdMap = {
+const levelNameToIdMap = {
   'Level One': 1,
   'Level Two': 2,
   'Level Three': 3,
@@ -37,7 +37,7 @@ export default storybook => {
         <div style={{width: 800}}>
           <LevelTokenDetails
             levelKeyList={levelKeyList}
-            levelKeyToIdMap={levelKeyToIdMap}
+            levelNameToIdMap={levelNameToIdMap}
             chooseLevel={action('chooseLevel')}
             addVariant={action('addVariant')}
             removeVariant={action('removeVariant')}
@@ -55,7 +55,7 @@ export default storybook => {
         <div style={{width: 800}}>
           <LevelTokenDetails
             levelKeyList={levelKeyList}
-            levelKeyToIdMap={levelKeyToIdMap}
+            levelNameToIdMap={levelNameToIdMap}
             chooseLevel={action('chooseLevel')}
             addVariant={action('addVariant')}
             removeVariant={action('removeVariant')}

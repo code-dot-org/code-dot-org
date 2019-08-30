@@ -77,7 +77,7 @@ ArrowRenderer.propTypes = {onMouseDown: PropTypes.func.isRequried};
 export class UnconnectedLevelTokenDetails extends Component {
   static propTypes = {
     levelKeyList: PropTypes.object.isRequired,
-    levelKeyToIdMap: PropTypes.objectOf(PropTypes.number).isRequired,
+    levelNameToIdMap: PropTypes.objectOf(PropTypes.number).isRequired,
     chooseLevel: PropTypes.func.isRequired,
     addVariant: PropTypes.func.isRequired,
     removeVariant: PropTypes.func.isRequired,
@@ -244,7 +244,7 @@ export class UnconnectedLevelTokenDetails extends Component {
             <span style={{...styles.levelFieldLabel}}>Level name:</span>
             <LevelNameInput
               onSelectLevel={id => this.handleLevelSelected(index, id)}
-              levelKeyToIdMap={this.props.levelKeyToIdMap}
+              levelNameToIdMap={this.props.levelNameToIdMap}
               initialLevelName={this.props.levelKeyList[id] || ''}
             />
           </div>
@@ -297,7 +297,7 @@ export class UnconnectedLevelTokenDetails extends Component {
 export default connect(
   state => ({
     levelKeyList: state.levelKeyList,
-    levelKeyToIdMap: state.levelKeyToIdMap
+    levelNameToIdMap: state.levelNameToIdMap
   }),
   dispatch => ({
     chooseLevel(stage, level, variant, value) {
