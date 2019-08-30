@@ -539,8 +539,8 @@ class Blockly < Level
   end
 
   # Clear 'is_project_level' from cloned levels
-  def clone_with_name(name)
-    level = super(name)
+  def clone_with_name(name, editor_experiment: nil)
+    level = super(name, editor_experiment: editor_experiment)
     level.update!(is_project_level: false)
     level
   end
