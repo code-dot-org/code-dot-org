@@ -1,20 +1,20 @@
 /* global p5 */
 import {expect} from '../../util/reconfiguredChai';
 import {stub} from 'sinon';
-import createGameLabP5 from '../../util/gamelab/TestableGameLabP5';
+import createP5Wrapper from '../../util/gamelab/TestableP5Wrapper';
 import * as coreLibrary from '@cdo/apps/p5lab/spritelab/coreLibrary';
 import {commands as spriteCommands} from '@cdo/apps/p5lab/spritelab/commands/spriteCommands';
 
 describe('SpriteLab Core Library', () => {
-  let gameLabP5, createSprite, animation;
+  let p5Wrapper, createSprite, animation;
 
   beforeEach(function() {
-    gameLabP5 = createGameLabP5();
-    createSprite = gameLabP5.p5.createSprite.bind(gameLabP5.p5);
-    let image = new p5.Image(100, 100, gameLabP5.p5);
+    p5Wrapper = createP5Wrapper();
+    createSprite = p5Wrapper.p5.createSprite.bind(p5Wrapper.p5);
+    let image = new p5.Image(100, 100, p5Wrapper.p5);
     let frames = [{name: 0, frame: {x: 0, y: 0, width: 50, height: 50}}];
-    let sheet = new gameLabP5.p5.SpriteSheet(image, frames);
-    animation = new gameLabP5.p5.Animation(sheet);
+    let sheet = new p5Wrapper.p5.SpriteSheet(image, frames);
+    animation = new p5Wrapper.p5.Animation(sheet);
     coreLibrary.reset();
   });
 
@@ -213,8 +213,8 @@ describe('SpriteLab Core Library', () => {
 
   describe('Events', () => {
     it('Can run key events', () => {
-      const keyWentDownStub = stub(gameLabP5.p5, 'keyWentDown').returns(true);
-      const keyDownStub = stub(gameLabP5.p5, 'keyDown').returns(true);
+      const keyWentDownStub = stub(p5Wrapper.p5, 'keyWentDown').returns(true);
+      const keyDownStub = stub(p5Wrapper.p5, 'keyDown').returns(true);
       const eventLog = [];
       coreLibrary.addEvent('whenpress', {key: 'up'}, () =>
         eventLog.push('when up press ran')
@@ -223,7 +223,7 @@ describe('SpriteLab Core Library', () => {
         eventLog.push('while down press ran')
       );
 
-      coreLibrary.runEvents(gameLabP5.p5);
+      coreLibrary.runEvents(p5Wrapper.p5);
 
       expect(eventLog).to.deep.equal([
         'when up press ran',
@@ -238,9 +238,9 @@ describe('SpriteLab Core Library', () => {
       let eventLog, mouseWentDownStub, mouseIsOverStub, mousePressedOverStub;
       beforeEach(function() {
         eventLog = [];
-        mouseWentDownStub = stub(gameLabP5.p5, 'mouseWentDown');
-        mouseIsOverStub = stub(gameLabP5.p5, 'mouseIsOver');
-        mousePressedOverStub = stub(gameLabP5.p5, 'mousePressedOver');
+        mouseWentDownStub = stub(p5Wrapper.p5, 'mouseWentDown');
+        mouseIsOverStub = stub(p5Wrapper.p5, 'mouseIsOver');
+        mousePressedOverStub = stub(p5Wrapper.p5, 'mousePressedOver');
       });
       afterEach(function() {
         mouseWentDownStub.restore();
@@ -259,7 +259,7 @@ describe('SpriteLab Core Library', () => {
           eventLog.push('while click ran')
         );
 
-        coreLibrary.runEvents(gameLabP5.p5);
+        coreLibrary.runEvents(p5Wrapper.p5);
         expect(eventLog).to.deep.equal(['when click ran', 'while click ran']);
       });
 
@@ -284,7 +284,7 @@ describe('SpriteLab Core Library', () => {
           eventLog.push(extraArgs.sprite + ' was clicked')
         );
 
-        coreLibrary.runEvents(gameLabP5.p5);
+        coreLibrary.runEvents(p5Wrapper.p5);
         expect(eventLog).to.deep.equal([id1 + ' was clicked']);
       });
 
@@ -305,7 +305,7 @@ describe('SpriteLab Core Library', () => {
           eventLog.push(extraArgs.sprite + ' was clicked')
         );
 
-        coreLibrary.runEvents(gameLabP5.p5);
+        coreLibrary.runEvents(p5Wrapper.p5);
         expect(eventLog).to.deep.equal([
           id1 + ' was clicked',
           id2 + ' was clicked'
@@ -349,7 +349,7 @@ describe('SpriteLab Core Library', () => {
           () => eventLog.push('while touch ran')
         );
 
-        coreLibrary.runEvents(gameLabP5.p5);
+        coreLibrary.runEvents(p5Wrapper.p5);
         expect(eventLog).to.deep.equal(['when touch ran', 'while touch ran']);
       });
 
@@ -365,11 +365,11 @@ describe('SpriteLab Core Library', () => {
           () => eventLog.push('while touch ran')
         );
         // First tick- expect the callback to be called
-        coreLibrary.runEvents(gameLabP5.p5);
+        coreLibrary.runEvents(p5Wrapper.p5);
         expect(eventLog).to.deep.equal(['while touch ran']);
 
         // Second tick- expect the callback to be called again
-        coreLibrary.runEvents(gameLabP5.p5);
+        coreLibrary.runEvents(p5Wrapper.p5);
         expect(eventLog).to.deep.equal(['while touch ran', 'while touch ran']);
       });
 
@@ -385,11 +385,11 @@ describe('SpriteLab Core Library', () => {
           () => eventLog.push('when touch ran')
         );
         // First tick- expect the callback to be called
-        coreLibrary.runEvents(gameLabP5.p5);
+        coreLibrary.runEvents(p5Wrapper.p5);
         expect(eventLog).to.deep.equal(['when touch ran']);
 
         // Second tick- expect the callback not to be called again
-        coreLibrary.runEvents(gameLabP5.p5);
+        coreLibrary.runEvents(p5Wrapper.p5);
         expect(eventLog).to.deep.equal(['when touch ran']);
       });
 
@@ -406,15 +406,15 @@ describe('SpriteLab Core Library', () => {
           () => eventLog.push('when touch ran')
         );
         // First tick- expect the callback to be called
-        coreLibrary.runEvents(gameLabP5.p5);
+        coreLibrary.runEvents(p5Wrapper.p5);
         expect(eventLog).to.deep.equal(['when touch ran']);
 
         // Second tick- expect the callback not to be called (overlap returns false)
-        coreLibrary.runEvents(gameLabP5.p5);
+        coreLibrary.runEvents(p5Wrapper.p5);
         expect(eventLog).to.deep.equal(['when touch ran']);
 
         // Third tick- expect the callback to be called again
-        coreLibrary.runEvents(gameLabP5.p5);
+        coreLibrary.runEvents(p5Wrapper.p5);
         expect(eventLog).to.deep.equal(['when touch ran', 'when touch ran']);
       });
     });
@@ -472,7 +472,7 @@ describe('SpriteLab Core Library', () => {
             eventLog.push(`while: ${extraArgs.sprite}, ${extraArgs.target}`)
         );
 
-        coreLibrary.runEvents(gameLabP5.p5);
+        coreLibrary.runEvents(p5Wrapper.p5);
         expect(eventLog).to.deep.equal(['when: 0, 2', 'while: 0, 2']);
       });
 
@@ -490,7 +490,7 @@ describe('SpriteLab Core Library', () => {
             eventLog.push(`when: ${extraArgs.sprite}, ${extraArgs.target}`)
         );
 
-        coreLibrary.runEvents(gameLabP5.p5);
+        coreLibrary.runEvents(p5Wrapper.p5);
         expect(eventLog).to.deep.equal(['when: 0, 2', 'when: 0, 3']);
       });
 
@@ -508,7 +508,7 @@ describe('SpriteLab Core Library', () => {
             eventLog.push(`when: ${extraArgs.sprite}, ${extraArgs.target}`)
         );
 
-        coreLibrary.runEvents(gameLabP5.p5);
+        coreLibrary.runEvents(p5Wrapper.p5);
         expect(eventLog).to.deep.equal(['when: 0, 2', 'when: 1, 3']);
       });
 
@@ -526,7 +526,7 @@ describe('SpriteLab Core Library', () => {
             eventLog.push(`while: ${extraArgs.sprite}, ${extraArgs.target}`)
         );
 
-        coreLibrary.runEvents(gameLabP5.p5);
+        coreLibrary.runEvents(p5Wrapper.p5);
         expect(eventLog).to.deep.equal([
           'while: 0, 2',
           'while: 0, 3',
@@ -536,7 +536,7 @@ describe('SpriteLab Core Library', () => {
       });
 
       it('Calls the callback if costume group changes', () => {
-        gameLabP5.p5._predefinedSpriteAnimations = {b: animation, c: animation};
+        p5Wrapper.p5._predefinedSpriteAnimations = {b: animation, c: animation};
         // 'a' sprite overlapping 'b' sprite
         overlapStub1.withArgs(target1).returns(true);
         coreLibrary.addEvent(
@@ -545,18 +545,18 @@ describe('SpriteLab Core Library', () => {
           extraArgs =>
             eventLog.push(`when: ${extraArgs.sprite}, ${extraArgs.target}`)
         );
-        coreLibrary.runEvents(gameLabP5.p5);
+        coreLibrary.runEvents(p5Wrapper.p5);
         expect(eventLog).to.deep.equal(['when: 0, 2']);
 
         // 'b' sprite changes to 'c' sprite
         spriteCommands.setAnimation(2, 'c');
-        coreLibrary.runEvents(gameLabP5.p5);
+        coreLibrary.runEvents(p5Wrapper.p5);
         // Event does not fire
         expect(eventLog).to.deep.equal(['when: 0, 2']);
 
         // 'c' sprite changes back to 'b' sprite
         spriteCommands.setAnimation(2, 'b');
-        coreLibrary.runEvents(gameLabP5.p5);
+        coreLibrary.runEvents(p5Wrapper.p5);
         // Event does fire again
         expect(eventLog).to.deep.equal(['when: 0, 2', 'when: 0, 2']);
       });
@@ -575,7 +575,7 @@ describe('SpriteLab Core Library', () => {
             eventLog.push(`while: ${extraArgs.sprite}, ${extraArgs.target}`)
         );
 
-        coreLibrary.runEvents(gameLabP5.p5);
+        coreLibrary.runEvents(p5Wrapper.p5);
         expect(eventLog).to.deep.equal(['while: 0, 1', 'while: 1, 0']);
       });
     });
