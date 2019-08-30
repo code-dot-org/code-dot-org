@@ -77,3 +77,9 @@ level 'CSP U3 L9 Add More Code', progression: 'Add More Code'
 stage 'Project: Finish Your App'
 level 'CSP U3L10 SFLP 20-21', progression: 'Lesson Overview'
 level 'CSP U3 L10 Submit App', progression: 'Submit Your App', assessment: true
+
+stage 'Unit 3 STUDENT Survey', lockable: true, flex_category: 'required'
+level 'CSP U3 20-21 Student Pilot Survey', progression: 'Unit 1 STUDENT Survey', assessment: true
+
+stage 'Unit 3 TEACHER Survey', lockable: true, flex_category: 'required'
+level 'CSP U3 20-21 Teacher Pilot Survey', progression: 'Unit 1 TEACHER Survey', assessment: true

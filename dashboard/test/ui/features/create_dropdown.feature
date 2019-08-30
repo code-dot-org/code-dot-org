@@ -1,6 +1,7 @@
 @no_mobile
 # Dropdown hidden in 1024x768 Safari with fixed scrollbar due to media query.
 @no_safari
+@no_firefox
 @single_session
 Feature: Create Dropdown in Header
 
