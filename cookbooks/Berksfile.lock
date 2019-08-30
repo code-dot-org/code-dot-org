@@ -1,7 +1,7 @@
 DEPENDENCIES
   apt
   ark
-  build-essential (~> 2.1.3)
+  build-essential
   cdo-analytics
     path: cdo-analytics
   cdo-apps
@@ -52,11 +52,8 @@ DEPENDENCIES
     path: cdo-varnish
   chef-client
   chef_client_updater
-    git: https://github.com/wjordan/chef_client_updater.git
-    revision: c15baa2bc783f515912665a7b1de00df5d7f0a3e
-    branch: update_rubygems_fix
-  ntp (~> 1.8.6)
-  seven_zip (< 3.0.0)
+  ntp
+  seven_zip
   sudo-user
     path: sudo-user
 
@@ -65,7 +62,9 @@ GRAPH
   ark (4.0.0)
     build-essential (>= 0.0.0)
     seven_zip (>= 0.0.0)
-  build-essential (2.1.3)
+  build-essential (8.2.1)
+    mingw (>= 1.1)
+    seven_zip (>= 0.0.0)
   cdo-analytics (0.0.0)
     apt (~> 2.6.0)
     ark (>= 0.0.0)
@@ -144,15 +143,17 @@ GRAPH
   chef-client (11.3.0)
     cron (>= 4.2.0)
     logrotate (>= 1.9.0)
-  chef_client_updater (3.2.4)
+  chef_client_updater (3.5.3)
   chef_hostname (0.6.1)
   cron (6.2.1)
   logrotate (2.2.0)
-  nodejs (5.0.0)
+  mingw (2.1.0)
+    seven_zip (>= 0.0.0)
+  nodejs (6.0.0)
     ark (>= 2.0.2)
-    build-essential (>= 0.0.0)
-  ntp (1.8.6)
-  ohai (5.2.5)
+    build-essential (>= 5.0)
+  ntp (3.6.2)
+  ohai (5.3.0)
   poise (2.8.2)
   poise-archive (1.5.0)
     poise (~> 2.6)
@@ -165,13 +166,13 @@ GRAPH
   poise-service (1.5.2)
     poise (~> 2.0)
   postfix (5.3.1)
-  redisio (2.7.2)
-    build-essential (>= 0.0.0)
+  redisio (3.0.0)
+    build-essential (>= 5.0)
     selinux_policy (>= 0.0.0)
     ulimit (>= 0.1.2)
   selinux_policy (2.3.4)
-  seven_zip (2.0.2)
-    windows (>= 1.2.2)
+  seven_zip (3.1.1)
+    windows (>= 0.0.0)
   ssl_certificate (2.1.0)
   sudo-user (0.1.2)
     ohai (>= 0.0.0)
