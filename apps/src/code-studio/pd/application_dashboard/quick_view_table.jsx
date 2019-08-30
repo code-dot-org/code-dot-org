@@ -2,8 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 import ReactTooltip from 'react-tooltip';
-import * as Table from 'reactabular-table';
-import * as sort from 'sortabular';
+import {Table, sort} from 'reactabular';
 import color from '@cdo/apps/util/color';
 import {Button} from 'react-bootstrap';
 import _, {orderBy} from 'lodash';
@@ -101,7 +100,7 @@ export class QuickViewTable extends React.Component {
           label: 'Actions'
         },
         cell: {
-          formatters: [this.formatActionsCell]
+          format: this.formatActionsCell
         }
       },
       {
@@ -111,13 +110,12 @@ export class QuickViewTable extends React.Component {
           transforms: [sortable]
         },
         cell: {
-          formatters: [
-            created_at =>
-              new Date(created_at).toLocaleDateString('en-us', {
-                month: 'long',
-                day: 'numeric'
-              })
-          ]
+          format: created_at => {
+            return new Date(created_at).toLocaleDateString('en-us', {
+              month: 'long',
+              day: 'numeric'
+            });
+          }
         }
       },
       {
@@ -148,11 +146,9 @@ export class QuickViewTable extends React.Component {
           transforms: [sortable]
         },
         cell: {
-          formatters: [
-            status =>
-              ApplicationStatuses[this.props.viewType][status] ||
-              _.upperFirst(status)
-          ],
+          format: status =>
+            ApplicationStatuses[this.props.viewType][status] ||
+            _.upperFirst(status),
           transforms: [
             status => ({
               style: {...styles.statusCellCommon, ...styles.statusCell[status]}
@@ -166,7 +162,7 @@ export class QuickViewTable extends React.Component {
       columns.push({
         property: 'locked',
         cell: {
-          formatters: [this.formatBoolean]
+          format: this.formatBoolean
         },
         header: {
           label: 'Locked?',
@@ -184,7 +180,7 @@ export class QuickViewTable extends React.Component {
             transforms: [sortable]
           },
           cell: {
-            formatters: [this.formatPrincipalApprovalCell]
+            format: this.formatPrincipalApprovalCell
           }
         },
         {
@@ -249,7 +245,7 @@ export class QuickViewTable extends React.Component {
           transforms: [sortable]
         },
         cell: {
-          formatters: [this.formatNotesTooltip],
+          format: this.formatNotesTooltip,
           transforms: [
             () => ({
               style: {...styles.notesCell}
