@@ -351,8 +351,10 @@ P5Lab.prototype.init = function(config) {
 
     if (this.isSpritelab) {
       this.studioApp_.addChangeHandler(() => {
-        this.reset();
-        this.preview.apply(this);
+        if (!getStore().getState().runState.isRunning) {
+          this.reset();
+          this.preview.apply(this);
+        }
       });
     }
   };
