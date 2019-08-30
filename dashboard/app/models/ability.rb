@@ -232,7 +232,9 @@ class Ability
 
     if user.persisted?
       editor_experiment = Experiment.get_editor_experiment(user)
-      can :manage, Level, editor_experiment: editor_experiment
+      if editor_experiment
+        can :manage, Level, editor_experiment: editor_experiment
+      end
     end
 
     if user.persisted? && user.permission?(UserPermission::PROJECT_VALIDATOR)

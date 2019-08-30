@@ -10,6 +10,7 @@ class LevelsControllerTest < ActionController::TestCase
     @level = create(:level)
     @admin = create(:admin)
     @not_admin = create(:user)
+    @wizard = create :teacher, editor_experiment: 'hogwarts'
     @levelbuilder = create(:levelbuilder)
     sign_in(@levelbuilder)
     @program = '<hey/>'
@@ -782,6 +783,23 @@ DSL
     get :show, params: {id: level}
     assert_response :success
     assert_select '#markdown', "this is the markdown for #{@not_admin.id}"
+  end
+
+  test 'platformization partner can edit their levels' do
+    sign_out @levelbuilder
+    sign_in @wizard
+
+    get :edit, params: {id: @level.id}
+    assert_response :forbidden
+  end
+
+  test 'platformization partner cannot edit our levels' do
+    sign_out @levelbuilder
+    sign_in @wizard
+    hogwarts_level = create :level, editor_experiment: 'hogwarts'
+
+    get :edit, params: {id: hogwarts_level.id}
+    assert_response :success
   end
 
   private
