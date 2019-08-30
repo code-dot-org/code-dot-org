@@ -4,7 +4,7 @@ import {expect} from '../../../util/reconfiguredChai';
 import sinon from 'sinon';
 import LevelNameInput from '@cdo/apps/lib/script-editor/LevelNameInput';
 
-const levelKeyToIdMap = {
+const levelNameToIdMap = {
   'Level One': 1,
   'Level Two': 2,
   'Level Three': 3
@@ -16,7 +16,7 @@ describe('LevelNameInput', () => {
     onSelectLevel = sinon.spy();
     defaultProps = {
       onSelectLevel,
-      levelKeyToIdMap,
+      levelNameToIdMap,
       initialLevelName: 'Level One'
     };
   });
