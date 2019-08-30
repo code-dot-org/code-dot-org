@@ -60,22 +60,28 @@ function processPdWorkshops(workshops) {
       markersByLocation[hash] = createNewMarker(
         latLng,
         workshop.location_name,
-        infoWindowContent
+        infoWindowContent,
+        workshop.subject
       );
     } else {
       // Extend existing marker.
       infoWindowContent = compileHtml(workshop, false);
       markersByLocation[hash].infoWindowContent += infoWindowContent;
+      // Upgrade any marker containing a deep dive workshop to the deep dive icon
+      if (workshop.subject === 'Deep Dive') {
+        markersByLocation[hash].icon = {url: iconForSubject(workshop.subject)};
+      }
     }
   });
 }
 
-function createNewMarker(latLng, title, infoWindowContent) {
+function createNewMarker(latLng, title, infoWindowContent, subject) {
   var marker = new google.maps.Marker({
     position: latLng,
     map: gmap,
     title: title,
-    infoWindowContent: infoWindowContent
+    infoWindowContent: infoWindowContent,
+    icon: {url: iconForSubject(subject)}
   });
   google.maps.event.addListener(marker, 'click', function() {
     infoWindow.setContent(this.get('infoWindowContent'));
@@ -83,6 +89,13 @@ function createNewMarker(latLng, title, infoWindowContent) {
   });
   markerClusterer.addMarker(marker);
   return marker;
+}
+
+function iconForSubject(subject) {
+  if (subject === 'Deep Dive') {
+    return 'https://maps.google.com/mapfiles/kml/paddle/red-stars.png';
+  }
+  return 'https://maps.google.com/mapfiles/kml/paddle/red-blank.png';
 }
 
 function completeProcessingPdWorkshops() {
@@ -102,6 +115,10 @@ function compileHtml(workshop, first) {
     '<div class="workshop-location-name"><strong>' +
     workshop.location_name +
     '</strong></div>';
+
+  // Add the workshop subject
+  html +=
+    '<div class="workshop-subject">' + workshop.subject + ' Workshop</div>';
 
   // Add the date(s).
   html += '<div class="workshop-dates">';
