@@ -2,8 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 import ReactTooltip from 'react-tooltip';
-import * as Table from 'reactabular-table';
-import * as sort from 'sortabular';
+import {Table, sort} from 'reactabular';
 import color from '@cdo/apps/util/color';
 import {Button} from 'react-bootstrap';
 import _, {orderBy} from 'lodash';
@@ -108,7 +107,7 @@ export class CohortViewTable extends React.Component {
           label: 'View Application'
         },
         cell: {
-          formatters: [this.formatViewButton]
+          format: this.formatViewButton
         }
       },
       {
@@ -118,7 +117,7 @@ export class CohortViewTable extends React.Component {
           transforms: [sortable]
         },
         cell: {
-          formatters: [this.formatDate]
+          format: this.formatDate
         }
       },
       {
@@ -156,11 +155,9 @@ export class CohortViewTable extends React.Component {
           transforms: [sortable]
         },
         cell: {
-          formatters: [
-            status =>
-              ApplicationStatuses[this.props.viewType][status] ||
-              _.upperFirst(status)
-          ],
+          format: status =>
+            ApplicationStatuses[this.props.viewType][status] ||
+            _.upperFirst(status),
           transforms: [
             status => ({
               style: {...styles.statusCellCommon, ...styles.statusCell[status]}
@@ -187,7 +184,7 @@ export class CohortViewTable extends React.Component {
           label: 'Locked'
         },
         cell: {
-          formatters: [this.formatBoolean]
+          format: this.formatBoolean
         }
       });
     }
@@ -247,7 +244,7 @@ export class CohortViewTable extends React.Component {
           transforms: [sortable]
         },
         cell: {
-          formatters: [this.formatNotesTooltip],
+          format: this.formatNotesTooltip,
           transforms: [
             () => ({
               style: {...styles.notesCell}
