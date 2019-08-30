@@ -184,6 +184,7 @@ class LevelsController < ApplicationController
 
     create_level_params = level_params
 
+    # Give platformization partners permission to edit any levels they create.
     editor_experiment = Experiment.get_editor_experiment(current_user)
     create_level_params[:editor_experiment] = editor_experiment if editor_experiment
 
