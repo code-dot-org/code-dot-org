@@ -4,8 +4,7 @@ import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 import color from '../../util/color';
 import {ImageWithStatus} from '../ImageWithStatus';
-import * as Table from 'reactabular-table';
-import * as sort from 'sortabular';
+import {Table, sort} from 'reactabular';
 import wrappedSortable from '../tables/wrapped_sortable';
 import orderBy from 'lodash/orderBy';
 import {
@@ -197,7 +196,7 @@ class PersonalProjectsTable extends React.Component {
           }
         },
         cell: {
-          formatters: [thumbnailFormatter],
+          format: thumbnailFormatter,
           props: {
             style: {
               ...tableLayoutStyles.cell,
@@ -220,7 +219,7 @@ class PersonalProjectsTable extends React.Component {
           transforms: [sortable]
         },
         cell: {
-          formatters: [nameFormatter],
+          format: nameFormatter,
           props: {
             style: {
               ...tableLayoutStyles.cell,
@@ -237,7 +236,7 @@ class PersonalProjectsTable extends React.Component {
           transforms: [sortable]
         },
         cell: {
-          formatters: [typeFormatter],
+          format: typeFormatter,
           props: {
             style: {
               ...styles.cellType,
@@ -254,7 +253,7 @@ class PersonalProjectsTable extends React.Component {
           transforms: [sortable]
         },
         cell: {
-          formatters: [dateFormatter],
+          format: dateFormatter,
           props: {style: tableLayoutStyles.cell}
         }
       },
@@ -266,7 +265,7 @@ class PersonalProjectsTable extends React.Component {
           transforms: [sortable]
         },
         cell: {
-          formatters: [this.publishedAtFormatter],
+          format: this.publishedAtFormatter,
           props: {
             style: {
               ...tableLayoutStyles.cell,
@@ -287,7 +286,7 @@ class PersonalProjectsTable extends React.Component {
           }
         },
         cell: {
-          formatters: [this.actionsFormatter],
+          format: this.actionsFormatter,
           props: {
             style: {
               ...tableLayoutStyles.cell,
