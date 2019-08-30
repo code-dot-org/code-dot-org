@@ -230,6 +230,11 @@ class Ability
       can [:upload, :destroy], :level_starter_asset
     end
 
+    if user.persisted?
+      editor_experiment = Experiment.get_editor_experiment(user)
+      can :manage, Level, editor_experiment: editor_experiment
+    end
+
     if user.persisted? && user.permission?(UserPermission::PROJECT_VALIDATOR)
       # let them change the hidden state
       can :manage, LevelSource
