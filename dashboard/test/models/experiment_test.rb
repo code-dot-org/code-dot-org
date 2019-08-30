@@ -173,11 +173,11 @@ class ExperimentTest < ActiveSupport::TestCase
 
   test 'editor experiments' do
     teacher = create :teacher
-    wizard = create :teacher, editor_experiment: 'hogwarts'
+    platformization_partner = create :platformization_partner
     levelbuilder = create :levelbuilder
 
     assert_nil Experiment.get_editor_experiment(teacher)
-    assert_equal 'hogwarts', Experiment.get_editor_experiment(wizard)
+    assert_equal 'platformization-partners', Experiment.get_editor_experiment(platformization_partner)
     assert_nil Experiment.get_editor_experiment(levelbuilder)
   end
 end

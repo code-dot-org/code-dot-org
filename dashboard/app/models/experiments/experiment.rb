@@ -42,7 +42,7 @@ class Experiment < ApplicationRecord
   # edit scripts and levels marked with the same editor_experiment.
   LEVEL_EDITOR_EXPERIMENTS = %w(
     broward
-    hogwarts
+    platformization-partners
   )
 
   def self.get_editor_experiment(user)
