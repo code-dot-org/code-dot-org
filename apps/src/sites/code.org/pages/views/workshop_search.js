@@ -3,6 +3,7 @@
 import $ from 'jquery';
 import MarkerClusterer from 'node-js-marker-clusterer';
 import getScriptData from '@cdo/apps/util/getScriptData';
+import {SubjectNames} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 
 const markerCustererOptions = {
   imagePath: getScriptData('workshopSearch').imagePath,
@@ -68,7 +69,7 @@ function processPdWorkshops(workshops) {
       infoWindowContent = compileHtml(workshop, false);
       markersByLocation[hash].infoWindowContent += infoWindowContent;
       // Upgrade any marker containing a deep dive workshop to the deep dive icon
-      if (workshop.subject === 'Deep Dive') {
+      if (workshop.subject === SubjectNames.SUBJECT_CSF_201) {
         markersByLocation[hash].icon = {url: iconForSubject(workshop.subject)};
       }
     }
@@ -92,7 +93,7 @@ function createNewMarker(latLng, title, infoWindowContent, subject) {
 }
 
 function iconForSubject(subject) {
-  if (subject === 'Deep Dive') {
+  if (subject === SubjectNames.SUBJECT_CSF_201) {
     return 'https://maps.google.com/mapfiles/kml/paddle/red-stars.png';
   }
   return 'https://maps.google.com/mapfiles/kml/paddle/red-blank.png';

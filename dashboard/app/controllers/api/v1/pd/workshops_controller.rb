@@ -119,7 +119,7 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
     # But until then, when deep-dive isn't specified, we only show 'Intro'
     # workshops.
     if params['deep_dive_only']
-      conditions[:subject] = 'Deep Dive'
+      conditions[:subject] = Pd::Workshop::SUBJECT_CSF_201
     end
 
     @workshops = Pd::Workshop.scheduled_start_on_or_after(Date.today.beginning_of_day).
