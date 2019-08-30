@@ -1,6 +1,6 @@
-import * as spriteUtils from './spriteUtils';
+import * as coreLibrary from '../coreLibrary';
 import {getStore} from '@cdo/apps/redux';
-import {addConsoleMessage} from './textConsoleModule';
+import {addConsoleMessage} from '../textConsoleModule';
 
 export const commands = {
   comment(text) {
@@ -8,7 +8,7 @@ export const commands = {
   },
 
   hideTitleScreen() {
-    spriteUtils.title = spriteUtils.subtitle = '';
+    coreLibrary.title = coreLibrary.subtitle = '';
   },
 
   printText(text) {
@@ -16,18 +16,18 @@ export const commands = {
   },
 
   setBackground(color) {
-    spriteUtils.background = color;
+    coreLibrary.background = color;
   },
 
   setBackgroundImage(img) {
     if (this._preloadedBackgrounds && this._preloadedBackgrounds[img]) {
       let backgroundImage = this._preloadedBackgrounds[img];
-      spriteUtils.background = backgroundImage;
+      coreLibrary.background = backgroundImage;
     }
   },
 
   showTitleScreen(title, subtitle) {
-    spriteUtils.title = title || '';
-    spriteUtils.subtitle = subtitle || '';
+    coreLibrary.title = title || '';
+    coreLibrary.subtitle = subtitle || '';
   }
 };
