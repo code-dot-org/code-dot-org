@@ -173,8 +173,7 @@ class ExperimentTest < ActiveSupport::TestCase
 
   test 'editor experiments' do
     teacher = create :teacher
-    wizard = create :teacher
-    SingleUserExperiment.find_or_create_by!(min_user_id: wizard.id, name: 'hogwarts')
+    wizard = create :teacher, editor_experiment: 'hogwarts'
     levelbuilder = create :levelbuilder
 
     assert_nil Experiment.get_editor_experiment(teacher)
