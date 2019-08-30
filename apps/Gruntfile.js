@@ -220,11 +220,10 @@ describe('entry tests', () => {
           src: ['**/*.js'],
           dest: 'build/package/js/ace/'
         },
-        // Pull p5.js and p5.play.js into the package from our fork of the
-        // p5.play repo at https://github.com/code-dot-org/p5.play
+        // Pull p5.js and p5.play.js into the package from our forks.
         {
           expand: true,
-          cwd: './node_modules/@code-dot-org/p5.play/examples/lib',
+          cwd: './node_modules/@code-dot-org/p5/lib',
           src: ['p5.js'],
           dest: 'build/package/js/p5play/'
         },

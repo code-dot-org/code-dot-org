@@ -70,6 +70,7 @@ class Level < ActiveRecord::Base
     rubric_performance_level_4
     mini_rubric
     encrypted
+    editor_experiment
     teacher_markdown
     bubble_choice_description
     starter_assets
@@ -612,6 +613,13 @@ class Level < ActiveRecord::Base
   def add_starter_asset!(friendly_name, uuid_name)
     self.starter_assets ||= {}
     self.starter_assets[friendly_name] = uuid_name
+    save!
+  end
+
+  # Remove a starter asset by its key (friendly_name) from the level's properties.
+  def remove_starter_asset!(friendly_name)
+    return true unless starter_assets
+    starter_assets.delete(friendly_name)
     save!
   end
 

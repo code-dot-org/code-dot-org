@@ -601,7 +601,7 @@ designMode.onDuplicate = function(element, prevThemeName, event) {
       elementClass: element.className
     })
   });
-  var duplicateElement = $(element).clone(true)[0];
+  var duplicateElement = $(element).clone()[0];
   var dupLeft = parseInt(element.style.left, 10) + 10;
   var dupTop = parseInt(element.style.top, 10) + 10;
   var dupWidth = parseInt(element.style.width, 10);
@@ -844,7 +844,7 @@ function duplicateScreen(element) {
 
   // Clone each child of the source screen into the new screen (with new ids):
   sourceScreen.children().each(function() {
-    const clonedChild = $(this).clone(true)[0];
+    const clonedChild = $(this).clone()[0];
     const elementType = elementLibrary.getElementType(clonedChild);
     elementUtils.setId(
       clonedChild,
@@ -893,7 +893,7 @@ designMode.onCopyElementToScreen = function(element, destScreen) {
   // Unwrap the draggable wrappers around the elements in the source screen:
   const madeUndraggable = makeUndraggable(sourceElement.children());
 
-  const duplicateElement = sourceElement.clone(true)[0];
+  const duplicateElement = sourceElement.clone()[0];
   const elementType = elementLibrary.getElementType(duplicateElement);
   elementUtils.setId(
     duplicateElement,
@@ -1731,7 +1731,7 @@ designMode.setAsClipboardElement = function(element) {
   }
 
   // Remember the current element on the clipboard
-  clipboardElement = jqueryElement.clone(true)[0];
+  clipboardElement = jqueryElement.clone()[0];
 
   // Remember the current theme on the clipboard
   clipboardElementTheme = elementLibrary.getCurrentTheme(

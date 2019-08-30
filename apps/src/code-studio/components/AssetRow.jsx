@@ -33,6 +33,7 @@ export default class AssetRow extends React.Component {
     soundPlayer: PropTypes.object,
     projectId: PropTypes.string,
     levelName: PropTypes.string,
+    hideDelete: PropTypes.bool,
 
     // For logging purposes
     imagePicker: PropTypes.bool, // identifies if displayed by 'Manage Assets' flow
@@ -138,13 +139,15 @@ export default class AssetRow extends React.Component {
         actions = (
           <td width="250" style={{textAlign: 'right'}}>
             {flex}
-            <button
-              type="button"
-              className={usage > 0 ? '' : 'btn-danger'}
-              onClick={usage > 0 ? this.attemptBadDelete : this.confirmDelete}
-            >
-              <i className="fa fa-trash-o" />
-            </button>
+            {!this.props.hideDelete && (
+              <button
+                type="button"
+                className={usage > 0 ? '' : 'btn-danger'}
+                onClick={usage > 0 ? this.attemptBadDelete : this.confirmDelete}
+              >
+                <i className="fa fa-trash-o" />
+              </button>
+            )}
 
             {this.state.attemptedUsedDelete && (
               <div style={styles.deleteWarning}>

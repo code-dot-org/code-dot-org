@@ -22,15 +22,19 @@
       "noFill": null,
       "stroke": null,
       "comment_Variables": null,
-      "var group = createGroup": null
+      "var group = createGroup": null,
+      "regularPolygon": null,
+      "arc": null,
+      "line": null,
+      "shape": null
     },
     "edit_code": true,
     "embed": "false",
-    "long_instructions": "<div class=\"no-pullthrough\" style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\r\n<details>\r\n\r\n<summary>\r\n<strong>What are the possible colors I can use?</strong>\r\n</summary>\r\n\r\nFor a full list of possible colors you can use, go to <a href=\"https://www.w3schools.com/cssref/css_colors.asp\" target=\"_new\">W3Schools - CSS Colors</a>.\r\n</details>\r\n</div>\r\n\r\n# Challenge: String Variables\r\n\r\n_Check with your teacher before tackling this challenge level._\r\n\r\nSo far we've only ever assigned a number value to a variable, but did you know you can give a string value to a variable?  Read through the example program we've provided and then modify the program create new images with different colors.\r\n\r\n\r\n",
+    "long_instructions": "<div class=\"no-pullthrough\" style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\r\n<details>\r\n\r\n<summary>\r\n<strong>What are the possible colors I can use?</strong>\r\n</summary>\r\n\r\nFor a full list of possible colors you can use, go to <a href=\"https://www.w3schools.com/cssref/css_colors.asp\" target=\"_new\">W3Schools - CSS Colors</a>.\r\n</details>\r\n</div>\r\n\r\n# Challenge: String Variables\r\n\r\n_Check with your teacher before tackling this challenge level._\r\n\r\nSo far we've only ever assigned a number value to a variable, but did you know you can give a string value to a variable?  Read through the example program we've provided and then modify the program create new images with different colors.\r\n",
     "instructions_important": "false",
-    "display_name": "Challenge: Updating Variables",
+    "display_name": "Challenge: String Variables",
     "hide_share_and_remix": "false",
-    "start_blocks": "var x = 50;\r\nvar y = 50;\r\n\r\nfill(\"red\");\r\nellipse(x, y);\r\nx = x + 50; // Increase x by 50, now x is 100\r\nellipse(x, y);\r\nx = x + 50; // Increase x by 50, now x is 150\r\nellipse(x, y);",
+    "start_blocks": "var color1 = \"crimson\";\r\nvar color2 = \"coral\";\r\nvar color3 = \"gold\";\r\nvar color4 = \"azure\";\r\nfill(color1);\r\nregularPolygon(200, 200, 5, 200);\r\nfill(color2);\r\nregularPolygon(200, 200, 6, 150);\r\nfill(color3);\r\nregularPolygon(200, 200, 7, 100);\r\nfill(color4);\r\nellipse(200, 200, 100, 100);\r\n",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -59,23 +63,23 @@
     "expand_debugger": "false",
     "debugger_disabled": "true",
     "pause_animations_by_default": "false",
-    "encrypted_examples": [
-
-    ],
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
     "parent_level_id": 18475,
     "name_suffix": "_pilot",
     "show_type_hints": "false",
-    "thumbnail_url": "https://images.code.org/c52d84260d74ec1b938f877f0c5ddd88-image-1528744566060.47.48 PM.png",
+    "thumbnail_url": "https://images.code.org/2b26e5f68eed282158a7874f5994be9d-image-1567039123683.PNG",
     "encrypted": "false",
     "mini_rubric": "false",
     "text_mode_at_start": "false",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ]
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-05 22:13:13 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-06-05 22:14:07 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-06-13 20:32:27 +0000\",\"changed\":[\"code_functions\",\"show_debug_watch\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-06-26 18:52:31 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-06-26 19:14:25 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-03-07 07:00:17 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-03-28 00:06:04 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-05-17 20:48:13 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-06-11 19:16:16 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-08-26 22:10:59 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":959,\"changed_by_email\":\"george.zhang@code.org\"},{\"changed_at\":\"2019-08-26 22:32:34 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":959,\"changed_by_email\":\"george.zhang@code.org\"},{\"changed_at\":\"2019-08-26 22:49:43 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":959,\"changed_by_email\":\"george.zhang@code.org\"},{\"changed_at\":\"2019-08-27 16:35:20 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":959,\"changed_by_email\":\"george.zhang@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-06-05 22:13:13 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-06-05 22:14:07 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-06-13 20:32:27 +0000\",\"changed\":[\"code_functions\",\"show_debug_watch\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-06-26 18:52:31 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-06-26 19:14:25 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-03-07 07:00:17 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-03-28 00:06:04 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-05-17 20:48:13 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-06-11 19:16:16 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-08-26 22:10:59 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":959,\"changed_by_email\":\"george.zhang@code.org\"},{\"changed_at\":\"2019-08-26 22:32:34 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":959,\"changed_by_email\":\"george.zhang@code.org\"},{\"changed_at\":\"2019-08-26 22:49:43 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":959,\"changed_by_email\":\"george.zhang@code.org\"},{\"changed_at\":\"2019-08-27 16:35:20 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":959,\"changed_by_email\":\"george.zhang@code.org\"},{\"changed_at\":\"2019-08-27 20:23:23 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":959,\"changed_by_email\":\"george.zhang@code.org\"},{\"changed_at\":\"2019-08-29 00:36:39 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"start_blocks\",\"thumbnail_url\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":959,\"changed_by_email\":\"george.zhang@code.org\"},{\"changed_at\":\"2019-08-29 00:37:52 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":959,\"changed_by_email\":\"george.zhang@code.org\"},{\"changed_at\":\"2019-08-29 00:39:12 +0000\",\"changed\":[\"code_functions\",\"display_name\",\"thumbnail_url\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":959,\"changed_by_email\":\"george.zhang@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
