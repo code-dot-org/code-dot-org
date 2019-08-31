@@ -48,14 +48,6 @@ template "#{systemd_varnish}/cdo.conf" do
   notifies :restart, 'service[varnish]', :delayed
 end
 
-template '/etc/varnish/accept-language.vcl' do
-  source 'accept-language.vcl.erb'
-  user 'root'
-  group 'root'
-  mode '0644'
-  notifies :restart, 'service[varnish]', :delayed
-end
-
 template '/etc/varnish/default.vcl' do
   source 'default.vcl.erb'
   user 'root'
