@@ -32,7 +32,7 @@ export default class CensusInaccuracyReviewTable extends Component {
   };
 
   beginReviewButton = (_value, data) => {
-    if (this.props.resolvedReports.includes(data.rowData.id)) {
+    if (data.rowData.isResolved) {
       return (
         <div style={{textAlign: 'center', verticalAlign: 'middle'}}>
           Review Completed
@@ -99,6 +99,11 @@ export default class CensusInaccuracyReviewTable extends Component {
     const numReviewed = this.props.resolvedReports.length;
     const numToReview = this.props.reportsToReview.length - numReviewed;
 
+    const decoratedRows = rows.map(row => ({
+      ...row,
+      isResolved: this.props.resolvedReports.includes(row.id)
+    }));
+
     return (
       <div>
         <h3>
@@ -110,7 +115,7 @@ export default class CensusInaccuracyReviewTable extends Component {
           columns={this.columns}
         >
           <Table.Header />
-          <Table.Body rows={rows} rowKey="id" />
+          <Table.Body rows={decoratedRows} rowKey="id" />
         </Table.Provider>
       </div>
     );
