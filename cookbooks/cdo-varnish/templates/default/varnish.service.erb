@@ -1,3 +1,4 @@
+[Service]
 # Should we start varnishd at boot?  Set to "no" to disable.
 Environment = START=yes
 
@@ -54,21 +55,18 @@ Environment = VARNISH_TTL=120
 # Ref: http://docs.aws.amazon.com/elasticloadbalancing/latest/classic/config-idle-timeout.html
 Environment = VARNISH_TIMEOUT_IDLE=65
 
-# DAEMON_OPTS is used by the init script.  If you add or remove options, make
-# sure you update this section, too.
-Environment = DAEMON_OPTS="-a ${VARNISH_LISTEN_ADDRESS}:${VARNISH_LISTEN_PORT} \
-             -f ${VARNISH_VCL_CONF} \
-             -T ${VARNISH_ADMIN_LISTEN_ADDRESS}:${VARNISH_ADMIN_LISTEN_PORT} \
-             -t ${VARNISH_TTL} \
-             -S ${VARNISH_SECRET_FILE} \
-             -s ${VARNISH_STORAGE} \
-             -p thread_pool_min=${VARNISH_MIN_THREADS} \
-             -p thread_pool_max=${VARNISH_MAX_THREADS} \
-             -p thread_pool_timeout=${VARNISH_THREAD_TIMEOUT} \
-             -p thread_pool_add_delay=${VARNISH_THREAD_POOL_ADD_DELAY} \
-             -p timeout_idle=${VARNISH_TIMEOUT_IDLE} \
-             -p vcc_allow_inline_c=true"
-
-[Service]
 ExecStart=
-ExecStart=/usr/sbin/varnishd ${DAEMON_OPTS}
+ExecStart=/usr/sbin/varnishd \
+  -a ${VARNISH_LISTEN_ADDRESS}:${VARNISH_LISTEN_PORT} \
+  -f ${VARNISH_VCL_CONF} \
+  -T ${VARNISH_ADMIN_LISTEN_ADDRESS}:${VARNISH_ADMIN_LISTEN_PORT} \
+  -t ${VARNISH_TTL} \
+  -S ${VARNISH_SECRET_FILE} \
+  -s ${VARNISH_STORAGE} \
+  -p thread_pool_min=${VARNISH_MIN_THREADS} \
+  -p thread_pool_max=${VARNISH_MAX_THREADS} \
+  -p thread_pool_timeout=${VARNISH_THREAD_TIMEOUT} \
+  -p thread_pool_add_delay=${VARNISH_THREAD_POOL_ADD_DELAY} \
+  -p timeout_idle=65 \
+  -p vcc_allow_inline_c=true \
+  -F
