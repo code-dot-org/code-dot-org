@@ -1,5 +1,4 @@
 vcl 4.0;
-include "/etc/varnish/accept-language.vcl";
 import cookie;
 import header;
 import directors;
@@ -122,10 +121,7 @@ if(req.http.Cookie) {
 }
 ###
 
-# Normalize Accept-Language header into X-Varnish-Accept-Language for better cache hit rates.
-C{
-  vcl_rewrite_accept_language(ctx);
-}C
+# TODO: Normalize Accept-Language header into X-Varnish-Accept-Language for better cache hit rates.
 
 # Collapse cookie-extracted language setting into X-Varnish-Accept-Language header if present.
 if (req.http.X-Cookie-language_) {
