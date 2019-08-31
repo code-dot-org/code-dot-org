@@ -5,8 +5,6 @@ SSL_HOSTNAME_MISMATCH_REGEX = /does not match the server certificate/
 
 # Helper which fetches the specified URL, optionally caching and following redirects.
 module ProxyHelper
-  DASHBOARD_IP_ADDRESS = IPAddr.new(IPSocket.getaddress(CDO.dashboard_hostname))
-
   def render_proxied_url(
     location,
     allowed_content_types:,
@@ -132,7 +130,7 @@ module ProxyHelper
 
   # Wrap constant in a method so it can be stubbed in a test.
   def dashboard_ip_address
-    DASHBOARD_IP_ADDRESS
+    @@dashboard_ip_address ||= IPAddr.new(IPSocket.getaddress(CDO.dashboard_hostname)) rescue nil
   end
   module_function :dashboard_ip_address
 
