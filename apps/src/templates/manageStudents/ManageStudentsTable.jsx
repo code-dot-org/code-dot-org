@@ -229,9 +229,7 @@ class ManageStudentsTable extends Component {
   };
 
   ageFormatter = (age, {rowData}) => {
-    const editedValue = rowData.isEditing
-      ? this.props.editingData[rowData.id].age
-      : 0;
+    const editedValue = rowData.isEditing ? rowData.editingData.age : 0;
     return (
       <ManageStudentsAgeCell
         age={age}
@@ -243,9 +241,7 @@ class ManageStudentsTable extends Component {
   };
 
   genderFormatter = (gender, {rowData}) => {
-    const editedValue = rowData.isEditing
-      ? this.props.editingData[rowData.id].gender
-      : '';
+    const editedValue = rowData.isEditing ? rowData.editingData.gender : '';
     return (
       <ManageStudentsGenderCell
         gender={gender}
@@ -257,9 +253,7 @@ class ManageStudentsTable extends Component {
   };
 
   nameFormatter = (name, {rowData}) => {
-    const editedValue = rowData.isEditing
-      ? this.props.editingData[rowData.id].name
-      : '';
+    const editedValue = rowData.isEditing ? rowData.editingData.name : '';
     return (
       <ManageStudentsNameCell
         id={rowData.id}
@@ -275,7 +269,7 @@ class ManageStudentsTable extends Component {
 
   actionsFormatter = (actions, {rowData}) => {
     let disableSaving = rowData.isEditing
-      ? this.props.editingData[rowData.id].name.length === 0
+      ? rowData.editingData.name.length === 0
       : false;
     return (
       <ManageStudentsActionsCell
@@ -345,10 +339,10 @@ class ManageStudentsTable extends Component {
 
   projectSharingFormatter = (projectSharing, {rowData}) => {
     let disabled = rowData.isEditing
-      ? this.props.editingData[rowData.id].age.length === 0
+      ? rowData.editingData.age.length === 0
       : true;
     const editedValue = rowData.isEditing
-      ? this.props.editingData[rowData.id].sharingDisabled
+      ? rowData.editingData.sharingDisabled
       : true;
 
     return (
@@ -548,11 +542,15 @@ class ManageStudentsTable extends Component {
     const columns = this.getColumns(sortable);
     const sortingColumns = this.getSortingColumns();
 
+    const decoratedRows = this.props.studentData.map(rowData => ({
+      ...rowData,
+      editingData: this.props.editingData[rowData.id]
+    }));
     const sortedRows = sort.sorter({
       columns,
       sortingColumns,
       sort: sortRows
-    })(this.props.studentData);
+    })(decoratedRows);
 
     const {
       addStatus,
