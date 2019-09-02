@@ -12,7 +12,7 @@ import {ScholarshipDropdownOptions} from '@cdo/apps/generated/pd/scholarshipInfo
 import {SubjectNames} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 
 const CSF = 'CS Fundamentals';
-const DEEP_DIVE = 'Deep Dive';
+const DEEP_DIVE = SubjectNames.SUBJECT_CSF_201;
 const NA = 'N/A';
 const LOCAL_SUMMER = SubjectNames.SUBJECT_SUMMER_WORKSHOP;
 

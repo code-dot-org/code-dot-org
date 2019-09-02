@@ -182,8 +182,14 @@ class LevelsController < ApplicationController
     params[:level][:maze_data] = params[:level][:maze_data].to_json if type_class <= Grid
     params[:user] = current_user
 
+    create_level_params = level_params
+
+    # Give platformization partners permission to edit any levels they create.
+    editor_experiment = Experiment.get_editor_experiment(current_user)
+    create_level_params[:editor_experiment] = editor_experiment if editor_experiment
+
     begin
-      @level = type_class.create_from_level_builder(params, level_params)
+      @level = type_class.create_from_level_builder(params, create_level_params)
     rescue ArgumentError => e
       render(status: :not_acceptable, text: e.message) && return
     rescue ActiveRecord::RecordInvalid => invalid
