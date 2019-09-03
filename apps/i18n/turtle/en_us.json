@@ -1,4 +1,5 @@
 {
+  "backward": "backward",
   "blocksUsed": "Blocks used: %1",
   "branches": "branches",
   "catColour": "Color",
@@ -39,6 +40,7 @@
   "drawLowerWave": "draw lower wave",
   "drawSticker": "draw sticker",
   "drawStickerWithSize": "draw sticker with size",
+  "forward": "forward",
   "heightParameter": "height",
   "hideTurtle": "hide artist",
   "jump": "jump",
