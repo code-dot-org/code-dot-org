@@ -717,7 +717,6 @@ exports.install = function(blockly, blockInstallOptions) {
   };
 
   blockly.Blocks.jump = {
-    // debugger;
     // Block for moving forward or backwards.
     helpUrl: '',
     init: function() {
@@ -730,7 +729,7 @@ exports.install = function(blockly, blockInstallOptions) {
             'DIR'
           );
         },
-        ['BY', 'Number', blockly.ALIGN_RIGHT],
+        ['VALUE', 'Number', blockly.ALIGN_RIGHT],
         blockly.ALIGN_RIGHT
       );
       this.setInputsInline(true);
