@@ -277,6 +277,11 @@ function levelKeyList(state = {}, action) {
 function levelNameToIdMap(state = {}, action) {
   switch (action.type) {
     case INIT: {
+      if (!action.levelKeyList) {
+        // This can be falsy if the new editor experiment is not enabled
+        return state;
+      }
+
       const levelNameToIdMap = {};
       Object.keys(action.levelKeyList).forEach(levelId => {
         const levelKey = action.levelKeyList[levelId];
