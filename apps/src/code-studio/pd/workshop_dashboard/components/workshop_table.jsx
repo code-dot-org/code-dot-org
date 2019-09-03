@@ -296,7 +296,7 @@ export default class WorkshopTable extends React.Component {
           state === 'Ended' ||
           ([CSD, CSP].includes(course) &&
             subject !== SubjectNames.SUBJECT_FIT) ||
-          (course === CSF && subject === 'Deep Dive')
+          (course === CSF && subject === SubjectNames.SUBJECT_CSF_201)
         }
       />
     );
