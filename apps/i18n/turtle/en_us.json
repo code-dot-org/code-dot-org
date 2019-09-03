@@ -62,6 +62,7 @@
   "moveBackward": "move backward by",
   "moveEastTooltip": "Moves the artist east.",
   "moveForward": "move forward by",
+  "moveToDirectionByPixels": "move %1 by %2 pixels",
   "moveForwardTooltip": "Moves the artist forward.",
   "moveNorthTooltip": "Moves the artist north.",
   "moveNortheastTooltip": "Moves the artist northeast.",
