@@ -23,6 +23,9 @@ const styles = {
   tableName: {
     fontFamily: '"Gotham 5r", sans-serif',
     color: color.cyan
+  },
+  collapsibleContainer: {
+    paddingLeft: '8px'
   }
 };
 
@@ -55,7 +58,7 @@ class LibraryCategory extends React.Component {
           </span>
         </a>
         {!this.state.collapsed && (
-          <div>
+          <div style={styles.collapsibleContainer}>
             <span style={styles.categoryDescription}>
               {this.props.description}
             </span>
