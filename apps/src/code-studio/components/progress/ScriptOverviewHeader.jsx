@@ -23,7 +23,6 @@ import AssignmentVersionSelector, {
 } from '@cdo/apps/templates/teacherDashboard/AssignmentVersionSelector';
 import {assignmentVersionShape} from '@cdo/apps/templates/teacherDashboard/shapes';
 import StudentFeedbackNotification from '@cdo/apps/templates/feedback/StudentFeedbackNotification';
-import experiments from '@cdo/apps/util/experiments';
 import VerifiedResourcesNotification from '@cdo/apps/templates/courseOverview/VerifiedResourcesNotification';
 
 const SCRIPT_OVERVIEW_WIDTH = 1100;
@@ -212,9 +211,7 @@ class ScriptOverviewHeader extends Component {
             width={SCRIPT_OVERVIEW_WIDTH}
           />
         )}
-        {experiments.isEnabled(experiments.FEEDBACK_NOTIFICATION) && userId && (
-          <StudentFeedbackNotification studentId={userId} />
-        )}
+        {userId && <StudentFeedbackNotification studentId={userId} />}
         {displayVerifiedResources && (
           <VerifiedResourcesNotification width={SCRIPT_OVERVIEW_WIDTH} />
         )}
