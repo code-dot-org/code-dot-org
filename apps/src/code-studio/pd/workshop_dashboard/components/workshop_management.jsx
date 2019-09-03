@@ -69,7 +69,7 @@ export class WorkshopManagement extends React.Component {
 
     let new_csf_201 =
       workshop_date >= new Date('2019-05-20') &&
-      this.props.subject === 'Deep Dive';
+      this.props.subject === SubjectNames.SUBJECT_CSF_201;
 
     return (
       new_local_summer_and_teachercon || new_facilitator_weekend || new_csf_201
