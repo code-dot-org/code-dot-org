@@ -116,6 +116,7 @@ class FollowersController < ApplicationController
   end
 
   def load_section
+    p request.path
     if params[:section_code].blank?
       if request.path != student_user_new_path(section_code: params[:section_code])
         # if user submitted the section form without a code /join
