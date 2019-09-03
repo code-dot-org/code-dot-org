@@ -102,7 +102,7 @@ module Pd::SurveyPipeline
         form_questions.each_pair do |_, q_content|
           q_name = q_content[:name]
           next if result.key? q_name
-          next if categories.none? {|category| q_name.start_with? category}
+          next if categories.none? {|category| q_name.start_with? "#{category}_"}
 
           result[q_name] = q_content[:text]
         end
@@ -126,7 +126,7 @@ module Pd::SurveyPipeline
         # Sort question names by question texts so order of questions is always in
         # alphabetical order.
         sorted_q_names = questions.
-          select {|q_name, _| q_name.start_with?(category) && q_name != category}.
+          select {|q_name, _| q_name.start_with? "#{category}_"}.
           sort_by {|_, value| value}.
           pluck(0)
 
@@ -167,7 +167,7 @@ module Pd::SurveyPipeline
         scope = summary[:workshop_id] ? :this_workshop : :all_my_workshops
         q_name = summary[:name]
         result[q_name] ||= {}
-        result[q_name][scope] = summary[:reducer_result]
+        result[q_name][scope] = summary[:reducer_result].round(2)
       end
 
       result
@@ -182,7 +182,7 @@ module Pd::SurveyPipeline
     def self.get_category_averages(categories, question_averages)
       result = {}
       categories.each do |category|
-        category_scores = question_averages.select {|q_name, _| q_name.start_with? category}
+        category_scores = question_averages.select {|q_name, _| q_name.start_with? "#{category}_"}
         this_workshop_scores = category_scores.values.pluck(:this_workshop).compact
         all_workshop_scores = category_scores.values.pluck(:all_my_workshops).compact
 
