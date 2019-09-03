@@ -90,8 +90,7 @@ class FollowersController < ApplicationController
     end
 
     Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
-      if @user.save
-        @section.add_student @user
+      if @user.save && @section&.add_student(@user)
         sign_in(:user, @user)
         redirect_to root_path, notice: I18n.t('follower.registered', section_name: @section.name)
         return
