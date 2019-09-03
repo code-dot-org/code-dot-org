@@ -228,6 +228,16 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_equal script, assigns(:script)
   end
 
+  test 'platformization partner cannot create script' do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    sign_in @platformization_partner
+    post :create, params: {
+      script: {name: 'test-script-create'},
+      script_text: ''
+    }
+    assert_response :forbidden
+  end
+
   test "platformization partner cannot edit our scripts" do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     sign_in @platformization_partner
