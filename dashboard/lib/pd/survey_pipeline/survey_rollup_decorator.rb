@@ -54,19 +54,22 @@ module Pd::SurveyPipeline
       report[:facilitator_averages][facilitator_name].merge! category_averages
 
       # Count number of submissions contributed to category average scores.
-      submission_type =
-        data[:facilitator_submissions] ? 'Facilitator-specific submissions' : 'Workshop submissions'
-
       report[:facilitator_response_counts] = {
         this_workshop: {facilitator_id => {}},
         all_my_workshops: {facilitator_id => {}}
       }
-      report[:facilitator_response_counts][:this_workshop][facilitator_id][submission_type] =
-        get_submission_counts(
-          data[:question_answer_joined], data[:question_categories], data[:current_workshop_id]
-        )
-      report[:facilitator_response_counts][:all_my_workshops][facilitator_id][submission_type] =
-        get_submission_counts data[:question_answer_joined], data[:question_categories]
+
+      if data[:facilitator_submissions].present? || data[:workshop_submissions].present?
+        submission_type = data[:facilitator_submissions].present? ?
+          'Facilitator-specific submissions' : 'Workshop submissions'
+
+        report[:facilitator_response_counts][:this_workshop][facilitator_id][submission_type] =
+          get_submission_counts(
+            data[:question_answer_joined], data[:question_categories], data[:current_workshop_id]
+          )
+        report[:facilitator_response_counts][:all_my_workshops][facilitator_id][submission_type] =
+          get_submission_counts data[:question_answer_joined], data[:question_categories]
+      end
 
       report
     end
