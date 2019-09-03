@@ -71,11 +71,9 @@ en:
   heading_x_of_y: "%{heading} (page %{x} of %{y})"
   add_teacher_form:
     code:
-      label: 'Add a teacher:'
       placeholder: "Section Code (ABCDEF)"
       instructions: "Please enter the code shared with you by your teacher. It's a 6 letter code like \"ABCDEF\"."
       instructions_short: "Enter your 6 letter section code"
-    submit: 'Add teacher'
   add_hint_form:
     placeholder: 'Please enter your hint here'
     submit: 'Add hint'
