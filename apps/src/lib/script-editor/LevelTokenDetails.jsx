@@ -6,7 +6,6 @@ import {
   addVariant,
   removeVariant,
   setActiveVariant,
-  hasVariants,
   setField,
   NEW_LEVEL_ID
 } from './editorRedux';
@@ -85,13 +84,19 @@ export class UnconnectedLevelTokenDetails extends Component {
     setActiveVariant: PropTypes.func.isRequired,
     setField: PropTypes.func.isRequired,
     level: levelShape.isRequired,
-    stagePosition: PropTypes.number.isRequired,
-    hasVariants: PropTypes.bool.isRequired
+    stagePosition: PropTypes.number.isRequired
   };
 
-  state = {
-    showBlankProgression: false
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      showBlankProgression: false,
+      // Variants are deprecated. Only show them if they are already in use.
+      // If the number of variants is reduced to 1, keep showing the Add
+      // Variants button for the rest of this editing session.
+      showAddVariants: props.level.ids.length > 1
+    };
+  }
 
   containsLegacyLevel() {
     return this.props.level.ids.some(id =>
@@ -151,6 +156,7 @@ export class UnconnectedLevelTokenDetails extends Component {
   };
 
   render() {
+    const {showBlankProgression, showAddVariants} = this.state;
     const scriptLevelOptions = ['assessment', 'named', 'challenge'];
     return (
       <div style={styles.levelTokenActive}>
@@ -253,7 +259,7 @@ export class UnconnectedLevelTokenDetails extends Component {
         ))}
         {/* We don't currently support editing progression names here, but do
          * show the current progression if we have one. */}
-        {(this.props.level.progression || this.state.showBlankProgression) && (
+        {(this.props.level.progression || showBlankProgression) && (
           <div style={styles.progression}>
             <hr style={styles.divider} />
             <span style={styles.levelFieldLabel}>Progression name:</span>
@@ -269,18 +275,17 @@ export class UnconnectedLevelTokenDetails extends Component {
           </div>
         )}
         <hr style={styles.divider} />
-        {this.props.hasVariants &&
-          !this.props.level.ids.includes(NEW_LEVEL_ID) && (
-            <button
-              onMouseDown={this.handleAddVariant}
-              className="btn"
-              style={styles.button}
-              type="button"
-            >
-              <i style={{marginRight: 7}} className="fa fa-plus-circle" />
-              Add Variant
-            </button>
-          )}
+        {showAddVariants && !this.props.level.ids.includes(NEW_LEVEL_ID) && (
+          <button
+            onMouseDown={this.handleAddVariant}
+            className="btn"
+            style={styles.button}
+            type="button"
+          >
+            <i style={{marginRight: 7}} className="fa fa-plus-circle" />
+            Add Variant
+          </button>
+        )}
         {!this.props.level.progression && !this.state.showBlankProgression && (
           <button
             onMouseDown={this.handleAddProgression}
@@ -300,8 +305,7 @@ export class UnconnectedLevelTokenDetails extends Component {
 export default connect(
   state => ({
     levelKeyList: state.levelKeyList,
-    levelNameToIdMap: state.levelNameToIdMap,
-    hasVariants: hasVariants(state)
+    levelNameToIdMap: state.levelNameToIdMap
   }),
   dispatch => ({
     chooseLevel(stage, level, variant, value) {

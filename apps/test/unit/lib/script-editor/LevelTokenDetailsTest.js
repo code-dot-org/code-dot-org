@@ -69,7 +69,6 @@ describe('LevelTokenDetails', () => {
       addVariant,
       removeVariant,
       setActiveVariant,
-      hasVariants: true,
       setField,
       level: defaultLevel,
       stagePosition: 5
