@@ -5,14 +5,7 @@
 
 class FollowersController < ApplicationController
   before_action :authenticate_user!, except: [:student_user_new, :student_register]
-  before_action :load_section, only: [:create, :create_sync, :student_user_new, :student_register]
-
-  # join a section as a logged in student
-  def create
-    @section.add_student current_user
-
-    redirect_to redirect_url, notice: I18n.t('follower.added_teacher', name: @section.teacher.name)
-  end
+  before_action :load_section, only: [:student_user_new, :student_register]
 
   # GET /join/XXXXXX
   def student_user_new
