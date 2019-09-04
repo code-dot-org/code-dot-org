@@ -1,13 +1,12 @@
 ---
-title: <%= hoc_s(:title_stats).inspect %>
+title: Blurbs and useful stats
 layout: wide
 nav: promote_nav
 ---
 
-
 <a id="blurb"></a>
 
-<%= view :signup_button %>
+{{ signup_button }}
 
 # Blurbs and useful stats
 
@@ -41,7 +40,7 @@ With technology changing every industry on the planet, computing knowledge has b
 
 #### Code.org-ის შესახებ
 
-Code.org არის 501c3 არამომგებიანი ორგანიზაცია, რომლის მიზანიცაა ჩართოს პროგრამირების სწავლაში რაც შეიძლება მეტი მოსწავლე, მათ შორის ქალები და ეთნიკური უმცირესობები, რომლებიც დღეს განსაკუთრებით იშვიათად სწავლობენ პროგრამირებას. Its vision is that every student in every school has the opportunity to learn computer programming. 2013 წელს გაშვების შემდეგ, Code.org-მა კოდის ერთი საათის კამპანია შექმნა – რომელმაც კომპიუტერული მეცნიერება 100 მილიონზე მეტ მოსწავლეს გააცნო. 70 სასკოლო ოლქთან თანამშრომლობის შედეგად კი კომპიუტერული მეცნიერების პროგრამა ქვეყნის მასშტაბით გავრცელდა. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. დამატებითი ინფორმაციისთვის გთხოვთ, ეწვიეთ: [<%= resolve_url('code.org') %>](%= resolve_url('https://code.org') %).
+Code.org არის 501c3 არამომგებიანი ორგანიზაცია, რომლის მიზანიცაა ჩართოს პროგრამირების სწავლაში რაც შეიძლება მეტი მოსწავლე, მათ შორის ქალები და ეთნიკური უმცირესობები, რომლებიც დღეს განსაკუთრებით იშვიათად სწავლობენ პროგრამირებას. Its vision is that every student in every school has the opportunity to learn computer programming. 2013 წელს გაშვების შემდეგ, Code.org-მა კოდის ერთი საათის კამპანია შექმნა – რომელმაც კომპიუტერული მეცნიერება 100 მილიონზე მეტ მოსწავლეს გააცნო. 70 სასკოლო ოლქთან თანამშრომლობის შედეგად კი კომპიუტერული მეცნიერების პროგრამა ქვეყნის მასშტაბით გავრცელდა. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. For more information, please visit: [code.org]({{ codeorg_link }}).
 
 ## Share these on social media and in emails
 
@@ -51,6 +50,6 @@ Code.org არის 501c3 არამომგებიანი ორგა
 
 ## Infographics
 
-<%= view :stats_carousel %>
+{{ stats_carousel }}
 
-<%= view :signup_button %>
+{{ signup_button }}

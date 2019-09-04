@@ -1,9 +1,10 @@
 ---
-title: <%= hoc_s(:title_how_to_volunteers).inspect %>
+title: Guía para voluntarios de la Hora del Código
 layout: wide
 nav: how_to_nav
 ---
-<%= view :signup_button %>
+
+{{ signup_button }}
 
 # Guía para voluntarios
 
@@ -43,11 +44,11 @@ Usted puede ser un presentador invitado en una clase o ayudar a un/a maestro/a c
 
 <ol>
   <li>
-    <a href="%= resolve_url('/promote/resources#help-schools') %">Envíele este email</a> al/la maestro/a de su hijo/a ofreciéndole ayuda para llevar a cabo la Hora de Código.
+    <a href="{{ promote/help_schools }}">Send this email</a> to your child’s teacher offering to help them run an Hour of Code.
   </li>
   
   <li>
-    Ofrezca auspiciar un evento de Hora de Código después de escuela en una escuela local. <a href="%= resolve_url('/how-to') %">Use esta Guía de Cómo Hacer</a> para ayudarse.
+    Offer to host an Hour of Code event after school at a local school. <a href="{{ urls/how_to_guide }}">Use this How-To Guide</a> to help you plan.
   </li>
 </ol>
 
@@ -56,7 +57,7 @@ Usted puede ser un presentador invitado en una clase o ayudar a un/a maestro/a c
 </h2>
 
 <p>
-  Hábleles a sus amigos y compañeros de trabajo acerca de Hora de Código. Tenemos miles de maestros registrados que están buscando voluntarios, así que pídales que se <a href="https://code.org/volunteer">inscriban como voluntarios</a>. Pídale a su empleador que participe. <a href="%= resolve_url('/promote/resources#email') %">Envíe este correo electrónico</a> a su gerente o director general.
+  Hábleles a sus amigos y compañeros de trabajo acerca de Hora de Código. Tenemos miles de maestros registrados que están buscando voluntarios, así que pídales que se <a href="https://code.org/volunteer">inscriban como voluntarios</a>. Pídale a su empleador que participe. <a href="{{ promote/sample_emails }}">Send this email</a> to your manager or the CEO to get everyone on board.
 </p>
 
 <h2>
@@ -65,13 +66,13 @@ Usted puede ser un presentador invitado en una clase o ayudar a un/a maestro/a c
 
 <ul>
   <li>
-    <a href="%= resolve_url('/promote/resources#videos') %">Seleccione un video</a> para mostrar y ayudar a la clase a enfocarse y para que se emocionen con la Hora de Código.
+    <a href="{{ promote/videos }}">Pick out a video</a> to show to help focus the class and get them excited to do an Hour of Code.
   </li>
   <li>
     Revise las <a href="/files/hoc-volunteer-toolkit.pdf">Herramientas para Voluntarios de la Hora de Código</a> que incluyen un resumen, cronograma, preparación de materiales y material de mercadotecnia. ¡Todo lo que usted necesita para estar listo/a para su experiencia como voluntario/a!
   </li>
   <li>
-    Si va a estar haciendo una tutoría durante su sesión, emplee 30 minutos intentando por lo menos una <a href="%= resolve_url('/learn') %">tutoría de Hora de Código</a>.
+    If you're going to be doing a tutorial during your session, spend 30 minutes trying at least one <a href="{{ urls/learn }}">Hour of Code tutorial</a>.
   </li>
   <li>
     Si vas a visitar una escuela, complete cualquier verificación de antecedentes o papeleo requerido.
@@ -119,7 +120,7 @@ Usted puede ser un presentador invitado en una clase o ayudar a un/a maestro/a c
     </td>
     
     <td>
-      <a href="%= resolve_url('promote/resources#videos') %">Muestra un video inspirador</a>.
+      <a href="{{ promote/videos }}">Show an inspirational video</a>.
     </td>
   </tr>
   
@@ -244,5 +245,5 @@ Usted puede ser un presentador invitado en una clase o ayudar a un/a maestro/a c
           Code.org y nuestros patrocinadores diseñamos todas las actividades de la Hora del Código para compromenter a los estudiantes de todos los niveles escolares (K-12), niños y niñas, de todos los orígenes. Todos, incluso adultos puede divertirse participando!
         </p>
         <p>
-          <%= view :signup_button %>
+          {{ signup_button }}
         </p>

@@ -228,6 +228,34 @@ class FollowersControllerTest < ActionController::TestCase
     assert @chris_section.students.include? @student
   end
 
+  test "student_register prompts user to create an account if not signed in" do
+    assert_does_not_create(User, Follower) do
+      post :student_register, params: {section_code: @chris_section.code}
+    end
+
+    assert_template 'followers/student_user_new'
+    assert_select '#signup'
+  end
+
+  test "student_register with no section when signed in" do
+    sign_in @student
+    assert_does_not_create(User, Follower) do
+      post :student_register, params: {section_code: ''}
+    end
+
+    assert_template 'followers/student_user_new'
+    assert_select 'input#section_code'
+  end
+
+  test "student_register with no section when not signed in" do
+    assert_does_not_create(User, Follower) do
+      post :student_register, params: {section_code: ''}
+    end
+
+    assert_template 'followers/student_user_new'
+    assert_select 'input#section_code'
+  end
+
   test "create with section code" do
     sign_in @student
 

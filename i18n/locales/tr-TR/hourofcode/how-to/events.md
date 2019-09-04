@@ -1,9 +1,10 @@
 ---
-title: <%= hoc_s(:title_how_to_events).inspect %>
+title: Kodlama Saati Etkinlik Rehberi
 layout: wide
 nav: how_to_nav
 ---
-<%= view :signup_button %>
+
+{{ signup_button }}
 
 # How to organize an Hour of Code assembly or event
 
@@ -14,13 +15,13 @@ nav: how_to_nav
 ## 1. Etkinliğiniz için hazırlanın
 
 - Yerine, gününe ve saatine karar verin.
-- Send [a letter](https://hourofcode.com/promote/resources#sample-emails) to your local mayor, member of Congress, governor, or influential business person and invite them to speak. Check out our [how-to toolkit](%=localized_file('/files/elected-official.pdf')%) when hosting an elected official during an Hour of Code for more info.
-- Medyayı (yerel haber kanalları, gazeteler, eğitim ve teknoloji bloggerları,... vb.) davet edin. Bu konuda yardım için [basın kiti](%= resolve_url('/promote/press-kit') %)mizi inceleyin.
+- Send [a letter](https://hourofcode.com/promote/resources#sample-emails) to your local mayor, member of Congress, governor, or influential business person and invite them to speak. Check out our [how-to toolkit]({{ localized_files/elected_official }}) when hosting an elected official during an Hour of Code for more info.
+- Invite media/press. i.e. local news station, newspaper, education/tech bloggers. See our [press kit]({{ promote/press_kit_url }}) for help.
 
 ## 2. Etkinlik esnasında
 
-- Etkinliğinizi [ilham verici videolarla](%= resolve_url('/promote/resources#videos') %) başlatın.
-- Bu [istatistikleri ve grafikleri](%= resolve_url('/promote/stats') %) kullanarak bilgisayar biliminin öneminden bahseden bir giriş konuşması yapın.   
+- Kick off your event with one of our [inspirational videos]({{ promote/videos }}).
+- Give an intro overviewing the importance of computer science, using these [stats and infographics]({{ promote/stats_url }}).   
       
     
 - **Other event ideas**: 
@@ -46,7 +47,7 @@ Consider hosting a K-5 evening event and invite parents to join their students f
 
 **Event:** School-wide Computer Science Education Week kick-off assembly
 
-**Date:** <%= campaign_date('start-short') %> (start of Computer Science Education Week)
+**Date:** {{ campaign_date/start_short }} (start of Computer Science Education Week)
 
 **Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
 
@@ -56,11 +57,11 @@ Consider hosting a K-5 evening event and invite parents to join their students f
 
 | Saat          | Etkinlik                                                                                                                                                          |
 | ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 10.00 - 10.05 | Open with one of our [inspirational videos](%= resolve_url('/promote/resources#videos') %).                                                                       |
-| 10.05 - 10.15 | Okul müdürü bilgisayar bilimlerinin öneminden bahseden bir açılış konuşması yapar. Bu [istatistik ve grafikleri](%= resolve_url('/promote/stats') %) kullanın.    |
+| 10.00 - 10.05 | Open with one of our [inspirational videos]({{ promote/videos }}).                                                                                                |
+| 10.05 - 10.15 | Principal gives an intro overviewing the importance of computer science. Use these [stats and infographics]({{ promote/stats_url }}).                             |
 | 10.15 - 10.30 | Misafir konuşmacı biraz kendisinden, biraz da teknolojinin ve bilgisayar biliminin günlük hayatımızda nasıl önemli bir rol aldığından bahseden bir konuşma yapar. |
 | 10.30 - 10.40 | Öğrenciler okul için Hour of Code gösterisi yaparlar. Eğlence zamanı: öğrencilere okul müdürüne, politikacılara ve diğer öğrencilere öğretmesini söyleyin!        |
 | 10.40 - 11.00 | Öğrenciler bilgisayardan bağımsız bir aktivite göstererek bilgisayar biliminin bilgisayar olmadan da öğretilebildiğini gösterirler.                               |
 | 11.00 - 11.05 | Okul çapındaki bu etkinliği düzenleyen öğretmen kapanış konuşmasını yapar.                                                                                        |
 
-<%= view :signup_button %>
+{{ signup_button }}

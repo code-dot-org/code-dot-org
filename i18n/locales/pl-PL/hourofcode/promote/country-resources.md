@@ -1,8 +1,9 @@
 ---
 title: <%= hoc_s(:title_country_resources).inspect %>
-layout: wide
+layout: szeroki
 nav: promote_nav
 ---
+
 <%= view :signup_button %>
 
 <% if @country == 'la' %>
@@ -51,7 +52,7 @@ p>[**Ora E Kodimit (5 min)**](https://www.youtube.com/embed/AtVzbUZqZcI)
 
 <
 
-p>[**Join Nova Scotia for the Hour of Code (3 min)**](https://www.youtube.com/watch?v=k3cg1e27zQM)
+p > [**Dołącz do Nowej Szkocji na Godzinę Kodowania (3 min)**](https://www.youtube.com/watch?v=k3cg1e27zQM)
 
 <% elsif @country == 'id' %>
 
@@ -65,9 +66,9 @@ Mari bersama kita dukung gerakan Hour of Code di Indonesia!
 
 <
 
-p>[**Hour of Code(アワーオブコード) 2015紹介ビデオ (1 min)**](https://www.youtube.com/watch?v=_C9odNcq3uQ)
+p>[**Godzina Kodowania(アワーオブコード) 2015紹介ビデオ (1 min)**](https://www.youtube.com/watch?v=_C9odNcq3uQ)
 
-[Hour of Code Lesson Guide](/files/HourofCodeLessonGuideJapan.pdf)
+[Przewodnik po lekcjach Godziny Kodowania](/files/HourofCodeLessonGuideJapan.pdf)
 
 <% elsif @country == 'nl' %>
 
@@ -78,7 +79,7 @@ p>[**Hour of Code(アワーオブコード) 2015紹介ビデオ (1 min)**](https
 
 <
 
-p>[**Friends of Technology Hour of Code (2 min)**](https://www.youtube.com/embed/0hfb0d5GxSw)
+p>[**Przyjaciele Technologii Godziny kodowania (2 min)**](https://www.youtube.com/embed/0hfb0d5GxSw)
 
 <% elsif @country == 'pk' %>
 
@@ -109,7 +110,7 @@ Będziemy gościć wiele zabawnych, godzinnych samouczków, utworzonych przez r�
 
 ## 2) Zaplanuj potrzebny sprzęt - komputery nie są niezbędne
 
-The best Hour of Code experience will be with Internet-connected computers. But you don’t need a computer for every participant, and can even do the Hour of Code without a computer at all.
+Najlepsze efekty związane z Godziną Kodowania osiąga się z komputerami przyłączonymi do Internetu. Ale nie potrzebujesz komputera dla każdego uczestnika, a nawet możesz przeprowadzić Godzinę Kodowania bez komputera.
 
 - **Przetestuj samouczki na szkolnych komputerach lub urządzeniach.** Upewnij się, że działają prawidłowo (z dźwiękiem i obrazem).
 - **Przeglądnij strony końcowe z gratulacjami**, aby sprawdzić, co uczniowie zobaczą, kiedy skończą.
@@ -122,13 +123,13 @@ The best Hour of Code experience will be with Internet-connected computers. But 
 
 ## 4) Zainspiruj uczniów - pokaż im film
 
-Show students an inspirational video to kick off the Hour of Code. Examples:
+Pokaż uczniom inspirujący film, aby wystartować z Godziną Kodowania. Przykłady:
 
 - Oryginalny film inaugurujący Code.org, z udziałem Billa Gatesa, Marka Zuckerberga i gwiazdy NBA Chrisa Bosha (Dostępne są wersje trwające [1 minutę](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minut](https://www.youtube.com/watch?v=nKIu9yen5nc) i [9 minut](https://www.youtube.com/watch?v=dU1xS07N-FA))
 - [Inauguracja Godziny Kodowania w 2013 roku](https://www.youtube.com/watch?v=FC5FbmsH4fw) lub [wideo z Godziny Kodowania w 2014 roku](https://www.youtube.com/watch?v=96B5-JGA9EQ)
 - [Prezydent Obama zachęcający wszystkich uczniów do nauki informatyki](https://www.youtube.com/watch?v=6XvmhE1J9PY)
 
-**Get your students excited - give them a short intro**
+**Spraw, by Twoi uczniowie byli podekscytowani - zrób im krótkie wprowadzenie**
 
 <% elsif @country == 'pe' %>
 

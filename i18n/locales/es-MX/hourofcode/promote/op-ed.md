@@ -1,15 +1,16 @@
 ---
-title: <%= hoc_s(:title_op_ed).inspect %>
+title: Ejemplo de un artículo de opinión que apoye la Semana por la Educación de las Ciencias de la Computación y la Hora del Código
 layout: wide
 nav: promote_nav
 ---
-<%= view :signup_button %>
+
+{{ signup_button }}
 
 # Escribe un artículo de opinión que apoye a la semana de la educación de ciencias de la computación
 
 ### Abajo está un ejemplo de un artículo de opinión que apoya la semana por la educación de la ciencia de la computación -y sus metas- que puede ser utilizado por legisladores estatales y locales, líderes de negocio, y otros.
 
-### Visita [advocacy.code.org](%= resolve_url('https://advocacy.code.org') %) para encontrar información específica del estado sobre la ciencia de la computación.
+### Visit [advocacy.code.org]({{ urls/advocacy }}) to find state specific information about computer science.
 
 * * *
 
@@ -43,6 +44,6 @@ Necesitamos reclutar más profesores de Ciencias de la Computación y promover s
 
 De acuerdo a la oficina de estadísticas laborales, para el año 2020 habrán 9.2 millones de puestos de trabajo en los campos STEM. La mitad de esos empleos — 4,6 millones — serán de Ciencias de la Computación o de tecnologías de la información. Y las Ciencias de la Computación son cada vez más un conocimiento fundamental para el siglo XXI. ¿Quién ocupará estos trabajos si a nuestros hijos no se les da la oportunidad de adquirir las habilidades necesarias?
 
-Esta semana, <%= campaign_date('full') %>, es la semana de Educación en Ciencias de la Computación. Escuelas por todo **[STATE]**, nuestros estudiantes participarán a nivel nacional en la Hora de Código, desmitificando el tema de las Ciencias de la Computación y esperamos despertar el gusto para que vayan y aprendan más. Yo me uniré a ellos, y le invito a unirse también. Todos deberíamos aprender a programar. Visita https://hourofcode.com/<%= @country %> para aprender más y para empezar. Y apoya nuestros esfuerzos para llevar las Ciencias de la Computación a más escuelas en **[STATE]**.
+This week, {{ campaign_date/full }}, is Computer Science Education Week. Escuelas por todo **[STATE]**, nuestros estudiantes participarán a nivel nacional en la Hora de Código, desmitificando el tema de las Ciencias de la Computación y esperamos despertar el gusto para que vayan y aprendan más. Yo me uniré a ellos, y le invito a unirse también. Todos deberíamos aprender a programar. Visit https://hourofcode.com/{{ country }} to learn more and get started. Y apoya nuestros esfuerzos para llevar las Ciencias de la Computación a más escuelas en **[STATE]**.
 
-<%= view :signup_button %>
+{{ signup_button }}

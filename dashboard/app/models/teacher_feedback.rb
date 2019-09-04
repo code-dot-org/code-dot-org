@@ -19,7 +19,6 @@
 #
 # Indexes
 #
-#  index_feedback_on_student_and_level                 (student_id,level_id)
 #  index_feedback_on_student_and_level_and_teacher_id  (student_id,level_id,teacher_id)
 #
 

@@ -168,7 +168,7 @@ export default class TeacherHomepage extends Component {
     const showSpecialAnnouncement = false;
 
     // Hide the regular announcement/notification for now.
-    const showAnnouncement = false;
+    const showAnnouncement = true;
 
     return (
       <div>

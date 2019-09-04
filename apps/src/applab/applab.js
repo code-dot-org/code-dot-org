@@ -405,6 +405,14 @@ Applab.init = function(config) {
   );
   config.getGeneratedProperties = getGeneratedProperties;
 
+  // Set information about the current Applab level being displayed.
+  getStore().dispatch(
+    actions.setLevelData({
+      name: config.level.name,
+      isStartMode: config.isStartMode
+    })
+  );
+
   // replace studioApp methods with our own
   studioApp().reset = this.reset.bind(this);
   studioApp().runButtonClick = this.runButtonClick.bind(this);
