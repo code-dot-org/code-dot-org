@@ -11,6 +11,8 @@ import {
 } from './editorRedux';
 import {levelShape} from './shapes';
 import LevelNameInput from './LevelNameInput';
+import ReactTooltip from 'react-tooltip';
+import _ from 'lodash';
 
 const styles = {
   checkbox: {
@@ -67,6 +69,16 @@ const styles = {
   progression: {
     paddingTop: 5
   }
+};
+
+const scriptLevelOptions = ['assessment', 'named', 'challenge'];
+
+const tooltipText = {
+  assessment:
+    'Visibly mark this level as an assessment, and show it in the Assessments tab in Teacher Dashboard.',
+  named:
+    'Show this level on a line by itself, with the Display Name of the level as the label.',
+  challenge: 'Show students the Challenge dialog when viewing this level.'
 };
 
 const ArrowRenderer = ({onMouseDown}) => {
@@ -157,19 +169,31 @@ export class UnconnectedLevelTokenDetails extends Component {
 
   render() {
     const {showBlankProgression, showAddVariants} = this.state;
-    const scriptLevelOptions = ['assessment', 'named', 'challenge'];
+    const tooltipIds = {};
+    scriptLevelOptions.forEach(option => {
+      tooltipIds[option] = _.uniqueId();
+    });
     return (
       <div style={styles.levelTokenActive}>
         <span className="level-token-checkboxes">
           {scriptLevelOptions.map(option => (
-            <label key={option} style={styles.checkboxLabel}>
+            <label
+              key={option}
+              style={styles.checkboxLabel}
+              data-for={tooltipIds[option]}
+              data-tip
+            >
               <input
                 type="checkbox"
                 style={styles.checkboxInput}
                 checked={!!this.props.level[option]}
                 onChange={this.handleCheckboxChange.bind(this, option)}
               />
-              &nbsp;<span style={styles.checkboxText}>{option}</span>
+              &nbsp;
+              <span style={styles.checkboxText}>{option}</span>
+              <ReactTooltip id={tooltipIds[option]} delayShow={500}>
+                {tooltipText[option]}
+              </ReactTooltip>
             </label>
           ))}
         </span>
