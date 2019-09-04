@@ -38,6 +38,8 @@ const styles = {
     margin: '7px 0 10px 0'
   },
   progressionTextInput: {
+    width: 550,
+    verticalAlign: 'baseline',
     marginBottom: 0
   },
   checkboxLabel: {
@@ -296,7 +298,7 @@ export class UnconnectedLevelTokenDetails extends Component {
               data-for={tooltipIds.progression}
               data-tip
             >
-              Progression name:
+              Progression:
             </span>
             <ReactTooltip id={tooltipIds.progression} delayShow={500}>
               <div style={styles.tooltip}>{tooltipText.progression}</div>
@@ -307,7 +309,7 @@ export class UnconnectedLevelTokenDetails extends Component {
                 type="text"
                 onChange={event => this.handleFieldChange('progression', event)}
                 value={this.props.level.progression}
-                style={styles.textInput}
+                style={styles.progressionTextInput}
                 data-field-name="progression"
               />
             </span>

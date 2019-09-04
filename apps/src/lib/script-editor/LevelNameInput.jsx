@@ -17,6 +17,11 @@ const styles = {
     color: 'red',
     fontSize: 16,
     marginLeft: 6
+  },
+  textInput: {
+    width: 550,
+    verticalAlign: 'baseline',
+    marginBottom: 0
   }
 };
 
