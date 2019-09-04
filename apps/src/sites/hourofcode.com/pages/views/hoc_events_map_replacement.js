@@ -2,10 +2,10 @@
 
 $(document).ready(function() {
   // We keep some style elements as a Mapbox style for simplicity.
-  const style_path = 'mapbox://styles/codeorg/cjz36duae88ds1cp7ll7smx6s';
+  const stylePath = 'mapbox://styles/codeorg/cjz36duae88ds1cp7ll7smx6s';
   var map = new mapboxgl.Map({
     container: 'mapbox-map',
-    style: style_path,
+    style: stylePath,
     zoom: 1,
     minZoom: 1,
     center: [-98, 39]
@@ -30,14 +30,14 @@ $(document).ready(function() {
   map.on('load', function() {
     map.on('click', 'hoc-events', function(e) {
       var coordinates = e.features[0].geometry.coordinates.slice();
-      var organization_name = e.features[0].properties.organization_name;
+      var organizationName = e.features[0].properties.organization_name;
       var city = e.features[0].properties.city;
 
       if (popup) {
         popup.remove();
       }
       const popupText =
-        organization_name + (city.length > 0 ? ' (' + city + ')' : '');
+        organizationName + (city.length > 0 ? ' (' + city + ')' : '');
       popup = new mapboxgl.Popup({closeButton: false})
         .setLngLat(getPopupCoordinates(e.lngLat, coordinates))
         .setText(popupText)
@@ -46,7 +46,7 @@ $(document).ready(function() {
 
     map.on('click', 'hoc-special-events', function(e) {
       var coordinates = e.features[0].geometry.coordinates.slice();
-      var organization_name = e.features[0].properties.organization_name;
+      var organizationName = e.features[0].properties.organization_name;
       var city = e.features[0].properties.city;
       var event_description = e.features[0].properties.description;
 
@@ -54,7 +54,7 @@ $(document).ready(function() {
         popup.remove();
       }
       const popupText =
-        organization_name +
+        organizationName +
         (city.length > 0 ? ' (' + city + ')' : '') +
         '<br>' +
         event_description;
