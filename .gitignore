@@ -68,3 +68,15 @@ npm-debug.log
 /rebuild-code-studio
 /shared/js/node_modules/
 /tools/scripts/brokenLinkChecker/node_modules/
+.solargraph.yml
+/bin/log/
+/bin/sc
+/bin/sc-4.5.4-osx/
+/dashboard/bin/log/
+/dashboard/node_modules/
+/dashboard/test/lib/pd/survey_pipeline/notes/
+/dashboard/yarn.lock
+/mytools/
+/node_modules/.bin/
+/node_modules/prettier/
+/package.json
