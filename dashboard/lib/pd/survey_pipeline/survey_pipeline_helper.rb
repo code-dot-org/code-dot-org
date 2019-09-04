@@ -152,6 +152,17 @@ module Pd::SurveyPipeline::Helper
   # @return [Hash]
   #
   def report_single_workshop(workshop, current_user)
+    # Centralized context object shared by all workers in the pipeline.
+    # Workers read from and write to this object.
+    context = {
+      current_user: current_user,
+      filters: {workshop_ids: workshop.id}
+    }
+
+    Pd::SurveyPipeline::DailySurveyRetriever.process_data context
+    Pd::SurveyPipeline::DailySurveyParser.process_data context
+    Pd::SurveyPipeline::DailySurveyJoiner.process_data context
+
     # Fields used to group survey answers
     group_config = [:workshop_id, :day, :facilitator_id, :form_id, :name, :type, :answer_type]
 
@@ -166,36 +177,16 @@ module Pd::SurveyPipeline::Helper
       {condition: not_single_select_answer, field: :answer, reducers: [Pd::SurveyPipeline::NoOpReducer]}
     ]
 
-    # Centralized context object shared by all workers in the pipeline.
-    # Workers read from and write to this object.
-    context = {
-      current_user: current_user,
-      filters: {workshop_ids: workshop.id}
-    }
+    Pd::SurveyPipeline::GenericMapper.
+      new(group_config: group_config, map_config: map_config).
+      process_data(context)
 
-    # Assembly line to summarize CSF surveys
-    workers = [
-      Pd::SurveyPipeline::DailySurveyRetriever,
-      Pd::SurveyPipeline::DailySurveyParser,
-      Pd::SurveyPipeline::DailySurveyJoiner,
-      Pd::SurveyPipeline::GenericMapper.new(
-        group_config: group_config, map_config: map_config
-      ),
-      Pd::SurveyPipeline::DailySurveyDecorator
-    ]
+    Pd::SurveyPipeline::DailySurveyDecorator.process_data context
 
-    run_pipeline context, workers
     context[:decorated_summaries]
   end
 
   private
-
-  # Create survey report by having a group of workers process data in the same context.
-  def run_pipeline(context, workers)
-    workers&.each do |w|
-      w.process_data context
-    end
-  end
 
   # Find all workshops of the same course and facilitated by a facilitator.
   #
