@@ -293,7 +293,6 @@ Dashboard::Application.routes.draw do
   get '/weblab/host', to: 'weblab_host#index'
 
   resources :followers, only: [:create]
-  post '/followers/remove', to: 'followers#remove', as: 'remove_follower'
 
   get '/join(/:section_code)', to: 'followers#student_user_new', as: 'student_user_new'
   post '/join(/:section_code)', to: 'followers#student_register', as: 'student_register'
