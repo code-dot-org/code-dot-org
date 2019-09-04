@@ -34,7 +34,7 @@ const styles = {
     width: '100%',
     borderTop: '1px solid #ddd',
     borderBottom: '1px solid #ddd',
-    cursor: 'text'
+    cursor: 'pointer'
   },
   variants: {
     color: 'white',
