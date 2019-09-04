@@ -15,6 +15,7 @@ import SearchBar from '@cdo/apps/templates/SearchBar';
 import PaginationWrapper from '@cdo/apps/templates/PaginationWrapper';
 import {searchAssets} from '@cdo/apps/code-studio/assets/searchAssets';
 import {connect} from 'react-redux';
+import i18n from '@cdo/locale';
 
 const MAX_SEARCH_RESULTS = 27;
 const animationPickerStyles = {
@@ -124,7 +125,7 @@ class AnimationPickerBody extends React.Component {
           <WarningLabel>{msg.animationPicker_warning()}</WarningLabel>
         )}
         <SearchBar
-          placeholderText={'Search for images'}
+          placeholderText={i18n.animationSearchPlaceholder()}
           styles={{}}
           onChange={evt => this.onSearchQueryChange(evt.target.value)}
         />

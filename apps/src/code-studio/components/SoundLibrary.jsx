@@ -6,6 +6,7 @@ import * as color from '../../util/color';
 import Sounds from '../../Sounds';
 import SearchBar from '@cdo/apps/templates/SearchBar';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import i18n from '@cdo/locale';
 
 const SOUND_CATEGORIES = {
   category_accent: 'Accent',
@@ -172,7 +173,7 @@ export default class SoundLibrary extends React.Component {
         </div>
         <SearchBar
           onChange={this.search}
-          placeholderText={'Search for a sound...'}
+          placeholderText={i18n.soundSearchPlaceholder()}
           styles={styles}
         />
         {this.state.category === '' && this.state.search === '' && (
