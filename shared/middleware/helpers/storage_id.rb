@@ -29,6 +29,7 @@ end
 
 def storage_decrypt(encrypted)
   $storage_id_decrypter ||= OpenSSL::Cipher.new('AES-128-CBC').tap do |decrypter|
+    raise 'please define CDO.channels_api_secret' unless CDO.channels_api_secret
     decrypter.decrypt
     decrypter.pkcs5_keyivgen(CDO.channels_api_secret, '8 octets')
   end
@@ -69,6 +70,7 @@ end
 
 def storage_encrypt(plain)
   $storage_id_encrypter ||= OpenSSL::Cipher.new('AES-128-CBC').tap do |encrypter|
+    raise 'please define CDO.channels_api_secret' unless CDO.channels_api_secret
     encrypter.encrypt
     encrypter.pkcs5_keyivgen(CDO.channels_api_secret, '8 octets')
   end
