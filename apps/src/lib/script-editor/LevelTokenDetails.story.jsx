@@ -45,7 +45,6 @@ export default storybook => {
             setField={action('setField')}
             level={defaultLevel}
             stagePosition={1}
-            hasVariants={true}
           />
         </div>
       )
@@ -64,7 +63,6 @@ export default storybook => {
             setField={action('setField')}
             level={blocklyLevel}
             stagePosition={1}
-            hasVariants={true}
           />
         </div>
       )
