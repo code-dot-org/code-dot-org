@@ -53,26 +53,26 @@ class FollowersController < ApplicationController
   def student_user_new
     # Though downstream validations would raise an exception, we redirect to the admin directory to
     # improve user experience.
-    if current_user && current_user.admin?
+    if current_user&.admin?
       redirect_to admin_directory_path
       return
     end
 
-    if @section && @section.provider_managed?
+    # Redirect and provide an error for provider-managed sections.
+    if @section&.provider_managed?
       provider = I18n.t(@section.login_type, scope: 'section.type')
       redirect_to root_path, alert: I18n.t('follower.error.provider_managed_section', provider: provider)
       return
     end
 
-    @user = current_user || User.new
-
-    # if this is a picture or word section, redirect to the section login page so that the student
-    # does not have to type in the full URL
-    if @section && [Section::LOGIN_TYPE_PICTURE, Section::LOGIN_TYPE_WORD].include?(@section.login_type)
+    # If this is a picture or word section, redirect to the section login page so that the student
+    # does not have to type in the full URL.
+    if [Section::LOGIN_TYPE_PICTURE, Section::LOGIN_TYPE_WORD].include?(@section&.login_type)
       redirect_to controller: 'sections', action: 'show', id: @section.code
     end
 
     # render the default student_user_new view, which includes the section code form or sign up form
+    @user = current_user || User.new
   end
 
   # POST /join/XXXXXX
