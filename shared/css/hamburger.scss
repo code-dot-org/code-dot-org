@@ -42,6 +42,8 @@
 
   display: inline-block;
   float: right;
+  // We want the z-index to be greater than the teacher panel, which is currently 1021.
+  // Teacher panel z-index is defined in teacher-panel.scss
   z-index: 1050;
   position: relative;
   font-size: 14px;
