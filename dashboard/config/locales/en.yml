@@ -69,7 +69,7 @@ en:
   okay: "Okay"
   or: "or"
   heading_x_of_y: "%{heading} (page %{x} of %{y})"
-  add_teacher_form:
+  join_section:
     code:
       placeholder: "Section Code (ABCDEF)"
       instructions: "Please enter the code shared with you by your teacher. It's a 6 letter code like \"ABCDEF\"."
