@@ -298,3 +298,7 @@ export default {
   levelKeyList,
   levelNameToIdMap
 };
+
+// Whether any level in the script has multiple variants.
+export const hasVariants = state =>
+  state.stages.some(stage => stage.levels.some(level => level.ids.length > 1));

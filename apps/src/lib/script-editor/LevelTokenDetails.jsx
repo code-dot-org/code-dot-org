@@ -6,6 +6,7 @@ import {
   addVariant,
   removeVariant,
   setActiveVariant,
+  hasVariants,
   setField,
   NEW_LEVEL_ID
 } from './editorRedux';
@@ -84,7 +85,8 @@ export class UnconnectedLevelTokenDetails extends Component {
     setActiveVariant: PropTypes.func.isRequired,
     setField: PropTypes.func.isRequired,
     level: levelShape.isRequired,
-    stagePosition: PropTypes.number.isRequired
+    stagePosition: PropTypes.number.isRequired,
+    hasVariants: PropTypes.bool.isRequired
   };
 
   state = {
@@ -267,17 +269,18 @@ export class UnconnectedLevelTokenDetails extends Component {
           </div>
         )}
         <hr style={styles.divider} />
-        {!this.props.level.ids.includes(NEW_LEVEL_ID) && (
-          <button
-            onMouseDown={this.handleAddVariant}
-            className="btn"
-            style={styles.button}
-            type="button"
-          >
-            <i style={{marginRight: 7}} className="fa fa-plus-circle" />
-            Add Variant
-          </button>
-        )}
+        {this.props.hasVariants &&
+          !this.props.level.ids.includes(NEW_LEVEL_ID) && (
+            <button
+              onMouseDown={this.handleAddVariant}
+              className="btn"
+              style={styles.button}
+              type="button"
+            >
+              <i style={{marginRight: 7}} className="fa fa-plus-circle" />
+              Add Variant
+            </button>
+          )}
         {!this.props.level.progression && !this.state.showBlankProgression && (
           <button
             onMouseDown={this.handleAddProgression}
@@ -297,7 +300,8 @@ export class UnconnectedLevelTokenDetails extends Component {
 export default connect(
   state => ({
     levelKeyList: state.levelKeyList,
-    levelNameToIdMap: state.levelNameToIdMap
+    levelNameToIdMap: state.levelNameToIdMap,
+    hasVariants: hasVariants(state)
   }),
   dispatch => ({
     chooseLevel(stage, level, variant, value) {
