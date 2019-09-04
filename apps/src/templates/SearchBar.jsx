@@ -43,7 +43,7 @@ export default class AnimationPickerSearchBar extends React.Component {
       searchArea: PropTypes.object,
       icon: PropTypes.object,
       input: PropTypes.object
-    });
+    }),
     onChange: PropTypes.func.isRequired
   };
 
