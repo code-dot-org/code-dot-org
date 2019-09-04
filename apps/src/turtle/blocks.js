@@ -1116,7 +1116,6 @@ exports.install = function(blockly, blockInstallOptions) {
     helpUrl: '',
     init: function() {
       this.setHSV(184, 1.0, 0.74);
-      this.appendDummyInput();
       this.interpolateMsg(
         msg.jumpToOverDown(),
         () => {
