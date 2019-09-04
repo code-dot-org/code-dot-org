@@ -57,7 +57,7 @@ class MakerController < ApplicationController
       script_data: {
         application: application_status,
         is_admin: current_user.admin?,
-        currently_distributing_discount_codes: true
+        currently_distributing_discount_codes: false
       }
     }
   end
