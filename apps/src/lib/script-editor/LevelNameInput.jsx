@@ -5,7 +5,7 @@ import FontAwesome from '../../templates/FontAwesome';
 const styles = {
   levelSelect: {
     display: 'inline-block',
-    verticalAlign: 'middle',
+    verticalAlign: 'baseline',
     width: 600
   },
   validIcon: {
@@ -17,6 +17,11 @@ const styles = {
     color: 'red',
     fontSize: 16,
     marginLeft: 6
+  },
+  textInput: {
+    width: 550,
+    verticalAlign: 'baseline',
+    marginBottom: 0
   }
 };
 
