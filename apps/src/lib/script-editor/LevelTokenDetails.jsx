@@ -28,12 +28,12 @@ const styles = {
     display: 'inline-block',
     lineHeight: '36px',
     margin: '0 7px 0 5px',
-    verticalAlign: 'middle'
+    verticalAlign: 'middle',
+    textAlign: 'right',
+    width: 80
   },
-  textInput: {
-    height: 34,
-    width: 350,
-    boxSizing: 'border-box',
+  shortTextInput: {
+    width: 330,
     verticalAlign: 'baseline',
     margin: '7px 0 10px 0'
   },
@@ -208,41 +208,37 @@ export class UnconnectedLevelTokenDetails extends Component {
         <div style={{clear: 'both'}} />
         {this.containsLegacyLevel() && (
           <div>
-            <span style={styles.levelFieldLabel}>Skin</span>
+            <span style={styles.levelFieldLabel}>Skin:</span>
             <input
               defaultValue={this.props.level.skin}
               type="text"
-              style={styles.textInput}
+              style={styles.shortTextInput}
               onChange={event => this.handleFieldChange('skin', event)}
             />
-            <div style={{float: 'right'}}>
-              <span style={styles.levelFieldLabel}>Video key</span>
-              <input
-                defaultValue={this.props.level.videoKey}
-                type="text"
-                style={styles.textInput}
-                onChange={event => this.handleFieldChange('videoKey', event)}
-              />
-            </div>
+            <span style={styles.levelFieldLabel}>Video key:</span>
+            <input
+              defaultValue={this.props.level.videoKey}
+              type="text"
+              style={styles.shortTextInput}
+              onChange={event => this.handleFieldChange('videoKey', event)}
+            />
             <div style={{clear: 'both'}} />
-            <span style={styles.levelFieldLabel}>Difficulty</span>
+            <span style={styles.levelFieldLabel}>Difficulty:</span>
             <input
               defaultValue={this.props.level.conceptDifficulty}
               type="text"
-              style={styles.textInput}
+              style={styles.shortTextInput}
               onChange={event =>
                 this.handleFieldChange('conceptDifficulty', event)
               }
             />
-            <div style={{float: 'right'}}>
-              <span style={styles.levelFieldLabel}>Concepts</span>
-              <input
-                defaultValue={this.props.level.concepts}
-                type="text"
-                style={Object.assign({}, styles.textInput, {width: 320})}
-                onChange={this.handleFieldChange.bind(this, 'concepts')}
-              />
-            </div>
+            <span style={styles.levelFieldLabel}>Concepts:</span>
+            <input
+              defaultValue={this.props.level.concepts}
+              type="text"
+              style={styles.shortTextInput}
+              onChange={this.handleFieldChange.bind(this, 'concepts')}
+            />
           </div>
         )}
         {this.props.level.ids.map((id, index) => (
