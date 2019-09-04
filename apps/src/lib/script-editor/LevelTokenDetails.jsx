@@ -68,6 +68,9 @@ const styles = {
   },
   progression: {
     paddingTop: 5
+  },
+  tooltip: {
+    maxWidth: 450
   }
 };
 
@@ -78,7 +81,9 @@ const tooltipText = {
     'Visibly mark this level as an assessment, and show it in the Assessments tab in Teacher Dashboard.',
   named:
     'Show this level on a line by itself, with the Display Name of the level as the label.',
-  challenge: 'Show students the Challenge dialog when viewing this level.'
+  challenge: 'Show students the Challenge dialog when viewing this level.',
+  progression:
+    'Group this level with other levels in the same progression, with this text as the label. This overrides the "named" checkbox.'
 };
 
 const ArrowRenderer = ({onMouseDown}) => {
@@ -173,6 +178,7 @@ export class UnconnectedLevelTokenDetails extends Component {
     scriptLevelOptions.forEach(option => {
       tooltipIds[option] = _.uniqueId();
     });
+    tooltipIds.progression = _.uniqueId();
     return (
       <div style={styles.levelTokenActive}>
         <span className="level-token-checkboxes">
@@ -192,7 +198,7 @@ export class UnconnectedLevelTokenDetails extends Component {
               &nbsp;
               <span style={styles.checkboxText}>{option}</span>
               <ReactTooltip id={tooltipIds[option]} delayShow={500}>
-                {tooltipText[option]}
+                <div style={styles.tooltip}>{tooltipText[option]}</div>
               </ReactTooltip>
             </label>
           ))}
@@ -286,7 +292,17 @@ export class UnconnectedLevelTokenDetails extends Component {
         {(this.props.level.progression || showBlankProgression) && (
           <div style={styles.progression}>
             <hr style={styles.divider} />
-            <span style={styles.levelFieldLabel}>Progression name:</span>
+            <span
+              style={styles.levelFieldLabel}
+              data-for={tooltipIds.progression}
+              data-tip
+            >
+              Progression name:
+            </span>
+            <ReactTooltip id={tooltipIds.progression} delayShow={500}>
+              <div style={styles.tooltip}>{tooltipText.progression}</div>
+            </ReactTooltip>
+
             <span style={styles.levelSelect}>
               <input
                 type="text"
