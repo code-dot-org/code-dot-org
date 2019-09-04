@@ -28,6 +28,42 @@ $(document).ready(function() {
   }
 
   map.on('load', function() {
+    map.addSource('hoctiles', {
+      type: 'vector',
+      url: 'mapbox://codeorg.hoctiles'
+    });
+
+    // The order we add layers matters here as layers are added on top of each
+    // other. We want special events to be on top of the other events, so we
+    // add the special events layer second.
+    map.addLayer({
+      id: 'hoc-events',
+      type: 'symbol',
+      source: 'hoctiles',
+      'source-layer': 'hoc',
+      layout: {
+        visibility: 'visible',
+        'icon-allow-overlap': true,
+        'icon-size': 1,
+        'icon-image': 'circle-11-orange'
+      },
+      filter: ['!=', 'review', 'approved']
+    });
+
+    map.addLayer({
+      id: 'hoc-special-events',
+      type: 'symbol',
+      source: 'hoctiles',
+      'source-layer': 'hoc',
+      layout: {
+        visibility: 'visible',
+        'icon-allow-overlap': true,
+        'icon-size': 1.1,
+        'icon-image': 'marker-15-red'
+      },
+      filter: ['==', 'review', 'approved']
+    });
+
     map.on('click', 'hoc-events', function(e) {
       var coordinates = e.features[0].geometry.coordinates.slice();
       var organizationName = e.features[0].properties.organization_name;
