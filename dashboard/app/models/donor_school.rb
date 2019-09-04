@@ -14,7 +14,6 @@ class DonorSchool < ApplicationRecord
   include Seeded
 
   def self.setup
-    puts "in setup!"
     donor_schools = CSV.read(pegasus_dir('data/cdo-donor-schools.csv'), headers: true).map.with_index(1) do |row, id|
       {
         id: id,
