@@ -78,6 +78,9 @@ stage 'Project: Finish Your App'
 level 'CSP U3L10 SFLP 20-21', progression: 'Lesson Overview'
 level 'CSP U3 L10 Submit App', progression: 'Submit Your App', assessment: true
 
+stage 'Lesson 11: Unit Assessment', lockable: true
+level 'CSP Unit 3 MC Assessment _2020', assessment: true
+
 stage 'Unit 3 STUDENT Survey', lockable: true, flex_category: 'required'
 level 'CSP U3 20-21 Student Pilot Survey', progression: 'Unit 1 STUDENT Survey', assessment: true
 
