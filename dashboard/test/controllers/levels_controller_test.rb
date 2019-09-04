@@ -70,7 +70,7 @@ class LevelsControllerTest < ActionController::TestCase
   end
 
   test "should get new of all types" do
-    Level.descendants.each do |klass|
+    LevelsController::LEVEL_CLASSES.each do |klass|
       get :new, params: {type: klass.name}
 
       assert_response :success
