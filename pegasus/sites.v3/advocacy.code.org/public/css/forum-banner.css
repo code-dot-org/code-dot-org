@@ -18,13 +18,13 @@
   padding-right: 15px;
 }
 
-.announcement .left p.title {
+.announcement .left .title {
   font-size: 16px;
   margin-bottom: 3px;
   font-family: 'Gotham 5r', sans-serif;
 }
 
-.announcement .left p.details {
+.announcement .left .details {
   margin-bottom: 0px;
 }
 
