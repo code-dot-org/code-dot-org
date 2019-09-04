@@ -36,7 +36,7 @@ const styles = {
     borderBottom: '1px solid #ddd',
     cursor: 'pointer'
   },
-  tags: {
+  tag: {
     color: 'white',
     background: color.purple,
     padding: '3px 5px',
@@ -45,7 +45,7 @@ const styles = {
     float: 'right',
     marginLeft: 3
   },
-  progression: {
+  progressionTag: {
     color: color.purple,
     background: 'white',
     padding: '2px 5px',
@@ -139,23 +139,23 @@ class LevelToken extends Component {
             <span style={styles.levelTokenName} onMouseDown={this.toggleExpand}>
               {this.props.levelKeyList[this.props.level.activeId]}
               {this.props.level.ids.length > 1 && (
-                <span style={styles.tags}>
+                <span style={styles.tag}>
                   {this.props.level.ids.length} variants
                 </span>
               )}
               {this.props.level.challenge && (
-                <span style={styles.tags}>challenge</span>
+                <span style={styles.tag}>challenge</span>
               )}
               {/* progression supercedes named, so only show the named tag
                   when the level is behaving like a named level. */}
               {this.props.level.named && !this.props.level.progression && (
-                <span style={styles.tags}>named</span>
+                <span style={styles.tag}>named</span>
               )}
               {this.props.level.assessment && (
-                <span style={styles.tags}>assessment</span>
+                <span style={styles.tag}>assessment</span>
               )}
               {this.props.level.progression && (
-                <span style={styles.progression}>
+                <span style={styles.progressionTag}>
                   {this.props.level.progression}
                 </span>
               )}
