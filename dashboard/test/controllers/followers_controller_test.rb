@@ -256,94 +256,6 @@ class FollowersControllerTest < ActionController::TestCase
     assert_select 'input#section_code'
   end
 
-  test "create with section code" do
-    sign_in @student
-
-    assert_creates(Follower) do
-      post :create, params: {
-        section_code: @laurel_section_1.code,
-        redirect: '/'
-      }
-    end
-
-    follower = Follower.last
-
-    assert_equal @laurel_section_1, follower.section
-    assert_equal @laurel, follower.user
-    assert_equal @student, follower.student_user
-
-    assert_redirected_to '/'
-    assert_equal "#{@laurel.name} added as your teacher", flash[:notice]
-  end
-
-  test "create does not allow joining your own section" do
-    sign_in @chris
-
-    assert_does_not_create(Follower) do
-      post :create, params: {section_code: @chris_section.code, redirect: '/'}
-    end
-
-    assert_redirected_to '/'
-    assert_equal "Sorry, you can't join your own section.", flash[:alert]
-  end
-
-  test "create with invalid section code gives error message" do
-    sign_in @student
-
-    assert_does_not_create(Follower) do
-      post :create, params: {section_code: '2323232', redirect: '/'}
-    end
-
-    assert_redirected_to '/'
-    assert_equal "Could not find a section with code '2323232'.", flash[:alert]
-  end
-
-  test "create without section code redirects to join" do
-    sign_in @student
-
-    assert_does_not_create(Follower) do
-      post :create, params: {redirect: '/'}
-    end
-
-    assert_response :redirect
-    assert_redirected_to '/join'
-  end
-
-  test "remove has nice error when student does not actually have teacher" do
-    sign_in @laurel
-
-    assert_does_not_destroy(Follower) do
-      post :remove, params: {section_code: @chris_section.code}
-    end
-    assert_redirected_to '/'
-    assert_equal "Could not find a section with code '#{@chris_section.code}'.", flash[:alert]
-  end
-
-  test "student can remove teacher" do
-    follower = @laurel_student_1
-
-    sign_in follower.student_user
-
-    assert_destroys(Follower) do
-      post :remove, params: {section_code: follower.section.code}
-    end
-
-    refute Follower.exists?(follower.id)
-  end
-
-  test "student can remove teacher if teacher does not have email" do
-    follower = @laurel_student_1
-    @laurel.update_attribute(:email, "")
-
-    sign_in follower.student_user
-
-    assert_destroys(Follower) do
-      post :remove, params: {section_code: follower.section.code}
-    end
-
-    refute Follower.exists?(follower.id)
-  end
-
   test "student_register in section with script" do
     student_params = {email: 'student1@school.edu',
                       name: "A name",
@@ -362,21 +274,5 @@ class FollowersControllerTest < ActionController::TestCase
     assert user_script
     assert user_script.assigned_at
     assert_equal @laurel_section_script.script, assigns(:user).primary_script
-  end
-
-  test "create with section with script" do
-    sign_in @student
-
-    assert_creates(Follower, UserScript) do
-      post :create, params: {
-        section_code: @laurel_section_script.code,
-        redirect: '/'
-      }
-    end
-
-    user_script = UserScript.where(user: @student, script: @laurel_section_script.script).first
-    assert user_script
-    assert user_script.assigned_at
-    assert_equal @laurel_section_script.script, @student.primary_script
   end
 end
