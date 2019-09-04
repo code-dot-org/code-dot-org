@@ -48,22 +48,6 @@ const SOUND_CATEGORIES = {
 };
 
 const styles = {
-  searchArea: {
-    float: 'right',
-    margin: '10px 0'
-  },
-  input: {
-    height: 20,
-    width: 300,
-    borderRadius: 4,
-    padding: '3px 7px'
-  },
-  icon: {
-    right: 5,
-    top: 5,
-    fontSize: 16,
-    color: color.light_gray
-  },
   button: {
     float: 'right',
     margin: '20px 0px'
@@ -174,7 +158,6 @@ export default class SoundLibrary extends React.Component {
         <SearchBar
           onChange={this.search}
           placeholderText={i18n.soundSearchPlaceholder()}
-          styles={styles}
         />
         {this.state.category === '' && this.state.search === '' && (
           <div style={styles.categoryArea}>

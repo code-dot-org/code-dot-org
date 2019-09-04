@@ -9,7 +9,6 @@ import i18n from '@cdo/locale';
  */
 export default class IconLibrary extends React.Component {
   static propTypes = {
-    alignment: PropTypes.string,
     assetChosen: PropTypes.func.isRequired
   };
 
@@ -22,31 +21,11 @@ export default class IconLibrary extends React.Component {
   };
 
   render() {
-    const styles = {
-      searchArea: {
-        float: this.props.alignment || 'right',
-        margin: '10px 0'
-      },
-      input: {
-        height: '20px',
-        width: '300px',
-        borderRadius: '4px',
-        padding: '3px 7px'
-      },
-      icon: {
-        right: '5px',
-        top: '5px',
-        fontSize: '16px',
-        color: '#999'
-      }
-    };
-
     return (
       <div>
         <SearchBar
           onChange={this.search}
           placeholderText={i18n.iconSearchPlaceholder()}
-          styles={styles}
         />
         <IconList
           assetChosen={this.props.assetChosen}
