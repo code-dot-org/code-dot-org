@@ -90,8 +90,7 @@ class FollowersController < ApplicationController
     end
 
     Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
-      if @user.save
-        @section.add_student @user
+      if @user.save && @section&.add_student(@user)
         sign_in(:user, @user)
         redirect_to root_path, notice: I18n.t('follower.registered', section_name: @section.name)
         return
@@ -116,6 +115,7 @@ class FollowersController < ApplicationController
   end
 
   def load_section
+    p request.path
     if params[:section_code].blank?
       if request.path != student_user_new_path(section_code: params[:section_code])
         # if user submitted the section form without a code /join

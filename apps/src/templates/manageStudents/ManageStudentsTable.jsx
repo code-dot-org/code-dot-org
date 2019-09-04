@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import ReactTooltip from 'react-tooltip';
-import {Table, sort} from 'reactabular';
+import * as Table from 'reactabular-table';
+import * as sort from 'sortabular';
 import wrappedSortable from '../tables/wrapped_sortable';
 import orderBy from 'lodash/orderBy';
 import PasswordReset from './PasswordReset';
@@ -228,9 +229,7 @@ class ManageStudentsTable extends Component {
   };
 
   ageFormatter = (age, {rowData}) => {
-    const editedValue = rowData.isEditing
-      ? this.props.editingData[rowData.id].age
-      : 0;
+    const editedValue = rowData.isEditing ? rowData.editingData.age : 0;
     return (
       <ManageStudentsAgeCell
         age={age}
@@ -242,9 +241,7 @@ class ManageStudentsTable extends Component {
   };
 
   genderFormatter = (gender, {rowData}) => {
-    const editedValue = rowData.isEditing
-      ? this.props.editingData[rowData.id].gender
-      : '';
+    const editedValue = rowData.isEditing ? rowData.editingData.gender : '';
     return (
       <ManageStudentsGenderCell
         gender={gender}
@@ -256,9 +253,7 @@ class ManageStudentsTable extends Component {
   };
 
   nameFormatter = (name, {rowData}) => {
-    const editedValue = rowData.isEditing
-      ? this.props.editingData[rowData.id].name
-      : '';
+    const editedValue = rowData.isEditing ? rowData.editingData.name : '';
     return (
       <ManageStudentsNameCell
         id={rowData.id}
@@ -274,7 +269,7 @@ class ManageStudentsTable extends Component {
 
   actionsFormatter = (actions, {rowData}) => {
     let disableSaving = rowData.isEditing
-      ? this.props.editingData[rowData.id].name.length === 0
+      ? rowData.editingData.name.length === 0
       : false;
     return (
       <ManageStudentsActionsCell
@@ -344,10 +339,10 @@ class ManageStudentsTable extends Component {
 
   projectSharingFormatter = (projectSharing, {rowData}) => {
     let disabled = rowData.isEditing
-      ? this.props.editingData[rowData.id].age.length === 0
+      ? rowData.editingData.age.length === 0
       : true;
     const editedValue = rowData.isEditing
-      ? this.props.editingData[rowData.id].sharingDisabled
+      ? rowData.editingData.sharingDisabled
       : true;
 
     return (
@@ -398,7 +393,7 @@ class ManageStudentsTable extends Component {
           transforms: [sortable]
         },
         cell: {
-          format: this.nameFormatter,
+          formatters: [this.nameFormatter],
           props: {
             style: {
               ...tableLayoutStyles.cell
@@ -419,7 +414,7 @@ class ManageStudentsTable extends Component {
           transforms: [sortable]
         },
         cell: {
-          format: this.ageFormatter,
+          formatters: [this.ageFormatter],
           props: {
             style: {
               ...tableLayoutStyles.cell,
@@ -441,7 +436,7 @@ class ManageStudentsTable extends Component {
           transforms: [sortable]
         },
         cell: {
-          format: this.genderFormatter,
+          formatters: [this.genderFormatter],
           props: {
             style: {
               ...tableLayoutStyles.cell,
@@ -465,7 +460,7 @@ class ManageStudentsTable extends Component {
           }
         },
         cell: {
-          format: this.passwordFormatter,
+          formatters: [this.passwordFormatter],
           props: {
             style: {
               ...tableLayoutStyles.cell,
@@ -480,7 +475,7 @@ class ManageStudentsTable extends Component {
         property: 'projectSharing',
         header: {
           label: i18n.projectSharingColumnHeader(),
-          format: this.projectSharingHeaderFormatter,
+          formatters: [this.projectSharingHeaderFormatter],
           props: {
             style: {
               ...tableLayoutStyles.headerCell,
@@ -490,7 +485,7 @@ class ManageStudentsTable extends Component {
           }
         },
         cell: {
-          format: this.projectSharingFormatter,
+          formatters: [this.projectSharingFormatter],
           props: {
             style: {
               ...tableLayoutStyles.cell,
@@ -505,7 +500,7 @@ class ManageStudentsTable extends Component {
         property: 'actions',
         header: {
           label: i18n.actions(),
-          format: this.actionsHeaderFormatter,
+          formatters: [this.actionsHeaderFormatter],
           props: {
             style: {
               ...tableLayoutStyles.headerCell,
@@ -514,7 +509,7 @@ class ManageStudentsTable extends Component {
           }
         },
         cell: {
-          format: this.actionsFormatter,
+          formatters: [this.actionsFormatter],
           props: {
             style: {
               ...tableLayoutStyles.cell
@@ -547,11 +542,15 @@ class ManageStudentsTable extends Component {
     const columns = this.getColumns(sortable);
     const sortingColumns = this.getSortingColumns();
 
+    const decoratedRows = this.props.studentData.map(rowData => ({
+      ...rowData,
+      editingData: this.props.editingData[rowData.id]
+    }));
     const sortedRows = sort.sorter({
       columns,
       sortingColumns,
       sort: sortRows
-    })(this.props.studentData);
+    })(decoratedRows);
 
     const {
       addStatus,

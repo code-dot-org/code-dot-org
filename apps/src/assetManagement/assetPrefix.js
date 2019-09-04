@@ -1,4 +1,5 @@
 import {unicode} from '@cdo/apps/code-studio/components/icons';
+import {getStore} from '@cdo/apps/redux';
 
 // For proxying non-https assets
 const MEDIA_PROXY = '//' + location.host + '/media?u=';
@@ -17,6 +18,11 @@ export const ICON_PREFIX_REGEX = new RegExp('^icon://');
 
 export const SOUND_PREFIX = 'sound://';
 export const SOUND_PREFIX_REGEX = new RegExp('^sound://');
+
+// Starter assets are currently only used for image assets, but may be extended
+// in the future, where we will want to change this prefix.
+export const STARTER_ASSET_PREFIX = 'image://';
+export const STARTER_ASSET_PREFIX_REGEX = new RegExp('^image://');
 
 const DEFAULT_ASSET_PATH_PREFIX = '/v3/assets/';
 export const DEFAULT_SOUND_PATH_PREFIX = '/api/v1/sound-library/';
@@ -71,6 +77,14 @@ export function fixPath(filename) {
     return filename.replace(SOUND_PREFIX, soundPathPrefix);
   }
 
+  if (STARTER_ASSET_PREFIX_REGEX.test(filename)) {
+    const state = getStore().getState();
+    return filename.replace(
+      STARTER_ASSET_PREFIX,
+      starterAssetPathPrefix(state.level.name)
+    );
+  }
+
   if (filename.indexOf('/') !== -1 || !channelId) {
     return filename;
   }
@@ -79,6 +93,15 @@ export function fixPath(filename) {
   // catch any characters which could break urls such as # or ?, without
   // modifying extended ascii or unicode characters.
   return assetPathPrefix + channelId + '/' + encodeURIComponent(filename);
+}
+
+/**
+ * Get path prefix for starter assets, given a level name.
+ * @param levelName {string}
+ * @return {string}
+ */
+function starterAssetPathPrefix(levelName) {
+  return `/level_starter_assets/${levelName}/`;
 }
 
 /**
