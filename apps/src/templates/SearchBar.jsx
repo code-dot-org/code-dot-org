@@ -5,18 +5,14 @@ import color from '@cdo/apps/util/color';
 
 const BORDER_WIDTH = 1;
 const BORDER_COLOR = color.light_gray;
-const BORDER_RADIUS = 6;
-const INPUT_HORIZONTAL_PADDING = BORDER_RADIUS;
+const BORDER_RADIUS = 4;
 
 // We have side-by-side elements that should format sort of like one element
 const styles = {
   input: {
-    height: 28,
-    paddingTop: 0,
-    paddingBottom: 0,
-    paddingLeft: INPUT_HORIZONTAL_PADDING,
-    paddingRight: INPUT_HORIZONTAL_PADDING,
-    width: '100%',
+    height: 20,
+    width: 300,
+    padding: '3px 7px',
     marginLeft: 0,
     marginRight: 0,
     borderStyle: 'solid',
@@ -28,22 +24,26 @@ const styles = {
   },
   icon: {
     position: 'absolute',
-    top: 9,
-    left: 10
+    top: 5,
+    left: 5,
+    fontSize: 16,
+    color: color.light_gray
   },
   searchArea: {
-    position: 'relative'
+    position: 'relative',
+    float: 'right',
+    margin: '10px 0'
   }
 };
 
-export default class AnimationPickerSearchBar extends React.Component {
+export default class SearchBar extends React.Component {
   static propTypes = {
     placeholderText: PropTypes.string.isRequired,
-    styles: PropTypes.object.shape({
+    styles: PropTypes.shape({
       searchArea: PropTypes.object,
       icon: PropTypes.object,
       input: PropTypes.object
-    });
+    }),
     onChange: PropTypes.func.isRequired
   };
 
@@ -52,14 +52,15 @@ export default class AnimationPickerSearchBar extends React.Component {
   }
 
   render() {
+    let customStyles = this.props.styles || {};
     return (
-      <div style={{...styles.searchArea, ...this.props.styles.searchArea}}>
+      <div style={{...styles.searchArea, ...customStyles.searchArea}}>
         <span
           className="fa fa-search"
-          style={{...styles.icon, ...this.props.styles.icon}}
+          style={{...styles.icon, ...customStyles.icon}}
         />
         <input
-          style={{...styles.input, ...this.props.styles.input}}
+          style={{...styles.input, ...customStyles.input}}
           placeholder={this.props.placeholderText}
           onChange={this.props.onChange}
           ref={input => {
