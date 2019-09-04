@@ -175,10 +175,9 @@ export class UnconnectedLevelTokenDetails extends Component {
   render() {
     const {showBlankProgression, showAddVariants} = this.state;
     const tooltipIds = {};
-    scriptLevelOptions.forEach(option => {
+    Object.keys(tooltipText).forEach(option => {
       tooltipIds[option] = _.uniqueId();
     });
-    tooltipIds.progression = _.uniqueId();
     return (
       <div style={styles.levelTokenActive}>
         <span className="level-token-checkboxes">
