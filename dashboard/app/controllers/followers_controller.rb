@@ -73,6 +73,8 @@ class FollowersController < ApplicationController
   end
 
   def load_section
+    return if params[:section_code].blank?
+
     @section = Section.find_by_code(params[:section_code])
     # Note that we treat the section as not being found if the section user
     # (i.e., the teacher) does not exist (possibly soft-deleted) or is not a teacher
