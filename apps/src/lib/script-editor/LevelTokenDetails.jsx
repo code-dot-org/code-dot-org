@@ -230,7 +230,7 @@ export class UnconnectedLevelTokenDetails extends Component {
               defaultValue={this.props.level.concepts}
               type="text"
               style={styles.shortTextInput}
-              onChange={this.handleFieldChange.bind(this, 'concepts')}
+              onChange={event => this.handleFieldChange('concepts', event)}
             />
           </div>
         )}
