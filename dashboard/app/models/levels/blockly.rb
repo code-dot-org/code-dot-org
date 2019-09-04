@@ -361,6 +361,7 @@ class Blockly < Level
 
       if is_a? Applab
         level_prop['startHtml'] = try(:project_template_level).try(:start_html) || start_html
+        level_prop['name'] = name
       end
 
       if is_a? Gamelab
