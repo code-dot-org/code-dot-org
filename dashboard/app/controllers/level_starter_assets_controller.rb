@@ -10,7 +10,7 @@ class LevelStarterAssetsController < ApplicationController
 
   # GET /level_starter_assets/:level_name
   def show
-    starter_assets = @level.starter_assets.map do |friendly_name, uuid_name|
+    starter_assets = (@level.starter_assets || []).map do |friendly_name, uuid_name|
       file_obj = get_object(uuid_name)
       summarize(file_obj, friendly_name, uuid_name)
     end.compact
