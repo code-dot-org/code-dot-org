@@ -115,14 +115,6 @@ class FollowersController < ApplicationController
   end
 
   def load_section
-    if params[:section_code].blank?
-      if request.path != student_user_new_path(section_code: params[:section_code])
-        # if user submitted the section form without a code /join
-        redirect_to student_user_new_path(section_code: params[:section_code])
-      end
-      return
-    end
-
     @section = Section.find_by_code(params[:section_code])
     # Note that we treat the section as not being found if the section user
     # (i.e., the teacher) does not exist (possibly soft-deleted) or is not a teacher
