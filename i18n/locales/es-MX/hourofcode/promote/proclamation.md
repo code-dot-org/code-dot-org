@@ -1,9 +1,10 @@
 ---
-title: <%= hoc_s(:title_proclamation).inspect %>
+title: Resolución de Ejemplo Soporte de la Semana de Educación de Ciencia de Computación y Una Hora de Código
 layout: wide
 nav: promote_nav
 ---
-<%= view :signup_button %>
+
+{{ signup_button }}
 
 # Ejemplo de resolución de la semana para la educación de las ciencias de la computación
 
@@ -42,11 +43,11 @@ Considerando que el campo de las Ciencias de la Computación abordan importantes
 
 Considerando que Grace Murray Hopper, una de las primeras mujeres en el campo de las Ciencias de la Computación, diseñó nuevos lenguajes de programación y fue pionera en las normas para los sistemas informáticos que sentaron las bases de muchos adelantos en Ciencias de la Computación; y
 
-Considerando que la semana de <%= campaign_date('start-long') %>, en honor al cumpleaños de Grace Hopper, es designada como la 'Semana de la Educación en Ciencias de la Computación': por lo tanto, será <br />
+Whereas the week of {{ campaign_date/start_long }}, in honor of Grace Hopper's birthday, is designated as ‘Computer Science Education Week’: Now, therefore, be it <br />
 
 Resuelta, que la (CÁMARA o SENADO, ESTADO, CONDADO, CIUDAD o JUNTA ESCOLAR) --
 
-(1) apoyar la designación de la Semana de la Educación en Ciencias de la Computación (<%= campaign_date('full') %>);
+(1) supports the designation of Computer Science Education Week ({{ campaign_date/full }});
 
 (2) motivar a las escuelas, educadores, padres y legisladores a participar en la Semana de la Educación en Ciencias de la Computación permitiendo a sus estudiantes a participar en la Hora del Código;
 
@@ -56,4 +57,4 @@ Resuelta, que la (CÁMARA o SENADO, ESTADO, CONDADO, CIUDAD o JUNTA ESCOLAR) --
 
 (5) fomenta oportunidades, incluso a través de los programas existentes, para mujeres y minorías subrepresentadas en Ciencias de la Computación.
 
-<%= view :signup_button %>
+{{ signup_button }}

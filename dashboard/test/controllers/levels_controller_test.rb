@@ -8,8 +8,10 @@ class LevelsControllerTest < ActionController::TestCase
     Level.any_instance.stubs(:write_to_file?).returns(false) # don't write to level files
 
     @level = create(:level)
+    @partner_level = create :level, editor_experiment: 'platformization-partners'
     @admin = create(:admin)
     @not_admin = create(:user)
+    @platformization_partner = create :platformization_partner
     @levelbuilder = create(:levelbuilder)
     sign_in(@levelbuilder)
     @program = '<hey/>'
@@ -68,7 +70,7 @@ class LevelsControllerTest < ActionController::TestCase
   end
 
   test "should get new of all types" do
-    Level.descendants.each do |klass|
+    LevelsController::LEVEL_CLASSES.each do |klass|
       get :new, params: {type: klass.name}
 
       assert_response :success
@@ -783,6 +785,61 @@ DSL
     assert_response :success
     assert_select '#markdown', "this is the markdown for #{@not_admin.id}"
   end
+
+  # test_platformization_partner_calling_get_new_should_receive_success
+  test_user_gets_response_for(
+    :new,
+    response: :success,
+    user: :platformization_partner
+  )
+
+  test 'platformization partner creates and owns new artist level' do
+    sign_out @levelbuilder
+    sign_in @platformization_partner
+
+    game = Game.find_by_name('Custom')
+    assert_creates(Level) do
+      post :create, params: {
+        level: {name: 'partner artist level', type: 'Artist'},
+        game_id: game.id,
+        program: @program
+      }
+    end
+
+    level = Level.last
+    assert_equal 'partner artist level', level.name
+    assert_equal 'platformization-partners', level.editor_experiment
+  end
+
+  test_user_gets_response_for(
+    :edit,
+    response: :forbidden,
+    user: :platformization_partner,
+    params: -> {{id: @level.id}}
+  )
+
+  test_user_gets_response_for(
+    :edit,
+    response: :success,
+    user: :platformization_partner,
+    params: -> {{id: @partner_level.id}}
+  )
+
+  test_user_gets_response_for(
+    :update,
+    method: :patch,
+    response: :forbidden,
+    user: :platformization_partner,
+    params: -> {{id: @level.id, level: {name: 'new partner name'}}}
+  )
+
+  test_user_gets_response_for(
+    :update,
+    method: :patch,
+    response: :success,
+    user: :platformization_partner,
+    params: -> {{id: @partner_level.id, level: {name: 'new partner name'}}}
+  )
 
   private
 

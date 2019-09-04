@@ -1,9 +1,10 @@
 ---
-title: <%= hoc_s(:title_how_to_volunteers).inspect %>
+title: Juhend KoodiTund vabatahtlikele
 layout: wide
 nav: how_to_nav
 ---
-<%= view :signup_button %>
+
+{{ signup_button }}
 
 # Juhend vabatahtlikele
 
@@ -43,11 +44,11 @@ Võid olla kas külalisesineja klassis või aidata KoodiTundi läbi viia. Külas
 
 <ol>
   <li>
-    <a href="%= resolve_url('/promote/resources#help-schools') %">Saada see e-kiri</a> oma lapse õpetajale ja paku abi KoodiTund läbiviimisel.
+    <a href="{{ promote/help_schools }}">Send this email</a> to your child’s teacher offering to help them run an Hour of Code.
   </li>
   
   <li>
-    Paku end läbi viima KoodiTund üritust koolivälisel ajal kohalikus koolis.<a href="%= resolve_url('/how-to') %">Kasuta seda juhist</a> ürituse korraldamisel.
+    Offer to host an Hour of Code event after school at a local school. <a href="{{ urls/how_to_guide }}">Use this How-To Guide</a> to help you plan.
   </li>
 </ol>
 
@@ -56,7 +57,7 @@ Võid olla kas külalisesineja klassis või aidata KoodiTundi läbi viia. Külas
 </h2>
 
 <p>
-  Räägi oma sõpradele ja kolleegidele KoodiTund kampaaniast. Paljud õpetajad otsivad vabatahtlikke, palu neil <a href="https://code.org/volunteer"> vabatahtlikuks registreeruda</a>. Kutsu oma tööandja kaasa lööma. <a href="%= resolve_url('/promote/resources#sample-email') %">Saada see e-kiri</a> oma ülemusele või ettevõtte juhile, et kõiki kaasata.
+  Räägi oma sõpradele ja kolleegidele KoodiTund kampaaniast. Paljud õpetajad otsivad vabatahtlikke, palu neil <a href="https://code.org/volunteer"> vabatahtlikuks registreeruda</a>. Kutsu oma tööandja kaasa lööma. <a href="{{ promote/sample_emails }}">Send this email</a> to your manager or the CEO to get everyone on board.
 </p>
 
 <h2>
@@ -65,13 +66,13 @@ Võid olla kas külalisesineja klassis või aidata KoodiTundi läbi viia. Külas
 
 <ul>
   <li>
-    <a href="%= resolve_url('/promote/resources#videos') %">Vali video</a>, mida klassile näidata innustamiseks ja KoodiTunni sissejuhatuseks.
+    <a href="{{ promote/videos }}">Pick out a video</a> to show to help focus the class and get them excited to do an Hour of Code.
   </li>
   <li>
     Tutvu <a href="/files/hoc-volunteer-toolkit.pdf">KoodiTund vabatahtliku juhendiga</a>, mis sisaldab ülevaadet, ajakava, ettevalmistavaid materjale ja reklmaammaterjale. Siin on olemas kõik, mida vabatahtlikuks hakkamisel vajad!
   </li>
   <li>
-    Kui plaanid läbi KoodiTund õpetuse oma ürituse raames, siis proovi vähemalt 30 minutit õppida vähemalt üht <a href="%= resolve_url('/learn') %">KoodiTund õpetust</a>.
+    If you're going to be doing a tutorial during your session, spend 30 minutes trying at least one <a href="{{ urls/learn }}">Hour of Code tutorial</a>.
   </li>
   <li>
     Kui külastad kooli, siis täida kõik vajalikud dokumendid (kui need on vajalikud).
@@ -119,7 +120,7 @@ Võid olla kas külalisesineja klassis või aidata KoodiTundi läbi viia. Külas
     </td>
     
     <td>
-      <a href="%= resolve_url('promote/resources#videos') %">Näita inspireerivat videot</a>.
+      <a href="{{ promote/videos }}">Show an inspirational video</a>.
     </td>
   </tr>
   
@@ -244,5 +245,5 @@ Võid olla kas külalisesineja klassis või aidata KoodiTundi läbi viia. Külas
           Code.org ja meie partnerid on kõik KoodiTund tegevused loonud selliselt, et need oleksid sobivad kõigile koolilastele, poistele ja tüdrukutele. Igaüks, isegi täiskasvanud, saab kaasa lüüa!
         </p>
         <p>
-          <%= view :signup_button %>
+          {{ signup_button }}
         </p>

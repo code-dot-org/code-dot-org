@@ -1,9 +1,10 @@
 ---
-title: <%= hoc_s(:title_how_to_events).inspect %>
+title: Cum sa organizezi un eveniment Hour of Code
 layout: wide
 nav: how_to_nav
 ---
-<%= view :signup_button %>
+
+{{ signup_button }}
 
 # How to organize an Hour of Code assembly or event
 
@@ -14,13 +15,13 @@ nav: how_to_nav
 ## 1. Pregătiți-vă pentru eveniment
 
 - Stabiliți un loc, o dată şi o oră.
-- Send [a letter](https://hourofcode.com/promote/resources#sample-emails) to your local mayor, member of Congress, governor, or influential business person and invite them to speak. Check out our [how-to toolkit](%=localized_file('/files/elected-official.pdf')%) when hosting an elected official during an Hour of Code for more info.
-- Invită mass-media şi presa locală, ziaristi sau bloggeri tech/educatie. Pentru ajutor, vedeti [kit-ul de presă](%= resolve_url('/promote/press-kit') %).
+- Send [a letter](https://hourofcode.com/promote/resources#sample-emails) to your local mayor, member of Congress, governor, or influential business person and invite them to speak. Check out our [how-to toolkit]({{ localized_files/elected_official }}) when hosting an elected official during an Hour of Code for more info.
+- Invite media/press. i.e. local news station, newspaper, education/tech bloggers. See our [press kit]({{ promote/press_kit_url }}) for help.
 
 ## 2. În timpul evenimentului dumneavoastră
 
-- Transformați evenimentul dvs. din start într-un succes cu unul dintre [video-urile noastre inspiraționale](%= resolve_url('/promote/resources#videos') %).
-- Formulati o introducere despre importanta studiului tehnologiei computerelor si programare folosind aceste [statistici si infografice](%= resolve_url('/promote/stats') %).   
+- Kick off your event with one of our [inspirational videos]({{ promote/videos }}).
+- Give an intro overviewing the importance of computer science, using these [stats and infographics]({{ promote/stats_url }}).   
       
     
 - **Other event ideas**: 
@@ -46,7 +47,7 @@ Consider hosting a K-5 evening event and invite parents to join their students f
 
 **Event:** School-wide Computer Science Education Week kick-off assembly
 
-**Date:** <%= campaign_date('start-short') %> (start of Computer Science Education Week)
+**Date:** {{ campaign_date/start_short }} (start of Computer Science Education Week)
 
 **Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
 
@@ -54,13 +55,13 @@ Consider hosting a K-5 evening event and invite parents to join their students f
 
 ## Desfasurarea evenimentului
 
-| Orar           | Activitati                                                                                                                                                                                    |
-| -------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 10:00-10:05 am | Open with one of our [inspirational videos](%= resolve_url('/promote/resources#videos') %).                                                                                                   |
-| 10:05-10:15 am | Directorul începe cu o introducere în care se subliniază importanța programării și tehnologiei computerelor. Folosiți aceste [statistici și infografice](%= resolve_url('/promote/stats') %). |
-| 10:15-10:30 am | Invitatii speciali vorbesc despre modul in care tehnologia si informatica joaca un rol important in viata cotidiana.                                                                          |
-| 10:30-10:40 am | Elevii vor desfășura o activitate demonstrativă în cadrul Orei de Programare pentru școală. Întorsătura amuzantă - ei trebuie să îi predea directorului, politicienilor sau altor elevi!      |
-| 10:40-11:00 am | Elevii deruleaza o activitate care sa nu implice utilizarea computerului si arata cum informatica poate fi studiata fara a folosi computerul.                                                 |
-| 11:00-11:05 am | Profesorul organizator ofera concluzii de final.                                                                                                                                              |
+| Orar           | Activitati                                                                                                                                                                               |
+| -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 10:00-10:05 am | Open with one of our [inspirational videos]({{ promote/videos }}).                                                                                                                       |
+| 10:05-10:15 am | Principal gives an intro overviewing the importance of computer science. Use these [stats and infographics]({{ promote/stats_url }}).                                                    |
+| 10:15-10:30 am | Invitatii speciali vorbesc despre modul in care tehnologia si informatica joaca un rol important in viata cotidiana.                                                                     |
+| 10:30-10:40 am | Elevii vor desfășura o activitate demonstrativă în cadrul Orei de Programare pentru școală. Întorsătura amuzantă - ei trebuie să îi predea directorului, politicienilor sau altor elevi! |
+| 10:40-11:00 am | Elevii deruleaza o activitate care sa nu implice utilizarea computerului si arata cum informatica poate fi studiata fara a folosi computerul.                                            |
+| 11:00-11:05 am | Profesorul organizator ofera concluzii de final.                                                                                                                                         |
 
-<%= view :signup_button %>
+{{ signup_button }}

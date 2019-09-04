@@ -11,7 +11,7 @@ In this set of lessons, students are introduced to a relatively simple Caesar an
 **Lesson Type:**  Caesar Cipher Widget | Frequency Analysis Widget | Individual and Group Discovery
 
 
-<a href = “https://curriculum.code.org/csp/unit4/5/” target=_blank> Lesson Plan Link <i class="fa fa-external-link-square"></i></a>
+<a href = "https://curriculum.code.org/csp/unit4/5/" target=_blank> Lesson Plan Link <i class="fa fa-external-link-square"></i></a>
 
 To begin this lesson, students recall some of the facts they learned in Unit 1 while using the Internet Simulator.
 
@@ -33,7 +33,7 @@ This lesson gives students a first taste of the kind of thinking that goes into 
 **Lesson Type:** Vigenère Widget | Individual and Group Discovery
 
 
-<a href = “https://curriculum.code.org/csp/unit4/6/” target=_blank> Lesson Plan Link <i class="fa fa-external-link-square"></i></a>
+<a href = "https://curriculum.code.org/csp/unit4/6/" target=_blank> Lesson Plan Link <i class="fa fa-external-link-square"></i></a>
 
 
 Cryptography and encryption are important and far-reaching fields within computer science. This lesson begins to get students’ feet wet with the human side of cybersecurity: choosing good passwords through an exploration of the classic Vigenère Cipher. We also learn that the Vigenère cipher is actually susceptible to frequency analysis (though at first glance it is not) and in subsequent lessons we learn that better methods are used today. In this lesson we focus on making a good key and students explain in broad terms what makes a key difficult to “crack”, while in subsequent lessons we learn more about problems and algorithms that are **computationally hard**.
@@ -45,7 +45,7 @@ Cryptography and encryption are important and far-reaching fields within compute
 **Lesson Type:** Modeling | Individual and Group Discovery
 
 
-<a href = “https://curriculum.code.org/csp/unit4/7/” target=_blank> Lesson Plan Link <i class="fa fa-external-link-square"></i></a>
+<a href = "https://curriculum.code.org/csp/unit4/7/" target=_blank> Lesson Plan Link <i class="fa fa-external-link-square"></i></a>
 
 
 Up to now, students have been working with simple ways to secure their digital data, but those methods always required both parties knowing a secret key to encrypt and decrypt. In this model a coordination problem arises: how can two parties establish a secret key without meeting ahead of time? If we can solve that problem, then we have a way for people (or computers) to establish keys over the Internet to enable secure transactions. Public key cryptography does away with this problem by introducing asymmetric keys – that is, using one key to encrypt a message and a different key to decrypt. For this to work the keys need to be mathematically related in ways we explain in the lesson. In this way, messages can be sent between people who have never met before, by making a person’s encryption key public, and their decryption key private.

@@ -84,6 +84,7 @@ group :development, :test do
   #gem 'debugger' unless ENV['RM_INFO']
 
   gem 'active_record_query_trace'
+  gem 'benchmark-ips'
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'brakeman'

@@ -1,15 +1,16 @@
 ---
-title: <%= hoc_s(:title_how_to).inspect %>
+title: Vejledning
 layout: wide
 nav: how_to_nav
 ---
-<%= view :signup_button %>
 
-# How to teach one Hour of Code with your class
+{{ signup_button }}
 
-### Join the movement and introduce a group of students to their first hour of computer science with these steps. The Hour of Code is easy to run - even for beginners! If you'd like an extra set of hands to help out, you can find a [local volunteer](%= codeorg_url('/volunteer/local') %) to help run an Hour of Code in your class.
+# Sådan afholder du Hour of Code med en skoleklasse
 
-### Take a look at our [participation guide if you still have questions](%= localized_file('/files/participation-guide.pdf') %).
+### Tilslut dig bevægelsen og indfør en gruppe elever i deres første time med datalogi ved at bruge disse trin. Hour of Code er nemt at afvikle - selv for begyndere! If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your class.
+
+### Take a look at our [participation guide if you still have questions]({{ localized_files/participation_guide }}).
 
 * * *
 
@@ -17,11 +18,11 @@ nav: how_to_nav
 
 ## 2. Choose a tutorial for your hour
 
-We provide a variety of fun, [student-guided tutorials](%= resolve_url('/learn') %) for all age groups and experience levels. Students do the activities on their own, though many activities include lesson plans for teachers (you'll see the link when you click the activity) to guide discussion or extend the activity. [![](/images/fit-700/tutorials.png)](%=resolve_url('/learn') %)
+We provide a variety of fun, [student-guided tutorials]({{ urls/learn }}) for all age groups and experience levels. Students do the activities on their own, though many activities include lesson plans for teachers (you'll see the link when you click the activity) to guide discussion or extend the activity. [![](/images/fit-700/tutorials.png)]({{ urls/learn }})
 
 ## 3. Promote your Hour of Code
 
-Promote your Hour of Code [with these tools](%= resolve_url('/promote/resources') %) and encourage others to host their own events.
+Promote your Hour of Code [with these tools]({{ urls/promote_resources }}) and encourage others to host their own events.
 
 ## 4. Plan your technology needs - computers are optional
 
@@ -37,24 +38,24 @@ Stil høretelefoner til rådighed i din klasse, eller bed eleverne medbringe der
 
 ## 5. Start your Hour of Code off with an inspiring speaker or video
 
-**Invite a [local volunteer](%= codeorg_url('/volunteer/local') %) to inspire your students by talking about the breadth of possibilities in computer science.** There are thousands of volunteers around the world ready to help with your Hour of Code through either a classroom visit or video chat with your students!
+**Invite a [local volunteer]({{ urls/volunteer_local }}) to inspire your students by talking about the breadth of possibilities in computer science.** There are thousands of volunteers around the world ready to help with your Hour of Code through either a classroom visit or video chat with your students!
 
 **Vis en inspirerende video:**
 
 - The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh. (There are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions available)
-- Find more inspirational [resources](%= codeorg_url('/inspire') %) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+- Find more inspirational [resources]({{ urls/inspire }}) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
 **It’s okay if both you and your students are brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
 
 - Explain ways that technology impacts our lives, with examples both boys and girls will care about (talk about saving lives, helping people, connecting people, etc.).
 - Lav som klasse en liste over ting i hverdagen, som bruger kode.
-- See tips for getting girls interested in computer science [here](%= codeorg_url('/girls')%).
+- See tips for getting girls interested in computer science [here]({{ urls/girls }}).
 
 ## 6. Code!
 
 **Direct students to the activity**
 
-- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](%= resolve_url('/learn')%) under the number of participants.
+- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
 
 **When your students come across difficulties it's okay to respond:**
 
@@ -64,7 +65,7 @@ Stil høretelefoner til rådighed i din klasse, eller bed eleverne medbringe der
 
 **What if a student finishes early?**
 
-- Students can see all tutorials and [try another Hour of Code activity](%= resolve_url('/learn')%).
+- Students can see all tutorials and [try another Hour of Code activity]({{ urls/learn }}).
 - Eller du kan bede de elever, der er tidligt færdige om, at hjælpe de klassekammerater der har problemer med deres aktivitet.
 
 [col-33]
@@ -83,8 +84,8 @@ Stil høretelefoner til rådighed i din klasse, eller bed eleverne medbringe der
 
 [/col-33]
 
-- [Print certificates](%= codeorg_url('/certificates')%) for your students.
-- [Udskriv "I did an Hour of Code!"](%= resolve_url('/promote/resources#stickers') %) stickere til dine elever.
+- [Print certificates]({{ urls/certificates }}) for your students.
+- [Print "I did an Hour of Code!"]({{ urls/promote_stickers }}) stickers for your students.
 - [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for your school.
 - Del billeder og video af jeres Hour of Code på sociale medier. Brug #HourOfCode og @codeorg så vi også kan dele jeres succes!
 
@@ -98,14 +99,14 @@ Stil høretelefoner til rådighed i din klasse, eller bed eleverne medbringe der
 
 ## Flere Hour of Code materialer til undervisere:
 
-- Besøg [Hour of Code Teacher Forum](http://forum.code.org/c/plc/hour-of-code) for at få rådgivning, indsigt og hjælp fra andre undervisere. <% if @country == 'us' %>
-- Tjek vores [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code). <% end %>
+- Besøg [Hour of Code Teacher Forum](http://forum.code.org/c/plc/hour-of-code) for at få rådgivning, indsigt og hjælp fra andre undervisere.
+- Tjek vores [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
 
 ## Hvad er næste skridt efter Hour of Code?
 
 The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey:
 
-- Encourage students to continue to [learn online](%= codeorg_url('/learn/beyond')%).
-- [Attend](%= codeorg_url('/professional-development-workshops') %) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
+- Encourage students to continue to [learn online]({{ urls/learn_beyond }}).
+- [Attend]({{ urls/professional_development_workshops }}) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
 
-<%= view :signup_button %>
+{{ signup_button }}

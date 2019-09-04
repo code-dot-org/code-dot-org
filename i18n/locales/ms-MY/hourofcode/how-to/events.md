@@ -1,9 +1,10 @@
 ---
-title: <%= hoc_s(:title_how_to_events).inspect %>
+title: Panduan Bagaimana bagi Acara Hour of Code
 layout: wide
 nav: how_to_nav
 ---
-<%= view :signup_button %>
+
+{{ signup_button }}
 
 # How to organize an Hour of Code assembly or event
 
@@ -14,13 +15,13 @@ nav: how_to_nav
 ## 1. Sedia untuk acara anda
 
 - Menentukan tempat, tarikh, dan masa.
-- Send [a letter](https://hourofcode.com/promote/resources#sample-emails) to your local mayor, member of Congress, governor, or influential business person and invite them to speak. Check out our [how-to toolkit](%=localized_file('/files/elected-official.pdf')%) when hosting an elected official during an Hour of Code for more info.
-- Menjemput media/pihak akhbar, sebagai contohnya, stesen berita tempatan, surat khabar, ahli blog pendidikan/teknologi. Rujuk kepada [kit kenyataan akhbar](%= resolve_url('/promote/press-kit') %) untuk mendapatkan bantuan.
+- Send [a letter](https://hourofcode.com/promote/resources#sample-emails) to your local mayor, member of Congress, governor, or influential business person and invite them to speak. Check out our [how-to toolkit]({{ localized_files/elected_official }}) when hosting an elected official during an Hour of Code for more info.
+- Invite media/press. i.e. local news station, newspaper, education/tech bloggers. See our [press kit]({{ promote/press_kit_url }}) for help.
 
 ## 2. Semasa acara anda
 
-- Mulakan acara anda dengan salah satu [video yang memberi inspirasi](%= resolve_url('/promote/resources#videos') %) kita.
-- Memberikan sebuah pengenalan yang secara keseluruhannya mengupas kepentingan sains komputer, menggunakan [statistik dan infografik](%= resolve_url('/promote/stats') %) ini.   
+- Kick off your event with one of our [inspirational videos]({{ promote/videos }}).
+- Give an intro overviewing the importance of computer science, using these [stats and infographics]({{ promote/stats_url }}).   
       
     
 - **Other event ideas**: 
@@ -46,7 +47,7 @@ Consider hosting a K-5 evening event and invite parents to join their students f
 
 **Event:** School-wide Computer Science Education Week kick-off assembly
 
-**Date:** <%= campaign_date('start-short') %> (start of Computer Science Education Week)
+**Date:** {{ campaign_date/start_short }} (start of Computer Science Education Week)
 
 **Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
 
@@ -54,13 +55,13 @@ Consider hosting a K-5 evening event and invite parents to join their students f
 
 ## Jadual Masa Acara
 
-| Masa             | Peristiwa                                                                                                                                                                             |
-| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 10:00 - 10:05 am | Open with one of our [inspirational videos](%= resolve_url('/promote/resources#videos') %).                                                                                           |
-| 10:05 - 10:15 am | Pengetua memberikan sebuah pengenalan yang secara keseluruhannya mengupas kepentingan sains komputer, menggunakan [statistik dan infografik](%= resolve_url('/promote/stats') %) ini. |
-| 10:15 - 10:30 am | Tetamu khas berucap tentang latar belakang mereka dan bagaimana teknologi dan sains komputer memainkan peranan penting dalam kehidupan seharian mereka.                               |
-| 10:30 - 10:40 am | Pelajar melaksanakan sebuah demo Hour of Code untuk sekolah. Pintal menyeronokkan: mengizinkan mereka untuk mengajar tuan pengetua, ahli politik, atau pelejar-pelajar lain!          |
-| 10:40 - 11:00 am | Pelajar mendemonstrasikan sebuah aktiviti tercabut dan bagaimana sains komputer boleh diajar tanpa menggunakan komputer.                                                              |
-| 11:00 - 11:05 am | Guru yang telah membantu dalam acara yang melibatkan seluruh sekolah memberikan kata-kata penutup.                                                                                    |
+| Masa             | Peristiwa                                                                                                                                                                    |
+| ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 10:00 - 10:05 am | Open with one of our [inspirational videos]({{ promote/videos }}).                                                                                                           |
+| 10:05 - 10:15 am | Principal gives an intro overviewing the importance of computer science. Use these [stats and infographics]({{ promote/stats_url }}).                                        |
+| 10:15 - 10:30 am | Tetamu khas berucap tentang latar belakang mereka dan bagaimana teknologi dan sains komputer memainkan peranan penting dalam kehidupan seharian mereka.                      |
+| 10:30 - 10:40 am | Pelajar melaksanakan sebuah demo Hour of Code untuk sekolah. Pintal menyeronokkan: mengizinkan mereka untuk mengajar tuan pengetua, ahli politik, atau pelejar-pelajar lain! |
+| 10:40 - 11:00 am | Pelajar mendemonstrasikan sebuah aktiviti tercabut dan bagaimana sains komputer boleh diajar tanpa menggunakan komputer.                                                     |
+| 11:00 - 11:05 am | Guru yang telah membantu dalam acara yang melibatkan seluruh sekolah memberikan kata-kata penutup.                                                                           |
 
-<%= view :signup_button %>
+{{ signup_button }}

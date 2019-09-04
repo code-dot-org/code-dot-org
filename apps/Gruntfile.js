@@ -220,11 +220,10 @@ describe('entry tests', () => {
           src: ['**/*.js'],
           dest: 'build/package/js/ace/'
         },
-        // Pull p5.js and p5.play.js into the package from our fork of the
-        // p5.play repo at https://github.com/code-dot-org/p5.play
+        // Pull p5.js and p5.play.js into the package from our forks.
         {
           expand: true,
-          cwd: './node_modules/@code-dot-org/p5.play/examples/lib',
+          cwd: './node_modules/@code-dot-org/p5/lib',
           src: ['p5.js'],
           dest: 'build/package/js/p5play/'
         },
@@ -767,6 +766,10 @@ describe('entry tests', () => {
           name: 'webpack-runtime'
         },
         splitChunks: {
+          // Override the default limit of 3 concurrent downloads on page load,
+          // which only makes sense for HTTP 1.1 servers. HTTP 2 performance has
+          // been observed to degrade only with > 200 simultaneous downloads.
+          maxInitialRequests: 100,
           cacheGroups: {
             // Pull any module shared by 2+ appsEntries into the "common" chunk.
             common: {
@@ -782,7 +785,7 @@ describe('entry tests', () => {
               name: 'code-studio-common',
               minChunks: 2,
               chunks: chunk => {
-                const chunkNames = _.keys(codeStudioEntries);
+                const chunkNames = Object.keys(codeStudioEntries);
                 return chunkNames.includes(chunk.name);
               },
               priority: 10
@@ -811,14 +814,54 @@ describe('entry tests', () => {
             // For more information see: https://webpack.js.org/guides/code-splitting/
             'code-studio-multi': {
               name: 'code-studio-common',
-              minChunks: _.keys(appsEntries).length + 1,
+              minChunks: Object.keys(appsEntries).length + 1,
               chunks: chunk => {
-                const chunkNames = _.keys(codeStudioEntries).concat(
-                  _.keys(appsEntries)
+                const chunkNames = Object.keys(codeStudioEntries).concat(
+                  Object.keys(appsEntries)
                 );
                 return chunkNames.includes(chunk.name);
               },
               priority: 20
+            },
+            vendors: {
+              name: 'vendors',
+              priority: 30,
+              chunks: chunk => {
+                // all 'initial' chunks except otherEntries
+                const chunkNames = _.concat(
+                  Object.keys(codeStudioEntries),
+                  Object.keys(appsEntries),
+                  Object.keys(pegasusEntries),
+                  Object.keys(professionalDevelopmentEntries),
+                  Object.keys(internalEntries)
+                );
+                return chunkNames.includes(chunk.name);
+              },
+              test(module) {
+                return [
+                  'babel-polyfill',
+                  'immutable',
+                  'lodash',
+                  'moment',
+                  'pepjs',
+                  'radium',
+                  'react',
+                  'react-dom',
+                  'wgxpath'
+                ].some(libName =>
+                  new RegExp(`/apps/node_modules/${libName}/`).test(
+                    module.resource
+                  )
+                );
+              }
+            },
+            p5lab: {
+              name: 'p5-dependencies',
+              priority: 10,
+              minChunks: 2,
+              chunks: chunk =>
+                ['spritelab', 'gamelab', 'dance'].includes(chunk.name),
+              test: module => /p5/.test(module.resource)
             }
           }
         }

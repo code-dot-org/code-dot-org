@@ -1,13 +1,12 @@
 ---
-title: <%= hoc_s(:title_stats).inspect %>
+title: Blurbs and useful stats
 layout: wide
 nav: promote_nav
 ---
 
-
 <a id="blurb"></a>
 
-<%= view :signup_button %>
+{{ signup_button }}
 
 # Blurbs and useful stats
 
@@ -41,7 +40,7 @@ Tehnologia transformă fiecare industrie pe planeta. În 2015, 7 milioane de des
 
 #### Despre Code.org
 
-Code.org® este o organizație non-profit dedicată extinderii educației cu privire la tehnologia computerelor și programare, prin promovarea acesteia în școli și prin creșterea participării femeilor dar și a minoritatilor. Its vision is that every student in every school has the opportunity to learn computer programming. După lansarea din 2013, Code.org a organizat campania Hour of Code – care a introdus peste 100 de milioane de studenţi in tainele informaticii pana in prezent – şi în parteneriat cu 70 districte reusesc la nivel naţional sa extinde programele de tehnologia computerelor si programare. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. Pentru mai multe informaţii, vă rugăm să vizitaţi: [<%= resolve_url('code.org') %>](%= resolve_url('https://code.org') %).
+Code.org® este o organizație non-profit dedicată extinderii educației cu privire la tehnologia computerelor și programare, prin promovarea acesteia în școli și prin creșterea participării femeilor dar și a minoritatilor. Its vision is that every student in every school has the opportunity to learn computer programming. După lansarea din 2013, Code.org a organizat campania Hour of Code – care a introdus peste 100 de milioane de studenţi in tainele informaticii pana in prezent – şi în parteneriat cu 70 districte reusesc la nivel naţional sa extinde programele de tehnologia computerelor si programare. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. For more information, please visit: [code.org]({{ codeorg_link }}).
 
 ## Share these on social media and in emails
 
@@ -51,6 +50,6 @@ Code.org® este o organizație non-profit dedicată extinderii educației cu pri
 
 ## Infographics
 
-<%= view :stats_carousel %>
+{{ stats_carousel }}
 
-<%= view :signup_button %>
+{{ signup_button }}

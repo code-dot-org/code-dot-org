@@ -1,8 +1,9 @@
 ---
-title: <%= hoc_s(:title_country_resources).inspect %>
+title: '& lt؛٪ = hoc_s (: title_country_resources) .تمام٪ & gt؛'
 layout: wide
 nav: promote_nav
 ---
+
 <%= view :signup_button %>
 
 <% if @country == 'la' %>

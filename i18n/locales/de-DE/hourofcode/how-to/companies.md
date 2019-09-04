@@ -1,9 +1,10 @@
 ---
-title: <%= hoc_s(:title_how_to_companies).inspect %>
+title: Wie eine Stunde Code Veranstaltung gehostet wird- für Firmen
 layout: wide
 nav: how_to_nav
 ---
-<%= view :signup_button %>
+
+{{ signup_button }}
 
 # So bringen Sie die Hour of Code in Ihr Unternehmen
 
@@ -13,34 +14,34 @@ nav: how_to_nav
 
 ## Nehmen Sie Kontakt mit örtlichen Schulklassen und freiwilligen Helfern für die Hour of Code auf
 
-Code.org bietet die Möglichkeit, [Kontakt](%= codeorg_url('/volunteer') %) zwischen Ihren Mitarbeitern und örtlichen Klassen, in denen "Hour of Code"-Veranstaltungen stattfinden, herzustellen. So können Ihre Mitarbeiter ihre beruflichen Erfahrungen einbringen und die Schüler für das Studium der Informatik begeistern.
+Code.org offers the opportunity for your employees to [connect]({{ urls/volunteer }}) with local classrooms doing the Hour of Code where they can share their tech career experience and inspire students to study computer science.
 
-[<button>Sign up to volunteer!</button>](%= codeorg_url('/volunteer') %) <br /> <br />
+[<button>Sign up to volunteer!</button>]({{ urls/volunteer }}) <br /> <br />
 
-Um mehr darüber zu erfahren, wie Sie Ihre Mitarbeiter ermutigen können und wie der Kontakt zwischen Ihren Mitarbeitern und den örtlichen Klassen hergestellt werden kann, schauen Sie sich unseren [Leitfaden für Firmenpartner](%= localized_file('/files/hoc-corporate-toolkit.pdf') %) an.
+For more instructions on encouraging employees and connecting your employees with classrooms, check out our [guide for corporate partners]({{ localized_files/hoc_corporate_toolkit }}).
 
 ## Weitere Möglichkeiten, als Unternehmen die Hour of Code zu unterstützen
 
-- Ask your CEO to [send a company-wide email](%= resolve_url('/promote/resources#sample-emails') %) emphasizing the importance of computer science and encouraging employees to spread the word.
-- Host an Hour of Code Happy Hour with coworkers to try the [activities](%= resolve_url('/learn') %).
+- Ask your CEO to [send a company-wide email]({{ promote/sample_emails }}) emphasizing the importance of computer science and encouraging employees to spread the word.
+- Host an Hour of Code Happy Hour with coworkers to try the [activities]({{ urls/learn }}).
 - Host an Hour of Code event for a local classroom of students or non profits partners to do an Hour of Code at your company’s office. See event how-to guide below.
 
 # Leitfaden zur Durchführung einer "Hour of Code"-Veranstaltung
 
 ## 1. Machen Sie Werbung für Ihre Veranstaltung
 
-- Promote your [Hour of Code](%= resolve_url('/promote') %) event and encourage others to host.
-- Encourage software engineers at your company to visit a local classroom to help lead an Hour of Code and inspire students to study computer science. They can [sign up](%= codeorg_url('/volunteer/engineer') %) to be connected with a classroom.
+- Promote your [Hour of Code]({{ urls/promote }}) event and encourage others to host.
+- Encourage software engineers at your company to visit a local classroom to help lead an Hour of Code and inspire students to study computer science. They can [sign up]({{ urls/volunteer_engineer }}) to be connected with a classroom.
 
 ## 2. Schauen Sie sich dieses Videotutorial an <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
 ## 3. Wählen Sie einen Kurs
 
-We host a variety of [fun, hour-long activities](%= resolve_url('/learn') %) for participants of all ages, created by a variety of partners. [Probieren Sie es einfach aus!](%= resolve_url('/learn') %)
+We host a variety of [fun, hour-long activities]({{ urls/learn }}) for participants of all ages, created by a variety of partners. [Try them out!]({{ urls/learn }})
 
 **All Hour of Code activities** require minimal prep-time, and are self-guided - allowing participants to work at their own pace and skill-level.
 
-[![](/images/fit-700/tutorials.png)](%= resolve_url('/learn') %)
+[![](/images/fit-700/tutorials.png)]({{ urls/learn }})
 
 ## 4. Planen Sie ihren Bedarf an technischer Ausstattung - Computer sind nicht immer erforderlich
 
@@ -70,13 +71,13 @@ Beginnen Sie Ihre Hour of Code mit einer motivierenden Diskussion mit den Teilne
 - If you are a tech company, demo fun, innovative products your company is working on.
 - If you aren’t a tech company, discuss ways your company uses technology to solve problems and accomplish goals.
 - Invite software engineers from your company to speak about why they decided to study computer science and the projects they work on.
-- See tips for getting girls interested in computer science [here](%= codeorg_url('/girls') %).
+- See tips for getting girls interested in computer science [here]({{ urls/girls }}).
 
 ## 6. Programmieren!
 
 **Führen Sie die Teilnehmer in den Kurs ein**
 
-- Write the activity link on a whiteboard. Find the link listed on the [information for your selected activity](%= resolve_url('/learn') %) under the number of participants.
+- Write the activity link on a whiteboard. Find the link listed on the [information for your selected activity]({{ urls/learn }}) under the number of participants.
 - For younger students, load the activity page ahead of time or save it as a bookmark.
 
 **When participants come across difficulties it's okay to respond:**
@@ -91,9 +92,9 @@ Beginnen Sie Ihre Hour of Code mit einer motivierenden Diskussion mit den Teilne
 
 ## 7) Feiern Sie!
 
-- [Print certificates](%= codeorg_url('/certificates') %) for participants and students.
-- [Print "I did an Hour of Code!"](%= resolve_url('/promote/resources#stickers') %) stickers.
+- [Print certificates]({{ urls/certificates }}) for participants and students.
+- [Print "I did an Hour of Code!"]({{ promote/resources_stickers }}) stickers.
 - [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for your employees.
 - Teilen Sie Fotos und Videos Ihrer Hour of Code-Veranstaltung in den sozialen Medien. Verwenden Sie #HourOfCode und @codeorg, damit wir Ihren Erfolg auch hervorheben können!
 
-<%= view :signup_button %>
+{{ signup_button }}

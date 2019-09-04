@@ -1,9 +1,10 @@
 ---
-title: <%= hoc_s(:title_how_to_companies).inspect %>
+title: Kuidas KoodiTund läbi viia - ettevõtetele
 layout: wide
 nav: how_to_nav
 ---
-<%= view :signup_button %>
+
+{{ signup_button }}
 
 # Kuidas KoodiTund oma ettevõttes läbi teha
 
@@ -13,34 +14,34 @@ nav: how_to_nav
 
 ## Võta ühendust kohalike koolidega ning mine KoodiTund külalisõpetajaks
 
-Code.org pakub töötajatele võimalust[ võtta ühendust ](%= codeorg_url('/volunteer') %) kohalike koolidega ning viia läbi KoodiTund ja seeläbi jagada oma karjäärikogemust infotehnoloogia valdkonnas ning innustada õpilasi arvutiteadusi õppima.
+Code.org offers the opportunity for your employees to [connect]({{ urls/volunteer }}) with local classrooms doing the Hour of Code where they can share their tech career experience and inspire students to study computer science.
 
-[<button>Registreeri külalisõpetajaks!</button>](%= codeorg_url('/volunteer') %) <br /> <br />
+[<button>Sign up to volunteer!</button>]({{ urls/volunteer }}) <br /> <br />
 
-Kui soovite töötajaid julgustada KoodiTundi koolides läbi viima, tutvuge ka meie [ korporatiivklientide juhendiga](%= localized_file('/files/hoc-corporate-toolkit.pdf') %).
+For more instructions on encouraging employees and connecting your employees with classrooms, check out our [guide for corporate partners]({{ localized_files/hoc_corporate_toolkit }}).
 
 ## Veel võimalusi, kuidas ettevõtted saavad KoodiTund kampaaniat toetada
 
-- Palu oma juhil [saata kogu ettevõttele e-kiri](%= resolve_url('/promote/resources#sample-emails') %), rõhutamaks arvutiteaduste olulisust ning julgustada töötajaid minema KoodiTund üritust läbi viima ning KoodiTund kampaania infot levitama.
-- Korraldage KoodiTund Happy Hour oma töötajatele ning proovige [ erinevaid tegevusi](%= resolve_url('/learn') %).
+- Ask your CEO to [send a company-wide email]({{ promote/sample_emails }}) emphasizing the importance of computer science and encouraging employees to spread the word.
+- Host an Hour of Code Happy Hour with coworkers to try the [activities]({{ urls/learn }}).
 - Korraldage KoodiTund üritus kohalikus koolis õpilastele või mittetulundussektorile oma ettevõttes. Allpool on selleks samm-sammult juhend.
 
 # Kuidas viia läbi KoodiTund õpilastega
 
 ## 3. Reklaami oma KoodiTund üritust
 
-- Reklaamige oma üritust [ KoodiTund ](%= resolve_url('/promote') %) ja julgustage teisi neid korraldama.
-- Julgustage oma ettevõtte tarkvara arendajaid ja it-töötajaid külastama kohalikke koole. Paluge neil juhendada KoodiTund üritust ning inspireerida õpilasi arvutiteadusi õppima. Nad saavad[ liituda ](%= codeorg_url('/volunteer/engineer') %) KoodiTund üritust läbi viivate külalisõpetajatega.
+- Promote your [Hour of Code]({{ urls/promote }}) event and encourage others to host.
+- Julgustage oma ettevõtte tarkvara arendajaid ja it-töötajaid külastama kohalikke koole. Paluge neil juhendada KoodiTund üritust ning inspireerida õpilasi arvutiteadusi õppima. They can [sign up]({{ urls/volunteer_engineer }}) to be connected with a classroom.
 
 ## 1. Vaata seda "Kuidas KoodiTundi läbi viia" videot <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
 ## 3. Vali tegevus
 
-Oleme koos erinevate partneritega koostanud mitmeid[ lõbusaid tund aega kestvaid õpetusi ](%= resolve_url('/learn') %)igas vanuses osalejatele. [Proovi järgi!](%= resolve_url('/learn') %)
+We host a variety of [fun, hour-long activities]({{ urls/learn }}) for participants of all ages, created by a variety of partners. [Try them out!]({{ urls/learn }})
 
 **Kõik KoodiTund õpetused ** vajavad korraldajatelt minimaalselt ettevalmistust ning on juhenditega, mis aitavad lastel neid läbida vastavalt nende oma oskustele ja õpikiirusele.
 
-[![](/images/fit-700/tutorials.png)](%= resolve_url('/learn') %)
+[![](/images/fit-700/tutorials.png)]({{ urls/learn }})
 
 ## 4. Planeeringe vajalik tehnoloogia - arvutite kasutamine on valikuline
 
@@ -70,13 +71,13 @@ Alusta oma KoodiTund läbiviimist osalejate inspireerimisega ning aruteluga, kui
 - Kui töötad tehnoloogiaettevõttes, näita lõbusaid ja innovaatilisi tooteid/teenuseid, millega hetkel tegelete.
 - Kui te ei ole tehnoloogiaettevõtte, siis arutage, milliseid tehnoloogiaid teie ettevõtte kasutab probleemide lahendamiseks ning ärieesmärkide saavutamiseks.
 - Kutsuge oma ettevõtte tarkvaraarendaid rääkima, miks nad otsustasid arvutiteaduse õppimise kasuks ning milliste projektide kallal nad hetkel töötavad.
-- Nõuandeid, kuidas tüdrukutes arvutiteaduse vastu huvi äratada, leiad[ siit](%= resolve_url('https://code. org/girls') %).
+- See tips for getting girls interested in computer science [here]({{ urls/girls }}).
 
 ## 6. Programmeeri!
 
 **Juhata osalised tegevuse juurde**
 
-- Kirjuta tegevuse viide tahvlile. Viite leiad [ valitud juhendist](%= resolve_url('/learn') %) osalejate arvu juurest.
+- Write the activity link on a whiteboard. Find the link listed on the [information for your selected activity]({{ urls/learn }}) under the number of participants.
 - Noorematele õpilastele salvesta tegevuse internetiaadress eelnevalt brauseri järjehoidjasse.
 
 **Kui osalejad satuvad raskustesse, siis võid vastata:**
@@ -91,9 +92,9 @@ Alusta oma KoodiTund läbiviimist osalejate inspireerimisega ning aruteluga, kui
 
 ## 7. Tähistage
 
-- [Trüki tunnistused](%= codeorg_url('/certificates') %)oma õpilastele.
-- [Trüki "KoodiTund läbitud!"](%= resolve_url('/promote/resources#stickers') %) kleepsud oma õpilastele.
+- [Print certificates]({{ urls/certificates }}) for participants and students.
+- [Print "I did an Hour of Code!"]({{ promote/resources_stickers }}) stickers.
 - [Telli spetsiaalsed t-särgid](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) osalejatele.
 - Jagage KoodiTund ürituse fotosid ja videosid sotsiaalmeedias. Kasuta #HourOfCode ja @codeord, kes saaksime samuti teie edusamme jagada!
 
-<%= view :signup_button %>
+{{ signup_button }}

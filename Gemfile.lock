@@ -323,6 +323,7 @@ GEM
       aws-eventstream (~> 1.0, >= 1.0.2)
     backports (3.11.3)
     bcrypt (3.1.11)
+    benchmark-ips (2.7.2)
     better_errors (2.1.1)
       coderay (>= 1.0.0)
       erubis (>= 2.6.6)
@@ -896,6 +897,7 @@ DEPENDENCIES
   aws-sdk-s3 (~> 1)
   aws-sdk-secretsmanager (~> 1)
   bcrypt
+  benchmark-ips
   better_errors
   binding_of_caller
   bootstrap-sass (~> 2.3.2.2)

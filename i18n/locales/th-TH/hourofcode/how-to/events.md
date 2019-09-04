@@ -1,9 +1,10 @@
 ---
-title: <%= hoc_s(:title_how_to_events).inspect %>
+title: Hour of Code Event How-To
 layout: wide
 nav: how_to_nav
 ---
-<%= view :signup_button %>
+
+{{ signup_button }}
 
 # How to organize an Hour of Code assembly or event
 
@@ -14,13 +15,13 @@ nav: how_to_nav
 ## 1. เตรียมพร้อมสำหรับกิจกรรมของคุณ
 
 - กำหนดสถานที่, วัน และเวลา
-- Send [a letter](https://hourofcode.com/promote/resources#sample-emails) to your local mayor, member of Congress, governor, or influential business person and invite them to speak. ลองดู[คู่มือวิธีทำ](%=localized_file('/files/elected-official.pdf')%)ของเราเมื่อเชิญข้าราชการมาในงาน Hour of Code สำหรับข้อมูลเพิ่มเติม
-- เชิญสื่อ/สำนักพิมพ์ เช่น สถานีข่าวท้องถิ่น, หนังสือพิมพ์, ผู้เขียนบล็อกเกี่ยวกับการศึกษา/เทคโนโลยี ดู[คู่มือสื่อ](%= resolve_url('/promote/press-kit') %)ของเราสำหรับความช่วยเหลือ
+- Send [a letter](https://hourofcode.com/promote/resources#sample-emails) to your local mayor, member of Congress, governor, or influential business person and invite them to speak. Check out our [how-to toolkit]({{ localized_files/elected_official }}) when hosting an elected official during an Hour of Code for more info.
+- Invite media/press. i.e. local news station, newspaper, education/tech bloggers. See our [press kit]({{ promote/press_kit_url }}) for help.
 
 ## 2. ระหว่างกิจกรรม
 
-- เริ่มกิจกรรมของคุณด้วยหนึ่งใน[วิดีโอสร้างแรงบันดาลใจ](%= resolve_url('/promote/resources#videos') %)ของเรา
-- เกริ่นนำอธิบายถึงความสำคัญของวิชาวิทยาการคอมพิวเตอร์ โดยใช้[สถิติและอินโฟกราฟิก](%= resolve_url('/promote/stats') %)เหล่านี้   
+- Kick off your event with one of our [inspirational videos]({{ promote/videos }}).
+- Give an intro overviewing the importance of computer science, using these [stats and infographics]({{ promote/stats_url }}).   
       
     
 - **Other event ideas**: 
@@ -46,7 +47,7 @@ Consider hosting a K-5 evening event and invite parents to join their students f
 
 **Event:** School-wide Computer Science Education Week kick-off assembly
 
-**Date:** <%= campaign_date('start-short') %> (start of Computer Science Education Week)
+**Date:** {{ campaign_date/start_short }} (start of Computer Science Education Week)
 
 **Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
 
@@ -54,13 +55,13 @@ Consider hosting a K-5 evening event and invite parents to join their students f
 
 ## ลำดับงาน
 
-| เวลา             | การดำเนินการ                                                                                                                            |
-| ---------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| 10:00 - 10:05 น. | Open with one of our [inspirational videos](%= resolve_url('/promote/resources#videos') %).                                             |
-| 10:05 - 10:15 น. | ผู้อำนวยการเกริ่นนำอธิบายถึงความสำคัญของวิชาวิทยาการคอมพิวเตอร์ โดยใช้[สถิติและอินโฟกราฟิก](%= resolve_url('/promote/stats') %)เหล่านี้ |
-| 10:15 - 10:30 น. | แขกรับเชิญพูดถึงประวัติของพวกเขาและพูดถึงว่าเทคโนโลยีและวิทยาการคอมพิวเตอร์มีบทบาทที่สำคัญในชีวิตประจำวันของพวกเขาอย่างไร               |
-| 10:30 - 10:40 น. | นักเรียนสาธิต Hour of Code สำหรับโรงเรียน หักมุมสนุกๆ: ให้พวกเขาสอนผู้อำนวยการ, นักการเมือง หรือนักเรียนคนอื่นๆ!                        |
-| 10:40 - 11:00 น. | นักเรียนสาธิตกิจกรรมที่ไม่ใช้การเชื่อมต่อ และสาธิตว่าวิชาวิทยาการคอมพิวเตอร์สามารถสอนได้โดยไม่ต้องใช้คอมพิวเตอร์                        |
-| 11:00 - 11:05 น. | ครูที่ช่วยเสนอกิจกรรมทั้งโรงเรียนนี้ให้ข้อคิดเห็นปิดท้าย                                                                                |
+| เวลา             | การดำเนินการ                                                                                                                          |
+| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| 10:00 - 10:05 น. | Open with one of our [inspirational videos]({{ promote/videos }}).                                                                    |
+| 10:05 - 10:15 น. | Principal gives an intro overviewing the importance of computer science. Use these [stats and infographics]({{ promote/stats_url }}). |
+| 10:15 - 10:30 น. | แขกรับเชิญพูดถึงประวัติของพวกเขาและพูดถึงว่าเทคโนโลยีและวิทยาการคอมพิวเตอร์มีบทบาทที่สำคัญในชีวิตประจำวันของพวกเขาอย่างไร             |
+| 10:30 - 10:40 น. | นักเรียนสาธิต Hour of Code สำหรับโรงเรียน หักมุมสนุกๆ: ให้พวกเขาสอนผู้อำนวยการ, นักการเมือง หรือนักเรียนคนอื่นๆ!                      |
+| 10:40 - 11:00 น. | นักเรียนสาธิตกิจกรรมที่ไม่ใช้การเชื่อมต่อ และสาธิตว่าวิชาวิทยาการคอมพิวเตอร์สามารถสอนได้โดยไม่ต้องใช้คอมพิวเตอร์                      |
+| 11:00 - 11:05 น. | ครูที่ช่วยเสนอกิจกรรมทั้งโรงเรียนนี้ให้ข้อคิดเห็นปิดท้าย                                                                              |
 
-<%= view :signup_button %>
+{{ signup_button }}

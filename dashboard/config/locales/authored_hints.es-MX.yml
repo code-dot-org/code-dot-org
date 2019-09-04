@@ -11916,7 +11916,7 @@ es-MX:
         courseD_bounce_events10s_a: |-
           Deberías tener estos dos eventos en tu código:
 
-          <xml><block type="bounce_whenBallInGoal" deletable="false"><next><block type="bounce_playSound"><title name="SOUND">silbar</title><next><block type="bounce_incrementPlayerScore"></block></next></block></next></block><block type="bounce_whenBallMissesPaddle" deletable="false"><next><block type="bounce_playSound"><title name="SOUND">pitar</title><next><block type="bounce_incrementOpponentScore"></block></next></block></next>\</block</xml>
+          <xml><block type="bounce_whenBallInGoal" deletable="false"><next><block type="bounce_playSound"><title name="SOUND">swish</title><next><block type="bounce_incrementPlayerScore"></block></next></block></next></block><block type="bounce_whenBallMissesPaddle" deletable="false"><next><block type="bounce_playSound"><title name="SOUND">whistle</title><next><block type="bounce_incrementOpponentScore"></block></next></block></next></block></xml>
       courseD_bounce_events10s_2019:
         courseD_bounce_events10s_a: |-
           Deberías tener estos dos eventos en tu código:

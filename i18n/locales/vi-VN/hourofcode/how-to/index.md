@@ -1,15 +1,16 @@
 ---
-title: <%= hoc_s(:title_how_to).inspect %>
+title: Hướng dẫn Sử dụng
 layout: wide
 nav: how_to_nav
 ---
-<%= view :signup_button %>
+
+{{ signup_button }}
 
 # How to teach one Hour of Code with your class
 
-### Tham gia và giới thiệu với các học sinh về giờ đầu tiên của họ cùng với khoá học lập trình với những bước sau. Hour of Code (Giờ Lập Trình) rất dễ dàng để chạy - ngay cả với người mới luôn đấy! If you'd like an extra set of hands to help out, you can find a [local volunteer](%= codeorg_url('/volunteer/local') %) to help run an Hour of Code in your class.
+### Tham gia và giới thiệu với các học sinh về giờ đầu tiên của họ cùng với khoá học lập trình với những bước sau. Hour of Code (Giờ Lập Trình) rất dễ dàng để chạy - ngay cả với người mới luôn đấy! If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your class.
 
-### Take a look at our [participation guide if you still have questions](%= localized_file('/files/participation-guide.pdf') %).
+### Take a look at our [participation guide if you still have questions]({{ localized_files/participation_guide }}).
 
 * * *
 
@@ -17,11 +18,11 @@ nav: how_to_nav
 
 ## 2. Chọn một bài hướng dẫn phù hợp với thời gian biểu của bạn
 
-We provide a variety of fun, [student-guided tutorials](%= resolve_url('/learn') %) for all age groups and experience levels. Students do the activities on their own, though many activities include lesson plans for teachers (you'll see the link when you click the activity) to guide discussion or extend the activity. [![](/images/fit-700/tutorials.png)](%=resolve_url('/learn') %)
+We provide a variety of fun, [student-guided tutorials]({{ urls/learn }}) for all age groups and experience levels. Students do the activities on their own, though many activities include lesson plans for teachers (you'll see the link when you click the activity) to guide discussion or extend the activity. [![](/images/fit-700/tutorials.png)]({{ urls/learn }})
 
 ## 3. Quảng bá Giờ Lập Trình của bạn
 
-Promote your Hour of Code [with these tools](%= resolve_url('/promote/resources') %) and encourage others to host their own events.
+Promote your Hour of Code [with these tools]({{ urls/promote_resources }}) and encourage others to host their own events.
 
 ## 4. Lên kế hoạch các yêu cầu công nghệ - máy tính là tùy chọn không bắt buộc
 
@@ -37,24 +38,24 @@ Trang bị tai nghe cho các học sinh hoặc yêu cầu các em mang tới l�
 
 ## 5. Bắt đầu Giờ lập trình với một diễn giả hoặc video truyền cảm hứng
 
-**Invite a [local volunteer](%= codeorg_url('/volunteer/local') %) to inspire your students by talking about the breadth of possibilities in computer science.** There are thousands of volunteers around the world ready to help with your Hour of Code through either a classroom visit or video chat with your students!
+**Invite a [local volunteer]({{ urls/volunteer_local }}) to inspire your students by talking about the breadth of possibilities in computer science.** There are thousands of volunteers around the world ready to help with your Hour of Code through either a classroom visit or video chat with your students!
 
 **Chiếu một video truyền cảm hứng:**
 
 - Code.org đã cho ra mắt các video với sự tham gia của Bill Gates, Mark Zuckerberg và ngôi sao NBA Chris Bosh. (Có các phiên bản [1 phút](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 phút](https://www.youtube.com/watch?v=nKIu9yen5nc), và [9 phút](https://www.youtube.com/watch?v=dU1xS07N-FA))
-- Find more inspirational [resources](%= codeorg_url('/inspire') %) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+- Find more inspirational [resources]({{ urls/inspire }}) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
 **It’s okay if both you and your students are brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
 
 - Chia sẻ về cách mà công nghệ tác động lên cuộc sống của chúng ta, với những ví dụ mà cả nam lẫn nữ đều quan tâm đến (Nói về các ứng dụng và công nghệ được sử dụng để giúp đỡ và kết nối con người, v. v.).
 - Như ở lớp học, liệt kê những ứng dụng của lập trình được sử dụng trong đời sống hàng ngày.
-- See tips for getting girls interested in computer science [here](%= codeorg_url('/girls')%).
+- See tips for getting girls interested in computer science [here]({{ urls/girls }}).
 
 ## 6. Lập trình!
 
 **Direct students to the activity**
 
-- Viết đường link bài hướng dẫn lên bảng. Tìm đường link được liệt kê trong [ mục thông tin các bài hướng dẫn bạn đã chọn](%= resolve_url('https://code. org/learn') %) tùy theo số lượng người tham gia.
+- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
 
 **When your students come across difficulties it's okay to respond:**
 
@@ -64,7 +65,7 @@ Trang bị tai nghe cho các học sinh hoặc yêu cầu các em mang tới l�
 
 **What if a student finishes early?**
 
-- Các học sinh có thể xem tất cả các bài hướng dẫn và [ thử tham gia các hoạt động Giờ Lập Trình khác](%= resolve_url('/learn')%).
+- Students can see all tutorials and [try another Hour of Code activity]({{ urls/learn }}).
 - Hoặc yêu cầu học sinh hoàn thành sớm đi giúp những bạn vẫn đang gặp khó khăn.
 
 [col-33]
@@ -83,8 +84,8 @@ Trang bị tai nghe cho các học sinh hoặc yêu cầu các em mang tới l�
 
 [/col-33]
 
-- [Print certificates](%= codeorg_url('/certificates')%) for your students.
-- [In nhãn dán "Tôi đã hoàn thành Giờ Lập Trình!"](%= resolve_url('/promote/resources#stickers') %)cho các học sinh của bạn.
+- [Print certificates]({{ urls/certificates }}) for your students.
+- [Print "I did an Hour of Code!"]({{ urls/promote_stickers }}) stickers for your students.
 - [Đặt áo phông](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) cho trường của bạn.
 - Chia sẻ hình ảnh và video lớp học Một Giờ Lập Trình của bạn lên các phương tiện truyền thông xã hội. Sử dụng #HourOfCode và @codeorg để chúng tôi cũng có thể ghi nhận thành công của bạn!
 
@@ -98,14 +99,14 @@ Trang bị tai nghe cho các học sinh hoặc yêu cầu các em mang tới l�
 
 ## Những tài liệu khác về Giờ Lập Trình cho giáo viên/hướng dẫn viên:
 
-- Truy cập [ diễn đàn cho các giáo viên Giờ Lập Trình ](http://forum.code.org/c/plc/hour-of-code) để được tư vấn, tham gia sâu và nhận được sự hỗ trợ từ những giáo viên khác. <% if @country == 'us' %>
-- Xem lại [ câu hỏi thường gặp (FAQ) của một Giờ Lập Trình](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code). <% end %>
+- Truy cập [ diễn đàn cho các giáo viên Giờ Lập Trình ](http://forum.code.org/c/plc/hour-of-code) để được tư vấn, tham gia sâu và nhận được sự hỗ trợ từ những giáo viên khác.
+- Xem lại [ câu hỏi thường gặp (FAQ) của một Giờ Lập Trình](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
 
 ## Tiếp theo Hour of Code sẽ là gì?
 
 Một Giờ Lập Trình chỉ là bước đầu tiên trên hành trình học tập sâu hơn về cách công nghệ hoạt động và cách tạo ra các ứng dụng phần mềm. Để tiếp tục hành trình này:
 
-- Encourage students to continue to [learn online](%= codeorg_url('/learn/beyond')%).
-- [Attend](%= codeorg_url('/professional-development-workshops') %) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
+- Encourage students to continue to [learn online]({{ urls/learn_beyond }}).
+- [Attend]({{ urls/professional_development_workshops }}) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
 
-<%= view :signup_button %>
+{{ signup_button }}
