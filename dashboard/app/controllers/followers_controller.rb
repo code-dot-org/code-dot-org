@@ -118,7 +118,7 @@ class FollowersController < ApplicationController
     @section = Section.find_by_code(params[:section_code])
     # Note that we treat the section as not being found if the section user
     # (i.e., the teacher) does not exist (possibly soft-deleted) or is not a teacher
-    unless @section && @section.user && @section.user.teacher?
+    unless @section && @section.user&.teacher?
       redirect_to redirect_url, alert: I18n.t('follower.error.section_not_found', section_code: params[:section_code])
       return
     end
