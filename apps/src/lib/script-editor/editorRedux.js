@@ -252,10 +252,16 @@ function stages(state = [], action) {
     case MOVE_STAGE: {
       const index = action.position - 1;
       const swap = action.direction === 'up' ? index - 1 : index + 1;
-      const temp = newState[index];
-      newState[index] = newState[swap];
-      newState[swap] = temp;
-      updatePositions(newState);
+      if (newState[index].flex_category === newState[swap].flex_category) {
+        const temp = newState[index];
+        newState[index] = newState[swap];
+        newState[swap] = temp;
+        updatePositions(newState);
+      } else {
+        // Move the stage into the adjacent group, without changing its
+        // position relative to other stages.
+        newState[index].flex_category = newState[swap].flex_category;
+      }
       break;
     }
     case SET_STAGE_LOCKABLE: {
