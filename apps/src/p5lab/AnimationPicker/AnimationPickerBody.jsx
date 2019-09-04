@@ -11,7 +11,7 @@ import spriteCostumeLibrary from '../spritelab/spriteCostumeLibrary.json';
 import ScrollableList from '../AnimationTab/ScrollableList.jsx';
 import styles from './styles';
 import AnimationPickerListItem from './AnimationPickerListItem.jsx';
-import AnimationPickerSearchBar from './AnimationPickerSearchBar.jsx';
+import SearchBar from '@cdo/apps/templates/SearchBar';
 import PaginationWrapper from '@cdo/apps/templates/PaginationWrapper';
 import {searchAssets} from '@cdo/apps/code-studio/assets/searchAssets';
 import {connect} from 'react-redux';
@@ -123,9 +123,10 @@ class AnimationPickerBody extends React.Component {
         {!this.props.is13Plus && !hideUploadOption && (
           <WarningLabel>{msg.animationPicker_warning()}</WarningLabel>
         )}
-        <AnimationPickerSearchBar
-          value={this.state.searchQuery}
-          onChange={this.onSearchQueryChange}
+        <SearchBar
+          placeholderText={'Search for images'}
+          styles={{}}
+          onChange={evt => this.onSearchQueryChange(evt.target.value)}
         />
         {(this.state.searchQuery !== '' || this.state.categoryQuery !== '') && (
           <div style={animationPickerStyles.navigation}>
