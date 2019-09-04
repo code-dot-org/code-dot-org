@@ -146,7 +146,11 @@ class LevelToken extends Component {
               {this.props.level.challenge && (
                 <span style={styles.tags}>challenge</span>
               )}
-              {this.props.level.named && <span style={styles.tags}>named</span>}
+              {/* progression supercedes named, so only show the named tag
+                  when the level is behaving like a named level. */}
+              {this.props.level.named && !this.props.level.progression && (
+                <span style={styles.tags}>named</span>
+              )}
               {this.props.level.assessment && (
                 <span style={styles.tags}>assessment</span>
               )}
