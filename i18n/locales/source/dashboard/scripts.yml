@@ -11352,7 +11352,7 @@ en:
               name: Practice PT Part 3
             Unit 4 Assessment:
               name: Unit 4 Assessment
-          title: 'Unit 4: Variables, Conditionals, Functions'
+          title: CSP Unit 4 Pilot - Variables, Conditionals, Functions
           description_audience: ''
           description_short: ''
           description: ''
@@ -11860,7 +11860,13 @@ en:
               name: CS Principles Unit 1 Survey
             Unit 1 Survey:
               name: Unit 1 Survey
-          title: CSP Unit 1 Pilot
+            'Lesson 15: Unit Assessment':
+              name: 'Lesson 15: Unit Assessment'
+            Unit 1 STUDENT Survey:
+              name: Unit 1 STUDENT Survey
+            Unit 1 TEACHER Survey:
+              name: Unit 1 TEACHER Survey
+          title: CSP Unit 1 Pilot - Digital Information
           description_audience: ''
           description_short: ''
           description: ''
@@ -12624,7 +12630,7 @@ en:
               name: Student Survey (Libraries)
             Teacher Survey (Libraries):
               name: Teacher Survey (Libraries)
-          title: 'Unit 5: Lists, Loops, and Traversals'
+          title: CSP Unit 5 Pilot - Lists, Loops, and Traversals
           description_audience: ''
           description_short: ''
           description: ''
@@ -12999,7 +13005,15 @@ en:
               name: 'Project: Share Your App'
             The Need for Programming Languages:
               name: The Need for Programming Languages
-          title: 'Unit 3: Intro to App Design'
+            'Project: Finish Your App':
+              name: 'Project: Finish Your App'
+            Programs Explore:
+              name: Programs Explore
+            Unit 3 STUDENT Survey:
+              name: Unit 3 STUDENT Survey
+            Unit 3 TEACHER Survey:
+              name: Unit 3 TEACHER Survey
+          title: CSP Unit 3 Pilot - Intro to App Design
           description_audience: ''
           description_short: ''
           description: ''
@@ -13029,7 +13043,7 @@ en:
               name: Understanding the Curriculum
             Demonstrating Understanding:
               name: Demonstrating Understanding
-          title: CS Discoveries Deeper Learning 2019 Overview
+          title: CS Discoveries Deeper Learning 2019 Module for FiT
           description_audience: CS Discoveries Facilitators in Training 2019
           description_short: Background information and practice prompt for FiT workshop
           description: ''
@@ -13077,7 +13091,13 @@ en:
               name: new stage
             CS Discoveries Deeper Learning Module 2:
               name: CS Discoveries Deeper Learning Module 2
-          title: CS Discoveries Deeper Learning Module 2
+            Deeper Learning Overview:
+              name: Deeper Learning Overview
+            'Step 1: Develop Understanding':
+              name: 'Step 1: Develop Understanding'
+            'Step 2: Demonstrate Understanding':
+              name: 'Step 2: Demonstrate Understanding'
+          title: CS Discoveries Deeper Learning Module for Workshop 2
           description_audience: CS Discoveries Facilitators in Training 2019
           description_short: ''
           description: ''
@@ -13115,6 +13135,12 @@ en:
           stages:
             CS Principles Deeper Learning Module 2:
               name: CS Principles Deeper Learning Module 2
+            Deeper Learning Overview:
+              name: Deeper Learning Overview
+            'Step 1: Develop Understanding':
+              name: 'Step 1: Develop Understanding'
+            'Step 2: Demonstrate Understanding':
+              name: 'Step 2: Demonstrate Understanding'
           title: CS Principles Deeper Learning Module 2
           description_audience: CS Principles Facilitators in Training 2019
           description_short: ''
@@ -13241,7 +13267,13 @@ en:
               name: Unit 2 Assessment
             Unit Assessment:
               name: Unit Assessment
-          title: ''
+            'Lesson 8: Unit Assessment':
+              name: 'Lesson 8: Unit Assessment'
+            Unit 2 STUDENT Survey:
+              name: Unit 2 STUDENT Survey
+            Unit 2 TEACHER Survey:
+              name: Unit 2 TEACHER Survey
+          title: CSP Unit 2 Pilot - The Internet
           description_audience: ''
           description_short: ''
           description: ''
