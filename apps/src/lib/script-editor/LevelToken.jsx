@@ -36,13 +36,26 @@ const styles = {
     borderBottom: '1px solid #ddd',
     cursor: 'pointer'
   },
-  variants: {
+  tags: {
     color: 'white',
     background: color.purple,
     padding: '3px 5px',
     lineHeight: '12px',
     borderRadius: 5,
-    float: 'right'
+    float: 'right',
+    marginLeft: 3
+  },
+  progression: {
+    color: color.purple,
+    background: 'white',
+    padding: '2px 5px',
+    lineHeight: '12px',
+    borderRadius: 5,
+    borderColor: color.purple,
+    borderWidth: 1,
+    borderStyle: 'solid',
+    float: 'right',
+    marginLeft: 3
   },
   remove: {
     fontSize: 14,
@@ -126,8 +139,20 @@ class LevelToken extends Component {
             <span style={styles.levelTokenName} onMouseDown={this.toggleExpand}>
               {this.props.levelKeyList[this.props.level.activeId]}
               {this.props.level.ids.length > 1 && (
-                <span style={styles.variants}>
+                <span style={styles.tags}>
                   {this.props.level.ids.length} variants
+                </span>
+              )}
+              {this.props.level.challenge && (
+                <span style={styles.tags}>challenge</span>
+              )}
+              {this.props.level.named && <span style={styles.tags}>named</span>}
+              {this.props.level.assessment && (
+                <span style={styles.tags}>assessment</span>
+              )}
+              {this.props.level.progression && (
+                <span style={styles.progression}>
+                  {this.props.level.progression}
                 </span>
               )}
             </span>
