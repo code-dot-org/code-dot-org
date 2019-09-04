@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import IconList from './IconList';
+import SearchBar from '@cdo/apps/templates/SearchBar';
 import i18n from '@cdo/locale';
 
 /**
@@ -22,19 +23,17 @@ export default class IconLibrary extends React.Component {
 
   render() {
     const styles = {
-      root: {
+      searchArea: {
         float: this.props.alignment || 'right',
-        position: 'relative',
         margin: '10px 0'
       },
       input: {
+        height: '20px',
         width: '300px',
-        border: '1px solid #999',
         borderRadius: '4px',
         padding: '3px 7px'
       },
       icon: {
-        position: 'absolute',
         right: '5px',
         top: '5px',
         fontSize: '16px',
@@ -44,14 +43,11 @@ export default class IconLibrary extends React.Component {
 
     return (
       <div>
-        <div style={styles.root}>
-          <input
-            onChange={this.search}
-            style={styles.input}
-            placeholder={i18n.iconSearchPlaceholder()}
-          />
-          <i className="fa fa-search" style={styles.icon} />
-        </div>
+        <SearchBar
+          onChange={this.search}
+          placeholderText={i18n.iconSearchPlaceholder()}
+          styles={styles}
+        />
         <IconList
           assetChosen={this.props.assetChosen}
           search={this.state.search}

@@ -4,6 +4,7 @@ import SoundList from './SoundList';
 import SoundCategory from './SoundCategory';
 import * as color from '../../util/color';
 import Sounds from '../../Sounds';
+import SearchBar from '@cdo/apps/templates/SearchBar';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 const SOUND_CATEGORIES = {
@@ -48,17 +49,15 @@ const SOUND_CATEGORIES = {
 const styles = {
   searchArea: {
     float: 'right',
-    position: 'relative',
     margin: '10px 0'
   },
   input: {
+    height: 20,
     width: 300,
-    border: '1px solid ' + color.light_gray,
     borderRadius: 4,
     padding: '3px 7px'
   },
-  sound: {
-    position: 'absolute',
+  icon: {
     right: 5,
     top: 5,
     fontSize: 16,
@@ -171,14 +170,11 @@ export default class SoundLibrary extends React.Component {
             </span>
           )}
         </div>
-        <div style={styles.searchArea}>
-          <input
-            onChange={this.search}
-            style={styles.input}
-            placeholder={'Search for a sound...'}
-          />
-          <i className="fa fa-search" style={styles.sound} />
-        </div>
+        <SearchBar
+          onChange={this.search}
+          placeholderText={'Search for a sound...'}
+          styles={styles}
+        />
         {this.state.category === '' && this.state.search === '' && (
           <div style={styles.categoryArea}>
             {this.animationCategoriesRendering()}
