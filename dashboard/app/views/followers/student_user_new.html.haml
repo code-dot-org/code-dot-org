@@ -1,10 +1,10 @@
 - if current_user || !@section
-  = t('add_teacher_form.code.instructions')
-  %br/
+  %h2= t('join_section.code.title')
+  %p= t('join_section.code.instructions')
   = form_tag(student_user_new_path) do
-    = text_field_tag(:section_code, params[:section_code], placeholder: I18n.t('add_teacher_form.code.placeholder'))
+    = text_field_tag(:section_code, params[:section_code], placeholder: I18n.t('join_section.code.placeholder'))
     %br/
-    = submit_tag 'Go', class: 'btn btn-primary'
+    = submit_tag t('join_section.code.submit'), class: 'btn btn-primary'
 - else
   %h2 Register to join the class #{@section.name} taught by #{@section.user.name}
   %p

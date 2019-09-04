@@ -11,7 +11,9 @@ Feature: Manage Assets
     And I wait until element ".modal-content" contains text "Your computer is not set-up to record audio."
 
   # Safari thinks it can record audio on saucelabs, so this tests the success condition.
-  @no_chrome @no_firefox @no_ie
+  # Skipping for now because safari responds differently for localhost vs adhoc environments.
+  # @no_chrome @no_firefox @no_ie
+  @skip
   Scenario: The manage assets dialog allows recording audio on Safari.
     Given I am a student
     And I start a new Game Lab project
