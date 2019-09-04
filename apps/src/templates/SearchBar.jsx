@@ -39,7 +39,11 @@ const styles = {
 export default class AnimationPickerSearchBar extends React.Component {
   static propTypes = {
     placeholderText: PropTypes.string.isRequired,
-    styles: PropTypes.object.isRequired,
+    styles: PropTypes.object.shape({
+      searchArea: PropTypes.object,
+      icon: PropTypes.object,
+      input: PropTypes.object
+    });
     onChange: PropTypes.func.isRequired
   };
 
