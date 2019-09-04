@@ -84,9 +84,8 @@ describe('LevelTokenDetails', () => {
 
     assertButtonVisible(wrapper, 'Add Variant', false);
     assertButtonVisible(wrapper, 'Remove Variant', false);
-    assertButtonVisible(wrapper, 'Add Progression', true);
 
-    assertInputVisible(wrapper, 'progression', false);
+    assertInputVisible(wrapper, 'progression', true);
   });
 
   it('renders with progression', () => {
@@ -96,19 +95,8 @@ describe('LevelTokenDetails', () => {
         level={{...defaultLevel, progression: 'intro'}}
       />
     );
-    assertButtonVisible(wrapper, 'Add Progression', false);
     assertInputVisible(wrapper, 'progression', true);
     assertInputValue(wrapper, 'progression', 'intro');
-  });
-
-  it('shows progression when clicked', () => {
-    const wrapper = shallow(<LevelTokenDetails {...defaultProps} />);
-    assertInputVisible(wrapper, 'progression', false);
-    const button = wrapper.findWhere(
-      n => n.name() === 'button' && n.text().includes('Add Progression')
-    );
-    button.simulate('mousedown');
-    assertInputVisible(wrapper, 'progression', true);
   });
 
   it('shows new blank variant', () => {

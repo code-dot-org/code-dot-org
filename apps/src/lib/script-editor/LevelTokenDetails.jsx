@@ -28,14 +28,14 @@ const styles = {
     display: 'inline-block',
     lineHeight: '36px',
     margin: '0 7px 0 5px',
-    verticalAlign: 'middle',
+    verticalAlign: 'baseline',
     textAlign: 'right',
     width: 80
   },
   shortTextInput: {
     width: 330,
     verticalAlign: 'baseline',
-    margin: '7px 0 10px 0'
+    marginBottom: 0
   },
   progressionTextInput: {
     width: 550,
@@ -56,7 +56,8 @@ const styles = {
   },
   divider: {
     borderColor: '#ddd',
-    margin: '7px 0'
+    margin: '7px 0',
+    paddingBottom: 5
   },
   button: {
     fontSize: 14,
@@ -67,9 +68,6 @@ const styles = {
   },
   removeVariant: {
     float: 'right'
-  },
-  progression: {
-    paddingTop: 5
   },
   tooltip: {
     maxWidth: 450
@@ -109,7 +107,6 @@ export class UnconnectedLevelTokenDetails extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      showBlankProgression: false,
       // Variants are deprecated. Only show them if they are already in use.
       // If the number of variants is reduced to 1, keep showing the Add
       // Variants button for the rest of this editing session.
@@ -144,10 +141,6 @@ export class UnconnectedLevelTokenDetails extends Component {
     );
   };
 
-  handleAddProgression = () => {
-    this.setState({showBlankProgression: true});
-  };
-
   handleActiveVariantChanged = id => {
     this.props.setActiveVariant(
       this.props.stagePosition,
@@ -175,7 +168,7 @@ export class UnconnectedLevelTokenDetails extends Component {
   };
 
   render() {
-    const {showBlankProgression, showAddVariants} = this.state;
+    const {showAddVariants} = this.state;
     const tooltipIds = {};
     Object.keys(tooltipText).forEach(option => {
       tooltipIds[option] = _.uniqueId();
@@ -284,55 +277,42 @@ export class UnconnectedLevelTokenDetails extends Component {
             />
           </div>
         ))}
-        {/* We don't currently support editing progression names here, but do
-         * show the current progression if we have one. */}
-        {(this.props.level.progression || showBlankProgression) && (
-          <div style={styles.progression}>
-            <hr style={styles.divider} />
-            <span
-              style={styles.levelFieldLabel}
-              data-for={tooltipIds.progression}
-              data-tip
-            >
-              Progression:
-            </span>
-            <ReactTooltip id={tooltipIds.progression} delayShow={500}>
-              <div style={styles.tooltip}>{tooltipText.progression}</div>
-            </ReactTooltip>
+        {showAddVariants && <hr style={styles.divider} />}
+        <div style={styles.progression}>
+          <span
+            style={styles.levelFieldLabel}
+            data-for={tooltipIds.progression}
+            data-tip
+          >
+            Progression:
+          </span>
+          <ReactTooltip id={tooltipIds.progression} delayShow={500}>
+            <div style={styles.tooltip}>{tooltipText.progression}</div>
+          </ReactTooltip>
 
-            <span style={styles.levelSelect}>
-              <input
-                type="text"
-                onChange={event => this.handleFieldChange('progression', event)}
-                value={this.props.level.progression}
-                style={styles.progressionTextInput}
-                data-field-name="progression"
-              />
-            </span>
-          </div>
-        )}
-        <hr style={styles.divider} />
+          <span style={styles.levelSelect}>
+            <input
+              type="text"
+              onChange={event => this.handleFieldChange('progression', event)}
+              value={this.props.level.progression}
+              style={styles.progressionTextInput}
+              data-field-name="progression"
+            />
+          </span>
+        </div>
         {showAddVariants && !this.props.level.ids.includes(NEW_LEVEL_ID) && (
-          <button
-            onMouseDown={this.handleAddVariant}
-            className="btn"
-            style={styles.button}
-            type="button"
-          >
-            <i style={{marginRight: 7}} className="fa fa-plus-circle" />
-            Add Variant
-          </button>
-        )}
-        {!this.props.level.progression && !this.state.showBlankProgression && (
-          <button
-            onMouseDown={this.handleAddProgression}
-            className="btn"
-            style={styles.button}
-            type="button"
-          >
-            <i style={{marginRight: 7}} className="fa fa-plus-circle" />
-            Add Progression
-          </button>
+          <div>
+            <hr style={styles.divider} />
+            <button
+              onMouseDown={this.handleAddVariant}
+              className="btn"
+              style={styles.button}
+              type="button"
+            >
+              <i style={{marginRight: 7}} className="fa fa-plus-circle" />
+              Add Variant
+            </button>
+          </div>
         )}
       </div>
     );
