@@ -82,7 +82,7 @@ describe('LevelTokenDetails', () => {
     assertChecked(wrapper, 'assessment', false);
     assertChecked(wrapper, 'challenge', false);
 
-    assertButtonVisible(wrapper, 'Add Variant', true);
+    assertButtonVisible(wrapper, 'Add Variant', false);
     assertButtonVisible(wrapper, 'Remove Variant', false);
     assertButtonVisible(wrapper, 'Add Progression', true);
 
