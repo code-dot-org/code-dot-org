@@ -57,6 +57,7 @@
       %strong= @script.name
       %ul
         %li= link_to "Edit", edit_script_path(@script)
+        %li= link_to "Edit stage text", edit_script_path(@script, text: 1)
       - unless @script.courses.empty?
         = "This script is in #{@script.courses.length} course#{'s' unless @script.courses.length == 1}:"
         %ul
