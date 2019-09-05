@@ -37,14 +37,15 @@ const styles = {
     background: '#eee',
     border: '1px solid #ddd',
     boxShadow: 'inset 0 1px 0 0 rgba(255, 255, 255, 0.8)',
-    margin: '5px 0 5px 5px'
+    margin: '0 5px 0 0'
   },
   flexCategoryLabel: {
-    fontSize: 13,
+    fontSize: 14,
     verticalAlign: 'baseline'
   },
-  flexCategoryInput: {
-    verticalAlign: 'baseline'
+  flexCategorySelect: {
+    verticalAlign: 'baseline',
+    width: 550
   },
   saveFlexCategoryButton: {
     verticalAlign: 'baseline'
@@ -175,6 +176,7 @@ export class UnconnectedStageCard extends Component {
   }
 
   render() {
+    const {flexCategoryMap} = this.props;
     return (
       <div style={styles.stageCard}>
         <div style={styles.stageCardHeader}>
@@ -239,13 +241,20 @@ export class UnconnectedStageCard extends Component {
         )}
         {this.state.editingFlexCategory && (
           <div>
-            <span style={styles.flexCategoryLabel}>Flex Category:</span>&nbsp;
-            <input
-              type="text"
-              value={this.state.newFlexCategory}
+            <span style={styles.flexCategoryLabel}>New Flex Category:</span>
+            &nbsp;
+            <select
+              style={styles.flexCategorySelect}
               onChange={e => this.flexCategorySelected(e.target.value)}
-              style={styles.flexCategoryInput}
-            />
+              value={this.state.newFlexCategory}
+            >
+              <option value="">(None)</option>
+              {Object.keys(flexCategoryMap).map(flexCategory => (
+                <option key={flexCategory} value={flexCategory}>
+                  {flexCategory}: "{flexCategoryMap[flexCategory]}"
+                </option>
+              ))}
+            </select>
             <button
               onMouseDown={this.handleSaveFlexCategory}
               className="btn"
