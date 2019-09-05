@@ -181,6 +181,8 @@ module Pd::SurveyPipeline::Helper
       new(group_config: group_config, map_config: map_config).
       process_data(context)
 
+    Pd::SurveyPipeline::DailySurveyModifier.augment_questions_for_display context[:parsed_questions]
+
     Pd::SurveyPipeline::DailySurveyDecorator.process_data context
 
     context[:decorated_summaries]
