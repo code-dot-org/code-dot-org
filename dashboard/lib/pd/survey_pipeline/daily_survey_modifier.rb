@@ -6,6 +6,7 @@ module Pd::SurveyPipeline
     #
     # @param [Hash] parsed_questions {form_id => {question_id => question_content}}
     # @return [Hash] The same input with modified question content
+    # @note This function changes input param!
     #
     def self.augment_questions_for_display(parsed_questions = {})
       parsed_questions.each do |_, form_questions|
