@@ -27,7 +27,7 @@ class RaceInterstitialHelperTest < ActionView::TestCase
   end
 
   test 'do not show race interstitial to user accounts less than one week old' do
-    @user.created_at = DateTime.now - 3
+    @user.created_at = DateTime.now - 3.days
     refute RaceInterstitialHelper.show?(@user)
   end
 
