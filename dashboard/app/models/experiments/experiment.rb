@@ -38,6 +38,19 @@ class Experiment < ApplicationRecord
   cattr_accessor :experiments
   @@experiments = nil
 
+  # users in these experiments can create levels on levelbuilder, as well as
+  # edit scripts and levels marked with the same editor_experiment.
+  LEVEL_EDITOR_EXPERIMENTS = %w(
+    broward
+    platformization-partners
+  )
+
+  def self.get_editor_experiment(user)
+    LEVEL_EDITOR_EXPERIMENTS.find do |experiment|
+      Experiment.enabled?(user: user, experiment_name: experiment)
+    end
+  end
+
   def self.get_all_enabled(user: nil, section: nil, script: nil, experiment_name: nil)
     if @@experiments.nil? || @@experiments_loaded < DateTime.now - MAX_CACHE_AGE
       update_cache

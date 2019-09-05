@@ -147,6 +147,7 @@ class Script < ActiveRecord::Base
     is_stable
     supported_locales
     pilot_experiment
+    editor_experiment
     project_sharing
     curriculum_umbrella
   )
@@ -792,7 +793,10 @@ class Script < ActiveRecord::Base
       Script::CSD2_2019_NAME,
       Script::CSD3_2019_NAME,
       Script::CSD4_2019_NAME,
-      Script::CSD6_2019_NAME
+      Script::CSD6_2019_NAME,
+      Script::CSD1_PILOT_NAME,
+      Script::CSD2_PILOT_NAME,
+      Script::CSD3_PILOT_NAME
     ].include?(name)
   end
 
@@ -823,6 +827,11 @@ class Script < ActiveRecord::Base
 
   def text_to_speech_enabled?
     csf_tts_level? || csd_tts_level? || csp_tts_level? || hoc_tts_level? || name == Script::TTS_NAME
+  end
+
+  # Generates TTS files for each level in a script.
+  def tts_update
+    levels.each(&:tts_update)
   end
 
   def hint_prompt_enabled?
@@ -931,7 +940,7 @@ class Script < ActiveRecord::Base
 
       # Stable sort by ID then add each script, ensuring scripts with no ID end up at the end
       added_scripts = scripts_to_add.sort_by.with_index {|args, idx| [args[0][:id] || Float::INFINITY, idx]}.map do |options, raw_stages|
-        add_script(options, raw_stages, new_suffix: new_suffix)
+        add_script(options, raw_stages, new_suffix: new_suffix, editor_experiment: new_properties[:editor_experiment])
       end
       [added_scripts, custom_i18n]
     end
@@ -939,7 +948,7 @@ class Script < ActiveRecord::Base
 
   # if new_suffix is specified, copy the script, hide it, and copy all its
   # levelbuilder-defined levels.
-  def self.add_script(options, raw_stages, new_suffix: nil)
+  def self.add_script(options, raw_stages, new_suffix: nil, editor_experiment: nil)
     raw_script_levels = raw_stages.map {|stage| stage[:scriptlevels]}.flatten
     script = fetch_script(options)
     script.update!(hidden: true) if new_suffix
@@ -985,7 +994,7 @@ class Script < ActiveRecord::Base
 
         level =
           if new_suffix && !key.starts_with?('blockly')
-            Level.find_by_name(key).clone_with_suffix("_#{new_suffix}")
+            Level.find_by_name(key).clone_with_suffix("_#{new_suffix}", editor_experiment: editor_experiment)
           else
             levels_by_key[key] || Level.find_by_key(key)
           end
@@ -1106,14 +1115,18 @@ class Script < ActiveRecord::Base
   # script. Also clone all the levels in the script, appending an underscore and
   # the suffix to the name of each level. Mark the new script as hidden, and
   # copy any translations and other metadata associated with the original script.
-  def clone_with_suffix(new_suffix)
+  # @param options [Hash] Optional properties to set on the new script.
+  # @param options[:editor_experiment] [String] Optional editor_experiment name.
+  #   if specified, this editor_experiment will also be applied to any newly
+  #   created levels.
+  def clone_with_suffix(new_suffix, options = {})
     new_name = "#{base_name}-#{new_suffix}"
 
     script_filename = "#{Script.script_directory}/#{name}.script"
     new_properties = {
       is_stable: false,
       script_announcements: nil
-    }
+    }.merge(options)
     if /^[0-9]{4}$/ =~ (new_suffix)
       new_properties[:version_year] = new_suffix
     end
@@ -1348,6 +1361,7 @@ class Script < ActiveRecord::Base
       supported_locales: supported_locales,
       section_hidden_unit_info: section_hidden_unit_info(user),
       pilot_experiment: pilot_experiment,
+      editor_experiment: editor_experiment,
       show_assign_button: assignable?(user),
       project_sharing: project_sharing,
       curriculum_umbrella: curriculum_umbrella,
@@ -1495,6 +1509,7 @@ class Script < ActiveRecord::Base
       is_stable: script_data[:is_stable],
       supported_locales: script_data[:supported_locales],
       pilot_experiment: script_data[:pilot_experiment],
+      editor_experiment: script_data[:editor_experiment],
       project_sharing: !!script_data[:project_sharing],
       curriculum_umbrella: script_data[:curriculum_umbrella]
     }.compact

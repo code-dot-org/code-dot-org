@@ -1,9 +1,10 @@
 ---
-title: <%= hoc_s(:title_how_to_parents).inspect %>
+title: '"Πώς να" οδηγός για τους γονείς'
 layout: wide
 nav: how_to_nav
 ---
-<%= view :signup_button %>
+
+{{ signup_button }}
 
 # Πώς να κάνετε μια Ώρα του Κώδικα μαζί με το παιδί σας
 
@@ -15,11 +16,11 @@ nav: how_to_nav
 
 ## 2) Επιλέξτε έναν εκπαιδευτικό οδηγό
 
-Παρέχουμε μια ποικιλία από διασκεδαστικά εκπαιδευτικά βίντεο διάρκειας μίας ώρας για μαθητές όλων των ηλικιών, που δημιουργήθηκαν από πλήθος συνεργατών μας. [Δοκιμάστε τα τώρα!](%= resolve_url('/learn') %)
+We provide a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. [Try them out!]({{ urls/learn }})
 
 **Όλα τα εκπαιδευτικά βιντεάκια της Ώρας του Κώδικα είναι αυτό-καθοδηγούμενα, επιτρέποντας στο παιδί σας να προχωρεί με το δικό του ρυθμό και επίπεδο δεξιοτήτων**
 
-[![](/images/fit-700/tutorials.png)](%= resolve_url('/learn') %)
+[![](/images/fit-700/tutorials.png)]({{ urls/learn }})
 
 ## 3) Προγραμμάτισε τις τεχνολογικές σου ανάγκες
 
@@ -36,13 +37,13 @@ nav: how_to_nav
 - Το αρχικό βίντεο του Code.org, με τον Bill Gates, τον Mark Zuckerberg και τον παίχτη του ΝΒΑ Chris Bosh (Υπάρχουν εκδόσεις [1 λεπτού](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 λεπτών](https://www.youtube.com/watch?v=nKIu9yen5nc) και [9 λεπτών](https://www.youtube.com/watch?v=dU1xS07N-FA)).
 - Το [διεθνές βίντεο για την Ώρα του Κώδικα](https://www.youtube.com/watch?v=KsOIlDT145A).
 - [Ο Πρόεδρος Obama καλεί όλους τους μαθητές να ασχοληθούν με την επιστήμη των υπολογιστών](https://www.youtube.com/watch?v=6XvmhE1J9PY).
-- Αναζητήστε έμπνευση και σε άλλους [πόρους](%= codeorg_url('/inspire') %) και [βίντεο](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+- Find more inspirational [resources]({{ urls/inspire }}) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
 Δεν υπάρχει πρόβλημα αν τόσο εσείς όσο και το παιδί σας είστε καινούργιοι στην επιστήμη της πληροφορικής. Εδώ θα βρείτε μερικές ιδέες για να εισαγάγετε τη δραστηριότητά σας:
 
 - Εξηγήστε τρόπους που η τεχνολογία επηρεάζει τη ζωή μας, με παραδείγματα που αγόρια και κορίτσια θα καταλαβαίνουν (μιλάμε για τη διάσωση ζωών, τη βοήθεις προς τους άλλους ανθρώπους, την επικοινωνία κ.λπ.).
 - Κάντε μια λίστα με τα πράγματα που χρησιμοποιούν κώδικα στην καθημερινή ζωή.
-- Δείτε μερικές συμβουλές για το πώς να βοηθήσετε τα κορίτσια να ενδιαφερθούν για την Επιστήμη των Υπολογιστών [here](%= codeorg_url('/girls') %).
+- See tips for getting girls interested in computer science [here]({{ urls/girls }}).
 
 Θέλετε και άλλες ιδέες; Δείτε το [πρότυπο σχέδιο μαθημάτων](/files/AfterschoolEducatorLessonPlanOutline.docx) με τις καλύτερες πρακτικές από έμπειρους εκπαιδευτικούς.
 
@@ -62,7 +63,7 @@ nav: how_to_nav
 
 ## 6) Γιορτάστε το
 
-[Τυπώστε πτυχία](%= codeorg_url('/certificates') %) για το παιδί σας (και για εσάς!).
+[Print certificates]({{ urls/certificates }}) for your child (and yourself!).
 
 Μοιραστείτε φωτογραφίες και βίντεο της εκδήλωσής σας στα μέσα κοινωνικής δικτύωσης. Χρησιμοποιήστε #HourOfCode και @codeorg, ώστε να μπορούμε να αναδείξουμε την επιτυχία σας επίσης!
 
@@ -72,7 +73,7 @@ nav: how_to_nav
 
 Η Ώρα του Κώδικα είναι μόνο το πρώτο βήμα σε ένα ταξίδι μάθησης σχετικά με το πώς λειτουργεί η τεχνολογία και πώς δημιουργούνται οι εφαρμογές λογισμικού. Για να συνεχίσετε αυτό το ταξίδι:
 
-- Ενθαρρύνετε το παιδί σας να συνεχίσει τη [διαδικτυακή μάθηση](%= codeorg_url('/learn/beyond') %).
-- Βοηθήστε με την [προώθηση](%= resolve_url('/promote') %)της εκπαίδευσης σχετικά με την επιστήμη των υπολογιστών στη γειτονιά του σχολείου του παιδιού σας.
+- Encourage your child to continue [to learn online]({{ urls/learn_beyond }}).
+- Help [promote]({{ urls/promote }}) computer science education in your child’s school district.
 
-<%= view :signup_button %>
+{{ signup_button }}

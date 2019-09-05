@@ -5,6 +5,7 @@ import color from '@cdo/apps/util/color';
 import shapes from './shapes';
 import {UnlocalizedTimeAgo as TimeAgo} from '@cdo/apps/templates/TimeAgo';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 const styles = {
   main: {
@@ -19,7 +20,7 @@ const styles = {
     boxSizing: 'border-box'
   },
   lessonDetails: {
-    width: '88%',
+    width: '75%',
     marginLeft: 20,
     marginTop: 8,
     marginBottom: 4
@@ -42,7 +43,10 @@ const styles = {
     fontSize: 14,
     lineHeight: '17px',
     color: color.light_gray,
-    float: 'left'
+    float: 'right',
+    textAlign: 'right',
+    marginRight: 20,
+    width: 200
   },
   comment: {
     color: color.dark_charcoal,
@@ -99,6 +103,16 @@ export default class LevelFeedbackEntry extends Component {
 
   expand = () => {
     this.setState({expanded: true});
+    if (this.longComment()) {
+      firehoseClient.putRecord(
+        {
+          study: 'all-feedback',
+          event: 'expand-feedback',
+          data_json: {feedback_id: this.props.feedback.id}
+        },
+        {includeUserId: true}
+      );
+    }
   };
 
   collapse = () => {

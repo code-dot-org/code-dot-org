@@ -1,13 +1,12 @@
 ---
-title: <%= hoc_s(:title_stats).inspect %>
+title: Blurbs and useful stats
 layout: wide
 nav: promote_nav
 ---
 
-
 <a id="blurb"></a>
 
-<%= view :signup_button %>
+{{ signup_button }}
 
 # Blurbs and useful stats
 
@@ -41,7 +40,7 @@ With technology changing every industry on the planet, computing knowledge has b
 
 #### 關於 Code.org
 
-Code.org®是501c3公立非營利項目，致力於擴展計算機科學，增加女性和有色弱勢學生群體的參與。 Its vision is that every student in every school has the opportunity to learn computer programming. 自 2013 年成立以來，Code.org 發起了一小時玩程式（Hour of Code）運動 – 這個運動是要把計算機科學介紹給上百萬的學生 – 並與國內超過 70 所公立學校聯盟，以推展計算機科學與編程。 Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. 更多詳情, 請訪問: [ <%= resolve_url('code.org')%> ](%= resolve_url('https://code.org') %)。
+Code.org®是501c3公立非營利項目，致力於擴展計算機科學，增加女性和有色弱勢學生群體的參與。 Its vision is that every student in every school has the opportunity to learn computer programming. 自 2013 年成立以來，Code.org 發起了一小時玩程式（Hour of Code）運動 – 這個運動是要把計算機科學介紹給上百萬的學生 – 並與國內超過 70 所公立學校聯盟，以推展計算機科學與編程。 Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. For more information, please visit: [code.org]({{ codeorg_link }}).
 
 ## Share these on social media and in emails
 
@@ -51,6 +50,6 @@ Code.org®是501c3公立非營利項目，致力於擴展計算機科學，增�
 
 ## Infographics
 
-<%= view :stats_carousel %>
+{{ stats_carousel }}
 
-<%= view :signup_button %>
+{{ signup_button }}

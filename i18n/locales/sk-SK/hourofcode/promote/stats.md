@@ -1,13 +1,12 @@
 ---
-title: <%= hoc_s(:title_stats).inspect %>
+title: Blurbs and useful stats
 layout: wide
 nav: promote_nav
 ---
 
-
 <a id="blurb"></a>
 
-<%= view :signup_button %>
+{{ signup_button }}
 
 # Blurbs and useful stats
 
@@ -41,7 +40,7 @@ Technológia mení každé odvetvie na tejto planéte. V roku 2015 bolo len v Sp
 
 #### O Code.org
 
-Code.org je 501c3 verejná nezisková organizácia, zameraná na šírenie účasti na výuke informatiky a zvyšovaní účasti žien a minorít na nej. Its vision is that every student in every school has the opportunity to learn computer programming. Po spustení v roku 2013, Code.org zorganizovalo kampaň Hodina Kódu, v rámci ktorej viac ako 100 miliónov študentov dostalo hodiny informatiky a spolupracovalo s množstvom školských okrskov po celej krajine na šírení výuky informatiky. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. Pre viac informácií navštívte: [<%= resolve_url('code.org') %>](%= resolve_url('https://code.org') %).
+Code.org je 501c3 verejná nezisková organizácia, zameraná na šírenie účasti na výuke informatiky a zvyšovaní účasti žien a minorít na nej. Its vision is that every student in every school has the opportunity to learn computer programming. Po spustení v roku 2013, Code.org zorganizovalo kampaň Hodina Kódu, v rámci ktorej viac ako 100 miliónov študentov dostalo hodiny informatiky a spolupracovalo s množstvom školských okrskov po celej krajine na šírení výuky informatiky. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. For more information, please visit: [code.org]({{ codeorg_link }}).
 
 ## Share these on social media and in emails
 
@@ -51,6 +50,6 @@ Code.org je 501c3 verejná nezisková organizácia, zameraná na šírenie úča
 
 ## Infographics
 
-<%= view :stats_carousel %>
+{{ stats_carousel }}
 
-<%= view :signup_button %>
+{{ signup_button }}

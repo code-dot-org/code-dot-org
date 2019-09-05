@@ -1,13 +1,14 @@
 ---
-title: <%= hoc_s(:title_how_to_volunteers).inspect %>
+title: מדריך למתנדבים
 layout: wide
 nav: how_to_nav
 ---
-<%= view :signup_button %>
+
+{{ signup_button }}
 
 # מדריך למתנדבים
 
-### Make a difference in a classroom today!
+### היו משמעותיים בכיתה היום!
 
 * * *
 
@@ -19,15 +20,15 @@ nav: how_to_nav
 - “Especially enjoyed getting to encourage young girls in technology. Felt like I was helping the next generation in my local area.”
 - “I LOVED seeing how excited the kids were. One amazing thing was that the teachers noticed that some of the students who didn’t do as well academically were excelling at thinking like a developer and helping others learn - giving them a place to feel confident.”
 
-## Anyone can volunteer
+## כל אחד יכול להתנדב
 
-### Volunteers and speakers in tech:
+### מתנדבים ומרצים בהיי-טק:
 
-Do you have a connection to CS or tech? If you work in software engineering, at a tech company in any role (non-engineer or engineering), or you’ve taken computer science courses, you can help inspire students! Many students have never met anyone who works in the tech industry and our teachers love being able to connect their classrooms to professionals and university students.
+יש לך קשר למדעי המחשב או להיי-טק? אם אתה עובד בהנדסת תוכנה, בכל תפקיד בחברת היי-טק (מהנדס או לא), או שלמדת קורסים במדעי המחשב, אתה יכול להוות השראה לתלמידים! תלמידים רבים לא פגשו מעולם מישהו שעובד בהייטק והמורים שלנו ישמחו לחבר בין הכיתה לבין אנשי מקצוע וסטודנטים באוניברסיטה.
 
-You can be a guest speaker in a classroom, or help a teacher run the activity. Visit a local classroom to inspire students to keep learning computer science. <br /> <br />
+תוכלו להיות מרצה אורח בכיתה או לעזור למורה בפעילות. בקרו בכיתה מקומית בכדי לתת השראה לתלמידים להמשיך בלימודי מדעי המחשב. <br /> <br />
 
-<a href="https://code.org/volunteer"><button>Sign up today to be a tech volunteer!</button> <br /> <br /></p> 
+<a href="https://code.org/volunteer"><button>הירשמו היום בכדי להפוך למתנדבי הייטק</button> <br /> <br /></p> 
 
 <h3>
   Anyone passionate about expanding opportunity:
@@ -38,16 +39,16 @@ You can be a guest speaker in a classroom, or help a teacher run the activity. V
 </p>
 
 <h3>
-  How do you get started?
+  איך מתחילים?
 </h3>
 
 <ol>
   <li>
-    <a href="%= resolve_url('/promote/resources#help-schools') %">Send this email</a> to your child’s teacher offering to help them run an Hour of Code.
+    <a href="{{ promote/help_schools }}">Send this email</a> to your child’s teacher offering to help them run an Hour of Code.
   </li>
   
   <li>
-    Offer to host an Hour of Code event after school at a local school. <a href="%= resolve_url('/how-to') %">Use this How-To Guide</a> to help you plan.
+    Offer to host an Hour of Code event after school at a local school. <a href="{{ urls/how_to_guide }}">Use this How-To Guide</a> to help you plan.
   </li>
 </ol>
 
@@ -56,7 +57,7 @@ You can be a guest speaker in a classroom, or help a teacher run the activity. V
 </h2>
 
 <p>
-  Tell your friends and co-workers about the Hour of Code. Thousands of teachers are looking for volunteers, so ask them to <a href="https://code.org/volunteer">sign up as a volunteer</a>. Ask your employer to get involved. <a href="%= resolve_url('/promote/resources#sample-email') %">Send this email</a> to your manager or the CEO to get everyone on board.
+  Tell your friends and co-workers about the Hour of Code. Thousands of teachers are looking for volunteers, so ask them to <a href="https://code.org/volunteer">sign up as a volunteer</a>. Ask your employer to get involved. <a href="{{ promote/sample_emails }}">Send this email</a> to your manager or the CEO to get everyone on board.
 </p>
 
 <h2>
@@ -65,13 +66,13 @@ You can be a guest speaker in a classroom, or help a teacher run the activity. V
 
 <ul>
   <li>
-    <a href="%= resolve_url('/promote/resources#videos') %">Pick out a video</a> to show to help focus the class and get them excited to do an Hour of Code.
+    <a href="{{ promote/videos }}">Pick out a video</a> to show to help focus the class and get them excited to do an Hour of Code.
   </li>
   <li>
     Check out the <a href="/files/hoc-volunteer-toolkit.pdf">Hour of Code Volunteer Toolkit</a> which includes an overview, timeline, preparation material, and marketing material. Everything you need to be ready for your volunteer experience!
   </li>
   <li>
-    If you're going to be doing a tutorial during your session, spend 30 minutes trying at least one <a href="%= resolve_url('/learn') %">Hour of Code tutorial</a>.
+    If you're going to be doing a tutorial during your session, spend 30 minutes trying at least one <a href="{{ urls/learn }}">Hour of Code tutorial</a>.
   </li>
   <li>
     If you're visiting a school, complete any background checks or required paperwork.
@@ -119,7 +120,7 @@ You can be a guest speaker in a classroom, or help a teacher run the activity. V
     </td>
     
     <td>
-      <a href="%= resolve_url('promote/resources#videos') %">Show an inspirational video</a>.
+      <a href="{{ promote/videos }}">Show an inspirational video</a>.
     </td>
   </tr>
   
@@ -244,5 +245,5 @@ You can be a guest speaker in a classroom, or help a teacher run the activity. V
           Code.org and our partners design all the Hour of Code activities to engage students of all grade levels (K-12), boys and girls, from all backgrounds. Everyone, even adults can have fun playing!
         </p>
         <p>
-          <%= view :signup_button %>
+          {{ signup_button }}
         </p>

@@ -1216,10 +1216,12 @@ And(/^I save the section url$/) do
 end
 
 And(/^I join the section$/) do
-  steps %Q{
-    Given I am on "#{@section_url}"
-    And I click selector ".btn.btn-primary" once I see it
-  }
+  page_load(true) do
+    steps %Q{
+      Given I am on "#{@section_url}"
+      And I click selector ".btn.btn-primary" once I see it
+    }
+  end
 end
 
 And(/^I wait until I am on the join page$/) do

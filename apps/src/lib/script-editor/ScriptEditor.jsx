@@ -60,6 +60,7 @@ export default class ScriptEditor extends React.Component {
     hasLessonPlan: PropTypes.bool,
     curriculumPath: PropTypes.string,
     pilotExperiment: PropTypes.string,
+    editorExperiment: PropTypes.string,
     announcements: PropTypes.arrayOf(announcementShape),
     supportedLocales: PropTypes.arrayOf(PropTypes.string),
     locales: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.string)).isRequired,
@@ -311,6 +312,13 @@ export default class ScriptEditor extends React.Component {
           <input
             name="pilot_experiment"
             defaultValue={this.props.pilotExperiment}
+            style={styles.input}
+          />
+          Editor Experiment. If specified, users with this experiment on the
+          levelbuilder machine will be able to edit this script.
+          <input
+            name="editor_experiment"
+            defaultValue={this.props.editorExperiment}
             style={styles.input}
           />
         </label>

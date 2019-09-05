@@ -1,13 +1,12 @@
 ---
-title: <%= hoc_s(:title_stats).inspect %>
+title: Propaganda y estadísticas útiles
 layout: wide
 nav: promote_nav
 ---
 
-
 <a id="blurb"></a>
 
-<%= view :signup_button %>
+{{ signup_button }}
 
 # Propaganda y estadísticas útiles
 
@@ -41,7 +40,7 @@ La tecnologia esta transformando todas las industrias en el planeta. En el ano 2
 
 #### Acerca de Code.org
 
-Code.org® es un una organizacion 501c3-pública, sin fines de lucro dedicada a expandir la participación en ciencias de la computación y aumentar la participación de las mujeres y los estudiantes subrepresentados de color. Su visión es que todos los estudiantes en todas las escuelas tengan la oportunidad de aprender programación informática. Después de su lanzamiento en 2013, Code.org organizó la campaña la Hora del Código – que ha introducido más de 100 millones de estudiantes en ciencias de la computación hasta la fecha – y se ha asociado con 70 distritos de escuelas públicas en todo el país para expandir programas de ciencias de la computación. Code.org es apoyado por donaciones filantrópicas de las corporaciones, fundaciones y personas generosas, incluyendo Microsoft, Facebook, Fundación de Infosys, USA, Amazon, y otros. Para obtener más información, visite: [ < % = resolve_url('code.org') %>](%= resolve_url('https://code.org') %).
+Code.org® es un una organizacion 501c3-pública, sin fines de lucro dedicada a expandir la participación en ciencias de la computación y aumentar la participación de las mujeres y los estudiantes subrepresentados de color. Su visión es que todos los estudiantes en todas las escuelas tengan la oportunidad de aprender programación informática. Después de su lanzamiento en 2013, Code.org organizó la campaña la Hora del Código – que ha introducido más de 100 millones de estudiantes en ciencias de la computación hasta la fecha – y se ha asociado con 70 distritos de escuelas públicas en todo el país para expandir programas de ciencias de la computación. Code.org es apoyado por donaciones filantrópicas de las corporaciones, fundaciones y personas generosas, incluyendo Microsoft, Facebook, Fundación de Infosys, USA, Amazon, y otros. For more information, please visit: [code.org]({{ codeorg_link }}).
 
 ## Comparte esto en redes sociales y por correo electrónico
 
@@ -51,6 +50,6 @@ Code.org® es un una organizacion 501c3-pública, sin fines de lucro dedicada a 
 
 ## Infografías
 
-<%= view :stats_carousel %>
+{{ stats_carousel }}
 
-<%= view :signup_button %>
+{{ signup_button }}

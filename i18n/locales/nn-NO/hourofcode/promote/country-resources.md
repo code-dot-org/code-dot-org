@@ -3,6 +3,7 @@ title: <%= hoc_s(:title_country_resources).inspect %>
 layout: wide
 nav: promote_nav
 ---
+
 <%= view :signup_button %>
 
 <% if @country == 'la' %>

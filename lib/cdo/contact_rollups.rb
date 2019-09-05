@@ -579,15 +579,6 @@ class ContactRollups
     WHERE #{DEST_TABLE_NAME}.id > 0"
   end
 
-  def self.append_regional_partner_to_role_list
-    PEGASUS_REPORTING_DB_WRITER.run "
-    UPDATE #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME}
-    INNER JOIN #{DASHBOARD_DB_NAME}.users_view AS users ON users.id = #{PEGASUS_DB_NAME}.#{DEST_TABLE_NAME}.dashboard_user_id
-    INNER JOIN #{DASHBOARD_DB_NAME}.regional_partners AS regional_partners ON regional_partners.contact_id = users.id
-    SET roles = CONCAT(COALESCE(CONCAT(roles, ','), ''), 'Regional Partner')
-    WHERE LENGTH(users.email) > 0 AND #{DEST_TABLE_NAME}.id > 0"
-  end
-
   def self.update_courses_facilitated
     start = Time.now
     log "Updating courses_facilitated"

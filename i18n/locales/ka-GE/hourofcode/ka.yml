@@ -4,7 +4,6 @@ ka:
   language: 'ქართული'
   front_title: 'შემოუერთდით პროგრამირების ყველაზე დიდ ღონისძიებას %{campaign_date}-ში'
   coming_soon: 'მალე'
-  compatibility_unsupported_browser: "თქვენი ბრაუზერი მხარდაჭერილი არ არის. გთხოვთ განაახლოთ თქვენი ბრაუზერი ჩვენ მიერ მხარდაჭერილ ბრაუზერამდე <a href='%{supported_browsers_url}', target='_blank'></a>. თქვენ შეგიძლიათ სცადოთ დაათვალიეროთ ეს გვერდი, თუმცა მზად იყავით იმისათვის, რომ ზოგიერთი ფუნქცია არ იმუშავებს."
   campaign_date_start_short: "7 დეკ."
   campaign_date_start_long: "7 დეკემბერი"
   campaign_date_short: "დეკ. 7-13"
@@ -15,23 +14,20 @@ ka:
   codeorg_homepage_hoc2018_dance_heading: 'Create your own <span class="highlight-word">Dance&nbsp;Party</span>'
   codeorg_homepage_hoc2018_header_line1: 'The Hour of Code is coming...'
   codeorg_homepage_hoc2018_header_line2_desktop: 'What will you <span class="hoc2018-highlight-word">create?</span>'
-  codeorg_homepage_hoc2018_header_line2_mobile: 'What will you create?'
+  codeorg_homepage_hoc2018_header_line2_mobile: 'რას შექმნი შენ?'
   codeorg_homepage_hoc2018_header_line3: 'Give flight to imagination and birth to innovation. Start with an Hour of Code and your own brand of creativity, whatever it may be.'
   codeorg_homepage_hoc2018_musician_before: 'Featuring'
   codeorg_homepage_hoc2018_musician_after: 'and more!'
   codeorg_homepage_hoc2018_video: 'Watch our video'
-  hourofcode_homepage_hoc2018_header_line1: 'Anyone, anywhere can organize an Hour of Code event. One-hour tutorials in over 45 languages. No experience needed.'
-  hourofcode_homepage_hoc2018_header_line2: 'Ages 4 to 104.'
+  hourofcode_homepage_hoc2018_header_line1: 'კოდის ერთი საათის ორგანიზება ყველას, ყველგან შეუძლია. ჩვენ გვაქვს ერთსაათიანი გაკვეთილები 45 ენაზე. აუცილებელი არაა, გქონდეთ პროგრამირების გამოცდილება.'
+  hourofcode_homepage_hoc2018_header_line2: '4-დან 104 წლამდე ადამიანებისთვის.'
   hoc2018_tutorial_mchoc_description: 'გამოიყენეთ კოდის ბლოკები, რათა ამოგზაუროთ ალექსი ან სტივი Minecraft-ის სამყაროში.'
-  hoc2018_minecraft_aquatic_title1: "Minecraft Voyage Aquatic"
-  hoc2018_minecraft_with_microsoft: "In partnership with"
-  hoc2018_minecraft_thank_microsoft: "We thank Microsoft for supporting our vision and mission to ensure every child has the opportunity to learn computer science and the skills to succeed in the 21st century."
   cookie_banner_message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
   cookie_banner_more_information: "See Code.org's Privacy Policy."
   cookie_banner_accept: 'I agree'
   front_header_banner: 'შემოუერთდით პროგრამირების ყველაზე დიდ ღონისძიებას %{campaign_date}-ში'
   front_intro_default: 'კოდის ერთი საათი არის გლობალური მოძრაობა, რომელიც აერთიანებს ათობით მილიონ მოსწავლეს 180+ ქვეყნიდან. კოდის ერთი საათის ორგანიზება შეუძლია ნებისმიერ ადამიანს, ნებისმიერ ადგილას. ერთსაათიანი ტუტორიალები 40 ენაზეა მისაწვდომი. გამოცდილება საჭირო არ არის. <strong>ასაკი: 4 წლიდან 104 წლამდე.</strong>'
-  front_intro_default_2: 'A global movement in 180+ countries.'
+  front_intro_default_2: 'მსოფლიო მოძრაობა 180+ ქვეყანაში.'
   front_watch_video: 'უყურეთ ახალ ვიდეოს'
   front_watch_regular_video: 'უყურეთ ვიდეოს'
   front_volunteers: 'გვესაჭიროება ტექ–მოხალისეები'
@@ -203,6 +199,7 @@ ka:
   register_now: 'დარეგისტრირდით ახლავე'
   share_on_facebook: 'გააზირეთ Facebook-ზე'
   share_on_twitter: 'გააზიარეთ Twitter-ზე'
+  promote_additional_resources: 'დამატებითი რესურსები მალე!'
   front_join_us_heading: 'კოდის ერთი საათი ყველა მოსწავლისთვის.'
   front_join_us_announcements: 'განცხადებები'
   front_join_us_anybody_can_learn: 'სწავლა შეუძლია ყველას'
@@ -270,8 +267,8 @@ ka:
   signup_your_event: 'დაარეგისტრირეთ თქვენი ღონისძიება'
   signup_host_an_hour: 'უმასპინძლეთ კოდის ერთ საათს'
   signup_match_volunteer: 'მაპოვნინეთ ადგილობრივი პროგრამისტი, მოსწავლეებისთვის მაგალითის საჩვენებლად'
-  signup_email_preference_opt_in: 'Can we email you about updates to Code.org courses, local opportunities, or other computer science news?'
-  signup_email_preference_privacy: '(See our privacy policy)'
+  signup_email_preference_opt_in: 'შეგვიძლია, გამოგიგზავნოთ ხოლმე სიახლეები Code.org-ის კურსების, ადგილობრივი შესაძლებლობების ან კომპიუტერული მეცნიერების სამყაროს შესახებ?'
+  signup_email_preference_privacy: '(ნახეთ ჩვენი კონფიდენციალურობის პოლიტიკა)'
   signup_email_preference_yes: 'Yes'
   signup_email_preference_no: 'No'
   signup_email_preference_error: 'Email preference is required'
@@ -306,11 +303,11 @@ ka:
   social_hoc2018_join: "კოდის ერთი საათის დროა"
   social_hoc2018_mc: "Minecraft is back for the Hour of Code, and you’re the hero! Write code to journey through Minecraft biomes."
   social_hoc2018_mc_creativity: "Use your creativity and problem solving skills to explore and build underwater worlds with code."
-  social_hoc2018_what_create: "What will you create?"
+  social_hoc2018_what_create: "რას შექმნი შენ?"
   social_hoc2018_global_movement: "The Hour of Code is a global movement reaching tens of millions of students. One-hour tutorials are available in 45+ languages for all ages."
   map_title: "კოდის ერთი საათი - რუკა"
   map_header: '# 2017 წლის კოდის ერთ საათზე დარეგისტრირებული ღონისძიებები'
-  map_header_count_year: '%{event_count} events registered in %{year}'
+  map_header_count_year: '%{year} წელს დარეგისტრირებულია %{event_count} ღონისძიება'
   see_all_events: 'ყველა ღონისძიება'
   map_header_company: '# კომპანიის ორგანიზატორების მიერ'
   map_header_country: '# %{country}–ში'
@@ -424,6 +421,7 @@ ka:
   videos_creativity_series: What is Creativity? View Full Series.
   title_country_resources: რესურსები ქვეყნების მიხედვით
   title_hoc_advisory_committee: Hour of Code and CSEdWeek Advisory Committee
+  title_hoc_review_committee: Hour of Code and CSEdWeek Review Committee
   title_how_to_promote: გაავრცელეთ ინფორმაცია
   title_how_to_districts: როგორ მოვაწყოთ კოდის ერთი საათი უბანში
   title_how_to_events: კოდის ერთი საათის ორგანიზება - ინსტრუქციები
@@ -543,7 +541,6 @@ ka:
   tutorial_tynkerspin_name: "Spin Draw Animation Kit"
   tutorial_code-avengers_name: "შექმენით თამაში JavaScript-ის საშუალებით"
   tutorial_tynkercq_name: "კანფეტის კვესტი"
-  tutorial_makeschool_name: "შექმენით აიფონის თამაში თქვენს ბრაუზერში!"
   tutorial_cmgame_name: "CodeMonkey's თამაშის ამწყობი"
   tutorial_codesters_name: "კოდის ტესტერები"
   tutorial_qrm_name: "ხელმისაწვდომი პროგრამირება (ეკრანის წამკითხველის მხარდაჭერით)"
@@ -575,7 +572,6 @@ ka:
   tutorial_codestersflappybike_name: "მოფარფატე ველოსიპედი"
   tutorial_kanopong_name: "Kano-ს გამოთვლები - შექმენით პონგი"
   tutorial_tynkerright_name: "Bill of Rights STEM Kit"
-  tutorial_flatverse_name: "ბრტყელი სამყარო"
   tutorial_touchdevelop_name: "TouchDevelop"
   tutorial_tynkercc_name: "კოდის მბრძანებელი"
   tutorial_bamboo_name: "ბამბუკის JS"
@@ -760,7 +756,6 @@ ka:
   tutorial_wolframp_name: "დახატეთ მრავალკუთხედი"
   tutorial_wolframn_name: "ნინძას სახელის გენერატორი"
   tutorial_soloweb_name: "თქვენი პირველი ვებგვერდი ერთ საათში!"
-  tutorial_bloxmobapp_name: "შექმენით თქვენი მობილური აპლიკაცია"
   tutorial_khanweb_name: "ხანის აკადემია: ვებგვერდები"
   tutorial_khandata_name: "ხანის აკადემია: მონაცემთა ბაზები"
   tutorial_robomeshiq_name: "დააპროგრამეთ VEX IQ რობოტები Blockly-ს საშუალებით"
@@ -824,7 +819,6 @@ ka:
   tutorial_kanostreet_name: "ქუჩის მხატვარი"
   tutorial_nyblebot_name: "ბუგი ბოტი"
   tutorial_codemojijs_name: "შესავალი JavaScript-ში"
-  tutorial_bloxmobmath_name: "iOS-ის და Android-ის მათემატიკური აპლიკაციები"
   tutorial_techapf_name: "Python-ის დამატებითი ფუნქციები"
   tutorial_techfpjs_name: "პრაქტიკული შესავალი ფუნქციონალურ პროგრამირებაში JS-ის საშუალებით"
   tutorial_techlinq_name: "C# LINQ-ის გამოყენება - პრაქტიკული მიმოხილვა"
@@ -832,12 +826,9 @@ ka:
   tutorial_quorumastro_name: "პროგრამირება ასტრონომიაში"
   tutorial_alicewonder_name: "ალისა საოცრებათა ქვეყანაში"
   tutorial_rginter_name: "რობო ბაღი - საშუალო დონე"
-  tutorial_bloxmobscience_name: "iOS-ის და Android-ის მეცნიერული აპლიკაციები"
   tutorial_cssgrid_name: "ბადისებრი ბაღი"
-  tutorial_bloxmobdesign_name: "აპლიკაციის დიზაინის პროცესი"
   tutorial_jshero_name: "JS-ის გმირი"
   tutorial_codemojipy_name: "Python-ის ლაბორატორია"
-  tutorial_bloxmobcomp_name: "კომპიუტერული გამოთვლების პრობლემების გადაწყვეტა"
   tutorial_nclabdrone_name: "მოდით ავაწყოთ დრონი!"
   tutorial_gpbcircle_name: "შექმენით ინტერაქტიული ფერადი წრე"
   tutorial_gpbpaint_name: "შექმენით თქვენი საკუთარი სახატავი რედაქტორი"
@@ -916,10 +907,6 @@ ka:
   tutorial_idowedo_name: "iDo WeDo"
   tutorial_diggindwarf_name: "მთხრელი ჯუჯა"
   tutorial_rmedr_name: "დააპროგრამეთ VEX EDR-ის რობოტები Blockly-ს გამოყენებით"
-  tutorial_dksky_name: "DevKit: Build the Sky Fall App"
-  tutorial_dkcurrency_name: "DevKit: Build the Currency King App"
-  tutorial_dkriver_name: "DevKit: Build the River Monsters App"
-  tutorial_dkball_name: "DevKit: Build the Bouncing Ball App"
   tutorial_spheroit_name: "Blocks 2: If/Then Else"
   tutorial_gameofcodes_name: "Game Of Codes"
   tutorial_blocklygames_name: "Blockly Games"
@@ -1132,7 +1119,6 @@ ka:
   tutorial_tynkerspin_shortdescription: "შექმენით მხიარული კალამი, რომელიც დახატავს მბრუნავ სურათს."
   tutorial_code-avengers_shortdescription: "შეისწავლეთ \"JavaScript\"-ის პროგრამირება ვებ-ბრაუზერში."
   tutorial_tynkercq_shortdescription: "შეასრულეთ კვესტი ტკბილეულობის მოსაპოვებლად!"
-  tutorial_makeschool_shortdescription: "შექმენით iPhone-ის თამაში! ისწავლეთ კოდის წერის საშუალებით და ასწავლეთ თქვენს მონსტრებს ახალი მოძრაობები!"
   tutorial_cmgame_shortdescription: "შექმენით თქვენი საკუთარი ონლაინ თამაში CoffeeScript-ის, რეალური პროგრამირების ენის საშუალებით. "
   tutorial_codesters_shortdescription: "შექმენით თქვენი საკუთარი თამაში, ანიმაციები და ხელოვნების ნიმუშები Python-ის გამოყენებით."
   tutorial_qrm_shortdescription: "შეუერთდით Mary-ს პროგრამირების პირველ კვირაში ბიოლოგიის ლაბორატორიაში, სადაც ის Quorum-ს სწავლობს."
@@ -1164,7 +1150,6 @@ ka:
   tutorial_codestersflappybike_shortdescription: "შექმენით თამაში მოთამაშის კონტროლით. გააჩერეთ მოტოციკლი ჰაერში და ამავე დროს თავი აარიდეთ დაბრკოლებებს!"
   tutorial_kanopong_shortdescription: "შეცვალეთ თამაში. დაარღვიეთ წესები. გაიმარჯვეთ კოდის საშუალებით."
   tutorial_tynkerright_shortdescription: "დააპროგრამეთ ქვიზი ბილის უფლებების შესახებ!"
-  tutorial_flatverse_shortdescription: "დაეხმარეთ ბოტს ბრტყელი სამყაროს დაპყრობაში! "
   tutorial_touchdevelop_shortdescription: "ამოხსენით თავსატეხები, შექმენით თამაშები და ისწავლეთ კოდის წერა თქვენს ტელეფონში. "
   tutorial_tynkercc_shortdescription: "შექმენით და მოამზადეთ თქვენი ჯარი ბრძოლისთვის!"
   tutorial_bamboo_shortdescription: "Bamboo JS აქტივობა შექმნა Codemoji-მ, რათა ესწავლებინა მოსწავლეებისთვის Javascript-ის ძირითადი კონცეფციები."
@@ -1349,7 +1334,6 @@ ka:
   tutorial_wolframp_shortdescription: "შეისწავლეთ საოცარი მრავაკუთხედების შექმნა!"
   tutorial_wolframn_shortdescription: "რა ჰქვია თქვენს ნინძას?"
   tutorial_soloweb_shortdescription: "შექმენით და გააზიარეთ ვებგვერდი თქვენი საყვარელი ხუმრობით!"
-  tutorial_bloxmobapp_shortdescription: "ისწავლეთ დიზაინი და სისტემური აზროვნება, რათა შექმნათ აპლიკაციები თქვენთვის და თქვენი მეგობრებისთვის."
   tutorial_khanweb_shortdescription: "შეისწავლეთ HTML ტეგებისა და CSS-ის საშუალებით ვებგვერდების შექმნა. საბოლოოდ თქვენ შექმნით თქვენს საკუთარ მისალოც ბარათს."
   tutorial_khandata_shortdescription: "შეისწავლეთ მონაცემების მანიპულირება მონაცემთა ბაზაში და თქვენი საკუთარი მაღაზიის შექმნა"
   tutorial_robomeshiq_shortdescription: "დააპროგრამეთ ან ვირტუალური ონლაინ რობოტი ან ნამდვილი VEX IQ რობოტი."
@@ -1413,7 +1397,6 @@ ka:
   tutorial_kanostreet_shortdescription: "შექმენით ლამაზი და უნიკალური ხელოვნების ნიმუშები კანოს ქუჩის ხელოვნების პროგრამირების გამოწვევებთან ერთად"
   tutorial_nyblebot_shortdescription: "პროგრამირება მაგიაა - ვეხმარებით ბავშვებს კოდის საშუალებით საოცარი რაღაცების შექმნაში."
   tutorial_codemojijs_shortdescription: "Codemoji-მ შექმნა Beginning Javascript, რათა დააწერინოს მოსწავლეებს ნამდვილი javascript-ის ბრძანებები, რომლებიც სხვადასხვა პერსონაჟის ანიმირებას გააკეთებს."
-  tutorial_bloxmobmath_shortdescription: "შექმენით საკუთარი მობილური აპლიკაცია. ისწავლეთ, იყოთ ინოვაციური დიზაინერი და გახდით კომპიუტერისთვის გასაგებად მოაზროვნე ისეთი აპლიკაციების შექმნით, რომლებსაც გამოიყენებთ თქვენ და თქვენი მეგობრები. შექმენით დიზაინი ქვიზების, ფლეშ ბარათების, კალენდრების, რუკების, ნახატებისა და სხვა ობიექტების გამოყენებით თქვენს ინტერაქტიულ აპლიკაციებში, რომლებიც მუშაობს როგორც iOS-ზე, ისე ანდროიდზე. ყველას შეუძლია მობილური აპლიკაციის შექმნა."
   tutorial_techapf_shortdescription: "7 გამოყენებადი ხერხი Python-ის პროფესიუნალურ დონეზე შესასწავლად!"
   tutorial_techfpjs_shortdescription: "გამარტივებული ფუნქციონალური პროგრამირება JavaScript-ის საშუალებით!"
   tutorial_techlinq_shortdescription: "C#-ის LINQ ბიბლიოთეკის გამოყენების სასარგებლო შესავალი"
@@ -1421,12 +1404,9 @@ ka:
   tutorial_quorumastro_shortdescription: "გაიგეთ მეტი პროგრამირებასა და ასტრონომიაზე ამ ხელმისაწვდომ ონლაინ გაკვეთილში."
   tutorial_alicewonder_shortdescription: "გაუძეხით ელისს საოცრებათა ქვეყანაში JavaScript-ის დახმარებით."
   tutorial_rginter_shortdescription: "RoboGarden-ში გვჯერა, რომ მოსწავლეებს უნდა მივცეთ საშუალება, თავის განათლებაში აქტიურად იყონ ჩართულნი."
-  tutorial_bloxmobscience_shortdescription: "შექმენით საკუთარი მობილური აპლიკაცია. ისწავლეთ, იყოთ ინოვაციური დიზაინერი და გახდით კომპიუტერისთვის გასაგებად მოაზროვნე ისეთი აპლიკაციების შექმნით, რომლებსაც გამოიყენებთ თქვენ და თქვენი მეგობრები. შექმენით დიზაინი ქვიზების, ფლეშ ბარათების, კალენდრების, რუკების, ნახატებისა და სხვა ობიექტების გამოყენებით თქვენს ინტერაქტიულ აპლიკაციებში, რომლებიც მუშაობს როგორც iOS-ზე, ისე ანდროიდზე. ყველას შეუძლია მობილური აპლიკაციის შექმნა."
   tutorial_cssgrid_shortdescription: "თამაში CSS ბადის სასწავლად."
-  tutorial_bloxmobdesign_shortdescription: "შექმენით საკუთარი მობილური აპლიკაცია. ისწავლეთ თანმიმდევრობითობა და სისტემური აზროვნება ისეთი აპლიკაციების შესაქმნელად, რომლებსაც გამოიყენებთ თქვენ და თქვენი მეგობრები. შექმენით დიზაინი ქვიზების, ფლეშ ბარათების, კალენდრების, რუკების, სურათების და სხვა ობიექტების გამოყენებით თქვენს ინტერაქტიულ აპლიკაციებში, რომლებიც იმუშავებს როგორც iOS-ზე, ისე ანდროიდზე. თქვენი მასალა, თქვენი პერსონალიზაცია, თქვენი აპლიკაცია თქვენს მობილრ ტელეფონზე."
   tutorial_jshero_shortdescription: "JS Hero გთავაზობთ პროგრამირების შესავალს JavaScript-ის გამოყენებით. ის გასწავლით პროგრამირების ზოგად კონცეფციებს, როგორიცაა ცვლადები, პირობები, ციკლები, ფუნქციები და ბევრი სხვა. ეს კონცეფციები ქმნის საფუძველს ბევრი პროგრამული ენისთვის."
   tutorial_codemojipy_shortdescription: "Python-ის ლაბორატორია iOS-ზე დაფუძნებული აქტივობაა, რომელიც ასწავლის python-ის საფუძვლებს."
-  tutorial_bloxmobcomp_shortdescription: "შექმენით საკუთარი მობილური აპლიკაცია. ისწავლეთ თანმიმდევრობითობა და სისტემური აზროვნება ისეთი აპლიკაციების შესაქმნელად, რომლებსაც გამოიყენებთ თქვენ და თქვენი მეგობრები. შექმენით დიზაინი ქვიზების, ფლეშ ბარათების, კალენდრების, რუკების, სურათების და სხვა ობიექტების გამოყენებით თქვენს ინტერაქტიულ აპლიკაციებში, რომლებიც იმუშავებს როგორც iOS-ზე, ისე ანდროიდზე. თქვენი მასალა, თქვენი პერსონალიზაცია, თქვენი აპლიკაცია თქვენს მობილრ ტელეფონზე."
   tutorial_nclabdrone_shortdescription: "შექმენით დრონის ჩარჩო NCLab-ის 3D (სამგანზომილებიანი) მოდელირების აპლიკაციის საშუალებით. დაბეჭდეთ თქვენი შექმნილი ჩარჩო 3D ფორმატით და შექმენით ნამდვილი მფრინავი დრონი!"
   tutorial_gpbcircle_shortdescription: "ინტერაქტიულად შექმენით ლამაზი ფერები."
   tutorial_gpbpaint_shortdescription: "შექმენით და დაამუშავეთ სახატავი აპლიკაცია."
@@ -1505,10 +1485,6 @@ ka:
   tutorial_idowedo_shortdescription: "შექმენით რობოტული სატრანსპორტო საშუალება, შემდეგ კი დააპროგრამეთ ისე, რომ გადაადგილოთ მინი ფიგურები."
   tutorial_diggindwarf_shortdescription: "ჯუჯებს თქვენი დახმარება სჭირდებათ ნავიგაციაში, გამოთხრებსა და ძვირფასი ქვების მოგროვებაში JavaScript-ის გამოყენებით."
   tutorial_rmedr_shortdescription: "Blockly პროგრამირების გამოყენებით დააპროგრამეთ VEX EDR რობოტი ლაბირინთის ნავიგაციისთვის."
-  tutorial_dksky_shortdescription: "Are you ready for the app that builds apps? The magic of DevKit awaits you!"
-  tutorial_dkcurrency_shortdescription: "Are you ready for the app that builds apps? The magic of DevKit awaits you!"
-  tutorial_dkriver_shortdescription: "Are you ready for the app that builds apps? The magic of DevKit awaits you!"
-  tutorial_dkball_shortdescription: "Are you ready for the app that builds apps? The magic of DevKit awaits you!"
   tutorial_spheroit_shortdescription: "Learn about if/then, else conditions while building your very own animal sound game we like to call \"Animal Toss!\""
   tutorial_gameofcodes_shortdescription: "Build your awesome Dragon game and export it as a standalone app."
   tutorial_blocklygames_shortdescription: "Blockly Games is a series of educational games that teach programming."
@@ -1602,7 +1578,7 @@ ka:
   tutorial_wizard_shortdescription: "Journey into the world of Code Magic as a Code Wizard. Learn to create and cast spells to customize your castle."
   tutorial_mbscratchcards_shortdescription: "Connect the physical world of micro:bit with the virtual world of Scratch."
   tutorial_mbswiftplaygrounds_shortdescription: "Use the micro:bit with an iPad to learn Swift."
-  tutorial_mbbuttons_shortdescription: "In this introductory project, you'll make pictures or animations appear on the micro:bit display when a buttons are pressed."
+  tutorial_mbbuttons_shortdescription: "In this introductory project, you'll make pictures or animations appear on the micro:bit display when buttons are pressed."
   tutorial_meteor_shortdescription: "In this project, you'll create a Falling Meteors game for the BBC micro:bit. Using the buttons, the player will move a shield to catch falling meteors and save the Earth."
   tutorial_ballbounce_shortdescription: "Learn to make a mobile app where the user flings a ball across the screen and it bounces off the edges."
   tutorial_mitcodi_shortdescription: "Learn to make your own interactive mobile app. Press the bee and hear it buzz!"
@@ -1656,7 +1632,7 @@ ka:
   tutorial_pets_shortdescription: "Create a fun game about pets – either real or imaginary! Beginners can use the self-guided tutorial while more advanced coders have the option to start off with a blank project."
   tutorial_petvet_shortdescription: "From guiding pets into the Examination Room to diagnosing their sniffles, boo-boos, and itches, you'll find every puzzle has a solution to make the pets feel better than ever!"
   tutorial_superhero_shortdescription: "Use HTML and CSS pixel art to create your favorite superhero masks. Publish and share your creations!"
-  tutorial_vidcodeplastic_shortdescription: "Learn to use loops, sin waves and customized emojis to make a unique project."
+  tutorial_vidcodeplastic_shortdescription: "Learn to use loops, sine waves and customized emojis to make a unique project."
   tutorial_vidcodetypeface_shortdescription: "Create your own typeface using shapes and elements of typography. Type has more elements than you may have realized!"
   tutorial_washustorm_shortdescription: "Learn how to program an incoming storm."
   tutorial_activitypackets_shortdescription: "Find hours of family-friendly fun with Wonder Workshop's printable packets of creative coding activities. Bring coding to life with Dash, Dot, and Cue robots by downloading these online and offline activities to use during Hour of Code and beyond!"
@@ -1721,7 +1697,6 @@ ka:
   tutorial_tynkerspin_longdescription: "ამ პროექტში თქვენ შექმნით საოცარ, მორგებად სახატავ ინსტრუმენტს. დააპროგრამეთ თქვენი კალამი, აირჩიეთ სურათი (ან ატვირთეთ თქვენი საკუთარი) და თქვენ შეძლებთ ამ სურათის ტრიალის დახატვას."
   tutorial_code-avengers_longdescription: "შექმენით 2-მოთამაშიანი 2D (ორგანზომილებიანი) თამაში JavaScrip-ით 10 მოკლე დავალების დახმარებით. შემდეგ გააგრძელეთ პროგრამირების საფუძვლების სწავლა (ცვლადები და If პირობები), ვიდრე ქმნით ქვიზს, რომელსაც გაუზიარებთ მეგობრებს. გზადაგზა მიიღებთ ქულებს და მედლებს კლასში საუკეთესო შედეგის მისაღებად ბრძოლაში."
   tutorial_tynkercq_longdescription: "შექმენით თქვენი საკუთარი კანფეტის ტროლის პერსონაჟი და გაემგზავრეთ მრავალდონიან თავგადასავალში, რომლის მიზანია თქვენი პერსონაჟის სახლში მიყვანა. თქვენ მოგიწევთ პროგრამული თავსატეხების ამოხსნა, რათა გაიყვანოთ თქვენი პერსონაჟი ადამიანთა სამყაროში, თავი აარიდებინოთ დაბრკოლებებს და შეაგროვებინოთ საღეჭი რეზინები და პიტნის კანფეტები."
-  tutorial_makeschool_longdescription: "ისწავლეთ კოდის წერა iPhone-ის თამაშის შექმნით. გამოიყენეთ დამწყებებზე მორგებული სრულიად ახალი ენა, რომელსაც ჰქვია Swift-ი! შექმენით \"პოკემონით\" შთაგონებული თამაში და დაწერეთ კოდი, რომლითაც თქვენს მონსტრს ახალ მოძრაოებებს ასწავლით. ისწავლით ცვლადების, მეთოდებისა და ობიექტების გამოყენებას, რაც თქვენს მონსტრს გამარჯვებაში დაეხმარება!"
   tutorial_cmgame_longdescription: "შექმენით საკუთარი თამაში - მაიმუნებთან ერთად! ეს არის ახალი ონლაინ კურსი CodeMonkey-ის შემქმნელებისგან. ისწავლეთ, როგორ ააწყოთ საკუთარი ონლაინ თამაში თავიდან ბოლომდე CoffeeScript-ის, პროგრამირების ნამდვილი ენის გამოყენებით. ისწავლეთ სპრაიტების დამატება, მათი კონტროლი კლავიატურით, მტრების თავიდან აცილება, ქულების დამატება და მოკლება, წინააღმდეგობების შექმნა და ვეფხვისგან თავის დაღწევა. წინა გამოცდილება არ არის საჭირო. როცა მორჩებით, გაუზიარეთ თქვენი თამაში მეგობრებს!"
   tutorial_codesters_longdescription: "შექმენით საკუთარი თამაშები, ანიმაციები და ხელოვნების ნიმუშები Python-ის გამოყენებით. როცა მორჩებით, გაუზიარეთ ნამუშევარი მეგობრებს! დააპროგრამეთ Python-ით, პროგრამირების ნამდვილი ენით, რომელსაც ყოველ დღე იყენებენ კომპანიები - ჩვენი გადმოსატანი და ჩასაგდები ხელსაწყო სწავლას ამარტივებს! სცადეთ კალათბურთის თამაშის შექმნა, ცეკვის დადგმა ან მოძრავი ბარათის შექმნა! "
   tutorial_qrm_longdescription: "Join Mary in learning the Quorum programming language as part of a light hearted and entertaining journey in biology. The activities are student-guided, with online examples, and are accessible to the blind and visually impaired."
@@ -1753,7 +1728,6 @@ ka:
   tutorial_codestersflappybike_longdescription: "In this activity, students use our drag-to-text toolkit to start coding in Python right away! Students are guided through a series of learning activities that teach them to build a complete game! After they finish, they are challenged to use what they learned about syntax, dot notation, events, variables, parameters and game mechanics to create a new game. "
   tutorial_kanopong_longdescription: "ისწავლეთ პროგრამირება ერთ საათი კლასიკური არკადული თამაშის შექმნის საშუალებით!"
   tutorial_tynkerright_longdescription: "შექმენით თქვენი საკუთარი კანონპროექტი უფლებების შესახებ: შეცვალეთ ფონი, დაამატეთ მეტი კითხვა, დააგროვეთ ქულები, დაამატეთ ანიმაციები."
-  tutorial_flatverse_longdescription: "შეისწავლეთ პროგრამირების საფუძვლები ამ თამაშის საშუალებით, რომელშიც ან თქვენ შეჭამთ, ან თქვენ შეგჭამენ!"
   tutorial_touchdevelop_longdescription: "სენსორზე მორგებული რედაქტორი გაგაცნობთ პიქსელური ხელოვნების შექმნას, დათვის თავსატეხის ამოხსნას ან თქვენი საკუთარი მხტუნავი ჩიტის თამაშის შექმნას. "
   tutorial_tynkercc_longdescription: "მოამზადეთ თქვენი ჯარი ბრძოლისათვის! დაწერეთ შეტევის ლოგიკის კოდი ჯარის ყოველი წევრისთვის, რათა გამოიყენოთ მტრის სუსტი წერტილები და ამ ბრძოლაში გამარჯვებულად გამოხვიდეთ. სწავლის პროცესში თქვენ გახსნით ახალ პერსონაჟებს, რომელთა დაპროგრამებასაც შეძლებთ. შექმენით თქვენი ჯარი, შემდეგ ებრძოლეთ მეგობრებს. ვისი კოდია საუკეთესო?"
   tutorial_bamboo_longdescription: "Bamboo JS არის Codemoji-ის მიერ შექმნილი აქტივობა, რომელიც მოსწავლეებს ასწავლის ჯავასკრიპტის საბაზისო კონცეფციებს. პანდა ბამბუკი და მისი მეგობრები გაუძღვებიან მოსწავლეებს ძირითადი ბრძანებებისა და სტრუქტურის შექმნის პროცესში. Bamboo JS აქტივობა შექმნილია მოსწავლეებისთვის, რომლებსაც სურთ ცოტა მეტი ანიმაცია და მეტი ხელოვნება და დიზაინი კოდის წერისას. ბამბუკის აქტივობა შესანიშნავია ნებისმიერი ასაკის მოსწავლისთვის. "
@@ -1783,7 +1757,7 @@ ka:
   tutorial_bbot_longdescription: "კოდის ერთი საათის ეს 3 ერთსაათიანი აქტივობა ისეა დაგეგმილი, რომ თქვენ არ დაგჭირდებათ არანაირი ცოდნა ან გამოცდილება პროგრამირებაში იმისთვის, რომ ასწავლოთ თქვენს მოსწავლეებს პროგრამირება! შეგიძლიათ, ასწავლოთ პროგრამირება სახალისო და მარტივი გზით. გადახედეთ აქტივობებს და ჩამოტვირთეთ ჩვენი გაკვეთილების მასალზები, პრეზენტაციის სლაიდების, უსადენო აქტივობების და ამოხსნის ინსტუქციების ჩათვლით. ამ ყველაფრის დახმარებით, მოემზადეთ თქვენი პირველი გაკვეთილისთვის 20-40 წუთში! \n\nჩვენი აქტივობები მოიცავს როგორც ოფლაინ, ისე ონლაინ სავარჯიშოებს და გაძლევთ საშუალებას, ასწავლოთ მოსწავლეებს (7 წლის ასაკიდან) პროგრამირების და მისი ფუნდამენტური კონცეფციების შესახებ, როგორიცაა ციკლები და ალგორითმები. მოსწავლეები თავიანთ ცოდნას გამოიყენებენ Bomberbot ონლაინ თამაშში, სადაც დააპროგრამებენ თავიანთ რობოტს, ამოხსნას ლოგიკაზე დაფუძნებული თავსატეხები ყველაზე ეფექტური გზით. "
   tutorial_scratchg_longdescription: "ბავშვებს უყვართ თამაში მობილურ ტელეფონებსა და კომპიუტერებზე. მაგრამ როგორაა დაპროგრამებული ეს თამაშები? ეს აქტივობა აცნობს მოსწავლეებს პროგრამირების ენა Scratch-ს და შემდეგ აჩვენებს, როგორ დააპროგრამონ სხვადასხვა სტილის თამაში. თამაშისთვის საჭირო ყველა დეტალი მოცემულია და მოსწავლეებმა უნდა მოიფიქრონ, როგორ დააკავშირონ ერთმანეთთან ყველაფერი ისე, რომ შექმნან ფუნქციონირებადი თამაში."
   tutorial_roboticfriends_longdescription: "წინასწარ განსაზღვრული \"Robot Vocabulary\"-ს გამოყენებით მოსწავლეები გაიგებენ, როგორ შეასრულონ კონკრეტული ამოცანები წინასწარ განხილვის გარეშე ერთმანეთის ხელმძღვანელობით. ეს გაკვეთილი ასწავლის ბავშვებს კავშირს სიმბოლოებსა და მოქმედებებს შორის და, ასევე, გამართვის ფასდაუდებელ უნარს. \"My Robotic Friends\" უფრო შედეგიანია ჯგუფურ აქტივობაში, მასწავლებლისთვის კი კლასში სამუშაო წიგნს შეიცავს."
-  tutorial_sjforest_longdescription: "\"Can I Make a Spooky Forest?\" is an intermediate activity meant for children in kindergarten through second grade who have some prior experience with programming to learn about and master more advanced features of ScratchJr. Lager, children can use the skills they have learned in doing this activity to create their own unique projects, or build upon what they created in the \"Can I Make a Spooky Forest?\" program. Through this activity and continued time with ScratchJr, students will have the opportunity to think creatively, become storytellers, and improve upon mathematical reasoning and sequencing skills."
+  tutorial_sjforest_longdescription: "\"Can I Make a Spooky Forest?\" is an intermediate activity meant for children in kindergarten through second grade who have some prior experience with programming to learn about and master more advanced features of ScratchJr. Later, children can use the skills they have learned in doing this activity to create their own unique projects, or build upon what they created in the \"Can I Make a Spooky Forest?\" program. Through this activity and continued time with ScratchJr, students will have the opportunity to think creatively, become storytellers, and improve upon mathematical reasoning and sequencing skills."
   tutorial_sjgreet_longdescription: "\"Can I Make My Characters Greet Each Other?\" is an advanced activity meant for children in kindergarten through second grade who have prior experience with programming to master more advanced features of ScratchJr. Later, children can use the skills they have learned in doing this activity to create their own unique projects, or build upon what they have created in \"Can I Make My Characters Greet Each Other?\" program. Through this activity and continued time in ScratchJr, students will have the opportunity to think creatively, become storytellers, and improve upon mathematical reasoning and sequencing skills."
   tutorial_sjsunset_longdescription: "\"როგორ ჩადის მზე?\" არის შესავალი აქტივობა ბავშვებისთვის საბავშბო ბაღიდან მეორე კლასამდე, რომლებსაც თითქმის, ან, შესაძლოა, არანაირი გამოცდილება არ ჰქონდათ პროგრამირებაში. ამ აქტივობაში ისინი ისწავლიან ScratchJr-ის ძირითად ფუნქციებსა და პროგრამირების ელემენტარულ კონცეფციებს. ამ აქტივობითა და ScratchJr-თან რაღაც დროის განმავლობაში მუშაობისას, მოსწავლეებს ექმნებათ საშუალება, იაზროვნონ კრეატიულად, გახდნენ ამბის მთხრობელები და გააუმჯობესონ თავისი მათემატიკური მსჯელობა და მოქმედებების თანმიმდევრობის უნარები. შემდგომ, ბავშვები თავისი უნიკალური პროექტების შესაქმნელად ნასწავლი უნარების გამოყენებას შეძლებენ."
   tutorial_fufafrenz_longdescription: "გაკვეთილი მიმდევრობაზე დამწყებებისთვის (K-5). ეს არის შესავალი მიმდევრობაში, პროგრამირების ძირითად კონცეფციაში. ეს არის მესამე კლასის მაგალითი, ჩვენ ამ კონცეფციის გაკვეთილის გეგმა გათვლილი გვაქვს K-5-სთვის."
@@ -1938,7 +1912,6 @@ ka:
   tutorial_wolframp_longdescription: "შეისწავლეთ განსხვავებული მრავალკუთხედების შექმნა ამ აქტივობაში."
   tutorial_wolframn_longdescription: "ამ აქტივობაში მოსწავლეები შექმნიან სახელების გენერატორს, რომელიც გადააკეთებს მათ სახელებს ნინძას სტილის სახელებად."
   tutorial_soloweb_longdescription: "შედით www.sololearn.com-ზე და დააყენეთ HTML-ისა და CSS-ის აპლიკაციები ან გახსენით შესაბამისი გაკვეთილები ვებში (ანდროიდის მომხმარებლებს შეუძლიათ, დააყენონ გაერთიანებული SoloLearn აპლიკაცია). შეასრულეთ 2 მოდული (მიმოხილვა და HTML-ის საფუძვლები) HTML-ში და 2 მოდული (საფუძვლები და ტექსტთან მუშაობა) და მე-3 მოდულის პირველი 5 გაკვეთილი (თვისებები) CSS-ში. აიღეთ შაბლონი აქ: https://code.sololearn.com/WKeg2CtzpRts/ და მიჰყევით ინსტრუქციებს."
-  tutorial_bloxmobapp_longdescription: "შექმენით საკუთარი მობილური აპლიკაცია. ისწავლეთ თანმიმდევრობითობა და სისტემური აზრივნება, ისეთი აპლიკაციებსი შესაქმნელად, რომლებსაც გამოიყენებთ თქვენ და თქვენი მეგობრები. შექმენით დიზაინი ქვიზების, ფლეშ ბარათების, კალენდრების, რუკების, სურათებისა და სხვა ობიექტების გამოყენებით თქვენს ინტერაქციულ აპლიკაციებში, რომლებიც იმუშავებს როგორც iOS-ზე, ისე ანდროიდზე. თქვენი მასალა, თქვენი პერსონალიზაცია, თქვენი აპლიკაცია თქვენს მობილრ ტელეფონზე."
   tutorial_khanweb_longdescription: "ხანის აკადემია: ვებგვერდები გასწავლიან HTML ტეგებისა და CSS-ის საშუალებით ვებგვერდების შექმნას. საბოლოოდ თქვენ შექმნით თქვენს საკუთარ მისასალმებელ ბარათს."
   tutorial_khandata_longdescription: "ხანის აკადემია: მონაცემთა ბაზები გასწავლიან მონაცემების მანიპულირებას მონაცემთა ბაზაში და თქვენი საკუთარი მაღაზიის შექმნას."
   tutorial_robomeshiq_longdescription: "მოსწავლეები წერენ Google Blockly კოდს პოპულარული VEX IQ რობოტის გასაკონტროლებლად. მათ შეუძლიათ, აირჩიონ კოდის დაწერა ვირტუალური რობოტისთვის ან ნამდვილი VEX IQ რობოტისთვის, რომელსაც თავად შექმნიან. ორივე ვარიანტი ხელმისაწვდომია ერთი ვებზე დაფუძნებული ინტერფეისით. მოსწავლეებს შეუძლიათ, ისწავლონ რობოტების საბაზისო მოძრაობები და სენსორისა და შედეგის გამოტანის ხელსაწყოს გამოყენება. ეს აქტივობა არის მარტივი და სახალისო."
@@ -2002,7 +1975,6 @@ ka:
   tutorial_kanostreet_longdescription: "ხელოვნება და ტექნოლოგია გაერთიანდა! Kano-ს Street Art Hour of Code გამოწვევებთან ერთად ნებისმიერი შესაძლებლობების მქონე შემოქმედებითი ხალხი დაწერს კოდს ფუნჯით და მიიღებს ლამაზ, უნიკალურ ნამუშევარს. ამასობაში, ნამდვილი პროგრამული ენის გამოყენებით ისინი ინტუიციურად და საინტერესოდ ისწავლიან კომპიუტერული მეცნიერების პრინციპებს. ჩვენი მასწავლებლების რესურსებით და მართვადი მასალით ყველას შეუძლია, ისიამოვნოს სწავლით."
   tutorial_nyblebot_longdescription: "Boogie Bot არის კოდის წერის სახალისო აპლიკაცია. ეს სამგანზომილებიანი აპლიკაცია, რომელიც სავსეა სიცოცხლითა და ენერგიით, ბავშვებს გააცნობს კომპიუტერული პროგრამირების საფუძვლებს Google-ის ვიზუალური პროგრამირების ენის, Blockly-ის, გამოყენებით. Boogie Bot არის მოცეკვავე რობოტი, რომელიც შეიძლება დაპროგრამდეს ცეკვის ილეთების შესასრულებლად. \"აპლიკაციის თვისებები\" (ყველა თვისება ხელმისაწვდომია სრულ ვერსიაში) ისწავლეთ კოდის წერა ბლოკებით, შექმენით საკუთარი სპეც-ეფექტები სცენაზე, მიიღეთ მონეტები პროგრამირების კონსტრუქტების სწავლისას, მოაწყვეთ ოთახი მაგარი ნივთებით, ითამაშეთ და გამოიკვლიეთ დამალული ნივთებით სავსე ოთახი, ჩაწერეთ და შეინახეთ თქვენი შესანიშნავი ნამუშევრის ვიდეო."
   tutorial_codemojijs_longdescription: "შესავალი JavaScript-ში შექმნილია იმისთვის, რომ ასწავლოს მოსწავლეებს მარტივი ბრძანებები, რომლებსაც აქვთ მნიშვნელოვანი შედეგები პერსონაჟის ქმედებებზე. მოსწავლეები დაწერენ ბრძანებებს, რომელთა დახმარებითაც პერსონაჟები აკეთებენ ყველაფერს, დაწყებული მალაყით, დამთავრებული ხმების გამოცემით და საუბრით. ეს აქტივობა დაგეხმარებათ JavaScript-ის იდეებსა და ბრძანებებს."
-  tutorial_bloxmobmath_longdescription: "შექმენით საკუთარი მობილური აპლიკაცია. ისწავლეთ, იყოთ ინოვაციური დიზაინერი და გახდით კომპიუტერისთვის გასაგებად მოაზროვნე ისეთი აპლიკაციების შექმნით, რომლებსაც გამოიყენებთ თქვენ და თქვენი მეგობრები. შექმენით დიზაინი ქვიზების, ფლეშ ბარათების, კალენდრების, რუკების, ნახატებისა და სხვა ობიექტების გამოყენებით თქვენს ინტერაქტიულ აპლიკაციებში, რომლებიც მუშაობს როგორც iOS-ზე, ისე ანდროიდზე. ყველას შეუძლია მობილური აპლიკაციის შექმნა."
   tutorial_techapf_longdescription: "ამ ინტერაქტიული ტუტორიალის მიზანია, გაგაცნოთ Python-ის მაღალი საფეხურის თქვენთვის უცნობი ფუნქციები და ხრიკები Python ენის ცოდნის გასაღრმავებლად."
   tutorial_techfpjs_longdescription: "ფუნქციონალური პროგრამირება არის ერთ-ერთი ისეთი რაღაც, რაც, შეიძლება, საცდელად ძალიან რთული ან ძალიან თეორიული ჩანს. ნუღარ მოიცდით! ამ ინტერაქციულ ტუტორიალში აღმოაჩენთ ფუნქციონალურ პროგრამირებას JavaScript-ის პრაქტიკული მაგალითებისა და სავარჯიშოების დახმარებით."
   tutorial_techlinq_longdescription: "პროგრამირების ენა C# საკმაოდ პოპულარულია დეველოპერებს შორის. ამის ძირითადი მიზეზი მისი მძლავრი და ინტუიტური თვისებებია. ერთ-ერთი ასეთი თვისება LINQ-ია, ბიბლიოთეკა, რომელიც გამოიყენება მოთხოვნების შესასრულებლად პირდაპირ C#-ის სინტაქსში სხვადასხვა მონაცემთა ტიპის გამოყენების მაგივრად. ეს ინტერაქტიული გაკვეთილი ნაბიჯ-ნაბიჯ გაჩვენებთ, თუ როგორ უნდა გამოიყენოთ ის."
@@ -2010,12 +1982,9 @@ ka:
   tutorial_quorumastro_longdescription: "გაიგეთ კოდის წერის შესახებ გამოთვლითი ასტრონომიის თემების გამოყენებით ამ ხელმისაწვდომი ონლაინ კურსის დახმარებით. მასში მოსწავლეები აღმოაჩენენ, როგორ ხდება ტელესკოპების კონტროლი და, გარდა ამისა, ივარჯიშებენ პროგრამირების ენა Quorum-ის კომპიუტერული გრაფიკის ძრავაზე. ბოლო გაკვეთლისთვის მოსწავლეები შექმნიან ვარსკვლავების გრაფიკულ და ხელმისაწვდომ რუკას კოსმოსში სხვადასხვა ობიექტის მოსაძებნად."
   tutorial_alicewonder_longdescription: "\"ელისი საოცრებათა ქვეყანაში\" არის დამოუკიდებლად სწავლის თავსატეხი, რომელიც შექმნილია პროგრამირების გამოცდილების არმქონე 6+ წლის ბავშვებისთვის. თქვენ გაუძღვებით ელისს პარამეტრების მქონე და პარამეტრების არმქონე ფუნქციების გამოყენებით."
   tutorial_rginter_longdescription: "RoboGarden-ი არის გასაგებად მარტივი, პრაქტიკული საგანმანათლებლო აპლიკაცია, სადაც მოსწავლეებს შეუძლიათ, მონაწილეობა მიიღონ აქტიური სწავლის პროცესში. RoboGarden-ი, რომელიც მზადაა, პროგრამირება გასწავლოთ ნულიდან, ამცირებს ტექნიკური გამოცდილების მქონე მასწავლებლის საჭიროებას."
-  tutorial_bloxmobscience_longdescription: "შექმენით საკუთარი მობილური აპლიკაცია. ისწავლეთ, იყოთ ინოვაციური დიზაინერი და გახდით კომპიუტერულად მოაზროვნე ისეთი აპლიკაციების შექმნით, რომლებსაც გამოიყენებთ თქვენ და თქვენი მეგობრები. შექმენით დიზაინი ქვიზების, ფლეშ ბარათების, კალენდრების, რუკების, ნახატებისა და სხვა ობიექტების გამოყენებით თქვენს ინტერაქტიულ აპლიკაციებში, რომლებიც მუშაობს როგორც iOS-ზე, ისე ანდროიდზე. ყველას შეუძლია მობილური აპლიკაციის შექმნა. "
   tutorial_cssgrid_longdescription: "შეისწავლეთ ყველაფერი CSS ბადის შესახებ თქვენს ბოსტნეულის ბაღში მუშაობის საშუალებით."
-  tutorial_bloxmobdesign_longdescription: "შექმენით საკუთარი მობილური აპლიკაცია. ისწავლეთ თანმიმდევრობითობა და სისტემური აზროვნება ისეთი აპლიკაციების შესაქმნელად, რომლებსაც გამოიყენებთ თქვენ და თქვენი მეგობრები. შექმენით დიზაინი ქვიზების, ფლეშ ბარათების, კალენდრების, რუკების, სურათების და სხვა ობიექტების გამოყენებით თქვენს ინტერაქტიულ აპლიკაციებში, რომლებიც იმუშავებს როგორც iOS-ზე, ისე ანდროიდზე. თქვენი მასალა, თქვენი პერსონალიზაცია, თქვენი აპლიკაცია თქვენს მობილრ ტელეფონზე."
   tutorial_jshero_longdescription: "JS-ის გმირს სურს, შეგიყვანოთ JavaScript-ის პროგრამირების სამყაროში. თითოეულ გვერდზე იპოვით პატარა გაკვეთილებს და პატარა დავალებებს. პასუხის გაცემა პირდაპირ გვერდზე არის შესაძლებელი და მაშინვე გეტყვიან, ამოცანა სწორად ამოხსენი, თუ შეცდომა დაუშვი."
   tutorial_codemojipy_longdescription: "Python-ის ლაბორატორია IOS-ზე დაფუძნებული აქტივობაა, რომელიც ასწავლის პროგრამირების ენა python-ში კოდის წერის საფუძვლებს. მომხმარებლები შეისწავლიან ციკლებს, მასივებს, ბულის ცვლადებსა და ბევრ სხვა რამეს."
-  tutorial_bloxmobcomp_longdescription: "შექმენით საკუთარი მობილური აპლიკაცია. ისწავლეთ თანმიმდევრობითობა და სისტემური აზროვნება ისეთი აპლიკაციების შესაქმნელად, რომლებსაც გამოიყენებთ თქვენ და თქვენი მეგობრები. შექმენით დიზაინი ქვიზების, ფლეშ ბარათების, კალენდრების, რუკების, სურათების და სხვა ობიექტების გამოყენებით თქვენს ინტერაქტიულ აპლიკაციებში, რომლებიც იმუშავებს როგორც iOS-ზე, ისე ანდროიდზე. თქვენი მასალა, თქვენი პერსონალიზაცია, თქვენი აპლიკაცია თქვენს მობილრ ტელეფონზე."
   tutorial_nclabdrone_longdescription: "შექმენით დრონის ჩარჩო ათ ნაბიჯში NCLab-ის 3D (სამგანზომილებიანი) მოდელირების აპლიკაციის გამოყენებით. შემდეგ შესაძლებელია დრონის ჩარჩოს 3D ბეჭდვა და ნამდვილი დრონის გაკეთება! თითოეული დაბიჯი შედგება ტუტორიალებისა და ინსტრუქციებისგან. დაასრულე კოდი და მაშინვე ნახე შედეგი. 3D მოდელირება 21-ე საუკუნის ინჟინერიის, წარმოების, ხელოვნების, მეცნიერების, მედიცინის და სხვა ბევრი დარგის განუყოფელი ნაწილია. ეს შესანიშნავი გზაა დასაწყებად! "
   tutorial_gpbcircle_longdescription: "მონაწილეები შექმნიან წრეს, რომელიც იცვლის ფერს და სიკაშკაშეს მაუსის მოძრაობის მიხედვით. პროცესში, ისინი გამოიკვლევენ შეფერილობის, გაჯერებისა და სიკაშკაშის მოდელს."
   tutorial_gpbpaint_longdescription: "მონაწილეები შექმნიან ხატვის რედაქტორს, რომელშიც მაუსით ხატვა არის შესაძლებელი, შემდეგ დაუმატებენ ისეთ თვისებებს, როგორიცაა საშლელის ღილაკი და ადგილების ფერით შევსების საშუალება."
@@ -2094,10 +2063,6 @@ ka:
   tutorial_idowedo_longdescription: "This teacher-led lesson activity, adapted for the Hour of Code, provides opportunities to explore physical programming (robotics). Children design and build models using construction bricks and bring them to life with code! Using a visual drag-and-drop programming environment and LEGO™ WeDo parts (motor and hub and optional sensors), pupils learn that physical systems can be programmed and controlled using algorithms and code. Includes a step-by-step activity plan, associated teacher and pupil resources and ideas for extension and enrichment to take learning further."
   tutorial_diggindwarf_longdescription: "ჯუჯებს თქვენი დახმარება სჭირდებათ ნავიგაციაში, გამოთხრებსა და ძვირფასი ქვების მოგროვებაში! ისწავლეთ, როგორ გამოიყენოთ JavaScript, რომ გზა გაუკვლიოთ თქვენს ჯუჯას ლაბირინთებსა და თავსატეხებში."
   tutorial_rmedr_longdescription: "Robot Mesh Studio-ში Blockly-ს გამოყენებით დააპროგრამეთ VEX EDR რობოტი \"mimic\" ონლაინ და ნახეთ, როგორ გაივლის იგი ლაბირინთს. მოსწავლეები ისწავლიან რობოტის საბაზისო მოძრაობებს და პროგრამირებისას სამი სენსორისა და ერთი გამომავალი მონაცემის გამოყენებას."
-  tutorial_dksky_longdescription: "Build the awesome Sky Fall game with the DevKit app for iOS! You'll use DevKit's unique form of block coding to gain hands-on experience with real programming concepts like if statements, timers, variables, and much more. No prior experience is needed to complete or facilitate this activity; just open up the DevKit app, add the Sky Fall template, and follow along with the video tutorial!"
-  tutorial_dkcurrency_longdescription: "Build the awesome Currency King game with the DevKit app for iOS! You'll use DevKit's unique form of block coding to gain hands-on experience with real programming concepts like if statements, timers, variables, and much more. No prior experience is needed to complete or facilitate this activity; just open up the DevKit app, add the Currency King template, and follow along with the video tutorial!"
-  tutorial_dkriver_longdescription: "Build the awesome River Monsters game with the DevKit app for iOS! You'll use DevKit's unique form of block coding to gain hands-on experience with real programming concepts like if statements, timers, variables, and much more. No prior experience is needed to complete or facilitate this activity; just open up the DevKit app, add the River Monsters template, and follow along with the video tutorial!"
-  tutorial_dkball_longdescription: "Build the awesome Bouncing Ball game with the DevKit app for iOS! You'll use DevKit's unique form of block coding to gain hands-on experience with real programming concepts like if statements, timers, variables, and much more. No prior experience is needed to complete or facilitate this activity; just open up the DevKit app, add the Bouncing Ball template, and follow along with the video tutorial!"
   tutorial_spheroit_longdescription: "Learn your first \"if/then, else\" condition by building a fun game where you will be throwing Sphero and guessing animal sounds. This is a great activity after you complete Blocks 1, and can be used for the \"Hour of Code.\""
   tutorial_gameofcodes_longdescription: "Build an awesome Dragon game to defend the wall, then export it as a standalone app (for iOS, Android, PC, and Mac)."
   tutorial_blocklygames_longdescription: "Blockly Games is a series of educational games that teach programming. It is designed for children who have not had prior experience with computer programming but who wish to learn at a more challenging pace. By the end of these games, players are ready to use conventional text-based languages."
@@ -2153,7 +2118,7 @@ ka:
   tutorial_codehsmusic_longdescription: "Students explore how coding is used in music creation by building their own dynamic eight-count beats and patterns with JavaScript blocks!"
   tutorial_codehssports_longdescription: "Students learn about how coding is used in sports and game design by building an original sports video game that can be shared with their friends immediately!"
   tutorial_codemojipizza_longdescription: "This course is designed to teach students the fundamentals of JavaScript objects. Students will learn the basic types of data that can be stored in variables, from their first boolean all the way to creating their own objects with multiple properties. The activity makes complex concepts easy to understand by using everyone's favourite food: Pizza!"
-  tutorial_moonlander_longdescription: "Learn Physics as you Code! Moon Lander is a Game Builder course with 17 exercises that guide you on how to build your own physics-based game. In the game, you will use code and 6-9th grade Physics concepts in order to help a spaceship land safely on the moon."
+  tutorial_moonlander_longdescription: "Learn Physics as you code! Moon Lander is a Game Builder course with 17 exercises that guides you on how to build your own physics-based game. In the game, you will use code and 6-9th grade physics concepts in order to help a spaceship land safely on the moon."
   tutorial_sushicards_longdescription: "Make a game where you move a shark around to try and catch fish."
   tutorial_codesparkcreate_longdescription: "Ever wanted to design and code your own video game? Choose from two game kits that guide you through creating and coding a Mario-style video game using codeSpark Academy's no words interface. Beginner coders and pre-readers welcome!"
   tutorial_hardvsoft_longdescription: "Through an illustrated children's story and worksheets, your students will learn the differences between hardware and software."
@@ -2191,7 +2156,7 @@ ka:
   tutorial_wizard_longdescription: "Journey into the world of Code Magic as a Code Wizard. Learn to create and cast spells to customize your castle."
   tutorial_mbscratchcards_longdescription: "Connect the physical world of micro:bit with the virtual world of Scratch."
   tutorial_mbswiftplaygrounds_longdescription: "Use the micro:bit with an iPad to learn Swift."
-  tutorial_mbbuttons_longdescription: "In this introductory project, you'll make pictures or animations appear on the micro:bit display when a buttons are pressed. This activity is suitable for those who have never programmed before or those seeking a simple introduction to programming the BBC micro:bit. It uses MicroBlocks, a Scratch-like programming system that lets you see your code running on the micro:bit immediately."
+  tutorial_mbbuttons_longdescription: "In this introductory project, you'll make pictures or animations appear on the micro:bit display when buttons are pressed. This activity is suitable for those who have never programmed before or those seeking a simple introduction to programming the BBC micro:bit. It uses MicroBlocks, a Scratch-like programming system that lets you see your code running on the micro:bit immediately."
   tutorial_meteor_longdescription: "In this project, you'll create a Falling Meteors game for the BBC micro:bit. Using the buttons, the player will move a shield to catch falling meteors and save the Earth. The techniques you learn in this project can be used to make many other games for the BBC micro:bit, including classics such as Pong and Space Invaders."
   tutorial_ballbounce_longdescription: "Learn to make a mobile app where the user flings a ball across the screen and it bounces off the edges."
   tutorial_mitcodi_longdescription: "Learn to make your own interactive mobile app. Press the bee and hear it buzz!"
@@ -2245,7 +2210,7 @@ ka:
   tutorial_pets_longdescription: "Create a fun game about pets – either real or imaginary! Beginners can use the self-guided tutorial while more advanced coders have the option to start off with a blank project."
   tutorial_petvet_longdescription: "A busy day at the Pet Vet leads to fun as you and Barbie help a variety of pets through their very first checkups. From guiding pets into the Examination Room to diagnosing their sniffles, boo-boos, and itches, you'll find every puzzle has a solution to make the pets feel better than ever!"
   tutorial_superhero_longdescription: "Use HTML and CSS pixel art to create your favorite superhero masks. Publish and share your creations!"
-  tutorial_vidcodeplastic_longdescription: "The problem of plastic filling our oceans continues to worsen. Luckily, you can make your voice heard with code through the Plastic Pollution PSA. After coding a PSA on plastic pollution using JavaScript, you can make a second video about any subject you care about! Learn to use loops, sin waves and customized emojis to make a unique project."
+  tutorial_vidcodeplastic_longdescription: "The problem of plastic filling our oceans continues to worsen. Luckily, you can make your voice heard with code through the Plastic Pollution PSA. After coding a PSA on plastic pollution using JavaScript, you can make a second video about any subject you care about! Learn to use loops, sine waves and customized emojis to make a unique project."
   tutorial_vidcodetypeface_longdescription: "Create your own typeface using shapes and elements of typography. Type has more elements than you may have realized! So far we have talked about fonts and how they are different styles of text. Fonts are actually just different styles of a typeface. A typeface is a family of fonts that have similar features."
   tutorial_washustorm_longdescription: "Learn how to program an incoming storm."
   tutorial_activitypackets_longdescription: "Find hours of family-friendly fun with Wonder Workshop's printable packets of creative coding activities. Bring coding to life with Dash, Dot, and Cue robots by downloading these online and offline activities to use during Hour of Code and beyond!"
@@ -2310,7 +2275,6 @@ ka:
   tutorial_tynkerspin_language: "მხოლოდ ინგლისური"
   tutorial_code-avengers_language: "ინგლისური, ესპანური, ჰოლანდიური, რუსული, პორტუგალიური"
   tutorial_tynkercq_language: "მხოლოდ ინგლისური"
-  tutorial_makeschool_language: "მხოლოდ ინგლისური"
   tutorial_cmgame_language: "მხოლოდ ინგლისური"
   tutorial_codesters_language: "მხოლოდ ინგლისური"
   tutorial_qrm_language: "ინგლისური, გერმანული"
@@ -2342,7 +2306,6 @@ ka:
   tutorial_codestersflappybike_language: "მხოლოდ ინგლისური"
   tutorial_kanopong_language: "მხოლოდ ინგლისური"
   tutorial_tynkerright_language: "მხოლოდ ინგლისური"
-  tutorial_flatverse_language: "მხოლოდ ინგლისური"
   tutorial_touchdevelop_language: "მხოლოდ ინგლისური"
   tutorial_tynkercc_language: "მხოლოდ ინგლისური"
   tutorial_bamboo_language: "მხოლოდ ინგლისური"
@@ -2527,7 +2490,6 @@ ka:
   tutorial_wolframp_language: "მხოლოდ ინგლისური"
   tutorial_wolframn_language: "მხოლოდ ინგლისური"
   tutorial_soloweb_language: "მხოლოდ ინგლისური"
-  tutorial_bloxmobapp_language: "მხოლოდ ინგლისური"
   tutorial_khanweb_language: "ინგლისური, პორტუგალიური (ბრაზილიური), ესპანური"
   tutorial_khandata_language: "ინგლისური, პორტუგალიური (ბრაზილიური), ესპანური"
   tutorial_robomeshiq_language: "მხოლოდ ინგლისური"
@@ -2591,7 +2553,6 @@ ka:
   tutorial_kanostreet_language: "მხოლოდ ინგლისური"
   tutorial_nyblebot_language: "მხოლოდ ინგლისური"
   tutorial_codemojijs_language: "მხოლოდ ინგლისური"
-  tutorial_bloxmobmath_language: "მხოლოდ ინგლისური"
   tutorial_techapf_language: "მხოლოდ ინგლისური"
   tutorial_techfpjs_language: "მხოლოდ ინგლისური"
   tutorial_techlinq_language: "მხოლოდ ინგლისური"
@@ -2599,12 +2560,9 @@ ka:
   tutorial_quorumastro_language: "მხოლოდ ინგლისური"
   tutorial_alicewonder_language: "მხოლოდ ინგლისური"
   tutorial_rginter_language: "მხოლოდ ინგლისური"
-  tutorial_bloxmobscience_language: "მხოლოდ ინგლისური"
   tutorial_cssgrid_language: "რამდენიმე"
-  tutorial_bloxmobdesign_language: "მხოლოდ ინგლისური"
   tutorial_jshero_language: "ინგლისური, გერმანული"
   tutorial_codemojipy_language: "მხოლოდ ინგლისური"
-  tutorial_bloxmobcomp_language: "მხოლოდ ინგლისური"
   tutorial_nclabdrone_language: "მხოლოდ ინგლისური"
   tutorial_gpbcircle_language: "მხოლოდ ინგლისური"
   tutorial_gpbpaint_language: "მხოლოდ ინგლისური"
@@ -2683,10 +2641,6 @@ ka:
   tutorial_idowedo_language: "მხოლოდ ინგლისური"
   tutorial_diggindwarf_language: "მხოლოდ ინგლისური"
   tutorial_rmedr_language: "მხოლოდ ინგლისური"
-  tutorial_dksky_language: "მხოლოდ ინგლისური"
-  tutorial_dkcurrency_language: "მხოლოდ ინგლისური"
-  tutorial_dkriver_language: "მხოლოდ ინგლისური"
-  tutorial_dkball_language: "მხოლოდ ინგლისური"
   tutorial_spheroit_language: "მხოლოდ ინგლისური"
   tutorial_gameofcodes_language: "მხოლოდ ინგლისური"
   tutorial_blocklygames_language: "ესპანური, ფრანგული, მრავალი სხვა"
@@ -2899,7 +2853,6 @@ ka:
   tutorial_tynkerspin_string_detail_grades: "დამწყებები - მე-8 კლასი"
   tutorial_code-avengers_string_detail_grades: "კლასები 6+"
   tutorial_tynkercq_string_detail_grades: "დამწყებები - მე-5 კლასი"
-  tutorial_makeschool_string_detail_grades: "კლასები 6+"
   tutorial_cmgame_string_detail_grades: "კლასები 6+"
   tutorial_codesters_string_detail_grades: "არ-აჩვენო"
   tutorial_qrm_string_detail_grades: "კლასები 6+"
@@ -2931,7 +2884,6 @@ ka:
   tutorial_codestersflappybike_string_detail_grades: "კლასები 6+"
   tutorial_kanopong_string_detail_grades: "კლასები 6-8"
   tutorial_tynkerright_string_detail_grades: "კლასები 2-8"
-  tutorial_flatverse_string_detail_grades: "კლასები 9+"
   tutorial_touchdevelop_string_detail_grades: "არ-აჩვენო"
   tutorial_tynkercc_string_detail_grades: "კლასები 6+"
   tutorial_bamboo_string_detail_grades: "2-5 კლასები"
@@ -3116,7 +3068,6 @@ ka:
   tutorial_wolframp_string_detail_grades: "კლასები 6+"
   tutorial_wolframn_string_detail_grades: "კლასები 6+"
   tutorial_soloweb_string_detail_grades: "კლასები 9+"
-  tutorial_bloxmobapp_string_detail_grades: "კლასები 6+"
   tutorial_khanweb_string_detail_grades: "კლასები 2+"
   tutorial_khandata_string_detail_grades: "კლასები 6+"
   tutorial_robomeshiq_string_detail_grades: "კლასები 2+"
@@ -3180,7 +3131,6 @@ ka:
   tutorial_kanostreet_string_detail_grades: "2-5 კლასები"
   tutorial_nyblebot_string_detail_grades: "2-5 კლასები"
   tutorial_codemojijs_string_detail_grades: "2-5 კლასები"
-  tutorial_bloxmobmath_string_detail_grades: "კლასები 6+"
   tutorial_techapf_string_detail_grades: "უნივერსიტეტი"
   tutorial_techfpjs_string_detail_grades: "უნივერსიტეტი"
   tutorial_techlinq_string_detail_grades: "უნივერსიტეტი"
@@ -3188,12 +3138,9 @@ ka:
   tutorial_quorumastro_string_detail_grades: "კლასები 6+"
   tutorial_alicewonder_string_detail_grades: "2-5 კლასები"
   tutorial_rginter_string_detail_grades: "კლასები 6-8"
-  tutorial_bloxmobscience_string_detail_grades: "კლასები 6+"
   tutorial_cssgrid_string_detail_grades: "კლასები 6+"
-  tutorial_bloxmobdesign_string_detail_grades: "კლასები 6+"
   tutorial_jshero_string_detail_grades: "კლასები 9+"
   tutorial_codemojipy_string_detail_grades: "2-5 კლასები"
-  tutorial_bloxmobcomp_string_detail_grades: "კლასები 6+"
   tutorial_nclabdrone_string_detail_grades: "კლასები 6+"
   tutorial_gpbcircle_string_detail_grades: "კლასები 6+"
   tutorial_gpbpaint_string_detail_grades: "კლასები 6+"
@@ -3272,10 +3219,6 @@ ka:
   tutorial_idowedo_string_detail_grades: "კლასები 2-8"
   tutorial_diggindwarf_string_detail_grades: "კლასები 6+"
   tutorial_rmedr_string_detail_grades: "კლასები 2-8"
-  tutorial_dksky_string_detail_grades: "კლასები 9+"
-  tutorial_dkcurrency_string_detail_grades: "კლასები 9+"
-  tutorial_dkriver_string_detail_grades: "კლასები 9+"
-  tutorial_dkball_string_detail_grades: "კლასები 9+"
   tutorial_spheroit_string_detail_grades: "კლასები 2+"
   tutorial_gameofcodes_string_detail_grades: "კლასები 2+"
   tutorial_blocklygames_string_detail_grades: "კლასები 6+"
@@ -3448,7 +3391,7 @@ ka:
   tutorial_frzn_string_platforms: "ყველა თანამედროვე ბრაუზერი, Android, iOS"
   tutorial_cocom_string_platforms: "ყველა თანამედროვე ბრაუზერი"
   tutorial_play-lab_string_platforms: "ყველა თანამედროვე ბრაუზერი, Android, iOS"
-  tutorial_boxisland_string_platforms: "Android ტაბლეტი, iPad, Android ტელეფონი, iPhone"
+  tutorial_boxisland_string_platforms: "iPad, iPhone"
   tutorial_textcomp_string_platforms: "ყველა თანამედროვე ბრაუზერი"
   tutorial_encryption_string_platforms: "ყველა თანამედროვე ბრაუზერი"
   tutorial_kanopixel_string_platforms: "Internet Explorer 11, Microsoft Edge, Chrome, Firefox, Safari, Android ტაბლეტი, iPad"
@@ -3488,7 +3431,6 @@ ka:
   tutorial_tynkerspin_string_platforms: "Internet Explorer 11, Microsoft Edge, Chrome, Firefox, Safari, Android ტაბლეტი, iPad"
   tutorial_code-avengers_string_platforms: "Internet Explorer 11, Microsoft Edge, Chrome, Firefox, Safari"
   tutorial_tynkercq_string_platforms: "Internet Explorer 11, Microsoft Edge, Chrome, Firefox, Safari, Android ტაბლეტი, iPad"
-  tutorial_makeschool_string_platforms: "Internet Explorer 11, Chrome, Firefox, Safari"
   tutorial_cmgame_string_platforms: "ყველა თანამედროვე ბრაუზერი"
   tutorial_codesters_string_platforms: "არ-აჩვენო"
   tutorial_qrm_string_platforms: "ყველა თანამედროვე ბრაუზერი"
@@ -3520,7 +3462,6 @@ ka:
   tutorial_codestersflappybike_string_platforms: "ყველა თანამედროვე ბრაუზერი"
   tutorial_kanopong_string_platforms: "ყველა თანამედროვე ბრაუზერი"
   tutorial_tynkerright_string_platforms: "Internet Explorer 11, Microsoft Edge, Chrome, Firefox, Safari, Android ტაბლეტი, iPad"
-  tutorial_flatverse_string_platforms: "ყველა თანამედროვე ბრაუზერი, iPad, Android ტელეფონი"
   tutorial_touchdevelop_string_platforms: "არ-აჩვენო"
   tutorial_tynkercc_string_platforms: "Internet Explorer 11, Microsoft Edge, Chrome, Firefox, Safari"
   tutorial_bamboo_string_platforms: "Chrome"
@@ -3705,7 +3646,6 @@ ka:
   tutorial_wolframp_string_platforms: "ყველა თანამედროვე ბრაუზერი"
   tutorial_wolframn_string_platforms: "ყველა თანამედროვე ბრაუზერი"
   tutorial_soloweb_string_platforms: "ყველა თანამედროვე ბრაუზერი, Android ტაბლეტი, iPad-ი, Android ტელეფონი, iPad, iPhone"
-  tutorial_bloxmobapp_string_platforms: "ყველა თანამედროვე ბრაუზერი"
   tutorial_khanweb_string_platforms: "ყველა თანამედროვე ბრაუზერი, Android ტაბლეტი"
   tutorial_khandata_string_platforms: "ყველა თანამედროვე ბრაუზერი"
   tutorial_robomeshiq_string_platforms: "Internet Explorer 11, Chrome, Firefox, VEX IQ რობოტები"
@@ -3769,7 +3709,6 @@ ka:
   tutorial_kanostreet_string_platforms: "ყველა თანამედროვე ბრაუზერი"
   tutorial_nyblebot_string_platforms: "Android ტაბლეტი, iPad, Android ტელეფონი, iPhone"
   tutorial_codemojijs_string_platforms: "ყველა თანამედროვე ბრაუზერი"
-  tutorial_bloxmobmath_string_platforms: "Internet Explorer 11, Microsoft Edge, Chrome, Safari"
   tutorial_techapf_string_platforms: "ყველა თანამედროვე ბრაუზერი, Android ტაბლეტი, iPad, Windows ტელეფონი, Android ტელეფონი, iPhone"
   tutorial_techfpjs_string_platforms: "ყველა თანამედროვე ბრაუზერი, Android ტაბლეტი, iPad, Windows ტელეფონი, Android ტელეფონი, iPhone"
   tutorial_techlinq_string_platforms: "ყველა თანამედროვე ბრაუზერი, Android ტაბლეტი, iPad, Windows ტელეფონი, Android ტელეფონი, iPhone"
@@ -3777,12 +3716,9 @@ ka:
   tutorial_quorumastro_string_platforms: "ყველა თანამედროვე ბრაუზერი, Android ტაბლეტი, iPad, Windows ტელეფონი, Android ტელეფონი, iPhone"
   tutorial_alicewonder_string_platforms: "ყველა თანამედროვე ბრაუზერი"
   tutorial_rginter_string_platforms: "Chrome, Firefox, Android ტაბლეტი"
-  tutorial_bloxmobscience_string_platforms: "ყველა თანამედროვე ბრაუზერი"
   tutorial_cssgrid_string_platforms: "ყველა თანამედროვე ბრაუზერი"
-  tutorial_bloxmobdesign_string_platforms: "Internet Explorer 11, Microsoft Edge, Chrome, Safari"
   tutorial_jshero_string_platforms: "ყველა თანამედროვე ბრაუზერი, Android ტაბლეტი, Android ტელეფონი"
   tutorial_codemojipy_string_platforms: "iPad, iPhone"
-  tutorial_bloxmobcomp_string_platforms: "ყველა თანამედროვე ბრაუზერი"
   tutorial_nclabdrone_string_platforms: "ყველა თანამედროვე ბრაუზერი"
   tutorial_gpbcircle_string_platforms: "ყველა თანამედროვე ბრაუზერი"
   tutorial_gpbpaint_string_platforms: "ყველა თანამედროვე ბრაუზერი"
@@ -3861,10 +3797,6 @@ ka:
   tutorial_idowedo_string_platforms: "ყველა თანამედროვე ბრაუზერი, Android tablet, iPad, WeDo"
   tutorial_diggindwarf_string_platforms: "Chrome, Firefox, Safari"
   tutorial_rmedr_string_platforms: "ყველა თანამედროვე ბრაუზერი"
-  tutorial_dksky_string_platforms: "iPad, iPhone"
-  tutorial_dkcurrency_string_platforms: "iPad, iPhone"
-  tutorial_dkriver_string_platforms: "iPad, iPhone"
-  tutorial_dkball_string_platforms: "iPad, iPhone"
   tutorial_spheroit_string_platforms: "iPad, Android ტაბლეტი, iPhone, Android ტელეფონი, რობოტი Sphero"
   tutorial_gameofcodes_string_platforms: "ყველა თანამედროვე ბრაუზერი, Android ტაბლეტი, Android ტელეფონი, iPad"
   tutorial_blocklygames_string_platforms: "ყველა თანამედროვე ბრაუზერი"
@@ -4077,7 +4009,6 @@ ka:
   tutorial_tynkerspin_string_detail_platforms: ""
   tutorial_code-avengers_string_detail_platforms: ""
   tutorial_tynkercq_string_detail_platforms: ""
-  tutorial_makeschool_string_detail_platforms: ""
   tutorial_cmgame_string_detail_platforms: ""
   tutorial_codesters_string_detail_platforms: "არ-აჩვენო"
   tutorial_qrm_string_detail_platforms: ""
@@ -4109,7 +4040,6 @@ ka:
   tutorial_codestersflappybike_string_detail_platforms: ""
   tutorial_kanopong_string_detail_platforms: ""
   tutorial_tynkerright_string_detail_platforms: ""
-  tutorial_flatverse_string_detail_platforms: ""
   tutorial_touchdevelop_string_detail_platforms: "არ-აჩვენო"
   tutorial_tynkercc_string_detail_platforms: ""
   tutorial_bamboo_string_detail_platforms: ""
@@ -4294,7 +4224,6 @@ ka:
   tutorial_wolframp_string_detail_platforms: ""
   tutorial_wolframn_string_detail_platforms: ""
   tutorial_soloweb_string_detail_platforms: ""
-  tutorial_bloxmobapp_string_detail_platforms: ""
   tutorial_khanweb_string_detail_platforms: ""
   tutorial_khandata_string_detail_platforms: ""
   tutorial_robomeshiq_string_detail_platforms: "VEX IQ რობოტები"
@@ -4358,7 +4287,6 @@ ka:
   tutorial_kanostreet_string_detail_platforms: ""
   tutorial_nyblebot_string_detail_platforms: ""
   tutorial_codemojijs_string_detail_platforms: ""
-  tutorial_bloxmobmath_string_detail_platforms: ""
   tutorial_techapf_string_detail_platforms: ""
   tutorial_techfpjs_string_detail_platforms: ""
   tutorial_techlinq_string_detail_platforms: ""
@@ -4366,12 +4294,9 @@ ka:
   tutorial_quorumastro_string_detail_platforms: ""
   tutorial_alicewonder_string_detail_platforms: ""
   tutorial_rginter_string_detail_platforms: ""
-  tutorial_bloxmobscience_string_detail_platforms: ""
   tutorial_cssgrid_string_detail_platforms: ""
-  tutorial_bloxmobdesign_string_detail_platforms: ""
   tutorial_jshero_string_detail_platforms: ""
   tutorial_codemojipy_string_detail_platforms: ""
-  tutorial_bloxmobcomp_string_detail_platforms: ""
   tutorial_nclabdrone_string_detail_platforms: ""
   tutorial_gpbcircle_string_detail_platforms: ""
   tutorial_gpbpaint_string_detail_platforms: ""
@@ -4450,10 +4375,6 @@ ka:
   tutorial_idowedo_string_detail_platforms: "Wedo"
   tutorial_diggindwarf_string_detail_platforms: ""
   tutorial_rmedr_string_detail_platforms: "Vex EDR Robots"
-  tutorial_dksky_string_detail_platforms: ""
-  tutorial_dkcurrency_string_detail_platforms: ""
-  tutorial_dkriver_string_detail_platforms: ""
-  tutorial_dkball_string_detail_platforms: ""
   tutorial_spheroit_string_detail_platforms: "რობოტი Sphero"
   tutorial_gameofcodes_string_detail_platforms: ""
   tutorial_blocklygames_string_detail_platforms: ""
@@ -4666,7 +4587,6 @@ ka:
   tutorial_tynkerspin_string_detail_programming_languages: "ბლოკები"
   tutorial_code-avengers_string_detail_programming_languages: "JavaScript"
   tutorial_tynkercq_string_detail_programming_languages: "ბლოკები"
-  tutorial_makeschool_string_detail_programming_languages: "iOS/Swift"
   tutorial_cmgame_string_detail_programming_languages: "CoffeeScript"
   tutorial_codesters_string_detail_programming_languages: "არ-აჩვენო"
   tutorial_qrm_string_detail_programming_languages: "Quorum"
@@ -4698,7 +4618,6 @@ ka:
   tutorial_codestersflappybike_string_detail_programming_languages: "Python"
   tutorial_kanopong_string_detail_programming_languages: "JavaScript"
   tutorial_tynkerright_string_detail_programming_languages: "ბლოკები"
-  tutorial_flatverse_string_detail_programming_languages: "Touch Develop"
   tutorial_touchdevelop_string_detail_programming_languages: "არ-აჩვენო"
   tutorial_tynkercc_string_detail_programming_languages: "ბლოკები"
   tutorial_bamboo_string_detail_programming_languages: "JavaScript"
@@ -4883,7 +4802,6 @@ ka:
   tutorial_wolframp_string_detail_programming_languages: "ენა Wolfram"
   tutorial_wolframn_string_detail_programming_languages: "ენა Wolfram"
   tutorial_soloweb_string_detail_programming_languages: "HTML, CSS"
-  tutorial_bloxmobapp_string_detail_programming_languages: "ბლოკები"
   tutorial_khanweb_string_detail_programming_languages: "HTML და CSS"
   tutorial_khandata_string_detail_programming_languages: "SQL"
   tutorial_robomeshiq_string_detail_programming_languages: "ბლოკები, Python"
@@ -4947,7 +4865,6 @@ ka:
   tutorial_kanostreet_string_detail_programming_languages: "ბლოკები, JavaScript"
   tutorial_nyblebot_string_detail_programming_languages: "ბლოკები"
   tutorial_codemojijs_string_detail_programming_languages: "JavaScript"
-  tutorial_bloxmobmath_string_detail_programming_languages: "ბლოკები"
   tutorial_techapf_string_detail_programming_languages: "Python"
   tutorial_techfpjs_string_detail_programming_languages: "JavaScript"
   tutorial_techlinq_string_detail_programming_languages: "C#"
@@ -4955,12 +4872,9 @@ ka:
   tutorial_quorumastro_string_detail_programming_languages: "Quorum"
   tutorial_alicewonder_string_detail_programming_languages: "JavaScript"
   tutorial_rginter_string_detail_programming_languages: "ბლოკები"
-  tutorial_bloxmobscience_string_detail_programming_languages: "ბლოკები"
   tutorial_cssgrid_string_detail_programming_languages: "CSS"
-  tutorial_bloxmobdesign_string_detail_programming_languages: "ბლოკები"
   tutorial_jshero_string_detail_programming_languages: "JavaScript"
   tutorial_codemojipy_string_detail_programming_languages: "iOS/Swift, Python"
-  tutorial_bloxmobcomp_string_detail_programming_languages: "ბლოკები"
   tutorial_nclabdrone_string_detail_programming_languages: "Python"
   tutorial_gpbcircle_string_detail_programming_languages: "ბლოკები"
   tutorial_gpbpaint_string_detail_programming_languages: "ბლოკები"
@@ -5039,10 +4953,6 @@ ka:
   tutorial_idowedo_string_detail_programming_languages: "Scratch"
   tutorial_diggindwarf_string_detail_programming_languages: "JavaScript"
   tutorial_rmedr_string_detail_programming_languages: "ბლოკები"
-  tutorial_dksky_string_detail_programming_languages: "ბლოკები"
-  tutorial_dkcurrency_string_detail_programming_languages: "ბლოკები"
-  tutorial_dkriver_string_detail_programming_languages: "ბლოკები"
-  tutorial_dkball_string_detail_programming_languages: "ბლოკები"
   tutorial_spheroit_string_detail_programming_languages: "ბლოკები, JavaScript"
   tutorial_gameofcodes_string_detail_programming_languages: "Blocks, Ready, Unity"
   tutorial_blocklygames_string_detail_programming_languages: "ბლოკები"
