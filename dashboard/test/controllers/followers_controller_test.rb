@@ -19,6 +19,8 @@ class FollowersControllerTest < ActionController::TestCase
 
     @picture_section = create(:section, login_type: Section::LOGIN_TYPE_PICTURE)
     @word_section = create(:section, login_type: Section::LOGIN_TYPE_WORD)
+
+    @admin = create(:admin)
   end
 
   test "student in picture section should be redirected to picture login when joining section" do
@@ -130,7 +132,7 @@ class FollowersControllerTest < ActionController::TestCase
   end
 
   test 'student_user_new redirects admins to admin_directory' do
-    sign_in (create :admin)
+    sign_in @admin
     assert_does_not_create(Follower) do
       get :student_user_new, params: {section_code: @word_section.code}
     end
@@ -274,5 +276,35 @@ class FollowersControllerTest < ActionController::TestCase
     assert user_script
     assert user_script.assigned_at
     assert_equal @laurel_section_script.script, assigns(:user).primary_script
+  end
+
+  test "student_register with a picture/word section redirects to section login" do
+    get :student_register, params: {section_code: @picture_section.code}
+    assert_redirected_to controller: 'sections', action: 'show', id: @picture_section.code
+
+    get :student_register, params: {section_code: @word_section.code}
+    assert_redirected_to controller: 'sections', action: 'show', id: @word_section.code
+  end
+
+  test 'student_register errors when joining a provider_managed section' do
+    sign_in @student
+    section = create(:section, login_type: Section::LOGIN_TYPE_CLEVER)
+
+    assert_does_not_create(User, Follower) do
+      get :student_register, params: {section_code: section.code}
+    end
+
+    assert_redirected_to '/'
+    expected = I18n.t('follower.error.provider_managed_section', provider: 'Clever')
+    assert_equal(expected, flash[:alert])
+  end
+
+  test 'student_register redirects admins to admin_directory' do
+    sign_in @admin
+    assert_does_not_create(User, Follower) do
+      get :student_register, params: {section_code: @word_section.code}
+    end
+
+    assert_redirected_to admin_directory_path
   end
 end
