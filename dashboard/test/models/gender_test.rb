@@ -1,4 +1,5 @@
 require 'test_helper'
+
 class GenderTest < ActiveSupport::TestCase
   test 'normalize' do
     assert_equal 'f', Gender.normalize('f')

@@ -8,9 +8,9 @@ class Gender
     ['gender.none', '-'],
   ].freeze
 
-  def normalize(v)
-    return nil if v.blank?
-    case v.downcase
+  def self.normalize(gender)
+    return nil if gender.blank?
+    case gender.downcase
     when 'f', 'female'
       'f'
     when 'm', 'male'

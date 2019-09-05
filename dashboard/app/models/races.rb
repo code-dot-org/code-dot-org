@@ -1,4 +1,4 @@
-class Race
+class Races
   # races: array of strings, the races that a student has selected.
   # Allowed values for race are:
   #   white: "White"
@@ -36,30 +36,32 @@ class Race
   #   - true: Yes, a URM user.
   #   - false: No, not a URM user.
   #   - nil: Don't know, may or may not be a URM user.
-  def any_urm?(races)
-    return nil unless races
+  def self.any_urm?(races)
+    races = normalize(races)
 
-    races_as_list = races.split ','
-    return nil if races_as_list.empty?
-    return nil if (races_as_list & ['opt_out', 'nonsense', 'closed_dialog']).any?
-    return true if (races_as_list & ['black', 'hispanic', 'hawaiian', 'american_indian']).any?
+    return nil unless races
+    return nil if races.empty?
+    return nil if (races & ['opt_out', 'nonsense', 'closed_dialog']).any?
+    return true if (races & ['black', 'hispanic', 'hawaiian', 'american_indian']).any?
+
     false
   end
 
-  def sanitize(races)
-    if races
-      races_as_list = races.split ','
-      if races_as_list.include? 'closed_dialog'
-        return 'closed_dialog'
-      elsif races_as_list.length > 5
-        return 'nonsense'
-      else
-        races_as_list.each do |race|
-          return 'nonsense' unless VALID_RACES.include? race
-        end
-      end
-    end
+  def self.sanitized(races)
+    races = normalize(races)
+
+    return ['closed_dialog'] if races.include?('closed_dialog')
+    return ['nonsense'] if races.length > 5
+    return ['nonsense'] unless (races - VALID_RACES).empty?
 
     races
+  end
+
+  def self.normalize(races)
+    return races if races.is_a? Array
+    return races.split(",") if races.is_a? String
+    return [] if races.nil?
+
+    raise TypeError.new("Expected either nil, an array, or a comma-separated string; got #{races.inspect}")
   end
 end
