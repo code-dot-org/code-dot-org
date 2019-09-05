@@ -2,7 +2,7 @@
   teacher_dashboard_data = {}
   teacher_dashboard_data[:studioUrlPrefix] = CDO.studio_url('', CDO.default_scheme)
   teacher_dashboard_data[:pegasusUrlPrefix] = CDO.code_org_url('', CDO.default_scheme)
-  teacher_dashboard_data[:visibleSections] = @visible_sections
+  teacher_dashboard_data[:sections] = @sections
   teacher_dashboard_data[:section] = @section
 
 %script{src: minifiable_asset_path('js/teacher_dashboard/show.js'), data: {dashboard: teacher_dashboard_data.to_json}}
