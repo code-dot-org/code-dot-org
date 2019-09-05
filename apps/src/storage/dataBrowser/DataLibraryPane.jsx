@@ -1,5 +1,7 @@
 import Radium from 'radium';
 import React from 'react';
+import LibraryCategory from './LibraryCategory';
+import datasetManifest from './datasetManifest.json';
 
 const styles = {
   container: {
@@ -13,9 +15,21 @@ const styles = {
     padding: 10
   }
 };
+
 class DataLibraryPane extends React.Component {
   render() {
-    return <div style={styles.container} />;
+    return (
+      <div style={styles.container}>
+        {datasetManifest.categories.map(category => (
+          <LibraryCategory
+            key={category.name}
+            name={category.name}
+            datasets={category.datasets}
+            description={category.description}
+          />
+        ))}
+      </div>
+    );
   }
 }
 

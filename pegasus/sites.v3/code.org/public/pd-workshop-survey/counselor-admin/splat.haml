@@ -15,7 +15,7 @@ title: "Workshop Survey for Counselors and Administrators"
   name = teacher.nil? ? "#{enrollment[:first_name]} #{enrollment[:last_name]}" : teacher[:name]
   email = teacher.nil? ? enrollment[:email] : teacher[:email]
 
-  plp = DASHBOARD_DB[:regional_partners].where(contact_id: workshop[:organizer_id]).first
+  plp = DASHBOARD_DB[:regional_partners].where(id: workshop[:regional_partner_id]).first
 
   # Have they taken this particular survey?
   previous_response = DB[:forms].where(kind: 'PdWorkshopSurveyCounselorAdmin', source_id: enrollment[:id]).first

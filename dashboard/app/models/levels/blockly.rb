@@ -361,6 +361,7 @@ class Blockly < Level
 
       if is_a? Applab
         level_prop['startHtml'] = try(:project_template_level).try(:start_html) || start_html
+        level_prop['name'] = name
       end
 
       if is_a? Gamelab
@@ -539,8 +540,8 @@ class Blockly < Level
   end
 
   # Clear 'is_project_level' from cloned levels
-  def clone_with_name(name)
-    level = super(name)
+  def clone_with_name(name, editor_experiment: nil)
+    level = super(name, editor_experiment: editor_experiment)
     level.update!(is_project_level: false)
     level
   end

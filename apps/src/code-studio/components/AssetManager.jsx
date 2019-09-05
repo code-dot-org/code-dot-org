@@ -13,6 +13,7 @@ import AudioRecorder from './AudioRecorder';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import AddAssetButtonRow from './AddAssetButtonRow';
 import i18n from '@cdo/locale';
+import {STARTER_ASSET_PREFIX} from '@cdo/apps/assetManagement/assetPrefix';
 
 export const AudioErrorType = {
   NONE: 'none',
@@ -214,7 +215,17 @@ export default class AssetManager extends React.Component {
 
     this.setState({
       assets: assetListStore.list(this.props.allowedExtensions),
-      statusMessage: 'File "' + name + '" successfully deleted!'
+      statusMessage: `File "${name}" successfully deleted!`
+    });
+  };
+
+  deleteStarterAssetRow = name => {
+    let starterAssets = [...this.state.starterAssets].filter(
+      asset => asset.filename !== name
+    );
+    this.setState({
+      starterAssets,
+      statusMessage: `File "${name}" successfully deleted!`
     });
   };
 
@@ -247,9 +258,15 @@ export default class AssetManager extends React.Component {
         <AssetRow
           {...this.defaultAssetProps(asset)}
           api={boundApi}
-          onChoose={() => console.log('choose!')}
-          onDelete={() => console.log('delete!')}
+          onChoose={() =>
+            this.props.assetChosen(
+              STARTER_ASSET_PREFIX + asset.filename,
+              asset.timestamp
+            )
+          }
+          onDelete={() => this.deleteStarterAssetRow(asset.filename)}
           levelName={this.props.levelName}
+          hideDelete={!this.props.isStartMode}
         />
       );
     });

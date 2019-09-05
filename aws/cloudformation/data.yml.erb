@@ -191,6 +191,12 @@ Resources:
       Description: !Sub "Aurora DB Cluster Parameters for ${AWS::StackName}."
       Family: aurora-mysql5.7
       Parameters: <%= YAML.load(erb_file(aws_dir('cloudformation/db_parameters.yml.erb')))['AuroraCluster'].compact.to_json %>
+  AuroraReportingClusterDBParameters:
+    Type: AWS::RDS::DBClusterParameterGroup
+    Properties:
+      Description: !Sub "Aurora Reporting DB Cluster Parameters for ${AWS::StackName}."
+      Family: aurora-mysql5.7
+      Parameters: <%= YAML.load(erb_file(aws_dir('cloudformation/db_parameters.yml.erb')))['AuroraReportingCluster'].compact.to_json %>
   AuroraWriterDBParameters:
     Type: AWS::RDS::DBParameterGroup
     Properties:

@@ -9,6 +9,7 @@ class Ability
     # Abilities for all users, signed in or not signed in.
     can :read, :all
     cannot :read, [
+      TeacherFeedback,
       Script, # see override below
       ScriptLevel, # see override below
       :reports,
@@ -226,7 +227,15 @@ class Ability
 
       # Ability for LevelStarterAssetsController. Since the controller does not have
       # a corresponding model, use lower/snake-case symbol instead of class name.
-      can [:upload], :level_starter_asset
+      can [:upload, :destroy], :level_starter_asset
+    end
+
+    if user.persisted?
+      editor_experiment = Experiment.get_editor_experiment(user)
+      if editor_experiment
+        can :manage, Level, editor_experiment: editor_experiment
+        can [:edit, :update], Script, editor_experiment: editor_experiment
+      end
     end
 
     if user.persisted? && user.permission?(UserPermission::PROJECT_VALIDATOR)
