@@ -686,6 +686,40 @@ body.embedded_iframe {
     padding-left: 0;
   }
 }
+body.docs-embed {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+
+  .full_container {
+    padding: 0;
+  }
+
+  #codeApp {
+    height: 100%;
+  }
+}
+
+//#codeApp.pin_bottom {
+//  position: absolute;
+//  top: 60px;
+//  left: $codeApp-left-margin;
+//  right: 25px;
+//  bottom: 10px;
+//  @media screen and (max-device-height: 900px) and (max-device-width: 500px) {
+//    top: 10px;
+//  }
+//
+//  &.centered_embed {
+//    position: relative;
+//    top: 0;
+//    left: auto;
+//    right: auto;
+//    margin-top: 10px;
+//  }
+//}
 
 .responsive_full_container {
   padding: 0 10px 10px 10px;

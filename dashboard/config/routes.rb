@@ -195,6 +195,7 @@ Dashboard::Application.routes.draw do
         get "/#{key}/:channel_id/edit", to: 'projects#edit', key: key.to_s, as: "#{key}_project_edit"
         get "/#{key}/:channel_id/view", to: 'projects#show', key: key.to_s, as: "#{key}_project_view", readonly: true
         get "/#{key}/:channel_id/embed", to: 'projects#show', key: key.to_s, as: "#{key}_project_iframe_embed", iframe_embed: true
+        get "/#{key}/:channel_id/docs", to: 'projects#show', key: key.to_s, as: "#{key}_project_docs_embed", docs_embed: true
         get "/#{key}/:channel_id/remix", to: 'projects#remix', key: key.to_s, as: "#{key}_project_remix"
         get "/#{key}/:channel_id/export_create_channel", to: 'projects#export_create_channel', key: key.to_s, as: "#{key}_project_export_create_channel"
         get "/#{key}/:channel_id/export_config", to: 'projects#export_config', key: key.to_s, as: "#{key}_project_export_config"

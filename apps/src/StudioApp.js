@@ -280,22 +280,24 @@ StudioApp.prototype.init = function(config) {
 
   this.configureDom(config);
 
-  ReactDOM.render(
-    <Provider store={getStore()}>
-      <div>
-        <InstructionsDialogWrapper
-          showInstructionsDialog={autoClose => {
-            this.showInstructionsDialog_(config.level, autoClose);
-          }}
-        />
-        <FinishDialog
-          onContinue={() => this.onContinue()}
-          getShareUrl={() => this.lastShareUrl}
-        />
-      </div>
-    </Provider>,
-    document.body.appendChild(document.createElement('div'))
-  );
+  if (!config.level.docsEmbed) {
+    ReactDOM.render(
+      <Provider store={getStore()}>
+        <div>
+          <InstructionsDialogWrapper
+            showInstructionsDialog={autoClose => {
+              this.showInstructionsDialog_(config.level, autoClose);
+            }}
+          />
+          <FinishDialog
+            onContinue={() => this.onContinue()}
+            getShareUrl={() => this.lastShareUrl}
+          />
+        </div>
+      </Provider>,
+      document.body.appendChild(document.createElement('div'))
+    );
+  }
 
   if (config.usesAssets && config.channel) {
     assetPrefix.init(config);
@@ -323,6 +325,18 @@ StudioApp.prototype.init = function(config) {
     });
   }
 
+  if (config.level.docsEmbed) {
+    this.handleDocsEmbed_({
+      containerId: config.containerId,
+      embed: config.embed,
+      level: config.level,
+      noHowItWorks: config.noHowItWorks,
+      isLegacyShare: config.isLegacyShare,
+      legacyShareStyle: config.legacyShareStyle,
+      wireframeShare: config.wireframeShare
+    });
+  }
+
   if (config.share) {
     this.handleSharing_({
       makeUrl: config.makeUrl,
@@ -332,21 +346,23 @@ StudioApp.prototype.init = function(config) {
     });
   }
 
-  const hintsUsedIds = utils.valueOr(config.authoredHintsUsedIds, []);
-  this.authoredHintsController_.init(
-    config.level.authoredHints,
-    hintsUsedIds,
-    config.scriptId,
-    config.serverLevelId
-  );
-  if (config.authoredHintViewRequestsUrl && config.isSignedIn) {
-    this.authoredHintsController_.submitHints(
-      config.authoredHintViewRequestsUrl
+  if (!config.level.docsEmbed) {
+    const hintsUsedIds = utils.valueOr(config.authoredHintsUsedIds, []);
+    this.authoredHintsController_.init(
+      config.level.authoredHints,
+      hintsUsedIds,
+      config.scriptId,
+      config.serverLevelId
     );
-  }
+    if (config.authoredHintViewRequestsUrl && config.isSignedIn) {
+      this.authoredHintsController_.submitHints(
+        config.authoredHintViewRequestsUrl
+      );
+    }
 
-  if (config.puzzleRatingsUrl) {
-    puzzleRatingUtils.submitCachedPuzzleRatings(config.puzzleRatingsUrl);
+    if (config.puzzleRatingsUrl) {
+      puzzleRatingUtils.submitCachedPuzzleRatings(config.puzzleRatingsUrl);
+    }
   }
 
   // Record time at initialization.
@@ -2019,9 +2035,11 @@ StudioApp.prototype.configureDom = function(config) {
 
     if (config.level.iframeEmbed) {
       document.body.className += ' embedded_iframe';
+    } else if (config.level.docsEmbed) {
+      document.body.className += 'docs-embed';
     }
 
-    if (config.pinWorkspaceToBottom) {
+    if (config.pinWorkspaceToBottom && !config.level.docsEmbed) {
       var bodyElement = document.body;
       bodyElement.style.overflow = 'hidden';
       bodyElement.className = bodyElement.className + ' pin_bottom';
@@ -2129,6 +2147,39 @@ StudioApp.prototype.handleHideSource_ = function(options) {
         buttonRow.appendChild(openWorkspace);
       }
     }
+  }
+};
+
+/**
+ * Render in a special mode designed for embedding in our docs, that shows
+ * the viewport and code workspace side-by-side in readonly mode, while
+ * removing most of the usual chrome.
+ * @private
+ */
+StudioApp.prototype.handleDocsEmbed_ = function(options) {
+  document.body.style.backgroundColor = 'transparent';
+
+  $('.header-wrapper').hide();
+  var vizColumn = document.getElementById('visualizationColumn');
+  $(vizColumn).addClass('chromelessShare');
+
+  if (!options.embed && !options.noHowItWorks) {
+    const buttonRow = document.getElementById('gameButtons');
+    const openWorkspace = document.createElement('button');
+    openWorkspace.setAttribute('id', 'open-workspace');
+    openWorkspace.appendChild(document.createTextNode(msg.openWorkspace()));
+
+    dom.addClickTouchEvent(openWorkspace, function() {
+      // /c/ URLs go to /edit when we click open workspace.
+      // /project/ URLs we want to go to /view (which doesnt require login)
+      if (/^\/c\//.test(location.pathname)) {
+        location.pathname += '/edit';
+      } else {
+        location.pathname += '/view';
+      }
+    });
+
+    buttonRow.appendChild(openWorkspace);
   }
 };
 

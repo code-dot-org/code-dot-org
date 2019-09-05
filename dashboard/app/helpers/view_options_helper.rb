@@ -62,6 +62,7 @@ module ViewOptionsHelper
     :submitted,
     :unsubmit_url,
     :iframe_embed,
+    :docs_embed,
     :pairing_driver,
     :pairing_attempt,
     :pairing_channel_id,

@@ -280,9 +280,10 @@ class ProjectsController < ApplicationController
     end
 
     iframe_embed = params[:iframe_embed] == true
+    docs_embed = params[:docs_embed] == true
     sharing = iframe_embed || params[:share] == true
-    readonly = params[:readonly] == true
-    if iframe_embed
+    readonly = docs_embed || params[:readonly] == true
+    if iframe_embed || docs_embed
       # explicitly set security related headers so that this page can actually
       # be embedded.
       response.headers['X-Frame-Options'] = 'ALLOWALL'
@@ -293,6 +294,7 @@ class ProjectsController < ApplicationController
       hide_source: sharing,
       share: sharing,
       iframe_embed: iframe_embed,
+      docs_embed: docs_embed,
       project_type: params[:key]
     )
     # for sharing pages, the app will display the footer inside the playspace instead

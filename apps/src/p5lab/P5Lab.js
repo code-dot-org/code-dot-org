@@ -365,8 +365,11 @@ P5Lab.prototype.init = function(config) {
 
   var showDebugButtons =
     config.level.editCode &&
-    (!config.hideSource && !config.level.debuggerDisabled);
-  var showDebugConsole = config.level.editCode && !config.hideSource;
+    (!config.hideSource &&
+      !config.level.debuggerDisabled &&
+      !config.level.docsEmbed);
+  var showDebugConsole =
+    config.level.editCode && !config.hideSource && !config.level.docsEmbed;
   this.debuggerEnabled = showDebugButtons || showDebugConsole;
 
   if (this.debuggerEnabled) {

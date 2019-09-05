@@ -517,7 +517,7 @@ module LevelsHelper
       level_overrides[:hide_source] = true
       level_overrides[:show_finish] = true
     end
-    if level_overrides[:embed]
+    if level_overrides[:embed] || level_overrides[:docs_embed]
       view_options(no_header: true, no_footer: true, white_background: true)
     end
 

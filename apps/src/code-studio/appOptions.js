@@ -113,6 +113,7 @@
  * @property {number} puzzle_number
  * @property {number} stage_total
  * @property {boolean} iframeEmbed
+ * @property {boolean} docsEmbed
  * @property {?} lastAttempt
  * @property {boolean} submittable
  * @property {boolean} final_level
