@@ -504,6 +504,8 @@ class User < ActiveRecord::Base
   end
 
   def sanitize_race_data_set_urm
+    return unless races_changed?
+
     self.races = Races.sanitized(races).join(',')
     self.urm = Races.any_urm?(races)
   end
