@@ -39,6 +39,24 @@ const styles = {
     border: '1px solid #ccc',
     boxShadow: 'none',
     margin: '0 10px 10px 10px'
+  },
+  bottomControls: {
+    height: 30,
+    marginBottom: 30
+  },
+  flexCategoryLabel: {
+    fontSize: 14,
+    verticalAlign: 'baseline',
+    marginRight: 5
+  },
+  flexCategorySelect: {
+    verticalAlign: 'baseline',
+    width: 550,
+    margin: '0 5px 0 0'
+  },
+  saveFlexCategoryButton: {
+    verticalAlign: 'baseline',
+    margin: '0 5px 0 0'
   }
 };
 
@@ -54,11 +72,37 @@ class FlexGroup extends Component {
     flexCategoryMap: PropTypes.object.isRequired
   };
 
-  handleAddGroup = () => {
-    this.props.addGroup(
-      prompt('Enter new stage name'),
-      prompt('Enter new group name')
-    );
+  state = {
+    addingFlexCategory: false,
+    newFlexCategory: ''
+  };
+
+  handleAddFlexCategory = () => {
+    this.setState({
+      addingFlexCategory: true,
+      newFlexCategory: ''
+    });
+  };
+
+  cancelAddFlexCategory = () => {
+    this.setState({
+      addingFlexCategory: false,
+      newFlexCategory: ''
+    });
+  };
+
+  flexCategorySelected = newFlexCategory => {
+    this.setState({newFlexCategory});
+  };
+
+  handleCreateFlexCategory = () => {
+    const {newFlexCategory} = this.state;
+    const newStageName = prompt('Enter new stage name');
+    this.setState({
+      addingFlexCategory: false,
+      newFlexCategory: ''
+    });
+    this.props.addGroup(newStageName, newFlexCategory);
   };
 
   handleAddStage = position => {
@@ -184,15 +228,51 @@ class FlexGroup extends Component {
             </div>
           </div>
         ))}
-        <button
-          onMouseDown={this.handleAddGroup}
-          className="btn"
-          style={styles.addGroup}
-          type="button"
-        >
-          <i style={{marginRight: 7}} className="fa fa-plus-circle" />
-          Add Flex Category
-        </button>
+        {!this.state.addingFlexCategory && (
+          <button
+            onMouseDown={this.handleAddFlexCategory}
+            className="btn"
+            style={styles.addGroup}
+            type="button"
+          >
+            <i style={{marginRight: 7}} className="fa fa-plus-circle" />
+            Add Flex Category
+          </button>
+        )}
+        {this.state.addingFlexCategory && (
+          <div style={styles.bottomControls}>
+            <span style={styles.flexCategoryLabel}>New Flex Category:</span>
+            &nbsp;
+            <select
+              style={styles.flexCategorySelect}
+              onChange={e => this.flexCategorySelected(e.target.value)}
+              value={this.state.newFlexCategory}
+            >
+              <option value="">(none): "Content"</option>
+              {Object.keys(flexCategoryMap).map(flexCategory => (
+                <option key={flexCategory} value={flexCategory}>
+                  {flexCategory}: "{flexCategoryMap[flexCategory]}"
+                </option>
+              ))}
+            </select>
+            <button
+              onMouseDown={this.handleCreateFlexCategory}
+              className="btn btn-primary"
+              style={styles.saveFlexCategoryButton}
+              type="button"
+            >
+              Create
+            </button>
+            <button
+              onMouseDown={this.cancelAddFlexCategory}
+              className="btn"
+              style={styles.saveFlexCategoryButton}
+              type="button"
+            >
+              Cancel
+            </button>
+          </div>
+        )}
         <input
           type="hidden"
           name="script_text"
