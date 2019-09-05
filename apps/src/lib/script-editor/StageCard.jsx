@@ -42,7 +42,8 @@ export class UnconnectedStageCard extends Component {
     addLevel: PropTypes.func.isRequired,
     setStageLockable: PropTypes.func.isRequired,
     stagesCount: PropTypes.number.isRequired,
-    stage: PropTypes.object.isRequired
+    stage: PropTypes.object.isRequired,
+    flexCategoryMap: PropTypes.object.isRequired
   };
 
   /**
@@ -193,7 +194,9 @@ export class UnconnectedStageCard extends Component {
 }
 
 export default connect(
-  state => ({}),
+  state => ({
+    flexCategoryMap: state.flexCategoryMap
+  }),
   dispatch => ({
     reorderLevel(stage, originalPosition, newPosition) {
       dispatch(reorderLevel(stage, originalPosition, newPosition));

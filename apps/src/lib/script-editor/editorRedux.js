@@ -18,10 +18,11 @@ const REMOVE_GROUP = 'scriptEditor/REMOVE_GROUP';
 const REMOVE_STAGE = 'scriptEditor/REMOVE_STAGE';
 const SET_STAGE_LOCKABLE = 'scriptEditor/SET_STAGE_LOCKABLE';
 
-export const init = (stages, levelKeyList) => ({
+export const init = (stages, levelKeyList, flexCategoryMap) => ({
   type: INIT,
   stages,
-  levelKeyList
+  levelKeyList,
+  flexCategoryMap
 });
 
 export const addGroup = (stageName, groupName) => ({
@@ -312,8 +313,17 @@ function levelNameToIdMap(state = {}, action) {
   return state;
 }
 
+function flexCategoryMap(state = {}, action) {
+  switch (action.type) {
+    case INIT:
+      return action.flexCategoryMap;
+  }
+  return state;
+}
+
 export default {
   stages,
   levelKeyList,
-  levelNameToIdMap
+  levelNameToIdMap,
+  flexCategoryMap
 };
