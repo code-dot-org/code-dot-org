@@ -40,10 +40,11 @@ export default function initPage(scriptEditorData) {
         }))
     }));
   const locales = scriptEditorData.locales;
+  const flexCategories = scriptEditorData.flex_categories;
 
   registerReducers({...reducers, isRtl});
   const store = getStore();
-  store.dispatch(init(stages, scriptEditorData.levelKeyList));
+  store.dispatch(init(stages, scriptEditorData.levelKeyList, flexCategories));
 
   const teacherResources = (scriptData.teacher_resources || []).map(
     ([type, link]) => ({type, link})
