@@ -11,7 +11,7 @@ const BORDER_RADIUS = 4;
 const styles = {
   input: {
     height: 20,
-    width: 300,
+    width: '100%',
     padding: '3px 7px',
     marginLeft: 0,
     marginRight: 0,
