@@ -3,3 +3,5 @@ display_name 'Challenges: Random Numbers'
 description 'Try out these extra challenges with random numbers.'
 
 sublevels
+
+level 'CSD U3 Random rgb_pilot'
