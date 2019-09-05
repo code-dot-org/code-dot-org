@@ -290,7 +290,20 @@ function stages(state = [], action) {
       break;
     }
     case SET_FLEX_CATEGORY: {
-      newState[action.stage - 1].flex_category = action.flexCategory;
+      // Remove the stage from the array and update its flex category.
+      const index = action.stage - 1;
+      const [curStage] = newState.splice(index, 1);
+      curStage.flex_category = action.flexCategory;
+
+      // Insert the stage after the last stage with the same flex_category,
+      // or at the end of the list if none matches.
+      const categories = newState.map(stage => stage.flex_category);
+      const lastIndex = categories.lastIndexOf(action.flexCategory);
+      const targetIndex = lastIndex > 0 ? lastIndex + 1 : newState.length;
+      newState.splice(targetIndex, 0, curStage);
+
+      updateStagePositions(newState);
+
       break;
     }
   }

@@ -173,7 +173,9 @@ export class UnconnectedStageCard extends Component {
       editingFlexCategory: false,
       newFlexCategory: ''
     });
-    this.props.setFlexCategory(this.props.stage.position, newFlexCategory);
+    if (this.props.stage.flex_category !== newFlexCategory) {
+      this.props.setFlexCategory(this.props.stage.position, newFlexCategory);
+    }
   };
 
   toggleLockable = () => {
