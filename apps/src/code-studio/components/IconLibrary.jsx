@@ -23,10 +23,12 @@ export default class IconLibrary extends React.Component {
   render() {
     return (
       <div>
-        <SearchBar
-          onChange={this.search}
-          placeholderText={i18n.iconSearchPlaceholder()}
-        />
+        <div style={{width: '320px'}}>
+          <SearchBar
+            onChange={this.search}
+            placeholderText={i18n.iconSearchPlaceholder()}
+          />
+        </div>
         <IconList
           assetChosen={this.props.assetChosen}
           search={this.state.search}
