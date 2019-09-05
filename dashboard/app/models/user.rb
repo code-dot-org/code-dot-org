@@ -504,8 +504,8 @@ class User < ActiveRecord::Base
   end
 
   def sanitize_race_data_set_urm
-    self.races = Race.sanitize(races)
-    self.urm = Race.any_urm?(races)
+    self.races = Races.sanitized(races).join(',')
+    self.urm = Races.any_urm?(races)
   end
 
   def fix_by_user_type
