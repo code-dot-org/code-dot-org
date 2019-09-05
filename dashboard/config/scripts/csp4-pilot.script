@@ -104,6 +104,7 @@ level 'Debugging Variable Scope and Functions', progression: 'Function Scope'
 level 'U4 L10 Functions Scope Practice 1 v2', progression: 'Function Scope'
 level 'When to Make Functions Map', progression: 'When to Declare Functions'
 level 'U4 L10 Making Functions Practice', progression: 'When to Declare Functions'
+level 'U4L10 CFU Functions Psuedocode', progression: 'Check For Understanding: AP Practice', assessment: true
 
 stage 'Functions Make', flex_category: 'csp_functions'
 level 'CSP U4L11 SFLP 20-21', progression: 'Lesson Overview'
