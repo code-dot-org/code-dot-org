@@ -12,7 +12,7 @@ class RaceInterstitialHelperTest < ActionView::TestCase
     # Create a student over 13 with an account more than 1 week old with an
     # associated IP address. We expect that such a user would see the race
     # interstitial helper.
-    @user = create :student, created_at: DateTime.now - 8
+    @user = create :student, created_at: DateTime.now - 8.days
     @user.current_sign_in_ip = "127.0.0.1"
   end
 
