@@ -19,10 +19,15 @@ module Pd::SurveyPipeline
 
     # Augment a scale question for the purpose of displaying in UI.
     #
-    # @param [Hash] question Contains all question attributes. Must have values and options keys
-    # @return [Hash] A copy of input question with augmented attributes
+    # @param [Hash] question Contains all question attributes. Must have values and options keys.
+    # @return [Hash] A copy of input question with augmented attributes or the question itself
+    #   if required input keys don't exist.
+    # @note This function follows best-effort approach and doesn't raise exception
+    #   if it cannot augment the input question.
     #
     def self.augment_scale_question_for_display(question)
+      return question unless question[:values] && question[:options]
+
       # JotForm format: values.first and values.last are the the lowest and highest rating points.
       # E.g. values = [1, 2, 3]
       min_value = question[:values].first
