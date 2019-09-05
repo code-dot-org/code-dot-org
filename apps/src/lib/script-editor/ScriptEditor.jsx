@@ -467,9 +467,6 @@ export default class ScriptEditor extends React.Component {
           <FlexGroup />
         ) : (
           <div>
-            <a href="?beta=true">
-              Try the beta Script Editor (will reload the page without saving)
-            </a>
             <textarea
               id="script_text"
               name="script_text"
