@@ -72,7 +72,6 @@
 require 'digest/md5'
 require 'cdo/aws/metrics'
 require 'cdo/user_helpers'
-require 'cdo/race_interstitial_helper'
 require 'school_info_interstitial_helper'
 require 'sign_up_tracking'
 
@@ -2051,11 +2050,6 @@ class User < ActiveRecord::Base
     # Must have an NCES school to show the banner
     users_school = try(:school_info).try(:school)
     teacher? && users_school && (next_census_display.nil? || Date.today >= next_census_display.to_date)
-  end
-
-  def show_race_interstitial?(ip = nil)
-    ip_to_check = ip || current_sign_in_ip
-    RaceInterstitialHelper.show_race_interstitial?(self, ip_to_check)
   end
 
   # Removes PII and other information from the user and marks the user as having been purged.
