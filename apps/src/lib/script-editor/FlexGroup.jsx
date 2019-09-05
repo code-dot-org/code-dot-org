@@ -143,7 +143,7 @@ class FlexGroup extends Component {
   render() {
     const groups = _.groupBy(
       this.props.stages,
-      stage => stage.flex_category || 'Default'
+      stage => stage.flex_category || ''
     );
     let afterStage = 1;
     const {flexCategoryMap} = this.props;
@@ -153,7 +153,8 @@ class FlexGroup extends Component {
         {_.keys(groups).map(group => (
           <div key={group}>
             <div style={styles.groupHeader}>
-              Flex Category: {group}: "{flexCategoryMap[group]}"
+              Flex Category: {group || '(none)'}: "
+              {flexCategoryMap[group] || 'Content'}"
               <OrderControls
                 type={ControlTypes.Group}
                 position={afterStage}
