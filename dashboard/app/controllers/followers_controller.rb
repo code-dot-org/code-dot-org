@@ -6,12 +6,12 @@
 class FollowersController < ApplicationController
   before_action :load_section
 
-  # GET /join/XXXXXX
+  # GET /join/:section_code (section_code is optional)
   def student_user_new
     @user = current_user || User.new
   end
 
-  # POST /join/XXXXXX
+  # POST /join/:section_code
   # join a section
   def student_register
     if current_user
