@@ -148,10 +148,10 @@ class FlexGroup extends Component {
 
     return (
       <div>
-        {_.keys(groups).map((group, groupIndex) => (
+        {_.keys(groups).map(group => (
           <div key={group}>
             <div style={styles.groupHeader}>
-              Group {groupIndex + 1}: {group}
+              Flex Category: {group}
               <OrderControls
                 type={ControlTypes.Group}
                 position={afterStage}
@@ -188,7 +188,7 @@ class FlexGroup extends Component {
           type="button"
         >
           <i style={{marginRight: 7}} className="fa fa-plus-circle" />
-          Add Group
+          Add Flex Category
         </button>
         <input
           type="hidden"
