@@ -879,6 +879,11 @@ export function assignedScriptName(state) {
   return assignment ? assignment.name : '';
 }
 
+export function getVisibleSections(state) {
+  const allSections = Object.values(getRoot(state).sections);
+  return allSections.filter(s => !s.hidden);
+}
+
 /**
  * Gets the data needed by Reacttabular to show a sortable table
  * @param {object} state - Full store state
