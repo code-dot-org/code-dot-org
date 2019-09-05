@@ -6,6 +6,7 @@ class ScriptsControllerTest < ActionController::TestCase
   setup do
     @admin = create(:admin)
     @not_admin = create(:user)
+    @platformization_partner = create(:platformization_partner)
     @levelbuilder = create(:levelbuilder)
     @pilot_teacher = create :teacher, pilot_experiment: 'my-experiment'
     @pilot_script = create :script, pilot_experiment: 'my-experiment'
@@ -15,6 +16,7 @@ class ScriptsControllerTest < ActionController::TestCase
     @coursez_2017 = create :script, name: 'coursez-2017', family_name: 'coursez', version_year: '2017', is_stable: true
     @coursez_2018 = create :script, name: 'coursez-2018', family_name: 'coursez', version_year: '2018', is_stable: true
     @coursez_2019 = create :script, name: 'coursez-2019', family_name: 'coursez', version_year: '2019'
+    @partner_script = create :script, editor_experiment: 'platformization-partners'
 
     Rails.application.config.stubs(:levelbuilder_mode).returns false
   end
@@ -224,6 +226,54 @@ class ScriptsControllerTest < ActionController::TestCase
     get :edit, params: {id: script.name}
 
     assert_equal script, assigns(:script)
+  end
+
+  test 'platformization partner cannot create script' do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    sign_in @platformization_partner
+    post :create, params: {
+      script: {name: 'test-script-create'},
+      script_text: ''
+    }
+    assert_response :forbidden
+  end
+
+  test "platformization partner cannot edit our scripts" do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    sign_in @platformization_partner
+    get :edit, params: {id: @coursez_2019.id}
+    assert_response :forbidden
+  end
+
+  test "platformization partner can edit their scripts" do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    sign_in @platformization_partner
+    get :edit, params: {id: @partner_script.id}
+    assert_response :success
+  end
+
+  test "platformization partner cannot update our scripts" do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    sign_in @platformization_partner
+    patch :update, params: {
+      id: @coursez_2019.id,
+      script: {name: @coursez_2019.name},
+      script_text: '',
+    }
+    assert_response :forbidden
+  end
+
+  test "platformization partner can update their scripts" do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    File.stubs(:write).with {|filename, _| filename == "config/scripts/#{@partner_script.name}.script" || filename.end_with?('scripts.en.yml')}
+
+    sign_in @platformization_partner
+    patch :update, params: {
+      id: @partner_script.id,
+      script: {name: @partner_script.name},
+      script_text: '',
+    }
+    assert_response :redirect
   end
 
   # These two tests are the only remaining dependency on script seed order.  Check that /s/1 redirects to /s/20-hour in

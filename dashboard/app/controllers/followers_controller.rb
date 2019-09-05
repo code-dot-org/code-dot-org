@@ -50,7 +50,6 @@ class FollowersController < ApplicationController
   end
 
   # GET /join/XXXXXX
-  # if logged in, join the section, if not logged in, present a form to create a new user and log in
   def student_user_new
     # Though downstream validations would raise an exception, we redirect to the admin directory to
     # improve user experience.
@@ -65,40 +64,33 @@ class FollowersController < ApplicationController
       return
     end
 
-    if current_user && @section
-      @section.add_student current_user
+    @user = current_user || User.new
 
-      redirect_to root_path, notice: I18n.t('follower.registered', section_name: @section.name)
-    else
-      @user = User.new
-
-      # if this is a picture or word section, redirect to the section login page so that the student
-      # does not have to type in the full URL
-      if @section && [Section::LOGIN_TYPE_PICTURE, Section::LOGIN_TYPE_WORD].include?(@section.login_type)
-        redirect_to controller: 'sections', action: 'show', id: @section.code
-      end
-
-      # if there is no logged in user and no section or an e-mail section, render the default
-      # student_user_new view which includes the section code form or sign up form
+    # if this is a picture or word section, redirect to the section login page so that the student
+    # does not have to type in the full URL
+    if @section && [Section::LOGIN_TYPE_PICTURE, Section::LOGIN_TYPE_WORD].include?(@section.login_type)
+      redirect_to controller: 'sections', action: 'show', id: @section.code
     end
+
+    # render the default student_user_new view, which includes the section code form or sign up form
   end
 
   # POST /join/XXXXXX
-  # join a section as a new student
+  # join a section
   def student_register
-    user_type = params[:user][:user_type] == User::TYPE_TEACHER ? User::TYPE_TEACHER : User::TYPE_STUDENT
-    @user = User.new(followers_params(user_type))
-    @user.user_type = user_type
-
     if current_user
-      @user.errors.add(:username, "Please signout before proceeding")
-      render 'student_user_new', formats: [:html]
-      return
+      @user = current_user
+    elsif params[:user]
+      user_type = params[:user][:user_type] == User::TYPE_TEACHER ? User::TYPE_TEACHER : User::TYPE_STUDENT
+      @user = User.new(followers_params(user_type))
+      @user.user_type = user_type
+    else
+      @user = User.new(user_type: User::TYPE_STUDENT)
+      return render 'student_user_new', formats: [:html]
     end
 
     Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
-      if @user.save
-        @section.add_student @user
+      if @user.save && @section&.add_student(@user)
         sign_in(:user, @user)
         redirect_to root_path, notice: I18n.t('follower.registered', section_name: @section.name)
         return
@@ -123,6 +115,7 @@ class FollowersController < ApplicationController
   end
 
   def load_section
+    p request.path
     if params[:section_code].blank?
       if request.path != student_user_new_path(section_code: params[:section_code])
         # if user submitted the section form without a code /join
