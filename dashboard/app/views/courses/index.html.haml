@@ -18,7 +18,7 @@
 
 %link{:href=>'/shared/css/course-explorer.css', :rel=>'stylesheet'}
 
-- if (current_user && current_user.show_race_interstitial?) || @force_race_interstitial
+- if RaceInterstitialHelper.show?(current_user) || @force_race_interstitial
   = render partial: 'layouts/race_interstitial'
 
 %script{src: minifiable_asset_path('js/courses/index.js'), data: {courses: courses_data.to_json}}

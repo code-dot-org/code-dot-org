@@ -5,7 +5,7 @@
 
 
 -# Student modal
-- if (current_user && current_user.show_race_interstitial?) || @force_race_interstitial
+- if RaceInterstitialHelper.show?(current_user) || @force_race_interstitial
   = render partial: 'layouts/race_interstitial'
 
 -# Teacher modals
