@@ -152,7 +152,7 @@ export class UnconnectedStageCard extends Component {
   handleEditFlexCategory = () => {
     this.setState({
       editingFlexCategory: true,
-      newFlexCategory: this.props.stage.flex_category
+      newFlexCategory: this.props.stage.flex_category || ''
     });
   };
 
@@ -265,7 +265,7 @@ export class UnconnectedStageCard extends Component {
                 onChange={e => this.flexCategorySelected(e.target.value)}
                 value={this.state.newFlexCategory}
               >
-                <option value="">(None)</option>
+                <option value="">(none): "Content"</option>
                 {Object.keys(flexCategoryMap).map(flexCategory => (
                   <option key={flexCategory} value={flexCategory}>
                     {flexCategory}: "{flexCategoryMap[flexCategory]}"
