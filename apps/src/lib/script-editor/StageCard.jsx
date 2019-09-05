@@ -139,7 +139,10 @@ export class UnconnectedStageCard extends Component {
     return (
       <div style={styles.stageCard}>
         <div style={styles.stageCardHeader}>
-          Stage {this.props.stage.position}: {this.props.stage.name}
+          {!this.props.stage.lockable && (
+            <span>Stage {this.props.stage.relativePosition}:&nbsp;</span>
+          )}
+          {this.props.stage.name}
           <OrderControls
             type={ControlTypes.Stage}
             position={this.props.stage.position}
