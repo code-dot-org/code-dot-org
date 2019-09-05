@@ -11,7 +11,10 @@
         = t('auth.already_signedup')
         = link_to t('nav.user.signin'), new_session_path(resource_name)
 
-  = render 'old_sign_up_form'
+  - if SignUpTracking.new_sign_up_experience?(session)
+    = render 'new_sign_up_form'
+  - else
+    = render 'old_sign_up_form'
 
 %div{style: "clear:both"}
 %br/
