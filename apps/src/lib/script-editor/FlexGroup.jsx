@@ -50,7 +50,8 @@ class FlexGroup extends Component {
     addGroup: PropTypes.func.isRequired,
     addStage: PropTypes.func.isRequired,
     stages: PropTypes.array.isRequired,
-    levelKeyList: PropTypes.object.isRequired
+    levelKeyList: PropTypes.object.isRequired,
+    flexCategoryMap: PropTypes.object.isRequired
   };
 
   handleAddGroup = () => {
@@ -145,13 +146,14 @@ class FlexGroup extends Component {
       stage => stage.flex_category || 'Default'
     );
     let afterStage = 1;
+    const {flexCategoryMap} = this.props;
 
     return (
       <div>
         {_.keys(groups).map(group => (
           <div key={group}>
             <div style={styles.groupHeader}>
-              Flex Category: {group}
+              Flex Category: {group}: "{flexCategoryMap[group]}"
               <OrderControls
                 type={ControlTypes.Group}
                 position={afterStage}
@@ -203,7 +205,8 @@ class FlexGroup extends Component {
 export default connect(
   state => ({
     levelKeyList: state.levelKeyList,
-    stages: state.stages
+    stages: state.stages,
+    flexCategoryMap: state.flexCategoryMap
   }),
   dispatch => ({
     addGroup(stageName, groupName) {
