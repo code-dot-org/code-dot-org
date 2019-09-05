@@ -32,6 +32,9 @@ const styles = {
     fontSize: 13,
     marginTop: 3
   },
+  bottomControls: {
+    height: 30
+  },
   addLevel: {
     fontSize: 14,
     background: '#eee',
@@ -45,10 +48,12 @@ const styles = {
   },
   flexCategorySelect: {
     verticalAlign: 'baseline',
-    width: 550
+    width: 550,
+    margin: '0 5px 0 0'
   },
   saveFlexCategoryButton: {
-    verticalAlign: 'baseline'
+    verticalAlign: 'baseline',
+    margin: '0 5px 0 0'
   }
 };
 
@@ -151,6 +156,13 @@ export class UnconnectedStageCard extends Component {
     });
   };
 
+  cancelEditFlexCategory = () => {
+    this.setState({
+      editingFlexCategory: false,
+      newFlexCategory: ''
+    });
+  };
+
   flexCategorySelected = newFlexCategory => {
     this.setState({newFlexCategory});
   };
@@ -219,52 +231,64 @@ export class UnconnectedStageCard extends Component {
             handleDragStart={this.handleDragStart}
           />
         ))}
-        <button
-          onMouseDown={this.handleAddLevel}
-          className="btn"
-          style={styles.addLevel}
-          type="button"
-        >
-          <i style={{marginRight: 7}} className="fa fa-plus-circle" />
-          Add Level
-        </button>
-        {!this.state.editingFlexCategory && (
-          <button
-            onMouseDown={this.handleEditFlexCategory}
-            className="btn"
-            style={styles.addLevel}
-            type="button"
-          >
-            <i style={{marginRight: 7}} className="fa fa-pencil" />
-            Edit Flex Category
-          </button>
-        )}
-        {this.state.editingFlexCategory && (
-          <div>
-            <span style={styles.flexCategoryLabel}>New Flex Category:</span>
-            &nbsp;
-            <select
-              style={styles.flexCategorySelect}
-              onChange={e => this.flexCategorySelected(e.target.value)}
-              value={this.state.newFlexCategory}
-            >
-              <option value="">(None)</option>
-              {Object.keys(flexCategoryMap).map(flexCategory => (
-                <option key={flexCategory} value={flexCategory}>
-                  {flexCategory}: "{flexCategoryMap[flexCategory]}"
-                </option>
-              ))}
-            </select>
-            <button
-              onMouseDown={this.handleSaveFlexCategory}
-              className="btn"
-              style={styles.saveFlexCategoryButton}
-              type="button"
-            >
-              Save
-            </button>
-          </div>
-        )}
+        <div style={styles.bottomControls}>
+          {!this.state.editingFlexCategory && (
+            <span>
+              <button
+                onMouseDown={this.handleAddLevel}
+                className="btn"
+                style={styles.addLevel}
+                type="button"
+              >
+                <i style={{marginRight: 7}} className="fa fa-plus-circle" />
+                Add Level
+              </button>
+              <button
+                onMouseDown={this.handleEditFlexCategory}
+                className="btn"
+                style={styles.addLevel}
+                type="button"
+              >
+                <i style={{marginRight: 7}} className="fa fa-pencil" />
+                Edit Flex Category
+              </button>
+            </span>
+          )}
+          {this.state.editingFlexCategory && (
+            <div>
+              <span style={styles.flexCategoryLabel}>Flex Category:</span>
+              &nbsp;
+              <select
+                style={styles.flexCategorySelect}
+                onChange={e => this.flexCategorySelected(e.target.value)}
+                value={this.state.newFlexCategory}
+              >
+                <option value="">(None)</option>
+                {Object.keys(flexCategoryMap).map(flexCategory => (
+                  <option key={flexCategory} value={flexCategory}>
+                    {flexCategory}: "{flexCategoryMap[flexCategory]}"
+                  </option>
+                ))}
+              </select>
+              <button
+                onMouseDown={this.handleSaveFlexCategory}
+                className="btn btn-primary"
+                style={styles.saveFlexCategoryButton}
+                type="button"
+              >
+                Save
+              </button>
+              <button
+                onMouseDown={this.cancelEditFlexCategory}
+                className="btn"
+                style={styles.saveFlexCategoryButton}
+                type="button"
+              >
+                Cancel
+              </button>
+            </div>
+          )}
+        </div>
       </div>
     );
   }
