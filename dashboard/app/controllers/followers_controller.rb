@@ -4,8 +4,7 @@
 # models).
 
 class FollowersController < ApplicationController
-  before_action :authenticate_user!, except: [:student_user_new, :student_register]
-  before_action :load_section, only: [:student_user_new, :student_register]
+  before_action :load_section
 
   # GET /join/XXXXXX
   def student_user_new
