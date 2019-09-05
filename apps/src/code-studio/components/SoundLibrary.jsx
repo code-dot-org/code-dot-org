@@ -71,6 +71,10 @@ const styles = {
   },
   categoryText: {
     fontSize: 14
+  },
+  searchBarContainer: {
+    width: '300px',
+    float: 'right'
   }
 };
 
@@ -155,10 +159,12 @@ export default class SoundLibrary extends React.Component {
             </span>
           )}
         </div>
-        <SearchBar
-          onChange={this.search}
-          placeholderText={i18n.soundSearchPlaceholder()}
-        />
+        <div style={styles.searchBarContainer}>
+          <SearchBar
+            onChange={this.search}
+            placeholderText={i18n.soundSearchPlaceholder()}
+          />
+        </div>
         {this.state.category === '' && this.state.search === '' && (
           <div style={styles.categoryArea}>
             {this.animationCategoriesRendering()}

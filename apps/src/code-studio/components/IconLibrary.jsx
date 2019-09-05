@@ -23,7 +23,7 @@ export default class IconLibrary extends React.Component {
   render() {
     return (
       <div>
-        <div style={{width: '320px'}}>
+        <div style={{width: '300px', float: 'right'}}>
           <SearchBar
             onChange={this.search}
             placeholderText={i18n.iconSearchPlaceholder()}

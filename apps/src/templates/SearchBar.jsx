@@ -10,8 +10,8 @@ const BORDER_RADIUS = 4;
 // We have side-by-side elements that should format sort of like one element
 const styles = {
   input: {
-    height: 20,
     width: '100%',
+    boxSizing: 'border-box',
     padding: '3px 7px',
     marginLeft: 0,
     marginRight: 0,
@@ -31,7 +31,6 @@ const styles = {
   },
   searchArea: {
     position: 'relative',
-    float: 'right',
     margin: '10px 0'
   }
 };

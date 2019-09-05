@@ -39,20 +39,6 @@ const animationPickerStyles = {
   },
   navigation: {
     minHeight: 30
-  },
-  searchBar: {
-    input: {
-      width: '100%',
-      height: '28px',
-      padding: '0px 6px'
-    },
-    icon: {
-      top: 9,
-      left: 10
-    },
-    searchArea: {
-      float: 'none'
-    }
   }
 };
 
@@ -140,7 +126,6 @@ class AnimationPickerBody extends React.Component {
         )}
         <SearchBar
           placeholderText={i18n.animationSearchPlaceholder()}
-          styles={animationPickerStyles.searchBar}
           onChange={evt => this.onSearchQueryChange(evt.target.value)}
         />
         {(this.state.searchQuery !== '' || this.state.categoryQuery !== '') && (
