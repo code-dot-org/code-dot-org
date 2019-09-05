@@ -699,7 +699,7 @@ class Pd::Workshop < ActiveRecord::Base
       end
     else
       UserPermission.where(permission: UserPermission::PROGRAM_MANAGER).pluck(:user_id)&.map do |user_id|
-        pm = User.find(user_id)
+        pm = User.where(id: user_id).select(:name, :id).first
         potential_organizers << {label: pm.name, value: pm.id}
       end
     end
@@ -707,14 +707,14 @@ class Pd::Workshop < ActiveRecord::Base
     # any CSF facilitator can become the organizer of a CSF workshhop
     if course == Pd::Workshop::COURSE_CSF
       Pd::CourseFacilitator.where(course: Pd::Workshop::COURSE_CSF).pluck(:facilitator_id)&.map do |user_id|
-        facilitator = User.find(user_id)
+        facilitator = User.where(id: user_id).select(:name, :id).first
         potential_organizers << {label: facilitator.name, value: facilitator.id}
       end
     end
 
     # workshop admins can become the organizer of any workshop
     UserPermission.where(permission: UserPermission::WORKSHOP_ADMIN).pluck(:user_id)&.map do |user_id|
-      admin = User.find(user_id)
+      admin = User.where(id: user_id).select(:name, :id).first
       potential_organizers << {label: admin.name, value: admin.id}
     end
 
