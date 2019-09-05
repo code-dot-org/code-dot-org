@@ -198,7 +198,6 @@ class User < ActiveRecord::Base
 
   belongs_to :school_info
   accepts_nested_attributes_for :school_info, reject_if: :preprocess_school_info
-  validates_presence_of :school_info, unless: :school_info_optional?
 
   has_many :user_school_infos
   after_save :update_and_add_users_school_infos, if: :school_info_id_changed?
@@ -287,11 +286,6 @@ class User < ActiveRecord::Base
     if user_school_infos.count > 0 && !school_info&.complete?
       errors.add(:school_info_id, "cannot add new school id")
     end
-  end
-
-  # Not deployed to everyone, so we don't require this for anybody, yet
-  def school_info_optional?
-    true # update if/when A/B test is done and accepted
   end
 
   # Most recently created user_school_info referring to a complete school_info entry
@@ -1416,16 +1410,6 @@ class User < ActiveRecord::Base
     Experiment.get_all_enabled(user: self).pluck(:name)
   end
 
-  def advertised_scripts
-    [
-      Script.hoc_2014_script, Script.frozen_script, Script.infinity_script,
-      Script.flappy_script, Script.playlab_script, Script.artist_script,
-      Script.course1_script, Script.course2_script, Script.course3_script,
-      Script.course4_script, Script.twenty_hour_script, Script.starwars_script,
-      Script.starwars_blocks_script, Script.minecraft_script
-    ]
-  end
-
   def in_progress_and_completed_scripts
     user_scripts.compact.reject do |user_script|
       user_script.script.nil?
@@ -1587,10 +1571,6 @@ class User < ActiveRecord::Base
   # @return [Section|nil]
   def last_joined_section
     Follower.where(student_user: self).order(created_at: :desc).first.try(:section)
-  end
-
-  def all_advertised_scripts_completed?
-    advertised_scripts.all? {|script| completed?(script)}
   end
 
   def completed?(script)
@@ -1989,14 +1969,6 @@ class User < ActiveRecord::Base
   def show_race_interstitial?(ip = nil)
     ip_to_check = ip || current_sign_in_ip
     RaceInterstitialHelper.show_race_interstitial?(self, ip_to_check)
-  end
-
-  def show_school_info_confirmation_dialog?
-    SchoolInfoInterstitialHelper.show_school_info_confirmation_dialog?(self)
-  end
-
-  def show_school_info_interstitial?
-    SchoolInfoInterstitialHelper.show_school_info_interstitial?(self)
   end
 
   # Removes PII and other information from the user and marks the user as having been purged.

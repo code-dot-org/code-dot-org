@@ -5,7 +5,6 @@
 #  id                 :integer          not null, primary key
 #  name               :string(255)      not null
 #  group              :integer
-#  contact_id         :integer
 #  urban              :boolean
 #  attention          :string(255)
 #  street             :string(255)
@@ -19,10 +18,6 @@
 #  updated_at         :datetime         not null
 #  deleted_at         :datetime
 #  properties         :text(65535)
-#
-# Indexes
-#
-#  index_regional_partners_on_name_and_contact_id  (name,contact_id) UNIQUE
 #
 
 require 'state_abbr'
@@ -152,17 +147,9 @@ class RegionalPartner < ActiveRecord::Base
   # Since contact_email is defined dynamically by SerializedProperties, that will take precedence,
   # and we can't 'override' it in this class.
   # In order to fallback to another value when contact_email is missing, we need a wrapper method:
-  # @return contact_email, or the first program manager's email, or the contact user's email
+  # @return contact_email, or the first program manager's email
   def contact_email_with_backup
-    contact_email || program_managers&.first&.email || contact&.email
-  end
-
-  def contact
-    User.find_by(id: contact_id) || program_managers.first
-  end
-
-  def contact=(user)
-    self.contact_id = user.try(:id)
+    contact_email || program_managers&.first&.email
   end
 
   # find a Regional Partner that services a particular region

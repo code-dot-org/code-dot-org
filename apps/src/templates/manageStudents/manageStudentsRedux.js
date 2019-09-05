@@ -735,7 +735,8 @@ export const convertStudentServerData = (studentData, loginType, sectionId) => {
       dependsOnThisSectionForLogin: student.depends_on_this_section_for_login,
       isEditing: false,
       isSaving: false,
-      rowType: RowType.STUDENT
+      rowType: RowType.STUDENT,
+      userType: student.user_type
     };
   }
   return studentLookup;

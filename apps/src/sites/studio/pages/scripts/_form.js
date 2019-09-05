@@ -73,6 +73,7 @@ export default function initPage(scriptEditorData) {
         hasLessonPlan={scriptData.has_lesson_plan}
         curriculumPath={scriptData.curriculum_path}
         pilotExperiment={scriptData.pilot_experiment}
+        editorExperiment={scriptData.editor_experiment}
         announcements={announcements}
         supportedLocales={scriptData.supported_locales}
         locales={locales}

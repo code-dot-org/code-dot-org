@@ -1,0 +1,17 @@
+name 'csp-u3-exam1-debug6_2020'
+height 'auto'
+
+question 'Which line of code in this program is MOST likely to result in an error?'
+
+wrong 'Line 1'
+right 'Line 2'
+wrong 'Line 3'
+wrong 'Line 4'
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN
+
+markdown <<MARKDOWN
+<img src="https://images.code.org/eda2baa468ca1964c15a947b01fe6257-image-1567613599804.12.45 AM.png" style="width:250px">
+MARKDOWN
