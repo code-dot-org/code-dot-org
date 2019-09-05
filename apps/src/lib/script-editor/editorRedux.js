@@ -17,6 +17,7 @@ const MOVE_STAGE = 'scriptEditor/MOVE_STAGE';
 const REMOVE_GROUP = 'scriptEditor/REMOVE_GROUP';
 const REMOVE_STAGE = 'scriptEditor/REMOVE_STAGE';
 const SET_STAGE_LOCKABLE = 'scriptEditor/SET_STAGE_LOCKABLE';
+const SET_FLEX_CATEGORY = 'scriptEditor/SET_FLEX_CATEGORY';
 
 export const init = (stages, levelKeyList, flexCategoryMap) => ({
   type: INIT,
@@ -122,6 +123,12 @@ export const setStageLockable = (stage, lockable) => ({
   type: SET_STAGE_LOCKABLE,
   stage,
   lockable
+});
+
+export const setFlexCategory = (stage, flexCategory) => ({
+  type: SET_FLEX_CATEGORY,
+  stage,
+  flexCategory
 });
 
 function updateStagePositions(stages) {
@@ -280,6 +287,11 @@ function stages(state = [], action) {
     }
     case SET_STAGE_LOCKABLE: {
       newState[action.stage - 1].lockable = action.lockable;
+      break;
+    }
+    case SET_FLEX_CATEGORY: {
+      newState[action.stage - 1].flex_category = action.flexCategory;
+      break;
     }
   }
 
