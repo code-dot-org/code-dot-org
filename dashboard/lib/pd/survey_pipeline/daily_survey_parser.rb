@@ -102,9 +102,9 @@ module Pd::SurveyPipeline
     #
     # @param survey_questions [Array<Pd::SurveyQuestion>]
     #
-    # @return [Hash{form_id => {question_id => question_content}}]
-    #   question_content is Hash{:type, :name, :text, :order, :hidden}.
-    #   It could also have question-specific keys such as :options, :sub_questions etc.
+    # @return [Hash] {form_id => {question_id => question_content}}
+    #   In which, question_content is Hash{:type, :name, :text, :order, :hidden, :answer_type}.
+    #   It could also have question-specific keys such as :options, :option_map and :values.
     #
     def self.parse_questions(survey_questions)
       parsed_questions = {}
