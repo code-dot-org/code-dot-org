@@ -6,7 +6,7 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
   COLLECTION_ACTIONS = [:index, :filter].freeze
 
   load_and_authorize_resource class: 'Pd::Workshop', only:
-    [:show, :update, :create, :destroy, :start, :end, :summary, :unstart, :reopen] + COLLECTION_ACTIONS
+    [:show, :update, :create, :destroy, :start, :end, :summary, :unstart, :reopen, :potential_organizers] + COLLECTION_ACTIONS
 
   before_action :load_workshops, only: COLLECTION_ACTIONS
 
@@ -192,6 +192,42 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
   # GET /api/v1/pd/workshops/1/summary
   def summary
     render json: @workshop, serializer: Api::V1::Pd::WorkshopSummarySerializer
+  end
+
+  # Users who could be re-assigned to be the organizer of this workshop
+  def potential_organizers
+    potential_organizer_ids = []
+    potential_organizers = []
+
+    # if there is a regional partner, only that partner's PMs can become the organizer
+    # otherwise, any PM can become the organizer
+    if @workshop.regional_partner
+      @workshop.regional_partner.program_managers.each do |pm|
+        potential_organizers << {label: pm.name, value: pm.id}
+      end
+    else
+      UserPermission.where(permission: UserPermission::PROGRAM_MANAGER).pluck(:user_id)&.map do |user_id|
+        potential_organizer_ids << user_id
+      end
+    end
+
+    # any CSF facilitator can become the organizer of a CSF workshhop
+    if @workshop.course == Pd::Workshop::COURSE_CSF
+      Pd::CourseFacilitator.where(course: Pd::Workshop::COURSE_CSF).pluck(:facilitator_id)&.map do |user_id|
+        potential_organizer_ids << user_id
+      end
+    end
+
+    # workshop admins can become the organizer of any workshop
+    UserPermission.where(permission: UserPermission::WORKSHOP_ADMIN).pluck(:user_id)&.map do |user_id|
+      potential_organizer_ids << user_id
+    end
+
+    User.where(id: potential_organizer_ids).pluck(:name, :id)&.map do |name, id|
+      potential_organizers << {label: name, value: id}
+    end
+
+    render json: potential_organizers
   end
 
   private
