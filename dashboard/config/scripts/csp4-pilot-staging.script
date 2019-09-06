@@ -47,14 +47,11 @@ level 'U4 L05 CYU Exit Ticket', progression: 'Check Your Understanding', assessm
 
 stage 'Conditionals Investigate', flex_category: 'csp_conditionals'
 level 'U4L06 Introduction to Conditionals: if Statements', progression: 'If-Statements', named: true
-level 'U4 L06 Thermostat App v4', progression: 'If-Statements'
 level 'U4 L06 Lemon Hunter App v1 Code', progression: 'If-Statements'
 level 'U4L06 Introduction to Conditionals: if-else Statements', progression: 'If-Else Statements'
 level 'U4L06 Introduction to Conditionals: if-else-if Statements', progression: 'If-Else Statements'
-level 'U4 L06 Thermostat App v5', progression: 'If-Else Statements'
 level 'U4 L06 Lemon Hunter App v2 Code', progression: 'If-Else Statements'
 level 'U4L06 Introduction to Conditionals: Compound Boolean Expressions', progression: 'Logical Operators: AND OR'
-level 'U4 L06 Thermostat App v6', progression: 'Logical Operators: AND OR'
 level 'U4 L06 Lemon Hunter App v3 Code', progression: 'Logical Operators: AND OR'
 level 'Checking Multiple Conditions with If-elseif', progression: 'Patterns: If-else-if'
 level 'U4 L06 CYU Exit Ticket', progression: 'Check Your Understanding', assessment: true
