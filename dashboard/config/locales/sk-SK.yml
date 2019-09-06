@@ -43,6 +43,7 @@ sk:
           vytvorenia Code.org účtu s <strong>%{provider}</strong> pre <strong>%{email}</strong>.
         error:
           future: nemôže byť v budúcnosti
+  beta: beta
   hello: Ahoj svet
   welcome_back: Vitaj späť, %{name}
   your_professional_learning_plan: Tvoj profesionálny učebný plán
