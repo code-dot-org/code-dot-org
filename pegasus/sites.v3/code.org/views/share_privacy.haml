@@ -15,11 +15,12 @@
                   "Thanks," |
   -# haml-lint:enable MultilinePipe
   - email_subject = "Code.org and your child's privacy"
+  -# different subject b/c Remind renders 'Code.org' as a shortened URL instead of the literal
   - remind_subject = "Computer Science and Your Child's Privacy:"
   %label{class:'share-label'}
     Share this notice with parents:
   %a{class:'share-on-remind', href:'https://www.remind.com/v1/share?url=code.org/privacy/student-privacy&referer=code.org&text=' + CGI.escape(remind_subject), target:'_blank', id: 'share_on_remind'}
-  -# using URI.encode here because Windows Outlook client renders + as + literally
+  -# using URI.encode here because Windows Outlook client renders + as '+' literally
   %a{class: 'email-button',
     href: "mailto:?to=&subject=" + URI.encode(email_subject) + "&body=" + URI.encode(email_body), target:'_blank', id: 'email_button'}
     %i.fa.fa-envelope{"aria-hidden": "true"}
