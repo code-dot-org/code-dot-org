@@ -84,7 +84,8 @@ export class WorkshopForm extends React.Component {
       regional_partner_name: PropTypes.string,
       regional_partner_id: PropTypes.number,
       organizer: PropTypes.shape({
-        id: PropTypes.number
+        id: PropTypes.number,
+        name: PropTypes.string
       })
     }),
     onSaved: PropTypes.func,
@@ -981,6 +982,7 @@ export class WorkshopForm extends React.Component {
             <OrganizerFormPart
               workshopId={this.props.workshop.id}
               organizerId={this.state.organizer.id}
+              organizerName={this.state.organizer.name}
               onChange={this.handleOrganizerChange}
               readOnly={this.props.readOnly}
             />
