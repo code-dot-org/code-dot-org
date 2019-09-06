@@ -877,7 +877,12 @@ export class Workshop extends React.Component {
     return (
       <Row>
         <Col sm={12}>
-          <Panel header={header}>{content}</Panel>
+          <Panel>
+            <Panel.Heading>
+              <Panel.Title>{header}</Panel.Title>
+            </Panel.Heading>
+            <Panel.Body>{content}</Panel.Body>
+          </Panel>
         </Col>
       </Row>
     );
