@@ -11,8 +11,10 @@ class ZendeskSessionController < ApplicationController
 
   def index
     unless current_user.age && current_user.under_13?
-      sign_into_zendesk(current_user)
-      return
+      if current_user.oauth_only?
+        sign_into_zendesk(current_user)
+        return
+      end
     end
   end
 
