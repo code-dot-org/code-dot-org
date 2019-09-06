@@ -16,6 +16,46 @@ class LevelsController < ApplicationController
 
   LEVELS_PER_PAGE = 100
 
+  # All level types that can be requested via /levels/new
+  LEVEL_CLASSES = [
+    Applab,
+    Artist,
+    Bounce,
+    BubbleChoice,
+    Calc,
+    ContractMatch,
+    Craft,
+    CurriculumReference,
+    Dancelab,
+    Eval,
+    EvaluationMulti,
+    External,
+    ExternalLink,
+    Flappy,
+    FreeResponse,
+    FrequencyAnalysis,
+    Gamelab,
+    GamelabJr,
+    Karel,
+    LevelGroup,
+    Map,
+    Match,
+    Maze,
+    Multi,
+    NetSim,
+    Odometer,
+    Pixelation,
+    PublicKeyCryptography,
+    StandaloneVideo,
+    StarWarsGrid,
+    Studio,
+    TextCompression,
+    TextMatch,
+    Unplugged,
+    Vigenere,
+    Weblab
+  ]
+
   # GET /levels
   # GET /levels.json
   def index
@@ -100,6 +140,8 @@ class LevelsController < ApplicationController
         success_condition: 'function () { return true; }'
       )
     end
+
+    @is_start_mode = type == 'start_blocks'
 
     show
     render :show
@@ -209,7 +251,7 @@ class LevelsController < ApplicationController
   def new
     authorize! :create, Level
     if params.key? :type
-      @type_class = Level.descendants.find {|klass| klass.name == params[:type]}
+      @type_class = LEVEL_CLASSES.find {|klass| klass.name == params[:type]}
       raise "Level type '#{params[:type]}' not permitted" unless @type_class
       if @type_class == Artist
         @game = Game.custom_artist

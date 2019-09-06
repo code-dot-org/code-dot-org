@@ -16,6 +16,10 @@ module Pd::SurveyPipeline
       "82115646319154".to_i => {
         full_name: 'Academic Year 6-12 Workshop Post Survey',
         short_name: 'Post Workshop'
+      },
+      "92125916725157".to_i => {
+        full_name: 'Academic Year 6-12 Workshop Post Survey',
+        short_name: 'Post Workshop'
       }
     }
 

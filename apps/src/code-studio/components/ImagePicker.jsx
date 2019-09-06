@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import {getStore} from '@cdo/apps/redux';
 import AssetManager from './AssetManager';
 import color from '../../util/color';
 import IconLibrary from './IconLibrary';
@@ -95,7 +96,15 @@ export default class ImagePicker extends React.Component {
     }
 
     const disableAudio =
-      this.props.disableAudioRecording || this.props.assetChosen;
+      this.props.disableAudioRecording || !!this.props.assetChosen;
+
+    const reduxState = getStore().getState();
+    let levelName, isStartMode;
+    if (reduxState && reduxState.level) {
+      levelName = reduxState.level.name;
+      isStartMode = reduxState.level.isStartMode;
+    }
+
     const body =
       !this.props.assetChosen || this.state.mode === 'files' ? (
         <AssetManager
@@ -109,6 +118,8 @@ export default class ImagePicker extends React.Component {
           disableAudioRecording={disableAudio}
           imagePicker={true}
           elementId={this.props.elementId}
+          levelName={levelName}
+          isStartMode={isStartMode}
         />
       ) : (
         <IconLibrary assetChosen={this.getAssetNameWithPrefix} />

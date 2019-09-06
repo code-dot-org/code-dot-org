@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import {Table} from 'reactabular';
+import * as Table from 'reactabular-table';
 import Button from '../Button';
 
 export default class CensusInaccuracyReviewTable extends Component {
@@ -32,7 +32,7 @@ export default class CensusInaccuracyReviewTable extends Component {
   };
 
   beginReviewButton = (_value, data) => {
-    if (this.props.resolvedReports.includes(data.rowData.id)) {
+    if (data.rowData.isResolved) {
       return (
         <div style={{textAlign: 'center', verticalAlign: 'middle'}}>
           Review Completed
@@ -58,7 +58,7 @@ export default class CensusInaccuracyReviewTable extends Component {
         label: 'School'
       },
       cell: {
-        format: this.formatSchool
+        formatters: [this.formatSchool]
       }
     },
     {
@@ -67,7 +67,7 @@ export default class CensusInaccuracyReviewTable extends Component {
         label: 'Current Summary'
       },
       cell: {
-        format: this.formatTeachesCs
+        formatters: [this.formatTeachesCs]
       }
     },
     {
@@ -76,7 +76,7 @@ export default class CensusInaccuracyReviewTable extends Component {
         label: "Submitter's comment"
       },
       cell: {
-        format: this.formatComment
+        formatters: [this.formatComment]
       }
     },
     {
@@ -85,7 +85,7 @@ export default class CensusInaccuracyReviewTable extends Component {
         label: 'Action'
       },
       cell: {
-        format: this.beginReviewButton
+        formatters: [this.beginReviewButton]
       }
     }
   ];
@@ -99,6 +99,11 @@ export default class CensusInaccuracyReviewTable extends Component {
     const numReviewed = this.props.resolvedReports.length;
     const numToReview = this.props.reportsToReview.length - numReviewed;
 
+    const decoratedRows = rows.map(row => ({
+      ...row,
+      isResolved: this.props.resolvedReports.includes(row.id)
+    }));
+
     return (
       <div>
         <h3>
@@ -110,7 +115,7 @@ export default class CensusInaccuracyReviewTable extends Component {
           columns={this.columns}
         >
           <Table.Header />
-          <Table.Body rows={rows} rowKey="id" />
+          <Table.Body rows={decoratedRows} rowKey="id" />
         </Table.Provider>
       </div>
     );
