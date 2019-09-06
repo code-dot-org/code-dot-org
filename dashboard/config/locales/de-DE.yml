@@ -44,6 +44,7 @@ de:
           fertigzustellen.
         error:
           future: darf nicht in der Zukunft liegen
+  beta: Beta
   hello: Hallo Welt
   welcome_back: Willkommen zurück, %{name}
   your_professional_learning_plan: Ihr persönlicher Lernplan
