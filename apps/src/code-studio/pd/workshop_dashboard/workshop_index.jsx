@@ -13,7 +13,6 @@ import {
   Organizer,
   CsfFacilitator,
   Facilitator,
-  Partner,
   ProgramManager
 } from './permission';
 import $ from 'jquery';
@@ -54,10 +53,6 @@ export class WorkshopIndex extends React.Component {
 
   handleAttendanceReportsClick = () => {
     this.context.router.push('/reports');
-  };
-
-  handleOrganizerSurveyResultsClick = () => {
-    this.context.router.push('/organizer_survey_results');
   };
 
   handleSurveyResultsClick = () => {
@@ -108,11 +103,6 @@ export class WorkshopIndex extends React.Component {
           {canSeeAttendanceReports && (
             <Button onClick={this.handleAttendanceReportsClick}>
               Attendance Reports
-            </Button>
-          )}
-          {this.props.permission.has(Partner) && (
-            <Button onClick={this.handleOrganizerSurveyResultsClick}>
-              Organizer Survey Results
             </Button>
           )}
           {this.props.permission.hasAny(Facilitator, CsfFacilitator) && (

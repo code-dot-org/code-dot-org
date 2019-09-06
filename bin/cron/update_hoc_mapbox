@@ -33,7 +33,7 @@ def main
     # In order to be placed on the map, all events require an organization name,
     # processed location, and city. With the exception that approved special events
     # don't need a city so we can show events like the Cocos Keeling Islands.
-    next if data['name_s'].nil? || processed_data['location_p'].nil?
+    next if data['organization_name_s'].nil? || processed_data['location_p'].nil?
     next if form[:review] != "approved" && processed_data['location_city_s'].nil?
 
     organization_name =
@@ -42,7 +42,7 @@ def main
       elsif !data['school_name_s'].to_s.strip.empty?
         data['school_name_s']
       else
-        data['name_s']
+        data['organization_name_s']
       end
 
     coordinates = processed_data['location_p'].split(',')

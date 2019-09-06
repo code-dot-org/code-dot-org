@@ -31,6 +31,7 @@ class ScriptDSL < BaseDSL
     @is_stable = nil
     @supported_locales = []
     @pilot_experiment = nil
+    @editor_experiment = nil
     @project_sharing = nil
     @curriculum_umbrella = nil
   end
@@ -58,6 +59,7 @@ class ScriptDSL < BaseDSL
   string :version_year
   string :curriculum_path
   string :pilot_experiment
+  string :editor_experiment
   string :curriculum_umbrella
 
   def teacher_resources(resources)
@@ -120,6 +122,7 @@ class ScriptDSL < BaseDSL
       is_stable: @is_stable,
       supported_locales: @supported_locales,
       pilot_experiment: @pilot_experiment,
+      editor_experiment: @editor_experiment,
       project_sharing: @project_sharing,
       curriculum_umbrella: @curriculum_umbrella
     }
@@ -295,6 +298,7 @@ class ScriptDSL < BaseDSL
     s << 'is_stable true' if script.is_stable
     s << "supported_locales #{script.supported_locales}" if script.supported_locales
     s << "pilot_experiment '#{script.pilot_experiment}'" if script.pilot_experiment
+    s << "editor_experiment '#{script.editor_experiment}'" if script.editor_experiment
     s << 'project_sharing true' if script.project_sharing
     s << "curriculum_umbrella '#{script.curriculum_umbrella}'" if script.curriculum_umbrella
 

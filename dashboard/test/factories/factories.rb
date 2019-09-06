@@ -176,6 +176,15 @@ FactoryGirl.define do
           create :single_user_experiment, min_user_id: teacher.id, name: evaluator.pilot_experiment
         end
       end
+      transient {editor_experiment nil}
+      after(:create) do |teacher, evaluator|
+        if evaluator.editor_experiment
+          create :single_user_experiment, min_user_id: teacher.id, name: evaluator.editor_experiment
+        end
+      end
+      factory :platformization_partner do
+        editor_experiment 'platformization-partners'
+      end
 
       # We have some teacher records in our system that do not pass validation because they have
       # no email address.  Sometimes we want to test against this case because we still want features
@@ -1102,7 +1111,6 @@ FactoryGirl.define do
 
   factory :regional_partner do
     sequence(:name) {|n| "Partner#{n}"}
-    contact {create :teacher}
     group 1
   end
 

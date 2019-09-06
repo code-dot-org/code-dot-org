@@ -18,6 +18,7 @@ import {connect} from 'react-redux';
 import {getColumnNamesFromRecords} from '../firebaseMetadata';
 import PaginationWrapper from '../../templates/PaginationWrapper';
 import msg from '@cdo/locale';
+import experiments from '../../util/experiments';
 
 const MIN_TABLE_WIDTH = 600;
 const MAX_ROWS_PER_PAGE = 500;
@@ -33,7 +34,10 @@ const styles = {
     flexDirection: 'column',
     height: '100%',
     minWidth: MIN_TABLE_WIDTH,
-    maxWidth: '100%'
+    maxWidth: '100%',
+    paddingLeft: experiments.isEnabled(experiments.APPLAB_DATASETS)
+      ? '8px'
+      : '0px'
   },
   table: {
     minWidth: MIN_TABLE_WIDTH
