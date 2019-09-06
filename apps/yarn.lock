@@ -849,10 +849,10 @@
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/@code-dot-org/artist/-/artist-0.2.1.tgz#fcfe7ea5cfb3f19ddb6b912e70e922ba4b7ef0b1"
 
-"@code-dot-org/blockly@3.4.8":
-  version "3.4.8"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/blockly/-/blockly-3.4.8.tgz#625ca646c2f3f5eaf5aa09ef750d8d708a6727c9"
-  integrity sha512-+JnpfQth9FS8I6hqLmHidYFKcgCTnKH26mArP9h1JJZE2vkbOtsBzmCyZGIRYF7lz9zf2JZKE0W5BBhQCEPSug==
+"@code-dot-org/blockly@3.5.1":
+  version "3.5.1"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/blockly/-/blockly-3.5.1.tgz#480d4b2d7c83a148f206d6269cea06dcc3c62f79"
+  integrity sha512-RHpm5wIOaaaNvQOAqrpLNnIyct8jGQ+GLXdpZUUbogcPgxnuDyFiZrBraqnj8tpygfjMVal/Xo93TJIhgW9pwA==
 
 "@code-dot-org/bramble@0.1.26":
   version "0.1.26"
@@ -9599,10 +9599,6 @@ loader-utils@^1.0.1:
     emojis-list "^2.0.0"
     json5 "^1.0.1"
 
-loadjs@^3.3.1:
-  version "3.5.5"
-  resolved "https://registry.yarnpkg.com/loadjs/-/loadjs-3.5.5.tgz#2fbaa981ffdd079e0f8786ea75aeed643483b368"
-
 locate-path@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/locate-path/-/locate-path-2.0.0.tgz#2b568b265eec944c6d9c0de9c3dbbbca0354cd8e"
@@ -12291,7 +12287,7 @@ raf@^3.1.0:
   dependencies:
     performance-now "~0.2.0"
 
-raf@^3.4.0:
+raf@^3.3.0, raf@^3.4.0:
   version "3.4.1"
   resolved "https://registry.yarnpkg.com/raf/-/raf-3.4.1.tgz#0742e99a4a6552f445d73e3ee0328af0ff1ede39"
   dependencies:
@@ -12510,15 +12506,6 @@ react-dom-confetti@^0.0.8:
   dependencies:
     dom-confetti "~0.0.7"
 
-"react-dom@^15.3.2 || ^16":
-  version "16.7.0"
-  resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.7.0.tgz#a17b2a7ca89ee7390bc1ed5eb81783c7461748b8"
-  dependencies:
-    loose-envify "^1.1.0"
-    object-assign "^4.1.1"
-    prop-types "^15.6.2"
-    scheduler "^0.12.0"
-
 react-dom@^16.7.0:
   version "16.8.6"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.8.6.tgz#71d6303f631e8b0097f56165ef608f051ff6e10f"
@@ -12549,15 +12536,12 @@ react-fuzzy@^0.5.2:
     fuse.js "^3.0.1"
     prop-types "^15.5.9"
 
-react-google-charts@~1.5.5:
-  version "1.5.7"
-  resolved "https://registry.yarnpkg.com/react-google-charts/-/react-google-charts-1.5.7.tgz#70d5daf1e362a9ef199576f15e37769185888067"
+react-google-charts@2:
+  version "2.0.29"
+  resolved "https://registry.yarnpkg.com/react-google-charts/-/react-google-charts-2.0.29.tgz#1f07b6cccf6c6b0965a00ae9e50f1d75d48f723d"
+  integrity sha512-VwP4AhNJp24oI7yUq6ItJ+jOPlxjsXTk/QMWWaGLkNInaRoQno4PHSNOebNmvZv97E4rqnJpxPwddhqXcK3R8g==
   dependencies:
-    debug "^2.2.0"
-    loadjs "^3.3.1"
-    prop-types "^15.5.8"
-    react "^15.3.2 || ^16"
-    react-dom "^15.3.2 || ^16"
+    react-load-script "^0.0.6"
 
 react-hot-api@^0.4.5:
   version "0.4.7"
@@ -12612,6 +12596,11 @@ react-lazy-load@~3.0.13:
 react-lifecycles-compat@^3.0.0, react-lifecycles-compat@^3.0.4:
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
+
+react-load-script@^0.0.6:
+  version "0.0.6"
+  resolved "https://registry.yarnpkg.com/react-load-script/-/react-load-script-0.0.6.tgz#db6851236aaa25bb622677a2eb51dad4f8d2c258"
+  integrity sha512-aRGxDGP9VoLxcsaYvKWIW+LRrMOzz2eEcubTS4NvQPPugjk2VvMhow0wWTkSl7RxookomD1MwcP4l5UStg5ShQ==
 
 react-modal@^3.6.1:
   version "3.8.1"
@@ -12754,11 +12743,13 @@ react-split-pane@^0.1.84:
     react-lifecycles-compat "^3.0.4"
     react-style-proptype "^3.0.0"
 
-react-sticky@~5.0.5:
-  version "5.0.8"
-  resolved "https://registry.yarnpkg.com/react-sticky/-/react-sticky-5.0.8.tgz#d5f85f96977f410081d792ab81886c622c5d8b14"
+react-sticky@^6.0.3:
+  version "6.0.3"
+  resolved "https://registry.yarnpkg.com/react-sticky/-/react-sticky-6.0.3.tgz#7a18b643e1863da113d7f7036118d2a75d9ecde4"
+  integrity sha512-LNH4UJlRatOqo29/VHxDZOf6fwbgfgcHO4mkEFvrie5FuaZCSTGtug5R8NGqJ0kSnX8gHw8qZN37FcvnFBJpTQ==
   dependencies:
     prop-types "^15.5.8"
+    raf "^3.3.0"
 
 react-style-proptype@^3.0.0:
   version "3.1.0"
@@ -12854,15 +12845,6 @@ react-with-context@^2.0.0:
   dependencies:
     "@types/react" "^16.0.7"
     react "^15.6.2"
-
-"react@^15.3.2 || ^16":
-  version "16.7.0"
-  resolved "https://registry.yarnpkg.com/react/-/react-16.7.0.tgz#b674ec396b0a5715873b350446f7ea0802ab6381"
-  dependencies:
-    loose-envify "^1.1.0"
-    object-assign "^4.1.1"
-    prop-types "^15.6.2"
-    scheduler "^0.12.0"
 
 react@^15.6.2:
   version "15.6.2"
@@ -13769,13 +13751,6 @@ scandirectory@^2.5.0:
     ignorefs "^1.0.0"
     safefs "^3.1.2"
     taskgroup "^4.0.5"
-
-scheduler@^0.12.0:
-  version "0.12.0"
-  resolved "https://registry.yarnpkg.com/scheduler/-/scheduler-0.12.0.tgz#8ab17699939c0aedc5a196a657743c496538647b"
-  dependencies:
-    loose-envify "^1.1.0"
-    object-assign "^4.1.1"
 
 scheduler@^0.13.6:
   version "0.13.6"
