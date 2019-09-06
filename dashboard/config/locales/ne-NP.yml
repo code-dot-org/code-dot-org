@@ -31,6 +31,7 @@ ne:
         edit_header: खाता जानकारी सम्पादन गर्नुहोस्
         error:
           future: can't be in the future
+  beta: बिटा
   hello: के छ विश्व
   welcome_back: Welcome back, %{name}
   your_professional_learning_plan: Your Professional Learning Plan

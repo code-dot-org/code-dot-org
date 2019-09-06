@@ -1458,3 +1458,9 @@ ne:
               name: Conditionals
             Functions:
               name: Functions
+        peru-2019:
+          stages:
+            Introduction:
+              name: Introduction
+            Nested Loops:
+              name: Nested Loops
