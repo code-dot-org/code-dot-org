@@ -12,11 +12,37 @@ const styles = {
 
 export default class OrganizerFormPart extends React.Component {
   static propTypes = {
-    potential_organizers: PropTypes.array,
-    organizer_id: PropTypes.number,
+    workshopId: PropTypes.number,
+    organizerId: PropTypes.number,
     onChange: PropTypes.func,
     readOnly: PropTypes.bool
   };
+
+  state = {
+    loading: true,
+    potentialOrganizers: null
+  };
+
+  componentWillMount() {
+    this.load(this.props.workshopId);
+  }
+
+  load() {
+    let url = `/api/v1/pd/workshops/${
+      this.props.workshopId
+    }/potential_organizers`;
+
+    $.ajax({
+      method: 'GET',
+      url: url,
+      dataType: 'json'
+    }).done(data => {
+      this.setState({
+        loading: false,
+        potentialOrganizers: data
+      });
+    });
+  }
 
   renderOrganizerOption(organizer) {
     return (
@@ -27,9 +53,14 @@ export default class OrganizerFormPart extends React.Component {
   }
 
   render() {
-    const organizerOptions = this.props.potential_organizers.map(o =>
-      this.renderOrganizerOption(o)
-    );
+    let organizerOptions;
+    if (this.state.potentialOrganizers) {
+      organizerOptions = this.state.potentialOrganizers.map(o =>
+        this.renderOrganizerOption(o)
+      );
+    } else {
+      organizerOptions = [];
+    }
     return (
       <div>
         <h3>Organizer (admin)</h3>
@@ -37,7 +68,7 @@ export default class OrganizerFormPart extends React.Component {
           <Col sm={8}>
             <select
               className="form-control"
-              value={this.props.organizer_id}
+              value={this.props.organizerId}
               onChange={this.props.onChange}
               disabled={this.props.readOnly}
               style={this.props.readOnly && styles.readOnlyInput}
