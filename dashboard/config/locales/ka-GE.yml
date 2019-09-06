@@ -38,6 +38,7 @@ ka:
         edit_header: ანგარიშის მონაცემების შესწორება
         error:
           future: არ შეიძლება იყოს მომავალში
+  beta: ბეტა-ვერსია
   hello: ჰეი, სამყარო
   welcome_back: კარგია, რომ დაბრუნდით, %{name}
   your_professional_learning_plan: თქვენი პროფესიონალური სასწავლო გეგმა
