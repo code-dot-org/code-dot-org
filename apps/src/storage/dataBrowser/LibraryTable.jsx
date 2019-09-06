@@ -17,7 +17,10 @@ const styles = {
     fontFamily: '"Gotham 4r", sans-serif',
     fontSize: '14px',
     padding: '1px 7px 2px',
-    height: '30px'
+    height: '30px',
+    width: '95px',
+    margin: 10,
+    marginLeft: 0
   },
   import: {
     backgroundColor: color.orange,
@@ -26,10 +29,13 @@ const styles = {
     fontSize: '14px',
     color: color.white,
     padding: '1px 7px 2px',
-    height: '30px'
+    height: '30px',
+    width: '95px',
+    margin: 10,
+    marginRight: 0
   },
   collapsibleContainer: {
-    paddingLeft: '8px'
+    paddingLeft: '16px'
   },
   lastUpdated: {
     fontFamily: '"Gotham 4r", sans-serif',
@@ -63,7 +69,7 @@ class LibraryTable extends React.Component {
     return (
       <div>
         <a style={styles.tableName} onClick={this.toggleCollapsed}>
-          <FontAwesome icon={icon} />
+          <FontAwesome className="fa fa-fw" icon={icon} />
           <span>{this.props.name}</span>
         </a>
         {!this.state.collapsed && (
@@ -73,12 +79,14 @@ class LibraryTable extends React.Component {
               <span style={styles.lastUpdatedTime}> 8 hours ago</span>
             </div>
             <div>{this.props.description}</div>
-            <button style={styles.preview} type="button">
-              {msg.preview()}
-            </button>
-            <button style={styles.import} type="button">
-              {msg.import()}
-            </button>
+            <div>
+              <button style={styles.preview} type="button">
+                {msg.preview()}
+              </button>
+              <button style={styles.import} type="button">
+                {msg.import()}
+              </button>
+            </div>
           </div>
         )}
       </div>

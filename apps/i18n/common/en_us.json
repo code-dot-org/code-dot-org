@@ -363,6 +363,7 @@
   "dataTableHeader": "DATA TABLES",
   "dataTableNamePlaceholder": "Table name",
   "dataLibraryHeader": "Data Library",
+  "dataLibraryDescription": "Find and import tables of real data from the Code.org library.",
   "dataWorkspaceHeader": "Data Browser",
   "dateUpdatedByTeacher": "Date Updated By Teacher",
   "debugConsoleHeader": "Debug Console",

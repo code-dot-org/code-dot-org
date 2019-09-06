@@ -25,7 +25,7 @@ const styles = {
     color: color.cyan
   },
   collapsibleContainer: {
-    paddingLeft: '8px'
+    paddingLeft: '16px'
   }
 };
 
@@ -50,7 +50,7 @@ class LibraryCategory extends React.Component {
     return (
       <div>
         <a style={styles.categoryName} onClick={this.toggleCollapsed}>
-          <FontAwesome icon={icon} />
+          <FontAwesome className="fa fa-fw" icon={icon} />
           <span>{this.props.name}</span>
           <span style={styles.tableNumber}>
             {this.props.datasets.length}{' '}
