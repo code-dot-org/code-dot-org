@@ -245,6 +245,7 @@ export default class CensusMapReplacement extends Component {
         layout: {
           'icon-image': 'marker-15-green',
           'icon-allow-overlap': true,
+          // Increase the icon size as we zoom in
           'icon-size': ['interpolate', ['linear'], ['zoom'], 1, 0.7, 14, 1.6]
         },
         filter: [
