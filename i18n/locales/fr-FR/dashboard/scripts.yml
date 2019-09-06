@@ -2997,7 +2997,19 @@ fr:
               name: Vitesse
             Functions:
               name: fonctions
+            Shapes and Parameters:
+              name: Formes et paramètres
+            Random Numbers:
+              name: Nombres aléatoires
+            Sprite Properties:
+              name: Propriétés du sprite
         csl-vn:
           stages:
             Loops in Ice Age:
               name: Boucles dans l'Âge de Glace
+        peru-2019:
+          stages:
+            Introduction:
+              name: Introduction
+            Nested Loops:
+              name: Boucles imbriquées
