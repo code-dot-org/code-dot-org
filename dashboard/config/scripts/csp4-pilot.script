@@ -73,7 +73,6 @@ level 'U4 L07 Conditionals Practice 5', progression: 'If-Statements'
 level 'U4 L07 Conditionals Practice 6', progression: 'If-Statements'
 level 'U4 L07 Conditionals Practice 7', progression: 'Logical Operators'
 level 'U4 L07 Conditionals Practice 8', progression: 'Logical Operators'
-level 'U4 L07 Conditionals Practice 9', progression: 'Logical Operators'
 level 'U4L10 CFU Conditionals Psuedocode', progression: 'Check For Understanding: AP Practice', assessment: true
 
 stage 'Conditional Make', flex_category: 'csp_conditionals'
@@ -104,6 +103,7 @@ level 'Debugging Variable Scope and Functions', progression: 'Function Scope'
 level 'U4 L10 Functions Scope Practice 1 v2', progression: 'Function Scope'
 level 'When to Make Functions Map', progression: 'When to Declare Functions'
 level 'U4 L10 Making Functions Practice', progression: 'When to Declare Functions'
+level 'U4L10 CFU Functions Psuedocode', progression: 'Check For Understanding: AP Practice', assessment: true
 
 stage 'Functions Make', flex_category: 'csp_functions'
 level 'CSP U4L11 SFLP 20-21', progression: 'Lesson Overview'
