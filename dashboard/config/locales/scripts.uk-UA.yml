@@ -1975,3 +1975,9 @@ uk:
           stages:
             Loops in Ice Age:
               name: Петлі в Ice Age
+        peru-2019:
+          stages:
+            Introduction:
+              name: Вступ
+            Nested Loops:
+              name: Вкладені цикли
