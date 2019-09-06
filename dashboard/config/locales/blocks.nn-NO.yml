@@ -660,16 +660,9 @@ nn:
         text: når {SPRITE} klikkes på
       gamelab_comment:
         text: 'kommentar: {COMMENT}'
-      gamelab_console.log:
-        text: loggmelding {MESSAGE}
       gamelab_createNewSprite:
         text: "lag en ny sprite \n kalt {NAME} \n med kostyme {COSTUME} \n plassert
           {LOCATION}"
-      gamelab_debugSprite:
-        options:
-          VAL:
-            'true': sann
-            'false': usann
       gamelab_destroy:
         text: slett {THIS}
       gamelab_draggable:
@@ -795,7 +788,6 @@ nn:
             '"x"': x-posisjon
             '"y"': y-posisjon
             '"direction"': retninga til rørsla
-            '"tint"': farge
       gamelab_setSizes:
         text: sett {SPRITE} {PROPERTY} til {N} %
         options:
@@ -826,13 +818,6 @@ nn:
             '"w"': w
             '"s"': s
             '"d"': d
-      gamelab_whenPressedAndReleased:
-        options:
-          DIR:
-            "'up'": opp
-            "'down'": ned
-            "'left'": venstre
-            "'right'": høgre
       gamelab_whileKey:
         options:
           KEY:
