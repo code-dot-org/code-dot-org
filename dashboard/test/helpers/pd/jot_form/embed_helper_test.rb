@@ -12,7 +12,7 @@ module Pd
           "https://form.jotform.com/#{form_id}?firstQuestion=answer+1&amp;secondQuestion=answer+2&amp;withPlus=a%7BplusSign%7Db"
 
         assert_equal(
-          "<iframe id=\"JotFormIFrame-#{form_id}\" onload=\"window.parent.scrollTo(0,0)\" allowtransparency=\"true\" allowfullscreen=\"allowfullscreen\" allow=\"geolocation; microphone; camera\" src=\"#{expected_src}\" frameborder=\"0\" style=\"width: 1px; min-width: 100%; height:539px; border:none;\" scrolling=\"no\"></iframe>",
+          "<iframe id=\"JotFormIFrame-#{form_id}\" onload=\"window.parent.scrollTo(0,0)\" allowtransparency=\"true\" allowfullscreen=\"allowfullscreen\" allow=\"geolocation; microphone; camera\" sandbox=\"allow-forms allow-same-origin allow-scripts allow-top-navigation\" src=\"#{expected_src}\" frameborder=\"0\" style=\"width: 1px; min-width: 100%; height:539px; border:none;\" scrolling=\"no\"></iframe>",
           embed_tag
         )
       end

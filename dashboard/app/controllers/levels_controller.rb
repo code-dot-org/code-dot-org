@@ -16,6 +16,46 @@ class LevelsController < ApplicationController
 
   LEVELS_PER_PAGE = 100
 
+  # All level types that can be requested via /levels/new
+  LEVEL_CLASSES = [
+    Applab,
+    Artist,
+    Bounce,
+    BubbleChoice,
+    Calc,
+    ContractMatch,
+    Craft,
+    CurriculumReference,
+    Dancelab,
+    Eval,
+    EvaluationMulti,
+    External,
+    ExternalLink,
+    Flappy,
+    FreeResponse,
+    FrequencyAnalysis,
+    Gamelab,
+    GamelabJr,
+    Karel,
+    LevelGroup,
+    Map,
+    Match,
+    Maze,
+    Multi,
+    NetSim,
+    Odometer,
+    Pixelation,
+    PublicKeyCryptography,
+    StandaloneVideo,
+    StarWarsGrid,
+    Studio,
+    TextCompression,
+    TextMatch,
+    Unplugged,
+    Vigenere,
+    Weblab
+  ]
+
   # GET /levels
   # GET /levels.json
   def index
@@ -101,6 +141,8 @@ class LevelsController < ApplicationController
       )
     end
 
+    @is_start_mode = type == 'start_blocks'
+
     show
     render :show
   end
@@ -182,8 +224,14 @@ class LevelsController < ApplicationController
     params[:level][:maze_data] = params[:level][:maze_data].to_json if type_class <= Grid
     params[:user] = current_user
 
+    create_level_params = level_params
+
+    # Give platformization partners permission to edit any levels they create.
+    editor_experiment = Experiment.get_editor_experiment(current_user)
+    create_level_params[:editor_experiment] = editor_experiment if editor_experiment
+
     begin
-      @level = type_class.create_from_level_builder(params, level_params)
+      @level = type_class.create_from_level_builder(params, create_level_params)
     rescue ArgumentError => e
       render(status: :not_acceptable, text: e.message) && return
     rescue ActiveRecord::RecordInvalid => invalid
@@ -203,7 +251,7 @@ class LevelsController < ApplicationController
   def new
     authorize! :create, Level
     if params.key? :type
-      @type_class = Level.descendants.find {|klass| klass.name == params[:type]}
+      @type_class = LEVEL_CLASSES.find {|klass| klass.name == params[:type]}
       raise "Level type '#{params[:type]}' not permitted" unless @type_class
       if @type_class == Artist
         @game = Game.custom_artist

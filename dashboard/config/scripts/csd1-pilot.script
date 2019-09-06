@@ -5,8 +5,7 @@ student_detail_progress_view true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csd-19/unit1"], ["teacherForum", "https://forum.code.org/c/csd1"], ["vocabulary", "https://curriculum.code.org/csd-19/unit1/vocab/"], ["standardMappings", "https://curriculum.code.org/csd-19/unit1/standards/"]]
 has_verified_resources true
 has_lesson_plan true
-curriculum_path 'https://curriculum.code.org/csd-19/unit1/{LESSON}'
-family_name ''
+curriculum_path 'https://curriculum.code.org/csd-20/unit1/{LESSON}'
 pilot_experiment 'csd-piloters'
 project_sharing true
 curriculum_umbrella 'CSD'

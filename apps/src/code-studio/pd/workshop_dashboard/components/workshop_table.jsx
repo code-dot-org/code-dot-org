@@ -4,7 +4,8 @@
 import _, {orderBy} from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
-import {Table, sort} from 'reactabular';
+import * as Table from 'reactabular-table';
+import * as sort from 'sortabular';
 import color from '@cdo/apps/util/color';
 import SessionTimesList from './session_times_list';
 import FacilitatorsList from './facilitators_list';
@@ -107,7 +108,7 @@ export default class WorkshopTable extends React.Component {
           label: 'Manage'
         },
         cell: {
-          format: this.formatManagement
+          formatters: [this.formatManagement]
         }
       },
       {
@@ -117,7 +118,7 @@ export default class WorkshopTable extends React.Component {
           transforms: [sortable]
         },
         cell: {
-          format: this.formatSessions
+          formatters: [this.formatSessions]
         }
       },
       {
@@ -134,7 +135,7 @@ export default class WorkshopTable extends React.Component {
           transforms: [sortable]
         },
         cell: {
-          format: this.formatBoolean
+          formatters: [this.formatBoolean]
         }
       },
       {
@@ -144,7 +145,7 @@ export default class WorkshopTable extends React.Component {
           transforms: [sortable]
         },
         cell: {
-          format: this.formatBoolean
+          formatters: [this.formatBoolean]
         }
       },
       {
@@ -177,7 +178,7 @@ export default class WorkshopTable extends React.Component {
           label: 'Organizer'
         },
         cell: {
-          format: this.formatOrganizer
+          formatters: [this.formatOrganizer]
         }
       });
     }
@@ -189,7 +190,7 @@ export default class WorkshopTable extends React.Component {
           label: 'Facilitators'
         },
         cell: {
-          format: this.formatFacilitators
+          formatters: [this.formatFacilitators]
         }
       },
       {
@@ -220,7 +221,7 @@ export default class WorkshopTable extends React.Component {
           label: 'Signup Url'
         },
         cell: {
-          format: this.formatSignupUrl
+          formatters: [this.formatSignupUrl]
         }
       });
     }
@@ -296,7 +297,7 @@ export default class WorkshopTable extends React.Component {
           state === 'Ended' ||
           ([CSD, CSP].includes(course) &&
             subject !== SubjectNames.SUBJECT_FIT) ||
-          (course === CSF && subject === 'Deep Dive')
+          (course === CSF && subject === SubjectNames.SUBJECT_CSF_201)
         }
       />
     );

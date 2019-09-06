@@ -45,8 +45,13 @@ module Cdo
     private
 
     # Stores a reference to a secret so it can be resolved later.
-    Secret = Struct.new(:key)
+    Secret = Struct.new(:key) do
+      def to_s
+        "${#{key}}"
+      end
+    end
 
+    SECRET_REGEX = /\${(.*)}/
     YAML.add_domain_type('', 'Secret') {Secret.new}
 
     # Processes `Secret` references in the provided config hash.
@@ -64,13 +69,19 @@ module Cdo
         Cdo::Secrets.new(logger: log)
       end
 
-      table.select {|_k, v| v.is_a?(Secret)}.each do |key, secret|
-        table[key] = cdo_secrets.lazy(secret.key, raise_not_found: true)
+      table.select {|_k, v| v.to_s.match(SECRET_REGEX)}.each do |key, value|
+        cdo_secrets.required(*value.to_s.scan(SECRET_REGEX).flatten)
+        table[key] = Cdo.lazy do
+          value.is_a?(Secret) ?
+            cdo_secrets.get!(value.key) :
+            value.to_s.gsub(SECRET_REGEX) {cdo_secrets.get!($1)}
+        end
+
+        # Replace lazy references to the underlying object on first access,
+        # in order to support 'falsey' (false / nil) values.
         define_singleton_method(key) do
-          # Replace lazy references to the underlying object on first access,
-          # in order to support 'falsey' (false / nil) values.
           val = @table[key]
-          val = @table[key] = val.__getobj__ if val.respond_to?(:__getobj__)
+          val = @table[key] = val.__getobj__ if val.is_a?(Cdo::Lazy)
           val
         end
       end

@@ -1,5 +1,4 @@
 student_detail_progress_view true
-family_name ''
 
 stage 'Intro to AppLab - Choose Your Own Adventure'
 level 'AppLab Intro 1 - Welcome', progression: 'Welcome to App Lab!'

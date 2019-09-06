@@ -1,5 +1,4 @@
 login_required true
-family_name ''
 
 stage 'CSD Workshop 1 Bugs'
 level 'CSD-PL AYWS1 Debugging Intro', named: true

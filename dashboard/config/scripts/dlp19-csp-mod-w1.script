@@ -2,7 +2,6 @@ professional_learning_course 'CS Principles Deeper Learning 2019 - 2020'
 peer_reviews_to_complete 6
 login_required true
 student_detail_progress_view true
-family_name ''
 
 stage 'Deeper Learning Overview', flex_category: 'required'
 level 'dlp19_overview1', progression: 'Background'
