@@ -32,6 +32,7 @@ nl:
         finish_sign_up_subheader_provider: 'Vul de volgende informatie in om het aanmaken van een Code.org-account met <strong>%{provider}</strong> voor <strong>%{email}</strong> te voltooien.'
         error:
           future: kan niet in de toekomst
+  beta: "beta"
   hello: "Hallo wereld"
   welcome_back: "Welkom terug, %{name}"
   your_professional_learning_plan: "Jouw professionele leerplan"
