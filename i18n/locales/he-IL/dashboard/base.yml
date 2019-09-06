@@ -312,6 +312,7 @@ he:
       district_dashboard: 'לוח ניהול מחוזי'
       label: 'היי %{username}'
       stats: 'ההתקדמות שלי'
+      my_projects: 'הפרויקטים שלי'
       settings: 'החשבון שלי'
       logout: 'התנתק'
       signin: 'התחבר'

@@ -451,6 +451,7 @@ nl:
         CSF_loops_AB: Lussen
         csd_pair_programming: Programmeren in Tweetallen
         csd_applab_parameters: Functies met Parameters
+        csd_debugging: Foutopsporing
     callout:
       text:
         drag_blocks: Sleep een "vooruit" blok en plak het onder het andere blok

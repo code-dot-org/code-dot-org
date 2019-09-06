@@ -247,10 +247,10 @@ it-IT:
         per fare in modo che l'alieno gironzoli qua e là.
       Dance Party 2_2019: Cambia il comportamento nel blocco `___begins___` (_inizia_)
         per fare in modo che all'inizio l'alieno gironzoli qua e là.
-      Dance Party 3: Crea un nuovo personaggio chiamato `alien2`.  Fagli fare un passo
-        di danza diverso ogni volta che ci clicchi sopra.
-      Dance Party 3_2019: Crea un nuovo personaggio chiamato `alien2`.  Fagli fare
-        un passo di danza diverso ogni volta che ci clicchi sopra.
+      Dance Party 3: 'Crea un nuovo personaggio chiamato `alien2`, poi fagli fare
+        un passo di danza a tua scelta ogni volta che ci clicchi sopra.  '
+      Dance Party 3_2019: 'Crea un nuovo personaggio con l''aspetto di un alieno rosa.
+        Fagli fare un passo di danza a tua scelta ogni volta che ci clicchi sopra.  '
       Dance Party 4: Crea un terzo personaggio chiamato `alien3` e posiziona tutti
         gli alieni lungo una linea retta.
       Dance Party 4_2019: Crea un terzo personaggio chiamato `alien3` e posiziona
@@ -736,7 +736,8 @@ it-IT:
       Virtual Pet 6: Aggiungi una mela che riporti la giraffa alla sua dimensione
         originale quando si toccano.
       Virtual Pet 8_2019: 'Tempo di giocare: Cos''altro puoi far fare alla tua giraffa? '
-      Virtual Pet Freeplay: 'Tempo di giocare: Cos''altro puoi far fare alla tua giraffa? '
+      Virtual Pet Freeplay: "**Tempo di giocare**: Cos'altro puoi far fare alla tua
+        giraffa? "
       'Widget: Text Compression': Cerca modelli (parole o frasi ripetute) nel testo.
         Inserisci i modelli che vedi nel dizionario in alto a destra. Come inserisci
         le voci nel dizionario, il simbolo per la voce è inserito nel testo al posto
@@ -1177,11 +1178,8 @@ it-IT:
         di lavoro e prova a vedere cosa succede!
       courseA_playLab_events1_2018: Questo è il Laboratorio. Metti dei blocchi nell'area
         di lavoro e prova a vedere cosa succede!
-      courseA_playLab_events1_2019: Questo è il Laboratorio. Metti dei blocchi nell'area
-        di lavoro e prova a vedere cosa succede!
       courseA_playLab_events2: Il cane vuole dire "Ciao!" Riesci ad aiutarlo?
       courseA_playLab_events2_2018: Il cane vuole dire "Ciao!" Riesci ad aiutarlo?
-      courseA_playLab_events2_2019: Il cane vuole dire "Ciao!" Riesci ad aiutarlo?
       courseA_playLab_events3: Aggancia il blocco `sposta il cane a sinistra` al blocco
         verde dell'evento `quando si preme la freccia sinistra` che si trova già nell'area
         di lavoro.

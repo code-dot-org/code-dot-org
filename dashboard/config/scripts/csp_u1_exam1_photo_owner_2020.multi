@@ -1,0 +1,17 @@
+name 'csp-u1-exam1-photo-owner_2020'
+height 'auto'
+
+question 'Arman takes a picture with his smartphone which he subsequently posts online. Beatrice finds the picture online and posts a copy of it on her website with an attached Creative Commons license. Which of the following best describes who owns the photo?'
+wrong ‘Beatrice owns the photo because only holders of a Creative Commons license can own works online.’
+right ‘Arman owns the photo because he was the original creator and did not license the work.’
+wrong ‘Arman owns the photo because it was granted a Creative Commons license by another person online.’
+wrong ‘Both own the photo because creating a copy makes it her intellectual property.’
+
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN
+
+markdown <<MARKDOWN
+
+MARKDOWN

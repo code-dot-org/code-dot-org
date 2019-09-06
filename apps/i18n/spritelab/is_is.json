@@ -1,3 +1,26 @@
 {
-  "shareGame": "Deildu leiknum þínum:"
+  "errorLoadingAnimation": "Við virðumst vera í vandræðum með að hlaða inn hreyfimyndina þína \"{animationName}\". Gættu þess að netsambandið sé í lagi og prófaðu að hlaða síðunni inn aftur. Ef þetta vandamál heldur áfram er hugsanlegt að hreyfimyndin virki ekki. Í því tilfelli, gætir þú þurft að fjarlægja hreyfimyndina til að halda áfram.",
+  "reinfFeedbackMsg": "Þú hefur lokið þessu! Smelltu á \"Áfram\" til að fara í næsta áfanga.",
+  "shareGame": "Deildu leiknum þínum:",
+  "spritelabFeedbackCreateFishWithBehavior": "Þú þarft að búa til minnst einn fiskakvika og gefa honum hegðun.",
+  "spritelabFeedbackMoveFishLeftRight": "Fiskakvikinn þinn þarf að hreyfast til vinstri og hægri. Prófaðu að breyta hegðun hans.",
+  "spritelabFeedbackChangeBackgroundColor": "Þú þarft að breyta bakgrunninum í eitthvað annað en hvítt.",
+  "spritelabFeedbackCreateTwoSprites": "Þú þarft að búa til nákvæmlega tvo kvika.",
+  "spritelabFeedbackTwoSpritesWithCostumes": "Kvikarnir þínir tveir þurfa mismunandi búninga.",
+  "spritelabFeedbackTwoSpritesWithCostumesAndBehaviors": "Þú þarft að búa til tvo kvika í mismunandi búningum sem hvor hefur hegðun.",
+  "spritelabFeedbackClickSprite": "Gættu þess að smella á kvikann eftir að hafa ýtt á `Keyra`.",
+  "spritelabFeedbackUseSpinningBehavior": "Kvikinn þinn þarf að byrja að snúast. Reyndu að breyta hegðun hans.",
+  "spritelabFeedbackPinkAlienBehavior": "Bleiki geimverukvikinn þinn byrjaði ekki hegðun.",
+  "spritelabFeedbackCreateThreeAliens": "Þú þarft að búa til bláa geimveru, bleika geimveru og gula geimveru.",
+  "spritelabFeedbackAliensNotInLine": "Geimverukvikarnir þínir þrir þurfa að vera í láréttri röð (innan 50 díla).",
+  "spritelabFeedbackYellowAlienBehavior": "Gula geimveran byrjaði ekki hegðun sína.",
+  "spritelabFeedbackNoAlienColor": "Minnst ein af geimverunum skipti ekki um lit.",
+  "spritelabFeedbackNeedAlienStopBehavior": "Geimuverukvikarnir þínir þurfa að stöðva hverja hegðun sína.",
+  "spritelabFeedbackBlueAlienBehavior": "Bláa geimveran þín þarf að byrja nýja hegðun.",
+  "spritelabFeedbackUseCostume": "Þú þarft að nota minnst einn búning.",
+  "spritelabFeedbackThreeSpritesWithCostumes": "Þú þarft að búa til þrjá kvika með mismunandi búninga.",
+  "spritelabFeedbackMoveUpNotDown": "Kvikinn þinn þarf að færast upp (norður) í staðinn fyrir niður (suður).",
+  "spritelabFeedbackRobotFasterThanRover": "Vélmennið náði vinstri brún skjámyndarinnar á undan fjórhjólinu.",
+  "spritelabFeedbackDifferentStarRotation": "Kvikar með báða stjörnubúningana þurfa að snúast jafnmikið.",
+  "spritelabFeedbackAstronautMoveToCorner": "Geimfarakvikinn þarf að færast í eitt af fjórum hornunum."
 }

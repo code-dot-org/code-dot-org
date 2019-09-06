@@ -1,31 +1,35 @@
 ---
-title: <%= hoc_s(:title_resources).inspect %>
+title: Materiały
 layout: wide
 nav: promote_nav
 ---
-<%= view :signup_button %>
+
+{{ signup_button }}
 
 <link rel="stylesheet" type="text/css" href="/css/promote-page.css"></link>
 
 # Promuj Godzinę Kodowania
 
-### Find all the resources you need to bring attention to your Hour of Code. Not sure where to begin? Start with our [how-to guide for hosting an Hour of Code](<%= resolve_url('/how-to') %>)!
+### Find all the resources you need to bring attention to your Hour of Code. Not sure where to begin? Start with our [how-to guide for hosting an Hour of Code]({{ how_to_url }})!
 
 * * *
 
-<%= view :promote_handouts %> <%= view :promote_videos %>
+{{ view :promote_handouts }} {{ view :promote_videos }}
 
 <a id="posters"></a>
 
-## Hang these posters in your school
+## Powieś te plakaty w twojej szkole
 
-<%= view :promote_new_posters %>
+Nowy zestaw plakatów jest dostępny, gościnnie występują na nich Malala, Stephen Curry, Shakira i wielu innych! W tym roku, każdy zestaw dostarczany jest jako 6 plakatów i 126 naklejek "I did the Hour of Code". Zasoby są limitowane, więc [ zamów swoje plakaty](https://smile.amazon.com/Code-Hour-Poster-Set-2018/dp/B07J6T18DH) szybko. To print on your own, simply click an image below to view and save a printable version.
 
-Looking for our posters from previous years? [Find them here](<%= resolve_url('/promote/previous-posters') %>)!
+{{ view :promote_new_posters }}
+
+* Want to download smaller versions of these posters? <a href="https://www.dropbox.com/sh/8dqt7p9ioc4hnmu/AABQfTWLTPVh2Kgy32PSvLU3a?dl=0" target="_blank">Download them here</a>.
+* Looking for our posters from previous years? [Find them here]({{ promote/previous_posters_url }})!
 
 <a id="social"></a>
 
-## Post these on social media
+## Opublikuj w mediach społecznościowych
 
 [![obraz](/images/social-media/fit-250/social-1.png)](/images/social-media/social-1.png)&nbsp;&nbsp;&nbsp;&nbsp; [![obraz](/images/social-media/fit-250/social-2.png)](/images/social-media/social-2.png)&nbsp;&nbsp;&nbsp;&nbsp; [![obraz](/images/social-media/fit-250/social-3.png)](/images/social-media/social-3.png)&nbsp;&nbsp;&nbsp;&nbsp;
 
@@ -35,25 +39,25 @@ Looking for our posters from previous years? [Find them here](<%= resolve_url('/
 
 <a id="logo"></a>
 
-## Use the Hour of Code logo to spread the word
+## Użyj logo Godziny Kodowania aby szerzyć nowinę
 
-[![obraz](<%= localized_image('/images/fit-200/hour-of-code-logo.png') %>)](%= localized_image('/images/hour-of-code-logo.png') %)
+[![obraz]({{ hoc_logo_fit_200 }})]({{ hoc_logo }})
 
 [Download hi-res versions](http://images.code.org/share/hour-of-code-logo.zip)
 
 **"Hour of Code" is trademarked. We don't want to prevent its usage, but we want to make sure it fits within a few limits:**
 
-1. Wszelkie odniesienia do "Godziny Kodowania" powinny być stosowane w sposób, który nie sugeruje, że jest to twoja własna marka, ale odnosi się do Godziny Kodowania jako inicjatywy społecznej. **Good example**: "Participate in the Hour of Code™ at ACMECorp.com." **Bad example**: "Try Hour of Code by ACME Corp."
-2. Use a "TM" superscript in the most prominent places you mention "Hour of Code," both on your web site and in app descriptions.
-3. Include language on your page (or in the footer), including links to the CSEdWeek and [Code.org](%= resolve_url('https://code.org') %) websites, that says the following:
+1. Wszelkie odniesienia do "Godziny Kodowania" powinny być stosowane w sposób, który nie sugeruje, że jest to twoja własna marka, ale odnosi się do Godziny Kodowania jako inicjatywy społecznej. **Przykład dobrego użycia**: "Dołącz do Godziny Kodowania™ w ACMECorp.com." **Przykład złego użycia**: "Wypróbuj Godzinę Kodowania od ACME Corp."
+2. Używaj znaku "TM" jako indeksu górnego po frazie "Godzina Kodowania" w najbardziej znaczących miejscach, zarówno na twojej stronie internetowej jak i opisach aplikacji.
+3. Include language on your page (or in the footer), including links to the CSEdWeek and [Code.org]({{ codeorg_link }}) websites, that says the following:
     
-    *“The 'Hour of Code™' is a nationwide initiative by Computer Science Education Week [csedweek.org] and Code.org [code.org] to introduce millions of students to one hour of computer science and computer programming.”*
+    *"Godzina Kodowania™'"jest międzynarodową inicjatywą Computer Science Education Week [csedweek.org] i Code.org [code.org], która wprowadza jedną godzinę informatyki i programowania milionom uczniów*
 
 4. Zakaz używania frazy "Godzina Kodowania" w nazwach aplikacji.
 
 <a id="stickers"></a>
 
-## Print these stickers to give to your students
+## Wydrukuj te naklejki i daj je swoim uczniom
 
 (Stickers are 1" diameter, 63 per sheet) <br />
 
@@ -61,15 +65,15 @@ Looking for our posters from previous years? [Find them here](<%= resolve_url('/
 
 <a id="sample-emails"></a>
 
-## Invite people in your community to your Hour of Code and promote your event through email
+## Zaproś ludzi z twojego otoczenia na twoją " Godzinę Kodowania" i promuj swoje akcje przez email
 
-### Find [more information and language you can use](<%= resolve_url('/promote/stats') %>) when talking about the Hour of Code.
+### Find [more information and language you can use]({{ promote/stats_url }}) when talking about the Hour of Code.
 
 * * *
 
 <a id="email"></a>
 
-### Ask your school, employer, or friends to sign up:
+### Namów do rejestracji znajomych ze szkoły lub pracy: 
 
 **Subject line:** Join me and over 100 million students for an Hour of Code <br />
 
@@ -77,23 +81,23 @@ Computers are everywhere, changing every industry on the planet. But only 35% of
 
 Dzięki Godzinie Kodowania, zajęcia informatyki pojawiły się na stronach domowych Google, MSN, Yahoo! Ponad 100 partnerskich firm wsparło tę inicjatywę. Every Apple Store in the world has hosted an Hour of Code, and leaders like President Obama and Canadian Prime Minister Justin Trudeau wrote their first lines of code as part of the campaign.
 
-This year, let's make it even bigger. I’m asking you to join the Hour of Code <%= campaign_date('year') %>. Please get involved with an Hour of Code event during Computer Science Education Week, <%= campaign_date('full') %>.
+This year, let's make it even bigger. I’m asking you to join the Hour of Code {{ campaign_date/year }}. Please get involved with an Hour of Code event during Computer Science Education Week, {{ campaign_date/full }}.
 
 Get the word out. Host an event. Ask a local school to sign up. Or try the Hour of Code yourself—everyone can benefit from learning the basics.
 
-Get started at http://hourofcode.com/<%= @country %> <br />
+Get started at http://hourofcode.com/{{ country }} <br />
 
 * * *
 
 <a id="help-schools"></a>
 
-### Volunteer at a school:
+### Wolontariusz w szkole:
 
-#### [Find more resources and information about volunteering in schools here](<%= resolve_url('/how-to/volunteers') %>).
+#### [Find more resources and information about volunteering in schools here]({{ how_to_volunteers_url }}).
 
 **Subject line:** Can we help you host an Hour of Code?
 
-Between <%= campaign_date('short') %>, ten percent of students around the world will celebrate Computer Science Education Week by doing an Hour of Code at their school. It’s an opportunity for every child to learn how the technology around us works.
+Between {{ campaign_date/short }}, ten percent of students around the world will celebrate Computer Science Education Week by doing an Hour of Code at their school. It’s an opportunity for every child to learn how the technology around us works.
 
 [Our organization/My name] would love to help [school name] run an Hour of Code event. We can help teachers host an Hour of Code in their classrooms (we don’t even need computers!) or if you would like to host a school assembly, we can arrange for a speaker to talk about how technology works and what it’s like to be a software engineer.
 
@@ -107,7 +111,7 @@ You can read more about the event at http://hourofcode.com. Or, let us know if y
 
 <a id="parents"></a>
 
-### Tell parents about your school's event:
+### Poinformuj rodziców o wydarzeniu w twojej szkole:
 
 **Subject line:** Our students are changing the future with an Hour of Code
 
@@ -117,19 +121,19 @@ We live in a world surrounded by technology. And we know that whatever field our
 
 But only a tiny fraction of us are learning **how** technology works. Only 35% of all high schools teach computer science.
 
-That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (<%= campaign_date('full') %>). More than 100 million students worldwide have already tried an Hour of Code. Our Hour of Code is making a statement that [SCHOOL NAME] is ready to teach these foundational 21st-century skills. To continue bringing programming activities to your students, we want to make our Hour of Code event huge. I encourage you to volunteer, reach out to local media, share the news on social media channels and consider hosting additional Hour of Code events in the community.
+That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week ({{ campaign_date/full }}). More than 100 million students worldwide have already tried an Hour of Code. Our Hour of Code is making a statement that [SCHOOL NAME] is ready to teach these foundational 21st-century skills. To continue bringing programming activities to your students, we want to make our Hour of Code event huge. I encourage you to volunteer, reach out to local media, share the news on social media channels and consider hosting additional Hour of Code events in the community.
 
 This is a chance to change the future of education in [TOWN/CITY NAME].
 
-See http://hourofcode.com/<%= @country %> for details, and help spread the word. <br />
+See http://hourofcode.com/{{ country }} for details, and help spread the word. <br />
 
 * * *
 
 <a id="media-pitch"></a>
 
-### Invite media to attend your event:
+### Zaproś media do uczestnictwa w Twoim przedsięwzięciu:
 
-#### [Check out our press kit for more information on inviting media to your event.](<%= resolve_url('/promote/press-kit') %>)
+#### [Zobacz nasze materiały prasowe, aby uzyskać więcej informacji jak zaprosić media do Twojego przedsięwzięcia.]({{ promote/press_kit_url }})
 
 **Subject line**: Local school joins mission to introduce students to computer science
 
@@ -151,9 +155,9 @@ I look forward to being in touch. <br />
 
 <a id="politicians"></a>
 
-### Invite a local politician to your school's event:
+### Zaproś lokalne władze na swoje szkolne wydarzenie:
 
-#### [Need more info? Take a look at our resources for inviting politicians to attend your event](<%= resolve_url('/how-to/public-officials') %>).
+#### [Need more info? Take a look at our resources for inviting politicians to attend your event]({{ how_to_public_officials_url }}).
 
 **Subject line**: Join our school as we change the future with an Hour of Code
 
@@ -163,10 +167,10 @@ Did you know that computing is the #1 source of wages in the U.S.? There are mor
 
 Computer science is foundational for every industry today, yet most schools don’t teach it. At [SCHOOL NAME], we are trying to change that.
 
-That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (<%= campaign_date('full') %>). More than 100 million students worldwide have already tried an Hour of Code.
+That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week ({{ campaign_date/full }}). More than 100 million students worldwide have already tried an Hour of Code.
 
 I'm writing to invite you to join our Hour of Code event and speak at our kickoff assembly. It’ll take place on [DATE, TIME, PLACE], and will make a strong statement that [State or City name] is ready to teach our students critical 21st-century skills. We want to ensure that our students are on the forefront of creating technology of the future—not just consuming it.
 
 Please contact me at [PHONE NUMBER OR EMAIL ADDRESS]. I look forward to your response.
 
-<%= view :signup_button %>
+{{ view :signup_button }}

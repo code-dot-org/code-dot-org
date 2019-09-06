@@ -6644,6 +6644,8 @@ pt-BR:
               name: Propriedade intelectual
             Images:
               name: Imagens
+            CSS Classes:
+              name: Classes CSS
         csd3-pilot:
           description_short: Programação
           stages:

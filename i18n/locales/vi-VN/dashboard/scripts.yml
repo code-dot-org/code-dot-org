@@ -4156,6 +4156,8 @@ vi:
               name: Đến nơi an toàn
             Loops in Artist:
               name: Vòng lặp trong câu chuyện về biển
+            Sequencing in Maze:
+              name: Chuỗi tuần tự cùng Angry Birds
         express-2018:
           stages:
             'Algorithms: Graph Paper Programming':
@@ -4765,6 +4767,8 @@ vi:
               name: Cho vòng lặp vui vẻ
             The Artist:
               name: nghệ sĩ
+            Sequencing in the Maze:
+              name: Chuỗi tuần tự trong mê cung
             Internet:
               name: Internet
             Crowdsourcing:
@@ -4807,6 +4811,8 @@ vi:
               name: Đa nguồn
             Nested Loops in Frozen:
               name: Vòng lặp lồng với Frozen
+            Sequencing in the Maze:
+              name: Chuỗi tuần tự trong mê cung
             Songwriting:
               name: Sáng tác với tham số
         express-2019:
@@ -4872,6 +4878,8 @@ vi:
           title: Kho Trò chơi
         coursea-2019:
           stages:
+            Sequencing in Maze:
+              name: Chuỗi tuần tự trong mê cung
             'Programming: Happy Maps':
               name: Bản đồ thú vị
             Programming in Maze:
@@ -4899,6 +4907,8 @@ vi:
               name: Vòng lặp trong Kỷ băng hà
             'Loops: Getting Loopy':
               name: Tạo vòng lặp
+            Sequencing in Maze:
+              name: Chuỗi tuần tự cùng Angry Birds
         pre-express-2019:
           stages:
             'Debugging: Unspotted Bugs':

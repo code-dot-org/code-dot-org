@@ -1,5 +1,4 @@
 hidden false
-family_name ''
 
 stage 'Sequencing with Scrat', flex_category: 'csf_sequencing'
 level 'courseAB_video_NewIntro_2019'

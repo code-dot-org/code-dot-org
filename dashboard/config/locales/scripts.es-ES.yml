@@ -4272,6 +4272,8 @@ es:
                 buscarán información sobre varios animales poco comunes. Tendrán que
                 analizar los sitios que encuentran confiables para identificar cuál
                 de los animales son realmente un engaño.
+            CSS Classes:
+              name: Clases CSS
         csd3-pilot:
           description_short: Programación
           stages:

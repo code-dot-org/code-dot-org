@@ -696,10 +696,8 @@ zh-CN:
       courseA_maze_seq_challenge2_2019: 沿着这条路带我去找那只笨猪。躲开 TNT 炸药，不然我的羽毛就要被炸飞了！
       courseA_playLab_events1: 这是一个游戏实验室关卡。 把模块移到工作区看会发生什么!
       courseA_playLab_events1_2018: 这是一个游戏实验室关卡。 把模块移到工作区看会发生什么!
-      courseA_playLab_events1_2019: 这是一个游戏实验室关卡。 把模块移到工作区看会发生什么!
       courseA_playLab_events2: 乔治狗想说“大家好”。你可以帮它吗？
       courseA_playLab_events2_2018: 乔治狗想说“大家好”。你可以帮它吗？
-      courseA_playLab_events2_2019: 乔治狗想说“大家好”。你可以帮它吗？
       courseA_playLab_events3: 将`向左移动`模块连接到工作区中的`当点击向左时`的事件模块下。
       courseA_playLab_events3_2018: 将`向左移动`模块连接到工作区中的`当点击向左时`的事件模块下。
       courseA_playLab_events3_2019: 将`向左移动`模块连接到工作区中的`当点击向左时`的事件模块下。
@@ -2086,6 +2084,7 @@ zh-CN:
       grade5_artist_binary5: 每个二进制字符串表达这个图形中的一行。你能重新排列他们，从而能够画出一张笑脸，而不是皱眉的脸吗？
       grade5_artist_binary8: 完成这幅画。
       grade5_artist_binary9: "这是更高分辨率的画布 - 16像素乘以16像素！\\\r\n\\\r\n看看你用二进制位能创造出什么？"
+      grade5_pixelation: 用二进制来编码任何你喜欢的图像。二进制语言将只用“0”和“1”来表示。
       iceage_click_hello: '你能帮助喜得，在点击他的时候呼叫他的朋友们吗？ '
       iceage_free_play: 是时候创造你自己的游戏或故事了！
       iceage_hello1: 通过拖拽`说`模块出来，并连接`当运行时`事件下来帮助喜得说“你好！”

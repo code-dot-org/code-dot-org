@@ -86,8 +86,8 @@ As a student, you are at a magnificent time in your life where you can design wh
 
 I’m always inspired by this quote: 
 
->>***“Don't assume that what we currently think is out there is the full story. Go after the dark matter in whatever field you choose to explore. There are unknowns all around us and they're just waiting to be discovered.”
->>- Nathan Wolfe***
+>>**“Don't assume that what we currently think is out there is the full story. Go after the dark matter in whatever field you choose to explore. There are unknowns all around us and they're just waiting to be discovered.”**
+>>- Nathan Wolfe
 
 [/col-50]
 

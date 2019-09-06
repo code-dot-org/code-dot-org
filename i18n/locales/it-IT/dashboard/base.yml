@@ -16,7 +16,7 @@ it:
       user:
         name: 'Nome da visualizzare'
         name_example: 'Mostra Nome <br/>(es. Cool Coder o Jane S.)'
-        email: 'Indirizzo di posta elettronica'
+        email: 'Indirizzo email'
         parent_email: 'E-mail del genitore/tutore'
         personal_email: "E-mail personale<a href=\"%{url}\">(clicca qui se non hai un indirizzo e-mail)</a>"
         username: 'Nome utente'
@@ -170,7 +170,7 @@ it:
     school_organization_zip: 'Codice Postale della Scuola/Organizzazione'
   signin_form:
     title: 'Sei già iscritto con un account? Accedi'
-    login: 'Indirizzo di posta elettronica'
+    login: 'Indirizzo email'
     login_username: 'Email o nome utente'
     password: 'password'
     remember: 'Ricorda le mie credenziali di accesso'
@@ -229,7 +229,7 @@ it:
     type:
       picture: 'Password Immagine'
       word: 'Parole Segrete'
-      email: 'Indirizzo di posta elettronica'
+      email: 'Indirizzo email'
       google_classroom: 'Google Classroom'
       clever: 'Clever'
   follower:
@@ -280,7 +280,7 @@ it:
       project_gallery: "Progetti"
       sections: "Classi"
       help_support: "Help and support"
-      report_bug: "Report Bug"
+      report_bug: "Report a problem"
       teacher_community: "Teacher community"
       professional_learning: "Professional learning"
       documentation: "Documentazione"
@@ -609,7 +609,7 @@ it:
       body: "Gli studenti imparano delle tecniche per creare e decodificare un messaggio cifrato."
     weblab:
       title: "Sviluppo Web"
-      body: "Sviluppo Web è un ambiente di programmazione in cui si possono realizzare semplici pagine web con HTML e CSS. Progetta le tue pagine web e condividi il tuo sito in pochi secondi. (Versione provvisoria.)"
+      body: "Sviluppo Web è un ambiente di programmazione in cui si possono realizzare semplici pagine web con HTML e CSS. Progetta le tue pagine web e condividi il tuo sito in pochi secondi."
       audience: "Da 13 anni in su"
       cta: "Scopri come"
     frozen:
@@ -737,7 +737,7 @@ it:
     sign_out: 'Se non desideri fornire la tua età puoi <a href="%{url}">uscire</a>.'
   terms_interstitial:
     title: "Aggiornati i termini e le condizioni della privacy"
-    intro_desc: "Abbiamo aggiornato i nostri Termini di Servizio e la nostra Informativa sulla Privacy, come mostrato di seguito. I cambiamenti saranno effettivi a partire dal 24 agosto 2016. La modifica più importante: noi <i>non memorizzeremo più le e-mail degli account degli studenti su Code studio.</i> Questo è molto importante per noi, e speriamo che stabilisca un nuovo standard per la privacy degli studenti nella tecnologia di formazione. Ti abbiamo inviato un riassunto delle altre modifiche via e-mail."
+    intro_desc: "Abbiamo aggiornato i nostri Termini di Servizio e la nostra Informativa sulla Privacy, come mostrato di seguito. I cambiamenti saranno effettivi a partire dal 24 agosto 2016. La modifica più importante: noi <i>non memorizzeremo più le e-mail degli account degli studenti su Code studio.</i> Questo è molto importante per noi e speriamo che stabilisca un nuovo standard per la privacy degli studenti nella tecnologia di formazione. Ti abbiamo inviato un riassunto delle altre modifiche via e-mail."
     intro_instructions: "È necessario accettare questi nuovi termini per gli studenti con un'età minore di 13 anni nella tua classe per avere accesso completo alle ultime caratteristiche di Code studio. Registrando uno studente con un'età minore di 13 anni, ti verrà chiesto se la tua scuola abbia il consenso dei genitori per la raccolta di dati personali dello studente per uso e beneficio della scuola, tra cui programmi educativi come Code studio."
     tos: "Termini di servizio"
     privacy: "Informativa sulla privacy"
@@ -982,13 +982,13 @@ it:
   return_unit_overview: 'Vai alla panoramica della lezione'
   return_course_overview: 'Vai alla visualizzazione delle unità'
   view_all_units: 'Visualizza tutte le lezioni'
-  view_teacher_guide: 'Visualizza la guida per l''insegnante'
+  view_teacher_guide: 'Guida per l''insegnante (in inglese)'
   pd:
     form_labels:
       first_name: 'Nome'
       first_name_preferred: 'Nome preferito'
       last_name: 'Cognome'
-      email: 'Indirizzo di posta elettronica'
+      email: 'Indirizzo email'
       email_alternate: 'Email alternativa'
       gender: 'Identità di genere'
       school_name: 'Nome della scuola'

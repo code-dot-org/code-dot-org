@@ -164,6 +164,10 @@ zh-CN:
 
         -   上节课你是如何运用解决问题的方法的？
         -   你将如何运用这个方法去解决日常生活中的问题呢？
+      CSD U1 - PixFilter FreePlay: |-
+        # 自由发挥
+
+        发挥你的想象，做些令人惊叹的东西吧！
       CSD U2 CSS explore CSS: "<div style=\"float: right;\nheight: 250px; width: 40%;
         overflow-y: scroll; margin-left: 20px; font-size:14px\"\nmarkdown=\"1\">\n<details>\n\n<summary>\n\n\\*\\*
         如何在文件之间切换？ \\*\\* \n\n</summary> \n单击要查看的文件的名称。菜单在屏幕左侧. \n\n</details> \n</div>
@@ -6562,6 +6566,16 @@ zh-CN:
 
         每个图形的周长是200像素。你还记得当多边形有不同数量的边时，如何让它们一样长的等式吗？
       NEW Course 4 Artist Params 2: 从头开始创建一个 "绘制三角形" 函数，使三角形具有50像素边。
+      NetSim Standalone Automatic DNS: |-
+        # 域名系统（DNS）
+
+        在这个版本的互联网模拟器中，将会为你提供一个域名系统（DNS）以及已连接的计算机的 IP 地址。你只能看到已连接的计算机的主机名称。\
+        ![](https://images.code.org/3ac2c23ed610abc7e785ec85054e89a9-image-1434746293690.PNG)
+
+        DNS 地址始终是 \<yourRouterNumber>.15。使用协议 `GET [hostname]` 来发送信息，例如发送 `GET Bob2` 到 DNS 以获取另一名学生的 DNS 地址。你随时都可以在笔记区选择 DNS 标签来查看答复。\
+        ![](https://images.code.org/c81c1a6b876eb46674a7f7e5e70506ce-image-1434746797267.png)
+
+        你的教师将在活动上更加具体地说明。
       Overworld Chop Tree: 木材是一种非常重要的资源。许多东西都是由它制成的。走到树边, 并使用`摧毁方块`模块命令将它砍倒。
       Overworld Chop Tree_2019: 木材是一种非常重要的资源。许多东西都是由它制成的。走到树边, 并使用`摧毁方块`模块命令将它砍倒。
       Overworld House Frame Chosen: 用你想要的任何材料来建立房子的剩余部分。`重复`命令将派上用场。
@@ -7028,6 +7042,7 @@ zh-CN:
       courseA_playLab_events5: 添加事件让乔治在`上`和`下`按钮被点击时，向上和下移动。
       courseA_playLab_events5_2018: 添加事件让乔治在`上`和`下`按钮被点击时，向上和下移动。
       courseA_playLab_events5_2019: 添加事件让乔治在`上`和`下`按钮被点击时，向上和下移动。
+      courseA_playLab_events6_2019: 当乔治被点击的时候，改变背景和播放随机声音来添加一些乐趣。
       courseA_playLab_events7_2018: _任意发挥:_ 添加你想要的任何东西到这个游戏中。当乔治碰上恐龙的时候, 你能否让恐龙消失?
       courseA_playLab_events7_2019: _任意发挥:_ 添加你想要的任何东西到这个游戏中。当乔治碰上恐龙的时候, 你能否让恐龙消失?
       courseA_playlab_events_challenge1: "点击奥丽芙将使罗宾出现！\n你能编写代码来显示其余的人物吗？\\\r\n\\\r\n在这个关卡中,

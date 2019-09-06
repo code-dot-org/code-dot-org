@@ -630,12 +630,13 @@ zh-CN:
         title: 标题
         content1: 描述
       CSD U2 image debug match:
+        content1: 将这段存在问题的 HTML 代码与描述中所对应的问题相连线。
         questions:
+        - text: 属性“src”拼写错误。
         - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: 图像路径中的文件扩展名（.jpg）丢失
+        - text: 图像路径的属性不是“src”
+        - text: 文件名中包含空格
         answers:
         - text: <img src="https://images.code.org/6015fb13fa76d32072de2762d7d363ba-image-1553717013288.02.34
             PM.png">
@@ -648,7 +649,7 @@ zh-CN:
         - text: <img src="https://images.code.org/a86b628a71ae0415fe48dfd8a19ee69a-image-1553717016038.02.24
             PM.png">
       CSD U2 lists match:
-        content1: Match the list to the code that makes it.
+        title: 快速检查列表
         questions:
         - text: https://images.code.org/b7b998dd12e507d163d7dac0fcd37b8c-image-1493336218044.31.41
             PM.png
@@ -672,7 +673,7 @@ zh-CN:
         - text: https://images.code.org/1bbd9b340b51a295760f8daa4714cf84-image-1493336218035.32.21
             PM.png
       CSD U2 lists match_2018:
-        content1: Match the list to the code that makes it.
+        title: 快速检查列表
         questions:
         - text: https://images.code.org/b7b998dd12e507d163d7dac0fcd37b8c-image-1493336218044.31.41
             PM.png
@@ -696,7 +697,7 @@ zh-CN:
         - text: https://images.code.org/1bbd9b340b51a295760f8daa4714cf84-image-1493336218035.32.21
             PM.png
       CSD U2 lists match_2018_2019:
-        content1: Match the list to the code that makes it.
+        title: 快速检查列表
         questions:
         - text: https://images.code.org/b7b998dd12e507d163d7dac0fcd37b8c-image-1493336218044.31.41
             PM.png
@@ -736,11 +737,11 @@ zh-CN:
         - {}
         - {}
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: dog.rotation &lt; cat.rotation
+        - text: dog.x &lt; cat.x
+        - text: dog.scale &gt; cat.scale
+        - text: dog.x &gt; cat.x
+        - text: dog.x == cat.x
       CSD U3 - conditionals - Matching_2018:
         questions:
         - {}
@@ -749,11 +750,11 @@ zh-CN:
         - {}
         - {}
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: dog.rotation &lt; cat.rotation
+        - text: dog.x &lt; cat.x
+        - text: dog.scale &gt; cat.scale
+        - text: dog.x &gt; cat.x
+        - text: dog.x == cat.x
       CSD U3 - conditionals - Matching_2018_2019:
         questions:
         - {}
@@ -762,11 +763,11 @@ zh-CN:
         - {}
         - {}
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: dog.rotation &lt; cat.rotation
+        - text: dog.x &lt; cat.x
+        - text: dog.scale &gt; cat.scale
+        - text: dog.x &gt; cat.x
+        - text: dog.x == cat.x
       CSD U3 Boolean MC:
         title: 标题
         questions:
@@ -1026,13 +1027,13 @@ zh-CN:
         title: 标题
         content1: 描述
       CSD U6 LED create intro:
-        title: 使用LED制作应用程序
+        title: 使用 LED 制作应用程序
         content1: 描述
       CSD U6 LED create intro_2018:
-        title: 使用LED制作应用程序
+        title: 使用 LED 制作应用程序
         content1: 描述
       CSD U6 LED create intro_2018_2019:
-        title: 使用LED制作应用程序
+        title: 使用 LED 制作应用程序
         content1: 描述
       CSD U6 array multi:
         questions:
@@ -1409,99 +1410,109 @@ zh-CN:
         - text: 仔细阅读下面的代码。 当您单击 "运行" 时, 会发生什么情况？
         answers:
         - text: 艺术家将会画一个等边三角形。
+          feedback: 错误。艺术家画了一个正方形。
         - text: 艺术家将会画一条线。
-        - correct: true
+          feedback: 错误。艺术家画了一个正方形。
+        - text: 艺术家画了一个正方形。
+          correct: true
           feedback: 叮咚！答对啦！
-        - text: 我不知道.
+        - text: 我不知道。
+          feedback: 艺术家画了一个正方形。
       courseC_multi_artist_prog6_predict1_2018:
         questions:
         - text: 仔细阅读下面的代码。 当您单击 "运行" 时, 会发生什么情况？
         answers:
         - text: 艺术家将会画一个等边三角形。
+          feedback: 错误。艺术家画了一个正方形。
         - text: 艺术家将会画一条线。
+          feedback: 错误。艺术家画了一个正方形。
         - text: 艺术家将会画一个正方形。
           correct: true
           feedback: 叮咚！答对啦！
-        - text: 我不知道.
+        - text: 我不知道。
+          feedback: 艺术家画了一个正方形。
       courseC_multi_artist_prog6_predict1_2018_2019:
         questions:
         - text: 仔细阅读下面的代码。 当您单击 "运行" 时, 会发生什么情况？
         answers:
         - text: 艺术家将会画一个等边三角形。
+          feedback: 错误。艺术家画了一个正方形。
         - text: 艺术家将会画一条线。
+          feedback: 错误。艺术家画了一个正方形。
         - text: 艺术家将会画一个正方形。
           correct: true
           feedback: 叮咚！答对啦！
-        - text: 我不知道.
+        - text: 我不知道。
+          feedback: 艺术家画了一个正方形。
       courseC_multi_harvester_loops11_predict1:
         questions:
         - text: 仔细查看下面的代码。你点击 "运行" 后, 农民会收集多少南瓜？
         answers:
         - text: '4'
-          feedback: 错误。在每个循环中农民收集4个南瓜, 执行了3个循环。 4乘以3等于 12!
+          feedback: 错误。在每个循环中农民收集4个南瓜，执行了3个循环。4乘以3等于12。
         - text: '12'
           correct: true
           feedback: 叮咚！答对啦！
         - text: '15'
-          feedback: 错误。在每个循环中农民收集4个南瓜, 执行了3个循环。 4乘以3等于 12!
-        - text: 我不知道.
-          feedback: 在每个循环中农民收集4个南瓜, 执行了3个循环。 4乘以3等于 12!
+          feedback: 错误。在每个循环中农民收集4个南瓜，执行了3个循环。4乘以3等于12。
+        - text: 我不知道。
+          feedback: 在每个循环中农民收集4个南瓜，执行了3个循环。4乘以3等于 12。
       courseC_multi_harvester_loops11_predict1_2018:
         questions:
         - text: 仔细查看下面的代码。你点击 "运行" 后, 农民会收集多少南瓜？
         answers:
         - text: '4'
-          feedback: 错误。在每个循环中农民收集4个南瓜, 执行了3个循环。 4乘以3等于 12!
+          feedback: 错误。在每个循环中农民收集4个南瓜，执行了3个循环。4乘以3等于12。
         - text: '12'
           correct: true
           feedback: 叮咚！答对啦！
         - text: '15'
-          feedback: 错误。在每个循环中农民收集4个南瓜, 执行了3个循环。 4乘以3等于 12!
-        - text: 我不知道.
-          feedback: 在每个循环中农民收集4个南瓜, 执行了3个循环。 4乘以3等于 12!
+          feedback: 错误。在每个循环中农民收集4个南瓜，执行了3个循环。4乘以3等于12。
+        - text: 我不知道。
+          feedback: 在每个循环中农民收集4个南瓜，执行了3个循环。4乘以3等于 12。
       courseC_multi_harvester_loops11_predict1_2018_2019:
         questions:
         - text: 仔细查看下面的代码。你点击 "运行" 后, 农民会收集多少南瓜？
         answers:
         - text: '4'
-          feedback: 错误。在每个循环中农民收集4个南瓜, 执行了3个循环。 4乘以3等于 12!
+          feedback: 错误。在每个循环中农民收集4个南瓜，执行了3个循环。4乘以3等于12。
         - text: '12'
           correct: true
           feedback: 叮咚！答对啦！
         - text: '15'
-          feedback: 错误。在每个循环中农民收集4个南瓜, 执行了3个循环。 4乘以3等于 12!
-        - text: 我不知道.
-          feedback: 在每个循环中农民收集4个南瓜, 执行了3个循环。 4乘以3等于 12!
+          feedback: 错误。在每个循环中农民收集4个南瓜，执行了3个循环。4乘以3等于12。
+        - text: 我不知道。
+          feedback: 在每个循环中农民收集4个南瓜，执行了3个循环。4乘以3等于 12。
       courseC_multi_maze_debugging8_predict1:
         questions:
         - text: '仔细查看下面的代码。 第一个将使此程序失败的bug是什么？ '
         answers:
         - text: 这个程序不会失败。松鼠会到达橡子的位置。
-        - text: 松鼠在转最后一个弯的时候, 它会走错路。
+        - text: 松鼠在转最后一个弯的时候，它会走错路。
           correct: true
           feedback: 叮咚！答对啦！
-        - text: 松鼠走的路太少, 最终不会到达橡子的位置。
-        - text: 我不知道.
+        - text: 松鼠走的路太少，最终不会到达橡子的位置。
+        - text: 我不知道。
       courseC_multi_maze_debugging8_predict1_2018:
         questions:
         - text: '仔细查看下面的代码。 第一个将使此程序失败的bug是什么？ '
         answers:
         - text: 这个程序不会失败。松鼠会到达橡子的位置。
-        - text: 松鼠在转最后一个弯的时候, 它会走错路。
+        - text: 松鼠在转最后一个弯的时候，它会走错路。
           correct: true
           feedback: 叮咚！答对啦！
-        - text: 松鼠走的路太少, 最终不会到达橡子的位置。
-        - text: 我不知道.
+        - text: 松鼠走的路太少，最终不会到达橡子的位置。
+        - text: 我不知道。
       courseC_multi_maze_debugging8_predict1_2018_2019:
         questions:
         - text: '仔细查看下面的代码。 第一个将使此程序失败的bug是什么？ '
         answers:
         - text: 这个程序不会失败。松鼠会到达橡子的位置。
-        - text: 松鼠在转最后一个弯的时候, 它会走错路。
+        - text: 松鼠在转最后一个弯的时候，它会走错路。
           correct: true
           feedback: 叮咚！答对啦！
-        - text: 松鼠走的路太少, 最终不会到达橡子的位置。
-        - text: 我不知道.
+        - text: 松鼠走的路太少，最终不会到达橡子的位置。
+        - text: 我不知道。
       courseC_multi_maze_programming8_predict1:
         questions:
         - text: 仔细阅读下面的代码。 当您单击 "运行" 时, 会发生什么情况？
@@ -1511,9 +1522,9 @@ zh-CN:
         - text: 小鸟会到达猪的位置。
           correct: true
           feedback: 叮咚！答对啦！
-        - text: 这只鸟将撞上TNT炸药。
+        - text: 这只鸟将撞上 TNT 炸药。
           feedback: 错误。这段代码会把小鸟完美移动到猪的位置。
-        - text: 我不知道.
+        - text: 我不知道。
           feedback: 这段代码会把小鸟完美地移动到猪的位置。
       courseC_multi_maze_programming8_predict1_2018:
         questions:
@@ -1524,9 +1535,9 @@ zh-CN:
         - text: 小鸟会到达猪的位置。
           correct: true
           feedback: 叮咚！答对啦！
-        - text: 这只鸟将撞上TNT炸药。
+        - text: 这只鸟将撞上 TNT 炸药。
           feedback: 错误。这段代码会把小鸟完美移动到猪的位置。
-        - text: 我不知道.
+        - text: 我不知道。
           feedback: 这段代码会把小鸟完美地移动到猪的位置。
       courseC_multi_maze_programming8_predict1_2018_2019:
         questions:
@@ -1537,9 +1548,9 @@ zh-CN:
         - text: 小鸟会到达猪的位置。
           correct: true
           feedback: 叮咚！答对啦！
-        - text: 这只鸟将撞上TNT炸药。
+        - text: 这只鸟将撞上 TNT 炸药。
           feedback: 错误。这段代码会把小鸟完美移动到猪的位置。
-        - text: 我不知道.
+        - text: 我不知道。
           feedback: 这段代码会把小鸟完美地移动到猪的位置。
       courseC_multi_starWars_predict1:
         questions:
@@ -1583,7 +1594,7 @@ zh-CN:
           correct: true
           feedback: 叮咚！答对啦！
         - text: BB-8将会毫无困难地收集所有的废金属。
-        - text: 我不知道.
+        - text: 我不知道。
           feedback: 第一个循环只能让 BB-8 向前移动2格, 当它需要向前移动3格的时候。
       courseC_multi_starWars_predict2_2018:
         questions:
@@ -1594,7 +1605,7 @@ zh-CN:
           correct: true
           feedback: 叮咚！答对啦！
         - text: BB-8将会毫无困难地收集所有的废金属。
-        - text: 我不知道.
+        - text: 我不知道。
           feedback: 第一个循环只能让 BB-8 向前移动2格, 当它需要向前移动3格的时候。
       courseC_multi_starWars_predict2_2018_2019:
         questions:
@@ -1605,7 +1616,7 @@ zh-CN:
           correct: true
           feedback: 叮咚！答对啦！
         - text: BB-8将会毫无困难地收集所有的废金属。
-        - text: 我不知道.
+        - text: 我不知道。
           feedback: 第一个循环只能让 BB-8 向前移动2格, 当它需要向前移动3格的时候。
       courseD_external_binary1:
         title: 二进制绘图
@@ -1663,7 +1674,7 @@ zh-CN:
           feedback: 错误。 内层的循环生成了一个正五边形, 外层的循环在一个圆圈中重复4次。
         - text: C
           feedback: 错误。 内层的循环生成了一个正五边形, 外层的循环在一个圆圈中重复4次。
-        - text: 我不知道.
+        - text: 我不知道。
           feedback: 错误。 内层的循环生成了一个正五边形, 外层的循环在一个圆圈中重复4次。
       courseD_multi_artist_nestedLoops9_predict1_2018:
         questions:
@@ -1676,7 +1687,7 @@ zh-CN:
           feedback: 错误。 内层的循环生成了一个正五边形, 外层的循环在一个圆圈中重复4次。
         - text: C
           feedback: 错误。 内层的循环生成了一个正五边形, 外层的循环在一个圆圈中重复4次。
-        - text: 我不知道.
+        - text: 我不知道。
           feedback: 错误。 内层的循环生成了一个正五边形, 外层的循环在一个圆圈中重复4次。
       courseD_multi_artist_nestedLoops9_predict1_2018_2019:
         questions:
@@ -1689,7 +1700,7 @@ zh-CN:
           feedback: 错误。 内层的循环生成了一个正五边形, 外层的循环在一个圆圈中重复4次。
         - text: C
           feedback: 错误。 内层的循环生成了一个正五边形, 外层的循环在一个圆圈中重复4次。
-        - text: 我不知道.
+        - text: 我不知道。
           feedback: 错误。 内层的循环生成了一个正五边形, 外层的循环在一个圆圈中重复4次。
       courseD_multi_bee_conditionals1_predict1:
         questions:
@@ -1702,7 +1713,7 @@ zh-CN:
           feedback: 叮咚！答对啦！
         - text: 蜜蜂会移动到云中，然后什么都不做，不论云下是什么。
           feedback: 错误。积木块“如果在花里”能确保，如果云下有花朵的话，蜜蜂会采花粉。
-        - text: 我不知道.
+        - text: 我不知道。
           feedback: 错误。积木块“如果在花里”能确保，如果云下有花朵的话，蜜蜂只会采花粉。
       courseD_multi_bee_conditionals1_predict1_2018:
         questions:
@@ -1715,7 +1726,7 @@ zh-CN:
           feedback: 叮咚！答对啦！
         - text: 蜜蜂会移动到云中，然后什么都不做，不论云下是什么。
           feedback: 错误。积木块“如果在花里”能确保，如果云下有花朵的话，蜜蜂会采花粉。
-        - text: 我不知道.
+        - text: 我不知道。
           feedback: 错误。积木块“如果在花里”能确保，如果云下有花朵的话，蜜蜂只会采花粉。
       courseD_multi_bee_conditionals1_predict1_2018_2019:
         questions:
@@ -1728,7 +1739,7 @@ zh-CN:
           feedback: 叮咚！答对啦！
         - text: 蜜蜂会移动到云中，然后什么都不做，不论云下是什么。
           feedback: 错误。积木块“如果在花里”能确保，如果云下有花朵的话，蜜蜂会采花粉。
-        - text: 我不知道.
+        - text: 我不知道。
           feedback: 错误。积木块“如果在花里”能确保，如果云下有花朵的话，蜜蜂只会采花粉。
       courseD_multi_bee_conditionals7_predict2:
         questions:
@@ -1740,8 +1751,8 @@ zh-CN:
         - text: 蜜蜂会从花朵和蜂窝中获取花粉。
           feedback: 错误。积木块“如果在花里”可以让蜜蜂得到每朵花的花粉，并在每个蜂窝中制作蜂蜜。
         - text: 蜜蜂会从花朵和蜂窝中获取蜂蜜。
-          feedback: 错误。错误。积木块“如果在花里”可以让蜜蜂得到每朵花的花粉，并在每个蜂窝中制作蜂蜜。
-        - text: 我不知道.
+          feedback: 错误，错误。积木块“如果在花里”可以让蜜蜂得到每朵花的花粉，并在每个蜂窝中制作蜂蜜。
+        - text: 我不知道。
           feedback: 积木块“如果在花里”可以让蜜蜂得到每朵花的花粉，并在每个蜂窝中制作蜂蜜。
       courseD_multi_bee_conditionals7_predict2_2018:
         questions:
@@ -1753,8 +1764,8 @@ zh-CN:
         - text: 蜜蜂会从花朵和蜂窝中获取花粉。
           feedback: 错误。积木块“如果在花里”可以让蜜蜂得到每朵花的花粉，并在每个蜂窝中制作蜂蜜。
         - text: 蜜蜂会从花朵和蜂窝中获取蜂蜜。
-          feedback: 错误。错误。积木块“如果在花里”可以让蜜蜂得到每朵花的花粉，并在每个蜂窝中制作蜂蜜。
-        - text: 我不知道.
+          feedback: 错误，错误。积木块“如果在花里”可以让蜜蜂得到每朵花的花粉，并在每个蜂窝中制作蜂蜜。
+        - text: 我不知道。
           feedback: 积木块“如果在花里”可以让蜜蜂得到每朵花的花粉，并在每个蜂窝中制作蜂蜜。
       courseD_multi_bee_conditionals7_predict2_2018_2019:
         questions:
@@ -1766,87 +1777,87 @@ zh-CN:
         - text: 蜜蜂会从花朵和蜂窝中获取花粉。
           feedback: 错误。积木块“如果在花里”可以让蜜蜂得到每朵花的花粉，并在每个蜂窝中制作蜂蜜。
         - text: 蜜蜂会从花朵和蜂窝中获取蜂蜜。
-          feedback: 错误。错误。积木块“如果在花里”可以让蜜蜂得到每朵花的花粉，并在每个蜂窝中制作蜂蜜。
-        - text: 我不知道.
+          feedback: 错误，错误。积木块“如果在花里”可以让蜜蜂得到每朵花的花粉，并在每个蜂窝中制作蜂蜜。
+        - text: 我不知道。
           feedback: 积木块“如果在花里”可以让蜜蜂得到每朵花的花粉，并在每个蜂窝中制作蜂蜜。
       courseD_multi_bee_nestedLoops2_predict1:
         questions:
-        - text: 请仔细查看下面的代码。 当您单击 "运行" 时, 会发生什么情况？
+        - text: 请仔细查看下面的代码。 当您单击 "运行" 时，会发生什么情况？
         answers:
-        - text: 蜜蜂会向前移动, 只能得到1个花蜜。
+        - text: 蜜蜂会向前移动，只能得到1个花蜜。
           feedback: 不正确。 蜜蜂重复"前进移动和收集花蜜的循环动作"来解决这个难题。
         - text: 蜜蜂只能得到2个花蜜。
           feedback: 不正确。 蜜蜂重复"前进移动和收集花蜜的循环动作"来解决这个难题。
         - text: 蜜蜂将会得到所有的花蜜。
           correct: true
           feedback: 叮咚！答对啦！
-        - text: 我不知道.
+        - text: 我不知道。
           feedback: 蜜蜂重复"移动前进和收集花蜜"的循环动作，来解决这个难题。
       courseD_multi_bee_nestedLoops2_predict1_2018:
         questions:
-        - text: 请仔细查看下面的代码。 当您单击 "运行" 时, 会发生什么情况？
+        - text: 请仔细查看下面的代码。 当您单击 "运行" 时，会发生什么情况？
         answers:
-        - text: 蜜蜂会向前移动, 只能得到1个花蜜。
+        - text: 蜜蜂会向前移动，只能得到1个花蜜。
           feedback: 不正确。 蜜蜂重复"前进移动和收集花蜜的循环动作"来解决这个难题。
         - text: 蜜蜂只能得到2个花蜜。
           feedback: 不正确。 蜜蜂重复"前进移动和收集花蜜的循环动作"来解决这个难题。
         - text: 蜜蜂将会得到所有的花蜜。
           correct: true
           feedback: 叮咚！答对啦！
-        - text: 我不知道.
+        - text: 我不知道。
           feedback: 蜜蜂重复"移动前进和收集花蜜"的循环动作，来解决这个难题。
       courseD_multi_bee_nestedLoops2_predict1_2018_2019:
         questions:
-        - text: 请仔细查看下面的代码。 当您单击 "运行" 时, 会发生什么情况？
+        - text: 请仔细查看下面的代码。 当您单击 "运行" 时，会发生什么情况？
         answers:
-        - text: 蜜蜂会向前移动, 只能得到1个花蜜。
+        - text: 蜜蜂会向前移动，只能得到1个花蜜。
           feedback: 不正确。 蜜蜂重复"前进移动和收集花蜜的循环动作"来解决这个难题。
         - text: 蜜蜂只能得到2个花蜜。
           feedback: 不正确。 蜜蜂重复"前进移动和收集花蜜的循环动作"来解决这个难题。
         - text: 蜜蜂将会得到所有的花蜜。
           correct: true
           feedback: 叮咚！答对啦！
-        - text: 我不知道.
+        - text: 我不知道。
           feedback: 蜜蜂重复"移动前进和收集花蜜"的循环动作，来解决这个难题。
       courseD_multi_bee_nestedLoops9_predict2:
         questions:
-        - text: 仔细查看下面的代码。当你点击 "运行" 后, 蜜蜂会采集多少蜂蜜？
+        - text: 仔细查看下面的代码。当你点击 "运行" 后，蜜蜂会采集多少蜂蜜？
         answers:
         - text: '4'
         - text: '8'
           correct: true
           feedback: 叮咚！答对啦！
         - text: '12'
-        - text: 我不知道.
+        - text: 我不知道。
       courseD_multi_bee_nestedLoops9_predict2_2018:
         questions:
-        - text: 仔细查看下面的代码。当你点击 "运行" 后, 蜜蜂会采集多少蜂蜜？
+        - text: 仔细查看下面的代码。当你点击 "运行" 后，蜜蜂会采集多少蜂蜜？
         answers:
         - text: '4'
         - text: '8'
           correct: true
           feedback: 叮咚！答对啦！
         - text: '12'
-        - text: 我不知道.
+        - text: 我不知道。
       courseD_multi_bee_nestedLoops9_predict2_2018_2019:
         questions:
-        - text: 仔细查看下面的代码。当你点击 "运行" 后, 蜜蜂会采集多少蜂蜜？
+        - text: 仔细查看下面的代码。当你点击 "运行" 后，蜜蜂会采集多少蜂蜜？
         answers:
         - text: '4'
         - text: '8'
           correct: true
           feedback: 叮咚！答对啦！
         - text: '12'
-        - text: 我不知道.
+        - text: 我不知道。
       courseD_multi_collector_debugging10_predict1:
         questions:
         - {}
         answers:
-        - feedback: 错误。这个答案部分正确, 循环没有运行足够多次数来获得所有的宝贝。
+        - feedback: 错误。这个答案部分正确，循环没有运行足够多次数来获得所有的宝贝。
         - {}
         - correct: true
           feedback: 叮咚！答对啦！
-        - text: 我不知道.
+        - text: 我不知道。
       courseD_multi_farmer_condLoops9_predict1:
         questions:
         - text: 仔细阅读下面的代码。 当您单击 "运行" 时, 会发生什么情况？
@@ -1857,7 +1868,7 @@ zh-CN:
         - text: 收割者将收获到除了南瓜以外的所有农作物。
           correct: true
           feedback: 叮咚！答对啦！
-        - text: 我不知道.
+        - text: 我不知道。
       courseD_multi_farmer_condLoops9_predict1_2018:
         questions:
         - text: 仔细阅读下面的代码。 当您单击 "运行" 时, 会发生什么情况？
@@ -1868,7 +1879,7 @@ zh-CN:
         - text: 收割者将收获到除了南瓜以外的所有农作物。
           correct: true
           feedback: 叮咚！答对啦！
-        - text: 我不知道.
+        - text: 我不知道。
       courseD_multi_farmer_condLoops9_predict1_2018_2019:
         questions:
         - text: 仔细阅读下面的代码。 当您单击 "运行" 时, 会发生什么情况？
@@ -1879,7 +1890,7 @@ zh-CN:
         - text: 收割者将收获到除了南瓜以外的所有农作物。
           correct: true
           feedback: 叮咚！答对啦！
-        - text: 我不知道.
+        - text: 我不知道。
       courseD_multi_farmer_ramp13:
         questions:
         - {}
@@ -1889,46 +1900,46 @@ zh-CN:
           correct: true
           feedback: 叮咚！答对啦！
         - text: 农夫会移动4个格子，然后摘一个南瓜。
-        - text: 我不知道.
+        - text: 我不知道。
           feedback: 积木块“摘南瓜”在循环内，所以农夫每一步都会尝试摘南瓜，而不是直接结束。
       courseD_multi_farmer_while10_predict2:
         questions:
         - text: 请仔细查看下面的代码。这段代码的运行结果是什么？
         answers:
-        - text: 土堆和坑都消失了, 土地变成了平地。
+        - text: 土堆和坑都消失了,土地变成了平地。
           feedback: 错误。没有任何代码用来清除土堆。
         - text: 代码将对土堆不产生任何影响。
           correct: true
           feedback: 叮咚！答对啦！
         - text: 代码将对地上的坑不产生任何影响。
           feedback: 错误。’当‘ 循环会永远执行除非‘当’的条件是假, 但没有用于清除土堆的代码。
-        - text: 我不知道.
+        - text: 我不知道。
           feedback: "’当‘ 循环会永远执行除非‘当’的条件是假, 但没有用于清除土堆的代码。"
       courseD_multi_farmer_while10_predict2_2018:
         questions:
         - text: 请仔细查看下面的代码。这段代码的运行结果是什么？
         answers:
-        - text: 土堆和坑都消失了, 土地变成了平地。
+        - text: 土堆和坑都消失了,土地变成了平地。
           feedback: 错误。没有任何代码用来清除土堆。
         - text: 代码将对土堆不产生任何影响。
           correct: true
           feedback: 叮咚！答对啦！
         - text: 代码将对地上的坑不产生任何影响。
           feedback: 错误。’当‘ 循环会永远执行除非‘当’的条件是假, 但没有用于清除土堆的代码。
-        - text: 我不知道.
+        - text: 我不知道。
           feedback: "’当‘ 循环会永远执行除非‘当’的条件是假, 但没有用于清除土堆的代码。"
       courseD_multi_farmer_while10_predict2_2018_2019:
         questions:
         - text: 请仔细查看下面的代码。这段代码的运行结果是什么？
         answers:
-        - text: 土堆和坑都消失了, 土地变成了平地。
+        - text: 土堆和坑都消失了,土地变成了平地。
           feedback: 错误。没有任何代码用来清除土堆。
         - text: 代码将对土堆不产生任何影响。
           correct: true
           feedback: 叮咚！答对啦！
         - text: 代码将对地上的坑不产生任何影响。
           feedback: 错误。’当‘ 循环会永远执行除非‘当’的条件是假, 但没有用于清除土堆的代码。
-        - text: 我不知道.
+        - text: 我不知道。
           feedback: "’当‘ 循环会永远执行除非‘当’的条件是假, 但没有用于清除土堆的代码。"
       courseD_multi_farmer_while4_predict1:
         questions:
@@ -1941,7 +1952,7 @@ zh-CN:
         - text: 农民一见到土堆就会去清除直到所有土堆被清除完毕。
           correct: true
           feedback: 叮咚！答对啦！
-        - text: 我不知道.
+        - text: 我不知道。
       courseD_multi_farmer_while4_predict1_2018:
         questions:
         - {}
@@ -1953,7 +1964,7 @@ zh-CN:
         - text: 农民一见到土堆就会去清除直到所有土堆被清除完毕。
           correct: true
           feedback: 叮咚！答对啦！
-        - text: 我不知道.
+        - text: 我不知道。
       courseD_multi_farmer_while4_predict1_2018_2019:
         questions:
         - {}
@@ -1965,7 +1976,7 @@ zh-CN:
         - text: 农民一见到土堆就会去清除直到所有土堆被清除完毕。
           correct: true
           feedback: 叮咚！答对啦！
-        - text: 我不知道.
+        - text: 我不知道。
       courseD_multi_maze_until10_predict2:
         questions:
         - text: 仔细阅读下面的代码。 当您单击 "运行" 时, 会发生什么情况？
@@ -1975,7 +1986,7 @@ zh-CN:
           feedback: 叮咚！答对啦！
         - text: 僵尸会到达向日葵。
         - text: 僵尸将在第一个路口右转，然后永远的绕着圈走。
-        - text: 我不知道.
+        - text: 我不知道。
           feedback: 这个代码中，僵尸在右转之前，会先判断是否可以向前移动。正因如此，解谜失败。
       courseD_multi_maze_until10_predict2_2018:
         questions:
@@ -1988,7 +1999,7 @@ zh-CN:
           feedback: 错误。僵尸会通过正确的路径, 最终会永远的来回走动。
         - text: 僵尸将在第一个路口右转，然后永远的绕着圈走。
           feedback: 错误。僵尸会通过正确的路径, 最终会永远的来回走动。
-        - text: 我不知道.
+        - text: 我不知道。
           feedback: 在这个代码中，僵尸将会通过正确的路径，最终会永远的来回走动。
       courseD_multi_maze_until10_predict2_2018_2019:
         questions:
@@ -2001,7 +2012,7 @@ zh-CN:
           feedback: 错误。僵尸会通过正确的路径, 最终会永远的来回走动。
         - text: 僵尸将在第一个路口右转，然后永远的绕着圈走。
           feedback: 错误。僵尸会通过正确的路径, 最终会永远的来回走动。
-        - text: 我不知道.
+        - text: 我不知道。
           feedback: 在这个代码中，僵尸将会通过正确的路径，最终会永远的来回走动。
       courseD_multi_maze_until2_predict1:
         questions:
@@ -2012,7 +2023,7 @@ zh-CN:
           correct: true
           feedback: 叮咚！答对啦！
         - text: 小鸟会撞上TNT炸药。
-        - text: 我不知道.
+        - text: 我不知道。
           feedback: 当前面有路时，这只鸟会向前走然后左转，反复如此，直到达到猪的位置！
       courseD_multi_maze_until2_predict1_2018:
         questions:
@@ -2023,7 +2034,7 @@ zh-CN:
           correct: true
           feedback: 叮咚！答对啦！
         - text: 小鸟会撞上TNT炸药。
-        - text: 我不知道.
+        - text: 我不知道。
           feedback: 当前面有路时，这只鸟会向前走然后左转，反复如此，直到达到猪的位置！
       courseD_multi_maze_until2_predict1_2018_2019:
         questions:
@@ -2034,7 +2045,7 @@ zh-CN:
           correct: true
           feedback: 叮咚！答对啦！
         - text: 小鸟会撞上TNT炸药。
-        - text: 我不知道.
+        - text: 我不知道。
           feedback: 当前面有路时，这只鸟会向前走然后左转，反复如此，直到达到猪的位置！
       courseD_multi_scrat_predict1:
         questions:
@@ -2044,7 +2055,7 @@ zh-CN:
         - correct: true
           feedback: 叮咚！答对啦！
         - {}
-        - text: 我不知道.
+        - text: 我不知道。
       courseE_multi_bee_functions_predict1:
         questions:
         - {}
@@ -2052,7 +2063,7 @@ zh-CN:
         - correct: true
         - {}
         - {}
-        - text: 我不知道.
+        - text: 我不知道。
       courseE_multi_farmer_functions11_predict:
         questions:
         - {}
@@ -2134,7 +2145,7 @@ zh-CN:
           feedback: 叮咚！答对啦！
         - text: 蜜蜂将会得到所有的花蜜。
           feedback: 错误。在最后两个函数调用之前，变量被设置回0。
-        - text: 我不知道.
+        - text: 我不知道。
       courseF_bee_variables_8a_2018_2019:
         title: 小蜜蜂——多变量的应用
         questions:
@@ -2147,7 +2158,7 @@ zh-CN:
           feedback: 叮咚！答对啦！
         - text: 蜜蜂将会得到所有的花蜜。
           feedback: 错误。在最后两个函数调用之前，变量被设置回0。
-        - text: 我不知道.
+        - text: 我不知道。
       courseF_markdown_algorithms_end:
         title: 测试Markdown文本页面
         content1: 测试Markdown文本页面
@@ -2213,7 +2224,7 @@ zh-CN:
         - text: 艺术家将绘制一个螺旋图形，每次通过“for”循环，线会变得更长和更粗。
           correct: true
           feedback: 叮咚！答对啦！
-        - text: 我不知道.
+        - text: 我不知道。
           feedback: 错误。每次通过“for”循环，艺术家绘制的线会变得更长和更粗。
       courseF_multi_artist_for10_predict1_2018:
         questions:
@@ -2226,7 +2237,7 @@ zh-CN:
         - text: 艺术家将绘制一个螺旋图形，每次通过“for”循环，线会变得更长和更粗。
           correct: true
           feedback: 叮咚！答对啦！
-        - text: 我不知道.
+        - text: 我不知道。
           feedback: 错误。每次通过“for”循环，艺术家绘制的线会变得更长和更粗。
       courseF_multi_artist_for10_predict1_2018_2019:
         questions:
@@ -2239,7 +2250,7 @@ zh-CN:
         - text: 艺术家将绘制一个螺旋图形，每次通过“for”循环，线会变得更长和更粗。
           correct: true
           feedback: 叮咚！答对啦！
-        - text: 我不知道.
+        - text: 我不知道。
           feedback: 错误。每次通过“for”循环，艺术家绘制的线会变得更长和更粗。
       courseF_multi_artist_fwp2_predict1:
         questions:
@@ -2249,7 +2260,7 @@ zh-CN:
           feedback: 叮咚！答对啦！
         - {}
         - {}
-        - text: 我不知道.
+        - text: 我不知道。
       courseF_multi_artist_variables3a_predict1:
         questions:
         - text: 我们已将变量“长度”设置为50。当您单击“运行”时，会发生什么情况？
@@ -2261,7 +2272,7 @@ zh-CN:
           feedback: 错误。 变量“长度”需要在“重复”循环中使用，才能实现。
         - text: 艺术家将绘制一个开放的图形，其中三条边分别旋转50度。
           feedback: 错误。 变量“长度”需要在“转x度”积木块中使用，才能实现。
-        - text: 我不知道.
+        - text: 我不知道。
       courseF_multi_artist_variables3a_predict1_2018:
         questions:
         - text: 我们已将变量“长度”设置为50。当您单击“运行”时，会发生什么情况？
@@ -2273,7 +2284,7 @@ zh-CN:
           feedback: 错误。 变量“长度”需要在“重复”循环中使用，才能实现。
         - text: 艺术家将绘制一个开放的图形，其中三条边分别旋转50度。
           feedback: 错误。 变量“长度”需要在“转x度”积木块中使用，才能实现。
-        - text: 我不知道.
+        - text: 我不知道。
       courseF_multi_artist_variables3a_predict1_2018_2019:
         questions:
         - text: 我们已将变量“长度”设置为50。当您单击“运行”时，会发生什么情况？
@@ -2285,7 +2296,7 @@ zh-CN:
           feedback: 错误。 变量“长度”需要在“重复”循环中使用，才能实现。
         - text: 艺术家将绘制一个开放的图形，其中三条边分别旋转50度。
           feedback: 错误。 变量“长度”需要在“转x度”积木块中使用，才能实现。
-        - text: 我不知道.
+        - text: 我不知道。
       courseF_multi_bee_conditionals1_predict1:
         questions:
         - {}
@@ -2297,17 +2308,17 @@ zh-CN:
           feedback: 叮咚！答对啦！
         - text: 蜜蜂会移动到云中，然后什么都不做，不论云下是什么。
           feedback: 错误。积木块“如果在花里”能确保，如果云下有花朵的话，蜜蜂会采花粉。
-        - text: 我不知道.
+        - text: 我不知道。
           feedback: 错误。积木块“如果在花里”能确保，如果云下有花朵的话，蜜蜂只会采花粉。
       courseF_multi_bee_conditionals7_predict2:
         questions:
-        - text: 仔细阅读下面的代码。 当您单击 "运行" 时, 会发生什么情况？
+        - text: 仔细阅读下面的代码。当您单击 "运行" 时, 会发生什么情况？
         answers:
         - correct: true
           feedback: 叮咚！答对啦！
         - text: 蜜蜂会从花朵和蜂窝中获取花粉。
         - text: 蜜蜂会从花朵和蜂窝中获取蜂蜜。
-        - text: 我不知道.
+        - text: 我不知道。
       courseF_multi_bee_for3_predict1:
         questions:
         - text: 仔细阅读下面的代码。当您单击“运行”时，会发生什么情况？
@@ -2354,7 +2365,7 @@ zh-CN:
         - {}
         - correct: true
         - {}
-        - text: 我不知道.
+        - text: 我不知道。
       courseF_multi_playlab_variables4c_predictive1:
         questions:
         - {}
@@ -2363,13 +2374,13 @@ zh-CN:
           feedback: '正确 '
         - {}
         - {}
-        - text: 我不知道.
+        - text: 我不知道。
       courseF_project_exemplars_2019:
         title: 测试Markdown文本页面
         content1: 测试Markdown文本页面
       coursee_prediction_artistfunction2:
         questions:
-        - text: What will happen when you press the "Run" button?
+        - {}
         answers:
         - text: 艺术家将正确解决谜题。
           feedback: 不正确。循环使用了“画多边形”，而不是“多一列多边形”。
@@ -2382,7 +2393,7 @@ zh-CN:
           feedback: 不正确。在调用“画多边形”之间，循环转动了90度。
       coursee_prediction_artistfunction2_2018:
         questions:
-        - text: What will happen when you press the "Run" button?
+        - {}
         answers:
         - text: 艺术家将正确解决谜题。
           feedback: 不正确。循环使用了“画多边形”，而不是“多一列多边形”。
@@ -2395,7 +2406,7 @@ zh-CN:
           feedback: 不正确。在调用“画多边形”之间，循环转动了90度。
       coursee_prediction_artistfunction2_2018_2019:
         questions:
-        - text: What will happen when you press the "Run" button?
+        - {}
         answers:
         - text: 艺术家将正确解决谜题。
           feedback: 不正确。循环使用了“画多边形”，而不是“多一列多边形”。
@@ -2421,7 +2432,7 @@ zh-CN:
         - correct: true
           feedback: 叮咚！答对啦！
         - {}
-        - text: 我不知道.
+        - text: 我不知道。
       grade2_multi_collector_A_predict1_2018:
         questions:
         - text: 仔细观察代码。你认为程序运行时会发生什么？
@@ -2430,7 +2441,7 @@ zh-CN:
         - correct: true
           feedback: 叮咚！答对啦！
         - {}
-        - text: 我不知道.
+        - text: 我不知道。
       grade2_multi_collector_A_predict1_2018_2019:
         questions:
         - text: 仔细观察代码。你认为程序运行时会发生什么？
@@ -2439,6 +2450,6 @@ zh-CN:
         - correct: true
           feedback: 叮咚！答对啦！
         - {}
-        - text: 我不知道.
+        - text: 我不知道。
       gradek1_activity_beNice:
         title: 计算机是你的朋友

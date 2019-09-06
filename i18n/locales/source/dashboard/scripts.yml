@@ -11352,7 +11352,7 @@ en:
               name: Practice PT Part 3
             Unit 4 Assessment:
               name: Unit 4 Assessment
-          title: 'Unit 4: Variables, Conditionals, Functions'
+          title: CSP Unit 4 Pilot - Variables, Conditionals, Functions
           description_audience: ''
           description_short: ''
           description: ''
@@ -11856,7 +11856,17 @@ en:
               name: Binary Numbers
             Overflow and Rounding:
               name: Overflow and Rounding
-          title: CSP Unit 1 Pilot
+            CS Principles Unit 1 Survey:
+              name: CS Principles Unit 1 Survey
+            Unit 1 Survey:
+              name: Unit 1 Survey
+            'Lesson 15: Unit Assessment':
+              name: 'Lesson 15: Unit Assessment'
+            Unit 1 STUDENT Survey:
+              name: Unit 1 STUDENT Survey
+            Unit 1 TEACHER Survey:
+              name: Unit 1 TEACHER Survey
+          title: CSP Unit 1 Pilot - Digital Information
           description_audience: ''
           description_short: ''
           description: ''
@@ -12620,7 +12630,7 @@ en:
               name: Student Survey (Libraries)
             Teacher Survey (Libraries):
               name: Teacher Survey (Libraries)
-          title: 'Unit 5: Lists, Loops, and Traversals'
+          title: CSP Unit 5 Pilot - Lists, Loops, and Traversals
           description_audience: ''
           description_short: ''
           description: ''
@@ -12687,7 +12697,7 @@ en:
           description_short: ''
           description: ''
         csd1-pilot:
-          title: CSD Unit 1 - Problem Solving and Computing (Pilot Version)
+          title: Problem Solving (Pilot Version)
           description: "Problem Solving and Computing is a highly interactive and collaborative introduction to the field of computer science, as framed within the broader pursuit of solving problems. You’ll practice using a problem solving process to address a series of puzzles, challenges, and real world scenarios. Next, you’ll learn how computers input, output, store, and process information to help humans solve problems.  The unit concludes with a project in which you design an application that helps solve a problem of your choosing.\r\n"
           description_short: "  Learn how humans work with computers to solve problems."
           description_audience: ''
@@ -12820,6 +12830,20 @@ en:
               name: Searching and Research
             Sources and Research:
               name: Sources and Research
+            Team Problem Solving:
+              name: Team Problem Solving
+            Wireframes and Planning:
+              name: Wireframes and Planning
+            Linking Pages:
+              name: Linking Pages
+            Planning a Multi-page Website:
+              name: Planning a Multi-page Website
+            Linking and Navigation:
+              name: Linking and Navigation
+            Peer Review and Final Touches:
+              name: Peer Review and Final Touches
+            Project - Website for a Purpose:
+              name: Project - Website for a Purpose
         csd3-pilot:
           title: CSD Unit 3 - Animations and Games (Pilot Version)
           description: " In Unit 3, you’ll build on your coding experience as you program animations, interactive art, and games in Game Lab. The unit starts off with simple shapes and builds up to more sophisticated sprite-based games, using the same programming concepts and the design process computer scientists use daily. In the final project, you’ll develop a personalized, interactive program."
@@ -12927,6 +12951,18 @@ en:
               name: CS Discoveries Post Course survey
               description_student: ''
               description_teacher: ''
+            Shapes and Parameters:
+              name: Shapes and Parameters
+            Random Numbers:
+              name: Random Numbers
+            Sprites and Animations:
+              name: Sprites and Animations
+            Create a Scene:
+              name: Create a Scene
+            Text and Captioned Scenes:
+              name: Text and Captioned Scenes
+            Sprite Properties:
+              name: Sprite Properties
         csd-bugs:
           stages:
             Game Lab Bugs:
@@ -12969,7 +13005,15 @@ en:
               name: 'Project: Share Your App'
             The Need for Programming Languages:
               name: The Need for Programming Languages
-          title: 'Unit 3: Intro to App Design'
+            'Project: Finish Your App':
+              name: 'Project: Finish Your App'
+            Programs Explore:
+              name: Programs Explore
+            Unit 3 STUDENT Survey:
+              name: Unit 3 STUDENT Survey
+            Unit 3 TEACHER Survey:
+              name: Unit 3 TEACHER Survey
+          title: CSP Unit 3 Pilot - Intro to App Design
           description_audience: ''
           description_short: ''
           description: ''
@@ -12999,7 +13043,7 @@ en:
               name: Understanding the Curriculum
             Demonstrating Understanding:
               name: Demonstrating Understanding
-          title: CS Discoveries Deeper Learning 2019 Overview
+          title: CS Discoveries Deeper Learning 2019 Module for FiT
           description_audience: CS Discoveries Facilitators in Training 2019
           description_short: Background information and practice prompt for FiT workshop
           description: ''
@@ -13035,6 +13079,8 @@ en:
               name: 'Step 1: Develop Understanding'
             'Step 2: Demonstrate Understanding':
               name: 'Step 2: Demonstrate Understanding'
+            Deeper Learning Overview:
+              name: Deeper Learning Overview
           title: 'CS Discoveries Deeper Learning 2019 Module for Workshop 1 '
           description_audience: CS Discoveries Facilitators in Training 2019
           description_short: Academic Year Workshop 1
@@ -13045,7 +13091,13 @@ en:
               name: new stage
             CS Discoveries Deeper Learning Module 2:
               name: CS Discoveries Deeper Learning Module 2
-          title: CS Discoveries Deeper Learning Module 2
+            Deeper Learning Overview:
+              name: Deeper Learning Overview
+            'Step 1: Develop Understanding':
+              name: 'Step 1: Develop Understanding'
+            'Step 2: Demonstrate Understanding':
+              name: 'Step 2: Demonstrate Understanding'
+          title: CS Discoveries Deeper Learning Module for Workshop 2
           description_audience: CS Discoveries Facilitators in Training 2019
           description_short: ''
           description: ''
@@ -13073,6 +13125,8 @@ en:
               name: 'Step 1: Develop Understanding'
             'Step 2: Demonstrate Understanding':
               name: 'Step 2: Demonstrate Understanding'
+            Deeper Learning Overview:
+              name: Deeper Learning Overview
           title: CS Principles Deeper Learning Module for Workshop 1
           description_audience: CS Principles Facilitators in Training 2019
           description_short: ''
@@ -13081,6 +13135,12 @@ en:
           stages:
             CS Principles Deeper Learning Module 2:
               name: CS Principles Deeper Learning Module 2
+            Deeper Learning Overview:
+              name: Deeper Learning Overview
+            'Step 1: Develop Understanding':
+              name: 'Step 1: Develop Understanding'
+            'Step 2: Demonstrate Understanding':
+              name: 'Step 2: Demonstrate Understanding'
           title: CS Principles Deeper Learning Module 2
           description_audience: CS Principles Facilitators in Training 2019
           description_short: ''
@@ -13105,7 +13165,153 @@ en:
           stages:
             Pilot Information:
               name: Pilot Information
+            Pilot Information 1:
+              name: Pilot Information 1
+            Pilot Information 2:
+              name: Pilot Information 2
+            Pilot Information 3:
+              name: Pilot Information 3
+            Pilot Information 4:
+              name: Pilot Information 4
+            Pilot Information 5:
+              name: Pilot Information 5
+            Pilot Information 6:
+              name: Pilot Information 6
+            Pilot Information 7:
+              name: Pilot Information 7
+            Pilot Information 8:
+              name: Pilot Information 8
+            Pilot Information 9:
+              name: Pilot Information 9
+            Pilot Information 10:
+              name: Pilot Information 10
+            Pilot Information 11:
+              name: Pilot Information 11
+            Pilot Information 12:
+              name: Pilot Information 12
+            Pilot Information 13:
+              name: Pilot Information 13
+            Pilot Information 14:
+              name: Pilot Information 14
+            Pilot Information 15:
+              name: Pilot Information 15
+            Pilot Information 16:
+              name: Pilot Information 16
+            Pilot Information 17:
+              name: Pilot Information 17
+            Pilot Information 18:
+              name: Pilot Information 18
+            Pilot Information 19:
+              name: Pilot Information 19
+            Pilot Information 20:
+              name: Pilot Information 20
+            Pilot Information 21:
+              name: Pilot Information 21
+            Pilot Information 22:
+              name: Pilot Information 22
+            Pilot Information 23:
+              name: Pilot Information 23
+            Pilot Information 24:
+              name: Pilot Information 24
+            Pilot Information 25:
+              name: Pilot Information 25
+            Pilot Information 26:
+              name: Pilot Information 26
+            Pilot Information 27:
+              name: Pilot Information 27
+            Pilot Information 28:
+              name: Pilot Information 28
+            Pilot Information 29:
+              name: Pilot Information 29
           title: CSD Pilot Course
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csd4-pilot:
+          stages:
+            What is a Computer?:
+              name: What is a Computer?
+            Input and Output:
+              name: Input and Output
+            Processing:
+              name: Processing
+            Apps and Storage:
+              name: Apps and Storage
+            Project - Propose an App:
+              name: Project - Propose an App
+            Post-Project Test:
+              name: Post-Project Test
+          title: Computing and Problem Solving
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csp2-pilot:
+          stages:
+            new stage:
+              name: new stage
+            Building a Network:
+              name: Building a Network
+            IP Addresses:
+              name: IP Addresses
+            Routers and Redundancy:
+              name: Routers and Redundancy
+            Packets:
+              name: Packets
+            The Growing Internet:
+              name: The Growing Internet
+            Internet Dilemmas pt 1:
+              name: Internet Dilemmas pt 1
+            Internet Dilemmas, pt 2:
+              name: Internet Dilemmas, pt 2
+            Unit 2 Assessment:
+              name: Unit 2 Assessment
+            Unit Assessment:
+              name: Unit Assessment
+            'Lesson 8: Unit Assessment':
+              name: 'Lesson 8: Unit Assessment'
+            Unit 2 STUDENT Survey:
+              name: Unit 2 STUDENT Survey
+            Unit 2 TEACHER Survey:
+              name: Unit 2 TEACHER Survey
+          title: CSP Unit 2 Pilot - The Internet
+          description_audience: ''
+          description_short: ''
+          description: ''
+        denny-science:
+          stages:
+            Earthquake Detector:
+              name: Earthquake Detector
+            'Earthquake Detector: Designing Screens':
+              name: 'Earthquake Detector: Designing Screens'
+            'Earthquake Detector: Processing with Events':
+              name: 'Earthquake Detector: Processing with Events'
+          title: Denny Science
+          description_audience: ''
+          description_short: ''
+          description: ''
+        peru-2019:
+          stages:
+            new stage:
+              name: new stage
+            Introduction:
+              name: Introduction
+            Debugging in Collector:
+              name: Debugging in Collector
+            'Loops: My Loopy Robotic Friends':
+              name: 'Loops: My Loopy Robotic Friends'
+            Loops in Artist:
+              name: Loops in Artist
+            Nested Loops:
+              name: Nested Loops
+            Nested Loops Project in Frozen:
+              name: Nested Loops Project in Frozen
+            Events in Star Wars:
+              name: Events in Star Wars
+            Introduction to Debugging:
+              name: Introduction to Debugging
+            Nested Loops in Frozen:
+              name: Nested Loops in Frozen
+          title: Hora del Código Perú 2019
           description_audience: ''
           description_short: ''
           description: ''

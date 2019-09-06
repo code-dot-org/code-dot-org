@@ -89,4 +89,4 @@ level 'CSD U5 test', assessment: true
 
 stage 'CS Discoveries Post Course survey', lockable: true, flex_category: 'cspSurvey'
 level 'csd-post-survey-intro-2019'
-level 'csd-post-survey-2017-levelgroup_2018_2019', assessment: true
+level 'csd-post-survey-levelgroup_2019', assessment: true

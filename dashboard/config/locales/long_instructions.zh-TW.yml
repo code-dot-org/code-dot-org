@@ -268,7 +268,7 @@ zh-TW:
       Dance_Party_02: |-
         讓這隻麋鹿跳舞！
 
-        拖曳出 <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> 程式積木到工作區上。連接到在 <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"小節"</title></block></xml> 程式積木之的後面。您的舞者應該在第 4 個小節之後開始新的動作。
+        拖曳出 <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> 程式積木 到工作區上。連接此程式積木在 <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> 程式積木的後面. 您的舞者應該在第 4 個小節之後開始新的動作。
 
         **小節**用於計算音樂中的時間。在本教學課程中，一小節的長度為四拍。
       Dance_Party_03: |-
@@ -407,6 +407,12 @@ zh-TW:
       K-1 Bee Loops 5: 使用「重複」迴圈讓我收集到花蜜和蜂蜜！
       K-1 Maze Loops 2: 使用`重複`積木讓我抓到豬！
       K-1 Maze Loops 8: 使用「重複」迴圈讓我抓到豬。
+      MC HOC 2016 SCORE LEVEL: |-
+        大部分的遊戲會有分數機制吧。與這些鐵魔像玩「人捉鬼」遊戲，再用<xml>  <block type="craft_addScore">
+            <title name="SCORE">1</title>
+          </block></xml> 程式積木，在你捉到他們時給自己加分。
+
+        達到 5 分就勝利！
       MC_HOC_2017_01_RETRY: |-
         房門反鎖住了，代理 Agent 快來幫忙！
 
@@ -627,6 +633,7 @@ zh-TW:
       courseB_artist_loops10_2019: "你覺得當小藝術家回到家時看到了什麼？用你學過的技能來畫出這個圖形。\\\r\n\\\r\n\n<hr/>\r\n<h3>Ideas</h3>\r\n<table>\r\n<tr>\r\n<td>\r\n<img\nsrc=\"https://images.code.org/8f4f2a68dae2cf0aa82cc0a49ea4df04-image-1466787750475.gif\"\nwidth=\"150\"/><br/>\r\n<h4>一隻唱歌的蝸牛</h4><br/><br/>\r\n</td>\r\n\r\n<td>\r\n<img\nsrc=\"https://images.code.org/732ce5dd91c7f49f06e88da1a9f664f3-image-1466794904255.gif\"\nwidth=\"150\"/><br/>\r\n<h4>一座大城市</h4><br/><br/>\r\n</td>\r\n\r\n<td>\r\n<img\nsrc=\"https://images.code.org/37fdd6fdd761df09fd4949d5e43f0a7f-image-1466795165642.gif\"\nwidth=\"150\"/><br/>\r\n<h4>A
         Concert</h4><br/><br/>\r\n</td>\r\n\r\n<td>\r\n<img\nsrc=\"https://images.code.org/f7bf86b0f86669d82ee2c1565738b9cb-image-1466794447737.gif\"\nwidth=\"150\"/><br/>\r\n<h4>一個生日蛋糕</h4><br/><br/>\r\n</td>\r\n\r\n</tr>\r\n</table>\r"
       courseB_artist_loops3_2019: 幫助小藝術家畫一條線，畫 7 次以繪出花園的牆。
+      courseB_artist_loops4_2019: 現在我們需要準備好泥土讓他可以耕種。找出程式碼中的臭蟲（bug，程式中有錯誤的意思）幫助藝術家準備好地面。
       courseB_artist_loops6: 灌木叢後面還有美麗的葡萄樹開滿了花。 你可以爬上藤和看到它在哪裡嗎？
       courseB_artist_loops6_2018: 灌木叢後面還有美麗的葡萄樹開滿了花。 你可以爬上藤和看到它在哪裡嗎？
       courseB_artist_loops6_2019: 灌木叢後面還有美麗的葡萄樹開滿了花。 你可以爬上藤和看到它在哪裡嗎？

@@ -15,6 +15,15 @@ const UPDATE_KEY_VALUE_DATA = 'data/UPDATE_KEY_VALUE_DATA';
 const SHOW_WARNING = 'data/SHOW_WARNING';
 const CLEAR_WARNING = 'data/CLEAR_WARNING';
 
+/**
+ * Types which a column can be coerced to.
+ * @enum {string}
+ */
+export const tableType = {
+  SHARED: 'shared',
+  PROJECT: 'project'
+};
+
 const DataState = Record({
   view: DataView.OVERVIEW,
   tableListMap: {},
@@ -35,7 +44,7 @@ export default function(state = initialState, action) {
       return state.set(
         'tableListMap',
         Object.assign({}, state.tableListMap, {
-          [action.tableName]: true
+          [action.tableName]: action.tableType
         })
       );
     case CHANGE_VIEW:
@@ -81,9 +90,10 @@ export default function(state = initialState, action) {
  * Action which adds a table name to the table list map, if it doesn't exist already.
  * @param {string} tableName
  */
-export const addTableName = tableName => ({
+export const addTableName = (tableName, tableType) => ({
   type: ADD_TABLE_NAME,
-  tableName
+  tableName,
+  tableType
 });
 
 export const changeView = (view, tableName) => ({

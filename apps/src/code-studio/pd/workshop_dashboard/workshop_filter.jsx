@@ -313,23 +313,34 @@ export class WorkshopFilter extends React.Component {
     }));
   }
 
-  mergeSubjectArrays(objValue, srcValue) {
+  static getSubjectOptions(subjects, prefix = '') {
+    let result = {};
+
+    Object.keys(subjects).map(
+      course =>
+        (result[course] = subjects[course].map(subject => ({
+          value: subject,
+          label: prefix + subject
+        })))
+    );
+
+    return result;
+  }
+
+  static concatSubjectArrays(objValue, srcValue) {
     if (_.isArray(objValue)) {
-      const legacySubjects = srcValue.map(subject => '[Legacy] ' + subject);
-      return objValue.concat(legacySubjects);
+      return objValue.concat(srcValue);
     }
   }
 
-  getSubjects() {
-    if (!this._subjects) {
-      this._subjects = _.mergeWith(
-        Subjects,
-        LegacySubjects,
-        this.mergeSubjectArrays
-      );
-    }
+  static combineSubjectOptions(currentSubjects, legacySubjects) {
+    const legacyPrefix = '[Legacy] ';
 
-    return this._subjects;
+    return _.mergeWith(
+      this.getSubjectOptions(currentSubjects),
+      this.getSubjectOptions(legacySubjects, legacyPrefix),
+      this.concatSubjectArrays
+    );
   }
 
   render() {
@@ -341,6 +352,13 @@ export class WorkshopFilter extends React.Component {
 
     const startDate = this.parseDate(filters.start);
     const endDate = this.parseDate(filters.end);
+
+    if (!this.subjectOptions) {
+      this.subjectOptions = WorkshopFilter.combineSubjectOptions(
+        Subjects,
+        LegacySubjects
+      );
+    }
 
     return (
       <Grid fluid>
@@ -396,7 +414,7 @@ export class WorkshopFilter extends React.Component {
             </FormGroup>
           </Col>
           <Clearfix visibleLgBlock />
-          {filters.course && this.getSubjects()[filters.course] && (
+          {filters.course && this.subjectOptions[filters.course] && (
             <Col md={5} sm={6}>
               <FormGroup>
                 <ControlLabel>Subject</ControlLabel>
@@ -404,10 +422,7 @@ export class WorkshopFilter extends React.Component {
                   value={filters.subject}
                   onChange={this.handleSubjectChange}
                   placeholder={null}
-                  options={this.getSubjects()[filters.course].map(v => ({
-                    value: v,
-                    label: v
-                  }))}
+                  options={this.subjectOptions[filters.course]}
                   {...SelectStyleProps}
                 />
               </FormGroup>

@@ -5560,6 +5560,8 @@ id:
               name: Proyek - Situs web Portfolio Pribadi
             Intellectual Property:
               name: Hak milik intelektual
+            CSS Classes:
+              name: Kelas CSS
         csd3-pilot:
           description_short: Pemrograman
           stages:

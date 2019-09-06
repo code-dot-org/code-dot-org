@@ -86,7 +86,11 @@ module Poste
       # TODO(andrew): Fix this so that we get a signal as to how often this is happening.
       # For more information, see https://www.pivotaltracker.com/story/show/104750788.
       tracking_id = header['litmus_tracking_id'] unless header.nil?
-      html = replace_urls_with_click_trackers @html.result(locals), params if @html
+
+      html = @html.result(locals) if @html
+      # Parse the html into a DOM and then re-serialize back to html text in case we were depending on that
+      # logic in the click tracking method to clean up or canonicalize the HTML.
+      html = Nokogiri::HTML(html).to_html if html
       html = inject_litmus_tracking html, tracking_id, params[:encrypted_id] if html
       text = @text.result(locals) unless @text.nil?
 
@@ -100,20 +104,6 @@ module Poste
 <img src="https://#{tracking_id}.emltrk.com/#{tracking_id}?d=#{unique_id}" width="1" height="1" border="0" />
 eos
       html.gsub("</body>", litmus_blob + "\n</body>")
-    end
-
-    def replace_urls_with_click_trackers(html, params)
-      doc = Nokogiri::HTML(html)
-      doc.css('a').each do |link|
-        href = link['href']
-        next if href == params[:unsubscribe_link]
-        next if href =~ /users\/password\/edit/
-        next unless href =~ /^http:\/\// || href =~ /^https:\/\//
-
-        url_id = Poste2.find_or_create_url(href)
-        link.attributes['href'].value = poste_url("/l/#{params[:encrypted_id]}/#{Base64.urlsafe_encode64(url_id.to_s)}")
-      end
-      doc.to_html
     end
   end
 end

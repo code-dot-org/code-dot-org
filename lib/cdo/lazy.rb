@@ -22,11 +22,19 @@ module Cdo
     end
 
     def __getobj__
-      __setobj__(@block.call) unless defined?(@delegate_sd_obj)
-      super
+      __setobj__(super(&@block))
     end
 
-    undef_method(:instance_of?, :kind_of?, :is_a?, :nil?, :class)
+    def is_a?(class1)
+      class1 == Lazy || __getobj__.is_a?(class1)
+    end
+    alias kind_of? is_a?
+
+    def instance_of?(class1)
+      class1 == Lazy || __getobj__.instance_of?(class1)
+    end
+
+    undef_method(:nil?, :class)
   end
 
   def self.lazy(&block)

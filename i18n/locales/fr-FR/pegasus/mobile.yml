@@ -1345,7 +1345,7 @@
   sphero_beyond_longdescription: "Que vous soyez un éducateur ou un parent, les leçons SPRK donnent aux enfants un cours accéléré et amusant de programmation de robots, tout en affûtant leurs compétences en mathématiques et en sciences."
   compatibility_hide_this_warning: "Cacher l'avertissement"
   compatibility_unsupported_browser: "Votre navigateur n'est pas supporté. Merci de mettre à jour avec <a href='%{supported_browsers_url}', target='_blank'>l'un de nos navigateurs supportés</a>. Vous pouvez afficher la page mais il risque d'y avoir des choses qui ne fonctionnent pas."
-  compatibility_unsupported_browser_markdown: "Votre navigateur n'est pas supporté. Merci de mettre à jour avec <a href='%{supported_browsers_url}', target='_blank'>l'un de nos navigateurs supportés</a>. Vous pouvez afficher la page mais il risque d'y avoir des choses qui ne fonctionnent pas."
+  compatibility_unsupported_browser_markdown: "Votre navigateur n'est pas supporté. Merci de mettre à jour avec [un de nos navigateurs supportés](%{supported_browsers_url}). Vous pouvez afficher la page mais il risque d'y avoir des choses qui ne fonctionnent pas."
   flappy_shortcode: "battre des ailes"
   header_home: "Accueil"
   header_my_dashboard: "Mon tableau de bord"

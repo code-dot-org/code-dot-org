@@ -854,6 +854,23 @@ zh-TW:
         - {}
         - correct: true
         - {}
+      Dance_Party_extras_intro:
+        markdown: "# 繼續跳舞!\n\n對於第2部分，您將創建自己的專案。 這裡沒有謎題 - 相反，有一些專案展現不同的方式來製作更複雜的舞會。
+          \n\n您可以按照自己的喜好順序選擇這個層級。 跳轉看看在先前級別中完成哪些事情，或者組合專案中的概念。 嘗試所有這些，選擇您喜歡的，並花時間在添加到該專案上，讓它成為你自己的專案。\n\n<a
+          class=\"btn btn-large btn-primary next-stage submitButton pull-right\">繼續</a>\n\n<div
+          class=\"clearfix\"></div>\n\n<div style=\"float: left; margin: 10px\">\n<a
+          href=\"2\">\n<h2>\n加入陣形\n</h2>\n\n<img src=\"https://images.code.org/70ad4cbc12321f301d43161f847bdee4-image-1541746835274.gif\"></a>\n\n</div>\n\n<div
+          style=\"float: left; margin: 10px\">\n<a href=\"3\">\n<h2>\n他們要去哪？\n</h2>\n\n<img
+          src=\"https://images.code.org/524010de61c9af76e98bd2a5ccdba461-image-1541746855689.gif\"></a>\n\n</div>\n\n<div
+          style=\"float: left; margin: 10px\">\n<a href=\"4\">\n<h2>\n舞蹈團隊\n</h2>\n\n<img
+          src=\"https://images.code.org/f4ccfd43f9a15d68a339b449be8e96c3-image-1541746870889.gif\"></a>\n\n</div>\n\n<div
+          style=\"float: left; margin: 10px\">\n<a href=\"5\">\n<h2>\n四分音符\n</h2>\n\n<img
+          src=\"https://images.code.org/6b538efe77ea6e19f1428f7c0e45c621-image-1541746886875.gif\"></a>\n\n</div>\n\n<div
+          style=\"float: left; margin: 10px\">\n<a href=\"6\">\n<h2>\n低音、中音和高音\n</h2>\n\n<img
+          src=\"https://images.code.org/3825556a395fd31bc4f767ca7ea5c566-image-1541746894197.gif\"></a>\n\n</div>\n\n<div
+          style=\"float: left; margin: 10px\">\n<a href=\"7\">\n<h2>\n加速、減速\n</h2>\n\n<img
+          src=\"https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif\"></a>\n\n</div>\n
+          \nhttps://studio.code.org/s/dance-extras/stage/1/puzzle/1 -> dsls -> markdown\n"
       DigitalFootprint-Unplugged:
         markdown: |
           # 你的數位足跡

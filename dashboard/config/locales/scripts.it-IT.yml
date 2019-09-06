@@ -1500,8 +1500,8 @@ it:
           title: Programma il tuo Minecraft
           description_short: Programma animali e altre creature di Minecraft nella
             tua versione di questo gioco.
-          description: Programma il comportamento degli animali e delle altre creature
-            di Minecraft nella tua versione di questo gioco.
+          description: Programma animali e altre creature di Minecraft nella tua versione
+            di questo gioco.
           stages:
             Minecraft Hour of Code Designer:
               name: Programma il tuo Minecraft
@@ -2257,7 +2257,7 @@ it:
           assignment_family_title: Corso D
           description_audience: Da 7 a 11 anni
           description_short: Vengono ripresi brevemente i concetti del corso C ed
-            aggiunti algoritmi, cicli annidati, istruzioni condizioni e altro ancora.
+            aggiunti algoritmi, cicli annidati, istruzioni condizionali e altro ancora.
           description: In questo corso vengono insegnati nuovi concetti di informatica
             tra cui algoritmi, cicli annidati, cicli "mentre", istruzioni condizionali
             ed eventi. Vengono introdotti alcuni concetti di cittadinanza digitale
@@ -2990,9 +2990,13 @@ it:
               name: Introduzione a Sviluppo App (da 13 anni in su)
         hero:
           stages:
+            'Minecraft\: Hero''s Journey Hour of Code':
+              name: 'Minecraft\: Ora del Codice - Il viaggio dell''eroe'
             Minecraft Hour of Code:
               name: L'Ora del Codice con Minecraft
           title: 'Minecraft: Il viaggio dell''eroe'
+          description_short: Minecraft è tornato per l'Ora del Codice con una nuovissima
+            attività!
           description: Minecraft è tornato per l'Ora del Codice con una nuovissima
             attività! Viaggia attraverso Minecraft grazie al coding.
         applab-intro-staging:
@@ -3429,7 +3433,7 @@ it:
             'Events: The Big Event':
               name: Gli eventi (per i più piccoli)
             Events in Play Lab:
-              name: 'Laboratorio: Eventi'
+              name: Una battaglia con gli eventi
             Programming in Ice Age:
               name: Programmare con Scrat
             Loops in Ice Age:
@@ -3542,7 +3546,7 @@ it:
             Build a Flappy Game:
               name: Realizzare un gioco Flappy
             Events in Play Lab:
-              name: 'Laboratorio: Eventi'
+              name: Giocare con gli eventi
             Screen Out the Mean:
               name: Cittadinanza digitale - Caccia via le cattiverie dallo schermo
             Binary Bracelets:
@@ -3980,7 +3984,7 @@ it:
             'Events: The Big Event':
               name: Gli eventi (per i più piccoli)
             Events in Play Lab:
-              name: 'Laboratorio: Eventi'
+              name: Una battaglia con gli eventi
             Spelling Bee:
               name: Ape Sapiente
             Move It, Move It:
@@ -4741,7 +4745,7 @@ it:
             Screen Out the Mean:
               name: Cittadinanza digitale - Caccia via le cattiverie dallo schermo
             Events in Play Lab:
-              name: 'Laboratorio: Eventi'
+              name: Giocare con gli eventi
             Looking Ahead:
               name: Uno sguardo avanti con Minecraft
             Binary Bracelets:
@@ -4884,7 +4888,7 @@ it:
                 proprio programma risponda all'utente esattamente quando l'utente
                 ne ha bisogno. Gli eventi servono proprio a questo.
             Events in Play Lab:
-              name: 'Laboratorio: Eventi'
+              name: Una battaglia con gli eventi
             'Loops: Getting Loopy':
               name: Diventare ripetitivi
             Loops in Harvester:
@@ -4948,7 +4952,7 @@ it:
             Tell a Story in Play Lab:
               name: Racconta una storia nel Laboratorio
             Make a Game in Play Lab:
-              name: Crea un gioco nel Laboratorio
+              name: Una battaglia con gli eventi
             Ocean Scene with Loops:
               name: Al mare con i cicli
         removed19:

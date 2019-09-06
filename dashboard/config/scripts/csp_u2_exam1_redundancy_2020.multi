@@ -1,0 +1,18 @@
+name 'csp-u2-exam1-redundancy_2020'
+height 'auto'
+
+question 'An Internet Service Provider (ISP) is a company that builds the routers and wired connections that allow individuals to access the Internet.
+<br> <br>
+An ISP is considering adding additional redundant connections to its network. Which of the following best describes why the company would choose to do so?'
+wrong ‘It costs less to design a network that is redundant’
+wrong ‘The protocols of the Internet only work on networks that are redundant’
+right ‘Redundant networks are more reliable’
+wrong ‘Adding additional connections reduces the fault-tolerance of the network’
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN
+
+markdown <<MARKDOWN
+
+MARKDOWN

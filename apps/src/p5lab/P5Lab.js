@@ -23,9 +23,9 @@ var dropletConfig = require('./gamelab/dropletConfig');
 var JSInterpreter = require('@cdo/apps/lib/tools/jsinterpreter/JSInterpreter');
 import * as apiTimeoutList from '@cdo/apps/lib/util/timeoutList';
 var JsInterpreterLogger = require('@cdo/apps/JsInterpreterLogger');
-var GameLabP5 = require('./GameLabP5');
-var gameLabSprite = require('./GameLabSprite');
-var gameLabGroup = require('./GameLabGroup');
+var P5Wrapper = require('./P5Wrapper');
+var p5SpriteWrapper = require('./P5SpriteWrapper');
+var p5GroupWrapper = require('./P5GroupWrapper');
 var gamelabCommands = require('./gamelab/commands');
 import {initializeSubmitHelper, onSubmitComplete} from '@cdo/apps/submitHelper';
 var dom = require('@cdo/apps/dom');
@@ -40,7 +40,7 @@ import {
 import {getSerializedAnimationList} from './shapes';
 import {add as addWatcher} from '@cdo/apps/redux/watchedExpressions';
 var reducers = require('./reducers');
-var GameLabView = require('./GameLabView');
+var P5LabView = require('./P5LabView');
 var Provider = require('react-redux').Provider;
 import {shouldOverlaysBeVisible} from '@cdo/apps/templates/VisualizationOverlay';
 import {
@@ -123,7 +123,7 @@ var P5Lab = function() {
   this.drawInProgress = false;
   this.setupInProgress = false;
   this.reportPreloadEventHandlerComplete_ = null;
-  this.gameLabP5 = new GameLabP5();
+  this.p5Wrapper = new P5Wrapper();
   this.apiJS = apiJavascript;
   this.apiJS.injectGameLab(this);
   this.reportPerf =
@@ -256,7 +256,7 @@ P5Lab.prototype.init = function(config) {
     showRateLimitAlert: this.studioApp_.showRateLimitAlert
   });
 
-  this.gameLabP5.init({
+  this.p5Wrapper.init({
     gameLab: this,
     onExecutionStarting: this.onP5ExecutionStarting.bind(this),
     onPreload: this.onP5Preload.bind(this),
@@ -319,7 +319,7 @@ P5Lab.prototype.init = function(config) {
 
     // Store p5specialFunctions in the unusedConfig array so we don't give warnings
     // about these functions not being called:
-    config.unusedConfig = this.gameLabP5.p5specialFunctions;
+    config.unusedConfig = this.p5Wrapper.p5specialFunctions;
     // remove 'setup' from unusedConfig so that we can show a warning for redefining it.
     if (config.unusedConfig.indexOf('setup') !== -1) {
       config.unusedConfig.splice(config.unusedConfig.indexOf('setup'), 1);
@@ -351,8 +351,10 @@ P5Lab.prototype.init = function(config) {
 
     if (this.isSpritelab) {
       this.studioApp_.addChangeHandler(() => {
-        this.reset();
-        this.preview.apply(this);
+        if (!getStore().getState().runState.isRunning) {
+          this.reset();
+          this.preview.apply(this);
+        }
       });
     }
   };
@@ -449,7 +451,7 @@ P5Lab.prototype.init = function(config) {
     .then(() =>
       ReactDOM.render(
         <Provider store={getStore()}>
-          <GameLabView
+          <P5LabView
             showFinishButton={finishButtonFirstLine && showFinishButton}
             onMount={onMount}
           />
@@ -571,11 +573,11 @@ P5Lab.prototype.onIsRunningChange = function() {
 };
 
 P5Lab.prototype.onIsDebuggingSpritesChange = function(isDebuggingSprites) {
-  this.gameLabP5.debugSprites(isDebuggingSprites);
+  this.p5Wrapper.debugSprites(isDebuggingSprites);
 };
 
 P5Lab.prototype.onStepSpeedChange = function(stepSpeed) {
-  this.gameLabP5.changeStepSpeed(stepSpeed);
+  this.p5Wrapper.changeStepSpeed(stepSpeed);
 
   if (this.isTickTimerRunning()) {
     this.stopTickTimer();
@@ -623,8 +625,8 @@ P5Lab.prototype.hasDataStoreAPIs = function(code) {
 P5Lab.prototype.afterInject_ = function(config) {
   this.mobileControls = new MobileControls();
   this.mobileControls.init({
-    notifyKeyCodeDown: code => this.gameLabP5.notifyKeyCodeDown(code),
-    notifyKeyCodeUp: code => this.gameLabP5.notifyKeyCodeUp(code),
+    notifyKeyCodeDown: code => this.p5Wrapper.notifyKeyCodeDown(code),
+    notifyKeyCodeUp: code => this.p5Wrapper.notifyKeyCodeUp(code),
     softButtonIds: this.level.softButtons
   });
   this.mobileControls.update(
@@ -652,13 +654,13 @@ P5Lab.prototype.afterInject_ = function(config) {
     Blockly.JavaScript.INFINITE_LOOP_TRAP = '';
   }
 
-  // Update gameLabP5's scale and keep it updated with future resizes:
-  this.gameLabP5.scale = this.calculateVisualizationScale_();
+  // Update p5Wrapper's scale and keep it updated with future resizes:
+  this.p5Wrapper.scale = this.calculateVisualizationScale_();
 
   window.addEventListener(
     'resize',
     function() {
-      this.gameLabP5.scale = this.calculateVisualizationScale_();
+      this.p5Wrapper.scale = this.calculateVisualizationScale_();
     }.bind(this)
   );
 };
@@ -705,7 +707,7 @@ P5Lab.prototype.startTickTimer = function() {
   // Set to 100ms interval when we are in the experiment with the speed slider
   // and the slider has been slowed down (we only support two speeds for now):
   const slowPeriod = 100;
-  const intervalPeriod = this.gameLabP5.stepSpeed < 1 ? slowPeriod : fastPeriod;
+  const intervalPeriod = this.p5Wrapper.stepSpeed < 1 ? slowPeriod : fastPeriod;
   this.tickIntervalId = window.setInterval(
     this.onTick.bind(this),
     intervalPeriod
@@ -738,9 +740,9 @@ P5Lab.prototype.reset = function() {
   apiTimeoutList.clearIntervals();
   Sounds.getSingleton().stopAllAudio();
 
-  this.gameLabP5.resetExecution();
+  this.p5Wrapper.resetExecution();
 
-  // Import to reset these after this.gameLabP5 has been reset
+  // Import to reset these after this.p5Wrapper has been reset
   this.drawInProgress = false;
   this.setupInProgress = false;
   this.initialCaptureComplete = false;
@@ -919,8 +921,8 @@ P5Lab.prototype.execute = function() {
     return;
   }
 
-  this.gameLabP5.startExecution();
-  this.gameLabP5.setLoop(true);
+  this.p5Wrapper.startExecution();
+  this.p5Wrapper.setLoop(true);
 
   if (
     !this.JSInterpreter ||
@@ -941,9 +943,9 @@ P5Lab.prototype.execute = function() {
 P5Lab.prototype.initInterpreter = function(attachDebugger = true) {
   const injectGamelabGlobals = () => {
     if (experiments.isEnabled('replay')) {
-      wrap(this.gameLabP5.p5);
+      wrap(this.p5Wrapper.p5);
     }
-    const propList = this.gameLabP5.getGlobalPropertyList();
+    const propList = this.p5Wrapper.getGlobalPropertyList();
     for (const prop in propList) {
       // Each entry in the propList is an array with 2 elements:
       // propListItem[0] - a native property value
@@ -960,7 +962,7 @@ P5Lab.prototype.initInterpreter = function(attachDebugger = true) {
       for (const command in spritelabCommands) {
         this.JSInterpreter.createGlobalProperty(
           command,
-          spritelabCommands[command].bind(this.gameLabP5.p5),
+          spritelabCommands[command].bind(this.p5Wrapper.p5),
           null
         );
       }
@@ -982,10 +984,10 @@ P5Lab.prototype.initInterpreter = function(attachDebugger = true) {
   this.JSInterpreter = new JSInterpreter({
     studioApp: this.studioApp_,
     maxInterpreterStepsPerTick: MAX_INTERPRETER_STEPS_PER_TICK,
-    shouldRunAtMaxSpeed: () => this.gameLabP5.stepSpeed >= 1,
-    customMarshalGlobalProperties: this.gameLabP5.getCustomMarshalGlobalProperties(),
-    customMarshalBlockedProperties: this.gameLabP5.getCustomMarshalBlockedProperties(),
-    customMarshalObjectList: this.gameLabP5.getCustomMarshalObjectList()
+    shouldRunAtMaxSpeed: () => this.p5Wrapper.stepSpeed >= 1,
+    customMarshalGlobalProperties: this.p5Wrapper.getCustomMarshalGlobalProperties(),
+    customMarshalBlockedProperties: this.p5Wrapper.getCustomMarshalBlockedProperties(),
+    customMarshalObjectList: this.p5Wrapper.getCustomMarshalObjectList()
   });
   this.JSInterpreter.onExecutionError.register(
     this.handleExecutionError.bind(this)
@@ -1025,10 +1027,10 @@ P5Lab.prototype.initInterpreter = function(attachDebugger = true) {
     return;
   }
 
-  gameLabSprite.injectJSInterpreter(this.JSInterpreter);
-  gameLabGroup.injectJSInterpreter(this.JSInterpreter);
+  p5SpriteWrapper.injectJSInterpreter(this.JSInterpreter);
+  p5GroupWrapper.injectJSInterpreter(this.JSInterpreter);
 
-  this.gameLabP5.p5specialFunctions.forEach(function(eventName) {
+  this.p5Wrapper.p5specialFunctions.forEach(function(eventName) {
     var func = this.JSInterpreter.findGlobalFunction(eventName);
     if (func) {
       this.eventHandlers[
@@ -1055,8 +1057,8 @@ P5Lab.prototype.onTick = function() {
     if (this.interpreterStarted) {
       this.JSInterpreter.executeInterpreter();
 
-      if (this.gameLabP5.stepSpeed < 1) {
-        this.gameLabP5.drawDebugSpriteColliders();
+      if (this.p5Wrapper.stepSpeed < 1) {
+        this.p5Wrapper.drawDebugSpriteColliders();
       }
     }
 
@@ -1068,13 +1070,13 @@ P5Lab.prototype.onTick = function() {
 };
 
 /**
- * This is called while this.gameLabP5 is in startExecution(). We use the
+ * This is called while this.p5Wrapper is in startExecution(). We use the
  * opportunity to create native event handlers that call down into interpreter
  * code for each event name.
  */
 P5Lab.prototype.onP5ExecutionStarting = function() {
-  this.gameLabP5.p5eventNames.forEach(function(eventName) {
-    this.gameLabP5.registerP5EventHandler(
+  this.p5Wrapper.p5eventNames.forEach(function(eventName) {
+    this.p5Wrapper.registerP5EventHandler(
       eventName,
       function() {
         if (this.JSInterpreter && this.eventHandlers[eventName]) {
@@ -1086,7 +1088,7 @@ P5Lab.prototype.onP5ExecutionStarting = function() {
 };
 
 /**
- * This is called while this.gameLabP5 is in the preload phase. Do the following:
+ * This is called while this.p5Wrapper is in the preload phase. Do the following:
  *
  * - load animations into the P5 engine
  * - initialize the interpreter
@@ -1106,7 +1108,7 @@ P5Lab.prototype.onP5Preload = function() {
     this.maybePreloadBackgrounds_(),
     this.runPreloadEventHandler_()
   ]).then(() => {
-    this.gameLabP5.notifyPreloadPhaseComplete();
+    this.p5Wrapper.notifyPreloadPhaseComplete();
   });
   return false;
 };
@@ -1125,7 +1127,7 @@ P5Lab.prototype.maybePreloadBackgrounds_ = function() {
   if (!this.isSpritelab) {
     return Promise.resolve();
   }
-  return this.gameLabP5.preloadBackgrounds();
+  return this.p5Wrapper.preloadBackgrounds();
 };
 
 /**
@@ -1141,7 +1143,7 @@ P5Lab.prototype.maybePreloadBackgrounds_ = function() {
 P5Lab.prototype.preloadAnimations_ = async function(pauseAnimationsByDefault) {
   await this.whenAnimationsAreReady();
   // Animations are ready - send them to p5 to be loaded into the engine.
-  return this.gameLabP5.preloadAnimations(
+  return this.p5Wrapper.preloadAnimations(
     getStore().getState().animationList,
     pauseAnimationsByDefault
   );
@@ -1149,7 +1151,7 @@ P5Lab.prototype.preloadAnimations_ = async function(pauseAnimationsByDefault) {
 
 P5Lab.prototype.preloadSpriteImages_ = async function() {
   await this.whenAnimationsAreReady();
-  return this.gameLabP5.preloadSpriteImages(
+  return this.p5Wrapper.preloadSpriteImages(
     getStore().getState().animationList
   );
 };
@@ -1258,7 +1260,7 @@ P5Lab.prototype.completePreloadIfPreloadComplete = function() {
 };
 
 /**
- * This is called while this.gameLabP5 is in the setup phase. We restore the
+ * This is called while this.p5Wrapper is in the setup phase. We restore the
  * interpreter methods that were modified during preload, then call the user's
  * setup function.
  */
@@ -1266,14 +1268,14 @@ P5Lab.prototype.onP5Setup = function() {
   if (this.JSInterpreter) {
     // Re-marshal restored preload methods for the interpreter:
     const preloadMethods = _.intersection(
-      this.gameLabP5.p5._preloadMethods,
-      this.gameLabP5.getMarshallableP5Properties()
+      this.p5Wrapper.p5._preloadMethods,
+      this.p5Wrapper.getMarshallableP5Properties()
     );
     for (const method in preloadMethods) {
       this.JSInterpreter.createGlobalProperty(
         method,
-        this.gameLabP5.p5[method],
-        this.gameLabP5.p5
+        this.p5Wrapper.p5[method],
+        this.p5Wrapper.p5
       );
     }
 
@@ -1302,7 +1304,7 @@ P5Lab.prototype.completeSetupIfSetupComplete = function() {
   ) {
     // Global code should run during the setup phase, but global code hasn't
     // completed.
-    this.gameLabP5.afterSetupStarted();
+    this.p5Wrapper.afterSetupStarted();
     return;
   }
 
@@ -1310,7 +1312,7 @@ P5Lab.prototype.completeSetupIfSetupComplete = function() {
     !this.eventHandlers.setup ||
     this.JSInterpreter.seenReturnFromCallbackDuringExecution
   ) {
-    this.gameLabP5.afterSetupComplete();
+    this.p5Wrapper.afterSetupComplete();
     this.setupInProgress = false;
   }
 };
@@ -1354,14 +1356,14 @@ P5Lab.prototype.measureDrawLoop = function(name, callback) {
     callback();
     measure(name, `${name}_start`);
     clearMarks(`${name}_start`);
-    this.spriteTotalCount += this.gameLabP5.p5.allSprites.length;
+    this.spriteTotalCount += this.p5Wrapper.p5.allSprites.length;
   } else {
     callback();
   }
 };
 
 /**
- * This is called while this.gameLabP5 is in a draw() call. We call the user's
+ * This is called while this.p5Wrapper is in a draw() call. We call the user's
  * draw function.
  */
 P5Lab.prototype.onP5Draw = function() {
@@ -1421,9 +1423,9 @@ P5Lab.prototype.completeRedrawIfDrawComplete = function() {
     this.drawInProgress &&
     this.JSInterpreter.seenReturnFromCallbackDuringExecution
   ) {
-    this.gameLabP5.afterDrawComplete();
+    this.p5Wrapper.afterDrawComplete();
     this.drawInProgress = false;
-    $('#bubble').text('FPS: ' + this.gameLabP5.getFrameRate().toFixed(0));
+    $('#bubble').text('FPS: ' + this.p5Wrapper.getFrameRate().toFixed(0));
   }
 };
 

@@ -536,7 +536,7 @@ fr:
     show_video: 'Afficher la vidéo'
   compatibility:
     upgrade:
-      unsupported_message: "Votre navigateur n'est pas supporté. Merci de mettre à jour avec <a href='%{supported_browsers_url}', target='_blank'>l'un de nos navigateurs supportés</a>. Vous pouvez afficher la page mais il risque d'y avoir des choses qui ne fonctionnent pas."
+      unsupported_message: "Votre navigateur n'est pas supporté. Merci de mettre à jour avec [un de nos navigateurs supportés](%{supported_browsers_url}). Vous pouvez afficher la page mais il risque d'y avoir des choses qui ne fonctionnent pas."
       link: "Pour en savoir plus"
       applab_unsupported_tablet: "Le labo des applis fonctionne mieux sur un ordinateur portable ou de bureau avec une souris et un clavier. Vous pourriez rencontrer des problèmes avec de cet outil sur votre appareil actuel."
       gamelab_unsupported_tablet: "Game Lab fonctionne mieux sur un ordinateur portable ou de bureau avec une souris et un clavier. Vous pourriez rencontrer des problèmes avec cet outil sur votre appareil actuel."
@@ -918,7 +918,7 @@ fr:
   hoc_download:
     title: 'Téléchargements d''Heure du Code'
     capsule_title: 'Vous avez Internet ?'
-    capsule_desc: 'Utiliser l''application en ligne <a href="%{url}">%{app_name}</a>.'
+    capsule_desc: 'Utilisez l''application en ligne [%{app_name}](%{url}).'
     instructions_headline: 'Pas d’Internet ?'
     instructions: 'Instructions pour les enseignants : Si vous avez un débit Internet faible, ces tutoriels d''Heures du Code sont disponibles en téléchargement et utilisables hors ligne. Choisissez votre langue et votre plate-forme, téléchargez et installez les sur tous les ordinateurs dans votre salle de classe. Vous pouvez utiliser une clé USB pour le télécharger une seule fois et installation sur chaque ordinateur ensuite. Remarque : les étudiants ne pourront pas s''identifier dans Code Studio ni enregistrer des progrès ou imprimer les certificats. Les enseignants peuvent imprimer des certificats à l''avance <a href="%{url}">ici</a>.'
     minecraft_name: 'Heure de Code Minecraft'

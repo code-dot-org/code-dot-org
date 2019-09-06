@@ -1,6 +1,9 @@
 import {expect} from '../../util/configuredChai';
 import {initFirebaseStorage} from '@cdo/apps/storage/firebaseStorage';
-import {getDatabase, getConfigRef} from '@cdo/apps/storage/firebaseUtils';
+import {
+  getProjectDatabase,
+  getConfigRef
+} from '@cdo/apps/storage/firebaseUtils';
 
 describe('FirebaseStorage', () => {
   let FirebaseStorage;
@@ -12,7 +15,7 @@ describe('FirebaseStorage', () => {
       firebaseAuthToken: 'test-firebase-auth-token',
       showRateLimitAlert: () => {}
     });
-    getDatabase().autoFlush();
+    getProjectDatabase().autoFlush();
     return getConfigRef()
       .set({
         limits: {
@@ -25,7 +28,7 @@ describe('FirebaseStorage', () => {
         maxTableCount: 3
       })
       .then(() => {
-        getDatabase().set(null);
+        getProjectDatabase().set(null);
       });
   });
 
@@ -36,7 +39,7 @@ describe('FirebaseStorage', () => {
       );
 
       function verifyStringValue() {
-        getDatabase()
+        getProjectDatabase()
           .child(`storage/keys`)
           .once('value')
           .then(snapshot => {
@@ -52,7 +55,7 @@ describe('FirebaseStorage', () => {
       );
 
       function verifyNumberValue() {
-        getDatabase()
+        getProjectDatabase()
           .child(`storage/keys`)
           .once('value')
           .then(snapshot => {
@@ -68,7 +71,7 @@ describe('FirebaseStorage', () => {
       );
 
       function verifySetKeyValue() {
-        getDatabase()
+        getProjectDatabase()
           .child(`storage/keys`)
           .once('value')
           .then(snapshot => {
@@ -99,7 +102,7 @@ describe('FirebaseStorage', () => {
       );
 
       function verifyNoKeys() {
-        getDatabase()
+        getProjectDatabase()
           .child(`storage/keys`)
           .once('value')
           .then(snapshot => {
@@ -123,7 +126,7 @@ describe('FirebaseStorage', () => {
 
       function verifyValueAndWarning() {
         expect(didWarn).to.be.true;
-        getDatabase()
+        getProjectDatabase()
           .child(`storage/keys`)
           .once('value')
           .then(snapshot => {
@@ -160,7 +163,7 @@ describe('FirebaseStorage', () => {
         'mytable',
         {name: 'bob', age: 8},
         () => {
-          getDatabase()
+          getProjectDatabase()
             .child(`storage/tables/${'mytable'}/records`)
             .once('value')
             .then(snapshot => {
@@ -244,7 +247,7 @@ describe('FirebaseStorage', () => {
 
       function handleDelete(status) {
         expect(status).to.equal(true);
-        getDatabase()
+        getProjectDatabase()
           .child(`storage/tables/${'mytable'}/records`)
           .once('value')
           .then(snapshot => {
@@ -264,7 +267,7 @@ describe('FirebaseStorage', () => {
         }
       );
 
-      const rowCountRef = getDatabase().child(
+      const rowCountRef = getProjectDatabase().child(
         `counters/tables/${'mytable'}/rowCount`
       );
 
@@ -294,7 +297,7 @@ describe('FirebaseStorage', () => {
 
       function handleDelete(status) {
         expect(status).to.equal(true);
-        getDatabase()
+        getProjectDatabase()
           .child(`storage/tables/${'mytable'}/records`)
           .once('value')
           .then(snapshot => {
@@ -320,12 +323,14 @@ describe('FirebaseStorage', () => {
    * @param {function} callback
    */
   function verifyEmptyTable(callback) {
-    const rowCountRef = getDatabase().child('counters/tables/mytable/rowCount');
+    const rowCountRef = getProjectDatabase().child(
+      'counters/tables/mytable/rowCount'
+    );
     rowCountRef
       .once('value')
       .then(snapshot => {
         expect(snapshot.val()).to.equal(0);
-        const recordsRef = getDatabase().child(
+        const recordsRef = getProjectDatabase().child(
           'storage/tables/mytable/records'
         );
         return recordsRef.once('value');
@@ -420,12 +425,14 @@ describe('FirebaseStorage', () => {
       }
 
       function verifyNoTable() {
-        const countersRef = getDatabase().child('counters/tables/mytable');
+        const countersRef = getProjectDatabase().child(
+          'counters/tables/mytable'
+        );
         countersRef
           .once('value')
           .then(snapshot => {
             expect(snapshot.val()).to.equal(null);
-            const recordsRef = getDatabase().child(
+            const recordsRef = getProjectDatabase().child(
               'storage/tables/mytable/records'
             );
             return recordsRef.once('value');
@@ -509,7 +516,7 @@ describe('FirebaseStorage', () => {
       }
 
       function validate() {
-        const recordsRef = getDatabase().child(
+        const recordsRef = getProjectDatabase().child(
           `storage/tables/mytable/records`
         );
         recordsRef.once('value').then(snapshot => {
@@ -580,7 +587,7 @@ describe('FirebaseStorage', () => {
       }
 
       function validate() {
-        const recordsRef = getDatabase().child(
+        const recordsRef = getProjectDatabase().child(
           `storage/tables/mytable/records`
         );
         recordsRef.once('value').then(snapshot => {
@@ -647,7 +654,7 @@ describe('FirebaseStorage', () => {
       }
 
       function validate() {
-        const recordsRef = getDatabase().child(
+        const recordsRef = getProjectDatabase().child(
           `storage/tables/mytable/records`
         );
         recordsRef.once('value').then(snapshot => {
@@ -702,7 +709,7 @@ describe('FirebaseStorage', () => {
       }
 
       function validate() {
-        const recordsRef = getDatabase().child(
+        const recordsRef = getProjectDatabase().child(
           `storage/tables/mytable/records`
         );
         recordsRef.once('value').then(snapshot => {
@@ -756,7 +763,7 @@ describe('FirebaseStorage', () => {
       }
 
       function validate() {
-        const recordsRef = getDatabase().child(
+        const recordsRef = getProjectDatabase().child(
           `storage/tables/mytable/records`
         );
         recordsRef.once('value').then(snapshot => {
@@ -802,7 +809,7 @@ describe('FirebaseStorage', () => {
     const BAD_JSON = '{';
 
     function verifyTable(expectedTablesData) {
-      return getDatabase()
+      return getProjectDatabase()
         .child(`storage/tables`)
         .once('value')
         .then(
@@ -829,11 +836,11 @@ describe('FirebaseStorage', () => {
 
     it('does not overwrite existing data when overwrite is false', done => {
       const overwrite = false;
-      getDatabase()
+      getProjectDatabase()
         .child(`storage/tables`)
         .set(EXISTING_TABLE_DATA)
         .then(() =>
-          getDatabase()
+          getProjectDatabase()
             .child('counters/tables')
             .set(EXISTING_COUNTER_DATA)
         )
@@ -854,7 +861,7 @@ describe('FirebaseStorage', () => {
     // sure we overwrite tables for users in that state.
     it('does overwrite existing data when counters/tables node is empty', done => {
       const overwrite = false;
-      getDatabase()
+      getProjectDatabase()
         .child(`storage/tables`)
         .set(EXISTING_TABLE_DATA)
         .then(() => {
@@ -871,11 +878,11 @@ describe('FirebaseStorage', () => {
 
     it('does overwrite existing data when overwrite is true', done => {
       const overwrite = true;
-      getDatabase()
+      getProjectDatabase()
         .child(`storage/tables`)
         .set(EXISTING_TABLE_DATA)
         .then(() =>
-          getDatabase()
+          getProjectDatabase()
             .child('counters/tables')
             .set(EXISTING_COUNTER_DATA)
         )
@@ -924,7 +931,7 @@ describe('FirebaseStorage', () => {
     const BAD_JSON = '{';
 
     function verifyKeyValue(expectedData) {
-      return getDatabase()
+      return getProjectDatabase()
         .child(`storage/keys`)
         .once('value')
         .then(
@@ -951,7 +958,7 @@ describe('FirebaseStorage', () => {
 
     it('does not overwrite existing data when overwrite is false', done => {
       const overwrite = false;
-      getDatabase()
+      getProjectDatabase()
         .child(`storage/keys`)
         .set(EXISTING_KEY_VALUE_DATA)
         .then(() => {
@@ -968,7 +975,7 @@ describe('FirebaseStorage', () => {
 
     it('does overwrite existing data when overwrite is true', done => {
       const overwrite = true;
-      getDatabase()
+      getProjectDatabase()
         .child(`storage/keys`)
         .set(EXISTING_KEY_VALUE_DATA)
         .then(() => {
@@ -1087,14 +1094,14 @@ describe('FirebaseStorage', () => {
       );
 
       function validateTableData() {
-        const rowCountRef = getDatabase().child(
+        const rowCountRef = getProjectDatabase().child(
           'counters/tables/mytable/rowCount'
         );
         rowCountRef
           .once('value')
           .then(snapshot => {
             expect(snapshot.val()).to.equal(3);
-            const recordsRef = getDatabase().child(
+            const recordsRef = getProjectDatabase().child(
               'storage/tables/mytable/records'
             );
             return recordsRef.once('value');
@@ -1128,14 +1135,14 @@ describe('FirebaseStorage', () => {
       }
 
       function validateTableData() {
-        const rowCountRef = getDatabase().child(
+        const rowCountRef = getProjectDatabase().child(
           'counters/tables/mytable/rowCount'
         );
         rowCountRef
           .once('value')
           .then(snapshot => {
             expect(snapshot.val()).to.equal(3);
-            const recordsRef = getDatabase().child(
+            const recordsRef = getProjectDatabase().child(
               'storage/tables/mytable/records'
             );
             return recordsRef.once('value');

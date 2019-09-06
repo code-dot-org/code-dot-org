@@ -856,6 +856,7 @@ it:
         CSF_SpriteLab_Intro_v2: Introducendo lo Sviluppo Personaggi
         CSF_Spritelab_MakeSprite_v2: Come fare un Personaggio
         CSF_SpriteLab_SpritesInAction_v2: Personaggi in azione
+        csd_debugging: Correzione errori (debugging)
     callout:
       text:
         drag_blocks: Prendi qui a sinistra il blocco "vai avanti" ed attaccalo sotto

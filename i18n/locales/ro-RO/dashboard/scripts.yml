@@ -4630,3 +4630,7 @@ ro:
         dlp19-csp-mod-w4:
           description_short: '[șir gol]'
           description: '[șir gol]'
+        csd-pilot:
+          description_audience: '[șir gol]'
+          description_short: '[șir gol]'
+          description: '[șir gol]'

@@ -190,33 +190,33 @@ es-MX:
       4-5 Nested Loops 9: "¡Dibuja los dientes en la boca de cocodrilo!"
       Alien Defender: 'Idea para un proyecto: ¡crea un juego de defensa en el Laboratorio
         de juegos!'
-      CSD U3 Boolean Modify: Modifica el código para que todos los comandos consola.registro
+      CSD U3 Boolean Modify: Modifica el código para que todos los comandos console.log
         impriman verdadero
-      CSD U3 Boolean Modify_2018: Modifica el código para que todos los comandos consola.registro
+      CSD U3 Boolean Modify_2018: Modifica el código para que todos los comandos console.log
         impriman verdadero
-      CSD U3 Boolean Modify_2019: Modifica el código para que todos los comandos consola.registro
+      CSD U3 Boolean Modify_2019: Modifica el código para que todos los comandos console.log
         impriman verdadero
       CSD U3 Boolean Predict: "¿Qué crees que hará este código cuando se ejecute?
-        Predice qué imprimirá cada comando consola.registro(), y luego ejecuta el
-        programa para comprobar tus predicciones."
+        Predice qué imprimirá cada comando console.log(), y luego ejecuta el programa
+        para comprobar tus predicciones."
       CSD U3 Boolean Predict_2018: "¿Qué crees que hará este código cuando se ejecute?
-        Predice qué imprimirá cada comando consola.registro(), y luego ejecuta el
-        programa para comprobar tus predicciones."
+        Predice qué imprimirá cada comando console.log(), y luego ejecuta el programa
+        para comprobar tus predicciones."
       CSD U3 Boolean Predict_2019: "¿Qué crees que hará este código cuando se ejecute?
-        Predice qué imprimirá cada comando consola.registro(), y luego ejecuta el
-        programa para comprobar tus predicciones."
-      CSD U3 Keypress Boolean: Modifica el código para que todos los comandos consola.registro
+        Predice qué imprimirá cada comando console.log(), y luego ejecuta el programa
+        para comprobar tus predicciones."
+      CSD U3 Keypress Boolean: Modifica el código para que todos los comandos console.log
         impriman verdadero
       CSD U3 Keypress Boolean_2018: Modifica el código para que todos los comandos
-        consola.registro impriman verdadero
+        console.log impriman verdadero
       CSD U3 Keypress Boolean_2018_2019: Modifica el código para que todos los comandos
-        consola.registro impriman verdadero
-      CSD U3 Keypress Watchers: Modifica el código para que todos los comandos consola.registro
+        console.log impriman verdadero
+      CSD U3 Keypress Watchers: Modifica el código para que todos los comandos console.log
         impriman verdadero
       CSD U3 Keypress Watchers_2018: Modifica el código para que todos los comandos
-        consola.registro impriman verdadero
+        console.log impriman verdadero
       CSD U3 Keypress Watchers_2019: Modifica el código para que todos los comandos
-        consola.registro impriman verdadero
+        console.log impriman verdadero
       CSD U3 L5 Freeplay: Cambia el valor de tamañoPétalo varias veces. ¿Cómo cambia
         tu dibujo?
       CSD U3 L5 Freeplay_2018: Cambia el valor de tamañoPétalo varias veces. ¿Cómo
@@ -281,10 +281,10 @@ es-MX:
 
         # Hacer esto
 
-        -   Crea una nueva función `movernube(nombre)` que moverá cualquier nube.
-        -   (Sugerencia: usarás casi todo el mismo código como la función `moveCloud0`)
-        -   Llama a su nueva función de `movernube(nombre)` dentro del bloque del evento, una vez para cada nombre de nube.
-        -   (Sugerencia: esto es similar a cómo la función `buclenube(nombre)` se llama muchas veces.
+        -   Crea una nueva función `moverNube(nombre)` que moverá cualquier nube.
+        -   (Sugerencia: usarás casi todo el mismo código como la función `moverNube0`)
+        -   Llama a su nueva función de `moverNube(nombre)` dentro del bloque del evento, una vez para cada nombre de nube.
+        -   (Sugerencia: esto es similar a cómo la función `bucleNube(nombre)` se llama muchas veces.
       CSD U6 params modify clouds_2018: |-
         # Nubes
 
@@ -292,43 +292,43 @@ es-MX:
 
         # Hacer esto
 
-        -   Crea una nueva función `movernube(nombre)` que moverá cualquier nube.
-        -   (Sugerencia: usarás casi todo el mismo código como la función `moveCloud0`)
-        -   Llama a su nueva función de `movernube(nombre)` dentro del bloque del evento, una vez para cada nombre de nube.
-        -   (Sugerencia: esto es similar a cómo la función `buclenube(nombre)` se llama muchas veces.
+        -   Crea una nueva función `moverNube(nombre)` que moverá cualquier nube.
+        -   (Sugerencia: usarás casi todo el mismo código como la función `moverNube0`)
+        -   Llama a su nueva función de `moverNube(nombre)` dentro del bloque del evento, una vez para cada nombre de nube.
+        -   (Sugerencia: esto es similar a cómo la función `bucleNube(nombre)` se llama muchas veces.
       CSD U6 params modify planes: |-
-        # Controlador multiavión
+        # Controlador multiavion
 
         Este programa mueve los tres aviones mediante el uso del acelerómetro del tablero y las casillas en la pantalla. En este momento, solo funciona el avión rojo.
 
         # Hacer esto
 
-        -   Crea una nueva función de `moveravión(nombre)` que pueda mover cualquier avión.
-        -   Llama a la función `moveravión(nombre)` dentro del bloque del evento, que sólo se mueve cuando se marca su casilla.
+        -   Crea una nueva función de `moverAvion(nombre)` que pueda mover cualquier avión.
+        -   Llama a la función `moverAvion(nombre)` dentro del bloque del evento, que sólo se mueve cuando se marca su casilla.
 
-        \_Challenge: ahora los aviones se mueven demasiado rápido. ¿Puedes averiguar cómo cambiar el código para que se mueva más lento? \_
+        Desafío: ahora los aviones se mueven demasiado rápido. ¿Puedes averiguar cómo cambiar el código para que se mueva más lento? \_
       CSD U6 params modify planes_2018: |-
-        # Controlador multiavión
+        # Controlador multiavion
 
         Este programa mueve los tres aviones mediante el uso del acelerómetro del tablero y las casillas en la pantalla. En este momento, solo funciona el avión rojo.
 
         # Hacer esto
 
-        -   Crea una nueva función de `moveravión(nombre)` que pueda mover cualquier avión.
-        -   Llama a la función `moveravión(nombre)` dentro del bloque del evento, que sólo se mueve cuando se marca su casilla.
+        -   Crea una nueva función de `moverAvion(nombre)` que pueda mover cualquier avión.
+        -   Llama a la función `moverAvion(nombre)` dentro del bloque del evento, que sólo se mueve cuando se marca su casilla.
 
-        \_Challenge: ahora los aviones se mueven demasiado rápido. ¿Puedes averiguar cómo cambiar el código para que se mueva más lento? \_
+        Desafío: ahora los aviones se mueven demasiado rápido. ¿Puedes averiguar cómo cambiar el código para que se mueva más lento? \_
       CSD U6 params modify planes_2019: |-
-        # Controlador multiavión
+        # Controlador multiavion
 
         Este programa mueve los tres aviones mediante el uso del acelerómetro del tablero y las casillas en la pantalla. En este momento, solo funciona el avión rojo.
 
         # Hacer esto
 
-        -   Crea una nueva función de `moveravión(nombre)` que pueda mover cualquier avión.
-        -   Llama a la función `moveravión(nombre)` dentro del bloque del evento, que sólo se mueve cuando se marca su casilla.
+        -   Crea una nueva función de `moverAvion(nombre)` que pueda mover cualquier avión.
+        -   Llama a la función `moverAvion(nombre)` dentro del bloque del evento, que sólo se mueve cuando se marca su casilla.
 
-        \_Challenge: ahora los aviones se mueven demasiado rápido. ¿Puedes averiguar cómo cambiar el código para que se mueva más lento? \_
+        Desafío: ahora los aviones se mueven demasiado rápido. ¿Puedes averiguar cómo cambiar el código para que se mueva más lento? \_
       CSDU6 arrays select rainbow: Escribe el contenido del arreglo en la pantalla
         en orden numérico. (Haz clic para ver las instrucciones completas)
       CSDU6 arrays select rainbow_2018: Escribe el contenido del arreglo en la pantalla
@@ -1399,11 +1399,8 @@ es-MX:
         bloques al espacio de trabajo y mira lo que ocurre!
       courseA_playLab_events1_2018: Este es un nivel de Laboratorio de juegos. ¡Mueve
         los bloques al espacio de trabajo y mira lo que ocurre!
-      courseA_playLab_events1_2019: Este es un nivel de Laboratorio de juegos. ¡Mueve
-        los bloques al espacio de trabajo y mira lo que ocurre!
       courseA_playLab_events2: Jorge el Perro quiere decir "Hola". ¿Puedes ayudarlo?
       courseA_playLab_events2_2018: Jorge el Perro quiere decir "Hola". ¿Puedes ayudarlo?
-      courseA_playLab_events2_2019: Jorge el Perro quiere decir "Hola". ¿Puedes ayudarlo?
       courseA_playLab_events3: Conecta el bloque `mover a la izquierda` al bloque
         de evento `cuando izquierda` que ya está en el espacio de trabajo.
       courseA_playLab_events3_2018: Conecta el bloque `mover a la izquierda` al bloque

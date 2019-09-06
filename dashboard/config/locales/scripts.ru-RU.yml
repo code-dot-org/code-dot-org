@@ -2929,6 +2929,8 @@ ru:
           stages:
             Lists:
               name: Списки
+            CSS Classes:
+              name: CSS классы
         csd3-pilot:
           description_short: Программирование
           stages:

@@ -670,9 +670,9 @@ fr:
   compatibility:
     upgrade:
       unsupported_message: Votre navigateur n'est pas supporté. Merci de mettre à
-        jour avec <a href='%{supported_browsers_url}', target='_blank'>l'un de nos
-        navigateurs supportés</a>. Vous pouvez afficher la page mais il risque d'y
-        avoir des choses qui ne fonctionnent pas.
+        jour avec [un de nos navigateurs supportés](%{supported_browsers_url}). Vous
+        pouvez afficher la page mais il risque d'y avoir des choses qui ne fonctionnent
+        pas.
       link: Pour en savoir plus
       applab_unsupported_tablet: Le labo des applis fonctionne mieux sur un ordinateur
         portable ou de bureau avec une souris et un clavier. Vous pourriez rencontrer
@@ -1173,7 +1173,7 @@ fr:
   hoc_download:
     title: Téléchargements d'Heure du Code
     capsule_title: Vous avez Internet ?
-    capsule_desc: Utiliser l'application en ligne <a href="%{url}">%{app_name}</a>.
+    capsule_desc: Utilisez l'application en ligne [%{app_name}](%{url}).
     instructions_headline: Pas d’Internet ?
     instructions: 'Instructions pour les enseignants : Si vous avez un débit Internet
       faible, ces tutoriels d''Heures du Code sont disponibles en téléchargement et

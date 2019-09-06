@@ -17,7 +17,7 @@ correlates highly with a person’s success in programming because you must have
 
 **Lesson Type:** Event Driven Programming | Pair Problem Solving
 
-<a href = “https://curriculum.code.org/csp/unit5/4/” target=_blank> Lesson Plan Link <i class="fa fa-external-link-square"></i></a>
+<a href = "https://curriculum.code.org/csp/unit5/4/" target=_blank> Lesson Plan Link <i class="fa fa-external-link-square"></i></a>
 
 This lesson introduces students to variables and how they work. The lesson shows students how to create and assign values to variables and navigates through a series of common misconceptions about variables and how they work. Variables are often difficult to learn because they are not visual, they are abstract, and one must have a good mental model for what’s happening in the computer and with program instructions, in order to reason about the code and develop one’s own solutions to problems.
 <br><br>
@@ -27,7 +27,7 @@ This lesson introduces students to variables and how they work. The lesson shows
 
 **Lesson Type:** Event Driven Programming | Pair Problem Solving
 
-<a href = “https://curriculum.code.org/csp/unit5/5/” target=_blank> Lesson Plan Link <i class="fa fa-external-link-square"></i></a>
+<a href = "https://curriculum.code.org/csp/unit5/5/" target=_blank> Lesson Plan Link <i class="fa fa-external-link-square"></i></a>
 
 In this lesson, students add variables to two different exemplar apps to keep track of a score, or a count of some number of button clicks. The major topic is variable scope and understanding the differences, benefits, and drawbacks, of using global versus local variables. This lesson focuses more on using global variables, since in event-driven apps that’s what you need to keep track of data across multiple events.
 The topic and concept of variable scope is a big one in any programming language. However, since many languages do it differently, the concept of variable scope isn’t listed explicitly as a learning objective in the CSP framework. As a concept, though, variable scoping is a form of abstraction - a programming language lets you create variables with as narrow or broad a scope as you need to program a certain task. As a general practice, you usually want to create variables with the most narrow scope you can for the task at hand, since the other extreme - everything is global - can become unwieldy or hard to manage, and it doesn’t promote code reuse.
@@ -38,7 +38,7 @@ The topic and concept of variable scope is a big one in any programming language
 
 **Lesson Type:** Event Driven Programming | Pair Problem Solving
 
-<a href = “https://curriculum.code.org/csp/unit5/6/” target=_blank> Lesson Plan Link <i class="fa fa-external-link-square"></i></a>
+<a href = "https://curriculum.code.org/csp/unit5/6/" target=_blank> Lesson Plan Link <i class="fa fa-external-link-square"></i></a>
 
 In the final lesson of this ‘chunk’, students are introduced to the string data type as a way of representing arbitrary sequences of ASCII characters. They will use variables and strings to accept input from a user as they work on mastering two new UI elements, the text input and the text area.
 

@@ -54,6 +54,7 @@ en:
         error:
           future: can't be in the future
 
+  beta: "beta"
   hello: "Hello world"
   welcome_back: "Welcome back, %{name}"
   your_professional_learning_plan: "Your Professional Learning Plan"
@@ -68,13 +69,13 @@ en:
   okay: "Okay"
   or: "or"
   heading_x_of_y: "%{heading} (page %{x} of %{y})"
-  add_teacher_form:
+  join_section:
     code:
-      label: 'Add a teacher:'
+      title: 'Join a section on Code.org'
       placeholder: "Section Code (ABCDEF)"
-      instructions: "Please enter the code shared with you by your teacher. It's a 6 letter code like \"ABCDEF\"."
+      instructions: "Please enter the 6 letter code your teacher shared with you (example: \"ABCDEF\") to join their section."
       instructions_short: "Enter your 6 letter section code"
-    submit: 'Add teacher'
+      submit: 'Join'
   add_hint_form:
     placeholder: 'Please enter your hint here'
     submit: 'Add hint'

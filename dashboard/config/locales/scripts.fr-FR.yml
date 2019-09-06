@@ -3417,6 +3417,8 @@ fr:
                 design.\r\n"
             Intellectual Property:
               name: Propriété intellectuelle
+            CSS Classes:
+              name: Classes CSS
         csd3-pilot:
           description_short: Programmation
           stages:
