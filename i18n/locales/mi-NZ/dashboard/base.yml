@@ -23,6 +23,7 @@ mi:
         edit_header: 'Whakatika Taipitopito Pūkete'
         error:
           future: tē āhei haere ake nei
+  beta: "beta"
   hello: "Tēnā koe e te ao"
   welcome_back: "Hoki mai rā, %{name}"
   your_professional_learning_plan: "Tō Mahere Ako Ngaio"
