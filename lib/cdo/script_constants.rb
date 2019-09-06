@@ -109,6 +109,11 @@ module ScriptConstants
       COURSEE_DRAFT_NAME = 'coursee-draft'.freeze,
       COURSEF_DRAFT_NAME = 'coursef-draft'.freeze,
     ],
+    csd_pilot: [
+      CSD1_PILOT_NAME = 'csd1-pilot'.freeze,
+      CSD2_PILOT_NAME = 'csd2-pilot'.freeze,
+      CSD3_PILOT_NAME = 'csd3-pilot'.freeze,
+    ],
     csd_2019: [
       CSD1_2019_NAME = 'csd1-2019'.freeze,
       CSD2_2019_NAME = 'csd2-2019'.freeze,
