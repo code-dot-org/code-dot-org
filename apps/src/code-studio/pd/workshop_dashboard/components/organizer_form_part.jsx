@@ -14,6 +14,7 @@ export default class OrganizerFormPart extends React.Component {
   static propTypes = {
     workshopId: PropTypes.number,
     organizerId: PropTypes.number,
+    organizerName: PropTypes.string,
     onChange: PropTypes.func,
     readOnly: PropTypes.bool
   };
@@ -66,15 +67,20 @@ export default class OrganizerFormPart extends React.Component {
         <h3>Organizer (admin)</h3>
         <Row>
           <Col sm={8}>
-            <select
-              className="form-control"
-              value={this.props.organizerId}
-              onChange={this.props.onChange}
-              disabled={this.props.readOnly}
-              style={this.props.readOnly && styles.readOnlyInput}
-            >
-              {organizerOptions}
-            </select>
+            {this.state.potentialOrganizers && (
+              <select
+                className="form-control"
+                value={this.props.organizerId}
+                onChange={this.props.onChange}
+                disabled={this.props.readOnly}
+                style={this.props.readOnly && styles.readOnlyInput}
+              >
+                {organizerOptions}
+              </select>
+            )}
+            {!this.state.potentialOrganizers && (
+              <h4>{this.props.organizerName}</h4>
+            )}
           </Col>
         </Row>
       </div>
