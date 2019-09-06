@@ -12287,7 +12287,7 @@ raf@^3.1.0:
   dependencies:
     performance-now "~0.2.0"
 
-raf@^3.4.0:
+raf@^3.3.0, raf@^3.4.0:
   version "3.4.1"
   resolved "https://registry.yarnpkg.com/raf/-/raf-3.4.1.tgz#0742e99a4a6552f445d73e3ee0328af0ff1ede39"
   dependencies:
@@ -12743,11 +12743,13 @@ react-split-pane@^0.1.84:
     react-lifecycles-compat "^3.0.4"
     react-style-proptype "^3.0.0"
 
-react-sticky@~5.0.5:
-  version "5.0.8"
-  resolved "https://registry.yarnpkg.com/react-sticky/-/react-sticky-5.0.8.tgz#d5f85f96977f410081d792ab81886c622c5d8b14"
+react-sticky@^6.0.3:
+  version "6.0.3"
+  resolved "https://registry.yarnpkg.com/react-sticky/-/react-sticky-6.0.3.tgz#7a18b643e1863da113d7f7036118d2a75d9ecde4"
+  integrity sha512-LNH4UJlRatOqo29/VHxDZOf6fwbgfgcHO4mkEFvrie5FuaZCSTGtug5R8NGqJ0kSnX8gHw8qZN37FcvnFBJpTQ==
   dependencies:
     prop-types "^15.5.8"
+    raf "^3.3.0"
 
 react-style-proptype@^3.0.0:
   version "3.1.0"
