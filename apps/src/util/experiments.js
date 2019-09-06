@@ -23,6 +23,7 @@ experiments.SCHOOL_AUTOCOMPLETE_DROPDOWN_NEW_SEARCH =
   'schoolAutocompleteDropdownNewSearch';
 experiments.ROLLUP_SURVEY_REPORT = 'rollupSurveyReport';
 experiments.APPLAB_DATASETS = 'applabDatasets';
+experiments.CENSUS_MAP_ON_MAPBOX = 'censusMapOnMapbox';
 
 /**
  * Get our query string. Provided as a method so that tests can mock this.
