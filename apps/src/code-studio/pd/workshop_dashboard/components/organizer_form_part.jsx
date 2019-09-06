@@ -7,6 +7,9 @@ const styles = {
     backgroundColor: 'inherit',
     cursor: 'default',
     border: 'none'
+  },
+  error: {
+    color: 'red'
   }
 };
 
@@ -21,7 +24,8 @@ export default class OrganizerFormPart extends React.Component {
 
   state = {
     loading: true,
-    potentialOrganizers: null
+    potentialOrganizers: null,
+    error: false
   };
 
   componentWillMount() {
@@ -37,12 +41,16 @@ export default class OrganizerFormPart extends React.Component {
       method: 'GET',
       url: url,
       dataType: 'json'
-    }).done(data => {
-      this.setState({
-        loading: false,
-        potentialOrganizers: data
+    })
+      .done(data => {
+        this.setState({
+          loading: false,
+          potentialOrganizers: data
+        });
+      })
+      .error(() => {
+        this.setState({error: true});
       });
-    });
   }
 
   renderOrganizerOption(organizer) {
@@ -80,6 +88,12 @@ export default class OrganizerFormPart extends React.Component {
             )}
             {!this.state.potentialOrganizers && (
               <h4>{this.props.organizerName}</h4>
+            )}
+            {this.state.error && (
+              <p style={styles.error}>
+                An error occurred loading the organizer dropdown. Try reloading
+                the page.
+              </p>
             )}
           </Col>
         </Row>
