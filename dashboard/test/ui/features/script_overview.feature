@@ -29,3 +29,22 @@ Feature: Script overview page
 
     # Make sure we only see student progress, not teacher progress.
     Then I verify progress for stage 29 level 4 is "not_tried"
+
+  Scenario: Script overview contents
+    Given I create a student named "Jean"
+    And I am on "http://studio.code.org/s/allthethings"
+    # make sure we are in summary view and the page has finished loading
+    And I wait until element "td:contains(Maze)" is visible
+    # verify name format in summary view
+    And element "td:contains(2. Maze)" is visible
+
+    And I click selector ".uitest-toggle-detail"
+    And I wait until element "td:contains(Maze)" is not visible
+    And I wait until element "span:contains(Maze)" is visible
+    # verify name format in detail view
+    And element "span:contains(Lesson 2: Maze)" is visible
+
+    And I am on "http://studio.code.org/s/mc"
+    And I wait until element "td:contains(Minecraft)" is visible
+    # verify script name overrides stage name when there is only one stage
+    And element "td:contains(1. Minecraft Hour of Code)" is visible

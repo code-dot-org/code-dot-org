@@ -301,7 +301,7 @@ export default class TutorialDetail extends React.Component {
                     {this.props.item.teachers_notes && (
                       <tr key={0}>
                         <td style={styles.tutorialDetailsTableTitle}>
-                          More resources
+                          {i18n.tutorialDetailsMoreResources()}
                         </td>
                         <td style={styles.tutorialDetailsTableBody}>
                           <a

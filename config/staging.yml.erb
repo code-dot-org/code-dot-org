@@ -1,5 +1,6 @@
 slack_endpoint_broken_links: !Secret
 github_webhook_secret: !Secret
+zendesk_secret:
 netsim_enable_metrics: true
 lint: true
 pretty_js: true
@@ -52,3 +53,6 @@ jotform_forms:
       facilitator: 91372090131144
     post_course:
       2018-2019: 90486182774164
+
+# Developer of the Day needs to see raw HTTP error pages so they can debug an issue with a staging build.
+custom_error_response: false

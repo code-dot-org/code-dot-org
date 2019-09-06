@@ -8,7 +8,7 @@ In the previous unit, students were motivated by the need to to transmit data fr
 ## Lesson 1: Bytes and File Sizes
 **Lesson type:** Research
 
-<a href = “https://curriculum.code.org/csp/unit2/1/” target=_blank> Lesson Plan Link >> <i class="fa fa-external-link-square"></i></a>
+<a href = "https://curriculum.code.org/csp/unit2/1/" target=_blank> Lesson Plan Link >> <i class="fa fa-external-link-square"></i></a>
 
 <img src="https://images.code.org/4cb801bc626a07e72c9bf50b2e234677-image-1475945304876.png" style="float:right; margin-left:30px; width:200px">
 In this lesson, students will: 
@@ -26,7 +26,7 @@ Paralleling the explosion of computing power and speed, the sheer size of the di
 ## Lesson 2: Text Compression
 **Lesson Type:** Widget - Text Compression | Individual and Group Discovery
 
-<a href = “https://curriculum.code.org/csp/unit2/2/” target=_blank> Lesson Plan Link >> <i class="fa fa-external-link-square"></i></a>
+<a href = "https://curriculum.code.org/csp/unit2/2/" target=_blank> Lesson Plan Link >> <i class="fa fa-external-link-square"></i></a>
 
 <img src="https://images.code.org/886da7e6a79454e21d0c6e7969ef9fde-image-1475945307650.png" style="float:right; margin-left:30px; width:200px"> 
 Lesson 2 is a big lesson that covers a lot of bases, and it will take at least 2 days of class, because it covers three topics from the CSP framework.  Students will take a look at  *lossless compression* and create their own compression format.  In doing so, they will need to consider the best *heuristic* for compression. By the end of this lesson, students should see that there is no single correct way to compress text using the method we use in this lesson because a) there is no known algorithm for finding an optimal solution, and b) we don’t even know a way to verify whether a given solution is optimal. There is no way to prove it or derive it beyond trying all possibilities by brute force.This is an example of an algorithm that cannot run in a “reasonable amount of time” - one of the CSP learning objectives. In situations such as this, it is better to use a heuristic that will give a ‘pretty good’ answer, instead of trying to find the best compression.  Lastly, the Text Compression Activity is an important lesson to refer back to when students start programming. The activity engages students in thinking and problem solving behaviors that foreshadow skills that are particularly useful for programming later down the line.

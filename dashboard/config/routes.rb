@@ -234,6 +234,8 @@ Dashboard::Application.routes.draw do
   resources :level_starter_assets, only: [:show], param: 'level_name' do
     member do
       get '/:filename', to: 'level_starter_assets#file'
+      post '', to: 'level_starter_assets#upload'
+      delete '/:filename', to: 'level_starter_assets#destroy'
     end
   end
 
@@ -289,9 +291,6 @@ Dashboard::Application.routes.draw do
   get '/jigsaw/:chapter', to: 'script_levels#show', script_id: Script::JIGSAW_NAME, as: 'jigsaw_chapter', format: false
 
   get '/weblab/host', to: 'weblab_host#index'
-
-  resources :followers, only: [:create]
-  post '/followers/remove', to: 'followers#remove', as: 'remove_follower'
 
   get '/join(/:section_code)', to: 'followers#student_user_new', as: 'student_user_new'
   post '/join(/:section_code)', to: 'followers#student_register', as: 'student_register'
