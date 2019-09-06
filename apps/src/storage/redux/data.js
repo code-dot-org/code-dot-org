@@ -14,6 +14,8 @@ const UPDATE_TABLE_RECORDS = 'data/UPDATE_TABLE_RECORDS';
 const UPDATE_KEY_VALUE_DATA = 'data/UPDATE_KEY_VALUE_DATA';
 const SHOW_WARNING = 'data/SHOW_WARNING';
 const CLEAR_WARNING = 'data/CLEAR_WARNING';
+const SHOW_PREVIEW = 'data/SHOW_PREVIEW';
+const HIDE_PREVIEW = 'data/HIDE_PREVIEW';
 
 /**
  * Types which a column can be coerced to.
@@ -33,7 +35,8 @@ const DataState = Record({
   keyValueData: {},
   warningTitle: '',
   warningMsg: '',
-  isWarningDialogOpen: false
+  isWarningDialogOpen: false,
+  isPreviewOpen: false
 });
 
 const initialState = new DataState();
@@ -81,6 +84,12 @@ export default function(state = initialState, action) {
         .set('warningMsg', '')
         .set('warningTitle', '')
         .set('isWarningDialogOpen', false);
+    case SHOW_PREVIEW:
+      return state
+        .set('isPreviewOpen', true)
+        .set('tableName', action.tableName);
+    case HIDE_PREVIEW:
+      return state.set('isPreviewOpen', false).set('tableName', '');
     default:
       return state;
   }
@@ -138,3 +147,7 @@ export const showWarning = (warningMsg, warningTitle) => ({
 export const clearWarning = () => ({
   type: CLEAR_WARNING
 });
+
+export const showPreview = tableName => ({type: SHOW_PREVIEW, tableName});
+
+export const hidePreview = () => ({type: HIDE_PREVIEW});

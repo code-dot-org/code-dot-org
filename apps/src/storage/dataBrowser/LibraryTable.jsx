@@ -1,9 +1,11 @@
 import PropTypes from 'prop-types';
-import Radium from 'radium';
+import {connect} from 'react-redux';
 import React from 'react';
 import FontAwesome from '../../templates/FontAwesome';
 import msg from '@cdo/locale';
 import color from '../../util/color';
+import {showPreview} from '../redux/data';
+import PreviewModal from './PreviewModal';
 
 const styles = {
   tableName: {
@@ -52,7 +54,10 @@ const styles = {
 class LibraryTable extends React.Component {
   static propTypes = {
     name: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired
+    description: PropTypes.string.isRequired,
+
+    // from redux dispatch
+    onShowPreview: PropTypes.func.isRequired
   };
 
   state = {
@@ -80,7 +85,11 @@ class LibraryTable extends React.Component {
             </div>
             <div>{this.props.description}</div>
             <div>
-              <button style={styles.preview} type="button">
+              <button
+                style={styles.preview}
+                type="button"
+                onClick={() => this.props.onShowPreview(this.props.name)}
+              >
                 {msg.preview()}
               </button>
               <button style={styles.import} type="button">
@@ -89,9 +98,17 @@ class LibraryTable extends React.Component {
             </div>
           </div>
         )}
+        <PreviewModal tableName={this.props.name} />
       </div>
     );
   }
 }
 
-export default Radium(LibraryTable);
+export default connect(
+  state => ({}),
+  dispatch => ({
+    onShowPreview(tableName) {
+      dispatch(showPreview(tableName));
+    }
+  })
+)(LibraryTable);
