@@ -392,6 +392,7 @@ Dashboard::Application.routes.draw do
           post :end
           post :reopen
           get  :summary
+          get  :potential_organizers
         end
         resources :enrollments, controller: 'workshop_enrollments', only: [:index, :destroy, :create]
 

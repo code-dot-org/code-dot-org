@@ -6,7 +6,7 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
   COLLECTION_ACTIONS = [:index, :filter].freeze
 
   load_and_authorize_resource class: 'Pd::Workshop', only:
-    [:show, :update, :create, :destroy, :start, :end, :summary, :unstart, :reopen] + COLLECTION_ACTIONS
+    [:show, :update, :create, :destroy, :start, :end, :summary, :unstart, :reopen, :potential_organizers] + COLLECTION_ACTIONS
 
   before_action :load_workshops, only: COLLECTION_ACTIONS
 
@@ -190,6 +190,11 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
   # GET /api/v1/pd/workshops/1/summary
   def summary
     render json: @workshop, serializer: Api::V1::Pd::WorkshopSummarySerializer
+  end
+
+  # Users who could be re-assigned to be the organizer of this workshop
+  def potential_organizers
+    render json: @workshop.potential_organizers
   end
 
   private
