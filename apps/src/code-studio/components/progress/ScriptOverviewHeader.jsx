@@ -23,7 +23,6 @@ import AssignmentVersionSelector, {
 } from '@cdo/apps/templates/teacherDashboard/AssignmentVersionSelector';
 import {assignmentVersionShape} from '@cdo/apps/templates/teacherDashboard/shapes';
 import StudentFeedbackNotification from '@cdo/apps/templates/feedback/StudentFeedbackNotification';
-import experiments from '@cdo/apps/util/experiments';
 import VerifiedResourcesNotification from '@cdo/apps/templates/courseOverview/VerifiedResourcesNotification';
 
 const SCRIPT_OVERVIEW_WIDTH = 1100;
@@ -81,7 +80,6 @@ class ScriptOverviewHeader extends Component {
     isSignedIn: PropTypes.bool.isRequired,
     isVerifiedTeacher: PropTypes.bool.isRequired,
     hasVerifiedResources: PropTypes.bool.isRequired,
-    verificationCheckComplete: PropTypes.bool,
     showCourseUnitVersionWarning: PropTypes.bool,
     showScriptVersionWarning: PropTypes.bool,
     showRedirectWarning: PropTypes.bool,
@@ -165,16 +163,12 @@ class ScriptOverviewHeader extends Component {
       showHiddenUnitWarning,
       courseName,
       userId,
-      verificationCheckComplete,
       isVerifiedTeacher,
       hasVerifiedResources
     } = this.props;
 
     const displayVerifiedResources =
-      viewAs === ViewType.Teacher &&
-      verificationCheckComplete &&
-      !isVerifiedTeacher &&
-      hasVerifiedResources;
+      viewAs === ViewType.Teacher && !isVerifiedTeacher && hasVerifiedResources;
 
     const displayVersionWarning =
       showRedirectWarning &&
@@ -212,9 +206,7 @@ class ScriptOverviewHeader extends Component {
             width={SCRIPT_OVERVIEW_WIDTH}
           />
         )}
-        {experiments.isEnabled(experiments.FEEDBACK_NOTIFICATION) && userId && (
-          <StudentFeedbackNotification studentId={userId} />
-        )}
+        {userId && <StudentFeedbackNotification studentId={userId} />}
         {displayVerifiedResources && (
           <VerifiedResourcesNotification width={SCRIPT_OVERVIEW_WIDTH} />
         )}
@@ -286,6 +278,5 @@ export default connect(state => ({
   isSignedIn: state.progress.signInState === SignInState.SignedIn,
   viewAs: state.viewAs,
   isVerifiedTeacher: state.verifiedTeacher.isVerified,
-  hasVerifiedResources: state.verifiedTeacher.hasVerifiedResources,
-  verificationCheckComplete: state.verifiedTeacher.verificationCheckComplete
+  hasVerifiedResources: state.verifiedTeacher.hasVerifiedResources
 }))(ScriptOverviewHeader);

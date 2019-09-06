@@ -11,6 +11,8 @@ import {
 } from './editorRedux';
 import {levelShape} from './shapes';
 import LevelNameInput from './LevelNameInput';
+import ReactTooltip from 'react-tooltip';
+import _ from 'lodash';
 
 const styles = {
   checkbox: {
@@ -26,16 +28,18 @@ const styles = {
     display: 'inline-block',
     lineHeight: '36px',
     margin: '0 7px 0 5px',
-    verticalAlign: 'middle'
-  },
-  textInput: {
-    height: 34,
-    width: 350,
-    boxSizing: 'border-box',
     verticalAlign: 'baseline',
-    margin: '7px 0 10px 0'
+    textAlign: 'right',
+    width: 80
+  },
+  shortTextInput: {
+    width: 330,
+    verticalAlign: 'baseline',
+    marginBottom: 0
   },
   progressionTextInput: {
+    width: 550,
+    verticalAlign: 'baseline',
     marginBottom: 0
   },
   checkboxLabel: {
@@ -52,7 +56,8 @@ const styles = {
   },
   divider: {
     borderColor: '#ddd',
-    margin: '7px 0'
+    margin: '7px 0',
+    paddingBottom: 5
   },
   button: {
     fontSize: 14,
@@ -64,9 +69,21 @@ const styles = {
   removeVariant: {
     float: 'right'
   },
-  progression: {
-    paddingTop: 5
+  tooltip: {
+    maxWidth: 450
   }
+};
+
+const scriptLevelOptions = ['assessment', 'named', 'challenge'];
+
+const tooltipText = {
+  assessment:
+    'Visibly mark this level as an assessment, and show it in the Assessments tab in Teacher Dashboard.',
+  named:
+    'Show this level on a line by itself, with the Display Name of the level as the label.',
+  challenge: 'Show students the Challenge dialog when viewing this level.',
+  progression:
+    'Group this level with other levels in the same progression, with this text as the label. This overrides the "named" checkbox.'
 };
 
 const ArrowRenderer = ({onMouseDown}) => {
@@ -87,9 +104,15 @@ export class UnconnectedLevelTokenDetails extends Component {
     stagePosition: PropTypes.number.isRequired
   };
 
-  state = {
-    showBlankProgression: false
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      // Variants are deprecated. Only show them if they are already in use.
+      // If the number of variants is reduced to 1, keep showing the Add
+      // Variants button for the rest of this editing session.
+      showAddVariants: props.level.ids.length > 1
+    };
+  }
 
   containsLegacyLevel() {
     return this.props.level.ids.some(id =>
@@ -116,10 +139,6 @@ export class UnconnectedLevelTokenDetails extends Component {
       this.props.level.position,
       levelId
     );
-  };
-
-  handleAddProgression = () => {
-    this.setState({showBlankProgression: true});
   };
 
   handleActiveVariantChanged = id => {
@@ -149,19 +168,32 @@ export class UnconnectedLevelTokenDetails extends Component {
   };
 
   render() {
-    const scriptLevelOptions = ['assessment', 'named', 'challenge'];
+    const {showAddVariants} = this.state;
+    const tooltipIds = {};
+    Object.keys(tooltipText).forEach(option => {
+      tooltipIds[option] = _.uniqueId();
+    });
     return (
       <div style={styles.levelTokenActive}>
         <span className="level-token-checkboxes">
           {scriptLevelOptions.map(option => (
-            <label key={option} style={styles.checkboxLabel}>
+            <label
+              key={option}
+              style={styles.checkboxLabel}
+              data-for={tooltipIds[option]}
+              data-tip
+            >
               <input
                 type="checkbox"
                 style={styles.checkboxInput}
                 checked={!!this.props.level[option]}
                 onChange={this.handleCheckboxChange.bind(this, option)}
               />
-              &nbsp;<span style={styles.checkboxText}>{option}</span>
+              &nbsp;
+              <span style={styles.checkboxText}>{option}</span>
+              <ReactTooltip id={tooltipIds[option]} delayShow={500}>
+                <div style={styles.tooltip}>{tooltipText[option]}</div>
+              </ReactTooltip>
             </label>
           ))}
         </span>
@@ -169,41 +201,37 @@ export class UnconnectedLevelTokenDetails extends Component {
         <div style={{clear: 'both'}} />
         {this.containsLegacyLevel() && (
           <div>
-            <span style={styles.levelFieldLabel}>Skin</span>
+            <span style={styles.levelFieldLabel}>Skin:</span>
             <input
               defaultValue={this.props.level.skin}
               type="text"
-              style={styles.textInput}
+              style={styles.shortTextInput}
               onChange={event => this.handleFieldChange('skin', event)}
             />
-            <div style={{float: 'right'}}>
-              <span style={styles.levelFieldLabel}>Video key</span>
-              <input
-                defaultValue={this.props.level.videoKey}
-                type="text"
-                style={styles.textInput}
-                onChange={event => this.handleFieldChange('videoKey', event)}
-              />
-            </div>
+            <span style={styles.levelFieldLabel}>Video key:</span>
+            <input
+              defaultValue={this.props.level.videoKey}
+              type="text"
+              style={styles.shortTextInput}
+              onChange={event => this.handleFieldChange('videoKey', event)}
+            />
             <div style={{clear: 'both'}} />
-            <span style={styles.levelFieldLabel}>Difficulty</span>
+            <span style={styles.levelFieldLabel}>Difficulty:</span>
             <input
               defaultValue={this.props.level.conceptDifficulty}
               type="text"
-              style={styles.textInput}
+              style={styles.shortTextInput}
               onChange={event =>
                 this.handleFieldChange('conceptDifficulty', event)
               }
             />
-            <div style={{float: 'right'}}>
-              <span style={styles.levelFieldLabel}>Concepts</span>
-              <input
-                defaultValue={this.props.level.concepts}
-                type="text"
-                style={Object.assign({}, styles.textInput, {width: 320})}
-                onChange={this.handleFieldChange.bind(this, 'concepts')}
-              />
-            </div>
+            <span style={styles.levelFieldLabel}>Concepts:</span>
+            <input
+              defaultValue={this.props.level.concepts}
+              type="text"
+              style={styles.shortTextInput}
+              onChange={event => this.handleFieldChange('concepts', event)}
+            />
           </div>
         )}
         {this.props.level.ids.map((id, index) => (
@@ -249,45 +277,42 @@ export class UnconnectedLevelTokenDetails extends Component {
             />
           </div>
         ))}
-        {/* We don't currently support editing progression names here, but do
-         * show the current progression if we have one. */}
-        {(this.props.level.progression || this.state.showBlankProgression) && (
-          <div style={styles.progression}>
+        {showAddVariants && <hr style={styles.divider} />}
+        <div style={styles.progression}>
+          <span
+            style={styles.levelFieldLabel}
+            data-for={tooltipIds.progression}
+            data-tip
+          >
+            Progression:
+          </span>
+          <ReactTooltip id={tooltipIds.progression} delayShow={500}>
+            <div style={styles.tooltip}>{tooltipText.progression}</div>
+          </ReactTooltip>
+
+          <span style={styles.levelSelect}>
+            <input
+              type="text"
+              onChange={event => this.handleFieldChange('progression', event)}
+              value={this.props.level.progression}
+              style={styles.progressionTextInput}
+              data-field-name="progression"
+            />
+          </span>
+        </div>
+        {showAddVariants && !this.props.level.ids.includes(NEW_LEVEL_ID) && (
+          <div>
             <hr style={styles.divider} />
-            <span style={styles.levelFieldLabel}>Progression name:</span>
-            <span style={styles.levelSelect}>
-              <input
-                type="text"
-                onChange={event => this.handleFieldChange('progression', event)}
-                value={this.props.level.progression}
-                style={styles.textInput}
-                data-field-name="progression"
-              />
-            </span>
+            <button
+              onMouseDown={this.handleAddVariant}
+              className="btn"
+              style={styles.button}
+              type="button"
+            >
+              <i style={{marginRight: 7}} className="fa fa-plus-circle" />
+              Add Variant
+            </button>
           </div>
-        )}
-        <hr style={styles.divider} />
-        {!this.props.level.ids.includes(NEW_LEVEL_ID) && (
-          <button
-            onMouseDown={this.handleAddVariant}
-            className="btn"
-            style={styles.button}
-            type="button"
-          >
-            <i style={{marginRight: 7}} className="fa fa-plus-circle" />
-            Add Variant
-          </button>
-        )}
-        {!this.props.level.progression && !this.state.showBlankProgression && (
-          <button
-            onMouseDown={this.handleAddProgression}
-            className="btn"
-            style={styles.button}
-            type="button"
-          >
-            <i style={{marginRight: 7}} className="fa fa-plus-circle" />
-            Add Progression
-          </button>
         )}
       </div>
     );

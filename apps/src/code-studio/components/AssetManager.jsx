@@ -13,6 +13,7 @@ import AudioRecorder from './AudioRecorder';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import AddAssetButtonRow from './AddAssetButtonRow';
 import i18n from '@cdo/locale';
+import {STARTER_ASSET_PREFIX} from '@cdo/apps/assetManagement/assetPrefix';
 
 export const AudioErrorType = {
   NONE: 'none',
@@ -257,7 +258,14 @@ export default class AssetManager extends React.Component {
         <AssetRow
           {...this.defaultAssetProps(asset)}
           api={boundApi}
-          onChoose={() => console.log('choose!')}
+          onChoose={
+            this.props.assetChosen &&
+            (() =>
+              this.props.assetChosen(
+                STARTER_ASSET_PREFIX + asset.filename,
+                asset.timestamp
+              ))
+          }
           onDelete={() => this.deleteStarterAssetRow(asset.filename)}
           levelName={this.props.levelName}
           hideDelete={!this.props.isStartMode}
@@ -272,8 +280,9 @@ export default class AssetManager extends React.Component {
         <AssetRow
           {...this.defaultAssetProps(asset)}
           useFilesApi={this.props.useFilesApi}
-          onChoose={() =>
-            this.props.assetChosen(asset.filename, asset.timestamp)
+          onChoose={
+            this.props.assetChosen &&
+            (() => this.props.assetChosen(asset.filename, asset.timestamp))
           }
           onDelete={() => this.deleteAssetRow(asset.filename)}
         />

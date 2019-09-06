@@ -110,11 +110,12 @@ module Api::V1::Pd
 
     # GET /api/v1/pd/workshops/:id/generic_survey_report
     def generic_survey_report
-      return local_workshop_daily_survey_report if @workshop.summer? ||
-        ([COURSE_CSP, COURSE_CSD].include?(@workshop.course) &&
-        @workshop.workshop_starting_date > Date.new(2018, 8, 1))
-
+      # 3 separate routes for summer workshop, CSF deep dive (201) workshop, and academic year
+      # workshop. Eventually we want summer workshop to use the same route as academic year workshop.
+      # CSF intro should not use this controller action.
+      return local_workshop_daily_survey_report if @workshop.summer?
       return create_csf_survey_report if @workshop.csf? && @workshop.subject == SUBJECT_CSF_201
+      return create_generic_survey_report if [COURSE_CSP, COURSE_CSD].include?(@workshop.course)
 
       raise 'Action generic_survey_report should not be used for this workshop'
     rescue => e
@@ -123,13 +124,7 @@ module Api::V1::Pd
 
     # GET /api/v1/pd/workshops/experiment_survey_report/:id/
     def experiment_survey_report
-      this_ws_report = report_single_workshop(@workshop, current_user)
-      rollup_report = report_rollups(@workshop, current_user)
-
-      results = this_ws_report.merge(rollup_report)
-      results[:experiment] = true
-
-      render json: results
+      create_generic_survey_report
     rescue => e
       notify_error e
     end
@@ -148,6 +143,13 @@ module Api::V1::Pd
 
     def create_csf_survey_report
       render json: report_single_workshop(@workshop, current_user)
+    end
+
+    def create_generic_survey_report
+      this_ws_report = report_single_workshop(@workshop, current_user)
+      rollup_report = report_rollups(@workshop, current_user)
+
+      render json: this_ws_report.merge(rollup_report).merge(experiment: true)
     end
 
     def notify_error(exception, error_status_code = :bad_request)

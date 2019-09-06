@@ -11352,6 +11352,8 @@ en:
               name: Practice PT Part 3
             Unit 4 Assessment:
               name: Unit 4 Assessment
+            'Lesson 15: Unit 4 Assessment':
+              name: 'Lesson 15: Unit 4 Assessment'
           title: CSP Unit 4 Pilot - Variables, Conditionals, Functions
           description_audience: ''
           description_short: ''
@@ -13013,6 +13015,8 @@ en:
               name: Unit 3 STUDENT Survey
             Unit 3 TEACHER Survey:
               name: Unit 3 TEACHER Survey
+            'Lesson 11: Unit Assessment':
+              name: 'Lesson 11: Unit Assessment'
           title: CSP Unit 3 Pilot - Intro to App Design
           description_audience: ''
           description_short: ''
@@ -13091,7 +13095,13 @@ en:
               name: new stage
             CS Discoveries Deeper Learning Module 2:
               name: CS Discoveries Deeper Learning Module 2
-          title: CS Discoveries Deeper Learning Module 2
+            Deeper Learning Overview:
+              name: Deeper Learning Overview
+            'Step 1: Develop Understanding':
+              name: 'Step 1: Develop Understanding'
+            'Step 2: Demonstrate Understanding':
+              name: 'Step 2: Demonstrate Understanding'
+          title: CS Discoveries Deeper Learning Module for Workshop 2
           description_audience: CS Discoveries Facilitators in Training 2019
           description_short: ''
           description: ''
