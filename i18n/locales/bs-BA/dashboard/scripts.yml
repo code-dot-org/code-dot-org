@@ -2141,3 +2141,9 @@ bs:
               name: Brzina
             Functions:
               name: Funkcije
+        peru-2019:
+          stages:
+            Introduction:
+              name: Uvod
+            Nested Loops:
+              name: Ugniježdene Petlje
