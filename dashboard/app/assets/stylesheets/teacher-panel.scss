@@ -17,8 +17,8 @@
   border-right: none;
   border-radius: 10px 0 0 10px;
 
-  /* must appear in front of <Overlay/>, whose z-index is 1020 */
-  z-index: 1021;
+  /* must appear in front of ProgressBubble */
+  z-index: 1000;
 
   .hide-handle,
   .show-handle {
