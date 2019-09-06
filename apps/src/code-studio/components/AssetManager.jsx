@@ -13,6 +13,7 @@ import AudioRecorder from './AudioRecorder';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import AddAssetButtonRow from './AddAssetButtonRow';
 import i18n from '@cdo/locale';
+import {STARTER_ASSET_PREFIX} from '@cdo/apps/assetManagement/assetPrefix';
 
 export const AudioErrorType = {
   NONE: 'none',
@@ -58,6 +59,7 @@ export default class AssetManager extends React.Component {
     disableAudioRecording: PropTypes.bool,
     projectId: PropTypes.string,
     levelName: PropTypes.string,
+    isStartMode: PropTypes.bool,
 
     // For logging purposes
     imagePicker: PropTypes.bool, // identifies if displayed by 'Manage Assets' flow
@@ -158,14 +160,21 @@ export default class AssetManager extends React.Component {
   };
 
   onUploadDone = result => {
-    assetListStore.add(result);
-    if (this.props.assetsChanged) {
-      this.props.assetsChanged();
-    }
-    this.setState({
-      assets: assetListStore.list(this.props.allowedExtensions),
+    let newState = {
       statusMessage: 'File "' + result.filename + '" successfully uploaded!'
-    });
+    };
+
+    if (this.props.isStartMode) {
+      newState.starterAssets = [...this.state.starterAssets, result];
+    } else {
+      assetListStore.add(result);
+      if (this.props.assetsChanged) {
+        this.props.assetsChanged();
+      }
+      newState.assets = assetListStore.list(this.props.allowedExtensions);
+    }
+
+    this.setState(newState);
   };
 
   onUploadError = status => {
@@ -206,7 +215,17 @@ export default class AssetManager extends React.Component {
 
     this.setState({
       assets: assetListStore.list(this.props.allowedExtensions),
-      statusMessage: 'File "' + name + '" successfully deleted!'
+      statusMessage: `File "${name}" successfully deleted!`
+    });
+  };
+
+  deleteStarterAssetRow = name => {
+    let starterAssets = [...this.state.starterAssets].filter(
+      asset => asset.filename !== name
+    );
+    this.setState({
+      starterAssets,
+      statusMessage: `File "${name}" successfully deleted!`
     });
   };
 
@@ -239,9 +258,15 @@ export default class AssetManager extends React.Component {
         <AssetRow
           {...this.defaultAssetProps(asset)}
           api={boundApi}
-          onChoose={() => console.log('choose!')}
-          onDelete={() => console.log('delete!')}
+          onChoose={() =>
+            this.props.assetChosen(
+              STARTER_ASSET_PREFIX + asset.filename,
+              asset.timestamp
+            )
+          }
+          onDelete={() => this.deleteStarterAssetRow(asset.filename)}
           levelName={this.props.levelName}
+          hideDelete={!this.props.isStartMode}
         />
       );
     });
@@ -260,6 +285,21 @@ export default class AssetManager extends React.Component {
         />
       );
     });
+  };
+
+  uploadApi = () => {
+    if (this.props.isStartMode) {
+      return starterAssetsApi.withLevelName(this.props.levelName);
+    } else {
+      let api = this.props.useFilesApi ? filesApi : assetsApi;
+
+      // Bind API if it isn't already bound
+      if (!api.getProjectId()) {
+        api = api.withProjectId(this.props.projectId);
+      }
+
+      return api;
+    }
   };
 
   render() {
@@ -284,7 +324,7 @@ export default class AssetManager extends React.Component {
         <AddAssetButtonRow
           uploadsEnabled={this.props.uploadsEnabled}
           allowedExtensions={this.props.allowedExtensions}
-          useFilesApi={this.props.useFilesApi}
+          api={this.uploadApi()}
           onUploadStart={this.onUploadStart}
           onUploadDone={this.onUploadDone}
           onUploadError={this.onUploadError}

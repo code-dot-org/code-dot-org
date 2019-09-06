@@ -44,7 +44,7 @@
   "heightParameter": "height",
   "hideTurtle": "hide artist",
   "jump": "jump",
-  "jumpTo": "jump to",
+  "jumpToOverDown": "jump to %1 over %2 down",
   "jumpBackward": "jump backward by",
   "jumpForward": "jump forward by",
   "jumpToDirectionByPixels": "jump %1 by %2 pixels",

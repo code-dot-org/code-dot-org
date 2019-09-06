@@ -18,6 +18,7 @@
     %script{src: minifiable_asset_path('js/webpack-runtime.js')}
     // essential.js is ordered above application.js to filter new relic errors
     %script{src: minifiable_asset_path('js/essential.js')}
+    %script{src: minifiable_asset_path('js/vendors.js')}
     = render file: Rails.root.join('..', 'shared', 'haml', 'answerdash.haml') if view_options[:answerdash]
     = javascript_include_tag 'application'
     = javascript_include_tag "js/#{js_locale}/common_locale"

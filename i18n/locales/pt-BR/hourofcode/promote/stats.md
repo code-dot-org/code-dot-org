@@ -1,13 +1,12 @@
 ---
-title: <%= hoc_s(:title_stats).inspect %>
+title: Blurbs and useful stats
 layout: wide
 nav: promote_nav
 ---
 
-
 <a id="blurb"></a>
 
-<%= view :signup_button %>
+{{ signup_button }}
 
 # Blurbs and useful stats
 
@@ -41,7 +40,7 @@ A tecnologia está transformando todos os setores do planeta. Em 2015, 7 milhõe
 
 #### Sobre a Code.org
 
-A Code.org® é uma instituição pública sem fins lucrativos dedicada a promover o estudo da ciência da computação e garantir que ela chegue também às minorias sociais, empoderando, por exemplo, mulheres e negros para a participação nesta área. Its vision is that every student in every school has the opportunity to learn computer programming. Após seu lançamento, em 2013, a Code.org organizou a campanha Hora do Código – que levou a ciência da computação a mais de 100 milhões de alunos – em parceria com 70 distritos de escolas públicas em todo o país para expandir os programas de ciência da computação. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. Para mais informaçõe, visite: [<%= resolve_url('code.org') %>](%= resolve_url('https://code.org') %).
+A Code.org® é uma instituição pública sem fins lucrativos dedicada a promover o estudo da ciência da computação e garantir que ela chegue também às minorias sociais, empoderando, por exemplo, mulheres e negros para a participação nesta área. Its vision is that every student in every school has the opportunity to learn computer programming. Após seu lançamento, em 2013, a Code.org organizou a campanha Hora do Código – que levou a ciência da computação a mais de 100 milhões de alunos – em parceria com 70 distritos de escolas públicas em todo o país para expandir os programas de ciência da computação. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. For more information, please visit: [code.org]({{ codeorg_link }}).
 
 ## Share these on social media and in emails
 
@@ -49,8 +48,8 @@ A Code.org® é uma instituição pública sem fins lucrativos dedicada a promov
 
 <a id="infographics"></a>
 
-## Infographics
+## Infográficos
 
-<%= view :stats_carousel %>
+{{ stats_carousel }}
 
-<%= view :signup_button %>
+{{ signup_button }}

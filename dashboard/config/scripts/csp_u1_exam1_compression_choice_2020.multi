@@ -1,0 +1,17 @@
+name 'csp-u1-exam1-compression-choice_2020'
+height 'auto'
+
+question '
+Ryan is designing an app that needs to quickly send low quality photos between users. Most smartphones take much higher quality photos than Ryan needs for his app. Which answer best describes the type of compression Ryan should choose and why?'
+wrong ‘Lossless compression since it ensures perfect reconstruction of the photo.’
+wrong ‘Lossy compression since it ensures perfect reconstruction of the photo.’
+wrong ‘Lossless compression since it typically results in smaller data sizes.’
+right ‘Lossy compression since it typically results in smaller data sizes.’
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN
+
+markdown <<MARKDOWN
+
+MARKDOWN

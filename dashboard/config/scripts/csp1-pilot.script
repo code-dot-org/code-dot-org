@@ -79,7 +79,7 @@ level 'CSP U1L11 SFLP 20-21', progression: 'Lesson Overview'
 level 'U1 Lossy Compression Widget v1', progression: 'Lossy Compression Widget'
 level 'U1 Lossy Compression Widget v2', progression: 'Lossy Compression Widget'
 level 'U1 L12 Lossy iframe widget', progression: 'Compression Comparison Widget'
-level 'U1L11 CFU Compression for Email', progression: 'Check For Understanding', assessment: true
+level 'U1L11 CPS CFU Cell Phone', progression: 'Check For Understanding', assessment: true
 
 stage 'Intellectual Property'
 level 'CSP U1L12 SFLP 20-21', progression: 'Lesson Overview'
@@ -88,14 +88,17 @@ level 'U1L12 CFU Copyright', progression: 'Check For Understanding', assessment:
 
 stage 'Project: Digital Information Dilemmas, pt 1'
 level 'CSP U1L13 SFLP 20-21', progression: 'Lesson Overview'
-level 'U1L11 CFU Compression for Email', progression: 'Check For Understanding', assessment: true
+level 'U1L13 CFU Digital Representation', progression: 'Check For Understanding', assessment: true
 
 stage 'Project: Digital Information Dilemmas, pt 2'
 level 'CSP U1L14 SFLP 20-21', progression: 'Lesson Overview'
-level 'U1L13 CFU Digital Representation', progression: 'Check For Understanding', assessment: true
+level 'U1L14 CSP CFU digital information', progression: 'Check For Understanding', assessment: true
 
-stage 'Unit Assessment'
-level 'CSP U1L15 SFLP 20-21', progression: 'Lesson Overview'
+stage 'Lesson 15: Unit Assessment', lockable: true
+level 'CSP Unit 1 AP-Style Assessment _2020', assessment: true
 
-stage 'Unit 1 Survey'
-level 'CSP U1 20-21 Student Pilot Survey', progression: 'Unit 1 Survey', assessment: true
+stage 'Unit 1 STUDENT Survey', lockable: true, flex_category: 'required'
+level 'CSP U1 20-21 Student Pilot Survey', progression: 'Unit 1 STUDENT Survey', assessment: true
+
+stage 'Unit 1 TEACHER Survey', lockable: true, flex_category: 'required'
+level 'CSP U1 20-21 Teacher Pilot Survey', progression: 'Unit 1 TEACHER Survey', assessment: true

@@ -40,7 +40,7 @@ export function replay(gameLabInst) {
         sprite[prop] = value;
       });
     }
-    gameLabInst.gameLabP5.p5.drawSprites();
+    gameLabInst.p5Wrapper.p5.drawSprites();
     frame++;
   };
 }

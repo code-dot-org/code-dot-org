@@ -1,9 +1,10 @@
 ---
-title: <%= hoc_s(:title_how_to_companies).inspect %>
+title: Bagaimana mengadakan Hour of Code - perusahaan
 layout: wide
 nav: how_to_nav
 ---
-<%= view :signup_button %>
+
+{{ signup_button }}
 
 # Cara membawa Hour of Code ke perusahaan Anda
 
@@ -13,34 +14,34 @@ nav: how_to_nav
 
 ## Terhubung dengan kelas-kelas lokal dan para sukarelawan untuk Hour of Code
 
-Code.org menawarkan kesempatan untuk karyawan anda untuk [terhubung](%= codeorg_url('/volunteer') %) dengan kelas lokal yang menawarkan Hour of Code dimana mereka bisa berbagi pengalaman berkarir di bidang teknologi and menginsipirasi siswa untuk belajar ilmu komputer.
+Code.org offers the opportunity for your employees to [connect]({{ urls/volunteer }}) with local classrooms doing the Hour of Code where they can share their tech career experience and inspire students to study computer science.
 
-Mendaftar menjadi sukarelawan <br /> <br />
+[<button>Sign up to volunteer!</button>]({{ urls/volunteer }}) <br /> <br />
 
-For more instructions on encouraging employees and connecting your employees with classrooms, check out our [guide for corporate partners](%= localized_file('/files/hoc-corporate-toolkit.pdf') %).
+For more instructions on encouraging employees and connecting your employees with classrooms, check out our [guide for corporate partners]({{ localized_files/hoc_corporate_toolkit }}).
 
 ## Additional ways companies can support the Hour of Code
 
-- Ask your CEO to [send a company-wide email](%= resolve_url('/promote/resources#sample-emails') %) emphasizing the importance of computer science and encouraging employees to spread the word.
-- Host an Hour of Code Happy Hour with coworkers to try the [activities](%= resolve_url('/learn') %).
+- Ask your CEO to [send a company-wide email]({{ promote/sample_emails }}) emphasizing the importance of computer science and encouraging employees to spread the word.
+- Host an Hour of Code Happy Hour with coworkers to try the [activities]({{ urls/learn }}).
 - Host an Hour of Code event for a local classroom of students or non profits partners to do an Hour of Code at your company’s office. See event how-to guide below.
 
 # Bagaimana menjadi penyelenggara acara Hour of Code dengan siswa
 
 ## 1. Promosikan Hour of Code Anda
 
-- Promote your [Hour of Code](%= resolve_url('/promote') %) event and encourage others to host.
-- Encourage software engineers at your company to visit a local classroom to help lead an Hour of Code and inspire students to study computer science. They can [sign up](%= codeorg_url('/volunteer/engineer') %) to be connected with a classroom.
+- Promote your [Hour of Code]({{ urls/promote }}) event and encourage others to host.
+- Encourage software engineers at your company to visit a local classroom to help lead an Hour of Code and inspire students to study computer science. They can [sign up]({{ urls/volunteer_engineer }}) to be connected with a classroom.
 
 ## 2. Tonton video how-to ini <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
 ## 3. Pilih sebuah aktivitas
 
-We host a variety of [fun, hour-long activities](%= resolve_url('/learn') %) for participants of all ages, created by a variety of partners. Ayo dicoba
+We host a variety of [fun, hour-long activities]({{ urls/learn }}) for participants of all ages, created by a variety of partners. [Try them out!]({{ urls/learn }})
 
 **All Hour of Code activities** require minimal prep-time, and are self-guided - allowing participants to work at their own pace and skill-level.
 
-[![](/images/fit-700/tutorials.png)](%= resolve_url('/learn') %)
+[![](/images/fit-700/tutorials.png)]({{ urls/learn }})
 
 ## 4. Rencanakan kebutuhan teknologi komputer Anda - bersifat opsional
 
@@ -71,13 +72,13 @@ Pengalaman Jam Pemrograman terbaik memiliki komputer yang terhubung dengan inter
     - If you are a tech company, demo fun, innovative products your company is working on.
     - If you aren’t a tech company, discuss ways your company uses technology to solve problems and accomplish goals.
     - Invite software engineers from your company to speak about why they decided to study computer science and the projects they work on.
-    - See tips for getting girls interested in computer science [here](%= codeorg_url('/girls') %).
+    - See tips for getting girls interested in computer science [here]({{ urls/girls }}).
     
     ## 6. Kode!
     
     **Arahkan peserta langsung ke aktivitas**
     
-    - Write the activity link on a whiteboard. Find the link listed on the [information for your selected activity](%= resolve_url('/learn') %) under the number of participants.
+    - Write the activity link on a whiteboard. Find the link listed on the [information for your selected activity]({{ urls/learn }}) under the number of participants.
     - For younger students, load the activity page ahead of time or save it as a bookmark.
     
     **When participants come across difficulties it's okay to respond:**
@@ -92,9 +93,9 @@ Pengalaman Jam Pemrograman terbaik memiliki komputer yang terhubung dengan inter
     
     ## 7) Selebrasi
     
-    - [Print certificates](%= codeorg_url('/certificates') %) for participants and students.
-    - [Print "I did an Hour of Code!"](%= resolve_url('/promote/resources#stickers') %) stickers.
+    - [Print certificates]({{ urls/certificates }}) for participants and students.
+    - [Print "I did an Hour of Code!"]({{ promote/resources_stickers }}) stickers.
     - [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for your employees.
     - Bagikan foto dan video Jam Pemrograman Anda pada media sosial. Gunakan tautan #HourOfCode dan @codeorg sehingga kami dapat menyoroti keberhasilan Anda juga!
     
-    <%= view :signup_button %>
+    {{ signup_button }}

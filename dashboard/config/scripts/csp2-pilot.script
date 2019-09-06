@@ -1,8 +1,7 @@
 login_required true
 hideable_stages true
-has_verified_resources true
 has_lesson_plan true
-curriculum_path 'https://curriculum.code.org/{LOCALE}/cspilot/unit-2/{LESSON}'
+curriculum_path 'https://curriculum.code.org/{LOCALE}/cspilot/unit2/{LESSON}'
 pilot_experiment 'csp-piloters'
 
 stage 'Building a Network'
@@ -39,5 +38,11 @@ level 'CSP U2L6 SFLP 20-21', progression: 'Lesson Overview'
 stage 'Internet Dilemmas, pt 2'
 level 'CSP U2L7 SFLP 20-21', progression: 'Lesson Overview'
 
-stage 'Unit 2 Assessment'
-level 'CSP U2L8 SFLP 20-21', progression: 'Lesson Overview'
+stage 'Lesson 8: Unit Assessment', lockable: true
+level 'CSP Unit 2 MC Assessment _2020', assessment: true
+
+stage 'Unit 2 STUDENT Survey', lockable: true, flex_category: 'required'
+level 'CSP U2 20-21 Student Pilot Survey', progression: 'Unit 2 STUDENT Survey', assessment: true
+
+stage 'Unit 2 TEACHER Survey', lockable: true, flex_category: 'required'
+level 'CSP U2 20-21 Teacher Pilot Survey', progression: 'Unit 2 TEACHER Survey', assessment: true

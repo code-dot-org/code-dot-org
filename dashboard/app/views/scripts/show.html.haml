@@ -1,6 +1,6 @@
--# This variable will get any data we need to pass along to scriptOverview.js
+-# This variable will get any data we need to pass along to scripts/show.js
 - script_data = @script.summarize(true, current_user)
-- additional_script_data = {course_name: @script.course&.name, show_redirect_warning: @show_redirect_warning, redirect_script_url: @redirect_script_url, section: @section, user_type: current_user&.user_type, user_id: current_user&.id, locale: Script.locale_english_name_map[request.locale]}
+- additional_script_data = {course_name: @script.course&.name, show_redirect_warning: @show_redirect_warning, redirect_script_url: @redirect_script_url, section: @section, user_type: current_user&.user_type, user_id: current_user&.id, is_verified_teacher: current_user&.authorized_teacher?, locale: Script.locale_english_name_map[request.locale]}
 - scriptOverviewData = {scriptData: script_data.merge(additional_script_data)}
 - if @script.professional_learning_course? && @current_user && Plc::UserCourseEnrollment.exists?(user: @current_user, plc_course: @script.plc_course_unit.plc_course)
   -  scriptOverviewData[:plcBreadcrumb] = {unit_name: @script.plc_course_unit.unit_name, course_view_path: course_path(@script.plc_course_unit.plc_course.get_url_name)}
@@ -8,7 +8,7 @@
   %script{ src: minifiable_asset_path('js/scripts/show.js'), data: {scriptoverview: scriptOverviewData.to_json }}
 
 
-- if (current_user && current_user.show_race_interstitial?) || @force_race_interstitial
+- if RaceInterstitialHelper.show?(current_user) || @force_race_interstitial
   = render partial: 'layouts/race_interstitial'
 
 = render partial: 'shared/check_admin'

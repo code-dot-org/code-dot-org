@@ -3,6 +3,7 @@ import React from 'react';
 import AssetUploader from './AssetUploader';
 import Button from '../../templates/Button';
 import i18n from '@cdo/locale';
+import {isIE11} from '@cdo/apps/util/browser-detector';
 
 export const assetButtonStyles = {
   button: {
@@ -47,7 +48,7 @@ export default class AddAssetButtonRow extends React.Component {
   static propTypes = {
     uploadsEnabled: PropTypes.bool.isRequired,
     allowedExtensions: PropTypes.string,
-    useFilesApi: PropTypes.bool,
+    api: PropTypes.object,
     onUploadStart: PropTypes.func.isRequired,
     onUploadDone: PropTypes.func.isRequired,
     onUploadError: PropTypes.func.isRequired,
@@ -59,10 +60,7 @@ export default class AddAssetButtonRow extends React.Component {
 
   render() {
     let shouldShowRecordButton = !this.props.hideAudioRecording;
-    if (
-      navigator.userAgent.indexOf('Firefox') === -1 &&
-      navigator.userAgent.indexOf('Chrome') === -1
-    ) {
+    if (isIE11()) {
       shouldShowRecordButton = false;
     }
     return (
@@ -70,7 +68,7 @@ export default class AddAssetButtonRow extends React.Component {
         <AssetUploader
           uploadsEnabled={this.props.uploadsEnabled}
           allowedExtensions={this.props.allowedExtensions}
-          useFilesApi={this.props.useFilesApi}
+          api={this.props.api}
           onUploadStart={this.props.onUploadStart}
           onUploadDone={this.props.onUploadDone}
           onUploadError={this.props.onUploadError}

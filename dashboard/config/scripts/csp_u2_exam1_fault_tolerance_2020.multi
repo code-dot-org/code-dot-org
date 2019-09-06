@@ -1,0 +1,18 @@
+name 'csp-u2-exam1-fault-tolerance_2020'
+height 'auto'
+
+question 'Two devices are connected to the Internet and communicating with one another. A squirrel chews through one of the wires in the network that is currently being used by the devices to communicate. The network immediately begins using a different path through the network and communication continues as normal.  
+<br> <br>
+This situation best exemplifies which principle?'
+right 'fault-tolerance'
+wrong 'scalability'
+wrong 'protocol'
+wrong 'pathing'
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN
+
+markdown <<MARKDOWN
+
+MARKDOWN

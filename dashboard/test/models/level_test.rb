@@ -888,11 +888,100 @@ EOS
     assert_equal contained_level_2_copy, level_2_copy.contained_levels.last
   end
 
+  test 'clone with suffix sets editor experiment' do
+    old_level = create :level, name: 'old level'
+    new_level = old_level.clone_with_suffix(' copy', editor_experiment: 'level-editors')
+    assert_equal 'old level copy', new_level.name
+    assert_equal 'level-editors', new_level.editor_experiment, 'clone_with_suffix adds editor experiment'
+  end
+
+  test 'cloning multi level sets editor experiment' do
+    old_dsl_text = <<EOS
+name 'old multi level'
+title 'Multiple Choice'
+question 'What is your favorite color?'
+wrong 'Red'
+wrong 'Green'
+right 'Blue'
+EOS
+
+    expected_new_dsl_text = <<EOS
+name 'old multi level copy'
+editor_experiment 'level-editors'
+title 'Multiple Choice'
+question 'What is your favorite color?'
+wrong 'Red'
+wrong 'Green'
+right 'Blue'
+EOS
+
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    File.expects(:write).once.with do |_pathname, new_dsl_text|
+      new_dsl_text == expected_new_dsl_text
+    end
+
+    old_level = create :multi, name: 'old multi level'
+    old_level.stubs(:dsl_text).returns(old_dsl_text)
+
+    new_level = old_level.clone_with_suffix(' copy', editor_experiment: 'level-editors')
+    assert_equal 'old multi level copy', new_level.name
+    assert_equal 'level-editors', new_level.editor_experiment
+  end
+
   test 'contained_level_names filters blank names before validation' do
     level = build :level
     level.contained_level_names = ['', 'real_name']
     assert_equal level.contained_level_names, ['', 'real_name']
     level.valid?
     assert_equal level.contained_level_names, ['real_name']
+  end
+
+  test 'add_starter_asset! saves key-value pair in level properties' do
+    level = create :level
+    assert_nil level.starter_assets
+
+    level.add_starter_asset!("my-file.png", "12345.png")
+    level.reload
+    expected_assets = {"my-file.png" => "12345.png"}
+    assert_equal expected_assets, level.starter_assets
+
+    level.add_starter_asset!("file with spaces.png", "54321.png")
+    level.reload
+    expected_assets["file with spaces.png"] = "54321.png"
+    assert_equal expected_assets, level.starter_assets
+
+    # Overwrite "my-file.png" starter asset
+    level.add_starter_asset!("my-file.png", "6789.png")
+    level.reload
+    expected_assets["my-file.png"] = "6789.png"
+    assert_equal expected_assets, level.starter_assets
+  end
+  test 'add_starter_asset! raises if level fails to save' do
+    level = create :level
+    level.expects(:valid?).returns(false)
+
+    assert_raises ActiveRecord::RecordInvalid do
+      level.add_starter_asset!("my-file.png", "123.png")
+    end
+  end
+
+  test 'remove_starter_asset! returns true if starter_assets are nil' do
+    level = create :level
+    level.expects(:save).never
+    assert_nil level.starter_assets
+
+    assert level.remove_starter_asset!('non-existent-asset.png')
+  end
+
+  test 'remove_starter_asset! deletes key-value pair from starter_assets' do
+    key = 'my-key.png'
+    level = create :level, starter_assets: {key => '123-abc.png'}
+    assert_equal 1, level.starter_assets.length
+
+    successful_save = level.remove_starter_asset!(key)
+    level.reload
+
+    assert successful_save
+    assert_nil level.starter_assets
   end
 end

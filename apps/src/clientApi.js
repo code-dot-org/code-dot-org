@@ -460,10 +460,20 @@ class StarterAssetsApi {
     return `/level_starter_assets/${this.levelName}/${path}`;
   }
 
+  getUploadUrl() {
+    return this.basePath('');
+  }
+
+  wrapUploadDoneCallback(callback) {
+    return callback;
+  }
+
+  wrapUploadStartCallback(callback) {
+    return callback;
+  }
+
   deleteFile(filename, success, error) {
-    throw new Error('not yet implemented');
-    // TODO (madelynkasula): implement this endpoint and method
-    // return ajaxInternal('DELETE', this.basePath(filename), success, error);
+    return ajaxInternal('DELETE', this.basePath(filename), success, error);
   }
 }
 

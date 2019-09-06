@@ -711,20 +711,10 @@ en:
         text: clicked {SPRITE}
       gamelab_comment:
         text: 'comment: {COMMENT}'
-      gamelab_console.log:
-        text: log message {MESSAGE}
       gamelab_createNewSprite:
         text: "make a new sprite \n called {NAME} \n with costume {COSTUME} \n at {LOCATION}"
-      gamelab_debugSprite:
-        text: debug {SPRITE} {VAL}
-        options:
-          VAL:
-            'true': 'true'
-            'false': 'false'
       gamelab_destroy:
         text: remove {THIS}
-      gamelab_displace:
-        text: "{THIS} blocks {SPRITE} from moving"
       gamelab_draggable:
         text: being draggable
       gamelab_edgesDisplace:
@@ -890,7 +880,6 @@ en:
             '"x"': x position
             '"y"': y position
             '"direction"': movement direction
-            '"tint"': tint
       gamelab_setSizes:
         text: set {SPRITE} {PROPERTY} to {N}%
         options:
@@ -938,20 +927,8 @@ en:
             '"d"': d
       gamelab_whenLeftArrow:
         text: when left arrow pressed
-      gamelab_whenPressedAndReleased:
-        text: "when {DIR} pressed \n{STATEMENT1}when released \n{STATEMENT2}"
-        options:
-          DIR:
-            "'up'": up
-            "'down'": down
-            "'left'": left
-            "'right'": right
       gamelab_whenRightArrow:
         text: when right arrow pressed
-      gamelab_whenStartAndStopTouching:
-        text: |-
-          when {SPRITE1} starts touching {SPRITE2} {STATEMENT1}when they stop touching
-           {STATEMENT2}
       gamelab_whenTouching:
         text: when {SPRITE1} touches {SPRITE2}
       gamelab_whenUpArrow:

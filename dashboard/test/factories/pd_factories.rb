@@ -182,7 +182,7 @@ FactoryGirl.define do
       form_data_hash {build :pd_regional_partner_program_registration_hash}
       regional_partner {create :regional_partner}
     end
-    user {regional_partner.contact}
+    user {(create :regional_partner_program_manager, regional_partner: regional_partner).program_manager}
     teachercon 1
     form_data {form_data_hash.to_json}
   end

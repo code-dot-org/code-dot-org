@@ -1,144 +1,41 @@
 ---
-title: <%= hoc_s(:title_partners).inspect %>
+title: Partnerid
 ---
+
 KoodiTund kampaaniat juhivad Hour of Code ja Computer Science Education Week nõuandvad ja järelvalve komiteed.
 
-[Nõuandev komitee](%= resolve_url('/advisory-committee') %) liikmed on haridusasutuste, ülikoolide, mittetulundusorganisatsioonide, ettevõtete ja rahvusvaheliste organisatsioonide esindajad. See komitee juhib Hour of Code kampaania strateegiat.
+The [Advisory Committee]({{ urls/advisory_committee }}) is composed of representatives from K-12, academia, nonprofits, for-profits, and international organizations. See komitee juhib Hour of Code kampaania strateegiat.
 
-[Järelvalve komitee](%= resolve_url('/review-committee') %) koosneb 15-st haridustöötajast, kes hindab ja soovitab tegevusi lähtuvalt nõustava komitee visioonist. Need haridustöötajad hindavad iseseisvaks õppimiseks mõeldud tegevusi ning õpetajate juhendeid, mille on koostanud sajad partnerid. Hinnatakse hariduslikku väärtust ning seda, kui paljudele erinevatele õpilastele tegevus huvi pakuks.
+The [Review Committee]({{ urls/review_committee }}) is composed of 15 educators across K-12 grade bands that assess and recommend activities using the Advisory Committee's rubric. Need haridustöötajad hindavad iseseisvaks õppimiseks mõeldud tegevusi ning õpetajate juhendeid, mille on koostanud sajad partnerid. Hinnatakse hariduslikku väärtust ning seda, kui paljudele erinevatele õpilastele tegevus huvi pakuks.
 
 Mõlema komitee tegevus on kaasa aidanud Hour of Code edule ning eesmärgile pakkuda igale õpilasele võimalust õppida arvutiteadusi.
 
-<% if @country == 'la' %>
+# Major Partners and Corporate Supporters
 
-# Ladina-Ameerika partnerid
-
-<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'la') %>
-
-<% end %>
-
-<% if @country == 'ac' %>
-
-# Aafrika partnerid
-
-<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'ac') %>
-
-<% end %>
-
-<% if @country == 'au' %>
-
-# Austraalia partnerid
-
-<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'au') %>
-
-<% end %>
-
-<% if @country == 'cn' %>
-
-# Hiina partnerid
-
-<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'cn') %>
-
-<% end %>
-
-<% if @country == 'fr' %>
-
-# Prantsusmaa partnerid
-
-<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'fr') %>
-
-<% end %>
-
-<% if @country == 'id' %>
-
-# Indoneesia partnerid
-
-<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'id') %>
-
-<% end %>
-
-<% if @country == 'ie' %>
-
-# Iirimaa partnerid
-
-<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'ie') %>
-
-<% end %>
-
-<% if @country == 'in' %>
-
-# India partnerid
-
-<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'in') %>
-
-<% end %>
-
-<% if @country == 'jp' %>
-
-# Jaapani partnerid
-
-<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'jp') %>
-
-<% end %>
-
-<% if @country == 'nl' %>
-
-# Hollandi partnerid
-
-<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'nl') %>
-
-<% end %>
-
-<% if @country == 'nz' %>
-
-# Uus-Meremaa partnerid
-
-<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'nz') %>
-
-<% end %>
-
-<% if @country == 'uk' %>
-
-# Suurbritannia partnerid
-
-<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'uk') %>
-
-<% end %>
-
-<% if @country == 'ca' %>
-
-# Kanada partnerid
-
-<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'ca') %>
-
-<% end %>
-
-# Peamised partnerid ja korporatiivtoetajad
-
-<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'major') %>
+{{ partners/major_partners_corporate_supporters }}
 
 * * *
 
-# Rahvusvahelised partnerid
+# International Partners
 
-<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'international') %>
-
-* * *
-
-# Tunniplaani ja juhendite koostamise partnerid
-
-<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'tutorial') %>
+{{ partners/international_partners }}
 
 * * *
 
-# Infrastruktuuri ja vahendite partnerid
+# Curriculum and Tutorial Partners
 
-<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'infrastructure') %>
+{{ partners/curriculum_tutorial_partners }}
 
 * * *
 
-# Täiendavad partnerid
+# Infrastructure Partners and Tools
 
-<%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'additional') %>
+{{ partners/infrastructure_partners_tools }}
 
-<%= view :signup_button %>
+* * *
+
+# Additional Partners
+
+{{ partners/additional_partners }}
+
+{{ signup_button }}
