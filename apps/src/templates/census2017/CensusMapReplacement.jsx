@@ -255,6 +255,11 @@ export default class CensusMapReplacement extends Component {
         ]
       });
 
+      _this.map.addControl(
+        new mapboxgl.NavigationControl({showCompass: false}),
+        'bottom-right'
+      );
+
       _this.map.on('click', 'census-schools', function(e) {
         _this.onPointClick(_this, e);
       });
