@@ -258,11 +258,13 @@ export default class AssetManager extends React.Component {
         <AssetRow
           {...this.defaultAssetProps(asset)}
           api={boundApi}
-          onChoose={() =>
-            this.props.assetChosen(
-              STARTER_ASSET_PREFIX + asset.filename,
-              asset.timestamp
-            )
+          onChoose={
+            this.props.assetChosen &&
+            (() =>
+              this.props.assetChosen(
+                STARTER_ASSET_PREFIX + asset.filename,
+                asset.timestamp
+              ))
           }
           onDelete={() => this.deleteStarterAssetRow(asset.filename)}
           levelName={this.props.levelName}
@@ -278,8 +280,9 @@ export default class AssetManager extends React.Component {
         <AssetRow
           {...this.defaultAssetProps(asset)}
           useFilesApi={this.props.useFilesApi}
-          onChoose={() =>
-            this.props.assetChosen(asset.filename, asset.timestamp)
+          onChoose={
+            this.props.assetChosen &&
+            (() => this.props.assetChosen(asset.filename, asset.timestamp))
           }
           onDelete={() => this.deleteAssetRow(asset.filename)}
         />
