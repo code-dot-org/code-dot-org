@@ -1154,7 +1154,7 @@ exports.install = function(blockly, blockInstallOptions) {
     init: function() {
       this.setHSV(184, 1.0, 0.74);
       this.interpolateMsg(
-        msg.turnToDirectionByDegrees(),
+        msg.turnDirection(),
         () => {
           this.appendDummyInput().appendTitle(
             new blockly.FieldDropdown(blockly.Blocks.draw_turn.DIRECTIONS),
