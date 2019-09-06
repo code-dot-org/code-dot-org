@@ -1,9 +1,10 @@
 ---
-title: <%= hoc_s(:title_how_to_events).inspect %>
+title: Une Heure de Code comment faire ?
 layout: wide
 nav: how_to_nav
 ---
-<%= view :signup_button %>
+
+{{ signup_button }}
 
 # How to organize an Hour of Code assembly or event
 
@@ -14,13 +15,13 @@ nav: how_to_nav
 ## 1. Préparez pour votre prochaine événement
 
 - Choisissez un lieu, une date et une heure.
-- Send [a letter](https://hourofcode.com/promote/resources#sample-emails) to your local mayor, member of Congress, governor, or influential business person and invite them to speak. Lisez notre [guide pratique](%=localized_file('/files/elected-official.pdf')%) quand vous invitez une personne officielle à une Heure de Code pour plus d'information.
-- Invitez les médias, comme par exemple une station de radio ou une télé locale, un journal, des blogueurs spécialisés dans l'éducation ou les nouvelles technologies. Regardez notre [dossier de presse](%= resolve_url('/promote/press-kit') %) pour plus de conseils.
+- Send [a letter](https://hourofcode.com/promote/resources#sample-emails) to your local mayor, member of Congress, governor, or influential business person and invite them to speak. Check out our [how-to toolkit]({{ localized_files/elected_official }}) when hosting an elected official during an Hour of Code for more info.
+- Invite media/press. i.e. local news station, newspaper, education/tech bloggers. See our [press kit]({{ promote/press_kit_url }}) for help.
 
 ## 2. Pendant votre événement
 
-- Commencez votre événement avec un de nos [vidéos encourageants](%= resolve_url('/promote/resources#videos') %).
-- Faites une présentation pour montrer quelle est l'importance de l'informatique, en utilisant des [statistiques et des graphiques](%= resolve_url('/promote/stats') %).   
+- Kick off your event with one of our [inspirational videos]({{ promote/videos }}).
+- Give an intro overviewing the importance of computer science, using these [stats and infographics]({{ promote/stats_url }}).   
       
     
 - **Other event ideas**: 
@@ -46,7 +47,7 @@ Consider hosting a K-5 evening event and invite parents to join their students f
 
 **Event:** School-wide Computer Science Education Week kick-off assembly
 
-**Date:** <%= campaign_date('start-short') %> (start of Computer Science Education Week)
+**Date:** {{ campaign_date/start_short }} (start of Computer Science Education Week)
 
 **Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
 
@@ -56,11 +57,11 @@ Consider hosting a K-5 evening event and invite parents to join their students f
 
 | Temps          | Action                                                                                                                                                                        |
 | -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 10h00 – 10h05  | Open with one of our [inspirational videos](%= resolve_url('/promote/resources#videos') %).                                                                                   |
-| 10h05 – 10h15  | Le proviseur fait une présentation pour expliquer l'importance de l'informatique. Utilisez ces [statistiques et graphiques](%= resolve_url('/promote/stats') %).              |
+| 10h00 – 10h05  | Open with one of our [inspirational videos]({{ promote/videos }}).                                                                                                            |
+| 10h05 – 10h15  | Principal gives an intro overviewing the importance of computer science. Use these [stats and infographics]({{ promote/stats_url }}).                                         |
 | 10h15 – 10h30  | Un invité spécial discute de son parcours et du rôle majeur des nouvelles technologies et de l'informatique dans nos vies quotidiennes.                                       |
 | 10h30 – 10h40  | Les élèves font une démo de l'Heure de Code pour l'école. Renversement des rôles amusant : leur demander d'enseigner au proviseur, à un homme politique ou à d'autres élèves! |
 | 10h40 – 11h00  | Les étudiants font une démonstration d'activités hors connexion et montrent comment l'informatique peut être enseignée même sans utiliser un ordinateur.                      |
 | 11h00 – 11h 05 | Les enseignants qui ont contribué à organiser l'événement dans toute l'école concluent par un discours de clôture.                                                            |
 
-<%= view :signup_button %>
+{{ signup_button }}

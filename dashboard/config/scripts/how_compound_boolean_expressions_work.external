@@ -17,9 +17,7 @@ To prove the point, here's a completely made up long compound boolean expression
 
 With text we usually use parentheses to cluster expression so we know which should be evaluated together,
 
-```
-(( expr1 || expr2 && expr3) && expr4) && (expr5 && expr6 || (expr7 || expr8))
-```
+`(( expr1 || expr2 && expr3) && expr4) && (expr5 && expr6 || (expr7 || expr8))`
 
 Now this is probably not a useful expression, but the point is that it *could* be evaluated assuming that *expr1* through *expr8* are Booleans.
 

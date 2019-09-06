@@ -1,9 +1,10 @@
 ---
-title: <%= hoc_s(:title_how_to_events).inspect %>
+title: KoodiTund ürituse juhend
 layout: wide
 nav: how_to_nav
 ---
-<%= view :signup_button %>
+
+{{ signup_button }}
 
 # Kuidas korraldada KoodiTund üritust
 
@@ -14,13 +15,13 @@ nav: how_to_nav
 ## 1. Ürituse ettevalmistus
 
 - Vali toimumiskoht, kuupäev ja toimumisaeg.
-- Saada [kiri](https://hourofcode.com/promote/resources#sample-emails) omvalitsuse juhile, rahvasaadikutele, tuntud äriinimestele jt ning kutsu neid esinema. Loe lähemalt[ Kuidas teha juhis](%=localized_file('/files/elected-official.pdf')%) kui kaasate parlamendiliikmeid/poliitikuid KoodiTund üritusse.
-- Kutsu üritusele ka kohalik meedia, blogijad. Lisainfo meie[ pressimaterjalist](%= resolve_url('/promote/press-kit') %).
+- Saada [kiri](https://hourofcode.com/promote/resources#sample-emails) omvalitsuse juhile, rahvasaadikutele, tuntud äriinimestele jt ning kutsu neid esinema. Check out our [how-to toolkit]({{ localized_files/elected_official }}) when hosting an elected official during an Hour of Code for more info.
+- Invite media/press. i.e. local news station, newspaper, education/tech bloggers. See our [press kit]({{ promote/press_kit_url }}) for help.
 
 ## 2. Ürituse ajal
 
-- Alusta üritust ühe meie [ inspireeriva video näitamisega.](%= resolve_url('/promote/resources#videos') %).
-- Kõnele sissejuhatuseks, kui oluline on arvutiteadus, kasutades meie[ statistikat ja infograafikuid](%= resolve_url('/promote/stats') %).   
+- Kick off your event with one of our [inspirational videos]({{ promote/videos }}).
+- Give an intro overviewing the importance of computer science, using these [stats and infographics]({{ promote/stats_url }}).   
       
     
 - **Muud ideed ürituseks**: 
@@ -46,7 +47,7 @@ Korralda üritust noorematele lastele (lasteaiast kuni 5. klassini) ning kutsu l
 
 **Üritus:** Kooliülene kogunemine arvutiteaduse nädala alguse tähistamiseks
 
-**Kuupäev: Arvutiteaduse nädala algus</p> 
+**Date:** {{ campaign_date/start_short }} (start of Computer Science Education Week)
 
 **Kellaaeg:** Koolipäeva vältel. Soovitavalt ennelõunal. Kestvus umbes 1 tund.
 
@@ -56,11 +57,11 @@ Korralda üritust noorematele lastele (lasteaiast kuni 5. klassini) ning kutsu l
 
 | Aeg           | Tegevus                                                                                                                                                                                               |
 | ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 10:00 - 10:05 | Alusta üritust ühe meie [ inspireeriva video näitamisega.](%= resolve_url('/promote/resources#videos') %).                                                                                            |
-| 10:05 - 10:15 | Koolidirektor annab ülevaate arvutiteaduse olulisusest. Kasuta meie[ statistikat ja infograafikuid](%= resolve_url('/promote/stats') %).                                                              |
+| 10:00 - 10:05 | Open with one of our [inspirational videos]({{ promote/videos }}).                                                                                                                                    |
+| 10:05 - 10:15 | Principal gives an intro overviewing the importance of computer science. Use these [stats and infographics]({{ promote/stats_url }}).                                                                 |
 | 10:15 - 10:30 | Erikülaline tutvustab ennast ning kõneleb, kuidas tehnoloogia ja arvutiteadus nende igapäevaelus olulist rolli mängib.                                                                                |
 | 10:30 - 10:40 | Õpilased näitavad, kuidas nad KoodiTund ürituse raames programmeerivad. Asja lõbusamaks tegemiseks võivad hoopis õpilased olla õpetaja rollis ning õpetada direktorid, poliitikuid või teisi õpilasi! |
 | 10:40 - 11:00 | Õpilased näitavad KoodiTund ürituse arvutivaba tegevust, demonstreerimaks, et arvuiteaduse põhimõtteid võib ka ilma arvutita õpetada.                                                                 |
 | 11:00 - 11:05 | Korraldaja lõpusõnad.                                                                                                                                                                                 |
 
-<%= view :signup_button %>
+{{ signup_button }}

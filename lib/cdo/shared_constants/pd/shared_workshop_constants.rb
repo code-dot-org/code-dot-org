@@ -20,6 +20,8 @@ module Pd
 
     SUBJECT_TEACHER_CON = 'Code.org TeacherCon'.freeze
     SUBJECT_NAMES = {
+      SUBJECT_CSF_101: SUBJECT_CSF_101 = 'Intro'.freeze,
+      SUBJECT_CSF_201: SUBJECT_CSF_201 = 'Deep Dive'.freeze,
       SUBJECT_FIT: SUBJECT_FIT = 'Code.org Facilitator Weekend'.freeze,
       SUBJECT_SUMMER_WORKSHOP: SUBJECT_SUMMER_WORKSHOP = '5-day Summer'.freeze,
       SUBJECT_VIRTUAL_1: SUBJECT_VIRTUAL_1 = 'Virtual Workshop 1'.freeze,
@@ -88,8 +90,8 @@ module Pd
         SUBJECT_CSD_VIRTUAL_8 = SUBJECT_VIRTUAL_8
       ],
       COURSE_CSF => [
-        SUBJECT_CSF_101 = 'Intro'.freeze,
-        SUBJECT_CSF_201 = 'Deep Dive'.freeze,
+        SUBJECT_CSF_101,
+        SUBJECT_CSF_201,
         SUBJECT_CSF_FIT = SUBJECT_FIT
       ]
     }.freeze

@@ -1,13 +1,14 @@
 ---
-title: <%= hoc_s(:title_how_to).inspect %>
+title: イベント開催ガイド
 layout: wide
 nav: how_to_nav
 ---
-<%= view :signup_button %>
+
+{{ signup_button }}
 
 # 放課後クラスやクラブでHour of Codeを教える方法
 
-### この運動に参加して、以下の手順で生徒たちのグループに初めてのコンピュータサイエンスを紹介しましょう。 Hour of Codeは簡単に実施できます。初めての方でも心配いりません！ お手伝い手が足りなければ、[地元のボランティア](%= codeorg_url('/volunteer/local') %)を見つけて、あなたの放課後クラスやクラブでHour of Codeを実施する手伝いをしてもらえます。
+### この運動に参加して、以下の手順で生徒たちのグループに初めてのコンピュータサイエンスを紹介しましょう。 Hour of Codeは簡単に実施できます。初めての方でも心配いりません！ If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your after-school class or club.
 
 * * *
 
@@ -15,17 +16,17 @@ nav: how_to_nav
 
 ## 2. チュートリアルを選ぶ
 
-すべての年齢の参加者のために、様々なパートナーにより制作された[楽しい一時間で終わるチュートリアル](%= resolve_url('/learn') %)を提供しています。 [ぜひ試してみましょう！](%= resolve_url('/learn') %)
+We provide a variety of [fun, hour-long tutorials]({{ urls/learn }}) for participants all ages, created by a variety of partners. [Try them out!]({{ urls/learn }})
 
 **すべてのHour of Codeチュートリアル**は最低限の準備時間で済むようになっており、参加者は自分自身のペースやスキルレベルに応じて参加できる自習式となっています。
 
-[![](/images/fit-700/tutorials.png)](%= resolve_url('/learn') %)
+[![](/images/fit-700/tutorials.png)]({{ urls/learn }})
 
 **放課後にHour of Codeを実施するレッスンプランが必要ですか？**それならこの[テンプレート](/files/AfterschoolEducatorLessonPlanOutline.docx)をチェックしてみてください！
 
 ## 3. あなたのHour of Codeを宣伝する
 
-[このツール](%= resolve_url('/promote') %)であなたのHour of Codeを宣伝して、他の人たちもイベントを開催するよう呼びかけましょう。
+Promote your Hour of Code [with these tools]({{ urls/promote }}) and encourage others to host their own events.
 
 ## 4. 必要な技術を準備する（コンピューターは必須ではありません）
 
@@ -52,22 +53,22 @@ nav: how_to_nav
 
 - なぜ、コンピュータが我々の生活に大きなインパクトを与えているのか、男の子も女の子も興味を持つ分野の実例を交えて（例えば、コンピュータが医療の分野でどの様に使われているのか、人々を助けるためにどんな役割を担っているのか、もしくは人々を国境を超えてつなげるためにどんなアプリケーションが使われているのか）説明してみましょう。
 - コンピュータが使われているシーンをリストアップしてみましょう。
-- 女の子にコンピューターサイエンスへ興味を持ってもらうヒントは[こちら](%= resolve_url('https://code.org/girls') %)をご覧ください。
+- See tips for getting girls interested in computer science [here]({{ urls/girls }}).
 
 **もっと知りたいですか？**[レッスンプランテンプレート](/files/AfterschoolEducatorLessonPlanOutline.docx)をダウンロードしてください。
 
 ## 6. コードを書く！
 
-**Direct participants to the activity** - Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial](%= resolve_url('/learn') %) under the number of participants.
+**Direct participants to the activity** - Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
 
 **When someone comes across difficulties it's okay to respond:** - “I don’t know. Let’s figure this out together.” - “Technology doesn’t always work out the way we want.” - “Learning to program is like learning a new language; you won’t be fluent right away.”
 
-**What to do if someone finishes early?** - Encourage participants to try another Hour of Code activity at [hourofcode.com/learn](%= resolve_url('/learn') %) - Or, ask those who finish early to help others who are having trouble.
+**What to do if someone finishes early?** - Encourage participants to try another Hour of Code activity at [hourofcode.com/learn]({{ urls/learn }}) - Or, ask those who finish early to help others who are having trouble.
 
 ## 7. ほめてあげる
 
-- 生徒達に[修了証を印刷](%= codeorg_url('/certificates') %)します。
-- 生徒へ配る[「Hour of Codeをやったよ！」](%= resolve_url('/promote/resources#stickers') %)ステッカーを印刷します。
+- [Print certificates]({{ urls/certificates }}) for your students.
+- [Print "I did an Hour of Code!"]({{ promote/resources_stickers }}) stickers for your students.
 - 参加者向けの[特製Tシャツを注文](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more)します。
 - Hour of Codeのイベントの様子を撮影した写真やビデオをソーシャルメディア上で共有しましょう。 #HourOfCodeハッシュタグや@codeorg参照を使うと、我々があなたの取り組みをハイライトすることもできます！
 
@@ -75,11 +76,11 @@ nav: how_to_nav
 
 - 過去にHour of Codeを開催した人の[ベストプラクティス](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)を見てみましょう。
 - 録画された[Hour of Code教育者用ガイドのウェビナー](https://youtu.be/EJeMeSW2-Mw)を見てみましょう。
-- Visit the [Hour of Code Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other organizers. <% if @country == 'us' %>
-- Hour of Codeの[よくある質問](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code)を読みましょう。 <% end %>
+- Visit the [Hour of Code Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other organizers.
+- Hour of Codeの[よくある質問](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code)を読みましょう。
 
 ## Hour of Codeを終えたら？
 
 Hour of Codeは、あくまでコンピュータやアプリケーションがどうやって作られているのかを理解する最初の一歩にすぎません。 Help students continue their journey and encourage them to [learn more online](%= codeorg_url('/learn/beyond') %)!
 
-<%= view :signup_button %>
+{{ signup_button }}

@@ -1,9 +1,10 @@
 ---
-title: <%= hoc_s(:title_press_release).inspect %>
+title: Rueda de prensa sobre la Hora del Código para funcionarios electos
 layout: wide
 nav: promote_nav
 ---
-<%= view :signup_button %>
+
+{{ signup_button }}
 
 # Muestra del comunicado a la prensa para los funcionarios electos
 
@@ -44,4 +45,4 @@ Más de 100 millones de estudiantes de todo el mundo ya han hecho una Hora del C
 
 Para obtener más información sobre [**EVENTO/PROGRAMA/ETC**], visite [**INSERTE SITIO WEB**] o contacte [**INSERTE INFORMATION DE CONTACTO**]
 
-<%= view :signup_button %>
+{{ signup_button }}
