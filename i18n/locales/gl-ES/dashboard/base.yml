@@ -32,6 +32,7 @@ gl:
         finish_sign_up_subheader_provider: 'Completa a seguinte información para acabar de crear unha conta de Code.org con <strong>%{provider}</strong> para <strong>%{email}</strong>.'
         error:
           future: non pode estar no futuro
+  beta: "beta"
   hello: "Ola, mundo"
   welcome_back: "Ola outra vez, %{name}"
   your_professional_learning_plan: "O teu plan de aprendizaxe profesional"
