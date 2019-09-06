@@ -687,6 +687,42 @@ class Pd::Workshop < ActiveRecord::Base
     end
   end
 
+  # Users who could be re-assigned to be the organizer of this workshop
+  def potential_organizers
+    potential_organizer_ids = []
+    potential_organizers = []
+
+    # if there is a regional partner, only that partner's PMs can become the organizer
+    # otherwise, any PM can become the organizer
+    if regional_partner
+      regional_partner.program_managers.each do |pm|
+        potential_organizers << {label: pm.name, value: pm.id}
+      end
+    else
+      UserPermission.where(permission: UserPermission::PROGRAM_MANAGER).pluck(:user_id)&.map do |user_id|
+        potential_organizer_ids << user_id
+      end
+    end
+
+    # any CSF facilitator can become the organizer of a CSF workshhop
+    if course == Pd::Workshop::COURSE_CSF
+      Pd::CourseFacilitator.where(course: Pd::Workshop::COURSE_CSF).pluck(:facilitator_id)&.map do |user_id|
+        potential_organizer_ids << user_id
+      end
+    end
+
+    # workshop admins can become the organizer of any workshop
+    UserPermission.where(permission: UserPermission::WORKSHOP_ADMIN).pluck(:user_id)&.map do |user_id|
+      potential_organizer_ids << user_id
+    end
+
+    User.where(id: potential_organizer_ids).pluck(:name, :id)&.map do |name, id|
+      potential_organizers << {label: name, value: id}
+    end
+
+    potential_organizers
+  end
+
   def can_user_delete?(user)
     state != STATE_ENDED && Ability.new(user).can?(:destroy, self)
   end
