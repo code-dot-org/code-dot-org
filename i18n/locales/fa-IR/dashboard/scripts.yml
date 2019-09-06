@@ -1619,3 +1619,9 @@ fa:
               name: شرطی ها
             Functions:
               name: توابع
+        peru-2019:
+          stages:
+            Introduction:
+              name: مقدمه
+            Nested Loops:
+              name: حلقه های تو در تو
