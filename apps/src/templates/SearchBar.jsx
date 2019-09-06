@@ -1,22 +1,18 @@
-/** Animation picker dialog search bar */
+/** Generic search bar */
 import PropTypes from 'prop-types';
 import React from 'react';
 import color from '@cdo/apps/util/color';
 
 const BORDER_WIDTH = 1;
 const BORDER_COLOR = color.light_gray;
-const BORDER_RADIUS = 6;
-const INPUT_HORIZONTAL_PADDING = BORDER_RADIUS;
+const BORDER_RADIUS = 4;
 
 // We have side-by-side elements that should format sort of like one element
 const styles = {
   input: {
-    height: 28,
-    paddingTop: 0,
-    paddingBottom: 0,
-    paddingLeft: INPUT_HORIZONTAL_PADDING,
-    paddingRight: INPUT_HORIZONTAL_PADDING,
     width: '100%',
+    boxSizing: 'border-box',
+    padding: '3px 7px',
     marginLeft: 0,
     marginRight: 0,
     borderStyle: 'solid',
@@ -28,21 +24,22 @@ const styles = {
   },
   icon: {
     position: 'absolute',
-    top: 9,
-    left: 10
+    top: 5,
+    left: 5,
+    fontSize: 16,
+    color: color.light_gray
   },
-  search: {
-    position: 'relative'
+  searchArea: {
+    position: 'relative',
+    margin: '10px 0'
   }
 };
 
-export default class AnimationPickerSearchBar extends React.Component {
+export default class SearchBar extends React.Component {
   static propTypes = {
-    value: PropTypes.string.isRequired,
+    placeholderText: PropTypes.string.isRequired,
     onChange: PropTypes.func.isRequired
   };
-
-  onChange = evt => this.props.onChange(evt.target.value);
 
   componentDidMount() {
     this.searchBox.focus();
@@ -50,13 +47,12 @@ export default class AnimationPickerSearchBar extends React.Component {
 
   render() {
     return (
-      <div style={styles.search}>
+      <div style={styles.searchArea}>
         <span className="fa fa-search" style={styles.icon} />
         <input
           style={styles.input}
-          placeholder="Search for images"
-          value={this.props.value}
-          onChange={this.onChange}
+          placeholder={this.props.placeholderText}
+          onChange={this.props.onChange}
           ref={input => {
             this.searchBox = input;
           }}
