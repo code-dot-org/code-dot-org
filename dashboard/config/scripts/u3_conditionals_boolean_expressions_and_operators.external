@@ -22,6 +22,7 @@ The statements on which this decision-making process is based are called **boole
 | <img src="https://images.code.org/a4daa9efccea2278e165592efe343c1a-image-1447271431308.png" style="width: 100px">| `1 == 9` | Is 1 equal to 9?| 
 | <img src="https://images.code.org/626613131395d1fa43f04547012ec173-image-1447271431305.png" style="width: 100px"> | `1 != 9` | Is 1 not equal to 9? |
 <br>
+
 **Note:** If you saw the statement 3 < 2 in math class, you'd think something was terribly wrong, **BUT THIS IS NOT MATH CLASS!** 
 
 In computer science, the **comparison operators ask a question that the computer will evaluate to true or false.** So you can read 3 < 2 as **"Is 3 less than 2?"** The answer in this case is no, or __FALSE__.
