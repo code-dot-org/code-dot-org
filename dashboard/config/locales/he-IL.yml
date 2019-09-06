@@ -38,6 +38,7 @@ he:
           עבור <strong>%{email}</strong>.
         error:
           future: לא יכול להיות בעתיד
+  beta: בטא
   hello: הי עולם
   welcome_back: ברוך שובך, %{name}
   your_professional_learning_plan: תוכנית הלמידה המקצועית שלך
