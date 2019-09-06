@@ -269,11 +269,6 @@ da:
           CONDITION:
             '"when"': når
             '"while"': mens
-      gamelab_debugSprite:
-        options:
-          VAL:
-            'true': sandt
-            'false': falsk
       gamelab_getProp:
         options:
           PROPERTY:
@@ -339,13 +334,6 @@ da:
             '"left"': venstre
             '"right"': højre
             '"space"': rummet
-      gamelab_whenPressedAndReleased:
-        options:
-          DIR:
-            "'up'": op
-            "'down'": ned
-            "'left'": venstre
-            "'right'": højre
       gamelab_whileKey:
         options:
           KEY:
