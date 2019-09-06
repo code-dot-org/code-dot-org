@@ -34,6 +34,7 @@ zh-CN:
           <strong>%{email}</strong> 创建 Code.org 账户。
         error:
           future: 不能选择将来的时间
+  beta: 测试版
   hello: 世界你好
   welcome_back: 欢迎回来，%{name}
   your_professional_learning_plan: 你的专业学习计划
