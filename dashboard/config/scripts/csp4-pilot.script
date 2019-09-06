@@ -73,7 +73,6 @@ level 'U4 L07 Conditionals Practice 5', progression: 'If-Statements'
 level 'U4 L07 Conditionals Practice 6', progression: 'If-Statements'
 level 'U4 L07 Conditionals Practice 7', progression: 'Logical Operators'
 level 'U4 L07 Conditionals Practice 8', progression: 'Logical Operators'
-level 'U4 L07 Conditionals Practice 9', progression: 'Logical Operators'
 level 'U4L10 CFU Conditionals Psuedocode', progression: 'Check For Understanding: AP Practice', assessment: true
 
 stage 'Conditional Make', flex_category: 'csp_conditionals'
