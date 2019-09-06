@@ -42,6 +42,7 @@ bg:
           създаването на Code.org акаунт с <strong>%{provider}</strong> за <strong>%{email}</strong>.
         error:
           future: не може да бъде в бъдещето
+  beta: бета
   hello: Здравей, свят
   welcome_back: Добре дошли отново, %{name}
   your_professional_learning_plan: Вашият план за професионално обучение
