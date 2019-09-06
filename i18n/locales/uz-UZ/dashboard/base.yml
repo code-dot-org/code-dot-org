@@ -20,6 +20,7 @@ uz:
         edit_header: 'Foydalanuvchi ma''lumotlarini tahrir qilish'
         error:
           future: yaqin orada bo`la olmaydi
+  beta: "beta"
   hello: "Salom Dunyo"
   welcome_back: "Qayta tashrifingiz bilan, %{name}"
   submit: Taqdim qilmoq
