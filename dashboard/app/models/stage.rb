@@ -177,8 +177,7 @@ class Stage < ActiveRecord::Base
     summary = summarize.dup
     # Do not let script name override stage name when there is only one stage
     summary[:name] = I18n.t("data.script.name.#{script.name}.stages.#{name}.name")
-    # Do not use a default value if flex_category is nil
-    summary[:flex_category] = flex_category && I18n.t("flex_category.#{flex_category}")
+    summary[:flex_category] = flex_category
     summary.freeze
   end
 
