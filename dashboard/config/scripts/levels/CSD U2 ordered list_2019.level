@@ -8,7 +8,7 @@
     "instructions_important": "false",
     "hide_share_and_remix": "true",
     "start_sources": "{\r\n  \"files\": [\r\n    {\r\n      \"name\": \"index.html\",\r\n      \"data\": \"<!DOCTYPE html>\\r\\n<html>\\r\\n  <head>\\r\\n  <\\/head>\\r\\n  <body>\\r\\n    <h2>Top Five Reasons a Turtle is the Best Pet<\\/h2>\\r\\n    \\r\\n    They are cute.\\r\\n    They are easy to take care of.\\r\\n    They don't bite or scratch.\\r\\n    They will eat all your leftovers.\\r\\n    They are good listeners.\\r\\n   \\r\\n  <\\/body>\\r\\n<\\/html>\"\r\n    }\r\n  ]\r\n}",
-    "encrypted_examples": "p3phLxtn/nR5+x4clK8e2LQ9UpWazaY95SU2FbIYfrrnB7rH2emyliGgEpQS\nB4eXeI6nz4x13khoqFfhf5c2dQ==\n",
+    "encrypted_examples": "4GYDWnw74rlT4/7W9VmcvG8Bb6csaXPgUFFmFT+AxA8sFRohH9Cg8UqwgYbB\npWvlY7E8PySHd1OJOJ+4O+V2AQ==\n",
     "submittable": "false",
     "parent_level_id": 11497,
     "name_suffix": "_2019",
@@ -17,10 +17,14 @@
       "/docs/concepts/html/html-tags/",
       "/docs/concepts/html/headings-and-paragraphs/"
     ],
-    "map_reference": "/docs/concepts/html/lists/"
+    "map_reference": "/docs/concepts/html/lists/",
+    "encrypted": "false",
+    "mini_rubric": "false"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-05-11 04:30:44 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-05-11 04:51:25 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-06-20 21:55:19 +0000\",\"changed\":[],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-09-20 15:34:42 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-12-10 21:32:28 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\"],\"changed_by_id\":156,\"changed_by_email\":\"elijah@code.org\"},{\"changed_at\":\"2019-01-30 02:31:28 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-05-11 04:30:44 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-05-11 04:51:25 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-06-20 21:55:19 +0000\",\"changed\":[],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-09-20 15:34:42 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-12-10 21:32:28 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\"],\"changed_by_id\":156,\"changed_by_email\":\"elijah@code.org\"},{\"changed_at\":\"2019-01-30 02:31:28 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-09-06 21:56:29 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":959,\"changed_by_email\":\"george.zhang@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
 </Weblab>
