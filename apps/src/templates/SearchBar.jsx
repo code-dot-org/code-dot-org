@@ -38,11 +38,6 @@ const styles = {
 export default class SearchBar extends React.Component {
   static propTypes = {
     placeholderText: PropTypes.string.isRequired,
-    styles: PropTypes.shape({
-      searchArea: PropTypes.object,
-      icon: PropTypes.object,
-      input: PropTypes.object
-    }),
     onChange: PropTypes.func.isRequired
   };
 
@@ -51,15 +46,11 @@ export default class SearchBar extends React.Component {
   }
 
   render() {
-    let customStyles = this.props.styles || {};
     return (
-      <div style={{...styles.searchArea, ...customStyles.searchArea}}>
-        <span
-          className="fa fa-search"
-          style={{...styles.icon, ...customStyles.icon}}
-        />
+      <div style={styles.searchArea}>
+        <span className="fa fa-search" style={styles.icon} />
         <input
-          style={{...styles.input, ...customStyles.input}}
+          style={styles.input}
           placeholder={this.props.placeholderText}
           onChange={this.props.onChange}
           ref={input => {
