@@ -29,7 +29,7 @@ class LibraryTable extends React.Component {
 
   importTable = () => {
     if (this.props.current) {
-      // TODO
+      // TODO: Implement current tables (see STAR-615)
     } else {
       FirebaseStorage.copyStaticTable(
         this.props.name,
