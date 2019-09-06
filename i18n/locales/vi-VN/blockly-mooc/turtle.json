@@ -1,6 +1,6 @@
 {
   "blocksUsed": "Số lượng khối đã dùng: %1",
-  "branches": "Chi nhánh\/ các nhánh",
+  "branches": "Chi nhánh/ các nhánh",
   "catColour": "Màu sắc",
   "catControl": "Vòng lặp",
   "catMath": "thuật toán",
@@ -86,7 +86,7 @@
   "showMe": "cho tôi thấy",
   "showTurtle": "hiển thị nghệ sĩ",
   "sizeParameter": "kích cỡ",
-  "step": "bước\/ từng bước",
+  "step": "bước/ từng bước",
   "tooFewColours": "Bạn phải sử dụng ít nhất %1 màu khác nhau ở câu đố này.  Bạn mới chỉ sử dụng %2 màu.",
   "turnLeft": "rẽ trái (độ)",
   "turnRight": "rẽ phải (độ)",
