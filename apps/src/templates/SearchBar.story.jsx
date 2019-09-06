@@ -6,11 +6,7 @@ export default storybook => {
     {
       name: 'Search Bar',
       story: () => (
-        <SearchBar
-          placeholderText={'Some Text'}
-          styles={{}}
-          onChange={() => {}}
-        />
+        <SearchBar placeholderText={'Some Text'} onChange={() => {}} />
       )
     }
   ]);
