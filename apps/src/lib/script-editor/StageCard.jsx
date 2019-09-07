@@ -11,6 +11,7 @@ import {
   setStageLockable,
   setFlexCategory
 } from './editorRedux';
+import FlexCategorySelector from './FlexCategorySelector';
 
 const styles = {
   checkbox: {
@@ -41,19 +42,6 @@ const styles = {
     border: '1px solid #ddd',
     boxShadow: 'inset 0 1px 0 0 rgba(255, 255, 255, 0.8)',
     margin: '0 5px 0 0'
-  },
-  flexCategoryLabel: {
-    fontSize: 14,
-    verticalAlign: 'baseline'
-  },
-  flexCategorySelect: {
-    verticalAlign: 'baseline',
-    width: 550,
-    margin: '0 5px 0 0'
-  },
-  saveFlexCategoryButton: {
-    verticalAlign: 'baseline',
-    margin: '0 5px 0 0'
   }
 };
 
@@ -64,7 +52,6 @@ export class UnconnectedStageCard extends Component {
     setStageLockable: PropTypes.func.isRequired,
     stagesCount: PropTypes.number.isRequired,
     stage: PropTypes.object.isRequired,
-    flexCategoryMap: PropTypes.object.isRequired,
     setFlexCategory: PropTypes.func.isRequired
   };
 
@@ -81,8 +68,7 @@ export class UnconnectedStageCard extends Component {
     initialScroll: null,
     newPosition: null,
     startingPositions: null,
-    editingFlexCategory: false,
-    newFlexCategory: ''
+    editingFlexCategory: false
   };
 
   handleDragStart = (position, {pageY}) => {
@@ -151,31 +137,19 @@ export class UnconnectedStageCard extends Component {
 
   handleEditFlexCategory = () => {
     this.setState({
-      editingFlexCategory: true,
-      newFlexCategory: this.props.stage.flex_category || ''
+      editingFlexCategory: true
     });
   };
 
-  cancelEditFlexCategory = () => {
-    this.setState({
-      editingFlexCategory: false,
-      newFlexCategory: ''
-    });
-  };
-
-  flexCategorySelected = newFlexCategory => {
-    this.setState({newFlexCategory});
-  };
-
-  handleSaveFlexCategory = () => {
-    const {newFlexCategory} = this.state;
-    this.setState({
-      editingFlexCategory: false,
-      newFlexCategory: ''
-    });
+  handleSetFlexCategory = newFlexCategory => {
+    this.setState({editingFlexCategory: false});
     if (this.props.stage.flex_category !== newFlexCategory) {
       this.props.setFlexCategory(this.props.stage.position, newFlexCategory);
     }
+  };
+
+  hideFlexCategorySelector = () => {
+    this.setState({editingFlexCategory: false});
   };
 
   toggleLockable = () => {
@@ -190,7 +164,6 @@ export class UnconnectedStageCard extends Component {
   }
 
   render() {
-    const {flexCategoryMap} = this.props;
     return (
       <div style={styles.stageCard}>
         <div style={styles.stageCardHeader}>
@@ -257,38 +230,12 @@ export class UnconnectedStageCard extends Component {
             </span>
           )}
           {this.state.editingFlexCategory && (
-            <div>
-              <span style={styles.flexCategoryLabel}>Flex Category:</span>
-              &nbsp;
-              <select
-                style={styles.flexCategorySelect}
-                onChange={e => this.flexCategorySelected(e.target.value)}
-                value={this.state.newFlexCategory}
-              >
-                <option value="">(none): "Content"</option>
-                {Object.keys(flexCategoryMap).map(flexCategory => (
-                  <option key={flexCategory} value={flexCategory}>
-                    {flexCategory}: "{flexCategoryMap[flexCategory]}"
-                  </option>
-                ))}
-              </select>
-              <button
-                onMouseDown={this.handleSaveFlexCategory}
-                className="btn btn-primary"
-                style={styles.saveFlexCategoryButton}
-                type="button"
-              >
-                Save
-              </button>
-              <button
-                onMouseDown={this.cancelEditFlexCategory}
-                className="btn"
-                style={styles.saveFlexCategoryButton}
-                type="button"
-              >
-                Cancel
-              </button>
-            </div>
+            <FlexCategorySelector
+              labelText="Flex Category"
+              confirmButtonText="Save"
+              onConfirm={this.handleSetFlexCategory}
+              onCancel={this.hideFlexCategorySelector}
+            />
           )}
         </div>
       </div>
@@ -297,9 +244,7 @@ export class UnconnectedStageCard extends Component {
 }
 
 export default connect(
-  state => ({
-    flexCategoryMap: state.flexCategoryMap
-  }),
+  state => ({}),
   dispatch => ({
     reorderLevel(stage, originalPosition, newPosition) {
       dispatch(reorderLevel(stage, originalPosition, newPosition));
