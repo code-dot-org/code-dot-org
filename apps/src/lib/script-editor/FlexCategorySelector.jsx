@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
-import {addGroup} from './editorRedux';
 
 const styles = {
   flexCategoryLabel: {
@@ -89,13 +88,6 @@ class FlexCategorySelector extends Component {
   }
 }
 
-export default connect(
-  state => ({
-    flexCategoryMap: state.flexCategoryMap
-  }),
-  dispatch => ({
-    addGroup(stageName, groupName) {
-      dispatch(addGroup(stageName, groupName));
-    }
-  })
-)(FlexCategorySelector);
+export default connect(state => ({
+  flexCategoryMap: state.flexCategoryMap
+}))(FlexCategorySelector);
