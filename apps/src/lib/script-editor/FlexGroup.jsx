@@ -7,6 +7,7 @@ import {borderRadius, ControlTypes} from './constants';
 import OrderControls from './OrderControls';
 import StageCard from './StageCard';
 import {NEW_LEVEL_ID, addStage, addGroup} from './editorRedux';
+import FlexCategorySelector from './FlexCategorySelector';
 
 const styles = {
   groupHeader: {
@@ -40,23 +41,9 @@ const styles = {
     boxShadow: 'none',
     margin: '0 10px 10px 10px'
   },
-  bottomControls: {
+  flexCategorySelector: {
     height: 30,
     marginBottom: 30
-  },
-  flexCategoryLabel: {
-    fontSize: 14,
-    verticalAlign: 'baseline',
-    marginRight: 5
-  },
-  flexCategorySelect: {
-    verticalAlign: 'baseline',
-    width: 550,
-    margin: '0 5px 0 0'
-  },
-  saveFlexCategoryButton: {
-    verticalAlign: 'baseline',
-    margin: '0 5px 0 0'
   }
 };
 
@@ -73,36 +60,25 @@ class FlexGroup extends Component {
   };
 
   state = {
-    addingFlexCategory: false,
-    newFlexCategory: ''
+    addingFlexCategory: false
   };
 
   handleAddFlexCategory = () => {
     this.setState({
-      addingFlexCategory: true,
-      newFlexCategory: ''
+      addingFlexCategory: true
     });
   };
 
-  cancelAddFlexCategory = () => {
-    this.setState({
-      addingFlexCategory: false,
-      newFlexCategory: ''
-    });
-  };
-
-  flexCategorySelected = newFlexCategory => {
-    this.setState({newFlexCategory});
-  };
-
-  handleCreateFlexCategory = () => {
-    const {newFlexCategory} = this.state;
+  createFlexCategory = newFlexCategory => {
+    this.hideFlexCategorySelector();
     const newStageName = prompt('Enter new stage name');
-    this.setState({
-      addingFlexCategory: false,
-      newFlexCategory: ''
-    });
-    this.props.addGroup(newStageName, newFlexCategory);
+    if (newStageName) {
+      this.props.addGroup(newStageName, newFlexCategory);
+    }
+  };
+
+  hideFlexCategorySelector = () => {
+    this.setState({addingFlexCategory: false});
   };
 
   handleAddStage = position => {
@@ -240,37 +216,13 @@ class FlexGroup extends Component {
           </button>
         )}
         {this.state.addingFlexCategory && (
-          <div style={styles.bottomControls}>
-            <span style={styles.flexCategoryLabel}>New Flex Category:</span>
-            &nbsp;
-            <select
-              style={styles.flexCategorySelect}
-              onChange={e => this.flexCategorySelected(e.target.value)}
-              value={this.state.newFlexCategory}
-            >
-              <option value="">(none): "Content"</option>
-              {Object.keys(flexCategoryMap).map(flexCategory => (
-                <option key={flexCategory} value={flexCategory}>
-                  {flexCategory}: "{flexCategoryMap[flexCategory]}"
-                </option>
-              ))}
-            </select>
-            <button
-              onMouseDown={this.handleCreateFlexCategory}
-              className="btn btn-primary"
-              style={styles.saveFlexCategoryButton}
-              type="button"
-            >
-              Create
-            </button>
-            <button
-              onMouseDown={this.cancelAddFlexCategory}
-              className="btn"
-              style={styles.saveFlexCategoryButton}
-              type="button"
-            >
-              Cancel
-            </button>
+          <div style={styles.flexCategorySelector}>
+            <FlexCategorySelector
+              labelText="New Flex Category"
+              confirmButtonText="Create"
+              onConfirm={this.createFlexCategory}
+              onCancel={this.hideFlexCategorySelector}
+            />
           </div>
         )}
         <input
