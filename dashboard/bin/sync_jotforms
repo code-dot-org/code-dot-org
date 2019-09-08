@@ -15,27 +15,18 @@ JOT_FORM_CLASSES = [
   Pd::MiscSurvey
 ].freeze
 
-def sync_submissions
-  JOT_FORM_CLASSES.each do |survey_class|
-    survey_class.sync_from_jotform
-  rescue => e
-    # One survey class fails to sync doesn't stop other from syncing
-    Honeybadger.notify e
-  end
-end
-
-def sync_questions
+def sync_survey_questions
   Pd::SurveyQuestion.all.each do |survey|
     survey.sync_from_jotform
   rescue => e
-    # One form fails to sync doesn't stop other forms from syncing
+    # One form fails to sync doesn't stop syncing other forms
     Honeybadger.notify e
   end
 end
 
 def main
-  sync_submissions
-  sync_questions
+  JOT_FORM_CLASSES.each(&:sync_from_jotform)
+  sync_survey_questions
 end
 
 main
