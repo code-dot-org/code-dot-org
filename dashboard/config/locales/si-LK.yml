@@ -35,6 +35,7 @@ si:
         edit_header: "ගිනුමේ තොරතුරු \tසංස්කරණය කරන්න"
         error:
           future: අනාගතයේදී විය නොහැකිය
+  beta: beta
   hello: Hello world
   welcome_back: "%{name}, ඔබව නැවතත් පිළිගන්නවා"
   your_professional_learning_plan: ඔබේ වෘත්තිමය ඉගෙනුම් සැලැස්ම

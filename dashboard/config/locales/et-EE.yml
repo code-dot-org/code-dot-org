@@ -34,6 +34,7 @@ et:
         edit_header: Muuda kasutajakonto üksikasju
         error:
           future: ei saa olla tulevikus
+  beta: beeta
   hello: Tere maailm
   welcome_back: Tere tulemast tagasi, %{name}
   your_professional_learning_plan: Sinu professionaalne õppeplaan

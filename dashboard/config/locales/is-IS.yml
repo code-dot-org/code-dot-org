@@ -43,6 +43,7 @@ is:
           fyrir <strong>%{email}</strong>.
         error:
           future: má ekki vera í framtíð
+  beta: beta
   hello: Halló heimur
   welcome_back: Velkomin/n aftur, %{name}
   your_professional_learning_plan: Námsáætlun þín í faginu

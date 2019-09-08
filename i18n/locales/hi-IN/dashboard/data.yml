@@ -19,9 +19,23 @@ hi:
         Unplug1: CS क्या है?
         Unplug5: कार्य
         Unplug6: शर्तें
+        Unplug7: गीत लेखन
+        Unplug10: इंटरनेट
+        C1_happy_maps_unplugged: हैप्पी मैप्स
+        C1_bigevent_unplugged: विशाल इवेंट
+        C1_getting_loopy: लूपी होना
+        C1_building_foundation: नींव का निर्माण करना
+        C1_going_places_safely: सुरक्षित रूप से स्थानों पर जाना
         C2_conditionals_with_cards: शर्तें
+        C2_binary_bracelets: युग्मक ब्रैस्लेट्स
+        C2_digital_footprint: आपका डिजीटल फुटप्रिंट
+        C2_digital_footprint_v2: आपका डिजीटल फुटप्रिंट
+        C3_internet: इंटरनेट
+        C3_crowdsourcing: क्राउडसोर्सिंग
+        C3_functional_suncatchers: फंक्शनल सनकैचर्स
         C4_loops_zombie: फंदे
         C4_conditionals: शर्तें
+        CSF_my_robotic_friends: मेरे रोबोटिक दोस्त
         csp_applab_loops: फंदे
         mc_intro: Minecraft - परिचय
         mc_repeat: Minecraft - दोहराव
@@ -33,6 +47,8 @@ hi:
         hoc_dance_events: डांस पार्टी - इवेंट्स
         hoc_dance_properties: डांस पार्टी - विशेषताएं
         hoc_dance_congrats: '"डांस पार्टी - पार्टी ऑन!"'
+        c_and_c_great_to_create: यह ग्रेट टू क्रिएट एंड प्ले फेयर है
+        c_and_c_digital_sharing: डिजीटल शेयरिंग
     callout:
       text:
         run: अपने प्रोग्राम को आज़माने के लिए "Run" चलाएँ

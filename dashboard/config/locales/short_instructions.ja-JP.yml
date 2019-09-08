@@ -711,10 +711,34 @@ ja-JP:
       course3_maze_debugging_challenge1: _円をかくように、ぐるりと回ればいいかな？_
       course3_maze_debugging_challenge2: _回りすぎると、めまいがするよ！ 4つの「まがる」ブロックだけでドングリをひろえるようにしてね。_
       course4_artist_fwp_challenge1: このプログラムを実行してみてください、そして何が起こるかを参照し変更をしてください。それがどのように動作するかを理解できますか？(または削除し、完全に別の何かと交換)
+      courseA_artist_loops1: これは「アーティスト」という あたらしい パズルです。すきなものを かいて ください。（かきおわったら、「おわり」を
+        クリックします）
+      courseA_artist_loops1_2018: これは「アーティスト」という あたらしい パズルです。すきなものを かいて ください。（かきおわったら、「おわり」を
+        クリックします）
+      courseA_artist_loops1_2019: これは「アーティスト」という あたらしい パズルです。すきなものを かいて ください。（かきおわったら、「おわり」を
+        クリックします）
+      courseA_artist_loops2: アーティストが、２かい せんを かくよう たすけてください。
+      courseA_artist_loops2_2018: アーティストが、２かい せんを かくよう たすけてください。
+      courseA_artist_loops2_2019: アーティストが、２かい せんを かくよう たすけてください。
+      courseA_artist_loops3: まえに、５かい せんを ひきます。
+      courseA_artist_loops3_2018: まえに、５かい せんを ひきます。
+      courseA_artist_loops3_2019: まえに、５かい せんを ひきます。
+      courseA_artist_loops4: "「くりかえし」ループを つかって、５かい せんを かいてみよう！"
+      courseA_artist_loops4_2018: "「くりかえし」ループを つかって、５かい せんを かいてみよう！"
+      courseA_artist_loops4_2019: "「くりかえし」ループを つかって、５かい せんを かいてみよう！"
       courseA_artist_loops7: "「リピート」ループを使用して、水を波立たせることができます。"
       courseA_artist_loops7_2018: "「リピート」ループを使用して、水を波立たせることができます。"
       courseA_artist_loops7_2019: "「リピート」ループを使用して、水を波立たせることができます。"
       courseA_collector_loops1: ローレルを うごかして、たからものを あつめよう！
+      courseA_collector_loops10: ローレルが ぜんぶの たからを あつめられるよう、たすけて ください。
+      courseA_collector_loops10_2018: ローレルが ぜんぶの たからを あつめられるよう、たすけて ください。
+      courseA_collector_loops10_2019: ローレルが ぜんぶの たからを あつめられるよう、たすけて ください。
+      courseA_collector_loops11: ローレルが どうくつから、ぜんぶの たからを あつめられるよう、たすけて ください。
+      courseA_collector_loops11_2018: ローレルが どうくつから、ぜんぶの たからを あつめられるよう、たすけて ください。
+      courseA_collector_loops11_2019: ローレルが どうくつから、ぜんぶの たからを あつめられるよう、たすけて ください。
+      courseA_collector_loops12: _"エウレカ！できるだけ、たくさん たからものを あつめてください！"_
+      courseA_collector_loops12_2018: _"エウレカ！できるだけ、たくさん たからものを あつめてください！"_
+      courseA_collector_loops12_2019: _"エウレカ！できるだけ、たくさん たからものを あつめてください！"_
       courseA_collector_loops1_2018: ローレルを うごかして、たからものを あつめよう！
       courseA_collector_loops1_2019: ローレルを うごかして、たからものを あつめよう！
       courseA_collector_loops2: このレベルを クリアするには、３つ すべてを とってください。
@@ -740,6 +764,14 @@ ja-JP:
         とれるように プログラミングしてください。"
       courseA_collector_loops9_2019: "**チャレンジ** たからものが かいだんに なっています！ローレルが ぜんぶ たからものを
         とれるように プログラミングしてください。"
+      courseA_collector_loops_challenge1: _"バグをみつけるのを てつだって もらえますか？"_
+      courseA_collector_loops_challenge1_2018: _"バグをみつけるのを てつだって もらえますか？"_
+      courseA_collector_loops_challenge1_2019: _"バグをみつけるのを てつだって もらえますか？"_
+      courseA_collector_loops_challenge2kp: このレベルをパスするには、**3** つの たからものを あつめて ください。
+      courseA_collector_loops_challenge2kp_2018: このレベルをパスするには、**3** つの たからものを あつめて
+        ください。
+      courseA_collector_loops_challenge2kp_2019: このレベルをパスするには、**3** つの たからものを あつめて
+        ください。
       courseA_collector_preLoops7: このレベルを クリアするには、３つ すべてを とってください。
       courseA_harvester_seq6: 自分でやってみよう！
       courseA_harvester_seq6_2019: 自分でやってみよう！
@@ -776,6 +808,15 @@ ja-JP:
       courseA_maze_seq_challenge2: みちを たどって トリさんを ブタさんのところに つれてって。ばくだんで はねが とばされないように！
       courseA_maze_seq_challenge2_2018: みちを たどって トリさんを ブタさんのところに つれてって。ばくだんで はねが とばされないように！
       courseA_maze_seq_challenge2_2019: みちを たどって トリさんを ブタさんのところに つれてって。ばくだんで はねが とばされないように！
+      courseB_artist_loops1: これは「アーティスト」という あたらしい パズルです。すきなものを かいて ください。（かきおわったら、「おわり」を
+        クリックします）
+      courseB_artist_loops1_2018: これは「アーティスト」という あたらしい パズルです。すきなものを かいて ください。（かきおわったら、「おわり」を
+        クリックします）
+      courseB_artist_loops1_2019: これは「アーティスト」という あたらしい パズルです。すきなものを かいて ください。（かきおわったら、「おわり」を
+        クリックします）
+      courseB_collector_loops10: ローレルが どうくつから、ぜんぶの たからを あつめられるよう、たすけて ください。
+      courseB_collector_loops10_2018: ローレルが どうくつから、ぜんぶの たからを あつめられるよう、たすけて ください。
+      courseB_collector_loops10_2019: ローレルが どうくつから、ぜんぶの たからを あつめられるよう、たすけて ください。
       courseB_collector_loops_challenge2a: このパズルをクリアするには、**5** つの たからものを ゲットして ください。
       courseB_collector_loops_challenge2a_2018: このパズルをクリアするには、**5** つの たからものを ゲットして
         ください。
@@ -787,6 +828,12 @@ ja-JP:
       courseC_artist_prog5: この家には天井が必要です！三角の屋根をかいてください。ヒント：3つの線はすべて同じ長さです。
       courseC_artist_prog5_2018: この家には天井が必要です！三角の屋根をかいてください。ヒント：3つの線はすべて同じ長さです。
       courseC_artist_prog5_2019: この家には天井が必要です！三角の屋根をかいてください。ヒント：3つの線はすべて同じ長さです。
+      courseC_maze_programming1: このパズルでは、ブロックをドラッグしてくっつけたら「実行」をクリックして、どうなるか見てみよう！
+      courseC_maze_programming1_2018: このパズルでは、ブロックをドラッグしてくっつけたら「実行」をクリックして、どうなるか見てみよう！
+      courseC_maze_programming1_2019: このパズルでは、ブロックをドラッグしてくっつけたら「実行」をクリックして、どうなるか見てみよう！
+      courseC_maze_programming2: ツールボックスからもうひとつ「前に すすむ」ブロックをドラッグしてきて、コードをかんせいさせよう。
+      courseC_maze_programming2_2018: ツールボックスからもうひとつ「前に すすむ」ブロックをドラッグしてきて、コードをかんせいさせよう。
+      courseC_maze_programming2_2019: ツールボックスからもうひとつ「前に すすむ」ブロックをドラッグしてきて、コードをかんせいさせよう。
       courseD_artist_binary1: |-
         「Draw binary "01010101"」ブロックを「実行したとき」にくっつけて、実行してください。
         アーティストは、一番目の行にバイナリで「01010101」を書きます。

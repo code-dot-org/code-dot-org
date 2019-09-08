@@ -22,6 +22,7 @@ bn:
         edit_header: একাউন্ট বিস্তারিত সম্পাদনা করুন
         error:
           future: ভবিষ্যতের হতে পারবে না
+  beta: বেটা
   hello: হ্যালো ওয়ার্ল্ড
   welcome_back: স্বাগতম %{name}
   submit: জমা করুন

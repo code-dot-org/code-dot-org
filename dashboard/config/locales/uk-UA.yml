@@ -42,6 +42,7 @@ uk:
           створення облікового запису в Code.org з <strong>%{provider}</strong> <strong>%{email}</strong>.
         error:
           future: не може бути в майбутньому
+  beta: бета-версія
   hello: Привіт, світ!
   welcome_back: З поверненням, %{name}
   your_professional_learning_plan: Ваш план професійного навчання

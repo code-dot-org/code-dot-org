@@ -33,6 +33,7 @@ zh-TW:
         finish_sign_up_subheader: 填妥下面的資料以完成 <strong>%{email}</strong> 的帳戶申請。
         error:
           future: 不能選擇將來的時間
+  beta: 測試版
   hello: Hello world
   welcome_back: 歡迎回來，%{name}
   your_professional_learning_plan: 你的專業學習計畫

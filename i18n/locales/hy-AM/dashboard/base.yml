@@ -20,6 +20,7 @@ hy:
         edit_header: 'Խմբագրել Հաշիվը Մանրամասներ'
         error:
           future: հակում է լինի ապագայում
+  beta: "բետա"
   hello: "Բարև աշխարհ"
   welcome_back: "Բարի վերադարձ, %{name}"
   your_professional_learning_plan: "Ձեր Մասնագիտական ​​ուսուցում Plan"

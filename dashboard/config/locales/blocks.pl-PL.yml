@@ -692,11 +692,6 @@ pl:
           CONDITION:
             '"when"': kiedy
             '"while"': dopóki
-      gamelab_debugSprite:
-        options:
-          VAL:
-            'true': prawda
-            'false': fałsz
       gamelab_getProp:
         text: "{SPRITE} {PROPERTY}"
         options:
@@ -779,7 +774,6 @@ pl:
             '"x"': współrzędna x
             '"y"': współrzędna y
             '"direction"': kierunku ruchu
-            '"tint"': odcień
       gamelab_setSizes:
         text: zestaw {SPRITE} {PROPERTY} do {N}%
         options:
@@ -810,13 +804,6 @@ pl:
             '"w"': w
             '"s"': s
             '"d"': d
-      gamelab_whenPressedAndReleased:
-        options:
-          DIR:
-            "'up'": do góry
-            "'down'": do dołu
-            "'left'": w lewo
-            "'right'": w prawo
       gamelab_whileKey:
         options:
           KEY:

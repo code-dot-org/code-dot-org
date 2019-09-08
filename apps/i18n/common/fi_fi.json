@@ -175,6 +175,7 @@
   "createNewClassroom": "Luo uusi luokkahuone-ryhmä aloittaaksesi liittämään kursseja ja seurataksesi opiskelijoittesi etenemistä.",
   "createSection": "Luo ryhmä",
   "createSectionsInfo": "Luo uusia ryhmiä ja lisää opiskelijoita niihin. Ryhmät auttavat sinua organisoimaan oppilaat pienempiin ryhmiin niin että voit seurata heidän etenemistään ja hallinnoida heidän tilejään.",
+  "createTableHeader": "Luo tietotaulukoita tallentamaan usean palstan tietorivejä eri tietokentille.",
   "csf": "Tietojenkäsittelyn Perusteet",
   "csfButton": ">Kokeile kurssia ",
   "currentUnit": "Nykyinen yksikkö:",

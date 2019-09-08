@@ -568,11 +568,6 @@ nl:
           CONDITION:
             '"when"': wanneer
             '"while"': terwijl
-      gamelab_debugSprite:
-        options:
-          VAL:
-            'true': waar
-            'false': onwaar
       gamelab_getProp:
         options:
           PROPERTY:
@@ -664,13 +659,6 @@ nl:
             '"w"': w
             '"s"': s
             '"d"': d
-      gamelab_whenPressedAndReleased:
-        options:
-          DIR:
-            "'up'": omhoog
-            "'down'": omlaag
-            "'left'": links
-            "'right'": rechts
       gamelab_whileKey:
         options:
           KEY:

@@ -689,20 +689,10 @@ is:
         text: ásmellt vera
       gamelab_comment:
         text: 'athugasemd: {COMMENT}'
-      gamelab_console.log:
-        text: skrá boð {MESSAGE}
       gamelab_createNewSprite:
         text: "búa til nýja veru \n nafn {NAME} \n búningur {COSTUME} \n staður {LOCATION}"
-      gamelab_debugSprite:
-        text: aflúsa {SPRITE} {VAL}
-        options:
-          VAL:
-            'true': satt
-            'false': ósatt
       gamelab_destroy:
         text: fjarlægja {THIS}
-      gamelab_displace:
-        text: "{THIS} hindra {SPRITE} að hreyfast"
       gamelab_draggable:
         text: er hægt að draga
       gamelab_edgesDisplace:
@@ -849,7 +839,6 @@ is:
             '"x"': x staða
             '"y"': y staða
             '"direction"': stefna hreyfingar
-            '"tint"': litur
       gamelab_setSizes:
         text: stilla {SPRITE} {PROPERTY} á {N}%
         options:
@@ -897,20 +886,8 @@ is:
             '"d"': d
       gamelab_whenLeftArrow:
         text: þegar ýtt er á vinstri ör
-      gamelab_whenPressedAndReleased:
-        text: "þegar {DIR} haldið \n{STATEMENT1} þegar sleppt \n{STATEMENT2}"
-        options:
-          DIR:
-            "'up'": upp
-            "'down'": niður
-            "'left'": vinstri
-            "'right'": hægri
       gamelab_whenRightArrow:
         text: þegar ýtt er á hægri ör
-      gamelab_whenStartAndStopTouching:
-        text: |-
-          þegar {SPRITE1} byrjar að snerta {SPRITE2} {STATEMENT1} þegar snerting hættir
-          {STATEMENT2}
       gamelab_whenTouching:
         text: þegar {SPRITE1} snertir {SPRITE2}
       gamelab_whenUpArrow:

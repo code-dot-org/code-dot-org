@@ -969,3 +969,9 @@ bn:
               name: শর্তযুক্ত
             Functions:
               name: ফাংশনগুলি
+        peru-2019:
+          stages:
+            Introduction:
+              name: ভূমিকা
+            Nested Loops:
+              name: নেষ্টেড লুপ
