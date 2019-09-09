@@ -705,6 +705,23 @@ class LevelsControllerTest < ActionController::TestCase
     assert_equal "/levels/#{new_level.id}/edit", URI(JSON.parse(@response.body)['redirect']).path
   end
 
+  test "platformization partner should own cloned level" do
+    sign_out @levelbuilder
+    sign_in @platformization_partner
+
+    game = Game.find_by_name("Custom")
+    old = create(:level, game_id: game.id, name: "Fun Level")
+    assert_creates(Level) do
+      post :clone, params: {level_id: old.id, name: "Fun Level (copy 1)"}
+    end
+
+    new_level = assigns(:level)
+    assert_equal new_level.game, old.game
+    assert_equal new_level.name, "Fun Level (copy 1)"
+    assert_equal "/levels/#{new_level.id}/edit", URI(JSON.parse(@response.body)['redirect']).path
+    assert_equal 'platformization-partners', new_level.editor_experiment
+  end
+
   test 'cannot update level name with just a case change' do
     level = create :level, name: 'original name'
 
@@ -780,6 +797,7 @@ class LevelsControllerTest < ActionController::TestCase
   end
 
   test 'external markdown levels will render <user_id/> as the actual user id' do
+    File.stubs(:write)
     dsl_text = <<DSL
 name 'user_id_replace'
 title 'title for user_id_replace'
