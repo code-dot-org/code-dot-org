@@ -69,7 +69,8 @@ export default class ScriptEditor extends React.Component {
     familyName: PropTypes.string,
     versionYear: PropTypes.string,
     scriptFamilies: PropTypes.arrayOf(PropTypes.string).isRequired,
-    versionYearOptions: PropTypes.arrayOf(PropTypes.string).isRequired
+    versionYearOptions: PropTypes.arrayOf(PropTypes.string).isRequired,
+    isLevelbuilder: PropTypes.bool
   };
 
   handleClearProjectWidgetSelectClick = () => {
@@ -315,15 +316,17 @@ export default class ScriptEditor extends React.Component {
             style={styles.input}
           />
         </label>
-        <label>
-          Editor Experiment. If specified, users with this experiment on the
-          levelbuilder machine will be able to edit this script.
-          <input
-            name="editor_experiment"
-            defaultValue={this.props.editorExperiment}
-            style={styles.input}
-          />
-        </label>
+        {this.props.isLevelbuilder && (
+          <label>
+            Editor Experiment. If specified, users with this experiment on the
+            levelbuilder machine will be able to edit this script.
+            <input
+              name="editor_experiment"
+              defaultValue={this.props.editorExperiment}
+              style={styles.input}
+            />
+          </label>
+        )}
         <label>
           Curriculum Path
           <input
