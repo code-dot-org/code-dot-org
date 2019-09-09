@@ -4,7 +4,7 @@ layout: wide
 nav: how_to_nav
 ---
 
-{{ signup_button }}
+{{signup_button}}
 
 # உங்கள் நிறுவனத்தின் கோட் ஹவர் எப்படி கொண்டு வர வேண்டும்
 
@@ -99,4 +99,4 @@ We host a variety of [fun, hour-long activities]({{ urls/learn }}) for participa
             
             - சமூக மீடியாவில் உங்கள் நிகழ்வு நிகழ்வு நிகழ்வுகளின் வீடியோ மற்றும் வீடியோக்களைப் பகிரலாம். #HourOfCode மற்றும் @codeorg பயன்படுத்தவும், எனவே உங்கள் வெற்றியை முன்னிலைப்படுத்தலாம்!</ul> 
             
-            {{ signup_button }}
+            {{signup_button}}

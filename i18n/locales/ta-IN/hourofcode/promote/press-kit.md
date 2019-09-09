@@ -4,7 +4,7 @@ layout: wide
 nav: promote_nav
 ---
 
-{{ signup_button }}
+{{signup_button}}
 
 # How to attract media to your Hour of Code event
 
@@ -84,4 +84,4 @@ Code.org என்பது ஒரு 501c3 பொது லாபமல்ல�
   
 Find more resources and sample emails [here]({{ promote/sample_emails }}).
 
-{{ signup_button }}
+{{signup_button}}
