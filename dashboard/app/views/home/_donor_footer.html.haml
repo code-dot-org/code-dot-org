@@ -1,18 +1,18 @@
 - full_width = local_assigns[:full_width]
 .container{ style: 'padding: 10px;' + (full_width ? 'width: 855px; margin-left: 25px;' : '') }
-  %div
-    %h1{ style: 'margin: auto;'}
+  %div{ style: "position:absolute; left:0; right:0; height:340px; background: url(#{asset_path('dashboard_footer-cropped.png')})" }
+    %h1
       Code.org thanks our donors
-    %p{ style: 'margin: auto;'}
+    %p
       Our vision is that every student in every school should have the opportunity to learn computer science. The impact of our work is amplified and made possible with help from our amazing partners.
-    %h3{ style: 'margin: auto;'}
+    %h3
       %strong
         - if current_user.teacher?
           Your classroom's free use of Code.org is made possible by:
         - else
           Your free education on Code.org is made possible by:
     -# Logos here
-    %p{ style: 'margin: auto;'}
-      Amazon is offering free resources for Code.org classrooms. Learn more
-
-
+    - if true # will eventually be if Amazon
+      %p
+        Amazon is offering free resources for Code.org classrooms. Learn more
+  %div{style: 'height:265px'}
