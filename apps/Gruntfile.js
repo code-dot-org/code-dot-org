@@ -605,8 +605,8 @@ describe('entry tests', () => {
       './src/sites/hourofcode.com/pages/public/index.js',
     'hourofcode.com/views/theme_common_head_after':
       './src/sites/hourofcode.com/pages/views/theme_common_head_after.js',
-    'hourofcode.com/views/hoc_events_map_replacement':
-      './src/sites/hourofcode.com/pages/views/hoc_events_map_replacement.js',
+    'hourofcode.com/views/hoc_events_map':
+      './src/sites/hourofcode.com/pages/views/hoc_events_map.js',
 
     // shared between code.org and hourofcode.com
     tutorialExplorer: './src/tutorialExplorer/tutorialExplorer.js'
