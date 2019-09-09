@@ -10,15 +10,22 @@ class ZendeskSessionController < ApplicationController
   SUBDOMAIN = Dashboard::Application.config.zendesk_subdomain
 
   def index
-    unless current_user.age && current_user.under_13?
-      if current_user.oauth_only?
-        sign_into_zendesk(current_user)
-        return
-      end
+    if allow_zendesk_signin?(current_user)
+      sign_into_zendesk(current_user)
+      return
     end
   end
 
   private
+
+  def allow_zendesk_signin?(user)
+    return false if user.age && user.under_13?
+    puts user.inspect
+    return false if user.email &&
+      Mail::Address.new(user.email).domain == "code.org" &&
+      !user.google_oauth_only?
+    return true
+  end
 
   def configured?
     SECRET.present? && SUBDOMAIN.present?

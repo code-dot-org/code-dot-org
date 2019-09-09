@@ -66,6 +66,10 @@ class AuthenticationOption < ApplicationRecord
     OAUTH_CREDENTIAL_TYPES.include? credential_type
   end
 
+  def google_oauth?
+    credential_type == GOOGLE
+  end
+
   def primary?
     user.primary_contact_info == self
   end

@@ -816,6 +816,14 @@ class User < ActiveRecord::Base
     end
   end
 
+  def google_oauth_only?
+    if migrated?
+      authentication_options.all?(&:google_oauth?) && encrypted_password.blank?
+    else
+      OAUTH_PROVIDERS.include?(provider) && encrypted_password.blank?
+    end
+  end
+
   def self.new_with_session(params, session)
     return super unless PartialRegistration.in_progress? session
     new_from_partial_registration session do |user|
