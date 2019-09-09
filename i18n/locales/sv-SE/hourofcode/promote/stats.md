@@ -1,13 +1,12 @@
 ---
-title: <%= hoc_s(:title_stats).inspect %>
+title: Blurbs and useful stats
 layout: wide
 nav: promote_nav
 ---
 
-
 <a id="blurb"></a>
 
-<%= view :signup_button %>
+{{ signup_button }}
 
 # Blurbs and useful stats
 
@@ -41,7 +40,7 @@ Teknik förändrar varje industrin på planeten. Under 2015 erbjöds 7 miljoner 
 
 #### Om Code.org
 
-Code.org är en offentlig, ideell organisation till förmån för ett större intresse för datavetenskap och med mål om större jämställhet inom IT-området. Its vision is that every student in every school has the opportunity to learn computer programming. Efter lanseringen år 2013, har Code.org organiserade kampanjen "Hour of Code" – som har introducerad över 100 miljoner elever till datavetenskap hittills. Man samarbetar i USA med 70 offentliga skoldistrikt för att rikstäckande expandera datorvetenskapliga program. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. For more information, please visit: [<%= resolve_url('code.org') %>](%= resolve_url('https://code.org') %).
+Code.org är en offentlig, ideell organisation till förmån för ett större intresse för datavetenskap och med mål om större jämställhet inom IT-området. Its vision is that every student in every school has the opportunity to learn computer programming. Efter lanseringen år 2013, har Code.org organiserade kampanjen "Hour of Code" – som har introducerad över 100 miljoner elever till datavetenskap hittills. Man samarbetar i USA med 70 offentliga skoldistrikt för att rikstäckande expandera datorvetenskapliga program. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. For more information, please visit: [code.org]({{ codeorg_link }}).
 
 ## Share these on social media and in emails
 
@@ -51,6 +50,6 @@ Code.org är en offentlig, ideell organisation till förmån för ett större in
 
 ## Infographics
 
-<%= view :stats_carousel %>
+{{ stats_carousel }}
 
-<%= view :signup_button %>
+{{ signup_button }}

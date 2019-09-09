@@ -630,27 +630,19 @@ ku:
           PROPERTY:
             '"rotation"': سوڕانەوە
             '"direction"': ئاڕاستەی جووڵە
+      gamelab_checkTouching:
+        text: "{CONDITION} {SPRITE1} بەر {SPRITE2} دەکەوێ"
       gamelab_clickedOn:
         text: کاتێک {SPRITE} کرتە دەکرێت
       gamelab_clickedSpritePointer:
         text: کرتە کرا {SPRITE}
       gamelab_comment:
         text: 'کۆمێنت: {COMMENT}'
-      gamelab_console.log:
-        text: نامەی لۆگ {MESSAGE}
       gamelab_createNewSprite:
         text: "سپرایتێکی نوێ دروستبکە \n ناوی بنێ {NAME} \n بە جلوبەرگی {COSTUME}
           \n لە {LOCATION}"
-      gamelab_debugSprite:
-        text: ڕاستکردنەوە {SPRITE} {VAL}
-        options:
-          VAL:
-            'true': ڕاست
-            'false': هەڵە
       gamelab_destroy:
         text: لاببە {THIS}
-      gamelab_displace:
-        text: "{THIS} ڕێگە دەگرێ {SPRITE} بجوڵێ"
       gamelab_draggable:
         text: دەتوانرێ بجوڵێنرێ
       gamelab_edgesDisplace:
@@ -663,6 +655,7 @@ ku:
             '"direction"': ئاڕاستەی جووڵە
             '"tint"': سێبەری ڕەنگ
       gamelab_getThisSprite:
+        text: سپڕایتی {CHOICE}
         options:
           CHOICE:
             '"this"': ئەمە
@@ -673,6 +666,7 @@ ku:
       gamelab_jumpTo:
         text: "{SPRITE} بپەڕێتەوە بۆ {LOCATION}"
       gamelab_keyPressed:
+        text: "{CONDITION} {KEY} داگیراوە"
         options:
           KEY:
             '"a"': a
@@ -707,6 +701,8 @@ ku:
         text: شوێنی {SPRITE}
       gamelab_location_picker:
         text: "{LOCATION}"
+      gamelab_makeNewSpriteAnon:
+        text: سپرایتێکی {ANIMATION_NAME} نوێ دروست بکە لە {LOCATION}
       gamelab_mirrorSprite:
         text: "{SPRITE} ڕوودەکاتە {DIRECTION}"
       gamelab_mouseLocation:
@@ -772,7 +768,6 @@ ku:
           PROPERTY:
             '"rotation"': سوڕانەوە
             '"direction"': ئاڕاستەی جووڵە
-            '"tint"': سێبەری ڕەنگ
       gamelab_setSizes:
         text: "{SPRITE} {PROPERTY} بکە بە {N}%"
         options:
@@ -791,6 +786,8 @@ ku:
           {SPRITE3N}{SPRITE3COSTUME}
       gamelab_showTitleScreen:
         text: شاشەی ناونیشان پشانبدە {BREAK} ناونیشان {TITLE} دەق {SUBTITLE}
+      gamelab_spriteClicked:
+        text: "{CONDITION} {SPRITE} کرتە کراوە"
       gamelab_turn:
         text: "{SPRITE} بسوڕێنە {DIRECTION} بە پلەی {N}"
       gamelab_whenDownArrow:
@@ -805,14 +802,8 @@ ku:
             '"d"': d
       gamelab_whenLeftArrow:
         text: کاتێک هێمای چەپ دادەگیرێت
-      gamelab_whenPressedAndReleased:
-        text: "کاتێک {DIR} دادەگیرێ \nکاتێک {STATEMENT1} لادەبرێت \n{STATEMENT2}"
       gamelab_whenRightArrow:
         text: کاتێک هێمای ڕاست دادەگیرێت
-      gamelab_whenStartAndStopTouching:
-        text: |-
-          کاتێک{SPRITE1} دەست بە بەرکەوتن دەکات {SPRITE2}{STATEMENT1}کاتێک لە بەرکەوتن دەوەستێ
-          {STATEMENT2}
       gamelab_whenTouching:
         text: کاتێک {SPRITE1} بە {SPRITE2} دەکەوێ
       gamelab_whenUpArrow:
@@ -1031,26 +1022,71 @@ ku:
         options:
           PROPERTY:
             "'shapeColor'": ڕەنگ
+      aalab_addBehaviorForDuration:
+        text: سپڕایتی aalab {SPRITE} {BEHAVIOR} دەستپێدەکات بۆ {SECONDS} چرکە
+      aalab_addBehaviorSimpleFlexible:
+        text: سپڕایتی aalab {SPRITE} دەستپێدەکات {BEHAVIOR}
+      aalab_addBehaviorUntilBoolean:
+        text: سپڕایتی {SPRITE} دەست بە {BEHAVIOR} دەکات تا {CONDITION}
+      aalab_addToSpriteGroup:
+        text: سپڕایت زیاد بکە{SPRITE} بۆ گروپی {GROUP}
       aalab_allSpritesWithAnimation:
         text: "{ANIMATION}"
       aalab_changePropByFlexible:
+        text: گۆڕانی aalab {SPRITE} {PROPERTY} بەبڕی {VAL}
         options:
           PROPERTY:
             '"rotation"': سوڕانەوە
             '"direction"': ئاڕاستەی جووڵە
+      aalab_checkTouching:
+        text: "{CONDITION} {SPRITE1} بەر {SPRITE2} دەکەوێ"
+      aalab_clickedOn:
+        text: "{CONDITION} {SPRITE} کرتە کراوە"
+      aalab_createNewSprite:
+        text: "aalab سپڕایتێکی نوێ دروست بکە \n بەناوی {NAME} \n بە جلوبەرگی {COSTUME}
+          \n لە {LOCATION}"
+      aalab_createNewSpriteAdvanced:
+        text: "سپڕایتێکی نوێ ڕروست بکە بە ناوی {NAME} \n بە جلوبەرگی {COSTUME} \n
+          لە {LOCATION}"
+      aalab_createNewSpriteAnon:
+        text: سپرایتێکی {ANIMATION_NAME} نوێ دروست بکە لە {LOCATION}
+      aalab_createNewSpriteAnonReturn:
+        text: aalab سپڕایتێکی {ANIMATION_NAME} نوێ دروست بکە لە {LOCATION}
+      aalab_createPropertyGroup:
+        text: سپڕایت گروپێکی نوێ دروست بکە بەناوی {VAR} لە هەموو {COSTUME} ی سپڕایت
+      aalab_createSpriteGroup:
+        text: گروپێکی سپڕایتی نوێ دروست بکە بەناوی {VAR}
+      aalab_getSpritesByName:
+        text: هەر سپڕایتێک بەناوی {NAME}
       aalab_getThisSprite:
+        text: سپڕایتی {CHOICE}
         options:
           CHOICE:
             '"this"': ئەمە
+      aalab_jumpTo:
+        text: aalab {SPRITE} دەپەڕێتەوە بۆ {LOCATION}
+      aalab_keyPressed:
+        text: "{CONDITION} {KEY} داگیراوە"
+      aalab_locationOf:
+        text: aalab شوێنی {SPRITE}
       aalab_location_picker:
         text: "{LOCATION}"
+      aalab_moveForward:
+        text: aalab {SPRITE} بجوڵێنە بەبڕی {DISTANCE} وێنەخاڵ بۆ پێشەوە
       aalab_moveInDirection:
+        text: aalab {SPRITE} بجوڵێنە بەبڕی {DISTANCE} وێنەخاڵ بەئاراستەی {DIRECTION}
         options:
           DIRECTION:
             '"North"': باکوور
             '"East"': ڕۆژهەڵات
             '"South"': باشوور
             '"West"': ڕۆژئاوا
+      aalab_moveToward:
+        text: aalab {SPRITE} بجوڵێنە دووری {DISTANCE} بەئاڕاستەی {TARGET}
+      aalab_nameStringSay:
+        text: "{NAMESTRING} دەڵێت {MESSAGE}"
+      aalab_prompt:
+        text: پرسیار بکە {MESSAGE}
       aalab_randomLocation:
         text: شوێنێکی هەڕەمەکی
       aalab_removeOneAndAll:

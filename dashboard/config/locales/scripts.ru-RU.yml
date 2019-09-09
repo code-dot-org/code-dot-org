@@ -2899,6 +2899,14 @@ ru:
               name: Визуализация данных
             Final Project:
               name: Финальный проект
+        csp1-pilot:
+          stages:
+            Sending Binary Messages:
+              name: Отправка двоичных сообщений
+            Sending Binary Messages with the Internet Simulator:
+              name: Отправка двоичных сообщений с интернет симулятором
+            Binary Numbers:
+              name: Двоичные числа
         time4csdemo:
           stages:
             Crowdsourcing:
@@ -2921,6 +2929,8 @@ ru:
           stages:
             Lists:
               name: Списки
+            CSS Classes:
+              name: CSS классы
         csd3-pilot:
           description_short: Программирование
           stages:
@@ -2934,3 +2944,23 @@ ru:
               name: Скорость
             Functions:
               name: функции
+            Random Numbers:
+              name: Случайные числа
+        csl-vn:
+          stages:
+            Loops in Ice Age:
+              name: Циклы в ледниковом периоде
+            Ocean Scene with Loops:
+              name: Циклы в исполнителе Художник
+        csp2-pilot:
+          stages:
+            Routers and Redundancy:
+              name: Маршрутизаторы и резервирование
+        peru-2019:
+          stages:
+            Introduction:
+              name: Введение
+            Loops in Artist:
+              name: Циклы в исполнителе Художник
+            Nested Loops:
+              name: Вложенные циклы

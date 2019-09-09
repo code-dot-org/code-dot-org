@@ -1,4 +1,4 @@
-%div{style: 'position:absolute; top:5px; right:5px', id: 'share_privacy_policy'}
+%div{style: 'float: right; padding-top: 5px; padding-right: 5px', id: 'share_privacy_policy'}
   -# haml-lint:disable MultilinePipe
   - email_body = "Dear parents,\n\n" + |
                   "Software and technology are everywhere - in our computers, in our pockets, in our cars, " + |
@@ -15,55 +15,60 @@
                   "Thanks," |
   -# haml-lint:enable MultilinePipe
   - email_subject = "Code.org and your child's privacy"
+  -# different subject b/c Remind renders 'Code.org' as a shortened URL instead of the literal
+  - remind_subject = "Computer Science and Your Child's Privacy:"
   %label{class:'share-label'}
     Share this notice with parents:
-  %a{class:'share-on-remind', href:'https://www.remind.com/v1/share?url=code.org/privacy/student-privacy&referer=code.org&text=Code.org%20Student%20Privacy%20Policy', target:'_blank', id: 'share_on_remind'}
+  %a{class:'share-on-remind', href:'https://www.remind.com/v1/share?url=code.org/privacy/student-privacy&referer=code.org&text=' + CGI.escape(remind_subject), target:'_blank', id: 'share_on_remind'}
+  -# using URI.encode here because Windows Outlook client renders + as '+' literally
   %a{class: 'email-button',
-    href: "mailto:?to=&subject=" + CGI.escape(email_subject) + "&body=" + CGI.escape(email_body), target:'_blank', id: 'email_button'}
+    href: "mailto:?to=&subject=" + URI.encode(email_subject) + "&body=" + URI.encode(email_body), target:'_blank', id: 'email_button'}
     %i.fa.fa-envelope{"aria-hidden": "true"}
     Email
   %a{class: 'print-button', href: "javascript:window.print()", id: 'print_button'}
     %i.fa.fa-print{"aria-hidden": "true"}
     Print
+%div{style: 'clear: both'}
 
 %script{src: minifiable_asset_path("js/code.org/views/share_privacy.js")}
 
-%body
-  :css
-    .share-on-remind {
-      display: inline-block;
-      width: 185px;
-      height: 40px;
-      background: url("/images/share-on-remind-button-with-text.png") no-repeat top;
-      background-position: center top;
-      text-decoration: none;
-      text-align: center;
-      position: relative;
-      vertical-align: middle;
-    }
-    .share-label {
-      margin-right: 5px;
-    }
-    .share-on-remind:active {
-      background-position: center bottom;
-    }
-    .email-button, .print-button {
-      background-color: #7665a0;
+:css
+  .share-on-remind {
+    display: inline-block;
+    width: 185px;
+    height: 40px;
+    background: url("/images/share-on-remind-button-with-text.png") no-repeat top;
+    background-position: center top;
+    text-decoration: none;
+    text-align: center;
+    position: relative;
+    vertical-align: middle;
+    margin-bottom: 5px;
+  }
+  .share-label {
+    margin-right: 5px;
+  }
+  .share-on-remind:active {
+    background-position: center bottom;
+  }
+  .email-button, .print-button {
+    background-color: #7665a0;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    width: 90px;
+    height: 40px;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 40px;
+    vertical-align: middle;
+    margin-bottom: 5px;
+  }
+  .email-button:visited, .print-button:visited, .email-button:link, .print-button:link {
       color: white;
-      text-decoration: none;
-      display: inline-block;
-      width: 90px;
-      height: 40px;
-      border-radius: 5px;
-      text-align: center;
-      line-height: 40px;
-      vertical-align: middle;
+  }
+  @media print {
+    #share_privacy_policy {
+      display: none
     }
-    .email-button:visited, .print-button:visited, .email-button:link, .print-button:link {
-        color: white;
-    }
-    @media print {
-      #share_privacy_policy {
-        display: none
-      }
-    }
+  }

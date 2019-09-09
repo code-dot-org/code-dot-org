@@ -32,6 +32,7 @@ es:
         finish_sign_up_subheader_provider: 'Llena la siguiente información para terminar de crear una cuenta de Code.org con <strong>%{provider}</strong> para <strong>%{email}</strong>.'
         error:
           future: No puede ser en el futuro
+  beta: "beta"
   hello: "Hola mundo"
   welcome_back: "Bienvenido, %{name}"
   your_professional_learning_plan: "Tu Plan de aprendizaje profesional"
@@ -466,33 +467,6 @@ es:
     no_primary_course: "Prueba un curso de Code Studio"
     choose_next_course: "Prueba un curso de Código Studio eligiendo uno a continuación"
     print_certificate: "Imprimir Certificado"
-    announcement_title: "Anuncios"
-    announcement_message_fall2016_features: "Pasamos el verano convirtiendo tus comentarios en nuevas características. AHora, puedes <a href=\"%{pp_url}\" target=\"_blank\">dar seguimiento al progreso de varios alumnos</a> aún si hacen programación por pares en un sólo dispositivo. Puedes usar <a href=\"%{csp_widgets_url}\" target=\"_blank\">las mejores herramientas interactivas</a> de nuestro curso de Principios de CS en <i>cualquier</i> salón de clases. ¡Y tus alumnos pueden <a href=\"%{unused_code_url}\" target=\"_blank\">mantener código sin usar</a> en su espacio de trabajo para fomentar la experimentación! Consulta todas las nuevas características y déjanos saber que piensas de ellas."
-    announcement_csp_widgets_message: "¿Estás buscando maneras divertidas de enseñar acerca de cómo funciona el internet, cómo la criptografía mantiene la data segura y otros conceptos? ¡Hemos tomado las mejores herramientas interactivas de nuestro currículo de Principios de Informática y creado widgets únicos que puedes usar en cualquier momento!"
-    announcement_learn_more_button: "Aprende más"
-    announcement_try_now_button: "Probar ahora"
-    announcement_host_an_hour_button: "Anfitrión una hora"
-    announcement_watch_video_button: "Ver video"
-    announcement_petition: "Como profesor, está liderando el camino de un movimiento para dar a cada estudiante en todas las escuelas la oportunidad de aprender informática. Ahora, es tiempo de dejar que sus representantes escuchen de usted. Esta semana, los líderes de la educación, los 28 gobernadores y CEO's de las compañías más grandes de América se unieron en una carta abierta pidiendo al congreso de los Estados Unidos financiar la educación en informática para K-12."
-    announcement_petition_button: "Agrega tu nombre"
-    announcement_go_beyond_button: "Ve más allá"
-    announcement_apply_now: "Aplícalo ahora"
-    announcement_all: "Manténte al día con las nuevas características y actualizaciones en nuestro blog del maestro. <a href='%{teacher_blog_url}' target='_blank'>Ver anuncios anteriores.</a>"
-    announcement_hoc_launch: "Miles de educadores en más de 180 países comenzarán a enseñar informática durante la hora del código del 5 al 11 de diciembre. Nosotros estamos contando contigo para que nos ayudes a llegar a más estudiantes que nunca antes. <a href='%{signup_url}' target='_blank'> Registre su evento hora del código</a> y haga saber a otros profesores que cualquiera puede empezar a enseñar informática."
-    announcement_mc_launch: "¡Uno de nuestros más populares tutoriales tiene ahora una secuela! El totalmente nuevo Diseñador de Hora del código de Minecraft le permite a los estudiantes hacer las reglas del mundo de Minecraft. Ellos pueden crear una experiencia Minecraft totalmente única, y luego compartirla con amigos o jugarla en sus teléfonos. Hazlo con tu clase para la Hora del código."
-    announcement_how_code_studio: "No necesita ninguna experiencia para empezar a enseñar informática en el aula. Code.org ofrece plan de estudios, planificaciones, programas de aprendizaje profesional de alta calidad y toneladas de excelentes herramientas para todos los niveles&mdash; todo lo que necesita, sin costo. ¿Se pregunta dónde empezar? Descarga <a href='%{video_download_url}'>this video</a>!"
-    announcement_go_beyond: "Ve mas allá de Hour of Code y explora las ciencias de la computación con tus estudiantes cada semana. Code.org ofrece currículum, planes de enseñanza, planes profesionales de aprendizaje, y toneladas de buenas herramientas para todos los niveles&mdash;y es todo gratis. :) No necesitas ninguna experiencia para empezar a enseñar ciencias de la computación en tu clase.<b>Encuentra el proximo paso que es correcto para tu clase.</b>"
-    announcement_teacher_recruitment: "Profesores como tú están liderando el movimiento de educación de la informática. Puedes participar en programas de grado profesional K-12th de alta calidad <strong>sin ningún tipo de costo a ti o a tu escuela</strong>. Toma la delantera en informática en tu escuela, y aplica para un aprendizaje profesional."
-    announcement_teacher_recruitment2: "Profesores como tú están liderando el movimiento educativo de la Informática. Puedes participar en programas de aprendizaje de grando profesional K-12th de alta calidad <strong>sin ningún tipo de costo para ti o para tu escuela</strong>. Toma la delantera en informática en tu escuela y aplica para el aprendizaje profesional. Profesores de secundaria y primaria aplican el 17 de marzo."
-    announcement_csf_pilot: "<strong>Profesores de escuelas elementarias:</strong> ¡Sean parte de actualizar nuestros cursos de CS Fundamentales! Estamos buscando profesores para pilotear un currículo actualizado de CS Fundamentals durante el invierno y primavera de 2017. Estamos impacientes de escuchar sus críticas antes de que estás actualizaciones se apiquen en agosto de 2017."
-    announcement_student_privacy: "En Code.org nos tomamos la privacidad del estudiante muy en serio. Para proteger tu privacidad como estudiante, hemos hecho un cambio a tu sección de la página de inicio para evitar que se muestren los nombres completos, de todas maneras animamos a los usuarios a que <i>no usen sus nombres completos como estudiantes</i>."
-    announcement_apcsp_recruitment: "<strong>Principales profesores de informática:</strong> Tus estudiantes pueden ser incluidos en nuestros siguiente video viral de Code.org, animando a estudiantes a tomar el examen de AP CS Principles de este año. Estamos invitando todos los estudiantes de CS Principles a enviar un video de 10-20 segundos en Twitter, Instagram o Facebook diciendo \"Estoy tomando el examen #APCSP porque...\" ¡Los mejores videos serán incluidos en nuestro video y los estudiantes ganadores recibirán un swag de Code.org!"
-    announcement_apcsp_recruitment2: "El examen de AP CS Principles va a romper récords. La participación estudiantil en el examen podría cambiar dramáticamente en AP Informática, pero necesitamos de tu ayuda. Anima a cada estudiante de CS Principles a tomar el examen y nosotros te <a href='%{gift_url}' target='_blank'>enviaremos un regalo</a>. Los estudiantes también pueden animar a pares alrededor del país en nuestro <a href='%{challenge_url}' target='_blank'>desafío de video #APCSP</a>."
-    announcement_apcsp_recruitment3: "Este año el examen de Principios avanzados de CC está destinado a romper records. La participación de los estudiantes podría cambiar drásticamente la diversidad en Ciencias de la Computación Avanzado, pero necesitamos de su ayuda. Incentive a cada uno de los estudiantes de Principios de CC a realizar el examen de PCC para avanzados y usted puede ganar ¡<a href='%{gift_url}' target='_blank'>una tarjeta de regalo, laptop o cualquier otro premio</a>! Comparta <a href='%{video_url}' target='_blank'>este video</a> para que sus estudiantes puedan enterarse sobre sus similares alrededor del país que también aplicarán al examen."
-    announcement_csp_deadline: "¡Última llamada para los profesores de secundaria! Toma la delantera de informática en tu escuela y aplica para programas de aprendizaje de alta calidad <strong>sin ningún tipo de precio para ti o para tu escuela</strong>. Las aplicaciones cerrarán el 14 de abril."
-    announcement_applab_export: "¡App Lab, nuestra web basada en el ambiente de programación, ahora soporta exportar tu código! Puedes empezar a construir aplicaciones con bloques de JavaScript de jalar y soltar, entonces puedes exportar el código para continuar editando en cualquier ambiente de desarrollo profesional de tu elección."
-    announcement_csp_survey: "<b>¡Felicidades profesores de Principios de CC!</b><br/> Su estudiante de Principios de CC que realizó el examen de CC para avanzados se unirá con otros 50,000 estudiantes en el examen para avanzados mas largo que se ha realizado en la historia. Ahora, permitamos que las voces de sus estudiantes sean oídas - ¡recuérdele que debe completar la encuesta de fin de curso! Usted podrá revisar las respuestas de sus estudiantes y compartiremos también un reporte nacional con usted."
-    announcement_navigation_redesign: "<b>Próximos cambios en el sitio de navegación</b><br/>Próximamente este verano, estaremos mejorando la navegación dentro del sitio web de Code.org para que siempre tengas acceso a sus principales recursos desde cualquier parte del sitio. Tan pronto como inicie sesión en su cuenta de profesor, cada página tendrá una nueva barra de navegación con enlaces a su página de inicio, cursos, galería de proyectos, secciones y aprendizaje profesional."
   move_students:
     new_section_dne: "Lo sentimos, pero no existe la sección %{new_section_code}. Introduce un código de sección diferente."
     section_code_cant_be_current_section: "La sección actual no puede ser la misma que la de la nueva sección."
@@ -886,6 +860,7 @@ es:
     csf_variables: 'variables'
     csf_for_loops: 'Bucles Para'
     csf_internet: 'Internet'
+    csf_warmup: 'Calentamiento'
     csd1_1: 'Capítulo 1: El proceso de resolución de problemas'
     csd1_2: 'Capítulo 2: Computadoras y resolución de problemas'
     csd2_1: 'Capítulo 1: Contenido Web y HTML'
@@ -916,6 +891,7 @@ es:
     csp_postap_2: 'Capítulo 2: Aplicaciones y bases de datos'
     csp2_1_2018: 'Unidad 2: Información Digital'
     csp3_1_2018: 'Unidad 3: Introducción a la Programación'
+    csp4_1_2018: 'Unidad 4: Gran data y privacidad'
     csp_variables: 'variables'
     csp_conditionals: 'Condicionales'
     csp_functions: 'funciones'
@@ -924,6 +900,7 @@ es:
     csp_loops: 'vuelta'
     csp_traversals: 'Recorridos'
     csp_libraries: 'Librerías'
+    csp_parameters_return_values: 'Parámetros y valores de retorno'
     dlp: 'Preguntas para Reflexionar'
     time4cs_c1: 'Everglades y sus Ecosistemas'
     time4cs_c2: 'Cadenas de comida en Everglades'

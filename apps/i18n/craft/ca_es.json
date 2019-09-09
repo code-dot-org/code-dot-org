@@ -1,5 +1,6 @@
 {
   "absolute": "valor absolut",
+  "at": "a",
   "blockActionAdd": "afegir",
   "blockActionAttack": "ataca",
   "blockActionCollect": "agafa",
@@ -81,6 +82,7 @@
   "directionMiddle": "centre",
   "directionRight": "dret",
   "directionUp": "cap amunt",
+  "downloadButton": "Baixa",
   "entityTypeChicken": "gallina",
   "entityTypeCow": "vaca",
   "entityTypeCreeper": "creeper",

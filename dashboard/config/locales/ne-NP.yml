@@ -31,6 +31,7 @@ ne:
         edit_header: खाता जानकारी सम्पादन गर्नुहोस्
         error:
           future: can't be in the future
+  beta: बिटा
   hello: के छ विश्व
   welcome_back: Welcome back, %{name}
   your_professional_learning_plan: Your Professional Learning Plan
@@ -369,49 +370,6 @@ ne:
     no_primary_course: Try a Code Studio course
     choose_next_course: Try a Code Studio course by choosing one below
     print_certificate: Print Certificate
-    announcement_title: Announcements
-    announcement_message_fall2016_features: We spent the summer turning your feedback
-      into new features. Now, you can <a href="%{pp_url}" target="_blank">track multiple
-      students' progress</a> even if they're pair programming on one device. You can
-      use <a href="%{csp_widgets_url}" target="_blank">the best interactive tools</a>
-      from our CS Principles course in <i>any</i> classroom. And your students can
-      <a href="%{unused_code_url}" target="_blank">keep unused code</a> in their workspace
-      to encourage experimentation! Check out all our new features and let us know
-      what you think.
-    announcement_learn_more_button: थप जान्नुहोस्
-    announcement_try_now_button: Try now
-    announcement_host_an_hour_button: Host an Hour
-    announcement_watch_video_button: Watch video
-    announcement_petition: As a teacher, you're leading the way in a movement to give
-      every student in every school the opportunity to learn computer science. Now,
-      it's time to let your representatives hear from you. This week, education leaders,
-      28 governors, and CEOs of America's largest companies joined together in an
-      open letter asking the U.S. Congress to fund K-12 computer science education.
-    announcement_petition_button: Add your name
-    announcement_go_beyond_button: Go beyond
-    announcement_all: Keep up to date with new features and updates on our teacher
-      blog. <a href='%{teacher_blog_url}' target='_blank'>See past announcements.</a>
-    announcement_hoc_launch: Thousands of educators in more than 180 countries will
-      start teaching computer science during the Hour of Code this December 5-11.
-      We're counting on you to help us reach more students than ever before. <a href='%{signup_url}'
-      target='_blank'>Register your Hour of Code event</a> and let another teacher
-      know that anyone can start teaching computer science.
-    announcement_mc_launch: One of our most popular tutorials now has a sequel! The
-      all-new Minecraft Hour of Code Designer lets students make the rules of the
-      Minecraft world. They can create a totally unique Minecraft experience, and
-      then share it with friends or play it on their phones. Do it with your class
-      for the Hour of Code.
-    announcement_how_code_studio: You don't need any experience to start teaching
-      computer science in your classroom. Code.org offers curriculum, lesson plans,
-      high quality professional learning programs, and tons of great tools for all
-      grade levels&mdash;everything you need, all at no cost. Wondering where to get
-      started? Download <a href='%{video_download_url}'>this video</a>!
-    announcement_go_beyond: Go beyond an Hour of Code and explore computer science
-      concepts with your students every week. Code.org offers curriculum, lesson plans,
-      high quality professional learning programs, and tons of great tools for all
-      grade levels&mdash;and it's all free. :) You don't need any experience to start
-      teaching computer science in your classroom. <b>Find the next step that's right
-      for your classroom.</b>
   move_students:
     new_section_dne: Sorry, but section %{new_section_code} does not exist. Please
       enter a different section code.

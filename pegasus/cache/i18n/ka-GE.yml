@@ -299,6 +299,8 @@ ka-GE:
   studiobar_title_nolink: გაეცანით კოდის სტუდიას
   studiobar_elementary_title: კურსები დამწყებთათვის
   studiobar_elementary_body: ჩვენი ახალი სამი კურსი K&#8209;5
+  studiobar_dance_title: ცეკვა
+  studiobar_dance_body: შექმენით და გააზიარეთ თქვენი ცეკვა
   studiobar_hoc_title: კოდის ერთი საათი
   studiobar_hoc_body: ისწავლეთ პროგრამირება Angry Birds თამაშით
   studiobar_flappy_title: ფლაპი კოდი
@@ -411,6 +413,7 @@ ka-GE:
   homepage_slot_text_link_donate: შემოწირულობა
   homepage_slot_text_link_shop: მაისურები, ქუდები და სხვა
   homepage_slot_text_link_administrators: შეიტანეთ CS თქვენს სკოლაში ან უბანში
+  homepage_gallery_header: Code.org-ზე შექმნილია %{project_count} მილიონზე მეტი პროექტი
   homepage_header_donors: Code.org მადლობას უხდის მხარდამჭერებს
   homepage_donors_seall: ყველას ნახვა
   homepage_donors_donate: შემოწირულობის გაღება
@@ -1833,6 +1836,10 @@ ka-GE:
     განაახლეთ თქვენი ბრაუზერი <a href='%{supported_browsers_url}', target='_blank'>ჩვენ
     მიერ მხარდაჭერილ ბრაუზერზე</a>. შეგიძლიათ სცადოთ გვერდის ნახვა, მაგრამ მისი ფუნქციონალურობა
     დარღვეული იქნება.
+  compatibility_unsupported_browser_markdown: თქცენი ბრაუზერი არ არის მხარდაჭერილი.
+    თხოვთ, განაახლეთ თქვენი ბრაუზერი <a href='%{supported_browsers_url}', target='_blank'>ჩვენ
+    მიერ მხარდაჭერილ ბრაუზერზე</a>. შეგიძლიათ სცადოთ გვერდის ნახვა, მაგრამ მისი ფუნქციონალურობა
+    დარღვეული იქნება.
   flappy_shortcode: ფრთების ქნევა
   header_home: მთავარი
   header_my_dashboard: ჩემი მთავარი პანელი
@@ -1876,8 +1883,10 @@ ka-GE:
   user_header_settings: ანგარიშის პარამეტრები
   user_header_logout: გასვლა
   user_header_signin: შესვლა
+  user_header_create: 'შექმნა '
   user_header_gamelab: თამაშების ლაბი
   user_header_playlab: თამაშების ლაბი
+  user_header_dance: ცეკვა
   user_header_minecraft: Minecraft
   user_header_flappy: Flappy
   user_header_view_my_projects: ჩემი პროექტების ნახვა
@@ -1906,6 +1915,7 @@ ka-GE:
   applab_tile_start_tutorial: დაწყება
   account_sign_up_email_opt_in: შეიძლება, რომ ელფოსტით მოგწეროთ კურსების განახლებები,
     ადგილობრივი შესაძლებლობები და სხვა სიახლეები კომპიუტერული მეცნიერებების შესახებ?
+  hoc_overview_dance_title: ცეკვა
   hoc_overview_start_tutorial: დაწყება
   hoc2018_creativity_create: შექმნა
   hoc2018_creativity_what_will_you_create: რას შექმნი შენ?
@@ -1943,7 +1953,9 @@ ka-GE:
   hoc2018_mc_homepage_join_us: შემოგვიერთდით
   hoc2018_mc_homepage_try_it: სცადეთ
   hoc2018_mc_minecraft_education: Minecraft Education
+  hoc2018_dance_party_main_heading: ცეკვა
   hoc2018_dance_create_your_own_dance_title: შექმენი საცეკვაო წვეულება
+  hoc2018_dance_party_box_title: ცეკვა
   hoc2018_dance_party_button: დაწყება
   hoc2018_dance_teacher_resources_tile1_button: გაკვეთილის გეგმა
   hoc2018_dance_teacher_resources_tile2_button: აქტივობა უკომპიუტეროდ

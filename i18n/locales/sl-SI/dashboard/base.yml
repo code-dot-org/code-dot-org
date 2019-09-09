@@ -27,6 +27,7 @@ sl:
         finish_sign_up_header: 'Dokončaj registracijo'
         error:
           future: ne more biti v prihodnosti
+  beta: "beta"
   hello: "Pozdravljen svet"
   welcome_back: "Dobrodošel/a nazaj, %{name}"
   your_professional_learning_plan: "Tvoj osebni načrt učenja"
@@ -347,13 +348,6 @@ sl:
     no_primary_course: "Poskusite Code Studio smer"
     choose_next_course: "Poskusi Code Studio tečaj z izbiro enga spodaj"
     print_certificate: "Natisni certifikat"
-    announcement_title: "Obvestila"
-    announcement_learn_more_button: "Več o tem"
-    announcement_try_now_button: "Poskusite zdaj"
-    announcement_watch_video_button: "Oglej si video"
-    announcement_petition_button: "Dodaj svoje ime"
-    announcement_all: "Bodite na tekočem z novimi funkcijami in posodobitvami na našem blogu za učitelje. <a href='%{teacher_blog_url}' target='_blank'>Poglejte pretekle objave.</a>"
-    announcement_mc_launch: "Edena od naših najbolj priljubljenih vadnic ima sedaj nadaljevanje! Popolnoma nov Minecraft Ura za kodo Oblikovalec omogoča učencem, da dajo pravila svet v Minecrafta. Ustvarijo lahko popolnoma edinstveno doživetje v svetu Minecrafta in nato delijo s prijatelji ali igrajo na svojih telefone. Naredite to svojim razredom v času Ure za kodo."
   move_students:
     new_section_dne: "Žal, oddelek %{new_section_code} ne obstaja. Prosimo vnesite drugo šifro odseka."
     section_code_cant_be_current_section: "Trenutni odsek ne more biti enak kot nov odsek."

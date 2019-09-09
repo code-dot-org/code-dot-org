@@ -2109,6 +2109,10 @@ bs:
           stages:
             Number Systems:
               name: Brojčani Sistemi
+            Sending Binary Messages:
+              name: Slanje Binarnih Poruka
+            Binary Numbers:
+              name: Binarni Brojevi
         time4csdemo:
           stages:
             Crowdsourcing:
@@ -2137,3 +2141,9 @@ bs:
               name: Brzina
             Functions:
               name: Funkcije
+        peru-2019:
+          stages:
+            Introduction:
+              name: Uvod
+            Nested Loops:
+              name: Ugniježdene Petlje

@@ -5107,6 +5107,9 @@ ka:
           stages:
             new stage:
               name: ახალი დონე
+            Dance Party:
+              name: ცეკვა
+          title: ცეკვა
         frozen-2018-test-b:
           stages:
             Artist:
@@ -5117,6 +5120,14 @@ ka:
               name: ციფრული დიზაინი
             Linking Screens:
               name: ეკრანების დაკავშირება
+        dance--draft:
+          stages:
+            Dance Party:
+              name: ცეკვა
+        dance-draft:
+          stages:
+            Dance Party:
+              name: ცეკვა
         coursef-2019:
           description_audience: 'ასაკი: 9-13'
           stages:
@@ -5187,6 +5198,10 @@ ka:
                 ჯგუფური მუშაობა ისეთ სფეროში, როგორიცაა კომპიუტერული მეცნიერება.
             Digital Sharing:
               name: ციფრული გაზიარება
+        dance-low:
+          stages:
+            Dance Party:
+              name: ცეკვა
         coursed-2019:
           stages:
             'Algorithms: Graph Paper Programming':
@@ -5232,6 +5247,8 @@ ka:
                 რომელსაც შემდგომში გაუზიარებენ სხვებს ონლაინ. R2-D2 და სხვა ვარსკვლავური
                 ომების პერსონაჟებთან ერთად, მოსწავლეები შეისწავლიან მოვლენების მთავარ
                 პრინციპებს, ხოლო შემდეგ მათ მიეცემათ საშუალება, შექმნან საკუთარი თამაში.
+            Dance Party:
+              name: ცეკვა
         coursee-2019:
           description_audience: 'ასაკი: 8-12'
           stages:
@@ -5382,6 +5399,8 @@ ka:
               name: ინტერნეტი
             Crowdsourcing:
               name: ქრაუდსორსინგი
+            Dance Party:
+              name: ცეკვა
         csd1-2019:
           description_short: "  შეისწავლეთ თუ როგორ მუშაობენ ადამიანები კომპიუტერთან
             პრობლემების გადასაჭრელად."
@@ -5869,6 +5888,14 @@ ka:
           stages:
             new stage:
               name: ახალი დონე
+            Sending Binary Messages:
+              name: ორობითი წერილების გაგზავნა
+            Intellectual Property:
+              name: ინტელექტუალური ქონება
+            CS Principles Pre-survey:
+              name: კომპიუტერული მეცნიერების საფუძვლების წინარეგამოკითხვა
+            Binary Numbers:
+              name: ორობითი რიცხვები
         csd-videos:
           stages:
             new stage:
@@ -6087,3 +6114,47 @@ ka:
           stages:
             new stage:
               name: ახალი დონე
+        csl-vn:
+          stages:
+            Programming in Maze:
+              name: პროგრამირება ლაბირინთში
+            Programming with Rey and BB-8:
+              name: პროგრამირება რეისთან და BB-8-სთან ერთად
+            Loops in Ice Age:
+              name: ციკლები გამყინვარების პერიოდში
+            Ocean Scene with Loops:
+              name: ციკლები მხატვარში
+        dlp19-csd-mod-w2:
+          stages:
+            new stage:
+              name: ახალი დონე
+        csd4-pilot:
+          stages:
+            What is a Computer?:
+              name: რა არის კომპიუტერი?
+            Input and Output:
+              name: შეყვანილი და მიღებული ინფორმაცია
+            Processing:
+              name: დამუშავება
+            Project - Propose an App:
+              name: პროექტი - შემოგვთავაზეთ აპლიკაცია
+        csp2-pilot:
+          stages:
+            new stage:
+              name: ახალი დონე
+        peru-2019:
+          stages:
+            new stage:
+              name: ახალი დონე
+            Introduction:
+              name: შესავალი
+            Debugging in Collector:
+              name: გამართვა შემგროვებელში
+            'Loops: My Loopy Robotic Friends':
+              name: 'ციკლები: ჩემი ციკლური რობოტისებრი მეგობრები'
+            Loops in Artist:
+              name: ციკლები მხატვარში
+            Nested Loops:
+              name: ჩასმული ციკლები
+            Events in Star Wars:
+              name: მოვლენები ვარსკვლავურ ომებში

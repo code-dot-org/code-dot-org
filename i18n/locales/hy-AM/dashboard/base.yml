@@ -20,6 +20,7 @@ hy:
         edit_header: 'Խմբագրել Հաշիվը Մանրամասներ'
         error:
           future: հակում է լինի ապագայում
+  beta: "բետա"
   hello: "Բարև աշխարհ"
   welcome_back: "Բարի վերադարձ, %{name}"
   your_professional_learning_plan: "Ձեր Մասնագիտական ​​ուսուցում Plan"
@@ -297,11 +298,6 @@ hy:
     no_primary_course: "Փորձեք մի Code Studio դասընթաց"
     choose_next_course: "Փորձեք մի օրենսգիրք Studio դասընթաց ընտրելով մեկը ստորեւ"
     print_certificate: "Տպել վկայական"
-    announcement_title: "Announcements"
-    announcement_learn_more_button: "Սովորել ավելին"
-    announcement_try_now_button: "Փորձել հիմա"
-    announcement_petition: "Որպես ուսուցիչ, դու առաջատար ճանապարհ է շարժման տալ յուրաքանչյուր ուսանող յուրաքանչյուր դպրոց հնարավորություն է տալիս սովորել համակարգչային գիտությունը: Հիմա, որ ժամանակն է, թող ձեր ներկայացուցիչները լսել ձեզ. Այս շաբաթ, կրթության առաջնորդները, 28 նահանգապետեր, եւ ղեկավարները Ամերիկաների խոշորագույն ընկերությունները միացել միասին բաց նամակ, խնդրելով ԱՄՆ Կոնգրեսին է ֆինանսավորել K-12 համակարգչային գիտության կրթություն:"
-    announcement_petition_button: "Հավելեք ձեր անունը"
   move_students:
     new_section_dne: "Sorry, but section %{new_section_code} does not exist. Please enter a different section code."
     section_code_cant_be_current_section: "Ներկայիս բաժինը չի կարող լինել նույնը, քանի որ նոր բաժնում:"

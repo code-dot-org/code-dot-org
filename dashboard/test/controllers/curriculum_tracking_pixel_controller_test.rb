@@ -11,8 +11,11 @@ class CurriculumTrackingPixelControllerTest < ActionController::TestCase
   def assert_curriculum_page_view_logged(curriculum_url, user_id)
     assert @firehose_record[:study], CurriculumTrackingPixelController::STUDY_NAME
     assert @firehose_record[:event], CurriculumTrackingPixelController::EVENT_NAME
-    assert @firehose_record[:data_json]["curriculumBuilderUrl"], curriculum_url
-    assert @firehose_record[:data_json]["userId"], user_id
+    assert @firehose_record[:data_string], curriculum_url
+    split_url = curriculum_url.try(:split, '/')
+    assert @firehose_record[:data_json]["csx"], split_url[1]
+    assert @firehose_record[:data_json]["course_or_unit"], split_url[2]
+    assert @firehose_record[:data_json]["lesson"], split_url[3]
   end
 
   def refute_curriculum_page_view_logged

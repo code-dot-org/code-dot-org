@@ -3,13 +3,11 @@ hideable_stages true
 exclude_csf_column_in_legend true
 student_detail_progress_view true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csd-19/unit3/"], ["teacherForum", "https://forum.code.org/c/csd3"], ["vocabulary", "https://curriculum.code.org/csd-19/unit3/vocab/"], ["standardMappings", "https://curriculum.code.org/csd-19/unit3/standards/"], ["codeIntroduced", "https://curriculum.code.org/csd-19/unit3/code/"]]
-stage_extras_available true
 has_verified_resources true
 has_lesson_plan true
-curriculum_path 'https://curriculum.code.org/csd-19/unit3/{LESSON}'
 project_widget_visible true
 project_widget_types ["gamelab", "weblab"]
-family_name ''
+pilot_experiment 'csd-piloters'
 project_sharing true
 curriculum_umbrella 'CSD'
 
@@ -38,135 +36,141 @@ level 'CSD U3 drawing practice choice', progression: 'Drawing'
 level 'CSD U3 debug_pilot', progression: 'Drawing', assessment: true
 level 'CSD U3 drawing challenges', named: true
 
-stage 'Shapes and Randomization', flex_category: 'csd3_1'
+stage 'Shapes and Parameters', flex_category: 'csd3_1'
 level 'CSD U3L04 TFMD_pilot', named: true
 level 'CSD U3 Random Taller Rectangle_pilot', progression: 'New Shapes'
 level 'CSD U3 Random Ellipse Behind_2018_pilot', progression: 'More Parameters'
 level 'CSD U3 Random background_pilot', progression: 'More Parameters'
 level 'CSD U3 Random background2_pilot', progression: 'More Parameters'
 level 'CSD U3 Random Debug Grass_pilot', progression: 'More Parameters'
+level 'CSD Games parameters practice', progression: 'More Parameters'
 level 'CSD U3 Random Debug Cloud_2018_pilot', progression: 'More Parameters', assessment: true
-level 'CSD U3 shape size map_pilot', named: true
-level 'CSD U3 Random random ellipse_2018_pilot', progression: 'More Parameters'
-level 'CSD U3 Random random ellipse2_2018_pilot', progression: 'Using Random Numbers'
-level 'CSD U3 Random rainbow snake_2018_pilot', progression: 'Using Random Numbers', assessment: true
-level 'CSD U3 Random Number Map Level_pilot', named: true
-bonus 'CSD U3 L4 Freeplay_pilot'
+level 'CSD Games Parameters challenge', named: true
+level 'CSD U3 parameters shape scene', named: true
 
 stage 'Variables', flex_category: 'csd3_1'
 level 'CSD U3L05 TFMD_pilot', named: true
+level 'CSD U3 Variables Predict Where X_pilot', progression: 'Code Prediction'
 level 'Introduction to Variables - Part 1_pilot', named: true
-level 'CSD U3 Variables Predict Where X_pilot', progression: 'Intro to Variables'
-level 'CSD U3 Variables Predict Where XY_pilot', progression: 'Intro to Variables'
-level 'CSD U3 Variables change circle size_pilot', progression: 'Intro to Variables'
-level 'CSD U3 Variables Draw Poppy_pilot', progression: 'Intro to Variables'
-level 'CSD U3 Variables Map_pilot', named: true
-level 'CSD U3 Variables naming rules v2_2018_pilot', progression: 'Intro to Variables'
-level 'CSD U3 Variables random with assignment_pilot', progression: 'Intro to Variables', assessment: true
-level 'CSD U3 naming map_pilot', named: true
-bonus 'CSD U3 Variables Draw Challenge_pilot'
-bonus 'CSD U3 Variables Challenge_pilot'
-bonus 'CSD U3 L5 Freeplay_pilot'
+level 'CSD U3 Variables Predict Where XY_pilot', progression: 'Variables'
+level 'CSD U3 Variables naming rules v2_2018_pilot', progression: 'Variables'
+level 'CSD U3 Variables Draw Poppy_pilot', progression: 'Variables'
+level 'CSD Games variables practice', progression: 'Variables'
+level 'CSD U3 Variables assessment', progression: 'Variables', assessment: true
+level 'CSD Games variables challenge', named: true
 
-stage 'Sprites', flex_category: 'csd3_1'
+stage 'Random Numbers', flex_category: 'csd3_1'
 level 'CSD U3L06 TFMD_pilot', named: true
+level 'CSD U3 Random random ellipse_2018_pilot', progression: 'Exploring Random Numbers'
+level 'CSD U3 Random random ellipse2_2018_pilot', progression: 'Using Random Numbers'
+level 'CSD U3 Variables random with assignment_pilot', progression: 'Using Random Numbers'
+level 'CSD U3 Variables random reassign', progression: 'Using Random Numbers'
+level 'CSD games random practice', progression: 'Using Random Numbers'
+level 'CSD U3 Random rainbow snake_2018_pilot', progression: 'Using Random Numbers', assessment: true
+level 'CSD games random challenge', named: true
+
+stage 'Sprites and Animations', flex_category: 'csd3_1'
+level 'CSD U3L07 TFMD_pilot', named: true
+level 'CSD U3 Sprites Exploration', named: true
 level 'CSD: Sprites in Game Lab_pilot', named: true
-level 'CSD U3 Sprites Map_pilot', named: true
 level 'CSD U3 Sprites intro sprites_pilot', progression: 'Intro to Sprites'
-level 'CSD U3 Sprites intro predict_pilot', progression: 'Intro to Sprites'
 level 'CSD U3 Sprites intro debug_pilot', progression: 'Intro to Sprites'
+level 'CSD U3 Sprites anitab 1_pilot', progression: 'Intro to Sprites'
 level 'CSD: Animation Tab_pilot', named: true
-level 'CSD U3 Animation Tab Map_pilot', named: true
-level 'CSD U3 Sprites anitab 1_pilot', progression: 'Adding Images'
-level 'CSD U3 Sprites anitab 2_pilot', progression: 'Adding Images'
-level 'CSD U3 Sprites anitab 3_pilot', progression: 'Adding Images'
+level 'CSD U3 Sprites sequencing', progression: 'Adding Images'
+level 'CSD Games Sprites practice', progression: 'Adding Images'
 level 'CSD U3 drawSprites placement match_2019_pilot', progression: 'Adding Images', assessment: true
+level 'CSD U3 Sprites assessment', progression: 'Adding Images', assessment: true
+level 'CSD Games Sprites Challenges', named: true
+
+stage 'Sprite Properties', flex_category: 'csd3_1'
+level 'CSD U3L08 TFMD_pilot', named: true
+level 'CSD Games properties predict', named: true
+level 'CSD Games properties xy', progression: 'Sprite Properties'
+level 'CSD Games properties new', progression: 'Sprite Properties'
+level 'CSD Games Properties practice', progression: 'Sprite Properties'
+level 'CSD Games properties assessment', progression: 'Sprite Properties', assessment: true
+level 'CSD Games Properties challenge', named: true
+
+stage 'Text and Captioned Scenes', flex_category: 'csd3_1'
+level 'CSD U3L09 TFMD_pilot', named: true
+level 'CSD U3 Scene Example_2018_pilot', named: true
 level 'CSD U3 Sprites text_pilot', progression: 'Making Scenes'
 level 'CSD U3 Sprites text debug_2018_pilot', progression: 'Making Scenes'
-level 'CSD U3 Scene Example_2018_pilot', named: true
 level 'CSD U3 Sprites scene drawing_pilot', progression: 'Making Scenes'
 level 'CSD U3 Sprites scene sprites_pilot', progression: 'Making Scenes', assessment: true
 level 'CSD U3 Sprites scene text_pilot', progression: 'Making Scenes'
-bonus 'CSD U3 Sprites scene challenge_pilot'
-bonus 'CSD U3 L6 Freeplay_pilot'
+level 'CSD U3 Sprites scene challenge_pilot', progression: 'Challenge'
 
 stage 'The Draw Loop', flex_category: 'csd3_1'
-level 'CSD U3L07 TFMD_pilot', named: true
+level 'CSD U3L10 TFMD pilot', named: true
 level 'CSD: Introduction to the Draw Loop_pilot', named: true
 level 'CSD U3 Draw Loop Plugged predict 1_pilot', progression: 'Shapes and the Draw Loop'
-level 'CSD U3 The Draw Loop Map_pilot', named: true
 level 'CSD U3 Draw Loop Plugged orange and green_pilot', progression: 'Shapes and the Draw Loop'
 level 'CSD U3 Draw Loop Plugged predict 2_pilot', progression: 'Shapes and the Draw Loop'
 level 'CSD U3 dancing alien_pilot', progression: 'Sprites and the Draw Loop'
-level 'CSD U3 Sprite Properties Map_pilot', named: true
 level 'CSD U3 Draw Loop Plugged wiggle sprite x_pilot', progression: 'Sprites and the Draw Loop'
 level 'CSD U3 Draw Loop Plugged wiggle sprite y_pilot', progression: 'Sprites and the Draw Loop'
 level 'CSD U3 Draw Loop Plugged wiggle sprite rotation_pilot', progression: 'Sprites and the Draw Loop'
 level 'CSD U3 Draw Loop Plugged update your scene_pilot', progression: 'Animate Your Scene', assessment: true
-bonus 'CSD U3 L7 Freeplay_pilot'
+level 'CSD U3 L7 Freeplay_pilot', progression: 'Challenge'
 
 stage 'The Counter Pattern Unplugged', flex_category: 'csd3_1'
-level 'CSD U3L08 TFMD_pilot', named: true
+level 'CSD U3L11 TFMD_pilot', named: true
 
 stage 'Sprite Movement', flex_category: 'csd3_1'
-level 'CSD U3L09 TFMD_pilot', named: true
+level 'CSD U3L12 TFMD_pilot', named: true
 level 'CSD: Animating Sprite Movement_pilot', named: true
 level 'CSD U3 - Simple Counter Predict_pilot', progression: 'Movement with the Counter Pattern'
 level 'CSD U3 Sprite Movement Right_pilot', progression: 'Movement with the Counter Pattern'
 level 'CSD U3 Sprite Movement Left_pilot', progression: 'Movement with the Counter Pattern'
 level 'CSD U3 Sprite Movement Predict_pilot', progression: 'Movement with the Counter Pattern', assessment: true
 level 'CSD U3 Diagonal Movement_pilot', progression: 'Movement with the Counter Pattern'
-level 'CSD Counter Pattern Map_pilot', named: true
 level 'CSD U3 Watcher Predict_pilot', progression: 'Animating Sprites'
 level 'CSD U3 Watcher Debug_pilot', progression: 'Animating Sprites'
 level 'CSD U3 Movement Fish_pilot', progression: 'Animating Sprites'
 level 'CSD U3 Movement Gears_pilot', progression: 'Animating Sprites'
-level 'CSD U3 Watchers Map_pilot', named: true
 level 'CSD U3 Movement Your Own 1_pilot', progression: 'Create Your Own Animation'
 level 'CSD U3 Movement Your Own 2_pilot', progression: 'Create Your Own Animation', assessment: true
-bonus 'CSD sprite movement challenge_pilot'
-bonus 'CSD U3 Movement Fish challenge_pilot'
-bonus 'CSD U3 L9 Freeplay_pilot'
+level 'CSD sprite movement challenge_pilot', progression: 'Challenge'
+level 'CSD U3 Movement Fish challenge_pilot', progression: 'Challenge'
+level 'CSD U3 L9 Freeplay_pilot', progression: 'Challenge'
 
 stage 'Booleans Unplugged', flex_category: 'csd3_1'
-level 'CSD U3L10 TFMD_pilot', named: true
+level 'CSD U3L13 TFMD_pilot', named: true
 
 stage 'Conditionals', flex_category: 'csd3_1'
-level 'CSD U3L11 TFMD_pilot', named: true
+level 'CSD U3L14 TFMD_pilot', named: true
 level 'CSD U3 Boolean Predict_pilot', progression: 'Make a Prediction'
 level 'CSD U3 - Booleans Video_pilot', named: true
 level 'CSD U3 Boolean Modify_pilot', progression: 'Boolean Comparison'
 level 'CSD U3 - conditionals - Matching_2018_2019_pilot', progression: 'Boolean Comparison'
 level 'CSD U3 - conditionals - transition_pilot', progression: 'Boolean Comparison'
 level 'CSD U3 Conditionals Apple_2018_pilot', progression: 'Boolean Comparison'
-level 'CSD Booleans Map_pilot', named: true
 level 'csd U3 conditional statements video_pilot', named: true
 level 'CSD U3 - conditionals - first conditional_pilot', progression: 'Basic Conditionals'
 level 'CSD U3 Conditionals Apple 2_2018_pilot', progression: 'Basic Conditionals', assessment: true
-level 'CSD If Statements Map_pilot', named: true
-bonus 'CSD U3 - conditionals - first conditional 2_2018_pilot'
-bonus 'CSD U3 L11 Freeplay_pilot'
+level 'CSD U3 - conditionals - first conditional 2_2018_pilot', progression: 'Challenge'
+level 'CSD U3 L11 Freeplay_pilot', progression: 'Challenge'
 
 stage 'Keyboard Input', flex_category: 'csd3_1'
-level 'CSD U3L12 TFMD_pilot', named: true
+level 'CSD U3L15 TFMD_pilot', named: true
 level 'CSD U3 Keypress Boolean_2018_pilot', progression: 'Keyboard Input'
 level 'CSD U3 keydown conditional_2018_pilot', progression: 'Keyboard Input'
 level 'CSD U3 UP_ARROW_2018_pilot', progression: 'Keyboard Input'
 level 'CSD U3 Input Fish_pilot', progression: 'Keyboard Input'
 level 'CSD U3 Input Gears_pilot', progression: 'Keyboard Input'
 level 'CSD U3 Direction Arrows_2018_pilot', progression: 'Keyboard Input', assessment: true
-level 'CSD U3 Animation Edit Map_pilot', named: true
 level 'CSD U3 Direction Animations_2018_pilot', progression: 'Keyboard Input'
-bonus 'CSD U3 Keyboard Input Challenge_2018_pilot'
-bonus 'CSD U3 L12 Freeplay_pilot'
+level 'CSD U3 Keyboard Input Challenge_2018_pilot', progression: 'Challenge'
+level 'CSD U3 L12 Freeplay_pilot', progression: 'Challenge'
 
 stage 'Other Forms of Input', flex_category: 'csd3_1'
-level 'CSD U3L13 TFMD_pilot', named: true
+level 'CSD U3L16 TFMD_pilot', named: true
 level 'CSD U3 if else predict_pilot', named: true
 level 'CSD U3 - Conditionals Video_pilot', named: true
 level 'CSD U3 If Else_pilot', progression: 'Input with If-Else'
 level 'CSD U3 Else_pilot', progression: 'Input with If-Else', assessment: true
-level 'CSD If Else Map_pilot', named: true
 level 'CSD U3 Mouse Input Bee 1_pilot', progression: 'More Input'
 level 'CSD U3 Mouse Input Bee 2_pilot', progression: 'More Input'
 level 'CSD U3 Keypress Watchers_pilot', progression: 'More Input'
@@ -174,11 +178,11 @@ level 'CSD U3 Keypress Matching_2018_2019_pilot', progression: 'More Input'
 level 'CSD U3 - complex - mouse down_pilot', progression: 'More Input'
 level 'CSD U3 - complex - key up and down_pilot', progression: 'More Input'
 level 'CSD U3 - complex - mouse move_pilot', progression: 'More Input'
-bonus 'CSD U3 Compound Nested Challenge_pilot'
-bonus 'CSD U3 L13 Freeplay_pilot'
+level 'CSD U3 Compound Nested Challenge_pilot', progression: 'Challenge'
+level 'CSD U3 L13 Freeplay_pilot', progression: 'Challenge'
 
 stage 'Project - Interactive Card', flex_category: 'csd3_1'
-level 'CSD U3L14 TFMD_pilot', named: true
+level 'CSD U3L17 TFMD_pilot', named: true
 level 'CSD U3 Interactive Card Exemplar_pilot', named: true
 level 'CSD U3 Card Examples_2018_2019_pilot', named: true
 level 'CSD U3 Interactive Card Background_pilot', progression: 'Project Work'
@@ -189,7 +193,7 @@ level 'CSD U3 Interactive Card Final_pilot', progression: 'Project Work'
 level 'csd-pulse-check-survey-1-levelgroup U3Ch1_2018_2019_pilot', progression: 'Reflection', assessment: true
 
 stage 'Velocity', flex_category: 'csd3_2'
-level 'CSD U3L15 TFMD_pilot', named: true
+level 'CSD U3L18 TFMD_pilot', named: true
 level 'CSD: Sprite Velocity_pilot', named: true
 level 'CSD U3 abstraction velocityX_pilot', progression: 'Velocity'
 level 'CSD U3 abstraction velocityY_pilot', progression: 'Velocity'
@@ -198,14 +202,13 @@ level 'CSD U3 abstraction rotation control_pilot', progression: 'Velocity'
 level 'CSD U3 abstraction velocityY control_pilot', progression: 'Velocity'
 level 'CSD U3 abstraction velocityX if-statements_pilot', progression: 'Velocity'
 level 'CSD U3 abstraction velocityX control_pilot', progression: 'Velocity'
-level 'CSD U3 velocity map_pilot', named: true
 level 'CSD U3 abstraction jump_2018_pilot', progression: 'Side Scroller'
 level 'CSD U3 abstraction tumbleweed_pilot', progression: 'Side Scroller'
 level 'CSD U3 abstraction looping_pilot', progression: 'Side Scroller'
-bonus 'CSD U3 L15 Freeplay_pilot'
+level 'CSD U3 L15 Freeplay_pilot', progression: 'Challenge'
 
 stage 'Collision Detection', flex_category: 'csd3_2'
-level 'CSD U3L16 TFMD_pilot', named: true
+level 'CSD U3L19 TFMD_pilot', named: true
 level 'CSD U3 collisions car intro_pilot', named: true
 level 'CSD U3 collisions build isTouching_pilot', named: true
 level 'CSD U3 collisions isTouching intro_pilot', progression: 'isTouching'
@@ -215,11 +218,10 @@ level 'CSD U3 collisions horse_pilot', progression: 'isTouching', assessment: tr
 level 'CSD U3 collisions debug isTouching_pilot', progression: 'isTouching'
 level 'CSD U3 collisions scoreboard_pilot', progression: 'Collisions in Games'
 level 'CSD U3 collisions sidescroll2_pilot', progression: 'Collisions in Games'
-level 'CSD U3 istouching map_pilot', named: true
-bonus 'CSD U3 L16 Freeplay_pilot'
+level 'CSD U3 L16 Freeplay_pilot', progression: 'Challenge'
 
 stage 'Complex Sprite Movement', flex_category: 'csd3_2'
-level 'CSD U3L17 TFMD_pilot', named: true
+level 'CSD U3L20 TFMD_pilot', named: true
 level 'CSD U3 Complex Movement counter prediction gamelab_pilot', named: true
 level 'CSD U3 abstraction accelerateX_pilot', progression: 'Velocity and the Counter Pattern'
 level 'CSD U3 abstraction accelerateY_pilot', progression: 'Velocity and the Counter Pattern'
@@ -232,11 +234,10 @@ level 'CSD U3 abstraction left right counter 2_pilot', progression: 'Flyer Game'
 level 'CSD U3 abstraction add coin_pilot', progression: 'Flyer Game'
 level 'CSD U3 abstraction reset coin_pilot', progression: 'Flyer Game'
 level 'CSD U3 abstraction make it your own_pilot', progression: 'Flyer Game'
-level 'CSD U3 acceleration map_pilot', named: true
-bonus 'CSD U3 L17 Freeplay_pilot'
+level 'CSD U3 L17 Freeplay_pilot', progression: 'Challenge'
 
 stage 'Collisions', flex_category: 'csd3_2'
-level 'CSD U3L18 TFMD_pilot', named: true
+level 'CSD U3L21 TFMD_pilot', named: true
 level 'CSD U3 collisions predict set velocity code_pilot', named: true
 level 'CSD U3 collisions displace x_pilot', progression: 'Collisions'
 level 'CSD U3 collisions displace y_pilot', progression: 'Collisions'
@@ -252,11 +253,10 @@ level 'CSD U3 collisions flyman bounceOff_pilot', progression: 'Flyer Game'
 level 'CSD U3 collisions flyman displace coin_pilot', progression: 'Flyer Game'
 level 'CSD U3 collisions flyman change colliders_pilot', progression: 'Flyer Game'
 level 'CSD U3 collisions flyman make it your own_pilot', progression: 'Flyer Game', assessment: true
-level 'CSD U3 interactions map_pilot', named: true
-bonus 'CSD U3 L18 Freeplay_pilot'
+level 'CSD U3 L18 Freeplay_pilot', progression: 'Challenge'
 
 stage 'Functions', flex_category: 'csd3_2'
-level 'CSD U3L19 TFMD_pilot', named: true
+level 'CSD U3L22 TFMD_pilot', named: true
 level 'CSD U3 function video_pilot', named: true
 level 'CSD U3 Functions Call Function_pilot', progression: 'Functions'
 level 'CSD U3 Functions Order Functions_pilot', progression: 'Functions'
@@ -269,10 +269,10 @@ level 'CSD U3 Functions Write Reset_pilot', progression: 'Collector Game'
 level 'CSD U3 Functions Add IsTouching_pilot', progression: 'Collector Game'
 level 'CSD U3 Functions Add Change Background_pilot', progression: 'Collector Game', assessment: true
 level 'CSD U3 functions review_pilot', named: true
-bonus 'CSD U3 L19 Freeplay_pilot'
+level 'CSD U3 L19 Freeplay_pilot', progression: 'Challenge'
 
 stage 'The Game Design Process', flex_category: 'csd3_2'
-level 'CSD U3L20 TFMD_pilot', named: true
+level 'CSD U3L23 TFMD_pilot', named: true
 level 'CSD U3 AnimationsMulti Play Defender_pilot', named: true
 level 'CSD U3 AnimationsMulti STOP project guide_2018_2019_pilot', named: true
 level 'CSD U3 AnimationsMulti introducing multiframe_pilot', progression: 'Multiframe Animations'
@@ -291,7 +291,7 @@ level 'CSD U3 AnimationsMulti defender touch water_pilot', progression: 'Cake De
 level 'CSD U3 AnimationsMulti defender make it your own_pilot', progression: 'Cake Defender'
 
 stage 'Using the Game Design Process', flex_category: 'csd3_2'
-level 'CSD U3L21 TFMD_pilot', named: true
+level 'CSD U3L24 TFMD_pilot', named: true
 level 'CSD U3 platform sample1_pilot', named: true
 level 'CSD U3 platform intro_2018_2019_pilot', named: true
 level 'CSD U3 platform background1_pilot', progression: 'Platform Jumper - Background and Variables'
@@ -313,7 +313,7 @@ level 'CSD U3 platform sample3_pilot', named: true
 level 'CSD U3 platform challenge_pilot', assessment: true
 
 stage 'Project - Design a Game', flex_category: 'csd3_2'
-level 'CSD U3L22 TFMD_pilot', named: true
+level 'CSD U3L25 TFMD_pilot', named: true
 level 'CSD U3 game intro_2018_2019_pilot', named: true
 level 'CSD U3 game variables_pilot', progression: 'Project - Background and Variables'
 level 'CSD U3 game backgrounds_pilot', progression: 'Project - Background and Variables'

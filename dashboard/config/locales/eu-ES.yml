@@ -31,6 +31,7 @@ eu:
         edit_header: Aldatu kontuaren xehetasunak
         error:
           future: ezin du izan etorkizunean
+  beta: beta
   hello: Kaixo, mundua
   welcome_back: Ongi etorria berriro, %{name}
   submit: Bidali
@@ -322,9 +323,6 @@ eu:
     no_primary_course: Probatu Code Studioko ikastaro bat
     choose_next_course: Probatu Code Studioko ikastaro bat hauetako bat aukeratuta
     print_certificate: Inprimatu ziurtagiria
-    announcement_title: Berriak
-    announcement_learn_more_button: Ikasi gehiago
-    announcement_try_now_button: Saiatu orain
   share:
     title: Ezagutu Code Studio
     description: Edonork ikas dezake informatika. Jokoak, aplikazioak eta artea sortu

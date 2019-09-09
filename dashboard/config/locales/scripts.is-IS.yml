@@ -5113,6 +5113,12 @@ is:
               name: nýr áfangi
             Number Systems:
               name: Talnakerfi
+            Sending Binary Messages:
+              name: Sending stafrænna skilaboða
+            Sending Binary Messages with the Internet Simulator:
+              name: Sending tvenndarboða með Internet-herminum
+            Binary Numbers:
+              name: Tvíundartölur
         csd-videos:
           stages:
             new stage:
@@ -5336,7 +5342,39 @@ is:
                 til að betrumbæta leikinn að vild.
             Using the Game Design Process:
               name: Notkun leikjahönnunarferlisins
+            Sprite Properties:
+              name: Eiginleikar kvika
         maddie-test:
           stages:
             new stage:
               name: nýr áfangi
+        csl-vn:
+          stages:
+            Loops in Ice Age:
+              name: Lykkjur í Ísöld
+        dlp19-csd-mod-w2:
+          stages:
+            new stage:
+              name: nýr áfangi
+        csd4-pilot:
+          stages:
+            Input and Output:
+              name: Inntak og Úttak
+            Processing:
+              name: Vinnsla
+            Project - Propose an App:
+              name: Verkefni - Tillaga að Appi
+        csp2-pilot:
+          stages:
+            new stage:
+              name: nýr áfangi
+            Routers and Redundancy:
+              name: Netbeinar og umfremd
+        peru-2019:
+          stages:
+            new stage:
+              name: nýr áfangi
+            Introduction:
+              name: Kynning
+            Nested Loops:
+              name: Innri lykkjur

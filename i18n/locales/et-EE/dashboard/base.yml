@@ -26,6 +26,7 @@ et:
         edit_header: 'Muuda kasutajakonto üksikasju'
         error:
           future: ei saa olla tulevikus
+  beta: "beeta"
   hello: "Tere maailm"
   welcome_back: "Tere tulemast tagasi, %{name}"
   your_professional_learning_plan: "Sinu professionaalne õppeplaan"
@@ -351,18 +352,6 @@ et:
     no_primary_course: "Proovige Code Studio kursust"
     choose_next_course: "Proovige Code Studio kursuseid. Selleks valige üks altpoolt"
     print_certificate: "Prindi tunnistus"
-    announcement_title: "Teated"
-    announcement_learn_more_button: "Lisateave"
-    announcement_try_now_button: "Lisateave"
-    announcement_host_an_hour_button: "Vii läbi KoodiTund"
-    announcement_watch_video_button: "Vaata videot"
-    announcement_petition: "Õpetajana oled sa teejuht liikumises, mis annab igale õpilasele igas koolis võimaluse arvutiteadust õppida. Nüüd on aeg, et ka sinu esindajad sinu arvamust kuuleksid. Sel nädalal kirjutasid haridusjuhid, 28 kuberneri, ameerika suurimate ettevõtete juhid ühise avatud kirja, kus palusid, et U.S.A. kongress rahastaks K-12 hariduse arvutiteaduse programmi."
-    announcement_petition_button: "Lisa oma nimi"
-    announcement_apply_now: "Taotle nüüd"
-    announcement_all: "Hoia end kursis uute funktsioonide ja uudistega meie õpetajate blogis. <a href='%{teacher_blog_url}' target='_blank'>Vaata vanemaid teadaandeid.</a>"
-    announcement_hoc_launch: "Tuhanded õpetajad rohkem kui 180 riigis hakkavad 5.-11. detsembril toimuva KoodiTunni jooksul arvutiteadusi õpetama. Me loodame, et aitate meil jõuda rohkemate õpilasteni kui kunagi varem. <a href='%{signup_url}' target='_blank'> Registreeri oma KoodiTund</a> ja andke ja teistele õpetajatele teada, et igaühest võib saada arvutiteaduste õpetaja."
-    announcement_mc_launch: "Ühel meie kõige populaarsemal juhendil on nüüd järg! Uus KoodiTunni Minecraft Designer laseb õpilastel ise luua Minecrafti maailma reegleid. Nad saavad luua täiesti unikaalse Minecrafti kogemuse ning jagada seda sõpradega, kes saavad seda oma telefonides mängida. Kasuta seda oma klassi KoodiTunnis."
-    announcement_how_code_studio: "Selleks, et arvutiteadusi oma klassis õpetada ei ole teil vaja eelnevat kogemust. Code.org pakub õppe- ja tunnikavasid, kõrge kvaliteediga õppeprogramme ja hulgaliselt vahendeid kõikidele tasemetele&mdash; kõike, mida vajate, ja seda täiesti tasuta. Kust alustada? Lae alla<a href='%{video_download_url}'>see video</a>!"
   move_students:
     new_section_dne: "Vabandame, kuid seda sektsiooni ei ole olemas %{new_section_code} Palun lisa teine sektsiooni kood."
     section_code_cant_be_current_section: "Käesolev sektsioon ei saa olla sama kui uus sektsioon."

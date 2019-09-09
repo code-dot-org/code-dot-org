@@ -198,11 +198,6 @@ km:
           CONDITION:
             '"when"': នៅ​ពេល
             '"while"': នៅ​ពេល
-      gamelab_debugSprite:
-        options:
-          VAL:
-            'true': ពិត
-            'false': មិន​ពិត
       gamelab_getProp:
         options:
           PROPERTY:
@@ -269,13 +264,6 @@ km:
             '"left"': ឆ្វេង
             '"right"': ស្តាំ
             '"space"': លំហ​អាកាស
-      gamelab_whenPressedAndReleased:
-        options:
-          DIR:
-            "'up'": ឡើង
-            "'down'": ចុះ
-            "'left'": ឆ្វេង
-            "'right'": ស្តាំ
       gamelab_whileKey:
         options:
           KEY:

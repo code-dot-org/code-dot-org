@@ -94,4 +94,53 @@ describe('clientApi module', () => {
       );
     });
   });
+
+  describe('starter assets api', () => {
+    const levelName = 1;
+
+    describe('getStarterAssets', () => {
+      it('makes an ajax request to the correct url', () => {
+        clientApi.starterAssets.getStarterAssets(levelName, () => {}, () => {});
+
+        expect(requests).to.have.length(1);
+        expect(requests[0].method).to.equal('GET');
+        expect(requests[0].url).to.equal(`/level_starter_assets/${levelName}/`);
+      });
+    });
+
+    describe('withLevelName', () => {
+      it('binds levelName to the api and returns the bound api', () => {
+        const boundApi = clientApi.starterAssets.withLevelName(levelName);
+
+        assert.equal(levelName, boundApi.levelName);
+      });
+    });
+
+    describe('basePath', () => {
+      it('returns the correct base path', () => {
+        const path = 'some-path';
+        const boundApi = clientApi.starterAssets.withLevelName(levelName);
+
+        assert.equal(
+          `/level_starter_assets/${levelName}/${path}`,
+          boundApi.basePath(path)
+        );
+      });
+
+      it('throws an error if StarterAssetsApi is not bound', () => {
+        assert.throws(
+          clientApi.starterAssets.basePath,
+          'You must bind the API and set levelName before creating a base path.'
+        );
+      });
+
+      it('throws an error if levelName is not set', () => {
+        const boundApi = clientApi.starterAssets.withLevelName(undefined);
+        assert.throws(
+          boundApi.basePath,
+          'You must bind the API and set levelName before creating a base path.'
+        );
+      });
+    });
+  });
 });

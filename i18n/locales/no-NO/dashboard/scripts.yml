@@ -1748,6 +1748,10 @@
           stages:
             While Loops:
               name: Gjenta-løkker
+        csp1-pilot:
+          stages:
+            Binary Numbers:
+              name: Binære Tall
         time4csdemo:
           stages:
             Crowdsourcing:
@@ -1776,3 +1780,11 @@
               name: Hastighet
             Functions:
               name: Funksjoner
+            Sprite Properties:
+              name: Figuregenskaper
+        peru-2019:
+          stages:
+            Introduction:
+              name: Introduksjon
+            Nested Loops:
+              name: Løkker i løkker

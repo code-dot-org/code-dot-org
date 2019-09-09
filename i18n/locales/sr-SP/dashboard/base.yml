@@ -23,6 +23,7 @@ sr:
         edit_header: 'Уреди детаље налога'
         error:
           future: не може бити у будућности
+  beta: "пробна верзија"
   hello: "Здраво свете"
   welcome_back: "Добродошао назад, %{name}"
   see_your_learning_plan: "Погледај твој план учења"
@@ -294,9 +295,6 @@ sr:
     no_primary_course: "Испробајте Code Studio курс"
     choose_next_course: "Испробајте Code Studio курс одабиром једног испод"
     print_certificate: "Одштампајте сертификат"
-    announcement_title: "Објаве"
-    announcement_learn_more_button: "Сазнајте више"
-    announcement_try_now_button: "Испробај сада"
   share:
     title: "Научите о Code Studio-ју"
     description: "Свако може да научи компјутерску науку. Да направи игрице, апликације и уметност помоћу кодирања."

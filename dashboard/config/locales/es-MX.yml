@@ -45,6 +45,7 @@ es-MX:
           para <strong>%{email}</strong>.
         error:
           future: no puede ser en el futuro
+  beta: beta
   hello: Hola, mundo
   welcome_back: Bienvenido, %{name}
   your_professional_learning_plan: Tu plan de aprendizaje profesional
@@ -571,128 +572,6 @@ es-MX:
     no_primary_course: Prueba un curso de Code Studio
     choose_next_course: Prueba un curso de Código Studio eligiendo uno a continuación
     print_certificate: Imprimir Certificado
-    announcement_title: Anuncios
-    announcement_message_fall2016_features: Nos tomamos el verano para convertir tus
-      comentarios en nuevas características. Ahora, puedes <a href="%{pp_url}" target="_blank">seguir
-      el progreso de varios estudiantes</a>, aun si programan en parejas en un mismo
-      dispositivo. Puedes usar <a href="%{csp_widgets_url}" target="_blank">las mejores
-      herramientas interactivas</a> de nuestro curso de Principios de Ciencias de
-      la Computación en <i>cualquier</i> aula. ¡Y tus estudiantes pueden <a href="%{unused_code_url}"
-      target="_blank">mantener código sin usar</a> en sus espacios de trabajo para
-      experimentar cada vez más! Echa un vistazo a las nuevas características y cuéntanos  qué
-      piensas de ellas.
-    announcement_csp_widgets_message: "¿Estás buscando maneras divertidas de enseñar
-      cómo funciona Internet, por qué la criptografía mantiene seguros los datos y
-      otros conceptos a tus estudiantes? ¡Hemos tomado las mejores herramientas interactivas
-      de nuestro plan de estudios de Principios de Ciencias de la Computación y creamos
-      widgets únicos que puedes usar en cualquier momento!"
-    announcement_learn_more_button: Aprende más
-    announcement_try_now_button: Probar ahora
-    announcement_host_an_hour_button: Organiza una Hora
-    announcement_watch_video_button: Ver el video
-    announcement_petition: Como docente, estás liderando un movimiento para brindar
-      a cada estudiante, de cada escuela, la oportunidad de aprender ciencias de la
-      computación. Ahora es tiempo de que tus representantes te escuchen. Esta semana,
-      líderes de la educación, 28 gobernadores y CEO de las compañías más grandes
-      de los EE. UU. pidieron al Congreso de ese país, a través de una carta abierta,
-      que financie la enseñanza de ciencias de la computación a niños de escuelas
-      primarias y secundarias.
-    announcement_petition_button: Agrega tu nombre
-    announcement_go_beyond_button: Ir más allá
-    announcement_apply_now: Enviar solicitud
-    announcement_all: Conoce las nuevas características y actualizaciones en nuestro
-      blog para docentes. <a href='%{teacher_blog_url}' target='_blank'>Mira los anuncios
-      anteriores.</a>
-    announcement_hoc_launch: Del 5 al 11 de diciembre, miles de educadores de más
-      de 180 países comenzarán a enseñar ciencias de la computación durante la Hora
-      del Código. Contamos contigo para que nos ayudes a llegar a cada vez más estudiantes.
-      <a href='%{signup_url}' target='_blank'>Registra tu evento de la Hora del Código</a>
-      y muestra a los demás docentes que también pueden comenzar a enseñar ciencias
-      de la computación.
-    announcement_mc_launch: "¡Uno de nuestros tutoriales más populares ahora tiene
-      una segunda parte! Con el nuevo Diseñador de Minecraft para la Hora del Código,
-      los estudiantes pueden crear las reglas del mundo de Minecraft, dar forma a
-      una experiencia totalmente única y compartirla con sus amigos o jugarla en sus
-      teléfonos. Ponlo en práctica con tu clase durante la Hora del Código."
-    announcement_how_code_studio: No se necesita experiencia para comenzar a enseñar
-      ciencias de la computación en el aula. Code.org tiene planes de estudios, lecciones,
-      programas de aprendizaje profesional de alta calidad y una gran cantidad de
-      herramientas geniales para todos los niveles, sin costo. ¿No sabes por dónde
-      empezar? ¡Descarga <a href='%{video_download_url}'>este video</a>!
-    announcement_go_beyond: Ve mas allá de la Hora del Código y explora las ciencias
-      de la computación con tus estudiantes todas las semanas. Code.org tienes planes
-      de estudios, lecciones, programas de aprendizaje profesional de alta calidad
-      y una gran cantidad de herramientas geniales para todos los niveles, sin costo.
-      :) No necesitas experiencia para comenzar a enseñar ciencias de la computación
-      en tu aula.<b>Descubre el próximo paso que debes dar.</b>
-    announcement_teacher_recruitment: Docentes como tú lideran el movimiento educativo
-      de las Ciencias de la Computación. Puedes participar en programas de aprendizaje
-      profesional de alta calidad para niños de escuelas primarias y secundarias <strong>sin
-      ningún costo para ti o tu institución</strong>. Toma la iniciativa en ciencias
-      de la computación en tu escuela y aplica para el aprendizaje profesional.
-    announcement_teacher_recruitment2: Docentes como tú lideran el movimiento educativo
-      de las Ciencias de la Computación. Puedes participar en programas de aprendizaje
-      profesional de alta calidad para niños de escuelas primarias y secundarias <strong>sin
-      ningún costo para ti o tu institución</strong>. Toma la iniciativa en ciencias
-      de la computación en tu escuela y aplica para el aprendizaje profesional. Los
-      docentes de escuelas secundarias pueden postularse hasta el 17 de marzo.
-    announcement_csf_pilot: "<strong>¿Eres docente en una escuela primaria?</strong>
-      ¡Sé parte de la actualización de nuestros cursos de Fundamentos de Ciencias
-      de la Computación! Estamos buscando docentes para poner a prueba un plan de
-      estudios actualizado de Fundamentos de Ciencias de la Computación durante el
-      invierno y la primavera de 2017. Estamos ansiosos por escuchar tus comentarios
-      antes de que estas actualizaciones se apliquen en agosto de 2017."
-    announcement_student_privacy: La privacidad de tus estudiantes es muy importante
-      para Code.org. Para protegerla, hemos hecho un cambio en la página de inicio
-      de tu sección y así evitar que se muestren los nombres completos. De todas maneras,
-      recomendamos a los usuarios que <i>no usen sus nombres completos como estudiantes</i>.
-    announcement_apcsp_recruitment: '<strong>¿Eres docente del curso de Principios
-      de Ciencias de la Computación?</strong> Tus estudiantes podrían aparecer en
-      el próximo video viral de Code.org, para alentar a otros compañeros a que completen
-      el examen del curso este año. Invitamos a todos los estudiantes de Principios
-      Avanzados de Ciencias de la Computación a enviar un video de 10-20 segundos
-      con el mensaje: "Estoy tomando el examen #APCSP, porque..." en Twitter, Instagram
-      o Facebook. ¡Los mejores serán incluidos en nuestro video y los estudiantes
-      ganadores recibirán regalos de Code.org!'
-    announcement_apcsp_recruitment2: 'Este año, el examen de Principios Avanzados
-      de Ciencias de la Computación va a romper récords. La participación de los estudiantes
-      en el examen podría cambiar radicalmente la diversidad en Ciencias de la Computación,
-      pero necesitamos de tu ayuda. Alienta a cada estudiante de Principios de Ciencias
-      de la Computación a completar el examen de AP CSP y te <a href=''%{gift_url}''
-      target=''_blank''>enviaremos un regalo</a>. Los estudiantes también pueden alentar
-      a compañeros de todo el país en nuestro <a href=''%{challenge_url}'' target=''_blank''>desafío
-      de videos #APCSP</a>.'
-    announcement_apcsp_recruitment3: Este año, el examen de Principios Avanzados de
-      Ciencias de la Computación va a romper récords. La participación de los estudiantes
-      en el examen podría cambiar radicalmente la diversidad en Ciencias de la Computación,
-      pero necesitamos de tu ayuda. ¡Alienta a cada estudiante de Principios de Ciencias
-      de la Computación a completar el examen de AP CSP y podrías ganar <a href='%{gift_url}'
-      target='_blank'>una tarjeta de regalo, una  computadora portátil u otros premios
-      geniales</a>! Comparte <a href='%{video_url}' target='_blank'>este video</a>
-      para que tus estudiantes puedan escuchar a otros compañeros de todo el país
-      que ya están completando el examen.
-    announcement_csp_deadline: "¡Última llamada para docentes de escuelas secundarias!
-      Toma la delantera en ciencias de la computación en tu escuela e inscríbete a
-      programas de aprendizaje profesional de alta calidad <strong>sin costo para
-      ti o para tu institución</strong>. Las solicitudes cierran el 14 de abril."
-    announcement_applab_export: "¡El Laboratorio de juegos, nuestro ambiente de programación
-      web, ahora te permite exportar tu código! Puedes empezar a crear aplicaciones
-      con solo arrastrar y soltar bloques de JavaScript, y exportar el código para
-      continuar con la edición en cualquier ambiente de desarrollo profesional que
-      elijas."
-    announcement_csp_survey: "<b>¡Felicitamos a los docentes de Principios de Ciencias
-      de la Computación!</b><br/> Sus estudiantes que completaron el examen de Principios
-      Avanzados ahora son parte de un grupo de 50,000 estudiantes, el más grande que
-      haya realizado el examen en la historia. Ahora, haz que se escuchen sus voces.
-      ¡Recuérdales que deben completar la encuesta de fin de curso! Podrás revisar
-      las respuestas de tus estudiantes y también te compartiremos un informe a nivel
-      nacional."
-    announcement_navigation_redesign: "<b>Próximos cambios de navegación en el sitio</b><br/>Este
-      verano mejoraremos la navegación dentro del sitio web Code.org para que siempre
-      tengas acceso a los principales recursos desde cualquier lugar. Tan pronto como
-      inicies sesión en tu cuenta de docente, las páginas tendrán una nueva barra
-      de navegación con enlaces a tu página de inicio, cursos, galería de proyectos,
-      secciones y aprendizaje profesional."
   move_students:
     new_section_dne: Lo sentimos, pero no existe la sección %{new_section_code}. Ingresa
       un código de sección diferente.
@@ -1282,7 +1161,7 @@ es-MX:
   hoc_download:
     title: Descargas de la Hora del Código
     capsule_title: "¿Tienes Internet?"
-    capsule_desc: Usa la aplicación web <a href="%{url}">%{app_name}</a> en línea.
+    capsule_desc: Usa la aplicación web [%{app_name}](%{url}) en línea.
     instructions_headline: "¿No tienes Internet?"
     instructions: 'Instrucciones para docentes: si tu conexión a Internet no es buena,
       puedes descargar estos tutoriales de la Hora del Código y consultarlos sin conexión.
@@ -1290,7 +1169,7 @@ es-MX:
       computadoras de tu aula. También puedes utilizar una unidad USB para descargarlo
       una sola vez e instalarlo en todos los equipos. Ten en cuenta que los estudiantes
       no podrán iniciar sesión en Code Studio, guardar su progreso o imprimir certificados.
-      Los docentes pueden imprimir los certificados por adelantado <a href="%{url}">aquí</a>.'
+      Los docentes pueden imprimir los certificados por adelantado [here](%{url}).'
     minecraft_name: Hora del Código de Minecraft
     starwars_blocks_name: 'Star Wars: cómo crear una galaxia con el código (bloques)'
     starwars_javascript_name: 'Star Wars: cómo crear una galaxia con el código (JavaScript)'

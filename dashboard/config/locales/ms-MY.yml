@@ -18,6 +18,7 @@ ms:
         edit_header: Edit Maklumat Akaun
         error:
           future: tidak boleh ada di masa depan
+  beta: beta
   hello: Helo dunia
   welcome_back: Selamat datang kembali, % {nama}
   submit: Hantar
@@ -239,8 +240,6 @@ ms:
       programming. Kursus ini direka untuk kegunaan di bilik darjah bagi gred K-8,
       tetapi ia adalah menyeronokkan untuk belajar di semua peringkat umur.
     test_videos_help: Uji pemain video baru kami di sekolah anda
-    announcement_learn_more_button: Ketahui lebih lanjut
-    announcement_try_now_button: Cuba sekarang
   gender:
     male: Lelaki
     female: Perempuan

@@ -1550,6 +1550,10 @@ sq-AL:
     versionin e shfletuesit në <a href='%{supported_browsers_url}', target='_blank'>
     një nga shfletuesit që suportohen</a>. Ju mund të provoni ta shikoni faqen, por
     mundet që të mos funksionojë.
+  compatibility_unsupported_browser_markdown: Shfletuesi juaj nuk suportohet. Ju lutem
+    përmirësoni versionin e shfletuesit në <a href='%{supported_browsers_url}', target='_blank'>
+    një nga shfletuesit që suportohen</a>. Ju mund të provoni ta shikoni faqen, por
+    mundet që të mos funksionojë.
   flappy_shortcode: përplas flatrat
   header_courses: Kurset
   header_project_gallery: Projekte

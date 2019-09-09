@@ -43,6 +43,7 @@ is:
           fyrir <strong>%{email}</strong>.
         error:
           future: má ekki vera í framtíð
+  beta: beta
   hello: Halló heimur
   welcome_back: Velkomin/n aftur, %{name}
   your_professional_learning_plan: Námsáætlun þín í faginu
@@ -393,7 +394,7 @@ is:
       infinity: Óendanleiki
       makerlab: Maker Toolkit
       minecraft_adventurer: Minecraft Könnuður
-      minecraft_aquatic: Minecraft Vatnaveröld
+      minecraft_aquatic: Minecraft Neðansjávarheimur
       minecraft_codebuilder: 'Minecraft: Code Connection'
       minecraft_designer: Minecraft
       minecraft_hero: Minecraft Hetja
@@ -553,115 +554,6 @@ is:
     no_primary_course: Prófaðu námskeið í Kóðastúdíóinu
     choose_next_course: Prófaðu Kóðastúdíóið með því að velja námskeið hér fyrir neðan
     print_certificate: Prenta skírteini
-    announcement_title: Tilkynningar
-    announcement_message_fall2016_features: Við eyddum sumrinu í að búa til nýjungar
-      úr endurgjöfinni frá ykkur notendunum. Nú er hægt að <a href="%{pp_url}" target="_blank">fylgjast
-      með framvindu margra nemenda</a> jafnvel þó þeir séu í félagaforritun á einu
-      tæki. Einnig nota <a href="%{csp_widgets_url}" target="_blank">bestu gagnvirku
-      tækin</a> af námskeiðinu CS Principles með <i>hvaða bekk sem er</i>. Og nemendur
-      þína geta <a href="%{unused_code_url}" target="_blank">geymt ónotaðan kóða</a>
-      á vinnusvæði sínu til að ýta undir að þeir geri tilraunir! Kannaðu allar þessar
-      nýjungar og láttu okkur vita hvað þér finnst.
-    announcement_csp_widgets_message: Ertu að leita að skemmtilegu efni til að kenna
-      bekknum þínum hvernig Internetið virkar, hvernig dulkóðun verndar gögn og önnur
-      hugtök? Við höfum tekið bestu gagnvirku verkfærin í námsefni okkar Grunnhugtök
-      tölvunarfræði og útbúið sjálfstæð örforrit sem þú getur notað hvenær sem er!
-    announcement_learn_more_button: Nánar
-    announcement_try_now_button: Prófaðu núna
-    announcement_host_an_hour_button: Sjá um Klukkustund
-    announcement_watch_video_button: Horfa á myndband
-    announcement_petition: Sem kennari ert þú í fararbroddi hreyfingar sem vill gefa
-      öllum nemendum í öllum skólum tækifæri til að læra tölvunarfræði. Nú er kominn
-      tími til að kjörnir fulltrúar þínir heyri frá þér. Í Bandaríkjunum hafa skólastjórar,
-      28 fylkisstjórar og forstjórar stærstu fyrirtækja í Bandaríkjunum ritað opið
-      bréf sem fer þess á leit við Bandaríkjaþing að fjármagna kennslu tölvunarfræði
-      í grunnskólum.
-    announcement_petition_button: Bættu nafni þínu við
-    announcement_go_beyond_button: Halda lengra
-    announcement_apply_now: Sækja um nú
-    announcement_all: Fylgstu með nýjungum og uppfærslum á spjallsvæði okkar fyrir
-      kennara. <a href='%{teacher_blog_url}' target='_blank'>Lesa fyrri tilkynningar.</a>
-    announcement_hoc_launch: Þúsundir kennara í meira en 180 löndum munu byrja að
-      kenna tölvunarfræði í Klukkustund kóðunar dagana 5. - 11. desember. Við treystum
-      á þig að hjálpa okkur að ná til fleiri nemenda en nokkru sinni áður. <a href='%{signup_url}'
-      target='_blank'>Skráðu þinn Klukkustund kóðunar-viðburð</a> og láttu aðra kennara
-      vita að það geti hver sem er byrjað að kenna tölvunarfræði.
-    announcement_mc_launch: Eitt vinsælasta kennsluefnið okkar er nú komið með framhald!
-      Með glænýjum Minecraft Hour of Code Designer (Minecraft hönnuði) geta nemendur
-      búið til reglur fyrir Minecraft heiminn. Þeir geta skapað alveg einstaka Minecraft
-      upplifun og deilt henni síðan með vinum eða spilað hana í síma. Láttu bekkinn
-      prófa þetta fyrir Klukkustund kóðunar.
-    announcement_how_code_studio: Þú þarft ekki að hafa reynslu til að byrja að kenna
-      tölvunarfræði í bekknum þínum. Hjá Code.org færðu námsefni, kennsluáætlanir,
-      hágæða fræðslu fyrir kennara og fjöldann allan af góðum verkfærum fyrir alla
-      aldurhópa &mdash;allt sem þú munt þarfnast, og allt frítt. Hvar er best að byrja?
-      Sæktu  <a href='%{video_download_url}'>þetta myndband</a>!
-    announcement_go_beyond: Haltu áfram eftir Klukkustund kóðunar og kannaðu hugtök
-      tölvunarfræði með nemendum þínum í hverri viku. Code.org er með námsefni, kennsluáætlanir,
-      hágæða þjálfun fyrir kennara og fullt af fínum verkfærum fyrir alla árganga&mdash;og
-      allt ókeypis. :) Þú þarft ekki að hafa neina fyrri reynslu til að geta byrjað
-      að kenna nemendum þínum tölvunarfræði. <b>Finndu næsta áfanga sem hentar bekknum
-      þínum.</b>
-    announcement_teacher_recruitment: Kennarar eins og þú eru leiðandi í átakinu að
-      kenna tölvunarfræði. Þú getur tekið þátt í hágæða fagnámi fyrir kennara allt
-      frá leikskóla til framhaldsskólastigs og <strong> án endurgjalds fyrir þig eða
-      skólann</strong>. Taktu forystuna í tölvunarfræði innan þíns skóla og sæktu
-      um nám til að þróa þig faglega á því sviði.
-    announcement_teacher_recruitment2: Kennarar eins og þú eru leiðandi í átakinu
-      að kenna tölvunarfræði. Þú getur tekið þátt í hágæða fagnámi fyrir kennara allt
-      frá leikskóla til framhaldsskólastigs og <strong> án endurgjalds fyrir þig eða
-      skólann</strong>. Taktu forystuna í tölvunarfræði innan þíns skóla og sæktu
-      um nám til að þróa þig faglega á því sviði. Mið- og framhaldskólakennarar sæki
-      um ekki síðar en 17. mars.
-    announcement_csf_pilot: "<strong>Grunnskólakennarar:</strong> Vertu með í að uppfæra
-      grunnnámskeið okkar í tölvunarfræði (CS Fundamentals)! Við erum að leita að
-      kennurum til að sjá um tilraunakennslu á uppfærðu grunnnámskeiðsefni veturinn
-      og vorið 2017. Við viljum gjarnan fá endurgjöf ykkar áður en efnið fer í loftið
-      í ágúst 2017."
-    announcement_student_privacy: Hjá Code.org tökum við persónuvernd nemenda mjög
-      alvarlega. Til verndar nemendum þínum höfum við gert breytingu á innskráningarsíðu
-      hópsins þíns þannig að fullt nafn sé ekki sýnt. Þó að þessi breyting ætti að
-      draga úr áhyggjum hvað varðar persónuupplýsingar við innskráningu, hvetjum við
-      eftir sem áður notendur til að nota <i>ekki fullt nafn nemenda</i>.
-    announcement_apcsp_recruitment: '<strong>Kennarar Grunnhugtaka tölvunarfræði:</strong>
-      Nemendur þínir gætu birst í næsta kynningarmyndbandi sem Code.org dreifir á
-      netinu til að hvetja nemendur að taka AP CS Principles prófið á þessu ári. Við
-      erum að bjóða öllum nemendum sem taka Grunnhugtök tölvunarfræði að senda inn
-      10-20 sekúndna myndskeið á Twitter, Instagram eða Facebook þar sem þeir segja
-      "Ég ætla að taka #APCSP prófið vegna þess að..." Bestu myndskeiðin verða klippt
-      inn í myndbandið okkar og nemendurnir sem vinna munu fá dót frá Code.org!'
-    announcement_apcsp_recruitment2: Á þessu ári stefnir í að AP CS Principles prófið
-      slái öll met. Þátttaka nemenda í prófinu gæti haft kröftug áhrif á það að tölvunarfræði
-      fyrir lengra komna nái til fleiri hópa, en við þurfum á hjálp þinni að halda.
-      Hvettu alla nemendur sem skrá sig á námskeiðið Grunnhugtök tölvunarfræði að
-      taka AP CSP prófið og við munum <a href='%{gift_url}' target='_blank'>senda
-      þér gjöf</a>. Nemendur geta líka hvatt aðra nemendur í <a href='%{challenge_url}'
-      target='_blank'>#APCSP myndbandi okkar</a>.
-    announcement_apcsp_recruitment3: Á þessu ári stefnir í að AP CS Principles prófið
-      slái öll met. Þátttaka nemenda í prófinu gæti haft kröftug áhrif á það að tölvunarfræði
-      fyrir lengra komna nái til fleiri hópa, en við þurfum á hjálp þinni að halda.
-      Hvettu alla nemendur sem skrá sig á námskeiðið Grunnhugtök tölvunarfræði að
-      taka AP CSP prófið og þú gætir unnið <a href='%{gift_url}' target='_blank'>gjafakort,
-      fartölvu eða önnur verðlaun</a>!  Deildu <a href='%{video_url}' target='_blank'>þessu
-      myndbandi</a> svo að nemendur þínir geti hlýtt á aðra nemendur sem ætla að taka
-      prófið.
-    announcement_csp_deadline: Lokaútkall fyrir framhaldsskólakennara! Taktu forystuna
-      í tölvunarfræði innan þíns skóla og sæktu um hágæða fagnám fyrir kennara <strong>
-      án endurgjalds fyrir þig eða skólann</strong>. Tekið á móti umsóknum til 14.
-      ágúst.
-    announcement_applab_export: Appsmiðjan, forritunarumhverfi okkar á vefnum, styður
-      nú útflutning á kóða þínum! Þú getur byrjað að smíða app með JavaScript kubbum
-      og síðan flutt kóðann út til að halda áfram að vinna appið í faglegra þróunarumhverfi.
-    announcement_csp_survey: "<b>Til hamingju, kennarar Grunnhugtaka tölvunarfræði!</b><br/>Þeir
-      nemendur ykkar sem taka AP CS prófið munu slást í hóp með yfir 50.000 öðrum
-      nemendum í stærstu AP próftöku sögunnar. Ýtið undir það að raddir nemenda heyrist
-      - með því að minna þá á að svara könnuninni í lok námskeiðsins! Þú munt geta
-      skoðað svör nemenda þinna og einnig heildarsamantekt okkar."
-    announcement_navigation_redesign: "<b>Breytingar á vefskipulaginu</b><br/>Fljótlega
-      í sumar munum við gera Code.org vefinn aðgengilegri þannig að þú hafir aðgang
-      að helstu tilföngum þínum hvar sem er á vefnum. Um leið og þú skráir þig inn
-      á kennaraaðgang þinn, mun hver síða hafa stiku með tenglum við heimasíðu þína,
-      námskeið, verkefnagallerí, hópa og faglegt nám."
   move_students:
     new_section_dne: Því miður finnst hópurinn %{new_section_code} ekki. Vinsamlegast
       færðu inn annan kóða fyrir hóp.
@@ -1151,6 +1043,7 @@ is:
     instructor_feedback: Álit leiðbeinanda
     peer_feedback: Álit samnemenda
     outdated: Þessi umsögn átti við áður innsenda útgáfu
+    review_count: Þú verður að ljúka %{review_count} upprifjunum fyrir þessa einingu
   flex_category:
     required: Yfirlit
     content: Innihald
@@ -1210,6 +1103,7 @@ is:
     csp_postap_2: 'Kafli 2: Öpp og gagnagrunnar'
     csp2_1_2018: Kafli 2 - Stafrænar upplýsingar
     csp3_1_2018: 'Kafli 3: Inngangur að forritun'
+    csp4_1_2018: 'Kennslueining 4: Gríðargögn og persónuvernd'
     csp_variables: Breytur
     csp_conditionals: Skilyrði
     csp_functions: Föll
@@ -1315,6 +1209,8 @@ is:
   view_all_units: Sjá allar einingar
   view_teacher_guide: Leiðbeiningar kennara
   pd:
+    survey:
+      part_of_community_s: Mér finnst ég tilheyra samfélagi kennara.
     form_labels:
       first_name: Fornafn
       first_name_preferred: Fornafn sem þú vilt að sé notað

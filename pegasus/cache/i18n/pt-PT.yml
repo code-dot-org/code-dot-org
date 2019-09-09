@@ -1604,6 +1604,10 @@ pt-PT:
     o seu navegador para <a href='%{supported_browsers_url}', target='_blank'> um
     dos nossos navegadores suportados</a>. Você pode tentar visualizar a página, mas
     algumas funcionalidade podem não estar disponíveis.
+  compatibility_unsupported_browser_markdown: O seu navegador não é suportado. Por
+    favor atualize o seu navegador para <a href='%{supported_browsers_url}', target='_blank'>
+    um dos nossos navegadores suportados</a>. Você pode tentar visualizar a página,
+    mas algumas funcionalidade podem não estar disponíveis.
   flappy_shortcode: bater as assas
   header_home: Início
   header_courses: Cursos

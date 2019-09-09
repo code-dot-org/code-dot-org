@@ -77,6 +77,9 @@ es-MX:
       2-3 Bee Loops 3A: Usa un bucle `repetir` para recoger todo el néctar.
       2-3 Bee Loops 3B: Ahora usa el nuevo bloque repeat para recolectar todo el néctar
         y hacer toda la miel.
+      2-3 Maze 1: '¿Puedes ayudarme a atrapar al cerdo travieso? Apila un par de bloques
+        ''mover hacia adelante'' debajo del bloque ''cuando se ejecute'' y presiona
+        "Ejecutar". '
       2-3 Maze 10: "¡Guíame al demonio verde! (Cuidado con el TNT)"
       2-3 Maze 2: Este cerdo me está colmando la paciencia. ¡Ayúdame a llegar a él!
       2-3 Maze 4: "¡Guíame al demonio verde! (Cuidado con el TNT)"
@@ -187,33 +190,33 @@ es-MX:
       4-5 Nested Loops 9: "¡Dibuja los dientes en la boca de cocodrilo!"
       Alien Defender: 'Idea para un proyecto: ¡crea un juego de defensa en el Laboratorio
         de juegos!'
-      CSD U3 Boolean Modify: Modifica el código para que todos los comandos consola.registro
+      CSD U3 Boolean Modify: Modifica el código para que todos los comandos console.log
         impriman verdadero
-      CSD U3 Boolean Modify_2018: Modifica el código para que todos los comandos consola.registro
+      CSD U3 Boolean Modify_2018: Modifica el código para que todos los comandos console.log
         impriman verdadero
-      CSD U3 Boolean Modify_2019: Modifica el código para que todos los comandos consola.registro
+      CSD U3 Boolean Modify_2019: Modifica el código para que todos los comandos console.log
         impriman verdadero
       CSD U3 Boolean Predict: "¿Qué crees que hará este código cuando se ejecute?
-        Predice qué imprimirá cada comando consola.registro(), y luego ejecuta el
-        programa para comprobar tus predicciones."
+        Predice qué imprimirá cada comando console.log(), y luego ejecuta el programa
+        para comprobar tus predicciones."
       CSD U3 Boolean Predict_2018: "¿Qué crees que hará este código cuando se ejecute?
-        Predice qué imprimirá cada comando consola.registro(), y luego ejecuta el
-        programa para comprobar tus predicciones."
+        Predice qué imprimirá cada comando console.log(), y luego ejecuta el programa
+        para comprobar tus predicciones."
       CSD U3 Boolean Predict_2019: "¿Qué crees que hará este código cuando se ejecute?
-        Predice qué imprimirá cada comando consola.registro(), y luego ejecuta el
-        programa para comprobar tus predicciones."
-      CSD U3 Keypress Boolean: Modifica el código para que todos los comandos consola.registro
+        Predice qué imprimirá cada comando console.log(), y luego ejecuta el programa
+        para comprobar tus predicciones."
+      CSD U3 Keypress Boolean: Modifica el código para que todos los comandos console.log
         impriman verdadero
       CSD U3 Keypress Boolean_2018: Modifica el código para que todos los comandos
-        consola.registro impriman verdadero
+        console.log impriman verdadero
       CSD U3 Keypress Boolean_2018_2019: Modifica el código para que todos los comandos
-        consola.registro impriman verdadero
-      CSD U3 Keypress Watchers: Modifica el código para que todos los comandos consola.registro
+        console.log impriman verdadero
+      CSD U3 Keypress Watchers: Modifica el código para que todos los comandos console.log
         impriman verdadero
       CSD U3 Keypress Watchers_2018: Modifica el código para que todos los comandos
-        consola.registro impriman verdadero
+        console.log impriman verdadero
       CSD U3 Keypress Watchers_2019: Modifica el código para que todos los comandos
-        consola.registro impriman verdadero
+        console.log impriman verdadero
       CSD U3 L5 Freeplay: Cambia el valor de tamañoPétalo varias veces. ¿Cómo cambia
         tu dibujo?
       CSD U3 L5 Freeplay_2018: Cambia el valor de tamañoPétalo varias veces. ¿Cómo
@@ -278,10 +281,10 @@ es-MX:
 
         # Hacer esto
 
-        -   Crea una nueva función `movernube(nombre)` que moverá cualquier nube.
-        -   (Sugerencia: usarás casi todo el mismo código como la función `moveCloud0`)
-        -   Llama a su nueva función de `movernube(nombre)` dentro del bloque del evento, una vez para cada nombre de nube.
-        -   (Sugerencia: esto es similar a cómo la función `buclenube(nombre)` se llama muchas veces.
+        -   Crea una nueva función `moverNube(nombre)` que moverá cualquier nube.
+        -   (Sugerencia: usarás casi todo el mismo código como la función `moverNube0`)
+        -   Llama a su nueva función de `moverNube(nombre)` dentro del bloque del evento, una vez para cada nombre de nube.
+        -   (Sugerencia: esto es similar a cómo la función `bucleNube(nombre)` se llama muchas veces.
       CSD U6 params modify clouds_2018: |-
         # Nubes
 
@@ -289,43 +292,43 @@ es-MX:
 
         # Hacer esto
 
-        -   Crea una nueva función `movernube(nombre)` que moverá cualquier nube.
-        -   (Sugerencia: usarás casi todo el mismo código como la función `moveCloud0`)
-        -   Llama a su nueva función de `movernube(nombre)` dentro del bloque del evento, una vez para cada nombre de nube.
-        -   (Sugerencia: esto es similar a cómo la función `buclenube(nombre)` se llama muchas veces.
+        -   Crea una nueva función `moverNube(nombre)` que moverá cualquier nube.
+        -   (Sugerencia: usarás casi todo el mismo código como la función `moverNube0`)
+        -   Llama a su nueva función de `moverNube(nombre)` dentro del bloque del evento, una vez para cada nombre de nube.
+        -   (Sugerencia: esto es similar a cómo la función `bucleNube(nombre)` se llama muchas veces.
       CSD U6 params modify planes: |-
-        # Controlador multiavión
+        # Controlador multiavion
 
         Este programa mueve los tres aviones mediante el uso del acelerómetro del tablero y las casillas en la pantalla. En este momento, solo funciona el avión rojo.
 
         # Hacer esto
 
-        -   Crea una nueva función de `moveravión(nombre)` que pueda mover cualquier avión.
-        -   Llama a la función `moveravión(nombre)` dentro del bloque del evento, que sólo se mueve cuando se marca su casilla.
+        -   Crea una nueva función de `moverAvion(nombre)` que pueda mover cualquier avión.
+        -   Llama a la función `moverAvion(nombre)` dentro del bloque del evento, que sólo se mueve cuando se marca su casilla.
 
-        \_Challenge: ahora los aviones se mueven demasiado rápido. ¿Puedes averiguar cómo cambiar el código para que se mueva más lento? \_
+        Desafío: ahora los aviones se mueven demasiado rápido. ¿Puedes averiguar cómo cambiar el código para que se mueva más lento? \_
       CSD U6 params modify planes_2018: |-
-        # Controlador multiavión
+        # Controlador multiavion
 
         Este programa mueve los tres aviones mediante el uso del acelerómetro del tablero y las casillas en la pantalla. En este momento, solo funciona el avión rojo.
 
         # Hacer esto
 
-        -   Crea una nueva función de `moveravión(nombre)` que pueda mover cualquier avión.
-        -   Llama a la función `moveravión(nombre)` dentro del bloque del evento, que sólo se mueve cuando se marca su casilla.
+        -   Crea una nueva función de `moverAvion(nombre)` que pueda mover cualquier avión.
+        -   Llama a la función `moverAvion(nombre)` dentro del bloque del evento, que sólo se mueve cuando se marca su casilla.
 
-        \_Challenge: ahora los aviones se mueven demasiado rápido. ¿Puedes averiguar cómo cambiar el código para que se mueva más lento? \_
+        Desafío: ahora los aviones se mueven demasiado rápido. ¿Puedes averiguar cómo cambiar el código para que se mueva más lento? \_
       CSD U6 params modify planes_2019: |-
-        # Controlador multiavión
+        # Controlador multiavion
 
         Este programa mueve los tres aviones mediante el uso del acelerómetro del tablero y las casillas en la pantalla. En este momento, solo funciona el avión rojo.
 
         # Hacer esto
 
-        -   Crea una nueva función de `moveravión(nombre)` que pueda mover cualquier avión.
-        -   Llama a la función `moveravión(nombre)` dentro del bloque del evento, que sólo se mueve cuando se marca su casilla.
+        -   Crea una nueva función de `moverAvion(nombre)` que pueda mover cualquier avión.
+        -   Llama a la función `moverAvion(nombre)` dentro del bloque del evento, que sólo se mueve cuando se marca su casilla.
 
-        \_Challenge: ahora los aviones se mueven demasiado rápido. ¿Puedes averiguar cómo cambiar el código para que se mueva más lento? \_
+        Desafío: ahora los aviones se mueven demasiado rápido. ¿Puedes averiguar cómo cambiar el código para que se mueva más lento? \_
       CSDU6 arrays select rainbow: Escribe el contenido del arreglo en la pantalla
         en orden numérico. (Haz clic para ver las instrucciones completas)
       CSDU6 arrays select rainbow_2018: Escribe el contenido del arreglo en la pantalla
@@ -592,12 +595,18 @@ es-MX:
       K-1 Artist Loops 4: "¿Podría un enlace ayudarnos a dibujar el tope del castillo?"
       K-1 Artist Loops 5: "¿Puedes repetir 4 veces el mismo enlace para dibujar la
         escalera?"
+      K-1 Artist Loops 6: 'Este necesita dos bucles: uno para subir las escaleras
+        y otro para bajar.'
       K-1 Artist Loops 7: "¿Podrías terminar este patrón con dos enlaces?"
       K-1 Artist Loops 8: Esta escalera tiene escalones largos
       K-1 Artist Loops 9: 'Evaluación: utilice un enlace para dibujar la escalera'
       K-1 Artist Loops Free Play: Dibuja algo divertido.
       K-1 Artist1 1: Dibuja el pie del hombre con una línea
+      K-1 Artist1 10: Dibuja y salta para hacer el camino discontinuo hacia el tesoro
+        X
       K-1 Artist1 2: "¡Dibuja el bigote del gato con dos líneas!"
+      K-1 Artist1 3: "¡Dibuja dos líneas al este y dos líneas hacia el norte para
+        terminar la casa!"
       K-1 Artist1 4: "¡Dibuja líneas verticales, superiores e inferiores para terminar
         el castillo!"
       K-1 Artist1 5: "¡Dibuja el tallo de la flor con dos líneas! "
@@ -612,9 +621,16 @@ es-MX:
       K-1 Artist2 Assessment1: '"Evaluación: Dibuja un cuadrado junto a otro cuadrado".'
       K-1 Artist2 Free Draw: "¡Dibuja cualquier cosa!"
       K-1 Artist2_7: "¡Dibuja un rectángulo para hacerle un cajón al vestidor!"
+      K-1 Bee 1: Muéveme a la flor, obtén el néctar, luego muéveme al panal y, haz
+        miel
       K-1 Bee 11: Toma tres néctares y entonces haz una miel
       K-1 Bee 13: "¡Toma tres néctares y entonces haz una miel!"
+      K-1 Bee 14: "¡Llevame al néctar, recógelo, llevame a la miel y haz miel!"
       K-1 Bee 15: "¡Conseguir dos néctares para hacer dos unidades de miel!"
+      K-1 Bee 2: Muéveme a la flor, obtén el néctar, luego muéveme al panal y, haz
+        miel
+      K-1 Bee 3: Muéveme a la flor, obtén el néctar, luego muéveme al panal y, haz
+        miel
       K-1 Bee 4: "¡Consigue dos unidades de néctar y luego haz dos unidades de miel!"
       K-1 Bee 5: "¡Toma tres néctares y entonces haz dos mieles!"
       K-1 Bee 6: "¡Consigue dos unidades de néctar y luego haz dos unidades de miel!"
@@ -625,12 +641,25 @@ es-MX:
       K-1 Bee Loops 11: 'Evaluación: ¡Utiliza enlaces para obtener néctar y miel!'
       K-1 Bee Loops 12: 'Evaluación: ¡Utiliza enlaces para obtener néctar, miel y
         moverte!'
+      K-1 Bee Loops 2: "¡Utiliza un bucle 'repetir' para moverte y luego obtener el
+        néctar y hacer miel!"
+      K-1 Bee Loops 3: "¡Usa tres bucles 'repetir' para obtener el néctar y hacer
+        miel!"
+      K-1 Bee Loops 4: "¡Usa el bucle 'repetir' para obtener el néctar, hacer miel
+        y, para moverte!"
       K-1 Bee Loops 5: "¡Utiliza enlaces para tomar néctar y miel!"
+      K-1 Bee Loops 6: "¡Utiliza un bucle 'repetir' para obtener el néctar, obtener
+        miel, y para moverse!"
       K-1 Bee Loops 7: "¡Utiliza enlaces para obtener néctar y para hacer miel!"
       K-1 Bee Loops 8: "¡Utiliza enlaces para obtener néctar y para hacer miel!"
       K-1 Bee Loops 9: "¡Utiliza enlaces para obtener néctar, miel y para moverte!"
       K-1 Bee Puzzle 12: Toma tres néctares y luego haz dos mieles
+      K-1 Building a Foundation Assessment: "¡Construye una pirámide de tres niveles,
+        no hay otras instruciones, así que sólo tienes que jugar con las piezas hasta
+        que lo logres!"
       K-1 Maze 10: "¡Evita el TNT para llevarme al cerdo!"
+      K-1 Maze 11: 'Traza el camino y llévame al cerdo tonto. ¡Evita El TNT o las
+        plumas volarán! Sugerencia: Está al sur de mí.'
       K-1 Maze 2: "¡Muéveme al Este para llevarme al cerdo!"
       K-1 Maze 3: "¡Muéveme al sur para llegar al cerdo!"
       K-1 Maze 4: "¡Muéveme al norte para llegar al cerdo!"
@@ -640,16 +669,51 @@ es-MX:
       K-1 Maze 8: "¡Muéveme en una dirección, luego en otra para llevarme el cerdo!"
       K-1 Maze 9: "¡Muéveme en una dirección, luego en otra para llevarme el cerdo!"
       K-1 Maze Loops 1: "¡Tráeme al cerdo!"
+      K-1 Maze Loops 10: "¡Llevame con el cerdo! El uso del bucle 'repetir' lo hará
+        mucho más fácil."
+      K-1 Maze Loops 11: |-
+        ¡Llevame al cerdo!
+        El bucle 'repetir' hará esto más fácil.
+      K-1 Maze Loops 12: "¡Llevame al cerdo! El bucle 'repetir' hará esto más fácil."
       K-1 Maze Loops 2: "¡Usa el bloque de Repetición para llevarme al cerdo!"
       K-1 Maze Loops 3: "¡Llévame al cerdo! Usa el bloque de repetición."
       K-1 Maze Loops 5: "¡Llévame al cerdo! Usa el bloque de repetición."
       K-1 Maze Loops 6: "¡Llévame al cerdo! Usa el bloque de repetición."
       K-1 Maze Loops 7: "¡Llévame al cerdo! Usa el bloque de repetición."
       K-1 Maze Loops 8: "¡Llévame al cerdo! Usa el bloque de repetición."
+      K-1 Maze Loops Assessment 1: ¡Mira todo lo que hemos aprendido! ¡Usa un bucle
+        "repetir" para llevarme al cerdo!
+      K-1 Maze Loops Assessment 2: "¡Usa el bucle 'repetir' para llevarme al cerdo!"
+      K-1 Maze Sequence Assessment 1: |-
+        ¡A ver qué has aprendido!
+        Muévete de una dirección a otra para llevarme al cerdo.
+      K-1 Maze Sequence Assessment 2: Muévete en una dirección, luego a otra para
+        llevarme al cerdo.
+      K-1 artist 1 level 10: Dibuja la línea discontinua usando los bloques de salto
+        y dibujo
       K-1 artist 1 level 9: Dibuja esto utilizando tres líneas
       K-1 maze debug 1: "¡Cambie el código para traerme al cerdo!"
+      K-1 maze debug 10: "¡Depura este nivel reorganizando y cambiando bloques para
+        llevarme al cerdo!"
+      K-1 maze debug 11: |-
+        ¡Esto es una prueba!
+        Depurar este nivel reorganizando y el cambiando bloques para llevarme al cerdo
+      K-1 maze debug 2: "¡Averigua lo que falta y luego añade bloques para llevarme
+        al cerdo!"
       K-1 maze debug 3: "¡Averigua cuál es el problema y borra bloques para llevarme
         al cerdo!"
+      K-1 maze debug 4: "¡Corre a través de estos bloques y arréglalos! Creo que voy
+        en la dirección equivocada."
+      K-1 maze debug 5: "¡Depura este nivel reorganizando y cambiando bloques para
+        llevarme al cerdo!"
+      K-1 maze debug 6: "¡Depura este nivel reorganizando y cambiando bloques para
+        llevarme al cerdo!"
+      K-1 maze debug 7: "¡Depura este nivel reorganizando y cambiando bloques para
+        llevarme al cerdo!"
+      K-1 maze debug 8: "¡Depura este nivel reorganizando y agregando bloques para
+        llevarme al cerdo!"
+      K-1 maze debug 9: "¡Depura este nivel reorganizando y cambiando bloques para
+        llevarme al cerdo!"
       MC HOC 2016 Level 10: "¡Es hora de crear tu propio Minecraft! Genera criaturas
         y haz que hagan lo que tú quieras. ¡Diviértete!"
       MC HOC 2016 Level 2-2: La gallina está quieta. Para lograr que se mueva, debes
@@ -950,11 +1014,17 @@ es-MX:
         Puede usar un loop para dibujar muchas líneas seguidas.
 
         ¿Puedes dibujar una casa? ¡Haz que se vea como a ti te gusta! Intenta buscar patrones que se repiten!
+      course1_artist_loops_challenge2: "¡Juguemos un juego! ¡Dibuja tantas X como
+        puedas! ¿Puedes obtener 3 en una fila?"
       course1_artist_loops_challenge3: '"¿Puedes ayudarme a hacer dos casas para pájaros?"'
       course1_artist_loops_challenge4: '"¡Es hora de lanzar los dados! ¿Puedes ayudarme
         a dibujar estos?"'
       course1_collector_loops_challenge1: '"¿Puedes ayudarme a detectar algunos bugs?
         Sé por que camino quiero ir, pero no estoy segura de cuántos pasos dar".'
+      course1_collector_loops_challenge2: 'Esta vez solo puedes usar uno de cada bloque
+        de flecha. ¡Consigue todo el tesoro! '
+      course1_collector_loops_challenge3: 'Esta vez solo puedes usar uno de cada bloque
+        de flecha. ¡Consigue todo el tesoro! '
       course1_collector_loops_challenge4: "¡Vamos a obtener el tesoro! Ayúdame a cruzar
         cada fila y, luego, regresa para comenzar la siguiente fila. ¿Puedes encontrar
         un patrón?"
@@ -964,6 +1034,8 @@ es-MX:
         correctos, ¡pero están mal ordenados!
       course1_maze_seq_challenge1: '"Indica el recorrido y llévame hasta el cerdo
         tonto. Evita el TNT o las plumas se desparramarán".'
+      course1_maze_seq_challenge2: Solo puedes moverte hasta cuatro veces en cada
+        dirección. ¿Puedes encontrar un camino antes de que te quedes sin bloques?
       course1_playlab_events_challenge1: "¿Dónde están escondidos mis amigos? ¿Puedes
         escribir el código para mostrar al resto de mis amigos?"
       course1_playlab_events_challenge2: '"Hagamos una fiesta. Dales a mis amigos
@@ -1327,11 +1399,8 @@ es-MX:
         bloques al espacio de trabajo y mira lo que ocurre!
       courseA_playLab_events1_2018: Este es un nivel de Laboratorio de juegos. ¡Mueve
         los bloques al espacio de trabajo y mira lo que ocurre!
-      courseA_playLab_events1_2019: Este es un nivel de Laboratorio de juegos. ¡Mueve
-        los bloques al espacio de trabajo y mira lo que ocurre!
       courseA_playLab_events2: Jorge el Perro quiere decir "Hola". ¿Puedes ayudarlo?
       courseA_playLab_events2_2018: Jorge el Perro quiere decir "Hola". ¿Puedes ayudarlo?
-      courseA_playLab_events2_2019: Jorge el Perro quiere decir "Hola". ¿Puedes ayudarlo?
       courseA_playLab_events3: Conecta el bloque `mover a la izquierda` al bloque
         de evento `cuando izquierda` que ya está en el espacio de trabajo.
       courseA_playLab_events3_2018: Conecta el bloque `mover a la izquierda` al bloque
@@ -3124,27 +3193,16 @@ es-MX:
         clic en "Ejecutar" ¡para verlos funcionar!
       courseD_scrat_ramp2: Arrastra un bloque 'avanzar' extra desde la caja de herramientas,
         luego adjunta todos los bloques al 'cuando ejecute' para finalizar el código.
-      courseD_scrat_ramp3: Hay un bloque sobrante que hará que el pájaro se estrelle.
+      courseD_scrat_ramp3: Hay un bloque sobrante que hará que Scrat se estrelle.
         Arrástralo a la caja de herramientas para descartarlo.
-      courseD_scrat_ramp4: "¡Evita el TNT o volarán plumas!"
-      courseD_scrat_ramp5: Evita el TNT.
-      courseD_scrat_ramp6: |-
-        _"Mantén la calma y ayúdame a encontrar al cerdo malo. Si no, ¡puedo enfadarme!"_
-
-        Cuando tienes varios bloques seguidos, prueba moverlos dentro de un bucle `repetir`. ¡Esto hará lo mismo con menos código!
+      courseD_scrat_ramp4: "¡Evita el hielo roto para mantener a Scrat a salvo!"
+      courseD_scrat_ramp5: Evita el hielo roto.
+      courseD_scrat_ramp6: 'Usa un bucle para ayudar a Scrat a llegar hasta la bellota. '
       courseD_scrat_ramp7: "¡Ayuda a Scrat a llegar hasta la bellota!"
       courseD_scrat_ramp8: "¡Usa lo que has aprendido para que Scrat llegue hasta
         la bellota!"
-      courseE_aboutme_6: |-
-        El póster de Rikki se ve bien, ¡pero puede ser aún mejor!
-
-        **Tres tareas para completar el póster de Rikki**
-
-        -   Haz que Rikki comience a recorrer cuando se hace clic en ella. ¡Ella ama explorar!
-
-        -   Haz que Thuy comience a girar cuando Rikki la toca. ¡Ella tiene cosquillas!
-
-        -   Haz que el cono de helado desaparezca cuando Rikki lo toca. ¡Qué rico!
+      courseE_aboutme_6: "¡Sigue intentándolo! Prueba agregar más funciones para que
+        tu póster sea aún mejor. "
       courseE_artist_concept1: 'Recrea esta imagen. '
       courseE_artist_concept1_2018: 'Recrea esta imagen. '
       courseE_artist_concept4: Recrea este dibujo.

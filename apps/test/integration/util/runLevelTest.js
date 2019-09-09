@@ -2,7 +2,10 @@ import $ from 'jquery';
 import _ from 'lodash';
 import LegacyDialog from '@cdo/apps/code-studio/LegacyDialog';
 import {assert} from '../../util/configuredChai';
-import {getConfigRef, getDatabase} from '@cdo/apps/storage/firebaseUtils';
+import {
+  getConfigRef,
+  getProjectDatabase
+} from '@cdo/apps/storage/firebaseUtils';
 import Firebase from 'firebase';
 import MockFirebase from '../../util/MockFirebase';
 import {installCustomBlocks} from '@cdo/apps/block_utils';
@@ -165,7 +168,7 @@ function runLevel(app, skinId, level, onAttempt, finished, testData) {
           'Expected to be using apps/test/util/MockFirebase in level tests.'
         );
 
-        getDatabase().autoFlush();
+        getProjectDatabase().autoFlush();
         getConfigRef().autoFlush();
         getConfigRef().set({
           limits: {
@@ -179,7 +182,7 @@ function runLevel(app, skinId, level, onAttempt, finished, testData) {
         });
         timeout = 500;
 
-        getDatabase().set(null);
+        getProjectDatabase().set(null);
       }
 
       setTimeout(function() {

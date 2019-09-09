@@ -1173,6 +1173,7 @@
   sphero_beyond_longdescription: "SPRK-Lektionen ermöglichen Kindern, einen Schnellkurs im Programmieren von Robotern zu absolvieren und dabei ihre Mathematik- und Naturwissenschafts-Kenntnisse zu erweitern."
   compatibility_hide_this_warning: "Diese Warnung ausblenden"
   compatibility_unsupported_browser: "Ihr Browser wird nicht unterstützt. Bitte aktualisieren Sie Ihren Browser auf <a href='%{supported_browsers_url}', target='_blank'> einen von uns unterstützten Browser</a>. Sie können versuchen diese Seite zu betrachten, aber es können Fehler auftreten."
+  compatibility_unsupported_browser_markdown: "Ihr Browser wird nicht unterstützt. Bitte aktualisieren Sie Ihren Browser auf <a href='%{supported_browsers_url}', target='_blank'> einen von uns unterstützten Browser</a>. Sie können versuchen diese Seite zu betrachten, aber es können Fehler auftreten."
   flappy_shortcode: "flattern"
   header_home: "Home"
   header_my_dashboard: "Mein Armaturenbrett"

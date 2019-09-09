@@ -414,7 +414,7 @@ class PeerReviewTest < ActiveSupport::TestCase
     base_expected = {
       submitter: @user.name,
       course_name: @plc_course.name,
-      unit_name: @learning_module.name,
+      unit_name: @plc_course_unit.name,
     }
 
     level_1_pr_1 = PeerReview.find_by(level: level_1, status: nil)

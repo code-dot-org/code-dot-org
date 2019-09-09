@@ -1,7 +1,7 @@
 import ReactDOM from 'react-dom';
 import sinon from 'sinon';
 import {expect} from '../../util/configuredChai';
-import GameLab from '@cdo/apps/gamelab/GameLab';
+import GameLab from '@cdo/apps/p5lab/gamelab/GameLab';
 import Sounds from '@cdo/apps/Sounds';
 import {
   getStore,
@@ -10,7 +10,7 @@ import {
   restoreRedux
 } from '@cdo/apps/redux';
 import commonReducers from '@cdo/apps/redux/commonReducers';
-import reducers from '@cdo/apps/gamelab/reducers';
+import reducers from '@cdo/apps/p5lab/reducers';
 import {isOpen as isDebuggerOpen} from '@cdo/apps/lib/tools/jsdebugger/redux';
 import {setExternalGlobals} from '../../util/testUtils';
 import 'script-loader!@code-dot-org/p5.play/examples/lib/p5';
@@ -61,7 +61,7 @@ describe('GameLab', () => {
     });
 
     it('Must have studioApp injected first', () => {
-      expect(() => instance.init({})).to.throw('GameLab requires a StudioApp');
+      expect(() => instance.init({})).to.throw('P5Lab requires a StudioApp');
     });
 
     describe('After being injected with a studioApp instance', () => {
@@ -71,13 +71,13 @@ describe('GameLab', () => {
         let unmuteSpy;
         beforeEach(() => {
           unmuteSpy = sinon.stub(Sounds.getSingleton(), 'unmuteURLs');
-          instance.gameLabP5.p5 = sinon.spy();
-          instance.gameLabP5.p5.allSprites = sinon.spy();
-          instance.gameLabP5.p5.allSprites.removeSprites = sinon.spy();
-          instance.gameLabP5.p5.redraw = sinon.spy();
-          instance.gameLabP5.p5.World = sinon.spy();
-          instance.gameLabP5.setLoop = sinon.spy();
-          instance.gameLabP5.startExecution = sinon.spy();
+          instance.p5Wrapper.p5 = sinon.spy();
+          instance.p5Wrapper.p5.allSprites = sinon.spy();
+          instance.p5Wrapper.p5.allSprites.removeSprites = sinon.spy();
+          instance.p5Wrapper.p5.redraw = sinon.spy();
+          instance.p5Wrapper.p5.World = sinon.spy();
+          instance.p5Wrapper.setLoop = sinon.spy();
+          instance.p5Wrapper.startExecution = sinon.spy();
           instance.initInterpreter = sinon.spy();
           instance.onP5Setup = sinon.spy();
           instance.reset = sinon.spy();

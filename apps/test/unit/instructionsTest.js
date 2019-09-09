@@ -60,13 +60,30 @@ describe('instructions', () => {
       initialState = {
         collapsed: false,
         renderedHeight: 0,
-        expandedHeight: 0
+        expandedHeight: 0,
+        allowResize: true
       };
       newState = reducer(initialState, setInstructionsRenderedHeight(200));
       assert.deepEqual(newState, {
         collapsed: false,
         renderedHeight: 200,
-        expandedHeight: 200
+        expandedHeight: 200,
+        allowResize: true
+      });
+    });
+
+    it('setInstructionsRenderedHeight does not update without allowResize', () => {
+      var initialState, newState;
+      initialState = {
+        collapsed: false,
+        renderedHeight: 0,
+        expandedHeight: 0
+      };
+      newState = reducer(initialState, setInstructionsRenderedHeight(200));
+      assert.deepEqual(newState, {
+        collapsed: false,
+        renderedHeight: 0,
+        expandedHeight: 0
       });
     });
 
@@ -75,24 +92,28 @@ describe('instructions', () => {
       initialState = {
         collapsed: true,
         renderedHeight: 0,
-        expandedHeight: 0
+        expandedHeight: 0,
+        allowResize: true
       };
       newState = reducer(initialState, setInstructionsRenderedHeight(200));
       assert.deepEqual(newState, {
         collapsed: true,
         renderedHeight: 200,
-        expandedHeight: 0
+        expandedHeight: 0,
+        allowResize: true
       });
     });
 
     it('setInstructionsMaxHeightNeeded sets maxNeededHeight', () => {
       var initialState, newState;
       initialState = {
-        maxNeededHeight: 0
+        maxNeededHeight: 0,
+        allowResize: true
       };
       newState = reducer(initialState, setInstructionsMaxHeightNeeded(200));
       assert.deepEqual(newState, {
-        maxNeededHeight: 200
+        maxNeededHeight: 200,
+        allowResize: true
       });
     });
 
@@ -101,13 +122,15 @@ describe('instructions', () => {
       initialState = {
         maxAvailableHeight: Infinity,
         renderedHeight: 0,
-        expandedHeight: 0
+        expandedHeight: 0,
+        allowResize: true
       };
       newState = reducer(initialState, setInstructionsMaxHeightAvailable(300));
       assert.deepEqual(newState, {
         maxAvailableHeight: 300,
         renderedHeight: 0,
-        expandedHeight: 0
+        expandedHeight: 0,
+        allowResize: true
       });
     });
 
@@ -116,13 +139,15 @@ describe('instructions', () => {
       initialState = {
         maxAvailableHeight: Infinity,
         renderedHeight: 400,
-        expandedHeight: 400
+        expandedHeight: 400,
+        allowResize: true
       };
       newState = reducer(initialState, setInstructionsMaxHeightAvailable(300));
       assert.deepEqual(newState, {
         maxAvailableHeight: 300,
         renderedHeight: 300,
-        expandedHeight: 300
+        expandedHeight: 300,
+        allowResize: true
       });
     });
   });

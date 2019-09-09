@@ -4,12 +4,57 @@ hi:
     script:
       category:
         csf_category_name: कंप्यूटर साइंस की बुनियादी बातें
+        full_course_category_name: Full Courses
+        hoc_category_name: आवर ऑफ़ कोड
         math_category_name: गणित
       name:
+        course1:
+          stages:
+            Building a Foundation:
+              name: नींव का निर्माण करना
+            Getting Loopy:
+              name: लूपी होना
+            Going Places Safely:
+              name: सुरक्षित रूप से स्थानों पर जाना
+            Happy Maps:
+              name: हैप्पी मैप्स
+            Move it, Move it:
+              name: इसे मूव करें, इसे मूव करें
+            'Real-life Algorithms: Plant a Seed':
+              name: 'वास्तविक-जीवन की कलन विधियां: पौधा उगाना'
+            The Big Event:
+              name: विशाल इवेंट
         course2:
           stages:
+            Binary Bracelets:
+              name: युग्मक ब्रैस्लेट्स
             Conditionals:
               name: शर्तें
+            Getting Loopy:
+              name: लूपी होना
+            'Real-life Algorithms: Paper Planes':
+              name: 'वास्तविक-जीवन की कलन विधियां: कागज के जहाज'
+            The Big Event:
+              name: विशाल इवेंट
+            Your Digital Footprint:
+              name: आपका डिजीटल फुटप्रिंट
+        course3:
+          stages:
+            Crowdsourcing:
+              name: क्राउडसोर्सिंग
+            Digital Citizenship:
+              name: डिजीटल नागरिकता
+            Functional Suncatchers:
+              name: फंक्शनल सनकैचर्स
+            Internet:
+              name: इंटरनेट
+            Songwriting:
+              name: गीत लेखन
+        hourofcode:
+          title: क्लासिक भूलभुलैया
+        frozen:
+          description_short: आइए ऐना और एल्सा से जुड़ने के लिए कोड का उपयोग करें,
+            जब वे बर्फ के जादू और सुंदरता की पड़ताल करती हैं।
         usability:
           stages:
             Variables:
@@ -22,6 +67,14 @@ hi:
           stages:
             Infinity:
               name: अनंत
+        algebrademo:
+          stages:
+            The Design Recipe:
+              name: डिज़ाइन रेसिपी
+        K5PD:
+          stages:
+            Teacher Dashboard:
+              name: अध्यापक डैशबोर्ड
         20-hour:
           stages:
             Conditionals:
@@ -36,34 +89,162 @@ hi:
           title: घटनाएँ
           description: घटनाएँ
           description_short: घटनाएँ
+        flappy:
+          title: फ्लैपी कोड
+          description: क्या आप 10 मिनट से कम समय में अपनी खुद की गेम लिख सकते हैं?
+            हमारा फ्लैपी कोड ट्यूटोरियल आजमाएं!
+          stages:
+            Flappy Code:
+              name: फ्लैपी कोड
+        algebraPD:
+          stages:
+            Teacher Dashboard:
+              name: अध्यापक डैशबोर्ड
+        algebraPD3:
+          stages:
+            Teacher Dashboard:
+              name: अध्यापक डैशबोर्ड
+            The Design Recipe:
+              name: डिज़ाइन रेसिपी
+        algebraPD-NexTech:
+          stages:
+            Teacher Dashboard:
+              name: अध्यापक डैशबोर्ड
+        algebraPD-iZone:
+          stages:
+            Teacher Dashboard:
+              name: अध्यापक डैशबोर्ड
+        sciencePD2:
+          stages:
+            Wrap-Up:
+              name: समाप्ति
+        algebraPD2a:
+          stages:
+            The Design Recipe:
+              name: डिज़ाइन रेसिपी
+        allthethings:
+          stages:
+            Minecraft:
+              name: Minecraft
+            Web Lab:
+              name: वेब लैब
+        algebraPD2b:
+          stages:
+            Teacher Dashboard:
+              name: अध्यापक डैशबोर्ड
+        algebraPD2:
+          stages:
+            Teacher Dashboard:
+              name: अध्यापक डैशबोर्ड
+            The Design Recipe:
+              name: डिज़ाइन रेसिपी
+        sciencePD2b:
+          stages:
+            Wrap-Up:
+              name: समाप्ति
+        science-PD2:
+          stages:
+            Wrap-Up:
+              name: समाप्ति
+        sciencePD2b-iZone:
+          stages:
+            Wrap-Up:
+              name: समाप्ति
+        asUnplugged:
+          stages:
+            Binary Bracelets:
+              name: युग्मक ब्रैस्लेट्स
+            Building a Foundation:
+              name: नींव का निर्माण करना
+            Getting Loopy:
+              name: लूपी होना
+            Happy Maps:
+              name: हैप्पी मैप्स
+            Move it, Move it:
+              name: इसे मूव करें, इसे मूव करें
+            'Real-life Algorithms: Plant a Seed':
+              name: 'वास्तविक-जीवन की कलन विधियां: पौधा उगाना'
+            Songwriting:
+              name: गीत लेखन
+            The Big Event:
+              name: विशाल इवेंट
+        ScienceP3OLPT2:
+          stages:
+            Wrap-Up:
+              name: समाप्ति
         starwars:
           title: 'स्टार वार्स: कोड के झरीये आकाशगंगा बनाए'
         starwarsblocks:
           title: 'स्टार वार्स: कोड के झरीये आकाशगंगा बनाए'
         mc:
+          title: Minecraft आवर ऑफ़ कोड
           description: इस Minecraft की दुनिया के जरिए साहसिक यात्रा पर स्टीव या एलेक्स
             को ले जाने के लिए कोड ब्लॉक का उपयोग करें
           description_short: कोड के जरिए Minecraft की दुनिया का पता लगाएँ
+        ScienceP3OLPT3:
+          stages:
+            Wrap-Up:
+              name: समाप्ति
+        algebraPD1:
+          stages:
+            Teacher Dashboard:
+              name: अध्यापक डैशबोर्ड
         csp1-2017:
           stages:
             The Internet:
               name: इंटरनेट
+            Post-Course Survey:
+              name: पाठ्यक्रम के बाद का सर्वेक्षण
+        csp2-2017:
+          stages:
+            Post-Course Survey:
+              name: पाठ्यक्रम के बाद का सर्वेक्षण
+        csp3-2017:
+          stages:
+            Post-Course Survey:
+              name: पाठ्यक्रम के बाद का सर्वेक्षण
+        csp4-2017:
+          stages:
+            Simple Encryption:
+              name: साधारण कूटलेखन
+            Post-Course Survey:
+              name: पाठ्यक्रम के बाद का सर्वेक्षण
+        csp5-2017:
+          stages:
+            Post-Course Survey:
+              name: पाठ्यक्रम के बाद का सर्वेक्षण
         CSDU3-Draft:
           stages:
             Functions:
               name: कार्य
+        algebraFacilitator:
+          stages:
+            Teacher Dashboard:
+              name: अध्यापक डैशबोर्ड
         gradeKinder:
           stages:
             Events:
               name: घटनाएँ
             Loops:
               name: फंदे
+            'Real-life Algorithms: Plant a Seed':
+              name: 'वास्तविक-जीवन की कलन विधियां: पौधा उगाना'
+        grade4:
+          stages:
+            Digital Citizenship:
+              name: डिजीटल नागरिकता
+            Songwriting:
+              name: गीत लेखन
         grade1:
           stages:
             Events:
               name: घटनाएँ
             Loops:
               name: फंदे
+        grade5:
+          stages:
+            Digital Citizenship:
+              name: डिजीटल नागरिकता
         csd3-2017:
           stages:
             Functions:
@@ -72,6 +253,14 @@ hi:
               name: चर
             Conditionals:
               name: शर्तें
+        grade2:
+          stages:
+            Binary Bracelets:
+              name: युग्मक ब्रैस्लेट्स
+            'Real-life Algorithms: Paper Planes':
+              name: 'वास्तविक-जीवन की कलन विधियां: कागज के जहाज'
+            The Big Event:
+              name: विशाल इवेंट
         k5concepts:
           stages:
             Conditionals:
@@ -84,14 +273,105 @@ hi:
               name: फंदे
             Variables:
               name: चर
+        algebrapdnext:
+          stages:
+            Teacher Dashboard:
+              name: अध्यापक डैशबोर्ड
+            The Design Recipe:
+              name: डिज़ाइन रेसिपी
+        hoc-encryption:
+          stages:
+            Simple Encryption:
+              name: साधारण कूटलेखन
+        fesbinary:
+          stages:
+            Binary Bracelets:
+              name: युग्मक ब्रैस्लेट्स
+            Binary Images:
+              name: युग्मक चित्र
         csd2-2017:
           stages:
             Lists:
               name: सूचियाँ
+        minecraft:
+          description_short: Minecraft के आपके खुद के संस्करण में जानवरों और अन्य
+            Minecraft प्राणियों को प्रोग्राम करें।
+          description: Minecraft के आपके खुद के संस्करण में जानवरों और अन्य Minecraft
+            प्राणियों को प्रोग्राम करें।
+        flappy-impact-study:
+          stages:
+            Flappy Code:
+              name: फ्लैपी कोड
+        coursea-draft:
+          stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'वास्तविक-जीवन की कलन विधियां: पौधा उगाना'
+            Going Places Safely:
+              name: सुरक्षित रूप से स्थानों पर जाना
+        courseb-draft:
+          stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'वास्तविक-जीवन की कलन विधियां: पौधा उगाना'
+            Your Digital Footprint:
+              name: आपका डिजीटल फुटप्रिंट
+        coursec-draft:
+          stages:
+            'Real-life Algorithms: Paper Planes':
+              name: 'वास्तविक-जीवन की कलन विधियां: कागज के जहाज'
+            Binary Bracelets:
+              name: युग्मक ब्रैस्लेट्स
+            Your Digital Footprint:
+              name: आपका डिजीटल फुटप्रिंट
+            Building a Foundation:
+              name: नींव का निर्माण करना
+        coursed-draft:
+          stages:
+            Conditionals with Cards:
+              name: कार्डों के साथ सापेक्ष
+            Digital Citizenship:
+              name: डिजीटल नागरिकता
         coursee-draft:
           stages:
+            Digital Citizenship:
+              name: डिजीटल नागरिकता
+            Internet:
+              name: इंटरनेट
+            Crowdsourcing:
+              name: क्राउडसोर्सिंग
             Conditionals:
               name: शर्तें
+        coursef-draft:
+          stages:
+            Digital Citizenship:
+              name: डिजीटल नागरिकता
+            Envelope Variables:
+              name: एनवलोप वेरिएब्लस
+            For Loop Fun:
+              name: फॉर लूप फन
+        2016_sciencePD-phase2b:
+          stages:
+            Wrap-Up:
+              name: समाप्ति
+        2016_sciencePD_phase2b:
+          stages:
+            Wrap-Up:
+              name: समाप्ति
+        sciencepd4:
+          stages:
+            Wrap-Up:
+              name: समाप्ति
+        science-pd-ol-pt-5:
+          stages:
+            Wrap-Up:
+              name: समाप्ति
+        sciencepd5:
+          stages:
+            Wrap-Up:
+              name: समाप्ति
+        csppostap-2017:
+          stages:
+            Post-Course Survey:
+              name: पाठ्यक्रम के बाद का सर्वेक्षण
         csd6-draft:
           stages:
             Lists:
@@ -100,6 +380,8 @@ hi:
           stages:
             Conditionals:
               name: शर्तें
+            'Real Life Algorithms: Dice Race':
+              name: 'वास्तविक-जीवन की कलन विधियां: डाइस रेस'
         csd6-2017:
           stages:
             Lists:
@@ -130,22 +412,148 @@ hi:
               name: कार्य
             'null':
               name: शून्य
+        coursea-2017:
+          stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'वास्तविक-जीवन की कलन विधियां: पौधा उगाना'
+          title: कोर्स A
+          assignment_family_title: कोर्स A
+          description_short: आरंभिक-पाठकों के लिए कंप्यूटर साइंस का परिचय।
+        courseb-2017:
+          stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'वास्तविक-जीवन की कलन विधियां: पौधा उगाना'
+          title: कोर्स B
+          assignment_family_title: कोर्स B
+          description_short: आरंभिक-पाठकों के लिए कंप्यूटर साइंस का परिचय। (कोर्स
+            A से मिलता-जुलता, लेकिन पुराने छात्रों के लिए और विविध प्रकारों के साथ।)
+        coursec-2017:
+          stages:
+            'Real-life Algorithms: Paper Planes':
+              name: 'वास्तविक-जीवन की कलन विधियां: कागज के जहाज'
+          title: कोर्स C
+          assignment_family_title: कोर्स C
+        coursed-2017:
+          title: कोर्स D
+          assignment_family_title: कोर्स D
+          description_short: जल्दी से कोर्स C से अवधारणाओं को ग्रहण करें, फिर कलन
+            विधियों, नेस्टड लूप्स, सापेक्षों आदि पर जाएं।
+        coursee-2017:
+          stages:
+            Envelope Variables:
+              name: एनवलोप वेरिएब्लस
+            For Loop Fun:
+              name: फॉर लूप फन
+            Building a Foundation:
+              name: नींव का निर्माण करना
+          title: कोर्स E
+          assignment_family_title: कोर्स E
+          description_short: जल्दी से कोर्स C और D में अवधारणाओं को ग्रहण करें और
+            फिर फंक्शन्स के साथ आगे जाएं।
+        coursef-2017:
+          stages:
+            Building a Foundation:
+              name: नींव का निर्माण करना
+          title: कोर्स F
+          assignment_family_title: कोर्स F
+          description_short: कंप्यूटर साइंस के मूल सिद्धांतों में सभी अवधारणाएं सीखें
+            और अपनी खुद की कला, कहानी या गेम बनाएं।
+        express-2017:
+          stages:
+            Internet:
+              name: इंटरनेट
+            Digital Citizenship:
+              name: डिजीटल नागरिकता
+            Conditionals with Cards:
+              name: कार्डों के साथ सापेक्ष
+            Envelope Variables:
+              name: एनवलोप वेरिएब्लस
+            For Loop Fun:
+              name: फॉर लूप फन
+            Building a Foundation:
+              name: नींव का निर्माण करना
+        pre-express-2017:
+          stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'वास्तविक-जीवन की कलन विधियां: पौधा उगाना'
         subgoal-labels-opt-in:
           stages:
             Thanks:
               name: धन्यवाद
         e-f-ramp:
           stages:
+            Building a Foundation:
+              name: नींव का निर्माण करना
             Conditionals:
               name: शर्तें
+            Internet:
+              name: इंटरनेट
+            Crowdsourcing:
+              name: क्राउडसोर्सिंग
+        new-d:
+          stages:
+            Conditionals with Cards:
+              name: कार्डों के साथ सापेक्ष
+            Digital Citizenship:
+              name: डिजीटल नागरिकता
+            Building a Foundation:
+              name: नींव का निर्माण करना
+        new-express:
+          stages:
+            Building a Foundation:
+              name: नींव का निर्माण करना
         new-e:
           stages:
+            Building a Foundation:
+              name: नींव का निर्माण करना
             Conditionals:
               name: शर्तें
+            Internet:
+              name: इंटरनेट
+            Crowdsourcing:
+              name: क्राउडसोर्सिंग
+        new-f:
+          stages:
+            Building a Foundation:
+              name: नींव का निर्माण करना
+            Envelope Variables:
+              name: एनवलोप वेरिएब्लस
+            For Loop Fun:
+              name: फॉर लूप फन
+        pwc:
+          stages:
+            Simple Encryption:
+              name: साधारण कूटलेखन
+        hero:
+          stages:
+            Minecraft Hour of Code:
+              name: Minecraft आवर ऑफ़ कोड
+        csp-explore-2017:
+          stages:
+            Post-Course Survey:
+              name: पाठ्यक्रम के बाद का सर्वेक्षण
+        csp-create-2017:
+          stages:
+            Post-Course Survey:
+              name: पाठ्यक्रम के बाद का सर्वेक्षण
         course-e-2018:
           stages:
+            Building a Foundation:
+              name: नींव का निर्माण करना
             Conditionals:
               name: शर्तें
+            Internet:
+              name: इंटरनेट
+            Crowdsourcing:
+              name: क्राउडसोर्सिंग
+        course-f-2018:
+          stages:
+            Building a Foundation:
+              name: नींव का निर्माण करना
+            Envelope Variables:
+              name: एनवलोप वेरिएब्लस
+            For Loop Fun:
+              name: फॉर लूप फन
         csd6-old:
           stages:
             Lists:
@@ -170,18 +578,119 @@ hi:
           stages:
             Lists:
               name: सूचियाँ
+        coursea-2018:
+          assignment_family_title: कोर्स A
+          description_short: आरंभिक-पाठकों के लिए कंप्यूटर साइंस का परिचय।
+          stages:
+            'Programming: Happy Maps':
+              name: हैप्पी मैप्स
+            Going Places Safely:
+              name: सुरक्षित रूप से स्थानों पर जाना
         express-2018:
           stages:
+            Building a Foundation:
+              name: नींव का निर्माण करना
+            'Events: The Big Event':
+              name: विशाल इवेंट
+            'Loops: Getting Loopy':
+              name: लूपी होना
+            Conditionals with Cards:
+              name: कार्डों के साथ सापेक्ष
+            'Functions: Songwriting':
+              name: गीत लेखन
+            Envelope Variables:
+              name: एनवलोप वेरिएब्लस
+            For Loop Fun:
+              name: फॉर लूप फन
+            Binary Bracelets:
+              name: युग्मक ब्रैस्लेट्स
+            'Unplugged: Binary':
+              name: युग्मक चित्र
             Internet:
               name: इंटरनेट
-        coursee-2018:
+            Crowdsourcing:
+              name: क्राउडसोर्सिंग
+        courseb-2018:
+          assignment_family_title: कोर्स B
           stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'वास्तविक-जीवन की कलन विधियां: पौधा उगाना'
+            Your Digital Footprint:
+              name: आपका डिजीटल फुटप्रिंट
+            Copyright and Creativity:
+              name: यह ग्रेट टू क्रिएट एंड प्ले फेयर है
+        coursed-2018:
+          assignment_family_title: कोर्स D
+          stages:
+            Building a Foundation:
+              name: नींव का निर्माण करना
+            Conditionals with Cards:
+              name: कार्डों के साथ सापेक्ष
+            Digital Citizenship:
+              name: डिजीटल नागरिकता
+            'Unplugged: Binary':
+              name: युग्मक चित्र
+        coursec-2018:
+          assignment_family_title: कोर्स C
+          stages:
+            Building a Foundation:
+              name: नींव का निर्माण करना
+            'Loops: Getting Loopy':
+              name: लूपी होना
+            'Events: The Big Event':
+              name: विशाल इवेंट
+            Binary Bracelets:
+              name: युग्मक ब्रैस्लेट्स
+        coursee-2018:
+          assignment_family_title: कोर्स E
+          stages:
+            'Programming: My Robotic Friends':
+              name: मेरे रोबोटिक दोस्त
+            Building a Foundation:
+              name: नींव का निर्माण करना
+            'Functions: Songwriting':
+              name: गीत लेखन
             Internet:
               name: इंटरनेट
+            Crowdsourcing:
+              name: क्राउडसोर्सिंग
+            Conditionals with Cards:
+              name: कार्डों के साथ सापेक्ष
+            Minecraft Hour of Code:
+              name: Minecraft आवर ऑफ़ कोड
+            Copyright and Creativity:
+              name: डिजीटल शेयरिंग
+        coursef-2018:
+          assignment_family_title: कोर्स F
+          description_short: कंप्यूटर साइंस के मूल सिद्धांतों में सभी अवधारणाएं सीखें
+            और अपनी खुद की कला, कहानी या गेम बनाएं।
+          stages:
+            'Programming: My Robotic Friends':
+              name: मेरे रोबोटिक दोस्त
+            Building a Foundation:
+              name: नींव का निर्माण करना
+            Envelope Variables:
+              name: एनवलोप वेरिएब्लस
+            For Loop Fun:
+              name: फॉर लूप फन
+            Conditionals with Cards:
+              name: कार्डों के साथ सापेक्ष
         csp1-2018:
           stages:
             The Internet:
               name: इंटरनेट
+        csp4-2018:
+          stages:
+            Simple Encryption:
+              name: साधारण कूटलेखन
+        pre-express-2018:
+          stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'वास्तविक-जीवन की कलन विधियां: पौधा उगाना'
+            Your Digital Footprint:
+              name: आपका डिजीटल फुटप्रिंट
+            Copyright and Creativity:
+              name: यह ग्रेट टू क्रिएट एंड प्ले फेयर है
         dance:
           stages:
             Dance Party:
@@ -199,19 +708,80 @@ hi:
           title: डांस करते रहें
           description: विस्तृत परियोजना योजनाओं के साथ पहले घंटे से आगे जाएं।
         coursef-2019:
+          description_short: कंप्यूटर साइंस के मूल सिद्धांतों में सभी अवधारणाएं सीखें
+            और अपनी खुद की कला, कहानी या गेम बनाएं।
           stages:
+            Building a Foundation:
+              name: नींव का निर्माण करना
+            Conditionals with Cards:
+              name: कार्डों के साथ सापेक्ष
+            Envelope Variables:
+              name: एनवलोप वेरिएब्लस
+            For Loop Fun:
+              name: फॉर लूप फन
             Internet:
               name: इंटरनेट
+            Crowdsourcing:
+              name: क्राउडसोर्सिंग
+            Digital Sharing:
+              name: डिजीटल शेयरिंग
+              description_teacher: कॉपीराइट और रचनात्मकता पर टीम के द्वारा कंप्यूटर
+                साइंस के मूल सिद्धांतों के लिए उधार लिया गया, यह पाठ विशेषकर डिजीटल
+                परिवेश में, स्वामित्व और कॉपीराइट का सम्मान करने की चुनौतियों और लाभों
+                को समझने में छात्रों की मदद के लिए मौजूद है। छात्रों को नैतिक डिजीटल
+                नागरिक होने का महत्वपूर्ण हिस्से के तौर पर कलाकारों के अधिकारों का
+                सम्मान करने के लिए प्रोत्साहित किया जाना चाहिए।
         dance-low:
           stages:
             Dance Party:
               name: डांस पार्टी
         coursed-2019:
           stages:
+            Relay Programming:
+              description_teacher: यह गतिविधि डीबगिंग और दृढ़ता के बारे में एक छोटे
+                पाठ से शुरू होगी, फिर बहुत तेज़ी से मूव होगी क्योंकि छात्रों को टीमों
+                में बाटा जाता है और वे एक ही समय पर एक निर्देश का प्रोग्राम लिखने
+                के लिए एक साथ काम करते हैं।
+            Conditionals with Cards:
+              name: कार्डों के साथ सापेक्ष
+            Digital Citizenship:
+              name: डिजीटल नागरिकता
+            'Unplugged: Binary':
+              name: युग्मक चित्र
             Dance Party:
               name: डांस पार्टी
+        coursee-2019:
+          stages:
+            Building a Foundation:
+              name: नींव का निर्माण करना
+            Conditionals with Cards:
+              name: कार्डों के साथ सापेक्ष
+            'Functions: Songwriting':
+              name: गीत लेखन
+            Internet:
+              name: इंटरनेट
+            Crowdsourcing:
+              name: क्राउडसोर्सिंग
+            Digital Sharing:
+              name: डिजीटल शेयरिंग
+            Simon Says:
+              name: सिमोन कहती है
+            Songwriting:
+              name: गीत लेखन
         express-2019:
           stages:
+            Conditionals with Cards:
+              name: कार्डों के साथ सापेक्ष
+            Envelope Variables:
+              name: एनवलोप वेरिएब्लस
+            For Loop Fun:
+              name: फॉर लूप फन
+            Binary Bracelets:
+              name: युग्मक ब्रैस्लेट्स
+            Internet:
+              name: इंटरनेट
+            Crowdsourcing:
+              name: क्राउडसोर्सिंग
             Dance Party:
               name: डांस पार्टी
         andrea-test:
@@ -221,6 +791,39 @@ hi:
         dance-extras-gallery:
           title: डांस करते रहें
           description: विस्तृत परियोजना योजनाओं के साथ पहले घंटे से आगे जाएं।
+        coursec-2019:
+          stages:
+            'Real-life Algorithms: Paper Planes':
+              name: 'वास्तविक-जीवन की कलन विधियां: कागज के जहाज'
+            'Events: The Big Event':
+              name: विशाल इवेंट
+            Binary Bracelets:
+              name: युग्मक ब्रैस्लेट्स
+            Powerful Passwords:
+              name: प्रभावशाली पासवर्ड
+            Picturing Data:
+              name: तस्वीरों वाला डेटा
+        coursea-2019:
+          description_short: आरंभिक-पाठकों के लिए कंप्यूटर साइंस का परिचय।
+          stages:
+            'Programming: Happy Maps':
+              name: हैप्पी मैप्स
+            Going Places Safely:
+              name: सुरक्षित रूप से स्थानों पर जाना
+        courseb-2019:
+          stages:
+            Your Digital Footprint:
+              name: आपका डिजीटल फुटप्रिंट
+            'Loops: Getting Loopy':
+              name: लूपी होना
+        pre-express-2019:
+          stages:
+            Your Digital Footprint:
+              name: आपका डिजीटल फुटप्रिंट
+        removed19:
+          stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'वास्तविक-जीवन की कलन विधियां: पौधा उगाना'
         csd2-2019:
           stages:
             Lists:
@@ -233,10 +836,30 @@ hi:
               name: शर्तें
             Functions:
               name: कार्य
+        csp4-pilot:
+          stages:
+            Surveys:
+              name: सर्वेक्षण
         csp1-2019:
           stages:
             The Internet:
               name: इंटरनेट
+        csp4-2019:
+          stages:
+            Simple Encryption:
+              name: साधारण कूटलेखन
+        time4csdemo:
+          stages:
+            Crowdsourcing:
+              name: क्राउडसोर्सिंग
+            Conditionals with Cards:
+              name: कार्डों के साथ सापेक्ष
+            Building a Foundation:
+              name: नींव का निर्माण करना
+        csp7-pilot-staging:
+          stages:
+            Libraries:
+              name: पुस्तकालय
         csd2-pilot:
           stages:
             Lists:

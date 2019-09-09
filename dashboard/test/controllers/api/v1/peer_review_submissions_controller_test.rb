@@ -49,7 +49,7 @@ class Api::V1::PeerReviewSubmissionsControllerTest < ActionController::TestCase
     create_peer_reviews_for_user_and_level(other_submitter, @level_3)
     submissions = PeerReview.where(level: @level_3, submitter: other_submitter)
 
-    get :index, params: {email: other_submitter.email}
+    get :index, params: {user_q: other_submitter.email}
     assert_response :success
     response = JSON.parse(@response.body)
     assert_equal [
@@ -67,6 +67,36 @@ class Api::V1::PeerReviewSubmissionsControllerTest < ActionController::TestCase
       },
       response['pagination']
     )
+  end
+
+  test 'Peer reviews email filter can also fuzzy-search for name' do
+    daneel = create :teacher, name: 'R. Daneel Olivaw'
+    danielle = create :teacher, name: 'Danielle B'
+    gerbil = create :teacher, name: 'Toothy the Gerbil'
+
+    create_peer_reviews_for_user_and_level daneel, @level_3
+    create_peer_reviews_for_user_and_level danielle, @level_3
+    create_peer_reviews_for_user_and_level gerbil, @level_3
+
+    # Try to find "Daneel" and "Danielle" but not "Toothy"
+    get :index, params: {user_q: 'Dan'}
+    assert_response :success
+    response = JSON.parse(@response.body)
+
+    # R. Daneel's submissions are found
+    PeerReview.where(submitter: daneel).each do |pr|
+      assert response['submissions'].any? {|submission| submission['review_ids'].any? {|r| r[0] == pr.id}}
+    end
+
+    # Danielle's submissions are found
+    PeerReview.where(submitter: danielle).each do |pr|
+      assert response['submissions'].any? {|submission| submission['review_ids'].any? {|r| r[0] == pr.id}}
+    end
+
+    # Toothy the Gerbil's submissions are not found
+    PeerReview.where(submitter: gerbil).each do |pr|
+      refute response['submissions'].any? {|submission| submission['review_ids'].any? {|r| r[0] == pr.id}}
+    end
   end
 
   test 'All peer reviews gets the first page of peer reviews submissions' do
@@ -129,6 +159,128 @@ class Api::V1::PeerReviewSubmissionsControllerTest < ActionController::TestCase
     )
   end
 
+  test 'Peer Review report shows first submission date and latest submission date' do
+    sign_out @plc_reviewer
+
+    Timecop.freeze do
+      # Create a one-level peer review module
+      course_unit = create :plc_course_unit
+      level = create :free_response, peer_reviewable: true
+      script_level = create :script_level, script: course_unit.script, levels: [level]
+      learning_module = create :plc_learning_module, plc_course_unit: course_unit, stage: script_level.stage
+
+      # Create a PD'd teacher and an instructor
+      learner = create :teacher
+      instructor = create :plc_reviewer
+
+      # Assign the learner to the peer review module
+      # (Whoa let's simplify this in the future...)
+      create(
+        :plc_enrollment_module_assignment,
+        user: learner,
+        plc_learning_module: learning_module,
+        plc_enrollment_unit_assignment: create(
+          :plc_enrollment_unit_assignment,
+          user: learner,
+          plc_course_unit: course_unit,
+          plc_user_course_enrollment: create(
+            :plc_user_course_enrollment,
+            user: learner,
+            plc_course: course_unit.plc_course
+          )
+        )
+      )
+
+      # All set up - let's jump forward in time
+      Timecop.travel 1.day
+
+      # Learner submits an answer for the level
+      first_answer = create :level_source, level: level
+      user_level = create :user_level,
+        user: learner,
+        level: level,
+        level_source: first_answer,
+        script: course_unit.script,
+        submitted: true,
+        best_result: ActivityConstants::UNREVIEWED_SUBMISSION_RESULT
+      # Setup check: We created two peer reviews for this submission
+      assert_equal 2, PeerReview.where(level_source: first_answer).count
+
+      # Remember this date, we'll check it later
+      first_submission_date = PeerReview.where(level_source: first_answer).last.created_at
+
+      # The instructor reviews a day later, rejecting the submission
+      Timecop.travel 1.day
+      PeerReview.where(level_source: first_answer, status: :escalated).update(
+        reviewer: instructor,
+        from_instructor: true,
+        data: 'Please make some changes',
+        status: :rejected
+      )
+
+      # The learner updates their answer
+      Timecop.travel 1.day
+      second_answer = create :level_source, level: level
+      user_level.update level_source: second_answer
+      # Setup check: Two new peer reviews should exist for this submission
+      assert_equal 2, PeerReview.where(level_source: second_answer).count
+
+      # The instructor reviews again, rejecting the submission a second time
+      Timecop.travel 1.day
+      PeerReview.where(level_source: second_answer, status: :escalated).update(
+        reviewer: instructor,
+        from_instructor: true,
+        data: 'Still not good enough',
+        status: :rejected
+      )
+
+      # The learner updates their answer one more time
+      Timecop.travel 1.day
+      final_answer = create :level_source, level: level
+      user_level.update level_source: final_answer
+      # Setup check: Two new peer reviews should exist for this submission
+      assert_equal 2, PeerReview.where(level_source: final_answer).count
+
+      # Remember this date - we'll check it later
+      last_submission_date = PeerReview.where(level_source: final_answer).last.created_at
+
+      # The instructor reviews a third time, finally accepting the submission
+      Timecop.travel 1.day
+      PeerReview.where(level_source: final_answer, status: :escalated).update(
+        reviewer: instructor,
+        from_instructor: true,
+        data: 'Great work!',
+        status: :accepted
+      )
+
+      # Setup check: We should now see three completed peer reviews and one still
+      # open for a non-instructor.
+      assert_equal 3, PeerReview.where(level: level, submitter: learner, reviewer: instructor).count
+      assert_equal 1, PeerReview.where(level: level, submitter: learner, reviewer: nil).count
+
+      # Jump forward one more day for good measure
+      Timecop.travel 1.day
+
+      # Finally, the thing we wanted to test:
+      # Generate CSV as the instructor
+      sign_in instructor
+      get :report_csv, params: {plc_course_unit_id: course_unit.id}
+      assert_response :success
+      response = CSV.parse(@response.body)
+
+      # Check that the relevant columns are where we expect them to be
+      assert_equal "#{level.name.titleize} First Submit Date", response[0][3]
+      assert_equal "#{level.name.titleize} Latest Submit Date", response[0][4]
+
+      # Check that only our test data was included (a header row and one data row)
+      assert_equal 2, response.count
+
+      # Check columns for correct dates
+      assert_equal first_submission_date.strftime("%-m/%-d/%Y"), response[1][3]
+      assert_equal last_submission_date.strftime("%-m/%-d/%Y"), response[1][4]
+    end
+  end
+
   test 'Peer Review report returns expected columns' do
     create :peer_review, reviewer: @submitter, script: @course_unit.script
     create :peer_review, reviewer: @submitter
@@ -140,7 +292,11 @@ class Api::V1::PeerReviewSubmissionsControllerTest < ActionController::TestCase
 
     expected_headers = ['Name', 'Email']
     expected_headers << [@level_1, @level_2, @level_3].map do |level|
-      [level.name.titleize, "#{level.name.titleize} Submit Date"]
+      [
+        level.name.titleize,
+        "#{level.name.titleize} First Submit Date",
+        "#{level.name.titleize} Latest Submit Date"
+      ]
     end
     expected_headers << 'Reviews Performed'
 
@@ -148,8 +304,34 @@ class Api::V1::PeerReviewSubmissionsControllerTest < ActionController::TestCase
 
     assert_equal [
       expected_headers.flatten,
-      [@submitter.name, @submitter.email, 'Pending Review', date, 'Accepted', date, 'Pending Review', date, '1'],
-      [@teacher_reviewer.name, @teacher_reviewer.email, 'Unsubmitted', '', 'Unsubmitted', '', 'Unsubmitted', '', '2']
+      [
+        @submitter.name,
+        @submitter.email,
+        'Pending Review',
+        date,
+        date,
+        'Accepted',
+        date,
+        date,
+        'Pending Review',
+        date,
+        date,
+        '1'
+      ],
+      [
+        @teacher_reviewer.name,
+        @teacher_reviewer.email,
+        'Unsubmitted',
+        '',
+        '',
+        'Unsubmitted',
+        '',
+        '',
+        'Unsubmitted',
+        '',
+        '',
+        '2'
+      ]
     ], response
   end
 

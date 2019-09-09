@@ -37,6 +37,7 @@ pl:
           tworzenie konta Code.org z <strong>%{provider}</strong> <strong>%{email}</strong>.
         error:
           future: nie może być w przyszłości
+  beta: beta
   hello: Witaj świecie
   welcome_back: Witaj z powrotem, %{name}
   your_professional_learning_plan: Twój profesjonalny program nauczania
@@ -523,125 +524,6 @@ pl:
     no_primary_course: Wypróbuj kurs w Code Studio
     choose_next_course: Wypróbuj jeden z poniższych kursów w Code Studio
     print_certificate: Drukuj Certyfikat
-    announcement_title: Ogłoszenia
-    announcement_message_fall2016_features: Spędziliśmy lato zamieniając Wasze opinie
-      na nowe możliwości. Teraz możesz <a href="%{pp_url}" target="_blank"> śledzić
-      postępy wielu uczniów</a>, nawet jeśli programuj w parach na jednym urządzeniu.
-      Możesz użyć <a href="%{csp_widgets_url}" target="_blank"> najlepszych narzędzi
-      interaktywnych</a> z kursu CS Prinicples (Podstawy Informatyki) w <i>każdej</i>
-      klasie. I Twoi uczniowie mogą <a href="%{unused_code_url}" target="_blank">
-      zachować niewykorzystany kod</a> w swojej roboczej przestrzeni, aby zachęcić
-      ich do eksperymentowania! Sprawdź nasze nowe propozycje i daj nam znać, co o
-      nich myślisz.
-    announcement_csp_widgets_message: Szukasz ciekawych sposobów, aby nauczyć klasę,
-      jak działa internet, jak kryptografia zabezpiecza dane oraz innych koncepcji?
-      Wzięliśmy najlepsze interaktywne narzędzia z naszego programu Zasad Informatyki
-      i wydaliśmy niezależne widżety, z których możesz korzystać w każdej chwili!
-    announcement_learn_more_button: Dowiedz się więcej
-    announcement_try_now_button: Spróbuj teraz
-    announcement_host_an_hour_button: Przeprowadź Godzinę Kodowania
-    announcement_watch_video_button: Obejrzyj Film
-    announcement_petition: Jako nauczyciel przewodzisz ruchowi, który umożliwia każdemu
-      uczniowi w każdej szkole naukę informatyki. Nadszedł czas, abyś skontaktował
-      się ze swoimi przedstawicielami. W tym tygodniu, liderzy edukacji, 28 Naczelników
-      i dyrektorów największych firm w Ameryce we wspólnym liście otwartym zwróci
-      się do Kongresu USA o sfinansowanie edukacji informatycznej w K-12.
-    announcement_petition_button: Dodaj swoje imię
-    announcement_go_beyond_button: Idź o krok dalej
-    announcement_apply_now: Zaaplikuj
-    announcement_all: Bądź na bieżąco z nowymi funkcjami i aktualizacjami na naszym
-      blogu dla nauczycieli. <a href='%{teacher_blog_url}' target='_blank'>Zobacz
-      poprzednie ogłoszenia.</a>
-    announcement_hoc_launch: Tysiące nauczycieli w ponad 180 krajach rozpocznie nauczanie
-      informatyki w czasie Godziny Kodowania w dniach 5-11 grudnia, 2016. Liczymy
-      na was, że pomożecie nam przyciągnąć więcej uczniów niż kiedykolwiek dotychczas.
-      <a href='%{signup_url}' target='_blank'> Zarejestruj swoje zdarzenie w ramach
-      Godziny Kodowania</a> i powiadom innego nauczyciela, że każdy może rozpocząć
-      nauczanie informatyki.
-    announcement_mc_launch: Jeden z naszych najbardziej popularnych samouczków ma
-      teraz dalszy ciąg! Całkowicie nowy samouczek Minecraft Designer pozwala uczniom
-      tworzyć własne zasady dla świata Minecrafta. Mogą zdobyć unikatowe doświadczenia
-      w świecie Minecrafta a następnie podzielić się nim z przyjaciółmi lub grać na
-      swoich telefonach. Zróbcie to ze swoją klasą w ramach Godziny Kodowania.
-    announcement_how_code_studio: Nie potrzebujesz żadnego doświadczenia, aby zacząć
-      uczyć informatyki w swojej klasie. Code.org oferuje curriculum, plany lekcji,
-      wysokiej jakości programy nauczania i tony wspaniałych narzędzi dla wszystkich
-      poziomów nauczania&mdash;wszystko, czego potrzebujesz, za darmo. Ciekaw jesteś,
-      gdzie zacząć? Pobierz <a href='%{video_download_url}'>to wideo</a>!
-    announcement_go_beyond: Wykrocz poza Godzinę Kodowania i każdego tygodnia odkrywaj
-      ze swoimi uczniami pojęcia informatyki. Code.org oferuje programy nauczania,
-      harmonogramy lekcji, wysokiej jakości programy kształcenia zawodowego oraz mnóstwo
-      wspaniałych narzędzi dla wszystkich klas &mdash; i wszystko to za darmo. :)
-      Nie potrzebujesz żadnego doświadczenia, by zacząć uczyć informatyki w swojej
-      klasie. <b>Wybierz odpowiedni dla swojej klasy kolejny krok.</b>
-    announcement_teacher_recruitment: Nauczyciele tacy jak ty przewodzą w ruchu edukacji
-      informatycznej. Możesz wziąć udział w wysokiej jakości programach kształcenia
-      zawodowego dla nauczycieli wszystkich klas szkół podstawowych i średnich <strong>bez
-      ponoszenia jakichkolwiek kosztów przez twoją szkołę</strong>. Podejmij przewodnictwo
-      w nauce informatyki w twojej szkole i zgłoś się na kształcenie zawodowe.
-    announcement_teacher_recruitment2: Nauczyciele tacy jak ty przewodzą w ruchu edukacji
-      informatycznej. Możesz wziąć udział w wysokiej jakości programach kształcenia
-      zawodowego dla nauczycieli wszystkich klas szkół podstawowych i średnich <strong>bez
-      ponoszenia jakichkolwiek kosztów przez twoją szkołę</strong>. Podejmij przewodnictwo
-      w nauce informatyki w twojej szkole i zgłoś się na kształcenie zawodowe. Zgłoszenia
-      nauczycieli szkół średnich są przyjmowane do 17 marca.
-    announcement_csf_pilot: "<strong>Nauczyciele szkół podstawowych:</strong> Pomóż
-      nam aktualizować nasze kursy Podstaw Informatyki! Poszukujemy nauczycieli do
-      pilotażowego prowadzenia zaktualizowanego programu Podstaw Informatyki zimą
-      i wiosną 2017. Bardzo prosimy o komentarze i uwagi, zanim owe aktualizacje zostaną
-      opublikowane w sierpniu 2017."
-    announcement_student_privacy: W Code.org traktujemy prywatność uczniów bardzo
-      poważnie. Aby chronić prywatność twoich uczniów, wprowadziliśmy zmianę na stronie
-      logowania do twojej sekcji, tak, by uniknąć wyświetlania imion i nazwisk. Mimo
-      że ta aktualizacja powinna zredukować zastrzeżenia co do prywatności na stronie
-      logowania, nadal zachęcamy użytkowników, żeby <i>nie używali imion i nazwisk
-      uczniów</i>.
-    announcement_apcsp_recruitment: "<strong>Nauczyciele Zasad Informatyki:</strong>
-      Twoi uczniowie mają szansę wystąpić w kolejnym kultowym wideo Code.org, zachęcającym
-      uczniów do przystąpienia w tym roku do egzaminu z Zasad Informatyki w wersji
-      AP. Zapraszamy wszystkich uczniów Zasad Informatyki do zgłaszania za pośrednictwem
-      Twittera, Instragramu lub Facebooka 10-20-sekundowych filmików zawierających
-      zdanie &ldquor;Przystępuję do egzaminu #APCSP, ponieważ...&rdquo; Najlepsze
-      zgłoszenia zostaną wykorzystane w naszym wideo, a zwycięzcy otrzymają upominki
-      z logo Code.org!"
-    announcement_apcsp_recruitment2: 'Zapowiada się, że tegoroczny egzamin z Zasad
-      Informatyki AP pobije rekordy. Udział uczniów w tym egzaminie mógłby znacząco
-      poprawić różnorodność na Informatyce w wersji AP, jednakże potrzebujemy twojej
-      pomocy. Zachęć każdego ucznia i uczennicę Zasad Informatyki do przystąpienia
-      do egzaminu z Zasad Informatyki w wersji AP, a <a href=''%{gift_url}'' target=''_blank''>prześlemy
-      ci upominek</a>. Uczniowie mogą również zachęcić rówieśników w całym kraju,
-      biorąc udział w naszym <a href=''%{challenge_url}'' target=''_blank''>wyzwaniu
-      wideo #APCSP</a>.'
-    announcement_apcsp_recruitment3: Zapowiada się, że tegoroczny egzamin z Zasad
-      Informatyki AP pobije rekordy. Udział uczniów w tym egzaminie mógłby znacząco
-      poprawić różnorodność na Informatyce w wersji AP, jednakże potrzebujemy twojej
-      pomocy. Zachęć każdego ucznia i uczennicę Zasad Informatyki do przystąpienia
-      do egzaminu z Zasad Informatyki w wersji AP, aby mieć szansę wygrać <a href='%{gift_url}'
-      target='_blank'>kartę upominkową, laptopa lub inną ciekawą nagrodę</a>. Udostępnij
-      <a href='%{video_url}' target='_blank'>ten film</a>, aby twoi uczniowie mogli
-      posłuchać rówieśników z całego kraju, którzy przystępują do tego egzaminu.
-    announcement_csp_deadline: Ostatni dzwonek dla nauczycieli szkół średnich! Obejmij
-      przewodnictwo w informatyce w twojej szkole i zgłoś się na nasze wysokiej jakości
-      programy kształcenia zawodowego, <strong>całkowicie bezpłatne dla ciebie i twojej
-      szkoły</strong>. Przyjmowanie zgłoszeń kończy się 14 kwietnia.
-    announcement_applab_export: Laboratorium Aplikacji, nasze webowe środowisko programistyczne,
-      obsługuje obecnie eksportowanie twojego kodu! Możesz zacząć budować aplikacje
-      przeciągając i upuszczając bloki z JavaScript, a następnie eksportować kod,
-      by móc edytować go w dowolnym wybranym przez siebie profesjonalnym środowisku
-      deweloperskim.
-    announcement_csp_survey: "<b>Gratulacje dla nauczycieli Zasad Informatyki!</b><br/>
-      Twoi uczniowie Zasad Informatyki przystępujący do egzaminu z Informatyki w wersji
-      AP dołączą do ponad 50.000 innych uczniów w największej w historii inauguracji
-      egzaminu AP. A teraz, niech głosy twoich uczniów zostaną usłyszane - przypomnij
-      im, żeby wypełnili ankietę kończącą kurs! Będziesz mieć możliwość przejrzeć
-      odpowiedzi swoich uczniów, a my podzielimy się z tobą zagregowanym ogólnokrajowym
-      raportem."
-    announcement_navigation_redesign: "<b>Nadchodzące Zmiany w Nawigacji Strony</b><br/>Już
-      wkrótce tego lata będziemy ulepszać nawigację na całej stronie Code.org tak,
-      abyś zawsze miał dostęp do swoich najważniejszych zasobów z dowolnego miejsca
-      na stronie. Gdy tylko zalogujesz się do swojego konta nauczycielskiego, każda
-      strona będzie mieć nowy pasek nawigacyjny z linkami do twojej Strony Głównej,
-      Kursów, Galerii Projektów, Sekcji, jak również Kształcenia Zawodowego."
   move_students:
     new_section_dne: Przepraszamy, ale sekcja %{new_section_code} nie istnieje. Wprowadź
       kod innej sekcji.

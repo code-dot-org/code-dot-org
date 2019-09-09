@@ -31,6 +31,7 @@ ko:
         finish_sign_up_subheader: '<strong>%{email}</strong>을 위해 Code.org 계정을 만들려면 밑에 있는 빈 곳에 정보들을 입력 하세요.'
         error:
           future: 오늘 이전 날짜만 가능합니다.
+  beta: "베타"
   hello: "Hello world"
   welcome_back: "%{name} 님, 어서오세요. "
   your_professional_learning_plan: "전문적인 학습 계획"
@@ -437,22 +438,6 @@ ko:
     no_primary_course: "Code Studio 과정들을 해보세요."
     choose_next_course: "아래의 Code Studio 과정을 해보세요."
     print_certificate: "인증서 인쇄"
-    announcement_title: "공시사항"
-    announcement_message_fall2016_features: "우리는 새로운 기능으로 귀하의 의견을 반영하기 위해 여름을 보냈습니다. 이제 하나의 기기에서 페어 프로그래밍을 하는 경우에도 <a href=\"%{pp_url}\" target=\"_blank\">여러 학생들의 진행상황을 추적</a> 할 수 있습니다. 모든 강의의 컴퓨터공학 원리 과정에서 <a href=\"%{csp_widgets_url}\" target=\"_blank\">대화형 도구</a>를 사용할 수 있습니다. 그리고 학생들은 실험을 장려하기 위해 <a href=\"%{unused_code_url}\" target=\"_blank\">사용하지 않는 코드</a>를 작업공간에 보관할 수 있습니다. 새로운 기능을 확인하고 당신의 생각을 알려주세요."
-    announcement_csp_widgets_message: "여러분의 학급에 어떻게 인터넷이 동작하는지, 어떻게 데이터를 안전하게 보관하기 위해 암호화하는지 등 다양한 개념을 가르치기 위한 재미있는 방법을 찾고 있나요? 우리는 컴퓨터 과학 원리 교육과정이 반영된 최고의 상호작용이 가능한 도구를 준비하였습니다. 독립형 위젯으로 릴리즈해서 여러분이 언제든 사용할 수 있어요!"
-    announcement_learn_more_button: "더 알아보기"
-    announcement_try_now_button: "지금 해보기"
-    announcement_host_an_hour_button: "1시간 호스팅"
-    announcement_watch_video_button: "동영상 보기"
-    announcement_petition: "교육자로서 여러분은 모든 학교의 모든 학생들에게 컴퓨터과학을 배울 기회를 주어야 한다는 운동에 앞장서고 있습니다. 이제 여러분의 대표자들에게 이야기를 들려줄 때입니다. 이번 주에 교육 지도자들, 28개의 주지사들 그리고 미국 대기업의 CEO들은 미국 의회에 K-12 컴퓨터과학 교육 자금을 요청하는 공개 서한에 우리와 함께 참여합니다."
-    announcement_petition_button: "이름을 입력하세요"
-    announcement_go_beyond_button: "넘어서"
-    announcement_apply_now: "지금 신청하기"
-    announcement_all: "교사 블로그에서 새로운 내용이나 추가사항을 확인할 수 있습니다. <a href='%{teacher_blog_url}' target='_blank'>지난 공지사항 보기</a>"
-    announcement_hoc_launch: "12월 5일부터 11일까지 180개 이상의 나라에서 수많은 교육자가 Hour of Code 를 통해 컴퓨터과학을 가르칠것입니다. 더 많은 학생들이 참여할 수 있도록 그 어느때보다 당신을 믿고 있습니다. <a href='%{signup_url}' target='_blank'>Hour of Code 이벤트를 등록</a>하고, 누구나 컴퓨터과학을 가르칠 수 있다는 것을 다른 선생님들에게 알려주세요."
-    announcement_mc_launch: "현재 가장 인기있는 튜토리얼의 속편! 신규 마인크래프트 Hour of Code 디자이너로 학생들은 새로운 마인크래프트 월드를 만들 수 있습니다. 세상에 하나뿐인 마인크래프트를 경험할 수 있고, 친구와 공유하거나 스마트폰에서 재생할 수 있습니다. Hour of Code를 반친구들과 함께하세요."
-    announcement_how_code_studio: "강의에서 컴퓨터공학을 가르치기 위해 다른 경험이 필요하지 않습니다. Code.org는 커리큘럼, 강의계획, 고품질의 전문 학습 프로그램 그리고 모든 학년&mdash;필요한 모든 것을 관리할 수 있는 다양한 도구가 무료로 제공되고 있습니다. 어디에서 시작해야 될지 궁금하세요? <a href='%{video_download_url}'>이 비디오</a>를 다운로드 하세요!"
-    announcement_go_beyond: "Hour of Code를 뛰어넘어 매주 학생들과 컴퓨터과학 개념을 탐구하세요. Code.org는 모든 학년에 적합한 커리큘럼, 강의계획, 고품질 전문 학습 프로그램 및 다양한도구를 제공하고&mdash;모두 무료로 사용할 수 있습니다. :) 강의에서 컴퓨터공학을 가르치기 위해 다른 경험이 필요하지 않습니다. <b>강의에 적합한 다음 단계를 찾아보세요.</b>"
   move_students:
     new_section_dne: "죄송합니다. %{new_section_code}는 존재하지 않습니다. 다른 섹션 코드를 입력하세요."
     section_code_cant_be_current_section: "현재 섹션과 새로운 섹션은 동일할 수 없습니다."

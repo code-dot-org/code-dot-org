@@ -27,6 +27,7 @@ lv:
         edit_header: Rediģēt konta detaļas
         error:
           future: nevar būt nākotnē
+  beta: beta
   hello: Sveika, pasaule
   welcome_back: Laipni lūdzu atpakaļ, %{name}
   submit: Iesniegt
@@ -323,8 +324,6 @@ lv:
     no_primary_course: Izmēģināt Code Studio kursu
     choose_next_course: Izmēģini kādu no Code Studio kursiem izvēloties zemāk
     print_certificate: Izdrukāt sertifikātu
-    announcement_learn_more_button: Uzzini vairāk
-    announcement_try_now_button: Izmēģini tūlīt
   share:
     title: Mācies Code Studio
     description: Jebkurš var apgūt datorzinības. Izveido spēles aplikācijas un mākslu

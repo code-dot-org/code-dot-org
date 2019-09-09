@@ -44,7 +44,6 @@ en-GB:
       answer_viewer: Teacher Panel
   home:
     trynow: Try now
-    announcement_try_now_button: Try now
   dialog:
     ok: OK
     startover_title: Are you sure you want to start over?

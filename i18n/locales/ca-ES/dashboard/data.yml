@@ -37,6 +37,8 @@ ca:
         NetSim: Simulador d'Internet
         Custom: Artista
         CustomStudio: Play Lab
+        Gamelab: Laboratori de jocs
+        Spritelab: Laboratori de personatges
     trophy:
       name:
         Bronze: Bronze
@@ -55,7 +57,7 @@ ca:
         parameters: Funcions amb Paràmetres
     level:
       instructions:
-        maze_2_2: 'Em pots ajudar a atrapar aquest porc entremaliat? Apila un conjunt de blocs "Avança" i prem "Executa" per ajudar-me a arribar-hi. '
+        maze_2_2: 'Pots ajudar-me a atrapar el porc entremaliat? Apila un parell de blocs «avança» i prem «executa» per ajudar-me a arribar-hi. '
         maze_2_1: Aquest porc està enfadant-me. Ajuda'm a trobar-lo!
         maze_2_2_5: Traça el camí i guia'm a l'estúpid porc . Evita el TNT o les plomes volaran!
         maze_2_3: Guia'm al dimoni verd! (Ves en compte amb el TNT)
@@ -64,14 +66,14 @@ ca:
         maze_2_6: Intenta fer-me agafar l'intrús verd utilitzant només 3 blocs.
         maze_2_7: Ajuda'm a desterrar aquest porque te roïn utilitzant el menor nombre possible de blocs. Intenta-ho utilitzant més d'un bloc repetir.
         maze_2_8: 'Quan un bloc és gris, això vol dir que no pots suprimir-lo. Resol aquest trencaclosques utilitzant el bloc "repetir" que es repeteix 3 vegades. Intenta posant aquests 3 bloc dins del bloc gris "repetir": avança, avança, gira.'
-        maze_2_9: Ok, prova el nou bloc "repetició fins" - es repetirà fins que arribi el porc molest.
-        maze_2_10: Ok, última vegada per a practicar - pots resoldre aquest utilitzant només 4 blocs?
+        maze_2_9: D'acord, prova el nou bloc «repeteix fins». Es repetirà fins que arribi al porc emprenyador.
+        maze_2_10: D'acord, una última vegada per practicar. Pots resoldre aquest utilitzant només 4 blocs?
         maze_2_11: Estimada persona. Jo zombie. Jo gana. Necessito... arribar... al gira-sol... Pots moure'm fins allà només amb 5 blocs?
-        maze_2_12: Ok, això és semblant, però lleugerament diferent. Pots fer-ho només amb 5 blocs?
+        maze_2_12: D'acord, això s'assembla, però és una mica diferent. Pots fer-ho només amb 5 blocs?
         maze_2_13: 'Utilitza el nou bloc "si" per deixar-me decidir quan girar. Pista: només necessites un bloc més, però aprèn com ho hem establert nosaltres per fer-ho tu en la teva pròxima vegada.'
-        maze_2_14: Ok, aquest és com l'últim puzzle, però necessites recordar com vas utilitzar els blocs "si" i "repetir" junts.
+        maze_2_14: D'acord, aquest és com l'últim trencaclosques, però necessites recordar com has utilitzat els blocs «si» i «repeteix» junts.
         maze_2_15: Jo voler gira-sol! Utilitza un bloc "si" per portar-me allà amb el menor nombre de blocs possibles.
-        maze_2_16: Ok, anem a fer allò una altra vegada per practicar - aquest no és molt diferent, però ves amb compte amb els mossegadors!
+        maze_2_16: D'acord, tornem-ho a fer per practicar. Aquest no és gaire diferent, però ves amb compte amb els mossegadors!
         maze_2_17: Els blocs "si-sino" comproven una condició, i llavors fa una cosa O una altra. Per portar-me al gira-sol prova d'utilitzar aquet nou bloc.
         maze_2_18: Una pràctica més del blocs "si-sino", pots fer-ho bé en el primer intent?
         maze_2_19: Pots afegir només 3 blocs per ajudar-me a resoldre un laberint més complex? Si ho fas bé, puc caminar qualsevol camí amb corbes sense importar la longitud.
@@ -81,13 +83,13 @@ ca:
         turtle_1_4: 'Dibuixa un triangle amb els costats de diferents colors, utilitzant la opció de "color aleatori" que elegeix un color diferent cada vegada. Pista: tindràs que averiguar quant rotar fent click en el nombre del bloc girar.'
         turtle_1_5: Ara, per a practicar, dibuixa un triangle i després un quadrat per dibuixar un sobre.
         turtle_1_6: 'Pots esbrinar com dibuixar aquest triangle i quadrat? Pista: Fer primer el triangle, després descobreix quant girar abans de dibuixar el quadrat.'
-        turtle_1_7: Ok, anem a fer-ho una mica més difícil - a veure si pots dibuixar aquestes ulleres verdes. Els quadrats són de 100 píxels a cada costat, i estan separats per 50 píxels. No t'oblidis de dibuixar-ho en verd!
-        turtle_1_8: Ok, tracta d'esbrinar què passa si executes aquest codi (o prems "Executa" per provar-ho). A continuació, repeteix-ho suficient vegades per a completar el dibuix. Els colors seran diferents cada vegada.
+        turtle_1_7: D'acord, fem-ho una mica més difícil. A veure si pots dibuixar aquestes ulleres verdes. Els quadrats són de 100 píxels a cada costat, i estan separats per 50 píxels. No t'oblidis de dibuixar-ho en verd!
+        turtle_1_8: D'acord, intenta esbrinar què passa si executes aquest codi (o prem «executa» per provar-ho). Després repeteix-ho prou vegades per completar el dibuix. Els colors seran diferents cada vegada.
         turtle_1_9: Pots averiguar amb quin nombre reemplaçaries els signes d'interrogació per a dibuixar un cercle?
         turtle_1_10: 'Ho has aconseguit! Ara, dibuixa el que vulguis. Algunes idees divertides: un ninot de pals, un floc de neu, o una espiral. També prova el nou bloc "ajust d''amplada". Diverteix-te!'
         turtle_4_1: 'Pots dibuixar un triangle (amb vores de 100 píxels) amb només 3 blocs? Pista: utilitza un bloc "repetir".'
         turtle_4_2: Afegeix un bloc "gira a la dreta 90 graus" en algun lloc en el centre del programa que ja tens enmig de l'àrea de treball per dibuixar aquests triangles.
-        turtle_4_3: Ok, aquest és el codi que vas escriure per a dibuixar un únic triangle. Pots afegir un bloc "repeat" i un bloc "girar" per a crear una bonica flor?
+        turtle_4_3: D'acord, aquest és el codi que has escrit per dibuixar un sol triangle. Pots afegir un bloc «repeteix» i un bloc «gira» per crear una bonica flor?
         turtle_4_4: 'Aquí hi ha el mateix codi que en el puzzle anterior, però girat només 36 graus després de dibuixar cada triangle. Quantes vegades es necessita repetir això? (Pista: després de girar el dibuix 360 graus, aquest es converitrà en un cercle complet)'
         turtle_4_5: 'Aquí està el mateix codi que el puzzle anterior, però repetint els girs 36 vegades. De quants graus haurien de ser els girs? (Pista: després de girar el dibuix 360 graus, aquest es tornarà un cercle complet)'
         turtle_4_6: Utilitzant només 3 blocs, pots dibuixar un quadrat amb les vores de 20 píxels?
@@ -126,7 +128,7 @@ ca:
         maze_karel_2_6: Utilitza dos funcions noves, "omplir 8" i "llevar 8", per ajudar-me a anivellar la pila i omplir el forat.
         maze_karel_2_7: Hi ha una vaca en el meu camp! Escriu una nova funció que m'ajudi a evitar la vaca i llevar la pila. Posa tots els teus blocs dins una nova funció.
         maze_karel_2_8: Utilitza aquesta nova funció, "evitar la vaca i llevar 1", per ajudar-me a llevar totes les piles.
-        maze_karel_2_9: Ok, aquí hi ha una funció que lleva 4 piles diferents de terra en una columna vertical. Intenta posar aquesta funció dins una bucle, de manera que puguis llevar totes les piles de terra utilitzant només un parell de blocs.
+        maze_karel_2_9: D'acord, aquí tens una funció que treu 4 piles de terra diferents en una columna vertical. Intenta posar aquesta funció dins d'un bucle, de manera que treguis totes les piles de terra utilitzant només un parell de blocs.
         maze_karel_2_10: Mou-me a través del camp, i utilitza aquestes dos funcions per ajudar-me a llevar totes les piles i omplir tots els forats.
         turtle_3_1: Aquest puzzle et mostra com estan definides les funcions "dibuixa un quadrat" i "dibuixa un cercle". Definir una funció no executa els seus blocs. Tens que utilitzar el bloc "dibuixa un quadrat" per realment dibuixar un quadrat.
         turtle_3_2: Utilitzant la funció "dibuixa un quadrat" com a exemple, crea la funció "dibuixa un triangle" i utilitza-la.
@@ -341,6 +343,7 @@ ca:
         csp_applab_functions: Introducció a les funcions
         csp_applab_functions_parameters: Funcions amb Paràmetres
         csp_applab_loops: Bucles
+        csp_cs_is_changing_everything: La informàtica ho està canviant tot
         starwars_intro: 'Star Wars: Construint una Galaxia amb Codi - Introducció'
         starwars_typing: 'Star Wars: Creant una Galaxia amb Codi - JavaScript'
         starwars_events: 'Star Wars: Creant una galaxia amb codi - Esdeveniments'

@@ -9,7 +9,7 @@ class Api::V1::Pd::WorkshopAttendanceControllerTest < ::ActionDispatch::Integrat
     @workshop_organizer = create :workshop_organizer
     @facilitator = create :facilitator
 
-    @workshop = create :pd_workshop, organizer: @organizer, facilitators: [@facilitator], num_sessions: 1
+    @workshop = create :workshop, organizer: @organizer, facilitators: [@facilitator], num_sessions: 1
     @workshop.start!
 
     @teacher = create :pd_workshop_participant, workshop: @workshop, enrolled: true, sign_in_count: 1
@@ -17,14 +17,14 @@ class Api::V1::Pd::WorkshopAttendanceControllerTest < ::ActionDispatch::Integrat
     @session = @workshop.sessions.first
 
     # TODO: remove this test when workshop_organizer is deprecated
-    @organizer_workshop = create :pd_workshop, organizer: @workshop_organizer, facilitators: [@facilitator], num_sessions: 1
+    @organizer_workshop = create :workshop, organizer: @workshop_organizer, facilitators: [@facilitator], num_sessions: 1
     @organizer_workshop.start!
 
     @organizer_workshop_teacher = create :pd_workshop_participant, workshop: @organizer_workshop, enrolled: true, sign_in_count: 1
     @organizer_workshop_enrollment = Pd::Enrollment.find_by!(workshop: @organizer_workshop, user: @organizer_workshop_teacher)
     @organizer_workshop_session = @organizer_workshop.sessions.first
 
-    @other_workshop = create :pd_workshop, num_sessions: 1
+    @other_workshop = create :workshop, num_sessions: 1
     @other_workshop.start!
 
     @other_teacher = create :pd_workshop_participant, workshop: @other_workshop, enrolled: true, sign_in_count: 1

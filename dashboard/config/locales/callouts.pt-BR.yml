@@ -157,10 +157,16 @@ pt-BR:
         CSD_U3_L12_S2_C1: Adicione seu bloco aqui.
       CSD U3 collisions scoreboard:
         CSD_U3_L12_S8_C1: Estes blocos mostram a pontuação.
+        CSD_U3_L12_S8_C2: Os blocos que determinam se o coelho pegou a cenoura ficam
+          aqui.
       CSD U3 collisions scoreboard_2018:
         CSD_U3_L12_S8_C1: Estes blocos mostram a pontuação.
+        CSD_U3_L12_S8_C2: Os blocos que determinam se o coelho pegou a cenoura ficam
+          aqui.
       CSD U3 collisions scoreboard_2019:
         CSD_U3_L12_S8_C1: Estes blocos mostram a pontuação.
+        CSD_U3_L12_S8_C2: Os blocos que determinam se o coelho pegou a cenoura ficam
+          aqui.
       CSD U3 collisions try blocks:
         CSD_U3_L13_S6_C1: Modifique este bloco.
       CSD U3 collisions try blocks_2018:
@@ -210,10 +216,13 @@ pt-BR:
         CSD_U3_S18_L4_C1: Este bloco chama sua função.
         CSD_U3_L18_S4_C2: Área de Funções
       CSD U3 game variables:
+        CSD_U3_S18_L3_C1: Este bloco cria uma nova variável.
         CSD_U3_L18_S3_C2: Área de Variáveis
       CSD U3 game variables_2018:
+        CSD_U3_S18_L3_C1: Este bloco cria uma nova variável.
         CSD_U3_L18_S3_C2: Área de Variáveis
       CSD U3 game variables_2019:
+        CSD_U3_S18_L3_C1: Este bloco cria uma nova variável.
         CSD_U3_L18_S3_C2: Área de Variáveis
       CSD U3 keydown conditional:
         '': Adicione seu bloco dentro desta declaração if
@@ -224,18 +233,33 @@ pt-BR:
       CSD U3 platform background1:
         CSD_U3_L16_S3_C1: a função que desenha o plano de fundo
         CSD_U3_L16_S3_C2: o código que chama a função
+        CSD_U3_L16_S3_C3: Mude esta função.
       CSD U3 platform background1_2018:
         CSD_U3_L16_S3_C1: a função que desenha o plano de fundo
         CSD_U3_L16_S3_C2: o código que chama a função
+        CSD_U3_L16_S3_C3: Mude esta função.
       CSD U3 platform background1_2019:
         CSD_U3_L16_S3_C1: a função que desenha o plano de fundo
         CSD_U3_L16_S3_C2: o código que chama a função
+        CSD_U3_L16_S3_C3: Mude esta função.
       CSD U3 platform platform1:
         CSD_U3_S17_L8_C1: Este bloco cria um novo sprite.
       CSD U3 platform platform1_2018:
         CSD_U3_S17_L8_C1: Este bloco cria um novo sprite.
       CSD U3 platform platform1_2019:
         CSD_U3_S17_L8_C1: Este bloco cria um novo sprite.
+      CSD U3 platform scoreboard:
+        CSD_U3_L17_S7_C1: A pontuação é impressa aqui.
+      CSD U3 platform scoreboard_2018:
+        CSD_U3_L17_S7_C1: A pontuação é impressa aqui.
+      CSD U3 platform scoreboard_2019:
+        CSD_U3_L17_S7_C1: A pontuação é impressa aqui.
+      CSD U3 platform variable1:
+        callout: Este bloco cria uma variável.
+      CSD U3 platform variable1_2018:
+        callout: Este bloco cria uma variável.
+      CSD U3 platform variable1_2019:
+        callout: Este bloco cria uma variável.
       CSD U3 rect:
         CSD_U3_rect_c1: Aqui está o código
         CSD_U3_rect_c2: Aqui está o botão "Executar".
@@ -798,6 +822,12 @@ pt-BR:
       courseC_maze_programming4_2019:
         courseC_maze_programming4_1: Esse é o seu limite de blocos. Diz quantos blocos
           você ainda pode usar.
+      courseC_maze_programming5:
+        '': Esses blocos não possuem números neles. Você pode usar quantos quiser!
+      courseC_maze_programming5_2018:
+        '': Esses blocos não possuem números neles. Você pode usar quantos quiser!
+      courseC_maze_programming5_2019:
+        '': Esses blocos não possuem números neles. Você pode usar quantos quiser!
       courseC_maze_programming7:
         courseC_maze_programming7_1: Este é o seu primeiro desafio! Estes são feitos
           para serem difíceis e podem levar várias tentativas.
@@ -869,6 +899,8 @@ pt-BR:
       courseD_maze_intro4_2019:
         courseC_maze_programming4_1: Esse é o seu limite de blocos. Diz quantos blocos
           você ainda pode usar.
+      courseD_maze_intro5a_2019:
+        '': Esses blocos não possuem números neles. Você pode usar quantos quiser!
       courseD_maze_ramp1:
         grade2_CaringForNewPet_0_1: Após conectar os blocos, clique em "Executar"
           para rodar o programa.
@@ -908,6 +940,18 @@ pt-BR:
       courseD_maze_ramp4_2019:
         courseC_maze_programming4_1: Esse é o seu limite de blocos. Diz quantos blocos
           você ainda pode usar.
+      courseD_maze_ramp5:
+        '': Esses blocos não possuem números neles. Você pode usar quantos quiser!
+      courseD_maze_ramp5_2018:
+        '': Esses blocos não possuem números neles. Você pode usar quantos quiser!
+      courseD_maze_ramp5_2019:
+        '': Esses blocos não possuem números neles. Você pode usar quantos quiser!
+      courseD_maze_ramp5a:
+        '': Esses blocos não possuem números neles. Você pode usar quantos quiser!
+      courseD_maze_ramp5a_2018:
+        '': Esses blocos não possuem números neles. Você pode usar quantos quiser!
+      courseD_maze_ramp5a_2019:
+        '': Esses blocos não possuem números neles. Você pode usar quantos quiser!
       courseD_maze_ramp6:
         courseD_maze_ramp6_1: O código que você colocou aqui será repetido quantas
           vezes você diga a ele, então, continuar a executar o resto do programa.
@@ -929,6 +973,8 @@ pt-BR:
       courseD_scrat_ramp4:
         courseC_maze_programming4_1: Esse é o seu limite de blocos. Diz quantos blocos
           você ainda pode usar.
+      courseD_scrat_ramp5:
+        '': Esses blocos não possuem números neles. Você pode usar quantos quiser!
       courseD_scrat_ramp6:
         courseD_maze_ramp6_1: O código que você colocou aqui será repetido quantas
           vezes você diga a ele, então, continuar a executar o resto do programa.

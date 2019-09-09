@@ -32,6 +32,7 @@ sq:
         finish_sign_up_subheader_provider: 'Plotëso informacionin e mëposhtëm për të përfunduar krijimin e një llogarie në Code.org <strong>%{provider}</strong> për <strong>%{email}</strong>.'
         error:
           future: nuk mund të jetë në të ardhmen
+  beta: "beta"
   hello: "Pershendetje Botë"
   welcome_back: "Mirë se erdhët sërish, %{name}"
   your_professional_learning_plan: "Plani Juaj Profesional i Mësimit"
@@ -371,14 +372,6 @@ sq:
     no_primary_course: "Provo një kurs të Code Studio"
     choose_next_course: "Provo një kurs nga Studio e Kodimit duke zgjedhur një më poshtë"
     print_certificate: "Printo Certifikatën"
-    announcement_learn_more_button: "Mëso më shumë"
-    announcement_try_now_button: "Mëso më Shumë"
-    announcement_host_an_hour_button: "Të organizojë një Orën"
-    announcement_petition: "Si mësues, ju jeni duke udhëhequr në mënyrë që t'i jepni çdo nxënësi në çdo shkollë mundësi për të mësuar shkencën kompjuterike. Tani, është koha që përfaqësuesit tuaj të dëgjojmë nga ju. Këtë javë, liderët e arsimit, 28 qeveritarët dhe CEOs të kompanive më të mëdha të Amerikës u bashkuan së bashku në një letër të hapur duke i kërkuar Kongresit SH.B.A. për të financuar K-12 shkolla të shkencave kompjuterike."
-    announcement_petition_button: "Shto emrin tuaj"
-    announcement_all: "Mbahuni të përditësuar me veçoritë e reja dhe përditësimet në blogun e mësuesve tanë. <a href='%{teacher_blog_url}' target='_blank'> Shihni njoftimet e kaluara. </a>\n "
-    announcement_hoc_launch: "Mijëra mësues në më shumë se 180 vende do të fillojnë mësimin e shkencës kompjuterike gjatë Orës së Kodit, nga5-11 dhjetor. Ne jemi duke u mbështetur te ju për të na ndihmuar që të kemi më shumë studentë se kurrë më parë. <a href='%{signup_url}' target='_blank'> Regjistrohu në eventin tuaj të Orës së Kodimit </a> dhe bëjini të ditur një tjetër mësuesi se cdo kush mund të filloj të shpjegoj shkenca kompjuterike."
-    announcement_mc_launch: "Një nga mësime tona më të njohura tani ka një vazhdim! Të gjithë dizenjuesit e rinj të Orës së Kodimit Minecraft lejojnë nxënësit të bëjnë rregullat e botës Minecraft. Ata mund të krijojnë një përvojë krejtësisht unike Minecraft, dhe pastaj të ndajnë atë me miqtë ose ta luajnë atë në telefonat e tyre. Bëjeni atë me klasën tuaj për Orën e Kodimit.\n ."
   move_students:
     new_section_dne: "Na vjen keq, por seksioni %{new_section_code} nuk ekziston. Ju lutem, jepni një tjetër kod seksioni."
     section_code_cant_be_current_section: "Seksioni aktual nuk mund të jetë i njëjtë me seksionin e ri."

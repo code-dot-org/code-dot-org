@@ -462,12 +462,12 @@ vi:
             Jigsaw:
               name: Ghép hình
         step:
-          title: Bước/ từng bước thực hiện
+          title: Thực hiện từng bước
           description: Hướng dẫn các bước
           description_short: Hướng dẫn các bước
           stages:
             Step:
-              name: Bước/ từng bước thực hiện
+              name: Thực hiện từng bước
         Hour of Code:
           title: Giờ Lập trình 2013
           description: thử những căn bản của khoa học máy tính với các đặc tính từ Angry bird và Plants vs zombies!
@@ -2944,6 +2944,8 @@ vi:
           stages:
             'Real-life Algorithms: Plant a Seed':
               name: 'Thuật toán đời sống: Trồng một hạt giống'
+            Programming in Maze:
+              name: Lập trình trong mê cung
             Going Places Safely:
               name: Đến nơi an toàn
             'Debugging: Unspotted Bugs':
@@ -2952,6 +2954,8 @@ vi:
           stages:
             'Debugging: Unspotted Bugs':
               name: 'Gỡ lội: Những chú bọ không đốm'
+            Programming in Maze:
+              name: Lập trình trong mê cung
             More Computer Science:
               name: Khoa học máy tính thêm nữa
             'Real-life Algorithms: Plant a Seed':
@@ -2960,6 +2964,8 @@ vi:
               name: Dấu chân kỹ thuật số 
         coursec-draft:
           stages:
+            Programming in Maze:
+              name: Lập trình trong mê cung
             'Real-life Algorithms: Paper Planes':
               name: 'Thuật toán trong đời sống: Máy bay giấy'
             Online Internet Safety:
@@ -3165,6 +3171,8 @@ vi:
               name: Danh sách
             For Loops:
               name: Cho vòng lặp
+            Map:
+              name: Bản đồ
             Making Music:
               name: Tạo âm nhạc
             Functions with Parameters:
@@ -3417,14 +3425,22 @@ vi:
               name: 'Gỡ lội: Những chú bọ không đốm'
             'Real-life Algorithms: Plant a Seed':
               name: 'Thuật toán đời sống: Trồng một hạt giống'
+            Programming in Maze:
+              name: Lập trình trong mê cung
         courseb-2017:
           stages:
             'Debugging: Unspotted Bugs':
               name: 'Gỡ lội: Những chú bọ không đốm'
             'Real-life Algorithms: Plant a Seed':
               name: 'Thuật toán đời sống: Trồng một hạt giống'
+            Programming in Maze:
+              name: Lập trình trong mê cung
+            Programming with Rey and BB-8:
+              name: Lập trình cùng Rey và robot BB-8
         coursec-2017:
           stages:
+            Programming in Maze:
+              name: Lập trình trong mê cung
             'Real-life Algorithms: Paper Planes':
               name: 'Thuật toán trong đời sống: Máy bay giấy'
         coursed-2017:
@@ -3668,6 +3684,8 @@ vi:
               name: 'Gỡ lội: Những chú bọ không đốm'
             'Real-life Algorithms: Plant a Seed':
               name: 'Thuật toán đời sống: Trồng một hạt giống'
+            Programming in Maze:
+              name: Lập trình trong mê cung
             Spelling Bee:
               name: Ong tìm chữ
         subgoal-labels-opt-in:
@@ -3787,6 +3805,8 @@ vi:
               name: Nghệ sĩ nhị phân
             Building a Foundation:
               name: Xây dựng nền tảng
+            Loops in Ice Age:
+              name: Vòng lặp trong Kỷ băng hà
           title: Kịch bản khóa D mới
         csp3-a:
           stages:
@@ -3823,7 +3843,7 @@ vi:
         new-stages-sept-2017:
           stages:
             Sequences with Scrat:
-              name: Trình tự với Scrat
+              name: Học về chuỗi tuần tự cùng sóc Scrat
             Testing Template:
               name: Thử nghiệm mẫu
           title: Các giai đoạn mới nhất 9/17
@@ -4134,6 +4154,10 @@ vi:
               name: Bản đồ thú vị
             Going Places Safely:
               name: Đến nơi an toàn
+            Loops in Artist:
+              name: Vòng lặp trong câu chuyện về biển
+            Sequencing in Maze:
+              name: Chuỗi tuần tự cùng Angry Birds
         express-2018:
           stages:
             'Algorithms: Graph Paper Programming':
@@ -4190,6 +4214,12 @@ vi:
               name: 'Thuật toán đời sống: Trồng một hạt giống'
             Your Digital Footprint:
               name: Dấu chân kỹ thuật số 
+            Programming in Maze:
+              name: Lập trình trong mê cung
+            Programming with Rey and BB-8:
+              name: Lập trình cùng Rey và robot BB-8
+            Sequencing with Scrat:
+              name: Học về chuỗi tuần tự cùng sóc Scrat
             Move It, Move It:
               name: Di chuyển nó, di chuyển nó
         coursed-2018:
@@ -4207,6 +4237,8 @@ vi:
               name: Hình ảnh Nhị phân
             Artist Binary:
               name: Nghệ sĩ nhị phân
+            Loops in Ice Age:
+              name: Vòng lặp trong Kỷ băng hà
             Graph Paper Programming:
               name: lập trình đồ thị trên giấy
             Relay Programming:
@@ -4665,12 +4697,18 @@ vi:
           stages:
             'Real-life Algorithms: Plant a Seed':
               name: 'Thuật toán đời sống: Trồng một hạt giống'
+            Programming in Maze:
+              name: Lập trình trong mê cung
             Spelling Bee:
               name: Ong tìm chữ
             Move It, Move It:
               name: Di chuyển nó, di chuyển nó
+            Sequencing with Scrat:
+              name: Học về chuỗi tuần tự cùng sóc Scrat
             Your Digital Footprint:
               name: Dấu chân kỹ thuật số 
+            Programming with Rey and BB-8:
+              name: Lập trình cùng Rey và robot BB-8
         fit-test:
           stages:
             Deeper Learning Overview:
@@ -4729,6 +4767,8 @@ vi:
               name: Cho vòng lặp vui vẻ
             The Artist:
               name: nghệ sĩ
+            Sequencing in the Maze:
+              name: Chuỗi tuần tự trong mê cung
             Internet:
               name: Internet
             Crowdsourcing:
@@ -4743,6 +4783,8 @@ vi:
               name: lập trình đồ thị trên giấy
             Relay Programming:
               name: Chương trình chuyển tiếp
+            Loops in Ice Age:
+              name: Vòng lặp trong Kỷ băng hà
             Digital Citizenship:
               name: Dân kỹ thuật số
             'Unplugged: Binary':
@@ -4769,6 +4811,8 @@ vi:
               name: Đa nguồn
             Nested Loops in Frozen:
               name: Vòng lặp lồng với Frozen
+            Sequencing in the Maze:
+              name: Chuỗi tuần tự trong mê cung
             Songwriting:
               name: Sáng tác với tham số
         express-2019:
@@ -4834,28 +4878,53 @@ vi:
           title: Kho Trò chơi
         coursea-2019:
           stages:
+            Sequencing in Maze:
+              name: Chuỗi tuần tự trong mê cung
             'Programming: Happy Maps':
               name: Bản đồ thú vị
+            Programming in Maze:
+              name: Lập trình trong mê cung
             Going Places Safely:
               name: Đến nơi an toàn
+            Ocean Scene with Loops:
+              name: Vòng lặp trong câu chuyện về biển
+            Programming with Rey and BB-8:
+              name: Lập trình cùng Rey và robot BB-8
+            Sequencing with Scrat:
+              name: Học về chuỗi tuần tự cùng sóc Scrat
+              description_student: Viết chương trình để Scrat tìm đến hạt sồi.
         courseb-2019:
           stages:
             Move It, Move It:
               name: Di chuyển nó, di chuyển nó
+            Sequencing with Scrat:
+              name: Học về chuỗi tuần tự cùng sóc Scrat
             Your Digital Footprint:
               name: Dấu chân kỹ thuật số 
+            Programming with Rey and BB-8:
+              name: Lập trình cùng Rey và robot BB-8
+            Loops in Ice Age:
+              name: Vòng lặp trong Kỷ băng hà
             'Loops: Getting Loopy':
               name: Tạo vòng lặp
+            Sequencing in Maze:
+              name: Chuỗi tuần tự cùng Angry Birds
         pre-express-2019:
           stages:
             'Debugging: Unspotted Bugs':
               name: 'Gỡ lội: Những chú bọ không đốm'
             Move It, Move It:
               name: Di chuyển nó, di chuyển nó
+            Sequencing with Scrat:
+              name: Học về chuỗi tuần tự cùng sóc Scrat
             Your Digital Footprint:
               name: Dấu chân kỹ thuật số 
+            Programming with Rey and BB-8:
+              name: Lập trình cùng Rey và robot BB-8
             Spelling Bee:
               name: Ong tìm chữ
+            Ocean Scene with Loops:
+              name: Vòng lặp trong câu chuyện về biển
         removed19:
           stages:
             'Debugging: Unspotted Bugs':
@@ -5134,6 +5203,16 @@ vi:
               name: giai đoạn mới
             Number Systems:
               name: Hệ thống các con số
+            Sending Binary Messages:
+              name: Gửi tin nhắn nhị phân
+            Sending Binary Messages with the Internet Simulator:
+              name: Gửi tin nhắn nhị phân với mô phỏng Internet
+            Intellectual Property:
+              name: Sở hữu trí tuệ
+            CS Principles Pre-survey:
+              name: Nguyên lý KHMT trước khi khảo sát
+            Binary Numbers:
+              name: Số nhị phân
         csd-videos:
           stages:
             new stage:
@@ -5158,6 +5237,8 @@ vi:
           stages:
             Graph Paper Programming:
               name: lập trình đồ thị trên giấy
+            Programming in Maze:
+              name: Lập trình trong mê cung
         csp5-pilot:
           stages:
             new stage:
@@ -5248,3 +5329,63 @@ vi:
           stages:
             new stage:
               name: giai đoạn mới
+        csl-vn:
+          stages:
+            Sequencing with Scrat:
+              name: Học về chuỗi tuần tự cùng sóc Scrat
+            Programming in Maze:
+              name: Lập trình trong mê cung
+            Programming with Rey and BB-8:
+              name: Lập trình cùng Rey và robot BB-8
+            Loops in Ice Age:
+              name: Vòng lặp trong Kỷ băng hà
+            Ocean Scene with Loops:
+              name: Vòng lặp trong câu chuyện về biển
+            Tell a Story in Play Lab:
+              name: Kể chuyện bằng Play Lab
+        dlp19-csd-mod-fit:
+          stages:
+            Deeper Learning Overview:
+              name: Tổng quan học tập sâu
+        dlp19-csp-mod-fit:
+          stages:
+            Deeper Learning Overview:
+              name: Tổng quan học tập sâu
+        dlp19-csd-mod-w1:
+          stages:
+            Deeper Learning Overview:
+              name: Tổng quan học tập sâu
+        dlp19-csd-mod-w2:
+          stages:
+            new stage:
+              name: giai đoạn mới
+            Deeper Learning Overview:
+              name: Tổng quan học tập sâu
+        dlp19-csp-mod-w1:
+          stages:
+            Deeper Learning Overview:
+              name: Tổng quan học tập sâu
+        dlp19-csp-mod-w2:
+          stages:
+            Deeper Learning Overview:
+              name: Tổng quan học tập sâu
+        csd4-pilot:
+          stages:
+            What is a Computer?:
+              name: Máy tính là gì?
+        csp2-pilot:
+          stages:
+            new stage:
+              name: giai đoạn mới
+            Routers and Redundancy:
+              name: Bộ định tuyến và dự phòng
+        peru-2019:
+          stages:
+            new stage:
+              name: giai đoạn mới
+            Introduction:
+              name: Giới thiệu
+            Nested Loops:
+              name: Vòng lặp lồng nhau
+            Nested Loops Project in Frozen:
+              name: Dự án vòng lặp lồng nhau trong Frozen

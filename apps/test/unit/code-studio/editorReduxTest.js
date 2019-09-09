@@ -4,11 +4,12 @@ import reducers, {
   reorderLevel,
   addGroup,
   addStage,
+  moveStage,
   setActiveVariant,
   setField
 } from '@cdo/apps/lib/script-editor/editorRedux';
 
-const initialState = {
+const getInitialState = () => ({
   levelKeyList: {},
   stages: [
     {
@@ -44,11 +45,14 @@ const initialState = {
       ]
     }
   ]
-};
+});
 
 const reducer = combineReducers(reducers);
 
 describe('editorRedux reducer tests', () => {
+  let initialState;
+  beforeEach(() => (initialState = getInitialState()));
+
   it('reorder levels', () => {
     const nextState = reducer(initialState, reorderLevel(1, 3, 1)).stages;
     assert.deepEqual(nextState[0].levels.map(l => l.activeId), [5, 1, 4, 6]);
@@ -77,5 +81,61 @@ describe('editorRedux reducer tests', () => {
     assert.equal(nextState.stages[0].levels[0].conceptDifficulty, '_c_');
     nextState = reducer(nextState, setField(1, 1, {concepts: '_d_'}));
     assert.equal(nextState.stages[0].levels[0].concepts, '_d_');
+  });
+
+  describe('flex categories', () => {
+    let initialStages = [];
+
+    beforeEach(() => {
+      initialStages = [
+        {flex_category: 'X', id: 101, position: 1, relativePosition: 1},
+        {flex_category: 'X', id: 102, position: 2, relativePosition: 2},
+        {flex_category: 'Y', id: 103, position: 3, relativePosition: 3},
+        {flex_category: 'Y', id: 104, position: 4, relativePosition: 4}
+      ];
+      initialState.stages = initialStages;
+    });
+
+    it('moves a stage up three times', () => {
+      const id = 104;
+      let position = initialState.stages.find(s => s.id === id).position;
+      let state = reducer(initialState, moveStage(position, 'up'));
+      assert.deepEqual(
+        [
+          {flex_category: 'X', id: 101, position: 1, relativePosition: 1},
+          {flex_category: 'X', id: 102, position: 2, relativePosition: 2},
+          {flex_category: 'Y', id: 104, position: 3, relativePosition: 3},
+          {flex_category: 'Y', id: 103, position: 4, relativePosition: 4}
+        ],
+        state.stages,
+        'first move changes position but not group'
+      );
+
+      position = state.stages.find(s => s.id === id).position;
+      state = reducer(state, moveStage(position, 'up'));
+      assert.deepEqual(
+        [
+          {flex_category: 'X', id: 101, position: 1, relativePosition: 1},
+          {flex_category: 'X', id: 102, position: 2, relativePosition: 2},
+          {flex_category: 'X', id: 104, position: 3, relativePosition: 3},
+          {flex_category: 'Y', id: 103, position: 4, relativePosition: 4}
+        ],
+        state.stages,
+        'second move changes group but not position'
+      );
+
+      position = state.stages.find(s => s.id === id).position;
+      state = reducer(state, moveStage(position, 'up'));
+      assert.deepEqual(
+        [
+          {flex_category: 'X', id: 101, position: 1, relativePosition: 1},
+          {flex_category: 'X', id: 104, position: 2, relativePosition: 2},
+          {flex_category: 'X', id: 102, position: 3, relativePosition: 3},
+          {flex_category: 'Y', id: 103, position: 4, relativePosition: 4}
+        ],
+        state.stages,
+        'third move changes group but not position'
+      );
+    });
   });
 });

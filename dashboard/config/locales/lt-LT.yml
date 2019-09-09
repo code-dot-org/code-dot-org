@@ -32,6 +32,7 @@ lt:
         edit_header: Keisti paskyros duomenis
         error:
           future: negali būti ateitis
+  beta: beta
   hello: Sveikas, pasauli
   welcome_back: Sveiki sugrįžę, %{name}
   your_professional_learning_plan: Tavo Profesionalus Mokymosi planas
@@ -376,13 +377,6 @@ lt:
     no_primary_course: Išmėgink „Code Studio“ kursą
     choose_next_course: Išbandyk „Code Studio“ kursą, pasirink vieną iš pateiktų žemiau
     print_certificate: Atsispausdinti sertifikatą
-    announcement_learn_more_button: Sužinok daugiau
-    announcement_try_now_button: Išmėginkite dabar
-    announcement_petition_button: Pridėk savo vardą
-    announcement_mc_launch: Mūsų populiariausios pamokėlės jau turi tęsinį! Naujas
-      „Programavimo valandos“ Minecraft Projektuotojas leis mokiniams sukurti Minecraft
-      pasaulio taisykles. Jie galės susikurti unikalią Minecraft žaidimo versiją bei
-      pasidalinti ja su draugais ir žaisti ją telefonu. Išmėginkite tai savo klasėje.
   share:
     title: Mokytis su „Code Studio“
     description: Kiekvienas gali išmokti informatikos. Kurk žaidimus, programėles

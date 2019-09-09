@@ -1250,6 +1250,7 @@
   sphero_beyond_longdescription: "SPRK 교육과정을 통해 아이들이 로봇이 충돌을 피하도록 하는 재미있는 프로그래밍 과정을 통해 수학 과학 능력을 향상시킬 수 있습니다."
   compatibility_hide_this_warning: "경고창 숨기기"
   compatibility_unsupported_browser: "브라우저가 지원되지 않습니다. <a href='%{supported_browsers_url}', target='_blank'> 지원 되는 브라우저로</a>로 업그레이드 하시기 바랍니다. 여러분은 이 페이지를 볼 수는 있지만 올바르게 동작하지 않을 수 있습니다."
+  compatibility_unsupported_browser_markdown: "브라우저가 지원되지 않습니다. <a href='%{supported_browsers_url}', target='_blank'> 지원 되는 브라우저로</a>로 업그레이드 하시기 바랍니다. 여러분은 이 페이지를 볼 수는 있지만 올바르게 동작하지 않을 수 있습니다."
   starwars_shortcode: "별"
   flappy_shortcode: "펄럭이기"
   header_home: "홈"

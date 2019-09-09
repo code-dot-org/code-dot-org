@@ -72,7 +72,6 @@
 require 'digest/md5'
 require 'cdo/aws/metrics'
 require 'cdo/user_helpers'
-require 'cdo/race_interstitial_helper'
 require 'school_info_interstitial_helper'
 require 'sign_up_tracking'
 
@@ -229,7 +228,6 @@ class User < ActiveRecord::Base
 
   belongs_to :school_info
   accepts_nested_attributes_for :school_info, reject_if: :preprocess_school_info
-  validates_presence_of :school_info, unless: :school_info_optional?
 
   has_many :user_school_infos
   after_save :update_and_add_users_school_infos, if: :school_info_id_changed?
@@ -320,11 +318,6 @@ class User < ActiveRecord::Base
     end
   end
 
-  # Not deployed to everyone, so we don't require this for anybody, yet
-  def school_info_optional?
-    true # update if/when A/B test is done and accepted
-  end
-
   # Most recently created user_school_info referring to a complete school_info entry
   def last_complete_user_school_info
     user_school_infos.
@@ -381,32 +374,32 @@ class User < ActiveRecord::Base
 
   def self.find_or_create_teacher(params, invited_by_user, permission = nil)
     user = User.find_by_email_or_hashed_email(params[:email])
-    unless user
+
+    if user
+      user.update!(params.merge(user_type: TYPE_TEACHER))
+    else
       # initialize new users with name and school
       if params[:ops_first_name] || params[:ops_last_name]
         params[:name] ||= [params[:ops_first_name], params[:ops_last_name]].flatten.join(" ")
       end
       params[:school] ||= params[:ops_school]
+      params[:user_type] = TYPE_TEACHER
+      params[:age] ||= 21
 
       # Devise Invitable's invite! skips validation, so we must first validate the email ourselves.
       # See https://github.com/scambra/devise_invitable/blob/5eb76d259a954927308bfdbab363a473c520748d/lib/devise_invitable/model.rb#L151
       ValidatesEmailFormatOf.validate_email_format(params[:email]).tap do |result|
         raise ArgumentError, "'#{params[:email]}' #{result.first}" unless result.nil?
       end
-      user = User.invite!(
-        email: params[:email],
-        user_type: TYPE_TEACHER,
-        age: 21
-      )
-      user.invited_by = invited_by_user
+      user = User.invite!(attributes: params)
+      user.update!(invited_by: invited_by_user)
     end
-
-    user.update!(params.merge(user_type: TYPE_TEACHER))
 
     if permission
       user.permission = permission
       user.save!
     end
+
     user
   end
 
@@ -1503,16 +1496,6 @@ class User < ActiveRecord::Base
     Experiment.get_all_enabled(user: self).pluck(:name)
   end
 
-  def advertised_scripts
-    [
-      Script.hoc_2014_script, Script.frozen_script, Script.infinity_script,
-      Script.flappy_script, Script.playlab_script, Script.artist_script,
-      Script.course1_script, Script.course2_script, Script.course3_script,
-      Script.course4_script, Script.twenty_hour_script, Script.starwars_script,
-      Script.starwars_blocks_script, Script.minecraft_script
-    ]
-  end
-
   def in_progress_and_completed_scripts
     user_scripts.compact.reject do |user_script|
       user_script.script.nil?
@@ -1674,10 +1657,6 @@ class User < ActiveRecord::Base
   # @return [Section|nil]
   def last_joined_section
     Follower.where(student_user: self).order(created_at: :desc).first.try(:section)
-  end
-
-  def all_advertised_scripts_completed?
-    advertised_scripts.all? {|script| completed?(script)}
   end
 
   def completed?(script)
@@ -2071,19 +2050,6 @@ class User < ActiveRecord::Base
     # Must have an NCES school to show the banner
     users_school = try(:school_info).try(:school)
     teacher? && users_school && (next_census_display.nil? || Date.today >= next_census_display.to_date)
-  end
-
-  def show_race_interstitial?(ip = nil)
-    ip_to_check = ip || current_sign_in_ip
-    RaceInterstitialHelper.show_race_interstitial?(self, ip_to_check)
-  end
-
-  def show_school_info_confirmation_dialog?
-    SchoolInfoInterstitialHelper.show_school_info_confirmation_dialog?(self)
-  end
-
-  def show_school_info_interstitial?
-    SchoolInfoInterstitialHelper.show_school_info_interstitial?(self)
   end
 
   # Removes PII and other information from the user and marks the user as having been purged.

@@ -2,7 +2,7 @@ nl:
   errors:
     messages:
       not_saved: 'Corrigeer de volgende fouten:'
-      too_young: 'Deze inhoud heeft leeftijd restricties en is niet beschikbaar voor jongere studenten.'
+      too_young: 'Deze inhoud heeft leeftijdrestricties en is niet beschikbaar voor jongere studenten.'
       teacher_must_accept_terms: 'Deze inhoud heeft leeftijd restricties en is niet beschikbaar voor jongere studenten. Vraag je leraar om de laatste service bepalingen te accepteren en jou zo toegang te geven tot de inhoud. Je leraar kan dit doen door in te loggen in de Code Studio en de knop " Review updates terms" aan te klikken bovenaan de Code Studio homepage.'
       pair_programmer: 'Momenteel programmeer je samen met een leerling die nog geen toegang heeft tot deze inhoud. Om toegang te krijgen tot deze inhoud, moet je stoppen met het samen programmeren en opnieuw proberen.'
   activerecord:
@@ -28,8 +28,11 @@ nl:
         gender: 'Geslacht'
         edit_header: 'Accountdetails bewerken'
         finish_sign_up_header: 'Voltooi het maken van je account'
+        finish_sign_up_subheader: 'Vul de volgende informatie in om het aanmaken van een Code.org-account voor <strong>%{email}</strong> te voltooien.'
+        finish_sign_up_subheader_provider: 'Vul de volgende informatie in om het aanmaken van een Code.org-account met <strong>%{provider}</strong> voor <strong>%{email}</strong> te voltooien.'
         error:
           future: kan niet in de toekomst
+  beta: "beta"
   hello: "Hallo wereld"
   welcome_back: "Welkom terug, %{name}"
   your_professional_learning_plan: "Jouw professionele leerplan"
@@ -48,7 +51,7 @@ nl:
       label: 'Voeg een leraar toe:'
       placeholder: "Sectiecode (ABCDEF)"
       instructions: "Voer hier de code in die je van je leraar hebt gekregen. De code bestaat uit 6 letters zoals \"ABCDEF\"."
-      instructions_short: "Voer je 6 letter code van de sectie in"
+      instructions_short: "Voer je code van 6 letters van de sectie in"
     submit: 'voeg leraar toe'
   add_hint_form:
     placeholder: 'Voer hier uw hint'
@@ -62,7 +65,7 @@ nl:
   courses_page:
     title_student: "Leer meer op Code Studio"
     title_teacher: "Leren met Code Studio"
-  unplugged_activity: 'UNPLUGGED ACTIVITEIT'
+  unplugged_activity: 'Unplugged Activiteit'
   of: "van"
   more: "MEER"
   less: "MINDER"
@@ -88,6 +91,7 @@ nl:
     windowslive: 'Microsoft Account'
     microsoft_v2_auth: 'Microsoft Account'
     clever: 'Slimme Account'
+    powerschool: 'Powerschool'
     forgot_password: 'Wachtwoord vergeten?'
     need_confirmation: "Geen bevestigingsinstructies ontvangen?"
     need_unlock: "Nog geen unlock instructies ontvangen?"
@@ -120,7 +124,7 @@ nl:
     agree_us_website: "Ik ga akkoord met het gebruik van een website die in de Verenigde Staten gevestigd is."
     my_data_to_us: "Gegevens over mijn gebruik van deze site mogen worden verzonden naar en opgeslagen of verwerkt worden in de Verenigde Staten."
     additional_information: "We hebben aanvullende informatie nodig om door te kunnen gaan met uw registratie."
-    user_type_label: "Account type"
+    user_type_label: "Accounttype"
     user_type_teacher: "Leraar"
     user_type_student: "Leerling"
     field_is_required: "is vereist"
@@ -131,7 +135,7 @@ nl:
     email_preference_yes: "Ja"
     email_preference_no: "Nee"
   school_info:
-    title: 'School informatie (optioneel)'
+    title: 'Schoolinformatie (optioneel)'
     school_country: 'Land van de school'
     select_school_type: 'Type van de school'
     private: 'Privé'
@@ -139,10 +143,10 @@ nl:
     homeschool: 'Thuisonderwijs'
     after_school: 'Na School'
     other: 'Anders'
-    state: 'Staat'
-    district: 'District'
-    other_district_not_listed: 'Andere niet hierboven genoemde district'
-    district_name: 'District naam'
+    state: 'Provincie'
+    district: 'Regio'
+    other_district_not_listed: 'Andere niet hierboven genoemde regio'
+    district_name: 'Regionaam'
     school: 'School'
     other_school_not_listed: 'Andere niet hierboven genoemde school'
     school_name: 'Naam van de school'
@@ -169,11 +173,11 @@ nl:
     login: 'Aanmelden'
     invalid_login: 'Onjuiste login, probeer opnieuw'
     pair_programming: 'Ik werk met een partner achter de computer'
-    student_privacy: "Meer informatie over waarom bent u niet uw volledige naam ziet vindt u <a href='%{student_privacy_blog}' target='_blank'> hier</a>."
+    student_privacy: "Meer informatie over waarom u niet uw volledige naam ziet vindt u <a href='%{student_privacy_blog}' target='_blank'> hier</a>."
   password:
     reset_form:
       title: 'Wachtwoord vergeten?'
-      instructions: "Vul hieronder uw e-mail adres in en wij sturen u instructies voor het opnieuw instellen van het wachtwoord."
+      instructions: "Vul hieronder uw e-mailadres in en wij sturen u instructies voor het opnieuw instellen van het wachtwoord."
       email: 'Email-adres'
       submit: 'Insturen'
     reset_errors:
@@ -195,7 +199,7 @@ nl:
 
       %{name}
   parent_mailer:
-    student_associated_subject: 'Login informatie voor Code.org'
+    student_associated_subject: 'Logininformatie voor Code.org'
   teacher_mailer:
     new_teacher_subject: 'Welkom bij Code.org!'
   section:
@@ -204,7 +208,7 @@ nl:
       other: 'Jullie secties:'
     code_with_teacher: '%{section_code} met %{teacher_name}'
     confirm:
-      remove: 'Ben je zeker dat je deze groep wilt verlaten?'
+      remove: 'Weet je zeker dat je deze groep wilt verlaten?'
     remove: '(sectie verwijderen)'
     type:
       picture: 'Foto wachtwoord'
@@ -254,7 +258,7 @@ nl:
       sections: "Secties"
       help_support: "Hulp en ondersteuning"
       report_bug: "Rapporteer bugs"
-      teacher_community: "Leraar Gemeenschap"
+      teacher_community: "Lerarengemeenschap"
       professional_learning: "Professioneel Leren"
       documentation: "Documentatie"
       tutorials: "Tutorials"
@@ -282,7 +286,7 @@ nl:
       about: "Over"
     user:
       classroom: 'Startpagina voor de leerkracht'
-      district_dashboard: 'District Ovezicht'
+      district_dashboard: 'Regio-overzicht'
       label: 'Hallo %{username}'
       stats: 'Code Studio'
       settings: 'Mijn account'
@@ -291,7 +295,7 @@ nl:
       signup: 'Maak een account aan'
       already_registered: 'Al aangemeld?'
       team: 'Team'
-      driver: 'Stuurprogramma'
+      driver: 'Ingelogd'
       navigator: 'Navigator'
       create: 'Maak'
       algebra_game: 'Algebra'
@@ -338,7 +342,7 @@ nl:
     confirm:
       remove: 'Weet je zeker dat je deze leraar wilt verwijderen?'
     students:
-      dashboard: 'Leerkrachten Dashboard'
+      dashboard: 'Lerarendashboard'
     user_not_found: 'De leerkracht is niet gevonden.'
     student_teacher_disassociated: 'Je hebt %{teacher_name} verwijderd als jouw leerkracht.'
     panel:
@@ -417,16 +421,6 @@ nl:
     no_primary_course: "Probeer een cursus bij Code Studio"
     choose_next_course: "Probeer een Code Studio cursus door er hier onder één te kiezen"
     print_certificate: "print certificaat"
-    announcement_title: "Aankondigingen"
-    announcement_learn_more_button: "Leer meer"
-    announcement_try_now_button: "Probeer nu"
-    announcement_host_an_hour_button: "Verzorg een uur"
-    announcement_watch_video_button: "Video bekijken"
-    announcement_petition: "Als leerkracht neemt u het voortouw in een beweging die elke leerling op elke school de mogelijkheid geeft om informatica te leren. Nu is het de tijd om uw vertegenwoordigers van u te laten horen. Deze week schrijven onderwijsleiders, 28 gouverneurs en CEO's van Amerika's grootste bedrijven samen een open brief aan het Amerikaanse Congres met de vraag om informatica op de basisschool te financieren."
-    announcement_petition_button: "Voeg je naam toe"
-    announcement_go_beyond_button: "Verdergaan"
-    announcement_apply_now: "Meld je nu aan"
-    announcement_all: "Blijf up-to-date met nieuws en updates op onze blog voor docenten. <a href='%{teacher_blog_url}' target='_blank'> Bekijk eerdere aankondigingen.</a>"
   move_students:
     new_section_dne: "Sorry, maar de groep %{new_section_code} bestaat niet. Vul een andere groepscode in."
     section_code_cant_be_current_section: "Het huidige onderdeel kan niet hetzelfde zijn als het nieuwe onderdeel."

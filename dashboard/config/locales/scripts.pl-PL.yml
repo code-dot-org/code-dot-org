@@ -4724,6 +4724,14 @@ pl:
               name: nowy etap
             Number Systems:
               name: Systemy liczbowe
+            Sending Binary Messages:
+              name: Wysyłanie wiadomości binarnych
+            Sending Binary Messages with the Internet Simulator:
+              name: Wysyłanie wiadomości binarnych z wykorzystaniem symulatora internetu
+            Intellectual Property:
+              name: Własność intelektualna
+            Binary Numbers:
+              name: Liczby binarne
         csd-videos:
           stages:
             new stage:
@@ -4837,7 +4845,45 @@ pl:
               name: Używanie procesu projektowania gier
             Project - Design a Game:
               name: Projekt - Zaprojektuj grę
+            Sprite Properties:
+              name: Właściwości duszka
         maddie-test:
           stages:
             new stage:
               name: nowy etap
+        csl-vn:
+          stages:
+            Programming in Maze:
+              name: Programowanie w labiryncie
+            Loops in Ice Age:
+              name: Pętle w Epoce Lodowcowej
+        dlp19-csd-mod-w2:
+          stages:
+            new stage:
+              name: nowy etap
+        csd4-pilot:
+          stages:
+            What is a Computer?:
+              name: Czym jest komputer?
+            Input and Output:
+              name: Wejście i wyjście
+            Processing:
+              name: Przetwarzanie
+            Project - Propose an App:
+              name: Projekt - Propozycja aplikacji
+        csp2-pilot:
+          stages:
+            new stage:
+              name: nowy etap
+            Routers and Redundancy:
+              name: Routery i nadmiarowość
+        peru-2019:
+          stages:
+            new stage:
+              name: nowy etap
+            Introduction:
+              name: Wstęp
+            Nested Loops:
+              name: Zagnieżdżające się  pętle
+            Events in Star Wars:
+              name: Wydarzenia w Star Wars

@@ -3,12 +3,11 @@ import $ from 'jquery';
 import _ from 'lodash';
 import JSZip from 'jszip';
 import {saveAs} from 'filesaver.js';
-import {SnackSession} from '@code-dot-org/snack-sdk';
+import {SnackSession} from 'snack-sdk';
 
 import * as applabConstants from './constants';
 import * as assetPrefix from '../assetManagement/assetPrefix';
 import download from '../assetManagement/download';
-import elementLibrary from './designElements/library';
 import exportProjectEjs from '../templates/export/project.html.ejs';
 import exportProjectReadmeEjs from '../templates/export/projectReadme.md.ejs';
 import exportFontAwesomeCssEjs from '../templates/export/fontAwesome.css.ejs';
@@ -187,88 +186,6 @@ export function getAppOptionsFile(expoMode, channelId) {
   return `window.APP_OPTIONS = ${JSON.stringify(options)};`;
 }
 
-/**
- * Extracts a CSS file from the given HTML dom node by traversing each node and
- * looking at the style attributes. We use the element library to determine
- * which styles are common among each element and split those out into more
- * generic selectors. This function also removes all the style attributes from
- * the elements. It gives each element where it removed styles an
- * 'appModernDesign' class.
- */
-function extractCSSFromHTML(el) {
-  var css = [];
-
-  // We need to prefix all of our selectors with divApplab to overcome the
-  // precendence of css defined in applab.css
-  var selectorPrefix = '#divApplab.appModern ';
-
-  var baseEls = {};
-  for (var elementType in elementLibrary.ElementType) {
-    var baseEl = elementLibrary.createElement(elementType, 0, 0, true);
-    baseEls[elementType] = baseEl;
-    var selector = selectorPrefix + baseEl.tagName.toLowerCase();
-    if (baseEl.classList.length > 0) {
-      selector += '.' + baseEl.classList[0];
-    }
-    if (baseEl.tagName.toLowerCase() === 'input') {
-      selector += '[type=' + (baseEl.getAttribute('type') || 'text') + ']';
-    }
-    selector += '.appModernDesign';
-    selector += ',\n' + selector + ':hover';
-    css.push(selector + ' {');
-    for (var k = 0; k < baseEl.style.length; k++) {
-      var key = baseEl.style[k];
-      css.push('  ' + key + ': ' + baseEl.style[key] + ';');
-    }
-    css.push('}');
-    css.push('');
-  }
-
-  function traverse(root) {
-    for (var i = 0; i < root.children.length; i++) {
-      var child = root.children[i];
-      var elementType = elementLibrary.getElementType(child, true);
-      if (elementType) {
-        var styleDiff = [];
-        for (var k = 0; k < child.style.length; k++) {
-          var key = child.style[k];
-          if (child.style[key] !== baseEls[elementType].style[key]) {
-            styleDiff.push('  ' + key + ': ' + child.style[key] + ';');
-          }
-        }
-        child.removeAttribute('style');
-        if (child.tagName.toLowerCase() === 'input') {
-          // make sure all input tags have a type attribute specified
-          if (!child.getAttribute('type')) {
-            child.setAttribute('type', 'text');
-          }
-        }
-        if (styleDiff.length > 0) {
-          let childId = child.id;
-          const firstIdChar = childId.charAt(0);
-          if (!isNaN(parseInt(firstIdChar, 10))) {
-            // First character of id is a number. Must transform this to create
-            // legal CSS:
-            childId = `\\3${firstIdChar} ${childId.substring(1)}`;
-          }
-          css.push(selectorPrefix + '#' + childId + ' {');
-          css = css.concat(styleDiff);
-          css.push('}');
-          css.push('');
-        }
-        const exitingClassName = child.className;
-        const exitingClassNamePrefix = exitingClassName
-          ? `${exitingClassName} `
-          : '';
-        child.className = `${exitingClassNamePrefix}appModernDesign`;
-      }
-      traverse(child);
-    }
-  }
-  traverse(el);
-  return css.join('\n');
-}
-
 const fontAwesomeWOFFRelativeSourcePath = '/fonts/fontawesome-webfont.woff2';
 const fontAwesomeWOFFPath = 'applab/fontawesome-webfont.woff2';
 
@@ -305,7 +222,7 @@ async function getExportConfig(expoMode) {
 
 export default {
   async exportAppToZip(appName, code, levelHtml, expoMode) {
-    const {css, outerHTML} = transformLevelHtml(levelHtml);
+    const transformedHTML = transformLevelHtml(levelHtml);
 
     const exportConfig = await getExportConfig(expoMode);
     const jQueryBaseName = 'jquery-1.12.1.min';
@@ -314,7 +231,7 @@ export default {
       html = exportExpoIndexEjs({
         appName,
         exportConfigPath: exportConfig.path,
-        htmlBody: outerHTML,
+        htmlBody: transformedHTML,
         applabApiPath: 'applab-api.j',
         jQueryPath: jQueryBaseName + '.j',
         applabCssPath: 'applab/applab.css',
@@ -329,7 +246,7 @@ export default {
       html = exportProjectEjs({
         appName,
         exportConfigPath: exportConfig.path,
-        htmlBody: outerHTML,
+        htmlBody: transformedHTML,
         fontPath: fontAwesomeWOFFPath
       });
     }
@@ -425,10 +342,7 @@ export default {
     const fontAwesomeCSS = exportFontAwesomeCssEjs({
       fontPath: fontAwesomeWOFFPath
     });
-    zip.file(
-      mainProjectFilesPrefix + 'style.css',
-      fontAwesomeCSS + rewriteAssetUrls(appAssets, css)
-    );
+    zip.file(mainProjectFilesPrefix + 'style.css', fontAwesomeCSS);
     zip.file(
       mainProjectFilesPrefix + (expoMode ? 'code.j' : 'code.js'),
       rewriteAssetUrls(appAssets, code)
@@ -595,7 +509,7 @@ export default {
   },
 
   async publishToExpo(appName, code, levelHtml, iconFileUrl, config) {
-    const {css, outerHTML} = transformLevelHtml(levelHtml);
+    const transformedHTML = transformLevelHtml(levelHtml);
     const fontAwesomeCSS = exportFontAwesomeCssEjs({
       fontPath: fontAwesomeWOFFPath
     });
@@ -613,7 +527,7 @@ export default {
     const html = exportExpoIndexEjs({
       appName,
       exportConfigPath: exportConfig.path,
-      htmlBody: outerHTML,
+      htmlBody: transformedHTML,
       commonLocalePath: `${origin}/blockly/js/en_us/common_locale.js`,
       applabLocalePath: `${origin}/blockly/js/en_us/applab_locale.js`,
       appOptionsPath: 'appOptions.j',
@@ -655,7 +569,7 @@ export default {
       {filename: 'index.html', data: rewriteAssetUrls(appAssets, html)},
       {
         filename: 'style.css',
-        data: fontAwesomeCSS + rewriteAssetUrls(appAssets, css)
+        data: fontAwesomeCSS
       },
       {filename: 'code.j', data: rewriteAssetUrls(appAssets, code)},
       {filename: 'appOptions.j', data: appOptionsJs}
@@ -775,11 +689,5 @@ function transformLevelHtml(levelHtml) {
   appElement.classList.remove('withCrosshair');
   appElement.style.transform = '';
 
-  // NOTE: this also modifies appElement!
-  const css = extractCSSFromHTML(appElement);
-
-  return {
-    outerHTML: appElement.outerHTML,
-    css
-  };
+  return appElement.outerHTML;
 }

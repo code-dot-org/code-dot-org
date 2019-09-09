@@ -14,7 +14,7 @@ project_sharing true
 curriculum_umbrella 'CSD'
 
 stage 'CS Discoveries Pre-survey', lockable: true, flex_category: 'cspSurvey'
-level 'csd-pre-survey-2017-levelgroup_2018_2019', assessment: true
+level 'csd-pre-survey-levelgroup_2019', assessment: true
 
 stage 'Intro to Problem Solving', flex_category: 'csd1_1'
 level 'CSD U1L01 TFMD_2019', named: true

@@ -101,16 +101,15 @@ Facilitators can host workshops that are not associated with their Regional Part
 
 **CS Fundamentals Facilitator Travel Reimbursement Process**
 
-Code.org will provide Partners with limited travel support for CS Fundamentals facilitators, up to, but not exceeding 250 dollars per facilitator per workshop, with the understanding that this should be around 30% of a Partner's workshops (ie. you should not be needing this travel support for every workshop you host).
+Code.org will provide Partners with limited travel support for CS Fundamentals facilitators, up to, but not exceeding $500 dollars per facilitator per workshop, with the understanding that this should be around 30% of a Partner's workshops (ie. you should not be needing this travel support for every workshop you host).
 
 Travel support will be provided by the following reimbursement process:
 
-- Regional Partner should submit an invoice and receipts within 30 days of the workshop by completing the form at [bit.ly/codeinvoices](http://bit.ly/codeinvoices)
-- Invoice total can be up to 250 dollars.
-- Reimbursable expenses include items like mileage, rental car, hotel, meals, etc.
-- For mileage reimbursement, no receipts are needed, but Regional Partner should specify the number of miles traveled.
-- For meals under 25 dollars, no receipts are needed.
+- Regional Partner should complete the form at [bit.ly/codeinvoices](http://bit.ly/codeinvoices) within 30 days of when the expenses were incurred.
+- Invoice total can be up to 500 dollars.
+- Reimbursable expenses include items like mileage, rental car, hotel, meals, etc. Refer to the 6-12 <a href="https://docs.google.com/document/d/1ichRN3P8XU71Ksr6VjejS6uYDK9yL3SMqEQjchm7xSo/edit" target=_blank>travel policy</a> for suggested guidance of reasonable expenses. Note that Egencia is not used for CS Fundamentals facilitator travel, yet. 
 - Payment will be provided independent of the regular workshop payment that is generated automatically from the workshop dashboard.
+
 
 [**Back to the top**](#top)
 ________________

@@ -42,6 +42,7 @@ nn:
           opprettelsen av en Code.org konto med <strong>%{provider}</strong> for <strong>%{email}</strong>.
         error:
           future: kan ikkje vere i framtida
+  beta: beta
   hello: Hallo, verda
   welcome_back: Velkommen attende, %{name}
   your_professional_learning_plan: Læringsplanen din
@@ -524,87 +525,6 @@ nn:
     no_primary_course: Prøv eit kurs frå Code Studio
     choose_next_course: Prøv eit kurs frå Code Studio ved å velje eit nedanfor
     print_certificate: Skriv ut sertifikat
-    announcement_title: Kunngjeringar
-    announcement_message_fall2016_features: Vi har brukt sommeren på å gjere tilbakemeldingane
-      deira til nye funksjonar. Nå kan du <a href="%{pp_url}" target="_blank">følge
-      fleire elevars framgang</a> sjølv om dei parprogrammerer på ein eining. Du kan
-      bruke <a href="%{csp_widgets_url}" target="_blank">de beste interaktive verktøya</a>
-      frå vårt informatikkprinsipper-kurs i <i>kva for helst slags</i> klasserom.
-      Og elevane dine kan <a href="%{unused_code_url}" target="_blank">ta vare på
-      ubrukt kode</a> i deira arbeidsområde for å fremme eksperimentering! Sjekk ut
-      alle våre nye funksjonar gje oss ei tilbakemelding.
-    announcement_csp_widgets_message: Ser du etter en morsom måter å lære klassen
-      hvordan Internett fungerer, hvordan kryptografi holder data sikre, og andre
-      begreper? Vi har tatt de beste interaktive verktøy fra vårt informatikk-prinsipper-kurs,
-      og utgitt frittstående moduler du kan bruke når som helst!
-    announcement_learn_more_button: Lær meir
-    announcement_try_now_button: Lær meir
-    announcement_host_an_hour_button: Ver vert for ein Kodetime
-    announcement_watch_video_button: Sjå videoen
-    announcement_petition: Som lærar, er du del av ei rørsle som ynskjer å gje alle
-      elevar, i alle skular, høve til å lære programmering. No er det på tide å la
-      myndigheitene høyre frå deg. Denne veka gjekk leiarar innan utdanning, 28 guvernørar
-      og administrerande direktørar i dei største selskapa i USA saman og leverte
-      eit ope brev, kor dei ba kongressen finansiere K-12 programmeringsutdanning.
-    announcement_petition_button: Legg til namnet ditt
-    announcement_go_beyond_button: Gå vidare
-    announcement_apply_now: Søk nå
-    announcement_all: Held deg oppdatert med oppdateringar og ny funksjonalitet på
-      lærarbloggen vår. <a href='%{teacher_blog_url}' target='_blank'>Sjå tidligare
-      kunngjeringar.</a>
-    announcement_hoc_launch: Tusener av lærarar i meir enn 180 land vil undervise
-      i programmering under Kodetimen 5.-11. desember. Me reknar med at du vil hjelpe
-      oss å nå fleire elevar enn nokon sinne. <a href='%{signup_url}' target='_blank'>Registrer
-      din Kodetime</a> og la andre lærarar vite at kven som helst kan lære bort programmering.
-    announcement_mc_launch: Eit av våre mest populære opplegg har fått ein oppfølgjar!
-      Heilt nye Kodetimens Minecraft-designer let elevane bestemme reglane i Minecraft.
-      Dei kan skape si helt unike Minecraft-verd, og dele den med venene sine eller
-      spele den på telefonen sin. Gjennomfør opplegget med klassa di i årets Kodetime.
-    announcement_how_code_studio: Du treng inga erfaring for å undervise i programmering
-      i ditt klasserom. Code.org har læreplanar, timeplanar, høykvalitetslæreprogram
-      og fleire verktøy for alle klassetrinn&mdash;alt du treng heilt gratis. Lurer
-      du på kvar du skal begynne? Last ned<a href='%{video_download_url}'>denne videoen</a>!
-    announcement_go_beyond: Fortsett videre fra Kodetimen og utforsk konsepter fra
-      datateknikk med dine elever hver uke. Code.org og LKK tilbyr pensum, timeplaner,
-      profesjonelle høykvalitets læreplaner og tilby tonnevis av gode verktøy for
-      alle klassenivåer&mdash;og alt er gratis. :) Du behøver ikke noen erfaring for
-      å begynne med å lære bort datateknologi i klasserommet ditt. <b>Finn det neste
-      steget som passer for ditt klasserom.</b>
-    announcement_teacher_recruitment: Lærere som deg leder den informasjonsvitenskapelige
-      utdannelsesbevegelsen. Du kan delta i profesjonelle læringsprogrammer av høy
-      kvalitet <strong> uten kostnad for deg eller din skole </strong>. Ta ledelsen
-      innen datavitenskap på din skolen, og søk om profesjonell opplæring.
-    announcement_teacher_recruitment2: Lærere som deg leder den informasjonsvitenskapelige
-      utdanningsbevegelsen. Du kan delta i profesjonelle læringsprogrammer av høy
-      kvalitet <strong> uten kostnad for deg eller din skole </strong>. Ta ledelsen
-      innen IT på din skole, og søk om profesjonell opplæring. Lærere i ungdomskole
-      og videregående skole må søke innen 17. mars.
-    announcement_csf_pilot: "<strong>Grunnskolelærere:</strong> Bli med og oppdater
-      våre grunnleggende Informatikkurs! VI ser etter lærere til å lede arbeidet med
-      å oppgradere læreplanen i Grunnleggende Informatikk i løpet av vinteren og våren
-      2017. Vi ser frem til å høre dine innspill før oppdateringene slippes i august
-      2017."
-    announcement_student_privacy: Hos Code.org tar vi studentenes personvern svært
-      alvorlig. For å beskytte elevenes personvern har vi gjort endringer for din
-      seksjons pålogginsside til ikke å vise fullt navn. Selv om denne oppdateringen
-      forbedrer personvernet, oppfordrer vi likevel brukere til å <i>ikke bruke fullt
-      navn på studentene</i>.
-    announcement_apcsp_recruitment: '<strong>Informatikk lærere:</strong> Dine studenter
-      kan delta i Code.org''s neste virale video for å oppmuntre flere studenter til
-      å ta Prinsipper i Informatikk eksamen i år. Vi inviterer alle Prinsipper i Informatikk
-      studenter til å legge ut en 10-20 sekunders videoklipp på Twitter, Instagram
-      eller Facebook hvor de sier "I''m taking the #APCSP exam because..." De beste
-      videoene vil benyttes i vår video og vinneren vil motta Code.org produkter i
-      premie!'
-    announcement_applab_export: App-lab, vårt web-baserte programmeringsmiljø, støtter
-      nå eksport av kode! Du kan starte å bygge applikasjoner med dra-og-slipp av
-      JavaScript-blokker, eksporter så koden for å fortsette kodingen i ditt foretrukne
-      utviklingsverktøy.
-    announcement_navigation_redesign: "<b>Endringer i nettstednavigering</b> <br/>I
-      sommer skal vi forbedre navigasjonen på siden Code.org, slik at du alltid har
-      tilgang til de beste ressursene dine fra hvor som helst på nettstedet. Så snart
-      du logger på din lærerkonto, vil hver side ha en ny navigasjonslinje med lenker
-      til hjemmesiden din, kursene, prosjektgalleriet, seksjoner og profesjonell læring."
   move_students:
     new_section_dne: Beklagar, men seksjon %{new_section_code} finns ikkje. Legg inn
       ein annan seksjonskode.

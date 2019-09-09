@@ -23,6 +23,7 @@ bs:
         edit_header: 'Preuredi Detalje Računa'
         error:
           future: ne može biti u budućnosti
+  beta: "beta"
   hello: "Pozdrav svijete"
   welcome_back: "Dobrodošao/la natrag, %{name}"
   your_professional_learning_plan: "Vaš profesionalni plan učenja"
@@ -330,11 +331,6 @@ bs:
     no_primary_course: "Probajte Code Studio kurs"
     choose_next_course: "Probajte Code Studio kurs odabirom sljedećih opcija dole"
     print_certificate: "Ispiši Diplomu"
-    announcement_title: "Objave"
-    announcement_learn_more_button: "Nauči više"
-    announcement_try_now_button: "Probaj sad"
-    announcement_watch_video_button: "Pogledaj video"
-    announcement_petition_button: "Dodajte svoje ime"
   move_students:
     all_students_must_be_in_current_section: "Svi učenici trenutno moraju biti upisani u vaše odjeljenje."
     already_enrolled_in_new_section: "Ne možete premjestiti ove učenike zato što su oni već u novom odjeljenju."

@@ -5,7 +5,8 @@ student_detail_progress_view true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csd-19/unit1"], ["teacherForum", "https://forum.code.org/c/csd1"], ["vocabulary", "https://curriculum.code.org/csd-19/unit1/vocab/"], ["standardMappings", "https://curriculum.code.org/csd-19/unit1/standards/"]]
 has_verified_resources true
 has_lesson_plan true
-curriculum_path 'https://curriculum.code.org/csd-19/unit1/{LESSON}'
+curriculum_path 'https://curriculum.code.org/csd-20/unit1/{LESSON}'
+pilot_experiment 'csd-piloters'
 project_sharing true
 curriculum_umbrella 'CSD'
 
@@ -21,23 +22,5 @@ level 'CSD Problem Solving Process Video_pilot', named: true
 
 stage 'Exploring Problem Solving', flex_category: 'csd1_1'
 level 'CSD U1L03 TFMD_pilot', named: true
-
-stage 'What is a Computer?', flex_category: 'csd1_2'
-level 'CSD U1L04 TFMD_pilot', named: true
-level 'CSD What Makes a Computer a Computer Video_pilot', named: true
-
-stage 'Input and Output', flex_category: 'csd1_2'
-level 'CSD U1L05 TFMD_pilot', named: true
-
-stage 'Processing', flex_category: 'csd1_2'
-level 'CSD U1L06 TFMD_pilot', named: true
-
-stage 'Apps and Storage', flex_category: 'csd1_2'
-level 'CSD U1L07 TFMD_pilot', named: true
-
-stage 'Project - Propose an App', flex_category: 'csd1_2'
-level 'CSD U1L09 TFMD_pilot', named: true
-level 'csd-pulse-check-survey-1-levelgroup U1Ch2_2018_2019_pilot', progression: 'Reflection', assessment: true
-
-stage 'Post-Project Test', lockable: true, flex_category: 'csd1_2'
-level 'CSD U1 Test_pilot', assessment: true
+level 'csd digital unplugged PSP word search big', named: true
+level 'csd digital unplugged PSP seating big', named: true

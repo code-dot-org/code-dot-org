@@ -100,8 +100,6 @@ tg:
   home:
     online: онлайн
     view_course: Намоиш додани дарс
-    announcement_title: "Эълонҳо"
-    announcement_learn_more_button: "Маълумоти бештар"
   gender:
     male: 'Мард'
     female: 'Зан'

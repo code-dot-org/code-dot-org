@@ -530,6 +530,7 @@ pt-BR:
         CSF_SpriteLab_Intro_v2: Introdução ao Sprite Lab
         CSF_Spritelab_MakeSprite_v2: Como fazer um Sprite
         CSF_SpriteLab_SpritesInAction_v2: Sprites em Ação
+        csd_debugging: Analisando
     callout:
       text:
         drag_blocks: Arraste um bloco "avance" e o encaixe embaixo do outro bloco

@@ -1,6 +1,7 @@
 require 'csv'
 require '../lib/cdo/git_utils'
 require '../lib/cdo/rake_utils'
+require '../lib/cdo/hash_utils'
 
 namespace :seed do
   verbose false
@@ -15,6 +16,14 @@ namespace :seed do
 
   task games: :environment do
     Game.setup
+  end
+
+  task donors: :environment do
+    Donor.setup
+  end
+
+  task donor_schools: :environment do
+    DonorSchool.setup
   end
 
   SCRIPTS_GLOB = Dir.glob('config/scripts/**/*.script').sort.flatten.freeze
@@ -94,13 +103,14 @@ namespace :seed do
   #
   # @param [Hash] opts the options to update the scripts with.
   # @option opts [Boolean] :incremental Whether to only process modified scripts.
-  # @option opts [Boolean] :ui_test Whether to only update ui test scripts.
+  # @option opts [Boolean] :script_files Which script files to update. Default:
+  #   all script files.
   def update_scripts(opts = {})
     # optionally, only process modified scripts to speed up seed time
     scripts_seeded_mtime = (opts[:incremental] && File.exist?(SEEDED)) ?
       File.mtime(SEEDED) : Time.at(0)
     touch SEEDED # touch seeded "early" to reduce race conditions
-    script_files = opts[:ui_test] ? UI_TEST_SCRIPTS : SCRIPTS_GLOB
+    script_files = opts[:script_files] || SCRIPTS_GLOB
     begin
       custom_scripts = script_files.select {|script| File.mtime(script) > scripts_seeded_mtime}
       LevelLoader.update_unplugged if File.mtime('config/locales/unplugged.en.yml') > scripts_seeded_mtime
@@ -122,6 +132,16 @@ namespace :seed do
     :libraries,
   ].freeze
 
+  # Do the minimum amount of work to seed a single script, without seeding
+  # levels or other dependencies. For use in development. Example:
+  # rake seed:single_script SCRIPT_NAME=express-2019
+  task single_script: :environment do
+    script_name = ENV['SCRIPT_NAME']
+    raise "must specify SCRIPT_NAME=" unless script_name
+    script_files = ["config/scripts/#{script_name}.script"]
+    update_scripts(script_files: script_files)
+  end
+
   task scripts: SCRIPTS_DEPENDENCIES do
     update_scripts(incremental: false)
   end
@@ -131,7 +151,7 @@ namespace :seed do
   end
 
   task scripts_ui_tests: SCRIPTS_DEPENDENCIES do
-    update_scripts(ui_test: true)
+    update_scripts(script_files: UI_TEST_SCRIPTS)
   end
 
   task courses: :environment do
@@ -185,9 +205,11 @@ namespace :seed do
     Library.load_records
   end
 
-  # Generate the database entry from the custom levels json file
+  # Generate the database entry from the custom levels json file.
+  # Optionally limit to a single level via LEVEL_NAME= env variable.
   task custom_levels: :environment do
-    LevelLoader.load_custom_levels
+    level_name = ENV['LEVEL_NAME']
+    LevelLoader.load_custom_levels(level_name)
   end
 
   # Seeds the data in callouts
@@ -278,35 +300,30 @@ namespace :seed do
   end
 
   task :cached_ui_test do
-    if File.exist?('db/ui_test_data.commit')
-      dump_commit = File.read('db/ui_test_data.commit')
-      if GitUtils.valid_commit?(dump_commit)
-        files_changed = GitUtils.files_changed_in_branch_or_local(
-          dump_commit,
-          [
-            'dashboard/app/dsl/**/*',
-            'dashboard/config/**/*',
-            'dashboard/db/**/*',
-            'dashboard/lib/tasks/**/*',
-          ],
-          ignore_patterns: [
-            'dashboard/db/ui_test_data.*',
-          ],
-        )
-        if files_changed.empty?
-          puts 'Cache hit! Loading from db dump'
-          sh('mysql -u root < db/ui_test_data.sql')
-          next
-        end
-        puts files_changed
-      else
-        puts 'SQL dump created on unreachable commit'
+    HASH_FILE = 'db/ui_test_data.hash'
+
+    # patterns are relative to dashboard directory
+    watched_files = FileList[
+      'app/dsl/**/*',
+      'config/**/*',
+      'db/**/*',
+      'lib/tasks/**/*',
+    ].exclude('db/ui_test_data.*')
+    current_hash = HashUtils.file_contents_hash(watched_files)
+
+    if File.exist?(HASH_FILE)
+      dump_hash = File.read(HASH_FILE)
+
+      if current_hash == dump_hash
+        puts 'Cache hit! Loading from db dump'
+        sh('mysql -u root < db/ui_test_data.sql')
+        next
       end
     end
 
     puts 'Cache mismatch, running full ui test seed'
     Rake::Task['seed:ui_test'].invoke
-    File.write('db/ui_test_data.commit', GitUtils.git_revision_branch('origin/' + GitUtils.current_branch))
+    File.write(HASH_FILE, current_hash)
     sh('mysqldump -u root -B dashboard_test > db/ui_test_data.sql')
   end
 
@@ -314,10 +331,10 @@ namespace :seed do
   end
 
   desc "seed all dashboard data"
-  task all: [:videos, :concepts, :scripts, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :courses, :ap_school_codes, :ap_cs_offerings, :ib_school_codes, :ib_cs_offerings, :state_cs_offerings]
-  task ui_test: [:videos, :concepts, :scripts_ui_tests, :courses_ui_tests, :callouts, :school_districts, :schools, :secret_words, :secret_pictures]
+  task all: [:videos, :concepts, :scripts, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :courses, :ap_school_codes, :ap_cs_offerings, :ib_school_codes, :ib_cs_offerings, :state_cs_offerings, :donors, :donor_schools]
+  task ui_test: [:videos, :concepts, :scripts_ui_tests, :courses_ui_tests, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :donors, :donor_schools]
   desc "seed all dashboard data that has changed since last seed"
-  task incremental: [:videos, :concepts, :scripts_incremental, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :courses, :ap_school_codes, :ap_cs_offerings, :ib_school_codes, :ib_cs_offerings, :state_cs_offerings]
+  task incremental: [:videos, :concepts, :scripts_incremental, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :courses, :ap_school_codes, :ap_cs_offerings, :ib_school_codes, :ib_cs_offerings, :state_cs_offerings, :donors, :donor_schools]
 
   desc "seed only dashboard data required for tests"
   task test: [:videos, :games, :concepts, :secret_words, :secret_pictures, :school_districts, :schools]

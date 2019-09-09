@@ -450,11 +450,11 @@ id-ID:
         Animasi.\\\r\n-   Membuat sprite dan menetapkan gambar.\\\r\n-   M\n-   Tetapkan\n
         \   hingga gambar loop untuk gambar latar belakang dan sprite anda."
       CSD U5 black white images pixelation 2: "# lakukan ini\\\r\n\n\\\r\ngunakan\nwidget
-        pixelasi untuk menggambar wajah tersenyum\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image->\n1491425592286.52.47\nPM.png>)"
+        pixelasi untuk menggambar wajah tersenyum\\\r\n\\\r\n!\\[](\\<<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image->\n1491425592286.52.47\nPM.png>)"
       CSD U5 black white images pixelation 2_2018: "# lakukan ini\\\r\n\n\\\r\ngunakan\nwidget
-        pixelasi untuk menggambar wajah tersenyum\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image->\n1491425592286.52.47\nPM.png>)"
+        pixelasi untuk menggambar wajah tersenyum\\\r\n\\\r\n!\\[](\\<<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image->\n1491425592286.52.47\nPM.png>)"
       CSD U5 black white images pixelation 2_2019: "# lakukan ini\\\r\n\n\\\r\ngunakan\nwidget
-        pixelasi untuk menggambar wajah tersenyum\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image->\n1491425592286.52.47\nPM.png>)"
+        pixelasi untuk menggambar wajah tersenyum\\\r\n\\\r\n!\\[](\\<<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image->\n1491425592286.52.47\nPM.png>)"
       CSD U6 game project finish: "# Menyelesaikan Sentuhan dan Pengujian\\\r\n\n\\\r\nDi\nPoin
         ini anda harus memiliki sebagian besar program di tempat Anda. Sekarang anda
         perlu untuk\nMenambahkan dengan menyelesaikan sentuhan yang diperlukan dan
@@ -520,8 +520,22 @@ id-ID:
       Course 4 Artist For Loops 6a: |-
         Buat tiga perubahan kecil pada
         kode dari level terakhir untuk mendapatkan ini!
+      CourseE_HOC 2018 Level_1: Anda butuh persediaan untuk perjalanan selanjutnya.
+        kumpulkan sebuah**perahu**![](https://images.code.org/0b3162de9dc0abf3e0890d315b8cc699-image-1538697977747.png)
+        dari **peti**![](https://images.code.org/e0cf43fd36a50dd16ee06595047bfd8f-image-1538697999418.png).
       CourseE_HOC 2018 Level_10: Ada seekor**cumi-cumi**![](https://images.code.org/82f305ab1cb4a9ff9044991a18edb16e-image-1538947827218.png)
         sedang bersembunyi di suatu tempat di Ocean Monument? bisakah kau temukan?
+      CourseE_HOC 2018 Level_11: Bangun sebuah dinding**prismarine**![](https://images.code.org/d110b8d13c01756fcdbef3768b2e2859-image-1538699770898.png)
+        di sekeliling beton hitam. Ini akan mengaktifkan**pipa**![](https://images.code.org/7773cf30f42e6727a23c8cb364d4664b-image-1538699800030.png)
+        dan lengkapi tantanganmu!
+      CourseE_HOC 2018 Level_2: Perahu lebih mudah berjalan di perairan terbuka! Menuju
+        ujung galangan kapal untuk menaiki kapal.
+      CourseE_HOC 2018 Level_3: Ambil dayung dan jalankan perahumu menyebrangi lautan
+        untuk menangkap **ikan kod**![](https://images.code.org/9b636884eefb1efe18f9f844e1e916a9-image-1538698597353.png).
+      CourseE_HOC 2018 Level_4: Ayo beri makan ikan kod untuk**lumba-lumba**![](https://images.code.org/8c240fd4df4da2795ba7ca942b77a057-image-1538947890991.png).
+        Gunakan pengulangan sampai blok untuk menyebrangi lautan lebih cepat.
+      CourseE_HOC 2018 Level_5: Ada sebuah**kerang nautillus**![](https://images.code.org/2eb084fa0c718dee6ca4b6379381f735-image-1538698936660.png)
+        bersembunyi disuatu tempat! Eksplor kapal karam untuk menjangkau **peti**![](https://images.code.org/16cdd5779b38909d4bf47b29535c92b0-image-1538698950602.png).
       CourseE_HOC 2018 Level_6: Lihat pembekuan diluar sana! Tangkap seekor**salmon**![](https://images.code.org/c66eadf25b3cdfe20bbfdc91e2c28c94-image-1538699000102.png)
         dengan caramu di reruntuhan bawah air.
       CourseE_HOC 2018 Level_7a: Anda menemukanreruntuhan bawah laut. Pencarian batu
@@ -577,6 +591,16 @@ id-ID:
         Perhatikan berapa lama anda bisa memecahkan sandinya!Apakah ini metode yang bagus dalam mengenkripsi data rahasia?.
 
         <img src="http://code.org/api/hour/begin_encryption.png">
+      Dance Party 2_2019: |-
+        Alien bangga dengan keterampilan dansanya  di Mars, tetapi sekarang dia hanya bisa bergerak ke samping.
+
+        Gantikan blok perilaku di <xml><block type="gamelab_addBehaviorSimple" block-text="the sprite begins block"><value name="SPRITE">
+        <block type="gamelab_allSpritesWithAnimation">
+
+        <title name="ANIMATION">"alien biru"</title>
+        </block>
+        </value>
+        </block></xml>  yang berbeda sehingga membuat alien mulai berputar!
       Dance Party 3_2019: |-
         Buat peri baru yang terlihat seperti alien biru. <img src="https://levelbuilder-studio.code.org/media?u=https%3A%2F%2Flevelbuilder-studio.code.org%2Fapi%2Fv1%2Fanimation-library%2FecnW7rdKTB0fUrKRKrqIHbrHVvyWh5hu%2Fcategory_characters%2FalienPink.png" width="3%"></img>
 
@@ -588,6 +612,14 @@ id-ID:
         \-Atur semua alienmu berdiri di garis horizontal, seperti ini:
 
         ![](https://images.code.org/09380fc01069e79d9d33a979379a666b-image-1555960752137.png)
+      Dance Party 5_2019: |-
+        <!--Kita bisa mengubah semua hal diprogram ini saat anda meng-klik peri. Tambahkan kode untuk merubah warna setiap alien ketika diklik.-->
+
+        Ayo mencoba menggunakan berbagai macam event berbeda.
+
+        Buat sebuah event keypress menggunakan <xml><block type="gamelab_keyPressed" block-text="the keypress event block"></block></xml>.
+
+        Untuk event ini, buat sehingga ketika ditekan, setiap alien berubah warna!, pilih tombol yang anda suka, tapi jika anda menggunakan layar sentuh kami merekomendasikan _up_,_down_,_left_, atau_right_.
       Dance Party Predict_2019: "**Buat sebuah prediksi:** seorang peri yang nampak
         seperti alien biru!\n\nMenurut anda apa yang akan terjadi saat anda meng-kliknya?
         \ "
@@ -688,6 +720,16 @@ id-ID:
         \-Tambahkan lebih banyak benda/hal yang pengguna bisa berinteraksi dengannya di dalam ruangan
         \-Coba buat kode rahasia acak
         \-Tambahkan lebih banyak ruang
+      Fish Tank 2-validated_2019: |-
+        Ayo membuat kolam ikan!
+
+        Ubah peri tumbleweed menjadi berbagai jenis ikan dengan meng-klik <xml><block type="gamelab_allSpritesWithAnimation" block-text="the sprite picker block"><title name="ANIMATION">"tumbleweed"</title></block></xml>.
+
+        Pastikan juga memperbaharui kostum peri dalam <xml><block type="gamelab_addBehaviorSimple" block-text="the add behavior block"></block></xml>.
+      Fish Tank 3-validated_2019: |-
+        Ikan mulai bingung!
+
+        Ubah perilaku ikan sehingga ikannya berenang ke kiri dan ke kanan.
       Fish Tank 4-validated_2019: |-
         Kolam ikan perlu air!
 
@@ -699,6 +741,9 @@ id-ID:
         </block>
         </value>
         </block></xml> untuk membuat berbagai warna latar. Kami merekomendasikan biru!
+      Fish Tank 5-validated_2019: Ikan adalah petualang dan ingin bertemu dengan mahluk
+        baru di laut. Tambahkan peri lain ke kolam ikan. Peri ini bisa memiliki berbagai
+        macam kostum lain selain yang anda gunakan untuk ikan!
       Fish Tank 6-validated_2019: |-
         Apa yang kau inginkan dari teman baru ikanmu untuk dilakukan?
 
@@ -711,10 +756,24 @@ id-ID:
         kerjamu.  Semua kode yang kamu butuhkan untuk menyeberangi sungai sudah tersedia!
         \\\r\n \\\r\nPosisikan blok hijau kecil dua kali ke ruang kerjamu untuk memperbaiki
         jalur dan bawa {currentPlayerName} ke Obor Batu Merah [redstone_torch]."
+      HOC 2018 Level_1: Anda butuh persediaan untuk perjalanan selanjutnya. kumpulkan
+        sebuah**perahu**![](https://images.code.org/0b3162de9dc0abf3e0890d315b8cc699-image-1538697977747.png)
+        dari **peti**![](https://images.code.org/e0cf43fd36a50dd16ee06595047bfd8f-image-1538697999418.png).
       HOC 2018 Level_10: Ada seekor**cumi-cumi**![](https://images.code.org/82f305ab1cb4a9ff9044991a18edb16e-image-1538947827218.png)
         sedang bersembunyi di suatu tempat di Ocean Monument? bisakah kau temukan?
+      HOC 2018 Level_11: Bangun sebuah dinding**prismarine**![](https://images.code.org/d110b8d13c01756fcdbef3768b2e2859-image-1538699770898.png)
+        di sekeliling beton hitam. Ini akan mengaktifkan**pipa**![](https://images.code.org/7773cf30f42e6727a23c8cb364d4664b-image-1538699800030.png)
+        dan lengkapi tantanganmu!
       HOC 2018 Level_12: Selamat! Dunia air terbuka menunggumu.Bangun sebuah batu
         karang! Sebuah gunung! Kapal karam! Terserah padamu
+      HOC 2018 Level_2: Perahu lebih mudah berjalan di perairan terbuka! Menuju ujung
+        galangan kapal untuk menaiki kapal.
+      HOC 2018 Level_3: Ambil dayung dan jalankan perahumu menyebrangi lautan untuk
+        menangkap **ikan kod**![](https://images.code.org/9b636884eefb1efe18f9f844e1e916a9-image-1538698597353.png).
+      HOC 2018 Level_4: Ayo beri makan ikan kod untuk**lumba-lumba**![](https://images.code.org/8c240fd4df4da2795ba7ca942b77a057-image-1538947890991.png).
+        Gunakan pengulangan sampai blok untuk menyebrangi lautan lebih cepat.
+      HOC 2018 Level_5: Ada sebuah**kerang nautillus**![](https://images.code.org/2eb084fa0c718dee6ca4b6379381f735-image-1538698936660.png)
+        bersembunyi disuatu tempat! Eksplor kapal karam untuk menjangkau **peti**![](https://images.code.org/16cdd5779b38909d4bf47b29535c92b0-image-1538698950602.png).
       HOC 2018 Level_6: Lihat pembekuan diluar sana! Tangkap seekor**salmon**![](https://images.code.org/c66eadf25b3cdfe20bbfdc91e2c28c94-image-1538699000102.png)
         dengan caramu di reruntuhan bawah air.
       HOC 2018 Level_7a: Anda menemukanreruntuhan bawah laut. Pencarian batu pasir
@@ -816,6 +875,18 @@ id-ID:
         domba
       Overworld Move to Sheep_2019: Tambahkan perintah "bergerak maju" kedua untuk
         mencapai domba
+      Room Escape Workshop - 1: |-
+        # Mengatur ruangan
+
+        <img src="https://images.code.org/9d103d74f7c2da05aeccd5fc317e6ab6-image-1490368234432.08.44 AM.png" style="width:200px; float:right">
+
+        Untuk membuat ruang pelarian anda perlu  mengatur ruangan user yang bisa untuk menjelajah sekitarnya.Sebagian sudah dikerjakan untuk anda.Anda hanya perlu memutuskan apa bagian yang berbeda dari ruangan itu yang akan nampak dengan mengambil salah satu gambar!
+
+        # Lakukan ini
+
+        \-level mulai dalam desain mode
+        \-untuk setiap elemen gambar yang blank (persegi panjang abu) tambah gambar yang sesuai.Sebagai contoh  anda perlu gambar pintu untuk label elemen gambar pintu.
+        \-Sebuah contoh dari bagaimana sebuah ruangan mungkin nampak ada disebelah kanan.
       Room Escape Workshop - 10: |-
         <img src="https://images.code.org/3651f7d5306bdcfd2d9a3d9bb842626e-image-1491066778787.12.36 PM.png" style="width:200px;float:right">
 
@@ -842,6 +913,18 @@ id-ID:
         \-Pada satu sisi '=='letakkan posisi x pindahkan kunci pada saat anda meng-klik
         \-Pada sisi lain tambahkan blok 'getXPosition()'-ID untuk itu seharusnya adalah ID kuncimu!
         \-Di dalam statement'if'gunakan 'showelement'untuk menampilkan gambar outdoor tersembunyi jika mereka memiliki kunci
+      Room Escape Workshop - 9-2: |-
+        # klik tombol
+
+        <img src="https://images.code.org/1a736d2774860bebc5072b8ae8b38f34-image-1491066638078.10.00 PM.png" style="width:170px;float:right">
+
+        Sekali pengguna meng-klik tombol anda akan ingin menunjukkan pada mereka saat menahannya.Anda bisa melakukan hal ini dengan memindahkan tombol  ke pojok bawah dari ruangan.
+
+        # Lakukan ini
+
+        \-Tambahkan  blok 'onEvent' saat user meng-klik tombol.
+        \-Di dalam blok 'onEvent':
+         \-gunakan setposition untuk memindahkan tombol ke sudut bawah layar
       Standalone_Artist_2: Gambarlah berlian dengan sudut120 dan 60 derajat dan sisi
         sepanjang 150 pixel.
       Standalone_Artist_3: Bisakah anda menggambar hexagon ini dengan 100 pixel dan
@@ -974,6 +1057,8 @@ id-ID:
       courseD_maze_nestedLoops4: Bawa aku ke bunga matahari!
       courseD_maze_nestedLoops4_2018: Bawa aku ke bunga matahari!
       courseD_maze_nestedLoops4_2019: Bawa aku ke bunga matahari!
+      courseD_maze_ramp4_2019: 'Tanda jalan dan tuntun aku ke biji pohon ek '
+      courseD_maze_ramp5c_2019: Bantu Scrat mencapai biji pohon ek.
       courseE_bee_functions2: "Fungsi adalah blok kode yang melakukan suatu tugas.
         \ \\\\ r \n\\\\ r \nGunakan `mendapatkan 2 nectar` fungsi untuk mengumpulkan
         nektar dari bunga masing-masing."

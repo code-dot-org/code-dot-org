@@ -3318,6 +3318,14 @@ fr:
           stages:
             Number Systems:
               name: Systèmes de numération
+            Sending Binary Messages:
+              name: Envoyer des Messages Binaires
+            Sending Binary Messages with the Internet Simulator:
+              name: Envoyer des Messages Binaires avec le Simulateur d'Internet
+            Intellectual Property:
+              name: Propriété intellectuelle
+            Binary Numbers:
+              name: Nombres binaires
         time4csdemo:
           stages:
             Crowdsourcing:
@@ -3409,6 +3417,8 @@ fr:
                 design.\r\n"
             Intellectual Property:
               name: Propriété intellectuelle
+            CSS Classes:
+              name: Classes CSS
         csd3-pilot:
           description_short: Programmation
           stages:
@@ -3439,3 +3449,19 @@ fr:
               name: Vitesse
             Functions:
               name: fonctions
+            Shapes and Parameters:
+              name: Formes et paramètres
+            Random Numbers:
+              name: Nombres aléatoires
+            Sprite Properties:
+              name: Propriétés du sprite
+        csl-vn:
+          stages:
+            Loops in Ice Age:
+              name: Boucles dans l'Âge de Glace
+        peru-2019:
+          stages:
+            Introduction:
+              name: Introduction
+            Nested Loops:
+              name: Boucles imbriquées

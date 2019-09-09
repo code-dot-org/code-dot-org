@@ -694,20 +694,10 @@ it:
         text: "{SPRITE} cliccato"
       gamelab_comment:
         text: 'commento: {COMMENT}'
-      gamelab_console.log:
-        text: messaggio di log {MESSAGE}
       gamelab_createNewSprite:
         text: "crea un nuovo personaggio\n chiamato {NAME} \n con il costume {COSTUME} \n alla posizione {LOCATION}"
-      gamelab_debugSprite:
-        text: debug {SPRITE} {VAL}
-        options:
-          VAL:
-            'true': vero
-            'false': falso
       gamelab_destroy:
         text: elimina {THIS}
-      gamelab_displace:
-        text: "{THIS} impedisce a {SPRITE} di muoversi"
       gamelab_draggable:
         text: trascinabile
       gamelab_edgesDisplace:
@@ -836,11 +826,16 @@ it:
           IMG:
             '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': grotta
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': città
+            '"https://studio.code.org/blockly/media/skins/studio/background.png"': corte
             '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': deserto
+            '"https://studio.code.org/blockly/media/skins/studio/background_space.png"': galassia
             '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': griglia
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': arcobaleno
+            '"https://studio.code.org/blockly/media/skins/studio/background_scifi.png"': sci-fi
+            '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': stelle
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': sottomarino
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': inverno
+            undefined: nessuno
       gamelab_setProp:
         text: imposta la {PROPERTY} di {SPRITE} a {VAL}
         options:
@@ -850,7 +845,6 @@ it:
             '"x"': posizione x
             '"y"': posizione y
             '"direction"': direzione del movimento
-            '"tint"': tonalità
       gamelab_setSizes:
         text: imposta {SPRITE} {PROPERTY} al {N}%
         options:
@@ -860,6 +854,13 @@ it:
             '"height"': altezza
       gamelab_setTint:
         text: colora {THIS} di {COLOR}
+      gamelab_setupSim:
+        text: |-
+          imposta simolazione con
+          {SPRITE1N}{SPRITE1COSTUME}velocità{SPRITE1SPEED}
+          {SPRITE2N}{SPRITE2COSTUME}velocità{SPRITE2SPEED}
+          raccolta
+          {SPRITE3N}{SPRITE3COSTUME}
       gamelab_showTitleScreen:
         text: mostra schermata introduttiva {BREAK} titolo {TITLE} testo {SUBTITLE}
       gamelab_spriteClicked:
@@ -891,20 +892,8 @@ it:
             '"d"': d
       gamelab_whenLeftArrow:
         text: quando viene premuta la freccia a sinistra
-      gamelab_whenPressedAndReleased:
-        text: "quando viene premuto {DIR}\n{STATEMENT1} quando viene rilasciato \n{STATEMENT2}"
-        options:
-          DIR:
-            "'up'": in alto
-            "'down'": in basso
-            "'left'": a sinistra
-            "'right'": a destra
       gamelab_whenRightArrow:
         text: quando viene premuta la freccia a destra
-      gamelab_whenStartAndStopTouching:
-        text: |-
-          quando {SPRITE1} inizia a toccare {SPRITE2} {STATEMENT1}quando smettono di toccarsi
-          {STATEMENT2}
       gamelab_whenTouching:
         text: quando {SPRITE1} tocca {SPRITE2}
       gamelab_whenUpArrow:
@@ -1175,6 +1164,8 @@ it:
         text: gira a sinistra
       RyanLab_turnRight:
         text: gira a destra
+      SpriteLab2Beta_spriteSay:
+        text: personaggio {SPRITE} dice {TEXT} per {SECONDS} secondi
       Vector_createSpriteWith:
         text: |-
           creare personaggio
@@ -1200,6 +1191,10 @@ it:
         options:
           PROPERTY:
             "'shapeColor'": colore
+      aalab_addBehaviorForDuration:
+        text: personaggio aalab {SPRITE} inizia {BEHAVIOR} per {SECONDS} secondi
+      aalab_addBehaviorSimpleFlexible:
+        text: personaggio aalab {SPRITE} inizia {BEHAVIOR}
       aalab_addBehaviorUntilBoolean:
         text: il personaggio {SPRITE} inizia {BEHAVIOR} fino a che {CONDITION}
       aalab_addToSpriteGroup:
@@ -1227,10 +1222,14 @@ it:
           CONDITION:
             '"when"': quando
             '"while"': mentre
+      aalab_createNewSprite:
+        text: "aalab fa un nuovo personaggio \n chiamato {NAME} \n con costume {COSTUME} \n a {LOCATION}"
       aalab_createNewSpriteAdvanced:
         text: "crea un nuovo personaggio chiamato {NAME} \n con il costume {COSTUME} \n alla posizione {LOCATION}"
       aalab_createNewSpriteAnon:
         text: crea un nuovo personaggio {ANIMATION_NAME} alla posizione {LOCATION}
+      aalab_createNewSpriteAnonReturn:
+        text: aalab fa nuova {ANIMATION_NAME} personaggio a {LOCATION}
       aalab_createPropertyGroup:
         text: crea un nuovo gruppo di personaggi chiamato {VAR} tutto composto da {COSTUME}
       aalab_createSpriteGroup:
@@ -1257,15 +1256,26 @@ it:
             '"left"': a sinistra
             '"right"': a destra
             '"space"': spazio
+      aalab_locationOf:
+        text: posizione aalab di {SPRITE}
       aalab_location_picker:
         text: "{LOCATION}"
+      aalab_moveForward:
+        text: sposta aalab {SPRITE} {DISTANCE} pixel via
       aalab_moveInDirection:
+        text: sposta aalab {SPRITE} {DISTANCE} pixel {DIRECTION}
         options:
           DIRECTION:
             '"North"': Nord
             '"East"': Est
             '"South"': Sud
             '"West"': Ovest
+      aalab_moveToward:
+        text: aalab sposta {SPRITE} distanza {DISTANCE} verso {TARGET}
+      aalab_nameStringSay:
+        text: "{NAMESTRING} dice {MESSAGE}"
+      aalab_prompt:
+        text: chiedi domanda {MESSAGE}
       aalab_randomLocation:
         text: posizione casuale
       aalab_removeOneAndAll:
@@ -1275,11 +1285,15 @@ it:
           BG:
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': città
       aalab_setCollidable:
+        text: aalab imposta {SPRITE} collida a {VAL}
         options:
           VAL:
             '"true"': vero
             '"false"': falso
+      aalab_setDirection:
+        text: aalab imposta {SPRITE} direzione movimento {DIRECTION}
       aalab_setProp:
+        text: aalab imposta {SPRITE} {PROPERTY} a {VAL}
         options:
           PROPERTY:
             '"scale"': dimensione
@@ -1288,11 +1302,26 @@ it:
             '"y"': posizione y
             '"direction"': direzione del movimento
             '"tint"': tonalità
+      aalab_setSpriteVariable:
+        text: aalab imposta {VARIABLE} a {SPRITE}
       aalab_showCustomText:
+        text: mostra testo {TEXT}posizione{LOCATION}dimensione{SIZE}colore{COLOR}durata{DURATION}
         options:
           DURATION:
+            '"1"': 1 secondo
+            '"2"': 2 secondi
+            '"3"': 3 secondi
+            '"4"': 4 secondi
+            '"5"': 5 secondi
             '"0"': per sempre
+      aalab_showSpriteLabel:
+        text: mostra etichetta{TEXT} {LOCATION} personaggio{SPRITE}
+      aalab_speakerSaysConsole:
+        text: "{SPRITE} dice {MESSAGE}"
+      aalab_spriteSay:
+        text: personaggio {SPRITE} dice {TEXT} per {SECONDS} secondi
       aalab_toggleHideCustomText:
+        text: "{OPTION} testo personalizzato"
         options:
           OPTION:
             '"show"': mostra

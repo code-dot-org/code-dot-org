@@ -510,6 +510,7 @@ pl:
         csd_applab_parameters: Funkcje z parametrami
         csd_problem_solving_process: Proces Rozwiązywania Problemów
         CSF_SpriteLab_SpritesInAction_v2: Duszki w akcji
+        csd_debugging: Debugowanie
     callout:
       text:
         drag_blocks: Przeciągnij blok "idź" i przypnij go poniżej innego bloku

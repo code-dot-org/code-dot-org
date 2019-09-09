@@ -1343,6 +1343,7 @@
   sphero_beyond_longdescription: "不管你是教師還是家長，SPRK 教學內容會給孩子一個有趣的機器人編程速成課程，並同時磨鍊孩子在數學和科學上的技能。"
   compatibility_hide_this_warning: "隱藏這個警告"
   compatibility_unsupported_browser: "您的瀏覽器不支援。請升級您的瀏覽器到<a href='%{supported_browsers_url}', target='_blank'>支援的瀏覽器版本之一</a>。您還是可以瀏覽此頁面，但有些有功能是會無法正常運作。"
+  compatibility_unsupported_browser_markdown: "您的瀏覽器不支援。請升級您的瀏覽器到 [one of our supported browsers](%{supported_browsers_url})。您還是可以瀏覽此頁面，但有些有功能是會無法正常運作。"
   starwars_shortcode: "星號"
   mc_shortcode: "mc"
   frozen_shortcode: "frzn"
@@ -1385,7 +1386,7 @@
   header_about: "關於"
   header_teacher_community: "教師社群"
   header_help_support: '幫助與支援'
-  header_report_bug: "回報 Bug"
+  header_report_bug: "回報問題"
   header_tutorials: "所有教程"
   header_documentation: "說明文件"
   user_header_label: "嗨，%{username}"

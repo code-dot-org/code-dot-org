@@ -6,9 +6,12 @@ it:
           assignment_family_title: Princìpi dell'Informatica
           title: Princìpi dell'Informatica (scuole superiori)
           version_title: "Superiori"
+          description_student: In autunno 2016, il College Board ha lanciato il suo più nuovo corso AP®, i Principi di Informatica AP. Il corso introduce gli studenti ai concetti fondamentali di informatica e li sfida ad esplorare come l'informatica e la tecnologia possono avere impatto sul mondo. Il Programma AP ha progettato i Principi di Informatica AP con lo scopo di creare leader nei campi informatici ed attrarre ed ingaggiare chi tradizionalmente sottorappresentava con strumenti di informatica essenziale e opportunità multidisciplinari.
+          description_teacher: In autunno 2016, il College Board ha lanciato il suo più nuovo corso AP®, i Principi di Informatica AP. Il corso introduce gli studenti ai concetti fondamentali di informatica e li sfida ad esplorare come l'informatica e la tecnologia possono avere impatto sul mondo. Il Programma AP ha progettato i Principi di Informatica AP con lo scopo di creare leader nei campi informatici ed attrarre ed ingaggiare chi tradizionalmente sottorappresentava con strumenti di informatica essenziale e opportunità multidisciplinari.
           description_short: Impara i concetti fondamentali dell'informatica.
         csd-2017:
           assignment_family_title: Alla scoperta dell'Informatica
+          title: Scoperte Informatica ('17-'18)
           version_title: "Superiori"
           description_student: Alla Scoperta dell'Informatica è un corso introduttivo all'informatica che conduce gli studenti alla realizzazione di autentiche creazioni e che introduce l'uso dell'informatica come strumento per la creatività, la comunicazione, il problem-solving ed il divertimento.
           description_teacher: Alla Scoperta dell'Informatica è un corso introduttivo all'informatica che conduce gli studenti alla realizzazione di autentiche creazioni e che introduce l'uso dell'informatica come strumento per la creatività, la comunicazione, il problem-solving ed il divertimento.
@@ -20,15 +23,27 @@ it:
           description_teacher: Questo è un corso per globale e ha una corposa descrizione per gli insegnanti
         csd-2018:
           assignment_family_title: Alla scoperta dell'Informatica
+          title: Scoperte Informatica ('18-'19)
+          version_title: "'18-'19"
           description_short: Corso introduttivo all'informatica che conduce gli studenti alla realizzazione di autentiche creazioni.
           description_student: Alla Scoperta dell'Informatica è un corso introduttivo all'informatica che conduce gli studenti alla realizzazione di autentiche creazioni e che introduce l'uso dell'informatica come strumento per la creatività, la comunicazione, il problem-solving ed il divertimento.
           description_teacher: Alla Scoperta dell'Informatica è un corso introduttivo all'informatica che conduce gli studenti alla realizzazione di autentiche creazioni e che introduce l'uso dell'informatica come strumento per la creatività, la comunicazione, il problem-solving ed il divertimento.
         csp-2018:
           assignment_family_title: Princìpi dell'Informatica
+          title: Principi Informatica ('18-'19)
+          version_title: "'18-'19"
           description_short: Impara i concetti fondamentali dell'informatica.
+          description_student: In autunno 2016, il College Board ha lanciato il suo più nuovo corso AP®, i Principi di Informatica AP. Il corso introduce gli studenti ai concetti fondamentali di informatica e li sfida ad esplorare come l'informatica e la tecnologia possono avere impatto sul mondo. Il Programma AP ha progettato i Principi di Informatica AP con lo scopo di creare leader nei campi informatici ed attrarre ed ingaggiare chi tradizionalmente sottorappresentava con strumenti di informatica essenziale e opportunità multidisciplinari.
+          description_teacher: In autunno 2016, il College Board ha lanciato il suo più nuovo corso AP®, i Principi di Informatica AP. Il corso introduce gli studenti ai concetti fondamentali di informatica e li sfida ad esplorare come l'informatica e la tecnologia possono avere impatto sul mondo. Il Programma AP ha progettato i Principi di Informatica AP con lo scopo di creare leader nei campi informatici ed attrarre ed ingaggiare chi tradizionalmente sottorappresentava con strumenti di informatica essenziale e opportunità multidisciplinari.
         csp-2019:
+          title: Principi di Informatica ('19-'20)
+          version_title: "'19-'20"
           description_short: Impara i concetti fondamentali dell'informatica.
+          description_student: In autunno 2016, il College Board ha lanciato il suo più nuovo corso AP®, i Principi di Informatica AP. Il corso introduce gli studenti ai concetti fondamentali di informatica e li sfida ad esplorare come l'informatica e la tecnologia possono avere impatto sul mondo. Il Programma AP ha progettato i Principi di Informatica AP con lo scopo di creare leader nei campi informatici ed attrarre ed ingaggiare chi tradizionalmente sottorappresentava con strumenti di informatica essenziale e opportunità multidisciplinari.
+          description_teacher: In autunno 2016, il College Board ha lanciato il suo più nuovo corso AP®, i Principi di Informatica AP. Il corso introduce gli studenti ai concetti fondamentali di informatica e li sfida ad esplorare come l'informatica e la tecnologia possono avere impatto sul mondo. Il Programma AP ha progettato i Principi di Informatica AP con lo scopo di creare leader nei campi informatici ed attrarre ed ingaggiare chi tradizionalmente sottorappresentava con strumenti di informatica essenziale e opportunità multidisciplinari.
         csd-2019:
+          title: Scoperte Informatica ('19-'20)
+          version_title: "'19-'20"
           description_short: Corso introduttivo all'informatica che conduce gli studenti alla realizzazione di autentiche creazioni.
           description_student: Alla Scoperta dell'Informatica è un corso introduttivo all'informatica che conduce gli studenti alla realizzazione di autentiche creazioni e che introduce l'uso dell'informatica come strumento per la creatività, la comunicazione, il problem-solving ed il divertimento.
           description_teacher: Alla Scoperta dell'Informatica è un corso introduttivo all'informatica che conduce gli studenti alla realizzazione di autentiche creazioni e che introduce l'uso dell'informatica come strumento per la creatività, la comunicazione, il problem-solving ed il divertimento.

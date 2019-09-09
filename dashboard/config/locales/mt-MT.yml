@@ -21,6 +21,7 @@ mt:
         edit_header: Editja id-dettalji tal-Account
         error:
           future: ma tistax tkun fil-futur
+  beta: verzjoni beta
   hello: Haw Lilly
   welcome_back: Merħba lura, %{name}
   unsubmit: Unsubmit

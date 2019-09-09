@@ -5,6 +5,7 @@ import color from '@cdo/apps/util/color';
 import shapes from './shapes';
 import {UnlocalizedTimeAgo as TimeAgo} from '@cdo/apps/templates/TimeAgo';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 const styles = {
   main: {
@@ -20,35 +21,54 @@ const styles = {
   },
   lessonDetails: {
     width: '75%',
-    marginLeft: 15,
-    marginTop: 15,
-    marginBottom: 5
+    marginLeft: 20,
+    marginTop: 8,
+    marginBottom: 4
   },
   lessonLevel: {
-    fontSize: 16,
-    marginBottom: 8,
-    color: color.teal
+    fontSize: 18,
+    lineHeight: '24px',
+    marginBottom: 4,
+    color: color.teal,
+    fontFamily: '"Gotham 5r", sans-serif'
   },
   unit: {
-    color: color.teal
-  },
-  label: {
-    fontFamily: '"Gotham 5r", sans-serif',
-    marginRight: 5,
-    marginLeft: 10
+    color: color.dark_charcoal,
+    fontSize: 14,
+    lineHeight: '17px',
+    marginBottom: 8
   },
   time: {
-    marginTop: 15,
-    fontStyle: 'italic',
+    marginTop: 8,
+    fontSize: 14,
+    lineHeight: '17px',
     color: color.light_gray,
-    float: 'left'
+    float: 'right',
+    textAlign: 'right',
+    marginRight: 20,
+    width: 200
   },
   comment: {
-    fontStyle: 'italic',
-    color: color.charcoal,
-    marginLeft: 25,
-    marginRight: 25,
-    fontSize: 14
+    color: color.dark_charcoal,
+    marginLeft: 20,
+    marginRight: 20,
+    marginBottom: 8,
+    fontSize: 14,
+    lineHeight: '21px',
+    fontFamily: '"Gotham 5r", sans-serif'
+  },
+  rubricBox: {
+    color: color.dark_charcoal,
+    marginLeft: 20,
+    marginRight: 20,
+    marginBottom: 8,
+    fontSize: 14,
+    lineHeight: '21px',
+    width: '100%'
+  },
+  rubricPerformance: {
+    fontFamily: '"Gotham 5r", sans-serif',
+    marginLeft: 5
   },
   icon: {
     fontSize: 18
@@ -71,7 +91,7 @@ const measureElement = element => {
   };
 };
 
-const initialCommentHeight = 60;
+const initialCommentHeight = 40;
 
 export default class LevelFeedbackEntry extends Component {
   state = {
@@ -83,6 +103,16 @@ export default class LevelFeedbackEntry extends Component {
 
   expand = () => {
     this.setState({expanded: true});
+    if (this.longComment()) {
+      firehoseClient.putRecord(
+        {
+          study: 'all-feedback',
+          event: 'expand-feedback',
+          data_json: {feedback_id: this.props.feedback.id}
+        },
+        {includeUserId: true}
+      );
+    }
   };
 
   collapse = () => {
@@ -101,10 +131,10 @@ export default class LevelFeedbackEntry extends Component {
       seen_on_feedback_page_at,
       student_first_visited_at,
       lessonName,
+      lessonNum,
       levelNum,
       linkToLevel,
       unitName,
-      linkToUnit,
       created_at,
       comment,
       performance
@@ -112,20 +142,27 @@ export default class LevelFeedbackEntry extends Component {
 
     const seenByStudent = seen_on_feedback_page_at || student_first_visited_at;
 
-    // These heights ensure that up to two lines of the comment will be visible, and a 'sneak peak' of the third line for long comments.
-    const baseHeight = performance && comment.length > 2 ? 132 : 112;
+    const commentExists = comment.length > 2;
+
+    // These heights ensure that the initial line of the comment will be visible, and a 'sneak peak' of the second line for long comments.
+    var baseHeight;
+    switch (true) {
+      case commentExists && performance !== null:
+        baseHeight = 125;
+        break;
+      case commentExists || performance !== null:
+        baseHeight = 96;
+        break;
+      default:
+        baseHeight = 72;
+    }
+    // const baseHeight = performance && commentExists ? 132 : 112;
 
     const style = {
-      backgroundColor: seenByStudent ? color.lightest_teal : color.white,
+      backgroundColor: seenByStudent ? color.background_gray : color.white,
       height: this.state.expanded ? 'auto' : baseHeight,
       overflow: this.state.expanded ? 'none' : 'hidden',
       ...styles.main
-    };
-
-    const performanceStyle = {
-      width: '100%',
-      marginBottom: 5,
-      ...styles.comment
     };
 
     const rubricPerformance = {
@@ -139,54 +176,50 @@ export default class LevelFeedbackEntry extends Component {
     const showDownCaret = this.longComment() && this.state.expanded;
 
     return (
-      <div style={style}>
+      <div
+        style={style}
+        onClick={this.state.expanded ? this.collapse : this.expand}
+      >
         <div style={styles.lessonDetails}>
           <a href={linkToLevel}>
             <div style={styles.lessonLevel}>
-              <span style={styles.label}>
-                {i18n.feedbackNotificationLesson()}
-              </span>
-              <span>{lessonName}</span>
-              <span style={styles.label}>
-                {i18n.feedbackNotificationLevel()}
-              </span>
-              <span>{levelNum}</span>
+              {i18n.feedbackNotificationLesson({
+                lessonNum,
+                lessonName,
+                levelNum
+              })}
             </div>
           </a>
-          <a href={linkToUnit}>
-            <div style={styles.unit}>
-              <span style={styles.label}>
-                {i18n.feedbackNotificationUnit()}
-              </span>
-              <span>{unitName}</span>
-            </div>
-          </a>
+          <div style={styles.unit}>
+            {i18n.feedbackNotificationUnit({unitName})}
+          </div>
         </div>
         <TimeAgo style={styles.time} dateString={created_at} />
-        <div style={performanceStyle}>{rubricPerformance[performance]}</div>
+        {performance ? (
+          <div style={styles.rubricBox}>
+            <span>{i18n.feedbackRubricEvaluation()}</span>
+            <span style={styles.rubricPerformance}>
+              {rubricPerformance[performance]}
+            </span>
+          </div>
+        ) : null}
         {showRightCaret ? (
           <span style={styles.iconBox}>
-            <FontAwesome
-              style={styles.icon}
-              icon="caret-right"
-              onClick={this.expand}
-            />
+            <FontAwesome style={styles.icon} icon="caret-right" />
           </span>
         ) : null}
         {showDownCaret ? (
           <span style={styles.iconBox}>
-            <FontAwesome
-              style={styles.icon}
-              icon="caret-down"
-              onClick={this.collapse}
-            />
+            <FontAwesome style={styles.icon} icon="caret-down" />
           </span>
         ) : null}
-        <span style={styles.commentBox}>
-          <div ref={r => (this.comment = r)} style={styles.comment}>
-            {comment}
-          </div>
-        </span>
+        {commentExists ? (
+          <span style={styles.commentBox}>
+            <div ref={r => (this.comment = r)} style={styles.comment}>
+              &quot;{comment}&quot;
+            </div>
+          </span>
+        ) : null}
       </div>
     );
   }

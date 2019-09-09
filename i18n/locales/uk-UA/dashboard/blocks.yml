@@ -479,6 +479,9 @@ uk:
             '"right"': праворуч
             '"space"': космос
             '"x"': x
+            '"0"': '0'
+            '"1"': '1'
+            '"2"': '2'
       Dancelab_whenPeak:
         text: коли досягаємо кінця {RANGE}
         options:
@@ -504,11 +507,6 @@ uk:
             '"while"': поки
       gamelab_clickedOn:
         text: коли клацнули {SPRITE}
-      gamelab_debugSprite:
-        options:
-          VAL:
-            'true': Істина
-            'false': Хибність
       gamelab_getProp:
         options:
           PROPERTY:
@@ -561,7 +559,6 @@ uk:
             '"x"': позиція по осі x
             '"y"': позиція по осі y
             '"direction"': напрямок руху
-            '"tint"': відтінок
       gamelab_setSizes:
         options:
           PROPERTY:
@@ -587,13 +584,6 @@ uk:
             '"left"': ліворуч
             '"right"': праворуч
             '"space"': космос
-      gamelab_whenPressedAndReleased:
-        options:
-          DIR:
-            "'up'": вгору
-            "'down'": вниз
-            "'left'": ліворуч
-            "'right'": праворуч
       gamelab_whileKey:
         options:
           KEY:

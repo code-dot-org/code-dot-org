@@ -24,11 +24,16 @@ export default class AssetRow extends React.Component {
     timestamp: PropTypes.string,
     type: PropTypes.oneOf(['image', 'audio', 'video', 'pdf', 'doc']).isRequired,
     size: PropTypes.number,
-    useFilesApi: PropTypes.bool.isRequired,
+    // Declare a specific API to use. If undefined, useFilesApi prop will decide the API.
+    api: PropTypes.object,
+    // Uses files API if true; uses assets API if false.
+    useFilesApi: PropTypes.bool,
     onChoose: PropTypes.func,
     onDelete: PropTypes.func.isRequired,
     soundPlayer: PropTypes.object,
     projectId: PropTypes.string,
+    levelName: PropTypes.string,
+    hideDelete: PropTypes.bool,
 
     // For logging purposes
     imagePicker: PropTypes.bool, // identifies if displayed by 'Manage Assets' flow
@@ -39,6 +44,15 @@ export default class AssetRow extends React.Component {
     action: 'normal',
     actionText: '',
     attemptedUsedDelete: false
+  };
+
+  api = () => {
+    const {api, useFilesApi} = this.props;
+    if (api) {
+      return api;
+    } else {
+      return useFilesApi ? filesApi : assetsApi;
+    }
   };
 
   /**
@@ -75,8 +89,7 @@ export default class AssetRow extends React.Component {
   handleDelete = () => {
     this.setState({action: 'deleting', actionText: ''});
 
-    let api = this.props.useFilesApi ? filesApi : assetsApi;
-    api.deleteFile(this.props.name, this.props.onDelete, () => {
+    this.api().deleteFile(this.props.name, this.props.onDelete, () => {
       this.setState({
         action: 'confirming delete',
         actionText: i18n.errorDeleting()
@@ -126,13 +139,15 @@ export default class AssetRow extends React.Component {
         actions = (
           <td width="250" style={{textAlign: 'right'}}>
             {flex}
-            <button
-              type="button"
-              className={usage > 0 ? '' : 'btn-danger'}
-              onClick={usage > 0 ? this.attemptBadDelete : this.confirmDelete}
-            >
-              <i className="fa fa-trash-o" />
-            </button>
+            {!this.props.hideDelete && (
+              <button
+                type="button"
+                className={usage > 0 ? '' : 'btn-danger'}
+                onClick={usage > 0 ? this.attemptBadDelete : this.confirmDelete}
+              >
+                <i className="fa fa-trash-o" />
+              </button>
+            )}
 
             {this.state.attemptedUsedDelete && (
               <div style={styles.deleteWarning}>
@@ -184,8 +199,9 @@ export default class AssetRow extends React.Component {
             type={this.props.type}
             name={this.props.name}
             timestamp={this.props.timestamp}
-            useFilesApi={this.props.useFilesApi}
+            api={this.api()}
             soundPlayer={this.props.soundPlayer}
+            levelName={this.props.levelName}
           />
         </td>
         <td>{this.props.name}</td>

@@ -43,6 +43,7 @@ hu:
           felhasználó fiókod befejezéséhez <strong>%{provider}</strong><strong>%{email}</strong>.
         error:
           future: nem lehet a jövőben
+  beta: béta
   hello: Helló világ
   welcome_back: Üdv újra, %{name}
   your_professional_learning_plan: Saját Profi Tanulmányi Terv
@@ -493,12 +494,6 @@ hu:
     choose_next_course: Próbáld ki a Kód Stúdiót, válassz egyet az alábbi tanfolyamok
       közül
     print_certificate: Oklevél nyomtatása
-    announcement_title: Közlemények
-    announcement_learn_more_button: Tudj meg többet
-    announcement_try_now_button: Próbálja ki most
-    announcement_watch_video_button: Nézd meg a videót
-    announcement_petition_button: Add meg a nevedet
-    announcement_go_beyond_button: Menj tovább
   share:
     title: Tanulj a Kód Stúdióban
     description: Mindenki megismerkedhet a számítógép-tudománnyal. Készíts játékokat,

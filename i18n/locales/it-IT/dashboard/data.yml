@@ -386,6 +386,7 @@ it:
         csd_concept_memory_cpu_input_output: 'Come Funzionano i Computer: Memoria, CPU, Ingressi e Uscite'
         csd_concept_hardware_software: 'Come Funzionano i Computer: Hardware e Software'
         csd_concept_search: Come Funziona la Ricerca
+        csd_external_amazon_data: Come I Big Data Sono Usati Nel Sistema Di Raccomandazione Di Amazon Per Cambiare Le Nostre Vite
         csd_external_netflix_data: In che modo Netflix crea show televisivi e suggerimenti sui film?
         csd_external_waze_data: Perchè cosi tanti utenti sono ossesionati con Waze?
         csd_gamelab_animation_tab: La scheda dell'animazione
@@ -511,14 +512,28 @@ it:
         c_and_c_great_to_create: È fantastico creare e comportarsi lealmente
         c_and_c_digital_sharing: Condivisione digitale
         teaching_csf_how_it_works: 'Introduzione ai corsi di fondamenti di informatica'
+        elem_pd_2: Informatica per Scuole Elementari - PD video 2/2
         what_is_cs: Cos'é l'informatica?
         repeat_block: Uso del blocco Ripeti
+        lesson_planning: Pianificazione Lezione
+        opd_closing: 'Insegnare i Fondamenti di CS: Chiusura & Passi Successivi'
+        why_unplugged_lessons: Essere "scollegato"
         writing_first_program: Scrivi il tuo primo programma per computer
+        conditionals_with_cards: Lezione Scollegata in Azione - Condizionali con Carte
+        songwriting_with_functions: Lezione Scollegata in Azione - Composizione di Canzoni con le Funzioni
         what_is_an_event: Cos'è un evento?
+        teaching_cs_pair_programming: 'Insegnare i Fondamenti di CS: Programmazione in Pari'
+        teaching_problem_solving: 'Insegnare i Fondamenti di CS: Insegnare la Risoluzione dei Problemi'
+        csd_applab_designmode: 'Scoperte CS: Sviluppo App - Modalità Progettazione'
         csd_pair_programming: Programmazione in coppia
+        csd_gamelab_functions: Chiamare e Definire Funzioni
         csd_applab_parameters: Funzioni con parametri
+        csd_applab_loops: Loop in Sviluppo App
         CSF_Going_Places_Safely: Il mio quartiere digitale
+        CSF_SpriteLab_Intro_v2: Introducendo lo Sviluppo Personaggi
+        CSF_Spritelab_MakeSprite_v2: Come fare un Personaggio
         CSF_SpriteLab_SpritesInAction_v2: Personaggi in azione
+        csd_debugging: Correzione errori (debugging)
     callout:
       text:
         drag_blocks: Prendi qui a sinistra il blocco "vai avanti" ed attaccalo sotto l'altro blocco qua sopra

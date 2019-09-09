@@ -115,11 +115,6 @@ ur:
           CONDITION:
             '"when"': کب
             '"while"': جب تک
-      gamelab_debugSprite:
-        options:
-          VAL:
-            'true': 'True'
-            'false': غلط
       gamelab_keyPressed:
         options:
           CONDITION:

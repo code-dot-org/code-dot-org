@@ -80,8 +80,8 @@ vi-VN:
         rương.
       CourseE_HOC 2018 Level_9b: Sử dụng san hô làm các điểm trung gian đường đi để
         đến được kho báu.
-      Crack Random Substitution: lời chỉ đẫn
-      Crack a Caesar Cipher: lời chỉ đẫn
+      Crack Random Substitution: Hướng dẫn
+      Crack a Caesar Cipher: Hướng dẫn
       Dance_Party_01: Kéo khối `make a new` vào trong không gian làm việc và kết nối
         nó với bên trong khối `setup`.
       Dance_Party_02: Làm nai sừng tấm bắt đầu động tác mới sau 4 nhịp!
@@ -358,12 +358,150 @@ vi-VN:
       course4_artist_fwp_challenge1: Thử chạy chương trình này, và tạo vài thay đổi
         để xem điều gì sẽ xảy ra. Bạn có thể tìm ra cách mà nó hoạt động? (Hoặc xóa
         nó và thay thế nó bằng một cái gì đó hoàn toàn khác)
+      courseA_artist_loops11: Hãy giúp tôi xây bậc cầu thang để tôi ngắm con tàu ra
+        khơi.
+      courseA_artist_loops11_2018: Hãy giúp tôi xây bậc cầu thang để tôi ngắm con
+        tàu ra khơi.
+      courseA_artist_loops11_2019: Hãy giúp tôi xây bậc cầu thang để tôi ngắm con
+        tàu ra khơi.
+      courseA_artist_loops12: Bạn hoạ sĩ này đã thấy cái gì đó thú vị ở xa, hãy thử
+        vẽ những gì bạn nghĩ anh ấy nhìn thấy.
+      courseA_artist_loops12_2018: Bạn hoạ sĩ này đã thấy cái gì đó thú vị ở xa, hãy
+        thử vẽ những gì bạn nghĩ anh ấy nhìn thấy.
+      courseA_artist_loops12_2019: Bạn hoạ sĩ này đã thấy cái gì đó thú vị ở xa, hãy
+        thử vẽ những gì bạn nghĩ anh ấy nhìn thấy.
+      courseA_artist_loops2: Hãy giúp hoạ sĩ vẽ đường này hai lần về phía trước.
+      courseA_artist_loops2_2018: Hãy giúp hoạ sĩ vẽ đường này hai lần về phía trước.
+      courseA_artist_loops2_2019: Hãy giúp hoạ sĩ vẽ đường này hai lần về phía trước.
+      courseA_artist_loops4: Hãy dùng khối `lặp lại` để vẽ dòng này năm lần nữa!
+      courseA_artist_loops4_2018: Hãy dùng khối `lặp lại` để vẽ dòng này năm lần nữa!
+      courseA_artist_loops4_2019: Hãy dùng khối `lặp lại` để vẽ dòng này năm lần nữa!
+      courseA_artist_loops5: Hãy vẽ đường thẳng dài bảy bước, đây sẽ là đường chân
+        trời của chúng ta.
+      courseA_artist_loops5_2018: Hãy vẽ đường thẳng dài bảy bước, đây sẽ là đường
+        chân trời của chúng ta.
+      courseA_artist_loops5_2019: Hãy vẽ đường thẳng dài bảy bước, đây sẽ là đường
+        chân trời của chúng ta.
+      courseA_artist_loops6: Hãy vẽ một ngọn đồi nhỏ ở phía sau.
+      courseA_artist_loops6_2018: Hãy vẽ một ngọn đồi nhỏ ở phía sau.
+      courseA_artist_loops6_2019: Hãy vẽ một ngọn đồi nhỏ ở phía sau.
+      courseA_artist_loops7: Hãy dùng khối `lặp lại` để tạo sóng.
+      courseA_artist_loops7_2018: Hãy dùng khối `lặp lại` để tạo sóng.
+      courseA_artist_loops7_2019: Hãy dùng khối `lặp lại` để tạo sóng.
+      courseA_artist_loops8: Chúng ta cần một cái thang lên tàu.
+      courseA_artist_loops8_2018: Chúng ta cần một cái thang lên tàu.
+      courseA_artist_loops8_2019: Chúng ta cần một cái thang lên tàu.
+      courseA_maze_ramp4a_2018: Bạn có thể tìm ra khối nào bạn cần thêm vào dưới cùng
+        của các khối khác để hoàn thành chương trình này không?
+      courseA_maze_ramp4a_2019: Bạn có thể tìm ra khối nào bạn cần thêm vào dưới cùng
+        của các khối khác để hoàn thành chương trình này không?
+      courseA_maze_seq13: Đến chỗ chú lợn đó bằng bất cứ cách nào mà bạn có thể!
+      courseA_maze_seq13_2018: Đến chỗ chú lợn đó bằng bất cứ cách nào mà bạn có thể!
+      courseA_maze_seq13_2019: Đến chỗ chú lợn đó bằng bất cứ cách nào mà bạn có thể!
+      courseA_maze_seq5_2018: Hãy thử giải câu đố này.
+      courseA_maze_seq5_2019: Hãy thử giải câu đố này.
+      courseA_maze_seq6: Đi về một hướng, sau đó đổi sang hướng khác để chú chim đến
+        được chỗ chú lợn!
+      courseA_maze_seq6_2018: Đi về một hướng, sau đó đổi sang hướng khác để chú chim
+        đến được chỗ chú lợn!
+      courseA_maze_seq6_2019: Đi về một hướng, sau đó đổi sang hướng khác để chú chim
+        đến được chỗ chú lợn!
+      courseA_maze_seq8: Bạn hãy giải câu đố này và đưa chú chim đến chỗ chú lợn!
+      courseA_maze_seq8_2018: Bạn hãy giải câu đố này và đưa chú chim đến chỗ chú
+        lợn!
+      courseA_maze_seq8_2019: Bạn hãy giải câu đố này và đưa chú chim đến chỗ chú
+        lợn!
+      courseA_playLab_events2: Chú chó Jorge muốn nói “Xin chào”. Bạn có thể giúp
+        chú không?
+      courseA_playLab_events2_2018: Chú chó Jorge muốn nói “Xin chào”. Bạn có thể
+        giúp chú không?
+      courseA_playLab_events3: Ghép khối `di chuyển trái` vào dưới khối `khi nào bên
+        trái`.
+      courseA_playLab_events3_2018: Ghép khối `di chuyển trái` vào dưới khối `khi
+        nào bên trái`.
+      courseA_playLab_events3_2019: Ghép khối `di chuyển trái` vào dưới khối `khi
+        nào bên trái`.
+      courseA_playLab_events6: Hãy làm cho trò chơi thú vị hơn bằng cách thay đổi
+        hình nền và chơi một âm thanh ngẫu nhiên khi click vào Jorge.
+      courseA_playLab_events6_2018: Hãy làm cho trò chơi thú vị hơn bằng cách thay
+        đổi hình nền và chơi một âm thanh ngẫu nhiên khi click vào Jorge.
+      courseA_playLab_events6_2019: Hãy làm cho trò chơi thú vị hơn bằng cách thay
+        đổi hình nền và chơi một âm thanh ngẫu nhiên khi click vào Jorge.
+      courseB_Scrat_ramp4a_2018: Bạn có thể tìm ra khối nào bạn cần thêm vào dưới
+        cùng của các khối khác để hoàn thành chương trình này không?
+      courseB_Scrat_ramp4a_2019: Bạn có thể tìm ra khối nào bạn cần thêm vào dưới
+        cùng của các khối khác để hoàn thành chương trình này không?
+      courseB_Scrat_ramp5a_2018: Hãy thử tạo một chương trình hoàn toàn theo ý của
+        bạn!
+      courseB_Scrat_ramp5a_2019: Hãy thử tạo một chương trình hoàn toàn theo ý của
+        bạn!
+      courseB_iceage_loops10: Hãy giúp Scrat đi hết đường đến tận chỗ hạt Sồi nhé!
+      courseB_iceage_loops10_2019: Hãy giúp Scrat đi hết đường đến tận chỗ hạt Sồi
+        nhé!
+      courseB_iceage_loops11: Hãy giúp Scrat đến chỗ hạt Sồi nhé!
+      courseB_iceage_loops11_2019: Hãy giúp Scrat đến chỗ hạt Sồi nhé!
+      courseB_iceage_loops12: Hãy đến chỗ hạt Sồi đó bằng bất cứ cách nào mà bạn có
+        thể!
+      courseB_iceage_loops12_2019: Hãy đến chỗ hạt Sồi đó bằng bất cứ cách nào mà
+        bạn có thể!
+      courseB_iceage_loops4: Hãy thêm một khối nữa để đưa Scrat đi đến tới tận chỗ
+        hạt Sồi!
+      courseB_iceage_loops4_2019: Hãy thêm một khối nữa để đưa Scrat đi đến tới tận
+        chỗ hạt Sồi!
+      courseB_iceage_loops6: Bạn có thể thêm một vòng lặp để đến được chỗ hạt Sồi
+        không?
+      courseB_iceage_loops6_2019: Bạn có thể thêm một vòng lặp để đến được chỗ hạt
+        Sồi không?
+      courseB_iceage_loops7: 'Scrat thật sự rất muốn hạt Sồi đó! '
+      courseB_iceage_loops7_2019: 'Scrat thật sự rất muốn hạt Sồi đó! '
+      courseB_iceage_loops8: 'Bạn có thể sửa phần code này không? '
+      courseB_iceage_loops8_2019: 'Bạn có thể sửa phần code này không? '
+      courseB_iceage_loops9: Hạt Sồi thật là xa quá đi! Bạn có thể dùng vòng lặp để
+        giúp Scrat đến đó không?
+      courseB_iceage_loops9_2019: Hạt Sồi thật là xa quá đi! Bạn có thể dùng vòng
+        lặp để giúp Scrat đến đó không?
+      courseB_maze_seq6: Đi về một hướng, sau đó đổi sang hướng khác để chú chim đến
+        được chỗ chú lợn!
+      courseB_playlab_events5: Thêm khối sự kiện để chàng kỵ sĩ di chuyển khi ấn phím
+        mũi tên.
+      courseB_starWars_prog1: '"Hãy đi lấy mảnh kim loại nào, BB-8!"'
+      courseB_starWars_prog1_2018: '"Hãy đi lấy mảnh kim loại nào, BB-8!"'
+      courseB_starWars_prog1_2019: '"Hãy đi lấy mảnh kim loại nào, BB-8!"'
+      courseB_starWars_prog2: Hãy lấy hết các mảnh kim loại.
+      courseB_starWars_prog2_2018: Hãy lấy hết các mảnh kim loại.
+      courseB_starWars_prog2_2019: Hãy lấy hết các mảnh kim loại.
       courseC_artist_prog5: 'Căn nhà này cần một mái nhà! Vẽ hình tam giác.  Gợi ý:
         Cả 3 cạnh đều dài như nhau.'
       courseC_artist_prog5_2018: 'Căn nhà này cần một mái nhà! Vẽ hình tam giác.  Gợi
         ý: Cả 3 cạnh đều dài như nhau.'
       courseC_artist_prog5_2019: 'Căn nhà này cần một mái nhà! Vẽ hình tam giác.  Gợi
         ý: Cả 3 cạnh đều dài như nhau.'
+      courseD_iceage_loops10: Hãy giúp Scrat đi hết đường đến tận chỗ hạt Sồi nhé!
+      courseD_iceage_loops10_2019: Hãy giúp Scrat đi hết đường đến tận chỗ hạt Sồi
+        nhé!
+      courseD_iceage_loops11: Hãy giúp Scrat đến chỗ hạt Sồi nhé!
+      courseD_iceage_loops11_2019: Hãy giúp Scrat đến chỗ hạt Sồi nhé!
+      courseD_iceage_loops12: Hãy đến chỗ hạt Sồi đó bằng bất cứ cách nào mà bạn có
+        thể!
+      courseD_iceage_loops12_2019: Hãy đến chỗ hạt Sồi đó bằng bất cứ cách nào mà
+        bạn có thể!
+      courseD_iceage_loops4: Hãy thêm một khối nữa để đưa Scrat đi đến tới tận chỗ
+        hạt Sồi!
+      courseD_iceage_loops4_2019: Hãy thêm một khối nữa để đưa Scrat đi đến tới tận
+        chỗ hạt Sồi!
+      courseD_iceage_loops6: Bạn có thể thêm một vòng lặp để đến được chỗ hạt Sồi
+        không?
+      courseD_iceage_loops6_2019: Bạn có thể thêm một vòng lặp để đến được chỗ hạt
+        Sồi không?
+      courseD_iceage_loops7: 'Scrat thật sự rất muốn hạt Sồi đó! '
+      courseD_iceage_loops7_2019: 'Scrat thật sự rất muốn hạt Sồi đó! '
+      courseD_iceage_loops8: 'Bạn có thể sửa phần code này không? '
+      courseD_iceage_loops8_2019: 'Bạn có thể sửa phần code này không? '
+      courseD_iceage_loops9: Hạt Sồi thật là xa quá đi! Bạn có thể dùng vòng lặp để
+        giúp Scrat đến đó không?
+      courseD_iceage_loops9_2019: Hạt Sồi thật là xa quá đi! Bạn có thể dùng vòng
+        lặp để giúp Scrat đến đó không?
+      courseD_scrat_ramp7: Hãy giúp Scrat đến chỗ hạt Sồi nhé!
       courseE_artist_functions1: 'Xin chào. Tôi-nghệ sĩ zombie. Tôi thích vẽ! Giúp
         tôi vẽ kính vuông.  Gợi ý: các cầu nối giữa các kính là 25 pixels ngắn hơn
         so với độ dài cạnh vuông.'

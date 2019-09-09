@@ -109,6 +109,11 @@ module ScriptConstants
       COURSEE_DRAFT_NAME = 'coursee-draft'.freeze,
       COURSEF_DRAFT_NAME = 'coursef-draft'.freeze,
     ],
+    csd_pilot: [
+      CSD1_PILOT_NAME = 'csd1-pilot'.freeze,
+      CSD2_PILOT_NAME = 'csd2-pilot'.freeze,
+      CSD3_PILOT_NAME = 'csd3-pilot'.freeze,
+    ],
     csd_2019: [
       CSD1_2019_NAME = 'csd1-2019'.freeze,
       CSD2_2019_NAME = 'csd2-2019'.freeze,
@@ -134,11 +139,16 @@ module ScriptConstants
       CSD5_NAME = 'csd5-2017'.freeze,
       CSD6_NAME = 'csd6-2017'.freeze,
     ],
-    # Currently only used for TTS.
     csp_2019: [
+      CSP1_2019_NAME = 'csp1-2019'.freeze,
+      CSP2_2019_NAME = 'csp2-2019'.freeze,
       CSP3_2019_NAME = 'csp3-2019'.freeze,
+      CSP4_2019_NAME = 'csp4-2019'.freeze,
       CSP5_2019_NAME = 'csp5-2019'.freeze,
+      CSP_CREATE_2019_NAME = 'csp-create-2019'.freeze,
       CSP_POSTAP_2019_NAME = 'csppostap-2019'.freeze,
+      CSP_POST_SURVEY_2019_NAME = 'csp-post-survey-2019'.freeze,
+      CSP_EXPLORE_2019_NAME = 'csp-explore-2019'.freeze,
     ],
     csp_2018: [
       CSP1_2018_NAME = 'csp1-2018'.freeze,

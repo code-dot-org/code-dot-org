@@ -21,6 +21,7 @@ az:
         edit_header: 'Hesab Detallarına düzəliş edin'
         error:
           future: gələcəkdə ola bilməz
+  beta: "beta versiya"
   hello: "Salam, dünya"
   welcome_back: "Bir daha xoş gəldiniz, %{name}"
   your_professional_learning_plan: "Sizin peşəkar öyrənmə planınız"
@@ -300,10 +301,6 @@ az:
     your_gallery: Qalereya
     no_primary_course: "Code Studiosu kursunu yoxla"
     print_certificate: "Sertifikatı çap edin"
-    announcement_title: "Elanlar"
-    announcement_learn_more_button: "Daha ətraflı"
-    announcement_try_now_button: "Elə indi sınaqdan keçirin"
-    announcement_petition_button: "Adınızı əlavə edin"
   gender:
     male: 'Kişi'
     female: 'Qadın'

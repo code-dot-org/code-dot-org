@@ -4,6 +4,7 @@ zh-CN:
     dsls:
       2-3 Algorithms Multi 1:
         title: 选择题
+        content1: "/script_assets/2-3_images/unplugged/algorithms_1_q.png"
         questions:
         - text: 为这个图像选择一种算法
         answers:
@@ -17,25 +18,28 @@ zh-CN:
         questions:
         - text: 哪个图像<em>不</em>符合算法？
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/unplugged/algorithms_2_a1.png"
+        - text: "/script_assets/2-3_images/unplugged/algorithms_2_a2.png"
+          correct: true
+        - text: "/script_assets/2-3_images/unplugged/algorithms_2_a3.png"
+        - text: "/script_assets/2-3_images/unplugged/algorithms_2_a4.png"
       2-3 Big Event Match 1:
         title: 匹配
+        content1: "/script_assets/k_1_images/unplugged_images/big_event_1_desc.png"
         content2: 用按键组合完成跳舞动作。
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_q1.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_q2.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_q3.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_q4.png"
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a2.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a3.pngac"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a4.png"
       2-3 Binary Match 1:
         title: 匹配
+        content1: "/script_assets/2-3_images/unplugged/binary_1_q.png, 250"
         content2: 用键与字母的代码匹配
         questions:
         - text: "<strong>N</strong>"
@@ -43,192 +47,223 @@ zh-CN:
         - text: "<strong>P</strong>"
         - text: "<strong>Q</strong>"
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/unplugged/binary_1_a3.png"
+        - text: "/script_assets/2-3_images/unplugged/binary_1_a1.png"
+        - text: "/script_assets/2-3_images/unplugged/binary_1_a2.png"
+        - text: "/script_assets/2-3_images/unplugged/binary_1_a4.png"
       2-3 Conditionals Multi 1:
         title: 选择题
+        content1: "/script_assets/2-3_images/unplugged/conditionals_1_q.png"
         questions:
         - text: 根据游戏规则，哪一组卡片的得分是正确的？
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: "/script_assets/2-3_images/unplugged/conditionals_1_a1.png"
+        - text: "/script_assets/2-3_images/unplugged/conditionals_1_a2.png"
+        - text: "/script_assets/2-3_images/unplugged/conditionals_1_a3.png"
+          correct: true
+        - text: "/script_assets/2-3_images/unplugged/conditionals_1_a4.png"
       2-3 Getting Loopy Multi 1:
         title: 选择题
+        content1: "/script_assets/2-3_images/unplugged/getting_loopy_1_q.png"
         questions:
         - text: 你将如何用循环来简化这个序列？
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/unplugged/getting_loopy_1_a1.png"
+          correct: true
+        - text: "/script_assets/2-3_images/unplugged/getting_loopy_1_a2.png"
+        - text: "/script_assets/2-3_images/unplugged/getting_loopy_1_a3.png"
+        - text: "/script_assets/2-3_images/unplugged/getting_loopy_1_a4.png"
       2-3 Graph Paper Match 1:
         title: 匹配
         content1: 将程序与网格相匹配。
         questions:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_2_q1.png"
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_2_q2.png"
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_2_q3.png"
         answers:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_2_a3.png"
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_2_a2.png"
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_2_a1.png"
       2-3 Graph Paper Multi 1:
         title: 选择题
+        content1: "/script_assets/2-3_images/unplugged/graph_paper_1_q.png"
         questions:
         - text: 哪一个程序画出了这个图像？
         answers:
-        - {}
-        - correct: true
-        - {}
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_1_a1.png"
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_1_a2.png"
+          correct: true
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_1_a3.png"
       2-3 Maze Match 2:
         title: 迷宫比赛
         content1: 将谜题与模块相匹配
         pre_title: 说明
         questions:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_2_q1.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_2_q2.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_2_q3.png"
         answers:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_2_a1.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_2_a2.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_2_a3.png"
       2-3 Maze Multi 2:
         title: 迷宫的选择题
+        content1: "/script_assets/2-3_images/maze/2-3_maze_multi_2_q.png, 500"
         questions:
         - text: 哪组模块会让我到达猪那里？
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/maze/2-3_maze_multi_2_a1.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_multi_2_a2.png"
+          correct: true
+        - text: "/script_assets/2-3_images/maze/2-3_maze_multi_2_a3.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_multi_2_a4.png"
       2-3 Relay Programming Multi 1:
         title: 选择题
+        content1: "/script_assets/2-3_images/unplugged/relay_programming_1_q.png"
         questions:
         - text: 哪一个程序 **不会** 画出这个图像？
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: "/script_assets/2-3_images/unplugged/relay_programming_1_a1.png"
+        - text: "/script_assets/2-3_images/unplugged/relay_programming_1_a2.png"
+        - text: "/script_assets/2-3_images/unplugged/relay_programming_1_a3.png"
+          correct: true
       2-3 Relay Programming Multi 2:
         title: 选择题
         questions:
         - text: 哪一组图像-程序没有问题？
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: "/script_assets/2-3_images/unplugged/relay_programming_2_a1.png"
+        - text: "/script_assets/2-3_images/unplugged/relay_programming_2_a2.png"
+        - text: "/script_assets/2-3_images/unplugged/relay_programming_2_a3.png"
+          correct: true
       2-3 artist debug multi 1:
         title: 小艺术家调试：选择题 1
+        content1: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_q1.png,
+          700"
         questions:
         - text: 什么地方需要修复，才能完成这个圆圈？
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a1.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a2.png"
+          correct: true
+        - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a3.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png"
       2-3 artist functions multi 1:
         title: 小艺术家函数：选择题一
+        content1: "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_q.png,
+          500"
         questions:
         - text: 用给定的函数在正确的方块上画出这个图像
         answers:
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a1.png"
+          correct: true
+        - text: "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a2.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a3.png"
       2-3 artist loops match 1:
         title: 小艺术家循环匹配 1
         content2: 将循环与形状相匹配
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q1.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q2.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q3.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png"
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a1.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a2.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a3.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a4.png"
       2-3 artist loops multi 1:
         title: 小艺术家循环：选择题
+        content1: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_a3.png,
+          500"
         questions:
         - text: 哪个形状是由这个循环做的呢？
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q1.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png"
+          correct: true
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png"
       2-3 artist loops multi 2:
         title: 小艺术家循环：选择题
+        content1: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_a4.png,
+          500"
         questions:
         - text: 哪个形状是这个程序所做的？
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q1.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png"
+          correct: true
       2-3 artist match 1:
         title: 小艺术家的匹配
         content1: 找到和形状相对应的代码块完成匹配.
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_q1.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_q2.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_q3.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_q4.png"
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_a1.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_a2.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_a3.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_a4.png"
       2-3 bee conditionals multi 1:
         title: 蜜蜂条件语句：选择题 1
         questions:
         - text: 比较一下哪个是正确的？
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a1.png"
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a2.png"
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a3.png"
+          correct: true
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a4.png"
       2-3 bee conditionals multi 3:
         title: 蜜蜂条件语句：选择题 2
+        content1: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_q.png,
+          500"
         questions:
         - text: 选择最好的模块。
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a1.png"
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a2.png"
+          correct: true
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a3.png"
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a4.png"
       2-3 bee loops multi 1:
         title: 蜜蜂循环语句：选择题一
+        content1: "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_q.png, 500"
         questions:
         - text: 哪一个代码块收集了所有的花蜜？
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a1.png"
+          correct: true
+        - text: "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a2.png"
+        - text: "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a3.png"
+        - text: "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a4.png"
       2-3 maze match 1:
         title: 迷宫比赛一
         content1: 将谜题与模块相匹配
         questions:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_1_q1.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_1_q2.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_1_q3.png"
         answers:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_1_a1.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_1_a2.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_1_a3.png"
       2-3 maze multi 1:
         title: 迷宫选择题一
+        content1: "/script_assets/2-3_images/maze/2-3_maze_multi_1_q.png, 500"
         questions:
         - text: 哪一个程序块是正确答案？
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/maze/2-3_maze_multi_1_a1.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_multi_1_a2.png"
+          correct: true
+        - text: "/script_assets/2-3_images/maze/2-3_maze_multi_1_a3.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_multi_1_a4.png"
       4-5 Algorithms Match 1:
         title: 匹配
         content1: 匹配骰子游戏比赛的步骤及他们在算法中应该出现的顺序.
@@ -261,12 +296,13 @@ zh-CN:
         - text: "<h3>每侧车轮数量： 2 <br/>每侧窗户数量： 6</h3>"
         - text: "<h3>每侧车轮数量： 3 <br/>每侧窗户数量： 2</h3>"
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/unplugged/comp_thinking_2_a1.png"
+        - text: "/script_assets/4-5_images/unplugged/comp_thinking_2_a2.png"
+        - text: "/script_assets/4-5_images/unplugged/comp_thinking_2_a3.png"
+        - text: "/script_assets/4-5_images/unplugged/comp_thinking_2_a4.png"
       4-5 Computational Thinking Multi 1:
         title: 选择题
+        content1: 这里有三个句子。哪一个模板描述了这三句话共有的特点？
         questions:
         - text: 北京是一个大城市。<br/>齐齐哈尔是一个中等城市。<br/>张家界是一个小城市。
         answers:
@@ -280,8 +316,9 @@ zh-CN:
         questions:
         - text: 哪一张图片最恰当的描述了众包策略？
         answers:
-        - {}
-        - correct: true
+        - text: "/script_assets/4-5_images/unplugged/crowdsourcing_2_a1.png"
+        - text: "/script_assets/4-5_images/unplugged/crowdsourcing_2_a2.png"
+          correct: true
       4-5 Crowdsourcing Multi 2:
         title: 选择题
         questions:
@@ -304,6 +341,7 @@ zh-CN:
         - text: 父母的信用卡卡号
       4-5 Internet Multi 1:
         title: 选择题
+        content1: "/script_assets/4-5_images/unplugged/internet_1_q.png"
         questions:
         - text: 当尝试登录到 code.org，哪个 IP 地址是 DNS 最有可能到达的？
         answers:
@@ -314,6 +352,7 @@ zh-CN:
           correct: true
       4-5 Internet Multi 2:
         title: 选择题
+        content1: "/script_assets/4-5_images/unplugged/internet_1_q.png"
         questions:
         - text: 如果 DNS 发送给你100.42.50.110这个IP地址上的网页，你登录的是哪个网站？
         answers:
@@ -324,6 +363,7 @@ zh-CN:
         - text: khanacademy.org
       4-5 Songwriting Multi 1:
         title: 选择题
+        content1: "/script_assets/4-5_images/unplugged/songwriting_1_q.png"
         questions:
         - {}
         answers:
@@ -335,11 +375,12 @@ zh-CN:
       4-5 Suncatchers Match 1:
         title: 匹配
         content1: 用提供的技巧，将程序匹配到输出的词语上。
+        content2: "/script_assets/4-5_images/unplugged/suncatchers_1.png"
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/unplugged/suncatchers_1_a1.png"
+        - text: "/script_assets/4-5_images/unplugged/suncatchers_1_a2.png"
+        - text: "/script_assets/4-5_images/unplugged/suncatchers_1_a3.png"
+        - text: "/script_assets/4-5_images/unplugged/suncatchers_1_a4.png"
         answers:
         - text: "<h4>STACK</h4>"
         - text: "<h4>STAMP</h4>"
@@ -347,96 +388,115 @@ zh-CN:
         - text: "<h4>RAMP</h4>"
       4-5 Suncatchers Multi 1:
         title: 选择题
+        content1: "/script_assets/4-5_images/unplugged/suncatchers_2_q.png"
         questions:
         - text: 下面哪个程序所产生的序列和程序 1的<em>有所不同</em>？
         answers:
-        - {}
-        - correct: true
-        - {}
+        - text: "/script_assets/4-5_images/unplugged/suncatchers_2_a1.png"
+        - text: "/script_assets/4-5_images/unplugged/suncatchers_2_a2.png"
+          correct: true
+        - text: "/script_assets/4-5_images/unplugged/suncatchers_2_a3.png"
       4-5 artist loops multi 1:
         title: 小艺术家循环：选择题
+        content1: "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_q.png,
+          500"
         questions:
         - text: 哪一个代码块可以画出这个设计？
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a1.png"
+        - text: "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a2.png"
+          correct: true
+        - text: "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a3.png"
+        - text: "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a4.png"
       4-5 artist multi 1:
         title: 小艺术家 选择题
         questions:
         - text: 哪一个模块画出了周长为100的长方形？
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/artist/4-5_artist_multi_1_a1.png"
+        - text: "/script_assets/4-5_images/artist/4-5_artist_multi_1_a2.png"
+          correct: true
+        - text: "/script_assets/4-5_images/artist/4-5_artist_multi_1_a3.png"
+        - text: "/script_assets/4-5_images/artist/4-5_artist_multi_1_a4.png"
       4-5 artist multi 2:
         title: 小艺术家 选择题
         questions:
         - text: 哪一个图像是对称的？
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: "/script_assets/4-5_images/artist/4-5_artist_multi_2_a1.png"
+        - text: "/script_assets/4-5_images/artist/4-5_artist_multi_2_a2.png"
+        - text: "/script_assets/4-5_images/artist/4-5_artist_multi_2_a3.png"
+          correct: true
+        - text: "/script_assets/4-5_images/artist/4-5_artist_multi_2_a4.png"
       4-5 bee conditionals multi 1:
         title: 蜜蜂条件语句选择题
+        content1: "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_q.png"
         questions:
         - text: 选择最好的模块。
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a1.png"
+        - text: "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a2.png"
+        - text: "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a3.png"
+          correct: true
+        - text: "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a4.png"
       4-5 bee debug multi 1:
         title: 蜜蜂调试选择题
+        content1: "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_q1.png"
+        content2: "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_q2.png"
         questions:
         - text: 哪一个版本的函数可以运行？
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a2.png"
+        - text: "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a3.png"
+          correct: true
+        - text: "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a1.png"
+        - text: "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a4.png"
       4-5 bee loops multi 1:
         title: 蜜蜂循环选择题
+        content1: "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_q.png"
         questions:
         - text: 哪一个模块可以解决这个问题？
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a1.png"
+          correct: true
+        - text: "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a2.png"
+        - text: "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a3.png"
+        - text: "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a4.png"
       4-5 maze conditionals multi 1:
         title: 迷宫条件语句选择题
+        content1: "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_q.png,
+          500"
         questions:
         - text: 哪些模块解决了这一问题？
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a1.png"
+          correct: true
+        - text: "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a2.png"
+        - text: "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a3.png"
+        - text: "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a4.png"
       4-5 maze match 1:
         title: 迷宫比赛
         content1: 将谜题与模块相匹配
         pre_title: 说明
         questions:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/maze/4-5_maze_match_1_q1.png"
+        - text: "/script_assets/4-5_images/maze/4-5_maze_match_1_q2.png"
+        - text: "/script_assets/4-5_images/maze/4-5_maze_match_1_q3.png"
         answers:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/maze/4-5_maze_match_1_a1.png"
+        - text: "/script_assets/4-5_images/maze/4-5_maze_match_1_a2.png"
+        - text: "/script_assets/4-5_images/maze/4-5_maze_match_1_a3.png"
       4-5 maze multi 1:
         title: 迷宫的选择题
+        content1: "/script_assets/4-5_images/maze/4-5_maze_multi_1_q.png, 500"
         questions:
         - text: 哪些模块解决了这一问题？
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/maze/4-5_maze_multi_1_a1.png"
+          correct: true
+        - text: "/script_assets/4-5_images/maze/4-5_maze_multi_1_a2.png"
+        - text: "/script_assets/4-5_images/maze/4-5_maze_multi_1_a3.png"
+        - text: "/script_assets/4-5_images/maze/4-5_maze_multi_1_a4.png"
       Begin planning your project:
         title: 标题
         content1: 描述
@@ -446,24 +506,56 @@ zh-CN:
       Begin planning your project_2018_2019:
         title: 开始计划项目
         content1: 描述
+        markdown: |+
+          # 项目案例
+
+          你即将开始你最终的项目。 在开始之前，花一些时间查看示例项目。
+
+          | 饥饿的松鼠Hungry Squirrel |外星人传奇Alien Story |
+          |---|---|
+          | [![Hungry Squirrel (Play Lab)](https://images.code.org/3fda61d18026d6661dccf4b09baea111-image-1565115158327.PNG "Hungry Squirrel (Play Lab")](https://studio.code.org/projects/playlab/HN1zAX4Om6zdsxVsBBug9Y8mlzKSWUAXhjzRl-64YRs/view) | [![Alien Story (Play Lab)](https://images.code.org/0bd5ed3674ac9fe3304e27e68974c35f-image-1565115240833.PNG "Alien Story (Play Lab")](https://studio.code.org/projects/playlab/I_8rcKtpLFRAn8flROC15Oc-KnDu-bkKBnSORoIDs0o/view) |
+          | 尝试给这个游戏增加一些声音! | 尝试为这个游戏增加一幕情节! |
+
+      BinaryBracelets-Unplugged:
+        markdown: |
+          # 二进制手镯
+
+          创建一个二进制手镯，在一个计算机能够理解的系统中代表你的名字。
+
+          ![](https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)
       CSD Header Size MC:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47
+            AM.png
+        - text: https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08
+            AM.png
+          correct: true
+        - text: https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25
+            AM.png
+        - text: https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50
+            AM.png
       CSD Header Size MC_2018:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47
+            AM.png
+        - text: https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08
+            AM.png
+          correct: true
+        - text: https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25
+            AM.png
+        - text: https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50
+            AM.png
       CSD Header Size MC_2018_2019:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47
+            AM.png
+        - text: https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08
+            AM.png
+          correct: true
+        - text: https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25
+            AM.png
+        - text: https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50
+            AM.png
       CSD U1 Lesson 5 Overview:
         markdown: |
           #概述
@@ -534,6 +626,17 @@ zh-CN:
         content1: 描述
       CSD U2 Lesson 6 Overview:
         content1: 描述
+      CSD U2 Top Websites:
+        markdown: |
+          # 美国最多访问量的网站
+
+          以下是在美国访问量最多的网站。每一条都包含了有关于该网站的核心内容和功能简介。
+
+          1. Google.com - 用于查找网站内容、图片、视频及其他多媒体信息的搜索引擎
+          2. Youtube.com - 用户可自行上传视频，并发表观点以及进行讨论
+          3. Facebook.com - 用户可与好友分享精彩内容的社交媒体
+          4. Yahoo.com - 一款搜索引擎，同时也是电子邮件提供者及新闻网站
+          5. Wikipedia.org - 自由而且免费的百科全书，用户可以编辑其中的内容
       CSD U2 expand project:
         title: 标题
         content1: 描述
@@ -544,62 +647,104 @@ zh-CN:
         title: 标题
         content1: 描述
       CSD U2 image debug match:
+        content1: 将这段存在问题的 HTML 代码与描述中所对应的问题相连线。
         questions:
+        - text: 属性“src”拼写错误。
         - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: 图像路径中的文件扩展名（.jpg）丢失
+        - text: 图像路径的属性不是“src”
+        - text: 文件名中包含空格
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: <img src="https://images.code.org/6015fb13fa76d32072de2762d7d363ba-image-1553717013288.02.34
+            PM.png">
+        - text: <img src="https://images.code.org/555e64ae1a9a586d902f1ed254e4e00c-image-1553717003484.03.01
+            PM.png">
+        - text: <img src="https://images.code.org/e3b9be5444661a34eefe9bfa89e94cbc-image-1553717006899.02.47
+            PM.png">
+        - text: <img src="https://images.code.org/0ffde880f790f497b2aaef29f40272f4-image-1553717010350.02.40
+            PM.png">
+        - text: <img src="https://images.code.org/a86b628a71ae0415fe48dfd8a19ee69a-image-1553717016038.02.24
+            PM.png">
       CSD U2 lists match:
+        title: 快速检查列表
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: https://images.code.org/b7b998dd12e507d163d7dac0fcd37b8c-image-1493336218044.31.41
+            PM.png
+        - text: https://images.code.org/d9af5a34631dee994f99750f48f52b66-image-1493336218042.50.24
+            PM.png
+        - text: https://images.code.org/63b9f044db7dfa10d0486920e982f217-image-1493336218039.32.08
+            PM.png
+        - text: https://images.code.org/17bf31d6521c45f56301f6224732e514-image-1493336218041.32.29
+            PM.png
+        - text: https://images.code.org/50e0264011243637e12e4972d573d278-image-1493399022792.02.38
+            AM.png
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: https://images.code.org/c77491ea22b3b977383bfd2ca3655df1-image-1493336218041.31.27
+            PM.png
+        - text: https://images.code.org/9007a23e2767b57e84ffad78675faf6a-image-1493336218044.50.09
+            PM.png
+        - text: https://images.code.org/9007a23e2767b57e84ffad78675faf6a-image-1493336218044.50.09
+            PM.png
+        - text: https://images.code.org/d3be2ba9f4a398277f9663bbd5fdf783-image-1493336218042.31.59
+            PM.png
+        - text: https://images.code.org/1bbd9b340b51a295760f8daa4714cf84-image-1493336218035.32.21
+            PM.png
       CSD U2 lists match_2018:
+        title: 快速检查列表
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: https://images.code.org/b7b998dd12e507d163d7dac0fcd37b8c-image-1493336218044.31.41
+            PM.png
+        - text: https://images.code.org/d9af5a34631dee994f99750f48f52b66-image-1493336218042.50.24
+            PM.png
+        - text: https://images.code.org/63b9f044db7dfa10d0486920e982f217-image-1493336218039.32.08
+            PM.png
+        - text: https://images.code.org/17bf31d6521c45f56301f6224732e514-image-1493336218041.32.29
+            PM.png
+        - text: https://images.code.org/50e0264011243637e12e4972d573d278-image-1493399022792.02.38
+            AM.png
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: https://images.code.org/c77491ea22b3b977383bfd2ca3655df1-image-1493336218041.31.27
+            PM.png
+        - text: https://images.code.org/9007a23e2767b57e84ffad78675faf6a-image-1493336218044.50.09
+            PM.png
+        - text: https://images.code.org/9007a23e2767b57e84ffad78675faf6a-image-1493336218044.50.09
+            PM.png
+        - text: https://images.code.org/d3be2ba9f4a398277f9663bbd5fdf783-image-1493336218042.31.59
+            PM.png
+        - text: https://images.code.org/1bbd9b340b51a295760f8daa4714cf84-image-1493336218035.32.21
+            PM.png
       CSD U2 lists match_2018_2019:
+        title: 快速检查列表
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: https://images.code.org/b7b998dd12e507d163d7dac0fcd37b8c-image-1493336218044.31.41
+            PM.png
+        - text: https://images.code.org/d9af5a34631dee994f99750f48f52b66-image-1493336218042.50.24
+            PM.png
+        - text: https://images.code.org/63b9f044db7dfa10d0486920e982f217-image-1493336218039.32.08
+            PM.png
+        - text: https://images.code.org/17bf31d6521c45f56301f6224732e514-image-1493336218041.32.29
+            PM.png
+        - text: https://images.code.org/50e0264011243637e12e4972d573d278-image-1493399022792.02.38
+            AM.png
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: https://images.code.org/c77491ea22b3b977383bfd2ca3655df1-image-1493336218041.31.27
+            PM.png
+        - text: https://images.code.org/9007a23e2767b57e84ffad78675faf6a-image-1493336218044.50.09
+            PM.png
+        - text: https://images.code.org/9007a23e2767b57e84ffad78675faf6a-image-1493336218044.50.09
+            PM.png
+        - text: https://images.code.org/d3be2ba9f4a398277f9663bbd5fdf783-image-1493336218042.31.59
+            PM.png
+        - text: https://images.code.org/1bbd9b340b51a295760f8daa4714cf84-image-1493336218035.32.21
+            PM.png
       CSD U2 project guide:
+        title: 你的个人网站
         content1: 描述
       CSD U2 project guide_2018:
+        title: 你的个人网站
         content1: 描述
       CSD U2 project guide_2018_2019:
+        title: 你的个人网站
         content1: 描述
       CSD U3 - conditionals - Matching:
         questions:
@@ -609,11 +754,11 @@ zh-CN:
         - {}
         - {}
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: dog.rotation &lt; cat.rotation
+        - text: dog.x &lt; cat.x
+        - text: dog.scale &gt; cat.scale
+        - text: dog.x &gt; cat.x
+        - text: dog.x == cat.x
       CSD U3 - conditionals - Matching_2018:
         questions:
         - {}
@@ -622,11 +767,11 @@ zh-CN:
         - {}
         - {}
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: dog.rotation &lt; cat.rotation
+        - text: dog.x &lt; cat.x
+        - text: dog.scale &gt; cat.scale
+        - text: dog.x &gt; cat.x
+        - text: dog.x == cat.x
       CSD U3 - conditionals - Matching_2018_2019:
         questions:
         - {}
@@ -635,41 +780,46 @@ zh-CN:
         - {}
         - {}
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: dog.rotation &lt; cat.rotation
+        - text: dog.x &lt; cat.x
+        - text: dog.scale &gt; cat.scale
+        - text: dog.x &gt; cat.x
+        - text: dog.x == cat.x
       CSD U3 Boolean MC:
         title: 标题
         questions:
-        - {}
+        - text: 程序的控制台将打印出什么结果？
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: 真<br>假<br>真
+          correct: true
+        - text: "  0<br>200<br>100"
+        - text: "  真<br>错误<br>真"
+        - text: "  假<br>真<br>假"
       CSD U3 Boolean MC_2018:
         title: 标题
         questions:
-        - {}
+        - text: 程序的控制台将打印出什么结果？
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: 真<br>假<br>真
+          correct: true
+        - text: "  0<br>200<br>100"
+        - text: "  真<br>错误<br>真"
+        - text: "  假<br>真<br>假"
       CSD U3 Boolean MC_2018_2019:
         title: 标题
         questions:
-        - {}
+        - text: 程序的控制台将打印出什么结果？
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: 真<br>假<br>真
+          correct: true
+        - text: "  0<br>200<br>100"
+        - text: "  真<br>错误<br>真"
+        - text: "  假<br>真<br>假"
       CSD U3 Card Examples_2018:
+        title: 制作互动卡
         content1: 描述
       CSD U3 Card Examples_2018_2019:
+        title: 制作互动卡
         content1: 描述
       CSD U3 Functions Prediction define first:
         answers:
@@ -691,30 +841,30 @@ zh-CN:
         - {}
       CSD U3 Keypress Matching:
         questions:
-        - {}
-        - {}
-        - {}
+        - text: 仅当按键被按下时为真且单次有效。
+        - text: 仅当按键被松开时为真且单次有效。
+        - text: 当按键被按下或松开时均为真。
         answers:
-        - {}
-        - {}
+        - text: keyWentDown()
+        - text: keyWentUp()
         - text: keyDown()
       CSD U3 Keypress Matching_2018:
         questions:
-        - {}
-        - {}
-        - {}
+        - text: 仅当按键被按下时为真且单次有效。
+        - text: 仅当按键被松开时为真且单次有效。
+        - text: 当按键被按下或松开时均为真。
         answers:
-        - {}
-        - {}
+        - text: keyWentDown()
+        - text: keyWentUp()
         - text: keyDown()
       CSD U3 Keypress Matching_2018_2019:
         questions:
-        - {}
-        - {}
-        - {}
+        - text: 仅当按键被按下时为真且单次有效。
+        - text: 仅当按键被松开时为真且单次有效。
+        - text: 当按键被按下或松开时均为真。
         answers:
-        - {}
-        - {}
+        - text: keyWentDown()
+        - text: keyWentUp()
         - text: keyDown()
       CSD U3 Sprite Movement Predict Multi:
         questions:
@@ -744,26 +894,41 @@ zh-CN:
         questions:
         - {}
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: '<img src="https://images.code.org/9fe7b64b9f4f566213a02ce2fcc78af3-image-1491255143541.png"
+            style="width: 150px; border: 1px solid">'
+        - text: '<img src="https://images.code.org/1e4cf8b84af44ac064f99c3370267f5c-image-1491255399012.png"
+            style="width: 150px; border: 1px solid">'
+          correct: true
+        - text: '<img src="https://images.code.org/5c6c1e71f8a36fc4c871342e0c447dad-image-1491255426577.png"
+            style="width: 150px; border: 1px solid">'
+        - text: '<img src="https://images.code.org/7804e61306e15e3b5a2e0e9cc5906442-image-1491255443696.png"
+            style="width: 150px; border: 1px solid">'
       CSD U3 Sprites intro predict multi_2018:
         questions:
         - {}
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: '<img src="https://images.code.org/9fe7b64b9f4f566213a02ce2fcc78af3-image-1491255143541.png"
+            style="width: 150px; border: 1px solid">'
+        - text: '<img src="https://images.code.org/1e4cf8b84af44ac064f99c3370267f5c-image-1491255399012.png"
+            style="width: 150px; border: 1px solid">'
+          correct: true
+        - text: '<img src="https://images.code.org/5c6c1e71f8a36fc4c871342e0c447dad-image-1491255426577.png"
+            style="width: 150px; border: 1px solid">'
+        - text: '<img src="https://images.code.org/7804e61306e15e3b5a2e0e9cc5906442-image-1491255443696.png"
+            style="width: 150px; border: 1px solid">'
       CSD U3 Sprites intro predict multi_2018_2019:
         questions:
         - {}
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: '<img src="https://images.code.org/9fe7b64b9f4f566213a02ce2fcc78af3-image-1491255143541.png"
+            style="width: 150px; border: 1px solid">'
+        - text: '<img src="https://images.code.org/1e4cf8b84af44ac064f99c3370267f5c-image-1491255399012.png"
+            style="width: 150px; border: 1px solid">'
+          correct: true
+        - text: '<img src="https://images.code.org/5c6c1e71f8a36fc4c871342e0c447dad-image-1491255426577.png"
+            style="width: 150px; border: 1px solid">'
+        - text: '<img src="https://images.code.org/7804e61306e15e3b5a2e0e9cc5906442-image-1491255443696.png"
+            style="width: 150px; border: 1px solid">'
       CSD U3 combining rep:
         title: 标题
         content1: 描述
@@ -774,38 +939,64 @@ zh-CN:
         title: 标题
         content1: 描述
       CSD U3 drawSprites placement match:
+        title: drawSprites
+        content1: 将代码所生成的图像与之连线。
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: <img src="https://images.code.org/cd11d762b2cb3e36c3d45157b965c968-image-1523901253224.59.08
+            AM.png">
+        - text: <img src="https://images.code.org/653dff2d49f07341b2f2552747212b34-image-1523901253222.59.21
+            AM.png">
+        - text: <img src="https://images.code.org/db71e0cde6861faabc0b5a55d67c739e-image-1523901253227.58.12
+            AM.png">
+        - text: <img src="https://images.code.org/15d6014329fa3da9b73016af9f1d0d74-image-1523901253226.58.34
+            AM.png">
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: <img width="300px" src="https://images.code.org/131282b44fe34cd619a9a21bc68888da-image-1523902103487.58.48
+            AM.png">
+        - text: <img src="https://images.code.org/2fbe4029dc47f6f048e7c9f90ac99cac-image-1523902103485.25.09
+            AM.png">
+        - text: <img src="https://images.code.org/c4cb49e00f7087765865da87cff37549-image-1523902103477.58.00
+            AM.png">
+        - text: <img src="https://images.code.org/7465035fc6701dcb91731fe9d160b638-image-1523902103481.58.28
+            AM.png">
       CSD U3 drawSprites placement match_2019:
+        title: drawSprites
+        content1: 将代码所生成的图像与之连线。
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: <img src="https://images.code.org/cd11d762b2cb3e36c3d45157b965c968-image-1523901253224.59.08
+            AM.png">
+        - text: <img src="https://images.code.org/653dff2d49f07341b2f2552747212b34-image-1523901253222.59.21
+            AM.png">
+        - text: <img src="https://images.code.org/db71e0cde6861faabc0b5a55d67c739e-image-1523901253227.58.12
+            AM.png">
+        - text: <img src="https://images.code.org/15d6014329fa3da9b73016af9f1d0d74-image-1523901253226.58.34
+            AM.png">
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: <img width="300px" src="https://images.code.org/131282b44fe34cd619a9a21bc68888da-image-1523902103487.58.48
+            AM.png">
+        - text: <img src="https://images.code.org/2fbe4029dc47f6f048e7c9f90ac99cac-image-1523902103485.25.09
+            AM.png">
+        - text: <img src="https://images.code.org/c4cb49e00f7087765865da87cff37549-image-1523902103477.58.00
+            AM.png">
+        - text: <img src="https://images.code.org/7465035fc6701dcb91731fe9d160b638-image-1523902103481.58.28
+            AM.png">
       CSD U3 game intro:
+        title: 创建你自己的游戏
         content1: 描述
       CSD U3 game intro_2018:
+        title: 创建你自己的游戏
         content1: 描述
       CSD U3 game intro_2018_2019:
+        title: 创建你自己的游戏
         content1: 描述
       CSD U3 platform intro:
+        title: 建造跳台
         content1: 描述
       CSD U3 platform intro_2018:
+        title: 建造跳台
         content1: 描述
       CSD U3 platform intro_2018_2019:
+        title: 建造跳台
         content1: 描述
       CSD U5 Encryption 1:
         title: 标题
@@ -817,10 +1008,13 @@ zh-CN:
         title: 标题
         content1: 描述
       CSD U5 Encryption 2:
+        title: 二进制串解码
         content1: 描述
       CSD U5 Encryption 2_2018:
+        title: 二进制串解码
         content1: 描述
       CSD U5 Encryption 2_2018_2019:
+        title: 二进制串解码
         content1: 描述
       CSD U5 L13 SFLP Interpreting Data:
         title: 标题
@@ -850,35 +1044,53 @@ zh-CN:
         title: 标题
         content1: 描述
       CSD U6 LED create intro:
+        title: 使用 LED 制作应用程序
         content1: 描述
       CSD U6 LED create intro_2018:
+        title: 使用 LED 制作应用程序
         content1: 描述
       CSD U6 LED create intro_2018_2019:
+        title: 使用 LED 制作应用程序
         content1: 描述
       CSD U6 array multi:
         questions:
-        - {}
+        - text: 当左侧的代码运行时，应用实验室将显示什么内容？
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: <img src="https://images.code.org/fc497646edb1fc92a4dfdca09030f294-image-1512686800362.42.54
+            PM.png" width="200px" />
+        - text: <img src="https://images.code.org/d9b2a9eca6e2027c032bbc6c1e47e107-image-1512686800356.44.34
+            PM.png" width="200px" />
+        - text: <img src="https://images.code.org/ae34c1d87e697c789303c5c1b602b7c6-image-1512686800360.44.11
+            PM.png" width="200px" />
+        - text: <img src="https://images.code.org/d220337a4cd1ec31b0a5bb70eaf6bffe-image-1512686800364.42.00
+            PM.png" width="200px"
+          correct: true
       CSD U6 array multi_2018:
         questions:
-        - {}
+        - text: 当左侧的代码运行时，应用实验室将显示什么内容？
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: <img src="https://images.code.org/fc497646edb1fc92a4dfdca09030f294-image-1512686800362.42.54
+            PM.png" width="200px" />
+        - text: <img src="https://images.code.org/d9b2a9eca6e2027c032bbc6c1e47e107-image-1512686800356.44.34
+            PM.png" width="200px" />
+        - text: <img src="https://images.code.org/ae34c1d87e697c789303c5c1b602b7c6-image-1512686800360.44.11
+            PM.png" width="200px" />
+        - text: <img src="https://images.code.org/d220337a4cd1ec31b0a5bb70eaf6bffe-image-1512686800364.42.00
+            PM.png" width="200px"
+          correct: true
       CSD U6 array multi_2018_2019:
         questions:
-        - {}
+        - text: 当左侧的代码运行时，应用实验室将显示什么内容？
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: <img src="https://images.code.org/fc497646edb1fc92a4dfdca09030f294-image-1512686800362.42.54
+            PM.png" width="200px" />
+        - text: <img src="https://images.code.org/d9b2a9eca6e2027c032bbc6c1e47e107-image-1512686800356.44.34
+            PM.png" width="200px" />
+        - text: <img src="https://images.code.org/ae34c1d87e697c789303c5c1b602b7c6-image-1512686800360.44.11
+            PM.png" width="200px" />
+        - text: <img src="https://images.code.org/d220337a4cd1ec31b0a5bb70eaf6bffe-image-1512686800364.42.00
+            PM.png" width="200px"
+          correct: true
       CSD U6 final intro:
         content1: 描述
       CSD U6 final intro_2018:
@@ -886,217 +1098,264 @@ zh-CN:
       CSD U6 final intro_2018_2019:
         content1: 描述
       CSD U6 setProperty predict multi:
+        title: 猜测一下
         questions:
         - {}
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: '<img src="https://images.code.org/f1bc9eacc1144bee60b1f04373e583e3-image-1507311692368.png"
+            style="max-width: 100px;">'
+        - text: '<img src="https://images.code.org/f30263a5f6e47e6548706288e67b220d-image-1507311692372.png"
+            style="max-width: 100px;">'
+        - text: '<img src="https://images.code.org/772be0de5cfed112f9066c05d2ea6bb7-image-1507311692376.png"
+            style="max-width: 100px;">'
+          correct: true
+        - text: '<img src="https://images.code.org/cea9a118066ffc296f1023f395e61058-image-1507311692360.png"
+            style="max-width: 100px;">'
       CSD U6 setProperty predict multi_2018:
+        title: 猜测一下
         questions:
         - {}
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: '<img src="https://images.code.org/f1bc9eacc1144bee60b1f04373e583e3-image-1507311692368.png"
+            style="max-width: 100px;">'
+        - text: '<img src="https://images.code.org/f30263a5f6e47e6548706288e67b220d-image-1507311692372.png"
+            style="max-width: 100px;">'
+        - text: '<img src="https://images.code.org/772be0de5cfed112f9066c05d2ea6bb7-image-1507311692376.png"
+            style="max-width: 100px;">'
+          correct: true
+        - text: '<img src="https://images.code.org/cea9a118066ffc296f1023f395e61058-image-1507311692360.png"
+            style="max-width: 100px;">'
       Internet Simulator Setup:
+        title: 互联网模拟器设置
         content1: 描述
       Internet Simulator Setup 2:
         title: 标题
         content1: 描述
       Internet Simulator Setup 3:
+        title: 互联网模拟器设置 3
         content1: 描述
       K-1 Artist 1 Multi 1:
         title: 选择题
+        content1: "/script_assets/k_1_images/artist_images/rshort_dlong.png, 500"
         questions:
         - text: 哪些模块解决了这一问题？
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/artist_images/W-S-S.png"
+        - text: "/script_assets/k_1_images/artist_images/E-S-S.png"
+          correct: true
+        - text: "/script_assets/k_1_images/artist_images/S-E-E.png"
+        - text: "/script_assets/k_1_images/artist_images/E-S.png"
       K-1 Artist 1 Multi 2:
         title: 选择题
+        content1: "/script_assets/k_1_images/artist_images/square.png, 500"
         questions:
         - text: 哪些模块可以绘制正方形？
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/artist_images/N-E-S-W.png"
+          correct: true
+        - text: "/script_assets/k_1_images/artist_images/E-S-W-N.png"
+        - text: "/script_assets/k_1_images/artist_images/N-S-E-W.png"
+        - text: "/script_assets/k_1_images/artist_images/N-W-S-E.png"
       K-1 Artist 2 Match 2:
         title: 匹配
         content2: 基于类型来匹配形状。
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/artist_images/small_circle.png"
+        - text: "/script_assets/k_1_images/artist_images/large_square.png"
+        - text: "/script_assets/k_1_images/artist_images/medium_rectangle.png"
+        - text: "/script_assets/k_1_images/artist_images/small_triangle.png"
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/artist_images/medium_circle.png"
+        - text: "/script_assets/k_1_images/artist_images/small_square.png"
+        - text: "/script_assets/k_1_images/artist_images/large_rectangle.png"
+        - text: "/script_assets/k_1_images/artist_images/large_triangle.png"
       K-1 Bee 1 Multi 1:
         title: 选择题
+        content1: "/script_assets/k_1_images/bee_images/1nectar+2nectar.png"
         questions:
         - text: 这是多少个蜂蜜？
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/bee_images/nectar.png"
+        - text: "/script_assets/k_1_images/bee_images/2nectar.png"
+          correct: true
+        - text: "/script_assets/k_1_images/bee_images/3nectar.png"
+        - text: "/script_assets/k_1_images/bee_images/4nectar.png"
       K-1 Bee 1 Multi 2:
         title: 选择题
+        content1: "/script_assets/k_1_images/bee_images/2nectar+2nectar.png"
         questions:
         - text: 这是多少个蜂蜜？
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: "/script_assets/k_1_images/bee_images/nectar.png"
+        - text: "/script_assets/k_1_images/bee_images/2nectar.png"
+        - text: "/script_assets/k_1_images/bee_images/3nectar.png"
+        - text: "/script_assets/k_1_images/bee_images/4nectar.png"
+          correct: true
       K-1 Bee Loops Match 1:
         title: 匹配
         content2: 匹配这些模块
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/bee_images/r4_gnectar.png"
+        - text: "/script_assets/k_1_images/move_blocks/r3_N.png"
+        - text: "/script_assets/k_1_images/bee_images/r5_ghoney.png"
+        - text: "/script_assets/k_1_images/move_blocks/r5_E.png"
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/bee_images/4_gnectar.png"
+        - text: "/script_assets/k_1_images/move_blocks/NNN.png"
+        - text: "/script_assets/k_1_images/bee_images/5_ghoney.png"
+        - text: "/script_assets/k_1_images/move_blocks/EEEEE.png"
       K-1 Big Event Match 1:
         title: 匹配
+        content1: "/script_assets/k_1_images/unplugged_images/big_event_1_desc.png"
         content2: 用按键组合完成跳舞动作。
         questions:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_q1.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_q2.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_q3.png"
         answers:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a2.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a3.pngac"
       K-1 Digital Footprint Multi 1:
         title: 选择题
+        content1: "/script_assets/k_1_images/unplugged_images/digital_footprint_1_q.png"
         questions:
         - text: 哪一个动物留下的数字足迹<strong>最不安全</strong>？
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a1.png"
+        - text: "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a2.png"
+        - text: "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a3.png"
+          correct: true
       K-1 Getting Loopy Multi 1:
         title: 选择题
+        content1: "/script_assets/k_1_images/unplugged_images/getting_loopy_1_q.png"
         questions:
         - text: 你将如何用循环来简化这个序列？
         answers:
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/getting_loopy_1_a1.png"
+          correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/getting_loopy_1_a2.png"
+        - text: "/script_assets/k_1_images/unplugged_images/getting_loopy_1_a3.png"
       K-1 Happy Maps Multi 1:
         title: 选择题
+        content1: "/script_assets/k_1_images/unplugged_images/happy_maps_1q.png"
         questions:
         - text: 哪个箭头让会让福乐波得到宝藏？
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/up.png"
+        - text: "/script_assets/k_1_images/unplugged_images/down.png"
+          correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/left.png"
+        - text: "/script_assets/k_1_images/unplugged_images/right.png"
       K-1 Keep it Private Multi 1:
         title: 选择题
         questions:
         - text: 你 <strong>不</strong> 应该在线共享哪些信息？
         answers:
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a1.png"
+          correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a2.png"
+        - text: "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a3.png"
       K-1 Maze Debugging Multi 1:
         title: 选择题
+        content1: "/script_assets/k_1_images/maze_images/EESq.png, 700"
         questions:
         - text: 哪个选择是最终的模块？
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/move_blocks/N.png"
+          correct: true
+        - text: "/script_assets/k_1_images/move_blocks/S.png"
+        - text: "/script_assets/k_1_images/move_blocks/E.png"
+        - text: "/script_assets/k_1_images/move_blocks/W.png"
       K-1 Maze Loops Multi 1:
         title: 选择题
+        content1: "/script_assets/k_1_images/move_blocks/NNNequals.png, 300"
         questions:
         - text: 哪个重复模块一样？
         answers:
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/move_blocks/r3_N.png"
+          correct: true
+        - text: "/script_assets/k_1_images/move_blocks/r3_NN.png"
+        - text: "/script_assets/k_1_images/move_blocks/r4_N.png"
       K-1 Maze Loops Multi 2:
         title: 选择题
+        content1: "/script_assets/k_1_images/move_blocks/SESESEequals.png, 240"
         questions:
         - text: 选择正确的重复块。
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: "/script_assets/k_1_images/move_blocks/r3_S.png"
+        - text: "/script_assets/k_1_images/move_blocks/r3_ES.png"
+        - text: "/script_assets/k_1_images/move_blocks/r3_SE.png"
+          correct: true
       K-1 Maze Match 1:
         title: 匹配
         content2: 匹配谜题和模块
         pre_title: 说明
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/maze_images/maze_EN.png"
+        - text: "/script_assets/k_1_images/maze_images/maze_ENE.png"
+        - text: "/script_assets/k_1_images/maze_images/maze_WW.png"
+        - text: "/script_assets/k_1_images/maze_images/maze_WSS.png"
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/move_blocks/EN.png"
+        - text: "/script_assets/k_1_images/move_blocks/ENE.png"
+        - text: "/script_assets/k_1_images/move_blocks/WW.png"
+        - text: "/script_assets/k_1_images/move_blocks/WSS.png"
       K-1 Maze Multiple Choice 2:
         title: 迷宫
+        content1: "/script_assets/k_1_images/maze_images/maze_WS.png, 500"
         questions:
         - text: 哪个答案可以解出这一关？
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: "/script_assets/k_1_images/move_blocks/EN.png"
+        - text: "/script_assets/k_1_images/move_blocks/ES.png"
+        - text: "/script_assets/k_1_images/move_blocks/WS.png"
+          correct: true
+        - text: "/script_assets/k_1_images/move_blocks/WN.png"
       K-1 Move It Multi 1:
         title: 选择题
+        content1: "/script_assets/k_1_images/unplugged_images/move_it_1_q.png"
         questions:
         - text: 哪种算法使福乐波能到花那里？
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/rightright.png"
+        - text: "/script_assets/k_1_images/unplugged_images/leftleft.png"
+          correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/upleft.png"
+        - text: "/script_assets/k_1_images/unplugged_images/leftdown.png"
       K-1 Plant a Seed Multi 1:
         title: 选择题
+        content1: "/script_assets/k_1_images/unplugged_images/plant_a_seed_1_q.png"
         questions:
         - text: 在这个算法的开头应该是哪一步？
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/poke-hole.png"
+        - text: "/script_assets/k_1_images/unplugged_images/foot-in-shoe.png"
+        - text: "/script_assets/k_1_images/unplugged_images/dirty-teeth.png"
+          correct: true
       K-1 Plant a Seed Multi 2:
         title: 选择题
+        content1: "/script_assets/k_1_images/unplugged_images/plant_a_seed_2_q.png"
         questions:
         - text: 哪一步可以填入算法的空白处？
         answers:
-        - {}
-        - correct: true
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/brush-teeth.png"
+        - text: "/script_assets/k_1_images/unplugged_images/cover-seed.png"
+          correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/water-pot.png"
       K-1 Word Search Multi 1:
         title: 选择题
+        content1: "/script_assets/k_1_images/search_images/move.png, 450"
         questions:
         - text: 哪些模块拼出了"MOVE"？
         answers:
-        - {}
-        - correct: true
-        - {}
+        - text: "/script_assets/k_1_images/move_blocks/EEES.png"
+        - text: "/script_assets/k_1_images/move_blocks/EESS.png"
+          correct: true
+        - text: "/script_assets/k_1_images/move_blocks/ESSS.png"
       K-1 Word Search Multi 3:
         title: 选择题
+        content1: "/script_assets/k_1_images/search_images/square.png, 700"
         questions:
         - text: 哪个单词被拼出来了？
         answers:
@@ -1107,18 +1366,48 @@ zh-CN:
       Multi-Screen Apps:
         title: 标题
         content1: 描述
+      MyLoopyRoboticFriends-Unplugged:
+        markdown: |
+          # 我的循环机器人朋友们Jr.
+
+          将假装您的同学是机器人，但这次使用循环把你的程序变短。
+      MyRoboticFriends-Unplugged:
+        markdown: |
+          # 我的机器人朋友
+
+          将假装您的同学是机器人，并对它们进行编程以构建堆叠杯子的模式。
       New Challenge Introduction:
         title: 标题
         content1: 描述
       OPD-K5 Stage3aGo:
         title: 标题
         content1: 描述
+      PicturingData-Unplugged:
+        markdown: |
+          # 描绘数据
+
+          使用Play Lab 项目，搜集数据并进行预测。
+
+          ![](https://images.code.org/606a78c09a01133a1bbc1aa9c76f3320-image-1557334268558.png)
+      PowerfulPasswords-Unplugged:
+        markdown: |
+          # 强大的密码
+
+          了解人们使用密码的原因， 理解使用密码的好处， 并探索一个策略。用这个策略来创建和保存强大而安全的密码。
+
+          ![](https://images.code.org/9e082a5564a289bccc8e2dd79a2cae9f-image-1557869939256.png)
       Prepare for your presentation:
         title: 标题
         content1: 描述
       Prepare for your presentation_2018:
         title: 准备演示
+      ScreenOutTheMean-Unplugged:
+        markdown: |
+          # 远离网络欺凌
+
+          今天你将学习，如果网络上有些事情使您感到愤怒，悲伤或害怕，该怎么做。
       'Technique: Frequency Analysis':
+        title: 如何破解替换密码
         content1: 描述
       Terminology Recap:
         content1: 描述
@@ -1160,105 +1449,116 @@ zh-CN:
         - correct: true
           feedback: 叮咚！答对啦！
         - text: 之字形
+          feedback: '错误。 '
         - feedback: 错误
       courseC_multi_artist_prog6_predict1:
         questions:
         - text: 仔细阅读下面的代码。 当您单击 "运行" 时, 会发生什么情况？
         answers:
         - text: 艺术家将会画一个等边三角形。
+          feedback: 错误。艺术家画了一个正方形。
         - text: 艺术家将会画一条线。
-        - correct: true
+          feedback: 错误。艺术家画了一个正方形。
+        - text: 艺术家画了一个正方形。
+          correct: true
           feedback: 叮咚！答对啦！
-        - text: 我不知道.
+        - text: 我不知道。
+          feedback: 艺术家画了一个正方形。
       courseC_multi_artist_prog6_predict1_2018:
         questions:
         - text: 仔细阅读下面的代码。 当您单击 "运行" 时, 会发生什么情况？
         answers:
         - text: 艺术家将会画一个等边三角形。
+          feedback: 错误。艺术家画了一个正方形。
         - text: 艺术家将会画一条线。
+          feedback: 错误。艺术家画了一个正方形。
         - text: 艺术家将会画一个正方形。
           correct: true
           feedback: 叮咚！答对啦！
-        - text: 我不知道.
+        - text: 我不知道。
+          feedback: 艺术家画了一个正方形。
       courseC_multi_artist_prog6_predict1_2018_2019:
         questions:
         - text: 仔细阅读下面的代码。 当您单击 "运行" 时, 会发生什么情况？
         answers:
         - text: 艺术家将会画一个等边三角形。
+          feedback: 错误。艺术家画了一个正方形。
         - text: 艺术家将会画一条线。
+          feedback: 错误。艺术家画了一个正方形。
         - text: 艺术家将会画一个正方形。
           correct: true
           feedback: 叮咚！答对啦！
-        - text: 我不知道.
+        - text: 我不知道。
+          feedback: 艺术家画了一个正方形。
       courseC_multi_harvester_loops11_predict1:
         questions:
         - text: 仔细查看下面的代码。你点击 "运行" 后, 农民会收集多少南瓜？
         answers:
         - text: '4'
-          feedback: 错误。在每个循环中农民收集4个南瓜, 执行了3个循环。 4乘以3等于 12!
+          feedback: 错误。在每个循环中农民收集4个南瓜，执行了3个循环。4乘以3等于12。
         - text: '12'
           correct: true
           feedback: 叮咚！答对啦！
         - text: '15'
-          feedback: 错误。在每个循环中农民收集4个南瓜, 执行了3个循环。 4乘以3等于 12!
-        - text: 我不知道.
-          feedback: 在每个循环中农民收集4个南瓜, 执行了3个循环。 4乘以3等于 12!
+          feedback: 错误。在每个循环中农民收集4个南瓜，执行了3个循环。4乘以3等于12。
+        - text: 我不知道。
+          feedback: 在每个循环中农民收集4个南瓜，执行了3个循环。4乘以3等于 12。
       courseC_multi_harvester_loops11_predict1_2018:
         questions:
         - text: 仔细查看下面的代码。你点击 "运行" 后, 农民会收集多少南瓜？
         answers:
         - text: '4'
-          feedback: 错误。在每个循环中农民收集4个南瓜, 执行了3个循环。 4乘以3等于 12!
+          feedback: 错误。在每个循环中农民收集4个南瓜，执行了3个循环。4乘以3等于12。
         - text: '12'
           correct: true
           feedback: 叮咚！答对啦！
         - text: '15'
-          feedback: 错误。在每个循环中农民收集4个南瓜, 执行了3个循环。 4乘以3等于 12!
-        - text: 我不知道.
-          feedback: 在每个循环中农民收集4个南瓜, 执行了3个循环。 4乘以3等于 12!
+          feedback: 错误。在每个循环中农民收集4个南瓜，执行了3个循环。4乘以3等于12。
+        - text: 我不知道。
+          feedback: 在每个循环中农民收集4个南瓜，执行了3个循环。4乘以3等于 12。
       courseC_multi_harvester_loops11_predict1_2018_2019:
         questions:
         - text: 仔细查看下面的代码。你点击 "运行" 后, 农民会收集多少南瓜？
         answers:
         - text: '4'
-          feedback: 错误。在每个循环中农民收集4个南瓜, 执行了3个循环。 4乘以3等于 12!
+          feedback: 错误。在每个循环中农民收集4个南瓜，执行了3个循环。4乘以3等于12。
         - text: '12'
           correct: true
           feedback: 叮咚！答对啦！
         - text: '15'
-          feedback: 错误。在每个循环中农民收集4个南瓜, 执行了3个循环。 4乘以3等于 12!
-        - text: 我不知道.
-          feedback: 在每个循环中农民收集4个南瓜, 执行了3个循环。 4乘以3等于 12!
+          feedback: 错误。在每个循环中农民收集4个南瓜，执行了3个循环。4乘以3等于12。
+        - text: 我不知道。
+          feedback: 在每个循环中农民收集4个南瓜，执行了3个循环。4乘以3等于 12。
       courseC_multi_maze_debugging8_predict1:
         questions:
         - text: '仔细查看下面的代码。 第一个将使此程序失败的bug是什么？ '
         answers:
         - text: 这个程序不会失败。松鼠会到达橡子的位置。
-        - text: 松鼠在转最后一个弯的时候, 它会走错路。
+        - text: 松鼠在转最后一个弯的时候，它会走错路。
           correct: true
           feedback: 叮咚！答对啦！
-        - text: 松鼠走的路太少, 最终不会到达橡子的位置。
-        - text: 我不知道.
+        - text: 松鼠走的路太少，最终不会到达橡子的位置。
+        - text: 我不知道。
       courseC_multi_maze_debugging8_predict1_2018:
         questions:
         - text: '仔细查看下面的代码。 第一个将使此程序失败的bug是什么？ '
         answers:
         - text: 这个程序不会失败。松鼠会到达橡子的位置。
-        - text: 松鼠在转最后一个弯的时候, 它会走错路。
+        - text: 松鼠在转最后一个弯的时候，它会走错路。
           correct: true
           feedback: 叮咚！答对啦！
-        - text: 松鼠走的路太少, 最终不会到达橡子的位置。
-        - text: 我不知道.
+        - text: 松鼠走的路太少，最终不会到达橡子的位置。
+        - text: 我不知道。
       courseC_multi_maze_debugging8_predict1_2018_2019:
         questions:
         - text: '仔细查看下面的代码。 第一个将使此程序失败的bug是什么？ '
         answers:
         - text: 这个程序不会失败。松鼠会到达橡子的位置。
-        - text: 松鼠在转最后一个弯的时候, 它会走错路。
+        - text: 松鼠在转最后一个弯的时候，它会走错路。
           correct: true
           feedback: 叮咚！答对啦！
-        - text: 松鼠走的路太少, 最终不会到达橡子的位置。
-        - text: 我不知道.
+        - text: 松鼠走的路太少，最终不会到达橡子的位置。
+        - text: 我不知道。
       courseC_multi_maze_programming8_predict1:
         questions:
         - text: 仔细阅读下面的代码。 当您单击 "运行" 时, 会发生什么情况？
@@ -1268,9 +1568,9 @@ zh-CN:
         - text: 小鸟会到达猪的位置。
           correct: true
           feedback: 叮咚！答对啦！
-        - text: 这只鸟将撞上TNT炸药。
+        - text: 这只鸟将撞上 TNT 炸药。
           feedback: 错误。这段代码会把小鸟完美移动到猪的位置。
-        - text: 我不知道.
+        - text: 我不知道。
           feedback: 这段代码会把小鸟完美地移动到猪的位置。
       courseC_multi_maze_programming8_predict1_2018:
         questions:
@@ -1281,9 +1581,9 @@ zh-CN:
         - text: 小鸟会到达猪的位置。
           correct: true
           feedback: 叮咚！答对啦！
-        - text: 这只鸟将撞上TNT炸药。
+        - text: 这只鸟将撞上 TNT 炸药。
           feedback: 错误。这段代码会把小鸟完美移动到猪的位置。
-        - text: 我不知道.
+        - text: 我不知道。
           feedback: 这段代码会把小鸟完美地移动到猪的位置。
       courseC_multi_maze_programming8_predict1_2018_2019:
         questions:
@@ -1294,9 +1594,9 @@ zh-CN:
         - text: 小鸟会到达猪的位置。
           correct: true
           feedback: 叮咚！答对啦！
-        - text: 这只鸟将撞上TNT炸药。
+        - text: 这只鸟将撞上 TNT 炸药。
           feedback: 错误。这段代码会把小鸟完美移动到猪的位置。
-        - text: 我不知道.
+        - text: 我不知道。
           feedback: 这段代码会把小鸟完美地移动到猪的位置。
       courseC_multi_starWars_predict1:
         questions:
@@ -1340,7 +1640,7 @@ zh-CN:
           correct: true
           feedback: 叮咚！答对啦！
         - text: BB-8将会毫无困难地收集所有的废金属。
-        - text: 我不知道.
+        - text: 我不知道。
           feedback: 第一个循环只能让 BB-8 向前移动2格, 当它需要向前移动3格的时候。
       courseC_multi_starWars_predict2_2018:
         questions:
@@ -1351,7 +1651,7 @@ zh-CN:
           correct: true
           feedback: 叮咚！答对啦！
         - text: BB-8将会毫无困难地收集所有的废金属。
-        - text: 我不知道.
+        - text: 我不知道。
           feedback: 第一个循环只能让 BB-8 向前移动2格, 当它需要向前移动3格的时候。
       courseC_multi_starWars_predict2_2018_2019:
         questions:
@@ -1362,7 +1662,7 @@ zh-CN:
           correct: true
           feedback: 叮咚！答对啦！
         - text: BB-8将会毫无困难地收集所有的废金属。
-        - text: 我不知道.
+        - text: 我不知道。
           feedback: 第一个循环只能让 BB-8 向前移动2格, 当它需要向前移动3格的时候。
       courseD_external_binary1:
         title: 二进制绘图
@@ -1420,7 +1720,7 @@ zh-CN:
           feedback: 错误。 内层的循环生成了一个正五边形, 外层的循环在一个圆圈中重复4次。
         - text: C
           feedback: 错误。 内层的循环生成了一个正五边形, 外层的循环在一个圆圈中重复4次。
-        - text: 我不知道.
+        - text: 我不知道。
           feedback: 错误。 内层的循环生成了一个正五边形, 外层的循环在一个圆圈中重复4次。
       courseD_multi_artist_nestedLoops9_predict1_2018:
         questions:
@@ -1433,7 +1733,7 @@ zh-CN:
           feedback: 错误。 内层的循环生成了一个正五边形, 外层的循环在一个圆圈中重复4次。
         - text: C
           feedback: 错误。 内层的循环生成了一个正五边形, 外层的循环在一个圆圈中重复4次。
-        - text: 我不知道.
+        - text: 我不知道。
           feedback: 错误。 内层的循环生成了一个正五边形, 外层的循环在一个圆圈中重复4次。
       courseD_multi_artist_nestedLoops9_predict1_2018_2019:
         questions:
@@ -1446,7 +1746,7 @@ zh-CN:
           feedback: 错误。 内层的循环生成了一个正五边形, 外层的循环在一个圆圈中重复4次。
         - text: C
           feedback: 错误。 内层的循环生成了一个正五边形, 外层的循环在一个圆圈中重复4次。
-        - text: 我不知道.
+        - text: 我不知道。
           feedback: 错误。 内层的循环生成了一个正五边形, 外层的循环在一个圆圈中重复4次。
       courseD_multi_bee_conditionals1_predict1:
         questions:
@@ -1459,7 +1759,7 @@ zh-CN:
           feedback: 叮咚！答对啦！
         - text: 蜜蜂会移动到云中，然后什么都不做，不论云下是什么。
           feedback: 错误。积木块“如果在花里”能确保，如果云下有花朵的话，蜜蜂会采花粉。
-        - text: 我不知道.
+        - text: 我不知道。
           feedback: 错误。积木块“如果在花里”能确保，如果云下有花朵的话，蜜蜂只会采花粉。
       courseD_multi_bee_conditionals1_predict1_2018:
         questions:
@@ -1472,7 +1772,7 @@ zh-CN:
           feedback: 叮咚！答对啦！
         - text: 蜜蜂会移动到云中，然后什么都不做，不论云下是什么。
           feedback: 错误。积木块“如果在花里”能确保，如果云下有花朵的话，蜜蜂会采花粉。
-        - text: 我不知道.
+        - text: 我不知道。
           feedback: 错误。积木块“如果在花里”能确保，如果云下有花朵的话，蜜蜂只会采花粉。
       courseD_multi_bee_conditionals1_predict1_2018_2019:
         questions:
@@ -1485,7 +1785,7 @@ zh-CN:
           feedback: 叮咚！答对啦！
         - text: 蜜蜂会移动到云中，然后什么都不做，不论云下是什么。
           feedback: 错误。积木块“如果在花里”能确保，如果云下有花朵的话，蜜蜂会采花粉。
-        - text: 我不知道.
+        - text: 我不知道。
           feedback: 错误。积木块“如果在花里”能确保，如果云下有花朵的话，蜜蜂只会采花粉。
       courseD_multi_bee_conditionals7_predict2:
         questions:
@@ -1497,8 +1797,8 @@ zh-CN:
         - text: 蜜蜂会从花朵和蜂窝中获取花粉。
           feedback: 错误。积木块“如果在花里”可以让蜜蜂得到每朵花的花粉，并在每个蜂窝中制作蜂蜜。
         - text: 蜜蜂会从花朵和蜂窝中获取蜂蜜。
-          feedback: 错误。错误。积木块“如果在花里”可以让蜜蜂得到每朵花的花粉，并在每个蜂窝中制作蜂蜜。
-        - text: 我不知道.
+          feedback: 错误，错误。积木块“如果在花里”可以让蜜蜂得到每朵花的花粉，并在每个蜂窝中制作蜂蜜。
+        - text: 我不知道。
           feedback: 积木块“如果在花里”可以让蜜蜂得到每朵花的花粉，并在每个蜂窝中制作蜂蜜。
       courseD_multi_bee_conditionals7_predict2_2018:
         questions:
@@ -1510,8 +1810,8 @@ zh-CN:
         - text: 蜜蜂会从花朵和蜂窝中获取花粉。
           feedback: 错误。积木块“如果在花里”可以让蜜蜂得到每朵花的花粉，并在每个蜂窝中制作蜂蜜。
         - text: 蜜蜂会从花朵和蜂窝中获取蜂蜜。
-          feedback: 错误。错误。积木块“如果在花里”可以让蜜蜂得到每朵花的花粉，并在每个蜂窝中制作蜂蜜。
-        - text: 我不知道.
+          feedback: 错误，错误。积木块“如果在花里”可以让蜜蜂得到每朵花的花粉，并在每个蜂窝中制作蜂蜜。
+        - text: 我不知道。
           feedback: 积木块“如果在花里”可以让蜜蜂得到每朵花的花粉，并在每个蜂窝中制作蜂蜜。
       courseD_multi_bee_conditionals7_predict2_2018_2019:
         questions:
@@ -1523,87 +1823,87 @@ zh-CN:
         - text: 蜜蜂会从花朵和蜂窝中获取花粉。
           feedback: 错误。积木块“如果在花里”可以让蜜蜂得到每朵花的花粉，并在每个蜂窝中制作蜂蜜。
         - text: 蜜蜂会从花朵和蜂窝中获取蜂蜜。
-          feedback: 错误。错误。积木块“如果在花里”可以让蜜蜂得到每朵花的花粉，并在每个蜂窝中制作蜂蜜。
-        - text: 我不知道.
+          feedback: 错误，错误。积木块“如果在花里”可以让蜜蜂得到每朵花的花粉，并在每个蜂窝中制作蜂蜜。
+        - text: 我不知道。
           feedback: 积木块“如果在花里”可以让蜜蜂得到每朵花的花粉，并在每个蜂窝中制作蜂蜜。
       courseD_multi_bee_nestedLoops2_predict1:
         questions:
-        - text: 请仔细查看下面的代码。 当您单击 "运行" 时, 会发生什么情况？
+        - text: 请仔细查看下面的代码。 当您单击 "运行" 时，会发生什么情况？
         answers:
-        - text: 蜜蜂会向前移动, 只能得到1个花蜜。
+        - text: 蜜蜂会向前移动，只能得到1个花蜜。
           feedback: 不正确。 蜜蜂重复"前进移动和收集花蜜的循环动作"来解决这个难题。
         - text: 蜜蜂只能得到2个花蜜。
           feedback: 不正确。 蜜蜂重复"前进移动和收集花蜜的循环动作"来解决这个难题。
         - text: 蜜蜂将会得到所有的花蜜。
           correct: true
           feedback: 叮咚！答对啦！
-        - text: 我不知道.
+        - text: 我不知道。
           feedback: 蜜蜂重复"移动前进和收集花蜜"的循环动作，来解决这个难题。
       courseD_multi_bee_nestedLoops2_predict1_2018:
         questions:
-        - text: 请仔细查看下面的代码。 当您单击 "运行" 时, 会发生什么情况？
+        - text: 请仔细查看下面的代码。 当您单击 "运行" 时，会发生什么情况？
         answers:
-        - text: 蜜蜂会向前移动, 只能得到1个花蜜。
+        - text: 蜜蜂会向前移动，只能得到1个花蜜。
           feedback: 不正确。 蜜蜂重复"前进移动和收集花蜜的循环动作"来解决这个难题。
         - text: 蜜蜂只能得到2个花蜜。
           feedback: 不正确。 蜜蜂重复"前进移动和收集花蜜的循环动作"来解决这个难题。
         - text: 蜜蜂将会得到所有的花蜜。
           correct: true
           feedback: 叮咚！答对啦！
-        - text: 我不知道.
+        - text: 我不知道。
           feedback: 蜜蜂重复"移动前进和收集花蜜"的循环动作，来解决这个难题。
       courseD_multi_bee_nestedLoops2_predict1_2018_2019:
         questions:
-        - text: 请仔细查看下面的代码。 当您单击 "运行" 时, 会发生什么情况？
+        - text: 请仔细查看下面的代码。 当您单击 "运行" 时，会发生什么情况？
         answers:
-        - text: 蜜蜂会向前移动, 只能得到1个花蜜。
+        - text: 蜜蜂会向前移动，只能得到1个花蜜。
           feedback: 不正确。 蜜蜂重复"前进移动和收集花蜜的循环动作"来解决这个难题。
         - text: 蜜蜂只能得到2个花蜜。
           feedback: 不正确。 蜜蜂重复"前进移动和收集花蜜的循环动作"来解决这个难题。
         - text: 蜜蜂将会得到所有的花蜜。
           correct: true
           feedback: 叮咚！答对啦！
-        - text: 我不知道.
+        - text: 我不知道。
           feedback: 蜜蜂重复"移动前进和收集花蜜"的循环动作，来解决这个难题。
       courseD_multi_bee_nestedLoops9_predict2:
         questions:
-        - text: 仔细查看下面的代码。当你点击 "运行" 后, 蜜蜂会采集多少蜂蜜？
+        - text: 仔细查看下面的代码。当你点击 "运行" 后，蜜蜂会采集多少蜂蜜？
         answers:
         - text: '4'
         - text: '8'
           correct: true
           feedback: 叮咚！答对啦！
         - text: '12'
-        - text: 我不知道.
+        - text: 我不知道。
       courseD_multi_bee_nestedLoops9_predict2_2018:
         questions:
-        - text: 仔细查看下面的代码。当你点击 "运行" 后, 蜜蜂会采集多少蜂蜜？
+        - text: 仔细查看下面的代码。当你点击 "运行" 后，蜜蜂会采集多少蜂蜜？
         answers:
         - text: '4'
         - text: '8'
           correct: true
           feedback: 叮咚！答对啦！
         - text: '12'
-        - text: 我不知道.
+        - text: 我不知道。
       courseD_multi_bee_nestedLoops9_predict2_2018_2019:
         questions:
-        - text: 仔细查看下面的代码。当你点击 "运行" 后, 蜜蜂会采集多少蜂蜜？
+        - text: 仔细查看下面的代码。当你点击 "运行" 后，蜜蜂会采集多少蜂蜜？
         answers:
         - text: '4'
         - text: '8'
           correct: true
           feedback: 叮咚！答对啦！
         - text: '12'
-        - text: 我不知道.
+        - text: 我不知道。
       courseD_multi_collector_debugging10_predict1:
         questions:
         - {}
         answers:
-        - feedback: 错误。这个答案部分正确, 循环没有运行足够多次数来获得所有的宝贝。
+        - feedback: 错误。这个答案部分正确，循环没有运行足够多次数来获得所有的宝贝。
         - {}
         - correct: true
           feedback: 叮咚！答对啦！
-        - text: 我不知道.
+        - text: 我不知道。
       courseD_multi_farmer_condLoops9_predict1:
         questions:
         - text: 仔细阅读下面的代码。 当您单击 "运行" 时, 会发生什么情况？
@@ -1614,7 +1914,7 @@ zh-CN:
         - text: 收割者将收获到除了南瓜以外的所有农作物。
           correct: true
           feedback: 叮咚！答对啦！
-        - text: 我不知道.
+        - text: 我不知道。
       courseD_multi_farmer_condLoops9_predict1_2018:
         questions:
         - text: 仔细阅读下面的代码。 当您单击 "运行" 时, 会发生什么情况？
@@ -1625,7 +1925,7 @@ zh-CN:
         - text: 收割者将收获到除了南瓜以外的所有农作物。
           correct: true
           feedback: 叮咚！答对啦！
-        - text: 我不知道.
+        - text: 我不知道。
       courseD_multi_farmer_condLoops9_predict1_2018_2019:
         questions:
         - text: 仔细阅读下面的代码。 当您单击 "运行" 时, 会发生什么情况？
@@ -1636,7 +1936,7 @@ zh-CN:
         - text: 收割者将收获到除了南瓜以外的所有农作物。
           correct: true
           feedback: 叮咚！答对啦！
-        - text: 我不知道.
+        - text: 我不知道。
       courseD_multi_farmer_ramp13:
         questions:
         - {}
@@ -1646,46 +1946,46 @@ zh-CN:
           correct: true
           feedback: 叮咚！答对啦！
         - text: 农夫会移动4个格子，然后摘一个南瓜。
-        - text: 我不知道.
+        - text: 我不知道。
           feedback: 积木块“摘南瓜”在循环内，所以农夫每一步都会尝试摘南瓜，而不是直接结束。
       courseD_multi_farmer_while10_predict2:
         questions:
         - text: 请仔细查看下面的代码。这段代码的运行结果是什么？
         answers:
-        - text: 土堆和坑都消失了, 土地变成了平地。
+        - text: 土堆和坑都消失了,土地变成了平地。
           feedback: 错误。没有任何代码用来清除土堆。
         - text: 代码将对土堆不产生任何影响。
           correct: true
           feedback: 叮咚！答对啦！
         - text: 代码将对地上的坑不产生任何影响。
           feedback: 错误。’当‘ 循环会永远执行除非‘当’的条件是假, 但没有用于清除土堆的代码。
-        - text: 我不知道.
+        - text: 我不知道。
           feedback: "’当‘ 循环会永远执行除非‘当’的条件是假, 但没有用于清除土堆的代码。"
       courseD_multi_farmer_while10_predict2_2018:
         questions:
         - text: 请仔细查看下面的代码。这段代码的运行结果是什么？
         answers:
-        - text: 土堆和坑都消失了, 土地变成了平地。
+        - text: 土堆和坑都消失了,土地变成了平地。
           feedback: 错误。没有任何代码用来清除土堆。
         - text: 代码将对土堆不产生任何影响。
           correct: true
           feedback: 叮咚！答对啦！
         - text: 代码将对地上的坑不产生任何影响。
           feedback: 错误。’当‘ 循环会永远执行除非‘当’的条件是假, 但没有用于清除土堆的代码。
-        - text: 我不知道.
+        - text: 我不知道。
           feedback: "’当‘ 循环会永远执行除非‘当’的条件是假, 但没有用于清除土堆的代码。"
       courseD_multi_farmer_while10_predict2_2018_2019:
         questions:
         - text: 请仔细查看下面的代码。这段代码的运行结果是什么？
         answers:
-        - text: 土堆和坑都消失了, 土地变成了平地。
+        - text: 土堆和坑都消失了,土地变成了平地。
           feedback: 错误。没有任何代码用来清除土堆。
         - text: 代码将对土堆不产生任何影响。
           correct: true
           feedback: 叮咚！答对啦！
         - text: 代码将对地上的坑不产生任何影响。
           feedback: 错误。’当‘ 循环会永远执行除非‘当’的条件是假, 但没有用于清除土堆的代码。
-        - text: 我不知道.
+        - text: 我不知道。
           feedback: "’当‘ 循环会永远执行除非‘当’的条件是假, 但没有用于清除土堆的代码。"
       courseD_multi_farmer_while4_predict1:
         questions:
@@ -1698,7 +1998,7 @@ zh-CN:
         - text: 农民一见到土堆就会去清除直到所有土堆被清除完毕。
           correct: true
           feedback: 叮咚！答对啦！
-        - text: 我不知道.
+        - text: 我不知道。
       courseD_multi_farmer_while4_predict1_2018:
         questions:
         - {}
@@ -1710,7 +2010,7 @@ zh-CN:
         - text: 农民一见到土堆就会去清除直到所有土堆被清除完毕。
           correct: true
           feedback: 叮咚！答对啦！
-        - text: 我不知道.
+        - text: 我不知道。
       courseD_multi_farmer_while4_predict1_2018_2019:
         questions:
         - {}
@@ -1722,7 +2022,7 @@ zh-CN:
         - text: 农民一见到土堆就会去清除直到所有土堆被清除完毕。
           correct: true
           feedback: 叮咚！答对啦！
-        - text: 我不知道.
+        - text: 我不知道。
       courseD_multi_maze_until10_predict2:
         questions:
         - text: 仔细阅读下面的代码。 当您单击 "运行" 时, 会发生什么情况？
@@ -1732,7 +2032,7 @@ zh-CN:
           feedback: 叮咚！答对啦！
         - text: 僵尸会到达向日葵。
         - text: 僵尸将在第一个路口右转，然后永远的绕着圈走。
-        - text: 我不知道.
+        - text: 我不知道。
           feedback: 这个代码中，僵尸在右转之前，会先判断是否可以向前移动。正因如此，解谜失败。
       courseD_multi_maze_until10_predict2_2018:
         questions:
@@ -1745,7 +2045,7 @@ zh-CN:
           feedback: 错误。僵尸会通过正确的路径, 最终会永远的来回走动。
         - text: 僵尸将在第一个路口右转，然后永远的绕着圈走。
           feedback: 错误。僵尸会通过正确的路径, 最终会永远的来回走动。
-        - text: 我不知道.
+        - text: 我不知道。
           feedback: 在这个代码中，僵尸将会通过正确的路径，最终会永远的来回走动。
       courseD_multi_maze_until10_predict2_2018_2019:
         questions:
@@ -1758,7 +2058,7 @@ zh-CN:
           feedback: 错误。僵尸会通过正确的路径, 最终会永远的来回走动。
         - text: 僵尸将在第一个路口右转，然后永远的绕着圈走。
           feedback: 错误。僵尸会通过正确的路径, 最终会永远的来回走动。
-        - text: 我不知道.
+        - text: 我不知道。
           feedback: 在这个代码中，僵尸将会通过正确的路径，最终会永远的来回走动。
       courseD_multi_maze_until2_predict1:
         questions:
@@ -1769,7 +2069,7 @@ zh-CN:
           correct: true
           feedback: 叮咚！答对啦！
         - text: 小鸟会撞上TNT炸药。
-        - text: 我不知道.
+        - text: 我不知道。
           feedback: 当前面有路时，这只鸟会向前走然后左转，反复如此，直到达到猪的位置！
       courseD_multi_maze_until2_predict1_2018:
         questions:
@@ -1780,7 +2080,7 @@ zh-CN:
           correct: true
           feedback: 叮咚！答对啦！
         - text: 小鸟会撞上TNT炸药。
-        - text: 我不知道.
+        - text: 我不知道。
           feedback: 当前面有路时，这只鸟会向前走然后左转，反复如此，直到达到猪的位置！
       courseD_multi_maze_until2_predict1_2018_2019:
         questions:
@@ -1791,17 +2091,17 @@ zh-CN:
           correct: true
           feedback: 叮咚！答对啦！
         - text: 小鸟会撞上TNT炸药。
-        - text: 我不知道.
+        - text: 我不知道。
           feedback: 当前面有路时，这只鸟会向前走然后左转，反复如此，直到达到猪的位置！
       courseD_multi_scrat_predict1:
         questions:
-        - {}
+        - text: 此代码使用了一个新模块。你认为在你按下“运行”时会发生什么？
         answers:
         - {}
         - correct: true
           feedback: 叮咚！答对啦！
         - {}
-        - text: 我不知道.
+        - text: 我不知道。
       courseE_multi_bee_functions_predict1:
         questions:
         - {}
@@ -1809,7 +2109,7 @@ zh-CN:
         - correct: true
         - {}
         - {}
-        - text: 我不知道.
+        - text: 我不知道。
       courseE_multi_farmer_functions11_predict:
         questions:
         - {}
@@ -1891,7 +2191,7 @@ zh-CN:
           feedback: 叮咚！答对啦！
         - text: 蜜蜂将会得到所有的花蜜。
           feedback: 错误。在最后两个函数调用之前，变量被设置回0。
-        - text: 我不知道.
+        - text: 我不知道。
       courseF_bee_variables_8a_2018_2019:
         title: 小蜜蜂——多变量的应用
         questions:
@@ -1904,7 +2204,7 @@ zh-CN:
           feedback: 叮咚！答对啦！
         - text: 蜜蜂将会得到所有的花蜜。
           feedback: 错误。在最后两个函数调用之前，变量被设置回0。
-        - text: 我不知道.
+        - text: 我不知道。
       courseF_markdown_algorithms_end:
         title: 测试Markdown文本页面
         content1: 测试Markdown文本页面
@@ -1970,7 +2270,7 @@ zh-CN:
         - text: 艺术家将绘制一个螺旋图形，每次通过“for”循环，线会变得更长和更粗。
           correct: true
           feedback: 叮咚！答对啦！
-        - text: 我不知道.
+        - text: 我不知道。
           feedback: 错误。每次通过“for”循环，艺术家绘制的线会变得更长和更粗。
       courseF_multi_artist_for10_predict1_2018:
         questions:
@@ -1983,7 +2283,7 @@ zh-CN:
         - text: 艺术家将绘制一个螺旋图形，每次通过“for”循环，线会变得更长和更粗。
           correct: true
           feedback: 叮咚！答对啦！
-        - text: 我不知道.
+        - text: 我不知道。
           feedback: 错误。每次通过“for”循环，艺术家绘制的线会变得更长和更粗。
       courseF_multi_artist_for10_predict1_2018_2019:
         questions:
@@ -1996,7 +2296,7 @@ zh-CN:
         - text: 艺术家将绘制一个螺旋图形，每次通过“for”循环，线会变得更长和更粗。
           correct: true
           feedback: 叮咚！答对啦！
-        - text: 我不知道.
+        - text: 我不知道。
           feedback: 错误。每次通过“for”循环，艺术家绘制的线会变得更长和更粗。
       courseF_multi_artist_fwp2_predict1:
         questions:
@@ -2006,7 +2306,7 @@ zh-CN:
           feedback: 叮咚！答对啦！
         - {}
         - {}
-        - text: 我不知道.
+        - text: 我不知道。
       courseF_multi_artist_variables3a_predict1:
         questions:
         - text: 我们已将变量“长度”设置为50。当您单击“运行”时，会发生什么情况？
@@ -2018,7 +2318,7 @@ zh-CN:
           feedback: 错误。 变量“长度”需要在“重复”循环中使用，才能实现。
         - text: 艺术家将绘制一个开放的图形，其中三条边分别旋转50度。
           feedback: 错误。 变量“长度”需要在“转x度”积木块中使用，才能实现。
-        - text: 我不知道.
+        - text: 我不知道。
       courseF_multi_artist_variables3a_predict1_2018:
         questions:
         - text: 我们已将变量“长度”设置为50。当您单击“运行”时，会发生什么情况？
@@ -2030,7 +2330,7 @@ zh-CN:
           feedback: 错误。 变量“长度”需要在“重复”循环中使用，才能实现。
         - text: 艺术家将绘制一个开放的图形，其中三条边分别旋转50度。
           feedback: 错误。 变量“长度”需要在“转x度”积木块中使用，才能实现。
-        - text: 我不知道.
+        - text: 我不知道。
       courseF_multi_artist_variables3a_predict1_2018_2019:
         questions:
         - text: 我们已将变量“长度”设置为50。当您单击“运行”时，会发生什么情况？
@@ -2042,7 +2342,7 @@ zh-CN:
           feedback: 错误。 变量“长度”需要在“重复”循环中使用，才能实现。
         - text: 艺术家将绘制一个开放的图形，其中三条边分别旋转50度。
           feedback: 错误。 变量“长度”需要在“转x度”积木块中使用，才能实现。
-        - text: 我不知道.
+        - text: 我不知道。
       courseF_multi_bee_conditionals1_predict1:
         questions:
         - {}
@@ -2054,17 +2354,17 @@ zh-CN:
           feedback: 叮咚！答对啦！
         - text: 蜜蜂会移动到云中，然后什么都不做，不论云下是什么。
           feedback: 错误。积木块“如果在花里”能确保，如果云下有花朵的话，蜜蜂会采花粉。
-        - text: 我不知道.
+        - text: 我不知道。
           feedback: 错误。积木块“如果在花里”能确保，如果云下有花朵的话，蜜蜂只会采花粉。
       courseF_multi_bee_conditionals7_predict2:
         questions:
-        - text: 仔细阅读下面的代码。 当您单击 "运行" 时, 会发生什么情况？
+        - text: 仔细阅读下面的代码。当您单击 "运行" 时, 会发生什么情况？
         answers:
         - correct: true
           feedback: 叮咚！答对啦！
         - text: 蜜蜂会从花朵和蜂窝中获取花粉。
         - text: 蜜蜂会从花朵和蜂窝中获取蜂蜜。
-        - text: 我不知道.
+        - text: 我不知道。
       courseF_multi_bee_for3_predict1:
         questions:
         - text: 仔细阅读下面的代码。当您单击“运行”时，会发生什么情况？
@@ -2111,7 +2411,7 @@ zh-CN:
         - {}
         - correct: true
         - {}
-        - text: 我不知道.
+        - text: 我不知道。
       courseF_multi_playlab_variables4c_predictive1:
         questions:
         - {}
@@ -2120,13 +2420,13 @@ zh-CN:
           feedback: '正确 '
         - {}
         - {}
-        - text: 我不知道.
+        - text: 我不知道。
       courseF_project_exemplars_2019:
         title: 测试Markdown文本页面
         content1: 测试Markdown文本页面
       coursee_prediction_artistfunction2:
         questions:
-        - text: What will happen when you press the "Run" button?
+        - {}
         answers:
         - text: 艺术家将正确解决谜题。
           feedback: 不正确。循环使用了“画多边形”，而不是“多一列多边形”。
@@ -2139,7 +2439,7 @@ zh-CN:
           feedback: 不正确。在调用“画多边形”之间，循环转动了90度。
       coursee_prediction_artistfunction2_2018:
         questions:
-        - text: What will happen when you press the "Run" button?
+        - {}
         answers:
         - text: 艺术家将正确解决谜题。
           feedback: 不正确。循环使用了“画多边形”，而不是“多一列多边形”。
@@ -2152,7 +2452,7 @@ zh-CN:
           feedback: 不正确。在调用“画多边形”之间，循环转动了90度。
       coursee_prediction_artistfunction2_2018_2019:
         questions:
-        - text: What will happen when you press the "Run" button?
+        - {}
         answers:
         - text: 艺术家将正确解决谜题。
           feedback: 不正确。循环使用了“画多边形”，而不是“多一列多边形”。
@@ -2172,30 +2472,33 @@ zh-CN:
           * [铝箔船](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=pdf) - 活动指导 (微软版(https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=doc), [谷歌文档](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/copy))
       grade2_multi_collector_A_predict1:
         questions:
-        - {}
+        - text: 仔细观察下面的代码。若程序运行至结束（忽略所有错误），那么罗瑞尔会收集到多少宝藏呢？
         answers:
         - text: 用这段代码让罗瑞尔收集4个宝贝
         - correct: true
           feedback: 叮咚！答对啦！
         - {}
-        - text: 我不知道.
+        - text: 我不知道。
       grade2_multi_collector_A_predict1_2018:
         questions:
-        - {}
+        - text: 仔细观察代码。你认为程序运行时会发生什么？
         answers:
         - text: 用这段代码让罗瑞尔收集4个宝贝
         - correct: true
           feedback: 叮咚！答对啦！
         - {}
-        - text: 我不知道.
+        - text: 我不知道。
       grade2_multi_collector_A_predict1_2018_2019:
         questions:
-        - {}
+        - text: 仔细观察代码。你认为程序运行时会发生什么？
         answers:
         - text: 用这段代码让罗瑞尔收集4个宝贝
         - correct: true
           feedback: 叮咚！答对啦！
         - {}
-        - text: 我不知道.
+        - text: 我不知道。
       gradek1_activity_beNice:
         title: 计算机是你的朋友
+        markdown: "# 在电脑实验室中表现\n  \n<br/><br/>    \n    \n<a href=\"https://docs.google.com/document/d/18KHX5NNlmXX1Eqt8u6LFRzto7PK4dIFNv-tr1F1joUQ/edit?usp=sharing\"
+          target=\"_new\">\n<button>\n前往教学计划\n</button> \n</a>\n\n<br/><br/>\n<a class=\"btn
+          btn-large btn-primary next-stage submitButton\">继续</a>\n"

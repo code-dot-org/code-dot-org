@@ -1333,6 +1333,7 @@
   sphero_beyond_longdescription: "Kahit ikaw ay isang tagapagturo man o isang magulang, ang SPRK na mga aralin ay nagbibigay sa mga bata ng isang masayang madaliang kurso sa pag-program ng mga robots habang hinahasa ang kanilang kakayahan sa matematika at agham."
   compatibility_hide_this_warning: "Itago ang babalang ito"
   compatibility_unsupported_browser: "Ang iyong browser ay hindi suportado. Paki-upgrade ang iyong browser sa <a href='%{supported_browsers_url}', target='_blank'>isa sa mga suportadong browser</a>. Maari mong subukang tingnan ang pahina, pero asahan mo na may mga sira na mga functionality."
+  compatibility_unsupported_browser_markdown: "Ang iyong browser ay hindi suportado. Paki-upgrade ang iyong browser sa <a href='%{supported_browsers_url}', target='_blank'>isa sa mga suportadong browser</a>. Maari mong subukang tingnan ang pahina, pero asahan mo na may mga sira na mga functionality."
   flappy_shortcode: "flap"
   header_home: "Home"
   header_my_dashboard: "Aking Dashboard"

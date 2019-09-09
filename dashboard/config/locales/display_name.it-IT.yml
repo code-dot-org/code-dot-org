@@ -2,8 +2,42 @@
 it-IT:
   data:
     display_name:
-      CSD Problem Solving Process Video: 'Video: il processo di risoluzione dei problemi
-        (problem solving)'
+      App Lab Intro 8 - Video Design Mode: 'Video: Modalità Progettazione'
+      App Lab Intro 8 - Video Getting Started: 'Video: Per Iniziare'
+      App Lab Intro 8 - Video Images and Sounds: 'Video: Immagini e Suoni'
+      App Lab Intro 8 - Video Make It Interactive: 'Video: Rendilo Interattivo'
+      App Lab Intro 8 - Video Share Your App: 'Video: Condividi La Tua App'
+      AppLab Intro 7 - Change Screen Color: Modifica Colore Schermo
+      AppLab Intro 7 - Change Text 2: Cambia Testo
+      AppLab Intro 7 - Full Text: Due Pulsanti
+      AppLab Intro 7 - onEvent intro: Fai Funzionare i Pulsanti
+      AppLab Intro 7 - onEvent twoButtons: Più Pratica suEvento
+      AppLab Intro 7 - playSound: Usare playSound
+      AppLab Intro 7 - thisOrThatAddButton: Questo o Quello
+      AppLab Intro 7 - thisOrThatAddScreen: Questo o Quello
+      AppLab Intro 7 - thisOrThatPersonalize: Questo o Quello
+      AppLab Intro 7 - thisOrThatSetScreen: Questo o Quello
+      CDEF_video_SpritesInAction: Come fare un Personaggio
+      CDEF_video_SpritesInAction_2019: Come fare un Personaggio
+      CSD Problem Solving Process Video: 'Video: Processo di Risoluzione Problemi'
+      CSD U2 HTML Tags Map: Tag HTML
+      CSD U2 HTML Tags Map_2018: Tag HTML
+      CSD U2 HTML Tags Map_2019: Tag HTML
+      CSD U2 Headers map: Intestazioni in HTML
+      CSD U2 Headers map_2018: Intestazioni in HTML
+      CSD U2 Headers map_2019: Intestazioni in HTML
+      CSD U2 Heading Demo: Introduzione alle Intestazioni
+      CSD U2 Heading Demo_2018: Introduzione alle Intestazioni
+      CSD U2 Heading Demo_2019: Introduzione alle Intestazioni
+      CSD U2 Heading Sizes: Dimensioni Intestazioni
+      CSD U2 Heading Sizes_2018: Dimensioni Intestazioni
+      CSD U2 Heading Sizes_2019: Dimensioni Intestazioni
+      CSD U2 Heading Test: Intestazioni e Paragrafi
+      CSD U2 Heading Test_2018: Intestazioni e Paragrafi
+      CSD U2 Heading Test_2019: Intestazioni e Paragrafi
+      CSD U2 Inspector Warm Up: Esplora HTML
+      CSD U2 Inspector Warm Up_2018: Esplora HTML
+      CSD U2 Inspector Warm Up_2019: Esplora HTML
       CSD U2 Pair Programming Video: Programmazione in coppia
       CSD U2 Pair Programming Video_2018: Programmazione in coppia
       CSD U2 Pair Programming Video_2019: Programmazione in coppia
@@ -63,6 +97,12 @@ it-IT:
       CSD U6 functions paramters video: Funzioni con parametri
       CSD U6 functions paramters video_2018: Funzioni con parametri
       CSD U6 functions paramters video_2019: Funzioni con parametri
+      CSD What Makes a Computer a Computer Video: 'Video: Che cosa rende un Computer,
+        un Computer?'
+      CSD What Makes a Computer a Computer Video_2018: 'Video: Che cosa rende un Computer,
+        un Computer?'
+      CSD What Makes a Computer a Computer Video_2019: 'Video: Che cosa rende un Computer,
+        un Computer?'
       'CSD: For Loop_2018': Cicli con contatore
       'Course E: Artist Project': 'Corso E: Progetto con l''Artista'
       'Course E: Artist Project_2018': 'Corso E: Progetto con l''Artista'
@@ -72,6 +112,8 @@ it-IT:
       'Course F: Artist Project_2019': 'Corso F: Progetto con l''Artista'
       CourseEF_video_IntroSpriteLab: Questo è il Laboratorio dei personaggi
       CourseEF_video_IntroSpriteLab_2019: Questo è il Laboratorio dei personaggi
+      CourseEF_video_MakeSprite: Come fare un Personaggio
+      CourseEF_video_MakeSprite_2019: Come fare un Personaggio
       CourseE_Project_SpriteLab: 'Corso E: Progetto nel Laboratorio dei personaggi'
       CourseE_Project_SpriteLab_2019: 'Corso E: Progetto nel Laboratorio dei personaggi'
       CourseE_hoops: Flipper
@@ -87,6 +129,12 @@ it-IT:
       Dance_Party_extras_visible: Dove sono andati?
       Geometric Sun_2018: Sole geometrico
       InspirationalArtwork_2018: Ispirazione!
+      Intro to Web Lab - Part 1: 'Video: Introduzione a Web Lab - Parte 1'
+      Intro to Web Lab - Part 1_2018: 'Video: Introduzione a Web Lab - Parte 1'
+      Intro to Web Lab - Part 1_2019: 'Video: Introduzione a Web Lab - Parte 1'
+      Intro to Web Lab - Part 2: 'Video: Introduzione a Web Lab - Parte 2'
+      Intro to Web Lab - Part 2_2018: 'Video: Introduzione a Web Lab - Parte 2'
+      Intro to Web Lab - Part 2_2019: 'Video: Introduzione a Web Lab - Parte 2'
       MC_HOC_2017_FP20x20: Tempo di giocare
       MC_HOC_2017_FP20x20_2019: Tempo di giocare
       OPD-K5 WhatIsCS: Cos'é l'informatica?

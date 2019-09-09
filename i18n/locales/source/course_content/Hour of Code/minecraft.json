@@ -37,7 +37,7 @@
   },
   "https://studio.code.org/s/minecraft/stage/1/puzzle/11": {
     "short_instructions": "Some games let you keep score. Play tag with these Iron Golems and use the `add 1 to score` block to give yourself a point when you tag them. Reach five points to win!",
-    "long_instructions": "Some games let you keep score. Play tag with these Iron Golems and use the <xml>  <block type=\"craft_addScore\">\n    <title name=\"SCORE\">1</title>\n  </block></xml> block to give yourself a point when you tag them.  \n\n  Reach five points to win!"
+    "long_instructions": "Some games let you keep score. Play tag with these Iron Golems and use the [blockly block][0] block to give yourself a point when you tag them.  \n\n  Reach five points to win!"
   },
   "https://studio.code.org/s/minecraft/stage/1/puzzle/12": {
     "short_instructions": "It's time to make your own Minecraft! Spawn creatures and then make them do whatever you want. Have fun!"

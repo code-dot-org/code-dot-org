@@ -23,6 +23,7 @@ sv:
         edit_header: 'Redigera kontouppgifter'
         error:
           future: kan inte vara i framtiden
+  beta: "beta"
   hello: "Hej världen"
   welcome_back: "Välkommen tillbaka, %{name}"
   your_professional_learning_plan: "Din professionella utbildningsplan"
@@ -366,16 +367,6 @@ sv:
     no_primary_course: "Prova en kurs på Code Studio"
     choose_next_course: "Prova en Code Studio kurs genom att välja en nedan"
     print_certificate: "Skriv ut intyg"
-    announcement_title: "Anslagstavla"
-    announcement_learn_more_button: "Lär dig mer"
-    announcement_try_now_button: "Prova nu"
-    announcement_host_an_hour_button: "Var värd för en Hour of Code"
-    announcement_watch_video_button: "Titta på film"
-    announcement_petition: "Som lärare är du en del av en rörelse som syftar till att ge varje elev, i varje skola en möjlighet att börja lära sig datavetenskap."
-    announcement_petition_button: "Ange ditt namn"
-    announcement_all: "Håll dig uppdaterad med nya funktioner och uppdateringar på vår lärarblogg. <a href='%{teacher_blog_url}' target='_blank'> Se tidigare meddelanden.</a>"
-    announcement_hoc_launch: "Tusentals lärare i mer än 180 länder börjar undervisningen i datavetenskap under Hour of Code de5-11 December. Vi räknar med dig för att kunna nå fler studenter än någonsin tidigare. <a href='%{signup_url}' target='_blank'> registrera evenemanget Hour of Code</a> och låta en annan lärare veta att någon kan börja undervisningen i datavetenskap."
-    announcement_mc_launch: "En av våra mest populära tutorials nu har nu fått en uppföljare! Den helt nya Minecraft Hour of Code Designer låter elever sätta reglerna för Minecraft världen. De kan skapa en helt unik Minecraftupplevelse, och sedan dela den med vänner och spela i den på sina telefoner. Gör det med dina elever under Hour of Code."
   move_students:
     new_section_dne: "Ledsen, men avsnittet %{new_section_code} existerar inte. Ange koden för ett annat avsnitt."
     section_code_cant_be_current_section: "Det aktuella avsnittet kan inte vara samma som det nya avsnittet."

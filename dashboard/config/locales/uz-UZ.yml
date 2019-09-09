@@ -21,6 +21,7 @@ uz:
         edit_header: Foydalanuvchi ma'lumotlarini tahrir qilish
         error:
           future: yaqin orada bo`la olmaydi
+  beta: beta
   hello: Salom Dunyo
   welcome_back: Qayta tashrifingiz bilan, %{name}
   submit: Taqdim qilmoq
@@ -95,8 +96,6 @@ uz:
       student: O‘quvchi
   home:
     trynow: Hoziroq sinang
-    announcement_learn_more_button: Ko‘proq bilish
-    announcement_try_now_button: Hoziroq sinang
   gender:
     none: Javob bermaslikni ma’qul ko‘raman
   user_type:

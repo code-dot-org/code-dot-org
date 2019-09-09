@@ -4449,6 +4449,12 @@ ro:
           stages:
             Number Systems:
               name: Sisteme de numere
+            Sending Binary Messages:
+              name: Transmiterea mesajelor binare
+            Sending Binary Messages with the Internet Simulator:
+              name: Transmiterea mesajelor binare cu simulatorul de internet
+            Binary Numbers:
+              name: Numerele binare
           description_audience: '[șir gol]'
           description_short: '[șir gol]'
           description: '[șir gol]'
@@ -4576,6 +4582,8 @@ ro:
             CS Discoveries Post Course survey:
               description_student: '[șir gol]'
               description_teacher: '[șir gol]'
+            Sprite Properties:
+              name: Proprietăți spiriduș
         csd-bugs:
           description_audience: '[șir gol]'
           description_short: '[șir gol]'
@@ -4586,6 +4594,69 @@ ro:
           description_short: '[șir gol]'
           description: '[șir gol]'
         csp3-pilot:
+          description_audience: '[șir gol]'
+          description_short: '[șir gol]'
+          description: '[șir gol]'
+        csl-vn:
+          stages:
+            Loops in Ice Age:
+              name: Bucle în Ice Age
+        dlp19-csd-mod-fit:
+          description: '[șir gol]'
+        dlp19-csp-mod-fit:
+          description_short: '[șir gol]'
+          description: '[șir gol]'
+        pl-csd-bugs:
+          description_audience: '[șir gol]'
+          description: '[șir gol]'
+        dlp19-csd-mod-w1:
+          description: '[șir gol]'
+        dlp19-csd-mod-w2:
+          description_short: '[șir gol]'
+          description: '[șir gol]'
+        dlp19-csd-mod-w3:
+          description_short: '[șir gol]'
+          description: '[șir gol]'
+        dlp19-csd-mod-w4:
+          description_short: '[șir gol]'
+          description: '[șir gol]'
+        dlp19-csp-mod-w1:
+          description_short: '[șir gol]'
+          description: '[șir gol]'
+        dlp19-csp-mod-w2:
+          description_short: '[șir gol]'
+          description: '[șir gol]'
+        dlp19-csp-mod-w3:
+          description_short: '[șir gol]'
+          description: '[șir gol]'
+        dlp19-csp-mod-w4:
+          description_short: '[șir gol]'
+          description: '[șir gol]'
+        csd-pilot:
+          description_audience: '[șir gol]'
+          description_short: '[șir gol]'
+          description: '[șir gol]'
+        csd4-pilot:
+          description_audience: '[șir gol]'
+          description_short: '[șir gol]'
+          description: '[șir gol]'
+        csp2-pilot:
+          stages:
+            Routers and Redundancy:
+              name: Routere și redundanță
+          description_audience: '[șir gol]'
+          description_short: '[șir gol]'
+          description: '[șir gol]'
+        denny-science:
+          description_audience: '[șir gol]'
+          description_short: '[șir gol]'
+          description: '[șir gol]'
+        peru-2019:
+          stages:
+            Introduction:
+              name: Introducere
+            Nested Loops:
+              name: Repetiții imbricate
           description_audience: '[șir gol]'
           description_short: '[șir gol]'
           description: '[șir gol]'

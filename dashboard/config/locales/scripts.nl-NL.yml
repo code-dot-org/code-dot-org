@@ -3,6 +3,7 @@ nl:
   data:
     script:
       category:
+        csf_category_name: Basis
         cspexams_category_name: CW Principes Praktische Test
         csp17_category_name: CW Principes
         full_course_category_name: Volledige Cursussen
@@ -2123,6 +2124,10 @@ nl:
           stages:
             Number Systems:
               name: Systemen voor getalnotatie
+            Sending Binary Messages:
+              name: Binaire berichten verzenden
+            Binary Numbers:
+              name: Binaire getallen
         time4csdemo:
           stages:
             Crowdsourcing:
@@ -2150,3 +2155,9 @@ nl:
               name: Snelheid
             Functions:
               name: Functies
+        peru-2019:
+          stages:
+            Introduction:
+              name: Introductie
+            Nested Loops:
+              name: Genestelde lussen

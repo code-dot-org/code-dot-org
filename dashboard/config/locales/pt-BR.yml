@@ -44,6 +44,7 @@ pt-BR:
           para <strong>%{email}</strong>.
         error:
           future: não pode estar no futuro
+  beta: beta
   hello: Olá, mundo
   welcome_back: Bem-vindo de volta, %{name}
   your_professional_learning_plan: Seu plano de aprendizagem profissional
@@ -567,131 +568,6 @@ pt-BR:
     no_primary_course: Faça um curso no Code Studio
     choose_next_course: Experimente um dos seguintes cursos do Code Studio
     print_certificate: Imprimir certificado
-    announcement_title: Anúncios
-    announcement_message_fall2016_features: Passamos as férias transformando seu feedback
-      em novos recursos. Agora, você pode <a href="%{pp_url}" target="_blank">acompanhar
-      o progresso de vários alunos</a>, mesmo se eles estiverem programando em pares
-      em um dispositivo. Você pode usar <a href="%{csp_widgets_url}" target="_blank">as
-      melhores ferramentas interativas</a> do nosso curso "Princípios da CC" em <i>qualquer</i>
-      sala de aula. E seus alunos podem <a href="%{unused_code_url}" target="_blank">manter
-      códigos não utilizados</a> em sua área de trabalho para incentivar ainda mais
-      descobertas! Confira todos os nossos novos recursos e conte-nos o que você achou.
-    announcement_csp_widgets_message: Procurando por maneiras divertidas para ensinar
-      sua turma como a Internet funciona, como a criptografia mantém os dados seguros,
-      e outros conceitos? Nós obtivemos as melhores ferramentas interativas do nosso
-      currículo de Princípios da Ciência da Computação e liberamos widgets avulsos
-      que você pode usar a qualquer momento!
-    announcement_learn_more_button: Saiba mais
-    announcement_try_now_button: Experimente agora
-    announcement_host_an_hour_button: Organize um evento
-    announcement_watch_video_button: Ver vídeo
-    announcement_petition: Como professor, você está abrindo as portas de um movimento
-      que dará a cada aluno de todas as escolas a oportunidade de aprender ciência
-      da computação. Agora chegou a hora de seus representantes ouvirem o que você
-      tem a dizer. Esta semana, líderes de educação, 28 governadores, e presidentes
-      das maiores empresas dos Estados Unidos se uniram em uma carta aberta pedindo
-      que o Congresso dos EUA financie o ensino da ciência da computação da pré-escola
-      ao Ensino médio.
-    announcement_petition_button: Adicione seu nome
-    announcement_go_beyond_button: Ir além
-    announcement_apply_now: Inscreva-se já
-    announcement_all: Fique por dentro dos novos recursos e atualizações em nosso
-      blog para professores.<a href='%{teacher_blog_url}' target='_blank'> Veja as
-      últimas novidades.</a>
-    announcement_hoc_launch: Milhares de professores em mais de 180 países começarão
-      a ensinar ciência da computação durante a Hora do Código, de 5 a 11 de dezembro.
-      Estamos contando com você para nos ajudar a atingir mais alunos do que nunca.
-      <a href='%{signup_url}' target='_blank'>Registre seu evento da Hora do Código</a>
-      e avise outro professor que ele também pode começar a ensinar ciência da computação.
-    announcement_mc_launch: Um de nossos tutoriais mais populares ganhou uma sequência!
-      O novo Designer para a Hora do Código Minecraft permite que os alunos façam
-      as regras do mundo Minecraft. Eles podem criar uma experiência completamente
-      única de Minecraft e compartilhar com seus amigos ou jogar em seus aparelhos.
-      Faça isso com sua turma na Hora do Código.
-    announcement_how_code_studio: Você não precisa ter experiência para começar a
-      ensinar ciência da computação em sua sala de aula. Code.org oferece currículo,
-      planos de aula, programas de aprendizagem profissionais de alta qualidade e
-      uma enorme quantidade de ferramentas excelentes para todos os níveis escolares&mdash;tudo
-      de que você precisa sem custo algum. Querendo saber por onde começar? Baixe
-      <a href='%{video_download_url}'>este vídeo</a>!
-    announcement_go_beyond: Ir além de uma hora de código e explorar conceitos de
-      ciência do computador com seus alunos a cada semana. Code.org oferece currículo,
-      planos de aula. programas de aprendizagem profissional de alta qualidade e toneladas
-      de ótimas ferramentas para todos os níveis da classe&mdash;e isso é totalmente
-      de graça. :) Você não precisa de nenhuma experiencia para começar a ensinar
-      ciência da computação em sua sala de aula. <b>Encontre o próximo passo que é
-      certo para sua sala de aula.</b>
-    announcement_teacher_recruitment: Professores como você estão liderando o movimento
-      de educação na ciência da computação. Você pode participar de programas de aprendizado
-      profissional K-12 de alta qualidade <strong>sem qualquer custo para você ou
-      sua instituição de ensino</strong>. Obtenha a liderança em ciência da computação
-      na sua escola, e inscreva-se para o aprendizado profissional.
-    announcement_teacher_recruitment2: Professores como você estão liderando o movimento
-      de educação na ciência da computação. Você pode participar de programas de aprendizado
-      profissional K-12 de alta qualidade <strong>sem qualquer custo para você ou
-      sua instituição de ensino</strong>. Obtenha a liderança em ciência da computação
-      na sua escola, e inscreva-se para o aprendizado profissional. Professores do
-      ensino fundamental II ou médio, inscrevam-se em 17 de março.
-    announcement_csf_pilot: "<strong>Professores do Ensino Fundamental I:</strong>
-      Faça parte da atualização dos nossos cursos de Fundamentos da Ciência da Computação!
-      Nós estamos buscando por professores para liderar um currículo atualizado de
-      Fundamentos da Ciência da Computação durante o inverno e primaveira de 2017.
-      Estamos ansiosos para ouvir sua opinião antes destas atualizações irem ao ar
-      em agosto de 2017."
-    announcement_student_privacy: No Code.org, nós levamos muito a sério a privacidade
-      do aluno. Para proteger a privacidade dos mesmos, nós fizemos alterações em
-      nossa área de login para não exibir nomes completos. Ainda que esta atualização
-      reduza as preocupações sobre privacidade, nós encorajamos os usuários a <i>não
-      utilizarem o nome completo dos estudantes</i>.
-    announcement_apcsp_recruitment: '<strong>Professores de Princípios da Ciência
-      da Computação:</strong> Seus estudantes podem ser destaque no próximo vídeo
-      viral do Code.org que encoraja estudantes a fazerem o exame AP Princípios da
-      CC este ano. Estamos convidando todos os estudantes de Princípios da Ciência
-      da Computação a enviarem um vídeo de 10 a 20 segundos para o Twitter, Instagram
-      ou Facebook dizendo "Eu farei o exame #APCSP porque..." Os melhores terão destaque
-      em nosso vídeo e os estudantes ganhadores receberão um brinde do Code.org!'
-    announcement_apcsp_recruitment2: 'O exame de Princípios de Ciência da Computação
-      do programa de Colocação Avançada (AP CS) está prestes a quebrar recordes. A
-      participação dos estudantes no exame poderá mudar drasticamente a diversidade
-      no programa de Colocação Avançada de Ciência da Computação, mas precisamos da
-      sua ajuda. Encoraje todos os estudantes de Princípios de Ciência da Computação
-      a fazer o exame de Princípios de Ciência da Computação do programa de Colocação
-      Avançada e nós iremos te <a href=''%{gift_url}'' target=''_blank''>enviar um
-      presente</a>. Os estudantes também podem encorajar os colegas de todo o país
-      no nosso <a href=''%{challenge_url}'' target=''_blank''>desafio em vídeo #APCSP</a>.'
-    announcement_apcsp_recruitment3: O exame de Princípios de Ciência da Computação
-      do programa de Colocação Avançada (AP CS) está prestes a quebrar recordes. A
-      participação dos estudantes no exame poderá mudar drasticamente a diversidade
-      no programa de Colocação Avançada de Ciência da Computação, mas precisamos da
-      sua ajuda. Encoraje todos os estudantes de Princípios de Ciência da Computação
-      a fazer o exame de Princípios de Ciência da Computação do programa de Colocação
-      Avançada e você poderá ganhar <a href='%{gift_url}' target='_blank'>um cartão
-      de presente, um laptop, ou outro prêmio legal</a>! Compartilhe <a href='%{video_url}'
-      target='_blank'>este vídeo</a> para que os seus estudantes possam ouvir dos
-      seus colegas de todo o país quem vai fazer o exame.
-    announcement_csp_deadline: Última chamada para professores de ensino médio! Assuma
-      a liderança em ciência da computação na sua escola e aplique para nossos programas
-      de aprendizado profissional de alta qualidade <strong>sem absolutamente nenhum
-      custo para sua escola</strong>. Aplicações encerram dia 14 de Abril.
-    announcement_applab_export: Laboratório de Aplicativo, nosso ambiente de programação
-      baseado na web, agora suporta exportar o seu código! Você pode começar a construir
-      apps com blocos de arrastar-e-soltar em JavaScript, e então exportar o código
-      para continuar editando em qualquer ambiente de desenvolvimento profissional
-      de sua escolha.
-    announcement_csp_survey: "<b>Parabéns aos professores do curso de Princípios de
-      Ciência da Computação!</b><br/>Seus alunos do curso de Princípios de Ciência
-      da Computação que farão o exame de Princípios de Ciência da Computação do programa
-      de Colocação Avançada (AP CS) vão se juntar a mais de 50.000 outros estudantes
-      no maior lançamento do exame de Colocação Avançada da história. Agora, permita
-      que as vozes dos seus alunos seja ouvida - lembre a eles de completar a pesquisa
-      de fim do curso! Você poderá rever as respostas dos seus alunos e nós também
-      vamos compartilhar um relatório agregado nacional com você."
-    announcement_navigation_redesign: "<b>Próximas Mudanças na Navegação do Site</b><br/>Em
-      breve neste verão, nós estamos melhorando a navegação através do site do Code.org
-      para que você sempre tenha acesso aos seus principais recursos em qualquer lugar
-      do site. Assim que você entrar na sua conta de professor, todas as páginas terão
-      uma nova barra de navegação com links para sua Página Principal, Cursos, Galeria
-      de Projetos, Turmas e Aprendizado Profissional."
   move_students:
     new_section_dne: A seção %{new_section_code} não existe. Insira outro código de
       seção.

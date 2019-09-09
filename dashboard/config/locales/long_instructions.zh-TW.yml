@@ -66,42 +66,47 @@ zh-TW:
 
         讓我移動到土堆上並把土鏟平，再移動到坑洞上並把洞填滿。
       Alien Defender: "**專案點子**：在 Play Lab 裡設計一個獨一無二的遊戲！"
+      CSD Problem Solving Process Video: |-
+        ## 需思想的問題
+
+        -   在上一次的課程中，你是如何跟著問題解決流程的?
+        -   在你每天的生活中，你是如何利用這個流程去解決問題?
       CSD U3 - Booleans Video: "# 布林表達式影片"
-      CSD U3 - Simple Counter Predict: "# \n\n計數器模型（Counter Pattern）\\\r\n\\\r\n這個模型（Pattern）在程式設計中相當的重要。\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56>\nPM.png>)\\\r\n
+      CSD U3 - Simple Counter Predict: "# \n\n計數器模型（Counter Pattern）\\\r\n\\\r\n這個模型（Pattern）在程式設計中相當的重要。\\\r\n\\\r\n!\\[](\\<<https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56>\nPM.png>)\\\r\n
         \   \\\r\n這會用來讓變數增加 1。你可能會稱之為 **計數器模型**，因為這可以讓變數往上數。\n我們很常使用到這個模型，尤其是在繪圖一類的迴圈。我們來看看它長得怎樣\\\r\n\\\r\n\n#
         做做這個\\\r\n\n\\\r\n這個程式會創造出\n一個變數`counter`，然後使用**計數器模型**來讓它開始計數。\n當你運行程式時，你覺得在畫面會出現什麼？\\\r\n\\\r\n\\*\n**解讀程式**
         然後預測輸出會是怎樣。\\\r\n\\*\n**運行程式** 來檢查是否和你的預測一致。\\\r\n\n-   **跟隔壁的人討論看看**.\n    看你能不能解釋你觀察到了什麼？\\\r\n
         \   \\\r"
-      CSD U3 - Simple Counter Predict_2018: "# \n\n計數器模型（Counter Pattern）\\\r\n\\\r\n這個模型（Pattern）在程式設計中相當的重要。\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56>\nPM.png>)\\\r\n
+      CSD U3 - Simple Counter Predict_2018: "# \n\n計數器模型（Counter Pattern）\\\r\n\\\r\n這個模型（Pattern）在程式設計中相當的重要。\\\r\n\\\r\n!\\[](\\<<https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56>\nPM.png>)\\\r\n
         \   \\\r\n這會用來讓變數增加 1。你可能會稱之為 **計數器模型**，因為這可以讓變數往上數。\n我們很常使用到這個模型，尤其是在繪圖一類的迴圈。我們來看看它長得怎樣\\\r\n\\\r\n\n#
         做做這個\\\r\n\n\\\r\n這個程式會創造出\n一個變數`counter`，然後使用**計數器模型**來讓它開始計數。\n當你運行程式時，你覺得在畫面會出現什麼？\\\r\n\\\r\n\\*\n**解讀程式**
         然後預測輸出會是怎樣。\\\r\n\\*\n**運行程式** 來檢查是否和你的預測一致。\\\r\n\n-   **跟隔壁的人討論看看**.\n    看你能不能解釋你觀察到了什麼？\\\r\n
         \   \\\r"
-      CSD U3 - Simple Counter Predict_2019: "# \n\n計數器模型（Counter Pattern）\\\r\n\\\r\n這個模型（Pattern）在程式設計中相當的重要。\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56>\nPM.png>)\\\r\n
+      CSD U3 - Simple Counter Predict_2019: "# \n\n計數器模型（Counter Pattern）\\\r\n\\\r\n這個模型（Pattern）在程式設計中相當的重要。\\\r\n\\\r\n!\\[](\\<<https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56>\nPM.png>)\\\r\n
         \   \\\r\n這會用來讓變數增加 1。你可能會稱之為 **計數器模型**，因為這可以讓變數往上數。\n我們很常使用到這個模型，尤其是在繪圖一類的迴圈。我們來看看它長得怎樣\\\r\n\\\r\n\n#
         做做這個\\\r\n\n\\\r\n這個程式會創造出\n一個變數`counter`，然後使用**計數器模型**來讓它開始計數。\n當你運行程式時，你覺得在畫面會出現什麼？\\\r\n\\\r\n\\*\n**解讀程式**
         然後預測輸出會是怎樣。\\\r\n\\*\n**運行程式** 來檢查是否和你的預測一致。\\\r\n\n-   **跟隔壁的人討論看看**.\n    看你能不能解釋你觀察到了什麼？\\\r\n
         \   \\\r"
-      CSD U3 Counters explaining counters contained 2: "# \n\n計數器模型（Counter Pattern）\\\r\n\\\r\n這個模型（Pattern）在程式設計中相當的重要。\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56>\nPM.png>)\\\r\n
+      CSD U3 Counters explaining counters contained 2: "# \n\n計數器模型（Counter Pattern）\\\r\n\\\r\n這個模型（Pattern）在程式設計中相當的重要。\\\r\n\\\r\n!\\[](\\<<https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56>\nPM.png>)\\\r\n
         \   \\\r\n這會用來讓變數增加 1。你可能會稱之為 **計數器模型**，因為這可以讓變數往上數。\n我們很常使用到這個模型，尤其是在繪圖一類的迴圈。我們來看看它長得怎樣\\\r\n\\\r\n\n#
         做做這個\\\r\n\n\\\r\n這個程式會創造出\n一個變數`counter`，然後使用**計數器模型**來讓它開始計數。\n當你運行程式時，你覺得在畫面會出現什麼？\\\r\n\\\r\n\\*\n**解讀程式**
         然後預測輸出會是怎樣。\\\r\n\\*\n**運行程式** 來檢查是否和你的預測一致。\\\r\n\n-   **跟隔壁的人討論看看**.\n    看你能不能解釋你觀察到了什麼？\\\r\n
         \   \\\r"
-      CSD U3 Counters explaining counters contained 2_2018: "# \n\n計數器模型（Counter Pattern）\\\r\n\\\r\n這個模型（Pattern）在程式設計中相當的重要。\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56>\nPM.png>)\\\r\n
+      CSD U3 Counters explaining counters contained 2_2018: "# \n\n計數器模型（Counter Pattern）\\\r\n\\\r\n這個模型（Pattern）在程式設計中相當的重要。\\\r\n\\\r\n!\\[](\\<<https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56>\nPM.png>)\\\r\n
         \   \\\r\n這會用來讓變數增加 1。你可能會稱之為 **計數器模型**，因為這可以讓變數往上數。\n我們很常使用到這個模型，尤其是在繪圖一類的迴圈。我們來看看它長得怎樣\\\r\n\\\r\n\n#
         做做這個\\\r\n\n\\\r\n這個程式會創造出\n一個變數`counter`，然後使用**計數器模型**來讓它開始計數。\n當你運行程式時，你覺得在畫面會出現什麼？\\\r\n\\\r\n\\*\n**解讀程式**
         然後預測輸出會是怎樣。\\\r\n\\*\n**運行程式** 來檢查是否和你的預測一致。\\\r\n\n-   **跟隔壁的人討論看看**.\n    看你能不能解釋你觀察到了什麼？\\\r\n
         \   \\\r"
-      CSD U3 Counters explaining counters contained 2_2019: "# \n\n計數器模型（Counter Pattern）\\\r\n\\\r\n這個模型（Pattern）在程式設計中相當的重要。\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56>\nPM.png>)\\\r\n
+      CSD U3 Counters explaining counters contained 2_2019: "# \n\n計數器模型（Counter Pattern）\\\r\n\\\r\n這個模型（Pattern）在程式設計中相當的重要。\\\r\n\\\r\n!\\[](\\<<https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56>\nPM.png>)\\\r\n
         \   \\\r\n這會用來讓變數增加 1。你可能會稱之為 **計數器模型**，因為這可以讓變數往上數。\n我們很常使用到這個模型，尤其是在繪圖一類的迴圈。我們來看看它長得怎樣\\\r\n\\\r\n\n#
         做做這個\\\r\n\n\\\r\n這個程式會創造出\n一個變數`counter`，然後使用**計數器模型**來讓它開始計數。\n當你運行程式時，你覺得在畫面會出現什麼？\\\r\n\\\r\n\\*\n**解讀程式**
         然後預測輸出會是怎樣。\\\r\n\\*\n**運行程式** 來檢查是否和你的預測一致。\\\r\n\n-   **跟隔壁的人討論看看**.\n    看你能不能解釋你觀察到了什麼？\\\r\n
         \   \\\r"
       CSD U5 black white images pixelation: "# 做做看\\\r\n\n\\\r\n輸入 0 或是 1 來完成這個 X
         形的圖案，如果你想要清除重來，可以點擊「可讀格式」。"
-      CSD U5 black white images pixelation 2: "# 做做看\\\r\n\n\\\r\n使用像素化工具來畫出笑臉\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image-1491425592286.52.47>\nPM.png>)"
-      CSD U5 black white images pixelation 2_2018: "# 做做看\\\r\n\n\\\r\n使用像素化工具來畫出笑臉\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image-1491425592286.52.47>\nPM.png>)"
-      CSD U5 black white images pixelation 2_2019: "# 做做看\\\r\n\n\\\r\n使用像素化工具來畫出笑臉\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image-1491425592286.52.47>\nPM.png>)"
+      CSD U5 black white images pixelation 2: "# 做做看\\\r\n\n\\\r\n使用像素化工具來畫出笑臉\\\r\n\\\r\n!\\[](\\<<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image-1491425592286.52.47>\nPM.png>)"
+      CSD U5 black white images pixelation 2_2018: "# 做做看\\\r\n\n\\\r\n使用像素化工具來畫出笑臉\\\r\n\\\r\n!\\[](\\<<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image-1491425592286.52.47>\nPM.png>)"
+      CSD U5 black white images pixelation 2_2019: "# 做做看\\\r\n\n\\\r\n使用像素化工具來畫出笑臉\\\r\n\\\r\n!\\[](\\<<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image-1491425592286.52.47>\nPM.png>)"
       CSD U5 black white images pixelation 3: "# 做做看\\\r\n\n\\\r\n使用像素化工具來畫出笑臉"
       CSD U5 black white images pixelation 3_2018: "# 做做看\\\r\n\n\\\r\n使用像素化工具來畫出笑臉"
       CSD U5 black white images pixelation 3_2019: "# 做做看\\\r\n\n\\\r\n使用像素化工具來畫出笑臉"
@@ -131,6 +136,11 @@ zh-TW:
       CSD U6 predict LED button: 嵌入式預測
       CSD U6 predict LED button_2018: 嵌入式預測
       CSD U6 predict LED button_2019: 嵌入式預測
+      CSD What Makes a Computer a Computer Video_2019: |-
+        ## 想一想
+
+        -   是什麼讓電腦與之前的機器變得不同?
+        -   想想你在電腦上做的事情。所謂的輸入、輸出、儲存和處理發生了什麼事?
       'CSD: Introduction to the Draw Loop_2019': |-
         ## 考量的問題點
 
@@ -258,7 +268,7 @@ zh-TW:
       Dance_Party_02: |-
         讓這隻麋鹿跳舞！
 
-        拖曳出 <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> 程式積木到工作區上。連接到在 <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"小節"</title></block></xml> 程式積木之的後面。您的舞者應該在第 4 個小節之後開始新的動作。
+        拖曳出 <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> 程式積木 到工作區上。連接此程式積木在 <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> 程式積木的後面. 您的舞者應該在第 4 個小節之後開始新的動作。
 
         **小節**用於計算音樂中的時間。在本教學課程中，一小節的長度為四拍。
       Dance_Party_03: |-
@@ -397,6 +407,12 @@ zh-TW:
       K-1 Bee Loops 5: 使用「重複」迴圈讓我收集到花蜜和蜂蜜！
       K-1 Maze Loops 2: 使用`重複`積木讓我抓到豬！
       K-1 Maze Loops 8: 使用「重複」迴圈讓我抓到豬。
+      MC HOC 2016 SCORE LEVEL: |-
+        大部分的遊戲會有分數機制吧。與這些鐵魔像玩「人捉鬼」遊戲，再用<xml>  <block type="craft_addScore">
+            <title name="SCORE">1</title>
+          </block></xml> 程式積木，在你捉到他們時給自己加分。
+
+        達到 5 分就勝利！
       MC_HOC_2017_01_RETRY: |-
         房門反鎖住了，代理 Agent 快來幫忙！
 
@@ -519,6 +535,10 @@ zh-TW:
         幫小藝術家畫出這兩個線條。
 
         ![](https://images.code.org/04501f26a36673460f5c8fe04e3e7686-image-1498002095108.gif)
+      courseA_artist_loops7_2019: |-
+        使用 <xml><block type="controls_repeat_simplified_dropdown" block-text="repeat"><title name="TIMES" config="3-10">???</title></block></xml> 迴圈將波浪加入到水中.
+
+        ![expandable](https://images.code.org/01c5f6772a8b608a2fca5f6de7e25c67-image-1498062629139.gif)
       courseA_artist_loops8: "<div style=\"color: #7665a0; font-size:\n1.6em; line-height:
         1.4em;\" >\r\n我們需要一個梯子到船上。<br/>\r\n</div>\r\n<img\nsrc=\"https://images.code.org/6e4dc767e55d11400f35c6680bbfe1e3-image-1470788284437.gif\"\nwidth=\"300\"/>"
       courseA_artist_loops8_2018: "<div style=\"color: #7665a0; font-size:\n1.6em;
@@ -531,8 +551,11 @@ zh-TW:
       courseA_collector_loops2: |-
         請收集 3 塊寶石！讓 Laurel 移動到寶石那兒，然後用下面的積木來收集：
         <block type="collector_collect"/>
-      courseA_collector_loops2_2018: "移動 Laurel 到寶石那兒，然後使用`收集`積來把它撿起來。\\\r\n\\\r\n收集
-        3 堆寶石以完成這個關卡。"
+      courseA_collector_loops2_2018: |-
+        請收集 3 塊寶石！讓 Laurel 移動到寶石那兒，然後用下面的積木來收集：
+        <block type="collector_collect"/>
+      courseA_collector_loops2_2019: '得到所有的三堆！移動勞雷爾到每一個寶藏, 然後使用<xml><block type="collector_collect"
+        block-text="get treasure"/></xml> 程式積木. '
       courseA_collector_loops3: Laurel 要怎麼只使用一個`東 -->`積木收集所有的 5 個寶藏？
       courseA_collector_loops3_2018: Laurel 要怎麼只使用一個`東 -->`積木收集所有的 5 個寶藏？
       courseA_collector_loops3_2019: Laurel 要怎麼只使用一個`東 -->`積木收集所有的 5 個寶藏？
@@ -551,10 +574,17 @@ zh-TW:
       courseA_harvester_seq1_2019: 幫助農夫撿起所有的玉米！
       courseA_harvester_seq2_2019: 使用 **3 個** <xml><block type="maze_moveWest" block-text="move
         west"/></xml> 積木，讓農夫到達玉米的位置！
+      courseA_harvester_seq3_2019: 使用 **三個** <xml><block type="maze_moveNorth" block-text="move
+        north"/></xml> 程式積木去收成玉米! 不要忘記最後要摘取玉米。
       courseA_harvester_seq6: 自己試試！
       courseA_harvester_seq6_2019: 自己試試！
       courseA_harvester_seq9: 添加兩個積木以完成這個關卡！
       courseA_harvester_seq9_2019: 添加兩個積木以完成這個關卡！
+      courseA_maze_ramp2_2019: 將 <xml><block type="maze_moveEast" block-text="move
+        east"/></xml> 程式積木和 <xml><block type="when_run" block-text="when run"/></xml>
+        程式積木兩者連接起來，來完成你的程式碼, 然後按 "▶ 運行".
+      courseA_maze_ramp3a_2019: 從工具箱裡抓起一個 <xml><block type="maze_moveNorth" block-text="move
+        north"/></xml> 程式積木，然後把它加入在其他程式積木的下面來完成程式碼，接下來按 "▶ 運行".
       courseA_maze_ramp5a_2018: 自己試試這個！
       courseA_maze_ramp5a_2019: 自己試試這個！
       courseA_maze_seq1: _「使用這些積木，試著讓我抓到這隻壞豬豬！」_
@@ -568,6 +598,7 @@ zh-TW:
       courseA_maze_seq12: "抓到那頭豬！\\\r\n\\\r\n<img src=\"https://images.code.org/f908ff77eb81ee85d405a7ba66cc2986-image-1467933103380.gif\"\nwidth=\"200px\"/>\\\r"
       courseA_maze_seq12_2018: 抓到那頭豬！
       courseA_maze_seq12_2019: 抓到那頭豬！
+      courseA_maze_seq13_2019: 抓到這頭豬，不管你用什麼方法！
       courseA_maze_seq1_2018: _「使用這些積木，試著讓我抓到這隻壞豬豬！」_
       courseA_maze_seq1_2019: _「使用這些積木，試著讓我抓到這隻壞豬豬！」_
       courseA_maze_seq3: "_「修正這個程式，好讓我抓到這頭豬！」_\\\r\n\\\r\n<img\nsrc=\"https://images.code.org/629cddc754f9ad02929f06fc68462e4d-image-1467924800613.gif\"\nwidth=\"200\"/>"
@@ -590,6 +621,9 @@ zh-TW:
       courseA_maze_seq_challenge1: 替這個關卡除錯，移除多餘的積木並添加缺少的積木，讓憤怒鳥抓到這頭豬！
       courseA_maze_seq_challenge1_2018: 替這個關卡除錯，移除多餘的積木並添加缺少的積木，讓憤怒鳥抓到這頭豬！
       courseA_maze_seq_challenge1_2019: 替這個關卡除錯，移除多餘的積木並添加缺少的積木，讓憤怒鳥抓到這頭豬！
+      courseA_maze_seq_challenge2_2019: 沿著這條路帶我去找那隻笨豬，記得躲開 TNT 炸藥，不然會見到我的羽毛滿天飛！
+      courseB_Scrat_ramp3a_2019: 從工具箱裡抓起一個 <xml><block type="maze_moveNorth" block-text="move
+        north"/></xml> 程式積木，然後把它加入在其他程式積木的下面來完成程式碼，接下來按 "▶ 運行".
       courseB_Scrat_ramp5a_2018: 自己試試這個！
       courseB_Scrat_ramp5a_2019: 自己試試這個！
       courseB_artist_loops10: "你覺得當小藝術家回到家時看到了什麼？用你學過的技能來畫出這個圖形。\\\r\n\\\r\n\n<hr/>\r\n<h3>Ideas</h3>\r\n<table>\r\n<tr>\r\n<td>\r\n<img\nsrc=\"https://images.code.org/8f4f2a68dae2cf0aa82cc0a49ea4df04-image-1466787750475.gif\"\nwidth=\"150\"/><br/>\r\n<h4>一隻唱歌的蝸牛</h4><br/><br/>\r\n</td>\r\n\r\n<td>\r\n<img\nsrc=\"https://images.code.org/732ce5dd91c7f49f06e88da1a9f664f3-image-1466794904255.gif\"\nwidth=\"150\"/><br/>\r\n<h4>一座大城市</h4><br/><br/>\r\n</td>\r\n\r\n<td>\r\n<img\nsrc=\"https://images.code.org/37fdd6fdd761df09fd4949d5e43f0a7f-image-1466795165642.gif\"\nwidth=\"150\"/><br/>\r\n<h4>A
@@ -598,6 +632,8 @@ zh-TW:
         Concert</h4><br/><br/>\r\n</td>\r\n\r\n<td>\r\n<img\nsrc=\"https://images.code.org/f7bf86b0f86669d82ee2c1565738b9cb-image-1466794447737.gif\"\nwidth=\"150\"/><br/>\r\n<h4>一個生日蛋糕</h4><br/><br/>\r\n</td>\r\n\r\n</tr>\r\n</table>\r"
       courseB_artist_loops10_2019: "你覺得當小藝術家回到家時看到了什麼？用你學過的技能來畫出這個圖形。\\\r\n\\\r\n\n<hr/>\r\n<h3>Ideas</h3>\r\n<table>\r\n<tr>\r\n<td>\r\n<img\nsrc=\"https://images.code.org/8f4f2a68dae2cf0aa82cc0a49ea4df04-image-1466787750475.gif\"\nwidth=\"150\"/><br/>\r\n<h4>一隻唱歌的蝸牛</h4><br/><br/>\r\n</td>\r\n\r\n<td>\r\n<img\nsrc=\"https://images.code.org/732ce5dd91c7f49f06e88da1a9f664f3-image-1466794904255.gif\"\nwidth=\"150\"/><br/>\r\n<h4>一座大城市</h4><br/><br/>\r\n</td>\r\n\r\n<td>\r\n<img\nsrc=\"https://images.code.org/37fdd6fdd761df09fd4949d5e43f0a7f-image-1466795165642.gif\"\nwidth=\"150\"/><br/>\r\n<h4>A
         Concert</h4><br/><br/>\r\n</td>\r\n\r\n<td>\r\n<img\nsrc=\"https://images.code.org/f7bf86b0f86669d82ee2c1565738b9cb-image-1466794447737.gif\"\nwidth=\"150\"/><br/>\r\n<h4>一個生日蛋糕</h4><br/><br/>\r\n</td>\r\n\r\n</tr>\r\n</table>\r"
+      courseB_artist_loops3_2019: 幫助小藝術家畫一條線，畫 7 次以繪出花園的牆。
+      courseB_artist_loops4_2019: 現在我們需要準備好泥土讓他可以耕種。找出程式碼中的臭蟲（bug，程式中有錯誤的意思）幫助藝術家準備好地面。
       courseB_artist_loops6: 灌木叢後面還有美麗的葡萄樹開滿了花。 你可以爬上藤和看到它在哪裡嗎？
       courseB_artist_loops6_2018: 灌木叢後面還有美麗的葡萄樹開滿了花。 你可以爬上藤和看到它在哪裡嗎？
       courseB_artist_loops6_2019: 灌木叢後面還有美麗的葡萄樹開滿了花。 你可以爬上藤和看到它在哪裡嗎？
@@ -608,6 +644,8 @@ zh-TW:
       courseB_artist_loops_challenge2_2018: 我們來玩個遊戲！盡可能畫多一些的 X！你有辦法每一排畫出 3 個嗎？
       courseB_artist_loops_challenge2_2019: 我們來玩個遊戲！盡可能畫多一些的 X！你有辦法每一排畫出 3 個嗎？
       courseB_collector_loops1: "這是冒險家 Laurel！\\\r\n\\\r\n讓她四處移動，並盡可能獲得最多的寶石。"
+      courseB_collector_loops10_2019: 幫助 Laurel 獲得洞穴中的所有寶石。
+      courseB_collector_loops11_2019: 發現寶藏啦！盡可能的收集到所有的寶藏吧！
       courseB_collector_loops1_2018: "這是冒險家 Laurel！\\\r\n\\\r\n讓她四處移動，並盡可能獲得最多的寶石。"
       courseB_collector_loops1_2019: "這是冒險家 Laurel！\\\r\n\\\r\n讓她四處移動，並盡可能獲得最多的寶石。"
       courseB_collector_loops2: "移動 Laurel 到寶石那兒，然後使用`收集`積來把它撿起來。\\\r\n\\\r\n收集 4
@@ -619,6 +657,13 @@ zh-TW:
       courseB_collector_loops3: Laurel 要怎麼只使用一個`東 -->`積木收集所有的 5 個寶藏？
       courseB_collector_loops3_2018: Laurel 要怎麼只使用一個`東 -->`積木收集所有的 5 個寶藏？
       courseB_collector_loops3_2019: Laurel 要怎麼只使用一個`東 -->`積木收集所有的 5 個寶藏？
+      courseB_collector_loops4_2019: 修正 Laurel 的路徑，讓牠能收集到寶藏！
+      courseB_collector_loops5_2019: 添加類似上一關的程式來收集到寶藏。
+      courseB_collector_loops6_2019: 想一想要怎麼編程才能幫助 Laurel 取得這些寶藏！
+      courseB_collector_loops7_2019: 編寫程式來收集這些寶藏。
+      courseB_collector_loops8_2019: "**挑戰：**階梯上到處都是寶藏！寫個程式幫我得到全部的寶藏。"
+      courseB_collector_loops9_2019: _「幫我拿到深谷裡的所有寶藏。」_
+      courseB_collector_loops_challenge1_2019: '這次你只可以用一個移動積木，試著收集到寶藏吧！ '
       courseB_collector_loops_challenge2a: |-
         _快拿到那些寶石！_
 
@@ -641,8 +686,11 @@ zh-TW:
       courseB_iceage_loops7_2019: 鼠奎特真的很想拿到橡樹果實！
       courseB_iceage_loops8: 你有辦法修好這個程式嗎？
       courseB_iceage_loops8_2019: 你有辦法修好這個程式嗎？
+      courseB_maze_seq12_2019: 現在抓到那頭豬，不管你用什麼方法！
       courseB_maze_seq3: _「修正這個程式，使我抓到這頭豬！」_
+      courseB_maze_seq4_2019: 添加 2 個積木讓鳥移動到豬那裡。
       courseB_maze_seq9: "**挑戰：**繞開 TNT 炸蘗，讓鳥能夠抓到豬！"
+      courseB_playlab_events2_2019: 在你點擊`運行`按鈕後，讓飛龍 Daisy 說些話。
       courseB_starWars_prog11: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"Keep going!"_'
       courseB_starWars_prog11_2018: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)

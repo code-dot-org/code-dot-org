@@ -10,6 +10,8 @@
 .field
   = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :design_mode_at_start, description: "Start in Design Mode"}
 .field
+  = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :widget_mode, description: "Enable Widget Mode: Creates an embeded level with a double-width app screen that auto-runs on page load. The coding workspace, design mode, data mode, the reset button, and sharing are all disabled in widget mode."}
+.field
   = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :hide_design_mode, description: "Hide Design Mode"}
 .field
   = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :makerlab_enabled, description: "Enable Maker APIs"}

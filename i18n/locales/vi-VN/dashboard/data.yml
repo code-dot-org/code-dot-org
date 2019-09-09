@@ -45,7 +45,7 @@ vi:
         Gold: Vàng
     concept:
       description:
-        sequence: chuỗi
+        sequence: Chuỗi tuần tự
         if: khối lệnh "nếu"
         if_else: khối lệnh "nếu-ngoài ra"
         loop_times: khối lệnh "lập lại số lần"
@@ -169,8 +169,8 @@ vi:
         jigsaw_8: Sắp xếp các khối để tạo thành hình ảnh cho sẵn
         jigsaw_9: Sắp xếp các khối để tạo thành hình ảnh cho sẵn
         jigsaw_10: Sắp xếp các khối để tạo thành hình ảnh cho sẵn
-        jigsaw_11: Sắp xếp các khối để tạo thành hình ảnh cho sẵn
-        jigsaw_12: Sắp xếp các khối để tạo thành hình ảnh cho sẵn
+        jigsaw_11: Đặt các khối vào đúng thứ tự các số.
+        jigsaw_12: Đặt các khối vào đúng thứ tự các số.
         jigsaw_13: Giải quyết các câu đố!
         mazestep_1: Các bước giải mê cung được mô tả ở đây
         mazestep_2: Các bước giải mê cung được mô tả ở đây
@@ -277,7 +277,7 @@ vi:
         C1_zuck_repeat_loop: Vòng lặp mê cung
         C1_bee_loops: Các vòng ong
         C1_maze_loops: Vòng lặp mê cung
-        C1_playlab_storytelling: 'Phòng trò chơi: Kể chuyện'
+        C1_playlab_storytelling: 'Play Lab: Kể chuyện'
         C1_planting_seed: Trồng một hạt giống
         C1_building_foundation: Xây dựng nền tảng
         C1_going_places_safely: Đến nơi an toàn
@@ -289,7 +289,7 @@ vi:
         C2_bee_loops: Các vòng ong
         C2_bee_debugging: 'Ong: sửa lỗi'
         C2_bee_conditionals: 'Ong: Các điều kiện'
-        C2_playlab_createstory: 'Phòng trò chơi: Kể chuyện'
+        C2_playlab_createstory: 'Play Lab: Kể chuyện'
         C2_graph_paper: lập trình đồ thị trên giấy
         C2_conditionals_with_cards: Điều kiện
         C2_binary_bracelets: Vòng đeo tay nhị phân
@@ -334,6 +334,8 @@ vi:
         C4_unplugged_forloops: Cho vòng lặp
         C4_unplugged_parameters: Sáng tác với tham số
         C4_unplugged_binary: Nhị phân
+        CSF_maze_intro_k1_blocks: Hướng dẫn sử dụng Code Studio
+        CSF_maze_intro_text_blocks: Hướng dẫn sử dụng Code Studio
         CSF_my_robotic_friends: Bạn bè robot của tôi
         frozen_intro: Giới thiệu về Giờ Lập Trình
         frozen_loops: Giới thiệu về vòng lặp
@@ -356,6 +358,8 @@ vi:
         mc_2017_agent_intro: Giờ lập trình Minecraft - Đặc vụ
         mc_2017_puzzle_1: Giờ lập trình Minecraft - Đặc vụ
         csd_applab_arrays: Giới thiệu Danh sách
+        CSF_scrat_loops_K1: Vòng lặp trong Kỷ băng hà
+        CSF_scrat_loops_CF: Vòng lặp trong Kỷ băng hà
         CSF_loops_AB: Vòng lặp
         mc_2018_intro: 'Minecraft: Chuyến thám hiểm đại dương - Giới thiệu'
         MC_2018_loops: 'Minecraft: Chuyến thám hiểm đại dương - Lặp tới khi'

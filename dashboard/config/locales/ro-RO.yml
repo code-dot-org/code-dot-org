@@ -44,6 +44,7 @@ ro:
           a finaliza crearea unui cont Code.org cu <strong>%{provider}</strong> pentru<strong>%{email}</strong>.
         error:
           future: nu poate fi în viitor
+  beta: beta
   hello: Salutare lume
   welcome_back: Bine ai revenit, %{name}
   your_professional_learning_plan: Planul tău prifesional de învățare
@@ -560,131 +561,6 @@ ro:
     choose_next_course: Încearcă un curs cu Atelierul de programare alegând unul de
       mai jos
     print_certificate: Tipărește certificatul
-    announcement_title: Anunțuri
-    announcement_message_fall2016_features: Ne-am petrecut vara transformând feedback-ul
-      vostru în noi caracteristici. Acum, puteţi <a href="%{pp_url}" target="_blank">
-      urmări progresul Mai multor elevi </a> chiar dacă aceștia programeaza in pereche
-      pe un singur dispozitiv. Utilizaţi <a href="%{csp_widgets_url}" target="_blank">
-      cele mai bune instrumente interactive</a> la cursul nostru de CS Principles
-      în <i>orice</i> clasă. Şi elevii pot <a href="%{unused_code_url}" target="_blank">
-      păstra codul meutilizat </a> în spaţiul lor de lucru pentru a încuraja experimentarea!
-      Încearcă toate caracteristicile noastre noi şi spuneţi-ne ce credeţi.
-    announcement_csp_widgets_message: Căutați modalități amuzante de a vă învăța clasa
-      cum funcționează Internetul, cum păstrează criptografia datele securizate, precum
-      și alte concepte? Am adunat în acest sens cele mai bune unelte interactive din
-      curriculum-ul Principiilor de Informatică și am lansat widget-uri independente
-      pe care le puteți utiliza în orice moment!
-    announcement_learn_more_button: Află mai mult
-    announcement_try_now_button: Află mai mult
-    announcement_host_an_hour_button: Organizeaza o ora
-    announcement_watch_video_button: Urmăriţi videoclipul
-    announcement_petition: Ca profesor, sunteți liderul miscarii pentru a oferi fiecarui
-      student din fiecare şcoală oportunitatea de a învăţa informatică. Acum, este
-      timpul să lăsaţi reprezentanţii dumneavoastră sa auda de la dumneavoastra. În
-      această săptămână, liderii de educaţie, 28 guvernatori şi Directorii celor mai
-      mari companii din America s-au alăturat într-o scrisoare deschisă catre Congresul
-      SUA pentru a finanta calculatorul de stiinta si educaţie k-12.
-    announcement_petition_button: Adaugă-ți numele
-    announcement_go_beyond_button: Mergeți mai departe
-    announcement_apply_now: Înscrieți-vă acum
-    announcement_all: Fii la curent cu noutățile si actualizarile de pe blogul cadrelor
-      noastre didactice. <a href='%{teacher_blog_url}' target='_blank'> A se vedea
-      anunturile vechi.</a>
-    announcement_hoc_launch: Mii de cadre didactice în peste 180 de ţări vor începe
-      predarea tehnologiei informatiei si programarii în timpul Hour of Code din 5-11
-      decembrie. Noi ne bzam pe tine pentru a ne ajuta sa ajungem la mai multi elevi
-      decat pana acum. <a href='%{signup_url}' target='_blank'> Inregistreaza-ti evenimentul
-      Hour of Code</a> si indeamna si alti profesori sa realizeze o Ora de Programare.
-    announcement_mc_launch: Unul din tutorialele noastre cele mai populare acum are
-      o continuare! Minecraft Designer permite studenţilor sa faca regulile din lumea
-      Minecraft. Ei pot crea o experienţă total unica de Minecraft, apoi sa o împărtăşească
-      cu prietenii sau sa se joace pe telefoanele lor. Parcurge acest tutorial cu
-      clasa ta la Hour of Code.
-    announcement_how_code_studio: Nu aveţi nevoie de nici o experienţă pentru a începe
-      predarea informaticii în clasa dvs. Code.org oferă curriculum, planuri de lecţie,
-      programe de învățare profesionale de înaltă calitate şi tone de instrumente
-      excelente pentru toate nivelurile de clasă&mdash;toate cele necesare, toate
-      gratuit.Vă întrebați de unde să începeți? Descărcați <a href='%{video_download_url}'>acest
-      video</a>!
-    announcement_go_beyond: Parcurgeți mai mult de o Oră de Cod și explorați concepte
-      informatice cu elevii dvs. în fiecare săptămână. Code.org oferă programe curriculare,
-      planuri de lecții, programe profesionale de învățare de înaltă calitate și tone
-      de instrumente excelente pentru toate nivelele de clasă&mdash; și totul este
-      gratuit :) Nu aveți nevoie de experiență pentru a începe să predați știința
-      informaticii în sala de clasă. <b>Identificați pasul următor potrivit clasei
-      dvs.</b>
-    announcement_teacher_recruitment: Profesori asemenea dumneavoastră conduc mișcarea
-      de educație informatică. Puteți participa la programe de învățământ profesional
-      de înaltă calitate pentru grădiniță până la clasa a 12, <strong>complet gratuit
-      pentru dvs. sau pentru școala dvs.</strong>. Preluați conducerea în domeniul
-      științelor informatice în școala dvs. și aplicați pentru învățarea profesională.
-    announcement_teacher_recruitment2: Profesori asemenea dumneavoastră conduc mișcarea
-      de educație informatică. Puteți participa la programe de învățământ profesional
-      de înaltă calitate pentru grădiniță până la clasa a 12, <strong>complet gratuit
-      pentru dvs. sau pentru școala dvs.</strong>. Preluați conducerea în domeniul
-      științelor informatice în școala dvs. și aplicați pentru învățarea profesională.
-      Profesori ai ciclului gimnazial și liceal aplicați până în 17 martie.
-    announcement_csf_pilot: "<strong>Profesori de școală primară:</strong> Participați
-      la actualizarea cursurilor noastre care predau fundamentele Informaticii! Căutăm
-      cadre didactice care să piloteze un curriculum actualizat al Fundamentelor Informatice
-      pe perioada iernii și în primăvara anului 2019. Suntem dornici să auzim feedbackul
-      dvs. înainte ca aceste actualizări să fie lansate live în august 2019."
-    announcement_student_privacy: La Code.org, acordăm o seriozitate deosebită protecției
-      confidențialității elevilor. Pentru a proteja confidențialitatea elevilor dvs.,
-      am modificat pagina de conectare din secțiunea dvs. pentru a evita afișarea
-      numelor complete. Chiar dacă această actualizare ar trebui să reducă preocupările
-      în privința menținerii confidențialității pe pagina de conectare, noi încurajăm
-      totuși utilizatorii în <i>a nu utiliza numele complete ale elevilor</i>.
-    announcement_apcsp_recruitment: '<strong>Profesori care predați Pricipiile Informaticii:</strong>
-      Elevii dvs. ar putea fi prezentați în următorul videoclip viral al Code.org,
-      care îi încurajează pe studenți să suțină anul acesta examenul la nivel avansat
-      AP (Advanced Placement) în Principii ale Informaticii. Invităm toți elevii care
-      studiază Principiile Informaticii să trimită un clip video de 10-20 de secunde
-      pe Twitter, Instagram sau Facebook, spunând că "susțin examenul #APCSP pentru
-      că..." Cele mai bune înregistrări vor fi prezentate în videoclipul nostru și
-      elevii câștigători vor primi Code.org swag/stil Code.org!'
-    announcement_apcsp_recruitment2: 'Anul acesta se preconizează că examenul de aptitudini
-      avansate AP(Advance Placement) în Principii ale Informaticii va bate recorduri.
-      Participarea elevilor la acest examen de aptitudini avansate ar putea schimba
-      în mod dramatic diversitatea în Informatică și Știința Calculatoarelor. Încurajați
-      fiecare elev care studiază principiile Informaticii să susțină examenul de aptitudini
-      avansate în această disciplină iar noi vă vom <a href=''%{gift_url}'' target=''_blank''>trimite
-      un cadou</a>. De asemenea, elevii își pot încuraja colegii de breaslă din întreaga
-      țară în cadrul inițiativei noastre <a href=''%{challenge_url}'' target=''_blank''>Provocarea
-      video #APCSP</a>.'
-    announcement_apcsp_recruitment3: Se preconizează că examenul de aptitudini avansate
-      AP(Advance Placement) în Principii ale Informaticii și Științei Calculatoarelor
-      va bate recorduri. Participarea elevilor la acest examen ar putea schimba în
-      mod dramatic diversitatea în Informatică și Știința Calculatoarelor - nivel
-      avansat. Încurajați fiecare elev care studiază principiile Informaticii să susțină
-      examenul de aptitudini avansate AP în această disciplină și veți putea câștiga
-      <a href='%{gift_url}' target='_blank'>un card cadou, laptop sau alte premii
-      minunate</a>! Distribuiți <a href='%{video_url}' target='_blank'>acest videoclip</a>
-      pentru ca elevii dvs. să poată afla de colegi de breaslă din întreaga țară care
-      susțin și ei acest examen.
-    announcement_csp_deadline: Ultimul apel pentru profesorii de liceu! Preluați conducerea
-      în implementarea informaticii în școala dvs. și aplicați la programele noastre
-      profesionale de învățare de înaltă calitate <strong>la absolut nici un cost
-      pentru dumneavoastră sau școala dvs</strong>de învăţare. Aplicațiile se primesc
-      până la data de 14 aprilie.
-    announcement_applab_export: Laboratorul de aplicații, mediul nostru de programare
-      pe web, acceptă acum exportul codului dvs.! Puteți să începeți să construiți
-      aplicații cu blocuri JavaScript drag-and-drop, apoi să exportați codul pentru
-      a continua editarea în orice mediu de dezvoltare profesională pe care-l preferați.
-    announcement_csp_survey: "<b>Felicitări Dvs., Profesori care predați Principiile
-      informaticii!</b><br/>Elevii dvs. care studiază Principiile Informaticii și
-      care susțin examenul de aptitudini avansate în Informatică se vor alătura altor
-      peste 50.000 de elevi în cea mai amplă lansare a unui examen la nivel avansat
-      AP (Advance Placement) din istorie. Acum, faceți ca vocile elevilor dvs să fie
-      auzite - reamintiți-le să completeze sondajul de încheiere a cursului! Veți
-      putea examina răspunsurile elevilor dvs. iar noi vom distribui, de asemenea,
-      împreună cu dvs. un raport național global."
-    announcement_navigation_redesign: "<b>Modificări viitoare de navigare pe site</b><br/>În
-      curând, în această vară, vom îmbunătăți navigarea pe site-ul Code.org, astfel
-      încât să aveți întotdeauna acces la resursele de top din orice locație de pe
-      site. De îndată ce vă conectați la contul dvs. de profesor, fiecare pagină va
-      avea o nouă bară de navigare cu link-uri către pagina dvs. de pornire, cursurile,
-      galeria de proiecte, secțiunile și învățarea profesională."
   move_students:
     new_section_dne: Ne pare rău, dar secțiunea %{new_section_code} nu există. Vă
       rugăm să introduceţi un cod aferent unei secţiuni diferite.

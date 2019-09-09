@@ -1,14 +1,10 @@
-class BubbleChoiceDSL < BaseDSL
+class BubbleChoiceDSL < LevelDSL
   def initialize
     super
     @hash[:display_name] = nil
     @hash[:description] = nil
     @hash[:sublevels] = []
     @i18n_strings = Hash.new({})
-  end
-
-  def parse_output
-    {name: @name, properties: @hash}
   end
 
   def display_name(text) @hash[:display_name] = text end

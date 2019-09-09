@@ -249,9 +249,9 @@ zh-CN:
       Robot Doodle_2018:
         4-5_Artist_Patterns_Free_Play_2: 尝试使用这个标签下的新的`评论 `模块, 让自己能在程序里记笔记！
       Underground Avoiding Lava:
-        craft_callout_moveforward: 此代码会检查岩浆，你能添加一条向前移动的命令吗？
+        craft_callout_moveforward: 此代码会检查熔岩，你能添加一条向前移动的命令吗？
       Underground Avoiding Lava_2019:
-        craft_callout_moveforward: 此代码会检查岩浆，你能添加一条向前移动的命令吗？
+        craft_callout_moveforward: 此代码会检查熔岩，你能添加一条向前移动的命令吗？
       Underground Iron:
         craft_what_is_iron: 开采这块铁矿！
       Underground Iron_2019:
@@ -411,7 +411,7 @@ zh-CN:
       courseC_artist_loops1a_2019:
         jumpto_callout: 这个模块对这个项目很重要。请确认使用它。
       courseC_artist_loops1b_2019:
-        sticker2: 将这个加到你的程序中。
+        sticker2: 将这个加到你程序的中部。
       courseC_artist_loopsPrePre1a:
         courseC_artist_loopsPrePre1a_1: 开始使用这个块, 让艺术家到屏幕的中心。
       courseC_artist_loopsPrePre1a_2018:
@@ -472,13 +472,13 @@ zh-CN:
       courseC_maze_programming4_2019:
         courseC_maze_programming4_1: 这是你的模块限制。 它告诉你还可以使用多少个模块。
       courseC_maze_programming7:
-        courseC_maze_programming7_1: 这是你的第一个挑战关卡！这些都是很难的, 可能需要几次尝试。
+        courseC_maze_programming7_1: 这是你的第一个挑战关卡！这些都是很难的，可能需要几次尝试。
         courseC_maze_programming7_2: 这些块是石头做的, 不能扔掉。
       courseC_maze_programming7_2018:
-        courseC_maze_programming7_1: 这是你的第一个挑战关卡！这些都是很难的, 可能需要几次尝试。
+        courseC_maze_programming7_1: 这是你的第一个挑战关卡！这些都是很难的，可能需要几次尝试。
         courseC_maze_programming7_2: 这些块是石头做的, 不能扔掉。
       courseC_maze_programming7_2019:
-        courseC_maze_programming7_1: 这是你的第一个挑战关卡！这些都是很难的, 可能需要几次尝试。
+        courseC_maze_programming7_1: 这是你的第一个挑战关卡！这些都是很难的，可能需要几次尝试。
         courseC_maze_programming7_2: 这些块是石头做的, 不能扔掉。
       courseC_starWars_loops2:
         courseC_starWars_loops2: 在这个关卡中，你只能使用一个这样的模块。
@@ -566,7 +566,7 @@ zh-CN:
       courseD_scrat_ramp7:
         courseD_maze_ramp6_1: 无论您在这里放置什么代码, 都会重复您说的次数, 然后继续运行该程序的其余部分。
       courseD_scrat_ramp8:
-        courseD_maze_ramp7_1: 这是你的第一个挑战关卡！这些都是很难的, 可能需要几次尝试。
+        courseD_maze_ramp7_1: 这是你的第一个挑战关卡！这些都是很难的，可能需要几次尝试。
       courseE_artist_functions1:
         courseD_artist_functions1_1: 让我们用这个模块来帮助创建第一个正方形。
       courseE_artist_functions2:

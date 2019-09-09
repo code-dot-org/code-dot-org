@@ -104,7 +104,6 @@ ta:
   home:
     classroom: உங்கள் வகுப்பறை
     trynow: 'இப்பொழுது முயற்சிக்கவும்'
-    announcement_try_now_button: "இப்பொழுது முயற்சிக்கவும்"
   user_type:
     student: 'மாணவர்'
   dialog:

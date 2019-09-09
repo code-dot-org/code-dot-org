@@ -133,6 +133,7 @@ export default connect(state => ({
 
 export function shouldRunStateOverlaysBeVisible(state) {
   return (
+    !state.pageConstants.widgetMode &&
     !state.pageConstants.hideCoordinateOverlay &&
     !state.pageConstants.isShareView
   );
@@ -140,6 +141,7 @@ export function shouldRunStateOverlaysBeVisible(state) {
 
 export function shouldOverlaysBeVisible(state) {
   return (
+    !state.pageConstants.widgetMode &&
     !state.pageConstants.hideCoordinateOverlay &&
     !(state.runState.isRunning || state.pageConstants.isShareView)
   );

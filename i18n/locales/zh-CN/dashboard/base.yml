@@ -32,6 +32,7 @@ zh-CN:
         finish_sign_up_subheader_provider: '填写信息，来使用 <strong>%{provider}</strong> 的 <strong>%{email}</strong> 创建 Code.org 账户。'
         error:
           future: 不能选择将来的时间
+  beta: "测试版"
   hello: "世界你好"
   welcome_back: "欢迎回来，%{name}"
   your_professional_learning_plan: "你的专业学习计划"
@@ -172,7 +173,7 @@ zh-CN:
     title: '已经有账号了？登录'
     login: '电子邮件'
     login_username: '邮箱/用户名'
-    password: '密码:'
+    password: '密码：'
     remember: '记住我'
     submit: '登录'
   signin:
@@ -333,7 +334,7 @@ zh-CN:
       algebra_game: '代数'
       applab: '应用实验室'
       artist: '小艺术家'
-      artist_k1: '艺术家（学龄前学生）'
+      artist_k1: '小艺术家（学龄前学生）'
       basketball: '篮球'
       bounce: '跳'
       calc: '计算'
@@ -477,33 +478,6 @@ zh-CN:
     no_primary_course: "试试代码工作室的课程"
     choose_next_course: "从下面代码工作室的课程中选一个体验"
     print_certificate: "打印证书"
-    announcement_title: "公告"
-    announcement_message_fall2016_features: "我们利用夏天的时间将您的反馈意见变成新的功能。现在，即使学生们结对编程在一台设备，您也可以 <a href=\"%{pp_url}\" target=\"_blank\">跟踪多个学生的进展</a> 。你可以在<i>任何</i>课堂中，使用计算机科学课程的<a href=\"%{csp_widgets_url}\" target=\"_blank\">最佳互动的工具</a>。并且你的学生可以在他们的空间里<a href=\"%{unused_code_url}\" target=\"_blank\">保留未使用的代码</a>，从而鼓励他们多尝试！试试所有的新功能，让我们知道你的想法。"
-    announcement_csp_widgets_message: "您在寻找一些有趣的方法来教您的班级一些计算机科学的概念吗？比如互联网如何工作，密码学如何为数学保密？我们已经从计算机科学原理课程中找到了最好的互动工具，并且你可以在任何时候，使用这些独立的小工具！"
-    announcement_learn_more_button: "了解详情"
-    announcement_try_now_button: "现在就试试"
-    announcement_host_an_hour_button: "主办一小时"
-    announcement_watch_video_button: "观看视频"
-    announcement_petition: "作为一名教师，你在这项活动中以领先的方式给在每一个学校的每一位学生机会，学习计算机科学。现在，是时候让你的代表们听到你的消息了。本周，教育领导人、 28位州长和美国一些最大的公司的首席执行官们一起在一封公开信里要求美国国会资助 K-12 计算机科学教育。"
-    announcement_petition_button: "添加您的姓名"
-    announcement_go_beyond_button: "超越"
-    announcement_apply_now: "立即申请"
-    announcement_all: "关注我们老师的博客以追踪最新的新功能和更新。<a href='%{teacher_blog_url}' target='_blank'> 看以前的公告。</a>"
-    announcement_hoc_launch: "在12月5日至11日的《编程一小时》活动中，来自180多个国家数以千计的教育工作者会开始教授计算机科学。我们期待你来帮助比以往更多的学生。<a href='%{signup_url}' target='_blank'>注册你的《编程一小时》活动</a>，并且让其他老师知道，任何人都可以教授计算机科学课程。"
-    announcement_mc_launch: "现在，一个我们最受欢迎的教程有了续集！全新的《我的世界》“编程一小时”设计师让学生们为《我的世界》里的世界设置规则。他们可以获得一个完全独一无二的《我的世界》体验，并可以将它分享给朋友或在他们的手机上玩。立即与你的班级参与到“编程一小时”。"
-    announcement_how_code_studio: "你不需要任何经验来在你的课堂中教授计算机科学。Code.org 为所有年级提供教案、 课程计划、 高质量专业学习程序和很多的好工具&mdash; 一切你所需要的，都是免费的。想知道如何开始？下载 <a href='%{video_download_url}'> 这个视频</a> ！"
-    announcement_go_beyond: "每周抽出一个小时的时间，与你的学生共同探索计算机科学概念。Code.org 为所有年级学生提供课程教案、 课程计划以及高质量的专业学习程序，还有很多有用的工具。&mdash;而且全部免费。:)你不需要任何计算机教学经验，<b>为你的课堂找到合适的内容。</b>"
-    announcement_teacher_recruitment: "和您一样的教师在领导计算机科学教育的潮流。你可以参加高质量的12年级的专业学习课程，<strong>这对您和您的学校都是完全免费的</strong>。成为您的学校的计算机科学领头羊，并申请专业学习。"
-    announcement_teacher_recruitment2: "和您一样的教师在领导计算机科学教育的潮流。你可以参加高质量的12年级的专业学习课程，<strong>这对您和您的学校都是完全免费的</strong>。成为您的学校的计算机科学领头羊，并申请专业学习。中学老师请于3月17日前申请。"
-    announcement_csf_pilot: "<strong>小学教师们：</strong>加入我们来更新计算机基础教育课程！我们在寻找教师于2017年冬季春季，来试用计算机科学基础教程。我们希望能在2017年8月更新前听到您的反馈。"
-    announcement_student_privacy: "Code.org对于保护学生的隐私有着非常认真的态度。为了保护您的学生的隐私，我们已经对您的小组的登录页面做了修改，不显示全名。尽管这个修改应能减低登录页面所带来的隐私风险，我们仍鼓励用户<i>不使用学生的全名</i>。"
-    announcement_apcsp_recruitment: "<strong>计算机科学原理教师们：</strong> 您的学生有可能被下一个病毒式视频所选中，这个视频用来鼓励学生们获得计算机科学原理课程考试的绩点。我们正在邀请所有的计算机科学原理的学生来提交一个10到20秒的短片到各种社交网站上：“我正在学习 #APCSP 课程，因为...”。 最佳视频会被我们选到视频中，获胜的学生也会受到Code.org的礼物！"
-    announcement_apcsp_recruitment2: "今年的计算机科学原理考试有望打破纪录。参与学生的多样性的到了很大的提升，但我们仍然需要你的帮助。鼓励每个学习计算机科学原理的学生来参加考试，我们会<a href='%{gift_url}' target='_blank'>送出礼物</a>。学生们也可以在我们的 <a href='%{challenge_url}' target='_blank'>#APCSP 视频挑战</a>中相互激励。"
-    announcement_apcsp_recruitment3: "今年的计算机科学原理考试有望打破纪录。参与学生的多样性的到了很大的提升，但我们仍然需要你的帮助。鼓励每个学习计算机科学原理的学生来参加考试，您有可能会得到<a href='%{gift_url}' target='_blank'>礼品卡、笔记本电脑或其它很酷的奖品</a>！分享<a href='%{video_url}' target='_blank'>这个视频</a>，这样学生们能够从参加考试的同伴那里知道它。"
-    announcement_csp_deadline: "给高中老师的最后召唤！率先在您的学校里教授计算机科学，并申请我们的高质量的<strong>完全免费的</strong>专业学习课程。申请将在4月14日关闭。"
-    announcement_applab_export: "应用实验室是我们的网络编程环境，现在支持导出代码了！你可以通过拖放Javascript代码块来创建应用，然后将代码导出到任何专业的开发环境中继续编辑。"
-    announcement_csp_survey: "<b>祝贺计算机科学原理的教师们！</b><br/>您的正在参加AP计算机科学测验的学生们，会和超过50000名学生一起参加历史上最大的AP考试。现在，让您学生的声音被大家听到吧 ——记住完成课后调查！你能看到学生们的回答，我们也会将合计后全国的报告分享给您。"
-    announcement_navigation_redesign: "<b>即将到来的站点导航的变化</b><br/>夏天即将来临，我们正在改进整个Code.org站点的导航，以便你能从任何位置都访问自己的最常用的资源。一旦您登录了自己的教师账号，每一页都会有一个新的导航栏，里面的链接包括你的主页、课程、项目集、小组和专业课程。"
   move_students:
     new_section_dne: "抱歉，章节 %{new_section_code} 不存在。请输入不同的章节代码。"
     section_code_cant_be_current_section: "当前章节不能与新建单元相同。"
@@ -953,7 +927,7 @@ zh-CN:
   hoc_download:
     title: '《编程一小时》下载'
     capsule_title: '你有网络吗？'
-    capsule_desc: '使用在线的，基于网页的 <a href="%{url}">%{app_name}</a>。'
+    capsule_desc: '使用在线、 基于 web 的 <a href="%{url}">%{app_name}</a>。'
     instructions_headline: '没有网络？'
     instructions: '给教师的提示︰ 如果你的网络条件不好，这些《编程一小时》教程都是可用于下载和安装供离线使用。选择您的语言和平台、下载和安装在你的教室里所有的计算机上。你可能想要使用 USB 驱动器一次下载并安装在所有计算机上。注︰ 学生将不能登录到代码工作室、保存进度或打印证书。教师可提前<a href="%{url}">打印证书</a>。'
     minecraft_name: '《我的世界》编程一小时'

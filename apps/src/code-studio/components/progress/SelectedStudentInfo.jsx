@@ -24,7 +24,7 @@ const styles = {
     flexDirection: 'column'
   },
   bubble: {
-    marginLeft: 56
+    marginLeft: 0
   },
   name: {
     fontFamily: '"Gotham 5r", sans-serif',

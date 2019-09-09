@@ -575,13 +575,8 @@ vi:
       gamelab_checkTouching:
         options:
           CONDITION:
-            '"when"': Khi nào
+            '"when"': khi nào
             '"while"': Lặp khi
-      gamelab_debugSprite:
-        options:
-          VAL:
-            'true': đúng
-            'false': sai
       gamelab_getProp:
         text: "{PROPERTY} {SPRITE}"
         options:
@@ -597,7 +592,7 @@ vi:
       gamelab_keyPressed:
         options:
           CONDITION:
-            '"when"': Khi nào
+            '"when"': khi nào
             '"while"': Lặp khi
           KEY:
             '"up"': trên
@@ -641,7 +636,6 @@ vi:
             '"x"': hoành độ
             '"y"': tung độ
             '"direction"': phương hướng chuyển động
-            '"tint"': sắc thái
       gamelab_setSizes:
         text: thiết lập {PROPERTY} {SPRITE} thành {N}%
         options:
@@ -652,7 +646,7 @@ vi:
       gamelab_spriteClicked:
         options:
           CONDITION:
-            '"when"': Khi nào
+            '"when"': khi nào
             '"while"': Lặp khi
       gamelab_turn:
         options:
@@ -668,13 +662,6 @@ vi:
             '"left"': trái
             '"right"': phải
             '"space"': vũ trụ
-      gamelab_whenPressedAndReleased:
-        options:
-          DIR:
-            "'up'": trên
-            "'down'": xuống
-            "'left'": trái
-            "'right'": phải
       gamelab_whileKey:
         options:
           KEY:
@@ -871,19 +858,19 @@ vi:
       aalab_checkTouching:
         options:
           CONDITION:
-            '"when"': Khi nào
+            '"when"': khi nào
             '"while"': Lặp khi
       aalab_clickedOn:
         options:
           CONDITION:
-            '"when"': Khi nào
+            '"when"': khi nào
             '"while"': Lặp khi
       aalab_jumpTo:
         text: "{SPRITE} nhảy đến {LOCATION}"
       aalab_keyPressed:
         options:
           CONDITION:
-            '"when"': Khi nào
+            '"when"': khi nào
             '"while"': Lặp khi
           KEY:
             '"up"': trên

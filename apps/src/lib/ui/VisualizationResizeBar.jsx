@@ -138,6 +138,7 @@ class VisualizationResizeBar extends React.Component {
 export const UnconnectedVisualizationResizeBar = VisualizationResizeBar;
 export default connect(state => ({
   hidden:
+    state.pageConstants.widgetMode ||
     // e.g. jigsaw
     state.pageConstants.noVisualization ||
     // e.g. share pages

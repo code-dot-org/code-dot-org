@@ -1788,3 +1788,17 @@ el:
               name: Ταχύτητα
             Functions:
               name: Συναρτήσεις
+            Random Numbers:
+              name: Τυχαίοι αριθμοί
+            Sprite Properties:
+              name: Ιδιότητες Χαρακτήρα
+        csl-vn:
+          stages:
+            Loops in Ice Age:
+              name: Βρόχοι στην Εποχή των Παγετώνων
+        peru-2019:
+          stages:
+            Introduction:
+              name: Εισαγωγή
+            Nested Loops:
+              name: Φωλιασμένες Επαναλήψεις

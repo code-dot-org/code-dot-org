@@ -1718,6 +1718,12 @@ he:
           stages:
             While Loops:
               name: לולאות "כל עוד"
+        csp1-pilot:
+          stages:
+            Sending Binary Messages:
+              name: שליחת הודעות בינאריות
+            Sending Binary Messages with the Internet Simulator:
+              name: שליחת הודעות בינאריות עם סימולטור האינטרנט
         time4csdemo:
           stages:
             Conditionals with Cards:
@@ -1749,3 +1755,15 @@ he:
               name: תנאים
             Functions:
               name: פונקציות
+            Sprite Properties:
+              name: מאפייני ספרייט
+        csl-vn:
+          stages:
+            Programming in Maze:
+              name: תכנות במבוך
+            Loops in Ice Age:
+              name: לולאות בעידן הקרח
+        peru-2019:
+          stages:
+            Introduction:
+              name: מבוא

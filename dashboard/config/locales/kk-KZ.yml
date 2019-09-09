@@ -21,6 +21,7 @@ kk:
         edit_header: Жеке парақша мәліметтерін өзгерту
         error:
           future: болашақта болуы мүмкін емес
+  beta: бета
   hello: Сәлем, әлем
   welcome_back: Қайта оралуыңызбен, %{name}
   submit: Жіберу
@@ -321,10 +322,6 @@ kk:
     no_primary_course: Код Студиясы курсын байқап көру
     choose_next_course: Төмендегі Код Студиясы курсының біреуін байқап көріңіз
     print_certificate: Сертификатты басып шығару
-    announcement_title: Хабарландыру
-    announcement_learn_more_button: толығырақ білу
-    announcement_try_now_button: Қазір қолданып көріңіз
-    announcement_watch_video_button: Бейнені көріңіз
   move_students:
     student_not_found: Бір немесе одан көбірек оқушы табылмады.
   share:

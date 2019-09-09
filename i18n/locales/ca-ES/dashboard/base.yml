@@ -32,6 +32,7 @@ ca:
         finish_sign_up_subheader_provider: 'Empleneu la informació següent per acabar creant un compte Code.org amb <strong>%{provider}</strong> per a <strong>%{email}</strong>.'
         error:
           future: no pot ser en el futur
+  beta: "beta"
   hello: "Hola món"
   welcome_back: "Benvingut de nou, %{name}"
   your_professional_learning_plan: "El seu pla d'aprenentatge professional"
@@ -61,8 +62,8 @@ ca:
   trophies: "trofeus"
   courses: 'cursos'
   courses_page:
-    title_student: "Aprendre sobre Code Studio"
-    title_teacher: "Ensenyar informàtica"
+    title_student: "Aprèn informàtica"
+    title_teacher: "Ensenyeu informàtica"
   unplugged_activity: 'Activitat sense connexió'
   of: "de"
   more: "MÉS"
@@ -136,7 +137,7 @@ ca:
     user_type_button: "Actualitzeu el tipus de compte"
     user_type_label: "Tipus de compte"
     user_type_teacher: "Mestre"
-    user_type_student: "estudiant"
+    user_type_student: "alumne"
     field_is_required: "és obligatori"
     accept_terms: "Has d'acceptar crear un compte."
     error: "S'ha produït un error."
@@ -227,8 +228,10 @@ ca:
     header:
       finished_hoc: "He acabat la meva Hora de Codi"
       sign_in_to_save: 'Inicia la sessió per a desar el progrés'
+      course_catalog: "Catàleg de cursos"
       project_gallery: "Projectes"
-      educate_hoc: "Hora del codi"
+      help_support: "Ajuda i suport"
+      educate_hoc: "L'hora del codi"
       about_us: "Sobre nosaltres"
       about_leadership: "Lideratge"
       about_donors: "Donants"
@@ -261,13 +264,17 @@ ca:
       applab: 'Laboratori d''aplicacions'
       artist: 'Artista'
       bounce: 'Rebota'
-      dance: 'Festa amb ball'
+      dance: 'Festa de ball'
       flappy: 'Flappy'
       frozen: 'Frozen'
+      gamelab: 'Laboratori de jocs'
       infinity: 'Infinit'
+      minecraft_adventurer: 'Aventurer Minecraft'
       minecraft_designer: 'Minecraft'
       playlab: 'Play Lab'
+      spritelab: 'Laboratori de personatges'
       starwars: 'Star Wars'
+      view_all: 'Mostra tots els projectes...'
     popup:
       progress_for_user: "Progrés de %{name}"
       progress: 'El teu progrés'
@@ -293,7 +300,7 @@ ca:
     user_not_found: 'No es troba el mestre.'
     student_teacher_disassociated: 'Vostè ha tret %{teacher_name} com el seu mestre.'
     panel:
-      student: 'estudiant'
+      student: 'alumne'
       viewing_solution: 'Mostra la solució'
       try_it_yourself: 'Prova-ho tu'
       section: 'Secció'
@@ -357,8 +364,6 @@ ca:
     no_primary_course: "Intenta un curs a Code Studio"
     choose_next_course: "Intenta un curs Code Studio triant-ne un a continuació"
     print_certificate: "Imprimeix el certificat"
-    announcement_learn_more_button: "Aprèn més"
-    announcement_try_now_button: "Més informació"
   share:
     title: "Aprendre sobre Code Studio"
     description: "Tothom pot aprendre programació. Crea jocs, apps i art amb codi."
@@ -368,24 +373,25 @@ ca:
     female: 'Dona'
     none: 'Prefereixo no respondre'
   user_type:
-    student: 'estudiant'
+    student: 'alumne'
     teacher: 'Mestre'
   footer:
     thank_you: 'Agraïm als nostres <a href="https://code.org/about/donors"> donants</a>, <a href="https://code.org/about/partners"> socis</a>, al nostre <a href="https://code.org/about/team"> extens equip</a>, al nostre elenc de vídeo i als nostres <a href="https://code.org/about/advisors"> assessors d''educació</a> pel seu suport en la creació de Code Studio.'
     help_from_html: 'Enginyers de Google, Microsoft, Facebook i Twitter i han ajudat a crear aquesta classe.'
-    help_from_html_old: 'Enginyers de Google, Microsoft, Facebook i Twitter han ajudat a crear aquests materials.'
+    help_from_html_old: 'Enginyers d''Amazon, Google i Microsoft han ajudat a crear aquests materials.'
     art_from_html: 'Minecraft &#8482; © %{current_year} Microsoft. Tots els drets reservats. < br / > Star Wars &#8482; © %{current_year} Disney i Lucasfilm. Tots els drets reservats. < br / > Frozen &#8482; © %{current_year} Disney. Tots els drets reservats. < br / > Ice Age &#8482; © %{current_year} segle Xx Fox. Tots els drets reservats. < br / > Angry Birds &#8482; © 2009-%{current_year} Rovio entreteniment Ltd. Tots els drets reservats. < br / > Plants vs Zombies &#8482; © %{current_year} Electronic Arts Inc Tots els drets reservats. < br / > El sorprenent món de Gumball és marca registrada i © 2015 Cartoon Network.'
-    powered_by_aws: 'Desenvolupat per Amazon Web Services'
+    powered_by_aws: 'Funciona amb Amazon Web Services'
     copyright: 'Copyright'
     more: 'Més'
     feedback: 'Digues la teva'
-    translate: 'Ajuda''ns a traduir al teu idioma'
+    translate: 'Ajudeu-nos a traduir els continguts'
     support: 'Suport'
     support_url: 'http://support.code.org'
-    tos_short: 'Termes'
+    tos_short: 'Condicions'
     tos: 'Condicions d''ús'
-    privacy: 'Política de Privacitat'
+    privacy: 'Política de privadesa'
     secure: 'Versió segura'
+    report_abuse: 'Denuncieu un abús'
     make_my_own_app: 'Fer la meva aplicació'
     how_it_works: 'Com funciona'
     try_hour_of_code: 'Proveu una hora de codi!'
@@ -404,7 +410,7 @@ ca:
     download: 'Descarregar vídeo'
   compatibility:
     upgrade:
-      link: "Aprèn més"
+      link: "Més informació"
   slow_loading: 'Això està trigant més de l''habitual...'
   try_reloading: 'Prova de tornar a carregar la pàgina'
   next_stage: 'Has acabat! Continua amb la següent etapa'
@@ -415,7 +421,7 @@ ca:
   download_coming_soon: 'Activitat descarregable properament.'
   video_coming_soon: 'Vídeo molt aviat!'
   share_code:
-    title: "Feu clic a \"Executa\" per veure el meu programa en acció"
+    title: "Feu clic a «Executa» per veure el meu programa en acció"
     bounce_og_title: "Comprovi el meu joc de rebot"
     flappy_og_title: "Comprova el meu joc de Flappy"
     studio_og_title: "Fes una mirada a la meva aplicació Play Lab"
@@ -439,15 +445,17 @@ ca:
   upsell:
     applab:
       title: 'Laboratori d''aplicacions'
+      body: "El Laboratori d'aplicacions és un entorn de programació on podeu crear aplicacions simples. Dissenyeu una aplicació, programeu-la amb blocs o JavaScript per fer-la funcionar i compartiu-la en pocs segons."
     dance:
-      title: 'Festa amb ball'
+      title: 'Festa de ball'
     hoc:
-      body: 'Provea els conceptes bàsics de la Informàtica. Milions li han donat una oportunitat.'
+      title: 'Laberint clàssic'
+      body: 'Prova els conceptes bàsics de la informàtica. Ja ho han fet milions d''usuaris.'
     flappy:
       title: 'Codi Flappy'
       body: 'Vols ''escriure el teu propi joc en menys de 10 minuts? Prova el nostre tutorial Codi Flappy!'
     20-hour:
-      title: 'Curs Accelerat'
+      title: 'Curs accelerat'
       body: 'Aquest curs de 20 hores és una introducció als conceptes bàsics d''informàtica i programació. El curs ha estat dissenyat per impartir a alumnes de 1er d''ESO, però és divertit d''aprendre a qualsevol edat.'
       body_short: 'Aprèn informàtica bàsica en una versió accelerada dels cursos 2-4.'
     hoc2014:
@@ -456,6 +464,12 @@ ca:
     gallery:
       title: "Galeria"
       body: "Mira tota una galeria d'imatges artístiques i aplicacions creades pels nostres usuaris"
+    gamelab:
+      title: "Laboratori de jocs"
+      body: "El Laboratori de jocs és un entorn de programació on podeu crear animacions simples i jocs amb objectes i caràcters que interaccionen uns amb altres."
+    weblab:
+      title: "Laboratori web (beta)"
+      body: "El Laboratori web és un entorn de programació on podeu crear pàgines web simples utilitzant HTML i CSS. Dissenyeu pàgines i compartiu el vostre lloc web en pocs segons."
     frozen:
       title: "Frozen"
     starwars:
@@ -468,13 +482,19 @@ ca:
       body: "Explora el món de Minecraft a través del codi"
     minecraft2016:
       title: "Minecraft"
+      body: "Programa animals i altres criatures de Minecraft en la teva pròpia versió de Minecraft."
     aquatic:
       title: "Minecraft"
     hero:
       title: "Minecraft"
       body: "Minecraft torna amb l'Hora del Codi amb una activitat nova de trinca! Viatja a través de Minecraft amb el codi."
+    unplugged:
+      title: "Lliçons sense connexió"
+      body_short: "Si no teniu ordinadors, proveu aquestes lliçons sense connexió a la classe."
     unplugged_conditionals:
       title: "Condicionals"
+    widgets:
+      title: "Ginys"
   gallery:
     students_drew_these_with_code: "Els estudiants van dibuixar això amb codi!"
     students_made_these_with_code: "Els estudiants van fer això amb codi!"
@@ -487,12 +507,14 @@ ca:
     header: "Galeria"
     header_playlab: "Play Lab"
     header_artist: "Artista"
+    report_abuse: "Denuncieu un abús"
   landing:
     prerelease: "Aquest curs és en <span class='betatext'> beta</span>.  Això significa que no és la versió final del curs i està subjecte a revisió a mida que es reben comentaris i es fan millores."
     prerelease_hoc2014: "Aquest tutorial està en <span class='betatext'> beta</span>.  És subjecte a revisió a mida que es reben comentaris i es fan millores."
     report_bug: "Informeu d'errors"
     support: "Obtenir ajuda"
     support_url: "support.code.org"
+    help_support: "Ajuda i suport"
   multi:
     wrong_title: "Resposta incorrecta"
     wrong_body: "La resposta que he introduït no és correcta.  Si us plau, intenta-ho de nou!"
@@ -543,7 +565,7 @@ ca:
     sign_out: 'Si no vols donar la teva edat tens que <a href="%{url}"> tancar la sessió</a>.'
   terms_interstitial:
     tos: "Condicions d'ús"
-    privacy: "Política de Privacitat"
+    privacy: "Política de privadesa"
     print: "Imprimeix"
   school_info_interstitial:
     save: "Desa"
@@ -551,7 +573,7 @@ ca:
     races:
       other: "Altres"
     submit: "Envia"
-    decline: "Tancar"
+    decline: "Tanca"
   zendesk_too_young_message: 'Lamentablement, els usuaris més joves no poden registrar-se en el nostre lloc de suport. Podeu navegar<a href="http://support.code.org">upport.code.org</a> sense registrar-vos o demanar als vostres pares o mestres que contactin amb nosaltres en representació vostra.'
   progress:
     not_started: no començat
@@ -600,6 +622,7 @@ ca:
     csf_events: 'Esdeveniments'
     csf_binary: 'Binari'
     csf_conditionals: 'Condicionals'
+    csf_spritelab: 'Laboratori de personatges'
     csf_nested_loops: 'Bucles imbricats'
     csf_functions: 'Funcions'
     csf_variables: 'Variables'
@@ -633,6 +656,6 @@ ca:
         opt_in_yes: 'Sí'
         opt_in_no: 'No'
   cookie_banner:
-    accept: 'Accepto'
+    accept: 'D''acord'
   gdpr_dialog:
     yes: 'Sí'

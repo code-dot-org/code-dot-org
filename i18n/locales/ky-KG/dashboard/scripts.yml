@@ -1095,3 +1095,15 @@ ky:
               name: Шартуулар
             Functions:
               name: Функциялар
+        csl-vn:
+          stages:
+            Ocean Scene with Loops:
+              name: Океан көрүнүшү циклдар менен
+        peru-2019:
+          stages:
+            Loops in Artist:
+              name: Сүрөтчүдөгү циклдар
+            Nested Loops Project in Frozen:
+              name: Тоңгондогу салынган циклдар
+            Nested Loops in Frozen:
+              name: Тоңгондогу салынган циклдар

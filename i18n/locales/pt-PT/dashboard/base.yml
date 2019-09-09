@@ -32,6 +32,7 @@ pt:
         finish_sign_up_subheader_provider: 'Preencher as seguintes informações para terminar de criar um contar no Code.org com <strong>%{provider}</strong> para <strong>%{email}</strong>.'
         error:
           future: não pode estar no futuro
+  beta: "beta"
   hello: "Olá mundo"
   welcome_back: "Olá mais uma vez, %{name}"
   your_professional_learning_plan: "O teu plano de aprendizagem profissional"
@@ -368,17 +369,6 @@ pt:
     no_primary_course: "Faça um curso no Code Studio"
     choose_next_course: "Experimenta um dos seguintes cursos do Code Studio"
     print_certificate: "Imprimir certificado"
-    announcement_title: "Anúncios"
-    announcement_learn_more_button: "Saber mais"
-    announcement_try_now_button: "Experimentar agora"
-    announcement_host_an_hour_button: "Hospedar uma hora"
-    announcement_watch_video_button: "Ver vídeo"
-    announcement_petition: "Como professor, você está a liderar o caminho num movimento para dar a cada aluno em todas as escolas a oportunidade de aprender informática. Agora, é hora de deixar aos seus representantes notícias suas. Esta semana, líderes de educação, 28 governadores e maiores empresas de CEOs da América uniram-se numa carta aberta pedindo ao Congresso dos EUA para financiar a educação de ciência de computador K-12."
-    announcement_petition_button: "Adicionar o teu nome"
-    announcement_all: "Mantenha-se atualizado com novos recursos e atualizações em nosso blog de professor. <a href='%{teacher_blog_url}' target='_blank'> Ver passado anúncios.</a>"
-    announcement_hoc_launch: "Milhares de educadores em mais de 180 países começarão a ensinar ciência da computação durante a hora de código este 5-11 de dezembro. Estamos contando com você para nos ajudar a atingir mais alunos do que nunca. <a href='%{signup_url}' target='_blank'> Registe o seu evento da hora de código</a> e outro professor avisa que qualquer um pode começar a ensinar ciência da computação."
-    announcement_mc_launch: "Um de nossos tutoriais mais populares agora tem uma sequela! O novo hora de Minecraft do Designer do código permite que os alunos fazem as regras do mundo Minecraft. Eles podem criar uma experiência completamente única de Minecraft e compartilhar com amigos ou reproduzi-lo em seus telefones. Fazê-lo com a sua turma para a hora do código."
-    announcement_how_code_studio: "Você não precisa ter experiência para começar a ensinar ciência da computação em sua sala de aula. Code.org oferece currículo, planos de aula, programas de aprendizagem profissional de alta qualidade e toneladas de ótimas ferramentas para todos da classe níveis &mdash; tudo que você precisa, tudo, sem qualquer custo. Quer saber onde começar? Baixe <a href='%{video_download_url}'> este vídeo</a>!"
   move_students:
     new_section_dne: "Desculpe, mas não existe secção %{new_section_code}. Por favor insira um código de seção diferente."
     section_code_cant_be_current_section: "A secção atual não pode ser a mesma que a nova seção."

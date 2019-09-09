@@ -57,7 +57,7 @@
   "https://studio.code.org/s/hero/stage/1/puzzle/6": {
     "display_name": "The River",
     "short_instructions": "Get the player to the shovel.",
-    "long_instructions": "Oh no, the bridge is out! \n\nCode the Agent to rebuild the bridge using the <xml>  <block type=\"craft_placeBlock\">\n    <title name=\"TYPE\">       </title>\n  </block></xml> block so that {currentPlayerName} can get to the **shovel** [diamond_shovel].",
+    "long_instructions": "Oh no, the bridge is out! \n\nCode the Agent to rebuild the bridge using the [blockly block][0] block so that {currentPlayerName} can get to the **shovel** [diamond_shovel].",
     "authored_hints": {
       "MC_HOC_2017_05_Cole_a": "Did you know that you can put more than one piece of code inside of a loop?  Try moving forward **and** placing a plank inside of a `repeat` to complete this puzzle.",
       "MC_HOC_2017_05_Cole_b": "Get the Agent across the river, building a bridge as you go."
@@ -77,7 +77,7 @@
   },
   "https://studio.code.org/s/hero/stage/1/puzzle/8": {
     "short_instructions": "Use the `build bridge` function twice to make a path to the Redstone Torch.",
-    "long_instructions": "A **function** named `build bridge` is in your workspace.  All of the code you need to cross the river is built right in! \n\nSnap the small, green <xml> <block type=\"procedures_callnoreturn\" id=\"callMe\"><mutation name=\"build bridge\"/></block></xml> block into your workspace twice to fix the path and get {currentPlayerName} to the Redstone Torch [redstone_torch].",
+    "long_instructions": "A **function** named `build bridge` is in your workspace.  All of the code you need to cross the river is built right in! \n\nSnap the small, green [blockly block][0] block into your workspace twice to fix the path and get {currentPlayerName} to the Redstone Torch [redstone_torch].",
     "authored_hints": {
       "Function_intro_Ryan_b": "If you call the functions correctly, this is the path you will travel...",
       "Function_intro_Ryan_a": "You can call a function many times inside of your program!  Try calling it twice to solve this puzzle."

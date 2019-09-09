@@ -24,6 +24,7 @@ fa:
         edit_header: 'ویرایش اطلاعات کاربری'
         error:
           future: نمیتوان در آینده بود
+  beta: "بتا"
   hello: "سلام دنیا"
   welcome_back: "%{name}، خوش آمدید"
   your_professional_learning_plan: "برنامه آموزش حرفه ای"
@@ -318,11 +319,6 @@ fa:
     no_primary_course: "یک کلاس را در کد استدیو امتحان کنید"
     choose_next_course: "یک دوره ی استودیو ی کد را با انتخاب آن در پایین امتحان کنید"
     print_certificate: "چاپ گواهینامه"
-    announcement_title: "اطلاعیه‌ها"
-    announcement_learn_more_button: "بیشتر بیاموزید"
-    announcement_try_now_button: "هم اکنون شروع کنید"
-    announcement_watch_video_button: "ویدیو را تماشا کنید"
-    announcement_petition_button: "نام خود را اضافه کنید"
   move_students:
     section_code_cant_be_current_section: "بخش جاری نمیتواند همانند بخش جدید باشد."
     student_ids_not_entered: "لطفا student_ids را ارائه کنید."

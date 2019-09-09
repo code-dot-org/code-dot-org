@@ -1644,6 +1644,10 @@ lt:
           stages:
             Number Systems:
               name: Skaičių sistemos
+            Sending Binary Messages:
+              name: Dvejetainių žinučių siuntimas
+            Binary Numbers:
+              name: Dvejetainiai skaičiai
         time4csdemo:
           stages:
             Crowdsourcing:
@@ -1670,3 +1674,9 @@ lt:
               name: Greitis
             Functions:
               name: Komandų kūrimas
+        peru-2019:
+          stages:
+            Introduction:
+              name: Įvadas
+            Nested Loops:
+              name: Kartojimas kartojime

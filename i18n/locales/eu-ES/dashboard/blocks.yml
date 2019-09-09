@@ -239,7 +239,7 @@ eu:
       Dancelab_setDanceSpeed:
         options:
           SPEED:
-            '1': normal
+            '1': arrunta
             '2': fast
             '4': very fast
             '0.5': slow
@@ -258,7 +258,7 @@ eu:
             '"ROBOT"': robot guztiak
             '"SHARK"': marrazo guztiak
           SPEED:
-            '1': normal
+            '1': arrunta
             '2': fast
             '4': very fast
             '0.5': slow
@@ -411,11 +411,6 @@ eu:
         text: "{SPRITE} klik egitean"
       gamelab_comment:
         text: 'iruzkina: {COMMENT}'
-      gamelab_debugSprite:
-        options:
-          VAL:
-            'true': egia
-            'false': gezurra
       gamelab_destroy:
         text: ezabatu {THIS}
       gamelab_getProp:
@@ -470,7 +465,6 @@ eu:
             '"x"': x posizioa
             '"y"': y posizioa
             '"direction"': mugimentuaren norantza
-            '"tint"': tinta
       gamelab_setSizes:
         options:
           PROPERTY:
@@ -499,13 +493,6 @@ eu:
             '"w"': w
             '"s"': s
             '"d"': d
-      gamelab_whenPressedAndReleased:
-        options:
-          DIR:
-            "'up'": gora
-            "'down'": behera
-            "'left'": ezkerrera
-            "'right'": eskuinera
       gamelab_whileKey:
         options:
           KEY:

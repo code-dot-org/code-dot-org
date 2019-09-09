@@ -1,50 +1,13 @@
-# Default global configuration settings for code-dot-org (CDO) application.
-# Keys in this file correspond to CDO.* properties, e.g., `x: foo` will set `CDO.x` to value `'foo'`.
-# All CDO.* properties _must_ be defined in this file, and _should_ be documented with descriptive comments.
-#
-# Once CDO configuration is loaded it is 'frozen', so values cannot be modified at runtime.
-# However, for testing, you can stub specific keys using Mocha syntax, e.g.:
-# CDO.stubs(x: 'foo')
-#
-# Properties defined below can be further configured through several overrides.
-# The loading order is as follows (1 = highest priority):
-#
-# 1. ENV          - environment-variable overrides (CDO_*, plus RACK_ENV and RAILS_ENV)
-#                   e.g.: `CDO_MY_VARIABLE` would override `CDO.my_variable`.
-# 2. locals.yml   - local configuration: locally-configured overrides
-# 3. globals.yml  - global configuration: globally-configured (e.g., Chef provisioned) overrides
-# 4. config/[env] - environment-specific overrides (version-controlled)
-# 5. config       - this file (version-controlled)
-#
-# CDO properties are generally used for the following use-cases:
-#
-# a. Configuration defaults that vary per-environment;
-# b. Configuration that may need to be manually overridden, e.g., when developing/testing services locally;
-# c. Application secrets, such as API keys or passwords;
-# d. Dynamic application endpoints, such as third-party services or dynamically-provisioned application resources
-#
-# CDO properties are not really needed for the following use-cases (though they have sometimes been used in these ways):
-#
-# e. Fixed constants that never change
-#    - Use a standard Ruby module/class constant.
-# f. Global namespace for general-purpose utility objects/functions, e.g., `CDO.cache`
-#    - Use a different namespace/constant to contain the object, e.g., `Cdo.cache` or `CDO_CACHE`.
-# g. Other custom logic that combines values from other CDO properties
-#    - Define a class method in another module/class containing the logic.
-#
-# See also:
-# DCDO and Gatekeeper properties are similar to CDO,
-# but are managed through an admin interface and can be updated while the application is running.
-#
+# See config/README.md for info on this config format.
 
 env:
-_env: <%=env == 'production' ? '' : "_#{env}"%>
-unit_test: <%=!!ENV['UNIT_TEST']%>
-ci: <%=!!ENV['CI']%>
-ci_test: <%=unit_test || ci%>
-root_dir: <%=__dir__%>
-name: <%=`hostname`.strip%>
-rack_env: :<%=env%>
+_env:       <%=env == 'production' ? '' : "_#{env}"%>
+unit_test:  <%=!!ENV['UNIT_TEST']%>
+ci:         <%=!!ENV['CI']%>
+ci_test:    <%=unit_test || ci%>
+root_dir:   <%=__dir__%>
+name:       <%=`hostname`.strip%>
+rack_env:   :<%=env%>
 rack_envs:
   - :development
   - :production
@@ -57,46 +20,46 @@ rack_envs:
 #### Third-party API credentials / configuration
 
 # OAuth provider credentials, used by Omniauth for authentication.
-dashboard_facebook_key:
-dashboard_facebook_secret:
-dashboard_google_key:
-dashboard_google_secret:
-dashboard_windowslive_key:
-dashboard_windowslive_secret:
-dashboard_microsoft_key:
-dashboard_microsoft_secret:
-dashboard_clever_key:
-dashboard_clever_secret:
-dashboard_schoolproject_key:
-dashboard_schoolproject_secret:
+dashboard_facebook_key:         !Secret
+dashboard_facebook_secret:      !Secret
+dashboard_google_key:           !Secret
+dashboard_google_secret:        !Secret
+dashboard_windowslive_key:      !Secret
+dashboard_windowslive_secret:   !Secret
+dashboard_microsoft_key:        !Secret
+dashboard_microsoft_secret:     !Secret
+dashboard_clever_key:           !Secret
+dashboard_clever_secret:        !Secret
+dashboard_schoolproject_key:    !Secret
+dashboard_schoolproject_secret: !Secret
 
 # Recaptcha
-recaptcha_site_key:
-recaptcha_secret_key:
+recaptcha_site_key: !Secret
+recaptcha_secret_key: !Secret
 
 # Logentries (aka 'slog')
-logentries_secret:
+logentries_secret: !Secret
 slog_token:
 
 # Twilio
-twilio_auth:
-twilio_auth_test:
-twilio_messaging_service:
+twilio_auth:               !Secret
+twilio_auth_test:          !Secret
+twilio_messaging_service:  !Secret
 twilio_phone_test_forward:
 twilio_phone_test_to:
-twilio_sid:
-twilio_sid_test:
+twilio_sid:                !Secret
+twilio_sid_test:           !Secret
 
 # Jotform
-jotform_api_key:
+jotform_api_key: !Secret
 jotform_forms:
 jotform_min_dates:
 
 # Learning Tools Interoperability (LTI)
-lti_credentials:
+lti_credentials: !Secret
 
 # PagerDuty
-pagerduty_token:
+pagerduty_token: !Secret
 
 # Pardot
 pardot_password:
@@ -105,36 +68,40 @@ pardot_username:
 
 # Honeybadger
 honeybadger_api_token:
-cronjobs_honeybadger_api_key:
-dashboard_honeybadger_api_key: '00000000'
-pegasus_honeybadger_api_key: '00000000'
+cronjobs_honeybadger_api_key:  !Secret
+dashboard_honeybadger_api_key: !Secret
+pegasus_honeybadger_api_key:   !Secret
 
 # Zendesk
-zendesk_secret:
-zendesk_dev_token:
+zendesk_secret:    !Secret
+zendesk_dev_token: !Secret
 
 # Webpurify
-webpurify_key:
+webpurify_key: !Secret
 
 # Github
-github_access_token:
+github_access_token:   !Secret
 github_webhook_secret:
 
 # Google API credentials (various)
-google_maps_client_id:
+google_maps_client_id:    !Secret
 google_maps_api_key:
-google_maps_secret:
+google_maps_secret:       !Secret
 hoc_map_account:
 hoc_map_table_id:
-ga_account:
-ga_profile_id:
-google_safe_browsing_key: fake_api_key
+ga_account:               !Secret
+ga_profile_id:            !Secret
+google_safe_browsing_key: !Secret
+
+# Mapbox
+mapbox_upload_token:
+mapbox_access_token:      !Secret
 
 # Crowdin
 crowdin_codeorg_api_key:
 
 # Azure Content Moderator
-azure_content_moderation_endpoint:
+azure_content_moderation_endpoint: https://eastus.api.cognitive.microsoft.com/contentmoderator
 azure_content_moderation_key:
 
 # Credentials for SauceLabs.com, used for running selenium tests against
@@ -143,23 +110,23 @@ saucelabs_username:
 saucelabs_authkey:
 
 # Credentials for applitools.com, used for running automated visual tests
-applitools_eyes_api_key:
+applitools_eyes_api_key:      !Secret
 applitools_eyes_api_key_view:
 
 # Slack API credentials
 slack_set_last_dtt_green_token:
 slack_start_build_token:
-slack_endpoint:
-slack_token:
-slack_log_room: <%=env%>
-hip_chat_logging: false
+slack_endpoint:                 !Secret
+slack_token:                    !Secret
+slack_log_room:                 <%=env%>
+hip_chat_logging:               false
 # Logging endpoint used by broken link checker.
 slack_endpoint_broken_links:
 
 # Credentials/configuration for connecting to Firebase to use data blocks or data browser
 # in Applab.
-firebase_name:
-firebase_secret:
+firebase_name: cdo-v3-<%=env%>
+firebase_secret: !Secret
 firebase_channel_id_suffix: ''
 firebase_max_channel_writes_per_15_sec: 300
 firebase_max_channel_writes_per_60_sec: 600
@@ -171,9 +138,9 @@ firebase_max_property_size: 4096
 # Configuration Options for Pusher.com integration
 # Optional for most devs, very useful if working on Internet Simulator
 use_pusher: false
-pusher_app_id: fake_app_id
-pusher_application_key: fake_application_key
-pusher_application_secret: fake_application_secret
+pusher_app_id:             !Secret
+pusher_application_key:    !Secret
+pusher_application_secret: !Secret
 
 # Configuration options for Acapela-Group.com integration
 use_acapela:
@@ -201,12 +168,7 @@ aws_secret_key:
 
 freegeoip_host:
 geocoder_redis_url:
-solr_server:
-
-# Asynchronous queue-processor
-pd_workshop_queue_url:
-activity_queue_url:
-process_queues:
+solr_server: localhost
 
 # S3 bucket and (environment-specific) path-prefix configuration
 assets_bucket:             cdo-dist
@@ -240,19 +202,19 @@ netsim_shard_expiry_seconds: 7200
 # The Fusion Table ID for the census map shown at code.org/yourschool.  If this
 # is set to the ID for the production site, be careful not to run
 # update_census_map as it will overwrite that table.
-census_map_table_id: 1AUZYRjLMI5NiQsDeDBGFsOIFpL_rLGsnxNpSyR13
+census_map_table_id: '1AUZYRjLMI5NiQsDeDBGFsOIFpL_rLGsnxNpSyR13'
 
 # DynamoDB table names for dcdo/gatekeeper
 dcdo_table_name:       dcdo_<%=env%>
 gatekeeper_table_name: gatekeeper_<%=env%>
 
 # Poste (internal transactional email processing framework)
-poste_host: 'localhost.code.org:3000'
+poste_host: <%= code_org_url.sub('//', '') %>
 poste_attachment_dir:
-poste_smtp_password:
-poste_smtp_server:
-poste_smtp_user:
-poste_secret: 'not a real secret'
+poste_smtp_password: !Secret
+poste_smtp_server:   email-smtp.us-east-1.amazonaws.com
+poste_smtp_user:     !Secret
+poste_secret:        !Secret
 
 # Chef defaults
 chef_managed: false
@@ -265,8 +227,8 @@ chef_validation_key: <%="#{ENV['HOME']}/.chef/#{chef_validation_client_name}.pem
 chef_server_url: '<%="https://api.opscode.com/organizations/#{chef_org_name}"%>'
 
 # Cloudfront keys for private content
-cloudfront_key_pair_id:
-cloudfront_private_key:
+cloudfront_key_pair_id: !Secret
+cloudfront_private_key: !Secret
 
 # Discourse configuration
 discourse_sso_secret:
@@ -280,13 +242,16 @@ app_servers: {}
 rack_mini_profiler_enabled:
 https_development:
 default_scheme: '<%=(env == 'development') || ci ? 'http:' : 'https:'%>'
-allowed_iframe_ancestors:
+allowed_iframe_ancestors: http://*.disney.com http://*.diznee.net <%=pegasus_hostname%> <%=dashboard_hostname%>
 skip_locales:
 secret_pictures_csv:
 no_https_store:
-expo_session_secret:
+expo_session_secret: !Secret
 firebase_debug:
 pd_teacher_application_list_secret_key:
+
+# Configure CloudFront to serve static, custom, student-friendly page when web application returns error HTTP response.
+custom_error_response: true
 
 # Whether rake:build should rebuild the apps package
 build_apps: false
@@ -313,7 +278,7 @@ cache_assets_in_memory:
 
 # Encryption key required for decoding certain protected level sources.
 # Contributors should ask a Code.org engineer for this if needed.
-properties_encryption_key:
+properties_encryption_key: !Secret
 
 # NOTE: When a new language is added to this set, make sure to also update
 # the redirection rules for the cdo-curriculum S3 bucket by running the
@@ -343,9 +308,9 @@ build_pegasus: true
 # Dashboard
 override_dashboard:
 dashboard_assets_dir: <%=root_dir%>/dashboard/public/assets
-dashboard_devise_secret:
-dashboard_devise_pepper: not a pepper!
-dashboard_secret_key_base: not a secret
+dashboard_devise_secret:   !Secret
+dashboard_devise_pepper:   !Secret
+dashboard_secret_key_base: !Secret
 dashboard_host: 0.0.0.0
 dashboard_port: 3000
 dashboard_workers: 8
@@ -471,28 +436,28 @@ logs_bucket:
 redshift_host:
 redshift_password:
 
-devinternal_db_writer:
+devinternal_db_writer: !Secret
 
 db_cluster_id:
-db_admin:
+db_admin: !Secret
 reporting_db_admin:
 
-db_writer: 'mysql://root@localhost/'
-reporting_db_writer: 'mysql://root@localhost/'
+db_writer: !Secret
+reporting_db_writer: <%=db_writer%>
 
 dashboard_db_name: dashboard_<%=env%>
-pegasus_db_name: pegasus<%=_env%>
+pegasus_db_name: <%= ENV['USE_PEGASUS_UNITTEST_DB'] ? 'pegasus_unittest' : "pegasus#{_env}" %>
 
 # Default reader endpoints to writer endpoint.
 db_reader: <%=db_writer%>
 reporting_db_reader: <%=reporting_db_writer%>
 
 # Default DB-specific endpoints to base endpoint plus db name.
-dashboard_db_reader:           <%="#{db_reader}#{dashboard_db_name}"%>
-dashboard_db_writer:           <%="#{db_writer}#{dashboard_db_name}"%>
-pegasus_db_reader:             <%="#{db_reader}#{pegasus_db_name}"%>
-pegasus_db_writer:             <%="#{db_writer}#{pegasus_db_name}"%>
-dashboard_reporting_db_reader: <%="#{reporting_db_reader}#{dashboard_db_name}"%>
-dashboard_reporting_db_writer: <%="#{reporting_db_writer}#{dashboard_db_name}"%>
-pegasus_reporting_db_reader:   <%="#{reporting_db_reader}#{pegasus_db_name}"%>
-pegasus_reporting_db_writer:   <%="#{reporting_db_writer}#{pegasus_db_name}"%>
+dashboard_db_reader:           '<%="#{db_reader}#{dashboard_db_name}"%>'
+dashboard_db_writer:           '<%="#{db_writer}#{dashboard_db_name}"%>'
+pegasus_db_reader:             '<%="#{db_reader}#{pegasus_db_name}"%>'
+pegasus_db_writer:             '<%="#{db_writer}#{pegasus_db_name}"%>'
+dashboard_reporting_db_reader: '<%="#{reporting_db_reader}#{dashboard_db_name}"%>'
+dashboard_reporting_db_writer: '<%="#{reporting_db_writer}#{dashboard_db_name}"%>'
+pegasus_reporting_db_reader:   '<%="#{reporting_db_reader}#{pegasus_db_name}"%>'
+pegasus_reporting_db_writer:   '<%="#{reporting_db_writer}#{pegasus_db_name}"%>'

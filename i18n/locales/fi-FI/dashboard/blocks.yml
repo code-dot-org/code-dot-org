@@ -594,11 +594,6 @@ fi:
         text: kun {SPRITE} klikataan
       gamelab_comment:
         text: 'kommentti: {COMMENT}'
-      gamelab_debugSprite:
-        options:
-          VAL:
-            'true': tosi
-            'false': epätosi
       gamelab_destroy:
         text: poista {THIS}
       gamelab_getProp:
@@ -687,7 +682,6 @@ fi:
             '"x"': x:än paikka
             '"y"': y:n paikka
             '"direction"': liikkeen suunta
-            '"tint"': sävy
       gamelab_setSizes:
         text: aseta {SPRITE} {PROPERTY} – {N}%
         options:
@@ -718,13 +712,6 @@ fi:
             '"w"': w
             '"s"': s
             '"d"': d
-      gamelab_whenPressedAndReleased:
-        options:
-          DIR:
-            "'up'": ylös
-            "'down'": alas
-            "'left'": vasemmalle
-            "'right'": oikealle
       gamelab_whileKey:
         options:
           KEY:

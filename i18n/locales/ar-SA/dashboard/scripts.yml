@@ -1564,3 +1564,13 @@ ar:
               name: الجمل الشرطية
             Functions:
               name: دوال
+        csl-vn:
+          stages:
+            Loops in Ice Age:
+              name: الحلقات في العصر الجليدي
+        peru-2019:
+          stages:
+            Introduction:
+              name: مقدمة
+            Nested Loops:
+              name: الحلقات المتداخلة

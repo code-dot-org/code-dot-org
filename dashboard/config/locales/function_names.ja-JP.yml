@@ -24,7 +24,7 @@ ja-JP:
       2-3 Artist Debugging 5:
         draw left leg: 左足を かく
         draw right leg: 右足を かく
-        draw body and arms: 体と うでを かく
+        draw body and arms: からだ と うで を かく
         draw a head: あたまを かく
       2-3 Artist Debugging 6:
         draw right leg: 右足を かく
@@ -37,6 +37,9 @@ ja-JP:
         draw O: Oを かく
         draw D: Dを かく
         draw E: Eを かく
+      2-3 Artist Functions 10:
+        big gear: 大きな歯車
+        small gear: 小さな歯車
       2-3 Artist Functions 11:
         draw a hexagon: 六角形 を かく
       2-3 Artist Functions 11.5:
@@ -54,7 +57,7 @@ ja-JP:
       2-3 Bee Functions 1:
         get 2 nectar: 蜜を2つ取る
       2-3 Bee Functions 10:
-        collect purple nectar: 紫の花の蜜を集める
+        collect purple nectar: ムラサキの花のミツを集める
       2-3 Bee Functions 2:
         get 5: 5つとる
       2-3 Bee Functions 4:
@@ -68,7 +71,7 @@ ja-JP:
       2-3 Bee Functions 9:
         get 7 make 7: ７つとり、7つ作る
       2-3 Bee Functions Assessment 1:
-        get 7: 7つ取る
+        get 7: 7つ とる
       2-3 Bee Functions Assessment 2:
         move and get 3: 移動して、3つ取る
       4-5 Artist 3:
@@ -81,12 +84,13 @@ ja-JP:
         draw a car: 車を かく
       4-5 Artist 8:
         draw circle: 円 を かく
+        draw goal: ゴールをかく
       4-5 Bee Conditionals 7:
-        check purple flower: むらさきの 花を チェックする
+        check purple flower: ムラサキの花を調べる
       4-5 Bee Conditionals 8:
-        check flower make honey: 花を確認し、蜂ミルを作る
+        check flower make honey: 花を調べてハチミツを作る
       4-5 Bee Conditionals Assessment 1:
-        get nectar or make honey: 蜜を採るか蜂蜜を作る
+        get nectar or make honey: 花のミツを集めるかハチミツを作る
       4-5 Bee Debugging 7:
         make 3 honey: ハチミツを3つ作る
       4-5 Bee Debugging 8:

@@ -1675,6 +1675,9 @@ ar-SA:
   compatibility_unsupported_browser: متصفح غير مدعوم. رجاءاً قم بتطوير متصفحك إلى
     <a href='%{supported_browsers_url}', target='_blank'> أحد متصفحاتنا المدعومة.</a>
     يمكنك تجربة رؤية الصفحة, ولكن توقع أن لا تعمل بكافة الوظائف و قد تتعطل.
+  compatibility_unsupported_browser_markdown: متصفح غير مدعوم. رجاءاً قم بتطوير متصفحك
+    إلى <a href='%{supported_browsers_url}', target='_blank'> أحد متصفحاتنا المدعومة.</a>
+    يمكنك تجربة رؤية الصفحة, ولكن توقع أن لا تعمل بكافة الوظائف و قد تتعطل.
   starwars_shortcode: نجمة
   flappy_shortcode: رفرف
   header_my_dashboard: لوحة التحكم

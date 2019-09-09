@@ -22,6 +22,8 @@ he-IL:
       2-3 Artist 4:
         2-3_Artist_4_a: כדי לסיים את ציור הבית, כל שצריך לעשות הוא לצייר ריבוע!
       2-3 Artist 6:
+        2-3_Artist_6_a: 'כדי לייצר את הזוויות הקטנות הללו, אתה צריך לפנות _רחוק יותר_
+          בכל פעם יותר מאשר עשית זאת עם ריבוע.   '
         2-3_Artist_6_b: מכיוון שאני כבר פונה לימין, קל יותר להתחיל על ידי תנועה קדימה
           ואז פניות שמאלה כדי ליצור את המשולש.
         2-3_Artist_6_c: כל צד של המשולש זהה באורכו לכל צד של המרובע...100 פיקסלים!
@@ -50,6 +52,13 @@ he-IL:
       2-3 Artist Debugging 7:
         2-3_Artist_Debugging_7_a: מה קורה אם גרמת לאמן לזוז או לקפוץ אחורה מיד לאחר
           שהוא צייר את השורה הראשונה?
+      2-3 Artist Debugging 8:
+        2-3_Artist_Debugging_8_a: |-
+          כמה פעמים הצורה שלי חזרה על עצמה?
+
+          כמה פעמים על הצורה הזו _צריכה_ לחזור על עצמה?
+
+          היכן תוכל לשנות את זה בתוכנית?
       2-3 Artist Debugging 9:
         2-3_Artist_Debugging_9_a: האמן צריך להסתובב בזווית 60 מעלות שמאלה לפני שהוא
           מתחיל לצייר!
@@ -78,7 +87,50 @@ he-IL:
         2-3_Artist_Functions_4_a: האמן צריך להסתובב 120 מעלות בין כל ריבוע כדי להשלים
           את העיצוב הזה.
       2-3 Artist Loops New 11:
-        2-3_Artist_Loops_New_11_b: הסיבוב החדש שלך צריך לבוא **בסוף** של הקוד שבתוך
+        2-3_Artist_Loops_New_11_a: |-
+          זכור שהקוד של החידה האחרונה היה:
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="controls_repeat">
+                  <title name="TIMES">8</title>
+                  <statement name="DO">
+                    <block type="draw_colour" inline="true">
+                      <value name="COLOUR">
+                        <block type="colour_random"/>
+                      </value>
+                      <next>
+                        <block type="draw_turn_by_constant_dropdown">
+                          <title name="DIR">turnRight</title>
+                          <title name="VALUE" config="45,60,90,120,180">45</title>
+                          <next>
+                            <block type="draw_move_by_constant">
+                              <title name="DIR">moveForward</title>
+                              <title name="VALUE">50</title>
+                              <next>
+                                <block type="draw_turn_by_constant_dropdown">
+                                  <title name="DIR">turnLeft</title>
+                                  <title name="VALUE" config="45,60,90,120,180">90</title>
+                                  <next>
+                                    <block type="draw_move_by_constant">
+                                      <title name="DIR">moveForward</title>
+                                      <title name="VALUE">50</title>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                </block>
+              </next>
+            </block>
+          </xml>
+        2-3_Artist_Loops_New_11_b: הסיבוב החדש שלך צריך לבוא **בסוף** הקוד אשר בתוך
           הלולאה.
       2-3 Artist Loops New 12:
         2-3_Artist Loops_New_12_a: לפני שמתחילים את היהלום, האמן צריך להסתובב שמאלה
@@ -91,6 +143,9 @@ he-IL:
         2-3_Artist_Loops_New_13_a: "בסיום כל יהלום, האמן כבר נמצא עם הפנים לכיוון
           הנכון כדי להתחיל את היהלום הבא. \n\nבגלל זה, אין צורך להוסיף בלוק של \"פנה
           שמאלה\" עודף לפני שהוא מתחיל שוב."
+        2-3_Artist_Loops_New_13_b: "כדי לייצר כל יהלום האמן צריך:\n\n-   לזוז\n-   לפנות
+          ימינה ב120 מעלות\n-   לזוז\n-   לפנות ימינה ב60 מעלות \n\nואז לעשות את כל
+          זה שוב!"
       2-3 Artist Loops New 9:
         2-3_Artist_Loops_New_9_a: האמן צריך להסתובב בזוית 45 מעלות ימינה לפני שהוא
           מתחיל לצייר.
@@ -1013,9 +1068,43 @@ he-IL:
         courseA_artist_loops_challenge1_b: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
         courseA_artist_loops_challenge1_c: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
         courseA_artist_loops_challenge1_d: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+      course2_artist_prog_challenge1:
+        courseC_artist_prog_challenge1_a: 'המלבן ברוחב 200 פיקסלים ובגובה 100 פיקסלים. '
+      course2_artist_prog_challenge2:
+        courseC_artist_prog_challenge2_a: "באפשרותך להכניס פקודות בתוך בלוק 'חזור'
+          כדי לחזור עליהם שוב ושוב. נסה זאת!\n\n<xml>\n  \n          <block type=\"controls_repeat\">\n
+          \           <title name=\"TIMES\">6</title>\n            <statement name=\"DO\">\n
+          \             <block type=\"draw_move_by_constant_dropdown\">\n                <title
+          name=\"DIR\">moveForward</title>\n                <title name=\"VALUE\"
+          config=\"25,50,100,150,200,300\">25</title>\n                <next>\n                  <block
+          type=\"jump_by_constant_dropdown\">\n                    <title name=\"DIR\">jumpForward</title>\n
+          \                   <title name=\"VALUE\" config=\"25,50,100,150,200,300\">25</title>\n
+          \                 </block>\n                </next>\n              </block>\n
+          \             </statement></block></xml>"
+      course2_collector_loops_challenge2:
+        courseC_maze_loops_challenge2_a: הקוד המקורי יכול לעבוד נהדר - רק אם היה אוצר
+          אחד בלבד בכל ערימה!
+      course2_collector_prog_challenge1:
+        courseC_collector_prog_challenge1_a: תוכל להשתמש בפקודה 'אסוף' יותר פעמים
+          כדי לאסוף את האוצר הנוסף.
+      course2_collector_prog_challenge2:
+        courseC_collector_prog_challenge1_a: תוכל להשתמש בפקודה 'אסוף' יותר פעמים
+          כדי לאסוף את האוצר הנוסף.
+      course2_harvester_loops_challenge1:
+        courseC_harvester_loops_challenge1_a: אל תחשוב אפילו לנסות לפתור את החידה
+          בלי לולאות!
       course2_maze_loops_challenge1:
         courseC_maze_loops_challenge1_b: בכל בלוק 'חזור' עליך להשתמש ב- 'פנה שמאלה'
           או 'פנה ימינה' כדי להכין את סקראט אל התבנית הבאה.
+        courseC_maze_loops_challenge1_c: |-
+          אם כבר הגעת עד לכאן, עליך רק 'פנה שמאלה' ואז 'זוז קדימה' מספר פעמים. אל תיכנע!
+
+          ![](<https://images.code.org/7696c5c16b8ddf1d53436cdc7fb6346d-image-1494101728016.14.34 PM.png>)
+      course2_maze_programming_challenge2:
+        courseC_maze_programming_challenge2_a: _אם תשלח אותי אחורה, שים לב לכך שאתה
+          מסובב אותי בכיוון הנכון!_
+        courseC_maze_programming_challenge2_b: הפתרון הקצר ביותר אפשרי בעזרת 5 בלוקים
+          בלבד, אבל בדרך זו עליך להשתמש בבלוק 'חזור'!
       course3_bee_functions_challenge1:
         courseE_bee_functions_challenge1_a: |-
           אם החידה נראית מאתגרת, נסה לבנות את הפונקציה שלך בצעדים קטנים.

@@ -36,6 +36,7 @@ ga:
         edit_header: Cuir Sonraí an Chuntais in Eagar
         error:
           future: earráid - dáta sa todhchaí
+  beta: béite
   hello: Dia dhuit a dhomhain
   welcome_back: Fáilte ar ais a %{name}
   your_professional_learning_plan: Do phlean foghlamtha proifisiúnta
@@ -508,121 +509,6 @@ ga:
     no_primary_course: Bain triail as cúrsa sa Stiúideo Códála
     choose_next_course: Bain triail as cúrsa sa Stiúideo Códála ón liosta thíos
     print_certificate: Priontáil Teastas
-    announcement_title: Fógraí
-    announcement_message_fall2016_features: Chaitheamar an samhradh seo caite ag déanamh
-      gnéithe nua, bunaithe ar an aiseolas a thug sibh dúinn. Mar shampla, anois is
-      féidir leat dul chun cinn <a href="%{pp_url}" target="_blank">níos mó ná dalta
-      amháin</a> a leanúint, fiú má tá siad ag obair le chéile ar ghléas amháin. Is
-      féidir leat <a href="%{csp_widgets_url}" target="_blank">na huirlisí idirghníomhacha
-      is fearr</a> ónár mBunchúrsa Ríomheolaíochta a úsáid i seomra ranga <i>ar bith</i>.
-      Agus beidh do chuid daltaí in ann <a href="%{unused_code_url}" target="_blank">cód
-      neamhúsáidte a choinneáil</a> ina spás oibre chun triail is earráid a spreagadh!
-      Bain triail as na gnéithe nua go léir agus nocht do thuairim.
-    announcement_csp_widgets_message: An bhfuil tú ag lorg bealaí spraíúla chun múineadh
-      do do rang conas a oibríonn an tIdirlíon, conas is féidir sonraí a choinneáil
-      slán leis an gcripteagrafaíocht, nó coincheapa ríomheolaíochta eile? Chruthaíomar
-      giuirléidí saorsheasaimh as na huirlisí idirghníomhacha is fearr ónár gcuraclam
-      ríomheolaíochta!
-    announcement_learn_more_button: Tuilleadh eolais
-    announcement_try_now_button: Bain triail as anois
-    announcement_host_an_hour_button: Bí i d'óstach
-    announcement_watch_video_button: Féach ar an bhfíseán
-    announcement_petition: Mar mhúinteoir, tá tú ar thús cadhnaíochta sa ghluaiseacht
-      chun deis a thabhairt do gach dalta i ngach scoil an ríomheolaíocht a fhoghlaim.
-      Anois, is mithid duit dul i dteagmháil le do theachta dála. An tseachtain seo,
-      tháinig ceannairí oideachais, 28 gobharnóir, agus príomhoifigigh na gcomhlachtaí
-      is mó sna Stáit Aontaithe le chéile i litir oscailte, ag impí ar Chomhdháil
-      na Stát Aontaithe oideachas ríomheolaíochta K-12 a mhaoiniú.
-    announcement_petition_button: Cuir d'ainm leis
-    announcement_go_beyond_button: An chéad chéim eile
-    announcement_apply_now: Cuir iarratas isteach
-    announcement_all: Bí ar an eolas faoi ghnéithe nua agus nuashonruithe ar ár mblag
-      le haghaidh múinteoirí. <a href='%{teacher_blog_url}' target='_blank'>Féach
-      ar fhógraí roimhe seo.</a>
-    announcement_hoc_launch: Tosóidh na mílte múinteoir i níos mó ná 180 tír ar fud
-      an domhain ag múineadh na ríomheolaíochta mar chuid den Uair Chódála idir an
-      5ú lá agus an 11ú lá de mhí na Nollag. Táimid ag brath ort chun cabhrú linn
-      níos mó daltaí ná riamh a shroicheadh. <a href='%{signup_url}' target='_blank'>Cláraigh
-      d'ócáid féin don Uair Chódála</a> agus cuir in iúl do mhúinteoir eile gur féidir
-      le héinne an ríomheolaíocht a mhúineadh.
-    announcement_mc_launch: Tá cúrsa nua againn a leanann ceann de na cúrsaí is mó
-      a thaitníonn le daoine! Leis an Dearthóir Minecraft úrnua don Uair Chódála,
-      is féidir le daltaí na rialacha sa domhan Minecraft a leagan síos, agus eispéireas
-      go hiomlán uathúil a chruthú. Ansin, is féidir leo an cluiche a chomhroinnt
-      le cairde, nó a imirt ar a nguthán. Bainfidh do chuid daltaí taitneamh as!
-    announcement_how_code_studio: Is féidir leat an ríomheolaíocht a mhúineadh i do
-      sheomra ranga fiú mura bhfuil aon taithí agat. Gheobhaidh tú curaclam iomlán,
-      pleananna ceachta, cláracha foghlamtha den chéad scoth, agus neart uirlisí iontacha
-      le haghaidh gach leibhéil &mdash; gach a dteastaíonn uait, saor in aisce. Níl
-      tú cinnte cá dtosóidh tú? Íoslódáil <a href='%{video_download_url}'>an físeán
-      seo</a>!
-    announcement_go_beyond: Téigh thar an Uair Chódála agus taiscéal coincheapa nua
-      sa ríomheolaíocht gach seachtain. Soláthraíonn Code.org curaclam, pleananna
-      ceachta, cláir fhoghlama phroifisiúnta den chéad scoth, agus go leor uirlisí
-      atá feiliúnach do gach aois &mdash; go hiomlán saor in aisce. :) Níl aon taithí
-      ag teastáil chun tosú ag múineadh na ríomheolaíochta. <b>Aimsigh an chéad chéim
-      eile is feiliúnaí do do sheomra ranga.</b>
-    announcement_teacher_recruitment: Is múinteoirí cosúil leatsa atá ar thús cadhnaíochta
-      sa ngluaiseacht ar son oideachais ríomheolaíochta. Is féidir leat páirt a ghlacadh
-      i gcúrsaí teagaisc gairmiúla den chéad scoth <strong>go hiomlán saor in aisce</strong>.
-      Cuir iarratas isteach ar chúrsa gairmiúil, agus cuir an ríomheolaíocht chun
-      cinn i do scoil.
-    announcement_teacher_recruitment2: Is múinteoirí cosúil leatsa atá ar thús cadhnaíochta
-      sa ngluaiseacht ar son oideachais ríomheolaíochta. Is féidir leat páirt a ghlacadh
-      i gcúrsaí teagaisc gairmiúla den chéad scoth <strong>go hiomlán saor in aisce</strong>.
-      Cuir iarratas isteach ar chúrsa gairmiúil, agus cuir an ríomheolaíocht chun
-      cinn i do scoil. Is é Lá 'le Pádraig an spriocdháta do mhúinteoirí i meánscoileanna
-      agus i scoileanna dara leibhéal.
-    announcement_csf_pilot: "<strong>Múinteoirí bunscoile:</strong> Cabhraígí linn
-      na Bunchúrsaí Ríomheolaíochta a nuashonrú! Táimid ag lorg múinteoirí chun páirt
-      a ghlacadh i scéim phíolótach Eanáir - Bealtaine 2017. Ba mhór linn do chuid
-      aiseolais sula bhfoilseoimid na nuashonruithe seo Lúnasa 2017."
-    announcement_student_privacy: Tá Code.org i ndáiríre faoi phríobháideachas na
-      ndaltaí a úsáideann an suíomh. Dá bharr sin, d'athraíomar an leathanach logála
-      isteach sa chaoi nach dtaispeánann sé ainmneacha iomlána a thuilleadh. Cé go
-      laghdóidh sé seo imní faoin phríobháideachas ar an leathanach seo, molaimid
-      do dhaltaí <i>gan a n-ainm iomlán a úsáid</i> mar sin féin.
-    announcement_apcsp_recruitment: '<strong>Dóibh siúd atá ag múineadh Foras Feasa
-      ar an Ríomheolaíocht:</strong> Táimid ag tabhairt cuiridh do gach dalta sa chúrsa
-      Foras Feasa gearrthóg físe 10-20 soicind a thaifeadadh agus a fhoilsiú ar Twitter,
-      Instagram, nó Facebook, ag rá "I''m taking the #APCSP exam because..." Cuirfimid
-      na gearrthóga is fearr sa chéad fhíseán mearscaipthe a bheidh againn, agus bhronnfaimid
-      táirgí Code.org ar na buaiteoirí!'
-    announcement_apcsp_recruitment2: 'Ceaptar go sáróidh an scrúdú AP sa Ríomheolaíocht
-      curiarrachtaí i mbliana. Seans go bhfeicfimid athrú suntasach ar éagsúlacht
-      na ndaltaí in AP Computer Science, ach tá cúnamh uainn. <a href=''%{gift_url}''
-      target=''_blank''>Seolfaimid bronntanas chugat</a> má spreagann tú gach dalta
-      i bhForas Feasa na Ríomheolaíocht an scrúdú AP a dhéanamh. Is féidir le daltaí
-      a gcuid comhghleacaithe timpeall na tíre a spreagadh freisin inár <a href=''%{challenge_url}''
-      target=''_blank''>ndúshlán físe #APCSP</a>.'
-    announcement_apcsp_recruitment3: Ceaptar go sáróidh an scrúdú AP sa Ríomheolaíocht
-      curiarrachtaí i mbliana. Seans go bhfeicfimid athrú suntasach ar éagsúlacht
-      na ndaltaí in AP Computer Science, ach tá cúnamh uainn. Má spreagann tú do chuid
-      daltaí chun an scrúdú AP a dhéanamh, seans go mbuafaidh tú <a href='%{gift_url}'
-      target='_blank'>cárta bronntanais, ríomhaire glúine, nó duais iontach eile</a>!
-      Scaip <a href='%{video_url}' target='_blank'>an físeán seo</a> sa chaoi go gcloisfidh
-      do chuid daltaí ó dhaoine eile timpeall na tíre a dhéanfaidh an scrúdú freisin.
-    announcement_csp_deadline: Gairm dheiridh do mhúinteoirí dara leibhéil! Bí ar
-      thús cadhnaíochta i do scoil ó thaobh ríomheolaíochta, agus cuir iarratas isteach
-      ar chlár foghlamtha proifisiúnta den chéad scoth, <strong>go hiomlán saor in
-      aisce</strong>. Dúnfar iarratais ar 14 Aibreán.
-    announcement_applab_export: Anois is féidir leat cód a easpórtáil ón tSaotharlann
-      Aipeanna, ár dtimpeallacht ríomhchláraithe ar an nGréasán. Is féidir leat aipeanna
-      a thosú le blocanna JavaScript mar is gnáth, ansin an cód a easpórtáil sa chaoi
-      go mbeidh tú in ann é a chur in eagar i do rogha timpeallachta ríomhchláraithe
-      proifisiúnta.
-    announcement_csp_survey: "<b>Comhghairdeas a Mhúinteoirí i bhForas Feasa na Ríomheolaíochta!</b><br/>Beidh
-      do chuid daltaí a ghlacfaidh an scrúdú AP i measc níos mó ná 50,000 dalta eile
-      - an scrúdú AP ríomheolaíochta is mó riamh. Meabhraigh dóibh a dtuairimí a nochtadh
-      trí an suirbhé ag deireadh an chúrsa a dhéanamh. Beidh tú in ann freagraí do
-      chuid daltaí a fheiceáil, agus seolfaimid tuairisc chomhiomlán náisiúnta chugat
-      freisin."
-    announcement_navigation_redesign: "<b>Nascleanúint Nua le Teacht</b><br/>Le linn
-      an tsamhraidh seo, cuirfimid feabhas ar an gcóras nascleanúna ar fud Code.org
-      sa chaoi go mbeidh teacht agat ar na hacmhainní is tábhachtaí ó aon áit ar an
-      suíomh. Chomh luath agus a bhéas tú logáilte isteach i do chuntas múinteora,
-      feicfidh tú barra nua nascleanúna ar a bhfuil nascanna le do Leathanach Baile,
-      Cúrsaí, Gailearaí, Rannáin, agus Foghlaim Phroifisiúnta."
   move_students:
     new_section_dne: Níl rannán %{new_section_code} ann. Cuir isteach cód rannáin
       eile.

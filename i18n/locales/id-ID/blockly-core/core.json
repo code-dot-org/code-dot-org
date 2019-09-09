@@ -12,7 +12,7 @@
     "COLOUR_BLEND_COLOUR2": "warna 2",
     "COLOUR_BLEND_HELPURL": "http://meyerweb.com/eric/tools/color-blend/",
     "COLOUR_BLEND_RATIO": "rasio",
-    "COLOUR_BLEND_TITLE": "mencampur",
+    "COLOUR_BLEND_TITLE": "campur",
     "COLOUR_BLEND_TOOLTIP": "Mencampur dua warna dengan perbandingan yang diberikan (0,0 - 1,0).",
     "COLOUR_PICKER_HELPURL": "http://en.wikipedia.org/wiki/Color",
     "COLOUR_PICKER_TOOLTIP": "Pilih warna dari palet.",

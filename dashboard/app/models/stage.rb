@@ -173,6 +173,14 @@ class Stage < ActiveRecord::Base
     stage_summary.freeze
   end
 
+  def summarize_for_edit
+    summary = summarize.dup
+    # Do not let script name override stage name when there is only one stage
+    summary[:name] = I18n.t("data.script.name.#{script.name}.stages.#{name}.name")
+    summary[:flex_category] = flex_category
+    summary.freeze
+  end
+
   # Provides a JSON summary of a particular stage, that is consumed by tools used to
   # build lesson plans
   def summary_for_lesson_plans

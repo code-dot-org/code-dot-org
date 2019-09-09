@@ -30,20 +30,22 @@ it-IT:
         - {}
       2-3 Big Event Match 1:
         title: Esercizio di Verifica (Corrispondenza)
+        content1: "/script_assets/k_1_images/unplugged_images/big_event_1_desc.png"
         content2: Associa ogni sequenza di figure alla relativa sequenza di mosse
           di danza, usando la corrispondenza sopra illustrata.
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_q1.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_q2.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_q3.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_q4.png"
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a2.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a3.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a4.png"
       2-3 Binary Match 1:
         title: Esercizio di Verifica (Corrispondenza)
+        content1: "/script_assets/2-3_images/unplugged/binary_1_q.png, 250"
         content2: Utilizza la chiave qua sopra per associare ogni codice alla lettera
           cui è abbinato.
         questions:
@@ -52,10 +54,10 @@ it-IT:
         - text: "<strong>P</strong>"
         - text: "<strong>Q</strong>"
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/unplugged/binary_1_a3.png"
+        - text: "/script_assets/2-3_images/unplugged/binary_1_a1.png"
+        - text: "/script_assets/2-3_images/unplugged/binary_1_a2.png"
+        - text: "/script_assets/2-3_images/unplugged/binary_1_a4.png"
       2-3 Conditionals Multi 1:
         title: Esercizio di Verifica (Risposte Multiple)
         questions:
@@ -89,13 +91,13 @@ it-IT:
         title: Esercizio di Verifica (Corrispondenza)
         content1: Associa ad ogni figura il programma corretto.
         questions:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_2_q1.png"
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_2_q2.png"
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_2_q3.png"
         answers:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_2_a3.png"
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_2_a2.png"
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_2_a1.png"
       2-3 Graph Paper Multi 1:
         title: Esercizio di Verifica (Risposte Multiple)
         questions:
@@ -484,9 +486,79 @@ it-IT:
       Begin planning your project:
         title: titolo
         content1: Descrizione qui
+        markdown: "# Il processo di progettazione\nProgettare software significa risolvere
+          tanti piccoli problemi, in continuazione. Il problema principale nella progettazione
+          del software è la definizione della prima parte da creare.\n\nQuesto processo
+          può essere utile in molti ambiti, ma qui ci concentreremo sulla progettazione
+          di app (applicazioni, programmi).\n\n<div style=\"position: relative; text-align:
+          center; font-size: 1em\">\n  <img src=\"https://images.code.org/a157e5f67444573e19e980a507db16fb-image-1563319667694.png\"
+          alt=\"Processo di progettazione\" style=\"width: 50%;\">\n  <div style=\"position:
+          absolute; top: 24%; left: 49.4%; transform: translateX(-49.4%); font-weight:
+          bold;\">Definisci</div> \n  <div style=\"position: absolute; top: 52%; left:
+          60.5%; transform: translateX(-60.5%); font-weight: bold;\">Prepara</div>\n
+          \ <div style=\"position: absolute; top: 79%; left: 49.7%; transform: translateX(-49.7%);
+          font-weight: bold;\">Prova</div>\n  <div style=\"position: absolute; top:
+          52%; left: 39%; transform: translateX(-39%); font-weight: bold;\">Rifletti</div>\n</div>\n\n*
+          **Definisci**\n  * Che tipo di app vorresti creare?\n  * Quali sono i tuoi
+          vincoli?\n  * Come te la immagini?\n* **Prepara**\n  * Raccogli le idee\n
+          \ * Confronta i pro e i contro\n  * Fai un piano\n* **Prova**\n  * Metti
+          in atto il tuo piano\n* **Rifletti**\n  * Come ti sembra il risultato, rispetto
+          agli obiettivi che hai fissato durante la definizione dell'app?\n  * Cosa
+          puoi imparare da questa esperienza e fare meglio la prossima volta?\n  *
+          Quali nuovi problemi hai scoperto?\n\n# Come lo mettiamo in pratica\n\nNel
+          corso delle prossime settimane, avrai l'opportunità di sperimentare alcuni
+          giochi già pronti e, sfruttando ciò che hai imparato, di progettare il tuo
+          gioco personale. Dopo aver creato il tuo gioco, avrai la possibilità di
+          presentarlo agli altri e ricevere dei commenti. Tutti questi passaggi sono
+          estremamente importanti nell'industria del software e far pratica con il
+          processo di progettazione ti aiuterà a creare prodotti migliori in modo
+          più efficiente.\n \nEcco cosa faremo nelle prossime settimane, mentre impareremo
+          di più sul processo di progettazione:\n\n1. **Definisci & Prepara**\n   *
+          Gioca con i giochi già pronti per farti venire delle idee e capire quali
+          sono i limiti\n   * Ragiona sulle varie idee e definisci la tua app nuova
+          o la personalizzazione di una già esistente\n1. **Prova**\n   * Segui il
+          piano per realizzare la tua app\n1. **Rifletti & Modifica**\n   * Scambia
+          la tua app con quella di un altro gruppo per migliorare entrambi i progetti\n1.
+          **Presenta**\n   * Presenta il tuo prodotto finale!\n"
       Begin planning your project_2018:
+        title: Inizia a pianificare il tuo progetto
         content1: Descrizione qui
+        markdown: "# Il processo di progettazione\nProgettare software significa risolvere
+          tanti piccoli problemi, in continuazione. Il problema principale nella progettazione
+          del software è la definizione della prima parte da creare.\n\nQuesto processo
+          può essere utile in molti ambiti, ma qui ci concentreremo sulla progettazione
+          di app (applicazioni, programmi).\n\n<div style=\"position: relative; text-align:
+          center; font-size: 1em\">\n  <img src=\"https://images.code.org/a157e5f67444573e19e980a507db16fb-image-1563319667694.png\"
+          alt=\"Processo di progettazione\" style=\"width: 50%;\">\n  <div style=\"position:
+          absolute; top: 24%; left: 49.4%; transform: translateX(-49.4%); font-weight:
+          bold;\">Definisci</div> \n  <div style=\"position: absolute; top: 52%; left:
+          60.5%; transform: translateX(-60.5%); font-weight: bold;\">Prepara</div>\n
+          \ <div style=\"position: absolute; top: 79%; left: 49.7%; transform: translateX(-49.7%);
+          font-weight: bold;\">Prova</div>\n  <div style=\"position: absolute; top:
+          52%; left: 39%; transform: translateX(-39%); font-weight: bold;\">Rifletti</div>\n</div>\n\n*
+          **Definisci**\n  * Che tipo di app vorresti creare?\n  * Quali sono i tuoi
+          vincoli?\n  * Come te la immagini?\n* **Prepara**\n  * Raccogli le idee\n
+          \ * Confronta i pro e i contro\n  * Fai un piano\n* **Prova**\n  * Metti
+          in atto il tuo piano\n* **Rifletti**\n  * Come ti sembra il risultato, rispetto
+          agli obiettivi che hai fissato durante la definizione dell'app?\n  * Cosa
+          puoi imparare da questa esperienza e fare meglio la prossima volta?\n  *
+          Quali nuovi problemi hai scoperto?\n\n# Come lo mettiamo in pratica\n\nNel
+          corso delle prossime settimane, avrai l'opportunità di sperimentare alcuni
+          giochi già pronti e, sfruttando ciò che hai imparato, di progettare il tuo
+          gioco personale. Dopo aver creato il tuo gioco, avrai la possibilità di
+          presentarlo agli altri e ricevere dei commenti. Tutti questi passaggi sono
+          estremamente importanti nell'industria del software e far pratica con il
+          processo di progettazione ti aiuterà a creare prodotti migliori in modo
+          più efficiente.\n \nEcco cosa faremo nelle prossime settimane, mentre impareremo
+          di più sul processo di progettazione:\n\n1. **Definisci & Prepara**\n   *
+          Gioca con i giochi già pronti per farti venire delle idee e capire quali
+          sono i limiti\n   * Ragiona sulle varie idee e definisci la tua app nuova
+          o la personalizzazione di una già esistente\n1. **Prova**\n   * Segui il
+          piano per realizzare la tua app\n1. **Rifletti & Modifica**\n   * Scambia
+          la tua app con quella di un altro gruppo per migliorare entrambi i progetti\n1.
+          **Presenta**\n   * Presenta il tuo prodotto finale!\n"
       Begin planning your project_2018_2019:
+        title: Inizia a pianificare il tuo progetto
         content1: Descrizione qui
       CSD Header Size MC:
         answers:
@@ -506,6 +578,58 @@ it-IT:
         - correct: true
         - {}
         - {}
+      CSD U1 Lesson 5 Overview:
+        markdown: |
+          # Panoramica
+
+          In questa lezione imparerai dei differenti tipi di dispositivi input ed output usati dai computer e dei tipi di informazione che inviano e ricevono.
+
+          ## Vocabolario
+
+          * **Input** - Un dispositivo o componente che consente alle informazioni di essere date ad un computer
+          * **Output** - Ogni dispositivo o componente che riceve informazioni da un computer
+
+
+          ## Risorse
+
+          * [Input ed Output - Guida Attività](https://docs.google.com/document/d/1ObS_kxkXoueaotPYFAEkcCDzn690zumqoLLnrU5kY2Q/export?format=pdf)
+      CSD U1 Lesson 6 Overview:
+        markdown: |
+          # Panoramica
+
+          In questa lezione imparerai come l'elaborazione sia usata da umani e computer per trasformare gli input in output.
+
+          ## Vocabolario
+
+          * **Algoritmo** - Una precisa sequenza di istruzioni per processi che possono essere eseguiti da un computer
+
+          ## Risorse
+
+          * [Algoritmo Sorteggio Carta - Guida Attività](https://docs.google.com/document/d/1o4kVRnXnigufkS9WsjHjeD38f8MQrX6qCEFpka-F9Oo/export?format=pdf)
+      CSD U1 Lesson 7 Overview:
+        markdown: |
+          # Panoramica
+
+          In questa lezione imparerai dei tipi di informazioni che i computer archiviano e come l'archiviazione sia una parte critica dell'elaborazione delle informazioni.
+
+          ## Risorse
+
+          * [Archiviazione ed Elaborazione - Guida Attività](https://docs.google.com/document/d/1I-OzbJizf7m5DK5jfRxDtSYtc_SoSk6vGtSM9tqlGw0/export?format=pdf)
+      CSD U1 Lesson 8 Overview:
+        markdown: |
+          # Panoramica
+
+          In questa lezione esplorerai come le app elaborano differenti tipi di informazioni per risolvere problemi.
+
+          ## Risorse
+
+          * [App Exploration - Activity Guide](https://docs.google.com/document/d/1OW-fkwA7xeNZWiduWescL-6a6zFigtJVP7hfL1oNgVA/export?format=pdf)
+      CSD U1 Lesson 9 Overview:
+        markdown: "# Panoramica\n\nPer questo progetto progetterai la tua app che
+          risolve un problema che devi definire.\n\n## Risorse\n\n * [App e Risoluzione
+          dei Problemi - Guida al Progetto](https://docs.google.com/document/d/1S7X-B2V1-WuT7ZLk1LAZRO1O5f4u7pgth4F7G00tGak/export?format=pdf)
+          \n * [App e Risoluzione dei Problemi - Valutazione Pari](https://docs.google.com/document/d/13ekhJvtz1vovS6FhGBeDf1mcYFRyJe65bQdi8S8T9lU/export?format=pdf)
+          \n * [App e Risoluzione dei Problemi - Rubrica](https://docs.google.com/document/d/1ix0LfgiVglwyC5Bb6PBlfBrnbeCOz2wPIPTgXu-qMZE/export?format=pdf)\n"
       CSD U2 Design Project:
         title: titolo
         content1: Descrizione qui
@@ -518,20 +642,101 @@ it-IT:
       CSD U2 L2 Overview:
         title: titolo
         content1: Descrizione qui
+        markdown: |
+          # Panoramica
+
+          Questa lezione introduce i siti web come mezzi di espressione personale. La classe discute prima dei differenti modi in cui le persone esprimono e condividono i propri interessi ed idee, poi guarda alcuni siti web esemplari fatti da studenti da un corso preedente. Infine, tutti discutono e condividono una lista di argomenti ed interessi da includere, creando una risorsa per sviluppare un sito web personale nel resto dell'unità.
+          ## Vocabolario
+
+          * **Contenuto Sito Web** Il testo grezzo, immagini, ed altri elementi inclusi in una pagina web
+
+
+          ## Risorse
+
+          * [Schizzo Sito Web Personale - Guida Attività](https://docs.google.com/document/d/1wnK0ntxFWvUyuEB6SksiTtUDqrEhZZn3VPLWynz-fV4/export?format=pdf)
       CSD U2 L3 Overview:
         title: titolo
         content1: Descrizione qui
+        markdown: "# Panoramica\n\nQuesta lezione introduce all'HTML come una soluzione
+          al problema di come comunicare sia il contenuto che la struttura di un sito
+          web ad un computer. La lezione cominca con una breve attività offline dimostrando
+          le sfide di comunicare con successo la struttura di una pagina web. La classe
+          guarda ad una pagina HTML su Web Lab e discute di come le etichette HTML
+          aiutino a risolvere questo problema, poi usano l'HTML per scrivere le prime
+          pagine web dell'unità.\n## Vocabolario\n\n* **HTML** - Hypertext Markup
+          Language, un linguaggio usato per creare pagine web\n* **Elemento HTML**
+          - Un pezzo di un sito web, indicato da un tag di avvio e, a volte chiuso
+          da un tag finale \n* **Tag HTML** - Il set speciale di caratteri che indicano
+          l'inizio e la fine di un elemento HTML ed il tipo di elemento\n* **Contenuto
+          Sito Web** - Il testo grezzo, le immagini, ed altri elementi inclusi in
+          una pagina web\n* **Struttura Sito Web** - Lo scopo dei differenti pezzi
+          di contenuto in una pagina web, usata per aiutare il computer a determinare
+          come dovrebbe essere mostrato quel contenuto.\n\n## Codice Introdotto\n\n*
+          **[HTML](//docs.code.org/weblab/html/)** - `<html></html>` * **[Doctype](//docs.code.org/weblab/doctype/)**
+          - `<!DOCTYPE>` * **[Paragraph](//docs.code.org/weblab/P/)** - `<p></p>`
+          * **[Body](//docs.code.org/weblab/body/)** - `<body></body>` * **[Head](//docs.code.org/weblab/head/)**
+          - `<head></head>`\n"
       CSD U2 L4 Overview:
         title: titolo
         content1: Descrizione qui
+        markdown: |+
+          # Panoramica
+
+          Questa lezione prosegue l'introduzione ai tag HTML, questa volta con le intestazioni. La classe pratica usando i tag intestazione per creare titoli di pagina e sezione ed imparare come i differenti elementi di intestazione sono mostrati di default. Poi, la classe pianifica come organizzare il contenuto sulle pagine web personali che saranno costruite durante l'unità ed inizia la prima pagina del progetto.
+          ## Vocabolario
+
+          * **Intestazione** - Un titolo o sommario per un documento o sezione di un documento.
+
+          ## Codice Introduzione
+
+          * **[Intestazione](//docs.code.org/weblab/h/)** - `<h1></h1>`
+
       CSD U2 L5 Overview:
         title: titolo
         content1: Descrizione qui
+        markdown: |
+          # Panoramica
+
+          Questa lezione porta un passo indietro dal creare il sito web personale al parlare di informazioni personali delle persone scelte da condividere a livello digitale. La lezione inizia discutendo quali tipi di informazioni sono buone da condividere con altre persone, poi guarda alle numerose pagine di social media esemplari per vedere che tipo di informazioni personali possono essere condivise intenzionalmente o non intenzionalmente. Infine, la classe conclude con una serie di linee guida da seguire quando si mettono informazioni online.
+          ## Vocabolario
+
+          * **Impronta Digitale* - Le informazioni raccolte su un individuo per siti web multipli sull'Internet.
+
+
+          ## Risorse
+          * [Quando Conta La Tua Privacy? - Guida Attività]
+          (https://docs.google.com/document/d/1SmCceDGntI-rJI40dTR7rA0Tfa0cH1OQoRNNxPEmXG0/export?format=pdf)
+          * [Investigazione Sociale - Guida Attività](https://docs.google.com/document/d/1A9q31rwrBA7tZZcZ3KZqjMb30UncM-eycwMvYgj9os4/export?format=pdf)
       CSD U2 L6 Overview:
         title: titolo
         content1: Descrizione qui
+        markdown: |+
+          # Panoramica
+
+          Questa lezione introduce elenchi ordinati e disordinati ed i tag HTML &lt;ul&gt;, &lt;ol&gt; e &lt;li&gt; associati. La classe pratica l'utilizzo dei tag, poi torna al progetto della pagina web personale per aggiungere una nuova pagina HTML che include nuovi tag.
+
+          ## Codice Introdotto
+
+
+          * **[Elenco Disordinato](//docs.code.org/weblab/ul/)** - `<ul></ul>`
+          *  **[Elenco Elementi](//docs.code.org/weblab/li/)** - `<li></li>`
+          *  **[Elenco Ordinato](//docs.code.org/weblab/ol/)** - `<ol></ol>`
+
       CSD U2 Lesson 6 Overview:
         content1: Descrizione qui
+      CSD U2 Top Websites:
+        markdown: |
+          # Migliori Siti Werb negli Stati Uniti
+
+          I seguenti sono i siti web visitati più frequentemente negli Stati Uniti. Ognuno include una breve descrizione della sua funzione principale.
+
+
+          1. Google.com - Motore di ricerca per siti web, immagini, video ed altri media
+          2. Youtube.com - Sito di Video inviati dall'utente con valutazioni e commenti
+          3. Facebook.com - Comunità social media che consente agli utenti di condividere informazioni con gli amici
+          4. Amazon.com - Siti di shopping online per ogni genere di prodotto
+          5. Yahoo.com - Un motore di ricerca, fornitore email e fonte di notizie
+          6. Wikipedia.org - Un'enciclopedia libera con contenuti generati dagli utenti
       CSD U2 expand project:
         title: titolo
         content1: Descrizione qui
@@ -542,12 +747,13 @@ it-IT:
         title: titolo
         content1: Descrizione qui
       CSD U2 image debug match:
+        content1: Abbina il codice HTML buggato con la descrizione del suo bug.
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: L'attributo 'src' è scritto in modo scorretto.
+        - text: Gli attributi 'src' 'alt' sono invertiti
+        - text: L'estensione file (.jpg) è mancante dall'indirizzo immagine
+        - text: L'indirizzo immagine non è dato come attributo 'src'
+        - text: C'è uno spazio nel nome del file
         answers:
         - {}
         - {}
@@ -555,89 +761,137 @@ it-IT:
         - {}
         - {}
       CSD U2 lists match:
+        content1: Abbina la lista al codice che la compone.
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: https://images.code.org/b7b998dd12e507d163d7dac0fcd37b8c-image-1493336218044.31.41
+            PM.png
+        - text: https://images.code.org/d9af5a34631dee994f99750f48f52b66-image-1493336218042.50.24
+            PM.png
+        - text: https://images.code.org/63b9f044db7dfa10d0486920e982f217-image-1493336218039.32.08
+            PM.png
+        - text: https://images.code.org/17bf31d6521c45f56301f6224732e514-image-1493336218041.32.29
+            PM.png
+        - text: https://images.code.org/50e0264011243637e12e4972d573d278-image-1493399022792.02.38
+            AM.png
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: https://images.code.org/c77491ea22b3b977383bfd2ca3655df1-image-1493336218041.31.27
+            PM.png
+        - text: https://images.code.org/9007a23e2767b57e84ffad78675faf6a-image-1493336218044.50.09
+            PM.png
+        - text: https://images.code.org/d3be2ba9f4a398277f9663bbd5fdf783-image-1493336218042.31.59
+            PM.png
+        - text: https://images.code.org/1bbd9b340b51a295760f8daa4714cf84-image-1493336218035.32.21
+            PM.png
+        - text: https://images.code.org/72bbedfd40904b68f2020af0676e0c3a-image-1493399020395.02.32
+            AM.png
       CSD U2 lists match_2018:
+        content1: Abbina la lista al codice che la compone.
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: https://images.code.org/b7b998dd12e507d163d7dac0fcd37b8c-image-1493336218044.31.41
+            PM.png
+        - text: https://images.code.org/d9af5a34631dee994f99750f48f52b66-image-1493336218042.50.24
+            PM.png
+        - text: https://images.code.org/63b9f044db7dfa10d0486920e982f217-image-1493336218039.32.08
+            PM.png
+        - text: https://images.code.org/17bf31d6521c45f56301f6224732e514-image-1493336218041.32.29
+            PM.png
+        - text: https://images.code.org/50e0264011243637e12e4972d573d278-image-1493399022792.02.38
+            AM.png
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: https://images.code.org/c77491ea22b3b977383bfd2ca3655df1-image-1493336218041.31.27
+            PM.png
+        - text: https://images.code.org/9007a23e2767b57e84ffad78675faf6a-image-1493336218044.50.09
+            PM.png
+        - text: https://images.code.org/d3be2ba9f4a398277f9663bbd5fdf783-image-1493336218042.31.59
+            PM.png
+        - text: https://images.code.org/1bbd9b340b51a295760f8daa4714cf84-image-1493336218035.32.21
+            PM.png
+        - text: https://images.code.org/72bbedfd40904b68f2020af0676e0c3a-image-1493399020395.02.32
+            AM.png
       CSD U2 lists match_2018_2019:
+        content1: Abbina la lista al codice che la compone.
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: https://images.code.org/b7b998dd12e507d163d7dac0fcd37b8c-image-1493336218044.31.41
+            PM.png
+        - text: https://images.code.org/d9af5a34631dee994f99750f48f52b66-image-1493336218042.50.24
+            PM.png
+        - text: https://images.code.org/63b9f044db7dfa10d0486920e982f217-image-1493336218039.32.08
+            PM.png
+        - text: https://images.code.org/17bf31d6521c45f56301f6224732e514-image-1493336218041.32.29
+            PM.png
+        - text: https://images.code.org/50e0264011243637e12e4972d573d278-image-1493399022792.02.38
+            AM.png
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: https://images.code.org/c77491ea22b3b977383bfd2ca3655df1-image-1493336218041.31.27
+            PM.png
+        - text: https://images.code.org/9007a23e2767b57e84ffad78675faf6a-image-1493336218044.50.09
+            PM.png
+        - text: https://images.code.org/d3be2ba9f4a398277f9663bbd5fdf783-image-1493336218042.31.59
+            PM.png
+        - text: https://images.code.org/1bbd9b340b51a295760f8daa4714cf84-image-1493336218035.32.21
+            PM.png
+        - text: https://images.code.org/72bbedfd40904b68f2020af0676e0c3a-image-1493399020395.02.32
+            AM.png
       CSD U2 project guide:
+        title: Il tuo Sito Web Personale
         content1: Descrizione qui
       CSD U2 project guide_2018:
+        title: Il tuo Sito Web Personale
         content1: Descrizione qui
       CSD U2 project guide_2018_2019:
+        title: Il tuo Sito Web Personale
         content1: Descrizione qui
       CSD U3 - conditionals - Matching:
+        title: 'Abbinamento: Comparazione Operatori'
+        content1: Abbina l'espressione booleana alla descrizione in inglese.
         questions:
-        - {}
-        - {}
+        - text: La rotazione del personaggio cane è inferiore alla rotazione del personaggio
+            gatto?
+        - text: La rotazione del personaggio cane x è minore di quella del personaggio
+            gatto x?
         - {}
         - {}
         - {}
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: cane.rotazione &lt; gatto.rotazione
+        - text: cane.x &lt; gatto.x
+        - text: cane.scala &gt; gatto.scala
+        - text: cane.x &gt; gatto.x
+        - text: cane.x == gatto.x
       CSD U3 - conditionals - Matching_2018:
+        title: 'Abbinamento: Comparazione Operatori'
+        content1: Abbina l'espressione booleana alla descrizione in inglese.
         questions:
-        - {}
-        - {}
+        - text: La rotazione del personaggio cane è inferiore alla rotazione del personaggio
+            gatto?
+        - text: La rotazione del personaggio cane x è minore di quella del personaggio
+            gatto x?
         - {}
         - {}
         - {}
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: cane.rotazione &lt; gatto.rotazione
+        - text: cane.x &lt; gatto.x
+        - text: cane.scala &gt; gatto.scala
+        - text: cane.x &gt; gatto.x
+        - text: cane.x == gatto.x
       CSD U3 - conditionals - Matching_2018_2019:
+        title: 'Abbinamento: Comparazione Operatori'
+        content1: Abbina l'espressione booleana alla descrizione in inglese.
         questions:
-        - {}
-        - {}
+        - text: La rotazione del personaggio cane è inferiore alla rotazione del personaggio
+            gatto?
+        - text: La rotazione del personaggio cane x è minore di quella del personaggio
+            gatto x?
         - {}
         - {}
         - {}
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: cane.rotazione &lt; gatto.rotazione
+        - text: cane.x &lt; gatto.x
+        - text: cane.scala &gt; gatto.scala
+        - text: cane.x &gt; gatto.x
+        - text: cane.x == gatto.x
       CSD U3 Boolean MC:
         title: titolo
         questions:
@@ -666,8 +920,10 @@ it-IT:
         - {}
         - {}
       CSD U3 Card Examples_2018:
+        title: Fare una Carta Interattiva
         content1: Descrizione qui
       CSD U3 Card Examples_2018_2019:
+        title: Fare una Carta Interattiva
         content1: Descrizione qui
       CSD U3 Functions Prediction define first:
         answers:
@@ -794,16 +1050,22 @@ it-IT:
         - {}
         - {}
       CSD U3 game intro:
+        title: Crea il Tuo Gioco
         content1: Descrizione qui
       CSD U3 game intro_2018:
+        title: Crea il Tuo Gioco
         content1: Descrizione qui
       CSD U3 game intro_2018_2019:
+        title: Crea il Tuo Gioco
         content1: Descrizione qui
       CSD U3 platform intro:
+        title: Costruisci un Jumper Platform
         content1: Descrizione qui
       CSD U3 platform intro_2018:
+        title: Costruisci un Jumper Platform
         content1: Descrizione qui
       CSD U3 platform intro_2018_2019:
+        title: Costruisci un Jumper Platform
         content1: Descrizione qui
       CSD U5 Encryption 1:
         title: titolo
@@ -815,19 +1077,25 @@ it-IT:
         title: titolo
         content1: Descrizione qui
       CSD U5 Encryption 2:
+        title: Decodificare Stringhe Binarie
         content1: Descrizione qui
       CSD U5 Encryption 2_2018:
+        title: Decodificare Stringhe Binarie
         content1: Descrizione qui
       CSD U5 Encryption 2_2018_2019:
+        title: Decodificare Stringhe Binarie
         content1: Descrizione qui
       CSD U5 L13 SFLP Interpreting Data:
         title: titolo
         content1: Descrizione qui
       CSD U5 crosstab warmup:
+        title: Sondaggio Pizza
         content1: Descrizione qui
       CSD U5 crosstab warmup_2018:
+        title: Sondaggio Pizza
         content1: Descrizione qui
       CSD U5 crosstab warmup_2018_2019:
+        title: Sondaggio Pizza
         content1: Descrizione qui
       CSD U5 data visualization:
         title: titolo
@@ -848,10 +1116,13 @@ it-IT:
         title: titolo
         content1: Descrizione qui
       CSD U6 LED create intro:
+        title: Fare un App Usando i Led
         content1: Descrizione qui
       CSD U6 LED create intro_2018:
+        title: Fare un App Usando i Led
         content1: Descrizione qui
       CSD U6 LED create intro_2018_2019:
+        title: Fare un App Usando i Led
         content1: Descrizione qui
       CSD U6 array multi:
         questions:
@@ -899,12 +1170,85 @@ it-IT:
         - {}
         - correct: true
         - {}
+      Dance_Party_extras_intro:
+        markdown: |
+          # Continua a Ballare!
+
+          Per la parte 2, creerai il tuo progetto. Non ci sono rompicapi qui - invece ci sono un sacco di progetti che mostrano differenti modi di fare feste da ballo più complesse.
+
+          Puoi fare questi livelli _in ogni ordine_. Salta intorno per vedere come qualcosa era stato fatto in un livello precedente, o combina un concetto tra i progetti. Provali tutti, scegli il tuo preferito, e passa il tuo tempo a lavorare su aggiungere a quel progetto per renderlo tuo.
+
+          <a class="btn btn-large btn-primary next-stage submitButton pull-right">Continua</a>
+
+          <div class="clearfix">
+
+          <div style="float: left; margin: 10px">
+          <a href="2">
+          <h2>
+          Vai in Formazione
+          </h2>
+
+          <img src="https://images.code.org/70ad4cbc12321f301d43161f847bdee4-image-1541746835274.gif">
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="3">
+          <h2>
+          Dove andranno?
+          </h2>
+
+          <img src="https://images.code.org/524010de61c9af76e98bd2a5ccdba461-image-1541746855689.gif">
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="4">
+          <h2>
+          Crew di Ballo
+          </h2>
+
+          <img src="https://images.code.org/f4ccfd43f9a15d68a339b449be8e96c3-image-1541746870889.gif">
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="5">
+          <h2>
+          Quartine
+          </h2>
+
+          <img src="https://images.code.org/6b538efe77ea6e19f1428f7c0e45c621-image-1541746886875.gif">
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="6">
+          <h2>
+          Bassi, Medi, Acuti
+          </h2>
+
+          <img src="https://images.code.org/3825556a395fd31bc4f767ca7ea5c566-image-1541746894197.gif">
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="7">
+          <h2>
+          Velocizzalo, Rallentalo
+          </h2>
+
+          <img src="https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif">
+
+          </div>
       Internet Simulator Setup:
+        title: Impostazione Simulatore Internet
         content1: Descrizione qui
       Internet Simulator Setup 2:
         title: titolo
         content1: Descrizione qui
       Internet Simulator Setup 3:
+        title: Impostazione Simulatore Internet 3
         content1: Descrizione qui
       K-1 Artist 1 Multi 1:
         title: Esercizio di Verifica (Risposte Multiple)
@@ -974,16 +1318,17 @@ it-IT:
         - {}
       K-1 Big Event Match 1:
         title: Esercizio di Verifica (Corrispondenza)
+        content1: "/script_assets/k_1_images/unplugged_images/big_event_1_desc.png"
         content2: Associa ogni sequenza di figure alla relativa sequenza di mosse
           di danza, usando la corrispondenza sopra illustrata.
         questions:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_q1.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_q2.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_q3.png"
         answers:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a2.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a3.png"
       K-1 Digital Footprint Multi 1:
         title: Esercizio di Verifica (Risposte Multiple)
         questions:
@@ -1121,16 +1466,145 @@ it-IT:
       New Challenge Introduction:
         title: titolo
         content1: Descrizione qui
+        markdown: "### Nuova Sfida: Decodifica un Codice a Sostituzione Casuale...
+          con un nuovo componente\n\nChe succederebbe se invece di scivolare l'intero
+          alfabeto, avessimo mappato ogni lettera dell'alfabeto ad una differente
+          lettera casuale dell'alfabeto? Ciò è chiamato un **Codice a Sostituzione
+          Casuale.**\n\n![](https://images.code.org/7837e7fef2f38659f4bf51a29b6dc4d3-image-1473863470440.gif)\n\nOra,
+          invece del messaggio segreto codificato con un semplice scorrimento alfabetico,
+          affronterai messaggi codificati con una **sostituzione casuale**.  \n\n\n\nCiò
+          è molto più difficile di decodificare e richiede uno strumento più sofisticato,
+          dunque...\n\nQuando clicchi continua, vedrai una **nuova, più sofisticata
+          versione dello strumento di crittografia** che mostra molte cose differenti.\n\nMa
+          cosa faccia è un po' un mistero!  \n\n### Le Tue Mansioni:\n\n * Scopri
+          cosa succede in questa nuova versione dello strumento\n * Quale informazione
+          ti è stata presentata?\n * Scopri cosa ti fa fare lo strumento\n * Come
+          sempre: non puoi romperlo. Quindi clicca sulle cose, fruga in giro.\n *
+          Se lo scopri potresti essere capace di decodificare un messaggio codificato
+          con sostituzione casuale.\n \n### Suggerimento\n\n* Sapevi che la **E**
+          è la lettera più comunemente usata in inglese?\n\n### Riunisciti e Discuti\n
+          Dopo un po' di tempo a giocarci, dovresti metterti con qualcuno - partner,
+          piccolo gruppo, classe intera - per discutere cosa hai scoperto e verificare
+          che tu sappia cosa succede ed i vari modi in cui puoi usare lo strumento.\n\n\n"
+      OPD-K5 PreSurvey:
+        markdown: |+
+          # Per cominciare > Sondaggio preliminare
+
+          Vogliamo che tu tragga il più possibile da questo corso. Per questo motivo, ti chiediamo di compilare [questo breve sondaggio preliminare (in inglese)](https://form.jotform.com/90556900301146). Il sondaggio ti chiederà di riflettere sui tuoi obiettivi per questo corso e ci farà un po' capire chi sei e come possiamo aiutarti.
+
+          <a class="btn btn-large btn-primary" href="https://form.jotform.com/90556900301146?user_id=<user_id/>">Sondaggio preliminare</a>
+
       OPD-K5 Stage3aGo:
         title: titolo
         content1: Descrizione qui
+      OPD-K5 Welcome 2:
+        markdown: |+
+          # Per cominciare > Corsi di fondamenti di informatica
+
+          Uno degli obiettivi di Code.org è di preparare gli insegnanti come te a insegnare informatica nelle tue classi e sostenere la tua crescita come insegnante. Dopo aver completato questo corso online, sarai pronto/a a condurre uno o più dei seguenti corsi di Code.org nella tua classe:
+
+           - **[Corso A](http://studio.code.org/s/coursea)**: circa 12 ore (Scuola dell'infanzia)
+           - **[Corso B](http://studio.code.org/s/courseb)**: circa 12 ore (1ª primaria)
+           - **[Corso C](http://studio.code.org/s/coursec)**: circa 18 ore (2ª primaria)
+           - **[Corso D](http://studio.code.org/s/coursed)**: circa 18 ore (3ª primaria)
+           - **[Corso E](http://studio.code.org/s/coursee)**: circa 18 ore (4ª primaria)
+           - **[Corso F](http://studio.code.org/s/coursef)**: circa 20 ore (5ª primaria)
+           - **[Corso rapido](http://studio.code.org/s/express)**: circa 20 ore (da 8 anni in su)
+           - **[Corso rapido pre-scolare](http://studio.code.org/s/pre-express)**: circa 20 ore (da 4 a 8 anni)
+
+
       Prepare for your presentation:
         title: titolo
         content1: Descrizione qui
+        markdown: |
+          # Presentazione del progetto
+
+          È ora di presentare il tuo progetto! Il tuo insegnante ti fornirà maggiori dettagli su come presentare il tuo lavoro ai tuoi compagni di classe.
+      Prepare for your presentation_2018:
+        title: Prepara per la tua presentazione
+        markdown: |
+          # Presentazione del progetto
+
+          È ora di presentare il tuo progetto! Il tuo insegnante ti fornirà maggiori dettagli su come presentare il tuo lavoro ai tuoi compagni di classe.
       'Technique: Frequency Analysis':
+        title: Come decodificare un codice a sostituzione
         content1: Descrizione qui
+        markdown: "# Decodificare i Codici a Sostituzione\n\nLa migliore tecnica per
+          decodificare un codice a sostituzione casuale è conosciuta come **analisi
+          di frequenza** \n\nParafrasato da: [wikipedia](https://en.wikipedia.org/wiki/Frequency_analysis)
+          \n\n* **Analisi di frequenza** è una tecnica basata su quanto *frequentemente*
+          certe lettere appaiono in inglese rispetto altre.\n* Per esempio, data una
+          sezione di testo inglese, *E*, *T*, *A* ed *O* sono le più comuni, mentre
+          *Z*, *Q* e *X* sono rare. Allo stesso modo, *TH*, *ER*, *ON* e *AN* sono
+          le più comuni paia di lettere che si presentano una accanto all'altra.\n*
+          In effetti, la distribuzione delle lettere è approssimativamente la stessa
+          per quasi *tutti* gli esempi di testo inglese. \n\n\nLa versione del componente
+          sulla pagina precedente è intesa per aiutarti a **codificare un codice a
+          sostituzione tramite l'analisi di frequenza**.\n\nAnalizzando la frequenza
+          delle lettere nel messaggio crittografato comparato alla frequenza di lettere
+          in un pezzo tipico di prosa inglese, puoi iniziare a restringere su quale
+          mappatura delle lettere potrebbe essere. \n\nLo strumento ti mostra come
+          la frequenza di lettere nel testo codificato (arancione) si compari con
+          la frequenza dall'inglese tipico (blu).\n\n### Suggerimento: Dove iniziare?\n\n1.
+          Trova le parole brevi e \"decodificale\" per prime. Quante parole di una
+          lettera conosci? (\"a\"). Una parola di 3 lettere molto comune è \"the\".\n2.
+          Una volta fatto ciò, hai la sostituzione per alcune delle lettere più comuni.
+          Dovresti essere capace di usare l'intuito per guardare alle altre parole
+          con queste sostituzioni parziali e fare buone intuizioni.\n3. Dopo aver
+          trovato una manciata di difficili lettere, il resto verrà rapidamente.\n4.
+          Comparare le frequenze di lettere da una buona intuizione per dare risposte
+          sensate.\n\n### Prova questo:\nL'animazione sotto mostra qualcuno che inizia.
+          Ecco cosa ha provato\n\n* Prima ordina i caratteri per frequenza. \n* Identifica
+          un gruppo di caratteri che potrebbero mappare la parola `the`.  \nÈ un buon
+          inizio!\n\n![](https://images.code.org/4c188dfb0b284810845285b83ce5bcd4-image-1473787694329.gif)
+          \n\n## La sostituzione casuale è buona?\n* Dopo un po' di pratica quanto
+          ti ci vuole per decodificare un codice a sostituzione casuale?\n* È un bene
+          o no?\n\n\n"
       Terminology Recap:
+        title: Questa era facile, che c'è poi?
         content1: Descrizione qui
+        markdown: "#Pausa e Ricapitolare\n\nI messaggi codificati con il **codice
+          di Cesare** sono molto facili da decodificare, specialmente con uno strumento
+          informatico. Ora che hai fatto un po' di pratica decodificando una cifra
+          a scorrimento alfabetico (abbastanza facile, eh?) proviamo qualcosa di più
+          difficile.\n\n**Terminologia di ricapitolo:**\n\n* **Crittografia** - un
+          processo di codifica di messaggi per mantenerli segreti, così che solo le
+          parti \"autorizzate\" possano leggerli.\n* **Decrittazione** - un processo
+          che inverte la crittografia, prendendo un messaggio segreto e riproducendo
+          il normale testo originale\n* **Codice** - il termine generico per una tecnica
+          (o algoritmo) che compia la crittografia\n* **Codice di Cesare** - una tecnica
+          di crittografia che fa scivolare l'alfabeto di qualche numero di caratteri.\n*
+          **Decodificare la crittografia** - Quando tenti di decodificare un messaggio
+          segreto **senza** sapere tutte le specifiche del codice, stai provando a
+          **decodificare** la crittografia. \n\n\nClicca Continua per vedere la **Prossima
+          Sfida**...\n"
+      Unit 1 Lesson 2 Overview:
+        markdown: |
+          # Panoramica
+
+          In questa lezione imparerai un processo formale di risoluzione dei problemi che ti aiuterà a strutturare il tuo approccio ad un'ampia varietà di problemi.
+
+
+          ## Risorse
+
+          * [Il Processo di Risoluzione Problemi - Guida Attività](https://docs.google.com/document/d/1xEPMYIDy70fWCgyLymBNmxkE-6uJ7BYOXSmV8Vyt-SQ/export?format=pdf)
+      Unit 1 Lesson 3 Overview:
+        markdown: |
+          # Panoramica
+          In questa lezione applicherai il processo di risoluzione dei problemi ad una varietà di problemi per esplorare come ogni passo ti aiuti a sviluppare e migliorare soluzioni ai problemi.
+
+          ## Risorse
+
+          * [Risoluzione Problemi - Guida Attività](https://docs.google.com/document/d/1cym5lMuy41CbvXYe7F57N2XfI6Afp0hJsHovhR0GD2M/export?format=pdf)
+      Unit 1 Lesson 4 Overview:
+        markdown: |
+          # Panoramica
+
+          In questa lezione inizierai a pensare a come i computer aiutano a risolvere certi tipi di problemi ed imparerai le caratteristiche chiave di ogni computer.
+
+          ## Risorse
+
+          * [Cos'è un Computer - Guida Attività](https://docs.google.com/document/d/1g4dPcsx2xADEZI0FiMYApLr0hh3_-89NDWd2y86sS6I/export?format=pdf)
       behaviors 1 predict:
         questions:
         - {}
@@ -1151,8 +1625,8 @@ it-IT:
         - feedback: Sbagliata
       courseC_multi_artist_prog6_predict1:
         questions:
-        - text: Guarda molto attentamente il codice riportato nell'area di lavoro.
-            Cosa succede quando si clicca su "Esegui"?
+        - text: Guarda molto attentamente il codice presente nell'area di lavoro.
+            Cosa succederà quando cliccherai su "Esegui"?
         answers:
         - text: L'artista disegnerà un triangolo con tre lati uguali.
           feedback: Sbagliato. L'artista disegna un quadrato.
@@ -1165,8 +1639,8 @@ it-IT:
           feedback: L'artista disegna un quadrato.
       courseC_multi_artist_prog6_predict1_2018:
         questions:
-        - text: Guarda molto attentamente il codice riportato nell'area di lavoro.
-            Cosa succede quando si clicca su "Esegui"?
+        - text: Guarda molto attentamente il codice presente nell'area di lavoro.
+            Cosa succederà quando cliccherai su "Esegui"?
         answers:
         - text: L'artista disegnerà un triangolo con tre lati uguali.
           feedback: Sbagliato. L'artista disegna un quadrato.
@@ -1179,8 +1653,8 @@ it-IT:
           feedback: L'artista disegna un quadrato.
       courseC_multi_artist_prog6_predict1_2018_2019:
         questions:
-        - text: Guarda molto attentamente il codice riportato nell'area di lavoro.
-            Cosa succede quando si clicca su "Esegui"?
+        - text: Guarda molto attentamente il codice presente nell'area di lavoro.
+            Cosa succederà quando cliccherai su "Esegui"?
         answers:
         - text: L'artista disegnerà un triangolo con tre lati uguali.
           feedback: Sbagliato. L'artista disegna un quadrato.
@@ -1252,8 +1726,8 @@ it-IT:
         - text: Scrat andrà nella direzione sbagliata dopo l'ultima curva.
           correct: true
           feedback: Corretto!
-        - text: Scrat non fa abbastanza passi e si ferma prima di aver raggiunto la
-            ghianda.
+        - text: Scrat non farà abbastanza passi e si fermerà prima di aver raggiunto
+            la ghianda.
           feedback: Sbagliato. Il fatto che Scrat non faccia abbastanza passi avviene
             dopo che ha già girato nella direzione sbagliata.
         - text: Non lo so.
@@ -1269,8 +1743,8 @@ it-IT:
         - text: Scrat andrà nella direzione sbagliata dopo l'ultima curva.
           correct: true
           feedback: Corretto!
-        - text: Scrat non fa abbastanza passi e si ferma prima di aver raggiunto la
-            ghianda.
+        - text: Scrat non farà abbastanza passi e si fermerà prima di aver raggiunto
+            la ghianda.
           feedback: Sbagliato. Il fatto che Scrat non faccia abbastanza passi avviene
             dopo che ha già girato nella direzione sbagliata.
         - text: Non lo so.
@@ -1286,8 +1760,8 @@ it-IT:
         - text: Scrat andrà nella direzione sbagliata dopo l'ultima curva.
           correct: true
           feedback: Corretto!
-        - text: Scrat non fa abbastanza passi e si ferma prima di aver raggiunto la
-            ghianda.
+        - text: Scrat non farà abbastanza passi e si fermerà prima di aver raggiunto
+            la ghianda.
           feedback: Sbagliato. Il fatto che Scrat non faccia abbastanza passi avviene
             dopo che ha già girato nella direzione sbagliata.
         - text: Non lo so.
@@ -1394,10 +1868,10 @@ it-IT:
         - text: Guarda molto attentamente il codice presente nell'area di lavoro.
             Cosa succederà quando cliccherai su "Esegui"?
         answers:
-        - text: BB-8 va troppo avanti nel primo ciclo.
+        - text: BB-8 andrà troppo avanti nel primo ciclo.
           feedback: Sbagliato. Il primo ciclo fa andare avanti BB-8 solo di 2 caselle,
             mentre dovrebbe andare avanti di 3.
-        - text: BB-8 non va abbastanza lontano nel primo ciclo per riuscire a raccogliere
+        - text: BB-8 non andrà abbastanza lontano nel primo ciclo per riuscire a raccogliere
             tutti i rottami metallici.
           correct: true
           feedback: Corretto!
@@ -1412,10 +1886,10 @@ it-IT:
         - text: Guarda molto attentamente il codice presente nell'area di lavoro.
             Cosa succederà quando cliccherai su "Esegui"?
         answers:
-        - text: BB-8 va troppo avanti nel primo ciclo.
+        - text: BB-8 andrà troppo avanti nel primo ciclo.
           feedback: Sbagliato. Il primo ciclo fa andare avanti BB-8 solo di 2 caselle,
             mentre dovrebbe andare avanti di 3.
-        - text: BB-8 non va abbastanza lontano nel primo ciclo per riuscire a raccogliere
+        - text: BB-8 non andrà abbastanza lontano nel primo ciclo per riuscire a raccogliere
             tutti i rottami metallici.
           correct: true
           feedback: Corretto!
@@ -1430,10 +1904,10 @@ it-IT:
         - text: Guarda molto attentamente il codice presente nell'area di lavoro.
             Cosa succederà quando cliccherai su "Esegui"?
         answers:
-        - text: BB-8 va troppo avanti nel primo ciclo.
+        - text: BB-8 andrà troppo avanti nel primo ciclo.
           feedback: Sbagliato. Il primo ciclo fa andare avanti BB-8 solo di 2 caselle,
             mentre dovrebbe andare avanti di 3.
-        - text: BB-8 non va abbastanza lontano nel primo ciclo per riuscire a raccogliere
+        - text: BB-8 non andrà abbastanza lontano nel primo ciclo per riuscire a raccogliere
             tutti i rottami metallici.
           correct: true
           feedback: Corretto!
@@ -1443,6 +1917,45 @@ it-IT:
         - text: Non lo so.
           feedback: Il primo ciclo fa andare avanti BB-8 solo di 2 caselle, mentre
             dovrebbe andare avanti di 3.
+      courseD_external_binary1:
+        title: Disegno Binario
+        markdown: "<h1>Disegna con il codice binario</h1>\n \n<h3>Il codice binario
+          è un modo di rappresentare i dati usando solo due opzioni alternative. In
+          questo caso <b>off</b> e <b>on</b> (<i>spento</i> e <i>acceso</i>).\n<br/>\nQui,
+          useremo il numero <b>0</b> come codifica di \"off\" (<i>spento</i>) ed il
+          numero <b>1</b> come codifica di \"on\" (<i>acceso</i>).\n<br/>\n<table>\n<tr><td><img
+          src=\"https://images.code.org/50283881d577c17ac6f1d1648d8f361f-image-1483640342574.09.14.png\"
+          width=\"75px\"/></td><td><img src=\"https://images.code.org/ba6f0a000b18f2dd87160e6255e8a71c-image-1483640355103.09.24.png\"
+          width=\"90px\"/></td></tr>\n<tr padding=\"0px\"><td align=\"center\"><b>0</b></td><td
+          align=\"center\"><b>1</b></td></tr>\n</table><img src=\"https://images.code.org/934883837aa59bca1d5c1ded0e0ac675-image-1483640120036.51.06.png\"
+          float=\"left\"/><h3>In questa lezione, ti proponiamo una griglia in cui
+          muoverti per creare dei disegni accendendo solo alcuni \"pixel\".</h3>\n\n![](https://images.code.org/c53e00cde9acbae72d02fb9cc2a20e53-image-1483639858942.png)\n\n\n"
+      courseD_external_binary1_2018:
+        title: Disegno Binario
+        markdown: "<h1>Disegna con il codice binario</h1>\n \n<h3>Il codice binario
+          è un modo di rappresentare i dati usando solo due opzioni alternative. In
+          questo caso <b>off</b> e <b>on</b> (<i>spento</i> e <i>acceso</i>).\n<br/>\nQui,
+          useremo il numero <b>0</b> come codifica di \"off\" (<i>spento</i>) ed il
+          numero <b>1</b> come codifica di \"on\" (<i>acceso</i>).\n<br/>\n<table>\n<tr><td><img
+          src=\"https://images.code.org/50283881d577c17ac6f1d1648d8f361f-image-1483640342574.09.14.png\"
+          width=\"75px\"/></td><td><img src=\"https://images.code.org/ba6f0a000b18f2dd87160e6255e8a71c-image-1483640355103.09.24.png\"
+          width=\"90px\"/></td></tr>\n<tr padding=\"0px\"><td align=\"center\"><b>0</b></td><td
+          align=\"center\"><b>1</b></td></tr>\n</table><img src=\"https://images.code.org/934883837aa59bca1d5c1ded0e0ac675-image-1483640120036.51.06.png\"
+          float=\"left\"/><h3>In questa lezione, ti proponiamo una griglia in cui
+          muoverti per creare dei disegni accendendo solo alcuni \"pixel\".</h3>\n\n![](https://images.code.org/c53e00cde9acbae72d02fb9cc2a20e53-image-1483639858942.png)\n\n\n"
+      courseD_external_binary1_2018_2019:
+        title: Disegno Binario
+        markdown: "<h1>Disegna con il codice binario</h1>\n \n<h3>Il codice binario
+          è un modo di rappresentare i dati usando solo due opzioni alternative. In
+          questo caso <b>off</b> e <b>on</b> (<i>spento</i> e <i>acceso</i>).\n<br/>\nQui,
+          useremo il numero <b>0</b> come codifica di \"off\" (<i>spento</i>) ed il
+          numero <b>1</b> come codifica di \"on\" (<i>acceso</i>).\n<br/>\n<table>\n<tr><td><img
+          src=\"https://images.code.org/50283881d577c17ac6f1d1648d8f361f-image-1483640342574.09.14.png\"
+          width=\"75px\"/></td><td><img src=\"https://images.code.org/ba6f0a000b18f2dd87160e6255e8a71c-image-1483640355103.09.24.png\"
+          width=\"90px\"/></td></tr>\n<tr padding=\"0px\"><td align=\"center\"><b>0</b></td><td
+          align=\"center\"><b>1</b></td></tr>\n</table><img src=\"https://images.code.org/934883837aa59bca1d5c1ded0e0ac675-image-1483640120036.51.06.png\"
+          float=\"left\"/><h3>In questa lezione, ti proponiamo una griglia in cui
+          muoverti per creare dei disegni accendendo solo alcuni \"pixel\".</h3>\n\n![](https://images.code.org/c53e00cde9acbae72d02fb9cc2a20e53-image-1483639858942.png)\n\n\n"
       courseD_multi_artist_binary8_predict1:
         questions:
         - text: Dai una bella occhiata al codice presente nell'area di lavoro. Che
@@ -2256,6 +2769,33 @@ it-IT:
           feedback: La variabile viene impostata nuovamente a 0 prima delle ultime
             due chiamate della funzione, in cui viene aggiunto 1 ogni volta. Quindi
             poi l'ape raccoglie 2 dosi di nettare.
+      courseF_external_variableConstant:
+        markdown: "<h2>Qualcosa in più sulle variabili</h2>\n\n\n<img src=\"https://images.code.org/082c757f5c939bd353eacda9589ca54f-image-1477349401281.35.08.png\"
+          style=\"padding-left: 30px; width:300px; float:right;\"/>\n<h3>Hai appena
+          imparato un ottimo modo per usare una variabile: in questo caso viene chiamata
+          \"costante\"!  \nQuando usi una variabile come \"costante\", imposti il
+          suo valore una sola volta e poi lo utilizzi più volte nel programma senza
+          più modificarlo dopo aver fatto clic su \"Esegui\".\n</h3>\n<br/><hr/>\n<h3>Nella
+          prossima lezione scriverai del codice con variabili che *cambieranno valore*
+          durante l'esecuzione del programma.</h3>\n\n"
+      courseF_external_variableConstant_2018:
+        markdown: "<h2>Qualcosa in più sulle variabili</h2>\n\n\n<img src=\"https://images.code.org/082c757f5c939bd353eacda9589ca54f-image-1477349401281.35.08.png\"
+          style=\"padding-left: 30px; width:300px; float:right;\"/>\n<h3>Hai appena
+          imparato un ottimo modo per usare una variabile: in questo caso viene chiamata
+          \"costante\"!  \nQuando usi una variabile come \"costante\", imposti il
+          suo valore una sola volta e poi lo utilizzi più volte nel programma senza
+          più modificarlo dopo aver fatto clic su \"Esegui\".\n</h3>\n<br/><hr/>\n<h3>Nella
+          prossima lezione scriverai del codice con variabili che *cambieranno valore*
+          durante l'esecuzione del programma.</h3>\n\n"
+      courseF_external_variableConstant_2018_2019:
+        markdown: "<h2>Qualcosa in più sulle variabili</h2>\n\n\n<img src=\"https://images.code.org/082c757f5c939bd353eacda9589ca54f-image-1477349401281.35.08.png\"
+          style=\"padding-left: 30px; width:300px; float:right;\"/>\n<h3>Hai appena
+          imparato un ottimo modo per usare una variabile: in questo caso viene chiamata
+          \"costante\"!  \nQuando usi una variabile come \"costante\", imposti il
+          suo valore una sola volta e poi lo utilizzi più volte nel programma senza
+          più modificarlo dopo aver fatto clic su \"Esegui\".\n</h3>\n<br/><hr/>\n<h3>Nella
+          prossima lezione scriverai del codice con variabili che *cambieranno valore*
+          durante l'esecuzione del programma.</h3>\n\n"
       courseF_markdown_algorithms_end:
         markdown: "# **Hai appena imparato cosa sono gli \"algoritmi\"!**  \n\n\n\n###
           **Un algoritmo è semplicemente una sequenza di passi necessari per svolgere
@@ -2282,13 +2822,30 @@ it-IT:
           ![](https://images.code.org/bd2de01f2c3b86109329b10eb544a6e6-image-1524678600994.png)
 
           ![](https://images.code.org/db76d28bb3dbabdb78edb2cf54c6cb11-image-1524678618646.png)
+      courseF_markdown_conditionals_end:
+        markdown: "# **Hai appena imparato cosa sono le \"istruzioni condizionali\"!**\n\n###
+          Le istruzioni condizionali sono estremamente utili in informatica. Immagina
+          di accedere al tuo sito web preferito inserendo il nome utente e la password;
+          il programma presente sul sito deve usare delle istruzioni condizionali
+          per verificare *se* la password che hai digitato corrisponde a quella associata
+          al tuo nome utente.\n\n### `Se` corrisponde, allora ti permette di entrare!
+          \n\n### `Altrimenti`, ti risponde con un messaggio di errore.  \n\n---\n\n##
+          **Termini da conoscere**\n\n* ### **Condizione** - Una situazione che un
+          programma controlla per decidere se eseguire una certa azione\n\n* ### **Istruzioni
+          condizionali** - Istruzioni che vengono eseguite solo se si verificano certe
+          condizioni\n\n"
+      courseF_markdown_conditionals_intro:
+        markdown: "# **In questa lezione...**\n\n### Le **condizioni** sono delle
+          situazioni che possono essere vere o false. \n\n### Imparerai come usare
+          le condizioni nei programmi, per far avvenire le cose `mentre`, `fino a
+          che` o `se` una certa situazione è vera!\n---\n\n## **Blocchi da conoscere**\n\n![](https://images.code.org/8c6cc9ffa31c916fc970c67382d83b8d-image-1524770260439.png)\n\n![](https://images.code.org/c2fbbaf80b348d47ba2dac4497ae2624-image-1524770272898.png)\n\n![](https://images.code.org/6b90e2dfb025609f8762014ff0ba51dc-image-1524770241058.png)\n\n\n"
       courseF_markdown_debugging_end:
         markdown: |
           # **Hai appena imparato cos'è il "debugging"!**
 
           ### **Un "bug" è qualcosa che non funziona.** È un errore in un programma. Quando cerchi e correggi questi errori, stai eseguendo il "debugging".
 
-          ### Devi allenare la **preseveranza**, un sinonimo di "non arrendersi", per trovare e correggere tutti gli errori.
+          ### Devi allenare la **perseveranza**, un sinonimo di "non arrendersi", per trovare e correggere tutti gli errori.
 
           ---
 
@@ -2318,6 +2875,178 @@ it-IT:
           ![](https://images.code.org/bd2de01f2c3b86109329b10eb544a6e6-image-1524678600994.png)
 
           ![](https://images.code.org/db76d28bb3dbabdb78edb2cf54c6cb11-image-1524678618646.png)
+      courseF_markdown_forloops_end:
+        markdown: |+
+          # **Hai appena imparato cosa sono i "cicli con contatore"!**
+
+          ### **I cicli con contatore sono cicli in cui imposti il valore iniziale, quello finale e il passo.**
+
+          ### Questo nuovo tipo di ciclo `ripeti` ti dà più controllo sul punto di partenza, di arrivo e sul passo da tenere ad ogni iterazione del ciclo.
+
+          ### Grazie a questo maggior controllo, è stato possibile risolvere esercizi più complessi in modo particolarmente efficiente!
+
+          ---
+
+          ## **Termini da conoscere**
+
+          ### **Ciclo con contatore** - È un ciclo dotato di valore iniziale, valore finale e passo
+
+      courseF_markdown_forloops_end_2019:
+        markdown: |+
+          # **Hai appena imparato cosa sono i "cicli con contatore"!**
+
+          ### **I cicli con contatore sono cicli in cui imposti il valore iniziale, quello finale e il passo.**
+
+          ### Questo nuovo tipo di ciclo `ripeti` ti dà più controllo sul punto di partenza, di arrivo e sul passo da tenere ad ogni iterazione del ciclo.
+
+          ### Grazie a questo maggior controllo, è stato possibile risolvere esercizi più complessi in modo particolarmente efficiente!
+
+          ---
+
+          ## **Termini da conoscere**
+
+          ### **Ciclo con contatore** - È un ciclo dotato di valore iniziale, valore finale e passo
+
+      courseF_markdown_forloops_intro:
+        markdown: |+
+          # **In questa lezione...**
+
+          ### Oggi conoscerai un nuovo tipo di ciclo `ripeti`. Ecco un'anteprima del nuovo blocco:
+
+          ![](https://images.code.org/d9cb4b829fe4e688b10c19e879cf4a4b-image-1531938148965.png)
+
+          ### per `counter` da `4` a `10` a passi di `2`
+
+          ### **Contatore** (_counter_) → Da questa variabile dipende il numero di ripetizioni del ciclo
+
+          ### _4_ → **Valore iniziale** → Questo è il valore attribuito alla variabile `counter` all'inizio del ciclo
+
+          ### _10_ → **Valore finale** → Questo è il valore che avrà la variabile `counter` al termine del ciclo
+
+          ### _2_ → **Passo** → Questa è la quantità sommata al valore della variabile ad ogni iterazione del ciclo
+
+          ### Grazie a questo nuovo blocco, sarà molto più semplice risolvere esercizi come questo!
+
+          ![](https://images.code.org/072230b389feb9c6c6998619a245b8af-image-1524773190948.png)
+
+      courseF_markdown_forloops_intro_2019:
+        markdown: |+
+          # **In questa lezione...**
+
+          ### Oggi conoscerai un nuovo tipo di ciclo `ripeti`. Ecco un'anteprima del nuovo blocco:
+
+          ![](https://images.code.org/d9cb4b829fe4e688b10c19e879cf4a4b-image-1531938148965.png)
+
+          ### per `counter` da `4` a `10` a passi di `2`
+
+          ### **Contatore** (_counter_) → Da questa variabile dipende il numero di ripetizioni del ciclo
+
+          ### _4_ → **Valore iniziale** → Questo è il valore attribuito alla variabile `counter` all'inizio del ciclo
+
+          ### _10_ → **Valore finale** → Questo è il valore che avrà la variabile `counter` al termine del ciclo
+
+          ### _2_ → **Passo** → Questa è la quantità sommata al valore della variabile ad ogni iterazione del ciclo
+
+          ### Grazie a questo nuovo blocco, sarà molto più semplice risolvere esercizi come questo!
+
+          ![](https://images.code.org/072230b389feb9c6c6998619a245b8af-image-1524773190948.png)
+
+      courseF_markdown_loops_end:
+        markdown: "# **Hai appena imparato cosa sono i \"cicli\"!**  \n\n### **Un
+          ciclo consiste nell'eseguire più e più volte una certa azione.** In altre
+          parole, ripetere più volte quell'azione.\n\n### I cicli sono molto utili
+          per ripetere certi schemi ricorrenti. Può essere di aiuto scrivere prima
+          il programma senza usare i cicli e poi cercare di individuare gli schemi
+          che si ripetono.\n\n### Quando ne vedi uno, sposta quell'insieme di blocchi
+          all'interno di un blocco di `ripeti`!\n\n---\n\n## **Termini da conoscere**\n\n*
+          ### **Ciclo** - L'esecuzione ripetuta di una certa azione\n\n* ### **Ripetere**
+          - Fare qualcosa più e più volte \n"
+      courseF_markdown_loops_intro:
+        markdown: |
+          # In questa lezione...
+
+          ### Immagina di voler muovere un personaggio per **5** volte. Basterebbe semplicemente usare **5** blocchi `vai avanti`. Ora, immagina di volerlo muovere per **5.000** volte!
+
+          ### Quanto tempo ci metteresti a trascinare **5.000** blocchi dalla cassetta degli attrezzi?
+
+          ### Ti piacerebbe avere un modo più semplice per farlo? C'è!
+
+          ---
+
+          ## Blocchi da conoscere
+
+          ![](https://images.code.org/2d949be303e653f4ea203cc00f0b06c3-image-1524697677509.png)
+      courseF_markdown_nestedloops_end:
+        markdown: |+
+          # **Hai appena imparato cosa sono i "cicli annidati"!**
+
+          ### **Un ciclo annidato è un ciclo inserito in un altro ciclo.** Immaginalo come un cerchio esterno, con un altro cerchio comodamente annidato all'interno del primo.
+
+          ### I cicli annidati servono per ripetere schemi che ripetono a loro volta altri schemi. Possono essere molto potenti, se usati correttamente!
+
+          ---
+
+          ## **Termini da conoscere**
+
+          ### __Cicli annidati__ - Un ciclo contenuto all'interno di un altro ciclo
+
+      courseF_markdown_nestedloops_intro:
+        markdown: |
+          # **In questa lezione...**
+
+          ### E se mettessimo un ciclo *all'interno di un altro ciclo*?
+
+          ### Nulla di impossibile!
+
+          ### Se un normale ciclo può essere utile per ripetere un certo schema, a cosa pensi possa servire un ciclo all'interno di un altro ciclo? Andiamo a scoprirlo!
+
+          ---
+
+          ## **Blocchi da conoscere**
+
+          ![](https://images.code.org/cecea12a6973648b56512ff0990da6fb-image-1524759116715.gif)
+      courseF_markdown_variables_end:
+        markdown: "# **Hai appena imparato cosa sono le \"variabili\"!**\n\n### Per
+          poter essere usata, una variabile ha bisogno di un nome e di un valore.
+          Il nome non cambia mai, mentre il suo valore può modificarsi durante l'esecuzione;
+          una variabile può essere usata in ogni punto del programma. \n\n---\n\n##
+          **Termini da conoscere**\n\n### **Variabile** - Un contenitore per un dato
+          che può cambiare\n\n"
+      courseF_markdown_variables_end_2019:
+        markdown: "# **Hai appena imparato cosa sono le \"variabili\"!**\n\n### Per
+          poter essere usata, una variabile ha bisogno di un nome e di un valore.
+          Il nome non cambia mai, mentre il suo valore può modificarsi durante l'esecuzione;
+          una variabile può essere usata in ogni punto del programma. \n\n---\n\n##
+          **Termini da conoscere**\n\n### **Variabile** - Un contenitore per un dato
+          che può cambiare\n\n"
+      courseF_markdown_variables_intro:
+        markdown: |+
+          # **In questa lezione...**
+
+          ### Le *variabili* sono dei contenitori per dei dati che possono cambiare. Usando il nome di questi contenitori, si può scrivere un programma, anche quando non si conoscono questi valori fino all'ultimo momento!
+
+
+          ---
+
+          ## **Blocchi da conoscere**
+
+          ![](https://images.code.org/2e5804ee6783390a6b86b7b2d7153594-image-1524772405748.png)
+
+
+      courseF_markdown_variables_intro_2019:
+        markdown: |+
+          # **In questa lezione...**
+
+          ### Le *variabili* sono dei contenitori per dei dati che possono cambiare. Usando il nome di questi contenitori, si può scrivere un programma, anche quando non si conoscono questi valori fino all'ultimo momento!
+
+
+          ---
+
+          ## **Blocchi da conoscere**
+
+          ![](https://images.code.org/2e5804ee6783390a6b86b7b2d7153594-image-1524772405748.png)
+
+
       courseF_multi_artist_for10_predict1:
         questions:
         - text: Cosa succederà quando cliccherai su "Esegui"?
@@ -2600,6 +3329,14 @@ it-IT:
         - text: L'artista disegnerà quattro quadrati uno sopra l'altro.
           feedback: Sbagliato. Il ciclo gira di 90 gradi tra le due chiamate alla
             funzione "disegna un poligono".
+      csd-pre-survey-2017-levelgroup:
+        markdown: "# Panoramica\n\nLa classe lavora in gruppi per progettare barche
+          con fogli di alluminio che possano supportare più centesimi possibili. Alla
+          fine della lezione i gruppi riflettono sulle loro esperienze con l'attività
+          e fanno connessioni ai tipi di risoluzione dei problemi che faranno per
+          il resto del corso. \n\n\n## Risorse\n\n* [Barche Alluminio](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=pdf)
+          - Guida Attività (copy as [MS Word](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=doc),
+          [Google Doc](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/copy))\n"
       grade2_multi_collector_A_predict1:
         questions:
         - text: Guarda molto attentamente il codice presente nell'area di lavoro.
@@ -2622,7 +3359,7 @@ it-IT:
       grade2_multi_collector_A_predict1_2018:
         questions:
         - text: Guarda molto attentamente il codice riportato nell'area di lavoro.
-            Cosa succede quando si clicca su "Esegui"?
+            Cosa succederà quando cliccherai su "Esegui"?
         answers:
         - text: Usando questo codice Laura raccoglierà 4 diamanti.
           feedback: Sbagliato. Il programma si blocca perché Laura cerca di raccogliere
@@ -2640,7 +3377,7 @@ it-IT:
       grade2_multi_collector_A_predict1_2018_2019:
         questions:
         - text: Guarda molto attentamente il codice riportato nell'area di lavoro.
-            Cosa succede quando si clicca su "Esegui"?
+            Cosa succederà quando cliccherai su "Esegui"?
         answers:
         - text: Usando questo codice Laura raccoglierà 4 diamanti.
           feedback: Sbagliato. Il programma si blocca perché Laura cerca di raccogliere
@@ -2655,3 +3392,5 @@ it-IT:
         - text: Non lo so.
           feedback: Il programma si blocca perché Laura cerca di raccogliere un diamante
             in una casella che non ne contiene.
+      gradek1_activity_beNice:
+        title: Il computer è tuo amico

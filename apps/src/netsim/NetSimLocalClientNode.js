@@ -79,6 +79,12 @@ var NetSimLocalClientNode = (module.exports = function(shard, clientRow) {
   this.remoteChange = new ObservableEventDEPRECATED();
 
   /**
+   * Change event others can observe, which will fire whenever the simplex wire
+   * state changes, if the level is configured to auto_receive new messages.
+   */
+  this.wireStateChange = new ObservableEventDEPRECATED();
+
+  /**
    * Callback for when something indicates that this node has been
    * disconnected from the instance.
    * @type {function}
@@ -601,6 +607,22 @@ NetSimLocalClientNode.prototype.onMessageTableChange_ = function() {
   if (!NetSimGlobals.getLevelConfig().automaticReceive) {
     // In this level, we will not automatically pick up messages directed
     // at us.  We must manually call a receive method instead.
+    return;
+  }
+  if (
+    // messageGranularity === BITS implies this is a simplex wire
+    NetSimGlobals.getLevelConfig().messageGranularity ===
+    MessageGranularity.BITS
+  ) {
+    this.getLatestMessageOnSimplexWire(
+      function(err, message) {
+        if (err) {
+          logger.error('Error pulling message off the wire: ' + err.message);
+          return;
+        }
+        this.wireStateChange.notifyObservers(message.payload);
+      }.bind(this)
+    );
     return;
   }
 

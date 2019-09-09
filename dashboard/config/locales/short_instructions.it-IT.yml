@@ -247,10 +247,10 @@ it-IT:
         per fare in modo che l'alieno gironzoli qua e là.
       Dance Party 2_2019: Cambia il comportamento nel blocco `___begins___` (_inizia_)
         per fare in modo che all'inizio l'alieno gironzoli qua e là.
-      Dance Party 3: Crea un nuovo personaggio chiamato `alien2`.  Fagli fare un passo
-        di danza diverso ogni volta che ci clicchi sopra.
-      Dance Party 3_2019: Crea un nuovo personaggio chiamato `alien2`.  Fagli fare
-        un passo di danza diverso ogni volta che ci clicchi sopra.
+      Dance Party 3: 'Crea un nuovo personaggio chiamato `alien2`, poi fagli fare
+        un passo di danza a tua scelta ogni volta che ci clicchi sopra.  '
+      Dance Party 3_2019: 'Crea un nuovo personaggio con l''aspetto di un alieno rosa.
+        Fagli fare un passo di danza a tua scelta ogni volta che ci clicchi sopra.  '
       Dance Party 4: Crea un terzo personaggio chiamato `alien3` e posiziona tutti
         gli alieni lungo una linea retta.
       Dance Party 4_2019: Crea un terzo personaggio chiamato `alien3` e posiziona
@@ -607,9 +607,9 @@ it-IT:
         questo esercizio! (Impareremo un modo più semplice nel prossimo esercizio).
       NEW Course 4 Bee For Loops 8: E ora andiamo oltre! Quale deve essere il _passo_
         in questo ciclo con contatore per raccogliere 3, 6, 9, 12, 15 dosi di nettare?
-      Overworld Avoid Monsters: Incontrare un Creeper non è una buona idea. Muoviti
-        con attenzione tra i Creeper e mettiti al sicuro a casa tua.
-      Overworld Avoid Monsters_2019: Incontrare un Creeper non è una buona idea. Muoviti
+      Overworld Avoid Monsters: Incontrare un Creeper non è salutare. Muoviti con
+        attenzione tra i Creeper e mettiti al sicuro a casa tua.
+      Overworld Avoid Monsters_2019: Incontrare un Creeper non è salutare. Muoviti
         con attenzione tra i Creeper e mettiti al sicuro a casa tua.
       Overworld Chop Tree: 'Il legno è una risorsa molto importante: serve per costruire
         molte cose. Raggiungi l''albero e usa l''istruzione `distruggi` per abbatterlo.'
@@ -713,10 +713,10 @@ it-IT:
       Underground If Statements_2019: Ora la situazione si fa un po' più difficile.
         Estrai tre blocchi di pietrarossa, ma non cadere nella lava. Usa un'istruzione
         `se` per posizionare dei ciottoli se scopri la lava.
-      Underground Iron: Camminare sulla lava non è una buona idea. Posiziona dei ciottoli
+      Underground Iron: Camminare sulla lava non è salutare. Posiziona dei ciottoli
         per creare un ponte, poi estrai almeno due blocchi di ferro.
-      Underground Iron_2019: Camminare sulla lava non è una buona idea. Posiziona
-        dei ciottoli per creare un ponte, poi estrai almeno due blocchi di ferro.
+      Underground Iron_2019: Camminare sulla lava non è salutare. Posiziona dei ciottoli
+        per creare un ponte, poi estrai almeno due blocchi di ferro.
       Underground Mining Coal: Nel sottosuolo trovi le risorse più preziose, ma è
         buio. Posiziona almeno due torce ed estrai almeno due blocchi di carbone.
       Underground Mining Coal_2019: Nel sottosuolo trovi le risorse più preziose,
@@ -736,7 +736,12 @@ it-IT:
       Virtual Pet 6: Aggiungi una mela che riporti la giraffa alla sua dimensione
         originale quando si toccano.
       Virtual Pet 8_2019: 'Tempo di giocare: Cos''altro puoi far fare alla tua giraffa? '
-      Virtual Pet Freeplay: 'Tempo di giocare: Cos''altro puoi far fare alla tua giraffa? '
+      Virtual Pet Freeplay: "**Tempo di giocare**: Cos'altro puoi far fare alla tua
+        giraffa? "
+      'Widget: Text Compression': Cerca modelli (parole o frasi ripetute) nel testo.
+        Inserisci i modelli che vedi nel dizionario in alto a destra. Come inserisci
+        le voci nel dizionario, il simbolo per la voce è inserito nel testo al posto
+        del modello.
       behaviors 1: Fai una previsione!
       behaviors 4: Fai una previsione!
       bounce_1: Attacca un blocco al blocco verde `quando si preme la freccia verso
@@ -833,9 +838,9 @@ it-IT:
         come questa?
       course2_artist_nestedLoops_challenge2: Riesci a scoprire come realizzare un'immagine
         come questa?
-      course2_bee_conditionals_challenge1: Raccogli tutto il nettare o fai tutto il
+      course2_bee_conditionals_challenge1: Raccogli tutto il nettare e fai tutto il
         miele.
-      course2_bee_conditionals_challenge2: Raccogli tutto il nettare o fai tutto il
+      course2_bee_conditionals_challenge2: Raccogli tutto il nettare e fai tutto il
         miele.
       course2_harvester_loops_challenge1: Raccogli tutte le pannocchie.
       course2_harvester_loops_challenge2: Raccogli tutte le lattughe evitando gli
@@ -871,7 +876,7 @@ it-IT:
         cancellalo e sostituiscilo con qualcosa di totalmente diverso)
       course4_collector_nested_loops_challenge2: Aiuta la collezionista a raggiungere
         almeno due diamanti usando solo i blocchi che trovi nella cassetta degli attrezzi.
-        È possibile raccoglierli tutti e 4.
+        Se vuoi, puoi anche raccoglierli tutti e 4.
       course4_harvester_nested_loops_challenge1: '"Ho bisogno di aiuto nella fattoria!
         Aiutami a raccogliere queste pannocchie usando solo i blocchi presenti nella
         cassetta degli attrezzi."'
@@ -1173,11 +1178,8 @@ it-IT:
         di lavoro e prova a vedere cosa succede!
       courseA_playLab_events1_2018: Questo è il Laboratorio. Metti dei blocchi nell'area
         di lavoro e prova a vedere cosa succede!
-      courseA_playLab_events1_2019: Questo è il Laboratorio. Metti dei blocchi nell'area
-        di lavoro e prova a vedere cosa succede!
       courseA_playLab_events2: Il cane vuole dire "Ciao!" Riesci ad aiutarlo?
       courseA_playLab_events2_2018: Il cane vuole dire "Ciao!" Riesci ad aiutarlo?
-      courseA_playLab_events2_2019: Il cane vuole dire "Ciao!" Riesci ad aiutarlo?
       courseA_playLab_events3: Aggancia il blocco `sposta il cane a sinistra` al blocco
         verde dell'evento `quando si preme la freccia sinistra` che si trova già nell'area
         di lavoro.
@@ -2531,9 +2533,9 @@ it-IT:
         contrario, fai il miele perché c'è sicuramente un favo.
       courseD_bee_conditionals8_2019: Se c'è un fiore, raccogli il nettare. In caso
         contrario, fai il miele perché c'è sicuramente un favo.
-      courseD_bee_conditionals9: Raccogli tutto il nettare o fai tutto il miele.
-      courseD_bee_conditionals9_2018: Raccogli tutto il nettare o fai tutto il miele.
-      courseD_bee_conditionals9_2019: Raccogli tutto il nettare o fai tutto il miele.
+      courseD_bee_conditionals9: Raccogli tutto il nettare e fai tutto il miele.
+      courseD_bee_conditionals9_2018: Raccogli tutto il nettare e fai tutto il miele.
+      courseD_bee_conditionals9_2019: Raccogli tutto il nettare e fai tutto il miele.
       courseD_bee_conditionals_challenge1: Raccogli tutto il nettare e fai tutto il
         miele.
       courseD_bee_conditionals_challenge1_2018: Raccogli tutto il nettare e fai tutto
@@ -2663,13 +2665,13 @@ it-IT:
         nell''area di lavoro per raccogliere almeno **6** diamanti!'
       courseD_collector_nested_loops_challenge2: Aiuta la collezionista a raggiungere
         almeno due diamanti usando solo i blocchi che trovi nella cassetta degli attrezzi.
-        È possibile raccoglierli tutti e 4.
+        Se vuoi, puoi anche raccoglierli tutti e 4.
       courseD_collector_nested_loops_challenge2_2018: Aiuta la collezionista a raggiungere
         almeno due diamanti usando solo i blocchi che trovi nella cassetta degli attrezzi.
-        È possibile raccoglierli tutti e 4.
+        Se vuoi, puoi anche raccoglierli tutti e 4.
       courseD_collector_nested_loops_challenge2_2019: Aiuta la collezionista a raggiungere
         almeno due diamanti usando solo i blocchi che trovi nella cassetta degli attrezzi.
-        È possibile raccoglierli tutti e 4.
+        Se vuoi, puoi anche raccoglierli tutti e 4.
       courseD_collector_ramp10: Aiuta Laura a raccogliere tutti i diamanti.
       courseD_collector_ramp8: Aiuta Laura a raccogliere tutti i diamanti.
       courseD_collector_ramp9: Aiuta Laura a raccogliere tutti i diamanti.
@@ -2865,24 +2867,24 @@ it-IT:
         il minor numero possibile di blocchi.
       courseD_maze_nestedLoops3_2019: Fai arrivare lo zombie fino al girasole usando
         il minor numero possibile di blocchi.
-      courseD_maze_nestedLoops4: 'Fammi arrivare al girasole usando il minor numero
-        possibile di blocchi!  '
-      courseD_maze_nestedLoops4_2018: 'Fammi arrivare al girasole usando il minor
-        numero possibile di blocchi!  '
-      courseD_maze_nestedLoops4_2019: 'Fammi arrivare al girasole usando il minor
-        numero possibile di blocchi!  '
+      courseD_maze_nestedLoops4: '_"Fammi arrivare al girasole usando il minor numero
+        possibile di blocchi!"_  '
+      courseD_maze_nestedLoops4_2018: '_"Fammi arrivare al girasole usando il minor
+        numero possibile di blocchi!"_  '
+      courseD_maze_nestedLoops4_2019: '_"Fammi arrivare al girasole usando il minor
+        numero possibile di blocchi!"_  '
       courseD_maze_nestedLoops5: Fai arrivare lo zombie fino al girasole usando il
         minor numero possibile di blocchi!
       courseD_maze_nestedLoops5_2018: Fai arrivare lo zombie fino al girasole usando
         il minor numero possibile di blocchi!
       courseD_maze_nestedLoops5_2019: Fai arrivare lo zombie fino al girasole usando
         il minor numero possibile di blocchi!
-      courseD_maze_nestedLoops6: Usa i cicli per farmi arrivare al girasole col minor
-        numero possibile di blocchi!
-      courseD_maze_nestedLoops6_2018: Usa i cicli per farmi arrivare al girasole col
-        minor numero possibile di blocchi!
-      courseD_maze_nestedLoops6_2019: Usa i cicli per farmi arrivare al girasole col
-        minor numero possibile di blocchi!
+      courseD_maze_nestedLoops6: Fai arrivare lo zombie fino al girasole usando solo
+        i blocchi disponibili.
+      courseD_maze_nestedLoops6_2018: Fai arrivare lo zombie fino al girasole usando
+        solo i blocchi disponibili.
+      courseD_maze_nestedLoops6_2019: Fai arrivare lo zombie fino al girasole usando
+        solo i blocchi disponibili.
       courseD_maze_ramp1: Per risolvere questo esercizio, collega tutti i blocchi
         e clicca su "Esegui" per vederlo in funzione!
       courseD_maze_ramp1_2018: Per risolvere questo esercizio, collega tutti i blocchi
@@ -2966,12 +2968,12 @@ it-IT:
       courseD_maze_until7_2018: Aiuta lo zombie ad arrivare fino al girasole.
       courseD_maze_until7_2019: Aiuta lo zombie ad arrivare fino al girasole.
       courseD_maze_until8: Aiuta lo zombie ad arrivare fino al girasole.
-      courseD_maze_until9: "**Sfida:** Evita le piante carnivore e aiuta gli zombie
+      courseD_maze_until9: "**Sfida:** Evita le piante carnivore e aiuta lo zombie
         ad arrivare fino al girasole."
-      courseD_maze_until9_2018: "**Sfida:** Evita le piante carnivore e aiuta gli
-        zombie ad arrivare fino al girasole."
-      courseD_maze_until9_2019: "**Sfida:** Evita le piante carnivore e aiuta gli
-        zombie ad arrivare fino al girasole."
+      courseD_maze_until9_2018: "**Sfida:** Evita le piante carnivore e aiuta lo zombie
+        ad arrivare fino al girasole."
+      courseD_maze_until9_2019: "**Sfida:** Evita le piante carnivore e aiuta lo zombie
+        ad arrivare fino al girasole."
       courseD_playLab_cond1: Fai arrivare il pirata fino alle bandierine per risolvere
         questo esercizio.
       courseD_playLab_cond1_2018: Fai arrivare il pirata fino alle bandierine per
@@ -3303,15 +3305,15 @@ it-IT:
         o condividerlo con i tuoi amici e compagni di classe!
       courseF_artist_for1: Fai esperimenti con il _ciclo con contatore_ e gioca con
         la variabile `counter` (_contatore_).
-      courseF_artist_for10: 'Tempo di giocare: Prova ad usare la variabile `counter`
+      courseF_artist_for10: "**Tempo di giocare**: Prova ad usare la variabile `counter`
         (_contatore_) con altri elementi grafici per creare immagini magiche come
-        questa.'
-      courseF_artist_for10_2018: 'Tempo di giocare: Prova ad usare la variabile `counter`
-        (_contatore_) con altri elementi grafici per creare immagini magiche come
-        questa.'
-      courseF_artist_for10_2019: 'Tempo di giocare: Prova ad usare la variabile `counter`
-        (_contatore_) con altri elementi grafici per creare immagini magiche come
-        questa.'
+        questa."
+      courseF_artist_for10_2018: "**Tempo di giocare**: Prova ad usare la variabile
+        `counter` (_contatore_) con altri elementi grafici per creare immagini magiche
+        come questa."
+      courseF_artist_for10_2019: "**Tempo di giocare**: Prova ad usare la variabile
+        `counter` (_contatore_) con altri elementi grafici per creare immagini magiche
+        come questa."
       courseF_artist_for1_2018: Fai esperimenti con il _ciclo con contatore_ e gioca
         con la variabile `counter` (_contatore_).
       courseF_artist_for1_2019: Fai esperimenti con il _ciclo con contatore_ e gioca
@@ -3409,11 +3411,13 @@ it-IT:
         per fare in modo che l'artista disegni i vari triangoli spostati ognuno in
         avanti di `length` pixel e verso il basso di `length` pixel.
       courseF_artist_variables5: Aggiungi un'altra serie di cicli alla fine del programma
-        per aggiungere tre triangoli. Questa volta, vai avanti e verso l'alto!
+        per aggiungere tre triangoli. Questa volta, salta in avanti e verso l'alto!
       courseF_artist_variables5_2018: Aggiungi un'altra serie di cicli alla fine del
-        programma per aggiungere tre triangoli. Questa volta, vai avanti e verso l'alto!
+        programma per aggiungere tre triangoli. Questa volta, salta in avanti e verso
+        l'alto!
       courseF_artist_variables5_2019: Aggiungi un'altra serie di cicli alla fine del
-        programma per aggiungere tre triangoli. Questa volta, vai avanti e verso l'alto!
+        programma per aggiungere tre triangoli. Questa volta, salta in avanti e verso
+        l'alto!
       courseF_artist_variables6: 'Ora crea triangoli che siano larghi 60 pixel con
         salti di 60 pixel.  '
       courseF_artist_variables6_2018: 'Ora crea triangoli che siano larghi 60 pixel

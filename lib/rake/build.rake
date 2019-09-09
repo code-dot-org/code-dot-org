@@ -133,17 +133,11 @@ namespace :build do
     end
   end
 
-  task :restart_process_queues do
-    ChatClient.log 'Restarting <b>process_queues</b>...'
-    RakeUtils.restart_service 'process_queues'
-  end
-
   tasks = []
   tasks << :apps if CDO.build_apps
   tasks << :dashboard if CDO.build_dashboard
   tasks << :pegasus if CDO.build_pegasus
   tasks << :tools if rack_env?(:staging)
-  tasks << :restart_process_queues if CDO.process_queues
   task all: tasks
 end
 

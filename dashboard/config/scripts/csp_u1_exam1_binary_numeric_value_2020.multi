@@ -1,0 +1,16 @@
+name 'csp-u1-exam1-binary-numeric-value_2020'
+height 'auto'
+
+question 'Which of the following binary (base-2) numbers is LARGEST?’
+right ‘<pre>11000000</pre>’
+wrong ‘<pre>01111111</pre>’
+wrong ‘<pre>00000001</pre>’
+wrong ‘<pre>10111111</pre>’
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN
+
+markdown <<MARKDOWN
+
+MARKDOWN

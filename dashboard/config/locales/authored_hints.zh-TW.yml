@@ -402,10 +402,6 @@ zh-TW:
           注意一個`計數`迴圈裡頭需要數個規律的重複積木，以重複 `counter` 次來製作出樓梯的模式。
 
           其它的`計數`迴圈只需要一個普通的重複積木以收集到 `counter` 個蜂蜜。
-        Course_4_SCFL_1_d: |-
-          **解決方案：**
-
-          ![Solution Blocks](https://images.code.org/1a61eae7e12742c8d850f2bf7e939f72-image-1469726415313.png)
       Course 4 SCFL 1a:
         Course_4_SCFL_1a_a: 盡可以減少積木的使用量，路還長得很呢！
         Course_4_SCFL_1a_b: |-
@@ -432,10 +428,6 @@ zh-TW:
           像素。"
         Course_4_SCFL_3_b: 筆刷的透明度固定都是 `counter`/2。
         Course_4_SCFL_3_c: 在你畫出一個正方形後，別忘了跳回去，轉向，再跳一次，再轉回去！
-        Course_4_SCFL_3_d: |-
-          **解決方案：**
-
-          ![Solution Blocks](https://images.code.org/7f14ddfa5cdcbfdfacd8b1e45511d583-image-1469726581880.png)
       Course 4 SCFL 4:
         Course_4_SCFL_4_a: 使用`設定顏色`積木，可以讓顏色改變，使用的是 RGB 顏色代碼。R（Red，紅）的值為 `counter`、G（Green，綠）的值為
           `255 - counter`、B（Blue，藍）的值則固定為 255。
@@ -446,10 +438,6 @@ zh-TW:
           `counter`、B（Blue，藍）的值為 `255 - counter`。
         Course_4_SCFL_6_b: 這個程式並沒有你想的這麼複雜，只需要設定好`計數迴圈`裡頭的顏色部分，然後向前移動，最後轉向。
         Course_4_SCFL_6_c: '這個`計數迴圈`是從 5 算到 250，間隔數是 2。 '
-        Course_4_SCFL_6_d: |-
-          **解決方案：**
-
-          ![Solution Blocks](https://images.code.org/a61c16d76d876d9c26ebcaebef3f97a2-image-1469726730055.png)
       Course 4 SCFL 7:
         Course_4_SCFL_7_a: 使用`設定顏色`積木，可以讓顏色改變，使用的是 Rgb 顏色代碼。R（Red，紅）的值為 `counter`、G（Green，綠）的值為
           `255 - counter`、B（Blue，藍）的值則固定為 255。
@@ -905,6 +893,20 @@ zh-TW:
         courseA_collector_loops_challenge1_b: 如果你只要執行某段指令一次，就不需要用到迴圈。
         courseA_collector_loops_challenge1_c: 右邊的洞穴有 6 個寶石，而你只需移動並收集 5 次，你知道怎麼做嗎？
       course1_collector_loops_challenge3:
+        courseB_collector_loops_challenge1_c: |-
+          只要 8 個積木就可以搞定！你必須把`重複`積木放到另一個`積木`裡。點擊以取得更多提示。
+          <xml>
+          <block type="controls_repeat_simplified">
+                  <title name="TIMES">?</title>
+                  <statement name="DO">
+
+                        <block type="controls_repeat_simplified">
+                          <title name="TIMES">?</title>
+                          <statement name="DO">
+                          </statement></block><next><block type="controls_repeat_simplified">
+                          <title name="TIMES">?</title>
+                          <statement name="DO">
+                          </statement></block></next></statement></block></xml>
         courseB_collector_loops_challenge1_d: |-
           試試這個！
           <xml>
@@ -1190,6 +1192,8 @@ zh-TW:
         courseA_collector_loops3_b: 記得在一個 <xml><block type="controls_repeat_simplified_dropdown"><title
           name="TIMES" config="3-10">???</title></block></xml>迴圈裡你可以用多於一塊程式積木。
       courseA_collector_loops3_2019:
+        courseA_collector_loops3_a: "試著使用一個 \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title
+          name=\"TIMES\" config=\"3-10\">???</title></block></xml>\n\n 迴圈!"
         courseA_collector_loops3_b: 記得在一個 <xml><block type="controls_repeat_simplified_dropdown"><title
           name="TIMES" config="3-10">???</title></block></xml>迴圈裡你可以用多於一塊程式積木。
       courseA_collector_loops_challenge1:
@@ -1215,6 +1219,9 @@ zh-TW:
         courseA_collector_loops_challenge2kp_a: 你能用迴圈過關嗎？
       courseA_collector_preLoops7:
         courseA_collector_loops2_b: 當你已經到達寶物的地點，記得用「取得寶物」程式積木來取得它。
+      courseA_harvester_loops2_2019:
+        courseA_harvester_loops2_a: "你的程式碼將會有 **四個** `往西移動`\n\n<xml><block type=\"maze_moveWest\"/></xml>\n\n程式積木和
+          **四個** <xml>\n`pick corn`\n  <block type=\"harvester_corn\"/>\n</xml> 程式積木. "
       courseA_harvester_loops5:
         courseA_harvester_loops5_c: 從這條路來摘取所有玉米！
       courseA_harvester_loops5_2019:
@@ -1247,6 +1254,13 @@ zh-TW:
         courseA_harvester_seq9_c: 你應該按照這個路徑才能拿到所有玉米。
       courseA_harvester_seq9_2019:
         courseA_harvester_seq9_c: 你應該按照這個路徑才能拿到所有玉米。
+      courseA_maze_seq13_2019:
+        courseA_maze_seq13_c: |-
+          這些 <xml><block type="maze_moveNorth"/></xml>
+
+          <xml><block type="maze_moveEast"/></xml>
+
+           程式積木將會幫助移動更靠近豬，
       courseA_maze_seq6:
         courseA_maze_seq6_a: 最後的程式應該要有 3 個移動積木。
       courseA_maze_seq6_2018:
@@ -1740,6 +1754,16 @@ zh-TW:
       courseB_iceage_loops2_2019:
         courseB_iceage_loops2_b: 如果你卡關了，試試邊觀察邊念出每個步驟。
         courseB_iceage_loops2_c: 按著這個路徑讓鼠奎特拿到橡樹果實。
+      courseB_iceage_loops3_2019:
+        courseB_iceage_loops3_a: |-
+          使用這個新的程式積木！
+           <xml><block type="controls_repeat_simplified_dropdown">
+              <title name="TIMES" config="3-10">5</title>
+              </block></xml>
+        courseB_iceage_loops3_b: |-
+          要讓程式碼重複, 把一個`repeat` <xml><block type="controls_repeat_simplified">
+              <title name="TIMES">???</title>
+            </block></xml>迴圈拖拉出來, 然後將你想要的程式積木放進去.
       courseB_iceage_loops4:
         courseB_iceage_loops4_c: 這是鼠奎特應該走的路徑。
       courseB_iceage_loops4_2019:
@@ -2707,19 +2731,11 @@ zh-TW:
           50 像素。"
         courseF_artist_for_challenge1_b: 筆刷的透明度固定都是 `counter`/2。
         courseF_artist_for_challenge1_c: 在你畫出一個正方形後，別忘了跳回去，轉向，再跳一次，再轉回去！
-        courseF_artist_for_challenge1_d: |-
-          **解決方案：**
-
-          ![Solution Blocks](https://images.code.org/7f14ddfa5cdcbfdfacd8b1e45511d583-image-1469726581880.png)
       courseF_artist_for_challenge1_2019:
         courseF_artist_for_challenge1_a: "`pen width`（筆跡寬度）是 1。而第一個正方形的邊長是 50 像素，每個正方形之間的邊長差了
           50 像素。"
         courseF_artist_for_challenge1_b: 筆刷的透明度固定都是 `counter`/2。
         courseF_artist_for_challenge1_c: 在你畫出一個正方形後，別忘了跳回去，轉向，再跳一次，再轉回去！
-        courseF_artist_for_challenge1_d: |-
-          **解決方案：**
-
-          ![Solution Blocks](https://images.code.org/7f14ddfa5cdcbfdfacd8b1e45511d583-image-1469726581880.png)
       courseF_artist_for_challenge2:
         courseF_artist_for_challenge2_c: '這個`計數迴圈`是從 5 算到 250，間隔數是 2。 '
         courseF_artist_for_challenge2_a: 使用`設定顏色`積木，可以讓顏色改變，使用的是 Rgb 顏色代碼。R（Red，紅）的值固定為
@@ -2854,10 +2870,6 @@ zh-TW:
           注意一個`計數`迴圈裡頭需要數個規律的重複積木，以重複 `counter` 次來製作出樓梯的模式。
 
           其它的`計數`迴圈只需要一個普通的重複積木以收集到 `counter` 個蜂蜜。
-        courseF_bee_for_challenge2_d: |-
-          **解決方案：**
-
-          ![Solution Blocks](https://images.code.org/1a61eae7e12742c8d850f2bf7e939f72-image-1469726415313.png)
       courseF_bee_for_challenge2_2019:
         courseF_bee_for_challenge2_a: |-
           看看可用的移動方式：
@@ -2868,10 +2880,6 @@ zh-TW:
           注意一個`計數`迴圈裡頭需要數個規律的重複積木，以重複 `counter` 次來製作出樓梯的模式。
 
           其它的`計數`迴圈只需要一個普通的重複積木以收集到 `counter` 個蜂蜜。
-        courseF_bee_for_challenge2_d: |-
-          **解決方案：**
-
-          ![Solution Blocks](https://images.code.org/1a61eae7e12742c8d850f2bf7e939f72-image-1469726415313.png)
       courseF_bee_functions3:
         courseF_bee_functions3_d: 探查這條道路。
       courseF_bee_functions6:

@@ -43,6 +43,7 @@ fi:
           Code.org -tilin luomisen <strong>%{provider}</strong> -tunnuksella <strong>%{email}</strong>.
         error:
           future: ei voi olla tulevaisuudessa
+  beta: beta
   hello: Hei maailma
   welcome_back: Tervetuloa takaisin, %{name}
   your_professional_learning_plan: Ammattimainen oppimissuunnitelmasi
@@ -459,14 +460,6 @@ fi:
     no_primary_course: Kokeile kurssia Code Studiossa
     choose_next_course: Kokeile jotakin allaolevista Code Studion kursseista
     print_certificate: Tulosta todistus
-    announcement_title: Ilmoituksia
-    announcement_learn_more_button: Lue lisää
-    announcement_try_now_button: Kokeile nyt
-    announcement_host_an_hour_button: Isännöi tunti
-    announcement_watch_video_button: Katso video
-    announcement_petition_button: Lisää sinun nimesi
-    announcement_go_beyond_button: Mene pidemmälle
-    announcement_apply_now: Liity nyt
   move_students:
     current_section_dne: Anteeksi, mutta ryhmää %{current_section_code} ei ole olemassa.
       Anna eri ryhmä koodi.

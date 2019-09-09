@@ -1083,6 +1083,7 @@
   alice_beyond_longdescription: "Usando um inovador ambiente de programação com suporte para a criação de animações em 3D, o projeto Alice fornece ferramentas e materiais para ensinar e aprender pensamento computacional, resolução de problemas e programação para várias idades e níveis escolares."
   sphero_beyond_longdescription: "Quer seja professor ou pai, as aulas do SPRK proporcionam às crianças um curso divertido acerca da programação de robôs, e, ao mesmo tempo, aperfeiçoam as competências dos alunos em Matemática e Ciências."
   compatibility_unsupported_browser: "O seu navegador não é suportado. Por favor atualize o seu navegador para <a href='%{supported_browsers_url}', target='_blank'> um dos nossos navegadores suportados</a>. Você pode tentar visualizar a página, mas algumas funcionalidade podem não estar disponíveis."
+  compatibility_unsupported_browser_markdown: "O seu navegador não é suportado. Por favor atualize o seu navegador para <a href='%{supported_browsers_url}', target='_blank'> um dos nossos navegadores suportados</a>. Você pode tentar visualizar a página, mas algumas funcionalidade podem não estar disponíveis."
   flappy_shortcode: "bater as assas"
   header_home: "Início"
   header_courses: "Cursos"

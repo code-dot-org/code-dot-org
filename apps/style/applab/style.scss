@@ -238,6 +238,16 @@ div#visualizationResizeBar {
   }
 }
 
+.widgetWidth {
+  width: 600px !important;
+  max-width: 600px !important;
+}
+
+.widgetHeight {
+  height: 450px !important;
+  max-height: 450px !important;
+}
+
 #visualizationColumn.wireframeShare {
   max-width: none !important;
   // If you change this width and height,

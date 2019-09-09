@@ -1868,6 +1868,10 @@ et:
           stages:
             While Loops:
               name: "„Kui“ tsüklid"
+        csp1-pilot:
+          stages:
+            Binary Numbers:
+              name: Binaararvud
         time4csdemo:
           stages:
             Crowdsourcing:
@@ -1894,3 +1898,13 @@ et:
               name: Velocity
             Functions:
               name: Funktsioonid
+        csl-vn:
+          stages:
+            Loops in Ice Age:
+              name: Tsüklik - Jääaeg
+        peru-2019:
+          stages:
+            Introduction:
+              name: Sissejuhatus
+            Nested Loops:
+              name: Korduvad tsüklid

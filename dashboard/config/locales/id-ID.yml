@@ -43,6 +43,7 @@ id:
           membuat akun Code.org dengan <strong>%{provider}</strong> untuk <strong>%{email}</strong>.
         error:
           future: tidak mungkin di masa depan
+  beta: Percobaan
   hello: Halo dunia
   welcome_back: Selamat datang kembali, %{name}
   your_professional_learning_plan: Rencana Pembelajaran Profesional Anda
@@ -565,135 +566,6 @@ id:
     choose_next_course: Coba kursus Code Studio dengan memilih salah satu di bawah
       ini
     print_certificate: Cetak Sertifikat
-    announcement_title: Pengumuman
-    announcement_message_fall2016_features: Kami menghabiskan musim panas untuk mengubah
-      masukan anda menjadi fitur-fitur baru. Sekarang, anda bisa <a href="%{pp_url}"
-      target="_blank">mengikuti berbagai macam kemajuan para perlajar</a> meskipun
-      mereka terprogram berpasangan pada satu perangkat. Anda bisa menggunakan <a
-      href="%{csp_widgets_url}" target="_blank">peralatan interaktif yang terbaik</a>
-      dari prinsip-prinsip pelajaran Ilmu Komputer kami di <i>setiap</i> kelas. Dan
-      pelajar anda bisa <a href="%{unused_code_url}" target="_blank">menyimpan kode
-      yang tidak digunakan</a> didalam ruang kerja mereka untuk mendorong beruji coba!
-      Periksalah semua fitur-fitur terbaru kami dan beritahu kami bagaimana pendapat
-      anda.
-    announcement_csp_widgets_message: Mencari beberapa cara yang menyenangkan untuk
-      mengajar kelas anda bagaimana internet bekerja, bagaimana kriptografi (ilmu
-      membuat dan memecahkan sandi) menyimpan data dengan aman, dan konsep-konsep
-      lainnya? Kami telah mengambil peralatan-peralatan interaktif terbaik dari kurikulum
-      prinsip-prinsip Ilmu Komputer kami dan mengeluarkannya sebagai sebuah widgets
-      (acang) yang berdiri sendiri yang bisa anda gunakan setiap saat!
-    announcement_learn_more_button: Pelajari lebih banyak
-    announcement_try_now_button: Coba sekarang
-    announcement_host_an_hour_button: Tuan rumah satu jam
-    announcement_watch_video_button: Lihat video
-    announcement_petition: Sebagai seorang guru, anda merupakan pemimpin dalam sebuah
-      pergerakan yang memberikan setiap pelajar di setiap sekolah kesempatan untuk
-      belajar ilmu komputer. Sekarang, adalah saatnya perwakilan anda mendengarkan
-      anda. Minggu ini, para pemimpin dunia pendidikan, 28 gubernur, dan pimpinan-pimpinan
-      perusahan-perusahaan terbesar di Amerika bergabung bersama dalam penyampaian
-      surat terbuka meminta kongres Amerika Serikat untuk mendanai pendidikan ilmu
-      komputer K-12.
-    announcement_petition_button: Tambahkan nama Anda
-    announcement_go_beyond_button: Melampaui
-    announcement_apply_now: Daftar sekarang
-    announcement_all: Ikuti terus perkembangan dengan fitur-fitur baru dan pembaharuan-pembaharuan
-      dalam blog guru kami. <a href='%{teacher_blog_url}' target='_blank'>Lihatlah
-      pengumuman sebelumnya.</a>
-    announcement_hoc_launch: Ribuan pengajar dari lebih 180 negara akan mulai mengajarkan
-      ilmu komputer selama kegiatan Hour of Code tanggal 5 s/d 11 Desember ini. Kami
-      sangat bergantung kepada anda untuk membantu kami mencapai lebih banyak pelajar
-      dari pada sebelumnya. <a href='%{signup_url}' target='_blank'>Daftarkan kegiatan
-      Hour of Code anda</a> dan biarkan guru-guru yang lain tahu bahwa setiap orang
-      bisa memulai mengajar ilmu komputer.
-    announcement_mc_launch: Salah satu tutorial kami yang paling populer sekarang
-      memiki lanjutannya! Perancang Minecraft Hour of Code yang baru memberi kesempatan
-      para pelajar membuat aturan-aturan dunia Minecraft. Mereka bisa menciptakan
-      pengalaman Minecraft yang benar-benar unik, dan kemudian membagikannya dengan
-      teman-teman atau memainkannya di ponsel mereka. Lakukan hal tersebut di dalam
-      kelas anda untuk Hour of Code.
-    announcement_how_code_studio: Anda tidak memerlukan pengalaman apapun untuk memulai
-      mengajar ilmu komputer di dalam kelas anda. Code.org menawarkan kurikulum, rencana
-      pembelajaran, program-program pembelajaran yang sangat berkualitas dan profesional,
-      dan berbagai macam peralatan-peralatan yang sangat bagus untuk semua tingkatan
-      kelas&mdash;semua yang anda butuhkan, semuanya tanpa biaya (gratis). Penasaran
-      dimana harus memulai? Unduh <a href='%{video_download_url}'>video ini</a>!
-    announcement_go_beyond: Lakukan lebih dari hanya satu kegiatan Hour of Code dan
-      jelajahi konsep-konsep ilmu komputer dengan pelajar-pelajar anda setiap minggu.
-      Code.org menawarkan kurikulum, rencana pembelajaran, program-progrm pembelajaran
-      yang sangat berkualitas dan profesional, berbagai macam peralatan-peralatan
-      yang sangat bagus untuk semua tingkatan kelas&mdash;dan semua itu gratis. :)
-      Anda tidak memmerlukan pengalaman apapun untuk memulai mengajar ilmu komputer
-      di dalam kelas anda. <b>Temukan langkah selanjutnya yang tepat untuk kelas anda.</b>
-    announcement_teacher_recruitment: Guru-guru seperti anda merupakan pemimpin pergerakan
-      pendidikan ilmu komputer. Anda bisa berpartisipasi dalam program pembelajaran
-      profesional tingkat K-12 (tingkatan kelas di sekolah amerika) yang sangat berkualitas
-      <strong>yang pasti tanpa ada beban biaya bagi anda dan sekolah anda</strong>.
-    announcement_teacher_recruitment2: Guru-guru seperti anda merupakan pemimpin pergerakan
-      pendidikan ilmu komputer. Anda bisa berpartisipasi dalam program pembelajaran
-      profesional tingkat K-12 (tingkatan kelas di sekolah amerika) yang sangat berkualitas
-      <strong>yang pasti tanpa ada beban biaya bagi anda dan sekolah anda</strong>.
-      Pimpinlah pelajaran ilmu komputer di sekolah anda, dan melamarlah untuk pembelajaran
-      profesional. Guru-guru sekolah menengah dan atas, batas lamaran 17 Maret.
-    announcement_csf_pilot: "<strong>Guru-guru sekolah dasar:</strong> Jadilah bagian
-      dari pembaharuan program-program yang mendasar dari Ilmu Komputer kami! Kami
-      mencari guru-guru untuk merintis sebuah pembaharuan kurikulum ilmu komputer
-      yang mendasar selama musim dingin dan musim semi tahun 2017. Kami sangat berhasrat
-      untuk mendengar masukan dari anda sebelum pembaharuan-pembaharuan tersebut diluncurkan
-      di Agustus 2017."
-    announcement_student_privacy: Di Code.org, kami memperlakukan kerahasian pelajar
-      dengan sangat serius. Untuk melindungi kerahasian pelajar-pelajar anda, kami
-      telah melakukan perubahan untuk bagian halaman login anda untuk menghindari
-      penayangan nama lengkap. Meskipun pembaharuan ini akan mengurangi kekhawatiran
-      tentang kerahasiaan pada halaman masuk, kami tetap menganjurkan kepada pengguna
-      untuk <i>tidak menggunakan nama-nama lengkap pelajar</i>.
-    announcement_apcsp_recruitment: '<strong>Prinsip Ilmu Pengetahuan Komputer:</strong>
-      pelajar anda dapat ditayangkan dalam video viral Code.org berikutnya yang mendorong
-      pelajar untuk mengikuti ujian AP CS Principles tahun ini. Kami mengundang semua
-      pelajar CS Principles untuk mengirimkan video klip 10-20 detik di Twitter, Instagram,
-      atau Facebook yang mengatakan "Saya mengikuti ujian #APCSP sebab..." Pengiriman
-      terbaik akan ditayangkan di video kami dan pelajar yang menang akan menerima
-      Code.org swag!'
-    announcement_apcsp_recruitment2: Ujian prinsip-prinsip Ilmu Komputer untuk Penempatan
-      Lanjutan pada tahun ini siap memecahkan rekor. Keikutsertaan pelajar dalam ujian
-      tersebut secara dramatis bisa merubah keragaman dalam Penempatan Lanjutan Ilmu
-      Komputer, tetapi kami membutuhkan bantuan anda. Dorong setiap pelajar Prinsip-prinsip
-      Ilmu Komputer untuk mengambil ujian Penempatan Lanjutan Ilmu Komputer dan kami
-      akan <a href='%{gift_url}' target='_blank'>mengirimkan anda sebuah hadiah</a>.
-      Pelajar-pelajar bisa juga mendorong teman-teman sebaya di seluruh negara dalam
-      <a href='%{challenge_url}' target='_blank'>#video tantangan Penempatan Lanjutan
-      Ilmu Komputer kami</a>.
-    announcement_apcsp_recruitment3: Ujian Prinsip-prinsip Ilmu Komputer untuk Penempatan
-      Lanjutan pada tahun ini siap memecahkan rekor. Keikutsertaan pelajar dalam ujian
-      tersebut secara dramatis akan merubah keragaman dalam Penempatan Lanjutan Ilmu
-      Komputer, tetapi kami butuh bantuan anda. Dorong setiap pelajar Prinsip-prinsip
-      Ilmu Komputer untuk mengikuti ujian Penempatan Lanjutan Ilmu Komputer dan anda
-      bisa memenangkan <a href='%{gift_url}' target='_blank'>kartu hadiah, laptop,
-      atau hadiah keren lainnya</a>! Bagikan <a href='%{video_url}' target='_blank'>video
-      ini</a> sehingga pelajar-pelajar anda bisa mendengan dari teman-teman sebayanya
-      dari seluruh negara yang sedang mengikuti ujian tersebut.
-    announcement_csp_deadline: Panggilan terakhir untuk pengajar Sma! Ikuti pelajaran
-      ilmu komputer di sekolah anda dan ajukan program pembelajaran profesional berkualitas
-      tinggi <strong>gratis untuk anda atau sekolah anda</strong>. Aplikasi ditutup
-      pada tanggal 14 April.
-    announcement_applab_export: App Lab, bagian pemrograman berbasis web kami, sekarang
-      mendukung pengiriman kode anda! Anda dapat mulai membuat aplikasi dengan blok
-      JavaScript geser dan letakkan, lalu mengirim kode untuk terus diedit di bagian
-      pengembangan profesional pilihan anda.
-    announcement_csp_survey: "<b>Selamat para guru Prinsip-prinsip Ilmu Komputer!</b><br/>Pelajar-pelajar
-      Prinsip-prinsip Ilmu Komputer anda yang mengikuti ujian Penempatan Lanjutan
-      Prinsip-prinsip Ilmu Komputer akan bergabung dengan lebih dari 50,000 pelajar-pelajar
-      lainnya dalam Ujian Penempatan Lanjutan terbesar yang pernah di lakukan dalam
-      sejarah. Sekarang, biarkan suara pelajar-pelajar anda didengarkan - ingatkan
-      mereka untuk menyelesaikan survei akhir-belajar! Anda akan bisa meninjau jawaban
-      pelajar-pelajar anda kami juga akan berbagi satu laporan nasional secara keseluruhan
-      dengan anda."
-    announcement_navigation_redesign: "<b>Perubahan-perubahan Situs Navigasi yang
-      akan datang</b><br/>Segera hadir musim panas ini, kami meningkatkan navigasi
-      diseluruh situs Code.org sehingga anda selalu bisa mengakses sumber-sumber anda
-      yang terbaik dari mana pun dari situs tersebut. Segera setelah anda masuk ke
-      akun guru anda, setiap halaman akan memiliki panel navigasi yang baru dengan
-      tautan-tautan ke beranda anda, program-program, Galeri Proyek, bagian-bagian
-      naskah, dan Pembejalaran Profesional."
   move_students:
     new_section_dne: Maaf, tapi bagian %{new_section_code} tidak ada. Harap masukkan
       kode bagian berbeda.
@@ -1243,6 +1115,7 @@ id:
     csp_postap_2: 'Bab 2: Aplikasi dan Basis data'
     csp2_1_2018: 'Unit 2: informasi digital'
     csp3_1_2018: 'Unit 3: Pengenalan Pemrograman'
+    csp4_1_2018: 'Unit 4: Big data dan privasi'
     csp_variables: variabel
     csp_conditionals: Kondisi
     csp_functions: fungsi

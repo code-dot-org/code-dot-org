@@ -36,6 +36,7 @@ th:
         finish_sign_up_header: เสร็จสิ้นการสร้างบัญชีผู้ใช้ของคุณ
         error:
           future: ไม่สามารถทำได้ในอนาคต
+  beta: Beta
   hello: สวัสดีชาวโลก
   welcome_back: ยินดีต้อนรับอีกครั้ง, % {name}
   your_professional_learning_plan: แผนการเรียนของคุณ
@@ -360,9 +361,6 @@ th:
     no_primary_course: ทดลองคอร์ส Code Studio
     choose_next_course: ทดลองเรียนคอร์ส Code Studio โดยเลือกจากรายการต่อไปนี้
     print_certificate: พิมพ์ใบรับรอง
-    announcement_title: ประกาศ
-    announcement_learn_more_button: สิ่งที่น่าเรียนรู้ยังมีอีก
-    announcement_try_now_button: ลองตอนนี้
   share:
     title: เรียนกับ Code Studio
   gender:

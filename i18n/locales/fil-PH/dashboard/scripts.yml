@@ -8350,6 +8350,16 @@ fil:
               name: bagong yugto
             Number Systems:
               name: Mga Sistema ng Pagbilang
+            Sending Binary Messages:
+              name: Pagpapadala ng Binary na mga Mensahe
+            Sending Binary Messages with the Internet Simulator:
+              name: Pagpapadala ng mga Binary na Mensahe sa mga Simulator ng Internet
+            Intellectual Property:
+              name: Intelektwal na Pag-aari
+            CS Principles Pre-survey:
+              name: Bago ang Surbey sa mga Prinsipyo sa CS
+            Binary Numbers:
+              name: Binary na mga Numero
         csd-videos:
           stages:
             new stage:
@@ -8615,3 +8625,69 @@ fil:
           stages:
             new stage:
               name: bagong yugto
+        csl-vn:
+          stages:
+            Programming in Maze:
+              name: Pag-Program sa Maze
+            Programming with Rey and BB-8:
+              name: Pag-Program kasama sina Rey at BB-8
+        dlp19-csd-mod-fit:
+          stages:
+            Deeper Learning Overview:
+              name: Buod ng Mas Malalim na Pag-aaral
+        dlp19-csp-mod-fit:
+          stages:
+            Deeper Learning Overview:
+              name: Buod ng Mas Malalim na Pag-aaral
+        dlp19-csd-mod-w1:
+          stages:
+            Deeper Learning Overview:
+              name: Buod ng Mas Malalim na Pag-aaral
+        dlp19-csd-mod-w2:
+          stages:
+            new stage:
+              name: bagong yugto
+            Deeper Learning Overview:
+              name: Buod ng Mas Malalim na Pag-aaral
+        dlp19-csp-mod-w1:
+          stages:
+            Deeper Learning Overview:
+              name: Buod ng Mas Malalim na Pag-aaral
+        dlp19-csp-mod-w2:
+          stages:
+            Deeper Learning Overview:
+              name: Buod ng Mas Malalim na Pag-aaral
+        csd4-pilot:
+          stages:
+            What is a Computer?:
+              name: Ano ang isang Kompyuter?
+            Input and Output:
+              name: Input at Output
+            Processing:
+              name: Pagproseso
+            Project - Propose an App:
+              name: Proyekto - Pagmungkahi ng App
+        csp2-pilot:
+          stages:
+            new stage:
+              name: bagong yugto
+            Routers and Redundancy:
+              name: Mga Routers at Redundancy
+        peru-2019:
+          stages:
+            new stage:
+              name: bagong yugto
+            Introduction:
+              name: Panimula
+            Debugging in Collector:
+              name: Pagde-debug sa Kolektor
+            'Loops: My Loopy Robotic Friends':
+              name: 'Mga Loop: Ang aking Loopy na Robotik na mga Kaibigan'
+            Nested Loops:
+              name: Mga Loops na naka-nest
+            Nested Loops Project in Frozen:
+              name: Naka-Nest na Mga Loop na Proyekto sa Frozen
+            Events in Star Wars:
+              name: Mga Pangyayari sa Star Wars
+            Nested Loops in Frozen:
+              name: Naka-nest na mga Loop sa Frozen

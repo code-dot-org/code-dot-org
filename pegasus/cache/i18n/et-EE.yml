@@ -1481,6 +1481,10 @@ et-EE:
     oma veebilehitseja<a href='%{supported_browsers_url}', target='_blank'>ühe veebilehitsejaga,
     mida me toetame</a>. Võite proovida veebilehte vaadata, kuid selle toimimine võib
     olla häiritud.
+  compatibility_unsupported_browser_markdown: Sinu veebilehitsejat ei toetata. Palun
+    asenda oma veebilehitseja<a href='%{supported_browsers_url}', target='_blank'>ühe
+    veebilehitsejaga, mida me toetame</a>. Võite proovida veebilehte vaadata, kuid
+    selle toimimine võib olla häiritud.
   starwars_shortcode: star
   mc_shortcode: mc
   flappy_shortcode: laksuta tiibu

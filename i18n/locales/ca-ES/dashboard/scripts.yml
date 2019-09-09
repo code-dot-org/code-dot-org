@@ -2,14 +2,14 @@ ca:
   data:
     script:
       category:
-        hoc_category_name: Hora del codi
+        hoc_category_name: L'hora del codi
         math_category_name: Matemàtiques
       name:
         course1:
           title: Curs 1
           description: El Curs 1 està dissenyat per permetre als lectors novells crear programes informàtics que els ajudaran a aprendre a col·laborar amb els altres, desenvolupar habilitats de resolució de problemes, i persistir a través de tasques difícils. Al final del curs, els alumnes creen el seu propi joc o història que poden compartir. Recomanat per infantil i cicle inicial de primària.
-          description_short: El curs 1 està dissenyat per a primers lectors.
-          description_audience: Edat 4 + (pre-lectors)
+          description_short: Introducció a la informàtica per a primers lectors.
+          description_audience: De 4 a 6 anys
           stages:
             'Artist: Loops':
               name: 'Artista: bucles'
@@ -50,8 +50,8 @@ ca:
         course2:
           title: Curs 2
           description: El Curs 2 està dissenyat per a alumnes que saben llegir i no tenen experiència prèvia en programació. En aquest curs els alumnes crearan programes per resoldre problemes i desenvoluparan jocs interactius o històries que poden compartir. Recomanat per educació primària.
-          description_short: El Curs 2 està dissenyat per alumnes que saben llegir.
-          description_audience: Edat +6 (s'ha de saber llegir)
+          description_short: Introducció a la informàtica per alumnes que saben llegir.
+          description_audience: Més de 6 anys (cal saber llegir)
           stages:
             'Artist: Debugging':
               name: 'Artista: Correcció d''errors'
@@ -93,8 +93,8 @@ ca:
               name: La vostra empremta digital
         course3:
           title: Curs 3
-          description_short: El Curs 3 és una continuació del Curs 2.
-          description_audience: Edats 8 + (continuació del Curs 2)
+          description_short: Aprofundeix encara més en la programació creant jocs i històries interactives. El curs 3 és una continuació del curs 2.
+          description_audience: De 8 a 18 anys
           stages:
             Artist:
               name: Artista
@@ -151,6 +151,7 @@ ca:
             Artist:
               name: Artista
         hourofcode:
+          title: Laberint clàssic
           description: Prova els bàsics de la informàtica amb els personatges d'Angry Birds, Plants vs. Zombies, i Scrat de Ice Age!
           description_short: Prova els conceptes bàsics de la informàtica amb personatges divertits!
           stages:
@@ -159,15 +160,15 @@ ca:
         frozen:
           title: Codi amb Anna i Elsa
           description: Programeu per unir-vos amb l' Anna i l' Elsa mentre exploren la màgia i la bellesa del gel. Creareu flocs de neu i patrons com patinatge sobre gel i la creació d'un món fantàstic d'hivern que podeu compartir amb els amics!
-          description_short: Anem a utilitzar el codi per unir l'Anna i l'Elsa mentre exploren la màgia i la bellesa del gel.
+          description_short: Fes servir codi per unir-te a l'Anna i l'Elsa mentre exploren la màgia i la bellesa del gel.
           stages:
             Artist:
               name: Artista
         course4:
           title: Curs 4
           description: Curs.
-          description_short: Els alumnes del Curs 4 haurien d'haver fet prèviament els cursos 2 i 3.
-          description_audience: Edat 10 + (després del curs 3)
+          description_short: Crea programes més complexos amb conceptes com bucles i funcions amb paràmetres. El curs 4 és una continuació del curs 3.
+          description_audience: De 9 a 18 anys
           stages:
             Artist:
               name: Artista
@@ -342,10 +343,10 @@ ca:
             Jigsaw:
               name: Puzzle
         step:
-          title: pas
+          title: Un pas
           stages:
             Step:
-              name: pas
+              name: Un pas
         Hour of Code:
           title: Hora de codi 2013
           description_short: Prova els conceptes bàsics de la informàtica amb personatges divertits!
@@ -421,6 +422,8 @@ ca:
               name: Multi
             Odometer:
               name: odòmetre
+            Sprite Lab:
+              name: Laboratori de personatges
         algebraPD2b:
           stages:
             Booleans:
@@ -437,6 +440,10 @@ ca:
               name: Laboratori d'aplicacions
             Internet Simulator:
               name: Simulador d'Internet
+        K5-OnlinePD:
+          stages:
+            Computer Science Fundamentals:
+              name: Fonaments de la informàtica
         ECSPD2:
           stages:
             0: |-
@@ -575,17 +582,21 @@ ca:
             Functions:
               name: Funcions
         CSF_Secret_Sample:
-          description_audience: Edats 8 + (continuació del Curs 2)
+          description_audience: De 8 a 18 anys
         algebraFacilitator:
           stages:
             Evaluation Blocks:
               name: Blocs d'avaluació
+        allthehiddenthings:
+          stages:
+            Game Lab:
+              name: Laboratori de jocs
         MikeTest:
           stages:
             Artist Functions:
               name: 'Artista: Funcions'
         artistExemplar:
-          description_audience: Edats 8 + (continuació del Curs 2)
+          description_audience: De 8 a 18 anys
         kinderTest:
           stages:
             'Bee: Conditionals':
@@ -713,6 +724,9 @@ ca:
           stages:
             Lists:
               name: Llistes
+        minecraft:
+          description_short: Programa animals i altres criatures de Minecraft en la teva pròpia versió de Minecraft.
+          description: Programa animals i altres criatures de Minecraft en la teva pròpia versió de Minecraft.
         flappy-impact-study:
           stages:
             Flappy Code:
@@ -730,6 +744,7 @@ ca:
             Your Digital Footprint:
               name: La vostra empremta digital
         coursec-draft:
+          description_short: Apreneu els conceptes bàsics de la informàtica i creeu el vostre propi art, històries i jocs.
           stages:
             'Real-life Algorithms: Paper Planes':
               name: 'Algoritmes de la vida quotidiana: Avions de paper'
@@ -740,6 +755,7 @@ ca:
             Building a Foundation:
               name: Posant les bases
         coursed-draft:
+          description_short: Apreneu els conceptes bàsics de la informàtica i creeu el vostre propi art, històries i jocs.
           stages:
             Conditionals with Cards:
               name: Condicionals amb targetes
@@ -754,6 +770,7 @@ ca:
             Introduction:
               name: Introducció
         coursee-draft:
+          description_short: Apreneu els conceptes bàsics de la informàtica i creeu el vostre propi art, històries i jocs.
           stages:
             Digital Citizenship:
               name: Ciutadania digital
@@ -766,6 +783,7 @@ ca:
             Conditionals:
               name: Condicionals
         coursef-draft:
+          description_short: Apreneu els conceptes bàsics de la informàtica i creeu el vostre propi art, històries i jocs.
           stages:
             Digital Citizenship:
               name: Ciutadania digital
@@ -879,18 +897,34 @@ ca:
           stages:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmes reals: Planta una llavor'
+          title: Curs A
+          assignment_family_title: Curs A
+          description_audience: 'De 4 a 7 anys'
+          description_short: Una introducció a la informàtica per prelectors.
         courseb-2017:
           stages:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmes reals: Planta una llavor'
+          title: Curs B
+          assignment_family_title: Curs B
+          description_audience: 'De 5 a 8 anys'
+          description_short: Una introducció a la informàtica per a prelectors. (Similar al curs A però més variat per alumnes més grans.)
         coursec-2017:
           stages:
             'Real-life Algorithms: Paper Planes':
               name: 'Algoritmes de la vida quotidiana: Avions de paper'
+          title: Curs C
+          assignment_family_title: Curs C
+          description_audience: 'De 6 a 10 anys'
+          description_short: Apreneu els conceptes bàsics de la informàtica i creeu el vostre propi art, històries i jocs.
         coursed-2017:
           stages:
             Nested Loops:
               name: Bucles imbricats
+          title: Curs D
+          assignment_family_title: Curs D
+          description_audience: 'De 7 a 11 anys'
+          description_short: Cobriu amb rapidesa conceptes del curs C i seguiu endavant amb algoritmes, bucles imbricats, condicionals i més.
         coursee-2017:
           stages:
             Songwriting with Parameters:
@@ -899,10 +933,18 @@ ca:
               name: Posant les bases
             Nested Loops:
               name: Bucles imbricats
+          title: Curs E
+          assignment_family_title: Curs E
+          description_audience: 'De 8 a 12 anys'
+          description_short: Cobriu ràpidament els conceptes del curs C i D i seguiu amb les funcions.
         coursef-2017:
           stages:
             Building a Foundation:
               name: Posant les bases
+          title: Curs F
+          assignment_family_title: Curs F
+          description_audience: 'De 9 a 13 anys'
+          description_short: Apreneu tots els conceptes dels Fonaments de la informàtica i creeu el vostre propi art, històries i jocs.
         express-2017:
           stages:
             Introduction:
@@ -919,12 +961,16 @@ ca:
               name: Posant les bases
             Nested Loops:
               name: Bucles imbricats
+          title: Curs exprés
+          description_short: 'Una introducció a la informàtica: combina el millor del nostre currículum d''educació primària per alumnes més grans.'
         pre-express-2017:
           stages:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmes reals: Planta una llavor'
             Spelling Bee:
               name: Abella ortogràfica
+          title: Prelector exprés
+          description_short: 'Una introducció a la informàtica per a prelectors: combina el millor dels cursos de parvulari i primer.'
         subgoal-labels-opt-in:
           stages:
             Thanks:
@@ -1043,6 +1089,9 @@ ca:
             Lists:
               name: Llistes
         coursea-2018:
+          assignment_family_title: Curs A
+          description_short: Una introducció a la informàtica per prelectors.
+          description_audience: 'De 4 a 7 anys'
           stages:
             'Programming: Happy Maps':
               name: Mapes feliços
@@ -1081,6 +1130,8 @@ ca:
             Graph Paper Programming:
               name: Programació de paper quadriculat
         courseb-2018:
+          assignment_family_title: Curs B
+          description_audience: 'De 5 a 8 anys'
           stages:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmes reals: Planta una llavor'
@@ -1089,6 +1140,8 @@ ca:
             Move It, Move It:
               name: Mou-lo, Mou-lo
         coursed-2018:
+          assignment_family_title: Curs D
+          description_audience: 'De 7 a 11 anys'
           stages:
             'Algorithms: Graph Paper Programming':
               name: Programació de paper quadriculat
@@ -1109,6 +1162,9 @@ ca:
             Relay Programming:
               name: Programació en relleus
         coursec-2018:
+          assignment_family_title: Curs C
+          description_short: Apreneu els conceptes bàsics de la informàtica i creeu el vostre propi art, històries i jocs.
+          description_audience: 'De 6 a 10 anys'
           stages:
             Building a Foundation:
               name: Posant les bases
@@ -1123,6 +1179,8 @@ ca:
             Functions with Parameters:
               name: Funcions amb Paràmetres
         coursee-2018:
+          assignment_family_title: Curs E
+          description_audience: 'De 8 a 12 anys'
           stages:
             'Programming: My Robotic Friends':
               name: Els meus amics robòtics
@@ -1141,6 +1199,9 @@ ca:
             Minecraft Hour of Code:
               name: Hora del Codi de Minecraft
         coursef-2018:
+          assignment_family_title: Curs F
+          description_short: Apreneu tots els conceptes dels Fonaments de la informàtica i creeu el vostre propi art, històries i jocs.
+          description_audience: 'De 9 a 13 anys'
           stages:
             'Programming: My Robotic Friends':
               name: Els meus amics robòtics
@@ -1185,10 +1246,10 @@ ca:
         dance:
           stages:
             Dance Party:
-              name: Festa amb ball
-          title: Festa amb ball
+              name: Festa de ball
+          title: Festa de ball
           description_short: Amb música de Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, i 25 més!
-          description: Crea un codi amb la teva pròpia festa amb ball i comparteix-la amb els teus amics!
+          description: Crea un codi amb la teva pròpia festa de ball i comparteix-la amb els teus amics!
         frozen-2018-test-b:
           stages:
             Artist:
@@ -1198,19 +1259,21 @@ ca:
             Aquatic:
               name: Aquàtiques
           title: 'Minecraft: Viatge aquàtic'
-          description_short: Minecraft torna amb una activitat del tot nova de l'Hora del Codi!
+          description_short: Utilitza la teva creativitat i les teves habilitats de resolució de problemes per explorar i crear mons submarins amb codi!
         dance--draft:
           stages:
             Dance Party:
-              name: Festa amb ball
+              name: Festa de ball
         dance-draft:
           stages:
             Dance Party:
-              name: Festa amb ball
+              name: Festa de ball
         dance-extras:
           title: Seguir ballant
           description: Anar més enllà de la primera hora amb idees desenvolupades del projecte.
         coursef-2019:
+          description_short: Apreneu tots els conceptes dels Fonaments de la informàtica i creeu el vostre propi art, històries i jocs.
+          description_audience: 'De 9 a 13 anys'
           stages:
             Building a Foundation:
               name: Posant les bases
@@ -1225,8 +1288,9 @@ ca:
         dance-low:
           stages:
             Dance Party:
-              name: Festa amb ball
+              name: Festa de ball
         coursed-2019:
+          description_audience: 'De 7 a 11 anys'
           stages:
             'Algorithms: Graph Paper Programming':
               name: Programació de paper quadriculat
@@ -1241,8 +1305,9 @@ ca:
             Artist Binary:
               name: Artista binari
             Dance Party:
-              name: Festa amb ball
+              name: Festa de ball
         coursee-2019:
+          description_audience: 'De 8 a 12 anys'
           stages:
             Building a Foundation:
               name: Posant les bases
@@ -1275,7 +1340,7 @@ ca:
             Crowdsourcing:
               name: Col·laboració oberta
             Dance Party:
-              name: Festa amb ball
+              name: Festa de ball
         andrea-test:
           stages:
             'null':
@@ -1284,6 +1349,8 @@ ca:
           title: Seguir ballant
           description: Anar més enllà de la primera hora amb idees desenvolupades del projecte.
         coursec-2019:
+          description_short: Apreneu els conceptes bàsics de la informàtica i creeu el vostre propi art, històries i jocs.
+          description_audience: 'De 6 a 10 anys'
           stages:
             'Real-life Algorithms: Paper Planes':
               name: 'Algoritmes de la vida quotidiana: Avions de paper'
@@ -1291,13 +1358,18 @@ ca:
               name: El gran esdeveniment
             Binary Bracelets:
               name: Polseres binàries
+        gamelab:
+          title: Laboratori de jocs
         coursea-2019:
+          description_short: Una introducció a la informàtica per prelectors.
+          description_audience: 'De 4 a 7 anys'
           stages:
             'Programming: Happy Maps':
               name: Mapes feliços
             Going Places Safely:
               name: Anant a llocs segurs
         courseb-2019:
+          description_audience: 'De 5 a 8 anys'
           stages:
             Move It, Move It:
               name: Mou-lo, Mou-lo
@@ -1369,3 +1441,9 @@ ca:
               name: Condicionals
             Functions:
               name: Funcions
+        peru-2019:
+          stages:
+            Introduction:
+              name: Introducció
+            Nested Loops:
+              name: Bucles imbricats

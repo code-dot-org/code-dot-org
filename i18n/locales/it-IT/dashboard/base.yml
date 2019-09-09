@@ -16,7 +16,7 @@ it:
       user:
         name: 'Nome da visualizzare'
         name_example: 'Mostra Nome <br/>(es. Cool Coder o Jane S.)'
-        email: 'Indirizzo di posta elettronica'
+        email: 'Indirizzo email'
         parent_email: 'E-mail del genitore/tutore'
         personal_email: "E-mail personale<a href=\"%{url}\">(clicca qui se non hai un indirizzo e-mail)</a>"
         username: 'Nome utente'
@@ -32,6 +32,7 @@ it:
         finish_sign_up_subheader_provider: 'Compila i seguenti dati per terminare la creazione del tuo account Code.org con <strong>%{provider}</strong> per <strong>%{email}</strong>.'
         error:
           future: non può essere in futuro
+  beta: "versione provvisoria"
   hello: "Ciao a tutti"
   welcome_back: "Bentornato, %{name}"
   your_professional_learning_plan: "Your Professional Learning Plan"
@@ -170,7 +171,7 @@ it:
     school_organization_zip: 'Codice Postale della Scuola/Organizzazione'
   signin_form:
     title: 'Sei già iscritto con un account? Accedi'
-    login: 'Indirizzo di posta elettronica'
+    login: 'Indirizzo email'
     login_username: 'Email o nome utente'
     password: 'password'
     remember: 'Ricorda le mie credenziali di accesso'
@@ -229,7 +230,7 @@ it:
     type:
       picture: 'Password Immagine'
       word: 'Parole Segrete'
-      email: 'Indirizzo di posta elettronica'
+      email: 'Indirizzo email'
       google_classroom: 'Google Classroom'
       clever: 'Clever'
   follower:
@@ -280,7 +281,7 @@ it:
       project_gallery: "Progetti"
       sections: "Classi"
       help_support: "Help and support"
-      report_bug: "Report Bug"
+      report_bug: "Report a problem"
       teacher_community: "Teacher community"
       professional_learning: "Professional learning"
       documentation: "Documentazione"
@@ -342,8 +343,10 @@ it:
       gumball: 'Lo straordinario mondo di Gumball'
       iceage: 'L''Era Glaciale'
       infinity: 'Infinito'
+      makerlab: 'Maker Toolkit'
       minecraft_adventurer: 'Un''avventura con Minecraft'
       minecraft_aquatic: 'Minecraft Acquatico'
+      minecraft_codebuilder: 'Minecraft: Connessione Code'
       minecraft_designer: 'Minecraft'
       minecraft_hero: 'L''Eroe di Minecraft'
       playlab: 'Laboratorio'
@@ -471,33 +474,6 @@ it:
     no_primary_course: "Prova un corso di Code Studio"
     choose_next_course: "Prova un corso di Code Studio scegliendone uno qui sotto"
     print_certificate: "Stampa l'attestato"
-    announcement_title: "Avvisi"
-    announcement_message_fall2016_features: "Abbiamo passato l'estate a trasformare le vostre segnalazioni in nuove funzionalità. Ora, potete <a href=\"%{pp_url}\" target=\"_blank\">monitorare i vari progressi degli studenti</a> anche se stanno programmando in coppia su un unico dispositivo. Potete utilizzare <a href=\"%{csp_widgets_url}\" target=\"_blank\">i migliori strumenti interattivi</a> dal nostro corso CS prinicipale in <i>qualsiasi</i> aula. E i vostri studenti possono <a href=\"%{unused_code_url}\" target=\"_blank\">tenere i codici inutilizzati</a> nella loro area di lavoro per incoraggiare la sperimentazione! Scoprite tutte le nostre nuove funzionalità e fateci sapere che ne pensate."
-    announcement_csp_widgets_message: "Stai cercando dei modi divertenti per insegnare alla tua classe come funziona Internet, come fa la crittografia a garantire la sicurezza dei dati, e altri concetti simili? Abbiamo preso i migliori strumenti interattivi dal nostro corso \"Principi dell'Informatica\" e li abbiamo resi disponibili come componenti autonomi che puoi usare in qualunque momento!"
-    announcement_learn_more_button: "Ulteriori informazioni"
-    announcement_try_now_button: "Prova adesso"
-    announcement_host_an_hour_button: "Ospita un'ora"
-    announcement_watch_video_button: "Guarda video"
-    announcement_petition: "Come insegnante, stai aprendo la strada per permettere ad ogni studente in ogni scuola la possibilità di imparare informatica. Adesso è giunto il momento che i tuoi rappresentanti ascoltino il tuo parere. Questa settimana, personaggi chiave del mondo dell'istruzione, 28 governatori e gli amministratori delegati delle più grandi aziende d'America si sono riuniti firmando una lettera aperta, chiedendo al Congresso degli Stati Uniti di finanziare il programma di informatica K-12."
-    announcement_petition_button: "Aggiungi il tuo nome"
-    announcement_go_beyond_button: "Vai oltre"
-    announcement_apply_now: "Applica ora"
-    announcement_all: "Rimani aggiornato sulle nuove caratteristiche dei corsi di Code.org attraverso il <a href='%{teacher_blog_url}' target='_blank'>blog degli insegnanti (in inglese)</a>."
-    announcement_hoc_launch: "Migliaia di educatori in più di 180 paesi inizieranno a insegnare informatica durante l'Ora del Codice dal 4 al 10 dicembre 2017. Contiamo su di voi per aiutarci a raggiungere il maggior numero di studenti possibile. <a href='%{signup_url}' target='_blank'> registra il tuo evento all'Ora del Codice</a> e convinci un altro insegnante che chiunque può iniziare a insegnare Informatica."
-    announcement_mc_launch: "Uno delle nostre esercitazioni dell'Ora del Codice più popolari adesso ha un seguito! Il nuovissimo <b>Programma il tuo Minecraft</b> permette allo studente di definire le sue regole del mondo di Minecraft. Potrà così creare un'esperienza con Minecraft del tutto unica, e condividerla con i suoi amici e giocarci insieme a loro. Svolgila nella tua classe come Ora del Codice."
-    announcement_how_code_studio: "Non hai bisogno di alcuna esperienza per cominciare ad insegnare informatica alla tua classe. Code.org offre curriculum, lezioni, programmi di apprendimento professionali di alta qualità, and un sacco di ottimi strumenti per ogni titolo di studio&mdash;tutto quello di cui hai bisogno, senza nessun costo. Ti stai chiedendo da dove cominciare? Scarica<a href='%{video_download_url}'>questo video</a>!"
-    announcement_go_beyond: "Vai oltre Ora di Codice ed esplora i concetti dell'Informatica con i tuoi studenti ogni settimana. Code.org offre curriculum, lezioni, programmi di apprendimento professionali di alta qualità, e un sacco di ottimi strumenti per ogni titolo di studio&mdash;ed è gratis. :) Non hai bisogno di nessuna esperienza per cominciare ad insegnare Informatica alla tua classe. <b>Trova il giusto prossimo passo per la tua classe.</b>"
-    announcement_teacher_recruitment: "Insegnanti come te stanno conducendo l'apprendimento dell'Informatica. Puoi partecipare a programmi di apprendimento professionali di alta qualità <strong>senza nessun costo per te e la tua scuola</strong>. Prendi il comando dell'Informatica nella tua scuola, e metti in pratica l'apprendimento professionale."
-    announcement_teacher_recruitment2: "Insegnanti come te stanno conducendo l'apprendimento dell'Informatica. Puoi partecipare a programmi di apprendimento professionali di alta qualità <strong>senza nessun costo per te e la tua scuola</strong>. Prendi il comando dell'Informatica nella tua scuola, e metti in pratica l'apprendimento professionale. Insegnanti di scuole medie e superiori, iscrivetevi entro il 17 Marzo."
-    announcement_csf_pilot: "<strong>Insegnanti di scuola elementare:</strong> Partecipate all'aggiornamento dei nostri corsi di Fondamenti di Informatica! Cerchiamo insegnanti per guidare un curriculum di Fondamenti di Informatica durante l'inverno e primavera del 2017. Non vediamo l'ora di ascoltare il tuo feedback prima che questi aggiornamenti vengano applicati ad Agosto 2017."
-    announcement_student_privacy: "In Code.org prendiamo la privacy dei nostri studenti molto seriamente. Per proteggere la privacy dei tuoi studenti, abbiamo apportato modifiche alla pagina di accesso della tua sezione per evitare di mostrare i nomi completi. Sebbene questo aggiornamento dovrebbe ridurre le preoccupazioni circa la privacy per la pagina di accesso, invitiamo ancora gli utenti a <i>non usare nomi per gli studenti</i>."
-    announcement_apcsp_recruitment: "<strong>Insegnanti di Principi di Informatica:</strong> I tuoi studenti potrebbero figurare nel prossimo video virale di Code.org incoraggiando gli studenti all'esame di Principi di Informatica di quest'anno. Stiamo invitando tutti gli studenti di Principi di Informatica ad inviare a una clip video di 10-20 secondi su Twitter, Instagram, o Facebook dicendo \"Sto sostenendo l'esame di #PrincipiDiInformatica perché...\". I migliori compariranno nel nostro video e gli studenti vincitori riceveranno il premio Code.org!"
-    announcement_apcsp_recruitment2: "Quest'anno si aspettano numeri da record all'esame avanzato (AP) di Principi d'Informatica. La partecipazione di studenti all'esame potrebbe cambiare drasticamente la diversità nei corsi di informatica avanzata, ma abbiamo bisogno del tuo aiuto. Per favore, incoraggia tutti gli studenti di Principi d'Informatica a sostenere l'esame. Per ringraziarti, ti <a href='%{gift_url}' target='_blank'>manderemo un regalo</a>. Gli studenti possono anche incoraggiare i compagni in tutto il Paese con la nostra <a href='%{challenge_url}' target='_blank'>#APCSP video sfida</a>."
-    announcement_apcsp_recruitment3: "Quest'anno si aspettano numeri da record all'esame avanzato (AP) di Principi d'Informatica. La partecipazione di studenti all'esame potrebbe cambiare drasticamente la diversità nei corsi di informatica avanzata, ma abbiamo bisogno del tuo aiuto. Per favore, incoraggia tutti gli studenti di Principi d'Informatica a sostenere l'esame e potresti vincere <a href='%{gift_url}' target='_blank'>una carta regalo, un laptop, o un altro bel regalo</a>! Condividi <a href='%{video_url}' target='_blank'>questo video</a> acciocché i tuoi studenti possano sentire l'incoraggiamento di altri studenti in tutto il Paese già iscritti all'esame."
-    announcement_csp_deadline: "Richiamo finale per gli insegnanti di scuola superiore! Prendi il comando dell'Informatica nella tua scuola e metti in pratica i nostri programmi di apprendimento professionali e di alta qualità <strong>senza assolutamente nessun costo per te e la tua scuola</strong>. Le richiesti di partecipazione si chiudono il 14 Aprile."
-    announcement_applab_export: "Sviluppo App, il nostro ambiente di programmazione basato sul web, ora supporta l'esportazione di codice! È possibile iniziare a creare App lavorando con i blocchi, quindi esportare il codice per modificarlo in qualsiasi ambiente di sviluppo professionale desiderato."
-    announcement_csp_survey: "congratulazioni insegnante principale della scienza del computer il tuo studente principale prende l' esame di scienza del computer partecipano più di 50,000 studenti nel grande esame lanciato in storia. Ora lascia intendere le voci dei tuoi studenti - ricorda loro di completare ricorda loro il tema per completare il sondaggio di fine corso! Sarai in grado di rivedere le risposte dei tuoi studenti e condivideremo anche un rapporto aggiungendo te\"\n"
-    announcement_navigation_redesign: "<b>In arrivo cambiamenti nella navigazione del sito</b><br/>\nCon l'arrivo dell'estate, stiamo migliorando la navigazione nel sito Code.org in modo che tu possa avere accesso alle risorse principali da ogni parte del sito. Non appena accederai con la tua utenza di insegnante, ogni pagina avrà una nuova barra di navigazione con collegamenti a: Home, Corsi, Progetti, Classi e Professional Learning."
   move_students:
     new_section_dne: "Ci dispiace, la classe col codice %{new_section_code} non esiste. Inserisci un codice di classe esistente."
     section_code_cant_be_current_section: "La nuova classe non può essere la stessa."
@@ -634,7 +610,7 @@ it:
       body: "Gli studenti imparano delle tecniche per creare e decodificare un messaggio cifrato."
     weblab:
       title: "Sviluppo Web"
-      body: "Sviluppo Web è un ambiente di programmazione in cui si possono realizzare semplici pagine web con HTML e CSS. Progetta le tue pagine web e condividi il tuo sito in pochi secondi. (Versione provvisoria.)"
+      body: "Sviluppo Web è un ambiente di programmazione in cui si possono realizzare semplici pagine web con HTML e CSS. Progetta le tue pagine web e condividi il tuo sito in pochi secondi."
       audience: "Da 13 anni in su"
       cta: "Scopri come"
     frozen:
@@ -762,7 +738,7 @@ it:
     sign_out: 'Se non desideri fornire la tua età puoi <a href="%{url}">uscire</a>.'
   terms_interstitial:
     title: "Aggiornati i termini e le condizioni della privacy"
-    intro_desc: "Abbiamo aggiornato i nostri Termini di Servizio e la nostra Informativa sulla Privacy, come mostrato di seguito. I cambiamenti saranno effettivi a partire dal 24 agosto 2016. La modifica più importante: noi <i>non memorizzeremo più le e-mail degli account degli studenti su Code studio.</i> Questo è molto importante per noi, e speriamo che stabilisca un nuovo standard per la privacy degli studenti nella tecnologia di formazione. Ti abbiamo inviato un riassunto delle altre modifiche via e-mail."
+    intro_desc: "Abbiamo aggiornato i nostri Termini di Servizio e la nostra Informativa sulla Privacy, come mostrato di seguito. I cambiamenti saranno effettivi a partire dal 24 agosto 2016. La modifica più importante: noi <i>non memorizzeremo più le e-mail degli account degli studenti su Code studio.</i> Questo è molto importante per noi e speriamo che stabilisca un nuovo standard per la privacy degli studenti nella tecnologia di formazione. Ti abbiamo inviato un riassunto delle altre modifiche via e-mail."
     intro_instructions: "È necessario accettare questi nuovi termini per gli studenti con un'età minore di 13 anni nella tua classe per avere accesso completo alle ultime caratteristiche di Code studio. Registrando uno studente con un'età minore di 13 anni, ti verrà chiesto se la tua scuola abbia il consenso dei genitori per la raccolta di dati personali dello studente per uso e beneficio della scuola, tra cui programmi educativi come Code studio."
     tos: "Termini di servizio"
     privacy: "Informativa sulla privacy"
@@ -871,7 +847,7 @@ it:
     practice: 'Pratiche d''insegnante'
     peer_review: 'Valutazioni dei parigrado'
     ramp_up: 'Introduzione'
-    end_of_course_project: 'Progetto di Fine Corso'
+    end_of_course_project: 'Progetto di fine corso'
     main_course: 'Corso principale'
     extra_course_content: 'Contenuti supplementari'
     csf_e_1: 'Introduzione al Corso E (facoltativo - per chi non ha svolto i corsi precedenti)'
@@ -880,8 +856,10 @@ it:
     csf_f_2: 'Contenuti del Corso F'
     csf_digcit: 'Cittadinanza digitale'
     csf_jigsaw: 'Puzzle'
+    csf_sequencing: 'Sequenze'
     csf_loops: 'Ripetizioni'
     csf_events: 'Eventi'
+    csf_online_safety: 'Sicurezza Online'
     csf_binary: 'Binario'
     csf_conditionals: 'Istruzioni condizionali'
     csf_sprites: 'Personaggi'
@@ -922,12 +900,22 @@ it:
     csp_postap_2: 'Capitolo 2: Apps e Database'
     csp2_1_2018: 'Unità 2: Informazioni digitali'
     csp3_1_2018: 'Unit 3: Introduzione alla Programmazione'
+    csp4_1_2018: 'Unità 4: Big Data e Privacy'
     csp_variables: 'Variabili'
     csp_conditionals: 'Istruzioni condizionali'
     csp_functions: 'Funzioni'
+    csp_project: 'Progetto'
     csp_lists: 'Liste'
     csp_loops: 'Ripetizioni'
+    csp_traversals: 'Traversali'
+    csp_libraries: 'Librerie'
+    csp_parameters_return_values: 'Parametri e Valori di Ritorno'
     dlp: 'Punti di riflessione'
+    time4cs_c1: 'Everglades ed i Suoi Ecosistemi'
+    time4cs_c2: 'Catene Alimentari negli Everglades'
+    time4cs_c3: 'Vivere negli Everglades'
+    time4cs_c4: 'Impatti Invasivi sugli Everglades'
+    time4cs_c5: 'I Cittadini Influenzano il Cambiamento negli Everglades'
   external_links:
     disclaimer: Limiti di responsabilità
     leaving_domain: Stai per lasciare il nostro dominio, per entrare su un sito che non è gestito da Code.org.
@@ -990,16 +978,18 @@ it:
   locked_stage: 'I contenuti di questa fase non sono visibili perché questa fase è al momento bloccata. Il/La tuo/a insegnante può sbloccare questa fase quando è il momento di lavorarci su o revisionare le tue risposte.'
   hidden_stage: "Il/La tuo/a insegnante non ti aspettava qui. Per favore chiedi al/alla tuo/a insegnante su quale lezione dovresti essere."
   hidden_script: "Il tuo insegnante non si aspettava che tu arrivassi qui. Per favore, chiedigli in quale lezione dovresti essere."
+  no_script_access_student: "Non hai accesso a questa unità. Perfavore chiedi al tuo insegnante in quale unità dovresti essere."
+  no_script_access_teacher: "Non hai accesso a questa unità. Se credi che dovresti avere accesso a questa unità, sei pregato di scrivere a support@code.org così che possiamo correggere la situazione."
   return_unit_overview: 'Vai alla panoramica della lezione'
   return_course_overview: 'Vai alla visualizzazione delle unità'
   view_all_units: 'Visualizza tutte le lezioni'
-  view_teacher_guide: 'Visualizza la guida per l''insegnante'
+  view_teacher_guide: 'Guida per l''insegnante (in inglese)'
   pd:
     form_labels:
       first_name: 'Nome'
       first_name_preferred: 'Nome preferito'
       last_name: 'Cognome'
-      email: 'Indirizzo di posta elettronica'
+      email: 'Indirizzo email'
       email_alternate: 'Email alternativa'
       gender: 'Identità di genere'
       school_name: 'Nome della scuola'
@@ -1070,6 +1060,7 @@ it:
       workshop_course:
         csf_af: 'Fondamenti di Informatica (Corsi A-F)'
         csf_express: 'Fondamenti di Informatica (Corsi rapidi)'
+        csd: 'Scoperte CS'
         csp: 'CS Principles'
       email_opt_in:
         opt_in_yes: 'Sì'
@@ -1078,6 +1069,7 @@ it:
       title: 'Partecipazione a Seminari'
       intro: "Grazie per aver dedicato tempo nella formazione sui materiali didattici di Code.org. La nostra missione di rendere disponibile l'apprendimento dell'informatica a tutti i bambini in tutte le scuole del mondo non sarebbe possibile senza di te."
       instructions: "Per favore, compila il seguente modulo per indicare che 1) hai partecipato ad un seminario di formazione gestito da uno dei partner internazionali di Code.org e 2) accetti di condividere i tuoi dati con il nostro partner internazionale nel tuo paese (in Italia: Programma il Futuro) in modo che possa aiutarti a sostenere il tuo viaggio come insegnante di informatica."
+      thanks: "Grazie per esserti iscritto! Aspettiamo di supportarti mentre conosci corsi e strumenti di Code.org. Perfavore continua a condividere le tue domande ed i tuoi feedback con noi scrivendoci a <a href='%{support_email_url}'>support@code.org</a> o postando sul <a href='%{teacher_forum_url}' target='_blank'>forum insegnanti</a>!"
     logged_out:
       heading: 'Grazie per il tuo interesse nel Programma di apprendimento professionale!'
       body: 'Per iniziare, devi prima accedere al tuo account Code.org. Se desideri ulteriori informazioni sul programma prima di avviare la tua candidatura, consulta la <a href="%{url}"> panoramica del programma di apprendimento professionale </a>.'

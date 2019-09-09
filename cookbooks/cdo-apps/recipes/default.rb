@@ -76,9 +76,6 @@ include_recipe 'cdo-apps::workers'
 end
 node.default['cdo-secrets']['daemon'] = node['cdo-apps']['daemon'] if node['cdo-apps']['daemon']
 
-node.default['cdo-apps']['process_queues'] = node['cdo-apps']['daemon'] && node.chef_environment != 'adhoc'
-node.default['cdo-secrets']['process_queues'] = true if node['cdo-apps']['process_queues']
-
 include_recipe 'cdo-secrets'
 include_recipe 'cdo-postfix'
 include_recipe 'cdo-varnish'
@@ -105,7 +102,6 @@ include_recipe node['cdo-apps']['nginx_enabled'] ?
   'cdo-nginx::stop'
 include_recipe 'cdo-apps::chef_credentials'
 include_recipe 'cdo-apps::crontab'
-include_recipe 'cdo-apps::process_queues'
 
 node.default['cdo-apps']['local_redis'] = !node['cdo-secrets']['redis_primary']
 include_recipe 'cdo-redis' if node['cdo-apps']['local_redis']
@@ -120,3 +116,5 @@ include_recipe 'cdo-analytics' if %w[production-daemon production-console].inclu
 include_recipe 'cdo-apps::daemon_ssh' if node['cdo-apps']['daemon'] && node['cdo-apps']['frontends']
 
 include_recipe 'cdo-apps::lighthouse' if node.chef_environment == 'test'
+
+include_recipe 'cdo-tippecanoe' if node['cdo-apps']['daemon']

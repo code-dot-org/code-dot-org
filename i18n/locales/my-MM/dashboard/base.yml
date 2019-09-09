@@ -41,8 +41,6 @@ my:
   teacher:
     panel:
       answer_viewer: 'ဆရာအဖွဲ့'
-  home:
-    announcement_learn_more_button: "ဆက်သင်ယူရန်"
   compatibility:
     upgrade:
       link: "ဆက်သင်ယူရန်"

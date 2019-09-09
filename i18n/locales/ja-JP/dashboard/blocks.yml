@@ -597,11 +597,6 @@ ja:
           CONDITION:
             '"when"': もし
             '"while"': 以下の間
-      gamelab_debugSprite:
-        options:
-          VAL:
-            'true': 'true'
-            'false': 'false'
       gamelab_getProp:
         options:
           PROPERTY:
@@ -655,7 +650,6 @@ ja:
             '"x"': x 位置
             '"y"': y 位置
             '"direction"': 動きの方向
-            '"tint"': 色合い
       gamelab_setSizes:
         text: "{SPRITE} {PROPERTY} を {N}%に設定"
         options:
@@ -682,13 +676,6 @@ ja:
             '"left"': 左 に
             '"right"': 右 に
             '"space"': うちゅう
-      gamelab_whenPressedAndReleased:
-        options:
-          DIR:
-            "'up'": 上 に
-            "'down'": 下 に
-            "'left'": 左 に
-            "'right'": 右 に
       gamelab_whileKey:
         options:
           KEY:
@@ -870,9 +857,9 @@ ja:
       RyanLab_moveForward:
         text: 前に すすむ
       RyanLab_turnLeft:
-        text: 左に回転
+        text: ひだりに まがる
       RyanLab_turnRight:
-        text: 右に回転
+        text: みぎに まがる
       Vector_positionCenter:
         text: 中央
       aalab_changePropByFlexible:

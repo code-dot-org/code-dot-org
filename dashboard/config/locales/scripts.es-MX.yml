@@ -1153,6 +1153,8 @@ es-MX:
               name: Prueba de Pluralsight
             Externals Optionally Displayed as Unplugged:
               name: Externos opcionalmente mostrados como sin conexión
+            Bubble Choice:
+              name: Bubble Choice
         algebraPD2b:
           title: Ciencias de la computación en álgebra PD
           description: Enseñar programación funcional a través de álgebra
@@ -13713,6 +13715,12 @@ es-MX:
               name: Resumen del aprendizaje profundo
             andrea-test-stage4:
               name: andrea-prueba-etapa4
+            Part 1:
+              name: Parte 1
+            Part 2:
+              name: Parte 2
+            part 3:
+              name: parte 3
           title: andrea-prueba
           description_audience: Facilitadores 6-12 en período de formación
           description_short: esto es para poner a prueba mis habilidades para hacer
@@ -15904,6 +15912,66 @@ es-MX:
               name: nueva etapa
             Number Systems:
               name: Sistemas numéricos
+            Bit Sending Device:
+              name: Dispositivo de envío de bit
+            Flippy Do Pt 1:
+              name: Flippy Do Parte 1
+            Flippy Do Pt 2:
+              name: Flippy Do Parte 2
+            Sending Text:
+              name: Envío de texto
+            Black and White Images:
+              name: Imágenes en blanco y negro
+            Color Images:
+              name: Imágenes a color
+            Lossless Compression:
+              name: Compresión sin pérdidas
+            Welcome to CSP:
+              name: Bienvenido a CSP
+            Sending Binary Messages:
+              name: Envío de mensajes binarios
+            Sending Binary Messages with the Internet Simulator:
+              name: Envío de mensajes binarios con el simulador de Internet
+            AB Patterns:
+              name: Patrones AB
+            Flippy Do, pt. 1:
+              name: Flippy Do, parte 1
+            Flippy Do, pt. 2:
+              name: Flippy Do, parte 2
+            Lossy Compression:
+              name: Compresión perdida
+            Intellectual Property:
+              name: Propiedad intelectual
+            'Project: Digital Information Dilemmas, pt. 1':
+              name: 'Proyecto: dilemas de la información digital, parte 1'
+            'Project: Digital Information Dilemmas, pt. 2':
+              name: 'Proyecto: dilemas de la información digital, parte 2'
+            Unit Assessment:
+              name: Evaluación de la unidad
+            Flippy Do, pt 1:
+              name: Flippy Do, parte 1
+            Flippy Do, pt 2:
+              name: Flippy Do, parte 2
+            'Project: Digital Information Dilemmas, pt 1':
+              name: 'Proyecto: dilemas de la información digital, parte 1'
+            'Project: Digital Information Dilemmas, pt 2':
+              name: 'Proyecto: dilemas de la información digital, parte 2'
+            CS Principles Pre-survey:
+              name: Encuesta previa de Principios de Ciencias de la Computación
+            Binary Numbers:
+              name: Números binarios
+            Overflow and Rounding:
+              name: Desbordamiento y redondeo
+            CS Principles Unit 1 Survey:
+              name: Encuesta de la Unidad 1 de Principios de Ciencias de la Computación
+            Unit 1 Survey:
+              name: Encuesta de la Unidad 1
+            'Lesson 15: Unit Assessment':
+              name: 'Lección 15: evaluación de la unidad'
+            Unit 1 STUDENT Survey:
+              name: Encuesta de la Unidad 1 para ESTUDIANTES
+            Unit 1 TEACHER Survey:
+              name: Encuesta de la Unidad 1 para DOCENTES
           title: Piloto de la Unidad 1 de CSP
         csd-tests:
           stages:
@@ -16718,7 +16786,8 @@ es-MX:
           title: Ejemplo de actividades en línea de Descubrimientos de Ciencias de
             la Computación
         csd1-pilot:
-          title: CSD Unidad 1 - La resolución de problemas y la computación ('19-'20)
+          title: CSD Unidad 1 - La resolución de problemas y la computación (versión
+            piloto)
           description: "La unidad sobre la resolución de problemas y la computación
             es una introducción muy interactiva y colaborativa al campo de las ciencias
             de la computación, enmarcada dentro de una búsqueda más amplia orientada
@@ -17158,6 +17227,28 @@ es-MX:
               name: Propósito de un sitio web
             Images:
               name: Imágenes
+            Exploring Web Pages:
+              name: Exploración de páginas web
+            CSS Classes:
+              name: Clases CSS
+            Searching and Research:
+              name: Búsqueda e investigación
+            Sources and Research:
+              name: Fuentes e investigación
+            Team Problem Solving:
+              name: Resolución de problemas en equipo
+            Wireframes and Planning:
+              name: Wireframes y planificación
+            Linking Pages:
+              name: Enlaces entre páginas
+            Planning a Multi-page Website:
+              name: Planificación de un sitio con varias páginas
+            Linking and Navigation:
+              name: Enlaces y navegación
+            Peer Review and Final Touches:
+              name: Revisión de compañeros y ajustes finales
+            Project - Website for a Purpose:
+              name: Proyecto - Sitio web para un propósito específico
         csd3-pilot:
           title: CSD Unidad 3 - Animaciones y juegos ('19-'20)
           description: " En la Unidad 3, desarrollarás tu experiencia de programación
@@ -17521,6 +17612,18 @@ es-MX:
             CS Discoveries Post Course survey:
               name: Encuesta de fin de curso de Descubrimientos de Ciencias de la
                 Computación
+            Shapes and Parameters:
+              name: Formas y parámetros
+            Random Numbers:
+              name: Números aleatorios
+            Sprites and Animations:
+              name: Sprites y animaciones
+            Create a Scene:
+              name: Crear una escena
+            Text and Captioned Scenes:
+              name: Texto y escenas con subtítulos
+            Sprite Properties:
+              name: Propiedades de Sprite
         csd-bugs:
           stages:
             Game Lab Bugs:
@@ -17554,3 +17657,296 @@ es-MX:
               name: 'Proyecto: comparte tu aplicación'
             The Need for Programming Languages:
               name: La necesidad de lenguajes de programación
+            'Project: Finish Your App':
+              name: 'Proyecto: finalizar tu aplicación'
+            Programs Explore:
+              name: Explorar programas
+            Unit 3 STUDENT Survey:
+              name: Encuesta de la Unidad 3 para ESTUDIANTES
+            Unit 3 TEACHER Survey:
+              name: Encuesta de la Unidad 3 para DOCENTES
+          title: 'Unidad 3: Introducción al diseño de aplicaciones'
+        csl-vn:
+          stages:
+            Sequencing with Scrat:
+              name: Secuencias con Scrat
+            Programming in Maze:
+              name: Programación en Laberinto
+            Programming with Rey and BB-8:
+              name: Programación con Rey y BB-8
+            Loops in Ice Age:
+              name: Bucles de la Era de Hielo
+            Ocean Scene with Loops:
+              name: Escena del océano con bucles
+            Tell a Story in Play Lab:
+              name: Contar una historia en el Laboratorio de juegos
+          title: Enseñanza de ciencias de la computación para Vietnam
+          description_audience: Tuổi 5-10
+          description_short: Khoa học máy tính cơ bản cho học sinh Việt Nam
+          description: 'Khoa Học Máy Tính (ciencias de la computación) là môn học
+            cơ bản của thời đại kinh tế số và đã được đưa vào dạy đại trà từ tiểu
+            học ở Mỹ, Canada, Anh, Nhật và các nước phát triển khác. Khoá học này
+            nhằm giới thiệu Khoa Học Máy Tính cơ bản đến với học sinh Việt Nam. Chương
+            trình được xây dựng trực tiếp từ chương trình hiện hành cho học sinh tiểu
+            học ở Mỹ và cô đọng cho phù hợp với học sinh Việt Nam. '
+        dlp19-csd-mod-fit:
+          stages:
+            Deeper Learning Overview:
+              name: Resumen del aprendizaje profundo
+            Understanding the Curriculum:
+              name: Comprender el plan de estudio
+            Demonstrating Understanding:
+              name: Demostrar conocimiento
+          title: Descripción del aprendizaje profundo en Descubrimientos de Ciencias
+            de la Computación 2019
+          description_audience: Facilitadores de Descubrimientos de las Ciencias de
+            la Computación en período de formación 2019
+        dlp19-csp-mod-fit:
+          stages:
+            Deeper Learning Overview:
+              name: Resumen del aprendizaje profundo
+            Understanding the Curriculum:
+              name: Comprender el plan de estudio
+            Demonstrating Understanding:
+              name: Demostrar conocimiento
+          title: Taller FiT de aprendizaje profundo en Principios de Ciencias de la
+            Computación 2019
+        pl-csd-bugs:
+          stages:
+            CSD Workshop 1 Bugs:
+              name: Errores del taller 1 de CSD
+          title: Errores del taller 1 de CSD
+          description_short: Depuración en el Laboratorio de juegos - Taller 1 del
+            año académico
+        dlp19-csd-mod-w1:
+          stages:
+            Module 1:
+              name: Módulo 1
+            Step 1:
+              name: Paso 1
+            Step 2:
+              name: Paso 2
+            'Step 1: Develop Understanding':
+              name: 'Paso 1: desarrollar la comprensión'
+            'Step 2: Demonstrate Understanding':
+              name: 'Paso 2: demostrar la comprensión'
+            Deeper Learning Overview:
+              name: Resumen del aprendizaje profundo
+          title: Módulo 1 de Aprendizaje Profundo de Descubrimientos de Ciencias de
+            la Computación - Muy pronto
+          description_audience: Facilitadores de Descubrimientos de las Ciencias de
+            la Computación en período de formación 2019
+          description_short: Taller 1 del año académico
+        dlp19-csd-mod-w2:
+          stages:
+            new stage:
+              name: nueva etapa
+            CS Discoveries Deeper Learning Module 2:
+              name: Módulo 2 de Aprendizaje Profundo de Descubrimientos de Ciencias
+                de la Computación
+            Deeper Learning Overview:
+              name: Resumen del aprendizaje profundo
+            'Step 1: Develop Understanding':
+              name: 'Paso 1: desarrollar la comprensión'
+            'Step 2: Demonstrate Understanding':
+              name: 'Paso 2: demostrar la comprensión'
+          title: Módulo 2 de Aprendizaje Profundo de Descubrimientos de Ciencias de
+            la Computación
+          description_audience: Facilitadores de Descubrimientos de las Ciencias de
+            la Computación en período de formación 2019
+        dlp19-csd-mod-w3:
+          stages:
+            CS Discoveries Deeper Learning Module 3:
+              name: Módulo 3 de Aprendizaje Profundo de Descubrimientos de Ciencias
+                de la Computación
+          title: Módulo 3 de Aprendizaje Profundo de Descubrimientos de Ciencias de
+            la Computación
+          description_audience: Facilitadores de Descubrimientos de las Ciencias de
+            la Computación en período de formación 2019
+        dlp19-csd-mod-w4:
+          stages:
+            CS Discoveries Deeper Learning Module 4:
+              name: Módulo 4 de Aprendizaje Profundo de Descubrimientos de Ciencias
+                de la Computación
+          title: Módulo 4 de Aprendizaje Profundo de Descubrimientos de Ciencias de
+            la Computación
+          description_audience: Facilitadores de Descubrimientos de las Ciencias de
+            la Computación en período de formación 2019
+        dlp19-csp-mod-w1:
+          stages:
+            CS Principles Deeper Learning Module 1:
+              name: Módulo 1 de Aprendizaje Profundo de Principios de Ciencias de
+                la Computación
+            'Step 1: Develop Understanding':
+              name: 'Paso 1: desarrollar la comprensión'
+            'Step 2: Demonstrate Understanding':
+              name: 'Paso 2: demostrar la comprensión'
+            Deeper Learning Overview:
+              name: Resumen del aprendizaje profundo
+          title: Módulo 1 de Aprendizaje Profundo de Principios de Ciencias de la
+            Computación
+        dlp19-csp-mod-w2:
+          stages:
+            CS Principles Deeper Learning Module 2:
+              name: Módulo 2 de Aprendizaje Profundo de Principios de Ciencias de
+                la Computación
+            Deeper Learning Overview:
+              name: Resumen del aprendizaje profundo
+            'Step 1: Develop Understanding':
+              name: 'Paso 1: desarrollar la comprensión'
+            'Step 2: Demonstrate Understanding':
+              name: 'Paso 2: demostrar la comprensión'
+          title: Módulo 2 de Aprendizaje Profundo de Principios de Ciencias de la
+            Computación
+        dlp19-csp-mod-w3:
+          stages:
+            CS Principles Deeper Learning Module 3:
+              name: Módulo 3 de Aprendizaje Profundo de Principios de Ciencias de
+                la Computación
+          title: Módulo 3 de Aprendizaje Profundo de Principios de Ciencias de la
+            Computación
+        dlp19-csp-mod-w4:
+          stages:
+            CS Principles Deeper Learning Module 4:
+              name: Módulo 4 de Aprendizaje Profundo de Principios de Ciencias de
+                la Computación
+          title: Módulo 4 de Aprendizaje Profundo de Principios de Ciencias de la
+            Computación
+        csd-pilot:
+          stages:
+            Pilot Information:
+              name: Información del curso piloto
+            Pilot Information 1:
+              name: Información del curso piloto 1
+            Pilot Information 2:
+              name: Información del curso piloto 2
+            Pilot Information 3:
+              name: Información del curso piloto 3
+            Pilot Information 4:
+              name: Información del curso piloto 4
+            Pilot Information 5:
+              name: Información del curso piloto 5
+            Pilot Information 6:
+              name: Información del curso piloto 6
+            Pilot Information 7:
+              name: Información del curso piloto 7
+            Pilot Information 8:
+              name: Información del curso piloto 8
+            Pilot Information 9:
+              name: Información del curso piloto 9
+            Pilot Information 10:
+              name: Información del curso piloto 10
+            Pilot Information 11:
+              name: Información del curso piloto 11
+            Pilot Information 12:
+              name: Información del curso piloto 12
+            Pilot Information 13:
+              name: Información del curso piloto 13
+            Pilot Information 14:
+              name: Información del curso piloto 14
+            Pilot Information 15:
+              name: Información del curso piloto 15
+            Pilot Information 16:
+              name: Información del curso piloto 16
+            Pilot Information 17:
+              name: Información del curso piloto 17
+            Pilot Information 18:
+              name: Información del curso piloto 18
+            Pilot Information 19:
+              name: Información del curso piloto 19
+            Pilot Information 20:
+              name: Información del curso piloto 20
+            Pilot Information 21:
+              name: Información del curso piloto 21
+            Pilot Information 22:
+              name: Información del curso piloto 22
+            Pilot Information 23:
+              name: Información del curso piloto 23
+            Pilot Information 24:
+              name: Información del curso piloto 24
+            Pilot Information 25:
+              name: Información del curso piloto 25
+            Pilot Information 26:
+              name: Información del curso piloto 26
+            Pilot Information 27:
+              name: Información del curso piloto 27
+            Pilot Information 28:
+              name: Información del curso piloto 28
+            Pilot Information 29:
+              name: Información del curso piloto 29
+          title: Curso piloto de CSD
+        csd4-pilot:
+          stages:
+            What is a Computer?:
+              name: "¿Qué es una computadora?"
+            Input and Output:
+              name: Entrada y salida
+            Processing:
+              name: Procesamiento
+            Apps and Storage:
+              name: Aplicaciones y almacenamiento
+            Project - Propose an App:
+              name: Proyecto - Propuesta de aplicación
+            Post-Project Test:
+              name: Prueba posterior al proyecto
+          title: La computación y la resolución de problemas
+        csp2-pilot:
+          stages:
+            new stage:
+              name: nueva etapa
+            Building a Network:
+              name: Crear una red
+            IP Addresses:
+              name: Direcciones IP
+            Routers and Redundancy:
+              name: Enrutadores y redundancia
+            Packets:
+              name: Paquetes
+            The Growing Internet:
+              name: El crecimiento de Internet
+            Internet Dilemmas pt 1:
+              name: Dilemas de Internet, parte 1
+            Internet Dilemmas, pt 2:
+              name: Dilemas de Internet, parte 2
+            Unit 2 Assessment:
+              name: Evaluación de la Unidad 2
+            Unit Assessment:
+              name: Evaluación de la unidad
+            'Lesson 8: Unit Assessment':
+              name: 'Lección 8: evaluación de la unidad'
+            Unit 2 STUDENT Survey:
+              name: Encuesta de la Unidad 2 para ESTUDIANTES
+            Unit 2 TEACHER Survey:
+              name: Encuesta de la Unidad 2 para DOCENTES
+        denny-science:
+          stages:
+            Earthquake Detector:
+              name: Detector de terremotos
+            'Earthquake Detector: Designing Screens':
+              name: 'Detector de terremotos: diseño de pantallas'
+            'Earthquake Detector: Processing with Events':
+              name: 'Detector de terremotos: procesamiento con eventos'
+          title: Denny Science
+        peru-2019:
+          stages:
+            new stage:
+              name: nueva etapa
+            Introduction:
+              name: Introducción
+            Debugging in Collector:
+              name: Depuración en Recolector
+            'Loops: My Loopy Robotic Friends':
+              name: 'Bucles: Mis amigos robóticos y repetitivos'
+            Loops in Artist:
+              name: Loops en Artista
+            Nested Loops:
+              name: Bucles anidados
+            Nested Loops Project in Frozen:
+              name: Proyecto de bucles anidados en Frozen
+            Events in Star Wars:
+              name: Eventos en Star Wars
+            Introduction to Debugging:
+              name: Introducción a la depuración
+            Nested Loops in Frozen:
+              name: Bucles anidados en Frozen
+          title: Hora del Código Perú 2019

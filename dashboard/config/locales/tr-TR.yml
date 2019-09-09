@@ -38,6 +38,7 @@ tr:
         edit_header: Hesap Bilgilerini Düzenle
         error:
           future: gelecekte olması mümkün değil
+  beta: beta
   hello: Merhaba dünya
   welcome_back: Hoş geldiniz %{name}
   your_professional_learning_plan: Profesyonel Eğitim Planın
@@ -512,107 +513,6 @@ tr:
     no_primary_course: Code Studio'daki kurslardan birisini deneyin
     choose_next_course: Aşağıdaki Code Studio derslerinden birini seçerek deneyin
     print_certificate: Sertifikayı Yazdır
-    announcement_title: Bildirimler
-    announcement_message_fall2016_features: Görüşlerinize göre yeni özellikleri geliştirerek
-      yazı geçirdik. Şimdi, bir aygıtta programlama yapan birden fazla kişinin ilerlemesini
-      izleyebilirsiniz. <a href="%{pp_url}" target="_blank"> <i>Herhangi bir</i> sınıfta
-      <a href="%{csp_widgets_url}" target="_blank"> en iyi interaktif araçları</a>
-      bizim CS ilkeleri kursundan kullanabilirsiniz. Ve öğrencileri denemeye teşvik
-      etmek için kendi çalışma alanındaki <a href="%{unused_code_url}" target="_blank">
-      kullanılmayan kodları tutmalarını sağladık</a>! bizim yeni özellikleri kontrol
-      edinve bize ne düşündüğünüzü bildirin.
-    announcement_csp_widgets_message: İnternetin nasıl çalıştığını öğretmek ve   Şifrelemenin
-      veriyi nasıl güvenli tuttuğunu gibi kavramları öğretmek için eğlenceli bir yöntem
-      mi bakıyorsun? Bilgisayar bilimi prensiplerinden en eğlenceli olanlarını laldık
-      ve kendibaşına kullanılabilen bileşenler oluşturduk!
-    announcement_learn_more_button: Daha fazlasını öğren
-    announcement_try_now_button: Şimdi dene
-    announcement_host_an_hour_button: Kodlama Saatine ev sahipliği yap
-    announcement_watch_video_button: Videoyu izle
-    announcement_petition: Öğretmen olarak, her okuldaki her öğrenciye bilgisayar
-      bilimlerini öğretme hareketinde öncülük ediyorsunuz. Şimdi, sesiniz olacak temsilcilerinize
-      izin verme zamanı. Bu hafta, eğitimci liderleri, 28 hükümet ve Amerika'nın önde
-      gelen şirketlerinin CEO'ları Amerika Kongresi'ne K-12 bilgisayar bilimleri eğitimi
-      için bir açık mektup verdi.
-    announcement_petition_button: Adınızı Ekleyin
-    announcement_go_beyond_button: Ötesine geçin
-    announcement_apply_now: Şimdi uygula
-    announcement_all: Bizim öğretmen bloğumuzdaki  yeni özellikler ve güncelleştirmeleri
-      takip edin. <a href='%{teacher_blog_url}' target='_blank'> Duyurular bkz.</a>
-    announcement_hoc_launch: 180 ülkede binden fazla eğitimci 5-11 Aralık tarihlerinde,
-      ' Bir saatlik kod eğitimi' ile bilgisayar bilimini öğrenmeye başlıyor. Bir önceki
-      organizasyonlardan daha fazla öğrenciye ulaşmak için sizlere güveniyoruz. <a
-      href='%{signup_url}' target='_blank'> 'Bir saatlik kod eğitimi' etkinliğine
-      başvuruda bulunun ve lütfen başka bir öğretmen arkadaşınıza bilgisayar bilimini
-      öğretmeye başlayabileceğini söyleyin.
-    announcement_mc_launch: En popüler eğitimlerimizden birinin şimdi devamı var!
-      Minecraft Kodlama Saati Tasarımcısı öğrencilerin Minecraft dünyasında kurallar
-      oluşturmasını sağlıyor. Benzersiz bir Minecraft deneyimi yaşamalarını ve arkadaşlarıyla
-      paylaşmalarını ya da telefonlarında oynamalarını sağlıyor. Kodlama Saatinde
-      sınıfınla birlikte yap.
-    announcement_how_code_studio: 'Bilgisayar Bilimlerini, sınıf içinde öğretmeye
-      başlamak için herhangi bir deneyime ihtiyacın yok. Code.org sunar: müfredat,
-      ders planları, yüksek kaliteli profesyonel eğitim programları ve büyük araçlar.Tüm
-      sınıf düzeyleri için &mdash; Nereden başlıyacağını merak ediyorsan<a href=''%{video_download_url}''>
-      Bu video</a> indir!'
-    announcement_go_beyond: 'Kodlama saatinin ötesine gidip bilgisayar bilimi kavramlarını
-      öğrenciler ile her hafta keşfedin. Code.org sunar: müfredat, ders planları,
-      yüksek kaliteli profesyonel eğitim programları ve büyük araçlar. Tüm düzeyler
-      için &mdash; ve hepsi ücretsiz. :) Bilgisayar Bilimleri, sınıf içinde öğretim
-      başlamak için herhangi bir deneyime ihtiyacın yok. <b>Sınıf için uygun olan
-      adım.</b>'
-    announcement_teacher_recruitment: Sizin öğretmenler bilişim hareketinin liderisiniz.
-      Yüksek kaliteli K-12th notlu profesyonel programlara <strong>hiçbir ücret ödemeden
-      katılabilirsiniz. </strong> Bilgisayar bilimi ile ilgili ipuclarını  alacak
-      ve profesyonel öğretme için uygulayabilirsiniz.
-    announcement_teacher_recruitment2: Sizin öğretmenler bilişim hareketinin liderisiniz.
-      Yüksek kaliteli K-12th notlu profesyonel programlara <strong>hiçbir ücret ödemeden
-      katılabilirsiniz. </strong> Bilgisayar bilimi ile ilgili ipuclarını  alacak
-      ve profesyonel öğretme için uygulayabilirsiniz.
-    announcement_csf_pilot: "<strong>İlköğretim Okulu öğretmenleri:</strong> CS Temelleri
-      kurslarımız güncelleştirme bir parçası olun! Güncellenme Zamanı bir CS Temelleri
-      müfredat kış ve 2017 yılının baharında sırasında pilot için öğretmen arıyoruz.
-      Biz bu güncelleştirmeleri Ağustos 2017 yılında canlı gitmeden önce görüşlerinizi
-      duymak arzu ediyoruz."
-    announcement_student_privacy: Code.org biz öğrencinin gizliliğini çok ciddiye
-      alıyoruz. Senin öğrencilerin gizliliğini korumak için biz tam adlarınnı görüntülemesini
-      önlemek için bölümün giriş sayfasına bir değişiklik yaptık. Bu güncelleştirme
-      gizlilik seviyesini arttırsa bile <i>öğrencilerin tam adlarını kullanmamasını
-      teşvik ediyoruz.
-    announcement_apcsp_recruitment: '<strong>Bilgisayar bilim ilkeleri.öğretmenler:</strong>
-      Öğrencilerin Bilgisayar Bilimleri İlkeleri sınavına bu yıl öğrencilerinizi teşvik
-      edin. Code.org''ın sonraki viral özellikli video. 10-20 saniye arası video göndermeleri
-      için öğrencileri davet ediyoruz. Instagram veya Facebook üzerinde video klip
-      vr "Ben #APCSP çünkü sınava gireceğim..." diye paylaşm yapın. Code.org dan swag
-      kazanın!'
-    announcement_apcsp_recruitment2: 'Bu yılki AP CS ilkeleri sınavı kayıtları kırmaya
-      hazırlanıyor. Sınavı Öğrenci katılımı önemli ölçüde çeşitlilik AP Bilgisayar
-      Biliminde kayması olabilir ama yardımına ihtiyacımız var. AP CSP sınava girmek
-      her CS ilkeleri öğrenci teşvik ve <a href=''%{gift_url}'' target=''_blank''>
-      bir hediye göndermek</a> olacak. Öğrenciler ayrıca bizim <a href=''%{challenge_url}''
-      target=''_blank''> #APCSP video challenge</a> ülke genelinde eş teşvik edebilir.'
-    announcement_apcsp_recruitment3: Bu yılki AP CS ilkeleri sınavı kayıtları kırmaya
-      hazırlanıyor. Sınavı Öğrenci katılımı önemli ölçüde çeşitlilik AP Bilgisayar
-      Biliminde kayması olabilir ama yardımına ihtiyacımız var. AP CSP sınava girmek
-      her CS ilkeleri öğrenci teşvik ve n <a href='%{gift_url}' target='_blank'>a  bir
-      hediye göndermek</a> olacak. Öğrenciler ayrıca bizim <a href='%{video_url}'
-      target='_blank'> P video challenge</a> ülke genelinde eş teşvik edebilir.
-    announcement_csp_deadline: Lise öğretmenleri için son çağrı! Bilgisayar bilimi
-      ile okulunuzda öncülük et ve eğrenme programlarımıza katıl. Hiçbir ücret ödemeden
-      yüksek kaliteli profesyonel eğitim al. 14 Nisan da başvurular kapanıyor.
-    announcement_applab_export: Uygulama laboratuvarı, bizim web tabanlı programlama
-      ortamı, şimdi senin programını indirmeni destekliyor! JavaScript bloklarını
-      Sürükle ve bırak ile uygulamalar oluşturmaya başlayın sonra seçtiğiniz herhangi
-      bir geliştirme ortamında düzenlemeye devam edin.
-    announcement_csp_survey: "<b>Tebrikler Bilgisayar Bilimleri ilkeleri öğretmenleri!</b>
-      <br/> Bilgisayar ilkeleri sınavına 50.000'i aşkın öğrenci tarihinin en büyük
-      sınavına katılacak. Öğrencilerin seslerini duyalım-ders son anketi tamamlamak
-      için onlara hatırlat! Senin öğrencilerin yanıtları gözden geçirmen mümkün olacak
-      ve biz de seninle toplu Ulusal sonuç raporu paylaşacağız."
-    announcement_navigation_redesign: "<b>Sitedeki Gezinti değişiklikleri</b> <biz
-      Code.org site genelinde kaynaklara erişimi kolaylaştırmak için değişiklik yapıyoruz.
-      Öğretmen hesabınıza giriş yapın, ana sayfanızda kurslar, Proje Galerisi, bölümler
-      ve profesyonel öğrenme linkleri ile yeni bir gezinti çubuğu olacak."
   move_students:
     new_section_dne: Üzgünüm, ama %{new_section_code} yok. Lütfen başka bir bölüm
       kodu girin.

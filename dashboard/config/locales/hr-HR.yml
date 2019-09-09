@@ -23,6 +23,7 @@ hr:
         edit_header: Uredi podatke o računu
         error:
           future: ne može biti u budućnosti
+  beta: beta
   hello: Pozdrav svima
   welcome_back: Dobrodošao natrag, %{name}
   submit: Pošalji
@@ -301,9 +302,6 @@ hr:
     no_primary_course: Probajte Code Studio tečaj
     choose_next_course: Probajte Code Studio tečaj odabirom sljedećih opcija niže
     print_certificate: Ispišite diplome
-    announcement_learn_more_button: Doznaj više
-    announcement_try_now_button: Probaj sad
-    announcement_petition_button: Unesi svoje ime
   share:
     title: Naučite o Code Studiu
     description: Svatko može učiti računarske znanosti, te izrađivati igre, aplikacije

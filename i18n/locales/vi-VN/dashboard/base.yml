@@ -32,6 +32,7 @@ vi:
         finish_sign_up_subheader_provider: 'Điền thông tin sau để hoàn thành tạo tài khoản Code.org với <strong>%{provider}</strong> cho <strong>%{email}</strong>.'
         error:
           future: không thể trong tương lai
+  beta: "phiên bản thử nghiệm"
   hello: "Xin chào thế giới"
   welcome_back: "Chào mừng trở lại, %{name}"
   your_professional_learning_plan: "Kế hoạch học tập chuyên nghiệp của bạn"
@@ -57,7 +58,7 @@ vi:
     submit: 'Thêm gợi ý'
   appname: "Code.org"
   stage: "giai đoạn"
-  stage_number: "Giai đoạn %{number}"
+  stage_number: "Bài %{number}"
   puzzle: "Câu đố"
   trophies: "những danh hiệu"
   courses: 'Các khóa học'
@@ -138,7 +139,7 @@ vi:
     user_type_button: "Cập nhật tài khoản"
     user_type_label: "Loại tài khoản"
     user_type_teacher: "Giáo viên"
-    user_type_student: "học sinh"
+    user_type_student: "Học sinh"
     field_is_required: "là bắt buộc"
     accept_terms: "Bạn phải đồng ý để tạo một tài khoản"
     error: "Có lỗi xảy ra."
@@ -314,6 +315,7 @@ vi:
       district_dashboard: 'khu vực điều khiển'
       label: 'Chào %{username}'
       stats: 'TIến trình của bạn'
+      my_projects: 'Chương trình của tôi'
       settings: 'Tài khoản của bạn'
       logout: 'Đăng xuất'
       signin: 'Đăng nhập'
@@ -372,7 +374,7 @@ vi:
     student_teacher_disassociated: 'Bạn đã gỡ bỏ %{teacher_name} là giáo viên của bạn.'
     panel:
       answer_viewer: 'Kênh Giáo viên'
-      student: 'học sinh'
+      student: 'Học sinh'
       viewing_solution: 'Xem đáp án'
       try_it_yourself: 'Hãy thử làm bài tập này'
       section: 'Học phần'
@@ -453,31 +455,6 @@ vi:
     no_primary_course: "Hãy thử một khóa học ở Code Studio"
     choose_next_course: "Thử một khóa Xưởng Mã bằng cách chọn một khóa bên dưới"
     print_certificate: "In giấy chứng nhận"
-    announcement_title: "Thông báo"
-    announcement_message_fall2016_features: "Chúng tôi đã dành thời gian hè chuyển phản hồi của bạn thành các tính năng mới. Bây giờ bạn có thể<a href=\"%{pp_url}\" target=\"_blank\">theo dõi sự tiến bộ của nhiều học sinh</a>ngay cả khi họ đang lập trình cặp trên một thiết bị. Bạn có thể dùng<a href=\"%{csp_widgets_url}\" target=\"_blank\">các công cụ tương tác tốt nhất</a> từ khóa học CS Nguyên tắc trong <i>bất kì</i> lớp học. Và sinh viên của bạn có thể <a href=\"%{unused_code_url}\" target=\"_blank\">giữ mã không sử dụng</a> trong không gian làm việc của họ để khuyến khích thử nghiệm! Kiểm tra tất cả các tính năng mới của chúng tôi và cho chúng tôi biết suy nghĩ của bạn."
-    announcement_csp_widgets_message: "Tìm kiếm một số cách thú vị để dạy lớp học của bạn về cách hoạt động của Internet, cách mật mã giữ an toàn dữ liệu và các khái niệm khác? Chúng tôi đã sử dụng các công cụ tương tác tốt nhất từ ​​chương trình giảng dạy về Nguyên tắc Khoa học Máy tính của chúng tôi và phát hành các vật dụng độc lập mà bạn có thể sử dụng bất kỳ lúc nào!"
-    announcement_learn_more_button: "Tìm hiểu thêm"
-    announcement_try_now_button: "Thử ngay bây giờ"
-    announcement_host_an_hour_button: "Tổ chức một giờ"
-    announcement_watch_video_button: "Xem video"
-    announcement_petition: "Là một giáo viên, bạn đang dẫn đầu trong phong trào để trao cho mỗi học sinh ở mỗi trường học cơ hội học về khoa học máy tính. Bây giờ, đã đến lúc để cho đại diện của bạn nghe từ bạn. Tuần này, các nhà lãnh đạo giáo dục, 28 thống đốc, và CEO của các công ty lớn nhất của Mỹ tham gia cùng nhau trong một bức thư ngỏ yêu cầu Quốc hội Hoa Kỳ tài trợ K-12 giáo dục khoa học máy tính."
-    announcement_petition_button: "Thêm tên của bạn"
-    announcement_go_beyond_button: "Tiên phong"
-    announcement_apply_now: "Đăng ký ngay"
-    announcement_all: "Cập nhật những tính năng và cập nhật trên blog của giáo viên của chúng tôi.<a href='%{teacher_blog_url}' target='_blank'>Xem thông báo cũ.</a>"
-    announcement_hoc_launch: "Hàng ngàn nhà giáo dục ở hơn 180 quốc gia sẽ bắt đầu giảng dạy khoa học máy tính trong giờ làm việc vào tháng 5-11. Chúng tôi tin tưởng vào bạn để giúp chúng tôi tiếp cận nhiều sinh viên hơn bao giờ hết. <a href='%{signup_url}' target='_blank'>Đăng ký sự kiện Hour of Code</a> và để cho một giáo viên khác biết rằng bất cứ ai cũng có thể bắt đầu giảng dạy khoa học máy tính."
-    announcement_mc_launch: "Một trong những hướng dẫn phổ biến nhất hiện nay có một phần tiếp theo! Giờ Minecraft hoàn toàn mới của Nhà thiết kế mã cho phép sinh viên thực hiện các quy tắc của thế giới Minecraft. Họ có thể tạo ra một trải nghiệm Minecraft hoàn toàn độc đáo, và sau đó chia sẻ nó với bạn bè hoặc chơi trên điện thoại của họ. Làm điều đó với lớp học của bạn cho Hour of Code."
-    announcement_how_code_studio: "Bạn không cần bất kỳ kinh nghiệm nào để bắt đầu giảng dạy khoa học máy tính trong lớp học của mình. Code.org cung cấp giáo trình, kế hoạch bài học, các chương trình học tập chuyên nghiệp chất lượng cao và hàng ngàn công cụ tuyệt vời cho tất cả các cấp lớp&mdash;mọi thứ bạn cần, tất cả đều miễn phí. Tự hỏi bắt đầu từ đâu? Tải về<a href='%{video_download_url}'>video này</a>!"
-    announcement_go_beyond: "Đi xa khỏi một Giờ lập trình và khám phá khái niệm khoa học máy tính với sinh viên của bạn mỗi tuần. Code.org cung cấp giáo trình, kế hoạch bài học, các chương trình học tập chuyên nghiệp chất lượng cao và hàng ngàn công cụ tuyệt vời cho tất cả các cấp lớp&mdash;và nó hoàn toàn miễn phí. :) Bạn không cần bất kỳ kinh nghiệm nào để bắt đầu giảng dạy khoa học máy tính trong lớp học của mình.<b>Tìm bước tiếp theo phù hợp với lớp học của bạn.</b>"
-    announcement_teacher_recruitment: "Những giáo viên như bạn có thể dẫn đầu nhưng tiến bộ trong giáo dục khoa học máy tính. Bạn có thể tham gia bồi dưỡng chuyên môn (hoàn toàn miễn phí) để giảng dạy chương trình chất lượng cao cho các học sinh tại trường. Hãy dẫn đầu về khoa học máy tính ở trường và ứng dụng trong việc học tập chuyên môn của bạn."
-    announcement_teacher_recruitment2: "Những giáo viên như bạn có thể dẫn đầu nhưng tiến bộ trong giáo dục khoa học máy tính. Bạn có thể tham gia bồi dưỡng chuyên môn (hoàn toàn miễn phí) để giảng dạy chương trình chất lượng cao cho các học sinh tại trường. Hãy dẫn đầu về khoa học máy tính ở trường và ứng dụng trong việc học tập chuyên môn của bạn. Giáo viên trung học có thể đăng ký trước ngày 17/3."
-    announcement_csf_pilot: "<strong>Giáo viên trường tiểu học:</strong> Tham gia vào cập nhật các khóa học khoa học máy tính cơ bản của chúng tôi! Chúng tôi đang tìm kiếm các giáo viên triển khai thí điểm một chương trình giảng dạy khoa học máy tính cơ bản vào mùa đông xuân 2017. Chúng tôi đang háo hức muốn nghe phản hồi của bạn trước khi đưa ra bản cập nhật vào tháng 8 năm 2017."
-    announcement_student_privacy: "Tại Code.org, chúng tôi tôn trọng sự riêng tư của học sinh. Để bảo vệ quyền riêng tư của học sinh, chúng tôi có một sự thay đổi trong phần đăng nhập để tránh hiển thị tên đầy đủ. Mặc dù cập nhật này sẽ giúp giảm thiểu sự lo lắng về bảo mật ở trang đăng nhập, chúng tôi vẫn khuyến nghị người dùng <i>không sử dụng tên đầy đủ cho các học sinh<i>."
-    announcement_apcsp_recruitment: "<strong>Nguyên tắc khoa học máy tính cho giáo viên:</strong> Học sinh của bạn có thể được xem video tiếp theo trên Code.org's khuyến khích học sinh tham gia bài thi các nguyên tắc khoa học máy tính năm nay. Chúng tôi đang mời tất cả các học sinh làm một video 10-20 giây đăng trên Twitter, Instagram hoặc Facebook và nói \"tôi đang tham gia kỳ thi #APCSP vì...\" Các bài thi tốt nhất sẽ được giới thiệu trong video của chúng tôi và các học sinh chiến thắng sẽ được ghi nhận bởi Code.org!"
-    announcement_apcsp_recruitment2: "Năm nay kỳ thi APCS kỳ vọng sẽ phá vỡ kỷ lục. Chúng tôi cần sự trợ giúp của bạn. Hãy khuyến khích các học sinh tham gia thi AP CSP và chúng tôi sẽ <a href='%{gift_url}' target='_blank'> gửi cho bạn một món quà</a>. Học sinh cũng có thể khuyến khích bạn bè khắp nơi tham gia <a href='%{challenge_url}' target='_blank'> thử thách video #APCSP</a>."
-    announcement_apcsp_recruitment3: "Bài kiểm tra AP CS năm nay đã sẵn sàng để phá vỡ kỷ lục. Sự tham gia của học sinh trong kỳ thi có thể thay đổi đáng kể sự đa dạng trong AP Computer Science, nhưng chúng tôi cần sự giúp đỡ của bạn. Khuyến khích tất cả sinh viên CS học lấy bài thi AP CSP và bạn có thể giành chiến thắng <a href='%{gift_url}' target='_blank'>thẻ quà tặng, máy tính xách tay hoặc giải thưởng khác</a>! Chia sẻ <a href='%{video_url}' target='_blank'>video này</a>để sinh viên của bạn có thể nghe thấy từ những người bạn trên khắp đất nước đang thi."
-    announcement_applab_export: "App Lab, môi trường lập trình web của chúng tôi, bây giờ hỗ trợ xuất mã của bạn! Bạn có thể bắt đầu xây dựng ứng dụng bằng các khối JavaScript kéo và thả, sau đó xuất mã để tiếp tục chỉnh sửa trong bất kỳ môi trường phát triển chuyên nghiệp nào mà bạn chọn."
-    announcement_csp_survey: "<b>Chúc mừng các giáo viên của CS Principles!</b><br/>Các nguyên tắc CS của bạn sinh viên tham dự kỳ thi AP CS sẽ tham gia hơn 50.000 sinh viên khác trong cuộc thi AP lớn nhất trong lịch sử. Bây giờ, để tiếng nói của học sinh của bạn được nghe - nhắc nhở họ để hoàn thành các cuộc khảo sát kết thúc của khóa học! Bạn sẽ có thể xem lại phản hồi của sinh viên và chúng tôi cũng sẽ chia sẻ báo cáo toàn quốc với bạn."
   move_students:
     new_section_dne: "Xin lỗi, nhưng phần học %{new_section_code} không tồn tại. Vui lòng nhập một mã khác cho phần học."
     student_ids_not_entered: "Vui lòng cung cấp student_ids."
@@ -491,7 +468,7 @@ vi:
     female: 'Nữ'
     none: 'Tùy chọn không muốn trả lời'
   user_type:
-    student: 'học sinh'
+    student: 'Học sinh'
     teacher: 'Giáo viên'
   footer:
     thank_you: 'Chúng tôi cảm ơn<a href="https://code.org/about/donors"> các nhà tài trợ</a>, <a href="https://code.org/about/partners">các đối tác</a>, <a href="https://code.org/about/team">các thành viên trong nhóm mở rộng của chúng tôi</a>, các <a href="https://code.org/about/advisors">chuyên gia video và giáo dục</a> của chúng tôi vì sự hỗ trợ của các bạn trong việc tạo nên Xưởng Mã.'
@@ -542,7 +519,7 @@ vi:
   slow_loading: 'Điều này mất nhiều thời gian hơn bình thường...'
   try_reloading: 'Hãy thử tải lại trang'
   next_stage: 'Hoàn thành! Tiếp tục màn tiếp theo'
-  download_pdf: 'Mở bài học'
+  download_pdf: 'Mở giáo án'
   lesson_plan: 'Giáo Án'
   view_lesson_plan: 'Xem Giáo Án'
   pdf_download: 'Tải phiên bản PDF'
@@ -759,7 +736,7 @@ vi:
   zendesk_too_young_message: 'Rất tiếc, người dùng trẻ em không thể đăng nhập vào trang web hỗ trợ của chúng tôi, ban có thể duyệt<a href="http://support.code.org">support.code.org</a> mà không cần đăng nhập cùng hay yêu cầu phụ huynh hoặc giáo viên của ban liên hệ với chúng tôi .'
   progress:
     not_started: chưa bắt đầu
-    in_progress: trong tiến trình
+    in_progress: đang thực hiện
     completed_too_many_blocks: hoàn thành, quá nhiều mảnh gép
     completed_perfect: hoàn thành, hoàn hảo
     furthest_level_attempted: đã cố gắng ở mức độ cao nhất
@@ -831,6 +808,7 @@ vi:
     content: 'Nội dung'
     csf_digcit: 'Dân kỹ thuật số'
     csf_jigsaw: 'Ghép hình'
+    csf_sequencing: 'Chuỗi tuần tự'
     csf_loops: 'Vòng lặp'
     csf_events: 'Các sự kiện'
     csf_binary: 'Nhị phân'

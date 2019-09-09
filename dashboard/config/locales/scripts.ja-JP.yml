@@ -251,7 +251,7 @@ ja:
             Intro:
               name: イントロ
             Variables:
-              name: 変数
+              name: 変数（へんすう）
         algebra:
           stages:
             'Eval: Conditionals':
@@ -675,7 +675,7 @@ ja:
             Functions:
               name: 関数(かんすう)
             Variables:
-              name: 変数
+              name: 変数（へんすう）
             Conditionals:
               name: 条件
         grade2:
@@ -705,7 +705,7 @@ ja:
             Nested Loops:
               name: 入れ子のループ
             Variables:
-              name: 変数
+              name: 変数（へんすう）
             While Loops:
               name: Whileループ
         algebrapdnext:
@@ -932,7 +932,7 @@ ja:
         csd3-draft:
           stages:
             Variables:
-              name: 変数
+              name: 変数（へんすう）
             Conditionals:
               name: 条件
             Velocity:
@@ -952,7 +952,7 @@ ja:
         csd3-chapters:
           stages:
             Variables:
-              name: 変数
+              name: 変数（へんすう）
             Conditionals:
               name: 条件
             Velocity:
@@ -996,7 +996,8 @@ ja:
               name: プレイ ラボのイベント
           title: コース A
           assignment_family_title: コース A
-          description_short: 読み書き前の子ども向けのコンピューターサイエンスの紹介
+          description_audience: 4-7 才
+          description_short: 低学年向けコンピューター サイエンス入門
         courseb-2017:
           stages:
             'Debugging: Unspotted Bugs':
@@ -1015,7 +1016,8 @@ ja:
               name: プレイ ラボのイベント
           title: コース B
           assignment_family_title: コース B
-          description_short: 読み書き前向けのコンピューターサイエンスの紹介 (コースAとほぼ同じですが年長さん向けの若干の追加があります)
+          description_audience: 5-8 才
+          description_short: 低学年向けコンピューター サイエンス入門 (コースAとほぼ同じですが、若干高度な内容を加えています)
         coursec-2017:
           stages:
             Programming in Maze:
@@ -1077,8 +1079,9 @@ ja:
               name: ピラミッドをたてよう
             Nested Loops:
               name: 入れ子のループ
-          title: エクスプレスコース
+          title: エクスプレス コース
           assignment_family_title: エクスプレスコース
+          description_short: コンピューター サイエンス入門。小学校の中高学年向けコースの良い所をとりだしました。
         pre-express-2017:
           stages:
             'Debugging: Unspotted Bugs':
@@ -1097,6 +1100,8 @@ ja:
               name: プレイ ラボのイベント
             Spelling Bee:
               name: つづりみつばち
+          title: 低学年エクスプレス
+          description_short: 低学年向けのコンピュータ サイエンス入門です。幼児向けと小学1年生向けコースの良い所をとりだしました。
         subgoal-labels-opt-in:
           stages:
             Thanks:
@@ -1227,7 +1232,7 @@ ja:
         csd3-1819draft:
           stages:
             Variables:
-              name: 変数
+              name: 変数（へんすう）
             Conditionals:
               name: 条件
             Velocity:
@@ -1237,7 +1242,7 @@ ja:
         csd3-2018:
           stages:
             Variables:
-              name: 変数
+              name: 変数（へんすう）
             Conditionals:
               name: 条件
             Velocity:
@@ -1250,7 +1255,8 @@ ja:
               name: リスト
         coursea-2018:
           assignment_family_title: コース A
-          description_short: 読み書き前の子ども向けのコンピューターサイエンスの紹介
+          description_short: 低学年向けコンピューター サイエンス入門
+          description_audience: 4-7 才
           stages:
             'Debugging: Unspotted Bugs':
               name: 気づかれていないバグ
@@ -1310,6 +1316,7 @@ ja:
               name: グラフ用紙のプログラミング
         courseb-2018:
           assignment_family_title: コース B
+          description_audience: 5-8 才
           stages:
             'Debugging: Unspotted Bugs':
               name: 'デバッグ: 気づかれていないバグ'
@@ -1582,7 +1589,8 @@ ja:
         gamelab:
           title: ゲーム ラボ
         coursea-2019:
-          description_short: 読み書き前の子ども向けのコンピューターサイエンスの紹介
+          description_short: 低学年向けコンピューター サイエンス入門
+          description_audience: 4-7 才
           stages:
             'Programming: Happy Maps':
               name: ハッピーマップ
@@ -1603,6 +1611,7 @@ ja:
             Learn to Drag and Drop:
               name: ドラッグ＆ドロップ
         courseb-2019:
+          description_audience: 5-8 才
           stages:
             Move It, Move It:
               name: 動かせ！動かせ！
@@ -1655,7 +1664,7 @@ ja:
         csd3-2019:
           stages:
             Variables:
-              name: 変数
+              name: 変数（へんすう）
             Conditionals:
               name: 条件
             Velocity:
@@ -1711,10 +1720,24 @@ ja:
         csd3-pilot:
           stages:
             Variables:
-              name: 変数
+              name: 変数（へんすう）
             Conditionals:
               name: 条件
             Velocity:
               name: 速度
             Functions:
               name: 関数(かんすう)
+        csl-vn:
+          stages:
+            Programming in Maze:
+              name: めいろ のプログラミング
+            Ocean Scene with Loops:
+              name: アーティストくりかえし
+        peru-2019:
+          stages:
+            Introduction:
+              name: はじめに
+            Loops in Artist:
+              name: アーティストくりかえし
+            Nested Loops:
+              name: 入れ子のループ

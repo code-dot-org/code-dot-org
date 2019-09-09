@@ -16,7 +16,7 @@ class Pd::FitWeekendRegistrationMailerPreview < ActionMailer::Preview
     application = build :pd_facilitator1920_application, user: user
 
     workshop = application.find_fit_workshop(course: Pd::Workshop::COURSE_CSD, city: 'Phoenix', year: 2019) ||
-      create(:pd_workshop, course: Pd::Workshop::COURSE_CSD, subject: Pd::Workshop::SUBJECT_CSD_TEACHER_CON, processed_location: {city: 'Phoenix'}, num_sessions: 5)
+      create(:workshop, course: Pd::Workshop::COURSE_CSD, subject: Pd::Workshop::SUBJECT_CSD_TEACHER_CON, processed_location: {city: 'Phoenix'}, num_sessions: 5)
 
     application.fit_workshop_id = workshop.id
 

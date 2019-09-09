@@ -43,6 +43,14 @@ a.third-rule {
 }
 `;
 
+const STYLE_CSS_CONTENT = `@font-face {
+  font-family: 'FontAwesome';
+  src: url("applab/fontawesome-webfont.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+`;
+
 const JQUERY_JS_CONTENT = 'jquery content';
 const PNG_ASSET_CONTENT = 'asset content';
 const FONTAWESOME_CONTENT = 'fontawesome content';
@@ -162,7 +170,8 @@ describe('Applab Exporter,', function() {
         stage_total: 1,
         iframeEmbed: false,
         lastAttempt: null,
-        submittable: false
+        submittable: false,
+        widgetMode: false
       },
       showUnusedBlocks: true,
       fullWidth: true,
@@ -408,62 +417,14 @@ describe('Applab Exporter,', function() {
             '#divApplab inner text second line'
           );
         });
-
-        it('should have added the appModernDesign class to the elements', () => {
-          assert.equal(
-            el.querySelector('#clickMeButton').className,
-            'appModernDesign',
-            'appModernDesign className should be set on elements'
-          );
-        });
-
-        it('should have added the appModernDesign class to the screen', () => {
-          assert.equal(
-            el.querySelector('#screen1').className,
-            'screen appModernDesign',
-            'appModernDesign className should be set on screen'
-          );
-        });
-
-        it('should have removed all style attributes from the elements', () => {
-          assert.isNull(
-            el.querySelector('#clickMeButton').getAttribute('style'),
-            'style attributes should be removed'
-          );
-          assert.isNull(
-            el.querySelector('#\\31 Button').getAttribute('style'),
-            'style attributes should be removed'
-          );
-        });
-
-        it('should have added type attributes to all input elements', () => {
-          assert.equal(el.querySelector("input[type='text']").id, 'nameInput');
-        });
       });
 
       it('should contain a style.css file', function() {
         assert.property(zipFiles, 'my-app/style.css');
       });
 
-      it('style.css should contain appModernDesign classes for design mode elements', () => {
-        assert.include(
-          zipFiles['my-app/style.css'],
-          '#divApplab.appModern button.appModernDesign,\n' +
-            '#divApplab.appModern button.appModernDesign:hover {\n'
-        );
-      });
-
-      it('style.css should contain id specific styles for design mode elements', () => {
-        assert.include(
-          zipFiles['my-app/style.css'],
-          '#divApplab.appModern #clickMeButton {\n' +
-            '  background-color: red;\n' +
-            '}\n' +
-            '\n' +
-            '#divApplab.appModern #\\31 Button {\n' +
-            '  background-color: blue;\n' +
-            '}'
-        );
+      it('style.css should contain the fontawesome definition', () => {
+        assert.include(zipFiles['my-app/style.css'], STYLE_CSS_CONTENT);
       });
 
       it('should contain a code.js file', function() {
@@ -640,62 +601,14 @@ describe('Applab Exporter,', function() {
             '#divApplab inner text second line'
           );
         });
-
-        it('should have added the appModernDesign class to the elements', () => {
-          assert.equal(
-            el.querySelector('#clickMeButton').className,
-            'appModernDesign',
-            'appModernDesign className should be set on elements'
-          );
-        });
-
-        it('should have added the appModernDesign class to the screen', () => {
-          assert.equal(
-            el.querySelector('#screen1').className,
-            'screen appModernDesign',
-            'appModernDesign className should be set on screen'
-          );
-        });
-
-        it('should have removed all style attributes from the elements', () => {
-          assert.isNull(
-            el.querySelector('#clickMeButton').getAttribute('style'),
-            'style attributes should be removed'
-          );
-          assert.isNull(
-            el.querySelector('#\\31 Button').getAttribute('style'),
-            'style attributes should be removed'
-          );
-        });
-
-        it('should have added type attributes to all input elements', () => {
-          assert.equal(el.querySelector("input[type='text']").id, 'nameInput');
-        });
       });
 
       it('should contain a style.css file', function() {
         assert.property(zipFiles, 'my-app/assets/style.css');
       });
 
-      it('style.css should contain appModernDesign classes for design mode elements', () => {
-        assert.include(
-          zipFiles['my-app/assets/style.css'],
-          '#divApplab.appModern button.appModernDesign,\n' +
-            '#divApplab.appModern button.appModernDesign:hover {\n'
-        );
-      });
-
-      it('style.css should contain id specific styles for design mode elements', () => {
-        assert.include(
-          zipFiles['my-app/assets/style.css'],
-          '#divApplab.appModern #clickMeButton {\n' +
-            '  background-color: red;\n' +
-            '}\n' +
-            '\n' +
-            '#divApplab.appModern #\\31 Button {\n' +
-            '  background-color: blue;\n' +
-            '}'
-        );
+      it('style.css should contain the fontawesome definition', () => {
+        assert.include(zipFiles['my-app/assets/style.css'], STYLE_CSS_CONTENT);
       });
 
       it('should contain a code.j file', function() {

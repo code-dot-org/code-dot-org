@@ -2,17 +2,22 @@ it:
   data:
     script:
       category:
+        csd_category_name: Scoperte CS ('17-'18)
+        csd_2018_category_name: Scoperte CS ('18-'19)
+        csd_2019_category_name: Scoperte CS ('19-'20)
         csf_category_name: Corsi base
         csf_2018_category_name: Fondamenti di Informatica (2018)
         csf_international_category_name: Fondamenti di Informatica (in Italiano)
         csf2_draft_category_name: 'Corsi A - F: In fase di sviluppo'
         csp_category_name: "Princìpi dell'Informatica (versione 2015-16)"
         csp_2018_category_name: Principi di informatica ('18-'19)
+        csp_2019_category_name: Principi CS ('19-'20)
         cspexams_category_name: Prova pratica di principi d'informatica
         csp17_category_name: CS Principles ('17-'18)
         full_course_category_name: Corsi Avanzati
         hoc_category_name: L'Ora del Codice
         math_category_name: Matematica
+        research_studies_category_name: Studi di Ricerca
       name:
         course1:
           title: Corso 1
@@ -268,14 +273,42 @@ it:
           description: Impara la Programmazione Funzionale mediante l'Algebra
           description_short: Impara la Programmazione Funzionale mediante l'Algebra
           stages:
+            'Calc: Defining Variables':
+              name: Definire Variabili e Sostituzione
+            'Calc: Evaluation Blocks':
+              name: Blocchi di Valutazione ed Espressioni Aritmetiche
             'Eval: Boolean Operators':
               name: Operatori Booleani
             'Eval: Conditionals':
               name: Istruzioni condizionali
+            'Eval: Defining Functions':
+              name: Funzioni Composite
+            'Eval: Functions':
+              name: Risolvere Problemi delle Parole con il Design Recipe
             'Eval: Strings and Images':
               name: Stringhe e Immagini
+            'Eval: Writing Contracts':
+              name: Contratti di Scrittura
+            'Play Lab: Animation (Big Game)':
+              name: Il Grande Gioco - Animazione
+            'Play Lab: Boolean (Big Game)':
+              name: Il Grande Gioco - Booleani
+            'Play Lab: Booleans':
+              name: Sam il Pipistrello
+            'Play Lab: Collision Detection (Big Game)':
+              name: Il Grande Gioco - Rilevamento Collisioni
+            'Play Lab: Defining Functions':
+              name: Altezza Razzo
+            'Play Lab: Defining Variables (Big Game)':
+              name: Il Grande Gioco - Variabili
+            'Unplugged: Booleans':
+              name: 'Scollegato: Booleani e Logica'
+            'Unplugged: Collision Detection and the Distance Formula':
+              name: 'Scollegato: Rilevamento Collisioni e Teorema di Pitagora'
             'Unplugged: Conditionals and Piecewise Functions':
               name: 'Tradizionale &ndash; Istruzioni Condizionali e Funzioni a Tratti'
+            'Unplugged: Contracts':
+              name: 'Scollegato: Contratti, Dominio e Portata'
             'Unplugged: The Design Recipe':
               name: 'Tradizionale &ndash; La Ricetta della Progettazione'
             'Unplugged: Video Games and Coordinate Planes':
@@ -333,12 +366,41 @@ it:
           description: Impariamo come funziona Internet
           description_short: Impariamo come funziona Internet
           stages:
+            Automatic DNS node:
+              name: Nodo DNS Automatico
             Broadcasting messages:
               name: Broadcasting dei messaggi
+            Internet Simulator Freeplay:
+              name: Simulatore Internet Freeplay
+            Manual DNS:
+              name: DNS Manuale
+            Overview and Setup Instructions:
+              name: Panoramica ed Istruzioni Installazione
+            Packets and Reliability:
+              name: Pacchetti ed Affidabilità
+            Peer to Peer - Sending Ascii:
+              name: Peer to Peer - Inviare Ascii
+            Peer to Peer - Sending Bits on a Shared Wire:
+              name: Peer to Peer - Inviare Bit su un Cavo Condiviso
+            Peer to Peer - Sending Numbers:
+              name: Peer to Peer - Inviare Numeri
+            Routers and addresses:
+              name: Router ed indirizzi
         pixelation:
           title: Conversione di pixel
           description: Crea immagini utilizzando bit e byte.
           description_short: Crea immagini utilizzando bit e byte.
+          stages:
+            Black & White Pixelation Freeplay:
+              name: Pixellazione Bianco e Nero Freeplay
+            Black & White Pixelation Tutorial:
+              name: Pixellazione Bianco e Nero Tutorial
+            Color Pixelation Examples:
+              name: Esempi Colore Pixellazione
+            Color Pixelation Freeplay:
+              name: Colore Pixellazione Freeplay
+            Color Pixelation Tutorial:
+              name: Tutorial Colore Pixellazione
         20-hour:
           title: Corso rapido in 20 ore
           description: Questo corso rapido in 20 lezioni introduce in modo sintetico i concetti fondamentali dell'informatica e della programmazione. Il corso è pensato per l'uso nelle scuole a partire dai 10 anni, ma è divertente per imparare un po' di informatica a qualunque età. Fai i corsi 2, 3, 4 se vuoi imparare in modo più graduale ed approfondito.
@@ -450,14 +512,42 @@ it:
         cspunit1:
           description_short: Programmazione
           stages:
+            Binary Numbers:
+              name: Numeri Binari
+            Bytes and File Sizes:
+              name: Byte e Dimensioni File
+            Encode a Complex Thing:
+              name: Codifica un'Esperienza
+            Encoding B&W Images:
+              name: Codifica Immagini B&N
+            Encoding Color Images:
+              name: Codifica Immagini Colori
+            Encoding Numbers in the Real World:
+              name: Codifica Numeri nel Mondo Reale
+            Encoding and Sending Text:
+              name: Codifica ed Invio Testo
             Number Systems:
               name: Sistema di numerazione
             Personal Innovations:
               name: Innovazione personale
+            Sending Binary Messages:
+              name: Inviare Messaggi Binari
+            Sending Binary Messages with the Internet Simulator:
+              name: Inviare Messaggi Binari con il Simulatore di Internet
+            Sending Bits in the Real World:
+              name: Inviare Bit nel Mondo Reale
+            Sending Complex Messages:
+              name: Inviare Messaggi Complessi
+            Sending Formatted Text:
+              name: Inviare Testo Formattato
+            Sending Numbers:
+              name: Inviare Numeri
             Text Compression:
               name: Compressione del testo
         algebraPD:
           stages:
+            Course Overview:
+              name: Panoramica Corso
             Evaluation Blocks:
               name: Blocchi di Valutazione
             Introduction to PD:
@@ -470,6 +560,8 @@ it:
               name: Valori Booleani
             Evaluation Blocks:
               name: Blocchi di Valutazione
+            Sam the Bat:
+              name: Sam il Pipistrello
             Strings and Images:
               name: Stringhe e Immagini
             Your Game - Animation:
@@ -528,6 +620,8 @@ it:
           stages:
             Computer Science Pedagogy:
               name: Pedagogia dell'informatica
+            Course Overview:
+              name: Panoramica Corso
             Evaluation Blocks:
               name: Blocchi di Valutazione
             Next Steps:
@@ -554,6 +648,8 @@ it:
               name: Cos'è l'ECS?
         algebraPD-NexTech:
           stages:
+            Course Overview:
+              name: Panoramica Corso
             Evaluation Blocks:
               name: Blocchi di Valutazione
             Introduction to PD:
@@ -562,6 +658,8 @@ it:
               name: Cruscotto dell'Insegnante
         algebraPD-iZone:
           stages:
+            Course Overview:
+              name: Panoramica Corso
             Evaluation Blocks:
               name: Blocchi di Valutazione
             Introduction to PD:
@@ -609,6 +707,8 @@ it:
               name: Blocchi di Valutazione
             Free Play:
               name: Tempo di giocare
+            Sam the Bat:
+              name: Sam il Pipistrello
             Strings and Images:
               name: Stringhe e Immagini
             The Design Recipe:
@@ -660,6 +760,8 @@ it:
           stages:
             Booleans:
               name: Valori Booleani
+            Course Overview:
+              name: Panoramica Corso
             Defining Functions:
               name: Definizione di Funzioni
             Defining Variables:
@@ -674,6 +776,8 @@ it:
               name: Stringhe e Immagini
             Teacher Dashboard:
               name: Cruscotto dell'Insegnante
+            Writing Contracts:
+              name: Contratti di Scrittura
         cspfacilitator:
           stages:
             App Lab:
@@ -687,13 +791,30 @@ it:
             Welcome!:
               name: Benvenuto!
         K5-OnlinePD:
+          title: Fondamenti di Informatica - Corso per insegnanti
+          description: Guida online gratuita per imparare autonomamente come insegnare l'informatica usando il corso di Code.org "Fondamenti di informatica".
+          description_short: Guida online gratuita per imparare autonomamente come insegnare l'informatica usando il corso di Code.org "Fondamenti di informatica".
           stages:
             Computer Science Fundamentals:
-              name: Fondamenti di Informatica
+              name: Fondamenti di informatica
+            Getting Started:
+              name: Per cominciare
             Looking Ahead:
-              name: Uno Sguardo Avanti
+              name: Uno sguardo avanti
+            'Mastering the Basics: Conditionals':
+              name: 'I concetti fondamentali: istruzioni condizionali'
+            'Mastering the Basics: Events':
+              name: 'I concetti fondamentali: eventi'
+            'Mastering the Basics: Functions':
+              name: 'I concetti fondamentali: funzioni'
+            'Mastering the Basics: Loops':
+              name: 'I concetti fondamentali: cicli'
+            'Mastering the Basics: Sequencing':
+              name: 'I concetti fondamentali: sequenze di istruzioni'
             Next Steps:
               name: I prossimi passi
+            Planning:
+              name: Gestione della classe
         ECSPD2:
           description: 'Fase 2 Online: Studio estivo in modalità ibrida (blended learning)'
           description_short: 'Fase 2 Online: Studio estivo in modalità ibrida (blended learning)'
@@ -736,6 +857,8 @@ it:
               name: Conclusione
         Equity-OnlinePD:
           stages:
+            Getting Started:
+              name: Per cominciare
             Next Steps:
               name: I prossimi passi
         sciencePD2b-iZone:
@@ -774,6 +897,10 @@ it:
               name: Benvenuto!
             Wrap-up:
               name: Conclusione
+        CSPPD2:
+          stages:
+            Getting Started:
+              name: Per cominciare
         asUnplugged:
           stages:
             Binary Bracelets:
@@ -798,12 +925,40 @@ it:
           stages:
             Welcome Back!:
               name: Bentornato!
+        ECSPD3-Unit2:
+          stages:
+            Getting Started:
+              name: Per cominciare
+        ECSPD3-Unit3:
+          stages:
+            Getting Started:
+              name: Per cominciare
+        ECSPD3-Unit4:
+          stages:
+            Getting Started:
+              name: Per cominciare
+        ECSPD3-Unit5:
+          stages:
+            Getting Started:
+              name: Per cominciare
+        ECSPD3-Unit6:
+          stages:
+            Getting Started:
+              name: Per cominciare
         ScienceP3OLPT2:
           stages:
             Welcome!:
               name: Benvenuto!
             Wrap-Up:
               name: Conclusione
+        algebraPD3b:
+          stages:
+            Getting Started:
+              name: Per cominciare
+        CSPPD3-Unit2:
+          stages:
+            Getting Started:
+              name: Per cominciare
         Special Fun:
           description_short: Qualcosa di speciale per coloro che ne conoscono l'esistenza. Questi esercizi potrebbero non essere disponibili a lungo, così divertiti finché ci sono!
           description_audience: Da 10 anni in su (dopo il Corso 3)
@@ -819,6 +974,10 @@ it:
           stages:
             Ice Age Play Lab:
               name: Laboratorio con L'Era Glaciale
+        CSPPD3-Unit3:
+          stages:
+            Getting Started:
+              name: Per cominciare
         cspunit3temp:
           description_short: Programmazione
           stages:
@@ -849,7 +1008,7 @@ it:
               name: L'Ora del Codice 2015
         mc:
           title: L'Ora del Codice con Minecraft
-          description: Usa blocchi di codice per guidare Steve o Alex in questo mondo di Minecraft
+          description: Usa i blocchi di codice per avventurarti in questo mondo di Minecraft con Steve o Alex
           description_short: Esplora un mondo di Minecraft con la programmazione
           stages:
             Hour of Code 2015:
@@ -864,6 +1023,14 @@ it:
           description_short: Programmazione
         cspunit4:
           description_short: Programmazione
+        CSPPD3-Unit4:
+          stages:
+            Getting Started:
+              name: Per cominciare
+        CSPPD3-Unit5:
+          stages:
+            Getting Started:
+              name: Per cominciare
         AlgebraA:
           description: Impara la Programmazione Funzionale mediante l'Algebra
           description_short: Impara la Programmazione Funzionale mediante l'Algebra
@@ -912,24 +1079,44 @@ it:
         algebraPD1:
           title: Informatica nell'algebra Parte 1
           stages:
+            Course Overview:
+              name: Panoramica Corso
             Evaluation Blocks:
               name: Blocchi di Valutazione
             Introduction to PD:
               name: Introduzione a PD
             Teacher Dashboard:
               name: Cruscotto dell'Insegnante
+        algebraPD3c:
+          stages:
+            Getting Started:
+              name: Per cominciare
         csp1-2017:
           stages:
+            Binary Numbers:
+              name: Numeri Binari
             Number Systems:
               name: Sistema di numerazione
             Personal Innovations:
               name: Innovazione personale
+            Sending Binary Messages:
+              name: Inviare Messaggi Binari
+            Sending Binary Messages with the Internet Simulator:
+              name: Inviare Messaggi Binari con il Simulatore di Internet
+            Sending Numbers:
+              name: Inviare Numeri
             The Internet:
               name: Internet
             Post-Course Survey:
               name: Sondaggio Post-corso
         csp2-2017:
           stages:
+            Bytes and File Sizes:
+              name: Byte e Dimensioni File
+            Encoding B&W Images:
+              name: Codifica Immagini B&N
+            Encoding Color Images:
+              name: Codifica Immagini Colori
             Text Compression:
               name: Compressione del testo
             Post-Course Survey:
@@ -995,6 +1182,10 @@ it:
               name: Introduzione a PD
             The Tutorial:
               name: Tutorial
+        cspunit1-support:
+          stages:
+            Sending Binary Messages:
+              name: Inviare Messaggi Binari
         allthehiddenthings:
           stages:
             Game Lab:
@@ -1042,7 +1233,7 @@ it:
             Digital Citizenship:
               name: Cittadinanza digitale
             Explore project ideas:
-              name: Idee di Progetto
+              name: Idee di progetto
             Songwriting:
               name: Composizione di canzoni
         grade1:
@@ -1082,7 +1273,7 @@ it:
             Digital Citizenship:
               name: Cittadinanza digitale
             Explore project ideas:
-              name: Idee di Progetto
+              name: Idee di progetto
             'Play Lab: Variables':
               name: 'Laboratorio: Variabili'
             'Unplugged: Envelope Variables':
@@ -1103,6 +1294,26 @@ it:
               name: Benvenuto!
             Wrap-up:
               name: Conclusione
+        ecs-unit2:
+          stages:
+            Getting Started:
+              name: Per cominciare
+        ecs-unit3:
+          stages:
+            Getting Started:
+              name: Per cominciare
+        ecs-unit4:
+          stages:
+            Getting Started:
+              name: Per cominciare
+        ecs-unit5:
+          stages:
+            Getting Started:
+              name: Per cominciare
+        ecs-unit6:
+          stages:
+            Getting Started:
+              name: Per cominciare
         grade3:
           stages:
             'Artist: Nested Loops':
@@ -1202,7 +1413,7 @@ it:
         minecraft:
           title: Programma il tuo Minecraft
           description_short: Programma animali e altre creature di Minecraft nella tua versione di questo gioco.
-          description: Programma il comportamento degli animali e delle altre creature di Minecraft nella tua versione di questo gioco.
+          description: Programma animali e altre creature di Minecraft nella tua versione di questo gioco.
           stages:
             Minecraft Hour of Code Designer:
               name: Programma il tuo Minecraft
@@ -1251,7 +1462,7 @@ it:
             Programming in Maze:
               name: Programmazione nel labirinto
             'Loops: My Loopy Robotic Friends':
-              name: 'Cicli: I miei ciclici amici robotici'
+              name: 'I miei ciclici amici robotici'
             Loops in Collector:
               name: Cicli con la collezionista
             Loops in Artist:
@@ -1292,7 +1503,7 @@ it:
             Screen Out the Mean:
               name: Cittadinanza digitale - Caccia via le cattiverie dallo schermo
             Debugging in Maze:
-              name: 'Labirinto: correzione di errori'
+              name: Correzione di errori nel labirinto
             Loops in Harvester:
               name: Cicli con la contadina
         coursed-draft:
@@ -1348,21 +1559,21 @@ it:
             Build a Play Lab Game:
               name: Realizzare un gioco col laboratorio
             Explore Project Ideas:
-              name: Idee di Progetto
+              name: Idee di progetto
             The Design Process:
               name: Il processo di progettazione
             Build Your Project:
               name: Realizza il tuo progetto
             Present Your Project:
-              name: Presenta il Tuo Progetto
+              name: Presenta il tuo progetto
             Private and Personal Information:
-              name: Cittadinanza digitale - Dati personali
+              name: Cittadinanza digitale - Dati personali e altri dati
             Internet:
               name: Internet
             Crowdsourcing:
               name: Intelligenza collettiva
             Determine the Concept:
-              name: Fissare i Concetti
+              name: Fissare i concetti
             Introduction:
               name: Introduzione
             Conditionals:
@@ -1383,7 +1594,7 @@ it:
             Functions with Parameters in Artist:
               name: Funzioni con parametri con l'artista
             Explore Project Ideas:
-              name: Idee di Progetto
+              name: Idee di progetto
             The Design Process:
               name: Il processo di progettazione
             Build Your Project:
@@ -1391,7 +1602,7 @@ it:
             Revise Your Project:
               name: Riesamina il tuo progetto
             Presentation Your Project:
-              name: Presenta il Tuo Progetto
+              name: Presenta il tuo progetto
             The Power of Words:
               name: Cittadinanza digitale - Il potere delle parole
             Songwriting with Parameters:
@@ -1454,7 +1665,7 @@ it:
             Functions in Bee:
               name: Funzioni con l'Ape
             Determine the Concept:
-              name: Fissare i Concetti
+              name: Fissare i concetti
             Binary:
               name: Binario
         sciencepd5:
@@ -1637,7 +1848,7 @@ it:
             Programming in Maze:
               name: Programmazione nel labirinto
             'Loops: My Loopy Robotic Friends':
-              name: 'Cicli: I miei ciclici amici robotici'
+              name: 'I miei ciclici amici robotici'
             Loops in Collector:
               name: Cicli con la collezionista
             Loops in Artist:
@@ -1662,7 +1873,7 @@ it:
             Programming in Maze:
               name: Programmazione nel labirinto
             Debugging in Maze:
-              name: 'Labirinto: correzione di errori'
+              name: Correzione di errori nel labirinto
             'Real-life Algorithms: Paper Planes':
               name: 'Algoritmi della vita reale: aeroplani di carta'
             Programming in Collector:
@@ -1766,7 +1977,7 @@ it:
           title: Corso D
           assignment_family_title: Corso D
           description_audience: 'Da 7 a 11 anni'
-          description_short: Vengono ripresi brevemente i concetti del corso C ed aggiunti algoritmi, cicli annidati, istruzioni condizioni e altro ancora.
+          description_short: Vengono ripresi brevemente i concetti del corso C ed aggiunti algoritmi, cicli annidati, istruzioni condizionali e altro ancora.
           description: In questo corso vengono insegnati nuovi concetti di informatica tra cui algoritmi, cicli annidati, cicli "mentre", istruzioni condizionali ed eventi. Vengono introdotti alcuni concetti di cittadinanza digitale ed è possibile creare il proprio gioco o la propria storia che è poi possibile condividere con gli amici.
         coursee-2017:
           stages:
@@ -1787,7 +1998,7 @@ it:
             Functions with Parameters in Artist:
               name: Funzioni con parametri con l'artista
             Explore Project Ideas:
-              name: Idee di Progetto
+              name: Idee di progetto
               description_teacher: "Le prossime quattro lezioni forniscono agli studenti l'opportunità di utilizzare le proprie capacità di programmazione in un progetto di fine corso. Questo progetto li aiuterà ad acquisire esperienza con la programmazione, producendo una realizzazione da condividere con compagni, amici e parenti. È un percorso pensato per essere distribuito su più lezioni, gli studenti trascorreranno del tempo ragionando insieme, imparando a conoscere il processo di progettazione, costruendo e presentando il loro lavoro finale. \n\nNella lezione di esplorazione, gli studenti potranno osservare degli esempi già pronti ai quali ispirarsi sia per l'Artista che per il Laboratorio. Successivamente, gli studenti impareranno il processo di progettazione e come implementarlo nei propri progetti. A loro verrà quindi dato uno spazio per creare il proprio progetto nell'Artista o nel Laboratorio (questa è probabilmente la parte più lunga del progetto). Infine, gli studenti potranno presentare il lavoro finito ai compagni."
             The Design Process:
               name: Il processo di progettazione
@@ -1799,14 +2010,14 @@ it:
             Revise Your Project:
               name: Riesamina il tuo progetto
             Presentation Your Project:
-              name: Presenta il Tuo Progetto
+              name: Presenta il tuo progetto
             'Algorithms: Dice Race':
               name: 'Algoritmi: Gara con i Dadi'
             Conditionals:
               name: Istruzioni condizionali con la contadina
               description_teacher: Questa lezione introduce gli studenti allo studio dei cicli `mentre` e delle istruzioni `se / altrimenti`. _I cicli mentre_ sono cicli che continuano a ripetere le istruzioni finché una certa condizione è vera. I cicli mentre sono usati quando il programmatore non conosce a priori il numero esatto di volte che le istruzioni devono essere ripetute, ma conosce quale condizione debba essere vera per consentire al ciclo di continuare. Le istruzioni `se / altrimenti` offrono flessibilità nella programmazione eseguendo intere sezioni di codice solo se una certa condizione è vera, altrimenti viene eseguito un insieme di istruzioni alternativo.
             Private and Personal Information:
-              name: 'Cittadinanza digitale - Dati personali'
+              name: 'Cittadinanza digitale - Dati personali e altri dati'
               description_teacher: |-
                 In questa lezione realizzata da Common Sense Education si sottolinea la differenza tra dati sicuri da condividere online e dati che non lo sono. 
 
@@ -1823,12 +2034,12 @@ it:
             Functions in Bee:
               name: Funzioni con l'Ape
             Determine the Concept:
-              name: Fissare i Concetti
+              name: Fissare i concetti
               description_teacher: Questa lezione riunisce i concetti delle lezioni precedenti e offre agli studenti la possibilità di riflettere in modo critico su come risolvere ciascun problema, ma senza suggerire quale concetto applicare. Gli studenti ripasseranno algoritmi di base, debugging, cicli `ripeti ... volte`, istruzioni condizionali, cicli `mentre` e funzioni.
             Build a Play Lab Game:
               name: Realizzare un gioco col laboratorio
             Present Your Project:
-              name: Presenta il Tuo Progetto
+              name: Presenta il tuo progetto
               description_teacher: Nel corso delle quattro lezioni, gli studenti si dedicheranno alla realizzazione di un progetto di loro ideazione, usando come ambienti di programmazione sia il Laboratorio che l'Artista. Alla fine, gli studenti saranno messi nella condizione di presentare i lavori completati ai loro compagni o di condividerli con amici e parenti con un apposito link. La guida alle lezioni che descrive tutte e quattro le fasi del processo si trova all'inizio del percorso, [here](https://curriculum.code.org/csf-18/coursee/23/).
             Internet:
               name: 'Oltre la Programmazione: Internet'
@@ -1847,7 +2058,7 @@ it:
             Programming in Artist:
               name: Programmare l'artista
             'Loops: My Loopy Robotic Friends':
-              name: 'Cicli: I miei ciclici amici robotici'
+              name: 'I miei ciclici amici robotici'
             Loops in Artist:
               name: Cicli con l'artista
             Nested Loops in Bee/Zombie:
@@ -1891,7 +2102,7 @@ it:
             Functions with Parameters in Artist:
               name: Funzioni con parametri con l'artista
             Explore Project Ideas:
-              name: Idee di Progetto
+              name: Idee di progetto
               description_student: È tempo di trovare l'ispirazione! Questi esercizi ti mostreranno una serie di illustrazioni e giochi già pronti per aiutarti a sviluppare un piano per il tuo GRANDE progetto.
               description_teacher: "Le prossime cinque lezioni forniscono agli studenti l'opportunità di utilizzare le proprie capacità di programmazione in un progetto di fine corso. Questo progetto li aiuterà ad acquisire esperienza con la programmazione, producendo una realizzazione da condividere con compagni, amici e parenti. È un percorso pensato per essere distribuito su più lezioni, gli studenti trascorreranno del tempo ragionando insieme, imparando a conoscere il processo di progettazione, costruendo e presentando il loro lavoro finale.\n\nNella lezione di esplorazione, gli studenti potranno osservare degli esempi già pronti ai quali ispirarsi sia per l'Artista che per il Laboratorio. Successivamente, gli studenti impareranno il processo di progettazione e come implementarlo nei propri progetti. A loro verrà quindi dato uno spazio per creare il proprio progetto nell'Artista o nel Laboratorio (questa è probabilmente la parte più lunga del progetto). Quindi gli studenti potranno migliorare i loro progetti, dopo test ed ulteriori riflessioni. Infine, gli studenti potranno presentare il lavoro finito ai compagni."
             The Design Process:
@@ -1907,9 +2118,9 @@ it:
               description_student: Roma non è stata costruita in un giorno e neanche il tuo progetto dovrebbe esserlo. Prenditi del tempo per modificare e rivedere il tuo progetto in modo da renderlo il migliore possibile.
               description_teacher: Nel corso delle cinque lezioni, gli studenti si dedicheranno alla realizzazione di un progetto di loro ideazione, usando come ambienti di programmazione sia il Laboratorio che l'Artista. Ora che i progetti sono pronti, agli studenti viene data l'opportunità di ricevere commenti dai compagni e migliorare i loro progetti. La guida alle lezioni che descrive tutte e cinque le fasi del processo si trova all'inizio del percorso, [here](https://curriculum.code.org/csf-18/coursef/24/).
             Presentation Your Project:
-              name: Presenta il Tuo Progetto
+              name: Presenta il tuo progetto
             Present Your Project:
-              name: Presenta il Tuo Progetto
+              name: Presenta il tuo progetto
               description_student: È ora di mostrare il tuo lavoro! Qui presenterai il tuo fantastico progetto ai tuoi compagni.
               description_teacher: Nel corso delle cinque lezioni, gli studenti si dedicheranno alla realizzazione di un progetto di loro ideazione, usando come ambienti di programmazione sia il Laboratorio che l'Artista. Infine, gli studenti saranno messi nella condizione di presentare i lavori completati ai loro compagni o di condividerli con amici e parenti con un apposito link. La guida alle lezioni che descrive tutte e cinque le fasi del processo si trova all'inizio del percorso, [here](https://curriculum.code.org/csf-18/coursef/24/).
             Functions in Bee:
@@ -1925,7 +2136,7 @@ it:
             Programming in Artist:
               name: Programmare l'artista
             'Loops: My Loopy Robotic Friends':
-              name: 'Cicli: I miei ciclici amici robotici'
+              name: 'I miei ciclici amici robotici'
             Loops in Artist:
               name: Cicli con l'artista
             Nested Loops in Bee/Zombie:
@@ -1948,7 +2159,7 @@ it:
             Debugging in Collector:
               name: Introduzione al Debugging
             'Loops: My Loopy Robotic Friends':
-              name: 'Cicli: I miei ciclici amici robotici'
+              name: 'I miei ciclici amici robotici'
             Loops in Artist:
               name: Cicli con l'artista
             Internet:
@@ -1984,7 +2195,7 @@ it:
             Functions with Parameters in Artist:
               name: Funzioni con parametri con l'artista
             Explore Project Ideas:
-              name: Idee di Progetto
+              name: Idee di progetto
             The Design Process:
               name: Il processo di progettazione
             Build Your Project:
@@ -1992,7 +2203,7 @@ it:
             Revise Your Project:
               name: Riesamina il tuo progetto
             Present Your Project:
-              name: Presenta il Tuo Progetto
+              name: Presenta il tuo progetto
             Nested Loops Project in Frozen:
               name: Cicli annidati con Frozen
             'How it Works: The Internet':
@@ -2014,7 +2225,7 @@ it:
             Conditionals & Loops in Harvester:
               name: Istruzioni condizionali & cicli con la contadina
             Until Loops in Maze:
-              name: Cicli "fino a che" con il labirinto
+              name: Cicli "fino a che" nel labirinto
           title: Corso rapido
           assignment_family_title: Corso Rapido
           description_short: 'Introduzione all''informatica: mette a disposizione di studenti più grandi, il meglio del nostro curriculum per la scuola primaria.'
@@ -2036,7 +2247,7 @@ it:
             Programming in Maze:
               name: Programmazione nel labirinto
             'Loops: My Loopy Robotic Friends':
-              name: 'Cicli: I miei ciclici amici robotici'
+              name: 'I miei ciclici amici robotici'
             Loops in Collector:
               name: Cicli con la collezionista
             Loops in Artist:
@@ -2086,7 +2297,7 @@ it:
             Programming in Artist:
               name: Programmare l'artista
             'Loops: My Loopy Robotic Friends':
-              name: 'Cicli: I miei ciclici amici robotici'
+              name: 'I miei ciclici amici robotici'
             Loops in Artist:
               name: Cicli con l'artista
             Nested Loops:
@@ -2098,7 +2309,7 @@ it:
             Conditionals:
               name: Istruzioni condizionali
             Private and Personal Information:
-              name: Cittadinanza digitale - Dati personali
+              name: Cittadinanza digitale - Dati personali e altri dati
             Build a Star Wars Game:
               name: Realizza un gioco con Star Wars
             'Functions: Songwriting':
@@ -2108,17 +2319,17 @@ it:
             Functions in Bee:
               name: Funzioni con l'Ape
             Determine the Concept:
-              name: Fissare i Concetti
+              name: Fissare i concetti
             Build a Play Lab Game:
               name: Realizzare un gioco col laboratorio
             Explore Project Ideas:
-              name: Idee di Progetto
+              name: Idee di progetto
             The Design Process:
               name: Il processo di progettazione
             Build Your Project:
               name: Realizza il tuo progetto
             Present Your Project:
-              name: Presenta il Tuo Progetto
+              name: Presenta il tuo progetto
             Internet:
               name: Internet
             Crowdsourcing:
@@ -2177,7 +2388,7 @@ it:
             Debugging in Collector:
               name: Debugging con la collezionista
             'Loops: My Loopy Robotic Friends':
-              name: 'Cicli: I miei ciclici amici robotici'
+              name: 'I miei ciclici amici robotici'
             Loops in Artist:
               name: Cicli con l'artista
             'Common Sense Education: Screen Out the Mean':
@@ -2199,7 +2410,7 @@ it:
             Functions with Parameters in Artist:
               name: Funzioni con parametri con l'artista
             Explore Project Ideas:
-              name: Idee di Progetto
+              name: Idee di progetto
             The Design Process:
               name: Il processo di progettazione
             Build Your Project:
@@ -2207,7 +2418,7 @@ it:
             Revise Your Project:
               name: Riesamina il tuo progetto
             Present Your Project:
-              name: Presenta il Tuo Progetto
+              name: Presenta il tuo progetto
             Building a Foundation:
               name: Costruire le fondamenta
             Debugging with Scrat:
@@ -2231,7 +2442,7 @@ it:
             Programming in Artist:
               name: Programmare l'artista
             'Loops: My Loopy Robotic Friends':
-              name: 'Cicli: I miei ciclici amici robotici'
+              name: 'I miei ciclici amici robotici'
             Loops in Artist:
               name: Cicli con l'artista
             Nested Loops in Bee/Zombie:
@@ -2243,7 +2454,7 @@ it:
             Conditionals:
               name: Istruzioni condizionali
             Private and Personal Information:
-              name: Cittadinanza digitale - Dati personali
+              name: Cittadinanza digitale - Dati personali e altri dati
             Build a Star Wars Game:
               name: Realizza un gioco con Star Wars
             'Functions: Songwriting':
@@ -2253,17 +2464,17 @@ it:
             Functions in Artist:
               name: Funzioni con l'artista
             Determine the Concept:
-              name: Fissare i Concetti
+              name: Fissare i concetti
             Build a Play Lab Game:
               name: Realizzare un gioco col laboratorio
             Explore Project Ideas:
-              name: Idee di Progetto
+              name: Idee di progetto
             The Design Process:
               name: Il processo di progettazione
             Build Your Project:
               name: Realizza il tuo progetto
             Present Your Project:
-              name: Presenta il Tuo Progetto
+              name: Presenta il tuo progetto
             Internet:
               name: Internet
             Crowdsourcing:
@@ -2281,7 +2492,7 @@ it:
             Programming in Artist:
               name: Programmare l'artista
             'Loops: My Loopy Robotic Friends':
-              name: 'Cicli: I miei ciclici amici robotici'
+              name: 'I miei ciclici amici robotici'
             Loops in Artist:
               name: Cicli con l'artista
             Nested Loops in Bee/Zombie:
@@ -2305,7 +2516,7 @@ it:
             Functions with Parameters in Artist:
               name: Funzioni con parametri con l'artista
             Explore Project Ideas:
-              name: Idee di Progetto
+              name: Idee di progetto
             The Design Process:
               name: Il processo di progettazione
             Build Your Project:
@@ -2313,7 +2524,7 @@ it:
             Revise Your Project:
               name: Riesamina il tuo progetto
             Present Your Project:
-              name: Presenta il Tuo Progetto
+              name: Presenta il tuo progetto
         csp3-staging:
           stages:
             Creating Functions:
@@ -2332,9 +2543,12 @@ it:
               name: Introduzione a Sviluppo App (da 13 anni in su)
         hero:
           stages:
+            'Minecraft\: Hero''s Journey Hour of Code':
+              name: 'Minecraft\: Ora del Codice - Il viaggio dell''eroe'
             Minecraft Hour of Code:
               name: L'Ora del Codice con Minecraft
           title: 'Minecraft: Il viaggio dell''eroe'
+          description_short: Minecraft è tornato per l'Ora del Codice con una nuovissima attività!
           description: Minecraft è tornato per l'Ora del Codice con una nuovissima attività! Viaggia attraverso Minecraft grazie al coding.
         applab-intro-staging:
           stages:
@@ -2367,7 +2581,7 @@ it:
             Programming in Artist:
               name: Programmare l'artista
             'Loops: My Loopy Robotic Friends':
-              name: 'Cicli: I miei ciclici amici robotici'
+              name: 'I miei ciclici amici robotici'
             Loops in Artist:
               name: Cicli con l'artista
             Nested Loops:
@@ -2381,7 +2595,7 @@ it:
             Conditionals:
               name: Istruzioni condizionali
             Private and Personal Information:
-              name: Cittadinanza digitale - Dati personali
+              name: Cittadinanza digitale - Dati personali e altri dati
             'Functions: Songwriting':
               name: 'Funzioni: Composizione di Canzoni'
             Functions in Artist:
@@ -2389,17 +2603,17 @@ it:
             Functions in Bee:
               name: Funzioni con l'Ape
             Determine the Concept:
-              name: Fissare i Concetti
+              name: Fissare i concetti
             Build a Play Lab Game:
               name: Realizzare un gioco col laboratorio
             Explore Project Ideas:
-              name: Idee di Progetto
+              name: Idee di progetto
             The Design Process:
               name: Il processo di progettazione
             Build Your Project:
               name: Realizza il tuo progetto
             Present Your Project:
-              name: Presenta il Tuo Progetto
+              name: Presenta il tuo progetto
             Internet:
               name: Internet
             Crowdsourcing:
@@ -2421,7 +2635,7 @@ it:
             Programming in Artist:
               name: Programmare l'artista
             'Loops: My Loopy Robotic Friends':
-              name: 'Cicli: I miei ciclici amici robotici'
+              name: 'I miei ciclici amici robotici'
             Loops in Artist:
               name: Cicli con l'artista
             Nested Loops in Bee/Zombie:
@@ -2447,7 +2661,7 @@ it:
             Functions with Parameters in Artist:
               name: Funzioni con parametri con l'artista
             Explore Project Ideas:
-              name: Idee di Progetto
+              name: Idee di progetto
             The Design Process:
               name: Il processo di progettazione
             Build Your Project:
@@ -2455,7 +2669,7 @@ it:
             Revise Your Project:
               name: Riesamina il tuo progetto
             Present Your Project:
-              name: Presenta il Tuo Progetto
+              name: Presenta il tuo progetto
         csd6-old:
           stages:
             Lists:
@@ -2520,7 +2734,7 @@ it:
               name: Mappe felici
               description_teacher: Il passaggio da algoritmo a programmazione può essere più immediato se gli studenti capiscono la differenza tra pianificare una sequenza e codificare tale sequenza in un linguaggio opportuno. Questa attività aiuterà gli studenti ad acquisire esperienza leggendo e scrivendo del codice costituito da semplici simboli.
             Programming in Maze:
-              name: Programmazione nel labirinto
+              name: Programmare con Angry Bird
               description_teacher: In questa serie di esercizi online, gli studenti svilupperanno la comprensione degli algoritmi, la correzione degli errori (debugging) e i primi principi generali dell'informatica. Utilizzando i personaggi del gioco Angry Birds, gli studenti svilupperanno algoritmi sequenziali per far arrivare l'uccellino fino al maialino senza sbattere contro i muri o esplodere sulla dinamite (TNT). Alcuni esercizi di ricerca degli errori sono stati mescolati in questa lezione per far pratica con la risoluzione dei problemi (problem solving) e nello sviluppo del pensiero critico (critical thinking).
             Going Places Safely:
               name: Cittadinanza digitale - Visitare luoghi in modo sicuro
@@ -2543,7 +2757,7 @@ it:
             Programming in Bee:
               name: Programmare l'Ape
             Programming in Harvester:
-              name: Programmazione con la contadina
+              name: Programmare con la contadina
             Loops in Harvester:
               name: Cicli con la contadina
             Sequencing in Maze:
@@ -2564,7 +2778,7 @@ it:
             Debugging in Collector:
               name: Debugging con la collezionista
             'Loops: My Loopy Robotic Friends':
-              name: 'Cicli: I miei ciclici amici robotici'
+              name: 'I miei ciclici amici robotici'
             Loops in Artist:
               name: Cicli con l'artista
             Nested Loops:
@@ -2592,7 +2806,7 @@ it:
             Functions with Parameters in Artist:
               name: Funzioni con parametri con l'artista
             Explore Project Ideas:
-              name: Idee di Progetto
+              name: Idee di progetto
             The Design Process:
               name: Il processo di progettazione
             Build Your Project:
@@ -2600,19 +2814,19 @@ it:
             Revise Your Project:
               name: Riesamina il tuo progetto
             Present Your Project:
-              name: Presenta il Tuo Progetto
+              name: Presenta il tuo progetto
             Conditionals in Bee:
               name: Istruzioni condizionali con l'ape
             Until Loops in Maze:
-              name: Cicli "fino a che" con il labirinto
+              name: Cicli "fino a che" nel labirinto
             Programming in Maze:
-              name: Programmazione nel labirinto
+              name: Programmare con Angry Birds
             Debugging in Maze:
               name: Debugging con Scrat
             Programming in Collector:
-              name: Programmare la collezionista
+              name: Programmare con la collezionista
             Programming in Artist:
-              name: Programmare l'artista
+              name: Programmare con l'artista
             'Loops: Getting Loopy':
               name: Diventare ripetitivi
             Loops with Rey and BB-8:
@@ -2640,7 +2854,7 @@ it:
             Screen Out the Mean:
               name: Cittadinanza digitale - Caccia via le cattiverie dallo schermo
             Determine the Concept:
-              name: Fissare i Concetti
+              name: Fissare i concetti
             Build a Flappy Game:
               name: Realizzare un gioco Flappy
             The Power of Words:
@@ -2699,7 +2913,7 @@ it:
             Programming with Rey and BB-8:
               name: Programmare con Rey e BB-8
             'Loops: My Loopy Robotic Friends':
-              name: 'Cicli: I miei ciclici amici robotici (per i più piccoli)'
+              name: I miei ciclici amici robotici (per i più piccoli)
             Loops in Collector:
               name: Cicli con la collezionista
             Loops in Artist:
@@ -2707,7 +2921,7 @@ it:
             'Events: The Big Event':
               name: Gli eventi (per i più piccoli)
             Events in Play Lab:
-              name: 'Laboratorio: Eventi'
+              name: Una battaglia con gli eventi
             Programming in Ice Age:
               name: Programmare con Scrat
             Loops in Ice Age:
@@ -2762,7 +2976,7 @@ it:
             Nested Loops in Frozen:
               name: Cicli annidati con Frozen
             Until Loops in Maze:
-              name: Cicli "fino a che" con il labirinto
+              name: Cicli "fino a che" nel labirinto
             Conditionals in Maze:
               name: Istruzioni Condizionali nel Labirinto
             Conditionals & Loops in Harvester:
@@ -2789,15 +3003,15 @@ it:
             Building a Foundation:
               name: Costruire le fondamenta
             Programming in Maze:
-              name: Programmazione nel labirinto
+              name: Programmare con Angry Bird
             Debugging in Maze:
-              name: 'Labirinto: correzione di errori'
+              name: Correzione di errori nel labirinto
             'Real-life Algorithms: Paper Planes':
               name: Aeroplani di carta
             Programming in Collector:
-              name: Programmare la collezionista
+              name: Programmare con la collezionista
             Programming in Artist:
-              name: Programmare l'artista
+              name: Programmare con l'artista
             'Loops: Getting Loopy':
               name: Diventare ripetitivi
             Loops with Rey and BB-8:
@@ -2811,7 +3025,7 @@ it:
             Build a Flappy Game:
               name: Realizzare un gioco Flappy
             Events in Play Lab:
-              name: 'Laboratorio: Eventi'
+              name: Giocare con gli eventi
             Screen Out the Mean:
               name: Cittadinanza digitale - Caccia via le cattiverie dallo schermo
             Binary Bracelets:
@@ -2831,15 +3045,15 @@ it:
             'Programming: My Robotic Friends':
               name: I miei amici robotici
             Sequence in Maze:
-              name: Aggiungere commenti nei programmi
+              name: Programmare e commentare nel labirinto
             Building a Foundation:
               name: Costruire le fondamenta
             Debugging with Scrat:
               name: Debugging con Scrat
             Programming in Artist:
-              name: Programmare l'artista
+              name: Programmare con l'artista
             'Loops: My Loopy Robotic Friends':
-              name: 'Cicli: I miei ciclici amici robotici'
+              name: I miei ciclici amici robotici
             Loops in Artist:
               name: Cicli con l'artista
             Nested Loops:
@@ -2854,7 +3068,7 @@ it:
               name: Istruzioni condizionali con la contadina
               description_teacher: Questa lezione introduce gli studenti allo studio dei cicli `mentre` e delle istruzioni `se / altrimenti`. _I cicli mentre_ sono cicli che continuano a ripetere le istruzioni finché una certa condizione è vera. I cicli mentre sono usati quando il programmatore non conosce a priori il numero esatto di volte che le istruzioni devono essere ripetute, ma conosce quale condizione debba essere vera per consentire al ciclo di continuare. Le istruzioni `se / altrimenti` offrono flessibilità nella programmazione eseguendo intere sezioni di codice solo se una certa condizione è vera, altrimenti viene eseguito un insieme di istruzioni alternativo.
             Private and Personal Information:
-              name: Cittadinanza digitale - Dati personali
+              name: Cittadinanza digitale - Dati personali e altri dati
               description_teacher: |-
                 In questa lezione realizzata da Common Sense Education si sottolinea la differenza tra dati sicuri da condividere online e dati che non lo sono. 
 
@@ -2871,12 +3085,12 @@ it:
             Functions in Harvester:
               name: Funzioni con la contadina
             Determine the Concept:
-              name: Fissare i Concetti
+              name: Fissare i concetti
               description_teacher: Questa lezione riunisce i concetti delle lezioni precedenti e offre agli studenti la possibilità di riflettere in modo critico su come risolvere ciascun problema, ma senza suggerire quale concetto applicare. Gli studenti ripasseranno algoritmi di base, debugging, cicli `ripeti ... volte`, istruzioni condizionali, cicli `mentre` e funzioni.
             Build a Play Lab Game:
               name: Realizzare un gioco col laboratorio
             Explore Project Ideas:
-              name: Idee di Progetto
+              name: Idee di progetto
               description_teacher: "Le prossime quattro lezioni forniscono agli studenti l'opportunità di utilizzare le proprie capacità di programmazione in un progetto di fine corso. Questo progetto li aiuterà ad acquisire esperienza con la programmazione, producendo una realizzazione da condividere con compagni, amici e parenti. È un percorso pensato per essere distribuito su più lezioni, gli studenti trascorreranno del tempo ragionando insieme, imparando a conoscere il processo di progettazione, costruendo e presentando il loro lavoro finale. \n\nNella lezione di esplorazione, gli studenti potranno osservare degli esempi già pronti ai quali ispirarsi sia per l'Artista che per il Laboratorio. Successivamente, gli studenti impareranno il processo di progettazione e come implementarlo nei propri progetti. A loro verrà quindi dato uno spazio per creare il proprio progetto nell'Artista o nel Laboratorio (questa è probabilmente la parte più lunga del progetto). Infine, gli studenti potranno presentare il lavoro finito ai compagni."
             The Design Process:
               name: Il processo di progettazione
@@ -2886,7 +3100,7 @@ it:
               name: Realizza il tuo progetto
               description_teacher: Nel corso delle quattro lezioni, gli studenti si dedicheranno alla realizzazione di un progetto di loro ideazione, usando come ambienti di programmazione sia il Laboratorio che l'Artista. Ora agli studenti verrà dato il proprio spazio per creare il loro progetto con l'Artista o il Laboratorio. Questa sarà la fase più lunga del percorso di creazione. La guida alle lezioni che descrive tutte e quattro le fasi del processo si trova all'inizio del percorso, [here](https://curriculum.code.org/csf-18/coursee/23/).
             Present Your Project:
-              name: Presenta il Tuo Progetto
+              name: Presenta il tuo progetto
               description_teacher: Nel corso delle quattro lezioni, gli studenti si dedicheranno alla realizzazione di un progetto di loro ideazione, usando come ambienti di programmazione sia il Laboratorio che l'Artista. Alla fine, gli studenti saranno messi nella condizione di presentare i lavori completati ai loro compagni o di condividerli con amici e parenti con un apposito link. La guida alle lezioni che descrive tutte e quattro le fasi del processo si trova all'inizio del percorso, [here](https://curriculum.code.org/csf-18/coursee/23/).
             Internet:
               name: Internet
@@ -2918,15 +3132,15 @@ it:
             'Programming: My Robotic Friends':
               name: I miei amici robotici
             Sequence in Maze:
-              name: Aggiungere commenti nei programmi
+              name: Programmare e commentare nel labirinto
             Building a Foundation:
               name: Costruire le fondamenta
             Debugging with Scrat:
               name: Debugging con Scrat
             Programming in Artist:
-              name: Programmare l'artista
+              name: Programmare con l'artista
             'Loops: My Loopy Robotic Friends':
-              name: 'Cicli: I miei ciclici amici robotici'
+              name: I miei ciclici amici robotici
             Loops in Artist:
               name: Cicli con l'artista
             Nested Loops in Bee/Zombie:
@@ -2966,7 +3180,7 @@ it:
             Functions with Parameters in Artist:
               name: Funzioni con parametri con l'artista
             Explore Project Ideas:
-              name: Idee di Progetto
+              name: Idee di progetto
               description_student: È tempo di trovare l'ispirazione! Questi esercizi ti mostreranno una serie di illustrazioni e giochi già pronti per aiutarti a sviluppare un piano per il tuo GRANDE progetto.
               description_teacher: "Le prossime cinque lezioni forniscono agli studenti l'opportunità di utilizzare le proprie capacità di programmazione in un progetto di fine corso. Questo progetto li aiuterà ad acquisire esperienza con la programmazione, producendo una realizzazione da condividere con compagni, amici e parenti. È un percorso pensato per essere distribuito su più lezioni, gli studenti trascorreranno del tempo ragionando insieme, imparando a conoscere il processo di progettazione, costruendo e presentando il loro lavoro finale.\n\nNella lezione di esplorazione, gli studenti potranno osservare degli esempi già pronti ai quali ispirarsi sia per l'Artista che per il Laboratorio. Successivamente, gli studenti impareranno il processo di progettazione e come implementarlo nei propri progetti. A loro verrà quindi dato uno spazio per creare il proprio progetto nell'Artista o nel Laboratorio (questa è probabilmente la parte più lunga del progetto). Quindi gli studenti potranno migliorare i loro progetti, dopo test ed ulteriori riflessioni. Infine, gli studenti potranno presentare il lavoro finito ai compagni."
             The Design Process:
@@ -2982,7 +3196,7 @@ it:
               description_student: Roma non è stata costruita in un giorno e neanche il tuo progetto dovrebbe esserlo. Prenditi del tempo per modificare e rivedere il tuo progetto in modo da renderlo il migliore possibile.
               description_teacher: Nel corso delle cinque lezioni, gli studenti si dedicheranno alla realizzazione di un progetto di loro ideazione, usando come ambienti di programmazione sia il Laboratorio che l'Artista. Ora che i progetti sono pronti, agli studenti viene data l'opportunità di ricevere commenti dai compagni e migliorare i loro progetti. La guida alle lezioni che descrive tutte e cinque le fasi del processo si trova all'inizio del percorso, [here](https://curriculum.code.org/csf-18/coursef/24/).
             Present Your Project:
-              name: Presenta il Tuo Progetto
+              name: Presenta il tuo progetto
               description_student: È ora di mostrare il tuo lavoro! Qui presenterai il tuo fantastico progetto ai tuoi compagni.
               description_teacher: Nel corso delle cinque lezioni, gli studenti si dedicheranno alla realizzazione di un progetto di loro ideazione, usando come ambienti di programmazione sia il Laboratorio che l'Artista. Infine, gli studenti saranno messi nella condizione di presentare i lavori completati ai loro compagni o di condividerli con amici e parenti con un apposito link. La guida alle lezioni che descrive tutte e cinque le fasi del processo si trova all'inizio del percorso, [here](https://curriculum.code.org/csf-18/coursef/24/).
             Conditionals with Cards:
@@ -3009,8 +3223,16 @@ it:
           stages:
             Personal Innovations:
               name: Innovazione personale
+            Sending Binary Messages:
+              name: Inviare Messaggi Binari
+            Sending Binary Messages with the Internet Simulator:
+              name: Inviare Messaggi Binari con il Simulatore di Internet
             Number Systems:
               name: Sistema di numerazione
+            Binary Numbers:
+              name: Numeri Binari
+            Sending Numbers:
+              name: Inviare Numeri
             The Internet:
               name: Internet
         csd1-2018:
@@ -3019,8 +3241,14 @@ it:
               description_student: 'La classe lavora in gruppi per progettare barche di "carta stagnola" che dovranno reggere il maggior numero possibile di monetine. Alla fine della lezione i gruppi rifletteranno sull''esperienza fatta, con particolare riferimento alle strategie di problem solving che utilizzeranno nel resto del corso. '
         csp2-2018:
           stages:
+            Bytes and File Sizes:
+              name: Byte e Dimensioni File
             Text Compression:
               name: Compressione del testo
+            Encoding B&W Images:
+              name: Codifica Immagini B&N
+            Encoding Color Images:
+              name: Codifica Immagini Colori
         csp3-2018:
           description_short: Programmazione
           stages:
@@ -3069,7 +3297,7 @@ it:
             Programming in Maze:
               name: Programmazione nel labirinto
             'Loops: My Loopy Robotic Friends':
-              name: 'Cicli: I miei ciclici amici robotici (per i più piccoli)'
+              name: I miei ciclici amici robotici (per i più piccoli)
             Loops in Collector:
               name: Cicli con la collezionista
             Loops in Artist:
@@ -3077,7 +3305,7 @@ it:
             'Events: The Big Event':
               name: Gli eventi (per i più piccoli)
             Events in Play Lab:
-              name: 'Laboratorio: Eventi'
+              name: Una battaglia con gli eventi
             Spelling Bee:
               name: Ape Sapiente
             Move It, Move It:
@@ -3175,7 +3403,7 @@ it:
             Programming in Artist:
               name: Programmare l'artista
             'Loops: My Loopy Robotic Friends':
-              name: 'Cicli: I miei ciclici amici robotici'
+              name: 'I miei ciclici amici robotici'
             Loops in Artist:
               name: Cicli con l'artista
             Nested Loops in Bee/Zombie:
@@ -3217,7 +3445,7 @@ it:
             Alien Dance Party with Sprite Lab:
               name: La festa degli alieni con il Laboratorio dei personaggi
             Explore Project Ideas:
-              name: Idee di Progetto
+              name: Idee di progetto
               description_student: È tempo di trovare l'ispirazione! Questi esercizi ti mostreranno una serie di illustrazioni e giochi già pronti per aiutarti a sviluppare un piano per il tuo GRANDE progetto.
               description_teacher: "Le prossime cinque lezioni forniscono agli studenti l'opportunità di utilizzare le proprie capacità di programmazione in un progetto di fine corso. Questo progetto li aiuterà ad acquisire esperienza con la programmazione, producendo una realizzazione da condividere con compagni, amici e parenti. È un percorso pensato per essere distribuito su più lezioni, gli studenti trascorreranno del tempo ragionando insieme, imparando a conoscere il processo di progettazione, costruendo e presentando il loro lavoro finale.\n\nNella lezione di esplorazione, gli studenti potranno osservare degli esempi già pronti ai quali ispirarsi sia per l'Artista che per il Laboratorio. Successivamente, gli studenti impareranno il processo di progettazione e come implementarlo nei propri progetti. A loro verrà quindi dato uno spazio per creare il proprio progetto nell'Artista o nel Laboratorio (questa è probabilmente la parte più lunga del progetto). Quindi gli studenti potranno migliorare i loro progetti, dopo test ed ulteriori riflessioni. Infine, gli studenti potranno presentare il lavoro finito ai compagni."
             The Design Process:
@@ -3233,7 +3461,7 @@ it:
               description_student: Roma non è stata costruita in un giorno e neanche il tuo progetto dovrebbe esserlo. Prenditi del tempo per modificare e rivedere il tuo progetto in modo da renderlo il migliore possibile.
               description_teacher: Nel corso delle cinque lezioni, gli studenti si dedicheranno alla realizzazione di un progetto di loro ideazione, usando come ambienti di programmazione sia il Laboratorio che l'Artista. Ora che i progetti sono pronti, agli studenti viene data l'opportunità di ricevere commenti dai compagni e migliorare i loro progetti. La guida alle lezioni che descrive tutte e cinque le fasi del processo si trova all'inizio del percorso, [here](https://curriculum.code.org/csf-18/coursef/24/).
             Present Your Project:
-              name: Presenta il Tuo Progetto
+              name: Presenta il tuo progetto
               description_student: È ora di mostrare il tuo lavoro! Qui presenterai il tuo fantastico progetto ai tuoi compagni.
               description_teacher: Nel corso delle cinque lezioni, gli studenti si dedicheranno alla realizzazione di un progetto di loro ideazione, usando come ambienti di programmazione sia il Laboratorio che l'Artista. Infine, gli studenti saranno messi nella condizione di presentare i lavori completati ai loro compagni o di condividerli con amici e parenti con un apposito link. La guida alle lezioni che descrive tutte e cinque le fasi del processo si trova all'inizio del percorso, [here](https://curriculum.code.org/csf-18/coursef/24/).
             The Artist:
@@ -3249,7 +3477,7 @@ it:
             Sprite Lab Behaviors:
               name: Comportamenti del Laboratorio dei personaggi
             End of Course Project:
-              name: Progetto di Fine Corso
+              name: Progetto di fine corso
             Copyright and Creativity:
               name: Diritti d'Autore e Creatività
             Internet:
@@ -3307,7 +3535,7 @@ it:
               name: Cicli "mentre" con la contadina
               description_student: 'I cicli sono molto utili nella programmazione. Grazie a questa lezione imparerai un nuovo tipo di cicli: i cicli "mentre"!'
             Until Loops in Maze:
-              name: Cicli "fino a che" con il labirinto
+              name: Cicli "fino a che" nel labirinto
             Conditionals with Cards:
               name: Istruzioni condizionali con le carte da gioco
               description_student: È ora di fare un gioco in cui guadagni punti solo a certe condizioni!
@@ -3349,7 +3577,7 @@ it:
             Programming in Artist:
               name: Programmare l'artista
             'Loops: My Loopy Robotic Friends':
-              name: 'Cicli: I miei ciclici amici robotici'
+              name: 'I miei ciclici amici robotici'
             Loops in Artist:
               name: Cicli con l'artista
             Nested Loops:
@@ -3362,7 +3590,7 @@ it:
               name: Istruzioni condizionali con la contadina
               description_teacher: Questa lezione introduce gli studenti allo studio dei cicli `mentre` e delle istruzioni `se / altrimenti`. _I cicli mentre_ sono cicli che continuano a ripetere le istruzioni finché una certa condizione è vera. I cicli mentre sono usati quando il programmatore non conosce a priori il numero esatto di volte che le istruzioni devono essere ripetute, ma conosce quale condizione debba essere vera per consentire al ciclo di continuare. Le istruzioni `se / altrimenti` offrono flessibilità nella programmazione eseguendo intere sezioni di codice solo se una certa condizione è vera, altrimenti viene eseguito un insieme di istruzioni alternativo.
             Private and Personal Information:
-              name: Cittadinanza digitale - Dati personali
+              name: Cittadinanza digitale - Dati personali e altri dati
               description_teacher: "In questa lezione realizzata da Common Sense Education si sottolinea la differenza tra dati sicuri da condividere online e dati che non lo sono. \n\nMentre gli studenti visitano siti che richiedono dati sulla loro identità, imparano ad adottare un processo di indagine critico che gli consenta di proteggere se stessi e le loro famiglie dal furto di identità. In questa lezione, gli studenti imparano a pensare in modo critico ai dati che alcuni siti web richiedono o esigono. Imparano la differenza tra dati personali e altre informazioni meno critiche e a distinguere ciò che è sicuro o non sicuro da condividere online."
             Build a Star Wars Game:
               name: Realizza un gioco con Star Wars
@@ -3380,12 +3608,12 @@ it:
               name: Funzioni con l'artista
               description_teacher: Gli studenti saranno introdotti all'uso delle funzioni su Code.org. Nell'ambiente dell'Artista verranno create e modificate figure magnifiche sfruttando la potenza delle funzioni. Per schemi più complessi, gli studenti impareranno ad usare le funzioni annidate, richiamando una funzione dall'interno di un'altra.
             Determine the Concept:
-              name: Fissare i Concetti
+              name: Fissare i concetti
               description_teacher: Questa lezione riunisce i concetti delle lezioni precedenti e offre agli studenti la possibilità di riflettere in modo critico su come risolvere ciascun problema, ma senza suggerire quale concetto applicare. Gli studenti ripasseranno algoritmi di base, debugging, cicli `ripeti ... volte`, istruzioni condizionali, cicli `mentre` e funzioni.
             Alien Dance Party with Sprite Lab:
               name: La festa degli alieni con il Laboratorio dei personaggi
             Explore Project Ideas:
-              name: Idee di Progetto
+              name: Idee di progetto
               description_teacher: "Le prossime quattro lezioni forniscono agli studenti l'opportunità di utilizzare le proprie capacità di programmazione in un progetto di fine corso. Questo progetto li aiuterà ad acquisire esperienza con la programmazione, producendo una realizzazione da condividere con compagni, amici e parenti. È un percorso pensato per essere distribuito su più lezioni, gli studenti trascorreranno del tempo ragionando insieme, imparando a conoscere il processo di progettazione, costruendo e presentando il loro lavoro finale. \n\nNella lezione di esplorazione, gli studenti potranno osservare degli esempi già pronti ai quali ispirarsi sia per l'Artista che per il Laboratorio. Successivamente, gli studenti impareranno il processo di progettazione e come implementarlo nei propri progetti. A loro verrà quindi dato uno spazio per creare il proprio progetto nell'Artista o nel Laboratorio (questa è probabilmente la parte più lunga del progetto). Infine, gli studenti potranno presentare il lavoro finito ai compagni."
             The Design Process:
               name: Il processo di progettazione
@@ -3395,7 +3623,7 @@ it:
               name: Realizza il tuo progetto
               description_teacher: Nel corso delle quattro lezioni, gli studenti si dedicheranno alla realizzazione di un progetto di loro ideazione, usando come ambienti di programmazione sia il Laboratorio che l'Artista. Ora agli studenti verrà dato il proprio spazio per creare il loro progetto con l'Artista o il Laboratorio. Questa sarà la fase più lunga del percorso di creazione. La guida alle lezioni che descrive tutte e quattro le fasi del processo si trova all'inizio del percorso, [here](https://curriculum.code.org/csf-18/coursee/23/).
             Present Your Project:
-              name: Presenta il Tuo Progetto
+              name: Presenta il tuo progetto
               description_teacher: Nel corso delle quattro lezioni, gli studenti si dedicheranno alla realizzazione di un progetto di loro ideazione, usando come ambienti di programmazione sia il Laboratorio che l'Artista. Alla fine, gli studenti saranno messi nella condizione di presentare i lavori completati ai loro compagni o di condividerli con amici e parenti con un apposito link. La guida alle lezioni che descrive tutte e quattro le fasi del processo si trova all'inizio del percorso, [here](https://curriculum.code.org/csf-18/coursee/23/).
             Internet:
               name: Internet
@@ -3414,7 +3642,7 @@ it:
             Nested Loops in Frozen:
               name: Cicli annidati con Frozen
             End of Course Project:
-              name: Progetto di Fine Corso
+              name: Progetto di fine corso
             Digital Sharing:
               name: Condivisione digitale
             'Conditionals in Minecraft: Voyage Aquatic':
@@ -3427,15 +3655,15 @@ it:
             'Algorithms: Graph Paper Programming':
               name: 'Algoritmi: Programmazione su carta a quadretti'
             Programming in Maze:
-              name: Programmazione nel labirinto
+              name: Programmare con Angry Bird
             Relay Programming:
               name: Programmazione a staffetta
             Debugging in Maze:
               name: Debugging con Scrat
             Programming in Collector:
-              name: Programmare la collezionista
+              name: Programmare con la collezionista
             Programming in Artist:
-              name: Programmare l'artista
+              name: Programmare con l'artista
             'Loops: Getting Loopy':
               name: 'Cicli: diventare ripetitivi'
             Loops with Rey and BB-8:
@@ -3453,7 +3681,7 @@ it:
             While Loops in Farmer:
               name: Cicli "mentre" con la contadina
             Until Loops in Maze:
-              name: Cicli "fino a che" con il labirinto
+              name: Cicli "fino a che" nel labirinto
             Conditionals with Cards:
               name: Istruzioni condizionali con le carte da gioco
             Conditionals in Bee:
@@ -3471,7 +3699,7 @@ it:
             Screen Out the Mean:
               name: Cittadinanza digitale - Caccia via le cattiverie dallo schermo
             Determine the Concept:
-              name: Fissare i Concetti
+              name: Fissare i concetti
             'Events: The Big Event':
               name: 'Eventi'
             Build a Flappy Game:
@@ -3497,7 +3725,7 @@ it:
             Alien Dance Party with Sprite Lab:
               name: La festa degli alieni
             Explore Project Ideas:
-              name: Idee di Progetto
+              name: Idee di progetto
             The Design Process:
               name: Il processo di progettazione
             Build Your Project:
@@ -3505,7 +3733,7 @@ it:
             Revise Your Project:
               name: Riesamina il tuo progetto
             Present Your Project:
-              name: Presenta il Tuo Progetto
+              name: Presenta il tuo progetto
             Binary Bracelets:
               name: Braccialetti binari
             'Unplugged: Binary':
@@ -3517,13 +3745,13 @@ it:
             Crowdsourcing:
               name: Intelligenza collettiva
             Build A Project:
-              name: Progetto di Fine Corso
+              name: Progetto di fine corso
             Dance Party:
               name: Ballando col codice
             'Conditionals in Minecraft: Voyage Aquatic':
               name: 'Istruzioni condizionali in Minecraft - Viaggio acquatico'
             Concept Practice with Minecraft:
-              name: Uno sguardo avanti con Minecraft
+              name: Teoria e pratica con Minecraft
         csd1-2019:
           stages:
             Intro to Problem Solving:
@@ -3544,15 +3772,15 @@ it:
           description_audience: 'Da 6 a 10 anni'
           stages:
             Programming in Maze:
-              name: Programmazione nel labirinto
+              name: Programmare con Angry Bird
             Debugging in Maze:
-              name: 'Labirinto: correzione di errori'
+              name: Correzione di errori nel labirinto
             'Real-life Algorithms: Paper Planes':
               name: 'Algoritmi della vita reale: aeroplani di carta'
             Programming in Collector:
-              name: Programmare la collezionista
+              name: Programmare con la collezionista
             Programming in Artist:
-              name: Programmare l'artista
+              name: Programmare con l'artista
             'Loops: Getting Loopy':
               name: 'Cicli: diventare ripetitivi'
             Loops with Rey and BB-8:
@@ -3568,17 +3796,17 @@ it:
             Screen Out the Mean:
               name: Cittadinanza digitale - Caccia via le cattiverie dallo schermo
             Events in Play Lab:
-              name: 'Laboratorio: Eventi'
+              name: Giocare con gli eventi
             Looking Ahead:
               name: Uno sguardo avanti con Minecraft
             Binary Bracelets:
               name: Braccialetti binari
             'End of Course Project: Create a Play Lab Game':
-              name: Progetto di Fine Corso
+              name: Progetto di fine corso
             'Programming: My Robotic Friends':
               name: I miei amici robotici (per i più piccoli)
             'Loops: My Loopy Robotic Friends':
-              name: 'Cicli: I miei ciclici amici robotici (per i più piccoli)'
+              name: I miei ciclici amici robotici (per i più piccoli)
             Sticker Art with Loops:
               name: Cicli con l'artista
         gamelab:
@@ -3645,7 +3873,7 @@ it:
             Programming with Rey and BB-8:
               name: Programmare con Rey e BB-8
             'Loops: My Loopy Robotic Friends':
-              name: 'Cicli: I miei ciclici amici robotici'
+              name: 'I miei ciclici amici robotici'
             Loops in Ice Age:
               name: Cicli con l'Era glaciale
             Loops in Collector:
@@ -3656,15 +3884,15 @@ it:
               name: Gli eventi (per i più piccoli)
               description_teacher: Gli eventi sono un ottimo strumento per aggiungere variazioni ad un algoritmo già scritto. A volte si desidera che il proprio programma risponda all'utente esattamente quando l'utente ne ha bisogno. Gli eventi servono proprio a questo.
             Events in Play Lab:
-              name: 'Laboratorio: Eventi'
+              name: Una battaglia con gli eventi
             'Loops: Getting Loopy':
               name: Diventare ripetitivi
             Loops in Harvester:
               name: Cicli con la contadina
             Programming in Maze:
-              name: Programmazione nel labirinto
+              name: Programmare con Angry Bird
             Programming in Harvester:
-              name: Programmazione con la contadina
+              name: Programmare con la contadina
             Sequencing in Maze:
               name: Sequenze di istruzioni con Angry Birds
               description_teacher: Questa lezione darà agli studenti un'idea di cosa aspettarsi quando andranno nel laboratorio di informatica. Si comincia con una breve discussione introduttiva sui comportamenti da tenere in laboratorio, poi gli studenti inizieranno ad utilizzare un computer per completare degli esercizi online.
@@ -3690,7 +3918,7 @@ it:
             Programming with Rey and BB-8:
               name: Programmare con Rey e BB-8
             'Loops: My Loopy Robotic Friends':
-              name: 'Cicli: I miei ciclici amici robotici'
+              name: 'I miei ciclici amici robotici'
             Loops in Ice Age:
               name: Cicli con Scrat
             Loops in Collector:
@@ -3708,11 +3936,11 @@ it:
             Programming in Maze:
               name: Programmare con Scrat
             Programming in Harvester:
-              name: Programmazione con la contadina
+              name: Programmare con la contadina
             Tell a Story in Play Lab:
               name: Racconta una storia nel Laboratorio
             Make a Game in Play Lab:
-              name: Crea un gioco nel Laboratorio
+              name: Una battaglia con gli eventi
             Ocean Scene with Loops:
               name: Al mare con i cicli
         removed19:
@@ -3763,14 +3991,28 @@ it:
           stages:
             Personal Innovations:
               name: Innovazione personale
+            Sending Binary Messages:
+              name: Inviare Messaggi Binari
+            Sending Binary Messages with the Internet Simulator:
+              name: Inviare Messaggi Binari con il Simulatore di Internet
             Number Systems:
               name: Sistema di numerazione
+            Binary Numbers:
+              name: Numeri Binari
+            Sending Numbers:
+              name: Inviare Numeri
             The Internet:
               name: Internet
         csp2-2019:
           stages:
+            Bytes and File Sizes:
+              name: Byte e Dimensioni File
             Text Compression:
               name: Compressione del testo
+            Encoding B&W Images:
+              name: Codifica Immagini B&N
+            Encoding Color Images:
+              name: Codifica Immagini Colori
         csp3-2019:
           description_short: Programmazione
           stages:
@@ -3800,6 +4042,12 @@ it:
           stages:
             Number Systems:
               name: Sistema di numerazione
+            Sending Binary Messages:
+              name: Inviare Messaggi Binari
+            Sending Binary Messages with the Internet Simulator:
+              name: Inviare Messaggi Binari con il Simulatore di Internet
+            Binary Numbers:
+              name: Numeri Binari
         time4csdemo:
           stages:
             Crowdsourcing:
@@ -3817,7 +4065,7 @@ it:
             Programming in Artist:
               name: Programmare l'artista
             'Loops: My Loopy Robotic Friends':
-              name: 'Cicli: I miei ciclici amici robotici'
+              name: 'I miei ciclici amici robotici'
             Loops in Artist:
               name: Cicli con l'artista
             Nested Loops in Bee/Zombie:
@@ -3841,7 +4089,7 @@ it:
             Functions in Artist:
               name: Funzioni con l'artista
             Determine the Concept:
-              name: Fissare i Concetti
+              name: Fissare i concetti
         csp1-pilot-staging:
           stages:
             Student Survey (Variables):
@@ -3912,6 +4160,8 @@ it:
               name: Sondaggio studente (istruzioni condizionali)
             Teacher Surveys (Conditionals):
               name: Sondaggio insegnante (istruzioni condizionali)
+            Libraries:
+              name: Librerie
         csp8-pilot-staging:
           stages:
             Student Survey (Variables):
@@ -3974,3 +4224,31 @@ it:
               name: Velocità
             Functions:
               name: Funzioni
+        csl-vn:
+          stages:
+            Sequencing with Scrat:
+              name: Sequenze di istruzioni con Scrat
+            Programming in Maze:
+              name: Programmazione nel labirinto
+            Programming with Rey and BB-8:
+              name: Programmare con Rey e BB-8
+            Loops in Ice Age:
+              name: Cicli con l'Era glaciale
+            Ocean Scene with Loops:
+              name: Al mare con i cicli
+        peru-2019:
+          stages:
+            Introduction:
+              name: Introduzione
+            Debugging in Collector:
+              name: Debugging con la collezionista
+            'Loops: My Loopy Robotic Friends':
+              name: 'I miei ciclici amici robotici'
+            Loops in Artist:
+              name: Cicli con l'artista
+            Nested Loops:
+              name: Cicli annidati
+            Introduction to Debugging:
+              name: Introduzione al Debugging
+            Nested Loops in Frozen:
+              name: Cicli annidati con Frozen

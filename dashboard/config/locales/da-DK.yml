@@ -43,6 +43,7 @@ da:
           oprettelsen af en Code.org konto <strong>%{provider}</strong> for <strong>%{email}</strong>.
         error:
           future: kan ikke være i fremtiden
+  beta: beta
   hello: Hej verden
   welcome_back: Velkommen tilbage %{name}
   your_professional_learning_plan: Din professionelle læringsplan
@@ -466,11 +467,6 @@ da:
     no_primary_course: Prøv et kursusforløb på Code Studio
     choose_next_course: Prøv en Code Studio kursus ved at vælge en nedenfor
     print_certificate: Udskriv certifikat
-    announcement_title: Meddelelser
-    announcement_learn_more_button: Lær mere
-    announcement_try_now_button: Prøv nu
-    announcement_petition_button: Tilføj dit navn
-    announcement_apply_now: Ansøg nu
   share:
     title: Lære om Code Studio
     description: Enhver kan lære programmering. Lav spil, apps og kunst med kode.

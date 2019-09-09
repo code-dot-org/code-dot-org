@@ -14,6 +14,7 @@ import {authorizeLockable} from './stageLockRedux';
 
 // Action types
 export const INIT_PROGRESS = 'progress/INIT_PROGRESS';
+const CLEAR_PROGRESS = 'progress/CLEAR_PROGRESS';
 const MERGE_PROGRESS = 'progress/MERGE_PROGRESS';
 const MERGE_PEER_REVIEW_PROGRESS = 'progress/MERGE_PEER_REVIEW_PROGRESS';
 const UPDATE_FOCUS_AREAS = 'progress/UPDATE_FOCUS_AREAS';
@@ -91,6 +92,13 @@ export default function reducer(state = initialState, action) {
       courseId: action.courseId,
       currentStageId,
       hasFullProgress: action.isFullProgress
+    };
+  }
+
+  if (action.type === CLEAR_PROGRESS) {
+    return {
+      ...state,
+      levelProgress: initialState.levelProgress
     };
   }
 
@@ -308,10 +316,16 @@ export function processedStages(stages, isPlc) {
  * Requests user progress from the server and dispatches other redux actions
  * based on the server's response data.
  */
-const userProgressFromServer = (state, dispatch, userId) => {
+const userProgressFromServer = (state, dispatch, userId = null) => {
   if (!state.scriptName) {
     const message = `Could not request progress for user ID ${userId} from server: scriptName must be present in progress redux.`;
     throw new Error(message);
+  }
+
+  // If we have a userId, we can clear any progress in redux and request all progress
+  // from the server.
+  if (userId) {
+    dispatch({type: CLEAR_PROGRESS});
   }
 
   return $.ajax({
@@ -333,11 +347,8 @@ const userProgressFromServer = (state, dispatch, userId) => {
       !data.professionalLearningCourse &&
       onOverviewPage
     ) {
-      // Default to progress summary view if teacher is viewing their student's progress.
-      if (data.teacherViewingStudent) {
-        dispatch(setIsSummaryView(true));
-      }
-
+      // Default to summary view if teacher is viewing their student, otherwise default to detail view.
+      dispatch(setIsSummaryView(data.teacherViewingStudent));
       dispatch(showTeacherInfo());
     }
 

@@ -5,7 +5,7 @@ markdown <<MARKDOWN
 
 ## The Physical System
 
-In Unit 1, students learned about binary and created protocols for encoding information in two states. While students never explicitly talked about images in unit 1, at this point they likely recognize that all digital information is represented in bits and images are displayed on computers, ergo they can be represented as bits.  While images use different encoding schemes than what students have seen before, this should not be a foreign concept.  As long as everyone communicating agrees upon a set protocol for how the data will be stored and interpreted, an image can be represented as simply as text can.  In this pair of lessons, students will investigate how images are actually stored using bits to represent pixels on the screen.  
+In Unit 1, students learned about binary and created protocols for encoding information in two states. While students never explicitly talked about images in unit 1, at this point they likely recognize that all digital information is represented in bits and images are displayed on computers, ergo they can be represented as bits.  While images use different encoding schemes than what students have seen before, this should not be a foreign concept.  As long as everyone communicating agrees upon a set protocol for how the data will be stored and interpreted, an image can be represented as simply as text can.  In this pair of lessons, students will investigate how images are actually stored using bits to represent pixels on the screen.
 
 ## What is Hexadecimal?
 
@@ -27,23 +27,26 @@ When reading a hexadecimal number, instead of each place value representing a po
 
 ## Representing Colors in Binary and Hex
 
-While monitors typically can represent thousands, if not millions of colors, each individual pixel contains only three tiny lights, one each of red, green, and blue. Every color you see on a screen is created by setting different brightnesses for each of these little lights. 
+While monitors typically can represent thousands, if not millions of colors, each individual pixel contains only three tiny lights, one each of red, green, and blue. Every color you see on a screen is created by setting different brightnesses for each of these little lights.
 
 Typically each of these little lights (red, green, blue) has its brightness dictated by a single byte.  The largest number that can be written using 8 digits of binary (or a byte) is 255, which indicates that a light should be turned to full brightness. 0 indicates that a light should be turned off.
+
 <br><br>
 <div style="margin-left:7%; margin-right:7%">
 <img src = "https://images.code.org/d27b6128b345e39a452039dcb2a11af1-image-1476036951662.14.39 PM.png" style="float:right; margin-left:5px; width:250px" />
 
-<strong>Example:</strong><em> If we wanted to make the reddest color our pixel could make, we would turn the red light all the way on, and the other two all the way off.  This would be represented as:
-<ul>
-  <li>red: 11111111 or 255</li>
-  <li>green: 00000000 or 0</li>
-  <li>blue: 00000000 or 0</li>
-</ul>
-But since these will usually be read as one 24-bit chunk, we display them below in the order they would be received, first the red byte, then the green byte, then the blue byte. <strong>Reddest Red </strong> = 111111110000000000000000</em></div><br>
+**Example:** _If we wanted to make the reddest color our pixel could make, we would turn the red light all the way on, and the other two all the way off.  This would be represented as:_
 
-While this system makes a lot of sense for a computer to read, it can be tricky for a human to keep track of all those digits. This is where hexadecimal becomes really handy. The numbers 0-255 can be written in hex using two symbols, whereas it takes eight in binary. 
+- _red: 11111111 or 255_
+- _green: 00000000 or 0_
+- _blue: 00000000 or 0_
 
-**Example:** *Our reddest red can be written in hexadecimal as “#FF0000”.  To do the conversion from binary to hexadecimal  yourself, just read the bits above 4-bit at a time, and convert each 4-bit chunk into its hex representation.* 
+_But since these will usually be read as one 24-bit chunk, we display them below in the order they would be received, first the red byte, then the green byte, then the blue byte. **Reddest Red** = 111111110000000000000000_
+
+<br>
+
+While this system makes a lot of sense for a computer to read, it can be tricky for a human to keep track of all those digits. This is where hexadecimal becomes really handy. The numbers 0-255 can be written in hex using two symbols, whereas it takes eight in binary.
+
+**Example:** *Our reddest red can be written in hexadecimal as “#FF0000”.  To do the conversion from binary to hexadecimal  yourself, just read the bits above 4-bit at a time, and convert each 4-bit chunk into its hex representation.*
 
 MARKDOWN

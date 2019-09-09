@@ -2075,6 +2075,8 @@ hu:
           stages:
             Lists:
               name: Listák
+            CSS Classes:
+              name: CSS osztályok
         csd3-pilot:
           description_short: Programozás
           stages:
@@ -2086,3 +2088,17 @@ hu:
               name: Feltételek
             Functions:
               name: funkciók
+            Random Numbers:
+              name: Véletlen számok
+            Sprite Properties:
+              name: Sprite tulajdonságok
+        csd4-pilot:
+          stages:
+            What is a Computer?:
+              name: Mi az a számítógép?
+        peru-2019:
+          stages:
+            Introduction:
+              name: Bevezető
+            Nested Loops:
+              name: Egymásba ágyazott ciklusok

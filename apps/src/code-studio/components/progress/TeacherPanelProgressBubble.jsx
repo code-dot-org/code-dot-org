@@ -79,7 +79,7 @@ export class TeacherPanelProgressBubble extends React.Component {
       <div
         style={{
           // Two pixels on each side for border, 2 pixels on each side for margin.
-          width: DOT_SIZE + 8,
+          minWidth: DOT_SIZE + 8,
           display: 'flex',
           justifyContent: 'center'
         }}

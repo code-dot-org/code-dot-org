@@ -32,7 +32,7 @@ import TeacherDashboard from '@cdo/apps/templates/teacherDashboard/TeacherDashbo
 const script = document.querySelector('script[data-dashboard]');
 const scriptData = JSON.parse(script.dataset.dashboard);
 const section = scriptData.section;
-const visibleSections = scriptData.visibleSections;
+const sections = scriptData.sections;
 const baseUrl = `/teacher_dashboard/sections/${section.id}`;
 
 $(document).ready(function() {
@@ -49,7 +49,7 @@ $(document).ready(function() {
   const store = getStore();
   // TODO: (madelynkasula) remove duplication in sectionData.setSection and teacherSections.setSections
   store.dispatch(setSection(section));
-  store.dispatch(setSections(visibleSections));
+  store.dispatch(setSections(sections));
 
   store.dispatch(selectSection(section.id));
   store.dispatch(setRosterProvider(section.login_type));

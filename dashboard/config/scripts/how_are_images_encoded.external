@@ -2,8 +2,8 @@ name 'How are Images Encoded?'
 markdown <<MARKDOWN
 # How are Images Encoded?
 
-
 <img src="https://images.code.org/ce07a11b10f6e00385ec38f0d549ef50-image-1477842258375.png" style="float:right; margin-left:30px; width:400px"/>
+
 ## What is a pixel?
 A pixel, or picture element, is the smallest digital unit of information used to represent a single slice of an image.  An image on a computer screen is made up of many pixels put together in a grid or matrix. In the image on the right, the bee is made up of hundreds of pixels.  Together, they give the effect of shading, creating the illusion of a round shape.  Zoomed in however, you can see that each pixel is indeed a single color. 
 
@@ -15,9 +15,9 @@ Simply put, metadata is data about data, which helps the computer determine how 
 ## Pixels and Images
 
 
-Check out the video below for an overview of how pixels and images actually work! 
-<br><br>
+Check out the video below for an overview of how pixels and images actually work!
 
+<br><br>
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/15aqFQQVBWU" frameborder="0" allowfullscreen></iframe>
 

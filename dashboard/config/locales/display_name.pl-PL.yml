@@ -2,15 +2,28 @@
 pl-PL:
   data:
     display_name:
+      CSD U2 HTML Tags Map: Tagi HTML
+      CSD U2 HTML Tags Map_2018: Tagi HTML
+      CSD U2 HTML Tags Map_2019: Tagi HTML
+      CSD U2 Headers map: Nagłówki w HTML
+      CSD U2 Headers map_2018: Nagłówki w HTML
+      CSD U2 Headers map_2019: Nagłówki w HTML
+      CSD U2 Inspector Warm Up: Poznaj HTML
+      CSD U2 Inspector Warm Up_2018: Poznaj HTML
+      CSD U2 Inspector Warm Up_2019: Poznaj HTML
       CSD U2 Pair Programming Video: Programowanie w parach
       CSD U2 Pair Programming Video_2018: Programowanie w parach
       CSD U2 Pair Programming Video_2019: Programowanie w parach
+      CSD U2 a tag map: Odnośniki
+      CSD U2 a tag map_2018: Odnośniki
+      CSD U2 a tag map_2019: Odnośniki
       CSD U2 images map: Obrazy w HTML
       CSD U2 images map_2018: Obrazy w HTML
       CSD U2 images map_2019: Obrazy w HTML
       CSD U3 Animation Tab Map: Karta Animacji
       CSD U3 Animation Tab Map_2018: Karta Animacji
       CSD U3 Animation Tab Map_2019: Karta Animacji
+      CSD U3 Functions Call Function_2019: 'Film: Wywoływanie i definiowanie funkcji'
       CSD U3 L11 Freeplay: Czas na zabawę
       CSD U3 L11 Freeplay_2018: Czas na zabawę
       CSD U3 L11 Freeplay_2019: Czas na zabawę
@@ -62,6 +75,7 @@ pl-PL:
       CSD U3 collisions build isTouching: Wykrywanie kolizji
       CSD U3 collisions build isTouching_2018: Wykrywanie kolizji
       CSD U3 collisions build isTouching_2019: Wykrywanie kolizji
+      CSD U3 function video: 'Film: Funkcje'
       CSD U6 Event Types: Typy zdarzeń
       CSD U6 Event Types_2018: Typy zdarzeń
       CSD U6 Event Types_2019: Typy zdarzeń
@@ -74,6 +88,9 @@ pl-PL:
       CSD U6 functions paramters video: Funkcje z parametrami
       CSD U6 functions paramters video_2018: Funkcje z parametrami
       CSD U6 functions paramters video_2019: Funkcje z parametrami
+      CSD What Makes a Computer a Computer Video: 'Wideo: Co czyni komputer komputerem?'
+      CSD What Makes a Computer a Computer Video_2018: 'Wideo: Co czyni komputer komputerem?'
+      CSD What Makes a Computer a Computer Video_2019: 'Wideo: Co czyni komputer komputerem?'
       'CSD: For Loop_2018': Pętle dla (for)
       CourseEF_video_IntroSpriteLab: To jest Laboratorium Duszków
       CourseEF_video_IntroSpriteLab_2019: To jest Laboratorium Duszków

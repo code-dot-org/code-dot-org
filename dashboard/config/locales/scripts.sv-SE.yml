@@ -2024,6 +2024,10 @@ sv:
           stages:
             Number Systems:
               name: Talsystem
+            Sending Binary Messages:
+              name: Skicka binära meddelanden
+            Binary Numbers:
+              name: Binära tal
         time4csdemo:
           stages:
             Crowdsourcing:
@@ -2050,3 +2054,9 @@ sv:
               name: Villkor
             Functions:
               name: funktioner
+        peru-2019:
+          stages:
+            Introduction:
+              name: Introduktion
+            Nested Loops:
+              name: Kapslade slingor(loopar)

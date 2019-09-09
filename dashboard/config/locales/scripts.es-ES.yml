@@ -4177,6 +4177,12 @@ es:
           stages:
             Number Systems:
               name: Sistemas de numeración
+            Sending Binary Messages:
+              name: Envío de mensajes binarios
+            Sending Binary Messages with the Internet Simulator:
+              name: Envío de los mensajes que son binarios con el simulador de internet
+            Binary Numbers:
+              name: Números binarios
         time4csdemo:
           stages:
             Crowdsourcing:
@@ -4266,6 +4272,8 @@ es:
                 buscarán información sobre varios animales poco comunes. Tendrán que
                 analizar los sitios que encuentran confiables para identificar cuál
                 de los animales son realmente un engaño.
+            CSS Classes:
+              name: Clases CSS
         csd3-pilot:
           description_short: Programación
           stages:
@@ -4426,3 +4434,29 @@ es:
                 de la lección, los estudiantes compartirán sus juegos completados
                 con sus compañeros de clase. Este proyecto abarcará múltiples clases
                 y puede tomar fácilmente de 3-5 períodos de clase.
+            Shapes and Parameters:
+              name: Formas y parámetros
+            Random Numbers:
+              name: Números aleatorios
+            Sprite Properties:
+              name: Propiedades de Sprites
+        csl-vn:
+          stages:
+            Loops in Ice Age:
+              name: Bucles en la Edad del Hielo
+        csp2-pilot:
+          stages:
+            Routers and Redundancy:
+              name: Enrutadores y reiteración
+        peru-2019:
+          stages:
+            Introduction:
+              name: Introducción
+            Loops in Artist:
+              name: Bucles en Artista
+            Nested Loops:
+              name: Bucles anidados
+            Events in Star Wars:
+              name: Eventos en la Guerra de las Galaxias
+            Introduction to Debugging:
+              name: Introducción a la depuración

@@ -2400,6 +2400,12 @@ nn:
           stages:
             Number Systems:
               name: Talsystem
+            Sending Binary Messages:
+              name: Sende binære meldingar
+            Sending Binary Messages with the Internet Simulator:
+              name: Sende binære meldingar med Internett Simulator
+            Binary Numbers:
+              name: Binære tal
         time4csdemo:
           stages:
             Crowdsourcing:
@@ -2428,3 +2434,11 @@ nn:
               name: Fart
             Functions:
               name: Funksjonar
+            Sprite Properties:
+              name: Eigenskapar ved Sprite
+        peru-2019:
+          stages:
+            Introduction:
+              name: Introduksjon
+            Nested Loops:
+              name: Løkker i løkke

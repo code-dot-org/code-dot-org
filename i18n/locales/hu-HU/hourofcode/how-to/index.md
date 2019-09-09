@@ -1,15 +1,16 @@
 ---
-title: <%= hoc_s(:title_how_to_events).inspect %>
+title: Útmutató
 layout: wide
 nav: how_to_nav
 ---
-<%= view :signup_button %>
+
+{{ signup_button }}
 
 # Hogyan tanítsuk a "Hour of Code" keretében az osztályt?
 
-### Csatlakozz a mozgalomhoz és tartsd meg egy csapat diáknak az első számítástudomány óráját az alábbi útmutató alapján. Egy "Hour of Code" alkalmat könnyű megszervezni, sőt tapasztalat sem szükséges hozzá! Amennyiben jól jönne egy segítő kéz, keressen oldalunkon egy [helyi önkéntest](%= codeorg_url('/volunteer/local') %), aki segít lebonyolítani egy "Hour of Code" rendezvényt.
+### Csatlakozz a mozgalomhoz és tartsd meg egy csapat diáknak az első számítástudomány óráját az alábbi útmutató alapján. Egy "Hour of Code" alkalmat könnyű megszervezni, sőt tapasztalat sem szükséges hozzá! If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your class.
 
-### Vessen egy pillantást a [részvételi útmutatónkra, ha még mindig vannak kérdései](%= localized_file('/files/participation-guide.pdf') %).
+### Take a look at our [participation guide if you still have questions]({{ localized_files/participation_guide }}).
 
 * * *
 
@@ -17,11 +18,11 @@ nav: how_to_nav
 
 ## 2. Válassz ki egy gyakorlatot a Kódolás Órájához:
 
-[Önálló tanulásra alkalmas, mókás tartalmat kínálunk](%= resolve_url('/learn') %) minden kornak és képzettségi szintnek megfelelően. A tanulók saját maguk tempójában is csinálhatják a feladatokat, de több lecke tartalmaz oktatói segédanyagokat (melyeket a linken, a feladatra való kattintás után elérhetnek), hogy az óra még interaktívabb legyen. [![](/images/fit-700/tutorials.png)](%=resolve_url('/learn') %)
+We provide a variety of fun, [student-guided tutorials]({{ urls/learn }}) for all age groups and experience levels. A tanulók saját maguk tempójában is csinálhatják a feladatokat, de több lecke tartalmaz oktatói segédanyagokat (melyeket a linken, a feladatra való kattintás után elérhetnek), hogy az óra még interaktívabb legyen. [![](/images/fit-700/tutorials.png)]({{ urls/learn }})
 
 ## 3. Népszerűsítsd a Kódolás Órája eseményedet!
 
-Segítsd a saját "Hour of Code" eseményedet [ezekkel az eszközökkel](%= resolve_url('/promote/resources') %), valamint biztass másokat arra, hogy szintén vegyenek részt, és szervezzék meg a saját "Hour of Code" eseményüket.
+Promote your Hour of Code [with these tools]({{ urls/promote_resources }}) and encourage others to host their own events.
 
 ## 4. Tervezd meg, hogy milyen technikai feltételek szükségesek - a számítógép opcionális dolog
 
@@ -37,24 +38,24 @@ Biztosíts fülhallgatókat, vagy kérd meg a tanulókat, hogy hozzanak magukkal
 
 ## 5. Indítsd a "Hour of Code" eseményedet egy inspiráló videóval
 
-**Hívj meg egy [helyi önkéntest](%= codeorg_url('/volunteer/local') %), aki az informatikáról való beszélgetéssel inspirálja a tanulókat.** Önkéntesek ezrei készek arra, hogy segítsenek a te "Hour of Code" eseményeden, akár személyesen, akár távolból!
+**Invite a [local volunteer]({{ urls/volunteer_local }}) to inspire your students by talking about the breadth of possibilities in computer science.** There are thousands of volunteers around the world ready to help with your Hour of Code through either a classroom visit or video chat with your students!
 
 **Mutass egy inspiráló videót az alábbiak közül:**
 
 - Az eredeti Code.org bemutatóvideó Bill Gates, Mark Zuckerbeg és az NBA játékos Chris Bosch szereplésével. (Elérhető [1 perces](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 perces](https://www.youtube.com/watch?v=nKIu9yen5nc) és [9 perces](https://www.youtube.com/watch?v=dU1xS07N-FA) változatban.)
-- Tekints át további inspiráló [segédanyagokat](%= codeorg_url('/inspire') %) és <[videókat](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+- Find more inspirational [resources]({{ urls/inspire }}) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
 **Nem gond, ha teljesen új vagy az informatika világában. Itt van néhány ötlet, hogy hogyan hozd létre a saját "Hour of Code" rendezvényedet:**
 
 - Magyarázd el, hogyan hat az életünkre a technológia, olyan példákkal, amelyek a fiúk és a lányok számára is érdekesek (beszélj életmentésről, emberek segítéséről, az emberek közötti kapcsolatok ápolásáról stb...).
 - Az osztály gyűjtsön olyan mindennapi dolgokat, amelyeket a kódolás tesz lehetővé.
-- Nézd meg [itt](%= codeorg_url('/girls')%), hogy hogyan keltheted fel a lányok érdeklődését a számítástechnika iránt.
+- See tips for getting girls interested in computer science [here]({{ urls/girls }}).
 
 ## 6. Kódoljunk!
 
 **Vezesd a tanulókat a tevékenységhez**
 
-- Írd le bemutató linkjét a táblára. Keresd meg a linket a [kiválasztott bemutató alatti](%= resolve_url('/learn')%) listában, a résztvevők száma alatt.
+- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
 
 **Ha a tanulóknak nehézségeik vannak, lehet így reagálni:**
 
@@ -64,7 +65,7 @@ Biztosíts fülhallgatókat, vagy kérd meg a tanulókat, hogy hozzanak magukkal
 
 **Mi történjen, ha egy tanuló korábban végez?**
 
-- A tanulók megtekinthetik az összes bemutatót, majd [kipróbálhatnak másik "Hour of Code" tevékenységet](%= resolve_url('/learn')%).
+- Students can see all tutorials and [try another Hour of Code activity]({{ urls/learn }}).
 - Vagy kérdd meg a korán végző tanulókat, hogy segítsenek egy társuknak, akinek nehezen megy a gyakorlat.
 
 [col-33]
@@ -83,8 +84,8 @@ Biztosíts fülhallgatókat, vagy kérd meg a tanulókat, hogy hozzanak magukkal
 
 [/col-33]
 
-- [Nyomtass oklevelet](%= codeorg_url('/certificates')%) a tanulóknak.
-- [Nyomtass "Teljesítettem a Kódolás Óráját!"](%= resolve_url('/promote/resources#stickers') %) matricákat a tanulóknak.
+- [Print certificates]({{ urls/certificates }}) for your students.
+- [Print "I did an Hour of Code!"]({{ urls/promote_stickers }}) stickers for your students.
 - [Rendeljen személyre szabott pólókat](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) az iskolának.
 - Oszd meg a "Hour of Code"-hoz kapcsolódó fotóidat, videóidat a közösségi hálón. Használd a #HourOfCode és a @codeorg tageket, így mi is ki tudjuk emelni az eredményeidet!
 
@@ -98,14 +99,14 @@ Biztosíts fülhallgatókat, vagy kérd meg a tanulókat, hogy hozzanak magukkal
 
 ## Egyéb "Kódolás Órája" források tanároknak:
 
-- Látogass el a [Kódolás Órája tanári fórumára](http://forum.code.org/c/plc/hour-of-code), hogy tanácsokat, tippeket és támogatást kapj a többi oktatótól. <% if @country == 'us' %>
-- Olvasd át a [Kódolás Órája GYIK](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code) részét. <% end %>
+- Látogass el a [Kódolás Órája tanári fórumára](http://forum.code.org/c/plc/hour-of-code), hogy tanácsokat, tippeket és támogatást kapj a többi oktatótól.
+- Olvasd át a [Kódolás Órája GYIK](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code) részét.
 
 ## Mi jön a "Hour of Code" esemény után?
 
 A Kódolás Órája esemény csak az első lépés, hogy újat tanulj a technológia működéséről, és hogy készíts új szoftvereket. Itt tudod folytatni ezt az utat:
 
-- Győzd meg a diákokat, hogy [folytassák a tanulást online.](%= codeorg_url('/learn/beyond')%)
-- [Vegyél részt](%= codeorg_url('/professional-development-workshops') %) egy egynapos tréningen, hogy tanácsokat kapj tapasztalt szakemberektől, facilitátoroktól. (Kizárólag Egyesült Államok beli oktatóknak)
+- Encourage students to continue to [learn online]({{ urls/learn_beyond }}).
+- [Attend]({{ urls/professional_development_workshops }}) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
 
-<%= view :signup_button %>
+{{ signup_button }}

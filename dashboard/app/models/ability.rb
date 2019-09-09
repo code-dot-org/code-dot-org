@@ -9,6 +9,7 @@ class Ability
     # Abilities for all users, signed in or not signed in.
     can :read, :all
     cannot :read, [
+      TeacherFeedback,
       Script, # see override below
       ScriptLevel, # see override below
       :reports,
@@ -102,8 +103,9 @@ class Ability
         can :read, Pd::CourseFacilitator, facilitator_id: user.id
 
         if Pd::CourseFacilitator.exists?(facilitator: user, course: Pd::Workshop::COURSE_CSF)
-          can :create, Pd::Workshop
+          can :create, Pd::Workshop, course: Pd::Workshop::COURSE_CSF
           can :update, Pd::Workshop, facilitators: {id: user.id}
+          can :destroy, Pd::Workshop, organizer_id: user.id
         end
       end
 
@@ -155,6 +157,7 @@ class Ability
         can :manage, Pd::Application::ApplicationBase
         can :manage, Pd::Application::Facilitator1920Application
         can :manage, Pd::Application::Teacher1920Application
+        can :move, :workshop_enrollments
         can :update_scholarship_info, Pd::Enrollment
       end
 
@@ -220,6 +223,18 @@ class Ability
       # Only custom levels are editable.
       cannot [:update, :destroy], Level do |level|
         !level.custom?
+      end
+
+      # Ability for LevelStarterAssetsController. Since the controller does not have
+      # a corresponding model, use lower/snake-case symbol instead of class name.
+      can [:upload, :destroy], :level_starter_asset
+    end
+
+    if user.persisted?
+      editor_experiment = Experiment.get_editor_experiment(user)
+      if editor_experiment
+        can :manage, Level, editor_experiment: editor_experiment
+        can [:edit, :update], Script, editor_experiment: editor_experiment
       end
     end
 

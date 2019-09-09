@@ -32,8 +32,8 @@ zh-CN:
             '"SHARK"': 所有鲨鱼
             '"UNICORN"': 所有独角兽
           MOVE:
-            '"next"': "(下一步)"
-            '"prev"': "(前一步)"
+            '"next"': "（下一步）"
+            '"prev"': "（前一步）"
             '"rand"': 随机
             MOVES.Roll: 身体转动
             MOVES.ClapHigh: 用力鼓掌
@@ -53,8 +53,8 @@ zh-CN:
         text: "{SPRITE} 一直重复 {MOVE} {DIR}"
         options:
           MOVE:
-            '"next"': "(下一步)"
-            '"prev"': "(前一步)"
+            '"next"': "（下一步）"
+            '"prev"': "（前一步）"
             '"rand"': 随机
             MOVES.Roll: 身体转动
             MOVES.ClapHigh: 用力鼓掌
@@ -165,7 +165,7 @@ zh-CN:
             '"measures"': 节拍
             '"seconds"': " 秒"
       Dancelab_everySecondsRange:
-        text: 每个 {N} {UNIT} 要从 {START} 到 {STOP}
+        text: 每个 {N} {UNIT} 从 {START} 到 {STOP}
         options:
           UNIT:
             measures: 节拍
@@ -227,7 +227,7 @@ zh-CN:
             '"seconds"': " 秒"
           OP:
             '">"': ">"
-            '"<"': "\\<"
+            '"<"': "<"
             '"="': "="
       Dancelab_jumpTo:
         text: "{SPRITE} 跳到 {LOCATION}"
@@ -244,7 +244,7 @@ zh-CN:
             "{x: 300, y: 300}": 右下
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": 随机
       Dancelab_layoutSprites:
-        text: 输出 {GROUP} 精灵为 {FORMAT}
+        text: 布局 {GROUP} 作为 {FORMAT}
         options:
           GROUP:
             sprites: 所有
@@ -693,21 +693,11 @@ zh-CN:
       gamelab_clickedSpritePointer:
         text: 点击 {SPRITE}
       gamelab_comment:
-        text: '注释: {COMMENT}'
-      gamelab_console.log:
-        text: 日志消息 {MESSAGE}
+        text: 注释： {COMMENT}
       gamelab_createNewSprite:
         text: "制作一个新的精灵 \n 叫做 {NAME} \n 服装为 {COSTUME} \n 位于 {LOCATION}"
-      gamelab_debugSprite:
-        text: 调试 {SPRITE} {VAL}
-        options:
-          VAL:
-            'true': 真
-            'false': 错
       gamelab_destroy:
         text: 移除 {THIS}
-      gamelab_displace:
-        text: "{THIS} 模块阻止了 {SPRITE} 移动"
       gamelab_draggable:
         text: 可拖拽
       gamelab_edgesDisplace:
@@ -855,7 +845,6 @@ zh-CN:
             '"x"': x位置
             '"y"': y位置
             '"direction"': 移动方向
-            '"tint"': 色调
       gamelab_setSizes:
         text: 设置 {SPRITE} {PROPERTY} 为 {N}%
         options:
@@ -903,20 +892,8 @@ zh-CN:
             '"d"': d
       gamelab_whenLeftArrow:
         text: 当按左方向键时
-      gamelab_whenPressedAndReleased:
-        text: "当 {DIR} 按下\n{STATEMENT1} 当释放 \n{STATEMENT2}"
-        options:
-          DIR:
-            "'up'": 向上
-            "'down'": 向下
-            "'left'": 向左
-            "'right'": 向右
       gamelab_whenRightArrow:
         text: 当按右方向键时
-      gamelab_whenStartAndStopTouching:
-        text: |-
-          当 {SPRITE1} 开始碰到 {SPRITE2} {STATEMENT1} 当它们不再接触
-          {STATEMENT2}
       gamelab_whenTouching:
         text: 当 {SPRITE1} 碰到 {SPRITE2}
       gamelab_whenUpArrow:
@@ -1023,7 +1000,7 @@ zh-CN:
             '"all"': 所有
             '"this"': 这
       Mikelab_groupDisplace:
-        text: 所有 {COSTUME} 屏蔽 {COSTUME2} 移动
+        text: 所有 {COSTUME} 阻挡 {COSTUME2} 移动
       Mikelab_groupEdgesDisplace:
         text: 边缘模块阻止了 {COSTUME} 移动
       Mikelab_groupGetProp:
@@ -1131,6 +1108,11 @@ zh-CN:
           CORNER:
             '"right"': 向右
             '"left"': 向左
+      Mikelab_showText:
+        options:
+          PREPOSITION:
+            '"above"': above
+            '"below"': below
       Mikelab_sprite:
         text: 在 {LOCATION} 创建一个新 {COSTUME} 精灵
         options:
@@ -1347,6 +1329,10 @@ zh-CN:
             '"0"': 永远
       aalab_showSpriteLabel:
         text: 显示精灵 {SPRITE} 的标签 {TEXT} {LOCATION}
+        options:
+          LOCATION:
+            '"above"': above
+            '"below"': below
       aalab_speakerSaysConsole:
         text: "{SPRITE} 说 {MESSAGE}"
       aalab_spriteSay:
@@ -1446,38 +1432,38 @@ zh-CN:
         text: 放下{blockType}
         options:
           blockType:
-            '"strippedOak"': 去皮橡树
-            '"strippedDarkOak"': 去皮深色橡树
+            '"strippedOak"': 去皮橡木
+            '"strippedDarkOak"': 去皮深色橡木
             '"stoneBricks"': 石砖
             '"mossyStoneBricks"': 苔石砖
             '"crackedStoneBricks"': 裂石砖
             '"decorativeStoneBricks"': 装饰性石砖
-            '"blueCoralBlock"': 蓝色珊瑚区块
-            '"pinkCoralBlock"': 粉色珊瑚区块
-            '"magentaCoralBlock"': 品红色珊瑚区块
-            '"redCoralBlock"': 红色珊瑚区块
-            '"yellowCoralBlock"': 黄色珊瑚区块
-            '"blueDeadCoralBlock"': 蓝色死亡珊瑚区块
-            '"pinkDeadCoralBlock"': 粉色死亡珊瑚区块
-            '"magentaDeadCoralBlock"': 品红色死亡珊瑚区块
-            '"readDeadCoralBlock"': 红色死亡珊瑚区块
-            '"yellowDeadCoralBlock"': 黄色死亡珊瑚区块
+            '"blueCoralBlock"': 管珊瑚块
+            '"pinkCoralBlock"': 脑纹珊瑚块
+            '"magentaCoralBlock"': 气泡珊瑚块
+            '"redCoralBlock"': 火珊瑚块
+            '"yellowCoralBlock"': 鹿角珊瑚块
+            '"blueDeadCoralBlock"': 失活的管珊瑚块
+            '"pinkDeadCoralBlock"': 失活的脑纹珊瑚块
+            '"magentaDeadCoralBlock"': 失活的气泡珊瑚块
+            '"readDeadCoralBlock"': 失活的火珊瑚块
+            '"yellowDeadCoralBlock"': 失活的鹿角珊瑚块
             '"prismarine"': 海晶石
             '"darkPrismarine"': 暗海晶石
             '"seaLantern"': 海晶灯
-            '"packedIce"': 冰砖
-            '"blueIce"': 蓝色冰
+            '"packedIce"': 霜冰
+            '"blueIce"': 蓝冰
             '"blackConcrete"': 黑色混凝土
             '"seaGrass"': 海草
             '"kelp"': 海带
             '"polishedGranite"': 磨制花岗岩
       craft_placePrismarine:
-        text: 放置监狱
+        text: 放置海晶石
       craft_placeTorch:
         text: 放下火把
       craft_repeatUntilConduit:
         text: |-
-          重复，直至导管完成
+          重复，直至潮涌核心完成
           {STATEMENT}
       craft_repeatUntilGoal:
         text: |-

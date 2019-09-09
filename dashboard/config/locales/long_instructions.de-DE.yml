@@ -439,18 +439,32 @@ de-DE:
       course4_artist_fwp_challenge1: Versuche, dieses Programm auszuführen und verändere
         es, um zu sehen, was passiert. Kannst du herausfinden, wie es funktioniert?
         (Oder lösche es und ersetze es durch etwas ganz anderes)
+      courseA_maze_seq13_2019: Hole das Schwein auf irgendeinem Weg!
       courseA_maze_seq6_2018: Gehe einen Weg und dann einen anderen, um den Vogel
         zum Schwein zu bringen!
       courseA_maze_seq6_2019: Gehe einen Weg und dann einen anderen, um den Vogel
         zum Schwein zu bringen!
       courseA_maze_seq8_2018: Löse dieses Level und bring den Vogel zum Schwein!
       courseA_maze_seq8_2019: Löse dieses Level und bring den Vogel zum Schwein!
+      courseB_artist_loops3_2019: Hilfe dem Künstler, eine Linie siebenmal zu zeichnen,
+        um eine Gartenmauer zu bauen.
       courseB_artist_loops7: "**Aufgabe:** Es ist ein versteckter Garten! Lauf ein
         bisschen herum."
       courseB_artist_loops7_2018: "**Aufgabe:** Es ist ein versteckter Garten! Lauf
         ein bisschen herum."
       courseB_artist_loops7_2019: "**Aufgabe:** Es ist ein versteckter Garten! Lauf
         ein bisschen herum."
+      courseB_collector_loops10_2019: Hilf Laurel, alles Gold aus der Höhle zu holen!
+      courseB_collector_loops11_2019: Heureka!  Hol dir so viele Schätze wie möglich!
+      courseB_collector_loops4_2019: Repariere Laurels Weg, um alles Gold zu bekommen!
+      courseB_collector_loops6_2019: Finden sie den Code heraus, um Laurel zu helfen
+        und all das Gold zu kassieren!
+      courseB_collector_loops7_2019: Schreibe den Code um den ganzen Schatz zu erhalten.
+      courseB_collector_loops8_2019: "**Aufgabe:** Das Gold führt die gesamte Treppe
+        herunter! Schreibe den Code um Laurel zu helfen, alles zu bekommen."
+      courseB_collector_loops9_2019: _"Hilf mir all das Gold aus diesen tiefen Tal
+        zu bekommen."_
+      courseB_maze_seq12_2019: Jetzt bekomme das Schwein auf irgendeine Art und Weise!
       courseB_maze_seq3: _"Repariere den Code, damit ich das Schwein bekomme!_"
       courseD_bee_nestedLoops8: Sammle den gesamten Nektar jeder Blüte und erzeuge
         Honig bei jeder Honigwabe. Benutze eine verschachtelte Schleife.

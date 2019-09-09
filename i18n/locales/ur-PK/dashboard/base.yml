@@ -20,6 +20,7 @@ ur:
         edit_header: 'اکاؤنٹ کی تفصیلات میں ترمیم کیجیے'
         error:
           future: مستقبل میں نہیں ہو سکتا
+  beta: "beta"
   hello: "hello dunia"
   welcome_back: "خوش آمدید، %{name}"
   submit: جمع کرائیں
@@ -137,8 +138,6 @@ ur:
   teacher:
     panel:
       student: 'Talib-e-ilm'
-  home:
-    announcement_learn_more_button: "مزید سیکھے"
   user_type:
     student: 'Talib-e-ilm'
   footer:

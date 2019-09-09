@@ -4,150 +4,150 @@ title: Computer Science Fundamentals Transition Guide theme: responsive style_mi
 
 * * *
 
-# Teaching Courses A-F
+# अध्यापन पाठ्यक्रम A-F
 
-## Table of Contents
+## विषय सूची
 
-* [Overview](#overview)
-* [Teaching the new courses](#newcourses)
-* [Circle-Time Stories (Courses A and B)](#circletime)
-* [Lesson Scaffolding & Challenge Puzzles (All Ages)](#scaffolding)
-* [Bridging Activities For Unplugged Lessons (All Ages)](#unplugged)
-* [End of Course Projects (Courses E & F)](#endofcourse)
-* [Conclusion](#conclusion)
-* [FAQs](#faq)
+* [रूप-रेखा](#overview)
+* [नए कोर्स पढ़ाना](#newcourses)
+* [सामूहिक-समय की कहानियां (कोर्स A व B)](#circletime)
+* [पाठ स्कैफोल्डिंग & चुनौतीपूर्ण पहेलियां (हर आयु वर्ग)](#scaffolding)
+* [अनप्लग्ड पाठों के लिए गतिविधियां पूरी करना (हर आयु वर्ग)](#unplugged)
+* [कोर्स समाप्ति प्रोजेक्ट (कोर्स E & F)](#endofcourse)
+* [निष्कर्ष](#conclusion)
+* [अकसर पूछे जाने वाले सवाल](#faq)
 
 <a id="overview"></a>
 
-## Overview
+## रूप-रेखा
 
-The landscape of computer science education has changed immensely since the creation of the original Computer Science Fundamentals courses. Originally, Courses 1-4 were designed as a starting point to acquire the basics, no matter what the age of the student who was coming to the discipline. Now that far more districts, cities, and states have implemented computer science courses beginning at Kindergarten, teachers are asking for more content to see students through until middle school/junior high.
+मूल कंप्यूटर साइंस के मूल सिद्धांत कोर्सों की रचना के बाद से कंप्यूटर साइंस शिक्षा का परिदृश्य बहुत हद तक बदल गया है। मूल रूप से, कोर्स 1-4 बुनियादी बातों को ग्रहण करने के लिए शुरुआती बिंदु के तौर पर तैयार किए गए थे, चाहे उस अध्ययन विषय में आने वाले छात्र की उम्र कितनी भी क्यों न हो। अब तक और जिलों, शहरों व राज्यों ने किंडरगार्टन से शुरू करते हुए कंप्यूटर साइंस कोर्स लागू कर दिए हैं, अध्यापक मिडल स्कूल/जूनियर हाई तक छात्रों को देखने के लिए और सामग्री की मांग कर रहे हैं।
 
-Computer Science Fundamentals Courses A-F, are our answer to that issue. The creation of a grade-by-grade curriculum allowed us to step back and rethink the way we were presenting material. It also allowed us the chance to wholeheartedly incorporate feedback from the dedicated teacher community that has supported us on this mission. Designed with the help of some of the best elementary school CS education specialists across the country, Courses A-F should feel familiar enough to run with no extra professional development, but fresh enough to present to students who have done our lessons in the past.
+कंप्यूटर साइंस के मूल सिद्धांत A-F, उस मुद्दे का जवाब हैं। हम ग्रेड-दर-ग्रेड पाठ्यक्रम की रचना से पीछे हटकर उस तरीके पर दुबारा सोच पाए, जिस प्रकार से हम सामग्री पेश कर रहे थे। इससे हमें उस समर्पित अध्यापक समुदाय से पूरे मन से प्रतिक्रिया शामिल करने का भी अवसर मिला, जिन्होंने इस मिशन में हमें सहयोग दिया है। देशभर के कुछ बेहतरीन एलीमेंटरी CS शिक्षा विशेषज्ञों की मदद से तैयार किए गए, कोर्स A-F पूरी तरह से बिना किसी अतिरिक्त पेशेवर विकास के चलाने के लिए परिचित लगेंगे, लेकिन उन छात्रों को पेश करने के लिए नए हैं, जिन्होंने पहले हमारे पाठ पढ़े हैं।
 
-* Course A: Kindergarten
-* Course B: 1st Grade
-* Course C: 2nd Grade
-* Course D: 3rd Grade
-* Course E: 4th Grade
-* Course F: 5th Grade
-* Pre-reader Express Course: Kindergarten - 1st Grade
-* Express Course: 2nd Grade - 5th Grade
+* कोर्स A: किंडरगार्टन
+* कोर्स B: पहला ग्रेड
+* कोर्स C: दूसरा ग्रेड
+* कोर्स D: तीसरा ग्रेड
+* कोर्स E: चौथा ग्रेड
+* कोर्स F: पांचवां ग्रेड
+* आरंभिक-पाठक एक्सप्रेस कोर्स: किंडरगार्टन - पहला ग्रेड
+* एक्सप्रेस ग्रेड: दूसरा ग्रेड - पांचवां ग्रेड
 
-The biggest update to CS Fundamentals is that content will move from four courses (Courses 1-4) to six courses aligned to each K-5 grade level (Courses A-F). In doing so, the lessons have become more tailored to the appropriate levels for reading, math, and overall cognitive development. Note the addition of two different “Express” courses, one for pre-readers and one for all other grades. These are similar to the previous suite’s “accelerated” version.
+CS के मूल सिद्धांत में सबसे बड़ा अद्यतन यह है कि सामग्री को प्रत्येक K-5 ग्रेड स्तर (कोर्स A-F) से संरेखित चार कोर्सों से (कोर्स1-4) छह कोर्सों में बदला गया है। ऐसा करने में, पठन, गणित और पूरे बोध संबंधी विकास के लिए पाठ और भी उपयुक्त स्तरों के मुताबिक तैयार हुए हैं। दो अलग-अलग “एक्सप्रेस” कोर्सों की वृद्धि पर ध्यान दें, इनमें से एर आरंभिक-पाठकों के लिए है और एक अन्य सभी ग्रेड्स के लिए है। ये पिछले सुइट के “त्वरित” संस्करण के समान हैं।
 
 <a id="newcourses"></a>
 
-## Teaching the new courses
+## नए कोर्स पढ़ाना
 
-As mentioned earlier, the courses should feel familiar, but different. If you’ve been to a Code.org professional development workshop, then you’re ready to teach the new courses. There are a small number of changes, but the overall platform, curriculum and pedagogical philosophy is unchanged. If you haven’t yet been, Code.org offers 1 day workshops at no cost to help you learn how to understand the curricula, navigate the Code.org platform, and teach the unplugged lessons.
+जैसा कि पहले उल्लेख किया गया है, कोर्स परिचित, लेकिन अलग लगेंगे। यदि आपने Code.org पेशेवर विकास वर्कशॉप में भाग लिया है, तो आप नए कोर्स पढ़ाने के लिए तैयार हैं। इसमें थोड़े से बदलाव हैं, लेकिन पूरा प्लेटफॉर्म, पाठ्यक्रम और शैक्षणिक सिद्धांत पहले जैसे ही हैं। यदि आपने अभी तक भाग नहीं लिया है, तो Code.org 1 दिन की निशुल्क वर्कशॉप पेश करती है, जो यह सीखने में आपकी मदद करेगी कि पाठ्यक्रम को कैसे समझा जाए, Code.org प्लेटफॉर्म का संचालन कैसे किया जाए और अनप्लग्ड पाठों को कैसे पढ़ाया जाए।
 
-The main updates to the courses are:
+कोर्सों में मुख्य अद्यतन हैं:
 
-* Circle-time stories for the younger learners
-* A new approach to scaffolding and practicing/applying concepts
-* Bridging activities to enhance the transition from unplugged lessons to plugged lessons
-* End of course projects for older students
+* छोटी आयु के शिक्षार्थियों के लिए सामूहिक-समय की कहानियां
+* स्कैफोल्डिंग और अभ्यास करने/अवधारणाओं का इस्तेमाल करने के लिए नया दृष्टिकोण 
+* अनप्लग्ड पाठों से प्लग्ड पाठों तक परिवर्तन में वृद्धि करने के लिए गतिविधियों को पूरा करना
+* बड़ी आयु के छात्रों के लिए कोर्स समाप्ति प्रोजेक्ट
 
-The rest of this guide will present each idea in more detail, offering tips and tricks for implementing the changes in your classroom.
+यह बाकी गाइड आपकी कक्षा में बदलावों को लागू करने के लिए सुझाव और तरकीबें पेश करते हुए, अधिक विस्तार में प्रत्येक सुझाव पेश करेगी।
 
 <a id="circletime"></a>
 
-## Circle-Time Stories (Courses A and B)
+## सामूहिक-समय की कहानियां (कोर्स A व B)
 
-Some concepts are difficult to teach through activities and puzzles alone, especially for young students. This is why we’ve introduced a small number of circle-time stories in the Kindergarten and First Grade curricula. These stories are intended to be read by the teacher to the entire class, with stops along the way to discuss critical ideas like debugging, persistence, and frustration. Our hope is that allowing students to experience these tough concepts via story characters will help them to recognize the same notions when they arise in future lessons.
+कुछ अवधारणाओं को केवल गतिविधियों और पहेलियों के द्वारा सिखाना मुश्किल है, विशेषकर छोटी आयु के छात्रों के लिए। इसी कारण हमने किंडरगार्टन और पहले ग्रेड के पाठ्यक्रम में थोड़ी संख्या में सामूहिक-समय की कहानियां पेश की हैं। ये कहानियां डीबगिंग, दृढ़ता और निराशा जैसे गंभीर विचारों की चर्चा करते हुए रुकने के साथ, पूरी कक्षा को अध्यापक द्वारा पढ़ के सुनाई जाने के लिए तैयार की गई हैं। हमें आशा है कि कहानी के पात्रों के माध्यम से छात्रों को इन मुश्किल अवधारणाओं का अनुभव करने देने से यह उन विचारों को पहचानने में उनकी मदद करेगा, जब वे भविष्य के पाठों में आएंगे।
 
-Here is how the circle-time stories are intended to be used:
+नीचे दिया गया है कि सामूहिक-समय की कहानियां किस प्रकार उपयोग के लिए तैयार की गई हैं:
 
-### Read the appropriate story to your class
+### अपनी कक्षा को उपयुक्त कहानी पढ़कर सुनाएं
 
-* Make sure to check for understanding along the way with questions and comments at useful moments during the action.
-* Discuss the stories afterward. What did your students hear? Are there any ideas that stuck with them?
-* Try to get students to identify with the characters. Is there anything that they do in their lives that remind them of one of the characters in the story?
+* क्रिया के दौरान उपयोगी समय में सवालों व टिप्पणियों के साथ समझ को जांचना सुनिश्चित करें।
+* उसके बाद कहानियों पर चर्चा करें। आपके छात्रों ने क्या सुना? क्या कोई ऐसे सुझाव हैं, जिन पर वे अटक गए हों?
+* छात्रों को पात्रों की पहचान करवाने का प्रयास करें। क्या कुछ ऐसा है, जो वे अपनी ज़िंदगियों में करते हैं, जो उन्हें कहानी के पात्रों में से किसी एक की याद दिलाते हों?
 
-### Remind students about the story before they begin the next activity.
+### इससे पहले कि वे अगली गतिविधि शुरू करें, छात्रों को कहानी के बारे में याद दिलाएं।
 
-* Do you remember the main ideas we discussed?
-* How will you know if you see that idea today?
-* What did the character do to handle that idea? What would you do?
+* क्या आपको वे मुख्य विचार याद हैं, जिन पर हमने चर्चा की थी?
+* यदि आप उस विचार को आज देखें तो आपको कैसे पता चलेगा?
+* पात्र ने उस विचार से व्यवहार करने के लिए क्या किया? आप क्या करेंगे?
 
-### Point out similarities between the story and the student’s situations when they intersect during an activity.
+### कहानी और छात्र की स्थितियों के बीच की समानताओं पर ध्यान दें, जब वे किसी गतिविधि के दौरान इसे भागों में विभाजित करें।
 
-* Describe for a student how the position that they are in resembles a situation from the book. 
-* Ask a student to think about the characters and figure out what they might do. Does that help the student figure out a next step?
+* छात्र को वर्णन करें कि किस प्रकार से उनकी स्थिति पुस्तक में से पात्र की स्थिति से मिलती-जुलती है। 
+* छात्र को पात्रों के बारे में सोचने और यह पता लगाने के लिए कहें कि वे क्या कर सकते हैं। क्या इससे छात्र को अगले चरण का पता लगाने में मदद मिलेगी?
 
-If you are unable to gather your entire class together, Code.org has provided a video option at the beginning of the appropriate lesson that presents the stories with limited animations. While these videos don’t offer quite the same experience, they will allow students to get exposure to the concepts and characters before continuing on with the rest of the course.
+यदि आप अपनी पूरी कक्षा को एक साथ एकत्र नहीं कर पाते हैं, तो Code.org ने उपयुक्त पाठ के शुरू में वीडियो विकल्प प्रदान किया है, जो सीमित एनिमेशंस के साथ कहानियां पेश करता है। हालांकि ये वीडियो बिल्कुल वैसा अनुभव प्रदान नहीं करते, फिर भी वे छात्रों को बाकी कोर्स जारी रखने से पहले अवधारणाओं और पात्रों के बारे में बताएंगे।
 
 <a id="scaffolding"></a>
 
-## Lesson Scaffolding & Challenge Puzzles (All Ages)
+## पाठ स्कैफोल्डिंग & चुनौतीपूर्ण पहेलियां (हर आयु वर्ग)
 
-Courses A-F are less scaffolded overall than our previous courses. That means that we try to have students create their code from the beginning as often as possible, unless they are specifically learning to debug. As part of this design, most of our online lessons follow a trend where we present a simple puzzle to begin the lesson, then slowly drill forward with a new concept until the point where students have had a chance to understand the idea underneath. Next, we present them with a challenge puzzle, which is intended to get students thinking about the concept in a new and complicated way.
+कोर्स A-F, हमारे पिछले कोर्सों के मुकाबले कम स्कैफोल्ड हैं। इसका मतलब है कि हम प्रयास करते हैं कि छात्र ज्यादा से ज्यादा शुरू से ही अपना कोड बनाएं, जब तक कि वे विशेषरूप से डीबग करना न सीखें। इस डिज़ाइन के भाग के तौर पर, हमारे अधिकतर ऑनलाइन पाठ ऐसे रुझान का अनुसरण करते हैं, जहां हम पाठ को शुरू करने के लिए आसान पहेली पेश करते हैं, फिर धीरे-धीरे तब तक नई अवधारणा के साथ आगे का अभ्यास करते हैं, जहां छात्रों को इसके पीछे छिपे विचार को समझने का मौका मिला हो। इसके बाद, हम उन्हें चुनौतीपूर्ण पहेली पेश करते हैं, जो छात्रों को नए और जटिल तरीके में अवधारणा के बारे में सोचने हेतु सक्रिय करने के लिए तैयार की गई है।
 
-Challenge puzzles are new in Courses A-F. The intention of challenge puzzles is to expose students to a high bar where they can practice persistence and independent thought. Challenge puzzles are intentionally hard and designed so that only students who truly understand the concept will pass within a reasonable timeframe. This means that a good number of students will not be successful on challenges their first time through. This requires a particular attitude from both student and teacher to pull off.
+कोर्सों A-F में चुनौतीपूर्ण पहेलियां नई हैं। चुनौतीपूर्ण पहेलियों का उद्देश्य छात्रों को उच्च स्तर तक लाना है, जहां वे दृढ़ और स्वतंत्र सोच का अभ्यास कर सकें। चुनौतीपूर्ण पहेलियों को जानबूझकर मुश्किल बनाया जाता है ताकि केवल अवधारणा को पूरी तरह से समझने वाले छात्र ही उचित समय सीमा के अंदर उन्हें पास कर पाएं। इसका अर्थ है कि अधिक संख्या में छात्र अपनी पहली बार की चुनौतियों में सफल नहीं होंगे। इसमें छात्र और अध्यापक दोनों को ही विशेष दृष्टिकोण को अपनाने की आवश्यकता होती है.
 
-1. Students should give these challenges a hearty try, then put them aside and carry on. That practice allows for two very important things to happen:
-2. Students gain a better understanding of when and why to use the concept being studied. The following puzzles feel easier after the challenge, even though they are serious puzzles in their own right.
+1. छात्रों को इन चुनौतियों के प्रति पूरे मन से प्रयास करना चाहिए, फिर उन्हें सुरक्षित करके आगे बढ़ना चाहिए। इस प्रकार के अभ्यास से दो बहुत ही महत्वपूर्ण चीज़ें होती हैं:
+2. छात्र इस बारे में बेहतर समझ प्राप्त करते हैं कि अध्ययन की जाने वाली अवधारणा का कब व किस कारण से उपयोग किया जाए। निम्नलिखित पहेलियां चुनौती के बाद अधिक आसान लगती हैं, हालांकि वे अपने आप में ही गंभीर पहेलियां हैं।
 
-Keep in mind that students can go through lessons and reattempt incomplete puzzles at any time. Sometimes it can be quite helpful to get a good night’s sleep before revisiting a tough problem.
+ध्यान में रखें कि छात्र अच्छी तरह से पाठों का प्रयोग कर सकते हैं और किसी भी समय अधूरी पहेलियों का पुनः प्रयास कर सकते हैं। कभी-कभार किसी कठिन समस्या पर दुबारा सोचने से पहले रात की अच्छी नींद लेना काफी लाभकारी हो सकता है।
 
-Once students make it past the challenge, they will find a handful of exercises waiting for them that are similar to what they may have experienced in the first half of the stage. These puzzles were placed intentionally to test a student’s clarity on the subject being studied. They might seem far too easy, given the puzzles that were experienced beforehand, but they were created to demonstrate the exact level of competence desired from the corresponding stage.
+जब छात्रों को चुनौती मुश्किल लगे, तो वे पाएंगे कि उनके लिए बहुत से अभ्यास मौजूद हैं, जो उससे मिलते-जुलते हैं, जो उन्होंने आधे चरण में अनुभव किया हो सकता है। ये पहेलियां अध्ययन किए जा रहे विषय पर छात्र की स्पष्टता को जांचने के इरादे से दी गई हैं। उन पहेलियों को देखते हुए वे काफी आसान प्रतीत हो सकते हैं, जिनका अनुभव पहले हुआ था, लेकिन वे अनुरूप चरण से ऐच्छिक सामर्थ्य के सही स्तर को दर्शाने के लिए तैयार की गईं थीं।
 
-In some instances, we end our lessons with free-play style levels. These levels might either have no “wrong” answer, or they might allow several different ways to solve their core problem. Please encourage students to give them their best shot and not just click “Continue” even though they can.
+कुछ अवस्थाओं में, हम स्वतंत्र-प्ले स्टाइल के स्तरों के साथ हमारे पाठों को समाप्त करते हैं। हो सकता है कि इन स्तरों का कोई “गलत” जवाब न हो, या वे उन्हें मुख्य समस्या को हल करने के कई अलग-अलग तरीके आजमाने की अनुमति देती हो। कृपया छात्रों को उनका सबसे बेहतर हल देने के लिए प्रोत्साहित करें, न कि वे केवल “जारी रखें” पर क्लिक करें, हालांकि वे ऐसा कर सकते हैं।
 
-Some final notes for this area:
+इस क्षेत्र के लिए कुछ अंतिम नोट्स:
 
-* Remind students to be persistent and use their debugging skills on problems that feel tough.
-* Videos are often helpful. When students get stuck, have them rewatch the video a second, third, or even fourth time.
-* Require students to read the instructions. If they are having a hard time, let them read the instructions out loud to a classmate.
-* It’s okay to use hints! Students should use as many hints as they need, but be sure to attempt re-solving the puzzle at least one between each new offering.
+* छात्रों को मुश्किल लगने वाली समस्याओं पर डटे रहने और अपने डीबगिंग कौशलों का उपयोग करना याद दिलाएं।
+* वीडियो अकसर उपयोगी होते हैं। जब छात्र अटक जाएं, तो उन्हें दूसरी, तीसरी, यहां तक कि चौथी बार वीडियो दुबारा दिखाएं।
+* छात्रों के लिए निर्देश पढ़ना आवश्यक बनाएं। यदि उन्हें मुश्किल हो रही हो, तो उन्हें किसी सहपाठी से निर्देशों को ज़ोर से बोलकर पढ़वाएं।
+* संकेतों का उपयोग किया जा सकता है! छात्रों को अपनी जरूरत के मुताबिक अधिक से अधिक संकेतों का उपयोग करना चाहिए, लेकिन सुनिश्चित करें कि वे प्रत्येक नई पेशकश के बीच कम से कम एक बार पहेली को दुबारा हल करने का प्रयास करें।
 
 <a id="unplugged"></a>
 
-## Bridging Activities For Unplugged Lessons (All Ages)
+## अनप्लग्ड पाठों के लिए गतिविधियां पूरी करना (हर आयु वर्ग)
 
-Unplugged activities meet students where they are in terms of pointing out how they already use important CS concepts in their everyday life. Once students can identify fundamental ideas like loops and conditionals, they get over the mental blocks that can happen when trying to use them for the first time programming online.
+अनप्लग्ड गतिविधियां छात्रों को वहां मिलती हैं, जहां वे यह पता लगा रहे होते हैं कि किस प्रकार वे अपनी रोजमर्रा ज़िंदगी में महत्वपूर्ण CS अवधारणों का पहले ही उपयोग कर रहे हैं। जब छात्र लूप्स और सापेक्षों जैसी बुनियादी धारणाओं को पहचान पाते हैं, तो वे पहली बार प्रोग्रामिंग को ऑनलाइन उपयोग करने का प्रयास करते समय उनके समक्ष आने वाले मानसिक ब्लॉक्स को पार कर पाते हैं।
 
-Unplugged experiences are so important that we chose to take them one step further and bake in activities that bridge the unplugged lessons to their online counterparts. In Courses A-F, you will now find that lesson plans provide examples of how to take the offline exercises and translate the lessons to the following set of online puzzles. Appropriately, we call these "Bridging Activities."
+वे अनप्लग्ड अनुभव बहुत महत्वपूर्ण हैं, जिन्हें हमने एक कदम आगे जाने और गतिविधियों में तैयार होने के लिए चुना है, जो उनके ऑनलाइन समकक्षों के लिए अनप्लग्ड पाठों को पूरा करती हैं। कोर्सों A-F में, अब आप पाएंगे कि पाठ योजनाएं इस बारे में उदाहरण प्रदान करती हैं कि ऑनलाइन अभ्यास कैसे करने हैं और पाठों को ऑनलाइन पहेलियों के निम्नलिखित सेट में कैसे बदलना है। उपयुक्त रूप से, हम इन्हें "ब्रिजिंग गतिविधियां” कहते हैं।
 
-For the most part, bridging activities can be created either by taking the subject of the unplugged exercise and executing it with paper Blockly blocks, or by taking an online puzzle and solving it using the language from the unplugged exercise. In some cases, a different relationship is introduced, but all of the examples are meant to keep the offline experiences from feeling too abstract or unrelated.
+अधिकतर भाग के लिए, ब्रिजिंग गतिविधियां अनप्लग्ड अभ्यास का विषय लेकर और इसे पेपर ब्लॉक्ली ब्लॉक्स के साथ इस्तेमाल करके, या ऑनलाइन पहेली लेकर और अनप्लग्ड अभ्यास से भाषा का उपयोग करते हुए इसे हल करके तैयार की जा सकती हैं। कुछ स्थितियों में, अलग संबंध पेश किया जाता है, लेकिन सभी उदाहरणों का उद्देश्य यही होता है कि ऑफलाइन अनुभव बहुत ही संक्षिप्त या असंबद्ध न लगें।
 
 <a id="endofcourse"></a>
 
-## End of Course Projects (Courses E & F)
+## कोर्स समाप्ति प्रोजेक्ट (कोर्स E & F)
 
-For older students, we have introduced substantial end of course projects in Courses E & F. Though Code.org has provided the ability to build “projects” for quite a while, we felt that it would add some much needed perspective for students to be able to plan and execute their projects in a formal context.
+बड़ी आयु वाले छात्रों के लिए, हमने कोर्सों E & F में पर्याप्त कोर्स समाप्ति प्रोजेक्ट पेश किए हैं। हालांकि Code.org ने लंबे समय के लिए “प्रोजेक्ट्स” का निर्माण करने की क्षमता प्रदान की है, हमने महसूस किया कि यह छात्रों के लिए औपचारिक संदर्भ में उनके प्रोजेक्ट्स की योजना बनाने और उनके कार्यान्वयन के लिए काफी अधिक आवश्यकता वाले परिपेक्ष्य को शामिल करेगा।
 
-The end of course projects are relatively straightforward. Over the period of four to five weeks students will review project ideas, plan their application, code their program, revise based on feedback (5th grade), then present their completed work. Each of these steps is guided by a helpful handout, as well as a teacher lesson plan that highlights the big picture.
+कोर्स समाप्ति प्रोजेक्ट तुलनात्मक तौर पर सरल होते हैं। चार से पांच सप्ताह की अवधि में, छात्र प्रोजेक्ट सुझावों की समीक्षा कर लेंगे, अपने अनुप्रयोग की योजना बना लेंगे, अपने प्रोग्राम को कोड कर लेंगे, फीडबैक (5वां ग्रेड) के आधार पर संशोधित कर लेंगे, फिर अपना पूरा किया काम प्रस्तुत करेंगे। इनमें से सभी चरण उपयोगी हैंडआउट के साथ-साथ, अध्यापक की पाठ योजना द्वारा निर्देशित हैं, जो बड़ी तस्वीर को उजागर करती है।
 
-**Review:** Students will take a look at a handful of aspirational projects, built to showcase the amazing things that can be done with the skills that they have learned up to this point. These projects have been built either in Play Lab or Artist, but students are free to review projects from Tynker, Scratch, or even text-based languages if the teacher sees fit.
+**समीक्षा:** छात्र कुछ आकांक्षापूर्ण प्रोजेक्ट्स पर नज़र डालेंगे, जिन्हें शानदार चीज़ों के प्रदर्शन के लिए बनाया गया हो, जिसे उन कौशलों के साथ किया जा सकता है, जो उन्होंने अब तक सीखे हैं। ये प्रोजेक्ट्स प्ले लैब या कलाकार में बनाए गए हैं, लेकिन छात्र Tynker, Scratch, या टेक्सट-आधारित भाषाओं से भी प्रोजेक्ट्स की समीक्षा करने के लिए स्वतंत्र हैं, यदि अध्यापक इसे अनुकूल समझे।
 
-**Plan:** The intention here is for students to sit back and think about what is really possible. They will need to think about the games that they saw, and the limitations that they faced when editing them. Afterward, they will sketch out a plan to create something unique. Students might need to be reminded to stay realistic, as they will have limited time and resources when bringing their visions to life. The materials here assume the use of Artist or Play Lab, but projects can be moved to whatever platform works for each particular classroom.
+**योजना:** इसका उद्देश्य यह है कि छात्र आराम से बैठकर सोचे कि वास्तव में क्या संभव है। उन्हें ऐसी गेम्स के बारे में सोचने की जरूरत है, जो उन्होंने देखी हैं, और वे सीमाएं, जो उनका संपादन करते समय उनके समक्ष आई हैं। उसके बाद, वे कुछ अच्छा सा बनाने की योजना की रूपरेखा प्रस्तुत करेंगे। छात्रों को यथार्थवादी रहना याद दिलाने की जरूरत पड़ सकती है, क्योंकि ज़िंदगी में अपने दृष्टिकोणों को अपनाते समय उनके पास सीमित समय और संसाधन होंगे। यहां मौजूद सामग्रियां कलाकार या प्ले लैब के उपयोग से बनी हैं, लेकिन प्रोजेक्टस को किसी भी प्लेटफॉर्म में मूव किया जा सकता है, जो प्रत्येक विशेष कक्षा के लिए के लिए उपयोगी हो।
 
-**Build:** One day is not a whole lot of time to execute a plan that has been laid out on paper. Students will face tough choices when it comes to trying to make things work as they run into one barrier after another. They will learn to edit and adapt as bugs and program limitations change their perceptions of what can comfortably be accomplished in a restricted timeframe.
+**बनाना:** किसी ऐसी योजना को कार्यान्वयन करने के लिए एक दिन पर्याप्त नहीं है, जिसका खाका कागज़ पर बनाया गया हो। जब चीज़ों को उपयोगी बनाने का प्रयास करने की बात आती है, तो छात्र कुछ मुश्किल विकल्पों का सामना करेंगे, जब उनके समक्ष एक के बाद एक बाधा आएगी। वे संपादन करना और बग्स के रूप में ग्रहण करना सीखेंगे और प्रोग्राम की सीमाएं इस बारे में उनकी धारणाएं बदल देंगी कि सीमित समय सीमा में सहजता से क्या पूरा किया जा सकता है।
 
-**Revise:** For older students, a day of revising their programs based on the feedback of classmates can help them improve their final product, and lets them inspire others with the things that they have achieved. Students will practice constructive critique, as well as group brainstorming and persistence.
+**संशोधन करना:** बड़ी आयु के छात्रों के लिए, सहपाठियों की प्रतिक्रिया के आधार पर उनके प्रोग्रामों को संशोधित करने का एक दिन उनके अंतिम उत्पाद को बेहतर बनाने में उनकी मदद कर सकता है, और पूरी की गई चीज़ों से वे दूसरों को प्रेरित कर सकते हैं। छात्र रचनात्मक समीक्षा के साथ-साथ सामूहिक विचार विमर्श और दृढ़ता का अभ्यास करेंगे।
 
-**Present:** Nearly a month in the making, this is the chance for students to stand-up and be proud of how far they have come. Our lesson plan assumes an oral presentation, but teachers have the option of suggesting written or multimedia presentations instead.
+**प्रस्तुत करना:** रचना में लगभग एक माह लगाने के बाद, छात्रों के लिए गर्व करने का समय होगा कि वे कितनी आगे पहुंच चुके हैं। हमारी पाठ योजना में एक मौखिक प्रस्तुति है, लेकिन अध्यापकों के पास इसकी बजाय सुझाव देकर लिखने या मल्टीमीडिया प्रस्तुतियों का विक्लप है।
 
-No matter how thoroughly students embed themselves in their projects, they are sure to learn something useful about the processes of creativity and problem solving in computer science.
+इससे कोई फर्क नहीं पड़ता कि छात्रों ने अपने प्रोजेक्ट्स में खुद को कितना शामिल किया है, वे कंप्यूटर साइंस में रचनात्मकता और सवाल हल करने की प्रक्रियाओं के बारे में कुछ उपयोगी सीखने के लिए सुनिश्चित हैं।
 
 <a id="conclusion"></a>
 
-## Conclusion
+## निष्कर्ष
 
-As you can see, Courses A-F in Computer Science Fundamentals contain exciting enhancements, influenced by feedback from the massive CS Fundamentals teacher & facilitator communities.
+जैसा कि आप देख सकते हैं, कंप्यूटर साइंस के बुनियादी सिद्धांतों में कोर्सों A-F में रोमांचक वृद्धियां शामिल हैं, जो बड़े CS के मूल सिद्धांतों के अध्यापकों & सहायक समुदायों की प्रतिक्रिया स प्रभावित हैं।
 
-We hope this overview has been insightful. If you have any questions or comments about this change, please visit http://forum.code.org/c/csf and post them on our forum. We will be sure to get your questions answered as quickly as possible. Until then, here are some of frequently asked questions about Courses A-F.
+हमें आशा है कि यह रूप रेखा गहरी पहुंच वाली है। यदि इस बदलाव के बारे में आपके कोई सवाल या टिप्पणियां हैं, तो कृपया http://forum.code.org/c/csf पर जाएं और हमारी फोर्म पर उन्हें पोस्ट करें। हम जल्दी से जल्दी आपके सवालों के जवाब जरूर देंगे। तब तक, यहां कोर्सों A-F के बारे में कुछेक अकसर पूछे जाने वाले सवाल दिए गए हैं।
 
 <a id="faq"></a>
 
-## FAQs
+## अकसर पूछे जाने वाले सवाल
 
-| Question                                                                                                                                                   | Answer                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **You are launching a new set of courses-- does that mean that Courses 1-4 are going away?**                                                               | No. Just as our original 20-Hour course is still available and in-use on our website, we plan to keep Courses 1-4 around for those who feel that it better represents the experience that their students/children need.                                                                                                                                                                                                                                                      |
-| **When can we start using Courses A-F?**                                                                                                                   | Courses A-F are available now!                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| **Some of my favorite lessons/puzzles are missing from Courses A-F!**                                                                                      | Have no fear! They still exist where you left them in Courses 1-4 or the Accelerated 20-Hour course.                                                                                                                                                                                                                                                                                                                                                                         |
-| **These puzzles seem much harder. I’m worried that they’re too difficult for my little ones.**                                                             | The backbone of these new courses is the desire to get students to think, problem solve, and practice persistence. None of these things are required when puzzles are too easy to complete. For this reason, we’ve had to make puzzles more difficult. Please refer to the teacher guide for help with leading your class in building these skills. As always, don’t underestimate the importance of using unplugged lessons before jumping in with the online puzzles.      |
-| **Some puzzles only allow a certain number of specific blocks. What if my students want to code something out the long way before they figure out loops?** | There are a few puzzles that restrict specific blocks. This is one of our new manners of scaffolding. It is a way of giving direction, without over scaffolding the pieces in the workspace itself. For students who like to code puzzles the long way before they pare down (and, in fact for all students, all the time) it is useful to have a journal or scratch paper beside the keyboard where they can figure out the algorithm in whatever way comes most naturally. |
+| सवाल                                                                                                                                                                                     | जवाब                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **आप कोर्सों का नया सेट शुरू कर रहे हैं-- क्या इसका अर्थ है कि कोर्स 1-4 हटाए जा रहे हैं?**                                                                                              | नहीं। जैसे हमारा मूल 20-घंटे का कोर्स अभी भी उपलब्ध है और हमारी वेबसाइट पर प्रयोग-में है, बिल्कुल उसी तरह उन छात्रों के लिए कोर्स 1-4 की भी हमारी योजना है, जिन्हें लगता है कि यह उस अनुभव के बेहतर ढंग से प्रदर्शित करता है, जिसकी छात्रों/बच्चों को जरूरत है।                                                                                                                                                                                                                     |
+| **हम कोर्सों A-F का उपयोग करना कब शुरू कर सकते हैं?**                                                                                                                                    | कोर्स A-F अब उपलब्ध हैं!                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| **मेरे कुछ पसंदीदा पाठ/पहेलियां कोर्सों A-F से गायब हैं!**                                                                                                                               | डरें मत! वे अभी भी वहीं मौजूद हैं, यहां आपने कोर्स 1-4 या त्वरित 20-घंटे के कोर्स में उन्हें छोड़ा था।                                                                                                                                                                                                                                                                                                                                                                              |
+| **ये पहेलियां काफी मुश्किल प्रतीत होती हैं। मुझे चिंता है कि ये मेरे छोटे बच्चों के लिए बहुत ज्यादा मुश्किल हैं।**                                                                       | इन नए कोर्सों का आधार छात्रों को सोचने, सवाल हल करने और दृढ़ता से अभ्यास करने के लिए सक्रिय करने की इच्छा है। जब पहेलियों को पूरा करने बेहद आसान हो तो इनमें से किसी चीज़ की जरूरत नहीं होती। इसी कारण से, हमें पहेलियों को अधिक मुश्किल बनाना पड़ा है। कृपया इन कौशलों का निर्माण करने में अपनी कक्षा का नेतृत्व करने में मदद के लिए अध्यापक गाइड देखें। हमेशा की तरह, ऑनलाइन पहेलियों पर जाने से पहले अनप्लग्ड पाठों का उपयोग करने के महत्व को कम न समझें।                        |
+| **कुछ पहेलियां केवल निश्चित संख्या में ही विशेष ब्लॉक्स की अनुमति देती हैं। यदि मेरे छात्र लूप्स के बारे में जानने से पहले अधिक समय तक किसी चीज़ को कोड करना चाहें तो क्या करना चाहिए?** | कुछ ऐसी पहेलियां हैं, जो विशेष ब्लॉक्स को प्रतिबंधित करती हैं। यह हमारी स्कैफोल्डिंग की नई विधियों में से एक है। यह वर्कस्पेस में ही भागों को अत्याधिक स्कैफोल्डिंग किए बिना ही, निर्देश देने का तरीका है। जो छात्र कम करने से पहले अधिक समय तक पहेलियों को कोड करना चाहते हैं, उनके लिए (और, असल में हमेशा, सभी छात्रों के लिए), कीबोर्ड के साथ में कोई पत्रिका या स्क्रैच पेपर रखना उपयोगी है, जहां वे उस कलन विधि का पता लगा सकते हैं, जिसमें भी विधि अधिक कुदरती ढंग से आती हो। |

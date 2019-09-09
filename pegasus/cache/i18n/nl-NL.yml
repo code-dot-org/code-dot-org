@@ -1623,6 +1623,10 @@ nl-NL:
     browser te upgraden naar <a href='%{supported_browsers_url}', target='_blank'>
     een van onze ondersteunde browsers</a>. U kunt proberen de pagina te bekijken,
     maar verwacht problemen met de functionaliteit.
+  compatibility_unsupported_browser_markdown: Uw browser wordt niet ondersteund. Probeer
+    uw browser te upgraden naar <a href='%{supported_browsers_url}', target='_blank'>
+    een van onze ondersteunde browsers</a>. U kunt proberen de pagina te bekijken,
+    maar verwacht problemen met de functionaliteit.
   flappy_shortcode: flapperen
   header_home: Home
   header_my_dashboard: Mijn Dashboard
@@ -1653,7 +1657,7 @@ nl-NL:
   header_stats: Statistieken
   header_help_us: Help ons
   header_about: Over
-  header_teacher_community: Leraar Gemeenschap
+  header_teacher_community: Lerarengemeenschap
   header_report_bug: Rapporteer bugs
   header_tutorials: Tutorials
   header_documentation: Documentatie
@@ -1740,7 +1744,7 @@ nl-NL:
   hoc2018_dance_teacher_resources_tile2_title: Unplugged dansfeest
   hoc2018_dance_teacher_resources_tile2_description: Geen computers nodig!  Leer de
     basis van coderen om samen een dansfeest te choreograferen.
-  hoc2018_dance_teacher_resources_tile2_button: UNPLUGGED ACTIVITEIT
+  hoc2018_dance_teacher_resources_tile2_button: Unplugged Activiteit
   hoc2018_dance_amazon_about_future_engineer_button: Leer meer
   hoc2018_dance_amazon_scholarship_programs_button: Meld je nu aan
   hoc2018_dance_measure: Maten

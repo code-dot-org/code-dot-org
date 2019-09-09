@@ -182,10 +182,202 @@ it-IT:
 
         **Sei bloccato? Clicca qui:** ![expandable](https://images.code.org/64dfec0d9f9c2fc237abb90ef6a72f0e-image-1508384166252.gif)
       CSD Problem Solving Process Video: |-
-        ## Domande sulle quali riflettere
+        ## Domande da considerare
 
-        -   Nell'ultima lezione, sei riuscito a mettere a fuoco il processo di risoluzione dei problemi?
-        -   Come potresti sfruttare questo processo su un problema della tua vita quotidiana?
+        -   Come hai seguito il processo di risoluzione problemi nell'ultima lezione?
+        -   Come potresti usare questo processo su un problema nella tua vita quotidiana?
+      CSD U2 HTML Adding Paragraphs: |-
+        # Aggiungi Testo al Corpo
+
+        Quando avvii qualsiasi progetto Web Lab, aggiungerà automaticamente i tag `<!DOCTYPE>`, `<html>`, `<head>`, e `<body>` al tuo progetto. Quando aggiungi contenuto ai tuoi progetti, avrai bisogno di farlo tra i tag `<body>` e `</body>`perchè dovrebbe essere parte della tua pagina web.
+
+        # Fai Questo
+
+        -   Scrivi tre frasi separate su qualsiasi argomento che ti piace all'interno dei tag corpo della tua pagina web.
+        -   Clicca su "Aggiorna e Salva" se non vedi le modifiche nell'area anteprima.
+        -   Compara il tuo lavoro con un vicino. Assicurati che tu stia posizionando il codice nello stesso posto.
+      CSD U2 HTML Adding Paragraphs pt 2: |-
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+        <details>
+
+        <summary><strong>Cos'è un elemento paragrafo?</strong></summary>
+
+        I paragrafi sono contrassegnati da tag di apertura (`<p>`) e chiusura (`</p>`). I paragrafi in HTML possono avere ogni lungezza di testo da una parola a molte frasi. I paragrafi si raggruppano in set di frasi e bisogna mettere spazio tra questo gruppo di testo ed il successivo.
+
+        </details>
+        <details>
+        <summary><strong>Come faccio paragrafi multipli?</strong>
+        </summary>
+
+        Ecco un esempio di molti tag paragrafo in fila. Questo codice sarà posto all'interno del codice della tua pagina web.
+
+            <p>Questo è un paragrafo. Contiene due frasi.</p>
+            <p>Questo è un altro paragrafo.</p>
+
+        </details>
+        </div>
+
+        # Uso dei Tag Paragrafo
+
+        Il tag `<p>` o il tag "paragrafo" è posto intorno al testo per indicare che è parte di un paragrafo. Mettendo del testo in un tag paragrafo farà sapere al computere che dovrebbe essere mostrato differentemente, in genere solo spaziandolo da un altro testo.
+
+        # Fai Questo
+
+        -   Metti il testo appena scritto almeno all'interno di due paragrafi separati circondandolo con i tag `<p>` e `</p>`
+        -   Compara i risultati con un vicino. Cosa è cambiato a riguardo del modo in cui il tuo testo è mostrato?
+      CSD U2 HTML Adding Paragraphs pt 2_2019: |-
+        <div class="no-pullthrough" style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+        <details>
+
+        <summary>
+        <strong>Cos'è un elemento paragrafo?</strong>
+        </summary>
+
+        I paragrafi sono contrassegnati da tag di apertura (`<p>`)e di chiusura (`</p>`). I paragrafi i HTML possono essere di ogni lunghezza di testo da una parola ad un sacco di frasi. I paragrafi si raggruppano in set di frasi e metti qualche spazio tra quel gruppo di testo ed il gruppo di testo successivo.
+
+        </details>
+        <details>
+        <summary>
+        <strong>Come faccio paragrafi multipli?</strong>
+        </summary>
+
+        Ecco un esempio di molti tag paragrafo in fila. Questo codice dovrebbe essere posto all'interno del corpo della tua pagina web.
+
+            <p>Questo è un paragrafo. Contiene due frasi.</p>
+            <p>Questo è un altro paragrafo.</p>
+
+        </details>
+        </div>
+
+        # Usa i Tag Paragrafo
+
+        I tag `<p>` `</p>` o tag di apertura e chiusura "paragrafo" sono posti intorno al testo per indicare che è parte di un paragrafo. Mettendo del testo tra il tag di apertura e chiusura del paragrafo fa sapere al computer che dovrebbe essere trattato differentemente, spesso solo spaziandolo da altro testo.
+
+        # Fai Questo
+
+        -   Metti il testo che hai appena scritto all'interno di almeno due paragrafi separati, circondandolo con i tag `<p>` e `</p>`
+        -   Compara i risultati con un vicino. Cosa è cambiato nel modo in cui il testo è mostrato?
+      CSD U2 HTML Adding Paragraphs_2018: |-
+        # Aggiungi Testo al Corpo
+
+        Quando avvii qualsiasi progetto Web Lab, aggiungerà automaticamente i tag `<!DOCTYPE>`, `<html>`, `<head>`, e `<body>` al tuo progetto. Quando aggiungi contenuto ai tuoi progetti, avrai bisogno di farlo tra i tag `<body>` e `</body>`perchè dovrebbe essere parte della tua pagina web.
+
+        # Fai Questo
+
+        -   Scrivi tre frasi separate su qualsiasi argomento che ti piace all'interno dei tag corpo della tua pagina web.
+        -   Clicca su "Aggiorna e Salva" se non vedi le modifiche nell'area anteprima.
+        -   Compara il tuo lavoro con un vicino. Assicurati che tu stia posizionando il codice nello stesso posto.
+      CSD U2 HTML Adding Paragraphs_2019: |-
+        # Aggiungi Testo al Corpo
+
+        Quando avvii qualsiasi progetto Web Lab, aggiungerà automaticamente i tag `<!DOCTYPE>`, `<html>`, `<head>`, e `<body>` al tuo progetto. Quando aggiungi contenuto ai tuoi progetti, avrai bisogno di farlo tra i tag `<body>` e `</body>`perchè dovrebbe essere parte della tua pagina web.
+
+        # Fai Questo
+
+        -   Scrivi tre frasi separate su qualsiasi argomento che ti piace all'interno dei tag corpo della tua pagina web.
+        -   Clicca su "Aggiorna e Salva" se non vedi le modifiche nell'area anteprima.
+        -   Compara il tuo lavoro con un vicino. Assicurati che tu stia posizionando il codice nello stesso posto.
+      CSD U2 HTML Debug Paragraphs: |-
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+        <details>
+
+        <summary>
+        <strong>Cos'è un elemento paragrafo?</strong>
+        </summary>
+        I paragrafi sono contrassegnati da tag di apertura ( `<p>` ) e di chiusura ( `</p>` ). I paragrafi in HTML possono essere di ogni lungezza di testo da una parola a molte frasi. I paragrafi si raggruppano in frasi, bisogna mettere un po' di spazio tra questo gruppo di testo ed il successivo.
+        </details>
+        <details>
+        <summary>
+        <strong>Perchè l'HTML sembra funzionare anche quando è rotto?</strong>
+        </summary>
+        L'HTML è letto dal tuo browser web per generare pagine web. Visto che le persone spesso fanno piccoli errori quando scrivono le loro pagine web, i browser sono programmati anche per fare diversi tentativi! L'unico modo per assicurare che il tuo codice sembri come vuoi tu è assicurarsi di usare sempre i tag in modo corretto.
+        </details>
+        <details>
+        <summary>
+        <strong>Perchè a volte il codice diventa rosa?</strong>
+        </summary>
+
+        Web Lab è programmato per identificare automaticamente qualche errore in HTML. Quando nota un errore, fa diventare quel codice rosa.  L'errore potrebbe essere in rosa, o potrebbe essere da qualche parte prima del codice rosa. Avrai bisogno di fare debug con attenzione per trovare il tuo errore.
+
+        </details>
+        </div>
+
+        # Debug: Sistema i Tag Rotti
+
+        Questa semplice pagina web ha qualche problema che non permettono al contenuto di essere mostrato correttamente. Identifica e risolvi i problemi. Questa pratica è anche chiamata "debug" del codice.
+
+        # Fai Questo
+
+        -   Sistema il codice rotto così che la pagina web sia mostrata correttamente
+        -   Compara i problemi che hai risolto con un vicino
+      CSD U2 HTML Debug Paragraphs_2019: |-
+        <div class="no-pullthrough" style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"><details>
+
+        <summary>
+        <strong>Cos'è un elemento paragrafo?</strong>
+        </summary>
+
+        I paragrafi sono contrassegnati da tag di apertura ( `<p>` ) e di chiusura ( `<\p>` ). I paragrafi in HTML possono essere di qualsiasi lungezza di testo da una parola ad un sacco di frasi. I paragrafi si raggruppano in set di frasi e metti un po' di spazio tra quel gruppo di testo ed il gruppo di testo successivo.
+
+        </details>
+        <details>
+        <summary>
+        <strong>Perchè l'HTML sembra funzionare anche quando è rotto?</strong>
+
+        </summary>
+
+        L'HTML è letto dal tuo browser web per generare pagine web. Visto che le persone spesso compiono piccoli errori quando scrivono le loro pagine web, i browser sono programmati per fare un'intuizione migliore di quello che tu intendevi fare. A volte differenti browser sono anche programmati per fare differenti intuizioni! L'unico modo per assicurare che il tuo codice sembri come intendi è assicurarsi di usare sempre i tag correttamente.
+
+        </details>
+        <details>
+        <summary>
+        <strong>Perchè il codice diventa rosa a volte?</strong>
+        </summary>
+
+        Web Lab è programmato per identificare automaticamente alcuni errori in HTML. Quando nota un errore, trasforma il codice in rosa. L'errore potrebbe essere in rosa, o potrebbe essere da qualche parte prima del codice rosa. Dovrai debuggare con attenzione per trovare il tuo errore.
+
+        </details>
+        </div>
+
+        # Debug: Ripara i Tag Rotti
+
+        Questa semplice pagina web ha qualche problema che non sta permettendo al contenuto di essere mostrato correttamente. Identifica e risolvi i problemi. Questa pratica è anche chiamata "debugging" del tuo codice.
+
+        # Fai Questo
+
+        -   Ripara il codice rotto così che la pagina web sia mostrata correttamente
+        -   Compara i problemi che hai risolto con un vicino
+      CSD U2 Heading Demo: "# Intestazioni\n\n<div style=\"float: right; height: 250px;
+        width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n<details>\n\n<summary><strong>Cosa
+        sono le intestazioni?</strong></summary>\n\nLe intestazioni sono i titoli
+        delle sezioni di differenti dimensioni di una pagina web. Le intestazioni
+        aggiungono struttura alla tua pagina web spezzandola, per rendere più facile
+        la lettura ad un utente.\n\n</details>\n<details>\n<summary><strong>Come faccio
+        le intestazioni in differenti dimensioni?</strong></summary>\n\nLe intestazioni
+        esistono in 6 differenti dimensioni. Hai già usato quella più grande: \\<h1>.\nIl
+        numero '1' nel tag HTML designa che questa è l'intestazione più grande. La
+        più piccola è \\<h6>. Puoi anche provare i tag \\<h2>, \\<h3>, \\<h4>, e \\<h5>,
+        che diventano più piccoli all'aumentare del numero.\n\n</h1>\n</details>\n<details>\n<summary><strong>Cos'è
+        l'HTML?</strong></summary>\n\nL'HTML sta per Hypertext Markup Language. L'HTML
+        è usato per aggiungere struttura al contenuto di una pagina web. L'HTML usa
+        tag per specificare dove iniziano e finiscono certe strutture. Questi tag
+        sono set di caratteri non trovati nella lingua inglese così che il contenuto
+        e la struttura siano differenziati. \n\n</details>\n<details>\n<summary><strong>Cos'è
+        un elemento HTML?</strong></summary>\n\nUn elemento HTML è un pezzo di un
+        sito web contrassegnato da un tag di inizio e a volte chiuso da un tag di
+        chiusura. L'elemento include anche il contenuto nei tag. Per esempio: \n<img
+        src=\"https://images.code.org/fb4df62aa4d879f7021c567be2e28eea-image-1481135855001.png\"
+        style=\"width:500px\">\n\n</details>\n<details>\n<summary><strong>Cos'è un
+        tag HTML?</strong></summary>\n\nUn tag HTML è lo speciale set di caratteri
+        che dicono alla macchina dove inizia o finisce un elemento HTML e di che tipo
+        è.\n\n</details>\n</div>\n\nGià, hai organizzato il tuo contenuto in paragrafi.
+        \ Un altro modo in cui l'HTML ti consente di organizzare il tuo codice è usando
+        **intestazioni**. Un'intestazione è una breve porzione di testo che va in
+        alto in una sezione di contenuto, come un titolo.\n\nFai Questo:\n\n-   Trova
+        le intestazioni nella pagina web sotto ed usa lo Strumento Ispettore per vedere
+        il codice che le costituisce.\n-   Assicurati che tu ed il tuo partners siate
+        d'accordo su cosa fanno i tag.\n-   Modifica il codice così che \"Disegni\"
+        e \"2 anni\" corrispondano  alle intestazioni sul resto della pagina."
       CSD U2 Heading Demo_2019: "# Intestazioni (Headings)\n\n<div class=\"no-pullthrough\"
         style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left:
         20px; font-size:14px\">\n<details>\n\n<summary><strong>Cosa sono le intestazioni
@@ -220,9 +412,161 @@ it-IT:
         Tool to see the code that makes them.\n-   Make sure you and your partner
         agree on what the tags do.\n-   Change the code so that \"Drawing\" and \"2
         years\" match the headings on the rest of the page."
+      CSD U2 Heading Sizes: "# Dimensioni Intestazione\n\n<div style=\"float: right;
+        height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"
+        markdown=\"1\"><div style=\"float: right; height: 250px; width: 40%; overflow-y:
+        scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n<details>\n\n<summary>\n<strong>Cosa
+        sono le intestazioni?</strong>\n\n</summary>\nLe intestazioni sono titoli
+        di sezione di differente dimensione  in una pagina web. Le intestazioni aggiungono
+        struttura alla tua pagina web spezzandola così che sia più facile per l'utente
+        leggere.\n</details>\n<details>\n<summary><strong>Come faccio intestazioni
+        di differenti dimensioni?</strong>\n\n</summary>\nLe intestazioni esistono
+        in 6 dimensioni differenti. L'intestazione più comune è &lt;h1&gt; Il numero
+        uno nel tag HTML designa che è l'intestazione più grande. L'intestazione più
+        piccola è &lt;h6&gt;. Puoi anche provare i tag &lt;h2&gt;, &lt;h3&gt;, &lt;h4&gt;
+        e &lt;h5&gt; che diventano più piccole all'aumentare del numero.\n</details>\n<details>\n<summary><strong>Cos'è
+        l'HTML?</strong>\n\n</summary>\nHTML sta per Hypertext Markup Language. L'HTML
+        è usato per aggiungere struttura al contenuto di una pagina web. L'HTML usa
+        i tag per specificare dove iniziano e finiscono certe strutture. Questi tag
+        sono set di caratteri non trovati nella lingua inglese così che il contenuto
+        e la struttura possano essere differenziati. \n</details>\n<details>\n<summary><strong>Cos'è
+        un elemento HTML?</strong>\n\n</summary>\nUn elemento HTML è un pezzo di un
+        sito web che è contrassegnato da un tag di inizio e talvolta chiuso con un
+        tag di chiusura. L'elemento include anche il contenuto all'interno dei tag.
+        Per esempio: \n<img src=\"https://images.code.org/fb4df62aa4d879f7021c567be2e28eea-image-1481135855001.png\"
+        style=\"width:500px\">\n</details>\n<details>\n<summary><strong>Cos'è un tag
+        HTML?</strong>\n\n</summary>\n\nUn tag HTML è il set di caratteri speciale
+        che dice alla macchina dove è l'inizio o la fine di un elemento HTML e di
+        che tipo è.\n\n</details>\n</div>\n\nLe intestazioni possono esistere in differenti
+        dimensioni. In questa pagina, ci sono sei intestazioni di dimensioni differenti,
+        ma sono tutte mischiate. Tu ed il tuo partner potete scoprire come risolverle?\n\nFai
+        Questo:\n\n-   Usa lo Strumento Ispettore per scoprire cosa rende le intestazioni
+        di differenti dimensioni\n-   Assicurati che tu ed il tuo partner siate d'accordo
+        su cosa facciano i differenti tag intestazione.\n-   Cambia i tag così che
+        le intestazioni siano in ordine dal più grande al più piccolo, ed il testo
+        dica la dimensione corretta come nell'immagine sotto.\n\n<img src=\"https://images.code.org/762022f97a355dd63dce5ecc8d0127aa-image-1493161154608.58.15
+        PM.png\" style=\"width:100px; float:left\">"
+      CSD U2 Inspector Warm Up: |-
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px">
+        <details>
+
+        <summary><strong>Come uso lo Strumento Ispettore</strong>
+
+        </summary>
+
+        Lo Strumento Ispettore è un gran modo per imparare di più sul codice non familiare in Web Lab. Per attivare lo Strumento Ispettore, clicca <img src="https://images.code.org/188579d7c6e7645d0d2edd203a33bd63-image-1480361561351.31.56 PM.png" style="width:100px">. Saprai che lo Strumento Ispettore è attivo perchè il pulsante diverrà bianco e dirà "Ispettore: On". Una volta attivato lo Strumento Ispettore, puoi passare su qualsiasi cosa nell'area anteprima e Web Lab evidenzierà il codice che fa apparirà questa parte della pagina.
+
+        </details>
+        </div>
+
+        # Esplora HTML
+
+        Questa è una pagina web scritta in HTML, il linguaggio del web. Imparerai di più su come funziona, ma prima esploralo usando lo Strumento Ispettore.
+
+        # Fai Questo
+
+        -   Clicca il Suggerimento "Come uso lo Strumento Ispettore" sulla destra per imparare come usare lo Strumento Ispettore.
+        -   Segui le istruzioni nella pagina web per esplorare la pagina web e discuti con un partner come sta funzionando.
+      CSD U2 Inspector Warm Up_2019: |-
+        <div class="no-pullthrough" style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px">
+        <details>
+
+        <summary>
+        <strong><span>Come uso lo Strumento Ispettore? </span></strong>
+        </summary>
+
+        Lo Strumento Ispettore è un gran modo per imparare di più sul codice non familiare in Web Lab. Per attivare lo Strumento Ispettore, clicca <img src="https://images.code.org/188579d7c6e7645d0d2edd203a33bd63-image-1480361561351.31.56 PM.png" style="width:100px">. Saprai che lo Strumento Ispettore è attivo perchè il pulsante diverrà bianco e dirà "Ispettore: On". Una volta attivato lo Strumento Ispettore, puoi passare su qualsiasi cosa presente nell'area anteprima e Web Lab sottolineerà il codice che sta facendo comparire quella parte della pagina.
+
+        </details>
+        </div>
+
+        # Esplora l'HTML
+
+        Questa è una pagina web scritta in HTML, il linguaggio del web. Imparerai di più su come funziona, ma prima esploralo usando lo Strumento Ispettore.
+
+        # Fai Questo
+
+        -   Clicca il Suggerimento "Come uso lo Strumento Ispettore?" sulla destra per imparare come usare lo Strumento Ispettore.
+        -   Segui le istruzioni nella pagina web per esplorarla e discuti con un partner su come funziona.
+      CSD U2 Pair Programming Video_2019: |-
+        ## Domande da considerare
+
+        -   Perchè credi che i programmatori professionisti usino la programmazione in pari?
+        -   Come pensi che la programmazione in pari ti aiuti a programmare meglio?
+      CSD U2 Project Start: |-
+        # Avvia il Tuo Progetto
+
+        Ora che hai un piano per il tuo sito web personale, puoi iniziare a codificarlo qui. Non ti preoccupare se non puoi fare tutto ciò che vuoi oggi. Avrai un sacco di possibilità di migliorare il tuo lavoro mentre imparerai di più sullo sviluppare siti web.
+
+        # Fai Questo
+
+        -   Usa HTML per creare la pagina che hai progettato. Assicurati che includa
+            -   Almeno **due intestazioni di dimensioni differenti**
+            -   Almeno **un paragrafo**
+        -   **Rifletti** sulla tua pagina comparandola al tuo schizzo e mostrandolo al tuo partner
+      CSD U2 Project Start_2018: |-
+        # Avvia il Tuo Progetto
+
+        Ora che hai un piano per il tuo sito web personale, puoi iniziare a codificarlo qui. Non ti preoccupare se non puoi fare tutto ciò che vuoi oggi. Avrai un sacco di possibilità di migliorare il tuo lavoro mentre imparerai di più sullo sviluppare siti web.
+
+        # Fai Questo
+
+        -   Usa HTML per creare la pagina che hai progettato. Assicurati che includa
+            -   Almeno **due intestazioni di dimensioni differenti**
+            -   Almeno **un paragrafo**
+        -   **Rifletti** sulla tua pagina comparandola al tuo schizzo e mostrandolo al tuo partner
+      CSD U2 Project Start_2019: |-
+        # Avvia il Tuo Progetto
+
+        Ora che hai un piano per il tuo sito web personale, puoi iniziare a codificarlo qui. Non ti preoccupare se non puoi fare tutto ciò che vuoi oggi. Avrai un sacco di possibilità di migliorare il tuo lavoro mentre imparerai di più sullo sviluppare siti web.
+
+        # Fai Questo
+
+        -   Usa HTML per creare la pagina che hai progettato. Assicurati che includa
+            -   Almeno **due intestazioni di dimensioni differenti**
+            -   Almeno **un paragrafo**
+        -   **Rifletti** sulla tua pagina comparandola al tuo schizzo e mostrandolo al tuo partner
       CSD U6 iter predict bubbles: "![](https://images.code.org/52f474adbbc3bdd87aaae407c9ebf588-image-1515690462464.png)"
       CSD U6 iter predict bubbles_2018: "![](https://images.code.org/52f474adbbc3bdd87aaae407c9ebf588-image-1515690462464.png)"
       CSD U6 iter predict bubbles_2019: "![](https://images.code.org/52f474adbbc3bdd87aaae407c9ebf588-image-1515690462464.png)"
+      CSD What Makes a Computer a Computer Video_2019: |-
+        ## Domande per pensarci
+
+        -   Cosa rende i computer diversi dalle macchine che li hanno preceduti?
+        -   Pensa a qualcosa che fai col computer. Che tipo di input, output, archiviazione ed elaborazione stanno avvenendo?
+      CSDU2 - Type Anything: |-
+        <img src="https://images.code.org/12ffe6980a25a3664eabe69be487a921-image-1485384422334.jpg" style="width:400px; float:right">
+
+        # Benvenuto a Web Lab!
+
+        La piattaforma in cui ti trovi è chiamata Web Lab. Ci sono tre parti principali sullo schermo in Web Lab.
+
+        ## Fai questo
+
+        -   Prova a digitare qualcosa nello spazio di lavoro.
+        -   Premi <img src="https://images.code.org/678619085e37ea6ce904ac8abd0df2f2-image-1493226906609.14.45 AM.png" style="width:150px"> per vederlo nell'area anteprima!
+      CSDU2 - Type Anything_2018: |-
+        <img src="https://images.code.org/12ffe6980a25a3664eabe69be487a921-image-1485384422334.jpg" style="width:400px; float:right">
+
+        # Benvenuto a Web Lab!
+
+        La piattaforma in cui ti trovi è chiamata Web Lab. Ci sono tre parti principali sullo schermo in Web Lab.
+
+        ## Fai questo
+
+        -   Prova a digitare qualcosa nello spazio di lavoro.
+        -   Premi <img src="https://images.code.org/678619085e37ea6ce904ac8abd0df2f2-image-1493226906609.14.45 AM.png" style="width:150px"> per vederlo nell'area anteprima!
+      CSDU2 - Type Anything_2019: |-
+        <img src="https://images.code.org/12ffe6980a25a3664eabe69be487a921-image-1485384422334.jpg" style="width:400px; float:right">
+
+        # Benvenuto a Web Lab!
+
+        La piattaforma in cui ti trovi è chiamata Web Lab. Ci sono tre parti principali sullo schermo in Web Lab.
+
+        ## Fai questo
+
+        -   Prova a digitare qualcosa nello spazio di lavoro.
+        -   Premi <img src="https://images.code.org/678619085e37ea6ce904ac8abd0df2f2-image-1493226906609.14.45 AM.png" style="width:150px"> per vederlo nell'area anteprima!
       Course 4 Artist For Loops 6a: Per ottenere questo disegno bastano solo tre piccole
         modifiche al codice del precedente esercizio!
       Course 4 Play Lab Params 3: |-
@@ -321,24 +665,75 @@ it-IT:
         **Cuore del mare** ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png)
         ! Usa i coralli rossi e blu come punti di riferimento per raggiungere il **forziere**
         del tesoro ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png).
+      Crack Random Substitution: |-
+        # Rompi un codice a sostituzione casuale!
+
+        Questa versione dello strumento ti da' maggiori informazioni sul testo crittografato e maggiori opzioni per come provare differenti sostituzioni.
+
+        ### Diversi modi di analizzare il testo
+
+        -   Gioca con alcune delle opzioni di sorteggio disponibili nella scheda codice a sostituzione Casuale per ottenere diversi punti di vista sulle frequenze delle lettere nel testo inserito così come nel testo in inglese standard.
+            ![](https://images.code.org/82efbca1807206c9a07de520fdb22027-image-1443572614493.23.28.png)
+
+        ### Diversi modi di sostituire
+
+        -   Per sostituire una lettera puoi trascinare una lettera blu dell'alfabeto direttamente sotto la lettera arancione che vuoi cambiare nel testo cifrato originale.
+            ![](https://images.code.org/da9a7af7568d8c1698872ab91b4d79d7-image-1443572471212.gif)
+
+        ### Gioca. Gioca sempre.
+
+        -   Ci sono altri modi per analizzare e sostituire i caratteri che puoi trovare cliccando sui pulsanti e provando qualsiasi cosa ti piaccia.
+        -   Ricorda: non puoi romperlo :)
+
+        Vedi quanto ti ci vuole a decodificare il codice! È questo un buon metodo per crittografare dati segreti?
+
+        <img src="http://code.org/api/hour/finish_encryption.png">
+      Crack a Caesar Cipher: |-
+        # Decodifica un codice di Cesare!
+
+        Questo strumento ti permette di giocare con il testo e di fare codici di Cesare. Puoi usarlo o per codificare un messaggio o decodificarlo.
+
+        # Fai Questo
+
+        -   Carica un **Messaggio semplice** dal messaggio a discesa. Questo caricherà un messaggio che è stato codificato con un codice di Cesare.
+
+        ![](https://images.code.org/347139486c8c729bf3c6e72ce67da878-image-1476286380409.gif)
+
+        -   Usando i pulsanti nella scheda di sostituzione di Cesare, puoi spostare l'alfabeto avanti o indietro per provare a decodificare il messaggio.
+
+        ![](https://images.code.org/ef9ebc16d2f1442dc46fba9bd48b5d43-image-1476285966821.gif)
+
+        Vedi quanto ti ci vuole per decodificare il codice! È questo un buon metodo di codificare dati segreti?
+
+        <img src="http://code.org/api/hour/begin_encryption.png">
       Dance Party 1-validated: "**Fai una previsione:** Ecco un personaggio chiamato
         `alien1`! \n\nCosa pensi accadrà quando ci cliccherai sopra?  "
-      Dance Party 2: "L'alieno era orgoglioso delle sue capacità di ballo su Marte,
-        ma ora può spostarsi solo da un lato all'altro.\n\nPuoi modificare il comportamento
-        all'interno del blocco <xml> <block type=\"gamelab_addBehaviorSimple\" inline=\"true\">\n
-        \     <value name=\"SPRITE\">\n        <block type=\"sprite_variables_get\">\n
-        \         <title name=\"VAR\">alien1</title>\n        </block>\n      </value>\n
-        \   </block></xml> per fare in modo che inizi gironzolando qua e là?  "
-      Dance Party 2_2019: "L'alieno era orgoglioso delle sue capacità di ballo su
-        Marte, ma ora può spostarsi solo da un lato all'altro.\n\nPuoi modificare
-        il comportamento all'interno del blocco <xml> <block type=\"gamelab_addBehaviorSimple\"
-        inline=\"true\">\n      <value name=\"SPRITE\">\n        <block type=\"sprite_variables_get\">\n
-        \         <title name=\"VAR\">alien1</title>\n        </block>\n      </value>\n
-        \   </block></xml> per fare in modo che inizi gironzolando qua e là?  "
+      Dance Party 2: |-
+        L'alieno era orgoglioso delle sue capacità di ballo su Marte, ma ora può spostarsi solo da un lato all'altro.
+
+        Puoi modificare il comportamento all'interno del blocco <xml> <block type="gamelab_addBehaviorSimple" inline="true">
+              <value name="SPRITE">
+                <block type="sprite_variables_get">
+                  <title name="VAR">alien1</title>
+                </block>
+              </value>
+            </block></xml> per fare in modo che inizi gironzolando qua e là? (Comportamento "wandering")
+      Dance Party 2_2019: |-
+        L'alieno era orgoglioso delle sue capacità di ballo su Marte, ma ora può spostarsi solo da un lato all'altro.
+
+        Puoi modificare il comportamento all'interno del blocco <xml> <block type="gamelab_addBehaviorSimple" inline="true">
+              <value name="SPRITE">
+                <block type="sprite_variables_get">
+                  <title name="VAR">alien1</title>
+                </block>
+              </value>
+            </block></xml> per fare in modo che inizi gironzolando qua e là? (Comportamento "wandering")
       Dance Party 3: "Crea un nuovo personaggio chiamato `alien2`.  \n\nFagli fare
-        un passo di danza diverso ogni volta che ci clicchi sopra."
-      Dance Party 3_2019: "Crea un nuovo personaggio chiamato `alien2`.  \n\nFagli
-        fare un passo di danza diverso ogni volta che ci clicchi sopra."
+        un passo di danza a tua scelta ogni volta che ci clicchi sopra.  "
+      Dance Party 3_2019: |-
+        Crea un nuovo personaggio con l'aspetto di un alieno rosa. <img src="https://levelbuilder-studio.code.org/media?u=https%3A%2F%2Flevelbuilder-studio.code.org%2Fapi%2Fv1%2Fanimation-library%2FecnW7rdKTB0fUrKRKrqIHbrHVvyWh5hu%2Fcategory_characters%2FalienPink.png" width="3%"></img>
+
+        Fagli fare un passo di danza a tua scelta ogni volta che ci clicchi sopra!
       Dance Party 4: "Crea un terzo personaggio chiamato `alien3`.  \n\nRiesci a posizionare
         tutti gli alieni lungo una linea retta? È una squadra di ballo aliena!"
       Dance Party 4_2019: "Crea un terzo personaggio chiamato `alien3`.  \n\nRiesci
@@ -358,9 +753,8 @@ it-IT:
         <xml><block type=\"gamelab_removeAllBehaviors\" inline=\"true\">\n      <value
         name=\"SPRITE\"/>\n    </block></xml> per fare in modo che ogni alieno si
         fermi quando si clicca su di esso."
-      Dance Party 7: "Infine, aggiungi un nuovo personaggio a campanella chiamato
-        `myBell`.  \n\nQuando viene cliccata, fa fare a tutti gli alieni la sua stessa
-        danza!"
+      Dance Party 7: "Infine, aggiungi un nuovo personaggio a forma di campanella.
+        \ \n\nQuando viene cliccata, fa fare a tutti gli alieni la sua stessa danza!"
       Dance Party 7_2019: "Infine, aggiungi un nuovo personaggio a campanella chiamato
         `myBell`.  \n\nQuando viene cliccata, fa fare a tutti gli alieni la sua stessa
         danza!"
@@ -532,8 +926,8 @@ it-IT:
       Function intro Ryan: "Nella tua area di lavoro c'è una **funzione** chiamata
         `costruisci un ponte`.  Tutto il codice che ti serve per attraversare il fiume
         è lì dentro! \n\nTrascina due volte il piccolo blocco verde <xml> <block type=\"procedures_callnoreturn\"
-        id=\"callMe\"><mutation name=\"costruisci un ponte\"/></block></xml> nell'area
-        di lavoro per preparare il percorso che conduce {currentPlayerName} alla torcia
+        id=\"callMe\"><mutation name=\"build bridge\"/></block></xml> nell'area di
+        lavoro per preparare il percorso che conduce {currentPlayerName} alla torcia
         di pietrarossa [redstone_torch]."
       Function intro Ryan_2019: |-
         Usa due volte la funzione `costruisci un ponte` per creare un sentiero fino alla torcia di pietrarossa.
@@ -580,12 +974,25 @@ it-IT:
         schema come questo!
       InspirationalArtwork_2018: Hai imparato tutto quello che devi sapere per creare
         uno schema come questo!
+      Intro to Web Lab - Part 1_2019: |-
+        ## Domande da considerare:
+
+        -   Quali sono le differenti parti di Web Lab, e per cosa sono usate?
+      Intro to Web Lab - Part 2_2019: |-
+        ## Domande da considerare
+
+        -   Perchè i tag HTML sono utili?
+        -   Cosa fa il tag paragrafo?
       K-1 Bee Loops 5: Usa i blocchi `ripeti` (detti anche <i>cicli</i>) per prendere
         il nettare e fare il miele!
       K-1 Maze Loops 2: Prova ad usare il nuovo blocco `ripeti` (detto anche <i>ciclo</i>)
         per farmi arrivare al maialino! Esso mi farà "ripetere", per il numero di
         volte che hai impostato, tutte le azioni all'interno del blocco.
       K-1 Maze Loops 8: Usa il blocco `ripeti` per farmi arrivare al maialino!
+      MC HOC 2016 SCORE LEVEL: "Alcuni giochi ti fanno mantenere il punteggio. Gioca
+        a tag con quegli Iron Golem ed usa il <xml>  <block type=\"craft_addScore\">\n
+        \   <title name=\"SCORE\">1</title>\n  </block></xml> blocco per darti un
+        punto quando li tagghi.  \n\n  Raggiungi cinque punti per vincere!"
       MC_HOC_2017_01_RETRY: "La porta è bloccata, ma l'Agente è pronto per venire
         in aiuto! \n\nAggancia un blocco `vai avanti` al blocco `quando si clicca
         su \"Esegui\"` per far arrivare l'Agente sulla pedana a pressione [PressurePlate_Up],
@@ -626,7 +1033,9 @@ it-IT:
       MC_HOC_2017_05_Cole: |-
         Oh no, non c'è più il ponte!
 
-        Programma l'Agente per ricostruire il ponte usando il blocco  <xml> <block type="craft_placeBlock">     <title name="TYPE"> </title>   </block></xml> in modo che {currentPlayerName} possa raggiungere la **pala** [diamond_shovel].
+        Programma l'Agente per ricostruire il ponte usando il blocco <xml>  <block type="craft_placeBlock">
+            <title name="TYPE">       </title>
+          </block></xml> in modo che {currentPlayerName} possa raggiungere la **pala** [diamond_shovel].
       MC_HOC_2017_05_Cole_2019: |-
         Oh no, non c'è più il ponte!
 
@@ -787,9 +1196,9 @@ it-IT:
         \ Aggiungi sullo schermo un nuovo personaggio sapone.\n2.  Puoi crearlo in
         modo che quando la giraffa e il sapone si toccano, la giraffa ritorni al suo
         colore normale?\n\n* * *\n\nPer ripristinare il colore, usa il blocco:\n<xml><block
-        type=\"gamelab_removeTint\" inline=\"true\">\n       <value name=\"THIS\">\n
-        \        <block type=\"sprite_variables_get\">\n           <title name=\"VAR\">mySprite</title>\n
-        \        </block>\n       </value>\n     </block></xml>"
+        type=\"gamelab_removeTint\" inline=\"true\">\n      <value name=\"THIS\">\n
+        \       <block type=\"sprite_variables_get\">\n          <title name=\"VAR\">mySprite</title>\n
+        \       </block>\n      </value>\n    </block></xml>"
       Virtual Pet 3_2019: "Non possiamo lasciare in giro una giraffa tutta sporca!
         \ \n\n1.  Aggiungi sullo schermo un nuovo personaggio Sapone.\n2.  Puoi crearlo
         in modo che quando la giraffa e il sapone si toccano, la giraffa ritorni al
@@ -818,9 +1227,13 @@ it-IT:
       Virtual Pet 8_2019: "Tempo di giocare: Cos'altro puoi far fare alla tua giraffa?
         \n\n-   Puoi aggiungere altri elementi caratteristici al tuo animaletto virtuale?\n-
         \  Puoi procurarle degli amici?  "
-      Virtual Pet Freeplay: "Tempo di giocare: Cos'altro puoi far fare alla tua giraffa?
-        \n\n-   Puoi aggiungere altri elementi caratteristici al tuo animaletto virtuale?\n-
-        \  Puoi procurarle degli amici?  "
+      Virtual Pet Freeplay: "**Tempo di giocare:** Cos'altro puoi far fare alla tua
+        giraffa? \n\n-   Puoi aggiungere altri elementi caratteristici al tuo animaletto
+        virtuale?\n-   Puoi procurarle degli amici?  "
+      'Widget: Text Compression': Cerca modelli (parole o frasi ripetute) nel testo.
+        Inserisci i modelli che vedi nel dizionario in alto a destra. Come inserisci
+        le voci nel dizionario, il simbolo per la voce è inserito nel testo al posto
+        del modello.
       comment_intro_maze_2018: "_\"Sono confuso. Ricordami come uscire da questo labirinto.\"_
         \ \n\n* * *\n\nPer risolvere questo esercizio, completa il codice usando anche
         il nuovo blocco <xml><block type=\"comment\">\n    <title name=\"TEXT\"> </title>\n
@@ -897,8 +1310,8 @@ it-IT:
         cancellalo e sostituiscilo con qualcosa di totalmente diverso)
       course4_collector_nested_loops_challenge2: "_\"A caccia di diamanti - usando
         i cicli!\"_ \n\nAiuta la collezionista a raggiungere almeno due diamanti usando
-        solo i blocchi che trovi nella cassetta degli attrezzi. È possibile raccoglierli
-        tutti e 4."
+        solo i blocchi che trovi nella cassetta degli attrezzi. Se vuoi, puoi anche
+        raccoglierli tutti e 4."
       course4_harvester_nested_loops_challenge1: _"Ho bisogno di aiuto nella fattoria!
         Aiutami a raccogliere queste pannocchie usando solo i blocchi presenti nella
         cassetta degli attrezzi."_
@@ -994,7 +1407,7 @@ it-IT:
       courseA_artist_loops4_2019: |-
         Ora usa un ciclo <xml><block type="controls_repeat_simplified_dropdown" block-text="repeat"><title name="TIMES" config="2-6">5</title></block></xml> per disegnare questa linea cinque volte!
 
-        ![](https://images.code.org/b2bc7f52ffdac2ad0d8e7c2d798c24df-image-1501875818062.gif)
+        <xml><block type="controls_repeat_simplified_dropdown" block-text="repeat"><title name="TIMES" config="2-6">5</title></block></xml>
       courseA_artist_loops5: |-
         ## Disegna una linea composta da sette segmenti. Questo diventerà il nostro orizzonte.
 
@@ -1030,7 +1443,7 @@ it-IT:
       courseA_artist_loops7_2019: |-
         ## Usa il ciclo <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> per aggiungere le onde all'acqua.
 
-        ![expandable](https://images.code.org/01c5f6772a8b608a2fca5f6de7e25c67-image-1498062629139.gif)
+        <xml><block type="controls_repeat_simplified_dropdown" block-text="repeat"><title name="TIMES" config="3-10">???</title></block></xml>
       courseA_artist_loops8: |-
         ## Ci serve una scala per salire sulla barca.
 
@@ -1121,9 +1534,8 @@ it-IT:
       courseA_collector_loops2: |-
         Raccogli tutti e tre i diamanti! Muovi Laura su ogni diamante e poi usa questo blocco:
           <xml><block type="collector_collect"/></xml>
-      courseA_collector_loops2_2018: |-
-        Raccogli tutti e tre i diamanti! Muovi Laura su ogni diamante e poi usa questo blocco:
-         <xml><block type="collector_collect"/></xml>
+      courseA_collector_loops2_2018: 'Raccogli tutte e tre le perle! Muovi Laurel
+        su ogni pezzo del tesoro e poi usa questo blocco: <xml><block type="collector_collect"/></xml>'
       courseA_collector_loops3: Come può Laura raccogliere tutti e cinque i diamanti
         usando un solo blocco <xml><block type="maze_moveEast"/></xml>?
       courseA_collector_loops3_2018: Come può Laura raccogliere tutti e cinque i diamanti
@@ -1175,9 +1587,9 @@ it-IT:
         la contadina raccolga tutte le pannocchie?
       courseA_harvester_loops5b_2019: Puoi modificare il programma per fare in modo
         che la contadina raccolga tutte le pannocchie?
-      courseA_harvester_loops6: Avrai bisogno di **un** blocco <xml><block type="maze_moveWest"></block></xml>
-        e di **un** blocco <xml><block type="maze_moveNorth"></block></xml> per finire
-        questo esercizio!
+      courseA_harvester_loops6: Avrai bisogno di **un** blocco <xml><block type="maze_moveWest"
+        block-text="move west"></block></xml> e di **un** blocco <xml><block type="maze_moveNorth"
+        block-text="move north"></block></xml> per finire questo esercizio!
       courseA_harvester_loops6_2019: Avrai bisogno di **un** blocco <xml><block type="maze_moveWest"></block></xml>
         e di **un** blocco <xml><block type="maze_moveNorth"></block></xml> per finire
         questo esercizio!
@@ -1197,8 +1609,8 @@ it-IT:
       courseA_harvester_seq13: Aiuta la contadina a raccogliere le pannocchie!
       courseA_harvester_seq13_2019: Aiuta la contadina a raccogliere le pannocchie!
       courseA_harvester_seq1_2019: Aiuta la contadina a raccogliere la pannocchia!
-      courseA_harvester_seq2: Usa **tre** volte il blocco <xml><block type="maze_moveWest"/></xml>
-        per far arrivare la contadina fino alla pannocchia!
+      courseA_harvester_seq2: 'Usa **tre** volte il blocco <xml><block type="maze_moveWest"/></xml>
+        per far arrivare la contadina fino alla pannocchia! '
       courseA_harvester_seq2_2019: Usa **tre** volte il blocco <xml><block type="maze_moveWest"/></xml>
         per far arrivare la contadina fino alla pannocchia!
       courseA_harvester_seq3: Usa **tre** volte il blocco <xml><block type="maze_moveNorth"/></xml>
@@ -1226,15 +1638,15 @@ it-IT:
         volte!
       courseA_harvester_seq9: Aggiungi due blocchi per completare l'esercizio!
       courseA_harvester_seq9_2019: Aggiungi due blocchi per completare l'esercizio!
-      courseA_maze_ramp2_2018: "Per completare l'esercizio, connetti entrambi i blocchi
-        <xml><block type=\"maze_moveEast\"/></xml> al blocco <xml><block type=\"when_run\"/></xml>,
-        quindi clicca su  \"▶ Esegui\".  \n\n* * *"
+      courseA_maze_ramp2_2018: Per completare l'esercizio, connetti entrambi i blocchi
+        <xml><block type="maze_moveEast"/></xml> al blocco <xml><block type="when_run"/></xml>,
+        quindi clicca su "▶ Esegui".
       courseA_maze_ramp2_2019: "Per completare l'esercizio, connetti entrambi i blocchi
         <xml><block type=\"maze_moveEast\"/></xml> al blocco <xml><block type=\"when_run\"/></xml>,
         quindi clicca su  \"▶ Esegui\".  \n\n* * *"
-      courseA_maze_ramp3a_2018: "Per completare il programma, trascina un blocco <xml><block
-        type=\"maze_moveNorth\"/></xml> dalla cassetta degli attrezzi e aggiungilo
-        sotto a tutti gli altri, poi clicca su \"▶ Esegui\". \n\n* * *"
+      courseA_maze_ramp3a_2018: Per completare il programma, trascina un blocco <xml><block
+        type="maze_moveNorth"/></xml> dalla cassetta degli attrezzi e aggiungilo sotto
+        a tutti gli altri, poi clicca su "▶ Esegui".
       courseA_maze_ramp3a_2019: "Per completare il programma, trascina un blocco <xml><block
         type=\"maze_moveNorth\"/></xml> dalla cassetta degli attrezzi e aggiungilo
         sotto a tutti gli altri, poi clicca su \"▶ Esegui\". \n\n* * *"
@@ -1278,6 +1690,7 @@ it-IT:
         ![expandable](https://images.code.org/c6ae5024441e2305db82d06679e5a281-image-1497997160569.gif)
       courseA_maze_seq12_2018: "Prendi quel maialino! \\\r\n\\\r\n![expandable](https://images.code.org/c6ae5024441e2305db82d06679e5a281-image-1497997160569.gif)"
       courseA_maze_seq12_2019: "Prendi quel maialino! \\\r\n\\\r\n![expandable](https://images.code.org/c6ae5024441e2305db82d06679e5a281-image-1497997160569.gif)"
+      courseA_maze_seq13_2019: Prendi quel maialino in qualsiasi modo!
       courseA_maze_seq1_2018: _"Gioca con questi blocchi e cerca di farmi arrivare
         fino a quel cattivone di un maialino!"_
       courseA_maze_seq1_2019: _"Gioca con questi blocchi e cerca di farmi arrivare
@@ -1343,25 +1756,23 @@ it-IT:
       courseA_maze_seq_challenge1_2019: Correggi gli errori in questo programma. Togli
         i blocchi di troppo e aggiungi quelli che mancano. Fai arrivare l'uccellino
         fino al maialino!
+      courseA_maze_seq_challenge2_2019: Individua il percorso per far arrivare l'uccellino
+        fino al maialino. Evita la dinamite (TNT) o l'uccellino ci lascerà le penne!
       courseA_playLab_events3: |-
         Aiuta il cane a muoversi unendo il blocco <xml><block type="studio_move">
             <title name="SPRITE">1</title>
-            <title
-        name="DIR">8</title>
+            <title name="DIR">8</title>
           </block></xml> al blocco evento <xml><block type="studio_whenArrow">
-            <title
-        name="VALUE">left</title>
+            <title name="VALUE">left</title>
           </block></xml> che si trova già nell'area di lavoro.
 
         Fai arrivare il cane alla bandierina per completare l'esercizio!
       courseA_playLab_events3_2018: |-
         Aiuta il cane a muoversi unendo il blocco <xml><block type="studio_move">
             <title name="SPRITE">1</title>
-            <title
-        name="DIR">8</title>
+            <title name="DIR">8</title>
           </block></xml> al blocco evento <xml><block type="studio_whenArrow">
-            <title
-        name="VALUE">left</title>
+            <title name="VALUE">left</title>
           </block></xml> che si trova già nell'area di lavoro.
 
         Fai arrivare il cane alla bandierina per completare l'esercizio!
@@ -1386,6 +1797,8 @@ it-IT:
         e giù quando si premono le frecce in su e in giù.
       courseA_playLab_events5_2019: Aggiungi gli eventi per far muovere il cane su
         e giù quando si premono le frecce in su e in giù.
+      courseA_playLab_events6_2019: Rendi questa scena più interessante, cambiando
+        lo sfondo e riproducendo un suono casuale quando si clicca sul cane.
       courseA_playLab_events7_2018: _Tempo di giocare:_ aggiungi ciò che vuoi a questo
         gioco. Riesci a fare in modo che il dinosauro scompaia quando il cane sbatte
         contro di lui? (Quando sei soddisfatto, premi "Termina" per completare il
@@ -1499,6 +1912,17 @@ it-IT:
         ![](https://images.code.org/126edbb030b78586c620fea11bd9c867-image-1497998152966.gif)
         ![](https://images.code.org/a4fc9deba0ecdae5f434a828708d997b-image-1497998171788.gif)
         ![](https://images.code.org/55271714dcfc01bf49441cdf3bf17649-image-1497998176661.gif)
+      courseB_artist_loops1_2019: Questo è un nuovo tipo di esercizio chiamato "Artista".
+        Prova a disegnare qualcosa di divertente. Quando sei soddisfatto, premi "Termina"
+        per passare all'esercizio successivo.
+      courseB_artist_loops2_2019: L'artista sta cercando di disegnare **6** volte
+        una linea, ma qualcosa non funziona. Puoi aiutarlo?
+      courseB_artist_loops3_2019: Aiuta l'artista a disegnare 7 volte una linea per
+        costruire un muro nel giardino.
+      courseB_artist_loops4_2019: Ora dobbiamo preparare il terreno per la coltivazione.
+        Trova gli errori nel codice e aiuta l'artista a sistemare il campo.
+      courseB_artist_loops5_2019: È ora di posizionare la scala! Ripeti questo schema
+        per **5** volte in modo che l'artista riesca a raggiungere la cima dei cespugli.
       courseB_artist_loops6: Dietro i cespugli c'è una bellissima pianta rampicante
         fiorita. Riesci a salire e capire dove va a finire?
       courseB_artist_loops6_2018: Dietro i cespugli c'è una bellissima pianta rampicante
@@ -1510,6 +1934,10 @@ it-IT:
         intorno."
       courseB_artist_loops7_2019: "**Sfida:** C'è un giardino segreto! Facci un giro
         intorno."
+      courseB_artist_loops8_2019: È tempo di tornare a casa. Aggiungendo un solo blocco,
+        riesci a sistemare questa scala per far scendere l'artista?
+      courseB_artist_loops9_2019: Scegli la strada più breve per tornare a casa attraversando
+        l'acqua. Puoi aiutare l'artista a stare sulle pietre?
       courseB_artist_loops_challenge1: _"È il momento di lanciare i dadi! Mi aiuti
         a disegnarli?"_
       courseB_artist_loops_challenge1_2018: _"È il momento di lanciare i dadi! Mi
@@ -1528,6 +1956,11 @@ it-IT:
         Trascina i blocchi nell'area di lavoro e cerca di capire come prendere i diamanti. Raccogli almeno un diamante per completare questo esercizio.
 
         (Se non sei riuscito a raccogliere tutti i diamanti, ma sei soddisfatto, premi il pulsante "Termina".)
+      courseB_collector_loops10_2019: Aiuta Laura a raccogliere tutti i diamanti da
+        questa grotta.
+      courseB_collector_loops11_2019: "Evviva! Raccogli più diamanti che puoi! \n(Se
+        non sei riuscito a raccogliere tutti i diamanti, ma sei comunque soddisfatto,
+        premi il pulsante \"Termina\")"
       courseB_collector_loops1_2018: "**Tempo di giocare:** questa è Laura l'avventuriera!
         Muovila per farle raccogliere più diamanti che puoi. Raccogli almeno un diamante
         per completare questo esercizio.\n\n* * *\n\nTrascina i blocchi nell'area
@@ -1558,6 +1991,20 @@ it-IT:
         usando un solo blocco <xml><block type="maze_moveEast"/></xml>?
       courseB_collector_loops3_2019: Come può Laura raccogliere tutti e cinque i diamanti
         usando un solo blocco <xml><block type="maze_moveEast"/></xml>?
+      courseB_collector_loops4_2019: Correggi il percorso di Laura per raccogliere
+        tutti i diamanti!
+      courseB_collector_loops5_2019: Questo è il programma che risolve il precedente
+        esercizio, modificalo per farmi prendere tutti i diamanti.
+      courseB_collector_loops6_2019: Scopri il codice necessario per aiutare Laura
+        a prendere tutti i diamanti!
+      courseB_collector_loops7_2019: Scrivi il codice per raccogliere tutti questi
+        diamanti.
+      courseB_collector_loops8_2019: "**Sfida:** I diamanti si sono sparpagliati giù
+        per le scale! Scrivi il codice per aiutare Laura a recuperarli."
+      courseB_collector_loops9_2019: _"Aiutami a raccogliere i diamanti in questa
+        ripida discesa."_
+      courseB_collector_loops_challenge1_2019: Questa volta hai i blocchi contati.
+        Raccogli tutti i diamanti!
       courseB_collector_loops_challenge2a: |-
         _"Prendiamo i diamanti!"_
 
@@ -1604,7 +2051,24 @@ it-IT:
         arrivarci usando i cicli?
       courseB_iceage_loops9_2019: La ghianda è così lontana! Riesci ad aiutare Scrat
         ad arrivarci usando i cicli?
+      courseB_maze_seq10_2019: Correggi gli errori per aiutare Scrat a raggiungere
+        la ghianda.
+      courseB_maze_seq11_2019: Tocca a te! Porta Scrat fino alla ghianda.
+      courseB_maze_seq12_2019: Ora prendi quella ghianda in qualsiasi modo!
+      courseB_maze_seq1_2019: |-
+        Gioca con questi blocchi per vedere cosa fanno fare a Scrat!
+
+        Porta Scrat fino alla ghianda per completare l'esercizio.
       courseB_maze_seq3: _"Correggi il programma per farmi arrivare fino al maialino!"_
+      courseB_maze_seq4_2019: Usa **2** blocchi di movimento per far arrivare Scrat
+        fino alla ghianda.
+      courseB_maze_seq5_2019: Questo esercizio è un po' complicato!
+      courseB_maze_seq6_2019: Muovi in una direzione, poi in un'altra, per far arrivare
+        Scrat fino alla ghianda!
+      courseB_maze_seq7_2019: Scopri che cosa manca e aggiungi i blocchi per far arrivare
+        Scrat fino alla ghianda!
+      courseB_maze_seq8_2019: Ora tocca a te! Cosa ti serve per far arrivare Scrat
+        fino alla ghianda?
       courseB_maze_seq9: "**Sfida**: Evita la dinamite (TNT) per far arrivare l'uccellino
         fino al maialino."
       courseB_maze_seq9_2018: "**Sfida:** aggira il ghiaccio rotto per far arrivare
@@ -1620,6 +2084,8 @@ it-IT:
       courseB_maze_seq_challenge1_2019: Hai solo quattro esemplari per ogni tipo di
         blocco. Riesci a trovare un percorso che ti faccia arrivare fino al maialino
         prima di terminare tutti i blocchi a disposizione?
+      courseB_maze_seq_challenge2_2019: Correggi questo esercizio. Ci sono già tutti
+        i blocchi giusti, ma sono nell'ordine sbagliato!
       courseB_playLab_events1: |-
         Questo ambiente si chiama Laboratorio.
 
@@ -1632,6 +2098,8 @@ it-IT:
         Questo ambiente si chiama Laboratorio.
 
         Cerca di capire cosa fa ogni blocco.
+      courseB_playlab_events2_2019: Fai dire qualcosa al drago quando clicchi sul
+        pulsante "Esegui".
       courseB_playlab_events3: Usa un evento per fare in modo che il drago cambi umore
         in modo casuale ![](https://images.code.org/c365e065614fea592612264f33624c09-image-1475698889081.17.53.png)
         quando clicchi su di lui.
@@ -1687,6 +2155,8 @@ it-IT:
         \ Fai svanire il cavaliere quando si scontra con il drago.   \n2.  Riproduci
         anche un suono quando si colpiscono, così sembra più reale.   \n\n* * *\n\nTocca
         tutte le bandierine, quindi vai contro il drago per completare l'esercizio."
+      courseB_playlab_eventsFP_2019: Usa la tua immaginazione. Come puoi rendere questo
+        gioco ancora più divertente?
       courseB_playlab_events_challenge1: |-
         È il momento della Grande Gara degli Animali! Fai in modo che gli animali si muovano verso il basso quando premi la freccia verso il basso (▼).
 
@@ -2038,24 +2508,24 @@ it-IT:
 
         ![expandable](https://images.code.org/d8e0ad6294aa5e04e4aab56631a6b50b-image-1496714582863.02.14.png)
       courseC_artist_loopsPre1a: |-
-        Ora, metti questo codice in un ciclo `ripeti ... volte` è fallo ripetere per **6** volte.
+        Ora, metti questo codice in un ciclo `ripeti ... volte` e fallo ripetere per **6** volte.
 
-        -   Nota che abbiamo aggiunto una curva di 60 gradi alla fine del codice all'interno del ciclo per ottenere una rotazione completa.
+        -   Nota che abbiamo predisposto una curva di 60 gradi alla fine del codice che andrà all'interno del ciclo per ottenere una rotazione completa.
       courseC_artist_loopsPre1a_2018: |-
-        Ora, metti questo codice in un ciclo `ripeti ... volte` è fallo ripetere per **6** volte.
+        Ora, metti questo codice in un ciclo `ripeti ... volte` e fallo ripetere per **6** volte.
 
-        -   Nota che abbiamo aggiunto una curva di 60 gradi alla fine del codice all'interno del ciclo per ottenere una rotazione completa.
+        -   Nota che abbiamo predisposto una curva di 60 gradi alla fine del codice che andrà all'interno del ciclo per ottenere una rotazione completa.
       courseC_artist_loopsPre1a_2019: |-
-        Ora, metti questo codice in un ciclo `ripeti ... volte` è fallo ripetere per **6** volte.
+        Ora, metti questo codice in un ciclo `ripeti ... volte` e fallo ripetere per **6** volte.
 
-        -   Nota che abbiamo aggiunto una curva di 60 gradi alla fine del codice all'interno del ciclo per ottenere una rotazione completa.
+        -   Nota che abbiamo predisposto una curva di 60 gradi alla fine del codice che andrà all'interno del ciclo per ottenere una rotazione completa.
       courseC_artist_loopsPrePre1a: |-
         Usa il blocco <xml><block type="jump_to_xy" id="callMe"><title name="XPOS">200</title><title name="YPOS">200</title></block></xml> per portare l'artista al centro dell'area di gioco.\
         Quindi disegna una linea lunga 50 pixel con il blocco <xml><block type="draw_move_by_constant"><title name="DIR">moveForward</title><title name="VALUE">50</title></block></xml>
       courseC_artist_loopsPrePre1a_2018: |-
         ### L'artista si trova nella posizione sbagliata!
 
-        Usa il blocco <xml><block type="jump_to_xy" id="callMe"><title name="XPOS">200</title><title name="YPOS">200</title></block></xml> per portare l'artista al centro dell'area di gioco.
+        Usa il blocco <xml><block type="jump_to_xy" id="callMe"><title name="XPOS">200</title><title name="YPOS">200</title></block></xml> per portare l'artista al centro dell'area di gioco.\
         Quindi disegna una linea lunga 50 pixel con il blocco <xml><block type="draw_move_by_constant"><title name="DIR">moveForward</title><title name="VALUE">50</title></block></xml>
       courseC_artist_loopsPrePre1a_2019: |-
         Usa il blocco <xml><block type="jump_to_xy" id="callMe"><title name="XPOS">200</title><title name="YPOS">200</title></block></xml> per portare l'artista al centro dell'area di gioco.
@@ -2815,14 +3285,20 @@ it-IT:
         Hai a disposizione una griglia di quadrati con cui puoi giocare e creare dei disegni semplicemente accendendo e spegnendo i vari quadrati. Ogni quadrato è quindi analogo ad un pixel dello schermo.
 
         Usa i blocchi qui sotto per far produrre all'artista nella prima riga il disegno la cui codifica binaria è "01010101".
+
+        (`draw binary` significa _disegna in binario_)
       courseD_artist_binary1_2018: |-
         Hai a disposizione una griglia di quadrati con cui puoi giocare e creare dei disegni semplicemente accendendo e spegnendo i vari quadrati. Ogni quadrato è quindi analogo ad un pixel dello schermo.
 
         Usa i blocchi qui sotto per far produrre all'artista nella prima riga il disegno la cui codifica binaria è "01010101".
+
+        (`draw binary` significa _disegna in binario_)
       courseD_artist_binary1_2019: |-
         Hai a disposizione una griglia di quadrati con cui puoi giocare e creare dei disegni semplicemente accendendo e spegnendo i vari quadrati. Ogni quadrato è quindi analogo ad un pixel dello schermo.
 
         Usa i blocchi qui sotto per far produrre all'artista nella prima riga il disegno la cui codifica binaria è "01010101".
+
+        (`draw binary` significa _disegna in binario_)
       courseD_artist_binary2: |-
         La funzione `draw binary` (_disegna in binario_) prende in ingresso una sequenza binaria, cioè fatta di caratteri "1" e "0" e fa sì che l'artista – mentre va da sinistra verso destra e dall'alto verso il basso – accenda o spenga i quadrati in base ai caratteri della stringa.
 
@@ -3611,16 +4087,16 @@ it-IT:
         Aiuta Laura a correggere il codice per raccogliere tutti i diamanti.
       courseD_collector_nested_loops_challenge2: "_\"A caccia di diamanti - usando
         i cicli!\"_ \n\nAiuta la collezionista a raggiungere almeno due diamanti usando
-        solo i blocchi che trovi nella cassetta degli attrezzi. È possibile raccoglierli
-        tutti e 4."
+        solo i blocchi che trovi nella cassetta degli attrezzi. Se vuoi, puoi anche
+        raccoglierli tutti e 4."
       courseD_collector_nested_loops_challenge2_2018: "_\"A caccia di diamanti - usando
         i cicli!\"_ \n\nAiuta la collezionista a raggiungere almeno due diamanti usando
-        solo i blocchi che trovi nella cassetta degli attrezzi. È possibile raccoglierli
-        tutti e 4."
+        solo i blocchi che trovi nella cassetta degli attrezzi. Se vuoi, puoi anche
+        raccoglierli tutti e 4."
       courseD_collector_nested_loops_challenge2_2019: "_\"A caccia di diamanti - usando
         i cicli!\"_ \n\nAiuta la collezionista a raggiungere almeno due diamanti usando
-        solo i blocchi che trovi nella cassetta degli attrezzi. È possibile raccoglierli
-        tutti e 4."
+        solo i blocchi che trovi nella cassetta degli attrezzi. Se vuoi, puoi anche
+        raccoglierli tutti e 4."
       courseD_collector_ramp10: Fai camminare Laura intorno a questo quadrato per
         raccogliere i diamanti che trova.
       courseD_collector_ramp8: |-
@@ -3856,11 +4332,17 @@ it-IT:
         queste lastre di ghiaccio!
       courseD_iceage_loops2: |-
         Usa un blocco <xml><block type="maze_turn">
-
-        <title name="DIR">turnLeft</title>
-        </block></xml> per raggiungere la ghianda!
+            <title name="DIR">turnLeft</title>
+          </block></xml> per raggiungere la ghianda!
+      courseD_iceage_loops2_2019: |-
+        Usa un blocco <xml><block type="maze_turn" block-text="turn left">
+            <title name="DIR">turnLeft</title>
+          </block></xml> per raggiungere la ghianda!
       courseD_iceage_loops3: Riesci a raggiungere la ghianda con un solo blocco <xml><block
         type="maze_moveForward"/></xml>? Prova con un ciclo!
+      courseD_iceage_loops3_2019: Riesci a raggiungere la ghianda con un solo blocco
+        `O ←` <xml><block type="maze_moveForward" block-text="move forward"/></xml>?
+        Prova con un ciclo!
       courseD_iceage_loops4: Aggiungi un blocco per far percorrere a Scrat tutto il
         tragitto per raggiungere la ghianda!
       courseD_iceage_loops4_2019: Aggiungi un blocco per far percorrere a Scrat tutto
@@ -3889,12 +4371,12 @@ it-IT:
         _"Zombie affamato!"_
 
         Fai arrivare lo zombie fino al girasole usando il minor numero possibile di blocchi.
-      courseD_maze_nestedLoops4: 'Fammi arrivare al girasole usando il minor numero
-        possibile di blocchi!  '
-      courseD_maze_nestedLoops4_2018: 'Fammi arrivare al girasole usando il minor
-        numero possibile di blocchi!  '
-      courseD_maze_nestedLoops4_2019: 'Fammi arrivare al girasole usando il minor
-        numero possibile di blocchi!  '
+      courseD_maze_nestedLoops4: '_"Fammi arrivare al girasole usando il minor numero
+        possibile di blocchi!"_  '
+      courseD_maze_nestedLoops4_2018: '_"Fammi arrivare al girasole usando il minor
+        numero possibile di blocchi!"_  '
+      courseD_maze_nestedLoops4_2019: '_"Fammi arrivare al girasole usando il minor
+        numero possibile di blocchi!"_  '
       courseD_maze_nestedLoops6: |-
         _"Dovere mangiare girasole!"_
 
@@ -4016,12 +4498,12 @@ it-IT:
       courseD_maze_until7_2018: Aiuta lo zombie ad arrivare fino al girasole.
       courseD_maze_until7_2019: Aiuta lo zombie ad arrivare fino al girasole.
       courseD_maze_until8: Aiuta lo zombie ad arrivare fino al girasole.
-      courseD_maze_until9: "**Sfida:** Evita le piante carnivore e aiuta gli zombie
+      courseD_maze_until9: "**Sfida:** Evita le piante carnivore e aiuta lo zombie
         ad arrivare fino al girasole."
-      courseD_maze_until9_2018: "**Sfida:** Evita le piante carnivore e aiuta gli
-        zombie ad arrivare fino al girasole."
-      courseD_maze_until9_2019: "**Sfida:** Evita le piante carnivore e aiuta gli
-        zombie ad arrivare fino al girasole."
+      courseD_maze_until9_2018: "**Sfida:** Evita le piante carnivore e aiuta lo zombie
+        ad arrivare fino al girasole."
+      courseD_maze_until9_2019: "**Sfida:** Evita le piante carnivore e aiuta lo zombie
+        ad arrivare fino al girasole."
       courseD_playLab_cond1: "Per iniziare il gioco, il pirata (personaggio 1) deve
         essere in grado di muoversi in tutte le direzioni. Collega i blocchi agli
         eventi corretti per permettere di muovere il pirata.  \n\n* * *\n\nAiuta il
@@ -4429,13 +4911,13 @@ it-IT:
       courseE_farmer_functions10b: Se metti il codice dell'esercizio precedente in
         una funzione, poi potrai usarla due volte per risolvere questo esercizio.
       courseE_farmer_functions13_2018: |-
-        Risolvi questo puzzle in 23 blocchi o meno.
+        Risolvi questo esercizio in 23 blocchi o meno.
 
         * * *
 
         ##### Ogni germoglio farà crescere _una_ pannocchia o niente. Per programmare la soluzione migliore, è necessario modificare le funzioni.
       courseE_farmer_functions13_2019: |-
-        Risolvi questo puzzle in 23 blocchi o meno.
+        Risolvi questo esercizio in 23 blocchi o meno.
 
         * * *
 
@@ -4724,15 +5206,18 @@ it-IT:
         modifiche al codice del precedente esercizio!
       courseF_artist_for7_2019: Per ottenere questo disegno bastano solo tre piccole
         modifiche al codice del precedente esercizio!
-      courseF_artist_for9: |-
-        **Ispirazione:** Usa il contatore all'interno del blocco `imposta l'opacità` in modo da ottenere l'effetto del centro gradualmente sbiadito.\
-        (Questo schema con esagono è stato creato usando un angolo di 60 gradi.)
-      courseF_artist_for9_2018: |-
-        **Ispirazione:** Usa il contatore all'interno del blocco `imposta l'opacità` in modo da ottenere l'effetto del centro gradualmente sbiadito.\
-        (Questo schema con esagono è stato creato usando un angolo di 60 gradi.)
-      courseF_artist_for9_2019: |-
-        **Ispirazione:** Usa il contatore all'interno del blocco `imposta l'opacità` in modo da ottenere l'effetto del centro gradualmente sbiadito.\
-        (Questo schema con esagono è stato creato usando un angolo di 60 gradi.)
+      courseF_artist_for9: "**Ispirazione:** Usa la variabile `counter` (_contatore_)
+        all'interno del blocco `imposta l'opacità` per ottenere un tratto più leggero
+        al centro del disegno.\\\\ \n(Questo schema con esagono è stato creato usando
+        un angolo di 60 gradi.)"
+      courseF_artist_for9_2018: "**Ispirazione:** Usa la variabile `counter` (_contatore_)
+        all'interno del blocco `imposta l'opacità` per ottenere un tratto più leggero
+        al centro del disegno.\\\\ \n(Questo schema con esagono è stato creato usando
+        un angolo di 60 gradi.)"
+      courseF_artist_for9_2019: "**Ispirazione:** Usa la variabile `counter` (_contatore_)
+        all'interno del blocco `imposta l'opacità` per ottenere un tratto più leggero
+        al centro del disegno.\\\\ \n(Questo schema con esagono è stato creato usando
+        un angolo di 60 gradi.)"
       courseF_artist_for_challenge1: |-
         Riesci a ricreare questo disegno?
 
@@ -5027,27 +5512,30 @@ it-IT:
         E ora andiamo oltre!
 
         Quale deve essere il **passo** in questo ciclo con contatore per raccogliere 3, 6, 9, 12, 15 dosi di nettare?
-      courseF_bee_for9: "Ora combina l'uso della variabile `counter` (contatore) un
-        blocco matematico! \n\nCome puoi utilizzare la variabile `counter` (contatore)
-        per muoverti in questo giardino usando il minor numero possibile di blocchi?"
-      courseF_bee_for9_2018: "Ora combina l'uso della variabile `counter` (contatore)
-        un blocco matematico! \n\nCome puoi utilizzare la variabile `counter` (contatore)
-        per muoverti in questo giardino usando il minor numero possibile di blocchi?"
-      courseF_bee_for9_2019: "Ora combina l'uso della variabile `counter` (contatore)
-        un blocco matematico! \n\nCome puoi utilizzare la variabile `counter` (contatore)
-        per muoverti in questo giardino usando il minor numero possibile di blocchi?"
+      courseF_bee_for9: "Ora combina l'uso della variabile `counter` (_contatore_)
+        con un blocco matematico! \n\nCome puoi utilizzare la variabile `counter`
+        (_contatore_) per muoverti in questo giardino usando il minor numero possibile
+        di blocchi?"
+      courseF_bee_for9_2018: "Ora combina l'uso della variabile `counter` (_contatore_)
+        con un blocco matematico! \n\nCome puoi utilizzare la variabile `counter`
+        (_contatore_) per muoverti in questo giardino usando il minor numero possibile
+        di blocchi?"
+      courseF_bee_for9_2019: "Ora combina l'uso della variabile `counter` (_contatore_)
+        con un blocco matematico! \n\nCome puoi utilizzare la variabile `counter`
+        (_contatore_) per muoverti in questo giardino usando il minor numero possibile
+        di blocchi?"
       courseF_bee_for_challenge1: |-
         Usa questo _ciclo con contatore_ per raccogliere tutto il nettare.
 
-        Ci sono alcune azioni che avrai bisogno di ripetere "counter" volte.
+        Ci sono alcune azioni che avrai bisogno di ripetere _counter_ volte.
       courseF_bee_for_challenge1_2018: |-
         Usa questo _ciclo con contatore_ per raccogliere tutto il nettare.
 
-        Ci sono alcune azioni che avrai bisogno di ripetere "counter" volte.
+        Ci sono alcune azioni che avrai bisogno di ripetere _counter_ volte.
       courseF_bee_for_challenge1_2019: |-
         Usa questo _ciclo con contatore_ per raccogliere tutto il nettare.
 
-        Ci sono alcune azioni che avrai bisogno di ripetere "counter" volte.
+        Ci sono alcune azioni che avrai bisogno di ripetere _counter_ volte.
       courseF_bee_for_challenge2: Risolvi questo esercizio con il minore numero possibile
         di blocchi.
       courseF_bee_for_challenge2_2018: Risolvi questo esercizio con il minore numero
@@ -5063,16 +5551,16 @@ it-IT:
 
         In questo esercizio, ogni zona necessita che la variabile sia 1 in meno rispetto alla zona precedente. Per poter usare la stessa funzione per risolvere questo esercizio, sottrai 1 dalla variabile `gather` (_che rappresenta la quantità di nettare e di miele da gestire_) ogni volta che si esegue il ciclo.
       courseF_bee_variables_4_2018: |-
-        "Incredibile!"
+        _"Incredibile!"_
 
         Modifica il codice in modo che funzioni per questo esercizio.
       courseF_bee_variables_4_2019: |-
-        "Incredibile!"
+        _"Incredibile!"_
 
         Modifica il codice in modo che funzioni per questo esercizio.
-      coursea_maze_ramp1_2018: "Per far arrivare l'uccellino fino al maialino, trascina
-        il blocco <xml><block type=\"maze_moveEast\"/></xml> sotto al blocco <xml><block
-        type=\"when_run\"/></xml>, poi premi \"▶ Esegui\"!  \n\n* * *"
+      coursea_maze_ramp1_2018: Per far arrivare l'uccellino fino al maialino, trascina
+        il blocco <xml><block type="maze_moveEast"/></xml> sotto al blocco <xml><block
+        type="when_run"/></xml>, poi premi "▶ Esegui"!
       coursea_maze_ramp1_2019: "Per far arrivare l'uccellino fino al maialino, trascina
         il blocco <xml><block type=\"maze_moveEast\"/></xml> sotto al blocco <xml><block
         type=\"when_run\"/></xml>, poi premi \"▶ Esegui\"!  \n\n* * *"

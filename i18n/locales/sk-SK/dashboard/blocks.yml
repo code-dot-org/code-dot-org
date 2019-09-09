@@ -653,11 +653,6 @@ sk:
           CONDITION:
             '"when"': keď
             '"while"': pokiaľ
-      gamelab_debugSprite:
-        options:
-          VAL:
-            'true': pravda
-            'false': nepravda
       gamelab_getProp:
         text: "{SPRITE} {PROPERTY}"
         options:
@@ -729,7 +724,6 @@ sk:
             '"x"': pozícia x
             '"y"': pozícia y
             '"direction"': smeru pohybu
-            '"tint"': sfarbenie
       gamelab_setSizes:
         options:
           PROPERTY:
@@ -761,13 +755,6 @@ sk:
             '"d"': d
       gamelab_whenLeftArrow:
         text: pri stlačení šípky vľavo
-      gamelab_whenPressedAndReleased:
-        options:
-          DIR:
-            "'up'": hore
-            "'down'": dole
-            "'left'": vľavo
-            "'right'": vpravo
       gamelab_whenUpArrow:
         text: pri stlačení šípky hore
       gamelab_whileKey:

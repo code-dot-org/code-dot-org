@@ -8131,6 +8131,16 @@ tr:
               name: yeni kademe
             Number Systems:
               name: Sayı Sistemleri
+            Sending Binary Messages:
+              name: İkili Mesajları Gönderiyor
+            Sending Binary Messages with the Internet Simulator:
+              name: Internet simülatörü ile ikili ileti gönderme
+            Intellectual Property:
+              name: Fikri Mülkiyet
+            CS Principles Pre-survey:
+              name: Bilgisayar Bilimi ilkeleri ön anket
+            Binary Numbers:
+              name: İkili Sayılar
         csd-videos:
           stages:
             new stage:
@@ -8296,6 +8306,8 @@ tr:
               name: Fikri Mülkiyet
             Images:
               name: Görüntüler
+            CSS Classes:
+              name: CSS Sınıfları
         csd3-pilot:
           description_short: "Programlama"
           stages:
@@ -8390,7 +8402,75 @@ tr:
               name: Proje - Bir oyun tasarla
               description_student: Sınıf, önceki iki dersteki proje rehberi kullanarak orjinal oyunlar planlar ve oluşturur. Bireysel veya çiftler halinde çalışarak sınıf, oyunları planlar, geliştirir ve geri bildirim verir. Akran geri bildirimini dahil edildikten sonra, sınıf tamamlanmış oyunları paylaşır.
               description_teacher: Öğrenciler, projelerini yönlendirmek için önceki iki dersin proje rehberini kullanarak kendi oyunlarını planlayacak ve inşa edecektir. Bireysel ya da çift olarak çalışarak, öğrenciler ilham kaynağı olarak örnek oyun seti alarak, kurmak istedikleri oyun türüne karar verecekler. Ardından, oyunun davranışını açıklayacak ve oluşturmaları gereken değişkenleri, hareketli nesneleri ve işlevleri kapsam altına alacakları boş bir proje kılavuzu tamamlayacaklardır. Code Studio'da, bir dizi seviye, onlara bu planı uygulamak için kullanabilecekleri genel bir sıra üzerinde bilgi ister. Süreç boyunca, öğrenciler akran incelemesi için projelerini paylaşacak ve oyunun bitiminde geri bildirim içeriyor olacak. Ders sonunda öğrenciler tamamladıkları oyunları sınıf arkadaşlarıyla paylaşacaklardır. Bu proje birden fazla sınıfı kapsayacak ve 3-5 sınıf döneminden herhangi bir yeri kolayca alabilecektir.
+            Sprite Properties:
+              name: Nesne özellikleri
         maddie-test:
           stages:
             new stage:
               name: yeni kademe
+        csl-vn:
+          stages:
+            Programming in Maze:
+              name: Labirentte Programlama
+            Programming with Rey and BB-8:
+              name: Rey ve BB-8 ile programlama
+            Ocean Scene with Loops:
+              name: Sanatçıların Döngüleri
+        dlp19-csd-mod-fit:
+          stages:
+            Deeper Learning Overview:
+              name: Derin Öğrenime Genel Bakış
+        dlp19-csp-mod-fit:
+          stages:
+            Deeper Learning Overview:
+              name: Derin Öğrenime Genel Bakış
+        dlp19-csd-mod-w1:
+          stages:
+            Deeper Learning Overview:
+              name: Derin Öğrenime Genel Bakış
+        dlp19-csd-mod-w2:
+          stages:
+            new stage:
+              name: yeni kademe
+            Deeper Learning Overview:
+              name: Derin Öğrenime Genel Bakış
+        dlp19-csp-mod-w1:
+          stages:
+            Deeper Learning Overview:
+              name: Derin Öğrenime Genel Bakış
+        dlp19-csp-mod-w2:
+          stages:
+            Deeper Learning Overview:
+              name: Derin Öğrenime Genel Bakış
+        csd4-pilot:
+          stages:
+            What is a Computer?:
+              name: Bilgisayar nedir?
+            Input and Output:
+              name: Girdiler ve çıktılar
+            Processing:
+              name: İşleme
+            Project - Propose an App:
+              name: Proje - bir uygulama önermek
+        csp2-pilot:
+          stages:
+            new stage:
+              name: yeni kademe
+            Routers and Redundancy:
+              name: Yönlendiriciler ve yedeklilik
+        peru-2019:
+          stages:
+            new stage:
+              name: yeni kademe
+            Introduction:
+              name: Giriş
+            Debugging in Collector:
+              name: Toplayıcıda Hata Ayıklama
+            'Loops: My Loopy Robotic Friends':
+              name: 'Döngüler: Loopy robot dostlarım'
+            Loops in Artist:
+              name: Sanatçı- Döngüler
+            Nested Loops:
+              name: İç İçe Döngüler
+            Nested Loops in Frozen:
+              name: Frozen'da İç İçe Döngüler

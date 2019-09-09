@@ -4960,6 +4960,14 @@ id:
           stages:
             Number Systems:
               name: Sistem nomor
+            Sending Binary Messages:
+              name: Mengirim pesan biner
+            Sending Binary Messages with the Internet Simulator:
+              name: Mengirim Pesan Biner dengan Internet Simulator
+            Intellectual Property:
+              name: Hak milik intelektual
+            Binary Numbers:
+              name: Bilangan Biner
         time4csdemo:
           stages:
             Crowdsourcing:
@@ -5024,6 +5032,8 @@ id:
               name: Proyek - Situs web Portfolio Pribadi
             Intellectual Property:
               name: Hak milik intelektual
+            CSS Classes:
+              name: Kelas CSS
         csd3-pilot:
           description_short: "Pemrograman"
           stages:
@@ -5068,3 +5078,19 @@ id:
             Project - Design a Game:
               name: Proyek - merancang sebuah permainan
               description_student: Kelas rencana dan membangun permainan asli menggunakan panduan proyek dari dua pelajaran sebelumnya. Bekerja secara individual atau berpasangan, kelas rencana, mengembangkan, dan memberikan umpan balik tentang permainan. Setelah memasukkan rekan umpan balik, permainan kelas saham selesai.
+        csd4-pilot:
+          stages:
+            What is a Computer?:
+              name: Apa itu komputer?
+            Processing:
+              name: Sedang memproses
+        csp2-pilot:
+          stages:
+            Routers and Redundancy:
+              name: Router dan Kualitas
+        peru-2019:
+          stages:
+            Introduction:
+              name: Pendahuluan
+            Nested Loops:
+              name: Perulangan bercabang

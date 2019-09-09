@@ -44,11 +44,12 @@ module SafeBrowsing
     # informed-redirect model and record the error value
     if response.nil?
       response_message = 'No response from API'
+    elsif response.code == '400' || response.code == '429'
+      # Note: with a 400 response, the body has no 'matches' field
+      response_message = "Error code: #{response.code}"
     elsif !JSON.parse(response.body).empty?
       response_message = JSON.parse(response.body)['matches'][0]['threatType']
       site_approved = false
-    elsif response.code == '400' || response.code == '429'
-      response_message = "Error code: #{response.code}"
     end
 
     # Record to Firehose the response time of request rounded to thousandths of a second,

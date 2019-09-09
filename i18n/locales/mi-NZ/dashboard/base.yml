@@ -23,6 +23,7 @@ mi:
         edit_header: 'Whakatika Taipitopito Pūkete'
         error:
           future: tē āhei haere ake nei
+  beta: "beta"
   hello: "Tēnā koe e te ao"
   welcome_back: "Hoki mai rā, %{name}"
   your_professional_learning_plan: "Tō Mahere Ako Ngaio"
@@ -308,16 +309,6 @@ mi:
     no_primary_course: "Whakamātauria tētahi o ngā whakaakoranga Code Studio"
     choose_next_course: "Whakamātauria tētahi o ngā whakaakoranga Code Studio mā te whiriwhiri i tētahi kei raro iho nei"
     print_certificate: "Tāngia te Tiwhikete"
-    announcement_learn_more_button: "Me ako tonu"
-    announcement_try_now_button: "Ngana ināianei"
-    announcement_host_an_hour_button: "Taurimatia tētahi Hour"
-    announcement_watch_video_button: "Mātakina te ataata"
-    announcement_petition: "Ko tāu mahi hei pouako, he para i te huarahi kia whai wāhi ai ia ākonga, i ia kura ki te ako e pā ana ki te pūataiao rorohiko. Na, kua eke te wā e rangona ai tō reo e ō tauira. I tēnei wiki, i whakatakoto tahi ētahi o ngā kaiurungi mātauranga, ngā kaikāwana 28, rātou ko ngā Kaihautū o ngā umanga mana nui o Amerika tā rātou tono, i tētahi reta ki te Kāwanatanga o U.S. ki te tautoko ā-pūtea taua kāwanatanga i te marau pūtaiao rorohiko."
-    announcement_petition_button: "Tāpiritia tō ingoa"
-    announcement_all: "Tirohia tā mātou rangitaki pouako kia mōhio ai koe ki ngā āhuahira me ngā whakahoutanga.<a href='%{teacher_blog_url}' target='_blank'>Tirohia ngā whakapāohotanga o mua.</a>"
-    announcement_hoc_launch: "Hei te 5-11 o tēnei Hakihea i te wiki Hour of Code, ka tīmataria te whakaako pūtaiao rorohiko e te manomano pouako nō ngā whenua 180 neke atu. Ko koutou hei pou whirinaki mō mātou kia whānui ake te toro atu ki ngā tini ākonga. <a href='%{signup_url}' target='_blank'> Rēhitatia mai tō takunetanga Hour of Code</a>, kātahi ka whakamōhiotia tētahi atu pouako, ka taea te whakaako mātauranga rorohiko te tangata ahakoa ko wai."
-    announcement_mc_launch: "Kua whai tānga tuarua tētahi o ā mātou whakaakoranga i tino pīrangitia! E wātea ana ngā ākonga i te tānga hou nei, i Hour of Code Hoahoa Mahimaina, ki te whakatakoto i ngā ture o te ao Mahimaina. E āhei ana rātou ki te waihanga i tētahi wheako Mahimaina motuhake ka tiritiria ai ki ō rātou hoa, ka tākaro rānei ki ō rātou waea. Mahia atu me tō akomanga mō Hour of Code."
-    announcement_how_code_studio: "Ehara i te mea me tangata mōhio koe ki te pūtaiao rorohiko e āhei ai koe ki te whakaako i tō akomanga. He marau, he mahere ako, he akoranga ngaio kounga, me ētahi tini rauemi ka whakaratoa e Code.org mō ngā taumata ako katoa &mdash; ngā mea katoa kei te hiahiatia, ā, he utu kore. E whakaaro ana koe ki hea tīmata ai? Tikina ake <a href='%{video_download_url}'>tēnei ataata</a>!"
   move_students:
     new_section_dne: "Kia manawanui mai, kāore tēnei wāhanga %{new_section_code}. Tēnā whakaurua he waehere wāhanga rerekē."
     section_code_cant_be_current_section: "Kāore e whakaae ana kia rite tonu te wāhanga onāianei ki te wāhanga hou."

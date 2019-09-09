@@ -647,11 +647,11 @@ hu-HU:
       courseA_artist_loops4_2019: |-
         Most használd a <xml><block type="controls_repeat_simplified_dropdown" block-text="repeat"><title name="TIMES" config="2-6">5</title></block></xml> ciklust, a vonal megrajzolásához ötször!
 
-        ![](https://images.code.org/b2bc7f52ffdac2ad0d8e7c2d798c24df-image-1501875818062.gif)
+        <xml><block type="controls_repeat_simplified_dropdown" block-text="repeat"><title name="TIMES" config="2-6">5</title></block></xml>
       courseA_artist_loops7_2019: |-
         Használd a <xml><block type="controls_repeat_simplified_dropdown" block-text="repeat"><title name="TIMES" config="3-10">???</title></block></xml> ciklust, hogy hullámos legyen a víz!
 
-        ![expandable](https://images.code.org/01c5f6772a8b608a2fca5f6de7e25c67-image-1498062629139.gif)
+        <xml><block type="controls_repeat_simplified_dropdown" block-text="repeat"><title name="TIMES" config="3-10">???</title></block></xml>
       courseA_collector_loops2_2019: 'Szerezd meg mind a három cölöpöt! Mozgasd Laurel-t
         minden egyes kincses darabhoz, majd használd a <xml><block type="collector_collect"
         block-text="get treasure"/></xml> blokkot. '

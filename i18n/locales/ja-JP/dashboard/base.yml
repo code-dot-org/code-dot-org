@@ -30,6 +30,7 @@ ja:
         finish_sign_up_header: 'アカウントの作成を完了します'
         error:
           future: 現在までの日付にする
+  beta: "ベータ版"
   hello: "Hello world"
   welcome_back: "Welcome Back, %{name}"
   your_professional_learning_plan: "プロフェッショナル学習計画"
@@ -60,8 +61,8 @@ ja:
   trophies: "トロフィー"
   courses: 'コース'
   courses_page:
-    title_student: "コード スタジオで学ぶ"
-    title_teacher: "コード スタジオで教えよう"
+    title_student: "コンピュータ サイエンスを学ぶ"
+    title_teacher: "コンピュータ サイエンスを教える"
   unplugged_activity: 'アンプラグド　アクティビティ'
   of: "の"
   more: "くわしく"
@@ -443,33 +444,6 @@ ja:
     no_primary_course: "コード スタジオ でコースを見る"
     choose_next_course: "Code Studio コースを以下のリストから一つ試す"
     print_certificate: "証書を印刷"
-    announcement_title: "お知らせ"
-    announcement_message_fall2016_features: "私たちはひと夏をかけて、あなたのフィードバックを新機能に追加しました。今では、生徒が1 つのデバイスを使ってペア プログラミングをしている場合でも、<a href=\"%{pp_url}\" target=\"_blank\">それぞれの学生の進捗状況を追跡</a>できます。CS 原則コースから <a href=\"%{csp_widgets_url}\" target=\"_blank\">最高のインタラクティブなツール</a> を <i>すべて</i> の教室で使用できます。さらに生徒たちは、作業画面に <a href=\"%{unused_code_url}\" target=\"_blank\">未使用のプログラムを保持</a> することで、もっと実験がしやすくなりました！すべての新機能をチェックして、ご意見をお寄せください。"
-    announcement_csp_widgets_message: "インターネットはどうやって動いているのか、暗号化技術がどうやってデータの安全性を保っているのか、その他の概念も、どうやって授業で楽しく教えられるか、お困りではないですか？私たちは、コンピューターサイエンス基本講座から、素晴らしいツールを提供します。これは単独で動くウィジェットなので、いつでも自由に使えます。"
-    announcement_learn_more_button: "もっと詳しく知る"
-    announcement_try_now_button: "今すぐ試す"
-    announcement_host_an_hour_button: "開催する"
-    announcement_watch_video_button: "ビデオを見る"
-    announcement_petition: "教師として、すべての学校のすべての学生にコンピューターサイエンスを学ぶ機会を与える運動をリードしています。今、代表者はあなたから聞くときです。今週、教育指導者、28 知事とアメリカ最大企業のCEOが、 米議会に、学生のコンピューターサイエンス教育への資金供給を求める公開書簡に参加しています。"
-    announcement_petition_button: "あなたの名前を追加します"
-    announcement_go_beyond_button: "超えて行く"
-    announcement_apply_now: "今すぐ申し込む"
-    announcement_all: "先生用ブログで、新しい機能や最新情報をアップデートします。<a href='%{teacher_blog_url}' target='_blank'> 過去のお知らせを参照する。</a>"
-    announcement_hoc_launch: "この 12 月 5-11 日、180 カ国以上で数千の教育者がHour of Code によってコンピュータ ・ サイエンスの教育を始めます。より多くの学生に届けられるかは、あなたの助けに掛かっています。<a href='%{signup_url}' target='_blank'> あなたのHour of Code イベントを登録</a> して、他の先生にも、コンピューターサイエンスを教えることができることを、伝えてください。"
-    announcement_mc_launch: "もっとも人気のチュートリアルに、続編が出来ました! マインクラフトHour of Code デザイナーで、学生は、マインクラフト世界のルールを作ることができます。完全にユニークなマインクラフト経験を作り出し、それを友人と共有したり、スマホでプレイが出来ます。あなたのクラスのHour of Codeで、やってみてください。"
-    announcement_how_code_studio: "あなたの教室でコンピューターサイエンスを教え始めるために、経験は必要ありません。Code.org は、すべての学年向けのカリキュラム、レッスン プラン、質の高い専門的な学習プログラム、および多くの優れたツール &mdash; あなたが必要なすべてを、無料で提供します。どこから始めるのか? <a href='%{video_download_url}'> このビデオ</a> をダウンロード!"
-    announcement_go_beyond: "Hour of Code を超えて、毎週、生徒とコンピュータサイエンスの概念を探索しましょう。Code.org は、すべての学年向けのカリキュラム、授業、質の高い専門的な学習プログラム、多くの素晴らしいツールを提供しています &mdash; しかも無料です :)あなたの教室でコンピューターサイエンスを教え始めるために、経験は必要ありません。<b>あなたの教室にぴったりな、次のステップを見つける。</b>"
-    announcement_teacher_recruitment: "あなたのような教師は、コンピューターサイエンス教育運動をリードしています。 <strong>あなたやあなたの学校は無償で</strong> 高品質な、幼稚園から高校生までの専門学習プログラムに参加することができます。あなたの学校で、コンピューター科学をリードし、専門的な学習に参加しましょう。"
-    announcement_teacher_recruitment2: "あなたのような教師は、コンピューターサイエンス教育運動をリードしています。高品質な、幼稚園から高校生までの専門学習プログラムに <strong>あなたやあなたの学校は無償で</strong> 参加することができます。あなたの学校で、コンピューター科学をリードし、専門的な学習に参加しましょう。\n中学校、高校の先生は3月17日までに応募してください。"
-    announcement_csf_pilot: "<strong>小学校の先生:</strong>私たちの CS 基礎コースのアップデートを共に！ 冬から2017 春にかけて更新 CS 基礎カリキュラムをパイロットして下さる教師を探しています。2017 年 8 月のアップデート公開前に、あなたのフィードバックをお聞かせください。"
-    announcement_student_privacy: "Code.org では、学生のプライバシーを非常に大切にしています。学生のプライバシーを守るため、フルネームが表示されないように、セクションのログイン ページを変更しました。この更新によって、ログイン ページのプライバシーへの懸念が減少しますが、引き続き <i>学生のフルネームは使用しない</i> よう、お勧めします。"
-    announcement_apcsp_recruitment: "<strong>コンピューターサイエンス原則 教師:</strong>あなたの生徒は、生徒たちが今年の AP CS 原則テストを受験する事を応援するための、Code.org の次の流行りのビデオに出演する事ができます。全てのCS 原則の学生は、10-20 秒の「私は #APCSP 試験を受けました、なぜなら・・・」と言うビデオクリップを、ツイッター、インスタグラム、フェイスブックに応募してください。最高の応募は、私たちのビデオで紹介され、受賞の学生には Code.org 粗品を進呈します！"
-    announcement_apcsp_recruitment2: "今年の AP CS 原理試験は記録を破る態勢を整えています。AP コンピューターサイエンスでは、試験に参加する学生は、劇的に多様化していますが、あなたの助けが必要です。すべての CS 原理学生が、AP CSP 試験を受けるのを奨励するため、我々は <a href='%{gift_url}' target='_blank'> 贈り物を</a>準備しています。学生も私たちの <a href='%{challenge_url}' target='_blank'> #APCSP ビデオの挑戦</a> で、全国の仲間を励ますことができます。"
-    announcement_apcsp_recruitment3: "今年の AP CS 原理試験は記録を破る態勢を整えています。AP コンピューターサイエンスでは、試験に参加する学生は、劇的に多様化していますが、あなたの助けが必要です。すべての CS 原理学生が、AP CSP 試験を受けるのを奨励して、 <a href='%{gift_url}' target='_blank'> ギフトカード、ラップトップ、その他の素晴らしい景品</a>を獲得するチャンスです！<a href='%{video_url}' target='_blank'>ビデオ</a> をシェアして学生が、試験を受けた全国の仲間の声を聞けるようにしましょう。"
-    announcement_csp_deadline: "高校教師のための最終呼び出し！あなたの学校のコンピューター科学をリードし、<strong>あなたや、あなたの学校に全く無料の</strong> 高品質な学習プログラムを適用しましょう。アプリケーションの締め切りは4 月 14 日です。"
-    announcement_applab_export: "アプリ ラボ、私たち web ベースのプログラミング環境は、コードをエクスポートできるようになりました！JavaScript ブロックをドラッグ アンド ドロップ してアプリケーションの構築を始められ、コードをエクスポートして好きなプロフェッショナル開発環境で編集を続けられます。"
-    announcement_csp_survey: "<b>おめでとうございます CS 原則の先生たち!</b> <br/>CS原則生徒が AP CS 試験を受験することで、史上最大の AP 試験受講者50,000 人以上の学生に加わります。さあ、コース完了アンケートを行わせて、あなたの学生の声を聞かせてください! あなたは学生のレビューを確認することができ、全国集計の報告も共有できます。"
-    announcement_navigation_redesign: "<b>サイト ナビゲーションの変更について</b> <br/>この夏、Code.org サイトの全体でナビゲーションを改善をします。いつでも、サイトのどこからでも、あなたの重要なリソースへのアクセスができるようになります。教師用アカウントにログインすれば、全ページに新しいナビゲーションバーが付き、それはホームページ、コース、プロジェクト ギャラリー、セクション、専門学習へリンクしています。"
   move_students:
     new_section_dne: "申し訳ありませんが、セクション %{new_section_code} は存在しません。別のセクション コードを入力してください。"
     section_code_cant_be_current_section: "現在のセクションを、新しいセクションと同じにすることはできません。"
@@ -599,7 +573,8 @@ ja:
     hoc-encryption:
       title: "単純な暗号化"
     weblab:
-      title: "Web 研究室 (ベータ版)"
+      title: "Web ラボ (ベータ版)"
+      body: "Webラボは、HTMLとCSSを使って、シンプルなWebページを作ることができるプログラミング環境です。Webページをデザインして、すぐにあなたのサイトを共有しよう。"
       audience: "13才以上"
       cta: "もっと知る"
     frozen:
@@ -841,7 +816,7 @@ ja:
     csf_conditionals: '条件'
     csf_nested_loops: '入れ子のループ'
     csf_functions: '関数(かんすう) '
-    csf_variables: '変数'
+    csf_variables: '変数（へんすう）'
     csf_for_loops: 'ループ用'
     csf_internet: 'インターネット'
     csd1_1: '第 1章: 問題解決プロセス'
@@ -860,7 +835,7 @@ ja:
     csp3_1: '章 1: プログラミング言語とアルゴリズム'
     cspSurvey: 'アンケート'
     csp2_1_2018: '第 2 章: デジタル情報'
-    csp_variables: '変数'
+    csp_variables: '変数（へんすう）'
     csp_conditionals: '条件'
     csp_functions: '関数(かんすう) '
     csp_lists: 'リスト'

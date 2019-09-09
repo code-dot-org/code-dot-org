@@ -41,6 +41,7 @@ el:
         finish_sign_up_header: Ολοκληρώστε τη δημιουργία του λογαριασμού σας
         error:
           future: δεν μπορεί να είναι στο μέλλον
+  beta: βήτα
   hello: Γεια σου κόσμε
   welcome_back: Καλώς ήρθες, %{name}
   your_professional_learning_plan: Το επαγγελματικό σας πλάνο εκμάθησης
@@ -445,12 +446,6 @@ el:
     choose_next_course: Δοκιμάστε μια σειρά μαθημάτων Code Studio επιλέγοντας ένα
       παρακάτω
     print_certificate: Εκτύπωση πιστοποιητικού
-    announcement_title: Ανακοινώσεις
-    announcement_learn_more_button: Μάθετε περισσότερα
-    announcement_try_now_button: Δοκιμάστε τώρα
-    announcement_host_an_hour_button: Φιλοξενήστε μια Ώρα
-    announcement_watch_video_button: Δείτε το βίντεο
-    announcement_petition_button: Προσθέστε το όνομά σας
   move_students:
     student_not_found: Δεν ήταν δυνατή η εύρεση ενός ή περισσότερων μαθητών.
   share:

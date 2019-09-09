@@ -1061,6 +1061,7 @@
   alice_beyond_longdescription: "Alice Project kasutab innovaatilist programmeerimise keskkonda 3D animatsioonide loomiseks. Olemas on vajalikud vahendid ja materjalid, kuidas õpetada ja õppida arvutiteadusi, probleemide lahendamist ja programmeerimist sõltumata east ning tasemest."
   sphero_beyond_longdescription: "Sõltumata sellest, kas oled õpetaja või lapsevanem, SPRK tunnid annavad lastele esimese lõbusa kogemusi robotite programmeerimisel ning samal parandavad nende matemaatika- ja reaalainete oskusi."
   compatibility_unsupported_browser: "Sinu veebilehitsejat ei toetata. Palun asenda oma veebilehitseja<a href='%{supported_browsers_url}', target='_blank'>ühe veebilehitsejaga, mida me toetame</a>. Võite proovida veebilehte vaadata, kuid selle toimimine võib olla häiritud."
+  compatibility_unsupported_browser_markdown: "Sinu veebilehitsejat ei toetata. Palun asenda oma veebilehitseja<a href='%{supported_browsers_url}', target='_blank'>ühe veebilehitsejaga, mida me toetame</a>. Võite proovida veebilehte vaadata, kuid selle toimimine võib olla häiritud."
   starwars_shortcode: "star"
   mc_shortcode: "mc"
   flappy_shortcode: "laksuta tiibu"

@@ -1,0 +1,8 @@
+name 'CSD Games Sprites Challenges'
+display_name 'Challenges: Sprites and Animations'
+description 'Try these extra challenges that will help you make your sprites even more special.'
+
+sublevels
+level 'CSD U3 Sprites anitab 2_pilot'
+level 'CSD U3 Sprites draw animation_pilot'
+level 'CSD U3 Sprites combine_pilot'

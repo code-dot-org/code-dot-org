@@ -122,6 +122,57 @@ Resources:
       TableMappings: !Sub |
         <%= table_mappings.to_json %>
 <% end -%>
+  DMSS3Role:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: DMSS3Role
+      AssumeRolePolicyDocument:
+        Statement:
+          - Effect: Allow
+            Principal: {Service: [dms.amazonaws.com]}
+            Action: 'sts:AssumeRole'
+      Policies:
+        - PolicyName: DMSRolePolicy
+          PolicyDocument:
+            Version: "2012-10-17"
+            Statement:
+              - Effect: Allow
+                Action:
+                  - 's3:PutObject'
+                  - 's3:DeleteObject'
+                  - 's3:PutObjectTagging'
+                  - 's3:ListBucket'
+                Resource: 'arn:aws:s3:::cdo-activities-archive*'
+      PermissionsBoundary: !ImportValue IAM-DevPermissions
+  AuroraS3Role:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: AuroraS3Role
+      AssumeRolePolicyDocument:
+        Statement:
+          - Effect: Allow
+            Principal: {Service: [rds.amazonaws.com]}
+            Action: 'sts:AssumeRole'
+      Policies:
+        # SELECT INTO OUTFILE S3 permissions:
+        # https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Integrating.Authorizing.IAM.S3CreatePolicy.html
+        - PolicyName: SelectIntoOutfileS3
+          PolicyDocument:
+            Version: "2012-10-17"
+            Statement:
+              - Effect: Allow
+                Action:
+                  - 's3:AbortMultipartUpload'
+                  - 's3:DeleteObject'
+                  - 's3:GetObject'
+                  - 's3:ListMultipartUploadParts'
+                  - 's3:PutObject'
+                Resource: 'arn:aws:s3:::cdo-activities-archive/*'
+              - Effect: Allow
+                Action:
+                  - 's3:ListBucket'
+                Resource: 'arn:aws:s3:::cdo-activities-archive'
+      PermissionsBoundary: !ImportValue IAM-DevPermissions
   PrimaryDBParameters:
     Type: AWS::RDS::DBParameterGroup
     Properties:
@@ -140,6 +191,12 @@ Resources:
       Description: !Sub "Aurora DB Cluster Parameters for ${AWS::StackName}."
       Family: aurora-mysql5.7
       Parameters: <%= YAML.load(erb_file(aws_dir('cloudformation/db_parameters.yml.erb')))['AuroraCluster'].compact.to_json %>
+  AuroraReportingClusterDBParameters:
+    Type: AWS::RDS::DBClusterParameterGroup
+    Properties:
+      Description: !Sub "Aurora Reporting DB Cluster Parameters for ${AWS::StackName}."
+      Family: aurora-mysql5.7
+      Parameters: <%= YAML.load(erb_file(aws_dir('cloudformation/db_parameters.yml.erb')))['AuroraReportingCluster'].compact.to_json %>
   AuroraWriterDBParameters:
     Type: AWS::RDS::DBParameterGroup
     Properties:

@@ -1343,6 +1343,7 @@
   sphero_beyond_longdescription: "Či ste pedagóg alebo rodič, lekcie SPRK sú pre deti zábavným kurzom programovania robotov, rozvíjajúcim ich zručnosti v matematike a prírodných vedách."
   compatibility_hide_this_warning: "Skryť toto upozornenie"
   compatibility_unsupported_browser: "Váš ineternetový prehliadač nepodporujeme. Prosím aktualizujte si váš ineternetový prehliadač, <a href='%{supported_browsers_url}', target='_blank'> na jeden z našich podporovaných prehliadačov</a>. Môžete si pozrieť stránku, ale očakávajte poruchy niektorých funckionalít."
+  compatibility_unsupported_browser_markdown: "Váš ineternetový prehliadač nepodporujeme. Prosím aktualizujte si váš ineternetový prehliadač, <a href='%{supported_browsers_url}', target='_blank'> na jeden z našich podporovaných prehliadačov</a>. Môžete si pozrieť stránku, ale očakávajte poruchy niektorých funckionalít."
   flappy_shortcode: "mávni"
   infinity_shortcode: "inf"
   header_home: "Domov"
