@@ -1,6 +1,4 @@
 - full_width = local_assigns[:full_width]
-- if true # eventually check if a donor school
-  = render partial: 'layouts/donor_footer', locals: {full_width: view_options[:full_width]}
 .navbar-static-top.footer
   .container{ style: 'padding: 10px;' + (full_width ? 'width: 855px; margin-left: 25px;' : '') }
     .row
