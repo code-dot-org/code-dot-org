@@ -135,6 +135,7 @@ class User < ActiveRecord::Base
     oauth_token_expiration
     sharing_disabled
     next_census_display
+    donor_teacher_banner_dismissed
     data_transfer_agreement_accepted
     data_transfer_agreement_request_ip
     data_transfer_agreement_source
@@ -2054,8 +2055,8 @@ class User < ActiveRecord::Base
 
   # Returns the name of the donor for the donor teacher banner, or nil if none.
   def donor_teacher_banner_name
-    school_id = try(:school_info).try(:school).id
-    donor_name = DonorSchool.find_by(nces_id: school_id)&.name
+    school_id = school_info&.school&.id
+    donor_name = DonorSchool.find_by(nces_id: school_id)&.name if school_id
 
     donor_name
   end

@@ -88,4 +88,12 @@ class Api::V1::UsersController < Api::V1::JsonApiController
 
     render status: 200, json: {next_census_display: @user.next_census_display}
   end
+
+  # POST /api/v1/users/<user_id>/dismiss_donor_teacher_banner
+  def dismiss_donor_teacher_banner
+    @user.donor_teacher_banner_dismissed = true
+    @user.save
+
+    head :ok
+  end
 end
