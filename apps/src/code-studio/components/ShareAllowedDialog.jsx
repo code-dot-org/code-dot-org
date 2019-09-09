@@ -10,7 +10,7 @@ import AbuseError from './AbuseError';
 import SendToPhone from './SendToPhone';
 import color from '../../util/color';
 import * as applabConstants from '../../applab/constants';
-import * as gamelabConstants from '@cdo/apps/gamelab/constants';
+import * as p5labConstants from '@cdo/apps/p5lab/constants';
 import {SongTitlesToArtistTwitterHandle} from '../dancePartySongArtistTags';
 import {hideShareDialog, unpublishProject} from './shareDialogRedux';
 import DownloadReplayVideoButton from './DownloadReplayVideoButton';
@@ -298,8 +298,8 @@ class ShareAllowedDialog extends React.Component {
       embedOptions = {
         // If you change this width and height, make sure to update the
         // #visualizationColumn.wireframeShare css
-        iframeHeight: gamelabConstants.GAME_HEIGHT + 357,
-        iframeWidth: gamelabConstants.GAME_WIDTH + 32
+        iframeHeight: p5labConstants.APP_HEIGHT + 357,
+        iframeWidth: p5labConstants.APP_WIDTH + 32
       };
     }
     const {canPrint, canPublish, isPublished} = this.props;

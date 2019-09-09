@@ -1,4 +1,58 @@
+slack_endpoint_broken_links: !Secret
+github_webhook_secret: !Secret
+zendesk_secret:
 netsim_enable_metrics: true
 lint: true
 pretty_js: true
 daemon: true
+use_pusher:                        true
+netsim_shard_expiry_seconds:       60
+poste_attachment_dir:              /home/ubuntu/poste_attachments
+jotform_forms:
+    academic_year_1:
+      day_1:         82115203919149
+      facilitator:   82115940819156
+      post_workshop: 82115646319154
+    academic_year_1_2:
+      day_1:         82115203919149
+      day_2:         82115636519155
+      facilitator:   82115940819156
+      post_workshop: 82115646319154
+    academic_year_2:
+      day_1:         82115636519155
+      facilitator:   82115940819156
+      post_workshop: 82115646319154
+    academic_year_3:
+      day_1:         82115699619165
+      facilitator:   82115940819156
+      post_workshop: 82115646319154
+    academic_year_3_4:
+      day_1:         82115699619165
+      day_2:         82115533319149
+      facilitator:   82115940819156
+      post_workshop: 82115646319154
+    academic_year_4:
+      day_1:         82115533319149
+      facilitator:   82115940819156
+      post_workshop: 82115646319154
+    local:
+      day_0:       81307473693159
+      day_1:       81236323593153
+      day_2:       81368536787170
+      day_3:       81368909887175
+      day_4:       81368069687170
+      day_5:       81495142793161
+      facilitator: 81276605393158
+    local_summer:
+      day_0:       90986490369171
+      day_1:       90986506471163
+      day_2:       90986458251165
+      day_3:       90986477669179
+      day_4:       90986953273169
+      day_5:       90986517815167
+      facilitator: 91372090131144
+    post_course:
+      2018-2019: 90486182774164
+
+# Developer of the Day needs to see raw HTTP error pages so they can debug an issue with a staging build.
+custom_error_response: false

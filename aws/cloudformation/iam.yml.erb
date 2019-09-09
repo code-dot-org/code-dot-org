@@ -3,6 +3,10 @@ AWSTemplateFormatVersion: 2010-09-09
 Description: >-
   IAM layer including global/shared roles and access permissions for Code.org infrastructure.
   Note: Admin permissions are required to manage some admin-only resources in this stack.
+Parameters:
+  GoogleDeveloperIDs:
+    Type: AWS::SSM::Parameter::Value<List<String>>
+    Default: /IAM/GoogleDeveloperIDs
 Resources:
   # Admin Service Role for managing all resources in CloudFormation stacks.
   # Only admins can update stacks using this service role.
@@ -64,6 +68,14 @@ Resources:
                 Condition:
                   StringEquals:
                     iam:PermissionsBoundary: !Ref DevPermissions
+        # Permissions for managing AWS::SecretsManager::Secret resources.
+        - PolicyName: SecretPermissions
+          PolicyDocument:
+            Version: 2012-10-17
+            Statement:
+              - Effect: Allow
+                Action: secretsmanager:*
+                Resource: '*'
       ManagedPolicyArns: [!Ref DevPermissions]
   # Shared 'Developer' permissions.
   # Used as default permissions for all developer Roles,
@@ -80,6 +92,7 @@ Resources:
             NotAction:
               - iam:*
               - organizations:*
+              - secretsmanager:*
             Resource: '*'
           - Sid: IAMReadOnlyAccess
             Effect: Allow
@@ -105,7 +118,68 @@ Resources:
             Condition:
               StringNotEquals:
                 cloudformation:RoleARN: !Sub "arn:aws:iam::${AWS::AccountId}:role/admin/CloudFormationService"
-
+            # Read-only access to current secrets.
+          - Effect: Allow
+            Action: secretsmanager:GetSecretValue
+            Resource: '*'
+            Condition:
+              StringEquals:
+                secretsmanager:VersionStage: AWSCURRENT
+  Developer:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: Developer
+      Path: /admin/
+      AssumeRolePolicyDocument:
+        Version: 2012-10-17
+        Statement:
+        - Effect: Allow
+          Principal: {Federated: !Sub "arn:aws:iam::${AWS::AccountId}:saml-provider/Google"}
+          Action: sts:AssumeRoleWithSAML
+          Condition:
+            StringEquals:
+              SAML:aud: https://signin.aws.amazon.com/saml
+        - Effect: Allow
+          Principal: {Federated: accounts.google.com}
+          Action: sts:AssumeRoleWithWebIdentity
+          Condition:
+            StringEquals:
+              accounts.google.com:aud: '{{resolve:secretsmanager:admin/google_client_id}}'
+            ForAnyValue:StringEquals:
+              accounts.google.com:sub: !Ref GoogleDeveloperIDs
+        - Effect: Allow
+          Principal: {Service: ec2.amazonaws.com}
+          Action: sts:AssumeRole
+      Policies:
+      # Only allow developers to create/update stacks in specific environments.
+      - PolicyName: ProtectedStacks
+        PolicyDocument:
+          Statement:
+          - Effect: Deny
+            Action:
+            - cloudformation:CreateStack
+            - cloudformation:UpdateStack
+            - cloudformation:DeleteStack
+            - cloudformation:ExecuteChangeSet
+            Resource: '*'
+            Condition:
+              ForAnyValue:StringNotEquals:
+                aws:ResourceTag/environment: [adhoc, development]
+              ForAnyValue:StringEquals:
+                aws:TagKeys: environment
+      # Don't allow developers to view/delete secrets in non-development environments.
+      - PolicyName: SecretsAccess
+        PolicyDocument:
+          Statement:
+          - Effect: Allow
+            Action: secretsmanager:*
+            Resource: '*'
+          - Effect: Deny
+            Action:
+            - secretsmanager:GetSecretValue
+            - secretsmanager:DeleteSecret
+            NotResource: !Sub "arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:development/*"
+      ManagedPolicyArns: [!Ref DevPermissions]
   # Used by FirehoseMicroservice Lambda function.
   # TODO move to Data stack
   FirehoseLambdaRole:
@@ -131,28 +205,6 @@ Resources:
             - !Sub "arn:aws:firehose:${AWS::Region}:${AWS::AccountId}:deliverystream/analysis-events"
       ManagedPolicyArns:
       - "arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
-  # TODO: Move to Data stack
-  GlueRole:
-    Type: AWS::IAM::Role
-    Properties:
-      AssumeRolePolicyDocument:
-        Statement:
-          - Action: ['sts:AssumeRole']
-            Effect: Allow
-            Principal: {Service: [glue.amazonaws.com]}
-      Path: /
-      Policies:
-      - PolicyName: ELBLogsRolePolicy
-        PolicyDocument:
-          Statement:
-          - Effect: Allow
-            Action:
-            - 's3:GetObject'
-            - 's3:PutObject'
-            Resource:
-            - !Sub 'arn:aws:s3:::cdo-logs/production-codeorg/AWSLogs/${AWS::AccountId}/elasticloadbalancing/${AWS::Region}/*'
-      ManagedPolicyArns:
-      - 'arn:aws:iam::aws:policy/service-role/AWSGlueServiceRole'
   # Percona Monitoring and Management RDS access role.
   # See: https://www.percona.com/doc/percona-monitoring-and-management/amazon-rds.html#creating-a-policy
   # TODO: Move to Data stack
@@ -215,7 +267,3 @@ Outputs:
     Description: Firehose Lambda Role ARN
     Value: !GetAtt FirehoseLambdaRole.Arn
     Export: {Name: !Sub "${AWS::StackName}-FirehoseLambdaRoleARN"}
-  GlueRoleARN:
-    Description: Glue Role ARN
-    Value: !GetAtt GlueRole.Arn
-    Export: {Name: !Sub "${AWS::StackName}-GlueRoleARN"}

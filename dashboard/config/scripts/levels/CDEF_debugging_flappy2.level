@@ -31,16 +31,20 @@
     "include_shared_functions": "false",
     "default_flap": "NORMAL",
     "free_play": "false",
-    "ground": "false",
-    "obstacles": "false",
-    "score": "false",
+    "ground": "true",
+    "obstacles": "true",
+    "score": "true",
     "shareable": "false",
     "short_instructions": "Why doesn't this game work?",
-    "contained_level_names": null
+    "encrypted": "false",
+    "mini_rubric": "false",
+    "success_condition": "function successCondition() {\r\n\t        return Flappy.playerScore >= 1;\r\n\t      }",
+    "failure_condition": "function failureCondition() {\r\n\t        return Flappy.avatarY >= Flappy.MAZE_HEIGHT - 78;\r\n\t      }",
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2018-07-05 23:46:57 +0000\",\"changed\":[\"notes\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-07-05 23:49:03 +0000\",\"changed\":[],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-07-05 23:49:23 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-07-05 23:49:53 +0000\",\"changed\":[\"name\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-07-05 23:50:08 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-07-19 20:31:52 +0000\",\"changed\":[\"start_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2018-07-05 23:46:57 +0000\",\"changed\":[\"notes\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-07-05 23:49:03 +0000\",\"changed\":[],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-07-05 23:49:23 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-07-05 23:49:53 +0000\",\"changed\":[\"name\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-07-05 23:50:08 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-07-19 20:31:52 +0000\",\"changed\":[\"start_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2019-07-29 14:58:32 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-07-29 14:58:35 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-07-29 15:27:31 +0000\",\"changed\":[\"start_blocks\",\"solution_blocks\",\"ground\",\"obstacles\",\"score\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-07-29 15:30:15 +0000\",\"changed\":[\"start_blocks\",\"solution_blocks\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-07-29 15:31:56 +0000\",\"changed\":[],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-07-29 15:32:28 +0000\",\"changed\":[\"start_blocks\",\"solution_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-07-29 15:33:28 +0000\",\"changed\":[\"start_blocks\",\"solution_blocks\",\"ground\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-07-29 15:33:57 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-07-29 15:34:27 +0000\",\"changed\":[\"start_blocks\",\"solution_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-07-29 15:34:53 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-07-29 15:36:07 +0000\",\"changed\":[\"start_blocks\",\"solution_blocks\",\"success_condition\",\"toolbox_blocks\",\"failure_condition\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-07-29 15:36:40 +0000\",\"changed\":[\"start_blocks\",\"solution_blocks\",\"toolbox_blocks\",\"failure_condition\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-07-29 15:37:04 +0000\",\"changed\":[\"start_blocks\",\"solution_blocks\",\"toolbox_blocks\",\"failure_condition\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-07-29 15:37:37 +0000\",\"changed\":[\"start_blocks\",\"solution_blocks\",\"ground\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-07-29 16:42:15 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-07-29 16:42:25 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-07-29 16:42:54 +0000\",\"changed\":[\"start_blocks\",\"solution_blocks\",\"toolbox_blocks\",\"failure_condition\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-07-29 16:43:37 +0000\",\"changed\":[\"start_blocks\",\"solution_blocks\",\"toolbox_blocks\",\"failure_condition\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-07-29 16:43:52 +0000\",\"changed\":[\"start_blocks\",\"solution_blocks\",\"toolbox_blocks\",\"failure_condition\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-07-29 16:44:10 +0000\",\"changed\":[\"start_blocks\",\"solution_blocks\",\"toolbox_blocks\",\"failure_condition\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-07-29 16:44:24 +0000\",\"changed\":[\"start_blocks\",\"solution_blocks\",\"toolbox_blocks\",\"failure_condition\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-08-01 16:55:28 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"success_condition\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -78,6 +82,37 @@
         </block>
       </xml>
     </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="flappy_flap"/>
+        <block type="flappy_endGame"/>
+        <block type="flappy_playSound">
+          <title name="VALUE">"sfx_wing"</title>
+        </block>
+        <block type="flappy_incrementPlayerScore"/>
+        <block type="flappy_setSpeed">
+          <title name="VALUE">Flappy.LevelSpeed.NORMAL</title>
+        </block>
+        <block type="flappy_setBackground">
+          <title name="VALUE">"flappy"</title>
+        </block>
+        <block type="flappy_setPlayer">
+          <title name="VALUE">"flappy"</title>
+        </block>
+        <block type="flappy_setObstacle">
+          <title name="VALUE">"flappy"</title>
+        </block>
+        <block type="flappy_setGround">
+          <title name="VALUE">"flappy"</title>
+        </block>
+        <block type="flappy_setGravity">
+          <title name="VALUE">Flappy.Gravity.NORMAL</title>
+        </block>
+        <block type="flappy_setScore">
+          <title name="VALUE">0</title>
+        </block>
+      </xml>
+    </toolbox_blocks>
     <solution_blocks>
       <xml>
         <block type="when_run" deletable="false">

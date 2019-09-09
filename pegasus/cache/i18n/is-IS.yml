@@ -89,7 +89,7 @@ is-IS:
     Gates, Mark Zuckerberg, Angry Birds og Plants vs. Zombies. Lærðu að nota lykkjur,
     ef-þá setningar og grunnalgrím.
   all_ages: Allur aldur
-  beginner: Byrjendur
+  beginner: Fyrir byrjendur
   n_participants: "# þátttakendur"
   go: Byrja
   thank_you_: Takk fyrir!
@@ -1941,6 +1941,10 @@ is-IS:
     í <a href='%{supported_browsers_url}', target='_blank'>einhvern af vöfrunum sem
     við styðjum</a>. Þú getur prófað að skoða síðuna en mátt búast við því að eitthvað
     virki ekki.
+  compatibility_unsupported_browser_markdown: Vafrinn þinn er ekki studdur. Vinsamlegast
+    uppfærðu í <a href='%{supported_browsers_url}', target='_blank'>einhvern af vöfrunum
+    sem við styðjum</a>. Þú getur prófað að skoða síðuna en mátt búast við því að
+    eitthvað virki ekki.
   starwars_shortcode: stjarna
   flappy_shortcode: blaka
   header_home: Forsíða
@@ -2192,8 +2196,8 @@ is-IS:
   hoc2018_dance_amazon_try_coding_this_summer_title: Prófaðu að kóða í sumar
   hoc2018_dance_amazon_scholarship_programs_button: Sækja um nú
   hoc2018_dance_amazon_future_engineer_footer: "* Listamennirnir sem eiga tónlistina
-    sem er notuð í þessu kennsluefni eru ekki að styðja við eða mæla með Amazon með
-    því að veita Code.org leyfi til að nota tónlist sína.\n\n"
+    sem er notuð í þessu kennsluefni eru ekki að styðja við eða mæla með Amazon þó
+    þeir veiti Code.org leyfi til að nota tónlist sína.\n\n"
   hoc2018_aquatic_video3: Minecraft Neðansjávarferð - Skilyrði
   hoc2018_aquatic_video4: Minecraft Neðansjávarferð - Til hamingju
   hoc2018_dance_video1: Danspartý - Kynning

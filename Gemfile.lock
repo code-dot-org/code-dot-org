@@ -316,13 +316,14 @@ GEM
       aws-sdk-core (~> 3, >= 3.21.2)
       aws-sdk-kms (~> 1)
       aws-sigv4 (~> 1.0)
-    aws-sdk-sqs (1.4.0)
-      aws-sdk-core (~> 3)
+    aws-sdk-secretsmanager (1.20.0)
+      aws-sdk-core (~> 3, >= 3.39.0)
       aws-sigv4 (~> 1.0)
     aws-sigv4 (1.1.0)
       aws-eventstream (~> 1.0, >= 1.0.2)
     backports (3.11.3)
     bcrypt (3.1.11)
+    benchmark-ips (2.7.2)
     better_errors (2.1.1)
       coderay (>= 1.0.0)
       erubis (>= 2.6.6)
@@ -414,9 +415,6 @@ GEM
     factory_girl_rails (4.7.0)
       factory_girl (~> 4.7.0)
       railties (>= 3.0.0)
-    fake_sqs (0.3.1)
-      builder
-      sinatra
     fakeredis (0.6.0)
       redis (~> 3.2)
     faraday (0.15.4)
@@ -529,7 +527,7 @@ GEM
     mime-types (3.2.2)
       mime-types-data (~> 3.2015)
     mime-types-data (3.2018.0812)
-    mini_magick (4.5.1)
+    mini_magick (4.9.5)
     mini_mime (1.0.1)
     mini_portile2 (2.4.0)
     minitest (5.11.3)
@@ -897,8 +895,9 @@ DEPENDENCIES
   aws-sdk-rds (>= 1.38.1)
   aws-sdk-route53 (~> 1)
   aws-sdk-s3 (~> 1)
-  aws-sdk-sqs (~> 1)
+  aws-sdk-secretsmanager (~> 1)
   bcrypt
+  benchmark-ips
   better_errors
   binding_of_caller
   bootstrap-sass (~> 2.3.2.2)
@@ -918,7 +917,6 @@ DEPENDENCIES
   execjs
   eyes_selenium
   factory_girl_rails
-  fake_sqs
   fakeredis
   firebase
   firebase_token_generator
@@ -954,7 +952,7 @@ DEPENDENCIES
   loofah (~> 2.2.1)
   marked-rails
   memory_profiler
-  mini_magick
+  mini_magick (>= 4.9.4)
   minitest (~> 5.5)
   minitest-around
   minitest-reporters (~> 1.2.0.beta3)
@@ -1052,4 +1050,4 @@ RUBY VERSION
    ruby 2.5.0p0
 
 BUNDLED WITH
-   1.17.0
+   1.17.1

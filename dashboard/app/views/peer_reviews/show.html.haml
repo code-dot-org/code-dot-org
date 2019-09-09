@@ -28,7 +28,7 @@
     #previous-reviews
       %p Previous reviews
       - @peer_review.related_reviews.where.not(reviewer: nil).each do |peer_review|
-        .peer-review-content
+        .peer-review-content{class: peer_review.css_classes}
           %p.peer-review-title
             %strong="#{peer_review.reviewer.name} added #{time_ago_in_words(peer_review.updated_at)} ago"
           %p.peer-review-status= peer_review.localized_status_description
@@ -57,4 +57,4 @@
       = f.text_area :data, rows: 7, placeholder: 'Type your peer review here', style: 'width: 100%; box-sizing: border-box;', disabled: reviewed
     - unless reviewed
       .actions
-        = f.submit 'Submit', class: 'btn btn-large btn-primary'
+        = f.submit 'Submit', class: 'btn btn-large btn-primary', disabled: current_user.plc_reviewer?

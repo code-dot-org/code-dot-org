@@ -273,6 +273,10 @@ mi-NZ:
     tō pūtirotiro kia rite ki<a href='%{supported_browsers_url}', target='_blank'>
     tētahi o ā mātou pūtirotiro </a>. E āhei ana te whakamātau te titiro ki te whārangi,
     heoi anō, kia takatū i te whatinga o te taumahinga.
+  compatibility_unsupported_browser_markdown: Kāore tō pūtirotiro i te tautokona.
+    Tēnā whakahoungia tō pūtirotiro kia rite ki<a href='%{supported_browsers_url}',
+    target='_blank'> tētahi o ā mātou pūtirotiro </a>. E āhei ana te whakamātau te
+    titiro ki te whārangi, heoi anō, kia takatū i te whatinga o te taumahinga.
   flappy_shortcode: paki
   header_courses: Akoranga
   header_project_gallery: Ngā Tūmahi

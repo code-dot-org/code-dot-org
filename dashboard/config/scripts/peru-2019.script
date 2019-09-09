@@ -1,0 +1,178 @@
+version_year '2019'
+
+stage 'Introduction'
+level 'courseE_video_ramp1'
+variants
+  level 'courseD_scrat_ramp1'
+  level 'courseE_maze_ramp1', active: false
+endvariants
+variants
+  level 'courseD_scrat_ramp2'
+  level 'courseE_maze_ramp2', active: false
+endvariants
+variants
+  level 'courseD_scrat_ramp3'
+  level 'courseE_maze_ramp3', active: false
+endvariants
+variants
+  level 'courseD_scrat_ramp4'
+  level 'courseE_maze_ramp4', active: false
+endvariants
+variants
+  level 'courseD_scrat_ramp5'
+  level 'courseE_maze_ramp5', active: false
+endvariants
+variants
+  level 'courseD_scrat_predict1'
+  level 'courseE_maze_predict1', active: false
+endvariants
+variants
+  level 'courseD_video_ScratLoops'
+  level 'courseCDEF_video_AngryBirdLoops', active: false
+endvariants
+variants
+  level 'courseD_scrat_ramp6'
+  level 'courseE_maze_ramp6', active: false
+endvariants
+variants
+  level 'courseD_scrat_ramp7'
+  level 'courseE_maze_ramp7', active: false
+endvariants
+variants
+  level 'courseD_scrat_ramp8', challenge: true
+  level 'courseE_artist_ramp8', active: false, challenge: true
+endvariants
+variants
+  level 'ramp_video_artistIntro'
+  level 'courseC_video_angles', active: false
+endvariants
+variants
+  level 'courseE_artist_ramp8_2'
+  level 'courseE_artist_ramp9', active: false
+endvariants
+variants
+  level 'courseC_video_angles2'
+  level 'courseE_artist_predict1', active: false
+endvariants
+variants
+  level 'courseE_artist_ramp9_2'
+  level 'courseD_video_nestedLoopsArtist', active: false
+endvariants
+
+stage 'Introduction to Debugging'
+variants
+  level 'courseC_video_debugging'
+  level 'courseD_video_debugging', active: false
+endvariants
+variants
+  level 'courseC_maze_debugging1'
+  level 'courseD_collector_debugging1', active: false
+endvariants
+variants
+  level 'courseC_maze_debugging2'
+  level 'courseD_collector_debugging2', active: false
+endvariants
+variants
+  level 'courseC_maze_debugging3'
+  level 'courseD_collector_debugging3', active: false
+endvariants
+variants
+  level 'courseC_maze_debugging4'
+  level 'courseD_collector_debugging4', active: false
+endvariants
+variants
+  level 'courseC_maze_debugging5'
+  level 'courseD_collector_debugging5', active: false
+endvariants
+variants
+  level 'courseC_maze_debugging6'
+  level 'courseD_collector_debugging6', active: false
+endvariants
+variants
+  level 'courseC_maze_debugging7', challenge: true
+  level 'courseD_collector_debugging8', active: false, challenge: true
+endvariants
+variants
+  level 'courseC_maze_debugging8_predict1'
+  level 'courseD_collector_debugging9', active: false
+endvariants
+variants
+  level 'courseC_maze_debugging9'
+  level 'courseD_collector_debugging10_predict1', active: false
+endvariants
+bonus 'courseC_maze_debugging_challenge1'
+bonus 'courseC_maze_debugging_challenge2'
+bonus 'courseD_bee_debugging_challenge1'
+bonus 'courseD_collector_debugging_challenge2'
+
+stage 'Loops: My Loopy Robotic Friends'
+level 'courseB_unplugged_loopyMRF'
+
+stage 'Loops in Artist'
+level 'ramp_video_artistIntro2'
+level 'ramp_artist_loops1'
+level 'ramp_artist_loops2'
+level 'ramp_video_loopsArtist'
+level 'ramp_artist_loops3'
+level 'ramp_artist_loops4'
+level 'ramp_artist_loops5'
+level 'ramp_artist_loops6'
+level 'ramp_artist_loops7'
+level 'ramp_artist_loops8', challenge: true
+level 'ramp_artist_loops9'
+level 'courseC_artist_loops1a'
+level 'courseC_artist_loops2a'
+level 'courseC_artist_loops3a'
+level 'courseC_artist_loops4a'
+level 'courseC_artist_loops5b'
+level 'courseC_artist_loops8a'
+
+stage 'Nested Loops'
+level 'courseD_bee_nestedLoops1a'
+level 'courseD_bee_nestedLoops1'
+level 'courseD_video_nestedLoops'
+level 'courseD_bee_nestedLoops2_predict1'
+level 'courseD_bee_nestedLoops2'
+level 'courseD_maze_nestedLoops3'
+level 'courseD_maze_nestedLoops4'
+level 'courseD_maze_nestedLoops5'
+level 'courseD_maze_nestedLoops6'
+level 'courseD_bee_nestedLoops7', challenge: true
+level 'courseD_bee_nestedLoops8'
+level 'courseD_bee_nestedLoops9'
+level 'courseD_bee_nestedLoops9_predict2'
+bonus 'courseD_harvester_nested_loops_challenge1'
+bonus 'courseD_collector_nested_loops_challenge2'
+
+stage 'Nested Loops in Frozen'
+level 'courseD_artist_project1'
+level 'courseD_artist_project2'
+level 'courseD_artist_project3'
+level 'courseD_artist_project4'
+level 'courseD_artist_project5'
+level 'courseD_artist_project1a'
+level 'courseD_artist_project2a'
+level 'courseD_artist_project3a'
+level 'courseD_artist_project4a'
+
+stage 'Events in Star Wars'
+level 'elementary_video_pairProgramming'
+skin 'hoc2015'
+level 'blockly:Studio:hoc2015_blockly_7_no_video'
+skin 'hoc2015'
+level 'blockly:Studio:hoc2015_blockly_8'
+skin 'hoc2015'
+level 'blockly:Studio:hoc2015_blockly_9'
+skin 'hoc2015'
+level 'blockly:Studio:hoc2015_blockly_10'
+skin 'hoc2015'
+level 'blockly:Studio:hoc2015_blockly_11'
+skin 'hoc2015'
+level 'blockly:Studio:hoc2015_blockly_12'
+skin 'hoc2015'
+level 'blockly:Studio:hoc2015_blockly_13'
+skin 'hoc2015'
+level 'blockly:Studio:hoc2015_blockly_14'
+skin 'hoc2015'
+video_key_for_next_level 'starwars_blocks_congrats'
+level 'blockly:Studio:hoc2015_blockly_15'

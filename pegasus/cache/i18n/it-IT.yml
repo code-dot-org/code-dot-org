@@ -551,6 +551,7 @@ it-IT:
   minecraft_adventurer: Un'avventura con Minecraft
   minecraft_tutorials: Le esercitazioni di Minecraft per l'Ora del Codice
   minecraft_specs: Molte lingue | Browser e tablet moderni | Da 7 anni in su
+  minecraft_start_tutorial: Inizia l'esercitazione
   minecraft_agent_description: Minecraft è tornato per l'Ora del Codice con una nuovissima
     attività! Viaggia attraverso Minecraft grazie al coding.
   minecraft_agent_button: Inizia
@@ -564,7 +565,8 @@ it-IT:
   minecraft_download_adventurer: Scarica la versione da usare <i>in locale</i> di
     "Un'avventura con Minecraft".
   minecraft_subtitle: L'Ora del Codice con Minecraft
-  minecraft_store_camps: Campi gratuiti per Ora di Codice Minecraft al Microsoft Store
+  minecraft_store_camps: Free Minecraft Hour of Code Camps at the Microsoft Store
+  minecraft_host_event: Organizza un evento dell'Ora del Codice con Minecraft
   minecraft_teach_resources: Risorse per l'insegnante e piano di lavoro della lezione.
   minecraft_leader_guide: Scarica le risorse per aiutarti a pianificare ed organizzare
     un evento.
@@ -1065,7 +1067,7 @@ it-IT:
   dashboard_grade_other: Altro
   dashboard_login_word: Parola
   dashboard_login_picture: Immagine
-  dashboard_login_none: Indirizzo di posta elettronica
+  dashboard_login_none: Indirizzo email
   dashboard_stage: Lezione
   dashboard_puzzle: Esercizio
   dashboard_question: Domanda
@@ -1506,7 +1508,7 @@ it-IT:
   coursec_shortdescription_congrats: Impara le basi dell'informatica e crea disegni,
     storie animate o giochi interattivi.
   coursed_shortdescription_congrats: Vengono ripresi brevemente i concetti del corso
-    C ed aggiunti algoritmi, cicli annidati, istruzioni condizioni e altro ancora.
+    C ed aggiunti algoritmi, cicli annidati, istruzioni condizionali e altro ancora.
   coursee_shortdescription_congrats: Vengono ripresi brevemente i concetti dei corsi
     C e D e viene aggiunto il concetto di funzione.
   coursef_shortdescription_congrats: Impara tutti i concetti dei corsi di fondamenti
@@ -1519,7 +1521,8 @@ it-IT:
   coursec-2017_shortdescription_congrats: Impara le basi dell'informatica e crea disegni,
     storie animate o giochi interattivi.
   coursed-2017_shortdescription_congrats: Vengono ripresi brevemente i concetti del
-    corso C ed aggiunti algoritmi, cicli annidati, istruzioni condizioni e altro ancora.
+    corso C ed aggiunti algoritmi, cicli annidati, istruzioni condizionali e altro
+    ancora.
   coursee-2017_shortdescription_congrats: Vengono ripresi brevemente i concetti dei
     corsi C e D e viene aggiunto il concetto di funzione.
   coursef-2017_shortdescription_congrats: Impara tutti i concetti dei corsi di fondamenti
@@ -1532,7 +1535,8 @@ it-IT:
   coursec-2018_shortdescription_congrats: Impara le basi dell'informatica e crea disegni,
     storie animate o giochi interattivi.
   coursed-2018_shortdescription_congrats: Vengono ripresi brevemente i concetti del
-    corso C ed aggiunti algoritmi, cicli annidati, istruzioni condizioni e altro ancora.
+    corso C ed aggiunti algoritmi, cicli annidati, istruzioni condizionali e altro
+    ancora.
   coursee-2018_shortdescription_congrats: Vengono ripresi brevemente i concetti dei
     corsi C e D e viene aggiunto il concetto di funzione.
   coursef-2018_shortdescription_congrats: Impara tutti i concetti dei corsi di fondamenti
@@ -1545,7 +1549,8 @@ it-IT:
   coursec-2019_shortdescription_congrats: Impara le basi dell'informatica e crea disegni,
     storie animate o giochi interattivi.
   coursed-2019_shortdescription_congrats: Vengono ripresi brevemente i concetti del
-    corso C ed aggiunti algoritmi, cicli annidati, istruzioni condizioni e altro ancora.
+    corso C ed aggiunti algoritmi, cicli annidati, istruzioni condizionali e altro
+    ancora.
   coursee-2019_shortdescription_congrats: Vengono ripresi brevemente i concetti dei
     corsi C e D e viene aggiunto il concetto di funzione.
   coursef-2019_shortdescription_congrats: Impara tutti i concetti dei corsi di fondamenti
@@ -2069,6 +2074,9 @@ it-IT:
     aggiornare il browser ad <a href='%{supported_browsers_url}', target='_blank'>
     uno dei nostri browser supportati</a>. Puoi provare a visualizzare la pagina,
     ma aspettati qualche malfunzionamento.
+  compatibility_unsupported_browser_markdown: Il tuo browser non è supportato. Per
+    favore aggiorna il browser ad [uno dei nostri browser supportati](%{supported_browsers_url}).
+    Prova comunque a visualizzare la pagina, ma aspettati che qualcosa non funzioni.
   flappy_shortcode: sbatti le ali
   header_home: Home
   header_my_dashboard: Controllo
@@ -2104,7 +2112,7 @@ it-IT:
   header_about: Informazioni
   header_teacher_community: Teacher community
   header_help_support: Help and support
-  header_report_bug: Report Bug
+  header_report_bug: Report a problem
   header_tutorials: Corsi
   header_documentation: Documentazione
   user_header_label: Ciao %{username}
@@ -2175,7 +2183,7 @@ it-IT:
     Oppure, se ti sei già esercitato con i blocchi, spingi le tue abilità al livello
     successivo con la programmazione in formato testo.
   applab_tile_start_tutorial: Inizia
-  applab_tile_teacher_guide: Visualizza la guida per l'insegnante
+  applab_tile_teacher_guide: Guida per l'insegnante (in inglese)
   aquatic_name: 'Minecraft: Viaggio Acquatico'
   account_sign_up_email_opt_in: Possiamo inviarti email sulle novità dei nostri corsi
     o su altre notizie legate all'informatica?
@@ -2196,7 +2204,7 @@ it-IT:
     da Code.org e partner.
   hoc_overview_partner_activities_link: Visualizza tutte le attività
   hoc_overview_start_tutorial: Inizia
-  hoc_overview_view_teacher_guide: Visualizza la guida per l'insegnante
+  hoc_overview_view_teacher_guide: Guida per l'insegnante (in inglese)
   hoc2018_creativity: creatività
   hoc2018_creativity_create: Crea
   hoc2018_creativity_hoc_coming: L'Ora del Codice è in arrivo…
@@ -2238,15 +2246,18 @@ it-IT:
     "Un'avventura con Minecraft".
   hoc2018_mc_educators: Per gli insegnanti
   hoc2018_mc_educators_box1_title: Programma con Minicraft
-  hoc2018_mc_educators_box1_desc: Su Minecraft Education Edition si trovano curriculum
-    standard, formazione e programmazione in Minecraft.
+  hoc2018_mc_educators_box1_desc: Su Minecraft Education Edition si trovano risorse
+    per la programmazione in Minecraft.
   hoc2018_mc_educators_box1_button: Inizia
   hoc2018_mc_educators_box2_title: Scarica la Guida per l'insegnante
   hoc2018_mc_educators_box2_desc: Questi strumenti ti aiuteranno ad organizzare un'Ora
     del Codice per coinvolgere i tuoi studenti sui temi dell'informatica.
   hoc2018_mc_educators_box2_button: Scarica
   hoc2018_mc_educators_box3_title: Partecipa ad un seminario gratuito per studenti
-    (solo in USA)
+  hoc2018_mc_educators_box3_desc: Visita un Microsoft Store nella tua zona per un'esercitazione
+    gratuita dell'Ora del Codice. Per principianti ed esperti, dai sei anni in su.
+    (Sono in USA.)
+  hoc2018_mc_educators_box3_button: Trova un seminario
   hoc2018_mc_educators_box4_title: Accedi ad ulteriori risorse di informatica
   hoc2018_mc_educators_box4_desc: Contribuisci a migliorare la tua comunità diffondendo
     competenze digitali e risorse di formazione in informatica con Microsoft.
@@ -2280,9 +2291,10 @@ it-IT:
   hoc2018_mc_homepage_watch_video: Guarda il nostro video
   hoc2018_mc_homepage_join_us: Unisciti a noi
   hoc2018_mc_homepage_try_it: Prova
+  hoc2018_mc_back: Minecraft è tornato per l'Ora del Codice con una nuovissima attività!
   hoc2018_mc_back_journey: Minecraft è tornato per l'Ora del Codice con una nuovissima
     attività! Viaggia attraverso Minecraft grazie al coding.
-  hoc2018_mc_teacher_guide: Visualizza la guida per l'insegnante
+  hoc2018_mc_teacher_guide: Guida per l'insegnante (in inglese)
   hoc2018_mc_minecraft_education: Minecraft Education
   hoc2018_mc_continue_learning: Continua ad imparare con Minecraft.
   hoc2018_mc_go_to_mc_education: Via su Minecraft Education
@@ -2293,6 +2305,7 @@ it-IT:
     i problemi per esplorare e costruire mondi sottomarini con la programmazione.
   hoc2018_mc_journey: Viaggio attraverso Minecraft con la programmazione.
   hoc2018_dance_party_main_heading: Ballando col codice
+  hoc2018_dance_party_landing_title: Balla
   hoc2018_dance_party_subheading: Aiuta a tradurre Ballando col codice
   hoc2018_dance_create_your_own_dance_title: Crea il tuo progetto in "Ballando col
     codice"
@@ -2328,8 +2341,33 @@ it-IT:
     target='_blank'>Maggiori informazioni</a>
   hoc2018_dance_amazon_learn_more_future_engineer_subheading_title: Ulteriori informazioni
     su Amazon Future Engineer
+  hoc2018_dance_amazon_about_future_engineer_title: Informazioni su Amazon Future
+    Engineer
+  hoc2018_dance_amazon_about_future_engineer_description: Learn about Amazon’s kindergarten
+    to career program to increase access to computer science education. Find information
+    on how to get involved in our summer camps, high school CS classes, scholarships,
+    and internships.
   hoc2018_dance_amazon_about_future_engineer_button: Ulteriori informazioni
+  hoc2018_dance_amazon_try_coding_this_summer_title: Try coding this summer
+  hoc2018_dance_amazon_try_coding_this_summer_description: Get involved in Amazon
+    Future Engineer’s free, fun, and inclusive computer science camps! Summer camps
+    are available for students from kindergarten through 8th grade in multiple locations
+    in the US for summer 2019.
+  hoc2018_dance_amazon_try_coding_this_summer_button: Join a camp
+  hoc2018_dance_amazon_scholarship_programs_title: Scholarship programs
+  hoc2018_dance_amazon_scholarship_programs_description: Amazon is offering scholarships
+    of $10,000 per year for underserved students who have successfully completed or
+    are currently enrolled in an AP CS course and intend to study a CS degree at a
+    4-year college or university in the United States.
   hoc2018_dance_amazon_scholarship_programs_button: Applica ora
+  hoc2018_dance_amazon_internships_title: Come Intern at Amazon
+  hoc2018_dance_amazon_internships_description: Applications are now open for summer
+    2019 Amazon Future Engineer internships. Interns will partner with a manager,
+    technical mentor, and other interns to innovate and create new features and services
+    on behalf of Amazon customers. Internships are available in the US and Canada.
+  hoc2018_dance_amazon_internships_button: Find an internship
+  hoc2018_dance_amazon_k8_programs_title: K-8 programs
+  hoc2018_dance_amazon_funding_title: Get funding for your CS degree
   hoc2018_dance_amazon_future_engineer_footer: "* Gli artisti che hanno permesso di
     usare la loro musica in questo tutorial non stanno sponsorizzando o sostenendo
     Amazon come parte della licenza d'uso della loro musica su Code.org.\n\n"

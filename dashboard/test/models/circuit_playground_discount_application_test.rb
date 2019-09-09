@@ -46,7 +46,7 @@ class CircuitPlaygroundDiscountApplicationTest < ActiveSupport::TestCase
     teacher = create :teacher
     create :pd_attendance,
       teacher: teacher,
-      workshop: create(:pd_workshop,
+      workshop: create(:workshop,
         course: Pd::Workshop::COURSE_CSD,
         subject: Pd::Workshop::SUBJECT_TEACHER_CON,
         started_at: DateTime.parse('2018-05-02')
@@ -59,11 +59,7 @@ class CircuitPlaygroundDiscountApplicationTest < ActiveSupport::TestCase
     teacher = create :teacher
     create :pd_attendance,
       teacher: teacher,
-      workshop: create(:pd_workshop,
-        course: Pd::Workshop::COURSE_CSD,
-        subject: Pd::Workshop::SUBJECT_SUMMER_WORKSHOP,
-        started_at: DateTime.parse('2018-05-02')
-      )
+      workshop: create(:csd_summer_workshop, started_at: DateTime.parse('2018-05-02'))
 
     assert CircuitPlaygroundDiscountApplication.studio_person_pd_eligible? teacher
   end
@@ -72,7 +68,7 @@ class CircuitPlaygroundDiscountApplicationTest < ActiveSupport::TestCase
     teacher = create :teacher
     create :pd_attendance,
       teacher: teacher,
-      workshop: create(:pd_workshop,
+      workshop: create(:workshop,
         course: Pd::Workshop::COURSE_CSP,
         subject: Pd::Workshop::SUBJECT_TEACHER_CON,
         started_at: DateTime.parse('2018-05-02')
@@ -85,7 +81,7 @@ class CircuitPlaygroundDiscountApplicationTest < ActiveSupport::TestCase
     teacher = create :teacher
     create :pd_attendance,
       teacher: teacher,
-      workshop: create(:pd_workshop,
+      workshop: create(:workshop,
         course: Pd::Workshop::COURSE_CSD,
         subject: Pd::Workshop::SUBJECT_TEACHER_CON,
         started_at: DateTime.parse('2017-05-02')
@@ -116,7 +112,7 @@ class CircuitPlaygroundDiscountApplicationTest < ActiveSupport::TestCase
 
     create :pd_attendance,
       teacher: user1,
-      workshop: create(:pd_workshop,
+      workshop: create(:workshop,
         course: Pd::Workshop::COURSE_CSD,
         subject: Pd::Workshop::SUBJECT_TEACHER_CON,
         started_at: DateTime.parse('2018-05-02')

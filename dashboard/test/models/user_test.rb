@@ -774,15 +774,16 @@ class UserTest < ActiveSupport::TestCase
   test "find_for_authentication finds migrated multi-auth email user first" do
     email = 'test@foo.bar'
     migrated_student = create(:student, email: email)
-    migrated_student.primary_contact_info = migrated_student.primary_contact_info
-    migrated_student.primary_contact_info.update(authentication_id: User.hash_email(email))
+
     legacy_student = build(:student, email: email)
-    # skip duplicate email validation
-    legacy_student.save(validate: false)
+    # ignore "Email has already been taken" error
+    assert_raises(ActiveRecord::RecordInvalid) do
+      legacy_student.save(validate: false)
+    end
+    legacy_student.demigrate_from_multi_auth
+    assert_equal legacy_student.hashed_email, migrated_student.hashed_email
 
     looked_up_user = User.find_for_authentication(hashed_email: User.hash_email(email))
-
-    assert_equal legacy_student.hashed_email, migrated_student.hashed_email
     assert_equal migrated_student, looked_up_user
   end
 
@@ -2710,71 +2711,6 @@ class UserTest < ActiveSupport::TestCase
   test 'account_age_days should return days since account creation' do
     student = create :student, created_at: DateTime.now - 10
     assert student.account_age_days == 10
-  end
-
-  def mock_geocoder_result(result)
-    mock_us_object = OpenStruct.new(country_code: result)
-    Geocoder.stubs(:search).returns([mock_us_object])
-  end
-
-  test 'do not show race interstitial to teacher' do
-    mock_geocoder_result('US')
-    teacher = create :teacher, created_at: DateTime.now - 8
-    refute teacher.show_race_interstitial?('ignored_ip')
-  end
-
-  test 'do not show race interstitial to user accounts under 13' do
-    mock_geocoder_result('US')
-    student = User.create(@good_data_young)
-    student.created_at = DateTime.now - 8
-    refute student.show_race_interstitial?('ignored_ip')
-  end
-
-  test 'do not show race interstitial to user accounts less than one week old' do
-    mock_geocoder_result('US')
-    student = create :student, created_at: DateTime.now - 3
-    refute student.show_race_interstitial?('ignored_ip')
-  end
-
-  test 'do not show race interstitial to user accounts that have already entered race information' do
-    mock_geocoder_result('US')
-    student = create :student, created_at: DateTime.now - 8
-    student.update_columns(races: 'white,black')
-    refute student.show_race_interstitial?('ignored_ip')
-  end
-
-  test 'do not show race interstitial to user accounts that have closed the dialog already' do
-    mock_geocoder_result('US')
-    student = create :student, created_at: DateTime.now - 8
-    student.update_columns(races: 'closed_dialog')
-    refute student.show_race_interstitial?('ignored_ip')
-  end
-
-  test 'do not show race interstitial if IP address is nil' do
-    mock_geocoder_result('US')
-    student = create :student, created_at: DateTime.now - 8
-    mock_ip = nil
-    refute RaceInterstitialHelper.show_race_interstitial?(student, mock_ip)
-  end
-
-  test 'do not show race interstitial to non-US users' do
-    mock_geocoder_result('CA')
-    student = create :student, created_at: DateTime.now - 8
-    unused_ip = 'ignored'
-    refute RaceInterstitialHelper.show_race_interstitial?(student, unused_ip)
-  end
-
-  test 'show race interstitial to US users' do
-    mock_geocoder_result('US')
-    student = create :student, created_at: DateTime.now - 8
-    unused_ip = 'ignored'
-    assert RaceInterstitialHelper.show_race_interstitial?(student, unused_ip)
-  end
-
-  test 'show race interstitial for student over 13 with account more than 1 week old' do
-    mock_geocoder_result('US')
-    student = create :student, created_at: DateTime.now - 8
-    assert student.show_race_interstitial?('ignored_ip')
   end
 
   test 'new users must have valid email addresses' do

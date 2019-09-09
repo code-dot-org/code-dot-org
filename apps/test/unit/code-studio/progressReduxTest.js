@@ -1385,12 +1385,26 @@ describe('progressReduxTest', () => {
       ]);
     };
 
-    it('requests user progress and does not dispatch actions with no data', () => {
+    const getDispatchActions = () => {
+      return dispatch.getCalls().map(call => call.args[0].type);
+    };
+
+    it('requests user progress and does not set new progress with no data', () => {
       serverResponse({});
       const promise = userProgressFromServer(state, dispatch, 1);
       server.respond();
       return promise.then(responseData => {
-        assert(dispatch.notCalled);
+        assert.deepEqual(['progress/CLEAR_PROGRESS'], getDispatchActions());
+        assert.deepEqual({}, responseData);
+      });
+    });
+
+    it('does not clear progress with no userId', () => {
+      serverResponse({});
+      const promise = userProgressFromServer(state, dispatch);
+      server.respond();
+      return promise.then(responseData => {
+        assert.equal(0, dispatch.callCount);
         assert.deepEqual({}, responseData);
       });
     });
@@ -1411,11 +1425,8 @@ describe('progressReduxTest', () => {
       const promise = userProgressFromServer(state, dispatch, 1);
       server.respond();
 
-      assert.equal(9, dispatch.callCount);
-      const dispatchActions = dispatch
-        .getCalls()
-        .map(call => call.args[0].type);
       const expectedDispatchActions = [
+        'progress/CLEAR_PROGRESS',
         'verifiedTeacher/SET_VERIFIED',
         'progress/SET_IS_SUMMARY_VIEW',
         'progress/SHOW_TEACHER_INFO',
@@ -1427,7 +1438,7 @@ describe('progressReduxTest', () => {
         'progress/SET_CURRENT_STAGE_ID'
       ];
       return promise.then(serverResponseData => {
-        assert.deepEqual(expectedDispatchActions, dispatchActions);
+        assert.deepEqual(expectedDispatchActions, getDispatchActions());
         assert.deepEqual(responseData, serverResponseData);
       });
     });

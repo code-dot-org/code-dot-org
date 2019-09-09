@@ -1,4 +1,5 @@
 import {assert} from '../../../util/configuredChai';
+import {sectionLoginFactory} from '../../../factories/sectionLogin';
 import manageStudents, {
   setLoginType,
   setStudents,
@@ -30,91 +31,10 @@ import manageStudents, {
   transferStudentsFailure
 } from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 
-const studentEmailData = {
-  1: {
-    id: 1,
-    name: 'StudentNameA',
-    username: 'student1',
-    userType: 'student',
-    age: 17,
-    gender: 'f',
-    loginType: 'email',
-    secretWords: 'wizard',
-    secretPictureName: 'wizard',
-    secretPicturePath: '/wizard.jpg',
-    sectionId: 53,
-    sharingDisabled: true
-  },
-  2: {
-    id: 2,
-    name: 'StudentNameC',
-    username: 'student2',
-    userType: 'student',
-    age: 14,
-    gender: 'm',
-    loginType: 'email',
-    secretWords: 'wizard',
-    secretPictureName: 'wizard',
-    secretPicturePath: '/wizard.jpg',
-    sectionId: 53,
-    sharingDisabled: true
-  },
-  3: {
-    id: 3,
-    name: 'StudentNameD',
-    username: 'student3',
-    userType: 'student',
-    age: 9,
-    gender: 'm',
-    loginType: 'email',
-    secretWords: 'wizard',
-    secretPictureName: 'wizard',
-    secretPicturePath: '/wizard.jpg',
-    sectionId: 53,
-    sharingDisabled: true
-  }
-};
-
-const studentPictureData = {
-  1: {
-    id: 1,
-    name: 'StudentNameA',
-    username: 'student1',
-    userType: 'student',
-    age: 17,
-    gender: 'f',
-    loginType: 'picture',
-    secretWords: 'wizard',
-    secretPictureName: 'wizard',
-    secretPicturePath: '/wizard.jpg',
-    sectionId: 53
-  },
-  2: {
-    id: 2,
-    name: 'StudentNameC',
-    username: 'student2',
-    userType: 'student',
-    age: 14,
-    gender: 'm',
-    loginType: 'picture',
-    secretWords: 'wizard',
-    secretPictureName: 'wizard',
-    secretPicturePath: '/wizard.jpg',
-    sectionId: 53
-  },
-  3: {
-    id: 3,
-    name: 'StudentNameD',
-    username: 'student3',
-    userType: 'student',
-    age: 9,
-    gender: 'm',
-    loginType: 'picture',
-    secretWords: 'wizard',
-    secretPictureName: 'wizard',
-    secretPicturePath: '/wizard.jpg',
-    sectionId: 53
-  }
+const sectionLoginData = {
+  1: sectionLoginFactory.build({id: 1, name: 'StudentNameA', sectionId: 53}),
+  2: sectionLoginFactory.build({id: 2, name: 'StudentNameC', sectionId: 53}),
+  3: sectionLoginFactory.build({id: 3, name: 'StudentNameD', sectionId: 53})
 };
 
 const expectedBlankRow = {
@@ -214,7 +134,7 @@ describe('manageStudentsRedux', () => {
 
   describe('updateAllShareSetting', () => {
     it('enable all sets sharingDisabled to false', () => {
-      const setStudentsAction = setStudents(studentEmailData);
+      const setStudentsAction = setStudents(sectionLoginData);
       const nextState = manageStudents(initialState, setStudentsAction);
       const startEditingStudentAction = editAll();
       const nextNextState = manageStudents(
@@ -232,7 +152,7 @@ describe('manageStudentsRedux', () => {
     });
 
     it('disable all sets sharingDisabled to true', () => {
-      const setStudentsAction = setStudents(studentEmailData);
+      const setStudentsAction = setStudents(sectionLoginData);
       const nextState = manageStudents(initialState, setStudentsAction);
       const startEditingStudentAction = editAll();
       const nextNextState = manageStudents(
@@ -394,10 +314,10 @@ describe('manageStudentsRedux', () => {
 
   describe('setStudents', () => {
     it('sets student data for the section in view', () => {
-      const action = setStudents(studentEmailData);
+      const action = setStudents(sectionLoginData);
       const nextState = manageStudents(initialState, action);
       assert.deepEqual(nextState.studentData, {
-        ...studentEmailData
+        ...sectionLoginData
       });
     });
 
@@ -406,10 +326,10 @@ describe('manageStudentsRedux', () => {
         ...initialState,
         loginType: 'picture'
       };
-      const action = setStudents(studentPictureData);
+      const action = setStudents(sectionLoginData);
       const nextState = manageStudents(startingState, action);
       assert.deepEqual(nextState.studentData, {
-        ...studentPictureData,
+        ...sectionLoginData,
         [0]: {
           ...expectedBlankRow,
           loginType: 'picture'
@@ -418,7 +338,7 @@ describe('manageStudentsRedux', () => {
     });
 
     it('overrides old section data', () => {
-      const setStudents1 = setStudents(studentEmailData);
+      const setStudents1 = setStudents(sectionLoginData);
       const nextState = manageStudents(initialState, setStudents1);
 
       const newSectionData = {
@@ -446,17 +366,17 @@ describe('manageStudentsRedux', () => {
 
   describe('convertStudentDataToArray', () => {
     it('converts studentData to an array of student objects in reverse order', () => {
-      const studentDataArray = convertStudentDataToArray(studentEmailData);
+      const studentDataArray = convertStudentDataToArray(sectionLoginData);
       assert.equal(studentDataArray.length, 3);
-      assert.equal(studentDataArray[0], studentEmailData[3]);
-      assert.equal(studentDataArray[1], studentEmailData[2]);
-      assert.equal(studentDataArray[2], studentEmailData[1]);
+      assert.equal(studentDataArray[0], sectionLoginData[3]);
+      assert.equal(studentDataArray[1], sectionLoginData[2]);
+      assert.equal(studentDataArray[2], sectionLoginData[1]);
     });
   });
 
   describe('startEditingStudent', () => {
     it('sets student isEditing to true', () => {
-      const setStudentsAction = setStudents(studentEmailData);
+      const setStudentsAction = setStudents(sectionLoginData);
       const nextState = manageStudents(initialState, setStudentsAction);
       const startEditingStudentAction = startEditingStudent(1);
       const finalState = manageStudents(nextState, startEditingStudentAction);
@@ -464,17 +384,17 @@ describe('manageStudentsRedux', () => {
     });
 
     it('sets editingData to be studentData', () => {
-      const setStudentsAction = setStudents(studentEmailData);
+      const setStudentsAction = setStudents(sectionLoginData);
       const nextState = manageStudents(initialState, setStudentsAction);
       const startEditingStudentAction = startEditingStudent(1);
       const finalState = manageStudents(nextState, startEditingStudentAction);
-      assert.deepEqual(finalState.editingData[1], studentEmailData[1]);
+      assert.deepEqual(finalState.editingData[1], sectionLoginData[1]);
     });
   });
 
   describe('editAll', () => {
     it('sets students isEditing to true', () => {
-      const setStudentsAction = setStudents(studentEmailData);
+      const setStudentsAction = setStudents(sectionLoginData);
       const nextState = manageStudents(initialState, setStudentsAction);
       const startEditingStudentAction = editAll();
       const finalState = manageStudents(nextState, startEditingStudentAction);
@@ -482,15 +402,15 @@ describe('manageStudentsRedux', () => {
       assert.deepEqual(finalState.studentData[2].isEditing, true);
       assert.deepEqual(finalState.studentData[3].isEditing, true);
 
-      assert.deepEqual(finalState.editingData[1], studentEmailData[1]);
-      assert.deepEqual(finalState.editingData[2], studentEmailData[2]);
-      assert.deepEqual(finalState.editingData[3], studentEmailData[3]);
+      assert.deepEqual(finalState.editingData[1], sectionLoginData[1]);
+      assert.deepEqual(finalState.editingData[2], sectionLoginData[2]);
+      assert.deepEqual(finalState.editingData[3], sectionLoginData[3]);
     });
   });
 
   describe('cancelEditingStudent', () => {
     it('sets student isEditing to false', () => {
-      const setStudentsAction = setStudents(studentEmailData);
+      const setStudentsAction = setStudents(sectionLoginData);
       const nextState = manageStudents(initialState, setStudentsAction);
       const startEditingStudentAction = startEditingStudent(1);
       const stateAfterEditing = manageStudents(
@@ -508,20 +428,20 @@ describe('manageStudentsRedux', () => {
 
   describe('removeStudent', () => {
     it('deletes a student with a given id', () => {
-      const setStudentsAction = setStudents(studentEmailData);
+      const setStudentsAction = setStudents(sectionLoginData);
       const nextState = manageStudents(initialState, setStudentsAction);
       const removeStudentAction = removeStudent(1);
       const stateAfterDeleting = manageStudents(nextState, removeStudentAction);
       assert.equal(stateAfterDeleting.studentData[1], undefined);
       assert.equal(stateAfterDeleting.editingData[1], undefined);
-      assert.deepEqual(stateAfterDeleting.studentData[2], studentEmailData[2]);
-      assert.deepEqual(stateAfterDeleting.studentData[3], studentEmailData[3]);
+      assert.deepEqual(stateAfterDeleting.studentData[2], sectionLoginData[2]);
+      assert.deepEqual(stateAfterDeleting.studentData[3], sectionLoginData[3]);
     });
   });
 
   describe('setSecretImage', () => {
     it('sets an image for a student given id', () => {
-      const setStudentsAction = setStudents(studentPictureData);
+      const setStudentsAction = setStudents(sectionLoginData);
       const nextState = manageStudents(initialState, setStudentsAction);
       const setSecretImageAction = setSecretImage(1, '/cat.jpg');
       const stateAfterUpdating = manageStudents(
@@ -534,18 +454,18 @@ describe('manageStudentsRedux', () => {
       );
       assert.deepEqual(
         stateAfterUpdating.studentData[2].secretPicturePath,
-        studentEmailData[2].secretPicturePath
+        sectionLoginData[2].secretPicturePath
       );
       assert.deepEqual(
         stateAfterUpdating.studentData[3].secretPicturePath,
-        studentEmailData[3].secretPicturePath
+        sectionLoginData[3].secretPicturePath
       );
     });
   });
 
   describe('setSecretWords', () => {
     it('sets words for a student given id', () => {
-      const setStudentsAction = setStudents(studentPictureData);
+      const setStudentsAction = setStudents(sectionLoginData);
       const nextState = manageStudents(initialState, setStudentsAction);
       const setSecretWordsAction = setSecretWords(1, 'cats');
       const stateAfterUpdating = manageStudents(
@@ -555,11 +475,11 @@ describe('manageStudentsRedux', () => {
       assert.equal(stateAfterUpdating.studentData[1].secretWords, 'cats');
       assert.deepEqual(
         stateAfterUpdating.studentData[2].secretWords,
-        studentEmailData[2].secretWords
+        sectionLoginData[2].secretWords
       );
       assert.deepEqual(
         stateAfterUpdating.studentData[3].secretWords,
-        studentEmailData[3].secretWords
+        sectionLoginData[3].secretWords
       );
     });
   });
@@ -567,7 +487,7 @@ describe('manageStudentsRedux', () => {
   describe('editStudent', () => {
     it('sets editingData to new updated values', () => {
       // Set up a student that is in the editing state.
-      const setStudentsAction = setStudents(studentEmailData);
+      const setStudentsAction = setStudents(sectionLoginData);
       const nextState = manageStudents(initialState, setStudentsAction);
       const startEditingStudentAction = startEditingStudent(1);
       const editingState = manageStudents(nextState, startEditingStudentAction);
@@ -576,14 +496,14 @@ describe('manageStudentsRedux', () => {
       const editStudentNameAction = editStudent(1, {name: 'New name'});
       const stateWithName = manageStudents(editingState, editStudentNameAction);
       assert.deepEqual(stateWithName.editingData[1], {
-        ...studentEmailData[1],
+        ...sectionLoginData[1],
         name: 'New name'
       });
 
       const editStudentAgeAction = editStudent(1, {age: 13});
       const stateWithAge = manageStudents(stateWithName, editStudentAgeAction);
       assert.deepEqual(stateWithAge.editingData[1], {
-        ...studentEmailData[1],
+        ...sectionLoginData[1],
         name: 'New name',
         age: 13
       });
@@ -594,7 +514,7 @@ describe('manageStudentsRedux', () => {
         editStudentGenderAction
       );
       assert.deepEqual(stateWithGender.editingData[1], {
-        ...studentEmailData[1],
+        ...sectionLoginData[1],
         name: 'New name',
         age: 13,
         gender: 'm'
@@ -608,7 +528,7 @@ describe('manageStudentsRedux', () => {
         editStudentShareSettingAction
       );
       assert.deepEqual(stateWithShareSetting.editingData[1], {
-        ...studentEmailData[1],
+        ...sectionLoginData[1],
         name: 'New name',
         age: 13,
         gender: 'm',
@@ -620,7 +540,7 @@ describe('manageStudentsRedux', () => {
   describe('saving edited data of a student', () => {
     it('startSavingStudent sets student to disabled saving mode', () => {
       // Start editing student
-      const setStudentsAction = setStudents(studentEmailData);
+      const setStudentsAction = setStudents(sectionLoginData);
       const nextState = manageStudents(initialState, setStudentsAction);
       const startEditingStudentAction = startEditingStudent(1);
       const editingState = manageStudents(nextState, startEditingStudentAction);
@@ -638,7 +558,7 @@ describe('manageStudentsRedux', () => {
 
     it('saveStudentSuccess updates studentData and removes editingData', () => {
       // Edit and start saving a student
-      const setStudentsAction = setStudents(studentEmailData);
+      const setStudentsAction = setStudents(sectionLoginData);
       const nextState = manageStudents(initialState, setStudentsAction);
       const startEditingStudentAction = startEditingStudent(1);
       const editingState = manageStudents(nextState, startEditingStudentAction);

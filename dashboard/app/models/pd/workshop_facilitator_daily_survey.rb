@@ -72,6 +72,14 @@ module Pd
       ACADEMIC_YEAR_4_CATEGORY => [1].freeze,
       ACADEMIC_YEAR_1_2_CATEGORY => [1, 2].freeze,
       ACADEMIC_YEAR_3_4_CATEGORY => [1, 2].freeze,
+      VIRTUAL_1_CATEGORY => [1].freeze,
+      VIRTUAL_2_CATEGORY => [1].freeze,
+      VIRTUAL_3_CATEGORY => [1].freeze,
+      VIRTUAL_4_CATEGORY => [1].freeze,
+      VIRTUAL_5_CATEGORY => [1].freeze,
+      VIRTUAL_6_CATEGORY => [1].freeze,
+      VIRTUAL_7_CATEGORY => [1].freeze,
+      VIRTUAL_8_CATEGORY => [1].freeze,
       CSF_CATEGORY => CSF_SURVEY_INDEXES.values.freeze
     }
 

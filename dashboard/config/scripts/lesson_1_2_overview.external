@@ -2,13 +2,14 @@ name 'Lesson 1.2 Overview'
 markdown <<MARKDOWN
 ## Lesson 2: Sending Binary Messages
 <img src="https://images.code.org/690e8e047d35f319c263921ce1c2289f-image-1474224681689.png" style="float:right; margin-left:30px; width:200px">
+
 Unplugged | Concept Invention
 
 In this lesson students work in groups using classroom supplies and everyday objects to develop their own systems for encoding and sending simple binary messages, messages that only have two possible values. Students will think about what can be usefully conveyed in such a simple message and build a “device” to communicate the message over some physical distance. Then students are asked to consider how to use their binary messaging devices to send a more complex message - a message with more than two possibilities, say four, or eight, or even thousands of different messages. Students will collaborate in an iterative design process in the “maker ethos” of rapidly building and improving their “device” for sending messages.
 
 
 <h2>
-<a href= "https://curriculum.code.org/csp/unit1/2" target=_blank>Lesson Plan Link<i class="fa fa-external-link-square"/></a>
+<a href= "https://curriculum.code.org/csp/unit1/2" target=_blank>Lesson Plan Link <i class="fa fa-external-link-square"></i></a>
 </h2>
 
 <br><br>

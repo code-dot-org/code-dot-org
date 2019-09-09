@@ -19,6 +19,8 @@ Sign up below to receive monthly email updates on the progress of Code.org’s C
 - <a href="http://go.pardot.com/webmail/153401/542877340/f7e01395f2e5bb7f0cc319f4106346c043330c5b5b064af9cd862fed315c3da9", target=_"blank">April 2019</a>
 - <a href="http://go.pardot.com/webmail/153401/550651034/f7e01395f2e5bb7f0cc319f4106346c043330c5b5b064af9cd862fed315c3da9", target=_"blank">May 2019</a>
 - <a href="http://go.pardot.com/webmail/153401/555918891/f7e01395f2e5bb7f0cc319f4106346c043330c5b5b064af9cd862fed315c3da9", target=_"blank">June 2019</a>
+- <a href="http://go.pardot.com/webmail/153401/570081073/f7e01395f2e5bb7f0cc319f4106346c043330c5b5b064af9cd862fed315c3da9", target=_"blank">Back-to-School 2019</a>
+- <a href="http://go.pardot.com/webmail/153401/575580411/f7e01395f2e5bb7f0cc319f4106346c043330c5b5b064af9cd862fed315c3da9", target=_"blank">September 2019</a>
 
 ### 2018
 

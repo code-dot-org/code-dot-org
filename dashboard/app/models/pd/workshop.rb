@@ -306,6 +306,26 @@ class Pd::Workshop < ActiveRecord::Base
     return unless ended_at.nil?
     self.ended_at = Time.zone.now
     save!
+
+    # We want to send exit surveys now, but that needs to be done on the
+    # production-daemon machine, so we'll let the process_pd_workshop_emails
+    # cron job call the process_ends function below on that machine.
+  end
+
+  # This is called by the process_pd_workshop_emails cron job which is run
+  # on the production-daemon machine, and will send exit surveys to workshops
+  # that have been ended in the last two days when they haven't already had
+  # that done.
+  # The emails must be sent from production-daemon because they contain attachments.
+  # See https://github.com/code-dot-org/code-dot-org/blob/96b890d6e6f77de23bc5d4469df69b900e3fbeb7/lib/cdo/poste.rb#L217
+  # for details.
+  def self.process_ends
+    end_on_or_after(Time.now - 2.days).each do |workshop|
+      if !workshop.processed_at || workshop.processed_at < workshop.ended_at
+        workshop.send_exit_surveys
+        workshop.update!(processed_at: Time.zone.now)
+      end
+    end
   end
 
   def state
@@ -410,15 +430,6 @@ class Pd::Workshop < ActiveRecord::Base
     send_reminder_for_upcoming_in_days(10)
     send_reminder_to_close
     send_follow_up_after_days(30)
-  end
-
-  def self.process_ended_workshop_async(id)
-    workshop = Pd::Workshop.find(id)
-    raise "Unexpected workshop state #{workshop.state}." unless workshop.state == STATE_ENDED
-
-    workshop.send_exit_surveys
-
-    workshop.update!(processed_at: Time.zone.now)
   end
 
   # Updates enrollments with resolved users.
@@ -678,6 +689,7 @@ class Pd::Workshop < ActiveRecord::Base
 
   # Users who could be re-assigned to be the organizer of this workshop
   def potential_organizers
+    potential_organizer_ids = []
     potential_organizers = []
 
     # if there is a regional partner, only that partner's PMs can become the organizer
@@ -688,25 +700,30 @@ class Pd::Workshop < ActiveRecord::Base
       end
     else
       UserPermission.where(permission: UserPermission::PROGRAM_MANAGER).pluck(:user_id)&.map do |user_id|
-        pm = User.find(user_id)
-        potential_organizers << {label: pm.name, value: pm.id}
+        potential_organizer_ids << user_id
       end
     end
 
     # any CSF facilitator can become the organizer of a CSF workshhop
     if course == Pd::Workshop::COURSE_CSF
       Pd::CourseFacilitator.where(course: Pd::Workshop::COURSE_CSF).pluck(:facilitator_id)&.map do |user_id|
-        facilitator = User.find(user_id)
-        potential_organizers << {label: facilitator.name, value: facilitator.id}
+        potential_organizer_ids << user_id
       end
     end
 
     # workshop admins can become the organizer of any workshop
     UserPermission.where(permission: UserPermission::WORKSHOP_ADMIN).pluck(:user_id)&.map do |user_id|
-      admin = User.find(user_id)
-      potential_organizers << {label: admin.name, value: admin.id}
+      potential_organizer_ids << user_id
+    end
+
+    User.where(id: potential_organizer_ids).pluck(:name, :id)&.map do |name, id|
+      potential_organizers << {label: name, value: id}
     end
 
     potential_organizers
+  end
+
+  def can_user_delete?(user)
+    state != STATE_ENDED && Ability.new(user).can?(:destroy, self)
   end
 end

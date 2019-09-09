@@ -4,7 +4,7 @@ require 'cdo/rake_utils'
 task :prepare_dbs do
   with_rack_env(:test) do
     Dir.chdir(pegasus_dir) do
-      puts 'Migrating pegasus test database...'
+      puts "Migrating #{CDO.pegasus_db_name} database..."
       RakeUtils.rake 'db:ensure_created', 'db:migrate', 'seed:migrate'
     end
   end

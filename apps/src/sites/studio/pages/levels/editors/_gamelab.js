@@ -2,13 +2,13 @@
 import $ from 'jquery';
 import animationListModule, {
   setInitialAnimationList
-} from '@cdo/apps/gamelab/animationListModule';
-import defaultSprites from '@cdo/apps/gamelab/defaultSprites.json';
+} from '@cdo/apps/p5lab/animationListModule';
+import defaultSprites from '@cdo/apps/p5lab/spritelab/defaultSprites.json';
 import initializeCodeMirror, {
   initializeCodeMirrorForJson
 } from '@cdo/apps/code-studio/initializeCodeMirror';
 import {getStore, registerReducers} from '@cdo/apps/redux';
-import {throwIfSerializedAnimationListIsInvalid} from '@cdo/apps/gamelab/shapes';
+import {throwIfSerializedAnimationListIsInvalid} from '@cdo/apps/p5lab/shapes';
 
 const VALID_COLOR = 'black';
 const INVALID_COLOR = '#d00';

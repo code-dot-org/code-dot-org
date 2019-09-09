@@ -864,6 +864,8 @@ describe('NetSimRouterNode', function() {
     var clientA = makeRemoteClient();
 
     NetSimGlobals.getLevelConfig().automaticReceive = true;
+    NetSimGlobals.getLevelConfig().messageGranularity =
+      NetSimConstants.MessageGranularity.PACKETS;
     var time = 1;
     var fakeReceivedLog = makeFakeMessageLog();
 

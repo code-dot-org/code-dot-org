@@ -120,8 +120,7 @@ module Dashboard
     config.assets.precompile += %w(
       js/*
       css/*.css
-      assets/**/*
-      levels/*
+      levels/*.css
       jquery.handsontable.full.css
       jquery.handsontable.full.js
       video-js/*.css

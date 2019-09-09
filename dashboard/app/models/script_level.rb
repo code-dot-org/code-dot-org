@@ -449,12 +449,14 @@ class ScriptLevel < ActiveRecord::Base
   end
 
   def summary_for_feedback
+    lesson_num = stage.lockable ? stage.absolute_position : stage.relative_position
+
     {
       lessonName: stage.name,
+      lessonNum: lesson_num,
       levelNum: position,
       linkToLevel: path,
-      unitName: stage.script.localized_title,
-      linkToUnit: stage.script.link
+      unitName: stage.script.localized_title
     }
   end
 

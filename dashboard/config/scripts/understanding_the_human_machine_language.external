@@ -8,7 +8,7 @@ The main point of this set of lessons is to connect the acts of writing “code�
 
 ## Why the Human Machine Language? 
 <img src="https://images.code.org/8570fc3517a0ff0457261db304e5bed2-image-1479765017681.png" style="float:right; margin-left:10px; width:300px">
-This language bears a strong resemblance to so-called <a href= “https://en.wikipedia.org/wiki/Low-level_programming_language” target=_blank>“low level” programming languages <i class="fa fa-external-link-square"/></a> - a sparse, primitive set of commands to directly control the physical/electronic operations of a computing machine. Other programming languages are built on top of the low level languages to provide more abstraction and functionality that combines low level operations into commonly used procedures. The most commonly known low level language is called <a href =”https://en.wikipedia.org/wiki/Assembly_language” target=_blank> Assembly Language <i class="fa fa-external-link-square"/></a> 
+This language bears a strong resemblance to so-called <a href="https://en.wikipedia.org/wiki/Low-level_programming_language" target=_blank>“low level” programming languages <i class="fa fa-external-link-square"></i></a> - a sparse, primitive set of commands to directly control the physical/electronic operations of a computing machine. Other programming languages are built on top of the low level languages to provide more abstraction and functionality that combines low level operations into commonly used procedures. The most commonly known low level language is called <a href ="https://en.wikipedia.org/wiki/Assembly_language” target=_blank> Assembly Language <i class="fa fa-external-link-square"></i></a> 
 
 
 ## Equity

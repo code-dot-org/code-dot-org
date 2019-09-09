@@ -338,7 +338,7 @@
     "short_instructions": "_Help me paint the yellow lines on this road!_",
     "long_instructions": "_Help me paint the yellow lines on this road!_",
     "authored_hints": {
-      "courseC_artist_prog_challenge2_a": "You can put commands inside `repeat` block to loop them over and over. Try it!\n\n<xml>\n  \n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">6</title>\n            <statement name=\"DO\">\n              <block type=\"draw_move_by_constant_dropdown\">\n                <title name=\"DIR\">moveForward</title>\n                <title name=\"VALUE\" config=\"25,50,100,150,200,300\">25</title>\n                <next>\n                  <block type=\"jump_by_constant_dropdown\">\n                    <title name=\"DIR\">jumpForward</title>\n                    <title name=\"VALUE\" config=\"25,50,100,150,200,300\">25</title>\n                  </block>\n                </next>\n              </block>\n              </statement></block></xml>"
+      "courseC_artist_prog_challenge2_a": "You can put commands inside `repeat` block to loop them over and over. Try it!\n\n[blockly block][0]"
     }
   },
   "https://studio.code.org/s/course2/stage/5/puzzle/2": {
@@ -563,7 +563,7 @@
     "short_instructions": "Rebuild the code from the last puzzle, but this time, add a left turn of 30 degrees inside the loop. Now, repeat it 24 times instead of 8.",
     "long_instructions": "Time to make something snazzy! \n\nRebuild the code from the last puzzle, but this time, add a left turn of 30 degrees inside the loop. Now, repeat it 24 times instead of 8.",
     "authored_hints": {
-      "2-3_Artist_Loops_New_11_a": "Remember that the code from the last puzzle was:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">8</title>\n        <statement name=\"DO\">\n          <block type=\"draw_colour\" inline=\"true\">\n            <value name=\"COLOUR\">\n              <block type=\"colour_random\"/>\n            </value>\n            <next>\n              <block type=\"draw_turn_by_constant_dropdown\">\n                <title name=\"DIR\">turnRight</title>\n                <title name=\"VALUE\" config=\"45,60,90,120,180\">45</title>\n                <next>\n                  <block type=\"draw_move_by_constant\">\n                    <title name=\"DIR\">moveForward</title>\n                    <title name=\"VALUE\">50</title>\n                    <next>\n                      <block type=\"draw_turn_by_constant_dropdown\">\n                        <title name=\"DIR\">turnLeft</title>\n                        <title name=\"VALUE\" config=\"45,60,90,120,180\">90</title>\n                        <next>\n                          <block type=\"draw_move_by_constant\">\n                            <title name=\"DIR\">moveForward</title>\n                            <title name=\"VALUE\">50</title>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>",
+      "2-3_Artist_Loops_New_11_a": "Remember that the code from the last puzzle was:\n\n[blockly block][0]",
       "2-3_Artist_Loops_New_11_b": "Your new turn should go at the **end** of the code inside the loop."
     }
   },
@@ -794,7 +794,7 @@
     "authored_hints": {
       "courseC_harvester_loops_challenge1_a": "Don't even think about try about trying this without loops!",
       "courseC_harvester_loops_challenge1_b": "You can repeat `move forward` and `pick corn` as many times as you need to, then `turn right` at each corner.",
-      "courseC_harvester_loops_challenge1_c": "The best way to collect the first four corn uses a `repeat` block inside of another `repeat` block. You can use this pattern for the rest of the puzzle too!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">2</title>\n        <statement name=\"DO\">\n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">2</title>\n            <statement name=\"DO\">\n              <block type=\"maze_move\">\n                <title name=\"DIR\">moveForward</title>\n                <next>\n                  <block type=\"harvester_corn\"/>\n                </next>\n              </block>\n            </statement>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n              </block>\n            </next>\n          </block>\n        </statement>\n        </block></next></block></xml>"
+      "courseC_harvester_loops_challenge1_c": "The best way to collect the first four corn uses a `repeat` block inside of another `repeat` block. You can use this pattern for the rest of the puzzle too!\n\n[blockly block][0]"
     }
   },
   "https://studio.code.org/s/course2/stage/8/extras?level_name=course2_harvester_loops_challenge2": {
@@ -1199,7 +1199,7 @@
     "short_instructions": "Collect all of the nectar or make all the honey.",
     "long_instructions": "Collect all of the nectar and make all the honey. You can collect all of the nectar in one flower by using the `while nectar > 0` loop.",
     "authored_hints": {
-      "courseD_bee_conditionals_challenge1_b": "Just like the `if at flower` blocks, the code inside a `while nectar > 0` will only run if the bee is at a flower. The main differences is that the code inside will run repetitively until there is no nectar left.  Try this pattern:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+      "courseD_bee_conditionals_challenge1_b": "Just like the `if at flower` blocks, the code inside a `while nectar > 0` will only run if the bee is at a flower. The main differences is that the code inside will run repetitively until there is no nectar left.  Try this pattern:\n\n[blockly block][0]"
     },
     "callouts": {
       "courseD_bee_conditionals_challenge2_1": "Use this loop to collect all of the nectar (or honey) from one flower (or honeycomb)."

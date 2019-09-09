@@ -50,15 +50,15 @@ class Api::V1::Pd::WorkshopSummaryReportControllerTest < ::ActionController::Tes
     @program_manager = create :program_manager
 
     # CSF workshop for this regional partner
-    @workshop = create :pd_ended_workshop, organizer: @program_manager, course: Pd::Workshop::COURSE_CSF
+    @workshop = create :workshop, :ended, organizer: @program_manager, course: Pd::Workshop::COURSE_CSF
     create :pd_workshop_participant, workshop: @workshop, enrolled: true, attended: true
 
     # CSF workshop for this organizer.
-    @organizer_workshop = create :pd_ended_workshop, organizer: @organizer, course: Pd::Workshop::COURSE_CSF
+    @organizer_workshop = create :workshop, :ended, organizer: @organizer, course: Pd::Workshop::COURSE_CSF
     create :pd_workshop_participant, workshop: @organizer_workshop, enrolled: true, attended: true
 
     # Non-CSF workshop from a different organizer
-    @other_workshop = create :pd_ended_workshop, course: Pd::Workshop::COURSE_ECS,
+    @other_workshop = create :workshop, :ended, course: Pd::Workshop::COURSE_ECS,
       subject: Pd::Workshop::SUBJECT_ECS_PHASE_2
   end
 
@@ -137,7 +137,7 @@ class Api::V1::Pd::WorkshopSummaryReportControllerTest < ::ActionController::Tes
 
   test 'returns only workshops that have ended' do
     # New workshop, not ended, should not be returned.
-    create :pd_workshop
+    create :workshop
 
     sign_in @workshop_admin
     get :index
@@ -151,11 +151,11 @@ class Api::V1::Pd::WorkshopSummaryReportControllerTest < ::ActionController::Tes
     start_date = Date.today - 6.months
     end_date = start_date + 1.month
 
-    workshop_in_range = create :pd_ended_workshop, sessions_from: start_date + 2.weeks
+    workshop_in_range = create :workshop, :ended, sessions_from: start_date + 2.weeks
 
     # Noise
-    create :pd_ended_workshop, sessions_from: start_date - 1.day
-    create :pd_ended_workshop, sessions_from: end_date + 1.day
+    create :workshop, :ended, sessions_from: start_date - 1.day
+    create :workshop, :ended, sessions_from: end_date + 1.day
 
     sign_in @workshop_admin
     get :index, params: {start: start_date, end: end_date, query_by: 'schedule'}
@@ -170,11 +170,11 @@ class Api::V1::Pd::WorkshopSummaryReportControllerTest < ::ActionController::Tes
     start_date = Date.today - 6.months
     end_date = start_date + 1.month
 
-    workshop_in_range = create :pd_ended_workshop, ended_at: start_date + 2.weeks
+    workshop_in_range = create :workshop, :ended, ended_at: start_date + 2.weeks
 
     # Noise
-    create :pd_ended_workshop, ended_at: start_date - 1.day
-    create :pd_ended_workshop, ended_at: end_date + 1.day
+    create :workshop, :ended, ended_at: start_date - 1.day
+    create :workshop, :ended, ended_at: end_date + 1.day
 
     sign_in @workshop_admin
     get :index, params: {start: start_date, end: end_date, query_by: 'end'}
@@ -212,7 +212,7 @@ class Api::V1::Pd::WorkshopSummaryReportControllerTest < ::ActionController::Tes
   end
 
   test 'includes unpaid workshops' do
-    unpaid_workshop = create :pd_ended_workshop, organizer: @program_manager, course: Pd::Workshop::COURSE_CSD
+    unpaid_workshop = create :workshop, :ended, organizer: @program_manager, course: Pd::Workshop::COURSE_CSD
     create :pd_workshop_participant, workshop: @workshop, enrolled: true, attended: true
 
     sign_in @workshop_admin

@@ -1,0 +1,19 @@
+---
+driver:
+  name: dokken
+  chef_version: 12.7.2
+transport:
+  name: dokken
+provisioner:
+  name: dokken
+verifier:
+  name:  inspec
+platforms:
+  - name: ubuntu-14.04
+    driver:
+      image: dokken/ubuntu-14.04
+      pid_one_command: /sbin/init
+suites:
+  - name: default
+    run_list:
+      - recipe[cdo-tippecanoe]

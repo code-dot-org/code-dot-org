@@ -40,7 +40,7 @@ class Pd::Teacher1920ApplicationMailerPreview < ActionMailer::Preview
       end
       application.regional_partner = regional_partner
     end
-    application.pd_workshop_id = Pd::Workshop.first.try(:id) || (create :pd_workshop).id
+    application.pd_workshop_id = Pd::Workshop.first.try(:id) || (create :workshop).id
     application.generate_application_guid
     application
   end

@@ -51,7 +51,7 @@ vi-VN:
     là nền tảng cho mỗi học sinh tìm hiểu.
   hoc2014_heading: Tham gia <a href="http://hourofcode.com">Giờ Mã</a> <br/> từ mùng
     8 đến 14 tháng 12, 2014 <br/>
-  hoc2014_students: học viên
+  hoc2014_students: Học sinh
   hoc2014_try: Hãy thử nó
   hoc2014_teachers: Giáo viên
   hoc2014_host: Lưu trữ nó
@@ -225,7 +225,7 @@ vi-VN:
   get_started: Bắt đầu
   i_agree: Tôi đồng ý
   participant_select: "-Chọn-"
-  participant_student: học sinh
+  participant_student: Học sinh
   participant_parent: Phụ Huynh
   participant_educator: Giáo viên
   participant_engineer: Kĩ sư phần mềm
@@ -374,7 +374,7 @@ vi-VN:
   homepage_slot_text_link_host: Đăng cai một Giờ Lập Trình
   homepage_slot_text_link_hocserved: phục vụ
   homepage_solot_text_link_volunteer: Tình nguyện viên cho Hour of Code
-  homepage_slot_text_title_students: học viên
+  homepage_slot_text_title_students: Học sinh
   homepage_slot_text_blurb_students: Khám phá tất cả các bài hướng dẫn của chúng tôi
   homepage_slot_text_blurb_students_courses: Tìm hiểu các khóa học của chúng tôi
   homepage_slot_text_link_codestudio: Thử Code Studio
@@ -450,7 +450,7 @@ vi-VN:
   starwars_javascript_description: Sử dụng các khối kéo-thả và JavaScript.
   starwars_javascript_specs: Chỉ sử dụng Tiếng Anh | Các trình duyệt hiện đại | Tuổi
     11+
-  starwars_blocks_title: các khối
+  starwars_blocks_title: Các khối lệnh
   starwars_blocks_description: Sử dụng các khối kéo-thả.
   starwars_blocks_specs: Nhiều ngôn ngữ | Các trình duyệt hiện đại, điện thoại thông
     minh, máy tính bảng | Tuổi từ 6-106
@@ -624,7 +624,7 @@ vi-VN:
   dashboard_landing_progress_title: Tiến độ lớp chính
   dashboard_landing_progress_biggest: Đây là tiến độ cho phần bạn học nhiều nhất.
   dashboard_landing_view_progress: Xem tiến độ cho %{biggest_section}
-  dashboard_landing_print_progress: Quá trình in
+  dashboard_landing_print_progress: In tiến trình
   dashboard_landing_available_title: Các khóa học có sẵn
   dashboard_landing_available_courses: Dưới đây là các khóa học hiện có sẵn cho bạn
     và học sinh của bạn.
@@ -657,24 +657,25 @@ vi-VN:
   dashboard_navigation_section_speakers: Khoa học máy tính <br/> Diễn giả
   dashboard_navigation_all_sections: Tài khoản sinh viên và Tiến độ
   dashboard_navigation_view_progress: Sự tiến bộ
-  dashboard_navigation_view_assessments: Phương pháp đánh giá
-  dashboard_navigation_add_students: Thêm sinh viên
+  dashboard_navigation_view_assessments: Các đánh giá
+  dashboard_navigation_add_students: Thêm học sinh
   dashboard_navigation_manage_students: Quản lý sinh viên
   dashboard_navigation_lesson_plans_resources: Kế hoạch bài học và tài nguyên
   dashboard_progress_not_started: chưa bắt đầu
-  dashboard_progress_in_progress: trong tiến trình
+  dashboard_progress_in_progress: đang thực hiện
   dashboard_progress_not_completed: chưa hoàn thành
   dashboard_progress_completed_too_many_blocks: hoàn thành, quá nhiều mảnh gép
   dashboard_progress_completed_perfect: hoàn thành, hoàn hảo
   dashboard_progress_furthest_level_attempted: đã cố gắng ở mức độ cao nhất
   dashboard_progress_submitted: đã gửi
+  dashboard_progress_view: 'Xem tiến trình của:'
   dashboard_sections_new_section: Thêm bài mới
   dashboard_sections_table_section: Học phần
   dashboard_sections_table_secret: Loại đăng nhập
   dashboard_sections_table_grade: Điểm số
   dashboard_sections_table_course: Khóa học
   dashboard_sections_table_pairing_allowed: Lập trình đôi
-  dashboard_sections_table_students: học viên
+  dashboard_sections_table_students: Học sinh
   dashboard_sections_table_code: Mã của học phần
   dashboard_sections_name: Tên phần
   dashboard_sections_choose_secret: Nếu bạn muốn cấp tài khoản cho học sinh của mình,
@@ -742,12 +743,12 @@ vi-VN:
   dashboard_correctness_correct: Chính xác
   dashboard_correctness_incorrect: Không đúng
   dashboard_submission_submitted: Đã gửi lên
-  dashboard_submission_in_progress: Đang thực hiện ...
+  dashboard_submission_in_progress: Đang thực hiện
   stats_hoc_2013_heading: 'Đáng kinh ngạc số liệu thống kê từ cuối năm Giờ Mã. Trong
     một tuần:'
   stats_hoc_2013_image_alt: Số liệu thống kê Giờ Lập Trình từ năm 2013
   dashboard_teacher: Giáo viên
-  dashboard_student: học sinh
+  dashboard_student: Học sinh
   dashboard_sections_email_question: Tất cả học sinh có một địa chỉ email hợp lệ?
   dashboard_sections_account_creation_question: Người tạo ra tài khoản của sinh viên?
   dashboard_sections_password_question: Những gì học sinh sử dụng như là một "mật
@@ -864,8 +865,14 @@ vi-VN:
   coursed-2018_gradelevel: Lớp 8 +
   coursed-2019_gradelevel: Lớp 8 +
   accelerated_gradelevel: Lứa tuổi 10 + (sau khóa học 3)
+  thinkersmithspanish_platformtext: Không dùng máy tính
+  thinkersmith_platformtext: Không dùng máy tính
+  condcards_platformtext: Không dùng máy tính
   lightbotintl_platformtext: IOS, Android(hoặc trình duyệt web)
   codespark_platformtext: IOS, Android(hoặc trình duyệt web)
+  thinkersmith2_platformtext: Không dùng máy tính
+  kodableunplugged_platformtext: Không dùng máy tính
+  projguts_platformtext: Không dùng máy tính
   boxisland_platformtext: Hệ điều hành Android, Ios
   codeorg_shortdescription: Học mã lập trình với  Mark Zuckerberg và Angry Birds!
   codeintl_shortdescription: Học mã lập trình với  Mark Zuckerberg và Angry Birds!
@@ -941,6 +948,10 @@ vi-VN:
     cấp trình duyệt của bạn lên <a href='%{supported_browsers_url}', target='_blank'>một
     trong những trình duyệt được hỗ trợ của chúng tôi</a>. Bạn có thể thử xem trang
     nhưng mong đợi chức năng bị hỏng.
+  compatibility_unsupported_browser_markdown: Trình duyệt của bạn không được hỗ trợ.
+    Hãy nâng cấp trình duyệt của bạn lên <a href='%{supported_browsers_url}', target='_blank'>một
+    trong những trình duyệt được hỗ trợ của chúng tôi</a>. Bạn có thể thử xem trang
+    nhưng mong đợi chức năng bị hỏng.
   flappy_shortcode: đập cánh
   header_home: Trang chủ
   header_my_dashboard: Bảng điều khiển của tôi
@@ -979,6 +990,7 @@ vi-VN:
   header_documentation: Tài liệu
   user_header_label: Chào %{username}
   user_header_team: Nhóm
+  user_header_my_projects: Chương trình của tôi
   user_header_settings: Tài khoản của bạn
   user_header_logout: Đăng xuất
   user_header_signin: Đăng nhập
@@ -987,7 +999,7 @@ vi-VN:
   user_header_dance: Bữa tiệc khiêu vũ
   user_header_minecraft: Minecraft
   user_header_flappy: Flappy bird
-  user_header_view_my_projects: Xem các dự án của tôi
+  user_header_view_my_projects: Xem chương trình của tôi
   view_all_sections: Xem tất cả các phần
   hero_name: 'Minecraft: Hero''s Journey'
   applab_tile_start_tutorial: Bắt đầu

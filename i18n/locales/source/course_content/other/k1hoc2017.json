@@ -49,16 +49,16 @@
   },
   "https://studio.code.org/s/k1hoc2017/stage/1/puzzle/8": {
     "short_instructions": "Get all three piles to pass this level.",
-    "long_instructions": "Get all three piles! Move Laurel to each piece of treasure, then use this block:\n  <xml><block type=\"collector_collect\"/></xml>",
+    "long_instructions": "Get all three piles! Move Laurel to each piece of treasure, then use this block:\n  [blockly block][0]",
     "authored_hints": {
-      "courseA_collector_loops2_b": "After you have moved to a square with treasure, use this block to pick it up.\n\n<xml>  <block type=\"collector_collect\"/></xml>"
+      "courseA_collector_loops2_b": "After you have moved to a square with treasure, use this block to pick it up.\n\n[blockly block][0]"
     }
   },
   "https://studio.code.org/s/k1hoc2017/stage/1/puzzle/10": {
-    "long_instructions": "How can Laurel get all five piles of treasure using only one <xml><block type=\"maze_moveEast\"/></xml> block?",
+    "long_instructions": "How can Laurel get all five piles of treasure using only one [blockly block][0] block?",
     "authored_hints": {
-      "courseA_collector_loops3_a": "Try using a <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> loop!",
-      "courseA_collector_loops3_b": "Remember, you can put more than 1 block inside a <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> loop."
+      "courseA_collector_loops3_a": "Try using a [blockly block][0] loop!",
+      "courseA_collector_loops3_b": "Remember, you can put more than 1 block inside a [blockly block][0] loop."
     },
     "callouts": {
       "gradek_adventurer_loops2_1": "This number tells you how many of these blocks you can use in this puzzle."
@@ -68,7 +68,7 @@
     "short_instructions": "Fix Laurel's path to get all of this treasure.",
     "authored_hints": {
       "courseA_collector_loops4_a": "To change how far Laurel goes, change the number of times that the loop runs.",
-      "courseA_collector_loops4_b": "Don't forget that Laurel needs to walk down and collect the treasure after she finishes the <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> loop!"
+      "courseA_collector_loops4_b": "Don't forget that Laurel needs to walk down and collect the treasure after she finishes the [blockly block][0] loop!"
     }
   },
   "https://studio.code.org/s/k1hoc2017/stage/1/puzzle/12": {
@@ -76,14 +76,14 @@
     "authored_hints": {
       "courseA_collector_loops5_a": "If you can't figure out the answer right away, try using a piece of paper to figure out what arrows you will need and look for a pattern.",
       "courseA_collector_loops5_b": "Try splitting the problem into 2 parts, moving sideways and then down.",
-      "courseA_collector_loops5_c": "You'll want to start with a <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> loop that moves Laurel west and collects treasure."
+      "courseA_collector_loops5_c": "You'll want to start with a [blockly block][0] loop that moves Laurel west and collects treasure."
     }
   },
   "https://studio.code.org/s/k1hoc2017/stage/1/puzzle/13": {
     "short_instructions": "Add blocks to this code to get all of the treasure.",
     "authored_hints": {
       "courseA_collector_loops6_a": "Can't figure out what's wrong? Try running the code a couple of times to see what happens.",
-      "courseA_collector_loops6_b": "The shortest solution has 2 <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> loops, one after the other."
+      "courseA_collector_loops6_b": "The shortest solution has 2 [blockly block][0] loops, one after the other."
     }
   },
   "https://studio.code.org/s/k1hoc2017/stage/1/puzzle/14": {
@@ -111,7 +111,7 @@
       "courseA_collector_loops_challenge1_a": "Try changing the numbers in each loop if something seems wrong.",
       "courseA_collector_loops_challenge1_b": "You don't need to use a loop if you are only doing something one time.",
       "courseA_collector_loops_challenge1_c": "There are 6 gems on the right side of the cave when you start, but you only need to get treasure 5 times moving South. Do you know why?",
-      "courseA_collector_loops_challenge1_d": "The starting program doesn't collect the last 2 gems. Try adding this code at the very end:\n\n<xml><block type=\"maze_moveEast\">\n                        <next>\n                          <block type=\"collector_collect_simplified\">\n                            <next>\n                              <block type=\"maze_moveSouth\">\n                                <next>\n                                  <block type=\"collector_collect\"/>\n                                </next>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block></xml>"
+      "courseA_collector_loops_challenge1_d": "The starting program doesn't collect the last 2 gems. Try adding this code at the very end:\n\n[blockly block][0]"
     }
   },
   "https://studio.code.org/s/k1hoc2017/stage/1/extras?level_name=courseA_collector_loops_challenge2": {

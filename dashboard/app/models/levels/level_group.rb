@@ -8,7 +8,7 @@
 #  created_at            :datetime
 #  updated_at            :datetime
 #  level_num             :string(255)
-#  ideal_level_source_id :integer
+#  ideal_level_source_id :integer          unsigned
 #  user_id               :integer
 #  properties            :text(65535)
 #  type                  :string(255)
@@ -103,11 +103,11 @@ ruby
 
   # Perform a deep copy of this level by cloning all of its sublevels
   # using the same suffix, and write them to the new level definition file.
-  def clone_with_suffix(new_suffix)
+  def clone_with_suffix(new_suffix, editor_experiment: nil)
     new_name = "#{base_name}#{new_suffix}"
     return Level.find_by_name(new_name) if Level.find_by_name(new_name)
 
-    level = super(new_suffix)
+    level = super(new_suffix, editor_experiment: editor_experiment)
     level.clone_sublevels_with_suffix(new_suffix)
     level.rewrite_dsl_file(LevelGroupDSL.serialize(level))
     level

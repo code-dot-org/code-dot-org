@@ -11,7 +11,7 @@ module Pd::SurveyPipeline
     setup_all do
       @ws_form_id = "11000000000000".to_i
 
-      ws = create :pd_workshop, course: COURSE_CSF, subject: SUBJECT_CSF_201, num_sessions: 1
+      ws = create :csf_deep_dive_workshop
       teacher = create :teacher
       day = 0
 

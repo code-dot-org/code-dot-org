@@ -1,0 +1,29 @@
+<Pixelation>
+  <config><![CDATA[{
+  "game_id": 44,
+  "created_at": "2019-08-02T03:26:42.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "short_instructions": "Let’s gain even more control by using 3 bits per color this time, or 9 bits per pixel!  Again, we’ve done the red row for you.  Your job is to complete the shades of green and blue.",
+    "long_instructions": "# Color Pixelation: Task 2\r\n**Directions:**\r\nLet’s gain even more control by using 3 bits per color this time, or 9 bits per pixel!  Again, we’ve done the red row for you.  Your job is to complete the shades of green and blue.",
+    "version": "3",
+    "data": "000010000000001100001001000000000001000000010000000011000000100000000101000000110000000111000000",
+    "href": "pixelation/pixelation.html",
+    "skip_dialog": true,
+    "parent_level_id": 18943,
+    "name_suffix": "_2019",
+    "instructions_important": "false",
+    "hex": "false",
+    "hide_encoding_controls": "false",
+    "v1_hide_sliders": "false",
+    "encrypted": "false",
+    "map_reference": "/docs/concepts/app-lab/patterns/update-screen-pattern/"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-05-05 00:46:12 +0000\",\"changed\":[\"notes\",\"published\",\"markdown_instructions\",\"data\"],\"changed_by_id\":18,\"changed_by_email\":\"dave@code.org\"},{\"changed_at\":\"2019-08-02 03:24:12 +0000\",\"changed\":[\"short_instructions\",\"long_instructions\",\"data\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-08-02 03:25:04 +0000\",\"changed\":[\"short_instructions\",\"long_instructions\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-08-02 03:28:20 +0000\",\"changed\":[\"short_instructions\",\"long_instructions\",\"data\",\"video_key\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</Pixelation>

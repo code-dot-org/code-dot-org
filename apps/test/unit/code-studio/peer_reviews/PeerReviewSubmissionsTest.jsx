@@ -45,7 +45,7 @@ describe('PeerReviewSubmissions', () => {
     server = sinon.fakeServer.create();
     server.respondWith(
       'GET',
-      '/api/v1/peer_review_submissions/index?email=&plc_course_id=&plc_course_unit_id=&page=1&per=30',
+      '/api/v1/peer_review_submissions/index?user_q=&plc_course_id=&plc_course_unit_id=&page=1&per=30',
       [
         200,
         {'Content-Type': 'application/json'},
@@ -72,14 +72,14 @@ describe('PeerReviewSubmissions', () => {
   it('Initially renders course options and calls API for submissions', () => {
     expect(server.requests.length).to.equal(1);
     expect(server.requests[0].url).to.equal(
-      '/api/v1/peer_review_submissions/index?email=&plc_course_id=&plc_course_unit_id=&page=1&per=30'
+      '/api/v1/peer_review_submissions/index?user_q=&plc_course_id=&plc_course_unit_id=&page=1&per=30'
     );
 
     server.respond();
 
     expect(peerReviewSubmissions.state()).to.deep.equal({
       loading: false,
-      emailFilter: '',
+      userFilter: '',
       plcCourseId: '',
       plcCourseUnitId: '',
       submissions: fakePeerReviewData.submissions,
@@ -112,7 +112,7 @@ describe('PeerReviewSubmissions', () => {
       .find('select#PlcCourseSelect')
       .simulate('change', {target: {value: '1'}});
     expect(server.requests[0].url).to.equal(
-      '/api/v1/peer_review_submissions/index?email=&plc_course_id=1&plc_course_unit_id=&page=1&per=30'
+      '/api/v1/peer_review_submissions/index?user_q=&plc_course_id=1&plc_course_unit_id=&page=1&per=30'
     );
     expect(peerReviewSubmissions.state().plcCourseId).to.equal('1');
     expect(peerReviewSubmissions.state().plcCourseUnitId).to.equal('');
@@ -137,7 +137,7 @@ describe('PeerReviewSubmissions', () => {
       .find('select#PlcCourseUnitSelect')
       .simulate('change', {target: {value: '10'}});
     expect(server.requests[1].url).to.equal(
-      '/api/v1/peer_review_submissions/index?email=&plc_course_id=1&plc_course_unit_id=10&page=1&per=30'
+      '/api/v1/peer_review_submissions/index?user_q=&plc_course_id=1&plc_course_unit_id=10&page=1&per=30'
     );
     expect(peerReviewSubmissions.state().plcCourseId).to.equal('1');
     expect(peerReviewSubmissions.state().plcCourseUnitId).to.equal('10');
@@ -149,7 +149,7 @@ describe('PeerReviewSubmissions', () => {
       .find('select#PlcCourseSelect')
       .simulate('change', {target: {value: ''}});
     expect(server.requests[2].url).to.equal(
-      '/api/v1/peer_review_submissions/index?email=&plc_course_id=&plc_course_unit_id=&page=1&per=30'
+      '/api/v1/peer_review_submissions/index?user_q=&plc_course_id=&plc_course_unit_id=&page=1&per=30'
     );
     expect(peerReviewSubmissions.state().plcCourseId).to.equal('');
     expect(peerReviewSubmissions.state().plcCourseUnitId).to.equal('');
@@ -165,10 +165,10 @@ describe('PeerReviewSubmissions', () => {
     server = sinon.fakeServer.create();
 
     peerReviewSubmissions
-      .find('input#EmailFilter')
+      .find('input#NameEmailFilter')
       .simulate('change', {target: {value: 'someone@example.com'}});
     expect(server.requests[0].url).to.equal(
-      '/api/v1/peer_review_submissions/index?email=someone@example.com&plc_course_id=&plc_course_unit_id=&page=1&per=30'
+      '/api/v1/peer_review_submissions/index?user_q=someone@example.com&plc_course_id=&plc_course_unit_id=&page=1&per=30'
     );
     expect(
       peerReviewSubmissions.find('button#DownloadCsvReport').prop('disabled')

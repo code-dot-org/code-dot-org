@@ -1536,6 +1536,9 @@ ko-KR:
   compatibility_unsupported_browser: 브라우저가 지원되지 않습니다. <a href='%{supported_browsers_url}',
     target='_blank'> 지원 되는 브라우저로</a>로 업그레이드 하시기 바랍니다. 여러분은 이 페이지를 볼 수는 있지만 올바르게 동작하지
     않을 수 있습니다.
+  compatibility_unsupported_browser_markdown: 브라우저가 지원되지 않습니다. <a href='%{supported_browsers_url}',
+    target='_blank'> 지원 되는 브라우저로</a>로 업그레이드 하시기 바랍니다. 여러분은 이 페이지를 볼 수는 있지만 올바르게 동작하지
+    않을 수 있습니다.
   starwars_shortcode: 별
   flappy_shortcode: 펄럭이기
   header_home: 홈

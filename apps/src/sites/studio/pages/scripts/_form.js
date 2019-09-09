@@ -17,6 +17,7 @@ export default function initPage(scriptEditorData) {
     .filter(stage => stage.id)
     .map(stage => ({
       position: stage.position,
+      relativePosition: stage.relative_position,
       flex_category: stage.flex_category,
       lockable: stage.lockable,
       name: stage.name,
@@ -73,6 +74,7 @@ export default function initPage(scriptEditorData) {
         hasLessonPlan={scriptData.has_lesson_plan}
         curriculumPath={scriptData.curriculum_path}
         pilotExperiment={scriptData.pilot_experiment}
+        editorExperiment={scriptData.editor_experiment}
         announcements={announcements}
         supportedLocales={scriptData.supported_locales}
         locales={locales}

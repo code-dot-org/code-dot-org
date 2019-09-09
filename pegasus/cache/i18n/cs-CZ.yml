@@ -1806,6 +1806,10 @@ cs-CZ:
     použijte některý z <a href='%{supported_browsers_url}', target='_blank'>podporovaných
     prohlížečů</a>. Můžete zkusit pokračovat se současným prohlížečem, ale mohou nastat
     chyby ve funkcionalitě.
+  compatibility_unsupported_browser_markdown: Váš prohlížeč není podporován. Nainstalujte
+    a použijte některý z <a href='%{supported_browsers_url}', target='_blank'>podporovaných
+    prohlížečů</a>. Můžete zkusit pokračovat se současným prohlížečem, ale mohou nastat
+    chyby ve funkcionalitě.
   flappy_shortcode: mávni
   header_home: Domů
   header_my_dashboard: Můj přehled

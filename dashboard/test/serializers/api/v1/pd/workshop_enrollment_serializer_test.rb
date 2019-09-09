@@ -19,7 +19,7 @@ class Api::V1::Pd::WorkshopEnrollmentSerializerTest < ::ActionController::TestCa
   end
 
   test 'attendances' do
-    workshop = create :pd_workshop, num_sessions: 5
+    workshop = create :workshop, num_sessions: 5
     enrollment = create :pd_enrollment, workshop: workshop
     create :pd_attendance, session: workshop.sessions.first, enrollment: enrollment
 
@@ -28,16 +28,15 @@ class Api::V1::Pd::WorkshopEnrollmentSerializerTest < ::ActionController::TestCa
   end
 
   test 'scholarship_ineligible_reason' do
-    summer_workshop = create :pd_workshop, :local_summer_workshop_upcoming
-    enrollment = create :pd_enrollment, :from_user, workshop: summer_workshop
+    enrollment = create :pd_enrollment, :from_user, workshop: create(:summer_workshop)
 
-    serialized = ::Api::V1::Pd::WorkshopEnrollmentSerializer.new(summer_workshop.enrollments.first).attributes
+    serialized = ::Api::V1::Pd::WorkshopEnrollmentSerializer.new(enrollment).attributes
     assert_nil serialized[:scholarship_ineligible_reason]
 
     fac_app = create FACILITATOR_APPLICATION_FACTORY, user: enrollment.user
     fac_app.update(status: 'accepted')
 
-    serialized = ::Api::V1::Pd::WorkshopEnrollmentSerializer.new(summer_workshop.enrollments.first).attributes
+    serialized = ::Api::V1::Pd::WorkshopEnrollmentSerializer.new(enrollment).attributes
     assert_equal SCHOLARSHIP_INELIGIBLE_NEW_FACILITATOR, serialized[:scholarship_ineligible_reason]
   end
 end

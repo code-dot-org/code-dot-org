@@ -10,36 +10,36 @@ Lessons 1 - 4 cover many learning objectives from across the big ideas of Data a
 **Enduring Understanding 3.2 - Computing facilitates exploration and the discovery of connections in information.**
 
 - 3.2.2 - Use large data sets to explore and discover information and knowledge. [P3]
- - 3.2.2A - Large data sets include data such as transactions, measurements, text, sound, images, and video.
- - 3.2.2B - The storing, processing, and curating of large data sets is challenging.
- - 3.2.2C - Structuring large data sets for analysis can be challenging.
- - 3.2.2D - Maintaining privacy of large data sets containing personal information can be challenging.
- - 3.2.2E - Scalability of systems is an important consideration when data sets are large.
- - 3.2.2F - The size or scale of a system that stores data affects how that data set is used.
- - 3.2.2G - The effective use of large data sets requires computational solutions.
- - 3.2.2H - Analytical techniques to store, manage, transmit, and process data sets change as the size of data sets scale.
+  - 3.2.2A - Large data sets include data such as transactions, measurements, text, sound, images, and video.
+  - 3.2.2B - The storing, processing, and curating of large data sets is challenging.
+  - 3.2.2C - Structuring large data sets for analysis can be challenging.
+  - 3.2.2D - Maintaining privacy of large data sets containing personal information can be challenging.
+  - 3.2.2E - Scalability of systems is an important consideration when data sets are large.
+  - 3.2.2F - The size or scale of a system that stores data affects how that data set is used.
+  - 3.2.2G - The effective use of large data sets requires computational solutions.
+  - 3.2.2H - Analytical techniques to store, manage, transmit, and process data sets change as the size of data sets scale.
 
 **Enduring Understanding 3.3 - There are trade offs when representing information as digital data.**
 
 - 3.3.1 - Analyze how data representation, storage, security, and transmission of data involve computational manipulation of information. [P4]
- - 3.3.1A - Digital data representations involve trade offs related to storage, security, and privacy concerns.
- - 3.3.1B - Security concerns engender tradeoffs in storing and transmitting information.
- - 3.3.1F - Security and privacy concerns arise with data containing personal information.
+  - 3.3.1A - Digital data representations involve trade offs related to storage, security, and privacy concerns.
+  - 3.3.1B - Security concerns engender tradeoffs in storing and transmitting information.
+  - 3.3.1F - Security and privacy concerns arise with data containing personal information.
 
 **Enduring Understanding 7.3 - Computing has a global affect -- both beneficial and harmful -- on people and society.**
 
 - 7.3.1 - Analyze the beneficial and harmful effects of computing. [P4]
- - 7.3.1A - Innovations enabled by computing raise legal and ethical concerns.
- - 7.3.1G - Privacy and security concerns arise in the development and use of computational systems and artifacts.
- - 7.3.1J - Technology enables the collection, use, and exploitation of information about, by, and for individuals, groups, and institutions.
- - 7.3.1K - People can have instant access to vast amounts of information online; accessing this information can enable the collection of both individual and aggregate data that can be used and collected.
- - 7.3.1L - Commercial and governmental curation of information may be exploited if privacy and other protections are ignored.
- - 7.3.1M - Targeted advertising is used to help individuals, but it can be misused at both individual and aggregate levels.
- - 7.3.1N - Widespread access to digitized information raises questions about intellectual property.
+  - 7.3.1A - Innovations enabled by computing raise legal and ethical concerns.
+  - 7.3.1G - Privacy and security concerns arise in the development and use of computational systems and artifacts.
+  - 7.3.1J - Technology enables the collection, use, and exploitation of information about, by, and for individuals, groups, and institutions.
+  - 7.3.1K - People can have instant access to vast amounts of information online; accessing this information can enable the collection of both individual and aggregate data that can be used and collected.
+  - 7.3.1L - Commercial and governmental curation of information may be exploited if privacy and other protections are ignored.
+  - 7.3.1M - Targeted advertising is used to help individuals, but it can be misused at both individual and aggregate levels.
+  - 7.3.1N - Widespread access to digitized information raises questions about intellectual property.
 
 **Enduring Understanding 7.5 - An investigative process is aided by effective organization and selection of resources. Appropriate technologies and tools facilitate the accessing of information and enable the ability to evaluate the credibility of sources.**
 
 - 7.5.2 - Evaluate online and print sources for appropriateness and credibility [P5]
- - 7.5.2A - Determining the credibility of a soruce requires considering and evaluating the reputation and credentials of the author(s), publisher(s), site owner(s), and/or sponsor(s).
- - 7.5.2B - Information from a source is considered relevant when it supports an appropriate claim or the purpose of the investigation
+  - 7.5.2A - Determining the credibility of a soruce requires considering and evaluating the reputation and credentials of the author(s), publisher(s), site owner(s), and/or sponsor(s).
+  - 7.5.2B - Information from a source is considered relevant when it supports an appropriate claim or the purpose of the investigation
 MARKDOWN

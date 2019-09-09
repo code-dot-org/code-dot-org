@@ -141,11 +141,11 @@ class RegionalPartnerTest < ActiveSupport::TestCase
     partner_organizer = create :workshop_organizer
     create :regional_partner_program_manager, regional_partner: regional_partner, program_manager: partner_organizer
 
-    partner_workshops = create_list :pd_workshop, 2, organizer: partner_organizer
+    partner_workshops = create_list :workshop, 2, organizer: partner_organizer
 
     # non-partner workshops
     non_partner_organizer = create :workshop_organizer
-    create_list :pd_workshop, 2, organizer: non_partner_organizer
+    create_list :workshop, 2, organizer: non_partner_organizer
 
     assert_equal partner_workshops, regional_partner.pd_workshops_organized
   end
@@ -154,11 +154,11 @@ class RegionalPartnerTest < ActiveSupport::TestCase
     regional_partner = create :regional_partner
     partner_organizer = create :program_manager, regional_partner: regional_partner
 
-    partner_workshops = create_list :pd_workshop, 2, organizer: partner_organizer
+    partner_workshops = create_list :workshop, 2, organizer: partner_organizer
 
     # non-partner workshops
     non_partner_organizer = create :program_manager
-    create_list :pd_workshop, 2, organizer: non_partner_organizer
+    create_list :workshop, 2, organizer: non_partner_organizer
 
     assert_equal partner_workshops, regional_partner.pd_workshops_organized
   end
@@ -170,13 +170,13 @@ class RegionalPartnerTest < ActiveSupport::TestCase
     create :regional_partner_program_manager, regional_partner: regional_partner, program_manager: partner_organizer
 
     future_partner_workshops = [
-      create(:pd_workshop, organizer: partner_organizer, num_sessions: 1, sessions_from: Date.today),
-      create(:pd_workshop, organizer: partner_organizer, num_sessions: 1, sessions_from: Date.tomorrow)
+      create(:workshop, organizer: partner_organizer, sessions_from: Date.today),
+      create(:workshop, organizer: partner_organizer, sessions_from: Date.tomorrow)
     ]
 
     # excluded (past or ended) partner workshops
-    create :pd_workshop, organizer: partner_organizer, num_sessions: 1, sessions_from: Date.yesterday
-    create :pd_ended_workshop, organizer: partner_organizer, num_sessions: 1, sessions_from: Date.today
+    create :workshop, organizer: partner_organizer, sessions_from: Date.yesterday
+    create :workshop, :ended, organizer: partner_organizer, sessions_from: Date.today
 
     assert_equal future_partner_workshops, regional_partner.future_pd_workshops_organized
   end
@@ -187,41 +187,18 @@ class RegionalPartnerTest < ActiveSupport::TestCase
     create :regional_partner_program_manager, regional_partner: regional_partner, program_manager: partner_organizer
 
     future_partner_workshops = [
-      create(:pd_workshop, organizer: partner_organizer, num_sessions: 1, sessions_from: Date.today),
-      create(:pd_workshop, organizer: partner_organizer, num_sessions: 1, sessions_from: Date.tomorrow)
+      create(:workshop, organizer: partner_organizer, sessions_from: Date.today),
+      create(:workshop, organizer: partner_organizer, sessions_from: Date.tomorrow)
     ]
 
     # excluded (past or ended) partner workshops
-    create :pd_workshop, organizer: partner_organizer, num_sessions: 1, sessions_from: Date.yesterday
-    create :pd_ended_workshop, organizer: partner_organizer, num_sessions: 1, sessions_from: Date.today
+    create :workshop, organizer: partner_organizer, sessions_from: Date.yesterday
+    create :workshop, :ended, organizer: partner_organizer, sessions_from: Date.today
 
     assert_equal future_partner_workshops, regional_partner.future_pd_workshops_organized
   end
 
-  test 'contact for partner with contact_id' do
-    contact = create :teacher
-    regional_partner = create :regional_partner, contact: contact
-
-    assert_equal contact, regional_partner.contact
-  end
-
-  # TODO: remove this test when workshop_organizer is deprecated
-  test 'contact for regional partner with no contact_id falls back to program manager workshop organizer' do
-    partner_organizer = create :workshop_organizer
-    regional_partner = create :regional_partner, contact: nil
-    create :regional_partner_program_manager, regional_partner: regional_partner, program_manager: partner_organizer
-
-    assert_equal partner_organizer, regional_partner.contact
-  end
-
-  test 'contact for regional partner with no contact_id falls back to program manager' do
-    regional_partner = create :regional_partner, contact: nil
-    partner_organizer = create :program_manager, regional_partner: regional_partner
-
-    assert_equal partner_organizer, regional_partner.contact
-  end
-
-  test 'contact_email_with_backup falls back to first pm then contact' do
+  test 'contact_email_with_backup falls back to first pm' do
     # contact_email
     regional_partner = create :regional_partner, contact_email: 'contact_email@partner.net'
     assert_equal 'contact_email@partner.net', regional_partner.contact_email_with_backup
@@ -230,12 +207,8 @@ class RegionalPartnerTest < ActiveSupport::TestCase
     regional_partner.update!(contact_email: nil, program_managers: [create(:teacher, email: 'first_pm@partner.net')])
     assert_equal 'first_pm@partner.net', regional_partner.contact_email_with_backup
 
-    # no contact_email or PMs, use contact's email
-    regional_partner.update!(program_managers: [], contact: create(:teacher, email: 'contact@partner.net'))
-    assert_equal 'contact@partner.net', regional_partner.contact_email_with_backup
-
     # nothing :(
-    regional_partner.update!(contact: nil)
+    regional_partner.update!(program_managers: [])
     assert_nil regional_partner.contact_email_with_backup
   end
 

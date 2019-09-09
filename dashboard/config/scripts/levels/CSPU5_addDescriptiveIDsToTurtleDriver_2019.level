@@ -38,7 +38,7 @@
     "long_instructions": "# Descriptive IDs\r\n\r\n**You try it** - give your buttons **descriptive and meaningful IDs** rather than the default `button1`, `button2` and so forth.\r\n\r\nAfter you change the ID in Design Mode remember to:\r\n\r\n* **Change the event handler code** so that it correctly references the new IDs of the buttons\r\n* **Run - Test - Debug** the program to make sure it works, and debug any problems.\r\n\r\n<details>\r\n\r\n<summary>\r\n<strong>Reminder:</strong> Rules About IDs [click to expand]\r\n</summary>\r\n\r\nIn making descriptive and meaningful IDs there **are some rules about IDs** you need to know.  IDs...\r\n\r\n<li> are case sensitive</li>\r\n<li> cannot contain spaces.\r\n<li>  *must* begin with a letter (A-Z or a-z) and may be followed by any number of digits and letters.\r\n<li>  can contain hyphens (\"-\"), underscores (\"_\"), colons (\":\"), or periods (\".\").\r\n\r\n\r\n</details>\r\n",
     "never_autoplay_video": "false",
     "examples_required": "false",
-    "show_turtle_before_run": "false",
+    "show_turtle_before_run": "true",
     "autocomplete_palette_apis_only": "true",
     "text_mode_at_start": "false",
     "design_mode_at_start": "false",
@@ -61,11 +61,14 @@
     "hide_share_and_remix": "false",
     "expand_debugger": "false",
     "mini_rubric": "false",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted": "false"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2018-09-19 20:09:28 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2019-02-15 03:47:33 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2018-09-19 20:09:28 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2019-02-15 03:47:33 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-07-30 17:35:57 +0000\",\"changed\":[\"code_functions\",\"show_turtle_before_run\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":958,\"changed_by_email\":\"stephanie.wong@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Applab>

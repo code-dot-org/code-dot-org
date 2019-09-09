@@ -2,20 +2,19 @@ professional_learning_course 'Andrea Test'
 peer_reviews_to_complete 6
 login_required true
 student_detail_progress_view true
-family_name ''
 
 stage 'Deeper Learning Overview', flex_category: 'required'
 level 'andrea_test1', progression: 'What is Deeper Learning', named: true
 
-stage 'andrea-test-stage2'
+stage 'Part 1'
 level 'andrea-test2', progression: 'President Question'
 level 'andrea-test3', progression: 'President Question'
 
-stage 'andrea-test-stage3'
+stage 'Part 2'
 variants
   level 'andrea_test1', named: true
   level 'andrea-test2', named: true
 endvariants
 
-stage 'andrea-test-stage4'
+stage 'part 3'
 level 'dlp-hold1', progression: 'In Construction', named: true

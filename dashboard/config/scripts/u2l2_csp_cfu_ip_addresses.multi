@@ -1,0 +1,19 @@
+name 'U2L2 CSP CFU IP Addresses'
+title 'Internet Protocol'
+type 'multi2'
+question 'Pick the two statements that are true about the Internet Protocol (IP):'
+
+right 'Each device or computer on the Internet is assigned a unique IP address. '
+wrong 'IP is a secret protocol shared between the sender and receiver.'
+wrong 'Each network on the Internet uses its own protocol to address messages.'
+wrong 'In order to communicate two devices on the Internet must have the same IP address.'
+right 'IP is the shared way that all devices and computers label their messages with the sender and receiver\'s addresses.'
+
+
+
+
+teacher_markdown <<MARKDOWN
+**Correct Answers:** 
+- make informed choices to support or oppose decisions my government makes about access to the internet.
+- right 'make informed choices about my privacy on the internet.
+MARKDOWN

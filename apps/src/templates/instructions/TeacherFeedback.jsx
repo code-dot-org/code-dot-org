@@ -99,6 +99,7 @@ export class TeacherFeedback extends Component {
     serverLevelId: PropTypes.number,
     serverScriptLevelId: PropTypes.number,
     teacher: PropTypes.number,
+    verifiedTeacher: PropTypes.bool,
     displayKeyConcept: PropTypes.bool,
     latestFeedback: PropTypes.array,
     token: PropTypes.string
@@ -217,13 +218,18 @@ export class TeacherFeedback extends Component {
     const buttonDisabled =
       feedbackUnchanged ||
       this.state.submitting ||
-      this.state.errorState === ErrorType.Load;
+      this.state.errorState === ErrorType.Load ||
+      !this.props.verifiedTeacher;
     const buttonText = latestFeedback ? i18n.update() : i18n.saveAndShare();
+
+    const placeholderWarning = this.props.verifiedTeacher
+      ? i18n.feedbackPlaceholder()
+      : i18n.feedbackPlaceholderNonVerified();
 
     const placeholderText =
       latestFeedback && latestFeedback.comment
         ? latestFeedback.comment
-        : i18n.feedbackPlaceholder();
+        : placeholderWarning;
     const dontShowStudentComment =
       !this.state.comment && this.props.viewAs === ViewType.Student;
 
@@ -343,5 +349,6 @@ export default connect(state => ({
   viewAs: state.viewAs,
   serverLevelId: state.pageConstants.serverLevelId,
   serverScriptLevelId: state.pageConstants.serverScriptLevelId,
-  teacher: state.pageConstants.userId
+  teacher: state.pageConstants.userId,
+  verifiedTeacher: state.pageConstants.verifiedTeacher
 }))(TeacherFeedback);

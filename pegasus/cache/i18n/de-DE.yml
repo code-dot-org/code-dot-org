@@ -1701,6 +1701,10 @@ de-DE:
     Sie Ihren Browser auf <a href='%{supported_browsers_url}', target='_blank'> einen
     von uns unterstützten Browser</a>. Sie können versuchen diese Seite zu betrachten,
     aber es können Fehler auftreten.
+  compatibility_unsupported_browser_markdown: Ihr Browser wird nicht unterstützt.
+    Bitte aktualisieren Sie Ihren Browser auf <a href='%{supported_browsers_url}',
+    target='_blank'> einen von uns unterstützten Browser</a>. Sie können versuchen
+    diese Seite zu betrachten, aber es können Fehler auftreten.
   flappy_shortcode: flattern
   header_home: Home
   header_my_dashboard: Mein Armaturenbrett

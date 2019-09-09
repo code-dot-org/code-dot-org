@@ -42,6 +42,9 @@ const styles = {
   }
 };
 
+// Replace ' with \'
+const escape = str => str.replace(/'/, "\\'");
+
 class FlexGroup extends Component {
   static propTypes = {
     addGroup: PropTypes.func.isRequired,
@@ -69,12 +72,12 @@ class FlexGroup extends Component {
   serializeStages = stages => {
     let s = [];
     stages.forEach(stage => {
-      let t = `stage '${stage.name}'`;
+      let t = `stage '${escape(stage.name)}'`;
       if (stage.lockable) {
         t += ', lockable: true';
       }
       if (stage.flex_category) {
-        t += `, flex_category: '${stage.flex_category}'`;
+        t += `, flex_category: '${escape(stage.flex_category)}'`;
       }
       s.push(t);
       stage.levels.forEach(level => {
@@ -102,24 +105,26 @@ class FlexGroup extends Component {
     const key = this.props.levelKeyList[id];
     if (/^blockly:/.test(key)) {
       if (level.skin) {
-        s.push(`skin '${level.skin}'`);
+        s.push(`skin '${escape(level.skin)}'`);
       }
       if (level.videoKey) {
-        s.push(`video_key_for_next_level '${level.videoKey}'`);
+        s.push(`video_key_for_next_level '${escape(level.videoKey)}'`);
       }
       if (level.concepts) {
+        // concepts is a comma-separated list of single-quoted strings, so do
+        // not escape its single quotes.
         s.push(`concepts ${level.concepts}`);
       }
       if (level.conceptDifficulty) {
-        s.push(`level_concept_difficulty '${level.conceptDifficulty}'`);
+        s.push(`level_concept_difficulty '${escape(level.conceptDifficulty)}'`);
       }
     }
-    let l = `level '${key.replace(/'/, "\\'")}'`;
+    let l = `level '${escape(key)}'`;
     if (active === false) {
       l += ', active: false';
     }
     if (level.progression) {
-      l += `, progression: '${level.progression}'`;
+      l += `, progression: '${escape(level.progression)}'`;
     }
     if (level.named) {
       l += `, named: true`;
@@ -143,10 +148,10 @@ class FlexGroup extends Component {
 
     return (
       <div>
-        {_.keys(groups).map((group, groupIndex) => (
+        {_.keys(groups).map(group => (
           <div key={group}>
             <div style={styles.groupHeader}>
-              Group {groupIndex + 1}: {group}
+              Flex Category: {group}
               <OrderControls
                 type={ControlTypes.Group}
                 position={afterStage}
@@ -183,7 +188,7 @@ class FlexGroup extends Component {
           type="button"
         >
           <i style={{marginRight: 7}} className="fa fa-plus-circle" />
-          Add Group
+          Add Flex Category
         </button>
         <input
           type="hidden"

@@ -112,6 +112,7 @@ namespace :test do
       ChatClient.wrap('dashboard ruby unit tests') do
         ENV['DISABLE_SPRING'] = '1'
         ENV['UNIT_TEST'] = '1'
+        ENV['USE_PEGASUS_UNITTEST_DB'] = '1'
         ENV['CODECOV_FLAGS'] = 'dashboard'
         ENV['PARALLEL_TEST_FIRST_IS_1'] = '1'
         # Parallel tests don't seem to run more quickly over 16 processes.
@@ -197,12 +198,27 @@ namespace :test do
         TestRunUtils.run_dashboard_tests(parallel: true)
 
         ENV.delete 'UNIT_TEST'
+        ENV.delete 'USE_PEGASUS_UNITTEST_DB'
         ENV.delete 'CODECOV_FLAGS'
       end
     end
   end
 
-  task ci: [:pegasus, :shared, :dashboard_ci, :ui_live]
+  task :shared_ci do
+    # isolate unit tests from the pegasus_test DB
+    ENV['USE_PEGASUS_UNITTEST_DB'] = '1'
+    TestRunUtils.run_shared_tests
+    ENV.delete 'USE_PEGASUS_UNITTEST_DB'
+  end
+
+  task :pegasus_ci do
+    # isolate unit tests from the pegasus_test DB
+    ENV['USE_PEGASUS_UNITTEST_DB'] = '1'
+    TestRunUtils.run_pegasus_tests
+    ENV.delete 'USE_PEGASUS_UNITTEST_DB'
+  end
+
+  task ci: [:shared_ci, :pegasus_ci, :dashboard_ci, :ui_live]
 
   desc 'Runs dashboard tests.'
   task :dashboard do
@@ -232,8 +248,8 @@ namespace :test do
         [
           'apps/**/*',
           'dashboard/config/libraries/*.interpreted.js',
-          'shared/**/*.js',
-          'shared/**/*.css',
+          'shared/js/**/*',
+          'shared/css/**/*',
         ]
       ) do
         TestRunUtils.run_apps_tests

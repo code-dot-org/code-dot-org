@@ -12,6 +12,14 @@ module Pd::SurveyPipeline
       "91405279991164".to_i => {
         full_name: 'Facilitator Feedback Survey',
         short_name: 'Facilitator'
+      },
+      "82115646319154".to_i => {
+        full_name: 'Academic Year 6-12 Workshop Post Survey',
+        short_name: 'Post Workshop'
+      },
+      "92125916725157".to_i => {
+        full_name: 'Academic Year 6-12 Workshop Post Survey',
+        short_name: 'Post Workshop'
       }
     }
 
@@ -45,7 +53,7 @@ module Pd::SurveyPipeline
     # @param parsed_questions [Hash] question data get from DailySurveyParser.
     # @param parsed_submissions [Hash] submission data get from DailySurveyParser.
     # @param current_user [User] user making survey report request.
-    # @param errors [Array] non-fatal errors encounterd when calculating survey summaries.
+    # @param errors [Array] non-fatal errors encountered when calculating survey summaries.
     #
     # @return [Hash] data returned to client.
     #
@@ -66,56 +74,55 @@ module Pd::SurveyPipeline
       # Populate entries for result[:this_workshop] and result[:questions]
       summaries.each do |summary|
         # Only process summarization for specific workshops and forms.
-        form_id = summary[:form_id]
-        workshop_id = summary[:workshop_id]
+        workshop_id, form_id, = summary.values_at(:workshop_id, :form_id)
         next unless workshop_id && form_id
 
         # Check if the current user can see specific data
         next unless data_visible_to_user?(current_user, summary)
 
-        form_name = get_form_short_name(form_id)
+        day, facilitator_id = summary.values_at(:day, :facilitator_id)
+        context_name = get_survey_context(workshop_id, day, facilitator_id, form_id)
         q_name = summary[:name]
 
         # Create top structures if not already created
         result[:course_name] ||= Pd::Workshop.find_by_id(workshop_id)&.course
-        result[:this_workshop][form_name] ||= {
+        result[:this_workshop][context_name] ||= {
           response_count: parsed_submissions[form_id].size,
           general: {},
           facilitator: {}
         }
-        result[:questions][form_name] ||= {general: {}, facilitator: {}}
+        result[:questions][context_name] ||= {general: {}, facilitator: {}}
 
         # Create an entry in result[:this_workshop].
         # General format:
-        # Hash{form_name => {response_count => number, general => {question_name => summary_result}}}
+        # Hash{context_name => {response_count => number, general => {question_name => summary_result}}}
         #
-        # Format for facilicator-specific result:
-        # Hash{form_name => {response_count => number,
-        #   facilitator => {question_name => {factilitator_name => summary_result}}}}
+        # Format for facilitator-specific result:
+        # Hash{context_name => {response_count => number,
+        #   facilitator => {question_name => {facilitator_name => summary_result}}}}
         #
-        if summary[:facilitator_id]
-          facilitator_name = User.find_by_id(summary[:facilitator_id])&.name ||
-            summary[:facilitator_id].to_s
+        if facilitator_id
+          facilitator_name = User.find_by_id(facilitator_id)&.name || facilitator_id.to_s
 
-          result[:this_workshop][form_name][:facilitator][q_name] ||= {}
-          result[:this_workshop][form_name][:facilitator][q_name][facilitator_name] =
+          result[:this_workshop][context_name][:facilitator][q_name] ||= {}
+          result[:this_workshop][context_name][:facilitator][q_name][facilitator_name] =
             summary[:reducer_result]
         else
-          result[:this_workshop][form_name][:general][q_name] = summary[:reducer_result]
+          result[:this_workshop][context_name][:general][q_name] = summary[:reducer_result]
         end
 
         # Create an entry in result[:questions].
         # General question format:
-        # Hash{form_name => {general => {question_name => question_content}}}
+        # Hash{context_name => {general => {question_name => question_content}}}
         #
         # Facilitator question format:
-        # Hash{form_name => {facilitator => {question_name => question_content}}}
+        # Hash{context_name => {facilitator => {question_name => question_content}}}
         #
         q_content = question_by_names.dig(form_id, q_name)
-        if summary[:facilitator_id]
-          result[:questions][form_name][:facilitator][q_name] ||= q_content
+        if facilitator_id
+          result[:questions][context_name][:facilitator][q_name] ||= q_content
         else
-          result[:questions][form_name][:general][q_name] ||= q_content
+          result[:questions][context_name][:general][q_name] ||= q_content
         end
       end
 
@@ -134,6 +141,40 @@ module Pd::SurveyPipeline
       end
 
       true
+    end
+
+    # Given metadata of a survey submission, returns context of that submission.
+    # Example return values: Pre Workshop, Post Workshop, Day <number>, and Facilitator.
+    #
+    # @param workshop_id [Number] must be valid workshop id
+    # @param day [Number]
+    # @param facilitator_id [Number]
+    # @param form_id [Number]
+    #
+    # @return [String] context name
+    #
+    def self.get_survey_context(workshop_id, day, facilitator_id, form_id)
+      workshop = Pd::Workshop.find_by_id(workshop_id)
+      return 'Invalid' unless workshop && day >= 0
+
+      if workshop.csf?
+        return 'Facilitators' if facilitator_id
+
+        # CSF is a 1-day workshop and doesn't have daily survey.
+        return day == 0 ? 'Pre Workshop' : 'Post Workshop'
+      elsif workshop.summer?
+        # Summer workshop doesn't have post-workshop survey.
+        return day == 0 ? 'Pre Workshop' : "Day #{day}"
+      else
+        # Academic year workshop doesn't have pre-workshop survey.
+        return 'Invalid' if day == 0
+
+        # Post workshop survey has the same "day" value as the last daily survey.
+        # Use form name to distinguish them.
+        session_count = workshop.sessions.size
+        form_name = get_form_short_name(form_id)
+        return day == session_count && form_name == 'Post Workshop' ? 'Post Workshop' : "Day #{day}"
+      end
     end
 
     def self.get_form_short_name(form_id)

@@ -7,6 +7,7 @@ const TOGGLE_EXPAND = 'scriptEditor/TOGGLE_EXPAND';
 const REMOVE_LEVEL = 'scriptEditor/REMOVE_LEVEL';
 const CHOOSE_LEVEL = 'scriptEditor/CHOOSE_LEVEL';
 const ADD_VARIANT = 'scriptEditor/ADD_VARIANT';
+const REMOVE_VARIANT = 'scriptEditor/REMOVE_VARIANT';
 const SET_ACTIVE_VARIANT = 'scriptEditor/SET_ACTIVE_VARIANT';
 const SET_FIELD = 'scriptEditor/SET_FIELD';
 const REORDER_LEVEL = 'scriptEditor/REORDER_LEVEL';
@@ -59,6 +60,13 @@ export const addVariant = (stage, level) => ({
   type: ADD_VARIANT,
   stage,
   level
+});
+
+export const removeVariant = (stage, level, levelId) => ({
+  type: REMOVE_VARIANT,
+  stage,
+  level,
+  levelId
 });
 
 export const setActiveVariant = (stage, level, id) => ({
@@ -115,9 +123,22 @@ export const setStageLockable = (stage, lockable) => ({
   lockable
 });
 
-function updatePositions(node) {
-  for (let i = 0; i < node.length; i++) {
-    node[i].position = i + 1;
+function updateStagePositions(stages) {
+  let relativePosition = 1;
+  for (let i = 0; i < stages.length; i++) {
+    stages[i].position = i + 1;
+    if (stages[i].lockable) {
+      stages[i].relativePosition = undefined;
+    } else {
+      stages[i].relativePosition = relativePosition;
+      relativePosition++;
+    }
+  }
+}
+
+function updateLevelPositions(levels) {
+  for (let i = 0; i < levels.length; i++) {
+    levels[i].position = i + 1;
   }
 }
 
@@ -133,7 +154,7 @@ function stages(state = [], action) {
       const levels = newState[action.stage - 1].levels;
       const temp = levels.splice(action.originalPosition - 1, 1);
       levels.splice(action.newPosition - 1, 0, temp[0]);
-      updatePositions(levels);
+      updateLevelPositions(levels);
       break;
     }
     case ADD_GROUP: {
@@ -142,7 +163,7 @@ function stages(state = [], action) {
         name: action.stageName,
         levels: []
       });
-      updatePositions(newState);
+      updateStagePositions(newState);
       break;
     }
     case ADD_STAGE: {
@@ -153,7 +174,7 @@ function stages(state = [], action) {
         flex_category: groupName,
         levels: []
       });
-      updatePositions(newState);
+      updateStagePositions(newState);
       break;
     }
     case ADD_LEVEL: {
@@ -163,13 +184,19 @@ function stages(state = [], action) {
         activeId: NEW_LEVEL_ID,
         expand: true
       });
-      updatePositions(levels);
+      updateLevelPositions(levels);
       break;
     }
     case ADD_VARIANT: {
       newState[action.stage - 1].levels[action.level - 1].ids.push(
         NEW_LEVEL_ID
       );
+      break;
+    }
+    case REMOVE_VARIANT: {
+      const levelIds = newState[action.stage - 1].levels[action.level - 1].ids;
+      const i = levelIds.indexOf(action.levelId);
+      levelIds.splice(i, 1);
       break;
     }
     case SET_ACTIVE_VARIANT: {
@@ -185,18 +212,18 @@ function stages(state = [], action) {
     case REMOVE_GROUP: {
       const groupName = newState[action.position - 1].flex_category;
       newState = newState.filter(stage => stage.flex_category !== groupName);
-      updatePositions(newState);
+      updateStagePositions(newState);
       break;
     }
     case REMOVE_STAGE: {
       newState.splice(action.position - 1, 1);
-      updatePositions(newState);
+      updateStagePositions(newState);
       break;
     }
     case REMOVE_LEVEL: {
       const levels = newState[action.stage - 1].levels;
       levels.splice(action.level - 1, 1);
-      updatePositions(levels);
+      updateLevelPositions(levels);
       break;
     }
     case CHOOSE_LEVEL: {
@@ -232,16 +259,22 @@ function stages(state = [], action) {
         0,
         ...swap
       );
-      updatePositions(newState);
+      updateStagePositions(newState);
       break;
     }
     case MOVE_STAGE: {
       const index = action.position - 1;
       const swap = action.direction === 'up' ? index - 1 : index + 1;
-      const temp = newState[index];
-      newState[index] = newState[swap];
-      newState[swap] = temp;
-      updatePositions(newState);
+      if (newState[index].flex_category === newState[swap].flex_category) {
+        const temp = newState[index];
+        newState[index] = newState[swap];
+        newState[swap] = temp;
+        updateStagePositions(newState);
+      } else {
+        // Move the stage into the adjacent group, without changing its
+        // position relative to other stages.
+        newState[index].flex_category = newState[swap].flex_category;
+      }
       break;
     }
     case SET_STAGE_LOCKABLE: {
@@ -260,7 +293,27 @@ function levelKeyList(state = {}, action) {
   return state;
 }
 
+function levelNameToIdMap(state = {}, action) {
+  switch (action.type) {
+    case INIT: {
+      if (!action.levelKeyList) {
+        // This can be falsy if the new editor experiment is not enabled
+        return state;
+      }
+
+      const levelNameToIdMap = {};
+      Object.keys(action.levelKeyList).forEach(levelId => {
+        const levelKey = action.levelKeyList[levelId];
+        levelNameToIdMap[levelKey] = +levelId;
+      });
+      return levelNameToIdMap;
+    }
+  }
+  return state;
+}
+
 export default {
   stages,
-  levelKeyList
+  levelKeyList,
+  levelNameToIdMap
 };

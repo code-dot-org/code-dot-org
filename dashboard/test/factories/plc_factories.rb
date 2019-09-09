@@ -39,7 +39,7 @@ FactoryGirl.define do
   end
 
   factory :plc_learning_module, class: 'Plc::LearningModule' do
-    name "MyString"
+    sequence(:name) {|n| "plc-learning-module-#{n}"}
     plc_course_unit {create(:plc_course_unit)}
     stage {create(:stage)}
     module_type Plc::LearningModule::CONTENT_MODULE
@@ -47,7 +47,7 @@ FactoryGirl.define do
 
   factory :plc_course, class: 'Plc::Course' do
     transient do
-      name 'plccourse'
+      sequence(:name) {|n| "plc-course-#{n}"}
     end
     after(:build) do |plc_course, evaluator|
       create(:course, name: evaluator.name, plc_course: plc_course)

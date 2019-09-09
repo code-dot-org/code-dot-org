@@ -231,6 +231,14 @@ Dashboard::Application.routes.draw do
 
   post 'level_assets/upload', to: 'level_assets#upload'
 
+  resources :level_starter_assets, only: [:show], param: 'level_name' do
+    member do
+      get '/:filename', to: 'level_starter_assets#file'
+      post '', to: 'level_starter_assets#upload'
+      delete '/:filename', to: 'level_starter_assets#destroy'
+    end
+  end
+
   resources :scripts, path: '/s/' do
     # /s/xxx/reset
     get 'reset', to: 'script_levels#reset'
@@ -283,9 +291,6 @@ Dashboard::Application.routes.draw do
   get '/jigsaw/:chapter', to: 'script_levels#show', script_id: Script::JIGSAW_NAME, as: 'jigsaw_chapter', format: false
 
   get '/weblab/host', to: 'weblab_host#index'
-
-  resources :followers, only: [:create]
-  post '/followers/remove', to: 'followers#remove', as: 'remove_follower'
 
   get '/join(/:section_code)', to: 'followers#student_user_new', as: 'student_user_new'
   post '/join(/:section_code)', to: 'followers#student_register', as: 'student_register'
@@ -387,6 +392,7 @@ Dashboard::Application.routes.draw do
           post :end
           post :reopen
           get  :summary
+          get  :potential_organizers
         end
         resources :enrollments, controller: 'workshop_enrollments', only: [:index, :destroy, :create]
 
@@ -411,6 +417,7 @@ Dashboard::Application.routes.draw do
       get 'workshop_organizer_survey_report_for_course/:course', action: :index, controller: 'workshop_organizer_survey_report'
       delete 'enrollments/:enrollment_code', action: 'cancel', controller: 'workshop_enrollments'
       post 'enrollment/:enrollment_id/scholarship_info', action: 'update_scholarship_info', controller: 'workshop_enrollments'
+      post 'enrollments/move', action: 'move', controller: 'workshop_enrollments'
 
       get :teacher_applications, to: 'teacher_applications#index'
       post :teacher_applications, to: 'teacher_applications#create'

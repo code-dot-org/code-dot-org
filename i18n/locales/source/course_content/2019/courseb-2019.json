@@ -11,7 +11,7 @@
   },
   "https://studio.code.org/s/courseb-2019/stage/3/puzzle/2": {
     "short_instructions": "For this puzzle, snap the blocks together and click \"▶ Run\"!",
-    "long_instructions": "To get the bird to the pig, snap the <xml><block type=\"maze_moveEast\" block-text=\"move east\"/></xml> block to the bottom of the <xml><block type=\"when_run\" block-text=\"when run\"/></xml> block, then press \"▶ Run\"!",
+    "long_instructions": "To get the bird to the pig, snap the [blockly block][0] block to the bottom of the [blockly block][1] block, then press \"▶ Run\"!",
     "authored_hints": {
       "courseC_maze_programming1_a": "If the bird isn't getting to the pig, make sure both of the blocks have been fully clicked together, then click \"Run\" again.",
       "courseC_maze_programming1_b": "Don't be afraid to make a mistake! Try something, and if it doesn't work, try something else!"
@@ -22,9 +22,9 @@
   },
   "https://studio.code.org/s/courseb-2019/stage/3/puzzle/3": {
     "short_instructions": "Snap all blocks together to finish your code, then click \"Run\".",
-    "long_instructions": "Attach both <xml><block type=\"maze_moveEast\" block-text=\"move east\"/></xml> blocks to the <xml><block type=\"when_run\" block-text=\"when run\"/></xml> block to finish your code, then click \"▶ Run\".",
+    "long_instructions": "Attach both [blockly block][0] blocks to the [blockly block][1] block to finish your code, then click \"▶ Run\".",
     "authored_hints": {
-      "1": "Your code should look like this:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+      "1": "Your code should look like this:\n\n[blockly block][0]"
     },
     "callouts": {
       "courseC_maze_programming2_1": "This is the toolbox. It’s where you’ll find extra blocks to complete your puzzles."
@@ -32,38 +32,38 @@
   },
   "https://studio.code.org/s/courseb-2019/stage/3/puzzle/4": {
     "short_instructions": "Add a `North` block to the bottom of the other blocks to finish this code, then click \"▶ Run\".",
-    "long_instructions": "Grab a <xml><block type=\"maze_moveNorth\" block-text=\"move north\"/></xml> block from the toolbox and add it to the bottom of the other blocks to finish this code, then click \"▶ Run\".",
+    "long_instructions": "Grab a [blockly block][0] block from the toolbox and add it to the bottom of the other blocks to finish this code, then click \"▶ Run\".",
     "authored_hints": {
-      "1": "Your code should look like this:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveNorth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+      "1": "Your code should look like this:\n\n[blockly block][0]"
     }
   },
   "https://studio.code.org/s/courseb-2019/stage/3/puzzle/5": {
     "short_instructions": "Add a `North` block to the bottom of the other blocks to finish this code, then click \"Run\".",
     "long_instructions": "There's an extra block at the end of this code!  \n\nDrag it back to the toolbox to throw it away.",
     "authored_hints": {
-      "1": "Your code should look like this:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveSouth\">\n        <next>\n          <block type=\"maze_moveWest\">\n            <next>\n              <block type=\"maze_moveWest\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+      "1": "Your code should look like this:\n\n[blockly block][0]"
     }
   },
   "https://studio.code.org/s/courseb-2019/stage/3/puzzle/6": {
     "short_instructions": "Can you figure out which block you need to add to the bottom of the other blocks to finish this code?",
     "long_instructions": "Can you figure out which block you need to add to the bottom of the other blocks to finish this code?",
     "authored_hints": {
-      "1": "Your code should look like this:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveSouth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+      "1": "Your code should look like this:\n\n[blockly block][0]"
     }
   },
   "https://studio.code.org/s/courseb-2019/stage/3/puzzle/7": {
     "short_instructions": "Get the bird to the pig!",
     "long_instructions": "Try this one all by yourself!",
     "authored_hints": {
-      "1": "Your code should look like this:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveWest\">\n        <next>\n          <block type=\"maze_moveWest\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+      "1": "Your code should look like this:\n\n[blockly block][0]"
     }
   },
   "https://studio.code.org/s/courseb-2019/stage/4/puzzle/2": {
     "short_instructions": "Get the bird to the bad pig!",
     "long_instructions": "_\"Play with these blocks and try to get me to the bad pig!\"_",
     "authored_hints": {
-      "courseA_maze_seq1_a": "If you are having trouble getting the bird to move, make sure blocks are snapped in place under <xml>\n  <block type=\"when_run\"/>\n</xml>",
-      "courseA_maze_seq1_b": "The bird will need to move West 3 times to get to the pig. Use this block:\n\n<xml><block type=\"maze_moveWest\"/></xml>"
+      "courseA_maze_seq1_a": "If you are having trouble getting the bird to move, make sure blocks are snapped in place under [blockly block][0]",
+      "courseA_maze_seq1_b": "The bird will need to move West 3 times to get to the pig. Use this block:\n\n[blockly block][0]"
     },
     "callouts": {
       "courseA_maze_seq1_1": "Click the lightbulb when you need a hint!"
@@ -74,7 +74,7 @@
     "long_instructions": "Give this one a try.",
     "authored_hints": {
       "1": "Try writing down the steps on paper to find a solution!",
-      "2": "You will need to use this block:\n\n<xml><block type=\"maze_moveSouth\"/></xml>"
+      "2": "You will need to use this block:\n\n[blockly block][0]"
     }
   },
   "https://studio.code.org/s/courseb-2019/stage/4/puzzle/4": {
@@ -117,10 +117,11 @@
   },
   "https://studio.code.org/s/courseb-2019/stage/4/puzzle/10": {
     "short_instructions": "Get the pig any way you can!",
+    "long_instructions": "Get the pig any way you can!",
     "authored_hints": {
       "courseA_maze_seq13_a": "If the path you need is unclear, use your finger to trace your way from the bird to the pig.",
       "courseA_maze_seq13_b": "Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen.",
-      "courseA_maze_seq13_c": "These <xml><block type=\"maze_moveNorth\"/></xml>\n\n<xml><block type=\"maze_moveEast\"/></xml> blocks will help you move closer to the pig."
+      "courseA_maze_seq13_c": "These [blockly block][0]\n\n[blockly block][1]\n\n blocks will help you move closer to the pig."
     }
   },
   "https://studio.code.org/s/courseb-2019/stage/4/extras?level_name=courseA_maze_seq_challenge1_2019": {
@@ -132,6 +133,7 @@
   },
   "https://studio.code.org/s/courseb-2019/stage/4/extras?level_name=courseA_maze_seq_challenge2_2019": {
     "short_instructions": "Trace the path to lead the bird to the pig. Avoid TNT or feathers will fly!",
+    "long_instructions": "Trace the path to lead the bird to the pig. Avoid TNT or feathers will fly!",
     "authored_hints": {
       "courseA_maze_seq_challenge2_a": "Try counting the spaces with your finger. Remember not to count the space where you start!"
     }
@@ -140,23 +142,23 @@
     "short_instructions": "Play with these blocks to help the harvester pick the piece of corn.",
     "long_instructions": "Help the harvester pick the piece of corn!",
     "authored_hints": {
-      "courseA_harvester_seq1_a": "Use this block to pick the corn when the harvester finds it!\n\n<xml>\n  <block type=\"harvester_corn\"/>\n</xml>",
-      "courseA_harvester_seq1_b": "The harvester will need to move East three times to get to the corn. Use this block:\n\n<xml>\n  <block type=\"maze_moveEast\"/>\n</xml>"
+      "courseA_harvester_seq1_a": "Use this block to pick the corn when the harvester finds it!\n\n[blockly block][0]",
+      "courseA_harvester_seq1_b": "The harvester will need to move East three times to get to the corn. Use this block:\n\n[blockly block][0]"
     }
   },
   "https://studio.code.org/s/courseb-2019/stage/5/puzzle/3": {
     "short_instructions": "Use three `move west` blocks and one `pick corn` block to solve this puzzle.",
-    "long_instructions": "Use **three** <xml><block type=\"maze_moveWest\" block-text=\"move west\"/></xml> blocks to get the harvester to the corn! ",
+    "long_instructions": "Use **three** [blockly block][0] blocks to get the harvester to the corn! ",
     "authored_hints": {
-      "courseA_harvester_seq2_a": "Don't forget to use <xml><block type=\"harvester_corn\"/></xml> to pick the corn!",
+      "courseA_harvester_seq2_a": "Don't forget to use [blockly block][0] to pick the corn!",
       "courseA_harvester_seq2_b": "Try writing down the steps on paper to find a solution!"
     }
   },
   "https://studio.code.org/s/courseb-2019/stage/5/puzzle/4": {
     "short_instructions": "Use three `Move North` blocks and one `Pick Corn` block.",
-    "long_instructions": "Use **three** <xml><block type=\"maze_moveNorth\" block-text=\"move north\"/></xml> blocks to get the harvester to the corn! Don't forget to pick the corn at the end.",
+    "long_instructions": "Use **three** [blockly block][0] blocks to get the harvester to the corn! Don't forget to pick the corn at the end.",
     "authored_hints": {
-      "courseA_harvester_seq3_a": "Did you remember to use this block?\n\n<xml><block type=\"harvester_corn\"/></xml>",
+      "courseA_harvester_seq3_a": "Did you remember to use this block?\n\n[blockly block][0]",
       "courseA_harvester_seq3_b": "Say the steps out loud and see if it helps you figure out the answer."
     }
   },
@@ -165,7 +167,7 @@
     "long_instructions": "Add _one_ block to help the harvester pick the corn.",
     "authored_hints": {
       "courseA_harvester_seq4_a": "How many spaces are between the Harvester and the corn? How many blocks are already in your workspace?",
-      "courseA_harvester_seq4_b": "You will need five `Move East` blocks and one `Pick Corn` block:\n\n<xml><block type=\"harvester_corn\"/></xml>"
+      "courseA_harvester_seq4_b": "You will need five `Move East` blocks and one `Pick Corn` block:\n\n[blockly block][0]"
     }
   },
   "https://studio.code.org/s/courseb-2019/stage/5/puzzle/7": {
@@ -174,7 +176,7 @@
     "authored_hints": {
       "courseA_harvester_seq5_a": "Which block moves the harvester the wrong way?",
       "courseA_harvester_seq5_b": "You need to remove one block.",
-      "courseA_harvester_seq5_c": "Throw this block in the trash!\n\n<xml><block type=\"maze_moveNorth\"/></xml>"
+      "courseA_harvester_seq5_c": "Throw this block in the trash!\n\n[blockly block][0]"
     }
   },
   "https://studio.code.org/s/courseb-2019/stage/5/puzzle/8": {
@@ -229,7 +231,7 @@
     "short_instructions": "Play with these blocks to help the harvester pick corn.",
     "long_instructions": "Help the harvester pick corn!",
     "authored_hints": {
-      "courseA_bee_seq1_a": "Use this block to pick corn once the harvester gets to it.\n\n<xml>\n  <block type=\"harvester_corn\"/>\n</xml>"
+      "courseA_bee_seq1_a": "Use this block to pick corn once the harvester gets to it.\n\n[blockly block][0]"
     }
   },
   "https://studio.code.org/s/courseb-2019/stage/6/puzzle/1": {
@@ -241,14 +243,14 @@
     "short_instructions": "Help the harvester pick all the corn!",
     "long_instructions": "Help the harvester pick all the corn!",
     "authored_hints": {
-      "courseA_harvester_loops1_a": "Once you move to some corn, use this block to pick it!\n\n<xml><block type=\"harvester_corn\"/></xml>"
+      "courseA_harvester_loops1_a": "Once you move to some corn, use this block to pick it!\n\n[blockly block][0]"
     }
   },
   "https://studio.code.org/s/courseb-2019/stage/7/puzzle/2": {
     "short_instructions": "Make sure to pick all the corn!",
     "long_instructions": "The harvester needs to pick all the corn! Do you see a pattern?",
     "authored_hints": {
-      "courseA_harvester_loops2_a": "Your code will have **four** `move west`\n\n<xml><block type=\"maze_moveWest\"/></xml>\n\nblocks and **four** <xml>\n`pick corn`\n  <block type=\"harvester_corn\"/>\n</xml> blocks. ",
+      "courseA_harvester_loops2_a": "Your code will have **four** `move west`\n\n[blockly block][0]\n\nblocks and **four** [blockly block][1] blocks. ",
       "courseA_harvester_loops2_b": "If you're still having trouble, try saying the steps out loud. "
     }
   },
@@ -256,8 +258,8 @@
     "short_instructions": "Can you pick all the corn using only **one** move block?",
     "long_instructions": "Can you pick all the corn using only **one** move block?",
     "authored_hints": {
-      "courseA_harvester_loops3_a": "Use a `repeat` block like this to help you!\n\n<xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">4</title>\n  </block></xml>",
-      "courseA_harvester_loops3_b": "To repeat code, drag out a `repeat` (<xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">4</title>\n  </block></xml> )loop, then put the block you want inside of it. "
+      "courseA_harvester_loops3_a": "Use a `repeat` block like this to help you!\n\n[blockly block][0]",
+      "courseA_harvester_loops3_b": "To repeat code, drag out a `repeat` ([blockly block][0] )loop, then put the block you want inside of it. "
     }
   },
   "https://studio.code.org/s/courseb-2019/stage/7/puzzle/5": {
@@ -273,7 +275,7 @@
     "long_instructions": "Try it yourself! Can you pick the corn at the end too?",
     "authored_hints": {
       "courseA_harvester_loops5_a": "If you get stuck, try solving the puzzle in 2 parts, one part before the corner and one part after the corner.",
-      "courseA_harvester_loops5_b": "Your final code will have **one** `repeat`  <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">6</title>\n    </block></xml> loop, **one** `move South`   <xml><block type=\"maze_moveSouth\" limit=\"1\"/></xml> block, and **one** `move East`   <xml><block type=\"maze_moveEast\" limit=\"1\"/> </xml>block.",
+      "courseA_harvester_loops5_b": "Your final code will have **one** `repeat`  [blockly block][0] loop, **one** `move South`   [blockly block][1] block, and **one** `move East`   [blockly block][2]block.",
       "courseA_harvester_loops5_c": "Use this path to pick all the corn!"
     }
   },
@@ -281,8 +283,8 @@
     "short_instructions": "Look at all this corn! Can you pick it all by yourself?",
     "long_instructions": "Look at all this corn? Can you pick it all by yourself?",
     "authored_hints": {
-      "courseA_harvester_loops5a_a": "You will need one `repeat` <xml> <block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">6</title>\n  </block></xml> loop after another.",
-      "courseA_harvester_loops5a_b": "One loop will repeat `move South`<xml><block type=\"maze_moveSouth\" limit=\"1\"/></xml>, and the other will repeat `move East` <xml><block type=\"maze_moveEast\" limit=\"1\"/></xml>",
+      "courseA_harvester_loops5a_a": "You will need one `repeat` [blockly block][0] loop after another.",
+      "courseA_harvester_loops5a_b": "One loop will repeat `move South`[blockly block][0], and the other will repeat `move East` [blockly block][1]",
       "courseA_harvester_loops5a_c": "Use this path to move one way, and then the other."
     }
   },
@@ -297,7 +299,7 @@
   },
   "https://studio.code.org/s/courseb-2019/stage/7/puzzle/9": {
     "short_instructions": "You will need **one** `Move South` block and **one** `Move West` block.",
-    "long_instructions": "You will need **one** <xml><block type=\"maze_moveWest\" block-text=\"move west\"></block></xml> block and **one** <xml><block type=\"maze_moveNorth\" block-text=\"move north\"></block></xml> block to finish this puzzle!",
+    "long_instructions": "You will need **one** [blockly block][0] block and **one** [blockly block][1] block to finish this puzzle!",
     "authored_hints": {
       "courseA_harvester_loops6_a": "If you get stuck, try writing the steps on paper and looking for repeating patterns.",
       "courseA_harvester_loops6_b": "This is the path you should take to pick all the corn."
@@ -307,7 +309,7 @@
     "short_instructions": "Try it on your own! ",
     "long_instructions": "Try it on your own! ",
     "authored_hints": {
-      "courseA_harvester_loops7_a": "You will need two `repeat` <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">5</title>\n  </block></xml>loops after each other!",
+      "courseA_harvester_loops7_a": "You will need two `repeat` [blockly block][0]loops after each other!",
       "courseA_harvester_loops7_b": "Use two loops to follow this path."
     }
   },
@@ -332,7 +334,7 @@
     "short_instructions": "Get at least one piece of treasure without mistakes to pass!",
     "long_instructions": "**Free Play:** Move Laurel around and get as much treasure as you can. Get at least one item with no mistakes to pass this level.  \n\n* * *\n\nDrag blocks into the workspace and try to figure out how to get treasure.  ",
     "authored_hints": {
-      "courseB_collector_loops1_a": "The <xml><block type=\"collector_collect_simplified\"/></xml> block can be used to pick up treasure when you are standing on top of it."
+      "courseB_collector_loops1_a": "The [blockly block][0] block can be used to pick up treasure when you are standing on top of it."
     },
     "callouts": {
       "courseB_collector_loops1_1": "Use this block to collect the treasure."
@@ -340,30 +342,32 @@
   },
   "https://studio.code.org/s/courseb-2019/stage/8/puzzle/3": {
     "short_instructions": "Get all four piles to pass this level.",
-    "long_instructions": "Move Laurel to the treasure, then use the <xml><block type=\"collector_collect\" block-text=\"get treasure\"/></xml> block to pick it up.\n\nGet all four piles to pass this level.",
+    "long_instructions": "Move Laurel to the treasure, then use the [blockly block][0] block to pick it up.\n\nGet all four piles to pass this level.",
     "authored_hints": {
       "courseB_collector_loops2_a": "You'll have to move before you can collect any treasure.",
-      "courseB_collector_loops2_b": "When you have reached a spot with treasure, use the <xml><block type=\"collector_collect\"/></xml> block to pick it up."
+      "courseB_collector_loops2_b": "When you have reached a spot with treasure, use the [blockly block][0] block to pick it up."
     }
   },
   "https://studio.code.org/s/courseb-2019/stage/8/puzzle/5": {
     "short_instructions": "How can Laurel get all five piles of treasure using only one `E -->` block?",
-    "long_instructions": "How can Laurel get all five piles of treasure using only one <xml><block type=\"maze_moveEast\" block-text=\"move east\"/></xml> block?",
+    "long_instructions": "How can Laurel get all five piles of treasure using only one [blockly block][0] block?",
     "authored_hints": {
-      "courseB_collector_prog3_a": "Try using a <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block></xml> block to collect your treasure.",
+      "courseB_collector_prog3_a": "Try using a [blockly block][0] block to collect your treasure.",
       "courseB_collector_prog3_b": "Remember you can put more than one block inside a repeat loop."
     }
   },
   "https://studio.code.org/s/courseb-2019/stage/8/puzzle/6": {
     "short_instructions": "Fix Laurel's path to get all of this treasure!",
+    "long_instructions": "Fix Laurel's path to get all of this treasure!",
     "authored_hints": {
       "courseB_collector_loops4_a": "Try using the step button to figure out where things go wrong.",
       "courseB_collector_loops4_b": "To change how far Laurel goes, change the number of times that the loop runs.",
-      "courseB_collector_loops4_c": "Laurel needs to walk down and collect the treasure after she finishes the `repeat` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml>loop!"
+      "courseB_collector_loops4_c": "Laurel needs to walk down and collect the treasure after she finishes the `repeat` [blockly block][0]loop!"
     }
   },
   "https://studio.code.org/s/courseb-2019/stage/8/puzzle/7": {
     "short_instructions": "Add to the code from the last puzzle to get all of the treasure. ",
+    "long_instructions": "Add to the code from the last puzzle to get all of the treasure. ",
     "authored_hints": {
       "courseB_collector_loops5_a": "Use more than one loop to get the job done.",
       "courseB_collector_loops5_b": "Try running the code a couple of times to see what happens."
@@ -371,15 +375,17 @@
   },
   "https://studio.code.org/s/courseb-2019/stage/8/puzzle/8": {
     "short_instructions": "Figure out the code to help Laurel get all of the treasure!",
+    "long_instructions": "Figure out the code to help Laurel get all of the treasure!",
     "authored_hints": {
       "courseB_collector_loops6_a": "Can't figure out where things start going wrong? Use the \"Step\" button to run through your program one block at a time.",
       "courseB_collector_loops6_b": "You can change the number of times the repeat loop runs by clicking on the \"3\" and choosing a different number.",
-      "courseB_collector_loops6_c": "You will want to use 3 `repeat` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> loops to solve this puzzle.",
+      "courseB_collector_loops6_c": "You will want to use 3 `repeat` [blockly block][0] loops to solve this puzzle.",
       "courseB_collector_loops6_d": "If you're confused, try breaking this puzzle into 3 pieces."
     }
   },
   "https://studio.code.org/s/courseb-2019/stage/8/puzzle/9": {
     "short_instructions": "Write the code to get all of this treasure.",
+    "long_instructions": "Write the code to get all of this treasure.",
     "authored_hints": {
       "courseB_collector_loops7_a": "If you are having a hard time with the puzzle, try drawing it on paper to help you figure it out.",
       "courseB_collector_loops7_b": "You will need 3 repeat loops to solve this puzzle, and don't forget the extra treasure at the end!"
@@ -387,12 +393,14 @@
   },
   "https://studio.code.org/s/courseb-2019/stage/8/puzzle/10": {
     "short_instructions": "**Challenge:** The treasure goes all the way down these stairs!  Write the code to help Laurel get it all.",
+    "long_instructions": "**Challenge:** The treasure goes all the way down these stairs!  Write the code to help Laurel get it all.",
     "authored_hints": {
       "courseB_collector_loops8_challenge_a": "If you can't figure out where to put the repeat loops, write out the code step-by-step and look for a pattern."
     }
   },
   "https://studio.code.org/s/courseb-2019/stage/8/puzzle/11": {
     "short_instructions": "_\"Help me get the treasure from this deep valley.\"_",
+    "long_instructions": "_\"Help me get the treasure from this deep valley.\"_",
     "authored_hints": {
       "courseB_collector_loops9_a": "Does this seem too hard?  Break it up into 3 little problems to make it feel easier.",
       "courseB_collector_loops9_b": "You will need 3 repeat loops, one after the other, for this solution."
@@ -400,20 +408,23 @@
   },
   "https://studio.code.org/s/courseb-2019/stage/8/puzzle/12": {
     "short_instructions": "Help Laurel get all of the treasure from this cave.",
+    "long_instructions": "Help Laurel get all of the treasure from this cave.",
     "authored_hints": {
       "courseB_collector_loops10_a": "If you can't figure out where to put the `repeat` loops, write out the code step-by-step and look for a pattern.",
       "courseB_collector_loops10_b": "Try writing the moves down on a piece of paper and looking for a pattern."
     }
   },
   "https://studio.code.org/s/courseb-2019/stage/8/puzzle/13": {
-    "short_instructions": "Eureka!  Get as much treasure as you can!"
+    "short_instructions": "Eureka!  Get as much treasure as you can!",
+    "long_instructions": "Eureka!  Get as much treasure as you can!"
   },
   "https://studio.code.org/s/courseb-2019/stage/8/extras?level_name=courseB_collector_loops_challenge1_2019": {
     "short_instructions": "This time you have limited blocks. Get all of the treasure! ",
+    "long_instructions": "This time you have limited blocks. Get all of the treasure! ",
     "authored_hints": {
-      "courseB_collector_loops_challenge1_b": "Start by looping the following commands:\n\n<xml>\n  <block type=\"maze_moveSouth\">\n    <next>\n    <block type=\"collector_collect\"></block>\n    </next>\n    </block>\n</xml>",
-      "courseB_collector_loops_challenge1_c": "Move East twice between each path.\n\n<xml>\n  <block type=\"maze_moveEast\"><next>\n  <block type=\"maze_moveEast\"></block></next></block>\n  </xml>\n\nYou can do this with only 14 blocks. Click for one more hint to see a solution. ",
-      "courseB_collector_loops_challenge1_d": "Try this!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_simplified\">\n        <title name=\"TIMES\">5</title>\n        <statement name=\"DO\">\n          <block type=\"maze_moveSouth\">\n            <next>\n              <block type=\"collector_collect\"/>\n            </next>\n          </block>\n        </statement>\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveEast\">\n                <next>\n                  <block type=\"controls_repeat_simplified\">\n                    <title name=\"TIMES\">5</title>\n                    <statement name=\"DO\">\n                      <block type=\"collector_collect\">\n                        <next>\n                          <block type=\"maze_moveNorth\"/>\n                        </next>\n                      </block>\n                    </statement>\n                    <next>\n                      <block type=\"maze_moveEast\">\n                        <next>\n                          <block type=\"maze_moveEast\">\n                            <next>\n                              <block type=\"controls_repeat_simplified\">\n                                <title name=\"TIMES\">5</title>\n                                <statement name=\"DO\">\n                                  <block type=\"maze_moveSouth\">\n                                    <next>\n                                      <block type=\"collector_collect\"/>\n                                    </next>\n                                  </block>\n                                </statement>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+      "courseB_collector_loops_challenge1_b": "Start by looping the following commands:\n\n[blockly block][0]",
+      "courseB_collector_loops_challenge1_c": "Move East twice between each path.\n\n[blockly block][0]\n\nYou can do this with only 14 blocks. Click for one more hint to see a solution. ",
+      "courseB_collector_loops_challenge1_d": "Try this!\n\n[blockly block][0]"
     }
   },
   "https://studio.code.org/s/courseb-2019/stage/8/extras?level_name=courseB_collector_loops_challenge2a_2019": {
@@ -422,14 +433,16 @@
     "authored_hints": {
       "courseB_collector_loops_challenge2a_a": "If something goes wrong, try debugging it. Don't give up!",
       "courseB_collector_loops_challenge2a_b": "Look at this option for getting through the maze. Do you see a pattern that you can repeat?",
-      "courseB_collector_loops_challenge2a_c": "To collect all of the treasure, you will either need to add two  <xml> <block type=\"collector_collect\"/></xml> blocks inside your loop, or put the block inside of its own `repeat` block."
+      "courseB_collector_loops_challenge2a_c": "To collect all of the treasure, you will either need to add two  [blockly block][0] blocks inside your loop, or put the block inside of its own `repeat` block."
     }
   },
   "https://studio.code.org/s/courseb-2019/stage/9/puzzle/2": {
-    "short_instructions": "This is a new type of puzzle called \"Artist\". Play with the level and draw something fun."
+    "short_instructions": "This is a new type of puzzle called \"Artist\". Play with the level and draw something fun.",
+    "long_instructions": "This is a new type of puzzle called \"Artist\". Play with the level and draw something fun."
   },
   "https://studio.code.org/s/courseb-2019/stage/9/puzzle/4": {
     "short_instructions": "The Artist is trying to draw a line **6** times, but can't get it right.  Can you help?",
+    "long_instructions": "The Artist is trying to draw a line **6** times, but can't get it right.  Can you help?",
     "authored_hints": {
       "courseB_artist_loops2_a": "If you want the loop to repeat more than 4 times, you can change the number at the top of the block.",
       "courseB_artist_loops2_b": "Try running the code first to see where the artist ends up."
@@ -437,8 +450,9 @@
   },
   "https://studio.code.org/s/courseb-2019/stage/9/puzzle/5": {
     "short_instructions": "Help the artist draw a line 7 times to make a garden wall.",
+    "long_instructions": "Help the artist draw a line 7 times to make a garden wall.",
     "authored_hints": {
-      "courseB_artist_loops3_a": "Remember to use a `repeat` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> loop for better code!",
+      "courseB_artist_loops3_a": "Remember to use a `repeat` [blockly block][0] loop for better code!",
       "courseB_artist_loops3_b": "The artist will want to move South to draw this line."
     },
     "callouts": {
@@ -447,6 +461,7 @@
   },
   "https://studio.code.org/s/courseb-2019/stage/9/puzzle/6": {
     "short_instructions": "Now we need to get the soil ready to plant. Find the bugs in the code and help the artist prepare the ground. ",
+    "long_instructions": "Now we need to get the soil ready to plant. Find the bugs in the code and help the artist prepare the ground.",
     "authored_hints": {
       "courseB_artist_loops4_a": "The jump block lets you move forward without drawing a line.",
       "courseB_artist_loops4_b": "You will need to add a block inside of the repeat loop to solve this puzzle.",
@@ -455,8 +470,9 @@
   },
   "https://studio.code.org/s/courseb-2019/stage/9/puzzle/7": {
     "short_instructions": "Time to fix the stairs!  Repeat this pattern **5** times so the artist can reach the top of the bushes.",
+    "long_instructions": "Time to fix the stairs!  Repeat this pattern **5** times so the artist can reach the top of the bushes.",
     "authored_hints": {
-      "courseB_artist_loops5_a": "Drag out a `repeat` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> loop, then put the other blocks inside of it. How many times do you need to repeat?"
+      "courseB_artist_loops5_a": "Drag out a `repeat` [blockly block][0] loop, then put the other blocks inside of it. How many times do you need to repeat?"
     }
   },
   "https://studio.code.org/s/courseb-2019/stage/9/puzzle/8": {
@@ -477,6 +493,7 @@
   },
   "https://studio.code.org/s/courseb-2019/stage/9/puzzle/10": {
     "short_instructions": "Time to head home. Can you fix this ladder using only one block to help the artist get down?",
+    "long_instructions": "Time to head home. Can you fix this ladder using only one block to help the artist get down?",
     "authored_hints": {
       "courseB_artist_loops8_a": "How many times should you repeat the pattern to make the ladder?",
       "courseB_artist_loops8_b": "Try running the code you're given to see what it does."
@@ -484,6 +501,7 @@
   },
   "https://studio.code.org/s/courseb-2019/stage/9/puzzle/11": {
     "short_instructions": "Let's take the short way home, over the pond. Can you help the artist stay on the stones?",
+    "long_instructions": "Let's take the short way home, over the pond. Can you help the artist stay on the stones?",
     "authored_hints": {
       "courseB_artist_loops9_a": "Remember that jump blocks can be used to move without drawing a line.",
       "courseB_artist_loops9_b": "You will want to use the W block to solve this puzzle.",
@@ -498,7 +516,7 @@
     "short_instructions": "\"It's time to toss the dice! Can you help me draw these?\"",
     "long_instructions": "_\"It's time to toss the dice! Can you help me draw these?\"_",
     "authored_hints": {
-      "courseB_artist_loops_challenge1_a": "Blocks like this: <xml>  <block type=\"simple_move_up_right\"/></xml> will let your artist move at a slant!",
+      "courseB_artist_loops_challenge1_a": "Blocks like this: [blockly block][0] will let your artist move at a slant!",
       "courseB_artist_loops_challenge1_b": "When you finish one of the dice, `jump` to the next!",
       "courseB_artist_loops_challenge1_c": "You will need to `move` or `jump` over some of the same lines twice. "
     }
@@ -533,39 +551,40 @@
   },
   "https://studio.code.org/s/courseb-2019/stage/12/puzzle/3": {
     "short_instructions": "Have Daisy the Dragon say something when you click \"Run\".",
+    "long_instructions": "Have Daisy the Dragon say something when you click \"Run\".",
     "authored_hints": {
-      "courseB_playlab_events2_a": "This is the block to have Daisy say something:\n\n<xml>\n  <block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n  </xml>"
+      "courseB_playlab_events2_a": "This is the block to have Daisy say something:\n\n[blockly block][0]"
     }
   },
   "https://studio.code.org/s/courseb-2019/stage/12/puzzle/4": {
     "short_instructions": "Use an event to make Daisy the Dragon switch to a random mood when you click on her.",
     "long_instructions": "Use an event to make Daisy the Dragon switch to a random [][0] mood when you click on her.",
     "authored_hints": {
-      "courseB_playlab_events3_a": "This is the block you should use to add the event:\n\n<xml>\n<block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">0</title>\n  </block>\n  </xml>",
-      "courseB_playlab_events3_b": "This is the block you need to switch Daisy's mood:\n\n<xml>\n<block type=\"studio_setSpriteEmotion\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">random</title>\n  </block>\n  </xml>"
+      "courseB_playlab_events3_a": "This is the block you should use to add the event:\n\n[blockly block][0]",
+      "courseB_playlab_events3_b": "This is the block you need to switch Daisy's mood:\n\n[blockly block][0]"
     }
   },
   "https://studio.code.org/s/courseb-2019/stage/12/puzzle/5": {
     "short_instructions": "Get the dragon to finish this level!",
     "long_instructions": "Knight time!  Get the dragon to finish this level.\n\nAdd an event so that the knight moves toward the dragon when the left arrow is clicked.",
     "authored_hints": {
-      "courseB_playlab_events4_a": "This is the event that controls the left arrow:\n\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">left</title>\n  </block>\n  </xml>",
-      "courseB_playlab_events4_b": "This is the block that makes the knight move left.\n\n<xml>\n<block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">8</title>\n  </block>\n  </xml>"
+      "courseB_playlab_events4_a": "This is the event that controls the left arrow:\n\n[blockly block][0]",
+      "courseB_playlab_events4_b": "This is the block that makes the knight move left.\n\n[blockly block][0]"
     }
   },
   "https://studio.code.org/s/courseb-2019/stage/12/puzzle/6": {
     "short_instructions": "Add an event so that the knight runs away from the dragon when you press the right arrow.",
     "long_instructions": "Now add an event so that the knight runs away from the dragon when you press the right arrow.  \n\nMove the knight to the right to pass this level.",
     "authored_hints": {
-      "courseB_playlab_events5_a": "This is the event block that controls the right arrow: \n\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">right</title>\n  </block>\n  </xml>",
-      "courseB_playlab_events5_b": "This is the block that makes the knight run away. \n\n<xml>\n<block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">2</title>\n  </block>\n</xml>"
+      "courseB_playlab_events5_a": "This is the event block that controls the right arrow: \n\n[blockly block][0]",
+      "courseB_playlab_events5_b": "This is the block that makes the knight run away. \n\n[blockly block][0]"
     }
   },
   "https://studio.code.org/s/courseb-2019/stage/12/puzzle/7": {
     "short_instructions": "Help your knight get all of the flags!\n\nTo do this, you'll need to add events to help the knight move up, down, left, and right.",
     "long_instructions": "Help your knight get all of the flags!\n\nTo do this, you'll need to add events to help the knight move up, down, left, and right.",
     "authored_hints": {
-      "courseB_playlab_events6_a": "You will need these event blocks:\n\n<xml>\n  <block type=\"studio_whenArrow\" id=\"callMe\">\n    <title name=\"VALUE\">up</title>\n  </block>\n  <block type=\"studio_whenArrow\" id=\"callMe\">\n    <title name=\"VALUE\">down</title>\n  </block>\n  </xml>",
+      "courseB_playlab_events6_a": "You will need these event blocks:\n\n[blockly block][0]",
       "courseB_playlab_events6_b": "Use the drop down arrows on the green `when ___ arrow pressed` event blocks to choose different directions.\n\n[][0]",
       "courseB_playlab_events6_c": "Get to all of the flags to pass!"
     },
@@ -577,21 +596,22 @@
     "short_instructions": "1.  Set the knight to vanish when he runs into the dragon.    \n2.  Play a sound when they collide to make it feel more real.  ",
     "long_instructions": "Make this game fun by adding more things!\n\n1.  Set the knight to vanish when he runs into the dragon.   \n2.  Play a sound when they collide to make it feel more real.   \n\n* * *\n\nVisit all of the goals, then run into the dragon to pass the level.",
     "authored_hints": {
-      "courseB_playlab_events7_a": "This is the event block that you will need:\n\n<xml>\n<block type=\"studio_whenSpriteCollided\">\n    <title name=\"SPRITE1\">0</title>\n    <title name=\"SPRITE2\">1</title>\n  </block>\n</xml>",
-      "courseB_playlab_events7_b": "This is the block you need to play a sound.\n\n<xml>\n<block type=\"studio_playSound\">\n    <title name=\"SOUND\">slap</title>\n  </block>\n</xml>",
-      "courseB_playlab_events7_c": "This is the block you need to make the knight vanish:\n\n<xml>\n<block type=\"studio_vanish\">\n    <title name=\"SPRITE\">1</title>\n  </block>\n</xml>"
+      "courseB_playlab_events7_a": "This is the event block that you will need:\n\n[blockly block][0]",
+      "courseB_playlab_events7_b": "This is the block you need to play a sound.\n\n[blockly block][0]",
+      "courseB_playlab_events7_c": "This is the block you need to make the knight vanish:\n\n[blockly block][0]"
     }
   },
   "https://studio.code.org/s/courseb-2019/stage/12/puzzle/9": {
-    "short_instructions": "**Free play:** Use your imagination. What can you do to make this game more fun?"
+    "short_instructions": "**Free play:** Use your imagination. What can you do to make this game more fun?",
+    "long_instructions": "**Free play:** Use your imagination. What can you do to make this game more fun?"
   },
   "https://studio.code.org/s/courseb-2019/stage/12/extras?level_name=courseB_playlab_events_challenge1_2019": {
     "short_instructions": "Make the animals move down when you press ▼. ",
     "long_instructions": "It's time for the Great Animal Race! Make the animals move down when you press `▼`. \n\nWho will run the fastest?",
     "authored_hints": {
-      "courseB_playlab_events_challenge1_a": "Make the other animals move down when you press `▼`. \n\n<xml>\n  <block type=\"studio_whenArrow\" movable=\"false\">\n    <title name=\"VALUE\">down</title>\n  </block>\n</xml>",
-      "courseB_playlab_events_challenge1_b": "Change the speed of the animals by using this block:\n\n<xml>\n  <block type=\"studio_setSpriteSpeed\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Studio.SpriteSpeed.NORMAL</title>\n  </block></xml>",
-      "courseB_playlab_events_challenge1_c": "What will the everyone say when the race is over? Make them talk with this event:\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_saySpriteChoices\">\n        <title name=\"SPRITE\">2</title>\n        <title name=\"VALUE\">Woo hoo!</title>\n      </block>\n    </next>\n  </block>\n</xml>"
+      "courseB_playlab_events_challenge1_a": "Make the other animals move down when you press `▼`. \n\n[blockly block][0]",
+      "courseB_playlab_events_challenge1_b": "Change the speed of the animals by using this block:\n\n[blockly block][0]",
+      "courseB_playlab_events_challenge1_c": "What will the everyone say when the race is over? Make them talk with this event:\n\n[blockly block][0]"
     }
   },
   "https://studio.code.org/s/courseb-2019/stage/12/extras?level_name=courseB_playlab_events_challenge2_2019": {
@@ -599,8 +619,8 @@
     "long_instructions": "Let's make the animals disappear when you click on them.\nTry playing with the dog now, then help the other animals join in the fun. You can also add sounds and score points to create a game of Animal Tag!\n\n[][0]",
     "authored_hints": {
       "courseB_playlab_events_challenge2_a": "Each animal in the game should disappear when clicked. It should also come back after a second or two!",
-      "courseB_playlab_events_challenge2_b": "Use other event blocks to make the other animals disappear!\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">1</title>\n  </block>\n  </xml>",
-      "courseB_playlab_events_challenge2_c": "Use extra commands to play sounds or score points when you click the animals!\n\n<xml>\n  <block type=\"studio_playSound\">\n    <title name=\"SOUND\">slap</title>\n  </block>\n  <block type=\"studio_changeScore\"/></xml>",
+      "courseB_playlab_events_challenge2_b": "Use other event blocks to make the other animals disappear!\n\n[blockly block][0]",
+      "courseB_playlab_events_challenge2_c": "Use extra commands to play sounds or score points when you click the animals!\n\n[blockly block][0]",
       "courseB_playlab_events_challenge2_d": "Mix it up!\n\nMake some animals give more points than others.\nUse different sounds.\nChange the animals' moods!"
     }
   }

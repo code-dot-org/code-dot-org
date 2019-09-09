@@ -30,7 +30,8 @@ export default class CountryAutocompleteDropdown extends Component {
     showRequiredIndicator: PropTypes.bool,
     value: PropTypes.string,
     fieldName: PropTypes.string,
-    singleLineLayout: PropTypes.bool
+    singleLineLayout: PropTypes.bool,
+    maxHeight: PropTypes.number
   };
 
   static defaultProps = {
@@ -46,7 +47,8 @@ export default class CountryAutocompleteDropdown extends Component {
       showRequiredIndicator,
       showErrorMsg,
       value,
-      singleLineLayout
+      singleLineLayout,
+      maxHeight
     } = this.props;
 
     const questionStyle = {
@@ -68,7 +70,6 @@ export default class CountryAutocompleteDropdown extends Component {
             {showError && !singleLineLayout && errorDiv}
           </div>
           <VirtualizedSelect
-            id="country"
             name={this.props.fieldName}
             options={COUNTRIES}
             value={value}
@@ -76,6 +77,7 @@ export default class CountryAutocompleteDropdown extends Component {
             placeholder={i18n.searchForCountry()}
             labelKey="value"
             matchPos="start"
+            maxHeight={maxHeight}
           />
         </div>
         {showError && singleLineLayout && errorDiv}

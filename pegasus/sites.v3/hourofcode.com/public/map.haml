@@ -6,7 +6,11 @@ layout: wide_index
 %script{type: "text/javascript", src: "https://maps.googleapis.com/maps/api/js?client=#{CDO.google_maps_client_id}&sensor=false&libraries=places,geometry&v=3.37"}
 %script{type: "text/javascript", src: "/js/jquery.geocomplete.min.js"}
 
-= view :header
+  = view :header
 %h2.center-text= view :hoc_events_counter
-= view :hoc_events_map, max_height_percentage: 1
+- use_mapbox = DCDO.get("use_mapbox", false) || params[:use_mapbox]
+- if use_mapbox
+  = view :hoc_events_map_replacement
+- else
+  = view :hoc_events_map, max_height_percentage: 1
 .footnote=hoc_s(:map_warning).gsub(/%{events_url}/, resolve_url('/events'))

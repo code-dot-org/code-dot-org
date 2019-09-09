@@ -14,11 +14,11 @@ class Pd::WorkshopEnrollmentControllerTest < ::ActionController::TestCase
   end
 
   setup do
-    @workshop = create :pd_workshop, organizer: @organizer, num_sessions: 1
+    @workshop = create :workshop, organizer: @organizer, num_sessions: 1
     @workshop.facilitators << @facilitator
     @existing_enrollment = create :pd_enrollment, workshop: @workshop
 
-    @organizer_workshop = create :pd_workshop, organizer: @workshop_organizer, num_sessions: 1
+    @organizer_workshop = create :workshop, organizer: @workshop_organizer, num_sessions: 1
     @organizer_workshop.facilitators << @facilitator
     @organizer_workshop_existing_enrollment = create :pd_enrollment, workshop: @organizer_workshop
   end
@@ -31,21 +31,21 @@ class Pd::WorkshopEnrollmentControllerTest < ::ActionController::TestCase
   end
 
   test 'non-logged-in users cannot enroll in csf workshop' do
-    workshop = create :pd_workshop, course: Pd::Workshop::COURSE_CSF
+    workshop = create :workshop, course: Pd::Workshop::COURSE_CSF
     get :new, params: {workshop_id: workshop.id}
     assert_response :success
     assert_template :logged_out
   end
 
   test 'non-logged-in users cannot enroll in csd workshop' do
-    workshop = create :pd_workshop, course: Pd::Workshop::COURSE_CSD
+    workshop = create :workshop, course: Pd::Workshop::COURSE_CSD
     get :new, params: {workshop_id: workshop.id}
     assert_response :success
     assert_template :logged_out
   end
 
   test 'non-logged-in users cannot enroll in csp workshop' do
-    workshop = create :pd_workshop, course: Pd::Workshop::COURSE_CSP
+    workshop = create :workshop, course: Pd::Workshop::COURSE_CSP
     get :new, params: {workshop_id: workshop.id}
     assert_response :success
     assert_template :logged_out
@@ -53,7 +53,7 @@ class Pd::WorkshopEnrollmentControllerTest < ::ActionController::TestCase
 
   test 'logged-in users can enroll in csf workshop' do
     sign_in @teacher
-    workshop = create :pd_workshop, course: Pd::Workshop::COURSE_CSF
+    workshop = create :workshop, course: Pd::Workshop::COURSE_CSF
     get :new, params: {workshop_id: workshop.id}
     assert_response :success
     assert_template :new
@@ -61,7 +61,7 @@ class Pd::WorkshopEnrollmentControllerTest < ::ActionController::TestCase
 
   test 'logged-in users can enroll in csd workshop' do
     sign_in @teacher
-    workshop = create :pd_workshop, course: Pd::Workshop::COURSE_CSD
+    workshop = create :workshop, course: Pd::Workshop::COURSE_CSD
     get :new, params: {workshop_id: workshop.id}
     assert_response :success
     assert_template :new
@@ -69,7 +69,7 @@ class Pd::WorkshopEnrollmentControllerTest < ::ActionController::TestCase
 
   test 'logged-in users can enroll in csp workshop' do
     sign_in @teacher
-    workshop = create :pd_workshop, course: Pd::Workshop::COURSE_CSP
+    workshop = create :workshop, course: Pd::Workshop::COURSE_CSP
     get :new, params: {workshop_id: workshop.id}
     assert_response :success
     assert_template :new
@@ -252,7 +252,7 @@ class Pd::WorkshopEnrollmentControllerTest < ::ActionController::TestCase
 
   test 'demographic questions added (for teachers, without application, for local summer workshop)' do
     sign_in @teacher
-    workshop = create :pd_workshop, :local_summer_workshop
+    workshop = create :summer_workshop
 
     get :new, params: {workshop_id: workshop.id}
     assert_template :new
@@ -261,7 +261,7 @@ class Pd::WorkshopEnrollmentControllerTest < ::ActionController::TestCase
 
   test 'demographic questions not added (for teachers, with application, for local summer workshop)' do
     sign_in @teacher
-    workshop = create :pd_workshop
+    workshop = create :workshop
     create Pd::Application::ActiveApplicationModels::TEACHER_APPLICATION_FACTORY, user: @teacher
 
     get :new, params: {workshop_id: workshop.id}
@@ -271,7 +271,7 @@ class Pd::WorkshopEnrollmentControllerTest < ::ActionController::TestCase
 
   test 'demographic questions not added (for teachers, without application, for non-local summer workshop)' do
     sign_in @teacher
-    workshop = create :pd_workshop
+    workshop = create :workshop
 
     get :new, params: {workshop_id: workshop.id}
     assert_template :new

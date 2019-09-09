@@ -1189,23 +1189,23 @@ ja-JP:
   course2_shortdescription_congrats: 基本的な読書スキルを持つ生徒のため、このコースはコース 1になります。生徒はプログラムを作って問題を解決したり、インタラクティブなゲームや物語を開発して共有します。小学2年～5年生が対象です。
   course3_shortdescription_congrats: 次のレベルの準備はできましたか？生徒は、前のコースで紹介されたプログラミング トピックを深く掘り下げ、より複雑な問題に解決策を見つけます。このコースの最後には、生徒はインタラクティブなストーリーとゲームを作成して、皆と共有します。小学4～5年生向けです。
   course4_shortdescription_congrats: 次に行く準備はできましたか？生徒は、前のコースで紹介されたプログラミング トピックを深く掘り下げ、より複雑な問題に解決策を見つけます。このコースの最後には、生徒はインタラクティブなストーリーとゲームを作成して、皆と共有します。小学4～5年生向けです。
-  coursea_shortdescription_congrats: 読み書き前の子ども向けのコンピューターサイエンスの紹介
-  courseb_shortdescription_congrats: 読み書き前向けのコンピューターサイエンスの紹介 (コースAとほぼ同じですが年長さん向けの若干の追加があります)
+  coursea_shortdescription_congrats: 低学年向けコンピューター サイエンス入門
+  courseb_shortdescription_congrats: 低学年向けコンピューター サイエンス入門 (コースAとほぼ同じですが、若干高度な内容を加えています)
   coursed_shortdescription_congrats: コースCのおさらいをした後に、アルゴリズム・ループ・条件などへ進みましょう。
   coursee_shortdescription_congrats: コースCとDのおさらいをしたあとに、関数へとすすみましょう。
   coursef_shortdescription_congrats: コンピューターサイエンスの基本のすべてを学び、自分だけのアート・物語・ゲームを創りましょう。
-  coursea-2017_shortdescription_congrats: 読み書き前の子ども向けのコンピューターサイエンスの紹介
-  courseb-2017_shortdescription_congrats: 読み書き前向けのコンピューターサイエンスの紹介 (コースAとほぼ同じですが年長さん向けの若干の追加があります)
+  coursea-2017_shortdescription_congrats: 低学年向けコンピューター サイエンス入門
+  courseb-2017_shortdescription_congrats: 低学年向けコンピューター サイエンス入門 (コースAとほぼ同じですが、若干高度な内容を加えています)
   coursed-2017_shortdescription_congrats: コースCのおさらいをした後に、アルゴリズム・ループ・条件などへ進みましょう。
   coursee-2017_shortdescription_congrats: コースCとDのおさらいをしたあとに、関数へとすすみましょう。
   coursef-2017_shortdescription_congrats: コンピューターサイエンスの基本のすべてを学び、自分だけのアート・物語・ゲームを創りましょう。
-  coursea-2018_shortdescription_congrats: 読み書き前の子ども向けのコンピューターサイエンスの紹介
-  courseb-2018_shortdescription_congrats: 読み書き前向けのコンピューターサイエンスの紹介 (コースAとほぼ同じですが年長さん向けの若干の追加があります)
+  coursea-2018_shortdescription_congrats: 低学年向けコンピューター サイエンス入門
+  courseb-2018_shortdescription_congrats: 低学年向けコンピューター サイエンス入門 (コースAとほぼ同じですが、若干高度な内容を加えています)
   coursed-2018_shortdescription_congrats: コースCのおさらいをした後に、アルゴリズム・ループ・条件などへ進みましょう。
   coursee-2018_shortdescription_congrats: コースCとDのおさらいをしたあとに、関数へとすすみましょう。
   coursef-2018_shortdescription_congrats: コンピューターサイエンスの基本のすべてを学び、自分だけのアート・物語・ゲームを創りましょう。
-  coursea-2019_shortdescription_congrats: 読み書き前の子ども向けのコンピューターサイエンスの紹介
-  courseb-2019_shortdescription_congrats: 読み書き前向けのコンピューターサイエンスの紹介 (コースAとほぼ同じですが年長さん向けの若干の追加があります)
+  coursea-2019_shortdescription_congrats: 低学年向けコンピューター サイエンス入門
+  courseb-2019_shortdescription_congrats: 低学年向けコンピューター サイエンス入門 (コースAとほぼ同じですが、若干高度な内容を加えています)
   coursed-2019_shortdescription_congrats: コースCのおさらいをした後に、アルゴリズム・ループ・条件などへ進みましょう。
   coursee-2019_shortdescription_congrats: コースCとDのおさらいをしたあとに、関数へとすすみましょう。
   coursef-2019_shortdescription_congrats: コンピューターサイエンスの基本のすべてを学び、自分だけのアート・物語・ゲームを創りましょう。
@@ -1471,6 +1471,8 @@ ja-JP:
   compatibility_hide_this_warning: 警告を消す
   compatibility_unsupported_browser: お使いのブラウザーはサポートされていません。お使いのブラウザーを<a href='%{supported_browsers_url}',
     target='_blank'> サポートされているブラウザーのいずれか</a> にアップグレードしてください。ページを表示してみてもよいですが、うまく動かないかもしれません。
+  compatibility_unsupported_browser_markdown: お使いのブラウザーはサポートされていません。お使いのブラウザーを<a href='%{supported_browsers_url}',
+    target='_blank'> サポートされているブラウザーのいずれか</a> にアップグレードしてください。ページを表示してみてもよいですが、うまく動かないかもしれません。
   flappy_shortcode: パタパタ
   header_home: ホーム
   header_my_dashboard: マイ ダッシュボード
@@ -1514,7 +1516,7 @@ ja-JP:
   user_header_settings: アカウント
   user_header_logout: サインアウト
   user_header_signin: サインイン
-  user_header_create: '作成 '
+  user_header_create: 'つくる '
   user_header_applab: 'アプリ ラボ '
   user_header_artist: 'アーティスト '
   user_header_gamelab: ゲーム ラボ
@@ -1570,7 +1572,7 @@ ja-JP:
   hoc_overview_view_teacher_guide: 教師用ガイドを表示
   hoc2018_creativity_create: つくる
   hoc2018_creativity_hoc_coming: もうすぐHour of Codeです...
-  hoc2018_creativity_what_will_you_create: 何を作りますか。
+  hoc2018_creativity_what_will_you_create: 何を作りますか？
   hoc2018_creativity_courses: Code.orgコースに進む
   hoc2018_creativity_courses_link: <a href="https://studio.code.org/courses">Code.orgコース</a>に進む
   hoc2018_mc_page_title: MinecraftのHour of Codeチュートリアル
@@ -1610,7 +1612,7 @@ ja-JP:
   hoc2018_mc_video_title_anybody_can_learn: 誰もが学ぶことができます
   hoc2018_mc_video_title_my_name_is_aracely: 私はAracelyといいます
   hoc2018_mc_homepage_hoc_coming: Hour of Code(1時間プログラミング)は間もなく利用可能です。
-  hoc2018_mc_homepage_what_create: 何を作りますか。
+  hoc2018_mc_homepage_what_create: 何を作りますか？
   hoc2018_mc_homepage_join_us: 参加しませんか
   hoc2018_mc_homepage_try_it: 挑戦してみる
   hoc2018_mc_back_journey: Hour of Code（1時間プログラミング）に向けて、マインクラフトの最新アクティビティが出来上がりました。プログラミングを使ってマインクラフトの旅へ

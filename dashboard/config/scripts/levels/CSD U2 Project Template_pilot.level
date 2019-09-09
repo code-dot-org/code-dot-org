@@ -6,12 +6,21 @@
   "user_id": 324,
   "properties": {
     "instructions_important": "false",
-    "start_sources": "{\r\n  \"files\": [\r\n    {\r\n      \"name\": \"index.html\",\r\n      \"data\": \"<!DOCTYPE html> \\n<html>\\n  <head>\\n  </head>\\n  <body>\\n\\n\\n </body>\\n</html>\"\r\n    }\r\n  ]\r\n}",
+    "start_sources": "{\r\n  \"files\": [\r\n    {\r\n      \"name\": \"index.html\",\r\n      \"data\": \"<!DOCTYPE html>\\r\\n<html>\\r\\n  <head>\\r\\n    <link rel=\\\"stylesheet\\\" href=\\\"style.css\\\">\\r\\n  <\\/head>\\r\\n  <body>\\r\\n\\r\\n  <\\/body>\\r\\n<\\/html>\"\r\n    },\r\n    {\r\n      \"name\": \"style.css\",\r\n      \"data\": \"\\r\\n\"\r\n    }\r\n  ]\r\n}",
     "hide_share_and_remix": "false",
     "parent_level_id": 15867,
-    "name_suffix": "_pilot"
+    "name_suffix": "_pilot",
+    "encrypted": "false",
+    "encrypted_examples": [
+
+    ],
+    "mini_rubric": "false",
+    "submittable": "false"
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2019-08-08 18:31:18 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
 </Weblab>

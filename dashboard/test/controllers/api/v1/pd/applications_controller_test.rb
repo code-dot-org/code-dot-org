@@ -332,7 +332,9 @@ module Api::V1::Pd
     end
 
     test 'update appends to the timestamp log if fit workshop is changed' do
-      fit_workshop = create :pd_workshop, :fit, num_sessions: 3, sessions_from: Date.new(2019, 6, 1), processed_location: {city: 'Orchard Park', state: 'NY'}.to_json
+      fit_workshop = create :fit_workshop,
+        sessions_from: Date.new(2019, 6, 1),
+        processed_location: {city: 'Orchard Park', state: 'NY'}.to_json
 
       sign_in @program_manager
       @csp_facilitator_application.update(status_timestamp_change_log: '[]')
@@ -354,7 +356,9 @@ module Api::V1::Pd
     end
 
     test 'update appends to the timestamp log if summer workshop is changed' do
-      summer_workshop = create :pd_workshop, :local_summer_workshop, num_sessions: 5, sessions_from: Date.new(2019, 6, 1), processed_location: {city: 'Orchard Park', state: 'NY'}.to_json
+      summer_workshop = create :summer_workshop,
+        sessions_from: Date.new(2019, 6, 1),
+        processed_location: {city: 'Orchard Park', state: 'NY'}.to_json
 
       sign_in @program_manager
       @csp_facilitator_application.update(status_timestamp_change_log: '[]')
@@ -376,8 +380,12 @@ module Api::V1::Pd
     end
 
     test 'update does not append to the timestamp log if fit and summer workshop are not changed' do
-      summer_workshop = create :pd_workshop, :local_summer_workshop, num_sessions: 5, sessions_from: Date.new(2019, 6, 1), processed_location: {city: 'Orchard Park', state: 'NY'}.to_json
-      fit_workshop = create :pd_workshop, :fit, num_sessions: 3, sessions_from: Date.new(2019, 6, 1), processed_location: {city: 'Orchard Park', state: 'NY'}.to_json
+      summer_workshop = create :summer_workshop,
+        sessions_from: Date.new(2019, 6, 1),
+        processed_location: {city: 'Orchard Park', state: 'NY'}.to_json
+      fit_workshop = create :fit_workshop,
+        sessions_from: Date.new(2019, 6, 1),
+        processed_location: {city: 'Orchard Park', state: 'NY'}.to_json
 
       sign_in @program_manager
       @csp_facilitator_application.update(status_timestamp_change_log: '[]')
@@ -648,7 +656,9 @@ module Api::V1::Pd
       time = Date.new(2017, 3, 15)
 
       Timecop.freeze(time) do
-        workshop = create :pd_workshop, :local_summer_workshop, num_sessions: 3, sessions_from: Date.new(2017, 1, 1), processed_location: {city: 'Orchard Park', state: 'NY'}.to_json
+        workshop = create :summer_workshop,
+          sessions_from: Date.new(2017, 1, 1),
+          processed_location: {city: 'Orchard Park', state: 'NY'}.to_json
         create :pd_enrollment, workshop: workshop, user: @serializing_teacher
 
         application = create(
@@ -675,7 +685,7 @@ module Api::V1::Pd
             district_name: 'A School District',
             school_name: 'A Seattle Public School',
             email: 'minerva@hogwarts.edu',
-            assigned_workshop: 'January 1-3, 2017, Orchard Park NY',
+            assigned_workshop: 'January 1-5, 2017, Orchard Park NY',
             registered_workshop: 'Yes',
             status: 'accepted_not_notified',
             notes: nil,
@@ -780,7 +790,9 @@ module Api::V1::Pd
       time = Date.new(2017, 3, 15)
 
       Timecop.freeze(time) do
-        workshop = create :pd_workshop, :local_summer_workshop, num_sessions: 3, sessions_from: Date.new(2017, 1, 1), processed_location: {city: 'Orchard Park', state: 'NY'}.to_json
+        workshop = create :summer_workshop,
+          sessions_from: Date.new(2017, 1, 1),
+          processed_location: {city: 'Orchard Park', state: 'NY'}.to_json
         create :pd_enrollment, workshop: workshop, user: @serializing_teacher
 
         application = create(
@@ -809,7 +821,7 @@ module Api::V1::Pd
             district_name: 'A School District',
             school_name: 'A Seattle Public School',
             email: 'minerva@hogwarts.edu',
-            assigned_workshop: 'January 1-3, 2017, Orchard Park NY',
+            assigned_workshop: 'January 1-5, 2017, Orchard Park NY',
             registered_workshop: 'Yes',
             status: 'accepted_not_notified',
             notes: nil,
@@ -1120,7 +1132,7 @@ module Api::V1::Pd
     end
 
     test 'fit_cohort' do
-      fit_workshop = create :pd_workshop, :fit
+      fit_workshop = create :fit_workshop
 
       # create some applications to be included in fit_cohort
       create FACILITATOR_APPLICATION_FACTORY, :locked, fit_workshop_id: fit_workshop.id, status: :accepted

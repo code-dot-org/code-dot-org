@@ -9,7 +9,7 @@ ca-ES:
     9 i 10. Si us plau, actualitzeu a un navegador modern.
   upgrade_ie_message_csedweek: CSEdWeek.org aviat eliminar el suport per a Internet
     Explorer 8, 9 i 10. Si us plau, actualitzeu a un navegador modern.
-  upgrade_ie_link: Aprèn més
+  upgrade_ie_link: Més informació
   en: Informàtica
   computer_science_edweek: Setmana de l'Educació en Informàtica
   csedweek_dates: 8-14 de desembre de 2014
@@ -26,8 +26,8 @@ ca-ES:
   learn_now: Aprèn ara
   petition_message: Cada alumne en cada escola ha de tenir l'oportunitat d'aprendre
     informàtica
-  petition_sign_message: 'Si estàs d''acord, signa amb el teu nom.  Uneix-te als altres
-    #.'
+  petition_sign_message: 'Si hi esteu d''acord, signeu amb el vostre nom. Uniu-vos
+    als altres #.'
   petition_sign_message_support: 'Signa si ens dónes suport. Uneix-te a # altres.'
   petition_join_others: 'Uneix-te a # altres'
   name: Nom
@@ -50,13 +50,13 @@ ca-ES:
   hoc2014_teachers: Mestres
   hoc2014_host: Acolliu-ho
   hoc2014_everyone: Tothom
-  hoc2014_support: Doneu-li suport &#x25BE;
+  hoc2014_support: Doneu-hi suport &#x25BE;
   hoc2014_whatishoc: Què és l'Hora del Codi?
   csedweek_map_header: "# CSEdWeek / Hour of Code events around the world"
   csedweek_map_signup: Registra el teu esdeveniment
   csedweek_map_search_placeholder: Cerca events de l'Hora del Codi
   csedweek_map_search_search: Cerca
-  csedweek_map_search_reset: Reiniciar
+  csedweek_map_search_reset: Reinicia
   csedweek_map_legend_title: Llegenda
   csedweek_map_legend_event: Event de l'Hora del Codi
   csedweek_map_legend_cs_tech_jam: Esdeveniment especial
@@ -175,22 +175,22 @@ ca-ES:
   share_on_facebook: Comparteix a Facebook
   share_on_twitter: Comparteix a Twitter
   beyond_an_hour: Més enllà d'una Hora del Codi
-  get_started: Inici
-  i_agree: Accepto
-  participant_select: Selecciona
-  participant_student: estudiant
-  participant_parent: Pares
-  participant_educator: Educador
-  participant_engineer: Enginyer de software
-  participant_other: Cap dels anteriors
+  get_started: Comença
+  i_agree: D'acord
+  participant_select: "- Trieu -"
+  participant_student: alumne
+  participant_parent: pare/mare
+  participant_educator: educador
+  participant_engineer: enginyer de programari
+  participant_other: cap dels anteriors
   print_all: Imprimimiu-ho tot
   print_ice_art: Imprimiu el vostre art de gel
   create_art_with_zombie: o féu art avançat amb un zombi
-  i_am_a: Jo sóc un
+  i_am_a: Sóc un
   never_spam: Nosaltres mai t'enviarem spam
-  enter_country: Introdueix el país si estàs fora dels Estats Units
+  enter_country: Introduïu el país si us trobeu fora dels Estats Units
   used_infrequent_updates: Només s'utilitza per a actualitzacions poc freqüents
-  privacy_practices_children: Mireu les nostres polítiques de privacitat per la mainada
+  privacy_practices_children: Consulteu la nostra política de privadesa per la mainada
   petition_thankyou: Gràcies per signar la petició
   continue_learning_header: Segueix aprenent més enllà d'una hora
   continue_learning_body: Hi ha un munt d'opcions.  Vostè pot aprendre en línia, o
@@ -225,17 +225,17 @@ ca-ES:
   studiobar_elementary_title: Cursos elementals
   studiobar_elementary_body: Els nostres tres cursos nous per cicle&#8209;superior
     de primària
-  studiobar_dance_title: Festa amb ball
-  studiobar_dance_body: Crear i compartir la teva pròpia festa amb ball
+  studiobar_dance_title: Festa de ball
+  studiobar_dance_body: Crea i comparteix la teva pròpia festa de ball
   studiobar_hoc_title: L'Hora de Codi
   studiobar_hoc_body: Aprèn a programar amb Angry Birds
   studiobar_flappy_title: Codi Flappy
   studiobar_flappy_body: Fes i comparteix el teu propi joc Flappy
   studiobar_teacher_title: Fet per a professors
   studiobar_teacher_body: Introdueix el Code Studio a la teva classe
-  studiobar_frozen_title: Hora del codi
+  studiobar_frozen_title: L'hora del codi
   studiobar_frozen_body: Creeu un món fantàstic d'hivern amb l'Anna i l'Elsa
-  studiobar_donate_title: Fes una donació
+  studiobar_donate_title: Feu una donació
   studiobar_donate_body: Un infant aprèn per cada dòlar que dongui
   studiobar_shop_title: Botiga
   studiobar_shop_body: Trencar els estereotips. Portar el nostre logotip amb orgull.
@@ -298,23 +298,23 @@ ca-ES:
     de la història. '
   homepage_banner_text_main: Code.org i el College Board formen una aliança per millorar
     la diversitat en informàtica.
-  homepage_banner_text_link: Aprèn més
-  homepage_banner_privacy_link: Aprèn més
-  homepage_banner_20k_teachers_link: Aprèn més
-  homepage_banner_40k_teachers_link: Aprèn més
-  homepage_slot_text_title_hoc: Hora del codi
+  homepage_banner_text_link: Més informació
+  homepage_banner_privacy_link: Més informació
+  homepage_banner_20k_teachers_link: Més informació
+  homepage_banner_40k_teachers_link: Més informació
+  homepage_slot_text_title_hoc: L'hora del codi
   homepage_slot_text_blurb_hoc: Tothom pot aprendre. Comença avui
   homepage_slot_text_link_hoc: Proveu l'Hora de programació
   homepage_slot_text_link_host: Amfitrió d'una hora de codi
   homepage_slot_text_link_hocserved: "# servit"
   homepage_solot_text_link_volunteer: Voluntari per a l'Hora del Codi
   homepage_slot_text_title_students: Alumnes
-  homepage_slot_text_blurb_students: Explora tots els nostres tutorials
+  homepage_slot_text_blurb_students: Explora tots els tutorials
   homepage_slot_text_link_codestudio: Prova el Code Studio
   homepage_slot_text_link_local: Troba una classe a prop teu
   homepage_slot_text_link_othercourses: Altres cursos online
   homepage_slot_text_title_educators: Educadors
-  homepage_slot_text_blurb_educators: Ensenya als teus estudiants
+  homepage_slot_text_blurb_educators: Formeu als vostres estudiants
   homepage_slot_text_link_middle: ESO
   homepage_slot_text_link_high: Batxillerat
   homepage_slot_text_link_k5: Cursos per als graus K-5
@@ -325,10 +325,11 @@ ca-ES:
   homepage_slot_text_link_stats: Veure les estadístiques
   homepage_slot_text_link_buy: Involucra't
   homepage_slot_text_link_donate: Fes una donació
-  homepage_header_donors: Code.org dóna gràcies als seus seguidors
-  homepage_donors_seall: Mostra-ho tot
-  homepage_donors_donate: Fes una donació
-  homepage_below_hero_announcement_link_text: Aprèn més
+  homepage_gallery_header: Més de %{project_count} milions de projectes creats a Code.org
+  homepage_header_donors: Code.org dóna gràcies als seus patrocinadors
+  homepage_donors_seall: Mostra'ls tots
+  homepage_donors_donate: Feu una donació
+  homepage_below_hero_announcement_link_text: Més informació
   contact_form_topic_student: Sóc estudiant
   contact_form_topic_parent: Sóc pare o mare
   contact_form_topic_teacher: Sóc professor/educador
@@ -369,6 +370,10 @@ ca-ES:
   class_submission_level_college: Universitat
   class_submission_level_vocational: Formació professional
   class_submission_languages_other: Altres idiomes
+  videos_more: Més <a href='%{inspiring_videos_playlist}'>vídeos motivadors</a> protagonitzats
+    per persones de referència i famosos
+  careers_page_more: Més <a href='%{careers_url}' target='_blank'>vídeos motivadors</a>
+    protagonitzats per professionals de l'àmbit de la tecnologia
   playlab_classic_title: Clàssic
   starwars_javascript_title: JavaScript
   starwars_javascript_specs: Només en anglès | Navegadors moderns | Edats 11 +
@@ -381,14 +386,41 @@ ca-ES:
     aventura a través d'aquest món de Minecraft
   mc_gradelevel: Edat 4-104
   mc_platformtext: Navegadors moderns, mòbils i tablets
+  minecraft_agent: El viatge de l'heroi de Minecraft
+  minecraft_designer: Dissenyador de Minecraft
+  minecraft_adventurer: Aventurer Minecraft
+  minecraft_tutorials: Tutorials de l'Hora del codi de Minecraft
+  minecraft_specs: Moltes llengües | Navegadors moderns i tablets | Més de 6 anys
   minecraft_agent_description: Minecraft torna amb l'Hora del Codi amb una activitat
     nova de trinca! Viatja a través de Minecraft amb el codi.
-  minecraft_agent_button: Inici
-  minecraft_designer_button: Inici
-  minecraft_adventurer_button: Inici
+  minecraft_agent_button: Comença
+  minecraft_designer_description: Programa animals i altres criatures de Minecraft
+    en la teva pròpia versió de Minecraft.
+  minecraft_designer_button: Comença
+  minecraft_adventurer_description: Utilitza el codi per du l'Alex o l'Steve a una
+    aventura.
+  minecraft_adventurer_button: Comença
+  minecraft_no_internet: No teniu Internet?
+  minecraft_download_adventurer: Baixeu la versió sense connexió de l'Aventurer Minecraft.
   minecraft_subtitle: Hora del Codi de Minecraft
+  sports_og_title: Llença-t'hi. Tothom pot aprendre.
   sports_watch_video: Mira el vídeo
+  sports_video_title: Llença-t'hi. Tothom pot aprendre.
+  watch_inspirational_videos: Abans de començar, mira un dels nostres vídeos motivadors
+  video_title_cs_is_everything: La informàtica ho està canviant tot
   video_title_inspire_girl: Inspira a una noia
+  video_title_cs_intro: Introducció a la informàtica
+  video_title_schools_dont_teach: El que moltes escoles no ensenyen
+  video_title_obama: La informàtica segons el president Obama
+  video_title_hoc_is_here: L'Hora del codi és aquí. Tothom pot aprendre
+  video_title_anybody_can_learn: Tothom pot aprendre
+  video_title_steph_curry: L'hora del codi amb Steph Curry
+  video_title_my_name_is_aracely: Em dic Aracely
+  video_1min: 1 min
+  video_2min: 2 min
+  video_3min: 3 min
+  video_5min: 5 min
+  no_internet: No teniu Internet?
   are_you_teacher: Sou mestre?
   volunteer_engineer_submission_title: Inspira alumnes i voluntaris per a l'Hora del
     Codi.
@@ -426,7 +458,7 @@ ca-ES:
     universitari actual (o investigador)
   volunteer_engineer_submission_experience_software_professional: Software professional
   petition_age: Edat
-  dashboard_announce_learn_more_button: Aprèn més
+  dashboard_announce_learn_more_button: Més informació
   dashboard_landing_title: Pàgina d'inici de mestre
   dashboard_landing_welcome: Benvinguts al nou i millorat escriptori del mestre.
   dashboard_landing_video: Mira aquest vídeo
@@ -549,7 +581,7 @@ ca-ES:
   dashboard_sections_print_secrets: Pots imprimir un full de targetes on hi ha la
     informació del compte per repartir als teus alumnes individualment.
   dashboard_sections_switch_section: 'Canvia de secció:'
-  dashboard_sections_close: Tancar
+  dashboard_sections_close: Tanca
   dashboard_students_add_multiple: 'Escriu o enganxa els noms dels teus alumnes, un
     per línia:'
   dashboard_students_new_section: Heu creat un grup nou! Ara afegiu els vostres alumnes
@@ -630,7 +662,7 @@ ca-ES:
     En només una setmana:'
   stats_hoc_2013_image_alt: Estadístiques de 2013 d'Hora de Codi
   dashboard_teacher: Mestre
-  dashboard_student: estudiant
+  dashboard_student: alumne
   dashboard_sections_email_question: Tots els alumnes tenen una adreça electrònica
     vàlida?
   dashboard_sections_account_creation_question: Qui crea els comptes dels estudiants?
@@ -682,6 +714,8 @@ ca-ES:
     target="_blank"> navegador Web modern.</a>
   mobile_devices: Tutorials per a dispositius mòbils
   frozen_name: Codi amb Anna i Elsa
+  codeorg_name: Laberint clàssic
+  codeintl_name: Laberint clàssic
   khan_name: Una introducció a JavaScript
   khanes_name: Una introducció a JavaScript
   khanpt_name: Una introducció a JavaScript
@@ -708,6 +742,7 @@ ca-ES:
   appinventor_name: AppInventor Hora del Codi
   blockly_name: Blockly
   projguts_name: Pedra, Paper, tisora
+  hourofcode_name: Laberint clàssic
   playlab_name: Play Lab
   infinity_name: Infinity Play Lab
   artist_name: Artista
@@ -715,10 +750,24 @@ ca-ES:
   course2_name: Curs 2
   course3_name: Curs 3
   course4_name: Curs 4
-  accelerated_name: Curs Accelerat
-  20-hour_name: Curs Accelerat
+  coursea-draft_name: Curs A
+  coursea_name: Curs A
+  courseb-draft_name: Curs B
+  courseb_name: Curs B
+  coursec-draft_name: Curs C
+  coursec_name: Curs C
+  coursed-draft_name: Curs D
+  coursed_name: Curs D
+  coursee-draft_name: Curs E
+  coursee_name: Curs E
+  coursef-draft_name: Curs F
+  coursef_name: Curs F
+  accelerated_name: Curs accelerat
+  20-hour_name: Curs accelerat
+  classicmaze_name: Laberint clàssic
   minecraft_name: Minecraft
   applab_name: Laboratori d'aplicacions
+  gamelab_name: Laboratori de jocs
   codeorg_gradelevel: Edat 4-104
   codeintl_gradelevel: Edat 4-104
   khan_gradelevel: ESO +
@@ -763,9 +812,9 @@ ca-ES:
   artist_gradelevel: Edat 8 +
   monstercoding_gradelevel: Edats 5-13
   boxisland_gradelevel: Primària
-  course1_gradelevel: Edat 4 + (pre-lectors)
+  course1_gradelevel: De 4 a 6 anys
   course2_gradelevel: Edat +6 (es requereix lectura)
-  course3_gradelevel: Edats 8 + (continuació del Curs 2)
+  course3_gradelevel: De 8 a 18 anys
   course4_gradelevel: Edat 10 + (després del curs 3)
   coursed_gradelevel: Qualificacions 8+
   coursee_gradelevel: Edats 8-12
@@ -871,14 +920,58 @@ ca-ES:
   kodableunplugged_shortdescription: Un divertit exercici sense connexió
   projguts_shortdescription: Prova modelatge i simulació utilitzant pedra-paper-estisores
   hourofcode_shortdescription: Aprèn a programar amb Mark Zuckerberg i Angry Birds!
-  frozen_shortdescription: Anem a utilitzar el codi per unir l'Anna i l'Elsa mentre
-    exploren la màgia i la bellesa del gel.
+  frozen_shortdescription: Fes servir codi per unir-te a l'Anna i l'Elsa mentre exploren
+    la màgia i la bellesa del gel.
   starwars_shortdescription: Aprèn a programar droides i a crear el teu propi joc
     d'Star Wars en una galàxia molt, molt llunyana.
   playlab_shortdescription: Crea una història o fes una partida amb Play Lab!
   infinity_shortdescription: Utilitza Play Lab per crear una història o un joc protagonitzada
     pels personatges de Disney infinity.
   artist_shortdescription: Dibuixar imatges estupendes i dissenys amb l'artista!
+  coursea_shortdescription_congrats: Una introducció a la informàtica per prelectors.
+  courseb_shortdescription_congrats: Una introducció a la informàtica per a prelectors.
+    (Similar al curs A però més variat per alumnes més grans.)
+  coursec_shortdescription_congrats: Apreneu els conceptes bàsics de la informàtica
+    i creeu el vostre propi art, històries i jocs.
+  coursed_shortdescription_congrats: Cobriu amb rapidesa conceptes del curs C i seguiu
+    endavant amb algoritmes, bucles imbricats, condicionals i més.
+  coursee_shortdescription_congrats: Cobriu ràpidament els conceptes del curs C i
+    D i seguiu amb les funcions.
+  coursef_shortdescription_congrats: Apreneu tots els conceptes dels Fonaments de
+    la informàtica i creeu el vostre propi art, històries i jocs.
+  coursea-2017_shortdescription_congrats: Una introducció a la informàtica per prelectors.
+  courseb-2017_shortdescription_congrats: Una introducció a la informàtica per a prelectors.
+    (Similar al curs A però més variat per alumnes més grans.)
+  coursec-2017_shortdescription_congrats: Apreneu els conceptes bàsics de la informàtica
+    i creeu el vostre propi art, històries i jocs.
+  coursed-2017_shortdescription_congrats: Cobriu amb rapidesa conceptes del curs C
+    i seguiu endavant amb algoritmes, bucles imbricats, condicionals i més.
+  coursee-2017_shortdescription_congrats: Cobriu ràpidament els conceptes del curs
+    C i D i seguiu amb les funcions.
+  coursef-2017_shortdescription_congrats: Apreneu tots els conceptes dels Fonaments
+    de la informàtica i creeu el vostre propi art, històries i jocs.
+  coursea-2018_shortdescription_congrats: Una introducció a la informàtica per prelectors.
+  courseb-2018_shortdescription_congrats: Una introducció a la informàtica per a prelectors.
+    (Similar al curs A però més variat per alumnes més grans.)
+  coursec-2018_shortdescription_congrats: Apreneu els conceptes bàsics de la informàtica
+    i creeu el vostre propi art, històries i jocs.
+  coursed-2018_shortdescription_congrats: Cobriu amb rapidesa conceptes del curs C
+    i seguiu endavant amb algoritmes, bucles imbricats, condicionals i més.
+  coursee-2018_shortdescription_congrats: Cobriu ràpidament els conceptes del curs
+    C i D i seguiu amb les funcions.
+  coursef-2018_shortdescription_congrats: Apreneu tots els conceptes dels Fonaments
+    de la informàtica i creeu el vostre propi art, històries i jocs.
+  coursea-2019_shortdescription_congrats: Una introducció a la informàtica per prelectors.
+  courseb-2019_shortdescription_congrats: Una introducció a la informàtica per a prelectors.
+    (Similar al curs A però més variat per alumnes més grans.)
+  coursec-2019_shortdescription_congrats: Apreneu els conceptes bàsics de la informàtica
+    i creeu el vostre propi art, històries i jocs.
+  coursed-2019_shortdescription_congrats: Cobriu amb rapidesa conceptes del curs C
+    i seguiu endavant amb algoritmes, bucles imbricats, condicionals i més.
+  coursee-2019_shortdescription_congrats: Cobriu ràpidament els conceptes del curs
+    C i D i seguiu amb les funcions.
+  coursef-2019_shortdescription_congrats: Apreneu tots els conceptes dels Fonaments
+    de la informàtica i creeu el vostre propi art, històries i jocs.
   codeorg_longdescription: Aprèn els conceptes bàsics de la Informàtica mitjançant
     la programació arrossega i deixa anar. Aquest és un tutorial amb vídeo conferencies
     protagonitzades per Bill Gates, Mark Zuckerberg, Angry Birds i Plants vs. Zombies.
@@ -916,9 +1009,9 @@ ca-ES:
     Fes el teu joc amb física realista. Mira el codi com blocs visuals o JavaScript.
     Porta els teus jocs mòbils a iPads i tauletes Android. Més d'una dotzena d'activitats
     divertides per triar!
-  scratch_longdescription: Amb Scratch, pots crear els teus  propis jocs interactius,
+  scratch_longdescription: Amb Scratch pots crear els teus propis jocs interactius,
     històries, animacions &mdash; i compartir-los amb els teus amics. Comença per
-    animar el teu nom, creant una targeta de festa o fent el joc Pong.
+    animar el teu nom creant una targeta de festa o fent el joc Pong.
   lightbot_longdescription: Guia el Lightbot per il·luminar totes les teules blaves!
     Lightbot és un joc de trencaclosques que utilitza mecàniques de programació per
     fer que els jugadors aprenguin de forma pràctica la programació. Aprèn a seqüenciar
@@ -1178,9 +1271,9 @@ ca-ES:
     Els nens poden transformar idees en històries animades i art matemàtic immediatament.
     Promou l'aprenentatge progressiu. A mesura que els nens aprenen els fonaments,
     Tynker introdueix conceptes més avançats incloent-hi la sintaxi de la programació.
-  scratch_beyond_longdescription: Amb Scratch, pots crear els teus  propis jocs interactius,
+  scratch_beyond_longdescription: Amb Scratch pots crear els teus propis jocs interactius,
     històries, animacions &mdash; i compartir-los amb els teus amics. Comença per
-    animar el teu nom, creant una targeta de festa o fent el joc Pong.
+    animar el teu nom creant una targeta de festa o fent el joc Pong.
   lightbot_beyond_longdescription: Aprèn lògica bàsica de programació, a partir de
     la programació super-bàsica, per a les edats a partir de 4, el iOS o Android (o
     navegador Web). Aprèn  la seqüència de comandaments, identificar els patrons,
@@ -1338,8 +1431,9 @@ ca-ES:
     les seves habilitats en matemàtiques i ciències.
   flappy_shortcode: aleteig
   header_courses: cursos
+  header_course_catalog: Catàleg de cursos
   header_project_gallery: Projectes
-  header_educate_hoc: Hora del codi
+  header_educate_hoc: L'hora del codi
   header_about_us: Sobre nosaltres
   header_about_leadership: Lideratge
   header_about_donors: Donants
@@ -1359,11 +1453,17 @@ ca-ES:
   user_header_settings: El meu compte
   user_header_logout: Tanca la sessió
   user_header_signin: Inicia la sessió
+  user_header_create: 'Crea '
+  user_header_applab: 'Laboratori d''aplicacions '
+  user_header_artist: 'Artista '
+  user_header_gamelab: Laboratori de jocs
   user_header_playlab: Play Lab
-  user_header_dance: Festa amb ball
+  user_header_dance: Festa de ball
+  user_header_spritelab: Laboratori de personatges
   user_header_minecraft: Minecraft
   user_header_flappy: Flappy
-  applab_tile_start_tutorial: Inici
+  user_header_view_all: Mostra tots els projectes...
+  applab_tile_start_tutorial: Comença
   applab_tile_teacher_guide: Veure la guia docent
   aquatic_name: 'Minecraft: Viatge aquàtic'
   account_sign_up_email_opt_in: Podem enviar-te un e-mail sobre actualitzacions en
@@ -1371,22 +1471,70 @@ ca-ES:
     un cop al mes)
   account_sign_up_child_accept_terms: Confirmo que tinc l'autorització dels meus pares
     o tutors legals per utilitzar los serveis de Code.org.
-  hoc_overview_dance_title: Festa amb ball
+  hoc_overview_dance_title: Festa de ball
   hoc_overview_partner_activities_title: Més activitats dels socis
   hoc_overview_partner_activities_body: El lloc web d'Hora del Codi té més de 100
     activitats de ciències de la computació per a totes les edats i nivells d'experiència,
     desenvolupats per Code.org i socis.
   hoc_overview_partner_activities_link: Veure activitats
-  hoc_overview_start_tutorial: Inici
+  hoc_overview_start_tutorial: Comença
   hoc_overview_view_teacher_guide: Veure la guia docent
   hoc2018_creativity_create: Crea
   hoc2018_creativity_what_will_you_create: Què crearàs?
+  hoc2018_mc_page_title: Tutorials de l'Hora del codi de Minecraft
+  hoc2018_mc_details: Moltes llengües | Navegadors moderns i tablets | Més de 6 anys
+  hoc2018_mc_aquatic_title: Viatge Aquàtic de Minecraft
   hoc2018_mc_aquatic_description: Minecraft torna amb l'Hora del Codi amb una activitat
     nova de trinca! Viatja a través de Minecraft amb el codi.
+  hoc2018_mc_hero_title: El viatge de l'heroi de Minecraft
   hoc2018_mc_hero_description: Minecraft torna amb l'Hora del Codi amb una activitat
     nova de trinca! Viatja a través de Minecraft amb el codi.
-  hoc2018_mc_start: Inici
+  hoc2018_mc_designer_title: Dissenyador de Minecraft
+  hoc2018_mc_designer_description: Programa animals i altres criatures de Minecraft
+    en la teva pròpia versió de Minecraft.
+  hoc2018_mc_adventurer_title: Aventurer Minecraft
+  hoc2018_mc_adventurer_description: Utilitza el codi per du l'Alex o l'Steve a una
+    aventura.
+  hoc2018_mc_start: Comença
+  hoc2018_mc_no_internet: No teniu Internet?
+  hoc2018_mc_download_adventurer: Baixeu la versió sense connexió de l'Aventurer Minecraft.
+  hoc2018_mc_educators: Per a docents
+  hoc2018_mc_educators_box1_title: Programeu amb Minecraft
+  hoc2018_mc_educators_box1_desc: L'edició d'educació de Minecraft proporciona un
+    currículum, exercicis i programació a Minecraft segons els estàndards educatius.
+  hoc2018_mc_educators_box1_button: Comença
+  hoc2018_mc_educators_box2_title: Baixeu la guia didàctica
+  hoc2018_mc_educators_box2_desc: Aquest joc d'eines us ajudarà a organitzar una Hora
+    del codi i a motivar els alumnes a aprendre informàtica.
+  hoc2018_mc_educators_box2_button: Baixa
+  hoc2018_mc_educators_box3_title: Assisteix a un taller gratuït per a alumnes
+  hoc2018_mc_educators_box3_desc: Visita una botiga Microsoft a la teva zona per assistir
+    a un taller gratuït de l'Hora del codi. Per participants de tots els nivells,
+    a partir de 6 anys.
+  hoc2018_mc_educators_box3_button: Troba un taller
+  hoc2018_mc_educators_box4_title: Accedeix a més recursos d'informàtica
+  hoc2018_mc_educators_box4_desc: Millora la comunitat amb les habilitats digitals
+    i els recursos educatius d'informàtica de Microsoft.
+  hoc2018_mc_educators_box4_button: Explora els recursos
+  hoc2018_mc_watch_videos: Abans de començar, mira un dels nostres vídeos motivadors
+  hoc2018_mc_videos_more: Més <a href='%{inspiring_videos_playlist}'>vídeos motivadors</a>
+    protagonitzats per persones de referència i famosos
+  hoc2018_mc_careers_more: Més <a href='%{careers_url}' target='_blank'>vídeos motivadors</a>
+    protagonitzats per professionals de l'àmbit de la tecnologia
+  hoc2018_mc_video_1min: 1 min
+  hoc2018_mc_video_2min: 2 min
+  hoc2018_mc_video_3min: 3 min
+  hoc2018_mc_video_5min: 5 min
+  hoc2018_mc_video_title_steph_curry: L'hora del codi amb Steph Curry
+  hoc2018_mc_video_title_sports: Llença-t'hi. Tothom pot aprendre.
+  hoc2018_mc_video_title_cs_is_everything: La informàtica ho està canviant tot
   hoc2018_mc_video_title_inspire_girl: Inspira a una noia
+  hoc2018_mc_video_title_cs_intro: Introducció a la informàtica
+  hoc2018_mc_video_title_schools_dont_teach: El que moltes escoles no ensenyen
+  hoc2018_mc_video_title_obama: La informàtica segons el president Obama
+  hoc2018_mc_video_title_hoc_is_here: L'Hora del codi és aquí. Tothom pot aprendre
+  hoc2018_mc_video_title_anybody_can_learn: Tothom pot aprendre
+  hoc2018_mc_video_title_my_name_is_aracely: Em dic Aracely
   hoc2018_mc_homepage_hoc_coming: S'acosta l'Hora del Codi...
   hoc2018_mc_homepage_what_create: Què crearàs?
   hoc2018_mc_homepage_join_us: Uneix-te
@@ -1394,12 +1542,15 @@ ca-ES:
   hoc2018_mc_back_journey: Minecraft torna amb l'Hora del Codi amb una activitat nova
     de trinca! Viatja a través de Minecraft amb el codi.
   hoc2018_mc_teacher_guide: Veure la guia docent
-  hoc2018_dance_party_main_heading: Festa amb ball
-  hoc2018_dance_create_your_own_dance_title: Crear la teva pròpia festa amb ball
-  hoc2018_dance_party_box_title: Festa amb ball
-  hoc2018_dance_party_box_description: Crea un codi de la festa amb ball i comparteix-la
+  hoc2018_mc_short_description_shorter: Utilitza la creativitat i les habilitats de
+    resolució de problemes per explorar i crear mons submarins amb codi.
+  hoc2018_mc_journey: Un viatge a través del Minecraft amb codi.
+  hoc2018_dance_party_main_heading: Festa de ball
+  hoc2018_dance_create_your_own_dance_title: Crea la teva pròpia festa de ball
+  hoc2018_dance_party_box_title: Festa de ball
+  hoc2018_dance_party_box_description: Crea un codi de la festa de ball i comparteix-la
     amb els teus amics!
-  hoc2018_dance_party_button: Inici
+  hoc2018_dance_party_button: Comença
   hoc2018_dance_keep_on_dancing_box_title: Seguir ballant
   hoc2018_dance_keep_on_dancing_description: Anar més enllà de la primera hora amb
     idees desenvolupades del projecte.
@@ -1408,10 +1559,12 @@ ca-ES:
   hoc2018_dance_teacher_resources_tile1_description: Els plans de lliçons, certificats
     i filtratge de música.
   hoc2018_dance_teacher_resources_tile1_button: Unitat didàctica
-  hoc2018_dance_teacher_resources_tile2_title: Festa amb ball desconnectat
-  hoc2018_dance_teacher_resources_tile2_description: No cal cap ordinador!  Aprendre
-    conceptes de codificació per coreografiar junts una festa amb ball.
+  hoc2018_dance_teacher_resources_tile2_title: Festa de ball sense connexió
+  hoc2018_dance_teacher_resources_tile2_description: No cal cap ordinador! Aprèn conceptes
+    de programació per coreografiar junts una festa de ball.
   hoc2018_dance_teacher_resources_tile2_button: Activitat sense connexió
-  hoc2018_dance_amazon_about_future_engineer_button: Aprèn més
+  hoc2018_dance_amazon_sponsor_section_with_logo_title: En associació amb
+  hoc2018_dance_amazon_about_future_engineer_button: Més informació
   hoc2018_dance_measure: Mesure
   hoc2018_dance_measure_colon: 'Mesure:'
+  hoc2018_mc_with_microsoft: En associació amb

@@ -50,10 +50,10 @@
   = @regional_partner.link_to_partner_application
 %p
   %strong Contact Email:
-  = @regional_partner.contact.try(:email)
+  = @regional_partner.contact_email
 %p
   %strong Contact Name:
-  = @regional_partner.contact.try(:name)
+  = @regional_partner.contact_name
 %p
   %strong Ship Attention:
   = @regional_partner.attention

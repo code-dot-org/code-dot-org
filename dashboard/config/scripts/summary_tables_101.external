@@ -11,7 +11,7 @@ A summary, or pivot, table typically represents an aggregation data (groupings o
 
 ## An Example
 
-The following example is pulled from the Wikipedia article about pivot tables. <a href="https://en.wikipedia.org/wiki/Pivot_table" target=_blank>Read the full article here <i class="fa fa-external-link-square"/></a>
+The following example is pulled from the Wikipedia article about pivot tables. <a href="https://en.wikipedia.org/wiki/Pivot_table" target=_blank>Read the full article here <i class="fa fa-external-link-square"></i></a>
 
 
 <div style="margin-left:15px"> <h2><i class="fa fa-quote-left" aria-hidden="true"></i></h2></div> <div style="float:right; margin-left:25px">For typical data entry and storage, data usually appear in flat tables, meaning that they consist of only columns and rows, as in the following example showing data on shirt types:
@@ -30,7 +30,7 @@ A pivot table usually consists of row, column and data (or fact) fields. In this
 
 ## Try one of your own
 
-To try out pivot tables yourself, follow along with <a href = "http://trendct.org/2015/09/04/tutorial-how-to-make-pivot-tables-in-google-sheets/" target=_blank> this <i class="fa fa-external-link-square"/></a> tutorial.
+To try out pivot tables yourself, follow along with <a href = "http://trendct.org/2015/09/04/tutorial-how-to-make-pivot-tables-in-google-sheets/" target=_blank> this <i class="fa fa-external-link-square"></i></a> tutorial.
 
 
 MARKDOWN

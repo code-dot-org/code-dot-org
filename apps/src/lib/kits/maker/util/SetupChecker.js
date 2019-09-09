@@ -58,6 +58,13 @@ export default class SetupChecker {
   /**
    * @return {Promise}
    */
+  detectBoardType() {
+    return this.boardController.detectBoardType();
+  }
+
+  /**
+   * @return {Promise}
+   */
   detectComponentsInitialize() {
     return this.boardController.initializeComponents();
   }

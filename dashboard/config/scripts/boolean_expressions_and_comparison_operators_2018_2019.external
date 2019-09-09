@@ -7,10 +7,11 @@ markdown <<MARKDOWN
 ## Word Soup: Conditionals, Booleans, expressions, statements
 <div style="width: 33%; float: right; border: solid 1px #00adbc; padding: 10px; margin: 10px;">
 <Strong>Historical Notes on Booleans</Strong><br>
-<li> Named after mathematician George Boole 
-<li> He invented a corner of mathematics that is now named after him called "Boolean Algebra" 
-<li> Boolean Algebra is math that operates using only true/false values. 
-<li> This is important work for computer science because true/false maps very easily to binary.
+<ul>
+<li> Named after mathematician George Boole </li>
+<li> He invented a corner of mathematics that is now named after him called "Boolean Algebra" </li>
+<li> Boolean Algebra is math that operates using only true/false values. </li>
+<li> This is important work for computer science because true/false maps very easily to binary.</li></ul>
 </div>
 As you saw in the video there are a bunch of terms that generally are all talking about the same thing.
 
@@ -26,7 +27,9 @@ As you saw in the video there are a bunch of terms that generally are all talkin
 
 
 ## Comparison Operators
+
 <img src="https://images.code.org/79f2ae7d27a3fa434138aeeb17146cab-image-1479413755076.png" style="float: left; margin-left: 20px; margin-right: 20px">
+
 A common type of condition to check is a comparison of two values.  Here are 6 common **comparison operators**. Each compares a value on the left with a value on the right and returns a Boolean value -- **true** or **false**.  Most of these do what you would expect. 
 
 
@@ -84,6 +87,7 @@ Compares two values to see if the number on the left is <em>greater than</em> th
 <hr>
 
 <img src="https://images.code.org/3c7c9336270e093bad437d69d155a8c7-image-1479242773012.png" style="float: left; margin-left: 50px; margin-right: 50px; margin-bottom: 20px">
+
 Compares two values to see if the number on the left is <em>less than</em> the number on the right.
 
 * `4 < 3` returns *false*
@@ -106,6 +110,7 @@ Compares two values to see if the number on the left is *less than or equal to* 
 
 <hr>
 <img src="https://images.code.org/2ca857bff29bca22a2a42433c6b3981f-image-1479242807960.png" style="float: left; margin-left: 50px; margin-right: 50px; margin-bottom: 20px">
+
 Compares two values to see if the number on the left is *greater than or equal to* the number on the right.
 
 * `3 >= 4` returns *false*

@@ -35,6 +35,13 @@ Scenario: Applab embedded level
   And I see no difference for "embedded level"
   Then I close my eyes
 
+Scenario: Applab widget mode
+  When I open my eyes to test "Applab widget mode"
+  And I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/22"
+  And I wait until element "#start_over_button" is visible
+  And I see no difference for "widget mode level"
+  Then I close my eyes
+
 Scenario: Applab Instructions in Top Pane
   When I open my eyes to test "Applab Instructions in top pane"
   And I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/9"

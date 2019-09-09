@@ -13,13 +13,11 @@ class FindRelatedWorkshopTests < ActiveSupport::TestCase
 
     default_props = {
       course: Pd::Workshop::COURSE_CSD,
-      subject: Pd::Workshop::SUBJECT_CSD_UNITS_2_3,
-      num_sessions: 1,
+      subject: Pd::Workshop::SUBJECT_CSD_WORKSHOP_1,
       sessions_from: Date.new(2018, 7, 1),
-      started_at: Date.today
     }
 
-    @first_workshop = create :pd_workshop, default_props.merge(
+    @first_workshop = create :workshop, :in_progress, default_props.merge(
       {
         facilitators: [@facilitator],
         regional_partner: @regional_partner,
@@ -27,32 +25,32 @@ class FindRelatedWorkshopTests < ActiveSupport::TestCase
       }
     )
 
-    @same_regional_partner = create :pd_workshop, default_props.merge(
+    @same_regional_partner = create :workshop, :in_progress, default_props.merge(
       {
         regional_partner: @regional_partner
       }
     )
 
-    @same_organizer = create :pd_workshop, default_props.merge(
+    @same_organizer = create :workshop, :in_progress, default_props.merge(
       {
         organizer: @organizer
       }
     )
 
-    @same_facilitator = create :pd_workshop, default_props.merge(
+    @same_facilitator = create :workshop, :in_progress, default_props.merge(
       {
         facilitators: [@facilitator]
       }
     )
 
     # These two should never be included. Creating them to make sure of it
-    create :pd_workshop, default_props.merge(
+    create :workshop, :in_progress, default_props.merge(
       {
         sessions_from: Date.new(2018, 5, 31)
       }
     )
 
-    create :pd_workshop, default_props.merge(
+    create :workshop, :in_progress, default_props.merge(
       {
         course: Pd::Workshop::COURSE_CSP
       }

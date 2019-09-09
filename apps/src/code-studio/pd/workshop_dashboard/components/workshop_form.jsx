@@ -36,7 +36,6 @@ import {
   Organizer,
   Facilitator,
   ProgramManager,
-  Partner,
   CsfFacilitator
 } from '../permission';
 import {
@@ -84,9 +83,9 @@ export class WorkshopForm extends React.Component {
       enrolled_teacher_count: PropTypes.number.isRequired,
       regional_partner_name: PropTypes.string,
       regional_partner_id: PropTypes.number,
-      potential_organizers: PropTypes.array,
       organizer: PropTypes.shape({
-        id: PropTypes.number
+        id: PropTypes.number,
+        name: PropTypes.string
       })
     }),
     onSaved: PropTypes.func,
@@ -484,8 +483,7 @@ export class WorkshopForm extends React.Component {
       (!this.props.permission.hasAny(
         WorkshopAdmin,
         Organizer,
-        ProgramManager,
-        Partner
+        ProgramManager
       ) &&
         // Enabled for CSF facilitators when they are creating a new workshop
         !(this.props.permission.has(CsfFacilitator) && !this.props.workshop));
@@ -541,13 +539,21 @@ export class WorkshopForm extends React.Component {
 
   renderSubjectSelect(validation) {
     if (this.shouldRenderSubject()) {
-      const options = Subjects[this.state.course].map((subject, i) => {
-        return (
-          <option key={i} value={subject}>
-            {subject}
-          </option>
-        );
-      });
+      const options = Subjects[this.state.course]
+        .filter(subject => {
+          // Only a WorkshopAdmin should be shown a Virtual workshop.
+          return (
+            subject.indexOf('Virtual') === -1 ||
+            this.props.permission.has(WorkshopAdmin)
+          );
+        })
+        .map((subject, i) => {
+          return (
+            <option key={i} value={subject}>
+              {subject}
+            </option>
+          );
+        });
       const placeHolder = this.state.subject ? null : <option />;
       return (
         <FormGroup validationState={validation.style.subject}>
@@ -974,8 +980,9 @@ export class WorkshopForm extends React.Component {
           )}
           {this.props.permission.has(WorkshopAdmin) && this.props.workshop && (
             <OrganizerFormPart
-              potential_organizers={this.props.workshop.potential_organizers}
-              organizer_id={this.state.organizer.id}
+              workshopId={this.props.workshop.id}
+              organizerId={this.state.organizer.id}
+              organizerName={this.state.organizer.name}
               onChange={this.handleOrganizerChange}
               readOnly={this.props.readOnly}
             />

@@ -186,8 +186,8 @@
     "short_instructions": "Drag blocks onto the screen to have the artist draw over the grey lines in the picture. (Each line is 100 pixels long)",
     "long_instructions": "_\"Let's make a cage for my pet monster!\"_\n\nDrag blocks onto the screen to have the artist draw over the grey lines in the picture.\\\n(Each line is 100 pixels long)",
     "authored_hints": {
-      "courseC_artist_prog2_a": "*\"If you use the <xml><block type=\"draw_move_by_constant\"><title name=\"DIR\">moveForward</title><title name=\"VALUE\">100</title></block></xml> block, I will draw a line.\"*",
-      "courseC_artist_prog2_b": "Having trouble turning the corner? Use the <xml><block type=\"draw_turn_by_constant_dropdown\"><title name=\"DIR\">turnRight</title><title name=\"VALUE\" config=\"45,60,90,120,180\">90</title></block></xml> block."
+      "courseC_artist_prog2_a": "_\"If you use the [blockly block][0] block, I will draw a line.\"_",
+      "courseC_artist_prog2_b": "Having trouble turning the corner? Use the [blockly block][0] block."
     }
   },
   "https://studio.code.org/s/coursee-2017/stage/5/puzzle/4": {
@@ -822,7 +822,7 @@
     "long_instructions": "Functions let you define new blocks! \n\nWe've moved the blocks needed for drawing a square into a function called `draw a square`. This time, use the `draw a square` function to create the glasses. \n\n* * *\n\nThe squares are 75 pixels apart.",
     "authored_hints": {
       "courseD_artist_functions2_b": "The function you write should not contain your whole program, just the part that draws a square with 100 pixel sides.",
-      "courseD_artist_functions2_c": "Use the green `draw a square` block to \"call\" your function under the `when run` block. Otherwise, the code in your function will not run.\n\n<xml><block type=\"procedures_callnoreturn\" limit=\"2\"><mutation name=\"draw a square\"/></block></xml>",
+      "courseD_artist_functions2_c": "Use the green `draw a square` block to \"call\" your function under the `when run` block. Otherwise, the code in your function will not run.\n\n[blockly block][0]",
       "courseD_artist_functions2_a": "Your program should:\n\n-   Use function\n-   Move forward 100 + 75 pixels\n-   Use function"
     },
     "callouts": {
@@ -994,9 +994,9 @@
   },
   "https://studio.code.org/s/coursee-2017/stage/16/extras?level_name=courseE_artist_functions_challenge2": {
     "short_instructions": "Try this code to see how it works, then make the program your own!",
-    "long_instructions": "Not only can you jump to some pre-set locations, like the corners of the canvas, you can also use a `jump to` command to get to absolutely any spot you like! Try this code to see how it works, then make the program your own!\n\n<xml>\n  <block type=\"jump_to_xy\">\n    <title name=\"XPOS\">???</title>\n    <title name=\"YPOS\">???</title>\n    </block></xml>",
+    "long_instructions": "Not only can you jump to some pre-set locations, like the corners of the canvas, you can also use a `jump to` command to get to absolutely any spot you like! Try this code to see how it works, then make the program your own!\n\n[blockly block][0]",
     "authored_hints": {
-      "courseE_artist_functions_challenge1_a": "<xml>\n  <block type=\"jump_to_xy\">\n    <title name=\"XPOS\">350</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n  </xml>\n\nThis `jump to` block lets you move the zombie artist to any pixel on the grid, whenever you want. It works by moving him a number of pixels over to the right and a number of pixels down. This is always counted from the top left corner, which it means it doesn't matter where the zombie artist is _before_ the command is run!\n\n[][0]"
+      "courseE_artist_functions_challenge1_a": "[blockly block][0]\n\nThis `jump to` block lets you move the zombie artist to any pixel on the grid, whenever you want. It works by moving him a number of pixels over to the right and a number of pixels down. This is always counted from the top left corner, which it means it doesn't matter where the zombie artist is _before_ the command is run!\n\n[][1]"
     },
     "callouts": {
       "courseE_artist_functions_challenge2_callout1": "Keep this program going by adding more code to the bottom.",
@@ -1023,7 +1023,7 @@
     "long_instructions": "Functions are blocks of code that perform a task.  \n\nUse the `get 2 nectar` function to collect the nectar from each flower.",
     "authored_hints": {
       "courseE_bee_functions2_a": "The function has been written for you, but you will need to call it at each flower.",
-      "courseE_bee_functions2_b": "This <xml><block type=\"procedures_callnoreturn\"><mutation name=\"get 2 nectar\"/></block></xml> block calls the function given to you.",
+      "courseE_bee_functions2_b": "This [blockly block][0] block calls the function given to you.",
       "courseE_bee_functions2_c": "You will want to move forward and get 2 nectar twice to solve this puzzle."
     },
     "function_names": {
@@ -1488,7 +1488,7 @@
     "long_instructions": "Create five pinwheel designs using the code below.",
     "authored_hints": {
       "courseE_artist_concept_challenge2_a": "Once you define a function, you can call it over and over again - whenever and wherever you want!",
-      "courseE_artist_concept_challenge2_b": "You can jump to different positions on the canvas using this command:\n\n<xml>  <block type=\"jump_to\">\n    <title name=\"VALUE\">???</title>\n  </block></xml>"
+      "courseE_artist_concept_challenge2_b": "You can jump to different positions on the canvas using this command:\n\n[blockly block][0]"
     },
     "function_names": {
       "draw pinwheel": "draw pinwheel"

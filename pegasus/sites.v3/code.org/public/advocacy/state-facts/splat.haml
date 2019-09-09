@@ -267,7 +267,7 @@ theme: pdf
 
   .chart-text-group
     .improve-edu
-      %h2.improve-edu-h2.together 
+      %h2.improve-edu-h2.together
         What can you do to support K-12 CS education in
         = succeed "?" do
           = state_info[:state_name_s]
@@ -278,14 +278,14 @@ theme: pdf
 
   %div
     %ol
-      %li 
-        Nominate a teacher for a professional learning scholarship: 
+      %li
+        Nominate a teacher for a professional learning scholarship:
         %a{href: "www.code.org/nominate"} www.code.org/nominate
-      %li 
+      %li
         Send a letter:
         %ul
           %li
-            To your school/district asking them to expand computer science offerings at every grade level: 
+            To your school/district asking them to expand computer science offerings at every grade level:
             %a{href: "www.code.org/promote/letter"} www.code.org/promote/letter
           %li
             To your elected officials asking them to support computer science education policy in
@@ -293,7 +293,7 @@ theme: pdf
               = state_info[:state_name_s]
             - if state_info[:action_text_s] == "NA"
               %a{href: "www.votervoice.net/Code/campaigns/58463/respond"} www.votervoice.net/Code/campaigns/58463/respond
-            - else 
+            - else
               = state_info[:action_text_s]
       %li
         Find out if your school teaches computer science or submit information about your school's offerings at
@@ -308,6 +308,37 @@ theme: pdf
         %a{href: state_info[:website_url_s]}= state_info[:website_url_s]
         to learn more about supporting computer science in your state.
 
+
+  %h2.together
+    Who can you connect with locally to talk about K-12 CS education policy?
+  %ul
+    %li
+      You can reach Code.org’s policy contact for your state,
+      = succeed "," do
+        = state_info[:code_name_s]
+      at
+      = succeed "." do
+        = state_info[:code_email_s]
+    - if state_info[:ecep_name_s] != "NA"
+      %li
+        The Expanding Computing Education Pathways (ECEP) Alliance
+        = precede "(" do
+          = succeed ")," do
+            %a{href: "https://www.ecepalliance.org"} www.ecepalliance.org
+        an NSF funded Broadening Participation in Computing Alliance, seeks to increase the number and diversity of students in computing and computing-intensive degrees by promoting state-level computer science education reform. ECEP supports 22 states and the territory of Puerto Rico to develop effective and replicable interventions to broaden participation in computing and to create state-level infrastructure to foster equitable computing education policies. You can reach your ECEP point of contact
+        = succeed "." do
+          = state_info[:ecep_name_s]
+          at
+          = state_info[:ecep_email_s]
+          - if state_info[:ecep_name_2_s] != "NA"
+            or
+            = state_info[:ecep_name_2_s]
+            at
+            = state_info[:ecep_email_2_s]
+          - if state_info[:ecep_url_s] != "NA"
+            and see your state ECEP project at
+            %a{href: state_info[:ecep_url_s]}= state_info[:ecep_url_s]
+
   %div.clear-both
     %h2.no-margin-bottom.together
       Code.org's impact in
@@ -317,7 +348,7 @@ theme: pdf
         In
         = succeed ',' do
           = state_info[:state_name_s]
-        Code.org’s curriculum is used in 
+        Code.org’s curriculum is used in
         %ul
           %li
             = succeed "%" do

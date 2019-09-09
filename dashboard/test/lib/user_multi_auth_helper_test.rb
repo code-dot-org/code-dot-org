@@ -62,11 +62,11 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
     assert user.migrated?
   end
 
-  test 'logs to honeybager if user save fails' do
-    Honeybadger.expects(:notify).once
-    user = create :user, :demigrated
-    user.stubs(:save).returns(false)
-    user.migrate_to_multi_auth
+  test 'raises error if attempting to create a second account with the same oauth' do
+    create :user, provider: 'google_oauth2', uid: 'fake-oauth-id'
+    assert_raises ActiveRecord::RecordInvalid do
+      create :user, provider: 'google_oauth2', uid: 'fake-oauth-id'
+    end
   end
 
   #

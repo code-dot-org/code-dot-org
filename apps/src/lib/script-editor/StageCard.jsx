@@ -36,7 +36,7 @@ const styles = {
   }
 };
 
-class StageCard extends Component {
+export class UnconnectedStageCard extends Component {
   static propTypes = {
     reorderLevel: PropTypes.func.isRequired,
     addLevel: PropTypes.func.isRequired,
@@ -124,10 +124,10 @@ class StageCard extends Component {
     this.props.addLevel(this.props.stage.position);
   };
 
-  handleLockableChanged = () => {
+  toggleLockable = () => {
     this.props.setStageLockable(
       this.props.stage.position,
-      this.refs.lockable.checked
+      !this.props.stage.lockable
     );
   };
 
@@ -139,23 +139,25 @@ class StageCard extends Component {
     return (
       <div style={styles.stageCard}>
         <div style={styles.stageCardHeader}>
-          Stage {this.props.stage.position}: {this.props.stage.name}
+          {!this.props.stage.lockable && (
+            <span>Stage {this.props.stage.relativePosition}:&nbsp;</span>
+          )}
+          {this.props.stage.name}
           <OrderControls
             type={ControlTypes.Stage}
             position={this.props.stage.position}
             total={this.props.stagesCount}
           />
-          <div style={styles.stageLockable}>
+          <label style={styles.stageLockable}>
             Require teachers to unlock this stage before students in their
             section can access it
             <input
-              ref="lockable"
-              defaultChecked={this.props.stage.lockable}
-              onChange={this.handleLockableChanged}
+              checked={this.props.stage.lockable}
+              onChange={this.toggleLockable}
               type="checkbox"
               style={styles.checkbox}
             />
-          </div>
+          </label>
         </div>
         {this.props.stage.levels.map(level => (
           <LevelToken
@@ -203,4 +205,4 @@ export default connect(
       dispatch(setStageLockable(stage, lockable));
     }
   })
-)(StageCard);
+)(UnconnectedStageCard);

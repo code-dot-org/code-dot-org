@@ -77,6 +77,7 @@ function showHomepage() {
           <StudentHomepage
             courses={homepageData.courses}
             topCourse={homepageData.topCourse}
+            hasFeedback={homepageData.hasFeedback}
             sections={homepageData.sections}
             canViewAdvancedTools={homepageData.canViewAdvancedTools}
             studentId={homepageData.studentId}
@@ -96,9 +97,9 @@ function showHomepage() {
 function getTeacherAnnouncement(override) {
   // Start with default teacher announcement.
   let announcement = {
-    heading: i18n.announcementHeadingBackToSchool2018(),
-    buttonText: i18n.announcementButtonBackToSchool2018(),
-    description: i18n.announcementDescriptionBackToSchool2018(),
+    heading: i18n.announcementHeadingBackToSchool(),
+    buttonText: i18n.announcementButtonBackToSchool(),
+    description: i18n.announcementDescriptionBackToSchool(),
     link:
       'https://support.code.org/hc/en-us/articles/360013399932-Back-to-School-FAQ',
     image: '',

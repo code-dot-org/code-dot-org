@@ -1,4 +1,5 @@
 import {ApplabInterfaceMode} from '../../applab/constants';
+import {DataView} from '../constants';
 import DataOverview from './DataOverview';
 import DataProperties from './DataProperties';
 import DataTable from './DataTable';
@@ -10,6 +11,7 @@ import {connect} from 'react-redux';
 import {clearWarning} from '../redux/data';
 import msg from '@cdo/locale';
 import color from '../../util/color';
+import experiments from '../../util/experiments';
 
 const styles = {
   container: {
@@ -18,13 +20,19 @@ const styles = {
     bottom: 0,
     left: 0,
     right: 0,
-    padding: 10,
+    padding: experiments.isEnabled(experiments.APPLAB_DATASETS) ? 0 : 10,
     backgroundColor: color.white,
     boxSizing: 'border-box',
     borderLeft: '1px solid gray',
     borderRight: '1px solid gray',
     borderBottom: '1px solid gray',
     overflowY: 'auto'
+  },
+  libraryHeader: {
+    display: 'block',
+    width: 270,
+    borderRight: '1px solid gray',
+    float: 'left'
   }
 };
 
@@ -38,6 +46,7 @@ class DataWorkspace extends React.Component {
     warningMsg: PropTypes.string.isRequired,
     warningTitle: PropTypes.string.isRequired,
     isWarningDialogOpen: PropTypes.bool.isRequired,
+    view: PropTypes.oneOf(Object.keys(DataView)),
 
     // from redux dispatch
     onClearWarning: PropTypes.func.isRequired
@@ -55,6 +64,13 @@ class DataWorkspace extends React.Component {
           hasFocus={!this.props.isRunning}
           className={this.props.isRunning ? 'is-running' : ''}
         >
+          {experiments.isEnabled(experiments.APPLAB_DATASETS) &&
+            (this.props.view === DataView.OVERVIEW ||
+              this.props.view === DataView.PROPERTIES) && (
+              <PaneSection id="library-header" style={styles.libraryHeader}>
+                <span id="library-header-span">{msg.dataLibraryHeader()}</span>
+              </PaneSection>
+            )}
           <div id="dataModeHeaders">
             <PaneButton
               id="data-mode-versions-header"
@@ -97,7 +113,8 @@ export default connect(
     isVisible: ApplabInterfaceMode.DATA === state.interfaceMode,
     warningMsg: state.data.warningMsg,
     warningTitle: state.data.warningTitle || '',
-    isWarningDialogOpen: state.data.isWarningDialogOpen
+    isWarningDialogOpen: state.data.isWarningDialogOpen,
+    view: state.data.view
   }),
   dispatch => ({
     onClearWarning() {

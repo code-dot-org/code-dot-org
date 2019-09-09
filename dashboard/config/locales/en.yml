@@ -54,6 +54,7 @@ en:
         error:
           future: can't be in the future
 
+  beta: "beta"
   hello: "Hello world"
   welcome_back: "Welcome back, %{name}"
   your_professional_learning_plan: "Your Professional Learning Plan"
@@ -68,13 +69,13 @@ en:
   okay: "Okay"
   or: "or"
   heading_x_of_y: "%{heading} (page %{x} of %{y})"
-  add_teacher_form:
+  join_section:
     code:
-      label: 'Add a teacher:'
+      title: 'Join a section on Code.org'
       placeholder: "Section Code (ABCDEF)"
-      instructions: "Please enter the code shared with you by your teacher. It's a 6 letter code like \"ABCDEF\"."
+      instructions: "Please enter the 6 letter code your teacher shared with you (example: \"ABCDEF\") to join their section."
       instructions_short: "Enter your 6 letter section code"
-    submit: 'Add teacher'
+      submit: 'Join'
   add_hint_form:
     placeholder: 'Please enter your hint here'
     submit: 'Add hint'
@@ -566,7 +567,7 @@ en:
     show_video: 'Show Video'
   compatibility:
     upgrade:
-      unsupported_message: "Your browser is not supported. Please upgrade your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken."
+      unsupported_message: "Your browser is not supported. Please upgrade your browser to [one of our supported browsers](%{supported_browsers_url}). You can try viewing the page, but expect functionality to be broken."
       link: "Learn more"
       applab_unsupported_tablet: "App Lab works best on a desktop or laptop computer with a mouse and keyboard. You may experience issues using this tool on your current device."
       gamelab_unsupported_tablet: "Game Lab works best on a desktop or laptop computer with a mouse and keyboard. You may experience issues using this tool on your current device."
@@ -967,9 +968,9 @@ en:
   hoc_download:
     title: 'Hour of Code downloads'
     capsule_title: 'Do you have Internet?'
-    capsule_desc: 'Use the online, web-based <a href="%{url}">%{app_name}</a>.'
+    capsule_desc: 'Use the online, web-based [%{app_name}](%{url}).'
     instructions_headline: 'No Internet?'
-    instructions: 'Instructions for teachers: if you have poor Internet service, these Hour of Code tutorials are available to download and install for offline use. Choose your language and platform, download and install it on all the computers in your classroom. You may want to use a USB drive to download once and install on all computers. Note: students will not be able to log into Code Studio, save progress, or print certificates. Teachers may print certificates ahead of time <a href="%{url}">here</a>.'
+    instructions: 'Instructions for teachers: if you have poor Internet service, these Hour of Code tutorials are available to download and install for offline use. Choose your language and platform, download and install it on all the computers in your classroom. You may want to use a USB drive to download once and install on all computers. Note: students will not be able to log into Code Studio, save progress, or print certificates. Teachers may print certificates ahead of time [here](%{url}).'
     minecraft_name: 'Minecraft Hour Of Code'
     starwars_blocks_name: 'Star Wars: Building a Galaxy With Code (Blocks)'
     starwars_javascript_name: 'Star Wars: Building a Galaxy With Code (JavaScript)'

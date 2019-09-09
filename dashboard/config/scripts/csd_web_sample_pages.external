@@ -1,0 +1,16 @@
+name 'CSD Web Sample Pages'
+title 'Sample Web Pages'
+display_name 'Sample Personal Web Pages'
+description 'Look through these sample web pages and decide what purpose they serve their creators and visitors.'
+markdown <<MARKDOWN
+# Sample Personal Web Pages
+
+<div style="float: left; text-align:center;"><strong>The Cutest Dog</strong><br /><a href="https://codeprojects.org/vfqqBSl9WL5EmWlRTaCuyGL523thd_RLmA6fZjoahHo/" target="_new"><img style="border-radius:10px; margin: 10px;" src="https://images.code.org/be0c20dba6319b34dc07a9f87ae615fa-image-1565304900473.png" alt="Dog Sample Page"></a></div>
+<div style="float: left; text-align:center;"><strong>My Trip</strong><br /><a href="https://codeprojects.org/HxtpYQ-r79cNzFpnSfGyhHHDE0tb28ed-9-scxvFYE0" target="_new"><img style="border-radius:10px; margin: 10px;" src="https://images.code.org/51b787b6a25663e092b3f55e051e9a94-image-1565630570417.png" alt="Trip Sample Page"></a></div>
+<div style="float: left; text-align:center;"><strong>Musical Instruments</strong><br /><a href="https://codeprojects.org/HxtpYQ-r79cNzFpnSfGyhMuNKEOTdyH5PPeUpDimEeY" target="_new"><img style="border-radius:10px; margin: 10px;" src="https://images.code.org/82323a78b17b69101dd6e98a6a21c55c-image-1565630573896.png" alt="Instrument Sample Page"></a></div>
+<div style="float: left; text-align:center;"><strong>Recycling Club</strong><br /><a href="https://codeprojects.org/HxtpYQ-r79cNzFpnSfGyhBiffg8HpOk2lRx1kd5sgaw" target="_new"><img style="border-radius:10px; margin: 10px;" src="https://images.code.org/5b0044bfd92d44c97cd74d82f1933daa-image-1565630578147.png" alt="Recycling Sample Page"></a></div>
+<div style="float: left; text-align:center;"><strong>Haikus</strong><br /><a href="https://codeprojects.org/HxtpYQ-r79cNzFpnSfGyhLgd_3k2ffeKaGZZO7Ebvgs" target="_new"><img style="border-radius:10px; margin: 10px;" src="https://images.code.org/40892c338c78da445310ddfb7cf63127-image-1565630595445.png" alt="Haiku Sample Page"></a></div>
+
+
+
+MARKDOWN

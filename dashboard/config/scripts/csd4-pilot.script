@@ -1,0 +1,21 @@
+pilot_experiment 'csd-piloters'
+
+stage 'What is a Computer?', flex_category: 'csd1_2'
+level 'CSD U1L04 TFMD_pilot', named: true
+level 'CSD What Makes a Computer a Computer Video_pilot', named: true
+
+stage 'Input and Output', flex_category: 'csd1_2'
+level 'CSD U1L05 TFMD_pilot', named: true
+
+stage 'Processing', flex_category: 'csd1_2'
+level 'CSD U1L06 TFMD_pilot', named: true
+
+stage 'Apps and Storage', flex_category: 'csd1_2'
+level 'CSD U1L07 TFMD_pilot', named: true
+
+stage 'Project - Propose an App', flex_category: 'csd1_2'
+level 'CSD U1L09 TFMD_pilot', named: true
+level 'csd-pulse-check-survey-1-levelgroup U1Ch2_2018_2019_pilot', progression: 'Reflection', assessment: true
+
+stage 'Post-Project Test', lockable: true, flex_category: 'csd1_2'
+level 'CSD U1 Test_pilot', assessment: true
