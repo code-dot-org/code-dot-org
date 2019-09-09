@@ -36,8 +36,8 @@ def sync_questions
 end
 
 def main
-  sync_submissions
   sync_questions
+  sync_submissions
 end
 
 main
