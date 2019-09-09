@@ -1711,3 +1711,10 @@ Then /^page text does (not )?contain "([^"]*)"$/ do |negation, text|
   body_text = @browser.execute_script('return document.body && document.body.textContent;').to_s
   expect(body_text.include?(text)).to eq(negation.nil?)
 end
+
+And (/^I update user "([^"]*)" account creation date$/) do |name|
+  require_rails_env
+  user = User.find_by_email_or_hashed_email(@users[name][:email])
+  user.created_at = 7.days.ago
+  user.save!
+end
