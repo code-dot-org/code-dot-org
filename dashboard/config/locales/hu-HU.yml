@@ -43,6 +43,7 @@ hu:
           felhasználó fiókod befejezéséhez <strong>%{provider}</strong><strong>%{email}</strong>.
         error:
           future: nem lehet a jövőben
+  beta: béta
   hello: Helló világ
   welcome_back: Üdv újra, %{name}
   your_professional_learning_plan: Saját Profi Tanulmányi Terv

@@ -689,6 +689,7 @@ class Pd::Workshop < ActiveRecord::Base
 
   # Users who could be re-assigned to be the organizer of this workshop
   def potential_organizers
+    potential_organizer_ids = []
     potential_organizers = []
 
     # if there is a regional partner, only that partner's PMs can become the organizer
@@ -699,23 +700,24 @@ class Pd::Workshop < ActiveRecord::Base
       end
     else
       UserPermission.where(permission: UserPermission::PROGRAM_MANAGER).pluck(:user_id)&.map do |user_id|
-        pm = User.find(user_id)
-        potential_organizers << {label: pm.name, value: pm.id}
+        potential_organizer_ids << user_id
       end
     end
 
     # any CSF facilitator can become the organizer of a CSF workshhop
     if course == Pd::Workshop::COURSE_CSF
       Pd::CourseFacilitator.where(course: Pd::Workshop::COURSE_CSF).pluck(:facilitator_id)&.map do |user_id|
-        facilitator = User.find(user_id)
-        potential_organizers << {label: facilitator.name, value: facilitator.id}
+        potential_organizer_ids << user_id
       end
     end
 
     # workshop admins can become the organizer of any workshop
     UserPermission.where(permission: UserPermission::WORKSHOP_ADMIN).pluck(:user_id)&.map do |user_id|
-      admin = User.find(user_id)
-      potential_organizers << {label: admin.name, value: admin.id}
+      potential_organizer_ids << user_id
+    end
+
+    User.where(id: potential_organizer_ids).pluck(:name, :id)&.map do |name, id|
+      potential_organizers << {label: name, value: id}
     end
 
     potential_organizers

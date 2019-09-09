@@ -44,6 +44,7 @@ ca:
           creant un compte Code.org amb <strong>%{provider}</strong> per a <strong>%{email}</strong>.
         error:
           future: no pot ser en el futur
+  beta: beta
   hello: Hola món
   welcome_back: Benvingut de nou, %{name}
   your_professional_learning_plan: El seu pla d'aprenentatge professional

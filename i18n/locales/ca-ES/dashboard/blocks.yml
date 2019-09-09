@@ -564,11 +564,6 @@ ca:
           CONDITION:
             '"when"': quan
             '"while"': mentres
-      gamelab_debugSprite:
-        options:
-          VAL:
-            'true': cert
-            'false': fals
       gamelab_getProp:
         options:
           PROPERTY:
@@ -642,13 +637,6 @@ ca:
             '"left"': esquerra
             '"right"': dret
             '"space"': espai
-      gamelab_whenPressedAndReleased:
-        options:
-          DIR:
-            "'up'": cap amunt
-            "'down'": avall
-            "'left'": esquerra
-            "'right'": dret
       gamelab_whileKey:
         options:
           KEY:

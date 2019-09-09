@@ -30,6 +30,7 @@ ja:
         finish_sign_up_header: 'アカウントの作成を完了します'
         error:
           future: 現在までの日付にする
+  beta: "ベータ版"
   hello: "Hello world"
   welcome_back: "Welcome Back, %{name}"
   your_professional_learning_plan: "プロフェッショナル学習計画"

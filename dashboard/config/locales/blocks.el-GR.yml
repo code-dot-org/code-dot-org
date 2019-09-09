@@ -669,21 +669,11 @@ el:
         text: όταν {SPRITE} πατηθεί
       gamelab_comment:
         text: 'σχόλιο: {COMMENT}'
-      gamelab_console.log:
-        text: μήνυμα καταγραφής {MESSAGE}
       gamelab_createNewSprite:
         text: "φτιάξε καινούριο χαρακτήρα\n που ονομάζεται {NAME} \n με κοστούμι {COSTUME}
           \n σε {LOCATION}"
-      gamelab_debugSprite:
-        text: ανίχνευση σφαλμάτων {SPRITE} {VAL}
-        options:
-          VAL:
-            'true': Αληθές
-            'false': ψευδές
       gamelab_destroy:
         text: αφαίρεσε {THIS}
-      gamelab_displace:
-        text: "{THIS} τουβλάκια {SPRITE} από το να κινηθούν"
       gamelab_draggable:
         text: είναι συρόμενο
       gamelab_edgesDisplace:
@@ -813,7 +803,6 @@ el:
             '"x"': θέση x
             '"y"': θέση y
             '"direction"': κατεύθυνση κίνησης
-            '"tint"': απόχρωση
       gamelab_setSizes:
         text: όρισε* {SPRITE} {PROPERTY} στο {N}%
         options:
@@ -854,19 +843,8 @@ el:
             '"d"': β
       gamelab_whenLeftArrow:
         text: όταν πατηθεί το αριστερό βέλος
-      gamelab_whenPressedAndReleased:
-        text: "όταν {DIR} πατηθεί \n{STATEMENT1} όταν ελευθερώνεται \n{STATEMENT2}"
-        options:
-          DIR:
-            "'up'": επάνω
-            "'down'": κάτω
-            "'left'": αριστερά
-            "'right'": δεξιά
       gamelab_whenRightArrow:
         text: όταν πατηθεί το δεξί βέλος
-      gamelab_whenStartAndStopTouching:
-        text: όταν {SPRITE1} αρχίζει να ακουμπάει {SPRITE2} {STATEMENT1} όταν σταματάνε
-          να αγγίζονται {STATEMENT2}
       gamelab_whenTouching:
         text: όταν {SPRITE1} αγγίζει {SPRITE2}
       gamelab_whenUpArrow:

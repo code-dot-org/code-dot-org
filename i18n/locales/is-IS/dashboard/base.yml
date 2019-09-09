@@ -32,6 +32,7 @@ is:
         finish_sign_up_subheader_provider: 'Færðu inn eftirfarandi upplýsingar til að ljúka við að stofna Code.org aðgang hjá <strong>%{provider}</strong> fyrir <strong>%{email}</strong>.'
         error:
           future: má ekki vera í framtíð
+  beta: "beta"
   hello: "Halló heimur"
   welcome_back: "Velkomin/n aftur, %{name}"
   your_professional_learning_plan: "Námsáætlun þín í faginu"

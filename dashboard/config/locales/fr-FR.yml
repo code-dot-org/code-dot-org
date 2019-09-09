@@ -44,6 +44,7 @@ fr:
           compléter la création d'un Code.org avec <strong>%{provider}</strong> <strong>%{email}</strong>.
         error:
           future: ne peut pas être dans le futur
+  beta: beta
   hello: Bonjour tout le monde
   welcome_back: Bienvenue %{name}
   your_professional_learning_plan: Votre plan d’apprentissage professionnel

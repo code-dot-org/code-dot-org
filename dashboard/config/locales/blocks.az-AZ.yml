@@ -196,11 +196,6 @@ az:
           CONDITION:
             '"when"': nə zaman
             '"while"': hələ ki,
-      gamelab_debugSprite:
-        options:
-          VAL:
-            'true': doğru
-            'false': yalan
       gamelab_getProp:
         options:
           PROPERTY:
@@ -265,13 +260,6 @@ az:
             '"left"': sola
             '"right"': sağa
             '"space"': kosmos
-      gamelab_whenPressedAndReleased:
-        options:
-          DIR:
-            "'up'": yuxarı
-            "'down'": aşağı
-            "'left'": sola
-            "'right'": sağa
       gamelab_whileKey:
         options:
           KEY:

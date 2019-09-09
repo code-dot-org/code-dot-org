@@ -1567,3 +1567,9 @@ kk:
               name: Шарттар
             Functions:
               name: Функциялар
+        peru-2019:
+          stages:
+            Introduction:
+              name: Кіріспе
+            Nested Loops:
+              name: Кіріккен Циклдер

@@ -31,6 +31,7 @@ he:
         finish_sign_up_subheader: 'מלא את הפרטים הבאים על מנת לסיים ליצור חשבון Code.org עבור <strong>%{email}</strong>.'
         error:
           future: לא יכול להיות בעתיד
+  beta: "בטא"
   hello: "הי עולם"
   welcome_back: "ברוך שובך, %{name}"
   your_professional_learning_plan: "תוכנית הלמידה המקצועית שלך"

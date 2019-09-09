@@ -17,6 +17,7 @@ ms:
         edit_header: 'Edit Maklumat Akaun'
         error:
           future: tidak boleh ada di masa depan
+  beta: "beta"
   hello: "Helo dunia"
   welcome_back: "Selamat datang kembali, % {nama}"
   submit: Hantar

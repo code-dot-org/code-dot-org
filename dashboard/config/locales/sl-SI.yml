@@ -31,6 +31,7 @@ sl:
         finish_sign_up_header: Dokončaj registracijo
         error:
           future: ne more biti v prihodnosti
+  beta: beta
   hello: Pozdravljen svet
   welcome_back: Dobrodošel/a nazaj, %{name}
   your_professional_learning_plan: Tvoj osebni načrt učenja

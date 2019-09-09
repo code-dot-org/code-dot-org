@@ -30,6 +30,7 @@ el:
         finish_sign_up_header: 'Ολοκληρώστε τη δημιουργία του λογαριασμού σας'
         error:
           future: δεν μπορεί να είναι στο μέλλον
+  beta: "βήτα"
   hello: "Γεια σου κόσμε"
   welcome_back: "Καλώς ήρθες, %{name}"
   your_professional_learning_plan: "Το επαγγελματικό σας πλάνο εκμάθησης"
