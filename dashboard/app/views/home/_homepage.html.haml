@@ -18,7 +18,7 @@
     - homepage_data[:showCensusBanner] = show_census_banner
     - homepage_data[:hiddenScripts] = current_user.get_hidden_script_ids
     - if show_census_banner
-      %script{type: "text/javascript", src: "https://maps.googleapis.com/maps/api/js?client=#{CDO.google_maps_client_id}&sensor=true&libraries=places,geometry&v=3.7"}
+      %script{type: "text/javascript", src: "https://maps.googleapis.com/maps/api/js?client=#{CDO.google_maps_client_id}&sensor=true&libraries=places,geometry&v=3.37"}
       - teachers_school = current_user.school_info.school
       - school_stats = SchoolStatsByYear.where(school_id: teachers_school.id).order(school_year: :desc).first
       - homepage_data[:ncesSchoolId] = teachers_school.id
