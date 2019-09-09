@@ -1,4 +1,4 @@
-- if current_user && (current_user.levelbuilder? || current_user.project_validator?)
+- if current_user && (current_user.levelbuilder? || current_user.project_validator? || Experiment.get_editor_experiment(current_user))
   = render layout: 'shared/extra_links' do
     %strong= @level.name
     %ul
