@@ -9,7 +9,7 @@ require 'csv'
 # cloned with them so we're doing a mass import.
 
 def main(csv_dir)
-  %w(CourseA CourseB CourseC CourseD CourseE CourseF).each do |course|
+  %w(CourseA CourseB CourseC CourseD CourseE CourseF PreExpress Express).each do |course|
     CSV.foreach("#{csv_dir}/#{course}.csv", headers: true,  header_converters: :symbol) do |row|
       level = Level.find_by(name: row.fetch(:level_name))
       unless level
