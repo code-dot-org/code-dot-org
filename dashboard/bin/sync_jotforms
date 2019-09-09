@@ -17,10 +17,12 @@ JOT_FORM_CLASSES = [
 
 def sync_submissions
   JOT_FORM_CLASSES.each do |survey_class|
-    survey_class.sync_from_jotform
-  rescue => e
-    # One survey class fails to sync doesn't stop other from syncing
-    Honeybadger.notify e
+    survey_class.all_form_ids.each do |form_id|
+      survey_class.sync_from_jotform form_id
+    rescue => e
+      # One form fails to sync doesn't stop other forms from syncing
+      Honeybadger.notify e
+    end
   end
 end
 
