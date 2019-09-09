@@ -17,6 +17,7 @@ export default function initPage(scriptEditorData) {
     .filter(stage => stage.id)
     .map(stage => ({
       position: stage.position,
+      relativePosition: stage.relative_position,
       flex_category: stage.flex_category,
       lockable: stage.lockable,
       name: stage.name,

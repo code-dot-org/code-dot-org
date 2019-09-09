@@ -23,6 +23,7 @@ hr:
         edit_header: Uredi podatke o računu
         error:
           future: ne može biti u budućnosti
+  beta: beta
   hello: Pozdrav svima
   welcome_back: Dobrodošao natrag, %{name}
   submit: Pošalji

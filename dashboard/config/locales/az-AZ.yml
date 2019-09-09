@@ -23,6 +23,7 @@ az:
         edit_header: Hesab Detallarına düzəliş edin
         error:
           future: gələcəkdə ola bilməz
+  beta: beta versiya
   hello: Salam, dünya
   welcome_back: Bir daha xoş gəldiniz, %{name}
   your_professional_learning_plan: Sizin peşəkar öyrənmə planınız

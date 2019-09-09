@@ -2427,7 +2427,15 @@ de:
               name: Geschwindigkeit
             Functions:
               name: Funktionen
+            Sprite Properties:
+              name: Sprite Eigenschaften
         csl-vn:
           stages:
             Loops in Ice Age:
               name: Schleifen in Ice Age
+        peru-2019:
+          stages:
+            Introduction:
+              name: Einführung
+            Nested Loops:
+              name: Verschachtelte Schleifen

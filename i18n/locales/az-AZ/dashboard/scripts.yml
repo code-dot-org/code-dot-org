@@ -850,3 +850,7 @@ az:
               name: Şərti ifadələr
             Functions:
               name: funksiyalar
+        peru-2019:
+          stages:
+            Introduction:
+              name: Giriş

@@ -607,11 +607,6 @@ ar:
           CONDITION:
             '"when"': عندما
             '"while"': التكرار طالما
-      gamelab_debugSprite:
-        options:
-          VAL:
-            'true': صحيح
-            'false': خطأ
       gamelab_getProp:
         text: "{SPRITE} {PROPERTY}"
         options:
@@ -666,7 +661,6 @@ ar:
             '"x"': الموضع س
             '"y"': الموضع ص
             '"direction"': اتجاه الحركة
-            '"tint"': لون خفيف
       gamelab_setSizes:
         text: عيّن {SPRITE} {PROPERTY} على {N}%
         options:
@@ -693,13 +687,6 @@ ar:
             '"left"': اليسار
             '"right"': اليمين
             '"space"': الفضاء
-      gamelab_whenPressedAndReleased:
-        options:
-          DIR:
-            "'up'": الأعلى
-            "'down'": الأسفل
-            "'left'": اليسار
-            "'right'": اليمين
       gamelab_whileKey:
         options:
           KEY:

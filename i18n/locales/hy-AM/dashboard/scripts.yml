@@ -1585,3 +1585,9 @@ hy:
               name: conditionals
             Functions:
               name: գործառույթները
+        peru-2019:
+          stages:
+            Introduction:
+              name: ներածություն
+            Nested Loops:
+              name: nested Loops

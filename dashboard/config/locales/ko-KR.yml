@@ -36,6 +36,7 @@ ko:
           밑에 있는 빈 곳에 정보들을 입력 하세요."
         error:
           future: 오늘 이전 날짜만 가능합니다.
+  beta: 베타
   hello: Hello world
   welcome_back: "%{name} 님, 어서오세요. "
   your_professional_learning_plan: 전문적인 학습 계획

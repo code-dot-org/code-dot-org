@@ -33,6 +33,7 @@ sv:
         edit_header: Redigera kontouppgifter
         error:
           future: kan inte vara i framtiden
+  beta: beta
   hello: Hej världen
   welcome_back: Välkommen tillbaka, %{name}
   your_professional_learning_plan: Din professionella utbildningsplan

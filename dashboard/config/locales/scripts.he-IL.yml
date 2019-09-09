@@ -1935,9 +1935,15 @@ he:
               name: תנאים
             Functions:
               name: פונקציות
+            Sprite Properties:
+              name: מאפייני ספרייט
         csl-vn:
           stages:
             Programming in Maze:
               name: תכנות במבוך
             Loops in Ice Age:
               name: לולאות בעידן הקרח
+        peru-2019:
+          stages:
+            Introduction:
+              name: מבוא

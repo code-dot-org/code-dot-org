@@ -694,21 +694,11 @@ it:
         text: "{SPRITE} cliccato"
       gamelab_comment:
         text: 'commento: {COMMENT}'
-      gamelab_console.log:
-        text: messaggio di log {MESSAGE}
       gamelab_createNewSprite:
         text: "crea un nuovo personaggio\n chiamato {NAME} \n con il costume {COSTUME}
           \n alla posizione {LOCATION}"
-      gamelab_debugSprite:
-        text: debug {SPRITE} {VAL}
-        options:
-          VAL:
-            'true': vero
-            'false': falso
       gamelab_destroy:
         text: elimina {THIS}
-      gamelab_displace:
-        text: "{THIS} impedisce a {SPRITE} di muoversi"
       gamelab_draggable:
         text: trascinabile
       gamelab_edgesDisplace:
@@ -856,7 +846,6 @@ it:
             '"x"': posizione x
             '"y"': posizione y
             '"direction"': direzione del movimento
-            '"tint"': tonalità
       gamelab_setSizes:
         text: imposta {SPRITE} {PROPERTY} al {N}%
         options:
@@ -904,20 +893,8 @@ it:
             '"d"': d
       gamelab_whenLeftArrow:
         text: quando viene premuta la freccia a sinistra
-      gamelab_whenPressedAndReleased:
-        text: "quando viene premuto {DIR}\n{STATEMENT1} quando viene rilasciato \n{STATEMENT2}"
-        options:
-          DIR:
-            "'up'": in alto
-            "'down'": in basso
-            "'left'": a sinistra
-            "'right'": a destra
       gamelab_whenRightArrow:
         text: quando viene premuta la freccia a destra
-      gamelab_whenStartAndStopTouching:
-        text: |-
-          quando {SPRITE1} inizia a toccare {SPRITE2} {STATEMENT1}quando smettono di toccarsi
-          {STATEMENT2}
       gamelab_whenTouching:
         text: quando {SPRITE1} tocca {SPRITE2}
       gamelab_whenUpArrow:

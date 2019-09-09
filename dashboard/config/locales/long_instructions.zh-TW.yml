@@ -72,41 +72,41 @@ zh-TW:
         -   在上一次的課程中，你是如何跟著問題解決流程的?
         -   在你每天的生活中，你是如何利用這個流程去解決問題?
       CSD U3 - Booleans Video: "# 布林表達式影片"
-      CSD U3 - Simple Counter Predict: "# \n\n計數器模型（Counter Pattern）\\\r\n\\\r\n這個模型（Pattern）在程式設計中相當的重要。\\\r\n\\\r\n![](<https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56\nPM.png>)\\\r\n
+      CSD U3 - Simple Counter Predict: "# \n\n計數器模型（Counter Pattern）\\\r\n\\\r\n這個模型（Pattern）在程式設計中相當的重要。\\\r\n\\\r\n!\\[](\\<<https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56>\nPM.png>)\\\r\n
         \   \\\r\n這會用來讓變數增加 1。你可能會稱之為 **計數器模型**，因為這可以讓變數往上數。\n我們很常使用到這個模型，尤其是在繪圖一類的迴圈。我們來看看它長得怎樣\\\r\n\\\r\n\n#
         做做這個\\\r\n\n\\\r\n這個程式會創造出\n一個變數`counter`，然後使用**計數器模型**來讓它開始計數。\n當你運行程式時，你覺得在畫面會出現什麼？\\\r\n\\\r\n\\*\n**解讀程式**
         然後預測輸出會是怎樣。\\\r\n\\*\n**運行程式** 來檢查是否和你的預測一致。\\\r\n\n-   **跟隔壁的人討論看看**.\n    看你能不能解釋你觀察到了什麼？\\\r\n
         \   \\\r"
-      CSD U3 - Simple Counter Predict_2018: "# \n\n計數器模型（Counter Pattern）\\\r\n\\\r\n這個模型（Pattern）在程式設計中相當的重要。\\\r\n\\\r\n![](<https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56\nPM.png>)\\\r\n
+      CSD U3 - Simple Counter Predict_2018: "# \n\n計數器模型（Counter Pattern）\\\r\n\\\r\n這個模型（Pattern）在程式設計中相當的重要。\\\r\n\\\r\n!\\[](\\<<https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56>\nPM.png>)\\\r\n
         \   \\\r\n這會用來讓變數增加 1。你可能會稱之為 **計數器模型**，因為這可以讓變數往上數。\n我們很常使用到這個模型，尤其是在繪圖一類的迴圈。我們來看看它長得怎樣\\\r\n\\\r\n\n#
         做做這個\\\r\n\n\\\r\n這個程式會創造出\n一個變數`counter`，然後使用**計數器模型**來讓它開始計數。\n當你運行程式時，你覺得在畫面會出現什麼？\\\r\n\\\r\n\\*\n**解讀程式**
         然後預測輸出會是怎樣。\\\r\n\\*\n**運行程式** 來檢查是否和你的預測一致。\\\r\n\n-   **跟隔壁的人討論看看**.\n    看你能不能解釋你觀察到了什麼？\\\r\n
         \   \\\r"
-      CSD U3 - Simple Counter Predict_2019: "# \n\n計數器模型（Counter Pattern）\\\r\n\\\r\n這個模型（Pattern）在程式設計中相當的重要。\\\r\n\\\r\n![](<https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56\nPM.png>)\\\r\n
+      CSD U3 - Simple Counter Predict_2019: "# \n\n計數器模型（Counter Pattern）\\\r\n\\\r\n這個模型（Pattern）在程式設計中相當的重要。\\\r\n\\\r\n!\\[](\\<<https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56>\nPM.png>)\\\r\n
         \   \\\r\n這會用來讓變數增加 1。你可能會稱之為 **計數器模型**，因為這可以讓變數往上數。\n我們很常使用到這個模型，尤其是在繪圖一類的迴圈。我們來看看它長得怎樣\\\r\n\\\r\n\n#
         做做這個\\\r\n\n\\\r\n這個程式會創造出\n一個變數`counter`，然後使用**計數器模型**來讓它開始計數。\n當你運行程式時，你覺得在畫面會出現什麼？\\\r\n\\\r\n\\*\n**解讀程式**
         然後預測輸出會是怎樣。\\\r\n\\*\n**運行程式** 來檢查是否和你的預測一致。\\\r\n\n-   **跟隔壁的人討論看看**.\n    看你能不能解釋你觀察到了什麼？\\\r\n
         \   \\\r"
-      CSD U3 Counters explaining counters contained 2: "# \n\n計數器模型（Counter Pattern）\\\r\n\\\r\n這個模型（Pattern）在程式設計中相當的重要。\\\r\n\\\r\n![](<https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56\nPM.png>)\\\r\n
+      CSD U3 Counters explaining counters contained 2: "# \n\n計數器模型（Counter Pattern）\\\r\n\\\r\n這個模型（Pattern）在程式設計中相當的重要。\\\r\n\\\r\n!\\[](\\<<https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56>\nPM.png>)\\\r\n
         \   \\\r\n這會用來讓變數增加 1。你可能會稱之為 **計數器模型**，因為這可以讓變數往上數。\n我們很常使用到這個模型，尤其是在繪圖一類的迴圈。我們來看看它長得怎樣\\\r\n\\\r\n\n#
         做做這個\\\r\n\n\\\r\n這個程式會創造出\n一個變數`counter`，然後使用**計數器模型**來讓它開始計數。\n當你運行程式時，你覺得在畫面會出現什麼？\\\r\n\\\r\n\\*\n**解讀程式**
         然後預測輸出會是怎樣。\\\r\n\\*\n**運行程式** 來檢查是否和你的預測一致。\\\r\n\n-   **跟隔壁的人討論看看**.\n    看你能不能解釋你觀察到了什麼？\\\r\n
         \   \\\r"
-      CSD U3 Counters explaining counters contained 2_2018: "# \n\n計數器模型（Counter Pattern）\\\r\n\\\r\n這個模型（Pattern）在程式設計中相當的重要。\\\r\n\\\r\n![](<https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56\nPM.png>)\\\r\n
+      CSD U3 Counters explaining counters contained 2_2018: "# \n\n計數器模型（Counter Pattern）\\\r\n\\\r\n這個模型（Pattern）在程式設計中相當的重要。\\\r\n\\\r\n!\\[](\\<<https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56>\nPM.png>)\\\r\n
         \   \\\r\n這會用來讓變數增加 1。你可能會稱之為 **計數器模型**，因為這可以讓變數往上數。\n我們很常使用到這個模型，尤其是在繪圖一類的迴圈。我們來看看它長得怎樣\\\r\n\\\r\n\n#
         做做這個\\\r\n\n\\\r\n這個程式會創造出\n一個變數`counter`，然後使用**計數器模型**來讓它開始計數。\n當你運行程式時，你覺得在畫面會出現什麼？\\\r\n\\\r\n\\*\n**解讀程式**
         然後預測輸出會是怎樣。\\\r\n\\*\n**運行程式** 來檢查是否和你的預測一致。\\\r\n\n-   **跟隔壁的人討論看看**.\n    看你能不能解釋你觀察到了什麼？\\\r\n
         \   \\\r"
-      CSD U3 Counters explaining counters contained 2_2019: "# \n\n計數器模型（Counter Pattern）\\\r\n\\\r\n這個模型（Pattern）在程式設計中相當的重要。\\\r\n\\\r\n![](<https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56\nPM.png>)\\\r\n
+      CSD U3 Counters explaining counters contained 2_2019: "# \n\n計數器模型（Counter Pattern）\\\r\n\\\r\n這個模型（Pattern）在程式設計中相當的重要。\\\r\n\\\r\n!\\[](\\<<https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56>\nPM.png>)\\\r\n
         \   \\\r\n這會用來讓變數增加 1。你可能會稱之為 **計數器模型**，因為這可以讓變數往上數。\n我們很常使用到這個模型，尤其是在繪圖一類的迴圈。我們來看看它長得怎樣\\\r\n\\\r\n\n#
         做做這個\\\r\n\n\\\r\n這個程式會創造出\n一個變數`counter`，然後使用**計數器模型**來讓它開始計數。\n當你運行程式時，你覺得在畫面會出現什麼？\\\r\n\\\r\n\\*\n**解讀程式**
         然後預測輸出會是怎樣。\\\r\n\\*\n**運行程式** 來檢查是否和你的預測一致。\\\r\n\n-   **跟隔壁的人討論看看**.\n    看你能不能解釋你觀察到了什麼？\\\r\n
         \   \\\r"
       CSD U5 black white images pixelation: "# 做做看\\\r\n\n\\\r\n輸入 0 或是 1 來完成這個 X
         形的圖案，如果你想要清除重來，可以點擊「可讀格式」。"
-      CSD U5 black white images pixelation 2: "# 做做看\\\r\n\n\\\r\n使用像素化工具來畫出笑臉\\\r\n\\\r\n![](<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image-1491425592286.52.47\nPM.png>)"
-      CSD U5 black white images pixelation 2_2018: "# 做做看\\\r\n\n\\\r\n使用像素化工具來畫出笑臉\\\r\n\\\r\n![](<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image-1491425592286.52.47\nPM.png>)"
-      CSD U5 black white images pixelation 2_2019: "# 做做看\\\r\n\n\\\r\n使用像素化工具來畫出笑臉\\\r\n\\\r\n![](<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image-1491425592286.52.47\nPM.png>)"
+      CSD U5 black white images pixelation 2: "# 做做看\\\r\n\n\\\r\n使用像素化工具來畫出笑臉\\\r\n\\\r\n!\\[](\\<<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image-1491425592286.52.47>\nPM.png>)"
+      CSD U5 black white images pixelation 2_2018: "# 做做看\\\r\n\n\\\r\n使用像素化工具來畫出笑臉\\\r\n\\\r\n!\\[](\\<<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image-1491425592286.52.47>\nPM.png>)"
+      CSD U5 black white images pixelation 2_2019: "# 做做看\\\r\n\n\\\r\n使用像素化工具來畫出笑臉\\\r\n\\\r\n!\\[](\\<<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image-1491425592286.52.47>\nPM.png>)"
       CSD U5 black white images pixelation 3: "# 做做看\\\r\n\n\\\r\n使用像素化工具來畫出笑臉"
       CSD U5 black white images pixelation 3_2018: "# 做做看\\\r\n\n\\\r\n使用像素化工具來畫出笑臉"
       CSD U5 black white images pixelation 3_2019: "# 做做看\\\r\n\n\\\r\n使用像素化工具來畫出笑臉"
@@ -268,7 +268,7 @@ zh-TW:
       Dance_Party_02: |-
         讓這隻麋鹿跳舞！
 
-        拖曳出 <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> 程式積木 到工作區上。連接此程式積木在 <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> 程式積木的後面. 您的舞者應該在第 4 個小節之後開始新的動作。
+        拖曳出 <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> 程式積木 到工作區上。連接此程式積木在 <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> 程式積木的後面. 您的舞者應該在第 4 個小節之後開始新的動作。
 
         **小節**用於計算音樂中的時間。在本教學課程中，一小節的長度為四拍。
       Dance_Party_03: |-

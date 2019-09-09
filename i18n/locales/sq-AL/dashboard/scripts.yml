@@ -1720,3 +1720,9 @@ sq:
               name: Kushtet
             Functions:
               name: funksione
+        peru-2019:
+          stages:
+            Introduction:
+              name: Hyrja
+            Nested Loops:
+              name: Përsëritjet e Mbivendosura

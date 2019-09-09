@@ -673,21 +673,11 @@ es:
         text: clic en gráfico
       gamelab_comment:
         text: 'comentario: {COMMENT}'
-      gamelab_console.log:
-        text: registro de mensaje {MESSAGE}
       gamelab_createNewSprite:
         text: "haz un gráfico nuevo \n llamado {NAME} \n con traje {COSTUME} \n en
           {LOCATION}"
-      gamelab_debugSprite:
-        text: depurar {SPRITE} {VAL}
-        options:
-          VAL:
-            'true': verdadero
-            'false': falso
       gamelab_destroy:
         text: eliminar {THIS}
-      gamelab_displace:
-        text: "{THIS} bloquea el movimiento de {SPRITE}"
       gamelab_draggable:
         text: poder arrastrarse
       gamelab_edgesDisplace:
@@ -831,7 +821,6 @@ es:
             '"x"': posición x
             '"y"': posición y
             '"direction"': dirección del movimiento
-            '"tint"': tonalidad
       gamelab_setSizes:
         text: establecer {SPRITE} {PROPERTY} en {N}%
         options:
@@ -879,20 +868,8 @@ es:
             '"d"': d
       gamelab_whenLeftArrow:
         text: cuando se presiona la flecha izquierda
-      gamelab_whenPressedAndReleased:
-        text: "cuando se presiona {DIR} \n{STATEMENT1}cuando se libera \n{STATEMENT2}"
-        options:
-          DIR:
-            "'up'": arriba
-            "'down'": abajo
-            "'left'": izquierda
-            "'right'": derecha
       gamelab_whenRightArrow:
         text: cuando se presiona la flecha derecha
-      gamelab_whenStartAndStopTouching:
-        text: |-
-          cuando {SPRITE1} empieza a tocar {SPRITE2} {STATEMENT1}cuando dejan de tocar
-          {STATEMENT2}
       gamelab_whenTouching:
         text: cuando {SPRITE1} toca {SPRITE2}
       gamelab_whenUpArrow:
