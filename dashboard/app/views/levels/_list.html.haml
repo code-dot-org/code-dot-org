@@ -46,11 +46,19 @@
     - @levels.each do |level|
       %tr
         %td.controls-column
-          - if level.custom?
+          - if can? :edit, level
             = link_to edit_level_path(level), title: t('crud.edit') do
               %i.fa.fa-fw.fa-pencil
+          - else
+            %i.fa.fa-fw
+
+          - if can? :destroy, level
             = link_to level, title: t('crud.destroy'), method: :delete, data: { confirm: t('crud.confirm') } do
               %i.fa.fa-fw.fa-trash
+          - else
+            %i.fa.fa-fw
+
+          - if can? :clone, level
             = link_to '', title: 'Clone', onclick: "$('#clone_#{level.id}').toggle(); return false;" do
               %i.fa.fa-fw.fa-copy
             %div{class: 'clone_level', id: "clone_#{level.id}", style: 'display: none;'}
@@ -58,6 +66,9 @@
                 = label_tag 'New name:'
                 = text_field_tag :name, level.name
                 = submit_tag 'Clone'
+          - else
+            %i.fa.fa-fw
+
         %td= link_to level.name, level, title: t('crud.show')
         %td= level.class.name
 = paginate @levels
