@@ -42,7 +42,7 @@ social:
 %script{type: "text/javascript", src: "/js/jquery.geocomplete.min.js"}
 
 - unless census_announcement && census_announcement['hide_map'] == 'true'
-  %script{type: "text/javascript", src: "https://maps.googleapis.com/maps/api/js?client=#{CDO.google_maps_client_id}&sensor=false&libraries=places,geometry&v=3.7"}
+  %script{type: "text/javascript", src: "https://maps.googleapis.com/maps/api/js?client=#{CDO.google_maps_client_id}&sensor=false&libraries=places,geometry&v=3.37"}
   %script{type: "text/javascript", src: "https://www.google.com/jsapi"}
   %script{type: "text/javascript"}
     google.load('visualization', '1');
