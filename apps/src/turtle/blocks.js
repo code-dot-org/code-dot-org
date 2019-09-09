@@ -1156,17 +1156,25 @@ exports.install = function(blockly, blockInstallOptions) {
     helpUrl: '',
     init: function() {
       this.setHSV(184, 1.0, 0.74);
-      this.appendValueInput('VALUE')
-        .setCheck(blockly.BlockValueType.NUMBER)
-        .addFieldHelper(blockly.BlockFieldHelper.ANGLE_HELPER, {
-          block: this,
-          directionTitle: 'DIR'
-        })
-        .appendTitle(
-          new blockly.FieldDropdown(blockly.Blocks.draw_turn.DIRECTIONS),
-          'DIR'
-        );
-      this.appendDummyInput().appendTitle(msg.degrees());
+      this.interpolateMsg(
+        msg.turnDirection(),
+        () => {
+          this.appendDummyInput().appendTitle(
+            new blockly.FieldDropdown(blockly.Blocks.draw_turn.DIRECTIONS),
+            'DIR'
+          );
+        },
+        () => {
+          this.appendValueInput('VALUE').addFieldHelper(
+            blockly.BlockFieldHelper.ANGLE_HELPER,
+            {
+              block: this,
+              directionTitle: 'DIR'
+            }
+          );
+        },
+        blockly.ALIGN_RIGHT
+      );
       this.setInputsInline(true);
       this.setPreviousStatement(true);
       this.setNextStatement(true);
@@ -1175,8 +1183,8 @@ exports.install = function(blockly, blockInstallOptions) {
   };
 
   blockly.Blocks.draw_turn.DIRECTIONS = [
-    [msg.turnRight(), 'turnRight'],
-    [msg.turnLeft(), 'turnLeft']
+    [msg.right(), 'turnRight'],
+    [msg.left(), 'turnLeft']
   ];
 
   generator.draw_turn = function() {
