@@ -8,8 +8,8 @@
       %li= link_to "see callouts (#{@level.available_callouts(@script_level).count})", show_callouts: '1'
       - if @level.is_a? Gamelab
         %li= link_to 'view animation JSON', '', onclick: 'window.viewExportableAnimationList(); return false'
-      - if can? :edit, @level
-        - if Rails.application.config.levelbuilder_mode
+      - if Rails.application.config.levelbuilder_mode
+        - if can? :edit, @level
           %li
             = link_to '[E]dit', edit_level_path(@level), { accesskey: 'e', title: "Edit this level. Can use the browser-dependent accesskey shortcut for quick access." }
             - if @level.is_a? Blockly
@@ -61,10 +61,10 @@
               = 'template: '
               = link_to project_template_level_name, level_path(project_template_level)
               = link_to '[E]', edit_level_path(project_template_level)
-        - elsif @script_level
-          %li= link_to 'edit on levelbuilder', URI.join("https://levelbuilder-studio.code.org/", build_script_level_path(@script_level)).to_s
-      - else
-        %li (Cannot edit)
+        - else
+          %li (Cannot edit)
+      - elsif @script_level
+        %li= link_to 'edit on levelbuilder', URI.join("https://levelbuilder-studio.code.org/", build_script_level_path(@script_level)).to_s
 
     -# Include any BubbleChoice parent script_levels in script_level list.
     - parent_levels = BubbleChoice.parent_levels(@level.name)
