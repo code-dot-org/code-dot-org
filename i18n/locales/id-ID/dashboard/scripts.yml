@@ -5078,3 +5078,19 @@ id:
             Project - Design a Game:
               name: Proyek - merancang sebuah permainan
               description_student: Kelas rencana dan membangun permainan asli menggunakan panduan proyek dari dua pelajaran sebelumnya. Bekerja secara individual atau berpasangan, kelas rencana, mengembangkan, dan memberikan umpan balik tentang permainan. Setelah memasukkan rekan umpan balik, permainan kelas saham selesai.
+        csd4-pilot:
+          stages:
+            What is a Computer?:
+              name: Apa itu komputer?
+            Processing:
+              name: Sedang memproses
+        csp2-pilot:
+          stages:
+            Routers and Redundancy:
+              name: Router dan Kualitas
+        peru-2019:
+          stages:
+            Introduction:
+              name: Pendahuluan
+            Nested Loops:
+              name: Perulangan bercabang

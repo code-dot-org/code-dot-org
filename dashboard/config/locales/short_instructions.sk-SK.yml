@@ -446,6 +446,8 @@ sk-SK:
       Course 4 Maze 3: 'Naprogramujte cestu nahnevaného vtáčika k prasisatku. '
       Course 4 Maze 5: Viete vyriešiť túto úlohu použitím čo najmenšieho možného počtu
         blokov?
+      Course 4 SCFL 1: Vyrieš túto úlohu použitím čo najmenšieho počtu blokov.
+      Course 4 SCFL 2: Vyrieš túto úlohu použitím čo najmenšieho počtu blokov.
       Course 4 SCFL 3: Viete zistiť, ako znova nakresliť túto kresbu?
       Course 4 SCFL 4: Viete zistiť, ako znova nakresliť túto kresbu?
       Course 4 SCFL 6: Viete zistiť, ako znova nakresliť túto kresbu s jedinou slučkou?
@@ -796,6 +798,10 @@ sk-SK:
         jaskyne.
       courseA_collector_loops11_2019: Pomôž Laurel pozbierať všetky drahokamy z tejto
         jaskyne.
+      courseA_maze_ramp2_2018: Spoj všetky bloky dokopy, aby si dokončil tvoj kód,
+        potom stlač "▶ Spustiť".
+      courseA_maze_ramp2_2019: Spoj všetky bloky dokopy, aby si dokončil tvoj kód,
+        potom stlač "▶ Spustiť".
       courseA_maze_ramp3a_2018: Pridaj blok `Sever` na spodok ostatných blokov, aby
         si dokončil tento kód, potom klikni "▶ Spustiť".
       courseA_maze_ramp3a_2019: Pridaj blok `Sever` na spodok ostatných blokov, aby
@@ -814,6 +820,8 @@ sk-SK:
       courseA_maze_seq13: Dostaň sa ku prasiatku akoukoľvek cestou!
       courseA_maze_seq13_2018: Dostaň sa ku prasiatku akoukoľvek cestou!
       courseA_maze_seq13_2019: Dostaň sa ku prasiatku akoukoľvek cestou!
+      courseA_maze_seq5_2018: Vyskúšaj si to ešte raz.
+      courseA_maze_seq5_2019: Vyskúšaj si to ešte raz.
       courseA_maze_seq_challenge2: Nájdi cestu a priveď vtáka ku prasiatku. Vyhni
         sa TNT, lebo bude lietať perie!
       courseA_maze_seq_challenge2_2018: Nájdi cestu a priveď vtáka ku prasiatku. Vyhni
@@ -2297,6 +2305,9 @@ sk-SK:
         prejde po ceste do štvorca a zoberie jednu hlávku šalátu v strede kazdej strany.
       courseE_farmer_functions7a1_2019: Vytvor funkciu pomocou ktorej záhradníčka
         prejde po ceste do štvorca a zoberie jednu hlávku šalátu v strede kazdej strany.
+      courseF_artist_for1: Experimentuj s cyklom `for` a s premennou `počítadlo`.
+      courseF_artist_for1_2018: Experimentuj s cyklom `for` a s premennou `počítadlo`.
+      courseF_artist_for1_2019: Experimentuj s cyklom `for` a s premennou `počítadlo`.
       courseF_artist_for_challenge1: Viete zistiť, ako znova nakresliť túto kresbu?
       courseF_artist_for_challenge1_2018: Viete zistiť, ako znova nakresliť túto kresbu?
       courseF_artist_for_challenge1_2019: Viete zistiť, ako znova nakresliť túto kresbu?
@@ -2420,6 +2431,18 @@ sk-SK:
         s najmenším počtom blokov.
       courseF_bee_for9_2019: Použí premennú `počítadlo` na prejdenie cez túto záhradu
         s najmenším počtom blokov.
+      courseF_bee_for_challenge1: 'Použi tento `cyklus for` na pozbieranie všetkého
+        nektáru. '
+      courseF_bee_for_challenge1_2018: 'Použi tento `cyklus for` na pozbieranie všetkého
+        nektáru. '
+      courseF_bee_for_challenge1_2019: 'Použi tento `cyklus for` na pozbieranie všetkého
+        nektáru. '
+      courseF_bee_for_challenge2: Vyrieš túto úlohu použitím čo najmenšieho počtu
+        blokov.
+      courseF_bee_for_challenge2_2018: Vyrieš túto úlohu použitím čo najmenšieho počtu
+        blokov.
+      courseF_bee_for_challenge2_2019: Vyrieš túto úlohu použitím čo najmenšieho počtu
+        blokov.
       courseF_bee_functions4: Funkcia "move and get nectar" prikáže včele otočiť sa,
         zbierať nektár a vrátiť sa kde to začalo. Použi funkciu aby si zozbieral všetok
         nektár.
@@ -2445,6 +2468,8 @@ sk-SK:
         ju vyriešil?
       courseF_bee_variables_7_2019: Táto úloha je trochu iná. Čo potrebuješ, aby si
         ju vyriešil?
+      coursea_maze_ramp1_2018: Pre túto úlohu, spoj bloky dokopy a stlač "▶ Spustiť"!
+      coursea_maze_ramp1_2019: Pre túto úlohu, spoj bloky dokopy a stlač "▶ Spustiť"!
       flappy_1: Ku bloku "keď klikneš" pripoj blok "mávni" a potom stlač "Spustiť".
         Klikaj myšou, alebo na obrazovku, aby sa Flappy dostal ku cieľu.
       flappy_11: A teraz si vytvor tvoju vlastnú hru Flappy. Môžeš zmeniť celý výzor

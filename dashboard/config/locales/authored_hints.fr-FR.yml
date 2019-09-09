@@ -1045,7 +1045,7 @@ fr-FR:
           </block>
           </xml>
       Course 4 SCFL 1:
-        Course_4_SCFL_1_a: "Jette un œil à cette option pour le mouvement :  \n\n\\!\\[]
+        Course_4_SCFL_1_a: "Jette un œil à cette option pour le mouvement :  \n\n!\\[]
           (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)"
         Course_4_SCFL_1_b: 'Essaie d’utiliser deux boucles ˋpour\` : une pour aller
           vers le haut et obtenir le nectar, et l’autre pour aller vers le bas et
@@ -1113,7 +1113,7 @@ fr-FR:
       Course 4 SCFL 1a:
         Course_4_SCFL_1a_a: Tu devras peut-être avancer plus loin pour utiliser le
           moins de blocs possible.
-        Course_4_SCFL_1a_b: "Jette un œil à cette option pour le mouvement :  \n\n\\!\\[]
+        Course_4_SCFL_1a_b: "Jette un œil à cette option pour le mouvement :  \n\n!\\[]
           (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)"
         Course_4_SCFL_1a_c: Une boucle ˋpour\` t’aidera à suivre le même motif, mais
           avec un nombre différent d’étapes. Note que le nombre d’étapes requises
@@ -1176,7 +1176,7 @@ fr-FR:
           </xml>
       Course 4 SCFL 1b:
         Course_4_SCFL_1b_a: Essaie d’utiliser une boucle ˋpour\`.
-        Course_4_SCFL_1b_b: "Jette un œil à cette option pour le mouvement :  \n\n\\!\\[]
+        Course_4_SCFL_1b_b: "Jette un œil à cette option pour le mouvement :  \n\n!\\[]
           (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)"
         Course_4_SCFL_1b_c: |-
           **Solution :**
@@ -1235,7 +1235,7 @@ fr-FR:
           </block>
           </xml>
       Course 4 SCFL 2:
-        Course_4_SCFL_2_a: "Jette un œil à cette option pour le mouvement :  \n\n\\!\\[]
+        Course_4_SCFL_2_a: "Jette un œil à cette option pour le mouvement :  \n\n!\\[]
           (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)"
         Course_4_SCFL_2_b: Note qu’il y a trois points pendant chaque itération de
           la boucle ˋpour\` où tu t’arrêtes pour interagir avec des objets.
@@ -1752,7 +1752,7 @@ fr-FR:
         Course_4_SCV_4_b: 'Il sera très utile d’utiliser trois boucles à l’intérieur
           de ta boucle principale. Une pour avancer, une pour collecter le nectar
           et une pour fabriquer du miel. '
-        Course_4_SCV_4_c: "Jette un œil à cette option pour le mouvement :  \n\n\\!\\[]
+        Course_4_SCV_4_c: "Jette un œil à cette option pour le mouvement :  \n\n!\\[]
           (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)"
         Course_4_SCV_4_d: |-
           **Solution :**
@@ -8760,7 +8760,7 @@ fr-FR:
           ou ˋsi / sinonˋ) pour résoudre le problème."
       courseF_bee_for_challenge2:
         courseF_bee_for_challenge2_a: "Jette un œil à cette option pour le mouvement :
-          \ \n\n\\!\\[] (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)"
+          \ \n\n!\\[] (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)"
         courseF_bee_for_challenge2_b: 'Essaie d’utiliser deux boucles ˋpour\` : une
           pour aller vers le haut et obtenir le nectar, et l’autre pour aller vers
           le bas et fabriquer le miel.'
@@ -8903,7 +8903,7 @@ fr-FR:
           </xml>
       courseF_bee_for_challenge2_2018:
         courseF_bee_for_challenge2_a: "Jette un œil à cette option pour le mouvement :
-          \ \n\n\\!\\[] (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)"
+          \ \n\n!\\[] (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)"
         courseF_bee_for_challenge2_b: 'Essaie d’utiliser deux boucles ˋpour\` : une
           pour aller vers le haut et obtenir le nectar, et l’autre pour aller vers
           le bas et fabriquer le miel.'
@@ -8969,7 +8969,7 @@ fr-FR:
           </xml>
       courseF_bee_for_challenge2_2019:
         courseF_bee_for_challenge2_a: "Jette un œil à cette option pour le mouvement :
-          \ \n\n\\!\\[] (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)"
+          \ \n\n!\\[] (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)"
         courseF_bee_for_challenge2_b: 'Essaie d’utiliser deux boucles ˋpour\` : une
           pour aller vers le haut et obtenir le nectar, et l’autre pour aller vers
           le bas et fabriquer le miel.'

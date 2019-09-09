@@ -32,6 +32,7 @@ ro:
         finish_sign_up_subheader_provider: 'Completează următoarele informații pentru a finaliza crearea unui cont Code.org cu <strong>%{provider}</strong> pentru<strong>%{email}</strong>.'
         error:
           future: nu poate fi în viitor
+  beta: "beta"
   hello: "Salutare lume"
   welcome_back: "Bine ai revenit, %{name}"
   your_professional_learning_plan: "Planul tău prifesional de învățare"

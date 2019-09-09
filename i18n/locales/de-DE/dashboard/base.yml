@@ -32,6 +32,7 @@ de:
         finish_sign_up_subheader_provider: 'Gib folgende Informationen ein um dein Code.org-Konto mit <strong>%{provider}</strong> für <strong>%{email}</strong> fertigzustellen.'
         error:
           future: darf nicht in der Zukunft liegen
+  beta: "Beta"
   hello: "Hallo Welt"
   welcome_back: "Willkommen zurück, %{name}"
   your_professional_learning_plan: "Ihr persönlicher Lernplan"

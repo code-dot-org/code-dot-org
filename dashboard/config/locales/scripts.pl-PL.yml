@@ -4845,6 +4845,8 @@ pl:
               name: Używanie procesu projektowania gier
             Project - Design a Game:
               name: Projekt - Zaprojektuj grę
+            Sprite Properties:
+              name: Właściwości duszka
         maddie-test:
           stages:
             new stage:
@@ -4859,3 +4861,29 @@ pl:
           stages:
             new stage:
               name: nowy etap
+        csd4-pilot:
+          stages:
+            What is a Computer?:
+              name: Czym jest komputer?
+            Input and Output:
+              name: Wejście i wyjście
+            Processing:
+              name: Przetwarzanie
+            Project - Propose an App:
+              name: Projekt - Propozycja aplikacji
+        csp2-pilot:
+          stages:
+            new stage:
+              name: nowy etap
+            Routers and Redundancy:
+              name: Routery i nadmiarowość
+        peru-2019:
+          stages:
+            new stage:
+              name: nowy etap
+            Introduction:
+              name: Wstęp
+            Nested Loops:
+              name: Zagnieżdżające się  pętle
+            Events in Star Wars:
+              name: Wydarzenia w Star Wars

@@ -1750,3 +1750,9 @@ fi:
               name: Nopeus
             Functions:
               name: Funktiot
+        peru-2019:
+          stages:
+            Introduction:
+              name: Johdanto
+            Nested Loops:
+              name: Sisäkkäiset silmukat

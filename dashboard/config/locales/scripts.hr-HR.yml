@@ -1506,3 +1506,9 @@ hr:
               name: Uvjeti
             Functions:
               name: Funkcije
+        peru-2019:
+          stages:
+            Introduction:
+              name: Uvod
+            Nested Loops:
+              name: Ugniježđene petlje

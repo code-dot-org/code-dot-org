@@ -28,6 +28,7 @@ tr:
         edit_header: 'Hesap Bilgilerini Düzenle'
         error:
           future: gelecekte olması mümkün değil
+  beta: "beta"
   hello: "Merhaba dünya"
   welcome_back: "Hoş geldiniz %{name}"
   your_professional_learning_plan: "Profesyonel Eğitim Planın"

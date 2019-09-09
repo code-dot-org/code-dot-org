@@ -342,11 +342,6 @@ id:
           CONDITION:
             '"when"': ketika
             '"while"': Selagi
-      gamelab_debugSprite:
-        options:
-          VAL:
-            'true': Benar
-            'false': Salah
       gamelab_getProp:
         options:
           PROPERTY:
@@ -404,7 +399,6 @@ id:
             '"x"': posisi x
             '"y"': posisi y
             '"direction"': Arah pergerakan
-            '"tint"': Mewarnai
       gamelab_setSizes:
         options:
           PROPERTY:
@@ -428,13 +422,6 @@ id:
             '"left"': kiri
             '"right"': kanan
             '"space"': luar angkasa
-      gamelab_whenPressedAndReleased:
-        options:
-          DIR:
-            "'up'": atas
-            "'down'": turun
-            "'left'": kiri
-            "'right'": kanan
       gamelab_whileKey:
         options:
           KEY:
