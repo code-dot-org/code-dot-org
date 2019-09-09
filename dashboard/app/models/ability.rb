@@ -221,7 +221,7 @@ class Ability
       ]
 
       # Only custom levels are editable.
-      cannot [:update, :destroy], Level do |level|
+      cannot [:clone, :update, :destroy], Level do |level|
         !level.custom?
       end
 
