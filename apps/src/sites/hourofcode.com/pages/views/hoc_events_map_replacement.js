@@ -64,6 +64,21 @@ $(document).ready(function() {
       filter: ['==', 'review', 'approved']
     });
 
+    map.addControl(new mapboxgl.FullscreenControl(), 'top-right');
+    map.addControl(
+      new mapboxgl.NavigationControl({showCompass: false}),
+      'bottom-right'
+    );
+
+    var legend = document.createElement('div');
+    legend.id = 'inmaplegend';
+    legend.className = 'inmap-mapbox-legend';
+    legend.index = 1;
+    $('#belowmaplegend div')
+      .clone()
+      .appendTo(legend);
+    document.getElementById('mapbox-map').appendChild(legend);
+
     map.on('click', 'hoc-events', function(e) {
       var coordinates = e.features[0].geometry.coordinates.slice();
       var organizationName = e.features[0].properties.organization_name;
