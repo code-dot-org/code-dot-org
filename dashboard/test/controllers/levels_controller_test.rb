@@ -780,6 +780,7 @@ class LevelsControllerTest < ActionController::TestCase
   end
 
   test 'external markdown levels will render <user_id/> as the actual user id' do
+    File.stubs(:write)
     dsl_text = <<DSL
 name 'user_id_replace'
 title 'title for user_id_replace'
