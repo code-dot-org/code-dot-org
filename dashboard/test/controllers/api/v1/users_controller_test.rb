@@ -110,6 +110,15 @@ class Api::V1::UsersControllerTest < ActionController::TestCase
     assert_equal response["next_census_display"], test_user.next_census_display
   end
 
+  test 'a post request to dismiss_donor_teacher_banner' do
+    test_user = create :user
+    sign_in(test_user)
+    post :dismiss_donor_teacher_banner, params: {user_id: 'me'}
+    assert_response :success
+    test_user.reload
+    assert_equal true, test_user.teacher_donor_banner_dismissed
+  end
+
   test "a get request to get school_name returns school object" do
     sign_in(@user)
     get :get_school_name, params: {user_id: @user.id}
