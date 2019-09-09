@@ -682,13 +682,17 @@ exports.install = function(blockly, blockInstallOptions) {
     helpUrl: '',
     init: function() {
       this.setHSV(184, 1.0, 0.74);
-      this.appendValueInput('VALUE')
-        .setCheck(blockly.BlockValueType.NUMBER)
-        .appendTitle(
-          new blockly.FieldDropdown(blockly.Blocks.draw_move.DIRECTIONS),
-          'DIR'
-        );
-      this.appendDummyInput().appendTitle(msg.dots());
+      this.interpolateMsg(
+        msg.moveDirectionByPixels(),
+        () => {
+          this.appendDummyInput().appendTitle(
+            new blockly.FieldDropdown(blockly.Blocks.draw_move.DIRECTIONS),
+            'DIR'
+          );
+        },
+        ['VALUE', 'Number', blockly.ALIGN_RIGHT],
+        blockly.ALIGN_RIGHT
+      );
       this.setInputsInline(true);
       this.setPreviousStatement(true);
       this.setNextStatement(true);
@@ -697,8 +701,8 @@ exports.install = function(blockly, blockInstallOptions) {
   };
 
   blockly.Blocks.draw_move.DIRECTIONS = [
-    [msg.moveForward(), 'moveForward'],
-    [msg.moveBackward(), 'moveBackward']
+    [msg.forward(), 'moveForward'],
+    [msg.backward(), 'moveBackward']
   ];
 
   generator.draw_move = function() {
