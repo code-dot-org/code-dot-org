@@ -1,15 +1,22 @@
 - content_for(:head) do
   %script{src: minifiable_asset_path('js/levelbuilder.js')}
   :scss
-    .controls-column > a {
-      &:hover {
-        text-decoration: none;
-      }
-      &:first-of-type {
-        margin-left: 1em;
-      }
-      &:last-of-type {
-        margin-right: 1em;
+    .main table {
+      width: 100%;
+    }
+    .controls-column {
+      width: 1%;
+      white-space: nowrap;
+      > a {
+        &:hover {
+          text-decoration: none;
+        }
+        &:first-of-type {
+          margin-left: 1em;
+        }
+        &:last-of-type {
+          margin-right: 1em;
+        }
       }
     }
 
@@ -32,7 +39,7 @@
 %table
   %thead
     %tr
-      %th
+      %th.controls-column
       %th Name
       %th Type
   %tbody
