@@ -88,6 +88,7 @@ level 'U4L09 Intro to Functions Video', progression: 'Declaring and Calling Func
 level 'U4 L09 Score Clicker Investigate', progression: 'Declaring and Calling Functions'
 level 'U4 L09 Thermostat App v7', progression: 'Declaring and Calling Functions'
 level 'updateScreen Pattern', progression: 'Update Screen Pattern'
+level 'CSP U4 L09 CFU Exit Ticket_2020', progression: 'Check Your Understanding', assessment: true
 
 stage 'Functions Practice', flex_category: 'csp_functions'
 level 'CSP U4L10 SFLP 20-21', progression: 'Lesson Overview'
