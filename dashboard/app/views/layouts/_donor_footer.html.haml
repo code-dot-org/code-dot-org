@@ -1,0 +1,5 @@
+- full_width = local_assigns[:full_width]
+.container{ style: 'padding: 10px;' + (full_width ? 'width: 855px; margin-left: 25px;' : '') }
+  %div
+    %h3
+      = current_user.name
