@@ -61,7 +61,9 @@ class LevelsController < ApplicationController
   def index
     levels = Level.order(updated_at: :desc)
     levels = levels.where('name LIKE ?', "%#{params[:name]}%") if params[:name]
+    levels = levels.where('type = ?', params[:level_type]) if params[:level_type].present?
     @levels = levels.page(params[:page]).per(LEVELS_PER_PAGE)
+    @level_types = LEVEL_CLASSES.map(&:name)
   end
 
   # GET /levels/1

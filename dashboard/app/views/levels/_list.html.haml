@@ -5,6 +5,10 @@
 = form_tag levels_path, method: :get do
   = label_tag 'Filter by name:'
   = text_field_tag :name, params[:name], autofocus: true
+  = label_tag 'Filter by type:'
+  - level_type_options = [['All types', '']].concat @level_types.map {|x| [x, x]}
+  = select_tag :level_type, options_for_select(level_type_options, params[:level_type])
+  = submit_tag "Search"
 = paginate @levels
 %table
   %thead
