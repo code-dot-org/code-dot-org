@@ -22,7 +22,8 @@
                   stageLevelData: @script_file,
                   locales: options_for_locale_select,
                   script_families: ScriptConstants::FAMILY_NAMES,
-                  version_year_options: Script.get_version_year_options}
+                  version_year_options: Script.get_version_year_options,
+                  flex_category_map: I18n.t('flex_category')}
   %script{src: minifiable_asset_path('js/scripts/_form.js'),
           data: {levelBuilderEditScript: scriptData.to_json}}
 
