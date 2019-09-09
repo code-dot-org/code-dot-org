@@ -60,10 +60,14 @@ class LevelsController < ApplicationController
   # GET /levels.json
   def index
     levels = Level.order(updated_at: :desc)
-    levels = levels.where('name LIKE ?', "%#{params[:name]}%") if params[:name]
-    levels = levels.where('type = ?', params[:level_type]) if params[:level_type].present?
+    levels = levels.where('levels.name LIKE ?', "%#{params[:name]}%") if params[:name]
+    levels = levels.where('levels.type = ?', params[:level_type]) if params[:level_type].present?
+    if params[:script_id].present?
+      levels = levels.joins(:script_levels).where('script_levels.script_id = ?', params[:script_id])
+    end
     @levels = levels.page(params[:page]).per(LEVELS_PER_PAGE)
     @level_types = LEVEL_CLASSES.map(&:name)
+    @scripts = Script.pluck(:name, :id)
   end
 
   # GET /levels/1
