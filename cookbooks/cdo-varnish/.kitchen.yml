@@ -1,33 +1,32 @@
 ---
-transport:
-  name: sftp
 driver:
-  name: docker
-  use_sudo: false
-  privileged: true
+  name: dokken
+  chef_version: 12.7.2
+
+transport:
+  name: dokken
 
 provisioner:
-  name: chef_zero
-  require_chef_omnibus: 12.6.0
-  environments_path: test/environments
-  client_rb:
-    node_name: test_varnish
-    environment: integration
+  name: dokken
 
 platforms:
-  - name: ubuntu-14.04
-    run_list:
-      - recipe[apt]
-    attributes:
-      cdo-apps:
-        dashboard:
-          port: 8080
-        pegasus:
-          port: 8081
-        i18n:
-          languages:
-            en: English
-            fr: French
+- name: ubuntu-14.04
+  driver:
+    image: dokken/ubuntu-14.04
+    pid_one_command: /sbin/init
+  attributes:
+    cdo-apps:
+      dashboard:
+        port: 8080
+      pegasus:
+        port: 8081
+      i18n:
+        languages:
+          en: English
+          fr: French
+  run_list:
+  - recipe[apt]
+
 suites:
   - name: default
     run_list:
