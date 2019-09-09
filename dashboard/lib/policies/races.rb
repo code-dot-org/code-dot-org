@@ -1,4 +1,4 @@
-class Races
+class RacesPolicy
   # races: array of strings, the races that a student has selected.
   # Allowed values for race are:
   #   white: "White"
