@@ -18,7 +18,6 @@ level 'U4 L02 Thermostat App v1 Code', progression: 'Thermostat App v1'
 level 'U4 L02 Thermostat App v2', progression: 'Thermostat App v2'
 level 'U4 L02 Thermostat App v3', progression: 'Thermostat App v3'
 level 'U4 L02 Thermostat App v3 pt2', progression: 'Thermostat App v3'
-level 'U4 L02 Thermostat App v3 pt3', progression: 'Thermostat App v3'
 level 'U4 L02 CYU Exit Ticket', progression: 'Check For Understanding', assessment: true
 
 stage 'Variables Practice', flex_category: 'csp_variables'
@@ -33,6 +32,7 @@ level 'U4 L03 Variables operator practice 6', progression: 'Variables and Operat
 level 'U4 L03 Variable Scope: Local vs. Global', progression: 'Debugging Scope Issues'
 level 'U4 L03 Scope Issue', progression: 'Debugging Scope Issues'
 level 'U4 L03 Variables operator practice 4', progression: 'Putting it Together'
+level 'U4L3 CFU Variables Psuedocode', progression: 'Check For Understanding: AP Practice', assessment: true
 
 stage 'Variables Make', flex_category: 'csp_variables'
 level 'CSP U4L4 SFLP 20-21', progression: 'Lesson Overview'

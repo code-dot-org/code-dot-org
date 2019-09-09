@@ -186,16 +186,12 @@
       "toggleSwitch.isOpen": null,
       "onBoardEvent": null
     },
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ],
     "embed": "true",
     "instructions_important": "false",
     "display_name": "Thermostat App",
-    "long_instructions": "# Thermostat App\r\n\r\nWith a partner test this app. \r\n\r\nTry: \r\n* username: GT\r\n* password: password\r\n\r\n",
+    "long_instructions": "# Thermostat App\r\n\r\n**Do This:** With a partner test this app. \r\n\r\nTry: \r\n\r\n* username: raysHouse\r\n* password: hotandcold\r\n\r\nAlso try:\r\n\r\n* username: jillsHouse\r\n* password: hotandcold\r\n",
     "submittable": "false",
-    "start_blocks": "var tempF = 70;\r\nvar tempC = Math.round((tempF - 32)*(5/9));\r\nvar tempDisplayF = tempF + \" F\";\r\nvar tempDisplayC = tempC + \" C\";\r\nvar userName;\r\nvar password;\r\n\r\nsetText(\"temperatureF\", tempDisplayF);\r\nsetText(\"temperatureC\", tempDisplayC);\r\n\r\nonEvent(\"downButton\", \"click\", function() {\r\n  if(tempF > 60){\r\n    tempF = tempF - 1;\r\n    tempC = Math.round((tempF - 32)*(5/9));\r\n  }\r\n  if(tempF >= 80){\r\n    setProperty(\"temperatureF\",\"text-color\",\"red\");\r\n    setProperty(\"temperatureC\",\"text-color\",\"red\");\r\n  } else if (tempF >= 70) {\r\n    setProperty(\"temperatureF\",\"text-color\",\"lightBlue\");\r\n    setProperty(\"temperatureC\",\"text-color\",\"lightBlue\");\r\n  } else {\r\n    setProperty(\"temperatureF\",\"text-color\",\"blue\");\r\n    setProperty(\"temperatureC\",\"text-color\",\"blue\");\r\n  }\r\n  tempDisplayF = tempF + \" F\";\r\n  tempDisplayC = tempC + \" C\";\r\n  setText(\"temperatureF\", tempDisplayF);\r\n  setText(\"temperatureC\", tempDisplayC);\r\n  playSound(\"sound://category_objects/sharp_switch.mp3\");\r\n});\r\n\r\nonEvent(\"upButton\", \"click\", function(){\r\n  if(tempF < 90){\r\n    tempF = tempF + 1;\r\n    tempC = Math.round((tempF - 32)*(5/9));\r\n  }\r\n  if(tempF >= 80){\r\n    setProperty(\"temperatureF\",\"text-color\",\"red\");\r\n    setProperty(\"temperatureC\",\"text-color\",\"red\");\r\n  } else if (tempF >= 70) {\r\n    setProperty(\"temperatureF\",\"text-color\",\"lightBlue\");\r\n    setProperty(\"temperatureC\",\"text-color\",\"lightBlue\");\r\n  } else {\r\n    setProperty(\"temperatureF\",\"text-color\",\"blue\");\r\n    setProperty(\"temperatureC\",\"text-color\",\"blue\");\r\n  }\r\n  tempDisplayF = tempF + \" F\";\r\n  tempDisplayC = tempC + \" C\";\r\n  setText(\"temperatureF\", tempDisplayF);\r\n  setText(\"temperatureC\", tempDisplayC);\r\n  playSound(\"sound://category_objects/sharp_switch.mp3\");\r\n});\r\n\r\nonEvent(\"loginButton\", \"click\", function() {\r\n  userName = getText(\"nameInput\");\r\n  password = getText(\"passwordInput\");\r\n  if((userName == \"GT\") && (password == \"password\")){\r\n    setScreen(\"homeScreen\");\r\n  } else if ((userName == \"Hannah\") && (password == \"password\")){\r\n    setScreen(\"homeScreen\");\r\n  } else {\r\n    playSound(\"sound://category_instrumental/marimba_downscale_1.mp3\");\r\n  }\r\n});\r\n",
+    "start_blocks": "var tempF = 70;\r\nvar tempC = Math.round((tempF - 32)*(5/9));\r\nvar tempDisplayF = tempF + \" F\";\r\nvar tempDisplayC = tempC + \" C\";\r\nvar userName;\r\nvar password;\r\n\r\nsetText(\"temperatureF\", tempDisplayF);\r\nsetText(\"temperatureC\", tempDisplayC);\r\n\r\nonEvent(\"downButton\", \"click\", function() {\r\n  if(tempF > 60){\r\n    tempF = tempF - 1;\r\n    tempC = Math.round((tempF - 32)*(5/9));\r\n  }\r\n  if(tempF >= 80){\r\n    setProperty(\"temperatureF\",\"text-color\",\"red\");\r\n    setProperty(\"temperatureC\",\"text-color\",\"red\");\r\n  } else if (tempF >= 70) {\r\n    setProperty(\"temperatureF\",\"text-color\",\"lightBlue\");\r\n    setProperty(\"temperatureC\",\"text-color\",\"lightBlue\");\r\n  } else {\r\n    setProperty(\"temperatureF\",\"text-color\",\"blue\");\r\n    setProperty(\"temperatureC\",\"text-color\",\"blue\");\r\n  }\r\n  tempDisplayF = tempF + \" F\";\r\n  tempDisplayC = tempC + \" C\";\r\n  setText(\"temperatureF\", tempDisplayF);\r\n  setText(\"temperatureC\", tempDisplayC);\r\n  playSound(\"sound://category_objects/sharp_switch.mp3\");\r\n});\r\n\r\nonEvent(\"upButton\", \"click\", function(){\r\n  if(tempF < 90){\r\n    tempF = tempF + 1;\r\n    tempC = Math.round((tempF - 32)*(5/9));\r\n  }\r\n  if(tempF >= 80){\r\n    setProperty(\"temperatureF\",\"text-color\",\"red\");\r\n    setProperty(\"temperatureC\",\"text-color\",\"red\");\r\n  } else if (tempF >= 70) {\r\n    setProperty(\"temperatureF\",\"text-color\",\"lightBlue\");\r\n    setProperty(\"temperatureC\",\"text-color\",\"lightBlue\");\r\n  } else {\r\n    setProperty(\"temperatureF\",\"text-color\",\"blue\");\r\n    setProperty(\"temperatureC\",\"text-color\",\"blue\");\r\n  }\r\n  tempDisplayF = tempF + \" F\";\r\n  tempDisplayC = tempC + \" C\";\r\n  setText(\"temperatureF\", tempDisplayF);\r\n  setText(\"temperatureC\", tempDisplayC);\r\n  playSound(\"sound://category_objects/sharp_switch.mp3\");\r\n});\r\n\r\nonEvent(\"loginButton\", \"click\", function() {\r\n  userName = getText(\"nameInput\");\r\n  password = getText(\"passwordInput\");\r\n  if((userName == \"raysHouse\") && (password == \"hotandcold\")){\r\n    setScreen(\"homeScreen\");\r\n  } else if ((userName == \"jillsHouse\") && (password == \"hotandcold\")){\r\n    setScreen(\"homeScreen\");\r\n  } else {\r\n    playSound(\"sound://category_instrumental/marimba_downscale_1.mp3\");\r\n  }\r\n});\r\n",
     "never_autoplay_video": "false",
     "hide_share_and_remix": "true",
     "droplet_tooltips_disabled": "false",
@@ -215,11 +211,17 @@
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
     "makerlab_enabled": "false",
-    "contained_level_names": null
+    "preload_asset_list": null,
+    "encrypted": "false",
+    "encrypted_examples": [
+
+    ],
+    "mini_rubric": "false",
+    "widget_mode": "false"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2019-02-07 15:42:11 +0000\",\"changed\":[\"notes\",\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-02-07 15:43:51 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"encrypted_examples\",\"embed\",\"hide_share_and_remix\",\"free_play\",\"contained_level_names\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2019-02-07 15:42:11 +0000\",\"changed\":[\"notes\",\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-02-07 15:43:51 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"encrypted_examples\",\"embed\",\"hide_share_and_remix\",\"free_play\",\"contained_level_names\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-09-09 16:32:19 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"start_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
