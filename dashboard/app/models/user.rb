@@ -507,6 +507,7 @@ class User < ActiveRecord::Base
     return unless races_changed?
 
     self.races = Races.sanitized(races).join(',')
+    self.races = nil if races.empty?
     self.urm = Races.any_urm?(races)
   end
 
