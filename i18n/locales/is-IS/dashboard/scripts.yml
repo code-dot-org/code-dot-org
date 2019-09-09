@@ -4509,6 +4509,8 @@ is:
               description_teacher: Þessi kennslustund kynnir ferlið sem hópurinn mun nota til að hanna leiki það sem eftir er einingarinnar. Ferlið er byggt á verkefnishandbók þar sem nemendum er ætlað að skilgreina kvika sína, breytur og föll áður en þeir byrja að forrita leikinn. Í tímanum byrja nemendur á að spila leik í Leikjasmiðjunni þar sem kóðinn er falinn. Þeir ræða hvaða kvika, breytur og föll gæti þurft til að búa til slíkan leik. Þeir fá síðan í hendur tilbúna verkefnishandbók sem sýnir eina leið til að gera leikinn. Hópurinn fer yfir þetta ferli í röð áfanga. Í tímanum fær hópurinn einnig stutta kynningu á að nota fjölrammahreyfingar í Leikjasmiðjunni. Í lok tímans fá þau tækifæri til að betrumbæta leikinn að vild.
             Using the Game Design Process:
               name: Notkun leikjahönnunarferlisins
+            Sprite Properties:
+              name: Eiginleikar kvika
         maddie-test:
           stages:
             new stage:
@@ -4521,3 +4523,25 @@ is:
           stages:
             new stage:
               name: nýr áfangi
+        csd4-pilot:
+          stages:
+            Input and Output:
+              name: Inntak og Úttak
+            Processing:
+              name: Vinnsla
+            Project - Propose an App:
+              name: Verkefni - Tillaga að Appi
+        csp2-pilot:
+          stages:
+            new stage:
+              name: nýr áfangi
+            Routers and Redundancy:
+              name: Netbeinar og umfremd
+        peru-2019:
+          stages:
+            new stage:
+              name: nýr áfangi
+            Introduction:
+              name: Kynning
+            Nested Loops:
+              name: Innri lykkjur

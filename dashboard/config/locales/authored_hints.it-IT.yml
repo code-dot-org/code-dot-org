@@ -4375,22 +4375,22 @@ it-IT:
         courseB_maze_seq_challenge1_b: Prova an andare a ovest per iniziare.
       course1_playlab_events_challenge1:
         courseA_playlab_events_challenge1_a: "Fai apparire il pinguino quando clicchi
-          sull'uccellino!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n
+          sull'uccellino!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
           \   <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
           \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n
           \     </block>\n    </next>\n  </block></xml>"
         courseA_playlab_events_challenge1_b: "Fai apparire il fantasma quando clicchi
-          sul pinguino!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title
+          sul pinguino!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title
           name=\"SPRITE\">3</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
           \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">4</title>\n
           \     </block>\n    </next>\n  </block></xml>"
         courseA_playlab_events_challenge1_c: "Fai apparire il mostro allegro quando
-          clicchi sul fantasma!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n
+          clicchi sul fantasma!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
           \   <title name=\"SPRITE\">4</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
           \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">5</title>\n
           \     </block>\n    </next>\n  </block></xml>"
         courseA_playlab_events_challenge1_d: "Fai apparire il robot quando clicchi
-          sul mostro!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title
+          sul mostro!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title
           name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
           \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">6</title>\n
           \     </block>\n    </next>\n  </block></xml>"
@@ -4398,7 +4398,7 @@ it-IT:
         courseA_playlab_events_challenge2_a: "Puoi fare cantare l'uccellino.\n\n<xml>
           \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n
           \   <next>\n          <block type=\"studio_saySprite\">\n            <title
-          name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Cip</title>\n
+          name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n
           \         </block>\n    </next>\n  </block></xml>"
         courseA_playlab_events_challenge2_b: "Puoi far suonare il robot.\n\n<xml>\n
           \ <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n
@@ -4894,21 +4894,21 @@ it-IT:
             </block>
           </xml>
       courseA_artist_loops2:
-        courseA_artist_loops2_a: |-
-          Non riesci ad immaginare come si fa a disegnare una linea? Per vedere cosa capita, inizia ad agganciare qualche blocco a caso al blocco iniziale
-          <xml><block type="when_run"/></xml>
+        courseA_artist_loops2_a: Non riesci ad immaginare come si fa a disegnare una
+          linea? Per vedere cosa capita, inizia ad agganciare qualche blocco a caso
+          al blocco iniziale <xml><block type="when_run"/></xml>
         courseA_artist_loops2_b: Utilizza questo blocco <xml><block type="simple_move_right"/></xml>
           per risolvere questo esercizio.
       courseA_artist_loops2_2018:
-        courseA_artist_loops2_a: |-
-          Non riesci ad immaginare come si fa a disegnare una linea? Per vedere cosa capita, inizia ad agganciare qualche blocco a caso al blocco iniziale
-          <xml><block type="when_run"/></xml>
+        courseA_artist_loops2_a: Non riesci ad immaginare come si fa a disegnare una
+          linea? Per vedere cosa capita, inizia ad agganciare qualche blocco a caso
+          al blocco iniziale <xml><block type="when_run"/></xml>
         courseA_artist_loops2_b: Utilizza questo blocco <xml><block type="simple_move_right"/></xml>
           per risolvere questo esercizio.
       courseA_artist_loops2_2019:
-        courseA_artist_loops2_a: |-
-          Non riesci ad immaginare come si fa a disegnare una linea? Per vedere cosa capita, inizia ad agganciare qualche blocco a caso al blocco iniziale
-          <xml><block type="when_run"/></xml>
+        courseA_artist_loops2_a: Non riesci ad immaginare come si fa a disegnare una
+          linea? Per vedere cosa capita, inizia ad agganciare qualche blocco a caso
+          al blocco iniziale <xml><block type="when_run"/></xml>
         courseA_artist_loops2_b: Utilizza questo blocco <xml><block type="simple_move_right"/></xml>
           per risolvere questo esercizio.
       courseA_artist_loops3:
@@ -4939,7 +4939,7 @@ it-IT:
         courseA_artist_loops4_b: |-
           Dato che puoi usare solo un blocco <xml><block type="simple_move_right"/></xml>
 
-          prova a metterlo all'interno del ciclo <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="2-6">5</title></block></xml> loop.
+          prova a metterlo all'interno del ciclo <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="2-6">5</title></block></xml>
       courseA_artist_loops4_2018:
         courseA_artist_loops4_a: Per indicare quante volte vuoi che il ciclo sia ripetuto,
           devi scrivere il numero di ripetizioni richieste al posto dei punti interrogativi
@@ -4947,7 +4947,7 @@ it-IT:
         courseA_artist_loops4_b: |-
           Dato che puoi usare solo un blocco <xml><block type="simple_move_right"/></xml>
 
-          prova a metterlo all'interno del ciclo <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="2-6">5</title></block></xml> loop.
+          prova a metterlo all'interno del ciclo <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="2-6">5</title></block></xml>
       courseA_artist_loops4_2019:
         courseA_artist_loops4_a: Per indicare quante volte vuoi che il ciclo sia ripetuto,
           devi scrivere il numero di ripetizioni richieste al posto dei punti interrogativi
@@ -4955,7 +4955,7 @@ it-IT:
         courseA_artist_loops4_b: |-
           Dato che puoi usare solo un blocco <xml><block type="simple_move_right"/></xml>
 
-          prova a metterlo all'interno del ciclo <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="2-6">5</title></block></xml> loop.
+          prova a metterlo all'interno del ciclo <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="2-6">5</title></block></xml>
       courseA_artist_loops5:
         courseA_artist_loops5_a: Prova a utilizzare quello che hai imparato sui blocchi
           <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES"
@@ -5065,16 +5065,16 @@ it-IT:
           al programma che trovi già scritto.
         courseA_artist_loops9_b: "Il blocco che aggiungi devi inserirlo all'interno
           del ciclo \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title
-          name=\"TIMES\" config=\"3-10\">5</title></block> </xml>"
+          name=\"TIMES\" config=\"3-10\">5</title></block>\n</xml>"
         courseA_artist_loops9_c: Se non riesci a capire dove mettere il ciclo, prova
           a scrivere il codice con tutti i blocchi azzurri e cerca poi di riconoscere
           la sequenza che si ripete.
       courseA_artist_loops9_2018:
         courseA_artist_loops9_a: Per disegnare il resto della scala, aggiungi un blocco
           al programma che trovi già scritto.
-        courseA_artist_loops9_b: "Il blocco che aggiungi devi inserirlo all'interno
-          del ciclo \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title
-          name=\"TIMES\" config=\"3-10\">5</title></block> </xml>"
+        courseA_artist_loops9_b: |-
+          Il blocco che aggiungi devi inserirlo all'interno del ciclo <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">5</title></block>
+          </xml>
         courseA_artist_loops9_c: Se non riesci a capire dove mettere il ciclo, prova
           a scrivere il codice con tutti i blocchi azzurri e cerca poi di riconoscere
           la sequenza che si ripete.
@@ -5083,7 +5083,7 @@ it-IT:
           al programma che trovi già scritto.
         courseA_artist_loops9_b: "Il blocco che aggiungi devi inserirlo all'interno
           del ciclo \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title
-          name=\"TIMES\" config=\"3-10\">5</title></block> </xml>"
+          name=\"TIMES\" config=\"3-10\">5</title></block>\n</xml>"
         courseA_artist_loops9_c: Se non riesci a capire dove mettere il ciclo, prova
           a scrivere il codice con tutti i blocchi azzurri e cerca poi di riconoscere
           la sequenza che si ripete.
@@ -5112,21 +5112,21 @@ it-IT:
         courseA_collector_loops1_a: |-
           Dopo aver raggiunto una casella con un diamante, usa questo blocco per raccoglierlo:
 
-          <xml><block type="collector_collect"/></xml>
+          <xml>  <block type="collector_collect"/></xml>
         courseA_collector_loops1_b: Una soluzione semplice sarebbe spostarsi verso
           Est `E →` 2 volte, quindi prendere il diamante.
       courseA_collector_loops1_2018:
         courseA_collector_loops1_a: |-
           Dopo aver raggiunto una casella con un diamante, usa questo blocco per raccoglierlo:
 
-          <xml><block type="collector_collect"/></xml>
+          <xml>  <block type="collector_collect"/></xml>
         courseA_collector_loops1_b: Una soluzione semplice sarebbe spostarsi verso
           Est `E →` 2 volte, quindi prendere il diamante.
       courseA_collector_loops1_2019:
         courseA_collector_loops1_a: |-
           Dopo aver raggiunto una casella con un diamante, usa questo blocco per raccoglierlo:
 
-          <xml><block type="collector_collect"/></xml>
+          <xml>  <block type="collector_collect"/></xml>
         courseA_collector_loops1_b: Una soluzione semplice sarebbe spostarsi verso
           Est `E →` 2 volte, quindi prendere il diamante.
       courseA_collector_loops2:
@@ -5134,28 +5134,28 @@ it-IT:
         courseA_collector_loops2_b: |-
           Dopo aver raggiunto una casella con un diamante, usa questo blocco per raccoglierlo:
 
-          <xml><block type="collector_collect"/></xml>
+          <xml>  <block type="collector_collect"/></xml>
       courseA_collector_loops2_2018:
         courseA_collector_loops2_a: Devi muoverti prima di raccogliere qualsiasi diamante.
         courseA_collector_loops2_b: |-
           Dopo aver raggiunto una casella con un diamante, usa questo blocco per raccoglierlo:
 
-          <xml><block type="collector_collect"/></xml>
+          <xml>  <block type="collector_collect"/></xml>
       courseA_collector_loops2_2019:
         courseA_collector_loops2_a: Devi muoverti prima di raccogliere qualsiasi diamante.
         courseA_collector_loops2_b: |-
           Dopo aver raggiunto una casella con un diamante, usa questo blocco per raccoglierlo:
 
-          <xml><block type="collector_collect"/></xml>
+          <xml>  <block type="collector_collect"/></xml>
       courseA_collector_loops3:
-        courseA_collector_loops3_a: "Prova ad usare un ciclo \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title
-          name=\"TIMES\" config=\"3-10\">???</title></block></xml>"
+        courseA_collector_loops3_a: Prova ad usare un ciclo <xml><block type="controls_repeat_simplified_dropdown"><title
+          name="TIMES" config="3-10">???</title></block></xml>
         courseA_collector_loops3_b: 'Ricorda: puoi mettere più di un blocco dentro
           un ciclo <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES"
           config="3-10">???</title></block></xml>'
       courseA_collector_loops3_2018:
-        courseA_collector_loops3_a: "Prova ad usare un ciclo \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title
-          name=\"TIMES\" config=\"3-10\">???</title></block></xml>"
+        courseA_collector_loops3_a: Prova ad usare un ciclo <xml><block type="controls_repeat_simplified_dropdown"><title
+          name="TIMES" config="3-10">???</title></block></xml>
         courseA_collector_loops3_b: 'Ricorda: puoi mettere più di un blocco dentro
           un ciclo <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES"
           config="3-10">???</title></block></xml>'
@@ -5166,21 +5166,21 @@ it-IT:
       courseA_collector_loops4:
         courseA_collector_loops4_a: Per modificare di quante caselle deve spostarsi
           Laura, cambia il numero di volte che il ciclo viene eseguito.
-        courseA_collector_loops4_b: |-
-          Non dimenticare che, dopo aver terminato il ciclo, Laura deve ancora scendere per raccogliere l'ultimo diamante
-          <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>
+        courseA_collector_loops4_b: Non dimenticare che, dopo aver terminato il ciclo,
+          Laura deve ancora scendere per raccogliere l'ultimo diamante <xml><block
+          type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>
       courseA_collector_loops4_2018:
         courseA_collector_loops4_a: Per modificare di quante caselle deve spostarsi
           Laura, cambia il numero di volte che il ciclo viene eseguito.
-        courseA_collector_loops4_b: |-
-          Non dimenticare che, dopo aver terminato il ciclo, Laura deve ancora scendere per raccogliere l'ultimo diamante
-          <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>
+        courseA_collector_loops4_b: Non dimenticare che, dopo aver terminato il ciclo,
+          Laura deve ancora scendere per raccogliere l'ultimo diamante <xml><block
+          type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>
       courseA_collector_loops4_2019:
         courseA_collector_loops4_a: Per modificare di quante caselle deve spostarsi
           Laura, cambia il numero di volte che il ciclo viene eseguito.
-        courseA_collector_loops4_b: |-
-          Non dimenticare che, dopo aver terminato il ciclo, Laura deve ancora scendere per raccogliere l'ultimo diamante
-          <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>
+        courseA_collector_loops4_b: Non dimenticare che, dopo aver terminato il ciclo,
+          Laura deve ancora scendere per raccogliere l'ultimo diamante <xml><block
+          type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>
       courseA_collector_loops5:
         courseA_collector_loops5_a: Se non riesci subito a capire la risposta, prova
           ad utilizzare un foglio di carta per capire di quali frecce hai bisogno
@@ -5371,10 +5371,11 @@ it-IT:
         courseA_collector_loops2_b: |-
           Dopo aver raggiunto una casella con un diamante, usa questo blocco per raccoglierlo:
 
-          <xml><block type="collector_collect"/></xml>
+          <xml>  <block type="collector_collect"/></xml>
       courseA_harvester_loops1:
         courseA_harvester_loops1_a: |-
           Quando vai avanti verso le pannocchie, usa questo blocco per raccoglierle!
+
           <xml><block type="harvester_corn"/></xml>
       courseA_harvester_loops1_2019:
         courseA_harvester_loops1_a: |-
@@ -5383,7 +5384,8 @@ it-IT:
       courseA_harvester_loops2:
         courseA_harvester_loops2_a: |-
           Il tuo codice avrà **quattro** blocchi <xml><block type="maze_moveWest"/></xml>
-          e **quattro** blocchi <xml><block type="harvester_corn"/> </xml>
+
+          e **quattro** blocchi <xml><block type="harvester_corn"/></xml>
         courseA_harvester_loops2_b: 'Se hai ancora difficoltà, prova a pronunciare
           le istruzioni a voce alta. '
       courseA_harvester_loops2_2019:
@@ -5400,9 +5402,9 @@ it-IT:
               <title name="TIMES" config="2-10">4</title>
             </block></xml>
         courseA_harvester_loops3_b: "Per ripetere una sequenza di istruzioni, trascina
-          nell'area di lavoro un blocco\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title
-          name=\"TIMES\" config=\"2-10\">4</title></block></xml> quindi inserisci
-          al suo interno i blocchi che vuoi ripetere. "
+          nell'area di lavoro un blocco <xml><block type=\"controls_repeat_simplified_dropdown\">\n
+          \   <title name=\"TIMES\" config=\"2-10\">4</title>\n  </block></xml> quindi
+          inserisci al suo interno i blocchi che vuoi ripetere. "
       courseA_harvester_loops3_2019:
         courseA_harvester_loops3_a: |-
           Usa un blocco `ripeti` come questo per aiutarti!
@@ -5997,7 +5999,7 @@ it-IT:
           <next>
           <block type="studio_saySpriteChoices">
               <title name="SPRITE">1</title>
-              <title name="VALUE">Ciao!</title>
+              <title name="VALUE">Hi there.</title>
             </block>
           </next>
           </block>
@@ -6012,7 +6014,7 @@ it-IT:
           <next>
           <block type="studio_saySpriteChoices">
               <title name="SPRITE">1</title>
-              <title name="VALUE">Ciao!</title>
+              <title name="VALUE">Hi there.</title>
             </block>
           </next>
           </block>
@@ -6027,7 +6029,7 @@ it-IT:
           <next>
           <block type="studio_saySpriteChoices">
               <title name="SPRITE">1</title>
-              <title name="VALUE">Ciao!</title>
+              <title name="VALUE">Hi there.</title>
             </block>
           </next>
           </block>
@@ -6232,79 +6234,79 @@ it-IT:
             </block></xml>
       courseA_playlab_events_challenge1:
         courseA_playlab_events_challenge1_a: "Fai apparire il pinguino quando clicchi
-          sull'uccellino!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n
+          sull'uccellino!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
           \   <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
           \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n
           \     </block>\n    </next>\n  </block></xml>"
         courseA_playlab_events_challenge1_b: "Fai apparire il fantasma quando clicchi
-          sul pinguino!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title
+          sul pinguino!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title
           name=\"SPRITE\">3</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
           \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">4</title>\n
           \     </block>\n    </next>\n  </block></xml>"
         courseA_playlab_events_challenge1_c: "Fai apparire il mostro allegro quando
-          clicchi sul fantasma!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n
+          clicchi sul fantasma!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
           \   <title name=\"SPRITE\">4</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
           \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">5</title>\n
           \     </block>\n    </next>\n  </block></xml>"
         courseA_playlab_events_challenge1_d: "Fai apparire il robot quando clicchi
-          sul mostro!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title
+          sul mostro!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title
           name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
           \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">6</title>\n
           \     </block>\n    </next>\n  </block></xml>"
         courseA_playlab_events_challenge1_e: "Infine, fai apparire il mago quando
-          clicchi sul robot!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n
+          clicchi sul robot!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
           \   <title name=\"SPRITE\">6</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
           \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">7</title>\n
           \     </block>\n    </next>\n  </block></xml>"
       courseA_playlab_events_challenge1_2018:
         courseA_playlab_events_challenge1_a: "Fai apparire il pinguino quando clicchi
-          sull'uccellino!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n
+          sull'uccellino!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
           \   <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
           \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n
           \     </block>\n    </next>\n  </block></xml>"
         courseA_playlab_events_challenge1_b: "Fai apparire il fantasma quando clicchi
-          sul pinguino!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title
+          sul pinguino!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title
           name=\"SPRITE\">3</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
           \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">4</title>\n
           \     </block>\n    </next>\n  </block></xml>"
         courseA_playlab_events_challenge1_c: "Fai apparire il mostro allegro quando
-          clicchi sul fantasma!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n
+          clicchi sul fantasma!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
           \   <title name=\"SPRITE\">4</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
           \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">5</title>\n
           \     </block>\n    </next>\n  </block></xml>"
         courseA_playlab_events_challenge1_d: "Fai apparire il robot quando clicchi
-          sul mostro!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title
+          sul mostro!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title
           name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
           \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">6</title>\n
           \     </block>\n    </next>\n  </block></xml>"
         courseA_playlab_events_challenge1_e: "Infine, fai apparire il mago quando
-          clicchi sul robot!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n
+          clicchi sul robot!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
           \   <title name=\"SPRITE\">6</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
           \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">7</title>\n
           \     </block>\n    </next>\n  </block></xml>"
       courseA_playlab_events_challenge1_2019:
         courseA_playlab_events_challenge1_a: "Fai apparire il pinguino quando clicchi
-          sull'uccellino!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n
+          sull'uccellino!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
           \   <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
           \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n
           \     </block>\n    </next>\n  </block></xml>"
         courseA_playlab_events_challenge1_b: "Fai apparire il fantasma quando clicchi
-          sul pinguino!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title
+          sul pinguino!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title
           name=\"SPRITE\">3</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
           \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">4</title>\n
           \     </block>\n    </next>\n  </block></xml>"
         courseA_playlab_events_challenge1_c: "Fai apparire il mostro allegro quando
-          clicchi sul fantasma!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n
+          clicchi sul fantasma!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
           \   <title name=\"SPRITE\">4</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
           \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">5</title>\n
           \     </block>\n    </next>\n  </block></xml>"
         courseA_playlab_events_challenge1_d: "Fai apparire il robot quando clicchi
-          sul mostro!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title
+          sul mostro!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title
           name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
           \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">6</title>\n
           \     </block>\n    </next>\n  </block></xml>"
         courseA_playlab_events_challenge1_e: "Infine, fai apparire il mago quando
-          clicchi sul robot!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n
+          clicchi sul robot!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
           \   <title name=\"SPRITE\">6</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
           \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">7</title>\n
           \     </block>\n    </next>\n  </block></xml>"
@@ -6312,7 +6314,7 @@ it-IT:
         courseA_playlab_events_challenge2_a: "Puoi fare cantare l'uccellino.\n\n<xml>
           \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n
           \   <next>\n          <block type=\"studio_saySprite\">\n            <title
-          name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Cip</title>\n
+          name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n
           \         </block>\n    </next>\n  </block></xml>"
         courseA_playlab_events_challenge2_b: "Puoi far suonare il robot.\n\n<xml>\n
           \ <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n
@@ -6346,7 +6348,7 @@ it-IT:
         courseA_playlab_events_challenge2_a: "Puoi fare cantare l'uccellino.\n\n<xml>
           \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n
           \   <next>\n          <block type=\"studio_saySprite\">\n            <title
-          name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Cip</title>\n
+          name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n
           \         </block>\n    </next>\n  </block></xml>"
         courseA_playlab_events_challenge2_b: "Puoi far suonare il robot.\n\n<xml>\n
           \ <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n
@@ -6380,7 +6382,7 @@ it-IT:
         courseA_playlab_events_challenge2_a: "Puoi fare cantare l'uccellino.\n\n<xml>
           \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n
           \   <next>\n          <block type=\"studio_saySprite\">\n            <title
-          name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Cip</title>\n
+          name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n
           \         </block>\n    </next>\n  </block></xml>"
         courseA_playlab_events_challenge2_b: "Puoi far suonare il robot.\n\n<xml>\n
           \ <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n
@@ -11495,7 +11497,7 @@ it-IT:
         courseD_bounce_events10s_a: |-
           Dovresti avere entrambi questi eventi nel tuo codice:
 
-          <xml><block type="bounce_whenBallInGoal" deletable="false"><next><block type="bounce_playSound"><title name="SOUND">swish</title><next><block type="bounce_incrementPlayerScore"></block></next></block></next></block><block type="bounce_whenBallMissesPaddle" deletable="false"><next><block type="bounce_playSound"><title name="SOUND">whistle</title><next><block type="bounce_incrementOpponentScore"></block></next></block></next>\</block</xml>
+          <xml><block type="bounce_whenBallInGoal" deletable="false"><next><block type="bounce_playSound"><title name="SOUND">swish</title><next><block type="bounce_incrementPlayerScore"></block></next></block></next></block><block type="bounce_whenBallMissesPaddle" deletable="false"><next><block type="bounce_playSound"><title name="SOUND">whistle</title><next><block type="bounce_incrementOpponentScore"></block></next></block></next></block></xml>
       courseD_bounce_events10s_2019:
         courseD_bounce_events10s_a: |-
           Dovresti avere entrambi questi eventi nel tuo codice:
@@ -13283,7 +13285,7 @@ it-IT:
         courseD_artist_functions2_c: |-
           Per "richiamare" la funzione `disegna un quadrato` usa questo blocco verde:
 
-          <xml><block type="procedures_callnoreturn" limit="2"><mutation name="disegna un quadrato"/></block></xml>
+          <xml><block type="procedures_callnoreturn" limit="2"><mutation name="draw a square"/></block></xml>
 
           In caso contrario, il codice contenuto nella funzione non verrà mai eseguito.
         courseD_artist_functions2_a: |-

@@ -36,6 +36,7 @@ ga:
         edit_header: Cuir Sonraí an Chuntais in Eagar
         error:
           future: earráid - dáta sa todhchaí
+  beta: béite
   hello: Dia dhuit a dhomhain
   welcome_back: Fáilte ar ais a %{name}
   your_professional_learning_plan: Do phlean foghlamtha proifisiúnta

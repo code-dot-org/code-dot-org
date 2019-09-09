@@ -1791,3 +1791,11 @@ ko:
               name: 속도
             Functions:
               name: 함수
+            Sprite Properties:
+              name: 스프라이트 속성
+        peru-2019:
+          stages:
+            Introduction:
+              name: 소개
+            Nested Loops:
+              name: 중첩 반복

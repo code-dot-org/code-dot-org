@@ -1674,3 +1674,9 @@ lt:
               name: Greitis
             Functions:
               name: Komandų kūrimas
+        peru-2019:
+          stages:
+            Introduction:
+              name: Įvadas
+            Nested Loops:
+              name: Kartojimas kartojime

@@ -465,6 +465,50 @@ pl-PL:
         - correct: true
         - {}
         - {}
+      CSD U1 Lesson 5 Overview:
+        markdown: |
+          #Podsumowanie
+
+          Na tej lekcji poznasz różne typy urządzeń wejściowych i wyjściowych używanych przez komputer oraz rodzaje informacji które są przez nie wysyłane i odbierane.
+
+          ##Słowniczek
+
+          * **Wejście** - urządzenie lub komponent które dostarcza informacje do komputera
+          * **Wyjście** - urządzenie lub komponent które otrzymuje informacje z komputera
+
+
+          ## Zasoby
+
+          * [Input and Output - Activity Guide](https://docs.google.com/document/d/1ObS_kxkXoueaotPYFAEkcCDzn690zumqoLLnrU5kY2Q/export?format=pdf)
+      CSD U1 Lesson 6 Overview:
+        markdown: "#Podsumowanie\n\nNa tej lekcji dowiesz się jak ludzie i komputery
+          przekształcają dane wejściowe w wyjściowe. \n\n##Słowniczek\n\n* **Algorytm**
+          - szczegółowa sekwencja instrukcji przetwarzania, wykonywana przez komputer\n\n##
+          Zasoby\n\n* [Card Sorting Algorithm - Activity Guide](https://docs.google.com/document/d/1o4kVRnXnigufkS9WsjHjeD38f8MQrX6qCEFpka-F9Oo/export?format=pdf)\n"
+      CSD U1 Lesson 7 Overview:
+        markdown: |
+          # Podsumowanie
+
+          Na tej lekcji poznasz sposoby przechowywania informacji przez komputer, oraz dowiesz się dlaczego pamięć jest krytyczną częścią przetwarzania informacji.
+
+          ## Zasoby
+
+          * [Storage and Processing - Activity Guide](https://docs.google.com/document/d/1I-OzbJizf7m5DK5jfRxDtSYtc_SoSk6vGtSM9tqlGw0/export?format=pdf)
+      CSD U1 Lesson 8 Overview:
+        markdown: "# Podsumowanie\n\nNa tej lekcji dowiesz się jak aplikacje przetwarzają
+          różne rodzaje informacji w celu rozwiązania problemu. \n\n## Zasoby\n\n*
+          [App Exploration - Activity Guide](https://docs.google.com/document/d/1OW-fkwA7xeNZWiduWescL-6a6zFigtJVP7hfL1oNgVA/export?format=pdf)\n"
+      CSD U1 Lesson 9 Overview:
+        markdown: |
+          # Podsumowanie
+
+          W tym projekcie zaprojektujesz swoją własną aplikację, która rozwiąże zdefiniowany przez Ciebie problem.
+
+          ## Zasoby
+
+          * [Apps and Problem Solving - Project Guide](https://docs.google.com/document/d/1S7X-B2V1-WuT7ZLk1LAZRO1O5f4u7pgth4F7G00tGak/export?format=pdf)
+          * [Apps and Problem Solving - Peer Review](https://docs.google.com/document/d/13ekhJvtz1vovS6FhGBeDf1mcYFRyJe65bQdi8S8T9lU/export?format=pdf)
+          * [Apps and Problem Solving - Rubric](https://docs.google.com/document/d/1ix0LfgiVglwyC5Bb6PBlfBrnbeCOz2wPIPTgXu-qMZE/export?format=pdf)
       CSD U2 Design Project:
         title: tytuł
       CSD U2 Design Project_2018:
@@ -481,6 +525,18 @@ pl-PL:
         title: tytuł
       CSD U2 L6 Overview:
         title: tytuł
+      CSD U2 Top Websites:
+        markdown: |
+          # Ranking najczęściej odwiedzanych stron w Stanach Zjednoczonych
+
+          Poniżej wymieniono najczęściej odwiedzane strony internetowe w Stanach Zjednoczonych. Do każdej dołączono krótki opis ich podstawowych funkcji.
+
+          1. Google.com - wyszukiwarka stron internetowych, obrazów, plików wideo i innych mediów
+          2. Youtube.com - strona z materiałami wideo przesyłanymi przez użytkowników. Zawiera oceny i komentarze.
+          3. Facebook.com - medium społecznościowe, które pozwala na dzielenie się informacjami ze znajomymi
+          4. Amazon.com - sklep internetowy z ogromną gamą produktów
+          4. Yahoo.com - wyszukiwarka stron internetowych, serwer poczty email, źródło informacji
+          5. Wikipedia.org - darmowa encyklopedia z treściami generowanymi przez użytkowników
       CSD U2 expand project:
         title: tytuł
       CSD U2 expand project_2018:
@@ -994,6 +1050,27 @@ pl-PL:
         title: tytuł
       Prepare for your presentation:
         title: tytuł
+      Unit 1 Lesson 2 Overview:
+        markdown: |
+          # Podsumowanie
+
+          Na tej lekcji nauczysz się formalnych procesów rozwiązywania problemu które pomogą ci ustrukturyzować podejście do szerokiej gamy problemów.
+
+          ## Zasoby
+
+          * [The Problem Solving Process - Activity Guide](https://docs.google.com/document/d/1xEPMYIDy70fWCgyLymBNmxkE-6uJ7BYOXSmV8Vyt-SQ/export?format=pdf)
+      Unit 1 Lesson 3 Overview:
+        markdown: "#Podsumowanie\nNa tej lekcji poznasz proces rozwiązywania gamy
+          problemów, aby dowiedzieć się jak każdy krok pomże ci rozwijać i ulepszać
+          rozwiązywanie problemów. \n\n##Zasoby\n* [Solving Problems - Activity Guide](https://docs.google.com/document/d/1cym5lMuy41CbvXYe7F57N2XfI6Afp0hJsHovhR0GD2M/export?format=pdf)\n"
+      Unit 1 Lesson 4 Overview:
+        markdown: |
+          #Podsumowanie
+          Na tej lekcji zaczniesz rozważania, jak komputery pomagają niektóre problemy oraz poznasz kluczowe funkcjonalności każdego komputera.
+
+          ##Zasoby
+
+          * [What is a Computer - Activity Guide](https://docs.google.com/document/d/1g4dPcsx2xADEZI0FiMYApLr0hh3_-89NDWd2y86sS6I/export?format=pdf)
       behaviors 1 predict:
         questions:
         - {}
@@ -1676,6 +1753,14 @@ pl-PL:
         - correct: true
         - {}
         - {}
+      csd-pre-survey-2017-levelgroup:
+        markdown: "#Podsumowanie\nKlasa pracuje w grupach, projektując łódki z folii
+          aluminiowej, która pomieszczą jak najwięcej groszówek. Na koniec lekcji
+          grupy zastanowią się jakie doświadczenia wyniosły z ćwiczenia i powiążą
+          je z problemami które będą rozwiązywać w dalszej części kursu.  \n\n## Zasoby\n\n*
+          [Aluminum Boats](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=pdf)
+          - Activity Guide (copy as [MS Word](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=doc),
+          [Google Doc](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/copy))\n"
       grade2_multi_collector_A_predict1:
         questions:
         - {}

@@ -1998,3 +1998,9 @@ sv:
               name: Villkor
             Functions:
               name: funktioner
+        peru-2019:
+          stages:
+            Introduction:
+              name: Introduktion
+            Nested Loops:
+              name: Kapslade slingor(loopar)

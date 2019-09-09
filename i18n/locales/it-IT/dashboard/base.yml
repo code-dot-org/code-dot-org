@@ -32,6 +32,7 @@ it:
         finish_sign_up_subheader_provider: 'Compila i seguenti dati per terminare la creazione del tuo account Code.org con <strong>%{provider}</strong> per <strong>%{email}</strong>.'
         error:
           future: non può essere in futuro
+  beta: "versione provvisoria"
   hello: "Ciao a tutti"
   welcome_back: "Bentornato, %{name}"
   your_professional_learning_plan: "Your Professional Learning Plan"
@@ -846,7 +847,7 @@ it:
     practice: 'Pratiche d''insegnante'
     peer_review: 'Valutazioni dei parigrado'
     ramp_up: 'Introduzione'
-    end_of_course_project: 'Progetto di Fine Corso'
+    end_of_course_project: 'Progetto di fine corso'
     main_course: 'Corso principale'
     extra_course_content: 'Contenuti supplementari'
     csf_e_1: 'Introduzione al Corso E (facoltativo - per chi non ha svolto i corsi precedenti)'

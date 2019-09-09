@@ -32,6 +32,7 @@ nn:
         finish_sign_up_subheader_provider: 'Fyll ut følgende informasjon for å fullføre opprettelsen av en Code.org konto med <strong>%{provider}</strong> for <strong>%{email}</strong>.'
         error:
           future: kan ikkje vere i framtida
+  beta: "beta"
   hello: "Hallo, verda"
   welcome_back: "Velkommen attende, %{name}"
   your_professional_learning_plan: "Læringsplanen din"

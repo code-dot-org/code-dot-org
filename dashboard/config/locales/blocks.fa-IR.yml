@@ -149,11 +149,6 @@ fa:
           CONDITION:
             '"when"': وقتی
             '"while"': '"while"'
-      gamelab_debugSprite:
-        options:
-          VAL:
-            'true': صحیح
-            'false': غلط
       gamelab_getProp:
         options:
           PROPERTY:
@@ -217,13 +212,6 @@ fa:
             '"left"': سمت چپ
             '"right"': سمت راست
             '"space"': فضا
-      gamelab_whenPressedAndReleased:
-        options:
-          DIR:
-            "'up'": بالا
-            "'down'": پایین
-            "'left'": سمت چپ
-            "'right'": سمت راست
       gamelab_whileKey:
         options:
           KEY:

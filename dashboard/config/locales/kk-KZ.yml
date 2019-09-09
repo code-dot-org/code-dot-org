@@ -21,6 +21,7 @@ kk:
         edit_header: Жеке парақша мәліметтерін өзгерту
         error:
           future: болашақта болуы мүмкін емес
+  beta: бета
   hello: Сәлем, әлем
   welcome_back: Қайта оралуыңызбен, %{name}
   submit: Жіберу

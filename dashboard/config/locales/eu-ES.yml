@@ -31,6 +31,7 @@ eu:
         edit_header: Aldatu kontuaren xehetasunak
         error:
           future: ezin du izan etorkizunean
+  beta: beta
   hello: Kaixo, mundua
   welcome_back: Ongi etorria berriro, %{name}
   submit: Bidali

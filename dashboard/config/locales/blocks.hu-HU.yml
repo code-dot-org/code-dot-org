@@ -670,16 +670,8 @@ hu:
         text: 'megjegyzés: {COMMENT}'
       gamelab_createNewSprite:
         text: "készíts új sprite-ot\n neve {NAME} \n viselete {COSTUME} \n helye {LOCATION}"
-      gamelab_debugSprite:
-        text: keress hibát {SPRITE} {VAL}
-        options:
-          VAL:
-            'true': igaz
-            'false': hamis
       gamelab_destroy:
         text: távolítsd el {THIS}
-      gamelab_displace:
-        text: "{THIS} megakadályozza {SPRITE} mozgását"
       gamelab_draggable:
         text: vonszolható
       gamelab_edgesDisplace:
@@ -810,7 +802,6 @@ hu:
             '"x"': x pozíció
             '"y"': y-pozíció
             '"direction"': mozgás iránya
-            '"tint"': árnyalat
       gamelab_setSizes:
         text: "{SPRITE} {PROPERTY} beállítása erre: {N}%"
         options:
@@ -851,23 +842,8 @@ hu:
             '"d"': d
       gamelab_whenLeftArrow:
         text: bal nyíl megnyomásakor
-      gamelab_whenPressedAndReleased:
-        text: |-
-          ha {DIR} nyomva
-          {STATEMENT1} felengedve
-          {STATEMENT2}
-        options:
-          DIR:
-            "'up'": fel
-            "'down'": le
-            "'left'": balra
-            "'right'": jobbra
       gamelab_whenRightArrow:
         text: jobb nyíl megnyomásakor
-      gamelab_whenStartAndStopTouching:
-        text: |-
-          amikor {SPRITE1} elkezd hozzáérni {SPRITE2} {STATEMENT1} ha elválnak
-          {STATEMENT2}
       gamelab_whenTouching:
         text: amikor {SPRITE1} érinti {SPRITE2}
       gamelab_whenUpArrow:
