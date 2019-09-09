@@ -66,10 +66,7 @@
     ],
     "encrypted": "false",
     "widget_mode": "false",
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ]
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",
