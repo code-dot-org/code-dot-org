@@ -1,4 +1,4 @@
-class GenderPolicy
+class Policies::Gender
   OPTIONS = [
     [nil, ''],
     ['gender.male', 'm'],
