@@ -1,4 +1,4 @@
-class Gender
+class GenderPolicy
   OPTIONS = [
     [nil, ''],
     ['gender.male', 'm'],

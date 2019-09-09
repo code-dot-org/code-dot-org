@@ -506,9 +506,9 @@ class User < ActiveRecord::Base
   def sanitize_race_data_set_urm
     return unless races_changed?
 
-    self.races = Races.sanitized(races).join(',')
+    self.races = RacesPolicy.sanitized(races).join(',')
     self.races = nil if races.empty?
-    self.urm = Races.any_urm?(races)
+    self.urm = RacesPolicy.any_urm?(races)
   end
 
   def fix_by_user_type
@@ -714,7 +714,7 @@ class User < ActiveRecord::Base
       user.birthday = nil
       user.age = user_age
     end
-    user.gender = Gender.normalize auth.info.gender
+    user.gender = GenderPolicy.normalize auth.info.gender
   end
 
   def oauth?
