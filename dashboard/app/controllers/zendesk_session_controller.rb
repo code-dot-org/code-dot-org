@@ -20,7 +20,6 @@ class ZendeskSessionController < ApplicationController
 
   def allow_zendesk_signin?(user)
     return false if user.age && user.under_13?
-    puts user.inspect
     return false if user.email &&
       Mail::Address.new(user.email).domain == "code.org" &&
       !user.google_oauth_only?
