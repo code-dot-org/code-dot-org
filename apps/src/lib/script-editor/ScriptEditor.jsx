@@ -314,6 +314,8 @@ export default class ScriptEditor extends React.Component {
             defaultValue={this.props.pilotExperiment}
             style={styles.input}
           />
+        </label>
+        <label>
           Editor Experiment. If specified, users with this experiment on the
           levelbuilder machine will be able to edit this script.
           <input
