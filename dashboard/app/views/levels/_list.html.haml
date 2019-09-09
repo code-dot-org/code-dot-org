@@ -1,5 +1,17 @@
 - content_for(:head) do
   %script{src: minifiable_asset_path('js/levelbuilder.js')}
+  :scss
+    .controls-column > a {
+      &:hover {
+        text-decoration: none;
+      }
+      &:first-of-type {
+        margin-left: 1em;
+      }
+      &:last-of-type {
+        margin-right: 1em;
+      }
+    }
 
 %h1 Levels
 = form_tag levels_path, method: :get do
@@ -13,25 +25,27 @@
 %table
   %thead
     %tr
-      %th{ width:100 } Levels
-      %th{ width:100 } Type
-      %th{ width:300 }
+      %th
+      %th Name
+      %th Type
   %tbody
     - @levels.each do |level|
       %tr
-        %td= level.name
-        %td= level.class.name
-        %td
-          = link_to t('crud.show'), level
+        %td.controls-column
           - if level.custom?
-            = link_to t('crud.edit'), edit_level_path(level)
-            = link_to t('crud.destroy'), level, method: :delete, data: { confirm: t('crud.confirm') }
-            = link_to 'Clone', '', onclick: "$('#clone_#{level.id}').toggle(); return false;"
+            = link_to edit_level_path(level), title: t('crud.edit') do
+              %i.fa.fa-fw.fa-pencil
+            = link_to level, title: t('crud.destroy'), method: :delete, data: { confirm: t('crud.confirm') } do
+              %i.fa.fa-fw.fa-trash
+            = link_to '', title: 'Clone', onclick: "$('#clone_#{level.id}').toggle(); return false;" do
+              %i.fa.fa-fw.fa-copy
             %div{class: 'clone_level', id: "clone_#{level.id}", style: 'display: none;'}
               = form_tag level_clone_path(level), method: :post, remote: true do
                 = label_tag 'New name:'
                 = text_field_tag :name, level.name
                 = submit_tag 'Clone'
+        %td= link_to level.name, level, title: t('crud.show')
+        %td= level.class.name
 = paginate @levels
 %br/
 - if can? :create, Level
