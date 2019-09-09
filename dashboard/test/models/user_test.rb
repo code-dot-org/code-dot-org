@@ -801,6 +801,26 @@ class UserTest < ActiveSupport::TestCase
     assert_equal 'tester', user.username
   end
 
+  test 'can get next_unpassed_visible_progression_level, no progress, none hidden' do
+    user = create :user
+    twenty_hour = Script.twenty_hour_script
+    assert_equal(1, user.next_unpassed_visible_progression_level(twenty_hour).chapter)
+  end
+
+  test 'can get next_unpassed_visible_progression_level, progress, none hidden' do
+    user = create :user
+    twenty_hour = Script.twenty_hour_script
+    first_script_level = twenty_hour.get_script_level_by_chapter(1)
+    UserLevel.create(
+      user: user,
+      level: first_script_level.level,
+      script: twenty_hour,
+      attempts: 1,
+      best_result: Activity::MINIMUM_PASS_RESULT
+    )
+    assert_equal(2, user.next_unpassed_visible_progression_level(twenty_hour).chapter)
+  end
+
   test 'can get next_unpassed_progression_level if not completed any unplugged levels' do
     user = create :user
     twenty_hour = Script.twenty_hour_script
@@ -3608,6 +3628,35 @@ class UserTest < ActiveSupport::TestCase
 
       # script 3 hidden in section 2
       SectionHiddenScript.create(section_id: section2.id, script_id: @script3.id)
+    end
+
+    test 'can get next_unpassed_visible_progression_level, progress, hidden' do
+      student = create :student
+      teacher = create :teacher
+      twenty_hour = Script.twenty_hour_script
+
+      # user completed the first level
+      first_script_level = twenty_hour.get_script_level_by_chapter(1)
+      UserLevel.create(
+        user: student,
+        level: first_script_level.level,
+        script: twenty_hour,
+        attempts: 1,
+        best_result: Activity::MINIMUM_PASS_RESULT
+      )
+
+      # Hide the second lesson/stage
+      SectionHiddenStage.create(
+        section_id: put_student_in_section(student, teacher, twenty_hour).id,
+        stage_id: 2
+      )
+
+      # Find the third stage, since the 2nd is hidden
+      next_visible_stage = twenty_hour.stages.find {|stage| stage.relative_position == 3}
+
+      next_visible_stage.script_levels.first.chapter
+
+      assert_equal(next_visible_stage.script_levels.first, student.next_unpassed_visible_progression_level(twenty_hour))
     end
 
     test "user in two sections, both attached to script" do
