@@ -35,7 +35,7 @@ export default class TeacherHomepage extends Component {
     isEnglish: PropTypes.bool.isRequired,
     locale: PropTypes.string,
     showCensusBanner: PropTypes.bool.isRequired,
-    showDonorBanner: PropTypes.bool.isRequired,
+    donorBannerName: PropTypes.string,
     ncesSchoolId: PropTypes.string,
     censusQuestion: PropTypes.oneOf(['how_many_10_hours', 'how_many_20_hours']),
     teacherName: PropTypes.string,
@@ -46,7 +46,7 @@ export default class TeacherHomepage extends Component {
 
   state = {
     showCensusBanner: this.props.showCensusBanner,
-    showDonorBanner: this.props.showDonorBanner
+    donorBannerName: this.props.donorBannerName
   };
 
   bindCensusBanner = banner => {
@@ -108,8 +108,7 @@ export default class TeacherHomepage extends Component {
 
   hideCensusBanner = () => {
     this.setState({
-      showCensusBanner: false,
-      showDonorBanner: false
+      showCensusBanner: false
     });
   };
 
@@ -230,7 +229,7 @@ export default class TeacherHomepage extends Component {
             <br />
           </div>
         )}
-        {this.state.showDonorBanner && (
+        {this.state.donorBannerName && (
           <div>
             <DonorTeacherBanner />
           </div>

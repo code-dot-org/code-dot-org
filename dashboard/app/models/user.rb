@@ -2052,8 +2052,12 @@ class User < ActiveRecord::Base
     teacher? && users_school && (next_census_display.nil? || Date.today >= next_census_display.to_date)
   end
 
-  def show_donor_teacher_banner?
-    false
+  # Returns the name of the donor for the donor teacher banner, or nil if none.
+  def donor_teacher_banner_name
+    school_id = try(:school_info).try(:school).id
+    donor_name = DonorSchool.find_by(nces_id: school_id)&.name
+
+    donor_name
   end
 
   # Removes PII and other information from the user and marks the user as having been purged.
