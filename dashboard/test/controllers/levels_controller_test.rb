@@ -51,6 +51,12 @@ class LevelsControllerTest < ActionController::TestCase
     assert_not_nil assigns(:levels)
   end
 
+  test_user_gets_response_for(
+    :index,
+    response: :success,
+    user: :platformization_partner
+  )
+
   test "should get new" do
     get :new, params: {game_id: @level.game}
     assert_response :success
