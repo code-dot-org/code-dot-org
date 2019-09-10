@@ -443,6 +443,21 @@ ar-SA:
         content1: الوصف هنا
       Begin planning your project_2018_2019:
         content1: الوصف هنا
+        markdown: |+
+          #أمثلة_مشاريع
+
+          أنت على وشك البدء بمشروعك النهائي.قبل البدء, اقضي وقتبالتعرف على أمثلة المشاريع المطروحة.
+
+          | Hungry Squirrel | Alien Story |
+          |---|---|
+          | [![Hungry Squirrel (Play Lab)](https://images.code.org/3fda61d18026d6661dccf4b09baea111-image-1565115158327.PNG "Hungry Squirrel (Play Lab")](https://studio.code.org/projects/playlab/HN1zAX4Om6zdsxVsBBug9Y8mlzKSWUAXhjzRl-64YRs/view) | [![Alien Story (Play Lab)](https://images.code.org/0bd5ed3674ac9fe3304e27e68974c35f-image-1565115240833.PNG "Alien Story (Play Lab")](https://studio.code.org/projects/playlab/I_8rcKtpLFRAn8flROC15Oc-KnDu-bkKBnSORoIDs0o/view) |
+          | Try adding sounds to this game! | Try adding another scene to this story! |
+
+      BinaryBracelets-Unplugged:
+        markdown: |
+          # الإسورة_ الثنائية
+
+          اصنع اسورة تمثل اسمك بالطريقة التي يفهمها الحاسب
       CSD Header Size MC:
         answers:
         - {}
@@ -1059,15 +1074,42 @@ ar-SA:
       Multi-Screen Apps:
         title: العنوان
         content1: الوصف هنا
+      MyLoopyRoboticFriends-Unplugged:
+        markdown: |
+          #صديقي_الربوت_الدوراني
+
+          اجعل برنامجك اقصر باستخدام التكرار!
+      MyRoboticFriends-Unplugged:
+        markdown: |
+          #صديقي_الروبوت
+
+          تعلم البرمجة عن طريق كتابة الأكواد لصديقك!
       New Challenge Introduction:
         title: العنوان
         content1: الوصف هنا
       OPD-K5 Stage3aGo:
         title: العنوان
         content1: الوصف هنا
+      PicturingData-Unplugged:
+        markdown: |
+          #تصور_البيانات
+
+          استخدم معمل الألعاب لتجمع البيانات و تتنبأ عنها.
+
+          ![](https://images.code.org/606a78c09a01133a1bbc1aa9c76f3320-image-1557334268558.png)
+      PowerfulPasswords-Unplugged:
+        markdown: |
+          #كلمة_سر_قوية
+
+          تعلم لماذا نستخدم كلمة المرور, تعلم فوائد استخدام كلمة المرور, واستكشف الاستراتيجيات لإنشاءكلمة مرور قوية وآمنة
       Prepare for your presentation:
         title: العنوان
         content1: الوصف هنا
+      ScreenOutTheMean-Unplugged:
+        markdown: |
+          #حارب_التنمر
+
+          اليوم سوف تتعلم ماذا يمكنك فعله عندما يؤذيك شخص سيء على الأنترنت.
       'Technique: Frequency Analysis':
         content1: الوصف هنا
       Terminology Recap:
@@ -1077,7 +1119,7 @@ ar-SA:
         - {}
         answers:
         - {}
-        - {}
+        - feedback: صحيح!
         - {}
         - {}
       behaviors 4 predict:
@@ -1085,112 +1127,154 @@ ar-SA:
         - {}
         answers:
         - {}
-        - {}
+        - feedback: صحيح!
         - {}
         - {}
       courseC_multi_artist_prog6_predict1:
         questions:
-        - {}
+        - text: أنظر جيداً إلى الكود البرمجي التالي. ماذا سيحدث لو ضغطت على زر التشغيل؟
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: الرسام سوف يرسم مثلث بثلاث أضلاع.
+          feedback: خطأ. سوف يرسم الرسام مربع.
+        - text: سوف يرسم الرسام خط مستقيم.
+          feedback: خطأ. سوف يرسم الرسام مربع.
+        - text: الرسام سوف يرسم مربع.
+          feedback: صحيح!
+        - text: لا أعرف.
+          feedback: الرسام سوف يرسم مربع.
       courseC_multi_artist_prog6_predict1_2018:
         questions:
-        - {}
+        - text: أنظر جيداً إلى الكود البرمجي التالي. ماذا سيحدث لو ضغطت على زر التشغيل؟
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: الرسام سوف يرسم مثلث بثلاث أضلاع.
+          feedback: خطأ. سوف يرسم الرسام مربع.
+        - text: سوف يرسم الرسام خط مستقيم.
+          feedback: خطأ. سوف يرسم الرسام مربع.
+        - text: الرسام سوف يرسم مربع.
+          feedback: صحيح!
+        - text: لا أعرف.
+          feedback: الرسام سوف يرسم مربع.
       courseC_multi_artist_prog6_predict1_2018_2019:
         questions:
-        - {}
+        - text: أنظر جيداً إلى الكود البرمجي التالي. ماذا سيحدث لو ضغطت على زر التشغيل؟
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: الرسام سوف يرسم مثلث بثلاث أضلاع.
+          feedback: خطأ. سوف يرسم الرسام مربع.
+        - text: سوف يرسم الرسام خط مستقيم.
+          feedback: خطأ. سوف يرسم الرسام مربع.
+        - text: الرسام سوف يرسم مربع.
+          feedback: صحيح!
+        - text: لا أعرف.
+          feedback: الرسام سوف يرسم مربع.
       courseC_multi_harvester_loops11_predict1:
         questions:
         - {}
         answers:
         - {}
+        - feedback: صحيح!
         - {}
-        - {}
-        - {}
+        - text: لا أعرف.
       courseC_multi_harvester_loops11_predict1_2018:
         questions:
         - {}
         answers:
         - {}
+        - feedback: صحيح!
         - {}
-        - {}
-        - {}
+        - text: لا أعرف.
       courseC_multi_harvester_loops11_predict1_2018_2019:
         questions:
         - {}
         answers:
         - {}
+        - feedback: صحيح!
         - {}
-        - {}
-        - {}
+        - text: لا أعرف.
       courseC_multi_maze_debugging8_predict1:
         questions:
-        - {}
+        - text: 'تفحص جيداً الكود البرمجي التالي. ماهو اول خطأ يمكنه أن يجعل البرنامج
+            يخفق؟ '
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: البرنامج لن يخفق. السنجاب سيحصل على الجوزة.
+          feedback: غير صحيح. السنجاب سيذهب إلى الطريق الخاطئ بعد الالتفافه الاخيرة.
+        - text: السنجاب سيذهب إلى الطريق الخاطئ بعد الالتفافه الاخيرة.
+          feedback: صحيح!
+        - text: السنجاب سيستخدم خطوات قليلة وسيتوقف قبل الوصول إلى الجوزة.
+          feedback: غير صحيح. الخطوات الناقصة ستحدث بعد أن يتجه السنجاب للاتجاه الخاطئ.
+        - text: لا أعرف.
+          feedback: 'الخطأ الاول هو أن السنجاب سوف يذهب للاتجاه الخاطئ بعد الالتفاف
+            الاخير. '
       courseC_multi_maze_debugging8_predict1_2018:
         questions:
-        - {}
+        - text: 'تفحص جيداً الكود البرمجي التالي. ماهو اول خطأ يمكنه أن يجعل البرنامج
+            يخفق؟ '
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: البرنامج لن يخفق. السنجاب سيحصل على الجوزة.
+          feedback: غير صحيح. السنجاب سيذهب إلى الطريق الخاطئ بعد الالتفافه الاخيرة.
+        - text: السنجاب سيذهب إلى الطريق الخاطئ بعد الالتفافه الاخيرة.
+          feedback: صحيح!
+        - text: السنجاب سيستخدم خطوات قليلة وسيتوقف قبل الوصول إلى الجوزة.
+          feedback: غير صحيح. الخطوات الناقصة ستحدث بعد أن يتجه السنجاب للاتجاه الخاطئ.
+        - text: لا أعرف.
+          feedback: 'الخطأ الاول هو أن السنجاب سوف يذهب للاتجاه الخاطئ بعد الالتفاف
+            الاخير. '
       courseC_multi_maze_debugging8_predict1_2018_2019:
         questions:
-        - {}
+        - text: 'تفحص جيداً الكود البرمجي التالي. ماهو اول خطأ يمكنه أن يجعل البرنامج
+            يخفق؟ '
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: البرنامج لن يخفق. السنجاب سيحصل على الجوزة.
+          feedback: غير صحيح. السنجاب سيذهب إلى الطريق الخاطئ بعد الالتفافه الاخيرة.
+        - text: السنجاب سيذهب إلى الطريق الخاطئ بعد الالتفافه الاخيرة.
+          feedback: صحيح!
+        - text: السنجاب سيستخدم خطوات قليلة وسيتوقف قبل الوصول إلى الجوزة.
+          feedback: غير صحيح. الخطوات الناقصة ستحدث بعد أن يتجه السنجاب للاتجاه الخاطئ.
+        - text: لا أعرف.
+          feedback: 'الخطأ الاول هو أن السنجاب سوف يذهب للاتجاه الخاطئ بعد الالتفاف
+            الاخير. '
       courseC_multi_maze_programming8_predict1:
         questions:
-        - {}
+        - text: راجع الكود البرمجي بدقة. ماذا سيحدث لو ضغطت على زر التشغيل؟
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: سيكون الطائر بمسافة خطوة واحدة قبل الوصول إلى الخنزير.
+          feedback: خطأ. هذا الكود سوف يصل الطائر إلى الخنزير بطريقة صحيحة.
+        - text: سيصل الطائر إلى الخنزير.
+          feedback: صحيح!
+        - text: سيصدم الطائر صندوق المتفجرات TNT.
+          feedback: خطأ. هذا الكود سوف يصل الطائر إلى الخنزير بطريقة صحيحة.
+        - text: لا أعرف.
+          feedback: هذا الكود البرمجي سيصل الطائر إلى الخنزير بطريقة صحيحة.
       courseC_multi_maze_programming8_predict1_2018:
         questions:
-        - {}
+        - text: راجع الكود البرمجي بدقة. ماذا سيحدث لو ضغطت على زر التشغيل؟
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: سيكون الطائر بمسافة خطوة واحدة قبل الوصول إلى الخنزير.
+          feedback: خطأ. هذا الكود سوف يصل الطائر إلى الخنزير بطريقة صحيحة.
+        - text: سيصل الطائر إلى الخنزير.
+          feedback: صحيح!
+        - text: سيصدم الطائر صندوق المتفجرات TNT.
+          feedback: خطأ. هذا الكود سوف يصل الطائر إلى الخنزير بطريقة صحيحة.
+        - text: لا أعرف.
+          feedback: هذا الكود البرمجي سيصل الطائر إلى الخنزير بطريقة صحيحة.
       courseC_multi_maze_programming8_predict1_2018_2019:
         questions:
-        - {}
+        - text: راجع الكود البرمجي بدقة. ماذا سيحدث لو ضغطت على زر التشغيل؟
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: سيكون الطائر بمسافة خطوة واحدة قبل الوصول إلى الخنزير.
+          feedback: خطأ. هذا الكود سوف يصل الطائر إلى الخنزير بطريقة صحيحة.
+        - text: سيصل الطائر إلى الخنزير.
+          feedback: صحيح!
+        - text: سيصدم الطائر صندوق المتفجرات TNT.
+          feedback: خطأ. هذا الكود سوف يصل الطائر إلى الخنزير بطريقة صحيحة.
+        - text: لا أعرف.
+          feedback: هذا الكود البرمجي سيصل الطائر إلى الخنزير بطريقة صحيحة.
       courseC_multi_starWars_predict1:
         questions:
         - {}
         answers:
         - {}
         - {}
-        - {}
+        - feedback: صحيح!
         - text: لا أعرف
       courseC_multi_starWars_predict1_2018:
         questions:
@@ -1198,7 +1282,7 @@ ar-SA:
         answers:
         - {}
         - {}
-        - {}
+        - feedback: صحيح!
         - text: لا أعرف
       courseC_multi_starWars_predict1_2018_2019:
         questions:
@@ -1206,32 +1290,32 @@ ar-SA:
         answers:
         - {}
         - {}
-        - {}
+        - feedback: صحيح!
         - text: لا أعرف
       courseC_multi_starWars_predict2:
         questions:
         - {}
         answers:
         - {}
+        - feedback: صحيح!
         - {}
-        - {}
-        - {}
+        - text: لا أعرف.
       courseC_multi_starWars_predict2_2018:
         questions:
         - {}
         answers:
         - {}
+        - feedback: صحيح!
         - {}
-        - {}
-        - {}
+        - text: لا أعرف.
       courseC_multi_starWars_predict2_2018_2019:
         questions:
         - {}
         answers:
         - {}
+        - feedback: صحيح!
         - {}
-        - {}
-        - {}
+        - text: لا أعرف.
       courseD_multi_artist_binary8_predict1:
         questions:
         - {}
@@ -1240,6 +1324,7 @@ ar-SA:
         - text: B
         - text: C
         - text: D
+          feedback: صحيح!
       courseD_multi_artist_binary8_predict1_2018:
         questions:
         - {}
@@ -1248,6 +1333,7 @@ ar-SA:
         - text: B
         - text: C
         - text: D
+          feedback: صحيح!
       courseD_multi_artist_binary8_predict1_2018_2019:
         questions:
         - {}
@@ -1256,270 +1342,277 @@ ar-SA:
         - text: B
         - text: C
         - text: D
+          feedback: صحيح!
       courseD_multi_artist_nestedLoops9_predict1:
         questions:
         - {}
         answers:
         - text: A
+          feedback: صحيح!
         - text: B
         - text: C
-        - {}
+        - text: لا أعرف.
       courseD_multi_artist_nestedLoops9_predict1_2018:
         questions:
         - {}
         answers:
         - text: A
+          feedback: صحيح!
         - text: B
         - text: C
-        - {}
+        - text: لا أعرف.
       courseD_multi_artist_nestedLoops9_predict1_2018_2019:
         questions:
         - {}
         answers:
         - text: A
+          feedback: صحيح!
         - text: B
         - text: C
-        - {}
+        - text: لا أعرف.
       courseD_multi_bee_conditionals1_predict1:
         questions:
         - {}
         answers:
         - {}
+        - feedback: صحيح!
         - {}
-        - {}
-        - {}
+        - text: لا أعرف.
       courseD_multi_bee_conditionals1_predict1_2018:
         questions:
         - {}
         answers:
         - {}
+        - feedback: صحيح!
         - {}
-        - {}
-        - {}
+        - text: لا أعرف.
       courseD_multi_bee_conditionals1_predict1_2018_2019:
         questions:
         - {}
         answers:
         - {}
+        - feedback: صحيح!
         - {}
-        - {}
-        - {}
+        - text: لا أعرف.
       courseD_multi_bee_conditionals7_predict2:
         questions:
         - {}
         answers:
+        - feedback: صحيح!
         - {}
         - {}
-        - {}
-        - {}
+        - text: لا أعرف.
       courseD_multi_bee_conditionals7_predict2_2018:
         questions:
         - {}
         answers:
+        - feedback: صحيح!
         - {}
         - {}
-        - {}
-        - {}
+        - text: لا أعرف.
       courseD_multi_bee_conditionals7_predict2_2018_2019:
         questions:
         - {}
         answers:
+        - feedback: صحيح!
         - {}
         - {}
-        - {}
-        - {}
+        - text: لا أعرف.
       courseD_multi_bee_nestedLoops2_predict1:
         questions:
         - {}
         answers:
         - {}
         - {}
-        - {}
-        - {}
+        - feedback: صحيح!
+        - text: لا أعرف.
       courseD_multi_bee_nestedLoops2_predict1_2018:
         questions:
         - {}
         answers:
         - {}
         - {}
-        - {}
-        - {}
+        - feedback: صحيح!
+        - text: لا أعرف.
       courseD_multi_bee_nestedLoops2_predict1_2018_2019:
         questions:
         - {}
         answers:
         - {}
         - {}
-        - {}
-        - {}
+        - feedback: صحيح!
+        - text: لا أعرف.
       courseD_multi_bee_nestedLoops9_predict2:
         questions:
         - {}
         answers:
         - {}
+        - feedback: صحيح!
         - {}
-        - {}
-        - {}
+        - text: لا أعرف.
       courseD_multi_bee_nestedLoops9_predict2_2018:
         questions:
         - {}
         answers:
         - {}
+        - feedback: صحيح!
         - {}
-        - {}
-        - {}
+        - text: لا أعرف.
       courseD_multi_bee_nestedLoops9_predict2_2018_2019:
         questions:
         - {}
         answers:
         - {}
+        - feedback: صحيح!
         - {}
-        - {}
-        - {}
+        - text: لا أعرف.
       courseD_multi_collector_debugging10_predict1:
         questions:
         - {}
         answers:
         - {}
         - {}
-        - {}
-        - {}
+        - feedback: صحيح!
+        - text: لا أعرف.
       courseD_multi_farmer_condLoops9_predict1:
         questions:
         - {}
         answers:
         - {}
         - {}
-        - {}
-        - {}
+        - feedback: صحيح!
+        - text: لا أعرف.
       courseD_multi_farmer_condLoops9_predict1_2018:
         questions:
         - {}
         answers:
         - {}
         - {}
-        - {}
-        - {}
+        - feedback: صحيح!
+        - text: لا أعرف.
       courseD_multi_farmer_condLoops9_predict1_2018_2019:
         questions:
         - {}
         answers:
         - {}
         - {}
-        - {}
-        - {}
+        - feedback: صحيح!
+        - text: لا أعرف.
       courseD_multi_farmer_ramp13:
         questions:
         - {}
         answers:
         - {}
+        - feedback: صحيح!
         - {}
-        - {}
-        - {}
+        - text: لا أعرف.
       courseD_multi_farmer_while10_predict2:
         questions:
         - {}
         answers:
         - {}
+        - feedback: صحيح!
         - {}
-        - {}
-        - {}
+        - text: لا أعرف.
       courseD_multi_farmer_while10_predict2_2018:
         questions:
         - {}
         answers:
         - {}
+        - feedback: صحيح!
         - {}
-        - {}
-        - {}
+        - text: لا أعرف.
       courseD_multi_farmer_while10_predict2_2018_2019:
         questions:
         - {}
         answers:
         - {}
+        - feedback: صحيح!
         - {}
-        - {}
-        - {}
+        - text: لا أعرف.
       courseD_multi_farmer_while4_predict1:
         questions:
         - {}
         answers:
         - {}
         - {}
-        - {}
-        - {}
+        - feedback: صحيح!
+        - text: لا أعرف.
       courseD_multi_farmer_while4_predict1_2018:
         questions:
         - {}
         answers:
         - {}
         - {}
-        - {}
-        - {}
+        - feedback: صحيح!
+        - text: لا أعرف.
       courseD_multi_farmer_while4_predict1_2018_2019:
         questions:
         - {}
         answers:
         - {}
         - {}
-        - {}
-        - {}
+        - feedback: صحيح!
+        - text: لا أعرف.
       courseD_multi_maze_until10_predict2:
         questions:
         - {}
         answers:
+        - feedback: صحيح!
         - {}
         - {}
-        - {}
-        - {}
+        - text: لا أعرف.
       courseD_multi_maze_until10_predict2_2018:
         questions:
         - {}
         answers:
+        - feedback: صحيح!
         - {}
         - {}
-        - {}
-        - {}
+        - text: لا أعرف.
       courseD_multi_maze_until10_predict2_2018_2019:
         questions:
         - {}
         answers:
+        - feedback: صحيح!
         - {}
         - {}
-        - {}
-        - {}
+        - text: لا أعرف.
       courseD_multi_maze_until2_predict1:
         questions:
         - {}
         answers:
         - {}
+        - text: سيصل الطائر إلى الخنزير.
+          feedback: صحيح!
         - {}
-        - {}
-        - {}
+        - text: لا أعرف.
       courseD_multi_maze_until2_predict1_2018:
         questions:
         - {}
         answers:
         - {}
+        - text: سيصل الطائر إلى الخنزير.
+          feedback: صحيح!
         - {}
-        - {}
-        - {}
+        - text: لا أعرف.
       courseD_multi_maze_until2_predict1_2018_2019:
         questions:
         - {}
         answers:
         - {}
+        - text: سيصل الطائر إلى الخنزير.
+          feedback: صحيح!
         - {}
-        - {}
-        - {}
+        - text: لا أعرف.
       courseD_multi_scrat_predict1:
         questions:
         - {}
         answers:
         - {}
+        - feedback: صحيح!
         - {}
-        - {}
-        - {}
+        - text: لا أعرف.
       courseE_multi_bee_functions_predict1:
         questions:
         - {}
@@ -1527,7 +1620,7 @@ ar-SA:
         - {}
         - {}
         - {}
-        - {}
+        - text: لا أعرف.
       courseE_multi_farmer_functions11_predict:
         questions:
         - {}
@@ -1535,14 +1628,14 @@ ar-SA:
         - {}
         - {}
         - {}
-        - {}
+        - feedback: صحيح!
       courseE_multi_farmer_functions11_predict_2018:
         questions:
         - {}
         answers:
         - {}
         - {}
-        - {}
+        - feedback: صحيح!
         - {}
       courseE_multi_farmer_functions11_predict_2018_2019:
         questions:
@@ -1550,7 +1643,7 @@ ar-SA:
         answers:
         - {}
         - {}
-        - {}
+        - feedback: صحيح!
         - {}
       courseE_prediction_artistFunction1:
         questions:
@@ -1581,95 +1674,95 @@ ar-SA:
         - {}
         answers:
         - {}
+        - feedback: صحيح!
         - {}
-        - {}
-        - {}
+        - text: لا أعرف.
       courseF_bee_variables_8a_2018_2019:
         questions:
         - {}
         answers:
         - {}
+        - feedback: صحيح!
         - {}
-        - {}
-        - {}
+        - text: لا أعرف.
       courseF_multi_artist_for10_predict1:
         questions:
         - {}
         answers:
         - {}
         - {}
-        - {}
-        - {}
+        - feedback: صحيح!
+        - text: لا أعرف.
       courseF_multi_artist_for10_predict1_2018:
         questions:
         - {}
         answers:
         - {}
         - {}
-        - {}
-        - {}
+        - feedback: صحيح!
+        - text: لا أعرف.
       courseF_multi_artist_for10_predict1_2018_2019:
         questions:
         - {}
         answers:
         - {}
         - {}
-        - {}
-        - {}
+        - feedback: صحيح!
+        - text: لا أعرف.
       courseF_multi_artist_fwp2_predict1:
         questions:
         - {}
         answers:
+        - feedback: صحيح!
         - {}
         - {}
-        - {}
-        - {}
+        - text: لا أعرف.
       courseF_multi_artist_variables3a_predict1:
         questions:
         - {}
         answers:
+        - feedback: صحيح!
         - {}
         - {}
-        - {}
-        - {}
+        - text: لا أعرف.
       courseF_multi_artist_variables3a_predict1_2018:
         questions:
         - {}
         answers:
+        - feedback: صحيح!
         - {}
         - {}
-        - {}
-        - {}
+        - text: لا أعرف.
       courseF_multi_artist_variables3a_predict1_2018_2019:
         questions:
         - {}
         answers:
+        - feedback: صحيح!
         - {}
         - {}
-        - {}
-        - {}
+        - text: لا أعرف.
       courseF_multi_bee_conditionals1_predict1:
         questions:
         - {}
         answers:
         - {}
+        - feedback: صحيح!
         - {}
-        - {}
-        - {}
+        - text: لا أعرف.
       courseF_multi_bee_conditionals7_predict2:
         questions:
         - {}
         answers:
+        - feedback: صحيح!
         - {}
         - {}
-        - {}
-        - {}
+        - text: لا أعرف.
       courseF_multi_bee_for3_predict1:
         questions:
         - {}
         answers:
         - {}
-        - {}
+        - feedback: صحيح!
         - {}
         - {}
       courseF_multi_bee_for3_predict1_2018:
@@ -1677,7 +1770,7 @@ ar-SA:
         - {}
         answers:
         - {}
-        - {}
+        - feedback: صحيح!
         - {}
         - {}
       courseF_multi_bee_for3_predict1_2018_2019:
@@ -1685,7 +1778,7 @@ ar-SA:
         - {}
         answers:
         - {}
-        - {}
+        - feedback: صحيح!
         - {}
         - {}
       courseF_multi_bee_fwp9_predict1:
@@ -1695,7 +1788,7 @@ ar-SA:
         - {}
         - {}
         - {}
-        - {}
+        - text: لا أعرف.
       courseF_multi_playlab_variables4c_predictive1:
         questions:
         - {}
@@ -1703,13 +1796,13 @@ ar-SA:
         - {}
         - {}
         - {}
-        - {}
+        - text: لا أعرف.
       coursee_prediction_artistfunction2:
         questions:
         - {}
         answers:
         - {}
-        - {}
+        - feedback: صحيح!
         - {}
         - {}
       coursee_prediction_artistfunction2_2018:
@@ -1717,7 +1810,7 @@ ar-SA:
         - {}
         answers:
         - {}
-        - {}
+        - feedback: صحيح!
         - {}
         - {}
       coursee_prediction_artistfunction2_2018_2019:
@@ -1725,30 +1818,45 @@ ar-SA:
         - {}
         answers:
         - {}
-        - {}
+        - feedback: صحيح!
         - {}
         - {}
       grade2_multi_collector_A_predict1:
         questions:
-        - {}
+        - text: تفحص جيداً الكودالبرمجي. لو شغلنا البرنامج للنهاية (بغض النظر عن الأخطاء)
+            كم عدد المجوهرات التي ستجمعها لورا؟
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: سوف تجمع لورا 4 مجوهرات باستخدام هذا الكود البرمجي.
+          feedback: خطأ. لورا سوف تحاول أن تجمع لكن لاتوجد مجوهرات مما يسبب الخطأ.
+        - text: سوف تحاول لورا الجمع ولكن لاتوجد مجوهرات مما يسبب خطأ.
+          feedback: صحيح!
+        - text: سوف تجمع لورا كل المجوهرات.
+          feedback: خطأ. لورا سوف تحاول أن تجمع لكن لاتوجد مجوهرات مما يسبب الخطأ.
+        - text: لا أعرف.
+          feedback: تحاول لورا الجمع ولكن لاتوجد مجوهرات مما يسبب خطأ.
       grade2_multi_collector_A_predict1_2018:
         questions:
-        - {}
+        - text: انضر جيداً إلى هذا الكود البرمجي. ماذا تضن أنه سيحدث لو شغلنا هذا
+            الكود؟
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: سوف تجمع لورا 4 مجوهرات باستخدام هذا الكود البرمجي.
+          feedback: خطأ. لورا سوف تحاول أن تجمع لكن لاتوجد مجوهرات مما يسبب الخطأ.
+        - text: سوف تحاول لورا الجمع ولكن لاتوجد مجوهرات مما يسبب خطأ.
+          feedback: صحيح!
+        - text: سوف تجمع لورا كل المجوهرات.
+          feedback: خطأ. لورا سوف تحاول أن تجمع لكن لاتوجد مجوهرات مما يسبب الخطأ.
+        - text: لا أعرف.
+          feedback: تحاول لورا الجمع ولكن لاتوجد مجوهرات مما يسبب خطأ.
       grade2_multi_collector_A_predict1_2018_2019:
         questions:
-        - {}
+        - text: انضر جيداً إلى هذا الكود البرمجي. ماذا تضن أنه سيحدث لو شغلنا هذا
+            الكود؟
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: سوف تجمع لورا 4 مجوهرات باستخدام هذا الكود البرمجي.
+          feedback: خطأ. لورا سوف تحاول أن تجمع لكن لاتوجد مجوهرات مما يسبب الخطأ.
+        - text: سوف تحاول لورا الجمع ولكن لاتوجد مجوهرات مما يسبب خطأ.
+          feedback: صحيح!
+        - text: سوف تجمع لورا كل المجوهرات.
+          feedback: خطأ. لورا سوف تحاول أن تجمع لكن لاتوجد مجوهرات مما يسبب الخطأ.
+        - text: لا أعرف.
+          feedback: تحاول لورا الجمع ولكن لاتوجد مجوهرات مما يسبب خطأ.
