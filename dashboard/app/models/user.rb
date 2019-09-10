@@ -1344,6 +1344,10 @@ class User < ActiveRecord::Base
     name.split.first # 'first name'
   end
 
+  def second_name
+    name.split.second # 'second name'
+  end
+
   def initial
     UserHelpers.initial(name)
   end

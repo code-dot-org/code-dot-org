@@ -37,8 +37,16 @@ export default class TeacherHomepage extends Component {
     showCensusBanner: PropTypes.bool.isRequired,
     donorBannerName: PropTypes.string,
     ncesSchoolId: PropTypes.string,
+    schoolAddress1: PropTypes.string,
+    schoolAddress2: PropTypes.string,
+    schoolAddress3: PropTypes.string,
+    schoolCity: PropTypes.string,
+    schoolState: PropTypes.string,
+    schoolZip: PropTypes.string,
     censusQuestion: PropTypes.oneOf(['how_many_10_hours', 'how_many_20_hours']),
     teacherName: PropTypes.string,
+    teacherFirstName: PropTypes.string,
+    teacherSecondName: PropTypes.string,
     teacherId: PropTypes.number,
     teacherEmail: PropTypes.string,
     schoolYear: PropTypes.number
@@ -178,10 +186,18 @@ export default class TeacherHomepage extends Component {
       announcement,
       joinedSections,
       ncesSchoolId,
+      schoolAddress1,
+      schoolAddress2,
+      schoolAddress3,
+      schoolCity,
+      schoolState,
+      schoolZip,
       censusQuestion,
       schoolYear,
       teacherId,
       teacherName,
+      teacherFirstName,
+      teacherSecondName,
       teacherEmail,
       canViewAdvancedTools,
       queryStringOpen,
@@ -254,8 +270,16 @@ export default class TeacherHomepage extends Component {
         {isEnglish && this.state.donorBannerName && (
           <div>
             <DonorTeacherBanner
-              teacherName={teacherName}
+              teacherFirstName={teacherFirstName}
+              teacherSecondName={teacherSecondName}
               teacherEmail={teacherEmail}
+              ncesSchoolId={ncesSchoolId}
+              schoolAddress1={schoolAddress1}
+              schoolAddress2={schoolAddress2}
+              schoolAddress3={schoolAddress3}
+              schoolCity={schoolCity}
+              schoolState={schoolState}
+              schoolZip={schoolZip}
               onDismiss={() => this.dismissDonorTeacherBanner()}
             />
           </div>
