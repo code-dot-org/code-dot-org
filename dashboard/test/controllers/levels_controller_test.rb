@@ -706,9 +706,9 @@ class LevelsControllerTest < ActionController::TestCase
       post :clone, params: {id: old.id, name: "Fun Level (copy 1)"}
     end
 
-    new_level = assigns(:level)
-    assert_equal new_level.game, old.game
-    assert_equal new_level.name, "Fun Level (copy 1)"
+    new_level = assigns(:new_level)
+    assert_equal old.game, new_level.game
+    assert_equal "Fun Level (copy 1)", new_level.name
     assert_equal "/levels/#{new_level.id}/edit", URI(JSON.parse(@response.body)['redirect']).path
   end
 
@@ -718,6 +718,13 @@ class LevelsControllerTest < ActionController::TestCase
     refute_creates(Level) do
       post :clone, params: {id: old.id, name: "Fun Level (copy 1)"}
       assert_response :forbidden
+    end
+  end
+
+  test "cloning a level requires a name parameter" do
+    old = create(:level, game_id: Game.first.id, name: "Fun Level")
+    assert_raise ActionController::ParameterMissing do
+      post :clone, params: {id: old.id, name: ''}
     end
   end
 
@@ -731,7 +738,7 @@ class LevelsControllerTest < ActionController::TestCase
       post :clone, params: {id: old.id, name: "Fun Level (copy 1)"}
     end
 
-    new_level = assigns(:level)
+    new_level = assigns(:new_level)
     assert_equal new_level.game, old.game
     assert_equal new_level.name, "Fun Level (copy 1)"
     assert_equal "/levels/#{new_level.id}/edit", URI(JSON.parse(@response.body)['redirect']).path

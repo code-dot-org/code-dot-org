@@ -290,23 +290,16 @@ class LevelsController < ApplicationController
   end
 
   # POST /levels/1/clone?name=new_name
+  # Clone existing level and open edit page
   def clone
-    if params[:name]
-      # Clone existing level and open edit page
-      old_level = @level
-
-      begin
-        editor_experiment = Experiment.get_editor_experiment(current_user)
-        @level = old_level.clone_with_name(params[:name], editor_experiment: editor_experiment)
-      rescue ArgumentError => e
-        render(status: :not_acceptable, text: e.message) && return
-      rescue ActiveRecord::RecordInvalid => invalid
-        render(status: :not_acceptable, text: invalid) && return
-      end
-      render json: {redirect: edit_level_url(@level)}
-    else
-      render status: :not_acceptable, text: 'New name required to clone level'
-    end
+    new_name = params.require(:name)
+    editor_experiment = Experiment.get_editor_experiment(current_user)
+    @new_level = @level.clone_with_name(new_name, editor_experiment: editor_experiment)
+    render json: {redirect: edit_level_url(@new_level)}
+  rescue ArgumentError => e
+    render(status: :not_acceptable, text: e.message)
+  rescue ActiveRecord::RecordInvalid => invalid
+    render(status: :not_acceptable, text: invalid)
   end
 
   def embed_level
