@@ -116,7 +116,7 @@ class Api::V1::UsersControllerTest < ActionController::TestCase
     post :dismiss_donor_teacher_banner, params: {user_id: 'me'}
     assert_response :success
     test_user.reload
-    assert_equal true, test_user.teacher_donor_banner_dismissed
+    assert_equal true, test_user.donor_teacher_banner_dismissed
   end
 
   test "a get request to get school_name returns school object" do
