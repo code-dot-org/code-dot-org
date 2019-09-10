@@ -1,6 +1,6 @@
 ---
 title: Poradnik wydarzenia Godziny Kodowania
-layout: szeroki
+layout: wide
 nav: how_to_nav
 ---
 

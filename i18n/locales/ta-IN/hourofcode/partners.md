@@ -38,4 +38,4 @@ The [Review Committee]({{ urls/review_committee }}) is composed of 15 educators 
 
 {{ partners/additional_partners }}
 
-{{ signup_button }}
+{{signup_button}}
