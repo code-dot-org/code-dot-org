@@ -721,21 +721,21 @@ DSL
 
   test 'script DSL with single quotes' do
     input_dsl = <<-DSL.gsub(/^\s+/, '')
-      stage 'Bobs stage'
-      level 'Level 1', progression: 'Bobs progression'
+      stage 'Bob\\'s stage'
+      level 'Level 1', progression: 'Bob\\'s progression'
       level 'Level 2'
     DSL
-    assert_includes(input_dsl, "Bobs stage")
-    assert_includes(input_dsl, "Bobs progression")
+    assert_includes(input_dsl, "Bob\\'s stage")
+    assert_includes(input_dsl, "Bob\\'s progression")
     output, i18n = ScriptDSL.parse(input_dsl, 'test.script', 'test')
     expected = DEFAULT_PROPS.merge(
       {
         stages: [
           {
-            stage: "Bobs stage",
+            stage: "Bob's stage",
             scriptlevels: [
-              {stage: "Bobs stage", levels: [{name: 'Level 1'}], properties: {progression: "Bobs progression"}},
-              {stage: "Bobs stage", levels: [{name: 'Level 2'}]},
+              {stage: "Bob's stage", levels: [{name: 'Level 1'}], properties: {progression: "Bob's progression"}},
+              {stage: "Bob's stage", levels: [{name: 'Level 2'}]},
             ]
           }
         ],
@@ -743,10 +743,9 @@ DSL
     )
 
     i18n_expected = {'test' => {'stages' => {
-      "Bobs stage" => {'name' => "Bobs stage"},
+      "Bob's stage" => {'name' => "Bob's stage"},
     }}}
     assert_equal expected, output
     assert_equal i18n_expected, i18n
   end
 end
-
