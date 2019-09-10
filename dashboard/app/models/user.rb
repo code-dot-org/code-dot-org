@@ -1150,7 +1150,7 @@ class User < ActiveRecord::Base
 
     # The user has not made any progress, return the first visible script_level
     if ul_level_ids.empty?
-      visible_sls.min_by(&:chapter)
+      return visible_sls.min_by(&:chapter)
     end
 
     visible_completed_level_ids = sl_level_ids & ul_level_ids
@@ -1162,17 +1162,17 @@ class User < ActiveRecord::Base
     most_recent_ul = visible_user_levels.max_by(&:created_at)
 
     # Find the script_level that goes with the most recent user_level
-    most_recent_sl = visible_sls.find_by(level_id: most_recent_ul.level_id)
+    most_recent_sl = visible_sls.find {|sl| sl.level_id == most_recent_ul.level_id}
 
     # Find the chapter for the script_level that goes with the most recent user_level
     most_recent_completed_chapter = most_recent_sl.chapter
 
-    # Find the script_level that has the next highest chapter level from the one above
-    later_visible_sls = visible_sls.select do |sl|
-      sl.chapter > most_recent_completed_chapter
+    # Find the script_level that has the next highest chapter level from the one above and is not complete
+    later_unpassed_visible_sls = visible_sls.select do |sl|
+      sl.chapter > most_recent_completed_chapter && !ul_level_ids.include?(sl.level_id)
     end
 
-    next_unpassed_visible_progression_sl = later_visible_sls.min_by(&:chapter)
+    next_unpassed_visible_progression_sl = later_unpassed_visible_sls.min_by(&:chapter)
 
     next_unpassed_visible_progression_sl
   end
