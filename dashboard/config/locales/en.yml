@@ -864,10 +864,10 @@ en:
   peer_review:
     accepted:
       name: 'Accepted'
-      description: '<strong>Yes</strong>, this submission <strong>meets</strong> the requirements'
+      description_markdown: '**Yes**, this submission **meets** the requirements'
     rejected:
       name: 'Rejected'
-      description: '<strong>No</strong>, this submission <strong>does not meet</strong> the requirements'
+      description_markdown: '**No**, this submission **does not meet** the requirements'
     escalated:
       name: 'Escalated'
       description: 'I would like an instructor to review this submission'
