@@ -130,15 +130,19 @@ def main
         if submission.answers == "{}" || submission.user_id.nil?
           next
         end
-        answers = submission.form_data_hash
-        answers.each do |question_key, answer_value|
-          survey_answers << {
-            user_id: submission.user_id,
-            form_id: submission.form_id,
-            submission_id: submission.submission_id,
-            question_id: question_key,
-            answer_value:  sanitize_string_for_db(answer_value.to_s)
-          }
+        begin
+          answers = submission.form_data_hash
+          answers.each do |question_key, answer_value|
+            survey_answers << {
+              user_id: submission.user_id,
+              form_id: submission.form_id,
+              submission_id: submission.submission_id,
+              question_id: question_key,
+              answer_value:  sanitize_string_for_db(answer_value.to_s)
+            }
+          end
+        rescue KeyError
+          next
         end
       end
       insert_survey_answers(survey_answers)
