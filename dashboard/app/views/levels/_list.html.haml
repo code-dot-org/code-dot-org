@@ -1,37 +1,103 @@
 - content_for(:head) do
   %script{src: minifiable_asset_path('js/levelbuilder.js')}
+  :scss
+    .main .new-level {
+      font-size: 20px;
+      line-height: 40px;
+      margin: 10px 0;
+      float: right;
+    }
+    .pagination {
+      text-align: center;
+    }
+    .main table {
+      width: 100%;
+    }
+    .controls-column {
+      width: 1%;
+      white-space: nowrap;
+      > a {
+        &:hover {
+          text-decoration: none;
+        }
+        &:first-of-type {
+          margin-left: 1em;
+        }
+        &:last-of-type {
+          margin-right: 1em;
+        }
+      }
+    }
+
+- if can? :create, Level
+  = link_to new_level_path, class: 'new-level' do
+    %i.fa.fa-plus-circle
+    = t('crud.new_model', model: Level.model_name.human)
 
 %h1 Levels
 = form_tag levels_path, method: :get do
-  = label_tag 'Filter by name:'
-  = text_field_tag :name, params[:name], autofocus: true
-= paginate @levels
+  %table
+    %tr
+      %td= label_tag :name, 'Filter by name:'
+      %td= label_tag :level_type, 'By type:'
+      %td= label_tag :script_id, 'By script'
+      %td
+    %tr
+      %td= text_field_tag :name, params[:name], autofocus: true
+
+      - level_type_options = [['All types', '']].concat @level_types.map {|x| [x, x]}
+      %td= select_tag :level_type, options_for_select(level_type_options, params[:level_type])
+
+      - script_options = [['All scripts', '']].concat @scripts
+      %td= select_tag :script_id, options_for_select(script_options, params[:script_id])
+
+      %td= submit_tag "Search"
+
 %table
   %thead
     %tr
-      %th{ width:100 } Levels
-      %th{ width:100 } Type
-      %th{ width:300 }
+      %th.controls-column
+      %th Name
+      %th Type
   %tbody
     - @levels.each do |level|
       %tr
-        %td= level.name
-        %td= level.class.name
-        %td
-          = link_to t('crud.show'), level
-          - if level.custom?
-            = link_to t('crud.edit'), edit_level_path(level)
-            = link_to t('crud.destroy'), level, method: :delete, data: { confirm: t('crud.confirm') }
-            = link_to 'Clone', '', onclick: "$('#clone_#{level.id}').toggle(); return false;"
+        %td.controls-column
+          - if can? :edit, level
+            = link_to edit_level_path(level), title: t('crud.edit') do
+              %i.fa.fa-fw.fa-pencil
+          - else
+            %i.fa.fa-fw
+
+          - if can? :destroy, level
+            = link_to level, title: t('crud.destroy'), method: :delete, data: { confirm: t('crud.confirm') } do
+              %i.fa.fa-fw.fa-trash
+          - else
+            %i.fa.fa-fw
+
+          - if can? :clone, level
+            = link_to '', title: 'Clone', onclick: "$('#clone_#{level.id}').toggle(); return false;" do
+              %i.fa.fa-fw.fa-copy
             %div{class: 'clone_level', id: "clone_#{level.id}", style: 'display: none;'}
-              = form_tag level_clone_path(level), method: :post, remote: true do
+              = form_tag clone_level_path(level), method: :post, remote: true do
                 = label_tag 'New name:'
                 = text_field_tag :name, level.name
                 = submit_tag 'Clone'
+          - else
+            %i.fa.fa-fw
+
+        -# Level name column, linked to view action if permitted
+        %td
+          - if can? :view, level
+            = link_to level.name, level, title: t('crud.show')
+          - else
+            = level.name
+
+        -# Level type column
+        %td= level.class.name
+
 = paginate @levels
 %br/
-- if can? :create, Level
-  = link_to t('crud.new_model', model: Level.model_name.human), new_level_path
 #validation-error.validation-error{style: 'background-color: yellow'}
 :javascript
   window.levelbuilder.ajaxSubmit('.clone_level');
