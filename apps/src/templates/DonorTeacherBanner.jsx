@@ -59,17 +59,17 @@ const styles = {
 
 export default class TeacherDonorBanner extends Component {
   static propTypes = {
-    teacherFirstName: PropTypes.string.isRequired,
-    teacherSecondName: PropTypes.string.isRequired,
-    teacherEmail: PropTypes.string.isRequired,
-    ncesSchoolId: PropTypes.string.isRequired,
+    teacherFirstName: PropTypes.string,
+    teacherSecondName: PropTypes.string,
+    teacherEmail: PropTypes.string,
+    ncesSchoolId: PropTypes.string,
     schoolAddress1: PropTypes.string,
     schoolAddress2: PropTypes.string,
     schoolAddress3: PropTypes.string,
     schoolCity: PropTypes.string,
     schoolState: PropTypes.string,
     schoolZip: PropTypes.string,
-    onDismiss: PropTypes.func.isRequired
+    onDismiss: PropTypes.func
   };
 
   initialState = {
@@ -99,7 +99,10 @@ export default class TeacherDonorBanner extends Component {
     }
 
     this.setState({submitted: true});
-    this.props.onDismiss();
+
+    if (this.props.onDismiss) {
+      this.props.onDismiss();
+    }
   };
 
   renderDonorForm() {
