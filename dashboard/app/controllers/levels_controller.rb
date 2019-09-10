@@ -292,7 +292,8 @@ class LevelsController < ApplicationController
       old_level = Level.find(params[:level_id])
 
       begin
-        @level = old_level.clone_with_name(params[:name])
+        editor_experiment = Experiment.get_editor_experiment(current_user)
+        @level = old_level.clone_with_name(params[:name], editor_experiment: editor_experiment)
       rescue ArgumentError => e
         render(status: :not_acceptable, text: e.message) && return
       rescue ActiveRecord::RecordInvalid => invalid
