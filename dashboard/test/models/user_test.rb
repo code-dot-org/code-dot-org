@@ -3635,7 +3635,7 @@ class UserTest < ActiveSupport::TestCase
       teacher = create :teacher
       twenty_hour = Script.twenty_hour_script
 
-      # user completed the first level
+      # User completed the first level
       first_script_level = twenty_hour.get_script_level_by_chapter(1)
       UserLevel.create(
         user: student,
@@ -3653,8 +3653,6 @@ class UserTest < ActiveSupport::TestCase
 
       # Find the third stage, since the 2nd is hidden
       next_visible_stage = twenty_hour.stages.find {|stage| stage.relative_position == 3}
-
-      next_visible_stage.script_levels.first.chapter
 
       assert_equal(next_visible_stage.script_levels.first, student.next_unpassed_visible_progression_level(twenty_hour))
     end
