@@ -494,11 +494,7 @@ en:
     test_videos_help: 'Test our new video player at your school'
     try_beta_courses: 'New! Try our beta courses for K-5 students'
     use_as_teacher: 'Use this site as a teacher'
-    heading_hoc2014: "<h2>The Hour of Code for</h2><h1>All Ages</h1>"
-    heading_elementary: "<h2>20 hour courses for</h2><h1>Computer Science Fundamentals (all ages)</h1>"
-    heading_apps: "<h2>Fun for</h2><h1>Everybody</h1>"
-    heading_tools: "<h2>Ready for the next step?</h2><h1>Tools for Middle and High School</h1>"
-    heading_legacy: "<h2>Our accelerated course for</h2><h1>All Ages</h1>"
+    heading_elementary_markdown: "## 20 hour courses for\n\n# Computer Science Fundamentals (all ages)"
     your_gallery: Gallery
     no_primary_course: "Try a Code Studio course"
     choose_next_course: "Try a Code Studio course by choosing one below"
