@@ -1,5 +1,5 @@
 - full_width = local_assigns[:full_width]
-%div{ style: "color: white; background: url(#{asset_path('dashboard_footer-uncropped.png')})" }
+%div{ style: "color: white; background: url(#{asset_path('dashboard_footer-cropped.png')}); background-size: cover; min-height: 340px;" }
   %h1{ style: 'color: white' }
     Code.org thanks our donors
   %p
@@ -12,6 +12,6 @@
       Your free education on Code.org is made possible by:
   -# Logos here
   - if true # will eventually be if Amazon
-    %h5
+    %p
       -# Learn more will be a link
       Amazon is offering free resources for Code.org classrooms. Learn more
