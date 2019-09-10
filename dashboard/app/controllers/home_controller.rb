@@ -60,6 +60,7 @@ class HomeController < ApplicationController
   # Signed in: render home page
   # Signed out: redirect to sign in
   def home
+    view_options(above_footer_content: 'home/donor_footer')
     authenticate_user!
     init_homepage
     render 'home/index'
