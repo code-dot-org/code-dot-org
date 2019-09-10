@@ -46,13 +46,9 @@ da:
   okay: "Okay"
   or: "eller"
   heading_x_of_y: "%{heading} (side %{x} af %{y})"
-  add_teacher_form:
+  join_section:
     code:
-      label: 'Tilføje en lærer:'
       placeholder: "Afsnitskode (ABCDEF)"
-      instructions: "Indtast venligst koden din lærer har delt med dig. Det er en kode på 6 bogstaver som \"ABCDEF\"."
-      instructions_short: "Angiv din sektionskode (6 tegn)"
-    submit: 'Tilføj lærer'
   add_hint_form:
     placeholder: 'Skriv dit huske-ord her'
     submit: 'Skriv huske-ord'
