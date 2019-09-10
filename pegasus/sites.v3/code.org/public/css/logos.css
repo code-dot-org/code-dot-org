@@ -1,0 +1,20 @@
+/* 970px and down (tablet and phones): show 3 columns */
+
+@media screen and (min-width: 0px) and (max-width: 970px)
+{
+    .col-mobile-30 { width: 30%; float:left; }
+}
+
+/* 512px and down: show 2 columns */
+
+@media screen and (min-width: 0px) and (max-width: 512px)
+{
+    .col-mobile-30 { width: 50%; float:left; }
+}
+
+/* 350px and down: show 1 column */
+
+@media screen and (min-width: 0px) and (max-width: 350px)
+{
+    .col-mobile-30 { width: 100%; float:left; }
+}
