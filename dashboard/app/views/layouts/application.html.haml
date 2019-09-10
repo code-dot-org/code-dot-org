@@ -86,6 +86,9 @@
           = render partial: 'layouts/small_footer', locals: {full_width: true}
 
     - unless view_options[:no_footer]
+      - if view_options[:above_footer_content]
+        = render partial: view_options[:above_footer_content]
+
       - if view_options[:responsive_content]
         .responsive-content-desktop-footer
           = render partial: 'layouts/footer', locals: {full_width: view_options[:full_width]}
