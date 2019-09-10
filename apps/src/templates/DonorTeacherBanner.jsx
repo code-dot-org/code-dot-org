@@ -249,14 +249,28 @@ export default class TeacherDonorBanner extends Component {
   }
 
   renderThankYou() {
-    return (
-      <Notification
-        type={NotificationType.success}
-        notice="Your response has been submitted!"
-        details="If you change your mind, you can sign up later at the bottom of this page"
-        dismissible={true}
-      />
-    );
+    if (this.state.participate) {
+      return (
+        <Notification
+          type={NotificationType.success}
+          notice="Your response has been submitted!"
+          details="Thank you for your response.  If you are not redirected to the form in a few moments,"
+          detailsLinkText="click here"
+          detailsLink="https://afe.qa.amazon-blogs.psdops.com/code-org-afe"
+          detailsLinkNewWindow={true}
+          dismissible={true}
+        />
+      );
+    } else {
+      return (
+        <Notification
+          type={NotificationType.success}
+          notice="Your response has been submitted!"
+          details="If you change your mind, you can sign up later at the bottom of this page."
+          dismissible={true}
+        />
+      );
+    }
   }
 
   render() {
