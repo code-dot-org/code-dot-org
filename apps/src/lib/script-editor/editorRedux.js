@@ -17,11 +17,13 @@ const MOVE_STAGE = 'scriptEditor/MOVE_STAGE';
 const REMOVE_GROUP = 'scriptEditor/REMOVE_GROUP';
 const REMOVE_STAGE = 'scriptEditor/REMOVE_STAGE';
 const SET_STAGE_LOCKABLE = 'scriptEditor/SET_STAGE_LOCKABLE';
+const SET_FLEX_CATEGORY = 'scriptEditor/SET_FLEX_CATEGORY';
 
-export const init = (stages, levelKeyList) => ({
+export const init = (stages, levelKeyList, flexCategoryMap) => ({
   type: INIT,
   stages,
-  levelKeyList
+  levelKeyList,
+  flexCategoryMap
 });
 
 export const addGroup = (stageName, groupName) => ({
@@ -121,6 +123,12 @@ export const setStageLockable = (stage, lockable) => ({
   type: SET_STAGE_LOCKABLE,
   stage,
   lockable
+});
+
+export const setFlexCategory = (stage, flexCategory) => ({
+  type: SET_FLEX_CATEGORY,
+  stage,
+  flexCategory
 });
 
 function updateStagePositions(stages) {
@@ -279,6 +287,24 @@ function stages(state = [], action) {
     }
     case SET_STAGE_LOCKABLE: {
       newState[action.stage - 1].lockable = action.lockable;
+      break;
+    }
+    case SET_FLEX_CATEGORY: {
+      // Remove the stage from the array and update its flex category.
+      const index = action.stage - 1;
+      const [curStage] = newState.splice(index, 1);
+      curStage.flex_category = action.flexCategory;
+
+      // Insert the stage after the last stage with the same flex_category,
+      // or at the end of the list if none matches.
+      const categories = newState.map(stage => stage.flex_category);
+      const lastIndex = categories.lastIndexOf(action.flexCategory);
+      const targetIndex = lastIndex > 0 ? lastIndex + 1 : newState.length;
+      newState.splice(targetIndex, 0, curStage);
+
+      updateStagePositions(newState);
+
+      break;
     }
   }
 
@@ -312,8 +338,17 @@ function levelNameToIdMap(state = {}, action) {
   return state;
 }
 
+function flexCategoryMap(state = {}, action) {
+  switch (action.type) {
+    case INIT:
+      return action.flexCategoryMap;
+  }
+  return state;
+}
+
 export default {
   stages,
   levelKeyList,
-  levelNameToIdMap
+  levelNameToIdMap,
+  flexCategoryMap
 };
