@@ -32,7 +32,7 @@
   "and": "そして",
   "animationMode": "アニメーション",
   "animationPicker_drawYourOwn": "自分のを描く",
-  "animationPicker_error": "エラー: {メッセージ}",
+  "animationPicker_error": "エラー: {message}",
   "animationPicker_failedToParseImage": "この画像は解析されないのでございます",
   "animationPicker_title": "アニメーション　図書館",
   "animationPicker_unsupportedType": "すみません、このファイルのタイプはサポートされていません。",
