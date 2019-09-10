@@ -48,6 +48,7 @@ class Ability
       Pd::InternationalOptIn,
       :maker_discount
     ]
+    cannot :index, Level
 
     if user.persisted?
       can :manage, user
@@ -221,7 +222,7 @@ class Ability
       ]
 
       # Only custom levels are editable.
-      cannot [:update, :destroy], Level do |level|
+      cannot [:clone, :update, :destroy], Level do |level|
         !level.custom?
       end
 
@@ -233,7 +234,8 @@ class Ability
     if user.persisted?
       editor_experiment = Experiment.get_editor_experiment(user)
       if editor_experiment
-        can :clone, Level
+        can :index, Level
+        can :clone, Level, &:custom?
         can :manage, Level, editor_experiment: editor_experiment
         can [:edit, :update], Script, editor_experiment: editor_experiment
       end
