@@ -48,6 +48,7 @@ class Ability
       Pd::InternationalOptIn,
       :maker_discount
     ]
+    cannot :index, Level
 
     if user.persisted?
       can :manage, user

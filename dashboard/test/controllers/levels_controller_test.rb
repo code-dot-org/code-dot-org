@@ -57,6 +57,13 @@ class LevelsControllerTest < ActionController::TestCase
     user: :platformization_partner
   )
 
+  test "non-levelbuilder can't index levels" do
+    sign_out @levelbuilder
+    sign_in create :teacher
+    get :index
+    assert_response :forbidden
+  end
+
   test "should get new" do
     get :new, params: {game_id: @level.game}
     assert_response :success
