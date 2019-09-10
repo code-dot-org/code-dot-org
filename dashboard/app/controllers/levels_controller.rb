@@ -65,7 +65,7 @@ class LevelsController < ApplicationController
     levels = levels.joins(:script_levels).where('script_levels.script_id = ?', params[:script_id]) if params[:script_id].present?
     @levels = levels.page(params[:page]).per(LEVELS_PER_PAGE)
     @level_types = LEVEL_CLASSES.map(&:name)
-    @scripts = Script.pluck(:name, :id)
+    @scripts = Script.valid_scripts(current_user).pluck(:name, :id).sort_by {|a| a[0]}
   end
 
   # GET /levels/1
