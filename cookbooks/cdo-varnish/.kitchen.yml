@@ -31,13 +31,13 @@ platforms:
   - recipe[apt]
 
 verifier:
+  # Needed for test discovery: https://github.com/someara/kitchen-dokken/issues/78#issuecomment-298314150
   root_path: '/opt/verifier'
 
 suites:
   - name: default
     run_list:
       - recipe[varnish_test]
-#      - recipe[minitest-handler]
   - name: cloudfront
     run_list:
       - recipe[varnish_test]
