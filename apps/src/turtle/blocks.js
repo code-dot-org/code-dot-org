@@ -682,17 +682,13 @@ exports.install = function(blockly, blockInstallOptions) {
     helpUrl: '',
     init: function() {
       this.setHSV(184, 1.0, 0.74);
-      this.interpolateMsg(
-        msg.moveDirectionByPixels(),
-        () => {
-          this.appendDummyInput().appendTitle(
-            new blockly.FieldDropdown(blockly.Blocks.draw_move.DIRECTIONS),
-            'DIR'
-          );
-        },
-        ['VALUE', 'Number', blockly.ALIGN_RIGHT],
-        blockly.ALIGN_RIGHT
-      );
+      this.appendValueInput('VALUE')
+        .setCheck(blockly.BlockValueType.NUMBER)
+        .appendTitle(
+          new blockly.FieldDropdown(blockly.Blocks.draw_move.DIRECTIONS),
+          'DIR'
+        );
+      this.appendDummyInput().appendTitle(msg.dots());
       this.setInputsInline(true);
       this.setPreviousStatement(true);
       this.setNextStatement(true);
@@ -701,8 +697,8 @@ exports.install = function(blockly, blockInstallOptions) {
   };
 
   blockly.Blocks.draw_move.DIRECTIONS = [
-    [msg.forward(), 'moveForward'],
-    [msg.backward(), 'moveBackward']
+    [msg.moveForward(), 'moveForward'],
+    [msg.moveBackward(), 'moveBackward']
   ];
 
   generator.draw_move = function() {
@@ -1160,25 +1156,17 @@ exports.install = function(blockly, blockInstallOptions) {
     helpUrl: '',
     init: function() {
       this.setHSV(184, 1.0, 0.74);
-      this.interpolateMsg(
-        msg.turnDirection(),
-        () => {
-          this.appendDummyInput().appendTitle(
-            new blockly.FieldDropdown(blockly.Blocks.draw_turn.DIRECTIONS),
-            'DIR'
-          );
-        },
-        () => {
-          this.appendValueInput('VALUE').addFieldHelper(
-            blockly.BlockFieldHelper.ANGLE_HELPER,
-            {
-              block: this,
-              directionTitle: 'DIR'
-            }
-          );
-        },
-        blockly.ALIGN_RIGHT
-      );
+      this.appendValueInput('VALUE')
+        .setCheck(blockly.BlockValueType.NUMBER)
+        .addFieldHelper(blockly.BlockFieldHelper.ANGLE_HELPER, {
+          block: this,
+          directionTitle: 'DIR'
+        })
+        .appendTitle(
+          new blockly.FieldDropdown(blockly.Blocks.draw_turn.DIRECTIONS),
+          'DIR'
+        );
+      this.appendDummyInput().appendTitle(msg.degrees());
       this.setInputsInline(true);
       this.setPreviousStatement(true);
       this.setNextStatement(true);
@@ -1187,8 +1175,8 @@ exports.install = function(blockly, blockInstallOptions) {
   };
 
   blockly.Blocks.draw_turn.DIRECTIONS = [
-    [msg.right(), 'turnRight'],
-    [msg.left(), 'turnLeft']
+    [msg.turnRight(), 'turnRight'],
+    [msg.turnLeft(), 'turnLeft']
   ];
 
   generator.draw_turn = function() {
