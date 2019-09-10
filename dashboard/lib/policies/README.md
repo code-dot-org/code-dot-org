@@ -3,7 +3,7 @@
 This directory is meant to contain Plain Old Ruby Objects (POROs) that
 encapsulate business logic which _tells you about something_. This is as
 opposed to other categories of POROs like Service Objects which _do something_
-or Query Objects which _retrieve something_).
+or Query Objects which _retrieve something_.
 
 Policy Objects declared in this directory should all be declared under the
 `Policies` namespace and should contain non-Rails-specific business logic that
