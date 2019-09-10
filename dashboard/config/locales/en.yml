@@ -211,7 +211,7 @@ en:
     login: 'Sign in'
     invalid_login: 'Invalid login, please try again'
     pair_programming: 'I have a partner at my computer'
-    student_privacy: "Learn more about why you're not seeing your full name <a href='%{student_privacy_blog}' target='_blank'>here</a>."
+    student_privacy_markdown: "Learn more about why you're not seeing your full name [here](%{student_privacy_blog})."
   password:
     reset_form:
       title: 'Forgot your password?'
