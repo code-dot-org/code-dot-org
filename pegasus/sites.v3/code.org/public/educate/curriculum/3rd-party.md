@@ -94,12 +94,6 @@ Looking for resources specifically for AP Computer Science Principles A in Java?
 <br />
 <a target="_blank" href="https://docs.google.com/spreadsheets/d/1-lbIKCkcVWWTFhcmpZkw8AcGv0iPj-hEqvO0Eu0N1hU/pubhtml?gid=705822074&single=true"><button>See full details and comparison</button></a>
 
-## For school counselors and administrators
-[NCWIT Counselors for Computing (C4C)](https://www.ncwit.org/project/counselors-computing-c4c) provides school counselors with
-up-to-date information and resources they can use to guide students toward education and
-careers in computing. Free professional development webinars and 1-day workshops are available
-across the US.   
-
 ## Funding for computer science programs
 
 U.S. Federal law recently recognized [computer science as part of the "well rounded education subjects"](http://blog.code.org/post/134932134563/sweeping-us-education-law-adds-computer-science), and explicitly [names computer science as an important STEM field](http://blog.code.org/post/130358071518/computer-science-is-finally-included-in-stem).
@@ -108,28 +102,10 @@ Your school or district may be able to use Title I or Title II funds, and other 
 
 The National Science Foundation (NSF) has several existing funding opportunities to support CS for All initiatives. The NSF outlined invitations for proposals in a [Dear Colleague Letter](http://www.nsf.gov/publications/pub_summ.jsp?ods_key=nsf16057) issued in March 2016. If you are an organization focused on the learning of computer science and computational thinking for all students, consider [submitting a proposal](http://www.nsf.gov/publications/pub_summ.jsp?ods_key=nsf16057).
 
-## Scholarship opportunities for students
-Raise.me is a college preparedness platform empowering millions of high school students to reach their full potential by helping them earn scholarship dollars from colleges for all the things that set them up to succeed - whether that’s getting good grades, volunteering in the community, or joining extracurriculars.
-
- <p>
-Click below to learn more about how Raise.me can help your students earn scholarships to stay motivated and pursue computer science education in preparation for college.
-</p>
-
-[<button>Learn more</button>](/educate/scholarships)
-
 ## More resources &mdash; for classrooms, afterschool clubs or learning online
-
-### [Khan Academy](http://khanacademy.org/cs/programming)
-Online curriculum that teaches JavaScript programming, HTML/CSS, and SQL, in an interactive online environment, plus courses on Algorithms and Cryptography. Includes teaching tools to track student progress.
-
-### [Kodu](http://www.kodugamelab.com/)
-Create games on the PC and XBox via a simple visual programming language. Can be used to teach creativity, problem solving, storytelling, as well as programming.
 
 ### [Alice](http://www.alice.org/)
 3D programming environment that makes it easy to create an animation for telling a story, playing an interactive game, or a video to share on the web.
-
-### [Pencil Code](//pencilcode.net)
-Pencil Code lets beginners be real web real developers, starting with turtle graphics and moving on to HTML5, CSS, and jQuery.  Create art, music, games, and stories in Coffeescript and Javascript using a unique switchable editor that lets you work in either blocks or text.
 
 ### [Codecademy](https://www.codecademy.com/learn)
 Codecademy is an online interactive platform that offers free coding classes in 12 different programming languages
@@ -140,12 +116,17 @@ Fun classroom exercises to teach computer science principles, no computers neede
 ### [CS First](http://cs-first.com/)
 Free curriculum from Google that uses online, project-based tutorials for elementary and middle school students and offers free club plans and resources to create an easy computer science entry point for educators and students alike.
 
+### [Khan Academy](http://khanacademy.org/cs/programming)
+Online curriculum that teaches JavaScript programming, HTML/CSS, and SQL, in an interactive online environment, plus courses on Algorithms and Cryptography. Includes teaching tools to track student progress.
+
+### [Kodu](http://www.kodugamelab.com/)
+Create games on the PC and XBox via a simple visual programming language. Can be used to teach creativity, problem solving, storytelling, as well as programming.
+
+### [Pencil Code](//pencilcode.net)
+Pencil Code lets beginners be real web real developers, starting with turtle graphics and moving on to HTML5, CSS, and jQuery.  Create art, music, games, and stories in Coffeescript and Javascript using a unique switchable editor that lets you work in either blocks or text.
+
 ### [Teaching Kids Programming ](http://teachingkidsprogramming.org)
 Build the next generation of creators using free, open-source Java courseware.
-
-## Other lists of resources for curriculum or PD
-- AskATeacher's [Hour of Code suggestions by grade level](https://askatechteacher.com/hour-of-code-websites-by-grade/)
-- [LeadCS.org](http://www.leadcs.org) - a list of many resources for schools to embrace CS
 
 ## Frequently Asked Questions
 
