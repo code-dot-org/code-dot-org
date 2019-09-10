@@ -51,12 +51,9 @@
       "/docs/concepts/app-lab/patterns/counter-patterns-with-event/",
       "/docs/concepts/app-lab/patterns/variable-with-string-concatenation-pattern/"
     ],
-    "preload_asset_list": null,
     "encrypted": "false",
-    "encrypted_examples": [
-
-    ],
-    "widget_mode": "false"
+    "widget_mode": "false",
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",
