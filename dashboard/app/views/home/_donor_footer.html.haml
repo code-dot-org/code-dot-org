@@ -1,19 +1,17 @@
 - full_width = local_assigns[:full_width]
-.container{ style: 'padding: 10px; color: white; width:100%' }
-  %div{ style: "position:absolute; left:0; right:0; height:340px; background: url(#{asset_path('dashboard_footer-uncropped.png')})" }
-    %h1{ style: 'color: white' }
-      Code.org thanks our donors
-    %p
-      Our vision is that every student in every school should have the opportunity to learn computer science. The impact of our work is amplified and made possible with help from our amazing partners.
-    %h3
-      - if current_user.teacher?
-        %strong
-          Your classroom's free use of Code.org is made possible by:
-      - else
-        Your free education on Code.org is made possible by:
-    -# Logos here
-    - if true # will eventually be if Amazon
-      %p
-        -# Learn more will be a link
-        Amazon is offering free resources for Code.org classrooms. Learn more
-  %div{style: 'height:265px'}
+%div{ style: "color: white; background: url(#{asset_path('dashboard_footer-uncropped.png')})" }
+  %h1{ style: 'color: white' }
+    Code.org thanks our donors
+  %p
+    Our vision is that every student in every school should have the opportunity to learn computer science. The impact of our work is amplified and made possible with help from our amazing partners.
+  %h3
+    - if current_user.teacher?
+      %strong
+        Your classroom's free use of Code.org is made possible by:
+    - else
+      Your free education on Code.org is made possible by:
+  -# Logos here
+  - if true # will eventually be if Amazon
+    %h5
+      -# Learn more will be a link
+      Amazon is offering free resources for Code.org classrooms. Learn more
