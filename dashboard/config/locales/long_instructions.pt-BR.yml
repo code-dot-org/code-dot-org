@@ -1964,6 +1964,55 @@ pt-BR:
         -   O nome do criador (se disponível)
         -   O site em que foi encontrado (por exemplo, commons.wikimedia.org)
         -   A licença em que foi publicada (por exemplo, CC-BY)
+      CSD U2 Image Tag Attribution_2018: |-
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+
+        <summary>
+        <strong>Como eu adiciono imagens?</strong>
+        </summary>
+
+        A tag `<img>` permite mostrar imagens em sua página da web. <br><br>
+
+        Exemplo:
+
+        <pre>&lt;img src="dog.png" alt="cachorro pulando"/&gt;</pre><br><br>
+
+        Para informar ao navegador qual arquivo usar, informações adicionais chamadas de **atributo** são adicionadas à tag \<img> dentro dos colchetes. O atributo `src` representa **s** ou **rc** e e informa o nome da imagem. Os nomes dos arquivos de imagem incluem extensões que informam ao computador com que tipo de imagem eles estão trabalhando. As extensões comuns são .jpg, .jpeg, .png. <br><br>
+
+        Além de possuir o atributo src, os elementos da imagem também possuem o atributo `alt` que descreve a imagem. Isso é importante caso a imagem não carregue ou para pessoas com problemas de visão. <br><br>
+
+        Uma tag `<img>` é um exemplo de uma **etiqueta de fechamento automático** porque inicia e fecha em uma tag. Para marcar isso, colocamos o `/` que normalmente aparece na tag close no final da tag da imagem.
+
+        </details>
+        <details>
+        <summary>
+        <strong> Por que uma tag de imagem não possui uma tag de fechamento? </strong>
+        </summary>
+        Uma tag de imagem não precisa de uma tag de fechamento porque não há conteúdo de texto que deva ser agrupado em tags. O conteúdo exibido na tela é especificado através dos atributos das tags.
+        </details>
+        <details>
+        <summary>
+        <strong> O que é um atributo? </strong>
+        </summary>
+
+        Atributos são informações extras incluídas em uma tag. Atributos têm nomes e valores. O nome informa que tipo de informação está sendo fornecida e, em seguida, o valor fornece as informações específicas para essa tag.
+
+        Por exemplo, as tags \<img> têm dois atributos, src e alt. src especifica o nome do arquivo de imagem e alt informa ao navegador em texto legível qual é a imagem.
+
+        </details>
+        </div>
+
+        # Dando crédito
+
+        Ao usar uma imagem licenciada da Creative Commons, você precisa dar crédito ao criador original (isso também é chamado _atribuição_). Existem várias maneiras de fornecer atribuição, mas a maneira mais fácil é adicionar texto abaixo da imagem que identifica o criador e o site de onde veio.
+
+        # Faça isso
+
+        Nesta página, já adicionamos e atribuímos uma imagem de um sapo. Use o mecanismo de pesquisa Creative Commons para encontrar outra imagem de um anfíbio. Adicione sua imagem encontrada a esta página, juntamente com a atribuição adequada, incluindo:
+
+        -   O nome do criador (se disponível)
+        -   O site em que foi encontrado (por exemplo, commons.wikimedia.org)
+        -   A licença em que foi publicada (por exemplo, CC-BY)
       CSD U2 Image Tag Attribution_2019: |-
         <div class="no-pullthrough" style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
         <details>
@@ -4692,6 +4741,63 @@ pt-BR:
         -   Altere a largura das imagens para maior ou menor.
         -   Crie uma nova regra com uma propriedade `height` para controlar a altura das imagens.
         -   Use a propriedade `width` no conjunto de regras`p` para alterar a largura dos seus parágrafos.
+      CSD U2 layout style width_2018: |-
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+
+        <summary>
+        <strong>Como o código funciona? </strong>
+        </summary>
+
+        Aqui está o código que está tornando a imagem em seu tamanho atual:
+
+            img {
+                 largura: 250 px;
+            }
+
+        -   `img` é o _seletor_. Ele especifica quais elementos terão que seguir as regras dentro das chaves, neste caso, as imagens.
+        -   `width: 250px` é a regra que torna a imagem com 250 pixels de largura. Ele também altera a altura para que a imagem não se estique.
+
+        </details>
+        <details>
+        <summary>
+        <strong> O que a propriedade <code> width </code> faz? </strong>
+        </summary>
+
+        A propriedade `width` determina a largura do elemento. Na maioria das vezes, você define a largura em pixels, o que faz com que o elemento ocupe uma quantidade exata de espaço na tela. Definir a largura também mudará a altura para que a imagem não se estique, a menos que você também tenha definido a altura. Você pode ler mais sobre esta propriedade em <a href="http://www.w3schools.com/cssref/pr_dim_width.asp" target="_new"> W3Schools - CSS propriedade largura</a>
+
+        </details>
+        <details>
+        <summary>
+        <strong> O que a propriedade <code>height</code> faz? </strong>
+        </summary>
+
+        A propriedade `height` determina a altura do elemento. Na maioria das vezes, você define a altura em pixels, o que faz com que o elemento ocupe uma quantidade exata de espaço na tela. Definir a altura também mudará a largura para que a imagem não se estique, a menos que você também tenha definido a largura. Você pode ler mais sobre esta propriedade em <a href="http://www.w3schools.com/cssref/pr_dim_height.asp" target="_new"> W3Schools - CSS propriedade altura </a>
+
+        </details>
+        <details>
+        <summary>
+        <strong> O que significa <code>px</code> / O que é um pixel? </strong>
+        </summary>
+
+        Pixel, que é abreviado como "px", é como os elementos são medidos no CSS. É do tamanho de um único ponto de luz na tela.
+
+        </details>
+        <details>
+        <summary>
+        <strong> Por que usar uma regra de largura e altura ao mesmo tempo às vezes estica a imagem? </strong>
+        </summary>
+
+        Quando a largura de uma imagem muda, a altura deve mudar na mesma porcentagem, caso contrário, a imagem será esticada. Por exemplo, se você dobrar a largura de uma imagem, também deverá dobrar a altura, ou a imagem será esticada horizontalmente. Quando você define apenas a largura ou a altura, o computador altera automaticamente a outra propriedade para que a imagem tenha a mesma aparência.
+
+        </details>
+        </div>
+
+        # Largura e altura
+
+        -   Encontre a propriedade na folha de estilos que controla a largura das imagens.
+        -   Altere a largura das imagens para serem maiores ou menores.
+        -   Crie uma nova regra com uma propriedade `height` para controlar a altura das imagens.
+        -   Use a propriedade `width` no conjunto de regras `p` para alterar a largura dos parágrafos.
       CSD U2 layout style width_2019: "<div class=\"no-pullthrough\" style=\"float:
         right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\n<details>\n\n<summary>\n<strong>Como
         o código funciona?</strong>\n</summary>\n\nAqui está o código que está fazendo
@@ -8247,6 +8353,24 @@ pt-BR:
 
         -   Use uma **declaração if** e duas funções separadas para desenhar seus planos de fundo
         -   Então escreva suas funções fora do laço de desenho. Você decide o que é um plano de fundo "simples" ou "maluco". Divirta-se!
+      CSD U3 Functions Add Change Background_2018: |-
+        # Altere o Fundo de Tela com o Placar
+
+        Assim que você pegar 10 moedas é hora de comemorar. Você deve alterar o fundo de tela para algo divertido.
+
+        # Faça Isso
+
+        -   Utilize um **condicional-if** e duas funções separadas para desenhar seus fundos de telas.
+        -   Então vá escrever suas funções fora do laço de repetição de desenho. Você pode decidir o que um fundo de tela "simples" e "bobo" são. Divirta-se!
+      CSD U3 Functions Add Change Background_2019: |-
+        # Altere o Fundo de Tela com o Placar
+
+        Assim que você pegar 10 moedas é hora de comemorar. Você deve alterar o fundo de tela para algo divertido.
+
+        # Faça Isso
+
+        -   Utilize um **condicional-if** e duas funções separadas para desenhar seus fundos de telas.
+        -   Então vá escrever suas funções fora do laço de repetição de desenho. Você pode decidir o que um fundo de tela "simples" e "bobo" são. Divirta-se!
       CSD U3 Functions Add IsTouching: |-
         # Pegue a Moeda, Aumente a Pontuação
 
@@ -9449,6 +9573,28 @@ pt-BR:
 
         -   Depure este programa e corrija o erro para que a grama se estenda por todo o fundo.
         -   Dica: você só precisa alterar um número. Qual parâmetro faz seu retângulo (a grama) mais amplo?
+      CSD U3 Random Debug Grass_2018: |-
+        <img src="https://images.code.org/08c7c6cd82f4d4ff57459165f29ab624-image-1520402652290.03.37 PM.png" style="float:right;height:150px">
+
+        # Teste - Utilizando 4 parâmetros
+
+        Esse programa utiliza a versão de quatro parâmetros do `rect()` e `elipse()` para desenhar uma cena simples.
+
+        # Faça Isso
+
+        -   Teste esse programa e corrija os erros para que a grama se estenda por toda a parte de baixo.
+        -   Dica: Você só pode alterar um número. Qual parâmetro deixa seu retângulo (a grama) mais larga?
+      CSD U3 Random Debug Grass_2019: |-
+        <img src="https://images.code.org/08c7c6cd82f4d4ff57459165f29ab624-image-1520402652290.03.37 PM.png" style="float:right;height:150px">
+
+        # Teste - Utilizando 4 parâmetros
+
+        Esse programa utiliza a versão de quatro parâmetros do `rect()` e `elipse()` para desenhar uma cena simples.
+
+        # Faça Isso
+
+        -   Teste esse programa e corrija os erros para que a grama se estenda por toda a parte de baixo.
+        -   Dica: Você só pode alterar um número. Qual parâmetro deixa seu retângulo (a grama) mais larga?
       CSD U3 Random Ellipse Behind: |-
         <img src="https://images.code.org/a8ed6092389aedceceb38a83ac59fae1-image-1490832453029.07.10 PM.png" style="float:right;height:150px">
 
@@ -9580,6 +9726,20 @@ pt-BR:
         -   Use `numeroAleatório()` para fazer o resto do corpo da cobra se mover para cima e para baixo como os três primeiros.
 
         _Desafio: Você pode tornar o tamanho de alguns círculos aleatórios também?_
+      CSD U3 Random rainbow snake_2018: |-
+        <img src="https://images.code.org/6af643f712b042e5b076f06cc2f902e2-image-1520404404645.32.58 PM.png" style="float:right;height:150px">
+
+        # Cobra Coral
+
+        Esse programa desenha uma espécie muito rara de cobra coral. Para fazer com que a cobra seja desenhada de forma diferente toda vez você vai precisar de utilizar números aleatórios.
+
+        # Faça Isso
+
+        -   Rode o programa várias vezes para ver como o código inicial funciona.
+        -   Adicione pelo menos três círculos coloridos na sua cobra coral.
+        -   Utilize `randomNumber()` para fazer o resto do corpo de sua cobra mover para cima e para baixo como os três primeiros.
+
+        _Desafio: Você consegue deixar os tamanhos de alguns círculos aleatórios também?_
       CSD U3 Random rainbow snake_2018_2019: "<img src=\"https://images.code.org/6af643f712b042e5b076f06cc2f902e2-image-1520404404645.32.58
         PM.png\" style=\"float:right;height:150px\">\n\n# Cobra Coral\n\nEste programa
         desenha uma espécie muito rara de cobra coral. Para fazer com que esta cobra
@@ -13054,6 +13214,42 @@ pt-BR:
                  \- Encontre uma imagem para usar no lugar do seu elemento
                  \- Desenhe o elemento usando seu editor de imagens preferido
         -   Compartilhe seu design regularmente com seus colegas de equipe para garantir um estilo consistente
+      CSD U4 - Design Mode Project_2018: |-
+        # Simulando seu App
+
+        Utilizando seu protótipo de papel, crie uma versão digital da sua tela utilizando os elementos do Design Mode que aprendeu até agora.
+
+        # Faça Isso
+
+        -   Renomeio a tela para corresponder ao seu _espaçamento_.
+        -   Utilize os elementos inclusos para criar sua tela para o app, dando um ID apropriado a cada um
+            -   Por exemplo, se o seu espaçamento for `home_` você como criar IDs como:
+            -   `home_title`
+            -   `home_login_button`
+            -   `home_logo`
+        -   Para os componentes do seu app que não podem ser recriados com os elementos inclusos você pode:
+            -   Recriar para utilizar os elementos inclusos
+            -   Achar uma imagem para ser utilizada no lugar do elemento
+            -   Desenhar a imagem utilizando um editor de imagem a sua escolha
+        -   Certifique-se de que você e seus companheiros de time estejam regularmente olhando os designs de cada um para garantir um estilo consistente
+      CSD U4 - Design Mode Project_2019: |-
+        # Simulando seu App
+
+        Utilizando seu protótipo de papel, crie uma versão digital da sua tela utilizando os elementos do Design Mode que aprendeu até agora.
+
+        # Faça Isso
+
+        -   Renomeio a tela para corresponder ao seu _espaçamento_.
+        -   Utilize os elementos inclusos para criar sua tela para o app, dando um ID apropriado a cada um
+            -   Por exemplo, se o seu espaçamento for `home_` você como criar IDs como:
+            -   `home_title`
+            -   `home_login_button`
+            -   `home_logo`
+        -   Para os componentes do seu app que não podem ser recriados com os elementos inclusos você pode:
+            -   Recriar para utilizar os elementos inclusos
+            -   Achar uma imagem para ser utilizada no lugar do elemento
+            -   Desenhar a imagem utilizando um editor de imagem a sua escolha
+        -   Certifique-se de que você e seus companheiros de time estejam regularmente olhando os designs de cada um para garantir um estilo consistente
       CSD U5 Amazon Data Video: Assista este vídeo para aprender como esse problema
         é resolvido pela Amazon. Enquanto assiste, pense em quais dados estão sendo
         coletados e de onde eles estão vindo.
@@ -14219,6 +14415,36 @@ pt-BR:
         # Faça Isto
 
         Acrescente um novo botão no projeto, e programe-o com um comportamento de sua escolha.
+      CSD U6 frequency: |-
+        # Freqüência
+
+        Esse controlador de campainha também foi expandido para controlar a frequência, mas o código ainda não foi concluído.
+
+        # Faça isso
+
+        -   Usando a variável `duration` como modelo, crie uma variável `frequency` que obtenha o valor do controle deslizante _frequency_.
+        -   Modifique a linha de código que emite o sinal sonoro para que ele use a variável `frequency` em vez da frequência padrão de`500`.
+        -   Execute seu código e altere a frequência e a duração para ouvir a diferença na campainha. (Não se esqueça de apertar o botão depois de fazer uma alteração!)
+      CSD U6 frequency_2018: |-
+        # Freqüência
+
+        Esse controlador de campainha também foi expandido para controlar a frequência, mas o código ainda não foi concluído.
+
+        # Faça isso
+
+        -   Usando a variável `duration` como modelo, crie uma variável `frequency` que obtenha o valor do controle deslizante _frequency_.
+        -   Modifique a linha de código que emite o sinal sonoro para que ele use a variável `frequency` em vez da frequência padrão de`500`.
+        -   Execute seu código e altere a frequência e a duração para ouvir a diferença na campainha. (Não se esqueça de apertar o botão depois de fazer uma alteração!)
+      CSD U6 frequency_2019: |-
+        # Freqüência
+
+        Esse controlador de campainha também foi expandido para controlar a frequência, mas o código ainda não foi concluído.
+
+        # Faça isso
+
+        -   Usando a variável `duration` como modelo, crie uma variável `frequency` que obtenha o valor do controle deslizante _frequency_.
+        -   Modifique a linha de código que emite o sinal sonoro para que ele use a variável `frequency` em vez da frequência padrão de`500`.
+        -   Execute seu código e altere a frequência e a duração para ouvir a diferença na campainha. (Não se esqueça de apertar o botão depois de fazer uma alteração!)
       CSD U6 functions paramters video_2019: |-
         ## Perguntas a Considerar
 
@@ -14242,6 +14468,15 @@ pt-BR:
         Neste ponto, você deve ter mais do seu programa no lugar. Agora você precisa adicionar os toques finais necessários e fazer um pequeno teste. Quando seu aplicativo estiver pronto, peça para seus colegas testarem. Veja se você pode encontrar algum bug, opções de design confusas ou recursos ausentes nos quais gostaria de trabalhar.
 
         Depois de concluir esta versão do seu programa, clique em Enviar para ativá-lo.
+      CSD U6 get toggle: |-
+        # mudança
+
+        Este programa possui eventos que detectam três alterações diferentes: a chave seletora, o controle deslizante de intervalo e o controle deslizante de duração. Como existem muitas coisas diferentes que fazem com que o LED e a campainha sejam redefinidos, ele usa funções para organizar o código.
+
+        # Faça isso
+
+        -   Leia a função `atualizarLED` para ver o que faz.
+        -   Adicione código ao `atualizarCampainha` para fazer com que a campainha ligue apenas quando a chave seletora estiver aberta.
       CSD U6 get toggle_2018: |-
         # mudança
 
@@ -14786,6 +15021,39 @@ pt-BR:
         Usando o bloco `definirPropriedade`, mova "vermelho\\ \_botao"para que corresponda à imagem à direita. (Clique na imagem para ver o tamanho total)
 
         _Nota: removemos a guia "Modo de design" por enquanto para que você possa praticar o trabalho com setProperty, mas ela voltará mais tarde assim que criar aplicativos próprios._
+      CSD U6 slider intro: |-
+        # Controles deslizantes
+
+        Na última vez, seus usuários puderam escolher apenas entre um zumbido curto e um longo. Para dar ao usuário controle sobre a duração exata da campainha, use um controle deslizante.
+
+        Esse controle deslizante permite que os usuários escolham um valor entre 100 e 1000 durante o burburinho, mas há algo que não está certo sobre como está funcionando.
+
+        # Faça isso
+
+        -   Examine o código e encontre o bug que impede que a duração seja definida corretamente.
+                 \- (Dica: passe o mouse sobre os triângulos amarelos para obter pistas sobre o que pode estar errado com o código.)
+      CSD U6 slider intro_2018: |-
+        # Controles deslizantes
+
+        Na última vez, seus usuários puderam escolher apenas entre um zumbido curto e um longo. Para dar ao usuário controle sobre a duração exata da campainha, use um controle deslizante.
+
+        Esse controle deslizante permite que os usuários escolham um valor entre 100 e 1000 durante o burburinho, mas há algo que não está certo sobre como está funcionando.
+
+        # Faça isso
+
+        -   Examine o código e encontre o bug que impede que a duração seja definida corretamente.
+                 \- (Dica: passe o mouse sobre os triângulos amarelos para obter pistas sobre o que pode estar errado com o código.)
+      CSD U6 slider intro_2019: |-
+        # Controles deslizantes
+
+        Na última vez, seus usuários puderam escolher apenas entre um zumbido curto e um longo. Para dar ao usuário controle sobre a duração exata da campainha, use um controle deslizante.
+
+        Esse controle deslizante permite que os usuários escolham um valor entre 100 e 1000 durante o burburinho, mas há algo que não está certo sobre como está funcionando.
+
+        # Faça isso
+
+        -   Examine o código e encontre o bug que impede que a duração seja definida corretamente.
+                 \- (Dica: passe o mouse sobre os triângulos amarelos para obter pistas sobre o que pode estar errado com o código.)
       CSD U6 test LED: |-
         # Controlar o LED
 
@@ -14849,8 +15117,8 @@ pt-BR:
       CSD What Makes a Computer a Computer Video_2019: |-
         ## Questões para pensar
 
-        -   O que fez os computadores serem maquinas diferentes das que vieram antes deles?
-        -   Pense em algo que você faz no computador. Que tipo de entrada, saída, armazenamento e processamento estão acontecendo?
+        -   O fez dos computadores máquinas diferentes das que vieram antes deles?
+        -   Pense em algo que você faz no computador. Que o tipo de entrada, saída, armazenamento e processamento estão acontecendo?
       CSD sprite movement challenge_2018: |-
         # Melhore sua animação
 
@@ -15299,6 +15567,24 @@ pt-BR:
         # Funcionalidade ausente nesse protótipo
 
         -   As perguntas não são realmente verificadas quanto à exatidão
+      CSDU6 - LED buttonL: "# Usando eventos do tabuleiro\n\nNeste momento, o LED
+        acende quando o botão esquerdo (\\`botaoL') é pressionado. Ele deve desligar
+        quando o botão direito (botaoR) é pressionado.\n\n<div style=\"float:right;\"
+        markdown=1> \n\n![expandable](https://images.code.org/402489ec13fb6c6f38910829a9633ac3-image-1510874304220.png)
+        \n\n</div>\n\n# Faça isso\n\n-   Adicione outro bloco `onBoardEvent ()` para
+        desligar o LED quando o botão direito for pressionado."
+      CSDU6 - LED buttonL_2018: "# Usando eventos do tabuleiro\n\nNeste momento, o
+        LED acende quando o botão esquerdo (\\`botaoL') é pressionado. Ele deve desligar
+        quando o botão direito (botaoR) é pressionado.\n\n<div style=\"float:right;\"
+        markdown=1> \n\n![expandable](https://images.code.org/402489ec13fb6c6f38910829a9633ac3-image-1510874304220.png)
+        \n\n</div>\n\n# Faça isso\n\n-   Adicione outro bloco `onBoardEvent ()` para
+        desligar o LED quando o botão direito for pressionado."
+      CSDU6 - LED buttonL_2019: "# Usando eventos do tabuleiro\n\nNeste momento, o
+        LED acende quando o botão esquerdo (\\`botaoL') é pressionado. Ele deve desligar
+        quando o botão direito (botaoR) é pressionado.\n\n<div style=\"float:right;\"
+        markdown=1> \n\n![expandable](https://images.code.org/402489ec13fb6c6f38910829a9633ac3-image-1510874304220.png)
+        \n\n</div>\n\n# Faça isso\n\n-   Adicione outro bloco `onBoardEvent ()` para
+        desligar o LED quando o botão direito for pressionado."
       CSDU6 - LED toggle buttonL up: |-
         # Outros eventos de teclado com os botões
 
@@ -15341,6 +15627,24 @@ pt-BR:
       CSDU6 - button LED prediction: Veja o nível contido para o markdown
       CSDU6 - button LED prediction_2018: Veja o nível contido para o markdown
       CSDU6 - button LED prediction_2019: Veja o nível contido para o markdown
+      CSDU6 - button_LED_prediction: |-
+        # Eventos de Tabuleiro
+
+        O bloco `onBoardEvent ()` permite que você comece a receber informações do seu Circuito Playground. Veja o programa com um parceiro e discuta o que você acha que ele fará. Depois de encontrar uma resposta, clique em "Executar" para verificar sua resposta.
+
+        -   O que acontecerá quando você pressionar o botão esquerdo?
+      CSDU6 - button_LED_prediction_2018: |-
+        # Eventos de Tabuleiro
+
+        O bloco `onBoardEvent ()` permite que você comece a receber informações do seu Circuito Playground. Veja o programa com um parceiro e discuta o que você acha que ele fará. Depois de encontrar uma resposta, clique em "Executar" para verificar sua resposta.
+
+        -   O que acontecerá quando você pressionar o botão esquerdo?
+      CSDU6 - button_LED_prediction_2019: |-
+        # Eventos de Tabuleiro
+
+        O bloco `onBoardEvent ()` permite que você comece a receber informações do seu Circuito Playground. Veja o programa com um parceiro e discuta o que você acha que ele fará. Depois de encontrar uma resposta, clique em "Executar" para verificar sua resposta.
+
+        -   O que acontecerá quando você pressionar o botão esquerdo?
       CSDU6 - buzzer duration buttons: |-
         # Buzina e os botões
 
@@ -16576,6 +16880,25 @@ pt-BR:
         quando você executar este código?"
       Fish Tank Predict_2019: "\\*\\* Faça uma previsão \\*\\*: O que você acha que
         acontecerá quando você executar este código?"
+      Frequency Analysis: |-
+        # Quebre um cifrador de substituição aleatória!
+
+        Mensagens criptografadas com um **Cifrador de César** são muito fáceis de serem descobertas. Que tal se ao invés de deslocar o alfabeto inteiro, nós mapeássemos cada uma das letras do alfabeto para uma letra diferente, de forma aleatória? Isto é chamado de **cifrador de substituição aleatória**.
+
+        Nesta versão da ferramenta, você estará interagindo mais com os gráficos que mostram a frequência das letras. Ao analisar a frequência das letras que constam na mensagem criptografada, comparada à frequência das letras contidas em um texto típico em português, você pode começar a desvendar alguns dos mapeamentos. Você sabia que _'E'_ é uma das letras mais comuns usadas na língua portuguesa? Talvez a letra mais frequente que você encontrar no seu texto criptografado seja a letra _'E'_, mas talvez não seja! Você vai ter que pensar um pouco para ver se esta substituição faz sentido.
+
+        # Faça Isto
+
+        -   Carregue a **Mensagem exemplo (difícil)** do menu suspenso de mensagens. Isto irá carregar a mensagem que foi criptografada com um cifrador de substituição aleatória.\
+            ![](https://images.code.org/04c6230c9607110126581c298bc09183-image-1443569176380.gif)
+
+        -   Você irá desvendar a mensagem descobrindo quais letras do alfabeto que deverão substituir cada letra contida na mensagem cifrada. Para fazer isto, arraste as letras azuis do alfabeto diretamente abaixo da letra em laranja que você quer substituir na mensagem cifrada original. As letras que foram alteradas usando suas sugestões não mais serão mostradas em laranja na janela à esquerda.
+            ![](https://images.code.org/da9a7af7568d8c1698872ab91b4d79d7-image-1443572471212.gif)
+
+        -   Brinque com algumas das opções de ordenação disponíveis no cifrador de substituição aleatória para obter diferentes visualizações das frequências das letras no texto de entrada, e também em textos padrão em português.
+            ![](https://images.code.org/82efbca1807206c9a07de520fdb22027-image-1443572614493.23.28.png)
+
+        Veja quanto tempo você demora para quebrar o cifrador! Isto é uma boa forma para criptografar informações secretas?
       Function intro Ryan: "A **função** chamada 'construir ponte' está em sua área
         de trabalho. Todos os códigos de que você precisa para atravessar o rio estão
         corretos! \\\r\n \\\r\nFixe o bloco verde pequeno duas vezes em sua área de
@@ -17918,6 +18241,38 @@ pt-BR:
         -   \*\* Arraste um bloco `console.log` \*\* da gaveta de variáveis.
         -   \*\* Execute seu aplicativo \*\*.
         -   \*\* Clique no botão Pesquisar \*\* e procure por mensagens no console.
+      U4 Model Program 3_2018: |-
+        # Eventos de botões
+
+        Com sua tela funcionando, é hora de começar a _programar_ de verdade o app para que responda aos cliques dos botões. Para cada botão em cada tela, você irá querer adicionar um bloco `onEvent` que observa o clique no botão e respondendo apropriadamente. Para começar nós iremos apenas observar o botão `home_search_btn` e imprimir alguma coisa no terminal quando ele for clicado.
+
+        # Faça Isso
+
+        Agora você está no Modo Código (você pode utilizar os botões acima do seu app para alterar entre Modo Código e Modo Design). Aqui é onde você escreve o código que irá responder aos usuários interagindo com seu app.
+
+        ![](https://images.code.org/278b27dd31b6ca014c0dd32c5f964a54-image-1505764431751.png)
+
+        -   **Pegue um bloco `onEvent`** da caixa de ferramentas do código.
+        -   **Escolha `home_search_btn`** do seletor "id".
+        -   **Pegue um bloco `console.log`** da caixa de variáveis.
+        -   **Rode seu aplicativo**
+        -   **Clique no botão de busca** e procure pela mensagem no terminal.
+      U4 Model Program 3_2019: |-
+        # Eventos de botões
+
+        Com sua tela funcionando, é hora de começar a _programar_ de verdade o app para que responda aos cliques dos botões. Para cada botão em cada tela, você irá querer adicionar um bloco `onEvent` que observa o clique no botão e respondendo apropriadamente. Para começar nós iremos apenas observar o botão `home_search_btn` e imprimir alguma coisa no terminal quando ele for clicado.
+
+        # Faça Isso
+
+        Agora você está no Modo Código (você pode utilizar os botões acima do seu app para alterar entre Modo Código e Modo Design). Aqui é onde você escreve o código que irá responder aos usuários interagindo com seu app.
+
+        ![](https://images.code.org/278b27dd31b6ca014c0dd32c5f964a54-image-1505764431751.png)
+
+        -   **Pegue um bloco `onEvent`** da caixa de ferramentas do código.
+        -   **Escolha `home_search_btn`** do seletor "id".
+        -   **Pegue um bloco `console.log`** da caixa de variáveis.
+        -   **Rode seu aplicativo**
+        -   **Clique no botão de busca** e procure pela mensagem no terminal.
       U4 Model Program 4: |-
         # Alterando as telas ao clicar
 
@@ -17930,6 +18285,30 @@ pt-BR:
         -   \*\* Arraste um bloco `setScreen` \*\* e coloque-o dentro do bloco`onEvent`.
         -   \*\* Selecione "pesquisar" \*\* no menu suspenso `setScreen`.
         -   \*\* Execute seu aplicativo \*\* e teste o botão "pagina inicial \\ \_pesquisar \\ \_btn.
+      U4 Model Program 4_2018: |-
+        # Alterando Telas no Clique
+
+        O bloco `setScreen` irá alterar seu app para qualquer tela que você especificar. Se você colocar um bloco `setScreen` _dentro_ de um bloco `onEvent`, você consegue programar seus botões para trocar para a tela correta.
+
+        # Faça isso
+
+        Utilizando o bloco `onEvent` que você criou, faça seu programa ir para a tela de "busca" quando o botão `home_search_btn` for clicado.
+
+        -   **Pegue um bloco `setScreen`** e coloque-o dentro do bloco `onEvent`.
+        -   **Escolha "busca"** de dentro do menu do `setScreen`.
+        -   **Rode seu app** e teste o botão `home_search_btn`.
+      U4 Model Program 4_2019: |-
+        # Alterando Telas no Clique
+
+        O bloco `setScreen` irá alterar seu app para qualquer tela que você especificar. Se você colocar um bloco `setScreen` _dentro_ de um bloco `onEvent`, você consegue programar seus botões para trocar para a tela correta.
+
+        # Faça isso
+
+        Utilizando o bloco `onEvent` que você criou, faça seu programa ir para a tela de "busca" quando o botão `home_search_btn` for clicado.
+
+        -   **Pegue um bloco `setScreen`** e coloque-o dentro do bloco `onEvent`.
+        -   **Escolha "busca"** de dentro do menu do `setScreen`.
+        -   **Rode seu app** e teste o botão `home_search_btn`.
       U4 Model Program 5: |-
         # Conecte os outros botões
 
@@ -18545,6 +18924,16 @@ pt-BR:
         bugs? Eu sei aonde eu quero ir, mas eu não sei quantos passos devo dar."'
       courseA_collector_loops_challenge1_2019: '"Você pode me ajudar encontrar alguns
         bugs? Eu sei aonde eu quero ir, mas eu não sei quantos passos devo dar."'
+      courseA_collector_preLoops1: |-
+        Esta é Laurel, a Aventureira!
+
+        Pressione "Executar" para vê-la andar até o tesouro e pegá-lo.
+      courseA_collector_preLoops2: "Ótimo! Agora você pode adicionar o código você
+        mesmo! \n\nEncaixe um bloco ![](https://images.code.org/563c0deb5c51d43cdfa72d62dec3419d-image-1508904559201.05.30.png)
+        na parte inferior do programa e clique em \"Executar \"!"
+      courseA_collector_preLoops3: Para pegar o tesouro, encaixe dois blocos ![](https://images.code.org/54c206b62a02f1d7ea8f1bee52664ecb-image-1508905670742.25.37.png)
+        e um bloco ![](https://images.code.org/563c0deb5c51d43cdfa72d62dec3419d-image-1508904559201.05.30.png)
+        na parte inferior do programa e clique em "Executar"!
       courseA_collector_preLoops7: "Pegue todas as três pilhas! Mova Laurel para cada
         peça do tesouro, e então use esse block: \n<xml><block type=\"collector_collect\"/></xml>"
       courseA_harvester_loops1: Ajude a colheitadeira a pegar todo o milho!

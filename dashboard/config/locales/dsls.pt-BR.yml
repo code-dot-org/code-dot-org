@@ -2037,6 +2037,7 @@ pt-BR:
 
 
       CSD U3 drawSprites placement match:
+        title: drawSprites
         content1: Combine o código com a imagem que será produzida.
         questions:
         - text: <img src="https://images.code.org/cd11d762b2cb3e36c3d45157b965c968-image-1523901253224.59.08
@@ -2057,6 +2058,7 @@ pt-BR:
         - text: <img src="https://images.code.org/7465035fc6701dcb91731fe9d160b638-image-1523902103481.58.28
             AM.png">
       CSD U3 drawSprites placement match_2019:
+        title: drawSprites
         content1: Combine o código com a imagem que será produzida.
         questions:
         - text: <img src="https://images.code.org/cd11d762b2cb3e36c3d45157b965c968-image-1523901253224.59.08
@@ -3096,6 +3098,44 @@ pt-BR:
           foi feito em um nível anterior ou combine conceitos entre os projetos. Experimente
           todos, escolha o seu favorito e gaste seu tempo trabalhando para que este
           projeto se torne o seu\n"
+      Design a Screen for your App_2018:
+        markdown: |
+          # Simulando seu App
+
+          Agora que você tem um pouco de experiência movendo elementos no App Lab, você pode começar a trabalhar com a simulação do seu próprio app. Com o seu grupo, divida as telas para que todos estejam trabalhando em telas diferentes.
+
+          Já que você estará dividindo o trabalho, você vai querer realizar um planejamento a frente para decidir em um visual e funcionamento comum a todas suas páginas. Por exemplo, você irá querer acordar em coisas como:
+
+          * Onde os botões de navegação serão colocados?
+          * Quais cores irão ser utilizadas para fundos de tela, textos e botões
+          * Qual o estilo e layout padrão?
+
+          # Espaçamento
+
+          Na próxima aula você irá irá combinar todas as telas dos membros do seu time em apenas um app. Para ter certeza de que os IDs de uma página não entrem em conflito com o de outra, você precisará incluir um único _espaçamento_ para sua página. Isso será algo que você irá adicionar no início de cada id para que seu elemento não entre em conflito com outros quando você juntar todas as telas. Seu espaçamento deve ser o ID da sua tela com um sublinhado no final. Por exemplo, se você estiver fazendo a página inicial, você pode utilizar "home_" como seu espaçamento - o que gerará IDs como:
+
+          * "home_title"
+          * "home_loginButton"
+          * "home_logo"
+      Design a Screen for your App_2018_2019:
+        markdown: |
+          # Simulando seu App
+
+          Agora que você tem um pouco de experiência movendo elementos no App Lab, você pode começar a trabalhar com a simulação do seu próprio app. Com o seu grupo, divida as telas para que todos estejam trabalhando em telas diferentes.
+
+          Já que você estará dividindo o trabalho, você vai querer realizar um planejamento a frente para decidir em um visual e funcionamento comum a todas suas páginas. Por exemplo, você irá querer acordar em coisas como:
+
+          * Onde os botões de navegação serão colocados?
+          * Quais cores irão ser utilizadas para fundos de tela, textos e botões
+          * Qual o estilo e layout padrão?
+
+          # Espaçamento
+
+          Na próxima aula você irá irá combinar todas as telas dos membros do seu time em apenas um app. Para ter certeza de que os IDs de uma página não entrem em conflito com o de outra, você precisará incluir um único _espaçamento_ para sua página. Isso será algo que você irá adicionar no início de cada id para que seu elemento não entre em conflito com outros quando você juntar todas as telas. Seu espaçamento deve ser o ID da sua tela com um sublinhado no final. Por exemplo, se você estiver fazendo a página inicial, você pode utilizar "home_" como seu espaçamento - o que gerará IDs como:
+
+          * "home_title"
+          * "home_loginButton"
+          * "home_logo"
       DesigningForAccessibilityMarkdownLevel_2019:
         markdown: |
           # Desenhando para Acessibilidade
@@ -3125,6 +3165,40 @@ pt-BR:
         markdown: "# Envelopes de Variáveis\n\nVariáveis nos dão muita liberdade em
           ciências da computação. Esta aula ajuda a explicar o que são variáveis e
           como nós podemos usá-las de muitas formas diferentes. \n"
+      Example App Types_2018:
+        markdown: |
+          # Exemplos de tipos de aplicativos
+
+          Nos níveis a seguir, você vê vários aplicativos de exemplo diferentes. Eles darão uma idéia de como seria a UI (interface do usuário) para aplicativos com objetivos diferentes.
+
+          Para cada aplicativo de exemplo:
+
+          * Clique no exemplo para ter uma ideia de como ele funciona.
+          * No guia de atividades, anote todos os recursos ou elementos da interface do usuário que encontrar e para que são usados.
+          * Discuta com seus grupos como esse aplicativo e qualquer um dos recursos da interface do usuário podem ser aplicados ao tópico escolhido.
+
+          # Uma observação sobre funcionalidade
+
+          Esses aplicativos são _protótipos_; eles permitem que o usuário interaja com o design sem se preocupar com a funcionalidade subjacente. Por exemplo, quando você usa o aplicativo Quiz, cada pergunta sempre responde da mesma maneira, independentemente de qual resposta você escolher.
+
+          Concentrando-se primeiro em um protótipo interativo, você pode aprender muito sobre como os usuários podem usar seu aplicativo antes de investir muita energia para fazê-lo realmente funcionar.
+      Example App Types_2018_2019:
+        markdown: |
+          # Exemplos de tipos de aplicativos
+
+          Nos níveis a seguir, você vê vários aplicativos de exemplo diferentes. Eles darão uma idéia de como seria a UI (interface do usuário) para aplicativos com objetivos diferentes.
+
+          Para cada aplicativo de exemplo:
+
+          * Clique no exemplo para ter uma ideia de como ele funciona.
+          * No guia de atividades, anote todos os recursos ou elementos da interface do usuário que encontrar e para que são usados.
+          * Discuta com seus grupos como esse aplicativo e qualquer um dos recursos da interface do usuário podem ser aplicados ao tópico escolhido.
+
+          # Uma observação sobre funcionalidade
+
+          Esses aplicativos são _protótipos_; eles permitem que o usuário interaja com o design sem se preocupar com a funcionalidade subjacente. Por exemplo, quando você usa o aplicativo Quiz, cada pergunta sempre responde da mesma maneira, independentemente de qual resposta você escolher.
+
+          Concentrando-se primeiro em um protótipo interativo, você pode aprender muito sobre como os usuários podem usar seu aplicativo antes de investir muita energia para fazê-lo realmente funcionar.
       ForLoopFun-Unplugged:
         markdown: |
           # Divirta-se com Laços For
@@ -3456,9 +3530,61 @@ pt-BR:
           Depois de um tempo brincando com isso, você deve juntar com alguém - dupla, um grupo ou a classe inteira - para discutir o que você encontrou e mostrar que você sabe o que está acontecendo e as várias maneiras de usar a ferramenta.
 
 
+      OPD-K5 About:
+        markdown: |
+          # Vamos começar: Sobre este Curso
+
+          ## Visão Geral do Curso
+
+          Este curso tem como objetivo apresentar o currículo e os recursos de Fundamentos de Ciências da Computação da Code.org para professores. Através de leituras, visualização de vídeos, solução de quebra-cabeças interativos e reflexões sobre o aprendizado, você irá desenvolver seu próprio entendimento enquanto se prepara para ensinar ciências da computação em sua sala de aula.
+
+          ## Objetivos de Aprendizagem
+
+          Ao completarem este curso on-line, os participantes irão:
+
+          - Aprender os fundamentos básicos de ciências da computação
+          - Rever as melhores práticas para ensinar estes fundamentos aos estudantes
+          - Acessar currículo e recursos gratuitos para professores
+          - Planejar como começar a ensinar os Fundamentos de Ciências da Computação
+          - Conectar-se a uma comunidade de educadores que estão trazendo mudanças positivas às suas salas de aula através da codificação
+
+          ## Pré-requisitos
+
+          Nenhuma experiência prévia com codificação ou ensino de ciências da computação é presumida. Este é um curso para iniciantes.
+
+          > **Uma Observação sobre Audiência:** Este curso é focado no currículo gratuito de Fundamentos de Ciências da Computação da Code.org, no contexto dos estudantes de ensino fundamental. Embora muitos conceitos podem ser aplicados a qualquer curso de CC, se você quiser ensinar um currículo de ciências da computação mais avançado (por exemplo, um de nossos cursos [Middle](https://code.org/educate/csd) ou [High school](https://code.org/educate/csp)), recomendamos que você conheça também [oportunidades de desenvolvimento profissional avançadas](https://code.org/educate/professional-learning/middle-high).
+
+          ## Duração do Curso
+
+          A conclusão deste curso on-line deve levar entre 3-7 horas, dependendo do seu conhecimento prévio e do quão profundo nos recursos do Code.org você deseja ir.
+      OPD-K5 PreSurvey:
+        markdown: |+
+          # Vamos começar -> Responda à pesquisa preliminar
+
+          Nós queremos que você obtenha o máximo de benefícios deste desenvolvimento profissional. Por este motivo, pedimos para você responder [esta rápida pesquisa](https://form.jotform.com/90556900301146). A pesquisa irá fazê-lo refletir nos seus objetivos para este curso, e irá nos dizer um pouco sobre quem você é e como poderemos ajudá-lo.
+
+
+          <a class="btn btn-large btn-primary" href="https://form.jotform.com/90556900301146?user_id=<user_id/>">Responder à pesquisa preliminar</a>
+
       OPD-K5 Stage3aGo:
         title: título
         content1: descrição aqui
+      OPD-K5 Welcome 2:
+        markdown: |+
+          # Vamos começar > Cursos Fundamentais de Ciências da Computação
+
+          O objetivo do desenvolvimento profissional do Code.org é preparar professores como você a integrar ciências da computação às atividades de sala de aula, além de suportar seu crescimento como professores. Após concluir este curso on-line, você estará apto a lecionar um ou mais dos seguintes cursos de Fundamentos em Ciências da Computação da Code.org em sua sala de aula:
+
+           - **[Curso A](http://studio.code.org/s/coursea)**: aproximadamente 12 horas (Preparatório)
+           - **[Curso B](http://studio.code.org/s/courseb)**: aproximadamente 12 horas (Ano 1)
+           - **[Curso C](http://studio.code.org/s/coursec)**: aproximadamente 18 horas (Ano 2)
+           - **[Curso D](http://studio.code.org/s/coursed)**: aproximadamente 18 horas (Ano 3)
+           - **[Curso E](http://studio.code.org/s/coursee)**: aproximadamente 18 horas (Ano 4)
+           - **[Curso F](http://studio.code.org/s/coursef)**: aproximadamente 20 horas (Ano 5)
+           - **[Fundamentos em Ciências da Computação (CC) Espresso](http://studio.code.org/s/express)**: aproximadamente 20 horas (Idades 8+)
+           - **[Fundamentos em Ciências da Computação (CC) Pré-espresso](http://studio.code.org/s/pre-express)**: aproximadamente 20 horas (Idades 4-8)
+
+
       PicturingData-Unplugged:
         markdown: |
           # Retratando Dados
