@@ -14,7 +14,7 @@ class LevelsController < ApplicationController
 
   before_action :set_level, only: [:show, :edit, :update, :destroy]
 
-  LEVELS_PER_PAGE = 100
+  LEVELS_PER_PAGE = 30
 
   # All level types that can be requested via /levels/new
   LEVEL_CLASSES = [
@@ -59,9 +59,13 @@ class LevelsController < ApplicationController
   # GET /levels
   # GET /levels.json
   def index
-    levels = Level.order(updated_at: :desc)
-    levels = levels.where('name LIKE ?', "%#{params[:name]}%") if params[:name]
-    @levels = levels.page(params[:page]).per(LEVELS_PER_PAGE)
+    @levels = @levels.order(updated_at: :desc)
+    @levels = @levels.where('levels.name LIKE ?', "%#{params[:name]}%") if params[:name]
+    @levels = @levels.where('levels.type = ?', params[:level_type]) if params[:level_type].present?
+    @levels = @levels.joins(:script_levels).where('script_levels.script_id = ?', params[:script_id]) if params[:script_id].present?
+    @levels = @levels.page(params[:page]).per(LEVELS_PER_PAGE)
+    @level_types = LEVEL_CLASSES.map(&:name)
+    @scripts = Script.valid_scripts(current_user).pluck(:name, :id).sort_by {|a| a[0]}
   end
 
   # GET /levels/1
@@ -286,23 +290,16 @@ class LevelsController < ApplicationController
   end
 
   # POST /levels/1/clone?name=new_name
+  # Clone existing level and open edit page
   def clone
-    if params[:name]
-      # Clone existing level and open edit page
-      old_level = Level.find(params[:level_id])
-
-      begin
-        editor_experiment = Experiment.get_editor_experiment(current_user)
-        @level = old_level.clone_with_name(params[:name], editor_experiment: editor_experiment)
-      rescue ArgumentError => e
-        render(status: :not_acceptable, text: e.message) && return
-      rescue ActiveRecord::RecordInvalid => invalid
-        render(status: :not_acceptable, text: invalid) && return
-      end
-      render json: {redirect: edit_level_url(@level)}
-    else
-      render status: :not_acceptable, text: 'New name required to clone level'
-    end
+    new_name = params.require(:name)
+    editor_experiment = Experiment.get_editor_experiment(current_user)
+    @new_level = @level.clone_with_name(new_name, editor_experiment: editor_experiment)
+    render json: {redirect: edit_level_url(@new_level)}
+  rescue ArgumentError => e
+    render(status: :not_acceptable, text: e.message)
+  rescue ActiveRecord::RecordInvalid => invalid
+    render(status: :not_acceptable, text: invalid)
   end
 
   def embed_level
