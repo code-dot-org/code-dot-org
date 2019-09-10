@@ -234,7 +234,7 @@ class Ability
     if user.persisted?
       editor_experiment = Experiment.get_editor_experiment(user)
       if editor_experiment
-        can :clone, Level
+        can :clone, Level, &:custom?
         can :manage, Level, editor_experiment: editor_experiment
         can [:edit, :update], Script, editor_experiment: editor_experiment
       end

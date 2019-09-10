@@ -226,7 +226,9 @@ Dashboard::Application.routes.draw do
     get 'embed_level', to: 'levels#embed_level', as: 'embed_level'
     post 'update_blocks/:type', to: 'levels#update_blocks', as: 'update_blocks'
     post 'update_properties'
-    post 'clone', to: 'levels#clone'
+    member do
+      post 'clone'
+    end
   end
 
   post 'level_assets/upload', to: 'level_assets#upload'

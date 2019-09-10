@@ -703,13 +703,22 @@ class LevelsControllerTest < ActionController::TestCase
     game = Game.find_by_name("Custom")
     old = create(:level, game_id: game.id, name: "Fun Level")
     assert_creates(Level) do
-      post :clone, params: {level_id: old.id, name: "Fun Level (copy 1)"}
+      post :clone, params: {id: old.id, name: "Fun Level (copy 1)"}
     end
 
     new_level = assigns(:level)
     assert_equal new_level.game, old.game
     assert_equal new_level.name, "Fun Level (copy 1)"
     assert_equal "/levels/#{new_level.id}/edit", URI(JSON.parse(@response.body)['redirect']).path
+  end
+
+  test "cannot clone hard-coded levels" do
+    old = create(:level, game_id: Game.first.id, name: "Fun Level", user_id: nil)
+    refute old.custom?
+    refute_creates(Level) do
+      post :clone, params: {id: old.id, name: "Fun Level (copy 1)"}
+      assert_response :forbidden
+    end
   end
 
   test "platformization partner should own cloned level" do
@@ -719,7 +728,7 @@ class LevelsControllerTest < ActionController::TestCase
     game = Game.find_by_name("Custom")
     old = create(:level, game_id: game.id, name: "Fun Level")
     assert_creates(Level) do
-      post :clone, params: {level_id: old.id, name: "Fun Level (copy 1)"}
+      post :clone, params: {id: old.id, name: "Fun Level (copy 1)"}
     end
 
     new_level = assigns(:level)
@@ -727,6 +736,18 @@ class LevelsControllerTest < ActionController::TestCase
     assert_equal new_level.name, "Fun Level (copy 1)"
     assert_equal "/levels/#{new_level.id}/edit", URI(JSON.parse(@response.body)['redirect']).path
     assert_equal 'platformization-partners', new_level.editor_experiment
+  end
+
+  test "platformization partner cannot clone hard-coded levels" do
+    sign_out @levelbuilder
+    sign_in @platformization_partner
+
+    old = create(:level, game_id: Game.first.id, name: "Fun Level", user_id: nil)
+    refute old.custom?
+    refute_creates(Level) do
+      post :clone, params: {id: old.id, name: "Fun Level (copy 1)"}
+      assert_response :forbidden
+    end
   end
 
   test 'cannot update level name with just a case change' do

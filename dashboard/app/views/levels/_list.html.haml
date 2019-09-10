@@ -79,7 +79,7 @@
             = link_to '', title: 'Clone', onclick: "$('#clone_#{level.id}').toggle(); return false;" do
               %i.fa.fa-fw.fa-copy
             %div{class: 'clone_level', id: "clone_#{level.id}", style: 'display: none;'}
-              = form_tag level_clone_path(level), method: :post, remote: true do
+              = form_tag clone_level_path(level), method: :post, remote: true do
                 = label_tag 'New name:'
                 = text_field_tag :name, level.name
                 = submit_tag 'Clone'
