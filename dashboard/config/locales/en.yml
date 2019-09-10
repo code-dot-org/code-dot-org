@@ -800,7 +800,8 @@ en:
       opt_out: "Prefer not to say"
     submit: "Submit"
     decline: "Close"
-  zendesk_too_young_message: 'Sorry, younger users may not sign in to our support site. You may browse <a href="http://support.code.org">support.code.org</a> without signing in or ask your parent or teacher to contact us for you.'
+  zendesk_too_young_message: 'Sorry, younger users may not sign in to our support site. You may browse [support.code.org](%{support_url}) without signing in or ask your parent or teacher to contact us for you.'
+  zendesk_unverified_codeorg_account_message: 'Sorry, this account is associated with an unverified code.org email and cannot access Zendesk.'
   progress:
     not_started: not started
     in_progress: in progress

@@ -1,1 +1,4 @@
-%p!= t('zendesk_too_young_message')
+- if @error == TOO_YOUNG
+  %p!= t('zendesk_too_young_message', support_url: "support.code.org", markdown:true)
+- else if @error == UNVERIFIED_CODEORG
+  %p= t('zendesk_unverified_codeorg_account_message')
