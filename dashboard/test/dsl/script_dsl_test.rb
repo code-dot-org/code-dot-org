@@ -720,7 +720,7 @@ DSL
   end
 
   test 'script DSL with single quotes' do
-    input_dsl = <<-DSL.gsub(/^\s+/, '')
+    input_dsl = <<~DSL
       stage 'Bob\\'s stage'
       level 'Level 1', progression: 'Bob\\'s progression'
       level 'Level 2'
