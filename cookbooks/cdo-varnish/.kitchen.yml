@@ -8,6 +8,9 @@ transport:
 
 provisioner:
   name: dokken
+  environments_path: test/environments
+  client_rb:
+    environment: integration
 
 platforms:
 - name: ubuntu-14.04
