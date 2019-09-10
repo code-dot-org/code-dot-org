@@ -293,7 +293,7 @@ class LevelsController < ApplicationController
   def clone
     if params[:name]
       # Clone existing level and open edit page
-      old_level = Level.find(params[:level_id])
+      old_level = @level
 
       begin
         editor_experiment = Experiment.get_editor_experiment(current_user)
