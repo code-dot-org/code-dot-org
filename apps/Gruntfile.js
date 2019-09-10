@@ -687,7 +687,7 @@ describe('entry tests', () => {
     regionalPartnerMiniContact:
       './src/regionalPartnerMiniContact/regionalPartnerMiniContact',
 
-    teacherDonorBanner: './src/teacherDonorBanner/teacherDonorBanner',
+    donorTeacherBanner: './src/donorTeacherBanner/donorTeacherBanner',
 
     cookieBanner: './src/cookieBanner/cookieBanner.js'
   };
