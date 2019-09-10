@@ -86,7 +86,7 @@ $(document).ready(function() {
       map.dragPan.enable();
     }
 
-    // Enable mouse controls when the map is clicked}
+    // Enable mouse controls when the map is clicked
     map.on('click', function(e) {
       enableMouseControls();
     });
