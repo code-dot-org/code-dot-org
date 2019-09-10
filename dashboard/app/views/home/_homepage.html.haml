@@ -29,10 +29,22 @@
       - homepage_data[:ncesSchoolId] = teachers_school.id
       - homepage_data[:censusQuestion] = school_stats.try(:has_high_school_grades?) ? "how_many_20_hours" : "how_many_10_hours"
       - homepage_data[:currentSchoolYear] = current_census_year
-    - if donor_banner_name || show_census_banner
       - homepage_data[:teacherName] = current_user.name
       - homepage_data[:teacherId] = current_user.id
       - homepage_data[:teacherEmail] = current_user.email
+    - elsif donor_banner_name
+      - homepage_data[:teacherFirstName] = current_user.short_name
+      - homepage_data[:teacherSecondName] = current_user.second_name
+      - homepage_data[:teacherId] = current_user.id
+      - homepage_data[:teacherEmail] = current_user.email
+      - teachers_school = current_user.school_info.school
+      - homepage_data[:ncesSchoolId] = teachers_school.id
+      - homepage_data[:schoolAddress1] = teachers_school.address_line1
+      - homepage_data[:schoolAddress2] = teachers_school.address_line2
+      - homepage_data[:schoolAddress3] = teachers_school.address_line3
+      - homepage_data[:schoolCity] = teachers_school.city
+      - homepage_data[:schoolState] = teachers_school.state
+      - homepage_data[:schoolZip] = teachers_school.zip
   - else
     - homepage_data[:sections] = @student_sections
     - homepage_data[:isTeacher] = false

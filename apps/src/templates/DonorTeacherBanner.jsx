@@ -1,3 +1,4 @@
+import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import Button from './Button';
@@ -58,14 +59,22 @@ const styles = {
 
 export default class TeacherDonorBanner extends Component {
   static propTypes = {
-    teacherName: PropTypes.string.isRequired,
+    teacherFirstName: PropTypes.string.isRequired,
+    teacherSecondName: PropTypes.string.isRequired,
     teacherEmail: PropTypes.string.isRequired,
+    ncesSchoolId: PropTypes.string.isRequired,
+    schoolAddress1: PropTypes.string,
+    schoolAddress2: PropTypes.string,
+    schoolAddress3: PropTypes.string,
+    schoolCity: PropTypes.string,
+    schoolState: PropTypes.string,
+    schoolZip: PropTypes.string,
     onDismiss: PropTypes.func.isRequired
   };
 
   initialState = {
-    participate: undefined,
     permission: false,
+    participate: undefined,
     submitted: false
   };
 
@@ -84,6 +93,11 @@ export default class TeacherDonorBanner extends Component {
   };
 
   handleSubmit = event => {
+    if (this.state.permission && this.state.participate) {
+      // Post to the external endpoint in a new tab.
+      $('#hidden_form').submit();
+    }
+
     this.setState({submitted: true});
     this.props.onDismiss();
   };
@@ -160,6 +174,66 @@ export default class TeacherDonorBanner extends Component {
               <span style={styles.red}>*</span>
             </label>
           </div>
+
+          <form
+            id="hidden_form"
+            action="https://afe.qa.amazon-blogs.psdops.com/code-org-afe"
+            method="post"
+            target="_blank"
+          >
+            <input
+              type="hidden"
+              name="first-name"
+              value={this.props.teacherFirstName}
+            />
+            <input
+              type="hidden"
+              name="last-name"
+              value={this.props.teacherSecondName}
+            />
+            <input type="hidden" name="email" value={this.props.teacherEmail} />
+            <input
+              type="hidden"
+              name="nces-id"
+              value={this.props.ncesSchoolId}
+            />
+            {this.props.schoolAddress1 && (
+              <input
+                type="hidden"
+                name="school-address-1"
+                value={this.props.schoolAddress1}
+              />
+            )}
+            {this.props.schoolAddress2 && (
+              <input
+                type="hidden"
+                name="school-address-2"
+                value={this.props.schoolAddress2}
+              />
+            )}
+            {this.props.schoolAddress3 && (
+              <input
+                type="hidden"
+                name="school-address-3"
+                value={this.props.schoolAddress3}
+              />
+            )}
+            <input
+              type="hidden"
+              name="school-city"
+              value={this.props.schoolCity}
+            />
+            <input
+              type="hidden"
+              name="school-state"
+              value={this.props.schoolState}
+            />
+            <input
+              type="hidden"
+              name="school-zip"
+              value={this.props.schoolZip}
+            />
+          </form>
 
           <Button
             onClick={this.handleSubmit}
