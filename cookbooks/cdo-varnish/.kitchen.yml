@@ -27,10 +27,14 @@ platforms:
   run_list:
   - recipe[apt]
 
+verifier:
+  root_path: '/opt/verifier'
+
 suites:
   - name: default
     run_list:
       - recipe[varnish_test]
+#      - recipe[minitest-handler]
   - name: cloudfront
     run_list:
       - recipe[varnish_test]
