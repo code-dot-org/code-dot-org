@@ -58,14 +58,9 @@ es:
   okay: De acuerdo
   or: o
   heading_x_of_y: "%{heading} (página %{x} de %{y})"
-  add_teacher_form:
+  join_section:
     code:
-      label: 'Agregar un maestro:'
       placeholder: Código de sección (ABCDEF)
-      instructions: Introduce el código que tu profesor ha compartido contigo. Es
-        un código de seis letras como "ABCDEF".
-      instructions_short: Ingresa tu código de sección de 6 letras
-    submit: Añadir maestro
   add_hint_form:
     placeholder: Introduce aquí tu pista
     submit: Agregar pista
