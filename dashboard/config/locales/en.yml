@@ -1028,7 +1028,6 @@ en:
       choose_different_focus_area: 'You can choose a different focus area if you think that it would help you better prepare to teach.'
       other_focus_areas_available: 'No matter what focus area you choose, all other resources will still be available for reference.'
       confirm_focus_areas: 'Confirm Focus Areas'
-  stage_extras_teacher_message: "You have Lesson Extras turned off for some of your sections. Your students won’t see this page unless you turn them on. You can turn Lesson Extras on by visiting your <a href='http://code.org/teacher-dashboard'>Teacher Dashboard</a>."
   locked_stage: 'The contents of this stage are not visible because this stage is currently locked. Your teacher can unlock this stage when it is time to work on it or review your answers.'
   hidden_stage: "Your teacher didn't expect you to be here. Please ask your teacher which lesson you should be on."
   hidden_script: "Your teacher didn't expect you to be here. Please ask your teacher which unit you should be on."
