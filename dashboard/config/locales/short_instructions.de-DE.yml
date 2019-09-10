@@ -678,36 +678,37 @@ de-DE:
       courseA_maze_seq1: Bring den Vogel zum bösen Schwein!
       courseA_maze_seq10: 'Herausforderung: Geh um das TNT herum, um den Vogel zum
         Schwein zu bringen! '
-      courseA_maze_seq11: Gehe den einen Weg, dann den anderen, um den Vogel zum Schwein
-        zu bringen!
-      courseA_maze_seq11_2018: Gehe den einen Weg, dann den anderen, um den Vogel
-        zum Schwein zu bringen!
-      courseA_maze_seq11_2019: Gehe den einen Weg, dann den anderen, um den Vogel
-        zum Schwein zu bringen!
+      courseA_maze_seq11: Gehe zuerst in eine Richtung und dann in eine andere, um
+        den Vogel zum Schwein zu bringen.
+      courseA_maze_seq11_2018: Gehe zuerst in eine Richtung und dann in eine andere,
+        um den Vogel zum Schwein zu bringen.
+      courseA_maze_seq11_2019: Gehe zuerst in eine Richtung und dann in eine andere,
+        um den Vogel zum Schwein zu bringen.
       courseA_maze_seq12: Hole das Schwein!
       courseA_maze_seq12_2018: Hole das Schwein!
       courseA_maze_seq12_2019: Hole das Schwein!
-      courseA_maze_seq13: Hole das Schwein auf irgendeinem Weg!
-      courseA_maze_seq13_2018: Hole das Schwein auf irgendeinem Weg!
-      courseA_maze_seq13_2019: Hole das Schwein auf irgendeinem Weg!
+      courseA_maze_seq13: Hole dir das Schwein auf irgendeine Art und Weise!
+      courseA_maze_seq13_2018: Hole dir das Schwein auf irgendeine Art und Weise!
+      courseA_maze_seq13_2019: Hole dir das Schwein auf irgendeine Art und Weise!
       courseA_maze_seq1_2018: Bring den Vogel zum bösen Schwein!
       courseA_maze_seq1_2019: Bring den Vogel zum bösen Schwein!
       courseA_maze_seq2: Bring mich zum Schwein, indem du den Code änderst.
       courseA_maze_seq3: Repariere den Code, um den Vogel zum Schwein zu bringen!
       courseA_maze_seq4: ENTFERNE einen Block, um den Vogel zum Schwein zu bringen!
-      courseA_maze_seq6: Gehe einen Weg und dann einen anderen, um den Vogel zum Schwein
-        zu bringen!
-      courseA_maze_seq6_2018: Gehe einen Weg und dann einen anderen, um den Vogel
-        zum Schwein zu bringen!
-      courseA_maze_seq6_2019: Gehe einen Weg und dann einen anderen, um den Vogel
-        zum Schwein zu bringen!
-      courseA_maze_seq7: Finde heraus, was fehlt, und füge dann Blöcke hinzu, um den
+      courseA_maze_seq5: Versuche diese Aufgabe von Anfang an allein zu schaffen.
+      courseA_maze_seq6: Gehe zuerst in eine Richtung und dann in eine andere, um
+        den Vogel zum Schwein zu bringen!
+      courseA_maze_seq6_2018: Gehe zuerst in eine Richtung und dann in eine andere,
+        um den Vogel zum Schwein zu bringen!
+      courseA_maze_seq6_2019: Gehe zuerst in eine Richtung und dann in eine andere,
+        um den Vogel zum Schwein zu bringen!
+      courseA_maze_seq7: Finde heraus was fehlt, und füge dann Blöcke hinzu, um den
         Vogel zum Schwein zu bringen!
       courseA_maze_seq8: Löse dieses Level und bring den Vogel zum Schwein!
       courseA_maze_seq8_2018: Löse dieses Level und bring den Vogel zum Schwein!
       courseA_maze_seq8_2019: Löse dieses Level und bring den Vogel zum Schwein!
-      courseA_maze_seq9: Repariere dieses Level, indem Du Blöcke hinzufügst, um den
-        Vogel zum Schwein zu kriegen!
+      courseA_maze_seq9: Repariere dieses Level, indem Du Blöcke hinzufügst um den
+        Vogel zum Schwein zu bewegen!
       courseA_playLab_events3: Verbinde den "nach links bewegen"-Block mit dem "wenn
         links"-Ereignisblock, den Du bereits auf der Arbeitsfläche vorfindest!
       courseA_playLab_events3_2018: Verbinde den "nach links bewegen"-Block mit dem
@@ -767,9 +768,9 @@ de-DE:
       courseB_maze_seq12_2018: Jetzt bekomme das Schwein auf irgendeine Art und Weise!
       courseB_maze_seq12_2019: Jetzt bekomme das Schwein auf irgendeine Art und Weise!
       courseB_maze_seq2: _"Ein Fehler! Repariere den Code, damit ich das Schwein bekomme."_
-      courseB_maze_seq6: Gehe einen Weg und dann einen anderen, um den Vogel zum Schwein
-        zu bringen!
-      courseB_maze_seq7: Finde heraus, was fehlt, und füge dann Blöcke hinzu, um den
+      courseB_maze_seq6: Gehe zuerst in eine Richtung und dann in eine andere, um
+        den Vogel zum Schwein zu bringen!
+      courseB_maze_seq7: Finde heraus was fehlt, und füge dann Blöcke hinzu, um den
         Vogel zum Schwein zu bringen!
       courseB_maze_seq8: Du bist dran! Was musst du machen um den Vogel zum Schwein
         zu bringen?
