@@ -1,6 +1,8 @@
 login_required true
 hideable_stages true
 has_verified_resources true
+has_lesson_plan true
+curriculum_path 'https://curriculum.code.org/{LOCALE}/cspilot/unit4/{LESSON}'
 pilot_experiment 'csp-piloters'
 curriculum_umbrella 'CSP'
 
@@ -18,7 +20,6 @@ level 'U4 L02 Thermostat App v1 Code', progression: 'Thermostat App v1'
 level 'U4 L02 Thermostat App v2', progression: 'Thermostat App v2'
 level 'U4 L02 Thermostat App v3', progression: 'Thermostat App v3'
 level 'U4 L02 Thermostat App v3 pt2', progression: 'Thermostat App v3'
-level 'U4 L02 Thermostat App v3 pt3', progression: 'Thermostat App v3'
 level 'U4 L02 CYU Exit Ticket', progression: 'Check For Understanding', assessment: true
 
 stage 'Variables Practice', flex_category: 'csp_variables'
@@ -33,6 +34,7 @@ level 'U4 L03 Variables operator practice 6', progression: 'Variables and Operat
 level 'U4 L03 Variable Scope: Local vs. Global', progression: 'Debugging Scope Issues'
 level 'U4 L03 Scope Issue', progression: 'Debugging Scope Issues'
 level 'U4 L03 Variables operator practice 4', progression: 'Putting it Together'
+level 'U4L3 CFU Variables Psuedocode', progression: 'Check For Understanding: AP Practice', assessment: true
 
 stage 'Variables Make', flex_category: 'csp_variables'
 level 'CSP U4L4 SFLP 20-21', progression: 'Lesson Overview'
@@ -88,6 +90,7 @@ level 'U4L09 Intro to Functions Video', progression: 'Declaring and Calling Func
 level 'U4 L09 Score Clicker Investigate', progression: 'Declaring and Calling Functions'
 level 'U4 L09 Thermostat App v7', progression: 'Declaring and Calling Functions'
 level 'updateScreen Pattern', progression: 'Update Screen Pattern'
+level 'CSP U4 L09 CFU Exit Ticket_2020', progression: 'Check Your Understanding', assessment: true
 
 stage 'Functions Practice', flex_category: 'csp_functions'
 level 'CSP U4L10 SFLP 20-21', progression: 'Lesson Overview'
@@ -133,9 +136,3 @@ level 'U4 L14 Practice PT 2', progression: 'Submit Your Decision Maker App', ass
 stage 'Lesson 15: Unit 4 Assessment', lockable: true
 level 'CSP U4L15 SFLP 20-21', progression: 'Lesson Overview'
 level 'CSP 20-21 Unit 4 Assessment', assessment: true
-
-stage 'Student Survey (Conditionals)', lockable: true, flex_category: 'required'
-level 'Pilot Student Survey Conditionals', progression: 'Student Survey (Conditionals)', assessment: true
-
-stage 'Teacher Surveys (Conditionals)', lockable: true, flex_category: 'required'
-level 'Pilot Teacher Surveys Conditionals CSP2021', progression: 'Teacher Surveys (Conditionals)', assessment: true
