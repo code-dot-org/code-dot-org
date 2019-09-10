@@ -14,6 +14,8 @@ $(document).ready(function() {
   var popup = null;
 
   map.dragRotate.disable();
+  map.scrollZoom.disable();
+  map.dragPan.disable();
 
   // Ensure that if the map is zoomed out such that multiple
   // copies of the point are visible, the popup appears
@@ -78,6 +80,24 @@ $(document).ready(function() {
       .clone()
       .appendTo(legend);
     document.getElementById('mapbox-map').appendChild(legend);
+
+    function enableMouseControls() {
+      map.scrollZoom.enable();
+      map.dragPan.enable();
+    }
+
+    // Enable mouse controls when the map is clicked
+    map.on('click', function(e) {
+      enableMouseControls();
+    });
+    // Enable mouse controls when the zoom (+/-) buttons are pressed
+    map.on('zoom', function(e) {
+      enableMouseControls();
+    });
+    // Enable mouse controls when we go full screen
+    map.on('resize', function(e) {
+      enableMouseControls();
+    });
 
     map.on('click', 'hoc-events', function(e) {
       var coordinates = e.features[0].geometry.coordinates.slice();
