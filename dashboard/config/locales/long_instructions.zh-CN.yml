@@ -661,7 +661,7 @@ zh-CN:
         -   通过添加新行和缩进来让代码更易阅读。
         -   修复所有的缺陷，让这个页面和下面的目标页面一致。
 
-        !\[](\<<https://images.code.org/7e194db101f71235340fc075bf09776c-image-1508777739384.46.13>
+        ![](<https://images.code.org/7e194db101f71235340fc075bf09776c-image-1508777739384.46.13
         AM.png>)
       CSD U2 Debugging 4_2018: |-
         # 格式
@@ -706,7 +706,7 @@ zh-CN:
         -   通过添加新行和缩进来让代码更易阅读。
         -   修复所有的缺陷，让这个页面和下面的目标页面一致。
 
-        !\[](\<<https://images.code.org/7e194db101f71235340fc075bf09776c-image-1508777739384.46.13>
+        ![](<https://images.code.org/7e194db101f71235340fc075bf09776c-image-1508777739384.46.13
         AM.png>)
       CSD U2 Debugging 4_2019: |-
         # 格式
@@ -751,7 +751,7 @@ zh-CN:
         -   通过添加新行和缩进来让代码更易阅读。
         -   修复所有的缺陷，让这个页面和下面的目标页面一致。
 
-        !\[](\<<https://images.code.org/7e194db101f71235340fc075bf09776c-image-1508777739384.46.13>
+        ![](<https://images.code.org/7e194db101f71235340fc075bf09776c-image-1508777739384.46.13
         AM.png>)
       CSD U2 HTML Adding Paragraphs: "# 添加文本到正文中\n\n当你开始任何新的网络实验室项目时，它会自动添加\n`<!DOCTYPE>`,
         `<html>`, `<head>`, 和 `<body>` 标签到这个项目里。当你需要在其中添加自己的内容时，所有内容都要在`<body>`\n和
@@ -3208,7 +3208,7 @@ zh-CN:
         # 这样做
 
         \*
-        通过点击 !\[](\<<https://images.code.org/9b9f9f78962ef77664333d1b0f762ff1-image-1493252448756.19.38>
+        通过点击 ![](<https://images.code.org/9b9f9f78962ef77664333d1b0f762ff1-image-1493252448756.19.38
         PM.png>)添加一个新页面。新页面会出现在左边工作区中的文件列表里。
 
         -   通过右击它或者选择"重命名"来给它重新命名。**确保这个文件名是唯一的，有描述性的，并以".html"结尾**.
@@ -3223,7 +3223,7 @@ zh-CN:
         # 这样做
 
         \*
-        通过点击 !\[](\<<https://images.code.org/9b9f9f78962ef77664333d1b0f762ff1-image-1493252448756.19.38>
+        通过点击 ![](<https://images.code.org/9b9f9f78962ef77664333d1b0f762ff1-image-1493252448756.19.38
         PM.png>)添加一个新页面。新页面会出现在左边工作区中的文件列表里。
 
         -   通过右击它或者选择"重命名"来给它重新命名。**确保这个文件名是唯一的，有描述性的，并以".html"结尾**.
@@ -3238,7 +3238,7 @@ zh-CN:
         # 这样做
 
         \*
-        通过点击 !\[](\<<https://images.code.org/9b9f9f78962ef77664333d1b0f762ff1-image-1493252448756.19.38>
+        通过点击 ![](<https://images.code.org/9b9f9f78962ef77664333d1b0f762ff1-image-1493252448756.19.38
         PM.png>)添加一个新页面。新页面会出现在左边工作区中的文件列表里。
 
         -   通过右击它或者选择"重命名"来给它重新命名。**确保这个文件名是唯一的，有描述性的，并以".html"结尾**.
@@ -3331,7 +3331,7 @@ zh-CN:
         # 这样做
 
         -   点击页面最上面的
-            !\[](\<<https://images.code.org/26bcf1645e18ac064cf0631fb5ca023c-image-1493744000091.52.27>
+            ![](<https://images.code.org/26bcf1645e18ac064cf0631fb5ca023c-image-1493744000091.52.27
             AM.png>)按钮
         -   复制获得的链接，并发给你想要分享的人。
       CSD U2 project share_2018: |-
@@ -3342,7 +3342,7 @@ zh-CN:
         # 这样做
 
         -   点击页面最上面的
-            !\[](\<<https://images.code.org/26bcf1645e18ac064cf0631fb5ca023c-image-1493744000091.52.27>
+            ![](<https://images.code.org/26bcf1645e18ac064cf0631fb5ca023c-image-1493744000091.52.27
             AM.png>)按钮
         -   复制获得的链接，并发给你想要分享的人。
       CSD U2 project share_2019: |-
@@ -3353,7 +3353,7 @@ zh-CN:
         # 这样做
 
         -   点击页面最上面的
-            !\[](\<<https://images.code.org/26bcf1645e18ac064cf0631fb5ca023c-image-1493744000091.52.27>
+            ![](<https://images.code.org/26bcf1645e18ac064cf0631fb5ca023c-image-1493744000091.52.27
             AM.png>)按钮
         -   复制获得的链接，并发给你想要分享的人。
       CSD U2 text style decoration_2018: "<div style=\"float:\nright; height: 250px;
@@ -3684,13 +3684,13 @@ zh-CN:
         -   将所有图片上传到你的项目中。如果忘了怎么做，就浏览
             <a href="/s/csd2/stage/7/puzzle/5" target="_new">课程 7 关卡 5</a>。
       CSD U3 - Booleans Video: "# 布尔表达式视频"
-      CSD U3 - Simple Counter Predict: "# \n\n计数器模式\n\n这个模式是编程中最重要的模式之一。 \n\n!\\[](\\<<https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56>\nPM.png>)\n\n它被用来将变量的值每次增加1。你可以将它叫做**计数器模式**，因为它能让一个变量累加计数。很多地方都能用这个模式，特别是在循环中。我们先看看它是什么样的。\n\n#
+      CSD U3 - Simple Counter Predict: "# \n\n计数器模式\n\n这个模式是编程中最重要的模式之一。 \n\n![](<https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56\nPM.png>)\n\n它被用来将变量的值每次增加1。你可以将它叫做**计数器模式**，因为它能让一个变量累加计数。很多地方都能用这个模式，特别是在循环中。我们先看看它是什么样的。\n\n#
         这样做\n\n这个程序创建了一个叫做`counter`（计数器）的变量，然后用**计数器模式**来增加它。当运行程序时，你觉得屏幕上会看见什么？\n\n\\*\n**阅读程序**，并预测一下输出会是什么。\n\\*\n**运行程序**检查一下你的预测。\n\n-
         \  **和同伴讨论**.\n    你能解释看到了什么吗？"
-      CSD U3 - Simple Counter Predict_2018: "# \n\n计数器模式\n\n这个模式是编程中最重要的模式之一。 \n\n!\\[](\\<<https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56>\nPM.png>)\n\n它被用来将变量的值每次增加1。你可以将它叫做**计数器模式**，因为它能让一个变量累加计数。很多地方都能用这个模式，特别是在循环中。我们先看看它是什么样的。\n\n#
+      CSD U3 - Simple Counter Predict_2018: "# \n\n计数器模式\n\n这个模式是编程中最重要的模式之一。 \n\n![](<https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56\nPM.png>)\n\n它被用来将变量的值每次增加1。你可以将它叫做**计数器模式**，因为它能让一个变量累加计数。很多地方都能用这个模式，特别是在循环中。我们先看看它是什么样的。\n\n#
         这样做\n\n这个程序创建了一个叫做`counter`（计数器）的变量，然后用**计数器模式**来增加它。当运行程序时，你觉得屏幕上会看见什么？\n\n\\*\n**阅读程序**，并预测一下输出会是什么。\n\\*\n**运行程序**检查一下你的预测。\n\n-
         \  **和同伴讨论**.\n    你能解释看到了什么吗？"
-      CSD U3 - Simple Counter Predict_2019: "# \n\n计数器模式\n\n这个模式是编程中最重要的模式之一。 \n\n!\\[](\\<<https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56>\nPM.png>)\n\n它被用来将变量的值每次增加1。你可以将它叫做**计数器模式**，因为它能让一个变量累加计数。很多地方都能用这个模式，特别是在循环中。我们先看看它是什么样的。\n\n#
+      CSD U3 - Simple Counter Predict_2019: "# \n\n计数器模式\n\n这个模式是编程中最重要的模式之一。 \n\n![](<https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56\nPM.png>)\n\n它被用来将变量的值每次增加1。你可以将它叫做**计数器模式**，因为它能让一个变量累加计数。很多地方都能用这个模式，特别是在循环中。我们先看看它是什么样的。\n\n#
         这样做\n\n这个程序创建了一个叫做`counter`（计数器）的变量，然后用**计数器模式**来增加它。当运行程序时，你觉得屏幕上会看见什么？\n\n\\*\n**阅读程序**，并预测一下输出会是什么。\n\\*\n**运行程序**检查一下你的预测。\n\n-
         \  **和同伴讨论**.\n    你能解释看到了什么吗？"
       CSD U3 - complex - key up and down: |-
@@ -3925,9 +3925,9 @@ zh-CN:
 
         读一下代码，并运行程序。确保你知道了精灵是如何响应方向键的。
 
-        -   在动画标签页中，通过点击这个按钮： !\[](\<<https://images.code.org/aee81f9cd3f63bb8a9c91ac3ab250a87-image-1475699896387.38.09>
+        -   在动画标签页中，通过点击这个按钮： ![](<https://images.code.org/aee81f9cd3f63bb8a9c91ac3ab250a87-image-1475699896387.38.09
             PM.png>) 来创建一个外星人动画的副本。
-        -   使用工具来反转动画。确保用这个按钮： !\[](\<<https://images.code.org/3b10b4a612f9a7c640dc7bb18f4c2b91-image-1475699599617.33.03>
+        -   使用工具来反转动画。确保用这个按钮： ![](<https://images.code.org/3b10b4a612f9a7c640dc7bb18f4c2b91-image-1475699599617.33.03
             PM.png>) 两帧都翻转了。
         -   重命名新动画。
         -   使用新的动画和旧的动画，这样外星人就能在移动的时候朝向正确的方向了。你觉得应该在代码的什么地方设置精灵的动画？
@@ -3940,9 +3940,9 @@ zh-CN:
 
         读一下代码，并运行程序。确保你知道了精灵是如何响应方向键的。
 
-        -   在动画标签页中，通过点击这个按钮： !\[](\<<https://images.code.org/aee81f9cd3f63bb8a9c91ac3ab250a87-image-1475699896387.38.09>
+        -   在动画标签页中，通过点击这个按钮： ![](<https://images.code.org/aee81f9cd3f63bb8a9c91ac3ab250a87-image-1475699896387.38.09
             PM.png>) 来创建一个外星人动画的副本。
-        -   使用工具来反转动画。确保用这个按钮： !\[](\<<https://images.code.org/3b10b4a612f9a7c640dc7bb18f4c2b91-image-1475699599617.33.03>
+        -   使用工具来反转动画。确保用这个按钮： ![](<https://images.code.org/3b10b4a612f9a7c640dc7bb18f4c2b91-image-1475699599617.33.03
             PM.png>) 两帧都翻转了。
         -   重命名新动画。
         -   使用新的动画和旧的动画，这样外星人就能在移动的时候朝向正确的方向了。你觉得应该在代码的什么地方设置精灵的动画？
@@ -3955,9 +3955,9 @@ zh-CN:
 
         读一下代码，并运行程序。确保你知道了精灵是如何响应方向键的。
 
-        -   在动画标签页中，通过点击这个按钮： !\[](\<<https://images.code.org/aee81f9cd3f63bb8a9c91ac3ab250a87-image-1475699896387.38.09>
+        -   在动画标签页中，通过点击这个按钮： ![](<https://images.code.org/aee81f9cd3f63bb8a9c91ac3ab250a87-image-1475699896387.38.09
             PM.png>) 来创建一个外星人动画的副本。
-        -   使用工具来反转动画。确保用这个按钮： !\[](\<<https://images.code.org/3b10b4a612f9a7c640dc7bb18f4c2b91-image-1475699599617.33.03>
+        -   使用工具来反转动画。确保用这个按钮： ![](<https://images.code.org/3b10b4a612f9a7c640dc7bb18f4c2b91-image-1475699599617.33.03
             PM.png>) 两帧都翻转了。
         -   重命名新动画。
         -   使用新的动画和旧的动画，这样外星人就能在移动的时候朝向正确的方向了。你觉得应该在代码的什么地方设置精灵的动画？
@@ -3987,15 +3987,15 @@ zh-CN:
         -   添加一个`console.log`语句。
         -   在`console.log`中增加一个布尔表达式来检查是否`apple.scale`（苹果.尺寸）大于2。
       CSD U3 Counters explaining counters contained 2: "# \n\n计数器模式\n\n这个模式是编程中最重要的模式之一。
-        \n\n!\\[](\\<<https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56>\nPM.png>)\n\n它被用来将变量的值每次增加1。你可以将它叫做**计数器模式**，因为它能让一个变量累加计数。很多地方都能用这个模式，特别是在循环中。我们先看看它是什么样的。\n\n#
+        \n\n![](<https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56\nPM.png>)\n\n它被用来将变量的值每次增加1。你可以将它叫做**计数器模式**，因为它能让一个变量累加计数。很多地方都能用这个模式，特别是在循环中。我们先看看它是什么样的。\n\n#
         这样做\n\n这个程序创建了一个叫做`counter`（计数器）的变量，然后用**计数器模式**来增加它。当运行程序时，你觉得屏幕上会看见什么？\n\n\\*\n**阅读程序**，并预测一下输出会是什么。\n\\*\n**运行程序**检查一下你的预测。\n\n-
         \  **和同伴讨论**.\n    你能解释看到了什么吗？"
       CSD U3 Counters explaining counters contained 2_2018: "# \n\n计数器模式\n\n这个模式是编程中最重要的模式之一。
-        \n\n!\\[](\\<<https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56>\nPM.png>)\n\n它被用来将变量的值每次增加1。你可以将它叫做**计数器模式**，因为它能让一个变量累加计数。很多地方都能用这个模式，特别是在循环中。我们先看看它是什么样的。\n\n#
+        \n\n![](<https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56\nPM.png>)\n\n它被用来将变量的值每次增加1。你可以将它叫做**计数器模式**，因为它能让一个变量累加计数。很多地方都能用这个模式，特别是在循环中。我们先看看它是什么样的。\n\n#
         这样做\n\n这个程序创建了一个叫做`counter`（计数器）的变量，然后用**计数器模式**来增加它。当运行程序时，你觉得屏幕上会看见什么？\n\n\\*\n**阅读程序**，并预测一下输出会是什么。\n\\*\n**运行程序**检查一下你的预测。\n\n-
         \  **和同伴讨论**.\n    你能解释看到了什么吗？"
       CSD U3 Counters explaining counters contained 2_2019: "# \n\n计数器模式\n\n这个模式是编程中最重要的模式之一。
-        \n\n!\\[](\\<<https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56>\nPM.png>)\n\n它被用来将变量的值每次增加1。你可以将它叫做**计数器模式**，因为它能让一个变量累加计数。很多地方都能用这个模式，特别是在循环中。我们先看看它是什么样的。\n\n#
+        \n\n![](<https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56\nPM.png>)\n\n它被用来将变量的值每次增加1。你可以将它叫做**计数器模式**，因为它能让一个变量累加计数。很多地方都能用这个模式，特别是在循环中。我们先看看它是什么样的。\n\n#
         这样做\n\n这个程序创建了一个叫做`counter`（计数器）的变量，然后用**计数器模式**来增加它。当运行程序时，你觉得屏幕上会看见什么？\n\n\\*\n**阅读程序**，并预测一下输出会是什么。\n\\*\n**运行程序**检查一下你的预测。\n\n-
         \  **和同伴讨论**.\n    你能解释看到了什么吗？"
       CSD U3 Diagonal Movement: |-
@@ -4763,254 +4763,254 @@ zh-CN:
       CSD U3 L11 Freeplay: |-
         # 自由发挥
 
-        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
-        PM.png>)发送给朋友。或者点击 !\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
+        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png>)发送给朋友。或者点击 ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png>) 将它发送到你的作品集里。
       CSD U3 L11 Freeplay_2018: |-
         # 自由发挥
 
-        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
-        PM.png>)发送给朋友。或者点击 !\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
+        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png>)发送给朋友。或者点击 ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png>) 将它发送到你的作品集里。
       CSD U3 L11 Freeplay_2019: |-
         # 自由发挥
 
-        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
-        PM.png>)发送给朋友。或者点击 !\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
+        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png>)发送给朋友。或者点击 ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png>) 将它发送到你的作品集里。
       CSD U3 L12 Freeplay: |-
         # 自由发挥
 
-        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
-        PM.png>)发送给朋友。或者点击 !\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
+        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png>)发送给朋友。或者点击 ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png>) 将它发送到你的作品集里。
       CSD U3 L12 Freeplay_2018: |-
         # 自由发挥
 
-        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
-        PM.png>)发送给朋友。或者点击 !\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
+        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png>)发送给朋友。或者点击 ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png>) 将它发送到你的作品集里。
       CSD U3 L12 Freeplay_2019: |-
         # 自由发挥
 
-        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
-        PM.png>)发送给朋友。或者点击 !\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
+        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png>)发送给朋友。或者点击 ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png>) 将它发送到你的作品集里。
       CSD U3 L13 Freeplay: |-
         # 自由发挥
 
-        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
-        PM.png>)发送给朋友。或者点击 !\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
+        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png>)发送给朋友。或者点击 ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png>) 将它发送到你的作品集里。
       CSD U3 L13 Freeplay_2018: |-
         # 自由发挥
 
-        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
-        PM.png>)发送给朋友。或者点击 !\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
+        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png>)发送给朋友。或者点击 ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png>) 将它发送到你的作品集里。
       CSD U3 L13 Freeplay_2019: |-
         # 自由发挥
 
-        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
-        PM.png>)发送给朋友。或者点击 !\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
+        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png>)发送给朋友。或者点击 ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png>) 将它发送到你的作品集里。
       CSD U3 L15 Freeplay: |-
         # 自由发挥
 
-        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
-        PM.png>)发送给朋友。或者点击 !\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
+        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png>)发送给朋友。或者点击 ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png>) 将它发送到你的作品集里。
       CSD U3 L15 Freeplay_2018: |-
         # 自由发挥
 
-        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
-        PM.png>)发送给朋友。或者点击 !\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
+        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png>)发送给朋友。或者点击 ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png>) 将它发送到你的作品集里。
       CSD U3 L15 Freeplay_2019: |-
         # 自由发挥
 
-        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
-        PM.png>)发送给朋友。或者点击 !\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
+        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png>)发送给朋友。或者点击 ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png>) 将它发送到你的作品集里。
       CSD U3 L16 Freeplay: |-
         # 自由发挥
 
-        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
-        PM.png>)发送给朋友。或者点击 !\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
+        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png>)发送给朋友。或者点击 ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png>) 将它发送到你的作品集里。
       CSD U3 L16 Freeplay_2018: |-
         # 自由发挥
 
-        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
-        PM.png>)发送给朋友。或者点击 !\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
+        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png>)发送给朋友。或者点击 ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png>) 将它发送到你的作品集里。
       CSD U3 L16 Freeplay_2019: |-
         # 自由发挥
 
-        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
-        PM.png>)发送给朋友。或者点击 !\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
+        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png>)发送给朋友。或者点击 ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png>) 将它发送到你的作品集里。
       CSD U3 L17 Freeplay: |-
         # 自由发挥
 
-        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
-        PM.png>)发送给朋友。或者点击 !\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
+        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png>)发送给朋友。或者点击 ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png>) 将它发送到你的作品集里。
       CSD U3 L17 Freeplay_2018: |-
         # 自由发挥
 
-        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
-        PM.png>)发送给朋友。或者点击 !\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
+        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png>)发送给朋友。或者点击 ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png>) 将它发送到你的作品集里。
       CSD U3 L17 Freeplay_2019: |-
         # 自由发挥
 
-        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
-        PM.png>)发送给朋友。或者点击 !\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
+        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png>)发送给朋友。或者点击 ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png>) 将它发送到你的作品集里。
       CSD U3 L18 Freeplay: |-
         # 自由发挥
 
-        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
-        PM.png>)发送给朋友。或者点击 !\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
+        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png>)发送给朋友。或者点击 ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png>) 将它发送到你的作品集里。
       CSD U3 L18 Freeplay_2018: |-
         # 自由发挥
 
-        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
-        PM.png>)发送给朋友。或者点击 !\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
+        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png>)发送给朋友。或者点击 ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png>) 将它发送到你的作品集里。
       CSD U3 L18 Freeplay_2019: |-
         # 自由发挥
 
-        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
-        PM.png>)发送给朋友。或者点击 !\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
+        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png>)发送给朋友。或者点击 ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png>) 将它发送到你的作品集里。
       CSD U3 L19 Freeplay: |-
         # 自由发挥
 
-        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
-        PM.png>)发送给朋友。或者点击 !\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
+        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png>)发送给朋友。或者点击 ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png>) 将它发送到你的作品集里。
       CSD U3 L19 Freeplay_2018: |-
         # 自由发挥
 
-        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
-        PM.png>)发送给朋友。或者点击 !\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
+        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png>)发送给朋友。或者点击 ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png>) 将它发送到你的作品集里。
       CSD U3 L19 Freeplay_2019: |-
         # 自由发挥
 
-        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
-        PM.png>)发送给朋友。或者点击 !\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
+        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png>)发送给朋友。或者点击 ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png>) 将它发送到你的作品集里。
       CSD U3 L3 Freeplay: |-
         # 自由发挥
 
-        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
-        PM.png>)发送给朋友。或者点击 !\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
+        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png>)发送给朋友。或者点击 ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png>) 将它发送到你的作品集里。
       CSD U3 L3 Freeplay_2018: |-
         # 自由发挥
 
-        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
-        PM.png>)发送给朋友。或者点击 !\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
+        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png>)发送给朋友。或者点击 ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png>) 将它发送到你的作品集里。
       CSD U3 L3 Freeplay_2019: |-
         # 自由发挥
 
-        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
-        PM.png>)发送给朋友。或者点击 !\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
+        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png>)发送给朋友。或者点击 ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png>) 将它发送到你的作品集里。
       CSD U3 L4 Freeplay: |-
         # 自由发挥
 
-        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
-        PM.png>)发送给朋友。或者点击 !\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
+        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png>)发送给朋友。或者点击 ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png>) 将它发送到你的作品集里。
       CSD U3 L4 Freeplay_2018: |-
         # 自由发挥
 
-        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
-        PM.png>)发送给朋友。或者点击 !\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
+        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png>)发送给朋友。或者点击 ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png>) 将它发送到你的作品集里。
       CSD U3 L4 Freeplay_2019: |-
         # 自由发挥
 
-        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
-        PM.png>)发送给朋友。或者点击 !\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
+        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png>)发送给朋友。或者点击 ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png>) 将它发送到你的作品集里。
       CSD U3 L5 Freeplay: |-
         # 自由发挥
 
-        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
-        PM.png>)发送给朋友。或者点击 !\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
+        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png>)发送给朋友。或者点击 ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png>) 将它发送到你的作品集里。
       CSD U3 L5 Freeplay_2018: |-
         # 自由发挥
 
-        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
-        PM.png>)发送给朋友。或者点击 !\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
+        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png>)发送给朋友。或者点击 ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png>) 将它发送到你的作品集里。
       CSD U3 L5 Freeplay_2019: |-
         # 自由发挥
 
-        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
-        PM.png>)发送给朋友。或者点击 !\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
+        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png>)发送给朋友。或者点击 ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png>) 将它发送到你的作品集里。
       CSD U3 L6 Freeplay: |-
         # 自由发挥
 
-        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
-        PM.png>)发送给朋友。或者点击 !\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
+        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png>)发送给朋友。或者点击 ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png>) 将它发送到你的作品集里。
       CSD U3 L6 Freeplay_2018: |-
         # 自由发挥
 
-        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
-        PM.png>)发送给朋友。或者点击 !\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
+        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png>)发送给朋友。或者点击 ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png>) 将它发送到你的作品集里。
       CSD U3 L6 Freeplay_2019: |-
         # 自由发挥
 
-        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
-        PM.png>)发送给朋友。或者点击 !\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
+        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png>)发送给朋友。或者点击 ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png>) 将它发送到你的作品集里。
       CSD U3 L7 Freeplay: |-
         # 自由发挥
 
-        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
-        PM.png>)发送给朋友。或者点击 !\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
+        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png>)发送给朋友。或者点击 ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png>) 将它发送到你的作品集里。
       CSD U3 L7 Freeplay_2018: |-
         # 自由发挥
 
-        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
-        PM.png>)发送给朋友。或者点击 !\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
+        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png>)发送给朋友。或者点击 ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png>) 将它发送到你的作品集里。
       CSD U3 L7 Freeplay_2019: |-
         # 自由发挥
 
-        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
-        PM.png>)发送给朋友。或者点击 !\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
+        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png>)发送给朋友。或者点击 ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png>) 将它发送到你的作品集里。
       CSD U3 L9 Freeplay: |-
         # 自由发挥
 
-        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
-        PM.png>)发送给朋友。或者点击 !\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
+        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png>)发送给朋友。或者点击 ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png>) 将它发送到你的作品集里。
       CSD U3 L9 Freeplay_2018: |-
         # 自由发挥
 
-        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
-        PM.png>)发送给朋友。或者点击 !\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
+        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png>)发送给朋友。或者点击 ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png>) 将它发送到你的作品集里。
       CSD U3 L9 Freeplay_2019: |-
         # 自由发挥
 
-        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
-        PM.png>)发送给朋友。或者点击 !\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
+        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png>)发送给朋友。或者点击 ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
         PM.png>) 将它发送到你的作品集里。
       CSD U3 Mouse Input Bee 1: "<img src=\"https://images.code.org/d2092b4f2debc336f963d48bd6cf4973-image-1477681020928.gif\"\nstyle=\"float:right\">\n\n#
         鼠标的X和Y\n\n最简单的输入方式之一，就是让一个精灵跟随用户的鼠标位置。\n**你能通过`World.mouseX`和`World.mouseY`来获得鼠标的x、y值。**这和你以前学的精灵的属性是一致的。`World`是目标对象的名字。`mouseX`和`mouseY`是属性的名字。\n\n#
@@ -5207,7 +5207,7 @@ zh-CN:
 
         确保点击 "运行" 并尝试打开网格来帮助精确地放置形状。
 
-        !\[](\<<https://images.code.org/d52dbc112dcc088858c4b8f54be09aa1-image-1502914103923.07.59>
+        ![](<https://images.code.org/d52dbc112dcc088858c4b8f54be09aa1-image-1502914103923.07.59
         PM.png>)
       CSD U3 Plotting Shapes Shape Lab_2018: |-
         # 绘制形状
@@ -5216,7 +5216,7 @@ zh-CN:
 
         确保点击 "运行" 并尝试打开网格来帮助精确地放置形状。
 
-        !\[](\<<https://images.code.org/d52dbc112dcc088858c4b8f54be09aa1-image-1502914103923.07.59>
+        ![](<https://images.code.org/d52dbc112dcc088858c4b8f54be09aa1-image-1502914103923.07.59
         PM.png>)
       CSD U3 Random Debug Cloud: |-
         <img src="https://images.code.org/529b7e5ddda4683e6a0cc5b3028e4dbf-image-1490824752133.58.50
@@ -6564,7 +6564,7 @@ zh-CN:
 
         # 这样做
 
-        当苹果碰到搅拌器时，从"world"世界抽屉里，找到并使用`playSound`（播放声音）模块来播放"<https://docs.code.org/sounds/blender.mp3"声音。你需要将声音的地址粘贴到模块中，看起来就像这样：> !\[](\<<https://images.code.org/8376df7a92ff8e6ba0a2d6e51c24547e-image-1484091385498.34.57>
+        当苹果碰到搅拌器时，从"world"世界抽屉里，找到并使用`playSound`（播放声音）模块来播放"<https://docs.code.org/sounds/blender.mp3"声音。你需要将声音的地址粘贴到模块中，看起来就像这样：> ![](<https://images.code.org/8376df7a92ff8e6ba0a2d6e51c24547e-image-1484091385498.34.57
         PM.png>)
 
         [//]: # "https://images.code.org/82436176c744caa106cfc4971cd1db6c-image-1470247395711.png"
@@ -6588,7 +6588,7 @@ zh-CN:
 
         # 这样做
 
-        当苹果碰到搅拌器时，从"world"世界抽屉里，找到并使用`playSound`（播放声音）模块来播放"<https://docs.code.org/sounds/blender.mp3"声音。你需要将声音的地址粘贴到模块中，看起来就像这样：> !\[](\<<https://images.code.org/8376df7a92ff8e6ba0a2d6e51c24547e-image-1484091385498.34.57>
+        当苹果碰到搅拌器时，从"world"世界抽屉里，找到并使用`playSound`（播放声音）模块来播放"<https://docs.code.org/sounds/blender.mp3"声音。你需要将声音的地址粘贴到模块中，看起来就像这样：> ![](<https://images.code.org/8376df7a92ff8e6ba0a2d6e51c24547e-image-1484091385498.34.57
         PM.png>)
 
         [//]: # "https://images.code.org/82436176c744caa106cfc4971cd1db6c-image-1470247395711.png"
@@ -6612,7 +6612,7 @@ zh-CN:
 
         # 这样做
 
-        当苹果碰到搅拌器时，从"world"世界抽屉里，找到并使用`playSound`（播放声音）模块来播放"<https://docs.code.org/sounds/blender.mp3"声音。你需要将声音的地址粘贴到模块中，看起来就像这样：> !\[](\<<https://images.code.org/8376df7a92ff8e6ba0a2d6e51c24547e-image-1484091385498.34.57>
+        当苹果碰到搅拌器时，从"world"世界抽屉里，找到并使用`playSound`（播放声音）模块来播放"<https://docs.code.org/sounds/blender.mp3"声音。你需要将声音的地址粘贴到模块中，看起来就像这样：> ![](<https://images.code.org/8376df7a92ff8e6ba0a2d6e51c24547e-image-1484091385498.34.57
         PM.png>)
 
         [//]: # "https://images.code.org/82436176c744caa106cfc4971cd1db6c-image-1470247395711.png"
@@ -7273,7 +7273,7 @@ zh-CN:
 
         这有一个工具能够计算4，5，6比特的数字。你能用它来找到编码的两个世界纪录。
 
-        !\[](\<<https://images.code.org/13b0d3307e688575b53e3e6bc86fb739-image-1505426509385.01.06>
+        ![](<https://images.code.org/13b0d3307e688575b53e3e6bc86fb739-image-1505426509385.01.06
         PM.png>)
 
         1.  人类在两分钟内能够举起并扔出去的数量。(4比特)
@@ -7287,7 +7287,7 @@ zh-CN:
 
         这有一个工具能够计算4，5，6比特的数字。你能用它来找到编码的两个世界纪录。
 
-        !\[](\<<https://images.code.org/13b0d3307e688575b53e3e6bc86fb739-image-1505426509385.01.06>
+        ![](<https://images.code.org/13b0d3307e688575b53e3e6bc86fb739-image-1505426509385.01.06
         PM.png>)
 
         1.  人类在两分钟内能够举起并扔出去的数量。(4比特)
@@ -7301,7 +7301,7 @@ zh-CN:
 
         这有一个工具能够计算4，5，6比特的数字。你能用它来找到编码的两个世界纪录。
 
-        !\[](\<<https://images.code.org/13b0d3307e688575b53e3e6bc86fb739-image-1505426509385.01.06>
+        ![](<https://images.code.org/13b0d3307e688575b53e3e6bc86fb739-image-1505426509385.01.06
         PM.png>)
 
         1.  人类在两分钟内能够举起并扔出去的数量。(4比特)
@@ -7317,7 +7317,7 @@ zh-CN:
 
         别忘了确保"1"比特永远在最右边。如果在左边有多余的比特，将它们关闭就行了
 
-        !\[](\<<https://images.code.org/e86788ff9b92a2b01b99749fa1aba8e8-image-1505426626592.01.14>
+        ![](<https://images.code.org/e86788ff9b92a2b01b99749fa1aba8e8-image-1505426626592.01.14
         PM.png>)
 
         1.  最长的狗尾巴（英寸）（5比特）
@@ -7333,7 +7333,7 @@ zh-CN:
 
         别忘了确保"1"比特永远在最右边。如果在左边有多余的比特，将它们关闭就行了
 
-        !\[](\<<https://images.code.org/e86788ff9b92a2b01b99749fa1aba8e8-image-1505426626592.01.14>
+        ![](<https://images.code.org/e86788ff9b92a2b01b99749fa1aba8e8-image-1505426626592.01.14
         PM.png>)
 
         1.  最长的狗尾巴（英寸）（5比特）
@@ -7349,7 +7349,7 @@ zh-CN:
 
         别忘了确保"1"比特永远在最右边。如果在左边有多余的比特，将它们关闭就行了
 
-        !\[](\<<https://images.code.org/e86788ff9b92a2b01b99749fa1aba8e8-image-1505426626592.01.14>
+        ![](<https://images.code.org/e86788ff9b92a2b01b99749fa1aba8e8-image-1505426626592.01.14
         PM.png>)
 
         1.  最长的狗尾巴（英寸）（5比特）
@@ -7363,7 +7363,7 @@ zh-CN:
 
         这里有一个新的二进制字符串。这次，你不知道两个数字的比特长度。试着在不知道比特长度的情况下解码这两个数字。
 
-        !\[](\<<https://images.code.org/cde9a4d100147b950a9be7540453fe89-image-1505426886341.07.46>
+        ![](<https://images.code.org/cde9a4d100147b950a9be7540453fe89-image-1505426886341.07.46
         PM.png>)
 
         1.  最大的风铃的英寸尺寸（？比特）
@@ -7378,7 +7378,7 @@ zh-CN:
 
         这里有一个新的二进制字符串。这次，你不知道两个数字的比特长度。试着在不知道比特长度的情况下解码这两个数字。
 
-        !\[](\<<https://images.code.org/cde9a4d100147b950a9be7540453fe89-image-1505426886341.07.46>
+        ![](<https://images.code.org/cde9a4d100147b950a9be7540453fe89-image-1505426886341.07.46
         PM.png>)
 
         1.  最大的风铃的英寸尺寸（？比特）
@@ -7393,7 +7393,7 @@ zh-CN:
 
         这里有一个新的二进制字符串。这次，你不知道两个数字的比特长度。试着在不知道比特长度的情况下解码这两个数字。
 
-        !\[](\<<https://images.code.org/cde9a4d100147b950a9be7540453fe89-image-1505426886341.07.46>
+        ![](<https://images.code.org/cde9a4d100147b950a9be7540453fe89-image-1505426886341.07.46
         PM.png>)
 
         1.  最大的风铃的英寸尺寸（？比特）
@@ -7410,24 +7410,24 @@ zh-CN:
 
         例如，下面的二进制字符串有多种方法来解码。
 
-        !\[](\<<https://images.code.org/cde9a4d100147b950a9be7540453fe89-image-1505426886341.07.46>
+        ![](<https://images.code.org/cde9a4d100147b950a9be7540453fe89-image-1505426886341.07.46
         PM.png>)
 
         如果你将字符串这样分开，这个字符串读作：10，84。
 
-        !\[](\<<https://images.code.org/c8586b93427166ae6ecfdb8b1ff66bdd-image-1505427228630.13.01>
-        PM.png>) !\[](\<<https://images.code.org/7d9814dc4bae8512dfaebbe459c29c9b-image-1505427230882.13.08>
+        ![](<https://images.code.org/c8586b93427166ae6ecfdb8b1ff66bdd-image-1505427228630.13.01
+        PM.png>) ![](<https://images.code.org/7d9814dc4bae8512dfaebbe459c29c9b-image-1505427230882.13.08
         PM.png>)
 
         如果这样分开，这个字符串读作：42，20。
 
-        !\[](\<<https://images.code.org/2e62b4a71b98b68bdf04713c508e4cb2-image-1505427233001.13.13>
-        PM.png>) !\[](\<<https://images.code.org/10a316c870b575db4b30a687815bf481-image-1505427235482.13.19>
+        ![](<https://images.code.org/2e62b4a71b98b68bdf04713c508e4cb2-image-1505427233001.13.13
+        PM.png>) ![](<https://images.code.org/10a316c870b575db4b30a687815bf481-image-1505427235482.13.19
         PM.png>)
 
         为了解决这个问题，人们同意为每个数字都设置固定的长度。下面的字符串用了同样的两个数字，但无论实际上它有多少比特，每个数字都正好是8比特。
 
-        !\[](\<<https://images.code.org/257cb728fde57421e58ef31164be5a51-image-1505427467235.13.26>
+        ![](<https://images.code.org/257cb728fde57421e58ef31164be5a51-image-1505427467235.13.26
         PM.png>)
 
         # 这样做
@@ -7441,24 +7441,24 @@ zh-CN:
 
         例如，下面的二进制字符串有多种方法来解码。
 
-        !\[](\<<https://images.code.org/cde9a4d100147b950a9be7540453fe89-image-1505426886341.07.46>
+        ![](<https://images.code.org/cde9a4d100147b950a9be7540453fe89-image-1505426886341.07.46
         PM.png>)
 
         如果你将字符串这样分开，这个字符串读作：10，84。
 
-        !\[](\<<https://images.code.org/c8586b93427166ae6ecfdb8b1ff66bdd-image-1505427228630.13.01>
-        PM.png>) !\[](\<<https://images.code.org/7d9814dc4bae8512dfaebbe459c29c9b-image-1505427230882.13.08>
+        ![](<https://images.code.org/c8586b93427166ae6ecfdb8b1ff66bdd-image-1505427228630.13.01
+        PM.png>) ![](<https://images.code.org/7d9814dc4bae8512dfaebbe459c29c9b-image-1505427230882.13.08
         PM.png>)
 
         如果这样分开，这个字符串读作：42，20。
 
-        !\[](\<<https://images.code.org/2e62b4a71b98b68bdf04713c508e4cb2-image-1505427233001.13.13>
-        PM.png>) !\[](\<<https://images.code.org/10a316c870b575db4b30a687815bf481-image-1505427235482.13.19>
+        ![](<https://images.code.org/2e62b4a71b98b68bdf04713c508e4cb2-image-1505427233001.13.13
+        PM.png>) ![](<https://images.code.org/10a316c870b575db4b30a687815bf481-image-1505427235482.13.19
         PM.png>)
 
         为了解决这个问题，人们同意为每个数字都设置固定的长度。下面的字符串用了同样的两个数字，但无论实际上它有多少比特，每个数字都正好是8比特。
 
-        !\[](\<<https://images.code.org/257cb728fde57421e58ef31164be5a51-image-1505427467235.13.26>
+        ![](<https://images.code.org/257cb728fde57421e58ef31164be5a51-image-1505427467235.13.26
         PM.png>)
 
         # 这样做
@@ -7472,24 +7472,24 @@ zh-CN:
 
         例如，下面的二进制字符串有多种方法来解码。
 
-        !\[](\<<https://images.code.org/cde9a4d100147b950a9be7540453fe89-image-1505426886341.07.46>
+        ![](<https://images.code.org/cde9a4d100147b950a9be7540453fe89-image-1505426886341.07.46
         PM.png>)
 
         如果你将字符串这样分开，这个字符串读作：10，84。
 
-        !\[](\<<https://images.code.org/c8586b93427166ae6ecfdb8b1ff66bdd-image-1505427228630.13.01>
-        PM.png>) !\[](\<<https://images.code.org/7d9814dc4bae8512dfaebbe459c29c9b-image-1505427230882.13.08>
+        ![](<https://images.code.org/c8586b93427166ae6ecfdb8b1ff66bdd-image-1505427228630.13.01
+        PM.png>) ![](<https://images.code.org/7d9814dc4bae8512dfaebbe459c29c9b-image-1505427230882.13.08
         PM.png>)
 
         如果这样分开，这个字符串读作：42，20。
 
-        !\[](\<<https://images.code.org/2e62b4a71b98b68bdf04713c508e4cb2-image-1505427233001.13.13>
-        PM.png>) !\[](\<<https://images.code.org/10a316c870b575db4b30a687815bf481-image-1505427235482.13.19>
+        ![](<https://images.code.org/2e62b4a71b98b68bdf04713c508e4cb2-image-1505427233001.13.13
+        PM.png>) ![](<https://images.code.org/10a316c870b575db4b30a687815bf481-image-1505427235482.13.19
         PM.png>)
 
         为了解决这个问题，人们同意为每个数字都设置固定的长度。下面的字符串用了同样的两个数字，但无论实际上它有多少比特，每个数字都正好是8比特。
 
-        !\[](\<<https://images.code.org/257cb728fde57421e58ef31164be5a51-image-1505427467235.13.26>
+        ![](<https://images.code.org/257cb728fde57421e58ef31164be5a51-image-1505427467235.13.26
         PM.png>)
 
         # 这样做
@@ -7510,63 +7510,63 @@ zh-CN:
 
         用像素小工具来画一个笑脸。
 
-        !\[](\<<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image-1491425592286.52.47>
+        ![](<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image-1491425592286.52.47
         PM.png>)
       CSD U5 black white images pixelation 2_2018: |-
         # 这样做
 
         用像素小工具来画一个笑脸。
 
-        !\[](\<<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image-1491425592286.52.47>
+        ![](<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image-1491425592286.52.47
         PM.png>)
       CSD U5 black white images pixelation 2_2019: |-
         # 这样做
 
         用像素小工具来画一个笑脸。
 
-        !\[](\<<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image-1491425592286.52.47>
+        ![](<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image-1491425592286.52.47
         PM.png>)
       CSD U5 black white images pixelation 3: |-
         # 这样做
 
         这幅图的高度和宽度滑块没有设置正确，所以它看起来什么都不像。改变它们，直到你发现了图片。
 
-        !\[](\<<https://images.code.org/c2abe82051e700f22ce613e407e71536-image-1491426050751.00.17>
+        ![](<https://images.code.org/c2abe82051e700f22ce613e407e71536-image-1491426050751.00.17
         PM.png>)
       CSD U5 black white images pixelation 3_2018: |-
         # 这样做
 
         这幅图的高度和宽度滑块没有设置正确，所以它看起来什么都不像。改变它们，直到你发现了图片。
 
-        !\[](\<<https://images.code.org/c2abe82051e700f22ce613e407e71536-image-1491426050751.00.17>
+        ![](<https://images.code.org/c2abe82051e700f22ce613e407e71536-image-1491426050751.00.17
         PM.png>)
       CSD U5 black white images pixelation 3_2019: |-
         # 这样做
 
         这幅图的高度和宽度滑块没有设置正确，所以它看起来什么都不像。改变它们，直到你发现了图片。
 
-        !\[](\<<https://images.code.org/c2abe82051e700f22ce613e407e71536-image-1491426050751.00.17>
+        ![](<https://images.code.org/c2abe82051e700f22ce613e407e71536-image-1491426050751.00.17
         PM.png>)
       CSD U5 black white images pixelation 4: |-
         # 这样做
 
         在笑脸上添加眉毛。如果搞乱了，记得使用“可读格式”。
 
-        !\[](\<<https://images.code.org/269725fa3d9d6857912fe4a20464a830-image-1491427249017.18.37>
+        ![](<https://images.code.org/269725fa3d9d6857912fe4a20464a830-image-1491427249017.18.37
         PM.png>)
       CSD U5 black white images pixelation 4_2018: |-
         # 这样做
 
         在笑脸上添加眉毛。如果搞乱了，记得使用“可读格式”。
 
-        !\[](\<<https://images.code.org/269725fa3d9d6857912fe4a20464a830-image-1491427249017.18.37>
+        ![](<https://images.code.org/269725fa3d9d6857912fe4a20464a830-image-1491427249017.18.37
         PM.png>)
       CSD U5 black white images pixelation 4_2019: |-
         # 这样做
 
         在笑脸上添加眉毛。如果搞乱了，记得使用“可读格式”。
 
-        !\[](\<<https://images.code.org/269725fa3d9d6857912fe4a20464a830-image-1491427249017.18.37>
+        ![](<https://images.code.org/269725fa3d9d6857912fe4a20464a830-image-1491427249017.18.37
         PM.png>)
       CSD U5 black white images pixelation 5: |-
         # 这样做
@@ -12166,7 +12166,7 @@ zh-CN:
 
         在这个关卡中, 请务必点击提示！这些提示将帮助你逐步完成此项目!
 
-        !\[](\<<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19>
+        ![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19
         PM.png>)
       courseA_playlab_events_challenge1_2018: |-
         点击奥丽芙将使罗宾出现！
@@ -12174,7 +12174,7 @@ zh-CN:
 
         在这个关卡中, 请务必点击提示！这些提示将帮助你逐步完成此项目!
 
-        !\[](\<<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19>
+        ![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19
         PM.png>)
       courseA_playlab_events_challenge1_2019: |-
         点击奥丽芙将使罗宾出现！
@@ -12182,28 +12182,28 @@ zh-CN:
 
         在这个关卡中, 请务必点击提示！这些提示将帮助你逐步完成此项目!
 
-        !\[](\<<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19>
+        ![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19
         PM.png>)
       courseA_playlab_events_challenge2: |-
         当你点击他们的时候让每个人做点什么。动物们会怎么说？还会发生什么呢？
 
         在这个关卡中, 请务必点击提示。这些提示会给你尝试一些有趣的事情!
 
-        !\[](\<<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19>
+        ![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19
         PM.png>)
       courseA_playlab_events_challenge2_2018: |-
         当你点击他们的时候让每个人做点什么。动物们会怎么说？还会发生什么呢？
 
         在这个关卡中, 请务必点击提示。这些提示会给你尝试一些有趣的事情!
 
-        !\[](\<<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19>
+        ![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19
         PM.png>)
       courseA_playlab_events_challenge2_2019: |-
         当你点击他们的时候让每个人做点什么。动物们会怎么说？还会发生什么呢？
 
         在这个关卡中, 请务必点击提示。这些提示会给你尝试一些有趣的事情!
 
-        !\[](\<<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19>
+        ![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19
         PM.png>)
       courseB_Scrat_ramp1_2018: 让斯奎特到达橡子，将<xml><block type="maze_moveEast"/></xml>模块粘到<xml><block
         type="when_run"/></xml>模块的下面，然后点击"▶ 运行"！
