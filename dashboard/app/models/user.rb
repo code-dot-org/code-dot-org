@@ -1138,18 +1138,19 @@ class User < ActiveRecord::Base
     user_levels.attempted.exists?
   end
 
-  # Returns the next visible script_level for the next progression level in the given
-  # script that hasn't yet been passed, starting its search at the last level we submitted
+  # Returns the next visible script_level for the next progression level in the # given script that hasn't yet been passed, starting at the last level the
+  # the user most recently submitted
   def next_unpassed_visible_progression_level(script)
-    # visible script levels
-    sl_level_ids = visible_script_levels(script).map(&:level_ids).flatten
+    visible_sls = visible_script_levels(script)
 
-    # levels the user made progress in
+    sl_level_ids = visible_sls.map(&:level_ids).flatten
+
+    # Levels the user made progress in
     ul_level_ids = user_levels_by_level(script).keys
 
-    # The user has not made any progress, return the first script_level
+    # The user has not made any progress, return the first visible script_level
     if ul_level_ids.empty?
-      return script.get_script_level_by_chapter(1)
+      visible_sls.min_by(&:chapter)
     end
 
     visible_completed_level_ids = sl_level_ids & ul_level_ids
@@ -1161,15 +1162,13 @@ class User < ActiveRecord::Base
     most_recent_ul = visible_user_levels.max_by(&:created_at)
 
     # Find the script_level that goes with the most recent user_level
-    most_recent_sl = visible_script_levels(script).detect do |sl|
-      sl.level_id == most_recent_ul.level_id
-    end
+    most_recent_sl = visible_sls.find_by(level_id: most_recent_ul.level_id)
 
     # Find the chapter for the script_level that goes with the most recent user_level
     most_recent_completed_chapter = most_recent_sl.chapter
 
     # Find the script_level that has the next highest chapter level from the one above
-    later_visible_sls = visible_script_levels(script).select do |sl|
+    later_visible_sls = visible_sls.select do |sl|
       sl.chapter > most_recent_completed_chapter
     end
 
@@ -1274,13 +1273,9 @@ class User < ActiveRecord::Base
   end
 
   def visible_script_levels(script)
-    visible_sls = []
-    script.script_levels.each do |sl|
-      unless script_level_hidden?(sl)
-        visible_sls << sl
-      end
+    script.script_levels.select do |sl|
+      !script_level_hidden?(sl)
     end
-    visible_sls
   end
 
   # Is the given script hidden for this user (based on the sections that they are in)
