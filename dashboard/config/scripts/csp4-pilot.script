@@ -1,6 +1,8 @@
 login_required true
 hideable_stages true
 has_verified_resources true
+has_lesson_plan true
+curriculum_path 'https://curriculum.code.org/{LOCALE}/cspilot/unit4/{LESSON}'
 pilot_experiment 'csp-piloters'
 curriculum_umbrella 'CSP'
 
@@ -134,9 +136,3 @@ level 'U4 L14 Practice PT 2', progression: 'Submit Your Decision Maker App', ass
 stage 'Lesson 15: Unit 4 Assessment', lockable: true
 level 'CSP U4L15 SFLP 20-21', progression: 'Lesson Overview'
 level 'CSP 20-21 Unit 4 Assessment', assessment: true
-
-stage 'Student Survey (Conditionals)', lockable: true, flex_category: 'required'
-level 'Pilot Student Survey Conditionals', progression: 'Student Survey (Conditionals)', assessment: true
-
-stage 'Teacher Surveys (Conditionals)', lockable: true, flex_category: 'required'
-level 'Pilot Teacher Surveys Conditionals CSP2021', progression: 'Teacher Surveys (Conditionals)', assessment: true
