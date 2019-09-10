@@ -14,7 +14,7 @@ class LevelsController < ApplicationController
 
   before_action :set_level, only: [:show, :edit, :update, :destroy]
 
-  LEVELS_PER_PAGE = 100
+  LEVELS_PER_PAGE = 30
 
   # All level types that can be requested via /levels/new
   LEVEL_CLASSES = [
