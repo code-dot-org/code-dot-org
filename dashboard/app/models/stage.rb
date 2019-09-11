@@ -257,12 +257,13 @@ class Stage < ActiveRecord::Base
   end
 
   def next_level_path_for_stage_extras(user)
-    next_level_for_stage_extras(user) ?
-      build_script_level_path(next_level_for_stage_extras(user)) : script_completion_redirect(script)
+    next_level = next_level_for_stage_extras(user)
+    next_level ?
+      build_script_level_path(next_level) : script_completion_redirect(script)
   end
 
   def next_level_number_for_stage_extras(user)
-    next_level_for_stage_extras(user) ?
-      next_level_for_stage_extras(user).stage.relative_position : nil
+    next_level = next_level_for_stage_extras(user)
+    next_level ? next_level.stage.relative_position : nil
   end
 end
