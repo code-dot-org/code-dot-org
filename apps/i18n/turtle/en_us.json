@@ -90,6 +90,8 @@
   "sizeParameter": "size",
   "step": "step",
   "tooFewColours": "You need to use at least %1 different colors for this puzzle.  You used only %2.",
+  "turnLeft": "turn left by",
+  "turnRight": "turn right by",
   "turnRightTooltip": "Turns the artist right by the specified angle.",
   "turnDirection": "turn %1 by %2 degrees",
   "turnTooltip": "Turns the artist left or right by the specified number of degrees.",
