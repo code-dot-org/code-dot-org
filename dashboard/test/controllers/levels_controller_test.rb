@@ -27,15 +27,8 @@ class LevelsControllerTest < ActionController::TestCase
   end
 
   test "should get rubric" do
-    level = create(:level,
-      mini_rubric: 'true',
-      rubric_key_concept: 'This is the key concept',
-      rubric_performance_level_1: 'This is great',
-      rubric_performance_level_2: 'This is good',
-      rubric_performance_level_3: 'This is okay',
-      rubric_performance_level_4: 'This is bad'
-    )
-    get :get_rubric, params: {level_id: level.id}
+    level = create_level_with_rubric
+    get :get_rubric, params: {id: level.id}
     assert_equal JSON.parse(@response.body), {
       "keyConcept" => "This is the key concept",
       "performanceLevel1" => "This is great",
@@ -43,6 +36,37 @@ class LevelsControllerTest < ActionController::TestCase
       "performanceLevel3" => "This is okay",
       "performanceLevel4" => "This is bad"
     }
+  end
+
+  test "anonymous user can get_rubric" do
+    sign_out @levelbuilder
+    level = create_level_with_rubric
+    get :get_rubric, params: {id: level.id}
+    assert_equal JSON.parse(@response.body), {
+      "keyConcept" => "This is the key concept",
+      "performanceLevel1" => "This is great",
+      "performanceLevel2" => "This is good",
+      "performanceLevel3" => "This is okay",
+      "performanceLevel4" => "This is bad"
+    }
+  end
+
+  test "empty success response for get_rubric on rubricless level" do
+    level = create :level
+    get :get_rubric, params: {id: level.id}
+    assert_response :no_content
+    assert_equal '', @response.body
+  end
+
+  def create_level_with_rubric
+    create(:level,
+      mini_rubric: 'true',
+      rubric_key_concept: 'This is the key concept',
+      rubric_performance_level_1: 'This is great',
+      rubric_performance_level_2: 'This is good',
+      rubric_performance_level_3: 'This is okay',
+      rubric_performance_level_4: 'This is bad'
+    )
   end
 
   test "should get index" do

@@ -9,8 +9,7 @@ class LevelsController < ApplicationController
   include ActiveSupport::Inflector
   before_action :authenticate_user!, except: [:show, :embed_level, :get_rubric]
   before_action :require_levelbuilder_mode, except: [:show, :index, :embed_level, :get_rubric]
-  load_and_authorize_resource except: [:create, :update_blocks, :edit_blocks, :embed_level, :get_rubric]
-  check_authorization except: [:get_rubric]
+  load_and_authorize_resource except: [:create, :update_blocks, :edit_blocks, :embed_level]
 
   before_action :set_level, only: [:show, :edit, :update, :destroy]
 
@@ -87,18 +86,17 @@ class LevelsController < ApplicationController
   def edit
   end
 
-  # GET all the information for the mini rubric
+  # GET /levels/:id/get_rubric
+  # Get all the information for the mini rubric
   def get_rubric
-    @level = Level.find_by(id: params[:level_id])
-    if @level.mini_rubric&.to_bool
-      render json: {
-        keyConcept: @level.rubric_key_concept,
-        performanceLevel1: @level.rubric_performance_level_1,
-        performanceLevel2: @level.rubric_performance_level_2,
-        performanceLevel3: @level.rubric_performance_level_3,
-        performanceLevel4: @level.rubric_performance_level_4
-      }
-    end
+    return head :no_content unless @level.mini_rubric&.to_bool
+    render json: {
+      keyConcept: @level.rubric_key_concept,
+      performanceLevel1: @level.rubric_performance_level_1,
+      performanceLevel2: @level.rubric_performance_level_2,
+      performanceLevel3: @level.rubric_performance_level_3,
+      performanceLevel4: @level.rubric_performance_level_4
+    }
   end
 
   # Action for using blockly workspace as a toolbox/startblock editor.
