@@ -50,6 +50,16 @@ class Ability
     ]
     cannot :index, Level
 
+    # If you can see a level, you can also do these things:
+    can [:embed_level, :get_rubric], Level do |level|
+      can? :read, level
+    end
+
+    # If you can update a level, you can also do these things:
+    can [:edit_blocks, :update_blocks, :update_properties], Level do |level|
+      can? :update, level
+    end
+
     if user.persisted?
       can :manage, user
 
