@@ -43,12 +43,12 @@ const POSITION_VALUES = [
   [commonMsg.positionBottomRight(), Position.BOTTOMRIGHT.toString()]
 ];
 
-const MOVE_DIRECTION_VALUES = [
+const MOVE_BY_DIRECTION_VALUES = [
   [msg.moveForward(), 'moveForward'],
   [msg.moveBackward(), 'moveBackward']
 ];
 
-const MOVE_DIRECTION_VALUES_EXTENDED = [
+const DIRECTION_VALUES = [
   [msg.forward(), 'moveForward'],
   [msg.backward(), 'moveBackward']
 ];
@@ -108,7 +108,7 @@ exports.install = function(blockly, blockInstallOptions) {
     init: function() {
       this.setHSV(184, 1.0, 0.74);
       this.appendDummyInput().appendTitle(
-        new blockly.FieldDropdown(MOVE_DIRECTION_VALUES),
+        new blockly.FieldDropdown(MOVE_BY_DIRECTION_VALUES),
         'DIR'
       );
       this.appendDummyInput()
@@ -133,7 +133,7 @@ exports.install = function(blockly, blockInstallOptions) {
     init: function() {
       this.setHSV(184, 1.0, 0.74);
       this.appendDummyInput().appendTitle(
-        new blockly.FieldDropdown(MOVE_DIRECTION_VALUES),
+        new blockly.FieldDropdown(MOVE_BY_DIRECTION_VALUES),
         'DIR'
       );
       this.appendDummyInput()
@@ -696,7 +696,7 @@ exports.install = function(blockly, blockInstallOptions) {
         msg.moveDirectionByPixels(),
         () => {
           this.appendDummyInput().appendTitle(
-            new blockly.FieldDropdown(MOVE_DIRECTION_VALUES_EXTENDED),
+            new blockly.FieldDropdown(DIRECTION_VALUES),
             'DIR'
           );
         },
