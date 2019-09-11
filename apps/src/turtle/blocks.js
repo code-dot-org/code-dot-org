@@ -30,6 +30,16 @@ import {Position} from '../constants';
 
 const RANDOM_VALUE = 'RAND';
 
+const TURN_BY_DIRECTION_VALUES = [
+  [msg.turnRight(), 'turnRight'],
+  [msg.turnLeft(), 'turnLeft']
+];
+
+const TURN_DIRECTION_VALUES = [
+  [msg.right(), 'turnRight'],
+  [msg.left(), 'turnLeft']
+];
+
 const POSITION_VALUES = [
   [commonMsg.positionRandom(), RANDOM_VALUE],
   [commonMsg.positionTopLeft(), Position.TOPLEFT.toString()],
@@ -158,7 +168,7 @@ exports.install = function(blockly, blockInstallOptions) {
     init: function() {
       this.setHSV(184, 1.0, 0.74);
       this.appendDummyInput().appendTitle(
-        new blockly.FieldDropdown(blockly.Blocks.draw_turn.DIRECTIONS),
+        new blockly.FieldDropdown(TURN_BY_DIRECTION_VALUES),
         'DIR'
       );
       this.appendDummyInput()
@@ -211,7 +221,7 @@ exports.install = function(blockly, blockInstallOptions) {
     init: function() {
       this.setHSV(184, 1.0, 0.74);
       this.appendDummyInput().appendTitle(
-        new blockly.FieldDropdown(blockly.Blocks.draw_turn.DIRECTIONS),
+        new blockly.FieldDropdown(TURN_BY_DIRECTION_VALUES),
         'DIR'
       );
       this.appendDummyInput()
@@ -235,7 +245,7 @@ exports.install = function(blockly, blockInstallOptions) {
     init: function() {
       this.setHSV(184, 1.0, 0.74);
       this.appendDummyInput().appendTitle(
-        new blockly.FieldDropdown(blockly.Blocks.draw_turn.DIRECTIONS),
+        new blockly.FieldDropdown(TURN_BY_DIRECTION_VALUES),
         'DIR'
       );
       this.appendDummyInput()
@@ -289,7 +299,7 @@ exports.install = function(blockly, blockInstallOptions) {
     init: function() {
       this.setHSV(184, 1.0, 0.74);
       this.appendDummyInput().appendTitle(
-        new blockly.FieldDropdown(blockly.Blocks.draw_turn.DIRECTIONS),
+        new blockly.FieldDropdown(TURN_BY_DIRECTION_VALUES),
         'DIR'
       );
       this.appendDummyInput()
@@ -342,7 +352,7 @@ exports.install = function(blockly, blockInstallOptions) {
     init: function() {
       this.setHSV(184, 1.0, 0.74);
       this.appendDummyInput().appendTitle(
-        new blockly.FieldDropdown(blockly.Blocks.draw_turn.DIRECTIONS),
+        new blockly.FieldDropdown(TURN_BY_DIRECTION_VALUES),
         'DIR'
       );
       this.appendDummyInput()
@@ -1160,7 +1170,7 @@ exports.install = function(blockly, blockInstallOptions) {
         msg.turnDirection(),
         () => {
           this.appendDummyInput().appendTitle(
-            new blockly.FieldDropdown(blockly.Blocks.draw_turn.DIRECTIONS),
+            new blockly.FieldDropdown(TURN_DIRECTION_VALUES),
             'DIR'
           );
         },
@@ -1181,11 +1191,6 @@ exports.install = function(blockly, blockInstallOptions) {
       this.setTooltip(msg.turnTooltip());
     }
   };
-
-  blockly.Blocks.draw_turn.DIRECTIONS = [
-    [msg.right(), 'turnRight'],
-    [msg.left(), 'turnLeft']
-  ];
 
   generator.draw_turn = function() {
     // Generate JavaScript for turning left or right.
