@@ -6,9 +6,10 @@ teacher_resources [["lessonPlans", "https://curriculum.code.org/csd-19/unit1"], 
 has_verified_resources true
 has_lesson_plan true
 curriculum_path 'https://curriculum.code.org/csd-20/unit1/{LESSON}'
+family_name 'csd1'
+version_year '2020'
 pilot_experiment 'csd-piloters'
 project_sharing true
-curriculum_umbrella 'CSD'
 
 stage 'CS Discoveries Pre-survey', lockable: true, flex_category: 'cspSurvey'
 level 'csd-pre-survey-2017-levelgroup_2018_2019_pilot', assessment: true

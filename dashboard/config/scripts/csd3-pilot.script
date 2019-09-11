@@ -7,6 +7,8 @@ has_verified_resources true
 has_lesson_plan true
 project_widget_visible true
 project_widget_types ["gamelab", "weblab"]
+family_name 'csd3'
+version_year '2020'
 pilot_experiment 'csd-piloters'
 project_sharing true
 curriculum_umbrella 'CSD'
