@@ -48,8 +48,12 @@ class Ability
       Pd::InternationalOptIn,
       :maker_discount
     ]
-    can :get_rubric, Level
     cannot :index, Level
+
+    # If you can see a level, you can also do these things:
+    can [:embed_level, :get_rubric], Level do |level|
+      can? :read, level
+    end
 
     if user.persisted?
       can :manage, user

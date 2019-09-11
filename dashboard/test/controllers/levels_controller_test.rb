@@ -851,7 +851,7 @@ class LevelsControllerTest < ActionController::TestCase
     level = create :artist
     sign_out @levelbuilder
 
-    get :embed_level, params: {level_id: level}
+    get :embed_level, params: {id: level}
     assert_response :success
   end
 

@@ -222,11 +222,11 @@ Dashboard::Application.routes.draw do
 
   resources :levels do
     get 'edit_blocks/:type', to: 'levels#edit_blocks', as: 'edit_blocks'
-    get 'embed_level', to: 'levels#embed_level', as: 'embed_level'
     post 'update_blocks/:type', to: 'levels#update_blocks', as: 'update_blocks'
     post 'update_properties'
     member do
       get 'get_rubric'
+      get 'embed_level'
       post 'clone'
     end
   end
