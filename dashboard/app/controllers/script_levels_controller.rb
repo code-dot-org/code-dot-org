@@ -282,7 +282,7 @@ class ScriptLevelsController < ApplicationController
 
   def user_or_session_level
     if current_user
-      current_user.next_unpassed_visible_progression_level(@script).try(:or_next_progression_level)
+      current_user.next_unpassed_visible_progression_level(@script)
     else
       find_next_level_for_session(@script)
     end
