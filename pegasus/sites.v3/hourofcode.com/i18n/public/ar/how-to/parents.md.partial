@@ -6,44 +6,44 @@ nav: how_to_nav
 
 {{ signup_button }}
 
-# How to do an Hour of Code with your child
+# كيف تنجز ساعة برمجة مع طفلك
 
-### Complete an Hour of Code at home or volunteer to bring it to your child’s classroom!
+### أكمل ساعة برمجة بالمنزل، أو تطوع لنقلها الي فصل طفلك في المدرسة!
 
 ---
 
 ## 1) شاهد هذا الفيديو "كيف تفعل ذلك" <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
-## 2) Choose a tutorial
+## 2) اختر دورة
 
-We provide a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. [Try them out!]({{ urls/learn }})
+نحن نوفر متعة متنوعة، دزرات طولية لكل الأعمار، مصممة منطرف عدة شركاء. [جربها]({{ urls/learn }})
 
-**All Hour of Code tutorials are self-guided - allowing your child to work at their own pace and skill level**
+**كل دورات ساعة البرمجة ذاتية التوجيه- مما يسمح لطفلك ان يكملها على وتيرته و مستوى مهاراته**
 
 [![](/images/fit-700/tutorials.png)]({{ urls/learn }})
 
 ## ٣) خطط لاحتياجاتك التقنية
 
-The best Hour of Code experience will be with Internet-connected computers. But you **don’t** need a computer. There are many activities that are "unplugged" and can be done without any technology at all. Test tutorials on your computer or device. Make sure they work properly on browsers with sound and video.
+افضل تجربة لساعة برمجة ستكون مع أجهزة كمبيوتر متصلة بالانترنت. لكنك **لا** تحتاج إلى كمبيوتر. هنالك العديد من الأنشطة "الغير متصلة" ويمكن أن تنجز دون اي تكنولوجيا على الاطلاق. دورات تجريبية على حاسوبك أو جهازك. تأكد أنها تعمل جيدا على متصفحات البحث بالصوت والصورة.
 
-**Want to learn alongside your child?** Try [pair programming.](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) Computer science is social and collaborative.
+**تريد أن تتعلم إلى جانب طفلك؟** جرب [البرمجة الثنائية.](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning)علوم الكمبيوتر هي اجتماعي تشاركي.
 
-## 4) Start your Hour of Code with an inspiring video
+## 4) ابدأ ساعة البرمجة بفيديو ملهم
 
 أطلق ساعة البرمجة بإلهام طفلك ومناقشة كيف أن علم الكمبيوتر يؤثر في كل جزء من حياتنا.
 
 **اعرض احد الفيديوهات المُلهِمة:**
 
 - الفيديو الرسمي لإطلاق Code.org، من تقديم بيل غايتس Bill Gates, مارك زاكربيرج Mark Zuckerberg و نجم إن بي أي NBA كريس بوش (توجد نسخ[الدقيقة الواحدة](https://www.youtube.com/watch?v=qYZF6oIZtfc), [الخمس دقائق](https://www.youtube.com/watch?v=nKIu9yen5nc), and [ التسع دقائق](https://www.youtube.com/watch?v=dU1xS07N-FA)).
-- The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A).
+- [الفيديو العالمي لساعة البرمجة](https://www.youtube.com/watch?v=KsOIlDT145A).
 - [الرئيس اوباما يدعو جميع الطلاب لتعلم علم الحاسوب](https://www.youtube.com/watch?v=6XvmhE1J9PY).
-- Find more inspirational [resources]({{ urls/inspire }}) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+- اطلع على المزيد من [الموارد الملهمة]({{ urls/inspire }}) و[الفيديوهات](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
 لا بأس ان تكون انت وطفلك حديثي العهد بعلم الكمبيوتر. هنا بعض الأفكار كي تقدم نشاط ساعة برمجة:
 
-- Explain ways technology impacts our lives, with examples both boys and girls will care about (Talk about saving lives, helping people, connecting people, etc.).
+- اشرح طرق تأثير التكنولوجيا على حياتنا، مع ذكر أمثلة تهم الفتيات والفتيان (تكلم عن انقاذ الحياة، مساعدة الناس، التواصل بينهم، الخ.).
 - بمشاركة الفصل، اسرد الاشياء التي نستخدم فيها البرمجة في حياتنا اليومية.
-- See tips for getting girls interested in computer science [here]({{ urls/girls }}).
+- هذه بعض التوجيهات لجعل الفتيات يهتمن بعلوم الكمبيوتر[هنا]({{ urls/girls }}).
 
 هل تريد المزيد من الأفكار؟ انظر إلى [نموذج خطة الدرس](/files/AfterschoolEducatorLessonPlanOutline.docx) لتحصل على أفضل الممارسات من خبراء التعليم.
 
@@ -63,17 +63,17 @@ The best Hour of Code experience will be with Internet-connected computers. But 
 
 ## ٦) احتفل
 
-[Print certificates]({{ urls/certificates }}) for your child (and yourself!).
+[اطبع الشهادات](%= codeorg_url('/certificates') %) لطفلك (ولنفسك!).
 
 شارك صور وفيديوهات حدث ساعة برمجة الذي قمت به على وسائل التواصل الاجتماعي. استخدم #HourOfCode و @codeorg حتى نسلط الضوء على نجاحك ايضا!
 
-Review the [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code) if you still have questions.
+راجع [الأسئلة المتكررة في ساعة البرمجة](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
 
 ## ماذا بعد ساعة برمجة؟
 
-The Hour of Code is just the first step in a journey to learn more about how technology works and how to create software applications. To continue this journey:
+ساعة البرمجة هي مجرد خطوة أولى في رحلة تعلم المزيد عن كيفية عمل التكنولوجيا وكيف تنشئ تطبيقات برمجية. لتواصل هذه الرحلة:
 
-- Encourage your child to continue [to learn online]({{ urls/learn_beyond }}).
-- Help [promote]({{ urls/promote }}) computer science education in your child’s school district.
+- شجع طفلك ليواصل [التعلم عبر الانترنت](%= codeorg_url('/learn/beyond') %).
+- ساعد في [تعزيز](%= resolve_url('/promote') %) تعليم علوم الكمبيوتر في منطقة مدرسة ابنك.
 
 {{ signup_button }}

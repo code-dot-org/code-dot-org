@@ -9,7 +9,7 @@ layout: wide
   }
 </style>
 
-{{ signup_button }}
+{{signup_button}}
 
 # Contact International Partners
 
@@ -179,4 +179,4 @@ compatsch@bcs.uk                                       |
 nhile@microsoft.com                                        |
 
 
-{{ signup_button }}
+{{signup_button}}

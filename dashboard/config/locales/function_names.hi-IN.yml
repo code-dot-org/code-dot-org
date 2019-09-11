@@ -52,6 +52,39 @@ hi-IN:
         draw a circle: एक चक्र बनाएं
       Alien Defender:
         game has been won: गेम जीत ली गई है
+      Course 4 Artist Binary 1:
+        draw: खींचें (चित्रित करें)
+        draw bit: बिट चित्रित करें
+      Course 4 Artist Binary 2:
+        draw: खींचें (चित्रित करें)
+        draw bit: बिट चित्रित करें
+      Course 4 Artist Binary 3:
+        draw: खींचें (चित्रित करें)
+        draw bit: बिट चित्रित करें
+      Course 4 Artist Binary 4:
+        draw: खींचें (चित्रित करें)
+        draw bit: बिट चित्रित करें
+      Course 4 Artist Binary 5:
+        draw: खींचें (चित्रित करें)
+        draw bit: बिट चित्रित करें
+      Course 4 Artist Binary 6:
+        draw: खींचें (चित्रित करें)
+        draw bit: बिट चित्रित करें
+      Course 4 Artist Binary 7:
+        draw: खींचें (चित्रित करें)
+        draw bit: बिट चित्रित करें
+      Course 4 Artist Binary Free Play 2:
+        draw: खींचें (चित्रित करें)
+        draw bit: बिट चित्रित करें
+      Course 4 Artist Binary Free Play 2a:
+        draw: खींचें (चित्रित करें)
+        draw bit: बिट चित्रित करें
+      Course 4 Artist Binary Free Play 2b:
+        draw: खींचें (चित्रित करें)
+        draw bit: बिट चित्रित करें
+      Course 4 Artist Binary pre1:
+        draw bit: बिट चित्रित करें
+        draw: खींचें (चित्रित करें)
       Course 4 Artist Functions challenge:
         draw a line of squares: वर्गों की लाइन खींचें
       Course 4 Play Lab Params 1:
@@ -174,6 +207,12 @@ hi-IN:
         win game: गेम जीतें
         lose game: गेम हारें
         keep playing: खेलते रहें
+      course4_artist_binary_challenge1:
+        draw: खींचें (चित्रित करें)
+        draw bit: बिट चित्रित करें
+      course4_artist_binary_challenge2:
+        draw: खींचें (चित्रित करें)
+        draw bit: बिट चित्रित करें
       course4_artist_concept_challenge2:
         draw pinwheel: चकरी चित्रित करें
       course4_artist_functions_challenge2:
@@ -183,8 +222,146 @@ hi-IN:
         do something: कुछ कीजिए
       courseA_artist_loops_challenge1:
         '"simple" solution': '"साधारण" समाधान'
+      courseC_artist_prog3:
+        draw flame: लौ चित्रित करें
+        draw fire: आग चित्रित करें
+      courseC_artist_prog3_2018:
+        draw flame: लौ चित्रित करें
+        draw fire: आग चित्रित करें
+      courseC_artist_prog3_2019:
+        draw flame: लौ चित्रित करें
+        draw fire: आग चित्रित करें
+      courseC_artist_prog4:
+        booster: बूस्टर
+      courseC_artist_prog4_2018:
+        booster: बूस्टर
+      courseC_artist_prog4_2019:
+        booster: बूस्टर
       courseC_data wizard:
         do something: कुछ कीजिए
+      courseD_artist_binary1:
+        draw bit: बिट चित्रित करें
+        draw: खींचें (चित्रित करें)
+      courseD_artist_binary1_2018:
+        draw bit: बिट चित्रित करें
+        draw: खींचें (चित्रित करें)
+      courseD_artist_binary1_2019:
+        draw bit: बिट चित्रित करें
+        draw: खींचें (चित्रित करें)
+      courseD_artist_binary2:
+        draw: खींचें (चित्रित करें)
+        draw bit: बिट चित्रित करें
+      courseD_artist_binary2_2018:
+        draw: खींचें (चित्रित करें)
+        draw bit: बिट चित्रित करें
+      courseD_artist_binary2_2019:
+        draw: खींचें (चित्रित करें)
+        draw bit: बिट चित्रित करें
+      courseD_artist_binary3:
+        draw: खींचें (चित्रित करें)
+        draw bit: बिट चित्रित करें
+      courseD_artist_binary3_2018:
+        draw: खींचें (चित्रित करें)
+        draw bit: बिट चित्रित करें
+      courseD_artist_binary3_2019:
+        draw: खींचें (चित्रित करें)
+        draw bit: बिट चित्रित करें
+      courseD_artist_binary4:
+        draw: खींचें (चित्रित करें)
+        draw bit: बिट चित्रित करें
+      courseD_artist_binary4_2018:
+        draw: खींचें (चित्रित करें)
+        draw bit: बिट चित्रित करें
+      courseD_artist_binary4_2019:
+        draw: खींचें (चित्रित करें)
+        draw bit: बिट चित्रित करें
+      courseD_artist_binary5:
+        draw: खींचें (चित्रित करें)
+        draw bit: बिट चित्रित करें
+      courseD_artist_binary5_2018:
+        draw: खींचें (चित्रित करें)
+        draw bit: बिट चित्रित करें
+      courseD_artist_binary5_2019:
+        draw: खींचें (चित्रित करें)
+        draw bit: बिट चित्रित करें
+      courseD_artist_binary6:
+        draw: खींचें (चित्रित करें)
+        draw bit: बिट चित्रित करें
+      courseD_artist_binary6_2018:
+        draw: खींचें (चित्रित करें)
+        draw bit: बिट चित्रित करें
+      courseD_artist_binary6_2019:
+        draw: खींचें (चित्रित करें)
+        draw bit: बिट चित्रित करें
+      courseD_artist_binary7:
+        draw: खींचें (चित्रित करें)
+        draw bit: बिट चित्रित करें
+      courseD_artist_binary7_2018:
+        draw: खींचें (चित्रित करें)
+        draw bit: बिट चित्रित करें
+      courseD_artist_binary7_2019:
+        draw: खींचें (चित्रित करें)
+        draw bit: बिट चित्रित करें
+      courseD_artist_binary8:
+        draw: खींचें (चित्रित करें)
+        draw bit: बिट चित्रित करें
+      courseD_artist_binary8_2018:
+        draw: खींचें (चित्रित करें)
+        draw bit: बिट चित्रित करें
+      courseD_artist_binary8_2019:
+        draw: खींचें (चित्रित करें)
+        draw bit: बिट चित्रित करें
+      courseD_artist_binary8_predict1:
+        draw: खींचें (चित्रित करें)
+        draw bit: बिट चित्रित करें
+      courseD_artist_binary8_predict1_2018:
+        draw: खींचें (चित्रित करें)
+        draw bit: बिट चित्रित करें
+      courseD_artist_binary8_predict1_2019:
+        draw: खींचें (चित्रित करें)
+        draw bit: बिट चित्रित करें
+      courseD_artist_binaryFP_2018:
+        draw: खींचें (चित्रित करें)
+        draw bit: बिट चित्रित करें
+      courseD_artist_binaryFP_2019:
+        draw: खींचें (चित्रित करें)
+        draw bit: बिट चित्रित करें
+      courseD_artist_binary_challenge1_2018:
+        draw: खींचें (चित्रित करें)
+        draw bit: बिट चित्रित करें
+      courseD_artist_binary_challenge1_2019:
+        draw: खींचें (चित्रित करें)
+        draw bit: बिट चित्रित करें
+      courseD_artist_binary_challenge2_2018:
+        draw: खींचें (चित्रित करें)
+        draw bit: बिट चित्रित करें
+      courseD_artist_binary_challenge2_2019:
+        draw: खींचें (चित्रित करें)
+        draw bit: बिट चित्रित करें
+      courseD_autorun_binary2_2019:
+        draw: खींचें (चित्रित करें)
+        draw bit: बिट चित्रित करें
+      courseD_autorun_binary3_2019:
+        draw bit: बिट चित्रित करें
+        draw: खींचें (चित्रित करें)
+      courseD_autorun_binary4_2019:
+        draw bit: बिट चित्रित करें
+        draw: खींचें (चित्रित करें)
+      courseD_autorun_binary5_2019:
+        draw bit: बिट चित्रित करें
+        draw: खींचें (चित्रित करें)
+      courseD_autorun_binary6_2019:
+        draw bit: बिट चित्रित करें
+        draw: खींचें (चित्रित करें)
+      courseD_autorun_binary7_2019:
+        draw bit: बिट चित्रित करें
+        draw: खींचें (चित्रित करें)
+      courseD_autorun_binary8_2019:
+        draw: खींचें (चित्रित करें)
+        draw bit: बिट चित्रित करें
+      courseD_autorun_binary8_predict1_2019:
+        draw: खींचें (चित्रित करें)
+        draw bit: बिट चित्रित करें
       courseE_artist_concept1:
         do something: कुछ कीजिए
         draw a hexagon: एक हेक्सागोन खींचे
@@ -446,3 +623,18 @@ hi-IN:
         collect: एकत्र
       courseF_bee_variables_8_2019:
         collect: एकत्र
+      grade5_artist_binary11:
+        draw: खींचें (चित्रित करें)
+        draw bit: बिट चित्रित करें
+      grade5_artist_binary4:
+        draw: खींचें (चित्रित करें)
+        draw bit: बिट चित्रित करें
+      grade5_artist_binary5:
+        draw: खींचें (चित्रित करें)
+        draw bit: बिट चित्रित करें
+      grade5_artist_binary8:
+        draw: खींचें (चित्रित करें)
+        draw bit: बिट चित्रित करें
+      grade5_artist_binary9:
+        draw: खींचें (चित्रित करें)
+        draw bit: बिट चित्रित करें

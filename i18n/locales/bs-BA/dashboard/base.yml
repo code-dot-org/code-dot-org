@@ -23,6 +23,7 @@ bs:
         edit_header: 'Preuredi Detalje Računa'
         error:
           future: ne može biti u budućnosti
+  beta: "beta"
   hello: "Pozdrav svijete"
   welcome_back: "Dobrodošao/la natrag, %{name}"
   your_professional_learning_plan: "Vaš profesionalni plan učenja"

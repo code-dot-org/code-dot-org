@@ -80,11 +80,6 @@ uz:
         options:
           KEY:
             '"space"': koinot
-      gamelab_debugSprite:
-        options:
-          VAL:
-            'true': rost
-            'false': yolgʻon
       gamelab_keyPressed:
         options:
           KEY:

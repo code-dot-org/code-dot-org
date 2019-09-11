@@ -1733,3 +1733,11 @@ ja:
               name: めいろ のプログラミング
             Ocean Scene with Loops:
               name: アーティストくりかえし
+        peru-2019:
+          stages:
+            Introduction:
+              name: はじめに
+            Loops in Artist:
+              name: アーティストくりかえし
+            Nested Loops:
+              name: 入れ子のループ

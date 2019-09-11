@@ -685,22 +685,12 @@ zh-TW:
             '"while"': 當
       gamelab_clickedOn:
         text: 當角色 {SPRITE} 被點擊
-      gamelab_console.log:
-        text: 紀錄訊息 {MESSAGE}
       gamelab_createNewSprite:
         text: |-
           角色 創建一個新的 {COSTUME}
           名稱 {NAME} 位置 {LOCATION}
-      gamelab_debugSprite:
-        text: 角色 {SPRITE} 偵錯 {VAL}
-        options:
-          VAL:
-            'true': 'true'
-            'false': 'false'
       gamelab_destroy:
         text: 角色 移除 {THIS}
-      gamelab_displace:
-        text: "{THIS} 阻擋 {SPRITE} 前進"
       gamelab_edgesDisplace:
         text: 邊緣阻擋 {SPRITE} 前進
       gamelab_getProp:
@@ -839,7 +829,6 @@ zh-TW:
             '"x"': x 座標
             '"y"': y 座標
             '"direction"': 移動方向
-            '"tint"': 色調
       gamelab_setSizes:
         text: 角色 {SPRITE} {PROPERTY} 設為 {N}%
         options:
@@ -880,13 +869,6 @@ zh-TW:
             '"d"': d
       gamelab_whenLeftArrow:
         text: 當向左鍵被按下
-      gamelab_whenPressedAndReleased:
-        options:
-          DIR:
-            "'up'": 向上
-            "'down'": 向下
-            "'left'": 向左
-            "'right'": 向右
       gamelab_whenRightArrow:
         text: 當向右鍵被按下
       gamelab_whenTouching:

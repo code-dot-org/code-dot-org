@@ -5361,6 +5361,8 @@ zh-TW:
               name: 使用遊戲設計流程
             Project - Design a Game:
               name: 專案 - 設計一個遊戲
+            Random Numbers:
+              name: 隨機取數
         maddie-test:
           stages:
             new stage:
@@ -5383,7 +5385,45 @@ zh-TW:
           stages:
             Deeper Learning Overview:
               name: 深度學習概覽
+        dlp19-csd-mod-w1:
+          stages:
+            Deeper Learning Overview:
+              name: 深度學習概覽
         dlp19-csd-mod-w2:
           stages:
             new stage:
               name: 新的階段
+            Deeper Learning Overview:
+              name: 深度學習概覽
+        dlp19-csp-mod-w1:
+          stages:
+            Deeper Learning Overview:
+              name: 深度學習概覽
+        dlp19-csp-mod-w2:
+          stages:
+            Deeper Learning Overview:
+              name: 深度學習概覽
+        csd4-pilot:
+          stages:
+            What is a Computer?:
+              name: 電腦是什麼？
+            Input and Output:
+              name: 輸入與輸出
+        csp2-pilot:
+          stages:
+            new stage:
+              name: 新的階段
+        peru-2019:
+          stages:
+            new stage:
+              name: 新的階段
+            Introduction:
+              name: 介紹
+            Debugging in Collector:
+              name: 和收藏家學除錯（Debug）
+            Loops in Artist:
+              name: 藝術家中的迴圈（Loops）
+            Nested Loops:
+              name: 巢狀迴圈
+            Introduction to Debugging:
+              name: 除錯 Debug 介紹

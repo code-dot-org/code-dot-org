@@ -226,7 +226,9 @@ Dashboard::Application.routes.draw do
     get 'embed_level', to: 'levels#embed_level', as: 'embed_level'
     post 'update_blocks/:type', to: 'levels#update_blocks', as: 'update_blocks'
     post 'update_properties'
-    post 'clone', to: 'levels#clone'
+    member do
+      post 'clone'
+    end
   end
 
   post 'level_assets/upload', to: 'level_assets#upload'
@@ -291,9 +293,6 @@ Dashboard::Application.routes.draw do
   get '/jigsaw/:chapter', to: 'script_levels#show', script_id: Script::JIGSAW_NAME, as: 'jigsaw_chapter', format: false
 
   get '/weblab/host', to: 'weblab_host#index'
-
-  resources :followers, only: [:create]
-  post '/followers/remove', to: 'followers#remove', as: 'remove_follower'
 
   get '/join(/:section_code)', to: 'followers#student_user_new', as: 'student_user_new'
   post '/join(/:section_code)', to: 'followers#student_register', as: 'student_register'
@@ -395,6 +394,7 @@ Dashboard::Application.routes.draw do
           post :end
           post :reopen
           get  :summary
+          get  :potential_organizers
         end
         resources :enrollments, controller: 'workshop_enrollments', only: [:index, :destroy, :create]
 

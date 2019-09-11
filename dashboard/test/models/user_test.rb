@@ -1223,37 +1223,6 @@ class UserTest < ActiveSupport::TestCase
     assert @student.urm
   end
 
-  test 'urm_from_races with nil' do
-    @student.update!(races: nil)
-    assert_nil @student.urm_from_races
-  end
-
-  test 'urm_from_races with empty string' do
-    @student.update!(races: '')
-    assert_nil @student.urm_from_races
-  end
-
-  test 'urm_from_races with non-answer responses' do
-    %w(opt_out nonsense closed_dialog).each do |response|
-      @student.update!(races: response)
-      assert_nil @student.urm_from_races
-    end
-  end
-
-  test 'urm_from_races with urm responses' do
-    ['white,black', 'hispanic,hawaiian', 'american_indian'].each do |response|
-      @student.update!(races: response)
-      assert @student.urm_from_races
-    end
-  end
-
-  test 'urm_from_races with non-urm response' do
-    ['white', 'white,asian', 'asian'].each do |response|
-      @student.update!(races: response)
-      refute @student.urm_from_races
-    end
-  end
-
   test 'under 13' do
     user = create :user
     refute user.under_13?
@@ -2515,32 +2484,6 @@ class UserTest < ActiveSupport::TestCase
     ).level_source_id
   end
 
-  test 'normalize_gender' do
-    assert_equal 'f', User.normalize_gender('f')
-    assert_equal 'm', User.normalize_gender('m')
-    assert_equal 'n', User.normalize_gender('n')
-    assert_equal 'o', User.normalize_gender('o')
-
-    assert_equal 'f', User.normalize_gender('F')
-    assert_equal 'm', User.normalize_gender('M')
-    assert_equal 'n', User.normalize_gender('N')
-    assert_equal 'o', User.normalize_gender('O')
-
-    assert_equal 'f', User.normalize_gender('Female')
-    assert_equal 'm', User.normalize_gender('Male')
-    assert_equal 'n', User.normalize_gender('NonBinary')
-    assert_equal 'o', User.normalize_gender('NotListed')
-
-    assert_equal 'f', User.normalize_gender('female')
-    assert_equal 'm', User.normalize_gender('male')
-    assert_equal 'n', User.normalize_gender('non-binary')
-    assert_equal 'o', User.normalize_gender('notlisted')
-
-    assert_nil User.normalize_gender('some nonsense')
-    assert_nil User.normalize_gender('')
-    assert_nil User.normalize_gender(nil)
-  end
-
   test 'can create user with same name as deleted user' do
     create(:user, :deleted, name: 'Same Name')
     assert_creates(User) do
@@ -2711,71 +2654,6 @@ class UserTest < ActiveSupport::TestCase
   test 'account_age_days should return days since account creation' do
     student = create :student, created_at: DateTime.now - 10
     assert student.account_age_days == 10
-  end
-
-  def mock_geocoder_result(result)
-    mock_us_object = OpenStruct.new(country_code: result)
-    Geocoder.stubs(:search).returns([mock_us_object])
-  end
-
-  test 'do not show race interstitial to teacher' do
-    mock_geocoder_result('US')
-    teacher = create :teacher, created_at: DateTime.now - 8
-    refute teacher.show_race_interstitial?('ignored_ip')
-  end
-
-  test 'do not show race interstitial to user accounts under 13' do
-    mock_geocoder_result('US')
-    student = User.create(@good_data_young)
-    student.created_at = DateTime.now - 8
-    refute student.show_race_interstitial?('ignored_ip')
-  end
-
-  test 'do not show race interstitial to user accounts less than one week old' do
-    mock_geocoder_result('US')
-    student = create :student, created_at: DateTime.now - 3
-    refute student.show_race_interstitial?('ignored_ip')
-  end
-
-  test 'do not show race interstitial to user accounts that have already entered race information' do
-    mock_geocoder_result('US')
-    student = create :student, created_at: DateTime.now - 8
-    student.update_columns(races: 'white,black')
-    refute student.show_race_interstitial?('ignored_ip')
-  end
-
-  test 'do not show race interstitial to user accounts that have closed the dialog already' do
-    mock_geocoder_result('US')
-    student = create :student, created_at: DateTime.now - 8
-    student.update_columns(races: 'closed_dialog')
-    refute student.show_race_interstitial?('ignored_ip')
-  end
-
-  test 'do not show race interstitial if IP address is nil' do
-    mock_geocoder_result('US')
-    student = create :student, created_at: DateTime.now - 8
-    mock_ip = nil
-    refute RaceInterstitialHelper.show_race_interstitial?(student, mock_ip)
-  end
-
-  test 'do not show race interstitial to non-US users' do
-    mock_geocoder_result('CA')
-    student = create :student, created_at: DateTime.now - 8
-    unused_ip = 'ignored'
-    refute RaceInterstitialHelper.show_race_interstitial?(student, unused_ip)
-  end
-
-  test 'show race interstitial to US users' do
-    mock_geocoder_result('US')
-    student = create :student, created_at: DateTime.now - 8
-    unused_ip = 'ignored'
-    assert RaceInterstitialHelper.show_race_interstitial?(student, unused_ip)
-  end
-
-  test 'show race interstitial for student over 13 with account more than 1 week old' do
-    mock_geocoder_result('US')
-    student = create :student, created_at: DateTime.now - 8
-    assert student.show_race_interstitial?('ignored_ip')
   end
 
   test 'new users must have valid email addresses' do

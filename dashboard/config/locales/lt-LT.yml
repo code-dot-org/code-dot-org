@@ -32,6 +32,7 @@ lt:
         edit_header: Keisti paskyros duomenis
         error:
           future: negali būti ateitis
+  beta: beta
   hello: Sveikas, pasauli
   welcome_back: Sveiki sugrįžę, %{name}
   your_professional_learning_plan: Tavo Profesionalus Mokymosi planas

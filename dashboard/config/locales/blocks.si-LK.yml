@@ -149,11 +149,6 @@ si:
           CONDITION:
             '"when"': විට
             '"while"': while
-      gamelab_debugSprite:
-        options:
-          VAL:
-            'true': සත්‍ය
-            'false': 'false'
       gamelab_getProp:
         options:
           PROPERTY:
@@ -217,13 +212,6 @@ si:
             '"left"': වම
             '"right"': දකුණ
             '"space"': අභ්‍යාවකාශය
-      gamelab_whenPressedAndReleased:
-        options:
-          DIR:
-            "'up'": උඩ
-            "'down'": යට
-            "'left'": වම
-            "'right'": දකුණ
       gamelab_whileKey:
         options:
           KEY:

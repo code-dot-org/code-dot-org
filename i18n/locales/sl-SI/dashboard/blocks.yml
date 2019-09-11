@@ -170,11 +170,6 @@ sl:
           CONDITION:
             '"when"': ko
             '"while"': dokler
-      gamelab_debugSprite:
-        options:
-          VAL:
-            'true': velja
-            'false': ne velja
       gamelab_getProp:
         options:
           PROPERTY:
@@ -241,13 +236,6 @@ sl:
             '"left"': levo
             '"right"': desno
             '"space"': vesolje
-      gamelab_whenPressedAndReleased:
-        options:
-          DIR:
-            "'up'": gor
-            "'down'": dol
-            "'left'": levo
-            "'right'": desno
       gamelab_whileKey:
         options:
           KEY:

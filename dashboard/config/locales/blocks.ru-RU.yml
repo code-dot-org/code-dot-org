@@ -603,11 +603,6 @@ ru:
             '"while"': пока
       gamelab_comment:
         text: 'комментарий: {COMMENT}'
-      gamelab_debugSprite:
-        options:
-          VAL:
-            'true': истина
-            'false': ложь
       gamelab_destroy:
         text: удалить {THIS}
       gamelab_getProp:
@@ -684,7 +679,6 @@ ru:
             '"x"': позиция абсцисс (x)
             '"y"': позиция ординат (y)
             '"direction"': направление движения
-            '"tint"': оттенок
       gamelab_setSizes:
         text: установить {SPRITE} {PROPERTY} на {N}%
         options:
@@ -717,13 +711,6 @@ ru:
             '"space"': космос
       gamelab_whenLeftArrow:
         text: когда стрелка влево нажата
-      gamelab_whenPressedAndReleased:
-        options:
-          DIR:
-            "'up'": вверх
-            "'down'": вниз
-            "'left'": влево
-            "'right'": вправо
       gamelab_whenRightArrow:
         text: когда стрелка вправо нажата
       gamelab_whenUpArrow:

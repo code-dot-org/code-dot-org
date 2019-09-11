@@ -32,6 +32,7 @@ cs:
         finish_sign_up_subheader_provider: 'Vyplňte následující informace pro vytvoření účtu Code.org prostřednictvím poskytovatele <strong>%{provider}</strong> pro <strong>%{email}</strong>.'
         error:
           future: nemůže být v budoucnosti
+  beta: "beta"
   hello: "Ahoj světe"
   welcome_back: "Vítej zpět, %{name}"
   your_professional_learning_plan: "Tvůj profesionální vzdělávací plán"

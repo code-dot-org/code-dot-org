@@ -37,6 +37,7 @@ pl:
           tworzenie konta Code.org z <strong>%{provider}</strong> <strong>%{email}</strong>.
         error:
           future: nie może być w przyszłości
+  beta: beta
   hello: Witaj świecie
   welcome_back: Witaj z powrotem, %{name}
   your_professional_learning_plan: Twój profesjonalny program nauczania

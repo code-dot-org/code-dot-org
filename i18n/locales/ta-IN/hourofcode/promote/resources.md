@@ -4,7 +4,7 @@ layout: wide
 nav: promote_nav
 ---
 
-{{ signup_button }}
+{{signup_button}}
 
 <link rel="stylesheet" type="text/css" href="/css/promote-page.css"></link>
 

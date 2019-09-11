@@ -32,6 +32,7 @@ vi:
         finish_sign_up_subheader_provider: 'Điền thông tin sau để hoàn thành tạo tài khoản Code.org với <strong>%{provider}</strong> cho <strong>%{email}</strong>.'
         error:
           future: không thể trong tương lai
+  beta: "phiên bản thử nghiệm"
   hello: "Xin chào thế giới"
   welcome_back: "Chào mừng trở lại, %{name}"
   your_professional_learning_plan: "Kế hoạch học tập chuyên nghiệp của bạn"

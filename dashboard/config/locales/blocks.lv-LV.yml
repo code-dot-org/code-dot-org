@@ -176,11 +176,6 @@ lv:
           CONDITION:
             '"when"': kad
             '"while"': kamēr
-      gamelab_debugSprite:
-        options:
-          VAL:
-            'true': patiess
-            'false': nepatiess
       gamelab_getProp:
         options:
           PROPERTY:
@@ -250,13 +245,6 @@ lv:
             '"left"': pa kreisi
             '"right"': pa labi
             '"space"': telpa
-      gamelab_whenPressedAndReleased:
-        options:
-          DIR:
-            "'up'": uz augšu
-            "'down'": uz leju
-            "'left'": pa kreisi
-            "'right'": pa labi
       gamelab_whileKey:
         options:
           KEY:

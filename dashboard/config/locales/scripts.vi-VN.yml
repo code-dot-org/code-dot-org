@@ -5751,7 +5751,41 @@ vi:
           stages:
             Deeper Learning Overview:
               name: Tổng quan học tập sâu
+        dlp19-csd-mod-w1:
+          stages:
+            Deeper Learning Overview:
+              name: Tổng quan học tập sâu
         dlp19-csd-mod-w2:
           stages:
             new stage:
               name: giai đoạn mới
+            Deeper Learning Overview:
+              name: Tổng quan học tập sâu
+        dlp19-csp-mod-w1:
+          stages:
+            Deeper Learning Overview:
+              name: Tổng quan học tập sâu
+        dlp19-csp-mod-w2:
+          stages:
+            Deeper Learning Overview:
+              name: Tổng quan học tập sâu
+        csd4-pilot:
+          stages:
+            What is a Computer?:
+              name: Máy tính là gì?
+        csp2-pilot:
+          stages:
+            new stage:
+              name: giai đoạn mới
+            Routers and Redundancy:
+              name: Bộ định tuyến và dự phòng
+        peru-2019:
+          stages:
+            new stage:
+              name: giai đoạn mới
+            Introduction:
+              name: Giới thiệu
+            Nested Loops:
+              name: Vòng lặp lồng nhau
+            Nested Loops Project in Frozen:
+              name: Dự án vòng lặp lồng nhau trong Frozen

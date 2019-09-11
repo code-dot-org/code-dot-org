@@ -2434,3 +2434,11 @@ nn:
               name: Fart
             Functions:
               name: Funksjonar
+            Sprite Properties:
+              name: Eigenskapar ved Sprite
+        peru-2019:
+          stages:
+            Introduction:
+              name: Introduksjon
+            Nested Loops:
+              name: Løkker i løkke
