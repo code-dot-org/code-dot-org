@@ -48,6 +48,7 @@ class Ability
       Pd::InternationalOptIn,
       :maker_discount
     ]
+    can :get_rubric, Level
     cannot :index, Level
 
     if user.persisted?
