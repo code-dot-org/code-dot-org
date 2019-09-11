@@ -43,6 +43,16 @@ const POSITION_VALUES = [
   [commonMsg.positionBottomRight(), Position.BOTTOMRIGHT.toString()]
 ];
 
+const MOVE_DIRECTION_VALUES = [
+  [msg.moveForward(), 'moveForward'],
+  [msg.moveBackward(), 'moveBackward']
+];
+
+const MOVE_DIRECTION_VALUES_EXTENDED = [
+  [msg.forward(), 'moveForward'],
+  [msg.backward(), 'moveBackward']
+];
+
 // Install extensions to Blockly's language and JavaScript generator.
 exports.install = function(blockly, blockInstallOptions) {
   var skin = blockInstallOptions.skin;
@@ -686,7 +696,9 @@ exports.install = function(blockly, blockInstallOptions) {
         msg.moveDirectionByPixels(),
         () => {
           this.appendDummyInput().appendTitle(
-            new blockly.FieldDropdown(blockly.Blocks.draw_move.DIRECTIONS),
+            new blockly.FieldDropdown(
+              blockly.Blocks.draw_move.DIRECTIONS_EXTENDED
+            ),
             'DIR'
           );
         },
@@ -700,10 +712,8 @@ exports.install = function(blockly, blockInstallOptions) {
     }
   };
 
-  blockly.Blocks.draw_move.DIRECTIONS = [
-    [msg.forward(), 'moveForward'],
-    [msg.backward(), 'moveBackward']
-  ];
+  blockly.Blocks.draw_move.DIRECTIONS = MOVE_DIRECTION_VALUES;
+  blockly.Blocks.draw_move.DIRECTIONS_EXTENDED = MOVE_DIRECTION_VALUES_EXTENDED;
 
   generator.draw_move = function() {
     // Generate JavaScript for moving forward or backwards.
