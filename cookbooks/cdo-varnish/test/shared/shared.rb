@@ -251,7 +251,7 @@ module HttpCacheTest
       end
 
       it 'Handles Accept-Language behaviors' do
-        skip 'Not implemented in Rack yet' unless environment == 'integration'
+        skip 'Not implemented in Rack yet' unless environment.to_s == 'integration'
         # URL contains whitelisted 'Accept-Language' header
         url = build_url 's/starwars/stage/1/puzzle'
         text_en = 'Hello World!'
