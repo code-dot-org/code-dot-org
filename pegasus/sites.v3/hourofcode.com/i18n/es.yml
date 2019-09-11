@@ -27,7 +27,7 @@
   cookie_banner_accept: 'I agree'
   front_header_banner: 'Únete al mayor evento educativo de la historia, %{campaign_date}'
   front_intro_default: 'La Hora del Código es un movimiento global, que llega a decenas de millones de estudiantes en más de 180 países. Cualquier persona, en cualquier lugar del mundo puede organizar una Hora del Código. Los tutoriales, de una hora de duración, están disponibles en más de 30 idiomas. No se necesita experiencia. <strong>Para edades entre 4 y 104 años.</strong>'
-  front_intro_default_2: 'A global movement in 180+ countries.'
+  front_intro_default_2: 'Un movimiento global en más de 180 países.'
   front_watch_video: 'Ver el vídeo 2015'
   front_watch_regular_video: 'Ver el vídeo'
   front_volunteers: 'Se necesitan Técnicos voluntarios'

@@ -1223,37 +1223,6 @@ class UserTest < ActiveSupport::TestCase
     assert @student.urm
   end
 
-  test 'urm_from_races with nil' do
-    @student.update!(races: nil)
-    assert_nil @student.urm_from_races
-  end
-
-  test 'urm_from_races with empty string' do
-    @student.update!(races: '')
-    assert_nil @student.urm_from_races
-  end
-
-  test 'urm_from_races with non-answer responses' do
-    %w(opt_out nonsense closed_dialog).each do |response|
-      @student.update!(races: response)
-      assert_nil @student.urm_from_races
-    end
-  end
-
-  test 'urm_from_races with urm responses' do
-    ['white,black', 'hispanic,hawaiian', 'american_indian'].each do |response|
-      @student.update!(races: response)
-      assert @student.urm_from_races
-    end
-  end
-
-  test 'urm_from_races with non-urm response' do
-    ['white', 'white,asian', 'asian'].each do |response|
-      @student.update!(races: response)
-      refute @student.urm_from_races
-    end
-  end
-
   test 'under 13' do
     user = create :user
     refute user.under_13?
@@ -2513,32 +2482,6 @@ class UserTest < ActiveSupport::TestCase
       script_id: script_level.script_id,
       level_id: script_level.level_id
     ).level_source_id
-  end
-
-  test 'normalize_gender' do
-    assert_equal 'f', User.normalize_gender('f')
-    assert_equal 'm', User.normalize_gender('m')
-    assert_equal 'n', User.normalize_gender('n')
-    assert_equal 'o', User.normalize_gender('o')
-
-    assert_equal 'f', User.normalize_gender('F')
-    assert_equal 'm', User.normalize_gender('M')
-    assert_equal 'n', User.normalize_gender('N')
-    assert_equal 'o', User.normalize_gender('O')
-
-    assert_equal 'f', User.normalize_gender('Female')
-    assert_equal 'm', User.normalize_gender('Male')
-    assert_equal 'n', User.normalize_gender('NonBinary')
-    assert_equal 'o', User.normalize_gender('NotListed')
-
-    assert_equal 'f', User.normalize_gender('female')
-    assert_equal 'm', User.normalize_gender('male')
-    assert_equal 'n', User.normalize_gender('non-binary')
-    assert_equal 'o', User.normalize_gender('notlisted')
-
-    assert_nil User.normalize_gender('some nonsense')
-    assert_nil User.normalize_gender('')
-    assert_nil User.normalize_gender(nil)
   end
 
   test 'can create user with same name as deleted user' do
