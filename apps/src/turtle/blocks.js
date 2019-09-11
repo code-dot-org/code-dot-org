@@ -108,7 +108,7 @@ exports.install = function(blockly, blockInstallOptions) {
     init: function() {
       this.setHSV(184, 1.0, 0.74);
       this.appendDummyInput().appendTitle(
-        new blockly.FieldDropdown(blockly.Blocks.draw_move.DIRECTIONS),
+        new blockly.FieldDropdown(MOVE_DIRECTION_VALUES),
         'DIR'
       );
       this.appendDummyInput()
@@ -133,7 +133,7 @@ exports.install = function(blockly, blockInstallOptions) {
     init: function() {
       this.setHSV(184, 1.0, 0.74);
       this.appendDummyInput().appendTitle(
-        new blockly.FieldDropdown(blockly.Blocks.draw_move.DIRECTIONS),
+        new blockly.FieldDropdown(MOVE_DIRECTION_VALUES),
         'DIR'
       );
       this.appendDummyInput()
@@ -696,9 +696,7 @@ exports.install = function(blockly, blockInstallOptions) {
         msg.moveDirectionByPixels(),
         () => {
           this.appendDummyInput().appendTitle(
-            new blockly.FieldDropdown(
-              blockly.Blocks.draw_move.DIRECTIONS_EXTENDED
-            ),
+            new blockly.FieldDropdown(MOVE_DIRECTION_VALUES_EXTENDED),
             'DIR'
           );
         },
@@ -711,9 +709,6 @@ exports.install = function(blockly, blockInstallOptions) {
       this.setTooltip(msg.moveTooltip());
     }
   };
-
-  blockly.Blocks.draw_move.DIRECTIONS = MOVE_DIRECTION_VALUES;
-  blockly.Blocks.draw_move.DIRECTIONS_EXTENDED = MOVE_DIRECTION_VALUES_EXTENDED;
 
   generator.draw_move = function() {
     // Generate JavaScript for moving forward or backwards.
