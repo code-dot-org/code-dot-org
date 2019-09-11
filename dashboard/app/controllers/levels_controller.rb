@@ -59,13 +59,39 @@ class LevelsController < ApplicationController
   # GET /levels
   # GET /levels.json
   def index
+    # Define search filter fields
+    @search_fields = [
+      {
+        name: :name,
+        description: 'Filter by name:',
+        type: 'text'
+      },
+      {
+        name: :level_type,
+        description: 'By type:',
+        type: 'select',
+        options: [
+          ['All types', ''],
+          *LEVEL_CLASSES.map {|x| [x.name, x.name]}.sort_by {|a| a[0]}
+        ]
+      },
+      {
+        name: :script_id,
+        description: 'By script:',
+        type: 'select',
+        options: [
+          ['All scripts', ''],
+          *Script.valid_scripts(current_user).pluck(:name, :id).sort_by {|a| a[0]}
+        ]
+      }
+    ]
+
+    # Gather filtered search results
     @levels = @levels.order(updated_at: :desc)
     @levels = @levels.where('levels.name LIKE ?', "%#{params[:name]}%") if params[:name]
     @levels = @levels.where('levels.type = ?', params[:level_type]) if params[:level_type].present?
     @levels = @levels.joins(:script_levels).where('script_levels.script_id = ?', params[:script_id]) if params[:script_id].present?
     @levels = @levels.page(params[:page]).per(LEVELS_PER_PAGE)
-    @level_types = LEVEL_CLASSES.map(&:name)
-    @scripts = Script.valid_scripts(current_user).pluck(:name, :id).sort_by {|a| a[0]}
   end
 
   # GET /levels/1
