@@ -221,11 +221,11 @@ Dashboard::Application.routes.draw do
   resources :libraries
 
   resources :levels do
-    get 'edit_blocks/:type', to: 'levels#edit_blocks', as: 'edit_blocks'
     post 'update_blocks/:type', to: 'levels#update_blocks', as: 'update_blocks'
     member do
       get 'get_rubric'
       get 'embed_level'
+      get 'edit_blocks/:type', to: 'levels#edit_blocks', as: 'edit_blocks'
       post 'update_properties'
       post 'clone'
     end

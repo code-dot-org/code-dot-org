@@ -33,7 +33,7 @@
     ], selected: @level.auto_run)
   = selector
 .field
-  = link_to 'Edit Predraw Blocks', level_edit_blocks_path(@level, :predraw_blocks) unless @level.new_record?
+  = link_to 'Edit Predraw Blocks', edit_blocks_level_path(@level, :predraw_blocks) unless @level.new_record?
   = render partial: 'levels/editors/collapsible_block_editor', locals: {f: f, xml_id: 'predraw'}
   :javascript
     levelbuilder.initializeCodeMirror('level_predraw_blocks', '#{@level.uses_droplet? ? 'javascript' : 'xml'}');
