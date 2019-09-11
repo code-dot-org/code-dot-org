@@ -19,7 +19,7 @@ class LevelsControllerTest < ActionController::TestCase
     enable_level_source_image_s3_urls
 
     @default_update_blocks_params = {
-      level_id: @level.id,
+      id: @level.id,
       game_id: @level.game.id,
       type: 'toolbox_blocks',
       program: @program,
@@ -442,11 +442,10 @@ class LevelsControllerTest < ActionController::TestCase
 
   test "should not edit level if not custom level" do
     level = Script.twenty_hour_script.levels.first
-    can_edit = Ability.new(@levelbuilder).can? :edit, level
-    assert_equal false, can_edit
+    refute Ability.new(@levelbuilder).can? :edit, level
 
     post :update_blocks, params: @default_update_blocks_params.merge(
-      level_id: level.id,
+      id: level.id,
       game_id: level.game.id,
     )
     assert_response :forbidden

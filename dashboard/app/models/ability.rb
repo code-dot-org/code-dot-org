@@ -56,7 +56,7 @@ class Ability
     end
 
     # If you can update a level, you can also do these things:
-    can [:edit_blocks, :update_properties], Level do |level|
+    can [:edit_blocks, :update_blocks, :update_properties], Level do |level|
       can? :update, level
     end
 

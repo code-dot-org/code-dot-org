@@ -9,7 +9,7 @@ class LevelsController < ApplicationController
   include ActiveSupport::Inflector
   before_action :authenticate_user!, except: [:show, :embed_level, :get_rubric]
   before_action :require_levelbuilder_mode, except: [:show, :index, :embed_level, :get_rubric]
-  load_and_authorize_resource except: [:create, :update_blocks]
+  load_and_authorize_resource except: [:create]
 
   before_action :set_level, only: [:show, :edit, :update, :destroy]
 
@@ -132,7 +132,7 @@ class LevelsController < ApplicationController
     )
     view_options(full_width: true)
     @game = @level.game
-    @callback = level_update_blocks_path @level, type
+    @callback = update_blocks_level_path @level, type
 
     # Ensure the simulation ends right away when the user clicks 'Run' while editing blocks
     if @level.is_a? Studio
@@ -148,9 +148,10 @@ class LevelsController < ApplicationController
     render :show
   end
 
+  # POST /levels/:id/update_blocks/:type
+  # Change a blockset in the level configuration
   def update_blocks
-    @level = Level.find(params[:level_id])
-    authorize! :update, @level
+    return head :forbidden unless @level.custom?
     blocks_xml = params[:program]
     type = params[:type]
     set_solution_image_url(@level) if type == 'solution_blocks'
