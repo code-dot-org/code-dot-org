@@ -365,7 +365,7 @@ class LevelsControllerTest < ActionController::TestCase
 
   test "should update App Lab starter code and starter HTML" do
     post :update_properties, params: {
-      level_id: create(:applab).id,
+      id: create(:applab).id,
     }, body: {
       start_html: '<h1>foo</h1>',
       start_blocks: 'console.log("hello world");',
@@ -375,6 +375,18 @@ class LevelsControllerTest < ActionController::TestCase
     level = assigns(:level)
     assert_equal '<h1>foo</h1>', level.properties['start_html']
     assert_equal 'console.log("hello world");', level.properties['start_blocks']
+  end
+
+  test "non-levelbuilder cannot update_properties" do
+    sign_out @levelbuilder
+    sign_in create(:teacher)
+    post :update_properties, params: {
+      id: create(:applab).id,
+    }, body: {
+      start_html: '<h1>foo</h1>'
+    }.to_json
+
+    assert_response :forbidden
   end
 
   test "should update solution image when updating solution blocks" do

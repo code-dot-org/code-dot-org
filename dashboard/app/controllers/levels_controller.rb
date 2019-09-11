@@ -163,9 +163,6 @@ class LevelsController < ApplicationController
   end
 
   def update_properties
-    @level = Level.find(params[:level_id])
-    authorize! :update, @level
-
     changes = JSON.parse(request.body.read)
     changes.each do |key, value|
       @level.properties[key] = value
