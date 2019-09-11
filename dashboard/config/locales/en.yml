@@ -1157,7 +1157,7 @@ en:
       body: 'Thanks for your interest in Code.org’s Professional Learning Program! You’re currently signed into a student account. Please either create a teacher account or <a href="%{user_settings}">go to your user settings</a> to upgrade your account from student to teacher.'
       more: 'If you’d like more information about the program before you start your application, please check out the <a href="%{pl_overview}">Professional Learning Program overview</a>.'
     no_teacher_email:
-      body: 'Your account doesn’t have an email address. Please <a href="%{user_registration}">visit your account settings</a> to add your email address before completing this form.'
+      body_markdown: 'Your account doesn’t have an email address. Please [visit your account settings](%{user_registration}) to add your email address before completing this form.'
   courses_category: 'Full Courses'
   cookie_banner:
     message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
