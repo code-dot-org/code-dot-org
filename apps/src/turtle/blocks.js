@@ -43,6 +43,16 @@ const POSITION_VALUES = [
   [commonMsg.positionBottomRight(), Position.BOTTOMRIGHT.toString()]
 ];
 
+const JUMP_BY_DIRECTION_VALUES = [
+  [msg.jumpForward(), 'jumpForward'],
+  [msg.jumpBackward(), 'jumpBackward']
+];
+
+const JUMP_DIRECTION_VALUES = [
+  [msg.forward(), 'jumpForward'],
+  [msg.backward(), 'jumpBackward']
+];
+
 // Install extensions to Blockly's language and JavaScript generator.
 exports.install = function(blockly, blockInstallOptions) {
   var skin = blockInstallOptions.skin;
@@ -722,10 +732,10 @@ exports.install = function(blockly, blockInstallOptions) {
     init: function() {
       this.setHSV(184, 1.0, 0.74);
       this.interpolateMsg(
-        msg.jumpToDirectionByPixels(),
+        msg.jumpByDirection(),
         () => {
           this.appendDummyInput().appendTitle(
-            new blockly.FieldDropdown(blockly.Blocks.jump.DIRECTIONS),
+            new blockly.FieldDropdown(JUMP_DIRECTION_VALUES),
             'DIR'
           );
         },
@@ -1004,11 +1014,6 @@ exports.install = function(blockly, blockInstallOptions) {
 
   SimpleMove.generateBlocksForAllDirections();
 
-  blockly.Blocks.jump.DIRECTIONS = [
-    [msg.forward(), 'jumpForward'],
-    [msg.backward(), 'jumpBackward']
-  ];
-
   generator.jump = function() {
     // Generate JavaScript for jumping forward or backwards.
     var value =
@@ -1031,7 +1036,7 @@ exports.install = function(blockly, blockInstallOptions) {
     init: function() {
       this.setHSV(184, 1.0, 0.74);
       this.appendDummyInput().appendTitle(
-        new blockly.FieldDropdown(blockly.Blocks.jump.DIRECTIONS),
+        new blockly.FieldDropdown(JUMP_BY_DIRECTION_VALUES),
         'DIR'
       );
       this.appendDummyInput()
@@ -1057,7 +1062,7 @@ exports.install = function(blockly, blockInstallOptions) {
     init: function() {
       this.setHSV(184, 1.0, 0.74);
       this.appendDummyInput().appendTitle(
-        new blockly.FieldDropdown(blockly.Blocks.jump.DIRECTIONS),
+        new blockly.FieldDropdown(JUMP_BY_DIRECTION_VALUES),
         'DIR'
       );
       this.appendDummyInput()
