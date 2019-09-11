@@ -179,8 +179,6 @@ class ScriptLevelsController < ApplicationController
   def stage_extras
     authorize! :read, ScriptLevel
 
-    @show_stage_extras_warning = current_user&.teacher? && !current_user&.sections&.all?(&:stage_extras)
-
     if current_user&.teacher?
       if params[:section_id]
         @section = current_user.sections.find_by(id: params[:section_id])
@@ -190,6 +188,7 @@ class ScriptLevelsController < ApplicationController
         @section = current_user.sections[0]
         @user = @section&.students&.find_by(id: params[:user_id])
       end
+      @show_stage_extras_warning = !@section.stage_extras
     end
 
     # Explicitly return 404 here so that we don't get a 5xx in get_from_cache.
