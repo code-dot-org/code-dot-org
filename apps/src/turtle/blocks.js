@@ -53,6 +53,16 @@ const POSITION_VALUES = [
   [commonMsg.positionBottomRight(), Position.BOTTOMRIGHT.toString()]
 ];
 
+const MOVE_BY_DIRECTION_VALUES = [
+  [msg.moveForward(), 'moveForward'],
+  [msg.moveBackward(), 'moveBackward']
+];
+
+const DIRECTION_VALUES = [
+  [msg.forward(), 'moveForward'],
+  [msg.backward(), 'moveBackward']
+];
+
 // Install extensions to Blockly's language and JavaScript generator.
 exports.install = function(blockly, blockInstallOptions) {
   var skin = blockInstallOptions.skin;
@@ -108,7 +118,7 @@ exports.install = function(blockly, blockInstallOptions) {
     init: function() {
       this.setHSV(184, 1.0, 0.74);
       this.appendDummyInput().appendTitle(
-        new blockly.FieldDropdown(blockly.Blocks.draw_move.DIRECTIONS),
+        new blockly.FieldDropdown(MOVE_BY_DIRECTION_VALUES),
         'DIR'
       );
       this.appendDummyInput()
@@ -133,7 +143,7 @@ exports.install = function(blockly, blockInstallOptions) {
     init: function() {
       this.setHSV(184, 1.0, 0.74);
       this.appendDummyInput().appendTitle(
-        new blockly.FieldDropdown(blockly.Blocks.draw_move.DIRECTIONS),
+        new blockly.FieldDropdown(MOVE_BY_DIRECTION_VALUES),
         'DIR'
       );
       this.appendDummyInput()
@@ -692,24 +702,23 @@ exports.install = function(blockly, blockInstallOptions) {
     helpUrl: '',
     init: function() {
       this.setHSV(184, 1.0, 0.74);
-      this.appendValueInput('VALUE')
-        .setCheck(blockly.BlockValueType.NUMBER)
-        .appendTitle(
-          new blockly.FieldDropdown(blockly.Blocks.draw_move.DIRECTIONS),
-          'DIR'
-        );
-      this.appendDummyInput().appendTitle(msg.dots());
+      this.interpolateMsg(
+        msg.moveDirectionByPixels(),
+        () => {
+          this.appendDummyInput().appendTitle(
+            new blockly.FieldDropdown(DIRECTION_VALUES),
+            'DIR'
+          );
+        },
+        ['VALUE', 'Number', blockly.ALIGN_RIGHT],
+        blockly.ALIGN_RIGHT
+      );
       this.setInputsInline(true);
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip(msg.moveTooltip());
     }
   };
-
-  blockly.Blocks.draw_move.DIRECTIONS = [
-    [msg.moveForward(), 'moveForward'],
-    [msg.moveBackward(), 'moveBackward']
-  ];
 
   generator.draw_move = function() {
     // Generate JavaScript for moving forward or backwards.
