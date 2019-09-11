@@ -19,7 +19,7 @@ class LevelsControllerTest < ActionController::TestCase
     enable_level_source_image_s3_urls
 
     @default_update_blocks_params = {
-      level_id: @level.id,
+      id: @level.id,
       game_id: @level.game.id,
       type: 'toolbox_blocks',
       program: @program,
@@ -27,15 +27,8 @@ class LevelsControllerTest < ActionController::TestCase
   end
 
   test "should get rubric" do
-    level = create(:level,
-      mini_rubric: 'true',
-      rubric_key_concept: 'This is the key concept',
-      rubric_performance_level_1: 'This is great',
-      rubric_performance_level_2: 'This is good',
-      rubric_performance_level_3: 'This is okay',
-      rubric_performance_level_4: 'This is bad'
-    )
-    get :get_rubric, params: {level_id: level.id}
+    level = create_level_with_rubric
+    get :get_rubric, params: {id: level.id}
     assert_equal JSON.parse(@response.body), {
       "keyConcept" => "This is the key concept",
       "performanceLevel1" => "This is great",
@@ -43,6 +36,37 @@ class LevelsControllerTest < ActionController::TestCase
       "performanceLevel3" => "This is okay",
       "performanceLevel4" => "This is bad"
     }
+  end
+
+  test "anonymous user can get_rubric" do
+    sign_out @levelbuilder
+    level = create_level_with_rubric
+    get :get_rubric, params: {id: level.id}
+    assert_equal JSON.parse(@response.body), {
+      "keyConcept" => "This is the key concept",
+      "performanceLevel1" => "This is great",
+      "performanceLevel2" => "This is good",
+      "performanceLevel3" => "This is okay",
+      "performanceLevel4" => "This is bad"
+    }
+  end
+
+  test "empty success response for get_rubric on rubricless level" do
+    level = create :level
+    get :get_rubric, params: {id: level.id}
+    assert_response :no_content
+    assert_equal '', @response.body
+  end
+
+  def create_level_with_rubric
+    create(:level,
+      mini_rubric: 'true',
+      rubric_key_concept: 'This is the key concept',
+      rubric_performance_level_1: 'This is great',
+      rubric_performance_level_2: 'This is good',
+      rubric_performance_level_3: 'This is okay',
+      rubric_performance_level_4: 'This is bad'
+    )
   end
 
   test "should get index" do
@@ -341,7 +365,7 @@ class LevelsControllerTest < ActionController::TestCase
 
   test "should update App Lab starter code and starter HTML" do
     post :update_properties, params: {
-      level_id: create(:applab).id,
+      id: create(:applab).id,
     }, body: {
       start_html: '<h1>foo</h1>',
       start_blocks: 'console.log("hello world");',
@@ -351,6 +375,18 @@ class LevelsControllerTest < ActionController::TestCase
     level = assigns(:level)
     assert_equal '<h1>foo</h1>', level.properties['start_html']
     assert_equal 'console.log("hello world");', level.properties['start_blocks']
+  end
+
+  test "non-levelbuilder cannot update_properties" do
+    sign_out @levelbuilder
+    sign_in create(:teacher)
+    post :update_properties, params: {
+      id: create(:applab).id,
+    }, body: {
+      start_html: '<h1>foo</h1>'
+    }.to_json
+
+    assert_response :forbidden
   end
 
   test "should update solution image when updating solution blocks" do
@@ -406,11 +442,10 @@ class LevelsControllerTest < ActionController::TestCase
 
   test "should not edit level if not custom level" do
     level = Script.twenty_hour_script.levels.first
-    can_edit = Ability.new(@levelbuilder).can? :edit, level
-    assert_equal false, can_edit
+    refute Ability.new(@levelbuilder).can? :edit, level
 
     post :update_blocks, params: @default_update_blocks_params.merge(
-      level_id: level.id,
+      id: level.id,
       game_id: level.game.id,
     )
     assert_response :forbidden
@@ -453,7 +488,7 @@ class LevelsControllerTest < ActionController::TestCase
 
   test "should get edit blocks" do
     @level.update(toolbox_blocks: @program)
-    get :edit_blocks, params: {level_id: @level.id, type: 'toolbox_blocks'}
+    get :edit_blocks, params: {id: @level.id, type: 'toolbox_blocks'}
     assert_equal @program, assigns[:level_view_options_map][@level.id][:start_blocks]
   end
 
@@ -827,7 +862,7 @@ class LevelsControllerTest < ActionController::TestCase
     level = create :artist
     sign_out @levelbuilder
 
-    get :embed_level, params: {level_id: level}
+    get :embed_level, params: {id: level}
     assert_response :success
   end
 
