@@ -55,6 +55,11 @@ class Ability
       can? :read, level
     end
 
+    # If you can update a level, you can also do these things:
+    can [:update_properties], Level do |level|
+      can? :update, level
+    end
+
     if user.persisted?
       can :manage, user
 
