@@ -9,7 +9,7 @@ class LevelsController < ApplicationController
   include ActiveSupport::Inflector
   before_action :authenticate_user!, except: [:show, :embed_level, :get_rubric]
   before_action :require_levelbuilder_mode, except: [:show, :index, :embed_level, :get_rubric]
-  load_and_authorize_resource except: [:create, :update_blocks, :edit_blocks]
+  load_and_authorize_resource except: [:create, :update_blocks]
 
   before_action :set_level, only: [:show, :edit, :update, :destroy]
 
@@ -99,11 +99,10 @@ class LevelsController < ApplicationController
     }
   end
 
+  # GET /levels/:id/edit_blocks/:type
   # Action for using blockly workspace as a toolbox/startblock editor.
   # Expects params[:type] which can be either 'toolbox_blocks' or 'start_blocks'
   def edit_blocks
-    @level = Level.find(params[:level_id])
-    authorize! :edit, @level
     type = params[:type]
     blocks_xml = @level.properties[type].presence || @level[type] || EMPTY_XML
 
