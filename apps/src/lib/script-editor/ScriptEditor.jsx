@@ -69,7 +69,8 @@ export default class ScriptEditor extends React.Component {
     familyName: PropTypes.string,
     versionYear: PropTypes.string,
     scriptFamilies: PropTypes.arrayOf(PropTypes.string).isRequired,
-    versionYearOptions: PropTypes.arrayOf(PropTypes.string).isRequired
+    versionYearOptions: PropTypes.arrayOf(PropTypes.string).isRequired,
+    isLevelbuilder: PropTypes.bool
   };
 
   handleClearProjectWidgetSelectClick = () => {
@@ -152,69 +153,76 @@ export default class ScriptEditor extends React.Component {
           inputStyle={styles.input}
         />
         <h2>Basic Settings</h2>
-        <label>
-          Is this script part of one of the core courses?
-          <select
-            name="curriculum_umbrella"
-            style={styles.dropdown}
-            defaultValue={this.props.curriculumUmbrella}
-            ref={select => (this.curriculumUmbrellaSelect = select)}
-          >
-            <option value="">(None)</option>
-            {CURRICULUM_UMBRELLAS.map(curriculumUmbrella => (
-              <option key={curriculumUmbrella} value={curriculumUmbrella}>
-                {curriculumUmbrella}
-              </option>
-            ))}
-          </select>
-          <p>
-            By selecting one of the above, this script will have a property,
-            curriculum_umbrella, specific to that course regardless of version.
-          </p>
-        </label>
-        <label>
-          Family Name
-          <select
-            name="family_name"
-            defaultValue={this.props.familyName}
-            style={styles.dropdown}
-          >
-            <option value="">(None)</option>
-            {this.props.scriptFamilies.map(familyOption => (
-              <option key={familyOption} value={familyOption}>
-                {familyOption}
-              </option>
-            ))}
-          </select>
-        </label>
-        <label>
-          Version Year
-          <select
-            name="version_year"
-            defaultValue={this.props.versionYear}
-            style={styles.dropdown}
-          >
-            <option value="">(None)</option>
-            {this.props.versionYearOptions.map(year => (
-              <option key={year} value={year}>
-                {year}
-              </option>
-            ))}
-          </select>
-        </label>
-        <label>
-          Visible in Teacher Dashboard
-          <input
-            name="visible_to_teachers"
-            type="checkbox"
-            defaultChecked={!this.props.hidden}
-            style={styles.checkbox}
-          />
-          <p>
-            If checked this script will show up in the dropdown on the Teacher
-            Dashboard, for teachers to assign to students.
-          </p>
-        </label>
+
+        {this.props.isLevelbuilder && (
+          <div>
+            <label>
+              Is this script part of one of the core courses?
+              <select
+                name="curriculum_umbrella"
+                style={styles.dropdown}
+                defaultValue={this.props.curriculumUmbrella}
+                ref={select => (this.curriculumUmbrellaSelect = select)}
+              >
+                <option value="">(None)</option>
+                {CURRICULUM_UMBRELLAS.map(curriculumUmbrella => (
+                  <option key={curriculumUmbrella} value={curriculumUmbrella}>
+                    {curriculumUmbrella}
+                  </option>
+                ))}
+              </select>
+              <p>
+                By selecting one of the above, this script will have a property,
+                curriculum_umbrella, specific to that course regardless of
+                version.
+              </p>
+            </label>
+            <label>
+              Family Name
+              <select
+                name="family_name"
+                defaultValue={this.props.familyName}
+                style={styles.dropdown}
+              >
+                <option value="">(None)</option>
+                {this.props.scriptFamilies.map(familyOption => (
+                  <option key={familyOption} value={familyOption}>
+                    {familyOption}
+                  </option>
+                ))}
+              </select>
+            </label>
+            <label>
+              Version Year
+              <select
+                name="version_year"
+                defaultValue={this.props.versionYear}
+                style={styles.dropdown}
+              >
+                <option value="">(None)</option>
+                {this.props.versionYearOptions.map(year => (
+                  <option key={year} value={year}>
+                    {year}
+                  </option>
+                ))}
+              </select>
+            </label>
+            <label>
+              Visible in Teacher Dashboard
+              <input
+                name="visible_to_teachers"
+                type="checkbox"
+                defaultChecked={!this.props.hidden}
+                style={styles.checkbox}
+              />
+              <p>
+                If checked this script will show up in the dropdown on the
+                Teacher Dashboard, for teachers to assign to students.
+              </p>
+            </label>
+          </div>
+        )}
+
         <label>
           Display project sharing column in Teacher Dashboard
           <input
@@ -314,14 +322,18 @@ export default class ScriptEditor extends React.Component {
             defaultValue={this.props.pilotExperiment}
             style={styles.input}
           />
-          Editor Experiment. If specified, users with this experiment on the
-          levelbuilder machine will be able to edit this script.
-          <input
-            name="editor_experiment"
-            defaultValue={this.props.editorExperiment}
-            style={styles.input}
-          />
         </label>
+        {this.props.isLevelbuilder && (
+          <label>
+            Editor Experiment. If specified, users with this experiment on the
+            levelbuilder machine will be able to edit this script.
+            <input
+              name="editor_experiment"
+              defaultValue={this.props.editorExperiment}
+              style={styles.input}
+            />
+          </label>
+        )}
         <label>
           Curriculum Path
           <input
@@ -330,17 +342,19 @@ export default class ScriptEditor extends React.Component {
             style={styles.input}
           />
         </label>
-        <label>
-          Professional Learning Course. When filled out, the course unit
-          associated with this script will be associated with the course named
-          in this box. If the course unit does not exist, and if the course does
-          not exist it will be created.
-          <input
-            name="professional_learning_course"
-            defaultValue={this.props.professionalLearningCourse}
-            style={styles.input}
-          />
-        </label>
+        {this.props.isLevelbuilder && (
+          <label>
+            Professional Learning Course. When filled out, the course unit
+            associated with this script will be associated with the course named
+            in this box. If the course unit does not exist, and if the course
+            does not exist it will be created.
+            <input
+              name="professional_learning_course"
+              defaultValue={this.props.professionalLearningCourse}
+              style={styles.input}
+            />
+          </label>
+        )}
         <label>
           Peer Reviews to Complete. Currently only supported for professional
           learning courses
