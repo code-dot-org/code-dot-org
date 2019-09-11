@@ -1,4 +1,4 @@
-@eyes
+@eyes @eyes_mobile
 Feature: Looking at hourofcode.com with Applitools Eyes
 
   Background:
