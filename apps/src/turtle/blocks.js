@@ -631,7 +631,7 @@ exports.install = function(blockly, blockInstallOptions) {
     init: function() {
       this.setHSV(322, 0.9, 0.95);
       this.interpolateMsg(
-        blockly.Msg.CONTROLS_FOR_INPUT_FROM_TO_BY,
+        blockly.Msg.CONTROLS_FOR_COUNTER,
         () => {
           this.appendDummyInput().appendTitle(
             new blockly.FieldLabel(msg.loopVariable()),
