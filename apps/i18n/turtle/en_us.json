@@ -1,4 +1,5 @@
 {
+  "backward": "backward",
   "blocksUsed": "Blocks used: %1",
   "branches": "branches",
   "catColour": "Color",
@@ -39,6 +40,7 @@
   "drawLowerWave": "draw lower wave",
   "drawSticker": "draw sticker",
   "drawStickerWithSize": "draw sticker with size",
+  "forward": "forward",
   "heightParameter": "height",
   "hideTurtle": "hide artist",
   "jump": "jump",
@@ -60,6 +62,7 @@
   "loopVariable": "counter",
   "moveBackward": "move backward by",
   "moveEastTooltip": "Moves the artist east.",
+  "moveDirectionByPixels": "move %1 by %2 pixels",
   "moveForward": "move forward by",
   "moveForwardTooltip": "Moves the artist forward.",
   "moveNorthTooltip": "Moves the artist north.",
