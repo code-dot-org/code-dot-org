@@ -9,7 +9,7 @@ class LevelsController < ApplicationController
   include ActiveSupport::Inflector
   before_action :authenticate_user!, except: [:show, :embed_level, :get_rubric]
   before_action :require_levelbuilder_mode, except: [:show, :index, :embed_level, :get_rubric]
-  load_and_authorize_resource except: [:create, :update_blocks, :edit_blocks, :embed_level]
+  load_and_authorize_resource except: [:create, :update_blocks, :edit_blocks]
 
   before_action :set_level, only: [:show, :edit, :update, :destroy]
 
@@ -300,9 +300,9 @@ class LevelsController < ApplicationController
     render(status: :not_acceptable, text: invalid)
   end
 
+  # GET /levels/:id/embed_level
+  # Show level styles for embedding in another page
   def embed_level
-    authorize! :read, :level
-    @level = Level.find(params[:level_id])
     @game = @level.game
     level_view_options(
       @level.id,
