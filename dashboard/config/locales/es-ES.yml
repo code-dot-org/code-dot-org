@@ -144,7 +144,7 @@ es:
     age: Edad
     user_type: "¿Eres estudiante o profesor?"
     submit: Registrarse
-    go_to_account: Eliminar mi cuenta
+    go_to_account: Ir a mi cuenta
     teacher: "¿Eres profesor/a?"
     valid_username: "¡Disponible!"
     invalid_username: El Nombre de usuario debe tener al menos 5 caracteres
