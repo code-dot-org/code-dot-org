@@ -85,11 +85,11 @@ module Pd::SurveyPipeline
             }
           }
         },
-        all_my_workshops: {},
-        facilitators: {},
-        facilitator_averages: {},
-        facilitator_response_counts: {},
-        errors: []
+        # all_my_workshops: {},
+        # facilitators: {},
+        # facilitator_averages: {},
+        # facilitator_response_counts: {},
+        errors: nil
       }
 
       context = {
@@ -99,9 +99,9 @@ module Pd::SurveyPipeline
         current_user: @workshop_admin
       }
 
-      DailySurveyDecorator.process_data context
+      result = DailySurveyDecorator.decorate_single_workshop context
 
-      assert_equal expected_result, context[:decorated_summaries]
+      assert_equal expected_result, result
     end
 
     test 'decorate general survey results' do
@@ -155,11 +155,11 @@ module Pd::SurveyPipeline
             facilitator: {}
           }
         },
-        all_my_workshops: {},
-        facilitators: {},
-        facilitator_averages: {},
-        facilitator_response_counts: {},
-        errors: []
+        # all_my_workshops: {},
+        # facilitators: {},
+        # facilitator_averages: {},
+        # facilitator_response_counts: {},
+        errors: nil
       }
 
       context = {
@@ -169,9 +169,9 @@ module Pd::SurveyPipeline
         current_user: @workshop_admin
       }
 
-      DailySurveyDecorator.process_data context
+      result = DailySurveyDecorator.decorate_single_workshop context
 
-      assert_equal expected_result, context[:decorated_summaries]
+      assert_equal expected_result, result
     end
 
     test 'index questions by form ids and question names' do
