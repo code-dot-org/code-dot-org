@@ -2185,6 +2185,10 @@ class User < ActiveRecord::Base
     )
   end
 
+  def donor_school
+    DonorSchool.where(nces_id: school_info.id).first
+  end
+
   # Called before_destroy.
   # Soft-deletes any projects and other channel-backed progress belonging to
   # this user.  Unfeatures any featured projects belonging to this user.

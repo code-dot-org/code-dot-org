@@ -11,9 +11,8 @@
     - else
       Your free education on Code.org is made possible by:
   -# Logos here
-  - if true # will eventually be if Amazon
+  - if current_user.donor_school.name == "Amazon"
     %p{ style: 'margin-top: 8px;' }
-      -# Learn more will be a link
       Amazon is offering free resources for Code.org classrooms.
       %a{ href: CDO.code_org_url('amazon-future-engineer'), style: 'color: #ffb81d'}
         Learn more
