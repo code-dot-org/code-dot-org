@@ -38,18 +38,15 @@
 = form_tag levels_path, method: :get do
   %table
     %tr
-      %td= label_tag :name, 'Filter by name:'
-      %td= label_tag :level_type, 'By type:'
-      %td= label_tag :script_id, 'By script'
+      - @search_fields.each do |field|
+        %td= label_tag field[:name], field[:description]
       %td
     %tr
-      %td= text_field_tag :name, params[:name], autofocus: true
-
-      - level_type_options = [['All types', '']].concat @level_types.map {|x| [x, x]}
-      %td= select_tag :level_type, options_for_select(level_type_options, params[:level_type])
-
-      - script_options = [['All scripts', '']].concat @scripts
-      %td= select_tag :script_id, options_for_select(script_options, params[:script_id])
+      - @search_fields.each do |field|
+        - if field[:type] == 'text'
+          %td= text_field_tag field[:name], params[field[:name]]
+        - elsif field[:type] == 'select'
+          %td= select_tag field[:name], options_for_select(field[:options], params[field[:name]])
 
       %td= submit_tag "Search"
 
@@ -59,6 +56,8 @@
       %th.controls-column
       %th Name
       %th Type
+      - if Rails.application.config.levelbuilder_mode
+        %th Owner
   %tbody
     - @levels.each do |level|
       %tr
@@ -95,6 +94,10 @@
 
         -# Level type column
         %td= level.class.name
+
+        -# Level owner column (only on levelbuilder)
+        - if Rails.application.config.levelbuilder_mode
+          %td= level.user&.name
 
 = paginate @levels
 %br/

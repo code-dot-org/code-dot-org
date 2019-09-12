@@ -61,7 +61,7 @@ export default class ScriptEditor extends React.Component {
     curriculumPath: PropTypes.string,
     pilotExperiment: PropTypes.string,
     editorExperiment: PropTypes.string,
-    announcements: PropTypes.arrayOf(announcementShape),
+    announcements: PropTypes.arrayOf(announcementShape).isRequired,
     supportedLocales: PropTypes.arrayOf(PropTypes.string),
     locales: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.string)).isRequired,
     projectSharing: PropTypes.bool,
@@ -72,6 +72,15 @@ export default class ScriptEditor extends React.Component {
     versionYearOptions: PropTypes.arrayOf(PropTypes.string).isRequired,
     isLevelbuilder: PropTypes.bool
   };
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      hidden: this.props.hidden,
+      pilotExperiment: this.props.pilotExperiment
+    };
+  }
 
   handleClearProjectWidgetSelectClick = () => {
     $(this.projectWidgetSelect)
@@ -207,22 +216,17 @@ export default class ScriptEditor extends React.Component {
                 ))}
               </select>
             </label>
-            <label>
-              Visible in Teacher Dashboard
-              <input
-                name="visible_to_teachers"
-                type="checkbox"
-                defaultChecked={!this.props.hidden}
-                style={styles.checkbox}
-              />
-              <p>
-                If checked this script will show up in the dropdown on the
-                Teacher Dashboard, for teachers to assign to students.
-              </p>
-            </label>
+            <VisibleInTeacherDashboard
+              checked={!this.state.hidden}
+              disabled={!!this.state.pilotExperiment}
+              onChange={e => this.setState({hidden: !e.target.checked})}
+            />
+            <PilotExperiment
+              value={this.state.pilotExperiment}
+              onChange={e => this.setState({pilotExperiment: e.target.value})}
+            />
           </div>
         )}
-
         <label>
           Display project sharing column in Teacher Dashboard
           <input
@@ -312,16 +316,6 @@ export default class ScriptEditor extends React.Component {
             Check if this course has lesson plans (on Curriculum Builder or in
             PDF form) that we should provide links to.
           </p>
-        </label>
-        <label>
-          Pilot Experiment. If specified, this script will only be accessible to
-          levelbuilders, or to classrooms whose teacher has this user experiment
-          enabled.
-          <input
-            name="pilot_experiment"
-            defaultValue={this.props.pilotExperiment}
-            style={styles.input}
-          />
         </label>
         {this.props.isLevelbuilder && (
           <label>
@@ -506,3 +500,47 @@ export default class ScriptEditor extends React.Component {
     );
   }
 }
+
+const VisibleInTeacherDashboard = props => (
+  <label style={props.disabled ? {opacity: 0.5} : {}}>
+    Visible in Teacher Dashboard
+    <input
+      name="visible_to_teachers"
+      type="checkbox"
+      disabled={props.disabled}
+      checked={props.checked && !props.disabled}
+      onChange={props.onChange}
+      style={styles.checkbox}
+    />
+    <p>
+      If checked this script will show up in the dropdown on the Teacher
+      Dashboard, for teachers to assign to students.
+      {props.disabled && (
+        <em> Disabled because a pilot experiment has been specified below.</em>
+      )}
+    </p>
+  </label>
+);
+VisibleInTeacherDashboard.propTypes = {
+  checked: PropTypes.bool,
+  disabled: PropTypes.bool,
+  onChange: PropTypes.func.isRequired
+};
+
+const PilotExperiment = props => (
+  <label>
+    Pilot Experiment. If specified, this script will only be accessible to
+    levelbuilders, or to classrooms whose teacher has this user experiment
+    enabled.
+    <input
+      name="pilot_experiment"
+      value={props.value || ''}
+      style={styles.input}
+      onChange={props.onChange}
+    />
+  </label>
+);
+PilotExperiment.propTypes = {
+  value: PropTypes.string,
+  onChange: PropTypes.func.isRequired
+};
