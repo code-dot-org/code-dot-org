@@ -15,6 +15,7 @@ ReactDOM.render(
   <Provider store={store}>
     <StageExtras
       stageNumber={config.stageNumber}
+      nextStageNumber={config.nextStageNumber}
       nextLevelPath={config.nextLevelPath}
       bonusLevels={config.bonusLevels}
       showProjectWidget={showProjectWidget}
