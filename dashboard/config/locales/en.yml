@@ -104,8 +104,8 @@ en:
     continue_with: 'Continue with %{provider}'
     sign_in_with: 'Sign in with %{provider}'
     signed_in: 'Signed in!'
-    signed_out: 'You have signed out of <a href="%{url}">Code.org</a>.'
-    sign_out_of: 'You used %{provider} to sign in. <a href="%{url}">Click here</a> to sign out of %{provider}.'
+    signed_out_markdown: '### You have signed out of [Code.org](%{url}).'
+    sign_out_of_markdown: '#### You used %{provider} to sign in. [Click here](%{url}) to sign out of %{provider}.'
     already_signedup: 'Already signed up?'
     notyet_signedup: "Haven't joined yet?"
     google_oauth2: 'Google'
