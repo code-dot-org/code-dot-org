@@ -17,6 +17,7 @@ const styles = {
 export default class StageExtras extends React.Component {
   static propTypes = {
     stageNumber: PropTypes.number.isRequired,
+    nextStageNumber: PropTypes.number,
     nextLevelPath: PropTypes.string.isRequired,
     showProjectWidget: PropTypes.bool,
     projectTypes: PropTypes.arrayOf(PropTypes.string),
@@ -28,6 +29,7 @@ export default class StageExtras extends React.Component {
   render() {
     const {
       stageNumber,
+      nextStageNumber,
       nextLevelPath,
       bonusLevels,
       sectionId,
@@ -36,7 +38,7 @@ export default class StageExtras extends React.Component {
       projectTypes
     } = this.props;
     const nextMessage = /stage/.test(nextLevelPath)
-      ? msg.extrasNextLesson({number: stageNumber + 1})
+      ? msg.extrasNextLesson({number: nextStageNumber})
       : msg.extrasNextFinish();
 
     return (
