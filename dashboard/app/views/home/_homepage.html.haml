@@ -37,7 +37,7 @@
       - homepage_data[:teacherSecondName] = current_user.second_name
       - homepage_data[:teacherId] = current_user.id
       - homepage_data[:teacherEmail] = current_user.email
-      - teachers_school = current_user.school_info.school
+      - teachers_school = current_user.last_complete_school_info.school
       - homepage_data[:ncesSchoolId] = teachers_school.id
       - homepage_data[:schoolAddress1] = teachers_school.address_line1
       - homepage_data[:schoolAddress2] = teachers_school.address_line2
