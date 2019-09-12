@@ -17,6 +17,28 @@ apt_package 'varnish-modules' do
   options '--force-yes'
 end
 
+# Needed to build libvmod-accept from source
+apt_package %w(
+  automake
+  autotools-dev
+  pkg-config
+  libvarnishapi1
+  libvarnishapi-dev
+  libtool
+  python-docutils
+)
+
+# Download, build, and install libvmod-accept from source
+libvmod_accept_archive = "#{Chef::Config[:file_cache_path]}/libvmod-accept.tar.gz"
+remote_file libvmod_accept_archive do
+  source 'https://github.com/gquintard/libvmod-accept/tarball/5.2'
+  action :create
+end
+ark 'libvmod-accept' do
+  url "file://#{libvmod_accept_archive}"
+  action :install_with_make
+end
+
 service 'varnish' do
   action :nothing
 end
