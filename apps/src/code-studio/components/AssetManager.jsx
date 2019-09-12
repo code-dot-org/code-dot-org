@@ -77,7 +77,7 @@ export default class AssetManager extends React.Component {
     };
   }
 
-  componentWillMount() {
+  componentDidMount() {
     if (this.props.levelName) {
       starterAssetsApi.getStarterAssets(
         this.props.levelName,
@@ -102,28 +102,16 @@ export default class AssetManager extends React.Component {
     }
   }
 
-  componentDidMount() {
-    this._isMounted = true;
-  }
-
-  componentWillUnmount() {
-    this._isMounted = false;
-  }
-
   onStarterAssetsReceived = result => {
     const response = JSON.parse(result.response);
-    if (this._isMounted) {
-      this.setState({starterAssets: response.starter_assets});
-    }
+    this.setState({starterAssets: response.starter_assets});
   };
 
   onStarterAssetsFailure = xhr => {
-    if (this._isMounted) {
-      this.setState({
-        statusMessage:
-          'Error loading starter assets: ' + getErrorMessage(xhr.status)
-      });
-    }
+    this.setState({
+      statusMessage:
+        'Error loading starter assets: ' + getErrorMessage(xhr.status)
+    });
   };
 
   /**
@@ -133,11 +121,9 @@ export default class AssetManager extends React.Component {
    */
   onAssetListReceived = result => {
     assetListStore.reset(result.files);
-    if (this._isMounted) {
-      this.setState({
-        assets: assetListStore.list(this.props.allowedExtensions)
-      });
-    }
+    this.setState({
+      assets: assetListStore.list(this.props.allowedExtensions)
+    });
   };
 
   /**
@@ -146,12 +132,9 @@ export default class AssetManager extends React.Component {
    * @param xhr
    */
   onAssetListFailure = xhr => {
-    if (this._isMounted) {
-      this.setState({
-        statusMessage:
-          'Error loading asset list: ' + getErrorMessage(xhr.status)
-      });
-    }
+    this.setState({
+      statusMessage: 'Error loading asset list: ' + getErrorMessage(xhr.status)
+    });
   };
 
   onUploadStart = data => {
