@@ -1,5 +1,8 @@
+# DailySurveyDecorator organizes survey summary results of a single workshop in a format
+# that client UI can presents.
+
 module Pd::SurveyPipeline
-  class DailySurveyDecorator < SurveyPipelineWorker
+  class DailySurveyDecorator
     FORM_IDS_TO_NAMES = {
       "90066184161150".to_i => {
         full_name: 'CS Fundamentals Deep Dive Pre-survey',
@@ -23,110 +26,86 @@ module Pd::SurveyPipeline
       }
     }
 
-    REQUIRED_INPUT_KEYS = [:summaries, :parsed_questions, :parsed_submissions, :current_user]
-    OPTIONAL_INPUT_KEYS = [:errors]
-    OUTPUT_KEYS = [:decorated_summaries]
-
-    # @param context [Hash] contains necessary input for this worker to process.
-    #   Results are added back to the context object.
+    # Create single-workshop survey summary report to send to client.
     #
-    # @return [Hash] the same context object.
+    # @param [Hash] data a hash contains pieces of information from previous steps in the pipeline
+    # @option data [Array<Hash>] :summaries an array of summary results.
+    # @option data [Hash] :parsed_questions question data get from DailySurveyParser.
+    # @option data [Hash] :parsed_submissions submission data get from DailySurveyParser.
+    # @option data [User] :current_user user making survey report request.
+    # @option data [Array<String>] :errors non-fatal errors from previous steps.
     #
-    # @raise [RuntimeError] if required input keys are missing.
+    # @return [Hash] a hash report contains 4 keys.
+    #   :course_name [String]
+    #   :questions [Hash]
+    #     {context_name => {question_scope => {question_name => question_content}}}]
+    #     context_name could be Pre Workshop, Day 1, Facilitator, Post Workshop, etc.
+    #     question_scope is either :general or :facilitator
+    #   :this_workshop [Hash]
+    #     {context_name => {:response_count => Integer, question_scope => question_summary_results}}
+    #     question_summary_results is either
+    #       :general => {question_name => summary_result}}
+    #       or :facilitator => {question_name => {facilitator_name => summary_result}}
+    #   :errors [Array<String>]
     #
-    def self.process_data(context)
-      check_required_input_keys REQUIRED_INPUT_KEYS, context
-
-      results = decorate context.slice(*(REQUIRED_INPUT_KEYS + OPTIONAL_INPUT_KEYS))
-
-      OUTPUT_KEYS.each do |key|
-        context[key] ||= {}
-        context[key].deep_merge! results[key]
-      end
-
-      context
-    end
-
-    # Combine summary data and parsed data into a format that UI client will understand.
-    #
-    # @param summaries [Array<Hash>] an array of summary results.
-    # @param parsed_questions [Hash] question data get from DailySurveyParser.
-    # @param parsed_submissions [Hash] submission data get from DailySurveyParser.
-    # @param current_user [User] user making survey report request.
-    # @param errors [Array] non-fatal errors encountered when calculating survey summaries.
-    #
-    # @return [Hash] data returned to client.
-    #
-    def self.decorate(summaries:, parsed_questions:, parsed_submissions:, current_user:, errors: [])
-      result = {
+    def self.decorate_single_workshop(data)
+      report = {
         course_name: nil,
         questions: {},
         this_workshop: {},
-        all_my_workshops: {},
-        facilitators: {},
-        facilitator_averages: {},
-        facilitator_response_counts: {},
-        errors: errors
+        # TODO: test CSF 201 workshop w/o these fields
+        # all_my_workshops: {},
+        # facilitators: {},
+        # facilitator_averages: {},
+        # facilitator_response_counts: {},
+        errors: data[:errors]
       }
 
-      question_by_names = index_question_by_names(parsed_questions)
+      question_by_names = index_question_by_names(data[:parsed_questions])
 
       # Populate entries for result[:this_workshop] and result[:questions]
-      summaries.each do |summary|
+      data[:summaries].each do |summary|
         # Only process summarization for specific workshops and forms.
         workshop_id, form_id, = summary.values_at(:workshop_id, :form_id)
         next unless workshop_id && form_id
 
         # Check if the current user can see specific data
-        next unless data_visible_to_user?(current_user, summary)
+        next unless data_visible_to_user?(data[:current_user], summary)
 
         day, facilitator_id = summary.values_at(:day, :facilitator_id)
         context_name = get_survey_context(workshop_id, day, facilitator_id, form_id)
         q_name = summary[:name]
 
         # Create top structures if not already created
-        result[:course_name] ||= Pd::Workshop.find_by_id(workshop_id)&.course
-        result[:this_workshop][context_name] ||= {
-          response_count: parsed_submissions[form_id].size,
+        report[:course_name] ||= Pd::Workshop.find_by_id(workshop_id)&.course
+        report[:this_workshop][context_name] ||= {
+          response_count: data[:parsed_submissions][form_id].size,
           general: {},
           facilitator: {}
         }
-        result[:questions][context_name] ||= {general: {}, facilitator: {}}
+        report[:questions][context_name] ||= {general: {}, facilitator: {}}
 
-        # Create an entry in result[:this_workshop].
-        # General format:
-        # Hash{context_name => {response_count => number, general => {question_name => summary_result}}}
-        #
-        # Format for facilitator-specific result:
-        # Hash{context_name => {response_count => number,
-        #   facilitator => {question_name => {facilitator_name => summary_result}}}}
-        #
+        # Create an entry in result[:this_workshop]
         if facilitator_id
           facilitator_name = User.find_by_id(facilitator_id)&.name || facilitator_id.to_s
 
-          result[:this_workshop][context_name][:facilitator][q_name] ||= {}
-          result[:this_workshop][context_name][:facilitator][q_name][facilitator_name] =
+          report[:this_workshop][context_name][:facilitator][q_name] ||= {}
+          report[:this_workshop][context_name][:facilitator][q_name][facilitator_name] =
             summary[:reducer_result]
         else
-          result[:this_workshop][context_name][:general][q_name] = summary[:reducer_result]
+          report[:this_workshop][context_name][:general][q_name] = summary[:reducer_result]
         end
 
-        # Create an entry in result[:questions].
-        # General question format:
-        # Hash{context_name => {general => {question_name => question_content}}}
-        #
-        # Facilitator question format:
-        # Hash{context_name => {facilitator => {question_name => question_content}}}
-        #
+        # Create an entry in result[:questions]
         q_content = question_by_names.dig(form_id, q_name)
         if facilitator_id
-          result[:questions][context_name][:facilitator][q_name] ||= q_content
+          report[:questions][context_name][:facilitator][q_name] ||= q_content
         else
-          result[:questions][context_name][:general][q_name] ||= q_content
+          report[:questions][context_name][:general][q_name] ||= q_content
         end
       end
 
-      {decorated_summaries: result}
+      report
     end
 
     def self.data_visible_to_user?(user, data)
