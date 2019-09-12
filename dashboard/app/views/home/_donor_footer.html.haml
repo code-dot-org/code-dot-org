@@ -10,7 +10,8 @@
         Your classroom's free use of Code.org is made possible by:
     - else
       Your free education on Code.org is made possible by:
-  -# Logos here
+  - Dir.glob("app/assets/images/donor_logos/#{current_user.donor_school.name}/*").each do |logo|
+    = image_tag "donor_logos/#{current_user.donor_school.name}/#{logo.split('/').last}"
   - if current_user.donor_school.name == "Amazon"
     %p{ style: 'margin-top: 8px;' }
       Amazon is offering free resources for Code.org classrooms.
