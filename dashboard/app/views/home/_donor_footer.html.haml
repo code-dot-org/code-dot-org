@@ -13,7 +13,7 @@
   - Dir.glob("app/assets/images/donor_logos/#{current_user.donor_school.name}/*").sort.each do |logo|
     %div{ style: "max-width: 235px; max-height: 64px; display: inline-block; margin-left: 20px; margin-right: 20px" }
       = image_tag "donor_logos/#{current_user.donor_school.name}/#{logo.split('/').last}"
-  - if current_user.donor_school.name == "Amazon"
+  - if current_user.teacher? && current_user.donor_school.name == "Amazon"
     %p{ style: 'margin-top: 20px; margin-bottom: 36px' }
       Amazon is offering free resources for Code.org classrooms.
       %a{ href: CDO.code_org_url('amazon-future-engineer'), style: 'color: #ffb81d'}
