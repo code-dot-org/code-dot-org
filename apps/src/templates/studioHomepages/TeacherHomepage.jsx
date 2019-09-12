@@ -13,10 +13,11 @@ import ProjectWidgetWithData from '@cdo/apps/templates/projects/ProjectWidgetWit
 import shapes from './shapes';
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
 import i18n from '@cdo/locale';
+import CensusTeacherBanner from '../census2017/CensusTeacherBanner';
 import DonorTeacherBanner, {
   donorTeacherBannerOptionsShape
 } from '@cdo/apps/templates/DonorTeacherBanner';
-import CensusTeacherBanner from '../census2017/CensusTeacherBanner';
+import experiments from '@cdo/apps/util/experiments';
 
 const styles = {
   clear: {
@@ -255,14 +256,16 @@ export default class TeacherHomepage extends Component {
             <br />
           </div>
         )}
-        {isEnglish && this.state.donorBannerName && (
-          <div>
-            <DonorTeacherBanner
-              options={donorTeacherBannerOptions}
-              onDismiss={() => this.dismissDonorTeacherBanner()}
-            />
-          </div>
-        )}
+        {experiments.isEnabled('donorTeacherBanner') &&
+          isEnglish &&
+          this.state.donorBannerName && (
+            <div>
+              <DonorTeacherBanner
+                options={donorTeacherBannerOptions}
+                onDismiss={() => this.dismissDonorTeacherBanner()}
+              />
+            </div>
+          )}
         <TeacherSections queryStringOpen={queryStringOpen} locale={locale} />
         <RecentCourses
           courses={courses}
