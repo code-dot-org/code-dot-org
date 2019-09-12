@@ -2059,7 +2059,7 @@ class User < ActiveRecord::Base
 
   # Returns the name of the donor for the donor teacher banner, or nil if none.
   def donor_teacher_banner_name
-    school_id = school_info&.school&.id
+    school_id = last_complete_school_info&.school&.id
     donor_name = DonorSchool.find_by(nces_id: school_id)&.name if school_id
 
     donor_name

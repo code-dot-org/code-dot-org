@@ -57,7 +57,7 @@ const styles = {
   }
 };
 
-export default class TeacherDonorBanner extends Component {
+export default class DonorTeacherBanner extends Component {
   static propTypes = {
     teacherFirstName: PropTypes.string,
     teacherSecondName: PropTypes.string,
