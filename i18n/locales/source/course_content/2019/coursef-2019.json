@@ -1104,16 +1104,17 @@
   },
   "https://studio.code.org/s/coursef-2019/stage/15/extras?level_name=behaviors+6": {
     "short_instructions": "Make the ball roll.",
-    "long_instructions": "Make the ball roll.\n\n-   Create a new behavior and use it to make the ball roll. Your behavior should combine two different actions.",
+    "long_instructions": "Make the ball roll.\n\n-   Create a new behavior and use it to make the ball roll. Your behavior should combine two different actions.\n\n[][0]",
     "authored_hints": {
       "behavior hint": "Try editing the behaviors! \n\n-   Which value is controlling the speed of each sprite?"
     }
   },
   "https://studio.code.org/s/coursef-2019/stage/15/extras?level_name=behaviors+7": {
     "short_instructions": "Drive off into the horizon!",
-    "long_instructions": "Drive off into the horizon!\n\n-   Create a new behavior and use it to make the car move up and shrink. If you do it right, it could look like it is driving off into the horizon.",
+    "long_instructions": "Drive off into the horizon!\n\n-   Create a new behavior and use it to make the car move up (north) and shrink. If you do it right, it could look like it is driving off into the horizon.\n\n[][0]",
     "authored_hints": {
-      "behavior hint": "Try editing the behaviors! \n\n-   Which value is controlling the speed of each sprite?"
+      "behaviors_hint1": "You can create a new behavior that uses two different actions or combine two existing behaviors.",
+      "sprites_idea1": "For fun, you can use a similar behavior to make a ship fly off into space or a character run to the foreground. Try changing the background and sprite costumes in your scene!\n\n[][0]\n\n[][1]"
     }
   },
   "https://studio.code.org/s/coursef-2019/stage/16/puzzle/1": {
