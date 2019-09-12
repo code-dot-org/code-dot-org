@@ -151,11 +151,6 @@ lt:
           CONDITION:
             '"when"': kada
             '"while"': kol
-      gamelab_debugSprite:
-        options:
-          VAL:
-            'true': Taip
-            'false': klaida
       gamelab_getProp:
         options:
           PROPERTY:
@@ -222,13 +217,6 @@ lt:
             '"left"': kairėn
             '"right"': dešinėn
             '"space"': kosmosas
-      gamelab_whenPressedAndReleased:
-        options:
-          DIR:
-            "'up'": aukštyn
-            "'down'": žemyn
-            "'left'": kairėn
-            "'right'": dešinėn
       gamelab_whileKey:
         options:
           KEY:

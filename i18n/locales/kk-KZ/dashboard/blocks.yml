@@ -149,11 +149,6 @@ kk:
           CONDITION:
             '"when"': кезде
             '"while"': болған кезде
-      gamelab_debugSprite:
-        options:
-          VAL:
-            'true': дұрыс
-            'false': Жалған
       gamelab_getProp:
         options:
           PROPERTY:
@@ -215,13 +210,6 @@ kk:
             '"left"': солға
             '"right"': оңға
             '"space"': кеңестік
-      gamelab_whenPressedAndReleased:
-        options:
-          DIR:
-            "'up'": жоғары
-            "'down'": төмен
-            "'left'": солға
-            "'right'": оңға
       gamelab_whileKey:
         options:
           KEY:

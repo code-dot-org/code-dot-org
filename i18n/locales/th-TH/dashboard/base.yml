@@ -30,6 +30,7 @@ th:
         finish_sign_up_header: 'เสร็จสิ้นการสร้างบัญชีผู้ใช้ของคุณ'
         error:
           future: ไม่สามารถทำได้ในอนาคต
+  beta: "Beta"
   hello: "สวัสดีชาวโลก"
   welcome_back: "ยินดีต้อนรับอีกครั้ง, % {name}"
   your_professional_learning_plan: "แผนการเรียนของคุณ"

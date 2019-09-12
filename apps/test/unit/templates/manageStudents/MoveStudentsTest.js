@@ -15,12 +15,12 @@ const studentData = [
   {id: 3, name: 'studentc'},
   {id: 0, name: 'studenta'}
 ];
-const sections = {
-  0: {id: 0, name: 'sectiona', loginType: SectionLoginType.google_classroom},
-  1: {id: 1, name: 'sectionb', loginType: SectionLoginType.email},
-  2: {id: 2, name: 'sectionc', loginType: SectionLoginType.clever},
-  3: {id: 3, name: 'sectiond', loginType: SectionLoginType.word}
-};
+const sections = [
+  {id: 0, name: 'sectiona', loginType: SectionLoginType.google_classroom},
+  {id: 1, name: 'sectionb', loginType: SectionLoginType.email},
+  {id: 2, name: 'sectionc', loginType: SectionLoginType.clever},
+  {id: 3, name: 'sectiond', loginType: SectionLoginType.word}
+];
 
 describe('MoveStudents', () => {
   let updateStudentTransfer;

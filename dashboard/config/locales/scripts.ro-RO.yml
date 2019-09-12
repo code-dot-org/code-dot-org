@@ -4692,6 +4692,8 @@ ro:
             CS Discoveries Post Course survey:
               description_student: "[șir gol]"
               description_teacher: "[șir gol]"
+            Sprite Properties:
+              name: Proprietăți spiriduș
         csd-bugs:
           description_audience: "[șir gol]"
           description_short: "[șir gol]"
@@ -4741,6 +4743,30 @@ ro:
           description_short: "[șir gol]"
           description: "[șir gol]"
         csd-pilot:
+          description_audience: "[șir gol]"
+          description_short: "[șir gol]"
+          description: "[șir gol]"
+        csd4-pilot:
+          description_audience: "[șir gol]"
+          description_short: "[șir gol]"
+          description: "[șir gol]"
+        csp2-pilot:
+          stages:
+            Routers and Redundancy:
+              name: Routere și redundanță
+          description_audience: "[șir gol]"
+          description_short: "[șir gol]"
+          description: "[șir gol]"
+        denny-science:
+          description_audience: "[șir gol]"
+          description_short: "[șir gol]"
+          description: "[șir gol]"
+        peru-2019:
+          stages:
+            Introduction:
+              name: Introducere
+            Nested Loops:
+              name: Repetiții imbricate
           description_audience: "[șir gol]"
           description_short: "[șir gol]"
           description: "[șir gol]"

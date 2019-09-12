@@ -294,7 +294,7 @@ it:
           lezione in italiano sul sito di Programma il Futuro: programmailfuturo.it
           / "Percorsi" / "Cittadinanza digitale consapevole" / "Per la scuola primaria"'
       courseE_unplugged_privateInformation:
-        title: 'Cittadinanza digitale - Dati personali '
+        title: Cittadinanza digitale - Dati personali e altri dati
         desc: Oggi imparerai la differenza tra informazioni private e personali!
       courseF_unplugged_powerOfWords:
         title: Attività tradizionale
@@ -533,7 +533,7 @@ it:
         title: I miei amici robotici
         desc: Impara a programmare scrivendo codice per i tuoi amici robotici!
       courseB_unplugged_loopyMRF_2019:
-        title: 'Cicli: I miei ciclici amici robotici'
+        title: I miei ciclici amici robotici
       Conditionals_2019:
         title: Istruzioni condizionali
         desc: Per imparare le istruzioni condizionali, gli studenti giocano con le
@@ -564,7 +564,7 @@ it:
           possa memorizzare informazioni ancora più complesse (ad esempio immagini
           e colori) in formato binario.
       courseE_unplugged_privateInformation_2019:
-        title: Cittadinanza digitale - Dati personali
+        title: Cittadinanza digitale - Dati personali e altri dati
       courseE_unplugged_CnC_2019:
         title: Condivisione digitale
         desc: Questa lezione è un contributo del gruppo Copyright e Creatività (www.copyrightandcreativity.org)

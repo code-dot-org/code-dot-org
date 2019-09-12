@@ -45,6 +45,7 @@ pt:
           para <strong>%{email}</strong>.
         error:
           future: não pode estar no futuro
+  beta: beta
   hello: Olá mundo
   welcome_back: Olá mais uma vez, %{name}
   your_professional_learning_plan: O teu plano de aprendizagem profissional

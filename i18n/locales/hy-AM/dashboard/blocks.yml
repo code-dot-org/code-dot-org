@@ -149,11 +149,6 @@ hy:
           CONDITION:
             '"when"': երբ
             '"while"': ժամանակ
-      gamelab_debugSprite:
-        options:
-          VAL:
-            'true': ճիշտ
-            'false': կեղծ
       gamelab_getProp:
         options:
           PROPERTY:
@@ -215,13 +210,6 @@ hy:
             '"left"': ձախ
             '"right"': ճիշտ
             '"space"': տարածություն
-      gamelab_whenPressedAndReleased:
-        options:
-          DIR:
-            "'up'": մինչեւ
-            "'down'": ներքեւ
-            "'left'": ձախ
-            "'right'": ճիշտ
       gamelab_whileKey:
         options:
           KEY:

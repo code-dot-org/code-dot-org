@@ -6,74 +6,74 @@ nav: how_to_nav
 
 {{ signup_button }}
 
-# Cómo completar una Hora de Código con su hijo
+# Cómo realizar una Hora del Código con tus hijos
 
-### ¡Complete una Hora de Código en el hogar, u ofrézcase como voluntario para llevarlo a clase de su hijo!
+### ¡Completa una Hora del Código en casa o sé voluntario para llevarla a cabo en la clase de tus hijos!
 
 * * *
 
-## 1) Mira este video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+## 1) Mira este video explicativo <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
 ## 2) Elige un tutorial
 
-We provide a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. [Try them out!]({{ urls/learn }})
+Contamos con una variedad de divertidos tutoriales de una hora para estudiantes de todas las edades, creados por diversos socios. [¡Pruébalos!]({{ urls/learn }})
 
-**Todas los tutoriales de Hora de Código son autoguiados - permitiendo que su hijo trabaje a su propio ritmo y nivel de habilidad**
+**Todos los tutoriales de la Hora del Código son autoguiados, para que tus hijos puedan trabajar según su propio ritmo y nivel de habilidad**
 
 [![](/images/fit-700/tutorials.png)]({{ urls/learn }})
 
-## 3) Planifique lo que necesita de tecnología
+## 3) Planifica tus necesidades tecnológicas
 
-La mejor experiencia de Hora de Código será con computadoras conectadas a Internet. Pero usted **no** necesita una computadora. Hay muchas actividades que son "desconectadas" y se pueden hacer sin ninguna tecnología en absoluto. Prueba los tutoriales en tu computadora o dispositivo. Asegúrate que funcionan correctamente en navegadores con sonido y video.
+Para tener una mejor experiencia con la Hora del Código, se recomiendan las computadoras con conexión a Internet. Pero **no** necesitas una computadora. Hay muchas actividades "sin conexión" que se pueden realizar sin ayuda de la tecnología. Prueba los tutoriales en tu computadora o dispositivo. Asegúrate de que el sonido y el video funcionan bien en los navegadores.
 
-**¿Quiere aprender junto a su hijo?** Pruebe [la programación por parejas.](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) La Informática es social y colaborativa.
+**¿Quieres aprender junto a tus hijos?** Prueba [la programación en parejas.](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) Las ciencias de la computación son una actividad social y colaborativa.
 
-## 4) Comience su Hora de Código con un vídeo inspirador
+## 4) Empieza tu Hora del Código con un video inspirador
 
-Empiece su Hora de Código motivando a los niños y comentando cómo la informática tiene un impacto en cada parte de nuestras vidas.
+Para dar inicio a la Hora del Código, inspira a tus hijos y habla acerca de cómo las ciencias de la computación tienen un impacto en cada parte de nuestras vidas.
 
-**Muestre un video inspirador:**
+**Muestra un video inspirador:**
 
-- El vídeo original de lanzamiento de Code.org, con Bill Gates, Mark Zuckerberg y la estrella de la NBA Chris Bosh (Hay versiones de [1 minuto](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minutos](https://www.youtube.com/watch?v=nKIu9yen5nc) y [9 minutos](https://www.youtube.com/watch?v=dU1xS07N-FA)).
-- El [vídeo mundial de la Hora del Código](https://www.youtube.com/watch?v=KsOIlDT145A).
-- [El presidente Obama llama a todos los estudiantes a aprender informática](https://www.youtube.com/watch?v=6XvmhE1J9PY).
-- Find more inspirational [resources]({{ urls/inspire }}) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+- Hay versiones de [1 minuto](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minutos](https://www.youtube.com/watch?v=nKIu9yen5nc) y [9 minutos](https://www.youtube.com/watch?v=dU1xS07N-FA) del video original de lanzamiento de Code.org, con Bill Gates, Mark Zuckerberg y la estrella de la NBA Chris Bosh.
+- [Video de la Hora del Código en todo el mundo](https://www.youtube.com/watch?v=KsOIlDT145A).
+- [El presidente Obama alienta a todos los estudiantes a aprender ciencias de la computación](https://www.youtube.com/watch?v=6XvmhE1J9PY).
+- Encuentra más [recursos]({{ urls/inspire }}) y [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP) inspiradores.
 
-No importe si usted y su hijo son nuevos en la Informática. Aquí tiene algunas ideas para presentar su actividad de Hora de Código:
+¿Tú y tus hijos recién comienzan a transitar el camino de las ciencias de la computación? No hay problema. Estas son algunas ideas que te ayudarán a iniciar tu Hora del Código:
 
-- Explique algunas formas en las que la tecnología hace impacto en nuestras vidas, con ejemplos que les interesen tanto a niños como a niñas (hable acerca de las tecnologías que salvan vidas, ayudando a las personas o conectándolas, etc.).
-- Haz una lista de las cosas que utilizan programación en la vida cotidiana.
-- See tips for getting girls interested in computer science [here]({{ urls/girls }}).
+- Explica algunas formas en que la tecnología tiene un impacto en nuestras vidas, con ejemplos que les interesen a niños y niñas (habla acerca de salvar vidas, ayudar a las personas, conectarlas, etc.).
+- Haz una lista de cosas para las que se usa la programación en la vida cotidiana.
+- Echa un vistazo a los [consejos]({{ urls/girls }}) para que las niñas se interesen en las ciencias de la computación.
 
-¿Quiere más ideas? Revise nuestra [plantilla de plan de clase](/files/AfterschoolEducatorLessonPlanOutline.docx) con las mejores prácticas de experimentados educadores.
+¿Quieres más ideas? Consulta nuestra [plantilla del plan de lecciones](/files/AfterschoolEducatorLessonPlanOutline.docx) para conocer las mejores prácticas de educadores con experiencia.
 
-## 6) ¡A Programar!
+## 5) ¡A programar!
 
 <img src="/images/fit-700/tutorial-short-link.png" />
 
-Cuando haya elegido el tutorial que quiere hacer, puede marcar el enlace corto del tutorial.
+Cuando hayas elegido el tutorial, puedes guardar el enlace corto como favorito.
 
-**Cuando su hijo se encuentre con dificultades**
+**Si tus hijos tienen dificultades,**
 
-Está bien responder:
+está bien responder:
 
-- "No lo sé. Vamos a averiguarlo juntos."
-- "La tecnología no siempre funciona de la manera que queremos."
-- "Aprender a programar es como aprender un nuevo idioma; No tendrás fluidez de inmediato."
+- "No lo sé. Vamos a averiguarlo juntos".
+- "La tecnología no siempre funciona como queremos".
+- "Aprender a programar es como aprender un nuevo idioma; no lo dominarás de inmediato".
 
-## 7) A Celebrar
+## 6) A celebrar
 
-[Print certificates]({{ urls/certificates }}) for your child (and yourself!).
+[Imprime certificados]({{ urls/certificates }}) para tus hijos (¡y para ti!).
 
-Comparte fotos y vídeos del evento de la Hora del Código en las redes sociales. ¡Utilice #HourOfCode y @codeorg para que también podamos resaltar tu éxito!
+Comparte fotos y videos de la Hora del Código en las redes sociales. ¡Usa #HoraDelCódigo y @codeorg para que podamos destacar tu éxito!
 
-Revise las [Preguntas Frecuentes de La Hora del Código](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
+Consulta las [preguntas frecuentes sobre la Hora del Código](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code) si tienes alguna duda.
 
 ## ¿Qué viene después de la Hora del Código?
 
-La Hora de Código es sólo el primer paso de un viaje para aprender más sobre cómo funciona la tecnología y cómo crear aplicaciones de software. Para continuar este viaje:
+La Hora del Código es solo el primer paso para aprender más sobre cómo funciona la tecnología y cómo crear aplicaciones de software. Para seguir adelante:
 
-- Encourage your child to continue [to learn online]({{ urls/learn_beyond }}).
-- Help [promote]({{ urls/promote }}) computer science education in your child’s school district.
+- Anima a tus hijos a que sigan [aprendiendo en línea]({{ urls/learn_beyond }}).
+- Ayuda a [promover]({{ urls/promote }}) la enseñanza de las ciencias de la computación en el distrito escolar de tus hijos.
 
 {{ signup_button }}

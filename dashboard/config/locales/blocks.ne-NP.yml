@@ -141,11 +141,6 @@ ne:
           CONDITION:
             '"when"': when
             '"while"': while
-      gamelab_debugSprite:
-        options:
-          VAL:
-            'true': 'true'
-            'false': 'false'
       gamelab_getProp:
         options:
           PROPERTY:
@@ -208,13 +203,6 @@ ne:
             '"left"': बाँया
             '"right"': दाँया
             '"space"': space
-      gamelab_whenPressedAndReleased:
-        options:
-          DIR:
-            "'up'": माथि
-            "'down'": तल
-            "'left'": बाँया
-            "'right'": दाँया
       gamelab_whileKey:
         options:
           KEY:

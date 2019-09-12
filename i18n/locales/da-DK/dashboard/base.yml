@@ -32,6 +32,7 @@ da:
         finish_sign_up_subheader_provider: 'Udfyld følgende oplysninger for at afslutte oprettelsen af en Code.org konto <strong>%{provider}</strong> for <strong>%{email}</strong>.'
         error:
           future: kan ikke være i fremtiden
+  beta: "beta"
   hello: "Hej verden"
   welcome_back: "Velkommen tilbage %{name}"
   your_professional_learning_plan: "Din professionelle læringsplan"

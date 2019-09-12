@@ -692,21 +692,11 @@ pt-BR:
         text: quando {SPRITE} for clicado
       gamelab_comment:
         text: 'comentário: {COMMENT}'
-      gamelab_console.log:
-        text: mostra mensagem {MESSAGE}
       gamelab_createNewSprite:
         text: "faça um novo sprite\n chamado {NAME} \n com fantasia {COSTUME} \n em
           {LOCATION}"
-      gamelab_debugSprite:
-        text: depurar {SPRITE} {VAL}
-        options:
-          VAL:
-            'true': verdadeiro
-            'false': falso
       gamelab_destroy:
         text: remover {THIS}
-      gamelab_displace:
-        text: "{THIS} bloqueia {SPRITE} de se mover"
       gamelab_draggable:
         text: ser arrastável
       gamelab_edgesDisplace:
@@ -854,7 +844,6 @@ pt-BR:
             '"x"': posição x
             '"y"': posição y
             '"direction"': direção do movimento
-            '"tint"': tonalidade
       gamelab_setSizes:
         text: definir {SPRITE} {PROPERTY} para {N}%
         options:
@@ -902,20 +891,8 @@ pt-BR:
             '"d"': d
       gamelab_whenLeftArrow:
         text: quando a seta para esquerda for pressionada
-      gamelab_whenPressedAndReleased:
-        text: "quando {DIR} pressionado \n{STATEMENT1}quando liberado\n{STATEMENT2}"
-        options:
-          DIR:
-            "'up'": para cima
-            "'down'": para baixo
-            "'left'": para esquerda
-            "'right'": para direita
       gamelab_whenRightArrow:
         text: quando a seta para direita for pressionada
-      gamelab_whenStartAndStopTouching:
-        text: |-
-          quando {SPRITE1} começar a encostar em {SPRITE2} {STATEMENT1}quando eles param de se encostar
-          {STATEMENT2}
       gamelab_whenTouching:
         text: quando {SPRITE1} encostar {SPRITE2}
       gamelab_whenUpArrow:

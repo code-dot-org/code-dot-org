@@ -27,6 +27,7 @@ lv:
         edit_header: Rediģēt konta detaļas
         error:
           future: nevar būt nākotnē
+  beta: beta
   hello: Sveika, pasaule
   welcome_back: Laipni lūdzu atpakaļ, %{name}
   submit: Iesniegt

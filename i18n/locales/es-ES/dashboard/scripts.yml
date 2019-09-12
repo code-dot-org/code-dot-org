@@ -3547,7 +3547,29 @@ es:
               description_teacher: En esta lección de varios días, los estudiantes usan el proceso de resolución de problemas de la Unidad 1 para crear un juego de salto de plataforma. Comienzan por mirar un ejemplo de un saltador de plataforma y luego definen cómo se verán sus juegos. A continuación, utilizan un proceso estructurado para planificar los fondos, las variables, los sprites y las funciones que necesitarán para implementar su juego. Después de escribir el código del juego, los estudiantes reflexionarán sobre cómo se puede mejorar el juego e implementarán esos cambios.
             Project - Design a Game:
               description_teacher: Los estudiantes planificarán y construirán su propio juego utilizando la guía del proyecto de las dos lecciones anteriores para guiar su proyecto. Trabajando individualmente o en parejas, los estudiantes primero decidirán el tipo de juego que les gustaría construir, tomando como inspiración un conjunto de juegos de muestra. Luego completarán una guía de proyecto en blanco donde describirán el comportamiento del juego y el alcance de las variables, sprites y funciones que necesitarán construir. En Code Studio, una serie de niveles les indica una secuencia general que pueden usar para implementar este plan. A mitad del proceso, los estudiantes compartirán sus proyectos para la revisión por pares e incorporarán comentarios a medida que finalicen su juego. Al final de la lección, los estudiantes compartirán sus juegos completados con sus compañeros de clase. Este proyecto abarcará múltiples clases y puede tomar fácilmente de 3-5 períodos de clase.
+            Shapes and Parameters:
+              name: Formas y parámetros
+            Random Numbers:
+              name: Números aleatorios
+            Sprite Properties:
+              name: Propiedades de Sprites
         csl-vn:
           stages:
             Loops in Ice Age:
               name: Bucles en la Edad del Hielo
+        csp2-pilot:
+          stages:
+            Routers and Redundancy:
+              name: Enrutadores y reiteración
+        peru-2019:
+          stages:
+            Introduction:
+              name: Introducción
+            Loops in Artist:
+              name: Bucles en Artista
+            Nested Loops:
+              name: Bucles anidados
+            Events in Star Wars:
+              name: Eventos en la Guerra de las Galaxias
+            Introduction to Debugging:
+              name: Introducción a la depuración

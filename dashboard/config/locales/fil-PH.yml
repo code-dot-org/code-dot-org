@@ -38,6 +38,7 @@ fil:
         edit_header: Palitan ang Account Details
         error:
           future: hindi maaari sa hinaharap
+  beta: beta
   hello: Mabuhay!
   welcome_back: Maligayang pagbabalik, %{name}
   your_professional_learning_plan: Iyong Propersyonal na Plano sa Pag-aaral

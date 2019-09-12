@@ -3354,6 +3354,14 @@ pt-BR:
           </block>
           </xml>
       course3_collector_debugging_challenge2:
+        courseD_collector_debugging_challenge2_a: "Inicie focando-se em coletar DUAS
+          pedras preciosas de cada uma das duas primeiras pilhas.\n\n![](<https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04
+          AM copy.png>)\nUse estes blocos.\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block
+          type=\"controls_repeat\" limit=\"2\">\n    <title name=\"TIMES\">2</title>\n
+          \ </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title
+          name=\"DIR\">moveForward</title>\n                  </block>\n                  \n
+          \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n
+          \   <title name=\"TIMES\">2</title>\n  </block>\n\n</xml>"
         courseD_collector_debugging_challenge2_b: |-
           Em seguida, colete as gemas restantes nessa linha.
 
@@ -14164,6 +14172,10 @@ pt-BR:
           de cada iteração. '
         courseF_artist_fwp_challenge1_e: Tanto a cor de cada octógono como a largura
           da caneta são controladas pela variável 'contador'.
+        courseF_artist_fwp_challenge1_f: |-
+          **Solução:**
+
+          ![Bloco de Soluções](https://images.code.org/a82cfea836b95ce6625b08afcc3b7b37-image-1469727289590.png)
       courseF_artist_variables10:
         courseF_artist_variables10_a: Divirta-se com este nível! Veja o que as pequenas
           alterações podem fazer no seu código.

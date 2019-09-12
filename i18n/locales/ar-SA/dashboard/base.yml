@@ -32,6 +32,7 @@ ar:
         finish_sign_up_subheader_provider: 'املأ المعلومات التالية لإكمال إنشاء حساب على Code.org مع <strong>%{provider}</strong> لـ <strong>%{email}</strong>.'
         error:
           future: لا يمكن أن يكون في المستقبل
+  beta: "تجريبي"
   hello: "مرحباً بالعالم"
   welcome_back: "أهلاً بكم من جديد، %{name}"
   your_professional_learning_plan: "خطة التعلم الاحترافية الخاصة بك"

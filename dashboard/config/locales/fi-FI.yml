@@ -43,6 +43,7 @@ fi:
           Code.org -tilin luomisen <strong>%{provider}</strong> -tunnuksella <strong>%{email}</strong>.
         error:
           future: ei voi olla tulevaisuudessa
+  beta: beta
   hello: Hei maailma
   welcome_back: Tervetuloa takaisin, %{name}
   your_professional_learning_plan: Ammattimainen oppimissuunnitelmasi

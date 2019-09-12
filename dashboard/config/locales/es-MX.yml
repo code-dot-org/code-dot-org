@@ -45,6 +45,7 @@ es-MX:
           para <strong>%{email}</strong>.
         error:
           future: no puede ser en el futuro
+  beta: beta
   hello: Hola, mundo
   welcome_back: Bienvenido, %{name}
   your_professional_learning_plan: Tu plan de aprendizaje profesional

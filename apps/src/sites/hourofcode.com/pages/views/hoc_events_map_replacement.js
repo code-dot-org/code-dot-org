@@ -14,6 +14,8 @@ $(document).ready(function() {
   var popup = null;
 
   map.dragRotate.disable();
+  map.scrollZoom.disable();
+  map.dragPan.disable();
 
   // Ensure that if the map is zoomed out such that multiple
   // copies of the point are visible, the popup appears
@@ -62,6 +64,39 @@ $(document).ready(function() {
         'icon-image': 'marker-15-red'
       },
       filter: ['==', 'review', 'approved']
+    });
+
+    map.addControl(new mapboxgl.FullscreenControl(), 'top-right');
+    map.addControl(
+      new mapboxgl.NavigationControl({showCompass: false}),
+      'bottom-right'
+    );
+
+    var legend = document.createElement('div');
+    legend.id = 'inmaplegend';
+    legend.className = 'inmap-mapbox-legend';
+    legend.index = 1;
+    $('#belowmaplegend div')
+      .clone()
+      .appendTo(legend);
+    document.getElementById('mapbox-map').appendChild(legend);
+
+    function enableMouseControls() {
+      map.scrollZoom.enable();
+      map.dragPan.enable();
+    }
+
+    // Enable mouse controls when the map is clicked
+    map.on('click', function(e) {
+      enableMouseControls();
+    });
+    // Enable mouse controls when the zoom (+/-) buttons are pressed
+    map.on('zoom', function(e) {
+      enableMouseControls();
+    });
+    // Enable mouse controls when we go full screen
+    map.on('resize', function(e) {
+      enableMouseControls();
     });
 
     map.on('click', 'hoc-events', function(e) {

@@ -32,6 +32,7 @@ id:
         finish_sign_up_subheader_provider: 'Mengisi informasi berikut untuk menyelesaikan membuat akun Code.org dengan <strong>%{provider}</strong> untuk <strong>%{email}</strong>.'
         error:
           future: tidak mungkin di masa depan
+  beta: "Percobaan"
   hello: "Halo dunia"
   welcome_back: "Selamat datang kembali, %{name}"
   your_professional_learning_plan: "Rencana Pembelajaran Profesional Anda"

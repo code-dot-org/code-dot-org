@@ -104,6 +104,9 @@ pt-BR:
         estão separados por 45 pixels.
       2-3 Artist Functions 4: Agora coloque a função dentro de um laço para desenhar
         esses três quadrados.
+      2-3 Artist Functions 9: "**Atividade livre:** Esta é uma função para flocos
+        de neve. Experimente usá-la para criar uma cena de inverno! \n\nEssa é uma
+        atividade livre, então não há desafios para resolver. Divirta-se!"
       2-3 Artist Loops New 1: |-
         Vamos desenhar a cabeça desse robô! Você pode fazer um quadrado com lados de 100 pixels?
 
@@ -147,9 +150,24 @@ pt-BR:
         desenhar este padrão. \n\nDivida o número de graus em um círculo (360) pelo
         número de formas que você está desenhando (12) para descobrir quanto virar
         depois de cada forma."
+      2-3 Artist Nested Loops 4: |-
+        Repita este diamante 12 vezes para desenhar uma flor!
+
+        Nota: Vamos usar o mesmo ângulo para repetir 12 diamantes, como fizemos com os 12 triângulos. \
+        Quanto você precisa virar depois de cada forma?
+      2-3 Artist Nested Loops 5: "Preencha as janelas deste edifício com um laço aninhado.
+        \n\nAs janelas têm 20 pixels de comprimento e são separadas por 20 pixels."
       2-3 Artist Nested Loops 6: "Esse dinossauro tem 8 espinhos ao longo de sua cauda.\n\nCada
         espinho tem 30 pixels de comprimento. \n\nRepita o triângulo 8 vezes, mas
         lembre-se de saltar para a frente depois de cada um!"
+      2-3 Artist Nested Loops 7: "Repita este triângulo 10 vezes para desenhar o sol.
+        \n\nVocê vai precisar mover e virar depois de cada triângulo. \n\nVocê pode
+        descobrir o quanto virar dividindo o número de graus em um círculo pelo número
+        de triângulos que o compõem."
+      2-3 Artist Nested Loops 8: "Agora, vamos adicionar um pouco de grama à imagem.
+        \n\nCada tufo de grama é separado por 50 pixels."
+      2-3 Artist Nested Loops 9: "Vamos terminar essa imagem adicionando nossa flor.
+        \n\nRepita o diamante 12 vezes para desenhar a flor."
       2-3 Artist Nested Loops Free Play: Atividade livre. Desenhe algo legal com laços
         aninhados.
       2-3 Bee Conditionals 11: "O que será que tem por aí!\n\nAjude-me a voar pelo
@@ -209,6 +227,14 @@ pt-BR:
         todo o mel."
       2-3 Bee Functions 1: "As funções são blocos de código que realizam uma tarefa.
         \n\nUse a função `colete 2 néctares` para coletar o néctar de cada flor."
+      2-3 Bee Functions 10: "As flores roxas variam entre 1 ou 0 néctares a cada vez
+        que você executa o desafio. \n\nCrie uma função que coleta néctar apenas das
+        flores roxas que possuem néctar."
+      2-3 Bee Functions 2: "Funções são blocos de código que realizam uma tarefa.
+        \n\nUse a função \"obtenha 5\" para obter 5 néctares por vez."
+      2-3 Bee Functions 4: "A função \"mova e obtenha néctar\" vira a abelha, coleta
+        néctar, e então retorna a abelha para onde ela começou. \n\nUse a função para
+        coletar todo o néctar."
       2-3 Bee Functions Assessment 1: "**Avaliação:** Use a função dada para coletar
         o néctar de cada flor."
       2-3 Bee Functions Assessment 2: "**Avaliação:** Crie uma função para virar,
@@ -237,6 +263,10 @@ pt-BR:
         Você consegue coletar todo o néctar usando o menor número possível de blocos?
       2-3 Bee Loops 7: "Que lindo campo florido!  \n\nAjude a abelha a visitar cada
         flor. \n\nVocê consegue achar uma maneira de fazer isso com menos de 7 blocos?"
+      2-3 Bee Loops 8: "Essas flores roxas têm uma quantidade diferente de néctar
+        a cada vez que você executa o desafio. \n\nUse o laço \"enquanto houver néctar\"
+        para coletar todo o néctar.\n\nEsse laço será executado enquanto a condição
+        for verdadeira, neste caso, enquanto `néctar > 0`."
       2-3 Bee Loops Assessment 1: 'Avaliação: Use um laço `enquanto` para coletar
         todo o néctar dessas flores.'
       2-3 Maze 1: "Você pode me ajudar a pegar o porco malvado? \n\nJunte alguns blocos
@@ -287,16 +317,31 @@ pt-BR:
         equilátero. Cada lado tem 300 pixels."
       4-5 Artist Free Draw 1: Desenho live! Desenhe o que você estiver inspirado para
         criar.
+      4-5 Artist Patterns 1: |-
+        Desenhe esse quadrado usando um laço.
+
+        Cada lado tem 20 pixels de comprimento.
       4-5 Artist Patterns 10: "O código desenha duas fileiras de hexágonos - repita
         todo o código 4 vezes para desenhar a colmeia inteira. \n\nVocê vai precisar
         recuar 120 pixels no laço mais externo para garantir que o artista não desenhe
         fora da tela."
       4-5 Artist Patterns 11: Quantas vezes você precisa repetir isso para desenhar
         um semicírculo?
+      4-5 Artist Patterns 12: |-
+        Se você criar outro laço como este, mas virar para a esquerda ao invés da direita, o que acontece?
+
+        Você consegue repetir tudo isso para desenhar essa onda?
+      4-5 Artist Patterns 13: |-
+        Agora vamos repetir tudo isso quatro vezes para criar esta moldura. Preste atenção nos cantos - você não pode simplesmente virar 90 graus!
+
+        Se repetir uma ação de virar 3 graus 60 vezes faz um semicírculo, qual desses blocos de código vai criar um outro quarto de círculo para os cantos?
       4-5 Artist Patterns 2: "Se você colocar seu laço do quadrado dentro de outro
         laço, o chamamos de laço aninhado. \n\nO que você precisa adicionar como um
         laço externo para garantir que todos os 15 quadrados fiquem próximos um dos
         outros?"
+      4-5 Artist Patterns 3: |-
+        Agora, vamos nos aprofundar mais um nível! Aninhamos todo o bloco de código dentro de outro laço, mas você precisa posicionar o artista no lugar para desenhar a próxima reta. Qual desses blocos de código você
+        pode colocar no final do laço mais externo para desenhar a grade completa?
       4-5 Artist Patterns 4: |-
         Este diamante tem lados de 50 pixels e ângulos de 120 e 60 graus.
 
@@ -312,14 +357,53 @@ pt-BR:
         agora, quão longe o artista deve ir no segundo "pule para trás"?
       4-5 Artist Patterns 8: Use um laço para desenhar este hexágono com lados de
         40 pixels e ângulos de 60 graus.
+      4-5 Artist Patterns 9: "Agora repita o código 3 vezes e desenhe a fileira inteira.
+        \n\nCada hexágono tem 80 pixels de largura entre o pontos mais à esquerda
+        e mais à direita."
       4-5 Artist Patterns 9.5: "Vamos repetir este código para desenhar duas linhas
         de hexágonos. \n\nPerceba que nossa segunda linha está deslocada para a direita."
       4-5 Artist Patterns Free Play: Atividade livre - tente criar seu próprio padrão!
+      4-5 Bee Conditionals 1: "Esta nuvem está tapando minha visão! \n\nVeja se há
+        uma flor atrás da nuvem, e somente colete néctar se houver uma flor. Cuidado,
+        as coisas podem mudar!"
+      4-5 Bee Conditionals 2: "Mais nuvens! \n\nProcure atrás de todas as nuvens para
+        ver se elas escondem alguma flor antes de coletar o néctar. \n\nLembre-se:
+        Nem todas as nuvens escondem a mesma coisa!"
       4-5 Bee Conditionals 4: "As vezes esta nuvem esconde uma flor, e outras vezes
         uma colmeia! \n\nUse o bloco `se/senão` para coletar néctar apenas se for
         uma flor. \nSenão para produzir mel (porque é uma colmeia)."
+      4-5 Bee Conditionals 5: |-
+        Vai haver ou uma flor ou uma colmeia atrás de cada uma destas nuvens!
+
+        Use o bloco `se/senão` para coletar néctar se houver uma flor.
+        Se não, produza mel (porque existe uma colmeia).
+      4-5 Bee Conditionals 6: "Eu não tenho certeza de quanto néctar esta flor possui,
+        mas eu sei que ela tem 1, 2 ou 3 unidades de néctar.\n\nCombine os blocos
+        condicionais (`se` e/ou `se/senão`) para coletar somente a quantidade de néctar
+        que cada flor tiver. \n\nLembre-se, a quantidade de néctar pode mudar a cada
+        vez que você executar o desafio!"
+      4-5 Bee Conditionals 7: |-
+        Estas flores podem ter 3, 2 ou 1 néctar.
+
+        Complete a função `verifique a flor roxa` e use-a para coletar todos os néctares das flores.
+      4-5 Bee Conditionals 8: "Escreva a função `verifique flor e produza mel`. \n\nSua
+        função deve verificar se a flor roxa possui 3, 2, ou 1 unidade de néctar e
+        coletar todas. Então, avance à frente e produza mel."
+      4-5 Bee Conditionals Assessment 1: "**Avaliação:** Esta nuvem está ou escondendo
+        uma flor com um néctar ou uma colmeia que precisa de um mel. \n\nComplete
+        a função `colete néctar ou produza mel`, e então use-a para coletar o néctar
+        ou o mel. "
+      4-5 Bee Debugging 1: "Estes blocos estão realmente me incomodando. \n\nVocê
+        pode consertá-los?"
+      4-5 Bee Debugging 6: "A flor roxa tem uma quantidade diferente de néctar a cada
+        vez que você executa o desafio. \n\nCorrija os blocos para coletar todo o
+        néctar da flor a cada vez."
       4-5 Bee Debugging Assessment 1: "**Avaliação:** conserte o código."
       4-5 Bee Nested Loops 2: "Colete todo o néctar de cada flor.\nUse um loop aninhado. "
+      4-5 Bee Nested Loops 4: "Colete todo o néctar de cada flor e faça mel na colmeia.
+        \n\nUse um laço aninhado. "
+      4-5 Bee Nested Loops Assessment 1: "**Avaliação:** Colete todo o néctar e produza
+        todo o mel usando laços."
       4-5 Maze 7: "Leve o zumbi até o girassol sem demora! \n\nVocê consegue resolver
         o desafio com menos de 11 blocos?"
       4-5 Maze 9: |-
@@ -329,6 +413,32 @@ pt-BR:
         Use o novo bloco `repita até` para resolver este desafio com o menor número possível de comandos.
       4-5 Maze Assessment 1: "**Avaliação:** chegue até o girassol usando o menor
         número possível de blocos."
+      4-5 Maze Conditionals 1: Use o bloco `repita até` para levar o zumbi até o girassol.
+      4-5 Maze Conditionals 10: "Você pode adicionar apenas 3 blocos para ajudar o
+        zumbi a resolver um labirinto mais complexo? \n\nSe fizer isso certo, ele
+        poderá andar em qualquer caminho com curvas, não importa o tamanho!"
+      4-5 Maze Conditionals 2: Use o bloco `repita até` para levar o zumbi até o girassol.
+      4-5 Maze Conditionals 3: 'Use o bloco `se` para me ajudar a decidir quando virar. '
+      4-5 Maze Conditionals 4: Ok, resolva este desafio da mesma forma que resolveu
+        o último, mas você precisa se lembrar como usou os blocos `se` e `repita até`
+        juntos.
+      4-5 Maze Conditionals 5: "\"Mim querer girassol!\" \n\nUse um bloco \"se\" para
+        levar o zumbi até o girassol com o menor número de blocos possível."
+      4-5 Maze Conditionals 6: |-
+        "Mim comer girassol!"
+
+        Use um bloco `se` para levar o zumbi até o girassol com o menor número de blocos possível.
+      4-5 Maze Conditionals 7: A solução deste desafio não é muito diferente, mas
+        fique de olho nas carnívoras!
+      4-5 Maze Conditionals 8: "O bloco `se/senão` verifica uma condição e, em seguida,
+        faz uma coisa OU outra. \n\nUse este novo bloco para me levar até o girassol."
+      4-5 Maze Conditionals 9: |-
+        Mais um desafio com o bloco `se/senão`!
+
+        Faça o caminho com seu dedo para ver se consegue descobrir a solução na sua primeira tentativa.
+      4-5 Maze Conditionals Assessment 1: "**Avaliação:** use um bloco `repita até`
+        e um bloco `se/senão` para me levar até o girassol com o menor número de blocos
+        possível."
       4-5 Nested Loops 1: 'Complete o código para desenhar esses triângulos. O primeiro
         já está feito pra você. Dica: 3 triângulos em uma rotação de 360 graus.'
       4-5 Nested Loops 11: "Você pode desenhar esses 10 quadrados desta calçada usando
@@ -336,12 +446,30 @@ pt-BR:
       4-5 Nested Loops 12: Você pode desenhar esses 36 triângulos usando um laço aninhado?
       4-5 Nested Loops 2: "Agora, aninhe esse laço dentro de outro laço para desenhar
         10 triângulos. \nIsso se chama laço \"aninhado\".  "
+      4-5 Nested Loops 3: |-
+        Crie um sol aninhando o código inicial em outro laço.
+
+        Para conseguir este desenho legal com um centro vazio, você terá que dar um pulo para a frente do tamanho do triângulo antes de virar.
       4-5 Nested Loops 5: Repita o código dado para criar um moinho de vento.
       4-5 Nested Loops 6: Você pode desenhar um hexágono repetindo o código do triângulo?
+      4-5 Nested Loops 7: "Repita esse desenho 10 vezes. \n\nQuanto você precisa virar
+        a cada repetição?"
+      4-5 Nested Loops 8: "Repita essa forma 6 vezes. \n\nQuanto você precisa virar
+        a cada repetição? "
       4-5 Nested Loops 9: Desenhe o dente na boca do crocodilo!
       4-5 Nested Loops Assessment 1: |-
         **Avaliação**: use um laço aninhado para
         completar o desenho.
+      4-5 While Loops 1: Mova-me para o buraco e preencha-o com duas pás cheias de
+        terra, usando o bloco `preencha`.
+      4-5 While Loops 2: Mova-me para o monte de terra e remova-o com 5 pás, usando
+        o bloco `remova 1`.
+      4-5 While Loops 3: "Use o menor número possível de blocos para completar este
+        desafio! \n\nMova-me para o monte e remova toda a terra, então mova-me para
+        o buraco e preencha-o completamente."
+      4-5 While Loops 4: "Uau, olhe para isso!\n\nEu não sei de quantas pás cheias
+        de terra esse buraco precisa.\\\nVocê consegue escrever um programa que fique
+        usando o bloco `preencha` até que o solo fique nivelado?  "
       Alien Defender: 'Ideia de Projeto: Construa um jogo de defesa no Laboratório!'
       AppLab Intro 7 - Change Screen Color: "<div style=\"float:right\">\n\\t<img
         src=\"https://images.code.org/bf9b1fb57751fa90c9b786339914ad70-image-1508521068798.34.54
@@ -492,6 +620,18 @@ pt-BR:
 
         -   Como você acompanhou o processo de solução de problemas na última aula?
         -   Como você poderia usar este processo em um problema do seu dia a dia?
+      CSD U1 - PixFilter Filter Intro: |-
+        # Filtragem de pixels
+
+        Se você já usou o Instagram, provavelmente já viu um filtro de imagem. Os filtros de imagem são lidos em cada pixel, processados de alguma maneira e retornam o pixel filtrado. Nesta ferramenta, começaremos a filtrar apenas um único pixel antes de passar para uma imagem completa.
+
+        # Faça isso
+
+        -   Tente alterar as listas suspensas de cores na seção Filtro
+        -   Clique na linha superior das lâmpadas na seção Diagrama para ver como o filtro converterá a entrada (lâmpadas superiores) na saída (lâmpadas inferiores)
+        -   Veja como os números na seção Binário refletem alterações nas cores
+        -   Com base em como os bits mudam, você pode formular o que a substituição está fazendo? Converse com seu parceiro e veja se você consegue descobrir.
+        -   Complete a tabela Nível 2 no seu Guia de atividades
       CSD U2 CSS explore CSS: |-
         <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
         <details>
@@ -1594,6 +1734,48 @@ pt-BR:
         # Imagens
 
         Uma página da web Cachorro X Gato foi iniciada para você. A imagem do cachorro já foi adicionada à página abaixo. Use uma tag de imagem para adicionar a imagem `cat.jpeg` à página abaixo do cabeçalho do gato.
+      CSD U2 Image Tag 1_2018: |-
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+        <details>
+
+        <summary>
+        <strong>Como eu adiciono imagens?</strong>
+        </summary>
+
+        A tag `<img>`ter permite mostrar imagens em uma página web. <br><br>
+
+        Example:
+
+        <pre>&lt;img src="dog.png" alt="cachorro pulando"/&gt;</pre><br><br>
+
+        Para dizer ao navegador qual arquivo utilizar,  uma informação extra, chamado de **atributo**, é adicionado à tag \<img> dentro dos sinais de maior/menor. O atributo `src` significa **s**ou**rc**e (fonte) e diz o nome da imagem. Os nomes dos arquivos de imagem incluem extensões para dizer al computador que tipo de imagem está sendo utilizada. Extensões comuns são .jpg, .jpeg, .png. <br><br>
+
+        Em adição ao atributo src, elementos de imagem também possuem o atributo `alt` para descrever a imagem. Isso é um caso importante se a imagem não carregar ou para pessoas que possuem problema de vista. <br><br>
+
+        Uma tag `<img>` é um exemplo de **tag auto-fechante** pois começa e é fechada na mesma tag. Para marcar isso, nós colocamos o `/` que normalmente é utilizado para fechar uma tag no final de uma tag imagem.
+
+        </details>
+        <details>
+        <summary>
+        <strong>Por que uma tag imagem não possui uma tag de fechamento?</strong>
+        </summary>
+        Uma tag imagem não precisa de uma tag de fechamento pois não possui nenhum conteúdo de texto que deve ser envolvido em tags. O conteúdo mostrado na tela é especificado através de atributos de tags.
+        </details>
+        <details>
+        <summary>
+        <strong>O que é um atributo?</strong>
+        </summary>
+
+        Atributos são informações extras incluídas em uma tag. Atributos possuem nomes e valores. O nome informa qual o tipo de informação está sendo informada e o valor da a respectiva informação a essa tag.
+
+        Por exemplo as tags \<img> possuem dois atributos, src e alt. src especifica o nome do arquivo de imagem e diz al navegador em texto legível o que a imagem é.
+
+        </details>
+        </div>
+
+        # Images
+
+        Uma página web de Cães vs Gatos foi iniciada para você. A imagem do cachorro já foi adicionada à página abaixo. Utilize uma tag de imagem para adicionar a imagem `gato.jpeg` na página abaixo do título gato.
       CSD U2 Image Tag 1_2019: |-
         <div class="no-pullthrough" style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px">
         <details>
@@ -9427,6 +9609,28 @@ pt-BR:
 
         -   Use `numeroAleatório()` para o parâmetro Y da elipse, de forma que o círculo também seja desenhado em uma posição Y aleatória.
         -   Enquanto seu círculo estiver aparecendo em posições aleatórias X e Y, você pode seguir em frente.
+      CSD U3 Random random ellipse2_2018: |-
+        <img src="https://images.code.org/8306a9fd01470ac8582cf4374dde7033-image-1520403513967.17.40 PM.png" style="float:right;height:150px">
+
+        # Números aleatórios
+
+        Aqui está o mesmo sol da última vez. No momento, apenas a coordenada x é aleatória, mas você também pode tornar a coordenada y aleatória.
+
+        # Faça isso
+
+        -   Use `numeroAleatorio()` para o parâmetro Y da elipse, de forma que o círculo também seja desenhado em uma posição Y aleatória.
+        -   Enquanto seu círculo estiver aparecendo em posições aleatórias X e Y, você pode seguir em frente.
+      CSD U3 Random random ellipse2_2018_2019: |-
+        <img src="https://images.code.org/8306a9fd01470ac8582cf4374dde7033-image-1520403513967.17.40 PM.png" style="float:right;height:150px">
+
+        # Números aleatórios
+
+        Aqui está o mesmo sol da última vez. No momento, apenas a coordenada x é aleatória, mas você também pode tornar a coordenada y aleatória.
+
+        # Faça isso
+
+        -   Use `numeroAleatorio()` para o parâmetro Y da elipse, de forma que o círculo também seja desenhado em uma posição Y aleatória.
+        -   Enquanto seu círculo estiver aparecendo em posições aleatórias X e Y, você pode seguir em frente.
       CSD U3 Random random ellipse_2018: |-
         # Números aleatórios
 
@@ -11901,6 +12105,48 @@ pt-BR:
         -   Veja o código que define a cor. ([Mostre-me onde] [0])
         -   Mude a cor de azul para amarelo.
         -   Adicione um novo quadrado arrastando um bloco `rect` para a área do código abaixo do comando preencher ([Mostre-me onde] [1]). O novo quadrado pode ir a qualquer local na tela que você quiser.
+      CSD U3 finishing touches: |-
+        # Toques finais
+
+        Agora que você tem a base para o seu jogo, é hora de adicionar alguns toques finais.
+
+        Para tornar seu jogo ainda melhor, tente fazer pelo menos duas melhorias nele. Você pode usar a lista abaixo para ajudá-lo ou pode criar suas próprias melhorias que gostaria de fazer.
+
+        -   Encontre uma maneira de impedir que seu player saia das bordas da tela.
+        -   Adicione um item diferente para o seu jogador coletar ou evitar que valha valores de pontos diferentes.
+        -   Faça uma variável para acompanhar quantas vidas seu jogador tem, e então termine o jogo quando a vida acabar.
+        -   Adicione sprites que se movem no fundo do seu jogo.
+        -   Faça outro histórico para mudar para quando a pontuação for ainda maior ou quando o jogo terminar.
+        -   Dê ao seu jogo um jeito de terminar. Os possíveis eventos para terminar o seu jogo podem ser a pontuação atingir um determinado valor ou a quantidade de vidas para manter o jogo a decorrer.
+        -   Se o seu jogo tiver plataformas, tente fazer com que os objetos do seu jogo interajam com essas plataformas de alguma forma.
+      CSD U3 finishing touches_2018: |-
+        # Toques finais
+
+        Agora que você tem a base para o seu jogo, é hora de adicionar alguns toques finais.
+
+        Para tornar seu jogo ainda melhor, tente fazer pelo menos duas melhorias nele. Você pode usar a lista abaixo para ajudá-lo ou pode criar suas próprias melhorias que gostaria de fazer.
+
+        -   Encontre uma maneira de impedir que seu player saia das bordas da tela.
+        -   Adicione um item diferente para o seu jogador coletar ou evitar que valha valores de pontos diferentes.
+        -   Faça uma variável para acompanhar quantas vidas seu jogador tem, e então termine o jogo quando a vida acabar.
+        -   Adicione sprites que se movem no fundo do seu jogo.
+        -   Faça outro histórico para mudar para quando a pontuação for ainda maior ou quando o jogo terminar.
+        -   Dê ao seu jogo um jeito de terminar. Os possíveis eventos para terminar o seu jogo podem ser a pontuação atingir um determinado valor ou a quantidade de vidas para manter o jogo a decorrer.
+        -   Se o seu jogo tiver plataformas, tente fazer com que os objetos do seu jogo interajam com essas plataformas de alguma forma.
+      CSD U3 finishing touches_2019: |-
+        # Toques finais
+
+        Agora que você tem a base para o seu jogo, é hora de adicionar alguns toques finais.
+
+        Para tornar seu jogo ainda melhor, tente fazer pelo menos duas melhorias nele. Você pode usar a lista abaixo para ajudá-lo ou pode criar suas próprias melhorias que gostaria de fazer.
+
+        -   Encontre uma maneira de impedir que seu player saia das bordas da tela.
+        -   Adicione um item diferente para o seu jogador coletar ou evitar que valha valores de pontos diferentes.
+        -   Faça uma variável para acompanhar quantas vidas seu jogador tem, e então termine o jogo quando a vida acabar.
+        -   Adicione sprites que se movem no fundo do seu jogo.
+        -   Faça outro histórico para mudar para quando a pontuação for ainda maior ou quando o jogo terminar.
+        -   Dê ao seu jogo um jeito de terminar. Os possíveis eventos para terminar o seu jogo podem ser a pontuação atingir um determinado valor ou a quantidade de vidas para manter o jogo a decorrer.
+        -   Se o seu jogo tiver plataformas, tente fazer com que os objetos do seu jogo interajam com essas plataformas de alguma forma.
       CSD U3 function video: |-
         ## Perguntas a considerar
 
@@ -11908,6 +12154,51 @@ pt-BR:
             -   Que código teria feito parte da **definição** da função?
             -   Quando você teria **chamado** a função?
             -   Que nome você teria dado a ela?
+      CSD U3 game animations: |-
+        # Crie suas animações
+
+        Em seguida, você criará suas animações na guia de animação. Não se esqueça de fazer várias animações se você quiser que seu sprite mude de aparência de acordo com a sua movimentação.
+      CSD U3 game animations_2018: |-
+        # Crie suas animações
+
+        Em seguida, você criará suas animações na guia de animação. Não se esqueça de fazer várias animações se você quiser que seu sprite mude de aparência de acordo com a sua movimentação.
+      CSD U3 game animations_2019: |-
+        # Crie suas animações
+
+        Em seguida, você criará suas animações na guia de animação. Não se esqueça de fazer várias animações se você quiser que seu sprite mude de aparência de acordo com a sua movimentação.
+      CSD U3 game backgrounds: |-
+        # Crie seus Fundos
+
+        Em seguida, você criará todas as funções de plano de fundo necessárias para o seu jogo. Alguns jogos têm apenas um plano de fundo, e outros têm mais de um que é escolhido de acordo com a pontuação do usuário ou outro aspecto do jogo. Você precisará criar uma função para cada fundo separado em seu jogo. Você vai escrever o código para escolher o fundo correto no próximo nível.
+
+        -   [Mostre-me o bloco para criar uma nova função] [0]
+        -   [Mostre-me a área no código para colocar minha função] [1]
+
+        Depois de criar suas funções, teste-as chamando-as dentro do laço de repetição de desenho, um segundo por teste.
+
+        -   [Mostre-me o bloco para chamar minha função] [2]
+      CSD U3 game backgrounds_2018: |-
+        # Crie seus Fundos
+
+        Em seguida, você criará todas as funções de plano de fundo necessárias para o seu jogo. Alguns jogos têm apenas um plano de fundo, e outros têm mais de um que é escolhido de acordo com a pontuação do usuário ou outro aspecto do jogo. Você precisará criar uma função para cada fundo separado em seu jogo. Você vai escrever o código para escolher o fundo correto no próximo nível.
+
+        -   [Mostre-me o bloco para criar uma nova função] [0]
+        -   [Mostre-me a área no código para colocar minha função] [1]
+
+        Depois de criar suas funções, teste-as chamando-as dentro do laço de repetição de desenho, um segundo por teste.
+
+        -   [Mostre-me o bloco para chamar minha função] [2]
+      CSD U3 game backgrounds_2019: |-
+        # Crie seus Fundos
+
+        Em seguida, você criará todas as funções de plano de fundo necessárias para o seu jogo. Alguns jogos têm apenas um plano de fundo, e outros têm mais de um que é escolhido de acordo com a pontuação do usuário ou outro aspecto do jogo. Você precisará criar uma função para cada fundo separado em seu jogo. Você vai escrever o código para escolher o fundo correto no próximo nível.
+
+        -   [Mostre-me o bloco para criar uma nova função] [0]
+        -   [Mostre-me a área no código para colocar minha função] [1]
+
+        Depois de criar suas funções, teste-as chamando-as dentro do laço de repetição de desenho, um segundo por teste.
+
+        -   [Mostre-me o bloco para chamar minha função] [2]
       CSD U3 game choose background: |-
         # Escolha seus Fundos
 
@@ -11926,6 +12217,19 @@ pt-BR:
         Agora que você tem os fundos necessários, você escreverá o código para escolher o plano de fundo correto. Você viu isso em [Lição 19 Nível 11](../../19/puzzle/11).
 
         Depois de escrever o código, teste-o alterando o valor inicial de suas variáveis e certificando-se de que o plano de fundo correto apareça.
+      CSD U3 game create sprites: |-
+        # Crie seus Sprites
+
+        Em seguida, você criará seus sprites e dará a eles propriedades iniciais na área "Criar Sprites" do seu código. Para cada sprite você deve:
+
+        -   Crie o sprite no lugar correto na tela
+        -   Defina sua animação (ou cor e tamanho)
+        -   Defina sua velocidade e velocidade de rotação, se necessário
+        -   Defina seu colisor e bounciness, se necessário
+
+        Depois de criar cada sprite, teste-o antes de fazer o próximo. Se o seu sprite começar a partir da tela, primeiro coloque-o na tela para testá-lo, e mova-o de volta para fora da tela, uma vez que você saiba que está correto.
+
+        Se sua posição de sprites precisar ser redefinida posteriormente no seu jogo, é uma boa idéia fazer uma função que defina a posição desse sprite que você pode usar novamente mais tarde.
       CSD U3 game create sprites_2018: |-
         # Crie seus Sprites
 
@@ -11952,6 +12256,99 @@ pt-BR:
         Depois de criar cada sprite, teste-o antes de fazer o próximo. Se o seu sprite começar a partir da tela, primeiro coloque-o na tela para testá-lo, e mova-o de volta para fora da tela, uma vez que você saiba que está correto.
 
         Se a posição do seu sprite precisar ser resetada posteriormente no seu jogo, é uma boa idéia fazer uma função que defina a posição desse sprite que você pode usar novamente mais tarde.
+      CSD U3 game display boards: |-
+        # Placas de exibição
+
+        Agora que seus planos de fundo estão funcionando, você pode adicionar suas placas de exibição. A maioria dos jogos tem um placar, mas você também pode querer exibir informações sobre o nível do jogador ou a vida restante. Veja [Lição 16 Desafio 9] [0] para um exemplo de como fazer um placar.
+
+        Para cada quadro de exibição:
+
+        -   Crie uma função para exibir as informações
+        -   Chame a função no loop de desenho
+
+        Certifique-se de testar suas placas alterando o valor inicial de suas variáveis e certificando-se de que a placa também muda quando você executar o código.
+      CSD U3 game display boards_2018: |-
+        # Placas de exibição
+
+        Agora que seus planos de fundo estão funcionando, você pode adicionar suas placas de exibição. A maioria dos jogos tem um placar, mas você também pode querer exibir informações sobre o nível do jogador ou a vida restante. Veja [Lição 16 Desafio 9] [0] para um exemplo de como fazer um placar.
+
+        Para cada quadro de exibição:
+
+        -   Crie uma função para exibir as informações
+        -   Chame a função no loop de desenho
+
+        Certifique-se de testar suas placas alterando o valor inicial de suas variáveis e certificando-se de que a placa também muda quando você executar o código.
+      CSD U3 game display boards_2019: |-
+        # Placas de exibição
+
+        Agora que seus planos de fundo estão funcionando, você pode adicionar suas placas de exibição. A maioria dos jogos tem um placar, mas você também pode querer exibir informações sobre o nível do jogador ou a vida restante. Veja [Lição 16 Desafio 9] [0] para um exemplo de como fazer um placar.
+
+        Para cada quadro de exibição:
+
+        -   Crie uma função para exibir as informações
+        -   Chame a função no loop de desenho
+
+        Certifique-se de testar suas placas alterando o valor inicial de suas variáveis e certificando-se de que a placa também muda quando você executar o código.
+      CSD U3 game interactions: |-
+        # Interações do Sprite
+
+        O último passo é criar as funções que fazem seus sprites interagirem da maneira correta. Você precisará de uma função para cada tipo de interação de sprite. Você pode usar o `collectItems` em [Lição 21 Desafio 17] [0] e `displaceEnemies` em [Lição 20 Desafrio 15] [1] como exemplos.
+
+        Para cada interação:
+
+        -   Crie uma função na área de funções do seu código
+        -   Chame a função dentro do loop de desenho
+
+        Depois de fazer cada função, execute o código para testá-lo antes de fazer outro.
+      CSD U3 game interactions_2018: |-
+        # Interações do Sprite
+
+        O último passo é criar as funções que fazem seus sprites interagirem da maneira correta. Você precisará de uma função para cada tipo de interação de sprite. Você pode usar o `collectItems` em [Lição 21 Desafio 17] [0] e `displaceEnemies` em [Lição 20 Desafrio 15] [1] como exemplos.
+
+        Para cada interação:
+
+        -   Crie uma função na área de funções do seu código
+        -   Chame a função dentro do loop de desenho
+
+        Depois de fazer cada função, execute o código para testá-lo antes de fazer outro.
+      CSD U3 game interactions_2019: |-
+        # Interações do Sprite
+
+        O último passo é criar as funções que fazem seus sprites interagirem da maneira correta. Você precisará de uma função para cada tipo de interação de sprite. Você pode usar o `collectItems` em [Lição 21 Desafio 17] [0] e `displaceEnemies` em [Lição 20 Desafrio 15] [1] como exemplos.
+
+        Para cada interação:
+
+        -   Crie uma função na área de funções do seu código
+        -   Chame a função dentro do loop de desenho
+
+        Depois de fazer cada função, execute o código para testá-lo antes de fazer outro.
+      CSD U3 game sprite movement: |-
+        # Funções de movimento do Sprite
+
+        Agora você fará as funções que fazem o sprite se mover de diferentes maneiras quando o jogo é jogado. Alguns exemplos de funções que você escreveu são `loopPlatforms` em [Lição 21 Desafio 9] [0] e `playerFall` em [Lição 21 Desafio 14] [1].
+
+        Para cada movimento:
+
+        -   Crie uma função que faça o sprite se mover dessa maneira
+        -   Chame a função dentro do loop de desenho
+      CSD U3 game sprite movement_2018: |-
+        # Funções de movimento do Sprite
+
+        Agora você fará as funções que fazem o sprite se mover de diferentes maneiras quando o jogo é jogado. Alguns exemplos de funções que você escreveu são `loopPlatforms` em [Lição 21 Desafio 9] [0] e `playerFall` em [Lição 21 Desafio 14] [1].
+
+        Para cada movimento:
+
+        -   Crie uma função que faça o sprite se mover dessa maneira
+        -   Chame a função dentro do loop de desenho
+      CSD U3 game sprite movement_2019: |-
+        # Funções de movimento do Sprite
+
+        Agora você fará as funções que fazem o sprite se mover de diferentes maneiras quando o jogo é jogado. Alguns exemplos de funções que você escreveu são `loopPlatforms` em [Lição 21 Desafio 9] [0] e `playerFall` em [Lição 21 Desafio 14] [1].
+
+        Para cada movimento:
+
+        -   Crie uma função que faça o sprite se mover dessa maneira
+        -   Chame a função dentro do loop de desenho
       CSD U3 game user controls: |-
         # Controles do usuário
 
@@ -11964,6 +12361,33 @@ pt-BR:
         # Controles do usuário
 
         Em seguida, você vai querer certificar-se de que seus controles de usuário estão funcionando. Crie uma função que faça seus sprites responderem aos controles do usuário, conforme definido em seu guia de projeto. Você pode usar a função em [Lição 20 Quebra-cabeça 13](../../20/puzzle/13) como exemplo.
+      CSD U3 game variables: |-
+        # Crie suas variáveis
+
+        Primeiro, você precisará criar todas as suas variáveis e colocá-las na área de variáveis do seu código.
+
+        -   [Mostre-me o bloco] [0]
+        -   [Mostre-me a área no código] [1]
+
+        Não se esqueça de que cada variável precisa de um rótulo (nome) e um valor inicial. Você pode alterar o valor da variável posteriormente no seu código.
+      CSD U3 game variables_2018: |-
+        # Crie suas variáveis
+
+        Primeiro, você precisará criar todas as suas variáveis e colocá-las na área de variáveis do seu código.
+
+        -   [Mostre-me o bloco] [0]
+        -   [Mostre-me a área no código] [1]
+
+        Não se esqueça de que cada variável precisa de um rótulo (nome) e um valor inicial. Você pode alterar o valor da variável posteriormente no seu código.
+      CSD U3 game variables_2019: |-
+        # Crie suas variáveis
+
+        Primeiro, você precisará criar todas as suas variáveis e colocá-las na área de variáveis do seu código.
+
+        -   [Mostre-me o bloco] [0]
+        -   [Mostre-me a área no código] [1]
+
+        Não se esqueça de que cada variável precisa de um rótulo (nome) e um valor inicial. Você pode alterar o valor da variável posteriormente no seu código.
       CSD U3 if else predict: Nível de Predição, veja o nível incluso para instruções.
       CSD U3 keydown conditional: |-
         # Mudando Sprites
@@ -12078,6 +12502,120 @@ pt-BR:
         -   Teste seu código, alterando a pontuação inicial para 100, e depois rodando o programa para ver se o fundo muda.
 
         _Desafio: Se você tiver um terceiro fundo, você pode clicar o sinal de mais na parte inferior do bloco `if`. Um outro espaço irá surgir para a função de seu terceiro fundo de tela, assim como um local para verificar novamente a pontuação._
+      CSD U3 platform challenge: |-
+        # Melhore seu jogo
+
+        Melhore seu jogo adicionando dois ou mais recursos que você viu nos dois últimos exemplos. Você pode usar a lista abaixo para ajudá-lo.
+
+        -   Escolha novas animações para o seu player, plataforma e itens.
+        -   Evite que o seu jogador saia do lado da tela.
+        -   Adicione um tipo diferente de item para o jogador coletar ou evitar.
+        -   Adicione uma variável que monitore quantas vidas o jogador tenha, e termine o jogo se o jogador acabar.
+        -   Faça a animação do seu jogador mudar de direção quando o jogador mudar de direção.
+        -   Mude o jogador para saltar somente quando estiver em uma plataforma.
+        -   Adicione outro plano de fundo e faça com que ele apareça quando a pontuação ficar ainda maior.
+        -   Faça seus itens interagirem com as plataformas de alguma forma.
+      CSD U3 platform challenge_2018: |-
+        # Melhore seu jogo
+
+        Melhore seu jogo adicionando dois ou mais recursos que você viu nos dois últimos exemplos. Você pode usar a lista abaixo para ajudá-lo.
+
+        -   Escolha novas animações para o seu player, plataforma e itens.
+        -   Evite que o seu jogador saia do lado da tela.
+        -   Adicione um tipo diferente de item para o jogador coletar ou evitar.
+        -   Adicione uma variável que monitore quantas vidas o jogador tenha, e termine o jogo se o jogador acabar.
+        -   Faça a animação do seu jogador mudar de direção quando o jogador mudar de direção.
+        -   Mude o jogador para saltar somente quando estiver em uma plataforma.
+        -   Adicione outro plano de fundo e faça com que ele apareça quando a pontuação ficar ainda maior.
+        -   Faça seus itens interagirem com as plataformas de alguma forma.
+      CSD U3 platform challenge_2019: |-
+        # Melhore seu jogo
+
+        Melhore seu jogo adicionando dois ou mais recursos que você viu nos dois últimos exemplos. Você pode usar a lista abaixo para ajudá-lo.
+
+        -   Escolha novas animações para o seu player, plataforma e itens.
+        -   Evite que o seu jogador saia do lado da tela.
+        -   Adicione um tipo diferente de item para o jogador coletar ou evitar.
+        -   Adicione uma variável que monitore quantas vidas o jogador tenha, e termine o jogo se o jogador acabar.
+        -   Faça a animação do seu jogador mudar de direção quando o jogador mudar de direção.
+        -   Mude o jogador para saltar somente quando estiver em uma plataforma.
+        -   Adicione outro plano de fundo e faça com que ele apareça quando a pontuação ficar ainda maior.
+        -   Faça seus itens interagirem com as plataformas de alguma forma.
+      CSD U3 platform items1: |-
+        # Criar um item
+
+        <img src="https://images.code.org/2cdb64a2e23e68c8a86296240642cd13-image-1476211650103.gif" style="float:right;">
+
+        Em seguida, você precisa adicionar os itens que caem da parte superior da tela. Estes se movem como as plataformas, mas mais rápido. Para tornar o jogo mais interessante, os itens começam em um local aleatório acima da tela. Para o jogo de amostra, a posição x do item é um número aleatório entre 50 e 350, e a posição y é um número aleatório entre -30 e -60.
+
+        # Faça isso
+
+        -   Use o bloco `criarSprite` para criar um item sprite na seção "criar sprites" do seu código.
+        -   Use o bloco `numeroAleatorio` dentro do seu bloco`criarSprite` para iniciar o item em uma posição x e y aleatória.
+        -   Use `definirAnimacao` e`velocidadeY` para dar ao seu sprite a imagem correta e fazê-la cair no topo da tela.
+        -   Execute o código para testar seu sprite.
+      CSD U3 platform items1_2018: |-
+        # Criar um item
+
+        <img src="https://images.code.org/2cdb64a2e23e68c8a86296240642cd13-image-1476211650103.gif" style="float:right;">
+
+        Em seguida, você precisa adicionar os itens que caem da parte superior da tela. Estes se movem como as plataformas, mas mais rápido. Para tornar o jogo mais interessante, os itens começam em um local aleatório acima da tela. Para o jogo de amostra, a posição x do item é um número aleatório entre 50 e 350, e a posição y é um número aleatório entre -30 e -60.
+
+        # Faça isso
+
+        -   Use o bloco `criarSprite` para criar um item sprite na seção "criar sprites" do seu código.
+        -   Use o bloco `numeroAleatorio` dentro do seu bloco`criarSprite` para iniciar o item em uma posição x e y aleatória.
+        -   Use `definirAnimacao` e`velocidadeY` para dar ao seu sprite a imagem correta e fazê-la cair no topo da tela.
+        -   Execute o código para testar seu sprite.
+      CSD U3 platform items1_2019: |-
+        # Criar um item
+
+        <img src="https://images.code.org/2cdb64a2e23e68c8a86296240642cd13-image-1476211650103.gif" style="float:right;">
+
+        Em seguida, você precisa adicionar os itens que caem da parte superior da tela. Estes se movem como as plataformas, mas mais rápido. Para tornar o jogo mais interessante, os itens começam em um local aleatório acima da tela. Para o jogo de amostra, a posição x do item é um número aleatório entre 50 e 350, e a posição y é um número aleatório entre -30 e -60.
+
+        # Faça isso
+
+        -   Use o bloco `criarSprite` para criar um item sprite na seção "criar sprites" do seu código.
+        -   Use o bloco `numeroAleatorio` dentro do seu bloco`criarSprite` para iniciar o item em uma posição x e y aleatória.
+        -   Use `definirAnimacao` e`velocidadeY` para dar ao seu sprite a imagem correta e fazê-la cair no topo da tela.
+        -   Execute o código para testar seu sprite.
+      CSD U3 platform items2: |-
+        # Laços de repetição no item
+
+        <img src="https://images.code.org/bf06ad06acbba65dfd48b63608a08c90-image-1476212006882.gif" style="float:right">
+
+        Agora que seu item está caindo, você pode adicionar código para voltar ao topo. Isso é semelhante ao que você fez para o sprite da plataforma, mas o sprite do item retornará para um local x e y aleatório quando for para o topo da tela.
+
+        # Faça isso
+
+        -   Crie uma função `iterarItens` que use um bloco`if` para verificar se o item sprite está fora da parte inferior da tela e, em seguida, envia o item de volta para uma posição x e y aleatória, da mesma forma que quando você criou o item sprite.
+        -   Chame a função dentro do loop de desenho.
+        -   Execute o código para testar seu sprite.
+      CSD U3 platform items2_2018: |-
+        # Laços de repetição no item
+
+        <img src="https://images.code.org/bf06ad06acbba65dfd48b63608a08c90-image-1476212006882.gif" style="float:right">
+
+        Agora que seu item está caindo, você pode adicionar código para voltar ao topo. Isso é semelhante ao que você fez para o sprite da plataforma, mas o sprite do item retornará para um local x e y aleatório quando for para o topo da tela.
+
+        # Faça isso
+
+        -   Crie uma função `iterarItens` que use um bloco`if` para verificar se o item sprite está fora da parte inferior da tela e, em seguida, envia o item de volta para uma posição x e y aleatória, da mesma forma que quando você criou o item sprite.
+        -   Chame a função dentro do loop de desenho.
+        -   Execute o código para testar seu sprite.
+      CSD U3 platform items2_2019: |-
+        # Laços de repetição no item
+
+        <img src="https://images.code.org/bf06ad06acbba65dfd48b63608a08c90-image-1476212006882.gif" style="float:right">
+
+        Agora que seu item está caindo, você pode adicionar código para voltar ao topo. Isso é semelhante ao que você fez para o sprite da plataforma, mas o sprite do item retornará para um local x e y aleatório quando for para o topo da tela.
+
+        # Faça isso
+
+        -   Crie uma função `iterarItens` que use um bloco`if` para verificar se o item sprite está fora da parte inferior da tela e, em seguida, envia o item de volta para uma posição x e y aleatória, da mesma forma que quando você criou o item sprite.
+        -   Chame a função dentro do loop de desenho.
+        -   Execute o código para testar seu sprite.
       CSD U3 platform items3: |-
         # Faça seu segundo item
 
@@ -12267,6 +12805,20 @@ pt-BR:
         -   Crie uma função `quedaDoJogador` que faz o sprite cair do topo da tela. O código dentro da função deve usar `velocidadeY` em um padrão de contador, assim como quando você fez a queda rock em [Lesson 17 Level 4] [0].
         -   Chame a função `quedaDoJogador` dentro do loop de desenho.
         -   Execute o código para testar seu sprite.
+      CSD U3 platform player2: "# Controles de Usuário\n\nA seguir, você deverá adicionar
+        controles de usuário para que você possa movimentar seu jogador. Seu jogador
+        precisa se mover à esquerda quando a seta à esquerda for pressionada, à direita
+        quando a seta à direita for pressionada, e pular quando a barra de espaços
+        for pressionada.\n\n# Faça Isto\n\n-   Crie uma nova função `controlPlayer`
+        na área de \"funções\" do seu código.\n-   Dentro da função `controlPlayer`,
+        use os blocos `if`, `keyDown`, e `sprite.x` para fazer seu jogador se mover
+        à esquerda e à esquerda conforme as teclas das setas. Veja exemplos em <a
+        href=\"/s/csd3-2017/stage/12/puzzle/7\" target=\"_blank\"> Lição 12 Quebra-cabeça
+        7 </a>. \n-   Dentro da função `controlPlayer`, use os blocos `if`, `keyDown`,
+        e `velocityY` para fazer seu jogador pular quando a seta para cima for pressionada.
+        Veja um exemplo em <a href=\"/s/csd3-2017/stage/15/puzzle/11\" target=\"_blank\">
+        Lição 15 Quebra-cabeça</a>.\n-   Chame a função `controlPlayer` dentro do
+        laço de desenho.\n-   Rode o jogo e teste seu código."
       CSD U3 platform player2_2019: "# Controles de Usuário\n\nA seguir, você deverá
         adicionar controles de usuário para que você possa movimentar seu jogador.
         Seu jogador precisa se mover à esquerda quando a seta à esquerda for pressionada,
@@ -12281,6 +12833,75 @@ pt-BR:
         um exemplo em <a href=\"../../15/puzzle/11\" target=\"_blank\">Lição 15 Quebra-cabeça</a>.\n-
         \  Chame a função `controlPlayer` dentro do laço de desenho.\n-   Rode o jogo
         e teste seu código."
+      CSD U3 platform player3: |-
+        # Interações do jogador
+
+        A última parte de fazer o seu jogo é programar as interações do jogador com os outros sprites. Primeiro, o seu jogador precisa pousar nas plataformas.
+
+        # Faça isso
+
+        -   Crie uma função `playerLands` e adicione-a à área de "funções " do seu código.
+        -   Dentro da função, use o bloco `collide` para que seu player possa pousar em ambas as plataformas.
+        -   Chame a função dentro do loop de desenho.
+        -   Execute o código para testar sua função.
+      CSD U3 platform player3_2018: |-
+        # Interações do jogador
+
+        A última parte de fazer o seu jogo é programar as interações do jogador com os outros sprites. Primeiro, o seu jogador precisa pousar nas plataformas.
+
+        # Faça isso
+
+        -   Crie uma função `playerLands` e adicione-a à área de "funções " do seu código.
+        -   Dentro da função, use o bloco `collide` para que seu player possa pousar em ambas as plataformas.
+        -   Chame a função dentro do loop de desenho.
+        -   Execute o código para testar sua função.
+      CSD U3 platform player3_2019: |-
+        # Interações do jogador
+
+        A última parte de fazer o seu jogo é programar as interações do jogador com os outros sprites. Primeiro, o seu jogador precisa pousar nas plataformas.
+
+        # Faça isso
+
+        -   Crie uma função `playerLands` e adicione-a à área de "funções " do seu código.
+        -   Dentro da função, use o bloco `collide` para que seu player possa pousar em ambas as plataformas.
+        -   Chame a função dentro do loop de desenho.
+        -   Execute o código para testar sua função.
+      CSD U3 platform player4: |-
+        # Coletar itens
+
+        Por último, você vai querer que o seu jogador colete os itens que caem do topo da tela.
+
+        # Faça isso
+
+        -   Crie uma função `collectItems` e adicione-a à área" functions "do seu código.
+        -   Use os blocos `if` e`isTouching` para alterar a posição x e y dos itens quando o jogador os tocar. Você pode olhar para a função `loopItem` para dicas sobre como redefinir a posição do item.
+        -   Dentro da sua declaração `if`, adicione um padrão de contador que irá aumentar a pontuação toda vez que o jogador tocar em um item. Veja [Lesson 16 Puzzle 9] [0] para um exemplo.
+        -   Chame a função dentro do loop de desenho, na área "update sprites" do seu código.
+        -   Execute o código para testar sua função.
+      CSD U3 platform player4_2018: |-
+        # Coletar itens
+
+        Por último, você vai querer que o seu jogador colete os itens que caem do topo da tela.
+
+        # Faça isso
+
+        -   Crie uma função `collectItems` e adicione-a à área" functions "do seu código.
+        -   Use os blocos `if` e`isTouching` para alterar a posição x e y dos itens quando o jogador os tocar. Você pode olhar para a função `loopItem` para dicas sobre como redefinir a posição do item.
+        -   Dentro da sua declaração `if`, adicione um padrão de contador que irá aumentar a pontuação toda vez que o jogador tocar em um item. Veja [Lesson 16 Puzzle 9] [0] para um exemplo.
+        -   Chame a função dentro do loop de desenho, na área "update sprites" do seu código.
+        -   Execute o código para testar sua função.
+      CSD U3 platform player4_2019: |-
+        # Coletar itens
+
+        Por último, você vai querer que o seu jogador colete os itens que caem do topo da tela.
+
+        # Faça isso
+
+        -   Crie uma função `collectItems` e adicione-a à área" functions "do seu código.
+        -   Use os blocos `if` e`isTouching` para alterar a posição x e y dos itens quando o jogador os tocar. Você pode olhar para a função `loopItem` para dicas sobre como redefinir a posição do item.
+        -   Dentro da sua declaração `if`, adicione um padrão de contador que irá aumentar a pontuação toda vez que o jogador tocar em um item. Veja [Lesson 16 Puzzle 9] [0] para um exemplo.
+        -   Chame a função dentro do loop de desenho, na área "update sprites" do seu código.
+        -   Execute o código para testar sua função.
       CSD U3 platform sample1: |-
         # Jumper de plataforma
 
@@ -13111,12 +13732,64 @@ pt-BR:
 
         -   Criar um manipulador de eventos para responder ao evento "dados" do sensor de som
         -   Mova o código existente para o manipulador de eventos
+      CSD U6 analog data_2018: |-
+        # Evento de dados
+
+        Cada um desses sensores analógicos emite um evento especial chamado "dado", que ocorre toda vez que novos dados chegam do sensor. Usando esse evento, você pode reescrever o primeiro programa em que trabalhou nesta lição para que ele seja atualizado continuamente.
+
+        # Faça isso
+
+        -   Criar um manipulador de eventos para responder ao evento "dado" do sensor de som
+        -   Mova o código existente para o manipulador de eventos
+      CSD U6 analog data_2019: |-
+        # Evento de dados
+
+        Cada um desses sensores analógicos emite um evento especial chamado "dado", que ocorre toda vez que novos dados chegam do sensor. Usando esse evento, você pode reescrever o primeiro programa em que trabalhou nesta lição para que ele seja atualizado continuamente.
+
+        # Faça isso
+
+        -   Criar um manipulador de eventos para responder ao evento "dado" do sensor de som
+        -   Mova o código existente para o manipulador de eventos
       CSD U6 arrays video: |-
         ## Perguntas a Considerar
 
         -   Quando uma matriz pode ser mais útil do que uma variável?
         -   Por que você sempre deve atribuir uma matriz a uma variável?
         -   Como você pode acessar os elementos em sua matriz?
+      CSD U6 board getters: |-
+        # Usando o Playground de Circuito
+
+        Você também pode usar caçadores e caçadores com o Circuito de Playground. Para esse nível, você precisará conectar sua placa.
+
+        Leia o código e preveja o que o programa fará, depois clique em "Executar" para testar sua previsão.
+      CSD U6 board getters_2018: |-
+        # Usando o Playground de Circuito
+
+        Você também pode usar caçadores e caçadores com o Circuito de Playground. Para esse nível, você precisará conectar sua placa.
+
+        Leia o código e preveja o que o programa fará, depois clique em "Executar" para testar sua previsão.
+      CSD U6 board getters_2019: |-
+        # Usando o Playground de Circuito
+
+        Você também pode usar caçadores e caçadores com o Circuito de Playground. Para esse nível, você precisará conectar sua placa.
+
+        Leia o código e preveja o que o programa fará, depois clique em "Executar" para testar sua previsão.
+      CSD U6 challenge motorcycle_2018: |-
+        # Desafio
+
+        Use este programa para experimentar um pouco mais sobre como obter e configurar propriedades. Algumas idéias que você pode tentar incluem:
+
+        -   Use o botão de alternância para alterar o movimento da motocicleta para subir e descer.
+        -   Use uma menu suspenso com nomes de cores para alterar a cor da motocicleta
+        -   Ligue a campainha ou o LED quando a motocicleta atingir a parte superior ou inferior da tela.
+      CSD U6 challenge motorcycle_2019: |-
+        # Desafio
+
+        Use este programa para experimentar um pouco mais sobre como obter e configurar propriedades. Algumas idéias que você pode tentar incluem:
+
+        -   Use o botão de alternância para alterar o movimento da motocicleta para subir e descer.
+        -   Use uma menu suspenso com nomes de cores para alterar a cor da motocicleta
+        -   Ligue a campainha ou o LED quando a motocicleta atingir a parte superior ou inferior da tela.
       CSD U6 change: |-
         # Mudança
 
@@ -13186,6 +13859,18 @@ pt-BR:
         # Debug: colorLeds
 
         Você pode depurar os valores do índice para que o arco-íris apareça no quadro, como na foto?
+      CSD U6 colorLeds debug_2018: |-
+        <img src="https://images.code.org/723f036c40ef2770426d5d437e69fcde-image-1527268321449.png" style="width:250px; float:right">
+
+        # Depurar: corLeds
+
+        Você pode depurar os valores do índice para que o arco-íris apareça no quadro como na figura?
+      CSD U6 colorLeds debug_2019: |-
+        <img src="https://images.code.org/723f036c40ef2770426d5d437e69fcde-image-1527268321449.png" style="width:250px; float:right">
+
+        # Depurar: corLeds
+
+        Você pode depurar os valores do índice para que o arco-íris apareça no quadro como na figura?
       CSD U6 create LED app: |-
         # Faça seu aplicativo - a tela
 
@@ -13492,6 +14177,32 @@ pt-BR:
         -   Quais manipuladores de eventos esse aplicativo usa?
         -   Quais elementos estão sendo alterados com código?
         -   Quais propriedades estão sendo alteradas quando você clica em um botão?
+      CSD U6 for loop led bonus 1_2018: |-
+        # Desafio: Adicionar mais botões
+
+        Estenda o programa adicionando mais botões que alteram o quadro para cores diferentes.
+
+        # Faça isso
+
+        Adicione seus novos botões no Modo Design e crie manipuladores de eventos para responder aos seus botões e alterar as cores dos LEDs.
+      CSD U6 for loop led bonus 2_2018: |-
+        # Desafio: Padrões de cores
+
+        Estenda o programa adicionando mais botões que criam diferentes padrões de luz.
+
+        # Faça isso
+
+        Adicione seus novos botões no Modo Design e crie manipuladores de eventos para responder aos seus botões e alterar as cores dos LEDs.
+
+        \_ Dica: Ao criar seus padrões, considere se uma função com parâmetros pode ajudar a simplificar seu programa.\_
+      CSD U6 for loop led bonus 3_2018: |-
+        # Desafio: Música
+
+        Use o que aprendeu na lição Fazendo Música para fazer o quadro tocar música quando as luzes mudarem.
+
+        # Faça isso
+
+        Crie algumas matrizes de notas para músicas diferentes e adicione código aos manipuladores de eventos para tocar sua música.
       CSD U6 for loop led color_2019: |-
         # Acrescente Cor
 
@@ -13531,6 +14242,24 @@ pt-BR:
         Neste ponto, você deve ter mais do seu programa no lugar. Agora você precisa adicionar os toques finais necessários e fazer um pequeno teste. Quando seu aplicativo estiver pronto, peça para seus colegas testarem. Veja se você pode encontrar algum bug, opções de design confusas ou recursos ausentes nos quais gostaria de trabalhar.
 
         Depois de concluir esta versão do seu programa, clique em Enviar para ativá-lo.
+      CSD U6 get toggle_2018: |-
+        # mudança
+
+        Este programa possui eventos que detectam três alterações diferentes: a chave seletora, o controle deslizante de intervalo e o controle deslizante de frequência. Como existem muitas coisas diferentes que fazem com que o LED e a campainha sejam redefinidos, ele usa funções para organizar o código.
+
+        # Faça isso
+
+        -   Leia a função `atualizarLED` para ver o que faz.
+        -   Adicione código ao `atualizarCampainha` para fazer com que a campainha ligue apenas quando a chave seletora estiver aberta.
+      CSD U6 get toggle_2019: |-
+        # mudança
+
+        Este programa possui eventos que detectam três alterações diferentes: a chave seletora, o controle deslizante de intervalo e o controle deslizante de frequência. Como existem muitas coisas diferentes que fazem com que o LED e a campainha sejam redefinidos, ele usa funções para organizar o código.
+
+        # Faça isso
+
+        -   Leia a função `atualizarLED` para ver o que faz.
+        -   Adicione código ao `atualizarCampainha` para fazer com que a campainha ligue apenas quando a chave seletora estiver aberta.
       CSD U6 getProperty Demo: |-
         # Atualizando Propriedades
 
@@ -13555,6 +14284,75 @@ pt-BR:
         para instruções)
       CSD U6 getProperty board predict_2019: Nível de Predição (veja o nível incluso
         para instruções)
+      CSD U6 getProperty dropdown: |-
+        # Dropdowns
+
+        As entradas de texto são boas quando você deseja que os usuários possam digitar tudo o que desejam, mas geralmente você deseja restringi-las a apenas algumas opções. Por exemplo, se você deseja que o usuário escolha uma cor, provavelmente deseja garantir que ele possa escolher apenas as cores que realmente funcionarão.
+
+        O menu suspenso fornecido com o ID "color\\ \_input" permite que o usuário escolha entre várias cores de plano de fundo. Quando o botão "Definir cor" é clicado, a tela muda para essa cor.
+
+        # Faça isso
+
+        -   Dentro do bloco de eventos, crie uma variável chamada `color` e atribua um valor a ela usando o bloco `getProperty`.
+                 \- Dica: você precisará usar a propriedade "value" para escolher o usuário.
+        -   Use o bloco `setProperty` para definir a propriedade "background-color" de "screen1" como sua variável `color`.
+                 \- Dica: certifique-se de digitar `color` sem aspas.
+        -   Teste seu programa escolhendo uma cor e clicando em "Definir cor".
+      CSD U6 getProperty dropdown_2018: |-
+        # Dropdowns
+
+        As entradas de texto são boas quando você deseja que os usuários possam digitar tudo o que desejam, mas geralmente você deseja restringi-las a apenas algumas opções. Por exemplo, se você deseja que o usuário escolha uma cor, provavelmente deseja garantir que ele possa escolher apenas as cores que realmente funcionarão.
+
+        O menu suspenso fornecido com o ID "color\\ \_input" permite que o usuário escolha entre várias cores de plano de fundo. Quando o botão "Definir cor" é clicado, a tela muda para essa cor.
+
+        # Faça isso
+
+        -   Dentro do bloco de eventos, crie uma variável chamada `color` e atribua um valor a ela usando o bloco `getProperty`.
+                 \- Dica: você precisará usar a propriedade "value" para escolher o usuário.
+        -   Use o bloco `setProperty` para definir a propriedade "background-color" de "screen1" como sua variável `color`.
+                 \- Dica: certifique-se de digitar `color` sem aspas.
+        -   Teste seu programa escolhendo uma cor e clicando em "Definir cor".
+      CSD U6 getProperty dropdown_2019: |-
+        # Dropdowns
+
+        As entradas de texto são boas quando você deseja que os usuários possam digitar tudo o que desejam, mas geralmente você deseja restringi-las a apenas algumas opções. Por exemplo, se você deseja que o usuário escolha uma cor, provavelmente deseja garantir que ele possa escolher apenas as cores que realmente funcionarão.
+
+        O menu suspenso fornecido com o ID "color\\ \_input" permite que o usuário escolha entre várias cores de plano de fundo. Quando o botão "Definir cor" é clicado, a tela muda para essa cor.
+
+        # Faça isso
+
+        -   Dentro do bloco de eventos, crie uma variável chamada `color` e atribua um valor a ela usando o bloco `getProperty`.
+                 \- Dica: você precisará usar a propriedade "value" para escolher o usuário.
+        -   Use o bloco `setProperty` para definir a propriedade "background-color" de "screen1" como sua variável `color`.
+                 \- Dica: certifique-se de digitar `color` sem aspas.
+        -   Teste seu programa escolhendo uma cor e clicando em "Definir cor".
+      CSD U6 getProperty input: |-
+        # getProperty e variáveis
+
+        Este programa usa a variável `name` para exibir o nome digitado em "name\\ \_input " quando o botão Enviar é clicado. Deve fazer o mesmo para \* friend\\ \_input \* e \* friend\\ \_output \*, mas falta um bloco.
+
+        # Faça isso
+
+        -   Leia o código e os comentários e execute o programa para ver como ele funciona. (Certifique-se de digitar seu nome e o nome do seu amigo antes de clicar em "Enviar".)
+        -   Use um bloco `getProperty` para armazenar a propriedade de texto de \* friend\\ \_input \* na variável" friend\\ \_name ". ([Mostre-me onde.] [0])
+      CSD U6 getProperty input_2018: |-
+        # getProperty e variáveis
+
+        Este programa usa a variável `name` para exibir o nome digitado em "name\\ \_input " quando o botão Enviar é clicado. Deve fazer o mesmo para \* friend\\ \_input \* e \* friend\\ \_output \*, mas falta um bloco.
+
+        # Faça isso
+
+        -   Leia o código e os comentários e execute o programa para ver como ele funciona. (Certifique-se de digitar seu nome e o nome do seu amigo antes de clicar em "Enviar".)
+        -   Use um bloco `getProperty` para armazenar a propriedade de texto de \* friend\\ \_input \* na variável" friend\\ \_name ". ([Mostre-me onde.] [0])
+      CSD U6 getProperty input_2019: |-
+        # getProperty e variáveis
+
+        Este programa usa a variável `name` para exibir o nome digitado em "name\\ \_input " quando o botão Enviar é clicado. Deve fazer o mesmo para \* friend\\ \_input \* e \* friend\\ \_output \*, mas falta um bloco.
+
+        # Faça isso
+
+        -   Leia o código e os comentários e execute o programa para ver como ele funciona. (Certifique-se de digitar seu nome e o nome do seu amigo antes de clicar em "Enviar".)
+        -   Use um bloco `getProperty` para armazenar a propriedade de texto de \* friend\\ \_input \* na variável" friend\\ \_name ". ([Mostre-me onde.] [0])
       CSD U6 getters debug: |-
         # LED e controlador de buzina
 
@@ -13617,6 +14415,44 @@ pt-BR:
       CSD U6 iter predict bubbles: "![](https://images.code.org/52f474adbbc3bdd87aaae407c9ebf588-image-1515690462464.png)"
       CSD U6 iter predict bubbles_2018: "![](https://images.code.org/52f474adbbc3bdd87aaae407c9ebf588-image-1515690462464.png)"
       CSD U6 iter predict bubbles_2019: "![](https://images.code.org/52f474adbbc3bdd87aaae407c9ebf588-image-1515690462464.png)"
+      CSD U6 light pattern challenge_2018: |-
+        # Desafio: Mais padrões
+
+        Adicione mais alguns padrões ao seu aplicativo. Encontre um parceiro e adicione seu padrão como opção. Certifique-se de colocar cada padrão em sua própria função.
+      CSD U6 light pattern challenge_2019: |-
+        # Desafio: Mais padrões
+
+        Adicione mais alguns padrões ao seu aplicativo. Encontre um parceiro e adicione seu padrão como opção. Certifique-se de colocar cada padrão em sua própria função.
+      CSD U6 light show predict: |-
+        # Faça um show de luzes
+
+        Este aplicativo permite que você faça um show de luzes com o LED.
+
+        Veja o código com seu parceiro e responda às seguintes perguntas:
+
+        -   O que esta linha de código faz: `setProperty("screen", "background-color", rgb(randomNumber(0,255), randomNumber(0,255), randomNumber(0,255)));`?
+
+        Depois de responder à pergunta, execute o código e clique nos botões para ver o que acontece.
+      CSD U6 light show predict_2018: |-
+        # Faça um show de luzes
+
+        Este aplicativo permite que você faça um show de luzes com o LED.
+
+        Veja o código com seu parceiro e responda às seguintes perguntas:
+
+        -   O que esta linha de código faz: `setProperty("screen", "background-color", rgb(randomNumber(0,255), randomNumber(0,255), randomNumber(0,255)));`?
+
+        Depois de responder à pergunta, execute o código e clique nos botões para ver o que acontece.
+      CSD U6 light show predict_2019: |-
+        # Faça um show de luzes
+
+        Este aplicativo permite que você faça um show de luzes com o LED.
+
+        Veja o código com seu parceiro e responda às seguintes perguntas:
+
+        -   O que esta linha de código faz: `setProperty("screen", "background-color", rgb(randomNumber(0,255), randomNumber(0,255), randomNumber(0,255)));`?
+
+        Depois de responder à pergunta, execute o código e clique nos botões para ver o que acontece.
       CSD U6 move motorcycle: |-
         # Movimento com propriedades
 
@@ -13655,6 +14491,40 @@ pt-BR:
         -   (Dica: você irá usar praticamente o mesmo código que existe na função `moveCloud0`)
         -   Chame sua nova função `moveCloud(name)` dentro do bloco do evento, uma vez para cada nome de nuvem.
         -   (Dica: isto é similar à forma como a função `loopCloud(name)` é chamada várias vezes)
+      CSD U6 params starchaser challenge 1_2018: |-
+        # Caçador de Estrelas
+
+        Agora que você tem um jogo em funcionamento, pode desafiar-se com alguns recursos diferentes.
+
+        # Faça isso
+
+        -   Inicie o usuário com 5 "vidas", e tire uma delas toda vez que o usuário tocar na estrela **errada**.
+        -   Faça uma tela final e mude para essa tela quando o usuário ficar sem vida.
+      CSD U6 params starchaser challenge 1_2019: |-
+        # Caçador de Estrelas
+
+        Agora que você tem um jogo em funcionamento, pode desafiar-se com alguns recursos diferentes.
+
+        # Faça isso
+
+        -   Inicie o usuário com 5 "vidas", e tire uma delas toda vez que o usuário tocar na estrela **errada**.
+        -   Faça uma tela final e mude para essa tela quando o usuário ficar sem vida.
+      CSD U6 params starchaser challenge 2_2018: |-
+        # Caçador de Estrelas
+
+        Agora que você tem um jogo em funcionamento, pode desafiar-se com alguns recursos diferentes.
+
+        # Faça isso
+
+        -   Faça o jogador voltar para o meio da tela quando o botão esquerdo for pressionado.
+      CSD U6 params starchaser challenge 2_2019: |-
+        # Caçador de Estrelas
+
+        Agora que você tem um jogo em funcionamento, pode desafiar-se com alguns recursos diferentes.
+
+        # Faça isso
+
+        -   Faça o jogador voltar para o meio da tela quando o botão esquerdo for pressionado.
       CSD U6 predict LED button: Previsão Integrada
       CSD U6 predict LED button_2018: Previsão Integrada
       CSD U6 predict LED button_2019: Previsão Integrada
@@ -13721,6 +14591,22 @@ pt-BR:
         -   Para o terceiro parâmetro, escreva seu nome entre aspas (o valor a ser definido)
 
         _Nota: removemos a guia "Modo de design" agora para que você possa praticar o trabalho com `definirPropriedade`, mas ela voltará mais tarde assim que criar seus próprios aplicativos._
+      CSD U6 setProperty hidden: |-
+        # Oculto
+
+        Os elementos de design têm uma propriedade chamada "hidden" que controla se o elemento deve aparecer na tela ou não. Vamos usar essa propriedade para criar um aplicativo de alarme. Observe que, quando o programa inicia, um botão está oculto e outro não.
+
+        Já configuramos um manipulador de eventos para o "triggerAlarmButton", que fará duas coisas quando clicado:
+
+        -   Altere a propriedade "text" de "statusLabel" para "on"
+        -   Defina a propriedade "hidden" de "stopAlarmButton" como `false` (o que significa que não deve ser oculto)
+
+        # Faça isso
+
+        -   Execute o programa e clique em "Trigger Alarm" para ver como funciona
+        -   Adicione código ao manipulador de eventos fornecido que oculta o "triggerAlarmButton"
+
+        _Nota: o botão "stopAlarmButton" já está na tela, mas como sua propriedade "oculta" está marcada como verdadeira, não é exibida quando o programa é iniciado._
       CSD U6 setProperty hidden 2: |-
         # Mostrando / Escondendo
 
@@ -13760,6 +14646,38 @@ pt-BR:
         -   Oculte o "stopAlarmButton"
 
         _Dica: "hidden" é uma propriedade booleana. Se nós usamos `falso` para exibir o botão, o que você deve usar para ocultá-lo novamente?_
+      CSD U6 setProperty hidden_2018: |-
+        # Oculto
+
+        Os elementos de design têm uma propriedade chamada "hidden" que controla se o elemento deve aparecer na tela ou não. Vamos usar essa propriedade para criar um aplicativo de alarme. Observe que, quando o programa inicia, um botão está oculto e outro não.
+
+        Já configuramos um manipulador de eventos para o "triggerAlarmButton", que fará duas coisas quando clicado:
+
+        -   Altere a propriedade "text" de "statusLabel" para "on"
+        -   Defina a propriedade "hidden" de "stopAlarmButton" como `false` (o que significa que não deve ser oculto)
+
+        # Faça isso
+
+        -   Execute o programa e clique em "Trigger Alarm" para ver como funciona
+        -   Adicione código ao manipulador de eventos fornecido que oculta o "triggerAlarmButton"
+
+        _Nota: o botão "stopAlarmButton" já está na tela, mas como sua propriedade "oculta" está marcada como verdadeira, não é exibida quando o programa é iniciado._
+      CSD U6 setProperty hidden_2019: |-
+        # Oculto
+
+        Os elementos de design têm uma propriedade chamada "hidden" que controla se o elemento deve aparecer na tela ou não. Vamos usar essa propriedade para criar um aplicativo de alarme. Observe que, quando o programa inicia, um botão está oculto e outro não.
+
+        Já configuramos um manipulador de eventos para o "triggerAlarmButton", que fará duas coisas quando clicado:
+
+        -   Altere a propriedade "text" de "statusLabel" para "on"
+        -   Defina a propriedade "hidden" de "stopAlarmButton" como `false` (o que significa que não deve ser oculto)
+
+        # Faça isso
+
+        -   Execute o programa e clique em "Trigger Alarm" para ver como funciona
+        -   Adicione código ao manipulador de eventos fornecido que oculta o "triggerAlarmButton"
+
+        _Nota: o botão "stopAlarmButton" já está na tela, mas como sua propriedade "oculta" está marcada como verdadeira, não é exibida quando o programa é iniciado._
       CSD U6 setProperty xy: |-
         # Alterando a posição
 
@@ -13800,6 +14718,42 @@ pt-BR:
         # Faça isso
 
         Nós fornecemos um bloco `onEvent` vazio que está assistindo a imagem de "sorriso". Dentro do bloco `onEvent`, use dois blocos`setProperty` para mover o sorriso para algum outro lugar (não importa onde esteja por enquanto). Teste seu programa executando-o e clicando no sorriso.
+      CSD U6 setProperty xy random: |-
+        <img src="https://images.code.org/67c6cc358b235e2c2ae39f3f72a3e0b1-image-1507326303839.gif" style="float:right; max-width: 150px; margin: 10px;">
+
+        # Randomização
+
+        Se mover no primeiro clique é bom, mas esse smiley seria ainda mais legal se ele se mudasse para algum lugar novo - a cada vez que clicamos. Felizmente, podemos usar o bloco `randomNumber` para fazer exatamente isso.
+
+        # Faça isso
+
+        Em vez de definir as propriedades "x" e "y" para um número específico, use o bloco `randomNumber` para selecionar um novo" x "e" y "aleatórios toda vez que o smiley for clicado.
+
+        \_ Dica: a tela do App Lab tem 320 pixels de largura por 450 pixels de altura. Que faixa de números aleatórios garantirá que o smiley esteja sempre visível na tela?\_
+      CSD U6 setProperty xy random_2018: |-
+        <img src="https://images.code.org/67c6cc358b235e2c2ae39f3f72a3e0b1-image-1507326303839.gif" style="float:right; max-width: 150px; margin: 10px;">
+
+        # Randomização
+
+        Se mover no primeiro clique é bom, mas esse smiley seria ainda mais legal se ele se mudasse para algum lugar novo - a cada vez que clicamos. Felizmente, podemos usar o bloco `randomNumber` para fazer exatamente isso.
+
+        # Faça isso
+
+        Em vez de definir as propriedades "x" e "y" para um número específico, use o bloco `randomNumber` para selecionar um novo" x "e" y "aleatórios toda vez que o smiley for clicado.
+
+        \_ Dica: a tela do App Lab tem 320 pixels de largura por 450 pixels de altura. Que faixa de números aleatórios garantirá que o smiley esteja sempre visível na tela?\_
+      CSD U6 setProperty xy random_2019: |-
+        <img src="https://images.code.org/67c6cc358b235e2c2ae39f3f72a3e0b1-image-1507326303839.gif" style="float:right; max-width: 150px; margin: 10px;">
+
+        # Randomização
+
+        Se mover no primeiro clique é bom, mas esse smiley seria ainda mais legal se ele se mudasse para algum lugar novo - a cada vez que clicamos. Felizmente, podemos usar o bloco `randomNumber` para fazer exatamente isso.
+
+        # Faça isso
+
+        Em vez de definir as propriedades "x" e "y" para um número específico, use o bloco `randomNumber` para selecionar um novo" x "e" y "aleatórios toda vez que o smiley for clicado.
+
+        \_ Dica: a tela do App Lab tem 320 pixels de largura por 450 pixels de altura. Que faixa de números aleatórios garantirá que o smiley esteja sempre visível na tela?\_
       CSD U6 setProperty xy_2018: |-
         # Alterando a posição
 
@@ -14372,6 +15326,18 @@ pt-BR:
 
         -   Crie um evento 'up' para o botão esquerdo.
         -   Adicione o código para desligar o LED quando o botão aparecer novamente.
+      CSDU6 - board event challenge_2018: |-
+        # Desafio: Placa de som
+
+        Verifique com seu professor antes de iniciar o desafio.
+
+        Agora que você sabe como usar os eventos da placa, os botões, a chave e a campainha, tente criar um programa que transforme sua placa em uma placa de som quando você pressionar os botões ou girar a chave. Brinque com a duração e as frequências dos sons e ouça o resultado.
+      CSDU6 - board event challenge_2019: |-
+        # Desafio: Placa de som
+
+        Verifique com seu professor antes de iniciar o desafio.
+
+        Agora que você sabe como usar os eventos da placa, os botões, a chave e a campainha, tente criar um programa que transforme sua placa em uma placa de som quando você pressionar os botões ou girar a chave. Brinque com a duração e as frequências dos sons e ouça o resultado.
       CSDU6 - button LED prediction: Veja o nível contido para o markdown
       CSDU6 - button LED prediction_2018: Veja o nível contido para o markdown
       CSDU6 - button LED prediction_2019: Veja o nível contido para o markdown
@@ -14702,6 +15668,9 @@ pt-BR:
 
         -   Crie uma nova matriz com as notas que você quiser. Elas podem estar em oitavas diferentes, associadas a um determinado tom, etc. Qualquer coisa que você quiser!
         -   Faça sua cigarra tocar uma nota aleatória de sua matriz quando o botão **direito** for pressionado.
+      CSDU6 play predict code: A remarcação está no nível contido
+      CSDU6 play predict code_2018: A remarcação está no nível contido
+      CSDU6 play predict code_2019: A remarcação está no nível contido
       CSDU6 toggle state prediction: |-
         # Mais do interruptor de alternância
 
@@ -15617,6 +16586,119 @@ pt-BR:
         estão corretos! \\\r\n \\\r\nFixe o bloco verde pequeno duas vezes em sua
         área de trabalho para corrigir o caminho e levar o jogador {currentPlayerName}
         até a Tocha de Redstone [redstone_torch]."
+      Gamelab StartScreen Change State: |-
+        # Alterando o Estado
+
+        Agora que você consegue exibir uma tela diferente conforme o estado do seu programa, você precisa de uma maneira de alterar de um estado para outro. Para ir do estado "começando" para o estado "jogando", você pode fazer o usuário pressionar a tecla "s". Você irá **somente** querer que o programa verifique a tecla pressionada quando o programa estiver no estado "começando", portanto seu código para isso será colocado dentro da condicional "começando". O uso de um bloco `se` no interior de outro é chamado um **aninhamento** de condicionais.
+
+        ## Faça Isto
+
+        -   Dentro da declaração `se` que verifica "começando", adicione uma nova declaração `se` que verifica se o usuário pressionou a tecla "s". (`if (keyDown("s")) {`)
+        -   Dentro da sua nova declaração `se`, defina o valor da variável `estadoDoJogo` para "jogando". (`estadoDoJogo = "jogando";`)
+        -   Teste o código iniciando o jogo e pressionando "s". O jogo deve iniciar após a tecla ser pressionada.
+
+        Caso o jogo não estiver iniciando na tela inicial, verifique novamente que quando a variável `estadoDoJogo` é criada no início do programa, seu valor é "começando". (`var estadoDoJogo = "começando";`)
+      Gamelab StartScreen Check State: |-
+        # Verificando o Estado de Jogo
+
+        Agora que você tem seu estado de jogo armazenado em uma variável, você pode verificá-lo para determinar o que deve ser exibido. Isso deve acontecer dentro do laço de desenho, já que é algo que vai mudar conforme o programa está sendo executado. O programa deve verificar se o jogo está no estado "jogando" e somente executar o programa se estiver. Podemos nos preocupar com os outros estados mais tarde.
+
+        ## Faça Isto
+
+        -   Dentro do laço de desenho, adicione uma condicional (declaração `se`).
+        -   Para a condição, verifique se `estadoDoJogo == "jogando"`.
+        -   Mova o resto do código do laço de desenho dentro da instrução `se`, para que ele somente seja executado caso o jogo estiver com o estado "jogando ".
+        -   Execute o programa. Nada deve acontecer porque o jogo ainda está no estado "começando".
+        -   Volte para onde você definiu o valor da sua variável `estadoDoJogo` e altere-a de "começando" para "jogando".
+        -   Execute o jogo novamente, e ele deve jogar normalmente, porque agora está no estado "jogando".
+        -   Altere o valor da variável de volta para "começando"
+
+        (É importante encontrar formas de verificar seu código à medida que você escreve, ao invés de esperar até o final de alterações complexas para executá-lo. Ao verificar ambos os estados "jogando" e "começando", você sabe que a condicional está funcionando corretamente e que o jogo deverá funcionar bem quando estiver no estado "jogando".)
+      Gamelab StartScreen Check States: |-
+        # Verifique Todos os Estados
+
+        Neste momento o único estado que seu programa consegue lidar é "jogando", mas você pode acrescentar mais condicionais para cuidar dos três estados que faltam.
+
+        ## Faça Isto
+
+        -   Dentro do laço de desenho, acrescente três declarações `se` que verificam se `estadoDoJogo == "começando"`, `estadoDoJogo == "venceu"` e ´estadoDoJogo == "perdeu"'\`, respectivamente.
+        -   Dentro de cada declaração `se`, adicione código que irá desenhar texto na tela, para que você possa ver os resultados dos diferentes estados. Você pode também querer usar `desenheFigura` para ver a imagem de fundo e as figuras dos jogadores, mas tenha certeza que você está desenhando o texto em cima das figuras.
+        -   Verifique seu código executando o programa nos diferentes estados. (Não se preocupe ainda em torná-los perfeitos, somente tenha certeza que as condicionais estão funcionando do modo como deveriam.)
+
+        Para ser capaz de rastrear seu código, você pode achar interessante criar uma função para cada uma das diferentes exibições de texto, e depois chamar estas funções de dentro das condicionais.
+      Gamelab StartScreen End Game: |-
+        # Terminando o Jogo
+
+        A seguir, você terá que acrescentar código que altera o estado do jogo quando você perde. Role a tela até o final do programa, na função `statusDoJogo`. Dentro da função, o programa verifica as variáveis de pontuação e número de vidas, para saber ser o usuário deve vencer ou perder o jogo. Ao invés de exibir uma mensagem de venceu ou perdeu, você vai querer trocar o estado do jogo para "venceu" ou "perdeu";
+
+        ## Faça Isto
+
+        -   Dentro da função `statusDoJogo`, substitua o código `text("Você Venceu!", 35, 200);` com `estadoDoJogo = "venceu"`.
+        -   Dentro da função `statusDoJogo`, substitua o código `text("Você Perdeu!", 35, 200);` with `estadoDoJogo = "perdeu"`.
+        -   Verifique seu código executando o jogo e perdendo.
+        -   Verifique seu código executando o jogo e ganhando.
+
+        (Para tornar o jogo mais fácil de vencer, altere o número de vidas para 1000 substituindo `var vidas = 3;` por `var vidas = 1000;`.)
+      Gamelab StartScreen Hide Sprites: |-
+        # Oculte e Mostre Figuras
+
+        Você pode preferir que as figuras da plataforma, moeda e pedra sejam somente visíveis quando o jogo está em ação. Você pode alterar a preparação do jogo para definir suas propriedades de visibilidade para `falso` ao início do jogo, e depois alterá-las para `verdadeiro` quando você começa a jogar, e para `falso` novamente quando o jogo foi ganho ou perdido.
+
+        ## Faça Isto
+
+        -   Adicione código após você criar os grupos de figuras de plataformas, ouro e pedras, que define as propriedades de visibilidade destes grupos de figuras para `falso` (ex: `plataformas.setVisibleEach(false);` )
+        -   Nos mesmos três locais em que você define `estadoDeJogo = "jogando";`, altere as propriedades de visibilidade dos grupos de figuras para `verdadeiro`.
+        -   Verifique seu código executando o jogo, perdendo, e reiniciando o jogo.
+        -   Verifique seu código executando o jogo, ganhando, e reiniciando o jogo.
+      Gamelab StartScreen Intro: |-
+        # Telas de Início e Fim
+
+        Este tutorial irá ensiná-lo como criar telas de início e fim no Laboratório, assim como reiniciar o jogo a partir da tela final.
+
+        Acione executar para jogar o jogo à esquerda. Siga as instruções na tela inicial para jogar. Quando o jogo terminar, siga as instruções na tela final para reiniciar o jogo.
+
+        Na próxima bolha, você verá o código para o jogo e começará a adicionar duas próprias telas de início e fim.
+
+        ## Tela de Início
+
+        A tela de início é uma tela introdutória que aparece antes que o usuário comece a jogar. Normalmente ela contém o título do jogo e algumas instruções básicas de jogo. Ela também pode incluir o nome do desenvolvedor do jogo.
+
+        # Tela Final
+
+        A tela final aparece após o usuário ter ganho ou ter perdido o jogo. Às vezes ela inclui a pontuação final, o ranking de jogadores ou outra informação. Ela pode também ter uma opção para jogar novamente.
+      Gamelab StartScreen Restart Game: |-
+        # Reiniciando o Jogo
+
+        Por fim, você terá que adicionar código que reinicia o jogo.  Isto é semelhante a como você iniciou o jogo fazendo o usuário pressionar a tecla "s". Desta vez, você terá que fazer a checagem durante os estados "perdeu" e "venceu". Se o usuário pressionar a tecla "r" em algum destes estados, você deve reiniciar o jogo definindo a variável `estadoDoJogo` para "jogando" e também reiniciando as variáveis `pontuação` e `vidas` para 0 e 3, respectivamente.
+
+        ## Faça Isto
+
+        -   Dentro da declaração `if (estadoDoJogo == "perdeu") {`, acrescente uma declaração "se" que verifica se o usuário pressionou a tecla "r".
+        -   Dentro da sua nova declaração `se`, defina `pontuação` para 0, `vidas` para 3, e `estadoDoJogo` para "jogando".
+        -   Dentro da declaração `if (estadoDoJogo == "venceu") {`, acrescente uma declaração "se" que verifica se o usuário pressionou a tecla "r".
+        -   Dentro de sua nova declaração "se", defina `pontuação` para 0, `vidas` para 3, e `estadoDoJogo` para "jogando".
+        -   Dentro da função `statusDoJogo` substitua o código `text("Você Perdeu!", 35, 200);` com `estadoDoJogo = "perdeu"`.
+        -   Verifique seu código executando o jogo, perdendo, e reiniciando o jogo.
+        -   Verifique seu código executando o jogo, ganhando, e reiniciando o jogo.
+      Gamelab StartScreen State: |-
+        Variável de Estado de Jogo #
+
+        Nosso jogo de exemplo teve quatro cenários diferentes (ou **estados**) que precisamos acompanhar para exibir a tela correta: "começando", "jogando", "vencido" e "perdido". O primeiro passo para adicionar uma tela inicial ou final ao jogo é criar uma variável para acompanhar quaisquer mudanças no estado de jogo.
+
+        ## Faça Isto
+
+        -   Declare uma variável chamada `estadoDoJogo` no início do programa. (Um bom lugar para fazer isso seria perto de onde "pontuação" e "vidas" são declarados.)
+        -   Defina o valor inicial da sua variável `estadoDoJogo` como "começando"
+
+        (Como você ainda não está usando essa variável, verá um triângulo de aviso ao lado da linha onde ela está declarada. Isso também não afetará a execução do programa.)
+      Gamelab StartScreen base code: |-
+        # Código do jogo
+
+        Este é o código do jogo sem as telas inicial e final. A função `estadoDoJogo` (chamada na linha 43 e definida na linha 208) verifica se o usuário ganhou ou perdeu, mas apenas adiciona uma mensagem de texto à tela. A ação de jogo prossegue mesmo após o término do jogo.
+
+        ## Faça Isto
+
+        Leia o código, especialmente o código antes do laço de desenho (linhas 1-24), dentro do laço de desenho (linhas 27-43) e dentro da função `estadoDoJogo` (linhas 209-224). Tudo bem se você não entender tudo no jogo, mas você deve ver que o código antes do laço de desenho prepara as figuras, e o código dentro do laço de desenho controla a ação de jogo.
       Geometric Sun: "**Ideia de projeto** Crie um padrão utilizando geometria, como
         formas. Isso requer persistência e planejamento!"
       Geometric Sun_2018: "**Ideia de projeto** Crie um padrão utilizando geometria,
@@ -15651,6 +16733,12 @@ pt-BR:
         o **Coração do Mar** [](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png).
         Use os corais azul e vermelho para chegar no **baú** ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png)
         do tesouro.
+      InspirationalArtwork: "Agora você já aprendeu tudo que precisa para fazer uma
+        forma como essa! \n\nSe essa imagem te inspirar, tente fazer algo similar.
+        Se não, crie algo por conta própria."
+      InspirationalArtwork_2018: "Agora você já aprendeu tudo que precisa para fazer
+        uma forma como essa! \n\nSe essa imagem te inspirar, tente fazer algo similar.
+        Se não, crie algo por conta própria."
       Intro to Web Lab - Part 1_2019: |-
         ## Perguntas para consideração:
 
@@ -16078,6 +17166,16 @@ pt-BR:
         real. Isso requer persistência e planejamento!"
       Robot Doodle_2018: "**Ideia de projeto:** Crie uma imagem de algo comum no mundo
         real. Isso requer persistência e planejamento!"
+      Room Escape Workshop - 1: |-
+        <img src="https://images.code.org/9d103d74f7c2da05aeccd5fc317e6ab6-image-1490368234432.08.44 AM.png" style="width:200px; float:right">
+
+        Para fazer sua sala de escapar, você precisará configurar a sala em que o usuário poderá se aventurar. Parte do trabalho já foi feito para você. Você só precisa decidir como serão as diferentes partes da sala escolhendo fotos!
+
+        # Faça isso
+
+        -   O nível começa no modo Design
+        -   Para cada elemento da imagem em branco (retângulo cinza), adicione uma imagem apropriada. Por exemplo, você precisará de uma imagem de porta para o elemento de imagem rotulado como porta.
+        -   Um exemplo da aparência da sala está à direita.
       Room Escape Workshop - 3: |-
         # Ocultar o código
 
@@ -17143,6 +18241,11 @@ pt-BR:
       course3_bee_functions_challenge1: Você está sozinho nesse desafio. Isso poderia
         ser mais difícil do que parece!
       course3_bee_functions_challenge2: Você está por conta própria neste desafio!
+      course3_bee_functions_challenge3: Crie uma nova função para coletar todo o nectar
+        e todo o mel enquanto houver um caminho a frente. Utilize-a para completar
+        o quebra cabeça!
+      course3_bee_functions_challenge4: Utilize tudo que você aprendeu para completar
+        esse quebra cabeça!
       course3_collector_debugging_challenge2: Você é um especialista em laços aninhados?
         Use o que você aprendeu até agora para coletar todo o tesouro!
       course3_farmer_condLoops_challenge1: |-
@@ -17194,6 +18297,9 @@ pt-BR:
         e usá-la para criar este padrão?
       course4_bee_for_challenge1: Use este laço for para coletar todo o néctar. Existem
         algumas ações que você vai `repetir 'contador' vezes`.
+      course4_bee_fwp_challenge1: Utilize um `laço de repetição` em uma função para
+        coletar todo o milho. O mesmo `laço de repetição` pode contar até valores
+        máximos diferentes utilizando o parâmetro `tamanho`.
       course4_bee_fwp_challenge2: |-
         Vamos ver se você consegue resolver este teste final! Dê o máximo que você pode!
 
@@ -17635,6 +18741,9 @@ pt-BR:
         adicione blocos que estão faltando. Leve o pássaro até o porco!
       courseA_maze_seq_challenge2_2019: Trace o caminho para levar o pássaro até o
         porco. Evite a TNT, ou penas vão voar!
+      courseA_playLab_events1_2019: Este é um nível de Laboratório. Mova os blocos
+        para o área de trabalho e veja o que acontece!
+      courseA_playLab_events2_2019: Jorge, o Cão, quer dizer 'Olá". Você pode ajudá-lo?
       courseA_playLab_events3: |-
         Ajude Jorge, o cachorro, a mover-se conectando o <xml><block type="studio_move">
 
@@ -20862,6 +21971,8 @@ pt-BR:
         Use `escolher ao longo do caminho` para resolver este quebra-cabeça novamente usando menos blocos.
       courseE_farmer_functions3c_2018: Ótimo! Tente agora em um caminho mais longo.
       courseE_farmer_functions3c_2019: Ótimo! Tente agora em um caminho mais longo.
+      courseE_farmer_functions4b: Utilize sua nova função para resolver esse quebra
+        cabeça.
       courseE_farmer_functions5c: Sua função será útil aqui.
       courseE_farmer_functions6c: |-
         _"Alface ocupa toda a produção!"_
@@ -21092,6 +22203,62 @@ pt-BR:
       courseF_artist_for_challenge2_2019: "Você consegue descobrir como re-criar esse
         desenho com um único laço de repetição? \n\n<img src=\"https://images.code.org/b0d15d06465d645c5ca533e5da6387b3-image-1446075597132.36.04.png\"
         width=\"350px\"/>"
+      courseF_artist_fwp1: Hoje, iremos continuar utilizando o poderoso editor de
+        funções. Veja se consegue se lembrar como editar a função `desenhar quadrado`
+        para achar erros.
+      courseF_artist_fwp2: "Edite a função para aceitar um parâmetro chamado `tamanho`.
+        \n\nOs lados de cada quadrado devem ser 25 pixels maiores que o do anterior.
+        O primeiro quadrado possui 25 pixels laterais.."
+      courseF_artist_fwp2_predict1: "Edite a função para aceitar um parâmetro chamado
+        `tamanho`. \n\nO lado de cada quadrado deve ser 25 pixels maior que o anterior.
+        O primeiro quadrado possui 25 pixels laterais. Substitua o '???' com o valor
+        correto para desenhar a figura.."
+      courseF_artist_fwp3: "Agora tente criar a função do zero! \n\nCrie uma função
+        chamada `desenhe um quadrado` e utilize-a para definir essas 4 caixas.\\\nCertifique-se
+        de adicionar o parâmetro para `tamanho`\"\n\n* * *\n\nIniciando do canto direito
+        superior, as larguras das caixas são de 50, 100, 150 e 200."
+      courseF_artist_fwp4: |-
+        Bom trabalho! Agora altere essa função para adicionar um parâmetro para o número de lados no seu polígono.
+
+        Os lados de todas as formas são de 100 pixels.
+      courseF_artist_fwp5: "Utilize a função do último quebra cabeça para desenhar
+        essa série de formas. \n\nO triângulo possui 21 pixels laterais, e as laterais
+        em cada uma das formas sequentes são 7 pixels a mais que a anterior.\\\nUtilize
+        o bloco `multiplicação` para fazer tudo acontecer com apenas uma chamada na
+        função.\n\n* * *\n\nO bloco `multiplicação` se parece com isso <xml><block
+        type=\"math_arithmetic\" inline=\"true\">\n      <title name=\"OP\">MULTIPLY</title>\n
+        \   </block></xml>"
+      courseF_artist_fwp6: |-
+        **Desafio:** Altere a `desenhe uma borda espiral` para utilizar os parâmetros `tamanho` e `laterais`, então recrie essas formas.
+
+        -   O quadrado vai de 3 pixels até 90 pixels.
+        -   O hexágono vai de 3 pixels até 100 pixels.
+        -   O triângulo vai de 3 pixels até 95 pixels.
+      courseF_artist_fwp7: |-
+        Termine a função `desenhe uma borda espiral` para também pedir um número mínimo para o centro da espiral.
+
+        -   O lado menor no centro desse quadrado possui 50 pixels de largura.
+        -   O lado maior fora do espiral possui 200 pixels de largura
+      courseF_artist_fwp8: |-
+        Atividade livre! Você consegue descobrir como fazer esse desenho utilizando a função que acabou de criar?
+
+        -   A espiral vermelha vai de 50 a 200 pixels
+        -   A espiral azul vai de 25 a 150 pixels
+        -   A espiral verde vai de 100 a 350 pixels
+      courseF_artist_fwp9: |-
+        **Atividade livre:** Abaixo existem funções que você já criou, e mais algumas para usar.
+        Brinque com o tamanho da caneta para ver o quão diferente seus desenhos ficam! Sugestões estão nas dicas!
+      courseF_artist_fwp_challenge1: Tente rodar esse programa. Faça alterações para
+        ver o que acontece. Consegue descobrir como funciona? Você também pode exclui-la
+        e substitui-la por algo totalmente diferente.
+      courseF_artist_fwp_challenge2: |-
+        Uau! Utilize o que aprendeu no nível anterior para desenhar uma imagem como essa.
+
+        _Dica: Utilize parâmetros para deixar seu código mais simples._
+
+        <br/>
+        <img src="https://images.code.org/d3d6a51fafdcc0a09a5c6b0e0f3c2b92-image-1446239805818.08.59.png" width="300px"/>
+        <br/>
       courseF_artist_variables10: "Aqui está seu código do último quebra-cabeça. Tente
         editar a variável de outras formas. \n\n-   O que acontece se você iniciar
         com `tamanho` menos que 150? \n-   O que acontece se você multiplicar sua
@@ -21391,6 +22558,86 @@ pt-BR:
         praticar com essa função de pegar nectar apenas se a abelha está na flor.
         Para ver o código interno, clique no botão azul \"editar\"!\n\nUtilize a função
         `pegue apenas nectar` para coletar nectar de cada fllor."
+      courseF_bee_functions3: Agora é sua Agora é sua vez de fazer uma função para
+        pegar um pouco de mel **apenas** se existir uma colmeia. Clique em "editar"
+        para construir a função `faça mel apenas`, então utilize-a para solucionar
+        o quebra cabeça.
+      courseF_bee_functions3a: |-
+        Cada nuvem pode estar escondendo ou uma flor ou uma colmeia! Escreva uma função que colete nectar se a abelha estiver em uma flor, se não pegue mel.
+
+        Utilize sua função para solucionar o quebra-cabeça!
+      courseF_bee_functions4: "Você sabia que você pode chamar uma função de _dentro_
+        de outra função? \n\nUtilize sua função `verificar nectar ou mel` dentro da
+        nova função `faça e verifique` para ajudar a abelha vira, ir buscar o que
+        está abaixo da nuvem, então volve de onde veio!"
+      courseF_bee_functions5a: Agora, construa o `mover e verificar` para levar a
+        abelha até a nuvem sempre que houver um caminho à direita, então utilize-a
+        para solucionar o quebra cabeça!
+      courseF_bee_functions6: |-
+        _"Esse campo é maravilhoso!"_
+
+        Construa sua própria função para ajudar a abelha a passar pelo labirinto virando a esquerda nas flores e a direita nas colmeias. Não se esqueça de coletar o nectar e fazer o mel ao longo do caminho!
+      courseF_bee_functions7: |-
+        Refaça sua função do último quebra cabeça para resolver esse labirinto.
+
+        Vire a esquerda na colmeia e a direita nas flores.\
+        **Nota:** Alguns cantos não estão marcados!
+      courseF_bee_functions8a: "Abaixo dessa nuvem, pode existir uma flor com uma
+        quantidade desconhecida de nectar, ou uma colmeia com uma quantidade desconhecida
+        de mel. \n\nVocê consegue escrever um programa para lidar com ambos?"
+      courseF_bee_functionsPre7: "Agora tente construir uma função para solucionar
+        esse labirinto. O quanto é diferente do da última vez? \n\nVire a esquerda
+        nas colmeias e a direita nas flores.\\\n**Nota:** Alguns cantos não estão
+        marcados!"
+      courseF_bee_functions_challenge1: Crie uma nova função para coletar todo o nectar
+        e todo o mel enquanto houver um caminho a frente. Utilize-a para completar
+        o quebra cabeça!
+      courseF_bee_functions_challenge2: Utilize tudo que você aprendeu para completar
+        esse quebra cabeça!
+      courseF_bee_fwp1: "Verifique abaixo da nuvem para ver se as flores possuem algum
+        nectar. \n\nPara essa etapa inteira, cada flor vai possui exatamente **uma**
+        unidade de nectar, e cada colmeia vai precisar de exatamente **uma** unidade
+        de mel. "
+      courseF_bee_fwp2: "Aqui está um código para resolver o último quebra cabeça.\\\nVamos
+        coloca-lo em uma função, então chame a função para buscar nectar na fileira.
+        \n\n* * *\n\nIsso pode parecer um passo estranho agora, mas será bem útil
+        em breve!"
+      courseF_bee_fwp3: "Hora de testar a função! \n\nVamos ver ela deixa mais fácil
+        coletar essas 3 fileiras."
+      courseF_bee_fwp4: "_\"Como está indo sua função?\"_ \n\nNós precisamos fazer
+        alguns ajustes aqui. Clique em \"alterar\" para adicionar um parâmetro `tamanho`
+        na função para que também funcione quando a fileira for de tamanho diferente."
+      courseF_bee_fwp5: |-
+        _"Você está se saindo muito bem até agora!"_
+
+        Vamos utilizar essa função para coletar o nectar.
+      courseF_bee_fwp6: "Você consegue deixar seu código menor e mais eficiente ao
+        combinar funções com outros elementos de programação. \n\n* * *\n\nQuais blocos
+        você pode utilizar com sua função para construir uma solução simples e linda
+        para esse quebra cabeça?"
+      courseF_bee_fwp7: "**Desafio:** Algo parece um pouco diferente. Modifique sua
+        função para também fazer mel."
+      courseF_bee_fwp_challenge1: Utilize um `laço de repetição` em uma função para
+        coletar todo o milho. O mesmo `laço de repetição` pode contar até valores
+        máximos diferentes utilizando o parâmetro `tamanho`.
+      courseF_bee_fwp_challenge2: |-
+        _"**Alface** veja se consegue resolver esse último teste! De tudo de si!"_
+
+        Utilize um `laço de repetição` em uma função para coletar todos vegetais em uma fileira. Faça o `laço de repetição` contar até diferentes valores máximos utilizando o parâmetro `tamanho`. Deixa seu código tão menor quanto for possível utilizando um segunda `laço de repetição` fora da função.
+
+        Boa sorte!
+      courseF_bee_variables_3_2018: |-
+        _"Que jardim labirincrível!"_
+
+        Neste desafio, cada conjunto de mel e flores precisa que sua variável seja um número menor que a anterior. Subtraia 1 da variável toda vez que passar pelo laço de repetição, se você quiser usar a mesma função para resolver esse desafio.
+      courseF_bee_variables_3_2019: |-
+        _"Que jardim labirincrível!"_
+
+        Neste desafio, cada conjunto de mel e flores precisa que sua variável seja um número menor que a anterior. Subtraia 1 da variável toda vez que passar pelo laço de repetição, se você quiser usar a mesma função para resolver esse desafio.
+      courseF_bee_variables_4_2018: |-
+        "Inverossí-MEL!"
+
+        Edite o código para que ele funcione neste desafio.
       courseF_bee_variables_4_2019: |-
         "Vamos em frente!"
 

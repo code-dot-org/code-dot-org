@@ -39,6 +39,7 @@ ku:
         edit_header: دەستکاریکردنی وردەکارییەکانی هەژمار
         error:
           future: ناکرێت لە داهاتوو بێت
+  beta: تاقیکاری
   hello: چۆنی جیهان
   welcome_back: بەخێربێیەوە، %{name}
   submit: بنێرە

@@ -89,6 +89,9 @@ hi-IN:
         craft_what_is_iron: इस लौह का खनन करें!
       Underground Iron_2019:
         craft_what_is_iron: इस लौह का खनन करें!
+      course2_bee_conditionals_challenge2:
+        courseD_bee_conditionals_challenge2_1: एक फूल (या मधु के छत्ते) से सारा मधुरस
+          (या शहद) एकत्र करने के लिए इस लूप का उपयोग करें।
       course3_artist_functions_challenge1:
         courseE_artist_functions_challenge1_callout1: नीचे और कोड जोड़कर इस प्रोग्राम
           को चलता रखें।
@@ -209,15 +212,55 @@ hi-IN:
       courseC_collector_prog1:
         courseC_collector_prog1_1: क्या आपको टूलबॉक्स में कुछ नए ब्लॉक दिखाई दे रहे
           हैं?  चिंता न करें, हम आपको बाद में दिखाएंगे कि उनका उपयोग कैसे करना है।
+      courseC_maze_debugging5:
+        courseC_maze_debugging5_1: स्लेटी ब्लॉक्स को मिटाया नहीं जा सकता!
+      courseD_artist_nestedLoops1a:
+        courseD_artist_nestedLoops1a_1: इस पहेली को सही करने के लिए आपको रंगों का
+          उपयोग करने की जरूरत नहीं है। यदि आप करना चाहते हैं, तो यह `बेतरतीब रंग`
+          ब्लॉक इसे आसान बनाता है!
+      courseD_artist_nestedLoops1a_2018:
+        courseD_artist_nestedLoops1a_1: इस पहेली को सही करने के लिए आपको रंगों का
+          उपयोग करने की जरूरत नहीं है। यदि आप करना चाहते हैं, तो यह `बेतरतीब रंग`
+          ब्लॉक इसे आसान बनाता है!
+      courseD_artist_nestedLoops1a_2019:
+        courseD_artist_nestedLoops1a_1: इस पहेली को सही करने के लिए आपको रंगों का
+          उपयोग करने की जरूरत नहीं है। यदि आप करना चाहते हैं, तो यह `बेतरतीब रंग`
+          ब्लॉक इसे आसान बनाता है!
       courseD_bee_conditionals2:
         4_5_Bee_Conditionals_2_1: याद रखें, यह देखने के लिए जांचें कि क्या प्रत्येक
           बादल में फ्लोअर है या नहीं। आपको हनीकॉम की जांच करने की ज़रूरत नहीं है।
+        4_5_Bee_Conditionals_2_2: क्या आपको मदद की जरूरत है?  वीडियो संकेत के लिए
+          यहां क्लिक करें!
       courseD_bee_conditionals2_2018:
         4_5_Bee_Conditionals_2_1: याद रखें, यह देखने के लिए जांचें कि क्या प्रत्येक
           बादल में फ्लोअर है या नहीं। आपको हनीकॉम की जांच करने की ज़रूरत नहीं है।
       courseD_bee_conditionals2_2019:
         4_5_Bee_Conditionals_2_1: याद रखें, यह देखने के लिए जांचें कि क्या प्रत्येक
           बादल में फ्लोअर है या नहीं। आपको हनीकॉम की जांच करने की ज़रूरत नहीं है।
+      courseD_bee_conditionals_challenge2:
+        courseD_bee_conditionals_challenge2_1: एक फूल (या मधु के छत्ते) से सारा मधुरस
+          (या शहद) एकत्र करने के लिए इस लूप का उपयोग करें।
+      courseD_bee_conditionals_challenge2_2018:
+        courseD_bee_conditionals_challenge2_1: एक फूल (या मधु के छत्ते) से सारा मधुरस
+          (या शहद) एकत्र करने के लिए इस लूप का उपयोग करें।
+      courseD_bee_conditionals_challenge2_2019:
+        courseD_bee_conditionals_challenge2_1: एक फूल (या मधु के छत्ते) से सारा मधुरस
+          (या शहद) एकत्र करने के लिए इस लूप का उपयोग करें।
+      courseD_collector_ramp8:
+        courseD_collector_ramp8_1: 'खजाने का एक ही पीस एकत्र करने के लिए इस ब्लॉक
+          का उपयोग करें।  '
+      courseD_maze_ramp3:
+        stone_block_2: ये ब्लॉक्स पत्थर के बने हैं और इन्हें फेंका नहीं जा सकता।
+      courseD_maze_ramp3_2018:
+        stone_block_2: ये ब्लॉक्स पत्थर के बने हैं और इन्हें फेंका नहीं जा सकता।
+      courseD_playLab_condFP:
+        courseD_playLab_condFP_1: हमने आपको खेलने के लिए और कोड देने हेतु ब्लॉक्स
+          को श्रेणियों में व्यवस्थित किया है!  यह देखने के लिए यहां क्लिक करें कि
+          सब कुछ कहां गया।
+      courseD_playLab_condFP_2018:
+        courseD_playLab_condFP_1: हमने आपको खेलने के लिए और कोड देने हेतु ब्लॉक्स
+          को श्रेणियों में व्यवस्थित किया है!  यह देखने के लिए यहां क्लिक करें कि
+          सब कुछ कहां गया।
       courseE_artist_functions1:
         courseD_artist_functions1_1: आइए पहले वर्ग बनाने में मदद के लिए इस ब्लॉक का
           उपयोग करके शुरुआत करें।

@@ -666,6 +666,42 @@ ja-JP:
       course3_maze_debugging_challenge1: _円をかくように、ぐるりと回ればいいかな？_
       course3_maze_debugging_challenge2: _回りすぎると、めまいがするよ！ 4つの「まがる」ブロックだけでドングリをひろえるようにしてね。_
       course4_artist_fwp_challenge1: このプログラムを実行してみてください、そして何が起こるかを参照し変更をしてください。それがどのように動作するかを理解できますか？(または削除し、完全に別の何かと交換)
+      courseA_artist_loops2: |-
+        アーティストが、２かい せんを かくよう たすけてください。
+
+        ![](https://images.code.org/04501f26a36673460f5c8fe04e3e7686-image-1498002095108.gif)
+      courseA_artist_loops2_2018: |-
+        アーティストが、２かい せんを かくよう たすけてください。
+
+        ![](https://images.code.org/04501f26a36673460f5c8fe04e3e7686-image-1498002095108.gif)
+      courseA_artist_loops2_2019: |-
+        アーティストが、２かい せんを かくよう たすけてください。
+
+        ![](https://images.code.org/04501f26a36673460f5c8fe04e3e7686-image-1498002095108.gif)
+      courseA_artist_loops3: |-
+        アーティストは、5かい せんを かこうとしていますが、うまく いきません。てつだって くれますか？
+
+        ![expandable](https://images.code.org/6d79b5f8291bd8e11c427bff25f423c2-image-1467935497388.gif)
+      courseA_artist_loops3_2018: |-
+        アーティストは、5かい せんを かこうとしていますが、うまく いきません。てつだって くれますか？
+
+        ![expandable](https://images.code.org/6d79b5f8291bd8e11c427bff25f423c2-image-1467935497388.gif)
+      courseA_artist_loops3_2019: |-
+        アーティストは、5かい せんを かこうとしていますが、うまく いきません。てつだって くれますか？
+
+        ![expandable](https://images.code.org/6d79b5f8291bd8e11c427bff25f423c2-image-1467935497388.gif)
+      courseA_artist_loops4: |-
+        <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="2-6">5</title></block></xml> ループを つかって、５かい せんを かいてみよう！
+
+        ![](https://images.code.org/b2bc7f52ffdac2ad0d8e7c2d798c24df-image-1501875818062.gif)
+      courseA_artist_loops4_2018: |-
+        <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="2-6">5</title></block></xml> ループを つかって、５かい せんを かいてみよう！
+
+        ![](https://images.code.org/b2bc7f52ffdac2ad0d8e7c2d798c24df-image-1501875818062.gif)
+      courseA_artist_loops4_2019: |-
+        <xml><block type="controls_repeat_simplified_dropdown" block-text="repeat"><title name="TIMES" config="2-6">5</title></block></xml> ループを つかって、５かい せんを かいてみよう！
+
+        ![](https://images.code.org/b2bc7f52ffdac2ad0d8e7c2d798c24df-image-1501875818062.gif)
       courseA_artist_loops8: |-
         ## ボートまで はしごが ひつようです。
 
@@ -682,6 +718,15 @@ ja-JP:
         **フリープレイ** ローレルの ぼうけん です！かのじょを うごかして たからものを あつめよう。
 
         ブロックを ワークスペースに ドラッグして、たからものを あつめよう。このレベルをクリアするには、ひとつ いじょうの アイテムを ゲットしよう。
+      courseA_collector_loops12: |-
+        _"エウレカ！できるだけ、たくさん たからものを あつめてください！"_\
+        (ぜんぶ とれなくても だいじょうぶ。)
+      courseA_collector_loops12_2018: |-
+        _"エウレカ！できるだけ、たくさん たからものを あつめてください！"_\
+        (ぜんぶ とれなくても だいじょうぶ。)
+      courseA_collector_loops12_2019: |-
+        _"エウレカ！できるだけ、たくさん たからものを あつめてください！"_\
+        (ぜんぶ とれなくても だいじょうぶ。)
       courseA_collector_loops1_2018: |-
         **フリープレイ** ローレルの ぼうけん です！かのじょを うごかして たからものを あつめよう。
 
@@ -699,6 +744,12 @@ ja-JP:
         つかって、５つの たからもの ぜんぶを とれますか？
       courseA_collector_loops3_2019: <xml><block type="maze_moveEast" block-text="move
         east"/></xml> を １つだけ つかって、５つの たからもの ぜんぶを とれますか？
+      courseA_collector_loops_challenge1: _"バグさがしを てつだってくれる？すすむ むきは わかってるけど、いくつ すすめば
+        いいか わからないのです。"_
+      courseA_collector_loops_challenge1_2018: _"バグさがしを てつだってくれる？すすむ むきは わかってるけど、いくつ
+        すすめば いいか わからないのです。"_
+      courseA_collector_loops_challenge1_2019: _"バグさがしを てつだってくれる？すすむ むきは わかってるけど、いくつ
+        すすめば いいか わからないのです。"_
       courseA_collector_preLoops7: |-
         ３つ すべてを とってください！ローレルを たからものの ところに うごかして このブロックを つかいます。
           <xml><block type="collector_collect"/></xml>
@@ -754,10 +805,13 @@ ja-JP:
       courseA_maze_seq_challenge1_2018: デバッグして！トリさんが ブタさんの ところに いけるよう プログラムを なおしてください。
       courseA_maze_seq_challenge1_2019: デバッグして！トリさんが ブタさんの ところに いけるよう プログラムを なおしてください。
       courseA_maze_seq_challenge2_2019: みちを たどって トリさんを ブタさんのところに つれてって。ばくだんで はねが とばされないように！
+      courseB_artist_loops1_2019: これは「アーティスト」という あたらしい パズルです。すきなものを かいて ください。（かきおわったら、「おわり」を
+        クリックします）
       courseB_collector_loops1: |-
         **フリープレイ** ローレルの ぼうけん です！かのじょを うごかして たからものを あつめよう。
 
         ブロックを ワークスペースに ドラッグして、たからものを あつめよう。このレベルをクリアするには、ひとつ いじょうの アイテムを ゲットしよう。
+      courseB_collector_loops10_2019: ローレルが どうくつから、ぜんぶの たからを あつめられるよう、たすけて ください。
       courseB_collector_loops3: <xml><block type="maze_moveEast"/></xml> を １つだけ つかって、５つの
         たからもの ぜんぶを とれますか？
       courseB_collector_loops3_2018: <xml><block type="maze_moveEast"/></xml> を １つだけ
@@ -776,6 +830,9 @@ ja-JP:
         _"たからものを あつめよう！"_
 
         このパズルをクリアするには、**5** つの たからものを ゲットして ください。
+      courseC_maze_programming1: このパズルでは、ブロックをドラッグしてくっつけたら「実行」をクリックして、どうなるか見てみよう！
+      courseC_maze_programming1_2018: このパズルでは、ブロックをドラッグしてくっつけたら「実行」をクリックして、どうなるか見てみよう！
+      courseC_maze_programming1_2019: このパズルでは、ブロックをドラッグしてくっつけたら「実行」をクリックして、どうなるか見てみよう！
       courseD_bee_nestedLoops8: "それぞれの花からすべての花のみつを集めてください。\nそしてそれぞれのハチの巣でハチミツを作ってください。\n入れ子のループ（ネスト・ループ）を使うのです。 "
       courseD_bee_nestedLoops8_2018: "それぞれの花からすべての花のみつを集めてください。\nそしてそれぞれのハチの巣でハチミツを作ってください。\n入れ子のループ（ネスト・ループ）を使うのです。 "
       courseD_bee_nestedLoops8_2019: "それぞれの花からすべての花のみつを集めてください。\nそしてそれぞれのハチの巣でハチミツを作ってください。\n入れ子のループ（ネスト・ループ）を使うのです。 "
