@@ -23,11 +23,9 @@ ms:
   submit: Hantar
   cancel: "Batal"
   or: "atau"
-  add_teacher_form:
+  join_section:
     code:
-      label: 'Tambahkan guru:'
       placeholder: "Kod Seksyen (ABCDEF)"
-    submit: 'Tambah guru'
   add_hint_form:
     placeholder: 'Sila masukkan petunjuk anda di sini'
     submit: 'Tambah petunjuk'

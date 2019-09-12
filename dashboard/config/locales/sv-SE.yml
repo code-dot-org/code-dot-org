@@ -47,13 +47,9 @@ sv:
   okay: Okej
   or: eller
   heading_x_of_y: "%{heading} (sida %{x} av %{y})"
-  add_teacher_form:
+  join_section:
     code:
-      label: 'Lägg till lärare:'
       placeholder: Avsnitt kod (ABCDEF)
-      instructions: Var snäll och skriv in koden som du har fått av din lärare. Det
-        är en 6 bokstäver lång kod som "ABCDEF".
-    submit: Lägg till lärare
   add_hint_form:
     placeholder: Skriv in ditt tips här
     submit: Lägg till tips

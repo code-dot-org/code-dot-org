@@ -4154,9 +4154,6 @@ is-IS:
       behaviors 6:
         behavior hint: "Prófaðu að breyta atferlinu! \n\n-   Hvaða gildi stjórnar
           hraða hverrar veru?"
-      behaviors 7:
-        behavior hint: "Prófaðu að breyta atferlinu! \n\n-   Hvaða gildi stjórnar
-          hraða hverrar veru?"
       comment_intro_maze_2018:
         courseC_maze_programming4_a: Athugasemdir eru einnig hjálplegar þegar aðrir
           reyna að lesa kóðann þinn.

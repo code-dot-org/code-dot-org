@@ -5206,18 +5206,15 @@ it-IT:
         modifiche al codice del precedente esercizio!
       courseF_artist_for7_2019: Per ottenere questo disegno bastano solo tre piccole
         modifiche al codice del precedente esercizio!
-      courseF_artist_for9: "**Ispirazione:** Usa la variabile `counter` (_contatore_)
-        all'interno del blocco `imposta l'opacità` per ottenere un tratto più leggero
-        al centro del disegno.\\\\ \n(Questo schema con esagono è stato creato usando
-        un angolo di 60 gradi.)"
-      courseF_artist_for9_2018: "**Ispirazione:** Usa la variabile `counter` (_contatore_)
-        all'interno del blocco `imposta l'opacità` per ottenere un tratto più leggero
-        al centro del disegno.\\\\ \n(Questo schema con esagono è stato creato usando
-        un angolo di 60 gradi.)"
-      courseF_artist_for9_2019: "**Ispirazione:** Usa la variabile `counter` (_contatore_)
-        all'interno del blocco `imposta l'opacità` per ottenere un tratto più leggero
-        al centro del disegno.\\\\ \n(Questo schema con esagono è stato creato usando
-        un angolo di 60 gradi.)"
+      courseF_artist_for9: |-
+        **Ispirazione:** Usa la variabile `counter` (_contatore_) all'interno del blocco `imposta l'opacità` per ottenere un tratto più leggero al centro del disegno.
+        (Questo schema con esagono è stato creato usando un angolo di 60 gradi.)
+      courseF_artist_for9_2018: |-
+        **Ispirazione:** Usa la variabile `counter` (_contatore_) all'interno del blocco `imposta l'opacità` per ottenere un tratto più leggero al centro del disegno.
+        (Questo schema con esagono è stato creato usando un angolo di 60 gradi.)
+      courseF_artist_for9_2019: |-
+        **Ispirazione:** Usa la variabile `counter` (_contatore_) all'interno del blocco `imposta l'opacità` per ottenere un tratto più leggero al centro del disegno.
+        (Questo schema con esagono è stato creato usando un angolo di 60 gradi.)
       courseF_artist_for_challenge1: |-
         Riesci a ricreare questo disegno?
 

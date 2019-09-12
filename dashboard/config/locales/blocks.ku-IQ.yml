@@ -997,6 +997,8 @@ ku:
         text: پۆتانی xی {SPRITE}
       Mikelab_yLocationOf:
         text: پۆتانی yی {SPRITE}
+      SpriteLab2Beta_spriteSay:
+        text: سپڕایت {SPRITE} بڵێ {TEXT} بەماوەی {SECONDS} چرکە
       Vector_createSpriteWith:
         text: |-
           سپڕایت دروستبکە
@@ -1096,16 +1098,54 @@ ku:
           BG:
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': شار
       aalab_setCollidable:
+        text: aalab سپڕایتی {SPRITE} بەیەکدابدە بە {VAL}
         options:
           VAL:
             '"true"': ڕاست
             '"false"': هەڵە
+      aalab_setDirection:
+        text: aalab ئاڕاستەی جوڵەی {SPRITE} دابنێ بەرەو {DIRECTION}
       aalab_setProp:
+        text: aalab {SPRITE} {PROPERTY} دابنێ بە {VAL}
         options:
           PROPERTY:
             '"rotation"': سوڕانەوە
             '"direction"': ئاڕاستەی جووڵە
             '"tint"': سێبەری ڕەنگ
+      aalab_setSpriteVariable:
+        text: aalab {VARIABLE} بکە بە {SPRITE}
+      aalab_showCustomText:
+        text: دەق پیشان بدە{TEXT}شوێن{LOCATION}قەبارە{SIZE}ڕەنگ{COLOR}ماوە{DURATION}
+        options:
+          DURATION:
+            '"1"': 1 چرکە
+            '"2"': 2 چرکە
+            '"3"': 3 چرکە
+            '"4"': 4 چرکە
+            '"5"': 5 چرکە
+      aalab_showSpriteLabel:
+        text: ناو دیاربخە{TEXT} {LOCATION} سپڕایتی{SPRITE}
+      aalab_speakerSaysConsole:
+        text: "{SPRITE} دەڵێ {MESSAGE}"
+      aalab_spriteSay:
+        text: سپڕایت {SPRITE} بڵێ {TEXT} بەماوەی {SECONDS} چرکە
+      aalab_toggleHideCustomText:
+        text: "{OPTION} دەقێکی خوازراو"
+      binary_drawBin:
+        text: دووانی بکێشە {BIN}
+      binary_drawBinScreen:
+        text: |-
+          سکرین بکێشە
+          {B1}
+          {B2}
+          {B3}
+          {B4}
+          {B5}
+          {B6}
+          {B7}
+          {B8}
+      binary_drawDec:
+        text: دەیی بکێشە {DEC}
       binary_drawPixelHere:
         text: وێنەخاڵ دیاریبکە {VAL}
         options:
@@ -1113,6 +1153,14 @@ ku:
             '0': كوژانەوە
             '1': پێکردن
             '"toggle"': سویچ
+      binary_drawString:
+        text: ڕیزبوند بکێشە {STR}
+      binary_goTo:
+        text: بازبدە بۆ {LOC}
+      binary_goToHome:
+        text: بازبدە بۆ سەرەوە لای چەپ
+      binary_gridSize:
+        text: قەبارەی تۆڕە هێڵدارەکە دیاریبکە {SIZE}
       binary_move:
         text: "{DIR} بجوڵێنە"
       binary_whenKey:
@@ -1124,16 +1172,37 @@ ku:
             '"s"': s
             '"d"': d
       craft_ifPath:
+        text: |-
+          ئەگەر ڕێگای {DIR}
+          {STATEMENT}
         options:
           DIR:
             "'ahead'": بەرەو پێشەوە
+            "'right'": بۆ لای ڕاست
+            "'left'": بۆ لای چەپ
       craft_ifStandingOn:
+        text: |-
+          ئەگەر وەستابێت لەسەر {TYPE}
+          {STATEMENT}
         options:
           TYPE:
+            "'blueCoralBlock'": مەرجانی شین
+            "'redCoralBlock'": مەرجانی سوور
             "'sand'": لم/وردە بەرد
+            "'wool_blue'": ئاوی قووڵ
+            "'seaLantern'": چرای دەریایی
       craft_ifStandingOnLimit:
+        text: |-
+          ئەگەر وەستابێت لەسەر {TYPE}
+          {STATEMENT}
         options:
           TYPE:
             "'sand'": لم/وردە بەرد
+            "'seaLantern'": چرای دەریایی
       craft_log:
         text: نامەی لۆگ {MESSAGE}
+      craft_placeBlock:
+        text: جێگیربکە {blockType}
+        options:
+          blockType:
+            '"seaLantern"': چرای دەریایی

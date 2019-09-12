@@ -45,13 +45,9 @@ he:
   okay: "בסדר"
   or: "או"
   heading_x_of_y: "%{heading} (עמוד %{x} מתוך %{y})"
-  add_teacher_form:
+  join_section:
     code:
-      label: 'הוסף מורה:'
       placeholder: "קוד קבוצה (ABCDEF)"
-      instructions: "אנא הזן את הקוד ששותף איתך בידי המורה. זה קוד בן 6 תווים כמו \"ABCDEF\"."
-      instructions_short: "הזן את קוד הקבוצה שלך באורך 6 תווים"
-    submit: 'הוסף מורה'
   add_hint_form:
     placeholder: 'הכניסו בבקשה את הרמז שלכם כאן'
     submit: 'הוסף רמז'

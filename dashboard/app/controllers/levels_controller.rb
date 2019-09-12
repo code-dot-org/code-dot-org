@@ -9,8 +9,7 @@ class LevelsController < ApplicationController
   include ActiveSupport::Inflector
   before_action :authenticate_user!, except: [:show, :embed_level, :get_rubric]
   before_action :require_levelbuilder_mode, except: [:show, :index, :embed_level, :get_rubric]
-  load_and_authorize_resource except: [:create, :update_blocks, :edit_blocks, :embed_level, :get_rubric]
-  check_authorization except: [:get_rubric]
+  load_and_authorize_resource except: [:create]
 
   before_action :set_level, only: [:show, :edit, :update, :destroy]
 
@@ -59,13 +58,55 @@ class LevelsController < ApplicationController
   # GET /levels
   # GET /levels.json
   def index
+    # Define search filter fields
+    @search_fields = [
+      {
+        name: :name,
+        description: 'Filter by name:',
+        type: 'text'
+      },
+      {
+        name: :level_type,
+        description: 'By type:',
+        type: 'select',
+        options: [
+          ['All types', ''],
+          *LEVEL_CLASSES.map {|x| [x.name, x.name]}.sort_by {|a| a[0]}
+        ]
+      },
+      {
+        name: :script_id,
+        description: 'By script:',
+        type: 'select',
+        options: [
+          ['All scripts', ''],
+          *Script.valid_scripts(current_user).pluck(:name, :id).sort_by {|a| a[0]}
+        ]
+      }
+    ]
+
+    # Add an "owner" filter, only if we're on levelbuilder
+    if Rails.application.config.levelbuilder_mode
+      @search_fields << {
+        name: :owner_id,
+        description: 'By owner:',
+        type: 'select',
+        options: [
+          ['Any owner', ''],
+          *Level.joins(:user).uniq.pluck('users.name, users.id').sort_by {|a| a[0]}
+        ]
+      }
+    end
+
+    # Gather filtered search results
     @levels = @levels.order(updated_at: :desc)
     @levels = @levels.where('levels.name LIKE ?', "%#{params[:name]}%") if params[:name]
     @levels = @levels.where('levels.type = ?', params[:level_type]) if params[:level_type].present?
     @levels = @levels.joins(:script_levels).where('script_levels.script_id = ?', params[:script_id]) if params[:script_id].present?
+    if Rails.application.config.levelbuilder_mode
+      @levels = @levels.left_joins(:user).where('levels.user_id = ?', params[:owner_id]) if params[:owner_id].present?
+    end
     @levels = @levels.page(params[:page]).per(LEVELS_PER_PAGE)
-    @level_types = LEVEL_CLASSES.map(&:name)
-    @scripts = Script.valid_scripts(current_user).pluck(:name, :id).sort_by {|a| a[0]}
   end
 
   # GET /levels/1
@@ -87,25 +128,23 @@ class LevelsController < ApplicationController
   def edit
   end
 
-  # GET all the information for the mini rubric
+  # GET /levels/:id/get_rubric
+  # Get all the information for the mini rubric
   def get_rubric
-    @level = Level.find_by(id: params[:level_id])
-    if @level.mini_rubric&.to_bool
-      render json: {
-        keyConcept: @level.rubric_key_concept,
-        performanceLevel1: @level.rubric_performance_level_1,
-        performanceLevel2: @level.rubric_performance_level_2,
-        performanceLevel3: @level.rubric_performance_level_3,
-        performanceLevel4: @level.rubric_performance_level_4
-      }
-    end
+    return head :no_content unless @level.mini_rubric&.to_bool
+    render json: {
+      keyConcept: @level.rubric_key_concept,
+      performanceLevel1: @level.rubric_performance_level_1,
+      performanceLevel2: @level.rubric_performance_level_2,
+      performanceLevel3: @level.rubric_performance_level_3,
+      performanceLevel4: @level.rubric_performance_level_4
+    }
   end
 
+  # GET /levels/:id/edit_blocks/:type
   # Action for using blockly workspace as a toolbox/startblock editor.
   # Expects params[:type] which can be either 'toolbox_blocks' or 'start_blocks'
   def edit_blocks
-    @level = Level.find(params[:level_id])
-    authorize! :edit, @level
     type = params[:type]
     blocks_xml = @level.properties[type].presence || @level[type] || EMPTY_XML
 
@@ -135,7 +174,7 @@ class LevelsController < ApplicationController
     )
     view_options(full_width: true)
     @game = @level.game
-    @callback = level_update_blocks_path @level, type
+    @callback = update_blocks_level_path @level, type
 
     # Ensure the simulation ends right away when the user clicks 'Run' while editing blocks
     if @level.is_a? Studio
@@ -151,9 +190,10 @@ class LevelsController < ApplicationController
     render :show
   end
 
+  # POST /levels/:id/update_blocks/:type
+  # Change a blockset in the level configuration
   def update_blocks
-    @level = Level.find(params[:level_id])
-    authorize! :update, @level
+    return head :forbidden unless @level.custom?
     blocks_xml = params[:program]
     type = params[:type]
     set_solution_image_url(@level) if type == 'solution_blocks'
@@ -165,9 +205,6 @@ class LevelsController < ApplicationController
   end
 
   def update_properties
-    @level = Level.find(params[:level_id])
-    authorize! :update, @level
-
     changes = JSON.parse(request.body.read)
     changes.each do |key, value|
       @level.properties[key] = value
@@ -302,9 +339,9 @@ class LevelsController < ApplicationController
     render(status: :not_acceptable, text: invalid)
   end
 
+  # GET /levels/:id/embed_level
+  # Show level styles for embedding in another page
   def embed_level
-    authorize! :read, :level
-    @level = Level.find(params[:level_id])
     @game = @level.game
     level_view_options(
       @level.id,

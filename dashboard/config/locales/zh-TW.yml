@@ -47,13 +47,9 @@ zh-TW:
   okay: OK！
   or: 或
   heading_x_of_y: "%{heading} （%{x} / %{y} 頁）"
-  add_teacher_form:
+  join_section:
     code:
-      label: 新增一個教師：
       placeholder: 學習小組代碼 (ABCDEF)
-      instructions: 請輸入老師給你的代碼。它是由 6 個字母所組成的代碼，像「ABCDEF」。
-      instructions_short: 輸入您的學習小組代碼（6字元）
-    submit: 新增教師
   add_hint_form:
     placeholder: 請在此處輸入您的提示
     submit: 添加提示

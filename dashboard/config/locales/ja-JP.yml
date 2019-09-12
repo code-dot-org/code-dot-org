@@ -47,13 +47,9 @@ ja:
   okay: オッケー
   or: または
   heading_x_of_y: "%{heading} (%{y} ページ中 %{x} ページ目)"
-  add_teacher_form:
+  join_section:
     code:
-      label: 先生を追加：
       placeholder: セクション ・ コード (ABCDEF)
-      instructions: 先生によって与えられたコードを入力してください。"ABCDEF"のような 6 文字のコードです。
-      instructions_short: 6 文字のセクションコードを入力してください
-    submit: 先生を追加
   add_hint_form:
     placeholder: ここにあなたのヒントを入力してください
     submit: ヒントを追加する

@@ -667,13 +667,13 @@ sk-SK:
         -   Použi blok `randomNumber()` (náhodné číslo) pre parameter Y elipsy tak, aby bol kruh nakreslený aj v náhodnej výške.
         -   Keď sa kruh nakreslí na náhodnej súradnici, môžeš pokračovať ďalej.
       CSD U3 Scene Example_2018: |-
-        # Zostavy postáv
+        # Zostavy "sprite" objektov
 
-        Kombináciou tvarov, postáv a textu môžeš vytvárať jednoduché zostavy, príbehy alebo komiks. Náš príklad je pomerne jednoduchý, ale ty môžeš kombinovať toľko postáv a tvarov, koľko chceš, aby si vytvtoril/a rôzne komplexné obrázky.
+        Kombináciou tvarov, "sprite" objektov a textu môžeš vytvárať jednoduché zostavy, príbehy alebo komiks. Náš príklad je pomerne jednoduchý, ale ty môžeš kombinovať toľko "sprite" objektov a tvarov, koľko chceš, aby si vytvtoril/a rôzne komplexné obrázky.
 
         ## Načrtni si svoj obrázok
 
-        Predtým ako začneš, venuj chvíľku načrtnutiu obrázku, ktorý by si chcel/a vytvoriť. Môžeš použiť jednoduché tvary, ktoré si použil/a v minulosti, rovnako ako rozličné postavy a text. Keď si svoj nápad nakreslíš, naučíme ťa, ako používať blok `text` a ako zostaviť obrázok.
+        Predtým ako začneš, venuj chvíľku načrtnutiu obrázku, ktorý by si chcel/a vytvoriť. Môžeš použiť jednoduché tvary, ktoré si použil/a v minulosti, rovnako ako rozličné "sprite objekty" a text. Keď si svoj nápad nakreslíš, naučíme ťa, ako používať blok `text` a ako zostaviť obrázok.
       CSD U3 Sprites text_2018: "# Pridávanie textu\n\nText môžeš pridať kdekoľvek
         na obrazovke použitím príkazu `text`. \n\n# Urob toto\n\n-   Zmeň zobrazený
         text v kóde\n-   Pridaj ďalší text na inú časť obrazovky.\n\n_Tip: Základná
@@ -886,6 +886,11 @@ sk-SK:
         \*\* Skús spustiť kód, aby si videl ako Umelec použije binárny reťazec na namaľovanie obrazca. \*\*
       Course 4 Artist For Loops 1: Použite blok s opakovaním pre nakreslenie tohto
         trojuholníka, ktorý je 50 pixelov široký.
+      Course 4 Artist For Loops 6a: Sprav tri malé zmeny v kóde z predošlého levelu,
+        aby si vytvoril toto!
+      Course 4 Artist For Loops 8: "Len jedná malá zmena v kóde z posledného obrázku
+        dokáže vytvoriť takýto obrázok. Vieš zistiť aká je to zmena?\n\nNápoveda:
+        Potrebuješ niečo odstrániť!  "
       CourseD_Dance_Party_01: |-
         _Spravme si tanečnú párty!_
 
@@ -3446,6 +3451,63 @@ sk-SK:
         `počítadlo`. \n\nVytiahni niekoľko blokov a pozri sa, čo sa stane.  "
       courseF_artist_for1_2019: "**Voľná hra:** Experimentuj s cyklom `for` a s premennou
         `počítadlo`. \n\nVytiahni niekoľko blokov a pozri sa, čo sa stane.  "
+      courseF_artist_for2: Použi cyklus `opakuj` vo vnútri cyklu `for` na vytvorenie
+        tejto kopy trojuholníkov, ktoré majú strany dlhé od 50 do 100 pixelov.
+      courseF_artist_for2_2018: Použi cyklus `opakuj` vo vnútri cyklu `for` na vytvorenie
+        tejto kopy trojuholníkov, ktoré majú strany dlhé od 50 do 100 pixelov.
+      courseF_artist_for2_2019: Použi cyklus `opakuj` vo vnútri cyklu `for` na vytvorenie
+        tejto kopy trojuholníkov, ktoré majú strany dlhé od 50 do 100 pixelov.
+      courseF_artist_for3: Vytvor tieto trojuholníky, ktoré majú strany od 20 do 200
+        pixelov, a kde každý trojuholník je o 20 pixelov väčší ako ten predošlý.
+      courseF_artist_for3_2018: Vytvor tieto trojuholníky, ktoré majú strany od 20
+        do 200 pixelov, a kde každý trojuholník je o 20 pixelov väčší ako ten predošlý.
+      courseF_artist_for3_2019: Vytvor tieto trojuholníky, ktoré majú strany od 20
+        do 200 pixelov, a kde každý trojuholník je o 20 pixelov väčší ako ten predošlý.
+      courseF_artist_for5: |-
+        Len jedná malá zmena v kóde z posledného obrázku dokáže vytvoriť takýto obrázok. Vieš zistiť aká je to zmena?
+
+        * * *
+
+        Nápoveda: Potrebuješ niečo odstrániť!
+      courseF_artist_for5_2018: |-
+        Len jedná malá zmena v kóde z posledného obrázku dokáže vytvoriť takýto obrázok. Vieš zistiť aká je to zmena?
+
+        * * *
+
+        Nápoveda: Potrebuješ niečo odstrániť!
+      courseF_artist_for5_2019: |-
+        Len jedná malá zmena v kóde z posledného obrázku dokáže vytvoriť takýto obrázok. Vieš zistiť aká je to zmena?
+
+        * * *
+
+        Nápoveda: Potrebuješ niečo odstrániť!
+      courseF_artist_for6: |-
+        Ak sa otočíš o trochu viac alebo menej, ako by si sa normálne, tak to spraví vkusný efekt.
+
+        Pretvor tvoj kód z predošlej úlohy, ale teraz sa otoč o 89 stupňov, aby si vytvoril takúto pokrútenú štvorcovú špirálu.
+      courseF_artist_for6_2018: |-
+        Ak sa otočíš o trochu viac alebo menej, ako by si sa normálne, tak to spraví vkusný efekt.
+
+        Pretvor tvoj kód z predošlej úlohy, ale teraz sa otoč o 89 stupňov, aby si vytvoril takúto pokrútenú štvorcovú špirálu.
+      courseF_artist_for6_2019: |-
+        Ak sa otočíš o trochu viac alebo menej, ako by si sa normálne, tak to spraví vkusný efekt.
+
+        Pretvor tvoj kód z predošlej úlohy, ale teraz sa otoč o 89 stupňov, aby si vytvoril takúto pokrútenú štvorcovú špirálu.
+      courseF_artist_for7: 'Sprav tri malé zmeny v kóde z predošlého levelu, aby si
+        vytvoril toto!  '
+      courseF_artist_for7_2018: 'Sprav tri malé zmeny v kóde z predošlého levelu,
+        aby si vytvoril toto!  '
+      courseF_artist_for7_2019: 'Sprav tri malé zmeny v kóde z predošlého levelu,
+        aby si vytvoril toto!  '
+      courseF_artist_for9: |-
+        **Inšpirácia:** Použi počítadlo vo vnútri bloku `nastav alfa`, aby si dostal niečo ako tento vyblednutý stred.\
+        (Tento šesťuholníkový vzor bol vytvorený otáčaním o 60 stupňov.)
+      courseF_artist_for9_2018: |-
+        **Inšpirácia:** Použi počítadlo vo vnútri bloku `nastav alfa`, aby si dostal niečo ako tento vyblednutý stred.\
+        (Tento šesťuholníkový vzor bol vytvorený otáčaním o 60 stupňov.)
+      courseF_artist_for9_2019: |-
+        **Inšpirácia:** Použi počítadlo vo vnútri bloku `nastav alfa`, aby si dostal niečo ako tento vyblednutý stred.\
+        (Tento šesťuholníkový vzor bol vytvorený otáčaním o 60 stupňov.)
       courseF_artist_variables10: "Tu je tvoj kód z predošlej úlohy. Skús zmeniť premennú
         rôznymi spôsobmi. \n\n-   Čo sa stane, ak začneš s `dĺžka` menšou než 150?\n-
         \  Čo ak zakaždým vynásobiš tvoju premennú číslom 1.25 namiesto pripočítania

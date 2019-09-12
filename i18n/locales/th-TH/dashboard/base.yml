@@ -44,12 +44,9 @@ th:
   okay: "ตกลง"
   or: "หรือ"
   heading_x_of_y: "%{heading} (หน้า %{x} จาก %{y})"
-  add_teacher_form:
+  join_section:
     code:
-      label: 'เพิ่มครู:'
       placeholder: "ส่วนรหัส (ABCDEF)"
-      instructions: "กรุณาใส่รหัสที่คุณครูมอบให้กับคุณ รหัสนี้ประกอบด้วยตัวอักษร 6 ตัว เช่น “ABCDEF”"
-    submit: 'เพิ่มครู'
   add_hint_form:
     placeholder: 'กรุณาป้อนคำแนะนำของคุณที่นี่'
     submit: 'เพิ่มคำแนะนำ'

@@ -46,13 +46,9 @@ lt:
   okay: Gerai
   or: arba
   heading_x_of_y: "%{heading} (%{x} puslapis iš %{y})"
-  add_teacher_form:
+  join_section:
     code:
-      label: 'Pridėti mokytoją:'
       placeholder: Grupės kodas (ABCDEF)
-      instructions: Įrašyk kodą, kurį tau davė mokytojas. Tai yra 6 raidžių kodas,
-        pavyzdžiui "ABCDEF".
-    submit: Pridėk mokytoją
   add_hint_form:
     placeholder: Įvesk savo suflerį čia
     submit: Pridėk suflerį

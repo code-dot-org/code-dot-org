@@ -57,14 +57,9 @@ ca:
   okay: D'acord
   or: o
   heading_x_of_y: "%{heading} (pàgina %{x} de %{y})"
-  add_teacher_form:
+  join_section:
     code:
-      label: 'Afegeix un mestre:'
       placeholder: Secció Codi (ABCDEF)
-      instructions: Si us plau, introdueixi el codi compartit pel seu professor. És
-        un codi de 6 lletres com "ABCDEF".
-      instructions_short: Introdueixi el seu codi de secció de 6 lletres
-    submit: Afegeix un professor
   add_hint_form:
     placeholder: Introduïu la vostra pista aquí
     submit: Afegeix pista
