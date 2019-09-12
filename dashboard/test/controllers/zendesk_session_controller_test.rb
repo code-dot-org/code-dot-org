@@ -34,7 +34,7 @@ class ZendeskSessionControllerTest < ActionController::TestCase
   end
 
   test "does not sign in to zendesk when non-oauth codeorg account" do
-    user = create :teacher, email: 'employee@code.org'
+    user = create :teacher, email: 'employee+test@code.org'
     sign_in user
 
     get :index

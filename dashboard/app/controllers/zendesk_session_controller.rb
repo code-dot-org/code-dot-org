@@ -9,12 +9,6 @@ class ZendeskSessionController < ApplicationController
   SECRET = Dashboard::Application.config.zendesk_secret
   SUBDOMAIN = Dashboard::Application.config.zendesk_subdomain
 
-  ERRORS = [
-    NONE = "",
-    TOO_YOUNG = "too young",
-    UNVERIFIED_CODEORG = "unverified code.org user"
-  ]
-
   @error = nil
 
   def index
@@ -28,11 +22,12 @@ class ZendeskSessionController < ApplicationController
 
   def allow_zendesk_signin?(user)
     if user.age && user.under_13?
-      @error = TOO_YOUNG
+      @error = I18n.t('zendesk_too_young_message', support_url: "support.code.org", markdown: true)
       return false
     end
-    if user.email && Mail::Address.new(user.email).domain == "code.org" && !user.google_oauth_only?
-      @error = UNVERIFIED_CODEORG
+    if user.email && Mail::Address.new(user.email).domain == "code.org" && !user.google_oauth_email_matches?
+      @error = I18n.t('zendesk_unverified_codeorg_account_message')
+      return false
     end
     return true
   end

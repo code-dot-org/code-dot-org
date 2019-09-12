@@ -816,11 +816,11 @@ class User < ActiveRecord::Base
     end
   end
 
-  def google_oauth_only?
+  def google_oauth_email_matches?
     if migrated?
-      authentication_options.all?(&:google_oauth?) && encrypted_password.blank?
+      authentication_options.any?(&:google_oauth?) && authentication_options.find(&:google_oauth?).email == email
     else
-      OAUTH_PROVIDERS.include?(provider) && encrypted_password.blank?
+      OAUTH_PROVIDERS.include?(&:google_oauth) == email
     end
   end
 
