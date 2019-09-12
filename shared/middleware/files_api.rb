@@ -5,6 +5,7 @@ require 'sinatra/base'
 require 'cdo/sinatra'
 require 'cdo/image_moderation'
 require 'nokogiri'
+require 'cdo/firehose'
 
 class FilesApi < Sinatra::Base
   set :mustermann_opts, check_anchors: false
@@ -570,6 +571,11 @@ class FilesApi < Sinatra::Base
     last_modified result[:last_modified]
 
     if result[:status] == 'NOT_FOUND'
+      FirehoseClient.instance.put_record(
+        study: 'weblab-manifest',
+        event: 'weblab-manifest-not-found',
+        project_id: encrypted_channel_id
+      )
       {"filesVersionId": "", "files": []}.to_json
     else
       # {
