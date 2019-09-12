@@ -1,7 +1,6 @@
 .row
-  .span9
-    %h3!= t 'auth.signed_out_markdown', url: code_org_root_path, markdown: true
+  .span9!= t('auth.signed_out_markdown', url: CDO.code_org_url('', 'https:'), markdown: true)
 .row
   .span9
     - if params[:provider] && external_oauth_sign_out_url(params[:provider])
-      %h4!= t 'auth.sign_out_of_markdown', provider: t("auth.#{params[:provider]}"), url: external_oauth_sign_out_url(params[:provider]), markdown: true
+      != t('auth.sign_out_of_markdown', provider: t("auth.#{params[:provider]}"), url: external_oauth_sign_out_url(params[:provider]), markdown: true)
