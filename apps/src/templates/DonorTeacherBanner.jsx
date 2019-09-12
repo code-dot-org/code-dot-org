@@ -57,18 +57,22 @@ const styles = {
   }
 };
 
+export const donorTeacherBannerOptionsShape = PropTypes.shape({
+  teacherFirstName: PropTypes.string,
+  teacherSecondName: PropTypes.string,
+  teacherEmail: PropTypes.string,
+  ncesSchoolId: PropTypes.string,
+  schoolAddress1: PropTypes.string,
+  schoolAddress2: PropTypes.string,
+  schoolAddress3: PropTypes.string,
+  schoolCity: PropTypes.string,
+  schoolState: PropTypes.string,
+  schoolZip: PropTypes.string
+});
+
 export default class DonorTeacherBanner extends Component {
   static propTypes = {
-    teacherFirstName: PropTypes.string,
-    teacherSecondName: PropTypes.string,
-    teacherEmail: PropTypes.string,
-    ncesSchoolId: PropTypes.string,
-    schoolAddress1: PropTypes.string,
-    schoolAddress2: PropTypes.string,
-    schoolAddress3: PropTypes.string,
-    schoolCity: PropTypes.string,
-    schoolState: PropTypes.string,
-    schoolZip: PropTypes.string,
+    options: donorTeacherBannerOptionsShape,
     onDismiss: PropTypes.func
   };
 
@@ -113,6 +117,19 @@ export default class DonorTeacherBanner extends Component {
     const buttonDisabled =
       this.state.participate === undefined ||
       (this.state.participate === true && this.state.permission !== true);
+
+    const optionFields = {
+      teacherFirstName: 'first-name',
+      teacherSecondName: 'last-name',
+      teacherEmail: 'email',
+      ncesSchoolId: 'nces-id',
+      schoolAddress1: 'school-address-1',
+      schoolAddress2: 'school-address-2',
+      schoolAddress3: 'school-address-3',
+      schoolCity: 'school-city',
+      schoolState: 'school-state',
+      schoolZip: 'school-zip'
+    };
 
     return (
       <div style={styles.main}>
@@ -184,58 +201,16 @@ export default class DonorTeacherBanner extends Component {
             method="post"
             target="_blank"
           >
-            <input
-              type="hidden"
-              name="first-name"
-              value={this.props.teacherFirstName}
-            />
-            <input
-              type="hidden"
-              name="last-name"
-              value={this.props.teacherSecondName}
-            />
-            <input type="hidden" name="email" value={this.props.teacherEmail} />
-            <input
-              type="hidden"
-              name="nces-id"
-              value={this.props.ncesSchoolId}
-            />
-            {this.props.schoolAddress1 && (
-              <input
-                type="hidden"
-                name="school-address-1"
-                value={this.props.schoolAddress1}
-              />
-            )}
-            {this.props.schoolAddress2 && (
-              <input
-                type="hidden"
-                name="school-address-2"
-                value={this.props.schoolAddress2}
-              />
-            )}
-            {this.props.schoolAddress3 && (
-              <input
-                type="hidden"
-                name="school-address-3"
-                value={this.props.schoolAddress3}
-              />
-            )}
-            <input
-              type="hidden"
-              name="school-city"
-              value={this.props.schoolCity}
-            />
-            <input
-              type="hidden"
-              name="school-state"
-              value={this.props.schoolState}
-            />
-            <input
-              type="hidden"
-              name="school-zip"
-              value={this.props.schoolZip}
-            />
+            {Object.keys(optionFields)
+              .filter(key => this.props.options[key])
+              .map(key => (
+                <input
+                  key={key}
+                  type="hidden"
+                  name={optionFields[key]}
+                  value={this.props.options[key]}
+                />
+              ))}
           </form>
 
           <Button
