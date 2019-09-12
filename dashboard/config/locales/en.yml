@@ -687,8 +687,7 @@ en:
     header_artist: "Code art"
     report_abuse: "Report Abuse"
   landing:
-    prerelease: "This course is in <span class='betatext'>beta</span>.  This means it is not the final version of the course, and is subject to revision as feedback is received and improvements are made."
-    prerelease_hoc2014: "This tutorial is in <span class='betatext'>beta</span>.  It is subject to revision as feedback is received and improvements are made."
+    prerelease_tutorial: "This tutorial is in **beta**.  It is subject to revision as feedback is received and improvements are made."
     report_bug: "Report Bug"
     support: "Get Help"
     support_url: "//support.code.org"
