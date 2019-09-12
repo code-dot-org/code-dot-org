@@ -1,8 +1,23 @@
 {
   "name": "csd-pilot",
   "script_names": [
-
+    "csd1-pilot",
+    "csd2-pilot",
+    "csd3-pilot"
   ],
   "properties": {
+    "teacher_resources": [
+      [
+        "curriculum",
+        "https://curriculum.code.org/csd-20/"
+      ],
+      [
+        "teacherForum",
+        "https://forum.code.org/c/csd"
+      ]
+    ],
+    "version_year": "2020",
+    "family_name": "csd",
+    "has_verified_resources": true
   }
 }
