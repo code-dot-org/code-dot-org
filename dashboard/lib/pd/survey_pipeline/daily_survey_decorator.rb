@@ -58,7 +58,7 @@ module Pd::SurveyPipeline
         # facilitators: {},
         # facilitator_averages: {},
         # facilitator_response_counts: {},
-        errors: data[:errors]
+        errors: data[:errors] || []
       }
 
       question_by_names = index_question_by_names(data[:parsed_questions])

@@ -89,7 +89,7 @@ module Pd::SurveyPipeline
         # facilitators: {},
         # facilitator_averages: {},
         # facilitator_response_counts: {},
-        errors: nil
+        errors: []
       }
 
       context = {
@@ -159,7 +159,7 @@ module Pd::SurveyPipeline
         # facilitators: {},
         # facilitator_averages: {},
         # facilitator_response_counts: {},
-        errors: nil
+        errors: []
       }
 
       context = {
