@@ -16,8 +16,7 @@
     - homepage_data[:announcement] = DCDO.get('announcement_override', nil)
     - if !current_user.donor_teacher_banner_dismissed
       - donor_banner_name = current_user.donor_teacher_banner_name
-    - else
-      - donor_banner_name = @force_donor_teacher_banner
+    - donor_banner_name ||= @force_donor_teacher_banner
     - show_census_banner = !!(!donor_banner_name && current_user.show_census_teacher_banner?)
     - homepage_data[:showCensusBanner] = show_census_banner
     - homepage_data[:hiddenScripts] = current_user.get_hidden_script_ids
